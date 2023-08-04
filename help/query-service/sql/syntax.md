@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Sintaxe SQL no Serviço de consulta
 description: Este documento mostra a sintaxe SQL suportada pelo Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: c05df76976e58da1f96c6e8c030c919ff5b1eb19
+source-git-commit: b94536be6e92354e237b99d36af13adf5a49afa7
 workflow-type: tm+mt
-source-wordcount: '3860'
+source-wordcount: '3863'
 ht-degree: 2%
 
 ---
@@ -597,9 +597,9 @@ Veja a seguir uma lista de cálculos estatísticos que estão disponíveis após
 
 #### CALCULAR ESTATÍSTICAS no data lake {#compute-statistics-data-lake}
 
-Agora você pode calcular estatísticas em nível de coluna em [!DNL Azure Data Lake Storage] (ADLS) com a variável `COMPUTE STATISTICS` e `SHOW STATISTICS` Comandos SQL. Calcular estatísticas de coluna em todo o conjunto de dados, um subconjunto de um conjunto de dados, todas as colunas ou um subconjunto de colunas.
+Agora você pode calcular estatísticas em nível de coluna em [!DNL Azure Data Lake Storage] (ADLS) com a variável `COMPUTE STATISTICS` Comando SQL. Calcular estatísticas de coluna em todo o conjunto de dados, um subconjunto de um conjunto de dados, todas as colunas ou um subconjunto de colunas.
 
-`COMPUTE STATISTICS` estende a `ANALYZE TABLE` comando. No entanto, a `COMPUTE STATISTICS`, `FILTERCONTEXT`, `FOR COLUMNS`, e `SHOW STATISTICS` não há suporte para comandos em tabelas de armazenamento aceleradas. Essas extensões para o `ANALYZE TABLE` atualmente, só há suporte para comandos ADLS.
+`COMPUTE STATISTICS` estende a `ANALYZE TABLE` comando. No entanto, a `COMPUTE STATISTICS`, `FILTERCONTEXT`, e `FOR COLUMNS` não há suporte para comandos em tabelas de armazenamento aceleradas. Essas extensões para o `ANALYZE TABLE` atualmente, só há suporte para comandos ADLS.
 
 **Exemplo**
 
@@ -611,7 +611,7 @@ A variável `FILTER CONTEXT` O comando calcula estatísticas em um subconjunto d
 
 >[!NOTE]
 >
->A variável `Statistics ID` e as estatísticas geradas são válidas apenas para cada sessão e não podem ser acessadas em diferentes sessões PSQL.<br><br>Limitações:<ul><li>A geração de estatísticas não é suportada para tipos de dados de matriz ou mapa</li><li>As estatísticas computadas não são persistentes</li></ul><br><br>Opções:<br><ul><li>`skip_stats_for_complex_datatypes`</li></ul><br>Por padrão, o sinalizador é definido como verdadeiro. Como resultado, quando as estatísticas são solicitadas em um tipo de dados que não é compatível, não ocorre erro, mas, em vez disso, ocorre uma falha silenciosa.<br>Para habilitar notificações de erros quando forem solicitadas estatísticas em tipos de dados não compatíveis, use: `SET skip_stats_for_complex_datatypes = false`.
+>A variável `Statistics ID` e as estatísticas geradas são válidas apenas para cada sessão e não podem ser acessadas em diferentes sessões PSQL.<br><br>Limitações:<ul><li>A geração de estatísticas não é suportada para tipos de dados de matriz ou mapa</li><li>As estatísticas calculadas são **não** persistida nas sessões.</li></ul><br><br>Opções:<br><ul><li>`skip_stats_for_complex_datatypes`</li></ul><br>Por padrão, o sinalizador é definido como verdadeiro. Como resultado, quando as estatísticas são solicitadas em um tipo de dados incompatível, não ocorre o erro, mas os campos são ignorados silenciosamente com os tipos de dados incompatíveis.<br>Para habilitar notificações de erros quando forem solicitadas estatísticas em tipos de dados não compatíveis, use: `SET skip_stats_for_complex_datatypes = false`.
 
 A saída do console é exibida conforme visto abaixo.
 
@@ -629,7 +629,7 @@ Você pode consultar as estatísticas calculadas diretamente fazendo referência
 SELECT * FROM adc_geometric_stats_1;
 ```
 
-Use o `SHOW STATISTICS` comando para exibir os metadados de todas as tabelas de estatísticas temporárias geradas na sessão. Este comando pode ajudá-lo a refinar o escopo da análise estatística.
+Use o `SHOW STATISTICS` comando para exibir os metadados de todas as estatísticas temporárias geradas na sessão. Este comando pode ajudá-lo a refinar o escopo da análise estatística.
 
 ```sql
 SHOW STATISTICS;

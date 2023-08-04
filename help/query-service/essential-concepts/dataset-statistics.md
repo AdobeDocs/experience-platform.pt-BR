@@ -1,16 +1,16 @@
 ---
 title: Computação de estatísticas do conjunto de dados
 description: Este documento descreve como calcular estatísticas em nível de coluna nos conjuntos de dados do Azure Data Lake Storage (ADLS) com comandos SQL.
-source-git-commit: c05df76976e58da1f96c6e8c030c919ff5b1eb19
+source-git-commit: b94536be6e92354e237b99d36af13adf5a49afa7
 workflow-type: tm+mt
-source-wordcount: '1086'
+source-wordcount: '1085'
 ht-degree: 0%
 
 ---
 
 # Cálculo das estatísticas do conjunto de dados
 
-Agora é possível calcular estatísticas em nível de coluna no [!DNL Azure Data Lake Storage] (ADLS) com a variável `COMPUTE STATISTICS` e `SHOW STATISTICS` Comandos SQL. Os comandos SQL que calculam as estatísticas do conjunto de dados são uma extensão do `ANALYZE TABLE` comando. Detalhes completos sobre o `ANALYZE TABLE` comando pode ser encontrado no campo [Documentação de referência SQL](../sql/syntax.md#analyze-table).
+Agora é possível calcular estatísticas em nível de coluna no [!DNL Azure Data Lake Storage] (ADLS) com a variável `COMPUTE STATISTICS` Comando SQL. Os comandos SQL que calculam as estatísticas do conjunto de dados são uma extensão do `ANALYZE TABLE` comando. Detalhes completos sobre o `ANALYZE TABLE` comando pode ser encontrado no campo [Documentação de referência SQL](../sql/syntax.md#analyze-table).
 
 >[!NOTE]
 >
@@ -20,7 +20,7 @@ Para ver as estatísticas que foram calculadas com a variável `ANALYZE TABLE CO
 
 >[!IMPORTANT]
 >
->A variável `COMPUTE STATISTICS`, `FILTERCONTEXT`, `FOR COLUMNS`, e `SHOW STATISTICS` não há suporte para comandos em tabelas de armazenamento aceleradas. Essas extensões para o `ANALYZE TABLE` atualmente, só há suporte para comandos ADLS. Para obter mais informações, consulte [seção ANALISAR TABELA](../sql/syntax.md#analyze-table) do guia de sintaxe SQL.
+>A variável `COMPUTE STATISTICS`, `FILTERCONTEXT`, e `FOR COLUMNS` não há suporte para comandos em tabelas de armazenamento aceleradas. Essas extensões para o `ANALYZE TABLE` atualmente, só há suporte para comandos ADLS. Para obter mais informações, consulte [seção ANALISAR TABELA](../sql/syntax.md#analyze-table) do guia de sintaxe SQL.
 
 Este guia ajuda a estruturar suas consultas para que você possa calcular as estatísticas de coluna de um conjunto de dados ADLS. Usando esses comandos, você pode ver as estatísticas geradas na sua sessão por meio de um cliente PSQL usando uma consulta SQL.
 

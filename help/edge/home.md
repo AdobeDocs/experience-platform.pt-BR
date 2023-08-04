@@ -3,9 +3,9 @@ title: Visão geral do SDK da Web da Adobe Experience Platform
 description: Saiba como usar o SDK da Web da Adobe Experience Platform para integrar recursos da plataforma ao seu site.
 keywords: SDK da Web da Adobe Experience Platform;SDK da Web da plataforma;borda;Visitor.js;AppMeasurement.js;AT.js;DIL.js;web sdk;SDK;SDK da Web;Iniciar;iniciar;Web SDK;Platform Web SDK;edge;Visitor.js;.js;AT.js;web sdk;SDK;web SDK;Launch;launch
 exl-id: 1348144a-7d25-4c27-bc40-3daee2f043a6
-source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
+source-git-commit: 606052562da79982cbe4977c65ecf8ab64e4fa66
 workflow-type: tm+mt
-source-wordcount: '803'
+source-wordcount: '802'
 ht-degree: 1%
 
 ---
@@ -25,7 +25,7 @@ Para obter um guia passo a passo para configurar o SDK da Web com tags e enviar 
 [!DNL Adobe Experience Platform Web SDK] O faz parte da coleção que compõe a [!DNL Adobe Experience Edge]. [!DNL Experience Edge] O consiste nas seguintes tecnologias:
 
 * **[[!DNL Adobe Experience Platform Web SDK]](#overview):** Um SDK JavaScript e uma extensão de tag para simplificar consideravelmente a implantação [!DNL Adobe] tecnologias.
-* **[[!DNL Adobe Experience Platform Mobile SDK]](https://aep-sdks.gitbook.io/docs/getting-started/overview):** Uma extensão para o SDK móvel v5 para permitir que os clientes usem a nova metodologia de implantação
+* **[[!DNL Adobe Experience Platform Mobile SDK]](https://developer.adobe.com/client-sdks/documentation/):** Uma extensão para o SDK móvel v5 para permitir que os clientes usem a nova metodologia de implantação
 * **[[!DNL Adobe Experience Platform Edge Network]](../server-api/overview.md):** Uma rede global distribuída de servidores que possibilita uma nova metodologia de implantação [!DNL Adobe] products
 
 A variável [!DNL Adobe Experience Edge] O é uma nova estrutura para coleta de dados de baixa latência, computação conectável e ativação rápida de dados em todos os canais endereçáveis.

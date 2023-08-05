@@ -2,9 +2,9 @@
 title: Chaves gerenciadas pelo cliente no Adobe Experience Platform
 description: Saiba como configurar suas próprias chaves de criptografia para dados armazenados no Adobe Experience Platform.
 exl-id: cd33e6c2-8189-4b68-a99b-ec7fccdc9b91
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 04ed092d4514d1668068ed73a1be4400c6cd4d8e
 workflow-type: tm+mt
-source-wordcount: '1617'
+source-wordcount: '1774'
 ht-degree: 1%
 
 ---
@@ -15,7 +15,7 @@ Os dados armazenados no Adobe Experience Platform são criptografados em repouso
 
 >[!NOTE]
 >
->Os dados no data lake da Adobe Experience Platform e no Armazenamento de perfis (CosmosDB) são criptografados usando CMK.
+>Os dados no data lake da Adobe Experience Platform e no Armazenamento de perfis são criptografados usando CMK. Eles são considerados seus principais armazenamentos de dados.
 
 Este documento aborda o processo de ativação do recurso de chaves gerenciadas pelo cliente (CMK) na Platform.
 
@@ -282,12 +282,21 @@ A variável `status` O atributo pode ter um dos quatro valores com os seguintes 
 1. `COMPLETED`: o cofre de chaves e o nome da chave foram adicionados aos armazenamentos de dados.
 1. `FAILED`: ocorreu um problema, relacionado principalmente à chave, cofre de chaves ou configuração de aplicativo de vários locatários.
 
-## Próximas etapas
+## Revogar acesso {#revoke-access}
 
-Ao concluir as etapas acima, você ativou o CMK com êxito para sua organização. Os dados assimilados na Platform agora serão criptografados e descriptografados usando as chaves na [!DNL Azure] Cofre da Chave. Se quiser revogar o acesso do Platform aos seus dados, você poderá remover a função de usuário associada à aplicação do cofre de chaves no [!DNL Azure].
-
-Depois de desabilitar o acesso ao aplicativo, pode levar de alguns minutos a 24 horas para que os dados não estejam mais acessíveis na Platform. O mesmo atraso se aplica para que os dados fiquem disponíveis novamente ao reativar o acesso ao aplicativo.
+Se quiser revogar o acesso do Platform aos seus dados, você poderá remover a função de usuário associada à aplicação do cofre de chaves no [!DNL Azure].
 
 >[!WARNING]
 >
->Quando o Cofre da chave, a chave ou o aplicativo CMK estiverem desativados e os dados não estiverem mais acessíveis na Platform, nenhuma operação downstream relacionada a esses dados será mais possível. Certifique-se de entender os impactos de downstream da revogação do acesso da Platform aos seus dados antes de fazer alterações na configuração.
+>Desabilitar o cofre de chaves, a Chave ou o aplicativo CMK pode resultar em uma mudança radical. Quando o cofre de chaves, a chave ou o aplicativo CMK estiverem desativados e os dados não estiverem mais acessíveis na Platform, nenhuma operação downstream relacionada a esses dados será mais possível. Certifique-se de entender os impactos de downstream da revogação do acesso da Platform à sua chave antes de fazer alterações na configuração.
+
+Após remover o acesso à chave ou desabilitar/excluir a chave do [!DNL Azure] cofre de chaves, pode levar de alguns minutos a 24 horas para que essa configuração se propague para os armazenamentos de dados principais. Os fluxos de trabalho da plataforma também incluem armazenamentos de dados em cache e transitórios, necessários para o desempenho e a funcionalidade principal do aplicativo. A propagação da revogação de CMK por meio desses armazenamentos em cache e transitórios pode levar até sete dias, conforme determinado por seus workflows de processamento de dados. Por exemplo, isso significa que o painel Perfil manteria e exibiria dados de seu armazenamento de dados em cache e levaria sete dias para expirar os dados mantidos nos armazenamentos de dados em cache como parte do ciclo de atualização. O mesmo atraso se aplica para que os dados fiquem disponíveis novamente ao reativar o acesso ao aplicativo.
+
+>[!NOTE]
+>
+>Há duas exceções específicas de caso de uso para a expiração do conjunto de dados de sete dias em dados não primários (em cache/transitórios). Consulte a respectiva documentação para obter mais informações sobre esses recursos.<ul><li>[Encurtador de URL do Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/sms/sms-configuration.html?lang=pt-BR#message-preset-sms)</li><li>[Projeções de borda](https://experienceleague.adobe.com/docs/experience-platform/profile/home.html#edge-projections)</li></ul>
+
+## Próximas etapas
+
+Ao concluir as etapas acima, você ativou o CMK com êxito para sua organização. Os dados assimilados nos armazenamentos de dados principais agora serão criptografados e descriptografados usando as chaves na [!DNL Azure] Cofre da Chave.
+

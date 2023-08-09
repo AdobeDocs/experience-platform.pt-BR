@@ -4,9 +4,9 @@ user-guide-title: Serviço de segmentação da Adobe Experience Platform
 breadcrumb-title: Guia do Serviço de segmentação
 user-guide-description: Crie públicos-alvo a partir dos dados do perfil do cliente em tempo real usando definições de segmento geradas pela Adobe Experience Platform ou fontes externas.
 feature: Segments
-source-git-commit: 5fb8edd9dd664f9a0ed036d1340b5f8fcd4ba0c4
+source-git-commit: d0b839dfc35ff9f8b4db34c61d2cdd820bfd448b
 workflow-type: tm+mt
-source-wordcount: '178'
+source-wordcount: '180'
 ht-degree: 36%
 
 ---
@@ -33,8 +33,9 @@ ht-degree: 36%
    - [Painel de público-alvo](ui/audience-dashboard.md)
    - [Composição de público-alvo](ui/audience-composition.md)
    - [Construtor de segmentos](ui/segment-builder.md)
-   - [Segmentação de borda](ui/edge-segmentation.md)
+   - [Públicos-alvo semelhantes](ui/lookalike-audiences.md)
    - [Públicos-alvo potenciais](ui/prospect-audience.md)
+   - [Segmentação de borda](ui/edge-segmentation.md)
    - [Segmentação de transmissão](ui/streaming-segmentation.md)
    - [Segmentação de transmissão (Vídeo)](video/streaming-segmentation-overview.md)
    - [Refatoração de restrições de tempo](ui/segment-refactoring.md)

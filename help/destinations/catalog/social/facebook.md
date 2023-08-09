@@ -3,9 +3,9 @@ keywords: conexão facebook;conexão facebook;destinos do facebook;facebook;inst
 title: Conexão com o facebook
 description: Ative perfis para suas campanhas do Facebook para direcionamento de público, personalização e supressão com base em emails com hash.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
+source-git-commit: 37e8d36d89bf984673345743b371c31b4bb1f94d
 workflow-type: tm+mt
-source-wordcount: '1907'
+source-wordcount: '1926'
 ht-degree: 6%
 
 ---
@@ -77,6 +77,7 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 
 Antes de enviar os públicos-alvo para [!DNL Facebook], certifique-se de atender aos seguintes requisitos:
 
+* Seu [!DNL Facebook] a conta de usuário deve ter acesso total à [!DNL Facebook Business Account] que possui a conta de Anúncio que você usará.
 * Seu [!DNL Facebook] a conta de usuário deve ter o **[!DNL Manage campaigns]** permissão ativada para a conta de anúncio que você planeja usar.
 * A variável **Adobe Experience Cloud** conta comercial deve ser adicionada como um parceiro de publicidade em sua [!DNL Facebook Ad Account]. Use `business ID=206617933627973`. Consulte [Adicionar parceiros ao seu gerente de negócios](https://www.facebook.com/business/help/1717412048538897) na documentação do Facebook para obter detalhes.
   >[!IMPORTANT]

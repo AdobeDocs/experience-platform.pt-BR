@@ -3,9 +3,9 @@ title: Reengajamento inteligente
 description: Ofereça experiências atraentes e conectadas durante os principais momentos de conversão para reengajar clientes pouco frequentes de forma inteligente.
 hide: true
 hidefromtoc: true
-source-git-commit: 4f0902b874d5e8179c009ad3b603e008b9a22bb4
+source-git-commit: 290c914216c1af070e065a38f726e2028c2cea8c
 workflow-type: tm+mt
-source-wordcount: '3496'
+source-wordcount: '3482'
 ht-degree: 6%
 
 ---
@@ -110,9 +110,7 @@ Para criar um schema, conclua as etapas abaixo:
 
 Para obter mais informações sobre como criar schemas, leia a [criar tutorial de esquema.](/help/xdm/tutorials/create-schema-ui.md)
 
-Há quatro designs de esquema usados para a jornada de reengajamento.
-
-Cada esquema requer a configuração de campos específicos, bem como de alguns campos altamente sugeridos.
+Há quatro designs de esquema usados para a jornada de reengajamento. Cada esquema requer a configuração de campos específicos, bem como de alguns campos altamente sugeridos.
 
 #### Requisitos do grupo de campos para o esquema de atributos do cliente
 
@@ -315,8 +313,6 @@ Atributos de auditoria do sistema de origem externa é um tipo de dados padrão 
 
 O esquema do conector da Web do Adobe é um [!UICONTROL XDM ExperienceEvent] esquema, contendo os seguintes grupos de campos:
 
-Os grupos de campos necessários para o Esquema de evento de experiência do Feed de dados do Adobe Analytics são:
-
 +++Modelo de evento de experiência do Adobe Analytics (grupo de campos)
 
 | Campos | Requisito | Descrição |
@@ -382,8 +378,6 @@ Atributos de auditoria do sistema de origem externa é um tipo de dados padrão 
 +++
 
 ![Esquema do conector da Web do Adobe que destaca a lista de grupos de campos.](../intelligent-re-engagement/images/adobe-web-connector.png)
-
->[!ENDTABS]
 
 ### Criar um conjunto de dados a partir de um esquema
 

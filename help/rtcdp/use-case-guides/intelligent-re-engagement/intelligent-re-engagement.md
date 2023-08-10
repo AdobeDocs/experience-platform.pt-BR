@@ -3,10 +3,10 @@ title: Reengajamento inteligente
 description: Ofereça experiências atraentes e conectadas durante os principais momentos de conversão para reengajar clientes pouco frequentes de forma inteligente.
 hide: true
 hidefromtoc: true
-source-git-commit: 290c914216c1af070e065a38f726e2028c2cea8c
+source-git-commit: 7ff623626b557cbf67ad6164157d1a5ef4820cb1
 workflow-type: tm+mt
-source-wordcount: '3482'
-ht-degree: 6%
+source-wordcount: '3259'
+ht-degree: 5%
 
 ---
 
@@ -20,56 +20,58 @@ O reengajamento inteligente permite que você configure uma campanha personaliza
 
 Ao concluir as etapas para implementar o caso de uso, você usará a seguinte funcionalidade do Real-Time CDP e os elementos da interface do usuário (listados na ordem em que serão usados). Verifique se você tem as permissões de controle de acesso baseadas em atributos necessárias para todas essas áreas ou peça ao administrador do sistema para conceder as permissões necessárias.
 
-* [Adobe Real-time Customer Data Platform (Real-Time CDP)](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/understanding-the-real-time-customer-data-platform.html) - Agrega dados em fontes de dados para alimentar a campanha. Esses dados são usados para criar os públicos-alvo da campanha e exibir elementos de dados personalizados usados no email e nos blocos promocionais da Web (por exemplo, nome ou informações relacionadas à conta). A CDP também é usada para ativar os públicos-alvo no email e na Web (via Adobe Target).
+* [Adobe Real-time Customer Data Platform (Real-Time CDP)](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/understanding-the-real-time-customer-data-platform.html) - Agrega dados em fontes de dados para alimentar a campanha. Esses dados são usados para criar os públicos-alvo da campanha e exibir elementos de dados personalizados usados no email e nos blocos promocionais da Web (por exemplo, nome ou informações relacionadas à conta). A CDP também é usada para ativar públicos-alvo no email e na Web (via Adobe Target).
    * [Esquemas](/help/xdm/home.md)
    * [Perfis](/help/profile/home.md)
+   * [Conjuntos de dados](/help/catalog/datasets/overview.md)
    * [Públicos-alvo](/help/segmentation/home.md)
    * [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)
+   * [Destinos](/help/destinations/home.md)
    * [Acionador de evento ou público-alvo](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/collect-event-data/data-collection.html)
    * [Públicos/ eventos](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/about-audiences.html)
    * [Jornada ações](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)
 
 ### Como atingir o caso de uso: visão geral de alto nível {#achieve-the-use-case-high-level}
 
-Foram criadas três jornadas de reengajamento.
+Atualmente, três jornadas diferentes de reengajamento foram desenvolvidas.
 
 >[!BEGINTABS]
 
 >[!TAB Jornada de reengajamento]
 
-A jornada de reengajamento é direcionada a navegações de produtos abandonadas no site e no aplicativo. Essa jornada é disparada quando um produto é visualizado sem produto comprado ou adicionado ao carrinho. O engajamento com a marca é acionado após três dias se não houver adições de lista nas últimas 24 horas.
+A jornada de reengajamento é direcionada à navegação de produto abandonada no site e no aplicativo. Essa jornada é disparada quando um produto foi visualizado, mas não foi comprado ou adicionado ao carrinho. O engajamento com a marca é acionado após três dias se não houver adições à lista nas últimas 24 horas.
 
 ![Visão geral visual de alto nível da jornada de reengajamento inteligente do cliente.](../intelligent-re-engagement/images/re-engagement-journey.png)
 
-1. Os dados são agregados ao SDK da Web/SDK móvel/assimilação da API da rede de borda por meio da rede de borda (método preferencial).
+1. Os dados são agregados ao SDK da Web, SDK móvel ou assimilação da API da rede de borda por meio da rede de borda (o método preferido).
 2. Como um **cliente**, você cria conjuntos de dados marcados para [!UICONTROL Perfil].
 3. Como um **cliente**, você carrega perfis no Real-Time CDP e cria políticas de governança para garantir um uso responsável.
 4. Como um **cliente**, você cria públicos-alvo focados a partir da lista de perfis para verificar se uma **usuário** fez um envolvimento com a marca nos últimos três dias.
 5. Como um **cliente**, você criará uma jornada de reengajamento no Adobe Journey Optimizer.
-6. Se necessário, trabalhe com a **parceiro de dados** para ativação de públicos para os destinos de mídia paga desejados.
+6. Se necessário, trabalhe com a **parceiro de dados** para a ativação de públicos para os destinos de mídia paga desejados.
 7. O Adobe Journey Optimizer verifica o consentimento e envia as várias ações configuradas.
 
 >[!TAB Jornada de carrinho abandonada]
 
-Esta jornada de carrinho abandonada destina-se a produtos que foram colocados no carrinho, mas não comprados no site e no aplicativo. Usado para iniciar e parar campanhas de mídia paga
+A jornada do carrinho abandonado tem como alvo os produtos que foram colocados no carrinho, mas que ainda não foram comprados no site e no aplicativo. Além disso, as campanhas de Mídia paga são iniciadas e interrompidas usando esse método.
 
 ![O cliente abandonou a visão geral de alto nível da jornada do carrinho.](../intelligent-re-engagement/images/abandoned-cart-journey.png)
 
-1. Os dados são agregados ao SDK da Web/SDK móvel/assimilação da API da rede de borda por meio da rede de borda (método preferencial).
+1. Os dados são agregados ao SDK da Web, SDK móvel ou assimilação da API da rede de borda por meio da rede de borda (o método preferido).
 2. Como um **cliente**, você cria conjuntos de dados marcados para [!UICONTROL Perfil].
 3. Como um **cliente**, você carrega perfis no Real-Time CDP e cria políticas de governança para garantir um uso responsável.
 4. Como um **cliente**, você cria públicos-alvo focados a partir da lista de perfis para verificar se uma **usuário** colocou um item no carrinho, mas não concluiu a compra. A variável **[!UICONTROL Adicionar ao carrinho]** O evento inicia um temporizador que aguarda 30 minutos e verifica a compra. Se nenhuma compra tiver sido feita, a variável **usuário** é adicionado à **[!UICONTROL Abandonar carrinho]** públicos-alvo.
 5. Como um **cliente**, você criará uma jornada de carrinho abandonada no Adobe Journey Optimizer
-6. Se necessário, trabalhe com a **parceiro de dados** para ativação de públicos para os destinos de mídia paga desejados.
+6. Se necessário, trabalhe com a **parceiro de dados** para a ativação de públicos para os destinos de mídia paga desejados.
 7. O Adobe Journey Optimizer verifica o consentimento e envia as várias ações configuradas.
 
 >[!TAB Jornada de confirmação de pedido]
 
-Esta jornada de confirmação de pedido destina-se às compras de produtos no site e no aplicativo.
+A jornada de confirmação de pedido se concentra nas compras de produtos feitas pelo site e pelo aplicativo móvel.
 
 ![Visão geral visual de alto nível da jornada de confirmação de pedido do cliente.](../intelligent-re-engagement/images/order-confirmation-journey.png)
 
-1. Os dados são agregados ao SDK da Web/SDK móvel/assimilação da API da rede de borda por meio da rede de borda (método preferencial).
+1. Os dados são agregados ao SDK da Web, SDK móvel ou assimilação da API da rede de borda por meio da rede de borda (o método preferido).
 2. Como um **cliente**, você cria conjuntos de dados marcados para [!UICONTROL Perfil].
 3. Como um **cliente**, você carrega perfis no Real-Time CDP e cria políticas de governança para garantir um uso responsável.
 4. Como um **cliente**, você cria públicos-alvo focados a partir da lista de perfis para verificar se uma **usuário** fez uma compra.
@@ -80,41 +82,36 @@ Esta jornada de confirmação de pedido destina-se às compras de produtos no si
 
 ## Como atingir o caso de uso: instruções passo a passo {#step-by-step-instructions}
 
-Leia as seções abaixo, que incluem links para documentação adicional e conclua cada uma das etapas das visões gerais de alto nível acima.
+Para concluir cada uma das etapas das visões gerais de alto nível acima, leia as seções abaixo, que oferecem links para mais informações e instruções mais detalhadas.
 
 ### Funcionalidade e elementos da interface do usuário que você usará {#ui-functionality-and-elements}
 
-Ao concluir as etapas para implementar o caso de uso, você usará a seguinte funcionalidade do Real-Time CDP e os elementos da interface do usuário (listados na ordem em que serão usados). Verifique se você tem as permissões de controle de acesso baseadas em atributos necessárias para todas essas áreas ou peça ao administrador do sistema para conceder as permissões necessárias.
-
-* [Esquemas](/help/xdm/home.md)
-* [Perfis](/help/profile/home.md)
-* [Conjuntos de dados](/help/catalog/datasets/overview.md)
-* [Públicos-alvo](/help/segmentation/home.md)
-* [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)
-* [Destinos](/help/destinations/home.md)
+Ao concluir as etapas para implementar o caso de uso, você usará a funcionalidade do Real-Time CDP e os elementos da interface do usuário listados no início deste documento. Verifique se você tem as permissões de controle de acesso baseadas em atributos necessárias para todas essas áreas ou peça ao administrador do sistema para conceder as permissões necessárias.
 
 ### Criar um design de esquema e especificar grupos de campos
 
-Os recursos do Experience Data Model (XDM) são gerenciados no [!UICONTROL Esquemas] espaço de trabalho no Adobe Experience Platform. Você pode visualizar e explorar os recursos principais fornecidos pela Adobe e criar recursos e esquemas personalizados para sua organização.
+Os recursos do Experience Data Model (XDM) são gerenciados no [!UICONTROL Esquemas] espaço de trabalho no Adobe Experience Platform. Você pode visualizar e explorar os recursos principais fornecidos pelo Adobe e criar recursos e esquemas personalizados para sua organização.
 
-Para criar um schema, conclua as etapas abaixo:
+<!--
+To create a schema, complete the steps below:
 
-1. Navegue até **[!UICONTROL Gerenciamento de dados]** > **[!UICONTROL Esquemas]** e selecione **[!UICONTROL Criar esquema]**.
-2. Selecionar **[!UICONTROL Perfil individual XDM]/[!UICONTROL XDM ExperienceEvent]**.
-3. Navegue até **[!UICONTROL Grupos de campos]** e selecione **[!UICONTROL Adicionar]**.
-4. Use a caixa de pesquisa para localizar e selecionar o grupo de campos e selecione **[!UICONTROL Adicionar grupos de campos]**.
-5. Dê um nome ao esquema e, opcionalmente, uma descrição.
-6. Selecione **[!UICONTROL Salvar]**.
+1. Navigate to **[!UICONTROL Data Management]** > **[!UICONTROL Schemas]** and select **[!UICONTROL Create schema]**.
+2. Select **[!UICONTROL XDM Individual Profile]/[!UICONTROL XDM ExperienceEvent]**.
+3. Navigate to **[!UICONTROL Field groups]** and select **[!UICONTROL Add]**.
+4. Use the search box to find and select the field group, then select **[!UICONTROL Add field groups]**.
+5. Give your schema a name and optionally a description.
+6. Select **[!UICONTROL Save]**.
 
-![Uma gravação das etapas para criar um schema.](../intelligent-re-engagement/images/create-a-schema.gif)
+![A recording of the steps to create a schema.](../intelligent-re-engagement/images/create-a-schema.gif) 
+-->
 
 Para obter mais informações sobre como criar schemas, leia a [criar tutorial de esquema.](/help/xdm/tutorials/create-schema-ui.md)
 
 Há quatro designs de esquema usados para a jornada de reengajamento. Cada esquema requer a configuração de campos específicos, bem como de alguns campos altamente sugeridos.
 
-#### Requisitos do grupo de campos para o esquema de atributos do cliente
+#### Esquema de atributos do cliente
 
-O esquema de atributos do cliente é um [!UICONTROL Perfil individual XDM] esquema, contendo os seguintes grupos de campos:
+O esquema de atributos do cliente é representado por um [!UICONTROL Perfil individual XDM] que inclui os seguintes grupos de campos:
 
 +++Detalhes de contato pessoal (grupo de campos)
 
@@ -165,11 +162,13 @@ Este grupo de campos é usado para prática recomendada.
 
 +++
 
-![Esquema de atributos do cliente destacando a lista de grupos de campos.](../intelligent-re-engagement/images/customer-attributes.png)
+<!--
+![Customer attributes schema highlighting the list of field groups.](../intelligent-re-engagement/images/customer-attributes.png) 
+-->
 
-#### Requisitos do grupo de campos para o esquema de transações digitais do cliente
+#### Esquema de transações digitais do cliente
 
-O esquema de transações digitais do cliente é um [!UICONTROL XDM ExperienceEvent] esquema, contendo os seguintes grupos de campos:
+O schema de transações digitais do cliente é representado por um [!UICONTROL XDM ExperienceEvent] que inclui os seguintes grupos de campos:
 
 +++ExperienceEvent do SDK da Web do Adobe Experience Platform (Grupo de campos)
 
@@ -260,11 +259,13 @@ Atributos de auditoria do sistema de origem externa é um tipo de dados padrão 
 
 +++
 
-![Esquema de transações digitais do cliente destacando a lista de grupos de campos.](../intelligent-re-engagement/images/customer-digital-transactions.png)
+<!--
+![Customer digital transactions schema highlighting the list of field groups.](../intelligent-re-engagement/images/customer-digital-transactions.png) 
+-->
 
-#### Requisitos do grupo de campos para o esquema de transações offline do cliente
+#### Esquema de transações offline do cliente
 
-O esquema de transações offline do cliente é um [!UICONTROL XDM ExperienceEvent] esquema, contendo os seguintes grupos de campos:
+O schema de transações offline do cliente é representado por um [!UICONTROL XDM ExperienceEvent] que inclui os seguintes grupos de campos:
 
 +++Detalhes do comércio (Grupo de campos)
 
@@ -307,11 +308,13 @@ Atributos de auditoria do sistema de origem externa é um tipo de dados padrão 
 
 +++
 
-![Esquema de transações offline do cliente destacando a lista de grupos de campos.](../intelligent-re-engagement/images/customer-offline-transactions.png)
+<!--
+![Customer offline transactions schema highlighting the list of field groups.](../intelligent-re-engagement/images/customer-offline-transactions.png) 
+-->
 
-#### Requisitos do grupo de campos para o esquema do conector web do Adobe
+#### Esquema do conector web do Adobe
 
-O esquema do conector da Web do Adobe é um [!UICONTROL XDM ExperienceEvent] esquema, contendo os seguintes grupos de campos:
+O esquema do conector web Adobe é representado por um [!UICONTROL XDM ExperienceEvent] que inclui os seguintes grupos de campos:
 
 +++Modelo de evento de experiência do Adobe Analytics (grupo de campos)
 
@@ -377,25 +380,34 @@ Atributos de auditoria do sistema de origem externa é um tipo de dados padrão 
 
 +++
 
-![Esquema do conector da Web do Adobe que destaca a lista de grupos de campos.](../intelligent-re-engagement/images/adobe-web-connector.png)
+<!--
+![Adobe web connector schema highlighting the list of field groups.](../intelligent-re-engagement/images/adobe-web-connector.png) 
+-->
 
 ### Criar um conjunto de dados a partir de um esquema
 
-Um conjunto de dados é uma construção de armazenamento e gerenciamento para uma coleção de dados, normalmente uma tabela, que contém um esquema (colunas) e campos (linhas). Para jornadas inteligentes de reengajamento, cada esquema terá um conjunto de dados.
+Um conjunto de dados é uma estrutura de armazenamento e gerenciamento para um grupo de dados, geralmente uma tabela com campos (linhas) e um esquema (colunas). Cada esquema para jornadas inteligentes de reengajamento terá um único conjunto de dados.
 
-Para criar um conjunto de dados a partir de um esquema, conclua as etapas abaixo:
+Para obter mais informações sobre como criar um conjunto de dados a partir de um esquema, leia a [Guia da interface do usuário de conjuntos de dados](/help/catalog/datasets/user-guide.md).
+<!-- 
+To create a dataset from a schema, complete the steps below:
 
-1. Navegue até **[!UICONTROL Gerenciamento de dados]** > **[!UICONTROL Conjuntos de dados]** e selecione **[!UICONTROL Criar conjunto de dados]**.
-2. Selecione **[!UICONTROL Criar conjunto de dados a partir do esquema]**.
-3. Selecione o esquema de reengajamento relevante que você criou.
-4. Dê um nome e, opcionalmente, uma descrição ao conjunto de dados.
-5. Selecione **[!UICONTROL Concluir]**.
+1. Navigate to **[!UICONTROL Data Management]** > **[!UICONTROL Datasets]** and select **[!UICONTROL Create dataset]**.
+2. Select **[!UICONTROL Create dataset from schema]**.
+3. Select the relevant re-engagement schema you created.
+4. Give your dataset a name and optionally a description.
+5. Select **[!UICONTROL Finish]**.
 
-![Uma gravação das etapas para criar um conjunto de dados a partir de um esquema.](../intelligent-re-engagement/images/dataset-from-schema.gif)
+![A recording of the steps to create a dataset from a schema.](../intelligent-re-engagement/images/dataset-from-schema.gif)
+-->
 
-Observe que, semelhante à etapa para criar um esquema, é necessário ativar o conjunto de dados para ser incluído no Perfil do cliente em tempo real. Para obter mais informações sobre como ativar o conjunto de dados para uso no Perfil do cliente em tempo real, leia o [criar tutorial de esquema.](/help/xdm/tutorials/create-schema-ui.md#profile)
+>Observação
+>
+>Semelhante à etapa para criar um esquema, é necessário ativar o conjunto de dados para ser incluído no Perfil do cliente em tempo real. Para obter mais informações sobre como ativar o conjunto de dados para uso no Perfil do cliente em tempo real, leia o [criar tutorial de esquema.](/help/xdm/tutorials/create-schema-ui.md#profile).
 
-![Ativar conjunto de dados para perfil.](../intelligent-re-engagement/images/enable-dataset-for-profile.png)
+<!-- 
+![Enable dataset for profile.](../intelligent-re-engagement/images/enable-dataset-for-profile.png)
+-->
 
 ### Privacidade, consentimento e governança de dados
 
@@ -405,7 +417,7 @@ Observe que, semelhante à etapa para criar um esquema, é necessário ativar o 
 >
 >Oferecer aos clientes a capacidade de cancelar a inscrição para receber comunicações de uma marca é um requisito legal, bem como garantir que essa escolha seja respeitada. Saiba mais sobre a legislação aplicável na [documentação da Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/privacy/regulations/overview.html).
 
-As seguintes políticas de consentimento precisam ser consideradas e usadas ao configurar uma jornada de reengajamento:
+Ao criar um caminho de reengajamento, as seguintes políticas de consentimento devem ser consideradas e usadas:
 
 * Se consents.marketing.email.val = &quot;Y&quot;, poderá enviar um email
 * Se consents.marketing.sms.val = &quot;Y&quot;, então Pode SMS
@@ -415,15 +427,14 @@ As seguintes políticas de consentimento precisam ser consideradas e usadas ao c
 
 #### Rótulo e aplicação do DULE
 
-O endereço de email pessoal é usado como dados diretamente identificáveis que podem ser usados para identificar ou entrar em contato com uma pessoa específica, em vez de com um dispositivo.
+Os endereços de email pessoais são utilizados como dados diretos identificáveis usados para identificar ou entrar em contato com um indivíduo específico, em vez de com um dispositivo.
 
 * personalEmail.address = I1
 
 #### Políticas de marketing
 
-Não há políticas de marketing adicionais para as jornadas de reengajamento, no entanto, as seguintes opções devem ser consideradas conforme desejado:
+Não há políticas de marketing adicionais necessárias para as jornadas de reengajamento, no entanto, as seguintes opções devem ser consideradas conforme desejado:
 
-* Considere como desejado
 * Restringir Dados Confidenciais
 * Restringir publicidade no local
 * Restringir o direcionamento de email
@@ -432,22 +443,26 @@ Não há políticas de marketing adicionais para as jornadas de reengajamento, n
 
 ### Criar um público-alvo
 
-Para criar um público-alvo, conclua as etapas abaixo:
+<!--
+To create an audience, complete the steps below:
 
-1. Navegue até **[!UICONTROL Cliente]** > **[!UICONTROL Públicos-alvo]** e selecione **[!UICONTROL Criar público]**.
-2. Selecionar **[!UICONTROL Criar regra]** e selecione **[!UICONTROL Criar]**.
-3. Navegue até **[!UICONTROL Campo]** e selecione **[!UICONTROL Eventos]** guia.
-4. Navegue ou use a caixa de pesquisa para localizar o tipo de evento e arraste-o para o construtor. Finalmente, adicione as regras de evento arrastando os tipos de evento.
-5. Dê um nome ao esquema e, opcionalmente, uma descrição.
-6. Selecione **[!UICONTROL Salvar]**.
+1. Navigate to **[!UICONTROL Customer]** > **[!UICONTROL Audiences]** and select **[!UICONTROL Create audience]**.
+2. Select **[!UICONTROL Build rule]** and select **[!UICONTROL Create]**.
+3. Navigate to **[!UICONTROL Field]** and select **[!UICONTROL Events]** tab.
+4. Navigate or use the search box to find the event type, then drag this to the builder. Finally add event rules by dragging event types.
+5. Give your schema a name and optionally a description.
+6. Select **[!UICONTROL Save]**.
 
-![Uma gravação das etapas para criar um público-alvo.](../intelligent-re-engagement/images/create-an-audience.gif)
-
-Para obter mais informações sobre como criar públicos-alvo, leia a [Guia da interface do usuário do Audience Builder](/help/segmentation/ui/segment-builder.md).
+![A recording of the steps to create an audience.](../intelligent-re-engagement/images/create-an-audience.gif)
+-->
 
 #### Criação de público-alvo para jornadas de reengajamento da marca
 
-Os públicos-alvo de cada jornada de reengajamento precisam ser configurados com eventos específicos para qualificação de segmento. Essas especificações podem ser encontradas abaixo nas guias correspondentes para cada jornada.
+As jornadas de reengajamento usam públicos para definir atributos ou comportamentos específicos compartilhados por um subconjunto de perfis da sua loja de perfis para distinguir um grupo comercializável de pessoas da sua base de clientes. Os públicos-alvo podem ser criados de duas maneiras diferentes no Adobe Experience Platform: diretamente compostos como públicos-alvo ou por meio de definições de segmentos derivadas da plataforma.
+
+Para obter mais informações sobre como compor públicos diretamente, leia a [Guia da interface do usuário da Composição de público-alvo](/help/segmentation/ui/audience-composition.md).
+
+Para obter mais informações sobre como criar públicos-alvo por meio de definições de segmento derivadas da plataforma, leia a [Guia da interface do usuário do Audience Builder](/help/segmentation/ui/segment-builder.md).
 
 >[!BEGINTABS]
 
@@ -457,20 +472,22 @@ Os eventos a seguir são usados para a jornada de reengajamento, em que os usuá
 
 Inclua público que tenha pelo menos 1 EventType = ProductViews event THEN que tenha pelo menos 1 Qualquer evento em que (EventType não é igual a commerce.productListAdds) e ocorra nas últimas 24 horas e, depois de 3 dias, não tenha nenhum evento em que (EventType = application.launch ou web.webpagedetails.pageViews ou commerce.purchases) e ocorra nos últimos 2 dias.
 
-![Uma captura de tela do público-alvo de reengajamento mostrando o conjunto de regras.](../intelligent-re-engagement/images/re-engagement-audience.png)
+<!--
+![A screenshot of the re-engagement audience showing the set of rules.](../intelligent-re-engagement/images/re-engagement-audience.png) 
+-->
 
 >[!TAB Jornada de carrinho abandonada]
 
 Os eventos a seguir são usados para perfis que adicionaram um produto ao carrinho, mas não concluíram a compra ou limparam o carrinho nas últimas 24 horas.
 
-inclua EventType = commerce.productListAdds entre 30 minutos e 1440 minutos antes de agora.
+Inclua EventType = commerce.productListAdds entre 30 minutos e 1440 minutos antes de agora.
 excluir EventType = commerce.purchases 30 minutos antes OU EventType = commerce.productListRemovals E ID do carrinho é igual a Lista de produtos Adiciona1 ID do carrinho (o evento de inclusão).
 
-![Uma captura de tela do público-alvo de reengajamento mostrando o conjunto de regras.](../intelligent-re-engagement/images/abandoned-cart-audience.png)
+<!--
+![A screenshot of the re-engagement audience showing the set of rules.](../intelligent-re-engagement/images/abandoned-cart-audience.png) 
+-->
 
 >[!ENDTABS]
-
-Para obter mais informações sobre a criação de públicos-alvo, leia a [Guia da interface do usuário do Audience Builder](/help/segmentation/ui/segment-builder.md).
 
 ### Configuração do Jornada no Adobe Journey Optimizer
 
@@ -478,13 +495,15 @@ Para obter mais informações sobre a criação de públicos-alvo, leia a [Guia 
 >
 >O Adobe Journey Optimizer não abrange tudo o que é mostrado nos diagramas na parte superior desta página. Todos os anúncios de mídia paga são criados no [!UICONTROL Destinos].
 
-Informações específicas são necessárias para as várias jornadas que cada caso de uso pode ter. Os dados específicos necessários para cada ramificação de Jornada podem ser encontrados abaixo nas guias correspondentes.
+O Adobe Journey Optimizer ajuda você a fornecer experiências conectadas, contextuais e personalizadas aos seus clientes. A jornada do cliente envolve todo o processo de interação do cliente com a marca. Cada caso de uso pode ter várias jornadas diferentes, cada uma exigindo informações específicas. Os dados precisos necessários para cada ramificação de Jornada estão listados abaixo.
 
 >[!BEGINTABS]
 
 >[!TAB Jornada de reengajamento]
 
-![Visão geral da jornada de reengajamento do cliente no Adobe Journey Optimizer](../intelligent-re-engagement/images/re-engagement-ajo.png)
+<!--
+![Customer re-engagemnt journey in Adobe Journey Optimizer overview](../intelligent-re-engagement/images/re-engagement-ajo.png) 
+-->
 
 +++Eventos
 
@@ -612,7 +631,9 @@ Informações específicas são necessárias para as várias jornadas que cada c
 
 >[!TAB Jornada de carrinho abandonada]
 
-![Visão geral da jornada de carrinho abandonado do cliente na Adobe Journey Optimizer](../intelligent-re-engagement/images/abandoned-cart-ajo.png)
+<!--
+![Customer abandoned cart journey in Adobe Journey Optimizer overview](../intelligent-re-engagement/images/abandoned-cart-ajo.png) 
+-->
 
 +++Eventos
 
@@ -741,7 +762,9 @@ Informações específicas são necessárias para as várias jornadas que cada c
 
 >[!TAB Jornada de confirmação de pedido]
 
-![Visão geral da jornada de confirmação de pedido do cliente na Adobe Journey Optimizer](../intelligent-re-engagement/images/order-confirmation-ajo.png)
+<!--
+![Customer order confirmation journey in Adobe Journey Optimizer overview](../intelligent-re-engagement/images/order-confirmation-ajo.png) 
+-->
 
 +++Eventos
 

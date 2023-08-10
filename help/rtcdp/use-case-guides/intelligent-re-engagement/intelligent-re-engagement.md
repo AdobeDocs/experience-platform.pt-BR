@@ -3,9 +3,9 @@ title: Reengajamento inteligente
 description: Ofereça experiências atraentes e conectadas durante os principais momentos de conversão para reengajar clientes pouco frequentes de forma inteligente.
 hide: true
 hidefromtoc: true
-source-git-commit: 7ff623626b557cbf67ad6164157d1a5ef4820cb1
+source-git-commit: 8b38114e600986979728e1c4e36245ff0aa3be65
 workflow-type: tm+mt
-source-wordcount: '3259'
+source-wordcount: '3258'
 ht-degree: 5%
 
 ---
@@ -401,7 +401,7 @@ To create a dataset from a schema, complete the steps below:
 ![A recording of the steps to create a dataset from a schema.](../intelligent-re-engagement/images/dataset-from-schema.gif)
 -->
 
->Observação
+>[!NOTE]
 >
 >Semelhante à etapa para criar um esquema, é necessário ativar o conjunto de dados para ser incluído no Perfil do cliente em tempo real. Para obter mais informações sobre como ativar o conjunto de dados para uso no Perfil do cliente em tempo real, leia o [criar tutorial de esquema.](/help/xdm/tutorials/create-schema-ui.md#profile).
 

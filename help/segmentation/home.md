@@ -6,7 +6,7 @@ exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
 source-git-commit: 44c92e2163e2b6c0c140c64bba41dfbcc15d5d7f
 workflow-type: tm+mt
 source-wordcount: '1633'
-ht-degree: 8%
+ht-degree: 11%
 
 ---
 
@@ -57,7 +57,7 @@ Para obter informações sobre como criar definições de segmento usando a API,
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation"
 >title="Métodos de avaliação"
->abstract="Atualmente, a Platform oferece suporte a três métodos de avaliação de públicos-alvo: segmentação por transmissão, segmentação em lote e segmentação de borda."
+>abstract="Atualmente, a Platform aceita três métodos de avaliação de públicos-alvo: segmentação de transmissão, segmentação em lote e segmentação de borda."
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_streaming"
@@ -65,7 +65,7 @@ Para obter informações sobre como criar definições de segmento usando a API,
 >abstract="A segmentação por transmissão é um processo contínuo de seleção de dados que atualiza os públicos-alvo em resposta à atividade do usuário."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/api/streaming-segmentation.html?lang=pt-BR" text="Avaliar eventos em tempo quase real com a segmentação de transmissão"
 
-Atualmente, a Platform oferece suporte a três métodos de avaliação de públicos-alvo: segmentação por transmissão, segmentação em lote e segmentação de borda.
+Atualmente, a Platform aceita três métodos de avaliação de públicos-alvo: segmentação de transmissão, segmentação em lote e segmentação de borda.
 
 ### Segmentação de transmissão {#streaming}
 

@@ -3,9 +3,9 @@ keywords: Experience Platform;página inicial;tópicos populares;fontes;conector
 title: Configurar as especificações de exploração para Fontes de autoatendimento (SDK em lote)
 description: Este documento fornece uma visão geral das configurações que você precisa preparar para usar as Fontes de autoatendimento (SDK em lote).
 exl-id: 423a7e56-9dd1-4071-bd26-ee4f9f206122
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '255'
+source-wordcount: '254'
 ht-degree: 1%
 
 ---
@@ -84,4 +84,4 @@ Explorar especificações define os parâmetros necessários para explorar e ins
 
 ## Próximas etapas
 
-Com suas especificações de exploração preenchidas, você pode prosseguir para criar uma especificação de conexão completa usando o [!DNL Flow Service] API. Consulte o [Guia da API de fontes de autoatendimento (SDK em lote)](../api/api-overview.md) para obter mais informações.
+Com suas especificações de exploração preenchidas, você pode prosseguir para criar uma especificação de conexão completa usando o [!DNL Flow Service] API. Consulte a [Guia da API de fontes de autoatendimento (SDK em lote)](../api/api-overview.md) para obter mais informações.

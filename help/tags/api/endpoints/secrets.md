@@ -2,9 +2,9 @@
 title: Ponto de extremidade secreto
 description: Saiba como fazer chamadas para o endpoint /segredos na API do Reator.
 exl-id: 76875a28-5d13-402d-8543-24db7e2bee8e
-source-git-commit: 24e79c14268b9eab0e8286eb8cd1352c1dfcd1b6
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1247'
+source-wordcount: '1246'
 ht-degree: 12%
 
 ---
@@ -302,7 +302,7 @@ Você pode criar um segredo fazendo uma solicitação POST.
 
 >[!NOTE]
 >
->Ao criar um novo segredo, a API retorna uma resposta imediata que contém informações desse recurso. Ao mesmo tempo, uma tarefa de troca de segredos é acionada para testar se a troca de credenciais está funcionando. Essa tarefa é processada de forma assíncrona e atualiza o atributo de status do segredo para `succeeded` ou `failed` dependendo do resultado.
+>Ao criar um novo segredo, a API retorna uma resposta imediata que contém informações desse recurso. Ao mesmo tempo, uma tarefa de troca de segredos é acionada para testar se a troca de credenciais está funcionando. Esta tarefa é processada de forma assíncrona e atualiza o atributo de status do segredo para `succeeded` ou `failed` dependendo do resultado.
 
 **Formato da API**
 

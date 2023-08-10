@@ -1,9 +1,9 @@
 ---
 description: Saiba como configurar o esquema de parceiro para destinos criados com o Destination SDK.
 title: Configuração de esquema de parceiro
-source-git-commit: ca4fb2dce097197aa1a97e0716e6294546bfee38
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1898'
+source-wordcount: '1897'
 ht-degree: 4%
 
 ---
@@ -47,7 +47,7 @@ Consulte a tabela abaixo para obter detalhes sobre quais tipos de integrações 
 
 O Destination SDK suporta várias configurações de esquema:
 
-* Os esquemas estáticos são definidos por meio da variável `profileFields` matriz no `schemaConfig` seção. Em um esquema estático, você define cada atributo de destino que deve ser mostrado na interface do usuário do Experience Platform na `profileFields` matriz. Se precisar atualizar seu esquema, você deve [atualizar a configuração de destino](../../authoring-api/destination-configuration/update-destination-configuration.md).
+* Os esquemas estáticos são definidos por meio da variável `profileFields` matriz no `schemaConfig` seção. Em um esquema estático, você define cada atributo de destino que deve ser mostrado na interface do usuário do Experience Platform na variável `profileFields` matriz. Se precisar atualizar seu esquema, você deve [atualizar a configuração de destino](../../authoring-api/destination-configuration/update-destination-configuration.md).
 * Os esquemas dinâmicos usam um tipo de servidor de destino adicional, chamado de [servidor de esquema dinâmico](../../authoring-api/destination-server/create-destination-server.md#dynamic-schema-servers), para recuperar dinamicamente os atributos de destino compatíveis e gerar esquemas com base em sua própria API. Os esquemas dinâmicos não usam o `profileFields` matriz. Se precisar atualizar o esquema, não há necessidade de [atualizar a configuração de destino](../../authoring-api/destination-configuration/update-destination-configuration.md). Em vez disso, o servidor de esquema dinâmico recupera o esquema atualizado da API.
 * Na configuração do esquema, você tem a opção de adicionar mapeamentos necessários (ou predefinidos). Esses são mapeamentos que os usuários podem visualizar na interface do usuário da Platform, mas não podem modificá-los ao configurar uma conexão com o seu destino. Por exemplo, é possível impor que o campo de endereço de email sempre seja enviado ao destino.
 
@@ -106,7 +106,7 @@ Para criar um esquema estático com atributos de perfil, defina os atributos de 
 | `segmentRequired` | Booleano | Obrigatório | Este parâmetro é requerido pelo Destination SDK e sempre deve ser definido como `true`. |
 | `identityRequired` | Booleano | Obrigatório | Defina como `true` se os usuários devem ser capazes de mapear [tipos de identidade](identity-namespace-configuration.md) de Experience Platform para os atributos definidos na variável `profileFields` matriz . |
 | `segmentNamespaceAllowList` | Matriz | Opcional | Define namespaces de público-alvo específicos a partir dos quais os usuários podem mapear públicos-alvo para o destino. Use esse parâmetro para restringir os usuários do Platform a exportar públicos-alvo somente dos namespaces de público-alvo definidos na matriz. Este parâmetro não pode ser usado junto com `segmentNamespaceDenyList`.<br> <br> Exemplo: `"segmentNamespaceAllowList": ["AudienceManager"]` permitirá que os usuários mapeiem apenas os públicos-alvo da `AudienceManager` para este destino. <br> <br> Para permitir que os usuários exportem qualquer público para o seu destino, você pode ignorar esse parâmetro. <br> <br> Se ambos `segmentNamespaceAllowList` e `segmentNamespaceDenyList` estiverem ausentes na sua configuração, os usuários só poderão exportar públicos-alvo originários da [Serviço de segmentação](../../../../segmentation/home.md). |
-| `segmentNamespaceDenyList` | Matriz | Opcional | Restringe os usuários no mapeamento de públicos-alvo para o destino, a partir dos namespaces de público-alvo definidos na matriz. Não pode ser usado com `segmentNamespaceAllowed`. <br> <br> Exemplo: `"segmentNamespaceDenyList": ["AudienceManager"]` bloquearão os usuários de mapear públicos-alvo da `AudienceManager` para este destino. <br> <br> Para permitir que os usuários exportem qualquer público para o seu destino, você pode ignorar esse parâmetro. <br> <br> Se ambos `segmentNamespaceAllowed` e `segmentNamespaceDenyList` estiverem ausentes na sua configuração, os usuários só poderão exportar públicos-alvo originários da [Serviço de segmentação](../../../../segmentation/home.md). <br> <br> Para permitir a exportação de todos os públicos-alvo, independentemente da origem, defina `"segmentNamespaceDenyList":[]`. |
+| `segmentNamespaceDenyList` | Matriz | Opcional | Restringe os usuários no mapeamento de públicos-alvo para o destino, a partir dos namespaces de público-alvo definidos na matriz. Não pode ser usado com `segmentNamespaceAllowed`. <br> <br> Exemplo: `"segmentNamespaceDenyList": ["AudienceManager"]` bloquearão os usuários de mapear públicos-alvo da `AudienceManager` para este destino. <br> <br> Para permitir que os usuários exportem qualquer público para o seu destino, você pode ignorar esse parâmetro. <br> <br> Se ambos `segmentNamespaceAllowed` e `segmentNamespaceDenyList` estiverem ausentes na sua configuração, os usuários só poderão exportar públicos-alvo originários da [Serviço de segmentação](../../../../segmentation/home.md). <br> <br> Para permitir a exportação de todos os públicos, independentemente da origem, defina `"segmentNamespaceDenyList":[]`. |
 
 {style="table-layout:auto"}
 

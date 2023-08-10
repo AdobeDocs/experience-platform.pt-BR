@@ -4,9 +4,9 @@ feature: Attribution AI
 title: Guia da interface do Attribution AI
 description: Este documento serve como um guia para interagir com o Attribution AI na interface do usuário dos Serviços inteligentes.
 exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
-source-git-commit: 66d20dc1141ff33211635ba74d320350f8b27fb7
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '2443'
+source-wordcount: '2442'
 ht-degree: 1%
 
 ---

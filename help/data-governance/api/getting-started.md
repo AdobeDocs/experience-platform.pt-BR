@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Introdução à API de serviço de política
 description: A API de serviço de política permite criar e gerenciar vários recursos relacionados à Governança de dados do Adobe Experience Platform. Este documento fornece uma introdução aos conceitos principais que você precisa saber antes de tentar fazer chamadas para a API do serviço de política.
 exl-id: 5539976c-8433-45af-a147-2ab82ae308b2
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '443'
+source-wordcount: '442'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ A variável [!DNL Policy Service] A API permite criar e gerenciar vários recurs
 
 ## Pré-requisitos
 
-O uso do guia do desenvolvedor requer um entendimento prático dos vários [!DNL Experience Platform] serviços envolvidos no trabalho com os recursos de governança de dados. Antes de começar a trabalhar com o [!DNL Policy Service API], consulte a documentação dos seguintes serviços:
+O uso do guia do desenvolvedor requer uma compreensão funcional dos vários [!DNL Experience Platform] serviços envolvidos no trabalho com os recursos de governança de dados. Antes de começar a trabalhar com o [!DNL Policy Service API], consulte a documentação dos seguintes serviços:
 
 * [Governança de dados](../home.md): a estrutura pela qual [!DNL Experience Platform] aplica a conformidade com o uso de dados.
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): o quadro normalizado pelo qual [!DNL Experience Platform] organiza os dados de experiência do cliente.

@@ -1,9 +1,9 @@
 ---
 description: Saiba como definir as configurações de metadados de público-alvo para destinos criados com o Destination SDK.
 title: Configuração de metadados de público
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '406'
+source-wordcount: '405'
 ht-degree: 2%
 
 ---

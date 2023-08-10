@@ -3,9 +3,9 @@ title: Criar uma conexão de origem e um fluxo de dados Customer.io na interface
 description: Saiba como criar uma conexão de origem Customer.io usando a interface do Adobe Experience Platform.
 badge: Beta
 exl-id: 7655a34c-808a-46e3-94e3-022a433755a4
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1233'
+source-wordcount: '1232'
 ht-degree: 1%
 
 ---
@@ -98,7 +98,7 @@ Quando terminar, selecione **[!UICONTROL Próxima]**.
 
 A variável [!UICONTROL Mapeamento] é exibida, fornecendo uma interface para mapear os campos de origem do esquema de origem para os campos XDM de destino apropriados no esquema de destino.
 
-A Platform fornece recomendações inteligentes para campos mapeados automaticamente com base no esquema ou conjunto de dados de destino selecionado. Você pode ajustar manualmente as regras de mapeamento para atender aos seus casos de uso. Com base nas suas necessidades, você pode optar por mapear campos diretamente ou usar funções de preparação de dados para transformar dados de origem para derivar valores calculados ou calculados. Para obter etapas abrangentes sobre o uso da interface do mapeador e campos calculados, consulte o [Guia da interface de preparação de dados](../../../../../data-prep/ui/mapping.md).
+A Platform fornece recomendações inteligentes para campos mapeados automaticamente com base no esquema ou conjunto de dados de destino selecionado. Você pode ajustar manualmente as regras de mapeamento para atender aos seus casos de uso. Com base nas suas necessidades, você pode optar por mapear campos diretamente ou usar funções de preparação de dados para transformar dados de origem para derivar valores calculados ou calculados. Para obter etapas abrangentes sobre como usar a interface do mapeador e campos calculados, consulte [Guia da interface de preparação de dados](../../../../../data-prep/ui/mapping.md).
 
 Todos os mapeamentos listados abaixo são obrigatórios e devem ser configurados antes de prosseguir para a [!UICONTROL Revisão] estágio.
 
@@ -156,7 +156,7 @@ No [!DNL Customer.io] interface do usuário, insira seu [URL do webhook](#get-st
 
 >[!TIP]
 >
->Você pode assinar uma variedade de eventos diferentes para seu webhook de relatórios. A mensagem de cada evento será assimilada na Platform quando um [!DNL Customer.io] o critério do acionador de evento de ação foi atendido. Para obter mais informações sobre os diferentes eventos, consulte a seção [[!DNL Customer.io] documentação de eventos](https://customer.io/docs/webhooks/#events).
+>Você pode assinar uma variedade de eventos diferentes para seu webhook de relatórios. A mensagem de cada evento será assimilada na Platform quando um [!DNL Customer.io] o critério do acionador de evento de ação foi atendido. Para obter mais informações sobre os diferentes eventos, consulte a [[!DNL Customer.io] documentação de eventos](https://customer.io/docs/webhooks/#events).
 
 ## Próximas etapas {#next-steps}
 

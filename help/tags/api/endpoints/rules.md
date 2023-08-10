@@ -2,10 +2,10 @@
 title: Ponto de extremidade de regras
 description: Saiba como fazer chamadas para o ponto de extremidade /rules na API do reator.
 exl-id: 79ef4389-e4b7-461e-8579-16a1a78cdd43
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '898'
-ht-degree: 97%
+source-wordcount: '896'
+ht-degree: 95%
 
 ---
 

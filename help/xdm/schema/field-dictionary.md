@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Dicionário de campos do Experience Data Model (XDM)
 description: O Experience Data Model (XDM) define um conjunto de campos padrão que podem ser usados ao compor esquemas do Adobe Experience Platform. O uso desses campos resulta em um comportamento consistente entre os serviços da plataforma, pois todos os serviços que consomem XDM entenderão explicitamente as definições específicas fornecidas por esses campos.
 exl-id: 9e183305-cd6c-444d-bd0b-f0cba3bcbe4d
-source-git-commit: f4f4deda02c96e567cbd0815783f192d1c54096c
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '25233'
+source-wordcount: '25232'
 ht-degree: 5%
 
 ---
@@ -462,7 +462,7 @@ Você pode usar a funcionalidade de pesquisa no [!DNL Schema Editor] para exibir
 | xdm:subCategory | Subcategoria | A subcategorização específica da assinatura. | string |  | string | https://ns.adobe.com/experience/campaign/experienceevent-profile-subscriptions, https://ns.adobe.com/xdm/context/profile-subscriptions, https://ns.adobe.com/xdm/context/subscription |
 | xdm:subscriber | Assinante | O proprietário da assinatura. | objeto |  | objeto | https://ns.adobe.com/experience/campaign/experienceevent-profile-subscriptions, https://ns.adobe.com/xdm/context/profile-subscriptions, https://ns.adobe.com/xdm/context/subscription |
 | xdm:subscriptionDate | Data da assinatura | Data e hora em que o usuário final se inscreveu em um tópico de notificação. Um usuário final será inscrito se tiver uma Data de inscrição e a variável `unsubscriptiondetails/unsubscriptionDate` está vazio. | string | date-time | date-time | https://ns.adobe.com/experience/campaign/notificationsubscription, https://ns.adobe.com/experience/campaign/profile-all |
-| xdm:assinaturas | Subscrições | Assinaturas às quais este perfil tem direito, incluindo assinaturas encerradas, expiradas ou esgotadas. | matriz |  | matriz | https://ns.adobe.com/experience/campaign/experienceevent-profile-subscriptions, https://ns.adobe.com/xdm/context/profile-subscriptions |
+| xdm:subscriptions | Subscrições | Assinaturas às quais este perfil tem direito, incluindo assinaturas encerradas, expiradas ou esgotadas. | matriz |  | matriz | https://ns.adobe.com/experience/campaign/experienceevent-profile-subscriptions, https://ns.adobe.com/xdm/context/profile-subscriptions |
 | xdm:supplierName | Nome do Fornecedor | O distribuidor do produto. | string |  | string | https://ns.adobe.com/xdm/context/product |
 | xdm:syncedRemarketingAudiences | Segmentos sincronizados | Lista de entidades de redirecionamento de Pesquisa que foram sincronizadas com o [!DNL adCloud] parceiro para construir públicos-alvo na plataforma, como o RLSA para [!DNL Google] ou WCA para Facebook | matriz |  | matriz | https://ns.adobe.com/experience/adcloud-profile, https://ns.adobe.com/experience/adcloud/profile-all |
 | xdm:tags | Tags | As tags são usadas para indicar como os aliases representados por uma determinada fonte de dados devem ser interpretados pelos aplicativos que usam esses aliases.Exemplos:* `isAVID`: fontes de dados que representam [!DNL Analytics] IDs de visitante.* `isCRSKey`: as fontes de dados que representam aliases que devem ser usados como chaves no CRS. Tags são definidas quando a fonte de dados é criada, mas também são incluídas nas mensagens do pipeline ao fazer referência a uma determinada fonte de dados. | matriz |  | matriz | https://ns.adobe.com/experience/adcloud-experienceevent, https://ns.adobe.com/experience/analytics-experienceevent, https://ns.adobe.com/experience/campaign-experienceevent, https://ns.adobe.com/experience/campaign/experienceevent-all, https://ns.adobe.com/experience/campaign/offer-detail, https://ns.adobe.com/experience/target-experienceevent, https://ns.adobe.com/xdm/context/experienceevent-technical-details |

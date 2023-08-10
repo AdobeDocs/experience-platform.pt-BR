@@ -2,9 +2,9 @@
 title: Criar uma conexão de origem do Adobe Analytics na interface
 description: Saiba como criar uma conexão de origem do Adobe Analytics na interface do usuário para trazer dados do consumidor para o Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: b8764b4b39aba43687c7ac0540d392a3aa808df4
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '2299'
+source-wordcount: '2298'
 ht-degree: 6%
 
 ---
@@ -38,7 +38,6 @@ Este tutorial requer um entendimento prático dos seguintes componentes do Exper
 >
 >* Um fluxo de dados que faz um preenchimento retroativo de 13 meses de dados históricos do conjunto de relatórios no data lake. Esse fluxo de dados termina quando o preenchimento retroativo é concluído.
 >* Um fluxo de dados que envia dados em tempo real para o data lake e o [!DNL Real-Time Customer Profile]. Esse fluxo de dados é executado continuamente.
-
 
 Na interface do usuário da Platform, selecione **[!UICONTROL Origens]** na navegação à esquerda, para acessar a [!UICONTROL Origens] espaço de trabalho. A variável [!UICONTROL Catálogo] exibe uma variedade de fontes com as quais você pode criar uma conta.
 
@@ -267,7 +266,7 @@ A variável [!UICONTROL Revisão] é exibida, permitindo que você revise seu no
 
 ### Monitorar seu fluxo de dados
 
-Depois que o fluxo de dados for criado, você poderá monitorar os dados que estão sendo assimilados por meio dele. No [!UICONTROL Catálogo] , selecione **[!UICONTROL Fluxos de dados]** para exibir uma lista de fluxos estabelecidos associados à sua conta do Analytics.
+Depois que o fluxo de dados for criado, você poderá monitorar os dados que estão sendo assimilados por meio dele. No [!UICONTROL Catálogo] , selecione **[!UICONTROL Fluxos de dados]** para visualizar uma lista de fluxos estabelecidos associados à sua conta do Analytics.
 
 ![select-datafflows](../../../../images/tutorials/create/analytics/select-dataflows.png)
 

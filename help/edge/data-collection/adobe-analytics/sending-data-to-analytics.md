@@ -3,9 +3,9 @@ title: Envio de dados para a Adobe Analytics usando o SDK da Web da Adobe Experi
 description: Saiba como enviar dados para a Adobe Analytics usando o SDK da Web da Adobe Experience Platform.
 keywords: adobe analytics;analytics;sendEvent;s.t();s.tl();webPageDetails;pageViews;webInteraction;web Interaction;page views;rastreamento de links;links;rastrear links;clickCollection;coleção de cliques;
 exl-id: cec4a9eb-2079-4386-88da-9b995e0673e6
-source-git-commit: 0085306a2f5172eb19590cc12bc9645278bd2b42
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '162'
+source-wordcount: '161'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ Enquanto no passado havia diferentes funções para distinguir entre uma exibiç
 
 ## Envio de uma exibição de página
 
-Você pode especificar uma visualização de página definindo o `web.webPageDetails.pageViews.value=1` variável.
+É possível especificar uma visualização de página definindo a variável `web.webPageDetails.pageViews.value=1` variável.
 
 ```javascript
 alloy("sendEvent", {

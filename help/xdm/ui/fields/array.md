@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Definir campos de matriz na interface
 description: Saiba como definir um campo de matriz na interface do usuário do Experience Platform.
 exl-id: 9ac55554-c29b-40b2-9987-c8c17cc2c00c
-source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '363'
+source-wordcount: '362'
 ht-degree: 1%
 
 ---

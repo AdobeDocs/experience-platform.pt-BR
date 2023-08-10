@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Definir campos de identidade na interface
 description: Saiba como definir um campo de identidade na interface do usuário do Experience Platform.
 exl-id: 11a53345-4c3f-4537-b3eb-ee7a5952df2a
-source-git-commit: 857c1d4f74b6352e90f9c97ef22d686a883e3563
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '610'
+source-wordcount: '609'
 ht-degree: 5%
 
 ---

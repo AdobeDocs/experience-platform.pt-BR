@@ -4,9 +4,9 @@ title: Explorar, verificar e processar conjuntos de dados do painel usando o ser
 type: Documentation
 description: Saiba como usar o Serviço de consulta para explorar e processar conjuntos de dados brutos que potencializam o perfil, o público-alvo e os painéis de destino no Experience Platform.
 exl-id: 0087dcab-d5fe-4a24-85f6-587e9ae74fb8
-source-git-commit: 79966442f5333363216da17342092a71335a14f0
+source-git-commit: c431973100cc65d99d9466553fe6624ac2653d4b
 workflow-type: tm+mt
-source-wordcount: '964'
+source-wordcount: '946'
 ht-degree: 0%
 
 ---
@@ -82,11 +82,7 @@ Para entender o esquema completo do conjunto de dados de destino do DIM, você p
 
 ![Uma visualização do conjunto de dados DIM_Destination.](images/query/destinations-metadata.png)
 
-## (Beta) Relatórios de insights da Plataforma de dados do cliente (CDP)
-
->[!IMPORTANT]
->
->O recurso Modelos de dados do CDP Insights está na versão beta. Seus recursos e documentação estão sujeitos a alterações.
+## Relatórios de insights da Plataforma de dados do cliente (CDP)
 
 O recurso Modelos de dados de insights da CDP expõe o SQL que habilita os insights para vários widgets de perfil, destino e segmentação. Você pode personalizar esses modelos de consulta SQL para criar relatórios CDP para seus casos de uso de marketing e KPI.
 

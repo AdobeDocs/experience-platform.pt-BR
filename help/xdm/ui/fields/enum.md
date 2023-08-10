@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Definir campos de enumeração e valores sugeridos na interface
 description: Saiba como definir enumerações e valores sugeridos para campos de sequência na interface do usuário do Experience Platform.
 exl-id: 67ec5382-31de-4f8d-9618-e8919bb5a472
-source-git-commit: a3140d5216857ef41c885bbad8c69d91493b619d
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1257'
+source-wordcount: '1256'
 ht-degree: 8%
 
 ---
@@ -122,6 +122,6 @@ Devido às limitações atuais do sistema, há dois casos em que um enum não é
 
 ## Próximas etapas
 
-Este guia abordou como definir enumerações e valores sugeridos para campos de sequência na interface do usuário do. Para obter informações sobre como gerenciar enumerações e valores sugeridos usando a API do Registro de Esquema, consulte o seguinte [tutorial](../../tutorials/suggested-values.md).
+Este guia abordou como definir enumerações e valores sugeridos para campos de sequência na interface do usuário. Para obter informações sobre como gerenciar enumerações e valores sugeridos usando a API do Registro de Esquema, consulte o seguinte [tutorial](../../tutorials/suggested-values.md).
 
 Para saber como definir outros tipos de campo XDM na variável [!DNL Schema Editor], consulte a visão geral em [definição de campos na interface](./overview.md#special).

@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Grupo de campos de esquema de consentimentos e preferências
 description: Este documento fornece uma visão geral do grupo de campos de esquema Consentimentos e Preferências.
 exl-id: ec592102-a9d3-4cac-8b94-58296a138573
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '941'
+source-wordcount: '940'
 ht-degree: 0%
 
 ---
@@ -95,7 +95,6 @@ O JSON a seguir mostra um exemplo do tipo de dados que o [!UICONTROL Consentimen
 >* [Gerar dados de amostra na interface](../../ui/sample.md)
 >* [Gerar dados de amostra na API](../../api/sample-data.md)
 
-
 ### `idSpecific`
 
 `idSpecific` O pode ser usado quando um consentimento ou preferência específica não se aplica universalmente a um cliente, mas está restrita a um único dispositivo ou ID. Por exemplo, um cliente pode recusar o recebimento de emails para um endereço, enquanto possivelmente permite emails em outro.
@@ -106,7 +105,6 @@ O JSON a seguir mostra um exemplo do tipo de dados que o [!UICONTROL Consentimen
 >
 >* Se o cliente tiver optado por não participar no nível do canal, quaisquer consentimentos ou preferências equivalentes em `idSpecific` são ignorados.
 >* Se o consentimento ou a preferência no nível do canal não estiver definido, ou se o cliente tiver optado, os consentimentos ou preferências equivalentes em `idSpecific` são honrados.
-
 
 Cada chave no `idSpecific` O objeto representa um namespace de identidade específico reconhecido pelo Adobe Experience Platform Identity Service. Embora você possa definir seus próprios namespaces personalizados para categorizar identificadores diferentes, é recomendável usar um dos namespaces padrão fornecidos pelo Serviço de identidade para reduzir os tamanhos de armazenamento do Perfil do cliente em tempo real. Para obter mais informações sobre namespaces de identidade, consulte o [visão geral do namespace de identidade](../../../identity-service/namespaces.md) na documentação do Serviço de identidade.
 

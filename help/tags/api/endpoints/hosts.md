@@ -2,10 +2,10 @@
 title: Ponto de extremidade de hosts
 description: Saiba como fazer chamadas para o ponto de extremidade /hosts na API do reator.
 exl-id: 9d0d2a65-49e9-429c-a665-754b59a11cf1
-source-git-commit: 905384b3190cd55e7caa9c4560d6b2774280eee7
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '797'
-ht-degree: 92%
+source-wordcount: '796'
+ht-degree: 90%
 
 ---
 

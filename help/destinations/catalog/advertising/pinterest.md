@@ -2,14 +2,14 @@
 title: Conexão com a Lista de clientes do pinterest
 description: Crie públicos-alvo com base em suas listas de clientes, pessoas que visitaram seu site ou pessoas que já interagiram com seu conteúdo no Pinterest.
 exl-id: e601f75f-0d40-4cd0-93ca-54d7439f1db7
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '694'
+source-wordcount: '693'
 ht-degree: 2%
 
 ---
 
-# [!DNL Pinterest Customer List] conexão
+# Conexão com o [!DNL Pinterest Customer List]
 
 ## Visão geral {#overview}
 
@@ -93,4 +93,4 @@ Todos [!DNL Adobe Experience Platform] os destinos estão em conformidade com as
 
 ## Recursos adicionais {#additional-resources}
 
-Consulte a seção [Página Central de ajuda do pinterest](https://help.pinterest.com/en/business/article/audience-targeting) para obter informações adicionais.
+Consulte a [Página Central de ajuda do pinterest](https://help.pinterest.com/en/business/article/audience-targeting) para obter informações adicionais.

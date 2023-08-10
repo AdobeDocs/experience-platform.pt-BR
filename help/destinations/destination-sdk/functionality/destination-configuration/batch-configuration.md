@@ -1,9 +1,9 @@
 ---
 description: Saiba como definir as configurações de exportação de arquivo para destinos criados com o Destination SDK.
 title: Configuração em lote
-source-git-commit: 3f31a54c0cf329d374808dacce3fac597a72aa11
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1073'
+source-wordcount: '1072'
 ht-degree: 4%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 4%
 
 Use as opções de configuração em lote no Destination SDK para permitir que os usuários personalizem os nomes dos arquivos exportados e configurem o agendamento de exportação de acordo com suas preferências.
 
-Ao criar destinos baseados em arquivo por meio do Destination SDK, você pode configurar a nomenclatura de arquivo padrão e os agendamentos de exportação ou pode dar aos usuários a opção de definir essas configurações na interface do usuário da Platform. Por exemplo, é possível configurar comportamentos como:
+Ao criar destinos baseados em arquivo por meio do Destination SDK, você pode configurar a nomenclatura de arquivo padrão e os agendamentos de exportação ou pode dar aos usuários a opção de definir essas configurações na interface do usuário da Platform. Por exemplo, você pode configurar comportamentos como:
 
 * Incluindo informações específicas no nome do arquivo, como IDs de público-alvo, IDs de destino ou informações personalizadas.
 * Permitir que os usuários personalizem a nomeação de arquivos na interface do usuário da Platform.

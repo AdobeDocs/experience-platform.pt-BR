@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Perguntas frequentes sobre regulamentos de privacidade
 description: Este documento fornece respostas a perguntas frequentes sobre as regulamentações legais de privacidade compatíveis e sua implementação no Adobe Experience Cloud.
 exl-id: ec553e53-664b-4e18-abb1-4e4063fdd2c9
-source-git-commit: 7e86721f6dd6fd280ae7e7e67aca21b4258ffb66
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1619'
+source-wordcount: '1618'
 ht-degree: 1%
 
 ---
@@ -86,9 +86,9 @@ Supondo que a empresa tenha coletado informações pessoais e possa autenticar o
 
 | Regulação | Prazo de resposta | Notas |
 | --- | --- | --- |
-| CCPA (Califórnia) | 45 dias |  |
+| CCPA (Califórnia) | 45 dias | |
 | GDPR (União Europeia) | 30 dias | Se a solicitação for complexa ou se várias solicitações tiverem sido feitas pelo mesmo titular dos dados, ela poderá ser estendida para 60 dias. |
-| LGPD (Brasil) | 15 dias |  |
+| LGPD (Brasil) | 15 dias | |
 | PDPA (Tailândia) | 30 dias | Se uma empresa não puder responder a uma solicitação do titular dos dados dentro da janela de conformidade, a empresa terá 30 dias adicionais a partir da data em que não pôde atender à solicitação para responder por escrito ao titular dos dados. |
 
 <!-- | New Zealand [!DNL Privacy Act] | 20 working days | | -->

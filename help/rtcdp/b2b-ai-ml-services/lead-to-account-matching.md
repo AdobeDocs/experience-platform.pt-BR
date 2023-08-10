@@ -3,9 +3,9 @@ title: Lead para correspondência de contas no Real-Time CDP B2B
 type: Documentation
 description: Uma visão geral e mais informações sobre o lead para o recurso de correspondência de contas no Experience Platform CDP B2B.
 exl-id: 2f853599-6bca-4ba6-bbba-131a49d8854e
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '616'
+source-wordcount: '615'
 ht-degree: 3%
 
 ---

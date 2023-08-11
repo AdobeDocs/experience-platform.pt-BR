@@ -5,9 +5,9 @@ description: Saiba como direcionar novos públicos-alvo de alto valor no Adobe E
 badgeLimitedAvailability: label="Disponibilidade limitada" type=Caution
 hide: true
 hidefromtoc: true
-source-git-commit: d0b839dfc35ff9f8b4db34c61d2cdd820bfd448b
+source-git-commit: c4a888768015542e37290cb3c919cb60fca4e548
 workflow-type: tm+mt
-source-wordcount: '1937'
+source-wordcount: '2123'
 ht-degree: 0%
 
 ---
@@ -42,7 +42,7 @@ No Adobe Experience Platform, o modelo semelhante consome três tipos diferentes
 
 Todos esses pontos de dados são transformados em pares de valores principais que são alimentados no modelo semelhante. Somente os pares de valores principais com uma porcentagem significativa de perfis correspondentes serão mantidos.
 
-O modelo semelhante é executado com frequência, criando e recriando os fatores influentes e gráficos de similaridade para os públicos-alvo básicos. A pontuação para públicos-alvo semelhantes também é executada com frequência.
+No momento, o modelo semelhante é executado a cada 24 horas, criando e recriando os fatores influentes e gráficos de similaridade para os públicos-alvo básicos. A pontuação para públicos-alvo semelhantes também é executada com frequência.
 
 ## Direitos {#entitlements}
 
@@ -52,11 +52,26 @@ Os seguintes direitos se aplicam ao uso de Públicos-alvo semelhantes:
 - Os clientes do Real-Time CDP Ultimate têm direito a **20** Públicos-alvo semelhantes ativos em sandboxes de produção
 - As sandboxes de desenvolvimento estão limitadas a **5** Públicos-alvo semelhantes para todos os clientes da Real-Time CDP
 
-Estão disponíveis pacotes complementares que aumentam os direitos para sandboxes de produção em 20 públicos-alvo semelhantes por pacote.
+Os pacotes complementares, que estarão disponíveis posteriormente, aumentam os direitos das sandboxes de produção em 20 públicos-alvo semelhantes por pacote.
 
 Para confirmar se você tem acesso a Públicos-alvo semelhantes, entre em contato com o representante da Adobe.
 
 ## Exibir insights semelhantes {#view}
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_lookAlike_notEligible"
+>title="Não elegível"
+>abstract="No momento, esse público-alvo não está qualificado para insights semelhantes, pois pode ter menos do que o número mínimo de perfis necessários para treinamento ou a exportação de perfis ainda não foi acionada."
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_lookAlike_processing"
+>title="Processamento"
+>abstract="Este público-alvo está sendo processado. O modelo pode levar até 24 horas para concluir o processamento. Verifique novamente mais tarde."
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_lookAlike_error"
+>title="Erro"
+>abstract="Ocorreu um erro ao processar este modelo. Exclua e recrie esse modelo ou tente novamente mais tarde."
 
 Os insights semelhantes são incorporados à página de detalhes do público-alvo. Para analisar os insights semelhantes de um público, selecione **[!UICONTROL Públicos-alvo]** na barra de navegação à esquerda, seguido por **[!UICONTROL Procurar]** e o público-alvo para o qual você deseja exibir os insights.
 
@@ -68,10 +83,10 @@ A página de detalhes do público-alvo é exibida. Selecionar **[!UICONTROL Insi
 
 ### Semelhança e alcance {#similarity-and-reach}
 
-<!-- >[!CONTEXTUALHELP]
+>[!CONTEXTUALHELP]
 >id="platform_audiences_lookAlike_similarityAndReach"
->title="Similarity and reach"
->abstract="" -->
+>title="Semelhança e alcance"
+>abstract="O gráfico de similaridade e alcance representa o alcance esperado de um Público-alvo semelhante que consiste em perfis acima de uma pontuação de similaridade fornecida. Você pode passar o mouse sobre um ponto específico do gráfico para exibir a porcentagem de similaridade e a contagem de perfis esperada para o ponto destacado no momento."
 
 A seção similaridade e alcance exibe um gráfico que representa o alcance esperado de um público-alvo semelhante que consiste em perfis acima de uma pontuação de similaridade fornecida. A pontuação de similaridade representa a **distância** de semelhança entre o perfil do público-alvo básico e o perfil do insight semelhante.
 
@@ -93,11 +108,11 @@ A seção Públicos-alvo semelhantes exibe uma lista de todos os Públicos-alvo 
 
 ### Fatores influentes {#influential-factors}
 
-<!-- >[!CONTEXTUALHELP]
+>[!CONTEXTUALHELP]
 >id="platform_audiences_lookAlike_influentialFactors"
->title="Influential factors"
->abstract="Influential factors are attributes, events and audience memberships that are important in explaining similarity of a profile to members of the base audience. Data usage labels and policies can be used to exclude certain data from being considered as influential factors in look-alike models."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/lookalike-audiences.html?lang=en#exclude" text="Exclude data" -->
+>title="Fatores influentes"
+>abstract="Fatores influentes são atributos, eventos e associações de público-alvo que são importantes para explicar a similaridade de um perfil aos membros do público-alvo básico. Os rótulos e políticas de uso de dados podem ser usados para excluir que determinados dados sejam considerados fatores influentes em modelos semelhantes."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/lookalike-audiences.html?lang=en#exclude" text="Excluir dados"
 
 A seção Fatores influentes exibe os 100 principais fatores que influenciam o modelo semelhante para o público-alvo básico selecionado. Esses fatores influentes são os atributos do perfil, os eventos de experiência e as associações de público-alvo que são os mais importantes para explicar as semelhanças no público-alvo básico. Entender os principais fatores influentes permite personalizar melhor o conteúdo de marketing para esse público-alvo e qualquer público semelhante criado a partir dele. Observe que nem todos os fatores influentes que afetam o modelo semelhante serão exibidos.
 

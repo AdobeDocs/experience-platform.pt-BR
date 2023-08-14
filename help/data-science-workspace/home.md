@@ -4,14 +4,19 @@ solution: Experience Platform
 title: Visão geral do Data Science Workspace
 description: Este guia fornece uma visão geral dos principais conceitos relacionados ao Espaço de trabalho de ciência de dados na Adobe Experience Platform.
 exl-id: bef25073-0dfb-453d-8c32-7f44d917d62d
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: fa52aa668d21f71c0da6b35c933713f068e36b28
 workflow-type: tm+mt
-source-wordcount: '2388'
+source-wordcount: '2448'
 ht-degree: 0%
 
 ---
 
 # Visão geral do Espaço de trabalho de ciência de dados
+
+>[!NOTE]
+>
+>Observe que a presença da documentação sobre um recurso no Experience League não garante sua disponibilidade para todos os clientes. Esse recurso só está disponível para clientes existentes que compraram uma licença do Adobe Experience Platform ou do Adobe Experience Platform Intelligence. Consulte a descrição oficial do produto para entender os recursos e outros detalhes associados aos SKUs/produtos comprados.
+
 
 Adobe Experience Platform [!DNL Data Science Workspace] O usa aprendizagem de máquina e inteligência artificial para liberar insights de seus dados. Integrado ao Adobe Experience Platform, [!DNL Data Science Workspace] O ajuda você a fazer previsões usando seus ativos de conteúdo e dados nas soluções do Adobe.
 
@@ -72,7 +77,7 @@ Os dados são a base da IA e do aprendizado de máquina.
 
 ### Receitas de aprendizado de máquina pré-criadas
 
-[!DNL Data Science Workspace] O inclui receitas de aprendizado de máquina pré-criadas para necessidades comerciais comuns, como previsão de vendas de varejo e detecção de anomalias, para que cientistas e desenvolvedores de dados não precisem começar do zero. Atualmente são oferecidas três receitas, [previsão de compra do produto](./pre-built-recipes/product-purchase-prediction.md), [recomendações de produto](./pre-built-recipes/product-recommendations.md), e [vendas de varejo](./pre-built-recipes/retail-sales.md).
+[!DNL Data Science Workspace] O inclui receitas de aprendizado de máquina pré-criadas para necessidades comerciais comuns, como previsão de vendas de varejo e detecção de anomalias, para que cientistas e desenvolvedores de dados não precisem começar do zero. Atualmente, são oferecidas três receitas, [previsão de compra do produto](./pre-built-recipes/product-purchase-prediction.md), [recomendações de produto](./pre-built-recipes/product-recommendations.md), e [vendas de varejo](./pre-built-recipes/retail-sales.md).
 
 [//]: # (The built-in recipe gallery offers recommendations for prebuilt recipes based on your business needs.)
 

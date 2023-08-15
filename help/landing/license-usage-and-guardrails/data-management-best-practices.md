@@ -61,7 +61,7 @@ Para obter mais informações, consulte o manual sobre [usar o painel de uso de 
 
 As seções a seguir descrevem as práticas recomendadas a serem seguidas para gerenciar melhor seus dados.
 
-### Noções básicas sobre os dados
+### Noções básicas sobre seus dados
 
 Nem todos os dados são os mesmos no Adobe Experience Platform. Alguns dados podem ser densos, mas de valor baixo, enquanto outros podem ser esparsos, mas de valor alto. Alguns dados podem perder valor assim que são gerados, enquanto outros podem ser valiosos por meses, se não anos.
 

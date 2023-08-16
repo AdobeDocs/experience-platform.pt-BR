@@ -3,9 +3,9 @@ title: Conexão com o TikTok
 description: Crie públicos-alvo personalizados no TikTok com seus dados para direcionar suas campanhas de publicidade. Esses públicos-alvo podem ser de pessoas que visitaram o site ou interagiram com o conteúdo. Empurre de maneira rápida e segura o público-alvo desejado do Adobe Experience Platform para o TikTok usando a integração em tempo real do Adobe com o TikTok Ads Manager.
 last-substantial-update: 2023-03-20T00:00:00Z
 exl-id: 7b12d17f-7d9a-4615-9830-92bffe3f6927
-source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
+source-git-commit: d9d31013d93e0e9e4e291a63840869e73d30ef01
 workflow-type: tm+mt
-source-wordcount: '983'
+source-wordcount: '1010'
 ht-degree: 5%
 
 ---
@@ -30,7 +30,9 @@ Uma marca de vestuário esportivo quer alcançar clientes existentes por meio de
 
 ## Pré-requisitos {#prerequisites}
 
-Antes de enviar dados para o seu [!DNL TikTok Ads Manager] conta, será necessário conceder a permissão Adobe Experience Platform para acessar sua conta de anúncio para `Audience Management`. Essa permissão pode ser fornecida inserindo a ID do anunciante no Experience Platform e seguindo o redirecionamento para conceder a permissão. Você pode encontrar mais instruções em [Documentação da API do TikTok](https://ads.tiktok.com/marketing_api/docs?id=1738373141733378).
+Você precisa ter [!DNL Admin] ou [!DNL Operator] acesso à conta do TikTok Ads Manager para a qual você deseja enviar públicos-alvo. Mais instruções podem ser encontradas no [Centro de ajuda do TikTok](https://ads.tiktok.com/help/article/add-users-tiktok-business-center?lang=en).
+
+Antes de enviar dados para sua conta do TikTok Ads Manager, será necessário conceder permissão ao Adobe Experience Platform para acessar sua conta de anúncio para `Audience Management`. Esta permissão pode ser fornecida por [inserir a ID do Ads Manager](#authenticate) na interface do usuário do Experience Platform e concedendo a permissão após ser redirecionado para sua conta do TikTok Ads Manager.
 
 ## Identidades suportadas {#supported-identities}
 

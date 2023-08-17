@@ -5,7 +5,7 @@ breadcrumb-title: Tags
 user-guide-description: Saiba como implantar e gerenciar tags de análise, marketing e publicidade para potencializar as experiências dos clientes.
 feature: Tags
 solution: Data Collection
-source-git-commit: 2772660936444e39124a75deda6f78d97f7793f2
+source-git-commit: 1ca080f6dd62c49c1f1672ec36ce446af591b6b6
 workflow-type: tm+mt
 source-wordcount: '1027'
 ht-degree: 37%
@@ -19,7 +19,7 @@ ht-degree: 37%
 * Introdução {#get-started}
    * [Manual de início rápido](./quick-start/quick-start.md)
    * [Guias de implementação](./quick-start/implementation-guides.md)
-* Guias de interface do usuário {#ui}
+* Guias de interface {#ui}
    * [Visão geral](./ui/managing-resources/overview.md)
    * Extensões {#extensions}
       * [Visão geral](./ui/managing-resources/extensions/overview.md)
@@ -45,7 +45,7 @@ ht-degree: 37%
    * [Bibliotecas](./ui/publishing/libraries.md)
    * [Bibliotecas de auto-hospedagem](./ui/publishing/hosts/self-hosting-libraries.md)
    * [Republicar uma biblioteca](./ui/publishing/republish.md)
-   * [Suporte Premium para CDN (Beta)](./ui/publishing/premium-cdn.md)
+   * [Tags do Experience Platform (China)](./ui/publishing/premium-cdn.md)
 * Informações do lado do cliente {#client-side}
    * [Visão geral](./ui/client-side/overview.md)
    * [Implantação assíncrona](./ui/client-side/asynchronous-deployment.md)
@@ -177,7 +177,7 @@ ht-degree: 37%
       * [!DNL Marketo Munchkin] {#marketo}
          * [Visão geral](./extensions/client/marketo/overview.md)
          * [Notas de versão](./extensions/client/marketo/release-notes.md)
-      * [Gerenciador de Propriedades principais](https://exchange.adobe.com/apps/ec/102992)
+      * [Gerenciador de Propriedades Mestre](https://exchange.adobe.com/apps/ec/102992)
       * [!DNL Meta Pixel] {#meta}
          * [Visão geral](./extensions/client/meta/overview.md)
       * [Monita](https://exchange.adobe.com/apps/ec/106544)

@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Visão geral da Adobe Experience Platform
 breadcrumb-title: Visão geral da Experience Platform
 user-guide-description: Saiba como a Experience Platform permite oferecer experiências personalizadas a seus clientes em tempo real.
-source-git-commit: bc781aadb620ad4b383d441d36e39626b0875901
+source-git-commit: 65abbb4dde5b83f597a3a5bfd96ce7c081c88275
 workflow-type: tm+mt
-source-wordcount: '258'
-ht-degree: 27%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -30,6 +30,7 @@ ht-degree: 27%
    * [Guia da interface de workflows](workflows.md)
    * [Suporte a navegador e idioma](browser-language-support.md)
    * [Pesquisa de autoidentificação](self-identification.md)
+   * [Assistente de IA](ai-assistant.md)
 * APIs Experience Platform {#platform-apis}
    * [Introdução às APIs da Platform](api-guide.md)
    * [Autenticar e acessar APIs da Platform](api-authentication.md)
@@ -43,7 +44,7 @@ ht-degree: 27%
    * [Visão geral](application-services.md)
    * [Adobe Real-time Customer Data Platform (todas as edições)](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html)
    * [Serviços inteligentes e de aplicativos (Vídeo)](video/application-intelligent-services.md)
-   * [Customer Journey Analytics](https://experienceleague.adobe.com/docs/customer-journey-analytics.html)
+   * [Customer Journey Analytics](https://experienceleague.adobe.com/docs/customer-journey-analytics.html?lang=pt-BR)
    * [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer.html?lang=pt-BR)
    * [Journey Orchestration](https://experienceleague.adobe.com/docs/journey-orchestration.html)
    * [Integrações da plataforma com o Experience Cloud (Vídeo)](video/experience-cloud-integrations.md)
@@ -69,7 +70,7 @@ ht-degree: 27%
 * Uso de licença e medidas de proteção {#license}
    * [Práticas recomendadas de direito de licença de gerenciamento de dados](./license-usage-and-guardrails/data-management-best-practices.md)
    * [Painel de uso da licença](./license-usage-and-guardrails/license-usage-dashboard.md)
-* [Guia de solução de problemas](troubleshooting.md)
+* [Manual de solução de problemas](troubleshooting.md)
 * [Migração de data lake Gen2](adls2-gen2-migration.md)
 * [Glossário](glossary.md)
 * [Notas de versão](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=pt-BR)

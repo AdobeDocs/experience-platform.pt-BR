@@ -2,9 +2,9 @@
 title: Comportamento de exportação de perfil
 description: Saiba como o comportamento de exportação de perfil varia entre os diferentes padrões de integração compatíveis com destinos Experience Platform.
 exl-id: 2be62843-0644-41fa-a860-ccd65472562e
-source-git-commit: 3f31a54c0cf329d374808dacce3fac597a72aa11
+source-git-commit: e6545dfaf5c43ac854986cfdc4f5cb153a07405b
 workflow-type: tm+mt
-source-wordcount: '2932'
+source-wordcount: '2924'
 ht-degree: 0%
 
 ---
@@ -19,20 +19,20 @@ Há vários tipos de destino no Experience Platform, conforme mostrado no diagra
 
 ![Tipos de diagrama de destinos](/help/destinations/assets/how-destinations-work/types-of-destinations-v4.png)
 
-## Política de microlote e agregação
+## Agregação de mensagens em destinos de streaming
 
-Antes de mergulhar em informações específicas por tipo de destino, é importante entender os conceitos de microlote e política de agregação para *destinos de transmissão*.
+Antes de mergulhar em informações específicas por tipo de destino, é importante entender o conceito de agregação de mensagens para *destinos de transmissão*.
 
 Os destinos Experience Platform exportam dados para integrações baseadas em API, como chamadas HTTPS. Assim que o serviço de destinos for notificado por outros serviços upstream de que os perfis foram atualizados como resultado da assimilação em lote, assimilação por streaming, segmentação em lote, segmentação por streaming ou alterações no gráfico de identidade, os dados serão exportados e enviados para destinos de streaming.
 
-O processo pelo qual os perfis são agregados em mensagens HTTPS antes de serem despachados para endpoints da API de destino é chamado de *microlotes*.
+Os perfis são agregados em mensagens HTTPS antes de serem despachados para endpoints da API de destino.
 
 Pegue o [Destino do facebook](/help/destinations/catalog/social/facebook.md) com um *[agregação configurável](../destination-sdk/functionality/destination-configuration/aggregation-policy.md)* política como exemplo - os dados são enviados de forma agregada, em que o serviço de destinos pega todos os dados recebidos do serviço de perfil upstream e os agrega por um dos itens a seguir, antes de enviá-los para o Facebook:
 
 * Número de registros (máximo de 10.000) ou
-* Intervalo da janela de tempo (30 minutos)
+* Intervalo da janela de tempo (300 segundos)
 
-Qualquer que seja o limite acima atingido primeiro aciona uma exportação para o Facebook. Assim, no [!DNL Facebook Custom Audiences] , você poderá ver públicos-alvo vindos do Experience Platform em incrementos de 10.000 registros. Você pode estar vendo 10.000 registros a cada 10-15 minutos porque os dados são processados e agregados mais rapidamente do que o intervalo de exportação de 30 minutos e são enviados mais rapidamente, portanto, aproximadamente a cada 10-15 minutos até que todos os registros tenham sido processados. Se não houver registros suficientes para compor um lote de 10.000, o número atual de registros será enviado como está quando o limite da janela de tempo for atingido, portanto, você também poderá ver lotes menores enviados para o Facebook.
+Qualquer que seja o limite acima atingido primeiro aciona uma exportação para o Facebook. Assim, no [!DNL Facebook Custom Audiences] , você poderá ver públicos-alvo vindos do Experience Platform em incrementos de 10.000 registros. Você pode estar vendo 10.000 registros a cada 2-3 minutos porque os dados são processados e agregados mais rapidamente do que o intervalo de exportação de 300 segundos e são enviados mais rapidamente, portanto, aproximadamente a cada 2-3 minutos até que todos os registros tenham sido processados. Se não houver registros suficientes para compor um lote de 10.000, o número atual de registros será enviado como está quando o limite da janela de tempo for atingido, portanto, você também poderá ver lotes menores enviados para o Facebook.
 
 Como outro exemplo, considere [Destino da API HTTP](/help/destinations/catalog/streaming/http-destination.md), que tem um *[agregação de melhor esforço](../destination-sdk/functionality/destination-configuration/aggregation-policy.md)* política, com `maxUsersPerRequest: 10`. Isso significa que no máximo dez perfis serão agregados antes que uma chamada HTTP seja disparada para esse destino, mas o Experience Platform tenta despachar perfis para o destino assim que o serviço de destinos recebe informações de reavaliação atualizadas de um serviço upstream.
 
@@ -42,7 +42,7 @@ A política de agregação é configurável e os desenvolvedores de destino pode
 
 >[!IMPORTANT]
 >
-> Os destinos corporativos estão disponíveis somente para [Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) clientes.
+> Os destinos corporativos estão disponíveis somente para [Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html?lang=pt-BR) clientes.
 
 A variável [destinos corporativos](/help/destinations/destination-types.md#streaming-profile-export) no Experience Platform estão o Amazon Kinesis, os Hubs de eventos do Azure e a API HTTP.
 

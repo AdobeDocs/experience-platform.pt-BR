@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Avaliar eventos em tempo quase real com a segmentação de transmissão
 description: Este documento contém exemplos sobre como usar a segmentação por transmissão com a API do Serviço de segmentação do Adobe Experience Platform.
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: 23504dd0909488e2ee63bf356fba4c7f0f7320dc
 workflow-type: tm+mt
-source-wordcount: '1992'
+source-wordcount: '1956'
 ht-degree: 2%
 
 ---
@@ -76,8 +76,7 @@ Para que uma definição de segmento seja avaliada usando a segmentação por tr
 | Evento único em uma janela de tempo relativa | Qualquer definição de segmento que se refere a um único evento de entrada. |
 | Evento único com uma janela de tempo | Qualquer definição de segmento que se refere a um único evento recebido com uma janela de tempo. |
 | Somente perfil | Qualquer definição de segmento que se refere apenas a um atributo de perfil. |
-| Evento único com um atributo de perfil | Qualquer definição de segmento que se refere a um único evento recebido, sem restrição de tempo e um ou mais atributos de perfil. **Nota:** A query é avaliada imediatamente quando o evento chega. No caso de um evento de perfil, no entanto, ele deve aguardar 24 horas para ser incorporado. |
-| Evento único com um atributo de perfil em uma janela de tempo relativa | Qualquer definição de segmento que se refere a um único evento de entrada e um ou mais atributos de perfil. |
+| Evento único com um atributo de perfil em uma janela de tempo relativa de menos de 24 horas | Qualquer definição de segmento que se refere a um único evento recebido, com um ou mais atributos de perfil, e ocorre em uma janela de tempo relativa de menos de 24 horas. |
 | Segmento de segmentos | Qualquer definição de segmento que contenha um ou mais segmentos em lote ou de fluxo. **Nota:** Se um segmento de segmentos for usado, ocorrerá a desqualificação do perfil **a cada 24 horas**. |
 | Vários eventos com um atributo de perfil | Qualquer definição de segmento que se refere a vários eventos **nas últimas 24 horas** e (opcionalmente) têm um ou mais atributos de perfil. |
 

@@ -6,7 +6,7 @@ badgeLimitedAvailability: label="Disponibilidade limitada" type=Caution
 source-git-commit: 4bd26857d2c714cd629fc46dbb9b6da6a29358c8
 workflow-type: tm+mt
 source-wordcount: '2123'
-ht-degree: 0%
+ht-degree: 10%
 
 ---
 
@@ -59,7 +59,7 @@ Para confirmar se você tem acesso a Públicos-alvo semelhantes, entre em contat
 >[!CONTEXTUALHELP]
 >id="platform_audiences_lookAlike_notEligible"
 >title="Não elegível"
->abstract="No momento, esse público-alvo não está qualificado para insights semelhantes, pois pode ter menos do que o número mínimo de perfis necessários para treinamento ou a exportação de perfis ainda não foi acionada."
+>abstract="No momento, esse público-alvo não está elegível para insights semelhantes, pois pode ter menos do que o número mínimo de perfis necessários para treinamento ou a exportação de perfis ainda não foi acionada."
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_lookAlike_processing"
@@ -79,12 +79,12 @@ A página de detalhes do público-alvo é exibida. Selecionar **[!UICONTROL Insi
 
 ![A guia Insights semelhantes é destacada, exibindo os insights semelhantes para o público-alvo base.](../images/ui/lookalike-audiences/look-alike-insights.png)
 
-### Semelhança e alcance {#similarity-and-reach}
+### Similaridade e alcance {#similarity-and-reach}
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_lookAlike_similarityAndReach"
->title="Semelhança e alcance"
->abstract="O gráfico de similaridade e alcance representa o alcance esperado de um Público-alvo semelhante que consiste em perfis acima de uma pontuação de similaridade fornecida. Você pode passar o mouse sobre um ponto específico do gráfico para exibir a porcentagem de similaridade e a contagem de perfis esperada para o ponto destacado no momento."
+>title="Similaridade e alcance"
+>abstract="O gráfico de similaridade e alcance representa o alcance esperado de um Público-alvo semelhante que consiste em perfis acima de uma pontuação de similaridade fornecida. É possível passar o mouse sobre um ponto específico do gráfico para exibir a porcentagem de similaridade e a contagem de perfis esperada para o ponto destacado no momento."
 
 A seção similaridade e alcance exibe um gráfico que representa o alcance esperado de um público-alvo semelhante que consiste em perfis acima de uma pontuação de similaridade fornecida. A pontuação de similaridade representa a **distância** de semelhança entre o perfil do público-alvo básico e o perfil do insight semelhante.
 
@@ -96,7 +96,7 @@ O eixo y mostra a contagem esperada de perfis com o percentual de similaridade q
 
 Observe que o gráfico é **cumulativo** da direita para a esquerda. Isso significa que, em qualquer ponto do gráfico, o valor do eixo y é o número de perfis com similaridade **acima** o limite de similaridade. Por exemplo, se o eixo x estiver em 60% e o eixo y estiver em 10 milhões, isso significa que há 10 milhões de perfis com uma similaridade em ou acima de 60% para o público base.
 
-Você pode passar o mouse sobre um ponto específico do gráfico para exibir a porcentagem de similaridade e a contagem de perfis esperada para o ponto destacado no momento.
+É possível passar o mouse sobre um ponto específico do gráfico para exibir a porcentagem de similaridade e a contagem de perfis esperada para o ponto destacado no momento.
 
 ### Públicos-alvo semelhantes {#list}
 
@@ -109,8 +109,8 @@ A seção Públicos-alvo semelhantes exibe uma lista de todos os Públicos-alvo 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_lookAlike_influentialFactors"
 >title="Fatores influentes"
->abstract="Fatores influentes são atributos, eventos e associações de público-alvo que são importantes para explicar a similaridade de um perfil aos membros do público-alvo básico. Os rótulos e políticas de uso de dados podem ser usados para excluir que determinados dados sejam considerados fatores influentes em modelos semelhantes."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/lookalike-audiences.html?lang=en#exclude" text="Excluir dados"
+>abstract="Fatores influentes são atributos, eventos e associações de público-alvo que são importantes para explicar a similaridade de um perfil aos membros do público-alvo básico. Políticas e rótulos de uso de dados podem ser usados para impedir que determinados dados sejam considerados como fatores influentes em modelos semelhantes."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/lookalike-audiences.html?lang=pt-BR#exclude" text="Excluir dados"
 
 A seção Fatores influentes exibe os 100 principais fatores que influenciam o modelo semelhante para o público-alvo básico selecionado. Esses fatores influentes são os atributos do perfil, os eventos de experiência e as associações de público-alvo que são os mais importantes para explicar as semelhanças no público-alvo básico. Entender os principais fatores influentes permite personalizar melhor o conteúdo de marketing para esse público-alvo e qualquer público semelhante criado a partir dele. Observe que nem todos os fatores influentes que afetam o modelo semelhante serão exibidos.
 

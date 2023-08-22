@@ -4,9 +4,9 @@ description: Saiba como usar o Assistente de IA para navegar e entender os conce
 badge: Alfa
 hide: true
 hidefromtoc: true
-source-git-commit: 65abbb4dde5b83f597a3a5bfd96ce7c081c88275
+source-git-commit: ca606e4e29f4ba1df281f47a86b4e3cfa850ae35
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '2627'
 ht-degree: 0%
 
 ---
@@ -72,7 +72,7 @@ Aqui, você pode inserir sua pergunta na caixa de texto e consultar o Assistente
 
 Considere um caso de uso em que você esteja criando uma **Esquema de evento de troca de dispositivo**. Durante o processo de criação do schema ExperienceEvent, você encontra o `eventType` campo. Nesse ponto, é possível sair do workflow e consultar a documentação no [noções básicas de uma composição de esquema](../xdm/schema/composition.md), ou você pode usar o Assistente de IA para recuperar respostas imediatas para suas perguntas.
 
-Para começar, insira sua pergunta na caixa de texto fornecida. No exemplo abaixo, o Assistente de IA recebe a pergunta: &quot;Qual é o campo eventType em um esquema de Evento de experiência?&quot;
+Para começar, insira sua pergunta na caixa de texto fornecida. No exemplo abaixo, o Assistente de IA recebe a pergunta: &quot;**O que é o campo eventType em um esquema de Evento de experiência?**&quot;
 
 ![O Assistente de IA para o Experience Platform com a seguinte pergunta preparada para consulta: &quot;Qual é o campo eventType em um esquema ExperienceEvent?](./images/ai-assistant/question.png)
 
@@ -82,7 +82,7 @@ O Assistente de IA consulta sua base de conhecimento e calcula uma resposta. Ap�
 
 Você pode saber mais sobre um tópico específico fazendo uma pergunta complementar. No próximo exemplo, o Assistente de IA é perguntado como o eventType pode ser usado na segmentação.
 
-![Uma pergunta e resposta de acompanhamento são exibidas no Assistente de IA para Experience Platform.](./images/ai-assistant/follow-up-question.png)
+![Uma pergunta e resposta de acompanhamento são exibidas no Assistente de IA para Experience Platform.](./images/ai-assistant/follow-up-answer.png)
 
 Você também pode fazer perguntas ao Assistente de IA sobre o uso de dados. Ao perguntar sobre o uso de dados, você deve estar em uma sandbox ativa para que o Assistente de IA responda à sua consulta.
 
@@ -100,15 +100,13 @@ Para fornecer feedback, selecione polegares para cima ou para baixo depois de re
 
 >[!ENDSHADEBOX]
 
-![O Assistente de IA para o Experience Platform exibe as opções que você pode escolher após uma consulta.](./images/ai-assistant/options.png)
-
 >[!BEGINTABS]
 
 >[!TAB Mostrar origem]
 
 Selecionar **[!UICONTROL Mostrar origem]** para obter uma lista de links para a documentação que o Assistente de IA faz referência para calcular sua resposta.
 
-![Os links para as citações exibidas no Assistente de IA.](./images/ai-assistant/citations.png)
+![Os links para a origem exibidos no Assistente do AI.](./images/ai-assistant/show-sources.png)
 
 >[!TAB Polegar para cima]
 
@@ -134,7 +132,7 @@ Selecione o ícone de sinalizador para fornecer mais relatórios sobre a experi�
 
 Você também pode usar os prompts predefinidos fornecidos pelo Assistente de IA para começar.
 
-![Os prompts fornecidos no painel do Assistente de IA.](./images/ai-assistant/ideas-to-get-started.png)
+![Os prompts fornecidos no painel do Assistente de IA.](./images/ai-assistant/ideas.png)
 
 ## Informações adicionais
 

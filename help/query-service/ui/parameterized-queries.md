@@ -1,14 +1,19 @@
 ---
 title: Consultas com parâmetros
 description: Saiba como usar consultas com parâmetros na interface do usuário do Adobe Experience Platform.
-source-git-commit: d8845e080489af12e98badc892bb60cb9749bd47
+source-git-commit: 4fc94fc39fa09756a440b5e532330cd310dd96d2
 workflow-type: tm+mt
-source-wordcount: '696'
+source-wordcount: '755'
 ht-degree: 0%
 
 ---
 
-# Consultas parametrizadas (versão limitada)
+# Consultas parametrizadas (versão limitada) {#parameterized-queries}
+
+>[!CONTEXTUALHELP]
+>id="platform_queryService_queryEditor_parameterizedQueries"
+>title="Consultas com parâmetros"
+>abstract="Use consultas parametrizadas para adicionar valores de parâmetros no momento da execução. Isso permite trabalhar com dados dinâmicos e reutilizar consultas para casos de uso diferentes. Use o `'$'` prefácio para inserir um parâmetro de consulta na sua consulta no editor de texto. Em seguida, adicione um valor para a chave na seção Parâmetros de consulta abaixo do editor."
 
 >[!IMPORTANT]
 >

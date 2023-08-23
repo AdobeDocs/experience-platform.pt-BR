@@ -2,18 +2,14 @@
 title: Criar uma conexão de origem de Contas e Contatos do SugarCRM na interface
 description: Saiba como criar uma conexão de origem de Contas e Contatos do SugarCRM usando a interface do Adobe Experience Platform.
 exl-id: 45840d7e-4c19-4720-8629-be446347862d
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: 0de4b32ac2ddc90dabefd469b6658388a4532e0d
 workflow-type: tm+mt
-source-wordcount: '779'
+source-wordcount: '762'
 ht-degree: 2%
 
 ---
 
-# (Beta) Criar um [!DNL SugarCRM Accounts & Contacts] conexão de origem na interface
-
->[!NOTE]
->
->A variável [!DNL SugarCRM Accounts & Contacts] a fonte está na versão beta. Consulte a [visão geral das origens](../../../../home.md#terms-and-conditions) para obter mais informações sobre o uso de fontes rotuladas como beta.
+# Criar um [!DNL SugarCRM Accounts & Contacts] conexão de origem na interface
 
 Este tutorial fornece etapas para a criação de um [!DNL SugarCRM Accounts & Contacts] conexão de origem usando a interface do usuário do Adobe Experience Platform.
 

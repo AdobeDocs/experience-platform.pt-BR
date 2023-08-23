@@ -1,9 +1,7 @@
 ---
 title: Assimilação sob demanda para fluxos de dados de origens na interface
 description: Saiba como criar fluxos de dados sob demanda para suas conexões de origem usando a interface do usuário Experience Platform.
-hide: true
-hidefromtoc: true
-source-git-commit: 812aa0bb0ec9199ef575ac972038115afc2fa647
+source-git-commit: ce1e6c08d1e53346c11f9746cea524689f402031
 workflow-type: tm+mt
 source-wordcount: '503'
 ht-degree: 0%

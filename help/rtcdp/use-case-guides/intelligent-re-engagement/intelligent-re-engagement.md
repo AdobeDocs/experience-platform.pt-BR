@@ -3,10 +3,10 @@ title: Reengajamento inteligente
 description: Ofereça experiências atraentes e conectadas durante os principais momentos de conversão para reengajar clientes pouco frequentes de forma inteligente.
 hide: true
 hidefromtoc: true
-source-git-commit: 69d83e0ca7530f09042e0740e3f25ba92ecb24e4
+source-git-commit: 7de5fe7808a22137c417a4ca865d764b0814b90e
 workflow-type: tm+mt
-source-wordcount: '3395'
-ht-degree: 4%
+source-wordcount: '3424'
+ht-degree: 3%
 
 ---
 
@@ -83,7 +83,7 @@ A jornada de confirmação de pedido se concentra nas compras de produtos feitas
 
 >[!ENDTABS]
 
-## Como atingir o caso de uso: instruções passo a passo {#step-by-step-instructions}
+## Como obter o caso de uso {#achieve-use-case-instruction}
 
 Para concluir cada uma das etapas das visões gerais de alto nível acima, leia as seções abaixo, que oferecem links para mais informações e instruções mais detalhadas.
 
@@ -91,7 +91,7 @@ Para concluir cada uma das etapas das visões gerais de alto nível acima, leia 
 
 Ao concluir as etapas para implementar o caso de uso, você usará a funcionalidade do Real-Time CDP e os elementos da interface do usuário listados no início deste documento. Verifique se você tem as permissões de controle de acesso baseadas em atributos necessárias para todas essas áreas ou peça ao administrador do sistema para conceder as permissões necessárias.
 
-### Criar um design de esquema e especificar grupos de campos
+### Criar um design de esquema e especificar grupos de campos {#schema-design}
 
 Os recursos do Experience Data Model (XDM) são gerenciados no [!UICONTROL Esquemas] espaço de trabalho no [!DNL Adobe Experience Platform]. Você pode visualizar e explorar os recursos principais fornecidos pelo [!DNL Adobe] (por exemplo, [!UICONTROL Grupos de campos]) e criar recursos e esquemas personalizados para sua organização.
 
@@ -337,22 +337,13 @@ A variável [!DNL Adobe] o esquema do conector da web é representado por um [!U
 
 +++
 
-+++Valor da classe (grupo de campos)
-
-| Campos | Requisito |
-| --- | --- |
-| `eventType` | Obrigatório |
-| `timestamp` | Obrigatório |
-
-+++
-
 +++Detalhes de auditoria do sistema de origem externo (grupo de campos)
 
 Atributos de auditoria do sistema de origem externa é um tipo de dados padrão do Experience Data Model (XDM) que captura os detalhes de auditoria sobre um sistema de origem externa.
 
 +++
 
-### Criar um conjunto de dados a partir de um esquema
+### Criar um conjunto de dados a partir de um esquema {#dataset-from-schema}
 
 Um conjunto de dados é uma estrutura de armazenamento e gerenciamento para um grupo de dados. Cada esquema para jornadas inteligentes de reengajamento tem um único conjunto de dados.
 
@@ -362,31 +353,31 @@ Para obter mais informações sobre como criar uma [conjunto de dados](/help/cat
 >
 >Semelhante à etapa para criar um esquema, é necessário ativar o conjunto de dados para ser incluído no Perfil do cliente em tempo real. Para obter mais informações sobre como ativar o conjunto de dados para uso no Perfil do cliente em tempo real, leia o [criar tutorial de esquema.](/help/xdm/tutorials/create-schema-ui.md#profile).
 
-### Privacidade, consentimento e governança de dados
+### Privacidade, consentimento e governança de dados {#privacy-consent}
 
 #### Políticas de consentimento
 
 >[!IMPORTANT]
 >
->Oferecer aos clientes a capacidade de cancelar a inscrição para receber comunicações de uma marca é um requisito legal, bem como garantir que essa escolha seja respeitada. Saiba mais sobre a legislação aplicável na [documentação da Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/privacy/regulations/overview.html).
+>Oferecer aos clientes a capacidade de cancelar a inscrição para receber comunicações de uma marca é um requisito legal, bem como garantir que essa escolha seja respeitada. Saiba mais sobre a legislação aplicável na [Visão geral das regras de privacidade](https://experienceleague.adobe.com/docs/experience-platform/privacy/regulations/overview.html).
 
-Ao criar um caminho de reengajamento, as seguintes políticas de consentimento devem ser consideradas:
+Ao criar um caminho de reengajamento, as seguintes [políticas de consentimento](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/consent/overview.html) deve ser considerada:
 
 * Se `consents.marketing.email.val = "Y"` pode enviar email
 * Se `consents.marketing.sms.val = "Y"` depois pode SMS
 * Se `consents.marketing.push.val = "Y"` depois, pode enviar
 * Se `consents.share.val = "Y"` depois, pode anunciar
 
-#### Rótulo e aplicação do DULE
+#### Rótulo e aplicação da governança de dados
 
-Ao criar um caminho de reengajamento, os seguintes rótulos de DULE devem ser considerados:
+Ao criar um caminho de reengajamento, as seguintes [Rótulos de governança de dados](/help/data-governance/labels/overview.md) deve ser considerada:
 
 * Os endereços de email pessoais são utilizados como dados diretos identificáveis usados para identificar ou entrar em contato com um indivíduo específico, em vez de com um dispositivo.
    * `personalEmail.address = I1`
 
 #### Políticas de marketing
 
-Não há políticas de marketing necessárias para as jornadas de reengajamento, no entanto, as seguintes opções devem ser consideradas conforme desejado:
+Não há [políticas de marketing](/help/data-governance/policies/overview.md) necessário para as jornadas de reengajamento, no entanto, os itens a seguir devem ser considerados conforme desejado:
 
 * Restringir Dados Confidenciais
 * Restringir publicidade no local
@@ -394,11 +385,13 @@ Não há políticas de marketing necessárias para as jornadas de reengajamento,
 * Restringir o direcionamento entre sites
 * Restringir a combinação de dados diretamente identificáveis com dados anônimos
 
-### Criar um público-alvo
+### Criar um público-alvo {#create-audience}
 
 #### Criação de público-alvo para jornadas de reengajamento da marca
 
 As jornadas de reengajamento usam públicos para definir atributos ou comportamentos específicos compartilhados por um subconjunto de perfis da sua loja de perfis para distinguir um grupo comercializável de pessoas da sua base de clientes. Os públicos-alvo podem ser criados de várias maneiras no [!DNL Adobe Experience Platform].
+
+Para obter mais informações sobre como criar um público-alvo, leia a [Guia da interface do usuário do serviço de público-alvo](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#create-audience).
 
 Para obter mais informações sobre como compor diretamente [Públicos-alvo](/help/segmentation/home.md), leia o [Guia da interface do usuário da Composição de público-alvo](/help/segmentation/ui/audience-composition.md).
 
@@ -444,13 +437,17 @@ O descritor da jornada do carrinho abandonado é exibido como:
 
 `Include EventType = commerce.productListAdds between 30 min and 1440 minutes before now. exclude EventType = commerce.purchases 30 minutes before now OR EventType = commerce.productListRemovals AND Cart ID equals Product List Adds1 Cart ID (the inclusion event).`
 
+>[!TAB Jornada de confirmação de pedido]
+
+Esta jornada não requer a criação de públicos-alvo.
+
 >[!ENDTABS]
 
-### Configuração do Jornada no Adobe Journey Optimizer
+### Configuração do Jornada no Adobe Journey Optimizer {#journey-setup}
 
 >[!NOTE]
 >
->[!DNL Adobe Journey Optimizer] não abrange tudo o que é mostrado nos diagramas. Todos os anúncios de mídia paga são criados no [!UICONTROL Destinos].
+>[!DNL Adobe Journey Optimizer] não abrange tudo o que é mostrado nos diagramas. Todos [anúncios de mídia paga](/help/destinations/catalog/social/overview.md) são criados em [!UICONTROL Destinos].
 
 [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html) O ajuda a fornecer experiências conectadas, contextuais e personalizadas aos clientes. A jornada do cliente envolve todo o processo de interação do cliente com a marca. Cada jornada de caso de uso requer informações específicas. Os dados precisos necessários para cada ramificação de Jornada estão listados abaixo.
 
@@ -768,7 +765,7 @@ A jornada de confirmação de pedido se concentra nas compras de produtos feitas
 
 Para obter mais informações sobre como criar jornadas no [!DNL Adobe Journey Optimizer], leia o [Introdução ao guia do jornada](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html).
 
-### Configuração de anúncios de mídia paga em destinos
+### Configuração de anúncios de mídia paga em destinos {#paid-media-ads}
 
 A estrutura de destinos é usada para anúncios de mídia paga. Após verificar o consentimento, ele é enviado para os vários destinos configurados. Para obter mais informações sobre destinos, leia a [Visão geral dos destinos](/help/destinations/home.md) documento.
 
@@ -787,6 +784,3 @@ O segmento do carrinho de abandono é de fluxo contínuo e, portanto, pode ser u
    * [Dispositivo móvel](/help/destinations/catalog/mobile-engagement/overview.md)
    * [Destino do streaming](/help/destinations/catalog/streaming/http-destination.md)
    * [Destination SDK personalizado](/help/destinations/destination-sdk/overview.md)
-
-* Arquivo/Agendado a cada três horas
-   * [Marketing por email](/help/destinations/catalog/email-marketing/overview.md)

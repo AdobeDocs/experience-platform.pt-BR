@@ -2,9 +2,9 @@
 title: Conector de origem do Adobe Analytics para dados do conjunto de relatórios
 description: Este documento fornece uma visão geral do Analytics e descreve os casos de uso para dados do Analytics.
 exl-id: c4887784-be12-40d4-83bf-94b31eccdc2e
-source-git-commit: 83ce7d46e4e64fbe961c964ed5a17ec12a7ec15f
+source-git-commit: 59f7b7cd2e7c52b64ee7fdb8e33b3a0116697696
 workflow-type: tm+mt
-source-wordcount: '1112'
+source-wordcount: '1161'
 ht-degree: 7%
 
 ---
@@ -92,3 +92,7 @@ Esses campos não são marcados como identidades. Em vez disso, as mesmas identi
 * `{ "key": "AACUSTOMID", "value": [ { "id": "<identity>", "primary": false } ] }`
 
 No mapa de identidade, se a ECID estiver presente, ela será marcada como a identidade principal do evento. Nesse caso, a AAID pode se basear na ECID devido à [Período de carência do Serviço de identidade](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/grace-period.html). Caso contrário, a AAID é marcada como a identidade principal do evento. AACUSTOMID nunca é marcada como a ID principal do evento. No entanto, se a AACUSTOMID estiver presente, a AAID será baseada na AACUSTOMID devido à ordem Experience Cloud das operações.
+
+>[!NOTE]
+>
+>Você pode usar o Preparo de dados para filtrar identidades secundárias provenientes do Analytics, como AAID e AACUSTOMID. Se filtradas, essas identidades não serão assimiladas no Perfil se estiverem disponíveis nos dados de entrada do Analytics. Os dados não filtrados continuarão a ser carregados no data lake.

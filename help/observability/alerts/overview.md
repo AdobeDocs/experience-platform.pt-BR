@@ -4,9 +4,9 @@ title: Visão geral de alertas
 description: Saiba mais sobre os alertas na Adobe Experience Platform, incluindo a estrutura de como as regras de alerta são definidas.
 feature: Alerts
 exl-id: c38a93c6-1618-4ef9-8f94-41c7ab4af43c
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: cb889a169aa42b761b0eeff5aa7fb771ad6ed4be
 workflow-type: tm+mt
-source-wordcount: '773'
+source-wordcount: '796'
 ht-degree: 3%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->Alertas não são aceitos em sandboxes de não produção. Para assinar alertas, você deve garantir que esteja usando uma sandbox de produção.
+>Alertas não são aceitos em sandboxes de não produção. Para assinar alertas, você deve garantir que esteja usando uma sandbox de produção. Todos os alertas de assinatura serão redefinidos quando a sandbox for redefinida. Todos os alertas de assinatura também serão apagados quando uma sandbox for excluída.
 
 O Adobe Experience Platform permite assinar alertas baseados em eventos relacionados a atividades do Adobe Experience Platform. Os alertas reduzem ou eliminam a necessidade de sondar os [[!DNL Observability Insights] API](../api/overview.md) para verificar se um trabalho foi concluído, se uma determinada etapa em um fluxo de trabalho foi atingida ou se ocorreram erros.
 

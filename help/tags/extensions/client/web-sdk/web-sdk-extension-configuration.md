@@ -2,10 +2,10 @@
 title: Configurar a extensão SDK da Web do Adobe Experience Platform
 description: Como configurar a extensão de tag do SDK da Web da Adobe Experience Platform na interface do usuário do.
 exl-id: 96d32db8-0c9a-49f0-91f3-0244522d66df
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: 97b435b9bcaf20be0e41150b6a7a408e083fbd61
 workflow-type: tm+mt
-source-wordcount: '1185'
-ht-degree: 6%
+source-wordcount: '1220'
+ht-degree: 9%
 
 ---
 
@@ -112,12 +112,16 @@ Isso ajuda a acionar comportamentos de sequência de dados diferentes dos padrã
 
 A substituição da configuração da sequência de dados é um processo de duas etapas:
 
-1. Primeiro, você deve definir as substituições de configuração da sequência de dados no [página de configuração do fluxo de dados](../../../../datastreams/configure.md).
-2. Em seguida, você deve enviar as substituições para a Rede de borda por meio de um comando do SDK da Web ou usando a extensão de tag do SDK da Web.
+1. Primeiro, você deve definir as substituições de configuração da sequência na [página de configuração da sequência de dados](../../../../datastreams/configure.md).
+2. Em seguida, você deve enviar as substituições para a rede de borda por meio de um comando do SDK da Web ou usando a extensão de tag do SDK da Web.
 
 Ver a sequência de dados [documentação de substituições de configuração](../../../../datastreams/overrides.md) para obter instruções detalhadas sobre como substituir configurações de sequência de dados.
 
 Como alternativa à transmissão de sobreposições por meio de um comando do SDK da Web, você pode configurar as sobreposições na tela de extensão de tag mostrada abaixo.
+
+>[!IMPORTANT]
+>
+> As substituições de fluxo de dados devem ser configuradas com base no ambiente. Os ambientes de desenvolvimento, armazenamento temporário e produção têm substituições separadas. Você pode copiar as configurações entre elas usando as opções dedicadas mostradas na tela abaixo.
 
 ![Imagem que mostra as sobreposições de configuração da sequência de dados na página de extensão de tag do SDK da Web.](assets/datastream-overrides.png)
 

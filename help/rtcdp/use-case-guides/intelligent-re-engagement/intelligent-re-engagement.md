@@ -1,9 +1,7 @@
 ---
 title: Reengajamento inteligente
 description: Ofereça experiências atraentes e conectadas durante os principais momentos de conversão para reengajar clientes pouco frequentes de forma inteligente.
-hide: true
-hidefromtoc: true
-source-git-commit: 7de5fe7808a22137c417a4ca865d764b0814b90e
+source-git-commit: 79ba0e350d64f43558af9bc3c2ecd4ac13d11499
 workflow-type: tm+mt
 source-wordcount: '3424'
 ht-degree: 3%
@@ -12,7 +10,7 @@ ht-degree: 3%
 
 # Reenvolva seus clientes de forma inteligente para retornar
 
-Reenvolva os clientes que abandonaram uma conversão antes de terminá-la de forma inteligente e responsável. Envolva os clientes obsoletos por meio de experiências, em vez de lembretes, para aprimorar a conversão e impulsionar o crescimento do valor vitalício do cliente.
+Reenvolva os clientes que abandonaram uma conversão antes de concluí-la de forma inteligente e responsável. Envolva os clientes obsoletos por meio de experiências, em vez de lembretes, para aprimorar a conversão e impulsionar o crescimento do valor vitalício do cliente.
 
 Empregue considerações em tempo real, considere todas as qualidades e comportamentos do consumidor e ofereça requalificação rápida com base em eventos online e offline.
 

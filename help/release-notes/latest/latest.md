@@ -2,7 +2,7 @@
 title: Notas de versão da Adobe Experience Platform
 description: As notas de versão de agosto de 2023 do Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: c7cd33c5d3d18095fc525b7a8b36a06cad681200
+source-git-commit: 8a313587a339ea775adc5422519841b1e679be7a
 workflow-type: tm+mt
 source-wordcount: '1592'
 ht-degree: 32%
@@ -64,10 +64,13 @@ Para obter mais informações sobre o controle de acesso baseado em atributos, c
 A Adobe Experience Platform fornece vários painéis para você visualizar insights importantes sobre os dados de sua organização, que são capturados por instantâneos diários.
 
 **Recursos novos ou atualizados**
-&#x200B; | Recurso | Descrição | | — | — | |Caso de uso de análise de consentimento e rastreamento | Saiba como criar um painel de consentimento para vários casos de uso de marketing para dados do Real-Time CDP com o [análise de consentimento e documento de rastreamento](../../dashboards/insights-use-cases/consent-analysis.md). Ele detalha como criar um público-alvo com os atributos apropriados para suas necessidades comerciais e, em seguida, consumir os insights por meio do uso de widgets pré-configurados na interface do usuário do Adobe Experience Platform. Ele também fornece instruções sobre como criar seu próprio widget personalizado com o recurso de painéis definido pelo usuário. O documento abrange a tendência de consentimento e os casos de uso de sobreposição de consentimento. |
+
+| Recurso | Descrição |
+| --- | --- |
+| Caso de uso de análise de consentimento e rastreamento | Saiba como criar um painel de consentimento para vários casos de uso de marketing para dados do Real-Time CDP com o [análise de consentimento e documento de rastreamento](../../dashboards/insights-use-cases/consent-analysis.md). Ele detalha como criar um público-alvo com os atributos apropriados para suas necessidades comerciais e, em seguida, consumir os insights por meio do uso de widgets pré-configurados na interface do usuário do Adobe Experience Platform. Ele também fornece instruções sobre como criar seu próprio widget personalizado com o recurso de painéis definido pelo usuário. O documento abrange a tendência de consentimento e os casos de uso de sobreposição de consentimento. |
 
 {style="table-layout:auto"}
-&#x200B;
+
 Para obter mais informações sobre painéis, incluindo como conceder permissões de acesso e criar widgets personalizados, comece lendo a [visão geral dos painéis](../../dashboards/home.md).
 
 ## Coleção de dados {#data-collection}

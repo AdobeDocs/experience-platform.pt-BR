@@ -2,9 +2,9 @@
 title: Monitorar consultas programadas
 description: Saiba como monitorar consultas por meio da interface do usuário do Serviço de consulta.
 exl-id: 4640afdd-b012-4768-8586-32f1b8232879
-source-git-commit: 75ef9c58aa7c5f1cc628d1f13b6c5f56b362458a
+source-git-commit: fa871529a4136263399bad3200ee3888049d06a5
 workflow-type: tm+mt
-source-wordcount: '1812'
+source-wordcount: '1818'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ A variável [!UICONTROL Consultas programadas] A guia fornece uma visão geral d
 
 Para navegar até o [!UICONTROL Consultas programadas] selecione **[!UICONTROL Consultas]** na barra de navegação esquerda, seguida por **[!UICONTROL Consultas programadas]**
 
-![A guia Consultas agendadas no espaço de trabalho Consultas.](../images/ui/monitor-queries/scheduled-queries.png)
+![A guia Consultas agendadas no espaço de trabalho Consultas com Consultas agendadas e Consultas destacadas.](../images/ui/monitor-queries/scheduled-queries.png)
 
 A tabela abaixo descreve cada coluna disponível.
 

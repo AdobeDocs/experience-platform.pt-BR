@@ -5,7 +5,7 @@ description: A Adobe Experience Platform fornece um painel por meio do qual voc�
 type: Documentation
 hide: true
 hidefromtoc: true
-source-git-commit: c1ad20def39ef58253e8486ca4dcfcce2501510b
+source-git-commit: 25f57b1bfbcb2ec95f88afb69386a10deb600125
 workflow-type: tm+mt
 source-wordcount: '1495'
 ht-degree: 1%
@@ -68,7 +68,7 @@ A tabela indica a métrica principal de cada produto, pois cada produto pode ras
 
 Todas as métricas disponíveis são exibidas na [!UICONTROL Resumo] guia. As métricas disponíveis dependem do produto licenciado. Essa visualização fornece **uma exibição consolidada de todas as métricas em todas as sandboxes de produção ou desenvolvimento**. O mesmo nível de análise é fornecido para sandboxes de produção e desenvolvimento.
 
-![A visualização resumida de um Produto da plataforma que mostra todas as métricas disponíveis para esse produto.]()
+![A visualização resumida de um Produto da plataforma que mostra todas as métricas disponíveis para esse produto.](../images/license-usage/summary-tab.png)
 
 Na guia resumo, a tabela inclui a variável [!UICONTROL Métrica] coluna. Essas descrições em formato legível por humanos indicam todas as métricas usadas para esse tipo de sandbox.
 
@@ -78,7 +78,7 @@ Para alterar a exibição entre tipos de sandbox de produção e desenvolvimento
 
 O relatório de consumo de sandboxes é cumulativo para todas as sandboxes do mesmo tipo. Em outras palavras, selecionar [!UICONTROL Produção] ou [!UICONTROL Desenvolvimento] O fornece relatórios de consumo para todas as sandboxes de produção ou desenvolvimento, respectivamente.
 
-![A exibição de resumo de um Produto de plataforma com sandboxes de produção e sandboxes de desenvolvimento foi destacada.](../images/license-usage/summary-tab.png)
+![A exibição de resumo de um Produto de plataforma com sandboxes de produção e sandboxes de desenvolvimento foi destacada.](../images/license-usage/summary-tab-sandboxes.png)
 
 >[!WARNING]
 >

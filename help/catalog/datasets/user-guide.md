@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guia da interface de conjuntos de dados
 description: Saiba como executar ações comuns ao trabalhar com conjuntos de dados na interface do usuário do Adobe Experience Platform.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 141037fd844c78e98785ea2246026ac120961dd5
+source-git-commit: 25f57b1bfbcb2ec95f88afb69386a10deb600125
 workflow-type: tm+mt
 source-wordcount: '2745'
 ht-degree: 4%
@@ -41,7 +41,7 @@ Este guia do usuário requer uma compreensão funcional dos seguintes componente
 
 No [!DNL Experience Platform] Interface, selecione **[!UICONTROL Conjuntos de dados]** no painel de navegação esquerdo para abrir a **[!UICONTROL Conjuntos de dados]** painel. O painel lista todos os conjuntos de dados disponíveis para sua organização. Os detalhes são exibidos para cada conjunto de dados listado, incluindo seu nome, o esquema ao qual o conjunto de dados adere e o status da execução de ingestão mais recente.
 
-![Uma imagem que destaca o item Conjuntos de dados na barra de navegação à esquerda.](../images/datasets/user-guide/browse-datasets.png)
+![Uma imagem que destaca o item Conjuntos de dados na barra de navegação esquerda.](../images/datasets/user-guide/browse-datasets.png)
 
 Selecione o nome de um conjunto de dados na [!UICONTROL Procurar] para acessar seu **[!UICONTROL Atividade do conjunto de dados]** e veja detalhes do conjunto de dados selecionado. A guia Atividade inclui um gráfico que visualiza a taxa de mensagens que estão sendo consumidas, bem como uma lista de lotes bem-sucedidos e com falha.
 
@@ -207,7 +207,7 @@ Você pode gerenciar os rótulos de governança de dados para um conjunto de dad
 
 Os rótulos de uso de dados, aplicados no nível do esquema, permitem categorizar conjuntos de dados e campos de acordo com as políticas de uso que se aplicam a esses dados. Consulte a [Visão geral da governança de dados](../../data-governance/home.md) para saber mais sobre rótulos ou consulte o [guia do usuário de rótulos de uso de dados](../../data-governance/labels/overview.md) para obter instruções sobre como aplicar rótulos a esquemas para propagação em conjuntos de dados.
 
-### Mover para pastas {#move-to-folders}
+## Mover para pastas {#move-to-folders}
 
 Você pode colocar conjuntos de dados em pastas para melhorar o gerenciamento do conjunto de dados. Para mover um conjunto de dados para uma pasta, selecione as reticências (...) ao lado do nome do conjunto de dados que você deseja gerenciar, seguido por **[!UICONTROL Mover para a pasta]** no menu suspenso.
 
@@ -217,7 +217,7 @@ A variável [!UICONTROL Mover] conjunto de dados para pasta é exibida. Selecion
 
 ![A variável [!UICONTROL Mover] caixa de diálogo do conjunto de dados com [!UICONTROL Mover] destacado.](../images/datasets/user-guide/move-dialog.png)
 
->
+>[!TIP]
 >
 >Você também pode criar pastas diretamente na caixa de diálogo Mover conjunto de dados. Para criar uma pasta, selecione o ícone criar pasta (![O ícone criar pasta.](../images/datasets/user-guide/create-folder-icon.png)) na parte superior direita da caixa de diálogo.
 >

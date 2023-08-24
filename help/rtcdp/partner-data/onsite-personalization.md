@@ -1,16 +1,18 @@
 ---
 title: Use o reconhecimento de visitantes auxiliados pelo parceiro para personalizar experiências no local
 description: Saiba como usar o reconhecimento de visitantes auxiliado por parceiros para fornecer experiências personalizadas no local para seus visitantes.
-hide: true
-hidefromtoc: true
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: 9d7e8ef99a42e804896f5c9befcf98bb1c010606
 workflow-type: tm+mt
-source-wordcount: '2492'
-ht-degree: 7%
+source-wordcount: '2530'
+ht-degree: 8%
 
 ---
 
 # Use o reconhecimento de visitantes auxiliados por parceiros para personalizar experiências no local
+
+>[!AVAILABILITY]
+>
+>Essa funcionalidade está disponível para clientes que possuem o Real-Time CDP (Serviço de aplicativo), Ativação da Adobe Experience Platform, Real-time CDP, Real-Time CDP Prime ou Real-Time CDP Ultimate licenciados. Leia mais sobre esses pacotes nas [descrições do produto](https://helpx.adobe.com/legal/product-descriptions.html?lang=pt-BR) e entre em contato com a pessoa representante da Adobe para obter mais informações.
 
 Saiba como usar o reconhecimento auxiliado pelo parceiro para fornecer experiências personalizadas aos visitantes de propriedades da Web. Use este tutorial para entender a sequência de implementação de vários elementos no Experience Platform e outras soluções da Experience Cloud para exibir uma experiência personalizada para visitantes autenticados e não autenticados.
 
@@ -265,4 +267,4 @@ Conheça outros casos de uso habilitados por meio da compatibilidade com dados d
 
 * [Suplemente perfis próprios com atributos de parceiros de dados confiáveis para melhorar sua base de dados, obter novos insights sobre sua base de clientes e aprimorar a otimização do público-alvo.](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
 * Use o suporte a dados de terceiros no Real-Time CDP para [expanda sua base de perfis com perfis de clientes potenciais de parceiros de dados e envolva-se com eles para adquirir ou alcançar novos clientes](/help/rtcdp/partner-data/prospecting.md).
-* (**Em breve**) [!BADGE Beta]{type=Informative}**Ativação expandida** usando IDs de parceiros para ecossistemas de publicação que não aceitam PII ou PII com hash.
+* [Ativação ampliada de perfis de clientes potenciais e públicos-alvo de clientes potenciais](/help/destinations/ui/activate-prospect-audiences.md) para selecionar destinos.

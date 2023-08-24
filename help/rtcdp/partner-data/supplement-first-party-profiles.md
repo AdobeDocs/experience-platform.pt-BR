@@ -1,13 +1,10 @@
 ---
-title: (Beta) Suplementar perfis próprios com atributos fornecidos por parceiros
+title: Suplementar perfis próprios com atributos fornecidos por parceiros
 description: Saiba como suplementar perfis próprios com atributos de parceiros de dados confiáveis para melhorar sua base de dados, obter novos insights sobre sua base de clientes e aprimorar a otimização do público-alvo.
-hide: true
-hidefromtoc: true
-badgeBeta: label="Beta" type="informative" before-title="true"
-source-git-commit: 486e1390dfa0602bef15d196d4a1a5befdc9ff23
+source-git-commit: 9dd305be4dcb45c290a2b8ee0476191949369adc
 workflow-type: tm+mt
-source-wordcount: '1083'
-ht-degree: 100%
+source-wordcount: '1091'
+ht-degree: 94%
 
 ---
 
@@ -15,7 +12,7 @@ ht-degree: 100%
 
 >[!AVAILABILITY]
 >
->* Essa funcionalidade beta está disponível para clientes que possuem o Real-Time CDP (Serviço de aplicativo), Ativação da Adobe Experience Platform, Real-time CDP, Real-Time CDP Prime ou Real-Time CDP Ultimate licenciados. Leia mais sobre esses pacotes nas [descrições do produto](https://helpx.adobe.com/legal/product-descriptions.html?lang=pt-BR) e entre em contato com a pessoa representante da Adobe para obter mais informações.
+>* Essa funcionalidade está disponível para clientes que possuem o Real-Time CDP (Serviço de aplicativo), Ativação da Adobe Experience Platform, Real-time CDP, Real-Time CDP Prime ou Real-Time CDP Ultimate licenciados. Leia mais sobre esses pacotes nas [descrições do produto](https://helpx.adobe.com/legal/product-descriptions.html?lang=pt-BR) e entre em contato com a pessoa representante da Adobe para obter mais informações.
 
 Suplemente perfis próprios com atributos de parceiros de dados confiáveis para melhorar sua base de dados, obter novos insights sobre sua base de clientes e aprimorar a otimização do público-alvo.
 
@@ -32,7 +29,7 @@ Ao considerar suplementar seus perfis próprios com atributos de parceiros de da
 
 >[!WARNING]
 >
->Os atributos adicionais fornecidos por parceiros assimilados na Real-Time CDP afetam sua *riqueza de perfil média*. Leia a [Descrição do produto da Real-time Customer Data Platform](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html?lang=pt-BR) para obter mais informações sobre riqueza de perfil.
+>Os atributos adicionais fornecidos por parceiros assimilados na Real-Time CDP afetam sua *riqueza do perfil média*. Leia a [Descrição do produto da Real-time Customer Data Platform](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html?lang=pt-BR) para obter mais informações sobre riqueza do perfil.
 
 ## Como atingir o caso de uso: visão geral de alto nível {#achieve-the-use-case-high-level}
 
@@ -121,5 +118,6 @@ Observe as seguintes limitações ao explorar o caso de uso descrito nesta pági
 
 Conheça outros casos de uso habilitados por meio da compatibilidade com dados de parceiros na Real-Time CDP:
 
-* (**Em breve**) [!BADGE Beta]{type=Informative}**Aproveite o reconhecimento auxiliado por parceiros** para personalizar experiências no site durante a visita e para redirecionamento fora do site após a visita, sem a necessidade de autenticação do usuário ou um histórico anterior com sua marca.
-* (**Em breve**) [!BADGE Beta]{type=Informative}**Ativação expandida** usando IDs de parceiros para ecossistemas de publicação que não aceitam PII ou PII com hash.
+* Use o suporte a dados de terceiros no Real-Time CDP para [expanda sua base de perfis com perfis de clientes potenciais de parceiros de dados e envolva-se com eles para adquirir ou alcançar novos clientes](/help/rtcdp/partner-data/prospecting.md).
+* [Aproveite o reconhecimento auxiliado pelo parceiro para personalizar experiências no local](/help/rtcdp/partner-data/onsite-personalization.md) durante a visita sem que o usuário autentique ou tenha um histórico anterior com sua marca.
+* [Ativação ampliada de perfis de clientes potenciais e públicos-alvo de clientes potenciais](/help/destinations/ui/activate-prospect-audiences.md) para selecionar destinos.

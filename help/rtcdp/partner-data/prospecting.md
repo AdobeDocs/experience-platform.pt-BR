@@ -1,13 +1,10 @@
 ---
-title: (Beta) Envolver e adquirir novos clientes por meio de casos de uso de prospecção
+title: Envolver e adquirir novos clientes por meio de casos de uso de prospecção
 description: Saiba como envolver e adquirir novos clientes por meio de casos de uso de prospecção, habilitados pelo suporte a dados de parceiros no Real-Time CDP.
-hide: true
-hidefromtoc: true
-badgeBeta: label="Beta" type="informative" before-title="true"
-source-git-commit: 2e2a473efd247cb235ee7e8f94058baa48fd1b1a
+source-git-commit: 9dd305be4dcb45c290a2b8ee0476191949369adc
 workflow-type: tm+mt
-source-wordcount: '1953'
-ht-degree: 15%
+source-wordcount: '1941'
+ht-degree: 14%
 
 ---
 
@@ -15,7 +12,7 @@ ht-degree: 15%
 
 >[!AVAILABILITY]
 >
->* Essa funcionalidade beta está disponível para clientes que possuem o Real-Time CDP (Serviço de aplicativo), Ativação da Adobe Experience Platform, Real-time CDP, Real-Time CDP Prime ou Real-Time CDP Ultimate licenciados. Leia mais sobre esses pacotes nas [descrições do produto](https://helpx.adobe.com/legal/product-descriptions.html?lang=pt-BR) e entre em contato com a pessoa representante da Adobe para obter mais informações.
+>* Essa funcionalidade está disponível para clientes que possuem o Real-Time CDP (Serviço de aplicativo), Ativação da Adobe Experience Platform, Real-time CDP, Real-Time CDP Prime ou Real-Time CDP Ultimate licenciados. Leia mais sobre esses pacotes nas [descrições do produto](https://helpx.adobe.com/legal/product-descriptions.html?lang=pt-BR) e entre em contato com a pessoa representante da Adobe para obter mais informações.
 
 Use o suporte a dados de terceiros no Real-Time CDP para expandir sua base de perfis com perfis de prospecto de parceiros de dados e interagir com eles para adquirir ou alcançar novos clientes.
 
@@ -57,8 +54,8 @@ Ao concluir as etapas para implementar o caso de uso, você usará a seguinte fu
 * [Rótulos de uso de dados](/help/data-governance/labels/overview.md)
 * [Conjuntos de dados](/help/catalog/datasets/overview.md)
 * [Fontes](/help/sources/home.md)
-* Perfis (link para perfis de cliente potencial)
-* Públicos (link para públicos-alvo potenciais)
+* [Perfis de cliente potencial](/help/profile/ui/prospect-profile.md)
+* [Públicos-alvo potenciais](/help/segmentation/ui/prospect-audience.md)
 * [Destinos](/help/destinations/home.md)
 
 ### Detalhes do perfil de terceiros da licença do parceiro {#license-profiles-from-partner}
@@ -184,7 +181,7 @@ Você também pode selecionar qualquer perfil de cliente potencial para inspeç�
 
 ![Exibição de como inspecionar perfis de cliente potencial.](/help/rtcdp/assets/partner-data/prospecting/inspect-prospect-profile.gif)
 
-(**Em breve**) Leia mais sobre perfis de clientes potenciais.
+Leia mais sobre [perfis de cliente potencial](/help/profile/ui/prospect-profile.md).
 
 ### Criar públicos-alvo potenciais {#create-prospect-audiences}
 
@@ -200,7 +197,7 @@ Observe que a experiência de criação de público-alvo para perfis de prospect
 * Somente avaliação do perfil de lote.
 * Não é compatível com a criação de públicos-alvo com base em eventos de série temporal.
 
-(**Em breve**) Leia mais sobre públicos-alvo potenciais.
+Leia mais sobre [públicos-alvo potenciais](/help/segmentation/ui/prospect-audience.md).
 
 ### Ativar perfis de cliente potencial para destinos {#activate-to-destinations}
 
@@ -210,5 +207,6 @@ Use os públicos potenciais exportando-os para destinos. Atualmente, apenas cert
 
 Conheça outros casos de uso habilitados por meio da compatibilidade com dados de parceiros na Real-Time CDP:
 
-* [!BADGE Beta]{type=Informative}[Suplemente perfis próprios com atributos de parceiros de dados confiáveis para melhorar sua base de dados, obter novos insights sobre sua base de clientes e aprimorar a otimização do público-alvo.](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
-* (**Em breve**) [!BADGE Beta]{type=Informative}**Aproveite o reconhecimento auxiliado por parceiros** para personalizar experiências no site durante a visita e para redirecionamento fora do site após a visita, sem a necessidade de autenticação do usuário ou um histórico anterior com sua marca.
+* [Suplemente perfis próprios com atributos de parceiros de dados confiáveis para melhorar sua base de dados, obter novos insights sobre sua base de clientes e aprimorar a otimização do público-alvo.](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
+* [Aproveite o reconhecimento auxiliado pelo parceiro para personalizar experiências no local](/help/rtcdp/partner-data/onsite-personalization.md) durante a visita sem que o usuário autentique ou tenha um histórico anterior com sua marca.
+* [Ativação ampliada de perfis de clientes potenciais e públicos-alvo de clientes potenciais](/help/destinations/ui/activate-prospect-audiences.md) para selecionar destinos.

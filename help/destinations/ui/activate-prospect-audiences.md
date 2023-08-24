@@ -1,13 +1,11 @@
 ---
 title: Ativar públicos-alvo potenciais para destinos
 type: Tutorial
-hide: true
-hidefromtoc: true
 description: Saiba como ativar públicos-alvo potenciais para destinos
-source-git-commit: e04d7a3cd75f4e61329a2de8ca5ddcc4d9518a57
+source-git-commit: 9dd305be4dcb45c290a2b8ee0476191949369adc
 workflow-type: tm+mt
-source-wordcount: '522'
-ht-degree: 0%
+source-wordcount: '619'
+ht-degree: 8%
 
 ---
 
@@ -82,3 +80,11 @@ No restante do fluxo de trabalho de ativação para exportar públicos-alvo de p
 Note that we will need to add links to other destination types here as more destinations become supported 
 
 -->
+
+## Outros casos de uso obtidos por meio da compatibilidade com dados de parceiros {#other-use-cases}
+
+Conheça outros casos de uso habilitados por meio da compatibilidade com dados de parceiros na Real-Time CDP:
+
+* [Suplemente perfis próprios com atributos de parceiros de dados confiáveis para melhorar sua base de dados, obter novos insights sobre sua base de clientes e aprimorar a otimização do público-alvo.](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
+* Use o suporte a dados de terceiros no Real-Time CDP para [expanda sua base de perfis com perfis de clientes potenciais de parceiros de dados e envolva-se com eles para adquirir ou alcançar novos clientes](/help/rtcdp/partner-data/prospecting.md).
+* [Aproveite o reconhecimento auxiliado pelo parceiro para personalizar experiências no local](/help/rtcdp/partner-data/onsite-personalization.md) durante a visita sem que o usuário autentique ou tenha um histórico anterior com sua marca.

@@ -4,10 +4,10 @@ title: Guia do Painel de públicos-alvo
 description: A Adobe Experience Platform fornece um painel por meio do qual você pode exibir informações importantes sobre os públicos-alvo criados por sua organização.
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: cd57ca50537d928025a5164b6a7d0ead490162ba
 workflow-type: tm+mt
-source-wordcount: '2231'
-ht-degree: 7%
+source-wordcount: '3053'
+ht-degree: 8%
 
 ---
 
@@ -86,6 +86,65 @@ Uma transferência de widget padrão é fornecida para todas as novas instância
 >
 >Em 26 de julho de 2023, [!UICONTROL Perfis], [!UICONTROL Públicos-alvo], e [!UICONTROL Destinos] Os painéis de visão geral foram redefinidos para uma nova carga de widget padrão para todos os usuários que não modificaram suas visualizações nos seis meses anteriores.
 >Consulte a documentação no [Perfis](./profiles.md#default-widgets) e [Destinos](./destinations.md#default-widgets) seções de widget padrão para obter detalhes sobre quais widgets são incluídos como parte dos carregamentos de widget padrão. Você pode continuar personalizando seus widgets de painel como antes.
+
+## Widgets da IA do cliente {#customer-ai-audiences-widgets}
+
+o Customer AI é usado para gerar pontuações de propensão personalizadas, como churn e conversão para perfis individuais em escala. A IA do cliente faz isso analisando dados existentes do Evento de experiência do consumidor para prever **pontuações de propensão de churn ou conversão**. Esses modelos de propensão de alta precisão do cliente permitem segmentação e direcionamento mais exatos. A variável [distribuição de pontuações](#customer-ai-distribution-of-scores) e [resumo de pontuação](#customer-ai-scoring-summary) os insights demonstram a divisão no público-alvo. Eles destacam quais perfis são a propensão alta/baixa/média e como eles são distribuídos na contagem de perfis.
+
+* [[!UICONTROL Resumo de pontuação do Customer AI]](#customer-ai-scoring-summary)
+* [[!UICONTROL Distribuição de pontuações da IA do cliente]](#customer-ai-distribution-of-scores)
+
+### [!UICONTROL Distribuição de pontuações da IA do cliente] {#customer-ai-distribution-of-scores}
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_segments_distributionOfScores"
+>title="Distribuição das pontuações"
+>abstract="Este dispositivo visualiza a distribuição do número total de perfis por suas pontuações de propensão em incrementos de cinco por cento. A distribuição da contagem de perfis é determinada pelo modelo de IA e pela política de mesclagem selecionada. É possível alterar o modelo de IA no menu suspenso sob o título do dispositivo."
+
+A variável [!UICONTROL Distribuição de pontuações da IA do cliente] O widget categoriza o número total de perfis por suas pontuações de propensão. A distribuição da contagem de perfis é determinada pelo modelo de IA e pela política de mesclagem selecionada e, em seguida, visualizada em incrementos de cinco por cento que indicam sua propensão. A contagem de perfis é fornecida ao longo do eixo Y e as pontuações de propensão são fornecidas ao longo do eixo X.
+
+>[!NOTE]
+>
+>Se a visualização for uma pontuação de propensão de conversão, as pontuações mais altas serão exibidas em verde e as pontuações mais baixas em vermelho. Se você estiver prevendo a propensão de churn, ela será invertida, as pontuações mais altas estarão em vermelho e as pontuações mais baixas em verde. O intervalo médio permanece amarelo, independentemente do tipo de propensão escolhido.
+
+O modelo de IA que determina as pontuações de propensão é escolhido no seletor suspenso sob o título do widget. A lista suspensa contém uma lista de todos os modelos configurados da IA do cliente. Selecione o modelo de IA apropriado para sua análise na lista de modelos disponíveis. Se nenhum modelo de IA do cliente estiver disponível, uma mensagem no widget o direcionará para configurar pelo menos um modelo de IA do cliente e fornecerá um hiperlink para a página Configuração do modelo de IA do cliente. Consulte a documentação para obter instruções sobre [como configurar uma instância da IA do cliente](../../intelligent-services/customer-ai/user-guide/configure.md).
+
+>[!NOTE]
+>
+>Selecione a lista suspensa imediatamente abaixo da guia de visão geral para alterar a política de mesclagem que determina quais perfis são incluídos na análise. Consulte a seção sobre [políticas de mesclagem](#merge-policies) para obter uma breve descrição, ou [visão geral da política de mesclagem](../../profile/merge-policies/overview.md) para obter mais detalhes.
+
+Para navegar até a página de insights detalhados do modelo de IA do cliente selecionado, selecione **[!UICONTROL Exibir detalhes do modelo]**.
+
+![O painel Públicos-alvo do Experience Platform com a [!UICONTROL Distribuição de pontuações da IA do cliente] widget e [!UICONTROL Exibir detalhes do modelo] destacado.](../images/segments/customer-ai-distribution-of-scores.png)
+
+A página de insights detalhados do modelo é exibida.
+
+![A página de insights da IA do cliente.](../images/profiles/customer-ai-insights-page.png)
+
+Mais informações sobre a IA do cliente podem ser encontradas no [guia da interface do usuário do discover insights](../../intelligent-services/customer-ai/user-guide/discover-insights.md).
+
+### [!UICONTROL Resumo de pontuação do Customer AI] {#customer-ai-scoring-summary}
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_segments_scoringSummary"
+>title="Resumo da pontuação"
+>abstract="Este dispositivo exibe o número total de perfis pontuados e os categoriza em compartimentos de propensão alta, média e baixa. O gráfico de rosquinha ilustra a composição proporcional dos perfis totais de propensão alta, média e baixa."
+
+Este widget exibe o número total de perfis pontuados e os categoriza em compartimentos que contêm alta, média e baixa propensão como verde, amarelo e vermelho, respectivamente. Um gráfico de rosca é usado para ilustrar a composição proporcional dos perfis totais entre propensões alta, média e baixa como verde, amarelo e vermelho, respectivamente. Um perfil se qualifica para alta propensão acima de 75, média propensão entre 25 e 74 e baixa propensão abaixo de 24. Uma legenda indica o código de cor e os limites de propensões. As contagens de perfil para as tendências alta, média e baixa são exibidas em uma caixa de diálogo quando o cursor passa o mouse sobre a respectiva seção do gráfico de rosca.
+
+>[!NOTE]
+>
+>Se a visualização for uma pontuação de propensão de conversão, as pontuações mais altas serão exibidas em verde e as pontuações mais baixas em vermelho. Se você estiver prevendo a propensão de churn, ela será invertida, as pontuações mais altas estarão em vermelho e as pontuações mais baixas em verde. O intervalo médio permanece amarelo, independentemente do tipo de propensão escolhido.
+
+O menu suspenso abaixo do título do widget fornece uma lista de todos os modelos configurados da IA do cliente. Selecione o modelo de IA apropriado para sua análise na lista de modelos disponíveis. Se nenhum modelo de IA do cliente estiver disponível, uma mensagem no widget o direcionará para configurar pelo menos um modelo de IA do cliente e fornecerá um hiperlink para a página Configuração do modelo de IA do cliente. Consulte a documentação em [como configurar uma instância da IA do cliente](../../intelligent-services/customer-ai/user-guide/configure.md) para obter instruções detalhadas.
+
+>[!NOTE]
+>
+>O número total de perfis calculados depende da política de mesclagem escolhida. Para alterar a política de mesclagem usada, selecione a lista suspensa imediatamente abaixo da guia de visão geral. Consulte a seção sobre [políticas de mesclagem](#merge-policies) para obter uma breve descrição, ou [visão geral da política de mesclagem](../../profile/merge-policies/overview.md) para obter mais detalhes.
+
+![O painel Públicos-alvo do Experience Platform com o widget de resumo de pontuação da IA do cliente é realçado.](../images/segments/customer-ai-scoring-summary.png)
+
+Selecionar **[!UICONTROL Exibir detalhes do modelo]** para navegar até a página de insights detalhados do modelo de IA do cliente selecionado. Mais informações sobre a IA do cliente podem ser encontradas no [guia da interface do usuário do discover insights](../../intelligent-services/customer-ai/user-guide/discover-insights.md).
 
 ## Widgets padrão {#standard-widgets}
 

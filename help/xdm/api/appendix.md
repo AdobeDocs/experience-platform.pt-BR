@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Apêndice do guia da API do registro de esquema
 description: Este documento fornece informações adicionais relacionadas ao trabalho com a API do Registro de esquema.
 exl-id: 2ddc7fe8-dd0b-4cf9-8561-e89fcdadbfce
-source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
+source-git-commit: 28891cf37dc9ffcc548f4c0565a77f62432c0b44
 workflow-type: tm+mt
-source-wordcount: '978'
+source-wordcount: '968'
 ht-degree: 0%
 
 ---
@@ -47,7 +47,6 @@ Os parâmetros de consulta mais comuns para paginação incluem:
 | `>` | Filtra especificando se a propriedade é maior que o valor fornecido. | `property=version>5` |
 | `<=` | Filtra se a propriedade é menor ou igual ao valor fornecido. | `property=version<=5` |
 | `>=` | Filtra se a propriedade é maior ou igual ao valor fornecido. | `property=version>=5` |
-| `~` | Filtra se a propriedade corresponde a uma expressão regular fornecida. | `property=title~test$` |
 | (None) | Declarar apenas o nome da propriedade retorna somente as entradas nas quais a propriedade existe. | `property=title` |
 
 {style="table-layout:auto"}

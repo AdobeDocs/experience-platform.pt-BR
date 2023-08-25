@@ -1,21 +1,14 @@
 ---
 title: Classe de perfil de cliente potencial individual XDM
 description: Este documento fornece uma visão geral da classe de Perfil de cliente potencial individual XDM no Experience Data Model (XDM).
-badgeBeta: label="Beta" type="Informative"
-hide: true
-hidefromtoc: true
-source-git-commit: 83f01c58e21bc42a53e2e7a08bd7a60ef90b41e6
+source-git-commit: 437bd602462330a96f356b83d7afe922b5315d9f
 workflow-type: tm+mt
-source-wordcount: '374'
-ht-degree: 5%
+source-wordcount: '348'
+ht-degree: 3%
 
 ---
 
 # [!UICONTROL Perfil de cliente potencial individual XDM] classe
-
->[!IMPORTANT]
->
->A variável [!UICONTROL Perfil de cliente potencial individual XDM] a classe está na versão beta e não está disponível para todos os usuários. A documentação e a funcionalidade estão sujeitas a alterações.
 
 No Experience Data Model (XDM), a variável [!UICONTROL Perfil de cliente potencial individual XDM] a classe captura perfis de prospecto geralmente obtidos de parceiros de dados para casos de uso de aquisição de clientes topo de funil.
 

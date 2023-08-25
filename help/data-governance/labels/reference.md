@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Glossário de rótulos de uso de dados
 description: Este documento descreve todos os rótulos de uso de dados atualmente compatíveis com o Adobe Experience Platform.
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
-source-git-commit: d1d817646fdc943428ca13f3dd8b52725bce4921
+source-git-commit: 538c5e2c7ff3c684edf6db12087fdf0a58e40199
 workflow-type: tm+mt
-source-wordcount: '2207'
+source-wordcount: '2185'
 ht-degree: 3%
 
 ---
@@ -64,11 +64,7 @@ Um tipo de dados que você pode considerar confidenciais pode ser o de diferente
 | **PSPD** | Dados pessoais confidenciais permitidos (PSPD) refere-se aos dados que você tem permissão contratual do Adobe para carregar e que são considerados &quot;confidenciais&quot;, &quot;categoria especial de dados&quot; ou um termo semelhante usado pelas leis aplicáveis. Isso exclui especificamente as Informações de Saúde Protegidas (PHI) e outros dados de saúde regulamentados. |
 | **RHD** | Dados que se referem a PHI (Protected Health Information, informações protegidas de saúde) ou informações sobre um paciente que você tem permissão contratual para carregar por Adobe. |
 
-## (Beta) Rótulos de ecossistema de parceiros {#partner}
-
->[!IMPORTANT]
->
->O rótulo de dados de terceiros está na versão beta. Não está disponível para todos os usuários e a documentação está sujeita a alterações.
+## Rótulos de ecossistema de parceiros {#partner}
 
 Os rótulos do ecossistema do parceiro são usados para categorizar dados obtidos de fontes externas à sua organização.
 

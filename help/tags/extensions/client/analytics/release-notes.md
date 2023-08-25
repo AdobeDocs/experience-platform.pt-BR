@@ -2,10 +2,10 @@
 title: Notas de versão da extensão do Adobe Analytics
 description: As notas de versão mais recentes da extensão de tag do Adobe Analytics na Adobe Experience Platform.
 exl-id: 3c7b4ec0-4b81-4ef4-b15f-6ad102525840
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 80c46748d809fe0b0367cf779f41d7851e8e62db
 workflow-type: tm+mt
-source-wordcount: '1333'
-ht-degree: 90%
+source-wordcount: '1394'
+ht-degree: 87%
 
 ---
 
@@ -15,7 +15,20 @@ Veja a seguir uma lista das notas de versão da extensão de tag do Adobe Analyt
 
 >[!NOTE]
 >
->A extensão de tag do Analytics é atualizada com frequência em resposta a atualizações na [Biblioteca JavaScript AppMeasurement](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=pt-BR). Consulte a [Notas de versão do AppMeasurement](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=pt-BR) para obter detalhes sobre as versões específicas mencionadas abaixo.
+>A extensão de tag do Analytics é atualizada com frequência em resposta a atualizações na [Biblioteca JavaScript do AppMeasurement](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=pt-BR). Consulte a [Notas de versão do AppMeasurement](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=pt-BR) para obter detalhes sobre as versões específicas mencionadas abaixo.
+
+## 19 de julho de 2023
+
+**Extensão do Adobe Analytics versão 1.9.2**
+
+**Recursos**:
+
+* Atualizado para o AppMeasurement v2.24.0.
+* Adição de uma configuração opcional (`decodeLinkParameters` padrão `false`) que decodifica URLs de links que incluem caracteres codificados com byte duplo.
+
+**Correções de erros**:
+* Adição de manipulação de erros para navegadores com alta entropia incorreta [Dicas do cliente de usuário-agente](https://experienceleague.adobe.com/docs/analytics/technotes/client-hints.html?lang=pt-BR) APIs.
+* Alterado [POST](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Methods/POST) Cabeçalho Content-Type a ser usado `x-www-form-urlencoded` por padrão.
 
 ## 23 de setembro de 2022
 
@@ -40,7 +53,7 @@ Veja a seguir uma lista das notas de versão da extensão de tag do Adobe Analyt
 
 **Correções de erros**:
 
-* AppMeasurement atualizado para v2.22.3.
+* Atualização do AppMeasurement para v2.22.3.
 
 ## 16 de setembro de 2021
 
@@ -48,7 +61,7 @@ Veja a seguir uma lista das notas de versão da extensão de tag do Adobe Analyt
 
 **Correções de erros**:
 
-* AppMeasurement atualizado para v2.22.2.
+* Atualização do AppMeasurement para v2.22.2.
 * Remoção do buildInfo.environment obsoleto
 
 ## 24 de agosto de 2021

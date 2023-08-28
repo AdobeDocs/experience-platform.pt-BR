@@ -4,9 +4,9 @@ description: Saiba como usar o Assistente de IA para navegar e entender os conce
 badge: Alfa
 hide: true
 hidefromtoc: true
-source-git-commit: ca606e4e29f4ba1df281f47a86b4e3cfa850ae35
+source-git-commit: e84f5aff6885535b58874a4fe02db2944e1d9b7f
 workflow-type: tm+mt
-source-wordcount: '2627'
+source-wordcount: '2629'
 ht-degree: 0%
 
 ---
@@ -342,4 +342,4 @@ Leia a tabela abaixo para ver exemplos:
 | --- | --- | --- |
 | Qual é meu maior segmento? | Qual é meu maior segmento? Uso de dados. | Informe explicitamente ao Assistente de IA que você deseja que a resposta seja baseada em dados. |
 | Qual é meu maior segmento? | Listar meu maior segmento. | Há casos em que uma pergunta &quot;o que...&quot; pode ser confundida com uma pergunta baseada em documentação. Usar um comando como &quot;lista&quot; é um indicador mais forte de que você está fazendo uma pergunta com dados em contexto. |
-| Quantos conjuntos de dados eu tenho? | Contar meus conjuntos de dados. | Embora a pergunta original seja segmentada, ela não funciona com conjuntos de dados. |
+| Quantos conjuntos de dados eu tenho? | Contar meus conjuntos de dados. | A pergunta original funciona para segmentos, mas pode não funcionar com conjuntos de dados. |

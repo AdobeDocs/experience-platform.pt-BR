@@ -3,9 +3,9 @@ keywords: Experience Platform;solução de problemas;medidas de proteção;diret
 title: Medidas de proteção para a assimilação de dados
 description: Este documento fornece orientação sobre medidas de proteção para a assimilação de dados no Adobe Experience Platform
 exl-id: f07751cb-f9d3-49ab-bda6-8e6fec59c337
-source-git-commit: 582f6ffdea6fa1978f6af6f0f0f92e50a12f6200
+source-git-commit: 008537dffff4cc428de9070964446f4e7ebf039f
 workflow-type: tm+mt
-source-wordcount: '534'
+source-wordcount: '496'
 ht-degree: 1%
 
 ---
@@ -29,11 +29,14 @@ A tabela a seguir descreve as medidas de proteção que devem ser consideradas a
 
 ## Medidas de proteção para assimilação por transmissão
 
-A tabela a seguir descreve as medidas de proteção que devem ser consideradas ao usar o [API de assimilação por transmissão](./streaming-ingestion/overview.md) ou fontes de transmissão:
+Leia o [visão geral da assimilação por transmissão](./streaming-ingestion/overview.md) para obter informações sobre as medidas de proteção para a assimilação por transmissão.
+
+## Medidas de proteção para fontes de transmissão
+
+A tabela a seguir descreve as medidas de proteção a serem consideradas ao usar as fontes de transmissão:
 
 | Tipo de assimilação | Diretrizes | Notas |
 | --- | --- | --- |
-| Assimilação por streaming | <ul><li>O tamanho máximo do registro é de 1 MB, com o tamanho recomendado de 10 KB.</li><li>Você pode processar até 2500 solicitações por segundo no Perfil.</li><li>Você pode processar até 20.000 solicitações por segundo para o data lake em menos de 15 minutos.</li></ul> | Use a API de assimilação em lote se precisar de uma taxa de transferência de dados mais alta. |
 | Fontes de transmissão | <ul><li>O tamanho máximo do registro é de 1 MB, com o tamanho recomendado de 10 KB.</li><li>As fontes de transmissão oferecem suporte a entre 4.000 e 5.000 solicitações por segundo após a criação de uma nova conexão de origem. **Nota**: pode levar até 30 minutos para que a transmissão de dados seja completamente processada para o data lake.</li><li>Você pode processar entre 4.000 e 5.000 solicitações por segundo no data lake. **Nota**: pode levar até 30 minutos para que a transmissão de dados seja completamente processada para o data lake.</li></ul> | Fontes de transmissão, como [!DNL Kafka], [!DNL Azure Event Hubs], e [!DNL Amazon Kinesis] não use o [!DNL Data Collection Core Service] (DCCS) e podem ter limites de rendimento diferentes. Consulte a [visão geral das origens](../sources/home.md) para um catálogo de fontes que você pode usar para assimilação de dados. |
 
 ## Próximas etapas

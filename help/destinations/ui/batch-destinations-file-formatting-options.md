@@ -1,15 +1,15 @@
 ---
 description: Saiba como configurar opções de formatação de arquivo ao ativar dados para destinos baseados em arquivo
-title: (Beta) Configurar opções de formatação de arquivo para destinos baseados em arquivo
+title: Configurar opções de formatação de arquivo para destinos baseados em arquivo
 exl-id: f59b1952-e317-40ba-81d1-35535e132a72
-source-git-commit: 3b5f4abd516259402e9b3c4cfbcc17e32f18b6f5
+source-git-commit: 0eb17d4d7ad9db3737a14f383bdafe40d59eb12c
 workflow-type: tm+mt
-source-wordcount: '1190'
+source-wordcount: '1188'
 ht-degree: 19%
 
 ---
 
-# (Beta) Configurar opções de formatação de arquivo para destinos baseados em arquivo
+# Configurar opções de formatação de arquivo para destinos baseados em arquivo
 
 >[!IMPORTANT]
 > 

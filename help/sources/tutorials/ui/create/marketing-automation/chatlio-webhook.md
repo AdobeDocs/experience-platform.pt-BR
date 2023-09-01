@@ -1,15 +1,20 @@
 ---
 title: Criar uma conexão de origem do Chatlio na interface do
 description: Saiba como criar uma conexão de origem do Chatlio usando a interface do Adobe Experience Platform.
+badge: Beta
 exl-id: 55c10bcb-0332-45ff-970b-272d375b591d
-source-git-commit: 68c14d7b187075b4af6b019a8bd1ca2625beabde
+source-git-commit: 8de45a54607bed17fd79bbed693666beb09c0502
 workflow-type: tm+mt
-source-wordcount: '1149'
+source-wordcount: '1167'
 ht-degree: 1%
 
 ---
 
 # Criar um [!DNL Chatlio] conexão de origem na interface
+
+>[!NOTE]
+>
+>A variável [!DNL Chatlio] a fonte está na versão beta. Leia as [visão geral das origens](../../../../home.md#terms-and-conditions) para obter mais informações sobre o uso de fontes rotuladas como beta.
 
 Este tutorial fornece etapas para a criação de um [!DNL Chatlio] conexão de origem usando a interface do usuário do Adobe Experience Platform.
 

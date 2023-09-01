@@ -1,15 +1,20 @@
 ---
 title: Criar uma conexão de origem e um fluxo de dados para Pendo usando a API de serviço de fluxo
 description: Saiba como conectar o Adobe Experience Platform ao Pendo usando a API de serviço de fluxo.
+badge: Beta
 exl-id: 12b0295d-4b26-4eb7-a02a-a01d825d2a1e
-source-git-commit: 68c14d7b187075b4af6b019a8bd1ca2625beabde
+source-git-commit: 8de45a54607bed17fd79bbed693666beb09c0502
 workflow-type: tm+mt
-source-wordcount: '1441'
+source-wordcount: '1459'
 ht-degree: 2%
 
 ---
 
 # Criar uma conexão de origem e um fluxo de dados para [!DNL Pendo] uso da API do Serviço de fluxo
+
+>[!NOTE]
+>
+>A variável [!DNL Pendo] a fonte está na versão beta. Leia as [visão geral das origens](../../../../home.md#terms-and-conditions) para obter mais informações sobre o uso de fontes rotuladas como beta.
 
 O tutorial a seguir orienta você pelas etapas para criar uma conexão de origem e um fluxo de dados para trazer [[!DNL Pendo]](https://Pendo.com/) dados do evento para a Adobe Experience Platform usando o [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 

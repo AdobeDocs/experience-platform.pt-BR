@@ -1,15 +1,20 @@
 ---
 title: Criar uma conexão de origem do Pendo na interface
 description: Saiba como criar uma conexão de origem do Pendo usando a interface do Adobe Experience Platform.
+badge: Beta
 exl-id: defdec30-42af-43c8-b2eb-7ce98f7871e3
-source-git-commit: 68c14d7b187075b4af6b019a8bd1ca2625beabde
+source-git-commit: 8de45a54607bed17fd79bbed693666beb09c0502
 workflow-type: tm+mt
-source-wordcount: '1194'
+source-wordcount: '1212'
 ht-degree: 1%
 
 ---
 
 # Criar um [!DNL Pendo] fluxo de dados da conexão de origem e na interface
+
+>[!NOTE]
+>
+>A variável [!DNL Pendo] a fonte está na versão beta. Leia as [visão geral das origens](../../../../home.md#terms-and-conditions) para obter mais informações sobre o uso de fontes rotuladas como beta.
 
 Este tutorial fornece etapas para a criação de um [!DNL Pendo] conexão de origem e fluxo de dados usando a interface do usuário do Adobe Experience Platform.
 

@@ -4,7 +4,7 @@ description: Saiba como usar consultas com parâmetros na interface do usuário 
 source-git-commit: 4fc94fc39fa09756a440b5e532330cd310dd96d2
 workflow-type: tm+mt
 source-wordcount: '755'
-ht-degree: 0%
+ht-degree: 10%
 
 ---
 
@@ -12,8 +12,8 @@ ht-degree: 0%
 
 >[!CONTEXTUALHELP]
 >id="platform_queryService_queryEditor_parameterizedQueries"
->title="Consultas com parâmetros"
->abstract="Use consultas parametrizadas para adicionar valores de parâmetros no momento da execução. Isso permite trabalhar com dados dinâmicos e reutilizar consultas para casos de uso diferentes. Use o `'$'` prefácio para inserir um parâmetro de consulta na sua consulta no editor de texto. Em seguida, adicione um valor para a chave na seção Parâmetros de consulta abaixo do editor."
+>title="Consultas parametrizadas"
+>abstract="Use consultas parametrizadas para adicionar valores de parâmetros no momento da execução. Isso permite trabalhar com dados dinâmicos e reutilizar consultas para diferentes casos de uso. Use o prefácio `'$'` para inserir um parâmetro na sua consulta no editor de texto. Em seguida, adicione um valor para a chave na seção Parâmetros de consulta abaixo do editor."
 
 >[!IMPORTANT]
 >
@@ -50,7 +50,7 @@ SELECT
 
 Para criar sua consulta parametrizada na interface do usuário do, navegue até o Editor de consultas. Consulte a seção sobre [acesso ao Editor de consultas](./user-guide.md#accessing-query-editor) para obter mais instruções.
 
-Use o `'$'` prefácio para inserir um parâmetro de consulta na sua consulta no editor de texto. Em seguida, adicione o valor ausente para a chave no [!UICONTROL Parâmetros de consulta] seção abaixo do editor. A consulta não pode ser executada se você não adicionar um valor a qualquer uma das chaves necessárias. Um ícone de alerta (![Um ícone de alerta.](../images/ui/parameterized-queries/alert-icon.png)) aparece na seção Parâmetros de consulta ao lado de qualquer [!UICONTROL Valor] campos de entrada.
+Use o prefácio `'$'` para inserir um parâmetro na sua consulta no editor de texto. Em seguida, adicione o valor ausente para a chave no [!UICONTROL Parâmetros de consulta] seção abaixo do editor. A consulta não pode ser executada se você não adicionar um valor a qualquer uma das chaves necessárias. Um ícone de alerta (![Um ícone de alerta.](../images/ui/parameterized-queries/alert-icon.png)) aparece na seção Parâmetros de consulta ao lado de qualquer [!UICONTROL Valor] campos de entrada.
 
 ![O Editor de consultas com uma consulta parametrizada e a seção Parâmetros de consulta destacados.](../images/ui/parameterized-queries/parameterized-query.png)
 

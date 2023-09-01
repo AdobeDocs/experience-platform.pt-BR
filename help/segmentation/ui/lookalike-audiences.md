@@ -6,7 +6,7 @@ badgeLimitedAvailability: label="Disponibilidade limitada" type=Caution
 source-git-commit: a44b1a1f6028e54ca23149249697dea9407bf60a
 workflow-type: tm+mt
 source-wordcount: '2123'
-ht-degree: 9%
+ht-degree: 10%
 
 ---
 
@@ -84,7 +84,7 @@ A página de detalhes do público-alvo é exibida. Selecionar **[!UICONTROL Insi
 >[!CONTEXTUALHELP]
 >id="platform_audiences_lookAlike_similarityAndReach"
 >title="Similaridade e alcance"
->abstract="O gráfico de similaridade e alcance representa o alcance esperado de um público-alvo semelhante que consiste em perfis acima de uma pontuação de similaridade fornecida. É possível passar o mouse sobre um ponto específico do gráfico para exibir a porcentagem de similaridade e a contagem de perfis esperada para o ponto destacado no momento."
+>abstract="O gráfico de similaridade e alcance representa o alcance esperado de um Público-alvo semelhante que consiste em perfis acima de uma pontuação de similaridade fornecida. É possível passar o mouse sobre um ponto específico do gráfico para exibir a porcentagem de similaridade e a contagem de perfis esperada para o ponto destacado no momento."
 
 A seção similaridade e alcance exibe um gráfico que representa o alcance esperado de um público-alvo semelhante que consiste em perfis acima de uma pontuação de similaridade fornecida. A pontuação de similaridade representa a **distância** de semelhança entre o perfil do público-alvo básico e o perfil do insight semelhante.
 

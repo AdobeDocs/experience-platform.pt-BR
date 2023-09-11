@@ -2,10 +2,10 @@
 title: Conexão SFTP
 description: Crie uma conexão de saída ativa com o servidor SFTP para exportar arquivos de dados delimitados da Adobe Experience Platform periodicamente.
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
+source-git-commit: 950370683f648771d91689e84c3d782824fb01f4
 workflow-type: tm+mt
-source-wordcount: '941'
-ht-degree: 7%
+source-wordcount: '982'
+ht-degree: 10%
 
 ---
 
@@ -15,9 +15,9 @@ ht-degree: 7%
 
 Com a versão de Experience Platform de julho de 2023, o destino SFTP fornece novas funcionalidades, conforme listado abaixo:
 
-* [!BADGE Beta]{type=Informative}[Suporte à exportação de conjuntos de dados](/help/destinations/ui/export-datasets.md).
-* Adicional [opções de nomenclatura de arquivo](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling).
-* Capacidade de definir cabeçalhos de arquivos personalizados em seus arquivos exportados por meio da [etapa de mapeamento aprimorada](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
+* [!BADGE  Beta]{type=Informative}[Suporte à exportação de conjuntos de dados](/help/destinations/ui/export-datasets.md).
+* [Opções de nomenclatura de arquivo](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) adicionais.
+* Capacidade de definir cabeçalhos de arquivos personalizados em seus arquivos exportados por meio da [etapa de mapeamento aprimorado](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
 * [Capacidade de personalizar a formatação de arquivos de dados CSV exportados](/help/destinations/ui/batch-destinations-file-formatting-options.md).
 
 ## Visão geral {#overview}
@@ -35,15 +35,12 @@ Crie uma conexão de saída ativa com o servidor SFTP para exportar arquivos de 
 
 ## Públicos-alvo compatíveis {#supported-audiences}
 
-Esta seção descreve todos os públicos-alvo que você pode exportar para esse destino.
+Esta seção descreve que tipo de público-alvo você pode exportar para esse destino.
 
-Esse destino suporta a ativação de todos os públicos-alvo gerados pelo Experience Platform [Serviço de segmentação](../../../segmentation/home.md).
-
-*Além disso*, esse destino também suporta a ativação dos públicos-alvo descritos na tabela abaixo.
-
-| Tipo de público | Descrição |
----------|----------|
-| Uploads personalizados | Públicos-alvo [importado](../../../segmentation/ui/overview.md#import-audience) para o Experience Platform de arquivos CSV. |
+| Origem do público | Suportado | Descrição |
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Públicos-alvo gerados pelo Experience Platform [Serviço de segmentação](../../../segmentation/home.md). |
+| Uploads personalizados | ✓ | Públicos-alvo [importado](../../../segmentation/ui/overview.md#import-audience) para o Experience Platform de arquivos CSV. |
 
 {style="table-layout:auto"}
 
@@ -111,12 +108,17 @@ Depois de estabelecer a conexão de autenticação com o local SFTP, forneça as
 
 ![Detalhes de destino disponíveis para destino SFTP](../../assets/catalog/cloud-storage/sftp/sftp-destination-details.png)
 
-* **[!UICONTROL Nome]**: digite um nome que ajude a identificar esse destino na interface do usuário do Experience Platform;
-* **[!UICONTROL Descrição]**: digite uma descrição para esse destino;
+* **[!UICONTROL Nome]**: insira um nome que ajude a identificar esse destino na interface do usuário do Experience Platform;
+* **[!UICONTROL Descrição]**: insira uma descrição para esse destino;
 * **[!UICONTROL Caminho da pasta]**: digite o caminho para a pasta no local SFTP onde os arquivos serão exportados.
 * **[!UICONTROL Tipo de arquivo]**: selecione o formato que o Experience Platform deve usar para os arquivos exportados. Ao selecionar a variável [!UICONTROL CSV] , você também pode [configurar as opções de formatação de arquivo](../../ui/batch-destinations-file-formatting-options.md).
 * **[!UICONTROL Formato de compactação]**: selecione o tipo de compactação que o Experience Platform deve usar para os arquivos exportados.
-* **[!UICONTROL Incluir arquivo de manifesto]**: ative essa opção se desejar que as exportações incluam um arquivo JSON de manifesto que contenha informações sobre o local de exportação, o tamanho da exportação e muito mais.
+* **[!UICONTROL Incluir arquivo de manifesto]**: ative essa opção se desejar que as exportações incluam um arquivo JSON de manifesto que contenha informações sobre o local de exportação, o tamanho da exportação e muito mais. O manifesto é nomeado usando o formato `manifest-<<destinationId>>-<<dataflowRunId>>.json`. Exibir um [exemplo de arquivo de manifesto](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json). O arquivo de manifesto inclui os seguintes campos:
+   * `flowRunId`: A variável [execução do fluxo de dados](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) que gerou o arquivo exportado.
+   * `scheduledTime`: a hora em UTC quando o arquivo foi exportado.
+   * `exportResults.sinkPath`: O caminho no local de armazenamento em que o arquivo exportado está depositado.
+   * `exportResults.name`: o nome do arquivo exportado.
+   * `size`: o tamanho do arquivo exportado, em bytes.
 
 ## Ativar públicos para este destino {#activate}
 

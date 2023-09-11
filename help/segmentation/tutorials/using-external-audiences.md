@@ -5,9 +5,9 @@ description: Siga este tutorial para saber como usar públicos externos com o Ad
 exl-id: 56fc8bd3-3e62-4a09-bb9c-6caf0523f3fe
 hide: true
 hidefromtoc: true
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: c83070d85177c72b2e4c4ae472b89c08c20ee743
 workflow-type: tm+mt
-source-wordcount: '1720'
+source-wordcount: '1722'
 ht-degree: 0%
 
 ---
@@ -265,4 +265,4 @@ Um exemplo da carga de associação do público-alvo externo pode ser visto abai
 
 >[!NOTE]
 >
->Por padrão, as associações de público-alvo externo são retidas apenas por 30 dias. Para retê-los por mais de 30 dias, use o `validUntil` ao assimilar os dados do público-alvo. Para obter mais informações sobre esse campo, leia o guia em [Grupos de campos de esquema Detalhes da associação do segmento](../../xdm/field-groups/profile/segmentation.md).
+>Por padrão, as associações de público-alvo externo são excluídas após 30 dias. Para evitar a exclusão e mantê-las por mais de 30 dias, use o `validUntil` ao assimilar os dados do público-alvo. Para obter mais informações sobre esse campo, leia o guia em [Grupos de campos de esquema Detalhes da associação do segmento](../../xdm/field-groups/profile/segmentation.md).

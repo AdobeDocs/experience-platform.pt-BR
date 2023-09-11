@@ -5,9 +5,9 @@ user-guide-title: Ajuda do SDK da Web da Adobe Experience Platform
 breadcrumb-title: Guia do SDK da Web
 user-guide-description: Interaja com os serviços da Experience Cloud por meio da Rede de borda.
 feature: Web SDK
-source-git-commit: cc864e091f5e3f338f025238572158f555c3ede9
+source-git-commit: 95d7b16efb638c37d8db3f56b0f3fbf6aa9d15df
 workflow-type: tm+mt
-source-wordcount: '169'
+source-wordcount: '170'
 ht-degree: 30%
 
 ---
@@ -34,7 +34,7 @@ ht-degree: 30%
 * Coleção de dados {#data-collection}
    * [Informações coletadas automaticamente](data-collection/automatic-information.md)
    * [Rastrear links](data-collection/track-links.md)
-   * [Coletar dados de comércio e produtos](data-collection/collect-commerce-data.md)
+   * [Coletar dados de comércio, produto e pedido](data-collection/collect-commerce-data.md)
    * Adobe Analytics {#adobe-analytics}
       * [Utilização do Adobe Analytics com o SDK da Web da plataforma](data-collection/adobe-analytics/analytics-overview.md)
       * [Mapeamento de variáveis do Analytics](data-collection/adobe-analytics/manually-mapping-variables.md)

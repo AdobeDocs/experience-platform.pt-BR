@@ -1,11 +1,11 @@
 ---
 title: (Beta) Públicos-Alvo Do Experience Cloud
-description: Saiba como compartilhar públicos do Experience Platform com várias soluções de Experience Platform.
+description: Saiba como compartilhar públicos-alvo do Experience Platform para várias soluções de Experience Platform.
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: 2bdbcda3-2efb-4a4e-9702-4fd9991e9461
-source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
+source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
 workflow-type: tm+mt
-source-wordcount: '1632'
+source-wordcount: '1611'
 ht-degree: 2%
 
 ---
@@ -105,15 +105,12 @@ Os perfis exportados para o [!UICONTROL Públicos do Experience Cloud] destino s
 
 ## Públicos-alvo compatíveis {#supported-audiences}
 
-Esta seção descreve todos os públicos-alvo que você pode exportar para esse destino.
+Esta seção descreve que tipo de público-alvo você pode exportar para esse destino.
 
-Esse destino suporta a ativação de todos os públicos-alvo gerados pelo Experience Platform [Serviço de segmentação](../../../segmentation/home.md).
-
-*Além disso*, esse destino também suporta a ativação dos públicos-alvo descritos na tabela abaixo.
-
-| Tipo de público | Descrição |
----------|----------|
-| Uploads personalizados | Públicos-alvo [importado](../../../segmentation/ui/overview.md#import-audience) para o Experience Platform de arquivos CSV. |
+| Origem do público | Suportado | Descrição |
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Públicos-alvo gerados pelo Experience Platform [Serviço de segmentação](../../../segmentation/home.md). |
+| Uploads personalizados | ✓ | Públicos-alvo [importado](../../../segmentation/ui/overview.md#import-audience) para o Experience Platform de arquivos CSV. |
 
 {style="table-layout:auto"}
 

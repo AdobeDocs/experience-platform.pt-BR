@@ -3,9 +3,9 @@ keywords: personalização personalizada, destino, destino personalizado da expe
 title: Conexão de personalização personalizada
 description: Esse destino fornece personalização externa, sistemas de gerenciamento de conteúdo, servidores de anúncios e outros aplicativos que estão sendo executados no site uma maneira de recuperar informações de público-alvo do Adobe Experience Platform. Esse destino fornece personalização em tempo real com base na associação do público-alvo do perfil do usuário.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
+source-git-commit: 139d6a6632532b392fdf8d69c5c59d1fd779a6d1
 workflow-type: tm+mt
-source-wordcount: '935'
+source-wordcount: '915'
 ht-degree: 9%
 
 ---
@@ -35,7 +35,7 @@ Esse destino fornece uma maneira de recuperar informações de público-alvo do 
 
 ## Pré-requisitos {#prerequisites}
 
-Essa integração é viabilizada pelo [Adobe Experience Platform Web SDK](../../../edge/home.md) ou o [Adobe Experience Platform Mobile SDK](https://aep-sdks.gitbook.io/docs/). Você deve usar um desses SDKs para usar esse destino.
+Essa integração é viabilizada pelo [Adobe Experience Platform Web SDK](../../../edge/home.md) ou o [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/). Você deve usar um desses SDKs para usar esse destino.
 
 >[!IMPORTANT]
 >
@@ -43,15 +43,12 @@ Essa integração é viabilizada pelo [Adobe Experience Platform Web SDK](../../
 
 ## Públicos-alvo compatíveis {#supported-audiences}
 
-Esta seção descreve todos os públicos-alvo que você pode exportar para esse destino.
+Esta seção descreve que tipo de público-alvo você pode exportar para esse destino.
 
-Esse destino suporta a ativação de todos os públicos-alvo gerados pelo Experience Platform [Serviço de segmentação](../../../segmentation/home.md).
-
-*Além disso*, esse destino também suporta a ativação dos públicos-alvo descritos na tabela abaixo.
-
-| Tipo de público | Descrição |
----------|----------|
-| Uploads personalizados | Públicos-alvo [importado](../../../segmentation/ui/overview.md#import-audience) para o Experience Platform de arquivos CSV. |
+| Origem do público | Suportado | Descrição |
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Públicos-alvo gerados pelo Experience Platform [Serviço de segmentação](../../../segmentation/home.md). |
+| Uploads personalizados | ✓ | Públicos-alvo [importado](../../../segmentation/ui/overview.md#import-audience) para o Experience Platform de arquivos CSV. |
 
 {style="table-layout:auto"}
 

@@ -3,10 +3,10 @@ keywords: email;Email;e-mail;destinos de e-mail;oracle eloqua;oracle;email;Email
 title: (Arquivos) Conexão Oracle Eloqua
 description: O Oracle Eloqua é uma plataforma de software as a service (SaaS) para automação de marketing oferecida pelo Oracle, que tem como objetivo ajudar profissionais e organizações B2B a gerenciar campanhas de marketing e a geração de leads de vendas.
 exl-id: 6eaa79ff-8874-423b-bdff-aa04f6101a53
-source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
+source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
 workflow-type: tm+mt
-source-wordcount: '716'
-ht-degree: 1%
+source-wordcount: '695'
+ht-degree: 2%
 
 ---
 
@@ -18,15 +18,12 @@ Para enviar dados do público-alvo para [!DNL Oracle Eloqua], você deve primeir
 
 ## Públicos-alvo compatíveis {#supported-audiences}
 
-Esta seção descreve todos os públicos-alvo que você pode exportar para esse destino.
+Esta seção descreve que tipo de público-alvo você pode exportar para esse destino.
 
-Esse destino suporta a ativação de todos os públicos-alvo gerados pelo Experience Platform [Serviço de segmentação](../../../segmentation/home.md).
-
-*Além disso*, esse destino também suporta a ativação dos públicos-alvo descritos na tabela abaixo.
-
-| Tipo de público | Descrição |
----------|----------|
-| Uploads personalizados | Públicos-alvo [importado](../../../segmentation/ui/overview.md#import-audience) para o Experience Platform de arquivos CSV. |
+| Origem do público | Suportado | Descrição |
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Públicos-alvo gerados pelo Experience Platform [Serviço de segmentação](../../../segmentation/home.md). |
+| Uploads personalizados | ✓ | Públicos-alvo [importado](../../../segmentation/ui/overview.md#import-audience) para o Experience Platform de arquivos CSV. |
 
 {style="table-layout:auto"}
 

@@ -2,9 +2,9 @@
 title: Destino do Marketo Engage
 description: O Marketo Engage é a única solução completa de gerenciamento de experiência do cliente (CXM) para marketing, publicidade, análises e comércio. Ele permite automatizar e gerenciar atividades do gerenciamento de clientes potenciais de CRM e do envolvimento do cliente para o marketing baseado em conta e a atribuição de receita.
 exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
-source-git-commit: 0507fd3596246bc2ead5c212c228822bf25f94e5
+source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
 workflow-type: tm+mt
-source-wordcount: '909'
+source-wordcount: '900'
 ht-degree: 1%
 
 ---
@@ -36,7 +36,7 @@ O destino permite que os profissionais de marketing enviem públicos-alvo criado
 
 >[!NOTE]
 >
->No [etapa de mapeamento](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) do workflow ativar destino, é *obrigatório* para mapear identidades e *opcional* para mapear atributos. Mapear o email e/ou a ECID da guia Namespace de identidade é a coisa mais importante a ser feita para garantir que a pessoa seja correspondida no Marketo. O mapeamento de email garante a maior taxa de correspondência.
+>No [etapa de mapeamento](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) do workflow ativar destino, é *obrigatório* para mapear identidades e *opcional* para mapear atributos. Mapear o email e/ou a ECID da guia Namespace de identidade é a coisa mais importante a ser feita para garantir que a pessoa seja correspondida no Marketo. O mapeamento de email garante a taxa de correspondência mais alta.
 
 ### Identidades suportadas {#supported-identities}
 
@@ -53,13 +53,12 @@ Você pode mapear atributos do Experience Platform para qualquer um dos atributo
 
 ## Públicos-alvo compatíveis {#supported-audiences}
 
-Esse destino suporta a ativação de todos os públicos-alvo gerados pelo Experience Platform [Serviço de segmentação](../../../segmentation/home.md).
+Esta seção descreve que tipo de público-alvo você pode exportar para esse destino.
 
-Além disso, esse destino também suporta a ativação dos públicos-alvo descritos na tabela abaixo.
-
-| Tipo de público externo | Descrição |
----------|----------|
-| Uploads personalizados | Públicos-alvo [importado](../../../segmentation/ui/overview.md#import-audience) para o Experience Platform de arquivos CSV. |
+| Origem do público | Suportado | Descrição |
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Públicos-alvo gerados pelo Experience Platform [Serviço de segmentação](../../../segmentation/home.md). |
+| Uploads personalizados | ✓ | Públicos-alvo [importado](../../../segmentation/ui/overview.md#import-audience) para o Experience Platform de arquivos CSV. |
 
 {style="table-layout:auto"}
 

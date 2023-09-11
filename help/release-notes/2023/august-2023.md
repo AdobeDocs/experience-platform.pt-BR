@@ -1,10 +1,10 @@
 ---
 title: Notas de versão da Adobe Experience Platform
 description: As notas de versão de agosto de 2023 do Adobe Experience Platform.
-source-git-commit: 5181d39e92fbf957f154c3b1dcf4f9af90cfeae9
+source-git-commit: 384faa13154386ef2578da4c20ab47f171aefeda
 workflow-type: tm+mt
-source-wordcount: '1749'
-ht-degree: 34%
+source-wordcount: '1750'
+ht-degree: 38%
 
 ---
 
@@ -24,7 +24,7 @@ Atualizações dos recursos já existentes na Adobe Experience Platform:
 - [Experience Data Model (XDM)](#xdm)
 - [Identity Service](#identity-service)
 - [Serviço de segmentação](#segmentation)
-- [Fontes](#sources)
+- [Origens](#sources)
 
 ## Real-Time Customer Data Platform {#rtcdp}
 
@@ -119,7 +119,7 @@ Para obter mais informações, leia a [Visão geral do Preparo de dados](../../d
 
 **Funcionalidades novas ou atualizadas** {#destinations-new-updated-functionality}
 
-- Agora você pode [ativar públicos-alvo potenciais](../../destinations/ui/activate-prospect-audiences.md) para destinos baseados em arquivo.
+- Agora você pode [ativar públicos-alvo potenciais](../../destinations/ui/activate-prospect-audiences.md) para destinos de armazenamento na nuvem.
 - O quadro [proteção de ativação](../../destinations/guardrails.md#general-activation-guardrails) máximo de 100 destinos por sandbox foi atualizada para ser um _limite rígido_.
 
 Para obter informações mais gerais sobre destinos, consulte a [visão geral de destinos](../../destinations/home.md).
@@ -132,7 +132,7 @@ O XDM é uma especificação de código aberto que fornece estruturas e definiç
 
 | Tipo de componente | Nome | Descrição |
 | --- | --- | --- |
-| Classe | [[!UICONTROL Perfil de cliente potencial individual do XDM]](https://github.com/adobe/xdm/pull/1758/files) | Use esta classe para trazer perfis de prospecto obtidos de casos de uso de aquisição de clientes topo de funil de fornecedores de dados. Consulte a [[!UICONTROL Perfil de cliente potencial individual XDM]](../../xdm/classes/prospect.md) para ver exemplos e saber mais. |
+| Classe | [[!UICONTROL Perfil de cliente potencial individual do XDM]](https://github.com/adobe/xdm/pull/1758/files) | Use esta classe para atrair perfis em potencial provenientes de casos de uso de conquista de cliente do topo de funil dos fornecedores de dados. Consulte a [[!UICONTROL Perfil de cliente potencial individual XDM]](../../xdm/classes/prospect.md) para ver exemplos e saber mais. |
 
 {style="table-layout:auto"}
 
@@ -161,7 +161,7 @@ Para obter mais informações, leia a [Visão geral do serviço de identidade](.
 
 ## Serviço de segmentação {#segmentation}
 
-[!DNL Segmentation Service] permite segmentar dados armazenados no [!DNL Experience Platform] que se relaciona a indivíduos (como clientes, clientes potenciais, usuários ou organizações) em públicos. Você pode criar públicos-alvo por meio de definições de segmento ou outras fontes da [!DNL Real-Time Customer Profile] dados. Esses públicos-alvo são configurados e mantidos de forma centralizada em [!DNL Platform]e são prontamente acessíveis por qualquer solução Adobe.
+O [!DNL Segmentation Service] permite segmentar dados relacionados a indivíduos (como clientes, prospectos, usuários ou organizações) que estão armazenados na [!DNL Experience Platform] em públicos-alvo. Você pode criar públicos-alvo por meio de definições de segmento ou outras fontes a partir dos dados do [!DNL Real-Time Customer Profile]. Esses públicos-alvo são configurados e mantidos de forma centralizada na [!DNL Platform] e podem ser acessados a qualquer momento usando as soluções da Adobe.
 
 **Recursos novos ou atualizados**
 
@@ -173,7 +173,7 @@ Para obter mais informações, leia a [Visão geral do serviço de identidade](.
 
 Para obter mais informações, leia a [Visão geral da segmentação](../../segmentation/home.md).
 
-## Fontes {#sources}
+## Origens {#sources}
 
 A Experience Platform fornece uma API RESTful e uma interface interativa que permite configurar conexões de origem para vários provedores de dados com facilidade. Essas conexões de origem permitem autenticar e conectar a sistemas de armazenamento externos e serviços de CRM, definir períodos para execuções de assimilação e gerenciar a taxa de transferência de assimilação de dados.
 

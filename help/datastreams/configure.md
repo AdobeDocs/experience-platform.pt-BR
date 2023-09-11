@@ -2,9 +2,9 @@
 title: Configurar uma sequência de dados
 description: Saiba como conectar a integração do SDK da Web do lado do cliente a outros produtos da Adobe e destinos de terceiros.
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
-source-git-commit: e3f507e010ea2a32042b53d46795d87e82e3fb72
-workflow-type: ht
-source-wordcount: '2275'
+source-git-commit: 139d6a6632532b392fdf8d69c5c59d1fd779a6d1
+workflow-type: tm+mt
+source-wordcount: '2276'
 ht-degree: 100%
 
 ---
@@ -57,7 +57,7 @@ Selecione **[!UICONTROL Opções avançadas]** para exibir controles adicionais 
 | [!UICONTROL Sincronização de ID de terceiros] | As sincronizações de ID podem ser agrupadas em containers para permitir que diferentes sincronizações de ID sejam executadas em momentos diferentes. Quando habilitada, essa configuração permite especificar qual container de sincronizações de ID é executado para essa sequência de dados. |
 | [!UICONTROL ID de container de sincronização de ID de terceiros] | A ID numérica do container a ser usada para a sincronização de ID de terceiros. |
 | [!UICONTROL Substituições de ID de container] | Nesta seção, você pode definir IDs de container de sincronização de ID de terceiros adicionais que você pode usar para substituir o padrão. |
-| [!UICONTROL Tipo de acesso] | Define o tipo de autenticação que a rede de borda aceita para a sequência de dados. <ul><li>**[!UICONTROL Autenticação mista]**: quando essa opção é selecionada, a rede de borda aceita solicitações autenticadas e não autenticadas. Selecione esta opção quando desejar usar o SDK da Web ou [SDK móvel](https://aep-sdks.gitbook.io/docs/) juntamente com a [API do servidor](../server-api/overview.md). </li><li>**[!UICONTROL Somente autenticado]**: quando essa opção é selecionada, a rede de borda aceita somente solicitações autenticadas. Selecione essa opção quando desejar usar somente a API do servidor e quiser impedir que qualquer solicitação não autenticada seja processada pela rede de borda.</li></ul> |
+| [!UICONTROL Tipo de acesso] | Define o tipo de autenticação que a rede de borda aceita para a sequência de dados. <ul><li>**[!UICONTROL Autenticação mista]**: quando essa opção é selecionada, a rede de borda aceita solicitações autenticadas e não autenticadas. Selecione esta opção quando desejar usar o SDK da Web ou [SDK móvel](https://developer.adobe.com/client-sdks/documentation/) juntamente com a [API do servidor](../server-api/overview.md). </li><li>**[!UICONTROL Somente autenticado]**: quando essa opção é selecionada, a rede de borda aceita somente solicitações autenticadas. Selecione essa opção quando desejar usar somente a API do servidor e quiser impedir que qualquer solicitação não autenticada seja processada pela rede de borda.</li></ul> |
 
 Agora, se você estiver configurando a sequência de dados para a Experience Platform, siga o tutorial em [Preparo de dados para a coleção de dados](./data-prep.md) para mapear seus dados em um esquema de evento da Platform antes de retornar a este guia. Caso contrário, selecione **[!UICONTROL Salvar]** e continue para a próxima seção.
 

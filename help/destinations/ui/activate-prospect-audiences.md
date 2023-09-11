@@ -2,10 +2,10 @@
 title: Ativar públicos-alvo potenciais para destinos
 type: Tutorial
 description: Saiba como ativar públicos-alvo potenciais para destinos
-source-git-commit: 9dd305be4dcb45c290a2b8ee0476191949369adc
+source-git-commit: 384faa13154386ef2578da4c20ab47f171aefeda
 workflow-type: tm+mt
-source-wordcount: '619'
-ht-degree: 8%
+source-wordcount: '620'
+ht-degree: 12%
 
 ---
 
@@ -20,7 +20,7 @@ Este artigo explica o workflow necessário para exportar [públicos-alvo potenci
 
 ## Destinos compatíveis {#supported-destinations}
 
-Ir para **[!UICONTROL Conexões]** > **[!UICONTROL Destinos]** e selecione a variável **[!UICONTROL Catálogo]** guia. Use o **[!UICONTROL Tipos de dados]** filtrar e selecionar **[!UICONTROL Clientes potenciais]** para ver os destinos que oferecem suporte à ativação de públicos-alvo de prospecto. Atualmente, a exportação de públicos-alvo potenciais está disponível somente para o [[!DNL Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md#changelog) destino.
+Ir para **[!UICONTROL Conexões]** > **[!UICONTROL Destinos]** e selecione a variável **[!UICONTROL Catálogo]** guia. Use o **[!UICONTROL Tipos de dados]** filtrar e selecionar **[!UICONTROL Clientes potenciais]** para ver os destinos que oferecem suporte à ativação de públicos-alvo de prospecto. Atualmente, a exportação de públicos-alvo potenciais está disponível somente para destinos de armazenamento em nuvem.
 
 ![Destinos que oferecem suporte a exportações de conjunto de dados](/help/destinations/assets/ui/activate-prospect-audiences/data-types-filter.png)
 
@@ -86,5 +86,5 @@ Note that we will need to add links to other destination types here as more dest
 Conheça outros casos de uso habilitados por meio da compatibilidade com dados de parceiros na Real-Time CDP:
 
 * [Suplemente perfis próprios com atributos de parceiros de dados confiáveis para melhorar sua base de dados, obter novos insights sobre sua base de clientes e aprimorar a otimização do público-alvo.](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
-* Use o suporte a dados de terceiros no Real-Time CDP para [expanda sua base de perfis com perfis de clientes potenciais de parceiros de dados e envolva-se com eles para adquirir ou alcançar novos clientes](/help/rtcdp/partner-data/prospecting.md).
+* Use o suporte a dados de terceiros da Real-Time CDP para [expandir sua base de perfis com prospectos de parceiros de dados e interaja com eles para adquirir ou alcançar novos clientes](/help/rtcdp/partner-data/prospecting.md).
 * [Aproveite o reconhecimento auxiliado pelo parceiro para personalizar experiências no local](/help/rtcdp/partner-data/onsite-personalization.md) durante a visita sem que o usuário autentique ou tenha um histórico anterior com sua marca.

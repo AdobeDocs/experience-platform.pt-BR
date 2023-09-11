@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Introdução às APIs do Adobe Experience Platform
 description: O Adobe Experience Platform fornece serviços de API que estão intimamente vinculados entre si. Este guia contém informações sobre os serviços disponíveis, cabeçalhos necessários para operações CRUD, mensagens de erro, coleções do Postman e exemplos de chamadas de API.
 exl-id: a362bcb4-a908-43a8-abd3-0e1d21cb9117
-source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
+source-git-commit: c728d63c22593ca56999dd0bb6679dea7de0e00a
 workflow-type: tm+mt
-source-wordcount: '1379'
+source-wordcount: '1412'
 ht-degree: 2%
 
 ---
@@ -124,6 +124,7 @@ Para obter mais informações sobre endpoints específicos nas APIs da Platform,
 | [[!DNL Catalog Service] Manual da API](.././catalog/api/getting-started.md) | A variável [!DNL Catalog Service] A API permite que os desenvolvedores gerenciem metadados do conjunto de dados na Adobe Experience Platform. Isso inclui locais de dados, estágios de processamento, erros que ocorreram durante o processamento e relatórios de dados. |
 | [[!DNL Data Access] Manual da API](.././data-access/api.md) | A variável [!DNL Data Access] A API permite que os desenvolvedores recuperem informações sobre conjuntos de dados assimilados no Experience Platform. Isso inclui acessar e baixar arquivos de conjunto de dados, recuperar informações de cabeçalho, listar lotes com falha e bem-sucedidos e baixar arquivos CSV/Parquet de visualização. |
 | [[!DNL Dataset Service] Manual da API](.././data-governance/labels/dataset-api.md) | A API de serviço do conjunto de dados permite aplicar e editar rótulos de uso para conjuntos de dados. Ela faz parte dos recursos de catálogo de dados da Adobe Experience Platform, mas é separada da API de serviço de catálogo que gerencia metadados do conjunto de dados. |
+| [[!DNL Edge Network Server] Manual da API](../server-api/overview.md) | A variável [!DNL Edge Network Server API] O pode ser usado para uma variedade de casos de uso de coleta de dados, personalização, publicidade e marketing. A variável [!DNL Server API] pode ser usado em servidores, [!DNL IoT] dispositivos, decodificadores de sinais e diversos outros dispositivos. |
 | [[!DNL Identity Service] Manual da API](.././identity-service/api/getting-started.md) | A variável [!DNL Identity Service] A API permite que os desenvolvedores gerenciem a identificação entre dispositivos, canais e quase em tempo real dos clientes usando gráficos de identidade no Adobe Experience Platform. |
 | [[!DNL Observability Insights] Manual da API](.././observability/api/overview.md) | [!DNL Observability Insights] é uma API RESTful que permite aos desenvolvedores expor as principais métricas de observabilidade no Adobe Experience Platform. Essas métricas fornecem insights sobre estatísticas de uso da Platform, verificações de integridade de serviços da Platform, tendências históricas e indicadores de desempenho para várias funcionalidades da Platform. |
 | [[!DNL Policy Service] Guia da API](.././data-governance/api/overview.md) <br> (Governança de dados) | A variável [!DNL Policy Service] A API permite criar e gerenciar rótulos e políticas de uso de dados para determinar quais ações de marketing podem ser executadas em relação aos dados que contêm determinados rótulos de uso de dados. Para aplicar rótulos a conjuntos de dados e campos, consulte o [[!DNL Dataset Service] API](.././data-governance/labels/dataset-api.md) guia |

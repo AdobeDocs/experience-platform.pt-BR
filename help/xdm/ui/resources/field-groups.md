@@ -4,14 +4,19 @@ solution: Experience Platform
 title: Criar e editar grupos de campos de esquema na interface
 description: Saiba como criar e editar grupos de campos de esquema na interface do usuário do Experience Platform.
 exl-id: 928d70a6-0468-4fb7-a53a-6686ac77f2a3
-source-git-commit: 542ad49f475ac9586da506a8afa5408e83262121
+source-git-commit: 51ef116ad125b0d699bf4808e3d26d3b00b743e2
 workflow-type: tm+mt
-source-wordcount: '839'
-ht-degree: 0%
+source-wordcount: '901'
+ht-degree: 1%
 
 ---
 
-# Criar e editar grupos de campos de esquema na interface
+# Criar e editar grupos de campos de esquema na interface {#ui-create-and-edit}
+
+>[!CONTEXTUALHELP]
+>id="platform_schemas_fieldgroup_filter"
+>title="Filtro de grupo de campos padrão ou personalizado"
+>abstract="A lista de grupos de campos disponíveis é pré-filtrada com base em como foram criados. Selecione o botão de opção para escolher entre as opções Padrão e Personalizado. A opção Padrão mostra entidades criadas pelo Adobe e a opção Personalizado exibe entidades criadas na organização. Consulte a documentação para saber mais sobre como criar e editar grupos de campos."
 
 No Experience Data Model (XDM), os grupos de campos de esquema são componentes reutilizáveis que definem um ou mais campos que implementam determinadas funções, como detalhes pessoais, preferências de hotel ou endereço. Os grupos de campos devem ser incluídos como parte de um esquema que implementa uma classe compatível.
 

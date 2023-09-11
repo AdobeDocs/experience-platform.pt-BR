@@ -4,12 +4,13 @@ description: Saiba o que é a API do servidor de rede de borda e como usá-la.
 seo-description: Learn what the Edge Network Server API is and how you can use it.
 keywords: coleção de dados;coleção;Rede de borda da Adobe Experience Platform;api do servidor;
 exl-id: 46bd8798-d7f9-405b-9ca8-856ad4aa688c
-source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
+source-git-commit: ef77a14eb40db490682c4615d1cbafb90c7b42c2
 workflow-type: tm+mt
 source-wordcount: '271'
 ht-degree: 5%
 
 ---
+
 
 # Visão geral da API do servidor de rede de borda {#overview}
 

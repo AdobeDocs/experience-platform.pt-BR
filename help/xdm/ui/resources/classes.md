@@ -4,14 +4,19 @@ solution: Experience Platform
 title: Criar e editar classes na interface
 description: Saiba como criar e editar classes na interface do usuário do Experience Platform.
 exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
-source-git-commit: 3a9b97b25980d88e0fff3d71e43407b641e6454d
+source-git-commit: 51ef116ad125b0d699bf4808e3d26d3b00b743e2
 workflow-type: tm+mt
-source-wordcount: '902'
+source-wordcount: '971'
 ht-degree: 0%
 
 ---
 
-# Criar e editar classes na interface
+# Criar e editar classes na interface {#ui-create-and-edit}
+
+>[!CONTEXTUALHELP]
+>id="platform_schemas_class_filter"
+>title="Filtro de classe padrão ou personalizado"
+>abstract="A lista de classes disponíveis é pré-filtrada com base em como elas foram criadas. Selecione o botão de opção para escolher entre as opções Padrão e Personalizado. A opção Padrão mostra entidades criadas pelo Adobe e inclui as classes Perfil individual XDM e Evento de experiência XDM. A opção Personalizado exibe entidades criadas em sua organização. Consulte a documentação para saber mais sobre criação e edição de classes."
 
 Na Adobe Experience Platform, a classe de um esquema define os aspectos comportamentais dos dados que o esquema conterá (registro ou série temporal). Além disso, as classes descrevem o menor número de propriedades comuns que todos os esquemas baseados nessa classe precisariam incluir e fornecem uma maneira de vários conjuntos de dados compatíveis serem mesclados.
 

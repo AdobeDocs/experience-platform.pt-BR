@@ -1,10 +1,10 @@
 ---
 title: Perguntas frequentes do Audiences
-description: Descubra respostas para perguntas frequentes sobre públicos-alvo.
-source-git-commit: 4dbd20dd3ac596052a3390eb6d3731fac7095c0d
+description: Descubra respostas para perguntas frequentes sobre públicos-alvo e outros conceitos relacionados à segmentação.
+source-git-commit: 9a72d85bfb592012b36826135e24d28983f92e40
 workflow-type: tm+mt
-source-wordcount: '996'
-ht-degree: 0%
+source-wordcount: '1935'
+ht-degree: 1%
 
 ---
 
@@ -13,17 +13,21 @@ ht-degree: 0%
 
 Adobe Experience Platform [!DNL Segmentation Service] O fornece uma interface de usuário e uma API RESTful que permite criar públicos-alvo por meio de definições de segmento ou outras fontes da [!DNL Real-Time Customer Profile] dados. Esses públicos-alvo são configurados e mantidos centralmente na Platform e estão prontamente acessíveis por qualquer solução da Adobe. Veja a seguir uma lista das perguntas frequentes sobre públicos-alvo e segmentação.
 
-## Tenho acesso ao Audience Portal e à Composição de público-alvo?
+## Portal de público-alvo
+
+A seção a seguir lista perguntas relacionadas ao Audience Portal.
+
+### Tenho acesso ao Audience Portal e à Composição de público-alvo?
 
 O Audience Portal e a Composição de público-alvo estão disponíveis para todos os clientes do Real-Time CDP Prime e Ultimate (edições B2C, B2B e B2P) e para clientes do Journey Optimizer Select, Prime, Ultimate Starter e Ultimate.
 
 Nesse momento, somente os públicos-alvo baseados em perfil são compatíveis. O suporte para públicos-alvo baseados em conta será adicionado em uma versão posterior.
 
-## Os públicos-alvo pré-criados gerados externamente são compatíveis com o Audience Portal?
+### Os públicos-alvo pré-criados gerados externamente são compatíveis com o Audience Portal?
 
 Sim, públicos-alvo pré-criados gerados externamente são compatíveis com o Audience Portal. Nesse momento, é possível importar um público gerado externamente por meio de um arquivo CSV. No futuro, você poderá adicionar públicos-alvo por meio de conectores de origem em lote ou baseados em fluxo.
 
-## Posso reconciliar dados de público-alvo gerados externamente com um perfil existente na Platform?
+### Posso reconciliar dados de público-alvo gerados externamente com um perfil existente na Platform?
 
 Sim, o público-alvo gerado externamente será mesclado com o perfil existente na Platform se os identificadores principais corresponderem. Esses dados podem levar até 24 horas para serem reconciliados. Se os dados do perfil ainda não existirem, um novo perfil será criado à medida que os dados forem assimilados.
 
@@ -31,7 +35,7 @@ Sim, o público-alvo gerado externamente será mesclado com o perfil existente n
 
 Sim, qualquer público gerado externamente aparecerá no inventário de público e poderá ser usado ao criar públicos dentro da [Construtor de segmentos](./ui/segment-builder.md).
 
-## Posso usar atributos carregados externamente como parte da segmentação?
+### Posso usar atributos carregados externamente como parte da segmentação?
 
 Não pode. Os atributos de perfil devem ser atributos de longa duração, enquanto os dados de público-alvo gerados externamente que são carregados contêm apenas dados contextuais associados a esse público-alvo gerado externamente.
 
@@ -41,34 +45,108 @@ No entanto, ao mapear os públicos-alvo para destinos em lote ou baseados em arq
 
 Para saber mais sobre esse recurso, leia o guia na [ativação de dados do público-alvo para destinos de exportação de perfis em lote](../destinations/ui/activate-batch-profile-destinations.md#mapping).
 
-## Posso ativar públicos gerados externamente para o Adobe Journey Optimizer?
+### Posso ativar públicos gerados externamente para o Adobe Journey Optimizer?
 
 Nesse momento, não. No entanto, esse recurso estará disponível em breve.
 
-## Posso excluir um público-alvo gerado externamente?
+### Posso excluir um público-alvo gerado externamente?
 
 Nesse momento, não. Em vez disso, você pode desativar ou arquivar esse público-alvo. Nesse estado, os perfis **irá** permanecem ativos para uso em aplicativos downstream. O suporte para excluir públicos-alvo gerados externamente será adicionado em uma versão subsequente.
 
-## Como o Audience Portal e a Composição de público-alvo interagem com o lançamento dos dados de parceiros da Real-Time CDP?
+### O que representam os diferentes estados do ciclo de vida?
+
+O gráfico a seguir explica os diferentes status do ciclo de vida, o que eles representam, onde os públicos-alvo com esse status podem ser usados, bem como o impacto nas medidas de proteção de segmentação.
+
+| Estado | Definição | Visível no Audience Portal? | Visível nos destinos? | Afeta os limites de segmentação? | Impacto nos públicos-alvo baseados em arquivos | Impacto na avaliação do público-alvo | Pode ser usado em outros públicos-alvo? |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Rascunho | Um público-alvo na **Rascunho** state é um público que ainda está em desenvolvimento e não está pronto para ser usado em outros serviços. | Sim, mas pode ser oculto. | Não | Sim | Podem ser importadas ou atualizadas durante o processo de refinamento. | Podem ser avaliadas para obter contagens precisas de publicações. | Sim, mas não é recomendável usar. |
+| Publicado | Um público-alvo na **Publicado** O estado do é um público-alvo pronto para uso em todos os serviços downstream. | Sim | Sim | Sim | Pode ser importado ou atualizado. | Avaliado usando segmentação em lote, de fluxo ou de borda. | Sim |
+| Inativo | Um público-alvo na **Inativo** estado é um público que não está em uso no momento. Ele ainda existe na Platform, mas continuará **não** ser utilizável até que seja marcado como rascunho ou publicado. | Não, mas pode ser exibido. | Não | Não | Não mais atualizado. | Não é mais avaliado ou atualizado pela Platform. | Sim |
+| Excluído | Um público-alvo na **Excluído** estado é um público-alvo que foi excluído. A exclusão real dos dados pode levar alguns minutos para ser executada. | Não | Não | Não | Os dados subjacentes são excluídos. | Não ocorre avaliação ou execução de dados após a conclusão da exclusão. | Não |
+
+### Como o Audience Portal e a Composição de público-alvo interagem com o lançamento dos dados de parceiros da Real-Time CDP?
 
 O Portal de público-alvo e a Composição de público-alvo interagirão com os Dados do parceiro de duas maneiras:
 
 1. Se você assimilar uma lista de clientes potenciais fornecida pelo parceiro usando a classe e o fluxo de trabalho Perfil do cliente potencial, os clientes potenciais serão mantidos **separadamente** dos perfis de cliente de mesclagem no Serviço de perfil. Como resultado, isso significa que as listas de clientes potenciais serão **não** aparecem no Portal de público-alvo ou na Composição de público-alvo para uso.
 2. Se você estiver utilizando atributos fornecidos pelo parceiro para enriquecer **existente** perfis primários, esses públicos-alvo enriquecidos com dados de parceiros **irá** aparecem no Portal de público-alvo e na Composição de público-alvo para uso.
 
-## Posso usar públicos gerados externamente na Composição de público-alvo?
+### Como posso usar atributos adicionais com meus públicos-alvo?
+
+Com os públicos-alvo, **dois** diferentes tipos de atributos adicionais que você pode adicionar — atributos de carga (contextuais) e atributos de enriquecimento.
+
+Os atributos de carga são atributos assimilados como parte do upload de CSV de um público gerado externamente. Esses atributos são **não** assimilado no Perfil do cliente em tempo real, mas pode ser usado como parte de um destino downstream.
+
+Os atributos de enriquecimento são atributos que vêm de um conjunto de dados e são unidos a um público na Composição do público-alvo. Esses atributos só podem ser usados atualmente em campanhas do Adobe Journey Optimizer. O suporte para Adobe Journey Optimizer jornada será lançado em breve, com suporte para destinos downstream aguardando lançamento futuro.
+
+| Canal de ativação | Públicos-alvo de upload personalizado para CSV | Públicos da composição de público-alvo |
+| --- | --- | --- |
+| Destinos do Real-Time CDP | Os atributos de carga e os públicos-alvo podem ser ativados. | Somente o público-alvo pode ser ativado. Atributos de enriquecimento **não é possível** ser ativados. |
+| Campanhas do Adobe Journey Optimizer | Nem o público-alvo nem os atributos de carga podem ser ativados. | É possível ativar o público-alvo e os atributos de enriquecimento. |
+
+## Inventário de público
+
+As seções a seguir listam as perguntas relacionadas ao inventário de público-alvo no Portal de público-alvo.
+
+### Preciso de permissões adicionais para usar os recursos de inventário de público-alvo?
+
+Não, você não. Desde que você tenha permissões de edição para públicos-alvo, será possível criar, atualizar e gerenciar suas pastas e tags no Portal de público-alvo. Para obter mais informações sobre o gerenciamento de permissões, leia a [guia gerenciar permissões](../access-control/ui/permissions.md).
+
+### Há um limite para o número de pastas que posso criar?
+
+Não, não há limite para o número de pastas que você pode criar. Para obter mais informações sobre pastas, leia a [seção inventário de público](./ui/overview.md#folders) da visão geral da interface do usuário do serviço de segmentação.
+
+### Há um limite para o número de tags que podem ser adicionadas a um público-alvo?
+
+Não, não há limite para o número de tags que podem ser adicionadas a um público-alvo. Para obter mais informações sobre tags, leia a [seção inventário de público](./ui/overview.md#tags) da visão geral da interface do usuário do serviço de segmentação.
+
+### Há um limite para o número de tags que posso criar?
+
+Não, não há limite para o número de tags que podem ser criadas. No entanto, é possível criar um máximo de **100** categorias a serem aplicadas às tags. Para obter mais informações sobre o gerenciamento de tags, leia a [Guia de gerenciamento de tags](../administrative-tags/ui/managing-tags.md).
+
+### Quando procuro um público-alvo por nome ou tag em uma pasta principal, também posso pesquisar pelas pastas secundárias relacionadas?
+
+Não, esse comportamento não é compatível. No entanto, é possível alterar a exibição do inventário de público-alvo para analisar **Todos os públicos-alvo**, em seguida, pesquise em todas as pastas. Para obter mais informações sobre como usar a pesquisa no inventário de público-alvo, leia a [seção de pesquisa](./ui/overview.md#search) da visão geral da interface do usuário do serviço de segmentação.
+
+### Posso atribuir automaticamente um público-alvo a uma pasta no momento da criação?
+
+Nesse momento, não. No entanto, esse recurso pode estar disponível no futuro.
+
+### Posso mover vários públicos-alvo para uma pasta ao mesmo tempo?
+
+Nesse momento, não. No entanto, esse recurso pode estar disponível no futuro.
+
+## Composição de público-alvo
+
+A seção a seguir lista perguntas relacionadas à Composição do público-alvo.
+
+### Quando devo usar a Composição de público-alvo em vez de usar o Construtor de segmentos?
+
+A composição do público-alvo e o Construtor de segmentos têm funções importantes na criação de públicos-alvo de construção na Platform.
+
+O Construtor de segmentos é mais adequado para o público-alvo **criação** (para criar um público do zero), enquanto a Composição de público-alvo é mais adequada para o público **curadoria** (para criar novos públicos-alvo com base em um público-alvo existente).
+
+A tabela a seguir ilustra a diferença entre os dois serviços:
+
+| Construtor de segmentos | Composição de público-alvo |
+| --------------- | -------------------- |
+| <ul><li>Geração de público-alvo de estágio único</li><li>Cria os blocos básicos de públicos-alvo a partir de dados de perfil, série temporal e várias entidades</li><li>Usado para criar **um** público</li></ul> | <ul><li>Geração de público-alvo em vários estágios, usando operações baseadas em conjuntos</li><li>Usa os públicos-alvo criados pelo Construtor de segmentos e aplica opções de enriquecimento de dados, como atributos de perfil de classificação</li><li>Usado para criar **múltiplo** públicos de uma só vez</li></ul> |
+
+Para saber mais sobre o Construtor de segmentos, leia o [Guia do Construtor de segmentos](./ui/segment-builder.md). Para saber mais sobre a Composição de público-alvo, leia o [Guia de composição de público-alvo](./ui/audience-composition.md).
+
+### Posso usar públicos gerados externamente na Composição de público-alvo?
 
 Nesse momento, não. No entanto, esse recurso deve estar disponível em breve.
 
-## Posso enviar públicos-alvo da Composição de público-alvo para todos os destinos e canais de downstream?
+### Posso enviar públicos-alvo da Composição de público-alvo para todos os destinos e canais de downstream?
 
 Nesse momento, não. Atualmente, você pode usar públicos-alvo da Composição de público-alvo nas Campanhas do Adobe Journey Optimizer e destinos da CDP em tempo real. O Adobe Journey Optimizer Jornada será compatível em uma versão futura.
 
-## Existem medidas de proteção para o número de composições?
+### Existem medidas de proteção para o número de composições?
 
 Nesse momento, você só pode ter **10** composições publicadas por sandbox. Esta garantia será aumentada em uma versão futura.
 
-## Quais são as medidas de proteção do fluxo de trabalho para a Composição de público-alvo?
+### Quais são as medidas de proteção do fluxo de trabalho para a Composição de público-alvo?
 
 O componente de composição &quot;colocação&quot; segue uma estrutura rígida, como se segue:
 
@@ -80,17 +158,17 @@ O componente de composição &quot;colocação&quot; segue uma estrutura rígida
 
 Para obter mais detalhes sobre como usar a Composição de público-alvo, leia a [Guia da interface do usuário da Composição de público-alvo](./ui/audience-composition.md).
 
-## Posso usar uma composição de público-alvo em outra composição?
+### Posso usar uma composição de público-alvo em outra composição?
 
 Não, públicos-alvo criados usando a Composição de público-alvo **não é possível** ser usado como entrada em outra composição de público-alvo.
 
-## Como a divisão funciona na Composição do público-alvo?
+### Como a divisão funciona na Composição do público-alvo?
 
 A divisão de público-alvo permite ainda subdefinir o público-alvo em grupos menores. Essa divisão força a exclusividade mútua entre os grupos. Isso significa que se um registro atender aos critérios de vários caminhos divididos, ele receberá a **primeiro** caminho a partir da esquerda e **não** atribuído a qualquer outro caminho.
 
 Para obter mais informações sobre o bloco Split, leia o [Guia da interface do usuário da Composição de público-alvo](./ui/audience-composition.md#split).
 
-## Posso usar todos os tipos de segmentação no fluxo de trabalho de Composição de público-alvo?
+### Posso usar todos os tipos de segmentação no fluxo de trabalho de Composição de público-alvo?
 
 Sim, todos os tipos de segmentação ([segmentação em lote, segmentação por transmissão e segmentação de borda](./home.md#evaluate-segments)) são compatíveis com o fluxo de trabalho Composição de público-alvo. No entanto, como as composições atualmente são executadas apenas uma vez por dia, mesmo se os públicos avaliados por transmissão ou borda forem incluídos, o resultado será baseado na associação do público no momento em que a composição foi executada.
 

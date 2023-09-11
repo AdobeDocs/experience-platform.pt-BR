@@ -2,9 +2,9 @@
 title: Chaves gerenciadas pelo cliente no Adobe Experience Platform
 description: Saiba como configurar suas próprias chaves de criptografia para dados armazenados no Adobe Experience Platform.
 exl-id: cd33e6c2-8189-4b68-a99b-ec7fccdc9b91
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: 2564c0cc817362536f1a8291e1c733d9efbf5a78
 workflow-type: tm+mt
-source-wordcount: '1773'
+source-wordcount: '1855'
 ht-degree: 1%
 
 ---
@@ -20,6 +20,10 @@ Os dados armazenados no Adobe Experience Platform são criptografados em repouso
 Este documento aborda o processo de ativação do recurso de chaves gerenciadas pelo cliente (CMK) na Platform.
 
 ## Pré-requisitos
+
+Para acessar as APIs CMK, você deve atribuir a variável [!UICONTROL Gerenciar Chave Gerenciada Pelo Cliente] permissão e acesso a uma sandbox de produção para uma função nova ou existente associada à credencial da API. Se você quiser fornecer essa credencial de API com acesso apenas a CMK, é recomendável criar uma nova função de Administrador de CMK com as permissões necessárias mencionadas anteriormente.
+
+Para obter mais informações sobre atribuição de funções e permissões no Experience Platform, consulte o [configurar documentação de permissões](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html).
 
 Para habilitar o CMK, seu [!DNL Azure] O Cofre da Chave deve ser configurado com as seguintes configurações:
 
@@ -152,7 +156,7 @@ Copie e cole o `applicationRedirectUrl` em um navegador para abrir uma caixa de 
 
 ### Atribuir o aplicativo CMK a uma função {#assign-to-role}
 
-Após concluir o processo de autenticação, volte para a [!DNL Azure] Cofre da Chave e selecione **[!DNL Access control]** no painel de navegação esquerdo. Aqui, selecione **[!DNL Add]** seguido por **[!DNL Add role assignment]**.
+Após concluir o processo de autenticação, navegue de volta para a [!DNL Azure] Cofre da Chave e selecione **[!DNL Access control]** no painel de navegação esquerdo. Aqui, selecione **[!DNL Add]** seguido por **[!DNL Add role assignment]**.
 
 ![Adicionar atribuição de função](../images/governance-privacy-security/customer-managed-keys/add-role-assignment.png)
 

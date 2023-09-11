@@ -5,9 +5,9 @@ title: Processamento de solicitação de privacidade no perfil do cliente em tem
 type: Documentation
 description: O Adobe Experience Platform Privacy Service processa solicitações de clientes para acessar, cancelar a venda ou excluir seus dados pessoais, conforme definido por várias regulamentações de privacidade. Este documento aborda os conceitos essenciais relacionados ao processamento de solicitações de privacidade para o Perfil do cliente em tempo real.
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-source-git-commit: fb2686eb44bbf7581120f40b241bead0e61baee9
+source-git-commit: f0179bacc55134241bed8de240ee632d0f38e4b6
 workflow-type: tm+mt
-source-wordcount: '1612'
+source-wordcount: '1625'
 ht-degree: 0%
 
 ---
@@ -23,6 +23,10 @@ Este documento aborda conceitos essenciais relacionados ao processamento de soli
 >Este guia aborda apenas como fazer solicitações de privacidade para o Armazenamento de dados do perfil no Experience Platform. Se você também planeja fazer solicitações de privacidade para o data lake da Platform, consulte o guia em [processamento de solicitação de privacidade no data lake](../catalog/privacy.md) além deste tutorial.
 >
 >Para obter etapas sobre como fazer solicitações de privacidade para outros aplicativos da Adobe Experience Cloud, consulte o [Documentação do Privacy Service](../privacy-service/experience-cloud-apps.md).
+
+>[!IMPORTANT]
+>
+>A solicitação de privacidade neste guia não **não** Abranger entidades não pessoais B2B.
 
 ## Introdução
 
@@ -213,9 +217,9 @@ Para remover o perfil e todas as associações de identidade de um determinado c
 ### Limitações da política de mesclagem {#merge-policy-limitations}
 
 O Privacy Service só pode ser processado [!DNL Profile] dados usando uma política de mesclagem que não executa a compilação de identidade. Se você estiver usando a interface do para confirmar se as solicitações de privacidade estão sendo processadas, verifique se está usando uma política com **[!DNL None]** como seu [!UICONTROL Identificação de ID] tipo. Em outras palavras, não é possível usar uma política de mesclagem em que [!UICONTROL Identificação de ID] está definida como [!UICONTROL Gráfico privado].
->>
-![A identificação da política de mesclagem está definida como Nenhum](./images/privacy/no-id-stitch.png)
->
+
+>![A identificação da política de mesclagem está definida como Nenhum](./images/privacy/no-id-stitch.png)
+
 ## Próximas etapas
 
 Ao ler este documento, você foi apresentado aos conceitos importantes envolvidos no processamento de solicitações de privacidade no [!DNL Experience Platform]. Para aprofundar sua compreensão de como gerenciar dados de identidade e criar processos de privacidade, continue lendo a documentação fornecida neste guia.

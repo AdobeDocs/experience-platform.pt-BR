@@ -3,10 +3,10 @@ keywords: Experience Platform;página inicial;tópicos populares; alertas;;home;
 description: Você pode assinar alertas ao criar um fluxo de dados para receber mensagens de alerta sobre o status, o sucesso ou a falha da execução do fluxo.
 title: Assinar alertas de contexto na interface do usuário
 exl-id: 5d51edaa-ecba-4ac0-8d3c-49010466b9a5
-source-git-commit: 3f7f66c0d58d127299ad12027869ca0e9837f5cd
+source-git-commit: 9120377f5f2048579d7e2a4740cfcbc56d49d61a
 workflow-type: tm+mt
-source-wordcount: '868'
-ht-degree: 5%
+source-wordcount: '846'
+ht-degree: 6%
 
 ---
 
@@ -48,12 +48,15 @@ Você pode ativar alertas para seus fluxos de dados durante o [!UICONTROL Detalh
 
 Os alertas disponíveis para fluxos de dados de origens são:
 
+>[!NOTE]
+>
+>Atualmente, os alertas não oferecem suporte para fontes de transmissão. Você só pode assinar notificações de alerta para origens de lote.
+
 | Alertas | Descrição |
 | --- | --- |
-| Início da execução do fluxo de dados de fontes | Esse alerta envia uma mensagem quando o fluxo de dados de origem é iniciado. |
-| Êxito na execução do fluxo de dados de fontes | Esse alerta envia uma mensagem quando os dados da fonte são assimilados com êxito na Platform. |
-| Falha na execução do fluxo de dados de fontes | Esse alerta envia uma mensagem se ocorrer um erro no fluxo de dados. |
-| ~~Falta de assimilação de fluxo de dados de origens~~ | ~~Esse alerta envia uma mensagem se a assimilação for atrasada em mais de sete horas e nenhum dado for assimilado na Platform.~~ <br>**Nota:** Você não receberá mais alertas, pois esse alerta foi descontinuado. |
+| Início da execução do fluxo de fontes | Esse alerta envia uma mensagem quando o fluxo de dados de origem é iniciado. |
+| Êxito na execução do fluxo de fontes | Esse alerta envia uma mensagem quando os dados da fonte são assimilados com êxito na Platform. |
+| Falha na execução do fluxo de fontes | Esse alerta envia uma mensagem se ocorrer um erro no fluxo de dados. |
 
 Selecione os alertas que deseja assinar e selecione **[!UICONTROL Próxima]** para revisar e concluir o fluxo de dados.
 

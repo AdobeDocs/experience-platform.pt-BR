@@ -5,10 +5,10 @@ title: Definir uma relação entre dois esquemas usando o editor de esquemas
 description: Este documento fornece um tutorial para definir uma relação entre dois esquemas usando o Editor de esquemas na interface do usuário Experience Platform.
 type: Tutorial
 exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
-source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
+source-git-commit: 8b5c1776804bbacad5c3d72dd48c1716380cca79
 workflow-type: tm+mt
-source-wordcount: '1109'
-ht-degree: 10%
+source-wordcount: '1161'
+ht-degree: 9%
 
 ---
 
@@ -32,6 +32,10 @@ ht-degree: 10%
 A capacidade de entender os relacionamentos entre seus clientes e as interações deles com sua marca em vários canais é uma parte importante do Adobe Experience Platform. Definir esses relacionamentos na estrutura do [!DNL Experience Data Model] Os esquemas de (XDM) permitem obter insights complexos sobre os dados do cliente.
 
 Embora os relacionamentos entre esquemas possam ser inferidos por meio do uso do esquema de união e [!DNL Real-Time Customer Profile], isso se aplica somente a esquemas que compartilham a mesma classe. Para estabelecer uma relação entre dois esquemas pertencentes a classes diferentes, um campo de relação dedicado deve ser adicionado a um esquema de origem, que faz referência à identidade do outro esquema relacionado.
+
+>[!NOTE]
+>
+>Se os esquemas de origem e destino pertencerem à mesma classe, um campo de relacionamento dedicado deverá **não** ser utilizado. Nesse caso, use a interface do esquema de união para ver o relacionamento. As instruções sobre como fazer isso podem ser encontradas no [exibir relacionamentos](../../profile/ui/union-schema.md#view-relationships) seção do guia da interface do esquema de união.
 
 Este documento fornece um tutorial para definir uma relação entre dois esquemas usando o Editor de esquemas na [!DNL Experience Platform] interface do usuário. Para obter etapas sobre como definir relações de esquema usando a API, consulte o tutorial sobre [definição de uma relação usando a API do registro de esquema](relationship-api.md).
 

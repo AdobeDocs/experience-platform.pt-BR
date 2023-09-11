@@ -1,9 +1,9 @@
 ---
 description: Saiba como configurar opções de formatação de arquivo para destinos baseados em arquivo criados com o Adobe Experience Platform Destination SDK, por meio do endpoint `/destination-servers`.
 title: Configuração da formatação de arquivo
-source-git-commit: 249a12e6a079e3c99bf13bec4bf83b2a53cd522b
+source-git-commit: 511e02f92b7016a7f07dd3808b39594da9438d15
 workflow-type: tm+mt
-source-wordcount: '999'
+source-wordcount: '1004'
 ht-degree: 4%
 
 ---
@@ -178,7 +178,7 @@ Abaixo está uma referência completa de todas as opções de formatação de ar
 | `templatingStrategy` | Obrigatório | Para cada opção de formatação de arquivo configurada, é necessário adicionar o parâmetro `templatingStrategy`, que pode ter dois valores: <br><ul><li>`NONE`: use esse valor se não estiver planejando permitir que os usuários selecionem entre valores diferentes para uma configuração. Consulte [esta configuração](#file-configuration-templating-none) por exemplo, onde as opções de formatação de arquivo são corrigidas.</li><li>`PEBBLE_V1`: use esse valor se quiser permitir que os usuários selecionem entre valores diferentes para uma configuração. Nesse caso, você também deve configurar um campo de dados do cliente correspondente no `/destination` Configuração do endpoint, para exibir as várias opções aos usuários na interface do usuário. Consulte [esta configuração](#file-configuration-templating-pebble) para obter um exemplo em que os usuários podem selecionar entre valores diferentes para opções de formatação de arquivo.</li></ul> | - | - | - |
 | `compression.value` | Opcional | Codec de compactação a ser usado ao salvar dados no arquivo. Valores compatíveis: `none`, `bzip2`, `gzip`, `lz4`, e `snappy`. | `none` | - | - |
 | `fileType.value` | Opcional | Especifica o formato do arquivo de saída. Valores compatíveis: `csv`, `parquet`, e `json`. | `csv` | - | - |
-| `csvOptions.quote.value` | Opcional | *Somente para`"fileType.value": "csv"`*. Define um caractere único usado para sair de valores entre aspas onde o separador pode ser parte do valor. | `null` | - | - |
+| `csvOptions.quote.value` | Opcional | *Somente para`"fileType.value": "csv"`*. Define um caractere único usado para sair de valores entre aspas onde o separador pode ser parte do valor. | `null` | Exemplo de valor padrão: `quote.value: "u0000"` —> `male,NULJohn,LastNameNUL` | Exemplo personalizado: `quote.value: "\""` —> `male,"John,LastName"` |
 | `csvOptions.quoteAll.value` | Opcional | *Somente para`"fileType.value": "csv"`*. Indica se todos os valores devem sempre estar entre aspas. O padrão é omitir apenas valores que contenham um caractere de aspas. | `false` | `quoteAll`:`false` --> `male,John,"TestLastName"` | `quoteAll`:`true` -->`"male","John","TestLastName"` |
 | `csvOptions.delimiter.value` | Opcional | *Somente para`"fileType.value": "csv"`*. Define um separador para cada campo e valor. Esse separador pode conter um ou mais caracteres. | `,` | `delimiter`:`,` --> `comma-separated values"` | `delimiter`:`\t` --> `tab-separated values` |
 | `csvOptions.escape.value` | Opcional | *Somente para`"fileType.value": "csv"`*. Define um caractere único usado para “escapar” citações dentro de um valor já citado. | `\` | `"escape"`:`"\\"` --> `male,John,"Test,\"LastName5"` | `"escape"`:`"'"` --> `male,John,"Test,'''"LastName5"` |

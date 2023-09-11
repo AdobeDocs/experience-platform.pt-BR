@@ -3,9 +3,9 @@ title: Comparação da at.js com o SDK da Web do Experience Platform
 description: Saiba como os recursos da at.js se comparam ao SDK da Web do Experience Platform
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisionScopes;ocultando previamente o trecho;vec;Criador de experiências baseado em formulário;xdm;públicos-alvo;decisões;escopo;esquema;diagrama do sistema;diagrama
 exl-id: b63fe47d-856a-4cae-9057-51917b3e58dd
-source-git-commit: 5065d76ad8008988c843c88e33a25731fb5284d0
+source-git-commit: 139d6a6632532b392fdf8d69c5c59d1fd779a6d1
 workflow-type: tm+mt
-source-wordcount: '2286'
+source-wordcount: '2281'
 ht-degree: 6%
 
 ---
@@ -1233,7 +1233,7 @@ Observação: todos esses recursos de depuração estão disponíveis com recurs
 
 Você tem vários recursos de depuração ao usar o SDK da Web:
 
-* Usar [Griffon](https://aep-sdks.gitbook.io/docs/beta/project-griffon)
+* Usar [Assurance](../../../assurance/home.md)
 * [Depuração do SDK da Web habilitada](../../../edge/fundamentals/debugging.md)
 * Uso [Ganchos de monitoramento do SDK da Web](https://github.com/adobe/alloy/wiki/Monitoring-Hooks)
 * Uso [Adobe Experience Platform Debugger](../../../debugger/home.md)

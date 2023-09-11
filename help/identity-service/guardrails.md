@@ -3,9 +3,9 @@ keywords: Experience Platform;identidade;serviço de identidade;solução de pro
 title: Medidas de proteção do serviço de identidade
 description: Este documento fornece informações sobre limites de uso e taxa para dados do Serviço de identidade para ajudar você a otimizar o uso do gráfico de identidade.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: 2f226ae1356733b89b10e73ef1a371c42da05295
+source-git-commit: 87138cbf041e40bfc6b42edffb16f5b8a8f5b365
 workflow-type: tm+mt
-source-wordcount: '999'
+source-wordcount: '1112'
 ht-degree: 1%
 
 ---
@@ -70,7 +70,8 @@ A seção a seguir contém informações adicionais sobre as medidas de proteç�
 >
 > * Um namespace personalizado em que os identificadores de pessoa (como IDs de CRM) são configurados como tipo de identidade de cookie/dispositivo.
 > * Um namespace personalizado em que os identificadores de cookie/dispositivo são configurados como tipo de identidade entre dispositivos.
-
+>
+>Quando esse recurso estiver disponível, os gráficos que excederem o limite de 50 identidades serão reduzidos para até 50 identidades. Para a Real-time CDP B2C Edition, isso pode resultar em um aumento mínimo no número de perfis qualificados para um público-alvo, pois esses perfis foram ignorados anteriormente da Segmentação e Ativação.
 
 Quando um gráfico de identidade completo é atualizado, o Serviço de identidade exclui a identidade mais antiga no gráfico antes de adicionar a identidade mais recente. Isso é para manter a precisão e a relevância dos dados de identidade. Esse processo de exclusão segue duas regras principais:
 
@@ -108,3 +109,8 @@ Neste exemplo, antes que o gráfico à esquerda possa ser atualizado com uma nov
 * No raro caso de haver duas identidades com o mesmo carimbo de data e hora e tipo de identidade, o Serviço de identidade classificará as IDs com base em [XID](./api/list-native-id.md) e realizar a exclusão.
 
 >[!ENDSHADEBOX]
+
+A exclusão acontece somente com os dados no Serviço de identidade, não com o Perfil do cliente em tempo real.
+
+* Esse comportamento poderia, consequentemente, criar mais perfis com uma única ECID, pois a ECID não faz mais parte do gráfico de identidade.
+* Para ficar dentro dos números de direito do público-alvo endereçável, é recomendável ativar [expiração de dados de perfil pseudônimo](../profile/pseudonymous-profiles.md) para excluir os perfis antigos.

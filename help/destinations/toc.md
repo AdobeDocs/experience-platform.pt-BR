@@ -4,9 +4,9 @@ user-guide-title: Guia de destinos
 user-guide-description: Ative seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas por email, publicidade direcionada e muito mais.
 description: Este documento lista o índice dos destinos do Adobe Experience Platform
 feature: Destinations
-source-git-commit: 0eb17d4d7ad9db3737a14f383bdafe40d59eb12c
+source-git-commit: 333f98a74e69f50ae356231733924d1c6793ddf1
 workflow-type: tm+mt
-source-wordcount: '1167'
+source-wordcount: '1170'
 ht-degree: 9%
 
 ---
@@ -83,6 +83,7 @@ ht-degree: 9%
       * [extensão gtag do Google](./catalog/advertising/gtag-advertising.md)
       * [Extensão de tag do linkedIn Insight](./catalog/advertising/linkedin.md)
       * [LiveRamp - Conexão de integração](./catalog/advertising/liveramp-onboarding.md)
+      * [LiveRamp - Conexão de distribuição](./catalog/advertising/liveramp-distribution.md)
       * [Conexão com o Microsoft Bing](./catalog/advertising/bing.md)
       * [Extensão de rastreamento de conversão do pinterest](./catalog/advertising/pinterest-extension.md)
       * [Conexão com a Lista de clientes do pinterest](./catalog/advertising/pinterest.md)

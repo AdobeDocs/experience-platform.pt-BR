@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Noções básicas da composição do esquema
 description: Este documento fornece uma introdução aos esquemas do Experience Data Model (XDM) e aos componentes, princípios e práticas recomendadas para a composição de esquemas a serem usados no Adobe Experience Platform.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 4ff003b8f4e98fa7af7f12271aa990c8e5f49f14
+source-git-commit: 139d6a6632532b392fdf8d69c5c59d1fd779a6d1
 workflow-type: tm+mt
-source-wordcount: '4140'
+source-wordcount: '4141'
 ht-degree: 6%
 
 ---
@@ -78,7 +78,7 @@ A principal desvantagem de usar `identityMap` é que as identidades se tornam in
 >
 >Um esquema que usa `identityMap` pode ser usado como um esquema de origem em uma relação, mas não pode ser usado como um esquema de referência. Isso ocorre porque todos os esquemas de referência devem ter uma identidade visível que possa ser mapeada em um campo de referência no esquema de origem. Consulte o guia da interface do usuário em [relacionamentos](../tutorials/relationship-ui.md) para obter mais informações sobre os requisitos dos esquemas de origem e de referência.
 
-No entanto, os mapas de identidade podem ser particularmente úteis se você estiver trazendo dados de fontes que armazenam identidades juntas (como [!DNL Airship] ou Adobe Audience Manager), ou quando houver um número variável de identidades para um esquema. Além disso, os mapas de identidade serão necessários se você estiver usando o [Adobe Experience Platform Mobile SDK](https://aep-sdks.gitbook.io/docs/).
+No entanto, os mapas de identidade podem ser particularmente úteis se você estiver trazendo dados de fontes que armazenam identidades juntas (como [!DNL Airship] ou Adobe Audience Manager), ou quando houver um número variável de identidades para um esquema. Além disso, os mapas de identidade serão necessários se você estiver usando o [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/).
 
 Um exemplo de um mapa de identidade simples seria semelhante ao seguinte:
 

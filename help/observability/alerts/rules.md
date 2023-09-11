@@ -4,9 +4,9 @@ title: Regras de alerta padrão
 description: Este documento aborda as regras de alerta predefinidas fornecidas pelo Experience Platform.
 feature: Alerts
 exl-id: b4af1c15-b1bc-4e4b-a447-09cc17a63988
-source-git-commit: 6650894c145fd1f42731fd5ed8aeb6e38062aa61
+source-git-commit: 9120377f5f2048579d7e2a4740cfcbc56d49d61a
 workflow-type: tm+mt
-source-wordcount: '943'
+source-wordcount: '961'
 ht-degree: 1%
 
 ---
@@ -20,6 +20,10 @@ Quando [exibição de regras de alerta na interface do usuário da Platform](./u
 ## Assimilação de dados
 
 As seguintes regras de alerta são específicas do [Assimilação de dados](../../ingestion/home.md) e  [origens](../../sources/home.md):
+
+>[!NOTE]
+>
+>Atualmente, os alertas não oferecem suporte para fontes de transmissão. Você só pode assinar notificações de alerta para origens de lote.
 
 | Inscrição no evento de E/S | Regra de alerta | Descrição |
 | --- | --- | --- |
@@ -93,7 +97,7 @@ As seguintes regras de alerta são específicas do [destinos](../../destinations
 
 {style="table-layout:auto"}
 
-## Serviço de query
+## Query Service
 
 As seguintes regras de alerta são específicas do [Serviço de consulta](../../query-service/home.md):
 

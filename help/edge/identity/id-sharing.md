@@ -3,10 +3,10 @@ title: Compartilhamento de ID de dispositivo móvel para Web e entre domínios
 description: Saiba como manter IDs de visitante móveis em propriedades da Web e entre domínios
 keywords: Identidade;móvel;id;compartilhamento;domínio;domínio cruzado;sdk;plataforma;
 exl-id: b9bb236f-52cf-4615-96d8-1137d957de8c
-source-git-commit: 3b65143e33804b251f888dbe2a69d238b3f4cda3
+source-git-commit: 139d6a6632532b392fdf8d69c5c59d1fd779a6d1
 workflow-type: tm+mt
 source-wordcount: '901'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -34,13 +34,13 @@ Um varejista de tecnologia deseja melhorar o relatório de atividades do visitan
 
 Para usar o compartilhamento de ID móvel para Web e entre domínios, você deve usar [!DNL Web SDK] versão 2.11.0 ou posterior.
 
-Para implementações móveis da Rede de borda, esse recurso é compatível com o [Identidade da rede de borda](https://aep-sdks.gitbook.io/docs/foundation-extensions/identity-for-edge-network) extensão a partir da versão 1.1.0 (iOS e Android).
+Para implementações móveis da Rede de borda, esse recurso é compatível com o [Identidade da rede de borda](https://developer.adobe.com/client-sdks/documentation/identity-for-edge-network/) extensão a partir da versão 1.1.0 (iOS e Android).
 
 Esse recurso também é compatível com o [!DNL VisitorAPI.js] versão 1.7.0 ou posterior.
 
 ## Compartilhamento de ID de dispositivo móvel para Web {#mobile-to-web}
 
-Use o `getUrlVariables` API do [Identidade da rede de borda](https://aep-sdks.gitbook.io/docs/foundation-extensions/identity-for-edge-network/api-reference#geturlvariables) extensão para recuperar os identificadores como parâmetros de consulta e anexá-los ao seu URL ao abrir [!DNL webViews].
+Use o `getUrlVariables` API do [Identidade da rede de borda](https://developer.adobe.com/client-sdks/documentation/identity-for-edge-network/api-reference/#geturlvariables) extensão para recuperar os identificadores como parâmetros de consulta e anexá-los ao seu URL ao abrir [!DNL webViews].
 
 Nenhuma configuração adicional é necessária para que o SDK da Web aceite `ECID` valores na sequência de consulta.
 
@@ -102,7 +102,7 @@ Siga as etapas descritas [aqui](../../tags/ui/managing-resources/rules.md) para 
    * Selecionar **[!UICONTROL Quando o usuário clica em > elementos específicos]**
    * Digite o **[!UICONTROL Seletor]**: `a[href]`. Esse evento será acionado sempre que uma tag de âncora for clicada na página com um `href` propriedade.
 
-      ![Imagem da interface do usuário mostrando a configuração do evento com as configurações descritas acima](assets/id-sharing-event-configuration.png)
+     ![Imagem da interface do usuário mostrando a configuração do evento com as configurações descritas acima](assets/id-sharing-event-configuration.png)
 
 * [!UICONTROL Configuração de condição]
    * **[!UICONTROL Tipo de lógica]**: [!UICONTROL Regular]
@@ -112,14 +112,14 @@ Siga as etapas descritas [aqui](../../tags/ui/managing-resources/rules.md) para 
    * **[!UICONTROL Operador]**: [!UICONTROL Corresponde a Regex]
    * **[!UICONTROL Operando Direito]**: digite uma expressão regular que corresponda aos domínios com os quais você deseja compartilhar identidades. Por exemplo, para corresponder links com nomes de host que terminam com `adobe.com` ou `behance.com`, use esta expressão regular: `behance.com$|adobe.com$`. A página vinculada precisa ter a [!DNL Web SDK] ou [!DNL Visitor ID] instalado para aceitar a identidade.
 
-      ![Imagem da interface do usuário mostrando a configuração de condição com as configurações descritas acima](assets/id-sharing-condition-configuration.png)
+     ![Imagem da interface do usuário mostrando a configuração de condição com as configurações descritas acima](assets/id-sharing-condition-configuration.png)
 
 * [!UICONTROL Configuração de ação]
    * **[!UICONTROL Extensão]**: [!UICONTROL Adobe Experience Platform Web SDK]
    * **[!UICONTROL Tipo de ação]**: [!UICONTROL Redirecionar com identidade]
    * **[!UICONTROL Instância]**: selecione a instância. Na maioria dos casos, você terá apenas uma instância configurada. Se você tiver várias instâncias, selecione aquela com a identidade que deseja compartilhar.
 
-      ![Imagem da interface do usuário mostrando a configuração da ação com as configurações descritas acima](assets/id-sharing-action-configuration.png)
+     ![Imagem da interface do usuário mostrando a configuração da ação com as configurações descritas acima](assets/id-sharing-action-configuration.png)
 
 A variável **[!UICONTROL Redirecionar com identidade]** Essa ação fará com que o navegador pare de navegar até o link. Em seguida, chamará o `appendIdentityToUrl` no [!DNL Web SDK] instância.
 

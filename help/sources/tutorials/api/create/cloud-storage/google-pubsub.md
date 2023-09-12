@@ -3,10 +3,10 @@ title: Criar uma conexão de origem Google PubSub usando a API do serviço de fl
 description: Saiba como conectar o Adobe Experience Platform a uma conta Google PubSub usando a API do Serviço de fluxo.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: f5b8f9bf-8a6f-4222-8eb2-928503edb24f
-source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
+source-git-commit: b157b9147d8ea8100bcaedca272b303a3c04e71a
 workflow-type: tm+mt
-source-wordcount: '979'
-ht-degree: 1%
+source-wordcount: '996'
+ht-degree: 2%
 
 ---
 
@@ -34,7 +34,7 @@ A fim de [!DNL Flow Service] para se conectar a [!DNL PubSub], você deve fornec
 | Credencial | Descrição |
 | ---------- | ----------- |
 | `projectId` | A ID do projeto necessária para a autenticação [!DNL PubSub]. |
-| `credentials` | A credencial ou chave necessária para autenticar [!DNL PubSub]. |
+| `credentials` | A credencial necessária para autenticar [!DNL PubSub]. Certifique-se de colocar o arquivo JSON completo após remover os espaços em branco de suas credenciais. |
 | `topicName` | O nome do recurso que representa um feed de mensagens. Você deve especificar um nome de tópico se quiser fornecer acesso a um fluxo específico de dados em seu [!DNL PubSub] origem. O formato do nome do tópico é: `projects/{PROJECT_ID}/topics/{TOPIC_ID}`. |
 | `subscriptionName` | O nome do seu [!DNL PubSub] assinatura. Entrada [!DNL PubSub], assinaturas permitem que você receba mensagens inscrevendo-se no tópico no qual as mensagens foram publicadas. **Nota**: Uma única [!DNL PubSub] a assinatura só pode ser usada para um fluxo de dados. Para fazer vários fluxos de dados, você deve ter várias assinaturas. O formato do nome da assinatura é: `projects/{PROJECT_ID}/subscriptions/{SUBSCRIPTION_ID}`. |
 | `connectionSpec.id` | A especificação de conexão retorna as propriedades do conector de origem, incluindo especificações de autenticação relacionadas à criação das conexões de origem e de destino de base. A variável [!DNL PubSub] A ID da especificação de conexão é: `70116022-a743-464a-bbfe-e226a7f8210c`. |

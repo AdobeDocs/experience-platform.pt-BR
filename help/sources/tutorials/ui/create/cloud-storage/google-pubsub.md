@@ -3,10 +3,10 @@ title: Criar uma conexão de origem Google PubSub na interface
 description: Saiba como criar um conector de origem Google PubSub usando a interface do usuário da Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: fb8411f2-ccae-4bb5-b1bf-52b1144534ed
-source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
+source-git-commit: b157b9147d8ea8100bcaedca272b303a3c04e71a
 workflow-type: tm+mt
-source-wordcount: '1028'
-ht-degree: 0%
+source-wordcount: '1043'
+ht-degree: 1%
 
 ---
 
@@ -34,7 +34,7 @@ Para se conectar [!DNL PubSub] Para o Platform, você deve fornecer um valor vá
 | Credencial | Descrição |
 | ---------- | ----------- |
 | Projeto  ID | A ID do projeto necessária para a autenticação [!DNL PubSub]. |
-| Credenciais | A ID da chave privada ou credencial necessária para autenticar [!DNL PubSub]. |
+| Credenciais | A credencial necessária para autenticar [!DNL PubSub]. Certifique-se de colocar o arquivo JSON completo após remover os espaços em branco de suas credenciais. |
 | Nome do tópico | O nome do seu [!DNL PubSub] assinatura. Entrada [!DNL PubSub], assinaturas permitem que você receba mensagens inscrevendo-se no tópico no qual as mensagens foram publicadas. **Nota**: Uma única [!DNL PubSub] a assinatura só pode ser usada para um fluxo de dados. Para fazer vários fluxos de dados, você deve ter várias assinaturas. |
 | Nome da assinatura | O nome do seu [!DNL PubSub] assinatura. Entrada [!DNL PubSub], assinaturas permitem que você receba mensagens inscrevendo-se no tópico no qual as mensagens foram publicadas. |
 

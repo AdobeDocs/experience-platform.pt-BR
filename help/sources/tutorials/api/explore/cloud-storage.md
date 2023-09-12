@@ -3,10 +3,10 @@ keywords: Experience Platform;página inicial;tópicos populares;armazenamento n
 title: Explorar pastas de armazenamento na nuvem usando a API do serviço de fluxo
 description: Este tutorial usa a API de serviço de fluxo para explorar um sistema de armazenamento em nuvem de terceiros.
 exl-id: ba1a9bff-43a6-44fb-a4e7-e6a45b7eeebd
-source-git-commit: 88e6f084ce1b857f785c4c1721d514ac3b07e80b
+source-git-commit: 9b9803b4d2aeb2a86ef980f34ee34909679ea3d9
 workflow-type: tm+mt
 source-wordcount: '699'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -106,14 +106,14 @@ Para inspecionar a estrutura do arquivo de dados do armazenamento na nuvem, exec
 GET /connections/{BASE_CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&fileType={FILE_TYPE}&{QUERY_PARAMS}&preview=true
 GET /connections/{BASE_CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&preview=true&fileType=delimited&columnDelimiter=\t
 GET /connections/{BASE_CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&preview=true&fileType=delimited&compressionType=gzip;
-GET /connections/{BASE_CONNECTION_ID}/explore?objectType=FILE&object={FILE_PATH}&preview=true&ileType=delimited&encoding=ISO-8859-1;
+GET /connections/{BASE_CONNECTION_ID}/explore?objectType=FILE&object={FILE_PATH}&preview=true&fileType=delimited&encoding=ISO-8859-1;
 ```
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
 | `{BASE_CONNECTION_ID}` | A ID de conexão do conector de origem de armazenamento na nuvem. |
 | `{FILE_PATH}` | O caminho para o arquivo que você deseja inspecionar. |
-| `{FILE_TYPE}` | O tipo do arquivo. Os tipos de arquivos compatíveis incluem:<ul><li>DELIMITADO</code>: valor separado por delimitadores. Os arquivos DSV devem ser separados por vírgulas.</li><li>JSON</code>: notação de objeto JavaScript. Os arquivos JSON devem ser compatíveis com XDM</li><li>PARQUET</code>: Apache Parquet. Os arquivos Parquet devem ser compatíveis com XDM.</li></ul> |
+| `{FILE_TYPE}` | O tipo do arquivo. Os tipos de arquivos compatíveis incluem:<ul><li><code>DELIMITADO</code>: valor separado por delimitadores. Os arquivos DSV devem ser separados por vírgulas.</li><li><code>JSON</code>: notação de objeto JavaScript. Os arquivos JSON devem ser compatíveis com XDM</li><li><code>PARQUET</code>: Apache Parquet. Os arquivos Parquet devem ser compatíveis com XDM.</li></ul> |
 | `{QUERY_PARAMS}` | Parâmetros de consulta opcionais que podem ser usados para filtrar resultados. Consulte a seção sobre [parâmetros de consulta](#query) para obter mais informações. |
 
 **Solicitação**

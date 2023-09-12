@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Suporte de navegador e idioma para a interface do Experience Platform
 description: A Adobe Experience Platform é o sistema mais poderoso, flexível e aberto do mercado para criar e gerenciar soluções completas que impulsionam a experiência do cliente. A Experience Platform permite que as organizações centralizem e padronizem dados e conteúdo de clientes de qualquer sistema e apliquem a ciência de dados e o aprendizado de máquina para melhorar o design e o delivery de experiências personalizadas.
 exl-id: 1b74aede-55df-4e81-8360-e49d1932b373
-source-git-commit: 20cb7afe6338f1ca79e86558f1f0cbec54790212
+source-git-commit: 9c46f2eeb563009da52acb629796ee9992136343
 workflow-type: tm+mt
-source-wordcount: '236'
-ht-degree: 24%
+source-wordcount: '247'
+ht-degree: 23%
 
 ---
 
@@ -51,9 +51,11 @@ Seu idioma padrão da interface do usuário é determinado pela região especifi
 
 Para alterar o idioma:
 
-1. Selecione o idioma atual no rodapé do [!DNL Experience Platform] interface do usuário.
-2. Nas configurações do perfil, selecione **[!UICONTROL Alterar região]**.
-3. Selecione sua região.
+1. Faça logon na sua conta Experience Platform.
+1. Pressione `Ctrl + i` para abrir o menu de informações da conta.
+1. Ir para **[!UICONTROL Idiomas preferidos]**.
+1. Selecione o primeiro e o segundo idiomas de preferência.
+1. Selecionar **[!UICONTROL Salvar]** e feche a janela.
 
 >[!NOTE]
 >

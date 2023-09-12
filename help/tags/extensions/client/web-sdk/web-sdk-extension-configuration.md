@@ -1,65 +1,67 @@
 ---
-title: Configurar a extensão SDK da Web do Adobe Experience Platform
-description: Como configurar a extensão de tag do SDK da Web da Adobe Experience Platform na interface do usuário do.
-exl-id: 96d32db8-0c9a-49f0-91f3-0244522d66df
-source-git-commit: 97b435b9bcaf20be0e41150b6a7a408e083fbd61
+title: Configurar o SDK da Web Extensão de tag
+description: Saiba como configurar a extensão de tag do SDK da Web do Experience Platform na interface do usuário de tags.
+source-git-commit: ec0aa64c466a8228d49a776d27040253b5a1b196
 workflow-type: tm+mt
-source-wordcount: '1220'
-ht-degree: 9%
+source-wordcount: '1458'
+ht-degree: 11%
 
 ---
 
 
-# Configurar a extensão de tag do SDK da Web da Adobe Experience Platform
+# Configurar a extensão de tag do SDK da Web
 
-A extensão de tag do SDK da Web da Adobe Experience Platform envia dados para a Adobe Experience Cloud a partir das propriedades da Web por meio da Rede de borda da Adobe Experience Platform. A extensão permite transmitir dados para a Platform, sincronizar identidades, processar sinais de consentimento do cliente e coletar automaticamente dados de contexto.
+A variável [!DNL Web SDK] A extensão de tag envia dados para a Adobe Experience Cloud a partir das propriedades da Web por meio da Rede de borda do Experience Platform.
 
-Este documento aborda como configurar a extensão na interface do usuário do.
+A extensão permite transmitir dados para a Platform, sincronizar identidades, processar sinais de consentimento do cliente e coletar automaticamente dados de contexto.
 
-## Introdução
+Este documento explica como configurar a extensão de tag na interface do usuário de tags.
 
-Se a extensão SDK da Web da Platform já tiver sido instalada para uma propriedade, abra a propriedade na interface do usuário e selecione a **[!UICONTROL Extensões]** guia. No SDK da Web da Platform, selecione **[!UICONTROL Configurar]**.
+## Instalar a extensão de tag do SDK da Web {#install}
 
-![](assets/configure.png)
+A extensão de tag do SDK da Web precisa de uma propriedade para ser instalada. Se ainda não tiver feito isso, consulte a documentação em [criação de uma propriedade de tag](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/create-a-property.html?lang=pt-BR).
 
-Se ainda não tiver instalado a extensão, selecione a opção **[!UICONTROL Catálogo]** guia. Na lista de extensões disponíveis, localize a extensão SDK da Web da plataforma e selecione **[!UICONTROL Instalar]**.
+Após criar uma propriedade, abra a propriedade e selecione a variável **[!UICONTROL Extensões]** na barra lateral esquerda.
 
-![](assets/install.png)
+Selecione o **[!UICONTROL Catálogo]** guia. Na lista de extensões disponíveis, localize o [!DNL Web SDK] e selecione **[!UICONTROL Instalar]**.
 
-Em ambos os casos, você acessa a página de configuração do SDK da Web da plataforma. As seções abaixo explicam as opções de configuração da extensão.
+![Imagem mostrando a interface do usuário de tags com a extensão SDK da Web selecionada](assets/web-sdk-install.png)
 
-![](assets/config-screen.png)
+Depois de selecionar **[!UICONTROL Instalar]**, você deve configurar a extensão de tag do SDK da Web e salvar a configuração.
 
-## Opções gerais de configuração
+>[!NOTE]
+>
+>A extensão de tag só é instalada depois de salvar a configuração. Consulte as próximas seções para saber como configurar a extensão de tag.
+
+## Definir configurações de instância {#general}
 
 As opções de configuração na parte superior da página informam à Adobe Experience Platform para onde rotear os dados e quais configurações usar no servidor.
 
-### [!UICONTROL Nome]
+![Imagem que mostra as configurações gerais da extensão de tag do SDK da Web na interface do usuário de tags](assets/web-sdk-ext-general.png)
 
-A extensão SDK da Web da Adobe Experience Platform é compatível com várias instâncias na página. O nome é usado para enviar dados para várias organizações com uma configuração de tag.
+* **[!UICONTROL Nome]**: a extensão SDK da Web do Adobe Experience Platform oferece suporte a várias instâncias na página. O nome é usado para enviar dados para várias organizações com uma configuração de tag. O nome da instância é padronizado como `alloy`. No entanto, é possível alterar o nome da instância para qualquer nome de objeto JavaScript válido.
+* **[!UICONTROL IMS organization ID]**: a ID da organização para a qual você deseja que os dados sejam enviados no Adobe. Na maioria das vezes, use o valor padrão preenchido automaticamente. Quando houver várias instâncias na página, preencha esse campo com o valor da segunda organização para a qual deseja enviar dados.
+* **[!UICONTROL Domínio de borda]**: o domínio do qual a extensão envia e recebe dados. O Adobe recomenda usar um domínio próprio (CNAME) para essa extensão. O domínio padrão de terceiros funciona em ambientes de desenvolvimento, mas não é adequado para ambientes de produção. As instruções sobre como configurar um CNAME primário estão listadas [aqui](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html?lang=pt-BR).
 
-O nome padrão da extensão é &quot;[!DNL alloy]&quot;. No entanto, é possível alterar o nome da instância para qualquer nome de objeto JavaScript válido.
+## Definir configurações de sequência de dados {#datastreams}
 
-### **[!UICONTROL ID da organização IMS]**
+Essa seção permite selecionar os fluxos de dados que devem ser usados para cada um dos três ambientes disponíveis (produção, preparo e desenvolvimento).
 
-A variável [!UICONTROL IMS Organization ID] é a organização para a qual você deseja que os dados sejam enviados no Adobe. Na maioria das vezes, use o valor padrão preenchido automaticamente. Quando houver várias instâncias na página, preencha esse campo com o valor da segunda organização para a qual deseja enviar dados.
+Quando uma solicitação é enviada para a Rede de borda, uma ID de fluxo de dados é usada para fazer referência à configuração do lado do servidor. Você pode atualizar a configuração sem precisar fazer alterações de código no site.
 
-### **[!UICONTROL Domínio de borda]**
+Consulte o guia sobre [sequências de dados](../../../../datastreams/overview.md) para saber como configurar um fluxo de dados.
 
-A variável [!UICONTROL Domínio de borda] é o domínio do qual a extensão do Adobe Experience Platform envia e recebe dados. O Adobe recomenda usar um domínio próprio (CNAME) para essa extensão. O domínio padrão de terceiros funciona em ambientes de desenvolvimento, mas não é adequado para ambientes de produção. As instruções sobre como configurar um CNAME primário estão listadas [aqui](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html?lang=pt-BR).
+Você pode escolher um fluxo de dados nos menus suspensos disponíveis ou selecionar **[!UICONTROL Inserir valores]** e insira uma ID de fluxo de dados personalizada para cada ambiente.
 
-## [!UICONTROL Datastreams]
+![Imagem que mostra as configurações de sequência de dados da extensão de tag do SDK da Web na interface do usuário de tags](assets/web-sdk-ext-datastreams.png)
 
-Quando uma solicitação é enviada para a Rede de borda da Adobe Experience Platform, uma ID de sequência de dados é usada para fazer referência à configuração do lado do servidor. Você pode atualizar a configuração sem precisar fazer alterações de código no site.
+## Definir configurações de privacidade {#privacy}
 
-Consulte o guia sobre [sequências de dados](../../../../datastreams/overview.md) para obter mais informações.
+Esta seção permite configurar como o SDK da Web lida com sinais de consentimento do usuário do seu site. Especificamente, ela permite selecionar o nível padrão de consentimento assumido de um usuário se nenhuma outra preferência de consentimento explícito tiver sido fornecida.
 
+O nível de consentimento padrão não é salvo no perfil do usuário.
 
-## [!UICONTROL Privacidade]
-
-![](assets/privacy.png)
-
-A variável [!UICONTROL Privacidade] permite configurar como o SDK lida com sinais de consentimento do usuário do seu site. Especificamente, ela permite selecionar o nível padrão de consentimento assumido de um usuário se nenhuma outra preferência de consentimento explícito tiver sido fornecida. O nível de consentimento padrão não é salvo no perfil do usuário. A tabela a seguir detalha o que cada opção implica:
+![Imagem mostrando as configurações de privacidade da extensão de tag do SDK da Web na interface do usuário de tags](assets/web-sdk-ext-privacy.png)
 
 | [!UICONTROL Nível de consentimento padrão] | Descrição |
 | --- | --- |
@@ -68,49 +70,44 @@ A variável [!UICONTROL Privacidade] permite configurar como o SDK lida com sina
 | [!UICONTROL Pending] | Enfileirar eventos que ocorrem antes de o usuário fornecer preferências de consentimento. Quando as preferências de consentimento são fornecidas, os eventos são coletados ou descartados, dependendo das preferências fornecidas. |
 | [!UICONTROL Fornecido pelo elemento de dados] | O nível de consentimento padrão é determinado por um elemento de dados separado que você define. Ao usar essa opção, você deve especificar o elemento de dados usando o menu suspenso fornecido. |
 
-Use Fora ou Pendente se você precisar de consentimento explícito do usuário para suas operações comerciais.
+>[!TIP]
+>
+>Uso **[!UICONTROL Saída]** ou **[!UICONTROL Pending]** se você precisar de consentimento explícito do usuário para suas operações comerciais.
 
-## [!UICONTROL Identidade]
+## Definir configurações de identidade {#identity}
 
-![](assets/identity.png)
+Esta seção permite definir o comportamento do SDK da Web quando se trata de lidar com a identificação do usuário.
 
-### [!UICONTROL Migrar ECID da VisitorAPI]
+![Imagem que mostra as configurações de identidade da extensão de tag do SDK da Web na interface do usuário de tags](assets/web-sdk-ext-identity.png)
 
-Essa opção está ativada por padrão. Quando esse recurso está ativado, o SDK pode ler os cookies AMCV e s_ecid e definir o cookie AMCV usado pelo Visitor.js. Esse recurso é importante ao migrar para o Adobe Experience Platform Web SDK, pois algumas páginas ainda podem estar usando o Visitor.js. Ele permite que o SDK continue usando a mesma ECID para que os usuários não sejam identificados como dois usuários separados.
+* **[!UICONTROL Migrar ECID da VisitorAPI]**: essa opção é ativada por padrão. Quando esse recurso está ativado, o SDK pode ler a variável `AMCV` e `s_ecid` cookies e defina o `AMCV` cookie usado por [!DNL Visitor.js]. Esse recurso é importante ao migrar para o SDK da Web, pois algumas páginas ainda podem estar usando [!DNL Visitor.js]. Essa opção permite que o SDK continue usando a mesma [!DNL ECID] para que os usuários não sejam identificados como dois usuários separados.
+* **[!UICONTROL Usar cookies de terceiros]**: quando esta opção é ativada, o SDK da Web tenta armazenar um identificador do usuário em um cookie de terceiros. Se for bem-sucedido, o usuário será identificado como um único usuário durante a navegação em vários domínios, em vez de ser identificado como um usuário separado em cada domínio. Se essa opção estiver ativada, o SDK ainda poderá não ser capaz de armazenar o identificador do usuário em um cookie de terceiros se o navegador não for compatível com cookies de terceiros ou tiver sido configurado pelo usuário para não permitir cookies de terceiros. Nesse caso, o SDK armazena apenas o identificador no domínio próprio.
 
-### [!UICONTROL Usar cookies de terceiros]
+## Definir configurações de personalização {#personalization}
 
-Essa opção permite que o SDK tente armazenar um identificador do usuário em um cookie de terceiros. Se for bem-sucedido, o usuário será identificado como um único usuário durante a navegação em vários domínios, em vez de ser identificado como um usuário separado em cada domínio. Se essa opção estiver ativada, o SDK ainda poderá não ser capaz de armazenar o identificador do usuário em um cookie de terceiros se o navegador não for compatível com cookies de terceiros ou tiver sido configurado pelo usuário para não permitir cookies de terceiros. Nesse caso, o SDK armazena apenas o identificador no domínio próprio.
+Esta seção permite configurar como você deseja ocultar determinadas partes de uma página enquanto o conteúdo personalizado é carregado.
 
-## [!UICONTROL Personalização]
+Você pode especificar os elementos a serem ocultados no editor de estilos pré-ocultação. Em seguida, você pode copiar o trecho pré-ocultação padrão fornecido e colá-lo dentro do `<head>` elemento do do site [!DNL HTML] código.
 
-![](assets/personalization.png)
+![Imagem que mostra as configurações de personalização da extensão de tag do SDK da Web na interface do usuário de tags](assets/web-sdk-ext-personalization.png)
 
-Se você quiser ocultar determinadas partes do site enquanto o conteúdo personalizado estiver carregado, especifique os elementos a serem ocultados no editor de estilos de pré-ocultação. Em seguida, você pode copiar o trecho pré-ocultação padrão fornecido e colá-lo dentro do `<head>`elemento do site HTML.
+* **[!UICONTROL Migração do Target da at.js para o SDK da Web]**: use esta opção para ativar [!DNL Web SDK] para ler e gravar o legado `mbox` e `mboxEdgeCluster` cookies usados pela at.js `1.x` ou `2.x` bibliotecas. Isso ajuda a manter o perfil do visitante ao mover de uma página que usa o SDK da Web para uma página que usa at.js `1.x` ou `2.x` bibliotecas e vice-versa.
 
-## [!UICONTROL Coleta de dados]
+## Definir configurações da coleção de dados {#data-collection}
 
-![](assets/data-collection.png)
+![Imagem que mostra as configurações da coleção de dados da extensão de tag do SDK da Web na interface do usuário de tags](assets/web-sdk-ext-collection.png)
 
-### [!UICONTROL Função de retorno de chamada]
+* **[!UICONTROL Função de retorno de chamada]**: a função de retorno de chamada fornecida na extensão também é chamada de [`onBeforeEventSend` função](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=pt-BR) na biblioteca. Essa função permite modificar eventos globalmente antes que sejam enviados para a Rede de borda. Informações mais detalhadas sobre como usar esta função podem ser encontradas [aqui](../../../../edge/fundamentals/tracking-events.md#modifying-events-globally).
+* **[!UICONTROL Ativar a coleta de dados de cliques]**: o SDK da Web pode coletar automaticamente informações de cliques em links para você. Por padrão, esse recurso está ativado, mas pode ser desativado usando essa opção. Os links também são rotulados como links de download se contiverem uma das expressões de download listadas no [!UICONTROL Baixar qualificador de link] caixa de texto. O Adobe fornece alguns qualificadores padrão de link de download. Você pode editá-los de acordo com suas necessidades.
+* **[!UICONTROL Dados de contexto coletados automaticamente]**: por padrão, o SDK da Web coleta determinados dados de contexto relacionados ao dispositivo, Web, ambiente e contexto de local. Se quiser ver uma lista dos Adobe de informações coletados, você pode encontrá-la [aqui](../../../../edge/data-collection/automatic-information.md). Se não quiser que esses dados sejam coletados ou se quiser apenas determinadas categorias de dados, selecione **[!UICONTROL Informações de contexto específicas]** e selecione os dados que deseja coletar.
 
-A função de retorno de chamada fornecida na extensão também é chamada de [`onBeforeEventSend` função](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=pt-BR) na biblioteca. Essa função permite modificar eventos globalmente antes que sejam enviados para a Rede da Adobe Edge. Informações mais detalhadas sobre como usar esta função podem ser encontradas [aqui](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en#modifying-events-globally).
+## Configurar substituições de sequência de dados {#datastream-overrides}
 
-### [!UICONTROL Clique em coleta de dados]
+As substituições de sequência de dados permitem definir configurações adicionais para suas sequências de dados, que são transmitidas para a rede de borda por meio do SDK da Web.
 
-O SDK pode coletar automaticamente informações de cliques em links para você. Por padrão, esse recurso está ativado, mas pode ser desativado usando essa opção. Os links também são rotulados como links de download se contiverem uma das expressões de download listadas no [!UICONTROL Baixar qualificador de link] caixa de texto. O Adobe fornece alguns qualificadores de link de download padrão, mas eles podem ser editados a qualquer momento.
+Isso ajuda a acionar comportamentos de sequência de dados diferentes dos tradicionais sem criar uma nova sequência de dados ou modificar as configurações existentes.
 
-### [!UICONTROL Dados de contexto coletados automaticamente]
-
-Por padrão, o SDK coleta determinados dados de contexto relacionados ao dispositivo, Web, ambiente e contexto de local. Se quiser ver uma lista dos Adobe de informações coletados, você pode encontrá-la [aqui](https://experienceleague.adobe.com/docs/experience-platform/edge/data-collection/automatic-information.html?lang=en). Se você não quiser que esses dados sejam coletados ou se quiser apenas determinadas categorias de dados, poderá alterar essas opções.
-
-## [!UICONTROL Substituições da configuração da sequência de dados]
-
-As substituições de sequência de dados permitem definir configurações adicionais para suas sequências de dados, que são transmitidas para a Rede de borda por meio do SDK da Web.
-
-Isso ajuda a acionar comportamentos de sequência de dados diferentes dos padrão, sem criar uma nova sequência de dados ou modificar as configurações existentes.
-
-A substituição da configuração da sequência de dados é um processo de duas etapas:
+Criar uma substituição de configuração da sequência de dados é um processo de duas etapas:
 
 1. Primeiro, você deve definir as substituições de configuração da sequência na [página de configuração da sequência de dados](../../../../datastreams/configure.md).
 2. Em seguida, você deve enviar as substituições para a rede de borda por meio de um comando do SDK da Web ou usando a extensão de tag do SDK da Web.
@@ -125,10 +122,8 @@ Como alternativa à transmissão de sobreposições por meio de um comando do SD
 
 ![Imagem que mostra as sobreposições de configuração da sequência de dados na página de extensão de tag do SDK da Web.](assets/datastream-overrides.png)
 
-## [!UICONTROL Configurações avançadas]
+## Definir configurações avançadas
 
-![](assets/advanced-settings.png)
+Use o **[!UICONTROL Caminho base da borda]** se precisar alterar o caminho base usado para interagir com a rede de borda. Isso não deve exigir atualização, mas no caso de você participar de um beta ou alfa, o Adobe pode solicitar que você altere esse campo.
 
-### [!UICONTROL Caminho base da borda]
-
-Use esse campo se precisar alterar o caminho base usado para interagir com a Adobe Edge Network. Isso não deve exigir atualização, mas no caso de você participar de um beta ou alfa, o Adobe pode solicitar que você altere esse campo.
+![Imagem que mostra as configurações avançadas na página de extensão de tag do SDK da Web.](assets/advanced-settings.png)

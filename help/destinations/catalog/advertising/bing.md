@@ -1,11 +1,11 @@
 ---
 keywords: publicidade; bing;
 title: Conexão com o Microsoft Bing
-description: Com o destino da conexão do Microsoft Bing, é possível executar redirecionamento e campanhas digitais direcionadas por público em anúncios de exibição do Microsoft.
+description: Com o destino da conexão do Microsoft Bing, você pode executar redirecionamento e campanhas digitais direcionadas por público em toda a Rede de publicidade da Microsoft, incluindo Publicidade de exibição, Pesquisa e Nativo.
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
-source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
+source-git-commit: 093ddd1651e15bebf73d007fb05042fbcf02c675
 workflow-type: tm+mt
-source-wordcount: '650'
+source-wordcount: '690'
 ht-degree: 8%
 
 ---
@@ -14,13 +14,15 @@ ht-degree: 8%
 
 ## Visão geral {#overview}
 
-A variável [!DNL Microsoft Bing] O destino ajuda a enviar dados de perfil para o [!DNL Microsoft Display Advertising].
+Use o [!DNL Microsoft Bing] destino para enviar dados de perfil a todo o [!DNL Microsoft Advertising Network], incluindo [!DNL Display Advertising], [!DNL Search], e [!DNL Native].
+
+A variável [!DNL Microsoft Bing] o destino cria *[!DNL Custom Audiences]* no Microsoft. Estes estão disponíveis tanto no [!DNL Microsoft Search Network] e [!DNL Audience Network] ([!DNL Native] /[!DNL Display] /[!DNL Programmatic]), conforme indicado na [Documentação da Microsoft Advertising](https://help.ads.microsoft.com/#apex/ads/en/56892/1-500).
 
 Para enviar dados de perfil para [!DNL Microsoft Bing], você deve primeiro se conectar ao destino.
 
 ## Casos de uso {#use-cases}
 
-Como profissional de marketing, quero poder usar públicos-alvo criados com o [!DNL Microsoft Advertising IDs] para direcionar usuários por meio de publicidade de exibição em [!DNL Microsoft Advertising] canais.
+Como profissional de marketing, quero poder usar públicos-alvo criados com o [!DNL Microsoft Advertising IDs] para direcionar usuários por meio de publicidade de exibição ou pesquisa em [!DNL Microsoft Advertising] canais.
 
 ## Identidades suportadas {#supported-identities}
 
@@ -74,7 +76,7 @@ Ao configurar o destino, você deve fornecer as seguintes informações:
 
 Para se conectar a esse destino, siga as etapas descritas no [tutorial de configuração de destino](../../ui/connect-destination.md).
 
-### Parâmetros de conexão {#parameters}
+### Preencher detalhes do destino {#parameters}
 
 Enquanto [configuração](../../ui/connect-destination.md) Para esse destino, você deve fornecer as seguintes informações:
 

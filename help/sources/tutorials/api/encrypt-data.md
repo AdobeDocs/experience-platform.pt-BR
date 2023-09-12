@@ -4,9 +4,9 @@ description: Saiba como assimilar arquivos criptografados por meio de fontes de 
 hide: true
 hidefromtoc: true
 exl-id: 83a7a154-4f55-4bf0-bfef-594d5d50f460
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: cd8844121fef79205d57fa979ca8630fc1b1ece4
 workflow-type: tm+mt
-source-wordcount: '1342'
+source-wordcount: '1473'
 ht-degree: 2%
 
 ---
@@ -332,6 +332,40 @@ Uma resposta bem-sucedida retorna a ID (`id`) do fluxo de dados recém-criado pa
     "etag": "\"8e000533-0000-0200-0000-5f3c40fd0000\""
 }
 ```
+
+
+>[!BEGINSHADEBOX]
+
+**Restrições à assimilação recorrente**
+
+A assimilação de dados criptografados não oferece suporte à assimilação de pastas recorrentes ou de vários níveis nas fontes. Todos os arquivos criptografados devem estar contidos em uma única pasta. Também não há suporte para curingas com várias pastas em um único caminho de origem.
+
+Veja a seguir um exemplo de estrutura de pastas com suporte, em que o caminho de origem é `/ACME-customers/*.csv.gpg`.
+
+Nesse cenário, os arquivos em negrito são assimilados no Experience Platform.
+
+* Clientes ACME
+   * **Arquivo1.csv.gpg**
+   * File2.json.gpg
+   * **Arquivo3.csv.gpg**
+   * File4.json
+   * **Arquivo5.csv.gpg**
+
+Veja a seguir um exemplo de uma estrutura de pastas não compatível, na qual o caminho de origem é `/ACME-customers/*`.
+
+Nesse cenário, a execução do fluxo falhará e retornará uma mensagem de erro indicando que os dados não podem ser copiados da origem.
+
+* Clientes ACME
+   * File1.csv.gpg
+   * File2.json.gpg
+   * Subfolder1
+      * File3.csv.gpg
+      * File4.json.gpg
+      * File5.csv.gpg
+* Fidelização por ACME
+   * File6.csv.gpg
+
+>[!ENDSHADEBOX]
 
 ## Próximas etapas
 

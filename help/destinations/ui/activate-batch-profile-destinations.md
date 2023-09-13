@@ -4,19 +4,15 @@ title: Ativar públicos para destinos de exportação de perfil em lote
 type: Tutorial
 description: Saiba como ativar os públicos-alvo no Adobe Experience Platform enviando-os para destinos com base em perfil de lote.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: d7264d94a03f0ba19da90559b156ecaace0d8f95
+source-git-commit: 823f781e59fe7f5f15620a2b99f9c0c1e7144666
 workflow-type: tm+mt
-source-wordcount: '3673'
+source-wordcount: '3633'
 ht-degree: 11%
 
 ---
 
 
 # Ativar públicos para destinos de exportação de perfil em lote
-
->[!IMPORTANT]
-> 
-> A funcionalidade descrita na página ainda não está geralmente disponível para os clientes. No momento, esta página destina-se às equipes internas de Adobe como uma pré-leitura sobre a próxima funcionalidade. Não compartilhe fora do Adobe até que esta nota seja removida.
 
 >[!IMPORTANT]
 > 
@@ -412,7 +408,7 @@ Devido a uma limitação conhecida, não é possível usar o **[!UICONTROL Selec
 ![Gravação de tela mostrando a solução alternativa de associação de público na etapa de mapeamento do fluxo de trabalho de ativação.](../assets/ui/activate-batch-profile-destinations/segment-membership-mapping-step.gif)
 
 As exportações de arquivos variam das seguintes maneiras, dependendo se `segmentMembership.status` está selecionado:
-* Se a variável `segmentMembership.status` for selecionado, os arquivos exportados incluirão **[!UICONTROL Ativo]** membros no instantâneo completo inicial e **[!UICONTROL Ativo]** e **[!UICONTROL Expirado]** membros em exportações incrementais subsequentes.
+* Se a variável `segmentMembership.status` for selecionado, os arquivos exportados serão **[!UICONTROL Ativo]** membros no instantâneo completo inicial e **[!UICONTROL Ativo]** e **[!UICONTROL Expirado]** membros em exportações incrementais subsequentes.
 * Se a variável `segmentMembership.status` não estiver selecionado, os arquivos exportados incluirão apenas **[!UICONTROL Ativo]** membros no instantâneo completo inicial e em exportações incrementais subsequentes.
 
 #### Os namespaces de identidade não podem ser selecionados atualmente para exportações
@@ -462,7 +458,7 @@ Para destinos baseados em perfil, você deve selecionar os atributos de perfil q
 >![Gravação de tela mostrando a solução alternativa de associação de público na etapa de mapeamento do fluxo de trabalho de ativação.](..//assets/ui/activate-batch-profile-destinations/segment-membership.gif)
 
 As exportações de arquivos variam das seguintes maneiras, dependendo se `segmentMembership.status` está selecionado:
-* Se a variável `segmentMembership.status` for selecionado, os arquivos exportados incluirão **[!UICONTROL Ativo]** membros no instantâneo completo inicial e **[!UICONTROL Ativo]** e **[!UICONTROL Expirado]** membros em exportações incrementais subsequentes.
+* Se a variável `segmentMembership.status` for selecionado, os arquivos exportados serão **[!UICONTROL Ativo]** membros no instantâneo completo inicial e **[!UICONTROL Ativo]** e **[!UICONTROL Expirado]** membros em exportações incrementais subsequentes.
 * Se a variável `segmentMembership.status` não estiver selecionado, os arquivos exportados incluirão apenas **[!UICONTROL Ativo]** membros no instantâneo completo inicial e em exportações incrementais subsequentes.
 
 ## Selecionar atributos de enriquecimento {#select-enrichment-attributes}
@@ -529,7 +525,7 @@ Se estiver satisfeito com a sua seleção e nenhuma violação de política tive
 
 ## Verificar ativação de público {#verify}
 
-Para destinos de marketing por email e destinos de armazenamento na nuvem, a Adobe Experience Platform cria uma `.csv` no local de armazenamento fornecido. Espere que um novo arquivo seja criado no local de armazenamento de acordo com o agendamento definido no fluxo de trabalho. O formato de arquivo padrão é mostrado abaixo, mas você pode [editar os componentes do nome do arquivo](#file-names):
+Para destinos de marketing por email e destinos de armazenamento na nuvem, o Adobe Experience Platform cria uma `.csv` no local de armazenamento fornecido. Espere que um novo arquivo seja criado no local de armazenamento de acordo com o agendamento definido no fluxo de trabalho. O formato de arquivo padrão é mostrado abaixo, mas você pode [editar os componentes do nome do arquivo](#file-names):
 `<destinationName>_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv`
 
 Por exemplo, se você selecionasse uma frequência de exportação diária, os arquivos que você receberia em três dias consecutivos seriam assim:

@@ -1,7 +1,7 @@
 ---
 description: Esta página exemplifica a chamada à API usada para criar um servidor de destino por meio do Adobe Experience Platform Destination SDK.
 title: Criar uma configuração do servidor de destino
-source-git-commit: ca4fb2dce097197aa1a97e0716e6294546bfee38
+source-git-commit: 03ec0e919304c9d46ef88d606eed9e12d1824856
 workflow-type: tm+mt
 source-wordcount: '1696'
 ht-degree: 9%
@@ -244,7 +244,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 {
    "name":"File-based SFTP destination server",
    "destinationServerType":"FILE_BASED_SFTP",
-   "fileBasedSftpDestination":{
+   "fileBasedSFTPDestination":{
       "rootDirectory":{
          "templatingStrategy":"PEBBLE_V1",
          "value":"{{customerData.rootDirectory}}"
@@ -319,10 +319,10 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 |---|---|---|
 | `name` | String | O nome da conexão de destino. |
 | `destinationServerType` | String | Defina esse valor de acordo com sua plataforma de destino. Para [!DNL SFTP] destinos, defina como `FILE_BASED_SFTP`. |
-| `fileBasedSftpDestination.rootDirectory.templatingStrategy` | String | *Obrigatório.* Use `PEBBLE_V1`. |
-| `fileBasedSftpDestination.rootDirectory.value` | String | O diretório raiz do armazenamento de destino. |
-| `fileBasedSftpDestination.hostName.templatingStrategy` | String | *Obrigatório.* Use `PEBBLE_V1`. |
-| `fileBasedSftpDestination.hostName.value` | String | O nome do host do armazenamento de destino. |
+| `fileBasedSFTPDestination.rootDirectory.templatingStrategy` | String | *Obrigatório.* Use `PEBBLE_V1`. |
+| `fileBasedSFTPDestination.rootDirectory.value` | String | O diretório raiz do armazenamento de destino. |
+| `fileBasedSFTPDestination.hostName.templatingStrategy` | String | *Obrigatório.* Use `PEBBLE_V1`. |
+| `fileBasedSFTPDestination.hostName.value` | String | O nome do host do armazenamento de destino. |
 | `port` | Número inteiro | A porta do servidor de arquivos SFTP. |
 | `encryptionMode` | String | Indica se deve ser usada criptografia de arquivo. Valores compatíveis: <ul><li>PGP</li><li>None</li></ul> |
 | `fileConfigurations` | N/D | Consulte [configuração da formatação de arquivo](../../functionality/destination-server/file-formatting.md) para obter informações detalhadas sobre como definir essas configurações. |

@@ -3,9 +3,9 @@ keywords: mobile; braze; mensagens;
 title: Conexão Braze
 description: O Brasil é uma plataforma abrangente de engajamento do cliente que promove experiências relevantes e memoráveis entre os clientes e as marcas que eles adoram.
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
+source-git-commit: e2317201ae4810734714cea6c5d172ea6a542f5b
 workflow-type: tm+mt
-source-wordcount: '1031'
+source-wordcount: '1096'
 ht-degree: 1%
 
 ---
@@ -163,6 +163,14 @@ O mapeamento correto seria semelhante a:
 ## Dados exportados {#exported-data}
 
 Para verificar se os dados foram exportados com êxito para o [!DNL Braze] destino, verifique seu [!DNL Braze] conta. [!DNL Adobe Experience Platform] os públicos são exportados para [!DNL Braze] no `AdobeExperiencePlatformSegments` atributo.
+
+## Solução de problemas {#troubleshooting}
+
+**Recebi um erro de tempo limite ao ativar meus públicos-alvo para esse destino. O que devo fazer?**
+
+Ocasionalmente, a ativação do público-alvo para esse destino pode resultar em um erro de tempo limite. Esse erro nem sempre indica um problema de ativação.
+
+Se você receber um erro de tempo limite, verifique o tamanho do público na plataforma de destino. Se o tamanho do público-alvo estiver correto, a integração está funcionando como esperado.
 
 ## Uso e governança de dados {#data-usage-governance}
 

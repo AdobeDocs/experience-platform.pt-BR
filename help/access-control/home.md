@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Visão geral do controle de acesso
 description: O controle de acesso do Adobe Experience Platform é fornecido por meio da Adobe Admin Console. Essa funcionalidade aproveita perfis de produto no Admin Console, que vinculam usuários com permissões e sandboxes.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: 88bfcdef65b4a938d573b1beb1952c7e030ebc13
+source-git-commit: d83a5558d706e7bf059edb912f6fd43d4b66cc54
 workflow-type: tm+mt
-source-wordcount: '1567'
-ht-degree: 3%
+source-wordcount: '1678'
+ht-degree: 4%
 
 ---
 
@@ -17,7 +17,7 @@ O controle de acesso do Adobe Experience Platform é fornecido por meio da **[!U
 
 ## Hierarquia e fluxo de trabalho do controle de acesso
 
-Para configurar o controle de acesso para o Experience Platform, você deve ter privilégios de administrador de sistema ou de produto para uma organização que tenha um produto Experience Platform. A função mínima que pode conceder ou retirar permissões é um administrador de produto. Outras funções de administrador que podem gerenciar permissões são administradores do sistema (sem restrições). Consulte o artigo da Adobe Help Center sobre [funções administrativas](https://helpx.adobe.com/enterprise/using/admin-roles.html) para obter mais informações.
+Para configurar o controle de acesso para o Experience Platform, você deve ter privilégios de administrador de sistema ou de produto para uma organização que tenha um produto Experience Platform. A função mínima que pode conceder ou retirar permissões é um administrador de produto. Outras funções de administrador que podem gerenciar permissões são administradores do sistema (sem restrições). Consulte o artigo da Adobe Help Center sobre [funções administrativas](https://helpx.adobe.com/br/enterprise/using/admin-roles.html) para obter mais informações.
 
 >[!NOTE]
 >
@@ -99,7 +99,11 @@ A tabela a seguir descreve as permissões disponíveis para Experience Platform 
 | [!DNL Profile Management] | [!UICONTROL Gerenciar políticas de mesclagem] | Acesso para ler, criar, editar e excluir políticas de mesclagem. |
 | [!DNL Profile Management] | [!UICONTROL Exibir Políticas de Mesclagem] | Acesso somente leitura às políticas de mesclagem disponíveis. |
 | [!DNL Profile Management] | [!UICONTROL Exportar público-alvo para segmento] | Capacidade de exportar um segmento de público avaliado para um conjunto de dados. |
-| [!DNL Profile Management] | [!UICONTROL Avaliar um segmento para um público-alvo] | Capacidade de gerar perfis para um público avaliando uma definição de segmento. |
+| [!DNL Profile Management] | [!UICONTROL Avaliar um segmento para um público-alvo] | Capacidade de gerar perfis para um público-alvo avaliando uma definição de segmento. |
+| [!DNL Profile Management] | [!UICONTROL Exibir IA B2B] | Acesso somente leitura às definições e configurações para todos os serviços de IA/ML B2B. |
+| [!DNL Profile Management] | [!UICONTROL Gerenciar IA B2B] | Acesso para ler, criar, editar e excluir configurações e configurações para todos os serviços de IA/ML B2B. |
+| [!DNL Profile Management] | [!UICONTROL Exibir perfil B2B] | Acesso somente leitura a perfis de entidade B2B (como Conta, Oportunidade e assim por diante), configurações e configurações para todos os serviços de IA/ML B2B e widgets do painel B2B. |
+| [!DNL Profile Management] | [!UICONTROL Gerenciar perfil B2B] | Acesso para ler, criar, editar e excluir perfis de entidade B2B (como Conta, Oportunidade e assim por diante). Acesso somente leitura para definições e configurações para todos os serviços de IA/ML B2B e widgets do painel B2B. |
 | [!DNL Identity Management] | [!UICONTROL Gerenciar namespaces de identidade] | Acesso para ler, criar, editar e excluir namespaces de identidade. |
 | [!DNL Identity Management] | [!UICONTROL Exibir namespaces de identidade] | Acesso somente leitura para namespaces de identidade. |
 | [!DNL Identity Management] | [!UICONTROL Exibir gráfico de identidade] | Acesso somente leitura para gráficos de identidade. |
@@ -109,7 +113,7 @@ A tabela a seguir descreve as permissões disponíveis para Experience Platform 
 | [!DNL Destinations] | [!UICONTROL Gerenciar destinos] | Acesso para ler, criar e excluir fluxos de ativação e contas de destino. |
 | [!DNL Destinations] | [!UICONTROL Exibir destinos] | Acesso somente leitura a destinos disponíveis na **[!UICONTROL Catálogo]** e destinos autenticados na **[!UICONTROL Procurar]** guia. |
 | [!DNL Destinations] | [!UICONTROL Ativar destinos] | Oferece aos usuários a capacidade de ativar segmentos para destinos existentes. Ativa a etapa de mapeamento no fluxo de trabalho de ativação. Esta permissão requer [!UICONTROL Exibir destinos] ou [!UICONTROL Gerenciar destinos] a ser concedido ao usuário que ativará os dados para destinos. |
-| [!DNL Destinations] | [!UICONTROL Ativar segmento sem mapeamento] | Oferece aos usuários a capacidade de ativar segmentos para destinos existentes, sem exibir a [etapa de mapeamento](../destinations/ui/activate-batch-profile-destinations.md#mapping). Os usuários podem adicionar e remover segmentos em workflows de ativação, mas não podem adicionar ou remover atributos ou identidades mapeadas. Essa permissão exige que o [!UICONTROL Ativar destinos] permissão a ser concedida ao usuário que ativará os dados para destinos. |
+| [!DNL Destinations] | [!UICONTROL Ativar segmento sem mapeamento] | Oferece aos usuários a capacidade de ativar segmentos para destinos existentes, sem exibir a [etapa de mapeamento](../destinations/ui/activate-batch-profile-destinations.md#mapping). Usuários podem adicionar e remover segmentos em fluxos de trabalho de ativação, mas não podem adicionar ou remover identidades ou atributos mapeados. Essa permissão exige que o [!UICONTROL Ativar destinos] permissão a ser concedida ao usuário que ativará os dados para destinos. |
 | [!DNL Destinations] | [!UICONTROL Gerenciar e ativar destinos do conjunto de dados] | Capacidade de ler, criar, editar e desativar fluxos de exportação do conjunto de dados. Capacidade de também ativar dados para conjuntos de dados ativos que foram criados. |
 | [!DNL Destinations] | [!UICONTROL Criação de destino] | Capacidade de criar destinos usando [Adobe Experience Platform Destination SDK](../destinations/destination-sdk/overview.md). |
 | [!DNL Data Ingestion] | [!UICONTROL Gerenciar fontes] | Acesso para ler, criar, editar e desativar fontes. |

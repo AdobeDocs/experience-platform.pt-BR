@@ -3,9 +3,9 @@ keywords: Experience Platform;página inicial;tópicos populares;controle de ace
 title: Visão Geral do Controle de Acesso Baseado em Atributo
 description: Este documento fornece informações sobre o controle de acesso baseado em atributos no Adobe Experience Platform
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: 36e38824963139414f2803ef4127706d1e521d1a
 workflow-type: tm+mt
-source-wordcount: '1825'
+source-wordcount: '1847'
 ht-degree: 17%
 
 ---
@@ -21,6 +21,10 @@ Essa funcionalidade permite rotular campos de esquema do Experience Data Model (
 >O controle de acesso baseado em atributos não deve ser confundido com os recursos de governança de dados do Experience Platform, que permitem usar rótulos e políticas para controlar como os dados são usados na Platform, em vez de quais usuários em sua organização têm acesso a eles. Consulte a [visão geral da governança de dados](../../data-governance/home.md) para obter mais informações.
 
 Por meio do controle de acesso baseado em atributos, os administradores da sua organização podem controlar o acesso dos usuários a dados pessoais confidenciais (SPD), informações de identificação pessoal (PII) e tipo personalizado de dados em todos os fluxos de trabalho e recursos da plataforma. Os administradores podem definir funções de usuário que tenham acesso somente a campos e dados específicos que correspondam a esses campos.
+
+O vídeo a seguir é destinado a ajudá-lo a entender o controle de acesso baseado em atributos e descreve como configurar funções, recursos e políticas.
+
+>[!VIDEO](https://video.tv.adobe.com/v/345641?learn=on)
 
 ## Terminologia de controle de acesso baseado em atributo
 

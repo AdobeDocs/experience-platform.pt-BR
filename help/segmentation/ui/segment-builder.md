@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guia da interface do construtor de segmentos
 description: O Construtor de segmentos na interface do usuário do Adobe Experience Platform fornece um espaço de trabalho avançado que permite a interação com elementos de dados de perfil. O espaço de trabalho fornece controles intuitivos para criar e editar regras, como arrastar e soltar blocos usados para representar propriedades de dados.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 56d9d3ec5565960438540ffec867ed528b52eaf1
+source-git-commit: f3bad477156db8f8cf79582c7a6cc2562e983b63
 workflow-type: tm+mt
-source-wordcount: '3338'
+source-wordcount: '3354'
 ht-degree: 7%
 
 ---
@@ -98,6 +98,10 @@ Depois que os conjuntos de relatórios forem mapeados, você poderá usar esses 
 | Vários conjuntos de relatórios | Nenhum descritor de nome simples é incluído com variáveis genéricas. <br><br>**Exemplo:** EVAR 2 | <ul><li>Qualquer campo com vários descritores é exibido como genérico. Isso significa que nenhum nome amigável é exibido na interface do usuário.</li><li>Os queries podem usar dados de qualquer conjunto de dados que contenha o eVar, o que pode resultar em resultados mistos ou incorretos.</li></ul> | As consultas usam os resultados combinados corretamente de vários conjuntos de dados. |
 
 ### Públicos-alvo
+
+>[!NOTE]
+>
+>Para públicos criados na Platform, somente públicos-alvo que tenham a **igual** a política de mesclagem será exibida.
 
 A variável **[!UICONTROL Públicos-alvo]** A guia lista todos os públicos-alvo importados de fontes externas, como o Adobe Audience Manager, bem como os públicos-alvo criados no [!DNL Experience Platform].
 

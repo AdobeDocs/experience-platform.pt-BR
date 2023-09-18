@@ -3,10 +3,10 @@ keywords: email;Email;e-mail;email targets;salesforce;salesforce destination
 title: Conexão do Marketing Cloud do Salesforce
 description: O Salesforce Marketing Cloud é uma suíte de marketing digital, anteriormente conhecida como ExactTarget, que permite criar e personalizar jornadas para visitantes e clientes para personalizar sua experiência.
 exl-id: e85049a7-eaed-4f8a-b670-9999d56928f8
-source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
+source-git-commit: 8e37ff057ec0fb750bc7b4b6f566f732d9fe5d68
 workflow-type: tm+mt
-source-wordcount: '783'
-ht-degree: 3%
+source-wordcount: '819'
+ht-degree: 2%
 
 ---
 
@@ -98,7 +98,8 @@ Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICON
 
 >[!IMPORTANT]
 > 
->Para ativar os dados, é necessário **[!UICONTROL Gerenciar destinos]**, **[!UICONTROL Ativar destinos]**, **[!UICONTROL Exibir perfis]**, e **[!UICONTROL Exibir segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
+>* Para ativar os dados, é necessário **[!UICONTROL Gerenciar destinos]**, **[!UICONTROL Ativar destinos]**, **[!UICONTROL Exibir perfis]**, e **[!UICONTROL Exibir segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
+>* Para exportar *identidades*, você precisará do **[!UICONTROL Exibir gráfico de identidade]** [permissão de controle de acesso](/help/access-control/home.md#permissions). <br> ![Selecione o namespace de identidade destacado no fluxo de trabalho para ativar públicos para destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecione o namespace de identidade destacado no fluxo de trabalho para ativar públicos para destinos."){width="100" zoomable="yes"}
 
 Consulte [Ativar dados do público-alvo para destinos de exportação de perfil em lote](../../ui/activate-batch-profile-destinations.md) para obter instruções sobre como ativar públicos-alvo para esse destino.
 

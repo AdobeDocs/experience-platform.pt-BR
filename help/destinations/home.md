@@ -1,11 +1,10 @@
 ---
-keywords: destinos;adobe experience platform;plataforma;visão geral de destinos;ativar dados;ativar;
 title: Visão geral dos destinos
 description: Os destinos são integrações pré-criadas com plataformas de destino que permitem a ativação contínua de dados do Adobe Experience Platform. Você pode usar Destinos na Adobe Experience Platform para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas de email, publicidade direcionada e muitos outros casos de uso.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: ce1aec87b827b6e8626018846bc6f438834fff54
+source-git-commit: 661ef040398a9e2ef8dd9cebdf7bd27d4268636b
 workflow-type: tm+mt
-source-wordcount: '925'
+source-wordcount: '956'
 ht-degree: 4%
 
 ---
@@ -64,6 +63,7 @@ A tabela a seguir descreve as permissões e as combinações de permissões nece
 | **[!UICONTROL Gerenciar destinos]** | Para se conectar a destinos, é necessário ter a **[!UICONTROL Gerenciar destinos]** [permissão de controle de acesso](/help/access-control/home.md#permissions). |
 | **[!UICONTROL Gerenciar destinos]**, **[!UICONTROL Ativar destinos]**, **[!UICONTROL Exibir perfis]**, e **[!UICONTROL Exibir segmentos]** | Para ativar públicos para destinos e habilitar a opção [etapa de mapeamento](ui/activate-batch-profile-destinations.md#mapping) do fluxo de trabalho, é necessário **[!UICONTROL Gerenciar destinos]**, **[!UICONTROL Ativar destinos]**, **[!UICONTROL Exibir perfis]**, e **[!UICONTROL Exibir segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). |
 | **[!UICONTROL Gerenciar destinos]**, **[!UICONTROL Ativar segmentos sem mapeamento]**, **[!UICONTROL Exibir perfis]**, e **[!UICONTROL Exibir segmentos]** | Para ativar públicos para destinos e ocultar a variável [etapa de mapeamento](ui/activate-batch-profile-destinations.md#mapping) do fluxo de trabalho, é necessário **[!UICONTROL Gerenciar destinos]**, **[!UICONTROL Ativar segmentos sem mapeamento]**, **[!UICONTROL Exibir perfis]**, e **[!UICONTROL Exibir segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). |
+| **[!UICONTROL Exibir gráfico de identidade]** | Para exportar *identidades* para destinos, você precisará da variável **[!UICONTROL Exibir gráfico de identidade]** [permissão de controle de acesso](/help/access-control/home.md#permissions). <br> ![Selecione o namespace de identidade destacado no fluxo de trabalho para ativar públicos para destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecione o namespace de identidade destacado no fluxo de trabalho para ativar públicos para destinos."){width="100" zoomable="yes"} |
 
 {style="table-layout:auto"}
 

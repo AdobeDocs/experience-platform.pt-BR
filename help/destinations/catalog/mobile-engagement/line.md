@@ -4,14 +4,14 @@ title: Conexão LINE
 description: O destino LINE permite adicionar perfis ao público-alvo da Platform e fornecer experiências personalizadas aos usuários conectados.
 last-substantial-update: 2022-11-08T00:00:00Z
 exl-id: 9981798a-61f2-4a09-9a33-57e63eb36d43
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 05e996f9e33e0d8be3d15a9ab3baaaf6d8152b5a
 workflow-type: tm+mt
-source-wordcount: '1178'
+source-wordcount: '1214'
 ht-degree: 0%
 
 ---
 
-# [!DNL LINE] conexão
+# Conexão com o [!DNL LINE]
 
 ## Visão geral {#overview}
 
@@ -110,8 +110,9 @@ Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICON
 ## Ativar públicos para este destino {#activate}
 
 >[!IMPORTANT]
->
->Para ativar os dados, é necessário **[!UICONTROL Gerenciar destinos]**, **[!UICONTROL Ativar destinos]**, **[!UICONTROL Exibir perfis]**, e **[!UICONTROL Exibir segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
+> 
+>* Para ativar os dados, é necessário **[!UICONTROL Gerenciar destinos]**, **[!UICONTROL Ativar destinos]**, **[!UICONTROL Exibir perfis]**, e **[!UICONTROL Exibir segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
+>* Para exportar *identidades*, você precisará do **[!UICONTROL Exibir gráfico de identidade]** [permissão de controle de acesso](/help/access-control/home.md#permissions). <br> ![Selecione o namespace de identidade destacado no fluxo de trabalho para ativar públicos para destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecione o namespace de identidade destacado no fluxo de trabalho para ativar públicos para destinos."){width="100" zoomable="yes"}
 
 Ler [Ativar perfis e públicos para destinos de exportação de público de transmissão](/help/destinations/ui/activate-segment-streaming-destinations.md) para obter instruções sobre como ativar públicos-alvo para esse destino.
 
@@ -139,7 +140,7 @@ Para validar se você configurou o destino corretamente, siga as etapas abaixo:
 
 1. O volume atualizado corresponderia à contagem no segmento.
 
-1. A variável *Tipo* a coluna mencionará **[!UICONTROL UserID]** se as identidades exportadas forem do tipo *UserID*. Do Mesmo Modo, A *Tipo* a coluna mencionará **[!UICONTROL ID de anúncio móvel]** se as identidades exportadas forem do tipo *IDFA*.
+1. A variável *Tipo* a coluna mencionará **[!UICONTROL UserID]** se as identidades exportadas forem do tipo *UserID*. Do Mesmo modo, *Tipo* a coluna mencionará **[!UICONTROL ID de anúncio móvel]** se as identidades exportadas forem do tipo *IDFA*.
 
 Um exemplo de configuração em [!DNL LINE] é mostrado abaixo:
 ![Captura de tela da interface do usuário LINE mostrando o volume de público-alvo.](../../assets/catalog/mobile-engagement/line/audience-volume.png)

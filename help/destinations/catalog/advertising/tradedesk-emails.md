@@ -3,9 +3,9 @@ title: (Beta) A conexão Trade Desk - CRM
 description: Ative perfis para sua conta da Trade Desk para direcionamento e supressão de público com base nos dados do CRM.
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
-source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
+source-git-commit: 661ef040398a9e2ef8dd9cebdf7bd27d4268636b
 workflow-type: tm+mt
-source-wordcount: '1081'
+source-wordcount: '1150'
 ht-degree: 4%
 
 ---
@@ -98,6 +98,11 @@ Antes de enviar ou ativar dados de público-alvo para um destino, você deve con
 Ao se conectar ao destino, definir uma política de governança de dados é totalmente opcional. Revise o Experience Platform [visão geral da governança de dados](/help/data-governance/policies/overview.md) para obter mais detalhes.
 
 ## Ativar públicos para este destino {#activate}
+
+>[!IMPORTANT]
+> 
+>* Para ativar os dados, é necessário **[!UICONTROL Gerenciar destinos]**, **[!UICONTROL Ativar destinos]**, **[!UICONTROL Exibir perfis]**, e **[!UICONTROL Exibir segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
+>* Para exportar *identidades*, você precisará do **[!UICONTROL Exibir gráfico de identidade]** [permissão de controle de acesso](/help/access-control/home.md#permissions). <br> ![Selecione o namespace de identidade destacado no fluxo de trabalho para ativar públicos para destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecione o namespace de identidade destacado no fluxo de trabalho para ativar públicos para destinos."){width="100" zoomable="yes"}
 
 Ler [ativar dados do público-alvo para destinos de exportação de perfis em lote](/help/destinations/ui/activate-batch-profile-destinations.md) para obter instruções sobre como ativar públicos-alvo para um destino.
 

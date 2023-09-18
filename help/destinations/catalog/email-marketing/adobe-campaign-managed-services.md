@@ -2,9 +2,9 @@
 title: Conexão com o Adobe Campaign Managed Cloud Services
 description: O Adobe Campaign Managed Cloud Services fornece uma plataforma para projetar experiências de clientes entre canais, além de um ambiente para a orquestração visual de campanhas, o gerenciamento de interação em tempo real e a execução entre canais.
 exl-id: fe151ad3-c431-4b5a-b453-9d1d9aedf775
-source-git-commit: c4ead035202828a09c8c170e0a380fa49d186473
+source-git-commit: 8e37ff057ec0fb750bc7b4b6f566f732d9fe5d68
 workflow-type: tm+mt
-source-wordcount: '1548'
+source-wordcount: '1584'
 ht-degree: 4%
 
 ---
@@ -41,7 +41,7 @@ Para ajudá-lo a entender melhor como e quando você deve usar o destino do Adob
 
   Por exemplo, uma empresa de roupas esportivas quer aproveitar os segmentos inteligentes alimentados pela Adobe Experience Platform e ativá-los usando o Adobe Campaign para alcançar sua base de clientes nos diferentes canais compatíveis com o Adobe Campaign. Depois que as mensagens forem enviadas, eles desejam aprimorar o perfil do cliente na Adobe Experience Platform com dados de experiência da Adobe Campaign, como envios, aberturas e cliques.
 
-  O resultado são campanhas entre canais mais consistentes em todo o ecossistema da Adobe Experience Cloud e um perfil do cliente avançado que está se adaptando e aprendendo rapidamente.
+  O resultado são campanhas entre canais mais consistentes em todo o ecossistema da Adobe Experience Cloud e um perfil do cliente avançado, que está se adaptando e aprendendo rapidamente.
 
 
 * Além da ativação de segmentos no Campaign, você pode aproveitar o destino do Adobe Campaign Managed Services para trazer atributos de perfil adicionais, que estão vinculados a um perfil no Adobe Experience Platform e têm um processo de sincronização em vigor para que sejam atualizados no banco de dados do Adobe Campaign.
@@ -119,9 +119,10 @@ Para obter mais informações sobre ações de marketing, consulte [visão geral
 
 >[!IMPORTANT]
 > 
->Para ativar os dados, é necessário **[!UICONTROL Gerenciar destinos]**, **[!UICONTROL Ativar destinos]**, **[!UICONTROL Exibir perfis]**, e **[!UICONTROL Exibir segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
+>* Para ativar os dados, é necessário **[!UICONTROL Gerenciar destinos]**, **[!UICONTROL Ativar destinos]**, **[!UICONTROL Exibir perfis]**, e **[!UICONTROL Exibir segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
+>* Para exportar *identidades*, você precisará do **[!UICONTROL Exibir gráfico de identidade]** [permissão de controle de acesso](/help/access-control/home.md#permissions). <br> ![Selecione o namespace de identidade destacado no fluxo de trabalho para ativar públicos para destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecione o namespace de identidade destacado no fluxo de trabalho para ativar públicos para destinos."){width="100" zoomable="yes"}
 
-Ler [Ativar dados do público-alvo para destinos de exportação de perfil em lote](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html) para obter instruções sobre como ativar dados de público-alvo para esse destino.
+Ler [Ativar dados do público-alvo para destinos de exportação de perfil em lote](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=pt-BR) para obter instruções sobre como ativar dados de público-alvo para esse destino.
 
 ### Mapear atributos e identidades {#map}
 

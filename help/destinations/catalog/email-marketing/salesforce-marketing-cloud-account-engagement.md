@@ -3,14 +3,14 @@ title: Envolvimento da conta de Marketing Cloud do Salesforce
 description: Saiba como usar o destino Salesforce Marketing Cloud Account Engagement (antigo Pardot) para exportar os dados da sua conta e ativá-los no Salesforce Marketing Cloud Account Engagement para atender às suas necessidades comerciais.
 last-substantial-update: 2023-04-14T00:00:00Z
 exl-id: fca9d4f4-8717-4bfa-9992-5164ba98bea4
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 8e37ff057ec0fb750bc7b4b6f566f732d9fe5d68
 workflow-type: tm+mt
-source-wordcount: '1588'
+source-wordcount: '1624'
 ht-degree: 1%
 
 ---
 
-# [!DNL Salesforce Marketing Cloud Account Engagement] conexão
+# Conexão com o [!DNL Salesforce Marketing Cloud Account Engagement]
 
 Use o [[!DNL Salesforce Marketing Cloud Account Engagement]](https://www.salesforce.com/products/marketing-cloud/marketing-automation/) *(anteriormente conhecido como [!DNL Pardot])* destino para capturar, rastrear, pontuar e classificar leads. Você também pode projetar faixas de clientes potenciais para todos os estágios do pipeline para públicos-alvo de mercado e grupos de clientes por meio de campanhas de queda de email e gerenciamento de clientes potenciais com promoção, pontuação e segmentação de campanha.
 
@@ -136,8 +136,9 @@ Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICON
 ## Ativar públicos para este destino {#activate}
 
 >[!IMPORTANT]
->
->Para ativar os dados, é necessário **[!UICONTROL Gerenciar destinos]**, **[!UICONTROL Ativar destinos]**, **[!UICONTROL Exibir perfis]**, e **[!UICONTROL Exibir segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
+> 
+>* Para ativar os dados, é necessário **[!UICONTROL Gerenciar destinos]**, **[!UICONTROL Ativar destinos]**, **[!UICONTROL Exibir perfis]**, e **[!UICONTROL Exibir segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
+>* Para exportar *identidades*, você precisará do **[!UICONTROL Exibir gráfico de identidade]** [permissão de controle de acesso](/help/access-control/home.md#permissions). <br> ![Selecione o namespace de identidade destacado no fluxo de trabalho para ativar públicos para destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecione o namespace de identidade destacado no fluxo de trabalho para ativar públicos para destinos."){width="100" zoomable="yes"}
 
 Ler [Ativar perfis e públicos para destinos de exportação de público de transmissão](/help/destinations/ui/activate-segment-streaming-destinations.md) para obter instruções sobre como ativar públicos-alvo para esse destino.
 

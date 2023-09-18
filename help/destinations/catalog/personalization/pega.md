@@ -2,9 +2,9 @@
 title: Conexão do Hub de decisão do cliente Pega
 description: Use o destino do Pega Customer Decision Hub no Adobe Experience Platform para enviar atributos de perfil e dados de associação de público-alvo para o Pega Customer Decision Hub para a próxima melhor ação de decisão.
 exl-id: 0546da5d-d50d-43ec-bbc2-9468a7db4d90
-source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
+source-git-commit: 05e996f9e33e0d8be3d15a9ab3baaaf6d8152b5a
 workflow-type: tm+mt
-source-wordcount: '1011'
+source-wordcount: '1047'
 ht-degree: 0%
 
 ---
@@ -37,7 +37,7 @@ Um profissional de marketing deseja otimizar as ofertas para clientes que assina
 
 Antes de usar esse destino para exportar dados do Adobe Experience Platform, conclua os seguintes pré-requisitos em [!DNL Pega Customer Decision Hub]:
 
-* Configure o [Componente de integração de perfil e associação de público-alvo do Adobe Experience Platform](https://docs.pega.com/component/customer-decision-hub/adobe-experience-platform-profile-and-segment-membership-integration-component) no seu [!DNL Pega Customer Decision Hub] instância.
+* Configure o [Componente de integração de Perfil e Associação de público-alvo do Adobe Experience Platform](https://docs.pega.com/component/customer-decision-hub/adobe-experience-platform-profile-and-segment-membership-integration-component) no seu [!DNL Pega Customer Decision Hub] instância.
 * Configurar o OAuth 2.0 [Registro do cliente usando credenciais do cliente](https://docs.pega.com/security/87/creating-and-configuring-oauth-20-client-registration) tipo de concessão no seu [!DNL Pega Customer Decision Hub] instância.
 * Configurar [fluxo de dados de execução em tempo real](https://docs.pega.com/decision-management/87/creating-real-time-run-data-flows) para o fluxo de dados de Associação de público-alvo do Adobe em seu [!DNL Pega Customer Decision Hub] instância.
 
@@ -94,7 +94,8 @@ Para configurar detalhes para o destino, preencha os campos obrigatórios e sele
 
 >[!IMPORTANT]
 > 
->Para ativar os dados, é necessário **[!UICONTROL Gerenciar destinos]**, **[!UICONTROL Ativar destinos]**, **[!UICONTROL Exibir perfis]**, e **[!UICONTROL Exibir segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
+>* Para ativar os dados, é necessário **[!UICONTROL Gerenciar destinos]**, **[!UICONTROL Ativar destinos]**, **[!UICONTROL Exibir perfis]**, e **[!UICONTROL Exibir segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
+>* Para exportar *identidades*, você precisará do **[!UICONTROL Exibir gráfico de identidade]** [permissão de controle de acesso](/help/access-control/home.md#permissions). <br> ![Selecione o namespace de identidade destacado no fluxo de trabalho para ativar públicos para destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecione o namespace de identidade destacado no fluxo de trabalho para ativar públicos para destinos."){width="100" zoomable="yes"}
 
 Consulte [Ativar dados do público-alvo para destinos de exportação de perfil de transmissão](../../ui/activate-streaming-profile-destinations.md) para obter instruções sobre como ativar públicos-alvo para esse destino.
 

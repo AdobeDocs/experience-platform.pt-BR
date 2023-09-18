@@ -3,9 +3,9 @@ keywords: Experience Platform;identidade;serviço de identidade;solução de pro
 title: Medidas de proteção do serviço de identidade
 description: Este documento fornece informações sobre limites de uso e taxa para dados do Serviço de identidade para ajudar você a otimizar o uso do gráfico de identidade.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: 87138cbf041e40bfc6b42edffb16f5b8a8f5b365
+source-git-commit: a9b5ab28d00941b7531729653eb630a61b5446fc
 workflow-type: tm+mt
-source-wordcount: '1112'
+source-wordcount: '1182'
 ht-degree: 1%
 
 ---
@@ -32,7 +32,7 @@ A tabela a seguir descreve os limites estáticos aplicados aos dados de identida
 | Grade de Proteção | Limite | Notas |
 | --- | --- | --- |
 | (Comportamento atual) Número de identidades em um gráfico | 150 | O limite é aplicado no nível da sandbox. Quando o número de identidades atingir 150 ou mais, nenhuma nova identidade será adicionada e o gráfico de identidade não será atualizado. Os gráficos podem mostrar identidades maiores que 150 como resultado da vinculação de um ou mais gráficos com menos de 150 identidades. **Nota**: o número máximo de identidades em um gráfico de identidade **para um perfil mesclado individual** é 50. Os perfis mesclados baseados em gráficos de identidade com mais de 50 identidades são excluídos do Perfil do cliente em tempo real. Para obter mais informações, leia o guia em [medidas de proteção para dados do Perfil](../profile/guardrails.md). |
-| (Comportamento futuro) Número de identidades em um gráfico [!BADGE Beta]{type=Informative} | 50 | Quando um gráfico com 50 identidades vinculadas é atualizado, o Serviço de identidade aplica um mecanismo &quot;primeiro a entrar, primeiro a sair&quot; e exclui a identidade mais antiga para abrir espaço para a identidade mais recente. A exclusão se baseia no tipo de identidade e no carimbo de data e hora. O limite é aplicado no nível da sandbox. Leia o [apêndice](#appendix) para obter mais informações sobre como o Serviço de identidade exclui identidades quando o limite é atingido. |
+| (Comportamento futuro) Número de identidades em um gráfico [!BADGE Beta]{type=Informative} | 50 | Quando um gráfico com 50 identidades vinculadas é atualizado, o Serviço de identidade aplica um mecanismo &quot;primeiro a entrar, primeiro a sair&quot; e exclui a identidade mais antiga para abrir espaço para a identidade mais recente. A exclusão se baseia no tipo de identidade e no carimbo de data e hora. O limite é aplicado no nível da sandbox. Para obter mais informações, leia a seção sobre [noções básicas sobre a lógica de exclusão](#deletion-logic). |
 | Número de identidades em um registro XDM | 20 | O número mínimo de registros XDM necessários é dois. |
 | Número de namespaces personalizados | None | Não há limites para o número de namespaces personalizados que você pode criar. |
 | Número de caracteres para um nome para exibição de namespace ou símbolo de identidade | None | Não há limites para o número de caracteres de um nome para exibição de namespace ou símbolo de identidade. |
@@ -50,32 +50,11 @@ A tabela a seguir descreve as regras existentes que devem ser seguidas para gara
 
 A partir de 31 de março de 2023, o Serviço de identidade bloqueará a assimilação da Adobe Analytics ID (AAID) para novos clientes. Normalmente, essa identidade é assimilada por meio do [Origem do Adobe Analytics](../sources/connectors/adobe-applications/analytics.md) e a variável [Origem do Adobe Audience Manager](../sources//connectors/adobe-applications/audience-manager.md) e é redundante porque a ECID representa o mesmo navegador da Web. Se quiser alterar essa configuração padrão, entre em contato com a equipe de conta do Adobe.
 
-## Próximas etapas
-
-Consulte a documentação a seguir para obter mais informações sobre [!DNL Identity Service]:
-
-* [Visão geral do [!DNL Identity Service]](home.md)
-* [Visualizador de gráficos de identidade](ui/identity-graph-viewer.md)
-
-
-## Apêndice {#appendix}
-
-A seção a seguir contém informações adicionais sobre as medidas de proteção do Serviço de identidade.
-
-### [!BADGE Beta]{type=Informative} Noções básicas sobre a lógica de exclusão quando um gráfico de identidade na capacidade é atualizado {#deletion-logic}
-
->[!IMPORTANT]
->
->A lógica de exclusão a seguir é um comportamento futuro do Serviço de identidade. Entre em contato com o representante de conta para solicitar uma alteração no tipo de identidade se a sandbox de produção contiver:
->
-> * Um namespace personalizado em que os identificadores de pessoa (como IDs de CRM) são configurados como tipo de identidade de cookie/dispositivo.
-> * Um namespace personalizado em que os identificadores de cookie/dispositivo são configurados como tipo de identidade entre dispositivos.
->
->Quando esse recurso estiver disponível, os gráficos que excederem o limite de 50 identidades serão reduzidos para até 50 identidades. Para a Real-time CDP B2C Edition, isso pode resultar em um aumento mínimo no número de perfis qualificados para um público-alvo, pois esses perfis foram ignorados anteriormente da Segmentação e Ativação.
+## [!BADGE Beta]{type=Informative} Noções básicas sobre a lógica de exclusão quando um gráfico de identidade na capacidade é atualizado {#deletion-logic}
 
 Quando um gráfico de identidade completo é atualizado, o Serviço de identidade exclui a identidade mais antiga no gráfico antes de adicionar a identidade mais recente. Isso é para manter a precisão e a relevância dos dados de identidade. Esse processo de exclusão segue duas regras principais:
 
-#### A exclusão da regra #1 é priorizada com base no tipo de identidade de um namespace
+### A exclusão da regra #1 é priorizada com base no tipo de identidade de um namespace
 
 A prioridade de exclusão é a seguinte:
 
@@ -83,7 +62,7 @@ A prioridade de exclusão é a seguinte:
 2. ID do dispositivo
 3. ID entre dispositivos, email e telefone
 
-#### A exclusão da regra #2 é baseada no carimbo de data e hora armazenado na identidade
+### A exclusão da regra #2 é baseada no carimbo de data e hora armazenado na identidade
 
 Cada identidade vinculada em um gráfico tem seu próprio carimbo de data e hora correspondente. Quando um gráfico completo é atualizado, o Serviço de identidade exclui a identidade com o carimbo de data e hora mais antigo.
 
@@ -110,7 +89,36 @@ Neste exemplo, antes que o gráfico à esquerda possa ser atualizado com uma nov
 
 >[!ENDSHADEBOX]
 
+### Implicações na implementação
+
+As seções a seguir descrevem as implicações que a lógica de exclusão tem para o Serviço de identidade, o Perfil do cliente em tempo real e o WebSDK.
+
+#### Serviço de identidade: alterações no tipo de identidade do namespace personalizado
+
+Entre em contato com a equipe de conta do Adobe para solicitar uma alteração no tipo de identidade se a sandbox de produção contiver:
+
+* Um namespace personalizado em que os identificadores de pessoa (como IDs de CRM) são configurados como tipo de identidade de cookie/dispositivo.
+* Um namespace personalizado em que os identificadores de cookie/dispositivo são configurados como tipo de identidade entre dispositivos.
+
+Quando esse recurso estiver disponível, os gráficos que excederem o limite de 50 identidades serão reduzidos para até 50 identidades. Para o Real-Time CDP B2C Edition, isso pode resultar em um aumento mínimo no número de perfis qualificados para um público-alvo, pois esses perfis foram ignorados anteriormente da Segmentação e Ativação.
+
+#### Perfil do cliente em tempo real: configuração de perfil pseudônimo
+
 A exclusão acontece somente com os dados no Serviço de identidade, não com o Perfil do cliente em tempo real.
 
 * Esse comportamento poderia, consequentemente, criar mais perfis com uma única ECID, pois a ECID não faz mais parte do gráfico de identidade.
 * Para ficar dentro dos números de direito do público-alvo endereçável, é recomendável ativar [expiração de dados de perfil pseudônimo](../profile/pseudonymous-profiles.md) para excluir os perfis antigos.
+
+#### Perfil do cliente em tempo real e WebSDK: exclusão de identidade principal
+
+Se você quiser preservar seus eventos autenticados em relação à ID do CRM, é recomendável alterar as IDs primárias de ECID para CRM ID. Leia os seguintes documentos para obter as etapas sobre como implementar essa alteração:
+
+* [Configurar mapa de identidade para tags Experience Platform](../tags/extensions/client/web-sdk/data-element-types.md#identity-map).
+* [Dados de identidade no SDK da Web do Experience Platform](../edge/identity/overview.md#using-identitymap)
+
+## Próximas etapas
+
+Consulte a documentação a seguir para obter mais informações sobre [!DNL Identity Service]:
+
+* [Visão geral do [!DNL Identity Service]](home.md)
+* [Visualizador de gráficos de identidade](ui/identity-graph-viewer.md)

@@ -1,31 +1,36 @@
 ---
 title: Visão geral dos atributos computados
 description: Os atributos computados são funções para agregar dados de nível de evento em atributos de nível de perfil. Essas funções são computadas automaticamente para que possam ser usadas na segmentação, ativação e personalização.
-badge: "Beta"
-source-git-commit: 3b4e1e793a610c9391b3718584a19bd11959e3be
+source-git-commit: 7ed473750b673eefd84b8d727043ad6ea35c3a8e
 workflow-type: tm+mt
-source-wordcount: '961'
+source-wordcount: '1059'
 ht-degree: 1%
 
 ---
 
-# Visão geral de atributos computados
 
->[!IMPORTANT]
->
->Atributos computados estão atualmente em **beta** e está **não** disponível para todos os usuários.
+# Visão geral de atributos computados
 
 A personalização baseada no comportamento do usuário é um requisito essencial para que os profissionais de marketing maximizem o impacto da personalização. Por exemplo, personalizar o email de marketing com o produto visualizado mais recentemente para impulsionar a conversão ou personalizar a página da Web com base no total de compras feitas pelos usuários para impulsionar a retenção.
 
 Os atributos computados ajudam a converter rapidamente os dados comportamentais do perfil em valores agregados no nível do perfil, sem depender dos recursos de engenharia para:
 
-- Ativação da personalização direcionada com ativação de agregações comportamentais para destinos do Real-time Customer Data Platform, uso no Adobe Journey Optimizer ou na segmentação
+- Habilitação de personalização direcionada de um para um ou em lote com ativação de agregações comportamentais para destinos e uso do Real-time Customer Data Platform no Adobe Journey Optimizer
+- Segmentação simplificada do público-alvo com armazenamento de agregações comportamentais como atributos de perfil
 - Padronização de dados comportamentais agregados de perfis para uso em plataformas e aplicativos
 - Melhor gerenciamento de dados com a consolidação de dados antigos de eventos de perfil em insights comportamentais significativos
 
-Essas agregações são calculadas com base nos conjuntos de dados de Evento de experiência habilitados para perfil assimilados na Adobe Experience Platform. Cada atributo calculado é um atributo de perfil criado no esquema de união de perfil e é agrupado no grupo de campos &quot;Atributo calculado&quot; no esquema de união.
+Essas agregações são calculadas com base nos conjuntos de dados de Evento de experiência habilitados para perfil assimilados na Adobe Experience Platform. Cada atributo calculado é um atributo de perfil criado no esquema de união de perfil e é agrupado no grupo de campos &quot;SystemComputedAttribute&quot; no esquema de união.
 
-Casos de uso de amostra incluem a personalização de anúncios com o nome do último produto visualizado para pessoas sem compras nos últimos 7 dias, a personalização de emails de marketing com o total de pontos de recompensa ganhos para parabenizar os usuários por serem promovidos para um nível premium ou o cálculo do valor vitalício de cada cliente para impulsionar um melhor direcionamento.
+Exemplos de casos de uso incluem:
+
+- Personalizar emails de marketing com pontos de recompensa totais para parabenizar os usuários por serem promovidos para um nível premium
+- Personalização de comunicações para usuários com base em contagens e frequência de compra
+- Personalizar emails de retenção com base nas datas de expiração da assinatura
+- Redirecionamento de usuários que visualizaram, mas não compraram um produto com o último produto visualizado
+- Ativar agregações de eventos por meio de atributos computados para um sistema downstream usando destinos do Real-Time CDP
+- Recolher vários públicos com base em eventos em um grupo mais condensado de atributos computados
+- Redirecionamento de usuários não autenticados para fora do site usando IDs de parceiros recentes de eventos
 
 Este guia ajudará você a entender melhor a função dos atributos computados na Platform, além de explicar as noções básicas sobre atributos computados.
 
@@ -47,7 +52,7 @@ Os atributos computados permitem definir agregações de eventos de maneira auto
 | CONTAGEM | Uma função que **contagens** o número de eventos que ocorreram para a regra especificada. | N/D | Contagem de compras nos últimos 3 meses |
 | MÍN | Uma função que encontra a variável **mínimo** para os eventos qualificados. | Números inteiros, números, duração, carimbos de data e hora | Dados da primeira compra nos últimos 7 dias<br/>Valor mínimo do pedido nas últimas 4 semanas |
 | MAX | Uma função que encontra a variável **máximo** para os eventos qualificados. | Números inteiros, números, duração, carimbos de data e hora | Dados da última compra nos últimos 7 dias<br/>Valor máximo do pedido nas últimas 4 semanas |
-| MAIS_RECENTE | Uma função localiza o valor do atributo especificado a partir do evento qualificado mais recente. | Todos os valores primitivos, Matrizes de valores primitivos | Produto mais recente exibido nos últimos 7 dias |
+| MAIS_RECENTE | Uma função que encontra o valor do atributo especificado do evento qualificado mais recente. Esta função dá **ambos** o valor e a data e hora do atributo. | Todos os valores primitivos, Matrizes de valores primitivos | Produto mais recente exibido nos últimos 7 dias |
 
 ### Períodos de pesquisa
 
@@ -68,21 +73,19 @@ Por exemplo, se o atributo calculado tiver um período de lookback dos últimos 
 
 >[!NOTE]
 >
->As semanas e os meses são considerados **semanas do calendário** e **meses do calendário** quando usado em retrospectivas de evento.
+>As semanas e os meses são considerados **semanas do calendário** e **meses do calendário** quando usado em retrospectivas de evento. A semana do calendário começa na **domingo** e termina no **Sábado** da semana.
 
-**Atualização rápida**
+**Atualização rápida** {#fast-refresh}
 
->[!IMPORTANT]
->
->Um máximo de **cinco** os atributos, por sandbox, podem ter a atualização rápida ativada.
-
-A atualização rápida permite manter seus atributos atualizados. Ativar essa opção permite atualizar os atributos calculados diariamente, mesmo para períodos de pesquisa mais longos. Isso permite que você reaja em tempo quase real às atividades do usuário. Esse valor só é aplicável para atributos calculados com um período de lookback maior que uma base semanal.
+A atualização rápida permite manter seus atributos atualizados. Ativar essa opção permite atualizar os atributos calculados diariamente, mesmo por períodos de lookback mais longos, permitindo que você reaja rapidamente às atividades do usuário.
 
 >[!NOTE]
 >
 >Ativar a atualização rápida variará a duração da pesquisa de evento, já que o período de pesquisa é acumulado semanal ou mensalmente, respectivamente.
 >
->Por exemplo, se você criar um atributo calculado com um período de lookback de duas semanas com a atualização rápida ativada, isso significa que o período de lookback inicial será de duas semanas. No entanto, a cada atualização diária, o período de lookback incluirá eventos do dia adicional. Essa adição de dias continuará até que a próxima semana do calendário comece, na qual a janela de retrospectiva será transferida e retornará para duas semanas.
+>Se você criar um atributo calculado com um período de lookback de duas semanas com a atualização rápida ativada, isso significa que o período de lookback inicial será de duas semanas. No entanto, a cada atualização diária, o período de lookback incluirá eventos do dia adicional. Essa adição de dias continuará até que a próxima semana do calendário comece, na qual a janela de retrospectiva será transferida e retornará para duas semanas.
+>
+>Por exemplo, se houver um período de lookback de duas semanas começando em 15 de março (domingo) com a atualização rápida ativada, com a atualização diária, o período de lookback continuará expandindo de forma inclusiva até 22 de março, onde será redefinido para duas semanas. Em resumo, o atributo calculado é **atualizado** diariamente, com o período de pesquisa aumentando de **dois** semanas para **três** semanas durante a semana e, em seguida, voltar para **dois** semanas.
 
 ## Próximas etapas
 

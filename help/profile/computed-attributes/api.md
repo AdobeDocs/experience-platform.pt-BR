@@ -1,21 +1,19 @@
 ---
 title: Endpoint da API de atributos computados
 description: Saiba como criar, exibir, atualizar e excluir atributos calculados usando a API de perfil do cliente em tempo real.
-badge: "Beta"
-source-git-commit: 3b4e1e793a610c9391b3718584a19bd11959e3be
+source-git-commit: e1c7d097f7ab39d05674c3dad620bea29f08092b
 workflow-type: tm+mt
-source-wordcount: '1565'
+source-wordcount: '1654'
 ht-degree: 2%
 
 ---
+
 
 # Endpoint da API de atributos computados
 
 >[!IMPORTANT]
 >
->A funcionalidade de atributos computados está atualmente na versão beta. A documentação e a funcionalidade estão sujeitas a alterações.
->
->Além disso, o acesso à API é restrito. Para saber como obter acesso à API de atributos computados, entre em contato com o Suporte Adobe.
+>O acesso à API é restrito. Para saber como obter acesso à API de atributos computados, entre em contato com o Suporte Adobe.
 
 Os atributos computados são funções usadas para agregar dados no nível do evento em atributos no nível do perfil. Essas funções são computadas automaticamente para que possam ser usadas na segmentação, ativação e personalização. Este guia inclui exemplos de chamadas de API para executar operações básicas de CRUD usando o `/attributes` terminal.
 
@@ -52,7 +50,7 @@ Os seguintes parâmetros de consulta podem ser usados ao recuperar uma lista de 
 | `limit` | Um parâmetro que especifica o número máximo de itens retornados como parte da resposta. O valor mínimo desse parâmetro é 1 e o valor máximo é 40. Se esse parâmetro não for incluído, por padrão, 20 itens serão retornados. | `limit=20` |
 | `offset` | Um parâmetro que especifica o número de itens que devem ser ignorados antes de retornar os itens. | `offset=5` |
 | `sortBy` | Um parâmetro que especifica a ordem em que os itens retornados são classificados. As opções disponíveis incluem `name`, `status`, `updateEpoch`, e `createEpoch`. Você também pode escolher se deseja classificar em ordem crescente ou decrescente, não incluindo ou incluindo uma `-` na frente da opção classificar. Por padrão, os itens serão classificados por `updateEpoch` em ordem descendente. | `sortBy=name` |
-| `status` | Um parâmetro que permite filtrar pelo status do atributo calculado. As opções disponíveis incluem `draft`, `new`, `processing`, `processed`, `failed`, `disabled`, e `initializing`. Essa opção não diferencia maiúsculas de minúsculas. | `status=draft` |
+| `property` | Um parâmetro que permite filtrar em vários campos de atributo computados. As propriedades compatíveis incluem `name`, `createEpoch`, `mergeFunction.value`, `updateEpoch`, e `status`. As operações compatíveis dependem da propriedade listada. <ul><li>`name`: `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=contains(), `NOT_CONTAINS` (=!contains()</li><li>`createEpoch`: `GREATER_THAN_OR_EQUALS` (&lt;=), `LESS_THAN_OR_EQUALS` (>=) </li><li>`mergeFunction.value`: `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=contains(), `NOT_CONTAINS` (!=contém())</li><li>`updateEpoch`: `GREATER_THAN_OR_EQUALS` (&lt;=), `LESS_THAN_OR_EQUALS` (>=)</li><li>`status`: `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=contains(), `NOT_CONTAINS` (=!contains()</li></ul> | `property=updateEpoch>=1683669114845`<br/>`property=name!=testingrelease`<br/>`property=status=contains(new,processing,disabled)` |
 
 **Solicitação**
 
@@ -107,19 +105,24 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com uma lista dos últimos 3
                 "default": true
             },
             "path": "{TENANT_ID}/ComputedAttributes",
+            "keepCurrent": false,
             "expression": {
                 "type": "PQL",
                 "format": "pql/text",
                 "value": "xEvent[(commerce.checkouts.value > 0.0 or commerce.purchases.value > 1.0 or commerce.order.priceTotal >= 10.0)",
-                "meta": " "
             },
             "mergeFunction": {
-                "value": "-"
+                "value": "SUM"
             },
             "status": "DRAFT",
             "schema": {
                 "name": "_xdm.context.profile"
             },
+            "duration": {
+                "count": 7,
+                "unit": "DAYS"
+            },
+            "lastEvaluationTs": "",
             "createEpoch": 1671223530322,
             "updateEpoch": 1673043640946,
             "createdBy": "{USER_ID}"
@@ -138,19 +141,24 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com uma lista dos últimos 3
                 "default": true
             },
             "path": "{TENANT_ID}/ComputedAttributes",
+            "keepCurrent": true,
             "expression": {
                 "type": "PQL",
                 "format": "pql/text",
-                "value": "xEvent[(commerce.checkouts.value > 0.0 or commerce.purchases.value > 1.0 or commerce.order.priceTotal >= 10.0)",
-                "meta": " "
+                "value": "xEvent[eventType.equals(\"commerce.backofficeOrderPlaced\", false)].topN(timestamp, 1).map({\"timestamp\": timestamp, \"value\": producedBy}).head()"
             },
             "mergeFunction": {
-                "value": "-"
+                "value": "MOST_RECENT"
             },
             "status": "DRAFT",
             "schema": {
                 "name": "_xdm.context.profile"
             },
+            "duration": {
+                "count": 7,
+                "unit": "DAYS"
+            },
+            "lastEvaluationTs": "",
             "createEpoch": 1671223586455,
             "updateEpoch": 1671223586455,
             "createdBy": "{USER_ID}"
@@ -173,15 +181,19 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com uma lista dos últimos 3
                 "type": "PQL",
                 "format": "pql/text",
                 "value": "xEvent[(commerce.checkouts.value > 0.0 or commerce.purchases.value > 1.0 or commerce.order.priceTotal >= 10.0)",
-                "meta": " "
             },
             "mergeFunction": {
-                "value": "-"
+                "value": "SUM"
             },
-            "status": "DRAFT",
+            "status": "PROCESSED",
             "schema": {
                 "name": "_xdm.context.profile"
             },
+            "duration": {
+                "count": 7,
+                "unit": "DAYS"
+            },
+            "lastEvaluationTs": "2023-08-27T00:14:55.028",
             "createEpoch": 1671220358902,
             "updateEpoch": 1671220358902,
             "createdBy": "{USER_ID}"
@@ -252,7 +264,7 @@ curl -X POST https://platform.adobe.io/data/core/ca/attributes \
 | `expression.type` | O tipo da expressão. No momento, somente o PQL é compatível. |
 | `expression.format` | O formato da expressão. Atualmente, somente `pql/text` é compatível. |
 | `expression.value` | O valor da expressão. |
-| `keepCurrent` | Um booleano que determina se o valor do atributo calculado é ou não mantido atualizado. Atualmente, esse valor deve ser definido como `false`. |
+| `keepCurrent` | Um booleano que determina se o valor do atributo calculado é ou não mantido atualizado usando a atualização rápida. Atualmente, esse valor deve ser definido como `false`. |
 | `duration` | Um objeto que representa o período de pesquisa do atributo calculado. O período de pesquisa representa até que ponto a pesquisa anterior pode ser realizada para calcular o atributo calculado. |
 | `duration.count` | Um número que representa a duração do período de pesquisa. Os valores possíveis dependem do valor do `duration.unit` campo. <ul><li>`HOURS`: 1-24</li><li>`DAYS`: 1-7</li><li>`WEEKS`: 1-4</li><li>`MONTHS`: 1-6</li></ul> |
 | `duration.unit` | Uma string que representa a unidade de tempo que será usada para o período de pesquisa. Os valores possíveis incluem: `HOURS`, `DAYS`, `WEEKS`, e `MONTHS`. |
@@ -294,6 +306,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com informações sobre o at
     "schema": {
         "name": "_xdm.context.profile"
     },
+    "lastEvaluationTs": "",
     "createEpoch": 1680070188696,
     "updateEpoch": 1680070188696,
     "createdBy": "{USER_ID}"
@@ -368,6 +381,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com informações detalhadas
     "schema": {
         "name": "_xdm.context.profile"
     },
+    "lastEvaluationTs": "",
     "createEpoch": 1680070188696,
     "updateEpoch": 1680070188696,
     "createdBy": "{USER_ID}"
@@ -378,13 +392,18 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com informações detalhadas
 | -------- | ----------- |
 | `id` | Uma ID exclusiva, somente leitura, gerada pelo sistema que pode ser usada para fazer referência ao atributo calculado durante outras operações da API. |
 | `type` | Uma string que mostra que o objeto retornado é um atributo calculado. |
+| `name` | O nome do atributo calculado. |
+| `displayName` | O nome de exibição do atributo calculado. Esse é o nome que será exibido ao listar os atributos calculados na interface do usuário do Adobe Experience Platform. |
+| `description` | Uma descrição do atributo calculado. Isso é especialmente útil depois que vários atributos computados são definidos, pois ajudará outras pessoas em sua organização a determinar o atributo calculado correto a ser usado. |
 | `imsOrgId` | A ID da organização à qual o atributo calculado pertence. |
 | `sandbox` | O objeto de sandbox contém detalhes da sandbox na qual o atributo calculado foi configurado. Essas informações são retiradas do cabeçalho da sandbox enviado na solicitação. Para obter mais informações, consulte [visão geral das sandboxes](../../sandboxes/home.md). |
 | `path` | A variável `path` ao atributo calculado. |
+| `keepCurrent` | Um booleano que determina se o valor do atributo calculado é ou não mantido atualizado usando a atualização rápida. |
 | `expression` | Um objeto que contém a expressão do atributo computado. |
-| `mergeFunction` | Um objeto que contém a função de mesclagem para o atributo calculado. Esse valor se baseia no parâmetro de agregação correspondente na expressão do atributo calculado. |
+| `mergeFunction` | Um objeto que contém a função de mesclagem para o atributo calculado. Esse valor se baseia no parâmetro de agregação correspondente na expressão do atributo calculado. Os valores possíveis incluem `SUM`, `MIN`, `MAX`, e `MOST_RECENT`. |
 | `status` | O status do atributo calculado. Pode ser um dos seguintes valores: `DRAFT`, `NEW`, `INITIALIZING`, `PROCESSING`, `PROCESSED`, `FAILED`ou `DISABLED`. |
 | `schema` | Um objeto que contém informações sobre o esquema no qual a expressão é avaliada. Atualmente, somente `_xdm.context.profile` é compatível. |
+| `lastEvaluationTs` | Um carimbo de data e hora que representa quando o atributo calculado foi avaliado pela última vez. |
 | `createEpoch` | A hora em que o atributo calculado foi criado, em segundos. |
 | `updateEpoch` | A hora em que o atributo calculado foi atualizado pela última vez, em segundos. |
 | `createdBy` | A ID do usuário que criou o atributo calculado. |
@@ -457,6 +476,7 @@ Uma resposta bem-sucedida retorna o status HTTP 202 com detalhes do atributo cal
     "schema": {
         "name": "_xdm.context.profile"
     },
+    "lastEvaluationTs": "",
     "createEpoch": 1681365690928,
     "updateEpoch": 1681365690928,
     "createdBy": "{USER_ID}"
@@ -548,6 +568,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com informações sobre o at
     "schema": {
         "name": "_xdm.context.profile"
     },
+    "lastEvaluationTs": "",
     "createEpoch": 1680071726825,
     "updateEpoch": 1680074429192,
     "createdBy": "{USER_ID}"

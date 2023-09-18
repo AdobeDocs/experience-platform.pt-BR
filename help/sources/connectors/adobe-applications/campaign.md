@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;página inicial;tópicos populares;campanha;campanha;serviços gerenciados;;home;popular topics;Adobe Campaign Managed Cloud Services;campaign;campaign managed services
 title: Adobe Campaign Managed Cloud Services
-description: Saiba como conectar Cloud Services do Campaign Managed à Platform usando a interface do usuário
+description: Saiba como conectar Cloud Service do Campaign Managed à Platform usando a interface do usuário
 exl-id: 8f18bf73-ebf1-4b4e-a12b-964faa0e24cc
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 39a503b14c731aeed279bbbfa8c814c2ec26ed92
 workflow-type: tm+mt
-source-wordcount: '663'
-ht-degree: 0%
+source-wordcount: '757'
+ht-degree: 1%
 
 ---
 
@@ -75,3 +75,9 @@ Por fim, você deve criar um conjunto de dados para seus esquemas. Para obter in
 Agora que você acessou os logs de dados no console do cliente do Campaign, criou um esquema e um conjunto de dados, é possível continuar a criar uma conexão de origem para trazer os dados do Campaign Managed Services para a Platform.
 
 Para obter instruções detalhadas sobre como trazer os logs do delivery e os dados dos logs de rastreamento do Campaign v8 para a Experience Platform, leia o guia em [criação de uma conexão de origem do Campaign Managed Services na interface](../../tutorials/ui/create/adobe-applications/campaign.md).
+
+>[!IMPORTANT]
+>
+>Há um caso periférico em que a interação de um destinatário de email recentemente removido com um email pode assimilar novamente informações pessoais no Experience Platform. Em alguns casos, isso poderia reativar o marketing para esse usuário.
+>
+>* Esse cenário só estará ativo entre o momento em que uma solicitação de acesso a dados pessoais for executada no Experience Platform e o momento em que for executada no Adobe Campaign Classic. Depois que a solicitação é executada no Campaign, há uma verificação para garantir que o registro não seja exportado para o Campaign. Para resolver esse problema, emita novamente uma solicitação de GDPR após 72 horas da execução.

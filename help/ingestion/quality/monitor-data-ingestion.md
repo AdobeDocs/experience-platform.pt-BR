@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Monitoramento da assimilação de dados
 description: Este guia do usuário fornece etapas sobre como monitorar os dados na interface do usuário do Adobe Experience Platform. Este guia requer que você tenha uma Adobe ID e acesso ao Adobe Experience Platform.
 exl-id: 85711a06-2756-46f9-83ba-1568310c9f73
-source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
+source-git-commit: 9399a242b855e151e5822035bc952efa89fe4bf0
 workflow-type: tm+mt
-source-wordcount: '654'
-ht-degree: 3%
+source-wordcount: '657'
+ht-degree: 2%
 
 ---
 
@@ -24,7 +24,7 @@ Este guia do usuário fornece etapas sobre como monitorar seus dados na interfac
 >title="Taxa de ingestão"
 >abstract="O número de eventos processados com êxito por segundo."
 >text="Learn more in the documentation"
->additional-url="http://www.adobe.com/go/monitor-dataflows-en" text="Monitorar fluxos de dados para fontes na interface"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-sources.html" text="Monitorar fluxos de dados para fontes na interface"
 
 >[!TIP]
 >

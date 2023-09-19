@@ -2,10 +2,10 @@
 title: Notas de versão da extensão do Adobe Target v2
 description: As mais recentes notas de versão de extensão de tag do Adobe Target v2 na Adobe Experience Platform.
 exl-id: c1a04e62-026d-4b16-aa70-bc6d5dbe6b2d
-source-git-commit: ffbb68c9c84b834984e1adb2640d8806ce9f9962
+source-git-commit: 4b87141e94681d9a9f51d4d9b2f2276ca065d6ce
 workflow-type: tm+mt
-source-wordcount: '650'
-ht-degree: 59%
+source-wordcount: '691'
+ht-degree: 55%
 
 ---
 
@@ -14,6 +14,12 @@ ht-degree: 59%
 >[!NOTE]
 >
 >O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+
+## v0.19.3 (18 de setembro de 2023)
+
+- Atualizado para oferecer suporte ao at.js v2.10.3.
+- Correção de um problema que acionava incorretamente o evento personalizado at-content-rendering-succeeded quando nenhuma oferta era renderizada. O evento correto, at-content-rendering-no-offers, agora é acionado.
+- Adição de eventToken e responseTokens ao objeto de erro para o evento personalizado at-content-rendering-failed.
 
 ## v0.19.2 (14 de fevereiro de 2023)
 

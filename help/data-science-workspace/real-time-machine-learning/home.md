@@ -2,11 +2,11 @@
 keywords: Experience Platform;guia do desenvolvedor;Data Science Workspace;tópicos populares;Aprendizado de máquina em tempo real;
 solution: Experience Platform
 title: Visão geral do Aprendizado de máquina em tempo real
-description: O Aprendizado de máquina em tempo real pode melhorar consideravelmente a relevância do seu conteúdo de experiência digital para os seus usuários finais. Isso é possível aproveitando a inferência em tempo real e o aprendizado contínuo no Experience Edge.
+description: O Aprendizado de máquina em tempo real pode melhorar consideravelmente a relevância do seu conteúdo de experiência digital para os seus usuários finais. Isso é possível aproveitando a inferência em tempo real e o aprendizado contínuo na Rede de borda do Experience Platform.
 exl-id: 23eb1877-1bdf-4982-b58c-cfb58467035a
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
-source-wordcount: '549'
+source-wordcount: '552'
 ht-degree: 1%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 1%
 >
 >O Aprendizado de máquina em tempo real ainda não está disponível para todos os usuários. Esse recurso está em alfa e ainda está sendo testado. Este documento está sujeito a alterações.
 
-O Aprendizado de máquina em tempo real pode melhorar consideravelmente a relevância do seu conteúdo de experiência digital para os seus usuários finais. Isso é possível aproveitando a inferência em tempo real e o aprendizado contínuo no [!DNL Experience Edge].
+O Aprendizado de máquina em tempo real pode melhorar consideravelmente a relevância do seu conteúdo de experiência digital para os seus usuários finais. Isso é possível aproveitando a inferência em tempo real e o aprendizado contínuo no [!DNL Experience Platform Edge Network].
 
 Uma combinação de computação contínua no Hub e no [!DNL Edge] reduz drasticamente a latência tradicionalmente envolvida na potencialização de experiências hiperpersonalizadas que são relevantes e responsivas. Portanto, o Aprendizado de máquina em tempo real fornece inferências com uma latência incrivelmente baixa para a tomada de decisões síncronas. Os exemplos incluem a renderização de conteúdo personalizado da página da Web ou a exibição de uma oferta ou desconto para reduzir o churn e aumentar as conversões em uma loja da Web.
 
@@ -43,7 +43,7 @@ Crie um modelo de Aprendizado de máquina em tempo real criando do zero ou traze
 
 ### Implantação
 
-Implantar seu modelo em [!DNL Experience Edge] para criar um serviço de Aprendizado de máquina em tempo real no [!UICONTROL Galeria de Serviços] usando o endpoint da API de Previsão.
+Implante seu modelo na [!DNL Edge Network] para criar um serviço de Aprendizado de máquina em tempo real no [!UICONTROL Galeria de Serviços] usando o endpoint da API de Previsão.
 
 ### Inferência
 
@@ -66,10 +66,9 @@ O Aprendizado de Máquina em Tempo Real está atualmente em alfa. A funcionalida
 > - Para o deep learning, seus dados precisam ser enviados de forma que, quando `df.values` é chamado de, ele retorna um array aceitável pelo modelo DL. Isso ocorre porque o nó de pontuação do modelo ONNX usa `df.values` e envia a saída para pontuação em relação ao modelo.
 
 
-
 ### Recursos:
 
-|  | Alfa (maio) |
+| | Alfa (maio) |
 | --- | --- |
 | **Recursos** | - Uso do modelo de bloco de anotações RTML, crie, teste e implante um modelo de aprendizado de máquina personalizado. <br> - Suporte para importação de modelos de aprendizado de máquina pré-treinados. <br> - SDK de aprendizado de máquina em tempo real. <br> - Conjunto inicial de nós de criação. <br> - Implantado no Adobe Experience Platform Hub. |
 | **Disponibilidade** | América do Norte |

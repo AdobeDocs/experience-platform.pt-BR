@@ -1,11 +1,11 @@
 ---
-keywords: extensão de encaminhamento de eventos;extensão de encaminhamento de eventos do twitter;twitter
-title: Extensão de encaminhamento de eventos do twitter
-description: Essa extensão de encaminhamento de eventos do Adobe Experience Platform permite assimilar eventos no Twitter para atender aos requisitos da empresa.
+keywords: extensão de encaminhamento de eventos;twitter;extensão de encaminhamento de eventos do twitter
+title: Extensão de encaminhamento de eventos do Twitter
+description: Essa extensão de encaminhamento de eventos do Adobe Experience Platform permite assimilar eventos no Twitter para atender aos requisitos da sua empresa.
 last-substantial-update: 2023-05-24T00:00:00Z
-source-git-commit: 4f75bbfee6b550552d2c9947bac8540a982297eb
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
-source-wordcount: '1143'
+source-wordcount: '1141'
 ht-degree: 3%
 
 ---
@@ -78,7 +78,7 @@ Quando terminar, selecione **[!UICONTROL Salvar]**.
 
 Depois que todos os elementos de dados forem configurados, você poderá começar a criar regras de encaminhamento de eventos que determinam quando e como seus eventos serão enviados para o [!DNL Twitter].
 
-Criar um novo [regra](../../../ui/managing-resources/rules.md) na propriedade de encaminhamento de eventos. Em **[!UICONTROL Ações]**, adicione uma nova ação e defina a extensão para **[!UICONTROL Twitter]**. Para enviar eventos da Adobe Experience Edge Network para o [!DNL Twitter], defina o **[!UICONTROL Tipo de ação]** para **[!UICONTROL Enviar conversão da Web].**
+Criar um novo [regra](../../../ui/managing-resources/rules.md) na propriedade de encaminhamento de eventos. Em **[!UICONTROL Ações]**, adicione uma nova ação e defina a extensão para **[!UICONTROL Twitter]**. Para enviar eventos da Rede de borda para o [!DNL Twitter], defina o **[!UICONTROL Tipo de ação]** para **[!UICONTROL Enviar conversão da Web].**
 
 Após a seleção, controles adicionais são exibidos para configurar ainda mais o evento. Você precisa mapear o [!DNL Twitter] para os elementos de dados criados anteriormente. Para obter mais informações, consulte [[!DNL Twitter] API de conversões da Web](https://developer.twitter.com/en/docs/twitter-ads-api/measurement/api-reference/conversions).
 

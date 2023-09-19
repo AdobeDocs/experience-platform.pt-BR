@@ -3,7 +3,7 @@ title: Utilização do Offer Decisioning com o SDK da Web da plataforma
 description: O SDK da Web da Adobe Experience Platform pode fornecer e renderizar ofertas personalizadas gerenciadas no Offer Decisioning. Você pode criar suas ofertas e outros objetos relacionados usando a interface do usuário ou a API do Offer Decisioning.
 keywords: offer decisioning;decisão;SDK da Web;SDK da Web da plataforma;ofertas personalizadas;entregar ofertas;entrega de ofertas;personalização de ofertas;
 exl-id: 4ab51f9d-3c44-4855-b900-aa2cde673a9a
-source-git-commit: 5f2358c2e102c66a13746004ad73e2766e933705
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
 source-wordcount: '863'
 ht-degree: 5%
@@ -332,4 +332,4 @@ Para ativar o Offer Decisioning, execute as seguintes etapas:
 
 ## Limitações
 
-No momento, algumas restrições de oferta não são compatíveis com os fluxos de trabalho móveis do Experience Edge, por exemplo, Limite. O valor do campo Limite especifica o número de vezes que uma oferta pode ser apresentada a todos os usuários. Para obter mais detalhes, consulte [Documentação de regras de elegibilidade e restrições da oferta](https://experienceleague.adobe.com/docs/offer-decisioning/using/managing-offers-in-the-offer-library/creating-personalized-offers.html#eligibility).
+No momento, algumas restrições de oferta não são compatíveis com os fluxos de trabalho móveis da Rede de borda, por exemplo, Limite. O valor do campo Limite especifica o número de vezes que uma oferta pode ser apresentada a todos os usuários. Para obter mais detalhes, consulte [Documentação de regras de elegibilidade e restrições da oferta](https://experienceleague.adobe.com/docs/offer-decisioning/using/managing-offers-in-the-offer-library/creating-personalized-offers.html#eligibility).

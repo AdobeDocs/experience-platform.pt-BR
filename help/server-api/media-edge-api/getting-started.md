@@ -2,9 +2,9 @@
 solution: Experience Platform
 title: Introdução às APIs do Media Edge
 description: Introdução às APIs do Media Edge
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
-source-wordcount: '959'
+source-wordcount: '958'
 ht-degree: 5%
 
 ---
@@ -164,7 +164,7 @@ x-content-type-options: nosniff
 
 No exemplo de resposta acima, a variável `sessionId` é exibido como `af8bb22766e458fa0eef98c48ea42c9e351c463318230e851a19946862020333`. Você usará essa ID em solicitações de evento subsequentes como um parâmetro obrigatório.
 
-Para obter mais informações sobre parâmetros de endpoint de Início da Sessão e exemplos, consulte a [Media Edge Swagger](swagger.md) arquivo.
+Para obter mais informações sobre parâmetros de endpoint de Início da Sessão e exemplos, consulte [Media Edge Swagger](swagger.md) arquivo.
 
 Para obter mais informações sobre parâmetros de dados de mídia XDM, consulte [Esquema de Informações de Detalhes de Mídia](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/mediadetails.schema.md#xdmplayhead).
 
@@ -284,7 +284,7 @@ A tabela a seguir mostra os possíveis códigos de resposta resultantes das soli
 | Status | Descrição |
 | ---------- | --------- |
 | 200 | A sessão foi criada com sucesso |
-| 207 | Problema com um dos serviços que se conectam à Experience Edge Network (consulte mais na seção [guia de solução de problemas](troubleshooting.md)) |
+| 207 | Problema com um dos serviços que se conectam à rede de borda (consulte mais na seção [guia de solução de problemas](troubleshooting.md)) |
 | nível 400 | Solicitação inválida |
 | nível 500 | Erro do servidor |
 

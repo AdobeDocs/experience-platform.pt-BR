@@ -2,7 +2,7 @@
 solution: Experience Platform
 title: APIs do Media Edge
 description: Visão geral das APIs do Media Edge
-source-git-commit: ff4bc64843e3d05277f56ab67b60400fb9e65c4f
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
 source-wordcount: '393'
 ht-degree: 5%
@@ -27,7 +27,7 @@ Ambos [APIs da coleção de mídia](https://experienceleague.adobe.com/docs/medi
 
 * É a maneira mais fácil de incorporar esquemas XDM no fluxo de dados.
 
-* As chamadas são direcionadas de um reprodutor de mídia diretamente para a [Rede da Experience Edge Platform](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/overview.html?lang=en).
+* As chamadas são direcionadas de um reprodutor de mídia diretamente para a [Rede de borda Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/overview.html?lang=en).
 
 * Ele rastreia eventos de mídia com eficiência, com um mínimo de chamadas entre servidores.
 

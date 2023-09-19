@@ -3,16 +3,16 @@ solution: Experience Platform
 title: Visão geral do serviço de segmentação
 description: Saiba mais sobre o Serviço de segmentação da Adobe Experience Platform e a função que ele desempenha no ecossistema da plataforma.
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-source-git-commit: 44c92e2163e2b6c0c140c64bba41dfbcc15d5d7f
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
-source-wordcount: '1633'
+source-wordcount: '1635'
 ht-degree: 11%
 
 ---
 
 # Visão geral do [!DNL Segmentation Service]
 
-Adobe Experience Platform [!DNL Segmentation Service] O fornece uma interface de usuário e uma API RESTful que permite criar públicos-alvo por meio de definições de segmento ou outras fontes da [!DNL Real-Time Customer Profile] dados. Esses públicos-alvo são configurados e mantidos de forma centralizada em [!DNL Platform]e são prontamente acessíveis por qualquer solução Adobe.
+Adobe Experience Platform [!DNL Segmentation Service] O fornece uma interface de usuário e uma API RESTful que permite criar públicos-alvo por meio de definições de segmento ou outras fontes da [!DNL Real-Time Customer Profile] dados. Esses públicos-alvo são configurados e mantidos de forma centralizada na [!DNL Platform] e podem ser acessados a qualquer momento usando as soluções da Adobe.
 
 Este documento fornece uma visão geral de [!DNL Segmentation Service] e o papel que desempenha no Adobe Experience Platform.
 
@@ -89,10 +89,10 @@ Os públicos-alvo em lote são avaliados automaticamente a cada 24 horas. Se qui
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_edge"
 >title="Avaliação da borda"
->abstract="A segmentação de borda é a capacidade de avaliar segmentos na Platform instantaneamente na Experience Edge, permitindo casos de uso de personalização da mesma página ou da próxima página."
+>abstract="A segmentação de borda é a capacidade de avaliar segmentos na Platform instantaneamente na Rede de borda, permitindo casos de uso de personalização de mesma página e próxima página."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/edge-segmentation.html?lang=pt-BR" text="Guia da interface de segmentação de borda"
 
-A segmentação de borda é a capacidade de avaliar segmentos na Platform instantaneamente [no Experience Edge](../edge/home.md), permitindo casos de uso de personalização de mesma página e próxima página.
+A segmentação de borda é a capacidade de avaliar segmentos na Platform instantaneamente [na rede de borda](../edge/home.md), permitindo casos de uso de personalização de mesma página e próxima página.
 
 Para saber mais sobre a segmentação de borda, leia as seções [Documentação da API](./api/edge-segmentation.md) ou o [Documentação da interface](./ui/edge-segmentation.md).
 

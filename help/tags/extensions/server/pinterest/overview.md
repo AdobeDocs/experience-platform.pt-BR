@@ -3,14 +3,14 @@ keywords: extensão de encaminhamento de eventos;extensão de encaminhamento de 
 title: Extensão de encaminhamento de eventos do pinterest
 description: Essa extensão de encaminhamento de eventos do Adobe Experience Platform permite assimilar eventos no Pinterest para atender aos requisitos da empresa.
 last-substantial-update: 2023-04-27T00:00:00Z
-source-git-commit: 87c76ef4b95bc05a64d9d124d69c2a51b7b77c08
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
-source-wordcount: '1550'
-ht-degree: 4%
+source-wordcount: '1548'
+ht-degree: 5%
 
 ---
 
-# [!DNL Pinterest] extensão de encaminhamento de eventos
+# Extensão de encaminhamento de eventos da [!DNL Pinterest]
 
 [!DNL Pinterest] O é um mecanismo de descoberta visual para encontrar ideias como receitas, decoração de casas, inspiração de estilo e muito mais. Há bilhões de pinos em [!DNL Pinterest], que também podem ser compartilhadas com outras pessoas no [!DNL Pinterest]. É possível agrupar os eventos de interação do usuário e aproveitar [!DNL Pinterest Analytics] para entender o comportamento do usuário e executar anúncios direcionados.
 
@@ -69,7 +69,7 @@ Na próxima tela, insira o [!UICONTROL ID da conta de anúncios] e [!UICONTROL T
 
 Depois que todos os elementos de dados forem configurados, você poderá começar a criar regras de encaminhamento de eventos que determinam quando e como seus eventos serão enviados para o [!DNL Pinterest].
 
-Criar um novo [regra](../../../ui/managing-resources/rules.md) na propriedade de encaminhamento de eventos. Em **[!UICONTROL Ações]**, adicione uma nova ação e defina a extensão para **[!UICONTROL Pinterest]**. Para enviar eventos da Adobe Experience Edge Network para o [!DNL Pinterest], defina o **[!UICONTROL Tipo de ação]** para **[!UICONTROL Enviar evento].**
+Criar um novo [regra](../../../ui/managing-resources/rules.md) na propriedade de encaminhamento de eventos. Em **[!UICONTROL Ações]**, adicione uma nova ação e defina a extensão para **[!UICONTROL Pinterest]**. Para enviar eventos da Rede de borda para o [!DNL Pinterest], defina o **[!UICONTROL Tipo de ação]** para **[!UICONTROL Enviar evento].**
 
 ![A variável [!DNL Pinterest] [!UICONTROL Enviar evento] criação da regra.](../../../images/extensions/server/pinterest/rule.png)
 

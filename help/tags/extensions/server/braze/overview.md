@@ -1,12 +1,12 @@
 ---
 keywords: extensão de encaminhamento de eventos;braze;extensão de encaminhamento de eventos braze
 title: Extensão Braze Event Forwarding
-description: Essa extensão de encaminhamento de eventos do Adobe Experience Platform envia eventos da Rede de borda do Adobe Experience para o Braze.
+description: Essa extensão de encaminhamento de eventos do Adobe Experience Platform envia eventos da Rede de borda para o Brasil.
 last-substantial-update: 2023-03-29T00:00:00Z
 exl-id: 297f48f8-2c3b-41c2-8820-35f4558c67b3
-source-git-commit: 4f75bbfee6b550552d2c9947bac8540a982297eb
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
-source-wordcount: '1863'
+source-wordcount: '1861'
 ht-degree: 4%
 
 ---
@@ -135,7 +135,7 @@ Os atributos do usuário podem ser um objeto JSON que contém campos que criarã
 | [!UICONTROL Data de nascimento] | Sequência de caracteres no formato &quot;AAAA-MM-DD&quot; (por exemplo, 1980-12-21). |
 | [!UICONTROL Fuso Horário] | Nome do fuso horário de [Banco de Dados de Fuso Horário IANA](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) (por exemplo, &#39;América/Nova_York&#39; ou &#39;Hora do Leste (EUA e Canadá)&#39;). |
 | [!UICONTROL Facebook] | Hash que contém qualquer um de id (cadeia de caracteres), curtidas (matriz de cadeias de caracteres), num_friends (inteiro). |
-| [!UICONTROL Twitter] | Hash que contém qualquer um de id (inteiro), screen_name (sequência de caracteres, identificador do Twitter), seguidores_count (inteiro), friends_count (inteiro), statuses_count(inteiro). |
+| [!UICONTROL Twitter] | Hash que contém qualquer um de id (inteiro), screen_name (sequência de caracteres, identificador de Twitter), seguidores_count (inteiro), friends_count (inteiro), statuses_count(inteiro). |
 
 {style="table-layout:auto"}
 
@@ -194,7 +194,7 @@ Os atributos do usuário podem ser um objeto JSON que contém campos que criarã
 | [!UICONTROL Data de nascimento] | Sequência de caracteres no formato &quot;AAAA-MM-DD&quot; (por exemplo, 1980-12-21). |
 | [!UICONTROL Fuso Horário] | Nome do fuso horário de [Banco de Dados de Fuso Horário IANA](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) (por exemplo, &#39;América/Nova_York&#39; ou &#39;Hora do Leste (EUA e Canadá)&#39;). |
 | [!UICONTROL Facebook] | Hash que contém qualquer um de id (cadeia de caracteres), curtidas (matriz de cadeias de caracteres), num_friends (inteiro). |
-| [!UICONTROL Twitter] | Hash que contém qualquer um de id (inteiro), screen_name (sequência de caracteres, identificador do Twitter), seguidores_count (inteiro), friends_count (inteiro), statuses_count(inteiro). |
+| [!UICONTROL Twitter] | Hash que contém qualquer um de id (inteiro), screen_name (sequência de caracteres, identificador de Twitter), seguidores_count (inteiro), friends_count (inteiro), statuses_count(inteiro). |
 
 {style="table-layout:auto"}
 

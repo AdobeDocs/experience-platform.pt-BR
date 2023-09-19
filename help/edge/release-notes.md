@@ -3,7 +3,7 @@ title: Notas de versão do SDK da Web da Adobe Experience Platform
 description: As notas de versão mais recentes do SDK da Web da Adobe Experience Platform.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;notas de versão;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 49624d51d6868fa951fe70b29715142b3cbad55b
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
 source-wordcount: '1589'
 ht-degree: 3%
@@ -118,7 +118,7 @@ Para obter as notas de versão mais recentes da extensão de tag do SDK da Web, 
 * Otimização dos eventos de alteração de visualização para aplicativos de página única. A notificação de exibição agora é incluída no evento de alteração de visualização quando as experiências personalizadas são renderizadas.
 * Remoção do aviso do console quando não `eventType` está presente.
 * Correção de um problema em que a variável `propositions` a propriedade foi retornada somente de um `sendEvent` comando quando as experiências foram solicitadas ou recuperadas do cache. A variável `propositions` agora, a propriedade sempre será definida como uma matriz.
-* Correção de um problema em que os contêineres ocultos não eram exibidos quando um erro era retornado do Adobe Experience Edge.
+* Correção de um problema em que os contêineres ocultos não eram exibidos quando um erro era retornado da Rede de borda.
 * Correção de um problema em que os eventos interativos não eram contados no Adobe Target. Isso foi corrigido adicionando o nome da exibição ao XDM em web.webPageDetails.viewName.
 * Corrigir links de documentação corrompidos nas mensagens do console.
 
@@ -130,7 +130,7 @@ Para obter as notas de versão mais recentes da extensão de tag do SDK da Web, 
 
 ## Versão 2.7.0 - 26 de outubro de 2021
 
-* Expor informações adicionais da Experience Edge no valor de retorno do `sendEvent`, incluindo `inferences` e `destinations`. O formato dessas propriedades pode mudar, pois esses recursos estão sendo lançados como parte de uma versão beta. Para obter mais informações, consulte [Rastreamento de eventos.](fundamentals/tracking-events.md)
+* Expor informações adicionais da Rede de borda no valor de retorno de `sendEvent`, incluindo `inferences` e `destinations`. O formato dessas propriedades pode mudar, pois esses recursos estão sendo lançados como parte de uma versão beta. Para obter mais informações, consulte [Rastreamento de eventos.](fundamentals/tracking-events.md)
 
 ## Versão 2.6.4 - 7 de setembro de 2021
 
@@ -186,7 +186,7 @@ Para obter as notas de versão mais recentes da extensão de tag do SDK da Web, 
 ## Versão 2.2.0 - outubro de 2020
 
 * Correção de erros: o objeto de aceitação estava impedindo que o Alloy fizesse chamadas quando `idMigrationEnabled` é `true`.
-* Correção de erros: torne o Alloy ciente das solicitações que devem retornar ofertas de personalização para evitar um problema de cintilação.
+* Correção de erros: torne o Alloy ciente das solicitações que devem retornar ofertas de personalização para evitar um problema de oscilação.
 
 ## Versão 2.1.0 - agosto de 2020
 

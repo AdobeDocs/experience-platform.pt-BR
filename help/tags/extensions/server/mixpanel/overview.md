@@ -1,12 +1,12 @@
 ---
 keywords: extensão de encaminhamento de eventos;mixpanel;extensão de encaminhamento de eventos do mixpanel
 title: Extensão de encaminhamento de eventos da API de rastreamento do Mixpanel
-description: Essa extensão de encaminhamento de eventos do Adobe Experience Platform envia eventos da Rede de borda do Adobe Experience para o Mixpanel.
+description: Essa extensão de encaminhamento de eventos do Adobe Experience Platform envia eventos da Rede de borda para o Mixpanel.
 last-substantial-update: 2023-03-29T00:00:00Z
 exl-id: 21e2e0fa-4949-4be4-859f-d449d21d8f41
-source-git-commit: 4f75bbfee6b550552d2c9947bac8540a982297eb
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
-source-wordcount: '950'
+source-wordcount: '946'
 ht-degree: 1%
 
 ---
@@ -74,7 +74,7 @@ Selecionar **[!UICONTROL Extensões]** no painel de navegação esquerdo. No **[
 
 ## Criar um [!DNL Send Event] regra
 
-Comece a criar uma nova regra na propriedade de encaminhamento de eventos. Em **[!UICONTROL Ações]**, adicione uma nova ação e defina a extensão para **[!UICONTROL Mixpanel]**. Em seguida, defina o tipo de ação como **[!UICONTROL Rastrear evento]** para enviar eventos da Adobe Experience Edge Network para [!DNL Mixpanel].
+Comece a criar uma nova regra na propriedade de encaminhamento de eventos. Em **[!UICONTROL Ações]**, adicione uma nova ação e defina a extensão para **[!UICONTROL Mixpanel]**. Em seguida, defina o tipo de ação como **[!UICONTROL Rastrear evento]** para enviar eventos da Rede de borda para o [!DNL Mixpanel].
 
 | Entrada | Descrição | Obrigatório |
 | --- | --- | --- |

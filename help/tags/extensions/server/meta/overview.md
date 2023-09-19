@@ -2,9 +2,9 @@
 title: Visão geral da extensão da API de meta conversões
 description: Saiba mais sobre a extensão da API de meta conversões para encaminhamento de eventos no Adobe Experience Platform.
 exl-id: 6b5836d6-6674-4978-9165-0adc1d7087b7
-source-git-commit: f5a9e8cb5cdbff485bc7d50e9567b0236ae5872e
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
-source-wordcount: '2368'
+source-wordcount: '2370'
 ht-degree: 0%
 
 ---
@@ -91,10 +91,9 @@ Ao enviar eventos compartilhados, verifique se você está incluindo uma ID e um
 >* O recurso de início rápido está disponível para clientes que compraram o pacote Real-Time CDP Prime e Ultimate. Entre em contato com o representante da Adobe para obter mais informações.
 >* Esse recurso é para novas implementações e atualmente não é compatível com a instalação automática de extensões e configurações em tags existentes e propriedades de encaminhamento de eventos.
 
-
 O recurso de início rápido ajuda a configurar com facilidade e eficiência a API de Meta Conversões e as extensões Meta Pixel. Essa ferramenta automatiza várias etapas executadas em tags de Adobe e no encaminhamento de eventos, reduzindo significativamente o tempo de configuração.
 
-Esse recurso instala e configura automaticamente a API de metaconversões e as extensões de metapixels em uma propriedade de tags recém-gerada automaticamente e encaminhamento de eventos com as regras e os elementos de dados necessários. Além disso, ele também instala e configura automaticamente o SDK da Web do Experience Platform e o Datastream. Por fim, o recurso de início rápido publica automaticamente a biblioteca no URL designado em um ambiente de desenvolvimento, o que permite a coleta de dados do lado do cliente e o encaminhamento de eventos do lado do servidor em tempo real por meio do Encaminhamento de eventos e do Experience Edge.
+Esse recurso instala e configura automaticamente a API de metaconversões e as extensões de metapixels em uma propriedade de tags recém-gerada automaticamente e encaminhamento de eventos com as regras e os elementos de dados necessários. Além disso, ele também instala e configura automaticamente o SDK da Web do Experience Platform e o Datastream. Por fim, o recurso de início rápido publica automaticamente a biblioteca no URL designado em um ambiente de desenvolvimento, o que permite a coleta de dados do lado do cliente e o encaminhamento de eventos do lado do servidor em tempo real por meio do encaminhamento de eventos e da Rede de borda do Experience Platform.
 
 O vídeo a seguir fornece uma introdução ao recurso de início rápido.
 

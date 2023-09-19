@@ -2,7 +2,7 @@
 title: Coleta de dados interativa
 description: Saiba como a API do servidor de rede de borda da Adobe Experience Platform realiza a coleta interativa de dados.
 exl-id: 1b06e755-b6a9-42dd-96c1-98ad67e7d222
-source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
 source-wordcount: '138'
 ht-degree: 7%
@@ -13,7 +13,7 @@ ht-degree: 7%
 
 ## Visão geral {#overview}
 
-Os pontos de extremidade de coleta de dados interativos recebem um único evento e são usados quando o cliente espera que uma resposta seja retornada pelo servidor da Rede de borda da Adobe Experience Platform. Esses endpoints também podem retornar conteúdo de outros serviços do Experience Edge enquanto executam a coleta de dados.
+Os pontos de extremidade de coleta de dados interativos recebem um único evento e são usados quando o cliente espera que uma resposta seja retornada pelo servidor da Rede de borda da Adobe Experience Platform. Esses endpoints também podem retornar conteúdo de outros serviços da rede de borda ao realizar a coleta de dados.
 
 A resposta do servidor inclui um ou mais `Handle` objetos, conforme mostrado abaixo.
 

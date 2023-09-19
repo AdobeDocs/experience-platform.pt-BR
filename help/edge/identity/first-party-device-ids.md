@@ -2,9 +2,9 @@
 title: IDs de dispositivo próprio no SDK da Web da plataforma
 description: Saiba como configurar IDs de dispositivo primário (FPIDs) para o Adobe Experience Platform Web SDK.
 exl-id: c3b17175-8a57-43c9-b8a0-b874fecca952
-source-git-commit: f5270d1d1b9697173bc60d16c94c54d001ae175a
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
-source-wordcount: '1773'
+source-wordcount: '1774'
 ht-degree: 1%
 
 ---
@@ -176,7 +176,7 @@ As seguintes `identityMap` resultaria em uma resposta de erro da Rede de borda, 
 }
 ```
 
-A resposta do erro retornada pela Experience Edge nesse caso seria semelhante ao seguinte:
+A resposta de erro retornada pela Rede de borda nesse caso seria semelhante ao seguinte:
 
 ```json
 {
@@ -194,7 +194,7 @@ A resposta do erro retornada pela Experience Edge nesse caso seria semelhante ao
 
 ## Hierarquia de ID
 
-Quando uma ECID e uma FPID estiverem presentes, a ECID será priorizada na identificação do usuário. Isso garantirá que, quando uma ECID existente estiver presente no armazenamento de cookies do navegador, ela continuará sendo o identificador principal e as contagens de visitantes existentes não correm o risco de ser afetadas. Para usuários existentes, o FPID não se tornará a identidade principal até que a ECID expire ou seja excluída como resultado de uma política de navegador ou processo manual.
+Quando uma ECID e um FPID estiverem presentes, a ECID será priorizada na identificação do usuário. Isso garantirá que, quando uma ECID existente estiver presente no armazenamento de cookies do navegador, ela continuará sendo o identificador principal e as contagens de visitantes existentes não correm o risco de ser afetadas. Para usuários existentes, o FPID não se tornará a identidade principal até que a ECID expire ou seja excluída como resultado de uma política de navegador ou processo manual.
 
 As identidades são priorizadas na seguinte ordem:
 

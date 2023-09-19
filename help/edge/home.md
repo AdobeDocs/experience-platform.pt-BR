@@ -1,14 +1,13 @@
 ---
 title: Visão geral do Adobe Experience Platform Web Software Development Kit (SDK)
 description: Saiba como usar o SDK da Web da Adobe Experience Platform para integrar recursos da plataforma ao seu site.
-keywords: SDK da Web da Adobe Experience Platform;SDK da Web da plataforma;borda;Visitor.js;AppMeasurement.js;AT.js;DIL.js;web sdk;SDK;SDK da Web;Iniciar;iniciar;Web SDK;Platform Web SDK;edge;Visitor.js;.js;AT.js;web sdk;SDK;web SDK;Launch;launch
-exl-id: 1348144a-7d25-4c27-bc40-3daee2f043a6
-source-git-commit: 52dbde052322a00fc33cd9f9c86ab7f92671f36a
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
-source-wordcount: '773'
+source-wordcount: '776'
 ht-degree: 3%
 
 ---
+
 
 # Visão geral do SDK da Web do Adobe Experience Platform {#overview}
 
@@ -17,17 +16,15 @@ O Adobe Experience Platform Web Software Development Kit (SDK) é uma biblioteca
 * Implementação manual usando `alloy.js`. Este guia do usuário fornece documentação para esse método de implementação.
 * A variável [Extensão de tag do SDK da Web](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md). Consulte [Implementar o Adobe Experience Cloud com o tutorial do SDK da Web](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html?lang=pt-BR) para obter mais informações.
 
-## Adobe Experience Edge
+## Rede de borda Experience Platform
 
-O SDK da Web da Adobe Experience Platform faz parte da coleção que compõe o Adobe Experience Edge. O Adobe Experience Edge consiste nas seguintes tecnologias:
+O SDK da Web do Experience Platform faz parte de uma coleção de ferramentas que compõem a Rede de borda da Adobe Experience Platform. A rede de borda consiste nos seguintes componentes:
 
-* **[Adobe Experience Platform Web SDK](#overview):** Um SDK JavaScript e extensão de tag para simplificar consideravelmente a implantação de tecnologias Adobe.
-* **[Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/):** Uma extensão para o SDK móvel v5 para permitir que os clientes usem a nova metodologia de implantação
-* **[Rede de borda Adobe Experience Platform](../server-api/overview.md):** Uma rede global distribuída de servidores que possibilita uma nova metodologia de implantação [!DNL Adobe] products
+* **[Experience Platform Web SDK](#overview):** Um SDK JavaScript e extensão de tag para simplificar consideravelmente a implantação de tecnologias Adobe.
+* **[SDK móvel do Experience Platform](https://developer.adobe.com/client-sdks/documentation/):** Uma extensão para o SDK móvel v5 para permitir que os clientes usem a nova metodologia de implantação
+* **[API do servidor de rede de borda Experience Platform](../server-api/overview.md):** Uma API que pode ser usada para uma variedade de casos de uso de coleta de dados, personalização, publicidade e marketing. A API do servidor pode ser usada em servidores, dispositivos IoT, decodificadores de sinais e em vários outros dispositivos.
 
-O Adobe Experience Edge é uma estrutura para coleta de dados de baixa latência, computação conectável e ativação rápida de dados em todos os canais endereçáveis.
-
-[!DNL Adobe Experience Edge] O fornece um único SDK consolidado para cada canal (JavaScript, Mobile, lado do servidor), que envia dados para um domínio de Adobe comum (`adobedc.net`) e recebe uma única carga de retorno para entrega de dados e experiência.
+A Edge Network é uma estrutura para coleta de dados de baixa latência, computação conectável e ativação rápida de dados em todos os canais endereçáveis. Ele fornece um único SDK consolidado para cada canal (JavaScript, móvel, lado do servidor), que envia dados para um domínio Adobe comum (`adobedc.net`) e recebe uma única carga de retorno para entrega de dados e experiência.
 
 No lado do servidor, um gateway de borda unificado e uma estrutura comum de serviço da plataforma ajudam a implantar novos recursos nesse ambiente de computação em tempo real. Essa arquitetura:
 

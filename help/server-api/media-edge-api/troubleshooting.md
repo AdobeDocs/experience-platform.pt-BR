@@ -2,9 +2,9 @@
 solution: Experience Platform
 title: Introdução às APIs do Media Edge
 description: Guia de solução de problemas de APIs do Media Edge
-source-git-commit: ff4bc64843e3d05277f56ab67b60400fb9e65c4f
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
-source-wordcount: '669'
+source-wordcount: '664'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ Para ajudar a solucionar problemas de respostas malsucedidas, os erros são acom
 ## Validação de inícios de sessão
 
 A maioria dos problemas com solicitações de Início de sessão resulta em uma resposta de 207 Vários status.
-A carga é semelhante aos erros não fatais da API do servidor da rede de borda da Experience. Todos os erros do Media Analytics têm o seguinte tipo:  `https://ns.adobe.com/aep/errors/va-edge-0XXX-XXX`. Os números exibidos na resposta correspondem ao status do erro.
+A carga é semelhante a [API do servidor](../error-handling.md)Erros não fatais de. Todos os erros do Media Analytics têm o seguinte tipo:  `https://ns.adobe.com/aep/errors/va-edge-0XXX-XXX`. Os números exibidos na resposta correspondem ao status do erro.
 
 O exemplo a seguir mostra um corpo de resposta para uma solicitação de Início de sessão que não tem um campo obrigatório e tem um campo inválido.
 
@@ -64,7 +64,7 @@ No exemplo acima, ambos os problemas são observados por `name` e `reason` em `d
 
 ## Validação de eventos
 
-A maioria das solicitações de evento inválidas resulta em uma resposta 400 de Solicitação incorreta. Nesses casos, a carga é semelhante aos erros fatais da API do servidor da rede de borda da Experience.
+A maioria das solicitações de evento inválidas resulta em uma resposta 400 de Solicitação incorreta. Nesses casos, a carga é semelhante aos erros fatais da API do servidor.
 
 Para solicitações de evento, o serviço de API de borda de mídia inclui verificações adicionais que não são capturadas no próprio modelo XDM. Isso inclui a verificação de que o caminho `eventType` corresponde à carga da solicitação `eventType`.
 

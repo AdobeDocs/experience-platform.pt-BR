@@ -3,7 +3,7 @@ title: Comparação da at.js com o SDK da Web do Experience Platform
 description: Saiba como os recursos da at.js se comparam ao SDK da Web do Experience Platform
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisionScopes;ocultando previamente o trecho;vec;Criador de experiências baseado em formulário;xdm;públicos-alvo;decisões;escopo;esquema;diagrama do sistema;diagrama
 exl-id: b63fe47d-856a-4cae-9057-51917b3e58dd
-source-git-commit: 139d6a6632532b392fdf8d69c5c59d1fd779a6d1
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
 source-wordcount: '2281'
 ht-degree: 6%
@@ -918,7 +918,7 @@ O registro no lado do servidor do Analytics é ativado quando o Analytics é ati
 
 ![](assets/analytics-enabled-datastream-config.png)
 
-Quando o Log do Analytics no lado do servidor é ativado, a carga do A4T que precisa ser compartilhada com o Analytics para que os relatórios do Analytics mostrem impressões e conversões corretas são compartilhadas no nível do Experience Edge, para que o cliente não precise fazer nenhum processamento adicional.
+Quando o Registro de análise do lado do servidor estiver ativado, a carga do A4T que precisa ser compartilhada com o Analytics para que os relatórios do Analytics mostrem impressões e conversões corretas são compartilhadas no nível da Rede de borda, para que o cliente não precise fazer nenhum processamento adicional.
 
 Veja como os dados fluem para nossos sistemas quando o registro do Server Side Analytics está ativado:
 

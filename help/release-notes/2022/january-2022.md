@@ -1,11 +1,11 @@
 ---
-title: Notas de versão da Adobe Experience Platform de janeiro de 2022
-description: As notas de versão de janeiro de 2022 para o Adobe Experience Platform.
+title: Notas da versão de janeiro de 2022 da Adobe Experience Platform
+description: As notas da versão de janeiro de 2022 da Adobe Experience Platform.
 exl-id: 734ce1b3-e270-4c37-958c-88bcc39fbf20
-source-git-commit: 4bdbb987905b6010f4b4f75bee060828d0e07368
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
 source-wordcount: '1342'
-ht-degree: 12%
+ht-degree: 21%
 
 ---
 
@@ -22,7 +22,7 @@ Atualizações dos recursos já existentes na Adobe Experience Platform:
 - [Query Service](#query-service)
 - [Sandboxes](#sandboxes)
 - [Serviço de segmentação](#segmentation)
-- [Fontes](#sources)
+- [Origens](#sources)
 
 ## Alertas {#alerts}
 
@@ -39,7 +39,7 @@ Para obter mais informações sobre alertas na Platform, consulte a [visão gera
 
 ## [!DNL Dashboards] {#dashboards}
 
-O Adobe Experience Platform fornece vários painéis por meio dos quais você pode visualizar insights importantes sobre os dados de sua organização, conforme capturados durante instantâneos diários.
+A Adobe Experience Platform fornece vários painéis para você visualizar insights importantes sobre os dados de sua organização, que são capturados por instantâneos diários.
 
 | Recurso | Descrição |
 | --- | --- |
@@ -69,7 +69,7 @@ Para obter mais informações sobre [!DNL Data Prep], consulte o [[!DNL Data Pre
 
 | Recurso | Descrição |
 | ----------- | ----------- |
-| Personalização de mesma página e próxima página | A variável [recurso de personalização de mesma página e próxima página](../../destinations/ui/activate-edge-personalization-destinations.md) O fornece uma visualização compartilhada e direcionável dos usuários para aplicativos no Experience Edge, para garantir a consistência entre os canais de marketing e do cliente. Essa personalização é possível por meio da variável [Conexão com o Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) e a variável [Conexão de personalização personalizada](../../destinations/catalog/personalization/custom-personalization.md). Para configurar suas campanhas de personalização de mesma página ou próxima página, consulte [tutorial dedicado](../../destinations/ui/activate-edge-personalization-destinations.md). |
+| Personalização de mesma página e próxima página | A variável [recurso de personalização de mesma página e próxima página](../../destinations/ui/activate-edge-personalization-destinations.md) O fornece uma visualização compartilhada e direcionável dos usuários para aplicativos na rede de borda, para garantir a consistência entre os canais de marketing e do cliente. Essa personalização é possível por meio da variável [Conexão com o Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) e a variável [Conexão de personalização personalizada](../../destinations/catalog/personalization/custom-personalization.md). Para configurar suas campanhas de personalização de mesma página ou próxima página, consulte [tutorial dedicado](../../destinations/ui/activate-edge-personalization-destinations.md). |
 | Monitoramento de destino em lote e métricas em nível de segmento | A funcionalidade de monitoramento de destino agora é expandida dos destinos de transmissão para também incluir destinos em lote e métricas no nível de segmento para seus fluxos de dados de ativação. Para obter mais informações, leia [painel de destinos de monitoramento](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard), [painel de monitoramento de trabalhos do segmento](/help/dataflows/ui/monitor-destinations.md#monitoring-segment-jobs-dashboard), e [visualização em nível de segmento](/help/dataflows/ui/monitor-destinations.md#segment-level-view). |
 | Programar edição na interface do usuário para fluxos de dados de ativação em lote existentes | Esta versão apresenta a opção de editar a programação dos fluxos de dados de ativação existentes para destinos em lote. Para obter mais informações, leia [ativar dados de perfil para destinos de perfil de lote](/help/destinations/ui/activate-batch-profile-destinations.md). |
 | Aprimoramentos no destino do Marketo | os clientes do Experience Platform que usam o Marketo Engage podem maximizar seu banco de dados Marketo com a nova capacidade de enviar registros de novas pessoas para o Marketo Engage pelo Experience Platform [Conector de destino do Marketo](/help/destinations/catalog/adobe/marketo-engage.md). <br> Ao enviar segmentos de público-alvo do Experience Platform para o Marketo Engage, as pessoas dentro do segmento que ainda não existe no banco de dados do Marketo Engage podem ser adicionadas automaticamente a ele. Para obter mais informações, leia [Encaminhar um segmento do Adobe Experience Platform para uma lista estática do Marketo](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-platform-segment-to-a-marketo-static-list.html?lang=en) (a etapa 9 do tutorial indica como enviar registros de novas pessoas para o Marketo). |
@@ -85,7 +85,7 @@ Para obter informações mais gerais sobre destinos, consulte a [visão geral de
 
 ## Query Service {#query-service}
 
-[!DNL Query Service] permite usar SQL padrão para consultar dados no Adobe Experience Platform [!DNL Data Lake]. Você pode associar qualquer conjunto de dados da [!DNL Data Lake] e capture os resultados da consulta como um novo conjunto de dados para usar em relatórios, no Data Science Workspace ou para assimilação no Perfil do cliente em tempo real.
+[!DNL Query Service]O permite usar SQL padrão para consultar dados no [!DNL Data Lake] da Adobe Experience Platform. Você pode associar qualquer conjunto de dados da [!DNL Data Lake] e capture os resultados da consulta como um novo conjunto de dados para usar em relatórios, no Data Science Workspace ou para assimilação no Perfil do cliente em tempo real.
 
 **Recursos atualizados**
 
@@ -110,7 +110,7 @@ Para obter mais informações sobre sandboxes, consulte a [visão geral das sand
 
 ## Serviço de segmentação {#segmentation}
 
-[!DNL Segmentation Service] O define um subconjunto específico de perfis descrevendo os critérios que distinguem um grupo comercializável de pessoas na sua base de clientes. Os segmentos podem ser baseados em dados de registro (como informações demográficas) ou eventos de séries temporais que representam interações do cliente com sua marca.
+O [!DNL Segmentation Service] define um subconjunto específico de perfis descrevendo os critérios que distinguem um grupo de pessoas na sua base de clientes que pode ser direcionado por campanhas de marketing. Os segmentos podem ser baseados em dados de registro (como informações demográficas) ou em eventos de séries temporais que representam interações de clientes com sua marca.
 
 **Novos recursos**
 
@@ -118,11 +118,11 @@ Para obter mais informações sobre sandboxes, consulte a [visão geral das sand
 | --- | --- |
 | Correspondência de segmentos | A Correspondência de segmentos é um serviço de colaboração de dados que permite que dois ou mais usuários da Platform troquem dados, com base em identificadores comuns, de forma segura, controlada e compatível com a privacidade. A correspondência de segmentos usa padrões de privacidade da Platform e identificadores pessoais, como emails com hash, números de telefone com hash e identificadores de dispositivos, como IDFAs e GAIDs. Para obter mais informações, consulte [Visão geral da correspondência de segmentos](../../segmentation/ui/segment-match/overview.md). |
 
-Para obter mais informações sobre [!DNL Segmentation Service], consulte o [Visão geral da segmentação](../../segmentation/home.md).
+Para obter mais informações sobre o [!DNL Segmentation Service], consulte a [Visão geral de segmentação](../../segmentation/home.md).
 
-## Fontes {#sources}
+## Origens {#sources}
 
-O Adobe Experience Platform pode assimilar dados de fontes externas e, ao mesmo tempo, estruturar, rotular e aprimorar esses dados usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, software de terceiros e seu sistema de CRM.
+O Adobe Experience Platform pode assimilar dados de fontes externas e, ao mesmo tempo, estruturar, rotular e aprimorar esses dados usando os serviços da plataforma. É possível assimilar dados de várias origens, como aplicativos da Adobe, do armazenamento na nuvem, um software de terceiros e do seu sistema de CRM.
 
 A Experience Platform fornece uma API RESTful e uma interface interativa que permite configurar conexões de origem para vários provedores de dados com facilidade. Essas conexões de origem permitem autenticar e conectar a sistemas de armazenamento externos e serviços de CRM, definir períodos para execuções de assimilação e gerenciar a taxa de transferência de assimilação de dados.
 

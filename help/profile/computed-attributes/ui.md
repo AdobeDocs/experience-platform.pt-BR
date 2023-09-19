@@ -1,15 +1,19 @@
 ---
 title: Guia da interface de atributos computados
 description: Saiba como criar, exibir e atualizar atributos computados usando a interface do usuário do Adobe Experience Platform.
-source-git-commit: 7ed473750b673eefd84b8d727043ad6ea35c3a8e
+source-git-commit: 631b67eb6609381235113009acefaf0d0cd8063c
 workflow-type: tm+mt
-source-wordcount: '1439'
+source-wordcount: '1485'
 ht-degree: 1%
 
 ---
 
 
 # Guia da interface de atributos computados
+
+>[!NOTE]
+>
+>Para obter acesso a atributos computados, você precisará ter as permissões apropriadas (**Exibir atributos computados** e **Gerenciar atributos computados**). Para obter mais informações sobre as permissões necessárias, leia a [documentação de controle de acesso](../../access-control/home.md). Para saber como aplicar essas permissões, leia o [guia de gerenciamento de permissões](../../access-control/ui/permissions.md).
 
 No Adobe Experience Platform, os atributos computados são funções usadas para agregar dados no nível do evento em atributos no nível do perfil. Essas funções são computadas automaticamente para que possam ser usadas na segmentação, ativação e personalização.
 

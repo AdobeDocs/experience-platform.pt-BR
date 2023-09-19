@@ -1,9 +1,9 @@
 ---
 title: Perguntas frequentes sobre atributos computados
 description: Descubra respostas para perguntas frequentes sobre o uso de atributos computados.
-source-git-commit: fb5d3088b9fb330153bf64125df2f739eee80518
+source-git-commit: 631b67eb6609381235113009acefaf0d0cd8063c
 workflow-type: tm+mt
-source-wordcount: '848'
+source-wordcount: '870'
 ht-degree: 0%
 
 ---
@@ -12,6 +12,10 @@ ht-degree: 0%
 # Perguntas frequentes
 
 No Adobe Experience Platform, os atributos computados são funções usadas para agregar dados no nível do evento em atributos no nível do perfil. Essas funções são computadas automaticamente para que possam ser usadas na segmentação, ativação e personalização. Veja a seguir uma lista das perguntas frequentes sobre atributos computados.
+
+## Como faço para obter acesso a atributos computados?
+
+Para obter acesso a atributos computados, você precisará ter as permissões apropriadas (**Exibir atributos computados** e **Gerenciar atributos computados**). Para obter mais informações sobre as permissões necessárias, leia a [documentação de controle de acesso](../../access-control/home.md). Para saber como aplicar essas permissões, leia o [guia de gerenciamento de permissões](../../access-control/ui/permissions.md).
 
 ## Quais conjuntos de dados contribuem para os cálculos de atributos calculados?
 
@@ -76,10 +80,6 @@ Como qualquer outro atributo de perfil, os atributos calculados estão disponív
 ## Como os rótulos de uso de dados são aplicados em atributos calculados?
 
 Os atributos calculados derivam automaticamente rótulos de uso de dados dos campos e conjuntos de dados de origem que foram usados para definir os atributos calculados. Isso garante que seus dados comportamentais sejam usados corretamente.
-
-## Como faço para obter atributos computados de acesso?
-
-Para obter acesso a atributos computados, você precisará ter as permissões apropriadas. Para obter mais informações sobre as permissões necessárias, leia a [documentação de controle de acesso](../../access-control/home.md).
 
 ## Como usar atributos computados com o Adobe Journey Optimizer?
 

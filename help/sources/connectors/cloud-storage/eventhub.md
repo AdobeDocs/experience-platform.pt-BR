@@ -3,7 +3,7 @@ title: Visão geral do conector de origem dos Hubs de eventos do Azure
 description: Saiba como conectar os Hubs de Eventos do Azure ao Adobe Experience Platform usando APIs ou a interface do usuário.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: b4d4bc7f-2241-482d-a5c2-4422c31705bf
-source-git-commit: 7240f96cb30e79add500a1957d93062eecd79ee2
+source-git-commit: 087100b23f95cef527a507fb11440467feb78c9e
 workflow-type: tm+mt
 source-wordcount: '538'
 ht-degree: 0%
@@ -107,7 +107,7 @@ Consulte a lista abaixo para ver as diferentes regiões das sub-redes da Platfor
     "virtualNetworkRules": [
       {
         "subnet": {
-          "id": "/subscriptions/1618ef18-9edc-48bf-88dd-61cc979629b5/resourceGroups/ethos_12_prod_aus5_network/providers/Microsoft.Network/virtualNetworks/ethos_12_prod_aus5_network_10_21_116_0_22/subnets/ethos_12_prod_aus5_network_10_21_116_0_22"
+          "id": "/subscriptions/1618ef18-9edc-48bf-88dd-61cc979629b5/resourceGroups/ethos_12_prod_aus5_network/providers/Microsoft.Network/virtualNetworks/ethos_12_prod_aus5-vnet/subnets/ethos_12_prod_aus5_network_10_21_116_0_22"
         },
         "ignoreMissingVnetServiceEndpoint": true
       },

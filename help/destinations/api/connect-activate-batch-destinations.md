@@ -5,26 +5,32 @@ title: Conectar-se a destinos em lote e ativar dados usando a API do Serviço de
 description: Instruções passo a passo para usar a API do Serviço de fluxo para criar um armazenamento em nuvem em lote ou destino de marketing por email no Experience Platform e ativar dados
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 9c07664873f649645db57a9a025277f515333b1e
 workflow-type: tm+mt
-source-wordcount: '3399'
+source-wordcount: '3446'
 ht-degree: 2%
 
 ---
 
-# Conectar-se a destinos em lote e ativar dados usando a API do Serviço de fluxo
+# Conecte-se aos destinos de marketing por email baseado em arquivo e ative os dados usando a API do Serviço de fluxo
 
 >[!IMPORTANT]
 > 
->Para se conectar a um destino, é necessário o **[!UICONTROL Gerenciar destinos]** [permissão de controle de acesso](/help/access-control/home.md#permissions).
+>* Para se conectar a um destino, é necessário o **[!UICONTROL Gerenciar destinos]** [permissão de controle de acesso](/help/access-control/home.md#permissions).
 >
->Para ativar os dados, é necessário **[!UICONTROL Gerenciar destinos]**, **[!UICONTROL Ativar destinos]**, **[!UICONTROL Exibir perfis]**, e **[!UICONTROL Exibir segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions).
+>* Para ativar os dados, é necessário **[!UICONTROL Gerenciar destinos]**, **[!UICONTROL Ativar destinos]**, **[!UICONTROL Exibir perfis]**, e **[!UICONTROL Exibir segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions).
+>
+>* Para exportar *identidades*, você precisará do **[!UICONTROL Exibir gráfico de identidade]** [permissão de controle de acesso](/help/access-control/home.md#permissions). <br> ![Selecione o namespace de identidade destacado no fluxo de trabalho para ativar públicos para destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecione o namespace de identidade destacado no fluxo de trabalho para ativar públicos para destinos."){width="100" zoomable="yes"}
 >
 >Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
 
-Este tutorial demonstra como usar a API de serviço de fluxo para criar um lote [armazenamento na nuvem](../catalog/cloud-storage/overview.md) ou [destino de marketing por email](../catalog/email-marketing/overview.md), crie um fluxo de dados para o destino recém-criado e exporte dados para o destino recém-criado por meio de arquivos CSV.
+Este tutorial demonstra como usar a API de serviço de fluxo para criar uma API baseada em arquivo [destino de marketing por email](../catalog/email-marketing/overview.md), crie um fluxo de dados para o destino recém-criado e exporte dados para o destino recém-criado por meio de arquivos CSV.
 
-Este tutorial usa o [!DNL Adobe Campaign] destino em todos os exemplos, mas as etapas são idênticas para todos os destinos de armazenamento em nuvem em lote e marketing por email.
+>[!TIP]
+> 
+>Para saber como ativar dados para destinos de armazenamento na nuvem usando a API do Serviço de fluxo, leia a [tutorial de API dedicado](/help/destinations/api/activate-segments-file-based-destinations.md).
+
+Este tutorial usa o [!DNL Adobe Campaign] destino em todos os exemplos, mas as etapas são idênticas para destinos de marketing por email baseados em arquivo.
 
 ![Visão geral - as etapas para criar um destino e ativar públicos](../assets/api/email-marketing/overview.png)
 
@@ -123,12 +129,9 @@ Para sua referência, a tabela abaixo contém as IDs de especificação da conex
 | Destino | ID de especificação da conexão |
 ---------|----------|
 | [!DNL Adobe Campaign] | `0b23e41a-cb4a-4321-a78f-3b654f5d7d97` |
-| [!DNL Amazon S3] | `4890fc95-5a1f-4983-94bb-e060c08e3f81` |
-| [!DNL Azure Blob] | `e258278b-a4cf-43ac-b158-4fa0ca0d948b` |
 | [!DNL Oracle Eloqua] | `c1e44b6b-e7c8-404b-9031-58f0ef760604` |
 | [!DNL Oracle Responsys] | `a5e28ddf-e265-426e-83a1-9d03a3a6822b` |
 | [!DNL Salesforce Marketing Cloud] | `f599a5b3-60a7-4951-950a-cc4115c7ea27` |
-| SFTP | `64ef4b8b-a6e0-41b5-9677-3805d1ee5dd0` |
 
 {style="table-layout:auto"}
 
@@ -1241,7 +1244,7 @@ Os endpoints de API neste tutorial seguem os princípios gerais de mensagem de e
 
 ## Próximas etapas {#next-steps}
 
-Ao seguir este tutorial, você conectou com sucesso o Platform a um de seus destinos preferidos de armazenamento em nuvem em lote ou marketing por email e configurou um fluxo de dados para o respectivo destino para exportar arquivos de dados. Os dados de saída agora podem ser usados no destino para campanhas por email, publicidade direcionada e muitos outros casos de uso. Consulte as seguintes páginas para obter mais detalhes, como editar fluxos de dados existentes usando a API do Serviço de fluxo:
+Ao seguir este tutorial, você conectou com sucesso o Platform a um dos seus destinos de marketing por email baseados em arquivos e configurou um fluxo de dados para o respectivo destino para exportar arquivos de dados. Os dados de saída agora podem ser usados no destino para campanhas por email, publicidade direcionada e muitos outros casos de uso. Consulte as seguintes páginas para obter mais detalhes, como editar fluxos de dados existentes usando a API do Serviço de fluxo:
 
 * [Visão geral dos destinos](../home.md)
 * [Visão geral do Catálogo de destinos](../catalog/overview.md)

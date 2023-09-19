@@ -3,9 +3,9 @@ title: LiveRamp - Conexão de distribuição
 description: Saiba como usar o LiveRamp - Conector de distribuição para ativar públicos-alvo integrados anteriormente no LiveRamp para outros destinos de publicidade.
 hide: true
 hidefromtoc: true
-source-git-commit: c04c7ff4f1ab45d944f4ab516d7842df536fae40
+source-git-commit: 324f662dcc9718df6c81c47874c6b30235a74601
 workflow-type: tm+mt
-source-wordcount: '1475'
+source-wordcount: '1469'
 ht-degree: 40%
 
 ---
@@ -140,7 +140,9 @@ Para configurar detalhes para o destino, preencha os campos obrigatórios e opci
 >id="platform_destinations_liveramp_distribution_agreement"
 >title="Contrato de termos de destino de dados do anunciante"
 >abstract="Digite `I AGREE` para confirmar o reconhecimento e a aceitação dos termos de dados do anunciante Disney."
->additional-url="https://www.disneyadvertising.com/ADVERTISER-DATA-DESTINATION-TERMS/" text="Leia o contrato"
+
+<!-- 
+>additional-url="https://www.disneyadvertising.com/ADVERTISER-DATA-DESTINATION-TERMS/" text="Read the agreement" -->
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_disney_client"

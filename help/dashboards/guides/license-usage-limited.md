@@ -5,14 +5,19 @@ description: A Adobe Experience Platform fornece um painel por meio do qual voc�
 type: Documentation
 hide: true
 hidefromtoc: true
-source-git-commit: 25f57b1bfbcb2ec95f88afb69386a10deb600125
+source-git-commit: 6a69ecebe67a156d67a324581e5b96699b96d2e6
 workflow-type: tm+mt
-source-wordcount: '1495'
+source-wordcount: '1553'
 ht-degree: 1%
 
 ---
 
 # Painel de uso da licença (versão limitada) {#license-usage-dashboard-limited-release}
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseUsage"
+>title="Painel de uso da licença"
+>abstract="O painel de uso da licença oferece informações sobre os produtos Adobe Experience Platform que você adquiriu. A visão geral do painel exibe as métricas principais de seus produtos, incluindo o uso de cada uma das métricas principais, bem como a quantidade de licença contratada. O espaço de trabalho de detalhes exibe um detalhamento das métricas para cada produto em sandboxes específicas."
 
 >[!IMPORTANT]
 >

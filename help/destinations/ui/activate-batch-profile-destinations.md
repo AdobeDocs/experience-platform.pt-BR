@@ -4,9 +4,9 @@ title: Ativar públicos para destinos de exportação de perfil em lote
 type: Tutorial
 description: Saiba como ativar os públicos-alvo no Adobe Experience Platform enviando-os para destinos com base em perfil de lote.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: afcb5f80edaa4d68ba167123feb2ba9060469243
+source-git-commit: 99ab9ed562d1959dc2bc801d563cb61d89bbde75
 workflow-type: tm+mt
-source-wordcount: '3669'
+source-wordcount: '3707'
 ht-degree: 11%
 
 ---
@@ -27,6 +27,11 @@ ht-degree: 11%
 Este artigo explica o fluxo de trabalho necessário para ativar públicos-alvo em destinos baseados em perfil de lote do Adobe Experience Platform, como destinos de armazenamento em nuvem e marketing por email.
 
 ## Pré-requisitos {#prerequisites}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_export_arrays_flat_files"
+>title="(Beta) Suporte a arrays de exportação"
+>abstract="(Beta) Exporte matrizes de valores primitivos do Experience Platform para o destino de armazenamento na nuvem desejado. Este texto será atualizado com mais informações. <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/license-usage-limited.html?lang=en#available-metrics">Saiba mais</a>. "
 
 Para ativar públicos para destinos, você deve ter o [conectado a um destino](./connect-destination.md). Se ainda não tiver feito isso, acesse o [catálogo de destinos](../catalog/overview.md), navegue pelos destinos compatíveis e configure o destino que deseja usar.
 

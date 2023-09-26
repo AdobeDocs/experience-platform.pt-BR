@@ -4,10 +4,10 @@ user-guide-title: Ajuda da higiene de dados
 breadcrumb-title: Guia de higiene de dados
 user-guide-description: Exclua registros individuais e programe as expirações dos conjuntos de dados na Experience Platform para limpeza de dados, remoção de dados anônimos e minimização de dados.
 feature: Data Hygiene
-source-git-commit: a20afcd95d47e38ccdec9fba9e772032e212d7a4
+source-git-commit: 0deb861d016fc99cfc1a2b75a08800dac7d208f4
 workflow-type: tm+mt
-source-wordcount: '54'
-ht-degree: 50%
+source-wordcount: '55'
+ht-degree: 52%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 50%
    * [Visão geral](./ui/overview.md)
    * [Procurar ordens de trabalho existentes](./ui/browse.md)
    * [Gerenciar expirações do conjunto de dados](./ui/dataset-expiration.md)
-   * [Excluir registros](./ui/record-delete.md)
+   * [(Beta) Excluir registros](./ui/record-delete.md)
 * API de higiene de dados {#api}
    * [Visão geral](./api/overview.md)
    * [Expirações do conjunto de dados](./api/dataset-expiration.md)

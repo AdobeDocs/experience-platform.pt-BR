@@ -1,60 +1,63 @@
 ---
 title: Excluir Registros
 description: Saiba como excluir registros na interface do Adobe Experience Platform.
-exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
 hide: true
 hidefromtoc: true
-source-git-commit: a20afcd95d47e38ccdec9fba9e772032e212d7a4
+source-git-commit: ccb2236fa169c26ef2f75d26776eee9f0122e92a
 workflow-type: tm+mt
-source-wordcount: '1184'
-ht-degree: 10%
+source-wordcount: '1493'
+ht-degree: 8%
 
 ---
 
-# Excluir registros
+# [!BADGE Beta]{type=Informative} Excluir registros {#record-delete}
 
-A variável [[!UICONTROL Higiene de dados] espaço de trabalho](./overview.md) na interface do usuário do Adobe Experience Platform, é possível excluir registros que participam do Serviço de identidade e do Perfil do cliente em tempo real. Esses registros podem ser vinculados a consumidores individuais ou a qualquer outra entidade incluída no gráfico de identidade.
+Use o [[!UICONTROL Ciclo de vida dos dados] espaço de trabalho](./overview.md) para excluir registros no Adobe Experience Platform com base em suas identidades principais. Esses registros podem ser vinculados a consumidores individuais ou a qualquer outra entidade incluída no gráfico de identidade.
 
 >[!IMPORTANT]
->
->As solicitações de exclusão de registro só estão disponíveis para organizações que compraram **Adobe Healthcare Shield**.
->
->
+> 
+>O recurso de Exclusão de registro está atualmente na versão beta e só está disponível em um **versão limitada**. Não está disponível para todos os clientes. As solicitações de exclusão de registro só estão disponíveis para organizações na versão limitada.
+> 
+> 
 >As exclusões de registros devem ser usadas para limpeza de dados, remoção de dados anônimos ou minimização de dados. Eles são **não** a ser usado para solicitações de direitos do titular dos dados (conformidade) como relacionadas a regulamentos de privacidade, como o Regulamento Geral sobre a Proteção de Dados (GDPR). Para todos os casos de uso de conformidade, use [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) em vez disso.
 
-## Pré-requisitos
+## Pré-requisitos {#prerequisites}
 
 A exclusão de registros requer um entendimento prático de como os campos de identidade funcionam no Experience Platform. Especificamente, você deve saber os valores de identidade principais das entidades cujos registros deseja excluir, dependendo do conjunto de dados (ou conjuntos de dados) do qual você está excluindo.
 
 Consulte a seguinte documentação para obter mais informações sobre identidades na Platform:
 
 * [Serviço de identidade da Adobe Experience Platform](../../identity-service/home.md): une as identidades em dispositivos e sistemas, vinculando conjuntos de dados com base nos campos de identidade definidos pelos esquemas XDM aos quais estão em conformidade.
-   * [Namespaces de identidade](../../identity-service/namespaces.md): os namespaces de identidade definem os diferentes tipos de informações de identidade que podem se relacionar a uma única pessoa e são um componente obrigatório para cada campo de identidade.
-* [Perfil do cliente em tempo real](../../profile/home.md): aproveita os gráficos de identidade para fornecer perfis de consumidor unificados com base em dados agregados de várias fontes, atualizados em tempo quase real.
+* [Namespaces de identidade](../../identity-service/namespaces.md): os namespaces de identidade definem os diferentes tipos de informações de identidade que podem se relacionar a uma única pessoa e são um componente obrigatório para cada campo de identidade.
+* [Perfil do cliente em tempo real](../../profile/home.md): usa gráficos de identidade para fornecer perfis de consumidor unificados com base em dados agregados de várias fontes, atualizados em tempo quase real.
 * [Experience Data Model (XDM)](../../xdm/home.md): fornece definições e estruturas padrão para dados da Platform por meio do uso de esquemas. Todos os conjuntos de dados da Platform estão em conformidade com um esquema XDM específico, e o esquema define quais campos são identidades.
-   * [Campos de identidade](../../xdm/ui/fields/identity.md): saiba como um campo de identidade é definido em um esquema XDM.
+* [Campos de identidade](../../xdm/ui/fields/identity.md): saiba como um campo de identidade é definido em um esquema XDM.
 
-## Criar uma nova solicitação
+## Criar uma solicitação {#create-request}
 
-Para iniciar o processo, selecione **[!UICONTROL Criar solicitação]** na página principal do espaço de trabalho.
+Para iniciar o processo, selecione **[!UICONTROL Ciclo de vida dos dados]** na navegação à esquerda da interface do usuário da Platform. A variável [!UICONTROL Solicitações de ciclo de vida de dados] espaço de trabalho é exibido. Em seguida, selecione **[!UICONTROL Criar solicitação]** na página principal do espaço de trabalho.
 
-![Imagem mostrando o [!UICONTROL Criar solicitação] botão sendo selecionado](../images/ui/record-delete/create-request-button.png)
+![A variável [!UICONTROL Solicitações de ciclo de vida de dados] espaço de trabalho com [!UICONTROL Criar solicitação] selecionado.](../images/ui/record-delete/create-request-button.png)
 
-A caixa de diálogo de criação de solicitação é exibida. Por padrão, a variável **[!UICONTROL Excluir consumidor]** estiver selecionada na caixa de diálogo **[!UICONTROL Ação solicitada]** seção. Deixe essa opção selecionada.
+O workflow de criação da solicitação é exibido. Por padrão, a variável **[!UICONTROL Excluir registro]** estiver selecionada na caixa de diálogo **[!UICONTROL Ação solicitada]** seção. Deixe essa opção selecionada.
 
-![Imagem mostrando a opção de exclusão de consumidor selecionada na caixa de diálogo de criação](../images/ui/record-delete/consumer-action.png)
+>[!IMPORTANT]
+> 
+>Como parte das alterações contínuas para melhorar a eficiência e reduzir o custo das operações do conjunto de dados, as organizações que foram movidas para o formato Delta podem excluir dados do Serviço de identidade, do Perfil do cliente em tempo real e do data lake. Esse tipo de usuário é chamado de delta-migrado. Os usuários de organizações que receberam a migração delta podem optar por excluir registros de um único conjunto de dados ou de todos eles. Os usuários de organizações que não foram migradas pelo delta não podem optar por excluir registros de um único conjunto de dados ou de todos os conjuntos de dados, como visto na imagem abaixo. Nesse caso, prossiga para o [fornecer identidades](#provide-identities) seção do guia.
 
-## Selecionar conjuntos de dados
+![O fluxo de trabalho de criação da solicitação com o [!UICONTROL Excluir registro] selecionada e realçada.](../images/ui/record-delete/delete-record.png)
 
-No **[!UICONTROL Detalhes do consumidor]** , a próxima etapa é determinar se você deseja excluir registros de um único conjunto de dados ou de todos os conjuntos de dados.
+## Selecionar conjuntos de dados {#select-dataset}
 
-Se você escolher **[!UICONTROL Selecionar conjunto de dados]**, selecione o ícone do banco de dados (![Imagem do ícone do banco de dados](../images/ui/record-delete/database-icon.png)) e uma caixa de diálogo é exibida permitindo selecionar o conjunto de dados desejado na lista.
+A próxima etapa é determinar se você deseja excluir registros de um único conjunto de dados ou de todos os conjuntos de dados. Se essa opção não estiver disponível para você, continue para a [fornecer identidades](#provide-identities) seção do guia.
 
-![Imagem mostrando a caixa de diálogo de seleção do conjunto de dados](../images/ui/record-delete/select-dataset.png)
+No **[!UICONTROL Detalhes do registro]** use o botão de opção para selecionar entre um conjunto de dados específico e todos os conjuntos de dados. Se você escolher **[!UICONTROL Selecionar conjunto de dados]**, prossiga para selecionar o ícone do banco de dados (![O ícone do banco de dados](../images/ui/record-delete/database-icon.png)) para abrir uma caixa de diálogo que fornece uma lista de conjuntos de dados disponíveis. Selecione o conjunto de dados desejado na lista seguida por **[!UICONTROL Concluído]**.
+
+![A variável [!UICONTROL Selecionar conjunto de dados] com um conjunto de dados selecionado e [!UICONTROL Concluído] destacado.](../images/ui/record-delete/select-dataset.png)
 
 Se desejar excluir registros de todos os conjuntos de dados, selecione **[!UICONTROL Todos os conjuntos de dados]**.
 
-![Imagem mostrando o [!UICONTROL Todos os conjuntos de dados] opção selecionada](../images/ui/record-delete/all-datasets.png)
+![A variável [!UICONTROL Selecionar conjunto de dados] com a [!UICONTROL Todos os conjuntos de dados] opção selecionada.](../images/ui/record-delete/all-datasets.png)
 
 >[!NOTE]
 >
@@ -80,7 +83,7 @@ Como todos os campos de identidade na Platform, uma identidade primária é comp
 >
 >Se você não souber a identidade principal de um conjunto de dados específico, poderá encontrá-la na interface do usuário da plataforma. No **[!UICONTROL Conjuntos de dados]** selecione o conjunto de dados em questão na lista. Na página de detalhes do conjunto de dados, passe o mouse sobre o nome do esquema do conjunto de dados no painel direito. A identidade principal é exibida junto com o nome e a descrição do schema.
 >
->![Imagem que mostra a identidade principal de um conjunto de dados destacado na interface](../images/ui/record-delete/dataset-primary-identity.png)
+>![O painel Conjuntos de dados com um conjunto de dados selecionado e uma caixa de diálogo de esquema aberta no painel Detalhes do conjunto de dados. A ID primária do conjunto de dados é realçada.](../images/ui/record-delete/dataset-primary-identity.png)
 
 Se você estiver excluindo registros de um único conjunto de dados, todas as identidades fornecidas deverão ser do mesmo tipo, já que um conjunto de dados só pode ter uma identidade principal. Se estiver excluindo de todos os conjuntos de dados, você poderá incluir vários tipos de identidade, pois conjuntos de dados diferentes podem ter identidades principais diferentes.
 
@@ -93,7 +96,7 @@ Há duas opções para fornecer identidades ao excluir registros:
 
 Para fazer upload de um arquivo JSON, você pode arrastar e soltar o arquivo na área fornecida ou selecionar **[!UICONTROL Escolher arquivos]** para procurar e selecionar no diretório local.
 
-![Imagem que mostra os métodos para fazer upload do JSON na interface](../images/ui/record-delete/upload-json.png)
+![O fluxo de trabalho de criação da solicitação com a interface escolher arquivos e arrastar e soltar para fazer upload de arquivos JSON foi realçado.](../images/ui/record-delete/upload-json.png)
 
 O arquivo JSON deve ser formatado como uma matriz de objetos, cada objeto representando uma identidade.
 
@@ -121,34 +124,40 @@ Depois que o arquivo for carregado, você poderá continuar para [enviar a solic
 
 Para inserir identidades manualmente, selecione **[!UICONTROL Adicionar identidade]**.
 
-![Imagem mostrando o [!UICONTROL Adicionar identidade] botão sendo selecionado](../images/ui/record-delete/add-identity.png)
+![O fluxo de trabalho de criação da solicitação com o [!UICONTROL Adicionar identidade] opção realçada.](../images/ui/record-delete/add-identity.png)
 
 São exibidos controles que permitem inserir identidades, uma de cada vez. Em **[!UICONTROL Identidade principal]**, use o menu suspenso para selecionar o tipo de identidade. Em **[!UICONTROL Valor de identidade]**, fornecem o valor de identidade principal do registro.
 
-![Imagem mostrando um campo de identidade adicionado manualmente](../images/ui/record-delete/identity-added.png)
+![O fluxo de trabalho de criação da solicitação com um campo de identidade adicionado manualmente.](../images/ui/record-delete/identity-added.png)
 
-Para adicionar mais identidades, selecione o ícone de adição (![Imagem do ícone de adição](../images/ui/record-delete/plus-icon.png)) ao lado de uma das linhas ou selecione **[!UICONTROL Adicionar identidade]**.
+Para adicionar mais identidades, selecione o ícone de adição (![Um ícone de adição.](../images/ui/record-delete/plus-icon.png)) ao lado de uma das linhas ou selecione **[!UICONTROL Adicionar identidade]**.
 
-![Imagem que mostra como adicionar mais identidades à solicitação](../images/ui/record-delete/more-identities.png)
+![O fluxo de trabalho de criação da solicitação com o ícone de adição e o ícone de adição de identidade é realçado.](../images/ui/record-delete/more-identities.png)
 
 ## Enviar a solicitação (#submit)
 
 Quando terminar de adicionar identidades à solicitação, em **[!UICONTROL Configurações de solicitação]**, forneça um nome e uma descrição opcional para a solicitação antes de selecionar **[!UICONTROL Enviar]**.
 
-![Imagem mostrando o [!UICONTROL Enviar] botão sendo selecionado](../images/ui/record-delete/submit.png)
+>[!IMPORTANT]
+> 
+>Há diferentes limites para o número total de exclusões de registros de identidade únicos que podem ser enviadas a cada mês. Esses limites são baseados no seu contrato de licença. As organizações que compraram todas as edições do Adobe Real-time Customer Data Platform e do Adobe Journey Optimizer podem enviar até 100.000 exclusões de registro de identidade a cada mês. Organizações que compraram **Adobe Healthcare Shield** ou **Proteção de segurança e privacidade do Adobe** O pode enviar até 600.000 exclusões de registros de identidade a cada mês.
 
-Você será solicitado a confirmar a lista de identidades cujos dados deseja excluir. Selecionar **[!UICONTROL Enviar]** para confirmar a seleção.
+![As configurações de solicitação do [!UICONTROL Nome] e [!UICONTROL Descrição] campos com [!UICONTROL Enviar] destacado.](../images/ui/record-delete/submit.png)
 
-![Imagem mostrando a caixa de diálogo de confirmação](../images/ui/record-delete/confirm-request.png)
+A [!UICONTROL Confirmar solicitação] aparece para indicar que as identidades não podem ser recuperadas após a exclusão. Selecionar **[!UICONTROL Enviar]** para confirmar a lista de identidades cujos dados você deseja excluir.
 
-Depois que a solicitação é submetida, uma ordem de serviço é criada e é exibida no [!UICONTROL Consumidor] guia do [!UICONTROL Higiene de dados] espaço de trabalho. Aqui, você pode monitorar o status da ordem de serviço à medida que ela processa a solicitação.
+![A variável [!UICONTROL Confirmar solicitação] diálogo.](../images/ui/record-delete/confirm-request.png)
+
+Depois que a solicitação é submetida, uma ordem de serviço é criada e é exibida no [!UICONTROL Gravar] guia do [!UICONTROL Ciclo de vida dos dados] espaço de trabalho. Aqui, você pode monitorar o status da ordem de serviço à medida que ela processa a solicitação.
 
 >[!NOTE]
 >
 >Consulte a seção de visão geral em [linhas do tempo e transparência](../home.md#record-delete-transparency) para obter detalhes sobre como as exclusões de registro são processadas após serem executadas.
 
+![A variável [!UICONTROL Gravar] guia do [!UICONTROL Ciclo de vida dos dados] espaço de trabalho com a nova solicitação realçada.](../images/ui/record-delete/request-log.png)
+
 ## Próximas etapas
 
-Este documento abordou como excluir registros na interface do usuário do Experience Platform. Para obter informações sobre como executar outras tarefas de higiene de dados na interface do usuário, consulte [visão geral da interface da higiene de dados](./overview.md).
+Este documento abordou como excluir registros na interface do usuário do Experience Platform. Para obter informações sobre como executar outras tarefas de gerenciamento do ciclo de vida dos dados na interface, consulte [Visão geral da interface do usuário do ciclo de vida dos dados](./overview.md).
 
 Para saber como excluir registros usando a API de higiene de dados, consulte o [guia de ponto de extremidade de ordem de trabalho](../api/workorder.md).

@@ -3,10 +3,10 @@ title: Conecte sua conta de transmissão do Snowflake à Adobe Experience Platfo
 description: Saiba como conectar o Adobe Experience Platform ao Snowflake Streaming usando a API do Serviço de fluxo.
 badgeBeta: label="Beta" type="Informative"
 badgeUltimate: label="Ultimate" type="Positive"
-source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
+source-git-commit: f2c392704e0404aaff2ad569e388241c06fba902
 workflow-type: tm+mt
-source-wordcount: '830'
-ht-degree: 3%
+source-wordcount: '867'
+ht-degree: 4%
 
 ---
 
@@ -185,7 +185,8 @@ curl -X POST \
       "params": {
           "tableName": "ACME",
           "timestampColumn": "dOb",
-          "backfill": "true"
+          "backfill": "true",
+          "timezoneValue": "PST"
       }
   }'
 ```
@@ -197,6 +198,7 @@ curl -X POST \
 | `params.tableName` | O nome da tabela no [!DNL Snowflake] banco de dados que você deseja trazer para a Platform. |
 | `params.timestampColumn` | O nome da coluna de carimbo de data e hora que será usada para buscar valores incrementais. |
 | `params.backfill` | Um sinalizador booleano que determina se os dados são obtidos do início (época 0) ou do momento em que a origem é iniciada. Para obter mais informações sobre esse valor, leia a [[!DNL Snowflake] visão geral da fonte de transmissão](../../../../connectors/databases/snowflake-streaming.md). |
+| `params.timezoneValue` | O valor de fuso horário indica qual hora atual do fuso horário deve ser buscada ao consultar o [!DNL Snowflake] banco de dados. Esse parâmetro deve ser fornecido se a coluna de carimbo de data e hora na configuração estiver definida como `TIMESTAMP_NTZ`. Se não fornecido, `timezoneValue` O padrão é UTC. |
 
 **Resposta**
 

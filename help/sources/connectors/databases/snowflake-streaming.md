@@ -4,9 +4,9 @@ description: Saiba como criar uma conexão de origem e um fluxo de dados para as
 badgeBeta: label="Beta" type="Informative"
 badgeUltimate: label="Ultimate" type="Positive"
 last-substantial-update: 2023-05-25T00:00:00Z
-source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
+source-git-commit: 054175bd3f3aaab73c8cca249eaf1a9cdbc8deab
 workflow-type: tm+mt
-source-wordcount: '686'
+source-wordcount: '710'
 ht-degree: 1%
 
 ---
@@ -74,7 +74,8 @@ Para obter mais informações sobre o gerenciamento de funções e privilégios,
    * Você pode ativar um `backfill` sinalizador booleano para o [!DNL Snowflake] origem ao criar uma conexão de origem.
       * Se o preenchimento retroativo for definido como verdadeiro, o valor de timestamp.initial será definido como 0. Isso significa que os dados com uma coluna de carimbo de data e hora maior que 0 época são buscados.
       * Se o preenchimento retroativo for definido como falso, o valor de timestamp.initial será definido como -1. Isso significa que os dados com uma coluna de carimbo de data e hora maior que a hora atual (a hora em que a fonte começa a assimilar) são buscados.
-   * A coluna de carimbo de data e hora deve ser formatada como tipo: `TIMESTAMP_LTZ` ou `TIMESTAMP_NTZ`. Se a coluna de carimbo de data e hora estiver definida como `TIMESTAMP_NTZ`, os tipos devem ser armazenados em UTC no banco de dados.
+   * A coluna de carimbo de data e hora deve ser formatada como tipo: `TIMESTAMP_LTZ` ou `TIMESTAMP_NTZ`. Se a coluna de carimbo de data e hora estiver definida como `TIMESTAMP_NTZ`, o fuso horário correspondente no qual os valores são armazenados deve ser transmitido por meio da `timezoneValue` parâmetro. Se não fornecido, o valor padrão será UTC.
+      * `TIMESTAMP_TZ` não pode ser usada uma coluna de carimbo de data/hora ou em um mapeamento.
 
 ## Próximas etapas
 

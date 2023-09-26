@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Visão geral da assimilação de fluxo
 description: A assimilação de streaming para o Adobe Experience Platform fornece aos usuários um método para enviar dados de dispositivos cliente e do lado do servidor para o Experience Platform em tempo real.
 exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
-source-git-commit: 008537dffff4cc428de9070964446f4e7ebf039f
+source-git-commit: 5adcdf3108fbbaee9e81dc737ae67b563e4dbf1d
 workflow-type: tm+mt
 source-wordcount: '348'
 ht-degree: 4%
@@ -39,7 +39,7 @@ Para obter mais informações sobre como habilitar um conjunto de dados para [!D
 
 | Destino | Latência esperada |
 | --------- | ---------------- |
-| Perfil do cliente em tempo real | &lt; 1 minuto |
+| Perfil do cliente em tempo real | &lt; 15 minutos |
 | Data lake | &lt; 60 minutos |
 
 ## Orientação de solicitação por segundos (RPS) sobre assimilação de streaming

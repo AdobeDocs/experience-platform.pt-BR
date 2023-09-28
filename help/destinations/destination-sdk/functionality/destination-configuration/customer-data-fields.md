@@ -1,10 +1,10 @@
 ---
 description: Saiba como criar campos de entrada na interface do usuário do Experience Platform que permitem que os usuários especifiquem várias informações relevantes para conexão e exportação de dados para o seu destino.
 title: Campos de dados do cliente
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
+source-git-commit: cadffd60093eef9fb2dcf4562b1fd7611e61da94
 workflow-type: tm+mt
-source-wordcount: '1436'
-ht-degree: 2%
+source-wordcount: '1580'
+ht-degree: 5%
 
 ---
 
@@ -62,7 +62,7 @@ Ao criar seus próprios campos de dados do cliente, você pode usar os parâmetr
 | `enum` | String | Opcional | Renderiza o campo personalizado como um menu suspenso e lista as opções disponíveis para o usuário. |
 | `default` | String | Opcional | Define o valor padrão a partir de um `enum` lista. |
 | `hidden` | Booleano | Opcional | Indica se o campo de dados do cliente é mostrado na interface do usuário ou não. |
-| `unique` | Booleano | Opcional | Use esse parâmetro quando precisar criar um campo de dados do cliente cujo valor deve ser exclusivo em todos os fluxos de dados de destino configurados pela organização de um usuário. Por exemplo, a variável **[!UICONTROL Alias de integração]** no campo [Personalização personalizada](../../../catalog/personalization/custom-personalization.md) o destino deve ser exclusivo, o que significa que dois fluxos de dados separados para esse destino não podem ter o mesmo valor para esse campo. |
+| `unique` | Booleano | Opcional | use esse parâmetro quando precisar criar um campo de dados do cliente cujo valor deve ser exclusivo em todos os fluxos de dados de destino configurados pela organização de um usuário. Por exemplo, o campo **[!UICONTROL Alias de integração]** no destino [Personalização individual](../../../catalog/personalization/custom-personalization.md) deve ser exclusivo, o que significa que dois fluxos de dados separados para esse destino não podem ter o mesmo valor nesse campo. |
 | `readOnly` | Booleano | Opcional | Indica se o cliente pode ou não alterar o valor do campo. |
 
 {style="table-layout:auto"}
@@ -252,6 +252,93 @@ Para fazer isso, use o `namedEnum` conforme mostrado abaixo e configure um `defa
 ```
 
 ![Gravação de tela mostrando um exemplo de seletores suspensos criados com a configuração mostrada acima.](../../assets/functionality/destination-configuration/customer-data-fields-dropdown.gif)
+
+## Criar seletores suspensos dinâmicos para campos de dados do cliente {#dynamic-dropdown-selectors}
+
+Para situações em que você deseja chamar dinamicamente uma API e usar a resposta para preencher dinamicamente as opções em um menu suspenso, é possível usar um seletor suspenso dinâmico.
+
+Os seletores da lista suspensa dinâmica são idênticos aos [seletores de lista suspensa regular](#dropdown-selectors) na interface. A única diferença são os valores recuperados dinamicamente de uma API.
+
+Para criar um seletor suspenso dinâmico, você deve configurar dois componentes:
+
+**Etapa 1.** [Criar um servidor de destino](../../authoring-api/destination-server/create-destination-server.md#dynamic-dropdown-servers) com um `responseFields` para a chamada de API dinâmica, conforme mostrado abaixo.
+
+```json
+{
+   "name":"Server for dynamic dropdown",
+   "destinationServerType":"URL_BASED",
+   "urlBasedDestination":{
+      "url":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":" <--YOUR-API-ENDPOINT-PATH--> "
+      }
+   },
+   "httpTemplate":{
+      "httpMethod":"GET",
+      "headers":[
+         {
+            "header":"Authorization",
+            "value":{
+               "templatingStrategy":"PEBBLE_V1",
+               "value":"My Bearer Token"
+            }
+         },
+         {
+            "header":"x-integration",
+            "value":{
+               "templatingStrategy":"PEBBLE_V1",
+               "value":"{{customerData.integrationId}}"
+            }
+         },
+         {
+            "header":"Accept",
+            "value":{
+               "templatingStrategy":"NONE",
+               "value":"application/json"
+            }
+         }
+      ]
+   },
+   "responseFields":[
+      {
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"{% set list = [] %} {% for record in response.body %} {% set list = list|merge([{'name' : record.name, 'value' : record.id }]) %} {% endfor %}{{ {'list': list} | toJson | raw }}",
+         "name":"list"
+      }
+   ]
+}
+```
+
+**Etapa 2.** Use o `dynamicEnum` conforme mostrado abaixo. No exemplo abaixo, a variável `User` a lista suspensa é recuperada usando o servidor dinâmico.
+
+
+```json {line-numbers="true" highlight="13-21"}
+"customerDataFields": [
+  {
+    "name": "integrationId",
+    "title": "Integration ID",
+    "type": "string",
+    "isRequired": true
+  },
+  {
+    "name": "userId",
+    "title": "User",
+    "type": "string",
+    "isRequired": true,
+    "dynamicEnum": {
+      "queryParams": [
+        "integrationId"
+      ],
+      "destinationServerId": "<~dynamic-field-server-id~>",
+      "authenticationRule": "CUSTOMER_AUTHENTICATION",
+      "value": "$.list",
+      "responseFormat": "NAME_VALUE"
+    }
+  }
+]
+```
+
+Defina o `destinationServerId` parâmetro para a ID do servidor de destino criado na etapa 1. Você pode ver a ID do servidor de destino na resposta do [recuperar uma configuração do servidor de destino](../../authoring-api/destination-server/retrieve-destination-server.md) chamada à API.
 
 ## Criar campos condicionais de dados do cliente {#conditional-options}
 
@@ -483,7 +570,7 @@ Para saber mais sobre os outros componentes de destino, consulte os seguintes ar
 * [Autenticação do cliente](customer-authentication.md)
 * [Autenticação OAuth2](oauth2-authentication.md)
 * [Atributos da interface](ui-attributes.md)
-* [Configuração de esquema](schema-configuration.md)
+* [Configuração do esquema](schema-configuration.md)
 * [Configuração do namespace de identidade](identity-namespace-configuration.md)
 * [Configurações de mapeamento compatíveis](supported-mapping-configurations.md)
 * [Entrega de destino](destination-delivery.md)

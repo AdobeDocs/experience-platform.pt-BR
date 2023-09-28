@@ -1,9 +1,9 @@
 ---
 description: Esta página exemplifica a chamada à API usada para criar um servidor de destino por meio do Adobe Experience Platform Destination SDK.
 title: Criar uma configuração do servidor de destino
-source-git-commit: 03ec0e919304c9d46ef88d606eed9e12d1824856
+source-git-commit: cadffd60093eef9fb2dcf4562b1fd7611e61da94
 workflow-type: tm+mt
-source-wordcount: '1696'
+source-wordcount: '2039'
 ht-degree: 9%
 
 ---
@@ -844,6 +844,103 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes da configuraç�
 
 +++
 
+
+>[!ENDTABS]
+
+
+### Criar servidores de destino de lista suspensa dinâmica {#dynamic-dropdown-servers}
+
+Uso [menus suspensos dinâmicos](../../functionality/destination-configuration/customer-data-fields.md#dynamic-dropdown-selectors) para recuperar e preencher dinamicamente campos suspensos de dados do cliente, com base em sua própria API. Por exemplo, você pode recuperar uma lista de contas de usuário existentes que deseja usar para uma conexão de destino.
+
+Você precisa configurar um servidor de destino para menus suspensos dinâmicos antes de poder configurar o campo de dados do cliente da lista suspensa dinâmica.
+
+Consulte na guia abaixo um exemplo de servidor de destino usado para recuperar dinamicamente os valores a serem exibidos em um seletor suspenso, de uma API.
+
+A carga de exemplo abaixo inclui todos os parâmetros necessários para um servidor de esquema dinâmico.
+
+>[!BEGINTABS]
+
+>[!TAB Servidor de lista suspensa dinâmica]
+
+**Criar um servidor suspenso dinâmico**
+
+É necessário criar um servidor suspenso dinâmico semelhante ao mostrado abaixo ao configurar um destino que recupera os valores de um campo suspenso de dados do cliente do seu próprio ponto de acesso de API.
+
++++Solicitação
+
+```shell
+curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-servers \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
+ -d '
+{
+   "name":"Server for dynamic dropdown",
+   "destinationServerType":"URL_BASED",
+   "urlBasedDestination":{
+      "url":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"https://api.moviestar.com/data/{{customerData.users}}/items"
+      }
+   },
+   "httpTemplate":{
+      "httpMethod":"GET",
+      "headers":[
+         {
+            "header":"Authorization",
+            "value":{
+               "templatingStrategy":"PEBBLE_V1",
+               "value":"My Bearer Token"
+            }
+         },
+         {
+            "header":"x-integration",
+            "value":{
+               "templatingStrategy":"PEBBLE_V1",
+               "value":"{{customerData.integrationId}}"
+            }
+         },
+         {
+            "header":"Accept",
+            "value":{
+               "templatingStrategy":"NONE",
+               "value":"application/json"
+            }
+         }
+      ]
+   },
+   "responseFields":[
+      {
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"{% set list = [] %} {% for record in response.body %} {% set list = list|merge([{'name' : record.name, 'value' : record.id }]) %} {% endfor %}{{ {'list': list} | toJson | raw }}",
+         "name":"list"
+      }
+   ]
+}
+```
+
+| Parâmetro | Tipo | Descrição |
+| -------- | ----------- | ----------- |
+| `name` | String | *Obrigatório.* Representa um nome amigável do servidor suspenso dinâmico, visível somente para Adobe. |
+| `destinationServerType` | String | *Obrigatório.* Defina como `URL_BASED` para servidores suspensos dinâmicos. |
+| `urlBasedDestination.url.templatingStrategy` | String | *Obrigatório.* <ul><li>Uso `PEBBLE_V1` se o Adobe precisar transformar o URL no `value` abaixo. Use essa opção se você tiver um terminal como: `https://api.moviestar.com/data/{{customerData.region}}/items`. </li><li> Uso `NONE` se nenhuma transformação for necessária no lado do Adobe, por exemplo, se você tiver um terminal como: `https://api.moviestar.com/data/items`.</li></ul> |
+| `urlBasedDestination.url.value` | String | *Obrigatório.* Preencha o endereço do endpoint da API ao qual o Experience Platform deve se conectar e recupere os valores da lista suspensa. |
+| `httpTemplate.httpMethod` | String | *Obrigatório.* O método que o Adobe usará nas chamadas para o servidor. Para servidores suspensos dinâmicos, use `GET`. |
+| `httpTemplate.headers` | Objeto | *Opcional.l* Inclua todos os cabeçalhos necessários para se conectar ao servidor suspenso dinâmico. |
+| `responseFields.templatingStrategy` | String | *Obrigatório.* Use `PEBBLE_V1`. |
+| `responseFields.value` | String | *Obrigatório.* Essa string é o template de transformação com escape de caracteres que transforma a resposta recebida da API nos valores que serão exibidos na interface do usuário da Platform. <br> <ul><li> Para obter informações sobre como gravar o template, leia o [Uso da seção de modelos](../../functionality/destination-server/message-format.md#using-templating). </li><li> Para obter mais informações sobre o escape de caracteres, consulte o [RFC JSON padrão, seção sete](https://tools.ietf.org/html/rfc8259#section-7). |
+
+{style="table-layout:auto"}
+
++++
+
++++Resposta
+
+Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes da configuração do servidor de destino recém-criado.
+
++++
 
 >[!ENDTABS]
 

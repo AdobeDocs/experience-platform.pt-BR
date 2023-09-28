@@ -1,78 +1,47 @@
 ---
 title: Notas de versão da Adobe Experience Platform
-description: As notas de versão de agosto de 2023 do Adobe Experience Platform.
+description: As notas de versão de setembro de 2023 para o Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 384faa13154386ef2578da4c20ab47f171aefeda
+source-git-commit: 2492651fb03e0bfc5c9f68a9b063689a1b9001a3
 workflow-type: tm+mt
-source-wordcount: '1750'
-ht-degree: 38%
+source-wordcount: '907'
+ht-degree: 26%
 
 ---
 
 # Notas de versão da Adobe Experience Platform
 
-**Data de lançamento: 23 de agosto de 2023**
+**Data de lançamento: 28 de setembro de 2023**
 
-Atualizações dos recursos já existentes na Adobe Experience Platform:
+Novos recursos na Adobe Experience Platform:
 
-- [Real-Time Customer Data Platform](#rtcdp)
-- [Controle de acesso baseado em atributos](#abac)
-- [Painéis](#dashboards)
+- [Atributos computados](#computed-attributes)
+
+Atualizações dos recursos já existentes na Experience Platform:
+
+- [Alertas](#alerts)
 - [Coleção de dados](#data-collection)
-- [Assimilação de dados](#data-ingestion)
-- [Preparação de dados](#data-prep)
-- [Destinos](#destinations)
-- [Experience Data Model (XDM)](#xdm)
 - [Identity Service](#identity-service)
 - [Serviço de segmentação](#segmentation)
 - [Origens](#sources)
 
-## Real-Time Customer Data Platform {#rtcdp}
+## Atributos computados {#computed-attributes}
 
-Integrado à Experience Platform, a Real-time Customer Data Platform ([!DNL Real-Time CDP]) ajuda as empresas a unirem dados conhecidos e desconhecidos para ativar perfis de clientes com decisões inteligentes em toda a jornada do cliente.
+Os atributos computados permitem resumir facilmente os dados do evento em atributos de perfil por meio de uma interface intuitiva para segmentação, personalização e ativação avançadas com base em comportamento. Com esse recurso, você pode criar atributos computados de maneira automatizada, gerenciá-los e usá-los na segmentação, destinos do Real-Time CDP ou Adobe Journey Optimizer. Além disso, os atributos computados simplificam a segmentação e os fluxos de trabalho de jornada para ajudá-lo a fornecer experiências relevantes de maneira contínua. Para saber mais sobre atributos computados, leia a [visão geral dos atributos computados](../../profile/computed-attributes/overview.md).
 
-A [!DNL Real-Time CDP] combina várias fontes de dados corporativos para criar perfis de clientes em tempo real. Os segmentos criados a partir desses perfis podem ser enviados para destinos downstream com o fim de oferecer experiências de cliente personalizadas em todos os canais e dispositivos.
+## Alertas {#alerts}
 
-**Recursos novos ou atualizados**
-
-| Recurso | Descrição |
-| --- | --- |
-| Guia de caso de uso de reengajamento inteligente | A variável [Reengajamento inteligente](../../rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md) o guia de casos de uso fornece detalhes sobre como reconectar clientes que abandonaram uma conversão antes de concluí-la de forma inteligente e responsável. Este guia usa o seguinte exemplo de jornada para reengajar os clientes: <ul><li>Jornada de reengajamento - Direcionamento de clientes que abandonaram a navegação no produto.</li><li>Jornada de carrinho abandonada - Direcionamento de clientes que colocaram produtos no carrinho, mas ainda não concluíram a compra.</li><li>Jornada de confirmação de pedido - Foco nas compras de produtos</li></ul> Use o link de opções detalhadas de feedback, na parte inferior do [Guia de caso de uso de reengajamento inteligente](../../rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md) para fornecer feedback. |
-| Suporte a dados de parceiros | Execute marketing de funil superior no Real-Time CDP, com perfis de prospecto e IDs de parceiros fornecidos pelos parceiros para alcançar novos clientes e enriquecer seus dados primários: <ul><li>Aquisição de clientes e capacidade de endereçamento: use identificadores sem cookies e PII com hash de parceiros de dados de sua escolha para alcançar novos clientes na rede e reduzir a dependência de cookies de terceiros.</li><li>Marketing de funil completo em um único sistema: segmentação de autoatendimento, curadoria de público-alvo e ativação nativa para clientes potenciais e conhecidos em um único sistema.</li><li>Base de confiança: controle dados e perfis de parceiros com uso de dados patenteado, rotulagem, controles de acesso e muito mais para comercializar de forma responsável. Leia os seguintes guias de casos de uso para obter mais informações: Os guias de casos de uso de prospecção estão agora disponíveis. Leia os guias de caso de uso de prospecção para saber como contratar e adquirir novos clientes por meio de casos de uso de prospecção:<ul><li>[Prospecção](../../rtcdp/partner-data/prospecting.md)</li><li>[Personalização no local](../../rtcdp/partner-data/onsite-personalization.md)</li><li>[Suplementar perfis próprios](../../rtcdp/partner-data/supplement-first-party-profiles.md)</li><li>[Ativar públicos-alvo potenciais](../../destinations/ui/activate-prospect-audiences.md)</li></ul> |
-
-{style="table-layout:auto"}
-
-Para obter mais informações, leia a [Visão geral do Real-Time CDP](../../rtcdp/overview.md).
-
-## Controle de acesso baseado em atributos {#abac}
-
-O controle de acesso baseado em atributos é um recurso do Adobe Experience Platform que oferece às marcas preocupadas com a privacidade maior flexibilidade para gerenciar o acesso do usuário. Objetos individuais, como campos de esquema e segmentos, podem ser atribuídos a funções de usuário. Esse recurso permite conceder ou revogar o acesso a objetos individuais para usuários específicos da Platform em sua organização.
-
-Por meio do controle de acesso baseado em atributos, os administradores da sua organização podem controlar o acesso dos usuários a dados pessoais confidenciais (SPD), informações de identificação pessoal (PII) e outros tipos personalizados de dados em todos os fluxos de trabalho e recursos da plataforma. Os administradores podem definir funções de usuário que tenham acesso somente a campos e dados específicos que correspondam a esses campos.
+O Experience Platform permite assinar alertas baseados em eventos para várias atividades da Platform. É possível assinar diferentes regras de alerta por meio da [!UICONTROL Alertas] na interface do usuário da Platform e podem optar por receber mensagens de alerta na própria interface ou por notificações por email.
 
 **Recursos novos ou atualizados**
 
 | Recurso | Descrição |
 | --- | --- |
-| Configuração da sandbox da política de permissões | O novo [configuração de sandbox de políticas de permissão](../../access-control/abac/ui/policies.md) O recurso permite aplicar uma política de controle de acesso baseada em atributos em todas as sandboxes ou em um número selecionado de sandboxes, dependendo das suas necessidades e requisitos. |
+| Guia Histórico de alertas | Os alertas [!UICONTROL Histórico] A guia agora incluirá todos os eventos, incluindo atrasos, inicializações, sucesso e falhas. Leia o [documentação da interface de alertas](../../observability/alerts/ui.md) para obter mais informações sobre a guia histórico. |
 
 {style="table-layout:auto"}
 
-Para obter mais informações sobre o controle de acesso baseado em atributos, consulte [visão geral do controle de acesso baseado em atributos](../../access-control/abac/overview.md). Para obter um guia abrangente sobre o fluxo de trabalho do controle de acesso baseado em atributos, leia o [guia completo do controle de acesso baseado em atributos](../../access-control/abac/end-to-end-guide.md).
-
-## Painéis {#dashboards}
-
-A Adobe Experience Platform fornece vários painéis para você visualizar insights importantes sobre os dados de sua organização, que são capturados por instantâneos diários.
-
-**Recursos novos ou atualizados**
-
-| Recurso | Descrição |
-| --- | --- |
-| Caso de uso de análise de consentimento e rastreamento | Saiba como criar um painel de consentimento para vários casos de uso de marketing para dados do Real-Time CDP com o [análise de consentimento e documento de rastreamento](../../dashboards/insights-use-cases/consent-analysis.md). Ele detalha como criar um público-alvo com os atributos apropriados para suas necessidades comerciais e, em seguida, consumir os insights por meio do uso de widgets pré-configurados na interface do usuário do Adobe Experience Platform. Ele também fornece instruções sobre como criar seu próprio widget personalizado com o recurso de painéis definido pelo usuário. O documento abrange a tendência de consentimento e os casos de uso de sobreposição de consentimento. |
-
-{style="table-layout:auto"}
-
-Para obter mais informações sobre painéis, incluindo como conceder permissões de acesso e criar widgets personalizados, comece lendo a [visão geral dos painéis](../../dashboards/home.md).
+Para saber mais sobre alertas, leia a [[!DNL Observability Insights] visão geral](../../observability/home.md).
 
 ## Coleção de dados {#data-collection}
 
@@ -82,71 +51,12 @@ A Adobe Experience Platform fornece um conjunto de tecnologias que permitem cole
 
 | Tipo | Recurso | Descrição |
 | --- | --- | --- |
-| Tags e encaminhamento de eventos | [Tags do Experience Platform (China)](/help/tags/ui/publishing/premium-cdn.md) | O novo recurso Tags de Experience Platform (China) melhora a confiabilidade e a latência do site, resultando em tempos de resposta mais rápidos para clientes que implantam Tags em sites na China. Agora, os clientes podem utilizar o código JavaScript na biblioteca de tags ao implementar sites na China. Esse recurso também foi adicionado ao Unified Provisioning Protocol (UPP), permitindo que a implantação do produto seja automatizada após a compra. |
+| Sequências de dados | Suporte à pesquisa de dispositivo | Ao configurar um fluxo de dados, agora é possível selecionar o nível de informações de pesquisa de dispositivo a serem coletadas. As informações de pesquisa do dispositivo incluem dados sobre o dispositivo, hardware, sistema operacional e navegador usados para interagir com a página. <br>  As informações de pesquisa de dispositivo não podem ser coletadas junto com o agente do usuário e as dicas do cliente. Optar por coletar informações do dispositivo desativará a coleta de agentes do usuário e dicas do cliente, e vice-versa. Todas as informações de pesquisa do dispositivo são armazenadas no `xdm:device` grupo de campos. Saiba mais na documentação sobre [configurando sequências de dados](../../datastreams/configure.md#geolocation-device-lookup). |
+| Extensões | [!DNL TikTok] extensão da API de eventos da web | A variável [[!DNL TikTok] API de eventos da Web](https://exchange.adobe.com/apps/ec/109834/tiktok-web-events-api) permite que você aproveite os dados capturados na Rede de borda da Adobe Experience Platform e os envie para [!DNL TikTok] na forma de eventos do lado do servidor usando o [!DNL TikTok] API de eventos da Web. |
 
 {style="table-layout:auto"}
 
-Para obter mais informações, leia a [visão geral das coleções de dados](../../tags/home.md).
-
-## Assimilação de dados {#data-ingestion}
-
-A Adobe Experience Platform fornece um conjunto avançado de recursos para assimilar qualquer tipo e qualquer latência de dados. Você pode assimilar usando APIs de lote ou transmissão, origens construídas pela Adobe, parceiros de integração de dados ou a interface da Adobe Experience Platform.
-
-**Recursos novos ou atualizados**
-
-| Recurso | Descrição |
-| --- | --- |
-| Alterações nos fluxos de trabalho de assimilação de dados | Linhas de dados contendo valores maiores que o tipo de dados especificado (por exemplo, dados longos transmitidos como um tipo de dados inteiro) agora serão rejeitadas e mensagens de erro serão relatadas. Anteriormente, essas linhas eram rejeitadas sem aviso. |
-
-Para obter mais informações, leia a [visão geral da assimilação de dados](../../ingestion/home.md).
-
-## Preparação de dados {#data-prep}
-
-A preparação de dados permite que os engenheiros de dados mapeiem, transformem e validem dados de e para o Experience Data Model (XDM).
-
-**Recursos novos ou atualizados**
-
-| Recurso | Descrição |
-| --- | --- |
-| Suporte para filtrar identidades secundárias | Agora você pode usar o Preparo de dados para filtrar identidades provenientes do Adobe Analytics, como AAID e AACUSTOMID. Se filtradas, essas identidades não são assimiladas no Perfil do cliente em tempo real. Os dados não filtrados continuarão a ser assimilados no data lake. |
-
-{style="table-layout:auto"}
-
-Para obter mais informações, leia a [Visão geral do Preparo de dados](../../data-prep/home.md).
-
-## Destinos {#destinations}
-
-[!DNL Destinations] são integrações pré-construídas com plataformas de destino que permitem a ativação perfeita de dados da Adobe Experience Platform. É possível usar destinos para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas de email, publicidade direcionada e muitos outros casos de uso.
-
-**Funcionalidades novas ou atualizadas** {#destinations-new-updated-functionality}
-
-- Agora você pode [ativar públicos-alvo potenciais](../../destinations/ui/activate-prospect-audiences.md) para destinos de armazenamento na nuvem.
-- O quadro [proteção de ativação](../../destinations/guardrails.md#general-activation-guardrails) máximo de 100 destinos por sandbox foi atualizada para ser um _limite rígido_.
-
-Para obter informações mais gerais sobre destinos, consulte a [visão geral de destinos](../../destinations/home.md).
-
-## Experience Data Model (XDM) {#xdm}
-
-O XDM é uma especificação de código aberto que fornece estruturas e definições comuns (esquemas) para dados inseridos na Adobe Experience Platform. Ao aderir aos padrões do XDM, todos os dados de experiência do cliente podem ser incorporados em uma representação comum para fornecer insights de maneira mais rápida e integrada. Você pode obter insights valiosos sobre ações de clientes, definir públicos-alvo por meio de segmentos e usar atributos de clientes para fins de personalização.
-
-**Novos componentes de XDM**
-
-| Tipo de componente | Nome | Descrição |
-| --- | --- | --- |
-| Classe | [[!UICONTROL Perfil de cliente potencial individual do XDM]](https://github.com/adobe/xdm/pull/1758/files) | Use esta classe para atrair perfis em potencial provenientes de casos de uso de conquista de cliente do topo de funil dos fornecedores de dados. Consulte a [[!UICONTROL Perfil de cliente potencial individual XDM]](../../xdm/classes/prospect.md) para ver exemplos e saber mais. |
-
-{style="table-layout:auto"}
-
-**Componentes de XDM atualizados**
-
-| Tipo de componente | Nome | Atualizar descrição |
-| --- | --- | --- |
-| Extensão ([!UICONTROL Extensão completa do Adobe Analytics ExperienceEvent]) | [[!UICONTROL Dados de contexto]](https://github.com/adobe/xdm/pull/1761/files) | [!UICONTROL Dados de contexto] objeto do mapa adicionado a [!UICONTROL Extensão completa do Adobe Analytics ExperienceEvent] para fornecer dados de contexto para o Adobe Analytics. |
-| Grupo de campos | Múltiplo | Vários campos adicionados a [[!UICONTROL Detalhes enriquecidos do segmento de evento]](https://github.com/adobe/xdm/pull/1760/files). |
-
-{style="table-layout:auto"}
-
-Para obter mais informações, leia a [Visão geral do sistema XDM](../../xdm/home.md).
+Para saber mais sobre a coleta de dados, leia o [visão geral da coleção de dados](../../tags/home.md).
 
 ## Identity Service {#identity-service}
 
@@ -156,9 +66,12 @@ O Identity Service da Adobe Experience Platform fornece uma visão abrangente do
 
 | Recurso | Descrição |
 | --- | --- |
-| Alterações nos limites do gráfico de identidade | Até o final de setembro, o gráfico de identidade será alterado para 50 identidades por gráfico, e a identidade mais recente será assimilada. Como consequência, a identidade mais antiga será excluída com base no carimbo de data e hora de assimilação e no tipo de identidade, com os tipos de identidade de cookie sendo excluídos primeiro. Hoje, os gráficos de identidade têm um limite de 150 identidades por gráfico e, uma vez atingido esse limite, os gráficos não são mais atualizados. Entre em contato com o representante de conta para solicitar uma alteração no tipo de identidade se a sandbox de produção contiver: <ul><li>um namespace personalizado em que os identificadores de pessoa (como IDs de CRM) são configurados como tipo de identidade de cookie/dispositivo.</li><li>um namespace personalizado em que os identificadores de cookie/dispositivo são configurados como tipo de identidade entre dispositivos.</li></ul> A engenharia de Adobe processará manualmente essas solicitações. Para obter mais informações, leia a [medidas de proteção para dados do serviço de identidade](../../identity-service/guardrails.md). |
+| Aprimoramentos na interface do usuário do serviço de identidade | Use a ferramenta aprimorada de criação de namespace personalizado na interface do usuário do Experience Platform para gerenciar melhor seus namespaces personalizados e seus tipos de identidade correspondentes. A interface aprimorada do serviço de identidade fornece: <ul><li>Experiência contextual: dicas visuais, clareza e contexto para o que é um namespace de identidade e os tipos de identidade.</li><li>Precisão: melhor tratamento de erros, sem mais nomes de identidade duplicados.</li><li>Capacidade de descoberta: acesso à documentação por meio de uma caixa de diálogo no produto.</li></ul> Para obter mais informações, leia o guia em [criação de namespaces personalizados](../../identity-service/namespaces.md#create-namespaces). |
+| Alterações nos limites do gráfico de identidade | O limite do gráfico de identidade foi alterado de 150 identidades para 50 identidades. Quando uma nova identidade é assimilada em um gráfico completo, a identidade mais antiga com base no carimbo de data e hora de assimilação e no tipo de identidade é excluída. Os tipos de identidade de cookie são priorizados para exclusão. Entre em contato com a equipe de conta do Adobe para solicitar uma alteração no tipo de identidade se a sandbox de produção contiver: <ul><li>um namespace personalizado em que os identificadores de pessoa (como IDs de CRM) são configurados como tipo de identidade de cookie/dispositivo.</li><li>um namespace personalizado em que os identificadores de cookie/dispositivo são configurados como tipo de identidade entre dispositivos.</li></ul> A engenharia de Adobe processará manualmente essas solicitações. Para obter mais informações, leia a [medidas de proteção para dados do serviço de identidade](../../identity-service/guardrails.md). |
 
-Para obter mais informações, leia a [Visão geral do serviço de identidade](../../identity-service/home.md).
+{style="table-layout:auto"}
+
+Para saber mais sobre o Serviço de identidade, leia a [Visão geral do serviço de identidade](../../identity-service/home.md).
 
 ## Serviço de segmentação {#segmentation}
 
@@ -167,12 +80,13 @@ O [!DNL Segmentation Service] permite segmentar dados relacionados a indivíduos
 **Recursos novos ou atualizados**
 
 | Recurso | Descrição |
-| --- | --- |
-| Públicos-alvo semelhantes (disponibilidade limitada) | Públicos semelhantes fornecem insights inteligentes sobre cada um de seus públicos, aproveitando insights baseados em aprendizado de máquina para identificar e direcionar clientes de alto valor com suas campanhas de marketing. Com Públicos-alvo semelhantes, você pode criar públicos-alvo expandidos que direcionem clientes semelhantes aos seus públicos-alvo de alto desempenho ou clientes-alvo semelhantes aos públicos-alvo convertidos anteriormente. Para obter mais informações sobre públicos-alvo semelhantes, leia o [Visão geral de públicos-alvo semelhantes](../../segmentation/ui/lookalike-audiences.md). |
+| ------- | ----------- |
+| Colunas personalizáveis | Agora é possível personalizar o layout do Audience Portal com colunas redimensionáveis. Para obter mais informações sobre esse recurso, leia a [guia da interface de segmentação](../../segmentation/ui/overview.md#customize). |
+| Atualizar detalhamento de frequência | Agora você pode ver um detalhamento das frequências de atualização dos públicos-alvo em sua organização. Para obter mais informações sobre esse recurso, leia a [guia da interface de segmentação](../../segmentation/ui/overview.md#browse). |
 
-{style="table-layout:auto"}
+Para saber mais sobre fontes, leia o [visão geral das origens](../../sources/home.md).
 
-Para obter mais informações, leia a [Visão geral da segmentação](../../segmentation/home.md).
+Para saber mais sobre o Serviço de segmentação, leia o [Visão geral do serviço de segmentação](../../segmentation/home.md).
 
 ## Origens {#sources}
 
@@ -182,10 +96,8 @@ A Experience Platform fornece uma API RESTful e uma interface interativa que per
 
 | Recurso | Descrição |
 | --- | --- |
-| Disponibilidade geral de [!DNL SugarCRM] | [!DNL SugarCRM] As fontes de estão disponíveis agora. Use as origens [!DNL SugarCRM Accounts & Contacts] e [!DNL SugarCRM Events] para trazer dados da sua conta [!DNL SugarCRM] para a Experience Platform. Para obter mais informações, leia a [[!DNL SugarCRM] visão geral](../../sources/connectors/crm/sugarcrm.md). |
-| Suporte para assimilação sob demanda para fluxos de dados de origens na interface do | Agora é possível criar execuções de fluxo sob demanda para um fluxo de dados de fontes existente na interface do usuário. Para obter mais informações, leia o guia em [criação de uma execução de fluxo sob demanda para origens usando a interface](../../sources/tutorials/ui/on-demand-ingestion.md). |
-| Suporte para novos `correlationID` campo para o Adobe Analytics | A variável `_experience.decisioning.propositions.scopeDetails.correlationID` agora está disponível no esquema do conector de origem do Adobe Analytics. Esse campo é usado em suporte às classificações do A4T e será preenchido a partir de setembro de 2023. |
+| Novos parâmetros para o `offset` paginação em fontes de autoatendimento (SDK em lote) | Agora você pode especificar um `endConditionName` e `endConditionValue` para sua origem ao usar `offset` paginação. Esses parâmetros permitem indicar a condição que encerrará o loop de paginação na próxima solicitação HTTP. Para obter mais informações, leia a [guia de paginação para Fontes de autoatendimento (SDK em lote)](../../sources/sources-sdk/config/sourcespec.md#pagination). |
 
 {style="table-layout:auto"}
 
-Para obter mais informações, leia a [visão geral das origens](../../sources/home.md).
+Para saber mais sobre fontes, leia o [visão geral das origens](../../sources/home.md).

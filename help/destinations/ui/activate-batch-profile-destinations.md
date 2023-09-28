@@ -4,9 +4,9 @@ title: Ativar públicos para destinos de exportação de perfil em lote
 type: Tutorial
 description: Saiba como ativar os públicos-alvo no Adobe Experience Platform enviando-os para destinos com base em perfil de lote.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 47ca76c5a4129882917e96a32721b4103bb6afa3
+source-git-commit: a81daa2a929505a934910892a4ad9c73e603ed9b
 workflow-type: tm+mt
-source-wordcount: '3669'
+source-wordcount: '3710'
 ht-degree: 11%
 
 ---
@@ -397,6 +397,10 @@ O Adobe recomenda selecionar um namespace de identidade, como um [!DNL CRM ID] o
 >* Os campos são configurados como atributos projetados para o destino.
 >
 > Por exemplo, se o `person.name.firstName` tiver determinados rótulos de uso de dados que entrem em conflito com a ação de marketing do destino, você verá uma violação de política do uso de dados na etapa de revisão. Para obter mais informações, consulte [Governança de dados no Adobe Experience Platform](../../rtcdp/privacy/data-governance-overview.md#destinations).
+
+### [!BADGE Beta]{type=Informative} Exportar matrizes por meio de campos calculados {#export-arrays-calculated-fields}
+
+Os clientes beta selecionados podem exportar objetos de matriz do Experience Platform para destinos de armazenamento na nuvem. Leia mais sobre [exportação de matrizes e campos calculados](/help/destinations/ui/export-arrays-calculated-fields.md) e entre em contato com o representante da Adobe para obter acesso à funcionalidade.
 
 ### Limitações conhecidas {#known-limitations}
 

@@ -4,9 +4,9 @@ user-guide-title: Guia de destinos
 user-guide-description: Ative seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas por email, publicidade direcionada e muito mais.
 description: Este documento lista o índice dos destinos do Adobe Experience Platform
 feature: Destinations
-source-git-commit: 9c07664873f649645db57a9a025277f515333b1e
+source-git-commit: a81daa2a929505a934910892a4ad9c73e603ed9b
 workflow-type: tm+mt
-source-wordcount: '1159'
+source-wordcount: '1166'
 ht-degree: 9%
 
 ---
@@ -44,6 +44,7 @@ ht-degree: 9%
       * [(Beta) Exportar arquivos sob demanda para destinos em lote usando a interface do Experience Platform](./ui/export-file-now.md)
       * [(Beta) Exportar conjuntos de dados usando a interface do Experience Platform](./ui/export-datasets.md)
       * [(Beta) Usar o atributo XDM do último horário de qualificação nos novos destinos de armazenamento na nuvem beta](./ui/activate-last-qualification-time.md)
+      * [Exportar campos de matriz para destinos de armazenamento na nuvem](/help/destinations/ui/export-arrays-calculated-fields.md)
    * [Exibir detalhes do destino](./ui/destination-details-page.md)
    * [Atualizar contas de destino](./ui/update-accounts.md)
    * [Excluir contas de destino](./ui/delete-destination-account.md)

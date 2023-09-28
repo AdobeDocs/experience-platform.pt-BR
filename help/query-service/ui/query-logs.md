@@ -2,9 +2,9 @@
 title: Logs de consulta
 description: Os logs de consulta são gerados automaticamente cada vez que uma consulta é executada e ficam disponíveis por meio da interface do usuário para ajudar na solução de problemas. Este documento descreve como usar e navegar na seção Logs do serviço de consulta da interface do usuário.
 exl-id: 929e9fba-a9ba-4bf9-a363-ca8657a84f75
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 88498a1382202bed057b8dc52d09359ba02748ea
 workflow-type: tm+mt
-source-wordcount: '585'
+source-wordcount: '899'
 ht-degree: 0%
 
 ---
@@ -57,9 +57,37 @@ Você também pode selecionar um nome de modelo de consulta na [!UICONTROL Nome]
 
 ![A exibição de detalhes do log de Query.](../images/ui/query-log/query-log-details.png)
 
+## Editar logs {#edit-logs}
+
 Ao lado do nome do modelo de cada linha ou do trecho SQL há um ícone de lápis (![Um lápis.](../images/ui/query-log/edit-icon.png)) que você pode usar para navegar até o Editor de consultas. A consulta é então preenchida previamente no editor para edição.
 
 ![O espaço de trabalho Log de Consultas com um ícone de lápis realçado.](../images/ui/query-log/edit-query.png)
+
+## Filtrar logs {#filter-logs}
+
+Você pode filtrar a lista de logs de consulta com base em várias configurações. Selecione o ícone de filtro (![O ícone de filtro.](../images/ui/query-log/filter-icon.png)) na parte superior esquerda do espaço de trabalho para abrir um conjunto de opções de filtro no painel esquerdo.
+
+![O espaço de trabalho Log de consultas com o ícone de filtro realçado.](../images/ui/query-log/log-filter.png)
+
+A lista de filtros disponíveis é exibida.
+
+![O espaço de trabalho Log de Queries com as opções de filtro exibidas e realçadas.](../images/ui/query-log/log-filter-settings.png)
+
+A tabela a seguir provou uma descrição de cada filtro.
+
+| Filtro | Descrição |
+| ------ | ----------- |
+| [!UICONTROL Excluir consultas do painel] | Essa caixa de seleção está ativada por padrão e exclui logs gerados pelas consultas usadas para gerar insights. Essas consultas são geradas pelo sistema e obscurecem os registros de logs gerados pelo usuário necessários para monitoramento, administração e solução de problemas. Para exibir logs gerados pelo sistema, desmarque a caixa de seleção. |
+| [!UICONTROL Data de início] | Para filtrar os logs de consultas criadas durante um período específico, defina o [!UICONTROL Início] e [!UICONTROL Fim] datas no [!UICONTROL Data inicial] seção. |
+| [!UICONTROL Data de conclusão] | Para filtrar os logs de consultas concluídas durante um período específico, defina o [!UICONTROL Início] e [!UICONTROL Fim] datas no [!UICONTROL Data de conclusão] seção. |
+| [!UICONTROL Status] | Para filtrar logs com base na variável [!UICONTROL Status] da consulta, selecione o botão de opção apropriado. As opções disponíveis incluem [!UICONTROL Enviado], [!UICONTROL Em andamento], [!UICONTROL Sucesso], e [!UICONTROL Failed]. Você só pode filtrar logs com base em uma condição de status por vez. |
+| [!UICONTROL Cliente] | Para filtrar logs com base no cliente de query usado, insira um dos seguintes valores aceitos no campo de texto livre: `API`, `Adobe Query Service UI`ou `QsAccel`. |
+| [!UICONTROL Minhas consultas] | Use o [!UICONTROL Minhas consultas] alternar para filtrar os logs de consultas executadas por você. |
+| [!UICONTROL ID do log de consulta] | Para filtrar com base na ID de log exclusiva de um query, insira a ID de log no campo de texto livre. Essas informações podem ser encontradas no [!UICONTROL Detalhes do log]. |
+
+Todos os filtros aplicados são exibidos acima dos resultados do log filtrado.
+
+![A guia Log do espaço de trabalho Queries, com a lista de filtros aplicados destacada.](../images/ui/query-log/applied-log-filters.png)
 
 ## Próximas etapas
 

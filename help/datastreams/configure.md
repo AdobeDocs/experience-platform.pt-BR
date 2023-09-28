@@ -2,10 +2,10 @@
 title: Configurar uma sequência de dados
 description: Saiba como conectar a integração do SDK da Web do lado do cliente a outros produtos da Adobe e destinos de terceiros.
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
-source-git-commit: 139d6a6632532b392fdf8d69c5c59d1fd779a6d1
+source-git-commit: 705b1645eb8ca69169350c57cd28d3a1061f4928
 workflow-type: tm+mt
-source-wordcount: '2276'
-ht-degree: 100%
+source-wordcount: '2629'
+ht-degree: 86%
 
 ---
 
@@ -38,9 +38,42 @@ Se estiver configurando essa sequência de dados para usar na Experience Platfor
 
 ![Configuração básica de uma sequência de dados](assets/configure/configure.png)
 
-Selecione **[!UICONTROL Opções avançadas]** para exibir controles adicionais de configuração da sequência de dados.
+### Configurar localização geográfica e pesquisa de rede {#geolocation-network-lookup}
 
-![Opções de configuração avançada](assets/configure/advanced-options.png) {#advanced-options}
+As configurações de geolocalização e pesquisa de rede ajudam a definir o nível de granularidade dos dados geográficos e de nível de rede que você deseja coletar.
+
+Expanda a **[!UICONTROL Localização geográfica e pesquisa de rede]** para definir as configurações descritas abaixo.
+
+![Captura de tela da interface do usuário da plataforma mostrando a tela de configuração da sequência de dados com as configurações de localização geográfica e pesquisa de rede realçadas.](assets/configure/geolookup.png)
+
+| Configuração | Descrição |
+| --- | --- |
+| [!UICONTROL Pesquisa geográfica] | Habilita pesquisas de geolocalização para as opções selecionadas, com base no endereço IP do visitante. A pesquisa de geolocalização requer que você inclua o grupo de campos [`placeContext`](../edge/data-collection/automatic-information.md#place-context) na configuração do SDK da Web. <br> Opções disponíveis: <ul><li>País</li><li>Código postal</li><li>Estado/Província</li><li>DMA</li><li>Cidade</li><li>Latitude </li><li>Longitude</li></ul>As opções **[!UICONTROL Cidade]**, **[!UICONTROL Latitude]** e **[!UICONTROL Longitude]** fornecem coordenadas com até duas casas decimais, independentemente de quais outras opções estão selecionadas. Essa é considerada uma granularidade no nível da cidade. <br> <br>Não selecionar uma opção desabilita todas as pesquisas de geolocalização. A geolocalização ocorre antes da [!UICONTROL ofuscação de IP] e não é afetada pela configuração de [!UICONTROL ofuscação de IP]. |
+| [!UICONTROL Pesquisa de rede] | Habilita pesquisas de rede para as opções selecionadas, com base no endereço IP do visitante. A pesquisa de rede exige que você inclua o grupo de campos [`Environment`](../edge/data-collection/automatic-information.md#environment) na configuração do SDK da Web. <br> Opções disponíveis: <ul><li>Operadora</li><li>Domínio</li><li>ISP</li></ul>Use essas opções para fornecer mais informações a outros serviços sobre a rede específica da qual as solicitações se originaram. |
+
+### Configurar pesquisa de dispositivo {#geolocation-device-lookup}
+
+A variável **[!UICONTROL Pesquisa de dispositivo]** As configurações do permitem selecionar o nível de granularidade das informações específicas do dispositivo que você deseja coletar.
+
+Expanda a **[!UICONTROL Pesquisa de dispositivo]** para definir as configurações descritas abaixo.
+
+![Captura de tela da interface do usuário da plataforma mostrando a tela de configuração da sequência de dados com as configurações de pesquisa do dispositivo realçadas.](assets/configure/device-lookup.png)
+
+>[!IMPORTANT]
+>
+>As configurações descritas na tabela abaixo são mutuamente exclusivas. Não é possível selecionar as informações do agente do usuário e os dados de pesquisa do dispositivo ao mesmo tempo.
+
+| Configuração | Descrição |
+| --- | --- |
+| **[!UICONTROL Manter cabeçalhos do agente do usuário e das dicas do cliente]** | Selecione esta opção para coletar apenas as informações armazenadas na sequência de agente do usuário. Esta é a configuração padrão. |
+| **[!UICONTROL Use a pesquisa de dispositivo para coletar as seguintes informações]** | Selecione esta opção se quiser coletar uma ou mais das seguintes informações específicas do dispositivo: <ul><li>**[!UICONTROL Dispositivo]** informações:<ul><li>Fabricante do dispositivo</li><li>Modelo do dispositivo</li><li>Nome de marketing</li></ul></li><li>**[!UICONTROL Hardware]** informações: <ul><li>Tipo de dispositivo</li><li>Altura da exibição</li><li>Largura da exibição</li><li>Exibir intensidade de cor</li></ul></li><li>**[!UICONTROL Navegador]** informações: <ul><li>Fornecedor do navegador</li><li>Nome do navegador</li><li>Versão do navegador</li></ul></li><li>**[!UICONTROL Sistema operacional]** informações: <ul><li>Fornecedor do sistema operacional</li><li>Nome do sistema operacional</li><li>Versão do sistema operacional</li></ul></li></ul> <br>  As informações de pesquisa de dispositivo não podem ser coletadas junto com o agente do usuário e as dicas do cliente. Optar por coletar informações do dispositivo desativará a coleta de agentes do usuário e dicas do cliente, e vice-versa. Todas as informações de pesquisa do dispositivo são armazenadas no `xdm:device` grupo de campos. |
+| **[!UICONTROL Não coletar informações do dispositivo]** | Selecione esta opção se não quiser coletar nenhum tipo de informação de pesquisa. Nenhuma informação de dispositivo, hardware, navegador ou sistema operacional será coletada, incluindo nenhum cabeçalho de agente do usuário ou dicas do cliente. |
+
+### Configurar opções avançadas {#@advanced-options}
+
+Selecionar **[!UICONTROL Opções avançadas]** para revelar controles adicionais para configurar o fluxo de dados, como ofuscação de IP, cookies de ID primária e muito mais.
+
+![Opções de configuração avançada](assets/configure/advanced-settings.png)
 
 >[!IMPORTANT]
 >
@@ -50,14 +83,13 @@ Selecione **[!UICONTROL Opções avançadas]** para exibir controles adicionais 
 
 | Configuração | Descrição |
 | --- | --- |
-| [!UICONTROL Pesquisa geográfica] | Habilita pesquisas de geolocalização para as opções selecionadas, com base no endereço IP do visitante. A pesquisa de geolocalização requer que você inclua o grupo de campos [`placeContext`](../edge/data-collection/automatic-information.md#place-context) na configuração do SDK da Web. <br> Opções disponíveis: <ul><li>País</li><li>Código postal</li><li>Estado/Província</li><li>DMA</li><li>Cidade</li><li>Latitude </li><li>Longitude</li></ul>As opções **[!UICONTROL Cidade]**, **[!UICONTROL Latitude]** e **[!UICONTROL Longitude]** fornecem coordenadas com até duas casas decimais, independentemente de quais outras opções estão selecionadas. Essa é considerada uma granularidade no nível da cidade. <br> <br>Não selecionar uma opção desabilita todas as pesquisas de geolocalização. A geolocalização ocorre antes da [!UICONTROL ofuscação de IP] e não é afetada pela configuração de [!UICONTROL ofuscação de IP]. |
-| [!UICONTROL Pesquisa de rede] | Habilita pesquisas de rede para as opções selecionadas, com base no endereço IP do visitante. A pesquisa de rede exige que você inclua o grupo de campos [`Environment`](../edge/data-collection/automatic-information.md#environment) na configuração do SDK da Web. <br> Opções disponíveis: <ul><li>Operadora</li><li>Domínio</li><li>ISP</li></ul>Use essas opções para fornecer mais informações a outros serviços sobre a rede específica da qual as solicitações se originaram. |
 | [!UICONTROL Ofuscação de IP] | Indica o tipo de ofuscação de IP a ser aplicada à sequência de dados. Qualquer processamento baseado no IP do cliente será afetado pela configuração de ofuscação de IP. Isso inclui todos os serviços da Experience Cloud que recebem dados de sua sequência de dados. <p>Opções disponíveis:</p> <ul><li>**[!UICONTROL Nenhuma]**: desabilita a ofuscação de IP. O endereço IP completo do usuário será enviado por meio da sequência de dados.</li><li>**[!UICONTROL Parcial]**: para endereços IPv4, ofusca o último octeto do endereço IP do usuário. Para endereços IPv6, ofusca os últimos 80 bits do endereço. <p>Exemplos:</p> <ul><li>ipv4: `1.2.3.4` -> `1.2.3.0`</li><li>ipv6: `2001:0db8:1345:fd27:0000:ff00:0042:8329` -> `2001:0db8:1345:0000:0000:0000:0000:0000`</li></ul></li><li>**[!UICONTROL Completa]**: ofusca todo o endereço IP. <p>Exemplos:</p> <ul><li>ipv4: `1.2.3.4` -> `0.0.0.0`</li><li>ipv6: `2001:0db8:1345:fd27:0000:ff00:0042:8329` -> `0:0:0:0:0:0:0:0`</li></ul></li></ul> Impacto da ofuscação de IP em outros produtos da Adobe: <ul><li>**Adobe Target**: a configuração de [!UICONTROL ofuscação de IP] no nível da sequência de dados tem prioridade sobre qualquer opção de ofuscação de IP definida no Adobe Target. Por exemplo, se a opção de [!UICONTROL ofuscação de IP] no nível da sequência de dados estiver definida como **[!UICONTROL Completa]** e a do Adobe Target estiver definida como **[!UICONTROL Ofuscação do último octeto]**, o Adobe Target receberá um IP totalmente ofuscado. Consulte a documentação do Adobe Target sobre [ofuscação de IP](https://developer.adobe.com/target/before-implement/privacy/privacy/) e [geolocalização](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html?lang=pt-BR) para obter mais detalhes.</li><li>**Audience Manager**: a configuração de ofuscação de IP no nível da sequência de dados tem prioridade sobre qualquer opção de ofuscação de IP definida no Audience Manager e é aplicada a todos os endereços IP. Qualquer pesquisa de geolocalização feita pelo Audience Manager é afetada pela opção de [!UICONTROL ofuscação de IP] no nível da sequência de dados. No Audience Manager, uma pesquisa de geolocalização que é baseada em um IP totalmente ofuscado resultará em uma região desconhecida, e todos os segmentos baseados nos dados de geolocalização resultantes não serão realizados. Consulte a documentação do Audience Manager sobre [ofuscação de IP](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/administration/ip-obfuscation.html?lang=pt-BR) para obter mais detalhes.</li><li>**Adobe Analytics**: no momento, o Adobe Analytics recebe os endereços IP parcialmente ofuscados se qualquer opção de ofuscação de IP estiver selecionada, com a exceção da opção NENHUMA. Para que o Analytics receba endereços IP ofuscados, você deve configurar a ofuscação de IP separadamente no Adobe Analytics. Esse comportamento será atualizado em versões futuras. Consulte a [documentação](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/general-acct-settings-admin.html?lang=pt-BR) do Adobe Analytics para obter detalhes sobre como habilitar a ofuscação de IP no Analytics.</li></ul> |
 | [!UICONTROL Cookie de ID próprio] | Quando habilitada, essa configuração orienta a rede de borda a buscar um cookie específico ao procurar uma [ID de dispositivo primária](../edge/identity/first-party-device-ids.md), em vez de pesquisar esse valor no mapa de identidade.<br><br>Ao habilitar essa configuração, é necessário fornecer o nome do cookie no qual a ID deve ser armazenada. |
 | [!UICONTROL Sincronização de ID de terceiros] | As sincronizações de ID podem ser agrupadas em containers para permitir que diferentes sincronizações de ID sejam executadas em momentos diferentes. Quando habilitada, essa configuração permite especificar qual container de sincronizações de ID é executado para essa sequência de dados. |
 | [!UICONTROL ID de container de sincronização de ID de terceiros] | A ID numérica do container a ser usada para a sincronização de ID de terceiros. |
 | [!UICONTROL Substituições de ID de container] | Nesta seção, você pode definir IDs de container de sincronização de ID de terceiros adicionais que você pode usar para substituir o padrão. |
 | [!UICONTROL Tipo de acesso] | Define o tipo de autenticação que a rede de borda aceita para a sequência de dados. <ul><li>**[!UICONTROL Autenticação mista]**: quando essa opção é selecionada, a rede de borda aceita solicitações autenticadas e não autenticadas. Selecione esta opção quando desejar usar o SDK da Web ou [SDK móvel](https://developer.adobe.com/client-sdks/documentation/) juntamente com a [API do servidor](../server-api/overview.md). </li><li>**[!UICONTROL Somente autenticado]**: quando essa opção é selecionada, a rede de borda aceita somente solicitações autenticadas. Selecione essa opção quando desejar usar somente a API do servidor e quiser impedir que qualquer solicitação não autenticada seja processada pela rede de borda.</li></ul> |
+| [!UICONTROL Media Analytics] | Selecione essa opção para habilitar o processamento de dados de rastreamento de transmissão para integração da Rede de borda por meio de SDKs do Experience Platform ou API do Media Edge. Saiba mais sobre o Media Analytics no [documentação](https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html?lang=pt-BR). |
 
 Agora, se você estiver configurando a sequência de dados para a Experience Platform, siga o tutorial em [Preparo de dados para a coleção de dados](./data-prep.md) para mapear seus dados em um esquema de evento da Platform antes de retornar a este guia. Caso contrário, selecione **[!UICONTROL Salvar]** e continue para a próxima seção.
 

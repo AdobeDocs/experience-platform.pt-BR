@@ -1,7 +1,7 @@
 ---
 title: Classe de perfil de cliente potencial individual XDM
 description: Este documento fornece uma visão geral da classe de Perfil de cliente potencial individual XDM no Experience Data Model (XDM).
-source-git-commit: 437bd602462330a96f356b83d7afe922b5315d9f
+source-git-commit: 7562da0f07a2109a2030653927d8d2639685e442
 workflow-type: tm+mt
 source-wordcount: '348'
 ht-degree: 3%
@@ -22,7 +22,7 @@ No Experience Data Model (XDM), a variável [!UICONTROL Perfil de cliente potenc
 | `_id` | [!UICONTROL String] | Um identificador de sequência de caracteres exclusivo gerado pelo sistema para o registro. Este campo é usado para rastrear a exclusividade de um registro individual, impedir a duplicação de dados e pesquisar esse registro nos serviços downstream.<br><br>Como esse campo é gerado pelo sistema, ele não fornece um valor explícito durante a assimilação de dados. No entanto, você pode optar por fornecer seus próprios valores de ID exclusivos, se desejar. |
 | `createdByBatchID` | [!UICONTROL String] | A ID do lote assimilado que causou a criação do registro. |
 | `modifiedByBatchID` | [!UICONTROL String] | A ID do último lote assimilado que causou a atualização do registro. |
-| `partnerID` | [!UICONTROL String] | Normalmente, um identificador exclusivo de pseudônimo que identifica um prospecto individual. Consulte a documentação em [tipos de identidade](../../identity-service/namespaces.md#identity-types) para saber mais sobre a ID do parceiro e outros tipos de identidade disponíveis no Adobe Experience Platform. |
+| `partnerID` | [!UICONTROL String] | Normalmente, um identificador exclusivo de pseudônimo que identifica um prospecto individual. Consulte a documentação em [tipos de identidade](../../identity-service/namespaces.md#identity-type) para saber mais sobre a ID do parceiro e outros tipos de identidade disponíveis no Adobe Experience Platform. |
 | `repositoryCreatedBy` | [!UICONTROL String] | A ID do usuário que criou o registro. |
 | `repositoryLastModifiedBy` | [!UICONTROL String] | A ID do usuário que modificou o registro pela última vez. Quando o registro é criado, a variável `modifiedByUser` é definido como o `createdByUser` valor. |
 

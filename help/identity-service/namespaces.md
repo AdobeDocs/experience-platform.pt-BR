@@ -1,45 +1,59 @@
 ---
 title: Visão geral do namespace de identidade
-description: Os namespaces de identidade são um componente do Serviço de identidade que serve como indicadores do contexto ao qual uma identidade está relacionada. Por exemplo, eles distinguem um valor "name@email.com" como um endereço de email ou "443522" como uma ID de CRM numérica.
+description: Saiba mais sobre namespaces de identidade no Serviço de identidade.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: ac53678ca9ef51cb638590138a16a3506c6a1fc0
+source-git-commit: 36a42a7c3722828776495359762289d0028b6ddc
 workflow-type: tm+mt
-source-wordcount: '1764'
-ht-degree: 10%
+source-wordcount: '1699'
+ht-degree: 6%
 
 ---
 
 # Visão geral do namespace de identidade
 
-Os namespaces de identidade são um componente do [[!DNL Identity Service]](./home.md) e servem como indicadores do contexto ao qual uma identidade está relacionada. Por exemplo, eles distinguem um valor de &quot;name<span>@email.com&quot; como um endereço de email ou &quot;443522&quot; como uma ID de CRM numérica.
+Leia o documento a seguir para saber mais sobre o que você pode fazer com namespaces de identidade no serviço de identidade da Adobe Experience Platform.
 
 ## Introdução
 
-Trabalhar com namespaces de identidade requer uma compreensão dos vários serviços envolvidos da Adobe Experience Platform. Antes de começar a trabalhar com namespaces, reveja a documentação dos seguintes serviços:
+Os namespaces de identidade exigem uma compreensão de vários serviços da Adobe Experience Platform. Antes de começar a trabalhar com namespaces, reveja a documentação dos seguintes serviços:
 
-- [[!DNL Real-Time Customer Profile]](../profile/home.md): fornece um perfil de cliente unificado em tempo real com base em dados agregados de várias fontes.
-- [[!DNL Identity Service]](./home.md): obtenha uma melhor visualização dos clientes individuais e do comportamento deles ao unir as identidades de vários dispositivos e sistemas.
-- [[!DNL Privacy Service]](../privacy-service/home.md): os namespaces de identidade são usados em solicitações de conformidade para regulamentos legais de privacidade, como o Regulamento Geral sobre a Proteção de Dados (GDPR). Cada solicitação de privacidade é feita em relação a um namespace para identificar quais dados dos consumidores devem ser afetados.
+* [[!DNL Real-Time Customer Profile]](../profile/home.md): fornece um perfil de cliente unificado em tempo real com base em dados agregados de várias fontes.
+* [[!DNL Identity Service]](./home.md): obtenha uma melhor visualização dos clientes individuais e do comportamento deles ao unir as identidades de vários dispositivos e sistemas.
+* [[!DNL Privacy Service]](../privacy-service/home.md): os namespaces de identidade são usados em solicitações de conformidade para regulamentos legais de privacidade, como o Regulamento Geral sobre a Proteção de Dados (GDPR). Cada solicitação de privacidade é feita em relação a um namespace para identificar quais dados dos consumidores devem ser afetados.
 
 ## Noções básicas sobre namespaces de identidade
 
-Uma identidade totalmente qualificada inclui um valor de ID e um namespace. Ao corresponder dados de registro em fragmentos de perfil, como quando [!DNL Real-Time Customer Profile] mescla os dados do perfil, o valor da identidade e o namespace devem corresponder.
+Uma identidade totalmente qualificada inclui dois componentes: um **valor de identidade** e uma **namespace de identidade**. Por exemplo, se o valor de uma identidade for `scott@acme.com`, um namespace fornece contexto para esse valor, diferenciando-o como um endereço de email. Da mesma forma, um namespace pode distinguir `555-123-456` como um número de telefone, e `3126ABC` como uma ID de CRM. Essencialmente, **um namespace fornece contexto a uma determinada identidade**. Ao corresponder dados de registro em fragmentos de perfil, como quando [!DNL Real-Time Customer Profile] mescla os dados do perfil, o valor da identidade e o namespace devem corresponder.
 
-Por exemplo, dois fragmentos de perfil podem conter IDs primárias diferentes, mas compartilham o mesmo valor para o namespace &quot;Email&quot;, portanto [!DNL Platform] O consegue ver que esses fragmentos são realmente o mesmo indivíduo e reúne os dados no gráfico de identidade do indivíduo.
+Por exemplo, dois fragmentos de perfil podem conter IDs primárias diferentes, mas compartilham o mesmo valor para o namespace &quot;Email&quot;. Portanto, o Experience Platform pode ver que esses fragmentos são realmente o mesmo indivíduo e reúne os dados no gráfico de identidade do indivíduo.
 
 ![](images/identity-service-stitching.png)
 
-### Tipos de identidade {#identity-types}
+### Componentes de um namespace
+
+Um namespace consiste nos seguintes componentes:
+
+* **Nome de exibição**: o nome amigável para um determinado namespace.
+* **Símbolo de identidade**: um código usado internamente pelo Serviço de identidade para representar um namespace.
+* **Tipo de identidade**: a classificação de um determinado namespace.
+* **Descrição**: (opcional) todas as informações complementares que você pode fornecer em relação a um determinado namespace.
+
+### Tipo de identidade {#identity-type}
 
 >[!CONTEXTUALHELP]
 >id="platform_identity_create_namespace"
 >title="Especificar tipo de identidade"
->abstract="O tipo de identidade controla se os dados são armazenados ou não no gráfico de identidade. Identificadores que não sejam de pessoas não serão armazenados, e todos os outros tipos de identidade serão armazenados."
+>abstract="O tipo de identidade controla se os dados são armazenados ou não no gráfico de identidade. Os gráficos de identidade não são gerados para os seguintes tipos de identidade: identificadores que não sejam pessoas e ID de parceiro."
 >text="Learn more in documentation"
 
-Os dados podem ser identificados por vários tipos de identidade diferentes. O tipo de identidade é especificado no momento em que o namespace de identidade é criado e controla se os dados são ou não mantidos no gráfico de identidade e quaisquer instruções especiais sobre como esses dados devem ser tratados. Todos os tipos de identidade exceto **Identificador não pessoal** siga o mesmo comportamento de compilação de um namespace e seu valor de ID correspondente a um cluster de gráficos de identidade. Os dados não são compilados ao usar **Identificador não pessoal**.
+Um elemento de um namespace de identidade é o **tipo de identidade**. O tipo de identidade determina:
 
-Os seguintes tipos de identidade estão disponíveis no [!DNL Platform]:
+* Se um gráfico de identidade será gerado:
+   * Os gráficos de identidade não são gerados para os seguintes tipos de identidade: identificadores que não sejam pessoas e ID de parceiro.
+   * Os gráficos de identidade são gerados para todos os outros tipos de identidade.
+* Quais identidades são removidas do gráfico de identidade quando os limites do sistema são atingidos. Para obter mais informações, leia a [medidas de proteção para dados de identidade](guardrails.md).
+
+Os seguintes tipos de identidade estão disponíveis no Experience Platform:
 
 | Tipo de identidade | Descrição |
 | --- | --- |
@@ -88,43 +102,33 @@ Os seguintes namespaces padrão são fornecidos para uso por todas as organizaç
 
 Para exibir namespaces de identidade na interface, selecione **[!UICONTROL Identidades]** na navegação à esquerda e selecione **[!UICONTROL Procurar]**.
 
-![navegar](./images/browse.png)
+Um diretório de namespaces na organização é exibido, exibindo informações sobre nomes, símbolos de identidade, datas da última atualização, tipos de identidade correspondentes e descrição.
 
-Uma lista de namespaces de identidade é exibida na interface principal da página, exibindo informações sobre seus nomes, símbolos de identidade, data da última atualização e se eles são um namespace padrão ou personalizado. O painel direito contém informações sobre [!UICONTROL Fortaleza do gráfico de identidade].
+![Um diretório de namespaces de identidade personalizados em sua organização.](./images/namespace/browse.png)
 
-![identidades](./images/identities.png)
-
-A Platform também fornece namespaces para fins de integração. Esses namespaces estão ocultos por padrão, pois são usados para se conectar a outros sistemas e não são usados para compilar identidades. Para exibir namespaces de integração, selecione **[!UICONTROL Exibir identidades de integração]**.
-
-![view-integration-identities](./images/view-integration-identities.png)
-
-Selecione um namespace de identidade na lista para exibir informações sobre um namespace específico. Selecionar um namespace de identidade atualiza a exibição no painel direito para mostrar metadados relacionados ao namespace de identidade que você selecionou, incluindo o número de identidades assimiladas e o número de registros que falharam e foram ignorados.
-
-![select-namespace](./images/select-namespace.png)
-
-## Gerenciar namespaces personalizados {#manage-namespaces}
+## Criar namespaces personalizados {#create-namespaces}
 
 Dependendo dos dados organizacionais e casos de uso, talvez você precise de namespaces personalizados. Os namespaces personalizados podem ser criados usando o [[!DNL Identity Service]](./api/create-custom-namespace.md) ou por meio da interface do usuário.
 
-Para criar um namespace personalizado usando a interface do usuário, navegue até o **[!UICONTROL Identidades]** espaço de trabalho, selecione **[!UICONTROL Procurar]** e selecione **[!UICONTROL Criar namespace de identidade]**.
+Para criar um namespace personalizado, selecione **[!UICONTROL Criar namespace de identidade]**.
 
-![select-create](./images/select-create.png)
+![O botão criar namespace de identidade no espaço de trabalho de identidades.](./images/namespace/create-identity-namespace.png)
 
-A variável **[!UICONTROL Criar namespace de identidade]** é exibida. Forneça uma **[!UICONTROL Nome de exibição]** e **[!UICONTROL Símbolo de identidade]** e selecione o tipo de identidade que deseja criar. Você também pode adicionar uma descrição opcional para adicionar mais informações sobre o namespace. Todos os tipos de identidade, exceto **Identificador não pessoal** O segue o mesmo comportamento de compilação. Se você selecionar **Identificador não pessoal** como tipo de identidade ao criar um namespace, a compilação não ocorre. Para obter informações específicas sobre cada tipo de identidade, consulte a tabela em [tipos de identidade](#identity-types).
+A variável [!UICONTROL Criar namespace de identidade] é exibida. Primeiro, você deve fornecer um nome de exibição e um símbolo de identidade para o namespace personalizado que deseja criar. Opcionalmente, também é possível fornecer uma descrição para adicionar mais contexto ao namespace personalizado que você está criando.
 
-Quando terminar, selecione **[!UICONTROL Criar]**.
+![Uma janela pop-up onde você pode inserir informações relacionadas ao namespace de identidade personalizado.](./images/namespace/name-and-symbol.png)
+
+Em seguida, selecione o tipo de identidade que deseja atribuir ao namespace personalizado. Quando terminar, selecione **[!UICONTROL Criar]**.
+
+![Uma seleção de tipos de identidade que você pode escolher e atribuir ao seu namespace de identidade personalizado.](./images/namespace/select-identity-type.png)
 
 >[!IMPORTANT]
 >
->Os namespaces definidos são privados para sua organização e exigem um símbolo de identidade exclusivo para serem criados com sucesso.
-
-![create-identity-namespace](./images/create-identity-namespace.png)
-
-Semelhante aos namespaces padrão, você pode selecionar um namespace personalizado na **[!UICONTROL Procurar]** para exibir seus detalhes. No entanto, com um namespace personalizado, também é possível editar o nome para exibição e a descrição na área de detalhes.
-
->[!NOTE]
+>* Os namespaces definidos são privados para sua organização e exigem um símbolo de identidade exclusivo para serem criados com sucesso.
 >
->Depois que um namespace é criado, ele não pode ser excluído e seu símbolo e tipo de identidade não podem ser alterados.
+>* Depois que um namespace é criado, ele não pode ser excluído e seu símbolo e tipo de identidade não podem ser alterados.
+>
+>* Não há suporte para namespaces duplicados. Não é possível usar um nome para exibição existente e um símbolo de identidade ao criar um novo namespace.
 
 ## Namespaces em dados de identidade
 

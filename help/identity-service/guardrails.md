@@ -3,9 +3,9 @@ keywords: Experience Platform;identidade;serviço de identidade;solução de pro
 title: Medidas de proteção do serviço de identidade
 description: Este documento fornece informações sobre limites de uso e taxa para dados do Serviço de identidade para ajudar você a otimizar o uso do gráfico de identidade.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: a9b5ab28d00941b7531729653eb630a61b5446fc
+source-git-commit: b78d1d00a42df8a703a4dd15959cf15b058e0b7a
 workflow-type: tm+mt
-source-wordcount: '1182'
+source-wordcount: '1073'
 ht-degree: 1%
 
 ---
@@ -31,8 +31,7 @@ A tabela a seguir descreve os limites estáticos aplicados aos dados de identida
 
 | Grade de Proteção | Limite | Notas |
 | --- | --- | --- |
-| (Comportamento atual) Número de identidades em um gráfico | 150 | O limite é aplicado no nível da sandbox. Quando o número de identidades atingir 150 ou mais, nenhuma nova identidade será adicionada e o gráfico de identidade não será atualizado. Os gráficos podem mostrar identidades maiores que 150 como resultado da vinculação de um ou mais gráficos com menos de 150 identidades. **Nota**: o número máximo de identidades em um gráfico de identidade **para um perfil mesclado individual** é 50. Os perfis mesclados baseados em gráficos de identidade com mais de 50 identidades são excluídos do Perfil do cliente em tempo real. Para obter mais informações, leia o guia em [medidas de proteção para dados do Perfil](../profile/guardrails.md). |
-| (Comportamento futuro) Número de identidades em um gráfico [!BADGE Beta]{type=Informative} | 50 | Quando um gráfico com 50 identidades vinculadas é atualizado, o Serviço de identidade aplica um mecanismo &quot;primeiro a entrar, primeiro a sair&quot; e exclui a identidade mais antiga para abrir espaço para a identidade mais recente. A exclusão se baseia no tipo de identidade e no carimbo de data e hora. O limite é aplicado no nível da sandbox. Para obter mais informações, leia a seção sobre [noções básicas sobre a lógica de exclusão](#deletion-logic). |
+| Número de identidades em um gráfico | 50 | Quando um gráfico com 50 identidades vinculadas é atualizado, o Serviço de identidade aplica um mecanismo &quot;primeiro a entrar, primeiro a sair&quot; e exclui a identidade mais antiga para abrir espaço para a identidade mais recente. A exclusão se baseia no tipo de identidade e no carimbo de data e hora. O limite é aplicado no nível da sandbox. Para obter mais informações, leia a seção sobre [noções básicas sobre a lógica de exclusão](#deletion-logic). |
 | Número de identidades em um registro XDM | 20 | O número mínimo de registros XDM necessários é dois. |
 | Número de namespaces personalizados | None | Não há limites para o número de namespaces personalizados que você pode criar. |
 | Número de caracteres para um nome para exibição de namespace ou símbolo de identidade | None | Não há limites para o número de caracteres de um nome para exibição de namespace ou símbolo de identidade. |
@@ -50,7 +49,7 @@ A tabela a seguir descreve as regras existentes que devem ser seguidas para gara
 
 A partir de 31 de março de 2023, o Serviço de identidade bloqueará a assimilação da Adobe Analytics ID (AAID) para novos clientes. Normalmente, essa identidade é assimilada por meio do [Origem do Adobe Analytics](../sources/connectors/adobe-applications/analytics.md) e a variável [Origem do Adobe Audience Manager](../sources//connectors/adobe-applications/audience-manager.md) e é redundante porque a ECID representa o mesmo navegador da Web. Se quiser alterar essa configuração padrão, entre em contato com a equipe de conta do Adobe.
 
-## [!BADGE Beta]{type=Informative} Noções básicas sobre a lógica de exclusão quando um gráfico de identidade na capacidade é atualizado {#deletion-logic}
+## Noções básicas sobre a lógica de exclusão quando um gráfico de identidade na capacidade é atualizado {#deletion-logic}
 
 Quando um gráfico de identidade completo é atualizado, o Serviço de identidade exclui a identidade mais antiga no gráfico antes de adicionar a identidade mais recente. Isso é para manter a precisão e a relevância dos dados de identidade. Esse processo de exclusão segue duas regras principais:
 

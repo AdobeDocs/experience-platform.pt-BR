@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guia da interface do usuário do Serviço de segmentação
 description: Saiba como criar e gerenciar públicos e definições de segmento na interface do usuário do Adobe Experience Platform.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 378b51b13547af994bd258a42d1068118d099eb4
+source-git-commit: 7eaf3383bb8dde0d5918eefba1ee69caddea0c0b
 workflow-type: tm+mt
-source-wordcount: '3610'
-ht-degree: 4%
+source-wordcount: '3781'
+ht-degree: 3%
 
 ---
 
@@ -62,37 +62,9 @@ Para saber mais, visite o [guia do painel de públicos-alvo](../../dashboards/gu
 >title="Adicionar todos os públicos-alvo à programação"
 >abstract="Permite incluir todos os públicos-alvo avaliados usando a segmentação em lote na atualização diária programada. Desabilite para remover todos os públicos-alvo da atualização programada."
 
-Selecione o **[!UICONTROL Procurar]** para ver uma lista de todos os públicos-alvo da sua organização.
+Selecione o **[!UICONTROL Procurar]** para ver uma lista de todos os públicos-alvo da sua organização. Essa exibição lista as informações sobre os públicos-alvo, incluindo a contagem de perfis, a origem, a data de criação, a data da última modificação, as tags e o detalhamento.
 
 ![A tela de navegação é exibida. Uma lista de todos os públicos-alvo pertencentes à organização é exibida.](../images/ui/overview/audience-browse.png)
-
-Essa exibição lista as informações sobre os públicos-alvo, incluindo a contagem de perfis, a origem, a data de criação, a data da última modificação, as tags e o detalhamento.
-
-É possível adicionar outros campos a essa exibição selecionando ![o ícone do atributo de filtro](../images/ui/overview/filter-attribute.png). Esses campos adicionais incluem status do ciclo de vida, frequência de atualização, última atualização por, descrição, criado por e rótulos de acesso.
-
-| Campo | Descrição |
-| ----- | ----------- |
-| [!UICONTROL Nome] | O nome do público-alvo. |
-| [!UICONTROL Contagem de perfis] | O número total de perfis qualificados para o público-alvo. |
-| [!UICONTROL Origem] | A origem do público. Isso indica de onde o público-alvo vem. Os valores possíveis incluem Serviço de segmentação, Upload personalizado, Composição de público-alvo e Audience Manager. |
-| [!UICONTROL Criado] | A data e a hora, em UTC, em que o público-alvo foi criado. |
-| [!UICONTROL Última atualização] | A data e a hora, em UTC, em que o público-alvo foi atualizado pela última vez. |
-| [!UICONTROL Tags] | As tags definidas pelo usuário que pertencem ao público. Mais informações sobre essas tags podem ser encontradas no [seção sobre tags](#tags). |
-| [!UICONTROL Detalhamento] | O detalhamento do status do perfil para o público-alvo. Uma descrição mais detalhada desse detalhamento do status do perfil pode ser encontrada abaixo. |
-| [!UICONTROL Status do ciclo de vida] | O status do público. Os valores possíveis para esse campo incluem `Draft`, `Published`, e `Archived`. |
-| [!UICONTROL Frequência das atualizações] | Um valor que indica a frequência com que os dados do público-alvo são atualizados. Os valores possíveis para esse campo incluem `On Demand` (Lote), `Scheduled` (Transmissão) e `Continuous` (Borda). |
-| [!UICONTROL Última atualização realizada por] | O nome da última pessoa que atualizou o público. |
-| [!UICONTROL Descrição] | A descrição do público. |
-| [!UICONTROL Criado por] | O nome da pessoa que criou o público-alvo. |
-| [!UICONTROL Acessar rótulos] | Os rótulos de acesso do público-alvo. Os rótulos de acesso permitem categorizar conjuntos de dados e campos de acordo com as políticas de uso que se aplicam a esses dados. Esses rótulos podem ser aplicados a qualquer momento, fornecendo flexibilidade na maneira como você escolhe controlar os dados. Para obter mais informações sobre rótulos de acesso, leia a documentação em [gerenciamento de rótulos](../../access-control/abac/ui/labels.md). |
-
-Se a opção de detalhamento estiver selecionada, a tela mostrará um gráfico de barras descrevendo a porcentagem de perfis que pertencem a cada um dos seguintes status de perfil calculados: [!UICONTROL Realizado], [!UICONTROL Existente], e [!UICONTROL Saindo]. Além disso, a discriminação mostrada na [!UICONTROL Procurar] é o detalhamento mais preciso do status de definição do segmento. Se este número for diferente do indicado no [!UICONTROL Visão geral] , você deve usar os números no [!UICONTROL Procurar] guia como a fonte correta de informações, já que a variável [!UICONTROL Visão geral] os números de guia são atualizados apenas uma vez por dia.
-
-| Status | Descrição |
-| ------ | ----------- |
-| [!UICONTROL Realizado] | A contagem de perfis que **qualificado** para o segmento nas últimas 24 horas desde a execução do último trabalho de segmento em lote. |
-| [!UICONTROL Existente] | A contagem de perfis que **permaneceu** no segmento nas últimas 24 horas desde a execução do último trabalho de segmento em lote. |
-| [!UICONTROL Saindo] | A contagem de perfis que **encerrado** o segmento nas últimas 24 horas desde a execução do último trabalho de segmento em lote. |
 
 Ao lado de cada público há um ícone de reticências. Selecionar essa opção exibe uma lista de ações rápidas disponíveis para o público-alvo. Essa lista de ações é diferente com base na origem do público-alvo.
 
@@ -110,8 +82,13 @@ Ao lado de cada público há um ícone de reticências. Selecionar essa opção 
 | Aplicar rótulos de acesso | Composição de público-alvo, Upload personalizado, Serviço de segmentação | Permite gerenciar os rótulos de acesso que pertencem ao público-alvo. Para obter mais informações sobre rótulos de acesso, leia a documentação em [gerenciamento de rótulos](../../access-control/abac/ui/labels.md). |
 | Arquivar | Upload personalizado | Arquiva o público-alvo selecionado. |
 | Excluir | Composição de público-alvo, Upload personalizado, Serviço de segmentação | Exclui o público selecionado. |
+| Adicionar ao pacote | Composição de público-alvo, Upload personalizado, Serviço de segmentação | Permite mover o público-alvo entre sandboxes. Para obter mais informações sobre esse recurso, leia a [guia de ferramentas de sandbox](../../sandboxes/ui/sandbox-tooling.md). |
 
-Na parte superior da página há opções para adicionar todos os públicos-alvo a um agendamento, importar um público-alvo e criar um novo público-alvo.
+>[!NOTE]
+>
+> Você vai **não** ser capaz de excluir um público-alvo usado em uma ativação de destino.
+
+Na parte superior da página há opções para adicionar todos os públicos-alvo a um agendamento, importar um público-alvo, criar um novo público-alvo e exibir um detalhamento da frequência de atualização.
 
 Alternando **[!UICONTROL Agendar todos os públicos-alvo]** habilitará a segmentação agendada. Mais informações sobre segmentação agendada podem ser encontradas na [seção segmentação programada deste guia do usuário](#scheduled-segmentation).
 
@@ -121,9 +98,45 @@ Selecionar **[!UICONTROL Criar público]** O permitirá a criação de um públi
 
 ![A barra de navegação superior na página de navegação do público-alvo é realçada. Essa barra contém um botão para criar um público-alvo e um botão para importar um público-alvo.](../images/ui/overview/browse-audiences-top.png)
 
->[!NOTE]
->
-> Você vai **não** ser capaz de excluir um público-alvo usado em uma ativação de destino.
+É possível selecionar **[!UICONTROL Atualizar resumo de frequência]** para exibir um gráfico de pizza que mostre a frequência de atualização.
+
+![O botão Update frequency summary é realçado.](../images/ui/overview/browse-audience-update-frequency-summary.png)
+
+O gráfico de pizza é exibido, mostrando um detalhamento dos públicos-alvo por frequência de atualização. O gráfico exibe o número total de públicos-alvo no meio. Se você passar o mouse sobre as diferentes partes do público-alvo, ele exibirá o número de públicos-alvo que pertencem a cada tipo de frequência de atualização.
+
+![O gráfico de pizza de frequência de atualização é exibido.](../images/ui/overview/update-frequency-chart.png)
+
+### Personalizar {#customize}
+
+É possível adicionar outros campos à [!UICONTROL Procurar] página selecionando ![o ícone do atributo de filtro](../images/ui/overview/filter-attribute.png). Esses campos adicionais incluem status do ciclo de vida, frequência de atualização, última atualização por, descrição, criado por e rótulos de acesso.
+
+| Campo | Descrição |
+| ----- | ----------- |
+| [!UICONTROL Nome] | O nome do público-alvo. |
+| [!UICONTROL Contagem de perfis] | O número total de perfis qualificados para o público-alvo. |
+| [!UICONTROL Origem] | A origem do público. Isso indica de onde o público-alvo vem. Os valores possíveis incluem Serviço de segmentação, Upload personalizado, Composição de público-alvo e Audience Manager. |
+| [!UICONTROL Status do ciclo de vida] | O status do público. Os valores possíveis para esse campo incluem `Draft`, `Published`, e `Archived`. |
+| [!UICONTROL Frequência das atualizações] | Um valor que indica a frequência com que os dados do público-alvo são atualizados. Os valores possíveis para esse campo incluem [!UICONTROL Lote], [!UICONTROL Streaming], [!UICONTROL Edge], e [!UICONTROL Não Agendado]. |
+| [!UICONTROL Última atualização realizada por] | O nome da última pessoa que atualizou o público. |
+| [!UICONTROL Criado] | A data e a hora, em UTC, em que o público-alvo foi criado. |
+| [!UICONTROL Última atualização] | A data e a hora, em UTC, em que o público-alvo foi atualizado pela última vez. |
+| [!UICONTROL Tags] | As tags definidas pelo usuário que pertencem ao público. Mais informações sobre essas tags podem ser encontradas no [seção sobre tags](#tags). |
+| [!UICONTROL Descrição] | A descrição do público. |
+| [!UICONTROL Criado por] | O nome da pessoa que criou o público-alvo. |
+| [!UICONTROL Acessar rótulos] | Os rótulos de acesso do público-alvo. Os rótulos de acesso permitem categorizar conjuntos de dados e campos de acordo com as políticas de uso que se aplicam a esses dados. Esses rótulos podem ser aplicados a qualquer momento, fornecendo flexibilidade na maneira como você escolhe controlar os dados. Para obter mais informações sobre rótulos de acesso, leia a documentação em [gerenciamento de rótulos](../../access-control/abac/ui/labels.md). |
+| [!UICONTROL Detalhamento] | O detalhamento do status do perfil para o público-alvo. Uma descrição mais detalhada desse detalhamento do status do perfil pode ser encontrada abaixo. |
+
+Se a opção de detalhamento estiver selecionada, a tela mostrará um gráfico de barras descrevendo a porcentagem de perfis que pertencem a cada um dos seguintes status de perfil calculados: [!UICONTROL Realizado], [!UICONTROL Existente], e [!UICONTROL Saindo]. Além disso, a discriminação mostrada na [!UICONTROL Procurar] é o detalhamento mais preciso do status de definição do segmento. Se este número for diferente do indicado no [!UICONTROL Visão geral] , você deve usar os números no [!UICONTROL Procurar] guia como a fonte correta de informações, já que a variável [!UICONTROL Visão geral] os números de guia são atualizados apenas uma vez por dia.
+
+| Status | Descrição |
+| ------ | ----------- |
+| [!UICONTROL Realizado] | A contagem de perfis que **qualificado** para o segmento nas últimas 24 horas desde a execução do último trabalho de segmento em lote. |
+| [!UICONTROL Existente] | A contagem de perfis que **permaneceu** no segmento nas últimas 24 horas desde a execução do último trabalho de segmento em lote. |
+| [!UICONTROL Saindo] | A contagem de perfis que **encerrado** o segmento nas últimas 24 horas desde a execução do último trabalho de segmento em lote. |
+
+Após selecionar os campos que deseja exibir, você também pode redimensionar a largura das colunas exibidas. Você pode fazer isso arrastando a área entre as colunas ou selecionando o ![ícone de seta](../images/ui/overview/arrow-icon.png) da coluna que você deseja redimensionar, seguida de **[!UICONTROL Redimensionar coluna]**.
+
+![O botão Redimensionar coluna é realçado.](../images/ui/overview/browse-audience-resize-column.png)
 
 ### Filtragem, pastas e marcação {#manage-audiences}
 
@@ -378,7 +391,7 @@ Um popover é exibido, listando todos os campos que podem ser exibidos dentro da
 | [!UICONTROL Status] | O status do público. Os valores possíveis para esse campo incluem `Draft`, `Published`, e `Archived`. |
 | [!UICONTROL Criado] | A hora e a data em que o público-alvo foi criado. |
 | [!UICONTROL Criado por] | O nome da pessoa que criou o público-alvo. |
-| [!UICONTROL Atualização dos pacotes  ] | A hora e a data em que o público-alvo foi atualizado pela última vez. |
+| [!UICONTROL Atualização dos pacotes] | A hora e a data em que o público-alvo foi atualizado pela última vez. |
 | [!UICONTROL Atualizado por] | O nome da última pessoa que atualizou o público. |
 
 Para ver como o público é composto, selecione o nome de um público na [!UICONTROL Públicos-alvo] guia.

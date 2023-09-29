@@ -1,12 +1,12 @@
 ---
-keywords: conectar destino;destino conectar;como conectar destino;connect destination;destination connect;how to connect destination
+keywords: conectar destino;conexão de destino;como conectar destino;connect destination;destination connect;how to connect destination
 title: Criar uma nova conexão de destino
 type: Tutorial
 description: Saiba como se conectar a um destino no Adobe Experience Platform, ativar alertas e configurar ações de marketing para o destino conectado.
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: af705b8a77b2ea15b44b97ed3f1f2c5aa7433eb1
 workflow-type: tm+mt
-source-wordcount: '1107'
+source-wordcount: '1141'
 ht-degree: 0%
 
 ---
@@ -78,15 +78,19 @@ Dependendo do destino ao qual você está se conectando, talvez seja solicitado 
 
 ![Imagem mostrando os parâmetros de entrada obrigatórios e opcionais ao conectar-se a um destino de Trade Desk.](../assets/ui/connect-destinations/connect-destination-trade-desk-example.png)
 
-### (Beta) Configurar opções de formatação de arquivo para arquivos exportados {#file-formatting-and-compression-options}
+### Configurar opções de formatação de arquivo para arquivos exportados {#file-formatting-and-compression-options}
 
 Para destinos baseados em arquivo, é possível definir várias configurações relacionadas ao modo como os arquivos exportados são formatados e compactados. Para obter mais informações sobre todas as opções de formatação e compactação disponíveis, leia a [Tutorial Configurar opções de formatação de arquivo para destinos baseados em arquivo](/help/destinations/ui/batch-destinations-file-formatting-options.md).
 
 ![Imagem que mostra a seleção do tipo de arquivo e várias opções para arquivos CSV.](/help/destinations/assets/ui/connect-destinations/file-formatting-options.png)
 
-### Configurar conexão de destino para ativação de público ou exportações de conjunto de dados {#segment-activation-or-dataset-exports}
+### Configurar a conexão de destino para ativação de público, ativação de clientes potenciais ou exportações de conjunto de dados {#segment-activation-or-dataset-exports}
 
-Alguns destinos baseados em arquivo oferecem suporte à ativação de públicos-alvo, bem como a exportações de conjuntos de dados. Para esses destinos, você pode escolher se deseja criar uma conexão que permita ativar públicos ou exportar conjuntos de dados.
+Alguns destinos baseados em arquivo oferecem suporte à ativação de públicos-alvo para clientes ou clientes potenciais conhecidos, bem como a exportações de conjuntos de dados. Para esses destinos, você pode criar uma conexão que permita [ativar públicos](/help/destinations/ui/activate-batch-profile-destinations.md), [clientes potenciais](/help/destinations/ui/activate-prospect-audiences.md)ou [exportar conjuntos de dados](/help/destinations/ui/export-datasets.md).
+
+>[!WARNING]
+>
+>Ao exportar conjuntos de dados, observe que as exportações para arquivos JSON são compatíveis somente no modo compactado. Exporta para [!DNL Parquet] arquivos são suportados no modo compactado e descompactado.
 
 ![Imagem mostrando o controle de seleção do tipo de dados, que permite aos usuários escolher entre ativação de público-alvo e exportações de conjunto de dados.](/help/destinations/assets/ui/connect-destinations/data-type-selection.png)
 

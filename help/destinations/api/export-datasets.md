@@ -4,9 +4,9 @@ title: Exportar conjuntos de dados usando a API do Serviço de fluxo
 description: Saiba como usar a API do Serviço de fluxo para exportar conjuntos de dados para destinos selecionados.
 type: Tutorial
 exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
-source-git-commit: 28e07c464eb05ba7c20b132d430fccac15d8806e
+source-git-commit: af705b8a77b2ea15b44b97ed3f1f2c5aa7433eb1
 workflow-type: tm+mt
-source-wordcount: '3526'
+source-wordcount: '3550'
 ht-degree: 4%
 
 ---
@@ -55,7 +55,7 @@ As seções a seguir fornecem informações adicionais que você deve saber para
 
 ### Permissões necessárias {#permissions}
 
-Para exportar conjuntos de dados, é necessário **[!UICONTROL Exibir destinos]** e **[!UICONTROL Gerenciar e ativar destinos do conjunto de dados]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
+Para exportar conjuntos de dados, é necessário **[!UICONTROL Exibir destinos]**, **[!UICONTROL Exibir conjuntos de dados]**, e **[!UICONTROL Gerenciar e ativar destinos do conjunto de dados]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
 
 Para garantir que você tenha as permissões necessárias para exportar conjuntos de dados e que o destino seja compatível com a exportação de conjuntos de dados, navegue pelo catálogo de destinos. Se um destino tiver um **[!UICONTROL Ativar]** ou um **[!UICONTROL Exportar conjuntos de dados]** , você terá as permissões apropriadas.
 
@@ -1149,6 +1149,10 @@ Observe a ID de conexão da resposta. Essa ID será necessária na próxima etap
 ![Diagrama que mostra a etapa 4 do fluxo de trabalho Exportar conjuntos de dados](../assets/api/export-datasets/export-datasets-api-workflow-create-target-connection.png)
 
 Em seguida, é necessário criar uma conexão de destino que armazene os parâmetros de exportação para seus conjuntos de dados. Os parâmetros de exportação incluem local, formato de arquivo, compactação e outros detalhes. Consulte a `targetSpec` As propriedades fornecidas na especificação de conexão do destino para entender as propriedades compatíveis com cada tipo de destino. Consulte as guias abaixo para a `targetSpec` propriedades de todos os destinos compatíveis.
+
+>[!WARNING]
+>
+>As exportações para arquivos JSON são suportadas somente em um modo compactado. Exporta para [!DNL Parquet] arquivos são suportados no modo compactado e descompactado.
 
 >[!BEGINTABS]
 

@@ -1,11 +1,11 @@
 ---
-title: (Beta) Usar campos calculados para exportar matrizes em arquivos simples
+title: (Beta) Usar campos calculados para exportar matrizes em arquivos de esquema simples
 type: Tutorial
-description: Saiba como exportar matrizes e campos calculados do Real-Time CDP para destinos baseados em perfil em lote.
+description: Saiba como usar campos calculados para exportar matrizes em arquivos de esquema simples do Real-Time CDP para destinos de armazenamento na nuvem.
 badge: "Beta"
-source-git-commit: 79924b9a7d5114c94a004f99fb194102845b2127
+source-git-commit: 77fd0ace252bae66478f73a1dc4b7d4a3ccb867d
 workflow-type: tm+mt
-source-wordcount: '1180'
+source-wordcount: '1207'
 ht-degree: 2%
 
 ---
@@ -17,15 +17,8 @@ ht-degree: 2%
 >id="platform_destinations_export_arrays_flat_files"
 >title="(Beta) Suporte a arrays de exportação"
 >abstract="Exporte matrizes simples de valores int, string ou booleanos do Experience Platform para o destino de armazenamento na nuvem desejado. Algumas limitações se aplicam. Consulte a documentação para obter exemplos abrangentes e as funções compatíveis."
-
-<!--
-
-additional links for contextualhelp:
-
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#examples" text="Examples"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#known-limitations" text="Known limitations"
-
--->
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#examples" text="Exemplos"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#known-limitations" text="Limitações conhecidas"
 
 >[!AVAILABILITY]
 >

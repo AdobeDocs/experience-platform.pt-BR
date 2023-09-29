@@ -1,10 +1,10 @@
 ---
 title: Suplementar perfis próprios com atributos fornecidos por parceiros
 description: Saiba como suplementar perfis próprios com atributos de parceiros de dados confiáveis para melhorar sua base de dados, obter novos insights sobre sua base de clientes e aprimorar a otimização do público-alvo.
-source-git-commit: 9dd305be4dcb45c290a2b8ee0476191949369adc
+source-git-commit: b4a18cdf434055be81dacbf19de4dd3e3f229d19
 workflow-type: tm+mt
-source-wordcount: '1091'
-ht-degree: 94%
+source-wordcount: '1110'
+ht-degree: 95%
 
 ---
 
@@ -30,6 +30,12 @@ Ao considerar suplementar seus perfis próprios com atributos de parceiros de da
 >[!WARNING]
 >
 >Os atributos adicionais fornecidos por parceiros assimilados na Real-Time CDP afetam sua *riqueza do perfil média*. Leia a [Descrição do produto da Real-time Customer Data Platform](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html?lang=pt-BR) para obter mais informações sobre riqueza do perfil.
+
+## Apresentação em vídeo {#video-walkthrough}
+
+Assista ao tutorial em vídeo abaixo para obter uma apresentação de como complementar públicos-alvo primários com atributos fornecidos pelo parceiro:
+
+>[!VIDEO](https://video.tv.adobe.com/v/3423075/?learn=on)
 
 ## Como atingir o caso de uso: visão geral de alto nível {#achieve-the-use-case-high-level}
 
@@ -118,6 +124,6 @@ Observe as seguintes limitações ao explorar o caso de uso descrito nesta pági
 
 Conheça outros casos de uso habilitados por meio da compatibilidade com dados de parceiros na Real-Time CDP:
 
-* Use o suporte a dados de terceiros no Real-Time CDP para [expanda sua base de perfis com perfis de clientes potenciais de parceiros de dados e envolva-se com eles para adquirir ou alcançar novos clientes](/help/rtcdp/partner-data/prospecting.md).
+* Use o suporte a dados de terceiros da Real-Time CDP para [expandir sua base de perfis com prospectos de parceiros de dados e interaja com eles para adquirir ou alcançar novos clientes](/help/rtcdp/partner-data/prospecting.md).
 * [Aproveite o reconhecimento auxiliado pelo parceiro para personalizar experiências no local](/help/rtcdp/partner-data/onsite-personalization.md) durante a visita sem que o usuário autentique ou tenha um histórico anterior com sua marca.
 * [Ativação ampliada de perfis de clientes potenciais e públicos-alvo de clientes potenciais](/help/destinations/ui/activate-prospect-audiences.md) para selecionar destinos.

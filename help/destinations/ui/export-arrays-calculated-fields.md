@@ -3,9 +3,9 @@ title: (Beta) Usar campos calculados para exportar matrizes em arquivos de esque
 type: Tutorial
 description: Saiba como usar campos calculados para exportar matrizes em arquivos de esquema simples do Real-Time CDP para destinos de armazenamento na nuvem.
 badge: "Beta"
-source-git-commit: 77fd0ace252bae66478f73a1dc4b7d4a3ccb867d
+source-git-commit: b4a18cdf434055be81dacbf19de4dd3e3f229d19
 workflow-type: tm+mt
-source-wordcount: '1207'
+source-wordcount: '1278'
 ht-degree: 2%
 
 ---
@@ -124,6 +124,19 @@ Nesse caso, o arquivo de saída é semelhante ao mostrado abaixo. Observe como o
 John,Doe,"Marketing_Sales_Finance"
 ```
 
+### `iif` função para exportar matrizes {#iif-function-export-arrays}
+
+Use o `iif` para exportar elementos de uma matriz em determinadas condições. Por exemplo, continuar com a variável `organzations` do objeto de matriz acima, você pode gravar uma simples função condicional como `iif(organizations[0].equals("Marketing"), "isMarketing", "isNotMarketing")`.
+
+![Mapeamento da captura de tela para a primeira e a última funções](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-iif-function.png)
+
+Nesse caso, o arquivo de saída é semelhante ao mostrado abaixo. Nesse caso, o primeiro elemento do array é Marketing, então a pessoa é um membro do departamento de marketing.
+
+```
+`First_Name,Last_Name, Personal_Email, Is_Member_Of_Marketing_Dept
+John,Doe, johndoe@acme.org, "isMarketing"
+```
+
 ### `coalesce` função para exportar matrizes {#coalesce-function-export-arrays}
 
 Use o `coalesce` função para acessar e exportar o primeiro elemento não nulo de uma matriz em uma cadeia de caracteres.
@@ -188,14 +201,6 @@ Nesse caso, o arquivo de saída tem a seguinte aparência:
 `Personal_Email,First_Purchase, Last_Purchase
 johndoe@acme.org,"1538097126","1664327526"
 ```
-
-<!--
-
-### `iif` function to export arrays {#iif-function-export-arrays}
-
-Here are some examples of how you could use the `iif` function to access and export arrays and other fields: (STILL TO DO)
-
--->
 
 ### `md5` e `sha256` funções de hash {#hashing-functions}
 

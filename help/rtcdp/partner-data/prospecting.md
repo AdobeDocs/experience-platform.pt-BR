@@ -1,10 +1,10 @@
 ---
 title: Engajamento e conquista de novos clientes por meio de casos de uso de prospecção
 description: Saiba como engajar e conquistar novos clientes por meio de casos de uso de prospecção, possibilitados pelo suporte a dados de parceiros da Real-Time CDP.
-source-git-commit: 5352b461be3684ac4fe1703c916b9ec59bd14af1
+source-git-commit: b4a18cdf434055be81dacbf19de4dd3e3f229d19
 workflow-type: tm+mt
-source-wordcount: '1935'
-ht-degree: 97%
+source-wordcount: '1953'
+ht-degree: 96%
 
 ---
 
@@ -40,6 +40,12 @@ Antes de expandir a Real-Time CDP para engajar e conquistar novos clientes, use-
 4. Como **cliente**, você cria públicos-alvo focados a partir da lista de perfis em potencial.
 5. Como **cliente**, você ativa potenciais públicos-alvo para destinos que aceitam as identidades disponíveis em sua lista de prospectos.
 6. Se necessário, trabalhe com o **parceiro de dados** para ativação da última milha de públicos-alvo para os destinos de mídia paga desejados.
+
+## Apresentação em vídeo {#video-walkthrough}
+
+Assista ao tutorial em vídeo abaixo para obter uma apresentação de como alcançar e engajar possíveis públicos-alvo:
+
+>[!VIDEO](https://video.tv.adobe.com/v/3423071/?learn=on)
 
 ## Como atingir o caso de uso: instruções passo a passo {#step-by-step-instructions}
 

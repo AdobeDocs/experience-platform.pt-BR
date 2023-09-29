@@ -3,7 +3,7 @@ keywords: destinos, perguntas, perguntas frequentes, faq, perguntas frequentes s
 title: Perguntas frequentes
 description: Respostas às perguntas mais frequentes sobre destinos do Adobe Experience Platform
 exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
-source-git-commit: 75b9cc3e2c9a18ec8c08c9c3ca774accae31eb7e
+source-git-commit: b41335ba5fd6dca422b0c19517bc32b320f1e733
 workflow-type: tm+mt
 source-wordcount: '1638'
 ht-degree: 3%
@@ -48,7 +48,32 @@ Você reativa o público-alvo atualizado para o mesmo destino, mas como não há
 Para garantir que todos os perfis sejam enviados para o seu destino, você deve criar um novo público-alvo com a nova configuração e ativá-lo para o seu destino.
 
 +++
+<!--
+## [!DNL Experience Cloud Audiences] {#eca-faq}
 
+### What are the differences between the Experience Cloud Audiences and Adobe Target destinations?
+
++++Answer
+
+See the table below for a feature comparison between the Experience Cloud Audiences and Adobe Target destinations.
+
+||Experience Cloud Audiences|Adobe Target|
+|---|---|---|
+| **Supported Experience Cloud apps** | Supports audience activation to Audience Manager, Adobe Target, Adobe Analytics, Advertising Cloud, Marketo, Adobe Campaign | Supports audience activation only to Adobe Target |
+| **Supports audience activation** | ✓ | ✓ |
+| **Supports attribute activation** | X | ✓ |
+| **Latency** | Profiles begin activating in 6 hours. Full population is visible in 48 hours​. |Depends on implementation​ type. <ul><li>Web SDK enables same-page/next-page​ personalization.</li><li>AT.js enables next-session personalization.</li></ul> |
+| **DULE support** | ✓ | ✓ |
+| **Marketing actions support** | ✓ | ✓ |
+| **Supported IDs** | [!DNL ECID], [!DNL GAID], [!DNL IDFA], [!DNL email_lc_sha256] | Any ID type |
+| **Sandbox support** | One sandbox | Multiple sandboxes |
+| **Consent support** | X | Yes. Requires Privacy & Security Shield. |
+| **Edge segmentation support** | Supports activation of edge audiences. Does not support edge segmentation. | Supports edge segmentation and activation of edge audiences. |
+| **Supported audiences** | All types of audiences  | Edge merge policy required for activation.|
+
++++
+
+-->
 
 ## [!DNL Facebook Custom Audiences] {#facebook-faq}
 
@@ -58,6 +83,7 @@ Para garantir que todos os perfis sejam enviados para o seu destino, você deve 
 
 * Seu [!DNL Facebook] a conta de usuário deve ter o **[!DNL Manage campaigns]** permissão ativada para a conta de anúncio que você planeja usar.
 * A variável **Adobe Experience Cloud** conta comercial deve ser adicionada como um parceiro de publicidade em sua [!DNL Facebook Ad Account]. Use `business ID=206617933627973`. Consulte [Adicionar parceiros ao seu gerente de negócios](https://www.facebook.com/business/help/1717412048538897) na documentação do Facebook para obter detalhes.
+
   >[!IMPORTANT]
   >
   > Ao configurar as permissões para o Adobe Experience Cloud, você deve ativar o **Gerenciar campanhas** permissão. Isso é necessário para a integração de [!DNL Adobe Experience Platform].

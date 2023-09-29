@@ -2,7 +2,7 @@
 title: Governança de dados no serviço de consulta
 description: Esta visão geral abrange os principais elementos da governança de dados no Serviço de query do Experience Platform.
 exl-id: 37543d43-bd8c-4bf9-88e5-39de5efe3164
-source-git-commit: c3ce6548e18078e604ecd5db276eb162935f6181
+source-git-commit: 260ba98f920c8006ab3ed7fb2519a8c1720916c8
 workflow-type: tm+mt
 source-wordcount: '3132'
 ht-degree: 1%
@@ -137,7 +137,7 @@ A criptografia é o uso de um processo algorítmico para transformar dados em te
 
 A conformidade de dados do Serviço de consulta garante que os dados sejam sempre criptografados. Os dados em trânsito são sempre compatíveis com HTTPS e os dados em repouso são criptografados em um armazenamento Azure Data Lake usando chaves de nível de sistema. Consulte a documentação em [como os dados são criptografados no Adobe Experience Platform](../../landing/governance-privacy-security/encryption.md) para obter mais informações. Para obter detalhes sobre como os dados em repouso são criptografados no Armazenamento Azure Data Lake, consulte o [documentação oficial do Azure](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-encryption).
 
-Os dados em trânsito são sempre compatíveis com HTTPS e, da mesma forma, quando os dados estão em repouso no data lake, a criptografia é feita com a Chave de gerenciamento de clientes (CMK), que já é compatível com o Gerenciamento de Data Lake. A versão atualmente compatível é TLS1.2. Consulte a [documentação de chaves gerenciadas pelo cliente (CMK)](../../landing/governance-privacy-security/customer-managed-keys.md) para saber como configurar suas próprias chaves de criptografia para dados armazenados no Adobe Experience Platform.
+Os dados em trânsito são sempre compatíveis com HTTPS e, da mesma forma, quando os dados estão em repouso no data lake, a criptografia é feita com a Chave de gerenciamento de clientes (CMK), que já é compatível com o Gerenciamento de Data Lake. A versão atualmente compatível é TLS1.2. Consulte a [documentação de chaves gerenciadas pelo cliente (CMK)](../../landing/governance-privacy-security/customer-managed-keys/overview.md) para saber como configurar suas próprias chaves de criptografia para dados armazenados no Adobe Experience Platform.
 
 
 ## Auditoria {#audit}

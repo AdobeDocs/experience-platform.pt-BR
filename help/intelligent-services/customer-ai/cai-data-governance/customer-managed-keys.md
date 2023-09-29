@@ -3,16 +3,16 @@ keywords: insights;customer ai;customer ai insights;AAI query service;customer a
 title: Chaves gerenciadas pelo cliente na IA do cliente.
 description: Saiba como configurar Chaves gerenciadas pelo cliente para a IA do cliente.
 exl-id: 12746c5c-094a-4d49-8d3a-7641fe0ec02a
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: a81c3f220203d65ef810a92896edcfc489a0327a
 workflow-type: tm+mt
 source-wordcount: '173'
 ht-degree: 21%
 
 ---
 
-# Chaves gerenciadas pelo cliente
+# Customer Managed Keys
 
-A IA do cliente fornece a opção para [Healthcare Shield](https://www.adobe.com/trust/compliance/hipaa-ready.html) e os clientes do Privacy &amp; Security Shield para utilizar as Chaves gerenciadas pelo cliente do Azure (CMK) para serem aplicadas aos dados da IA do cliente. O processo de configuração é o mesmo que [Configuração do Adobe Experience Platform CMK](../../../landing/governance-privacy-security/customer-managed-keys.md) e você pode seguir as etapas descritas aqui.
+A IA do cliente fornece a opção para [Healthcare Shield](https://www.adobe.com/trust/compliance/hipaa-ready.html) e os clientes do Privacy &amp; Security Shield para utilizar as Chaves gerenciadas pelo cliente do Azure (CMK) para serem aplicadas aos dados da IA do cliente. O processo de configuração é o mesmo que [Configuração do Adobe Experience Platform CMK](../../../landing/governance-privacy-security/customer-managed-keys/overview.md) e você pode seguir as etapas descritas aqui.
 
 Você pode ler a documentação em [Chaves gerenciadas pelo cliente no Adobe Experience Platform](../../../landing/governance-privacy-security/encryption.md) e siga as etapas descritas para executar o processo de configuração.
 

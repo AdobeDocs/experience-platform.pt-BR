@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Criar e editar esquemas na interface
 description: Saiba mais sobre as noções básicas sobre como criar e editar esquemas na interface do usuário do Experience Platform.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: bed627b945c5392858bcc2dce18e9bbabe8bcdb6
+source-git-commit: 943d1360e80caef58d09b8502507a3ad72edda03
 workflow-type: tm+mt
-source-wordcount: '3340'
+source-wordcount: '3571'
 ht-degree: 1%
 
 ---
@@ -31,15 +31,25 @@ Este guia requer uma compreensão funcional do Sistema XDM. Consulte a [Visão g
 >
 >Esta seção aborda como criar manualmente um novo esquema na interface do usuário do. Se estiver assimilando dados CSV na Platform, você pode optar por [mapear esses dados para um esquema XDM criado por recomendações geradas por IA](../../../ingestion/tutorials/map-csv/recommendations.md) (atualmente na versão beta) sem precisar criar manualmente o esquema.
 
-No [!UICONTROL Esquemas] espaço de trabalho, selecione **[!UICONTROL Criar esquema]** no canto superior direito. Na lista suspensa exibida, você pode escolher entre **[!UICONTROL Perfil individual XDM]** e **[!UICONTROL XDM ExperienceEvent]** como a classe base do esquema. Como alternativa, você pode selecionar **[!UICONTROL Procurar]** para selecionar na lista completa de classes disponíveis, ou [criar uma nova classe personalizada](./classes.md#create) em vez disso.
+No [!UICONTROL Esquemas] espaço de trabalho, selecione **[!UICONTROL Criar esquema]** no canto superior direito.
 
-![](../../images/ui/resources/schemas/create-schema.png)
+![O espaço de trabalho Esquemas com [!UICONTROL Criar esquema] destacado.](../../images/ui/resources/schemas/create-schema.png)
 
-Depois de selecionar uma classe, a variável [!DNL Schema Editor] é exibida e a estrutura base do esquema (fornecida pela classe ) é mostrada na tela. Aqui, você pode usar o painel direito para adicionar um **[!UICONTROL Nome de exibição]** e **[!UICONTROL Descrição]** para o esquema.
+A variável [!UICONTROL Criar esquema] workflow aparece. Você pode escolher uma classe base para o esquema selecionando **[!UICONTROL Perfil individual]**, **[!UICONTROL Evento de experiência]** ou **[!UICONTROL Outro]**, seguido por **[!UICONTROL Próxima]** para confirmar sua escolha. Consulte a [Perfil individual XDM](../../classes/individual-profile.md) e [XDM ExperienceEvent](../../classes/experienceevent.md) para obter mais informações sobre essas classes.
 
-![](../../images/ui/resources/schemas/schema-details.png)
+![A variável [!UICONTROL Criar esquema] fluxo de trabalho com as três opções de classe e [!UICONTROL Próxima] destacado.](../../images/ui/resources/schemas/schema-class-options.png)
 
-Agora você pode começar a criar a estrutura do esquema [adição de grupos de campos de esquema](#add-field-groups).
+Depois de selecionar uma classe, a variável [!UICONTROL Nome e revisão] é exibida. Nesta seção, você fornece um nome e uma descrição para identificar o esquema. &#x200B;A estrutura base do esquema (fornecida pela classe) é mostrada na tela para que você revise e verifique a classe selecionada e a estrutura do esquema.
+
+Entre em um [!UICONTROL Nome de exibição do esquema] no campo de texto. Em seguida, insira uma descrição adequada para ajudar a identificar seu esquema. Quando tiver revisado a estrutura do esquema e estiver satisfeito com as configurações, selecione **[!UICONTROL Concluir]** para criar seu esquema.
+
+![A variável [!UICONTROL Nome e revisão] seção do [!UICONTROL Criar esquema] fluxo de trabalho com o [!UICONTROL Nome de exibição do esquema], [!UICONTROL Descrição], e [!UICONTROL Concluir] destacado.](../../images/ui/resources/schemas/name-and-review.png)
+
+A variável [!UICONTROL Esquema] [!UICONTROL Procurar] é exibida. O esquema criado recentemente está disponível para edição no [!DNL Schema Editor] e aparece na lista de schemas disponíveis.
+
+![O Editor de esquemas exibe o esquema criado recentemente.](../../images/ui/resources/schemas/schema-details.png)
+
+Agora você pode começar a criar a estrutura do esquema [adição de grupos de campos de esquema](#add-field-groups) no [!DNL Schema Editor].
 
 ## Editar um esquema existente {#edit}
 
@@ -47,9 +57,9 @@ Agora você pode começar a criar a estrutura do esquema [adição de grupos de 
 >
 >Depois que um esquema é salvo e usado na assimilação de dados, somente alterações adicionais podem ser feitas nele. Consulte a [regras de evolução do schema](../../schema/composition.md#evolution) para obter mais informações.
 
-Para editar um esquema existente, selecione o **[!UICONTROL Procurar]** e selecione o nome do schema que deseja editar.
+Para editar um esquema existente, selecione o **[!UICONTROL Procurar]** e selecione o nome do schema que deseja editar. Você também pode usar a barra de pesquisa para restringir a lista de opções disponíveis.
 
-![](../../images/ui/resources/schemas/edit-schema.png)
+![O espaço de trabalho Esquema com um esquema realçado.](../../images/ui/resources/schemas/edit-schema.png)
 
 >[!TIP]
 >
@@ -81,11 +91,11 @@ Depois de abrir um esquema na variável [!DNL Schema Editor], é possível adici
 
 Uma caixa de diálogo é exibida, mostrando uma lista de grupos de campos que você pode selecionar para o esquema. Como os grupos de campos são compatíveis apenas com uma classe, somente os grupos de campos associados à classe selecionada do esquema serão listados. Por padrão, os grupos de campos listados são classificados com base na popularidade do uso em sua organização.
 
-![](../../images/ui/resources/schemas/field-group-popularity.png)
+![A variável [!UICONTROL Adicionar grupos de campos] caixa de diálogo realçada com o [!UICONTROL População] realçada.](../../images/ui/resources/schemas/field-group-popularity.png)
 
 Se você souber a atividade geral ou a área comercial dos campos que deseja adicionar, selecione uma ou mais categorias verticais do setor no painel à esquerda para filtrar a lista exibida de grupos de campos.
 
-![](../../images/ui/resources/schemas/industry-filter.png)
+![A variável [!UICONTROL Adicionar grupos de campos] caixa de diálogo realçada com o [!UICONTROL Setor] filtros e a variável [!UICONTROL Setor] realçada.](../../images/ui/resources/schemas/industry-filter.png)
 
 >[!NOTE]
 >
@@ -93,11 +103,11 @@ Se você souber a atividade geral ou a área comercial dos campos que deseja adi
 
 Você também pode usar a barra de pesquisa para ajudar a localizar o grupo de campos desejado. Os grupos de campos cujo nome corresponde à consulta são exibidos na parte superior da lista. Em **[!UICONTROL Campos padrão]**, grupos de campos que contêm campos que descrevem os atributos de dados desejados são exibidos.
 
-![](../../images/ui/resources/schemas/field-group-search.png)
+![A variável [!UICONTROL Adicionar grupos de campos] com a [!UICONTROL Campos padrão] função de pesquisa realçada.](../../images/ui/resources/schemas/field-group-search.png)
 
 Marque a caixa de seleção ao lado do nome do grupo de campos que você deseja adicionar ao esquema. É possível selecionar vários grupos de campos na lista, com cada grupo de campos selecionado aparecendo no painel direito.
 
-![](../../images/ui/resources/schemas/add-field-group.png)
+![A variável [!UICONTROL Adicionar grupos de campos] caixa de diálogo com o recurso de seleção de caixa de seleção realçado.](../../images/ui/resources/schemas/add-field-group.png)
 
 >[!TIP]
 >
@@ -105,11 +115,11 @@ Marque a caixa de seleção ao lado do nome do grupo de campos que você deseja 
 
 Depois de escolher os grupos de campos, selecione **[!UICONTROL Adicionar grupos de campos]** para adicioná-los ao esquema.
 
-![](../../images/ui/resources/schemas/add-field-group-finish.png)
+![A variável [!UICONTROL Adicionar grupos de campos] caixa de diálogo com grupos de campos selecionados e [!UICONTROL Adicionar grupos de campos] destacado.](../../images/ui/resources/schemas/add-field-group-finish.png)
 
 A variável [!DNL Schema Editor] reaparece com os campos fornecidos pelo grupo de campos representados na tela.
 
-![](../../images/ui/resources/schemas/field-groups-added.png)
+![A variável [!DNL Schema Editor] com um schema de exemplo exibido.](../../images/ui/resources/schemas/field-groups-added.png)
 
 Depois de adicionar um grupo de campos a um esquema, você pode [remover campos existentes](#remove-fields) ou [adicionar novos campos personalizados](#add-fields) para esses grupos, dependendo das suas necessidades.
 
@@ -123,15 +133,15 @@ Depois de adicionar um grupo de campos a um esquema, você pode remover os campo
 
 No exemplo a seguir, o grupo de campos padrão **[!UICONTROL Detalhes demográficos]** foi adicionado a um esquema. Para remover um único campo, como `taxId`, selecione o campo na tela e selecione **[!UICONTROL Remover]** no painel direito.
 
-![Remover campo único](../../images/ui/resources/schemas/remove-single-field.png)
+![A variável [!DNL Schema Editor] com [!UICONTROL Remover] destacado. Esta ação remove um único campo.](../../images/ui/resources/schemas/remove-single-field.png)
 
 Se houver vários campos que você deseja remover, é possível gerenciar o grupo de campos como um todo. Selecione um campo pertencente ao grupo na tela e selecione **[!UICONTROL Gerenciar campos relacionados]** no painel direito.
 
-![Gerenciar campos relacionados](../../images/ui/resources/schemas/manage-related-fields.png)
+![A variável [!DNL Schema Editor] com [!UICONTROL Gerenciar campos relacionados] destacado.](../../images/ui/resources/schemas/manage-related-fields.png)
 
 Uma caixa de diálogo é exibida mostrando a estrutura do grupo de campos em questão. Aqui, é possível usar as caixas de seleção fornecidas para marcar ou desmarcar os campos necessários. Quando estiver satisfeito, selecione **[!UICONTROL Confirmar o]**.
 
-![Selecionar campos do grupo de campos](../../images/ui/resources/schemas/select-fields.png)
+![A variável [!UICONTROL Gerenciar campos relacionados] com campos selecionados e [!UICONTROL Confirmar o] destacado.](../../images/ui/resources/schemas/select-fields.png)
 
 A tela reaparece com apenas os campos selecionados presentes na estrutura do esquema.
 
@@ -264,7 +274,7 @@ Depois de aplicar as alterações, o novo campo aparece sob o namespace da ID do
 >[!CONTEXTUALHELP]
 >id="platform_schemas_enableforprofile"
 >title="Habilitar um esquema para o perfil"
->abstract="Quando um esquema é ativado para o perfil, qualquer conjunto de dados criado a partir desse esquema participa do perfil do cliente em tempo real, que mescla dados de fontes diferentes para construir uma visualização completa de cada cliente. Depois que um esquema é usado para assimilar dados no perfil, ele não pode ser desabilitado. Consulte a documentação da para obter mais informações."
+>abstract="Quando um esquema é ativado para o perfil, qualquer conjunto de dados criado a partir desse esquema participa do perfil do cliente em tempo real, que mescla dados de fontes diferentes para construir uma visualização completa de cada cliente. Depois que um esquema é usado para assimilar dados no perfil, ele não pode ser desabilitado. Consulte a documentação para obter mais informações."
 
 [Perfil do cliente em tempo real](../../../profile/home.md) O mescla dados de fontes diferentes para criar uma visualização completa de cada cliente individual. Se quiser que os dados capturados por um schema participem desse processo, ative o schema para uso em [!DNL Profile].
 

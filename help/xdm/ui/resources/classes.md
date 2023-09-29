@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Criar e editar classes na interface
 description: Saiba como criar e editar classes na interface do usuário do Experience Platform.
 exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
-source-git-commit: 51ef116ad125b0d699bf4808e3d26d3b00b743e2
+source-git-commit: 4214339c4a661c6bca2cd571919ae205dcb47da1
 workflow-type: tm+mt
-source-wordcount: '971'
-ht-degree: 0%
+source-wordcount: '1374'
+ht-degree: 5%
 
 ---
 
@@ -15,8 +15,8 @@ ht-degree: 0%
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_class_filter"
->title="Filtro de classe padrão ou personalizado"
->abstract="A lista de classes disponíveis é pré-filtrada com base em como elas foram criadas. Selecione o botão de opção para escolher entre as opções Padrão e Personalizado. A opção Padrão mostra entidades criadas pelo Adobe e inclui as classes Perfil individual XDM e Evento de experiência XDM. A opção Personalizado exibe entidades criadas em sua organização. Consulte a documentação para saber mais sobre criação e edição de classes."
+>title="Filtro de classe padrão ou personalizada"
+>abstract="A lista de classes disponíveis é pré-filtrada com base em como elas foram criadas. Selecione o botão de opção para escolher entre as opções Padrão e Personalizado. A opção Padrão mostra entidades criadas pela Adobe e inclui as classes Perfil individual XDM e Evento de experiência XDM. A opção Personalizado exibe entidades criadas em sua organização. Consulte a documentação para saber mais sobre criação e edição de classes."
 
 Na Adobe Experience Platform, a classe de um esquema define os aspectos comportamentais dos dados que o esquema conterá (registro ou série temporal). Além disso, as classes descrevem o menor número de propriedades comuns que todos os esquemas baseados nessa classe precisariam incluir e fornecem uma maneira de vários conjuntos de dados compatíveis serem mesclados.
 
@@ -30,17 +30,29 @@ Este guia requer uma compreensão funcional do Sistema XDM. Consulte a [Visão g
 
 Embora não seja necessário para este guia, é recomendável seguir o tutorial em [composição de um esquema na interface](../../tutorials/create-schema-ui.md) para se familiarizar com os vários recursos do [!DNL Schema Editor].
 
+## Introdução
+
+Na interface do usuário da Platform, selecione **[!UICONTROL Esquemas]** na navegação à esquerda, para abrir a [!UICONTROL Esquemas] e selecione o **[!UICONTROL Classes]** guia. Uma lista de classes disponíveis é exibida.
+
+## Filtrar classes {#filter}
+
+A lista de classes é automaticamente filtrada com base em como foram criadas. A configuração padrão exibe as classes definidas pelo Adobe. Também é possível filtrar a lista para mostrar os criados por sua organização. Selecione o botão de opção para escolher entre as opções [!UICONTROL Padrão] e [!UICONTROL Personalizado] opções. A variável [!UICONTROL Padrão] mostra entidades criadas por Adobe e a variável [!UICONTROL Personalizado] exibe entidades criadas na organização.
+
+![A variável [!UICONTROL Classes] guia do [!UICONTROL Esquemas] espaço de trabalho com [!UICONTROL Padrão] e [!UICONTROL Personalizado] destacado.](../../images/ui/resources/classes/standard-and-custom-classes.png)
+
+>[!TIP]
+>
+>Você pode usar os recursos de pesquisa do espaço de trabalho para ajudar a encontrar o esquema com mais facilidade. Consulte o guia sobre [exploração de recursos XDM](../explore.md) para obter mais informações.
+
 ## Criar uma nova classe {#create}
 
-No **[!UICONTROL Esquemas]** espaço de trabalho, selecione **[!UICONTROL Criar esquema]** e selecione **[!UICONTROL Procurar]** na lista suspensa.
+Há dois métodos para criar uma classe na interface do usuário da Platform. Em qualquer guia no **[!UICONTROL Esquemas]** espaço de trabalho, selecione **[!UICONTROL Criar esquema]**, ou do [!UICONTROL Classes] seleção de guia **[!UICONTROL Criar classe]**.
 
-![](../../images/ui/resources/classes/browse-classes.png)
+![A variável [!UICONTROL Classes] guia do [!UICONTROL Esquemas] espaço de trabalho com [!UICONTROL Criar esquema] e [!UICONTROL Criar classe] realçado](../../images/ui/resources/classes/create-class-methods.png)
 
-É exibida uma caixa de diálogo que permite selecionar em uma lista de classes disponíveis. Na parte superior da caixa de diálogo, selecione **[!UICONTROL Criar nova classe]**. Em seguida, você pode dar à sua nova classe um nome de exibição (um nome curto, descritivo, exclusivo e amigável para a classe), uma descrição e um comportamento para os dados que o esquema definirá (**[!UICONTROL Gravar]** ou **[!UICONTROL Séries cronológicas]**).
+Se você selecionar **[!UICONTROL Criar classe]**, o [!UICONTROL Criar classe] será exibida. Insira um [!UICONTROL Nome] e [!UICONTROL Descrição] para a sua classe e escolha o comportamento pretendido da sua classe com os botões de opção. As classes podem ser séries de registros ou séries de tempo. Selecionar **[!UICONTROL Criar]** para confirmar suas escolhas.
 
-Quando terminar, selecione **[!UICONTROL Atribuir classe]**.
-
-![](../../images/ui/resources/classes/class-details.png)
+![A variável [!UICONTROL Criar classe] diálogo com [!UICONTROL Criar] destacado.](../../images/ui/resources/classes/create-class-dialog.png)
 
 A variável [!DNL Schema Editor] é exibida, mostrando um novo esquema na tela com base na classe personalizada que você acabou de criar. Como nenhum campo foi adicionado à classe ainda, o esquema contém apenas um `_id` que representa o identificador exclusivo gerado pelo sistema aplicado automaticamente a todos os recursos na [!DNL Schema Registry].
 
@@ -50,9 +62,9 @@ A variável [!DNL Schema Editor] é exibida, mostrando um novo esquema na tela c
 >
 >Ao criar um esquema que implementa uma classe definida por sua organização, lembre-se de que os grupos de campos de esquema estão disponíveis para uso somente com classes compatíveis. Como a classe definida é nova, não há grupos de campos compatíveis listados na **[!UICONTROL Adicionar grupo de campos]** diálogo. Em vez disso, será necessário [criar novos grupos de campos](./field-groups.md#create) para uso com essa classe. Na próxima vez que você compor um schema que implementa a nova classe, os grupos de campos definidos serão listados e estarão disponíveis para uso.
 
-Agora você pode começar [adicionar campos à classe](#add-fields), que serão compartilhados por todos os esquemas que empregam a classe.
+### Criar ou editar uma classe {#create-or-edit}
 
-## Editar uma classe existente {#edit}
+Se você selecionar **[!UICONTROL Criar esquema]**, o [!UICONTROL Criar esquema] workflow aparece. No [!UICONTROL Detalhes do esquema] , selecione **[!UICONTROL Outro]**. Uma lista de classes disponíveis é exibida. Aqui você pode navegar e filtrar classes pré-existentes nas quais basear sua nova classe.
 
 >[!NOTE]
 >
@@ -60,13 +72,25 @@ Agora você pode começar [adicionar campos à classe](#add-fields), que serão 
 >
 >Depois que uma classe personalizada é salva e usada na assimilação de dados, somente alterações aditivas podem ser feitas nela a partir de então. Consulte a [regras de evolução do schema](../../schema/composition.md#evolution) para obter mais informações.
 
-Para editar uma classe existente, selecione o **[!UICONTROL Procurar]** e selecione o nome de um schema que emprega a classe que deseja editar.
+![A variável [!UICONTROL Criar esquema] workflow com [!UICONTROL Outro] destacado no [!UICONTROL Detalhes do esquema] seção.](../../images/ui/resources/classes/other-schema-details.png)
 
-![](../../images/ui/resources/classes/select-for-edit.png)
+Selecione um botão de opção para filtrar as classes com base no fato de serem classes personalizadas ou padrão. Você também pode filtrar os resultados disponíveis com base em seu setor ou pesquisar por uma classe específica usando o campo de pesquisa.
 
->[!TIP]
->
->Você pode usar os recursos de pesquisa e filtragem do espaço de trabalho para facilitar a localização do esquema. Consulte o guia sobre [exploração de recursos XDM](../explore.md) para obter mais informações.
+![A variável [!UICONTROL Criar esquema] workflow com a barra de pesquisa, [!UICONTROL Personalizado], e [!UICONTROL Setores] destacado.](../../images/ui/resources/classes/filter-and-search.png)
+
+Para ajudá-lo a decidir sobre a classe apropriada, há informações (![Um ícone de informações.](../../images/ui/resources/classes/info.png)) e visualização (![Um ícone de visualização.](../../images/ui/resources/classes/preview.png)) para cada classe. O ícone de informações abre uma caixa de diálogo que fornece uma descrição da classe e do setor ao qual ela está associada. O ícone de visualização abre uma caixa de diálogo de visualização para a classe que contém um diagrama de esquema e suas propriedades.
+
+![Uma visualização da classe selecionada com o diagrama de esquema e as propriedades da classe realçadas.](../../images/ui/resources/classes/class-preview.png)
+
+Selecione qualquer linha para escolher uma classe e, em seguida, selecione **[!UICONTROL Próxima]** para confirmar sua escolha.
+
+![A variável [!UICONTROL Criar esquema] fluxo de trabalho com uma classe selecionada na tabela de classes disponíveis e [!UICONTROL Próxima] destacado.](../../images/ui/resources/classes/select-class.png)
+
+A variável [!UICONTROL Nomear e descrever] é exibida. Nesta seção, forneça um nome e uma descrição para identificar seu esquema. &#x200B;A estrutura base do esquema (fornecida pela classe) é mostrada na tela para que você revise e verifique a classe selecionada e a estrutura do esquema.
+
+Insira um nome curto, descritivo, exclusivo e amigável para a classe na [!UICONTROL Nome de exibição do esquema] campo de texto. Em seguida, insira uma descrição adequada para identificar o comportamento dos dados definidos pelo schema. Quando tiver revisado a estrutura do esquema e estiver satisfeito com as configurações, selecione **[!UICONTROL Concluir]** para criar seu esquema.
+
+![A variável [!UICONTROL Nome e revisão] seção do [!UICONTROL Criar esquema] fluxo de trabalho com o [!UICONTROL Nome de exibição do esquema], [!UICONTROL Descrição], e [!UICONTROL Concluir] destacado.](../../images/ui/resources/classes/name-and-review-class.png)
 
 A variável [!DNL Schema Editor] é exibida, com a estrutura do schema mostrada na tela. Agora você pode começar [adicionar campos à classe](#add-fields).
 

@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Glossário de rótulos de uso de dados
 description: Este documento descreve todos os rótulos de uso de dados atualmente compatíveis com o Adobe Experience Platform.
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
-source-git-commit: 538c5e2c7ff3c684edf6db12087fdf0a58e40199
+source-git-commit: c55ad6c592be95b01cf7fe0b39635b478bc98be6
 workflow-type: tm+mt
-source-wordcount: '2185'
-ht-degree: 3%
+source-wordcount: '2250'
+ht-degree: 2%
 
 ---
 
@@ -73,6 +73,8 @@ Este rótulo é usado para controlar o uso de dados de prospecto.
 | Rótulo | Definição |
 | --- | --- |
 | **Terceiros** | Dados de terceiros são dados fornecidos a você por um fornecedor de dados de terceiros. Um fornecedor de dados de terceiros é uma entidade que celebrou um contrato com sua organização autorizando você a acessar, usar, exibir e transmitir os dados de terceiros em conjunto com a Platform. |
+| **Enriquecimento de terceiros** | Dados coletados por uma organização de terceiros que não esteja diretamente relacionada ao titular dos dados. O rótulo deve ser aplicado aos dados de terceiros usados para enriquecer perfis primários. |
+| **Prospecção de terceiros** | Dados coletados por uma organização de terceiros que não esteja diretamente relacionada ao titular dos dados. A etiqueta deve ser aplicada aos dados de terceiros usados para parte superior da prospecção em funil para novos clientes líquidos. |
 
 ## Apêndice
 

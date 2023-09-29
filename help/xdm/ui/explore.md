@@ -5,9 +5,9 @@ title: Explorar recursos do esquema na interface do
 description: Saiba como explorar esquemas, classes, grupos de campos de esquema e tipos de dados existentes na interface do usuário do Experience Platform.
 type: Tutorial
 exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
-source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
+source-git-commit: f08aa017b7f971a54197b95023e9331832ecb7f1
 workflow-type: tm+mt
-source-wordcount: '958'
+source-wordcount: '993'
 ht-degree: 0%
 
 ---
@@ -28,9 +28,9 @@ O ícone de filtro (![Filtrar imagem do ícone](../images/ui/explore/icon.png)) 
 
 Por exemplo, para filtrar a lista de forma a mostrar apenas os tipos de dados padrão fornecidos pelo Adobe, selecione **[!UICONTROL Tipo de dados]** e **[!UICONTROL Adobe]** no **[!UICONTROL Tipo]** e **[!UICONTROL Proprietário]** seções, respectivamente.
 
-A variável **[!UICONTROL Incluído no perfil]** permite filtrar os resultados para mostrar apenas os recursos usados em esquemas que foram habilitados para uso em [Perfil do cliente em tempo real](../../profile/home.md).
+A variável **[!UICONTROL Incluído no perfil]** permite filtrar os resultados para mostrar apenas os recursos usados em esquemas que foram habilitados para uso em [Perfil do cliente em tempo real](../../profile/home.md). A variável **[!UICONTROL Mostrar esquemas adhoc]** ativar/desativar filtra a lista de esquemas criados com campos com namespace para uso somente por um único conjunto de dados.
 
-![](../images/ui/explore/filter.png)
+![A variável [!UICONTROL Esquemas] espaço de trabalho [!UICONTROL Procurar] com o painel filtros realçado.](../images/ui/explore/filter.png)
 
 Ao listar recursos no **[!UICONTROL Classes]**, **[!UICONTROL Grupos de campos]** ou **[!UICONTROL Tipos de dados]** , é possível selecionar **[!UICONTROL Adobe]** para mostrar apenas os recursos padrão ou **[!UICONTROL Cliente]** para mostrar apenas os recursos criados por sua organização.
 

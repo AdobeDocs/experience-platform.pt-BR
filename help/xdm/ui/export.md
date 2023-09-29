@@ -4,9 +4,9 @@ title: Exportar esquemas XDM na interface do
 description: Saiba como exportar um esquema existente para uma sandbox ou organização diferente na interface do usuário do Adobe Experience Platform.
 type: Tutorial
 exl-id: c467666d-55bc-4134-b8f4-7758d49c4786
-source-git-commit: bed627b945c5392858bcc2dce18e9bbabe8bcdb6
+source-git-commit: d25042e80ca5f655a50deac6a65ce9168225d6e6
 workflow-type: tm+mt
-source-wordcount: '498'
+source-wordcount: '582'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,9 @@ Embora a interface da Platform permita exportar recursos XDM, você deve usar a 
 
 ## Gerar uma carga de exportação {#generate-export-payload}
 
-Na interface do usuário da Platform, selecione **[!UICONTROL Esquemas]** no painel de navegação esquerdo. No prazo de [!UICONTROL Esquemas] selecione a linha do esquema que deseja exportar para exibir os detalhes do esquema na barra lateral direita.
+As cargas úteis de exportação podem ser geradas na interface do usuário da Platform no painel de detalhes na [!UICONTROL Procurar] ou diretamente da tela do schema no Editor de esquemas.
+
+Para gerar uma carga de exportação, selecione **[!UICONTROL Esquemas]** no painel de navegação esquerdo. No prazo de [!UICONTROL Esquemas] selecione a linha do esquema que deseja exportar para exibir os detalhes do esquema na barra lateral direita.
 
 >[!TIP]
 >
@@ -200,6 +202,14 @@ Isso copia uma carga JSON para a área de transferência, gerada com base na est
   }
 ]
 ```
+
+A carga também pode ser copiada selecionando [!UICONTROL Mais] na parte superior direita do Editor de esquemas. Um menu suspenso fornece duas opções, [!UICONTROL Copiar estrutura JSON] e [!UICONTROL Excluir esquema].
+
+>[!NOTE]
+>
+>Um esquema não pode ser excluído quando está habilitado para o Perfil ou tem conjuntos de dados associados.
+
+![O Editor de esquemas com [!UICONTROL Mais] e [!UICONTROL Copiar para JSON] destacado.](../images/ui/export/schema-editor-copy-json.png)
 
 A carga assume a forma de uma matriz, com cada item de matriz sendo um objeto que representa um recurso XDM personalizado a ser exportado. No exemplo acima, o &quot;[!DNL Loyalty details]&quot;grupo de campos personalizados&quot; e a &quot;[!DNL Loyalty Members]&quot; esquema estão incluídos. Quaisquer recursos principais empregados pelo esquema não são incluídos na exportação, pois esses recursos estão disponíveis em todas as sandboxes e organizações.
 

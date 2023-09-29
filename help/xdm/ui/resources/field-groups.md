@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Criar e editar grupos de campos de esquema na interface
 description: Saiba como criar e editar grupos de campos de esquema na interface do usuário do Experience Platform.
 exl-id: 928d70a6-0468-4fb7-a53a-6686ac77f2a3
-source-git-commit: 4214339c4a661c6bca2cd571919ae205dcb47da1
+source-git-commit: 0375ddcb7d06208199bf1172b157aa6eb28811f6
 workflow-type: tm+mt
 source-wordcount: '985'
 ht-degree: 8%

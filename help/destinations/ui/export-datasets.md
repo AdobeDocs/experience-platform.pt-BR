@@ -1,26 +1,65 @@
 ---
-title: (Beta) Exportar conjuntos de dados para destinos de armazenamento na nuvem
+title: Exportar conjuntos de dados para destinos de armazenamento na nuvem
 type: Tutorial
 description: Saiba como exportar conjuntos de dados do Adobe Experience Platform para o local de armazenamento em nuvem de sua preferência.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 3090b8a8eade564190dc32142c3fc71701007337
+source-git-commit: 85bc1f0af608a7b5510bd0b958122e9db10ee27a
 workflow-type: tm+mt
-source-wordcount: '1421'
+source-wordcount: '1754'
 ht-degree: 5%
 
 ---
 
-# (Beta) Exportar conjuntos de dados para destinos de armazenamento na nuvem
+# Exportar conjuntos de dados para destinos de armazenamento na nuvem
 
->[!IMPORTANT]
+>[!AVAILABILITY]
 >
->* A funcionalidade para exportar conjuntos de dados está atualmente na versão beta e não está disponível para todos os usuários. A documentação e a funcionalidade estão sujeitas a alterações.
->* Essa funcionalidade beta suporta a exportação de dados da primeira geração, conforme definido na Real-time Customer Data Platform [descrição do produto](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
->* Essa funcionalidade está disponível para clientes que compraram o pacote Real-Time CDP Prime e Ultimate. Entre em contato com o representante da Adobe para obter mais informações.
+>* Essa funcionalidade está disponível para clientes que compraram o pacote Real-Time CDP Prime ou Ultimate, Adobe Journey Optimizer ou Customer Journey Analytics. Entre em contato com o representante da Adobe para obter mais informações.
 
 Este artigo explica o workflow necessário para exportar [conjuntos de dados](/help/catalog/datasets/overview.md) do Adobe Experience Platform para o local de armazenamento em nuvem de sua preferência, como [!DNL Amazon S3], locais SFTP ou [!DNL Google Cloud Storage] usando a interface de usuário do Experience Platform.
 
 Você também pode usar as APIs de Experience Platform para exportar conjuntos de dados. Leia o [exportar tutorial da API de conjuntos de dados](/help/destinations/api/export-datasets.md) para obter mais informações.
+
+## Conjuntos de dados disponíveis para exportação {#datasets-to-export}
+
+Os conjuntos de dados que você pode exportar variam com base no aplicativo Experience Platform (Real-Time CDP, Adobe Journey Optimizer), no nível (Prime ou Ultimate) e em qualquer complemento que você tenha adquirido (por exemplo: Data Distiller).
+
+Entenda, na tabela abaixo, quais tipos de conjunto de dados você pode exportar dependendo do aplicativo, da camada do produto e de qualquer complemento adquirido:
+
+<table>
+<thead>
+  <tr>
+    <th>Aplicativo/Complemento</th>
+    <th>Nível</th>
+    <th>Conjuntos de dados disponíveis para exportação</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td rowspan="2">Real-Time CDP</td>
+    <td>Prime</td>
+    <td>Conjuntos de dados de Perfil e Evento de experiência criados na interface do Experience Platform após assimilar ou coletar dados por meio de Fontes, SDK da Web, SDK móvel, Conector de dados do Analytics e Audience Manager.</td>
+  </tr>
+  <tr>
+    <td>Ultimate</td>
+    <td><ul><li>Conjuntos de dados de Perfil e Evento de experiência criados na interface do Experience Platform após assimilar ou coletar dados por meio de Fontes, SDK da Web, SDK móvel, Conector de dados do Analytics e Audience Manager.</li><li> Conjuntos de dados gerados pelo sistema, como o <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html?lang=en#profile-attribute-datasets">Conjunto de dados do instantâneo do perfil</a>.</li></td>
+  </tr>
+  <tr>
+    <td rowspan="2">Adobe Journey Optimizer</td>
+    <td>Prime</td>
+    <td>Consulte a <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html?lang=pt-BR"> Adobe Journey Optimizer</a> documentação. (atualização para deep link para a tabela ou seção do AJO para conjuntos de dados compatíveis)</td>
+  </tr>
+  <tr>
+    <td>Ultimate</td>
+    <td>Consulte a <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html?lang=pt-BR"> Adobe Journey Optimizer</a> documentação. (atualização para deep link para a tabela ou seção do AJO para conjuntos de dados compatíveis)</td>
+  </tr>
+  <tr>
+    <td>Distiller de dados</td>
+    <td>Data Distiller (Complemento)</td>
+    <td>Conjuntos de dados derivados criados por meio do Serviço de consulta.</td>
+  </tr>
+</tbody>
+</table>
 
 ## Destinos compatíveis {#supported-destinations}
 
@@ -40,9 +79,9 @@ Atualmente, você pode exportar conjuntos de dados para os destinos de armazenam
 Alguns destinos baseados em arquivo no catálogo do Experience Platform são compatíveis com a ativação de público-alvo e a exportação de conjunto de dados.
 
 * Considere ativar públicos-alvo quando quiser que seus dados sejam estruturados em perfis agrupados por interesses ou qualificações de público-alvo.
-* Como alternativa, considere as exportações de conjunto de dados ao procurar exportar conjuntos de dados brutos, que não são agrupados ou estruturados por interesses ou qualificações de público-alvo. Você pode usar esses dados para relatórios, workflows de ciência de dados, para atender aos requisitos de conformidade e muitos outros casos de uso.
+* Como alternativa, considere as exportações de conjunto de dados ao procurar exportar conjuntos de dados brutos, que não são agrupados ou estruturados por interesses ou qualificações de público-alvo. Você pode usar esses dados para relatórios, fluxos de trabalho de ciência de dados e muitos outros casos de uso. Por exemplo, como administrador, engenheiro de dados ou analista, você pode exportar dados do Experience Platform para sincronizar com o data warehouse, usar em ferramentas de análise de BI, ferramentas de aprendizado de máquina na nuvem externas ou armazenar em seu sistema para necessidades de armazenamento de longo prazo.
 
-Este documento contém todas as informações necessárias para exportar conjuntos de dados. Se quiser ativar públicos para armazenamento na nuvem ou destinos de marketing por email, leia [Ativar dados do público-alvo para destinos de exportação de perfil em lote](/help/destinations/ui/activate-batch-profile-destinations.md).
+Este documento contém todas as informações necessárias para exportar conjuntos de dados. Se desejar ativar *públicos* para destinos de marketing por email ou armazenamento na nuvem, leia [Ativar dados do público-alvo para destinos de exportação de perfil em lote](/help/destinations/ui/activate-batch-profile-destinations.md).
 
 ## Pré-requisitos {#prerequisites}
 
@@ -50,7 +89,7 @@ Para exportar conjuntos de dados para destinos de armazenamento na nuvem, é nec
 
 ### Permissões necessárias {#permissions}
 
-Para exportar conjuntos de dados, é necessário **[!UICONTROL Exibir destinos]** e **[!UICONTROL Gerenciar e ativar destinos do conjunto de dados]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
+Para exportar conjuntos de dados, é necessário **[!UICONTROL Exibir destinos]**, **[!UICONTROL Exibir conjuntos de dados]**, e **[!UICONTROL Gerenciar e ativar destinos do conjunto de dados]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
 
 Para garantir que você tenha as permissões necessárias para exportar conjuntos de dados e que o destino seja compatível com a exportação de conjuntos de dados, navegue pelo catálogo de destinos. Se um destino tiver um **[!UICONTROL Ativar]** ou um **[!UICONTROL Exportar conjuntos de dados]** , você terá as permissões apropriadas.
 
@@ -106,7 +145,7 @@ A variável **[!UICONTROL Exportar arquivos incrementais]** é selecionada autom
 
 2. Use o **[!UICONTROL Hora]** seletor para escolher a hora do dia, em [!DNL UTC] formato, quando a exportação deve ocorrer.
 
-3. Use o **[!UICONTROL Data]** seletor para escolher o intervalo em que a exportação deve ocorrer. Observe que na versão beta do recurso, não é possível definir uma data de término para as exportações. Para obter mais informações, consulte [limitações conhecidas](#known-limitations) seção.
+3. Use o **[!UICONTROL Data]** seletor para escolher o intervalo em que a exportação deve ocorrer. No momento, não é possível definir uma data final para as exportações. Para obter mais informações, consulte [limitações conhecidas](#known-limitations) seção.
 
 4. Selecionar **[!UICONTROL Próxima]** para salvar o cronograma e prosseguir para a **[!UICONTROL Revisão]** etapa.
 
@@ -169,12 +208,23 @@ Para remover um conjunto de dados de um fluxo de dados existente, siga as etapas
 
    ![Caixa de diálogo mostrando a opção Confirmar remoção do conjunto de dados do fluxo de dados.](../assets/ui/export-datasets/remove-dataset-confirm.png)
 
+
+## Direitos de exportação do conjunto de dados {#licensing-entitlement}
+
+Consulte os documentos de descrição do produto para entender quantos dados você está autorizado a exportar para cada aplicativo Experience Platform, por ano. Por exemplo, você pode exibir a Descrição do produto Real-Time CDP [aqui](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
+
+Observe que os direitos de exportação de dados para diferentes aplicativos não são aditivos. Por exemplo, isso significa que, se você comprar o Real-Time CDP Ultimate e o Adobe Journey Optimizer Ultimate, o direito de exportação do perfil será o maior dos dois direitos, de acordo com as descrições do produto. Os direitos de volume são calculados calculando o número total de perfis licenciados e multiplicando por 500 KB para o Real-Time CDP Prime ou 700 KB para o Real-Time CDP Ultimate para determinar o volume de dados ao qual você tem direito.
+
+Por outro lado, se você comprar complementos como o Data Distiller, o limite de exportação de dados ao qual você está habilitado representa a soma da camada do produto e do complemento.
+
+Você pode visualizar e rastrear as exportações de perfil em relação aos limites contratuais no painel de licenciamento.
+
 ## Limitações conhecidas {#known-limitations}
 
-Lembre-se das seguintes limitações para a versão beta das exportações do conjunto de dados:
+Lembre-se das seguintes limitações da versão de disponibilidade geral das exportações do conjunto de dados:
 
-* No momento, há uma única permissão (**[!UICONTROL Gerenciar e ativar destinos do conjunto de dados]**) que inclui permissões de gerenciamento e ativação em destinos de conjuntos de dados. No futuro, esses controles serão divididos em permissões mais granulares. Revise o [permissões necessárias](#permissions) para obter uma lista completa de permissões necessárias para exportar conjuntos de dados.
 * Atualmente, você só pode exportar arquivos incrementais e uma data de término não pode ser selecionada para suas exportações de conjunto de dados.
 * Os nomes de arquivos exportados não podem ser personalizados no momento.
+* No momento, os conjuntos de dados criados por meio da API não estão disponíveis para exportação.
 * No momento, a interface não impede que você exclua um conjunto de dados que está sendo exportado para um destino. Não exclua conjuntos de dados que estejam sendo exportados para destinos. [Remover o conjunto de dados](#remove-dataset) de um fluxo de dados de destino antes de excluí-lo.
 * Atualmente, as métricas de monitoramento para exportações de conjunto de dados estão misturadas com números para exportações de perfil, de modo que não refletem os números reais exportados.

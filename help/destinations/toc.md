@@ -4,9 +4,9 @@ user-guide-title: Guia de destinos
 user-guide-description: Ative seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas por email, publicidade direcionada e muito mais.
 description: Este documento lista o índice dos destinos do Adobe Experience Platform
 feature: Destinations
-source-git-commit: 6725e28238c7be76613c7455fadce078b17aa71b
+source-git-commit: a34d2823383b2954ebd824a7197b1b64dc80e219
 workflow-type: tm+mt
-source-wordcount: '1168'
+source-wordcount: '1165'
 ht-degree: 9%
 
 ---
@@ -30,11 +30,11 @@ ht-degree: 9%
    * [Atualizar fluxos de dados de destino](./api/update-destination-dataflows.md)
    * [Excluir contas de destino](./api/delete-destination-account.md)
    * [Excluir fluxos de dados de destino](./api/delete-destination-dataflow.md)
-   * [(Beta) Exportar conjuntos de dados](/help/destinations/api/export-datasets.md)
+   * [Exportar conjuntos de dados](/help/destinations/api/export-datasets.md)
 * Guias de interface {#ui}
    * [Espaço de trabalho Destinos](./ui/destinations-workspace.md)
    * [Criar uma nova conexão de destino](./ui/connect-destination.md)
-   * Ativar dados do público-alvo para destinos{#activate}
+   * Ativar dados para destinos{#activate}
       * [Visão geral de Activation](./ui/activation-overview.md)
       * [Ativar públicos para streaming de destinos de exportação de público](./ui/activate-segment-streaming-destinations.md)
       * [Ativar públicos para destinos de exportação de perfil de transmissão](./ui/activate-streaming-profile-destinations.md)
@@ -42,7 +42,7 @@ ht-degree: 9%
       * [Ativar públicos para destinos de personalização de borda](./ui/activate-edge-personalization-destinations.md)
       * [Ativar públicos-alvo potenciais para destinos](./ui/activate-prospect-audiences.md)
       * [(Beta) Exportar arquivos sob demanda para destinos em lote usando a interface do Experience Platform](./ui/export-file-now.md)
-      * [(Beta) Exportar conjuntos de dados usando a interface do Experience Platform](./ui/export-datasets.md)
+      * [Exportar conjuntos de dados usando a interface do usuário do Experience Platform](./ui/export-datasets.md)
       * [(Beta) Usar o atributo XDM do último horário de qualificação nos novos destinos de armazenamento na nuvem beta](./ui/activate-last-qualification-time.md)
       * [Exportar campos de matriz para destinos de armazenamento na nuvem](/help/destinations/ui/export-arrays-calculated-fields.md)
    * [Exibir detalhes do destino](./ui/destination-details-page.md)

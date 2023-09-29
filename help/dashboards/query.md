@@ -4,7 +4,7 @@ title: Explorar, verificar e processar conjuntos de dados do painel usando o ser
 type: Documentation
 description: Saiba como usar o Serviço de consulta para explorar e processar conjuntos de dados brutos que potencializam o perfil, o público-alvo e os painéis de destino no Experience Platform.
 exl-id: 0087dcab-d5fe-4a24-85f6-587e9ae74fb8
-source-git-commit: c431973100cc65d99d9466553fe6624ac2653d4b
+source-git-commit: e808af41b0df7603ce6f44464d1e6e883d3f6208
 workflow-type: tm+mt
 source-wordcount: '946'
 ht-degree: 0%
@@ -27,7 +27,7 @@ Você pode usar [!DNL Query Service] para consultar conjuntos de dados brutos pa
 
 ![O painel Navegação pelo conjunto de dados com a guia Conjuntos de dados realçada na navegação à esquerda.](./images/query/browse-datasets.png)
 
-### Conjuntos de dados gerados pelo sistema
+### Conjuntos de dados gerados pelo sistema {#system-generated-datasets}
 
 >[!IMPORTANT]
 >
@@ -41,7 +41,7 @@ Uma barra lateral é exibida contendo dois botões de alternância, [!UICONTROL 
 
 ![A guia Procurar conjuntos de dados com a opção Mostrar conjuntos de dados do sistema realçada.](./images/query/show-system-datasets.png)
 
-### Conjuntos de dados do atributo de perfil
+### Conjuntos de dados do atributo de perfil {#profile-attribute-datasets}
 
 Os insights do painel de perfil estão ligados às políticas de mesclagem que foram definidas por sua organização. Para cada política de mesclagem ativa, há um conjunto de dados de atributo de perfil disponível no data lake.
 

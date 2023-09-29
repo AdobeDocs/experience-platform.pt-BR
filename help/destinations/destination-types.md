@@ -3,9 +3,9 @@ keywords: destinos;destino;destinos tipos;destinations;destination;destination t
 title: Tipos e categorias de destino
 description: Saiba mais sobre os diferentes tipos e categorias de destinos no Adobe Experience Platform.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: d0a9ac77346bea585691feee958e8d3b27f3f746
 workflow-type: tm+mt
-source-wordcount: '718'
+source-wordcount: '717'
 ht-degree: 0%
 
 ---
@@ -37,7 +37,7 @@ Os destinos de exportação de perfil recebem dados brutos, geralmente com o end
 
 >[!IMPORTANT]
 >
->Destinos corporativos ou destinos de exportação de perfil de streaming estão disponíveis para [Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) somente clientes.
+>Destinos corporativos ou destinos de exportação de perfil de streaming estão disponíveis para [Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html?lang=pt-BR) somente clientes.
 
 Use os conectores de dados de destino corporativo para fornecer perfis do Adobe Real-time Customer Data Platform em tempo quase real a sistemas internos ou a outros sistemas de terceiros para sincronização de dados, análise e outros casos de uso de enriquecimento de perfil.
 
@@ -69,7 +69,7 @@ O vídeo abaixo mostra as particularidades dos dois tipos de destinos:
 
 >[!VIDEO](https://video.tv.adobe.com/v/29707?quality=12)
 
-## (Beta) Destinos de exportação do conjunto de dados {#dataset-export-destinations}
+## Destinos de exportação do conjunto de dados {#dataset-export-destinations}
 
 Alguns destinos de armazenamento em nuvem no catálogo de destinos oferecem suporte a exportações de conjunto de dados. Use esses destinos para exportar conjuntos de dados brutos para locais de armazenamento na nuvem.
 

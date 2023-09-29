@@ -1,29 +1,33 @@
 ---
 solution: Experience Platform
-title: (Beta) Exportar conjuntos de dados usando a API do Serviço de fluxo
+title: Exportar conjuntos de dados usando a API do Serviço de fluxo
 description: Saiba como usar a API do Serviço de fluxo para exportar conjuntos de dados para destinos selecionados.
 type: Tutorial
 exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
-source-git-commit: 3090b8a8eade564190dc32142c3fc71701007337
+source-git-commit: 28e07c464eb05ba7c20b132d430fccac15d8806e
 workflow-type: tm+mt
-source-wordcount: '3520'
+source-wordcount: '3526'
 ht-degree: 4%
 
 ---
 
-# (Beta) Exportar conjuntos de dados usando o [!DNL Flow Service API]
+# Exportar conjuntos de dados usando o [!DNL Flow Service API]
 
->[!IMPORTANT]
+>[!AVAILABILITY]
 >
->* A funcionalidade para exportar conjuntos de dados está atualmente na versão beta e não está disponível para todos os usuários. A documentação e a funcionalidade estão sujeitas a alterações.
->* Essa funcionalidade beta suporta a exportação de dados da primeira geração, conforme definido na Real-time Customer Data Platform [descrição do produto](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
->* Essa funcionalidade está disponível para clientes que compraram o pacote Real-Time CDP Prime ou Ultimate. Entre em contato com o representante da Adobe para obter mais informações.
+>* Essa funcionalidade está disponível para clientes que compraram o pacote Real-Time CDP Prime e Ultimate, Adobe Journey Optimizer ou Customer Journey Analytics. Entre em contato com o representante da Adobe para obter mais informações.
 
 Este artigo explica o fluxo de trabalho necessário para usar o [!DNL Flow Service API] para exportar [conjuntos de dados](/help/catalog/datasets/overview.md) do Adobe Experience Platform para o local de armazenamento em nuvem de sua preferência, como [!DNL Amazon S3], locais SFTP ou [!DNL Google Cloud Storage].
 
 >[!TIP]
 >
 >Você também pode usar a interface de usuário do Experience Platform para exportar conjuntos de dados. Leia o [tutorial de exportação da interface do usuário de conjuntos de dados](/help/destinations/ui/export-datasets.md) para obter mais informações.
+
+## Conjuntos de dados disponíveis para exportação {#datasets-to-export}
+
+Os conjuntos de dados que você pode exportar dependem do aplicativo Experience Platform (Real-Time CDP, Adobe Journey Optimizer), do nível (Prime ou Ultimate) e de qualquer complemento que você tenha adquirido (por exemplo: Data Distiller).
+
+Consulte a [tabela na página de tutorial da interface do usuário](/help/destinations/ui/export-datasets.md#datasets-to-export) para entender quais conjuntos de dados você pode exportar.
 
 ## Destinos compatíveis {#supported-destinations}
 
@@ -1609,7 +1613,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --data-raw '{
-    "name": "Amazon S3 Beta Target Connection",
+    "name": "Amazon S3 Target Connection",
     "baseConnectionId": "<FROM_STEP_CREATE_TARGET_BASE_CONNECTION>",
     "params": {
         "mode": "Server-to-server",
@@ -1663,7 +1667,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --data-raw '{
-    "name": "Azure Blob Storage Beta Target Connection",
+    "name": "Azure Blob Storage Target Connection",
     "baseConnectionId": "<FROM_STEP_CREATE_TARGET_BASE_CONNECTION>",
     "params": {
         "mode": "Server-to-server",

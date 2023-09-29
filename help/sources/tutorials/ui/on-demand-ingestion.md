@@ -1,10 +1,10 @@
 ---
 title: Assimilação sob demanda para fluxos de dados de origens na interface
 description: Saiba como criar fluxos de dados sob demanda para suas conexões de origem usando a interface do usuário Experience Platform.
-source-git-commit: ce1e6c08d1e53346c11f9746cea524689f402031
+source-git-commit: cea12160656ba0724789db03e62213022bacd645
 workflow-type: tm+mt
-source-wordcount: '503'
-ht-degree: 0%
+source-wordcount: '499'
+ht-degree: 1%
 
 ---
 
@@ -44,9 +44,9 @@ Configure a programação da sua assimilação sob demanda. Selecione o **[!UICO
 
 | Configuração de agendamento | Descrição |
 | --- | --- |
-| [!UICONTROL Hora de início da assimilação] | A hora de início agendada em UTC de quando o fluxo de dados sob demanda será iniciado. |
-| [!UICONTROL Hora inicial do intervalo de datas] | A data e hora iniciais da qual os dados serão obtidos. |
-| [!UICONTROL Hora final do intervalo de datas] | A data e hora de término da qual os dados serão extraídos. |
+| [!UICONTROL Hora de início da assimilação] | O horário agendado para o início da execução do fluxo por demanda. |
+| [!UICONTROL Hora inicial do intervalo de datas] | A data e a hora a partir das quais os dados serão recuperados. |
+| [!UICONTROL Hora final do intervalo de datas] | A data e a hora em que os dados serão recuperados. |
 
 Selecionar **[!UICONTROL Agendar]** e aguarde alguns instantes para que seu fluxo de dados sob demanda seja acionado.
 

@@ -1,20 +1,16 @@
 ---
 keywords: Experience Platform;página inicial;tópicos populares;serviço de fluxo;
-title: (Beta) Criar uma execução de fluxo para assimilação sob demanda usando a API do serviço de fluxo
-description: Este tutorial aborda as etapas para criar uma execução de fluxo para assimilação sob demanda usando a API do serviço de fluxo
+title: Criar uma execução de fluxo para assimilação sob demanda usando a API do serviço de fluxo
+description: Saiba como criar uma execução de fluxo para assimilação sob demanda usando a API do serviço de fluxo
 exl-id: a7b20cd1-bb52-4b0a-aad0-796929555e4a
-source-git-commit: 795b1af6421c713f580829588f954856e0a88277
+source-git-commit: cea12160656ba0724789db03e62213022bacd645
 workflow-type: tm+mt
-source-wordcount: '856'
+source-wordcount: '801'
 ht-degree: 2%
 
 ---
 
-# (Beta) Crie uma execução de fluxo para assimilação sob demanda usando o [!DNL Flow Service] API
-
->[!IMPORTANT]
->
->A assimilação sob demanda está atualmente na versão beta e sua organização pode não ter acesso a ela ainda. A funcionalidade descrita nesta documentação está sujeita a alterações.
+# Crie uma execução de fluxo para assimilação sob demanda usando o [!DNL Flow Service] API
 
 As execuções de fluxo representam uma instância da execução de fluxo. Por exemplo, se um fluxo estiver programado para ser executado por hora às 9h, 10h e 11h, você terá três instâncias de um fluxo em execução. As execuções de fluxo são específicas para sua organização específica.
 
@@ -83,9 +79,9 @@ curl -X POST \
 | Parâmetro | Descrição |
 | --- | --- |
 | `flowId` | A ID do fluxo no qual a execução do fluxo será criada. |
-| `params.startTime` | Um número inteiro que define a hora inicial da execução. O valor é representado em época unix. |
-| `params.windowStartTime` | Um número inteiro que define a hora inicial da janela durante a qual os dados devem ser obtidos. O valor é representado em horário unix. |
-| `params.windowEndTime` | Um número inteiro que define a hora final da janela durante a qual os dados devem ser obtidos. O valor é representado em horário unix. |
+| `params.startTime` | O horário agendado para o início da execução do fluxo por demanda. Esse valor é representado no horário unix. |
+| `params.windowStartTime` | A data e a hora a partir das quais os dados serão recuperados. Esse valor é representado no horário unix. |
+| `params.windowEndTime` | A data e a hora em que os dados serão recuperados. Esse valor é representado no horário unix. |
 | `params.deltaColumn` | A coluna delta é necessária para particionar os dados e separar os dados recém-assimilados dos dados históricos. **Nota**: A variável `deltaColumn` é necessário somente ao criar a primeira execução de fluxo. |
 | `params.deltaColumn.name` | O nome da coluna delta. |
 
@@ -165,9 +161,9 @@ curl -X POST \
 | Parâmetro | Descrição |
 | --- | --- |
 | `flowId` | A ID do fluxo no qual a execução do fluxo será criada. |
-| `params.startTime` | Um número inteiro que define a hora inicial da execução. O valor é representado em época unix. |
-| `params.windowStartTime` | Um número inteiro que define a hora inicial da janela durante a qual os dados devem ser obtidos. O valor é representado em horário unix. |
-| `params.windowEndTime` | Um número inteiro que define a hora final da janela durante a qual os dados devem ser obtidos. O valor é representado em horário unix. |
+| `params.startTime` | O horário agendado para o início da execução do fluxo por demanda. Esse valor é representado no horário unix. |
+| `params.windowStartTime` | A data e a hora a partir das quais os dados serão recuperados. Esse valor é representado no horário unix. |
+| `params.windowEndTime` | A data e a hora em que os dados serão recuperados. Esse valor é representado no horário unix. |
 
 **Resposta**
 
@@ -192,4 +188,4 @@ Uma resposta bem-sucedida retorna os detalhes da execução de fluxo recém-cria
 
 ## Monitore as execuções de fluxo
 
-Após a criação da execução do fluxo, é possível monitorar os dados que estão sendo assimilados por meio dela para ver informações sobre execuções de fluxo, status de conclusão e erros. Para monitorar as execuções de fluxo usando a API, consulte o tutorial em [monitoramento de fluxos de dados na API ](./monitor.md). Para monitorar suas execuções de fluxo usando a interface do usuário da Platform, consulte o manual em [monitoramento de fluxos de dados de origens usando o painel de monitoramento](../../../dataflows/ui/monitor-sources.md).
+Após a criação da execução do fluxo, é possível monitorar os dados que estão sendo assimilados por meio dela para ver informações sobre execuções de fluxo, status de conclusão e erros. Para monitorar as execuções de fluxo usando a API, consulte o tutorial em [monitoramento de fluxos de dados na API](./monitor.md). Para monitorar suas execuções de fluxo usando a interface do usuário da Platform, consulte o manual em [monitoramento de fluxos de dados de origens usando o painel de monitoramento](../../../dataflows/ui/monitor-sources.md).

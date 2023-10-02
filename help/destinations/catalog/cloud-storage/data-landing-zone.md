@@ -3,9 +3,9 @@ title: Destino da Data Landing Zone
 description: Saiba como se conectar à Data Landing Zone para ativar públicos e exportar conjuntos de dados.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
-source-git-commit: 661ef040398a9e2ef8dd9cebdf7bd27d4268636b
+source-git-commit: a1b3e59e0d5b1312b7bc22885ee679775c2a4d78
 workflow-type: tm+mt
-source-wordcount: '1482'
+source-wordcount: '1481'
 ht-degree: 3%
 
 ---
@@ -234,7 +234,7 @@ No **[!UICONTROL Agendamento]** etapa, você pode [configurar o cronograma de ex
 
 No **[!UICONTROL Mapeamento]** etapa, você pode selecionar quais campos de atributo e identidade serão exportados para seus perfis. Você também pode optar por alterar os cabeçalhos no arquivo exportado para qualquer nome amigável. Para obter mais informações, consulte [etapa de mapeamento](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) no tutorial ativar interface do usuário de destinos em lote.
 
-## (Beta) Exportar conjuntos de dados {#export-datasets}
+## Exportar conjuntos de dados {#export-datasets}
 
 Esse destino suporta exportações de conjunto de dados. Para obter informações completas sobre como configurar exportações de conjunto de dados, leia os tutoriais:
 

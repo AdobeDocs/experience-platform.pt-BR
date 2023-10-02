@@ -2,9 +2,9 @@
 title: Conexão SFTP
 description: Crie uma conexão de saída ativa com o servidor SFTP para exportar arquivos de dados delimitados da Adobe Experience Platform periodicamente.
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: 661ef040398a9e2ef8dd9cebdf7bd27d4268636b
+source-git-commit: a1b3e59e0d5b1312b7bc22885ee679775c2a4d78
 workflow-type: tm+mt
-source-wordcount: '1018'
+source-wordcount: '1017'
 ht-degree: 10%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 10%
 
 Com a versão de Experience Platform de julho de 2023, o destino SFTP fornece novas funcionalidades, conforme listado abaixo:
 
-* [!BADGE  Beta]{type=Informative}[Suporte à exportação de conjuntos de dados](/help/destinations/ui/export-datasets.md).
+* [Suporte à exportação de conjuntos de dados](/help/destinations/ui/export-datasets.md).
 * [Opções de nomenclatura de arquivo](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) adicionais.
 * Capacidade de definir cabeçalhos de arquivos personalizados em seus arquivos exportados por meio da [etapa de mapeamento aprimorado](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
 * [Capacidade de personalizar a formatação de arquivos de dados CSV exportados](/help/destinations/ui/batch-destinations-file-formatting-options.md).

@@ -3,9 +3,9 @@ keywords: destino de armazenamento na nuvem;armazenamento na nuvem
 title: Visão geral dos destinos do Cloud Storage
 description: A Adobe Experience Platform pode fornecer seus públicos-alvo como arquivos de dados para seus locais de armazenamento na nuvem do Amazon S3, AWS Kinesis, Azure Event Hubs ou SFTP.
 exl-id: d29f0a6e-b323-4f78-bbd0-dee2f1e0fedb
-source-git-commit: 5d318d8fa4207ece26a8b0a291d81907af029aed
+source-git-commit: 8b8abea65ee0448594113ca77f75b84293646146
 workflow-type: tm+mt
-source-wordcount: '385'
+source-wordcount: '384'
 ht-degree: 4%
 
 ---
@@ -67,7 +67,7 @@ Caminho da pasta no local de armazenamento: `acme/campaigns/2021/Luxury Audience
 
 Os destinos de armazenamento na nuvem são compatíveis com os seguintes tipos de exportação:
 * **Exportação baseada em perfil**. Isso significa que você está exportando detalhes sobre os indivíduos no público-alvo. Esses detalhes são necessários para personalização e podem incluir atributos, eventos, associações de público-alvo e muito mais.
-* [!BADGE Beta]{type=Informative}**Exportação do conjunto de dados**. Essa funcionalidade permite exportar conjuntos de dados inteiros para destinos de armazenamento na nuvem. [Leia mais](/help/destinations/ui/export-datasets.md) sobre a funcionalidade.
+* **Exportação do conjunto de dados**. Essa funcionalidade permite exportar conjuntos de dados inteiros para destinos de armazenamento na nuvem. [Leia mais](/help/destinations/ui/export-datasets.md) sobre a funcionalidade.
 
 ## Próximas etapas {#next-steps}
 

@@ -2,9 +2,9 @@
 title: Conexão do Blob do Azure
 description: Crie uma conexão de saída ativa com seu armazenamento Azure Blob para exportar arquivos de dados CSV da Adobe Experience Platform periodicamente.
 exl-id: 8099849b-e3d2-48a5-902a-ca5a5ec88207
-source-git-commit: 661ef040398a9e2ef8dd9cebdf7bd27d4268636b
+source-git-commit: a1b3e59e0d5b1312b7bc22885ee679775c2a4d78
 workflow-type: tm+mt
-source-wordcount: '1051'
+source-wordcount: '1050'
 ht-degree: 7%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 7%
 
 Com a versão de julho de 2023 do Experience Platform, a [!DNL Azure Blob] O destino fornece novas funcionalidades, conforme listado abaixo:
 
-* [!BADGE  Beta]{type=Informative}[Suporte à exportação de conjuntos de dados](/help/destinations/ui/export-datasets.md).
+* [Suporte à exportação de conjuntos de dados](/help/destinations/ui/export-datasets.md).
 * [Opções de nomenclatura de arquivo](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) adicionais.
 * Capacidade de definir cabeçalhos de arquivos personalizados em seus arquivos exportados por meio da [etapa de mapeamento aprimorado](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
 * [Capacidade de personalizar a formatação de arquivos de dados CSV exportados](/help/destinations/ui/batch-destinations-file-formatting-options.md).

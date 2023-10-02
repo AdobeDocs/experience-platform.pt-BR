@@ -2,13 +2,13 @@
 title: Ativar públicos-alvo potenciais para destinos
 type: Tutorial
 description: Saiba como ativar públicos-alvo potenciais para destinos
-source-git-commit: 384faa13154386ef2578da4c20ab47f171aefeda
+exl-id: 3e034a14-09d0-4b08-b171-5afb62ae4b62
+source-git-commit: fdb9d7b168d6323fddaab1ac7abc44d3a390afea
 workflow-type: tm+mt
 source-wordcount: '620'
 ht-degree: 12%
 
 ---
-
 
 # Ativar públicos-alvo potenciais
 
@@ -22,7 +22,7 @@ Este artigo explica o workflow necessário para exportar [públicos-alvo potenci
 
 Ir para **[!UICONTROL Conexões]** > **[!UICONTROL Destinos]** e selecione a variável **[!UICONTROL Catálogo]** guia. Use o **[!UICONTROL Tipos de dados]** filtrar e selecionar **[!UICONTROL Clientes potenciais]** para ver os destinos que oferecem suporte à ativação de públicos-alvo de prospecto. Atualmente, a exportação de públicos-alvo potenciais está disponível somente para destinos de armazenamento em nuvem.
 
-![Destinos que oferecem suporte a exportações de conjunto de dados](/help/destinations/assets/ui/activate-prospect-audiences/data-types-filter.png)
+![Destinos que oferecem suporte a públicos-alvo em potencial.](/help/destinations/assets/ui/activate-prospect-audiences/data-types-filter.png)
 
 ## Pré-requisitos {#prerequisites}
 

@@ -1,10 +1,11 @@
 ---
 title: Engajamento e conquista de novos clientes por meio de casos de uso de prospecção
 description: Saiba como engajar e conquistar novos clientes por meio de casos de uso de prospecção, possibilitados pelo suporte a dados de parceiros da Real-Time CDP.
-source-git-commit: b4a18cdf434055be81dacbf19de4dd3e3f229d19
+exl-id: b9e7b3af-2a13-4904-bd12-e3ed05a1988e
+source-git-commit: da7a53c1e4accdacfa55e4022c1b499f70aab8fa
 workflow-type: tm+mt
-source-wordcount: '1953'
-ht-degree: 96%
+source-wordcount: '1960'
+ht-degree: 95%
 
 ---
 
@@ -207,7 +208,11 @@ Leia mais sobre [públicos-alvo potenciais](/help/segmentation/ui/prospect-audie
 
 ### Ativar perfis em potencial para destinos {#activate-to-destinations}
 
-Utilize os públicos-alvo em potencial exportando-os para destinos. Atualmente, apenas certos destinos, como o [Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md) ou o [!BADGE Alpha]{type=Informative}[LiveRamp](/help/destinations/catalog/advertising/liveramp-onboarding.md), permitem a ativação de perfis em potencial.
+Utilize os públicos-alvo em potencial exportando-os para destinos. Atualmente, apenas alguns destinos de armazenamento em nuvem oferecem suporte à ativação de perfis de prospecto.
+
+![Destinos que oferecem suporte a públicos-alvo em potencial.](/help/destinations/assets/ui/activate-prospect-audiences/data-types-filter.png)
+
+[Leia mais](/help/destinations/ui/activate-prospect-audiences.md) sobre como ativar clientes potenciais para destinos de armazenamento na nuvem.
 
 ## Outros casos de uso obtidos por meio da compatibilidade com dados de parceiros {#other-use-cases}
 

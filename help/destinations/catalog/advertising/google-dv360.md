@@ -3,7 +3,7 @@ keywords: Gerenciador de Lance do DoubleClick;Gerenciador de lance do DoubleClic
 title: Conexão do Google Display & Video 360
 description: O Display & Video 360, anteriormente conhecido como DoubleClick Bid Manager, é uma ferramenta usada para executar campanhas digitais direcionadas por redirecionamento e público-alvo em fontes de inventário de vídeo, dispositivos móveis e exibição.
 exl-id: bdd3b3fd-891f-44ec-bd47-daf7f3289f92
-source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
+source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
 workflow-type: tm+mt
 source-wordcount: '1022'
 ht-degree: 5%
@@ -21,7 +21,7 @@ ht-degree: 5%
 Observe os seguintes detalhes, específicos do [!DNL Google Display & Video 360] Destinos:
 
 * Os públicos ativados são criados programaticamente na plataforma do Google.
-* A ativação de preenchimentos retroativos de público para o [!DNL Google Display & Video 360] o destino está programado para ocorrer de 24 a 48 horas depois que um público-alvo é mapeado pela primeira vez para uma conexão de destino. Essa atualização é uma resposta à política da Google de aguardar 24 horas até a assimilação de dados e tem como objetivo melhorar as taxas de correspondência entre a Real-time CDP e [!DNL Google Display & Video 360]. Observe que essa é uma configuração de back-end aplicável somente a esse destino e não está relacionada a nenhuma opção de agendamento configurável pelo cliente na interface.
+* A ativação de preenchimentos retroativos de público para o [!DNL Google Display & Video 360] o destino está programado para ocorrer de 24 a 48 horas depois que um público-alvo é mapeado pela primeira vez para uma conexão de destino. Essa atualização é uma resposta à política da Google de aguardar 24 horas até a assimilação de dados e tem como objetivo melhorar as taxas de correspondência entre o Real-Time CDP e o [!DNL Google Display & Video 360]. Observe que essa é uma configuração de back-end aplicável somente a esse destino e não está relacionada a nenhuma opção de agendamento configurável pelo cliente na interface.
 
 >[!IMPORTANT]
 >

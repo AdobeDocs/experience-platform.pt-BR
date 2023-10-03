@@ -3,13 +3,13 @@ solution: Experience Platform
 title: Encontrar o manual de estratégia correto
 description: Saiba como encontrar o manual de estratégia correto para o seu caso de uso de habilitar manuais.
 badgeBeta: label="Beta" type="Informative"
-source-git-commit: 51e4a77472ccb560dbfa5f56011ce50932d87b64
-workflow-type: ht
-source-wordcount: '740'
-ht-degree: 100%
+exl-id: 3dae6ad6-adb3-4606-ad63-c0d4ef6beeba
+source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+workflow-type: tm+mt
+source-wordcount: '741'
+ht-degree: 96%
 
 ---
-
 
 # (Beta) Encontrar o manual de estratégia correto
 
@@ -23,7 +23,7 @@ Para usar um manual de estratégia, navegue até **[!UICONTROL Manuais de estrat
 
 Use a janela de pesquisa e os filtros disponíveis na página para encontrar o manual de estratégia correto para o seu caso de uso.
 
-Por exemplo, você pode filtrar os manuais de estratégia que podem ser usados de acordo com o estágio do funil de marketing que deseja direcionar: conversão, engajamento ou retenção. Você também pode filtrar os manuais de estratégia exibidos pelo setor em que está ou pelo direito do produto ao qual você tem acesso: Adobe Journey Optimizer ou Real-time CDP.
+Por exemplo, você pode filtrar os manuais de estratégia que podem ser usados de acordo com o estágio do funil de marketing que deseja direcionar: conversão, engajamento ou retenção. Você também pode filtrar os manuais exibidos pelo setor em que você está ou pelo direito do produto ao qual você tem acesso: Adobe Journey Optimizer ou Real-Time CDP.
 
 ![Filtrar manuais de estratégia por funil de marketing, setor ou produto](/help/use-case-playbooks/assets/playbooks/ui-guide/filter-by-funnel-industry-product.gif)
 
@@ -58,7 +58,7 @@ Inspecione a seção de resumo para entender quais ativos são gerados depois qu
 ---------|----------|
 | **[!UICONTROL Público-alvo]** | Descreve as personalidades que você deseja alcançar por meio deste manual de estratégia de casos de uso. |
 | **[!UICONTROL Canais de marketing]** | Descreve os canais usados para acessar as personalidades direcionadas no manual de estratégia. |
-| **[!UICONTROL Ativos técnicos]** | Uma lista dos ativos técnicos que são gerados após a criação de instâncias do manual de estratégia. Os ativos gerados diferem por manual de estratégia, dependendo do caso de uso. Alguns manuais podem gerar esquemas, segmentos e jornadas. Outros podem gerar destinos. Consulte a seção [Entender os ativos gerados](/help/use-case-playbooks/playbooks/create-share-reuse.md#understand-assets) (mais adiante no guia sobre criação e reutilização de instâncias) para obter mais informações sobre como usar e reutilizar os ativos gerados. |
+| **[!UICONTROL Ativos técnicos]** | Uma lista dos ativos técnicos que são gerados após a criação de instâncias do manual de estratégia. Os ativos gerados diferem por manual de estratégia, dependendo do caso de uso. Alguns manuais de estratégia podem gerar esquemas, segmentos e jornadas. Outros podem gerar destinos. Consulte a seção [Entender os ativos gerados](/help/use-case-playbooks/playbooks/create-share-reuse.md#understand-assets) (mais adiante no guia sobre criação e reutilização de instâncias) para obter mais informações sobre como usar e reutilizar os ativos gerados. |
 
 {style="table-layout:auto"}
 

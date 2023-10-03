@@ -1,13 +1,13 @@
 ---
 title: Perguntas frequentes do Audiences
 description: Descubra respostas para perguntas frequentes sobre públicos-alvo e outros conceitos relacionados à segmentação.
-source-git-commit: 9a72d85bfb592012b36826135e24d28983f92e40
+exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
+source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
 workflow-type: tm+mt
 source-wordcount: '1935'
 ht-degree: 1%
 
 ---
-
 
 # Perguntas frequentes
 
@@ -140,7 +140,7 @@ Nesse momento, não. No entanto, esse recurso deve estar disponível em breve.
 
 ### Posso enviar públicos-alvo da Composição de público-alvo para todos os destinos e canais de downstream?
 
-Nesse momento, não. Atualmente, você pode usar públicos-alvo da Composição de público-alvo nas Campanhas do Adobe Journey Optimizer e destinos da CDP em tempo real. O Adobe Journey Optimizer Jornada será compatível em uma versão futura.
+Nesse momento, não. Atualmente, você pode usar públicos-alvo da Composição de público-alvo em campanhas do Adobe Journey Optimizer e destinos do Real-Time CDP. O Adobe Journey Optimizer Jornada será compatível em uma versão futura.
 
 ### Existem medidas de proteção para o número de composições?
 

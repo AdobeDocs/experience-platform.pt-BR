@@ -2,10 +2,10 @@
 title: Notas da versão de março de 2023 da Adobe Experience Platform
 description: As notas da versão de março de 2023 da Adobe Experience Platform.
 exl-id: 3f4d764a-77cd-4e4a-ae11-e97a23006a53
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
-workflow-type: ht
+source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+workflow-type: tm+mt
 source-wordcount: '2206'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -23,7 +23,7 @@ Atualizações dos recursos já existentes na Adobe Experience Platform:
 - [Query Service](#query-service)
 - [Real-Time Customer Data Platform B2B Edition](#b2b)
 - [Serviço de segmentação](#segmentation)
-- [Fontes](#sources)
+- [Origens](#sources)
 
 ## Painéis {#dashboards}
 
@@ -96,7 +96,7 @@ Para obter mais informações sobre a preparação de dados, leia a [Visão gera
 
 **Correções e aprimoramentos** {#destinations-fixes-and-enhancements}
 
-Estamos lançando uma correção de erros para a criptografia PGP/GPG utilizada em destinos baseados em arquivo na Real-Time CDP. Com essa alteração, os destinos baseados em arquivo que estão usando a criptografia gerarão um nome de arquivo com uma extensão diferente da anterior.
+Estamos lançando uma correção de erros para a criptografia PGP/GPG em destinos baseados em arquivos para o Real-Time CDP. Com essa alteração, os destinos baseados em arquivo que estão usando a criptografia gerarão um nome de arquivo com uma extensão diferente da anterior.
 
 - Extensão atual ao usar a criptografia: `filename.csv`
 - Extensão futura ao usar a criptografia: `filename.csv.gpg`
@@ -191,7 +191,7 @@ O [!DNL Segmentation Service] define um subconjunto específico de perfis descre
 
 Para obter mais informações sobre o [!DNL Segmentation Service], consulte a [Visão geral de segmentação](../../segmentation/home.md).
 
-## Fontes {#sources}
+## Origens {#sources}
 
 A Adobe Experience Platform pode assimilar dados de fontes externas e permite estruturar, rotular e aprimorar esses dados usando os serviços da Platform. É possível assimilar dados de várias origens, como aplicativos da Adobe, do armazenamento na nuvem, um software de terceiros e do seu sistema de CRM.
 

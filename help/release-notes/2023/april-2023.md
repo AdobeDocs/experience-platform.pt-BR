@@ -1,11 +1,11 @@
 ---
 title: Notas de versão de abril de 2023 da Adobe Experience Platform
 description: As notas de versão de abril de 2023 da Adobe Experience Platform.
-exl-id: 8b8fa810-d301-43c1-98df-10d3903f3147
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+exl-id: 7b501467-99a7-4aee-ae86-66c851250ecf
+source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
 workflow-type: tm+mt
 source-wordcount: '2084'
-ht-degree: 100%
+ht-degree: 98%
 
 ---
 
@@ -27,7 +27,7 @@ Atualizações dos recursos já existentes na Adobe Experience Platform:
 - [Real-Time Customer Data Platform](#rtcdp)
 - [Perfil do cliente em tempo real](#profile)
 - [Serviço de segmentação](#segmentation)
-- [Fontes](#sources)
+- [Origens](#sources)
 
 ## Painéis {#dashboards}
 
@@ -91,7 +91,7 @@ A Adobe Experience Platform fornece um conjunto de tecnologias que permitem cole
 | ----------- | ----------- |
 | Monitoramento de fluxo de dados para destinos do [!DNL Custom Personalization] e [!DNL Adobe Commerce] | <p> Agora você pode ver as métricas de ativação das conexões do [Adobe Commerce](/help/destinations/catalog/personalization/adobe-commerce.md), [Personalização individual](../../destinations/catalog/personalization/custom-personalization.md) e [Personalização individual com atributos](../../destinations/catalog/personalization/custom-personalization.md). </p> <p>![Imagem do Adobe Commerce](/help/destinations/assets/common/adobe-commerce-metrics.png "Métricas do Adobe Commerce"){width="100" zoomable="yes"}</p>  Consulte [Monitorar fluxos de dados no espaço de trabalho de destinos](../../dataflows/ui/monitor-destinations.md#monitor-dataflows-in-the-destinations-workspace) para obter mais detalhes. |
 | Novo campo **[!UICONTROL Anexar ID do segmento ao nome do segmento]** para destinos do [!DNL Google Ad Manager] e [!DNL Google Ad Manager 360] | <p>Agora é possível fazer o nome do segmento no [[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md#parameters) e [[!DNL Google Ad Manager 360]](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) incluir a ID de segmento da Experience Platform, desta forma: `Segment Name (Segment ID)`.</p><p>![Anexar imagem da ID do segmento](/help/destinations/assets/common/append-segment-id-to-segment-name.png "Novo campo Anexar ID de segmento ao nome do segmento "){width="100" zoomable="yes"}</p> |
-| Preenchimentos retroativos de público-alvo programados | <p>Para o destino [[!DNL Google Display & Video 360]](/help/destinations/catalog/advertising/google-dv360.md#specifics), a ativação de preenchimentos retroativos de público-alvo para o destino é agendada para ocorrer de 24 a 48 horas depois que um segmento é mapeado pela primeira vez para uma conexão de destino. Essa atualização é em resposta à política do Google de aguardar 24 horas até a assimilação de dados e melhorará as taxas de correspondência entre a Real-time CDP e o [!DNL Google Display & Video 360].</p> <p>Observe que essa é uma configuração de back-end aplicável somente a esse destino e não está relacionada a nenhuma opção de agendamento configurável pelo cliente na interface.</p> |
+| Preenchimentos retroativos de público-alvo programados | <p>Para o destino [[!DNL Google Display & Video 360]](/help/destinations/catalog/advertising/google-dv360.md#specifics), a ativação de preenchimentos retroativos de público-alvo para o destino é agendada para ocorrer de 24 a 48 horas depois que um segmento é mapeado pela primeira vez para uma conexão de destino. Esta atualização é uma resposta à política da Google de aguardar 24 horas até a assimilação de dados e melhorará as taxas de correspondência entre o Real-Time CDP e o [!DNL Google Display & Video 360].</p> <p>Observe que essa é uma configuração de back-end aplicável somente a esse destino e não está relacionada a nenhuma opção de agendamento configurável pelo cliente na interface.</p> |
 
 {style="table-layout:auto"}
 
@@ -180,7 +180,7 @@ O [!DNL Segmentation Service] define um subconjunto específico de perfis descre
 
 Para obter mais informações sobre o [!DNL Segmentation Service], consulte a [Visão geral de segmentação](../../segmentation/home.md).
 
-## Fontes {#sources}
+## Origens {#sources}
 
 A Adobe Experience Platform pode assimilar dados de fontes externas e permite estruturar, rotular e aprimorar esses dados usando os serviços da Platform. É possível assimilar dados de várias origens, como aplicativos da Adobe, do armazenamento na nuvem, um software de terceiros e do seu sistema de CRM.
 

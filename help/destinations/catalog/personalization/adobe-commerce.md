@@ -2,7 +2,7 @@
 title: Conector de destino do Adobe Commerce
 description: Saiba como os comerciantes do Adobe Commerce e do Real-Time CDP podem personalizar a experiência de compra fornecendo promoções e conteúdo de site altamente relevantes, personalizados para públicos-alvo de clientes criados e gerenciados no Real-Time CDP.
 exl-id: f7aa3c6c-ba7a-440c-a4d7-5d7b50dbbc0d
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
 workflow-type: tm+mt
 source-wordcount: '720'
 ht-degree: 3%
@@ -75,7 +75,7 @@ Agora que você configurou o [!DNL Commerce] destino dentro do Experience Platfo
 
 ## Validar ativação de público no Commerce {#exported-data}
 
-Depois de ativar os públicos-alvo da Real-Time CDP para o seu [!DNL Adobe Commerce] conta, você verá esses públicos-alvo disponíveis ao acessar a _Admin_ barra lateral e vá para **[!UICONTROL Clientes]** > **[!UICONTROL Público-alvo da Real-time CDP]**.
+Depois de ativar os públicos-alvo da Real-Time CDP para o seu [!DNL Adobe Commerce] conta, você verá esses públicos-alvo disponíveis ao acessar a _Admin_ barra lateral e vá para **[!UICONTROL Clientes]** > **[!UICONTROL Público-alvo da Real-Time CDP]**.
 
 ![Painel de públicos-alvo da Real-Time CDP](../../assets/catalog/personalization/adobe-commerce/audience-library.png)
 

@@ -4,10 +4,10 @@ solution: Real-Time Customer Data Platform
 audience: user
 user-guide-title: Manual da Real-time Customer Data Platform
 user-guide-description: Reúna dados conhecidos e anônimos de várias fontes corporativas para criar perfis de clientes, e a partir deles criar segmentos de público-alvo e ativá-los para destinos de terceiros.
-source-git-commit: 7a977f92a81dd27c99ebe8bdf7be1a7d0425ad2a
+source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
 workflow-type: tm+mt
 source-wordcount: '250'
-ht-degree: 88%
+ht-degree: 94%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 88%
       * [Exemplo de caso de uso](./b2b-use-case.md)
       * [Tutorial completo](./b2b-tutorial.md)
       * [Medidas de proteção da Real-Time CDP B2B Edition](b2b-guardrails.md)
-* Audience Manager e Real-time CDP {#evolution}
+* AUDIENCE MANAGER e REAL-TIME CDP {#evolution}
    * [Evolução do Audience Manager](aam-to-rtcdp.md)
 * Perfis de conta {#account}
    * [Visão geral do perfil da conta](accounts/account-profile-overview.md)
@@ -68,8 +68,8 @@ ht-degree: 88%
    * Casos de uso de reengajamento inteligente {#intelligent-re-engagement}
       * [Reenvolva seus clientes de forma inteligente](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md)
    * Casos de uso de dados de parceiros {#partner-data}
-      * [Envolver e adquirir novos clientes por meio do suporte à prospecção](/help/rtcdp/partner-data/prospecting.md)
-      * [Suplemente perfis primários com atributos fornecidos pelo parceiro](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
-      * [Use o reconhecimento de visitantes auxiliados por parceiros para personalizar experiências no local](/help/rtcdp/partner-data/onsite-personalization.md)
+      * [Engajamento e conquista de novos clientes por meio do suporte à prospecção](/help/rtcdp/partner-data/prospecting.md)
+      * [Suplementar perfis próprios com atributos fornecidos por parceiros](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
+      * [Use o reconhecimento de visitante com auxílio de parceiros para personalizar experiências no site](/help/rtcdp/partner-data/onsite-personalization.md)
 * [Notas de versão da Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=pt-BR)
 * [Glossário da Experience Platform](https://www.adobe.com/go/platform-glossary-en)

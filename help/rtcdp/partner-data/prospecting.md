@@ -2,10 +2,10 @@
 title: Engajamento e conquista de novos clientes por meio de casos de uso de prospecção
 description: Saiba como engajar e conquistar novos clientes por meio de casos de uso de prospecção, possibilitados pelo suporte a dados de parceiros da Real-Time CDP.
 exl-id: b9e7b3af-2a13-4904-bd12-e3ed05a1988e
-source-git-commit: da7a53c1e4accdacfa55e4022c1b499f70aab8fa
+source-git-commit: ec6375a025833027fda01c412124321132aefd65
 workflow-type: tm+mt
 source-wordcount: '1960'
-ht-degree: 95%
+ht-degree: 93%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 95%
 
 >[!AVAILABILITY]
 >
->* Essa funcionalidade está disponível para clientes que possuem o Real-Time CDP (Serviço de aplicativo), Ativação da Adobe Experience Platform, Real-time CDP, Real-Time CDP Prime ou Real-Time CDP Ultimate licenciados. Leia mais sobre esses pacotes nas [descrições do produto](https://helpx.adobe.com/legal/product-descriptions.html?lang=pt-BR) e entre em contato com a pessoa representante da Adobe para obter mais informações.
+>* Essa funcionalidade está disponível para clientes que licenciaram o Real-Time CDP (Serviço de aplicativo), Adobe Experience Platform Ativation, Real-Time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate. Leia mais sobre esses pacotes nas [descrições do produto](https://helpx.adobe.com/legal/product-descriptions.html?lang=pt-BR) e entre em contato com a pessoa representante da Adobe para obter mais informações.
 
 Use o suporte a dados de terceiros da Real-Time CDP para expandir sua base de perfis com prospectos de parceiros de dados e interaja com eles para conquistar ou alcançar novos clientes.
 

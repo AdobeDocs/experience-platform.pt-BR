@@ -1,10 +1,11 @@
 ---
 title: Suplementar perfis próprios com atributos fornecidos por parceiros
 description: Saiba como suplementar perfis próprios com atributos de parceiros de dados confiáveis para melhorar sua base de dados, obter novos insights sobre sua base de clientes e aprimorar a otimização do público-alvo.
-source-git-commit: b4a18cdf434055be81dacbf19de4dd3e3f229d19
+exl-id: ee21b988-88f9-4c8e-bd82-7fc55c37ec24
+source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
 workflow-type: tm+mt
 source-wordcount: '1110'
-ht-degree: 95%
+ht-degree: 90%
 
 ---
 
@@ -12,7 +13,7 @@ ht-degree: 95%
 
 >[!AVAILABILITY]
 >
->* Essa funcionalidade está disponível para clientes que possuem o Real-Time CDP (Serviço de aplicativo), Ativação da Adobe Experience Platform, Real-time CDP, Real-Time CDP Prime ou Real-Time CDP Ultimate licenciados. Leia mais sobre esses pacotes nas [descrições do produto](https://helpx.adobe.com/legal/product-descriptions.html?lang=pt-BR) e entre em contato com a pessoa representante da Adobe para obter mais informações.
+>* Essa funcionalidade está disponível para clientes que licenciaram o Real-Time CDP (Serviço de aplicativo), Adobe Experience Platform Ativation, Real-Time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate. Leia mais sobre esses pacotes nas [descrições do produto](https://helpx.adobe.com/legal/product-descriptions.html?lang=pt-BR) e entre em contato com a pessoa representante da Adobe para obter mais informações.
 
 Suplemente perfis próprios com atributos de parceiros de dados confiáveis para melhorar sua base de dados, obter novos insights sobre sua base de clientes e aprimorar a otimização do público-alvo.
 
@@ -24,7 +25,7 @@ Ao considerar suplementar seus perfis próprios com atributos de parceiros de da
 
 * Pense no local fora da Real-Time CDP para onde a lista de públicos-alvo será exportada com o intuito de ser compartilhada com o fornecedor de dados. Este local precisa ter suporte a exportação de arquivos.
 * Quais são os identificadores esperados pelo fornecedor de dados para que seja possível criar camadas de atributos adicionais?
-* Como os arquivos que contém os atributos fornecidos por parceiros serão assimilados de volta na Real-time CDP? Por exemplo, os arquivos podem ser assimilados por meio de conectores de origem de armazenamento na nuvem, como o [Amazon S3](/help/sources/connectors/cloud-storage/s3.md) ou [SFTP](/help/sources/connectors/cloud-storage/sftp.md).
+* Como o arquivo que contém os atributos fornecidos pelo parceiro será assimilado de volta na Real-Time CDP? Por exemplo, os arquivos podem ser assimilados por meio de conectores de origem de armazenamento na nuvem, como o [Amazon S3](/help/sources/connectors/cloud-storage/s3.md) ou [SFTP](/help/sources/connectors/cloud-storage/sftp.md).
 * Qual é a frequência com a qual é esperado que os atributos fornecidos pelo parceiro sejam trazidos de volta para a Real-Time CDP e atualizados?
 
 >[!WARNING]
@@ -94,7 +95,7 @@ Além disso, nesta etapa, pense em como seu modelo de governança de dados mudar
 
 ### Exporte os públicos-alvo que deseja enriquecer ao desconectar informações de identificação pessoal (PII) ou PII com hash {#export-audiences}
 
-Exporte os públicos-alvo que deseja que o parceiro enriqueça. Use os destinos de armazenamento na nuvem fornecidos pela Real-time CDP, como Amazon S3 ou SFTP. Leia as seguintes páginas de documentação para concluir esta etapa:
+Exporte os públicos-alvo que deseja que o parceiro enriqueça. Use os destinos de armazenamento em nuvem fornecidos pela Real-Time CDP, como Amazon S3 ou SFTP. Leia as seguintes páginas de documentação para concluir esta etapa:
 
 * Página da documentação do [destino Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md)
 * Página da documentação do [destino SFTP](/help/destinations/catalog/cloud-storage/sftp.md)

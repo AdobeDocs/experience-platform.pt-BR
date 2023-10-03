@@ -3,13 +3,13 @@ solution: Experience Platform
 title: Visão geral dos manuais de estratégia de caso de uso
 description: Saiba como usar o recurso de manuais de estratégia de caso de uso na Experience Platform para começar a usar vários casos de uso de marketing
 badgeBeta: label="Beta" type="Informative"
-source-git-commit: 896ca002b34e79bd464467011875a54acd5c187c
-workflow-type: ht
-source-wordcount: '400'
-ht-degree: 100%
+exl-id: 9c5c4f61-ea99-4f54-9b77-d486be29813c
+source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+workflow-type: tm+mt
+source-wordcount: '401'
+ht-degree: 88%
 
 ---
-
 
 # (Beta) Visão geral dos manuais de estratégia de caso de uso
 
@@ -41,11 +41,11 @@ Se selecionar um manual de estratégia da Real-Time CDP, seu objetivo poderá se
 
 Se selecionar um manual de estratégia do Adobe Journey Optimizer, seu objetivo poderá ser criar uma jornada do cliente em seu produto e enviar mensagens relevantes para seus clientes.
 
-Crie uma instância de um manual de estratégia para gerar ativos específicos, como esquemas, segmentos ou jornadas, que são adaptados ao seu caso de uso e são reutilizáveis na Experience Platform. O objetivo desses objetos é ajudar você a entender todos os recursos necessários para implementar seu caso de uso específico. Eles não contêm dados e são criados em sandboxes de desenvolvimento. Comece a usar esses ativos ou edite-os antes de usá-los e compartilhá-los com sua equipe na Real-time CDP ou no Journey Optimizer.
+Crie uma instância de um manual de estratégia para gerar ativos específicos, como esquemas, segmentos ou jornadas, que são adaptados ao seu caso de uso e são reutilizáveis na Experience Platform. O objetivo desses objetos é ajudar você a entender todos os recursos necessários para implementar seu caso de uso específico. Eles não contêm dados e são criados em sandboxes de desenvolvimento. Comece a usar esses ativos ou faça edições neles antes de usá-los e compartilhá-los com sua equipe no Real-Time CDP ou no Journey Optimizer.
 
 ## Disponibilidade
 
-Alguns [!UICONTROL manuais de estratégia de caso de uso] são adaptados para casos de uso da Real-time CDP, enquanto outros são mais adequados para clientes que usam o Journey Optimizer. Navegue pelo catálogo para encontrar os manuais de estratégia mais adequados ao seu produto e caso de uso.
+Alguns [!UICONTROL Playbooks de caso de uso] são adaptados aos casos de uso do Real-Time CDP, enquanto outros são mais adequados para clientes que usam o Journey Optimizer. Navegue pelo catálogo para encontrar os manuais de estratégia mais adequados ao seu produto e caso de uso.
 
 ## Guias de interface
 

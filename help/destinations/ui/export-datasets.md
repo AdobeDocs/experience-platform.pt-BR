@@ -3,10 +3,10 @@ title: Exportar conjuntos de dados para destinos de armazenamento na nuvem
 type: Tutorial
 description: Saiba como exportar conjuntos de dados do Adobe Experience Platform para o local de armazenamento em nuvem de sua preferência.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 8b8abea65ee0448594113ca77f75b84293646146
+source-git-commit: 08463e9f14b0952fe5db177ae8b4546cc3c6cac5
 workflow-type: tm+mt
-source-wordcount: '1750'
-ht-degree: 5%
+source-wordcount: '1724'
+ht-degree: 4%
 
 ---
 
@@ -47,11 +47,11 @@ Entenda, na tabela abaixo, quais tipos de conjunto de dados você pode exportar 
   <tr>
     <td rowspan="2">Adobe Journey Optimizer</td>
     <td>Prime</td>
-    <td>Consulte a <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html?lang=pt-BR"> Adobe Journey Optimizer</a> documentação. (atualização para deep link para a tabela ou seção do AJO para conjuntos de dados compatíveis)</td>
+    <td>Consulte a <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html#datasets"> Adobe Journey Optimizer</a> documentação.</td>
   </tr>
   <tr>
     <td>Ultimate</td>
-    <td>Consulte a <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html?lang=pt-BR"> Adobe Journey Optimizer</a> documentação. (atualização para deep link para a tabela ou seção do AJO para conjuntos de dados compatíveis)</td>
+    <td>Consulte a <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html#datasets"> Adobe Journey Optimizer</a> documentação.</td>
   </tr>
   <tr>
     <td>Distiller de dados</td>

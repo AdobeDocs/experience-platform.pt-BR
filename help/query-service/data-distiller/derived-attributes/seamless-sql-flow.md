@@ -2,7 +2,7 @@
 title: Fluxo SQL contínuo para atributos derivados
 description: O SQL do Serviço de Consulta foi estendido para fornecer suporte ininterrupto para atributos derivados. Saiba como usar essa extensão SQL para criar um atributo derivado que esteja ativado para o perfil e como usar o atributo para o Perfil do cliente em tempo real e o Serviço de segmentação.
 exl-id: bb1a1d8d-4662-40b0-857a-36efb8e78746
-source-git-commit: 6202b1a5956da83691eeb5422d3ebe7f3fb7d974
+source-git-commit: e9c4068419b36da6ffaec67f0d1c39fe87c2bc4c
 workflow-type: tm+mt
 source-wordcount: '1238'
 ht-degree: 1%
@@ -35,7 +35,7 @@ O Serviço de consulta permite executar todas as ações listadas acima usando c
 >
 >A consulta SQL fornecida abaixo presume o uso de um namespace pré-existente.
 
-Use uma consulta Criar tabela como seleção (CTAS) para criar um conjunto de dados, atribuir tipos de dados, definir uma identidade principal, criar um esquema e marcá-lo como habilitado para perfil. A instrução SQL de exemplo abaixo cria atributos e os disponibiliza para o Perfil de dados do cliente em tempo real (Real-Time CDP). Sua consulta SQL seguirá o formato mostrado no exemplo abaixo:
+Use uma consulta Criar tabela como seleção (CTAS) para criar um conjunto de dados, atribuir tipos de dados, definir uma identidade principal, criar um esquema e marcá-lo como habilitado para perfil. A instrução SQL de exemplo abaixo cria atributos e a disponibiliza para o Real-time Customer Data Platform (Real-Time CDP). Sua consulta SQL seguirá o formato mostrado no exemplo abaixo:
 
 ```sql
 CREATE TABLE <your_table_name> [IF NOT EXISTS] (fieldname <your_data_type> primary identity namespace <your_namespace>, [field_name2 <your_data_type>]) [WITH(LABEL='PROFILE')];

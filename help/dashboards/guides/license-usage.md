@@ -3,7 +3,8 @@ keywords: Experience Platform;interface do usuário;UI;personalização;uso de l
 title: Guia do Painel de Uso da Licença
 description: A Adobe Experience Platform fornece um painel por meio do qual você pode visualizar informações importantes sobre o uso de licença da sua organização.
 type: Documentation
-source-git-commit: 5b3ec9aca773cf4a1ba0d4c7e432949769b942c1
+exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
+source-git-commit: e9c4068419b36da6ffaec67f0d1c39fe87c2bc4c
 workflow-type: tm+mt
 source-wordcount: '1987'
 ht-degree: 1%
@@ -19,7 +20,7 @@ ht-degree: 1%
 
 Você pode exibir informações importantes sobre o uso de licenças da sua organização por meio da Adobe Experience Platform [!UICONTROL Uso da licença] painel. As informações exibidas aqui são capturadas durante um instantâneo diário da sua instância da Platform.
 
-Os relatórios de uso de licença fornecem um alto grau de granularidade em relação às métricas de uso de licença. O painel fornece métricas de uso para cada produto comprado, o uso consolidado de métricas em todas as sandboxes de produção ou desenvolvimento e a métrica de uso de uma sandbox específica. Os aplicativos de Experience Platform a seguir podem ser rastreados com métricas de uso: Perfil de dados do cliente em tempo real, Adobe Journey Optimizer e Customer Journey Analytics.
+Os relatórios de uso de licença fornecem um alto grau de granularidade em relação às métricas de uso de licença. O painel fornece métricas de uso para cada produto comprado, o uso consolidado de métricas em todas as sandboxes de produção ou desenvolvimento e a métrica de uso de uma sandbox específica. Os aplicativos de Experience Platform a seguir podem ser rastreados com métricas de uso: Real-time Customer Data Platform, Adobe Journey Optimizer e Customer Journey Analytics.
 
 Este guia descreve como acessar e trabalhar com o painel de uso de licença na interface do usuário e fornece mais informações sobre as visualizações exibidas no painel.
 
@@ -59,7 +60,7 @@ Esse painel exibe todos os produtos licenciados da Adobe Experience Platform, in
 
 >[!NOTE]
 >
->Adições à [!UICONTROL Valor da licença] como resultado de complementos, são adicionados além do [!UICONTROL Valor da licença] para os produtos básicos, como Perfil de dados do cliente em tempo real, Adobe Journey Optimizer e Customer Journey Analytics. O uso dessa quantidade licenciada (após os complementos) é rastreado pelos produtos básicos. Por exemplo, se você comprar um pacote de cinco sandboxes, a quantidade de cinco será adicionada à do produto base. Nesse caso, o complemento mostra uma [!UICONTROL Valor da licença] de um, e o uso desse complemento fica &quot;em branco&quot; à medida que o uso é rastreado pelo produto base.
+>Adições à [!UICONTROL Valor da licença] como resultado de complementos, são adicionados além do [!UICONTROL Valor da licença] para os produtos básicos, como Real-time Customer Data Platform, Adobe Journey Optimizer e Customer Journey Analytics. O uso dessa quantidade licenciada (após os complementos) é rastreado pelos produtos básicos. Por exemplo, se você comprar um pacote de cinco sandboxes, a quantidade de cinco será adicionada à do produto base. Nesse caso, o complemento mostra uma [!UICONTROL Valor da licença] de um, e o uso desse complemento fica &quot;em branco&quot; à medida que o uso é rastreado pelo produto base.
 
 A tabela indica a métrica principal de cada produto, pois cada produto pode rastrear várias métricas.
 

@@ -1,13 +1,13 @@
 ---
 title: Guia da interface de atributos computados
 description: Saiba como criar, exibir e atualizar atributos computados usando a interface do usuário do Adobe Experience Platform.
-source-git-commit: 631b67eb6609381235113009acefaf0d0cd8063c
+exl-id: bc621167-6dba-473e-90e4-aac7ceb6579a
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '1485'
-ht-degree: 1%
+ht-degree: 8%
 
 ---
-
 
 # Guia da interface de atributos computados
 
@@ -42,7 +42,7 @@ Para selecionar quais campos estarão visíveis, você pode selecionar ![o ícon
 | [!UICONTROL Última avaliação] | Esse carimbo de data e hora representa a última execução de avaliação bem-sucedida. Somente eventos que ocorreram **antes** esse carimbo de data e hora é considerado na última avaliação bem-sucedida. |
 | [!UICONTROL Status da última avaliação] | O status que indica se o atributo calculado foi ou não calculado com êxito na última execução de avaliação. Os valores possíveis incluem **[!UICONTROL Sucesso]** ou **[!UICONTROL Failed]**. |
 | [!UICONTROL Frequência de atualização] | Uma indicação da frequência com que o atributo calculado deve ser atualizado. Os valores possíveis incluem por hora, dia, semana ou mês. |
-| [!UICONTROL Atualização rápida] | Um valor que mostra se a atualização rápida está ou não ativada para este atributo de computação. Se a atualização rápida estiver ativada, o atributo calculado poderá ser atualizado diariamente, em vez de semanalmente, quinzenalmente ou mensalmente. Esse valor só é aplicável para atributos calculados com um período de lookback maior que uma base semanal. |
+| [!UICONTROL Atualização rápida] | Um valor que mostra se a atualização rápida está ou não ativada para este atributo de computação. Se a atualização rápida estiver ativada, o atributo calculado poderá ser atualizado diariamente, em vez de semanalmente, quinzenalmente ou mensalmente. Esse valor só é aplicável para atributos calculados com um período de retrospectiva maior que uma semana. |
 | [!UICONTROL Status do ciclo de vida] | O status atual do atributo calculado. Há três status possíveis: <ul><li>**[!UICONTROL Rascunho]:** O atributo calculado não **não** já tem um campo criado no esquema. Nesse estado, o atributo calculado pode ser editado. </li><li>**[!UICONTROL Publicado]:** O atributo computado tem um campo criado no esquema e está pronto para ser usado. Nesse estado, o atributo calculado **não é possível** ser editado.</li><li>**[!UICONTROL Inativo]:** O atributo computado está desabilitado. Para obter mais informações sobre o status inativo, leia a [Página de perguntas frequentes](./faq.md#inactive-status). </li> |
 | [!UICONTROL Criado] | Um carimbo de data e hora que mostra a data e a hora em que o atributo calculado foi criado. |
 | [!UICONTROL Última modificação] | Um carimbo de data e hora que mostra a data e a hora em que o atributo calculado foi modificado pela última vez. |
@@ -106,13 +106,13 @@ Depois de aplicar a função de agregação, será necessário definir o períod
 >[!CONTEXTUALHELP]
 >id="platform_profile_computedAttributes_fastRefresh"
 >title="Atualização rápida"
->abstract="A atualização rápida permite manter seus atributos atualizados. Ativar essa opção permite atualizar os atributos calculados diariamente, mesmo por períodos de lookback mais longos, permitindo que você reaja rapidamente às atividades do usuário. Esse valor só é aplicável para atributos calculados com um período de lookback maior que uma base semanal."
+>abstract="A atualização rápida permite manter seus atributos atualizados. Habilitar essa opção possibilita atualizar os atributos calculados diariamente, mesmo para períodos de retrospectiva mais longos, permitindo reagir rapidamente às atividades do usuário ou usuária. Esse valor só é aplicável para atributos calculados com um período de retrospectiva maior que uma semana."
 
 Ao aplicar a função de agregação, você poderá ativar a atualização rápida se o período de lookback for maior que uma semana.
 
 ![A variável [!UICONTROL Atualização rápida] é realçada.](./images/ui/enable-fast-refresh.png)
 
-A atualização rápida permite manter seus atributos atualizados. Ativar essa opção permite atualizar os atributos calculados diariamente, mesmo por períodos de lookback mais longos, permitindo que você reaja rapidamente às atividades do usuário.
+A atualização rápida permite manter seus atributos atualizados. Habilitar essa opção possibilita atualizar os atributos calculados diariamente, mesmo para períodos de retrospectiva mais longos, permitindo reagir rapidamente às atividades do usuário ou usuária.
 
 Para obter mais informações sobre atualização rápida, leia a [seção atualização rápida](./overview.md#fast-refresh) da visão geral dos atributos calculados.
 

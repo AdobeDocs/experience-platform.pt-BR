@@ -7,7 +7,7 @@ exl-id: 85711a06-2756-46f9-83ba-1568310c9f73
 source-git-commit: 9399a242b855e151e5822035bc952efa89fe4bf0
 workflow-type: tm+mt
 source-wordcount: '657'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -24,7 +24,7 @@ Este guia do usuário fornece etapas sobre como monitorar seus dados na interfac
 >title="Taxa de ingestão"
 >abstract="O número de eventos processados com êxito por segundo."
 >text="Learn more in the documentation"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-sources.html" text="Monitorar fluxos de dados para fontes na interface"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-sources.html?lang=pt-BR" text="Monitorar fluxos de dados para fontes na interface"
 
 >[!TIP]
 >

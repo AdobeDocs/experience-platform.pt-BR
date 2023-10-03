@@ -6,7 +6,7 @@ exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
 source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
 source-wordcount: '1635'
-ht-degree: 11%
+ht-degree: 12%
 
 ---
 
@@ -89,7 +89,7 @@ Os públicos-alvo em lote são avaliados automaticamente a cada 24 horas. Se qui
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_edge"
 >title="Avaliação da borda"
->abstract="A segmentação de borda é a capacidade de avaliar segmentos na Platform instantaneamente na Rede de borda, permitindo casos de uso de personalização de mesma página e próxima página."
+>abstract="A segmentação de borda é a capacidade de avaliar segmentos na rede de borda da Platform instantaneamente, permitindo casos de uso de personalização da mesma página ou da próxima página."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/edge-segmentation.html?lang=pt-BR" text="Guia da interface de segmentação de borda"
 
 A segmentação de borda é a capacidade de avaliar segmentos na Platform instantaneamente [na rede de borda](../edge/home.md), permitindo casos de uso de personalização de mesma página e próxima página.

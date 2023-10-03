@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Criar uma nova especificação de conexão usando a API do Serviço de fluxo
 description: O documento a seguir fornece etapas sobre como criar uma especificação de conexão usando a API de Serviço de Fluxo e integrar uma nova origem por meio de Origens de Autoatendimento.
 exl-id: 0b0278f5-c64d-4802-a6b4-37557f714a97
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: f47b7f725475fc7f7fac6dd406975b46f257e390
 workflow-type: tm+mt
 source-wordcount: '797'
 ht-degree: 1%
@@ -27,7 +27,7 @@ Para criar uma nova origem em lote usando Fontes de autoatendimento, primeiro vo
 
 Depois de fornecido, você deve estruturar seu repositório Git privado da seguinte maneira:
 
-* Fontes
+* Origens
    * {your_source}
       * Artefatos
          * {your_source}-category.txt
@@ -578,7 +578,9 @@ curl -X POST \
                   "type": "OFFSET",
                   "limitName": "count",
                   "limitValue": "100",
-                  "offSetName": "offset"
+                  "offSetName": "offset",
+                  "endConditionName": "$.hasMore",
+                  "endConditionValue": "Const:false"
               },
               "scheduleParams": {
                   "scheduleStartParamName": "since_last_changed",
@@ -767,7 +769,9 @@ Uma resposta bem-sucedida retorna a especificação de conexão recém-criada, i
                 "type": "OFFSET",
                 "limitName": "count",
                 "limitValue": "100",
-                "offSetName": "offset"
+                "offSetName": "offset",
+                "endConditionName": "$.hasMore",
+                "endConditionValue": "Const:false"
             },
             "scheduleParams": {
                 "scheduleStartParamName": "since_last_changed",

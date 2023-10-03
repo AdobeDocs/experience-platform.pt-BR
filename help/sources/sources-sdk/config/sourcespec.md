@@ -3,10 +3,10 @@ keywords: Experience Platform;página inicial;tópicos populares;fontes;conector
 title: Configurar especificações de origem para Origens de Autoatendimento (SDK em Lote)
 description: Este documento fornece uma visão geral das configurações que você precisa preparar para usar as Fontes de autoatendimento (SDK em lote).
 exl-id: f814c883-b529-4ecc-bedd-f638bf0014b5
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: 1fdce7c798d8aff49ab4953298ad7aa8dddb16bd
 workflow-type: tm+mt
-source-wordcount: '1846'
-ht-degree: 0%
+source-wordcount: '2078'
+ht-degree: 1%
 
 ---
 
@@ -381,7 +381,53 @@ Veja a seguir uma especificação de origem concluída usando [!DNL MailChimp Me
 
 A seguir estão exemplos de outros tipos de paginação compatíveis com Origens de Autoatendimento (SDK em lote):
 
-#### `CONTINUATION_TOKEN`
+>[!BEGINTABS]
+
+>[!TAB Deslocamento]
+
+Esse tipo de paginação permite analisar os resultados especificando um índice de onde iniciar o array resultante e um limite para quantos resultados são retornados. Por exemplo:
+
+```json
+"paginationParams": {
+        "type": "OFFSET",
+        "limitName": "limit",
+        "limitValue": "4",
+        "offSetName": "offset",
+        "endConditionName": "$.hasMore",
+        "endConditionValue": "Const:false"
+}
+```
+
+| Propriedade | Descrição |
+| --- | --- |
+| `type` | O tipo de paginação usado para retornar dados. |
+| `limitName` | O nome do limite pelo qual a API pode especificar o número de registros a serem buscados em uma página. |
+| `limitValue` | O número de registros a serem buscados em uma página. |
+| `offSetName` | O nome do atributo offset. Isso é necessário se o tipo de paginação estiver definido como `offset`. |
+| `endConditionName` | Um valor definido pelo usuário que indica a condição que encerrará o loop de paginação na próxima solicitação HTTP. Você deve fornecer o nome do atributo no qual deseja colocar a condição final. |
+| `endConditionValue` | O valor do atributo no qual você deseja colocar a condição final. |
+
+>[!TAB Ponteiro]
+
+Esse tipo de paginação permite usar um `pointer` para apontar para um item específico que precisa ser enviado com uma solicitação. A paginação de tipo de ponteiro requer um caminho na carga que aponte para a próxima página. Por exemplo:
+
+```json
+{
+ "type": "POINTER",
+ "limitName": "limit",
+ "limitValue": 1,
+ "pointerPath": "paging.next"
+}
+```
+
+| Propriedade | Descrição |
+| --- | --- |
+| `type` | O tipo de paginação usado para retornar dados. |
+| `limitName` | O nome do limite pelo qual a API pode especificar o número de registros a serem buscados em uma página. |
+| `limitValue` | O número de registros a serem buscados em uma página. |
+| `pointerPath` | O nome do atributo de ponteiro. Isso requer o caminho json para o atributo que apontará para a próxima página. |
+
+>[!TAB Token de continuação]
 
 Um tipo de token de continuação de paginação retorna um token de sequência de caracteres que significa a existência de mais itens que não puderam ser retornados, devido a um número máximo predeterminado de itens que podem ser retornados em uma única resposta.
 
@@ -432,7 +478,7 @@ Este é um exemplo de uma resposta retornada usando o tipo de token de continua�
 }
 ```
 
-#### `PAGE`
+>[!TAB Página]
 
 A variável `PAGE` O tipo de paginação permite percorrer os dados de retorno pelo número de páginas começando de zero. Ao usar `PAGE` digite pagination, você deve fornecer o número de registros fornecidos em uma única página.
 
@@ -461,7 +507,7 @@ A variável `PAGE` O tipo de paginação permite percorrer os dados de retorno p
 {style="table-layout:auto"}
 
 
-#### `NONE`
+>[!TAB None]
 
 A variável `NONE` o tipo de paginação pode ser usado para origens que não oferecem suporte a nenhum dos tipos de paginação disponíveis. Fontes que usam o tipo de paginação de `NONE` basta retornar todos os registros recuperáveis quando uma solicitação GET for feita.
 
@@ -470,6 +516,8 @@ A variável `NONE` o tipo de paginação pode ser usado para origens que não of
   "type": "NONE"
 }
 ```
+
+>[!ENDTABS]
 
 ### Programação avançada para Fontes de autoatendimento (SDK em lote)
 

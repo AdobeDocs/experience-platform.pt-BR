@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Apêndice do guia de API do Privacy Service
 description: Este documento contém informações adicionais para trabalhar com a API Privacy Service.
 exl-id: 7099e002-b802-486e-8863-0630d66e330f
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: b0b49badd46601571be59afba84fad874ca1b368
 workflow-type: tm+mt
 source-wordcount: '476'
 ht-degree: 5%
@@ -69,7 +69,7 @@ A tabela a seguir descreve os valores aceitos para especificar um produto Adobe 
 | Adobe Campaign | `campaign` |
 | Adobe Experience Platform (Data Lake) | `aepDataLake` |
 | Adobe Experience Platform (Perfil do cliente em tempo real) | `profileService` |
-| Autenticação Adobe Primetime | `primetimeAuthentication` |
+| Autenticação Adobe Pass | `primetimeAuthentication` |
 | Adobe Target | `target` |
 | Atributos do cliente (CRS) | `CRS` |
 | Identity Service | `identity` |

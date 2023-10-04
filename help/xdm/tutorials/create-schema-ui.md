@@ -5,9 +5,9 @@ title: Criar um esquema usando o Editor de esquemas
 type: Tutorial
 description: Este tutorial aborda as etapas para a criação de um esquema usando o Editor de esquemas na Experience Platform.
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
-source-git-commit: a3140d5216857ef41c885bbad8c69d91493b619d
+source-git-commit: 28d9a53371beea37b5c61b3bc4b111816f6e63e0
 workflow-type: tm+mt
-source-wordcount: '3959'
+source-wordcount: '4619'
 ht-degree: 0%
 
 ---
@@ -36,31 +36,30 @@ Este tutorial requer uma compreensão funcional dos vários aspectos do Adobe Ex
 
 A variável [!UICONTROL Esquemas] espaço de trabalho no [!DNL Platform] A interface do usuário fornece uma visualização do [!DNL Schema Library], permitindo exibir e gerenciar os esquemas disponíveis para sua organização. O espaço de trabalho também inclui o [!DNL Schema Editor], a tela na qual você pode compor um esquema neste tutorial.
 
-Depois de fazer logon no [!DNL Experience Platform], selecione **[!UICONTROL Esquemas]** na navegação à esquerda, para abrir a **[!UICONTROL Esquemas]** espaço de trabalho. A variável **[!UICONTROL Procurar]** exibe uma lista de schemas (uma representação da variável [!DNL Schema Library]), que pode ser visualizada e personalizada. A lista inclui o nome, o tipo, a classe e o comportamento (registro ou série temporal) em que o esquema se baseia, bem como a data e a hora em que o esquema foi modificado pela última vez.
+Depois de fazer logon no [!DNL Experience Platform], selecione **[!UICONTROL Esquemas]** na navegação à esquerda, para abrir a **[!UICONTROL Esquemas]** espaço de trabalho. A variável **[!UICONTROL Procurar]** exibe uma lista de schemas (uma representação da variável [!DNL Schema Library]) para que você visualize e personalize. A lista inclui o nome, o tipo, a classe e o comportamento (registro ou série temporal) em que o esquema se baseia, bem como a data e a hora em que o esquema foi modificado pela última vez.
 
 Consulte o guia sobre [exploração de recursos XDM existentes na interface do](../ui/explore.md) para obter mais informações.
 
 ## Criar e nomear um esquema {#create}
 
-Para começar a compor um esquema, selecione **[!UICONTROL Criar esquema]** no canto superior direito da **[!UICONTROL Esquemas]** espaço de trabalho. Um menu suspenso é exibido, oferecendo a opção de escolher entre as classes principais [!UICONTROL Perfil individual XDM] e [!UICONTROL XDM ExperienceEvent]. Se essas classes não se adequarem aos seus objetivos, você também poderá selecionar **[!UICONTROL Procurar]** para escolher entre outras classes disponíveis ou [criar uma nova classe](#create-new-class).
+Para começar a compor um esquema, selecione **[!UICONTROL Criar esquema]** no canto superior direito da **[!UICONTROL Esquemas]** espaço de trabalho.
 
-Para os fins deste tutorial, selecione **[!UICONTROL Perfil individual XDM]**.
+![A variável [!UICONTROL Esquemas] espaço de trabalho [!UICONTROL Procurar] guia com [!UICONTROL Criar esquema] destacado.](../images/tutorials/create-schema/create-schema-button.png)
 
-![](../images/tutorials/create-schema/create-schema-button.png)
+A variável [!UICONTROL Criar esquema] workflow aparece. Em seguida, escolha uma classe base para o esquema. Você pode escolher entre as classes principais de [!UICONTROL Perfil individual XDM] e [!UICONTROL XDM ExperienceEvent]ou [!UICONTROL Outro] se essas classes não se adequarem aos seus objetivos. A variável [!UICONTROL Outro] classes permite que você [criar uma nova classe](#create-new-class) ou escolha entre outras classes pré-existentes.
 
-A variável [!DNL Schema Editor] é exibida. Esta é a tela sobre a qual você irá compor seu esquema. Um esquema sem título é criado automaticamente na variável **[!UICONTROL Estrutura]** da tela quando você chegar no editor, junto com os campos padrão incluídos em todos os schemas com base nessa classe. A classe atribuída para o esquema também é listada em **[!UICONTROL Classe]** in **[!UICONTROL Composição]** seção.
+Consulte a [Perfil individual XDM](../classes/individual-profile.md) e [XDM ExperienceEvent](../classes/experienceevent.md) para obter mais informações sobre essas classes. Para os fins deste tutorial, selecione **[!UICONTROL Perfil individual XDM]** seguido por **[!UICONTROL Próxima]**.
 
-![](../images/tutorials/create-schema/schema-editor.png)
 
->[!NOTE]
->
->Você pode [alterar a classe de um schema](#change-class) em qualquer momento durante o processo de composição inicial, antes do esquema ter sido salvo, mas isso deve ser feito com muito cuidado. Os grupos de campos são compatíveis apenas com determinadas classes e, portanto, alterar a classe redefinirá a tela e quaisquer campos adicionados.
 
-Em **[!UICONTROL Propriedades do esquema]**, forneça um nome de exibição e uma descrição opcional para o esquema. Depois que um nome é inserido, a tela é atualizada para refletir o novo nome do esquema.
+<!--  -->
 
-![](../images/tutorials/create-schema/name-schema.png)
+<!-- You can  by selecting either **[!UICONTROL Individual Profile]**, **[!UICONTROL Experience Event]**, or **[!UICONTROL Other]**, followed by **[!UICONTROL Next]** to confirm your choice.  -->
 
-Há várias considerações importantes a serem feitas ao decidir sobre um nome para o esquema:
+
+![A variável [!UICONTROL Criar esquema] fluxo de trabalho com o [!UICONTROL Perfil individual XDM] opções e [!UICONTROL Próxima] destacado.](../images/tutorials/create-schema/individual-profile-base-class.png)
+
+Depois de selecionar uma classe, a variável [!UICONTROL Nome e revisão] é exibida. Nesta seção, você fornece um nome e uma descrição para identificar o esquema. Há várias considerações importantes a serem feitas ao decidir sobre um nome para o esquema:
 
 * Os nomes do esquema devem ser curtos e descritivos para que o esquema possa ser facilmente encontrado posteriormente.
 * Os nomes do esquema devem ser exclusivos, o que significa que também devem ser específicos o suficiente para não serem reutilizados no futuro. Por exemplo, se sua organização tivesse programas de fidelidade separados para marcas diferentes, seria interessante nomear seu esquema como &quot;Membros da fidelidade da marca A&quot; para facilitar a distinção de outros esquemas relacionados à fidelidade que você poderia definir posteriormente.
@@ -68,37 +67,55 @@ Há várias considerações importantes a serem feitas ao decidir sobre um nome 
 
 Este tutorial compõe um esquema para assimilar dados relacionados aos membros de um programa de fidelidade e, portanto, o esquema é nomeado como &quot;[!DNL Loyalty Members]&quot;.
 
+&#x200B;A estrutura base do esquema (fornecida pela classe) é mostrada na tela para que você revise e verifique a classe selecionada e a estrutura do esquema.
+
+Entre em um [!UICONTROL Nome de exibição do esquema] no campo de texto. Em seguida, insira uma descrição adequada para ajudar a identificar seu esquema. Quando tiver revisado a estrutura do esquema e estiver satisfeito com as configurações, selecione **[!UICONTROL Concluir]** para criar seu esquema.
+
+![A variável [!UICONTROL Nome e revisão] seção do [!UICONTROL Criar esquema] fluxo de trabalho com o [!UICONTROL Nome de exibição do esquema], [!UICONTROL Descrição], e [!UICONTROL Concluir] destacado.](../images/ui/resources/schemas/name-and-review.png)
+
+A variável [!DNL Schema Editor] é exibida. Esta é a tela sobre a qual você irá compor seu esquema. O esquema autointitulado é criado automaticamente na variável **[!UICONTROL Estrutura]** seção da tela quando você chega ao editor, juntamente com os campos padrão incluídos na classe base que você selecionou. A classe atribuída para o esquema também é listada em **[!UICONTROL Classe]** in **[!UICONTROL Composição]** seção.
+
+>[!NOTE]
+>
+>Você pode atualizar o nome de exibição e a descrição opcional do esquema na  **[!UICONTROL Propriedades do esquema]** barra lateral. Depois que um novo nome é inserido, a tela é atualizada automaticamente para refletir o novo nome do esquema.
+
+![O Editor de esquemas com a classe base e o diagrama de esquema realçado.](../images/tutorials/create-schema/loyalty-members-schema-editor.png)
+
+>[!NOTE]
+>
+>Você pode [alterar a classe de um schema](#change-class) em qualquer momento durante o processo de composição inicial, antes do esquema ter sido salvo, mas isso deve ser feito com muito cuidado. Os grupos de campos são compatíveis apenas com determinadas classes e, portanto, alterar a classe redefinirá a tela e quaisquer campos adicionados.
+
 ## Adicionar um grupo de campos {#field-group}
 
 Agora é possível começar a adicionar campos ao esquema adicionando grupos de campos. Um grupo de campos é um grupo de um ou mais campos que geralmente são usados juntos para descrever um conceito específico. Este tutorial usa grupos de campos para descrever os membros do programa de fidelidade e capturar informações importantes, como nome, aniversário, número de telefone, endereço e muito mais.
 
 Para adicionar um grupo de campos, selecione **[!UICONTROL Adicionar]** no **[!UICONTROL Grupos de campos]** subseção.
 
-![](../images/tutorials/create-schema/add-field-group-button.png)
+![O Editor de esquemas com o botão Adicionar grupos de campos realçado.](../images/tutorials/create-schema/add-field-group-button.png)
 
 Uma nova caixa de diálogo é exibida, exibindo uma lista de grupos de campos disponíveis. Cada grupo de campos deve ser usado apenas com uma classe específica, portanto, a caixa de diálogo lista apenas grupos de campos compatíveis com a classe selecionada (nesse caso, o [!DNL XDM Individual Profile] classe). Se você estiver usando uma classe XDM padrão, a lista de grupos de campos será classificada de forma inteligente com base na popularidade do uso.
 
-![](../images/tutorials/create-schema/field-group-popularity.png)
+![A variável [!UICONTROL Adicionar grupos de campos] diálogo.](../images/tutorials/create-schema/field-group-popularity.png)
 
 É possível selecionar um dos filtros no painel à esquerda para restringir a lista de grupos de campos padrão a campos específicos [indústrias](../schema/industries/overview.md) como varejo, serviços financeiros e assistência médica.
 
-![](../images/tutorials/create-schema/industry-field-groups.png)
+![A variável [!UICONTROL Adicionar grupos de campos] diálogo com os grupos de campo do setor destacados.](../images/tutorials/create-schema/industry-field-groups.png)
 
 Selecionar um grupo de campos na lista faz com que ele apareça no painel direito. Você pode selecionar vários grupos de campos, se desejar, adicionando cada um à lista no painel direito antes de confirmar. Além disso, um ícone é exibido no lado direito do grupo de campos selecionado no momento, o que permite visualizar a estrutura dos campos fornecidos.
 
-![](../images/tutorials/create-schema/preview-field-group-button.png)
+![A variável [!UICONTROL Adicionar grupos de campos] caixa de diálogo com o ícone de visualização do grupo de campos selecionado realçado.](../images/tutorials/create-schema/preview-field-group-button.png)
 
 Ao visualizar um grupo de campos, uma descrição detalhada do esquema do grupo de campos é fornecida no painel direito. Você também pode navegar pelos campos do grupo de campos na tela fornecida. À medida que você seleciona campos diferentes, o painel direito é atualizado para mostrar detalhes sobre o campo em questão. Selecionar **[!UICONTROL Voltar]** quando tiver terminado de visualizar, retorne à caixa de diálogo de seleção do grupo de campos.
 
-![](../images/tutorials/create-schema/preview-field-group.png)
+![A variável [!UICONTROL Visualizar grupo de campos] com o grupo de campos Detalhes demográficos visualizado.](../images/tutorials/create-schema/preview-field-group.png)
 
 Para este tutorial, selecione a variável **[!UICONTROL Detalhes demográficos]** grupo de campos, selecione **[!UICONTROL Adicionar grupo de campos]**.
 
-![](../images/tutorials/create-schema/demographic-details.png)
+![A variável [!UICONTROL Adicionar grupos de campos] com o grupo de campos Detalhes demográficos selecionado e [!UICONTROL Adicionar grupos de campos] destacado.](../images/tutorials/create-schema/demographic-details.png)
 
 A tela do esquema será exibida novamente. A variável **[!UICONTROL Grupos de campos]** A seção agora lista &quot;[!UICONTROL Detalhes demográficos]&quot; e o **[!UICONTROL Estrutura]** inclui os campos contribuídos pelo grupo de campos. Você pode selecionar o nome do grupo de campos na **[!UICONTROL Grupos de campos]** para realçar os campos específicos fornecidos na tela.
 
-![](../images/tutorials/create-schema/demographic-details-structure.png)
+![O Editor de esquemas com os grupos de campos Detalhes demográficos destacados.](../images/tutorials/create-schema/demographic-details-structure.png)
 
 Este grupo de campos contribui com vários campos sob o nome do nível superior `person` com o tipo de dados &quot;[!UICONTROL Person]&quot;. Esse grupo de campos descreve informações sobre um indivíduo, incluindo nome, data de nascimento e sexo.
 
@@ -116,11 +133,11 @@ Agora é possível repetir as mesmas etapas para adicionar outro grupo de campos
 
 Para este tutorial, selecione os grupos de campos padrão **[!UICONTROL Detalhes de contato pessoal]** e **[!UICONTROL Detalhes de fidelidade]** na lista e selecione **[!UICONTROL Adicionar grupos de campos]** para adicioná-los ao esquema.
 
-![](../images/tutorials/create-schema/more-field-groups.png)
+![A variável [!UICONTROL Adicionar grupos de campos] caixa de diálogo com dois novos grupos de campos selecionados e [!UICONTROL Adicionar grupos de campos] destacado.](../images/tutorials/create-schema/more-field-groups.png)
 
 A tela será exibida novamente com os grupos de campos adicionados listados em **[!UICONTROL Grupos de campos]** no **[!UICONTROL Composição]** e seus campos compostos adicionados à estrutura do schema.
 
-![](../images/tutorials/create-schema/updated-structure.png)
+![O Editor de esquemas com a nova estrutura de esquema composto realçada.](../images/tutorials/create-schema/updated-structure.png)
 
 ## Definir um grupo de campos personalizado {#define-field-group}
 
@@ -133,7 +150,7 @@ No entanto, pode haver um cenário em que você deseje incluir campos personaliz
 
 Para criar um novo grupo de campos, selecione **[!UICONTROL Adicionar]** no **[!UICONTROL Grupos de campos]** subseção como antes, mas dessa vez selecione **[!UICONTROL Criar novo grupo de campos]** próximo à parte superior da caixa de diálogo exibida. Em seguida, você será solicitado a fornecer um nome de exibição e uma descrição para o novo grupo de campos. Para este tutorial, nomeie o novo grupo de campos &quot;[!DNL Custom Loyalty Details]&quot; e selecione **[!UICONTROL Adicionar grupos de campos]**.
 
-![](../images/tutorials/create-schema/create-new-field-group.png)
+![A variável [!UICONTROL Adicionar grupos de campos] diálogo com [!UICONTROL Criar novo grupo de campos], [!UICONTROL Nome de exibição] e [!UICONTROL Descrição] destacado.](../images/tutorials/create-schema/create-new-field-group.png)
 
 >[!NOTE]
 >
@@ -147,11 +164,11 @@ Agora que você criou o &quot;[!DNL Custom Loyalty Details]&quot;grupo de campos
 
 Para começar, selecione o **mais (+)** ícone ao lado do nome do schema na tela.
 
-![](../images/tutorials/create-schema/add-field.png)
+![O Editor de esquemas com o ícone de adição realçado.](../images/tutorials/create-schema/add-field.png)
 
 Um &quot;[!UICONTROL Campo sem título]O espaço reservado &quot; é exibido na tela e o painel direito é atualizado para revelar as opções de configuração do campo.
 
-![](../images/tutorials/create-schema/untitled-field.png)
+![O Editor de esquemas com um [!UICONTROL Campo sem título] e o schema [!UICONTROL Propriedades do campo] destacado.](../images/tutorials/create-schema/untitled-field.png)
 
 Nesse cenário, o esquema precisa ter um campo do tipo objeto que descreva detalhadamente o nível de fidelidade atual da pessoa. Usando os controles no painel direito, comece criando uma `loyaltyTier` campo com tipo &quot;[!UICONTROL Objeto]&quot; que serão usados para manter seus campos relacionados.
 
@@ -159,11 +176,11 @@ Em **[!UICONTROL Atribuir a]**, você deve selecionar um grupo de campos ao qual
 
 Quando terminar, selecione **[!UICONTROL Aplicar]**.
 
-![](../images/tutorials/create-schema/loyalty-tier-object.png)
+![O Editor de esquemas com o objeto Camada de fidelidade adicionado ao esquema [!UICONTROL Propriedades do campo] destacado.](../images/tutorials/create-schema/loyalty-tier-object.png)
 
 As alterações são aplicadas e o recém-criado `loyaltyTier` é exibido. Como esse é um campo personalizado, ele é aninhado automaticamente em um objeto com nome vinculado à ID de locatário da sua organização, precedido por um sublinhado (`_tenantId` neste exemplo).
 
-![](../images/tutorials/create-schema/tenant-id.png)
+![O Editor de esquemas com a ID do locatário e a Camada de fidelidade realçadas no diagrama do esquema.](../images/tutorials/create-schema/tenant-id.png)
 
 >[!NOTE]
 >
@@ -173,7 +190,7 @@ As alterações são aplicadas e o recém-criado `loyaltyTier` é exibido. Como 
 
 Selecione o **mais (+)** ícone ao lado do `loyaltyTier` objeto para começar a adicionar subcampos. Um novo espaço reservado de campo é exibido e a variável **[!UICONTROL Propriedades do campo]** A seção está visível no lado direito da tela.
 
-![](../images/tutorials/create-schema/new-field-in-loyalty-tier-object.png)
+![O Editor de esquemas com a ID do locatário e o novo subcampo foram adicionados à Camada de fidelidade no diagrama de esquema.](../images/tutorials/create-schema/new-field-in-loyalty-tier-object.png)
 
 Cada campo requer as seguintes informações:
 
@@ -186,11 +203,11 @@ Cada campo requer as seguintes informações:
 
 O primeiro campo para a variável `loyaltyTier` o objeto será uma cadeia de caracteres chamada `id`, representando a ID da camada atual do membro de fidelidade. A ID da camada será exclusiva para cada membro do programa de fidelidade, já que essa empresa define diferentes limites de ponto da camada de fidelidade para cada cliente com base em diferentes fatores. Defina o tipo do novo campo como &quot;[!UICONTROL String]&quot;, e a variável **[!UICONTROL Propriedades do campo]** fica preenchida com várias opções para aplicar restrições, incluindo valor padrão, formato e comprimento máximo.
 
-![](../images/tutorials/create-schema/string-constraints.png)
+![O Editor de esquemas com os valores de propriedade do campo para o novo campo de ID realçado.](../images/tutorials/create-schema/string-constraints.png)
 
 Desde `id` será uma cadeia de caracteres de forma livre gerada aleatoriamente, nenhuma outra restrição é necessária. Selecionar **[!UICONTROL Aplicar]** para aplicar as alterações.
 
-![](../images/tutorials/create-schema/id-field-added.png)
+![O Editor de esquemas com o campo de ID adicionado e realçado.](../images/tutorials/create-schema/id-field-added.png)
 
 ## Adicionar mais campos ao grupo de campos {#field-group-fields-2}
 
@@ -204,7 +221,7 @@ Para adicionar cada campo ao esquema, selecione a variável **mais (+)** ícone 
 
 Quando concluído, o `loyaltyTier` o objeto conterá campos para `id`, `currentThreshold`, `nextThreshold`, e `effectiveDate`.
 
-![](../images/tutorials/create-schema/loyalty-tier-object-fields.png)
+![O Editor de esquemas com o objeto Camada de fidelidade realçado.](../images/tutorials/create-schema/loyalty-tier-object-fields.png)
 
 ## Adicionar um campo de enumeração ao grupo de campos {#enum}
 
@@ -226,7 +243,7 @@ Ao definir campos na variável [!DNL Schema Editor], há algumas opções adicio
 
 Para este tutorial, a variável `loyaltyTier` o objeto no esquema requer um novo campo enum que descreve a classe de camada, onde o valor pode ser apenas uma das quatro opções possíveis. Para adicionar esse campo ao esquema, selecione a variável **mais (+)** ícone ao lado de `loyaltyTier` e preencha os campos obrigatórios para **[!UICONTROL Nome do campo]** e **[!UICONTROL Nome de exibição]**. Para **[!UICONTROL Tipo]**, selecione &quot;[!UICONTROL String]&quot;.
 
-![](../images/tutorials/create-schema/tier-class-type.png)
+![O Editor de esquemas com o objeto de Classe de camada adicionado e realçado no [!UICONTROL Propriedades do campo].](../images/tutorials/create-schema/tier-class-type.png)
 
 Caixas de seleção adicionais são exibidas para o campo após a seleção do tipo, incluindo caixas de seleção para **[!UICONTROL Matriz]**, **[!UICONTROL Enumeração e valores sugeridos]**, **[!UICONTROL Identidade]**, e **[!UICONTROL Relacionamento]**.
 
@@ -234,7 +251,7 @@ Selecione o **[!UICONTROL Enumeração e valores sugeridos]** e selecione **[!UI
 
 Quando tiver concluído todas as propriedades do campo, selecione **[!UICONTROL Aplicar]** para adicionar o `tierClass` para o campo `loyaltyTier` objeto.
 
-![](../images/tutorials/create-schema/tier-class-enum.png)
+![As propriedades dos campos enum e suggested values foram concluídas com [!UICONTROL Aplicar] destacado.](../images/tutorials/create-schema/tier-class-enum.png)
 
 ## Converter um objeto de vários campos em um tipo de dados {#datatype}
 
@@ -244,11 +261,11 @@ Os tipos de dados permitem o uso consistente de estruturas de vários campos e f
 
 Para converter a variável `loyaltyTier` a um tipo de dados, selecione o `loyaltyTier` na tela e selecione **[!UICONTROL Converter em novo tipo de dados]** no lado direito do editor, em **[!UICONTROL Propriedades do campo]**.
 
-![](../images/tutorials/create-schema/convert-data-type.png)
+![O Editor de esquemas com o objeto fidelistier e [!UICONTROL Converter em novo tipo de dados] destacado.](../images/tutorials/create-schema/convert-data-type.png)
 
 Uma notificação é exibida, confirmando que o objeto foi convertido com êxito. Na tela, agora é possível ver que a variável `loyaltyTier` O campo agora tem um ícone de link e o painel direito indica que ele tem um tipo de dados &quot;[!DNL Loyalty Tier]&quot;.
 
-![](../images/tutorials/create-schema/loyalty-tier-data-type.png)
+![O Editor de esquemas com o objeto fidelytier e o novo nome de exibição destacados.](../images/tutorials/create-schema/loyalty-tier-data-type.png)
 
 Em um esquema futuro, agora é possível atribuir um campo como &quot;[!DNL Loyalty Tier]&quot; e incluiria automaticamente campos para ID, classe de camada, limites de ponto e data de efetivação.
 
@@ -260,11 +277,11 @@ Em um esquema futuro, agora é possível atribuir um campo como &quot;[!DNL Loya
 
 Seu esquema agora contém vários grupos de campos além dos campos fornecidos por sua classe base. Ao trabalhar com esquemas maiores, você pode marcar as caixas de seleção ao lado dos nomes dos grupos de campos no painel esquerdo para filtrar os campos exibidos somente para aqueles fornecidos pelos grupos de campos em que você está interessado.
 
-![](../images/tutorials/create-schema/filter-by-field-group.png)
+![Algumas caixas de seleção marcadas na seção Grupos de campos do Editor de esquemas para reduzir o tamanho do diagrama de esquema.](../images/tutorials/create-schema/filter-by-field-group.png)
 
 Se estiver procurando um campo específico no esquema, também poderá usar a barra de pesquisa para filtrar os campos exibidos por nome, independentemente do grupo de campos em que são fornecidos.
 
-![](../images/tutorials/create-schema/search.png)
+![O campo de pesquisa do Editor de esquemas com os resultados relevantes destacados na tela.](../images/tutorials/create-schema/search.png)
 
 >[!IMPORTANT]
 >
@@ -292,7 +309,7 @@ Selecione o `personalEmail.address` na tela, e o campo **[!UICONTROL Identidade]
 
 Em seguida, você deve fornecer um **[!UICONTROL Namespace de identidade]** na lista de namespaces predefinidos na lista suspensa. Como esse campo é o endereço de email do cliente, selecione &quot;[!UICONTROL E-mail]&quot; na lista suspensa. Selecionar **[!UICONTROL Aplicar]** para confirmar as atualizações do `personalEmail.address` campo.
 
-![](../images/tutorials/create-schema/primary-identity.png)
+![O Editor de esquemas com o endereço de email realçado e a caixa de seleção Identidade primária ativada.](../images/tutorials/create-schema/primary-identity.png)
 
 >[!NOTE]
 >
@@ -300,7 +317,7 @@ Em seguida, você deve fornecer um **[!UICONTROL Namespace de identidade]** na l
 
 Depois de aplicar a alteração, o ícone para `personalEmail.address` mostra um símbolo de impressão digital, indicando que agora ele é um campo de identidade. O campo também está listado no painel à esquerda em **[!UICONTROL Identidades]**.
 
-![](../images/tutorials/create-schema/identity-applied.png)
+![O Editor de esquemas com o endereço de email realçado e o campo de identidade realçado na barra lateral de composição de esquemas.](../images/tutorials/create-schema/identity-applied.png)
 
 Agora todos os dados assimilados na `personalEmail.address` O campo será usado para ajudar a identificar essa pessoa e unir uma única visualização desse cliente. Para saber mais sobre como trabalhar com identidades no [!DNL Experience Platform], revise o [[!DNL Identity Service]](../../identity-service/home.md) documentação.
 
@@ -310,23 +327,31 @@ Agora todos os dados assimilados na `personalEmail.address` O campo será usado 
 
 Para que um esquema seja ativado para uso com [!DNL Real-Time Customer Profile], ela deve ter uma identidade principal definida. Você receberá uma mensagem de erro se tentar ativar um esquema sem definir primeiro uma identidade primária.
 
-![](../images/tutorials/create-schema/missing-primary-identity.png)
+![A caixa de diálogo Missing primary identity.](../images/tutorials/create-schema/missing-primary-identity.png)
 
 Para ativar o esquema &quot;Membros de fidelidade&quot; para uso no [!DNL Profile], comece selecionando o título do schema na tela.
 
 No lado direito do editor, são mostradas informações sobre o esquema, incluindo o nome para exibição, a descrição e o tipo. Para além destas informações, existe uma **[!UICONTROL Perfil]** botão de alternância.
 
-![](../images/tutorials/create-schema/profile-toggle.png)
+![O Editor de esquemas com a raiz do esquema e a opção de alternância Ativar para perfil estão realçados.](../images/tutorials/create-schema/profile-toggle.png)
 
 Selecionar **[!UICONTROL Perfil]** e um popover é exibido, pedindo que você confirme que deseja ativar o esquema para [!DNL Profile].
 
-![](../images/tutorials/create-schema/enable-profile.png)
+![A caixa de diálogo de confirmação Ativar para perfil.](../images/tutorials/create-schema/enable-profile.png)
 
 >[!WARNING]
 >
 >Depois que um esquema é ativado para [!DNL Real-Time Customer Profile] e salvo, não poderá ser desativado.
 
 Selecionar **[!UICONTROL Ativar]** para confirmar sua escolha. É possível selecionar a variável **[!UICONTROL Perfil]** alterne novamente para desativar o esquema, se desejar, mas depois que o esquema tiver sido salvo enquanto [!DNL Profile] estiver ativado, não poderá mais ser desativado.
+
+## Mais ações
+
+No Editor de esquemas, você também pode realizar ações rápidas para copiar a estrutura JSON do esquema ou excluir o esquema se ele não tiver sido ativado para o Perfil do cliente em tempo real ou tiver conjuntos de dados associados. Selecionar [!UICONTROL Mais] na parte superior da exibição para exibir uma lista suspensa com ações rápidas.
+
+A funcionalidade Copiar estrutura JSON permite ver como seria uma carga de amostra enquanto você ainda está criando o esquema e seus pipelines de dados. É especialmente útil para situações em que há estruturas complexas de mapa de objetos no esquema, como um mapa de identidade.
+
+![O Editor de esquemas com o botão Mais realçado e as opções suspensas exibidas.](../images/tutorials/create-schema/more-actions.png)
 
 ## Próximas etapas e recursos adicionais
 

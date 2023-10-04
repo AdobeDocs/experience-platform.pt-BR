@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Gerenciar processos de privacidade na interface do Privacy Service
 description: Saiba como usar a interface do usuário do Privacy Service para coordenar e monitorar solicitações de privacidade em vários aplicativos Experience Cloud.
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
-source-git-commit: e5a1b57bc81b27d0e61c3c1ecc10156c10dd3f6e
+source-git-commit: a19f37d40b52ce41975bfc303339d2b85e12080e
 workflow-type: tm+mt
-source-wordcount: '1473'
+source-wordcount: '1475'
 ht-degree: 14%
 
 ---
@@ -38,17 +38,18 @@ O painel para a [!DNL Privacy Service] A interface do usuário fornece dois widg
 
 | Rótulo da interface | Regulação |
 | --- | --- |
+| [!UICONTROL APA_AUS] | As seleções de menu [!DNL Australia Privacy Act (Privacy Act)] |
 | [!UICONTROL CPA] | As seleções de menu [!DNL Colorado Privacy Act] |
 | [!UICONTROL CCPA] | As seleções de menu [!DNL California Consumer Privacy Act] |
+| [!UICONTROL CPRA_EUA] | As seleções de menu [!DNL California Consumer Privacy Rights Act (CPRA)] |
 | [!UICONTROL CTDPA] | As seleções de menu [!DNL Connecticut Data Privacy Act] |
 | [!UICONTROL GDPR] | A política da União Europeia [!DNL General Data Protection Regulation] |
-| [!UICONTROL PDPA_THA] | da Tailândia [!DNL Personal Data Protection Act] |
+| [!UICONTROL HIPAA_AUS] | As seleções de menu [!DNL Health Insurance Portability and Accountability Act] |
 | [!UICONTROL LGPD_BRA] | O do Brasil [!DNL Lei Geral de Proteção de Dados] |
 | [!UICONTROL NZPA_NZL] | Nova Zelândia [!DNL Privacy Act] |
+| [!UICONTROL PDPA_THA] | da Tailândia [!DNL Personal Data Protection Act] |
+| [!UICONTROL UCPA] | As seleções de menu [!DNL Utah Consumer Privacy Act] |
 | [!UICONTROL VCDPA_USA] | As seleções de menu [!DNL Virginia Consumer Data Protection Act] |
-| [!UICONTROL CPRA_EUA] | As seleções de menu [!DNL California Consumer Privacy Rights Act (CPRA)] |
-| [!UICONTROL APA_AUS] | As seleções de menu [!DNL Australia Privacy Act (Privacy Act)] |
-| [!UICONTROL HIPAA_AUS] | As seleções de menu [!DNL Health Insurance Portability and Accountability Act] |
 
 {style="table-layout:auto"}
 

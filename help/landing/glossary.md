@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Glossário do Adobe Experience Platform
 description: Um glossário de termos importantes na Experience Platform.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: 6327f5e6cb64a46c502613dd6074d84ed1fdd32b
+source-git-commit: a19f37d40b52ce41975bfc303339d2b85e12080e
 workflow-type: tm+mt
-source-wordcount: '7929'
+source-wordcount: '7979'
 ht-degree: 0%
 
 ---
@@ -159,7 +159,7 @@ ht-degree: 0%
 
 **Camada de dados**: no contexto de tags, uma camada de dados é uma estrutura de dados que existe no dispositivo cliente e que contém metadados sobre o contexto em que uma página ou tela é exibida.
 
-**Governança de dados**: a governança de dados engloba as estratégias e tecnologias usadas para garantir que os dados estejam em conformidade com as regulamentações e as políticas organizacionais em relação ao uso de dados.
+**Governança de dados**: a governança de dados engloba as estratégias e tecnologias usadas para garantir que os dados estejam em conformidade com as regulamentações e as políticas organizacionais com relação ao uso de dados.
 
 **Parceiros de integração de dados**: os parceiros de integração de dados simplificam e automatizam o carregamento e a transformação de grandes volumes de dados de mais de 200 fontes para o Experience Platform sem gravar código.
 
@@ -538,6 +538,8 @@ ht-degree: 0%
 **Token**: um token é um tipo de segurança de autenticação de dois fatores que pode ser usada para autorizar o uso de serviços de computador com o [!DNL Query Service].
 
 ## U
+
+**UCPA**: A variável [[!DNL Utah Consumer Privacy Act]](https://le.utah.gov/~2022/bills/static/SB0227.html) O cria o direito do consumidor de saber quais dados pessoais uma empresa coleta, como a empresa usa seus dados pessoais e se a empresa vende seus dados pessoais. Os consumidores podem exigir que a empresa exclua ou pare de vender seus dados pessoais.
 
 **Esquema de união**: um esquema de união é uma consolidação de esquemas que compartilham a mesma classe e foram habilitados para [!DNL Real-Time Customer Profile]. Vários esquemas de união podem existir para uma organização, mas só pode haver um esquema de união por classe.
 

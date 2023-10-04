@@ -2,18 +2,18 @@
 keywords: Experience Platform;página inicial;tópicos populares;GDPR;gdpr;CCPA;ccpa;PDPA;pdpa;LGPD;lgpd;visão geral;Visão geral;regulamento;regulamento;regulamentos;Regulamentos;privacidade;Privacidade;
 solution: Experience Platform
 title: Terminologia dos regulamentos de privacidade
-description: Este documento fornece definições de termos principais relacionados às regulamentações de privacidade compatíveis com o Adobe Experience Cloud.
+description: Este documento fornece definições para termos-chave relacionados a regulamentos de privacidade compatíveis com o Adobe Experience Cloud.
 exl-id: 9c0a7d26-0571-41d4-8cf5-6356025d51ef
-source-git-commit: 96434c83b3d8757872439b58b5c450955c0ed652
+source-git-commit: a19f37d40b52ce41975bfc303339d2b85e12080e
 workflow-type: tm+mt
-source-wordcount: '1752'
+source-wordcount: '1796'
 ht-degree: 2%
 
 ---
 
 # Terminologia de regulamentos de privacidade
 
-Este documento fornece definições de termos principais relacionados às regulamentações de privacidade compatíveis com o Adobe Experience Cloud.
+Este documento fornece definições para termos-chave relacionados a regulamentos de privacidade compatíveis com o Adobe Experience Cloud.
 
 ## A
 
@@ -151,6 +151,8 @@ Este documento fornece definições de termos principais relacionados às regula
 chegar mais rapidamente a acordo sobre a adoção de um texto de compromisso.
 
 ## U
+
+**UCPA**: A variável [!DNL Utah Consumer Privacy Act] O cria o direito do consumidor de saber quais dados pessoais uma empresa coleta, como a empresa usa seus dados pessoais e se a empresa vende seus dados pessoais. Os consumidores podem exigir que a empresa exclua ou pare de vender seus dados pessoais.
 
 **Consentimento inequívoco**: O consentimento inequívoco também é conhecido como consentimento implícito. Consentimento inequívoco refere-se ao consentimento que não foi explicitamente dado pelo titular dos dados, mas, no entanto, é de natureza inequívoca. Por exemplo, durante o processo de inscrição em um site de empresa, é dado um aviso de que, ao fornecer um endereço de email, o titular dos dados consente em receber emails sobre ofertas especiais. Se o titular dos dados ler o aviso, a ação afirmativa de inserir seu email é suficiente para ser considerada consentimento inequívoco.
 

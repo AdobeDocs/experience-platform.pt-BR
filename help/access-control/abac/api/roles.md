@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Endpoint da API de Funções
 description: O ponto de extremidade /roles na API de controle de acesso baseado em atributos permite gerenciar programaticamente funções no Adobe Experience Platform.
 exl-id: 049f7a18-7d06-437b-8ce9-25d7090ba782
-source-git-commit: 16d85a2a4ee8967fc701a3fe631c9daaba9c9d70
+source-git-commit: 4b48fa5e9a1e9933cd33bf45b73ff6b0d831f06f
 workflow-type: tm+mt
-source-wordcount: '1606'
+source-wordcount: '1666'
 ht-degree: 6%
 
 ---
@@ -179,7 +179,7 @@ Uma resposta bem-sucedida retorna detalhes da ID de função consultada, incluin
 
 ## Pesquisar assuntos por ID de função
 
-Também é possível recuperar assuntos fazendo uma solicitação GET para a `/roles` ao fornecer uma {ROLE_ID}.
+Também é possível recuperar assuntos fazendo uma solicitação GET para a `/roles` ao fornecer um {ROLE_ID}.
 
 **Formato da API**
 
@@ -498,20 +498,18 @@ PATCH /roles/{ROLE_ID}
 A solicitação a seguir atualiza os assuntos associados a `{ROLE_ID}`.
 
 ```shell
-curl -X PATCH \
-  https://platform.adobe.io/data/foundation/access-control/administration/roles/{ROLE_ID} \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
-  -d'{
-    "operations": [
-      {
+curl --location --request PATCH 'https://platform.adobe.io/data/foundation/access-control/administration/roles/<ROLE_ID>/subjects' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'Content-Type: application/json' \
+--data-raw '[
+    {
         "op": "add",
-        "path": "/subjects",
-        "value": "New subjects"
-      }
-    ]
-  }'
+        "path": "/user",
+        "value": "{USER ID}"
+    }
+]' 
 ```
 
 | Operações | Descrição |
@@ -522,37 +520,7 @@ curl -X PATCH \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna os assuntos atualizados associados à ID de função consultada.
-
-```json
-{
-  "subjects": [
-    {
-      "subjectId": "string",
-      "subjectType": "user"
-    }
-  ],
-  "_page": {
-    "limit": 0,
-    "count": 0
-  },
-  "_links": {
-    "next": {
-      "href": "string",
-      "templated": true
-    },
-    "page": {
-      "href": "string",
-      "templated": true
-    }
-  }
-}
-```
-
-| Propriedade | Descrição |
-| --- | --- |
-| `subjectId` | A ID de um assunto. |
-| `subjectType` | O tipo de assunto. |
+Uma resposta bem-sucedida retorna o status HTTP 204 (Sem conteúdo) e um corpo em branco.
 
 ## Excluir uma função {#delete}
 
@@ -585,3 +553,34 @@ curl -X DELETE \
 Uma resposta bem-sucedida retorna o status HTTP 204 (Sem conteúdo) e um corpo em branco.
 
 Você pode confirmar a exclusão tentando uma solicitação de pesquisa (GET) para a função. Você receberá um status HTTP 404 (Não encontrado) porque a função foi removida da administração.
+
+## Adicionar uma credencial de API {#apicredential}
+
+Para adicionar uma credencial de API, faça uma solicitação PATCH para `/roles` ao fornecer a ID de função dos sujeitos.
+
+**Formato da API**
+
+```shell
+curl --location --request PATCH 'https://platform.adobe.io/data/foundation/access-control/administration/roles/<ROLE_ID>/subjects' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'Content-Type: application/json' \
+--data-raw '[
+    {
+        "op": "add",
+        "path": "/api-integration",
+        "value": "{TECHNICAL ACCOUNT ID}"
+    }
+]'   
+```
+
+| Operações | Descrição |
+| --- | --- |
+| `op` | A chamada de operação usada para definir a ação necessária para atualizar a função. As operações incluem: `add`, `replace`, e `remove`. |
+| `path` | O caminho do parâmetro a ser adicionado. |
+| `value` | O valor com o qual você deseja adicionar o parâmetro. |
+
+**Resposta**
+
+Uma resposta bem-sucedida retorna o status HTTP 204 (Sem conteúdo) e um corpo em branco.

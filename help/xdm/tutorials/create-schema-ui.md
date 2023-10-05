@@ -5,7 +5,7 @@ title: Criar um esquema usando o Editor de esquemas
 type: Tutorial
 description: Este tutorial aborda as etapas para a criação de um esquema usando o Editor de esquemas na Experience Platform.
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
-source-git-commit: 28d9a53371beea37b5c61b3bc4b111816f6e63e0
+source-git-commit: bf3099afadd6c8807060a6796cb6f37471478b44
 workflow-type: tm+mt
 source-wordcount: '4619'
 ht-degree: 0%
@@ -345,7 +345,7 @@ Selecionar **[!UICONTROL Perfil]** e um popover é exibido, pedindo que você co
 
 Selecionar **[!UICONTROL Ativar]** para confirmar sua escolha. É possível selecionar a variável **[!UICONTROL Perfil]** alterne novamente para desativar o esquema, se desejar, mas depois que o esquema tiver sido salvo enquanto [!DNL Profile] estiver ativado, não poderá mais ser desativado.
 
-## Mais ações
+## Mais ações {#more}
 
 No Editor de esquemas, você também pode realizar ações rápidas para copiar a estrutura JSON do esquema ou excluir o esquema se ele não tiver sido ativado para o Perfil do cliente em tempo real ou tiver conjuntos de dados associados. Selecionar [!UICONTROL Mais] na parte superior da exibição para exibir uma lista suspensa com ações rápidas.
 

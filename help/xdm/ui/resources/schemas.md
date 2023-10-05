@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Criar e editar esquemas na interface
 description: Saiba mais sobre as noções básicas sobre como criar e editar esquemas na interface do usuário do Experience Platform.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 943d1360e80caef58d09b8502507a3ad72edda03
+source-git-commit: 5e57df3fbc22baa1c7abbb02a003ad8663aad040
 workflow-type: tm+mt
-source-wordcount: '3571'
+source-wordcount: '3670'
 ht-degree: 1%
 
 ---
@@ -45,11 +45,9 @@ Entre em um [!UICONTROL Nome de exibição do esquema] no campo de texto. Em seg
 
 ![A variável [!UICONTROL Nome e revisão] seção do [!UICONTROL Criar esquema] fluxo de trabalho com o [!UICONTROL Nome de exibição do esquema], [!UICONTROL Descrição], e [!UICONTROL Concluir] destacado.](../../images/ui/resources/schemas/name-and-review.png)
 
-A variável [!UICONTROL Esquema] [!UICONTROL Procurar] é exibida. O esquema criado recentemente está disponível para edição no [!DNL Schema Editor] e aparece na lista de schemas disponíveis.
+A variável [!UICONTROL Esquema] [!UICONTROL Procurar] é exibida. O esquema criado recentemente está listado na Biblioteca de esquemas e disponível para edição no [!DNL Schema Editor].
 
-![O Editor de esquemas exibe o esquema criado recentemente.](../../images/ui/resources/schemas/schema-details.png)
-
-Agora você pode começar a criar a estrutura do esquema [adição de grupos de campos de esquema](#add-field-groups) no [!DNL Schema Editor].
+![A guia Procurar do espaço de trabalho Esquemas exibindo o esquema criado recentemente.](../../images/ui/resources/schemas/example-schema.png)
 
 ## Editar um esquema existente {#edit}
 
@@ -66,6 +64,14 @@ Para editar um esquema existente, selecione o **[!UICONTROL Procurar]** e seleci
 >Você pode usar os recursos de pesquisa e filtragem do espaço de trabalho para facilitar a localização do esquema. Consulte o guia sobre [exploração de recursos XDM](../explore.md) para obter mais informações.
 
 Depois de selecionar um esquema, a variável [!DNL Schema Editor] é exibida com a estrutura do esquema mostrada na tela. Agora você pode [adicionar grupos de campos](#add-field-groups) ao esquema (ou [adicionar campos individuais](#add-individual-fields) desses grupos), [editar nomes de exibição de campo](#display-names)ou [editar grupos de campos personalizados existentes](./field-groups.md#edit) se o schema utilizar algum.
+
+## Mais ações {#more}
+
+No Editor de esquemas, você também pode realizar ações rápidas para copiar a estrutura JSON do esquema ou excluir o esquema se ele não tiver sido ativado para o Perfil do cliente em tempo real ou tiver conjuntos de dados associados. Selecionar [!UICONTROL Mais] na parte superior da exibição para exibir uma lista suspensa com ações rápidas.
+
+A funcionalidade Copiar estrutura JSON permite ver como seria uma carga de amostra enquanto você ainda está criando o esquema e seus pipelines de dados. É especialmente útil para situações em que há estruturas complexas de mapa de objetos no esquema, como um mapa de identidade.
+
+![O Editor de esquemas com o botão Mais realçado e as opções suspensas exibidas.](../../images/tutorials/create-schema/more-actions.png)
 
 ## Alternância do nome de exibição {#display-name-toggle}
 

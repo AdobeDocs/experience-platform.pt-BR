@@ -3,9 +3,10 @@ title: Excluir Registros
 description: Saiba como excluir registros na interface do Adobe Experience Platform.
 hide: true
 hidefromtoc: true
-source-git-commit: ccb2236fa169c26ef2f75d26776eee9f0122e92a
+exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
+source-git-commit: 3bd1424c9a01733acf38f52879606596c7aeca50
 workflow-type: tm+mt
-source-wordcount: '1493'
+source-wordcount: '1533'
 ht-degree: 8%
 
 ---
@@ -134,13 +135,13 @@ Para adicionar mais identidades, selecione o ícone de adição (![Um ícone de 
 
 ![O fluxo de trabalho de criação da solicitação com o ícone de adição e o ícone de adição de identidade é realçado.](../images/ui/record-delete/more-identities.png)
 
-## Enviar a solicitação (#submit)
+## Enviar a solicitação {#submit}
 
 Quando terminar de adicionar identidades à solicitação, em **[!UICONTROL Configurações de solicitação]**, forneça um nome e uma descrição opcional para a solicitação antes de selecionar **[!UICONTROL Enviar]**.
 
 >[!IMPORTANT]
 > 
->Há diferentes limites para o número total de exclusões de registros de identidade únicos que podem ser enviadas a cada mês. Esses limites são baseados no seu contrato de licença. As organizações que compraram todas as edições do Adobe Real-time Customer Data Platform e do Adobe Journey Optimizer podem enviar até 100.000 exclusões de registro de identidade a cada mês. Organizações que compraram **Adobe Healthcare Shield** ou **Proteção de segurança e privacidade do Adobe** O pode enviar até 600.000 exclusões de registros de identidade a cada mês.
+>Há diferentes limites para o número total de exclusões de registros de identidade únicos que podem ser enviadas a cada mês. Esses limites são baseados no seu contrato de licença. As organizações que compraram todas as edições do Adobe Real-time Customer Data Platform e do Adobe Journey Optimizer podem enviar até 100.000 exclusões de registro de identidade a cada mês. Organizações que compraram **Adobe Healthcare Shield** ou **Proteção de segurança e privacidade do Adobe** O pode enviar até 600.000 exclusões de registros de identidade a cada mês.<br>Uma única solicitação de exclusão de registro por meio da interface do permite enviar 10.000 IDs de uma vez. A variável [Método de API para excluir registros](https://experienceleague.adobe.com/docs/experience-platform/hygiene/api/workorder.html?lang=en#create) O permite o envio de 100.000 IDs de uma só vez.
 
 ![As configurações de solicitação do [!UICONTROL Nome] e [!UICONTROL Descrição] campos com [!UICONTROL Enviar] destacado.](../images/ui/record-delete/submit.png)
 

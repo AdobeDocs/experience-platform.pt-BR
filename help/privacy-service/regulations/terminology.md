@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Terminologia dos regulamentos de privacidade
 description: Este documento fornece definições para termos-chave relacionados a regulamentos de privacidade compatíveis com o Adobe Experience Cloud.
 exl-id: 9c0a7d26-0571-41d4-8cf5-6356025d51ef
-source-git-commit: a19f37d40b52ce41975bfc303339d2b85e12080e
+source-git-commit: 9d05752f3db78d9d10fd91fd0d3fed924217199c
 workflow-type: tm+mt
 source-wordcount: '1796'
 ht-degree: 2%
@@ -108,6 +108,10 @@ Este documento fornece definições para termos-chave relacionados a regulamento
 ## P
 
 **PDPA**: A variável [!DNL Personal Data Protection Act] da Tailândia (PDPA) foi introduzido para proteger os proprietários de dados tailandeses da coleta, uso ou divulgação ilegal de seus dados pessoais. Inspirado pelo GDPR da União Europeia, o regulamento concede aos cidadãos tailandeses o direito de solicitar acesso ou a exclusão de seus dados pessoais armazenados.
+
+<!-- Not yet released:
+**PDPD**: The [!DNL Personal Data Protection Decree] of Vietnam (PDPD) ...  
+-->
 
 **Dados pessoais**: qualquer informação relacionada a uma pessoa física ou &quot;Titular de dados&quot;, que possa ser usada para identificar direta ou indiretamente tal pessoa.
 

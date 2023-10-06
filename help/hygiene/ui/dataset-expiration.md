@@ -1,15 +1,15 @@
 ---
-title: Gerenciar expirações do conjunto de dados
+title: Expirações do conjunto de dados automatizado
 description: Saiba como programar a expiração de um conjunto de dados na interface do usuário do Adobe Experience Platform.
 exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
-source-git-commit: 7931c8fe4a1ca5d255a80e7e6b0deb976d53c3de
+source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
 workflow-type: tm+mt
-source-wordcount: '819'
+source-wordcount: '828'
 ht-degree: 16%
 
 ---
 
-# Gerenciar expirações do conjunto de dados {#dataset-expiration}
+# Expirações automatizadas do conjunto de dados {#dataset-expiration}
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_scheduleDatasetExpiration_description"
@@ -22,7 +22,7 @@ A variável [[!UICONTROL Ciclo de vida dos dados] espaço de trabalho](./overvie
 >
 >Se um conjunto de dados estiver definido para expirar, você deverá alterar manualmente todos os fluxos de dados que possam estar assimilando dados nesse conjunto de dados para que seus fluxos de trabalho downstream não sejam afetados negativamente.
 
-Este documento aborda como agendar e gerenciar expirações de conjunto de dados na interface do usuário da plataforma.
+Este documento aborda como agendar e automatizar as expirações do conjunto de dados na interface do usuário da plataforma.
 
 >[!NOTE]
 >
@@ -39,7 +39,7 @@ Para criar uma solicitação, selecione **[!UICONTROL Criar solicitação]** na 
 
 >[!IMPORTANT]
 >
-Você pode ter até 20 expirações de conjunto de dados programadas simultaneamente. Isso significa que você pode ter 20 conjuntos de dados programados para serem excluídos a qualquer momento. Não há restrições quanto à hora ou ao ano em que essas expirações estão definidas. Por exemplo, se você tiver 20 expirações programadas para o conjunto de dados e um conjunto de dados precisar ser excluído amanhã, não será possível definir mais expirações até que esse conjunto de dados seja excluído.
+Os usuários do Real-Time CDP, Adobe Journey Optimizer e Customer Journey Analytics têm 20 ordens de serviço de expiração do conjunto de dados programadas e pendentes. Os usuários do Healthcare Shield e do Privacy and Security Shield têm 50 ordens de trabalho de expiração programadas do conjunto de dados. Isso significa que você pode ter 20 ou 50 conjuntos de dados programados para serem excluídos a qualquer momento.<br>Por exemplo, se você tiver 20 expirações programadas para o conjunto de dados e um conjunto de dados precisar ser excluído amanhã, não será possível definir mais expirações até que esse conjunto de dados seja excluído.
 
 ![A variável [!UICONTROL Ciclo de vida dos dados] espaço de trabalho com [!UICONTROL Criar solicitação] destacado.](../images/ui/ttl/create-request-button.png)
 

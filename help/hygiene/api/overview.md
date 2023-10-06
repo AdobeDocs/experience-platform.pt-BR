@@ -2,18 +2,14 @@
 title: Guia da API de higiene de dados
 description: Saiba como corrigir ou excluir programaticamente os dados pessoais armazenados dos clientes no Adobe Experience Platform.
 exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
-source-git-commit: da8b5d9fffdf8a176a4d70be5df5b3021cf0df7b
+source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
 workflow-type: tm+mt
-source-wordcount: '469'
+source-wordcount: '445'
 ht-degree: 0%
 
 ---
 
 # Guia da API de higiene de dados
-
->[!IMPORTANT]
->
->Atualmente, os recursos de higiene de dados na Adobe Experience Platform estão disponíveis apenas para organizações que compraram **Adobe Healthcare Shield** ou **Proteção de segurança e privacidade do Adobe**.
 
 A API de higiene de dados permite corrigir ou excluir programaticamente os dados pessoais armazenados dos clientes no Adobe Experience Platform, bem como programar datas de expiração para conjuntos de dados. Este guia aborda as etapas de pré-requisito para usar a API e fornece links para documentações mais específicas do endpoint.
 
@@ -52,12 +48,12 @@ A expiração de um conjunto de dados é uma ação de &quot;exclusão de um con
 >
 >As exclusões de registros devem ser usadas para limpeza de dados, remoção de dados anônimos ou minimização de dados. Eles são **não** a ser usado para solicitações de direitos do titular dos dados (conformidade) como relacionadas a regulamentos de privacidade, como o Regulamento Geral sobre a Proteção de Dados (GDPR). Para todos os casos de uso de conformidade, use [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) em vez disso.
 
-A API de higiene de dados permite excluir todos os registros associados a uma identidade em um ou todos os conjuntos de dados. Todas as tarefas de higiene de dados que excluem identidades são representadas por uma construção chamada ordem de serviço. Consulte a [guia de ponto de extremidade de ordem de trabalho](./workorder.md) para obter detalhes sobre como trabalhar com exclusões de registros na API.
+A API de higiene de dados permite excluir todos os registros associados a uma identidade em um ou todos os conjuntos de dados. Todas as tarefas do ciclo de vida de dados que excluem identidades são representadas por uma construção chamada ordem de serviço. Consulte a [guia de ponto de extremidade de ordem de trabalho](./workorder.md) para obter detalhes sobre como trabalhar com exclusões de registros na API.
 
 ## Cota
 
-Sua organização está limitada a uma cota de trabalho mensal predeterminada para cada tipo de operação de higiene de dados, que pode variar dependendo do licenciamento. Consulte a [guia de endpoint de cota](./quota.md) para obter detalhes sobre como visualizar o status atual da cota de seus processos de higiene de dados.
+Sua organização está limitada a uma cota de trabalho mensal predeterminada para cada tipo de operação do ciclo de vida dos dados, que pode variar dependendo do licenciamento. Consulte a [guia de endpoint de cota](./quota.md) para obter detalhes sobre como visualizar o status atual da cota dos processos do ciclo de vida dos dados.
 
 ## Próximas etapas
 
-Este guia abordou como gerenciar solicitações de higiene de dados usando chamadas de API. Para obter informações sobre como executar essas ações na interface do usuário da Platform, consulte a [guia da interface de higiene de dados](../ui/overview.md).
+Este guia abordou como gerenciar solicitações de ciclo de vida de dados usando chamadas de API. Para obter informações sobre como executar essas ações na interface do usuário da Platform, consulte a [guia da interface do usuário do ciclo de vida dos dados](../ui/overview.md).

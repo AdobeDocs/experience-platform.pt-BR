@@ -1,12 +1,12 @@
 ---
-title: Endpoint da API de ordem de trabalho
+title: Endpoint da API de Ordem de Serviço
 description: O ponto de extremidade /workorder na API de higiene de dados permite gerenciar de forma programática tarefas de exclusão para identidades.
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
 hide: true
 hidefromtoc: true
-source-git-commit: 54f92257d21f918b5d60c982670f96d30e879c60
+source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
 workflow-type: tm+mt
-source-wordcount: '1011'
+source-wordcount: '997'
 ht-degree: 4%
 
 ---
@@ -16,9 +16,6 @@ ht-degree: 4%
 A variável `/workorder` O endpoint na API da higiene de dados permite gerenciar de forma programática as solicitações de exclusão de registros no Adobe Experience Platform.
 
 >[!IMPORTANT]
->
->As solicitações de exclusão de registro só estão disponíveis para organizações que compraram **Adobe Healthcare Shield**.
->
 >
 >As exclusões de registros devem ser usadas para limpeza de dados, remoção de dados anônimos ou minimização de dados. Eles são **não** a ser usado para solicitações de direitos do titular dos dados (conformidade) como relacionadas a regulamentos de privacidade, como o Regulamento Geral sobre a Proteção de Dados (GDPR). Para todos os casos de uso de conformidade, use [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) em vez disso.
 

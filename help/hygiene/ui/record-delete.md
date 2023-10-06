@@ -1,13 +1,11 @@
 ---
 title: Excluir Registros
 description: Saiba como excluir registros na interface do Adobe Experience Platform.
-hide: true
-hidefromtoc: true
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-source-git-commit: 3bd1424c9a01733acf38f52879606596c7aeca50
+source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
 workflow-type: tm+mt
 source-wordcount: '1533'
-ht-degree: 8%
+ht-degree: 7%
 
 ---
 
@@ -69,12 +67,12 @@ Se desejar excluir registros de todos os conjuntos de dados, selecione **[!UICON
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_primaryidentity"
 >title="Identidade principal"
->abstract="Uma identidade principal é um atributo que vincula um registro ao perfil do consumidor na Experience Platform. O campo de identidade principal de um conjunto de dados é definido pelo esquema em que o conjunto de dados se baseia. Nessa coluna, você deve fornecer o tipo (ou namespace) da identidade principal do registro, como `email` para endereços de email e `ecid` para IDs da Experience Cloud. Para saber mais, consulte o guia da interface de higiene de dados."
+>abstract="Uma identidade principal é um atributo que vincula um registro ao perfil do consumidor na Experience Platform. O campo de identidade principal de um conjunto de dados é definido pelo esquema em que o conjunto de dados se baseia. Nessa coluna, você deve fornecer o tipo (ou namespace) da identidade principal do registro, como `email` para endereços de email e `ecid` para IDs da Experience Cloud. Para saber mais, consulte o guia da interface do usuário do ciclo de vida dos dados."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_identityvalue"
 >title="Valor de identidade"
->abstract="Nessa coluna, você deve fornecer o valor da identidade principal do registro, que deve corresponder ao tipo de identidade fornecido na coluna esquerda. Se o tipo de identidade principal for `email`, o valor deve ser o endereço de email do registro. Para saber mais, consulte o guia da interface de higiene de dados."
+>abstract="Nessa coluna, você deve fornecer o valor da identidade principal do registro, que deve corresponder ao tipo de identidade fornecido na coluna esquerda. Se o tipo de identidade principal for `email`, o valor deve ser o endereço de email do registro. Para saber mais, consulte o guia da interface do usuário do ciclo de vida dos dados."
 
 Ao excluir registros, você deve fornecer informações de identidade para que o sistema possa determinar quais registros devem ser excluídos. Para qualquer conjunto de dados na Plataforma, os registros são excluídos com base no **identidade principal** que é definido pelo esquema do conjunto de dados.
 

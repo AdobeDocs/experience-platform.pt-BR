@@ -1,23 +1,19 @@
 ---
 title: Endpoint da API de Cota
-description: O ponto de extremidade /quota na API da higiene de dados permite monitorar a utilização da higiene de dados em relação aos limites de cota mensais da organização para cada tipo de tarefa.
+description: O ponto de extremidade /quota na API da higiene de dados permite monitorar o uso do gerenciamento avançado do ciclo de vida dos dados em relação aos limites de cota mensais de sua organização para cada tipo de processo.
 exl-id: 91858a13-e5ce-4b36-a69c-9da9daf8cd66
-source-git-commit: 1c6a5df6473e572cae88a5980fe0db9dfcf9944e
+source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
 workflow-type: tm+mt
-source-wordcount: '347'
-ht-degree: 2%
+source-wordcount: '327'
+ht-degree: 3%
 
 ---
 
 # Endpoint da cota
 
->[!IMPORTANT]
->
->Atualmente, os recursos de higiene de dados na Adobe Experience Platform estão disponíveis apenas para organizações que compraram **Adobe Healthcare Shield** ou **Proteção de segurança e privacidade do Adobe**.
+A variável `/quota` O endpoint na API da higiene de dados permite monitorar o uso do gerenciamento avançado do ciclo de vida dos dados em relação aos limites de cota da organização para cada tipo de processo.
 
-A variável `/quota` O endpoint na API da higiene de dados permite monitorar a utilização da higiene de dados em relação aos limites de cota da organização para cada tipo de trabalho.
-
-As cotas são aplicadas para cada tipo de trabalho de higiene de dados das seguintes maneiras:
+As cotas são aplicadas para cada tipo de trabalho do ciclo de vida dos dados das seguintes maneiras:
 
 * As exclusões e atualizações de registros estão limitadas a um determinado número de solicitações a cada mês.
 * As expirações de conjunto de dados têm um limite simples para o número de trabalhos ativos simultaneamente, independentemente de quando as expirações serão executadas.
@@ -58,7 +54,7 @@ curl -X GET \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna os detalhes das cotas de higiene de dados.
+Uma resposta bem-sucedida retorna os detalhes das cotas de ciclo de vida dos dados.
 
 ```json
 {
@@ -81,6 +77,6 @@ Uma resposta bem-sucedida retorna os detalhes das cotas de higiene de dados.
 
 | Propriedade | Descrição |
 | --- | --- |
-| `quotas` | Lista as informações de cota para cada tipo de trabalho de higiene de dados. Cada objeto de cota contém as seguintes propriedades:<ul><li>`name`: O tipo de trabalho de higiene de dados:<ul><li>`expirationDatasetQuota`: expirações do conjunto de dados</li><li>`deleteIdentityWorkOrderDatasetQuota`: exclusões de registro</li></ul></li><li>`description`: uma descrição do tipo de trabalho de higiene de dados.</li><li>`consumed`: o número de trabalhos desse tipo executados no período mensal atual.</li><li>`quota`: o limite de cota para esse tipo de trabalho. Para exclusões e atualizações de registro, representa o número de trabalhos que podem ser executados para cada período mensal. Para expirações de conjunto de dados, representa o número de trabalhos que podem estar ativos simultaneamente em um determinado momento.</li></ul> |
+| `quotas` | Lista as informações de cota para cada tipo de trabalho do ciclo de vida dos dados. Cada objeto de cota contém as seguintes propriedades:<ul><li>`name`: O tipo de trabalho do ciclo de vida dos dados:<ul><li>`expirationDatasetQuota`: expirações do conjunto de dados</li><li>`deleteIdentityWorkOrderDatasetQuota`: exclusões de registro</li></ul></li><li>`description`: uma descrição do tipo de trabalho do ciclo de vida dos dados.</li><li>`consumed`: o número de trabalhos desse tipo executados no período mensal atual.</li><li>`quota`: o limite de cota para esse tipo de trabalho. Para exclusões e atualizações de registro, representa o número de trabalhos que podem ser executados para cada período mensal. Para expirações de conjunto de dados, representa o número de trabalhos que podem estar ativos simultaneamente em um determinado momento.</li></ul> |
 
 {style="table-layout:auto"}

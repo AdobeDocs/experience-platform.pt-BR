@@ -2,18 +2,14 @@
 title: Ponto de extremidade da API de expiração do conjunto de dados
 description: O ponto de extremidade /ttl na API da higiene de dados permite agendar programaticamente as expirações do conjunto de dados no Adobe Experience Platform.
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
 workflow-type: tm+mt
-source-wordcount: '1426'
+source-wordcount: '1402'
 ht-degree: 3%
 
 ---
 
 # Ponto de extremidade de expiração do conjunto de dados
-
->[!IMPORTANT]
->
->Atualmente, os recursos de higiene de dados na Adobe Experience Platform estão disponíveis apenas para organizações que compraram **Adobe Healthcare Shield** ou **Proteção de segurança e privacidade do Adobe**.
 
 A variável `/ttl` O endpoint na API da higiene de dados permite agendar datas de expiração para conjuntos de dados na Adobe Experience Platform.
 

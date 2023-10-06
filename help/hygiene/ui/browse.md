@@ -1,35 +1,31 @@
 ---
-title: Procurar Ordens de Serviço de Higiene de Dados
-description: Saiba como visualizar e gerenciar ordens de trabalho de higiene de dados existentes na interface do usuário do Adobe Experience Platform.
+title: Procurar Ordens de Serviço do Ciclo de Vida dos Dados
+description: Saiba como visualizar e gerenciar ordens de trabalho do ciclo de vida dos dados existentes na interface do usuário do Adobe Experience Platform.
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
-source-git-commit: a20afcd95d47e38ccdec9fba9e772032e212d7a4
+source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
 workflow-type: tm+mt
-source-wordcount: '862'
-ht-degree: 25%
+source-wordcount: '841'
+ht-degree: 14%
 
 ---
 
-# Procurar ordens de trabalho de higiene de dados {#browse-work-orders}
+# Procurar ordens de trabalho do ciclo de vida dos dados {#browse-work-orders}
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_workorders"
 >title="IDs de ordem de trabalho"
->abstract="Quando uma solicitação de higiene de dados é enviada para o sistema, uma ordem de trabalho é criada para executar a tarefa solicitada. Em outras palavras, uma ordem de trabalho representa um processo específico de higiene de dados, que inclui seu status atual e outros detalhes relacionados. Cada ordem de trabalho recebe automaticamente sua própria ID exclusiva após a criação."
->text="See the data hygiene UI guide to learn more."
+>abstract="Quando uma solicitação de ciclo de vida de dados é enviada para o sistema, uma ordem de serviço é criada para executar a tarefa solicitada. Em outras palavras, uma ordem de serviço representa um processo específico do ciclo de vida dos dados, que inclui seu status atual e outros detalhes relacionados. Cada ordem de trabalho recebe automaticamente sua própria ID exclusiva após a criação."
+>text="See the data lifecycle UI guide to learn more."
 
->[!IMPORTANT]
->
->Atualmente, os recursos de higiene de dados na Adobe Experience Platform estão disponíveis apenas para organizações que compraram **Adobe Healthcare Shield** ou **Proteção de segurança e privacidade do Adobe**.
-
-Quando uma solicitação de higiene de dados é enviada para o sistema, uma ordem de trabalho é criada para executar a tarefa solicitada. Uma ordem de serviço representa um processo específico de higiene de dados, como a expiração programada de um conjunto de dados, que inclui o status atual e outros detalhes relacionados.
+Quando uma solicitação de ciclo de vida de dados é enviada para o sistema, uma ordem de serviço é criada para executar a tarefa solicitada. Uma ordem de serviço representa um processo específico do ciclo de vida dos dados, como uma expiração programada do conjunto de dados, que inclui seu status atual e outros detalhes relacionados.
 
 Este guia aborda como exibir e gerenciar ordens de serviço existentes na interface do usuário do Adobe Experience Platform.
 
 ## Listar e filtrar ordens de serviço existentes
 
-Ao acessar o pela primeira vez, **[!UICONTROL Higiene de dados]** espaço de trabalho na interface, uma lista de ordens de serviço existentes é mostrada junto com seus detalhes básicos.
+Ao acessar o pela primeira vez, **[!UICONTROL Ciclo de vida dos dados]** espaço de trabalho na interface, uma lista de ordens de serviço existentes é mostrada junto com seus detalhes básicos.
 
-![Imagem mostrando o [!UICONTROL Higiene de dados] espaço de trabalho na interface do usuário da Platform](../images/ui/browse/work-order-list.png)
+![Imagem mostrando o [!UICONTROL Ciclo de vida dos dados] espaço de trabalho na interface do usuário da Platform](../images/ui/browse/work-order-list.png)
 
 A lista mostra somente ordens de serviço para uma categoria de cada vez. Selecionar **[!UICONTROL Consumidor]** para exibir uma lista de tarefas de deleção de registro e **[!UICONTROL Conjunto de dados]** para visualizar uma lista de expirações programadas do conjunto de dados.
 
@@ -59,7 +55,7 @@ Os filtros a seguir se aplicam às solicitações de expiração do conjunto de 
 | --- | --- |
 | [!UICONTROL Status] | Filtrar com base no status atual da ordem de serviço:<ul><li>**[!UICONTROL Concluído]**: O trabalho foi concluído.</li><li>**[!UICONTROL Pending]**: A tarefa foi criada, mas ainda não foi executada. A [solicitação de expiração do conjunto de dados](./dataset-expiration.md) O assume esse status antes da data de exclusão programada. Quando a data de exclusão chegar, o status será atualizado para [!UICONTROL Execução] a menos que a tarefa seja cancelada antecipadamente.</li><li>**[!UICONTROL Execução]**: a solicitação de expiração do conjunto de dados foi iniciada e está sendo processada.</li><li>**[!UICONTROL Cancelado]**: o trabalho foi cancelado como parte de uma solicitação manual do usuário.</li></ul> |
 | [!UICONTROL Data de criação] | Filtrar com base em quando a ordem de serviço foi feita. |
-| [!UICONTROL Data de validade] | Filtre solicitações de expiração do conjunto de dados com base na data de exclusão agendada para o conjunto de dados em questão. |
+| [!UICONTROL Data de expiração] | Filtre solicitações de expiração do conjunto de dados com base na data de exclusão agendada para o conjunto de dados em questão. |
 | [!UICONTROL Data da atualização] | Filtrar com base em quando a ordem de serviço foi atualizada pela última vez. Criações e expirações são contadas como atualizações. |
 
 {style="table-layout:auto"}
@@ -69,17 +65,17 @@ Os filtros a seguir se aplicam às solicitações de expiração do conjunto de 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_statusbyservice"
 >title="Status por serviço"
->abstract="As solicitações de higiene de dados são processadas de maneira independente por vários serviços da Experience Platform. Esta seção descreve o status de processamento atual da solicitação para cada serviço respectivo. Para saber mais, consulte o guia da interface de higiene de dados."
+>abstract="As solicitações de ciclo de vida dos dados são processadas independentemente por vários serviços Experience Platform. Esta seção descreve o status de processamento atual da solicitação para cada serviço respectivo. Para saber mais, consulte o guia da interface do usuário do ciclo de vida dos dados."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_numberofidentities"
 >title="Número de identidades"
->abstract="O número de identidades cujos registros foram solicitados a serem atualizados ou excluídos como parte dessa ordem de trabalho. As identidades incluídas na contagem podem não existir necessariamente nos conjuntos de dados afetados. Para saber mais, consulte o guia da interface de higiene de dados."
+>abstract="O número de identidades cujos registros foram solicitados a serem atualizados ou excluídos como parte dessa ordem de trabalho. As identidades incluídas na contagem podem não existir necessariamente nos conjuntos de dados afetados. Para saber mais, consulte o guia da interface do usuário do ciclo de vida dos dados."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_responsemessages"
 >title="Registrar resposta de exclusão"
->abstract="Quando um processo de exclusão de registro recebe uma resposta do sistema, essas mensagens são exibidas na seção **[!UICONTROL Resultado]**. Se ocorrer um problema enquanto uma ordem de trabalho está sendo processada, qualquer mensagem de erro relevante será exibida nessa seção para ajudar você a solucionar o problema. Para saber mais, consulte o guia da interface de higiene de dados."
+>abstract="Quando um processo de exclusão de registro recebe uma resposta do sistema, essas mensagens são exibidas na seção **[!UICONTROL Resultado]**. Se ocorrer um problema enquanto uma ordem de trabalho está sendo processada, qualquer mensagem de erro relevante será exibida nessa seção para ajudar você a solucionar o problema. Para saber mais, consulte o guia da interface do usuário do ciclo de vida dos dados."
 
 Selecione a ID de uma ordem de serviço listada para exibir seus detalhes.
 
@@ -101,7 +97,7 @@ A página de detalhes de uma expiração de conjunto de dados fornece informaç�
 
 ## Próximas etapas
 
-Este guia abordou como visualizar e gerenciar ordens de trabalho de higiene de dados existentes na interface do usuário da plataforma. Para obter informações sobre como criar suas próprias ordens de serviço, consulte a seguinte documentação:
+Este guia abordou como visualizar e gerenciar ordens de trabalho do ciclo de vida dos dados existentes na interface do usuário da plataforma. Para obter informações sobre como criar suas próprias ordens de serviço, consulte a seguinte documentação:
 
 * [Gerenciar expirações do conjunto de dados](./dataset-expiration.md)
-<!-- * [Manage record deletes](./record-delete.md) -->
+* [Gerenciar exclusões de registro](./record-delete.md)

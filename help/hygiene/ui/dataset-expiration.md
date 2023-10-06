@@ -2,7 +2,7 @@
 title: Expirações do conjunto de dados automatizado
 description: Saiba como programar a expiração de um conjunto de dados na interface do usuário do Adobe Experience Platform.
 exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
-source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
+source-git-commit: 45dac5647e44ac35d9821d407eddeee72523faf9
 workflow-type: tm+mt
 source-wordcount: '828'
 ht-degree: 16%
@@ -26,7 +26,7 @@ Este documento aborda como agendar e automatizar as expirações do conjunto de 
 
 >[!NOTE]
 >
->No momento, a expiração do conjunto de dados não exclui dados da Rede de borda da Adobe Experience Platform. No entanto, não há possibilidade de os dados permanecerem na Rede de borda após o conjunto de dados estar definido para expirar. Isso ocorre porque o contrato de licença de serviço de 14 dias para expiração do conjunto de dados coincide com o período de 14 dias em que os dados existem na Rede de borda antes de serem descartados.
+>No momento, a expiração do conjunto de dados não exclui dados da Rede de borda da Adobe Experience Platform. No entanto, não há possibilidade de os dados permanecerem na Rede de borda após o conjunto de dados estar definido para expirar. Isso ocorre porque o contrato de licença de serviço de 15 dias para expiração do conjunto de dados se sobrepõe ao período de 14 dias em que os dados existem na rede de borda antes de serem descartados.
 
 ## Programar uma expiração do conjunto de dados {#schedule-dataset-expiration}
 

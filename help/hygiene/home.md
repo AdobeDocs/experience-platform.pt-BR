@@ -2,7 +2,7 @@
 title: Visão geral do gerenciamento avançado do ciclo de vida dos dados
 description: O gerenciamento avançado do ciclo de vida dos dados permite gerenciar o ciclo de vida dos dados ao atualizar ou remover registros desatualizados ou imprecisos.
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
-source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
+source-git-commit: 45dac5647e44ac35d9821d407eddeee72523faf9
 workflow-type: tm+mt
 source-wordcount: '589'
 ht-degree: 1%
@@ -49,7 +49,7 @@ O seguinte ocorre quando uma [solicitação de expiração do conjunto de dados]
 | Contagem de perfis atualizada | 30 horas | Dependendo do conteúdo do conjunto de dados que está sendo excluído, alguns perfis podem ser removidos do sistema se todos os atributos do componente estiverem vinculados a esse conjunto de dados. 30 horas após a exclusão do conjunto de dados, todas as alterações resultantes nas contagens gerais de perfis são refletidas no [widgets de painel](../dashboards/guides/profiles.md#profile-count-trend) e outros relatórios. |
 | Públicos atualizados | 48 horas | Depois que todos os perfis afetados forem atualizados, todos os [públicos](../segmentation/home.md) são atualizadas para refletir seu novo tamanho. Dependendo do conjunto de dados removido e dos atributos nos quais você está segmentando, o tamanho de cada público pode aumentar ou diminuir como resultado da exclusão. |
 | Jornadas e destinos atualizados | 50 horas | [Jornadas](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html), [campanhas](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html), e [destinos](../destinations/home.md) são atualizados de acordo com as alterações nos segmentos relacionados. |
-| Exclusão forçada concluída | 14 dias | Todos os dados relacionados ao conjunto de dados são excluídos permanentemente do data lake. A variável [status do trabalho do ciclo de vida dos dados](./ui/browse.md#view-details) que excluiu o conjunto de dados é atualizado para refletir isso. |
+| Exclusão forçada concluída | 15 dias | Todos os dados relacionados ao conjunto de dados são excluídos permanentemente do data lake. A variável [status do trabalho do ciclo de vida dos dados](./ui/browse.md#view-details) que excluiu o conjunto de dados é atualizado para refletir isso. |
 
 {style="table-layout:auto"}
 

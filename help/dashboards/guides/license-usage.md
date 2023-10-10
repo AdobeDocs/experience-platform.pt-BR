@@ -7,7 +7,7 @@ exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
 source-git-commit: e9c4068419b36da6ffaec67f0d1c39fe87c2bc4c
 workflow-type: tm+mt
 source-wordcount: '1987'
-ht-degree: 1%
+ht-degree: 4%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 1%
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseUsage"
 >title="Painel de uso da licença"
->abstract="O painel de uso da licença oferece informações sobre os produtos Adobe Experience Platform que você adquiriu. A visão geral do painel exibe as métricas principais de seus produtos, incluindo o uso de cada uma das métricas principais e a quantidade de licença contratada. O espaço de trabalho de detalhes exibe um detalhamento das métricas para cada produto em sandboxes específicas."
+>abstract="O painel de uso da licença oferece insights sobre os produtos da Adobe Experience Platform que você adquiriu. A visão geral do painel exibe as métricas principais de seus produtos, incluindo o uso de cada uma das métricas principais e a quantidade contratada da licença. O espaço de trabalho de detalhes exibe um detalhamento das métricas para cada produto em sandboxes específicas."
 
 Você pode exibir informações importantes sobre o uso de licenças da sua organização por meio da Adobe Experience Platform [!UICONTROL Uso da licença] painel. As informações exibidas aqui são capturadas durante um instantâneo diário da sua instância da Platform.
 

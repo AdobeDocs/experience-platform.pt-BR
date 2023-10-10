@@ -5,7 +5,7 @@ exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
 source-git-commit: 3e4f79620d1f1b08684223214980ecbfdfa10a38
 workflow-type: tm+mt
 source-wordcount: '1699'
-ht-degree: 6%
+ht-degree: 8%
 
 ---
 
@@ -43,13 +43,13 @@ Um namespace consiste nos seguintes componentes:
 >[!CONTEXTUALHELP]
 >id="platform_identity_create_namespace"
 >title="Especificar tipo de identidade"
->abstract="O tipo de identidade controla se os dados são armazenados ou não no gráfico de identidade. Os gráficos de identidade não são gerados para os seguintes tipos de identidade: identificadores que não sejam pessoas e ID de parceiro."
+>abstract="O tipo de identidade controla se os dados são armazenados ou não no gráfico de identidade. Os gráficos de identidade não são gerados para os seguintes tipos de identidade: identificadores não pessoais e ID de parceiro."
 >text="Learn more in documentation"
 
 Um elemento de um namespace de identidade é o **tipo de identidade**. O tipo de identidade determina:
 
 * Se um gráfico de identidade será gerado:
-   * Os gráficos de identidade não são gerados para os seguintes tipos de identidade: identificadores que não sejam pessoas e ID de parceiro.
+   * Os gráficos de identidade não são gerados para os seguintes tipos de identidade: identificadores não pessoais e ID de parceiro.
    * Os gráficos de identidade são gerados para todos os outros tipos de identidade.
 * Quais identidades são removidas do gráfico de identidade quando os limites do sistema são atingidos. Para obter mais informações, leia a [medidas de proteção para dados de identidade](guardrails.md).
 
@@ -62,7 +62,7 @@ Os seguintes tipos de identidade estão disponíveis no Experience Platform:
 | ID do dispositivo | As IDs de dispositivo identificam dispositivos de hardware, como IDFA (iPhone e iPad), GAID (Android) e RIDA (Roku), e podem ser compartilhadas por várias pessoas no domicílio. |
 | Endereço de email | Os endereços de email são frequentemente associados a uma única pessoa e, portanto, podem ser usados para identificá-la em diferentes canais. Identidades desse tipo incluem informações de identificação pessoal (PII). Isso é uma indicação para [!DNL Identity Service] para lidar com o valor de forma sensível. |
 | Identificador não de pessoas | IDs que não sejam de pessoas são usadas para armazenar identificadores que exigem namespaces, mas não estão conectados a um cluster de pessoas. Por exemplo, um SKU de produto, dados relacionados a produtos, organizações ou lojas. |
-| ID do Parceiro | <ul><li>IDs de parceiro são identificadores usados por parceiros de dados para representar pessoas. As IDs de parceiros geralmente são pseudônimas para não revelar a verdadeira identidade de uma pessoa e podem ser probabilísticas. No Real-time Customer Data Platform, as IDs de parceiros são usadas principalmente para ativação expandida do público-alvo e enriquecimento de dados, e não para criar vinculações de gráficos de identidade.</li><li>Os gráficos de identidade não são gerados ao assimilar uma identidade que inclui um namespace de identidade especificado como tipo de ID do parceiro.</li><li>A falha na assimilação de dados do parceiro usando o tipo de identidade da ID do parceiro pode resultar no alcance das limitações de gráfico do sistema no Serviço de identidade, bem como na mesclagem indesejada de perfis.</li><ul> |
+| ID de parceiro | <ul><li>IDs de parceiro são identificadores usados por parceiros de dados para representar pessoas. As IDs de parceiros geralmente são pseudônimas para não revelar a verdadeira identidade de uma pessoa e podem ser probabilísticas. No Real-time Customer Data Platform, as IDs de parceiros são usadas principalmente para ativação expandida do público-alvo e enriquecimento de dados, e não para criar vinculações de gráficos de identidade.</li><li>Os gráficos de identidade não são gerados ao assimilar uma identidade que inclui um namespace de identidade especificado como tipo de ID do parceiro.</li><li>A falha na assimilação de dados do parceiro usando o tipo de identidade da ID do parceiro pode resultar no alcance das limitações de gráfico do sistema no Serviço de identidade, bem como na mesclagem indesejada de perfis.</li><ul> |
 | Número de telefone | Os números de telefone são frequentemente associados a uma única pessoa e, portanto, podem ser usados para identificá-la em diferentes canais. As identidades desse tipo incluem PII. Isso é uma indicação para [!DNL Identity Service] para lidar com o valor de forma sensível. |
 
 {style="table-layout:auto"}

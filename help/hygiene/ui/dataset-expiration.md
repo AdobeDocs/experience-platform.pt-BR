@@ -5,7 +5,7 @@ exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
 source-git-commit: 45dac5647e44ac35d9821d407eddeee72523faf9
 workflow-type: tm+mt
 source-wordcount: '828'
-ht-degree: 16%
+ht-degree: 20%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 16%
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_scheduleDatasetExpiration_description"
 >title="Excluir registros e conjuntos de dados de clientes indesejados ou expirados"
->abstract="<h2>Descrição</h2><p>Para gerenciar o ciclo de vida dos dados da Experience Platform não relacionados à conformidade regulatória, você pode excluir registros do consumidor e programar datas de expiração para os conjuntos de dados. Para criar ou gerenciar solicitações de titulares de dados, consulte o bloco de casos de uso &quot;Respeitar solicitações de privacidade de titulares de dados&quot;.</p>"
+>abstract="<h2>Descrição</h2><p>Para gerenciar o ciclo de vida dos dados da Experience Platform não relacionados à conformidade regulatória, você pode excluir registros do consumidor e programar datas de expiração para os conjuntos de dados. Para criar ou gerenciar solicitações de titulares de dados, consulte o bloco de casos de uso “Respeitar solicitações de privacidade de titulares de dados”.</p>"
 
 A variável [[!UICONTROL Ciclo de vida dos dados] espaço de trabalho](./overview.md) na interface do Adobe Experience Platform, permite agendar expirações para conjuntos de dados. Quando um conjunto de dados atinge sua data de expiração, o data lake, o serviço de identidade e o perfil do cliente em tempo real iniciam processos separados para remover o conteúdo do conjunto de dados de seus respectivos serviços. Depois que os dados forem excluídos dos três serviços, a expiração será marcada como completa.
 
@@ -33,7 +33,7 @@ Este documento aborda como agendar e automatizar as expirações do conjunto de 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_scheduleDatasetExpiration_instructions"
 >title="Instruções"
->abstract="<ul><li>Selecionar <a href="https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/overview.html?lang=pt-BR">Ciclo de vida dos dados</a> na navegação à esquerda, selecione <b>Criar solicitação</b>.</li><li>Se quiser excluir registros:</li>   <li>Selecione <b>Registro</b>.</li>   <li>Selecione um conjunto de dados específico do qual deseja excluir registros ou escolha a opção para excluí-los de todos os conjuntos de dados.</li>   <li>Forneça a identidade dos consumidores cujos registros devem ser excluídos. Selecionar <b>Adicionar identidade</b> para fornecer as identidades, uma de cada vez ou selecione <b>Escolher arquivos</b> para carregar um arquivo JSON de identidades.</li>   <li>Se necessário, selecione <b>Modelo</b> para exibir o formato esperado do arquivo JSON.</li><li>Consulte a documentação para obter instruções se desejar <a href="https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/dataset-expiration.html#schedule-dataset-expiration">programar datas de expiração para conjuntos de dados</a>.</li></ul>"
+>abstract="<ul><li>Selecione <a href="https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/overview.html?lang=pt-BR">Ciclo de vida dos dados</a> na navegação à esquerda e clique em <b>Criar solicitação</b>.</li><li>Se quiser excluir registros:</li>   <li>Selecione <b>Registro</b>.</li>   <li>Selecione um conjunto de dados específico do qual deseja excluir registros ou escolha a opção para excluí-los de todos os conjuntos de dados.</li>   <li>Forneça a identidade dos consumidores cujos registros devem ser excluídos. Selecionar <b>Adicionar identidade</b> para fornecer as identidades, uma de cada vez ou selecione <b>Escolher arquivos</b> para carregar um arquivo JSON de identidades.</li>   <li>Se necessário, selecione <b>Modelo</b> para exibir o formato esperado do arquivo JSON.</li><li>Consulte a documentação para obter instruções se desejar <a href="https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/dataset-expiration.html#schedule-dataset-expiration">programar datas de expiração para conjuntos de dados</a>.</li></ul>"
 
 Para criar uma solicitação, selecione **[!UICONTROL Criar solicitação]** na página principal do espaço de trabalho.
 

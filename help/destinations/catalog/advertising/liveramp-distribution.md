@@ -1,13 +1,13 @@
 ---
 title: LiveRamp - Conexão de distribuição
 description: Saiba como usar o LiveRamp - Conector de distribuição para orquestrar e ativar públicos integrados anteriormente no LiveRamp para destinos de publicidade downstream.
-source-git-commit: b97694dcf0d7fd600c6aada9600364e99ffe0902
+exl-id: 1b11a743-1ef9-4b01-90ef-cc072bc03c91
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '2716'
-ht-degree: 23%
+ht-degree: 38%
 
 ---
-
 
 # Conexão com o [!DNL LiveRamp - Distribution]
 
@@ -110,13 +110,13 @@ Consulte as seções abaixo para obter orientações detalhadas sobre como confi
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_4cinsights_profile_id"
 >title="ID de perfil de marca 4C"
->abstract="Insira a ID numérica associada ao seu Perfil de marca 4C. Se você não tiver essa ID, entre em contato com o representante de serviços do cliente 4C."
+>abstract="Insira a ID numérica associada ao seu Perfil de marca 4C. Se você não tiver essa ID, entre em contato com o(a) representante de serviços de cliente da 4C."
 
 Para configurar detalhes para o destino, preencha os campos abaixo.
 
 ![Imagem da interface do usuário da plataforma mostrando os campos de dados do cliente para o destino do 4C Insights.](../../assets/catalog/advertising/liveramp-distribution/LR_4C_DestSpecific.png)
 
-* **[!UICONTROL ID de perfil de marca 4C]**: digite a ID numérica associada ao seu Perfil de marca 4C. Se você não tiver essa ID, entre em contato com o representante de serviços do cliente 4C.
+* **[!UICONTROL ID de perfil de marca 4C]**: digite a ID numérica associada ao seu Perfil de marca 4C. Se você não tiver essa ID, entre em contato com o(a) representante de serviços de cliente da 4C.
 
 ### [!DNL Acast] {#acast}
 
@@ -136,7 +136,7 @@ Para configurar detalhes para o destino, preencha os campos abaixo.
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_ampersand_company_name"
 >title="O nome da sua empresa"
->abstract="O nome da sua empresa, como você gostaria que fosse mostrado ao parceiro de destino. Não use espaços ou caracteres especiais."
+>abstract="O nome da sua empresa que você deseja exibir ao parceiro de destino. Não use espaços ou caracteres especiais."
 
 Para configurar detalhes para o destino, preencha os campos abaixo.
 
@@ -175,7 +175,7 @@ Para configurar detalhes para o destino, preencha os campos abaixo.
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_agreement"
 >title="Contrato de termos de destino de dados do anunciante"
->abstract="Digitar `I AGREE` para confirmar o reconhecimento e a aceitação dos termos de dados do anunciante da Disney."
+>abstract="Digite `I AGREE` para confirmar que reconhece e aceita os termos de dados de anunciante da Disney."
 
 <!-- >additional-url="<https://www.disneyadvertising.com/ADVERTISER-DATA-DESTINATION-TERMS/>" text="Read the agreement" -->
 
@@ -187,7 +187,7 @@ Para configurar detalhes para o destino, preencha os campos abaixo.
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_disney_email"
 >title="Seu endereço de email"
->abstract="Insira um endereço de email vinculado a um indivíduo. Esse endereço de email serve como uma assinatura do contrato de termos de dados do anunciante. Esse endereço de email também é usado para entrar em contato com você, se necessário."
+>abstract="Insira um endereço de email vinculado a um indivíduo. Esse endereço de email serve como uma assinatura do contrato de termos de dados do anunciante. Esse endereço de email também será usado para entrar em contato com você, se necessário."
 
 Para configurar detalhes para o destino, preencha os campos abaixo.
 
@@ -228,7 +228,7 @@ Para configurar detalhes para o destino, preencha os campos abaixo.
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_magnitectv_client"
 >title="Cliente"
->abstract="O nome do cliente, como você gostaria que fosse mostrado ao parceiro de destino. Use o nome da sua empresa. Não use espaços ou caracteres especiais."
+>abstract="O nome de cliente que você deseja exibir ao parceiro de destino. Use o nome da sua empresa. Não use espaços ou caracteres especiais."
 
 Para configurar detalhes para o destino, preencha os campos abaixo.
 
@@ -240,19 +240,19 @@ Para configurar detalhes para o destino, preencha os campos abaixo.
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_magnitedv+_partnerid"
->title="ID do Parceiro"
->abstract="A ID do parceiro do projeto Rubicon associada ao publicador proprietário do segmento/dados. Entre em contato com o representante de conta do Projeto Rubicon se não tiver certeza do valor que deve usar."
+>title="ID de parceiro"
+>abstract="A ID de parceiro da Rubicon Project associada ao editor proprietário do segmento/dados. Entre em contato com o(a) representante de conta da Rubicon Project se não tiver certeza do valor que deve usar."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_magnitedv+_seatid"
->title="ID da vaga"
->abstract="Magnite DV+ ID da vaga fornecida pelo gerente de conta Magnite"
+>title="ID de licença"
+>abstract="Magnite DV + ID de licença fornecida pelo(a) gerente de conta da Magnite"
 
 Para configurar detalhes para o destino, preencha os campos abaixo.
 
 ![Imagem da interface do usuário da Platform mostrando os campos de dados do cliente para o destino Magnite DV+.](../../assets/catalog/advertising/liveramp-distribution/LR_MagniteDV_DestSpecific.png)
 
-* **[!UICONTROL ID do Parceiro]**: a ID do parceiro do projeto Rubicon associada ao publicador que é proprietário do segmento/dados. Entre em contato com o representante de conta do Projeto Rubicon se não tiver certeza do valor que deve usar.
+* **[!UICONTROL ID do Parceiro]**: a ID do parceiro do projeto Rubicon associada ao publicador que é proprietário do segmento/dados. Entre em contato com o(a) representante de conta da Rubicon Project se não tiver certeza do valor que deve usar.
 * **[!UICONTROL ID da vaga]**: Magnite DV+ ID da vaga fornecida pelo gerente de conta da Magnite
 
 ### [!DNL Nexxen (formerly known as [!DNL Amobee])] {#nexxen}
@@ -260,44 +260,44 @@ Para configurar detalhes para o destino, preencha os campos abaixo.
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_nexxen_ratetype"
 >title="Tipo de taxa"
->abstract="O tipo de taxa representa a forma como o uso de dados deve ser faturado. Todas as taxas de US$ 0,00 devem ser de taxa única. Confirme com seu representante da Nexxen se não tiver certeza de qual tipo de taxa usar."
+>abstract="O tipo de taxa representa a forma como o uso dos dados deve ser faturado. Todas as taxas de US$ 0,00 devem ser fixas. Consulte o(a) representante da Nexxen se não tiver certeza de qual tipo de taxa usar."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_nexxen_marketid"
 >title="ID de mercado"
->abstract="Insira a ID numérica do mercado onde o contrato de dados Nexxen deve ser criado. Se você estiver fazendo sindicalização &quot;AlwaysOn&quot; em todos os mercados na plataforma Nexxen, digite -1."
+>abstract="Insira a ID numérica de mercado onde o contrato de dados da Nexxen deve ser criado. Se estiver fazendo a distribuição “AlwaysOn” em todos os mercados na plataforma Nexxen, digite -1."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_nexxen_advertiserid"
->title="ID do anunciante"
->abstract="Se estiver enviando dados para um único anunciante na plataforma Nexxen, insira a ID numérica do anunciante da Adobe. Se você quiser disponibilizar os dados para todos os anunciantes em um mercado ou se esses segmentos forem &quot;AlwaysOn&quot;, digite -1."
+>title="ID de anunciante"
+>abstract="Se estiver enviando dados para um único anunciante na plataforma Nexxen, insira a ID numérica de anunciante da Amobee. Se quiser disponibilizar os dados para todos os anunciantes em um mercado ou se esses segmentos estiverem definidos como “AlwaysOn”, digite -1."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_nexxen_contactemail"
 >title="Email de contato"
->abstract="Insira o endereço de email que o Nexxen deve usar para enviar detalhes do contrato de dados. Provavelmente, esse é seu próprio endereço de email, mas também pode ser um alias de email. Para vários destinatários, separe usando vírgulas (`email1@domain.com`,`email2@domain.com`e assim por diante.)."
+>abstract="Insira o endereço de email que a Nexxen deve usar para enviar detalhes do contrato de dados. Esse provavelmente deve ser seu próprio endereço de email, mas também pode ser um alias de email. Para vários destinatários, separe-os usando vírgulas (`email1@domain.com`,`email2@domain.com` e assim por diante)."
 
 Para configurar detalhes para o destino, preencha os campos abaixo.
 
 ![Imagem da interface do usuário da Platform mostrando os campos de dados do cliente para o destino Nexxen.](../../assets/catalog/advertising/liveramp-distribution/LR_Nexxen_DestSpecific.png)
 
-* **[!UICONTROL Tipo de taxa]**: o tipo de taxa representa a maneira como o uso de dados deve ser faturado. Todas as taxas de US$ 0,00 devem ser de taxa única. Confirme com seu representante da Nexxen se não tiver certeza de qual tipo de taxa usar.
-* **[!UICONTROL ID de mercado]**: insira a ID numérica do mercado onde o contrato de dados Nexxen deve ser criado. Se você estiver fazendo sindicalização &quot;AlwaysOn&quot; em todos os mercados na plataforma Nexxen, digite -1.
+* **[!UICONTROL Tipo de taxa]**: o tipo de taxa representa a maneira como o uso de dados deve ser faturado. Todas as taxas de US$ 0,00 devem ser fixas. Consulte o(a) representante da Nexxen se não tiver certeza de qual tipo de taxa usar.
+* **[!UICONTROL ID de mercado]**: insira a ID numérica do mercado onde o contrato de dados Nexxen deve ser criado. Se estiver fazendo a distribuição “AlwaysOn” em todos os mercados na plataforma Nexxen, digite -1.
 * **[!UICONTROL ID do anunciante]**: se estiver enviando dados para um único anunciante na plataforma Nexxen, insira a ID numérica do anunciante Nexxen. Se quiser disponibilizar os dados para todos os anunciantes em um mercado ou se esses segmentos forem &quot;AlwaysOn&quot;, digite -1.
-* **[!UICONTROL Email de contato]**: insira o endereço de email que o Nexxen deve usar para enviar detalhes do contrato de dados. Provavelmente, esse é seu próprio endereço de email, mas também pode ser um alias de email. Para vários destinatários, separe usando vírgulas ( `email1@domain.com`, `email2@domain.com`).
+* **[!UICONTROL Email de contato]**: insira o endereço de email que o Nexxen deve usar para enviar detalhes do contrato de dados. Esse provavelmente deve ser seu próprio endereço de email, mas também pode ser um alias de email. Para vários destinatários, separe usando vírgulas ( `email1@domain.com`, `email2@domain.com`).
 
 ### [!DNL One Fox] {#fox}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_fox_client"
 >title="Cliente"
->abstract="O nome da sua empresa/conta de distribuição como você gostaria que ele aparecesse para o parceiro. Entre em contato com o representante de conta do parceiro se não tiver certeza sobre o nome a ser usado. Não use espaços ou caracteres especiais."
+>abstract="O nome da sua empresa/conta de distribuição que deseja exibir ao parceiro. Entre em contato com o(a) representante de conta do parceiro se não tiver certeza sobre qual nome usar. Não use espaços ou caracteres especiais."
 
 Para configurar detalhes para o destino, preencha os campos abaixo.
 
 ![Imagem da interface do usuário da Platform mostrando os campos de dados do cliente para o destino One Fox.](../../assets/catalog/advertising/liveramp-distribution/LR_Fox_DestSpecific.png)
 
-* **[!UICONTROL Cliente]**: o nome da sua empresa/conta de distribuição como você deseja que ele seja exibido para o parceiro. Use o nome da sua empresa por padrão. Entre em contato com o representante de conta do parceiro se não tiver certeza sobre o nome a ser usado. Não use espaços ou caracteres especiais.
+* **[!UICONTROL Cliente]**: o nome da sua empresa/conta de distribuição como você deseja que ele seja exibido para o parceiro. Use o nome da sua empresa por padrão. Entre em contato com o(a) representante de conta do parceiro se não tiver certeza sobre qual nome usar. Não use espaços ou caracteres especiais.
 
 ### [!DNL Pandora] {#pandora}
 
@@ -373,14 +373,14 @@ Para configurar detalhes para o destino, preencha os campos abaixo.
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_taboola_seg_type"
 >title="Tipo de segmento"
->abstract="O tipo de segmento. No momento, somente os segmentos primários são suportados."
+>abstract="O tipo de segmento. No momento, somente os segmentos primários são aceitos."
 
 Para configurar detalhes para o destino, preencha os campos abaixo.
 
 ![Imagem da interface do usuário da Platform mostrando os identificadores compatíveis com o destino do Tabola.](../../assets/catalog/advertising/liveramp-distribution/LR_Taboola_DestSpecific.png)
 
 * **[!UICONTROL Endereço de email do gerente de conta]**: O endereço de email do gerente de conta do Taboola.
-* **[!UICONTROL Tipo de segmento]**: o tipo de segmento. No momento, somente os segmentos primários são suportados.
+* **[!UICONTROL Tipo de segmento]**: o tipo de segmento. No momento, somente os segmentos primários são aceitos.
 
 ### [!DNL TargetSpot] {#targetspot}
 
@@ -399,7 +399,7 @@ Para configurar detalhes para o destino, preencha os campos abaixo.
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_teads_teadsid"
->title="ID de Teads"
+>title="ID do Teads"
 >abstract="Sua ID do Teads"
 
 Para configurar detalhes para o destino, preencha os campos abaixo.

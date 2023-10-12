@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Endpoint da API de Modelos de Consulta
 description: Este guia detalha as várias chamadas de API do modelo de consulta que você pode fazer usando a API do Serviço de consulta.
 exl-id: 14cd7907-73d2-478f-8992-da3bdf08eacc
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 958d5c322ff26f7372f8ab694a70ac491cbff56c
 workflow-type: tm+mt
-source-wordcount: '890'
-ht-degree: 4%
+source-wordcount: '969'
+ht-degree: 3%
 
 ---
 
@@ -42,7 +42,7 @@ Veja a seguir uma lista de parâmetros de consulta disponíveis para listar mode
 | --------- | ----------- |
 | `orderby` | Especifica o campo pelo qual ordenar resultados. Os campos compatíveis são `created` e `updated`. Por exemplo, `orderby=created` Os resultados serão classificados por criados em ordem crescente. Adicionar um `-` antes de criar (`orderby=-created`) classificará os itens por criados em ordem decrescente. |
 | `limit` | Especifica o limite de tamanho de página para controlar o número de resultados incluídos em uma página. (*Valor padrão: 20*) |
-| `start` | Desloca a lista de resposta, usando a numeração baseada em zero. Por exemplo, `start=2` retornará uma lista a partir da terceira consulta listada. (*Valor padrão: 0*) |
+| `start` | Especifique um carimbo de data e hora no formato ISO para ordenar os resultados. Se nenhuma data de início for especificada, a chamada à API retornará primeiro os modelos criados mais antigos e, em seguida, continuará a listar os resultados mais recentes.<br> Os carimbos de data e hora ISO permitem diferentes níveis de granularidade na data e hora. Os carimbos de data e hora ISO básicos têm o formato de: `2020-09-07` para expressar a data em 7 de setembro de 2020. Um exemplo mais complexo seria escrito como `2022-11-05T08:15:30-05:00` e corresponde a 5 de novembro de 2022, 8:15:30 da manhã, Hora Padrão do Leste dos EUA. Um fuso horário pode ser fornecido com um deslocamento UTC e é indicado pelo sufixo &quot;Z&quot; (`2020-01-01T01:01:01Z`). Se nenhum fuso horário for fornecido, o padrão será zero. |
 | `property` | Filtrar resultados com base em campos. Os filtros **deve** ser escapado por HTML. As vírgulas são usadas para combinar vários conjuntos de filtros. Os campos compatíveis são `name` e `userId`. O único operador compatível é `==` (igual a). Por exemplo, `name==my_template` retornará todos os modelos de consulta com o nome `my_template`. |
 
 **Solicitação**

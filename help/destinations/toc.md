@@ -4,9 +4,9 @@ user-guide-title: Guia de destinos
 user-guide-description: Ative seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas por email, publicidade direcionada e muito mais.
 description: Este documento lista o índice dos destinos do Adobe Experience Platform
 feature: Destinations
-source-git-commit: 77fd0ace252bae66478f73a1dc4b7d4a3ccb867d
+source-git-commit: c1f5c27a689e91b472d4e3c8e69e1637c12c37e4
 workflow-type: tm+mt
-source-wordcount: '1168'
+source-wordcount: '1170'
 ht-degree: 9%
 
 ---
@@ -158,6 +158,7 @@ ht-degree: 9%
       * [Conexão com as Tags do Aeróstato](./catalog/mobile-engagement/airship-tags.md)
       * [Conexão Braze](./catalog/mobile-engagement/braze.md)
       * [Conexão de linha](./catalog/mobile-engagement/line.md)
+      * [Conexão Moengage](./catalog/mobile-engagement/moengage.md)
    * Destinos de personalização {#personalization}
       * [Visão geral dos destinos de personalização](./catalog/personalization/overview.md)
       * [Conexão com o Adobe Commerce](./catalog/personalization/adobe-commerce.md)

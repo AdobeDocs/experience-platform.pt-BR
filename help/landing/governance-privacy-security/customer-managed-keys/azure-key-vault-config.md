@@ -1,9 +1,10 @@
 ---
 title: Configurar um Cofre de Chaves do Azure
 description: Saiba como criar uma nova conta corporativa com o Azure ou usar uma conta corporativa existente e criar o Cofre da Chave.
-source-git-commit: a0df05cde19e97d4abdad7abd19eafea8efe1096
+exl-id: 670e3ca3-a833-4b28-9ad4-73685fa5d74d
+source-git-commit: 4ec87482c5a38404217ecd910b6a27ee2d0e00eb
 workflow-type: tm+mt
-source-wordcount: '506'
+source-wordcount: '565'
 ht-degree: 0%
 
 ---
@@ -41,6 +42,12 @@ A partir daqui, continue percorrendo o fluxo de trabalho de criação do Cofre d
 Uma vez que você chegar ao **[!DNL Review + create]** etapa, você pode revisar os detalhes do Cofre da Chave enquanto ele passa pela validação. Depois que a validação for aprovada, selecione **[!DNL Create]** para concluir o processo.
 
 ![A página Verificar e criar cofres de chave do Microsoft Azure com Criar realçada.](../../images/governance-privacy-security/customer-managed-keys/finish-creation.png)
+
+## Configurar acesso {#configure-access}
+
+Em seguida, habilite o controle de acesso baseado em função do Azure para seu cofre de chaves. Selecionar **[!DNL Access configuration]** no [!DNL Settings] da navegação à esquerda, selecione **[!DNL Azure role-based access control]** para ativar a configuração. Essa etapa é essencial, pois o aplicativo CMK deve ser associado posteriormente a uma função do Azure. A atribuição de uma função está documentada no [API](./api-set-up.md#assign-to-role) e [IU](./ui-set-up.md#assign-to-role) fluxos de trabalho.
+
+![A variável [!DNL Microsoft Azure] painel com [!DNL Access configuration] e [!DNL Azure role-based access control] destacado.](../../images/governance-privacy-security/customer-managed-keys/access-configuration.png)
 
 ## Configurar opções de rede {#configure-network-options}
 

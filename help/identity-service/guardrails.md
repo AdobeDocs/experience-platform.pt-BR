@@ -3,9 +3,9 @@ keywords: Experience Platform;identidade;serviço de identidade;solução de pro
 title: Medidas de proteção do serviço de identidade
 description: Este documento fornece informações sobre limites de uso e taxa para dados do Serviço de identidade para ajudar você a otimizar o uso do gráfico de identidade.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: b78d1d00a42df8a703a4dd15959cf15b058e0b7a
+source-git-commit: 30e927ec78a953aae8ac90829ec8b3b0475c5db4
 workflow-type: tm+mt
-source-wordcount: '1073'
+source-wordcount: '1074'
 ht-degree: 1%
 
 ---
@@ -101,7 +101,7 @@ Entre em contato com a equipe de conta do Adobe para solicitar uma alteração n
 
 Quando esse recurso estiver disponível, os gráficos que excederem o limite de 50 identidades serão reduzidos para até 50 identidades. Para o Real-Time CDP B2C Edition, isso pode resultar em um aumento mínimo no número de perfis qualificados para um público-alvo, pois esses perfis foram ignorados anteriormente da Segmentação e Ativação.
 
-#### Perfil do cliente em tempo real: configuração de perfil pseudônimo
+#### Perfil do cliente em tempo real: impacto nos públicos endereçáveis
 
 A exclusão acontece somente com os dados no Serviço de identidade, não com o Perfil do cliente em tempo real.
 

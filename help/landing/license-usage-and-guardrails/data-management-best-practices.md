@@ -2,9 +2,9 @@
 title: Práticas recomendadas de direitos de licença de gerenciamento de dados
 description: Saiba mais sobre as práticas recomendadas e as ferramentas que você pode usar para gerenciar melhor seus direitos de licença na Adobe Experience Platform.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: 5f21d988d7947e64378dc6f35993f2a465ad1df6
 workflow-type: tm+mt
-source-wordcount: '2202'
+source-wordcount: '2287'
 ht-degree: 2%
 
 ---
@@ -94,6 +94,12 @@ Há várias ferramentas que você pode usar para manter os direitos de uso de li
 * [Filtros de assimilação](#ingestion-filters)
 * [Loja de perfis](#profile-service)
 
+### Serviço de identidade e público endereçável {#identity-service}
+
+Os gráficos de identidade não contam para o direito total de público endereçável, pois o público endereçável se refere à contagem total de perfis de clientes.
+
+No entanto, os limites do gráfico de identidade podem afetar seu público-alvo endereçável devido à divisão de identidades. Por exemplo, se a ECID mais antiga for removida do gráfico, a ECID continuará a existir no Perfil do cliente em tempo real como um perfil com pseudônimo. Você pode definir [Expirações de dados de perfil pseudônimo](../../profile/pseudonymous-profiles.md) para contornar esse comportamento. Para obter mais informações, leia a [medidas de proteção para dados do serviço de identidade](../../identity-service/guardrails.md).
+
 ### Filtros de assimilação {#ingestion-filters}
 
 Os filtros de assimilação permitem trazer apenas os dados necessários para os casos de uso e filtrar todos os eventos não necessários.
@@ -104,7 +110,7 @@ Os filtros de assimilação permitem trazer apenas os dados necessários para os
 | Preparação de dados do Adobe Analytics | Você pode usar [!DNL Data Prep] funcionalidades ao criar uma conexão de origem do Analytics para filtrar dados que não são necessários para seus casos de uso. Até [!DNL Data Prep], você pode definir quais atributos/colunas precisam ser publicados no Perfil. Você também pode fornecer declarações condicionais para informar à Platform se espera que os dados sejam publicados no Perfil ou apenas para o [!DNL data lake]. Consulte o guia sobre [criação de uma conexão de origem do Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md) para obter mais informações. |
 | Suporte para ativar/desativar conjuntos de dados para Perfil | Para assimilar dados no Perfil do cliente em tempo real, você deve habilitar um conjunto de dados para uso na loja de Perfis. Com isso, o adiciona à [!DNL Addressable Audience] e [!DNL Profile Richness] direitos. Assim que um conjunto de dados não for mais necessário para casos de uso de perfil do cliente, você poderá desativar a integração desse conjunto de dados com o Perfil para garantir que seus dados permaneçam em conformidade com a licença. Consulte o guia sobre [ativar e desativar conjuntos de dados para Perfil](../../catalog/datasets/enable-for-profile.md) para obter mais informações. |
 | Exclusão de dados do SDK da Web e SDK móvel | Há dois tipos de dados coletados pelo SDK da Web e móvel: dados coletados automaticamente e dados coletados explicitamente pelo desenvolvedor. Para gerenciar melhor a conformidade com a licença, você pode desativar a coleta automática de dados na configuração do SDK por meio da configuração de contexto. Os dados personalizados também podem ser removidos ou não definidos pelo desenvolvedor. Consulte o guia sobre [configuração dos fundamentos do SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=en#fundamentals) para obter mais informações. |
-| Exclusão de dados do encaminhamento pelo lado do servidor | Se estiver enviando dados para a Platform usando o encaminhamento pelo lado do servidor, você poderá excluir quais dados são enviados removendo o mapeamento em uma ação de regra para excluí-los em todos os eventos ou adicionando condições à regra para que os dados só sejam acionados para determinados eventos. Consulte a documentação em [eventos e condições](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/rules.html#events-and-conditions-(if)) para obter mais informações. |
+| Exclusão de dados do encaminhamento pelo lado do servidor | Se estiver enviando dados para a Platform usando o encaminhamento pelo lado do servidor, você poderá excluir quais dados são enviados removendo o mapeamento em uma ação de regra para excluí-los em todos os eventos ou adicionando condições à regra para que os dados só sejam acionados para determinados eventos. Consulte a documentação em [eventos e condições](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/rules.html#events-and-conditions-(if) para obter mais informações. |
 | Filtrar dados no nível da origem | Você pode usar operadores lógicos e de comparação para filtrar dados em nível de linha de suas fontes antes de criar uma conexão e assimilar dados no Experience Platform. Para obter mais informações, leia o guia em [filtragem de dados em nível de linha para uma origem usando o [!DNL Flow Service] API](../../sources/tutorials/api/filter.md). |
 
 {style="table-layout:auto"}

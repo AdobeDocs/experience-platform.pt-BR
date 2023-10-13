@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Expiração de dados do perfil pseudônimo
 description: Este documento fornece orientação geral sobre como configurar a expiração de dados para Perfis pseudônimos no Adobe Experience Platform.
 exl-id: e8d31718-0b50-44b5-a15b-17668a063a9c
-source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
+source-git-commit: b6a79952d616a6f8e6ea4b2341c24d74c482c4b8
 workflow-type: tm+mt
-source-wordcount: '923'
+source-wordcount: '987'
 ht-degree: 0%
 
 ---
@@ -80,3 +80,8 @@ Para um caso de uso típico, você pode definir a expiração de dados do evento
 - Isso é **não** um trabalho de limpeza único. A expiração de dados de perfil pseudônimo será executada continuamente uma vez por dia e excluirá os perfis que correspondem à entrada do cliente.
 - **Todos** Os perfis definidos como perfis pseudônimos serão afetados pela expiração dos dados do perfil pseudônimo. Ele faz **não** importante se o perfil for somente Evento de experiência ou se contiver apenas atributos de perfil.
 - Essa limpeza **somente** ocorrer no Perfil. O Serviço de identidade pode continuar mostrando as identidades excluídas no gráfico após a limpeza nos casos em que o perfil tem duas ou mais identidades com pseudônimos associadas (como `AAID` e `ECID`). Esta discrepância será abordada num futuro próximo.
+
+### Como a expiração de dados de perfis pseudônimos interage com as medidas de proteção para dados do Serviço de identidade?
+
+- O serviço de identidade [sistema de exclusão &quot;primeiro a entrar, primeiro a sair&quot;](../identity-service/guardrails.md) O pode excluir ECIDs do gráfico de identidade, que são armazenados no Serviço de identidade.
+- Se esse comportamento de exclusão resultar no armazenamento de um perfil somente ECID no Perfil do cliente em tempo real (Loja de perfil), a expiração dos dados de perfil pseudônimo excluirá esse perfil da Loja de perfil.

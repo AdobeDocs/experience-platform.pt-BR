@@ -2,9 +2,9 @@
 title: Visão geral da extensão da API de meta conversões
 description: Saiba mais sobre a extensão da API de meta conversões para encaminhamento de eventos no Adobe Experience Platform.
 exl-id: 6b5836d6-6674-4978-9165-0adc1d7087b7
-source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+source-git-commit: d55398f328f3f85ce6b32a2553e7a93df3584f02
 workflow-type: tm+mt
-source-wordcount: '2370'
+source-wordcount: '2624'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ Para instalar o [!DNL Meta Conversions API] , navegue até a interface da Coleç
 
 Depois de selecionar ou criar a propriedade desejada, selecione **[!UICONTROL Extensões]** na navegação à esquerda, selecione o **[!UICONTROL Catálogo]** guia. Procure por [!UICONTROL API de meta conversões] e selecione **[!UICONTROL Instalar]**.
 
-![A variável [!UICONTROL Instalar] botão que está sendo selecionado para o [!UICONTROL API de meta conversões] na interface da Coleção de dados.](../../../images/extensions/server/meta/install.png)
+![A variável [!UICONTROL Instalar] opção selecionada para a variável [!UICONTROL API de meta conversões] na interface da Coleção de dados.](../../../images/extensions/server/meta/install.png)
 
 Na visualização de configuração exibida, você deve fornecer a [!DNL Pixel] ID que você copiou anteriormente para vincular a extensão à sua conta. Você pode colar a ID diretamente na entrada ou usar um elemento de dados.
 
@@ -46,6 +46,30 @@ Quando terminar, selecione **[!UICONTROL Salvar]**
 ![A variável [!DNL Pixel] A ID fornecida como um elemento de dados na visualização de configuração de extensão.](../../../images/extensions/server/meta/configure.png)
 
 A extensão é instalada e agora você pode empregar seus recursos nas regras de encaminhamento de eventos.
+
+## Integração com o Meta Business Extension (MBE) {#mbe}
+
+A integração com o aprimoramento Meta Business Extensions (MBE) permite a autenticação rápida em sua conta Meta Business. Em seguida, preenche automaticamente o [!UICONTROL ID de pixel] e a API de meta conversões [!UICONTROL Token de acesso], facilitando a instalação e a configuração da API de metaconversões.
+
+Um prompt da caixa de diálogo para autenticar no MBE é exibido ao instalar o [!UICONTROL API de meta conversões] extensão.
+
+![A variável [!UICONTROL Extensão da API de meta conversões] realce da página de instalação [!UICONTROL Conectar ao Meta].](../../../images/extensions/server/meta/mbe-extension-install.png)
+
+Um prompt da caixa de diálogo para autenticar no MBE também aparece na interface do fluxo de trabalho de início rápido no encaminhamento de eventos.
+
+![Destaque da interface de fluxo de trabalho de início rápido [!UICONTROL Conectar ao Meta].](../../../images/extensions/server/meta/mbe-extension-quick-start.png)
+
+## Integração com a Pontuação de correspondência de qualidade do evento (EMQ) {#emq}
+
+A integração com a Pontuação de correspondência de qualidade do evento (EMQ) permite visualizar facilmente a eficácia da implementação ao mostrar pontuações da EMQ. Essa integração minimiza a alternância de contexto e ajuda a melhorar o sucesso das implementações da API de Meta Conversões. Essas pontuações de evento aparecem na variável [!UICONTROL Extensão da API de meta conversões] tela de configuração.
+
+![A variável [!UICONTROL Extensão da API de meta conversões] realce da página de configuração [!UICONTROL Exibir pontuação EMQ].](../../../images/extensions/server/meta/emq-score.png)
+
+## Integração com o LiveRamp (Alpha) {#alpha}
+
+A integração com o LiveRamp adiciona novos campos à configuração de regras da API de meta conversões, facilitando a integração dos clientes com a API de conversões do LiveRamp. Essa integração elimina a necessidade de compartilhar PII diretamente com seu parceiro ou Meta. Devido ao gráfico de identidade robusto do LiveRamp, a inclusão de [!UICONTROL ID do parceiro (alfa)] podem melhorar a qualidade da integração, aumentando a taxa de correspondência do usuário.
+
+![O encaminhamento de meta evento [!UICONTROL Regra] realce da página de configuração [!UICONTROL Nome do parceiro (alfa)] e [!UICONTROL ID do parceiro (alfa)].](../../../images/extensions/server/meta/live-ramp.png)
 
 ## Configurar uma regra de encaminhamento de eventos {#rule}
 

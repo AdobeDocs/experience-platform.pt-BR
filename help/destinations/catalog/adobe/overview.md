@@ -3,9 +3,9 @@ keywords: destinos;soluções da experience cloud; target;destino do target; ad 
 title: Visão geral dos destinos de Adobe
 description: Gerencie a experiência do cliente conectando seus dados na Platform a outras soluções da Adobe Experience Cloud para direcionamento de anúncios, personalização, automação de marketing e muito mais
 exl-id: 15a22a93-b4d6-4b94-bc6c-3634920c7689
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 461545b7d06a4c54fb4037cf1eb2ba44dd6ee7b9
 workflow-type: tm+mt
-source-wordcount: '234'
+source-wordcount: '231'
 ht-degree: 12%
 
 ---
@@ -35,7 +35,6 @@ Para entender a diferença entre conexões e extensões, consulte [Conexões](..
 
 * [Extensão do Adobe Advertising Cloud](../advertising/adobe-advertising-cloud.md)
 * [Extensão do Adobe Analytics](../analytics/adobe-analytics.md)
-* [Extensão Adobe Livefyre](../social/adobe-livefyre.md)
 * [Extensão Adobe Media Analytics for Audio and Video](../analytics/adobe-video-analytics.md)
 * [Extensão do Adobe Target](../personalization/adobe-target.md)
 * [Extensão do Adobe Target v2](../personalization/adobe-target-v2.md)

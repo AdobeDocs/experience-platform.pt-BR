@@ -4,9 +4,9 @@ user-guide-title: Guia de destinos
 user-guide-description: Ative seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas por email, publicidade direcionada e muito mais.
 description: Este documento lista o índice dos destinos do Adobe Experience Platform
 feature: Destinations
-source-git-commit: c1f5c27a689e91b472d4e3c8e69e1637c12c37e4
+source-git-commit: 461545b7d06a4c54fb4037cf1eb2ba44dd6ee7b9
 workflow-type: tm+mt
-source-wordcount: '1170'
+source-wordcount: '1167'
 ht-degree: 9%
 
 ---
@@ -176,7 +176,6 @@ ht-degree: 9%
       * [Conexão do Pega Profile](./catalog/personalization/pega-profile.md)
    * Destinos sociais{#social}
       * [Visão geral de destinos sociais](./catalog/social/overview.md)
-      * [Extensão Adobe Livefyre](./catalog/social/adobe-livefyre.md)
       * [Conexão com o facebook](./catalog/social/facebook.md)
       * [Conexão de Públicos-alvo correspondentes do linkedIn](./catalog/social/linkedin.md)
       * [Conexão com o TikTok](./catalog/social/tiktok.md)

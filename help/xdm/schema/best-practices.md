@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Práticas Recomendadas Para Modelagem De Dados
 description: Este documento fornece uma introdução aos esquemas do Experience Data Model (XDM) e aos componentes, princípios e práticas recomendadas para a composição de esquemas a serem usados no Adobe Experience Platform.
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
-source-git-commit: 55f86fdd4fd36d21dcbd575d6da83df18abb631d
+source-git-commit: 4e87471dcfc99ff70a0d91245821e7f974973b49
 workflow-type: tm+mt
-source-wordcount: '2709'
+source-wordcount: '3044'
 ht-degree: 1%
 
 ---
@@ -228,6 +228,16 @@ Para o Adobe Analytics, a ECID é a identidade principal padrão. Se um valor de
 >[!IMPORTANT]
 >
 >Ao usar grupos de campos de aplicativo Adobe, nenhum outro campo deve ser marcado como a identidade principal. Se houver propriedades adicionais que precisam ser marcadas como identidades, esses campos precisam ser atribuídos como identidades secundárias.
+
+## Campos de validação de dados {#data-validation-fields}
+
+Para evitar que dados desnecessários sejam assimilados na Platform, é recomendável definir os critérios de validação em nível de campo ao criar seus esquemas. Para definir restrições em um campo específico, selecione o campo no Editor de esquemas para abrir a variável [!UICONTROL Propriedades do campo] barra lateral. Consulte a documentação em [propriedades do campo específico do tipo](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/fields/overview.html?lang=en#type-specific-properties) para obter descrições exatas dos campos disponíveis.
+
+![O Editor de esquemas com os campos de restrição realçados no [!UICONTROL Propriedades do campo] barra lateral.](../images/best-practices/data-validation-fields.png)
+
+>[!TIP]
+>
+>Veja a seguir uma coleção de sugestões para modelagem de dados ao criar um schema:<br><ul><li>**Considerar identidades primárias**: para produtos Adobe, como SDK da Web, SDK móvel, Adobe Analytics e Adobe Journey Optimizer, o `identityMap` O campo geralmente serve como a identidade principal. Evite designar campos adicionais como identidades primárias para esse esquema.</li><li>**Evite usar `_id` como uma identidade**: Evite usar o `_id` em Esquemas de evento de experiência como uma identidade. Destina-se a registrar a exclusividade, não para uso como identidade.</li><li>**Definir restrições de comprimento**: É prática recomendada definir comprimentos mínimos e máximos em campos marcados como identidades. Essas limitações ajudam a manter a consistência e a qualidade dos dados.</li><li>**Aplicar padrões para valores consistentes**: Se os valores de identidade seguirem um padrão específico, use o [!UICONTROL Padrão] configuração para aplicar essa restrição. Essa configuração pode incluir regras como somente dígitos, maiúsculas ou minúsculas ou combinações de caracteres específicas. Use expressões regulares para corresponder padrões em suas cadeias de caracteres.</li><li>**Limitar eVars no esquema do Analytics**: Normalmente, um esquema do Analytics deve ter apenas um eVar designado como uma identidade. Se você pretende usar mais de um eVar como identidade, verifique novamente se a estrutura de dados pode ser otimizada.</li><li>**Garantir a exclusividade de um campo selecionado**: o campo escolhido deve ser exclusivo em comparação à identidade principal no esquema. Se não estiver, não marque-a como uma identidade. Por exemplo, se vários clientes puderem fornecer o mesmo endereço de email, esse namespace não será uma identidade adequada. Esse princípio também se aplica a outros namespaces de identidade, como números de telefone.</li></ul>
 
 ## Próximas etapas
 

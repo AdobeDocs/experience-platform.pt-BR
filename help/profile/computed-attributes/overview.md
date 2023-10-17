@@ -1,13 +1,13 @@
 ---
 title: Visão geral dos atributos computados
 description: Os atributos computados são funções para agregar dados de nível de evento em atributos de nível de perfil. Essas funções são computadas automaticamente para que possam ser usadas na segmentação, ativação e personalização.
-source-git-commit: 7ed473750b673eefd84b8d727043ad6ea35c3a8e
+exl-id: 13878363-589d-4a3c-811c-21d014a5f3c2
+source-git-commit: 03f1dfab768e98ef4959d605cc3ead25bb5eb238
 workflow-type: tm+mt
-source-wordcount: '1059'
-ht-degree: 1%
+source-wordcount: '1140'
+ht-degree: 4%
 
 ---
-
 
 # Visão geral de atributos computados
 
@@ -56,7 +56,7 @@ Os atributos computados permitem definir agregações de eventos de maneira auto
 
 ### Períodos de pesquisa
 
-Os atributos calculados são calculados em lotes, permitindo que você mantenha suas agregações atualizadas e use os eventos mais recentes. Para oferecer suporte a esses cenários quase em tempo real, a frequência de atualização varia dependendo do período de retrospectiva do evento.
+Os atributos calculados são calculados em lotes, permitindo que você mantenha suas agregações atualizadas e use os eventos mais recentes. Para oferecer suporte a esses cenários com atraso mínimo, a frequência de atualização varia dependendo do período de retrospectiva do evento.
 
 O período de lookback se refere à quantidade de tempo revisada ao agregar Eventos de experiência para o atributo calculado. Esse período pode ser definido em horas, dias, semanas ou meses.
 
@@ -73,11 +73,13 @@ Por exemplo, se o atributo calculado tiver um período de lookback dos últimos 
 
 >[!NOTE]
 >
->As semanas e os meses são considerados **semanas do calendário** e **meses do calendário** quando usado em retrospectivas de evento. A semana do calendário começa na **domingo** e termina no **Sábado** da semana.
+>As semanas e os meses são considerados **semanas do calendário** e **meses do calendário** quando usado em retrospectivas de evento. A semana do calendário começa na **domingo** e termina no **Sábado** da semana. O mês do calendário começa no dia **primeiro** do mês e termina no dia **último dia** do mês.
+
+O período de pesquisa para atributos calculados é um **rolagem** período de pesquisa. Por exemplo, se uma primeira avaliação ocorrer em 15 de outubro às 12h00 UTC, o período de lookback de duas semanas recuperará todos os eventos de 1º de outubro a 15 de outubro, atualizará no horário de uma semana em 22 de outubro e recuperará todos os eventos de 8 a 22 de outubro.
 
 **Atualização rápida** {#fast-refresh}
 
-A atualização rápida permite manter seus atributos atualizados. Ativar essa opção permite atualizar os atributos calculados diariamente, mesmo por períodos de lookback mais longos, permitindo que você reaja rapidamente às atividades do usuário.
+A atualização rápida permite manter seus atributos atualizados. Habilitar essa opção possibilita atualizar os atributos calculados diariamente, mesmo para períodos de retrospectiva mais longos, permitindo reagir rapidamente às atividades do usuário ou usuária.
 
 >[!NOTE]
 >

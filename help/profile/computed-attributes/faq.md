@@ -1,13 +1,13 @@
 ---
 title: Perguntas frequentes sobre atributos computados
 description: Descubra respostas para perguntas frequentes sobre o uso de atributos computados.
-source-git-commit: 631b67eb6609381235113009acefaf0d0cd8063c
+exl-id: a4d3c06a-d135-453b-9637-4f98e62737a7
+source-git-commit: 48c728c183d6ad28cd291543a79902b16a247a5a
 workflow-type: tm+mt
-source-wordcount: '870'
+source-wordcount: '1092'
 ht-degree: 0%
 
 ---
-
 
 # Perguntas frequentes
 
@@ -25,9 +25,9 @@ Os atributos computados consideram conjuntos de dados de Evento de experiência 
 
 Todos os campos XDM no esquema de união do Evento de experiência podem ser usados para criar atributos calculados.
 
-## O que representa o &quot;último horário de avaliação&quot;?
+## O que &quot;última avaliação&quot; e &quot;último status de avaliação&quot; representam?
 
-O último horário de avaliação significa que os eventos **anterior** para esse carimbo de data e hora foram considerados na última atualização bem-sucedida do atributo calculado.
+Última avaliação refere-se ao carimbo de data e hora até o qual os eventos são considerados na última execução bem-sucedida. O status da última avaliação refere-se a se a última execução de avaliação foi ou não bem-sucedida.
 
 ## Posso escolher a frequência de atualização? Como isso é decidido?
 
@@ -65,9 +65,25 @@ Os atributos computados impulsionam o enriquecimento do perfil ao agregar os atr
 
 ## Com que frequência os atributos calculados são avaliados? Isso está relacionado ao cronograma de avaliação do público-alvo?
 
-Os atributos calculados são avaliados em lotes independentemente do agendamento de segmentação. Isso significa que, independentemente do tipo de segmentação (segmentação em lote ou segmentação por transmissão), o atributo calculado será avaliado em seu próprio agendamento (por hora, dia, semana ou mês).
+Os atributos computados são avaliados em um **lote** frequência que é **independente** à programação do público-alvo, destino e avaliação da jornada. Isso significa que, independentemente do tipo de segmentação (segmentação em lote ou segmentação por transmissão), o atributo calculado será avaliado em seu próprio agendamento (por hora, dia, semana ou mês).
 
-Quando o público for avaliado, ele usará a variável **mais recente** valor do atributo calculado disponível.
+A primeira avaliação do atributo calculado ocorre dentro das 24 horas após o **criação**. As avaliações subsequentes em lote ocorrem de hora em hora, dia, semana ou mês, dependendo do período de pesquisa definido.
+
+Por exemplo, se uma primeira avaliação ocorrer às 12h00 UTC de 9 de outubro, as avaliações subsequentes ocorrerão nos seguintes horários:
+
+- Próxima atualização diária: 12:00 UTC de 10 de outubro
+- Próxima atualização semanal: 12:00 UTC de 15 de outubro
+- Próxima atualização mensal: 12h UTC de 1º de novembro
+
+>[!IMPORTANT]
+>
+>Esse é o caso somente se a atualização rápida for **não** ativado. Para saber como o período de lookback muda quando a atualização rápida está habilitada, leia o [seção atualização rápida](./overview.md#fast-refresh).
+
+Ambos os **semanalmente** e **mensal** as atualizações ocorrem no início do **semana do calendário** (o domingo da nova semana) ou no início do período de **mês do calendário** (o primeiro do novo mês), em vez de exatamente uma semana ou um mês após a primeira data de avaliação.
+
+>[!NOTE]
+>
+>O valor do atributo calculado é **não** atualizado imediatamente no perfil após cada execução de avaliação. Para garantir que o valor atualizado esteja em seus perfis, você deve considerar um buffer de algumas horas entre o tempo de avaliação e o uso do atributo calculado. O agendamento de atualização de atributo calculado é **determinado pelo sistema** e **não é possível** ser modificadas. Para obter mais informações, entre em contato com o Atendimento ao cliente da Adobe.
 
 ## Como os atributos computados interagem com os públicos avaliados usando a segmentação por transmissão?
 

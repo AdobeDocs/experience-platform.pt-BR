@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform Identity Service
 breadcrumb-title: Guia do Serviço de identidade do Platform
 user-guide-description: Une as identidades dos clientes em todos os dispositivos e sistemas para entregar experiências digitais personalizadas.
 feature: Identities
-source-git-commit: 2617d913d73dcd7dd877fe877a7b2b4d79396a5f
+source-git-commit: 03228eef47100096e98666966c4e5065eb7f478a
 workflow-type: tm+mt
-source-wordcount: '112'
-ht-degree: 32%
+source-wordcount: '129'
+ht-degree: 27%
 
 ---
 
@@ -30,6 +30,11 @@ ht-degree: 32%
    - [Visualizador de gráficos de identidade](ui/identity-graph-viewer.md)
    - [Detecção de dispositivo compartilhado](ui/shared-device-detection.md)
    - [Definir campos de identidade na interface](ui/label-identities.md)
+- [Regras de vinculação do gráfico de identidade] {#identity-graph-linking-rules}
+   - [Visão geral do recurso](./identity-graph-linking-rules/overview.md)
+   - [Exemplos de cenários](./identity-graph-linking-rules/example-scenarios.md)
+   - [Serviço de identidade e perfil do cliente em tempo real](./identity-graph-linking-rules/identity-and-profile.md)
+   - [Lógica de vinculação de identidade](./identity-graph-linking-rules/identity-linking-logic.md)
 - [Visão geral da ECID](ecid.md)
 - [Exclusões no serviço de identidade](deletion.md)
 - [Processamento de solicitação de privacidade](privacy.md)

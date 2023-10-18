@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Restrições de tipo de campo XDM
 description: Uma referência para restrições de tipo de campo no Experience Data Model (XDM), incluindo os outros formatos de serialização aos quais eles podem ser mapeados e como definir seus próprios tipos de campo na API.
 exl-id: 63839a28-6d26-46f1-8bbf-b524e82ac4df
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: 88caea133bd2bf994587bda5b31cddd22f2c90cb
 workflow-type: tm+mt
 source-wordcount: '654'
 ht-degree: 5%
@@ -49,7 +49,7 @@ A tabela a seguir descreve como cada tipo de XDM é representado no Esquema JSON
       <td><code>"Platinum"</code></td>
     </tr>
     <tr>
-      <td>[!UICONTROL Duplo]</td>
+      <td>[!UICONTROL Número]</td>
       <td>
         <pre class="JSON language-JSON hljs">
 {"type": "number"}</pre>
@@ -136,7 +136,7 @@ As seções abaixo descrevem como cada tipo de XDM é mapeado para outros format
 | Tipo XDM | Parquet | Spark SQL | Java |
 | --- | --- | --- | --- |
 | [!UICONTROL String] | Tipo: `BYTE_ARRAY`<br>Anotação: `UTF8` | `StringType` | `java.lang.String` |
-| [!UICONTROL Duplo] | Tipo: `DOUBLE` | `LongType` | `java.lang.Double` |
+| [!UICONTROL Número] | Tipo: `DOUBLE` | `LongType` | `java.lang.Double` |
 | [!UICONTROL Longo] | Tipo: `INT64` | `LongType` | `java.lang.Long` |
 | [!UICONTROL Número inteiro] | Tipo: `INT32`<br>Anotação: `INT_32` | `IntegerType` | `java.lang.Integer` |
 | [!UICONTROL Short] | Tipo: `INT32`<br>Anotação: `INT_16` | `ShortType` | `java.lang.Short` |
@@ -153,7 +153,7 @@ As seções abaixo descrevem como cada tipo de XDM é mapeado para outros format
 | Tipo XDM | Scala | .NET | CosmosDB |
 | --- | --- | --- | --- |
 | [!UICONTROL String] | `String` | `System.String` | `String` |
-| [!UICONTROL Duplo] | `Double` | `System.Double` | `Number` |
+| [!UICONTROL Número] | `Double` | `System.Double` | `Number` |
 | [!UICONTROL Longo] | `Long` | `System.Int64` | `Number` |
 | [!UICONTROL Número inteiro] | `Int` | `System.Int32` | `Number` |
 | [!UICONTROL Short] | `Short` | `System.Int16` | `Number` |
@@ -170,7 +170,7 @@ As seções abaixo descrevem como cada tipo de XDM é mapeado para outros format
 | Tipo XDM | MongoDB | Aerospike | Protobuf 2 |
 | --- | --- | --- | --- |
 | [!UICONTROL String] | `string` | `String` | `string` |
-| [!UICONTROL Duplo] | `double` | `Double` | `double` |
+| [!UICONTROL Número] | `double` | `Double` | `double` |
 | [!UICONTROL Longo] | `long` | `Integer` | `int64` |
 | [!UICONTROL Número inteiro] | `int` | `Integer` | `int32` |
 | [!UICONTROL Short] | `int` | `Integer` | `int32` |

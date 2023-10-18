@@ -3,14 +3,19 @@ title: Lógica de vinculação do serviço de identidade
 description: Saiba mais sobre como o Serviço de identidade vincula identidades diferentes para criar uma visualização abrangente de um cliente.
 hide: true
 hidefromtoc: true
-source-git-commit: 03228eef47100096e98666966c4e5065eb7f478a
+badge: Alfa
+source-git-commit: 03e4cd440f8627ad837a31e1c017d0b824cafb04
 workflow-type: tm+mt
-source-wordcount: '774'
+source-wordcount: '791'
 ht-degree: 4%
 
 ---
 
 # Lógica de vinculação do Serviço de identidade
+
+>[!IMPORTANT]
+>
+>As regras de vinculação do gráfico de identidade estão atualmente em Alpha. O recurso e a documentação estão sujeitos a alterações.
 
 Um link entre duas identidades é estabelecido quando o namespace de identidade e os valores de identidade são correspondentes.
 

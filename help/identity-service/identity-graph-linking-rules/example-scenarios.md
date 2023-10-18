@@ -3,17 +3,21 @@ title: Exemplos De Cenários Para Definir Configurações De Identidade
 description: Saiba mais sobre exemplos de cenários para definir configurações de identidade.
 hide: true
 hidefromtoc: true
-source-git-commit: bde6c96bf72bb948c149bf5dc8d35591f2586887
+badge: Alfa
+source-git-commit: 03e4cd440f8627ad837a31e1c017d0b824cafb04
 workflow-type: tm+mt
-source-wordcount: '416'
+source-wordcount: '433'
 ht-degree: 1%
 
 ---
 
 # Exemplos de cenários para configurar regras de vinculação de gráficos de identidade
 
-Este documento descreve cenários de exemplo que você pode considerar ao configurar regras de vinculação de gráficos de identidade.
+>[!IMPORTANT]
+>
+>As regras de vinculação do gráfico de identidade estão atualmente em Alpha. O recurso e a documentação estão sujeitos a alterações.
 
+Este documento descreve cenários de exemplo que você pode considerar ao configurar regras de vinculação de gráficos de identidade.
 
 ## Dispositivo compartilhado
 

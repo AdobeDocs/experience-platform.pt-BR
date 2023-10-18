@@ -4,9 +4,9 @@ title: Ativar públicos para destinos de exportação de perfil em lote
 type: Tutorial
 description: Saiba como ativar os públicos-alvo no Adobe Experience Platform enviando-os para destinos com base em perfil de lote.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: a81daa2a929505a934910892a4ad9c73e603ed9b
+source-git-commit: a854960b11cb3e56046dc9541f76c62a7e3f2f10
 workflow-type: tm+mt
-source-wordcount: '3710'
+source-wordcount: '3720'
 ht-degree: 11%
 
 ---
@@ -413,8 +413,10 @@ Devido a uma limitação conhecida, não é possível usar o **[!UICONTROL Selec
 ![Gravação de tela mostrando a solução alternativa de associação de público na etapa de mapeamento do fluxo de trabalho de ativação.](../assets/ui/activate-batch-profile-destinations/segment-membership-mapping-step.gif)
 
 As exportações de arquivos variam das seguintes maneiras, dependendo se `segmentMembership.status` está selecionado:
-* Se a variável `segmentMembership.status` for selecionado, os arquivos exportados serão **[!UICONTROL Ativo]** membros no instantâneo completo inicial e **[!UICONTROL Ativo]** e **[!UICONTROL Expirado]** membros em exportações incrementais subsequentes.
+* Se a variável `segmentMembership.status` for selecionado, os arquivos exportados serão **[!UICONTROL Ativo]** membros no instantâneo completo inicial e em eventos **[!UICONTROL Ativo]** e **[!UICONTROL Expirado]** membros em exportações incrementais subsequentes.
 * Se a variável `segmentMembership.status` não estiver selecionado, os arquivos exportados incluirão apenas **[!UICONTROL Ativo]** membros no instantâneo completo inicial e em exportações incrementais subsequentes.
+
+Leia mais sobre [comportamento de exportação de perfil para destinos baseados em arquivo](/help/destinations/how-destinations-work/profile-export-behavior.md#file-based-destinations).
 
 #### Os namespaces de identidade não podem ser selecionados atualmente para exportações
 

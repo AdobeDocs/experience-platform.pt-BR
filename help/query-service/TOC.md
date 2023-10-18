@@ -4,10 +4,10 @@ user-guide-title: Ajuda do Serviço de consulta da Adobe Experience Platform
 breadcrumb-title: Guia do Serviço de consulta
 user-guide-description: Use o SQL padrão para consultar dados no data lake na Experience Platform.
 feature: Queries
-source-git-commit: a74ec87c27d3db3bcd8d0a5075a593535e3c4de1
+source-git-commit: 6c3c5e3a87773f9f58a5d61bd4bef19f4cdc2e96
 workflow-type: tm+mt
-source-wordcount: '280'
-ht-degree: 20%
+source-wordcount: '311'
+ht-degree: 18%
 
 ---
 
@@ -29,10 +29,17 @@ ht-degree: 20%
       - [Visão geral](data-distiller/derived-attributes/overview.md)
       - [Fluxo SQL contínuo](data-distiller/derived-attributes/seamless-sql-flow.md)
       - [Criar atributos derivados baseados em decil](data-distiller/derived-attributes/decile-based-derived-attributes.md)
+   - Pipelines de recursos de IA/ML {#ml-feature-pipelines}
+      - [Pipelines de recursos de IA/ML](data-distiller/ml-feature-pipelines/overview.md)
+      - [Conectar-se aos Jupyter Notebooks](data-distiller/ml-feature-pipelines/establish-connection.md)
+      - [Análise exploratória de dados](data-distiller/ml-feature-pipelines/exploratory-analysis.md)
+      - [Recursos do engenheiro para ML](data-distiller/ml-feature-pipelines/feature-engineering.md)
+      - [Exportar dados para ambientes ML](data-distiller/ml-feature-pipelines/export-data.md)
+      - [Fluxo de trabalho completo de enriquecimento do pipeline de dados de IA/ML](data-distiller/ml-feature-pipelines/end-to-end-notebook-workflow.md)
 - Casos de uso {#use-cases}
    - [Navegação abandonada](use-cases/abandoned-browse.md)
    - [Análise de atribuição](use-cases/attribution-analysis.md)
-   - [Filtragem de bot](use-cases/bot-filtering.md)
+   - [Filtragem de bots](use-cases/bot-filtering.md)
    - [Criar um relatório de tendências de eventos](use-cases/trended-report-of-events.md)
    - [Análise de consentimento](use-cases/consent-analysis.md)
    - [Valor vitalício do cliente](use-cases/customer-lifetime-value.md)

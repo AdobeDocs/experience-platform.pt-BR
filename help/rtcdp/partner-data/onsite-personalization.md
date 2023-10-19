@@ -2,10 +2,10 @@
 title: Use o reconhecimento de visitante com auxílio de parceiros para personalizar experiências no site
 description: Saiba como usar o reconhecimento de visitante com auxílio de parceiros para fornecer experiências de site personalizadas para visitantes.
 exl-id: 99677988-1df8-47b1-96b1-0ef6db818a1d
-source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+source-git-commit: de8aeb553066405424711e75480204f6136b52ff
 workflow-type: tm+mt
-source-wordcount: '2548'
-ht-degree: 97%
+source-wordcount: '2580'
+ht-degree: 95%
 
 ---
 
@@ -248,9 +248,13 @@ Insira `interact` na caixa de pesquisa, atualize a página e você deverá ver c
 
 Agora você está pronto para criar e ativar públicos-alvo para personalização.
 
-#### Configurar a segmentação de borda
+#### Criar público-alvo e configurar a segmentação de borda
 
-Configure a [segmentação de borda](/help/segmentation/ui/edge-segmentation.md) para que a associação de público-alvo de visitantes seja avaliada em tempo real, à medida que visitam sua propriedade da web.
+Na interface da Platform, navegue até **[!UICONTROL Cliente]** > **[!UICONTROL Públicos-alvo]** e crie um público-alvo para capturar os visitantes do site.
+
+![Exibição de como navegar até públicos.](/help/rtcdp/assets/partner-data/onsite-personalization/navigate-to-audiences.png)
+
+Você deve configurar seu público com [segmentação de borda](/help/segmentation/ui/edge-segmentation.md) portanto, a associação de público-alvo de seus visitantes é avaliada em tempo real, à medida que eles visitam sua propriedade da web.
 
 Configure também uma [política de mesclagem ativa na borda](/help/destinations/ui/activate-edge-personalization-destinations.md#create-merge-policy) para os públicos-alvo de borda.
 

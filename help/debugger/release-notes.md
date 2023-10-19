@@ -4,14 +4,34 @@ description: As notas de versão mais recentes do Adobe Experience Platform Debu
 keywords: depurador;extensão do Experience Platform Debugger;chrome;extensão;notas de versão
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 70abe974aa7f94ea172d7ab90aacaf765b88de0e
 workflow-type: tm+mt
-source-wordcount: '429'
+source-wordcount: '526'
 ht-degree: 2%
 
 ---
 
 # Notas de versão do Adobe Experience Platform Debugger
+
+## Versão 1.5.0 - 19 de outubro de 2023
+
+### Novos recursos
+
+* Mostrar links para a propriedade, o ambiente e as regras no resumo e nos logs das tags.
+
+### Correções e melhorias
+
+* Correção de um problema em que os dados de resumo de tags não eram enviados.
+* Correção de um problema em que as sessões de Garantia apresentavam um erro no CORS
+* Correção de um problema que impedia a exibição do Target Trace.
+* Correção do botão &quot;Enviar feedback&quot;.
+* Correção da &quot;ID de sequência de dados&quot; ausente no Resumo do SDK da Web para a versão ≥2.18.0.
+* Correção de um problema em que os logs do Edge não eram pesquisáveis.
+* Adição de uma observação sobre perfis adicionais para determinados tipos de conta.
+
+## Versão 1.4.1 - 1 de novembro de 2022
+
+* Desempenho aprimorado em páginas com muitos eventos do Adobe Experience Platform Assurance.
 
 ## Versão 1.4.0 - 3 de outubro de 2022
 

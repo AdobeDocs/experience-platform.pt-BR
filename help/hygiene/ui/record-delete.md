@@ -2,10 +2,10 @@
 title: Excluir Registros
 description: Saiba como excluir registros na interface do Adobe Experience Platform.
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
+source-git-commit: 6e97b3a6b3830cf88802a8dd89944b6ce8791f02
 workflow-type: tm+mt
-source-wordcount: '1533'
-ht-degree: 7%
+source-wordcount: '1564'
+ht-degree: 8%
 
 ---
 
@@ -48,7 +48,7 @@ O workflow de criação da solicitação é exibido. Por padrão, a variável **
 
 ## Selecionar conjuntos de dados {#select-dataset}
 
-A próxima etapa é determinar se você deseja excluir registros de um único conjunto de dados ou de todos os conjuntos de dados. Se essa opção não estiver disponível para você, continue para a [fornecer identidades](#provide-identities) seção do guia.
+A próxima etapa é determinar se você deseja excluir registros de um único conjunto de dados ou de todos os conjuntos de dados. Se esta opção não estiver disponível para você, continue para a [fornecer identidades](#provide-identities) seção do guia.
 
 No **[!UICONTROL Detalhes do registro]** use o botão de opção para selecionar entre um conjunto de dados específico e todos os conjuntos de dados. Se você escolher **[!UICONTROL Selecionar conjunto de dados]**, prossiga para selecionar o ícone do banco de dados (![O ícone do banco de dados](../images/ui/record-delete/database-icon.png)) para abrir uma caixa de diálogo que fornece uma lista de conjuntos de dados disponíveis. Selecione o conjunto de dados desejado na lista seguida por **[!UICONTROL Concluído]**.
 
@@ -67,12 +67,12 @@ Se desejar excluir registros de todos os conjuntos de dados, selecione **[!UICON
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_primaryidentity"
 >title="Identidade principal"
->abstract="Uma identidade principal é um atributo que vincula um registro ao perfil do consumidor na Experience Platform. O campo de identidade principal de um conjunto de dados é definido pelo esquema em que o conjunto de dados se baseia. Nessa coluna, você deve fornecer o tipo (ou namespace) da identidade principal do registro, como `email` para endereços de email e `ecid` para IDs da Experience Cloud. Para saber mais, consulte o guia da interface do usuário do ciclo de vida dos dados."
+>abstract="Uma identidade principal é um atributo que vincula um registro ao perfil do consumidor na Experience Platform. O campo de identidade principal de um conjunto de dados é definido pelo esquema em que o conjunto de dados se baseia. Nessa coluna, você deve fornecer o tipo (ou namespace) da identidade principal do registro, como `email` para endereços de email e `ecid` para IDs da Experience Cloud. Para saber mais, consulte o manual da interface do ciclo de vida dos dados."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_identityvalue"
 >title="Valor de identidade"
->abstract="Nessa coluna, você deve fornecer o valor da identidade principal do registro, que deve corresponder ao tipo de identidade fornecido na coluna esquerda. Se o tipo de identidade principal for `email`, o valor deve ser o endereço de email do registro. Para saber mais, consulte o guia da interface do usuário do ciclo de vida dos dados."
+>abstract="Nessa coluna, você deve fornecer o valor da identidade principal do registro, que deve corresponder ao tipo de identidade fornecido na coluna esquerda. Se o tipo de identidade principal for `email`, o valor deve ser o endereço de email do registro. Para saber mais, consulte o manual da interface do ciclo de vida dos dados."
 
 Ao excluir registros, você deve fornecer informações de identidade para que o sistema possa determinar quais registros devem ser excluídos. Para qualquer conjunto de dados na Plataforma, os registros são excluídos com base no **identidade principal** que é definido pelo esquema do conjunto de dados.
 
@@ -139,7 +139,7 @@ Quando terminar de adicionar identidades à solicitação, em **[!UICONTROL Conf
 
 >[!IMPORTANT]
 > 
->Há diferentes limites para o número total de exclusões de registros de identidade únicos que podem ser enviadas a cada mês. Esses limites são baseados no seu contrato de licença. As organizações que compraram todas as edições do Adobe Real-time Customer Data Platform e do Adobe Journey Optimizer podem enviar até 100.000 exclusões de registro de identidade a cada mês. Organizações que compraram **Adobe Healthcare Shield** ou **Proteção de segurança e privacidade do Adobe** O pode enviar até 600.000 exclusões de registros de identidade a cada mês.<br>Uma única solicitação de exclusão de registro por meio da interface do permite enviar 10.000 IDs de uma vez. A variável [Método de API para excluir registros](https://experienceleague.adobe.com/docs/experience-platform/hygiene/api/workorder.html?lang=en#create) O permite o envio de 100.000 IDs de uma só vez.
+>Há diferentes limites para o número total de exclusões de registros de identidade únicos que podem ser enviadas a cada mês. Esses limites são baseados no seu contrato de licença. As organizações que compraram todas as edições do Adobe Real-time Customer Data Platform e do Adobe Journey Optimizer podem enviar até 100.000 exclusões de registro de identidade a cada mês. Organizações que compraram **Adobe Healthcare Shield** ou **Proteção de segurança e privacidade do Adobe** O pode enviar até 600.000 exclusões de registros de identidade a cada mês.<br>Uma única solicitação de exclusão de registro por meio da interface do permite enviar 10.000 IDs de uma vez. A variável [Método de API para excluir registros](../api/workorder.md#create) O permite o envio de 100.000 IDs de uma só vez.<br>É uma prática recomendada enviar o máximo possível de IDs por solicitação, até o limite de ID. Quando você pretende excluir um grande volume de IDs, deve evitar o envio de um pequeno volume ou de uma única ID por solicitação de exclusão de registro.
 
 ![As configurações de solicitação do [!UICONTROL Nome] e [!UICONTROL Descrição] campos com [!UICONTROL Enviar] destacado.](../images/ui/record-delete/submit.png)
 

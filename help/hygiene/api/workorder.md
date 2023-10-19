@@ -2,10 +2,10 @@
 title: Endpoint da API de Ordem de Serviço
 description: O ponto de extremidade /workorder na API de higiene de dados permite gerenciar de forma programática tarefas de exclusão para identidades.
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
-source-git-commit: 8e21bcc7b9d7fe3f4d26f80f953d454f090b0928
+source-git-commit: 6e97b3a6b3830cf88802a8dd89944b6ce8791f02
 workflow-type: tm+mt
-source-wordcount: '1034'
-ht-degree: 4%
+source-wordcount: '1181'
+ht-degree: 3%
 
 ---
 
@@ -26,6 +26,10 @@ O endpoint usado neste guia faz parte da API de higiene de dados. Antes de conti
 ## Criar uma solicitação de exclusão de registro {#create}
 
 Você pode excluir uma ou mais identidades de um único conjunto de dados ou de todos os conjuntos de dados fazendo uma solicitação POST para o `/workorder` terminal.
+
+>[!IMPORTANT]
+> 
+>Há diferentes limites para o número total de exclusões de registros de identidade únicos que podem ser enviadas a cada mês. Esses limites são baseados no seu contrato de licença. As organizações que compraram todas as edições do Adobe Real-time Customer Data Platform e do Adobe Journey Optimizer podem enviar até 100.000 exclusões de registro de identidade a cada mês. Organizações que compraram **Adobe Healthcare Shield** ou **Proteção de segurança e privacidade do Adobe** O pode enviar até 600.000 exclusões de registros de identidade a cada mês.<br>Um único [solicitação de exclusão de registro por meio da interface](../ui/record-delete.md) O permite enviar 10.000 IDs de uma vez. O método da API para excluir registros permite o envio de 100.000 IDs de uma vez.<br>É uma prática recomendada enviar o máximo possível de IDs por solicitação, até o limite de ID. Quando você pretende excluir um grande volume de IDs, deve evitar o envio de um pequeno volume ou de uma única ID por solicitação de exclusão de registro.
 
 **Formato da API**
 

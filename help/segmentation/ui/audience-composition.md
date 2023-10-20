@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guia da interface do usuário de públicos
 description: A Composição de público-alvo na interface do usuário do Adobe Experience Platform fornece um espaço de trabalho avançado que permite interagir com elementos de dados do perfil. O espaço de trabalho fornece controles intuitivos para criação e edição de públicos-alvo para sua organização.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: 56d9d3ec5565960438540ffec867ed528b52eaf1
+source-git-commit: 820ba6c9cedcb85db7ff9bc199a67e56ee628c93
 workflow-type: tm+mt
-source-wordcount: '1767'
+source-wordcount: '1780'
 ht-degree: 0%
 
 ---
@@ -51,6 +51,10 @@ Ao selecionar a variável **[!UICONTROL Público]** , o painel direito exibe con
 Para adicionar públicos-alvo ao bloco Público-alvo. selecionar **[!UICONTROL Adicionar público-alvo]**.
 
 ![O botão Adicionar público-alvo é realçado.](../images/ui/audience-composition/add-audience.png)
+
+>[!IMPORTANT]
+>
+>Observe que **somente** os públicos-alvo definidos usando a política de mesclagem padrão serão exibidos.
 
 Uma lista de públicos-alvo é exibida. Selecione os públicos que deseja incluir, seguido por **[!UICONTROL Adicionar]** para anexá-los ao bloco de público-alvo.
 

@@ -5,7 +5,7 @@ exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
 source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
 workflow-type: tm+mt
 source-wordcount: '841'
-ht-degree: 14%
+ht-degree: 26%
 
 ---
 
@@ -14,10 +14,10 @@ ht-degree: 14%
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_workorders"
 >title="IDs de ordem de trabalho"
->abstract="Quando uma solicitação de ciclo de vida de dados é enviada para o sistema, uma ordem de serviço é criada para executar a tarefa solicitada. Em outras palavras, uma ordem de serviço representa um processo específico do ciclo de vida dos dados, que inclui seu status atual e outros detalhes relacionados. Cada ordem de trabalho recebe automaticamente sua própria ID exclusiva após a criação."
+>abstract="Quando uma solicitação de ciclo de vida dos dados é enviada para o sistema, uma ordem de trabalho é criada para executar a tarefa solicitada. Em outras palavras, uma ordem de trabalho representa um processo específico do ciclo de vida dos dados, que inclui seu status atual e outros detalhes relacionados. Cada ordem de trabalho recebe automaticamente sua própria ID exclusiva após a criação."
 >text="See the data lifecycle UI guide to learn more."
 
-Quando uma solicitação de ciclo de vida de dados é enviada para o sistema, uma ordem de serviço é criada para executar a tarefa solicitada. Uma ordem de serviço representa um processo específico do ciclo de vida dos dados, como uma expiração programada do conjunto de dados, que inclui seu status atual e outros detalhes relacionados.
+Quando uma solicitação de ciclo de vida dos dados é enviada para o sistema, uma ordem de trabalho é criada para executar a tarefa solicitada. Uma ordem de serviço representa um processo específico do ciclo de vida dos dados, como uma expiração programada do conjunto de dados, que inclui seu status atual e outros detalhes relacionados.
 
 Este guia aborda como exibir e gerenciar ordens de serviço existentes na interface do usuário do Adobe Experience Platform.
 
@@ -65,17 +65,17 @@ Os filtros a seguir se aplicam às solicitações de expiração do conjunto de 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_statusbyservice"
 >title="Status por serviço"
->abstract="As solicitações de ciclo de vida dos dados são processadas independentemente por vários serviços Experience Platform. Esta seção descreve o status de processamento atual da solicitação para cada serviço respectivo. Para saber mais, consulte o guia da interface do usuário do ciclo de vida dos dados."
+>abstract="As solicitações de ciclo de vida dos dados são processadas de maneira independente por vários serviços da Experience Platform. Esta seção descreve o status de processamento atual da solicitação para cada serviço respectivo. Para saber mais, consulte o manual da interface do ciclo de vida dos dados."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_numberofidentities"
 >title="Número de identidades"
->abstract="O número de identidades cujos registros foram solicitados a serem atualizados ou excluídos como parte dessa ordem de trabalho. As identidades incluídas na contagem podem não existir necessariamente nos conjuntos de dados afetados. Para saber mais, consulte o guia da interface do usuário do ciclo de vida dos dados."
+>abstract="O número de identidades cujos registros foram solicitados a serem atualizados ou excluídos como parte dessa ordem de trabalho. As identidades incluídas na contagem podem não existir necessariamente nos conjuntos de dados afetados. Para saber mais, consulte o manual da interface do ciclo de vida dos dados."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_responsemessages"
 >title="Registrar resposta de exclusão"
->abstract="Quando um processo de exclusão de registro recebe uma resposta do sistema, essas mensagens são exibidas na seção **[!UICONTROL Resultado]**. Se ocorrer um problema enquanto uma ordem de trabalho está sendo processada, qualquer mensagem de erro relevante será exibida nessa seção para ajudar você a solucionar o problema. Para saber mais, consulte o guia da interface do usuário do ciclo de vida dos dados."
+>abstract="Quando um processo de exclusão de registro recebe uma resposta do sistema, essas mensagens são exibidas na seção **[!UICONTROL Resultado]**. Se ocorrer um problema enquanto uma ordem de trabalho está sendo processada, qualquer mensagem de erro relevante será exibida nessa seção para ajudar você a solucionar o problema. Para saber mais, consulte o manual da interface do ciclo de vida dos dados."
 
 Selecione a ID de uma ordem de serviço listada para exibir seus detalhes.
 

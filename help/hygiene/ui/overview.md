@@ -5,7 +5,7 @@ exl-id: 7199151a-5390-4150-8a1d-daf53b7a1f5b
 source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
 workflow-type: tm+mt
 source-wordcount: '225'
-ht-degree: 0%
+ht-degree: 35%
 
 ---
 
@@ -14,12 +14,12 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_privacyconsole_consumer"
 >title="Status das solicitações de ciclo de vida dos dados"
->abstract="Este widget mostra as contagens totais de trabalhos de exclusão de registros de ciclo de vida de dados criados, com falha e concluídos. Para obter mais informações sobre os processos do ciclo de vida dos dados, selecione **Ciclo de vida dos dados** no painel de navegação esquerdo."
+>abstract="Esse dispositivo mostra as contagens totais dos processos de exclusão de registros do ciclo de vida de dados criados, com falha e concluídos. Para obter mais informações sobre os processos de ciclo de vida dos dados, selecione **Ciclo de vida dos dados** na navegação à esquerda."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_privacyconsole_recents"
 >title="Ordens de trabalho recentes do ciclo de vida dos dados"
->abstract="Este widget mostra as cinco ordens de serviço do ciclo de vida dos dados criadas ou atualizadas mais recentemente, dependendo da opção selecionada no canto superior direito. Para obter mais informações sobre os processos do ciclo de vida dos dados, selecione **Ciclo de vida dos dados** no painel de navegação esquerdo."
+>abstract="Esse dispositivo mostra as cinco ordens de trabalho do ciclo de vida dos dados criadas ou atualizadas mais recentemente, dependendo da opção selecionada na parte superior direita. Para obter mais informações sobre os processos de ciclo de vida dos dados, selecione **Ciclo de vida dos dados** na navegação à esquerda."
 
 A variável **[!UICONTROL Ciclo de vida dos dados]** O espaço de trabalho na interface do usuário do Adobe Experience Platform permite criar e monitorar várias tarefas de gerenciamento do ciclo de vida dos dados, incluindo a exclusão de registros e o agendamento de expirações de conjuntos de dados.
 

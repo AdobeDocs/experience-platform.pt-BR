@@ -1,13 +1,13 @@
 ---
 audience: user
-user-guide-title: Ajuda do Gerenciamento Avançado do Ciclo de Vida dos Dados
-breadcrumb-title: Guia de gerenciamento avançado do ciclo de vida dos dados
+user-guide-title: Ajuda do gerenciamento avançado do ciclo de vida dos dados
+breadcrumb-title: Guia avançado de gerenciamento do ciclo de vida dos dados
 user-guide-description: Exclua registros individuais e programe as expirações dos conjuntos de dados na Experience Platform para limpeza de dados, remoção de dados anônimos e minimização de dados.
 feature: Data Hygiene
 source-git-commit: 35f598d3a03b459e2bbed58a006c7d020aba7dac
 workflow-type: tm+mt
 source-wordcount: '65'
-ht-degree: 32%
+ht-degree: 47%
 
 ---
 

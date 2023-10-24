@@ -2,9 +2,9 @@
 title: Notas de versão da Adobe Experience Platform
 description: As notas de versão de setembro de 2023 para o Adobe Experience Platform.
 exl-id: ff7fb0c1-6941-4339-8648-58f9b9e9a91f
-source-git-commit: 35d72969946dd79c356212ce53ee75b8c84f036c
+source-git-commit: 94651b8035677eb65f6ca9e93001b4149f8bdbd4
 workflow-type: tm+mt
-source-wordcount: '2284'
+source-wordcount: '2293'
 ht-degree: 26%
 
 ---
@@ -191,7 +191,7 @@ O Identity Service da Adobe Experience Platform fornece uma visão abrangente do
 | Recurso | Descrição |
 | --- | --- |
 | Aprimoramentos na interface do usuário do serviço de identidade | Use a ferramenta aprimorada de criação de namespace personalizado na interface do usuário do Experience Platform para gerenciar melhor seus namespaces personalizados e seus tipos de identidade correspondentes. A interface aprimorada do serviço de identidade fornece: <ul><li>Experiência contextual: dicas visuais, clareza e contexto para o que é um namespace de identidade e os tipos de identidade.</li><li>Precisão: melhor tratamento de erros, sem mais nomes de identidade duplicados.</li><li>Capacidade de descoberta: acesso à documentação por meio de uma caixa de diálogo no produto.</li></ul> Para obter mais informações, leia o guia em [criação de namespaces personalizados](../../identity-service/namespaces.md#create-namespaces). |
-| Alterações nos limites do gráfico de identidade | O limite do gráfico de identidade foi alterado de 150 identidades para 50 identidades. Quando uma nova identidade é assimilada em um gráfico completo, a identidade mais antiga com base no carimbo de data e hora de assimilação e no tipo de identidade é excluída. Os tipos de identidade de cookie são priorizados para exclusão. Entre em contato com a equipe de conta do Adobe para solicitar uma alteração no tipo de identidade se a sandbox de produção contiver: <ul><li>um namespace personalizado em que os identificadores de pessoa (como IDs de CRM) são configurados como tipo de identidade de cookie/dispositivo.</li><li>um namespace personalizado em que os identificadores de cookie/dispositivo são configurados como tipo de identidade entre dispositivos.</li></ul> A engenharia de Adobe processará manualmente essas solicitações. Para obter mais informações, leia a [medidas de proteção para dados do serviço de identidade](../../identity-service/guardrails.md). |
+| Alterações nos limites do gráfico de identidade | O limite do gráfico de identidade foi alterado de 150 identidades para 50 identidades. Quando uma nova identidade é assimilada em um gráfico completo, a identidade mais antiga com base no carimbo de data e hora de assimilação e no tipo de identidade é excluída. Os tipos de identidade de cookie são priorizados para exclusão. Entre em contato com a equipe de conta do Adobe para solicitar uma alteração no tipo de identidade se a sandbox de produção contiver: <ul><li>um namespace personalizado em que os identificadores de pessoa (como IDs de CRM) são configurados como tipo de identidade de cookie/dispositivo.</li><li>um namespace personalizado em que os identificadores de cookie/dispositivo são configurados como tipo de identidade entre dispositivos.</li></ul> A engenharia de Adobe processará manualmente essas solicitações. Para obter mais informações, leia a [medidas de proteção para dados do serviço de identidade](../../identity-service/guardrails.md) e guia sobre [práticas recomendadas de direito de licença de gerenciamento de dados](../../landing/license-usage-and-guardrails/data-management-best-practices.md). |
 
 {style="table-layout:auto"}
 

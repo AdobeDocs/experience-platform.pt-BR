@@ -3,9 +3,9 @@ keywords: Experience Platform;página inicial;tópicos populares;Zona de aterris
 title: Conectar a zona de aterrissagem de dados à plataforma usando a interface do
 description: Saiba como criar um conector de origem da Zona de aterrissagem de dados usando a interface do usuário da Platform.
 exl-id: 653c9958-5d89-4b0c-af3d-a3e74aa47a08
-source-git-commit: d57060ddeed64d3863f71ac1ea34ccc5c97265ea
+source-git-commit: 9cffd508c1bff7ce133f84ca686c414e997343b8
 workflow-type: tm+mt
-source-wordcount: '631'
+source-wordcount: '672'
 ht-degree: 0%
 
 ---
@@ -35,16 +35,16 @@ Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da te
 
 No [!UICONTROL armazenamento na nuvem] categoria, selecione [!DNL Data Landing Zone] e selecione **[!UICONTROL Adicionar dados]**.
 
-![catálogo](../../../../images/tutorials/create/dlz/catalog.png)
+![O catálogo de fontes com a Data Landing Zone selecionada.](../../../../images/tutorials/create/dlz/catalog.png)
 
 A variável [!UICONTROL Adicionar dados] é exibida, fornecendo uma interface para selecionar e visualizar os dados que deseja trazer para a Platform.
 
 * A parte esquerda da interface é um navegador de pastas, que fornece uma lista de arquivos do container que você pode trazer para a Platform.
 * A parte direita da interface permite visualizar até 100 linhas de dados de um arquivo compatível.
 
-Selecione o arquivo que deseja trazer para a Platform e aguarde alguns momentos para que a interface correta seja atualizada em uma tela de pré-visualização.
+Selecione o arquivo que deseja trazer para o Experience Platform e aguarde alguns momentos para que a interface correta seja atualizada em uma tela de visualização.
 
-![add-data](../../../../images/tutorials/create/dlz/add-data.png)
+![A interface de adição de dados do espaço de trabalho de origens.](../../../../images/tutorials/create/dlz/add-data.png)
 
 >[!TIP]
 >
@@ -56,7 +56,7 @@ Para visualizar um arquivo diferente, selecione o ícone de visualização ao la
 
 Quando terminar, selecione **[!UICONTROL Próxima]**.
 
-![detecção de arquivos](../../../../images/tutorials/create/dlz/file-detection.png)
+![A página de visualização de dados do espaço de trabalho de origens.](../../../../images/tutorials/create/dlz/file-detection.png)
 
 Para obter um guia passo a passo detalhado sobre como criar um fluxo de dados para uma fonte de armazenamento na nuvem, consulte o tutorial sobre [criação de um fluxo de dados de armazenamento em nuvem para trazer dados para a Platform](../../dataflow/batch/cloud-storage.md).
 
@@ -66,9 +66,9 @@ Para obter um guia passo a passo detalhado sobre como criar um fluxo de dados pa
 
 No [!UICONTROL Catálogo de origens], no âmbito do [!UICONTROL armazenamento na nuvem] selecione as reticências (**..**) do **[!UICONTROL Data Landing Zone]** cartão. No menu suspenso exibido, selecione **[!UICONTROL Exibir credenciais]**.
 
-![opções](../../../../images/tutorials/create/dlz/options.png)
+![Uma lista de opções de exibição para a Data Landing Zone.](../../../../images/tutorials/create/dlz/options.png)
 
-Um popover é exibido, exibindo o nome do container, o token SAS, o nome da conta de armazenamento e o URI SAS.
+Um pop-over é exibido, exibindo o nome do container, o token SAS, o nome da conta de armazenamento, o URI SAS e a data de expiração.
 
 Selecionar **[!UICONTROL Atualizar credenciais]** e aguarde alguns segundos para que suas credenciais atualizadas sejam processadas.
 
@@ -76,7 +76,7 @@ Selecionar **[!UICONTROL Atualizar credenciais]** e aguarde alguns segundos para
 >
 >Seu [!DNL Data Landing Zone] As credenciais do estão definidas para expirar automaticamente após 90 dias e você deve usar novas credenciais para se reconectar ao [!DNL Data Landing Zone] após a expiração. Seus fluxos de dados na Platform não são afetados pelas credenciais de expiração e você ainda pode continuar trabalhando com fluxos de dados novos e existentes com suas novas credenciais.
 
-![view-credentials](../../../../images/tutorials/create/dlz/credentials.png)
+![As credenciais associadas a uma determinada conta da Data Landing Zone.](../../../../images/tutorials/create/dlz/view-credentials.png)
 
 ## Próximas etapas
 

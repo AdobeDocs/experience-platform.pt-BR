@@ -4,9 +4,9 @@ user-guide-title: Guia de destinos
 user-guide-description: Ative seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas por email, publicidade direcionada e muito mais.
 description: Este documento lista o índice dos destinos do Adobe Experience Platform
 feature: Destinations
-source-git-commit: c171d333569a6006d3399ede07d55ce233c166fa
+source-git-commit: 57d3e136902201f9ba9bd2f427ebe0f876900671
 workflow-type: tm+mt
-source-wordcount: '1182'
+source-wordcount: '1185'
 ht-degree: 9%
 
 ---
@@ -186,6 +186,7 @@ ht-degree: 9%
       * [INCLUI NA LISTA DE PERMISSÕES de endereço IP para destinos de transmissão](./catalog/streaming/ip-address-allow-list.md)
    * Destinos da pesquisa {#survey}
       * [Visão geral dos destinos da pesquisa](./catalog/survey/overview.md)
+      * [Destino de Automações do Qualtrics](./catalog/survey/qualtrics-automations.md)
       * [Prever destino de extensão](./catalog/survey/foresee.md)
       * [Extensão do InMoment](./catalog/survey/inmoment.md)
       * [Extensão de feedback do site do Qualtrics](./catalog/survey/qualtrics.md)

@@ -1,11 +1,11 @@
 ---
-title: Configurar detecção de bot
-description: Saiba como configurar a detecção de bot para sequências de dados.
+title: Configurar a detecção de bot para sequências de dados
+description: Saiba como configurar a detecção de bot para sequências de dados, para diferenciar o tráfego humano e não humano.
 hide: true
 hidefromtoc: true
-source-git-commit: 8445d530ca1241d86775ffa7fc49f49cb5a03b72
+source-git-commit: 07b3ff85c1092614a60495e73575907df36d4158
 workflow-type: tm+mt
-source-wordcount: '1353'
+source-wordcount: '1361'
 ht-degree: 0%
 
 ---

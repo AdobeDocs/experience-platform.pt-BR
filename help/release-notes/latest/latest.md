@@ -2,10 +2,10 @@
 title: Notas de versão da Adobe Experience Platform
 description: As notas de versão de outubro de 2023 para o Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 4ab89ef7cabc9d808fd9dab24b6dbe3fe23e53f3
+source-git-commit: ac7597a2e63559f3af91d559dd77f7778c9f27bb
 workflow-type: tm+mt
-source-wordcount: '577'
-ht-degree: 35%
+source-wordcount: '766'
+ht-degree: 36%
 
 ---
 
@@ -16,6 +16,7 @@ ht-degree: 35%
 Atualizações dos recursos já existentes na Experience Platform:
 
 - [Coleção de dados](#data-collection)
+- [Destinos](#destinations)
 - [Sandboxes](#sandboxes)
 - [Serviço de segmentação](#segmentation)
 - [Origens](#sources)
@@ -31,6 +32,31 @@ A Adobe Experience Platform fornece um conjunto de tecnologias que permitem cole
 | Extensão | [!DNL Meta] Aprimoramento da API de conversões | Há três aprimoramentos na [API de meta conversões](/help/tags/extensions/server/meta/overview.md) extensão: <ul><li>Integração com [[!DNL Meta Business Extension (MBE)]](/help/tags/extensions/server/meta/overview.md#integration-with-meta-business-extension-mbe): cria uma experiência de logon contínua, permitindo que você compartilhe seu pixelID e token de acesso para a integração da API de conversões com o Adobe.</li><li>Integração com [[!DNL Event Match Quality Score (EMQ)]](/help/tags/extensions/server/meta/overview.md#integration-with-event-quality-match-score-emq): permite enviar anúncios para pessoas com maior probabilidade de concluir uma ação desejada e vincular a ação de volta aos anúncios entregues.</li><li>Integração com [[!DNL LiveRamp (Alpha)]](/help/tags/extensions/server/meta/overview.md#integration-with-liveramp-alpha): permite passar a RampID do LiveRamp no campo CIP, eliminando a necessidade de compartilhar PII diretamente com parceiros ou Meta. </li></ul> |
 
 Para obter mais informações sobre a coleção de dados, leia a [visão geral das coleções de dados](../../tags/home.md).
+
+## Destinos {#destinations}
+
+[!DNL Destinations] são integrações pré-construídas com plataformas de destino que permitem a ativação perfeita de dados da Adobe Experience Platform. É possível usar destinos para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas de email, publicidade direcionada e muitos outros casos de uso.
+
+**Destinos novos ou atualizados** {#new-updated-destinations}
+
+| Destino | Novo ou atualizado | Descrição |
+| ----------- |----------------|----------- |
+| [[!DNL MoEngage]](/help/destinations/catalog/mobile-engagement/moengage.md) | Novo | Use o destino do Moengage para conectar e mapear seus dados do Adobe (atributos de usuário, segmentos e eventos) para o MoEngage em tempo real. Os clientes podem então agir com base nesses dados, fornecendo experiências personalizadas e direcionadas. |
+| [[!DNL Qualtrics Automations]](/help/destinations/catalog/survey/qualtrics-automations.md) | Novo | Use a agregação de várias fontes de dados operacionais no Adobe Experience Platform como uma entrada na Experience ID do Qualtrics para entender melhor seus clientes e permitir que o alcance direcionado feche a lacuna quando se trata de entender a intenção, a emoção e os impulsionadores de experiência. |
+
+{style="table-layout:auto"}
+
+**Funcionalidades novas ou atualizadas** {#destinations-new-updated-functionality}
+
+| Funcionalidade | Descrição |
+| ----------- | ----------- |
+| Suporte para funções de hash em campos calculados | Além das funções específicas para [exportação de matrizes](../../destinations/ui/export-arrays-calculated-fields.md) ou elementos de uma matriz, agora é possível usar recursos [funções de hash](../../destinations/ui/export-arrays-calculated-fields.md#hashing-functions) aos atributos de hash nos arquivos exportados. As funções de hash compatíveis são: `sha`, `sha256`, `sha512`, `hash`, `md5`, `crc32`. |
+
+{style="table-layout:auto"}
+
+**Correções e aprimoramentos** {#destinations-fixes-and-enhancements}
+
+Para obter informações mais gerais sobre destinos, consulte a [visão geral de destinos](../../destinations/home.md).
 
 ## Sandboxes {#sandboxes}
 

@@ -2,9 +2,9 @@
 title: Referência a extensões de encaminhamento de eventos
 description: Encontre a documentação de extensões de encaminhamento de eventos no Adobe Experience Platform.
 exl-id: e7b42241-b41c-4d12-8551-4df14e3c9b74
-source-git-commit: c2baf3d14e57df87303aeadeed90203dcd233242
+source-git-commit: f63d171354e15a23c29c1e579ce816750dea3c97
 workflow-type: tm+mt
-source-wordcount: '191'
+source-wordcount: '193'
 ht-degree: 20%
 
 ---
@@ -37,6 +37,7 @@ Esta é uma lista de documentação das extensões de encaminhamento de eventos 
 * [API de evento Epsilon](https://exchange.adobe.com/apps/ec/109127)*
 * [Conversões aprimoradas do Google Ads](./google-ads-enhanced-conversions/overview.md)
 * [Google Cloud Platform](./google-cloud-platform/overview.md)
+* [[!DNL LinkedIn] API de conversão](./linkedin/overview.md)
 * [[!DNL Mailchimp] Edge](./mailchimp/overview.md)
 * [[!DNL Meta] API de conversões](./meta/overview.md)
 * [[!UICONTROL Microsoft Azure]](./azure/overview.md)

@@ -2,7 +2,7 @@
 title: Extensão de encaminhamento de eventos da API de conversões do Linkedin
 description: Essa extensão de encaminhamento de eventos do Adobe Experience Platform permite medir o desempenho da sua campanha de marketing do Linkedin.
 last-substantial-update: 2023-10-25T00:00:00Z
-source-git-commit: ca65f010cda5d37c40fd57075a26e365c76bdc0b
+source-git-commit: e1ed18aa79abae70974df1845c211a00390ecca4
 workflow-type: tm+mt
 source-wordcount: '758'
 ht-degree: 2%
@@ -19,7 +19,7 @@ Você deve criar uma regra de conversão em seu [!DNL LinkedIn] conta de anúnci
 
 ### Criar um segredo e um elemento de dados
 
-Criar um novo `LinkedIn` [segredo de encaminhamento de eventos](../../../ui/event-forwarding/secrets.md) e forneça um nome exclusivo que signifique o membro de autenticação. Ele será usado para autenticar a conexão com sua conta, mantendo o valor seguro.
+Criar um novo [!DNL LinkedIn] [segredo de encaminhamento de eventos](../../../ui/event-forwarding/secrets.md) e forneça um nome exclusivo que signifique o membro de autenticação. Ele será usado para autenticar a conexão com sua conta, mantendo o valor seguro.
 
 Em seguida, [criar um elemento de dados](../../../ui/managing-resources/data-elements.md#create-a-data-element) usando o [!UICONTROL Núcleo] extensão e um [!UICONTROL Segredo] tipo de elemento de dados para fazer referência ao `LinkedIn` segredo que acabou de criar.
 

@@ -5,16 +5,16 @@ title: Criar uma conexão de origem do Microsoft Dynamics na interface
 type: Tutorial
 description: Saiba como criar uma conexão de origem do Microsoft Dynamics usando a interface do usuário do Adobe Experience Platform.
 exl-id: 1a7a66de-dc57-4a72-8fdd-5fd80175db69
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: d22c71fb77655c401f4a336e339aaf8b3125d1b6
 workflow-type: tm+mt
-source-wordcount: '596'
-ht-degree: 1%
+source-wordcount: '620'
+ht-degree: 0%
 
 ---
 
 # Criar um [!DNL Microsoft Dynamics] conexão de origem na interface
 
-Este tutorial fornece etapas para a criação de um [!DNL Microsoft Dynamics] (a seguir designado por &quot;[!DNL Dynamics]&quot;) conexão de origem usando a interface do Adobe Experience Platform.
+Este tutorial fornece etapas para criar um [!DNL Microsoft Dynamics] (a seguir designado por &quot;[!DNL Dynamics]&quot;) conexão de origem usando a interface do Adobe Experience Platform.
 
 ## Introdução
 
@@ -29,58 +29,78 @@ Se você já tiver um [!DNL Dynamics] conta, você pode ignorar o restante deste
 
 ### Coletar credenciais necessárias
 
+Para autenticar seu [!DNL Dynamics] , você deve fornecer valores para as seguintes propriedades de conexão:
+
+>[!BEGINTABS]
+
+>[!TAB Autenticação básica]
+
 | Credencial | Descrição |
-| ---------- | ----------- |
+| --- | --- |
 | `serviceUri` | O URL de serviço do [!DNL Dynamics] instância. |
 | `username` | O nome de usuário do seu [!DNL Dynamics] conta de usuário. |
 | `password` | A senha do [!DNL Dynamics] conta. |
+
+>[!TAB Autenticação da entidade de serviço e da chave]
+
+| Credencial | Descrição |
+| --- | --- |
 | `servicePrincipalId` | A ID do cliente do [!DNL Dynamics] conta. Essa ID é necessária ao usar a entidade de serviço e a autenticação baseada em chave. |
 | `servicePrincipalKey` | A chave secreta da entidade de serviço. Essa credencial é necessária ao usar a entidade de serviço e a autenticação baseada em chave. |
+
+>[!ENDTABS]
 
 Para obter mais informações sobre a introdução, consulte [este [!DNL Dynamics] documento](https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/authenticate-oauth).
 
 ## Conecte seu [!DNL Dynamics] account
 
-Depois de obter as credenciais necessárias, siga as etapas abaixo para vincular [!DNL Dynamics] para a Platform.
-
-Efetue logon no [Adobe Experience Platform](https://platform.adobe.com) e selecione **[!UICONTROL Origens]** na barra de navegação esquerda, para acessar a [!UICONTROL Origens] espaço de trabalho. A variável **[!UICONTROL Catálogo]** A tela exibe uma variedade de fontes com as quais você pode criar uma conta.
+Na interface do usuário da Platform, selecione **[!UICONTROL Origens]** na navegação à esquerda, para acessar a [!UICONTROL Origens] espaço de trabalho. A variável [!UICONTROL Catálogo] exibe uma variedade de fontes com as quais você pode criar uma conta.
 
 Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar a fonte específica com a qual deseja trabalhar usando a opção de pesquisa.
 
-No **[!UICONTROL CRM]** categoria, selecione **[!UICONTROL Microsoft Dynamics]**. Se esta for a primeira vez que você usa este conector, selecione **[!UICONTROL Configurar]**. Caso contrário, selecione **[!UICONTROL Adicionar dados]** para criar um novo [!DNL Dynamics] conector.
+No [!UICONTROL CRM] categoria, selecione **[!UICONTROL Microsoft Dynamics]** e selecione **[!UICONTROL Adicionar dados]**.
 
-![catálogo](../../../../images/tutorials/create/ms-dynamics/catalog.png)
+![O catálogo de origens com o Microsoft Dynamics selecionado.](../../../../images/tutorials/create/ms-dynamics/catalog.png)
 
-A variável **[!UICONTROL Conectar-se ao Dynamics]** é exibida. Nesta página, você pode usar credenciais novas ou existentes.
-
-### Nova conta
-
-Se estiver usando novas credenciais, selecione **[!UICONTROL Nova conta]**. No formulário de entrada que aparece, forneça um nome e uma descrição opcional para o novo [!DNL Dynamics] conta.
-
-A variável [!DNL Dynamics] O conector da fornece tipos de autenticação de acesso diferentes. Em [!UICONTROL Autenticação de conta] selecionar **[!UICONTROL Autenticação básica]** para usar credenciais baseadas em senha.
-
-Quando terminar, selecione **[!UICONTROL Conectar à origem]** e aguarde algum tempo para a nova conta ser estabelecida.
-
-![basic-authentication](../../../../images/tutorials/create/ms-dynamics/basic-auth.png)
-
-Como alternativa, você pode selecionar **[!UICONTROL Autenticação da entidade de serviço e da chave]** e conecte seu [!DNL Dynamics] conta usando uma combinação de [!UICONTROL ID principal de serviço] e [!UICONTROL Chave principal de serviço].
-
->[!IMPORTANT]
->
-> Autenticação básica no [!DNL Dynamics] pode ser bloqueado pela autenticação de dois fatores, que atualmente não é compatível com a Platform. Nesse caso, é recomendável usar a autenticação baseada em chave para criar um conector de origem usando [!DNL Dynamics].
-
-![autenticação baseada em chave](../../../../images/tutorials/create/ms-dynamics/key-based-auth.png)
-
-| Credencial | Descrição |
-| ---------- | ----------- |
-| [!UICONTROL ID principal de serviço] | A ID do cliente do [!DNL Dynamics] conta. Essa ID é necessária ao usar a entidade de serviço e a autenticação baseada em chave. |
-| [!UICONTROL Chave principal de serviço] | A chave secreta da entidade de serviço. Essa credencial é necessária ao usar a entidade de serviço e a autenticação baseada em chave. |
+A variável **[!UICONTROL Conectar a conta do Microsoft Dynamics]** é exibida. Nesta página, você pode usar credenciais novas ou existentes.
 
 ### Conta existente
 
-Para conectar uma conta existente, selecione a [!DNL Dynamics] conta à qual deseja se conectar e selecione **[!UICONTROL Próxima]** no canto superior direito para continuar.
+Para usar uma conta existente, selecione a variável [!DNL Dynamics] conta que deseja usar e selecione **[!UICONTROL Próxima]** no canto superior direito para continuar.
 
-![existente](../../../../images/tutorials/create/ms-dynamics/existing.png)
+![A interface de conta existente.](../../../../images/tutorials/create/ms-dynamics/existing.png)
+
+### Nova conta
+
+>[!TIP]
+>
+>Depois de criado, não é possível alterar o tipo de autenticação de um [!DNL Dynamics] conexão básica. Para alterar o tipo de autenticação, você deve criar uma nova conexão base.
+
+Para criar uma nova conta, selecione **[!UICONTROL Nova conta]** e forneça um nome e uma descrição opcional para o novo [!DNL Dynamics] conta.
+
+![A interface de criação de novas contas.](../../../../images/tutorials/create/ms-dynamics/new.png)
+
+Você pode usar a autenticação básica ou a autenticação de entidade de serviço e chave ao criar uma [!DNL Dynamics] conta.
+
+>[!BEGINTABS]
+
+>[!TAB Autenticação básica]
+
+Para criar um [!DNL Dynamics] com autenticação básica, selecione [!UICONTROL Autenticação básica] e forneça valores para o [!UICONTROL URI do serviço], [!UICONTROL Nome de usuário], e [!UICONTROL Senha]. **Nota**: Autenticação básica no [!DNL Dynamics] pode ser bloqueado pela autenticação de dois fatores, que atualmente não é compatível com a Platform. Nesse caso, é recomendável usar a autenticação baseada em chave para criar um conector de origem usando [!DNL Dynamics].
+
+Quando terminar, selecione **[!UICONTROL Conectar à origem]** e aguarde algum tempo para a nova conta ser estabelecida.
+
+![A interface de autenticação básica.](../../../../images/tutorials/create/ms-dynamics/basic-authentication.png)
+
+>[!TAB Autenticação da entidade de serviço e da chave]
+
+Para criar um [!DNL Dynamics] conta com autenticação de entidade de serviço e chave, selecione **[!UICONTROL Autenticação da entidade de serviço e da chave]** e forneça valores para o [!UICONTROL ID principal de serviço] e [!UICONTROL Chave principal de serviço].
+
+Quando terminar, selecione **[!UICONTROL Conectar à origem]** e aguarde algum tempo para a nova conta ser estabelecida.
+
+![A interface de autenticação da chave da entidade de serviço.](../../../../images/tutorials/create/ms-dynamics/service-principal.png)
+
+>[!ENDTABS]
 
 ## Próximas etapas
 

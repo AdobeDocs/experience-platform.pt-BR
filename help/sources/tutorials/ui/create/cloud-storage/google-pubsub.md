@@ -3,9 +3,9 @@ title: Criar uma conexão de origem Google PubSub na interface
 description: Saiba como criar um conector de origem Google PubSub usando a interface do usuário da Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: fb8411f2-ccae-4bb5-b1bf-52b1144534ed
-source-git-commit: b157b9147d8ea8100bcaedca272b303a3c04e71a
+source-git-commit: 563ad16304894cab1ee1ead06f63a5b3f65c4ec2
 workflow-type: tm+mt
-source-wordcount: '1043'
+source-wordcount: '1099'
 ht-degree: 1%
 
 ---
@@ -31,12 +31,24 @@ Se você já tiver um [!DNL PubSub] conexão, você pode ignorar o restante dest
 
 Para se conectar [!DNL PubSub] Para o Platform, você deve fornecer um valor válido para as seguintes credenciais:
 
+>[!BEGINTABS]
+
+>[!TAB Autenticação baseada em projeto]
+
 | Credencial | Descrição |
-| ---------- | ----------- |
+| --- | --- |
 | Projeto  ID | A ID do projeto necessária para a autenticação [!DNL PubSub]. |
+| Credenciais | A credencial necessária para autenticar [!DNL PubSub]. Certifique-se de colocar o arquivo JSON completo após remover os espaços em branco de suas credenciais. |
+
+>[!TAB Tópico e autenticação por assinatura]
+
+| Credencial | Descrição |
+| --- | --- |
 | Credenciais | A credencial necessária para autenticar [!DNL PubSub]. Certifique-se de colocar o arquivo JSON completo após remover os espaços em branco de suas credenciais. |
 | Nome do tópico | O nome do seu [!DNL PubSub] assinatura. Entrada [!DNL PubSub], assinaturas permitem que você receba mensagens inscrevendo-se no tópico no qual as mensagens foram publicadas. **Nota**: Uma única [!DNL PubSub] a assinatura só pode ser usada para um fluxo de dados. Para fazer vários fluxos de dados, você deve ter várias assinaturas. |
 | Nome da assinatura | O nome do seu [!DNL PubSub] assinatura. Entrada [!DNL PubSub], assinaturas permitem que você receba mensagens inscrevendo-se no tópico no qual as mensagens foram publicadas. |
+
+>[!ENDTABS]
 
 Para obter mais informações sobre esses valores, consulte o seguinte [Autenticação PubSub](https://cloud.google.com/pubsub/docs/authentication) documento. Se você estiver usando autenticação baseada em conta de serviço, consulte o seguinte [Guia PubSub](https://cloud.google.com/docs/authentication/production#create_service_account) para obter etapas sobre como gerar suas credenciais.
 
@@ -68,7 +80,8 @@ Para usar uma conta existente, selecione a variável [!DNL PubSub] conta com a q
 
 >[!TIP]
 >
->Ao criar uma conta com acesso restrito, você deve fornecer pelo menos um dos nomes do tópico ou da assinatura. A autenticação falhará se ambos os valores estiverem ausentes.
+>* Ao criar uma conta com acesso restrito, você deve fornecer pelo menos um dos nomes do tópico ou da assinatura. A autenticação falhará se ambos os valores estiverem ausentes.
+>* Depois de criado, não é possível alterar o tipo de autenticação de um [!DNL Google PubSub] conexão básica. Para alterar o tipo de autenticação, você deve criar uma nova conexão base.
 
 Se estiver criando uma nova conta, selecione **[!UICONTROL Nova conta]** e forneça um nome e uma descrição opcional para o novo [!DNL PubSub] conta.
 

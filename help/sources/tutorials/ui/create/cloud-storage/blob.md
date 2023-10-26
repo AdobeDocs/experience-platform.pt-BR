@@ -2,9 +2,9 @@
 title: Criar uma conexão de origem do Azure Blob na interface do usuário
 description: Saiba como criar um conector de origem do Azure Blob usando a interface do usuário da Platform.
 exl-id: 0e54569b-7305-4065-981e-951623717648
-source-git-commit: 922e9a26f1791056b251ead2ce2702dfbf732193
+source-git-commit: d22c71fb77655c401f4a336e339aaf8b3125d1b6
 workflow-type: tm+mt
-source-wordcount: '794'
+source-wordcount: '827'
 ht-degree: 1%
 
 ---
@@ -34,16 +34,27 @@ O Experience Platform suporta os seguintes formatos de arquivo a serem assimilad
 
 ### Coletar credenciais necessárias
 
-Para acessar seu [!DNL Blob] armazenamento na Platform, você deve fornecer um valor válido para a seguinte credencial:
+Para acessar seu [!DNL Blob] armazenamento no Experience Platform, você deve fornecer valores válidos para as seguintes credenciais:
+
+>[!BEGINTABS]
+
+>[!TAB Autenticação da cadeia de conexão]
 
 | Credencial | Descrição |
-| ---------- | ----------- |
+| --- | --- |
 | String de conexão | Uma cadeia de caracteres que contém as informações de autorização necessárias para autenticação [!DNL Blob] para Experience Platform. A variável [!DNL Blob] o padrão da cadeia de conexão é: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. Para obter mais informações sobre cadeias de conexão, consulte esta [!DNL Blob] documento ativado [configurando cadeias de conexão](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string). |
+
+>[!TAB Autenticação URI SAS]
+
+| Credencial | Descrição |
+| --- | --- |
 | URI SAS | O URI de assinatura de acesso compartilhado que você pode usar como um tipo de autenticação alternativo para conectar seu [!DNL Blob] conta. A variável [!DNL Blob] O padrão do URI SAS é: `https://{ACCOUNT_NAME}.blob.core.windows.net/?sv=<storage version>&st={START_TIME}&se={EXPIRE_TIME}&sr={RESOURCE}&sp={PERMISSIONS}>&sip=<{IP_RANGE}>&spr={PROTOCOL}&sig={SIGNATURE}>` Para obter mais informações, consulte esta [!DNL Blob] documento ativado [URIs de assinatura de acesso compartilhado](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-blob-storage#shared-access-signature-authentication). |
 | Contêiner | O nome do container ao qual você deseja designar acesso. Ao criar uma nova conta com o [!DNL Blob] origem, você pode fornecer um nome de container para especificar o acesso do usuário à subpasta de sua escolha. |
 | Caminho da pasta | O caminho para a pasta à qual você deseja fornecer acesso. |
 
-Depois de obter as credenciais necessárias, siga as etapas abaixo para vincular [!DNL Blob] para a Platform.
+>[!ENDTABS]
+
+Depois de obter as credenciais necessárias, siga as etapas abaixo para conectar seu [!DNL Blob] armazenamento para o Experience Platform
 
 ## Conecte seu [!DNL Blob] account
 
@@ -64,6 +75,10 @@ Para usar uma conta existente, selecione a variável [!DNL Blob] conta com a qua
 ![existente](../../../../images/tutorials/create/blob/existing.png)
 
 ### Nova conta
+
+>[!TIP]
+>
+>Depois de criado, não é possível alterar o tipo de autenticação de um [!DNL Blob] conexão básica. Para alterar o tipo de autenticação, você deve criar uma nova conexão base.
 
 Se estiver criando uma nova conta, selecione **[!UICONTROL Nova conta]** e forneça um nome e uma descrição opcional para o novo [!DNL Blob] conta.
 

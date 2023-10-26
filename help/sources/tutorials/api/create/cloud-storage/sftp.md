@@ -2,10 +2,10 @@
 title: Criar uma conexão básica SFTP usando a API do serviço de fluxo
 description: Saiba como conectar o Adobe Experience Platform a um servidor SFTP usando a API do serviço de fluxo.
 exl-id: b965b4bf-0b55-43df-bb79-c89609a9a488
-source-git-commit: 922e9a26f1791056b251ead2ce2702dfbf732193
+source-git-commit: a826bda356a7205f3d4c0e0836881530dbaaf54e
 workflow-type: tm+mt
-source-wordcount: '895'
-ht-degree: 1%
+source-wordcount: '938'
+ht-degree: 3%
 
 ---
 
@@ -17,7 +17,7 @@ Este tutorial guiará você pelas etapas para criar uma conexão básica para [!
 
 ## Introdução
 
-Este guia requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
+Este manual necessita de uma compreensão funcional dos seguintes componentes da Adobe Experience Platform:
 
 * [Origens](../../../../home.md): o Experience Platform permite que os dados sejam assimilados de várias fontes e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma.
 * [Sandboxes](../../../../../sandboxes/home.md): o Experience Platform fornece sandboxes virtuais que particionam uma única instância da Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
@@ -26,7 +26,7 @@ Este guia requer uma compreensão funcional dos seguintes componentes do Adobe E
 >
 >É recomendável evitar novas linhas ou retornos de carro ao assimilar objetos JSON com um [!DNL SFTP] conexão de origem. Para contornar a limitação, use um único objeto JSON por linha e use várias linhas para os arquivos subsequentes.
 
-As seções a seguir fornecem informações adicionais que você precisará saber para se conectar com êxito a um [!DNL SFTP] servidor usando o [!DNL Flow Service] API.
+As seções a seguir fornecem as informações adicionais que você precisará saber para se conectar com êxito a um [!DNL SFTP] servidor usando o [!DNL Flow Service] API.
 
 ### Coletar credenciais necessárias
 
@@ -48,7 +48,11 @@ A fim de [!DNL Flow Service] para se conectar a [!DNL SFTP], você deve fornecer
 
 Para obter informações sobre como fazer chamadas para APIs da Platform com êxito, consulte o manual em [introdução às APIs da Platform](../../../../../landing/api-guide.md).
 
-## Criar uma conexão básica
+## Crie uma conexão básica
+
+>[!TIP]
+>
+>Depois de criado, não é possível alterar o tipo de autenticação de um [!DNL Dynamics] conexão básica. Para alterar o tipo de autenticação, você deve criar uma nova conexão base.
 
 Uma conexão base retém informações entre sua origem e a Platform, incluindo as credenciais de autenticação da origem, o estado atual da conexão e sua ID de conexão base exclusiva. A ID de conexão básica permite explorar e navegar pelos arquivos de dentro da origem e identificar os itens específicos que deseja assimilar, incluindo informações sobre os tipos de dados e formatos.
 
@@ -66,13 +70,11 @@ Para criar um ID de conexão base, faça uma solicitação POST ao `/connections
 POST /connections
 ```
 
-**Solicitação**
-
-A solicitação a seguir cria uma conexão básica para [!DNL SFTP]:
-
 >[!BEGINTABS]
 
 >[!TAB Autenticação básica]
+
++++Solicitação
 
 ```shell
 curl -X POST \
@@ -113,7 +115,24 @@ curl -X POST \
 | `auth.params.folderPath` | O caminho para a pasta à qual você deseja fornecer acesso. |
 | `connectionSpec.id` | A ID da especificação da conexão do servidor SFTP: `b7bf2577-4520-42c9-bae9-cad01560f7bc` |
 
++++
+
++++Resposta
+
+Uma resposta bem-sucedida retorna o identificador exclusivo (`id`) da conexão recém-criada. Essa ID é necessária para explorar o servidor SFTP no próximo tutorial.
+
+```json
+{
+    "id": "bf367b0d-3d9b-4060-b67b-0d3d9bd06094",
+    "etag": "\"1700cc7b-0000-0200-0000-5e3b3fba0000\""
+}
+```
+
++++
+
 >[!TAB Autenticação de chave pública SSH]
+
++++Solicitação
 
 ```shell
 curl -X POST \
@@ -156,9 +175,9 @@ curl -X POST \
 | `auth.params.folderPath` | O caminho para a pasta à qual você deseja fornecer acesso. |
 | `connectionSpec.id` | A variável [!DNL SFTP] ID da especificação de conexão do servidor: `b7bf2577-4520-42c9-bae9-cad01560f7bc` |
 
->[!ENDTABS]
++++
 
-**Resposta**
++++Resposta
 
 Uma resposta bem-sucedida retorna o identificador exclusivo (`id`) da conexão recém-criada. Essa ID é necessária para explorar o servidor SFTP no próximo tutorial.
 
@@ -168,6 +187,10 @@ Uma resposta bem-sucedida retorna o identificador exclusivo (`id`) da conexão r
     "etag": "\"1700cc7b-0000-0200-0000-5e3b3fba0000\""
 }
 ```
+
++++
+
+>[!ENDTABS]
 
 ## Próximas etapas
 

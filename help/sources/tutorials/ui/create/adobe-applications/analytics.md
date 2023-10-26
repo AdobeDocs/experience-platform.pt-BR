@@ -134,7 +134,7 @@ Dependendo das suas necessidades, você pode selecionar **[!UICONTROL Adicionar 
 A documentação a seguir fornece mais recursos sobre como entender o Preparo de dados, campos calculados e funções de mapeamento:
 
 * [Visão geral do Preparo de dados](../../../../../data-prep/home.md)
-* [Funções de mapeamento de Preparo de dados](../../../../../data-prep/functions.md)
+* [Funções de mapeamento do Preparo de dados](../../../../../data-prep/functions.md)
 * [Adicionar campos calculados](../../../../../data-prep/ui/mapping.md#calculated-fields)
 
 <!-- 

@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;página inicial;tópicos populares;monitorar identidades;monitorar fluxos de dados;fluxos de dados;identidades;
-description: O serviço de identidade da Adobe Experience Platform fornece uma visão abrangente dos clientes e do comportamento deles ao unir as identidades de vários dispositivos e sistemas, permitindo que você forneça experiências digitais pessoais e de impacto em tempo real. Este tutorial fornece instruções sobre como monitorar fluxos de dados com identidades usando a interface do usuário Experience Platform.
+description: O Identity Service da Adobe Experience Platform fornece uma visão abrangente dos clientes e seu comportamento ao unir identidades entre dispositivos e sistemas, permitindo fornecer experiências digitais pessoais de impacto em tempo real. Este tutorial fornece instruções sobre como monitorar fluxos de dados com identidades usando a interface do usuário Experience Platform.
 title: Monitorar fluxos de dados para identidades na interface
 type: Tutorial
 exl-id: 735b0e52-74f6-47fe-98c6-e12a633b6f57
 source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
 source-wordcount: '1149'
-ht-degree: 8%
+ht-degree: 14%
 
 ---
 
 # Monitorar fluxos de dados para identidades na interface
 
-O serviço de identidade da Adobe Experience Platform fornece uma visão abrangente dos clientes e do comportamento deles ao unir as identidades de vários dispositivos e sistemas, permitindo que você forneça experiências digitais pessoais e de impacto em tempo real.
+O Identity Service da Adobe Experience Platform fornece uma visão abrangente dos clientes e seu comportamento ao unir identidades entre dispositivos e sistemas, permitindo fornecer experiências digitais pessoais de impacto em tempo real.
 
 O painel de monitoramento fornece uma representação visual da atividade dos dados nas identidades, incluindo o status das identidades dos seus dados. Este tutorial fornece instruções sobre como usar o painel de monitoramento para monitorar as identidades de seus dados usando a interface do usuário do Experience Platform, permitindo que você acompanhe o status do processamento de identidades.
 

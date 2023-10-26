@@ -105,7 +105,7 @@ Para começar a assimilar dados no Experience Platform, você pode usar o Servi�
 
 Para obter mais informações sobre o Catálogo, consulte a [Visão geral do Serviço de catálogo](../catalog/home.md). Para obter mais informações sobre a assimilação de dados do Adobe Experience Platform, consulte a [Visão geral da assimilação de dados](../ingestion/home.md).
 
-### Serviço de query
+### Query Service
 
 O Adobe Experience Platform Query Service permite usar o SQL padrão para consultar dados de Experience Platform para suportar muitos casos de uso diferentes.
 

@@ -183,7 +183,7 @@ Para adicionar ou remover segmentos, selecione **[!UICONTROL Criar feed]** do [!
 
 A lista de segmentos é exibida. Aqui, você pode adicionar novos segmentos ao feed e usar o painel direito para remover os segmentos que não são mais necessários. Quando terminar de gerenciar os segmentos no feed, selecione **[!UICONTROL Próxima]** e siga as etapas descritas acima para concluir o feed atualizado.
 
-![update](./images/update.png)
+Atualização do ![](./images/update.png)
 
 >[!NOTE]
 >

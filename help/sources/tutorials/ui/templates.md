@@ -234,7 +234,7 @@ Você pode usar a visualização do editor de esquemas para atualizar o esquema 
 
 ### Publicar seu fluxo de dados
 
-Comece o processo de publicação navegando pelo fluxo de trabalho de origens. Depois de selecionar [!UICONTROL Atualizar fluxo de dados], você será levado para a *[!UICONTROL Adicionar dados]* etapa do fluxo de trabalho. Selecionar **[!UICONTROL Próxima]** para continuar.
+Comece o processo de publicação navegando pelo fluxo de trabalho de origens. Depois de selecionar [!UICONTROL Atualizar fluxo de dados], você será levado para a *[!UICONTROL Adicionar dados]* etapa do fluxo de trabalho. Selecione **[!UICONTROL Próximo]** para continuar.
 
 ![A etapa adicionar dados para um fluxo de dados de rascunho](../../images/tutorials/templates/continue-draft.png)
 

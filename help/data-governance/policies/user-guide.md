@@ -221,6 +221,6 @@ Se a ação de marketing não estiver sendo usada por nenhuma política de uso e
 
 Este documento forneceu uma visão geral de como gerenciar as políticas de uso de dados no [!DNL Experience Platform] IU. Para obter etapas sobre como gerenciar políticas usando o [!DNL Policy Service API], consulte o [guia do desenvolvedor](../api/getting-started.md). Para obter informações sobre como aplicar políticas de uso de dados, consulte a [visão geral da aplicação de políticas](../enforcement/overview.md).
 
-O vídeo a seguir fornece uma demonstração de como trabalhar com políticas de uso no [!DNL Experience Platform] Interface do usuário:
+O vídeo a seguir fornece uma demonstração de como trabalhar com políticas de uso na [!DNL Experience Platform] Interface do usuário:
 
 >[!VIDEO](https://video.tv.adobe.com/v/32977?quality=12&learn=on)

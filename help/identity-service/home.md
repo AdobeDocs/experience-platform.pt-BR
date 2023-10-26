@@ -7,7 +7,7 @@ exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
 source-git-commit: ad9fb0bcc7bca55da432c72adc94d49e3c63ad6e
 workflow-type: tm+mt
 source-wordcount: '1839'
-ht-degree: 8%
+ht-degree: 10%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 8%
 
 Para fornecer experiências digitais relevantes, é necessário ter uma compreensão completa do cliente. Isso se torna mais difícil quando os dados do cliente são fragmentados em sistemas diferentes, fazendo com que cada cliente individual pareça ter várias &quot;identidades&quot;.
 
-O serviço de identidade da Adobe Experience Platform fornece uma visão abrangente dos clientes e do comportamento deles ao unir as identidades de vários dispositivos e sistemas, permitindo que você forneça experiências digitais pessoais e de impacto em tempo real.
+O Identity Service da Adobe Experience Platform fornece uma visão abrangente dos clientes e seu comportamento ao unir identidades entre dispositivos e sistemas, permitindo fornecer experiências digitais pessoais de impacto em tempo real.
 
 Com [!DNL Identity Service], você pode:
 
@@ -133,7 +133,7 @@ Por exemplo, ao rotular campos de número de telefone como campos de identidade,
 
 ### Configurar um conjunto de dados para o [!DNL Identity Service]
 
-Durante o processo de assimilação por transmissão, [!DNL Identity Service ]O extrai automaticamente dados de identidade de dados de registro e de séries temporais. No entanto, antes que os dados possam ser assimilados, eles devem ser ativados para [!DNL Identity Service]. Veja o tutorial sobre  [configurar um conjunto de dados para o Perfil do cliente em tempo real e o Serviço de identidade usando APIs](../profile/tutorials/dataset-configuration.md) para obter mais informações.
+Durante o processo de assimilação por transmissão, [!DNL Identity Service]O extrai automaticamente dados de identidade de dados de registro e de séries temporais. No entanto, antes que os dados possam ser assimilados, eles devem ser ativados para [!DNL Identity Service]. Veja o tutorial sobre  [configurar um conjunto de dados para o Perfil do cliente em tempo real e o Serviço de identidade usando APIs](../profile/tutorials/dataset-configuration.md) para obter mais informações.
 
 ### Assimilar dados em [!DNL Identity Service]
 

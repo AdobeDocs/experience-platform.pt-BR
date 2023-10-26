@@ -69,7 +69,7 @@ Os gráficos são ativados por padrão e você pode desativá-los para expandir 
 
 | Ingestão de origem | Descrição |
 | ---------------- | ----------- |
-| [!UICONTROL Registros assimilados ] | O número total de registros assimilados. |
+| [!UICONTROL Registros assimilados] | O número total de registros assimilados. |
 | [!UICONTROL Registros com falha] | O número total de registros que não foram assimilados devido a erros nos dados. |
 | [!UICONTROL Total de fluxos de dados com falha] | O número total de fluxos de dados com um `failed` status. |
 

@@ -4,9 +4,9 @@ type: Tutorial
 description: Saiba como usar campos calculados para exportar matrizes em arquivos de esquema simples do Real-Time CDP para destinos de armazenamento na nuvem.
 badge: Beta
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: 8b8abea65ee0448594113ca77f75b84293646146
+source-git-commit: b6bdfef8b9ac5ef03ea726d668477b8629b70b6c
 workflow-type: tm+mt
-source-wordcount: '1479'
+source-wordcount: '1497'
 ht-degree: 5%
 
 ---
@@ -216,8 +216,21 @@ Nesse caso, o arquivo de saída é semelhante ao mostrado abaixo, exportando a p
 johndoe@acme.org,"1538097126","1664327526"
 ```
 
-### `md5` e `sha256` funções de hash {#hashing-functions}
+### Funções de hash {#hashing-functions}
 
-Além das funções específicas para exportar matrizes ou elementos de uma matriz, você pode usar funções de hash para atributos de hash. Por exemplo, se você tiver informações de identificação pessoal nos atributos, é possível aplicar hash a esses campos ao exportá-los.
+Além das funções específicas para exportar matrizes ou elementos de uma matriz, você pode usar funções de hash para hash de atributos nos arquivos exportados. Por exemplo, se você tiver informações de identificação pessoal nos atributos, é possível aplicar hash a esses campos ao exportá-los.
 
-Por exemplo, é possível aplicar hash a valores de string diretamente `md5(personalEmail.address)`. Se desejar, também é possível aplicar hash a elementos individuais de campos de matriz, desta forma: `md5(purchaseTime[0])`
+Por exemplo, é possível aplicar hash a valores de string diretamente `md5(personalEmail.address)`. Se desejar, também é possível aplicar hash a elementos individuais de campos de matriz, supondo que os elementos na matriz sejam cadeias de caracteres, desta forma: `md5(purchaseTime[0])`
+
+As funções de hash compatíveis são:
+
+| Função | Exemplo de expressão |
+|---------|----------|
+| `sha1` | `sha1(organizations[0])` |
+| `sha256` | `sha256(organizations[0])` |
+| `sha512` | `sha512(organizations[0])` |
+| `hash` | `hash("crc32", organizations[0], "UTF-8")` |
+| `md5` | `md5(organizations[0], "UTF-8")` |
+| `crc32` | `crc32(organizations[0])` |
+
+{style="table-layout:auto"}

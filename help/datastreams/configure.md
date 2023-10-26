@@ -1,16 +1,16 @@
 ---
-title: Configurar uma sequência de dados
+title: Criar e configurar sequências de dados
 description: Saiba como conectar a integração do SDK da Web do lado do cliente a outros produtos da Adobe e destinos de terceiros.
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
-source-git-commit: db75771d09caef00db58073333909f730a303975
+source-git-commit: d7a0299c5fe3729620e74602ac99459093cc2e28
 workflow-type: tm+mt
-source-wordcount: '2777'
+source-wordcount: '2779'
 ht-degree: 75%
 
 ---
 
 
-# Configurar uma sequência de dados
+# Criar e configurar sequências de dados
 
 Este documento aborda as etapas para configurar uma [sequência de dados](./overview.md) na interface.
 

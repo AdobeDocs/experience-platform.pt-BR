@@ -5,10 +5,10 @@ user-guide-title: Ajuda de sequências de dados da Adobe Experience Platform
 breadcrumb-title: Guia de datastreams
 user-guide-description: Saiba como configurar sequências de dados na Adobe Experience Platform.
 feature: Datastreams
-source-git-commit: 57867a7c78ae7f8100ead278cf901fed63780caa
-workflow-type: ht
-source-wordcount: '45'
-ht-degree: 100%
+source-git-commit: 6423b6a85873c9c767264ca0e29fbebb62a14b34
+workflow-type: tm+mt
+source-wordcount: '50'
+ht-degree: 90%
 
 ---
 
@@ -17,6 +17,7 @@ ht-degree: 100%
 
 * [Visão geral das sequências de dados](overview.md)
 * [Configurar uma sequência de dados](configure.md)
+* [Configurar a detecção de bot para sequências de dados](bot-detection.md)
 * [Configurar substituições de sequência de dados](overrides.md)
 * [Preparo de dados para a coleção de dados](data-prep.md)
 * Enriquecimento de dados {#data-enrichment}

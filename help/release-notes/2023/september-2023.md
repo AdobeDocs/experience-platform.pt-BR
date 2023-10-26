@@ -2,9 +2,9 @@
 title: Notas de versão da Adobe Experience Platform
 description: As notas de versão de setembro de 2023 para o Adobe Experience Platform.
 exl-id: ff7fb0c1-6941-4339-8648-58f9b9e9a91f
-source-git-commit: 94651b8035677eb65f6ca9e93001b4149f8bdbd4
+source-git-commit: 76ac65730512e589e518095f9496bb309365b0c9
 workflow-type: tm+mt
-source-wordcount: '2293'
+source-wordcount: '2283'
 ht-degree: 26%
 
 ---
@@ -222,8 +222,6 @@ O [!DNL Segmentation Service] permite segmentar dados relacionados a indivíduos
 | ------- | ----------- |
 | Colunas personalizáveis | Agora é possível personalizar o layout do Audience Portal com colunas redimensionáveis. Para obter mais informações sobre esse recurso, leia a [guia da interface de segmentação](../../segmentation/ui/overview.md#customize). |
 | Atualizar detalhamento de frequência | Agora você pode ver um detalhamento das frequências de atualização dos públicos-alvo em sua organização. Para obter mais informações sobre esse recurso, leia a [guia da interface de segmentação](../../segmentation/ui/overview.md#browse). |
-
-Para saber mais sobre fontes, leia o [visão geral das origens](../../sources/home.md).
 
 Para saber mais sobre o Serviço de segmentação, leia o [Visão geral do serviço de segmentação](../../segmentation/home.md).
 

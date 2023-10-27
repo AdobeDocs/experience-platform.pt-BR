@@ -1,9 +1,9 @@
 ---
 title: Notas de versão da Adobe Experience Platform
 description: As notas de versão de outubro de 2023 para o Adobe Experience Platform.
-source-git-commit: 9009f56956f0719fb80d423a14b81a6dc7115d77
+source-git-commit: fc0cb582d74f5ab52410991f65aa14ba05df3f97
 workflow-type: tm+mt
-source-wordcount: '808'
+source-wordcount: '954'
 ht-degree: 34%
 
 ---
@@ -14,11 +14,26 @@ ht-degree: 34%
 
 Atualizações dos recursos já existentes na Experience Platform:
 
+- [Painéis](#dashboards)
 - [Coleção de dados](#data-collection)
 - [Destinos](#destinations)
 - [Sandboxes](#sandboxes)
 - [Serviço de segmentação](#segmentation)
 - [Origens](#sources)
+
+## Painéis {#dashboards}
+
+A Adobe Experience Platform fornece vários painéis para você visualizar insights importantes sobre os dados de sua organização, que são capturados por instantâneos diários.
+
+**Recursos novos ou atualizados**
+
+| Recurso | Descrição |
+| --- | --- |
+| Métricas de uso de destinos | Novas métricas foram adicionadas ao painel de uso de licença. A variável **[!UICONTROL Tamanho do Audience Activation]** e **[!UICONTROL Tamanho da exportação de dados]** As métricas fornecem uma maneira conveniente de rastrear a quantidade de dados exportados da Platform em relação aos direitos de uso de licença. Consulte a [métricas disponíveis](../../dashboards/guides/license-usage.md#available-metrics) documentação para obter descrições dessas e de outras métricas de uso de licença. |
+
+{style="table-layout:auto"}
+
+Para obter mais informações sobre painéis, incluindo como conceder permissões de acesso e criar widgets personalizados, comece lendo a [visão geral dos painéis](../../dashboards/home.md).
 
 ## Coleção de dados {#data-collection}
 
@@ -51,7 +66,8 @@ Para obter mais informações sobre a coleção de dados, leia a [visão geral d
 
 | Funcionalidade | Descrição |
 | ----------- | ----------- |
-| Suporte para funções de hash em campos calculados | Além das funções específicas para [exportação de matrizes](../../destinations/ui/export-arrays-calculated-fields.md) ou elementos de uma matriz, agora é possível usar recursos [funções de hash](../../destinations/ui/export-arrays-calculated-fields.md#hashing-functions) aos atributos de hash nos arquivos exportados. As funções de hash compatíveis são: `sha`, `sha256`, `sha512`, `hash`, `md5`, `crc32`. |
+| (Beta) Suporte para funções de hash em campos calculados | Além das funções específicas para [exportação de matrizes](../../destinations/ui/export-arrays-calculated-fields.md) ou elementos de uma matriz, agora é possível usar recursos [funções de hash](../../destinations/ui/export-arrays-calculated-fields.md#hashing-functions) aos atributos de hash nos arquivos exportados. As funções de hash compatíveis são: `sha`, `sha256`, `sha512`, `hash`, `md5`, `crc32`. |
+| (Disponibilidade limitada) Ativar públicos-alvo da conta para determinados destinos | Os clientes B2B do Real-Time CDP agora podem ativar [públicos-alvo da conta](../../segmentation/ui/account-audiences.md) para certos destinos. Para obter mais informações sobre esse recurso, leia a [tutorial para ativar públicos-alvo da conta](/help/destinations/ui/activate-account-audiences.md). |
 
 {style="table-layout:auto"}
 

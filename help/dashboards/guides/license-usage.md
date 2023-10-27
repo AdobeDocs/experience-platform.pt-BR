@@ -4,9 +4,9 @@ title: Guia do Painel de Uso da Licença
 description: A Adobe Experience Platform fornece um painel por meio do qual você pode visualizar informações importantes sobre o uso de licença da sua organização.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: e9c4068419b36da6ffaec67f0d1c39fe87c2bc4c
+source-git-commit: fc0cb582d74f5ab52410991f65aa14ba05df3f97
 workflow-type: tm+mt
-source-wordcount: '1987'
+source-wordcount: '2027'
 ht-degree: 4%
 
 ---
@@ -119,27 +119,29 @@ Também é possível selecionar **[!UICONTROL Data personalizada]** para escolhe
 
 ![A guia Visão geral do painel de uso da licença com as opções de intervalo de datas personalizado destacadas.](../images/license-usage/custom-date-range.png)
 
-## Métricas disponíveis
+## Métricas disponíveis {#available-metrics}
 
 O painel de uso da licença relata várias métricas exclusivas que são aplicáveis a vários produtos na organização. As métricas disponíveis são:
 
 | Métrica | Descrição |
 |---|---|
-| [!UICONTROL Exportações de dados] | O tamanho total dos conjuntos de dados que podem ser exportados para qualquer solução não Adobe (direta ou indiretamente) em um ano. |
-| [!UICONTROL Número de modelos AMM] | Uma contagem do modelo de aprendizado de máquina (Adobe Mix Modeler interno) usada para medir e/ou prever um resultado especificado com base em seus investimentos. |
-| [!UICONTROL Armazenamento de data lake] | A quantidade usada do armazenamento de dados analíticos no Adobe Experience Platform. |
-| [!UICONTROL Atributos Calculados] | A contagem total de dados comportamentais agregados de perfis. Os dados comportamentais agregados do perfil são baseados em eventos de experiência convertidos em um atributo de perfil e podem ser incluídos em um perfil de pessoa ou perfil de pessoa de negócios. |
-| [!UICONTROL Públicos-alvo semelhantes] | A contagem de públicos-alvo gerada pela modelagem de um público-alvo de consumidor existente para identificar perfis de pessoas semelhantes ao público-alvo de consumidor existente. |
+| [!UICONTROL Tamanho do Audience Activation] | O tamanho total dos perfis ativados para qualquer destino baseado em arquivo em um ano. Observação: isso não inclui perfis enviados por meio de destinos de streaming. |
 | [!UICONTROL Público-alvo endereçável] | A soma do direito de público-alvo comercial e do direito de público-alvo consumidor. Um público-alvo do consumidor é definido como o número de perfis de pessoas identificados como um &quot;Público-alvo do consumidor&quot; na ordem de venda. Um público-alvo comercial é definido como o número de perfis empresariais identificados como o &quot;Público-alvo comercial&quot; na ordem de venda. |
-| [!UICONTROL Número de sandboxes] | A contagem de separações lógicas na instância de qualquer Adobe On-demand Service que acesse dados e operações de isolamento do Adobe Experience Platform. |
-| [!UICONTROL Riqueza média do perfil] | A soma de todos os dados de produção armazenados no Serviço de perfil de hub em qualquer momento, dividida por cinco vezes o número de perfis empresariais autorizados. [!UICONTROL Riqueza média do perfil] é um recurso compartilhado. |
-| [!UICONTROL Número de pacotes de segmentação de streaming] | Os pacotes atualizam a associação de segmento para um perfil de pessoa à medida que novos dados entram no Serviço de segmentação por meio de um fluxo de transmissão. A associação do segmento é avaliada com base nos atributos atuais do perfil da pessoa e no valor do evento atual, sem levar em conta o comportamento histórico. A segmentação de transmissão é um recurso compartilhado. |
-| [!UICONTROL Público-alvo] | O número de perfis de pessoas identificados como &quot;Público-alvo do consumidor&quot; na ordem de venda. |
-| [!UICONTROL Linhas do CJA disponíveis] | A média diária de linhas de dados disponíveis para análise no Customer Journey Analytics. |
-| [!UICONTROL Número de Pacotes Riqueza de Perfil] | Um aumento na riqueza média do perfil autorizado de 25 KB por perfil para cada pacote adicional de riqueza de perfil. |
 | [!UICONTROL Pacotes de usuários do serviço de consulta adhoc] | Um complemento para aumentar o direito dos Usuários do Serviço de Consulta simultâneos autorizados em cinco usuários adicionais do Serviço de Consulta simultâneos e uma consulta ad hoc adicional em execução simultânea por pacote. É possível que vários pacotes adicionais de usuários de Ad Hoc Query sejam licenciados. |
+| [!UICONTROL Riqueza média do perfil] | A soma de todos os dados de produção armazenados no Serviço de perfil de hub em qualquer momento, dividida por cinco vezes o número de perfis empresariais autorizados. [!UICONTROL Riqueza média do perfil] é um recurso compartilhado. |
+| [!UICONTROL Linhas do CJA disponíveis] | A média diária de linhas de dados disponíveis para análise no Customer Journey Analytics. |
+| [!UICONTROL Atributos Calculados] | A contagem total de dados comportamentais agregados de perfis. Os dados comportamentais agregados do perfil são baseados em eventos de experiência convertidos em um atributo de perfil e podem ser incluídos em um perfil de pessoa ou perfil de pessoa de negócios. |
+| [!UICONTROL Público-alvo] | O número de perfis de pessoas identificados como &quot;Público-alvo do consumidor&quot; na ordem de venda. |
+| [!UICONTROL Tamanho da exportação de dados] | A quantidade de dados enviados por meio de ativações de conjuntos de dados em um ano. |
+| [!UICONTROL Exportações de dados] | O tamanho total dos conjuntos de dados que podem ser exportados para qualquer solução não Adobe (direta ou indiretamente) em um ano. |
+| [!UICONTROL Armazenamento Data Lake] | A quantidade usada do armazenamento de dados analíticos no Adobe Experience Platform. |
 | [!UICONTROL Público envolvente] | Essa métrica se refere ao público-alvo de perfis utilizáveis. Um perfil envolvível é um registro de informações que representam um indivíduo e é representado no Serviço de perfil. Esses registros são perfis que você tentou utilizar com os recursos de criação, decisão, entrega, experimentação ou orquestração do Journey Optimizer nos últimos 12 meses. |
+| [!UICONTROL Públicos-alvo semelhantes] | A contagem de públicos-alvo gerada pela modelagem de um público-alvo de consumidor existente para identificar perfis de pessoas semelhantes ao público-alvo de consumidor existente. |
+| [!UICONTROL Número de modelos AMM] | Uma contagem do modelo de aprendizado de máquina (Adobe Mix Modeler interno) usada para medir e/ou prever um resultado especificado com base em seus investimentos. |
+| [!UICONTROL Número de sandboxes] | A contagem de separações lógicas na instância de qualquer Adobe On-demand Service que acesse dados e operações de isolamento do Adobe Experience Platform. |
+| [!UICONTROL Número de Pacotes Riqueza de Perfil] | Um aumento na riqueza média do perfil autorizado de 25 KB por perfil para cada pacote adicional de riqueza de perfil. |
 | [!UICONTROL Horas calculadas do serviço de consulta] | Uma medida do tempo gasto pelos mecanismos de Serviço de consulta para ler, processar e gravar dados de volta no data lake quando uma consulta em lote é executada. |
+| [!UICONTROL Número de pacotes de segmentação de streaming] | Os pacotes atualizam a associação de segmento para um perfil de pessoa à medida que novos dados entram no Serviço de segmentação por meio de um fluxo de transmissão. A associação do segmento é avaliada com base nos atributos atuais do perfil da pessoa e no valor do evento atual, sem levar em conta o comportamento histórico. A segmentação de transmissão é um recurso compartilhado. |
 
 <!-- |  [!UICONTROL Sandbox No of Packs] |  A logical separation within your instance of any Adobe On-demand Service that accesses Adobe Experience Platform isolating data and operations | -->
 

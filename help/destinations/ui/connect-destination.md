@@ -4,9 +4,9 @@ title: Criar uma nova conexão de destino
 type: Tutorial
 description: Saiba como se conectar a um destino no Adobe Experience Platform, ativar alertas e configurar ações de marketing para o destino conectado.
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
-source-git-commit: af705b8a77b2ea15b44b97ed3f1f2c5aa7433eb1
+source-git-commit: 28abc492dc3b2b89c3e79a0531b8d206af1e0590
 workflow-type: tm+mt
-source-wordcount: '1141'
+source-wordcount: '1146'
 ht-degree: 0%
 
 ---
@@ -84,9 +84,9 @@ Para destinos baseados em arquivo, é possível definir várias configurações 
 
 ![Imagem que mostra a seleção do tipo de arquivo e várias opções para arquivos CSV.](/help/destinations/assets/ui/connect-destinations/file-formatting-options.png)
 
-### Configurar a conexão de destino para ativação de público, ativação de clientes potenciais ou exportações de conjunto de dados {#segment-activation-or-dataset-exports}
+### Configurar a conexão de destino para ativação de público, ativação de conta, ativação de clientes potenciais ou exportações de conjunto de dados {#segment-activation-or-dataset-exports}
 
-Alguns destinos baseados em arquivo oferecem suporte à ativação de públicos-alvo para clientes ou clientes potenciais conhecidos, bem como a exportações de conjuntos de dados. Para esses destinos, você pode criar uma conexão que permita [ativar públicos](/help/destinations/ui/activate-batch-profile-destinations.md), [clientes potenciais](/help/destinations/ui/activate-prospect-audiences.md)ou [exportar conjuntos de dados](/help/destinations/ui/export-datasets.md).
+Alguns destinos baseados em arquivo oferecem suporte à ativação de públicos-alvo para clientes conhecidos, clientes da conta ou clientes potenciais, bem como exportações de conjuntos de dados. Para esses destinos, você pode criar uma conexão que permita [ativar públicos](/help/destinations/ui/activate-batch-profile-destinations.md), [contas](/help/destinations/ui/activate-account-audiences.md), [clientes potenciais](/help/destinations/ui/activate-prospect-audiences.md)ou [exportar conjuntos de dados](/help/destinations/ui/export-datasets.md).
 
 >[!WARNING]
 >

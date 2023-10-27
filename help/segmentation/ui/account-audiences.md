@@ -2,20 +2,20 @@
 title: Públicos da conta
 description: Saiba como criar e usar públicos-alvo da conta para direcionar perfis de conta em destinos downstream.
 badgeLimitedAvailability: label="Disponibilidade limitada" type="Caution"
-badgeB2B: label="Edição B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html"
-source-git-commit: ecc60ec2e7bf2ea02bd721eac1b101b0dc412ba0
+badgeB2B: label="Edição B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+source-git-commit: 77ba3bd55c2f2ac217612880b83b731919aa14af
 workflow-type: tm+mt
-source-wordcount: '585'
-ht-degree: 1%
+source-wordcount: '603'
+ht-degree: 0%
 
 ---
 
 
 # Públicos da conta
 
->[!IMPORTANT]
+>[!AVAILABILITY]
 >
->Observe que os públicos-alvo da conta só estão disponíveis no [Edição B2B do Real-time Customer Data Platform](../../rtcdp/b2b-overview.md). Além disso, a funcionalidade de público-alvo da conta está atualmente em **disponibilidade limitada**.
+>Os públicos-alvo da conta só estão disponíveis no [Edição B2B do Real-time Customer Data Platform](../../rtcdp/b2b-overview.md). Além disso, a funcionalidade de público-alvo da conta está atualmente em **disponibilidade limitada**. Entre em contato com o Atendimento ao cliente da Adobe ou com seu representante da Adobe para solicitar acesso a essa funcionalidade.
 
 Com a segmentação de conta, o Adobe Experience Platform permite que você ofereça a total facilidade e sofisticação da experiência de segmentação de marketing de públicos com base em pessoas para públicos com base em conta.
 
@@ -69,7 +69,7 @@ Selecione o público que deseja ativar, seguido por **[!UICONTROL Ativar para de
 
 ![A variável [!UICONTROL Ativar para destino] O botão é realçado no menu de ações rápidas para o público-alvo selecionado.](../images/ui/account-audiences/activate.png)
 
-A variável [!UICONTROL Ativar destino] é exibida. Para obter mais informações sobre o processo de ativação, incluindo detalhes sobre os mapeamentos de campo, leia a [visão geral da ativação](../../destinations/ui/activation-overview.md).
+A variável [!UICONTROL Ativar destino] é exibida. Para obter mais informações sobre o processo de ativação, incluindo destinos compatíveis e detalhes sobre mapeamentos de campo, leia a [ativar públicos-alvo da conta](/help/destinations/ui/activate-account-audiences.md) tutorial.
 
 ## Próximas etapas {#next-steps}
 

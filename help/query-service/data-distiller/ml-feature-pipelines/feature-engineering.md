@@ -1,9 +1,9 @@
 ---
 title: Recursos do engenheiro para aprendizado de máquina
 description: Saiba como transformar dados no Adobe Experience Platform em recursos ou variáveis que podem ser consumidos por um modelo de aprendizado de máquina. Use o Data Distiller para calcular recursos de aprendizado de máquina em escala e compartilhar esses recursos com seu ambiente de aprendizado de máquina.
-source-git-commit: 12926f36514d289449cf0d141b5828df3fac37c2
+source-git-commit: 60c5a624bfbe88329ab3e12962f129f03966ce77
 workflow-type: tm+mt
-source-wordcount: '1147'
+source-wordcount: '1161'
 ht-degree: 14%
 
 ---
@@ -67,7 +67,7 @@ Número de classes: 50000
 
 ### Agregar eventos para definir recursos para ML {#define-features}
 
-A consulta a seguir agrega os eventos no conjunto de dados em recursos numéricos significativos que podem ser usados para treinar um modelo de propensão:
+Com uma consulta apropriada, você pode coletar os eventos no conjunto de dados em recursos numéricos significativos que podem ser usados para treinar um modelo de propensão. Exemplos de eventos são vistos abaixo:
 
 - **Número de emails** que foram enviados para fins de marketing e recebidos pelo usuário.
 - Parte desses emails que foram **aberto**.
@@ -83,6 +83,8 @@ A consulta a seguir agrega os eventos no conjunto de dados em recursos numérico
 - Número de minutos entre duas apresentações com as quais houve interação.
 - Número de minutos entre duas propostas que foram rejeitadas.
 - Número de minutos entre dois links selecionados.
+
+A consulta a seguir agrega esses eventos:
 
 +++Selecione para exibir exemplo de consulta
 

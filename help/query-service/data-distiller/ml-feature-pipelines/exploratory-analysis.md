@@ -1,20 +1,20 @@
 ---
 title: Análise de dados exploratórios
 description: Saiba como usar o Data Distiller para explorar e analisar dados de um bloco de anotações Python.
-source-git-commit: 12926f36514d289449cf0d141b5828df3fac37c2
+source-git-commit: 60c5a624bfbe88329ab3e12962f129f03966ce77
 workflow-type: tm+mt
-source-wordcount: '814'
+source-wordcount: '809'
 ht-degree: 16%
 
 ---
 
 # Análise exploratória de dados
 
-Este documento fornece alguns exemplos básicos e práticas recomendadas para usar o Data Distiller para explorar e analisar dados de um notebook Python.
+Este documento fornece alguns exemplos básicos e práticas recomendadas para usar o Data Distiller para explorar e analisar dados de uma [!DNL Python] notebook.
 
 ## Introdução
 
-Antes de continuar com este guia, verifique se você criou uma conexão com o Data Distiller no bloco de anotações Python. Consulte a documentação para obter instruções sobre como [conectar um bloco de anotações Python ao Data Distiller](./establish-connection.md).
+Antes de continuar com este guia, verifique se você criou uma conexão com o Data Distiller em seu [!DNL Python] notebook. Consulte a documentação para obter instruções sobre como [conectar um [!DNL Python] notebook para o Data Distiller](./establish-connection.md).
 
 ## Adquirir estatísticas básicas {#basic-statistics}
 
@@ -90,7 +90,7 @@ sample_table_name = df_samples[df_samples["sampling_rate"] == sampling_rate]["sa
 count_query=f'''SELECT count(*) as cnt from {sample_table_name}'''
 
 df = qs_cursor.query(count_query, output="dataframe")
-# divide by the sampling rate to extrapolate to the full dataset
+# Divide by the sampling rate to extrapolate to the full dataset
 approx_count = df["cnt"].iloc[0] / (sampling_rate / 100)
 
 print(f"Approximate count: {approx_count} using {sampling_rate *10}% sample")
@@ -137,7 +137,7 @@ funnel_df
 
 ### Plotar resultados da consulta {#plot-results}
 
-Em seguida, marque os resultados da consulta usando o Python `plotly` biblioteca:
+Em seguida, plote os resultados da consulta usando o [!DNL Python] `plotly` biblioteca:
 
 ```python
 import plotly.express as px
@@ -261,4 +261,4 @@ ax.set_title("Pearson Correlation of Events with the outcome event")
 
 ## Próximas etapas
 
-Ao ler este documento, você aprendeu a usar o Data Distiller para explorar e analisar dados de um bloco de anotações Python. A próxima etapa na criação de pipelines de recursos, do Experience Platform para alimentar modelos personalizados no ambiente de aprendizado de máquina, é criar pipelines de recursos [recursos de engenharia para aprendizado de máquina](./feature-engineering.md).
+Ao ler este documento, você aprendeu a usar o Data Distiller para explorar e analisar dados de uma [!DNL Python] notebook. A próxima etapa na criação de pipelines de recursos, do Experience Platform para alimentar modelos personalizados no ambiente de aprendizado de máquina, é criar pipelines de recursos [recursos de engenharia para aprendizado de máquina](./feature-engineering.md).

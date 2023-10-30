@@ -2,7 +2,7 @@
 title: Criar uma conexão básica SFTP usando a API do serviço de fluxo
 description: Saiba como conectar o Adobe Experience Platform a um servidor SFTP usando a API do serviço de fluxo.
 exl-id: b965b4bf-0b55-43df-bb79-c89609a9a488
-source-git-commit: a826bda356a7205f3d4c0e0836881530dbaaf54e
+source-git-commit: f6d1cc811378f2f37968bf0a42b428249e52efd8
 workflow-type: tm+mt
 source-wordcount: '938'
 ht-degree: 3%
@@ -52,7 +52,7 @@ Para obter informações sobre como fazer chamadas para APIs da Platform com êx
 
 >[!TIP]
 >
->Depois de criado, não é possível alterar o tipo de autenticação de um [!DNL Dynamics] conexão básica. Para alterar o tipo de autenticação, você deve criar uma nova conexão base.
+>Depois de criado, não é possível alterar o tipo de autenticação de um [!DNL SFTP] conexão básica. Para alterar o tipo de autenticação, você deve criar uma nova conexão base.
 
 Uma conexão base retém informações entre sua origem e a Platform, incluindo as credenciais de autenticação da origem, o estado atual da conexão e sua ID de conexão base exclusiva. A ID de conexão básica permite explorar e navegar pelos arquivos de dentro da origem e identificar os itens específicos que deseja assimilar, incluindo informações sobre os tipos de dados e formatos.
 

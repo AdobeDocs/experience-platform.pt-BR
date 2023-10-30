@@ -1,7 +1,8 @@
 ---
 title: Guia da API de ferramentas de sandbox
 description: As ferramentas de sandbox no Adobe Experience Platform permitem exportar e importar um instantâneo das configurações de sandbox entre as sandboxes.
-source-git-commit: e4e89c5250885bef177ba0d678629261a361a66d
+exl-id: 4bcc095b-5db1-4824-8b7c-c2ea5a393b98
+source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
 workflow-type: tm+mt
 source-wordcount: '250'
 ht-degree: 3%

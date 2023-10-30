@@ -3,13 +3,13 @@ title: Configurar a detecção de bot para sequências de dados
 description: Saiba como configurar a detecção de bot para sequências de dados, para diferenciar o tráfego humano e não humano.
 hide: true
 hidefromtoc: true
-source-git-commit: 07b3ff85c1092614a60495e73575907df36d4158
+exl-id: 6b221d97-0145-4d3e-a32d-746d72534add
+source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
 workflow-type: tm+mt
 source-wordcount: '1361'
 ht-degree: 0%
 
 ---
-
 
 # Configurar a detecção de bot para sequências de dados
 
@@ -176,4 +176,3 @@ A regra mostrada na imagem abaixo identifica uma solicitação de origem de bot 
 A solicitação é originada de um dos dois endereços IP, o `referer` o cabeçalho começa com `www.adobe.com`, e o `sec-ch-ua-mobile` o cabeçalho identifica a solicitação como proveniente de um navegador de desktop.
 
 ![Imagem da regra de detecção de bot baseada em várias condições.](assets/bot-detection/bot-detection-multiple.png)
-

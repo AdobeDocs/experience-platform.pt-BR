@@ -1,7 +1,8 @@
 ---
 title: Classe de perfil de cliente potencial individual XDM
 description: Este documento fornece uma visão geral da classe de Perfil de cliente potencial individual XDM no Experience Data Model (XDM).
-source-git-commit: 7562da0f07a2109a2030653927d8d2639685e442
+exl-id: 10fd9d16-4123-4ad4-971f-b715231ee6a9
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '348'
 ht-degree: 3%

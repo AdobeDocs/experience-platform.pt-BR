@@ -5,7 +5,7 @@ exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
 source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
 workflow-type: tm+mt
 source-wordcount: '445'
-ht-degree: 0%
+ht-degree: 5%
 
 ---
 
@@ -19,7 +19,7 @@ Você pode acessar a API de higiene de dados por meio do seguinte caminho raiz: 
 
 Essas seções abaixo descrevem os conceitos principais que você precisa saber antes de tentar fazer chamadas para a API.
 
-### Coletar valores para cabeçalhos obrigatórios
+### Coletar valores para cabeçalhos necessários
 
 Para fazer chamadas para a API de higiene de dados, primeiro colete suas credenciais de autenticação. Siga as [Guia de autenticação de API](../../landing/api-authentication.md) para gerar valores para cada um dos cabeçalhos necessários para a API de higiene de dados, conforme mostrado abaixo:
 
@@ -27,7 +27,7 @@ Para fazer chamadas para a API de higiene de dados, primeiro colete suas credenc
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {ORG_ID}`
 
-Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabeçalho adicional:
+Todas as solicitações que contêm um conteúdo (POST, PUT, PATCH) exigem um cabeçalho adicional:
 
 * `Content-Type: application/json`
 

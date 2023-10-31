@@ -1,13 +1,13 @@
 ---
 description: O Experience Platform Destination SDK usa modelos Pebble, permitindo transformar os dados exportados do Experience Platform no formato exigido pelo destino.
 title: Funções de transformação compatíveis com o Destination SDK
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+exl-id: 36f761c7-9d76-41fe-b05f-d4cad655ddd2
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '579'
 ht-degree: 3%
 
 ---
-
 
 # Funções de transformação compatíveis com o Destination SDK
 

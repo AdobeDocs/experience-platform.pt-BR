@@ -7,7 +7,7 @@ exl-id: 7099e002-b802-486e-8863-0630d66e330f
 source-git-commit: b0b49badd46601571be59afba84fad874ca1b368
 workflow-type: tm+mt
 source-wordcount: '476'
-ht-degree: 5%
+ht-degree: 6%
 
 ---
 
@@ -69,7 +69,7 @@ A tabela a seguir descreve os valores aceitos para especificar um produto Adobe 
 | Adobe Campaign | `campaign` |
 | Adobe Experience Platform (Data Lake) | `aepDataLake` |
 | Adobe Experience Platform (Perfil do cliente em tempo real) | `profileService` |
-| Autenticação Adobe Pass | `primetimeAuthentication` |
+| Adobe Pass Authentication | `primetimeAuthentication` |
 | Adobe Target | `target` |
 | Atributos do cliente (CRS) | `CRS` |
 | Identity Service | `identity` |

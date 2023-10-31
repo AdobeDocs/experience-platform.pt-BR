@@ -5,9 +5,9 @@ description: Saiba como ativar públicos-alvo da conta para destinos
 badgeLimitedAvailability: label="Disponibilidade limitada" type="Caution"
 badgeB2B: label="Edição B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: ad69d0a8-bf5b-42ac-97a3-401eadda62cd
-source-git-commit: bf4a34a0fbf59571eaea3ccbc619f9fe17d5c218
+source-git-commit: 0a572c5fe612b8e0cc866b4e2287ea53a4022b1a
 workflow-type: tm+mt
-source-wordcount: '788'
+source-wordcount: '834'
 ht-degree: 0%
 
 ---
@@ -90,11 +90,11 @@ Ao ativar públicos-alvo da conta para a variável **[!UICONTROL (Empresas) Púb
 | Campo de origem | Campo de destino |
 |---------|----------|
 | `accountName` | `companyName` |
-| `accountKey.sourceKey` | `primaryId` (selecione este campo no campo **[!UICONTROL Selecionar namespace de identidade]** view) |
+| `accountKey.sourceKey` | `primaryId` (selecione este campo no campo **[!UICONTROL Selecionar namespace de identidade]** exibir, ao selecionar o **[!UICONTROL Campo de destino]**). <br> ![Selecione o namespace de identidade destacado no fluxo de trabalho para ativar os públicos-alvo da conta para os destinos.](/help/destinations/assets/ui/activate-account-audiences/identity-namespace-highlighted.png "Selecione o namespace de identidade destacado no fluxo de trabalho para ativar os públicos-alvo da conta para os destinos."){width="100" zoomable="yes"} |
 
 ### Imposição de governança de dados {#data-governance-enforcement}
 
-[Avaliação de política de consentimento](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) No momento, o não é compatível com a ativação de públicos-alvo da conta para destinos. Na etapa de revisão do fluxo de trabalho de ativação, é possível ver um controle esmaecido para **[!UICONTROL Exibir políticas de consentimento aplicáveis]**.
+O consentimento é aplicado no nível da pessoa ou do perfil para *públicos-alvo de clientes e clientes potenciais*. Por conseguinte,  [avaliação da política de consentimento](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) No momento, o não é compatível com a ativação de públicos-alvo da conta para destinos. Na etapa de revisão do fluxo de trabalho de ativação, é possível ver um controle esmaecido para **[!UICONTROL Exibir políticas de consentimento aplicáveis]**.
 
 ![Revise a etapa do fluxo de trabalho ativar públicos-alvo da conta com o controle de imposição de consentimento esmaecido.](/help/destinations/assets/ui/activate-account-audiences/consent-checks-greyed-out.png)
 

@@ -1,13 +1,13 @@
 ---
 description: Esta página exemplifica a chamada à API usada para atualizar um modelo de público-alvo por meio do Adobe Experience Platform Destination SDK.
 title: Atualizar um modelo de público
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
+exl-id: 8185a015-256d-46a7-af33-8475832fb6c1
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '319'
 ht-degree: 3%
 
 ---
-
 
 # Atualizar um modelo de público
 

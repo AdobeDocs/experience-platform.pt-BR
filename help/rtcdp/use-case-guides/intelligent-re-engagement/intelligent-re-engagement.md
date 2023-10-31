@@ -1,14 +1,15 @@
 ---
 title: Reengajamento inteligente
-description: Ofereça experiências atraentes e conectadas durante os principais momentos de conversão para reengajar clientes pouco frequentes de forma inteligente.
-source-git-commit: 79ba0e350d64f43558af9bc3c2ecd4ac13d11499
+description: Ofereça experiências atraentes e conectadas durante os principais momentos de conversão para engajar novamente clientes pouco frequentes de forma inteligente.
+exl-id: 13f6dbc9-7471-40bf-824d-27922be0d879
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '3424'
-ht-degree: 3%
+ht-degree: 7%
 
 ---
 
-# Reenvolva seus clientes de forma inteligente para retornar
+# Engaje novamente clientes de uma forma inteligente para que retornem
 
 Reenvolva os clientes que abandonaram uma conversão antes de concluí-la de forma inteligente e responsável. Envolva os clientes obsoletos por meio de experiências, em vez de lembretes, para aprimorar a conversão e impulsionar o crescimento do valor vitalício do cliente.
 
@@ -26,7 +27,7 @@ Você construirá esquemas, conjuntos de dados e públicos à medida que trabalh
 
 ## Pré-requisitos e planejamento {#prerequisites-and-planning}
 
-Ao concluir as etapas para implementar o caso de uso, você usará a seguinte funcionalidade do Real-Time CDP e os elementos da interface do usuário (listados na ordem em que serão usados). Verifique se você tem as permissões de controle de acesso baseadas em atributos necessárias para todas essas áreas ou peça ao administrador do sistema para conceder as permissões necessárias.
+Ao concluir as etapas para implementar o caso de uso, você usará a seguinte funcionalidade e elementos da interface da Real-Time CDP (listados na ordem em que serão usados). Verifique se tem as permissões de controle de acesso baseado em atributo necessárias para todas essas áreas, ou solicite ao(à) administrador(a) que as conceda a você.
 
 * [[!DNL Adobe Real-Time Customer Data Platform (Real-Time CDP)]](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/understanding-the-real-time-customer-data-platform.html) - Integra dados em fontes de dados para alimentar a campanha. Esses dados são usados para criar os públicos-alvo da campanha e exibir elementos de dados personalizados usados no email e nos blocos promocionais da Web (por exemplo, nome ou informações relacionadas à conta). A CDP também é usada para ativar públicos-alvo no email e na Web (via [!DNL Adobe Target]).
    * [Esquemas](/help/xdm/home.md)
@@ -85,9 +86,9 @@ A jornada de confirmação de pedido se concentra nas compras de produtos feitas
 
 Para concluir cada uma das etapas das visões gerais de alto nível acima, leia as seções abaixo, que oferecem links para mais informações e instruções mais detalhadas.
 
-### Funcionalidade e elementos da interface do usuário que você usará {#ui-functionality-and-elements}
+### Elementos e funcionalidade da interface que serão utilizados {#ui-functionality-and-elements}
 
-Ao concluir as etapas para implementar o caso de uso, você usará a funcionalidade do Real-Time CDP e os elementos da interface do usuário listados no início deste documento. Verifique se você tem as permissões de controle de acesso baseadas em atributos necessárias para todas essas áreas ou peça ao administrador do sistema para conceder as permissões necessárias.
+Ao concluir as etapas para implementar o caso de uso, você usará a funcionalidade do Real-Time CDP e os elementos da interface do usuário listados no início deste documento. Verifique se tem as permissões de controle de acesso baseado em atributo necessárias para todas essas áreas, ou solicite ao(à) administrador(a) que as conceda a você.
 
 ### Criar um design de esquema e especificar grupos de campos {#schema-design}
 
@@ -349,7 +350,7 @@ Para obter mais informações sobre como criar uma [conjunto de dados](/help/cat
 
 >[!NOTE]
 >
->Semelhante à etapa para criar um esquema, é necessário ativar o conjunto de dados para ser incluído no Perfil do cliente em tempo real. Para obter mais informações sobre como ativar o conjunto de dados para uso no Perfil do cliente em tempo real, leia o [criar tutorial de esquema.](/help/xdm/tutorials/create-schema-ui.md#profile).
+>Semelhante à etapa para criar um esquema, é necessário ativar o conjunto de dados para ser incluído no Perfil do cliente em tempo real. Para obter mais informações sobre como habilitar o conjunto de dados para uso no perfil do cliente em tempo real, leia o [tutorial de criação de esquemas.](/help/xdm/tutorials/create-schema-ui.md#profile).
 
 ### Privacidade, consentimento e governança de dados {#privacy-consent}
 

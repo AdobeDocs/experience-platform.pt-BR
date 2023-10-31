@@ -1,13 +1,13 @@
 ---
 description: Esta página exemplifica a chamada à API usada para excluir um modelo de público-alvo existente por meio do Adobe Experience Platform Destination SDK.
 title: Excluir um modelo de público-alvo
-source-git-commit: 9e1ae44f83b886f0b5dd5a9fc9cd9b7db6154ff0
+exl-id: 6eb07e3c-3269-4368-9b11-04bd993cc4ab
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '287'
 ht-degree: 3%
 
 ---
-
 
 # Excluir um modelo de público-alvo
 

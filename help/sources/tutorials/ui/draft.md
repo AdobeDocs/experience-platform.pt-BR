@@ -1,7 +1,8 @@
 ---
 title: Rascunhos de fluxos de dados na interface do
 description: Saiba como salvar seus fluxos de dados como rascunho e publicá-los posteriormente, ao usar o espaço de trabalho de fontes.
-source-git-commit: 5fc433f603c6e83c621df0f4a1d0aa27e18cd582
+exl-id: ee00798e-152a-4618-acb3-db40f2f55fae
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '591'
 ht-degree: 0%

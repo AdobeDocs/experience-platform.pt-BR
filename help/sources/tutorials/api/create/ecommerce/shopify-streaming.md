@@ -2,11 +2,11 @@
 title: Crie uma conexão de origem de transmissão e um fluxo de dados para dados do Shopify usando a API do serviço de fluxo
 description: Saiba como criar uma conexão de origem de transmissão e fluxo de dados para dados do Shopify usando a API do Serviço de fluxo.
 badge: Beta
-exl-id: d44414a1-48fb-41e2-8cec-23cad867ba7d
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+exl-id: 74660e27-49c0-415f-bd85-15f9d853daee
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '1472'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -20,7 +20,7 @@ O tutorial a seguir fornece etapas sobre como criar uma conexão de origem de tr
 
 ## Introdução {#getting-started}
 
-Este guia requer entendimento prático dos seguintes componentes do Experience Platform:
+Este manual necessita de uma compreensão funcional dos seguintes componentes da Experience Platform:
 
 * [Origens](../../../../home.md): o Experience Platform permite que os dados sejam assimilados de várias fontes e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando [!DNL Platform] serviços.
 * [Sandboxes](../../../../../sandboxes/home.md): o Experience Platform fornece sandboxes virtuais que particionam uma única instância da Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.

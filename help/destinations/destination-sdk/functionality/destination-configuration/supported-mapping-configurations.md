@@ -1,13 +1,13 @@
 ---
 description: Saiba como configurar seu destino para as configurações de mapeamento de identidade e atributo compatíveis.
 title: Configurações de mapeamento compatíveis
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
+exl-id: a477a3f2-a229-4b22-8588-ee58bd5436c6
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '659'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
-
 
 # Configurações de mapeamento compatíveis
 
@@ -157,7 +157,7 @@ Para saber mais sobre os outros componentes de destino, consulte os seguintes ar
 * [Autenticação OAuth2](oauth2-authentication.md)
 * [Campos de dados do cliente](customer-data-fields.md)
 * [Atributos da interface](ui-attributes.md)
-* [Configuração de esquema](schema-configuration.md)
+* [Configuração do esquema](schema-configuration.md)
 * [Configuração do namespace de identidade](identity-namespace-configuration.md)
 * [Entrega de destino](destination-delivery.md)
 * [Configuração de metadados de público](audience-metadata-configuration.md)

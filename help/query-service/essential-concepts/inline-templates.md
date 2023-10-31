@@ -1,14 +1,15 @@
 ---
 title: Modelos integrados
 description: Saiba como reutilizar várias condições em várias consultas com modelos em linha.
-source-git-commit: e9deabe1e0514f44be085e558fd2fdbf54956f3e
+exl-id: 78959070-f9e5-4736-b72a-a8ef518bfa4f
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '485'
 ht-degree: 1%
 
 ---
 
-# Modelos integrados
+# Modelos em linha
 
 Modelos em linha permitem reutilizar várias condições em várias consultas. Você pode salvar os critérios em um modelo e reutilizá-los em várias consultas. Modelos SQL reutilizáveis reduzem os esforços de desenvolvimento e também o risco de erros ao copiar longas instruções entre consultas. Com modelos em linha, é possível fazer alterações em um local e fazer com que elas sejam refletidas em qualquer consulta que faça referência a esse modelo.
 

@@ -1,13 +1,13 @@
 ---
 description: Saiba como definir as configurações de entrega de destino para destinos criados com o Destination SDK, para indicar para onde os dados exportados vão e qual regra de autenticação é usada no local onde os dados serão direcionados.
 title: Entrega de destino
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
+exl-id: ade77b6b-4b62-4b17-a155-ef90a723a4ad
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '563'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
-
 
 # Entrega de destino
 
@@ -111,7 +111,7 @@ Para saber mais sobre os outros componentes de destino, consulte os seguintes ar
 * [Autenticação OAuth2](oauth2-authentication.md)
 * [Atributos da interface](ui-attributes.md)
 * [Campos de dados do cliente](customer-data-fields.md)
-* [Configuração de esquema](schema-configuration.md)
+* [Configuração do esquema](schema-configuration.md)
 * [Configuração do namespace de identidade](identity-namespace-configuration.md)
 * [Configurações de mapeamento compatíveis](supported-mapping-configurations.md)
 * [Configuração de metadados de público](audience-metadata-configuration.md)

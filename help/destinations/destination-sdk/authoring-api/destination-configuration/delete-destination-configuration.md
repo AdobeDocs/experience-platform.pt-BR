@@ -1,13 +1,13 @@
 ---
 description: Esta página exemplifica a chamada à API usada para excluir uma configuração de destino existente por meio do Adobe Experience Platform Destination SDK.
 title: Excluir uma configuração de destino
-source-git-commit: acb7075f49b4194c31371d2de63709eea7821329
+exl-id: c7309ab7-1b8d-46d4-8017-fd4aa5918cdd
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '278'
 ht-degree: 3%
 
 ---
-
 
 # Excluir uma configuração de destino
 
@@ -69,4 +69,3 @@ Para saber mais sobre o que você pode fazer com esse endpoint, consulte os segu
 * [Criar uma configuração de destino](create-destination-configuration.md)
 * [Recuperar uma configuração de destino](retrieve-destination-configuration.md)
 * [Atualizar uma configuração de destino](update-destination-configuration.md)
-

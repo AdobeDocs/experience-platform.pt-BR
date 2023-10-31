@@ -2,10 +2,11 @@
 title: Criar uma conexão de origem e um fluxo de dados para o SAP Commerce usando a API do Serviço de Fluxo
 description: Saiba como criar uma conexão de origem e um fluxo de dados para trazer dados do SAP Commerce para o Experience Platform usando a API do Serviço de Fluxo.
 badge: Beta
-source-git-commit: a848ea11e388678ade780fd81ef3ff6a3477b741
+exl-id: 580731b9-0c04-4f83-a475-c1890ac5b7cd
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '2358'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -19,7 +20,7 @@ O tutorial a seguir guiará você pelas etapas para criar um [!DNL SAP Commerce]
 
 ## Introdução
 
-Este guia requer entendimento prático dos seguintes componentes do Experience Platform:
+Este manual necessita de uma compreensão funcional dos seguintes componentes da Experience Platform:
 
 * [Origens](../../../../home.md): o Experience Platform permite que os dados sejam assimilados de várias fontes e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma.
 * [Sandboxes](../../../../../sandboxes/home.md): o Experience Platform fornece sandboxes virtuais que particionam uma única instância da Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
@@ -43,7 +44,7 @@ Para obter mais informações sobre essas credenciais, consulte o [[!DNL SAP Com
 
 A seguir estão descritas as etapas que devem ser realizadas para autenticar o [!DNL SAP Commerce] , crie uma conexão de origem e um fluxo de dados para trazer seus dados de contas e contatos para o Experience Platform.
 
-### Criar uma conexão básica {#base-connection}
+### Crie uma conexão básica {#base-connection}
 
 Uma conexão base retém informações entre sua origem e a Platform, incluindo as credenciais de autenticação da origem, o estado atual da conexão e sua ID de conexão base exclusiva. A ID de conexão básica permite explorar e navegar pelos arquivos de dentro da origem e identificar os itens específicos que deseja assimilar, incluindo informações sobre os tipos de dados e formatos.
 

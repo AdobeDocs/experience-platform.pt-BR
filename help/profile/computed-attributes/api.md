@@ -1,13 +1,13 @@
 ---
 title: Endpoint da API de atributos computados
 description: Saiba como criar, exibir, atualizar e excluir atributos calculados usando a API de perfil do cliente em tempo real.
-source-git-commit: e1c7d097f7ab39d05674c3dad620bea29f08092b
+exl-id: f217891c-574d-4a64-9d04-afc436cf16a9
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '1654'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
-
 
 # Endpoint da API de atributos computados
 
@@ -27,7 +27,7 @@ Antes de continuar, reveja o [Guia de introdução à API de perfil](../api/gett
 
 Além disso, consulte a documentação do seguinte serviço:
 
-- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): o quadro normalizado pelo qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
+- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): a estrutura padronizada pela qual a [!DNL Experience Platform] organiza os dados de experiência do cliente.
    - [Guia de introdução ao Registro de esquema](../../xdm/api/getting-started.md#know-your-tenant_id): Informações sobre o `{TENANT_ID}`, que aparece nas respostas neste guia, é fornecido.
 
 ## Recuperar uma lista de atributos computados {#list}

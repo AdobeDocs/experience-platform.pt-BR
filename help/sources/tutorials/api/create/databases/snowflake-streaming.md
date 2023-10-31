@@ -3,10 +3,11 @@ title: Conecte sua conta de transmissão do Snowflake à Adobe Experience Platfo
 description: Saiba como conectar o Adobe Experience Platform ao Snowflake Streaming usando a API do Serviço de fluxo.
 badgeBeta: label="Beta" type="Informative"
 badgeUltimate: label="Ultimate" type="Positive"
-source-git-commit: f2c392704e0404aaff2ad569e388241c06fba902
+exl-id: 3fc225a4-746c-4a91-aa77-bbeb091ec364
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '867'
-ht-degree: 4%
+ht-degree: 6%
 
 ---
 
@@ -21,7 +22,7 @@ Este tutorial fornece etapas sobre como conectar e transmitir dados de seu [!DNL
 
 ## Introdução
 
-Este guia requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
+Este manual necessita de uma compreensão funcional dos seguintes componentes da Adobe Experience Platform:
 
 * [Origens](../../../../home.md): [!DNL Experience Platform] O permite que os dados sejam assimilados de várias fontes e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando o [!DNL Platform] serviços.
 * [Sandboxes](../../../../../sandboxes/home.md): [!DNL Experience Platform] O fornece sandboxes virtuais que particionam uma única [!DNL Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
@@ -32,7 +33,7 @@ Para obter a configuração de pré-requisitos e informações sobre o [!DNL Sno
 
 Para obter informações sobre como fazer chamadas para APIs da Platform com êxito, consulte o manual em [introdução às APIs da Platform](../../../../../landing/api-guide.md).
 
-## Criar uma conexão básica {#create-a-base-connection}
+## Crie uma conexão básica {#create-a-base-connection}
 
 Uma conexão base retém informações entre sua origem e a Platform, incluindo as credenciais de autenticação da origem, o estado atual da conexão e sua ID de conexão base exclusiva. A ID de conexão básica permite explorar e navegar pelos arquivos de dentro da origem e identificar os itens específicos que deseja assimilar, incluindo informações sobre os tipos de dados e formatos.
 
@@ -211,7 +212,7 @@ Uma resposta bem-sucedida retorna a ID de conexão de origem e a tag corresponde
 }
 ```
 
-## Criar um fluxo de dados
+## Crie um fluxo de dados
 
 Para criar um fluxo de dados para transmitir dados de um tour [!DNL Snowflake] para a Platform, você deve fazer uma solicitação POST para a `/flows` ao fornecer os seguintes valores:
 

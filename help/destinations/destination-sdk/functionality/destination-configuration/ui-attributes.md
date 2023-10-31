@@ -1,13 +1,13 @@
 ---
 description: Saiba como configurar os atributos da interface do usuário, como o link de documentação, a categoria de cartão de destino, o tipo e a frequência de conexão de destino, para destinos criados com o Destination SDK.
 title: Atributos da interface
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
+exl-id: aed8d868-c516-45da-b224-c7e99e4bfaf1
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '755'
 ht-degree: 0%
 
 ---
-
 
 # Atributos da interface
 
@@ -123,7 +123,7 @@ Para saber mais sobre os outros componentes de destino, consulte os seguintes ar
 * [Autenticação do cliente](customer-authentication.md)
 * [Autenticação OAuth2](oauth2-authentication.md)
 * [Campos de dados do cliente](customer-data-fields.md)
-* [Configuração de esquema](schema-configuration.md)
+* [Configuração do esquema](schema-configuration.md)
 * [Configuração do namespace de identidade](identity-namespace-configuration.md)
 * [Entrega de destino](destination-delivery.md)
 * [Configuração de metadados de público](audience-metadata-configuration.md)

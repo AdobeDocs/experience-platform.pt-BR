@@ -1,7 +1,8 @@
 ---
 title: Computação de estatísticas do conjunto de dados
 description: Este documento descreve como calcular estatísticas em nível de coluna nos conjuntos de dados do Azure Data Lake Storage (ADLS) com comandos SQL.
-source-git-commit: b94536be6e92354e237b99d36af13adf5a49afa7
+exl-id: 66f11cd4-b115-40b8-ba8a-c4bb3606bbbf
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '1085'
 ht-degree: 0%
@@ -121,7 +122,7 @@ Você pode usar o ID da estatística ou o nome do alias para pesquisar as estat�
 
 ## Limitar as colunas incluídas {#limit-included-columns}
 
-Para focalizar sua análise, você pode calcular estatísticas para colunas de conjunto de dados específicas referenciando-as por nome. Use o `FOR COLUMNS (<col1>, <col2>)` sintaxe para direcionar colunas específicas. O exemplo abaixo calcula estatísticas para as colunas  `commerce`, `id`, e `timestamp` para o conjunto de dados `tableName`.
+Para focalizar sua análise, você pode calcular estatísticas para colunas de conjunto de dados específicas referenciando-as por nome. Use o `FOR COLUMNS (<col1>, <col2>)` sintaxe para direcionar colunas específicas. O exemplo abaixo calcula as estatísticas das colunas  `commerce`, `id`, e `timestamp` para o conjunto de dados `tableName`.
 
 ```sql
 ANALYZE TABLE tableName COMPUTE STATISTICS FOR columns (commerce, id, timestamp);

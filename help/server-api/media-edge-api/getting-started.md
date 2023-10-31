@@ -2,13 +2,13 @@
 solution: Experience Platform
 title: Introdução às APIs do Media Edge
 description: Introdução às APIs do Media Edge
-source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+exl-id: 76022dea-408b-4d8e-abd4-1a6de81beceb
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '958'
 ht-degree: 5%
 
 ---
-
 
 # Introdução à API do Media Edge
 
@@ -292,5 +292,3 @@ A tabela a seguir mostra os possíveis códigos de resposta resultantes das soli
 
 * [Guia de solução de problemas do Media Edge](troubleshooting.md)
 * [Visão geral da API do Media Edge](overview.md)
-
-

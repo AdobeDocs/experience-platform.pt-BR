@@ -2,9 +2,9 @@
 title: Criar uma conexão de origem do Adobe Analytics na interface
 description: Saiba como criar uma conexão de origem do Adobe Analytics na interface do usuário para trazer dados do consumidor para o Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: 358daa9511f647749a8198893b712d00a5cfbc5d
 workflow-type: tm+mt
-source-wordcount: '2298'
+source-wordcount: '2481'
 ht-degree: 6%
 
 ---
@@ -264,33 +264,53 @@ A variável [!UICONTROL Revisão] é exibida, permitindo que você revise seu no
 
 ![revisão](../../../../images/tutorials/create/analytics/review.png)
 
-### Monitorar seu fluxo de dados
+## Monitorar seu fluxo de dados {#monitor-your-dataflow}
 
-Depois que o fluxo de dados for criado, você poderá monitorar os dados que estão sendo assimilados por meio dele. No [!UICONTROL Catálogo] , selecione **[!UICONTROL Fluxos de dados]** para visualizar uma lista de fluxos estabelecidos associados à sua conta do Analytics.
+Quando o fluxo de dados estiver concluído, selecione **[!UICONTROL Fluxos de dados]** no catálogo de origens para monitorar a atividade e o status dos dados.
 
-![select-datafflows](../../../../images/tutorials/create/analytics/select-dataflows.png)
+![O catálogo de origens com a guia de fluxos de dados selecionada.](../../../../images/tutorials/create/analytics/select-dataflows.png)
 
-A variável **Fluxos de dados** é exibida. Nesta página há um par de fluxos de conjunto de dados, incluindo informações sobre seu nome, dados de origem, hora de criação e status.
+Uma lista dos fluxos de dados existentes do Analytics em sua organização é exibida. Aqui, selecione um conjunto de dados de destino para visualizar sua respectiva atividade de assimilação.
 
-O conector instancia dois fluxos de conjunto de dados. Um fluxo representa dados de preenchimento retroativo e o outro é para dados em tempo real. Os dados de preenchimento retroativo não são configurados para o Perfil, mas são enviados ao data lake para casos de uso analíticos e de ciência de dados.
+![Uma lista de fluxos de dados existentes do Adobe Analytics em sua organização.](../../../../images/tutorials/create/analytics/select-target-dataset.png)
 
-Para obter mais informações sobre preenchimento retroativo, dados em tempo real e suas respectivas latências, consulte a [Visão geral do Conector de dados do Analytics](../../../../connectors/adobe-applications/analytics.md).
+A variável [!UICONTROL Atividade do conjunto de dados] Esta página fornece informações sobre o progresso dos dados que estão sendo enviados do Analytics para o Experience Platform. A interface exibe métricas como o número de registros assimilados, o número de lotes assimilados e o número de lotes com falha.
 
-Selecione o fluxo do conjunto de dados que deseja exibir na lista.
+A origem instancia dois fluxos de conjunto de dados. Um fluxo representa dados de preenchimento retroativo e o outro é para dados em tempo real. Os dados de preenchimento retroativo não são configurados para assimilação no Perfil do cliente em tempo real, mas são enviados ao data lake para casos de uso analíticos e de ciência de dados.
 
-![select-target-dataset](../../../../images/tutorials/create/analytics/select-target-dataset.png)
+Para obter mais informações sobre preenchimento retroativo, dados em tempo real e suas respectivas latências, leia a [Visão geral da origem do Analytics](../../../../connectors/adobe-applications/analytics.md).
 
-A variável **[!UICONTROL Atividade do conjunto de dados]** é exibida. Esta página exibe a taxa de mensagens que estão sendo consumidas no formato de um gráfico. Selecionar **[!UICONTROL Governança de dados]** no cabeçalho superior para acessar os campos de rotulagem.
+![A página da atividade do conjunto de dados para um determinado conjunto de dados de destino para dados do Adobe Analytics.](../../../../images/tutorials/create/analytics/dataset-activity.png)
 
-![atividade do conjunto de dados](../../../../images/tutorials/create/analytics/dataset-activity.png)
++++Exibir lotes individuais usando a interface de monitoramento herdada
 
-Você pode visualizar os rótulos herdados de um fluxo do conjunto de dados a partir da [!UICONTROL Governança de dados] tela. Para obter mais informações sobre como rotular dados provenientes do Analytics, visite o [guia de rótulos de uso de dados](../../../../../data-governance/labels/user-guide.md).
+A página de atividade do conjunto de dados não exibe uma lista de lotes individuais. Para exibir uma lista de lotes individuais, selecione um gráfico na interface da atividade do conjunto de dados.
 
-![data-gov](../../../../images/tutorials/create/analytics/data-gov.png)
+![A página de atividade do conjunto de dados com um gráfico selecionado.](../../../../images/tutorials/create/analytics/select-chart.png)
 
-Para excluir um fluxo de dados, vá para a guia [!UICONTROL Fluxos de dados] e selecione as reticências (`...`) ao lado do nome do fluxo de dados e selecione [!UICONTROL Excluir].
+Você será direcionado ao Painel de monitoramento. Em seguida, selecione **[!UICONTROL SOMENTE FALHAS DE ASSIMILAÇÃO: SIM]** para limpar o filtro e visualizar uma lista de lotes individuais.
 
-![delete](../../../../images/tutorials/create/analytics/delete.png)
+![O painel de monitoramento com o filtro de falha selecionado.](../../../../images/tutorials/create/analytics/clear-filter.png)
+
+A interface é atualizada para uma lista de lotes individuais, incluindo informações sobre suas respectivas métricas.
+
+![A página de monitoramento herdada dos dados em lote.](../../../../images/tutorials/create/analytics/batch-end-to-end.png)
+
+| Métricas | Descrição |
+| --- | --- |
+| ID em lote | A ID de um determinado lote. Esse valor é gerado internamente. |
+| Nome do conjunto de dados | O nome de um determinado conjunto de dados usado para os dados do Analytics. |
+| Fonte | A fonte dos dados assimilados. |
+| Atualização dos pacotes | A data da iteração de execução de fluxo mais recente. |
+| Registros no conjunto de dados | A contagem total de registros no conjunto de dados. **Nota**: ocasionalmente, esse parâmetro exibirá um status de `in-progress`. Esse status indica que o processo de assimilação de registros ainda não está concluído. |
+| Novos fragmentos de perfil | A contagem total de novos fragmentos de perfil que foram assimilados. |
+| Fragmentos de perfil existentes | A contagem total de fragmentos de perfil existentes. |
+| Registros de identidade compilados | A contagem total de registros de identidade que foram compilados após a assimilação. |
+| Registros no perfil | A contagem total de registros assimilados no Perfil de Cliente em Tempo Real. |
+
+{style="table-layout:auto"}
+
++++
 
 ## Próximas etapas e recursos adicionais
 

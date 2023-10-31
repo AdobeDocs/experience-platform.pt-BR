@@ -1,13 +1,13 @@
 ---
 description: Esta página exemplifica a chamada de API usada para atualizar uma configuração existente do servidor de destino por meio do Adobe Experience Platform Destination SDK.
 title: Atualizar uma configuração do servidor de destino
-source-git-commit: 03ec0e919304c9d46ef88d606eed9e12d1824856
+exl-id: 579d2cc1-5110-4fba-9dcc-ff4b8d259827
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '1098'
 ht-degree: 12%
 
 ---
-
 
 # Atualizar uma configuração do servidor de destino
 

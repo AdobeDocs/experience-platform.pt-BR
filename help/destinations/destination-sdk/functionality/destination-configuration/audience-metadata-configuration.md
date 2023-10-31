@@ -1,13 +1,13 @@
 ---
 description: Saiba como definir as configurações de metadados de público-alvo para destinos criados com o Destination SDK.
 title: Configuração de metadados de público
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+exl-id: ae71df4f-b753-4084-835f-03559b4986cb
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '405'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
-
 
 # Configuração de metadados de público
 
@@ -71,7 +71,7 @@ Para saber mais sobre os outros componentes de destino, consulte os seguintes ar
 * [Autenticação OAuth2](oauth2-authentication.md)
 * [Campos de dados do cliente](customer-data-fields.md)
 * [Atributos da interface](ui-attributes.md)
-* [Configuração de esquema](schema-configuration.md)
+* [Configuração do esquema](schema-configuration.md)
 * [Configuração do namespace de identidade](identity-namespace-configuration.md)
 * [Configurações de mapeamento compatíveis](supported-mapping-configurations.md)
 * [Entrega de destino](destination-delivery.md)

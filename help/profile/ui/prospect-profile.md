@@ -2,13 +2,13 @@
 title: Perfis de cliente potencial
 description: Saiba como criar e usar perfis de prospecto para coletar informações sobre clientes desconhecidos usando informações de terceiros.
 type: Documentation
-source-git-commit: 1973fbe858fc0a266936faf6060e467c108fedf6
+exl-id: 194d25d6-88ae-4a7a-9b79-39120bced5c7
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '399'
 ht-degree: 7%
 
 ---
-
 
 # Perfis de cliente potencial
 

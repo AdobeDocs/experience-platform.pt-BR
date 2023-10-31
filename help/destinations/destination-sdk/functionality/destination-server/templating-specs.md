@@ -1,13 +1,13 @@
 ---
 description: Saiba como formatar as solicitações HTTP enviadas para seu endpoint. Use o endpoint /authoring/destination-servers para configurar as especificações dos modelos de servidor de destino no Adobe Experience Platform Destination SDK.
 title: Especificações de modelos para destinos criados com o Destination SDK
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+exl-id: 066781c8-0af0-4958-b62f-194c6ba13f3a
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '523'
 ht-degree: 4%
 
 ---
-
 
 # Especificações de modelo para destinos criados com o Destination SDK
 

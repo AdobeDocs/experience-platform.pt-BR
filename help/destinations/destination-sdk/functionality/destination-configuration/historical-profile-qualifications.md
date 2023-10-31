@@ -1,13 +1,13 @@
 ---
 description: Saiba mais sobre as qualificações de perfil históricas compatíveis com destinos criados com o Destination SDK.
 title: Qualificações do perfil histórico
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+exl-id: 8880cff9-865b-4d45-a24d-a78e77419670
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '214'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
-
 
 # Qualificações do perfil histórico
 
@@ -48,7 +48,7 @@ Para saber mais sobre os outros componentes de destino, consulte os seguintes ar
 * [Autenticação OAuth2](oauth2-authentication.md)
 * [Campos de dados do cliente](customer-data-fields.md)
 * [Atributos da interface](ui-attributes.md)
-* [Configuração de esquema](schema-configuration.md)
+* [Configuração do esquema](schema-configuration.md)
 * [Configuração do namespace de identidade](identity-namespace-configuration.md)
 * [Configurações de mapeamento compatíveis](supported-mapping-configurations.md)
 * [Entrega de destino](destination-delivery.md)

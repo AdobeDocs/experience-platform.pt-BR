@@ -3,13 +3,13 @@ solution: Experience Platform
 title: Criar, compartilhar e reutilizar instâncias do manual de estratégia
 description: Saiba como criar, compartilhar e reutilizar instâncias do manual de estratégia para concluir seu caso de uso de marketing.
 badgeBeta: label="Beta" type="Informative"
-source-git-commit: e61e200b148e4d17041b3711bd63c796a44b05c8
-workflow-type: ht
-source-wordcount: '724'
+exl-id: b06d8186-c41f-4150-bac4-69c616151ef9
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+workflow-type: tm+mt
+source-wordcount: '725'
 ht-degree: 100%
 
 ---
-
 
 # (Beta) Criar, compartilhar e reutilizar instâncias do manual de estratégia
 
@@ -43,7 +43,7 @@ Depois de criar uma instância com base em um manual de estratégia, é possíve
 
 É importante entender que os ativos gerados diferem com base no caso de uso sendo habilitado:
 
-* Ativos diferentes são gerados para diferentes tipos de manuais de estratégia. Esses ativos são criados especificamente para o caso de uso atingido através do manual de estratégia. Por exemplo, um manual de estratégia gera um esquema, um segmento, uma jornada e mensagens. Outro manual gera um esquema, um segmento e um destino para ativar os dados.
+* Ativos diferentes são gerados para diferentes tipos de manuais de estratégia. Esses ativos são criados especificamente para o caso de uso atingido através do manual de estratégia. Por exemplo, um manual de estratégia gera um esquema, um segmento, uma jornada e mensagens. Outro manual de estratégia gera um esquema, um segmento e um destino para ativar os dados.
 * Os ativos em si diferem entre os manuais de estratégia. Por exemplo, para o manual de estratégia **[!UICONTROL Enviar uma mensagem de aniversário aos convidados]**, o público-alvo que será criado terá a regra `birthday=today AND year=any`.
 
 Para ilustrar um exemplo, para o manual de estratégia **[!UICONTROL Carrinho abandonado: mercadorias]**, você pode ver que uma jornada específica será criada e incluirá as mensagens criadas para esse caso de uso.

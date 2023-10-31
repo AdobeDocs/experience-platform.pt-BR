@@ -1,10 +1,11 @@
 ---
 title: Definir e configurar chaves gerenciadas pelo cliente usando a interface do usuário da plataforma
 description: Saiba como configurar seu aplicativo CMK com seu locatário do Azure e enviar sua ID de chave de criptografia para a Adobe Experience Platform.
-source-git-commit: a0df05cde19e97d4abdad7abd19eafea8efe1096
+exl-id: 5f38997a-66f3-4f9d-9c2f-fb70266ec0a6
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '1097'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -16,7 +17,7 @@ Este documento aborda o processo de ativação do recurso de chaves gerenciadas 
 
 Para visualizar e visitar o [!UICONTROL Criptografia] no Adobe Experience Platform, você deve ter criado uma função e atribuído a [!UICONTROL Gerenciar Chave Gerenciada Pelo Cliente] permissão para essa função. Qualquer usuário que tenha o [!UICONTROL Gerenciar Chave Gerenciada Pelo Cliente] permissão pode habilitar o CMK para sua organização.
 
-Para obter mais informações sobre atribuição de funções e permissões no Experience Platform, consulte o [configurar documentação de permissões](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html).
+Para obter mais informações sobre atribuição de funções e permissões no Experience Platform, consulte o [configurar documentação de permissões](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html?lang=pt-BR).
 
 Para ativar o CMK, seu [[!DNL Azure] O Cofre de Chaves deve ser configurado](./azure-key-vault-config.md) com as seguintes configurações:
 

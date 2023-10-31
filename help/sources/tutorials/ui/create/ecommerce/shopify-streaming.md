@@ -2,8 +2,8 @@
 title: Criar Uma Conexão De Transmissão E Um Fluxo De Dados Do Shopify Na Interface Do Usuário
 description: Saiba como criar uma conexão de origem e fluxo de dados de transmissão do Shopify usando a interface do usuário da Platform
 badge: Beta
-exl-id: 3368ecf6-0c61-49ce-bc9c-29ee50b3f037
-source-git-commit: feb05d5bddc4135c5fe14d3ec5d8fad62c5e2236
+exl-id: d53f4ab5-8bdc-4647-83d5-ee898abda0f2
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '790'
 ht-degree: 1%

@@ -1,13 +1,13 @@
 ---
 title: Visão geral do Adobe Experience Platform Web Software Development Kit (SDK)
 description: Saiba como usar o SDK da Web da Adobe Experience Platform para integrar recursos da plataforma ao seu site.
-source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+exl-id: 1348144a-7d25-4c27-bc40-3daee2f043a6
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '776'
 ht-degree: 3%
 
 ---
-
 
 # Visão geral do SDK da Web do Adobe Experience Platform {#overview}
 

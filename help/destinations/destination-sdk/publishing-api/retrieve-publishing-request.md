@@ -1,13 +1,13 @@
 ---
 description: Esta página exemplifica a chamada de API usada para recuperar detalhes sobre uma solicitação de publicação de destino por meio do Adobe Experience Platform Destination SDK.
 title: Recuperar uma solicitação de publicação de destino
-source-git-commit: 9e1ae44f83b886f0b5dd5a9fc9cd9b7db6154ff0
+exl-id: fceef12d-a52c-4259-a91e-7af88b132800
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '834'
 ht-degree: 4%
 
 ---
-
 
 # Recuperar uma solicitação de publicação de destino
 

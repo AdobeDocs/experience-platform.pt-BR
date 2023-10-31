@@ -1,7 +1,8 @@
 ---
 description: Saiba como o Experience Platform lida com diferentes tipos de erros retornados por destinos de streaming e como ele tenta enviar dados novamente para a plataforma de destino.
 title: Política de limitação de taxa e tentativa para destinos de transmissão criados com Destination SDK
-source-git-commit: 8c8026b1180775dddd9517fc88727749678a5613
+exl-id: aad10039-9957-4e9e-a0b7-7bf65eb3eaa9
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '426'
 ht-degree: 0%

@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guia da interface do usuário do Serviço de segmentação
 description: Saiba como criar e gerenciar públicos e definições de segmento na interface do usuário do Adobe Experience Platform.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 695a5c9b39def899c6b1f9cb169508ae0299686c
+source-git-commit: 692cdd3d8b30c3e5187a556e4f9ec80d675cb443
 workflow-type: tm+mt
-source-wordcount: '3822'
+source-wordcount: '3910'
 ht-degree: 4%
 
 ---
@@ -72,17 +72,17 @@ Ao lado de cada público há um ícone de reticências. Selecionar essa opção 
 
 | Ação | Origens | Descrição |
 | ------ | ------- | ----------- |
-| Editar | Serviço de segmentação | Permite abrir o Construtor de segmentos para editar o público-alvo. Para obter mais informações sobre como usar o Construtor de segmentos, leia as [Guia da interface do usuário do Construtor de segmentos](./segment-builder.md). |
-| Abrir composição | Composição de público-alvo | Permite abrir a composição de público-alvo para ver seu público-alvo. Para obter mais informações sobre a composição do público-alvo, leia a [guia da interface de composição de público-alvo](./audience-composition.md). |
-| Ativar para destino | Serviço de segmentação | Permite ativar o público para um destino. Para obter informações mais detalhadas sobre como ativar um público-alvo para um destino, leia o [visão geral da ativação](../../destinations/ui/activation-overview.md). |
-| Compartilhar com parceiros | Composição de público-alvo, Upload personalizado, Serviço de segmentação | Permite compartilhar seu público-alvo com outros usuários da Platform. Para obter mais informações sobre esse recurso, leia a [Visão geral da correspondência de segmentos](./segment-match/overview.md). |
-| Gerenciar tags | Composição de público-alvo, Upload personalizado, Serviço de segmentação | Permite gerenciar as tags definidas pelo usuário que pertencem ao público-alvo. Para obter mais informações sobre esse recurso, leia a seção sobre [filtragem e marcação](#manage-audiences). |
-| Mover para a pasta | Composição de público-alvo, Upload personalizado, Serviço de segmentação | Permite gerenciar a qual pasta o público-alvo pertence. Para obter mais informações sobre esse recurso, leia a seção sobre [filtragem e marcação](#manage-audiences). |
-| Copiar | Composição de público-alvo, Upload personalizado, Serviço de segmentação | Duplica o público selecionado. |
-| Aplicar rótulos de acesso | Composição de público-alvo, Upload personalizado, Serviço de segmentação | Permite gerenciar os rótulos de acesso que pertencem ao público-alvo. Para obter mais informações sobre rótulos de acesso, leia a documentação em [gerenciamento de rótulos](../../access-control/abac/ui/labels.md). |
-| Arquivar | Upload personalizado | Arquiva o público-alvo selecionado. |
-| Excluir | Composição de público-alvo, Upload personalizado, Serviço de segmentação | Exclui o público selecionado. |
-| Adicionar ao pacote | Composição de público-alvo, Upload personalizado, Serviço de segmentação | Permite mover o público-alvo entre sandboxes. Para obter mais informações sobre esse recurso, leia a [guia de ferramentas de sandbox](../../sandboxes/ui/sandbox-tooling.md). |
+| [!UICONTROL Editar] | Serviço de segmentação | Permite abrir o Construtor de segmentos para editar o público-alvo. Para obter mais informações sobre como usar o Construtor de segmentos, leia as [Guia da interface do usuário do Construtor de segmentos](./segment-builder.md). |
+| [!UICONTROL Abrir composição] | Composição de público-alvo | Permite abrir a composição de público-alvo para ver seu público-alvo. Para obter mais informações sobre a composição do público-alvo, leia a [guia da interface de composição de público-alvo](./audience-composition.md). |
+| [!UICONTROL Ativar para destino] | Serviço de segmentação | Permite ativar o público para um destino. Para obter informações mais detalhadas sobre como ativar um público-alvo para um destino, leia o [visão geral da ativação](../../destinations/ui/activation-overview.md). |
+| [!UICONTROL Compartilhar com parceiros] | Composição de público-alvo, Upload personalizado, Serviço de segmentação | Permite compartilhar seu público-alvo com outros usuários da Platform. Para obter mais informações sobre esse recurso, leia a [Visão geral da correspondência de segmentos](./segment-match/overview.md). |
+| [!UICONTROL Gerenciar tags] | Composição de público-alvo, Upload personalizado, Serviço de segmentação | Permite gerenciar as tags definidas pelo usuário que pertencem ao público-alvo. Para obter mais informações sobre esse recurso, leia a seção sobre [filtragem e marcação](#manage-audiences). |
+| [!UICONTROL Mover para a pasta] | Composição de público-alvo, Upload personalizado, Serviço de segmentação | Permite gerenciar a qual pasta o público-alvo pertence. Para obter mais informações sobre esse recurso, leia a seção sobre [filtragem e marcação](#manage-audiences). |
+| [!UICONTROL Copiar] | Composição de público-alvo, Upload personalizado, Serviço de segmentação | Duplica o público selecionado. |
+| [!UICONTROL Aplicar rótulos de acesso] | Composição de público-alvo, Upload personalizado, Serviço de segmentação | Permite gerenciar os rótulos de acesso que pertencem ao público-alvo. Para obter mais informações sobre rótulos de acesso, leia a documentação em [gerenciamento de rótulos](../../access-control/abac/ui/labels.md). |
+| [!UICONTROL Arquivar] | Upload personalizado | Arquiva o público-alvo selecionado. |
+| [!UICONTROL Excluir] | Composição de público-alvo, Upload personalizado, Serviço de segmentação | Exclui o público selecionado. |
+| [!UICONTROL Adicionar ao pacote] | Composição de público-alvo, Upload personalizado, Serviço de segmentação | Permite mover o público-alvo entre sandboxes. Para obter mais informações sobre esse recurso, leia a [guia de ferramentas de sandbox](../../sandboxes/ui/sandbox-tooling.md). |
 
 >[!NOTE]
 >
@@ -339,6 +339,8 @@ Depois de selecionar o arquivo CSV a ser importado, uma lista de dados de amostr
 
 A variável **[!UICONTROL Detalhes do público]** é exibida. Você pode adicionar informações sobre o público-alvo, incluindo nome, descrição, identidade principal e valor do namespace de identidade.
 
+Ao importar o público gerado externamente, você deve selecionar uma das colunas para ser o campo de identidade principal e especificar o valor do namespace. Observe que todos os campos restantes serão considerados **atributos de carga**. Esses atributos são considerados **não durável**, pois eles só serão associados a esse público-alvo para fins de personalização, e serão **não** conectado ao perfil.
+
 ![A variável [!UICONTROL Detalhes do público] é exibida.](../images/ui/overview/import-audience-audience-details.png)
 
 Depois de preencher os detalhes do público-alvo, selecione **[!UICONTROL Próxima]**.
@@ -353,7 +355,9 @@ Depois de confirmar que os detalhes estão corretos, selecione **[!UICONTROL Con
 
 >[!IMPORTANT]
 >
->Se o público gerado externamente contiver informações confidenciais e/ou relacionadas à assistência médica, você **deve** aplique os rótulos de uso de dados necessários antes de ativá-los em qualquer destino. Para obter mais informações sobre como aplicar rótulos de uso de dados, leia a documentação em [gerenciamento de rótulos](../../access-control/abac/ui/labels.md).
+>Por padrão, os públicos-alvo gerados externamente têm uma expiração de dados de 30 dias. A expiração dos dados é redefinida se o público-alvo for atualizado ou modificado de alguma forma.
+>
+>Além disso, se o público-alvo gerado externamente contiver informações confidenciais e/ou relacionadas à assistência médica, você **deve** aplique os rótulos de uso de dados necessários antes de ativá-los em qualquer destino. Para obter mais informações sobre como aplicar rótulos de uso de dados, leia a documentação em [gerenciamento de rótulos](../../access-control/abac/ui/labels.md).
 
 ## Segmentação programada {#scheduled-segmentation}
 

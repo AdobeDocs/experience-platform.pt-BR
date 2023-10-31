@@ -1,13 +1,13 @@
 ---
 description: Esta página exemplifica a chamada à API usada para excluir uma configuração existente do servidor de destino por meio do Adobe Experience Platform Destination SDK.
 title: Excluir uma configuração do servidor de destino
-source-git-commit: acb7075f49b4194c31371d2de63709eea7821329
+exl-id: 2322a2ce-220e-4590-a553-b15152412752
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '329'
 ht-degree: 3%
 
 ---
-
 
 # Excluir uma configuração do servidor de destino
 
@@ -75,4 +75,3 @@ Para saber mais sobre o que você pode fazer com esse endpoint, consulte os segu
 * [Criar uma configuração do servidor de destino](create-destination-server.md)
 * [Recuperar uma configuração do servidor de destino](retrieve-destination-server.md)
 * [Atualizar uma configuração do servidor de destino](update-destination-server.md)
-

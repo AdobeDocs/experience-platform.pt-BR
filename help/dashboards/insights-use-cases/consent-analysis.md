@@ -1,7 +1,8 @@
 ---
 title: Rastreamento e análise de consentimento
 description: Saiba como criar um painel de análise de consentimento para rastrear a tendência do consentimento do usuário ao longo do tempo.
-source-git-commit: 4c45492157f0fe1a82187faf73439d6206cb0dc9
+exl-id: 34accae5-8b4f-4281-8333-187a91db8199
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '1921'
 ht-degree: 0%

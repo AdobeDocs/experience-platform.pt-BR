@@ -2,9 +2,9 @@
 title: Chaves gerenciadas pelo cliente no Adobe Experience Platform
 description: Saiba como configurar suas próprias chaves de criptografia para dados armazenados no Adobe Experience Platform.
 exl-id: cd33e6c2-8189-4b68-a99b-ec7fccdc9b91
-source-git-commit: a81c3f220203d65ef810a92896edcfc489a0327a
+source-git-commit: 930c786db51063c55f731dc90f2ee66e98624555
 workflow-type: tm+mt
-source-wordcount: '739'
+source-wordcount: '763'
 ht-degree: 2%
 
 ---
@@ -18,6 +18,10 @@ Os dados armazenados no Adobe Experience Platform são criptografados em repouso
 >Os dados no data lake da Adobe Experience Platform e no Armazenamento de perfis são criptografados usando CMK. Eles são considerados seus principais armazenamentos de dados.
 
 Este documento fornece uma visão geral de alto nível do processo de ativação do recurso de chaves gerenciadas pelo cliente (CMK) na Platform e as informações de pré-requisitos necessárias para concluir essas etapas.
+
+>[!NOTE]
+>
+>Para clientes do Customer Journey Analytics, siga as instruções no [Documentação do Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-privacy/cmk.html?lang=en).
 
 ## Pré-requisitos
 

@@ -3,9 +3,9 @@ title: (Beta) A conexão Trade Desk - CRM
 description: Ative perfis para sua conta da Trade Desk para direcionamento e supressão de público com base nos dados do CRM.
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
-source-git-commit: 661ef040398a9e2ef8dd9cebdf7bd27d4268636b
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1150'
+source-wordcount: '1148'
 ht-degree: 4%
 
 ---
@@ -86,7 +86,7 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 
 ### Preencher Detalhes do Destino {#fill-in-details}
 
-Antes de enviar ou ativar dados de público-alvo para um destino, você deve configurar uma conexão com sua própria plataforma de destino. Enquanto [configuração](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=en) Para esse destino, você deve fornecer as seguintes informações:
+Antes de enviar ou ativar dados de público-alvo para um destino, você deve configurar uma conexão com sua própria plataforma de destino. Enquanto [configuração](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) Para esse destino, você deve fornecer as seguintes informações:
 
 * **[!UICONTROL Tipo de conta]**: Escolha o **[!UICONTROL Conta existente]** opção.
 * **[!UICONTROL Nome]**: um nome pelo qual você reconhecerá esse destino no futuro.

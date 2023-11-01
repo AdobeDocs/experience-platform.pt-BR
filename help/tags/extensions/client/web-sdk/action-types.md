@@ -3,10 +3,10 @@ title: Tipos de ação na extensão SDK da Web do Adobe Experience Platform
 description: Saiba mais sobre os diferentes tipos de ação fornecidos pela extensão de tag do Adobe Experience Platform Web SDK.
 solution: Experience Platform
 exl-id: a4bf0bb9-59b4-4c43-97e6-387768176517
-source-git-commit: 528b13aa20da62c32456e02cb2293fdded156421
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '761'
-ht-degree: 3%
+source-wordcount: '757'
+ht-degree: 2%
 
 ---
 
@@ -23,7 +23,7 @@ Envia um evento para o Adobe [!DNL Experience Platform] para que a Adobe Experie
 
 Há alguns outros campos no tipo de ação Enviar evento que também podem ser úteis, dependendo da implementação. Observe que todos esses campos são opcionais.
 
-- **Tipo:** Esse campo permite especificar um tipo de evento que será gravado no esquema XDM. Consulte a [documentação](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en#using-the-sendbeacon-api) para obter mais informações sobre os tipos de evento padrão.
+- **Tipo:** Esse campo permite especificar um tipo de evento que será gravado no esquema XDM. Consulte a [documentação](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html#using-the-sendbeacon-api) para obter mais informações sobre os tipos de evento padrão.
 - **Dados:** Os dados que não correspondem a um esquema XDM podem ser enviados usando esse campo. Este campo é útil se você estiver tentando atualizar um perfil do Adobe Target ou enviar atributos do Target Recommendations. Para obter exemplos, consulte nosso [documentação](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=pt-BR).<!--- **Merge ID:** If you would like to specify a merge ID for your event, you can do so in this field. Please note that the solutions downstream are not able to merge your event data at this time. -->
 - **ID do conjunto de dados:** Se precisar enviar dados para um conjunto de dados diferente daquele especificado no fluxo de dados, você pode especificar essa ID de conjunto de dados aqui.
 - **O documento será descarregado:** Se quiser garantir que os eventos cheguem ao servidor mesmo se o usuário sair da página, verifique a **[!UICONTROL O documento será descarregado]** caixa de seleção Isso permite que os eventos alcancem o servidor, mas as respostas são ignoradas.

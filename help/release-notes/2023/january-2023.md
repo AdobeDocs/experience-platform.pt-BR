@@ -2,10 +2,10 @@
 title: Notas da versão de janeiro de 2023 da Adobe Experience Platform
 description: As notas da versão de janeiro de 2023 da Adobe Experience Platform.
 exl-id: 461898ce-5683-4ab1-9167-ac25843a1ff8
-source-git-commit: a0400ab255b3b6a7edb4dcfd5c33a0f9e18b5157
-workflow-type: ht
-source-wordcount: '2414'
-ht-degree: 100%
+source-git-commit: e300e57df998836a8c388511b446e90499185705
+workflow-type: tm+mt
+source-wordcount: '2408'
+ht-degree: 98%
 
 ---
 
@@ -22,7 +22,7 @@ Atualizações dos recursos já existentes na Adobe Experience Platform:
 - [Experience Data Model (XDM)](#xdm)
 - [Perfil do cliente em tempo real](#profile)
 - [Serviço de segmentação](#segmentation)
-- [Fontes](#sources)
+- [Origens](#sources)
 
 ## Serviços de inteligência artificial/aprendizado de máquina {#ai-ml}
 
@@ -113,11 +113,11 @@ A Adobe Experience Platform fornece um conjunto de tecnologias que permitem cole
     </tr>
     <tr>
         <td>Atualização do comportamento de exportação para destinos baseados em arquivo (PLAT-123316)</td>
-        <td>Corrigimos um problema no comportamento dos <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=pt-BR#mandatory-attributes">atributos obrigatórios</a> ao exportar arquivos de dados para destinos em lote. <br> Anteriormente, cada registro dos arquivos de saída era verificado para garantir que continham: <ol><li>Um valor não nulo na coluna <code>mandatoryField</code> e</li><li>Um valor não nulo em pelo menos um dos outros campos não obrigatórios.</li></ol> A segunda condição foi removida. Como resultado, você pode estar vendo mais linhas de saída em seus arquivos de dados exportados, como mostrado no exemplo abaixo:<br> <b> Exemplo de comportamento antes da versão de janeiro de 2023 </b> <br> Campo obrigatório: <code>emailAddress</code> <br> <b>Dados de entrada a serem ativados</b> <br><table><thead><tr><th>firstName</th><th>emailAddress</th></tr></thead><tbody><tr><td>John</td><td>john@acme.com</td></tr><tr><td>nulo</td><td>peter@acme.com</td></tr><tr><td>Jenifer</td><td>jennifer@acme.com</td></tr><tr><td>nulo</td><td>diana@acme.com</td></tr></tbody></table> <br> <b>Saída de ativação</b> <br><table><thead><tr><th>firstName</th><th>emailAddress</th></tr></thead><tbody><tr><td>John</td><td>john@acme.com</td></tr><tr><td>Jenifer</td><td>jennifer@acme.com</td></tr></tbody></table> <br> <b> Exemplo de comportamento após a versão de janeiro de 2023 </b> <br> <b>Saída de ativação</b> <br> <table><thead><tr><th>firstName</th><th>emailAddress</th></tr></thead><tbody><tr><td>John</td><td>john@acme.com</td></tr><tr><td>nulo</td><td>peter@acme.com</td></tr><tr><td>Jenifer</td><td>jennifer@acme.com</td></tr><tr><td>nulo</td><td>diana@acme.com</td></tr></tbody></table> </td>
+        <td>Corrigimos um problema no comportamento dos <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html#mandatory-attributes">atributos obrigatórios</a> ao exportar arquivos de dados para destinos em lote. <br> Anteriormente, cada registro dos arquivos de saída era verificado para garantir que continham: <ol><li>Um valor não nulo na coluna <code>mandatoryField</code> e</li><li>Um valor não nulo em pelo menos um dos outros campos não obrigatórios.</li></ol> A segunda condição foi removida. Como resultado, você pode estar vendo mais linhas de saída em seus arquivos de dados exportados, como mostrado no exemplo abaixo:<br> <b> Exemplo de comportamento antes da versão de janeiro de 2023 </b> <br> Campo obrigatório: <code>emailAddress</code> <br> <b>Dados de entrada a serem ativados</b> <br><table><thead><tr><th>firstName</th><th>emailAddress</th></tr></thead><tbody><tr><td>John</td><td>john@acme.com</td></tr><tr><td>nulo</td><td>peter@acme.com</td></tr><tr><td>Jenifer</td><td>jennifer@acme.com</td></tr><tr><td>nulo</td><td>diana@acme.com</td></tr></tbody></table> <br> <b>Saída de ativação</b> <br><table><thead><tr><th>firstName</th><th>emailAddress</th></tr></thead><tbody><tr><td>John</td><td>john@acme.com</td></tr><tr><td>Jenifer</td><td>jennifer@acme.com</td></tr></tbody></table> <br> <b> Exemplo de comportamento após a versão de janeiro de 2023 </b> <br> <b>Saída de ativação</b> <br> <table><thead><tr><th>firstName</th><th>emailAddress</th></tr></thead><tbody><tr><td>John</td><td>john@acme.com</td></tr><tr><td>nulo</td><td>peter@acme.com</td></tr><tr><td>Jenifer</td><td>jennifer@acme.com</td></tr><tr><td>nulo</td><td>diana@acme.com</td></tr></tbody></table> </td>
     </tr>
     <tr>
         <td>Validação da interface e da API para mapeamentos obrigatórios e mapeamentos duplicados (PLAT-123316)</td>
-        <td>A validação agora é aplicada da seguinte maneira na interface e na API ao <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=pt-BR#mapping">mapear campos</a> no fluxo de trabalho de ativação de destinos:<ul><li><b>Mapeamentos obrigatórios</b>: se o destino tiver sido configurado pelo desenvolvedor do destino com os mapeamentos obrigatórios (por exemplo, o destino <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/advertising/google-ad-manager-360-connection.html?lang=pt-BR">Google Ad Manager 360</a>), esses mapeamentos precisarão ser adicionados pelo usuário ao ativar dados no destino. </li><li><b>Mapeamentos duplicados</b>: na etapa de mapeamento do fluxo de trabalho de ativação, é possível adicionar valores duplicados nos campos de origem, mas não nos campos de destino. Consulte a tabela abaixo para obter um exemplo de combinações de mapeamento permitidas e proibidas. <br><table><thead><tr><th>Permitido/proibido</th><th>Campo de origem</th><th>Campo de destino</th></tr></thead><tbody><tr><td>Permitido</td><td><ul><li>email.address</li><li>email.address</li></ul></td><td><ul><li>emailalias1</li><li>alias2 de email</li></ul></td></tr><tr><td>Proibido</td><td><ul><li>email.address</li><li>hashed.emails</li></ul></td><td><ul><li>emailalias1</li><li>emailalias1</li></ul></td></tr></tbody></table> </li></ul></td>
+        <td>A validação agora é aplicada da seguinte maneira na interface e na API ao <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html#mapping">mapear campos</a> no fluxo de trabalho de ativação de destinos:<ul><li><b>Mapeamentos obrigatórios</b>: se o destino tiver sido configurado pelo desenvolvedor do destino com os mapeamentos obrigatórios (por exemplo, o destino <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/advertising/google-ad-manager-360-connection.html">Google Ad Manager 360</a>), esses mapeamentos precisarão ser adicionados pelo usuário ao ativar dados no destino. </li><li><b>Mapeamentos duplicados</b>: na etapa de mapeamento do fluxo de trabalho de ativação, é possível adicionar valores duplicados nos campos de origem, mas não nos campos de destino. Consulte a tabela abaixo para obter um exemplo de combinações de mapeamento permitidas e proibidas. <br><table><thead><tr><th>Permitido/proibido</th><th>Campo de origem</th><th>Campo de destino</th></tr></thead><tbody><tr><td>Permitido</td><td><ul><li>email.address</li><li>email.address</li></ul></td><td><ul><li>emailalias1</li><li>alias2 de email</li></ul></td></tr><tr><td>Proibido</td><td><ul><li>email.address</li><li>hashed.emails</li></ul></td><td><ul><li>emailalias1</li><li>emailalias1</li></ul></td></tr></tbody></table> </li></ul></td>
     </tr>    
 </table>
 
@@ -195,7 +195,7 @@ O [!DNL Segmentation Service] define um subconjunto específico de perfis descre
 
 Para obter mais informações sobre o [!DNL Segmentation Service], consulte a [Visão geral de segmentação](../../segmentation/home.md).
 
-## Fontes {#sources}
+## Origens {#sources}
 
 A Adobe Experience Platform pode assimilar dados de fontes externas e permite estruturar, rotular e aprimorar esses dados usando os serviços da Platform. É possível assimilar dados de várias origens, como aplicativos da Adobe, do armazenamento na nuvem, um software de terceiros e do seu sistema de CRM.
 

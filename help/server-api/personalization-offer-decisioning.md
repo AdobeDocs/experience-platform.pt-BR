@@ -2,10 +2,10 @@
 title: Personalização via Offer Decisioning
 description: Saiba como usar a API do servidor para fornecer e renderizar experiências personalizadas por meio do Offer Decisioning.
 exl-id: 5348cd3e-08db-4778-b413-3339cb56b35a
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '580'
-ht-degree: 4%
+source-wordcount: '572'
+ht-degree: 5%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 4%
 
 ## Visão geral {#overview}
 
-A API do servidor de rede de borda pode fornecer experiências personalizadas gerenciadas no [Offer decisioning](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started-decision/starting-offer-decisioning.html?lang=en) ao canal da web.
+A API do servidor de rede de borda pode fornecer experiências personalizadas gerenciadas no [Offer decisioning](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started-decision/starting-offer-decisioning.html?lang=pt-BR) ao canal da web.
 
 [!DNL Offer Decisioning] O é compatível com uma interface não visual para criar, ativar e fornecer suas atividades e experiências de personalização.
 
@@ -41,7 +41,7 @@ Para saber mais sobre o [!DNL Offer Decisioning Engine], consulte a seção dedi
 
 Depois [configuração do seu fluxo de dados](#configure-your-datastream), você deve definir os escopos de decisão que serão usados na campanha de personalização.
 
-[Escopos de decisão](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/create-manage-activities/create-offer-activities.html?lang=en#add-decision-scopes) são as cadeias de caracteres JSON codificadas na Base64 que contêm as IDs de atividade e posicionamento que você deseja que o [!DNL Offer Decisioning Service] para usar ao propor ofertas.
+[Escopos de decisão](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/create-manage-activities/create-offer-activities.html#add-decision-scopes) são as cadeias de caracteres JSON codificadas na Base64 que contêm as IDs de atividade e posicionamento que você deseja que o [!DNL Offer Decisioning Service] para usar ao propor ofertas.
 
 **Escopo de decisão JSON**
 
@@ -58,7 +58,7 @@ Depois [configuração do seu fluxo de dados](#configure-your-datastream), você
 "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ=="
 ```
 
-Após criar as ofertas e coleções, é necessário definir um [escopo da decisão](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/create-manage-activities/create-offer-activities.html?lang=en#add-decision-scopes).
+Após criar as ofertas e coleções, é necessário definir um [escopo da decisão](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/create-manage-activities/create-offer-activities.html#add-decision-scopes).
 
 Copie o escopo de decisão codificado na Base64. Você o usará no `query` objeto da solicitação de API do servidor.
 

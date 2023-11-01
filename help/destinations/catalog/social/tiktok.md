@@ -3,10 +3,10 @@ title: Conexão com o TikTok
 description: Crie públicos-alvo personalizados no TikTok com seus dados para direcionar suas campanhas de publicidade. Esses públicos-alvo podem ser de pessoas que visitaram o site ou interagiram com o conteúdo. Empurre de maneira rápida e segura o público-alvo desejado do Adobe Experience Platform para o TikTok usando a integração em tempo real do Adobe com o TikTok Ads Manager.
 last-substantial-update: 2023-03-20T00:00:00Z
 exl-id: 7b12d17f-7d9a-4615-9830-92bffe3f6927
-source-git-commit: 05e996f9e33e0d8be3d15a9ab3baaaf6d8152b5a
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1046'
-ht-degree: 4%
+source-wordcount: '1040'
+ht-degree: 5%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 4%
 
 ## Visão geral {#overview}
 
-Crie públicos-alvo personalizados no TikTok com seus dados para direcionar suas campanhas de publicidade. Esses públicos-alvo podem ser de pessoas que visitaram o site ou interagiram com o conteúdo. Empurre de maneira rápida e segura o público-alvo desejado do Adobe Experience Platform para o TikTok usando a integração em tempo real do Adobe com o TikTok Ads Manager. Visita [Centro de ajuda empresarial da TikTok](https://ads.tiktok.com/help/article/audiences?lang=en) para obter mais informações.
+Crie públicos-alvo personalizados no TikTok com seus dados para direcionar suas campanhas de publicidade. Esses públicos-alvo podem ser de pessoas que visitaram o site ou interagiram com o conteúdo. Empurre de maneira rápida e segura o público-alvo desejado do Adobe Experience Platform para o TikTok usando a integração em tempo real do Adobe com o TikTok Ads Manager. Visita [Centro de ajuda empresarial da TikTok](https://ads.tiktok.com/help/article/audiences) para obter mais informações.
 
 >[!IMPORTANT]
 >
@@ -30,7 +30,7 @@ Uma marca de vestuário esportivo quer alcançar clientes existentes por meio de
 
 ## Pré-requisitos {#prerequisites}
 
-Você precisa ter [!DNL Admin] ou [!DNL Operator] acesso à conta do TikTok Ads Manager para a qual você deseja enviar públicos-alvo. Mais instruções podem ser encontradas no [Centro de ajuda do TikTok](https://ads.tiktok.com/help/article/add-users-tiktok-business-center?lang=en).
+Você precisa ter [!DNL Admin] ou [!DNL Operator] acesso à conta do TikTok Ads Manager para a qual você deseja enviar públicos-alvo. Mais instruções podem ser encontradas no [Centro de ajuda do TikTok](https://ads.tiktok.com/help/article/add-users-tiktok-business-center).
 
 Antes de enviar dados para sua conta do TikTok Ads Manager, será necessário conceder permissão ao Adobe Experience Platform para acessar sua conta de anúncio para `Audience Management`. Esta permissão pode ser fornecida por [inserir a ID do Ads Manager](#authenticate) na interface do usuário do Experience Platform e concedendo a permissão após ser redirecionado para sua conta do TikTok Ads Manager.
 
@@ -123,4 +123,4 @@ Todos [!DNL Adobe Experience Platform] os destinos estão em conformidade com as
 
 ## Recursos adicionais {#additional-resources}
 
-Consulte a [Página Central de ajuda do TikTok](https://ads.tiktok.com/help/article/audiences?lang=en) para obter informações adicionais.
+Consulte a [Página Central de ajuda do TikTok](https://ads.tiktok.com/help/article/audiences) para obter informações adicionais.

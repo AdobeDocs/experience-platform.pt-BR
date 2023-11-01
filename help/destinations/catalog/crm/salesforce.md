@@ -3,9 +3,9 @@ keywords: destino do crm;CRM;destinos do crm;crm do salesforce;destino do salesf
 title: Conexão com o Salesforce CRM
 description: O destino do Salesforce CRM permite exportar seus dados de conta e ativá-los no Salesforce CRM para suas necessidades comerciais.
 exl-id: bd9cb656-d742-4a18-97a2-546d4056d093
-source-git-commit: 661ef040398a9e2ef8dd9cebdf7bd27d4268636b
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '3121'
+source-wordcount: '3117'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ Como profissional de marketing, você pode fornecer experiências personalizadas
 
 ### Pré-requisitos no Experience Platform {#prerequisites-in-experience-platform}
 
-Antes de ativar dados para o destino do Salesforce CRM, você deve ter um [schema](/help/xdm/schema/composition.md), um [conjunto de dados](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=en), e [segmentos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en) criado em [!DNL Experience Platform].
+Antes de ativar dados para o destino do Salesforce CRM, você deve ter um [schema](/help/xdm/schema/composition.md), um [conjunto de dados](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=pt-BR), e [segmentos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) criado em [!DNL Experience Platform].
 
 ### Pré-requisitos no [!DNL Salesforce CRM] {#prerequisites-destination}
 

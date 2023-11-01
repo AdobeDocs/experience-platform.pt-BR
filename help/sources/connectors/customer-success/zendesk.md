@@ -3,9 +3,9 @@ title: Visão geral do Conector de origem do Zendesk
 description: Saiba como conectar o Zendesk ao Adobe Experience Platform usando APIs ou a interface do usuário.
 last-substantial-update: 2023-06-21T00:00:00Z
 exl-id: 9f245783-949d-4f40-9cf3-8991b4b6d780
-source-git-commit: 6f8abca8f0db8a559fe62e6c143f2d0506d3b886
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '367'
+source-wordcount: '365'
 ht-degree: 2%
 
 ---

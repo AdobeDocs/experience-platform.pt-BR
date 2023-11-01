@@ -2,9 +2,9 @@
 title: Usar a interface da Web do GitHub para criar uma página de documentação de destino
 description: As instruções nesta página mostram como usar a interface da Web do GitHub para criar uma página de documentação para o seu destino de Experience Platform e enviá-la para revisão.
 exl-id: 4780e05e-3d1d-4f1b-8441-df28d09c1a88
-source-git-commit: e239de97a26ea2ff36bb74390e249851a13d2e13
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '780'
+source-wordcount: '768'
 ht-degree: 1%
 
 ---
@@ -16,15 +16,14 @@ As instruções abaixo mostram como usar a interface da Web do GitHub para criar
 >[!TIP]
 >
 >Consulte também a documentação de suporte no guia do colaborador do Adobe:
->* [Instale as ferramentas de criação do Git e do Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=en)
->* [Configurar o repositório Git localmente para a documentação](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en)
->* [Fluxo de trabalho de contribuição do GitHub para grandes alterações](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html?lang=en).
-
+>* [Instale as ferramentas de criação do Git e do Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html)
+>* [Configurar o repositório Git localmente para a documentação](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html)
+>* [Fluxo de trabalho de contribuição do GitHub para grandes alterações](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html).
 
 ## Configurar o ambiente de criação do GitHub {#set-up-environment}
 
 1. No navegador, navegue até `https://github.com/AdobeDocs/experience-platform.en`.
-2. Para [bifurcação](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en#fork-the-repository) repositório, clique em **Bifurcar** conforme mostrado abaixo. Isso cria uma cópia do repositório Experience Platform em sua própria conta GitHub.
+2. Para [bifurcação](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html#fork-the-repository) repositório, clique em **Bifurcar** conforme mostrado abaixo. Isso cria uma cópia do repositório Experience Platform em sua própria conta GitHub.
 
    ![Repositório de documentação do Fork Adobe](../assets/docs-framework/ssd-fork-repository.gif)
 
@@ -47,7 +46,7 @@ As instruções abaixo mostram como usar a interface da Web do GitHub para criar
    >
    >Você pode fechar a janela do navegador a qualquer momento e reabri-la posteriormente. Seu trabalho é salvo automaticamente e aguardará você ao reabrir o navegador.
 3. Copie o conteúdo do editor de marcação para seu novo arquivo no GitHub.
-4. Para capturas de tela ou imagens que você planeja usar, use a interface do GitHub para fazer upload dos arquivos para o `experience-platform.en/help/destinations/assets/catalog/[...]`, onde `[...]` é a categoria desejada para o seu destino. Por exemplo, se estiver adicionando um destino de personalização ao Experience Platform, selecione a variável `personalization` categoria. É necessário vincular às imagens da página que você está criando. Consulte [instruções sobre como vincular a imagens](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html?lang=en#link-to-images).
+4. Para capturas de tela ou imagens que você planeja usar, use a interface do GitHub para fazer upload dos arquivos para o `experience-platform.en/help/destinations/assets/catalog/[...]`, onde `[...]` é a categoria desejada para o seu destino. Por exemplo, se estiver adicionando um destino de personalização ao Experience Platform, selecione a variável `personalization` categoria. É necessário vincular às imagens da página que você está criando. Consulte [instruções sobre como vincular a imagens](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html#link-to-images).
 
    ![Carregar imagem no GitHub](../assets/docs-framework/upload-image.gif)
 
@@ -61,11 +60,11 @@ As instruções abaixo mostram como usar a interface da Web do GitHub para criar
 >
 >Observe que não há nada que você possa quebrar aqui. Seguindo as instruções nesta seção, você está simplesmente sugerindo uma atualização da documentação. A atualização sugerida será aprovada ou editada pela equipe de documentação da Adobe Experience Platform.
 
-1. Depois de salvar o arquivo e carregar as imagens desejadas, você pode abrir uma solicitação de pull (PR) para mesclar a ramificação de trabalho à ramificação principal do repositório de documentação do Adobe. Verifique se a ramificação em que você trabalhou está selecionada e selecione **Contribute > Abrir solicitação de pull**.
+1. Depois de salvar o arquivo e carregar as imagens desejadas, você pode abrir uma solicitação de pull (PR) para mesclar a ramificação de trabalho à ramificação mestre do repositório da documentação do Adobe. Verifique se a ramificação em que você trabalhou está selecionada e selecione **Contribute > Abrir solicitação de pull**.
 
 ![Criar pull request](../assets/docs-framework/ssd-create-pull-request-1.gif)
 
-1. Verifique se as ramificações base e de comparação estão corretas. Adicione uma observação à PR, descrevendo a atualização e selecione **Criar pull request**. Isso abre uma PR para mesclar a ramificação de trabalho da sua bifurcação na ramificação principal do repositório Adobe.
+1. Verifique se as ramificações base e de comparação estão corretas. Adicione uma observação à PR, descrevendo a atualização e selecione **Criar pull request**. Isso abre uma PR para mesclar a ramificação de trabalho da sua bifurcação na ramificação mestre do repositório Adobe.
 
    >[!TIP]
    >
@@ -83,4 +82,4 @@ As instruções abaixo mostram como usar a interface da Web do GitHub para criar
 
 >[!TIP]
 >
->Para adicionar imagens e links à sua documentação e para qualquer outra pergunta sobre o Markdown, leia [Utilização do Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=en) no guia de escrita colaborativa do Adobe.
+>Para adicionar imagens e links à sua documentação e para qualquer outra pergunta sobre o Markdown, leia [Utilização do Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html) no guia de escrita colaborativa do Adobe.

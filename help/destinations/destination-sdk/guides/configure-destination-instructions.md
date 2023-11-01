@@ -2,9 +2,9 @@
 description: Esta página lista e descreve as etapas para configurar um destino de transmissão usando o Destination SDK.
 title: Usar o Destination SDK para configurar um destino de transmissão
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '820'
+source-wordcount: '818'
 ht-degree: 0%
 
 ---
@@ -62,7 +62,7 @@ Para conectar o servidor e a configuração do modelo na etapa 1 a essa configur
 
 >[!IMPORTANT]
 >
->Para criar um destino em tempo real (transmissão) configurado corretamente, você *deve* adicionar pelo menos uma identidade de destino em `identityNamespaces`, conforme mostrado abaixo. Se nenhuma identidade de destino estiver configurada, os usuários não poderão continuar após a [Etapa de mapeamento](../../ui/activate-segment-streaming-destinations.md#mapping) do workflow de ativação.
+>Para criar um destino em tempo real (transmissão) configurado corretamente, você *deve* adicionar pelo menos uma identidade de público alvo em `identityNamespaces`, conforme mostrado abaixo. Se nenhuma identidade de destino estiver configurada, os usuários não poderão continuar após a [Etapa de mapeamento](../../ui/activate-segment-streaming-destinations.md#mapping) do workflow de ativação.
 
 ```shell
 POST platform.adobe.io/data/core/activation/authoring/destinations
@@ -276,7 +276,7 @@ Depois de definir seu destino usando os endpoints de configuração nas etapas a
 Como parte do processo para testar o destino, é necessário usar a interface do usuário do Experience Platform para criar segmentos, que você ativará para o destino. Consulte os dois recursos abaixo para obter instruções sobre como criar públicos-alvo no Experience Platform:
 
 * [Criar uma página de documentação de público-alvo](/help/segmentation/ui/overview.md#create-segment)
-* [Criar uma apresentação de vídeo de público-alvo](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en)
+* [Criar uma apresentação de vídeo de público-alvo](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)
 
 ## Etapa 7: publicar seu destino {#publish-destination}
 

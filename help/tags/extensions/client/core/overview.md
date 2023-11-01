@@ -2,7 +2,7 @@
 title: Visão geral da extensão principal
 description: Saiba mais sobre a extensão de tag principal na Adobe Experience Platform.
 exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
-source-git-commit: bfbad3c11df64526627e4ce2d766b527df678bca
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
 source-wordcount: '5482'
 ht-degree: 83%
@@ -191,15 +191,15 @@ Se você selecionar essa opção, serão disponibilizados os seguintes parâmetr
 
 * `property=value`
 
-   Especificar o valor da propriedade
+  Especificar o valor da propriedade
 
 * Regex
 
-   Ative se a `property=value` for uma expressão regular.
+  Ative se a `property=value` for uma expressão regular.
 
 * Add
 
-   Adicione outro par de `property=value`.
+  Adicione outro par de `property=value`.
 
 #### Advanced options (Bubbling)
 
@@ -462,7 +462,7 @@ Especifique um ou mais padrões de hash que devem existir no URL.
 
 #### Path And Query String
 
-Especifique um ou mais caminhos que devem existir no URL. Inclui o caminho e a sequência de consulta.
+Especifique um ou mais caminhos que devem existir no URL. Inclui o caminho e a string de consulta.
 
 >[!NOTE]
 >
@@ -474,7 +474,7 @@ Especifique um ou mais caminhos que devem existir no URL. Inclui o caminho e a s
 
 #### Path Without Query String
 
-Especifique um ou mais caminhos que devem existir no URL. Inclui o caminho, mas não inclui a sequência de consulta.
+Especifique um ou mais caminhos que devem existir no URL. Inclui o caminho, mas não inclui a string de consulta.
 
 >[!NOTE]
 >
@@ -572,11 +572,11 @@ Execute a regra em um navegador e inspecione o objeto de evento registrado no co
 
 A extensão principal, disponível para todos os usuários da Adobe Experience Platform, contém uma ação de Código personalizado para executar o JavaScript ou o HTML fornecido pelo usuário. Geralmente, é útil que os usuários entendam como as regras com ações Custom Code são processadas.
 
-#### Regras que usam os eventos do início ou do final da página
+#### Regras que usam os eventos da parte superior ou inferior da página
 
 O código de ações personalizadas está incorporado à biblioteca de tags principal. O código é gravado no documento usando document.write. Se uma regra tiver várias ações Custom Code, o código será escrito na ordem configurada na regra.
 
-#### Regras que usam qualquer evento diferente dos eventos de início ou de final da página
+#### Regras que usam qualquer evento que não seja da parte superior ou inferior da página
 
 O código de ações personalizadas é carregado a partir do servidor e gravado no documento usando [Postscribe](https://github.com/krux/postscribe). Se uma regra tiver várias ações Custom Code, o código será carregado simultaneamente a partir do servidor, mas escrito na ordem configurada na regra.
 
@@ -636,7 +636,7 @@ Essa ação aciona todas as regras que usam um [evento de chamada direta](#direc
 
 ![Captura de tela de uma ação de chamada direta de acionador na interface da coleção de dados](../../../images/extensions/client/core/direct-call-action.png)
 
-A ação é mapeada diretamente para o [`track` método](../../../ui/client-side/satellite-object.md?lang=en#track) no `satellite` que pode ser acessado pelo código do lado do cliente.
+A ação é mapeada diretamente para o [`track` método](../../../ui/client-side/satellite-object.md#track) no `satellite` que pode ser acessado pelo código do lado do cliente.
 
 ## Tipos de elementos de dados da extensão principal
 

@@ -3,9 +3,9 @@ keywords: email;Email;e-mail;email targets;salesforce;api salesforce marketing c
 title: (API) Conexão do Salesforce Marketing Cloud
 description: O destino do Marketing Cloud do Salesforce (anteriormente conhecido como ExactTarget) permite exportar os dados da sua conta e ativá-los no Marketing Cloud do Salesforce para as suas necessidades comerciais.
 exl-id: 0cf068e6-8a0a-4292-a7ec-c40508846e27
-source-git-commit: b778b7b8c79176d0962a9c757d83a749acd147b6
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '3079'
+source-wordcount: '3075'
 ht-degree: 1%
 
 ---
@@ -38,7 +38,7 @@ O departamento de vendas de uma plataforma de aluguel de residências quer trans
 
 ### Pré-requisitos no Experience Platform {#prerequisites-in-experience-platform}
 
-Antes de ativar os dados para o [!DNL (API) Salesforce Marketing Cloud] destino, você deve ter um [schema](/help/xdm/schema/composition.md), um [conjunto de dados](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=en), e [segmentos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en) criado em [!DNL Experience Platform].
+Antes de ativar os dados para o [!DNL (API) Salesforce Marketing Cloud] destino, você deve ter um [schema](/help/xdm/schema/composition.md), um [conjunto de dados](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=pt-BR), e [segmentos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) criado em [!DNL Experience Platform].
 
 ### Pré-requisitos no [!DNL (API) Salesforce Marketing Cloud] {#prerequisites-destination}
 

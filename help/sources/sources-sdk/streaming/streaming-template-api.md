@@ -4,9 +4,9 @@ description: Saiba como trazer dados de transmissão de uma origem para a Adobe 
 hide: true
 hidefromtoc: true
 exl-id: a06384a2-cd99-456d-9f00-babcf3f7b7d9
-source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1704'
+source-wordcount: '1700'
 ht-degree: 2%
 
 ---
@@ -114,13 +114,13 @@ Para que os dados de origem sejam usados na Platform, um esquema de destino deve
 
 Um schema XDM de destino pode ser criado executando uma solicitação POST para o [API do registro de esquema](https://developer.adobe.com/experience-platform-apis/references/schema-registry/).
 
-Para obter etapas detalhadas sobre como criar um esquema XDM de destino, consulte o tutorial sobre [criação de um schema usando a API](https://experienceleague.adobe.com/docs/experience-platform/xdm/api/schemas.html?lang=en#create).
+Para obter etapas detalhadas sobre como criar um esquema XDM de destino, consulte o tutorial sobre [criação de um schema usando a API](https://experienceleague.adobe.com/docs/experience-platform/xdm/api/schemas.html#create).
 
 ### Criar um conjunto de dados de destino {#target-dataset}
 
 Um conjunto de dados de destino pode ser criado executando uma solicitação POST para o [API do serviço de catálogo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), fornecendo a ID do schema de destino na carga útil.
 
-Para obter etapas detalhadas sobre como criar um conjunto de dados de destino, consulte o tutorial sobre [criação de um conjunto de dados usando a API](https://experienceleague.adobe.com/docs/experience-platform/catalog/api/create-dataset.html?lang=en).
+Para obter etapas detalhadas sobre como criar um conjunto de dados de destino, consulte o tutorial sobre [criação de um conjunto de dados usando a API](https://experienceleague.adobe.com/docs/experience-platform/catalog/api/create-dataset.html).
 
 ### Criar uma conexão de destino {#target-connection}
 

@@ -3,9 +3,9 @@ keywords: publicidade, critério,
 title: Conexão de critério
 description: O Criteo capacita a publicidade confiável e impactante para trazer experiências mais ricas para cada consumidor através da internet aberta. Com o maior conjunto de dados de comércio do mundo e a melhor IA do setor, o Criteo garante que cada ponto de contato na jornada de compras seja personalizado para alcançar os clientes com o anúncio certo, na hora certa.
 exl-id: e6f394b2-ab82-47bb-8521-1cf9d01a203b
-source-git-commit: 661ef040398a9e2ef8dd9cebdf7bd27d4268636b
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1046'
+source-wordcount: '1042'
 ht-degree: 2%
 
 ---
@@ -35,7 +35,7 @@ O Criteo capacita a publicidade confiável e impactante para trazer experiência
 
 ## Identidades suportadas {#supported-identities}
 
-O critério é compatível com a ativação das identidades descritas na tabela abaixo. Saiba mais sobre [identidades](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#getting-started).
+O critério é compatível com a ativação das identidades descritas na tabela abaixo. Saiba mais sobre [identidades](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started).
 
 | Identidade de destino | Descrição | Considerações |
 | --- | --- | --- |
@@ -98,7 +98,7 @@ Após a autenticação no destino, preencha os seguintes parâmetros de conexão
 | --- | --- | --- |
 | Nome | Um nome para ajudá-lo a reconhecer este destino no futuro. O nome escolhido aqui será o [!DNL Audience] nome no Centro de Gerenciamento de Critérios e não pode ser modificado em um estágio posterior. | Sim |
 | Descrição | Uma descrição para ajudar a identificar este destino no futuro. | Não |
-| ID do anunciante | ID de anunciante de critérios de sua organização. Entre em contato com o gerente de conta da Criteo para obter essas informações. | Sim |
+| ID de anunciante | ID de anunciante de critérios de sua organização. Entre em contato com o gerente de conta da Criteo para obter essas informações. | Sim |
 | Critério [!DNL GUM caller ID] | [!DNL GUM Caller ID] da sua organização. Entre em contato com a equipe de conta da Criteo para obter as informações apropriadas [!DNL GUM Caller ID] ou para obter mais informações sobre isso [!DNL GUM] sincronizar, se necessário. | Sim, sempre [!DNL GUM ID] é fornecido como um identificador |
 
 ### Ativar alertas {#enable-alerts}

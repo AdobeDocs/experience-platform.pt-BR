@@ -2,16 +2,16 @@
 title: Testar uma implementação do Adobe Target com o Adobe Experience Platform Debugger
 description: Saiba como usar o Adobe Experience Platform Debugger para testar e depurar um site habilitado com o Adobe Target.
 exl-id: f99548ff-c6f2-4e99-920b-eb981679de2d
-source-git-commit: c3b5b63767a934be16a479d04853e1250b3bf775
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1211'
-ht-degree: 4%
+source-wordcount: '1209'
+ht-degree: 5%
 
 ---
 
 # Testar uma implementação do Adobe Target com o Adobe Experience Platform Debugger
 
-O Adobe Experience Platform Debugger fornece um conjunto de ferramentas úteis para testar e depurar um site que foi equipado com uma implementação do Adobe Target. Este guia aborda alguns fluxos de trabalho comuns e práticas recomendadas para usar o Platform Debugger em um site habilitado para o Target.
+O Adobe Experience Platform Debugger fornece um conjunto de ferramentas úteis para testar e depurar um site que foi fornecido com uma implementação do Adobe Target. Este guia aborda alguns fluxos de trabalho comuns e práticas recomendadas para usar o Platform Debugger em um site habilitado para o Target.
 
 ## Pré-requisitos
 
@@ -69,7 +69,7 @@ Os seguintes valores são capturados:
 | [!DNL clientCode] | O identificador da conta da sua organização conforme reconhecido pelo Target. |
 | [!DNL requestType] | A API usada para a solicitação. Se estiver usando a at.js 1.x, o valor será `/json`. Se estiver usando a at.js 2.x, o valor será `delivery`. |
 | [!DNL Audience Manager Blob] | Fornece informações sobre metadados de Audience Manager criptografados chamados de &quot;blob&quot;. |
-| [!DNL Audience Location Hint] | A ID da região de coleta de dados. Este é um identificador numérico para a localização geográfica de um data center de serviço de ID específico. Para obter mais informações, consulte a documentação do Audience Manager em [IDs da região do DCS, locais e nomes de host](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-api-reference/dcs-regions.html?lang=pt-BR) e o guia do Serviço de identidade do Experience Cloud em [`getLocationHint`](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/getlocationhint.html?lang=en#reference-a761030ff06c4439946bb56febf42d4c). |
+| [!DNL Audience Location Hint] | A ID da região de coleta de dados. Este é um identificador numérico para a localização geográfica de um data center de serviço de ID específico. Para obter mais informações, consulte a documentação do Audience Manager em [IDs da região do DCS, locais e nomes de host](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-api-reference/dcs-regions.html?lang=pt-BR) e o guia do Serviço de identidade do Experience Cloud em [`getLocationHint`](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/getlocationhint.html#reference-a761030ff06c4439946bb56febf42d4c). |
 | [!DNL Browser Height] | A altura do navegador em pixels. |
 | [!DNL Browser Time Offset] | O deslocamento de tempo do navegador associado ao seu fuso horário. |
 | [!DNL Browser Width] | A largura do navegador em pixels. |
@@ -80,7 +80,7 @@ Os seguintes valores são capturados:
 | [!DNL Experience Cloud Visitor ID] | Se algum for detectado, fornece informações sobre o [ID Experience Cloud (ECID)](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=pt-BR) atribuído ao visitante atual do site. |
 | [!DNL experienceCloud] | Contém as IDs de Experience Cloud para esta sessão de usuário específica: um A4T [ID de dados complementares](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/before-implement.html?#section_2C1F745A2B7D41FE9E30915539226E3A), e uma [ID de visitante (ECID)](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=pt-BR). |
 | [!DNL id] | A variável [ID de destino](https://developers.adobetarget.com/api/delivery-api/#section/Identifying-Visitors/Target-ID) para o visitante. |
-| [!DNL Mbox Host] | A variável [host](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html) que a solicitação do Target foi feita para. |
+| [!DNL Mbox Host] | A variável [host](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html?lang=pt-BR) que a solicitação do Target foi feita para. |
 | [!DNL Mbox PC] | Uma string que encapsula o [`mbox`](https://developer.adobe.com/target/implement/client-side/atjs/global-mbox/global-mbox-overview/) a ID da sessão e o [Adobe Target Edge](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html#concept_0AE2ED8E9DE64288A8B30FCBF1040934) dica de localização. Esse valor é usado pela at.js para garantir que a sessão e o local da borda permaneçam fixos. |
 | [!DNL Mbox Referrer] | O referenciador de URL para o [`mbox`](https://developer.adobe.com/target/implement/client-side/atjs/global-mbox/global-mbox-overview/) solicitação. |
 | [!DNL Mbox URL] | O URL para o [`mbox`](https://developer.adobe.com/target/implement/client-side/atjs/global-mbox/global-mbox-overview/) servidor. |

@@ -2,9 +2,9 @@
 title: Crie uma conexão de origem e um fluxo de dados para eventos do SugarCRM usando a API do Serviço de Fluxo
 description: Saiba como conectar o Adobe Experience Platform a eventos do SugarCRM usando a API do Serviço de fluxo.
 exl-id: 12d08010-569c-4111-ba95-697c6ce6f637
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '2009'
+source-wordcount: '2005'
 ht-degree: 2%
 
 ---
@@ -19,7 +19,7 @@ O tutorial a seguir guiará você pelas etapas para criar um [!DNL SugarCRM Even
 
 ## Introdução
 
-Este guia requer entendimento prático dos seguintes componentes do Experience Platform:
+Este manual necessita de uma compreensão funcional dos seguintes componentes da Experience Platform:
 
 * [Origens](../../../../home.md): o Experience Platform permite que os dados sejam assimilados de várias fontes e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando [!DNL Platform] serviços.
 * [Sandboxes](../../../../../sandboxes/home.md): o Experience Platform fornece sandboxes virtuais que particionam uma única instância da Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
@@ -40,7 +40,7 @@ Para se conectar [!DNL SugarCRM Events] Para o Platform, você deve fornecer val
 
 A seguir estão descritas as etapas que devem ser realizadas para autenticar o [!DNL SugarCRM] , crie uma conexão de origem e um fluxo de dados para trazer seus dados de eventos para o Experience Platform.
 
-### Criar uma conexão básica {#base-connection}
+### Crie uma conexão básica {#base-connection}
 
 Uma conexão base retém informações entre sua origem e a Platform, incluindo as credenciais de autenticação da origem, o estado atual da conexão e sua ID de conexão base exclusiva. A ID de conexão básica permite explorar e navegar pelos arquivos de dentro da origem e identificar os itens específicos que deseja assimilar, incluindo informações sobre os tipos de dados e formatos.
 
@@ -356,13 +356,13 @@ Para que os dados de origem sejam usados na Platform, um esquema de destino deve
 
 Um schema XDM de destino pode ser criado executando uma solicitação POST para o [API do registro de esquema](https://developer.adobe.com/experience-platform-apis/references/schema-registry/).
 
-Para obter etapas detalhadas sobre como criar um esquema XDM de destino, consulte o tutorial sobre [criação de um schema usando a API](https://experienceleague.adobe.com/docs/experience-platform/xdm/api/schemas.html?lang=en#create).
+Para obter etapas detalhadas sobre como criar um esquema XDM de destino, consulte o tutorial sobre [criação de um schema usando a API](https://experienceleague.adobe.com/docs/experience-platform/xdm/api/schemas.html#create).
 
 ### Criar um conjunto de dados de destino {#target-dataset}
 
 Um conjunto de dados de destino pode ser criado executando uma solicitação POST para o [API do serviço de catálogo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), fornecendo a ID do schema de destino na carga útil.
 
-Para obter etapas detalhadas sobre como criar um conjunto de dados de destino, consulte o tutorial sobre [criação de um conjunto de dados usando a API](https://experienceleague.adobe.com/docs/experience-platform/catalog/api/create-dataset.html?lang=en).
+Para obter etapas detalhadas sobre como criar um conjunto de dados de destino, consulte o tutorial sobre [criação de um conjunto de dados usando a API](https://experienceleague.adobe.com/docs/experience-platform/catalog/api/create-dataset.html).
 
 ### Criar uma conexão de destino {#target-connection}
 

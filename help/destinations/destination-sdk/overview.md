@@ -2,10 +2,10 @@
 description: O Adobe Experience Platform Destination SDK é um conjunto de APIs de configuração que permitem configurar padrões de integração de destino para que o Experience Platform forneça dados de público-alvo e perfil para seu endpoint ou local de armazenamento, com base nos formatos de dados e autenticação de sua escolha. As configurações são armazenadas em Experience Platform e podem ser recuperadas por meio da API para atualizações adicionais.
 title: Adobe Experience Platform Destination SDK
 exl-id: 7aca9f40-98c8-47c2-ba88-4308fc2b1798
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '854'
-ht-degree: 2%
+source-wordcount: '848'
+ht-degree: 4%
 
 ---
 
@@ -21,7 +21,7 @@ A documentação do Destination SDK fornece instruções para que você use o Ad
 
 >[!IMPORTANT]
 >
-> Essa funcionalidade para criar destinos personalizados privados está disponível somente para [Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) clientes.
+> Essa funcionalidade para criar destinos personalizados privados está disponível somente para [Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html?lang=pt-BR) clientes.
 
 Como parceiro de Destination SDK, você pode se beneficiar adicionando seu destino de produção à [catálogo de Experience Platform](../catalog/overview.md):
 
@@ -62,7 +62,7 @@ O acesso ao Destination SDK varia de acordo com seu status como parceiro ou Expe
 ---------|----------|
 | ISV (Independent Software Vendor, fornecedor independente de software) | Associe-se ao [Programa de parceiro de tecnologia Adobe](https://partners.adobe.com/technologyprogram/experiencecloud.html) e solicite a obtenção de uma sandbox Experience Platform provisionada para acessar o Destination SDK. |
 | Integrador de sistema (SI) | Você precisa estar no nível Gold ou Platinum no [Programa de parceiro de soluções Adobe](https://solutionpartners.adobe.com/home.html)e você obterá uma sandbox Experience Platform provisionada e acesso ao Destination SDK. |
-| cliente do Experience Platform no [Pacote Real-Time CDP Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) | Por padrão, você tem acesso às sandboxes e ao Destination SDK do Experience Platform, o que permite criar destinos privados para sua organização. |
+| cliente do Experience Platform no [Pacote Real-Time CDP Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html?lang=pt-BR) | Por padrão, você tem acesso às sandboxes e ao Destination SDK do Experience Platform, o que permite criar destinos privados para sua organização. |
 
 {style="table-layout:auto"}
 
@@ -70,7 +70,7 @@ O acesso ao Destination SDK varia de acordo com seu status como parceiro ou Expe
 
 O processo para configurar seu destino no Experience Platform é descrito abaixo:
 
-1. Se você for um ISV ou SI, consulte a [obter acesso](#get-access) informações na seção acima. [Pacote Real-Time CDP Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) os clientes do podem ignorar esta etapa.
+1. Se você for um ISV ou SI, consulte a [obter acesso](#get-access) informações na seção acima. [Pacote Real-Time CDP Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html?lang=pt-BR) os clientes do podem ignorar esta etapa.
 2. [Solicitação para provisionar uma sandbox de Experience Platform](https://adobeexchangeec.zendesk.com/hc/en-us/articles/360037457812-Adobe-Experience-Platform-Sandbox-Accounts-Access-Adding-Users-and-Support) e ativar a permissão de criação de destino.
 3. Crie sua integração. Siga as instruções na documentação do produto para configurar o [destinos de transmissão](guides/configure-destination-instructions.md) ou [destinos baseados em arquivo](guides/configure-file-based-destination-instructions.md).
 4. Teste sua integração. Siga as instruções na documentação do produto para testar [destinos de transmissão](testing-api/streaming-destinations/streaming-destination-testing-overview.md) ou [destinos baseados em arquivo](testing-api/batch-destinations/file-based-destination-testing-overview.md).
@@ -83,6 +83,6 @@ O processo para configurar seu destino no Experience Platform é descrito abaixo
 
 O Adobe recomenda que você leia e entenda a seguinte documentação do Experience Platform:
 
-* [Visão geral dos destinos do Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/destinations/home.html?lang=en)
+* [Visão geral dos destinos do Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/destinations/home.html?lang=pt-BR)
 * [Base da composição do esquema XDM](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=pt-BR)
 * [Visão geral do namespace de identidade](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=pt-BR)

@@ -2,9 +2,9 @@
 title: Notas de versão da extensão SDK da Web da Adobe Experience Platform
 description: Extensão de tag do SDK da Web da Adobe Experience Platform
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1758'
+source-wordcount: '1756'
 ht-degree: 37%
 
 ---
@@ -192,7 +192,7 @@ Contém a versão 2.5.0 da biblioteca de SDK da Web da Adobe Experience Platform
 
 Contém a versão 2.4.0 da biblioteca de SDK da Web da Adobe Experience Platform.
 
-* Adicionado [&quot;descarregamento de documento&quot;](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en#using-the-sendbeacon-api) para Enviar a interface de ação de Evento.
+* Adicionado [&quot;descarregamento de documento&quot;](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html#using-the-sendbeacon-api) para Enviar a interface de ação de Evento.
 * Adição de suporte para um `out` opção quando [configuração do consentimento padrão](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#default-consent) que elimina todos os eventos até que o consentimento seja recebido (o evento `pending` opção enfileira eventos e os envia quando o consentimento é recebido).
 * Adição de uma dica de ferramenta ao campo de consentimento padrão.
 * Suporte adicionado para [Adobe Consent 2.0 padrão](https://experienceleague.adobe.com/docs/experience-platform/edge/consent/supporting-consent.html?communicating-consent-preferences-via-the-adobe-standard).

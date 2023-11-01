@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Use a interface da Web do GitHub para criar uma página de documentação de origens
 description: Este documento fornece etapas sobre como usar a interface da Web do GitHub para criar a documentação e enviar uma solicitação de pull (PR).
 exl-id: 84b4219c-b3b2-4d0a-9a65-f2d5cd989f95
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '624'
+source-wordcount: '618'
 ht-degree: 2%
 
 ---
@@ -17,7 +17,7 @@ Este documento fornece etapas sobre como usar a interface da Web do GitHub para 
 
 >[!TIP]
 >
->Os seguintes documentos do guia de contribuição do Adobe podem ser usados para apoiar ainda mais o processo de documentação: <ul><li>[Instale as ferramentas de criação do Git e do Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=en)</li><li>[Configurar o repositório Git localmente para a documentação](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en)</li><li>[Fluxo de trabalho de contribuição do GitHub para grandes alterações](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html?lang=en)</li></ul>
+>Os seguintes documentos do guia de contribuição do Adobe podem ser usados para apoiar ainda mais o processo de documentação: <ul><li>[Instale as ferramentas de criação do Git e do Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html)</li><li>[Configurar o repositório Git localmente para a documentação](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html)</li><li>[Fluxo de trabalho de contribuição do GitHub para grandes alterações](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html)</li></ul>
 
 ## Configurar o ambiente do GitHub
 
@@ -29,7 +29,7 @@ Em seguida, selecione **Bifurcar**.
 
 ![bifurcação](../assets/fork.png)
 
-Quando a bifurcação estiver concluída, selecione **principal** e digite um nome para a nova ramificação no menu suspenso exibido. Forneça um nome descritivo para a ramificação, pois ele será usado para conter o trabalho, e selecione **criar ramificação**.
+Quando a bifurcação estiver concluída, selecione **master** e digite um nome para a nova ramificação no menu suspenso exibido. Forneça um nome descritivo para a ramificação, pois ele será usado para conter o trabalho, e selecione **criar ramificação**.
 
 ![create-branch](../assets/create-branch.png)
 
@@ -63,11 +63,11 @@ Quando terminar, confirme o arquivo na ramificação.
 
 ## Envie sua documentação para revisão
 
-Depois que o arquivo for confirmado, você poderá abrir uma solicitação de pull (PR) para mesclar a ramificação de trabalho com a ramificação principal do repositório da documentação do Adobe. Verifique se a ramificação em que você está trabalhando está selecionada e selecione **Comparar e extrair solicitação**.
+Depois que o arquivo for confirmado, você poderá abrir uma solicitação de pull (PR) para mesclar a ramificação de trabalho com a ramificação mestre do repositório da documentação do Adobe. Verifique se a ramificação em que você está trabalhando está selecionada e selecione **Comparar e extrair solicitação**.
 
 ![compare-pr](../assets/compare-pr.png)
 
-Certifique-se de que as ramificações base e de comparação estejam corretas. Adicione uma observação à PR, descrevendo a atualização e selecione **Criar pull request**. Isso abre uma PR para mesclar a ramificação de trabalho do seu trabalho na ramificação principal do repositório Adobe.
+Certifique-se de que as ramificações base e de comparação estejam corretas. Adicione uma observação à PR, descrevendo a atualização e selecione **Criar pull request**. Isso abre uma PR para mesclar a ramificação de trabalho do seu trabalho na ramificação mestre do repositório Adobe.
 
 >[!TIP]
 >

@@ -2,16 +2,16 @@
 title: Exportar dados para ambientes externos de ML
 description: Saiba como compartilhar um conjunto de dados de treinamento preparado, criado com o Data Distiller, em um local de armazenamento em nuvem que seu ambiente de aprendizado de máquina possa ler para treinamento e pontuação de seu modelo.
 exl-id: 75022acf-fafd-41d6-8dfa-ff3fd4c4fa7e
-source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '548'
+source-wordcount: '546'
 ht-degree: 3%
 
 ---
 
 # Exportar dados para ambientes externos de ML
 
-Este documento demonstra como compartilhar um conjunto de dados de treinamento preparado criado com o Data Distiller em um local de armazenamento na nuvem que seu ambiente de aprendizado de máquina pode ler para treinamento e pontuação em seu modelo. O exemplo aqui exporta o conjunto de dados de treinamento para o [Zona de aterrissagem de dados (DLZ)](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/create/cloud-storage/data-landing-zone.html?lang=en). Você pode alterar o destino de armazenamento conforme necessário para trabalhar com seu ambiente de aprendizado de máquina.
+Este documento demonstra como compartilhar um conjunto de dados de treinamento preparado criado com o Data Distiller em um local de armazenamento na nuvem que seu ambiente de aprendizado de máquina pode ler para treinamento e pontuação em seu modelo. O exemplo aqui exporta o conjunto de dados de treinamento para o [Zona de aterrissagem de dados (DLZ)](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/create/cloud-storage/data-landing-zone.html). Você pode alterar o destino de armazenamento conforme necessário para trabalhar com seu ambiente de aprendizado de máquina.
 
 A variável [Serviço de fluxo para destinos](https://developer.adobe.com/experience-platform-apis/references/destinations/) O é usado para concluir o pipeline de recursos, colocando um conjunto de dados de recursos computados em um local de armazenamento na nuvem apropriado.
 

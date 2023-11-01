@@ -2,10 +2,10 @@
 title: Criar uma conexão de origem de Marketo Engage e um fluxo de dados na interface
 description: Este tutorial fornece etapas para criar uma conexão de origem de Marketo Engage e fluxo de dados na interface do usuário para trazer dados B2B para o Adobe Experience Platform.
 exl-id: a6aa596b-9cfa-491e-86cb-bd948fb561a8
-source-git-commit: b271d28677543f773fe1ba471fc08574e7c5542b
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1693'
-ht-degree: 0%
+source-wordcount: '1691'
+ht-degree: 1%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Antes de criar uma [!DNL Marketo Engage] conexão de origem e um fluxo de dados, primeiro verifique se você tem [ID da organização do Adobe mapeada](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html?lang=en) in [!DNL Marketo]. Além disso, você também deve garantir que concluiu [preenchimento automático [!DNL Marketo] Namespaces e esquemas B2B](../../../../connectors/adobe-applications/marketo/marketo-namespaces.md) antes de criar uma conexão de origem e um fluxo de dados.
+>Antes de criar uma [!DNL Marketo Engage] conexão de origem e um fluxo de dados, primeiro verifique se você tem [ID da organização do Adobe mapeada](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html) in [!DNL Marketo]. Além disso, você também deve garantir que concluiu [preenchimento automático [!DNL Marketo] Namespaces e esquemas B2B](../../../../connectors/adobe-applications/marketo/marketo-namespaces.md) antes de criar uma conexão de origem e um fluxo de dados.
 
 Este tutorial fornece etapas para a criação de um [!DNL Marketo Engage] (a seguir designado por &quot;[!DNL Marketo]&quot;) conector de origem na interface do para trazer dados B2B para o Adobe Experience Platform.
 
@@ -57,7 +57,7 @@ A variável **[!UICONTROL Conectar conta Marketo Engage]** é exibida. Nesta pá
 
 ### Conta existente
 
-Para criar um fluxo de dados com uma conta existente, selecione **[!UICONTROL Conta existente]** e, em seguida, selecione a [!DNL Marketo] conta que deseja usar. Selecionar **[!UICONTROL Próxima]** para continuar.
+Para criar um fluxo de dados com uma conta existente, selecione **[!UICONTROL Conta existente]** e, em seguida, selecione a [!DNL Marketo] conta que deseja usar. Selecione **[!UICONTROL Próximo]** para continuar.
 
 ![existente](../../../../images/tutorials/create/marketo/existing.png)
 

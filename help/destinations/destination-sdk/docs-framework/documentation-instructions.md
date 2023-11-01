@@ -2,9 +2,9 @@
 title: Documentar seu destino no Adobe Experience Platform
 description: Instruções detalhadas para criar uma página de documentação para seu destino no Adobe Experience Platform
 exl-id: 6cc9c758-44bb-463b-941a-06b1a22ee8f3
-source-git-commit: ffd87573b93d642202e51e5299250a05112b6058
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '538'
+source-wordcount: '530'
 ht-degree: 1%
 
 ---
@@ -24,8 +24,8 @@ Esta seção de documentação inclui:
 
 * Instruções passo a passo para que você crie uma página de documentação para seu novo destino;
 * Um modelo para você preencher para o seu destino;
-* [Instruções gerais sobre o uso do Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=en);
-* [Instruções específicas para o sabor do Adobe Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=en#custom-markdown-extensions) (o sabor do Adobe Markdown é muito semelhante ao Markdown comum).
+* [Instruções gerais sobre o uso do Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html);
+* [Instruções específicas para o tipo de Markdown do Adobe](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html#custom-markdown-extensions) (o sabor do Adobe Markdown é muito semelhante ao Markdown comum).
 * A [página de práticas recomendadas](./authoring-best-practices.md) para ajudá-lo a criar uma página de documentação para sua página de destino, que atenda aos padrões de qualidade da documentação do Experience Platform.
 
 ## Pré-requisitos {#prerequisites}
@@ -38,7 +38,7 @@ Para criar a documentação do seu destino de acordo com as instruções neste a
 
 ## Instruções de alto nível para criar a documentação para seu destino no Adobe Experience Platform {#high-level-instructions}
 
-Em um alto nível, para criar a documentação do para seu destino, é necessário [criar um fork](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en#fork-the-repository) do repositório de documentação do Adobe Experience Platform e edite o [modelo de documentação fornecido](./self-service-template.md) em uma nova ramificação. Use o modelo fornecido pelo Adobe para criar uma nova página de destino. Abra uma solicitação de pull (PR) quando estiver pronto. As instruções para fazer isso estão mais abaixo, na [Etapas para criar sua nova página de destino](./documentation-instructions.md#steps-to-create-docs-page).
+Em um alto nível, para criar a documentação do para seu destino, é necessário [criar um fork](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html#fork-the-repository) do repositório de documentação do Adobe Experience Platform e edite o [modelo de documentação fornecido](./self-service-template.md) em uma nova ramificação. Use o modelo fornecido pelo Adobe para criar uma nova página de destino. Abra uma solicitação de pull (PR) quando estiver pronto. As instruções para fazer isso estão mais abaixo, na [Etapas para criar sua nova página de destino](./documentation-instructions.md#steps-to-create-docs-page).
 
 <!--
 
@@ -64,4 +64,4 @@ Você pode usar a interface da Web do GitHub ou seu ambiente local para criar a 
 
 ## Práticas recomendadas {#best-practices}
 
-Revise o [práticas recomendadas de criação](/help/destinations/destination-sdk/docs-framework/authoring-best-practices.md) antes e enquanto você cria a página de documentação de destino. Leia também a [orientações de escrita para a documentação do Adobe](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/general-writing-guidance.html?lang=en) para obter mais dicas de escrita que a equipe de documentação do Adobe usa ao criar a documentação.
+Revise o [práticas recomendadas de criação](/help/destinations/destination-sdk/docs-framework/authoring-best-practices.md) antes e enquanto você cria a página de documentação de destino. Leia também a [orientações de escrita para a documentação do Adobe](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/general-writing-guidance.html) para obter mais dicas de escrita que a equipe de documentação do Adobe usa ao criar a documentação.

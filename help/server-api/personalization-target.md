@@ -2,9 +2,9 @@
 title: Personalização via Adobe Target
 description: Saiba como usar a API do servidor para fornecer e renderizar experiências personalizadas criadas no Adobe Target.
 exl-id: c9e2f7ef-5022-4dc4-82b4-ecc210f27270
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '620'
+source-wordcount: '616'
 ht-degree: 2%
 
 ---
@@ -13,11 +13,11 @@ ht-degree: 2%
 
 ## Visão geral {#overview}
 
-A API do servidor de rede de borda pode fornecer e renderizar experiências personalizadas criadas no Adobe Target, com a ajuda da [Experience Composer baseado em formulário](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=en).
+A API do servidor de rede de borda pode fornecer e renderizar experiências personalizadas criadas no Adobe Target, com a ajuda da [Experience Composer baseado em formulário](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html).
 
 >[!IMPORTANT]
 >
->Experiências de personalização criadas por meio do [Visual Experience Composer (VEC) do Target](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=en) não são totalmente compatíveis com a API do servidor. A API do servidor pode **recuperar** Atividades criadas pelo VEC, mas a API do servidor não pode **renderizar** atividades criadas pelo VEC. Se você quiser renderizar atividades criadas pelo VEC, implemente [personalização híbrida](../edge/personalization/hybrid-personalization.md) usando o SDK da Web e a API do Servidor de rede de borda.
+>Experiências de personalização criadas por meio do [Visual Experience Composer (VEC) do Target](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) não são totalmente compatíveis com a API do servidor. A API do servidor pode **recuperar** Atividades criadas pelo VEC, mas a API do servidor não pode **renderizar** atividades criadas pelo VEC. Se você quiser renderizar atividades criadas pelo VEC, implemente [personalização híbrida](../edge/personalization/hybrid-personalization.md) usando o SDK da Web e a API do Servidor de rede de borda.
 
 ## Configurar o fluxo de dados {#configure-your-datastream}
 

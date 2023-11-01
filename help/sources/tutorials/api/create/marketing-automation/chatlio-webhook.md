@@ -3,10 +3,10 @@ title: Criar uma conexão de origem e um fluxo de dados para o Chatlio usando a 
 description: Saiba como conectar o Adobe Experience Platform ao Chatlio usando a API do Serviço de fluxo.
 badge: Beta
 exl-id: 867b8096-0841-4462-9888-e60c97c2115e
-source-git-commit: 8de45a54607bed17fd79bbed693666beb09c0502
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1458'
-ht-degree: 2%
+source-wordcount: '1454'
+ht-degree: 3%
 
 ---
 
@@ -20,7 +20,7 @@ O tutorial a seguir orienta você pelas etapas para criar uma conexão de origem
 
 ## Introdução {#getting-started}
 
-Este guia requer entendimento prático dos seguintes componentes do Experience Platform:
+Este manual necessita de uma compreensão funcional dos seguintes componentes da Experience Platform:
 
 * [Origens](../../../../home.md): o Experience Platform permite que os dados sejam assimilados de várias fontes e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando [!DNL Platform] serviços.
 * [Sandboxes](../../../../../sandboxes/home.md): o Experience Platform fornece sandboxes virtuais que particionam uma única instância da Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
@@ -89,13 +89,13 @@ Para que os dados de origem sejam usados na Platform, um esquema de destino deve
 
 Um schema XDM de destino pode ser criado executando uma solicitação POST para o [API do registro de esquema](https://developer.adobe.com/experience-platform-apis/references/schema-registry/).
 
-Para obter etapas detalhadas sobre como criar um esquema XDM de destino, consulte o tutorial sobre [criação de um schema usando a API](https://experienceleague.adobe.com/docs/experience-platform/xdm/api/schemas.html?lang=en#create).
+Para obter etapas detalhadas sobre como criar um esquema XDM de destino, consulte o tutorial sobre [criação de um schema usando a API](https://experienceleague.adobe.com/docs/experience-platform/xdm/api/schemas.html#create).
 
 ### Criar um conjunto de dados de destino {#target-dataset}
 
 Um conjunto de dados de destino pode ser criado executando uma solicitação POST para o [API do serviço de catálogo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), fornecendo a ID do schema de destino na carga útil.
 
-Para obter etapas detalhadas sobre como criar um conjunto de dados de destino, consulte o tutorial sobre [criação de um conjunto de dados usando a API](https://experienceleague.adobe.com/docs/experience-platform/catalog/api/create-dataset.html?lang=en).
+Para obter etapas detalhadas sobre como criar um conjunto de dados de destino, consulte o tutorial sobre [criação de um conjunto de dados usando a API](https://experienceleague.adobe.com/docs/experience-platform/catalog/api/create-dataset.html).
 
 ### Criar uma conexão de destino {#target-connection}
 

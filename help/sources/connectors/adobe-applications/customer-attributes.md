@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Visão geral do conector de origem de atributos do cliente
 description: Saiba como conectar atributos do cliente à Adobe Experience Platform usando APIs ou a interface do usuário
 exl-id: 63765ecd-ddb5-4992-a3de-d53f054bfb28
-source-git-commit: 139d6a6632532b392fdf8d69c5c59d1fd779a6d1
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '411'
-ht-degree: 8%
+source-wordcount: '405'
+ht-degree: 10%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 8%
 
 O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
 
-[[!DNL Customer Attributes]](https://experienceleague.adobe.com/docs/core-services/interface/services/customer-attributes/attributes.html?lang=en) O no Experience Cloud permite fazer upload dos dados corporativos capturados de um banco de dados do gerenciamento de relacionamento com o cliente (CRM). Você pode fazer upload dos dados em uma fonte de dados de atributo do cliente no Experience Cloud e, em seguida, usar os dados no Adobe Analytics e no Adobe Target.
+[[!DNL Customer Attributes]](https://experienceleague.adobe.com/docs/core-services/interface/services/customer-attributes/attributes.html?lang=pt-BR) O no Experience Cloud permite fazer upload dos dados corporativos capturados de um banco de dados do gerenciamento de relacionamento com o cliente (CRM). Você pode fazer upload dos dados em uma fonte de dados de atributo do cliente no Experience Cloud e, em seguida, usar os dados no Adobe Analytics e no Adobe Target.
 
 O Experience Platform fornece suporte para assimilação [!DNL Customer Attributes] dados de perfil no Adobe Experience Platform.
 
@@ -31,7 +31,7 @@ Não é possível selecionar um namespace existente para a identidade ao usar [!
 
 Para [!DNL Customer Attributes] dados a serem vinculados a outros [!DNL Profile] conjuntos de dados, seus dados e identidades devem poder corresponder a uma ID de Experience Cloud.
 
-É possível estabelecer a variável `CORE` definindo a ID do Experience Cloud para o visitante usando [SDK da Web](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html?lang=en), [SDK móvel](https://developer.adobe.com/client-sdks/documentation/mobile-core/identity/)ou a variável [API do serviço de ID do Experience Cloud](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=pt-BR).
+É possível estabelecer a variável `CORE` definindo a ID do Experience Cloud para o visitante usando [SDK da Web](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html), [SDK móvel](https://developer.adobe.com/client-sdks/documentation/mobile-core/identity/)ou a variável [API do serviço de ID do Experience Cloud](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=pt-BR).
 
 A variável [!DNL Customer Attributes] O arquivo não preenche ainda mais nenhuma outra relação de identidade. Por exemplo, se um [!DNL Customer Attributes] o conjunto de dados de origem contém um **E-mail** e uma **ID de fidelidade** , esses campos devem ser rotulados como campos de identidade no esquema para serem processados em [!DNL Identity Service].
 

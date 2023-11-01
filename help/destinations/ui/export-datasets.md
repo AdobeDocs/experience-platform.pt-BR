@@ -3,9 +3,9 @@ title: Exportar conjuntos de dados para destinos de armazenamento na nuvem
 type: Tutorial
 description: Saiba como exportar conjuntos de dados do Adobe Experience Platform para o local de armazenamento em nuvem de sua preferência.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 08463e9f14b0952fe5db177ae8b4546cc3c6cac5
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1724'
+source-wordcount: '1722'
 ht-degree: 4%
 
 ---
@@ -42,7 +42,7 @@ Entenda, na tabela abaixo, quais tipos de conjunto de dados você pode exportar 
   </tr>
   <tr>
     <td>Ultimate</td>
-    <td><ul><li>Conjuntos de dados de Perfil e Evento de experiência criados na interface do Experience Platform após assimilar ou coletar dados por meio de Fontes, SDK da Web, SDK móvel, Conector de dados do Analytics e Audience Manager.</li><li> <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html?lang=en#profile-attribute-datasets">Conjunto de dados Instantâneo do perfil gerado pelo sistema</a>.</li></td>
+    <td><ul><li>Conjuntos de dados de Perfil e Evento de experiência criados na interface do Experience Platform após assimilar ou coletar dados por meio de Fontes, SDK da Web, SDK móvel, Conector de dados do Analytics e Audience Manager.</li><li> <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html#profile-attribute-datasets">Conjunto de dados Instantâneo do perfil gerado pelo sistema</a>.</li></td>
   </tr>
   <tr>
     <td rowspan="2">Adobe Journey Optimizer</td>

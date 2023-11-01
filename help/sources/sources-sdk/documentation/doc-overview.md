@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Documente sua fonte
 description: A etapa final antes que a nova fonte possa ser ativada no Adobe Experience Platform é documentar a nova fonte.
 exl-id: 80daadb1-127f-4f42-8bc9-fb89a7898462
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '411'
+source-wordcount: '407'
 ht-degree: 0%
 
 ---
@@ -19,8 +19,8 @@ Este guia de documentação inclui:
 
 * Um tutorial que você pode seguir para criar uma página de documentação para sua nova fonte;
 * Um modelo de documentação que você deve preencher para sua nova fonte;
-* [Instruções sobre como usar o Markdown para escrever a documentação técnica](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=en);
-* [Instruções sobre como entender o sabor do Adobe Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=en#custom-markdown-extensions).
+* [Instruções sobre como usar o Markdown para escrever a documentação técnica](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html);
+* [Instruções sobre como entender o sabor do Adobe Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html#custom-markdown-extensions).
 
 ## Pré-requisitos
 

@@ -3,10 +3,10 @@ keywords: Experience Platform;página inicial;tópicos populares;campanha;campan
 title: Adobe Campaign Managed Cloud Services
 description: Saiba como conectar Cloud Service do Campaign Managed à Platform usando a interface do usuário
 exl-id: 8f18bf73-ebf1-4b4e-a12b-964faa0e24cc
-source-git-commit: 39a503b14c731aeed279bbbfa8c814c2ec26ed92
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '757'
-ht-degree: 1%
+source-wordcount: '753'
+ht-degree: 2%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
 
-O Adobe Campaign Managed Cloud Services fornece uma plataforma Managed Services para criação de experiências para clientes entre canais, além de um ambiente para a orquestração visual de campanhas, o gerenciamento de interação em tempo real e a execução entre canais. Visite o [Documentação do Adobe Campaign v8](https://experienceleague.adobe.com/docs/campaign/campaign-v8/campaign-home.html?lang=en) para obter mais informações.
+O Adobe Campaign Managed Cloud Services fornece uma plataforma Managed Services para criação de experiências para clientes entre canais, além de um ambiente para a orquestração visual de campanhas, o gerenciamento de interação em tempo real e a execução entre canais. Visite o [Documentação do Adobe Campaign v8](https://experienceleague.adobe.com/docs/campaign/campaign-v8/campaign-home.html?lang=pt-BR) para obter mais informações.
 
 A fonte do Adobe Campaign Managed Cloud Services permite trazer registros de entrega e dados de logs de rastreamento do Adobe Campaign v8 para a Adobe Experience Platform.
 
@@ -30,7 +30,7 @@ Antes de criar uma conexão de origem para trazer seu Campaign v8 para o Experie
 
 >[!IMPORTANT]
 >
->Você deve ter acesso ao Console do cliente do Adobe Campaign v8 para visualizar os dados de log no Campaign. Visite o [Documentação do Campaign v8](https://experienceleague.adobe.com/docs/campaign/campaign-v8/deploy/connect.html?lang=en) para obter informações sobre como baixar e instalar o console do cliente.
+>Você deve ter acesso ao Console do cliente do Adobe Campaign v8 para visualizar os dados de log no Campaign. Visite o [Documentação do Campaign v8](https://experienceleague.adobe.com/docs/campaign/campaign-v8/deploy/connect.html) para obter informações sobre como baixar e instalar o console do cliente.
 
 Faça logon na instância do Campaign v8 por meio do Console do cliente. No [!DNL Explorer] selecione [!DNL Administration] e selecione [!DNL Configuration]. Em seguida, selecione [!DNL Data schemas] e, em seguida, aplique o `broadLog` filtro para nome ou rótulo. Na lista exibida, selecione o schema de origem dos logs do delivery com o nome `broadLogRcp`.
 

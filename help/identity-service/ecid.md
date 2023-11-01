@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Visão geral da ECID
 description: O Identificador de Experience Cloud (ECID) é o módulo do lado do cliente que fornece acesso ao gerenciamento de identidades, atendendo a três funções principais.
 exl-id: da7717d2-da2e-414b-978d-2eab8ff2c5a0
-source-git-commit: ad9fb0bcc7bca55da432c72adc94d49e3c63ad6e
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '275'
+source-wordcount: '271'
 ht-degree: 2%
 
 ---
@@ -30,7 +30,7 @@ A identificação de usuários online exige a instrumentação do site ou aplica
 A documentação a seguir fornece mais recursos para entender a ECID em diferentes aplicativos de plataforma e Experience Cloud:
 
 * Para usar a ECID com implementação do site, consulte a documentação para [Serviço de identidade Experience Cloud](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=pt-BR).
-* Para ver como a ECID é usada com aplicativos e conteúdo para dispositivos móveis da Web, consulte a documentação de [rastreamento de visitantes entre um aplicativo e a internet móvel](https://experienceleague.adobe.com/docs/mobile-services/ios/sdk-reference-ios/hybrid-app.html?lang=en#sdk-reference-ios).
+* Para ver como a ECID é usada com aplicativos e conteúdo para dispositivos móveis da Web, consulte a documentação de [rastreamento de visitantes entre um aplicativo e a internet móvel](https://experienceleague.adobe.com/docs/mobile-services/ios/sdk-reference-ios/hybrid-app.html#sdk-reference-ios).
 * A implantação dessas ferramentas pode ser simples e fácil de gerenciar se você usar [tags](../tags/home.md).
 * Consulte a [Documentação do Privacy Service](../privacy-service/identity-data.md) para obter informações sobre como usar o ECID para facilitar a conformidade com as regras de privacidade, como o GDPR.
 * Para obter mais informações sobre a ECID com o contexto da Platform, consulte o [Visão geral do serviço de identidade](./home.md) e a variável [visão geral dos namespaces de identidade](./namespaces.md).

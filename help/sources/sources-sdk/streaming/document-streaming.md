@@ -4,9 +4,9 @@ description: A etapa final antes que a nova fonte possa ser ativada no Adobe Exp
 hide: true
 hidefromtoc: true
 exl-id: 65ca7a4d-3e02-4f54-bf07-ea2c92b8dbf1
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '408'
+source-wordcount: '404'
 ht-degree: 0%
 
 ---
@@ -19,8 +19,8 @@ Este guia de documentação inclui:
 
 * Um tutorial que você pode seguir para criar uma página de documentação para sua nova fonte;
 * Um modelo de documentação que você deve preencher para sua nova fonte;
-* [Instruções sobre como usar o Markdown para escrever a documentação técnica](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=en);
-* [Instruções sobre como entender o sabor do Adobe Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=en#custom-markdown-extensions).
+* [Instruções sobre como usar o Markdown para escrever a documentação técnica](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html);
+* [Instruções sobre como entender o sabor do Adobe Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html#custom-markdown-extensions).
 
 ## Pré-requisitos
 

@@ -2,9 +2,9 @@
 description: Esta página lista e descreve as etapas para configurar um destino baseado em arquivo usando o Destination SDK.
 title: Usar o Destination SDK para configurar um destino baseado em arquivo
 exl-id: 84d73452-88e4-4e0f-8fc7-d0d8e10f9ff5
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '683'
+source-wordcount: '681'
 ht-degree: 1%
 
 ---
@@ -387,7 +387,7 @@ Depois de definir seu destino usando os endpoints de configuração nas etapas a
 Como parte do processo para testar o destino, é necessário usar a interface do usuário do Experience Platform para criar segmentos, que você ativará para o destino. Consulte os dois recursos abaixo para obter instruções sobre como criar públicos-alvo no Experience Platform:
 
 * [Criar uma página de documentação de público-alvo](/help/segmentation/ui/overview.md#create-segment)
-* [Criar uma apresentação de vídeo de público-alvo](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en)
+* [Criar uma apresentação de vídeo de público-alvo](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)
 
 ## Etapa 6: publicar seu destino {#publish-destination}
 

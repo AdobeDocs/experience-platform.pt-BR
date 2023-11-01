@@ -2,10 +2,10 @@
 title: Evolução do Audience Manager para a Real-Time CDP
 description: Entenda o que você deve considerar antes de planejar a migração do Audience Manager para a Real-Time CDP.
 exl-id: 83ab9a5d-9abc-4072-b449-e2a9ecd48639
-source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '538'
-ht-degree: 90%
+source-wordcount: '528'
+ht-degree: 84%
 
 ---
 
@@ -17,7 +17,7 @@ Conforme sua organização evolui para usar a Adobe Real-Time CDP, analise estas
 
 ## 1. Considere a arquitetura de dados do Audience Manager
 
-Ao planejar a evolução do Audience Manager para a Real-Time CDP, é importante analisar seus [segmentos do Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/segments/segments-purpose.html?lang=pt-BR) e determinar quais são os [sinais](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-explorer/data-explorer-understanding-signals.html?lang=pt-BR), [características](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-details-page.html?lang=pt-BR) e [regras](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/segments/segment-builder.html?lang=pt-BR#segment-builder-section) que compõem esses segmentos.
+Ao planejar a evolução do Audience Manager para a Real-Time CDP, é importante analisar seus [segmentos do Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/segments/segments-purpose.html) e determinar quais são os [sinais](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-explorer/data-explorer-understanding-signals.html), [características](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-details-page.html) e [regras](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/segments/segment-builder.html#segment-builder-section) que compõem esses segmentos.
 
 Além disso, pense nas fontes de dados que você usa atualmente no Audience Manager.
 

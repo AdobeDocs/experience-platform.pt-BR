@@ -2,9 +2,9 @@
 title: Conexão Snap Inc
 description: Saiba como se conectar à plataforma Snapchat Ads e exportar seus públicos do Experience Platform.
 exl-id: 1f0f2dc0-5f3d-424b-9b22-b1a14ac30039
-source-git-commit: 661ef040398a9e2ef8dd9cebdf7bd27d4268636b
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1030'
+source-wordcount: '1028'
 ht-degree: 1%
 
 ---
@@ -128,7 +128,7 @@ Depois de ativar os públicos-alvo para a variável *Snap Inc* destino, você po
 
 ![Públicos-alvo](/help/destinations/assets/catalog/advertising/snapchat-ads/audiences.png)
 
-Observe que, quando um público-alvo Adobe é ativado pela primeira vez para a Snap Inc, você o verá inicialmente como um público-alvo vazio. Isso ocorre porque a Adobe Experience Platform não exporta dados de membros para a Snap Inc até avaliar o público-alvo. Para obter mais informações sobre como os públicos-alvo são avaliados em Experience Platform, consulte [Visão geral do serviço de segmentação](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html?lang=en#evaluate-segments).
+Observe que, quando um público-alvo Adobe é ativado pela primeira vez para a Snap Inc, você o verá inicialmente como um público-alvo vazio. Isso ocorre porque a Adobe Experience Platform não exporta dados de membros para a Snap Inc até avaliar o público-alvo. Para obter mais informações sobre como os públicos-alvo são avaliados em Experience Platform, consulte [Visão geral do serviço de segmentação](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html#evaluate-segments).
 
 ## Uso e governança de dados {#data-usage-governance}
 

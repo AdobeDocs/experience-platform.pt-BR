@@ -2,9 +2,9 @@
 title: Visão geral do namespace de identidade
 description: Saiba mais sobre namespaces de identidade no Serviço de identidade.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: 3e4f79620d1f1b08684223214980ecbfdfa10a38
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1699'
+source-wordcount: '1691'
 ht-degree: 8%
 
 ---
@@ -76,13 +76,13 @@ Os seguintes namespaces padrão são fornecidos para uso por todas as organizaç
 | Nome de exibição | Descrição |
 | ------------ | ----------- |
 | AdCloud | Um namespace que representa o Adobe AdCloud. |
-| Adobe Analytics (ID herdada) | Um namespace que representa o Adobe Analytics. Consulte o seguinte documento em [Namespaces do Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-namespaces.html?lang=en#namespaces) para obter mais informações. |
+| Adobe Analytics (ID herdada) | Um namespace que representa o Adobe Analytics. Consulte o seguinte documento em [Namespaces do Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-namespaces.html#namespaces) para obter mais informações. |
 | Apple IDFA (ID para anunciantes) | Um namespace que representa a Apple ID para anunciantes. Consulte o seguinte documento em [anúncios baseados em interesses](https://support.apple.com/en-us/HT202074) para obter mais informações. |
 | Serviço de notificação por push da Apple | Um namespace que representa identidades coletadas usando o serviço de notificação por push da Apple. Consulte o seguinte documento em [Serviço de notificação por push da Apple](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html#//apple_ref/doc/uid/TP40008194-CH8-SW1) para obter mais informações. |
-| CORE | Um namespace que representa o Adobe Audience Manager. Esse namespace também pode ser chamado pelo nome herdado: &quot;Adobe AudienceManager&quot;. Consulte o seguinte documento em [IDs do Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/data-privacy-reference/data-privacy-ids.html?lang=en#aam-ids) para obter mais informações. |
+| CORE | Um namespace que representa o Adobe Audience Manager. Esse namespace também pode ser chamado pelo nome herdado: &quot;Adobe AudienceManager&quot;. Consulte o seguinte documento em [IDs do Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/data-privacy-reference/data-privacy-ids.html#aam-ids) para obter mais informações. |
 | ECID | Um namespace que representa a ECID. Esse namespace também pode ser referenciado pelos seguintes aliases: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Consulte o seguinte documento em [ECID](./ecid.md) para obter mais informações. |
 | Email | Um namespace que representa um endereço de email. Esse tipo de namespace é frequentemente associado a uma única pessoa e, portanto, pode ser usado para identificá-la em diferentes canais. |
-| Emails (SHA256, em letras minúsculas) | Um namespace para o endereço de email com hash prévio. Os valores fornecidos neste namespace são convertidos em minúsculas antes do hash com SHA256. Espaços à esquerda e à direita precisam ser cortados antes da normalização de um endereço de email. Esta configuração não pode ser alterada retroativamente. Consulte o seguinte documento em [Suporte a hash SHA 256](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html?lang=en#hashing-support) para obter mais informações. |
+| Emails (SHA256, em letras minúsculas) | Um namespace para o endereço de email com hash prévio. Os valores fornecidos neste namespace são convertidos em minúsculas antes do hash com SHA256. Espaços à esquerda e à direita precisam ser cortados antes da normalização de um endereço de email. Esta configuração não pode ser alterada retroativamente. Consulte o seguinte documento em [Suporte a hash SHA 256](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html#hashing-support) para obter mais informações. |
 | Firebase Cloud Messaging | Um namespace que representa identidades coletadas usando o Google Firebase Cloud Messaging para notificações por push. Consulte o seguinte documento em [Google Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging) para obter mais informações. |
 | ID de anúncio do Google (GAID) | Um namespace que representa uma ID de anúncio do Google. Consulte o seguinte documento em [ID de publicidade do Google](https://support.google.com/googleplay/android-developer/answer/6048248?hl=en) para obter mais informações. |
 | ID de cliques do Google | Um namespace que representa uma ID de clique Google. Consulte o seguinte documento em [Rastreamento de cliques no Google Ads](https://developers.google.com/adwords/api/docs/guides/click-tracking) para obter mais informações. |
@@ -90,7 +90,7 @@ Os seguintes namespaces padrão são fornecidos para uso por todas as organizaç
 | Telefone (E.164) | Um namespace que representa números de telefone brutos que precisam ter hash no formato E.164. O formato E.164 inclui um sinal de mais (`+`), um código de chamada de país internacional, um código de área local e um número de telefone. Por exemplo: `(+)(country code)(area code)(phone number)`. |
 | Telefone (SHA256) | Um namespace que representa números de telefone que precisam de hash usando SHA256. Você deve remover símbolos, letras e quaisquer zeros à esquerda. Você também deve adicionar o código de chamada do país como prefixo. |
 | Telefone (SHA256_E.164) | Um namespace que representa números de telefone brutos que precisam de hash usando os formatos SHA256 e E.164. |
-| TNTID | Um namespace que representa o Adobe Target. Consulte o seguinte documento em [Target](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=pt-BR) para obter mais informações. |
+| TNTID | Um namespace que representa o Adobe Target. Consulte o seguinte documento em [Target](https://docs.adobe.com/content/help/pt-BR/experience-cloud/user-guides/home.translate.html) para obter mais informações. |
 | Windows AID | Um namespace que representa uma ID de anúncio do Windows. Consulte o seguinte documento em [ID de anúncio do Windows](https://docs.microsoft.com/en-us/uwp/api/windows.system.userprofile.advertisingmanager.advertisingid?view=winrt-19041) para obter mais informações. |
 
 ### Exibir namespaces de identidade {#view-identity-namespaces}

@@ -3,10 +3,10 @@ keywords: Experience Platform;página inicial;tópicos populares;controle de ace
 title: Guia completo do controle de acesso baseado em atributos
 description: Este documento fornece um guia completo sobre o controle de acesso baseado em atributos no Adobe Experience Platform
 exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
-source-git-commit: 36e38824963139414f2803ef4127706d1e521d1a
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1748'
-ht-degree: 19%
+source-wordcount: '1740'
+ht-degree: 17%
 
 ---
 
@@ -67,25 +67,25 @@ O espaço de trabalho de Permissões para a interface do usuário da Platform é
 >id="platform_permissions_labels_about"
 >title="O que são rótulos?"
 >abstract="Os rótulos permitem categorizar conjuntos de dados e campos de acordo com as políticas de uso que se aplicam a esses dados. A Platform fornece vários rótulos de uso de dados “principais” definidos pela Adobe, que abrangem uma grande variedade de restrições comuns aplicáveis à governança de dados. Por exemplo, rótulos sensíveis “S”, como RHD (Regulated Health Data, dados de saúde regulamentados), permitem categorizar dados que se referem a PHI (Protected Health Information, informações de saúde protegidas). Também é possível definir seus próprios rótulos personalizados que atendam às necessidades de sua organização."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=br#understanding-data-usage-labels" text="Visão geral dos rótulos de uso de dados"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html#understanding-data-usage-labels" text="Visão geral dos rótulos de uso de dados"
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_labels_about_create"
 >title="Criar novo rótulo"
 >abstract="É possível criar seus próprios rótulos personalizados para atender às necessidades de sua organização. Os rótulos personalizados podem ser usados para aplicar configurações de governança de dados e controle de acesso aos seus dados."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=pt-BR#manage-labels" text="Gerenciar rótulos personalizados"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html#manage-labels" text="Gerenciar rótulos personalizados"
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_roles_about"
 >title="O que são funções?"
 >abstract="Funções são maneiras de categorizar os tipos de usuários que estão interagindo com sua instância da Platform. São os pilares das políticas de controle de acesso. Uma função tem um determinado conjunto de permissões, e os membros da organização podem ter uma ou mais funções atribuídas, dependendo do escopo do acesso de visualização ou gravação necessário."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=pt-BR" text="Gerenciar funções"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html" text="Gerenciar funções"
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_roles_about_create"
 >title="Criar nova função"
 >abstract="É possível criar uma nova função para categorizar melhor os usuários que estão acessando sua instância da Platform. Por exemplo, você pode criar uma função para uma equipe interna de marketing e aplicar o rótulo RHD a essa função, permitindo que sua equipe interna de marketing acesse as informações de saúde protegidas (PHI). Como alternativa, você também pode criar uma função para uma agência externa e negar acesso a essa função para dados PHI ao não aplicar o rótulo RHD a essa função."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=br#create-a-new-role" text="Criar uma nova função"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html#create-a-new-role" text="Criar uma nova função"
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_roles_details"
@@ -179,19 +179,19 @@ A confirmação da ativação da política é recebida e você retorna ao [!UICO
 >id="platform_permissions_policies_about"
 >title="What are policies?"
 >abstract="Policies are statements that bring attributes together to establish permissible and impermissible actions. Every organization comes with a default policy that you must activate to define rules for resources like segments and schema fields. Default policies can neither be edited nor deleted. However, default policies can be activated or deactivated."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=en" text="Manage policies"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html" text="Manage policies"
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_about_create"
 >title="Create a policy"
 >abstract="Create a policy to define the actions that your users can and cannot take against your segments and schema fields."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=en#create-a-new-policy" text="Create a policy"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html#create-a-new-policy" text="Create a policy"
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_edit_permitdeny"
 >title="Configure permissible and impermissible actions for a policy"
 >abstract="A <b>deny access to</b> policy will deny users access when the criteria is met. Combined with <b>The following being false</b> - all users will be denied access unless they meet the matching criteria set. This type of policy allows you to protect a sensitive resource and only allow access to users with matching labels. <br>A <b>permit access to</b> policy will permit users access when the criteria are met. When combined with <b>The following being true</b> - users will be given access if they meet the matching criteria set. This does not explicitly deny access to users, but adds a permit access. This type of policy allows you to give additional access to resource and in addition to those users who might already have access through role permissions."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=en#edit-a-policy" text="Edit a policy"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html#edit-a-policy" text="Edit a policy"
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_edit_resource"

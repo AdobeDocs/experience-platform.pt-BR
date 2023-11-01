@@ -2,10 +2,10 @@
 title: Notas de versão da Adobe Experience Platform de setembro de 2022
 description: As notas de versão de setembro de 2022 para o Adobe Experience Platform.
 exl-id: a7a4dcf8-2cf3-4e39-879d-bdfcbacb737a
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '2940'
-ht-degree: 11%
+source-wordcount: '2938'
+ht-degree: 19%
 
 ---
 
@@ -27,7 +27,7 @@ Atualizações dos recursos já existentes na Adobe Experience Platform:
 - [Experience Data Model (XDM)](#xdm)
 - [Identity Service](#identity-service)
 - [Query Service](#query-service)
-- [Fontes](#sources)
+- [Origens](#sources)
 
 ## Controle de acesso baseado em atributos {#abac}
 
@@ -52,7 +52,7 @@ Os serviços de IA/ML permitem que analistas e profissionais de marketing aprove
 
 ### IA de atribuição
 
-O Attribution AI é usado para atribuir créditos a pontos de contato que levam a eventos de conversão. Ele pode ser usado pelos comerciantes para ajudar a quantificar o impacto de marketing de cada ponto de contato de marketing individual em várias jornadas de clientes.
+O Attribution AI é usado para atribuir créditos a pontos de contato que levam a eventos de conversão. Ela pode ser usada por comerciantes para ajudar a quantificar o impacto de marketing de cada ponto de contato de marketing individual em várias jornadas de clientes.
 
 | Recurso | Descrição |
 | --- | --- |
@@ -88,7 +88,7 @@ Para obter mais informações sobre os diferentes tipos de evento específicos d
 
 ## [!DNL Dashboards] {#dashboards}
 
-O Adobe Experience Platform fornece vários painéis por meio dos quais você pode visualizar insights importantes sobre os dados de sua organização, conforme capturados durante instantâneos diários.
+A Adobe Experience Platform fornece vários painéis para você visualizar insights importantes sobre os dados de sua organização, que são capturados por instantâneos diários.
 
 | Recurso | Descrição |
 | --- | --- |
@@ -134,7 +134,7 @@ Para obter mais informações sobre a coleta de dados na Platform, consulte a [v
 
 | Destino | Descrição |
 | ----------- | ----------- |
-| [[!DNL Adobe Campaign Managed Cloud Services]](../../destinations/catalog/email-marketing/adobe-campaign-managed-services.md) | O Adobe Campaign Managed Cloud Services fornece uma plataforma para projetar experiências de clientes entre canais, além de um ambiente para a orquestração visual de campanhas, o gerenciamento de interação em tempo real e a execução entre canais. [Introdução ao Campaign](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html). Observe que essa integração funciona com o [Adobe Campaign versão 8.4 ou superior](https://experienceleague.adobe.com/docs/campaign/campaign-v8/new/release-notes.html?lang=en#release-8-4-1). |
+| [[!DNL Adobe Campaign Managed Cloud Services]](../../destinations/catalog/email-marketing/adobe-campaign-managed-services.md) | O Adobe Campaign Managed Cloud Services fornece uma plataforma para projetar experiências de clientes entre canais, além de um ambiente para a orquestração visual de campanhas, o gerenciamento de interação em tempo real e a execução entre canais. [Introdução ao Campaign](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html). Observe que essa integração funciona com o [Adobe Campaign versão 8.4 ou superior](https://experienceleague.adobe.com/docs/campaign/campaign-v8/new/release-notes.html#release-8-4-1). |
 | [[!DNL Salesforce CRM]](../../destinations/catalog/crm/salesforce.md) | A variável [!DNL Salesforce CRM] o destino foi atualizado para oferecer suporte a atualizações de contatos e clientes potenciais, bem como melhorias de desempenho para atualizações mais rápidas. |
 
 {style="table-layout:auto"}
@@ -149,7 +149,7 @@ Para obter informações mais gerais sobre destinos, consulte a [visão geral de
 
 ## Experience Data Model (XDM) {#xdm}
 
-O XDM é uma especificação de código aberto que fornece estruturas e definições comuns (esquemas) para dados trazidos para o Adobe Experience Platform. Seguindo os padrões XDM, todos os dados de experiência do cliente podem ser incorporados a uma representação comum para fornecer insights de maneira mais rápida e integrada. Você pode obter insights valiosos das ações do cliente, definir públicos do cliente por meio de segmentos e usar atributos do cliente para fins de personalização.
+O XDM é uma especificação de código aberto que fornece estruturas e definições comuns (esquemas) para dados inseridos na Adobe Experience Platform. Ao aderir aos padrões do XDM, todos os dados de experiência do cliente podem ser incorporados em uma representação comum para fornecer insights de maneira mais rápida e integrada. Você pode obter insights valiosos sobre ações de clientes, definir públicos-alvo por meio de segmentos e usar atributos de clientes para fins de personalização.
 
 **Novos recursos**
 
@@ -157,40 +157,40 @@ O XDM é uma especificação de código aberto que fornece estruturas e definiç
 | --- | --- |
 | Suporte à interface do usuário para enumerações e valores sugeridos | Além dos enums que permitem a validação de dados, agora você pode [adicionar ou remover valores sugeridos](../../xdm/ui/fields/enum.md) para campos de sequência padrão ou personalizados, de modo que os usuários da Platform tenham uma lista amigável de valores para seleção ao criar segmentos. |
 
-**Novos componentes XDM**
+**Novos componentes do XDM**
 
 | Tipo de componente | Nome | Descrição |
 | --- | --- | --- |
 | Grupo de campos | [[!UICONTROL Campos de classificação do AJO]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/proposition-action.schema.json) | Propriedades de um elemento específico com o qual interagiu que causou o acionamento do evento de apresentação. |
 | Grupo de campos | [[!UICONTROL Detalhes de interação do MediaAnalytics]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-media-analytics.schema.json) | Rastreia interações de mídia ao longo do tempo. |
-| Grupo de campos | [[!UICONTROL Informações de detalhes de mídia]](https://github.com/adobe/xdm/blob/master/components/datatypes/mediadetails.schema.json) | Rastreia informações detalhadas da mídia. |
+| Grupo de campos | [[!UICONTROL Informações detalhadas de mídia]](https://github.com/adobe/xdm/blob/master/components/datatypes/mediadetails.schema.json) | Rastreia informações detalhadas da mídia. |
 | Grupo de campos | [[!UICONTROL Adobe CJM ExperienceEvent - Superfícies]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/surfaces.schema.json) | Descreve as superfícies de Eventos de experiência no Adobe Journey Optimizer. |
 
 {style="table-layout:auto"}
 
-**Componentes XDM atualizados**
+**Componentes de XDM atualizados**
 
 | Tipo de componente | Nome | Descrição |
 | --- | --- | --- |
 | Comportamento | [[!UICONTROL Séries cronológicas]](https://github.com/adobe/xdm/blob/master/components/behaviors/time-series.schema.json) | <ul><li>Valores adicionados para `eventType`:<ul><li>`decisioning.propositionSend`</li><li>`decisioning.propositionDismiss`</li><li>`decisioning.propositionTrigger`</li><li>`media.downloaded`</li><li>`location.entry`</li><li>`location.exit`</li></ul></li><li>Valores removidos para `eventType`:<ul><li>`decisioning.propositionDeliver`</li><li>`media.stateStart`</li><li>`media.stateEnd`</li></ul></li></ul> |
-| Grupo de campos | (Múltiplos) | [Atualização de várias descrições de campo](https://github.com/adobe/xdm/pull/1628/files) em componentes de Journey Orchestration. |
-| Grupo de campos | (Múltiplos) | [Atualização dos títulos de vários componentes do Adobe Workfront](https://github.com/adobe/xdm/pull/1634/files) por questões de coerência. |
+| Grupo de campos | (Vários) | [Atualização de várias descrições de campo](https://github.com/adobe/xdm/pull/1628/files) em componentes de Journey Orchestration. |
+| Grupo de campos | (Vários) | [Atualização dos títulos de vários componentes do Adobe Workfront](https://github.com/adobe/xdm/pull/1634/files) por questões de coerência. |
 | Grupo de campos | [[!UICONTROL Campos de classificação do AJO]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/proposition-event-type.schema.json) | Atualização dos namespaces de vários campos para `xdm`. |
 | Grupo de campos | [[!UICONTROL Campos Comuns de Evento de Etapa do Journey Orchestration]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/journeyOrchestration/stepEvents/journeyStepEventCommonFieldsMixin.schema.json) | Adição de um novo campo, `isReadSegmentTriggerStartEvent`. |
 | Grupo de campos | [[!UICONTROL Climas previstos]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/forecasted-weather.schema.json) | Alterou o `xdm:uvIndex` a um tipo inteiro, e adicionou o `xdm` para vários campos em que estava ausente. |
-| Grupo de campos | [[!UICONTROL Informações de detalhes de mídia]](https://github.com/adobe/xdm/blob/master/components/datatypes/mediadetails.schema.json) | `xdm:endUserIDs` e `xdm:implementationDetails` foram removidos do grupo de campos. |
-| Tipo de dados | (Múltiplos) | [Atualização de vários nomes de propriedade de mídia](https://github.com/adobe/xdm/pull/1626/files) em vários tipos de dados para fins de consistência. |
+| Grupo de campos | [[!UICONTROL Informações detalhadas de mídia]](https://github.com/adobe/xdm/blob/master/components/datatypes/mediadetails.schema.json) | `xdm:endUserIDs` e `xdm:implementationDetails` foram removidos do grupo de campos. |
+| Tipo de dados | (Vários) | [Atualização de vários nomes de propriedade de mídia](https://github.com/adobe/xdm/pull/1626/files) em vários tipos de dados para fins de consistência. |
 | Tipo de dados | [[!UICONTROL Detalhes da implementação]](https://github.com/adobe/xdm/blob/master/components/datatypes/industry-verticals/implementationdetails.schema.json) | Adição de nomes conhecidos para flutter. |
 | Tipo de dados | [[!UICONTROL Detalhes do ponto de interesse]](https://github.com/adobe/xdm/blob/master/components/datatypes/poi-detail.schema.json) | O tipo de dados agora pode aceitar uma lista de pares de valores-chave de metadados associados ao ponto de interesse. |
 | Tipo de dados | [[!UICONTROL Ação de apresentação]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/proposition-action.schema.json) | [!DNL AJO Classification Fields] foi renomeado para [!UICONTROL Ação de apresentação]. |
 | Tipo de dados | [[!UICONTROL Tipo de evento de apresentação]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/proposition-event-type.schema.json) | [!DNL AJO Classification Fields] foi renomeado para [!UICONTROL Ação de apresentação]. |
-| (Múltiplos) | (Múltiplos) | As propriedades experimentais foram [estabilizado em todos os componentes B2B](https://github.com/adobe/xdm/pull/1617/files). |
-| (Múltiplos) | (Múltiplos) | As entidades Adobe Journey Optimizer foram [estabilizado](https://github.com/adobe/xdm/pull/1625/files). |
-| (Múltiplos) | (Múltiplos) | Os namespaces de determinados campos em vários componentes experimentais foram [atualizado para fins de consistência](https://github.com/adobe/xdm/pull/1626/files). |
+| (Vários) | (Vários) | As propriedades experimentais foram [estabilizado em todos os componentes B2B](https://github.com/adobe/xdm/pull/1617/files). |
+| (Vários) | (Vários) | As entidades Adobe Journey Optimizer foram [estabilizado](https://github.com/adobe/xdm/pull/1625/files). |
+| (Vários) | (Vários) | Os namespaces de determinados campos em vários componentes experimentais foram [atualizado para fins de consistência](https://github.com/adobe/xdm/pull/1626/files). |
 
 {style="table-layout:auto"}
 
-Para obter mais informações sobre o XDM na Platform, consulte a [Visão geral do sistema XDM](../../xdm/home.md).
+Para obter mais informações sobre o XDM na Platform, consulte a [Visão geral do sistema de XDM](../../xdm/home.md).
 
 ## Identity Service {#identity-service}
 
@@ -204,11 +204,11 @@ O Serviço de identidade da Adobe Experience Platform ajuda você a ter uma melh
 | --- | --- |
 | Suporte para exclusão do conjunto de dados | O Serviço de identidade agora oferece suporte à exclusão do conjunto de dados ao solicitar por meio do [API do serviço de catálogo](https://developer.adobe.com/experience-platform-apis/references/catalog/), interface ou higiene de dados. Leia o guia em [exclusão de conjuntos de dados na interface](../../catalog/datasets/user-guide.md#delete-a-dataset) para obter mais informações. |
 
-Para saber mais sobre o Serviço de identidade, leia a [Visão geral do serviço de identidade](../../identity-service/home.md).
+Para saber mais sobre o Identity Service, leia a [Visão geral do Identity Service](../../identity-service/home.md).
 
 ## Query Service {#query-service}
 
-O Serviço de consulta permite usar o SQL padrão para consultar dados no Adobe Experience Platform [!DNL Data Lake]. Você pode associar qualquer conjunto de dados da [!DNL Data Lake] e capture os resultados da consulta como um novo conjunto de dados para usar em relatórios, no Data Science Workspace ou para assimilação no Perfil do cliente em tempo real.
+O Query Service permite usar SQL padrão para consultar dados no [!DNL Data Lake] da Adobe Experience Platform. Você pode associar qualquer conjunto de dados da [!DNL Data Lake] e capture os resultados da consulta como um novo conjunto de dados para usar em relatórios, no Data Science Workspace ou para assimilação no Perfil do cliente em tempo real.
 
 **Recursos atualizados**
 
@@ -221,9 +221,9 @@ Para obter mais informações sobre [!DNL Query Service], consulte o [[!DNL Quer
 
 Consulte a [documentação de alertas de consulta](../../query-service/api/alert-subscriptions.md) para saber mais.
 
-## Fontes {#sources}
+## Origens {#sources}
 
-O Adobe Experience Platform pode assimilar dados de fontes externas e, ao mesmo tempo, estruturar, rotular e aprimorar esses dados usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, software de terceiros e seu sistema de CRM.
+O Adobe Experience Platform pode assimilar dados de fontes externas e, ao mesmo tempo, estruturar, rotular e aprimorar esses dados usando os serviços da plataforma. É possível assimilar dados de várias origens, como aplicativos da Adobe, do armazenamento na nuvem, um software de terceiros e do seu sistema de CRM.
 
 A Experience Platform fornece uma API RESTful e uma interface interativa que permite configurar conexões de origem para vários provedores de dados com facilidade. Essas conexões de origem permitem autenticar e conectar a sistemas de armazenamento externos e serviços de CRM, definir períodos para execuções de assimilação e gerenciar a taxa de transferência de assimilação de dados.
 
@@ -235,6 +235,6 @@ A Experience Platform fornece uma API RESTful e uma interface interativa que per
 | Suporte para o Adobe Campaign Managed Cloud Service | Use a fonte Adobe Campaign Managed Cloud Service para trazer seus dados de entrega e registros de rastreamento do Adobe Campaign v8.4 para o Experience Platform. Leia o guia em [criação de uma conexão de origem Adobe Campaign Managed Cloud Service na interface](../../sources/tutorials/ui/create/adobe-applications/campaign.md) para obter mais informações. |
 | Suporte de API para assimilação sob demanda para origens em lote | Use a assimilação sob demanda para criar execuções de fluxo ad hoc para um determinado fluxo de dados com a [!DNL Flow Service] API. As execuções de fluxo criadas devem ser definidas para assimilação única. Para obter mais informações, leia o guia em [criação de uma execução de fluxo para assimilação sob demanda usando a API](../../sources/tutorials/api/on-demand-ingestion.md) para obter mais informações. |
 | Suporte de API para repetição de execuções de fluxo de dados com falha para fontes em lote | Use o `re-trigger` para repetir o fluxo de dados com falha por meio da API. Leia o guia em [tentar novamente execuções de fluxo de dados com falha usando a API](../../sources/tutorials/api/retry-flows.md) para obter mais informações. |
-| Suporte de API para filtragem de dados em nível de linha para o [!DNL Google BigQuery] e [!DNL Snowflake] origens | Usar operadores lógicos e de comparação para filtrar dados no nível da linha para a variável [!DNL Google BigQuery] e [!DNL Snowflake] fontes. Leia o guia em [filtragem de dados de uma origem usando a API](../../sources/tutorials/api/filter.md) para obter mais informações. |
+| Suporte de API para filtragem de dados em nível de linha para o [!DNL Google BigQuery] e [!DNL Snowflake] origens | Usar operadores lógicos e de comparação para filtrar dados no nível da linha para a variável [!DNL Google BigQuery] e [!DNL Snowflake] fontes. Leia o manual sobre [filtragem de dados de uma origem usando a API](../../sources/tutorials/api/filter.md) para obter mais informações. |
 
 Para saber mais sobre origens, leia a [visão geral de origens](../../sources/home.md).

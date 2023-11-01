@@ -1,11 +1,11 @@
 ---
-title: Configurar o SDK da Web Extensão de tag
+title: Configurar a extensão de tag do SDK da Web
 description: Saiba como configurar a extensão de tag do SDK da Web do Experience Platform na interface do usuário de tags.
 exl-id: 22425daa-10bd-4f06-92de-dff9f48ef16e
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1458'
-ht-degree: 11%
+source-wordcount: '1456'
+ht-degree: 10%
 
 ---
 

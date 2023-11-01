@@ -2,9 +2,9 @@
 title: Perguntas frequentes sobre o Adobe Experience Platform Web SDK
 description: Obtenha respostas para perguntas frequentes sobre o Adobe Experience Platform Web SDK.
 exl-id: 6ddb4b4d-c9b8-471a-bd2e-135dc4202876
-source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '2104'
+source-wordcount: '2098'
 ht-degree: 3%
 
 ---
@@ -84,7 +84,7 @@ Alloy é o nome de código do SDK da Web do Adobe Experience Platform. Ele é us
 
 Não. Qualquer cliente da Adobe Digital Experience pode usar o SDK da Web da Adobe Experience Platform gratuitamente. Clientes que desejam usar o [!DNL Web SDK] O precisará configurar as permissões certas para criar esquemas, conjuntos de dados, namespaces de identidade e fluxos de dados na interface da Coleção de dados ou na interface do Experience Platform.
 
-Para obter mais informações sobre como configurar essas permissões, consulte nossa documentação em [gerenciamento de permissões de coleta de dados](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html?lang=en).
+Para obter mais informações sobre como configurar essas permissões, consulte nossa documentação em [gerenciamento de permissões de coleta de dados](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html).
 
 ## Quem deve usar o SDK da Web?
 
@@ -119,7 +119,7 @@ Em outras palavras, se você decidir usar o SDK da Web da Adobe Experience Platf
 
 ## Posso migrar os ECIDs quando começar a usar o Alloy para que os visitantes do meu site não comecem a aparecer como novos visitantes?
 
-Sim, o SDK da Web da Adobe Experience Platform fornece um recurso de migração de identidade. Siga as instruções para migração de ID no [Documentação de identidade do SDK da Web da Platform](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html?lang=en#id-migration) para obter mais detalhes.
+Sim, o SDK da Web da Adobe Experience Platform fornece um recurso de migração de identidade. Siga as instruções para migração de ID no [Documentação de identidade do SDK da Web da Platform](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html#id-migration) para obter mais detalhes.
 
 ## Qual é a diferença entre o SDK da Web e as tags?
 
@@ -161,7 +161,7 @@ Sim, atualmente o SDK da Web usa entre um e sete cookies, dependendo da implemen
 | **kndctr_orgid_cluster** | 1800 | 30 minutos | Este cookie armazena a região da Rede de borda que está atendendo as solicitações do usuário atual. A região é usada no caminho do URL para que a Rede de borda possa rotear a solicitação para a região correta. Esse cookie tem uma duração de 30 minutos, para que, se um usuário se conectar com um endereço IP diferente, a solicitação possa ser roteada para a região mais próxima. |
 | **mbox** | 63072000 | 2 anos | Este cookie é exibido quando a configuração de migração do Target é definida como verdadeira. Isso permitirá que o Target [cookie da mbox](https://developer.adobe.com/target/implement/client-side/atjs/atjs-cookies/) a ser definido pelo SDK da Web. |
 | **mboxEdgeCluster** | 1800 | 30 minutos | Este cookie é exibido quando a configuração de migração do Target é definida como verdadeira. Esse cookie permite que o SDK da Web comunique o cluster de borda correto com a at.js para que os perfis do Target possam permanecer em sincronia enquanto os usuários navegam em um site. |
-| **AMCV_###@AdobeOrg** | 34128000 | 395 dias | Esse cookie só aparece quando a migração de ID no SDK da Web da Adobe Experience Platform está ativada. Este cookie ajuda na transição para o SDK da Web enquanto algumas partes do site ainda usam visitor.js. Consulte a [Documentação idMigrationEnabled](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=en#identity-options) para ler mais sobre esta configuração. |
+| **AMCV_###@AdobeOrg** | 34128000 | 395 dias | Esse cookie só aparece quando a migração de ID no SDK da Web da Adobe Experience Platform está ativada. Este cookie ajuda na transição para o SDK da Web enquanto algumas partes do site ainda usam visitor.js. Consulte a [Documentação idMigrationEnabled](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#identity-options) para ler mais sobre esta configuração. |
 
 Ao usar o SDK da Web, a Rede de borda define um ou mais dos cookies acima. A Rede de borda define todos os cookies com a variável `secure` e `sameSite="none"` atributos.
 

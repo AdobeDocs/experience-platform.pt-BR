@@ -3,20 +3,20 @@ keywords: Marketo Web Personalization;marketo personalização da web;extensão 
 title: Extensão do Marketo Web Personalization
 description: A extensão Marketo Web Personalization é um destino de personalização no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
 exl-id: 2f194a5e-13b7-460a-a968-29131771efca
-source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '501'
-ht-degree: 3%
+source-wordcount: '499'
+ht-degree: 4%
 
 ---
 
-# [!DNL Marketo Web Personalization] extensão {#marketo-web-personalization-extension}
+# Extensão do [!DNL Marketo Web Personalization] {#marketo-web-personalization-extension}
 
 ## Visão geral {#overview}
 
-Essa extensão implanta o script para [!DNL Marketo’s] Personalização da Web e aplicativos de IA de conteúdo. [!DNL Marketo] A Personalização da Web identifica e personaliza exclusivamente o conteúdo de acordo com as características do visitante da Web, como firmográficos para visitantes anônimos e uma grande variedade de atributos comportamentais na [!DNL Marketo] Plataforma de engajamento para visitantes conhecidos. [!DNL Marketo] A IA de conteúdo contém recursos para recomendações e personalização alimentadas por IA para campanhas da Web e de email que são exclusivas para clientes B2B.
+Essa extensão implanta o script para [!DNL Marketo's] Personalização da Web e aplicativos de IA de conteúdo. [!DNL Marketo] A Personalização da Web identifica e personaliza exclusivamente o conteúdo de acordo com as características do visitante da Web, como firmográficos para visitantes anônimos e uma grande variedade de atributos comportamentais na [!DNL Marketo] Plataforma de engajamento para visitantes conhecidos. [!DNL Marketo] A IA de conteúdo contém recursos para recomendações e personalização alimentadas por IA para campanhas da Web e de email que são exclusivas para clientes B2B.
 
-[!DNL Marketo Web Personalization] é uma extensão de personalização no Adobe Experience Platform. Para obter mais informações sobre personalização da Web e IA de conteúdo no Marketo, leia [Visão geral da personalização da Web](https://experienceleague.adobe.com/docs/marketo/using/product-docs/web-personalization/understanding-web-personalization/web-personalization-overview.html?lang=en).
+[!DNL Marketo Web Personalization] é uma extensão de personalização no Adobe Experience Platform. Para obter mais informações sobre personalização da Web e IA de conteúdo no Marketo, leia [Visão geral da personalização da Web](https://experienceleague.adobe.com/docs/marketo/using/product-docs/web-personalization/understanding-web-personalization/web-personalization-overview.html).
 
 Esse destino é uma extensão de tag. Para obter mais informações sobre como as extensões funcionam na Platform, consulte a [visão geral das extensões de tag](../launch-extensions/overview.md).
 

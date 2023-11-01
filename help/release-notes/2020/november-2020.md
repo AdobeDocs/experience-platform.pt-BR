@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: November 10, 2020
 author: crhoades, ens25212
 exl-id: 29179b56-e49a-44e8-8c64-a7c383c2eaaf
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '2181'
-ht-degree: 10%
+source-wordcount: '2179'
+ht-degree: 11%
 
 ---
 
@@ -27,7 +27,7 @@ Atualizações dos recursos existentes:
 
 - [[!DNL Data Prep]](#data-prep)
 - [[!DNL Data Science Workspace]](#dsw)
-- [[!DNL Destinations] Serviço de](#destinations)
+- [[!DNL Destinations] Serviço](#destinations)
 - [[!DNL Intelligent Services]](#intelligent-services)
 - [[!DNL Real-Time Customer Profile]](#profile)
 - [[!DNL Sources]](#sources)
@@ -104,7 +104,7 @@ O Data Science Workspace usa aprendizado de máquina e inteligência artificial 
 
 Para obter mais informações, leia o documento em [criação de uma fórmula usando o Jupyter Notebooks](../../data-science-workspace/jupyterlab/create-a-model.md).
 
-## [!DNL Destinations] Serviço de {#destinations}
+## [!DNL Destinations] Serviço {#destinations}
 
 Entrada [Real-time Customer Data Platform](../../rtcdp/overview.md), os destinos são integrações pré-criadas com plataformas de destino que ativam os dados para esses parceiros de forma contínua.
 
@@ -129,7 +129,7 @@ Para obter mais informações, consulte [Visão geral dos destinos](../../destin
 
 ## Serviços inteligentes {#intelligent-services}
 
-Os Serviços inteligentes capacitam analistas e profissionais de marketing a aproveitar o potencial da inteligência artificial e do aprendizado de máquina em casos de uso de experiência do cliente. Isso permite que os analistas de marketing definam previsões específicas para as necessidades de uma empresa usando configurações de nível empresarial sem a necessidade de conhecimento especializado em ciência de dados.
+Os Serviços inteligentes capacitam analistas e profissionais de marketing a aproveitar o potencial da inteligência artificial e do aprendizado de máquina em casos de uso de experiência do cliente. Isso permite que os analistas de marketing estabeleçam previsões específicas para as necessidades de uma empresa usando configurações de nível empresarial, sem a necessidade de uma especialização em ciência de dados.
 
 **Principais recursos**
 

@@ -2,9 +2,9 @@
 title: Perguntas frequentes sobre atributos computados
 description: Descubra respostas para perguntas frequentes sobre o uso de atributos computados.
 exl-id: a4d3c06a-d135-453b-9637-4f98e62737a7
-source-git-commit: 48c728c183d6ad28cd291543a79902b16a247a5a
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1092'
+source-wordcount: '1090'
 ht-degree: 0%
 
 ---
@@ -99,4 +99,4 @@ Os atributos calculados derivam automaticamente rótulos de uso de dados dos cam
 
 ## Como usar atributos computados com o Adobe Journey Optimizer?
 
-Para usar atributos computados no jornada, é necessário adicionar o `SystemComputedAttributes` grupo de campos para a fonte de dados do Experience Platform. Para obter mais informações sobre como configurar a fonte de dados do Experience Platform, leia a [Guia da fonte de dados do Adobe Experience Platform](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/configure-journeys/data-source-journeys/adobe-experience-platform-data-source.html?lang=en).
+Para usar atributos computados no jornada, é necessário adicionar o `SystemComputedAttributes` grupo de campos para a fonte de dados do Experience Platform. Para obter mais informações sobre como configurar a fonte de dados do Experience Platform, leia a [Guia da fonte de dados do Adobe Experience Platform](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/configure-journeys/data-source-journeys/adobe-experience-platform-data-source.html).

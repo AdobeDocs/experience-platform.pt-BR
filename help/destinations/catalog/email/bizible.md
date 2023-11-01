@@ -3,20 +3,20 @@ keywords: bizible;extensão bizible;destino bizible
 title: Extensão Bizible
 description: A extensão Bizible é um destino de email no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
 exl-id: 9e45416d-b951-411c-a59f-34f84529f721
-source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '446'
-ht-degree: 3%
+source-wordcount: '444'
+ht-degree: 4%
 
 ---
 
-# [!DNL Bizible] extensão {#bizible-extension}
+# Extensão do [!DNL Bizible] {#bizible-extension}
 
 ## Visão geral {#overview}
 
 [!DNL Bizible] O é a solução de atribuição B2B líder do setor que oferece visibilidade inigualável de seus dados para que você possa tomar decisões inteligentes que impulsionam o crescimento.
 
-[!DNL Bizible] é uma extensão de email no Adobe Experience Platform. Para obter mais informações sobre Bizible, leia [Atribuição de marketing](https://experienceleague.adobe.com/docs/bizible/using/introduction-to-bizible/overview-resources/marketing-attribution.html?lang=en) nos recursos de visão geral da Bizible.
+[!DNL Bizible] é uma extensão de email no Adobe Experience Platform. Para obter mais informações sobre Bizible, leia [Atribuição de marketing](https://experienceleague.adobe.com/docs/bizible/using/introduction-to-bizible/overview-resources/marketing-attribution.html) nos recursos de visão geral da Bizible.
 
 Esse destino é uma extensão de tag. Para obter mais informações sobre como as extensões funcionam na Platform, consulte a [visão geral das extensões de tag](../launch-extensions/overview.md).
 

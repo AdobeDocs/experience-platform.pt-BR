@@ -4,9 +4,9 @@ title: Introdução
 description: Saiba como começar a usar a funcionalidade dos manuais de estratégia de casos de uso.
 badgeBeta: label="Beta" type="Informative"
 exl-id: 1c39792e-49fe-4c5f-9796-fa29f60b7461
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '316'
+source-wordcount: '314'
 ht-degree: 100%
 
 ---

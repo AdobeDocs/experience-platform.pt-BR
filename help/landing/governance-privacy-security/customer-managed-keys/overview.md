@@ -2,10 +2,10 @@
 title: Chaves gerenciadas pelo cliente no Adobe Experience Platform
 description: Saiba como configurar suas próprias chaves de criptografia para dados armazenados no Adobe Experience Platform.
 exl-id: cd33e6c2-8189-4b68-a99b-ec7fccdc9b91
-source-git-commit: 930c786db51063c55f731dc90f2ee66e98624555
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '763'
-ht-degree: 2%
+source-wordcount: '761'
+ht-degree: 3%
 
 ---
 
@@ -21,7 +21,7 @@ Este documento fornece uma visão geral de alto nível do processo de ativação
 
 >[!NOTE]
 >
->Para clientes do Customer Journey Analytics, siga as instruções no [Documentação do Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-privacy/cmk.html?lang=en).
+>Para clientes do Customer Journey Analytics, siga as instruções no [Documentação do Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-privacy/cmk.html?lang=pt-BR).
 
 ## Pré-requisitos
 

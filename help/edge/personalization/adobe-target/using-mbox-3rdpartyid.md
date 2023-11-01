@@ -1,11 +1,11 @@
 ---
 title: Sincronização de perfil em tempo real para mbox3rdPartyId
-description: Saiba como usar mbox3rdPartyId com o SDK da Web da Adobe Experience Platform.
+description: Saiba como usar mbox3rdPartyId com o Adobe Experience Platform Web SDK.
 keywords: personalização;destino;adobe target;renderDecisions;sendEvent;mbox3rdPartyId;
 exl-id: 677d1054-0769-4ec6-811e-e02d4b247c2a
-source-git-commit: 5f2358c2e102c66a13746004ad73e2766e933705
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '161'
+source-wordcount: '159'
 ht-degree: 30%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 30%
 
 A mbox3rdPartyId no Adobe Target é a ID de visitante de sua empresa, como a ID de associação do programa de fidelidade da empresa.
 
-Quando um visitante faz logon no site de uma empresa, a empresa normalmente cria uma ID associada à conta, ao cartão de fidelidade, ao número de associado ou a outros identificadores aplicáveis do visitante dessa empresa. [Saiba mais](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/3rd-party-id.html?lang=en#)
+Quando um visitante faz logon no site de uma empresa, a empresa normalmente cria uma ID associada à conta, ao cartão de fidelidade, ao número de associado ou a outros identificadores aplicáveis do visitante dessa empresa. [Saiba mais](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/3rd-party-id.html#)
 
 
 ## Como usar `mbox3rdPartyId` com o SDK da Web

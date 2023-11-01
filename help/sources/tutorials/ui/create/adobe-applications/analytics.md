@@ -2,9 +2,9 @@
 title: Criar uma conexão de origem do Adobe Analytics na interface
 description: Saiba como criar uma conexão de origem do Adobe Analytics na interface do usuário para trazer dados do consumidor para o Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 358daa9511f647749a8198893b712d00a5cfbc5d
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '2481'
+source-wordcount: '2477'
 ht-degree: 6%
 
 ---
@@ -26,9 +26,9 @@ Este tutorial requer um entendimento prático dos seguintes componentes do Exper
 É importante entender os seguintes termos principais usados neste documento:
 
 * **Atributo padrão**: atributos padrão são qualquer atributo que seja predefinido pelo Adobe. Eles contêm o mesmo significado para todos os clientes e estão disponíveis na [!DNL Analytics] dados de origem e [!DNL Analytics] grupos de campos de esquema.
-* **Atributo personalizado**: atributos personalizados são qualquer atributo na hierarquia de variáveis personalizadas no [!DNL Analytics]. Os atributos personalizados são usados em uma implementação do Adobe Analytics para capturar informações específicas em um conjunto de relatórios e podem diferir no uso de cada conjunto de relatórios. Os atributos personalizados incluem eVars, propriedades e listas. Consulte o seguinte [[!DNL Analytics] documentação sobre variáveis de conversão](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=en) para obter mais informações sobre eVars.
+* **Atributo personalizado**: atributos personalizados são qualquer atributo na hierarquia de variáveis personalizadas no [!DNL Analytics]. Os atributos personalizados são usados em uma implementação do Adobe Analytics para capturar informações específicas em um conjunto de relatórios e podem diferir no uso de cada conjunto de relatórios. Os atributos personalizados incluem eVars, propriedades e listas. Consulte o seguinte [[!DNL Analytics] documentação sobre variáveis de conversão](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html) para obter mais informações sobre eVars.
 * **Qualquer atributo em grupos de campos personalizados**: os atributos originados de grupos de campos criados por clientes são todos definidos pelo usuário e não são considerados atributos padrão nem personalizados.
-* **Nomes amigáveis**: os nomes amigáveis são rótulos fornecidos por humanos para variáveis personalizadas em uma [!DNL Analytics] execução. Consulte o seguinte [[!DNL Analytics] documentação sobre variáveis de conversão](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=en) para obter mais informações sobre nomes amigáveis.
+* **Nomes amigáveis**: os nomes amigáveis são rótulos fornecidos por humanos para variáveis personalizadas em uma [!DNL Analytics] execução. Consulte o seguinte [[!DNL Analytics] documentação sobre variáveis de conversão](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html) para obter mais informações sobre nomes amigáveis.
 
 ## Criar uma conexão de origem com o Adobe Analytics
 

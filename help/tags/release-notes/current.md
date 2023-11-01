@@ -2,10 +2,10 @@
 title: Notas de versão para tags e encaminhamento de eventos
 description: As notas de versão mais recentes para tags e encaminhamento de eventos na Adobe Experience Platform.
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '841'
-ht-degree: 3%
+source-wordcount: '835'
+ht-degree: 12%
 
 ---
 
@@ -13,29 +13,29 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->A movimentação das tags e das notas de versão do encaminhamento de eventos não será mais fornecida nesta página. Consulte a versão mais recente [Notas de versão do Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=en#data-collection) para obter tags detalhadas e atualizações de encaminhamento de eventos.
+>A movimentação das tags e das notas de versão do encaminhamento de eventos não será mais fornecida nesta página. Consulte a versão mais recente [Notas de versão do Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html#data-collection) para obter tags detalhadas e atualizações de encaminhamento de eventos.
 
 ## 26 de abril de 2023
 
-* **Segredo JWT do OAuth**: A variável [Segredo JWT do OAuth](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html?lang=en) O permite que os clientes usem os tokens de serviço do Adobe e do Google para oferecer suporte às interações servidor a servidor no encaminhamento de eventos.
+* **Segredo JWT do OAuth**: A variável [Segredo JWT do OAuth](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html) O permite que os clientes usem os tokens de serviço do Adobe e do Google para oferecer suporte às interações servidor a servidor no encaminhamento de eventos.
 
 A nova extensão a seguir foi lançada:
 
-* **[!DNL Pinterest Conversions API]extensão**: A variável [[!DNL Pinterest Conversions API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/pinterest/overview.html) a extensão de encaminhamento de eventos permite aproveitar os dados capturados na rede de borda da Adobe Experience Platform e enviá-los para o [!DNL Pinterest] na forma de eventos do lado do servidor usando o [!DNL Pinterest Conversions API].
+* **[!DNL Pinterest Conversions API]extensão**: A variável [[!DNL Pinterest Conversions API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/pinterest/overview.html?lang=pt-BR) a extensão de encaminhamento de eventos permite aproveitar os dados capturados na rede de borda da Adobe Experience Platform e enviá-los para o [!DNL Pinterest] na forma de eventos do lado do servidor usando o [!DNL Pinterest Conversions API].
 
 ## 29 de março de 2023
 
 **Fluxos de trabalho rápidos do Stark (Beta)**
 
-Acesse os novos workflows de início rápido em &quot;Introdução&quot; na tela inicial da Coleção de dados! Os workflows a seguir agora estão disponíveis para clientes como um Beta público.
-* **[API de meta conversões](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview.html?lang=en#quick-start)**: os clientes do encaminhamento de eventos podem coletar e encaminhar rapidamente os dados do evento, do lado do servidor para o Meta, para conversões de anúncios em apenas algumas etapas simples.
+Acesse os novos fluxos de trabalho de início rápido na seção de “Introdução” da página inicial da Coleção de dados. Os workflows a seguir agora estão disponíveis para clientes como um Beta público.
+* **[API de meta conversões](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview.html#quick-start)**: os clientes do encaminhamento de eventos podem coletar e encaminhar rapidamente os dados do evento, do lado do servidor para o Meta, para conversões de anúncios em apenas algumas etapas simples.
 * **[SDK móvel](https://developer.adobe.com/client-sdks/documentation/)**: os clientes podem implementar rapidamente o SDK móvel e validar eventos móveis básicos em apenas algumas etapas simples.
 
 Novas extensões foram lançadas:
 
-* **[!DNL Braze]extensão de encaminhamento de eventos**: A variável [[!DNL Braze Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html) A extensão de encaminhamento de eventos permite aproveitar os dados capturados na Rede de borda da Adobe Experience Platform e enviá-los para o [!DNL Braze] na forma de eventos do lado do servidor usando o [!DNL Braze] APIs de rastreamento de usuários.
-* **[API de eventos Epsilon] extensão de encaminhamento de eventos**: A variável [[!DNL Epsilon Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html) A extensão do permite aproveitar o encaminhamento de eventos para capturar informações de eventos na Adobe Experience Platform Edge Network e enviá-las para o [!DNL Epsilon] usando o [!DNL Epsilon] API de evento.
-* **[!DNL Mixpanel]extensão de encaminhamento de eventos**: A variável [[!DNL Mixpanel Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html) A extensão do permite aproveitar o encaminhamento de eventos para capturar informações de eventos na Adobe Experience Platform Edge Network e enviá-las para o [!DNL Mixpanel] usando a API Rastrear eventos.
+* **[!DNL Braze]extensão de encaminhamento de eventos**: A variável [[!DNL Braze Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html?lang=pt-BR) A extensão de encaminhamento de eventos permite aproveitar os dados capturados na Rede de borda da Adobe Experience Platform e enviá-los para o [!DNL Braze] na forma de eventos do lado do servidor usando o [!DNL Braze] APIs de rastreamento de usuários.
+* **[API de eventos Epsilon] extensão de encaminhamento de eventos**: A variável [[!DNL Epsilon Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html?lang=pt-BR) A extensão do permite aproveitar o encaminhamento de eventos para capturar informações de eventos na Adobe Experience Platform Edge Network e enviá-las para o [!DNL Epsilon] usando o [!DNL Epsilon] API de evento.
+* **[!DNL Mixpanel]extensão de encaminhamento de eventos**: A variável [[!DNL Mixpanel Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html?lang=pt-BR) A extensão do permite aproveitar o encaminhamento de eventos para capturar informações de eventos na Adobe Experience Platform Edge Network e enviá-las para o [!DNL Mixpanel] usando a API Rastrear eventos.
 
 ## 25 de janeiro de 2023
 
@@ -43,7 +43,7 @@ Novas extensões foram lançadas:
    1. Documentação e fluxos de trabalho recomendados para começar
    1. Propriedades, regras e elementos de dados recentes
    1. Extensões populares
-   1. Novas atualizações de extensão com um recurso de instalação rápida
+   1. Novas atualizações de extensão com recurso de instalação rápida
 * **Enviar dados para [!DNL Google Ads] usar o encaminhamento de eventos**: Agora você pode usar o [[!DNL Google Ads Enhanced Conversions] Extensão da API](../extensions/server/google-ads-enhanced-conversions/overview.md) para encaminhamento de eventos, combinado com [Segredos do Google Oauth 2](../ui/event-forwarding/secrets.md#google-oauth2), para enviar com segurança os dados do lado do servidor para o [!DNL Google Ads] em tempo real.
 
 ## 23 de novembro de 2022

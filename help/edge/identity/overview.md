@@ -3,10 +3,10 @@ title: Dados de identidade no SDK da Web da plataforma
 description: Saiba como recuperar e gerenciar Adobe Experience Cloud IDs (ECIDs) usando o SDK da Web da Adobe Experience Platform.
 keywords: Identidade;Identidade própria;Serviço de identidade;Identidade de terceiros;Migração de ID;ID de visitante;identidade de terceiros;thirdPartyCookiesEnabled;idMigrationEnabled;getIdentity;Syncing Identities;syncIdentity;sendEvent;identityMap;primary;ecid;Identity Namespace;id de namespace;authenticationState;hashEnabled;
 exl-id: 03060cdb-becc-430a-b527-60c055c2a906
-source-git-commit: 709996a837e722a79d695bf8573552f8f373850e
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1418'
-ht-degree: 0%
+source-wordcount: '1414'
+ht-degree: 1%
 
 ---
 
@@ -119,7 +119,7 @@ Cada objeto de identidade na matriz de identidades contém as seguintes propried
 | `authenticationState` | String | **(Obrigatório)** O estado de autenticação da ID. Os valores possíveis são `ambiguous`, `authenticated`, e `loggedOut`. |
 | `primary` | Booleano | Determina se essa identidade deve ser usada como um fragmento primário no perfil. Por padrão, a ECID é definida como o identificador principal do usuário. Se omitido, esse valor assumirá como padrão `false`. |
 
-Usar o `identityMap` para identificar dispositivos ou usuários leva ao mesmo resultado que o uso de [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/setcustomerids.html?lang=en) método do [!DNL ID Service API]. Consulte a [Documentação da API do serviço de ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/get-set.html?lang=en) para obter mais detalhes.
+Usar o `identityMap` para identificar dispositivos ou usuários leva ao mesmo resultado que o uso de [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/setcustomerids.html?lang=pt-BR) método do [!DNL ID Service API]. Consulte a [Documentação da API do serviço de ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/get-set.html) para obter mais detalhes.
 
 ## Migração da API do visitante para ECID
 

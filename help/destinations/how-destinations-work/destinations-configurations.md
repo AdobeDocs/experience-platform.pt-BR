@@ -2,9 +2,9 @@
 title: Configurações de exportação comuns e alteráveis em destinos
 description: Saiba quais configurações de exportação em destinos são configuráveis em um nível de destino e quais são fixas e não podem ser editadas.
 exl-id: 3f4706cb-6d51-4567-81f6-5b2bf167b576
-source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '845'
+source-wordcount: '843'
 ht-degree: 1%
 
 ---
@@ -23,7 +23,7 @@ Esta página descreve ou cria links para todas as definições de exportação c
 
 ## Configurações comuns de exportação em tipos de destino {#common-settings-across-destination-types}
 
-O comportamento de exportação de destino é consistente entre destinos pertencentes a um tipo de destino em relação a *o que aciona uma exportação de destino* e *o que está incluído nas exportações de destino*. As exportações de destino são acionadas por notificações que o serviço de destinos recebe da [serviço upstream de Perfil do cliente em tempo real](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/platform-applications.html?lang=en#adobe-experience-platform-%26-applications-detailed-architecture-diagram).
+O comportamento de exportação de destino é consistente entre destinos pertencentes a um tipo de destino em relação a *o que aciona uma exportação de destino* e *o que está incluído nas exportações de destino*. As exportações de destino são acionadas por notificações que o serviço de destinos recebe da [serviço upstream de Perfil do cliente em tempo real](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/platform-applications.html#adobe-experience-platform-%26-applications-detailed-architecture-diagram).
 
 O que está incluído nas exportações de destino varia ligeiramente entre os tipos de destino. Leia mais sobre o [padrões comuns de comportamento de exportação por tipo de destino](/help/destinations/how-destinations-work/profile-export-behavior.md). Essas configurações não podem ser editadas por desenvolvedores de destino ou usuários do Real-Time CDP.
 

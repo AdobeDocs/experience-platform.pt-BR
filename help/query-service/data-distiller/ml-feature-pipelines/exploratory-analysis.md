@@ -2,9 +2,9 @@
 title: Análise de dados exploratórios
 description: Saiba como usar o Data Distiller para explorar e analisar dados de um bloco de anotações Python.
 exl-id: 1dd4cf6e-f7cc-4f4b-afbd-bfc1d342a2c3
-source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
+source-git-commit: f9c49dbcc1820cf70c85368114c2a1ab30b87807
 workflow-type: tm+mt
-source-wordcount: '809'
+source-wordcount: '808'
 ht-degree: 16%
 
 ---
@@ -249,7 +249,7 @@ corrdf.fillna(0)
 | 10 | `webForms_webPageViews` | 0.000000 | webPageViews | 0.000000 |
 
 
-Por fim, é possível visualizar as correlações com a variável `matplotlib` Biblioteca Python:
+Por fim, é possível visualizar as correlações com a variável `matplotlib` [!DNL Python] biblioteca:
 
 ```python
 import matplotlib.pyplot as plt

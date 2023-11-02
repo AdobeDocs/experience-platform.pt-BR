@@ -2,9 +2,9 @@
 title: Endpoint de consultas aceleradas
 description: Saiba como acessar o armazenamento acelerado de consultas de maneira sem estado para retornar resultados rapidamente com base em dados agregados. Este documento fornece um exemplo de solicitação HTTP e resposta para o endpoint de consultas aceleradas do Serviço de consulta.
 exl-id: 29ea4d25-9c46-4b29-a6d7-45ac33dcb0fb
-source-git-commit: aa209dce9268a15a91db6e3afa7b6066683d76ea
+source-git-commit: 7cde32f841497edca7de0c995cc4c14501206b1a
 workflow-type: tm+mt
-source-wordcount: '566'
+source-wordcount: '559'
 ht-degree: 1%
 
 ---
@@ -212,6 +212,6 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com o esquema ad hoc criado 
 | `resultsMeta` | Esse objeto contém os metadados de cada coluna retornada nos resultados para que os usuários saibam o nome e o tipo de cada coluna. |
 | `resultsMeta._adhoc` | Um esquema ad-hoc do Experience Data Model (XDM) com campos com namespace para uso somente por um único conjunto de dados. |
 | `resultsMeta._adhoc.type` | O tipo de dados do esquema ad hoc. |
-| `resultsMeta._adhoc.meta:xdmType` | É um valor gerado pelo sistema para o tipo de campo XDM. Para obter mais informações sobre os tipos disponíveis, consulte a documentação em [tipos XDM disponíveis](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/custom-fields-api.html). |
+| `resultsMeta._adhoc.meta:xdmType` | É um valor gerado pelo sistema para o tipo de campo XDM. Para obter mais informações sobre os tipos disponíveis, consulte a documentação em [tipos XDM disponíveis](../../xdm/tutorials/custom-fields-api.md). |
 | `resultsMeta._adhoc.properties` | Esses são os nomes das colunas do conjunto de dados consultado. |
 | `resultsMeta._adhoc.results` | Esses são os nomes das linhas do conjunto de dados consultado. Elas refletem cada uma das colunas retornadas. |

@@ -2,9 +2,9 @@
 title: Suporte de controle de acesso baseado em atributos para esquemas ad hoc
 description: Um guia para restringir o acesso a campos de dados em esquemas ad hoc gerados pelo Serviço de consulta da Adobe Experience Platform.
 exl-id: d675e3de-ab62-4beb-9360-1f6090397a17
-source-git-commit: 91f318596bf268aa93e8b2df9c13774aab76d13a
+source-git-commit: 7cde32f841497edca7de0c995cc4c14501206b1a
 workflow-type: tm+mt
-source-wordcount: '1040'
+source-wordcount: '1013'
 ht-degree: 2%
 
 ---
@@ -23,10 +23,10 @@ Este documento fornece um tutorial para gerenciar o acesso a dados confidenciais
 
 ## Introdução
 
-Este guia requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
+Este manual necessita de uma compreensão funcional dos seguintes componentes da Adobe Experience Platform:
 
-* [Sistema do Experience Data Model (XDM)](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=pt-BR): a estrutura padronizada pela qual o Experience Platform organiza os dados de experiência do cliente.
-   * [[!DNL Schema Editor]](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/overview.html?lang=pt-BR): saiba como criar e gerenciar esquemas e outros recursos na interface do Platform.
+* [Sistema do Experience Data Model (XDM)](../../xdm/home.md): a estrutura padronizada pela qual o Experience Platform organiza os dados de experiência do cliente.
+   * [[!DNL Schema Editor]](../../xdm/ui/overview.md): saiba como criar e gerenciar esquemas e outros recursos na interface do Platform.
 * [[!DNL Data Governance]](../../data-governance/home.md): saiba como [!DNL Data Governance] O permite gerenciar os dados do cliente e garantir a conformidade com os regulamentos, as restrições e as políticas aplicáveis ao uso de dados.
 * [Controle de acesso baseado em atributos](../../access-control/abac/overview.md): o controle de acesso baseado em atributos é um recurso do Adobe Experience Platform que permite aos administradores controlar o acesso a objetos e/ou recursos específicos com base em atributos. Os atributos podem ser metadados adicionados a um objeto, como um rótulo adicionado a um campo de esquema ad hoc ou regular. Um administrador define políticas de acesso que incluem atributos para gerenciar permissões de acesso do usuário.
 
@@ -70,7 +70,7 @@ A variável [!UICONTROL Editar rótulos] popover é exibido. Nesta visualizaçã
 
 ![Popover Editar rótulos.](../images/data-governance/edit-labels-popover.png)
 
-Consulte a documentação para obter orientação sobre como [criar ou editar rótulos para o esquema ou campo selecionado](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/labels.html#edit-the-labels-for-the-schema-or-field).
+Consulte a documentação para obter orientação sobre como [criar ou editar rótulos para o esquema ou campo selecionado](../../xdm/tutorials/labels.md#edit-the-labels-for-the-schema-or-field).
 
 >[!NOTE]
 >
@@ -94,4 +94,4 @@ Se uma identidade ou identidade primária for definida no esquema ad hoc, o sist
 Depois de ler este documento, você compreenderá melhor como adicionar rótulos de uso de dados a esquemas ad hoc criados por meio de consultas CTAS do Serviço de consulta. Se ainda não tiver feito isso, os seguintes documentos são úteis para melhorar a sua compreensão da governança de dados no Serviço de consulta:
 
 * [Identidades de esquema ad hoc](./ad-hoc-schema-identities.md)
-* [Governança de dados](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=pt-BR)
+* [Governança de dados](../../data-governance/home.md)

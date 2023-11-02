@@ -2,9 +2,9 @@
 title: Rastreamento e análise de consentimento
 description: Saiba como criar um painel de análise de consentimento para rastrear a tendência do consentimento do usuário ao longo do tempo.
 exl-id: 34accae5-8b4f-4281-8333-187a91db8199
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 7cde32f841497edca7de0c995cc4c14501206b1a
 workflow-type: tm+mt
-source-wordcount: '1919'
+source-wordcount: '1912'
 ht-degree: 0%
 
 ---
@@ -60,7 +60,7 @@ A variável [!UICONTROL Assinaturas] é exibida. Nas opções disponíveis, sele
 
 >[!NOTE]
 >
->Há um limite flexível no número de públicos que você é recomendado criar. Mais informações podem ser encontradas no [documentação das medidas de proteção de segmentação](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html#segmentation-guardrails).
+>Há um limite flexível no número de públicos que você é recomendado criar. Mais informações podem ser encontradas no [documentação das medidas de proteção de segmentação](../../profile/guardrails.md#segmentation-guardrails).
 
 ![A variável [!UICONTROL Valor de escolha] atributo com o [!UICONTROL Sim (aceitação)] valor destacado no construtor de segmentos. O nome e a descrição do público-alvo também são destacados.](../images/insights-use-cases/consent-analysis/choice-value.png)
 

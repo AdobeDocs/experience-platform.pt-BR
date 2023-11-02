@@ -2,16 +2,16 @@
 title: Retornar e usar variáveis de merchandising dos dados de análise
 description: Saiba como fornecer campos XDM e consultas de exemplo para acessar as variáveis de merchandising em seus conjuntos de dados do Analytics.
 exl-id: 1e2ae095-4152-446f-8b66-dae5512d690e
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 7cde32f841497edca7de0c995cc4c14501206b1a
 workflow-type: tm+mt
-source-wordcount: '1112'
-ht-degree: 4%
+source-wordcount: '1103'
+ht-degree: 3%
 
 ---
 
 # Retornar e usar variáveis de merchandising dos dados de análise
 
-Use o Serviço de consulta para gerenciar os dados assimilados da Adobe Analytics na Adobe Experience Platform como conjuntos de dados. As seções a seguir fornecem exemplos de consultas que você pode usar para acessar as variáveis de merchandising nos conjuntos de dados do Analytics. Consulte a documentação para obter mais informações sobre [como assimilar e mapear dados do Adobe Analytics](https://experienceleague.adobe.com/docs/experience-platform/sources/connectors/adobe-applications/mapping/analytics.html?lang=pt-BR) por meio da origem do Analytics
+Use o Serviço de consulta para gerenciar os dados assimilados da Adobe Analytics na Adobe Experience Platform como conjuntos de dados. As seções a seguir fornecem exemplos de consultas que você pode usar para acessar as variáveis de merchandising nos conjuntos de dados do Analytics. Consulte a documentação para obter mais informações sobre [como assimilar e mapear dados do Adobe Analytics](../../sources/connectors/adobe-applications/mapping/analytics.md) por meio da origem do Analytics
 
 ## Variáveis de merchandising {#merchandising-variables}
 
@@ -98,8 +98,7 @@ LIMIT 20
 >
 > Se você tentar recuperar um campo que não existe no conjunto de dados atual, o erro &quot;Campo de estrutura inexistente&quot; ocorrerá. Avalie o motivo retornado na mensagem de erro para identificar um campo disponível, atualize sua consulta e execute-a novamente.
 >
->
-```console
+>```console
 >ERROR: ErrorCode: 08P01 sessionId: XXXX queryId: XXXX Unknown error encountered. Reason: [No such struct field evar1 in eVar10, eVar13, eVar62, eVar88, eVar2;]
 >```
 

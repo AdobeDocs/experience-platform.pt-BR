@@ -4,9 +4,9 @@ title: Guia do painel de perfis
 description: A Adobe Experience Platform fornece um painel por meio do qual você pode visualizar informações importantes sobre os dados do Perfil do cliente em tempo real da sua organização.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 7cde32f841497edca7de0c995cc4c14501206b1a
 workflow-type: tm+mt
-source-wordcount: '4329'
+source-wordcount: '4313'
 ht-degree: 10%
 
 ---
@@ -213,7 +213,7 @@ Consulte a [seção sobre políticas de mesclagem anterior neste documento](#mer
 >
 >A variável [!UICONTROL Contagem de perfis] pode mostrar um número diferente da contagem de perfis mostrada no [!UICONTROL Procurar] na guia [!UICONTROL Perfis] da interface por vários motivos. O motivo mais comum para essa diferença é que a [!UICONTROL Procurar] A guia faz referência ao número total de perfis mesclados com base na política de mesclagem padrão de sua organização, enquanto a guia [!UICONTROL Contagem de perfis] o widget faz referência ao número total de perfis mesclados com base na política de mesclagem que você selecionou para exibir no painel.
 >
->Outro motivo comum é devido às diferenças entre o tempo em que o instantâneo do painel é tirado e o tempo em que o trabalho de amostra é executado para o [!UICONTROL Procurar] guia. Você pode ver quando a variável [!UICONTROL Contagem de perfis] O widget foi atualizado pela última vez observando o carimbo de data e hora no widget. Para saber mais sobre como o trabalho de amostra é acionado no [!UICONTROL Procurar] , consulte a [seção de contagem de perfis no guia da interface do usuário do Perfil do cliente em tempo real](https://experienceleague.adobe.com/docs/experience-platform/profile/ui/user-guide.html#profile-count).
+>Outro motivo comum é devido às diferenças entre o tempo em que o instantâneo do painel é tirado e o tempo em que o trabalho de amostra é executado para o [!UICONTROL Procurar] guia. Você pode ver quando a variável [!UICONTROL Contagem de perfis] O widget foi atualizado pela última vez observando o carimbo de data e hora no widget. Para saber mais sobre como o trabalho de amostra é acionado no [!UICONTROL Procurar] , consulte a [seção de contagem de perfis no guia da interface do usuário do Perfil do cliente em tempo real](../../profile/ui/user-guide.md#profile-count).
 
 ![O painel Perfis Experience Platform com o widget Contagem de perfis realçado.](../images/profiles/profile-count.png)
 
@@ -428,7 +428,7 @@ Para ver informações abrangentes sobre um público-alvo, selecione um nome de 
 
 ![O widget Tamanho do público-alvo com um nome de público-alvo e o texto Exibir todos os públicos-alvo destacado.](../images/profiles/audiences-size-view-all-audiences.png)
 
-Consulte a documentação para obter mais informações sobre o [[!UICONTROL Públicos-alvo] [!UICONTROL  Procurar] guia](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#browse).
+Consulte a documentação para obter mais informações sobre o [[!UICONTROL Públicos-alvo] [!UICONTROL  Procurar] guia](../../segmentation/ui/overview.md#browse).
 
 ### [!UICONTROL Sobreposição de público por política de mesclagem] {#audience-overlap-by-merge-policy}
 

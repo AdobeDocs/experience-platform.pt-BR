@@ -3,10 +3,10 @@ title: Introdução ao encaminhamento de eventos
 description: Siga este tutorial passo a passo para começar a usar o encaminhamento de eventos na Adobe Experience Platform.
 feature: Event Forwarding
 exl-id: f82bfac9-dc2d-44de-a308-651300f107df
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 45d881a810782f734ed030fbf29e802fa535400a
 workflow-type: tm+mt
-source-wordcount: '873'
-ht-degree: 78%
+source-wordcount: '868'
+ht-degree: 76%
 
 ---
 
@@ -20,7 +20,7 @@ Para usar a Adobe Experience Platform, os dados devem ser enviados à borda da r
 
 * [SDK da Web da Adobe Experience Platform](../../extensions/client/web-sdk/overview.md)
 * [SDK móvel da Adobe Experience Platform](https://sdkdocs.com)
-* [API servidor para servidor](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-apis/dcs-s2s.html)
+* [API servidor para servidor](/help/server-api/overview.md)
 
 >[!NOTE]
 >O SDK da Web da Platform e o SDK móvel da Platform não exigem implantação por meio de tags na Adobe Experience Platform. No entanto, a utilização de tags para implantar esses SDKs é a abordagem recomendada.
@@ -31,7 +31,7 @@ Depois de enviar dados para a rede de borda, você pode alternar entre as soluç
 
 * Adobe Real-Time CDP Connections, Prime ou Ultimate (Entre em contato com a equipe de conta do Adobe para obter preços)
 * Encaminhamento de eventos na Adobe Experience Platform
-* SDK da Web ou móvel da Adobe Experience Platform, configurado para enviar dados para a rede de borda
+* Adobe Experience Platform Web SDK, Mobile SDK ou API de servidor de rede de borda configurada para enviar dados para a rede de borda
 * Mapear dados para o Experience Data Model (XDM) (esse mapeamento pode ser feito usando tags)
 
 ## Criar um esquema do XDM

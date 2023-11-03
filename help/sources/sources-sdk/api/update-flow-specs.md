@@ -3,7 +3,7 @@ keywords: Experience Platform;página inicial;tópicos populares;fontes;conector
 title: Atualizar especificações de fluxo usando a API Serviço de fluxo
 description: O documento a seguir fornece etapas sobre como recuperar e atualizar especificações de fluxo usando a API do Serviço de Fluxo para Origens de Autoatendimento (SDK em lote).
 exl-id: 67a0cd3e-ac18-43a4-aa22-8f6376d5cc3f
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 21bccacf3555881ae731d0e60ff7d7677f18732d
 workflow-type: tm+mt
 source-wordcount: '408'
 ht-degree: 2%
@@ -251,7 +251,7 @@ A solicitação a seguir atualiza a especificação de fluxo de `6499120c-0b15-4
 
 ```shell
 PUT -X GET \
-  'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/6499120c-0b15-42dc-936e-847ea3c24d72' \
+  'https://platform.adobe.io/data/foundation/flowservice/flowSpecs/6499120c-0b15-42dc-936e-847ea3c24d72' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \

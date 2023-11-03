@@ -3,9 +3,9 @@ title: Medidas de proteção de desempenho para a API do Servidor de Rede de Bor
 description: Saiba como usar a API do servidor em medidas de proteção de desempenho ideais.
 keywords: coleção de dados;coleção;rede de borda;api;sla;slt;níveis de serviço
 exl-id: 063d0fbb-26d1-4727-9dea-8e7223b2173d
-source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
+source-git-commit: 0e609ce278af0c93503f05778887ad1bd881524a
 workflow-type: tm+mt
-source-wordcount: '437'
+source-wordcount: '536'
 ht-degree: 2%
 
 ---
@@ -64,3 +64,13 @@ A tabela abaixo mostra os valores de limite padrão. Se precisar de limites de u
 >[!NOTE]
 >
 >Dependendo do conteúdo em si, os formatos binários geralmente são 20 a 40% mais compactos, permitindo que você envie mais dados do que em JSON de texto simples. Entre em contato com o representante do Atendimento ao cliente se precisar de uma capacidade maior para seus fluxos de dados.
+
+## Próximas etapas
+
+Consulte a documentação a seguir para obter mais informações sobre outras medidas de proteção dos serviços de Experience Platform, informações de latência de ponta a ponta e informações de licenciamento dos documentos Descrição do produto Real-Time CDP:
+
+* [Medidas de proteção do Real-Time CDP](/help/rtcdp/guardrails/overview.md)
+* [Diagramas de latência de ponta a ponta](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) para vários serviços de Experience Platform.
+* [Real-time Customer Data Platform (B2C Edition - Pacotes Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-time Customer Data Platform (B2P - Pacotes Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-time Customer Data Platform (B2B - Pacotes Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

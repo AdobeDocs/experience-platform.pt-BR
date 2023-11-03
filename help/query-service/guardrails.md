@@ -3,10 +3,10 @@ keywords: Experience Platform;consulta;serviço de consulta;solução de problem
 title: Medidas de proteção do serviço de consulta
 description: Este documento fornece informações sobre limites de uso para dados do Serviço de consulta para ajudar você a otimizar o uso da consulta.
 exl-id: 1ad5dcf4-d048-49ff-97e3-07040392b65b
-source-git-commit: 5ceb261dbf1cac58d0cfe620875b8fa7c761abf2
+source-git-commit: ab2bb6f4cafe60aec7d8745cca9d2f7f0227a938
 workflow-type: tm+mt
-source-wordcount: '1004'
-ht-degree: 3%
+source-wordcount: '1177'
+ht-degree: 2%
 
 ---
 
@@ -34,13 +34,16 @@ Antes de continuar com este documento, você deve ter uma boa compreensão das p
 
 A ilustração abaixo resume como os recursos do Serviço de consulta são atualmente empacotados e licenciados:
 
-## Tipos de limite
+## Tipos de grade de proteção
 
 Há dois tipos de limites padrão neste documento:
 
-* **Limite flexível**: Você pode ir além de um limite flexível, no entanto, os limites flexíveis fornecem uma diretriz recomendada para o desempenho do sistema.
+| Tipo de grade de proteção | Descrição |
+|----------|---------|
+| **Proteção de desempenho (limite flexível)** | As medidas de proteção de desempenho são limites de uso relacionados ao escopo dos seus casos de uso. Ao exceder as medidas de proteção de desempenho, você pode enfrentar degradação e latência do desempenho. O Adobe não é responsável por essa degradação de desempenho. Os clientes que excederem consistentemente uma garantia de desempenho podem optar por licenciar capacidade adicional para evitar a degradação do desempenho. |
+| **Medidas de proteção aplicadas pelo sistema (limite rígido)** | As medidas de proteção aplicadas pelo sistema são aplicadas pela interface do usuário ou API do Real-Time CDP. Esses são limites que você não pode exceder, pois a interface do usuário e a API o bloquearão de fazer isso ou retornarão um erro. |
 
-* **Limite rígido**: um limite rígido fornece um máximo absoluto.
+{style="table-layout:auto"}
 
 >[!NOTE]
 >
@@ -54,10 +57,10 @@ As tabelas abaixo fornecem os limites de proteção e descrições recomendados 
 
 | Grade de Proteção | Limite | Tipo de limite | Descrição |
 |---|---|---|---|
-| Tempo máximo de execução | 10 minutos | Grave | Isso define o tempo máximo de saída para uma consulta SQL ad-hoc. Exceder o limite de tempo para retornar um resultado aciona o código de erro 53400. |
-| Usuários do Serviço de consulta simultâneo | <ul><li>Conforme especificado na descrição do produto do aplicativo.</li><li>+5 (com cada pacote complementar de usuários de query ad hoc adicional adquirido)</li></ul> | Grave | Isso define quantos usuários podem criar sessões simultaneamente para uma organização específica. Se o limite de simultaneidade for excedido, o usuário receberá uma `Session Limit Reached` erro. |
-| Consultar simultaneidade | <ul><li>Conforme especificado na descrição do produto do aplicativo.</li><li>+1 (com cada pacote SKU suplementar de usuário de consulta ad hoc adicional adquirido)</li></ul> | Grave | Isso define quantas consultas podem ser executadas simultaneamente para uma organização específica. Se o limite de simultaneidade for excedido, as consultas serão enfileiradas. |
-| Conector do cliente e limite de saída de resultados | Conector do cliente<ul><li>Interface do usuário de consulta (100 linhas)</li><li>Cliente de terceiros (50.000)</li><li>[!DNL PostgresSQL] cliente (50.000)</li></ul> | Grave | O resultado de um query pode ser recebido pelos seguintes meios:<ul><li>Interface do usuário do serviço de consulta</li><li>Cliente de terceiros</li><li>[!DNL PostgresSQL] cliente</li></ul>Observação: adicionar uma limitação à contagem de saída pode retornar resultados mais rapidamente. Por exemplo, `LIMIT 5`, `LIMIT 10`, e assim por diante. |
+| Tempo máximo de execução | 10 minutos | Proteção imposta pelo sistema | Isso define o tempo máximo de saída para uma consulta SQL ad-hoc. Exceder o limite de tempo para retornar um resultado aciona o código de erro 53400. |
+| Usuários do Serviço de consulta simultâneo | <ul><li>Conforme especificado na descrição do produto do aplicativo.</li><li>+5 (com cada pacote complementar de usuários de query ad hoc adicional adquirido)</li></ul> | Proteção imposta pelo sistema | Isso define quantos usuários podem criar sessões simultaneamente para uma organização específica. Se o limite de simultaneidade for excedido, o usuário receberá uma `Session Limit Reached` erro. |
+| Consultar simultaneidade | <ul><li>Conforme especificado na descrição do produto do aplicativo.</li><li>+1 (com cada pacote SKU suplementar de usuário de consulta ad hoc adicional adquirido)</li></ul> | Proteção imposta pelo sistema | Isso define quantas consultas podem ser executadas simultaneamente para uma organização específica. Se o limite de simultaneidade for excedido, as consultas serão enfileiradas. |
+| Conector do cliente e limite de saída de resultados | Conector do cliente<ul><li>Interface do usuário de consulta (100 linhas)</li><li>Cliente de terceiros (50.000)</li><li>[!DNL PostgresSQL] cliente (50.000)</li></ul> | Proteção imposta pelo sistema | O resultado de um query pode ser recebido pelos seguintes meios:<ul><li>Interface do usuário do serviço de consulta</li><li>Cliente de terceiros</li><li>[!DNL PostgresSQL] cliente</li></ul>Observação: adicionar uma limitação à contagem de saída pode retornar resultados mais rapidamente. Por exemplo, `LIMIT 5`, `LIMIT 10`, e assim por diante. |
 | Resultados retornados via | Interface do cliente | N/D | Isso define como os resultados são disponibilizados aos usuários. |
 
 {style="table-layout:auto"}
@@ -66,12 +69,12 @@ As tabelas abaixo fornecem os limites de proteção e descrições recomendados 
 
 | **Grade de Proteção** | **Limite** | **Tipo de limite** | **Descrição** |
 |---|---|---|---|
-| Tempo máximo de execução | 24 horas | Grave | Isso define o tempo máximo de execução para uma consulta SQL em lote.<br>O tempo de processamento de um query depende do volume de dados a serem processados e da complexidade do query. |
-| Usuários do Serviço de Consulta Concorrente para Lote Não Programado | <ul><li>Conforme especificado na descrição do produto do aplicativo.</li><li>+5 (com cada pacote complementar de usuários de query ad hoc adicional adquirido)</li></ul> | Grave | Para consultas em lote não agendadas (por exemplo, consultas CTAS/ITAS no modo interativo), isso define quantos usuários podem criar sessões simultaneamente para uma organização específica. Se o limite de simultaneidade for excedido, o usuário receberá uma `Session Limit Reached` erro. |
+| Tempo máximo de execução | 24 horas | Proteção imposta pelo sistema | Isso define o tempo máximo de execução para uma consulta SQL em lote.<br>O tempo de processamento de um query depende do volume de dados a serem processados e da complexidade do query. |
+| Usuários do Serviço de Consulta Concorrente para Lote Não Programado | <ul><li>Conforme especificado na descrição do produto do aplicativo.</li><li>+5 (com cada pacote complementar de usuários de query ad hoc adicional adquirido)</li></ul> | Proteção imposta pelo sistema | Para consultas em lote não agendadas (por exemplo, consultas CTAS/ITAS no modo interativo), isso define quantos usuários podem criar sessões simultaneamente para uma organização específica. Se o limite de simultaneidade for excedido, o usuário receberá uma `Session Limit Reached` erro. |
 | Usuários do Serviço de Consulta Simultâneos para um Lote agendado | Sem limitação de usuário | N/D | As consultas em lote agendadas são trabalhos assíncronos, portanto, não há limitação de usuário. |
-| Horas computacionais para processamento de dados em lote | Conforme especificado na Ordem de venda de SKU personalizada de Consulta de Adobe Experience Platform Intelligence do Cliente | Suave | Isso define a quantidade de tempo computacional por ano que um cliente tem permissão para executar consultas em lote para digitalizar, processar e gravar dados de volta no data lake. |
+| Horas computacionais para processamento de dados em lote | Conforme especificado na Ordem de venda de SKU personalizada de Consulta de Adobe Experience Platform Intelligence do Cliente | Proteção de desempenho | Isso define a quantidade de tempo computacional por ano que um cliente tem permissão para executar consultas em lote para digitalizar, processar e gravar dados de volta no data lake. |
 | Consultar simultaneidade | Suportado | N/D | As consultas em lote agendadas são trabalhos assíncronos, portanto, as consultas simultâneas são compatíveis. |
-| Conector do cliente e limite de saída do resultado | Conector do cliente<ul><li>Interface do usuário de consulta (sem limite superior para linhas)</li><li>Cliente de terceiros (sem limite superior para linhas)</li><li>[!DNL PostgresSQL] cliente (sem limite superior para linhas)</li><li>REST APIs (sem limite superior para linhas)</li></ul> | Grave | O resultado de um query pode ser disponibilizado usando os seguintes métodos:<ul><li>Pode ser armazenado como conjuntos de dados derivados</li><li>Pode ser inserido nos conjuntos de dados derivados existentes</li></ul>Observação: não há limite superior para o número de contagem de registros no resultado da consulta. |
+| Conector do cliente e limite de saída do resultado | Conector do cliente<ul><li>Interface do usuário de consulta (sem limite superior para linhas)</li><li>Cliente de terceiros (sem limite superior para linhas)</li><li>[!DNL PostgresSQL] cliente (sem limite superior para linhas)</li><li>REST APIs (sem limite superior para linhas)</li></ul> | Proteção imposta pelo sistema | O resultado de um query pode ser disponibilizado usando os seguintes métodos:<ul><li>Pode ser armazenado como conjuntos de dados derivados</li><li>Pode ser inserido nos conjuntos de dados derivados existentes</li></ul>Observação: não há limite superior para o número de contagem de registros no resultado da consulta. |
 | Resultados retornados via | Conjunto de dados | N/D | Isso define como os resultados são disponibilizados aos usuários. |
 
 {style="table-layout:auto"}
@@ -82,7 +85,7 @@ A tabela abaixo fornece os limites de garantia recomendados e a descrição do a
 
 | Grade de Proteção | Limite | Tipo de limite | Descrição |
 |---|---|---|---|
-| Consultar simultaneidade | 4 | Grave | Para garantir que as consultas em dados agregados por meio da API de relatórios (incluindo consultas que aprimoram modelos de dados, como os modelos de dados do Real-Time CDP) tenham os recursos para serem executados com eficiência, a API de relatórios rastreia a utilização de recursos atribuindo slots de simultaneidade a cada consulta. O sistema coloca as consultas em uma fila e aguarda até que os slots de simultaneidade fiquem disponíveis ou possam ser atendidos do cache. Um máximo de quatro slots de consulta simultâneos estão disponíveis a qualquer momento.<br>Se você acessar a API de relatórios por meio de uma ferramenta de BI e precisar de mais simultaneidade, será necessário um servidor de BI. |
+| Consultar simultaneidade | 4 | Proteção imposta pelo sistema | Para garantir que as consultas em dados agregados por meio da API de relatórios (incluindo consultas que aprimoram modelos de dados, como os modelos de dados do Real-Time CDP) tenham os recursos para serem executados com eficiência, a API de relatórios rastreia a utilização de recursos atribuindo slots de simultaneidade a cada consulta. O sistema coloca as consultas em uma fila e aguarda até que os slots de simultaneidade fiquem disponíveis ou possam ser atendidos do cache. Um máximo de quatro slots de consulta simultâneos estão disponíveis a qualquer momento.<br>Se você acessar a API de relatórios por meio de uma ferramenta de BI e precisar de mais simultaneidade, será necessário um servidor de BI. |
 
 {style="table-layout:auto"}
 
@@ -94,3 +97,11 @@ Consulte a documentação a seguir para obter mais informações sobre o Serviç
 
 * [API do serviço de consulta](./api/getting-started.md)
 * [Interface do usuário do serviço de consulta](./ui/overview.md)
+
+Consulte a documentação a seguir para obter mais informações sobre outras medidas de proteção dos serviços de Experience Platform, informações de latência de ponta a ponta e informações de licenciamento dos documentos Descrição do produto Real-Time CDP:
+
+* [Medidas de proteção do Real-Time CDP](/help/rtcdp/guardrails/overview.md)
+* [Diagramas de latência de ponta a ponta](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) para vários serviços de Experience Platform.
+* [Real-time Customer Data Platform (B2C Edition - Pacotes Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-time Customer Data Platform (B2P - Pacotes Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-time Customer Data Platform (B2B - Pacotes Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

@@ -2,10 +2,10 @@
 title: Notas de versão da extensão do Adobe Target v2
 description: As mais recentes notas de versão de extensão de tag do Adobe Target v2 na Adobe Experience Platform.
 exl-id: c1a04e62-026d-4b16-aa70-bc6d5dbe6b2d
-source-git-commit: f235d210682feba7617b720e514361c2862512f9
+source-git-commit: a51bc1fb536347840eef113a8649b64fbf573287
 workflow-type: tm+mt
-source-wordcount: '749'
-ht-degree: 51%
+source-wordcount: '776'
+ht-degree: 49%
 
 ---
 
@@ -17,18 +17,18 @@ ht-degree: 51%
 
 ## v0.20.1 (3 de novembro de 2023)
 
-- Atualizado para oferecer suporte ao at.js 2.11.2.
+- Atualizado para oferecer suporte `at.js` 2.11.2.
 - Correção de um bug que causava inconsistências nos tokens de resposta enviados em eventos personalizados.
 
 ## v0.20.0 (9 de outubro de 2023)
 
-- Atualizado para oferecer suporte ao at.js 2.11.0.
+- Atualizado para oferecer suporte `at.js` 2.11.0
 - Adição de suporte para configuração de sandboxId e sandboxName Adobe Experience Platform personalizados em targetGlobalSettings, que serão passados para a API de entrega nas chamadas getOffer/getOffers.
 - Correção de DOM de sombra para encadeamento :eq() no seletor.
 
 ## v0.19.3 (18 de setembro de 2023)
 
-- Atualizado para oferecer suporte ao at.js v2.10.3.
+- Atualizado para oferecer suporte `at.js` v2.10.3.
 - Correção de um problema que acionava incorretamente o evento personalizado at-content-rendering-succeeded quando nenhuma oferta era renderizada. O evento correto, at-content-rendering-no-offers, agora é acionado.
 - Adição de eventToken e responseTokens ao objeto de erro para o evento personalizado at-content-rendering-failed.
 
@@ -66,6 +66,12 @@ ht-degree: 51%
 ## v0.16.0 (28 de outubro de 2021)
 
 - Atualizado para oferecer suporte `at.js` v2.7.0, agora disponível para download no Adobe Target.
+
+## v0.15.2 (16 de agosto de 2021)
+
+- Atualizado para oferecer suporte `at.js` 2.6.1.
+- Inicialize a Decisão no dispositivo na inicialização independentemente do evento de Carregamento de página.
+- A decisão no dispositivo agora pode ser usada na primeira visita após o download do artefato.
 
 ## v0.15.1 (20 de julho de 2021)
 

@@ -1,15 +1,15 @@
 ---
-title: Use o reconhecimento de visitante com auxílio de parceiros para personalizar experiências no site
+title: Personalizar experiências locais para visitantes desconhecidos usando o reconhecimento de visitantes auxiliado por parceiros
 description: Saiba como usar o reconhecimento de visitante com auxílio de parceiros para fornecer experiências de site personalizadas para visitantes.
 exl-id: 99677988-1df8-47b1-96b1-0ef6db818a1d
-source-git-commit: de8aeb553066405424711e75480204f6136b52ff
+source-git-commit: 77eb2492259cc813db2d6c514d123fa2ad698f67
 workflow-type: tm+mt
-source-wordcount: '2580'
-ht-degree: 95%
+source-wordcount: '2696'
+ht-degree: 91%
 
 ---
 
-# Use o reconhecimento de visitante com auxílio de parceiros para personalizar experiências no site
+# Personalizar experiências locais para visitantes desconhecidos usando o reconhecimento de visitantes auxiliado por parceiros
 
 >[!AVAILABILITY]
 >
@@ -17,7 +17,15 @@ ht-degree: 95%
 
 Saiba como usar o reconhecimento com auxílio de parceiros para fornecer experiências personalizadas a visitantes de sua propriedade na Web. Use este tutorial para entender o processo de implementação de vários elementos na Experience Platform e outras soluções da Experience Cloud, a fim de criar uma experiência personalizada para visitantes autenticados e não autenticados.
 
-![Um infográfico que descreve como usar atributos fornecidos pelo parceiro para oferecer experiências personalizadas a visitantes.](/help/rtcdp/assets/partner-data/onsite-personalization/onsite-personalization-steps.png)
+![Um infográfico que descreve como usar atributos fornecidos pelo parceiro para oferecer experiências personalizadas a visitantes.](/help/rtcdp/assets/partner-data/onsite-personalization/onsite-personalization-overview.png)
+
+## Por que considerar este caso de uso {#why-this-use-case}
+
+A fragmentação das experiências digitais à medida que os consumidores interagem com as marcas de inúmeras maneiras é muito real e está se tornando cada vez mais difícil de resolver. As melhores estratégias de engajamento do cliente para experiências coesas, recomendações direcionadas e interações personalizadas são todas restritas pelo reconhecimento do usuário.
+
+É aqui que o reconhecimento em tempo real auxiliado por parceiros pode fazer uma diferença significativa. O Adobe permite que os parceiros de identidade se conectem às nossas sofisticadas ofertas de coleta de dados no lado do cliente e otimização de experiência líder de mercado, para elevar efetivamente o padrão na entrega de experiência a partir da primeira visita, sem histórico ou autenticação anteriores.
+
+Isso é especialmente valioso para mercados verticais que têm baixas taxas de autenticação, como Mercadorias embaladas do consumidor, varejo on-line e muito mais.
 
 ## Exemplo do setor {#industry-example}
 

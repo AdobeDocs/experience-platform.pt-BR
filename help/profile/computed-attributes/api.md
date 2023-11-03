@@ -2,7 +2,7 @@
 title: Endpoint da API de atributos computados
 description: Saiba como criar, exibir, atualizar e excluir atributos calculados usando a API de perfil do cliente em tempo real.
 exl-id: f217891c-574d-4a64-9d04-afc436cf16a9
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 94c94b8a3757aca1a04ff4ffc3c62e84602805cc
 workflow-type: tm+mt
 source-wordcount: '1654'
 ht-degree: 3%
@@ -50,7 +50,7 @@ Os seguintes parâmetros de consulta podem ser usados ao recuperar uma lista de 
 | `limit` | Um parâmetro que especifica o número máximo de itens retornados como parte da resposta. O valor mínimo desse parâmetro é 1 e o valor máximo é 40. Se esse parâmetro não for incluído, por padrão, 20 itens serão retornados. | `limit=20` |
 | `offset` | Um parâmetro que especifica o número de itens que devem ser ignorados antes de retornar os itens. | `offset=5` |
 | `sortBy` | Um parâmetro que especifica a ordem em que os itens retornados são classificados. As opções disponíveis incluem `name`, `status`, `updateEpoch`, e `createEpoch`. Você também pode escolher se deseja classificar em ordem crescente ou decrescente, não incluindo ou incluindo uma `-` na frente da opção classificar. Por padrão, os itens serão classificados por `updateEpoch` em ordem descendente. | `sortBy=name` |
-| `property` | Um parâmetro que permite filtrar em vários campos de atributo computados. As propriedades compatíveis incluem `name`, `createEpoch`, `mergeFunction.value`, `updateEpoch`, e `status`. As operações compatíveis dependem da propriedade listada. <ul><li>`name`: `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=contains(), `NOT_CONTAINS` (=!contains()</li><li>`createEpoch`: `GREATER_THAN_OR_EQUALS` (&lt;=), `LESS_THAN_OR_EQUALS` (>=) </li><li>`mergeFunction.value`: `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=contains(), `NOT_CONTAINS` (!=contém())</li><li>`updateEpoch`: `GREATER_THAN_OR_EQUALS` (&lt;=), `LESS_THAN_OR_EQUALS` (>=)</li><li>`status`: `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=contains(), `NOT_CONTAINS` (=!contains()</li></ul> | `property=updateEpoch>=1683669114845`<br/>`property=name!=testingrelease`<br/>`property=status=contains(new,processing,disabled)` |
+| `property` | Um parâmetro que permite filtrar em vários campos de atributo computados. As propriedades compatíveis incluem `name`, `createEpoch`, `mergeFunction.value`, `updateEpoch`, e `status`. As operações compatíveis dependem da propriedade listada. <ul><li>`name`: `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=contains(), `NOT_CONTAINS` (=!contains()</li><li>`createEpoch`: `GREATER_THAN_OR_EQUALS` (&lt;=), `LESS_THAN_OR_EQUALS` (>=) </li><li>`mergeFunction.value`: `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=contains(), `NOT_CONTAINS` (=!contains()</li><li>`updateEpoch`: `GREATER_THAN_OR_EQUALS` (&lt;=), `LESS_THAN_OR_EQUALS` (>=)</li><li>`status`: `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=contains(), `NOT_CONTAINS` (=!contains()</li></ul> | `property=updateEpoch>=1683669114845`<br/>`property=name!=testingrelease`<br/>`property=status=contains(new,processing,disabled)` |
 
 **Solicitação**
 

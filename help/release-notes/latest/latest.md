@@ -2,10 +2,10 @@
 title: Notas de versão da Adobe Experience Platform
 description: As notas de versão de outubro de 2023 para o Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: fc0cb582d74f5ab52410991f65aa14ba05df3f97
+source-git-commit: f2d0848952902d94b441566da677ef174518192e
 workflow-type: tm+mt
-source-wordcount: '954'
-ht-degree: 34%
+source-wordcount: '1068'
+ht-degree: 32%
 
 ---
 
@@ -44,9 +44,11 @@ A Adobe Experience Platform fornece um conjunto de tecnologias que permitem cole
 
 | Tipo | Recurso | Descrição |
 | --- | --- | --- |
-| Extensão | [!DNL Meta] Aprimoramento da API de conversões | Há três aprimoramentos na [API de meta conversões](/help/tags/extensions/server/meta/overview.md) extensão: <ul><li>Integração com [[!DNL Meta Business Extension (MBE)]](/help/tags/extensions/server/meta/overview.md#integration-with-meta-business-extension-mbe): cria uma experiência de logon contínua, permitindo que você compartilhe seu pixelID e token de acesso para a integração da API de conversões com o Adobe.</li><li>Integração com [[!DNL Event Match Quality Score (EMQ)]](/help/tags/extensions/server/meta/overview.md#integration-with-event-quality-match-score-emq): permite enviar anúncios para pessoas com maior probabilidade de concluir uma ação desejada e vincular a ação de volta aos anúncios entregues.</li><li>Integração com [[!DNL LiveRamp (Alpha)]](/help/tags/extensions/server/meta/overview.md#integration-with-liveramp-alpha): permite passar a RampID do LiveRamp no campo CIP, eliminando a necessidade de compartilhar PII diretamente com parceiros ou Meta. </li></ul> |
-| Extensão | [!DNL LinkedIn] API de conversões | A variável [[!DNL LinkedIn] API de conversões](../../tags/extensions/server/linkedin/overview.md) A extensão do permite avaliar a eficácia de suas campanhas de marketing do LinkedIn, encaminhando dados do evento Experience Platform para a LinkedIn. |
+| Extensões | [!DNL Meta] Aprimoramento da API de conversões | Há três aprimoramentos na [API de meta conversões](/help/tags/extensions/server/meta/overview.md) extensão: <ul><li>Integração com [[!DNL Meta Business Extension (MBE)]](/help/tags/extensions/server/meta/overview.md#integration-with-meta-business-extension-mbe): cria uma experiência de logon contínua, permitindo que você compartilhe seu pixelID e token de acesso para a integração da API de conversões com o Adobe.</li><li>Integração com [[!DNL Event Match Quality Score (EMQ)]](/help/tags/extensions/server/meta/overview.md#integration-with-event-quality-match-score-emq): permite enviar anúncios para pessoas com maior probabilidade de concluir uma ação desejada e vincular a ação de volta aos anúncios entregues.</li><li>Integração com [[!DNL LiveRamp (Alpha)]](/help/tags/extensions/server/meta/overview.md#integration-with-liveramp-alpha): permite passar a RampID do LiveRamp no campo CIP, eliminando a necessidade de compartilhar PII diretamente com parceiros ou Meta. </li></ul> |
+| Extensões | [!DNL LinkedIn] API de conversões | A variável [[!DNL LinkedIn] API de conversões](../../tags/extensions/server/linkedin/overview.md) A extensão do permite avaliar a eficácia de suas campanhas de marketing do LinkedIn, encaminhando dados do evento Experience Platform para a LinkedIn. |
 | Segredo | [!DNL LinkedIn] Segredo do OAuth 2 | A variável [[!DNL LinkedIn] Segredo do OAuth 2](../../tags/ui/event-forwarding/secrets.md#linkedin-oauth-2) permite enviar interações servidor-servidor para [!DNL LinkedIn] no encaminhamento de eventos. |
+| Encaminhamento de eventos | Atualização de tags e encaminhamento de eventos | Para preservar [Tags](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=pt-BR) e [Encaminhamento de evento](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html) desempenho na Platform, somente as builds mais recentes de Desenvolvimento e Preparo, bem-sucedidas e malsucedidas, serão mantidas. Todas as builds que não estão mais em uso serão removidas. Além disso, a limitação e a limitação de taxa foram implementadas para garantir que alguns usos intensos de API não prejudiquem o desempenho da API para outros. |
+| Extensões | Elementos, regras e extensões | [Elementos, regras e extensões](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/overview.html?lang=pt-BR) agora são classificados na saída da biblioteca para garantir mais consistência entre várias builds e implantações da mesma biblioteca. |
 
 Para obter mais informações sobre a coleção de dados, leia a [visão geral das coleções de dados](../../tags/home.md).
 

@@ -4,10 +4,10 @@ solution: Real-Time Customer Data Platform
 audience: user
 user-guide-title: Manual da Real-time Customer Data Platform
 user-guide-description: Reúna dados conhecidos e anônimos de várias fontes corporativas para criar perfis de clientes, e a partir deles criar segmentos de público-alvo e ativá-los para destinos de terceiros.
-source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+source-git-commit: 5c556d6a846c8ec97bf3aa8b6a6a6d2a64a33be5
 workflow-type: tm+mt
-source-wordcount: '250'
-ht-degree: 94%
+source-wordcount: '254'
+ht-degree: 89%
 
 ---
 
@@ -67,9 +67,10 @@ ht-degree: 94%
 * Casos de uso {#use-cases}
    * Casos de uso de reengajamento inteligente {#intelligent-re-engagement}
       * [Reenvolva seus clientes de forma inteligente](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md)
-   * Casos de uso de dados de parceiros {#partner-data}
-      * [Engajamento e conquista de novos clientes por meio do suporte à prospecção](/help/rtcdp/partner-data/prospecting.md)
+   * Aquisição de clientes {#customer-acquisition}
+      * [Interagir e adquirir novos clientes sem depender de cookies de terceiros](/help/rtcdp/partner-data/prospecting.md)
+      * [Personalizar experiências locais para visitantes desconhecidos usando o reconhecimento de visitantes auxiliado por parceiros](/help/rtcdp/partner-data/onsite-personalization.md)
+   * Enriquecimento de perfil {#profile-enrichment}
       * [Suplementar perfis próprios com atributos fornecidos por parceiros](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
-      * [Use o reconhecimento de visitante com auxílio de parceiros para personalizar experiências no site](/help/rtcdp/partner-data/onsite-personalization.md)
 * [Notas de versão da Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=pt-BR)
 * [Glossário da Experience Platform](https://www.adobe.com/go/platform-glossary-en)

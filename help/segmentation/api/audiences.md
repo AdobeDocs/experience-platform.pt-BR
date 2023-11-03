@@ -2,9 +2,9 @@
 title: Endpoint da API de públicos-alvo
 description: Use o endpoint de públicos-alvo na API do serviço de segmentação do Adobe Experience Platform para criar, gerenciar e atualizar programaticamente os públicos-alvo da sua organização.
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: 9277ad00f72b44d7e75e444f034c38f000e7909f
 workflow-type: tm+mt
-source-wordcount: '2124'
+source-wordcount: '1879'
 ht-degree: 4%
 
 ---
@@ -933,145 +933,6 @@ Uma resposta bem-sucedida retorna o status HTTP 207 com informações com os pú
 
 +++
 
-## Atualizar vários públicos {#bulk-patch}
-
-Você pode atualizar o perfil e a contagem de registros de vários públicos fazendo uma solicitação POST para o `/audiences/bulk-patch-metric` e fornecendo as IDs dos públicos-alvo que você deseja atualizar.
-
-**Formato da API**
-
-```http
-POST /audiences/bulk-patch-metric
-```
-
-**Solicitação**
-
-+++ Uma solicitação de amostra para atualizar vários públicos-alvo.
-
-```shell
-curl -X POST https://platform.adobe.io/data/core/ups/audiences/bulk-patch-metric
- -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'Content-Type: application/json' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
- -H 'x-api-key: {API_KEY}' \
- -H 'x-sandbox-name: {SANDBOX_NAME}' \
- -d ' {
-    "jobId": "12345",
-    "jobType": "AO",
-    "resources": [
-        {
-            "audienceId": "QUFNVHJhaXRzX2V4dGVybmFsU2VnbWVudC1hdWRpZW5jZS1pZA_6ed34f6f-fe21-4a30-934f-6ffe21fa3075",
-            "namespace": "AAMTraits",
-            "operations": [
-                {
-                    "op": "add",
-                    "path": "/metrics/data",
-                    "value": {
-                        "totalProfiles": 11037
-                    }
-                },
-            ]
-        },
-        {
-            "audienceId": "QUFNVHJhaXRzX2V4dGVybmFsU2VnbWVudC1hdWRpZW5jZS1pZA_6ed34f6f-fe21-4a30-934f-6ffe21fa3075",
-            "namespace": "AAMTraits",
-            "operations": [
-                {
-                    "op": "add",
-                    "path": "/metrics/data",
-                    "value": {
-                        "totalProfiles": 523
-                    }
-                }
-            ]
-        }
-    ]
-    }
-```
-
-<table>
-<thead>
-<tr>
-<th>Parâmetro</th>
-<th>Descrição</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>jobId</code></td>
-<td>A ID do trabalho que executará a atualização.</td>
-</tr>
-<tr>
-<td><code>jobType</code></td>
-<td>O tipo de trabalho que executará a atualização. Esse valor pode ser <code>export</code> ou <code>AO</code>.</td>
-</tr>
-<tr>
-<td><code>audienceId</code></td>
-<td>A ID dos públicos que você deseja atualizar. Observe que este é o <code>audienceId</code> valor e <strong>não</strong> o <code>id</code> dos públicos-alvo.</td>
-</tr>
-<tr>
-<td><code>namespace</code></td>
-<td>O namespace do público-alvo que você deseja atualizar.</td>
-</tr>
-<tr>
-<td><code>operations</code></td>
-<td>Um objeto que contém as informações usadas para atualizar o público.</td>
-</tr>
-<tr>
-<td><code>operations.op</code></td>
-<td>A operação usada para o patch. Ao atualizar vários públicos-alvo, esse valor é <strong>sempre</strong> <code>add</code>.</td>
-</tr>
-<tr>
-<td><code>operations.path</code></td>
-<td>O caminho do campo a ser atualizado. No momento, somente dois caminhos são compatíveis: <code>/metrics/data</code> quando estiver atualizando o <strong>perfil</strong> contagem e <code>/recordMetrics/data</code> quando estiver atualizando o <strong>gravar</strong> contagem.</td>
-</tr>
-<tr>
-<td><code>operations.value</code></td>
-<td>
-O valor do campo a ser atualizado. Quando você estiver atualizando a contagem de perfis, esse valor será semelhante a: 
-<pre>
-{ "totalProfiles": 123456 }
-</pre>
-Quando você estiver atualizando a contagem de registros, esse valor será semelhante a: 
-<pre>
-{ "recordCount": 123456 }
-</pre>
-</td>
-</tr>
-</tbody>
-</table>
-
-+++
-
-**Resposta**
-
-Uma resposta bem-sucedida retorna o status HTTP 207 com detalhes sobre os públicos atualizados.
-
-+++ Um exemplo de resposta para atualizar vários públicos-alvo.
-
-```json
-{
-   "resources":[
-      {
-         "audienceId":"QUFNVHJhaXRzX2V4dGVybmFsU2VnbWVudC1hdWRpZW5jZS1pZA_6ed34f6f-fe21-4a30-934f-6ffe21fa3075",
-
-         "namespace": "AAMTraits",
-         "status":200
-      },
-      {
-         "audienceId":"QUFNVHJhaXRzX2V4dGVybmFsU2VnbWVudC1vcmlnaW4tdGVzdDE_6ed34f6f-fe21-4a30-934f-6ffe21fa3075",
-
-         "namespace": "AAMTraits",
-         "status":200
-      }
-   ]
-}
-```
-
-| Parâmetro | Descrição |
-| --------- | ----------- |
-| `status` | O status do público atualizado. Se o status retornado for 200, o público-alvo foi atualizado com sucesso. Se o público-alvo não puder ser atualizado, um erro que explica por que o público-alvo não foi atualizado será retornado. |
-
-+++
 
 ## Próximas etapas
 

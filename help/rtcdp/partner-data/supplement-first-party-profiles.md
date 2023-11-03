@@ -2,10 +2,10 @@
 title: Suplementar perfis próprios com atributos fornecidos por parceiros
 description: Saiba como suplementar perfis próprios com atributos de parceiros de dados confiáveis para melhorar sua base de dados, obter novos insights sobre sua base de clientes e aprimorar a otimização do público-alvo.
 exl-id: ee21b988-88f9-4c8e-bd82-7fc55c37ec24
-source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+source-git-commit: 645295958ea6f94a9f9da13517b0fa1d02010b52
 workflow-type: tm+mt
-source-wordcount: '1110'
-ht-degree: 90%
+source-wordcount: '1263'
+ht-degree: 79%
 
 ---
 
@@ -18,6 +18,16 @@ ht-degree: 90%
 Suplemente perfis próprios com atributos de parceiros de dados confiáveis para melhorar sua base de dados, obter novos insights sobre sua base de clientes e aprimorar a otimização do público-alvo.
 
 ![Visão geral de alto nível visual do caso de uso enriquecimento de perfis com atributos fornecidos por parceiros.](/help/rtcdp/assets/partner-data/enrichment/enrichment-use-case-overview.png)
+
+## Por que considerar este caso de uso {#why-this-use-case}
+
+A maioria das marcas, mesmo aquelas ricas com dados primários, pode se beneficiar da simplificação de seus dados e de obter uma compreensão mais diferenciada dos clientes, seus comportamentos, padrões e preferências.
+
+A Adobe Real-time Customer Data Platform pode ajudar as marcas a complementar com responsabilidade seus dados primários com insights, identificadores e atributos valiosos de um ou mais parceiros confiáveis.
+
+A Adobe entende que não há uma abordagem única para todos os casos e permite uma interoperabilidade perfeita com parceiros de dados e identidade para promover um engajamento individualizado e criterioso em todos os estágios do ciclo de vida do cliente. Esses recursos são sustentados por uma estrutura confiável de governança de dados, permitindo um controle aprimorado sobre onde e como os dados do parceiro são usados. Por exemplo, você pode querer usar os insights fornecidos pelo parceiro para segmentação, mas não para personalização.
+
+Por exemplo, siga as etapas descritas neste caso de uso quando precisar enriquecer os registros do cliente com sinais demográficos e de intenção.
 
 ## Pré-requisitos e planejamento {#prerequisites-and-planning}
 
@@ -126,5 +136,5 @@ Observe as seguintes limitações ao explorar o caso de uso descrito nesta pági
 Conheça outros casos de uso habilitados por meio da compatibilidade com dados de parceiros na Real-Time CDP:
 
 * Use o suporte a dados de terceiros da Real-Time CDP para [expandir sua base de perfis com prospectos de parceiros de dados e interaja com eles para adquirir ou alcançar novos clientes](/help/rtcdp/partner-data/prospecting.md).
-* [Aproveite o reconhecimento auxiliado pelo parceiro para personalizar experiências no local](/help/rtcdp/partner-data/onsite-personalization.md) durante a visita sem que o usuário autentique ou tenha um histórico anterior com sua marca.
+* [Personalizar experiências no site para visitantes desconhecidos usando o reconhecimento de visitantes auxiliados por parceiros](/help/rtcdp/partner-data/onsite-personalization.md) durante a visita sem que o usuário autentique ou tenha um histórico anterior com sua marca.
 * [Ativação ampliada de perfis de clientes potenciais e públicos-alvo de clientes potenciais](/help/destinations/ui/activate-prospect-audiences.md) para selecionar destinos.

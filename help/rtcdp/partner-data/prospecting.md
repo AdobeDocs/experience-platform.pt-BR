@@ -1,15 +1,15 @@
 ---
-title: Engajamento e conquista de novos clientes por meio de casos de uso de prospecção
-description: Saiba como engajar e conquistar novos clientes por meio de casos de uso de prospecção, possibilitados pelo suporte a dados de parceiros da Real-Time CDP.
+title: Interagir e adquirir novos clientes sem depender de cookies de terceiros
+description: Saiba como engajar e adquirir novos clientes por meio de casos de uso de prospecção, sem depender de cookies de terceiros.
 exl-id: b9e7b3af-2a13-4904-bd12-e3ed05a1988e
-source-git-commit: ec6375a025833027fda01c412124321132aefd65
+source-git-commit: 645295958ea6f94a9f9da13517b0fa1d02010b52
 workflow-type: tm+mt
-source-wordcount: '1960'
-ht-degree: 93%
+source-wordcount: '2077'
+ht-degree: 85%
 
 ---
 
-# Engajamento e conquista de novos clientes por meio de casos de uso de prospecção
+# Interagir e adquirir novos clientes sem depender de cookies de terceiros
 
 >[!AVAILABILITY]
 >
@@ -19,9 +19,17 @@ Use o suporte a dados de terceiros da Real-Time CDP para expandir sua base de pe
 
 ![Visão geral de alto nível do caso de uso de prospecção de clientes.](/help/rtcdp/assets/partner-data/prospecting/prospecting-use-case-overview.png)
 
+## Por que considerar este caso de uso {#why-this-use-case}
+
+As marcas estão enfrentando simultaneamente desafios assustadores de executar com responsabilidade casos de uso de aquisição de clientes topo de funil sem dependência de cookies de terceiros, orçamentos limitados e maior demanda de transparência e retorno sobre o investimento em anúncios.
+
+A Adobe Real-time Customer Data Platform pode ajudar as marcas a fazer a transição segura de seus casos de uso compatíveis com a Plataforma de gerenciamento de dados (DMP) para alternativas sem cookies, de uma forma que promova a total sofisticação e o poder da segmentação de autoatendimento, curadoria de público-alvo e ativação em um único sistema. Tudo isso sem comprometer o foco inabalável do Adobe no uso responsável dos dados por meio de uma estrutura patenteada de governança e consentimento de dados.
+
+Por exemplo, siga as etapas descritas neste caso de uso quando precisar executar uma campanha para atrair prospetos para se tornarem usuários ou clientes conhecidos.
+
 ## Pré-requisitos e planejamento {#prerequisites-and-planning}
 
-Ao considerar entrar em contato com novos clientes e conquistá-los usando o suporte a dados de parceiros da Real-Time CDP, analise os seguintes pré-requisitos no processo de planejamento:
+Ao considerar entrar em contato com novos clientes e adquiri-los, considere os seguintes pré-requisitos no processo de planejamento:
 
 * Com que frequência se espera que os atributos fornecidos pelo parceiro sejam assimilados na Real-Time CDP e atualizados?
 * Quais identidades seus destinos downstream exigem?
@@ -219,5 +227,5 @@ Utilize os públicos-alvo em potencial exportando-os para destinos. Atualmente, 
 Conheça outros casos de uso habilitados por meio da compatibilidade com dados de parceiros na Real-Time CDP:
 
 * [Suplemente perfis próprios com atributos de parceiros de dados confiáveis para melhorar sua base de dados, obter novos insights sobre sua base de clientes e aprimorar a otimização do público-alvo.](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
-* [Aproveite o reconhecimento auxiliado pelo parceiro para personalizar experiências no local](/help/rtcdp/partner-data/onsite-personalization.md) durante a visita sem que o usuário autentique ou tenha um histórico anterior com sua marca.
+* [Personalizar experiências no site para visitantes desconhecidos usando o reconhecimento de visitantes auxiliados por parceiros](/help/rtcdp/partner-data/onsite-personalization.md) durante a visita sem que o usuário autentique ou tenha um histórico anterior com sua marca.
 * [Ativação ampliada de perfis de clientes potenciais e públicos-alvo de clientes potenciais](/help/destinations/ui/activate-prospect-audiences.md) para selecionar destinos.

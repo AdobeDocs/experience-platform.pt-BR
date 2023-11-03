@@ -2,10 +2,10 @@
 title: Elementos de dados
 description: Os elementos de dados são os blocos fundamentais do seu dicionário de dados (ou mapa de dados). Use elementos de dados para coletar, organizar e entregar dados em toda a tecnologia de marketing e anúncios.
 exl-id: 1e7b03cc-5a54-403d-bf8d-dbc206cfeb2d
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 9d897602c0c83d06910b8b14a87351a9c25ab5f1
 workflow-type: tm+mt
 source-wordcount: '1622'
-ht-degree: 93%
+ht-degree: 91%
 
 ---
 
@@ -27,7 +27,7 @@ Use elementos de dados o mais amplamente possível em todo o processo de criaç�
 
 O conceito de elementos de dados reutilizáveis é muito eficaz, e você deve usá-lo como prática recomendada.
 
-Por exemplo, se houver um modo específico pelo qual você faz referência a nomes de páginas ou IDs de produtos ou captura informações de parâmetros de sequência de consulta de um link de marketing de afiliado ou do [!DNL AdWords] e assim por diante, será possível criar um dicionário de dados (elementos de dados) obtendo informações da origem e usando esses dados em várias regras de tags.
+Por exemplo, se houver um modo específico pelo qual você faz referência a nomes de páginas ou IDs de produtos ou captura informações de parâmetros de string de consulta de um link de marketing de afiliado ou do [!DNL AdWords] e assim por diante, será possível criar um dicionário de dados (elementos de dados) obtendo informações da origem e usando esses dados em várias regras de tags.
 
 Usando o nome de página como exemplo, suponhamos que você use um esquema de nome de página específico referenciando uma camada de dados, elemento `document.title`, ou uma tag de título dentro do site. As tags na Adobe Experience Platform permitem criar um elemento de dados como um único ponto de referência para esse ponto de dados específico. Pode-se, então, usar esse elemento de dados em qualquer regra que precise fazer referência ao nome da página. Se futuramente, por algum motivo, você decidir mudar o modo como faz referência ao nome da página (por exemplo, se estiver fazendo referência a `document.title` e, a partir de determinado momento quiser referir uma camada de dados específica), não precisará editar muitas e diferentes regras para alterar essa referência. Bastará alterá-la uma vez no elemento de dados, e todas as regras que fizeram referência a esse elemento serão automaticamente atualizadas.
 
@@ -78,7 +78,7 @@ Os elementos de dados são os blocos de construção das regras. Os elementos de
       * O valor é mantido em uma variável JavaScript até que a página seja atualizada ou que uma nova página seja carregada.
       * Pode ser criada e definida nos scripts usando a sintaxe do objeto `_satellite`:
 
-         `_satellite.setVar('data_element_name')`
+        `_satellite.setVar('data_element_name')`
    * Session
       * Os valores persistem no armazenamento de sessão do navegador até que a guia do navegador seja fechada.
       * Disponível durante toda a visita ao site.
@@ -174,7 +174,7 @@ Por exemplo, considere que a marcação contém uma variável de JavaScript cham
 
 Você deve fornecer o caminho dessa variável ao criar o elemento de dados.
 
-Se você utilizar um objeto coletor de dados como parte da camada de dados, utilize a notação de pontos no Caminho para fazer referência ao objeto e propriedade que você deseja capturar no elemento de dados, como `_myData.pageName` ou `digitalData.pageName` etc.
+Se você utilizar um objeto coletor de dados como parte da camada de dados, utilize a notação de pontos no caminho para fazer referência ao objeto e propriedade que você deseja capturar no elemento de dados, como `_myData.pageName`ou `digitalData.pageName`, etc.
 
 #### Exemplo:
 

@@ -7,7 +7,7 @@ exl-id: 32fd2ba1-0ff0-4ea7-8d55-80d53eebc02f
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
 source-wordcount: '1919'
-ht-degree: 4%
+ht-degree: 5%
 
 ---
 
@@ -168,7 +168,7 @@ Para a seção segmentos, as seguintes métricas estão disponíveis:
 | **[!UICONTROL Nome]** | O nome do segmento que está sendo avaliado. |
 | **[!UICONTROL Contagem de perfis]** | O número de perfis que estão sendo avaliados. |
 
-## Painel de monitoramento de trabalhos do segmento {#monitoring-segment-jobs-dashboard}
+## Painel de monitoramento de processos do segmento {#monitoring-segment-jobs-dashboard}
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_segment_jobs"

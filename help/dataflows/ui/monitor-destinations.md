@@ -107,7 +107,7 @@ A página de detalhes também exibe uma lista de identidades que falharam e as q
 
 ![Registros de fluxo de dados para destinos de streaming](../assets/ui/monitor-destinations/dataflow-records-stream.png)
 
-### O fluxo de dados é executado para destinos em lote {#dataflow-runs-for-batch-destinations}
+### Execuções de fluxo de dados para destinos em lote {#dataflow-runs-for-batch-destinations}
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_activation"

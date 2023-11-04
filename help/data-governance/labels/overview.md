@@ -7,7 +7,7 @@ exl-id: 4f113000-b9a1-4dfb-9502-6a5d08f0b26f
 source-git-commit: 5d34781e06c0fa8bfd2e52f73e336d92d16192f6
 workflow-type: tm+mt
 source-wordcount: '802'
-ht-degree: 14%
+ht-degree: 15%
 
 ---
 
@@ -46,7 +46,7 @@ Para obter mais informações sobre como a imposição automática funciona na P
 
 Para obter uma referência sobre como os Controles de exportação de dados específicos são mapeados para rótulos de uso de dados no [!DNL Platform], consulte o [Documentação do Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep).
 
-## Gerenciamento de rótulos de uso de dados no [!DNL Experience Platform] {#manage-labels}
+## Gerenciamento dos rótulos de uso de dados na [!DNL Experience Platform] {#manage-labels}
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataUsageLabels_instructions"

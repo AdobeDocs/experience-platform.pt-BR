@@ -5,11 +5,11 @@ exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
 source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
 workflow-type: tm+mt
 source-wordcount: '1391'
-ht-degree: 14%
+ht-degree: 16%
 
 ---
 
-# Definir uma relação muitos para um entre dois esquemas no Real-time Customer Data Platform B2B Edition {#relationship-b2b}
+# Definir um relacionamento de “muitos para um” entre dois esquemas na Real-time Customer Data Platform B2B Edition {#relationship-b2b}
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_b2b_reference_schema"
@@ -46,7 +46,7 @@ Espera-se que você já tenha criado os dois schemas que serão definidos no rel
 
 Relacionamentos de esquema são representados por um campo dedicado em um **esquema de origem** que faz referência ao campo de identidade principal de um **esquema de referência**. Nas etapas a seguir, &quot;[!DNL Opportunities]&quot; serve como o esquema de origem, enquanto &quot;[!DNL Accounts]&quot;O atua como o schema de referência.
 
-### Compreensão de identidades em relacionamentos B2B
+### Noções básicas sobre identidades em relacionamentos B2B
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_b2b_identity_namespace"

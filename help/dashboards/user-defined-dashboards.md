@@ -5,7 +5,7 @@ exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
 source-git-commit: b3bd7a5ba1847518beafd12240c0d3a433a891d0
 workflow-type: tm+mt
 source-wordcount: '1608'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -37,7 +37,7 @@ A variável [!UICONTROL Criar painel] será exibida. Insira um nome descritivo a
 
 O painel em branco recém-criado é exibido com o nome escolhido no canto superior esquerdo da exibição.
 
-## Criar um widget {#create-widget}
+## Criar um dispositivo {#create-widget}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_udd_maxwidgets"

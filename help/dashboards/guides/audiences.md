@@ -7,7 +7,7 @@ exl-id: de5e07bc-2c44-416e-99db-7607059117cb
 source-git-commit: cd57ca50537d928025a5164b6a7d0ead490162ba
 workflow-type: tm+mt
 source-wordcount: '3053'
-ht-degree: 8%
+ht-degree: 9%
 
 ---
 
@@ -91,7 +91,7 @@ Uma transferência de widget padrão é fornecida para todas as novas instância
 
 o Customer AI é usado para gerar pontuações de propensão personalizadas, como churn e conversão para perfis individuais em escala. A IA do cliente faz isso analisando dados existentes do Evento de experiência do consumidor para prever **pontuações de propensão de churn ou conversão**. Esses modelos de propensão de alta precisão do cliente permitem segmentação e direcionamento mais exatos. A variável [distribuição de pontuações](#customer-ai-distribution-of-scores) e [resumo de pontuação](#customer-ai-scoring-summary) os insights demonstram a divisão no público-alvo. Eles destacam quais perfis são a propensão alta/baixa/média e como eles são distribuídos na contagem de perfis.
 
-* [[!UICONTROL Resumo de pontuação do Customer AI]](#customer-ai-scoring-summary)
+* [[!UICONTROL Resumo de pontuação da IA do cliente]](#customer-ai-scoring-summary)
 * [[!UICONTROL Distribuição de pontuações da IA do cliente]](#customer-ai-distribution-of-scores)
 
 ### [!UICONTROL Distribuição de pontuações da IA do cliente] {#customer-ai-distribution-of-scores}
@@ -123,7 +123,7 @@ A página de insights detalhados do modelo é exibida.
 
 Mais informações sobre a IA do cliente podem ser encontradas no [guia da interface do usuário do discover insights](../../intelligent-services/customer-ai/user-guide/discover-insights.md).
 
-### [!UICONTROL Resumo de pontuação do Customer AI] {#customer-ai-scoring-summary}
+### [!UICONTROL Resumo de pontuação da IA do cliente] {#customer-ai-scoring-summary}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_segments_scoringSummary"

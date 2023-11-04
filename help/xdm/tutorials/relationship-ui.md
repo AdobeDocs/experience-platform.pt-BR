@@ -8,11 +8,11 @@ exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
 source-git-commit: 8b5c1776804bbacad5c3d72dd48c1716380cca79
 workflow-type: tm+mt
 source-wordcount: '1161'
-ht-degree: 9%
+ht-degree: 11%
 
 ---
 
-# Defina uma relação um para um entre dois esquemas usando o [!DNL Schema Editor] {#relationship-ui}
+# Definir um relacionamento de “um para um” entre dois esquemas usando o [!DNL Schema Editor] {#relationship-ui}
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_relationships"

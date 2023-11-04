@@ -30,7 +30,7 @@ Este documento requer uma compreensão funcional dos seguintes componentes do Ad
 * [Observabilidade](../../../observability/home.md): [!DNL Observability Insights] O permite monitorar as atividades da Platform por meio do uso de métricas estatísticas e notificações de eventos.
    * [Alertas](../../../observability/alerts/overview.md): quando um determinado conjunto de condições em suas operações do Platform é atingido (como um problema em potencial quando o sistema viola um limite), o Platform pode enviar mensagens de alerta a qualquer usuário em sua organização que se inscreveu neles.
 
-## Assinar alertas na interface do usuário {#subscribe-sources-alerts}
+## Assinar os alertas da interface {#subscribe-sources-alerts}
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_alerts_subscribe"

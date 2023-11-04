@@ -1,16 +1,16 @@
 ---
 description: Saiba como usar modelos na interface do usuário do Adobe Experience Platform para acelerar seu processo de assimilação de dados para dados B2B.
-title: Criar um fluxo de dados de fontes usando modelos na interface
+title: Criar um fluxo de dados de origem usando modelos na interface
 badge1: "Beta"
 exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
 source-git-commit: deca8300ebbada548a409de9c6a7b7178d0032e0
 workflow-type: tm+mt
-source-wordcount: '2258'
-ht-degree: 10%
+source-wordcount: '2259'
+ht-degree: 11%
 
 ---
 
-# Criar um fluxo de dados de fontes usando modelos na interface {#create-a-sources-dataflow-using-templates-in-the-ui}
+# Criar um fluxo de dados de origem usando modelos na interface {#create-a-sources-dataflow-using-templates-in-the-ui}
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_marketo_mapping"
@@ -45,7 +45,7 @@ Este tutorial requer um entendimento prático dos seguintes componentes do Exper
 * [[!DNL Experience Data Model (XDM)] Sistema](../../../xdm/home.md): a estrutura padronizada pela qual o Experience Platform organiza os dados de experiência do cliente.
 * [Sandboxes](../../../sandboxes/home.md): o Experience Platform fornece sandboxes virtuais que particionam uma única instância da Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
-## Usar modelos na interface do Platform {#use-templates-in-the-platform-ui}
+## Usar modelos na interface da Platform {#use-templates-in-the-platform-ui}
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_templates_accounttype"

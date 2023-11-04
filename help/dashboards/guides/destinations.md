@@ -87,7 +87,7 @@ Para saber mais sobre cada um dos widgets padrão disponíveis, selecione o nome
 * [[!UICONTROL Tendência de tamanho do público-alvo]](#audience-size-trend)
 * [[!UICONTROL Públicos-alvo não mapeados por identidade]](#unmapped-audiences-by-identity)
 * [[!UICONTROL Públicos-alvo mapeados por identidade]](#mapped-audiences-by-identity)
-* [[!UICONTROL Públicos comuns]](#common-audiences)
+* [[!UICONTROL Públicos-alvo comuns]](#common-audiences)
 * [[!UICONTROL Públicos mapeados]](#mapped-audiences)
 * [[!UICONTROL Integridade do público mapeado]](#mapped-audience-health)
 * [[!UICONTROL Contagem de destinos]](#destinations-count)
@@ -213,11 +213,11 @@ Esse dispositivo fornece uma lista dos cinco principais públicos-alvo **mapeado
 
 A variável **[!UICONTROL Públicos mapeados por identidade]** principais características do widget, a probabilidade de direcionar com sucesso as oportunidades de perfil para uma campanha no destino escolhido. Uma campanha direcionada eficiente não depende do número de perfis enviados para o destino, mas sim do número de IDs de origem que provavelmente serão correspondidas às IDs de destino para fornecer dados úteis e acionáveis.
 
-### Públicos comuns {#common-audiences}
+### Públicos-alvo comuns {#common-audiences}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_commonaudiences"
->title="Públicos comuns"
+>title="Públicos-alvo comuns"
 >abstract="Esse dispositivo fornece uma lista dos cinco principais públicos-alvo ativados na conta de destino escolhida na parte superior da página e o destino selecionado na lista suspensa do dispositivo. A lista de públicos-alvo é ordenada de acordo com a data mais recente de ativação. O público-alvo ativado mais recentemente é exibido na parte superior."
 
 A variável **[!UICONTROL Públicos comuns]** O widget fornece uma lista dos cinco principais públicos-alvo ativados na conta de destino escolhida na parte superior da página, e o destino selecionado na lista suspensa widget. A lista de públicos-alvo é ordenada de acordo com a data mais recente de ativação. O público-alvo ativado mais recentemente é exibido na parte superior.

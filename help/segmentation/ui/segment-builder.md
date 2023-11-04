@@ -20,7 +20,7 @@ ht-degree: 7%
 
 ![A interface do usuário do Construtor de segmentos é exibida.](../images/ui/segment-builder/segment-builder.png)
 
-## Blocos de construção de definição de segmento {#building-blocks}
+## Aspectos fundamentais da definição de segmentos {#building-blocks}
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_fields"

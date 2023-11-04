@@ -7,11 +7,11 @@ exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
 source-git-commit: 9d05752f3db78d9d10fd91fd0d3fed924217199c
 workflow-type: tm+mt
 source-wordcount: '1475'
-ht-degree: 14%
+ht-degree: 15%
 
 ---
 
-# Gerenciar processos de privacidade na interface do Privacy Service {#user-guide}
+# Gerenciamento de processos de privacidade na interface do Privacy Service {#user-guide}
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_requests_description"
@@ -111,7 +111,7 @@ Se uma solução tiver fornecido dados adicionais, ela será exibida nessa caixa
 
 Para baixar os dados completos do processo como um arquivo CSV, selecione **[!UICONTROL Exportar para CSV]** na parte superior direita da caixa de diálogo.
 
-## Criar uma nova solicitação de trabalho de privacidade {#create-a-new-privacy-job-request}
+## Criar uma nova solicitação de processo de privacidade {#create-a-new-privacy-job-request}
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_requests_instructions"

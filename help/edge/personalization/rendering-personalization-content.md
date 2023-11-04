@@ -3,7 +3,7 @@ title: Renderizar conteúdo personalizado usando o SDK da Web da Adobe Experienc
 description: Saiba como renderizar conteúdo personalizado com o Adobe Experience Platform Web SDK.
 keywords: personalização;renderDecisions;sendEvent;decisionScopes;propositions;
 exl-id: 6a3252ca-cdec-48a0-a001-2944ad635805
-source-git-commit: 378f222b5c673632ce5792c52fc32410106def37
+source-git-commit: 5f205792a03c3c7dd9074827ce4a989fae2e45d9
 workflow-type: tm+mt
 source-wordcount: '962'
 ht-degree: 2%
@@ -18,7 +18,7 @@ Além disso, o SDK da Web capacita recursos de personalização de mesma página
 
 Conteúdo criado no Adobe Target [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) e ADOBE JOURNEY OPTIMIZER [Interface do Campaign da Web](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html) podem ser recuperadas e renderizadas automaticamente pelo SDK. Conteúdo criado no Adobe Target [Experience Composer baseado em formulário](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html) O Offer decisioning ou não pode ser renderizado automaticamente pelo SDK. Em vez disso, você deve solicitar esse conteúdo usando o SDK e, em seguida, renderizar manualmente o conteúdo.
 
-## Renderização automática de conteúdo
+## Renderização automática de conteúdo {#automatic}
 
 Ao enviar eventos para o servidor, você pode definir a variável `renderDecisions` opção para `true`. Isso força o SDK a renderizar automaticamente qualquer conteúdo personalizado que esteja qualificado para renderização automática.
 
@@ -40,7 +40,7 @@ alloy("sendEvent", {
 
 A renderização do conteúdo personalizado é assíncrona, portanto, você não deve fazer suposições sobre quando uma determinada parte do conteúdo terá concluído a renderização.
 
-## Renderização manual do conteúdo
+## Renderização manual do conteúdo {#manual}
 
 Para acessar qualquer conteúdo de personalização, você pode fornecer uma função de retorno de chamada, que será chamada depois que o SDK receber uma resposta bem-sucedida do servidor. Seu retorno de chamada recebe um `result` objeto, que pode conter uma `propositions` propriedade que contém qualquer conteúdo de personalização retornado. Veja abaixo um exemplo de como você forneceria uma função de retorno de chamada ao enviar um evento.
 

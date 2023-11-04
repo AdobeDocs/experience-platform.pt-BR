@@ -7,7 +7,7 @@ exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
 source-git-commit: afcb5f80edaa4d68ba167123feb2ba9060469243
 workflow-type: tm+mt
 source-wordcount: '1065'
-ht-degree: 7%
+ht-degree: 8%
 
 ---
 
@@ -99,7 +99,7 @@ Ao mapear atributos de origem com hash não atribuídos para atributos de destin
 
 ![Mapeamento de identidade](../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
 
-## Agendar exportação de público {#scheduling}
+## Programar exportação de público-alvo {#scheduling}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_enddate"
@@ -136,7 +136,7 @@ No **[!UICONTROL Revisão]** você poderá ver um resumo da sua seleção. Selec
 
 ![Resumo da seleção na etapa de revisão.](../assets/ui/activate-segment-streaming-destinations/review.png)
 
-### Avaliação de política de consentimento {#consent-policy-evaluation}
+### Avaliação da política de consentimento {#consent-policy-evaluation}
 
 Se sua organização adquiriu o **Adobe Healthcare Shield** ou o **Adobe Privacy &amp; Security Shield**, selecione **[!UICONTROL Exibir políticas de consentimento aplicáveis]** para ver quais políticas de consentimento são aplicadas e quantos perfis são incluídos na ativação como resultado delas. Ler sobre [avaliação da política de consentimento](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) para obter mais informações.
 

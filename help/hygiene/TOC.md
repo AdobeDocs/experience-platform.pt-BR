@@ -7,7 +7,7 @@ feature: Data Hygiene
 source-git-commit: 35f598d3a03b459e2bbed58a006c7d020aba7dac
 workflow-type: tm+mt
 source-wordcount: '65'
-ht-degree: 47%
+ht-degree: 60%
 
 ---
 
@@ -17,9 +17,9 @@ ht-degree: 47%
 * [Visão geral do gerenciamento avançado do ciclo de vida dos dados](./home.md)
 * Interface do usuário do ciclo de vida dos dados {#ui}
    * [Visão geral](./ui/overview.md)
-   * [Expirações automatizadas do conjunto de dados](./ui/dataset-expiration.md)
+   * [Expirações automatizadas de conjuntos de dados](./ui/dataset-expiration.md)
    * [(Beta) Excluir registros](./ui/record-delete.md)
-   * [Procurar ordens de trabalho do ciclo de vida dos dados](./ui/browse.md)
+   * [Navegar pelas ordens de trabalho do ciclo de vida dos dados](./ui/browse.md)
 * API de higiene de dados {#api}
    * [Visão geral](./api/overview.md)
    * [Expirações do conjunto de dados](./api/dataset-expiration.md)

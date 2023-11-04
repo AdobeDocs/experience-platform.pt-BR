@@ -6,7 +6,7 @@ exl-id: 0cf068e6-8a0a-4292-a7ec-c40508846e27
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
 source-wordcount: '3075'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -164,7 +164,7 @@ Para se conectar a esse destino, siga as etapas descritas no [tutorial de config
 
 Dentro de **[!UICONTROL Destinos]** > **[!UICONTROL Catálogo]**, pesquisar [!DNL (API) Salesforce Marketing Cloud]. Como alternativa, você pode localizá-lo na **[!UICONTROL Marketing por email]** categoria.
 
-### Autenticar para destino {#authenticate}
+### Autenticar para o destino {#authenticate}
 
 Para autenticar no destino, preencha os campos obrigatórios abaixo e selecione **[!UICONTROL Conectar ao destino]**. Consulte a [Coletar [!DNL Salesforce Marketing Cloud] credenciais](#gather-credentials) para obter orientação.
 
@@ -192,7 +192,7 @@ Você pode ativar os alertas para receber notificações sobre o status do fluxo
 
 Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICONTROL Próxima]**.
 
-## Ativar públicos para este destino {#activate}
+## Ativar públicos-alvo para esse destino {#activate}
 
 >[!IMPORTANT]
 > 

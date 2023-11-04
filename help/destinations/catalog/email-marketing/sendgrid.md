@@ -6,7 +6,7 @@ exl-id: 6f22746f-2043-4a20-b8a6-097d721f2fe7
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
 source-wordcount: '1571'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -79,7 +79,7 @@ As equipes de marketing que usam o SendGrid podem criar uma lista de endereçame
 
 Para se conectar a esse destino, siga as etapas descritas no [tutorial de configuração de destino](../../ui/connect-destination.md). No workflow de configuração de destino, preencha os campos listados nas duas seções abaixo.
 
-### Autenticar para destino {#authenticate}
+### Autenticar para o destino {#authenticate}
 
 1. No prazo de [!DNL Adobe Experience Platform] console, navegue até **Destinos**.
 
@@ -111,7 +111,7 @@ Você pode ativar os alertas para receber notificações sobre o status do fluxo
 
 Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICONTROL Próxima]**.
 
-## Ativar públicos para este destino {#activate}
+## Ativar públicos-alvo para esse destino {#activate}
 
 >[!IMPORTANT]
 > 

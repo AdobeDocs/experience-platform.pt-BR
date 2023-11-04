@@ -6,7 +6,7 @@ exl-id: e85049a7-eaed-4f8a-b670-9999d56928f8
 source-git-commit: 8e37ff057ec0fb750bc7b4b6f566f732d9fe5d68
 workflow-type: tm+mt
 source-wordcount: '819'
-ht-degree: 2%
+ht-degree: 4%
 
 ---
 
@@ -94,7 +94,7 @@ Você pode ativar os alertas para receber notificações sobre o status do fluxo
 
 Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICONTROL Próxima]**.
 
-## Ativar públicos para este destino {#activate}
+## Ativar públicos-alvo para esse destino {#activate}
 
 >[!IMPORTANT]
 > 

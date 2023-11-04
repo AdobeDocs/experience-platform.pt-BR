@@ -7,7 +7,7 @@ feature: Queries
 source-git-commit: 113e74b3a4783a11bc88dc2d16134b68638604e5
 workflow-type: tm+mt
 source-wordcount: '311'
-ht-degree: 18%
+ht-degree: 20%
 
 ---
 
@@ -65,7 +65,7 @@ ht-degree: 18%
    - [RStudio](clients/rstudio.md)
    - [Tableau](clients/tableau.md)
 - Interface do usuário do serviço de consulta {#ui}
-   - [Visão geral da interface](ui/overview.md)
+   - [Visão geral da interface do ](ui/overview.md)
    - [Guia do usuário do Editor de consultas](ui/user-guide.md)
    - [Modelos de consulta](ui/query-templates.md)
    - [Consultas com parâmetros (limit.)](ui/parameterized-queries.md)

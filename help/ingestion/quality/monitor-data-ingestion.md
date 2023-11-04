@@ -7,7 +7,7 @@ exl-id: 85711a06-2756-46f9-83ba-1568310c9f73
 source-git-commit: 9399a242b855e151e5822035bc952efa89fe4bf0
 workflow-type: tm+mt
 source-wordcount: '657'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -17,14 +17,14 @@ A assimilação de dados permite assimilar seus dados na Adobe Experience Platfo
 
 Este guia do usuário fornece etapas sobre como monitorar seus dados na interface do usuário do Adobe Experience Platform. Este guia requer que você tenha uma Adobe ID e acesso ao Adobe Experience Platform.
 
-## Monitorar a assimilação completa de dados por transmissão {#monitor-streaming-end-to-end-data-ingestion}
+## Monitorar a assimilação de dados na transmissão de ponta a ponta {#monitor-streaming-end-to-end-data-ingestion}
 
 >[!CONTEXTUALHELP]
 >id="platform_ingestion_streaming_ingestionrate"
 >title="Taxa de ingestão"
 >abstract="O número de eventos processados com êxito por segundo."
 >text="Learn more in the documentation"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-sources.html?lang=pt-BR" text="Monitorar fluxos de dados para fontes na interface"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-sources.html?lang=pt-BR" text="Monitorar fluxos de dados de fontes na interface"
 
 >[!TIP]
 >

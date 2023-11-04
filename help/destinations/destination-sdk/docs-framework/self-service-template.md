@@ -5,7 +5,7 @@ exl-id: 99700474-8bf6-4176-acc1-38814e17c995
 source-git-commit: afcb5f80edaa4d68ba167123feb2ba9060469243
 workflow-type: tm+mt
 source-wordcount: '1640'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -109,7 +109,7 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 
 Para se conectar a esse destino, siga as etapas descritas no [tutorial de configuração de destino](../../ui/connect-destination.md). No workflow de configuração de destino, preencha os campos listados nas duas seções abaixo.
 
-### Autenticar para destino {#authenticate}
+### Autenticar para o destino {#authenticate}
 
 *Adicione os campos que os clientes devem preencher ao autenticar em seu destino. Esses campos são específicos do destino e dependem da configuração no Destination SDK. Os campos de destino podem não ser os mesmos listados abaixo. Inclua também uma captura de tela semelhante à captura de tela de exemplo mostrada abaixo.*
 
@@ -137,7 +137,7 @@ Você pode ativar os alertas para receber notificações sobre o status do fluxo
 
 Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICONTROL Próxima]**.
 
-## Ativar públicos para este destino {#activate}
+## Ativar públicos-alvo para esse destino {#activate}
 
 >[!IMPORTANT]
 > 

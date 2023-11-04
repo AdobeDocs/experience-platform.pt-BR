@@ -2,10 +2,10 @@
 title: Ferramentas de sandboxes
 description: Exporte e importe configurações de sandbox facilmente entre sandboxes.
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: 58fcf3cbff242f65969193fd2e3d6eea0e6539aa
+source-git-commit: 4cb570fbdb76e53dd0a8c4ee78c31d2a886e5dc1
 workflow-type: tm+mt
-source-wordcount: '1820'
-ht-degree: 7%
+source-wordcount: '1849'
+ht-degree: 8%
 
 ---
 
@@ -237,6 +237,12 @@ A variável **[!UICONTROL Detalhes da importação]** mostra uma análise detalh
 >[!NOTE]
 >
 >Quando uma importação é concluída, você recebe notificações na interface do usuário da Platform. Você pode acessar essas notificações pelo ícone de alertas. Você pode acessar a solução de problemas aqui se uma tarefa não for bem-sucedida.
+
+## Tutorial em vídeo
+
+O vídeo a seguir é destinado a ajudá-lo a entender as ferramentas de sandbox e descreve como criar um novo pacote, publicar um pacote e importar um pacote.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3424763/?learn=on)
 
 ## Próximas etapas
 

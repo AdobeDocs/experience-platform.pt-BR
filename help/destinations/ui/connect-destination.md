@@ -50,7 +50,7 @@ Antes de enviar dados do público-alvo para um destino, é necessário configura
 
    ![Captura de tela da interface do Experience Platform, mostrando uma lista de destinos disponíveis e o controle Configurar novo destino destacado.](../assets/ui/connect-destinations/configure-new-destination.png)
 
-## Autenticar para destino {#authenticate}
+## Autenticar para o destino {#authenticate}
 
 A primeira etapa na conexão com um destino é autenticar na plataforma de destino.
 

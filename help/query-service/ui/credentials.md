@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guia de credenciais do Serviço de consulta
 description: O Serviço de consulta da Adobe Experience Platform fornece uma interface que pode ser usada para gravar e executar consultas, exibir consultas executadas anteriormente e acessar consultas salvas por usuários em sua organização.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: aed521bf50c301148c10b98021f1a3df0ed45278
+source-git-commit: 74e3dc2fa5fc84b5ce4b09e2adb0093ecb94bd82
 workflow-type: tm+mt
-source-wordcount: '1462'
+source-wordcount: '1517'
 ht-degree: 3%
 
 ---
@@ -15,7 +15,11 @@ ht-degree: 3%
 
 O Adobe Experience Platform Query Service permite conectar-se com clientes externos. Você pode se conectar a esses clientes externos usando credenciais com ou sem expiração.
 
-## Credenciais que expiram {#expiring-credentials}
+>[!NOTE]
+>
+>O painel de credenciais não está disponível automaticamente para todos os usuários. Entre em contato com a equipe de conta do Adobe para solicitar o [!UICONTROL Credenciais] para ser incluída no espaço de trabalho do Serviço de consulta, se necessário. Se solicitado, essa alteração abrange toda a organização e é realizada pela equipe de engenharia do Adobe. Não é uma configuração controlada por usuários.
+
+## Credenciais expiradas {#expiring-credentials}
 
 >[!CONTEXTUALHELP]
 >id="platform_queryservice_credentials_expiringcredentials"

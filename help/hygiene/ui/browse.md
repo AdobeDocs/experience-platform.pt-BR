@@ -5,11 +5,11 @@ exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
 source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
 workflow-type: tm+mt
 source-wordcount: '841'
-ht-degree: 26%
+ht-degree: 28%
 
 ---
 
-# Procurar ordens de trabalho do ciclo de vida dos dados {#browse-work-orders}
+# Navegar pelas ordens de trabalho do ciclo de vida dos dados {#browse-work-orders}
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_workorders"
@@ -60,7 +60,7 @@ Os filtros a seguir se aplicam às solicitações de expiração do conjunto de 
 
 {style="table-layout:auto"}
 
-## Exibir os detalhes de uma ordem de serviço {#view-details}
+## Exibir os detalhes de uma ordem de trabalho {#view-details}
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_statusbyservice"

@@ -5,11 +5,11 @@ exl-id: 7199151a-5390-4150-8a1d-daf53b7a1f5b
 source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
 workflow-type: tm+mt
 source-wordcount: '225'
-ht-degree: 35%
+ht-degree: 36%
 
 ---
 
-# Guia da interface do usuário do ciclo de vida dos dados {#lifecycle-ui-guide}
+# Manual da interface do ciclo de vida dos dados {#lifecycle-ui-guide}
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_privacyconsole_consumer"

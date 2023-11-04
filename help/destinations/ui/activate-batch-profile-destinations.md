@@ -7,7 +7,7 @@ exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
 source-git-commit: a854960b11cb3e56046dc9541f76c62a7e3f2f10
 workflow-type: tm+mt
 source-wordcount: '3720'
-ht-degree: 11%
+ht-degree: 12%
 
 ---
 
@@ -62,7 +62,7 @@ Você pode selecionar entre vários tipos de públicos-alvo, dependendo de sua o
 >
 >Seleção de públicos-alvo originados de **[!UICONTROL Uploads personalizados]** ativa automaticamente a variável [Selecionar atributos de enriquecimento](#select-enrichment-attributes) etapa.
 
-## Agendar exportação de público {#scheduling}
+## Programar exportação de público-alvo {#scheduling}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_schedule"
@@ -432,9 +432,9 @@ Como solução temporária, se você precisar adicionar namespaces de identidade
 
 >[!IMPORTANT]
 > 
->Todos os destinos de armazenamento em nuvem no catálogo podem visualizar uma [[!UICONTROL Mapeamento] etapa](#mapping) que substitui a **[!UICONTROL Selecionar atributos]** etapa descrita nesta seção.
+Todos os destinos de armazenamento em nuvem no catálogo podem visualizar uma [[!UICONTROL Mapeamento] etapa](#mapping) que substitui a **[!UICONTROL Selecionar atributos]** etapa descrita nesta seção.
 >
->Este **[!UICONTROL Selecionar atributos]** A etapa ainda é exibida para os destinos de marketing por email do Marketing Cloud do Adobe Campaign, Oracle Responsys, Oracle Eloqua e Salesforce.
+Este **[!UICONTROL Selecionar atributos]** A etapa ainda é exibida para os destinos de marketing por email do Marketing Cloud do Adobe Campaign, Oracle Responsys, Oracle Eloqua e Salesforce.
 
 Para destinos baseados em perfil, você deve selecionar os atributos de perfil que deseja enviar ao destino.
 
@@ -454,15 +454,15 @@ Para destinos baseados em perfil, você deve selecionar os atributos de perfil q
 
 >[!NOTE]
 >
-> O Adobe Experience Platform preenche sua seleção com quatro atributos recomendados, usados com frequência a partir do esquema: `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.status`.
+O Adobe Experience Platform preenche sua seleção com quatro atributos recomendados, usados com frequência a partir do esquema: `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.status`.
 
 ![Imagem mostrando atributos recomendados preenchidos previamente na etapa de mapeamento do fluxo de trabalho de ativação de público-alvo.](../assets/ui/activate-batch-profile-destinations/prefilled-fields.png)
 
 >[!IMPORTANT]
 >
->Devido a uma limitação conhecida, não é possível usar o **[!UICONTROL Selecionar campo]** janela para adicionar `segmentMembership.status` para suas exportações de arquivo. Em vez disso, cole manualmente o valor `xdm: segmentMembership.status` no campo schema, conforme mostrado abaixo.
+Devido a uma limitação conhecida, não é possível usar o **[!UICONTROL Selecionar campo]** janela para adicionar `segmentMembership.status` para suas exportações de arquivo. Em vez disso, cole manualmente o valor `xdm: segmentMembership.status` no campo schema, conforme mostrado abaixo.
 >
->![Gravação de tela mostrando a solução alternativa de associação de público na etapa de mapeamento do fluxo de trabalho de ativação.](..//assets/ui/activate-batch-profile-destinations/segment-membership.gif)
+![Gravação de tela mostrando a solução alternativa de associação de público na etapa de mapeamento do fluxo de trabalho de ativação.](..//assets/ui/activate-batch-profile-destinations/segment-membership.gif)
 
 As exportações de arquivos variam das seguintes maneiras, dependendo se `segmentMembership.status` está selecionado:
 * Se a variável `segmentMembership.status` for selecionado, os arquivos exportados serão **[!UICONTROL Ativo]** membros no instantâneo completo inicial e **[!UICONTROL Ativo]** e **[!UICONTROL Expirado]** membros em exportações incrementais subsequentes.
@@ -470,15 +470,15 @@ As exportações de arquivos variam das seguintes maneiras, dependendo se `segme
 
 ## Selecionar atributos de enriquecimento {#select-enrichment-attributes}
 
->[!CONTEXTUALHELP]
->id="platform_destinations_activate_exclude_enrichment_attributes"
->title="Excluir atributos de enriquecimento"
->abstract="Habilite essa opção para exportar os perfis dos públicos-alvo personalizados enviados que foram selecionados para o seu destino, enquanto exclui todos os atributos deles."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=pt-BR#select-enrichment-attributes" text="Saiba mais na documentação"
+[!CONTEXTUALHELP]
+id="platform_destinations_activate_exclude_enrichment_attributes"
+title="Excluir atributos de enriquecimento"
+abstract="Habilite essa opção para exportar os perfis dos públicos-alvo personalizados enviados que foram selecionados para o seu destino, enquanto exclui todos os atributos deles."
+additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=pt-BR#select-enrichment-attributes" text="Saiba mais na documentação"
 
 >[!IMPORTANT]
 >
->Esta etapa só será exibida se você tiver selecionado **[!UICONTROL Upload personalizado]** públicos-alvo durante o [seleção de público](#select-audiences) etapa.
+Esta etapa só será exibida se você tiver selecionado **[!UICONTROL Upload personalizado]** públicos-alvo durante o [seleção de público](#select-audiences) etapa.
 
 Os atributos de enriquecimento correspondem aos públicos-alvo carregados personalizados assimilados no Experience Platform como **[!UICONTROL Uploads personalizados]**. Nesta etapa, você pode selecionar quais atributos deseja exportar para o seu destino, para cada público externo selecionado.
 
@@ -507,12 +507,12 @@ No **[!UICONTROL Revisão]** você poderá ver um resumo da sua seleção. Selec
 
 ![Resumo da seleção na etapa de revisão.](../assets/ui/activate-batch-profile-destinations/review.png)
 
-### Avaliação de política de consentimento {#consent-policy-evaluation}
+### Avaliação da política de consentimento {#consent-policy-evaluation}
 
->[!CONTEXTUALHELP]
->id="platform_governance_policies_viewApplicableConsentPolicies"
->title="Exibir políticas de consentimento aplicáveis"
->abstract="Se sua organização adquiriu o **Adobe Healthcare Shield** ou o **Adobe Privacy &amp; Security Shield**, selecione **[!UICONTROL Exibir políticas de consentimento aplicáveis]** para ver quais políticas de consentimento são aplicadas e quantos perfis são incluídos na ativação como resultado delas. Esse controle será desabilitado se a empresa não tiver acesso às SKUs mencionadas acima."
+[!CONTEXTUALHELP]
+id="platform_governance_policies_viewApplicableConsentPolicies"
+title="Exibir políticas de consentimento aplicáveis"
+abstract="Se sua organização adquiriu o **Adobe Healthcare Shield** ou o **Adobe Privacy &amp; Security Shield**, selecione **[!UICONTROL Exibir políticas de consentimento aplicáveis]** para ver quais políticas de consentimento são aplicadas e quantos perfis são incluídos na ativação como resultado delas. Esse controle será desabilitado se a empresa não tiver acesso às SKUs mencionadas acima."
 
 Se sua organização adquiriu o **Adobe Healthcare Shield** ou o **Adobe Privacy &amp; Security Shield**, selecione **[!UICONTROL Exibir políticas de consentimento aplicáveis]** para ver quais políticas de consentimento são aplicadas e quantos perfis são incluídos na ativação como resultado delas. Ler sobre [avaliação da política de consentimento](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) para obter mais informações.
 

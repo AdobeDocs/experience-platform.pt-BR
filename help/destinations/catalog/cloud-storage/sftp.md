@@ -5,7 +5,7 @@ exl-id: 27abfc38-ec19-4321-b743-169370d585a0
 source-git-commit: 93b1c26e85ddd0fa232b26712f88faa824f19f30
 workflow-type: tm+mt
 source-wordcount: '1017'
-ht-degree: 10%
+ht-degree: 11%
 
 ---
 
@@ -120,7 +120,7 @@ Depois de estabelecer a conexão de autenticação com o local SFTP, forneça as
    * `exportResults.name`: o nome do arquivo exportado.
    * `size`: o tamanho do arquivo exportado, em bytes.
 
-## Ativar públicos para este destino {#activate}
+## Ativar públicos-alvo para esse destino {#activate}
 
 >[!IMPORTANT]
 > 

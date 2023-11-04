@@ -6,7 +6,7 @@ exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
 source-git-commit: a1b3e59e0d5b1312b7bc22885ee679775c2a4d78
 workflow-type: tm+mt
 source-wordcount: '1481'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -191,7 +191,7 @@ Com o seu [!DNL Data Landing Zone] contêiner conectado a [!DNL Azure Storage Ex
 
 Para se conectar a esse destino, siga as etapas descritas no [tutorial de configuração de destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html). No workflow da configuração de destino, preencha os campos listados nas duas seções abaixo.
 
-### Autenticar para destino {#authenticate}
+### Autenticar para o destino {#authenticate}
 
 Verifique se você conectou o [!DNL Data Landing Zone] contêiner para [!DNL Azure Storage Explorer] conforme descrito na seção [pré-requisitos](#prerequisites) seção. Porque [!DNL Data Landing Zone] é um armazenamento provisionado por Adobe, não é necessário executar outras etapas na interface do usuário do Experience Platform para autenticar no destino.
 
@@ -217,7 +217,7 @@ Você pode ativar os alertas para receber notificações sobre o status do fluxo
 
 Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICONTROL Próxima]**.
 
-## Ativar públicos para este destino {#activate}
+## Ativar públicos-alvo para esse destino {#activate}
 
 >[!IMPORTANT]
 > 

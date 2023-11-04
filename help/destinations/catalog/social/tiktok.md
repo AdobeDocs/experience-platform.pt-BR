@@ -6,7 +6,7 @@ exl-id: 7b12d17f-7d9a-4615-9830-92bffe3f6927
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
 source-wordcount: '1040'
-ht-degree: 5%
+ht-degree: 6%
 
 ---
 
@@ -66,7 +66,7 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 
 Para se conectar a esse destino, siga as etapas descritas no [tutorial de configuração de destino](../../ui/connect-destination.md). No workflow de configuração de destino, preencha os campos listados nas duas seções abaixo.
 
-### Autenticar para destino {#authenticate}
+### Autenticar para o destino {#authenticate}
 
 Para autenticar no destino, você será redirecionado para fazer logon no [!DNL TikTok Ads Manager] e autorize o Adobe a gerenciar públicos-alvo em seu nome.
 
@@ -90,7 +90,7 @@ Você pode ativar os alertas para receber notificações sobre o status do fluxo
 
 Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICONTROL Próxima]**.
 
-## Ativar públicos para este destino {#activate}
+## Ativar públicos-alvo para esse destino {#activate}
 
 >[!IMPORTANT]
 > 

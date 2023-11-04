@@ -59,7 +59,7 @@ O Aprendizado de Máquina em Tempo Real está atualmente em alfa. A funcionalida
 
 >[!NOTE]
 >
-> Limitações alfa:
+> Limitações de Alpha:
 > - Atualmente, somente os modelos baseados em ONNX são compatíveis.
 > - As funções usadas em nós não podem ser serializadas. Por exemplo, uma função lambda usada em um nó Pandas.
 > - Há um sono de 20 segundos depois [!DNL Edge] a implantação é feita manualmente.
@@ -68,7 +68,7 @@ O Aprendizado de Máquina em Tempo Real está atualmente em alfa. A funcionalida
 
 ### Recursos:
 
-| | Alfa (maio) |
+| | Alpha (maio) |
 | --- | --- |
 | **Recursos** | - Uso do modelo de bloco de anotações RTML, crie, teste e implante um modelo de aprendizado de máquina personalizado. <br> - Suporte para importação de modelos de aprendizado de máquina pré-treinados. <br> - SDK de aprendizado de máquina em tempo real. <br> - Conjunto inicial de nós de criação. <br> - Implantado no Adobe Experience Platform Hub. |
 | **Disponibilidade** | América do Norte |

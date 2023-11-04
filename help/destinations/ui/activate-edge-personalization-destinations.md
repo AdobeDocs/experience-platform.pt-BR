@@ -174,7 +174,7 @@ Para adicionar atributos de destino, selecione a variável **[!UICONTROL Adicion
 
 ![Gravação de tela mostrando como selecionar um atributo XDM na etapa de mapeamento](../assets/ui/activate-edge-personalization-destinations/mapping-step-select-target-attribute.gif)
 
-## Agendar exportação de público {#scheduling}
+## Programar exportação de público-alvo {#scheduling}
 
 Por padrão, a variável [!UICONTROL Programação de público] A página mostra apenas os públicos-alvo recém-selecionados que você escolheu no fluxo de ativação atual.
 
@@ -194,7 +194,7 @@ No **[!UICONTROL Revisão]** você poderá ver um resumo da sua seleção. Selec
 
 ![Resumo da seleção na etapa de revisão.](../assets/ui/activate-edge-personalization-destinations/review.png)
 
-### Avaliação de política de consentimento {#consent-policy-evaluation}
+### Avaliação da política de consentimento {#consent-policy-evaluation}
 
 Se sua organização adquiriu o **Adobe Healthcare Shield** ou o **Adobe Privacy &amp; Security Shield**, selecione **[!UICONTROL Exibir políticas de consentimento aplicáveis]** para ver quais políticas de consentimento são aplicadas e quantos perfis são incluídos na ativação como resultado delas. Ler sobre [avaliação da política de consentimento](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) para obter mais informações.
 

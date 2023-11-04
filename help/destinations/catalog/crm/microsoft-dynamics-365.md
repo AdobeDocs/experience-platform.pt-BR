@@ -7,7 +7,7 @@ exl-id: 49bb5c95-f4b7-42e1-9aae-45143bbb1d73
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
 source-wordcount: '2154'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -117,7 +117,7 @@ Para se conectar a esse destino, siga as etapas descritas no [tutorial de config
 
 Dentro de **[!UICONTROL Destinos]** > **[!UICONTROL Catálogo]** pesquisar [!DNL Dynamics 365]. Como alternativa, você pode localizá-lo na **[!UICONTROL CRM]** categoria.
 
-### Autenticar para destino {#authenticate}
+### Autenticar para o destino {#authenticate}
 
 Para autenticar no destino, selecione **[!UICONTROL Conectar ao destino]**.
 ![Captura de tela da interface do usuário da plataforma mostrando como autenticar.](../../assets/catalog/crm/microsoft-dynamics-365/authenticate-destination.png)
@@ -146,7 +146,7 @@ Você pode ativar os alertas para receber notificações sobre o status do fluxo
 
 Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICONTROL Próxima]**.
 
-## Ativar públicos para este destino {#activate}
+## Ativar públicos-alvo para esse destino {#activate}
 
 >[!IMPORTANT]
 > 

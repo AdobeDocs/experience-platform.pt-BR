@@ -7,7 +7,7 @@ exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
 source-git-commit: 9c07664873f649645db57a9a025277f515333b1e
 workflow-type: tm+mt
 source-wordcount: '4401'
-ht-degree: 3%
+ht-degree: 6%
 
 ---
 
@@ -47,9 +47,9 @@ If you were already using the Flow Service API to export profiles to the Amazon 
 
 ![Etapas para ativar públicos destacando a etapa atual em que o usuário está](/help/destinations/assets/api/file-based-segment-export/segment-export-overview.png)
 
-Este guia requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
+Este manual necessita de uma compreensão funcional dos seguintes componentes da Adobe Experience Platform:
 
-* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): o quadro normalizado pelo qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
+* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): a estrutura padronizada pela qual a [!DNL Experience Platform] organiza os dados de experiência do cliente.
 * [[!DNL Segmentation Service]](../../segmentation/api/overview.md): [!DNL Adobe Experience Platform Segmentation Service] O permite criar e gerar públicos-alvo no [!DNL Adobe Experience Platform] do seu [!DNL Real-Time Customer Profile] dados.
 * [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] O fornece sandboxes virtuais que particionam uma única [!DNL Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
@@ -63,11 +63,11 @@ Para exportar *identidades*, você precisará do **[!UICONTROL Exibir gráfico d
 
 ### Leitura de chamadas de API de amostra {#reading-sample-api-calls}
 
-Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O exemplo de JSON retornado nas respostas da API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de exemplo, consulte a seção sobre [como ler chamadas de API de exemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) no [!DNL Experience Platform] guia de solução de problemas.
+Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e conteúdos de solicitação formatados corretamente. Também fornece exemplos de JSON retornado nas respostas da API. Para obter informações sobre as convenções usadas na documentação para chamadas de API de exemplo, consulte a seção sobre [como ler chamadas de API de exemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) no manual de solução de problemas da [!DNL Experience Platform].
 
 ### Colete valores para cabeçalhos obrigatórios e opcionais {#gather-values-headers}
 
-Para fazer chamadas para [!DNL Platform] APIs, primeiro conclua o [Tutorial de autenticação Experience Platform](https://www.adobe.com/go/platform-api-authentication-en). Concluir o tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todos os [!DNL Experience Platform] Chamadas de API, conforme mostrado abaixo:
+Para fazer chamadas para [!DNL Platform] APIs, primeiro conclua o [Tutorial de autenticação Experience Platform](https://www.adobe.com/go/platform-api-authentication-en). Concluir o tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API da [!DNL Experience Platform], conforme mostrado abaixo:
 
 * Autorização: Portador `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
@@ -372,7 +372,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 Uma resposta bem-sucedida retorna a ID (`id`) da conexão de origem recém-criada e um `etag`. Anote a ID da conexão de origem, pois ela será necessária posteriormente ao criar o fluxo de dados.
 
-## Criar uma conexão básica {#create-base-connection}
+## Crie uma conexão básica {#create-base-connection}
 
 ![Etapas para ativar públicos destacando a etapa atual em que o usuário está](/help/destinations/assets/api/file-based-segment-export/step3.png)
 
@@ -2896,7 +2896,7 @@ Observe que `target connection ID` da resposta. Essa ID será necessária na pr�
 
 Uma resposta bem-sucedida retorna a ID (`id`) da conexão de origem de destino recém-criada e um `etag`. Anote a ID de conexão de destino, pois ela será necessária posteriormente ao criar o fluxo de dados.
 
-## Criar um fluxo de dados {#create-dataflow}
+## Crie um fluxo de dados {#create-dataflow}
 
 ![Etapas para ativar públicos destacando a etapa atual em que o usuário está](/help/destinations/assets/api/file-based-segment-export/step5.png)
 

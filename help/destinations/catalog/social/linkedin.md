@@ -6,7 +6,7 @@ exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
 source-git-commit: 05e996f9e33e0d8be3d15a9ab3baaaf6d8152b5a
 workflow-type: tm+mt
 source-wordcount: '1103'
-ht-degree: 2%
+ht-degree: 4%
 
 ---
 
@@ -112,7 +112,7 @@ O vídeo abaixo também demonstra as etapas para configurar um [!DNL LinkedIn Ma
 >
 >A interface do usuário do Experience Platform é atualizada com frequência e pode ter mudado desde a gravação deste vídeo. Para obter as informações mais atualizadas, consulte as [tutorial de configuração de destino](../../ui/connect-destination.md).
 
-### Autenticar para destino {#authenticate}
+### Autenticar para o destino {#authenticate}
 
 1. Localize o [!DNL LinkedIn Matched Audiences] no catálogo de destino e selecione **[!UICONTROL Configurar]**.
 2. Selecionar **[!UICONTROL Conectar ao destino]**.
@@ -138,7 +138,7 @@ Você pode ativar os alertas para receber notificações sobre o status do fluxo
 
 Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICONTROL Próxima]**.
 
-## Ativar públicos para este destino {#activate}
+## Ativar públicos-alvo para esse destino {#activate}
 
 >[!IMPORTANT]
 > 

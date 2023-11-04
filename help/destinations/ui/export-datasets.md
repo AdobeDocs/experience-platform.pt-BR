@@ -121,7 +121,7 @@ Use as caixas de seleção à esquerda dos nomes dos conjuntos de dados para sel
 
 ![Fluxo de trabalho de exportação do conjunto de dados mostrando a etapa Selecionar conjuntos de dados, onde é possível selecionar quais conjuntos de dados serão exportados.](/help/destinations/assets/ui/export-datasets/select-datasets.png)
 
-## Agendar exportação do conjunto de dados {#scheduling}
+## Programar exportação do conjunto de dados {#scheduling}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_datasets_exportoptions"

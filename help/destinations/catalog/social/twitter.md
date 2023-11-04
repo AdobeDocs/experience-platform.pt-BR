@@ -5,7 +5,7 @@ exl-id: fd244e58-cd94-4de7-81e4-c321eb673b65
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
 source-wordcount: '874'
-ht-degree: 4%
+ht-degree: 5%
 
 ---
 
@@ -71,7 +71,7 @@ Direcione seus seguidores e clientes existentes no Twitter e crie campanhas de r
 
 Para se conectar a esse destino, siga as etapas descritas no [tutorial de configuração de destino](../../ui/connect-destination.md). No workflow de configuração de destino, preencha os campos listados nas duas seções abaixo.
 
-### Autenticar para destino {#authenticate}
+### Autenticar para o destino {#authenticate}
 
 1. Localize o [!DNL Twitter Custom Audiences] no catálogo de destino e selecione **[!UICONTROL Configurar]**.
 2. Selecionar **[!UICONTROL Conectar ao destino]**.
@@ -97,7 +97,7 @@ Você pode ativar os alertas para receber notificações sobre o status do fluxo
 
 Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICONTROL Próxima]**.
 
-## Ativar públicos para este destino {#activate}
+## Ativar públicos-alvo para esse destino {#activate}
 
 >[!IMPORTANT]
 > 

@@ -6,7 +6,7 @@ exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
 source-git-commit: 05e996f9e33e0d8be3d15a9ab3baaaf6d8152b5a
 workflow-type: tm+mt
 source-wordcount: '1941'
-ht-degree: 6%
+ht-degree: 7%
 
 ---
 
@@ -145,7 +145,7 @@ O vídeo abaixo também demonstra as etapas para configurar um [!DNL Facebook] d
 >
 >A interface do usuário do Experience Platform é atualizada com frequência e pode ter mudado desde a gravação deste vídeo. Para obter as informações mais atualizadas, consulte as [tutorial de configuração de destino](../../ui/connect-destination.md).
 
-### Autenticar para destino {#authenticate}
+### Autenticar para o destino {#authenticate}
 
 1. Localize o destino do Facebook no catálogo de destino e selecione **[!UICONTROL Configurar]**.
 2. Selecionar **[!UICONTROL Conectar ao destino]**.
@@ -171,11 +171,11 @@ Você pode ativar os alertas para receber notificações sobre o status do fluxo
 
 Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICONTROL Próxima]**.
 
-## Ativar públicos para este destino {#activate}
+## Ativar públicos-alvo para esse destino {#activate}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_facebook_originofaudience"
->title="Origem do público"
+>title="Origem do público-alvo"
 >abstract="Escolha como os dados do cliente no público-alvo foram coletados originalmente. Os dados serão exibidos no Facebook quando um usuário for direcionado pelo segmento"
 
 >[!CONTEXTUALHELP]

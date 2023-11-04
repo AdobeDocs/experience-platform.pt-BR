@@ -6,7 +6,7 @@ exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
 source-wordcount: '1148'
-ht-degree: 4%
+ht-degree: 5%
 
 ---
 
@@ -97,7 +97,7 @@ Antes de enviar ou ativar dados de público-alvo para um destino, você deve con
 
 Ao se conectar ao destino, definir uma política de governança de dados é totalmente opcional. Revise o Experience Platform [visão geral da governança de dados](/help/data-governance/policies/overview.md) para obter mais detalhes.
 
-## Ativar públicos para este destino {#activate}
+## Ativar públicos-alvo para esse destino {#activate}
 
 >[!IMPORTANT]
 > 

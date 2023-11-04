@@ -6,7 +6,7 @@ exl-id: ab274270-ae8c-4264-ba64-700b118e6435
 source-git-commit: 661ef040398a9e2ef8dd9cebdf7bd27d4268636b
 workflow-type: tm+mt
 source-wordcount: '1108'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -67,7 +67,7 @@ Você pode usar a ID da chave de acesso recém-gerada e a chave de acesso secret
 
 Para se conectar a esse destino, siga as etapas descritas no [tutorial de configuração de destino](/help/destinations/ui/connect-destination.md). No workflow da configuração de destino, preencha os campos listados nas duas seções abaixo.
 
-### Autenticar para destino {#authenticate}
+### Autenticar para o destino {#authenticate}
 
 Para autenticar no destino, preencha os campos obrigatórios e selecione **[!UICONTROL Conectar ao destino]**.
 
@@ -102,7 +102,7 @@ Você pode ativar os alertas para receber notificações sobre o status do fluxo
 
 Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICONTROL Próxima]**.
 
-## Ativar públicos para este destino {#activate}
+## Ativar públicos-alvo para esse destino {#activate}
 
 >[!IMPORTANT]
 > 

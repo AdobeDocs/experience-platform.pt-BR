@@ -6,7 +6,7 @@ exl-id: 97ff41a2-2edd-4608-9557-6b28e74c4480
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
 source-wordcount: '2156'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -92,7 +92,7 @@ Para se conectar a esse destino, siga as etapas descritas no [tutorial de config
 
 Dentro de **[!UICONTROL Destinos]** > **[!UICONTROL Catálogo]** pesquisar [!DNL (API) Oracle Eloqua]. Como alternativa, você pode localizá-lo na **[!UICONTROL Marketing por email]** categoria.
 
-### Autenticar para destino {#authenticate}
+### Autenticar para o destino {#authenticate}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_apioracleeloqua_companyname_username"
@@ -129,7 +129,7 @@ Você pode ativar os alertas para receber notificações sobre o status do fluxo
 
 Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICONTROL Próxima]**.
 
-## Ativar públicos para este destino {#activate}
+## Ativar públicos-alvo para esse destino {#activate}
 
 >[!IMPORTANT]
 > 

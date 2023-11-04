@@ -220,7 +220,7 @@ Além disso, é possível limitar o número de públicos-alvo retornados ativand
 
 ![A opção Add profile limit está realçada, o que permite limitar o número de públicos-alvo retornados.](../images/ui/audience-composition/add-profile-limit.png)
 
-## [!UICONTROL Dividir] {#split-block}
+## [!UICONTROL Divisão] {#split-block}
 
 A variável **[!UICONTROL Split]** o tipo de bloco permite dividir o novo público em vários subpúblicos. Você pode dividir esse público com base na porcentagem ou por um atributo.
 

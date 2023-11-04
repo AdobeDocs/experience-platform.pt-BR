@@ -7,7 +7,7 @@ exl-id: 9981798a-61f2-4a09-9a33-57e63eb36d43
 source-git-commit: 05e996f9e33e0d8be3d15a9ab3baaaf6d8152b5a
 workflow-type: tm+mt
 source-wordcount: '1214'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
@@ -82,7 +82,7 @@ Para se conectar a esse destino, siga as etapas descritas no [tutorial de config
 
 Dentro de **[!UICONTROL Destinos]** > **[!UICONTROL Catálogo]** pesquisar [!DNL LINE]. Como alternativa, você pode localizá-lo na **[!UICONTROL Engajamento móvel]** categoria.
 
-### Autenticar para destino {#authenticate}
+### Autenticar para o destino {#authenticate}
 
 Para autenticar no destino, selecione **[!UICONTROL Conectar ao destino]**.
 ![Captura de tela da interface do usuário da plataforma mostrando como autenticar.](../../assets/catalog/mobile-engagement/line/authenticate-destination.png)
@@ -107,7 +107,7 @@ Você pode ativar os alertas para receber notificações sobre o status do fluxo
 
 Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICONTROL Próxima]**.
 
-## Ativar públicos para este destino {#activate}
+## Ativar públicos-alvo para esse destino {#activate}
 
 >[!IMPORTANT]
 > 

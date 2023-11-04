@@ -5,7 +5,7 @@ exl-id: 0546da5d-d50d-43ec-bbc2-9468a7db4d90
 source-git-commit: 05e996f9e33e0d8be3d15a9ab3baaaf6d8152b5a
 workflow-type: tm+mt
 source-wordcount: '1047'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
@@ -66,7 +66,7 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 
 Para se conectar a esse destino, siga as etapas descritas no [tutorial de configuração de destino](../../ui/connect-destination.md). No workflow de configuração de destino, preencha os campos listados nas duas seções abaixo.
 
-### Autenticar para destino {#authenticate}
+### Autenticar para o destino {#authenticate}
 
 #### Autenticação de Credenciais de Cliente OAuth 2 {#oauth-2-client-credentials-authentication}
 
@@ -90,7 +90,7 @@ Para configurar detalhes para o destino, preencha os campos obrigatórios e sele
 * **[!UICONTROL Descrição]**: uma descrição que ajudará você a identificar esse destino no futuro.
 * **[!UICONTROL Nome do host]**: o Nome de host do Pega Customer Decision Hub para o qual o perfil é exportado como dados json.
 
-## Ativar públicos para este destino {#activate}
+## Ativar públicos-alvo para esse destino {#activate}
 
 >[!IMPORTANT]
 > 

@@ -7,7 +7,7 @@ exl-id: 3289ed4c-8542-4e22-a574-e49cc6527a24
 source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
 workflow-type: tm+mt
 source-wordcount: '1149'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -85,7 +85,7 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 
 Para se conectar a esse destino, siga as etapas descritas no [tutorial de configuração de destino](../../ui/connect-destination.md). No workflow de configuração de destino, preencha os campos listados nas duas seções abaixo.
 
-### Autenticar para destino {#authenticate}
+### Autenticar para o destino {#authenticate}
 
 Como parte da autenticação, você precisará fornecer uma **Nome de usuário** e **Senha**. O nome de usuário é seu nome de usuário do Qualtrics e a senha é o token de API da sua conta do Qualtrics. Para recuperar o token da API, siga as instruções do **Pré-requisitos** acima.
 
@@ -107,7 +107,7 @@ Você pode ativar os alertas para receber notificações sobre o status do fluxo
 
 Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICONTROL Próxima]**.
 
-## Ativar públicos para este destino {#activate}
+## Ativar públicos-alvo para esse destino {#activate}
 
 >[!IMPORTANT]
 > 

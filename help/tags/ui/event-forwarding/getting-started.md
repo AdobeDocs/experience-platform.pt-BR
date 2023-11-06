@@ -3,10 +3,10 @@ title: Introdução ao encaminhamento de eventos
 description: Siga este tutorial passo a passo para começar a usar o encaminhamento de eventos na Adobe Experience Platform.
 feature: Event Forwarding
 exl-id: f82bfac9-dc2d-44de-a308-651300f107df
-source-git-commit: 45d881a810782f734ed030fbf29e802fa535400a
+source-git-commit: 05170986263b6eed2d19a65e34f70dc28eb8ba2f
 workflow-type: tm+mt
-source-wordcount: '868'
-ht-degree: 76%
+source-wordcount: '870'
+ht-degree: 77%
 
 ---
 
@@ -20,7 +20,7 @@ Para usar a Adobe Experience Platform, os dados devem ser enviados à borda da r
 
 * [SDK da Web da Adobe Experience Platform](../../extensions/client/web-sdk/overview.md)
 * [SDK móvel da Adobe Experience Platform](https://sdkdocs.com)
-* [API servidor para servidor](/help/server-api/overview.md)
+* [API do servidor da rede de borda](/help/server-api/overview.md)
 
 >[!NOTE]
 >O SDK da Web da Platform e o SDK móvel da Platform não exigem implantação por meio de tags na Adobe Experience Platform. No entanto, a utilização de tags para implantar esses SDKs é a abordagem recomendada.

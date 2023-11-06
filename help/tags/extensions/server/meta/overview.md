@@ -2,9 +2,9 @@
 title: Visão geral da extensão da API de meta conversões
 description: Saiba mais sobre a extensão da API de meta conversões para encaminhamento de eventos no Adobe Experience Platform.
 exl-id: 6b5836d6-6674-4978-9165-0adc1d7087b7
-source-git-commit: d55398f328f3f85ce6b32a2553e7a93df3584f02
+source-git-commit: b11aff782a44237e6e4ae87254163713883e3ded
 workflow-type: tm+mt
-source-wordcount: '2624'
+source-wordcount: '2595'
 ht-degree: 0%
 
 ---
@@ -67,9 +67,9 @@ A integração com a Pontuação de correspondência de qualidade do evento (EMQ
 
 ## Integração com o LiveRamp (Alpha) {#alpha}
 
-A integração com o LiveRamp adiciona novos campos à configuração de regras da API de meta conversões, facilitando a integração dos clientes com a API de conversões do LiveRamp. Essa integração elimina a necessidade de compartilhar PII diretamente com seu parceiro ou Meta. Devido ao gráfico de identidade robusto do LiveRamp, a inclusão de [!UICONTROL ID do parceiro (alfa)] podem melhorar a qualidade da integração, aumentando a taxa de correspondência do usuário.
+[!DNL LiveRamp] clientes que têm [!DNL LiveRamp]A Authenticated Traffic Solution (ATS) do implantada em seus sites pode optar por compartilhar RampIDs como um parâmetro de informações do cliente. Trabalhe com o seu [!DNL Meta] equipe de conta para participar do programa Alpha para este recurso.
 
-![O encaminhamento de meta evento [!UICONTROL Regra] realce da página de configuração [!UICONTROL Nome do parceiro (alfa)] e [!UICONTROL ID do parceiro (alfa)].](../../../images/extensions/server/meta/live-ramp.png)
+![O encaminhamento de metadados [!UICONTROL Regra] realce da página de configuração [!UICONTROL Nome do parceiro (alfa)] e [!UICONTROL ID do parceiro (alfa)].](../../../images/extensions/server/meta/live-ramp.png)
 
 ## Configurar uma regra de encaminhamento de eventos {#rule}
 

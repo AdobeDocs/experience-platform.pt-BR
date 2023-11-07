@@ -3,9 +3,9 @@ keywords: Experience Platform;perfil;perfil de cliente em tempo real;solução d
 title: Tipo de dados de consentimentos e preferências
 description: O tipo de dados Consentimento para privacidade, personalização e preferências de marketing é destinado a oferecer suporte à coleção de permissões e preferências do cliente geradas pelas Plataformas de gerenciamento de consentimento (CMPs) e outras fontes das operações de dados.
 exl-id: cdcc7b04-eeb9-40d3-b0b5-f736a5472621
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: 70ea0aa74f1874ea2772dd0d961c98d2ac1137e8
 workflow-type: tm+mt
-source-wordcount: '2033'
+source-wordcount: '2294'
 ht-degree: 1%
 
 ---
@@ -295,23 +295,23 @@ A tabela a seguir descreve os valores aceitos para `val`:
 
 ### Valores aceitos para `preferred` {#preferred-values}
 
-A tabela a seguir descreve os valores aceitos para `preferred`:
+A tabela a seguir descreve os valores aceitos para `preferred`. A variável `preferred` Os valores de indicam o canal de preferência do cliente para receber comunicações que informariam sobre coleta de dados, políticas de privacidade e opções de personalização.
 
 | Valor | Descrição |
 | --- | --- |
-| `email` | Email messages. |
-| `push` | Notificações por push. |
-| `inApp` | Mensagens no aplicativo. |
-| `sms` | Mensagens SMS. |
-| `phone` | Interações de telefonema. |
-| `phyMail` | Correio físico. |
-| `inVehicle` | Mensagens no veículo. |
-| `inHome` | Mensagens em casa. |
-| `iot` | Mensagens da Internet das coisas (IoT). |
-| `social` | Conteúdo de redes sociais. |
-| `other` | Um canal que não se encaixa em uma categoria padrão. |
-| `none` | Nenhum canal preferido. |
-| `unknown` | O canal preferido é desconhecido. |
+| `email` | Esta preferência indica o consentimento do cliente para receber mensagens por email. |
+| `push` | Esta preferência indica o consentimento do cliente para receber notificações por push. São mensagens ou alertas enviados diretamente ao dispositivo, geralmente um aplicativo móvel. |
+| `inApp` | Esta preferência indica o consentimento do cliente para receber mensagens no aplicativo. Essas mensagens são entregues em um aplicativo móvel ou Web e fornecem informações enquanto o usuário está ativamente envolvido no aplicativo. |
+| `sms` | Esta preferência indica o consentimento do cliente para receber mensagens via SMS (Short Message Service). São mensagens de texto enviadas para o celular deles. |
+| `phone` | Esta preferência indica o consentimento do cliente para receber comunicações por meio de interações de chamada telefônica. |
+| `phyMail` | Esta preferência indica o consentimento do cliente para receber material por correio físico. |
+| `inVehicle` | Esta preferência indica o consentimento do cliente para receber notificações enquanto estiver em seu veículo. Estas mensagens podem ser entregues através de sistemas de informação do veículo ou outros canais de comunicação no veículo. |
+| `inHome` | Esta preferência indica o consentimento do cliente para receber mensagens em casa. Essas mensagens podem ser entregues por meio de dispositivos residenciais inteligentes ou outros canais de comunicação baseados em residências. |
+| `iot` | Esta preferência denota o consentimento do cliente para receber mensagens relacionadas à IoT (Internet das Coisas). Essas mensagens podem ser entregues por meio de dispositivos e sistemas conectados em seu ambiente. |
+| `social` | Esta preferência indica o consentimento do cliente para receber comunicações por meio de plataformas de redes sociais. |
+| `other` | Essa preferência engloba canais que não se encaixam em categorias padrão. Representa canais de comunicação alternativos ou especializados que podem ser específicos de uma determinada empresa ou indústria. |
+| `none` | Essa preferência indica que o cliente não tem um canal de comunicação preferido. |
+| `unknown` | Esta preferência significa que o canal de comunicação preferido do cliente não é conhecido ou não foi especificado. Isso pode ocorrer se o cliente não tiver fornecido consentimento explícito ou informações de preferência. |
 
 {style="table-layout:auto"}
 

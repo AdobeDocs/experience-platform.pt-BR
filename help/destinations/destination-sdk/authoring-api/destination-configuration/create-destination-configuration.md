@@ -2,7 +2,7 @@
 description: Saiba como estruturar uma chamada de API para criar uma configuração de destino por meio do Adobe Experience Platform Destination SDK.
 title: Criar uma configuração de destino
 exl-id: aae4aaa8-1dd0-4041-a86c-5c86f04d7d13
-source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
+source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
 workflow-type: tm+mt
 source-wordcount: '1205'
 ht-degree: 3%
@@ -16,7 +16,7 @@ Esta página exemplifica a solicitação de API e a carga que você pode usar pa
 Para obter uma descrição detalhada dos recursos que você pode configurar por meio desse endpoint, leia os seguintes artigos:
 
 * [Configuração de autenticação do cliente](../../functionality/destination-configuration/customer-authentication.md)
-* [Autenticação OAuth2](../../functionality/destination-configuration/oauth2-authorization.md)
+* [Autorização OAuth2](../../functionality/destination-configuration/oauth2-authorization.md)
 * [Campos de dados do cliente](../../functionality/destination-configuration/customer-data-fields.md)
 * [Atributos da interface](../../functionality/destination-configuration/ui-attributes.md)
 * [Configuração do esquema](../../functionality/destination-configuration/schema-configuration.md)

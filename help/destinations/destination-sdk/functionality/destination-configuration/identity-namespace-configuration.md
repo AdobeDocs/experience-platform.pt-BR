@@ -2,7 +2,7 @@
 description: Saiba como configurar as identidades de destino compatíveis para destinos criados com o Destination SDK.
 title: Configuração do namespace de identidade
 exl-id: 30c0939f-b968-43db-b09b-ce5b34349c6e
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
 workflow-type: tm+mt
 source-wordcount: '841'
 ht-degree: 4%
@@ -145,7 +145,7 @@ Depois de ler este artigo, você deve entender melhor como configurar seus names
 Para saber mais sobre os outros componentes de destino, consulte os seguintes artigos:
 
 * [Autenticação do cliente](customer-authentication.md)
-* [Autenticação OAuth2](oauth2-authentication.md)
+* [Autenticação OAuth2](oauth2-authorization.md)
 * [Campos de dados do cliente](customer-data-fields.md)
 * [Atributos da interface](ui-attributes.md)
 * [Configuração do esquema](schema-configuration.md)

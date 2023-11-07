@@ -2,7 +2,7 @@
 description: Saiba como configurar um mecanismo de autenticação para seu destino e obter informações sobre o que os usuários verão na interface do usuário, dependendo do método de autenticação selecionado.
 title: Configuração de autenticação do cliente
 exl-id: 3912012e-0870-47d2-9a6f-7f1fc469a781
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
 workflow-type: tm+mt
 source-wordcount: '1094'
 ht-degree: 0%
@@ -105,7 +105,7 @@ Para configurar a autenticação de tipo de portador para o seu destino, configu
 
 ## Autenticação OAuth 2 {#oauth2}
 
-Os usuários selecionam **[!UICONTROL Conectar ao destino]** para acionar o fluxo de autenticação do OAuth 2 para o seu destino, como mostrado no exemplo abaixo para o destino de Públicos-alvo personalizados do Twitter. Para obter informações detalhadas sobre como configurar a autenticação OAuth 2 para o endpoint de destino, leia a seção dedicada [Página de autenticação OAuth 2 do Destination SDK](oauth2-authentication.md).
+Os usuários selecionam **[!UICONTROL Conectar ao destino]** para acionar o fluxo de autenticação do OAuth 2 para o seu destino, como mostrado no exemplo abaixo para o destino de Públicos-alvo personalizados do Twitter. Para obter informações detalhadas sobre como configurar a autenticação OAuth 2 para o endpoint de destino, leia a seção dedicada [Página de autenticação OAuth 2 do Destination SDK](oauth2-authorization.md).
 
 ![Renderização da interface do usuário com autenticação OAuth 2](../../assets/functionality/destination-configuration/oauth2-authentication-ui.png)
 
@@ -233,7 +233,7 @@ Depois de ler este artigo, você terá uma melhor compreensão de como configura
 
 Para saber mais sobre os outros componentes de destino, consulte os seguintes artigos:
 
-* [Autenticação OAuth2](oauth2-authentication.md)
+* [Autenticação OAuth2](oauth2-authorization.md)
 * [Campos de dados do cliente](customer-data-fields.md)
 * [Atributos da interface](ui-attributes.md)
 * [Configuração do esquema](schema-configuration.md)

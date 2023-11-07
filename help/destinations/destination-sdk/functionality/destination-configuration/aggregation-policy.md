@@ -2,7 +2,7 @@
 description: Saiba como configurar uma política de agregação para determinar como as solicitações HTTP para o seu destino devem ser agrupadas e armazenadas em lote.
 title: Política de agregação
 exl-id: 2dfa8815-2d69-4a22-8938-8ea41be8b9c5
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
 workflow-type: tm+mt
 source-wordcount: '995'
 ht-degree: 2%
@@ -127,7 +127,7 @@ Depois de ler este artigo, você deverá entender melhor como configurar as pol�
 Para saber mais sobre os outros componentes de destino, consulte os seguintes artigos:
 
 * [Configuração de autenticação do cliente](customer-authentication.md)
-* [Autenticação OAuth2](oauth2-authentication.md)
+* [Autenticação OAuth2](oauth2-authorization.md)
 * [Campos de dados do cliente](customer-data-fields.md)
 * [Atributos da interface](ui-attributes.md)
 * [Configuração do esquema](schema-configuration.md)

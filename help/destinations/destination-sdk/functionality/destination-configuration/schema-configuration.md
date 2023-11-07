@@ -2,7 +2,7 @@
 description: Saiba como configurar o esquema de parceiro para destinos criados com o Destination SDK.
 title: Configuração de esquema de parceiro
 exl-id: 0548e486-206b-45c5-8d18-0d6427c177c5
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
 workflow-type: tm+mt
 source-wordcount: '1897'
 ht-degree: 4%
@@ -246,7 +246,7 @@ Depois de ler este artigo, você deve entender melhor quais tipos de esquema sã
 Para saber mais sobre os outros componentes de destino, consulte os seguintes artigos:
 
 * [Autenticação do cliente](customer-authentication.md)
-* [Autenticação OAuth2](oauth2-authentication.md)
+* [Autenticação OAuth2](oauth2-authorization.md)
 * [Atributos da interface](ui-attributes.md)
 * [Campos de dados do cliente](customer-data-fields.md)
 * [Configuração do namespace de identidade](identity-namespace-configuration.md)

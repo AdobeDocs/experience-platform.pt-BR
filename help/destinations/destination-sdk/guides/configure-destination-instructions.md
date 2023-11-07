@@ -2,7 +2,7 @@
 description: Esta página lista e descreve as etapas para configurar um destino de transmissão usando o Destination SDK.
 title: Usar o Destination SDK para configurar um destino de transmissão
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
 workflow-type: tm+mt
 source-wordcount: '818'
 ht-degree: 0%
@@ -265,7 +265,7 @@ Se você usar uma configuração de metadados de público, deverá conectá-la �
 
 Dependendo de você especificar ou não `"authenticationRule": "CUSTOMER_AUTHENTICATION"` ou `"authenticationRule": "PLATFORM_AUTHENTICATION"` na configuração de destino acima, você pode definir a autenticação para seu destino usando o `/destination` ou o `/credentials` terminal.
 
-Se você selecionou `"authenticationRule": "CUSTOMER_AUTHENTICATION"` na configuração de destino e seu destino for compatível com o método de autenticação OAuth 2, leia [Autenticação OAuth 2](../functionality/destination-configuration/oauth2-authentication.md).
+Se você selecionou `"authenticationRule": "CUSTOMER_AUTHENTICATION"` na configuração de destino e seu destino for compatível com o método de autenticação OAuth 2, leia [Autenticação OAuth 2](../functionality/destination-configuration/oauth2-authorization.md).
 
 Se você selecionou `"authenticationRule": "PLATFORM_AUTHENTICATION"`, você deve criar um [configuração de credenciais](../credentials-api/create-credential-configuration.md).
 

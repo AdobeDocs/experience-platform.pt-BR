@@ -2,9 +2,9 @@
 description: Esta página aborda o formato da mensagem e a transformação do perfil nos dados exportados do Adobe Experience Platform para destinos.
 title: Formato de mensagem
 exl-id: ab05d34e-530f-456c-b78a-7f3389733d35
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: b42ef11681bb50141c7f3dc76d8c79d71e55e73c
 workflow-type: tm+mt
-source-wordcount: '2237'
+source-wordcount: '2502'
 ht-degree: 1%
 
 ---
@@ -1203,13 +1203,18 @@ O contexto fornecido para o modelo contém `input`  (os perfis/dados exportados 
 
 A tabela abaixo fornece descrições para as funções dos exemplos acima.
 
-| Função | Descrição |
-|---------|----------|
+| Função | Descrição | Exemplo |
+|---------|----------|----------|
 | `input.profile` | O perfil, representado como um [JsonNode](https://fasterxml.github.io/jackson-databind/javadoc/2.11/com/fasterxml/jackson/databind/node/JsonNodeType.html). Segue o esquema XDM do parceiro mencionado mais acima nesta página. |
-| `destination.segmentAliases` | Mapear IDs de público-alvo no namespace do Adobe Experience Platform para aliases de público-alvo no sistema do parceiro. |
-| `destination.segmentNames` | Mapear de nomes de público-alvo no namespace do Adobe Experience Platform para nomes de público-alvo no sistema do parceiro. |
-| `addedSegments(listOfSegments)` | Retorna somente os públicos-alvo com status `realized`. |
-| `removedSegments(listOfSegments)` | Retorna somente os públicos-alvo com status `exited`. |
+| `hasSegments` | Essa função pega um mapa de IDs de público-alvo de namespace como parâmetro. A função retorna `true` se houver pelo menos um público-alvo no mapa (independentemente do status) e `false` caso contrário. Você pode usar essa função para decidir se vai iterar em um mapa de públicos ou não. | `hasSegments(input.profile.segmentMembership)` |
+| `destination.namespaceSegmentAliases` | Mapear IDs de público-alvo em um namespace específico do Adobe Experience Platform para aliases de público-alvo no sistema do parceiro. | `destination.namespaceSegmentAliases["ups"]["seg-id-1"]` |
+| `destination.namespaceSegmentNames` | Mapear de nomes de público-alvo em namespaces específicos do Adobe Experience Platform para nomes de público-alvo no sistema do parceiro. | `destination.namespaceSegmentNames["ups"]["seg-name-1"]` |
+| `destination.namespaceSegmentTimestamps` | Retorna a hora em que um público-alvo foi criado, atualizado ou ativado no formato de carimbo de data e hora UNIX. | <ul><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].createdAt`: retorna o horário em que o segmento com a ID `seg-id-1`, do `ups` foi criado, no formato de carimbo de data e hora UNIX.</li><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].updatedAt`: retorna o horário em que o público-alvo com a ID `seg-id-1`, do `ups` namespace, foi atualizado, no formato de carimbo de data e hora UNIX.</li><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].mappingCreatedAt`: retorna o horário em que o público-alvo com a ID `seg-id-1`, do `ups` , foi ativada para o destino, no formato de carimbo de data e hora UNIX.</li><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].mappingUpdatedAt`: retorna a hora em que a ativação de público-alvo foi atualizada no destino, no formato de carimbo de data e hora UNIX.</li></ul> |
+| `addedSegments(mapOfNamespacedSegmentIds)` | Retorna somente os públicos-alvo com status `realized`, em todos os namespaces. | `addedSegments(input.profile.segmentMembership)` |
+| `removedSegments(mapOfNamespacedSegmentIds)` | Retorna somente os públicos-alvo com status `exited`, em todos os namespaces. | `removedSegments(input.profile.segmentMembership)` |
+| `destination.segmentAliases` | **Obsoleto. Substituído por`destination.namespaceSegmentAliases`** <br><br> Mapear IDs de público-alvo no namespace do Adobe Experience Platform para aliases de público-alvo no sistema do parceiro. | `destination.segmentAliases["seg-id-1"]` |
+| `destination.segmentNames` | **Obsoleto. Substituído por`destination.namespaceSegmentNames`** <br><br>  Mapear de nomes de público-alvo no namespace do Adobe Experience Platform para nomes de público-alvo no sistema do parceiro. | `destination.segmentNames["seg-name-1"]` |
+| `destination.segmentTimestamps` | **Obsoleto. Substituído por`destination.namespaceSegmentTimestamps`** <br><br> Retorna a hora em que um público-alvo foi criado, atualizado ou ativado no formato de carimbo de data e hora UNIX. | <ul><li>`destination.segmentTimestamps["seg-id-1"].createdAt`: retorna o horário em que o público-alvo com a ID `seg-id-1` foi criado, no formato de carimbo de data e hora UNIX.</li><li>`destination.segmentTimestamps["seg-id-1"].updatedAt`: retorna o horário em que o público-alvo com a ID `seg-id-1` foi atualizado, no formato de carimbo de data e hora UNIX.</li><li>`destination.segmentTimestamps["seg-id-1"].mappingCreatedAt`: retorna o horário em que o público-alvo com a ID `seg-id-1` foi ativado para o destino, no formato de carimbo de data e hora UNIX.</li><li>`destination.segmentTimestamps["seg-id-1"].mappingUpdatedAt`: retorna a hora em que a ativação de público-alvo foi atualizada no destino, no formato de carimbo de data e hora UNIX.</li></ul> |
 
 {style="table-layout:auto"}
 

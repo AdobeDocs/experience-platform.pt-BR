@@ -1,12 +1,12 @@
 ---
 audience: user
 user-guide-title: Guia de preparação de dados
-user-guide-description: Prepare seus dados para assimilação na Adobe Experience Platform.
+user-guide-description: Prepare seus dados para assimilação na Adobe Experience Platform e saiba como o Preparo de dados pode ajudar você a mapear, transformar e validar dados hoje.
 feature: Data Prep
-source-git-commit: e96263847f53ea2c884c273fd7986855d4c478c1
+source-git-commit: 81f570f8e5401624ccac74696b2323252a4de0a9
 workflow-type: tm+mt
-source-wordcount: '50'
-ht-degree: 46%
+source-wordcount: '64'
+ht-degree: 29%
 
 ---
 
@@ -25,5 +25,5 @@ ht-degree: 46%
 - [Manuseio de formatos de dados](./data-handling.md)
 - [Conjuntos de mapeamento](mapping-set.md)
 - [Substituições de fluxo](upserts.md)
-- [Guia de solução de problemas](troubleshooting-guide.md)
+- [Manual de solução de problemas](troubleshooting-guide.md)
 - [Notas de versão da Platform](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=pt-BR)

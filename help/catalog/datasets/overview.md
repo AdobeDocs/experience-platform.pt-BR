@@ -3,11 +3,12 @@ keywords: Experience Platform;página inicial;tópicos populares;local de dados;
 solution: Experience Platform
 title: Visão geral dos conjuntos de dados
 description: Este documento fornece uma visão geral de alto nível dos conjuntos de dados na Experience Platform.
+user-guide-description: Obtenha uma visão geral de alto nível dos conjuntos de dados no Experience Platform com este guia. Saiba como criá-los, aplicar restrições aos dados e assimilar dados nos conjuntos de dados aqui.
 exl-id: 51ecefb0-a699-4b1a-80f1-26c6ba92fcbf
-source-git-commit: dca5c9df82434d75238a0a80f15e5562cf2fa412
+source-git-commit: 81f570f8e5401624ccac74696b2323252a4de0a9
 workflow-type: tm+mt
-source-wordcount: '843'
-ht-degree: 9%
+source-wordcount: '870'
+ht-degree: 8%
 
 ---
 

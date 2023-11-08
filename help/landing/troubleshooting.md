@@ -2,15 +2,15 @@
 keywords: Experience Platform;início;tópicos populares;códigos de erro de API;código de erro de API;código de erro API;códigos de erro API;erro de solicitação de API;solução de problemas de API;erro de API
 solution: Experience Platform
 title: Perguntas frequentes sobre o Adobe Experience Platform e Guia de solução de problemas
-description: Encontre respostas para perguntas frequentes e um guia para solucionar erros comuns na Experience Platform.
-landing-page-description: Encontre respostas para perguntas frequentes e um guia para solucionar erros comuns na Experience Platform.
+description: Encontre respostas para perguntas frequentes e um guia para solucionar erros comuns no Adobe Experience Platform.
+landing-page-description: Encontre respostas para perguntas frequentes e um guia para solucionar erros comuns no Adobe Experience Platform.
 short-description: Encontre respostas para perguntas frequentes e um guia para solucionar erros comuns na Experience Platform.
 type: Documentation
 exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: 81f570f8e5401624ccac74696b2323252a4de0a9
 workflow-type: tm+mt
-source-wordcount: '1904'
-ht-degree: 5%
+source-wordcount: '1906'
+ht-degree: 3%
 
 ---
 
@@ -206,7 +206,7 @@ Essa mensagem de erro é exibida em qualquer um dos casos abaixo:
 
 Veja a seguir uma lista de guias de solução de problemas e a documentação de referência da API para [!DNL Experience Platform] APIs. Cada guia de solução de problemas fornece respostas a perguntas frequentes e soluções para problemas específicos de cada indivíduo [!DNL Platform] serviços. Os documentos de referência da API fornecem um guia abrangente para todos os endpoints disponíveis para cada serviço e mostram exemplos de corpos de solicitação, respostas e códigos de erro que você pode receber.
 
-| Serviço de | Referência da API | Solução de problemas |
+| Serviço | Referência da API | Solução de problemas |
 | --- | --- | --- |
 | Controle de acesso | [API de controle de acesso](https://www.adobe.io/experience-platform-apis/references/access-control/) | [Guia de solução de problemas de controle de acesso](../access-control/troubleshooting-guide.md) |
 | Assimilação de dados Adobe Experience Platform | [[!DNL Batch Ingestion API]](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) | [Guia de solução de problemas de assimilação em lote](../ingestion/batch-ingestion/troubleshooting.md) |

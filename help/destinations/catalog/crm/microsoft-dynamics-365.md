@@ -4,9 +4,9 @@ title: Conexão com o Microsoft Dynamics 365
 description: O destino do Microsoft Dynamics 365 permite exportar os dados da conta e ativá-los no Microsoft Dynamics 365 para atender às suas necessidades comerciais.
 last-substantial-update: 2022-11-08T00:00:00Z
 exl-id: 49bb5c95-f4b7-42e1-9aae-45143bbb1d73
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 29cf080f83adf0e7f8b3549104229e9f54c5b8d9
 workflow-type: tm+mt
-source-wordcount: '2154'
+source-wordcount: '2183'
 ht-degree: 2%
 
 ---
@@ -86,7 +86,7 @@ A variável [Limites de solicitações e alocações](https://docs.microsoft.com
 
 | Identidade de destino | Exemplo | Descrição | Considerações |
 |---|---|---|---|
-| `contactId` | 7eb682f1-ca75-e511-80d4-00155d2a68d1 | Identificador exclusivo de um contato. | **Obrigatório**. Consulte a [[!DNL Dynamics 365] documentação](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/contact?view=op-9-1) para obter mais detalhes. |
+| `contactid` | 7eb682f1-ca75-e511-80d4-00155d2a68d1 | Identificador exclusivo de um contato. | **Obrigatório**. Consulte a [[!DNL Dynamics 365] documentação](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/contact?view=op-9-1) para obter mais detalhes. |
 
 {style="table-layout:auto"}
 
@@ -162,23 +162,24 @@ Para enviar corretamente os dados do público-alvo do Adobe Experience Platform 
 1. No **[!UICONTROL Mapeamento]** etapa, selecione **[!UICONTROL Adicionar novo mapeamento]**. Você verá uma nova linha de mapeamento na tela.
    ![Exemplo de captura de tela da interface do Platform para Adicionar novo mapeamento.](../../assets/catalog/crm/microsoft-dynamics-365/add-new-mapping.png)
 
-1. No **[!UICONTROL Selecionar campo de origem]** escolha a **[!UICONTROL Selecionar namespace de identidade]** categoria e selecione `contactId`.
+1. No **[!UICONTROL Selecionar campo de origem]** escolha a **[!UICONTROL Selecionar namespace de identidade]** categoria e selecione `contactid`.
    ![Exemplo de captura de tela da interface do Platform para mapeamento de origem.](../../assets/catalog/crm/microsoft-dynamics-365/source-mapping.png)
 
 1. No **[!UICONTROL Selecionar campo de destino]** selecione o tipo de campo de destino para o qual deseja mapear seu campo de origem.
    * **[!UICONTROL Selecionar namespace de identidade]**: selecione esta opção para mapear o campo de origem para um namespace de identidade da lista.
-     ![Captura de tela da interface do usuário da plataforma mostrando o Target mapping para contactId.](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-contactid.png)
+     ![Captura de tela da interface do usuário da plataforma mostrando o Target mapping para contactid.](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-contactid.png)
 
-   * Adicione o mapeamento a seguir entre o esquema de perfil XDM e o [!DNL Dynamics 365] instância: |Esquema do perfil XDM|[!DNL Dynamics 365] Instância| Obrigatório| |—|—|—| |`contactId`|`contactId`| Sim |
+   * Adicione o mapeamento a seguir entre o esquema de perfil XDM e o [!DNL Dynamics 365] instância: |Esquema do perfil XDM|[!DNL Dynamics 365] Instância| Obrigatório| |—|—|—| |`contactid`|`contactid`| Sim |
 
    * **[!UICONTROL Selecionar atributos personalizados]**: selecione esta opção para mapear o campo de origem para um atributo personalizado definido na variável **[!UICONTROL Nome do atributo]** campo. Consulte [[!DNL Dynamics 365] documentação](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/contact?view=op-9-1#entity-properties) para obter uma lista abrangente dos atributos suportados.
-     ![Captura de tela da interface do usuário da plataforma mostrando o Target mapping para LastName.](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-lastname.png)
+     ![Captura de tela da interface do usuário da plataforma mostrando o Target mapping para email.](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-email.png)
 
      >[!IMPORTANT]
      >
-     >Se você tiver um campo de origem de data ou carimbo de data e hora mapeado para um [!DNL Dynamics 365] [data ou carimbo de data e hora](https://docs.microsoft.com/en-us/power-apps/developer/data-platform/webapi/reference/timestampdatemapping?view=dataverse-latest) campo de destino, certifique-se de que o valor mapeado que está sendo não esteja vazio. Se o valor transmitido estiver vazio, você encontrará um *`Bad request reported while pushing events to the destination. Please contact the administrator and try again.`* mensagem de erro e os dados não serão atualizados. Este é um [!DNL Dynamics 365] limitação.
+     > * Os nomes dos campos de destino devem estar em `lowercase`.
+     > * Além disso, se você tiver um campo de origem de data ou carimbo de data e hora mapeado para um [!DNL Dynamics 365] [data ou carimbo de data e hora](https://docs.microsoft.com/en-us/power-apps/developer/data-platform/webapi/reference/timestampdatemapping?view=dataverse-latest) target, certifique-se de que o valor mapeado não esteja vazio. Se o valor de campo exportado estiver vazio, você encontrará um *`Bad request reported while pushing events to the destination. Please contact the administrator and try again.`* mensagem de erro e os dados não serão atualizados. Este é um [!DNL Dynamics 365] limitação.
 
-   * Por exemplo, dependendo dos valores que você deseja atualizar, adicione o seguinte mapeamento entre o esquema de perfil XDM e o [!DNL Dynamics 365] instância: |Esquema do perfil XDM|[!DNL Dynamics 365] Instância| |—|—| |`person.name.firstName`|`FirstName`| |`person.name.lastName`|`LastName`| |`personalEmail.address`|`Email`|
+   * Por exemplo, dependendo dos valores que você deseja atualizar, adicione o seguinte mapeamento entre o esquema de perfil XDM e o [!DNL Dynamics 365] instância: |Esquema do perfil XDM|[!DNL Dynamics 365] Instância| |—|—| |`person.name.firstName`|`firstname`| |`person.name.lastName`|`lastname`| |`personalEmail.address`|`emailaddress1`|
 
    * Um exemplo usando esses mapeamentos é mostrado abaixo:
      ![Exemplo de captura de tela da interface do Platform mostrando os mapeamentos do Target.](../../assets/catalog/crm/microsoft-dynamics-365/mappings.png)
@@ -243,6 +244,7 @@ Esta seção captura a funcionalidade e as atualizações de documentação sign
 
 | Mês de lançamento | Tipo de atualização | Descrição |
 |---|---|---|
+| Outubro de 2023 | Atualização da documentação | Atualização da orientação para indicar que todos os nomes de atributos de destino devem estar em minúsculas, no [Considerações e exemplo de mapeamento](#mapping-considerations-example) etapa. |
 | Agosto de 2023 | Atualização de funcionalidade e documentação | Suporte adicionado para [!DNL Dynamics 365] prefixos de campo personalizado para campos personalizados que não foram criados na solução padrão no [!DNL Dynamics 365]. Um novo campo de entrada, **[!UICONTROL Prefixo de personalização]**, foi adicionada na [Preencher detalhes do destino](#destination-details) etapa. (PLATIR-31602). |
 | Nov. de 2022 | Versão inicial | Versão inicial de destino e publicação da documentação. |
 

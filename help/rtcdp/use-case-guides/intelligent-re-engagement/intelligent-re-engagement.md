@@ -2,7 +2,7 @@
 title: Reengajamento inteligente
 description: Ofereça experiências atraentes e conectadas durante os principais momentos de conversão para engajar novamente clientes pouco frequentes de forma inteligente.
 exl-id: 13f6dbc9-7471-40bf-824d-27922be0d879
-source-git-commit: d47ddc474fcaf19eaff8ddcd67139dec5c417720
+source-git-commit: df82431f87f725a12cbc5b8f88fff6d4cc065450
 workflow-type: tm+mt
 source-wordcount: '3594'
 ht-degree: 5%
@@ -150,6 +150,8 @@ O schema de transações digitais do cliente é representado por um [[!UICONTROL
 
 +++XDM ExperienceEvent (Classe)
 
+A variável [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) A classe inclui os seguintes grupos de campos:
+
 | Campos | Requisito | Descrição |
 | --- | --- | --- |
 | `_id` | Obrigatório | Identifica exclusivamente eventos individuais que são assimilados em [!DNL Adobe Experience Platform]. |
@@ -157,8 +159,6 @@ O schema de transações digitais do cliente é representado por um [[!UICONTROL
 | `eventType` | Obrigatório | Uma string que indica o tipo de categoria do evento. |
 
 +++
-
-A variável [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) A classe inclui os seguintes grupos de campos:
 
 +++Detalhes da ID do usuário final (Grupo de campos)
 
@@ -189,6 +189,8 @@ O schema de transações offline do cliente é representado por um [[!UICONTROL 
 
 +++XDM ExperienceEvent (Classe)
 
+A variável [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) A classe inclui os seguintes grupos de campos:
+
 | Campos | Requisito | Descrição |
 | --- | --- | --- |
 | `_id` | Obrigatório | Identifica exclusivamente eventos individuais que são assimilados em [!DNL Adobe Experience Platform]. |
@@ -196,8 +198,6 @@ O schema de transações offline do cliente é representado por um [[!UICONTROL 
 | `eventType` | Obrigatório | Uma string que indica o tipo de categoria do evento. |
 
 +++
-
-A variável [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) A classe inclui os seguintes grupos de campos:
 
 +++Detalhes do comércio (Grupo de campos)
 
@@ -247,6 +247,8 @@ A variável [!DNL Adobe] o esquema do conector da web é representado por um [[!
 
 +++XDM ExperienceEvent (Classe)
 
+A variável [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) A classe inclui os seguintes grupos de campos:
+
 | Campos | Requisito | Descrição |
 | --- | --- | --- |
 | `_id` | Obrigatório | Identifica exclusivamente eventos individuais que são assimilados em [!DNL Adobe Experience Platform]. |
@@ -254,8 +256,6 @@ A variável [!DNL Adobe] o esquema do conector da web é representado por um [[!
 | `eventType` | Obrigatório | Uma string que indica o tipo de categoria do evento. |
 
 +++
-
-A variável [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) A classe inclui os seguintes grupos de campos:
 
 +++Modelo de evento de experiência do Adobe Analytics (grupo de campos)
 

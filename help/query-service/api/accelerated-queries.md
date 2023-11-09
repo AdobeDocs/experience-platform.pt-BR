@@ -2,9 +2,9 @@
 title: Endpoint de consultas aceleradas
 description: Saiba como acessar o armazenamento acelerado de consultas de maneira sem estado para retornar resultados rapidamente com base em dados agregados. Este documento fornece um exemplo de solicitação HTTP e resposta para o endpoint de consultas aceleradas do Serviço de consulta.
 exl-id: 29ea4d25-9c46-4b29-a6d7-45ac33dcb0fb
-source-git-commit: 7cde32f841497edca7de0c995cc4c14501206b1a
+source-git-commit: 037ea8d11bb94e3b4f71ea301a535677b3cccdbd
 workflow-type: tm+mt
-source-wordcount: '559'
+source-wordcount: '561'
 ht-degree: 1%
 
 ---
@@ -17,11 +17,7 @@ Antes de continuar com este guia, verifique se você leu e compreendeu as [Guia 
 
 ## Introdução
 
-O SKU do Data Distiller é necessário para usar o armazenamento acelerado de consulta. Consulte a [empacotamento](../packages.md) e [grades de proteção](../guardrails.md#query-accelerated-store) Documentação relacionada ao Data Distiller SKU. Se você não tiver o Data Distiller SKU, entre em contato com o representante do serviço de atendimento ao cliente da Adobe para obter mais informações.
-
-<!-- Document is hidden temporarily
-Please see the [packaging](../packages.md), [guardrails](../guardrails.md#query-accelerated-store), and [licensing](../data-distiller/license-usage.md) documentation that relates to the Data Distiller SKU. 
--->
+O SKU do Data Distiller é necessário para usar o armazenamento acelerado de consulta. Consulte a [empacotamento](../packaging.md) e [grades de proteção](../guardrails.md#query-accelerated-store), e [licenciamento](../data-distiller/license-usage.md) Documentação relacionada ao Data Distiller SKU. Se você não tiver o Data Distiller SKU, entre em contato com o representante do serviço de atendimento ao cliente da Adobe para obter mais informações.
 
 As seções a seguir detalham as chamadas de API necessárias para acessar o armazenamento acelerado de consulta de forma sem estado por meio da API do Serviço de consulta. Cada chamada inclui o formato da API geral, uma solicitação de amostra mostrando os cabeçalhos necessários e uma resposta de amostra.
 

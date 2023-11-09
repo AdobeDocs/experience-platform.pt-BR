@@ -2,45 +2,32 @@
 title: Monitorar uso de licença de consulta em lote
 description: A interface do usuário do Adobe Experience Platform fornece um painel por meio do qual você pode visualizar informações importantes sobre o uso da licença do Data Distiller da sua organização.
 exl-id: a1e365a0-cc65-4fd6-b36f-8d79b7d9ec7c
-hide: true
-hidefromtoc: true
 recommendations: noCatalog, display
-source-git-commit: fa573dcf03eb711e946afe40d107871f5166ff58
+source-git-commit: e55cada0975d771f225e829aeeeeeeb64b9acf4a
 workflow-type: tm+mt
-source-wordcount: '352'
+source-wordcount: '274'
 ht-degree: 0%
 
 ---
 
-# (Alfa) Monitorar o uso de licença de consulta em lote {#monitor-license-usage}
+# Monitorar o uso de licença de consulta em lote {#monitor-license-usage}
 
->[!IMPORTANT]
+O painel de uso da licença fornece relatórios detalhados sobre o uso da licença do Serviço de consulta de sua organização e as métricas de uso de cada produto adquirido. Para saber mais sobre as métricas disponíveis exibidas no painel, visite o [guia do painel de uso da licença](../../dashboards/guides/license-usage.md#available-metrics).
+
+O painel fornece métricas de uso para cada produto comprado, o uso consolidado de métricas em todas as sandboxes de produção ou desenvolvimento e as métricas de uso de uma sandbox específica. As informações exibidas aqui são capturadas durante um instantâneo diário da sua instância da Platform.
+
+>[!NOTE]
 >
->A capacidade de monitorar o uso de licença de consulta em lote por meio da interface ainda não está disponível para todos os usuários. Esse recurso está em alfa e ainda está sendo testado. Este documento está sujeito a alterações.
-
-A interface do usuário (UI) do Adobe Experience Platform fornece um painel por meio do qual você pode exibir informações importantes sobre o uso da licença do Serviço de consulta da sua organização.
-
-Para obter instruções detalhadas sobre como acessar e interagir com o painel de uso de licença na interface do usuário, bem como para saber mais sobre as métricas disponíveis exibidas no painel, visite o [guia do painel de uso da licença](../../dashboards/guides/license-usage.md).
-
-Leia as [visão geral dos painéis](../../dashboards/home.md) para obter um resumo de todos os recursos do painel dentro do Experience Platform.
-
-## Widgets {#widgets}
-
-O painel de uso de licença é composto por widgets, que exibem métricas somente leitura que fornecem informações importantes sobre o uso de licença da sua organização. As métricas visíveis dependem do licenciamento específico da sua organização.
-
-Selecione um botão de opção para escolher uma sandbox para análise e use a lista suspensa para selecionar um período para a análise. As opções disponíveis são um período de 30 dias, 90 dias, 12 meses, o último ano, o período completo do contrato ou uma data personalizada.
+>O painel de uso de licença não está habilitado por padrão. Os usuários devem receber a permissão &quot;Exibir painel de uso da licença&quot; para poderem exibir o painel. Para obter etapas sobre como conceder permissões de acesso para exibir o painel de uso da licença, consulte o [guia de permissões do painel](../../dashboards/permissions.md).
 
 ## Computar horas {#compute-hours}
 
-A variável [!UICONTROL Computar horas] O widget usa um gráfico de linhas para visualizar o tempo de processamento de consultas em lote de sua organização a cada dia. O widget exibe três métricas indicadas por um número na parte superior esquerda do widget. São eles
+A variável [!UICONTROL Computar horas] A métrica só é aplicável a clientes com a licença do Data Distiller para consultas em lote. [!UICONTROL Computar horas] são a medida do tempo gasto pelos mecanismos do Serviço de consulta para ler, processar e gravar dados de volta no data lake quando uma consulta em lote é executada.
 
-- [!UICONTROL Efetivo]: o número total de horas computacionais do período escolhido na lista suspensa visão geral. Essa métrica também é indicada no gráfico por uma linha sólida.
-- [!UICONTROL Licenciado]: o número total de horas computacionais permitido pelo contrato de licença de sua organização. Essa métrica também é indicada no gráfico por uma linha pontilhada.
-- [!UICONTROL Uso]: essa é a porcentagem de seu uso em relação às horas computacionais máximas acordadas por sua licença.
-
->[!IMPORTANT]
+>[!NOTE]
 >
->A variável [!UICONTROL Computar horas] O widget só é aplicável a clientes com a licença do Data Distiller para consultas em lote.
+>**Os dados estão disponíveis com limitações**: os dados começam em 1º de outubro de 2023 sem tendências.<br>A variável **preenchimento retroativo** de dados a partir da data de início do contrato é um trabalho em andamento. Espera-se que esteja disponível até o final do ano civil.
 
-![O painel de uso da licença com o widget de horas de computação destacado.](../images/data-distiller/compute-hours.png)
+![O painel de uso da licença com a métrica horas de computação realçada.](../images/data-distiller/compute-hours.png)
 
+Para encontrar mais informações sobre as métricas disponíveis para sua organização com base na licença adquirida da organização, consulte a [guia do painel de uso da licença](../../dashboards/guides/license-usage.md).

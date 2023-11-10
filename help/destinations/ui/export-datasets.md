@@ -3,9 +3,9 @@ title: Exportar conjuntos de dados para destinos de armazenamento na nuvem
 type: Tutorial
 description: Saiba como exportar conjuntos de dados do Adobe Experience Platform para o local de armazenamento em nuvem de sua preferência.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 7c68b6a3b08eb47fa8c3906468dc87f3715fbe99
 workflow-type: tm+mt
-source-wordcount: '1722'
+source-wordcount: '1751'
 ht-degree: 4%
 
 ---
@@ -60,6 +60,12 @@ Entenda, na tabela abaixo, quais tipos de conjunto de dados você pode exportar 
   </tr>
 </tbody>
 </table>
+
+## Tutorial em vídeo {#video-tutorial}
+
+Assista ao vídeo abaixo para obter uma explicação completa do fluxo de trabalho descrito nesta página, os benefícios de usar a funcionalidade de conjunto de dados de exportação e alguns casos de uso sugeridos.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3424392/)
 
 ## Destinos compatíveis {#supported-destinations}
 

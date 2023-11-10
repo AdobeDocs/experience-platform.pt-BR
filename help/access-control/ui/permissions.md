@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Gerenciar Permissões Para Um Perfil De Produto
 description: O controle de acesso no Adobe Experience Platform permite gerenciar funções e permissões para vários recursos da plataforma usando o Adobe Admin Console. Este documento serve como um guia sobre como gerenciar permissões de um perfil de produto para a Platform.
 exl-id: ca403bef-6d62-4ca9-bba6-d1280ac63171
-source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
+source-git-commit: 1812af74e82f3071963177356b3cd4b23ea567f5
 workflow-type: tm+mt
-source-wordcount: '339'
+source-wordcount: '356'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Imediatamente após [criação de um novo perfil de produto](#create-a-new-produ
 
 ![permissões](../images/permissions.png)
 
-As permissões são divididas em categorias e listadas nesta página. A lista exibe o nome da categoria, o número de permissões que ela contém (e quantas estão ativas) e sua descrição.
+As permissões são divididas em categorias e listadas nesta página. A lista exibe o nome da categoria, o número de permissões que ela contém (e quantas estão ativas) e sua descrição. Consulte a tabela em [Permissões de recurso](/help/access-control/home.md#permissions) para obter um detalhamento das permissões disponíveis para cada função.
 
 Selecione qualquer categoria na lista para abrir a **[!UICONTROL Editar permissões]** página.
 

@@ -3,10 +3,10 @@ title: Públicos-alvo da Experience Cloud
 description: Saiba como compartilhar públicos do Real-time Customer Data Platform com vários aplicativos Experience Cloud.
 last-substantial-update: 2023-09-28T00:00:00Z
 exl-id: 2bdbcda3-2efb-4a4e-9702-4fd9991e9461
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 23c4bce542bba76ea4badba43a7ce3e6f7fe9e49
 workflow-type: tm+mt
-source-wordcount: '1683'
-ht-degree: 2%
+source-wordcount: '1780'
+ht-degree: 3%
 
 ---
 
@@ -17,7 +17,9 @@ ht-degree: 2%
 >
 > Este destino está disponível para [Adobe Real-time Customer Data Platform Prime e Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html?lang=pt-BR) clientes.
 
-Use esse destino para ativar públicos do Real-Time CDP para o Audience Manager e o Adobe Analytics. Você precisa de uma licença Audience Manager para enviar públicos-alvo para a Adobe Analytics.
+Use esse destino para ativar públicos do Real-Time CDP para o Audience Manager e o Adobe Analytics.
+
+Para enviar públicos-alvo para a Adobe Analytics, você precisa de uma licença Audience Manager. Para obter mais detalhes, consulte [visão geral do Audience Analytics](https://experienceleague.adobe.com/docs/analytics/integration/audience-analytics/mc-audiences-aam.html?lang=pt-BR).
 
 Para enviar públicos-alvo para outras soluções Adobe, use as conexões diretas do Real-Time CDP com [Adobe Target](../personalization/adobe-target-connection.md), [Adobe Advertising](../advertising/adobe-advertising-cloud-connection.md), [Adobe Campaign](../email-marketing/adobe-campaign.md) e [Marketo Engage](../adobe/marketo-engage.md).
 
@@ -43,56 +45,62 @@ No Audience Manager, você pode usar os públicos-alvo da Real-Time CDP para cas
 
 ### Controle granular de públicos exportados {#segments-control}
 
-Use a nova integração de compartilhamento de público-alvo de autoatendimento por meio do destino Experience Cloud Audiences para selecionar quais públicos-alvo serão exportados para Audience Manager e além. Isso permite determinar quais públicos-alvo você deseja compartilhar com outras soluções Experience Cloud e quais públicos-alvo você deseja manter no Real-Time CDP exclusivamente.
+Para selecionar quais públicos-alvo serão exportados para Audience Manager e além, use a nova integração de compartilhamento de público-alvo de autoatendimento por meio do destino Experience Cloud Audiences.  Isso permite determinar quais públicos-alvo você deseja compartilhar com outras soluções Experience Cloud e quais públicos-alvo você deseja manter no Real-Time CDP exclusivamente.
 
 A integração de compartilhamento de público-alvo herdada não permitiu um controle granular de quais públicos-alvo devem ser exportados para Audience Manager e além.
 
-### Compartilhamento de públicos da Real-Time CDP com mais soluções de Experience Cloud {#share-segments-with-other-solutions}
+### Compartilhar públicos da Real-Time CDP com a Adobe Analytics {#share-audiences-with-analytics}
 
-Além de compartilhar públicos-alvo com o Audience Manager, o cartão de destino do Real-Time CDP Audiences permite compartilhar públicos-alvo com qualquer outra solução Experience Cloud que você tenha provisionado para, incluindo:
+Os públicos-alvo enviados para o destino do Experience Cloud Audiences não aparecem automaticamente no Adobe Analytics.
 
-* Adobe Campaign
-* Adobe Target
-* Advertising Cloud
-* Analytics
-* Marketo
+Antes de enviar públicos-alvo para a Adobe Analytics, é necessário [implementar o serviço de identidade do Experience Cloud para Analytics e Audience Manager](https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-aam-analytics.html?lang=en).
 
-<!--
+>[!IMPORTANT]
+>
+>Para enviar públicos do Real-Time CDP para o Adobe Analytics por meio do destino Experience Cloud Audiences, é necessário ter uma licença Audience Manager.
 
-Note: briefly talk about when to share audiences to these destinations using the existing destination cards and when to share using the new Experience Cloud Audiences destination. 
+### Compartilhar públicos da Real-Time CDP com outras soluções de Experience Cloud {#share-segments-with-other-solutions}
 
--->
+Você pode usar o cartão de destino do Real-Time CDP Audiences para compartilhar públicos-alvo com outras soluções Experience Cloud.
+
+No entanto, a Adobe recomenda usar os seguintes cartões de destino dedicados se você quiser compartilhar públicos com essas soluções:
+
+* [Adobe Campaign](../email-marketing/adobe-campaign.md)
+* [Adobe Target](../personalization/adobe-target-connection.md)
+* [Advertising Cloud](../advertising/adobe-advertising-cloud-connection.md)
+* [Marketo](../adobe/marketo-engage.md)
 
 ## Pré-requisitos {#prerequisites}
 
 >[!IMPORTANT]
 >
 > * Você precisa de uma licença de Audience Manager para ativar o [Casos de uso da Plataforma de gerenciamento de dados](#dmp-use-cases) acima referidos.
+> * Você *fazer* precisa de uma licença Audience Manager para compartilhar públicos da Real-Time CDP com a Adobe Analytics.
 > * Você *não precisam* uma licença de Audience Manager para compartilhar públicos-alvo da Real-Time CDP com a Adobe Advertising Cloud, Adobe Target, Marketo e outras soluções Experience Cloud, mencionadas na [seção acima](#share-segments-with-other-solutions).
 
 ### Para clientes que estão usando a solução de compartilhamento de público-alvo herdada
 
 Se você já estiver compartilhando públicos do Real-Time CDP com o Audience Manager e outras soluções de Experience Cloud pelo [integração de compartilhamento de público herdado](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam), você deve entrar em contato com o Atendimento ao cliente para desativar a integração herdada.
 
-O tempo de resposta para resolver o ticket de desprovisionamento é de seis dias úteis ou menos. Depois que a integração herdada existente for desativada, você poderá prosseguir para [criação de uma conexão](#connect) por meio do cartão de destino de autoatendimento.
+O tempo de resposta para resolver o ticket de desprovisionamento é de seis dias úteis ou menos. Depois que a integração herdada existente for desativada, você poderá prosseguir para [criar uma conexão](#connect) por meio do cartão de destino de autoatendimento.
 
 >[!IMPORTANT]
 >
->A exportação de público do Real-Time CDP para outras soluções será interrompida no tempo entre a resolução do tíquete e o momento em que uma nova conexão é estabelecida por meio do cartão de destino. Você pode minimizar esse tempo de inatividade criando a conexão através do cartão de destino assim que o ticket for fechado.
+>A exportação de público do Real-Time CDP para outras soluções é interrompida no tempo entre a resolução do tíquete e o momento em que uma nova conexão é estabelecida por meio do cartão de destino. Você pode minimizar esse tempo de inatividade criando a conexão por meio do cartão de destino depois que o ticket for fechado.
 
 ## Limitações e chamadas de retorno conhecidas {#known-limitations}
 
 Observe as seguintes limitações conhecidas e chamadas importantes ao usar o cartão de Públicos-alvo do Experience Cloud:
 
-* Atualmente, há suporte para um único destino de Públicos-alvo de Experience Cloud. Tentar configurar uma segunda conexão de destino resultará em um erro.
+* Atualmente, há suporte para um único destino de Públicos-alvo de Experience Cloud. A tentativa de configurar uma segunda conexão de destino resulta em um erro.
 * Ao se conectar ao destino, você pode ver uma opção para [ativar alertas de fluxo de dados](../../ui/alerts.md). Embora visível na interface do usuário, a variável **a opção ativar alertas não é suportada no momento**.
-* **Suporte ao preenchimento retroativo de público**: a primeira exportação para Audience Manager ou outras soluções de Experience Cloud inclui uma população histórica dos públicos-alvo. Usuários do [integração de compartilhamento de público herdado](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam) que estão configurando esse destino devem esperar uma diferença de preenchimento retroativo de aproximadamente 6 horas.
+* **Suporte ao preenchimento retroativo de público**: a primeira exportação para Audience Manager ou outras soluções de Experience Cloud inclui uma população histórica dos públicos-alvo. Usuários do [integração de compartilhamento de público herdado](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam) que estão configurando esse destino devem esperar uma diferença de preenchimento retroativo de aproximadamente seis horas.
 
 ### Latência ao ativar públicos {#audience-activation-latency}
 
-Há uma latência de quatro horas entre o momento em que os públicos-alvo são ativados pela primeira vez no Real-Time CDP e o momento em que estão prontos para serem usados em Audience Manager e outras soluções de Experience Cloud para determinados casos de uso.
+Há uma latência de quatro horas entre o momento em que os públicos-alvo são ativados pela primeira vez no Real-Time CDP e o momento em que estão prontos para serem usados no Audience Manager e em outras soluções de Experience Cloud.
 
-Pode levar até 24 horas para que os públicos-alvo estejam totalmente disponíveis em Audience Manager para todos os casos de uso e até 48 horas para que os públicos-alvo dos públicos-alvo de Experience Cloud apareçam nos relatórios de Audience Manager.
+Pode levar até 24 horas para que os públicos-alvo estejam totalmente disponíveis em Audience Manager para todos os casos de uso. Pode levar até 48 horas para que os públicos-alvo do Experience Cloud Audiences apareçam nos relatórios de Audience Manager.
 
 Os metadados, como nomes de público-alvo, estão disponíveis no Audience Manager em minutos após a configuração da exportação para o destino do Experience Cloud Audiences.
 
@@ -127,7 +135,7 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 | Item | Tipo | Notas |
 |---------|----------|---------|
 | Tipo de exportação | **[!UICONTROL Exportação de público]** | Você está exportando todos os membros de um público-alvo com as identidades listadas na seção acima. |
-| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil for atualizado no Real-Time CDP com base na avaliação do público-alvo, o conector enviará a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de transmissão](/help/destinations/destination-types.md#streaming-destinations). |
+| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Quando um perfil é atualizado no Real-Time CDP com base na avaliação do público-alvo, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de transmissão](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -160,7 +168,7 @@ Para configurar detalhes para o destino, preencha os campos obrigatórios e opci
 > 
 >Para ativar os dados, é necessário **[!UICONTROL Gerenciar destinos]**, **[!UICONTROL Ativar destinos]**, **[!UICONTROL Exibir perfis]**, e **[!UICONTROL Exibir segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
 
-Ler [Ativar perfis e públicos para destinos de exportação de público de transmissão](/help/destinations/ui/activate-segment-streaming-destinations.md) para obter instruções sobre como ativar públicos-alvo para esse destino. Observe que nenhuma [etapa de mapeamento](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) é obrigatório e não [etapa de agendamento](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) O está disponível para este destino.
+Ler [Ativar perfis e públicos para destinos de exportação de público de transmissão](/help/destinations/ui/activate-segment-streaming-destinations.md) para obter instruções sobre como ativar públicos-alvo para esse destino. Não [etapa de mapeamento](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) é obrigatório e não [etapa de agendamento](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) O está disponível para este destino.
 
 ## Validar exportação de dados {#exported-data}
 
@@ -172,7 +180,7 @@ Os públicos-alvo da Real-Time CDP aparecem no Audience Manager como [sinais](ht
 
 Os nomes de segmento começam a ser preenchidos no Audience Manager 15 minutos após os públicos-alvo serem enviados pelo Real-Time CDP.
 
-A população do segmento começa a fluir para o Audience Manager em 6 horas a partir do envio do Real-Time CDP e será atualizada a cada 24 horas no Audience Manager.
+A população do segmento começa a fluir para o Audience Manager em 6 horas a partir do envio do Real-Time CDP e é atualizada a cada 24 horas no Audience Manager.
 
 A população completa estará visível em Audience Manager após 72 horas e as populações continuarão a fluir para Audience Manager, a menos que o público-alvo seja removido do destino no Real-Time CDP.
 
@@ -181,9 +189,9 @@ A população completa estará visível em Audience Manager após 72 horas e as 
 Todos [!DNL Real-Time CDP] os destinos estão em conformidade com as políticas de uso de dados ao manipular seus dados. Para obter informações detalhadas sobre como [!DNL Adobe Experience Platform] fiscaliza a governança de dados, leia o [Visão geral da governança de dados](/help/data-governance/home.md).
 
 A governança de dados no Real-Time CDP é aplicada por ambos [rótulos de uso de dados](/help/data-governance/labels/reference.md) e de marketing.
-Os rótulos de uso de dados serão transferidos para os aplicativos, mas as ações de marketing não. Isso significa que, uma vez direcionados ao Audience Manager, os públicos-alvo do Real-Time CDP poderão ser exportados para qualquer destino disponível. No Audience Manager, é possível usar [controles de exportação de dados](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-export-controls.html) para bloquear a exportação de públicos para determinados destinos.
+Os rótulos de uso de dados são transferidos para aplicativos, mas as ações de marketing não. Isso significa que, uma vez direcionados ao Audience Manager, os públicos-alvo do Real-Time CDP poderão ser exportados para qualquer destino disponível. No Audience Manager, é possível usar [controles de exportação de dados](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-export-controls.html) para bloquear a exportação de públicos para determinados destinos.
 
-Públicos marcados com a [!DNL HIPAA] a ação de marketing não será enviada do Real-Time CDP para o Audience Manager.
+Públicos marcados com a [!DNL HIPAA] ações de marketing não são enviadas do Real-Time CDP para o Audience Manager.
 
 ### Gerenciamento de permissões no Audience Manager
 
@@ -191,4 +199,4 @@ Os públicos-alvo e características no Audience Manager estão sujeitos a [Cont
 
 Os públicos exportados do Real-Time CDP são atribuídos a uma fonte de dados específica no Audience Manager, chamada **[!UICONTROL Segmentos Experience Platform]**.
 
-Para permitir que apenas determinados usuários acessem os públicos-alvo, você pode aplicar controles de acesso aos públicos-alvo pertencentes à fonte de dados. Você deve definir novas permissões de controle de acesso no Audience Manager para esses públicos-alvo e características criadas a partir de segmentos do Real-Time CDP.
+Para permitir que apenas determinados usuários acessem os públicos-alvo, você pode aplicar controles de acesso aos públicos-alvo pertencentes à fonte de dados. Defina novas permissões de controle de acesso no Audience Manager para esses públicos-alvo e características criadas a partir de segmentos do Real-Time CDP.

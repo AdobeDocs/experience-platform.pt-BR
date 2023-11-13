@@ -4,10 +4,10 @@ title: Ativar públicos para destinos de exportação de perfil em lote
 type: Tutorial
 description: Saiba como ativar os públicos-alvo no Adobe Experience Platform enviando-os para destinos com base em perfil de lote.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: a854960b11cb3e56046dc9541f76c62a7e3f2f10
+source-git-commit: 47197b745bebb6564d912d9dc045593bc076ae2a
 workflow-type: tm+mt
-source-wordcount: '3720'
-ht-degree: 12%
+source-wordcount: '3781'
+ht-degree: 11%
 
 ---
 
@@ -29,6 +29,18 @@ Este artigo explica o fluxo de trabalho necessário para ativar públicos-alvo e
 ## Pré-requisitos {#prerequisites}
 
 Para ativar públicos para destinos, você deve ter o [conectado a um destino](./connect-destination.md). Se ainda não tiver feito isso, acesse o [catálogo de destinos](../catalog/overview.md), navegue pelos destinos compatíveis e configure o destino que deseja usar.
+
+### Formatos de arquivo compatíveis com a exportação {#supported-file-formats-export}
+
+Os seguintes formatos de arquivo são compatíveis ao exportar públicos:
+
+* CSV
+* JSON
+* Parquet
+
+Observe que a exportação de arquivos CSV oferece maior flexibilidade em termos de como você deseja estruturar os arquivos exportados. Leia mais sobre [configuração da formatação de arquivos CSV](/help/destinations/ui/batch-destinations-file-formatting-options.md#file-configuration).
+
+Selecione o formato de arquivo desejado para exportação quando [criação de uma conexão com o destino baseado em arquivo](/help/destinations/ui/connect-destination.md).
 
 ## Selecione seu destino {#select-destination}
 
@@ -532,7 +544,7 @@ Se estiver satisfeito com a sua seleção e nenhuma violação de política tive
 
 ## Verificar ativação de público {#verify}
 
-Para destinos de marketing por email e destinos de armazenamento na nuvem, o Adobe Experience Platform cria uma `.csv` no local de armazenamento fornecido. Espere que um novo arquivo seja criado no local de armazenamento de acordo com o agendamento definido no fluxo de trabalho. O formato de arquivo padrão é mostrado abaixo, mas você pode [editar os componentes do nome do arquivo](#file-names):
+Ao exportar públicos para destinos de armazenamento na nuvem, o Adobe Experience Platform cria uma `.csv`, `.json`ou `.parquet` no local de armazenamento fornecido. Espere que um novo arquivo seja criado no local de armazenamento de acordo com o agendamento definido no fluxo de trabalho. O formato de arquivo padrão é mostrado abaixo, mas você pode [editar os componentes do nome do arquivo](#file-names):
 `<destinationName>_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv`
 
 Por exemplo, se você selecionasse uma frequência de exportação diária, os arquivos que você receberia em três dias consecutivos seriam assim:

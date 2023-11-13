@@ -25,7 +25,7 @@ ht-degree: 18%
       * [Visão geral](./schema/industries/overview.md)
       * [Varejo](./schema/industries/retail.md)
       * [Serviços financeiros](./schema/industries/financial.md)
-      * [Assistência médica](./schema/industries/healthcare.md)
+      * [Serviços de saúde](./schema/industries/healthcare.md)
       * [Telecomunicações](./schema/industries/telecom.md)
       * [Viagens e hospitalidade](./schema/industries/travel-hospitality.md)
    * [Dicionário de campo XDM](schema/field-dictionary.md)

@@ -16,7 +16,7 @@ ht-degree: 1%
 >No momento, a assimilação de objetos personalizados não é compatível com o [!DNL Salesforce Marketing Cloud] integração de origem.
 
 
-Este tutorial fornece etapas sobre como conectar seu [!DNL Salesforce Marketing Cloud] para a Adobe Experience Platform por meio da interface do usuário.
+Este tutorial fornece etapas sobre como conectar seus [!DNL Salesforce Marketing Cloud] para a Adobe Experience Platform por meio da interface do usuário.
 
 ## Introdução
 

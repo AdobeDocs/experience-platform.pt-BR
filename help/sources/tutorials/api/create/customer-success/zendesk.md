@@ -5,7 +5,7 @@ exl-id: 3e00e375-c6f8-407c-bded-7357ccf3482e
 source-git-commit: 6f8abca8f0db8a559fe62e6c143f2d0506d3b886
 workflow-type: tm+mt
 source-wordcount: '1966'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -15,7 +15,7 @@ O tutorial a seguir orienta você pelas etapas para criar uma conexão de origem
 
 ## Introdução
 
-Este guia requer entendimento prático dos seguintes componentes do Experience Platform:
+Este manual necessita de uma compreensão funcional dos seguintes componentes da Experience Platform:
 
 * [Origens](../../../../home.md): [!DNL Experience Platform] O permite que os dados sejam assimilados de várias fontes e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando o [!DNL Platform] serviços.
 * [Sandboxes](../../../../../sandboxes/home.md): [!DNL Experience Platform] O fornece sandboxes virtuais que particionam uma única instância da Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
@@ -37,7 +37,7 @@ Para obter mais informações sobre a autenticação do [!DNL Zendesk] fonte, co
 
 O tutorial a seguir guiará você pelas etapas para criar um [!DNL Zendesk] conexão de origem e criar um fluxo de dados para trazer [!DNL Zendesk] dados para a Platform usando o [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
-### Criar uma conexão básica {#base-connection}
+### Crie uma conexão básica {#base-connection}
 
 Uma conexão base retém informações entre sua origem e a Platform, incluindo as credenciais de autenticação da origem, o estado atual da conexão e sua ID de conexão base exclusiva. A ID de conexão básica permite explorar e navegar pelos arquivos de dentro da origem e identificar os itens específicos que deseja assimilar, incluindo informações sobre os tipos de dados e formatos.
 

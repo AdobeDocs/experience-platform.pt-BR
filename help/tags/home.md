@@ -24,7 +24,7 @@ As tags são oferecidas aos [!DNL Adobe Experience Cloud] clientes como um recur
 ## Principais benefícios {#key-benefits}
 
 * Retorno do valor mais rápido.
-* Dados confiáveis por meio de coleção, organização e fornecimento centralizado com o uso de elementos de dados.
+* Dados confiáveis por meio de coleção, organização e entrega centralizadas com o uso de elementos de dados
 * Experiências atraentes por meio da integração da tecnologia de marketing e de dados com o uso do construtor de regras.
 
 ## Recursos principais {#key-features}
@@ -82,6 +82,6 @@ O conteúdo do container é minimizado, incluindo o código personalizado. Tudo 
 As tags oferecem várias melhorias com relação a sistemas similares, incluindo:
 
 * Nenhum uso do `document.write ()`, onde o Chrome não permite seu uso.
-* As regras de Topo e de Base de página são agrupadas na biblioteca principal para minimizar chamadas HTTP desnecessárias.
+* As regras de parte superior e inferior da página são agrupadas na biblioteca principal para minimizar chamadas HTTP desnecessárias.
 * É possível carregar scripts de ação personalizados em paralelo dentro de uma regra, mas eles são executados sequencialmente.
-* Se evitar regras de Topo e de Base de página, o código é em sua maioria assíncrono, podendo se tornar totalmente assíncrono.
+* Se evitar regras de parte superior e inferior da página, o código é em sua maioria assíncrono, podendo se tornar totalmente assíncrono.

@@ -5,7 +5,7 @@ description: O Adobe Experience Platform Privacy Service processa solicitações
 exl-id: ab84450b-1a4b-4fdd-b77d-508c86bbb073
 source-git-commit: 74ef1e24c2b40103ac6cafdfd22cb6036cdbfd3e
 workflow-type: tm+mt
-source-wordcount: '1015'
+source-wordcount: '1016'
 ht-degree: 0%
 
 ---
@@ -119,4 +119,4 @@ Consulte a [[!DNL Privacy Service] documentação](../privacy-service/home.md#mo
 
 ## Próximas etapas
 
-Ao ler este documento, você foi apresentado aos conceitos importantes envolvidos no processamento de solicitações de privacidade no [!DNL Identity Service]. Para obter informações sobre o processamento de solicitações de privacidade de outros [!DNL Experience Cloud] aplicativos, consulte o documento sobre [[!DNL Privacy Service] and [!DNL Experience Cloud] aplicativos](../privacy-service/experience-cloud-apps.md).
+Ao ler este documento, você foi apresentado aos conceitos importantes envolvidos no processamento de solicitações de privacidade no [!DNL Identity Service]. Para obter informações sobre o processamento de solicitações de privacidade de outros [!DNL Experience Cloud] aplicativos, consulte o documento sobre [[!DNL Privacy Service] e [!DNL Experience Cloud] aplicativos](../privacy-service/experience-cloud-apps.md).

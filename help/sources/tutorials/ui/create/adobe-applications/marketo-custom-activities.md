@@ -87,7 +87,7 @@ A última etapa na preparação do esquema é adicionar campos individuais dentr
 
 ![Um grupo de subcampos adicionados a um campo no esquema.](../../../../images/tutorials/create/marketo-custom-activities/add-sub-fields.png)
 
-## Criar um fluxo de dados
+## Crie um fluxo de dados
 
 Com a configuração do esquema concluída, agora é possível prosseguir para criar um fluxo de dados para seus dados de atividade personalizados.
 

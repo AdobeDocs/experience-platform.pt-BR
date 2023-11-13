@@ -5,7 +5,7 @@ badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 4faf3200-673b-4a20-8f94-d049e800444b
 source-git-commit: a7c2c5e4add5c80e0622d5aeb766cec950d79dbb
 workflow-type: tm+mt
-source-wordcount: '491'
+source-wordcount: '492'
 ht-degree: 2%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 2%
 >
 >A variável [!DNL Amazon Redshift] origem está disponível no catálogo de origens para usuários que compraram o Real-time Customer Data Platform Ultimate.
 
-Este tutorial fornece etapas sobre como conectar seu [!DNL Amazon Redshift] (a seguir designado por &quot;[!DNL Redshift]&quot;) para a Adobe Experience Platform usando a interface do usuário.
+Este tutorial fornece etapas sobre como conectar seus [!DNL Amazon Redshift] (a seguir designado por &quot;[!DNL Redshift]&quot;) para a Adobe Experience Platform usando a interface do usuário.
 
 ## Introdução
 
@@ -36,7 +36,7 @@ Para acessar seu [!DNL Redshift] conta no Experience Platform, você deve fornec
 | **Credencial** | **Descrição** |
 | -------------- | --------------- |
 | Servidor | O servidor associado ao seu [!DNL Redshift] conta. |
-| Porta  | A porta TCP que um [!DNL Redshift] O servidor usa o para detectar conexões de clientes. |
+| Porta | A porta TCP que um [!DNL Redshift] O servidor usa o para detectar conexões de clientes. |
 | Nome de usuário | O nome de usuário associado à [!DNL Redshift] conta. |
 | Senha | A senha associada ao seu [!DNL Redshift] conta. |
 | Banco de dados | A variável [!DNL Redshift] banco de dados que você está acessando. |

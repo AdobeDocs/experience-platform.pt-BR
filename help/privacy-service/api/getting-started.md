@@ -5,7 +5,7 @@ exl-id: c1d05e30-ef8f-4adf-87e0-1d6e3e9e9f9e
 source-git-commit: 2c8ac35e9bf72c91743714da1591c3414db5c5e9
 workflow-type: tm+mt
 source-wordcount: '862'
-ht-degree: 12%
+ht-degree: 17%
 
 ---
 
@@ -19,7 +19,7 @@ Este guia requer uma compreensão funcional de [Privacy Service](../home.md) e c
 
 Para criar credenciais de acesso para a API, um administrador em sua organização deve ter configurado previamente perfis de produto para o Privacy Service no Adobe Admin Console. O perfil de produto atribuído a uma integração de API determina as permissões dessa integração ao acessar recursos de Privacy Service. Consulte o guia sobre [gerenciamento de permissões de Privacy Service](../permissions.md) para obter mais informações.
 
-## Coletar valores para cabeçalhos obrigatórios {#gather-values-required-headers}
+## Coletar valores para cabeçalhos necessários {#gather-values-required-headers}
 
 Para fazer chamadas para a API Privacy Service, primeiro colete suas credenciais de acesso para serem usadas nos cabeçalhos necessários:
 
@@ -99,11 +99,11 @@ Você também pode usar um ambiente e uma coleção do Postman para gerar tokens
 
 ## Leitura de chamadas de API de amostra {#read-sample-api-calls}
 
-Cada manual de endpoint fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O exemplo de JSON retornado nas respostas da API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de exemplo, consulte a seção sobre [como ler chamadas de API de exemplo](../../landing/api-guide.md#sample-api) no guia de introdução às APIs da Platform.
+Cada manual de endpoint fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e conteúdos de solicitação formatados corretamente. Também fornece exemplos de JSON retornado nas respostas da API. Para obter informações sobre as convenções usadas na documentação para chamadas de API de exemplo, consulte a seção sobre [como ler chamadas de API de exemplo](../../landing/api-guide.md#sample-api) no guia de introdução às APIs da Platform.
 
 ## Próximas etapas {#next-steps}
 
 Agora que você entende quais cabeçalhos usar, você está pronto para começar a fazer chamadas para a API Privacy Service. Selecione um dos manuais de endpoint para começar:
 
-* [Trabalhos de privacidade](./privacy-jobs.md)
+* [Processos de privacidade](./privacy-jobs.md)
 * [Consentimento](./consent.md)

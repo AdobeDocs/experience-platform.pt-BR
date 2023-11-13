@@ -5,7 +5,7 @@ exl-id: aad6a302-1905-4a23-bc3d-39e76c9a22da
 source-git-commit: ebd650355a5a4c2a949739384bfd5c8df9577075
 workflow-type: tm+mt
 source-wordcount: '1192'
-ht-degree: 4%
+ht-degree: 5%
 
 ---
 
@@ -951,4 +951,4 @@ Uma resposta bem-sucedida retorna a ID e a variável `etag` do seu fluxo de dado
 
 ## Próximas etapas
 
-Seguindo este tutorial, você aprendeu a criar rascunhos de seus [!DNL Flow Service] entidades adjudicantes, bem como a publicação desses rascunhos. Para obter mais informações sobre fontes, leia o [visão geral das origens](../../home.md).
+Seguindo este tutorial, você aprendeu a criar rascunhos de seus [!DNL Flow Service] entidades adjudicantes, bem como a publicação desses rascunhos. Para obter mais informações sobre origens, leia a [visão geral de origens](../../home.md).

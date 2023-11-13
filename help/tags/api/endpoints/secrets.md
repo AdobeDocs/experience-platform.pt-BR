@@ -648,7 +648,7 @@ Uma resposta bem-sucedida retorna os detalhes do segredo, com o status redefinid
 
 Each `oauth2-google` o segredo contém um `meta.authorization_url_expires_at` propriedade que indica quando o URL de autorização irá expirar. Após esse período, o segredo deverá ser reautorizado para que possa renovar o processo de autenticação.
 
-Para reautorizar uma `oauth2-google` segredo, faça uma solicitação PATCH para o segredo em questão.
+Para reautorizar uma `oauth2-google` secret, faça uma solicitação PATCH para o segredo em questão.
 
 **Formato da API**
 

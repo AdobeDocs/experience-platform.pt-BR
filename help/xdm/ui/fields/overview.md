@@ -25,7 +25,7 @@ Embora não seja necessário para este guia, é recomendável seguir o tutorial 
 
 Para definir novos campos XDM na interface do usuário do, primeiro abra um esquema na [!DNL Schema Editor]. Dependendo de quais esquemas estão atualmente disponíveis para você no [!DNL Schema Library], você pode optar por [criar um novo esquema](../resources/schemas.md#create) ou [selecionar um esquema existente para editar](../resources/schemas.md#edit).
 
-Depois que você tiver o [!DNL Schema Editor] aberto, os controles para adicionar campos aparecem na tela. Esses controles aparecem ao lado do nome do esquema, bem como quaisquer campos do tipo objeto que tenham sido definidos na classe ou grupo de campos selecionado.
+Depois que você tiver o [!DNL Schema Editor] aberto, os controles para adicionar campos aparecem na tela. Esses controles aparecem ao lado do nome do esquema, bem como quaisquer campos do tipo objeto que tenham sido definidos na classe ou no grupo de campos selecionado.
 
 ![](../../images/ui/fields/overview/select-resource.png)
 

@@ -83,7 +83,7 @@ Essa caixa de diálogo deve permitir que o cliente aceite ou não as seguintes o
 
 | Opção de consentimento | Descrição |
 | --- | --- |
-| **Finalidades** | Finalidades definem para quais fins de publicidade uma marca pode usar os dados de um cliente. Os seguintes objetivos devem ser aceitos para que a Platform processe as IDs do cliente: <ul><li>**Finalidade 1**: armazenar e/ou acessar informações em um dispositivo</li><li>**Propósito 10**: desenvolver e melhorar produtos</li></ul> |
+| **Finalidades** | Finalidades definem para quais fins de publicidade uma marca pode usar os dados de um cliente. Os seguintes objetivos devem ser aceitos para que a Platform processe as IDs do cliente: <ul><li>**Finalidade 1**: armazenar e/ou acessar informações em um dispositivo</li><li>**Finalidade 10**: desenvolver e melhorar produtos</li></ul> |
 | **Permissões de fornecedor** | Além dos objetivos tecnológicos do anúncio, o diálogo também deve permitir que o cliente opte por aceitar ou não ter seus dados usados por fornecedores específicos, incluindo o Adobe Experience Platform (565). |
 
 ### Strings de consentimento {#consent-strings}
@@ -116,7 +116,7 @@ Depois de configurar o CMP para gerar cadeias de consentimento, você deve integ
 
 **O SDK não faz interface com nenhum CMP pronto para uso**. Cabe a você determinar como integrar o SDK ao seu site, acompanhar as alterações de consentimento no CMP e chamar o comando apropriado.
 
-### Criar um novo fluxo de dados
+### Criar uma nova sequência de dados
 
 Para que o SDK envie dados para o Experience Platform, primeiro você deve criar um novo fluxo de dados para a Platform. Etapas específicas para criar um novo fluxo de dados são fornecidas na [Documentação do SDK](../../../../datastreams/overview.md).
 
@@ -236,7 +236,7 @@ Desde que a configuração de consentimento `gdprApplies` está definida como `t
 Os clientes devem consentir com os seguintes objetivos (conforme descrito pelo [Políticas do TCF 2.0](https://iabeurope.eu/iab-europe-transparency-consent-framework-policies/#Appendix_A_Purposes_and_Features_Definitions)) para que seus perfis sejam incluídos em segmentos exportados para destinos:
 
 * **Finalidade 1**: armazenar e/ou acessar informações em um dispositivo
-* **Propósito 10**: desenvolver e melhorar produtos
+* **Finalidade 10**: desenvolver e melhorar produtos
 
 O TCF 2.0 também exige que a fonte de dados verifique a permissão do fornecedor do destino antes de enviar os dados para esse destino. Dessa forma, a Platform verifica se a permissão do fornecedor do destino é aceita para todas as IDs no cluster antes de incluir dados vinculados a esse destino.
 

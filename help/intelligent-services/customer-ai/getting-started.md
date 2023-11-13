@@ -3,12 +3,12 @@ keywords: Experience Platform;introdução;ia do cliente;tópicos populares;gett
 solution: Experience Platform, Real-Time Customer Data Platform
 feature: Customer AI
 title: Introdução à IA do cliente
-description: Este guia fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente.
+description: Este manual fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e conteúdos de solicitação formatados corretamente.
 exl-id: 90c9a83a-8e66-4239-b2d6-2049a6319b25
 source-git-commit: 07a110f6d293abff38804b939014e28f308e3b30
 workflow-type: tm+mt
 source-wordcount: '572'
-ht-degree: 0%
+ht-degree: 11%
 
 ---
 
@@ -45,7 +45,7 @@ Todos os recursos no Experience Platform são isolados em sandboxes virtuais esp
 
 ### Leitura de chamadas de API de amostra
 
-Este guia fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O exemplo de JSON retornado nas respostas da API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de exemplo, consulte a seção sobre [como ler chamadas de API de exemplo](../../landing/troubleshooting.md) no guia de solução de problemas de Experience Platform.
+Este manual fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e conteúdos de solicitação formatados corretamente. Também fornece exemplos de JSON retornado nas respostas da API. Para obter informações sobre as convenções usadas na documentação para chamadas de API de exemplo, consulte a seção sobre [como ler chamadas de API de exemplo](../../landing/troubleshooting.md) no guia de solução de problemas de Experience Platform.
 
 ## Próximas etapas
 

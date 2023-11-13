@@ -59,7 +59,7 @@ Antes de mergulhar nos detalhes de [!DNL Data Science Workspace], aqui está um 
 | Treinamento | Treinamento é o processo de padrões de aprendizado e insights de dados rotulados. |
 | Modelo treinado | Um modelo treinado representa a saída executável de um processo de treinamento de modelo, no qual um conjunto de dados de treinamento foi aplicado à instância do modelo. Um modelo treinado manterá uma referência a qualquer serviço inteligente da Web criado a partir dele. O modelo treinado é adequado para pontuar e criar um serviço web inteligente. As modificações em um modelo treinado podem ser rastreadas como uma nova versão. |
 | Pontuação | A pontuação é o processo de gerar insights dos dados usando um modelo treinado. |
-| Serviço de | Um serviço implantado expõe a funcionalidade de uma inteligência artificial, de um modelo de aprendizado de máquina ou de um algoritmo avançado por meio de uma API, para que possa ser consumido por outros serviços ou aplicativos para criar aplicativos inteligentes. |
+| Serviço | Um serviço implantado expõe a funcionalidade de uma inteligência artificial, de um modelo de aprendizado de máquina ou de um algoritmo avançado por meio de uma API, para que possa ser consumido por outros serviços ou aplicativos para criar aplicativos inteligentes. |
 
 O gráfico a seguir descreve a relação hierárquica entre Receitas, Modelos, Execuções de Treinamento e Execuções de Pontuação.
 

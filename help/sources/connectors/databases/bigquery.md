@@ -5,7 +5,7 @@ badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 35c61382-a909-47f4-a937-15cb725ecbe3
 source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
 workflow-type: tm+mt
-source-wordcount: '395'
+source-wordcount: '396'
 ht-degree: 0%
 
 ---
@@ -37,7 +37,7 @@ Para conectar [!DNL Google BigQuery] Para o Platform, é necessário gerar valor
 | `project` | O projeto é a entidade organizacional de nível básico do [!DNL Google Cloud] recursos, incluindo [!DNL Google BigQuery]. |
 | `clientID` | A ID do cliente é metade de sua [!DNL Google BigQuery] Credenciais do OAuth 2.0. |
 | `clientSecret` | O segredo do cliente é a outra metade do seu [!DNL Google BigQuery] Credenciais do OAuth 2.0. |
-| `refreshToken` | O token de atualização permite obter novos tokens de acesso para a API. Os tokens de acesso têm duração limitada e podem expirar durante o curso do projeto. Você pode usar o token de atualização para autenticar e solicitar tokens de acesso subsequentes para o seu projeto quando necessário. |
+| `refreshToken` | O token de atualização permite obter novos tokens de acesso para a API. Os tokens de acesso têm duração limitada e podem expirar durante o curso do projeto. Você pode usar o token de atualização para autenticar e solicitar tokens de acesso subsequentes para seu projeto quando necessário. |
 | `largeResultsDataSetId` | O pré-criado  [!DNL Google BigQuery] a ID do conjunto de dados que é necessária para habilitar o suporte para grandes conjuntos de resultados. |
 
 Para obter instruções detalhadas sobre como gerar credenciais do OAuth 2.0 para [!DNL Google] APIs, consulte o seguinte [[!DNL Google] Guia de autenticação do OAuth 2.0](https://developers.google.com/identity/protocols/oauth2).

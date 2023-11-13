@@ -1,11 +1,11 @@
 ---
-title: Notas de versão da Adobe Experience Platform de março de 2022
-description: As notas de versão de março de 2022 para o Adobe Experience Platform.
+title: Notas da versão de março de 2022 da Adobe Experience Platform
+description: As notas da versão de março de 2022 da Adobe Experience Platform.
 exl-id: 0d499aa6-e25d-4d34-ad32-5e4ab361cba1
 source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '1176'
-ht-degree: 15%
+ht-degree: 19%
 
 ---
 
@@ -24,7 +24,7 @@ Atualizações dos recursos já existentes na Adobe Experience Platform:
 - [[!DNL Dashboards]](#dashboards)
 - [Coleção de dados](#data-collection)
 - [[!DNL Query Service]](#query-service)
-- [Fontes](#sources)
+- [Origens](#sources)
 
 ## Logs de auditoria {#audit-logs}
 
@@ -121,7 +121,7 @@ Para obter mais informações sobre a coleta de dados na Platform, consulte a [v
 
 ## Query Service {#query-service}
 
-[!DNL Query Service] permite usar SQL padrão para consultar dados no Adobe Experience Platform [!DNL Data Lake]. Você pode associar qualquer conjunto de dados da [!DNL Data Lake] e capture os resultados da consulta como um novo conjunto de dados para usar em relatórios, no Data Science Workspace ou para assimilação no Perfil do cliente em tempo real.
+[!DNL Query Service]O permite usar SQL padrão para consultar dados no [!DNL Data Lake] da Adobe Experience Platform. Você pode associar qualquer conjunto de dados da [!DNL Data Lake] e capture os resultados da consulta como um novo conjunto de dados para usar em relatórios, no Data Science Workspace ou para assimilação no Perfil do cliente em tempo real.
 
 **Recursos atualizados**
 
@@ -133,9 +133,9 @@ Para obter mais informações sobre a coleta de dados na Platform, consulte a [v
 
 Para obter mais informações sobre recursos disponíveis, consulte [Visão geral do Serviço de consulta](../../query-service/home.md).
 
-## Fontes {#sources}
+## Origens {#sources}
 
-O Adobe Experience Platform pode assimilar dados de fontes externas e, ao mesmo tempo, estruturar, rotular e aprimorar esses dados usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, software de terceiros e seu sistema de CRM.
+O Adobe Experience Platform pode assimilar dados de fontes externas e, ao mesmo tempo, estruturar, rotular e aprimorar esses dados usando os serviços da plataforma. É possível assimilar dados de várias origens, como aplicativos da Adobe, do armazenamento na nuvem, um software de terceiros e do seu sistema de CRM.
 
 A Experience Platform fornece uma API RESTful e uma interface interativa que permite configurar conexões de origem para vários provedores de dados com facilidade. Essas conexões de origem permitem autenticar e conectar-se a sistemas de armazenamento externos e serviços de CRM, definir tempos para execuções de assimilação e gerenciar a assimilação de dados em todo o.
 

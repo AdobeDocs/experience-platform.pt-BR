@@ -24,13 +24,13 @@ Para obter um guia para trabalhar com [!DNL Real-Time Customer Profile] dados no
 
 >[!IMPORTANT]
 >
->A funcionalidade de atributo computado está na versão beta e não está disponível para todos os usuários. A documentação e a funcionalidade estão sujeitas a alterações.
+A funcionalidade de atributo computado está na versão beta e não está disponível para todos os usuários. A documentação e a funcionalidade estão sujeitas a alterações.
 
 Os atributos computados são funções usadas para agregar dados no nível do evento em atributos no nível do perfil. Essas funções são computadas automaticamente para que possam ser usadas na segmentação, ativação e personalização.
 
 Cada atributo calculado contém uma expressão, ou &quot;regra&quot;, que avalia os dados recebidos e armazena o valor resultante em um atributo de perfil. Esses cálculos ajudam a responder facilmente a perguntas relacionadas a coisas como valor de compra vitalício, tempo entre compras ou número de aberturas de aplicativo, sem exigir que você realize cálculos complexos manualmente sempre que as informações forem necessárias. Esses valores de atributos calculados podem ser exibidos em um perfil, usados para criar um público ou acessados por meio de vários padrões de acesso diferentes.
 
-É possível criar, exibir, editar e excluir atributos calculados usando a `ca/attributes/` terminal. Para saber como usar atributos calculados, consulte a [visão geral dos atributos computados](../computed-attributes/overview.md). Para operações de API, visite o [manual de endpoint da API de atributos computados](../computed-attributes/api.md).
+Você pode criar, exibir, editar e excluir atributos calculados usando a `ca/attributes/` terminal. Para saber como usar atributos calculados, consulte a [visão geral dos atributos computados](../computed-attributes/overview.md). Para operações de API, visite o [manual de endpoint da API de atributos computados](../computed-attributes/api.md).
 
 ## Projeções de borda {#edge-projections}
 

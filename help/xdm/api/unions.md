@@ -29,7 +29,7 @@ De um esquema de união `identityMap` é uma representação das identidades con
 
 A variável `timeSeriesEvents` matriz é uma lista de eventos de série temporal relacionados aos esquemas de registro associados à união. Quando os dados do perfil são exportados para conjuntos de dados, essa matriz é incluída para cada registro. Isso é útil para vários casos de uso, como aprendizado de máquina, em que os modelos precisam de todo o histórico de comportamento de um perfil, além dos atributos de registro.
 
-### Mapa de associação de segmento
+### Mapa da associação de segmento
 
 A variável `segmentMembership` o mapa armazena os resultados da avaliação de uma definição de segmento. Quando os trabalhos de segmento são executados com sucesso usando o [API de segmentação](https://www.adobe.io/experience-platform-apis/references/segmentation/), o mapa é atualizado. `segmentMembership` O também armazena quaisquer públicos-alvo pré-avaliados que são assimilados na Platform, permitindo a integração com outras soluções, como o Adobe Audience Manager. Veja o tutorial sobre [criação de públicos usando APIs](../../segmentation/tutorials/create-a-segment.md) para obter mais informações.
 

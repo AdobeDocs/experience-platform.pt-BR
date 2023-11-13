@@ -1,11 +1,11 @@
 ---
-title: Notas de versão da Adobe Experience Platform de abril de 2022
-description: As notas de versão de abril de 2022 do Adobe Experience Platform.
+title: Notas de versão de abril de 2022 da Adobe Experience Platform
+description: As notas de versão de abril de 2022 da Adobe Experience Platform.
 exl-id: 39233787-3089-4469-8363-b006ae41ae21
 source-git-commit: 4bdbb987905b6010f4b4f75bee060828d0e07368
 workflow-type: tm+mt
 source-wordcount: '2904'
-ht-degree: 9%
+ht-degree: 18%
 
 ---
 
@@ -45,7 +45,7 @@ Os seguintes widgets estão disponíveis na Biblioteca de widgets nos respectivo
 | [!UICONTROL Destinos ativos por plataforma de destino] | Destinos | Este widget usa uma tabela de duas colunas para mostrar uma lista de plataformas de destino ativas e o número total de destinos ativos para cada plataforma de destino. |
 | [!UICONTROL Públicos ativados em todos os destinos] | Destinos | Este widget fornece o número total de públicos ativados em todos os destinos em uma única métrica. |
 | [!UICONTROL Ordem de ativação de público] | Segmentos | Esse widget fornece uma tabela de três colunas que lista o nome do destino, a plataforma e a data de ativação do público-alvo. |
-| [!UICONTROL Tendência de tamanho do público] | Segmentos | Este widget fornece uma ilustração de gráfico de linhas para o número total de perfis que atendem aos critérios de qualquer definição de segmento durante períodos de 30 dias, 90 dias e 12 meses. |
+| [!UICONTROL Tendência de tamanho do público-alvo] | Segmentos | Este widget fornece uma ilustração de gráfico de linhas para o número total de perfis que atendem aos critérios de qualquer definição de segmento durante períodos de 30 dias, 90 dias e 12 meses. |
 | [!UICONTROL Tendência de alteração de tamanho do público] | Segmentos | Este widget fornece uma ilustração de gráfico de linhas da diferença no número total de perfis qualificados para um determinado segmento entre os instantâneos diários mais recentes. O período da análise de tendência pode ser visualizado em períodos de 30 dias, 90 dias e 12 meses. |
 | [!UICONTROL Tendência de tamanho do público por identidade] | Segmentos | Este widget ilustra a tendência do tamanho do público-alvo para um segmento específico com base em um tipo de identidade selecionado. O período da análise de tendência pode ser visualizado em períodos de 30 dias, 90 dias e 12 meses. |
 
@@ -105,7 +105,7 @@ Se você estiver utilizando esses destinos na fase Beta, observe o seguinte:
 
 - Se tiver estado anteriormente em Beta com qualquer um dos três destinos, nenhuma ação será necessária. Todos os fluxos de dados configurados como parte da versão Beta continuarão funcionando e serão migrados para a versão GA.
 - Se você quiser configurar esses destinos a partir de 27 de abril, faça isso com a nova versão GA dos destinos.
-- Os cartões beta marcados como obsoletos serão removidos quando a operação de lançamento estiver concluída, estimada para o final do dia sexta-feira, 29 de abril. A equipe de engenharia de Experience Platform está monitorando atentamente uma operação de lançamento bem-sucedida.
+- Os cartões beta marcados como obsoletos serão removidos assim que a operação de lançamento estiver concluída, estimada para o final do dia sexta-feira, 29 de abril. A equipe de engenharia de Experience Platform está monitorando atentamente uma operação de lançamento bem-sucedida.
 
 **Novos destinos**
 
@@ -118,7 +118,7 @@ Para obter informações mais gerais sobre destinos, consulte a [visão geral de
 
 ## Experience Data Model (XDM) {#xdm}
 
-O XDM é uma especificação de código aberto que fornece estruturas e definições comuns (esquemas) para dados trazidos para o Adobe Experience Platform. Seguindo os padrões XDM, todos os dados de experiência do cliente podem ser incorporados a uma representação comum para fornecer insights de maneira mais rápida e integrada. Você pode obter insights valiosos das ações do cliente, definir públicos do cliente por meio de segmentos e usar atributos do cliente para fins de personalização.
+O XDM é uma especificação de código aberto que fornece estruturas e definições comuns (esquemas) para dados inseridos na Adobe Experience Platform. Ao aderir aos padrões do XDM, todos os dados de experiência do cliente podem ser incorporados em uma representação comum para fornecer insights de maneira mais rápida e integrada. Você pode obter insights valiosos sobre ações de clientes, definir públicos-alvo por meio de segmentos e usar atributos de clientes para fins de personalização.
 
 **Novos recursos**
 
@@ -128,7 +128,7 @@ O XDM é uma especificação de código aberto que fornece estruturas e definiç
 
 {style="table-layout:auto"}
 
-**Novos componentes XDM**
+**Novos componentes do XDM**
 
 | Tipo de componente | Nome | Descrição |
 | --- | --- | --- |
@@ -153,11 +153,11 @@ O XDM é uma especificação de código aberto que fornece estruturas e definiç
 
 {style="table-layout:auto"}
 
-**Componentes XDM atualizados**
+**Componentes de XDM atualizados**
 
 | Tipo de componente | Nome | Atualizar descrição |
 | --- | --- | --- |
-| Esquema global | [[!UICONTROL Destinos ]](https://github.com/adobe/xdm/blob/master/schemas/destinations/destination.schema.json) | Novos valores de enumeração para `destinationCategory`. |
+| Esquema global | [[!UICONTROL Destinos]](https://github.com/adobe/xdm/blob/master/schemas/destinations/destination.schema.json) | Novos valores de enumeração para `destinationCategory`. |
 | Descritor | [[!UICONTROL Descritor do nome amigável]](https://github.com/adobe/xdm/blob/master/schemas/descriptors/display/alternateDisplayInfo.schema.json) | Adição de suporte para remoção de valores sugeridos (`meta:enum`) que não são necessários nos campos padrão. |
 | Grupo de campos | [[!UICONTROL Processo de logon do usuário]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-user-login-details.schema.json) | `createProfile` campo adicionado. |
 | Tipo de dados | [[!UICONTROL Comércio]](https://github.com/adobe/xdm/blob/master/components/datatypes/marketing/commerce.schema.json) | Vários campos relacionados ao carrinho foram adicionados. |
@@ -169,15 +169,15 @@ O XDM é uma especificação de código aberto que fornece estruturas e definiç
 
 {style="table-layout:auto"}
 
-Para obter mais informações sobre o XDM na Platform, consulte a [Visão geral do sistema XDM](../../xdm/home.md).
+Para obter mais informações sobre o XDM na Platform, consulte a [Visão geral do sistema de XDM](../../xdm/home.md).
 
 ## [!DNL Artificial Intelligence/Machine Learning services] {#ai/ml-services}
 
-Os serviços de IA/ML permitem que analistas e profissionais de marketing aproveitem o potencial da inteligência artificial e do aprendizado de máquina em casos de uso de experiência do cliente. Isso permite que os analistas de marketing definam previsões específicas para as necessidades de uma empresa usando configurações de nível empresarial sem a necessidade de conhecimento especializado em ciência de dados.
+Os serviços de IA/ML permitem que analistas e profissionais de marketing aproveitem o potencial da inteligência artificial e do aprendizado de máquina em casos de uso de experiência do cliente. Isso permite que os analistas de marketing estabeleçam previsões específicas para as necessidades de uma empresa usando configurações de nível empresarial, sem a necessidade de uma especialização em ciência de dados.
 
 ### IA de atribuição
 
-O Attribution AI é usado para atribuir créditos a pontos de contato que levam a eventos de conversão. Ele pode ser usado pelos comerciantes para ajudar a quantificar o impacto de marketing de cada ponto de contato de marketing individual em várias jornadas de clientes.
+O Attribution AI é usado para atribuir créditos a pontos de contato que levam a eventos de conversão. Ela pode ser usada por comerciantes para ajudar a quantificar o impacto de marketing de cada ponto de contato de marketing individual em várias jornadas de clientes.
 
 **Recursos atualizados**
 
@@ -202,7 +202,7 @@ Para obter mais informações sobre [!DNL Intelligent Services], consulte o [[!D
 
 ## Real-Time Customer Data Platform B2B Edition {#B2B}
 
-Criado no Real-time Customer Data Platform (Real-Time CDP), o Real-Time CDP B2B Edition foi desenvolvido especificamente para profissionais de marketing que operam em um modelo de serviço business-to-business. Ele reúne dados de várias fontes e os combina em uma única visualização de pessoas e perfis de conta. Esses dados unificados permitem que os profissionais de marketing direcionem públicos específicos com precisão e envolvam esses públicos em todos os canais disponíveis.
+Criada com base na Real-time Customer Data Platform (Real-Time CDP), a Real-Time CDP B2B Edition foi desenvolvida especificamente para profissionais de marketing que operam em um modelo de serviço B2B. A plataforma reúne dados de várias origens e os combina numa única exibição de perfis de pessoas e contas. Esses dados unificados permitem que profissionais de marketing direcionem públicos-alvo específicos com precisão e gerem engajamento em todos os canais disponíveis.
 
 **Recursos atualizados**
 
@@ -212,9 +212,9 @@ Criado no Real-time Customer Data Platform (Real-Time CDP), o Real-Time CDP B2B 
 
 Para saber mais sobre o Real-time Customer Data Platform B2B Edition, consulte a [Visão geral B2B](../../rtcdp/b2b-overview.md).
 
-## Fontes {#sources}
+## Origens {#sources}
 
-O Adobe Experience Platform pode assimilar dados de fontes externas e, ao mesmo tempo, estruturar, rotular e aprimorar esses dados usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, software de terceiros e seu sistema de CRM.
+O Adobe Experience Platform pode assimilar dados de fontes externas e, ao mesmo tempo, estruturar, rotular e aprimorar esses dados usando os serviços da plataforma. É possível assimilar dados de várias origens, como aplicativos da Adobe, do armazenamento na nuvem, um software de terceiros e do seu sistema de CRM.
 
 A Experience Platform fornece uma API RESTful e uma interface interativa que permite configurar conexões de origem para vários provedores de dados com facilidade. Essas conexões de origem permitem autenticar e conectar a sistemas de armazenamento externos e serviços de CRM, definir períodos para execuções de assimilação e gerenciar a taxa de transferência de assimilação de dados.
 

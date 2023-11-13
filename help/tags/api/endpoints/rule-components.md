@@ -21,7 +21,7 @@ Há três tipos básicos de componentes de regra:
 
 | Tipo de componente de regra | Descrição |
 | --- | --- |
-| Eventos | Um evento é o acionador de uma regra. A regra é iniciada quando o evento ocorre em tempo de execução no dispositivo cliente. [!UICONTROL Carregamento de biblioteca]&quot;, &quot;[!UICONTROL Topo da página]&quot; e &quot;[!UICONTROL Clicar]&quot; são exemplos de eventos. |
+| Eventos | Um evento é o acionador de uma regra. A regra é iniciada quando o evento ocorre em tempo de execução no dispositivo cliente. [!UICONTROL Carregamento de biblioteca]&quot;, &quot;[!UICONTROL Parte superior da página]&quot; e &quot;[!UICONTROL Clicar]&quot; são exemplos de eventos. |
 | Condições | Uma condição é uma avaliação do cumprimento de certos critérios antes de qualquer ação ser executada. Quando um evento ocorre, as condições são avaliadas. As ações da regra só serão executadas se todas as condições forem atendidas. |
 | Ações | Essas são as ações que você deseja que a regra realmente execute, como enviar um beacon do Adobe Analytics, recuperar uma ID de visitante personalizada ou acionar uma mbox específica. |
 

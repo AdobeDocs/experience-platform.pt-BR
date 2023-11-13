@@ -8,7 +8,7 @@ exl-id: 76659f5a-c923-488c-88f6-1919bc6a7bb5
 source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '552'
-ht-degree: 1%
+ht-degree: 4%
 
 ---
 
@@ -24,7 +24,7 @@ Este tutorial guiará você pelas etapas para criar uma conexão básica para [!
 
 ## Introdução
 
-Este guia requer uma compreensão funcional dos seguintes componentes da Platform:
+Este manual necessita de uma compreensão funcional dos seguintes componentes da Platform:
 
 * [Origens](../../../../home.md): a Platform permite que os dados sejam assimilados de várias fontes e fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando o [!DNL Platform] serviços.
 * [Sandboxes](../../../../../sandboxes/home.md): a Platform fornece sandboxes virtuais que particionam um único [!DNL Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
@@ -48,7 +48,7 @@ Para obter mais informações sobre credenciais de autenticação para [!DNL Ora
 
 Para obter informações sobre como fazer chamadas para APIs da Platform com êxito, consulte o manual em [introdução às APIs da Platform](../../../../../landing/api-guide.md).
 
-## Criar uma conexão básica
+## Crie uma conexão básica
 
 Uma conexão base retém informações entre sua origem e a Platform, incluindo as credenciais de autenticação da origem, o estado atual da conexão e sua ID de conexão base exclusiva. A ID de conexão básica permite explorar e navegar pelos arquivos de dentro da origem e identificar os itens específicos que deseja assimilar, incluindo informações sobre os tipos de dados e formatos.
 

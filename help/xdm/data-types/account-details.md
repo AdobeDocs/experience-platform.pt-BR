@@ -35,7 +35,7 @@ ht-degree: 5%
 | `primaryEmailDomain` | String | O domínio de email principal que a organização usa para sua equipe. |
 | `rating` | Duplo | A pontuação calculada ou classificação por estrelas para esta organização. `1` indica a classificação máxima possível, e `0` é a classificação mínima possível. |
 | `tickerSymbol` | String | O símbolo do mercado de ações desta conta. Máximo de 20 caracteres. |
-| `twitterHandleUrl` | String | Um link de site para o identificador twitter da organização. |
+| `twitterHandleUrl` | String | Um link de site para o identificador de twitter da organização. |
 | `website` | String | O URL do site da organização. |
 
 {style="table-layout:auto"}

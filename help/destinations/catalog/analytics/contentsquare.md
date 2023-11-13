@@ -10,7 +10,7 @@ ht-degree: 5%
 
 ---
 
-# [!DNL Contentsquare] extensão {#contentsquare-extension}
+# Extensão do [!DNL Contentsquare] {#contentsquare-extension}
 
 ## Visão geral {#overview}
 

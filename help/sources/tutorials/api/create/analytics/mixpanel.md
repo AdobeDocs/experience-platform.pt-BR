@@ -15,7 +15,7 @@ O tutorial a seguir orienta você pelas etapas para criar uma conexão de origem
 
 ## Introdução
 
-Este guia requer entendimento prático dos seguintes componentes do Experience Platform:
+Este manual necessita de uma compreensão funcional dos seguintes componentes da Experience Platform:
 
 * [Origens](../../../../home.md): o Experience Platform permite que os dados sejam assimilados de várias fontes e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma.
 * [Sandboxes](../../../../../sandboxes/home.md): o Experience Platform fornece sandboxes virtuais que particionam uma única instância da Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
@@ -35,7 +35,7 @@ Para se conectar [!DNL Mixpanel] Para o Platform, você deve fornecer valores pa
 
 Para obter mais informações sobre a autenticação do [!DNL Mixpanel] fonte, consulte o [[!DNL Mixpanel] visão geral da origem](../../../../connectors/analytics/mixpanel.md).
 
-## Criar uma conexão básica {#base-connection}
+## Crie uma conexão básica {#base-connection}
 
 Uma conexão base retém informações entre sua origem e a Platform, incluindo as credenciais de autenticação da origem, o estado atual da conexão e sua ID de conexão base exclusiva. A ID de conexão básica permite explorar e navegar pelos arquivos de dentro da origem e identificar os itens específicos que deseja assimilar, incluindo informações sobre os tipos de dados e formatos.
 

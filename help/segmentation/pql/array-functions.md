@@ -72,7 +72,7 @@ A consulta PQL a seguir define as pessoas cujas cores favoritas incluem pelo men
 person.favoriteColors.intersects(["red", "blue", "green"])
 ```
 
-## Intersecção
+## Interseção
 
 A variável `intersection` é usada para determinar os membros comuns de duas matrizes ou listas.
 

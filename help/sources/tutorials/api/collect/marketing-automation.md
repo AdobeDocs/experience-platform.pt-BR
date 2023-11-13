@@ -558,7 +558,7 @@ Uma resposta bem-sucedida retorna os detalhes da especificação do fluxo de dad
 
 +++
 
-## Criar um fluxo de dados
+## Crie um fluxo de dados
 
 A última etapa para coletar dados de automação de marketing é criar um fluxo de dados. Até agora, você tem os seguintes valores necessários preparados:
 

@@ -5,7 +5,7 @@ exl-id: f22c37a8-202d-49ac-9af0-545dfa9af8fd
 source-git-commit: 7c1d956e3b6a1314baa13fef823d73d42404516a
 workflow-type: tm+mt
 source-wordcount: '627'
-ht-degree: 4%
+ht-degree: 5%
 
 ---
 
@@ -23,7 +23,7 @@ Este guia usa conceitos específicos da plataforma, como organização e sandbox
 
 O Destination SDK usa o [Adobe I/O](https://www.adobe.io/) gateway para autenticação. Para fazer chamadas de API para endpoints Destination SDK, você deve fornecer determinados cabeçalhos em suas chamadas de API. Trabalhe com a equipe do Adobe Exchange para configurar a autenticação para que você [Console do Adobe Developer](https://developer.adobe.com/console).
 
-Para fazer chamadas com êxito para endpoints da API Destination SDK, siga o [Tutorial de autenticação Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html). Inicie o tutorial pelo &quot;[Gerar uma chave de API, uma ID da organização e um segredo do cliente](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html#api-ims-secret)&quot; etapa. A equipe do Adobe Exchange cuidará das etapas anteriores para você. Concluir o tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários nas chamadas de API de Destination SDK, conforme mostrado abaixo:
+Para fazer chamadas com êxito para endpoints da API Destination SDK, siga o [Tutorial de autenticação Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=pt-BR). Inicie o tutorial pelo &quot;[Gerar uma chave de API, uma ID da organização e um segredo do cliente](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html#api-ims-secret)&quot; etapa. A equipe do Adobe Exchange cuidará das etapas anteriores para você. Concluir o tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários nas chamadas de API de Destination SDK, conforme mostrado abaixo:
 
 * `x-api-key: {API_KEY}`, também conhecida como ID do cliente
 * `x-gw-ims-org-id: {ORG_ID}`, também conhecida como ID da organização

@@ -159,7 +159,7 @@ Na tela seguinte, selecione **[!UICONTROL Adobe Experience Platform Web SDK]** n
 
 ![Tipo de objeto XDM](./images/e2e/xdm-object.png)
 
-A caixa de diálogo de configuração é exibida para o tipo de objeto XDM. A caixa de diálogo seleciona automaticamente sua sandbox da Platform e, aqui, é possível ver todos os esquemas que foram criados nessa sandbox. Selecione na lista o esquema XDM criado anteriormente.
+A caixa de diálogo de configuração é exibida para o tipo de objeto XDM. A caixa de diálogo seleciona automaticamente a sandbox da Platform e, aqui, é possível ver todos os esquemas criados nessa sandbox. Selecione na lista o esquema XDM criado anteriormente.
 
 ![Tipo de objeto XDM](./images/e2e/select-schema.png)
 

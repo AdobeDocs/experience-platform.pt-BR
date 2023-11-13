@@ -6,7 +6,7 @@ exl-id: 3f28e2bc-2c4b-4400-8f69-c7316449ff4f
 source-git-commit: 5f2358c2e102c66a13746004ad73e2766e933705
 workflow-type: tm+mt
 source-wordcount: '424'
-ht-degree: 0%
+ht-degree: 3%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Leia o [Documentação do canal da Web do Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/get-started-web.html) para obter informações sobre a introdução ao [!DNL Journey Optimizer Web] criação e relatórios de experiência.
+>Leia o [Documentação do canal da Web do Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/get-started-web.html?lang=pt-BR) para obter informações sobre a introdução ao [!DNL Journey Optimizer Web] criação e relatórios de experiência.
 
 ## Terminologia {#terminology}
 

@@ -5,7 +5,7 @@ exl-id: 61bc7f23-9f79-4c75-a515-85dd9dda2d02
 source-git-commit: e55bbba92b0e3b9c86a9962ffa0131dfb7c15e77
 workflow-type: tm+mt
 source-wordcount: '1109'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
@@ -210,7 +210,7 @@ GROUP BY cast(adwh_dim_segments.create_date AS date), adwh_dim_merge_policies.me
 
 +++
 
-#### Caso de uso dos destinos mais usados
+#### Caso de uso de destinos mais usados
 
 A lógica usada no [!UICONTROL Destinos mais usados] O widget lista os destinos mais usados de sua organização de acordo com o número de públicos-alvo mapeados para eles. Essa classificação fornece insight sobre quais destinos estão sendo utilizados, além de mostrar os que podem estar subutilizados. Consulte a documentação no [[!UICONTROL Destinos mais usados] widget](./guides/destinations.md#most-used-destinations) para obter mais informações.
 
@@ -239,7 +239,7 @@ FROM
 
 #### Caso de uso de públicos ativado recentemente
 
-A lógica para o [!UICONTROL Públicos ativados recentemente] O widget fornece uma lista dos públicos-alvo mapeados mais recentemente para um destino. Esta lista fornece um instantâneo dos públicos-alvo e destinos que estão ativamente em uso no sistema e pode ajudar a solucionar problemas de mapeamentos incorretos. Consulte a [[!UICONTROL Públicos ativados recentemente] documentação do widget](./guides/destinations.md#recently-activated-audiences) para obter mais informações.
+A lógica para o [!UICONTROL Públicos ativados recentemente] O widget fornece uma lista dos públicos-alvo mapeados mais recentemente para um destino. Essa lista fornece um instantâneo dos públicos-alvo e destinos que estão sendo usados ativamente no sistema e pode ajudar na solução de problemas de mapeamentos incorretos. Consulte a [[!UICONTROL Públicos ativados recentemente] documentação do widget](./guides/destinations.md#recently-activated-audiences) para obter mais informações.
 
 O SQL que gera a variável [!UICONTROL Públicos ativados recentemente] o widget está na seção recolhível abaixo.
 

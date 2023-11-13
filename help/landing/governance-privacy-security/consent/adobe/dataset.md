@@ -7,7 +7,7 @@ exl-id: 61ceaa2a-c5ac-43f5-b118-502bdc432234
 source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '1573'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -32,7 +32,7 @@ Este documento fornece etapas para configurar um conjunto de dados para processa
 Este tutorial requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
 * [Experience Data Model (XDM)](../../../../xdm/home.md): o quadro normalizado pelo qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
-   * [Noções básicas da composição do esquema](../../../../xdm/schema/composition.md): saiba mais sobre os blocos de construção básicos de esquemas XDM.
+   * [Noções básicas da composição de esquemas](../../../../xdm/schema/composition.md): saiba mais sobre os blocos de construção básicos de esquemas XDM.
 * [Perfil do cliente em tempo real](../../../../profile/home.md): consolida os dados do cliente de fontes diferentes em uma visualização completa e unificada, oferecendo uma conta acionável com carimbo de data e hora de cada interação com o cliente.
 
 >[!IMPORTANT]

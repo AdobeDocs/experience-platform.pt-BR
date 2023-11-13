@@ -106,7 +106,7 @@ A variável **[!UICONTROL Mais ações]** está localizado na navegação superi
 
 ![mais ações](../images/insights/more-actions.png)
 
-## Resumo de pontuação {#scoring-summary}
+## Resumo da pontuação {#scoring-summary}
 
 O resumo de pontuação exibe o número total de perfis pontuados e os categoriza em compartimentos que contêm alta, média e baixa propensão. Os intervalos de propensão são determinados com base no intervalo de pontuação, baixo é menor que 24, médio é 25 a 74 e alto é acima de 74. Cada bloco tem uma cor correspondente à legenda.
 

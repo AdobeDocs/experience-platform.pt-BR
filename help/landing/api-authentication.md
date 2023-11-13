@@ -6,7 +6,7 @@ description: Este documento fornece um tutorial passo a passo para obter acesso 
 exl-id: dfe8a7be-1b86-4d78-a27e-87e4ed8b3d42
 source-git-commit: f598c6dabe9296044055d8e961cf5177a655f5fa
 workflow-type: tm+mt
-source-wordcount: '2205'
+source-wordcount: '2204'
 ht-degree: 9%
 
 ---
@@ -220,7 +220,7 @@ Você pode usar a mesma chave de API, segredo do cliente e JWT para gerar um nov
 
 | Propriedade | Descrição |
 | --- | --- |
-| `token_type` | O tipo de token que está sendo retornado. Para tokens de acesso, esse valor é sempre `bearer`. |
+| `token_type` | O tipo of token sendo retornado. Para tokens de acesso, esse valor é sempre `bearer`. |
 | `access_token` | O gerado `{ACCESS_TOKEN}`. Este valor, com prefixo da palavra `Bearer`, é obrigatório como a `Authentication` para todas as chamadas de API da plataforma. |
 | `expires_in` | O número de milissegundos restantes até que o token de acesso expire. Quando esse valor atingir 0, um novo token de acesso deverá ser gerado para continuar usando as APIs da plataforma. |
 

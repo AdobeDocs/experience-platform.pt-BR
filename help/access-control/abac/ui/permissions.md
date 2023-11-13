@@ -6,7 +6,7 @@ exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
 source-git-commit: 7c44683c8110d78654baba4bc53f2c3c2daf2831
 workflow-type: tm+mt
 source-wordcount: '966'
-ht-degree: 4%
+ht-degree: 6%
 
 ---
 
@@ -151,7 +151,7 @@ A variável **[!UICONTROL Remover grupo de usuários]** será exibida, solicitan
 
 Você será redirecionado para a **[!UICONTROL Grupos de usuários]** guia.
 
-## Adicionar usuários ao Experience Platform por meio de um perfil de produto
+## Adicionar usuários à Experience Platform por meio de um perfil de produto
 
 Para adicionar um usuário a um perfil de produto, faça logon no Admin Console e selecione **[!UICONTROL Adicionar usuários]**
 

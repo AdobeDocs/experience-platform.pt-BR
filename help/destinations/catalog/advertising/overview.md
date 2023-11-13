@@ -6,7 +6,7 @@ exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
 source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '258'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
@@ -38,7 +38,7 @@ Para entender a diferença entre conexões e extensões, consulte [Conexões](..
 * [Conexão com a Lista de clientes do pinterest](pinterest.md)
 * [(Beta) Conexão com o Snapchat Ads](snap-inc.md)
 * [A conexão com a Trade Desk](tradedesk.md)
-* [(Beta) A conexão CRM da Trade Desk](tradedesk-emails.md)
+* [(Beta) Conexão CRM da Trade Desk](tradedesk-emails.md)
 * [DadosX do Yahoo/Verizon](datax.md)
 
 ### Extensões
@@ -55,7 +55,7 @@ Para entender a diferença entre conexões e extensões, consulte [Conexões](..
 * [extensão gtag do Google](gtag-advertising.md)
 * [Extensão de tag do linkedIn Insight](linkedin.md)
 * [Extensão de rastreamento de conversão do pinterest](pinterest-extension.md)
-* [Extensão de tag do site universal do twitter](twitter-uwt.md)
+* [Extensão de tag do site universal do Twitter](twitter-uwt.md)
 
 ## Conectar-se a um novo destino de publicidade {#connect-destination}
 

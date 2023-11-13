@@ -86,7 +86,7 @@ Quando ocorrem violações de política, as mensagens resultantes que aparecem n
 As seções abaixo descrevem as diferentes mensagens de aplicação de política que aparecem na interface do usuário da plataforma:
 
 * [Violação da política de uso de dados](#data-usage-violation)
-* [Avaliação de política de consentimento](#consent-policy-evaluation)
+* [Avaliação da política de consentimento](#consent-policy-evaluation)
 
 ### Violação da política de uso de dados {#data-usage-violation}
 
@@ -112,7 +112,7 @@ Selecionar **[!UICONTROL Exibição de lista]** para exibir a linhagem de dados 
 
 ![](../images/enforcement/list-view.png)
 
-### Avaliação de política de consentimento {#consent-policy-evaluation}
+### Avaliação da política de consentimento {#consent-policy-evaluation}
 
 Se você tiver [políticas de consentimento criadas](../policies/user-guide.md#consent-policy) e estiverem ativando um público-alvo para um destino, você poderá ver como suas políticas de consentimento afetam a porcentagem de perfis incluídos na ativação.
 

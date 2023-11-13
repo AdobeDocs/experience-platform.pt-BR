@@ -63,7 +63,7 @@ A tabela a seguir contém valores de exemplo, bem como informações adicionais 
 | `TENANT_ID` | Uma ID usada para garantir que os recursos criados tenham o namespace adequado e estejam contidos na organização. | `b2bcdpproductiontest` |
 | `PLATFORM_URL` | O endpoint de URL para o qual você está fazendo chamadas de API. Esse valor é fixo e sempre é definido como: `http://platform.adobe.io/`. | `http://platform.adobe.io/` |
 | `munchkinId` | O identificador exclusivo do [!DNL Marketo] conta. Veja o tutorial sobre [autenticando seu [!DNL Marketo] instância](../adobe-applications/marketo/marketo-auth.md) para obter informações sobre como recuperar o `munchkinId`. | `123-ABC-456` |
-| `sfdc_org_id` | A ID da organização para o [!DNL Salesforce] conta. Consulte o seguinte [[!DNL Salesforce] guia](https://help.salesforce.com/articleView?id=000325251&amp;type=1&amp;mode=1) para obter mais informações sobre como adquirir o [!DNL Salesforce] ID da organização. | `00D4W000000FgYJUA0` |
+| `sfdc_org_id` | A ID da organização do [!DNL Salesforce] conta. Consulte o seguinte [[!DNL Salesforce] guia](https://help.salesforce.com/articleView?id=000325251&amp;type=1&amp;mode=1) para obter mais informações sobre como adquirir o [!DNL Salesforce] ID da organização. | `00D4W000000FgYJUA0` |
 | `has_abm` | Um valor booliano que indica se você está inscrito no [!DNL Marketo Account-Based Marketing]. | `false` |
 | `has_msi` | Um valor booliano que indica se você está inscrito no [!DNL Marketo Sales Insight]. | `false` |
 

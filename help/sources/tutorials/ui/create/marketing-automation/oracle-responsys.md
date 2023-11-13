@@ -8,7 +8,7 @@ exl-id: 9ec5e1c2-3d9e-4729-be81-89a85d5ea782
 source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '485'
-ht-degree: 1%
+ht-degree: 4%
 
 ---
 
@@ -22,7 +22,7 @@ Este tutorial fornece as etapas para criar um [[!DNL Oracle Responsys]](../../..
 
 ## Introdução
 
-Este guia requer uma compreensão funcional dos seguintes componentes da Platform:
+Este manual necessita de uma compreensão funcional dos seguintes componentes da Platform:
 
 * [Origens](../../../../home.md): a Platform permite que os dados sejam assimilados de várias fontes e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da Platform.
 * [Sandboxes](../../../../../sandboxes/home.md): a Platform fornece sandboxes virtuais que particionam uma única instância da Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.

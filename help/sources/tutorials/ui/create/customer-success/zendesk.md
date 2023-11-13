@@ -5,7 +5,7 @@ exl-id: 75d303b0-2dcd-4202-987c-fe3400398d90
 source-git-commit: 6f8abca8f0db8a559fe62e6c143f2d0506d3b886
 workflow-type: tm+mt
 source-wordcount: '764'
-ht-degree: 6%
+ht-degree: 7%
 
 ---
 
@@ -69,7 +69,7 @@ Se estiver criando uma nova conta, selecione **[!UICONTROL Nova conta]** e forne
 
 ### Selecionar dados
 
-Depois que a fonte é autenticada, a página é atualizada em uma árvore de esquema interativa que permite explorar e inspecionar a hierarquia dos dados. Selecionar **[!UICONTROL Próxima]** para continuar.
+Depois que a fonte é autenticada, a página é atualizada em uma árvore de esquema interativa que permite explorar e inspecionar a hierarquia dos dados. Selecione **[!UICONTROL Próximo]** para continuar.
 
 ![select-data](../../../../images/tutorials/create/zendesk/select-data.png)
 

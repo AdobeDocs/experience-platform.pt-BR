@@ -439,7 +439,7 @@ INSERT INTO T2 VALUES (1)
 INSERT INTO T2 VALUES (2)
 ```
 
-Se você estiver usando o `NOT EXISTS` operador, é possível replicar usando o `NOT IN` operador usando a seguinte query:
+Se você estiver usando a variável `NOT EXISTS` operador, é possível replicar usando o `NOT IN` operador usando a seguinte query:
 
 ```sql
 SELECT ID FROM T1

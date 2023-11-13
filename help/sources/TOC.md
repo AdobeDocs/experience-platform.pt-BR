@@ -7,12 +7,12 @@ feature: Sources
 source-git-commit: 7f9a0965419a85894bd2cab4e78dd336874a5933
 workflow-type: tm+mt
 source-wordcount: '989'
-ht-degree: 12%
+ht-degree: 14%
 
 ---
 
 
-# Fontes {#sources}
+# Origens {#sources}
 
 - [Visão geral das fontes](home.md)
 - Conectores de origem disponíveis {#connectors}
@@ -114,7 +114,7 @@ ht-degree: 12%
    - Streaming {#streaming}
       - [Conector da API HTTP](connectors/streaming/http.md)
 - Tutoriais da API {#api-tutorials}
-   - Criar uma conexão básica {#create}
+   - Crie uma conexão básica {#create}
       - Advertising {#advertising}
          - [Anúncios do Google](tutorials/api/create/advertising/ads.md)
          - [Anúncios do pinterest](tutorials/api/create/advertising/pinterest-ads.md)
@@ -324,7 +324,7 @@ ht-degree: 12%
       - [Fluxo de dados de conexão da automação de marketing](tutorials/ui/dataflow/marketing-automation.md)
       - [Fluxo de dados da conexão de pagamento](tutorials/ui/dataflow/payments.md)
       - [Fluxo de dados de conexão de protocolo](tutorials/ui/dataflow/protocols.md)
-   - [Criar um fluxo de dados de fontes usando modelos na interface](tutorials/ui/templates.md)
+   - [Criar um fluxo de dados de origem usando modelos na interface](tutorials/ui/templates.md)
    - [Assimilação sob demanda](tutorials/ui/on-demand-ingestion.md)
    - [Monitorar fluxos de dados em lote](tutorials/ui/monitor.md)
    - [Monitorar fluxos de dados de transmissão](tutorials/ui/monitor-streaming.md)

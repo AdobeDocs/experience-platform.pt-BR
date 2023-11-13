@@ -8,7 +8,7 @@ exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
 source-git-commit: 92f39f970402ab907f711d23a8f5f599668f0fe0
 workflow-type: tm+mt
 source-wordcount: '1408'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -587,7 +587,7 @@ Uma resposta bem-sucedida retorna os detalhes da especificação do fluxo de dad
 
 +++
 
-## Criar um fluxo de dados
+## Crie um fluxo de dados
 
 A última etapa para coletar dados é criar um fluxo de dados. Nesse ponto, os seguintes valores obrigatórios devem ser preparados:
 

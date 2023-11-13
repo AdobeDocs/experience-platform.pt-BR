@@ -91,7 +91,7 @@ Esta é uma lista de documentação para extensões de tag do lado do cliente. P
 * [KickFire](https://exchange.adobe.com/apps/ec/101621)*
 * [Tabela de mapeamento](https://exchange.adobe.com/apps/ec/103136)*
 * [[!DNL Marketo Munchkin]](./marketo/overview.md)
-* [Gerenciador de Propriedades principais](https://exchange.adobe.com/apps/ec/102992)*
+* [Gerenciador de Propriedades Mestre](https://exchange.adobe.com/apps/ec/102992)*
 * [Monita](https://exchange.adobe.com/apps/ec/106544)*
 * [SDK digital Nielsen](https://exchange.adobe.com/apps/ec/101361)*
 * [Gerenciamento de consentimento do OneTrust para cookies](https://exchange.adobe.com/apps/ec/100340)*

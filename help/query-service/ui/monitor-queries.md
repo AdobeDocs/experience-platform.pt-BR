@@ -5,7 +5,7 @@ exl-id: 4640afdd-b012-4768-8586-32f1b8232879
 source-git-commit: fa871529a4136263399bad3200ee3888049d06a5
 workflow-type: tm+mt
 source-wordcount: '1818'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -83,7 +83,7 @@ Depois que uma consulta programada é excluída, ela é **não** removida da lis
 
 Se quiser programar execuções para esse modelo de consulta, selecione o nome do modelo na linha apropriada para navegar até o Editor de consultas e, em seguida, siga as [instruções para adicionar um agendamento a uma consulta](./query-schedules.md#create-schedule) conforme descrito na documentação.
 
-### Assinar alertas {#alert-subscription}
+### Assinatura de alertas {#alert-subscription}
 
 Para assinar alertas para execuções de consultas agendadas, selecione as reticências de uma consulta agendada que deseja gerenciar e selecione **[!UICONTROL Assinar]** nas opções do menu pop-up.
 

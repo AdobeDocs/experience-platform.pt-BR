@@ -7,7 +7,7 @@ exl-id: 47702819-f5f8-49a8-a35d-034ecac4dd98
 source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
 source-wordcount: '1599'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
@@ -26,7 +26,7 @@ Este tutorial requer um entendimento prático dos vários [!DNL Adobe Experience
 
 ### Cabeçalhos obrigatórios
 
-Este tutorial também requer que você tenha concluído a [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en) para fazer chamadas com êxito para o [!DNL Platform] APIs. Concluir o tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todos os [!DNL Experience Platform] Chamadas de API, conforme mostrado abaixo:
+Este tutorial também requer que você tenha concluído a [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en) para fazer chamadas com êxito para o [!DNL Platform] APIs. Concluir o tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API da [!DNL Experience Platform], conforme mostrado abaixo:
 
 - Autorização: Portador `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`

@@ -11,7 +11,7 @@ ht-degree: 3%
 
 ---
 
-# Funções de mapeamento de Preparo de dados
+# Funções de mapeamento do Preparo de dados
 
 As funções de Preparo de dados podem ser usadas para calcular e calcular valores com base no que é inserido em campos de origem.
 
@@ -357,7 +357,7 @@ A tabela abaixo descreve uma lista de valores de campo de dispositivo e suas des
 
 | Dispositivo | Descrição |
 | --- | --- |
-| Área de trabalho | Um tipo de dispositivo Desktop ou Laptop. |
+| Desktop | Um tipo de dispositivo Desktop ou Laptop. |
 | Anônimo | Um dispositivo anônimo. Em alguns casos, são `useragents` que foram alteradas por um software de anonimização. |
 | Desconhecido | Um dispositivo desconhecido. Normalmente, `useragents` que não contêm informações sobre o dispositivo. |
 | Dispositivo móvel | Um dispositivo móvel que ainda não foi identificado. Esse dispositivo móvel pode ser um eReader, um tablet, um telefone, um relógio etc. |

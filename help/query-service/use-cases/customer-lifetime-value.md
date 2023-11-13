@@ -111,7 +111,7 @@ Ao ler este documento, você deve entender melhor como usar o Real-time Customer
 
 * [Um exemplo completo de um caso de uso de navegador abandonado que demonstra a versatilidade e os benefícios do Serviço de consulta.](./abandoned-browse.md)
 * [Como usar o Serviço de consulta e o aprendizado de máquina para determinar e filtrar a atividade de bot a partir do tráfego de visitante genuíno do site online](./bot-filtering.md)
-* [Como executar uma correspondência nos dados da Platform que combina resultados de vários conjuntos de dados correspondendo aproximadamente a uma string de sua escolha.](./fuzzy-match.md)
+* [Como fazer uma correspondência nos dados da Platform que combina resultados de vários conjuntos de dados correspondendo aproximadamente a uma string de sua escolha.](./fuzzy-match.md)
 
 <!-- "Data signals are actions taken by consumers while online that offer clues about intent that can be acted upon. This includes anything from visiting a website to filling out a change of address or clicking an ad."  -->
 

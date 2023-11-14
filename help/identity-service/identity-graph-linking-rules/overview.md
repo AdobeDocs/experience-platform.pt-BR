@@ -5,9 +5,9 @@ hide: true
 hidefromtoc: true
 badge: Alfa
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
+source-git-commit: 20b8433cee719329bce562069c328adb906697a0
 workflow-type: tm+mt
-source-wordcount: '916'
+source-wordcount: '913'
 ht-degree: 0%
 
 ---
@@ -21,6 +21,7 @@ ht-degree: 0%
 ## Índice 
 
 * [Visão geral](./overview.md)
+* [Algoritmo de otimização de identidade](./identity-optimization-algorithm.md)
 * [Exemplos de cenários](./example-scenarios.md)
 * [Serviço de identidade e perfil do cliente em tempo real](identity-and-profile.md)
 * [Lógica de vinculação de identidade](./identity-linking-logic.md)
@@ -39,13 +40,12 @@ Para obter mais informações sobre cenários de caso de uso para regras de vinc
 
 Com as regras de vinculação do gráfico de identidade, você pode:
 
-* Configure limites para impedir que dois identificadores de pessoa diferentes sejam mesclados em um gráfico de identidade, de modo que um único gráfico de identidade represente apenas uma única pessoa.
-   * Os limites configurados são aplicados pelo algoritmo de otimização de identidade.
-* Configure as prioridades para associar a um determinado usuário os eventos online conduzidos pelo indivíduo autenticado.
+* Crie um único gráfico de identidade/perfil mesclado para cada usuário configurando namespaces exclusivos (limites), o que impedirá que dois identificadores de pessoa diferentes sejam mesclados em um gráfico de identidade.
+* Associar eventos online e autenticados à pessoa, configurando prioridades
 
 ### Limites
 
-Você pode usar limites de namespace para definir o número máximo de identidades que podem existir em um gráfico com base em um determinado namespace. Por exemplo, você pode definir o gráfico para ter no máximo uma identidade com um namespace de ID de CRM, evitando assim a mesclagem de dois identificadores de pessoas diferentes no mesmo gráfico.
+Um namespace exclusivo é um identificador que representa um indivíduo, como ID do CRM, ID de logon e email com hash. Se um namespace for designado como exclusivo, um gráfico só poderá ter uma identidade com esse namespace (`limit=1`). Isso evitará a mesclagem de dois identificadores de pessoas diferentes no mesmo gráfico.
 
 * Se um limite não for configurado, isso poderá resultar em mesclagens de gráficos indesejadas, como duas identidades com um namespace de ID do CRM em um gráfico.
 * Se um limite não for configurado, o gráfico poderá adicionar quantos namespaces forem necessários, desde que o gráfico esteja dentro das medidas de proteção (50 identidades/gráfico).
@@ -60,6 +60,8 @@ Veja a seguir uma lista das implicações do algoritmo na associação de evento
 * A ECID será associada ao último usuário autenticado se as seguintes condições forem atendidas:
    * Se as IDs do CRM forem mescladas pela ECID (dispositivo compartilhado).
    * Se os limites estiverem configurados para apenas uma ID de CRM.
+
+Para obter mais informações, leia o documento em [algoritmo de otimização de identidade](./identity-optimization-algorithm.md).
 
 ### Prioridade
 
@@ -106,6 +108,7 @@ Se os eventos de experiência a seguir forem assimilados no Experience Platform,
 
 Para obter mais informações sobre regras de vinculação de gráficos de identidade, leia a seguinte documentação:
 
+* [Algoritmo de otimização de identidade](./identity-optimization-algorithm.md)
 * [Exemplos de cenários para configurar regras de vinculação de gráficos de identidade](./example-scenarios.md)
 * [Serviço de identidade e perfil do cliente em tempo real](identity-and-profile.md)
 * [Lógica de vinculação de identidade](./identity-linking-logic.md)

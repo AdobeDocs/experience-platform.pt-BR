@@ -5,9 +5,9 @@ hide: true
 hidefromtoc: true
 badge: Alfa
 exl-id: 1c958c0e-0777-48db-862c-eb12b2e7a03c
-source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
+source-git-commit: 20b8433cee719329bce562069c328adb906697a0
 workflow-type: tm+mt
-source-wordcount: '791'
+source-wordcount: '794'
 ht-degree: 4%
 
 ---
@@ -150,5 +150,6 @@ Em `timestamp=4`, um cliente usa o mesmo tablet, faz logon em sua conta (ID do C
 Para obter mais informações sobre regras de vinculação de gráficos de identidade, leia a seguinte documentação:
 
 * [Visão geral das regras de vinculação do gráfico de identidade](./overview.md)
+* [Algoritmo de otimização de identidade](./identity-optimization-algorithm.md)
 * [Exemplos de cenários para configurar regras de vinculação de gráficos de identidade](./example-scenarios.md)
 * [Serviço de identidade e perfil do cliente em tempo real](identity-and-profile.md)

@@ -2,9 +2,9 @@
 title: Notas de versão da extensão SDK da Web da Adobe Experience Platform
 description: Extensão de tag do SDK da Web da Adobe Experience Platform
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 3e572458907bf745ee8f0fb7e2db37caae79f712
+source-git-commit: 8cec606849489ef1e8845254117d184d5dc3c70a
 workflow-type: tm+mt
-source-wordcount: '1806'
+source-wordcount: '1833'
 ht-degree: 36%
 
 ---
@@ -14,7 +14,15 @@ ht-degree: 36%
 
 Este documento aborda as notas de versão da extensão de tag do SDK da Web da Adobe Experience Platform. Para obter as notas de versão mais recentes sobre o próprio SDK, consulte a [Notas de versão do SDK da Web da Platform](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html?lang=pt-BR).
 
-## Versão 2.21.0 - 1 de novembro de 2023
+## Versão 2.21.3 - 10 de novembro de 2023
+
+Contém a versão 2.19.1 do SDK da Web da Adobe Experience Platform.
+
+**Correções e melhorias**
+
+* Correção de um problema em que a matriz de apresentações estava disponível em `Send event complete` events estava sempre vazio.
+
+## Versão 2.21.2 - 1 de novembro de 2023
 
 **Novos recursos**
 

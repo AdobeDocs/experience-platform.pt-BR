@@ -2,9 +2,9 @@
 title: Monitorar uso de licença de consulta em lote
 description: A interface do usuário do Adobe Experience Platform fornece um painel por meio do qual você pode visualizar informações importantes sobre o uso da licença do Data Distiller da sua organização.
 exl-id: a1e365a0-cc65-4fd6-b36f-8d79b7d9ec7c
-source-git-commit: a3a2377a873c0e54ba43a60e28f922e0cb9e9d01
+source-git-commit: f33629d73e9bc7273e6ee5170294618f3e9731a8
 workflow-type: tm+mt
-source-wordcount: '274'
+source-wordcount: '277'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ A variável [!UICONTROL Computar horas] A métrica só é aplicável a clientes 
 
 >[!NOTE]
 >
->**Os dados estão disponíveis com limitações**: os dados começam em 1º de outubro de 2023 sem tendências.<br>A variável **preenchimento retroativo** de dados a partir da data de início do contrato é um trabalho em andamento. Espera-se que esteja disponível até o final do ano civil.
+>**A variável [!UICONTROL Computar horas] Os dados do estão disponíveis com limitações**: os dados começam em 1º de outubro de 2023 sem tendências.<br>A variável **preenchimento retroativo** de dados a partir da data de início do contrato é um trabalho em andamento. Espera-se que esteja disponível até o final do ano civil.
 
 ![O painel de uso da licença com a métrica horas de computação realçada.](../images/data-distiller/compute-hours.png)
 

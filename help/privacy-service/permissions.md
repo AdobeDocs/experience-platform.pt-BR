@@ -2,20 +2,14 @@
 title: Gerenciamento de permissões do Privacy Service
 description: Saiba como gerenciar as permissões de usuário para o Adobe Experience Platform Privacy Service usando o Adobe Admin Console.
 exl-id: 6aa81850-48d7-4fff-95d1-53b769090649
-source-git-commit: 1e164166f58540cbaaa4ad789b10cdfc40fa8a70
-workflow-type: ht
-source-wordcount: '1634'
-ht-degree: 100%
+source-git-commit: 20a737cf36bf08415a15db78599f36659207ace1
+workflow-type: tm+mt
+source-wordcount: '1504'
+ht-degree: 95%
 
 ---
 
 # Gerenciamento de permissões do Privacy Service
-
->[!IMPORTANT]
->
->As permissões para o Adobe Experience Platform Privacy Service foram aprimoradas para aumentar seu nível de granularidade. Essas alterações permitem que os administradores da organização concedam acesso a mais usuários, com a função e o nível de permissão desejados.Os usuários da conta técnica precisam atualizar suas permissões do Privacy Service, pois essa atualização iminente constituirá uma alteração importante para eles.A aplicação desta alteração de permissões ocorrerá em **13 de abril de 2023**. Consulte a documentação em [migração de credenciais da API antiga](#migrate-tech-accounts) para obter orientações sobre como resolver esse problema.
->
->As contas técnicas estão disponíveis para clientes corporativos e são criadas por meio do Console de desenvolvedores da Adobe. A Adobe ID de um titular de conta técnica termina em `@techacct.adobe.com`. Se não tiver certeza se você é um titular de uma conta técnica, entre em contato com o administrador da organização.
 
 O acesso ao [Adobe Experience Platform Privacy Service](./home.md) é controlado por meio de permissões granulares baseadas em funções no Adobe Admin Console. Ao criar perfis de produto que atribuem permissões a grupos de usuários, é possível determinar quem tem acesso a quais recursos na [interface](./ui/overview.md) e na [API](./api/overview.md) do Privacy Service.
 
@@ -53,17 +47,17 @@ A tabela a seguir descreve as permissões disponíveis para o Privacy Service, c
 
 Para gerenciar permissões do Privacy Service, faça logon no [Admin Console](https://adminconsole.adobe.com/) e selecione **[!UICONTROL Produtos]** no painel de navegação superior. Então selecione **[!UICONTROL Adobe Experience Platform Privacy Service]**.
 
-![Imagem mostrando o cartão do Privacy Service no Admin Console](./images/permissions/privacy-service-card.png)
+![O Admin Console com a placa de produto Privacy Service realçada.](./images/permissions/privacy-service-card.png)
 
 ### Selecionar ou criar um perfil de produto
 
 A próxima tela mostra uma lista de perfis de produto disponíveis do Privacy Service na sua organização. Se não houver nenhum perfil de produto, clique em **[!UICONTROL Novo perfil]** para criar um. Se possuir várias funções ou grupos de usuários em sua organização que precisam de diferentes níveis de acesso, crie um perfil de produto separado para cada um deles.
 
-![Imagem mostrando os perfis de produto do Privacy Service no Admin Console](./images/permissions/select-or-create-profile.png)
+![O Admin Console com o perfil de produto Privacy Service realçado.](./images/permissions/select-or-create-profile.png)
 
 Após selecionar um perfil de produto, é possível usar a guia **[!UICONTROL Permissões]** para começar a [editar as permissões](#edit-permissions) para o perfil ou selecionar a guia **[!UICONTROL Usuários]** para [atribuir usuários](#assign-users) ao perfil.
 
-![Imagem mostrando a guia de permissões de um perfil de produto no Admin Console](./images/permissions/users-permissions-tabs.png)
+![A guia de permissões para um Admin Console de perfil de produto.](./images/permissions/users-permissions-tabs.png)
 
 ### Editar permissões para o perfil {#edit-permissions}
 
@@ -71,25 +65,25 @@ Na guia **[!UICONTROL Permissões]**, selecione qualquer uma das categorias de p
 
 Ao editar as permissões de um perfil, as permissões disponíveis são listadas na coluna à esquerda e as permissões incluídas no perfil são listadas na coluna à direita. Selecione as permissões listadas para movê-las entre as duas colunas.
 
-![Imagem mostrando as colunas de permissões disponíveis e incluídas](./images/permissions/edit-permissions.png)
+![As colunas de permissão disponíveis e incluídas.](./images/permissions/edit-permissions.png)
 
 As permissões são organizadas em categorias. Para alternar entre categorias, selecione a categoria desejada na painel de navegação à esquerda.
 
-![Imagem mostrando a seção [!UICONTROL Recusa de venda] nas permissões](./images/permissions/switch-category.png)
+![A variável [!UICONTROL Recusar a venda] seção em permissões.](./images/permissions/switch-category.png)
 
 Clique em **[!UICONTROL Salvar]** quando terminar de configurar as permissões.
 
-![Imagem mostrando a configuração de permissão sendo salva para o perfil do produto](./images/permissions/save-permissions.png)
+![A configuração de permissão para o perfil de produto com a opção Salvar realçada.](./images/permissions/save-permissions.png)
 
 A visualização do perfil de produto será exibida novamente com as permissões adicionadas.
 
-![Imagem mostrando as permissões adicionadas no perfil do produto](./images/permissions/permissions-added.png)
+![As permissões adicionadas para o perfil do produto.](./images/permissions/permissions-added.png)
 
 ### Atribuir usuários ao perfil {#assign-users}
 
 Para atribuir usuários ao perfil de produto (e conceder a eles as permissões configuradas nele), selecione a guia **[!UICONTROL Usuários]** e, em seguida, **[!UICONTROL Adicionar usuário]**.
 
-![Imagem mostrando a guia Usuários em um perfil de produto no Admin Console](./images/permissions/manage-users.png)
+![A guia Usuários para um perfil de produto no Admin Console.](./images/permissions/manage-users.png)
 
 Para obter mais informações sobre como gerenciar usuários em um perfil de produto, consulte a [Documentação do Admin Console](https://helpx.adobe.com/br/enterprise/using/manage-product-profiles.html).
 

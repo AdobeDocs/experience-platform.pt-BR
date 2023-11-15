@@ -5,9 +5,9 @@ title: Processamento de solicitação de privacidade no perfil do cliente em tem
 type: Documentation
 description: O Adobe Experience Platform Privacy Service processa solicitações de clientes para acessar, cancelar a venda ou excluir seus dados pessoais, conforme definido por várias regulamentações de privacidade. Este documento aborda os conceitos essenciais relacionados ao processamento de solicitações de privacidade para o Perfil do cliente em tempo real.
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-source-git-commit: f0179bacc55134241bed8de240ee632d0f38e4b6
+source-git-commit: 6d9f8eceeb8fbe550b4e1e7e0964f2fff0cd3c70
 workflow-type: tm+mt
-source-wordcount: '1625'
+source-wordcount: '1739'
 ht-degree: 0%
 
 ---
@@ -46,13 +46,14 @@ Para obter mais informações sobre namespaces de identidade no [!DNL Experience
 
 ## Envio de solicitações {#submit}
 
-As seções abaixo descrevem como fazer solicitações de privacidade para [!DNL Real-Time Customer Profile] usando o [!DNL Privacy Service] API ou interface. Antes de ler essas seções, é altamente recomendável que você analise a [API PRIVACY SERVICE](../privacy-service/api/getting-started.md) ou [IU DO PRIVACY SERVICE](../privacy-service/ui/overview.md) documentação para obter as etapas completas sobre como enviar um trabalho de privacidade, incluindo como formatar corretamente os dados de identidade do usuário enviados em cargas de solicitação.
+As seções abaixo descrevem como fazer solicitações de privacidade para [!DNL Real-Time Customer Profile] usando o [!DNL Privacy Service] API ou interface. Antes de ler estas seções, você deve revisar ou estar ciente da [API PRIVACY SERVICE](../privacy-service/api/getting-started.md) ou [IU DO PRIVACY SERVICE](../privacy-service/ui/overview.md) documentação. Esses documentos fornecem etapas completas sobre como enviar um trabalho de privacidade, incluindo como formatar corretamente os dados de identidade do usuário enviados em cargas de solicitação.
 
 >[!IMPORTANT]
 >
 >O Privacy Service só pode ser processado [!DNL Profile] dados usando uma política de mesclagem que não executa a compilação de identidade. Consulte a seção sobre [limitações da política de mesclagem](#merge-policy-limitations) para obter mais informações.
 >
->Observe que o tempo que uma solicitação de privacidade pode levar para ser concluída **não é possível** ser garantido. Se ocorrerem alterações no [!DNL Profile] dados enquanto uma solicitação ainda está sendo processada, independentemente de esses registros serem ou não processados também não podem ser garantidos.
+>Observe que as solicitações de privacidade são processadas de forma assíncrona dentro dos requisitos normativos, e o tempo necessário para a conclusão pode variar. Se ocorrerem alterações no [!DNL Profile] enquanto uma solicitação ainda está processando, não há garantia de que esses registros de entrada também serão processados nessa solicitação. Somente os perfis mantidos no data lake ou no Armazenamento de perfis no momento em que o trabalho de privacidade é solicitado têm garantia de exclusão. Se você assimilar dados de perfil relacionados ao assunto de uma solicitação de exclusão durante o trabalho de exclusão, não há garantia de que todos os fragmentos de perfil serão excluídos.
+>É sua responsabilidade estar ciente de qualquer dado recebido na plataforma ou no serviço de perfil no momento de uma solicitação de exclusão, pois esses dados serão inseridos em seus armazenamentos de registro. Você deve ser criterioso na assimilação de dados que foram ou estão sendo excluídos.
 
 ### Uso da API
 

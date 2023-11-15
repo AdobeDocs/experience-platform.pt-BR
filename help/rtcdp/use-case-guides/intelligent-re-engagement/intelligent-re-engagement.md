@@ -320,7 +320,7 @@ Não há [políticas de uso de dados](/help/data-governance/policies/overview.md
 * Restringir o direcionamento entre sites
 * Restringir a combinação de dados diretamente identificáveis com dados anônimos
 
-### Criar públicos {#create-audience}
+### Criar públicos-alvo {#create-audience}
 
 Os cenários de reengajamento usam públicos para definir atributos ou comportamentos específicos compartilhados por um subconjunto de perfis da sua loja de perfis para distinguir um grupo comercializável de pessoas da sua base de clientes. Os públicos-alvo podem ser criados de várias maneiras no [!DNL Adobe Experience Platform].
 

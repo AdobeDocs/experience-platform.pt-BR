@@ -5,9 +5,9 @@ badge: Alfa
 hide: true
 hidefromtoc: true
 exl-id: 8be1c222-3ccd-4a41-978e-33ac9b730f8c
-source-git-commit: 09d17f6dad7bd7b1eda491e4fbd92e298243f3c3
+source-git-commit: e204e1cc70f0c87632f7d259194d34276f6fab72
 workflow-type: tm+mt
-source-wordcount: '2524'
+source-wordcount: '2571'
 ht-degree: 0%
 
 ---
@@ -63,19 +63,19 @@ Selecione o **[!UICONTROL Ícone do assistente]** no cabeçalho para iniciar o p
 
 ![A página inicial da interface de usuário do Experience Platform com o ícone Assistente está selecionado.](./images/ai-assistant/ai-assistant.png)
 
-+++Usar modo imersivo
+<!-- +++Use immersive mode
 
-Para usar [!DNL Immersive mode] selecione o ícone de foco na navegação do cabeçalho do Assistente.
+To use [!DNL Immersive mode] select the focus icon in the header navigation of the Assistant.
 
 ![select-immersive](./images/ai-assistant/select-immersive.png)
 
-Uma interface pop-up dedicada para o Assistente é exibida no centro da tela.
+A dedicated pop-up interface for Assistant appears at the center of your screen.
 
-![modo imersivo](./images/ai-assistant/immersive-mode.png)
+![immersive-mode](./images/ai-assistant/immersive-mode.png)
 
 +++
 
-Aqui, você pode inserir sua pergunta na caixa de texto e consultar o Assistente para obter conceitos sobre dados ou públicos-alvo. Você também pode fazer perguntas sobre os objetos de dados para entender melhor como usá-los no respectivo caso de uso.
+From here, you can input your question in the text box and query Assistant for concepts regarding data or audiences. You can also ask questions about your data objects to better understand how you can use them for your respective use case.  -->
 
 ### Exemplo de caso de uso: usar o assistente para acelerar o processo de criação de esquema
 
@@ -97,25 +97,45 @@ Uma determinada resposta fornece hiperlinks para quaisquer entidades referenciad
 
 O Assistente fornece uma maneira de validar sua resposta ao exibir sua origem. Links para a documentação são fornecidos para perguntas de conceito, enquanto perguntas sobre o uso de dados podem ser verificadas com uma consulta SQL que demonstra como a resposta foi calculada.
 
-![Opções fornecidas pelo Assistente após retornar uma resposta.](./images/ai-assistant/options-post-answer.png)
-
-#### Sugestões relacionadas
-
-Você também pode se aprofundar no tópico da consulta selecionando uma das sugestões relacionadas fornecidas pelo Assistente.
-
-![Sugestões relacionadas.](./images/ai-assistant/related-suggestions.png)
+![Opções fornecidas pelo Assistente após retornar uma resposta.](./images/ai-assistant/options.png)
 
 #### Pergunta de acompanhamento
 
++++Selecione para exibir um exemplo de pergunta de acompanhamento
+
 Você pode saber mais sobre um tópico específico fazendo uma pergunta complementar. No próximo exemplo, o Assistente é perguntado como o eventType pode ser usado na segmentação.
 
-![Uma pergunta e resposta de acompanhamento são exibidas no Assistente para Experience Platform.](./images/ai-assistant/follow-up-answer.png)
+![Uma pergunta e resposta de acompanhamento são exibidas no Assistente para Experience Platform.](./images/ai-assistant/follow-up-question.png)
+
++++
 
 #### Pergunta de uso de dados
 
++++Selecione para exibir um exemplo de pergunta de uso de dados
+
 Você também pode fazer perguntas ao assistente sobre o uso de dados. Ao perguntar sobre o uso de dados, você deve estar em uma sandbox ativa para que o assistente responda à sua consulta.
 
+Para respostas que envolvem informações de uso de dados, o Assistente fornece links para entidades em questão. Além disso, o Assistente fornece uma explicação sobre como ele calculou sua resposta.
+
 ![Uma pergunta sobre o uso de dados, perguntando quantos segmentos um usuário tem.](./images/ai-assistant/data-usage-question.png)
+
++++
+
+#### Usar preenchimento automático
+
++++Selecione para exibir um exemplo de preenchimento automático
+
+Você pode usar a função de preenchimento automático para receber uma lista de objetos de dados que existem na sandbox. As recomendações de preenchimento automático estão disponíveis para os seguintes domínios: segmentos, esquemas, conjuntos de dados, fontes e destinos.
+
+Para usar o preenchimento automático, insira um símbolo de mais (**`+`**) como parte da sua pergunta. Como alternativa, você também pode selecionar o símbolo de adição (**`+`**) na caixa de entrada de texto. Em seguida, uma janela é exibida com uma lista de objetos de dados recomendados que existem em sua sandbox.
+
+![](./images/ai-assistant/autocomplete-options.png)
+
+Em seguida, selecione o objeto de dados que deseja consultar para concluir a pergunta e, em seguida, envie a pergunta.
+
+![](./images/ai-assistant/autocomplete-question.png)
+
++++
 
 ## Escopo
 
@@ -168,13 +188,9 @@ Você pode verificar a resposta que o Assistente retorna usando várias maneiras
 
 Com cada resposta, o Assistente fornece citações que você pode consultar para verificação ou mais informações.
 
-Selecionar **[!UICONTROL Mostrar origem]** para obter uma lista de links para a documentação que o assistente menciona para calcular sua resposta.
+Selecionar **[!UICONTROL Mostrar origem]** para obter uma lista de links para a documentação que o assistente menciona para calcular sua resposta. Ao selecionar um link para a documentação referenciada, você é levado para a seção relevante dessa página específica, com as informações específicas destacadas.
 
-![Os links para a origem exibidos no Assistente.](./images/ai-assistant/sources.png)
-
-Para respostas que envolvem informações de uso de dados, o Assistente fornece links para entidades em questão. Além disso, o Assistente fornece uma explicação sobre como ele calculou sua resposta.
-
-![explicação](./images/ai-assistant/explanation.png)
+![Os links para a origem exibidos no Assistente.](./images/ai-assistant/show-sources.png)
 
 ## Fornecer feedback
 
@@ -208,7 +224,7 @@ Selecione o ícone com miniaturas para fornecer feedback sobre o que pode ser me
 
 Selecione o ícone de sinalizador para fornecer mais relatórios sobre a sua experiência usando o Assistente.
 
-![A janela de resultados do relatório.](./images/ai-assistant/report-results.png)
+![A janela de resultados do relatório.](./images/ai-assistant/flag.png)
 
 >[!ENDTABS]
 

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guia da interface de conjuntos de dados
 description: Saiba como executar ações comuns ao trabalhar com conjuntos de dados na interface do usuário do Adobe Experience Platform.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 25f57b1bfbcb2ec95f88afb69386a10deb600125
+source-git-commit: 859b8432986e7426b8fdcfedf1242c3269eae5f1
 workflow-type: tm+mt
-source-wordcount: '2745'
+source-wordcount: '2769'
 ht-degree: 4%
 
 ---
@@ -264,6 +264,10 @@ Você pode selecionar um indivíduo **[!UICONTROL ID do lote]** para acessar o *
 ![Os detalhes do lote selecionado são exibidos. Isso inclui o número de registros assimilados, o número de registros com falha, o status do lote, o tamanho do arquivo, as horas de início e término da assimilação, o conjunto de dados e as IDs do lote, a ID da organização, o nome do conjunto de dados e as informações de acesso.](../images/datasets/user-guide/batch-overview.png)
 
 Se desejar excluir o lote, selecione **[!UICONTROL Excluir lote]** próximo à parte superior direita do painel. A exclusão de um lote também remove seus registros do conjunto de dados ao qual o lote foi originalmente assimilado.
+
+>[!NOTE]
+>
+>Se os dados assimilados tiverem sido ativados para Perfil e processados, a exclusão de um lote não excluirá esses dados da Loja de perfis.
 
 ![O botão Excluir lote é realçado na página de detalhes do conjunto de dados.](../images/datasets/user-guide/delete-batch.png)
 

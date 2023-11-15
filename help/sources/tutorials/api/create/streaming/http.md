@@ -3,10 +3,10 @@ keywords: Experience Platform;início;tópicos populares;conexão de transmissã
 title: Criar uma conexão de transmissão da API HTTP usando a API do serviço de fluxo
 description: Este tutorial fornece etapas sobre como criar uma conexão de transmissão usando a fonte de API HTTP para dados brutos e XDM usando a API do serviço de fluxo
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: 7ff297973f951d7bfd940983bf4fa39dcc9f1542
+source-git-commit: f94a51e22731977e120351c3b3598570666a624d
 workflow-type: tm+mt
-source-wordcount: '1544'
-ht-degree: 3%
+source-wordcount: '1552'
+ht-degree: 5%
 
 ---
 
@@ -19,7 +19,7 @@ Este tutorial usa o [[!DNL Flow Service] API](https://www.adobe.io/experience-pl
 
 ## Introdução
 
-Este guia requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
+Este manual necessita de uma compreensão funcional dos seguintes componentes da Adobe Experience Platform:
 
 * [[!DNL Experience Data Model (XDM)]](../../../../../xdm/home.md): o quadro normalizado pelo qual [!DNL Platform] organiza os dados de experiência.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): fornece um perfil de consumidor unificado em tempo real com base em dados agregados de várias fontes.
@@ -30,7 +30,7 @@ Além disso, a criação de uma conexão de transmissão exige que você tenha u
 
 Para obter informações sobre como fazer chamadas para APIs da Platform com êxito, consulte o manual em [introdução às APIs da Platform](../../../../../landing/api-guide.md).
 
-## Criar uma conexão básica
+## Crie uma conexão básica
 
 Uma conexão base especifica a origem e contém as informações necessárias para tornar o fluxo compatível com as APIs de assimilação de streaming. Ao criar uma conexão básica, você tem a opção de criar uma conexão não autenticada e autenticada.
 
@@ -459,7 +459,7 @@ Uma resposta bem-sucedida retorna detalhes do mapeamento recém-criado, incluind
 | Propriedade | Descrição |
 | --- | --- |
 
-## Criar um fluxo de dados
+## Crie um fluxo de dados
 
 Com as conexões de origem e de destino criadas, agora é possível criar um fluxo de dados. O fluxo de dados é responsável por agendar e coletar dados de uma origem. Você pode criar um fluxo de dados executando uma solicitação POST para o `/flows` terminal.
 
@@ -562,7 +562,6 @@ Uma resposta bem-sucedida retorna o status HTTP 201 com detalhes do fluxo de dad
 }
 ```
 
-
 ## Dados da publicação a serem assimilados na plataforma {#ingest-data}
 
 Agora que você criou o fluxo, é possível enviar a mensagem JSON para o ponto de extremidade de streaming criado anteriormente.
@@ -576,6 +575,7 @@ POST /collection/{INLET_URL}
 | Parâmetro | Descrição |
 | --------- | ----------- |
 | `{INLET_URL}` | O URL do ponto de extremidade de streaming. Você pode recuperar esse URL fazendo uma solicitação GET para o `/connections` ao fornecer a ID de conexão básica. |
+| `{FLOW_ID}` | A ID do fluxo de dados de transmissão da API HTTP. |
 
 **Solicitação**
 
@@ -584,9 +584,8 @@ POST /collection/{INLET_URL}
 >[!TAB XDM]
 
 ```shell
-curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec \
+curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec?x-adobe-flow-id=e5895dc9-b0c8-4431-bab7-bb0d2b4be5db \
   -H 'Content-Type: application/json' \
-  -H 'x-adobe-flow-id: f2ae0194-8bd8-4a40-a4d9-f07bdc3e6ce2' \
   -d '{
         "header": {
           "schemaRef": {
@@ -625,9 +624,8 @@ curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20
 >[!TAB Dados brutos]
 
 ```shell
-curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec \
+curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec?x-adobe-flow-id=e5895dc9-b0c8-4431-bab7-bb0d2b4be5db \
   -H 'Content-Type: application/json' \
-  -H 'x-adobe-flow-id: 1f086c23-2ea8-4d06-886c-232ea8bd061d' \
   -d '{
       "name": "Johnson Smith",
       "location": {

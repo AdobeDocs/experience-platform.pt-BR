@@ -1,9 +1,9 @@
 ---
 title: Gerenciar eventos de exibição no SDK da Web
-description: Este artigo descreve os eventos de exibição e como eles funcionam no SDK da Web.
-source-git-commit: 221a9348803e111a1842b3abf2e74f7408da5994
+description: Este artigo explica o que são eventos de exibição e como usá-los no SDK da Web.
+source-git-commit: da506cd5de69047e326790d0fae56f76c728e7a5
 workflow-type: tm+mt
-source-wordcount: '348'
+source-wordcount: '351'
 ht-degree: 0%
 
 ---

@@ -1,7 +1,7 @@
 ---
 title: Uso de eventos na parte superior e inferior da página
 description: Este artigo explica como usar os eventos principais e inferiores da página no SDK da Web.
-source-git-commit: 5322156774388a19788529aee554424b2fb5d91b
+source-git-commit: 221a9348803e111a1842b3abf2e74f7408da5994
 workflow-type: tm+mt
 source-wordcount: '806'
 ht-degree: 2%
@@ -32,7 +32,7 @@ Ao usar os eventos de parte superior e inferior da página no SDK da Web, a equi
 
 ## Exemplo de evento do início da página {#top-of-page}
 
-A amostra de código abaixo exemplifica uma configuração de evento de parte superior da página que solicita personalização, mas não envia notificações de exibição para propostas renderizadas automaticamente. As notificações de exibição serão enviadas como parte do evento de fim de página.
+A amostra de código abaixo exemplifica uma configuração de evento de parte superior da página que solicita personalização, mas não [enviar eventos de exibição](../personalization/display-events.md#send-sendEvent-calls) para apresentações renderizadas automaticamente. A variável [exibir eventos](../personalization/display-events.md#send-sendEvent-calls) serão enviados como parte do evento de fim de página.
 
 >[!BEGINTABS]
 
@@ -52,7 +52,7 @@ alloy("sendEvent", {
 |---|---|---|
 | `type` | Obrigatório | Defina esse parâmetro como `decisioning.propositionFetch`. Esse tipo de evento especial instrui o Adobe Analytics a eliminar esse evento. Ao usar o Customer Journey Analytics, também é possível configurar um filtro para eliminar esses eventos. |
 | `renderDecisions` | Obrigatório | Defina esse parâmetro como `true`. Esse parâmetro informa ao SDK da Web para renderizar as decisões retornadas pela Rede de borda. |
-| `personalization.sendDisplayEvent` | Obrigatório | Defina esse parâmetro como `false`. Isso interrompe o envio de notificações de exibição. |
+| `personalization.sendDisplayEvent` | Obrigatório | Defina esse parâmetro como `false`. Isso interrompe o envio de eventos de exibição. |
 
 >[!ENDTABS]
 
@@ -62,7 +62,7 @@ alloy("sendEvent", {
 
 >[!TAB Proposições renderizadas automaticamente]
 
-A amostra de código abaixo exemplifica uma configuração de evento da parte inferior da página, que envia notificações de exibição para propostas que foram renderizadas automaticamente na página, mas para as quais as notificações de exibição foram suprimidas no [parte superior da página](#top-of-page) evento.
+A amostra de código abaixo exemplifica uma configuração de evento da parte inferior da página, que envia eventos de exibição para propostas que foram renderizadas automaticamente na página, mas para as quais os eventos de exibição foram suprimidos no [parte superior da página](#top-of-page) evento.
 
 >[!NOTE]
 >
@@ -79,12 +79,12 @@ alloy("sendEvent", {
 
 | Parâmetro | Obrigatório / Opcional | Descrição |
 |---|---|---|
-| `personalization.includeRenderedPropositions` | Obrigatório | Defina esse parâmetro como `true`. Isso permite o envio de notificações de exibição que foram suprimidas no evento da parte superior da página. |
+| `personalization.includeRenderedPropositions` | Obrigatório | Defina esse parâmetro como `true`. Isso permite o envio de eventos de exibição que foram suprimidos no início da página. |
 | `xdm` | Opcional | Use esta seção para incluir todos os dados necessários para o evento de fim de página. |
 
 >[!TAB Proposições renderizadas manualmente]
 
-A amostra de código abaixo exemplifica uma parte inferior da configuração do evento da página, que envia notificações de exibição para propostas que foram renderizadas manualmente na página (ou seja, para escopos ou superfícies de decisão personalizados).
+A amostra de código abaixo exemplifica uma parte inferior da configuração de evento da página, que envia eventos de exibição para propostas que foram renderizadas manualmente na página (ou seja, para escopos ou superfícies de decisão personalizados).
 
 >[!NOTE]
 >
@@ -116,7 +116,7 @@ alloy("sendEvent", {
 
 | Parâmetro | Obrigatório / Opcional | Descrição |
 |---|---|---|
-| `xdm._experience.decisioning.propositions` | Obrigatório | Esta seção define as apresentações renderizadas manualmente. Você deve incluir a proposta `ID`, `scope`, e `scopeDetails`. Consulte a documentação sobre como [renderizar personalização manualmente](../personalization/rendering-personalization-content.md#manually) para obter mais informações sobre como registrar notificações de exibição para conteúdo renderizado manualmente. A personalização renderizada manualmente deve ser incluída na parte inferior da ocorrência da página. |
+| `xdm._experience.decisioning.propositions` | Obrigatório | Esta seção define as apresentações renderizadas manualmente. Você deve incluir a proposta `ID`, `scope`, e `scopeDetails`. Consulte a documentação sobre como [renderizar personalização manualmente](../personalization/rendering-personalization-content.md#manually) para obter mais informações sobre como registrar eventos de exibição para conteúdo renderizado manualmente. A personalização renderizada manualmente deve ser incluída na parte inferior da ocorrência da página. |
 | `xdm._experience.decisioning.propositionEventType` | Obrigatório | Defina esse parâmetro como `display: 1`. |
 | `xdm` | Opcional | Use esta seção para incluir todos os dados necessários para o evento de fim de página. |
 
@@ -149,7 +149,7 @@ alloy("sendEvent", {
     }
 });
 
-// Bottom of page, send display notifications for the items that were rendered.
+// Bottom of page, send display events for the items that were rendered.
 // Note: You need to include the viewName in both top and bottom of page so that the
 // correct view is rendered at the top of the page, and the correct view is recorded
 // at the bottom of the page.
@@ -198,7 +198,7 @@ alloy("applyPropositions", {
     viewName: "cart"
 });
 
-// bottom of page, send display notifications for the items that were rendered.
+// bottom of page, send display events for the items that were rendered.
 // Note: You need to include the viewName in both top and bottom of page so that the
 // correct view is rendered at the top of the page, and the correct view is recorded
 // at the bottom of the page.

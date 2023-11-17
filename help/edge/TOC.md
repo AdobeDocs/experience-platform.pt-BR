@@ -5,9 +5,9 @@ user-guide-title: Ajuda do SDK da Web da Adobe Experience Platform
 breadcrumb-title: Guia do SDK da Web
 user-guide-description: Interaja com os serviços da Experience Cloud por meio da Rede de borda.
 feature: Web SDK
-source-git-commit: 2e47f12cde0f4c4dca89deddbf612ad3840628f0
+source-git-commit: 221a9348803e111a1842b3abf2e74f7408da5994
 workflow-type: tm+mt
-source-wordcount: '181'
+source-wordcount: '184'
 ht-degree: 28%
 
 ---
@@ -42,6 +42,7 @@ ht-degree: 28%
       * [Variáveis mapeadas automaticamente](data-collection/adobe-analytics/automatically-mapped-vars.md)
       * [Envio de dados para o Analytics](data-collection/adobe-analytics/sending-data-to-analytics.md)
 * Personalização {#personalization}
+   * [Gerenciar eventos de exibição](personalization/display-events.md)
    * [Renderizar conteúdo personalizado](personalization/rendering-personalization-content.md)
    * [Personalização por meio de implementação híbrida](personalization/hybrid-personalization.md)
    * [Gerenciar cintilação](personalization/manage-flicker.md)

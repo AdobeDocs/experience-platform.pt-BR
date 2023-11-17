@@ -1,12 +1,12 @@
 ---
 audience: user
 user-guide-title: Guia de catálogo e conjuntos de dados
-user-guide-description: Explore a linhagem de dados, os metadados, as descrições dos arquivos, os diretórios e os conjuntos de dados no Data Lake e saiba mais sobre o sistema do Serviço de catálogo.
+user-guide-description: Explore a linhagem de dados, os metadados, as descrições de arquivos, os diretórios e os conjuntos de dados no Data Lake e saiba mais sobre o sistema do Serviço de catálogo.
 feature: Catalog
 source-git-commit: 81f570f8e5401624ccac74696b2323252a4de0a9
 workflow-type: tm+mt
 source-wordcount: '119'
-ht-degree: 18%
+ht-degree: 36%
 
 ---
 

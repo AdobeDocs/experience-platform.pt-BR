@@ -30,7 +30,7 @@ A segmentação é o processo de definir atributos ou comportamentos específico
 
 Depois que um público-alvo é definido conceitualmente, ele é incorporado [!DNL Experience Platform]. Normalmente, os públicos-alvo são criados pelo profissional de marketing ou especialista em público-alvo, embora algumas organizações prefiram que sejam criados pelo departamento de marketing em colaboração com os analistas de dados. Ao examinar os dados enviados para o [!DNL Platform], o analista de dados pode criar o público-alvo de duas maneiras: criando uma definição de segmento ao selecionar quais campos e valores serão usados para criar as regras ou condições do público-alvo ou compondo um público-alvo usando a Composição de público-alvo.
 
-## Criar públicos
+## Criar públicos-alvo
 
 Os públicos-alvo podem ser criados de duas maneiras diferentes no Adobe Experience Platform: diretamente compostos como públicos-alvo ou por meio de definições de segmentos derivadas da plataforma.
 

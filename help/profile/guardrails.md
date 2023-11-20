@@ -1,18 +1,18 @@
 ---
-title: Proteções padrão para dados de perfil do cliente em tempo real
+title: Proteções padrão para dados e segmentação do perfil do cliente em tempo real
 solution: Experience Platform
 product: experience platform
 type: Documentation
-description: A Adobe Experience Platform usa um modelo de dados híbrido não normalizado que difere do modelo de dados relacional tradicional. Este documento fornece limites de uso e taxa padrão para ajudar a modelar seus dados de perfil para obter o melhor desempenho do sistema.
+description: Saiba mais sobre o desempenho e as medidas de proteção aplicadas pelo sistema para dados de perfil e segmentação para garantir o uso ideal da funcionalidade do Real-Time CDP.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: ab2bb6f4cafe60aec7d8745cca9d2f7f0227a938
+source-git-commit: 554763cc444da0d1459b22f3f37d22b528b290e1
 workflow-type: tm+mt
-source-wordcount: '2153'
-ht-degree: 4%
+source-wordcount: '2202'
+ht-degree: 2%
 
 ---
 
-# Proteções padrão para [!DNL Real-Time Customer Profile] dados
+# Proteções padrão para [!DNL Real-Time Customer Profile] dados e segmentação
 
 O Adobe Experience Platform permite fornecer experiências personalizadas entre canais com base em insights comportamentais e atributos do cliente na forma de Perfis de clientes em tempo real. Para dar suporte a essa nova abordagem aos perfis, o Experience Platform usa um modelo de dados híbrido altamente desnormalizado que difere do modelo de dados relacional tradicional.
 
@@ -108,16 +108,17 @@ As medidas de proteção a seguir se referem ao tamanho dos dados e fornecem lim
 
 {style="table-layout:auto"}
 
-## Proteções de segmentação
+## Proteções de segmentação {#segmentation-guardrails}
 
 As medidas de proteção descritas nesta seção referem-se ao número e à natureza dos públicos que uma organização pode criar no Experience Platform, bem como mapear e ativar públicos para destinos.
 
 | Grade de Proteção | Limite | Tipo de limite | Descrição |
 | --- | --- | --- | --- |
-| Públicos-alvo por sandbox | 4000 | Proteção de desempenho | Uma organização pode ter mais de 4000 públicos-alvo no total, desde que haja menos de 4000 públicos-alvo em cada sandbox individual. Tentar criar públicos adicionais pode afetar o desempenho do sistema. |
-| Públicos-alvo da borda por sandbox | 150 | Proteção de desempenho | Uma organização pode ter mais de 150 públicos-alvo de borda no total, desde que haja menos de 150 públicos-alvo de borda em cada sandbox individual. Tentar criar públicos-alvo de borda adicionais pode afetar o desempenho do sistema. |
-| Públicos-alvo de transmissão por sandbox | 500 | Proteção de desempenho | Uma organização pode ter mais de 500 públicos-alvo de transmissão no total, desde que haja menos de 500 públicos-alvo de transmissão em cada sandbox individual. Tentar criar públicos de transmissão adicionais pode afetar o desempenho do sistema. |
+| Públicos-alvo por sandbox | 4000 | Proteção de desempenho | Uma organização pode ter mais de 4000 públicos-alvo no total, desde que haja menos de 4000 públicos-alvo em cada sandbox individual. Tentar criar públicos adicionais pode afetar o desempenho do sistema. Leia mais sobre [criação de públicos](/help/segmentation/ui/segment-builder.md) por meio do construtor de segmentos. |
+| Públicos-alvo da borda por sandbox | 150 | Proteção de desempenho | Uma organização pode ter mais de 150 públicos-alvo de borda no total, desde que haja menos de 150 públicos-alvo de borda em cada sandbox individual. Tentar criar públicos-alvo de borda adicionais pode afetar o desempenho do sistema. Leia mais sobre [públicos-alvo de borda](/help/segmentation/ui/edge-segmentation.md). |
+| Públicos-alvo de transmissão por sandbox | 500 | Proteção de desempenho | Uma organização pode ter mais de 500 públicos-alvo de transmissão no total, desde que haja menos de 500 públicos-alvo de transmissão em cada sandbox individual. Tentar criar públicos de transmissão adicionais pode afetar o desempenho do sistema. Leia mais sobre [públicos-alvo de transmissão](/help/segmentation/ui/streaming-segmentation.md). |
 | Públicos em lote por sandbox | 4000 | Proteção de desempenho | Uma organização pode ter mais de 4000 públicos-alvo em lote no total, desde que haja menos de 4000 públicos-alvo em lote em cada sandbox individual. Tentar criar públicos-alvo em lote adicionais pode afetar o desempenho do sistema. |
+| Públicos-alvo da conta por sandbox | 50 | Proteção imposta pelo sistema | Não é possível criar mais de 50 públicos-alvo de conta em uma sandbox. Depois de atingir 50 públicos-alvo em uma sandbox, a variável **[!UICONTROL Criar público]** o controle está desativado ao tentar criar um novo público-alvo para a conta. Leia mais sobre [públicos-alvo da conta](/help/segmentation/ui/account-audiences.md). |
 
 {style="table-layout:auto"}
 

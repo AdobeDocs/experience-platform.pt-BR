@@ -3,9 +3,9 @@ title: Personalização híbrida usando o SDK da Web e a API do servidor de rede
 description: Este artigo demonstra como você pode usar o SDK da Web em conjunto com a API do servidor para implantar personalização híbrida em suas propriedades da Web.
 keywords: personalização; híbrido; api do servidor; lado do servidor; implementação híbrida;
 exl-id: 506991e8-701c-49b8-9d9d-265415779876
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 33e69f34934b505e2ee434bc957f278486a97642
 workflow-type: tm+mt
-source-wordcount: '828'
+source-wordcount: '846'
 ht-degree: 3%
 
 ---
@@ -70,7 +70,7 @@ Quando você [configurar um fluxo de dados](../../datastreams/overview.md) no An
 A amostra dessa implementação usa dois fluxos de dados diferentes:
 
 * Uma sequência de dados configurada para o Analytics. Essa sequência de dados é usada para interações do SDK da Web.
-* Uma segunda sequência de dados sem uma configuração do Analytics. Essa sequência de dados é usada para solicitações de API do servidor.
+* Uma segunda sequência de dados sem uma configuração do Analytics. Essa sequência de dados é usada para solicitações de API do servidor. Você deve configurar essa sequência de dados com a mesma configuração de destino da sequência de dados configurada para o Analytics.
 
 Dessa forma, a solicitação do lado do servidor não registra eventos do Analytics, mas as solicitações do lado do cliente registram. Isso faz com que as solicitações do Analytics sejam contadas com precisão.
 

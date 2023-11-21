@@ -2,8 +2,9 @@
 keywords: RTCDP;CDP;Real-time Customer Data Platform;real time customer data platform;real time cdp;cdp;rtcdp
 title: Introdução ao Real-time Customer Data Platform
 description: Use esse modelo de cenário como exemplo ao configurar sua implementação da Adobe Real-time Customer Data Platform.
+feature: Get Started, Use Cases
 exl-id: 9f775d33-27a1-4a49-a4c5-6300726a531b
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
 source-wordcount: '2333'
 ht-degree: 2%
@@ -24,7 +25,7 @@ Este exemplo mostra o poder do Real-time Customer Data Platform, viabilizado pel
 
 A Luma, uma empresa de vestuário esportivo, está sempre tentando melhorar a experiência do cliente. Eles têm uma nova iniciativa para aumentar as vendas relacionadas a presentes. Eles também querem reduzir a superexposição, como anúncios irritantes que acompanham os clientes.
 
-Atualmente, eles estão gastando muito em mídia que se redireciona em relação a itens que o visitante não comprará no futuro. Por exemplo, a Luma não quer redirecionar alguém com um item que foi projetado como uma compra única para outra pessoa.
+Atualmente, eles estão gastando muito em mídia que redireciona contra itens que o visitante não vai comprar a partir de agora. Por exemplo, a Luma não quer redirecionar alguém com um item que foi projetado como uma compra única para outra pessoa.
 
 Neste momento, os dados do Luma estão dispersos em várias fontes. Como resultado, enfrentam desafios significativos:
 
@@ -96,7 +97,7 @@ Duas identidades são mescladas:
 
 Ambas as identidades são combinadas em um único perfil no [!DNL Experience Platform]. A Luma agora tem uma visão unificada desse consumidor.
 
-Com base no comportamento de navegação do visitante anônimo na seção masculina do site, pode ter sido presumido que o cliente era um homem. Agora que ela está conectada, Luma reconhece Sarah Rose. A Luma usa o poder do [!DNL Real-Time Customer Profile] para refinar as mensagens entregues a ela nos canais.
+Com base no comportamento de navegação do visitante anônimo na seção masculina do site, pode ter sido presumido que o cliente era um homem. Agora que ela está logada, Luma reconhece Sarah Rose. A Luma usa o poder do [!DNL Real-Time Customer Profile] para refinar as mensagens entregues a ela nos canais.
 
 ## Personalização da experiência do usuário
 
@@ -145,7 +146,7 @@ Uso [!DNL Real-Time Customer Data Platform] para trazer novas fontes de dados pa
 
 ![imagem](assets/luma-source-cat.png)
 
-Por exemplo, para assimilar dados do CRM da Luma, filtre o catálogo por *CRM* e todos os conectores prontos para uso que contêm *CRM* são listados. Para adicionar [!DNL Microsoft Dynamics CRM] dados:
+Por exemplo, para assimilar os dados do CRM da Luma, filtre o catálogo por *CRM* e todos os conectores prontos para uso que contêm *CRM* são listados. Para adicionar [!DNL Microsoft Dynamics CRM] dados:
 
 1. Autorizar a conexão.
 
@@ -205,7 +206,7 @@ Os poderosos recursos de segmentação do Adobe Experience Platform permitem que
 
 Neste cenário, as interações recentes de Sarah no site exibem um comportamento diferente de suas ações anteriores. Ela geralmente compra roupas femininas. No entanto, o item em seu carrinho é uma camiseta grande masculina.
 
-A equipe de ciência de dados da Luma criou modelos em torno da propensão para comprar. Um modelo identifica uma mudança repentina na categoria do vestuário (como homens/mulheres) ou no tamanho para o consumidor existente. A mudança no comportamento de compra de Sarah sugere que ela não está fazendo compras por si mesma.
+A equipe de ciência de dados da Luma criou modelos em torno da propensão para comprar. Um modelo identifica uma mudança repentina na categoria do vestuário (como homens/mulheres) ou no tamanho para o consumidor existente. A mudança no comportamento de compra de Sarah sugere que ela não está fazendo compras para si mesma.
 
 <!-- ![image](assets/luma-gift.png) -->
 
@@ -244,8 +245,7 @@ Aqui vemos todos os destinos disponíveis para o Luma enviar este destino para o
 Neste cenário, a Luma deseja redirecionar esse público-alvo com personalização nesses destinos:
 
 * Google, para exibição
-
-   <!--* Facebook -->
+  <!--* Facebook -->
 * Adobe Campaign, para email
 
 <!-- ![image](assets/luma-sched-dest.png) -->

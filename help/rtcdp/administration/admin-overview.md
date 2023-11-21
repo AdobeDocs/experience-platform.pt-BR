@@ -2,8 +2,9 @@
 keywords: visão geral da administração rtcdp;visão geral da administração
 title: Visão geral de administração do Real-time Customer Data Platform
 description: Este documento fornece uma visão geral dos recursos de administração do Adobe Real-time Customer Data Platform, viabilizados pelo Adobe Experience Platform.
+feature: Access Control, Get Started, Sandboxes
 exl-id: c5bdeac6-345a-4ef1-bc5a-a993f565b9d6
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
 source-wordcount: '283'
 ht-degree: 1%

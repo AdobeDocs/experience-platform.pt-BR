@@ -2,8 +2,9 @@
 keywords: fontes rtcdp;fontes fontes rtcdp;fontes da plataforma de dados do cliente em tempo real
 title: Fontes no Real-time Customer Data Platform
 description: Este documento fornece uma visão geral de Fontes no Adobe Real-time Customer Data Platform
+feature: Sources, Data Ingestion, Get Started
 exl-id: 15b3ee9b-6faf-4091-9641-e653e4cdd7fb
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
 source-wordcount: '101'
 ht-degree: 22%

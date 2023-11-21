@@ -2,11 +2,12 @@
 keywords: políticas de mesclagem rtcdp;rtcdp políticas de mesclagem
 title: Políticas de mesclagem no Real-time Customer Data Platform
 description: Trabalhar com políticas de mesclagem no Adobe Real-time Customer Data Platform
+feature: Get Started, Identities, Profiles
 exl-id: 1a9d9549-a7de-46d7-a23e-dd41829839c5
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
 source-wordcount: '157'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 

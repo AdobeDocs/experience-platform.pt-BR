@@ -2,15 +2,17 @@
 keywords: perfil rtcdp;perfis rtcdp;identidade rtcdp;políticas de mesclagem rtcdp;perfil do cliente em tempo real
 title: Guia da interface do usuário do perfil da conta
 description: Com o uso de perfis de conta, o Adobe Real-time Customer Data Platform B2B Edition permite unificar informações de conta de várias fontes. Este guia fornece detalhes para interagir com perfis de conta na interface do usuário do Adobe Experience Platform.
+badgeB2B: label="Edição B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+feature: Profiles, B2B
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
-source-wordcount: '1625'
+source-wordcount: '1636'
 ht-degree: 0%
 
 ---
 
-# Guia da interface do usuário do perfil da conta
+# Guia da interface do perfil da conta
 
 >[!NOTE]
 >
@@ -150,7 +152,6 @@ A variável **[!UICONTROL Contas relacionadas]** A guia fornece informações so
 >
 >* Um grupo de contas relacionadas pode ter no máximo 30 perfis de conta. Se mais de 30 perfis de conta forem encontrados relacionados, eles serão arbitrariamente divididos em vários grupos, cada um com no máximo 30 membros. O grupo Contas relacionadas de um perfil de conta sempre inclui a si mesmo.
 >* A variável [!UICONTROL Contas relacionadas] exibe uma lista de até 25 contas relacionadas associadas à conta que você está navegando. Essa é uma limitação que será abordada em uma atualização futura. Apesar dessa limitação da interface do usuário, quando você usa contas relacionadas nas definições de segmento, para grupos de 30 perfis de conta relacionados, todos os perfis são usados para direcionamento.
-
 
 Cada conta relacionada inclui informações como a ID e o nome do perfil da conta, sua chave de origem da conta e informações adicionais relacionadas à página inicial, endereço, conta pai, telefone, setor e receita anual.
 

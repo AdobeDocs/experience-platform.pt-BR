@@ -1,10 +1,12 @@
 ---
 title: Fontes na edição B2B do Real-time Customer Data Platform
 description: Uma visão geral da função das fontes no Adobe Real-time Customer Data Platform B2B Edition.
+feature: Sources, Data Ingestion, Get Started, B2B
+badgeB2B: label="Edição B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: eeea4b2e-67c5-4491-9b8e-4b8987e44777
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
-source-wordcount: '250'
+source-wordcount: '261'
 ht-degree: 0%
 
 ---

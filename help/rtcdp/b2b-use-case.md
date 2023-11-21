@@ -2,10 +2,12 @@
 keywords: RTCDP;CDP;Real-time Customer Data Platform;real time customer data platform;real time cdp;cdp;rtcdp
 title: Exemplo de caso de uso para o Real-time Customer Data Platform B2B Edition
 description: Este modelo de cenário fornece um exemplo para a configuração da sua implementação da Adobe Real-time Customer Data Platform B2B Edition.
+feature: Get Started, Use Cases, B2B
+badgeB2B: label="Edição B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 15505980-ac33-44b2-8989-c08cbabd212b
-source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
+source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
-source-wordcount: '1135'
+source-wordcount: '1146'
 ht-degree: 2%
 
 ---
@@ -34,7 +36,7 @@ No Marketo 1, Townsend é registrado como Account 1. Ela tem duas pessoas relaci
 
 No Marketo 2, Townsend é registrado como Account 2. A Conta 2 também tem duas pessoas relacionadas (p2@townsend.com e p3@townsend.com) e uma oportunidade fechada de US$ 900 mil (&quot;Oportunidade 2&quot;) no CRM 2. Esses dados são sincronizados do CRM 2 para o Marketo 2.
 
-Para fins de integração e controle corporativo adicional, a Bodea também tem um sistema de Gestão de Dados Principais (MDM), onde mantém um registro indicando que a Conta 1 no Marketo 1 (e CRM 1) e a Conta 2 no Marketo 2 (e CRM 2) são a mesma empresa.
+Para fins de integração e controle corporativo adicional, a Bodea também tem um sistema Master Data Management (MDM), onde mantém um registro indicando que a Conta 1 no Marketo 1 (e CRM 1) e a Conta 2 no Marketo 2 (e CRM 2) são a mesma empresa.
 
 No último mês, `p2@townsend.com` visitou a nova página do produto e a visita à web foi registrada pelo Marketo 1.
 
@@ -56,7 +58,7 @@ Como os gastos do Townsend são divididos em diferentes sistemas de vendas e nã
 
 Com o Real-Time CDP B2B Edition, a equipe de marketing da Bodea pode:
 
-- Combine os dados de todas as fontes diferentes (várias instâncias do Marketo e do CRM e o Gerenciamento de dados Principais) no Real-Time CDP B2B Edition.
+- Combine os dados de todas as fontes diferentes (várias instâncias do Marketo e do CRM, e o Master Data Management) no Real-Time CDP B2B Edition.
 
 Com o RT-CDP B2B Edition, o Bodea pode usar o Conector de origem do Marketo Engage para trazer dados B2B do Marketo 1 e Marketo 2 para o Experience Platform e manter esses dados atualizados usando aplicativos conectados à plataforma. Consulte a [Conector de origem do Marketo](../sources/connectors/adobe-applications/marketo/marketo.md) para obter mais informações.
 

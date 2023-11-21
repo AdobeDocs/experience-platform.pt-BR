@@ -3,10 +3,12 @@ keywords: RTCDP;CDP;B2B Edition;Real-time Customer Data Platform;real time custo
 solution: Experience Platform
 title: Introdução à Real-time Customer Data Platform B2B Edition
 description: Use esse cenário como exemplo ao configurar sua implementação do Adobe Real-time Customer Data Platform B2B Edition.
+feature: Get Started, B2B
+badgeB2B: label="Edição B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: ad9ace46-9915-4b8f-913a-42e735859edf
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
-source-wordcount: '1205'
+source-wordcount: '1216'
 ht-degree: 0%
 
 ---
@@ -22,7 +24,7 @@ A empresa de tecnologia Bodea quer combinar dados pessoais e de conta de diferen
 Este fluxo de trabalho tutorial depende de vários serviços da Adobe Experience Platform como parte da demonstração. Se desejar acompanhar, é recomendável compreender bem os seguintes serviços:
 
 - [Modal de dados de experiência (XDM)](../xdm/home.md)
-- [Fontes](../sources/home.md)
+- [Origens](../sources/home.md)
 - [Segmentação](../segmentation/home.md)
 - [Destinos](../destinations/home.md)
 
@@ -70,7 +72,7 @@ O conector de origem do Marketo Engage fornece um recurso de mapeamento automát
 
 >[!NOTE]
 > 
->Se você tiver feito grupos de campos personalizados em seus esquemas XDM, talvez tenha campos desconectados nesta fase do processo. Verifique todos os valores que estão preenchendo seus grupos de campos personalizados.
+>Se você tiver criado grupos de campos personalizados em seus esquemas XDM, talvez tenha campos desconectados nesta fase do processo. Verifique todos os valores que estão preenchendo seus grupos de campos personalizados.
 
 O profissional de marketing do Bodea verifica se todos os grupos de campos estão mapeados corretamente e continua o processo de configuração das fontes inicializando um fluxo de dados. Ao criar um fluxo de dados para trazer os dados do Marketo, os dados recebidos podem ser usados pelos serviços downstream da plataforma. Durante o processo inicial de assimilação, os dados são trazidos para o Experience Platform como um lote. Depois disso, os dados assimilados subsequentes são transmitidos ao Perfil com atualizações quase em tempo real.
 

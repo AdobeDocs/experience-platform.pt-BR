@@ -2,17 +2,19 @@
 keywords: RTCDP;CDP;B2B Edition;Real-time Customer Data Platform;real time customer data platform;real time cdp;b2b;cdp;Customer AI
 title: Visão geral da Real-Time CDP B2B Edition
 description: Visão geral da conta da Real-time Customer Data Platform B2B Edition
+feature: Get Started, B2B
+badgeB2B: label="Edição B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 9b45bba4-fc46-4d69-b36a-5cb91f316612
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
-source-wordcount: '1082'
-ht-degree: 1%
+source-wordcount: '1093'
+ht-degree: 4%
 
 ---
 
 # Visão geral da Real-time Customer Data Platform B2B Edition
 
-Criado no Adobe Real-time Customer Data Platform (Real-Time CDP), o Real-Time CDP B2B Edition foi desenvolvido especificamente para profissionais de marketing que operam em um modelo de serviço business-to-business. Ele reúne dados de várias fontes e os combina em uma única visualização de pessoas e perfis de conta. Esses dados unificados permitem que os profissionais de marketing direcionem públicos específicos com precisão e envolvam esses públicos em todos os canais disponíveis.
+Criado no Adobe Real-time Customer Data Platform (Real-Time CDP), o Real-Time CDP B2B Edition foi desenvolvido especificamente para profissionais de marketing que operam em um modelo de serviço business-to-business. A plataforma reúne dados de várias origens e os combina numa única exibição de perfis de pessoas e contas. Esses dados unificados permitem que profissionais de marketing direcionem públicos-alvo específicos com precisão e gerem engajamento em todos os canais disponíveis.
 
 Há melhorias em uma variedade de recursos do Adobe Experience Platform que distinguem o Real-Time CDP B2B Edition de seu equivalente B2C. Eles incluem melhorias no Experience Data Model (XDM) para casos de uso de B2B, atualizações na resolução de identidade e segmentação de perfil, bem como um conector e destino personalizados para [!DNL Marketo Engage]. A variável [!DNL Marketo] O conector do permite que as marcas B2B conectem seus dados de envolvimento B2B líderes do setor com informações comportamentais, a fim de nutrir clientes potenciais e aprimorar as operações de marketing baseadas em conta.
 
@@ -47,7 +49,7 @@ O sistema de resolução de identidades foi expandido para suportar uma classifi
 
 Os registros de conta sincronizados pelo CRM de origem e conectados por vários caminhos no sistema são mesclados pela Platform. O sistema reúne as pessoas associadas a oportunidades de negócios e as registradas como clientes, mas também é capaz de preservar a distinção entre elas como um atributo, se forem identificáveis.
 
-Os identificadores correspondentes são usados para vincular e mesclar registros de conta de vários sistemas. As hierarquias de conta são preservadas em todo esse processo. Os diferenciais são usados para verificar se uma pessoa está associada a uma conta ou não, e fornecer a capacidade de separá-la da conta, se necessário.
+Os identificadores correspondentes são usados para vincular e mesclar registros de conta de vários sistemas. As hierarquias de conta são preservadas em todo esse processo. Os diferenciais são usados para analisar se uma pessoa está associada a uma conta ou não e fornecer a capacidade de separá-la da conta, se necessário.
 
 ## Perfis e segmentação
 

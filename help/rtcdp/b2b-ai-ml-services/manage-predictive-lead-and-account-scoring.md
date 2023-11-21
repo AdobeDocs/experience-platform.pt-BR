@@ -2,11 +2,13 @@
 title: Gerenciar lead preditivo e pontuação da conta no Real-Time CDP B2B
 type: Documentation
 description: Este documento fornece informações sobre como gerenciar o lead preditivo e o recurso de pontuação da conta no Experience Platform CDP B2B.
+feature: Profiles, B2B
+badgeB2B: label="Edição B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: fe7eb94e-5cf1-46bf-80e5-affe5735c998
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
-source-wordcount: '1018'
-ht-degree: 2%
+source-wordcount: '1029'
+ht-degree: 3%
 
 ---
 
@@ -134,8 +136,8 @@ Você retornará à janela **[!UICONTROL Serviços]** onde não é mais possíve
 | 402 | ERRO 402. O pipeline de IA de cliente potencial foi interrompido: não há contatos válidos suficientes para a pontuação de contatos. Contagem de contatos: {}. |
 | 403 | ERRO 403. O pipeline de IA de cliente potencial foi interrompido: volume de atividade insuficiente para treinamento de modelo. Contagem de eventos: {}. |
 | 404 | ERRO 404. O pipeline de IA de cliente potencial foi interrompido: não há conversões suficientes para treinamento de modelo. Contagem de conversões: {}. |
-| 405 | ERRO 405. O pipeline de IA de cliente potencial foi interrompido: atividade muito esparsa para treinamento de modelo válido. Somente {} por cento das contas têm atividade. |
-| 406 | ERRO 406. O pipeline de IA de cliente potencial foi interrompido: atividade muito esparsa para treinamento de modelo válido. Somente {} por cento dos contatos têm atividade. |
+| 405 | ERRO 405. O pipeline de IA de cliente potencial foi interrompido: atividade muito esparsa para treinamento de modelo válido. Somente {} porcentagem de contas tem atividade. |
+| 406 | ERRO 406. O pipeline de IA de cliente potencial foi interrompido: atividade muito esparsa para treinamento de modelo válido. Somente {} porcentagem de contatos tem atividade. |
 | 407 | ERRO 407. O pipeline de IA de cliente potencial foi interrompido: os tipos de atividade de dados de pontuação não correspondem aos dados de treinamento. |
 | 408 | ERRO 408. O pipeline de IA de cliente potencial foi interrompido: a taxa de ausências é muito alta para recursos de atividade. Taxa ausente: {}. |
 | 409 | ERRO 409. O pipeline de IA de cliente potencial parou: a auc de teste está muito baixa. Auc de teste: {}. |
@@ -145,16 +147,16 @@ Você retornará à janela **[!UICONTROL Serviços]** onde não é mais possíve
 
 | Código de aviso/informações | Mensagem |
 | --- | --- |
-| 100 | INFORMAÇÃO 100. Verificação de qualidade da IA de clientes potenciais: a contagem de contas é: {}. |
-| 101 | INFORMAÇÃO 101. Verificação de qualidade da IA de clientes potenciais: a contagem de contatos é: {}. |
-| 102 | INFORMAÇÃO 102. Conduz a verificação de qualidade da IA: a contagem de oportunidades é: {}. |
+| 100 | INFORMAÇÃO 100. Verificação de qualidade de IA de clientes potenciais: a contagem de contas é: {}. |
+| 101 | INFORMAÇÃO 101. Verificação de qualidade de IA de clientes potenciais: a contagem de contatos é: {}. |
+| 102 | INFORMAÇÃO 102. Conduz à verificação de qualidade da IA: a contagem de oportunidades é: {}. |
 | 103 | INFORMAÇÃO 103. Conduz a verificação de qualidade da IA: o teste de auc é baixo. Iniciar ajuste de parâmetro. Testando auc: {}. |
 | 200 | AVISO 200. Conduz à verificação de qualidade da IA: a taxa de recursos firmográficos ausentes é: {}. |
-| 201 | AVISO 201. Conduz verificação de qualidade da IA: a taxa de recursos de atividade ausentes é: {}. |
+| 201 | AVISO 201. Conduz à verificação de qualidade da IA: a taxa de recursos de atividade ausentes é: {}. |
 
 ## Próximas etapas
 
 Ao seguir este tutorial, agora é possível criar e gerenciar pontuações com êxito. Consulte os seguintes documentos para obter mais detalhes:
 
-* [Pontuação preditiva de leads e contas](/help/rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md)
+* [Pontuação preditiva de conta e lead](/help/rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md)
 * [Monitorar trabalhos de pontuação preditiva de leads e contas](/help/dataflows/ui/b2b/monitor-profile-enrichment.md)

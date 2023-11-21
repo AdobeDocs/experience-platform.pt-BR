@@ -5,9 +5,9 @@ feature: Customer AI
 title: Configurar uma instância da IA do cliente
 description: Os Serviços de IA/ML fornecem IA do cliente como um serviço da Adobe Sensei simples de usar que pode ser configurado para casos de uso diferentes. As seções a seguir fornecem etapas para configurar uma instância da IA do cliente.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: 973a9cae711780448e5c708622a71ba928695beb
 workflow-type: tm+mt
-source-wordcount: '2827'
+source-wordcount: '2824'
 ht-degree: 0%
 
 ---
@@ -197,15 +197,11 @@ Você pode definir campos importantes do conjunto de dados do Perfil (com carimb
 
 #### Selecione atributos de perfil na exportação de instantâneos do perfil
 
-Você também pode optar por incluir atributos de perfil na exportação diária do instantâneo do Perfil. Esses atributos são sincronizados com a exportação de instantâneos do Perfil e exibem o valor disponível mais recentemente.
+Você também pode optar por incluir atributos de perfil na exportação diária do instantâneo do Perfil. Esses atributos são sincronizados com a exportação de instantâneos do Perfil e exibem o valor disponível mais recentemente. Eles são exibidos automaticamente e não exigem que um conjunto de dados seja selecionado na etapa de configuração.
 
 >[!WARNING]
 >
-> Tenha cuidado para não selecionar um atributo de perfil que seja atualizado como resultado da meta de previsão ou altamente correlacionado com a meta de previsão. Isso causa vazamento de dados e adaptação excessiva do modelo. Um exemplo desse atributo é `total_purchases_in_the_last_3_months` que prevê a conversão de compras.
-
->[!NOTE]
->
->O suporte para usar atributos de perfil da exportação de instantâneos da UPS está disponível na interface do usuário mediante solicitação.
+> Não selecione um atributo de perfil que tenha sido atualizado como resultado da meta de previsão ou que esteja altamente correlacionado a ela. Isso resulta em vazamento de dados e ajuste excessivo do modelo. Por exemplo, `total_purchases_in_the_last_3_months` é um atributo que prevê a conversão de compras.
 
 ### Adicionar um exemplo de evento personalizado {#custom-event}
 
@@ -264,3 +260,5 @@ O vídeo a seguir foi projetado para oferecer suporte à sua compreensão do flu
 > O vídeo a seguir está desatualizado. Para obter as informações mais atualizadas, consulte a documentação.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32665?learn=on&quality=12)
+
+<!-- comment -->

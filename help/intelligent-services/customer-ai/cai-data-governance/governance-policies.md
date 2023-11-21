@@ -4,14 +4,14 @@ feature: Customer AI
 title: Políticas de governança para a IA do cliente
 description: O Adobe Experience Platform fornece vários serviços e ferramentas que permitem controlar com confiança os dados de experiência coletados.
 exl-id: be3eca3a-0ea1-4b84-9454-675a4f9ac71e
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: eba23d39ade399f7df058da103fbd54883dc5b65
 workflow-type: tm+mt
-source-wordcount: '186'
+source-wordcount: '189'
 ht-degree: 0%
 
 ---
 
-# Políticas de governança
+# Políticas de governança no Attribution AI
 
 Após concluir o fluxo de trabalho para criar um modelo e enviar a configuração dele, a variável [aplicação de políticas](/help/data-governance/enforcement/auto-enforcement.md) verifica se há violações. Se ocorrer uma violação de política, será exibido um popover indicando que uma ou mais políticas foram violadas. Isso garante que suas operações de dados e ações de marketing na Platform estejam em conformidade com as políticas de uso de dados.
 

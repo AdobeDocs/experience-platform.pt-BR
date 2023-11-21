@@ -5,14 +5,14 @@ feature: Attribution AI
 title: Controle de acesso para o Attribution AI
 description: Este documento fornece informações sobre o controle de acesso baseado em atributos para o Attribution AI.
 exl-id: 3ed672bf-1fa6-4893-99e0-afc2b2179543
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: f28558d5939607cabf449cbc03b7e0f5406f6326
 workflow-type: tm+mt
-source-wordcount: '490'
+source-wordcount: '493'
 ht-degree: 1%
 
 ---
 
-# Controle de acesso
+# Controle de acesso no Attribution AI
 
 O controle de acesso do Attribution AI é fornecido por meio do Adobe Experience Platform na [Adobe Admin Console](https://adminconsole.adobe.com/). Essa funcionalidade aproveita perfis de produto no Admin Console, que vinculam usuários com permissões e sandboxes.
 

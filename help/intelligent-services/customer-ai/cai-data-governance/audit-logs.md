@@ -3,14 +3,14 @@ keywords: insights;customer ai;customer ai insights;serviço de consulta CAI;cus
 title: Visão geral dos logs de auditoria na IA do cliente
 description: Saiba como visualizar e gerenciar logs de auditoria na IA do cliente.
 exl-id: f5b2d0b0-b6ae-4ccc-b4c9-ac9cc6078d81
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: f28558d5939607cabf449cbc03b7e0f5406f6326
 workflow-type: tm+mt
-source-wordcount: '279'
-ht-degree: 36%
+source-wordcount: '282'
+ht-degree: 35%
 
 ---
 
-# Logs de auditoria
+# Logs de auditoria na IA do cliente
 
 Para aumentar a transparência e a visibilidade das atividades realizadas no sistema, a atividade do usuário no fluxo de trabalho da IA do cliente agora é capturada nos logs de auditoria para entender quaisquer alterações orientadas pelo usuário nos modelos da IA do cliente. Esses registros formam uma trilha de auditoria que pode ajudar na solução de problemas e ajudar sua empresa a cumprir com as políticas corporativas de gerenciamento de dados e os requisitos normativos.  Se você estiver sujeito à HIPAA (Health Insurance Portability and Accountability Act, Lei de Portabilidade e Responsabilidade do Seguro de Saúde) e estiver criando, recebendo, mantendo ou transmitindo dados pessoais confidenciais permitidos por meio da IA do cliente do Attribution AI, será responsável por executar um BAA com Adobe e licenciar o Healthcare Shield.
 

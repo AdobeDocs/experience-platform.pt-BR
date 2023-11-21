@@ -3,14 +3,14 @@ keywords: insights;ia de atribuição;insights de ia de atribuição;serviço de
 title: Visão geral dos logs de auditoria no Attribution AI
 description: Saiba como visualizar e gerenciar logs de auditoria no Attribution AI.
 exl-id: 83c55dbc-f03d-4bda-ae07-68b7914483c8
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: f28558d5939607cabf449cbc03b7e0f5406f6326
 workflow-type: tm+mt
-source-wordcount: '268'
-ht-degree: 38%
+source-wordcount: '271'
+ht-degree: 36%
 
 ---
 
-# Logs de auditoria
+# Logs de auditoria no Attribution AI
 
 Para aumentar a transparência e a visibilidade das atividades realizadas no sistema, a atividade do usuário no fluxo de trabalho do Attribution AI agora é capturada nos logs de auditoria para entender quaisquer alterações orientadas pelo usuário nos modelos do Attribution AI. Esses registros formam uma trilha de auditoria que pode ajudar na solução de problemas e ajudar sua empresa a cumprir com as políticas corporativas de gerenciamento de dados e os requisitos normativos.  Se você estiver sujeito à HIPAA (Health Insurance Portability and Accountability Act, Lei de Portabilidade e Responsabilidade do Seguro de Saúde) e estiver criando, recebendo, mantendo ou transmitindo dados pessoais confidenciais permitidos por meio da IA do cliente do Attribution AI, será responsável por executar um BAA com Adobe e licenciar o Healthcare Shield.
 

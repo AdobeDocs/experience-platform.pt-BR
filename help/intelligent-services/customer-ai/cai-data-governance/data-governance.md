@@ -5,14 +5,14 @@ feature: Customer AI
 title: Governança de dados na IA do cliente
 description: A Adobe Experience Platform fornece vários serviços e ferramentas que permitem controlar com confiança os dados de experiência coletados para estar em conformidade com as práticas comerciais, as obrigações legais e o processo de desenvolvimento.
 exl-id: de0836a4-7bc2-4f9c-95a9-c01dd9e2b03f
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: f28558d5939607cabf449cbc03b7e0f5406f6326
 workflow-type: tm+mt
-source-wordcount: '300'
+source-wordcount: '303'
 ht-degree: 11%
 
 ---
 
-# IA do cliente e governança de dados
+# IA do cliente e governança de dados na IA do cliente
 
 Todas as configurações relacionadas à governança de dados na IA do cliente são herdadas da Adobe Experience Platform.
 

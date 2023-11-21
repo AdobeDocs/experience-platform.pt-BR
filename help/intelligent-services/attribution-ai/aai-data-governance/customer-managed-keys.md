@@ -3,14 +3,14 @@ keywords: insights;ia de atribuição;insights de ia de atribuição;serviço de
 title: Customer Managed Keys
 description: Saiba como configurar chaves gerenciadas pelo cliente no Attribution AI.
 exl-id: c00bf1a0-cc4c-4a34-83f1-d93829576866
-source-git-commit: 260ba98f920c8006ab3ed7fb2519a8c1720916c8
+source-git-commit: f28558d5939607cabf449cbc03b7e0f5406f6326
 workflow-type: tm+mt
-source-wordcount: '168'
-ht-degree: 24%
+source-wordcount: '171'
+ht-degree: 22%
 
 ---
 
-# Customer Managed Keys
+# Chaves gerenciadas pelo cliente no Attribution AI
 
 O Attribution AI oferece a opção de [Healthcare Shield](https://www.adobe.com/trust/compliance/hipaa-ready.html) e os clientes do Privacy &amp; Security Shield para utilizar as Chaves gerenciadas pelo cliente do Azure (CMK) para serem aplicadas aos seus dados do Attribution AI. O processo de configuração é o mesmo que [Configuração do Adobe Experience Platform CMK](../../../landing/governance-privacy-security/customer-managed-keys/overview.md) e você pode seguir as etapas descritas aqui.
 

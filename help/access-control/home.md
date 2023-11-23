@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Visão geral do controle de acesso
 description: O controle de acesso do Adobe Experience Platform é fornecido por meio da Adobe Admin Console. Essa funcionalidade aproveita perfis de produto no Admin Console, que vinculam usuários com permissões e sandboxes.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: ded4df4062197fb69b54b71ab19fa1684ce17a58
+source-git-commit: 866e84e5f7fe5df7444c83756a893964dcd3ed3d
 workflow-type: tm+mt
-source-wordcount: '1703'
+source-wordcount: '1702'
 ht-degree: 4%
 
 ---
@@ -85,8 +85,8 @@ A tabela a seguir descreve as permissões disponíveis para Experience Platform 
 | [!DNL Alerts] | [!UICONTROL Gerenciar alertas] | Acesso para ler, criar, editar e excluir o histórico de alertas. |
 | [!DNL Computed Attributes] | [!UICONTROL Exibir atributos computados] | Acesso somente leitura para a guia de atributos calculados, inventário e detalhes. |
 | [!DNL Computed Attributes] | [!UICONTROL Gerenciar atributos computados] | Acesso para ler, criar, excluir rascunhos e desativar atributos calculados. |
-| [!DNL Data Hygiene] | [!UICONTROL Exibir higiene de dados] | Acesso somente leitura para higiene de dados. |
-| [!DNL Data Hygiene] | [!UICONTROL Gerenciar a higiene de dados] | Acesso para ler, criar, editar e excluir a higiene de dados. |
+| [!DNL Data Lifecycle] | [!UICONTROL Exibir ciclo de vida dos dados] | Acesso somente leitura para o ciclo de vida dos dados. |
+| [!DNL Data Lifecycle] | [!UICONTROL Gerenciar o ciclo de vida dos dados] | Acesso para ler, criar, editar e excluir o ciclo de vida dos dados. |
 | [!DNL Data Modeling] | [!UICONTROL Gerenciar esquemas] | Acesso para ler, criar, editar e excluir esquemas e recursos relacionados. |
 | [!DNL Data Modeling] | [!UICONTROL Visualizar esquemas] | Acesso somente leitura a esquemas e recursos relacionados. |
 | [!DNL Data Modeling] | [!UICONTROL Gerenciar relacionamentos] | Acesso para ler, criar, editar e excluir relacionamentos de esquema. |
@@ -123,7 +123,7 @@ A tabela a seguir descreve as permissões disponíveis para Experience Platform 
 | [!DNL Data Ingestion] | [!DNL Manage Audience Share Connections] | Acesso para criar, aceitar e recusar handshakes de parceiros para conectar duas organizações e habilitar [!DNL Segment Match] fluxos. |
 | [!DNL Data Ingestion] | [!DNL Manage Audience Share] | Acesso para ler, criar, editar e publicar [!DNL Segment Match] Feeds com parceiros ativos. |
 | [!DNL Data Science Workspace] | [!UICONTROL Gerenciar o Espaço de trabalho de ciência de dados] | Acesso para ler, criar, editar e excluir no [!DNL Data Science Workspace]. |
-| Governança de dados | [!UICONTROL Aplicar rótulos de uso de dados] | Acesso para ler, criar e excluir rótulos de uso. |
+| Governança de dados | [!UICONTROL Gerenciar rótulos de uso] | Acesso para ler, criar e excluir rótulos de uso. |
 | Governança de dados | [!UICONTROL Gerenciar políticas de uso de dados] | Acesso para ler, criar, editar e excluir políticas de uso de dados. |
 | Governança de dados | [!UICONTROL Exibir políticas de uso de dados] | Acesso somente leitura para políticas de uso de dados pertencentes à sua organização. |
 | Governança de dados | [!UICONTROL Exibir log de atividades do usuário] | Acesso somente leitura para visualização registrada [logs de auditoria](../landing/governance-privacy-security/audit-logs/overview.md) das atividades da Platform. |

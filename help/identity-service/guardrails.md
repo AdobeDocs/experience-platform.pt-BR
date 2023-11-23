@@ -3,9 +3,9 @@ keywords: Experience Platform;identidade;serviço de identidade;solução de pro
 title: Medidas de proteção do serviço de identidade
 description: Este documento fornece informações sobre limites de uso e taxa para dados do Serviço de identidade para ajudar você a otimizar o uso do gráfico de identidade.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: 614fc9af8c774a1f79d0ab52527e32b2381487fa
+source-git-commit: 614f48e53e981e479645da9cc48c946f3af0db26
 workflow-type: tm+mt
-source-wordcount: '1233'
+source-wordcount: '1509'
 ht-degree: 1%
 
 ---
@@ -72,23 +72,6 @@ Quando um gráfico completo é atualizado com uma nova identidade, essas duas re
 >
 >Se a identidade designada para ser excluída estiver vinculada a várias outras identidades no gráfico, os links que conectam essa identidade também serão excluídos.
 
->[!BEGINSHADEBOX]
-
-**Uma representação visual da lógica de exclusão**
-
-![Um exemplo da identidade mais antiga sendo excluída para acomodar a identidade mais recente](./images/graph-limits-v3.png)
-
-*Notas do diagrama:*
-
-* `t` = carimbo de data e hora.
-* O valor de um carimbo de data e hora corresponde à recenticidade de uma determinada identidade. Por exemplo, `t1` representa a primeira identidade vinculada (mais antiga) e `t51` representaria a identidade vinculada mais recente.
-
-Neste exemplo, antes que o gráfico à esquerda possa ser atualizado com uma nova identidade, o Serviço de identidade primeiro exclui a identidade existente com o carimbo de data e hora mais antigo. No entanto, como a identidade mais antiga é uma ID de dispositivo, o Serviço de identidade ignora essa identidade até que chegue ao namespace com um tipo que esteja mais alto na lista de prioridade de exclusão, que nesse caso é `ecid-3`. Depois que a identidade mais antiga com um tipo de prioridade de exclusão mais alta é removida, o gráfico é atualizado com um novo link, `ecid-51`.
-
-* No raro caso de haver duas identidades com o mesmo carimbo de data e hora e tipo de identidade, o Serviço de identidade classificará as IDs com base em [XID](./api/list-native-id.md) e realizar a exclusão.
-
->[!ENDSHADEBOX]
-
 ### Implicações na implementação
 
 As seções a seguir descrevem as implicações que a lógica de exclusão tem para o Serviço de identidade, o Perfil do cliente em tempo real e o WebSDK.
@@ -116,7 +99,83 @@ Se você quiser preservar seus eventos autenticados em relação à ID do CRM, �
 * [Configurar mapa de identidade para tags Experience Platform](../tags/extensions/client/web-sdk/data-element-types.md#identity-map).
 * [Dados de identidade no SDK da Web do Experience Platform](../edge/identity/overview.md#using-identitymap)
 
+### Exemplos de cenários
 
+#### Exemplo um: gráfico grande típico
+
+*Notas do diagrama:*
+
+* `t` = carimbo de data e hora.
+* O valor de um carimbo de data e hora corresponde à recenticidade de uma determinada identidade. Por exemplo, `t1` representa a primeira identidade vinculada (mais antiga) e `t51` representaria a identidade vinculada mais recente.
+
+Neste exemplo, antes que o gráfico à esquerda possa ser atualizado com uma nova identidade, o Serviço de identidade primeiro exclui a identidade existente com o carimbo de data e hora mais antigo. No entanto, como a identidade mais antiga é uma ID de dispositivo, o Serviço de identidade ignora essa identidade até que chegue ao namespace com um tipo que esteja mais alto na lista de prioridade de exclusão, que nesse caso é `ecid-3`. Depois que a identidade mais antiga com um tipo de prioridade de exclusão mais alta é removida, o gráfico é atualizado com um novo link, `ecid-51`.
+
+* No raro caso de haver duas identidades com o mesmo carimbo de data e hora e tipo de identidade, o Serviço de identidade classificará as IDs com base em [XID](./api/list-native-id.md) e realizar a exclusão.
+
+![Um exemplo da identidade mais antiga sendo excluída para acomodar a identidade mais recente](./images/graph-limits-v3.png)
+
+#### Exemplo dois: &quot;divisão de gráfico&quot;
+
+>[!BEGINTABS]
+
+>[!TAB Evento de entrada]
+
+*Notas do diagrama:*
+
+* O diagrama a seguir presume que em `timestamp=50`, existem 50 identidades no gráfico de identidade.
+* `(...)` significa as outras identidades que já estão vinculadas no gráfico.
+
+Neste exemplo, ECID:32110 é assimilado e vinculado a um gráfico grande em `timestamp=51`, excedendo assim o limite de 50 identidades.
+
+![](./images/guardrails/before-split.png)
+
+>[!TAB Processo de exclusão]
+
+Como resultado, o Serviço de identidade exclui a identidade mais antiga com base no carimbo de data e hora e no tipo de identidade. Nesse caso, a ECID:35577 é excluída.
+
+![](./images/guardrails/during-split.png)
+
+>[!TAB Saída do gráfico]
+
+Como resultado da exclusão de ECID:35577, as bordas que vincularam CRM ID:60013 e CRM ID:25212 com o agora excluído ECID:35577 também são excluídas. Esse processo de exclusão faz com que o gráfico seja dividido em dois gráficos menores.
+
+![](./images/guardrails/after-split.png)
+
+>[!ENDTABS]
+
+#### Exemplo três: &quot;hub-and-spoke&quot;
+
+>[!BEGINTABS]
+
+>[!TAB Evento de entrada]
+
+*Notas do diagrama:*
+
+* O diagrama a seguir presume que em `timestamp=50`, existem 50 identidades no gráfico de identidade.
+* `(...)` significa as outras identidades que já estão vinculadas no gráfico.
+
+Devido à lógica de exclusão, algumas identidades de &quot;hub&quot; também podem ser excluídas. Essas identidades de hub se referem a nós vinculados a várias identidades individuais que, de outra forma, seriam desvinculadas.
+
+No exemplo abaixo, ECID:21011 é assimilado e vinculado ao gráfico em `timestamp=51`, excedendo assim o limite de 50 identidades.
+
+![](./images/guardrails/hub-and-spoke-start.png)
+
+>[!TAB Processo de exclusão]
+
+Como resultado, o Serviço de identidade exclui a identidade mais antiga, que neste caso é ECID:35577. A supressão da referência ECID:35577 também resulta na supressão do seguinte:
+
+* O link entre a ID de CRM: 60013 e a ECID:35577 excluída agora, resultando em um cenário de divisão de gráfico.
+* IDFA: 32110, IDFA: 02383, e as identidades restantes representadas por `(...)`. Essas identidades são excluídas porque, individualmente, não estão vinculadas a outras identidades e, portanto, não podem ser representadas em um gráfico.
+
+![](./images/guardrails/hub-and-spoke-process.png)
+
+>[!TAB Saída do gráfico]
+
+Finalmente, o processo de exclusão produz dois gráficos menores.
+
+![](./images/guardrails/hub-and-spoke-result.png)
+
+>[!ENDTABS]
 
 ## Próximas etapas
 

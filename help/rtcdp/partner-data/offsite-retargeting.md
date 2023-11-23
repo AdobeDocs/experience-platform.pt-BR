@@ -2,13 +2,13 @@
 title: Redirecionamento externo de visitantes não autenticados
 description: Saiba como redirecionar usuários não autenticados usando IDs de prospecto para criar um atributo computado que pode ser usado para criar um público-alvo de usuários não autenticados.
 feature: Use Cases, Customer Acquisition
-source-git-commit: 3353866aa2d52c784663f355183e940e727b2af7
+exl-id: cffa3873-d713-445a-a3e1-1edf1aa8eebb
+source-git-commit: c2e308b5e743f07062be9a34e23c4bc700b27463
 workflow-type: tm+mt
 source-wordcount: '1449'
 ht-degree: 2%
 
 ---
-
 
 # Redirecionamento externo de visitantes não autenticados
 

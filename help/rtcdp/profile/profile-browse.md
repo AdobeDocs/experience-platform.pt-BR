@@ -4,9 +4,9 @@ title: Procurar perfis no Real-time Customer Data Platform
 description: O Adobe Real-time Customer Data Platform permite navegar pelos dados do Perfil do cliente em tempo real usando a interface do usuário do Adobe Experience Platform.
 feature: Get Started, Profiles
 exl-id: 8481e286-2ff0-484f-85d2-a8db9b08d8d3
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: ea785ffa1dfa0f7c684fe536796a4b7409882159
 workflow-type: tm+mt
-source-wordcount: '535'
+source-wordcount: '557'
 ht-degree: 0%
 
 ---
@@ -33,6 +33,8 @@ Para explorar esses aprimoramentos, comece seguindo as etapas descritas na seç�
 Os detalhes do perfil incluem acesso a [!UICONTROL Contas], [!UICONTROL Oportunidades], e [!UICONTROL Registros de origem] guias, além das informações padrão fornecidas no perfil do cliente, que também foram aprimoradas com eventos e atributos B2B.
 
 ![](images/b2b-profile-detail.png)
+
+Para saber mais sobre os detalhes do perfil fornecidos na interface do usuário da Platform, consulte o [seção de detalhes da documentação do painel Perfis](../../dashboards/guides/profiles.md#browse-profiles).
 
 ### Guia Contas
 

@@ -5,9 +5,9 @@ product: experience platform
 type: Documentation
 description: Saiba mais sobre o desempenho e as medidas de proteção aplicadas pelo sistema para dados de perfil e segmentação para garantir o uso ideal da funcionalidade do Real-Time CDP.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 554763cc444da0d1459b22f3f37d22b528b290e1
+source-git-commit: 1bc770ad078f2db3199f799403d96a676b73f4de
 workflow-type: tm+mt
-source-wordcount: '2202'
+source-wordcount: '2228'
 ht-degree: 2%
 
 ---
@@ -119,6 +119,7 @@ As medidas de proteção descritas nesta seção referem-se ao número e à natu
 | Públicos-alvo de transmissão por sandbox | 500 | Proteção de desempenho | Uma organização pode ter mais de 500 públicos-alvo de transmissão no total, desde que haja menos de 500 públicos-alvo de transmissão em cada sandbox individual. Tentar criar públicos de transmissão adicionais pode afetar o desempenho do sistema. Leia mais sobre [públicos-alvo de transmissão](/help/segmentation/ui/streaming-segmentation.md). |
 | Públicos em lote por sandbox | 4000 | Proteção de desempenho | Uma organização pode ter mais de 4000 públicos-alvo em lote no total, desde que haja menos de 4000 públicos-alvo em lote em cada sandbox individual. Tentar criar públicos-alvo em lote adicionais pode afetar o desempenho do sistema. |
 | Públicos-alvo da conta por sandbox | 50 | Proteção imposta pelo sistema | Não é possível criar mais de 50 públicos-alvo de conta em uma sandbox. Depois de atingir 50 públicos-alvo em uma sandbox, a variável **[!UICONTROL Criar público]** o controle está desativado ao tentar criar um novo público-alvo para a conta. Leia mais sobre [públicos-alvo da conta](/help/segmentation/ui/account-audiences.md). |
+| Composições publicadas por sandbox | 10 | Proteção de desempenho | Você não pode ter mais de 10 composições publicadas em uma sandbox. Leia mais sobre [composição de público-alvo no guia da interface](/help/segmentation/ui/audience-composition.md). |
 
 {style="table-layout:auto"}
 

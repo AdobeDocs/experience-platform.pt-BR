@@ -4,10 +4,10 @@ user-guide-title: Ajuda do Serviço de consulta da Adobe Experience Platform
 breadcrumb-title: Guia do Serviço de consulta
 user-guide-description: Use o SQL padrão para consultar dados no data lake na Experience Platform.
 feature: Queries
-source-git-commit: 037ea8d11bb94e3b4f71ea301a535677b3cccdbd
+source-git-commit: 1e9d6b0c43461902c5b966aa1d0576103e872e0c
 workflow-type: tm+mt
 source-wordcount: '310'
-ht-degree: 20%
+ht-degree: 21%
 
 ---
 
@@ -52,6 +52,15 @@ ht-degree: 20%
    - [Retornar e usar variáveis de merchandising dos dados de análise](use-cases/merchandising-variables.md)
    - [Exibir o relatório acumulado de um visitante](use-cases/roll-up-report-of-a-visitor.md)
    - [Insights de análise da Web e móvel](use-cases/analytics-insights.md)
+- Principais conceitos {#key-concepts}
+   - [Trabalho com estruturas de dados aninhadas](key-concepts/nested-data-structures.md)
+   - [Nivelar estruturas de dados aninhadas](key-concepts/flatten-nested-data.md)
+   - [Bloqueio anônimo](key-concepts/anonymous-block.md)
+   - [Modelo embutido](key-concepts/inline-templates.md)
+   - [Carregamento incremental](key-concepts/incremental-load.md)
+   - [Desduplicação de dados](key-concepts/deduplication.md)
+   - [Amostras de conjunto de dados](key-concepts/dataset-samples.md)
+   - [Cálculo das estatísticas do conjunto de dados](key-concepts/dataset-statistics.md)
 - Conectar clientes ao Serviço de consulta {#clients}
    - [Visão geral de conexões de clientes](clients/overview.md)
    - [Modos SSL](./clients/ssl-modes.md)
@@ -91,15 +100,6 @@ ht-degree: 20%
 - Práticas recomendadas {#best-practices}
    - [Execução da consulta](best-practices/writing-queries.md)
    - [Organização do ativo de dados](./best-practices/organize-data-assets.md)
-- Conceitos essenciais {#essential-concepts}
-   - [Trabalho com estruturas de dados aninhadas](essential-concepts/nested-data-structures.md)
-   - [Nivelar estruturas de dados aninhadas](essential-concepts/flatten-nested-data.md)
-   - [Bloqueio anônimo](essential-concepts/anonymous-block.md)
-   - [Modelo embutido](essential-concepts/inline-templates.md)
-   - [Carregamento incremental](essential-concepts/incremental-load.md)
-   - [Desduplicação de dados](essential-concepts/deduplication.md)
-   - [Amostras de conjunto de dados](essential-concepts/dataset-samples.md)
-   - [Cálculo das estatísticas do conjunto de dados](essential-concepts/dataset-statistics.md)
 - Referência SQL {#sql}
    - [Visão geral de SQL](sql/overview.md)
    - [Sintaxe SQL](sql/syntax.md)

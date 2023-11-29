@@ -2,7 +2,7 @@
 title: Notas de versão da Adobe Experience Platform de setembro de 2022
 description: As notas de versão de setembro de 2022 para o Adobe Experience Platform.
 exl-id: a7a4dcf8-2cf3-4e39-879d-bdfcbacb737a
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 1e9d6b0c43461902c5b966aa1d0576103e872e0c
 workflow-type: tm+mt
 source-wordcount: '2938'
 ht-degree: 19%
@@ -215,7 +215,7 @@ O Query Service permite usar SQL padrão para consultar dados no [!DNL Data Lake
 | Recurso | Descrição |
 | --- | --- |
 | API de assinatura em alerta | O Adobe Experience Platform Query Service permite assinar alertas para consultas ad hoc e programadas. Os alertas podem ser recebidos por email, na interface do usuário da Platform, ou em ambos. Atualmente, alertas de consulta só podem ser assinados usando o [API do serviço de consulta](https://developer.adobe.com/experience-platform-apis/references/query-service/). |
-| Amostras de conjunto de dados | As amostras de conjunto de dados do Serviço de consulta permitem realizar consultas exploratórias sobre grandes volumes de dados com tempo de processamento bastante reduzido, à custa da precisão da consulta. Consulte a [guia de amostras do conjunto de dados](../../query-service/essential-concepts/dataset-samples.md) para saber mais. |
+| Amostras de conjunto de dados | As amostras de conjunto de dados do Serviço de consulta permitem realizar consultas exploratórias sobre grandes volumes de dados com tempo de processamento bastante reduzido, à custa da precisão da consulta. Consulte a [guia de amostras do conjunto de dados](../../query-service/key-concepts/dataset-samples.md) para saber mais. |
 
 Para obter mais informações sobre [!DNL Query Service], consulte o [[!DNL Query Service] visão geral](../../query-service/home.md).
 

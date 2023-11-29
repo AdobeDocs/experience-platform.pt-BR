@@ -2,7 +2,7 @@
 title: Notas da versão de janeiro de 2022 da Adobe Experience Platform
 description: As notas da versão de janeiro de 2022 da Adobe Experience Platform.
 exl-id: 734ce1b3-e270-4c37-958c-88bcc39fbf20
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 1e9d6b0c43461902c5b966aa1d0576103e872e0c
 workflow-type: tm+mt
 source-wordcount: '1340'
 ht-degree: 21%
@@ -91,7 +91,7 @@ Para obter informações mais gerais sobre destinos, consulte a [visão geral de
 
 | Recurso | Descrição |
 | --- | --- |
-| Bloqueio anônimo | A construção anônima de bloco SQL permite dividir trabalhos de preparação de dados em larga escala no Serviço de Consulta em tarefas menores e, em seguida, reutilizá-los e executá-los em sequência para carregamento de dados incrementais. Para obter mais informações, consulte [exemplo de consultas para a documentação de blocos anônimos](../../query-service/essential-concepts/anonymous-block.md). |
+| Bloqueio anônimo | A construção anônima de bloco SQL permite dividir trabalhos de preparação de dados em larga escala no Serviço de Consulta em tarefas menores e, em seguida, reutilizá-los e executá-los em sequência para carregamento de dados incrementais. Para obter mais informações, consulte [exemplo de consultas para a documentação de blocos anônimos](../../query-service/key-concepts/anonymous-block.md). |
 | Organização do conjunto de dados | Fornece uma estrutura de dados coerente e lógica para organizar seus ativos de dados para uso com o Serviço de consulta à medida que a quantidade de ativos de dados na sandbox cresce. Para obter mais informações, consulte [organizar a documentação dos ativos de dados](../../query-service/best-practices/organize-data-assets.md). |
 
 Para obter mais informações sobre [!DNL Query Service], consulte o [[!DNL Query Service] visão geral](../../query-service/home.md).

@@ -2,7 +2,7 @@
 title: Rastrear sinais de dados para gerar o valor vitalício do cliente
 description: Este guia fornece uma demonstração completa sobre como usar o Data Distiller e painéis definidos pelo usuário com o Real-time Customer Data Platform para medir e visualizar o valor vitalício do cliente.
 exl-id: c74b5bff-feb2-4e21-9ee4-1e0973192570
-source-git-commit: b3bd7a5ba1847518beafd12240c0d3a433a891d0
+source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
 workflow-type: tm+mt
 source-wordcount: '1269'
 ht-degree: 0%
@@ -91,7 +91,7 @@ Verifique a [visão geral de destinos de marketing por email](../../destinations
 
 ## Veja os dados de análise retornados de sua campanha {#post-campaign-data-analysis}
 
-Os dados de fontes agora podem ser [processado incrementalmente](../essential-concepts/incremental-load.md) como parte de uma atualização agendada para seu modelo de dados no armazenamento de dados acelerado. Qualquer evento de resposta de clientes pode ser assimilado na Adobe Experience Platform à medida que ocorre ou em lotes. Seu modelo de dados pode ser atualizado uma ou várias vezes por dia, dependendo das configurações ou dos conectores de origem. Consulte a [visão geral da API de assimilação em lote](../../ingestion/batch-ingestion/api-overview.md) ou o [visão geral da assimilação por transmissão](../../ingestion/streaming-ingestion/overview.md) para obter mais informações.
+Os dados de fontes agora podem ser [processado incrementalmente](../key-concepts/incremental-load.md) como parte de uma atualização agendada para seu modelo de dados no armazenamento de dados acelerado. Qualquer evento de resposta de clientes pode ser assimilado na Adobe Experience Platform à medida que ocorre ou em lotes. Seu modelo de dados pode ser atualizado uma ou várias vezes por dia, dependendo das configurações ou dos conectores de origem. Consulte a [visão geral da API de assimilação em lote](../../ingestion/batch-ingestion/api-overview.md) ou o [visão geral da assimilação por transmissão](../../ingestion/streaming-ingestion/overview.md) para obter mais informações.
 
 Depois que seu modelo de dados é atualizado, seus widgets de painel personalizados fornecem sinais significativos que permitem medir e visualizar o valor vitalício do cliente.
 

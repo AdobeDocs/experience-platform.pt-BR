@@ -2,7 +2,7 @@
 title: Monitorar consultas programadas
 description: Saiba como monitorar consultas por meio da interface do usuário do Serviço de consulta.
 exl-id: 4640afdd-b012-4768-8586-32f1b8232879
-source-git-commit: fa871529a4136263399bad3200ee3888049d06a5
+source-git-commit: 37aeff5131b9f67dbc99f6199918403e699478c8
 workflow-type: tm+mt
 source-wordcount: '1818'
 ht-degree: 1%
@@ -161,7 +161,7 @@ As consultas que usam blocos anônimos para compreender suas instruções SQL s�
 >
 >Os detalhes de execução de um bloco anônimo que usa o comando DROP **não** ser relatada como uma subconsulta separada. Detalhes de execução separados estão disponíveis para consultas CTAS, consultas ITAS e instruções COPY usadas como subconsultas de bloco anônimas. Os detalhes de execução do comando DROP não são suportados no momento.
 
-Blocos anônimos são indicados pelo uso de um `$$` prefixo antes da consulta. Para saber mais sobre blocos anônimos no serviço de query, consulte [documento de bloqueio anônimo](../essential-concepts/anonymous-block.md).
+Blocos anônimos são indicados pelo uso de um `$$` prefixo antes da consulta. Para saber mais sobre blocos anônimos no serviço de query, consulte [documento de bloqueio anônimo](../key-concepts/anonymous-block.md).
 
 As subconsultas de blocos anônimos têm guias à esquerda do status de execução. Selecione uma guia para exibir os detalhes da execução.
 

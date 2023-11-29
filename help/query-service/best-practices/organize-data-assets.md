@@ -2,7 +2,7 @@
 title: Práticas recomendadas para a organização de ativos de dados no serviço de consulta
 description: Este documento descreve um meio lógico de organizar os dados para facilitar o uso com o Serviço de consulta.
 exl-id: 12d6af99-035a-4f80-b7c0-c6413aa50697
-source-git-commit: 6e2be299e3c1c0dfa2832ead22cdeaea0ca83591
+source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
 workflow-type: tm+mt
 source-wordcount: '786'
 ht-degree: 0%
@@ -170,4 +170,4 @@ DROP SCHEMA databaseA.schema2;
 
 ## Próximas etapas
 
-Ao ler este documento, agora você tem uma melhor compreensão das práticas recomendadas relacionadas à organização e à estrutura de seus ativos de dados para uso com o Serviço de consulta da Adobe Experience Platform. É recomendável continuar aprendendo sobre as práticas recomendadas do Serviço de consulta lendo sobre [documentação da desduplicação de dados](../essential-concepts/deduplication.md).
+Ao ler este documento, agora você tem uma melhor compreensão das práticas recomendadas relacionadas à organização e à estrutura de seus ativos de dados para uso com o Serviço de consulta da Adobe Experience Platform. É recomendável continuar aprendendo sobre as práticas recomendadas do Serviço de consulta lendo sobre [documentação da desduplicação de dados](../key-concepts/deduplication.md).

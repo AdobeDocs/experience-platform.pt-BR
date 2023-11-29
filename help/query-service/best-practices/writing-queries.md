@@ -5,7 +5,7 @@ title: Diretrizes gerais para execução de consulta no serviço de consulta
 type: Tutorial
 description: Este documento descreve detalhes importantes a serem conhecidos ao gravar consultas no Serviço de consulta da Adobe Experience Platform.
 exl-id: a7076c31-8f7c-455e-9083-cbbb029c93bb
-source-git-commit: adf8da46d09c60b86df16493043efeacbdd24fe2
+source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
 workflow-type: tm+mt
 source-wordcount: '1067'
 ht-degree: 3%
@@ -311,7 +311,7 @@ LIMIT 50;
 
 ## Desduplicação
 
-O Serviço de Consulta oferece suporte à desduplicação de dados ou à remoção de linhas duplicadas dos dados. Para obter mais informações sobre desduplicação, leia a [Guia de desduplicação do Serviço de consulta](../essential-concepts/deduplication.md).
+O Serviço de Consulta oferece suporte à desduplicação de dados ou à remoção de linhas duplicadas dos dados. Para obter mais informações sobre desduplicação, leia a [Guia de desduplicação do Serviço de consulta](../key-concepts/deduplication.md).
 
 ## Cálculos de fuso horário no Serviço de consulta
 

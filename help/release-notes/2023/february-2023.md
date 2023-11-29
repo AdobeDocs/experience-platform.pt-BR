@@ -2,8 +2,8 @@
 title: Notas da versão de fevereiro de 2023 da Adobe Experience Platform
 description: Notas da versão de fevereiro de 2023 da Adobe Experience Platform.
 exl-id: 1c30a646-d9f8-4749-ac25-40bc48365a40
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
-workflow-type: ht
+source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
+workflow-type: tm+mt
 source-wordcount: '1293'
 ht-degree: 100%
 
@@ -96,7 +96,7 @@ Para obter mais informações sobre o XDM na Platform, leia a [Visão geral do s
 
 ## Query Service {#query-service}
 
-O Query Service permite usar SQL padrão para consultar dados na Adobe Experience Platform[!DNL Data Lake]. É possível unir qualquer conjunto de dados do data lake e capturar os resultados de consultas como um novo conjunto de dados para usar em relatórios, no espaço de trabalho de ciência de dados ou para assimilação no perfil do cliente em tempo real.
+O Query Service permite usar SQL padrão para consultar dados no [!DNL Data Lake] da Adobe Experience Platform. É possível unir qualquer conjunto de dados do data lake e capturar os resultados de consultas como um novo conjunto de dados para usar em relatórios, no espaço de trabalho de ciência de dados ou para assimilação no perfil do cliente em tempo real.
 
 **Recursos atualizados**
 
@@ -105,7 +105,7 @@ O Query Service permite usar SQL padrão para consultar dados na Adobe Experienc
 | Habilitar conjuntos de dados para perfil com SQL | [Use LABELs em consultas CTAS para tornar um conjunto de dados &quot;habilitado para perfil&quot;](../../query-service/sql/syntax.md#create-table-as-select) ou use ALTER para atualizar conjuntos de dados já existentes e habilitá-los para perfil. É possível usar essa construção de SQL estendido para fornecer suporte ininterrupto a atributos derivados para seus casos de uso de negócios do Perfil do cliente em tempo real. Consulte o [documento Fluxo SQL ininterrupto para atributos derivados](../../query-service/data-distiller/derived-attributes/seamless-sql-flow.md) para obter mais detalhes. |
 | Monitorar consultas programadas | Use a [guia Consultas programadas](../../query-service/ui/monitor-queries.md) para encontrar informações importantes sobre suas consultas e assinar alertas. Monitore consultas para obter detalhes de agendamento, status e mensagens/códigos de erro caso haja falha. |
 | Alternar recurso de preenchimento automático | Elimine determinados comandos de metadados e melhore os tempos de processamento ao [ativar o recurso de preenchimento automático do Editor de consultas](../../query-service/ui/user-guide.md#auto-complete). Esse recurso sugere automaticamente possíveis palavras-chave SQL e detalhes da tabela para a consulta à medida que ela é escrita. |
-| Amostras de conjunto de dados | Especifique uma taxa de amostragem em sua consulta e [use amostras de conjunto de dados para criar uma amostra aleatória uniforme](../../query-service/essential-concepts/dataset-samples.md), ou crie amostras condicionais com base em critérios específicos. |
+| Amostras de conjunto de dados | Especifique uma taxa de amostragem em sua consulta e [use amostras de conjunto de dados para criar uma amostra aleatória uniforme](../../query-service/key-concepts/dataset-samples.md), ou crie amostras condicionais com base em critérios específicos. |
 
 {style="table-layout:auto"}
 
@@ -126,7 +126,7 @@ Criada com base na Real-time Customer Data Platform (Real-Time CDP), a Real-Time
 
 Para saber mais sobre a Real-Time CDP B2B Edition, leia a [Visão geral da Real-Time CDP B2B Edition](../../rtcdp/overview.md).
 
-## Fontes {#sources}
+## Origens {#sources}
 
 A Adobe Experience Platform pode assimilar dados de fontes externas e permite estruturar, rotular e aprimorar esses dados usando os serviços da Platform. É possível assimilar dados de várias origens, como aplicativos da Adobe, do armazenamento na nuvem, um software de terceiros e do seu sistema de CRM.
 

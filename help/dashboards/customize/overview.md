@@ -3,9 +3,9 @@ keywords: Experience Platform;interface do usuário;painéis;painel;perfis;segme
 title: Visão geral da personalização do painel
 description: Saiba mais sobre as maneiras de personalizar os dados exibidos nos painéis do Adobe Experience Platform.
 exl-id: efabdb61-4148-4b0e-b7a1-6e788b5e43a8
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 32dd90018c990e7013d826b29608a61022ba808b
 workflow-type: tm+mt
-source-wordcount: '480'
+source-wordcount: '468'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ Os perfis, segmentos e painéis de destinos disponíveis no Adobe Experience Pla
 
 >[!NOTE]
 >
->Os widgets mostrados no [!UICONTROL Uso da licença] o painel não pode ser personalizado. Para saber mais sobre esse painel exclusivo, leia o [documentação do painel de uso da licença](../guides/license-usage.md).
+>Todas as atualizações feitas nos painéis são por organização e por sandbox.
 
 ## Modificar painel
 

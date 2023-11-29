@@ -2,10 +2,10 @@
 title: Mapear um arquivo CSV para um esquema XDM usando o Recommendations gerado por IA
 description: Este tutorial aborda como mapear um arquivo CSV para um esquema XDM usando recomendações geradas por IA.
 exl-id: 1daedf0b-5a25-4ca5-ae5d-e9ee1eae9e4d
-source-git-commit: df6f76be6beba962b1795bd33dc753ef04267734
+source-git-commit: 6632086641004c2b788a28cbc47ac6d8bd4eace3
 workflow-type: tm+mt
-source-wordcount: '1014'
-ht-degree: 1%
+source-wordcount: '1102'
+ht-degree: 2%
 
 ---
 
@@ -21,7 +21,7 @@ Para assimilar dados CSV em [!DNL Adobe Experience Platform], os dados devem ser
 
 Este tutorial requer um entendimento prático dos seguintes componentes do [!DNL Platform]:
 
-* [[!DNL Experience Data Model (XDM System)]](../../../xdm/home.md): o quadro normalizado pelo qual [!DNL Platform] organiza os dados de experiência do cliente.
+* [[!DNL Experience Data Model (XDM System)]](../../../xdm/home.md): a estrutura padronizada pela qual a [!DNL Platform] organiza os dados de experiência do cliente.
    * No mínimo, você deve entender o conceito de [comportamentos no XDM](../../../xdm/home.md#data-behaviors), para que você possa decidir se deseja mapear seus dados para um [!UICONTROL Perfil] classe (comportamento de registro) ou [!UICONTROL ExperienceEvent] classe (comportamento de série temporal).
 * [Assimilação em lote](../../batch-ingestion/overview.md): o método pelo qual [!DNL Platform] assimila dados de arquivos de dados fornecidos pelo usuário.
 * [Preparação de dados do Adobe Experience Platform](../../batch-ingestion/overview.md): um conjunto de recursos que permitem mapear e transformar dados assimilados para estarem em conformidade com esquemas XDM. A documentação sobre [Funções de Preparo de dados](../../../data-prep/functions.md) é especificamente relevante para o mapeamento de esquema.
@@ -71,6 +71,10 @@ Após o upload do arquivo, é exibida uma seção de dados de amostra que mostra
 Os modelos ML são executados para gerar um novo esquema com base na configuração do fluxo de dados e no arquivo CSV carregado. Quando o processo estiver concluído, a variável [!UICONTROL Mapeamento] A etapa é preenchida para mostrar os mapeamentos de cada campo individual ao lado da exibição totalmente navegável da estrutura do esquema gerada.
 
 ![A variável [!UICONTROL Mapeamento] etapa na interface do usuário, mostrando todos os campos CSV mapeados e a estrutura de esquema resultante.](../../images/tutorials/map-csv-recommendations/schema-generated.png)
+
+>[!NOTE]
+>
+>Você pode filtrar todos os campos no esquema com base em vários critérios durante o fluxo de trabalho de mapeamento de campos da origem para o destino. O comportamento padrão é exibir todos os campos mapeados. Para alterar os campos exibidos, selecione o ícone de filtro ao lado do campo de entrada de pesquisa e escolha entre as opções suspensas.<br> ![A etapa de mapeamento do fluxo de trabalho de criação do esquema CSV para XDM com o ícone de filtro e o menu suspenso destacados.](../../images/tutorials/map-csv-recommendations/source-field-to-target-mapping-filter.png "A etapa de mapeamento do fluxo de trabalho de criação do esquema CSV para XDM com o ícone de filtro e o menu suspenso destacados."){width="100" zoomable="yes"}
 
 Aqui, você pode, opcionalmente, [editar os mapeamentos de campo](#edit-mappings) ou [alterar os grupos de campos aos quais estão associados](#edit-schema) de acordo com suas necessidades. Quando satisfeito, selecione **[!UICONTROL Concluir]** para concluir o mapeamento e iniciar o fluxo de dados configurado anteriormente. Os dados do CSV são assimilados no sistema e preenchem um conjunto de dados com base na estrutura de esquema gerada, pronta para ser consumida pelos serviços downstream da plataforma.
 

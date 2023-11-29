@@ -3,9 +3,9 @@ keywords: Experience Platform;interface do usuário;painéis;painel;perfis;segme
 title: Visão geral da biblioteca de widgets do painel
 description: Este guia fornece instruções passo a passo para acessar a biblioteca de widgets do Adobe Experience Platform.
 exl-id: 1d33e3ea-a8a8-4a09-8bd9-2e04ecedebdc
-source-git-commit: 09f212741321f17372d52fee507a96d2d2834e85
+source-git-commit: 32dd90018c990e7013d826b29608a61022ba808b
 workflow-type: tm+mt
-source-wordcount: '516'
+source-wordcount: '504'
 ht-degree: 0%
 
 ---
@@ -16,11 +16,11 @@ Na interface do usuário do Adobe Experience Platform, você pode visualizar e i
 
 Este guia fornece instruções passo a passo para acessar o [!UICONTROL Biblioteca de widgets] no Experience Platform, onde você pode selecionar widgets padrão e criar widgets personalizados para personalizar as informações exibidas em seus painéis.
 
-Para obter informações sobre como modificar a localização e o tamanho dos widgets já exibidos em seus painéis, consulte o [modificar guia de painéis](modify.md).
-
 >[!NOTE]
 >
->Os widgets mostrados no [!UICONTROL Uso da licença] o painel não pode ser personalizado. Para saber mais sobre esse painel exclusivo, leia o [documentação do painel de uso da licença](../guides/license-usage.md).
+>Todas as atualizações feitas nos painéis são por organização e por sandbox.
+
+Para obter informações sobre como modificar a localização e o tamanho dos widgets já exibidos em seus painéis, consulte o [modificar guia de painéis](modify.md).
 
 ## Acessar a biblioteca de widgets {#access}
 

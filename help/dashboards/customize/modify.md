@@ -3,9 +3,9 @@ keywords: Experience Platform;interface do usuário;painéis;painel;perfis;segme
 title: Modificar painéis da plataforma na interface
 description: Este guia fornece instruções passo a passo para personalizar como os dados do Adobe Experience Platform de sua organização são exibidos nos painéis.
 exl-id: 75e4aea7-b521-434d-9cd5-32a00d00550d
-source-git-commit: 338aa6849f58b3c0fd6c871f1e199ebf6a73d115
+source-git-commit: 32dd90018c990e7013d826b29608a61022ba808b
 workflow-type: tm+mt
-source-wordcount: '510'
+source-wordcount: '496'
 ht-degree: 0%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 0%
 
 Na interface do usuário (UI) da Adobe Experience Platform, você pode visualizar e interagir com os dados de sua organização usando vários painéis. Os widgets e métricas padrão mostrados nos painéis podem ser ajustados em nível de usuário individual para exibir dados preferidos, e widgets podem ser criados e compartilhados entre usuários na mesma organização.
 
-Este guia fornece instruções passo a passo para personalizar como os dados do painel são exibidos na [!UICONTROL Perfis], [!UICONTROL Segmentos], e [!UICONTROL Destinos] painéis na interface do Platform.
-
 >[!NOTE]
 >
->Os widgets exibidos no painel de uso de licença não podem ser personalizados. Consulte a [documentação do painel de uso da licença](../guides/license-usage.md) para saber mais sobre esse painel exclusivo.
+>Todas as atualizações feitas nos painéis são por organização e por sandbox.
+
+Este guia fornece instruções passo a passo para personalizar como os dados do painel são exibidos na [!UICONTROL Perfis], [!UICONTROL Segmentos], e [!UICONTROL Destinos] painéis na interface do Platform.
 
 ## Introdução
 

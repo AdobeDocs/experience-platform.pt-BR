@@ -3,9 +3,9 @@ keywords: Experience Platform;interface do usuário;painéis;painel;perfis;segme
 title: Widgets de painel padrão
 description: Este guia fornece instruções passo a passo para adicionar widgets padrão aos seus painéis do Adobe Experience Platform.
 exl-id: 37353e73-b207-444a-b2b5-a20a3628086b
-source-git-commit: d9ce17bbe17df175db30d283387d8fa569b97dee
+source-git-commit: 32dd90018c990e7013d826b29608a61022ba808b
 workflow-type: tm+mt
-source-wordcount: '508'
+source-wordcount: '436'
 ht-degree: 0%
 
 ---
@@ -14,18 +14,13 @@ ht-degree: 0%
 
 No Adobe Experience Platform, você pode visualizar e interagir com os dados de sua organização usando vários painéis. Você também pode atualizar determinados painéis adicionando novos widgets à visualização de painel. O Adobe fornece uma seleção de widgets padrão que você pode adicionar aos seus painéis.
 
-A variável [!UICONTROL Perfis], [!UICONTROL Públicos-alvo], e [!UICONTROL Destinos] cada painel tem um carregamento de widget padrão quando uma nova instância da Platform é criada. Este guia fornece instruções passo a passo para adicionar widgets padrão para personalizar o [!UICONTROL Perfis], [!UICONTROL Públicos-alvo], e [!UICONTROL Destinos] painéis na interface do Platform.
+A variável [[!UICONTROL Perfis]](../guides/profiles.md#default-widgets), [[!UICONTROL Públicos-alvo]](../guides/audiences.md#default-widgets), e [[!UICONTROL Destinos]](../guides/destinations.md#default-widgets) cada painel tem um carregamento de widget padrão quando uma nova instância da Platform é criada. Este guia fornece instruções passo a passo para adicionar widgets padrão para personalizar o [!UICONTROL Perfis], [!UICONTROL Públicos-alvo], e [!UICONTROL Destinos] painéis na interface do Platform.
 
 >[!NOTE]
 >
->Em 26 de julho de 2023, [!UICONTROL Perfis], [!UICONTROL Públicos-alvo], e [!UICONTROL Destinos] Os painéis de visão geral foram redefinidos para uma nova carga de widget padrão para todos os usuários que não modificaram suas visualizações nos seis meses anteriores.
->Consulte a documentação no [Perfis](../guides/profiles.md#default-widgets), [Públicos-alvo](../guides/audiences.md#default-widgets), e [Destinos](../guides/destinations.md#default-widgets) seções de widget padrão para obter detalhes sobre quais widgets são incluídos como parte dos carregamentos de widget padrão.
+>Todas as atualizações feitas nos painéis são por organização e por sandbox.
 
 Para saber mais sobre widgets personalizados, consulte o manual para [criação de widgets personalizados](custom-widgets.md).
-
->[!NOTE]
->
->Os widgets mostrados no [!UICONTROL Uso da licença] o painel não pode ser personalizado. Para saber mais sobre esse painel exclusivo, leia o [documentação do painel de uso da licença](../guides/license-usage.md).
 
 ## Biblioteca de widgets {#widget-library}
 

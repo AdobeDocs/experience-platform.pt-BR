@@ -3,9 +3,9 @@ keywords: Experience Platform;interface do usuário;UI;painéis;painel;perfis;se
 title: Criação de widgets personalizados para painéis
 description: Este guia fornece instruções passo a passo para criar widgets personalizados para uso em painéis do Adobe Experience Platform.
 exl-id: 0168ab1e-0b7d-4faf-852e-7208a2b09a04
-source-git-commit: 386d805eadf335b95b6eac92c7663fcee17b4b2d
+source-git-commit: 32dd90018c990e7013d826b29608a61022ba808b
 workflow-type: tm+mt
-source-wordcount: '987'
+source-wordcount: '975'
 ht-degree: 0%
 
 ---
@@ -16,11 +16,11 @@ No Adobe Experience Platform, você pode visualizar e interagir com os dados de 
 
 Este guia fornece instruções passo a passo para criar e adicionar widgets personalizados à [!UICONTROL Perfis], [!UICONTROL Segmentos], e [!UICONTROL Destinos] painéis na interface do Platform.
 
-Para saber mais sobre widgets padrão, consulte o manual para [adicionar widgets padrão aos seus painéis](standard-widgets.md).
-
 >[!NOTE]
 >
->Os widgets mostrados no [!UICONTROL Uso da licença] o painel não pode ser personalizado. Para saber mais sobre esse painel exclusivo, leia o [documentação do painel de uso da licença](../guides/license-usage.md).
+>Todas as atualizações feitas nos painéis são por organização e por sandbox.
+
+Para saber mais sobre widgets padrão, consulte o manual para [adicionar widgets padrão aos seus painéis](standard-widgets.md).
 
 ## Biblioteca de widgets {#widget-library}
 

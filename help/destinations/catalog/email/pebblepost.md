@@ -3,9 +3,9 @@ keywords: PebblePost;Pebblepost;Correspondência direta programática PebblePost
 title: Extensão PebblePost
 description: A extensão PebblePost é um destino de email no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
 exl-id: 2d0308db-9d75-4cd1-97de-70ce3837369d
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: baa0ea072c80e141974bb595dfff149aa5de6270
 workflow-type: tm+mt
-source-wordcount: '470'
+source-wordcount: '453'
 ht-degree: 4%
 
 ---
@@ -14,9 +14,9 @@ ht-degree: 4%
 
 ## Visão geral {#overview}
 
-[!DNL PebblePost's Programmatic Direct Mail®] Essa solução ajuda os profissionais de marketing digital a conectar interesses e intenções on-line a mídias tangíveis off-line que convertem dados. Os profissionais de marketing podem aproveitar os públicos-alvo de dados personalizados criados no Adobe para agora direcionar os consumidores com uma impressão de mídia doméstica relevante e de maior duração. Analise o desempenho em tempo real com base na atividade do caminho de resposta e nas conversões no site.
+[!DNL PebblePost's Programmatic Direct Mail] Essa solução ajuda os profissionais de marketing digital a conectar interesses e intenções on-line a mídias tangíveis off-line que convertem dados. Os profissionais de marketing podem aproveitar os públicos-alvo de dados personalizados criados no Adobe para agora direcionar os consumidores com uma impressão de mídia doméstica relevante e de maior duração. Analise o desempenho em tempo real com base na atividade do caminho de resposta e nas conversões no site.
 
-[!DNL PebblePost] é uma extensão de email no Adobe Experience Platform. Para obter mais informações sobre PebblePost, leia o [publicação do blog de integração](https://blog.adobe.com/en/publish/2017/11/16/pebblepost-builds-integration-launch-adobe.html#gs.7lejiq).
+[!DNL PebblePost] é uma extensão de email no Adobe Experience Platform.
 
 Esse destino é uma extensão de tag. Para obter mais informações sobre como as extensões funcionam na Platform, consulte a [visão geral das extensões de tag](../launch-extensions/overview.md).
 

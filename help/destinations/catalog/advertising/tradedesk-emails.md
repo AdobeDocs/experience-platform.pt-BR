@@ -3,9 +3,9 @@ title: (Beta) A conexão Trade Desk - CRM
 description: Ative perfis para sua conta da Trade Desk para direcionamento e supressão de público com base nos dados do CRM.
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 3680341c5ca4012ae33df32aa901467d1048b702
 workflow-type: tm+mt
-source-wordcount: '1148'
+source-wordcount: '1130'
 ht-degree: 5%
 
 ---
@@ -49,7 +49,7 @@ O Adobe Experience Platform oferece suporte tanto para texto simples quanto para
 | Identidade de destino | Descrição | Considerações |
 |---|---|---|
 | Email | Endereços de email (texto não criptografado) | Entrada `email` como a identidade de destino quando sua identidade de origem for um atributo ou namespace de email. |
-| Email_LC_SHA256 | Os endereços de email precisam ser transformados em hash usando SHA256 e em minúsculas. Certifique-se de seguir qualquer [normalização de email](https://github.com/UnifiedID2/uid2docs/tree/main/api#email-address-normalization) regras necessárias. Você não poderá alterar essa configuração posteriormente. | Entrada `hashed_email` como a identidade de destino quando sua identidade de origem for um namespace ou atributo Email_LC_SHA256. |
+| Email_LC_SHA256 | Os endereços de email precisam ser transformados em hash usando SHA256 e em minúsculas. Você não poderá alterar essa configuração posteriormente. | Entrada `hashed_email` como a identidade de destino quando sua identidade de origem for um namespace ou atributo Email_LC_SHA256. |
 
 {style="table-layout:auto"}
 

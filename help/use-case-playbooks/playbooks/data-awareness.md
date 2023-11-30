@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Visão geral do reconhecimento de dados nos manuais de caso de uso
 description: Saiba como acelerar o tempo de implantação copiando os ativos gerados na sandbox inspiradora final para outras sandboxes.
 badgeBeta: label="Beta" type="Informative"
-source-git-commit: 5b6b69d69a088f58d10f41debde859294285360d
+source-git-commit: cbf5f2aaf9bb8113ad5eadac888e9b4f85b199b8
 workflow-type: tm+mt
-source-wordcount: '851'
+source-wordcount: '843'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Visão geral do reconhecimento de dados nos manuais de caso de uso
 
-Os manuais de casos de uso são modelos de marketing projetados para gerar ativos, como públicos, esquemas ou jornadas, para casos de uso de marketing comum. No Adobe Experience Platform, esses modelos fazem referência a vários campos padrão e grupos de campos. No entanto, em certos casos, você já pode ter configurado seus próprios esquemas, campos e grupos de campos. Isso pode tornar alguns dos ativos gerados pelos modelos de caso de uso, como jornadas, incompatíveis com seus dados. Leia este tutorial para entender como usar a funcionalidade de reconhecimento de dados para alinhar e complementar melhor os ativos gerados com seus ativos existentes.
+Os manuais de casos de uso são modelos de marketing projetados para gerar ativos, como públicos, esquemas ou jornadas, para casos de uso de marketing comum. No Adobe Experience Platform, esses modelos fazem referência a vários campos padrão e grupos de campos. No entanto, em certos casos, você já pode ter configurado seus próprios esquemas, campos e grupos de campos. Isso pode tornar alguns dos ativos gerados pelos modelos de caso de uso, como jornadas, incompatíveis com seus dados. Para entender como usar a funcionalidade de reconhecimento de dados para alinhar e complementar melhor os ativos gerados com seus ativos existentes, leia este tutorial.
 
 ## Pré-requisitos {#prerequisites}
 
@@ -31,7 +31,7 @@ A criação de uma instância gera um conjunto de ativos, como jornadas, segment
 
    ![Um modal para criar um pacote](/help/use-case-playbooks/assets/playbooks/data-awareness/create-package-modal.png)
 
-3. Navegue até a **Sandboxes** no lado esquerdo da navegação e selecione a guia **Pacotes** , localize o pacote e publique-o. Para publicar um pacote que esteja em estado de rascunho, siga as etapas da seção [ferramentas de sandbox](/help/sandboxes/ui/sandbox-tooling.md#add-an-object-to-an-existing-package-and-publish) documento.
+3. Navegue até a **Sandboxes** no lado esquerdo da navegação e selecione a guia **Pacotes** , localize o pacote e publique-o. Para publicar um pacote no estado de rascunho, siga as etapas da seção [ferramentas de sandbox](/help/sandboxes/ui/sandbox-tooling.md#add-an-object-to-an-existing-package-and-publish) documento.
 
    ![Pacote em estado de rascunho ou não publicado](/help/use-case-playbooks/assets/playbooks/data-awareness/draft-mode.png)
 
@@ -45,7 +45,7 @@ A criação de uma instância gera um conjunto de ativos, como jornadas, segment
    >
    > O pacote não pode ser importado enquanto ainda estiver no modo de rascunho. Portanto, abra a página de detalhes do pacote e publique o pacote.
 
-5. Selecione o **+** controle para iniciar o fluxo de trabalho para importar os ativos gerados pelo manual do caso de uso para a **[!UICONTROL Sandbox do Target]**. Selecione uma sandbox de destino e confirme o nome do pacote que deseja importar usando a lista suspensa. Adicione os detalhes do job, como nome e descrição do job, antes de prosseguir para a próxima etapa.
+5. Selecione o **+** controlar e iniciar o fluxo de trabalho para importar os ativos gerados pelo manual do caso de uso para a **[!UICONTROL Sandbox do Target]**. Selecione uma sandbox de destino e confirme o nome do pacote que deseja importar usando a lista suspensa. Adicione os detalhes do job, como nome e descrição do job, antes de prosseguir para a próxima etapa.
 
    ![Inicie o fluxo de trabalho de importação, selecione target, confirme o pacote e adicione detalhes do trabalho.](/help/use-case-playbooks/assets/playbooks/data-awareness/import-package-import-settings.png)
 
@@ -59,7 +59,7 @@ A criação de uma instância gera um conjunto de ativos, como jornadas, segment
 
 ### Mapear esquemas {#map-schemas}
 
-1. Mapeie o primeiro esquema. A caixa de diálogo Mapeamento de esquema exibe uma lista suspensa para selecionar o esquema de destino. Se o esquema de origem for um esquema de perfil, então não haverá outras opções de esquema de destino além da variável [esquema de perfil de união individual](/help/xdm/classes/individual-profile.md). Você pode ver as recomendações de mapeamento geradas automaticamente entre os Dados de origem e os Campos de destino quando a página é exibida pela primeira vez. Você pode editar os mapeamentos selecionando o campo de destino e, em seguida, selecionando um novo campo. Se você fizer alterações nos mapeamentos sugeridos, use o **Validar** botão para validar os novos mapeamentos e exibir os erros que podem estar vinculados aos novos mapeamentos. Selecionar **Salvar** após a conclusão do mapeamento.
+1. Mapeie o primeiro esquema. A caixa de diálogo Mapeamento de esquema exibe uma lista suspensa para selecionar o esquema de destino. Se o esquema de origem for um esquema de perfil, então não haverá outras opções de esquema de destino além da variável [esquema de perfil de união individual](/help/xdm/classes/individual-profile.md). Você pode ver as recomendações de mapeamento geradas automaticamente entre os Dados de origem e os Campos de destino quando a página é exibida pela primeira vez. Você pode editar os mapeamentos selecionando o campo de destino e, em seguida, selecionando um novo campo. Se modificar os mapeamentos sugeridos, use o **Validar** botão para validar os novos mapeamentos e exibir os erros que podem estar vinculados aos novos mapeamentos. Selecionar **Salvar** após a conclusão do mapeamento.
 
    ![Caixa de diálogo Mapeamento de esquema com uma lista suspensa para selecionar um esquema de destino.](/help/use-case-playbooks/assets/playbooks/data-awareness/map-to-existing-fields.png)
 
@@ -81,7 +81,7 @@ A criação de uma instância gera um conjunto de ativos, como jornadas, segment
 
    >[!NOTE]
    >
-   > Não é possível realizar ações em nenhum ativo, exceto os esquemas, pois esta é uma sandbox inspiradora, mas eles são exibidos como dependências do pacote.
+   > Não é possível modificar nenhum ativo, exceto os esquemas, pois esta é uma sandbox inspiradora, mas eles são exibidos porque são dependências do pacote.
 
 ### Status da importação {#import-status}
 
@@ -89,7 +89,7 @@ A criação de uma instância gera um conjunto de ativos, como jornadas, segment
 
    ![Página que mostra o progresso da importação](/help/use-case-playbooks/assets/playbooks/data-awareness/import-progress.png)
 
-2. Enquanto o pacote é importado, os ativos do pacote são criados na sandbox de destino. Uma vez concluídos, eles referenciarão os campos que você acabou de mapear no processo de importação. O processo agora está concluído e os ativos da sandbox inspiradora agora também estão presentes na sandbox de destino para você testar.
+2. Enquanto o pacote é importado, os ativos do pacote são criados na sandbox de destino. Uma vez concluídos, eles fazem referência aos campos mapeados durante o processo de importação. O processo agora está concluído e os ativos da sandbox inspiradora agora também estão presentes na sandbox de destino para você testar.
 
    ![Ativos gerados na sandbox de destino](/help/use-case-playbooks/assets/playbooks/data-awareness/packages.png)
 

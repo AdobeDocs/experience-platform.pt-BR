@@ -3,12 +3,12 @@ title: Proteções padrão para dados e segmentação do perfil do cliente em te
 solution: Experience Platform
 product: experience platform
 type: Documentation
-description: Saiba mais sobre o desempenho e as medidas de proteção aplicadas pelo sistema para dados de perfil e segmentação para garantir o uso ideal da funcionalidade do Real-Time CDP.
+description: Saiba mais sobre o desempenho e as medidas de proteção aplicadas pelo sistema para segmentação e dados de perfil para garantir o uso ideal da funcionalidade da Real-Time CDP.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
 source-git-commit: 56ed0d777d9a7d489cde2e40340fee4ca0ad8c03
 workflow-type: tm+mt
 source-wordcount: '2230'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 

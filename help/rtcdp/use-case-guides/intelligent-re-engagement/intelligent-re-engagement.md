@@ -3,10 +3,10 @@ title: Reengajamento inteligente
 description: Ofereça experiências atraentes e conectadas durante os principais momentos de conversão para engajar novamente clientes pouco frequentes de forma inteligente.
 feature: Use Cases
 exl-id: 13f6dbc9-7471-40bf-824d-27922be0d879
-source-git-commit: 3353866aa2d52c784663f355183e940e727b2af7
+source-git-commit: ea0f53339d8549152a54267d537b04326f9164df
 workflow-type: tm+mt
-source-wordcount: '3594'
-ht-degree: 5%
+source-wordcount: '3772'
+ht-degree: 4%
 
 ---
 
@@ -19,6 +19,8 @@ ht-degree: 5%
 Reenvolva os clientes que abandonaram uma conversão de forma inteligente e responsável. Envolva os clientes obsoletos com experiências para aumentar a conversão e o valor vitalício do cliente.
 
 Empregue considerações em tempo real, considere todas as qualidades e comportamentos do consumidor e ofereça requalificação rápida com base em eventos online e offline.
+
+Abaixo está uma visualização de arquitetura de alto nível dos vários componentes do Real-Time CDP e do Journey Optimizer. Este diagrama mostra como os dados fluem pelos dois aplicativos Experience Platform da coleta de dados até o ponto em que são ativados por meio de jornadas ou campanhas para destinos, a fim de alcançar o caso de uso descrito nesta página.
 
 ![Visão geral visual de alto nível de reengajamento inteligente.](../intelligent-re-engagement/images/step-by-step.png)
 
@@ -59,7 +61,7 @@ O cenário de navegação de produto abandonado segmenta a navegação de produt
 
 1. Crie esquemas e conjuntos de dados e ative para [!UICONTROL Perfil].
 2. Você assimila dados no Experience Platform via SDK da Web, SDK móvel ou API. O Conector de dados do Analytics também pode ser usado, mas pode resultar em latência de jornada.
-3. Você assimila dados adicionais ativados por perfil, que podem ser vinculados ao visitante da Web e/ou do aplicativo móvel autenticado por meio de gráficos de identidade.
+3. Você assimila dados adicionais ativados por perfil, que podem ser vinculados ao visitante da Web e do aplicativo móvel autenticado por meio de gráficos de identidade.
 4. Você cria públicos-alvo focados a partir da lista de perfis para verificar se uma **cliente** fez um compromisso nos últimos três dias.
 5. Você cria uma jornada de navegação de produto abandonada no [!DNL Adobe Journey Optimizer].
 6. Se necessário, trabalhe com a **parceiro de dados** para a ativação de públicos para os destinos de mídia paga desejados.
@@ -71,7 +73,7 @@ O cenário de carrinho abandonado se aplica quando os produtos foram colocados n
 
 1. Crie esquemas e conjuntos de dados, a habilitação para [!UICONTROL Perfil].
 2. Você assimila dados no Experience Platform via SDK da Web, SDK móvel ou API. O Conector de dados do Analytics também pode ser usado, mas pode resultar em latência de jornada.
-3. Você assimila dados adicionais ativados por perfil, que podem ser vinculados ao visitante da Web e/ou do aplicativo móvel autenticado por meio de gráficos de identidade.
+3. Você assimila dados adicionais ativados por perfil, que podem ser vinculados ao visitante da Web e do aplicativo móvel autenticado por meio de gráficos de identidade.
 4. Você cria públicos-alvo focados a partir da lista de perfis para verificar se uma **cliente** colocou um item no carrinho, mas não concluiu a compra. A variável **[!UICONTROL Adicionar ao carrinho]** O evento inicia um temporizador que aguarda 30 minutos e verifica a compra. Se nenhuma compra tiver sido feita, a variável **cliente** é adicionado à **[!UICONTROL Abandonar carrinho]** públicos-alvo.
 5. Você cria uma jornada de carrinho abandonada no [!DNL Adobe Journey Optimizer].
 6. Se necessário, trabalhe com a **parceiro de dados** para a ativação de públicos para os destinos de mídia paga desejados.
@@ -83,7 +85,7 @@ O cenário de confirmação de pedido se concentra nas compras de produtos feita
 
 1. Crie esquemas e conjuntos de dados e ative para [!UICONTROL Perfil].
 2. Você assimila dados no Experience Platform via SDK da Web, SDK móvel ou API. O Conector de dados do Analytics também pode ser usado, mas pode resultar em latência de jornada.
-3. Você assimila dados adicionais ativados por perfil, que podem ser vinculados ao visitante da Web e/ou do aplicativo móvel autenticado por meio de gráficos de identidade.
+3. Você assimila dados adicionais ativados por perfil, que podem ser vinculados ao visitante da Web e do aplicativo móvel autenticado por meio de gráficos de identidade.
 4. Você cria uma jornada de confirmação no [!DNL Adobe Journey Optimizer].
 5. [!DNL Adobe Journey Optimizer] O envia uma mensagem de confirmação de pedido usando o canal preferencial.
 
@@ -109,10 +111,10 @@ O esquema de atributos do cliente é representado por um [[!UICONTROL Perfil ind
 
 [Detalhes de contato pessoal](/help/xdm/field-groups/profile/personal-contact-details.md) é um grupo de campos de esquema padrão para a classe Perfil individual XDM que descreve as informações de contato de uma pessoa individual.
 
-| Campos | Requisito | Descrição |
-| --- | --- | --- |
-| `mobilePhone.number` | Obrigatório | O número do celular da pessoa, que será usado para SMS. |
-| `personalEmail.address` | Obrigatório | O endereço de email da pessoa. |
+| Campos | Descrição |
+| --- | --- |
+| `mobilePhone.number` | O número do celular da pessoa, que será usado para SMS. |
+| `personalEmail.address` | O endereço de email da pessoa. |
 
 +++
 
@@ -139,13 +141,13 @@ A variável [Consentimentos e preferências](/help/xdm/field-groups//profile/con
 
 +++Detalhes do teste de perfil (grupo de campos)
 
-Este grupo de campos é usado para prática recomendada.
+Este grupo de campos permite testar sua jornada antes de ela ser publicada, usando perfis de teste. Para obter mais informações sobre como criar perfis de teste, leia a [tutorial criar perfis de teste](https://experienceleague.adobe.com/docs/journeys/using/building-journeys/about-journey-building/creating-test-profiles.html) e [tutorial de teste do jornada](https://experienceleague.adobe.com/docs/journeys/using/building-journeys/testing-the-journey.html).
 
 +++
 
 #### Esquema de transações digitais do cliente
 
-Esse esquema é usado para estruturar e fazer referência aos dados do evento que compõem a atividade do cliente que ocorre no seu site e/ou plataformas digitais associadas. Normalmente, esses dados são assimilados na [!DNL Adobe Experience Platform] via [SDK da Web](/help/edge/home.md) e é necessário fazer referência aos vários eventos de navegação e conversão usados para acionar jornadas, análises detalhadas de clientes online e recursos aprimorados de público-alvo.
+Esse esquema é usado para estruturar e fazer referência aos dados do evento que compõem a atividade do cliente que ocorre no site ou nas plataformas digitais associadas. Normalmente, esses dados são assimilados na [!DNL Adobe Experience Platform] via [SDK da Web](/help/edge/home.md) e é necessário fazer referência aos vários eventos de navegação e conversão usados para acionar jornadas, análises detalhadas de clientes online e recursos aprimorados de público-alvo.
 
 O schema de transações digitais do cliente é representado por um [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) classe.
 
@@ -153,11 +155,11 @@ O schema de transações digitais do cliente é representado por um [[!UICONTROL
 
 A variável [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) A classe inclui os seguintes grupos de campos:
 
-| Campos | Requisito | Descrição |
-| --- | --- | --- |
-| `_id` | Obrigatório | Identifica exclusivamente eventos individuais que são assimilados em [!DNL Adobe Experience Platform]. |
-| `timestamp` | Obrigatório | Um carimbo de data e hora ISO 8601 de quando o evento ocorreu, formatado de acordo com RFC 3339 Seção 5.6. Esse carimbo de data e hora deve ocorrer no passado. |
-| `eventType` | Obrigatório | Uma string que indica o tipo de categoria do evento. |
+| Campos | Descrição |
+| --- | --- |
+| `_id` | Identifica exclusivamente eventos individuais que são assimilados em [!DNL Adobe Experience Platform]. |
+| `timestamp` | Um carimbo de data e hora ISO 8601 de quando o evento ocorreu, formatado de acordo com RFC 3339 Seção 5.6. Esse carimbo de data e hora deve ocorrer no passado. |
+| `eventType` | Uma string que indica o tipo de categoria do evento. |
 
 +++
 
@@ -165,14 +167,14 @@ A variável [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent
 
 A variável [Detalhes da ID do usuário final](/help/xdm/field-groups/event/enduserids.md) grupo de campos é usado para descrever as informações de identidade de um indivíduo em vários aplicativos Adobe.
 
-| Campos | Requisito | Descrição |
-| --- | --- | --- |
-| `endUserIDs._experience.emailid.authenticatedState` | Obrigatório | Estado autenticado da ID do endereço de email do usuário final. |
-| `endUserIDs._experience.emailid.id` | Obrigatório | ID do endereço de email do usuário final. |
-| `endUserIDs._experience.emailid.namespace.code` | Obrigatório | Código de namespace da ID do endereço de email do usuário final. |
-| `endUserIDs._experience.mcid.authenticatedState` | Obrigatório | [!DNL Adobe] Estado autenticado da ID do Marketing Cloud (MCID). O MCID agora é conhecido como Experience Cloud ID (ECID). |
-| `endUserIDs._experience.mcid.id` | Obrigatório | [!DNL Adobe] ID DO Marketing Cloud (MCID). O MCID agora é conhecido como Experience Cloud ID (ECID). |
-| `endUserIDs._experience.mcid.namespace.code` | Obrigatório | [!DNL Adobe] Código de namespace da ID do Marketing Cloud (MCID). |
+| Campos | Descrição |
+| --- | --- |
+| `endUserIDs._experience.emailid.authenticatedState` | Estado autenticado da ID do endereço de email do usuário final. |
+| `endUserIDs._experience.emailid.id` | ID do endereço de email do usuário final. |
+| `endUserIDs._experience.emailid.namespace.code` | Código de namespace da ID do endereço de email do usuário final. |
+| `endUserIDs._experience.mcid.authenticatedState` | [!DNL Adobe] Estado autenticado da ID do Marketing Cloud (MCID). O MCID agora é conhecido como Experience Cloud ID (ECID). |
+| `endUserIDs._experience.mcid.id` | [!DNL Adobe] ID DO Marketing Cloud (MCID). O MCID agora é conhecido como Experience Cloud ID (ECID). |
+| `endUserIDs._experience.mcid.namespace.code` | [!DNL Adobe] Código de namespace da ID do Marketing Cloud (MCID). |
 
 +++
 
@@ -192,11 +194,11 @@ O schema de transações offline do cliente é representado por um [[!UICONTROL 
 
 A variável [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) A classe inclui os seguintes grupos de campos:
 
-| Campos | Requisito | Descrição |
-| --- | --- | --- |
-| `_id` | Obrigatório | Identifica exclusivamente eventos individuais que são assimilados em [!DNL Adobe Experience Platform]. |
-| `timestamp` | Obrigatório | Um carimbo de data e hora ISO 8601 de quando o evento ocorreu, formatado de acordo com RFC 3339 Seção 5.6. Esse carimbo de data e hora deve ocorrer no passado. |
-| `eventType` | Obrigatório | Uma string que indica o tipo de categoria do evento. |
+| Campos | Descrição |
+| --- | --- |
+| `_id` | Identifica exclusivamente eventos individuais que são assimilados em [!DNL Adobe Experience Platform]. |
+| `timestamp` | Um carimbo de data e hora ISO 8601 de quando o evento ocorreu, formatado de acordo com RFC 3339 Seção 5.6. Esse carimbo de data e hora deve ocorrer no passado. |
+| `eventType` | Uma string que indica o tipo de categoria do evento. |
 
 +++
 
@@ -204,18 +206,18 @@ A variável [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent
 
 A variável [Detalhes do comércio](/help/xdm/field-groups/event/commerce-details.md) o grupo de campos é usado para descrever dados de comércio, como informações do produto (SKU, nome, quantidade) e operações padrão do carrinho (pedido, check-out, abandono).
 
-| Campos | Requisito | Descrição |
-| --- | --- | --- |
-| `commerce.cart.cartID` | Obrigatório | Uma ID para o carrinho de compras. |
-| `commerce.order.orderType` | Obrigatório | Um objeto que descreve o tipo de pedido do produto. |
-| `commerce.order.payments.paymentAmount` | Obrigatório | Um objeto que descreve o valor do pagamento da ordem do produto. |
-| `commerce.order.payments.paymentType` | Obrigatório | Um objeto que descreve o tipo de pagamento de ordem de produto. |
-| `commerce.order.payments.transactionID` | Obrigatório | Um ID de transação de ordem de produto de objeto. |
-| `commerce.order.purchaseID` | Obrigatório | Uma ID de compra da ordem de produto do objeto. |
-| `productListItems.name` | Obrigatório | Uma lista de nomes de itens que representam os produtos selecionados por um cliente. |
-| `productListItems.priceTotal` | Obrigatório | O preço total da lista de itens que representam os produtos selecionados por um cliente. |
-| `productListItems.product` | Obrigatório | Os produtos selecionados. |
-| `productListItems.quantity` | Obrigatório | A quantidade de itens da lista que representam os produtos selecionados por um cliente. |
+| Campos | Descrição |
+| --- | --- |
+| `commerce.cart.cartID` | Uma ID para o carrinho de compras. |
+| `commerce.order.orderType` | Um objeto que descreve o tipo de pedido do produto. |
+| `commerce.order.payments.paymentAmount` | Um objeto que descreve o valor do pagamento da ordem do produto. |
+| `commerce.order.payments.paymentType` | Um objeto que descreve o tipo de pagamento de ordem de produto. |
+| `commerce.order.payments.transactionID` | Um ID de transação de ordem de produto de objeto. |
+| `commerce.order.purchaseID` | Uma ID de compra da ordem de produto do objeto. |
+| `productListItems.name` | Uma lista de nomes de itens que representam os produtos selecionados por um cliente. |
+| `productListItems.priceTotal` | O preço total da lista de itens que representam os produtos selecionados por um cliente. |
+| `productListItems.product` | Os produtos selecionados. |
+| `productListItems.quantity` | A quantidade de itens da lista que representam os produtos selecionados por um cliente. |
 
 +++
 
@@ -223,10 +225,10 @@ A variável [Detalhes do comércio](/help/xdm/field-groups/event/commerce-detail
 
 [Detalhes de contato pessoal](/help/xdm/field-groups/profile/personal-contact-details.md) é um grupo de campos de esquema padrão para a classe Perfil individual XDM que descreve as informações de contato de uma pessoa individual.
 
-| Campos | Requisito | Descrição |
-| --- | --- | --- |
-| `mobilePhone.number` | Obrigatório | O número do celular da pessoa, que será usado para SMS. |
-| `personalEmail.address` | Obrigatório | O endereço de email da pessoa. |
+| Campos | Descrição |
+| --- | --- |
+| `mobilePhone.number` | O número do celular da pessoa, que será usado para SMS. |
+| `personalEmail.address` | O endereço de email da pessoa. |
 
 +++
 
@@ -242,7 +244,7 @@ Atributos de auditoria do sistema de origem externa é um tipo de dados padrão 
 >
 >Essa é uma implementação opcional se você estiver usando o [[!DNL Adobe Analytics Source Connector]](/help/sources/connectors/adobe-applications/analytics.md).
 
-Esse esquema é usado para estruturar e fazer referência aos dados do evento que compõem a atividade do cliente que ocorre no seu site e/ou plataformas digitais associadas. Este esquema é semelhante ao esquema de Transações digitais do cliente, mas difere na medida em que deve ser usado quando [SDK da Web](/help/edge/home.md) não é uma opção para a coleta de dados; portanto, esse esquema é necessário ao utilizar a variável [!DNL Adobe Analytics Source Connector] para enviar seus dados online para o [!DNL Adobe Experience Platform] como um fluxo de dados primário ou secundário.
+Esse esquema é usado para estruturar e fazer referência aos dados do evento que compõem a atividade do cliente que ocorre no site ou nas plataformas digitais associadas. Este esquema é semelhante ao esquema de Transações digitais do cliente, mas difere na medida em que deve ser usado quando [SDK da Web](/help/edge/home.md) não é uma opção para a coleta de dados; portanto, esse esquema é necessário ao utilizar a variável [!DNL Adobe Analytics Source Connector] para enviar seus dados online para o [!DNL Adobe Experience Platform] como um fluxo de dados primário ou secundário.
 
 A variável [!DNL Adobe] o esquema do conector da web é representado por um [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) classe.
 
@@ -250,11 +252,11 @@ A variável [!DNL Adobe] o esquema do conector da web é representado por um [[!
 
 A variável [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) A classe inclui os seguintes grupos de campos:
 
-| Campos | Requisito | Descrição |
-| --- | --- | --- |
-| `_id` | Obrigatório | Identifica exclusivamente eventos individuais que são assimilados em [!DNL Adobe Experience Platform]. |
-| `timestamp` | Obrigatório | Um carimbo de data e hora ISO 8601 de quando o evento ocorreu, formatado de acordo com RFC 3339 Seção 5.6. Esse carimbo de data e hora deve ocorrer no passado. |
-| `eventType` | Obrigatório | Uma string que indica o tipo de categoria do evento. |
+| Campos | Descrição |
+| --- | --- |
+| `_id` | Identifica exclusivamente eventos individuais que são assimilados em [!DNL Adobe Experience Platform]. |
+| `timestamp` | Um carimbo de data e hora ISO 8601 de quando o evento ocorreu, formatado de acordo com RFC 3339 Seção 5.6. Esse carimbo de data e hora deve ocorrer no passado. |
+| `eventType` | Uma string que indica o tipo de categoria do evento. |
 
 +++
 
@@ -262,14 +264,14 @@ A variável [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent
 
 A variável [Adobe Analytics ExperienceEvent](/help/xdm/field-groups/event/analytics-full-extension.md) o grupo de campos captura métricas comuns coletadas pelo Adobe Analytics.
 
-| Campos | Requisito | Descrição |
-| --- | --- | --- |
-| `endUserIDs._experience.emailid.authenticatedState` | Obrigatório | Estado autenticado da ID do endereço de email do usuário final. |
-| `endUserIDs._experience.emailid.id` | Obrigatório | ID do endereço de email do usuário final. |
-| `endUserIDs._experience.emailid.namespace.code` | Obrigatório | Código de namespace da ID do endereço de email do usuário final. |
-| `endUserIDs._experience.mcid.authenticatedState` | Obrigatório | [!DNL Adobe] Estado autenticado da ID do Marketing Cloud (MCID). O MCID agora é conhecido como Experience Cloud ID (ECID). |
-| `endUserIDs._experience.mcid.id` | Obrigatório | [!DNL Adobe] ID DO Marketing Cloud (MCID). O MCID agora é conhecido como Experience Cloud ID (ECID). |
-| `endUserIDs._experience.mcid.namespace.code` | Obrigatório | [!DNL Adobe] Código de namespace da ID do Marketing Cloud (MCID). |
+| Campos | Descrição |
+| --- | --- |
+| `endUserIDs._experience.emailid.authenticatedState` | Estado autenticado da ID do endereço de email do usuário final. |
+| `endUserIDs._experience.emailid.id` | ID do endereço de email do usuário final. |
+| `endUserIDs._experience.emailid.namespace.code` | Código de namespace da ID do endereço de email do usuário final. |
+| `endUserIDs._experience.mcid.authenticatedState` | [!DNL Adobe] Estado autenticado da ID do Marketing Cloud (MCID). O MCID agora é conhecido como Experience Cloud ID (ECID). |
+| `endUserIDs._experience.mcid.id` | [!DNL Adobe] ID DO Marketing Cloud (MCID). O MCID agora é conhecido como Experience Cloud ID (ECID). |
+| `endUserIDs._experience.mcid.namespace.code` | [!DNL Adobe] Código de namespace da ID do Marketing Cloud (MCID). |
 
 +++
 
@@ -344,8 +346,9 @@ O evento a seguir é usado para o cenário de navegação de produto abandonada 
 Os seguintes campos e condições são obrigatórios ao configurar este público-alvo:
 
 * `eventType: commerce.productViews`
-* E `THEN` (evento sequencial) excluir `eventType: commerce.procuctListAdds` ou `application.launch` ou `web.webpagedetails.pageViews` ou `commerce.purchases` (isso inclui online e offline)
+* E `THEN` (evento sequencial) excluir `eventType: commerce.productListAdds` ou `application.launch` ou `web.webpagedetails.pageViews` ou `commerce.purchases` (isso inclui online e offline)
    * `Timestamp: > 3 days after productView`
+* `Timestamp: > 4 days`
 
 +++
 
@@ -356,8 +359,10 @@ O evento a seguir é usado para o cenário de navegação de produto abandonado 
 Os seguintes campos e condições são obrigatórios ao configurar este público-alvo:
 
 * `eventType: commerce.productViews`
-* E `THEN` (evento sequencial) incluir `eventType: commerce.procuctListAdds` ou `application.launch` ou `web.webpagedetails.pageViews` ou `commerce.purchases` (isso inclui online e offline)
+* E `THEN` (evento sequencial) incluir `eventType: commerce.productListAdds` ou `application.launch` ou `web.webpagedetails.pageViews` ou `commerce.purchases` (isso inclui online e offline)
    * `Timestamp: > 3 days after productView`
+* `Timestamp: > 4 days`
++++
 
 +++Transmissão do engajamento no último dia
 
@@ -365,7 +370,7 @@ O evento a seguir é usado para o cenário de navegação de produto abandonado 
 
 Os seguintes campos e condições são obrigatórios ao configurar este público-alvo:
 
-* `eventType: commerce.procuctListAdds or application.launch or web.webpagedetails.pageViews or commerce.purchases`
+* `eventType: commerce.productListAdds or application.launch or web.webpagedetails.pageViews or commerce.purchases`
    * `Timestamp: in last 1 day` (Transmissão)
 
 +++
@@ -376,7 +381,7 @@ O evento a seguir é usado para o cenário de navegação de produto abandonado 
 
 Os seguintes campos e condições são obrigatórios ao configurar este público-alvo:
 
-* `EventType: commerce.procuctListAdds or application.launch or web.webpagedetails.pageViews or commerce.purchases`
+* `EventType: commerce.productListAdds or application.launch or web.webpagedetails.pageViews or commerce.purchases`
    * `Timestamp: in last 3 days` (Lote)
 
 +++
@@ -422,6 +427,8 @@ O cenário de navegação de produto abandonado segmenta a navegação de produt
 
 +++Eventos
 
+Os eventos permitem acionar as jornadas de forma unitária para enviar mensagens em tempo real à pessoa que flui para a jornada. Para obter mais informações sobre eventos, leia a [guia de eventos gerais](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html).
+
 * Evento 1: visualizações do produto
    * Esquema: Transações digitais do cliente
    * Campos:
@@ -429,14 +436,7 @@ O cenário de navegação de produto abandonado segmenta a navegação de produt
    * Condição:
       * `eventType = commerce.productViews`
       * Campos:
-         * `commerce.productViews.id`
-         * `commerce.productViews.value`
          * `eventType`
-         * `identityMap.authenticatedState`
-         * `identityMap.id`
-         * `identityMap.primary`
-         * `productListItems.SKU`
-         * `productListItems.currencyCode`
          * `productListItems.name`
          * `productListItems.priceTotal`
          * `productListItems.product`
@@ -515,7 +515,9 @@ O cenário de navegação de produto abandonado segmenta a navegação de produt
 
 +++
 
-+++Lógica de Jornada de tecla
++++Lógica da chave da tela de Jornada
+
+A lógica da chave da tela de jornada exige que você identifique eventos específicos e configure as ações que devem ocorrer após a ocorrência do evento.
 
 * Jornada Lógica de Entrada
    * Evento de exibição de produto
@@ -549,6 +551,8 @@ O cenário de navegação de produto abandonado segmenta a navegação de produt
 O cenário de carrinho abandonado segmenta os produtos que foram colocados no carrinho, mas que ainda não foram comprados no site e no aplicativo móvel.<p>![Visão geral visual de alto nível do cenário de carrinho abandonado pelo cliente.](../intelligent-re-engagement/images/abandoned-cart-journey.png "Visão geral visual de alto nível do cenário de carrinho abandonado pelo cliente."){width="1920" zoomable="yes"}</p>
 
 +++Eventos
+
+Os eventos permitem acionar as jornadas de forma unitária para enviar mensagens em tempo real à pessoa que flui para a jornada. Para obter mais informações sobre eventos, leia a [guia de eventos gerais](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html).
 
 * Evento 2: Adicionar ao carrinho
    * Esquema: Transações digitais do cliente
@@ -643,7 +647,9 @@ O cenário de carrinho abandonado segmenta os produtos que foram colocados no ca
 
 +++
 
-+++Lógica de Jornada de chave
++++Lógica da chave da tela de Jornada
+
+A lógica da chave da tela de jornada exige que você identifique eventos específicos e configure as ações que devem ocorrer após a ocorrência do evento.
 
 * Jornada Lógica de Entrada
    * `AddToCart` Evento
@@ -679,6 +685,8 @@ O cenário de confirmação de pedido se concentra nas compras de produtos feita
 
 +++Eventos
 
+Os eventos permitem acionar as jornadas de forma unitária para enviar mensagens em tempo real à pessoa que flui para a jornada. Para obter mais informações sobre eventos, leia a [guia de eventos gerais](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html).
+
 * Evento 4: compras online
    * Esquema: Transações digitais do cliente
    * Campos:
@@ -707,7 +715,9 @@ O cenário de confirmação de pedido se concentra nas compras de produtos feita
 
 +++
 
-+++Lógica de Jornada de tecla
++++Lógica da chave da tela de Jornada
+
+A lógica da chave da tela de jornada exige que você identifique eventos específicos e configure as ações que devem ocorrer após a ocorrência do evento.
 
 * Jornada Lógica de Entrada
    * Evento de pedido
@@ -740,10 +750,16 @@ Os destinos de exportação de público-alvo de transmissão (como Facebook, Goo
 * `ECID`
 * `mobilePhone.number`
 
-o público do carrinho de abandono é avaliado como um público de streaming e, portanto, pode ser usado pela estrutura de destinos para este caso de uso.
+Você pode ativar a navegação abandonada de produtos e abandonar os públicos do carrinho para anúncios de mídia pagos.
 
 * Fluxo/Acionado
    * [Publicidade](/help/destinations/catalog/advertising/overview.md)/[Mídia paga e redes sociais](/help/destinations/catalog/social/overview.md)
    * [Dispositivo móvel](/help/destinations/catalog/mobile-engagement/overview.md)
    * [Destino do streaming](/help/destinations/catalog/streaming/http-destination.md)
    * [Destino personalizado criado por meio do Destination SDK.](/help/destinations/destination-sdk/overview.md). Se você for um cliente do Real-Time CDP Ultimate, também poderá criar uma conta [destino personalizado usando Destination SDK](/help/destinations/destination-sdk/overview.md#productized-and-custom-integrations)
+
+## Próximas etapas {#next-steps}
+
+Ao reengajar seus clientes que abandonaram uma conversão de uma maneira inteligente e responsável, você esperamos que tenha aumentado as conversões e aumentado o valor vitalício do cliente.
+
+Em seguida, você pode explorar outros casos de uso compatíveis com o Real-Time CDP, como [exibição de conteúdo personalizado para usuários não autenticados](/help/rtcdp/partner-data/onsite-personalization.md) nas propriedades da Web.

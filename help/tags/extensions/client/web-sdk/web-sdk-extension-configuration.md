@@ -2,10 +2,10 @@
 title: Configurar a extensão de tag do SDK da Web
 description: Saiba como configurar a extensão de tag do SDK da Web do Experience Platform na interface do usuário de tags.
 exl-id: 22425daa-10bd-4f06-92de-dff9f48ef16e
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: ac3362fa5e8a314f85f3bb659047f77fb56c1a7c
 workflow-type: tm+mt
-source-wordcount: '1456'
-ht-degree: 10%
+source-wordcount: '1546'
+ht-degree: 6%
 
 ---
 
@@ -65,7 +65,7 @@ O nível de consentimento padrão não é salvo no perfil do usuário.
 
 | [!UICONTROL Nível de consentimento padrão] | Descrição |
 | --- | --- |
-| [!UICONTROL Em] | Colete eventos que ocorrem antes de o usuário fornecer preferências de consentimento. |
+| [!UICONTROL Entrada] | Colete eventos que ocorrem antes de o usuário fornecer preferências de consentimento. |
 | [!UICONTROL Saída] | Descartar eventos que ocorrem antes de o usuário fornecer preferências de consentimento. |
 | [!UICONTROL Pending] | Enfileirar eventos que ocorrem antes de o usuário fornecer preferências de consentimento. Quando as preferências de consentimento são fornecidas, os eventos são coletados ou descartados, dependendo das preferências fornecidas. |
 | [!UICONTROL Fornecido pelo elemento de dados] | O nível de consentimento padrão é determinado por um elemento de dados separado que você define. Ao usar essa opção, você deve especificar o elemento de dados usando o menu suspenso fornecido. |
@@ -85,13 +85,25 @@ Esta seção permite definir o comportamento do SDK da Web quando se trata de li
 
 ## Definir configurações de personalização {#personalization}
 
-Esta seção permite configurar como você deseja ocultar determinadas partes de uma página enquanto o conteúdo personalizado é carregado.
-
-Você pode especificar os elementos a serem ocultados no editor de estilos pré-ocultação. Em seguida, você pode copiar o trecho pré-ocultação padrão fornecido e colá-lo dentro do `<head>` elemento do do site [!DNL HTML] código.
+Esta seção permite configurar como você deseja ocultar determinadas partes de uma página enquanto o conteúdo personalizado é carregado. Isso garante que seus visitantes vejam apenas a página personalizada.
 
 ![Imagem que mostra as configurações de personalização da extensão de tag do SDK da Web na interface do usuário de tags](assets/web-sdk-ext-personalization.png)
 
 * **[!UICONTROL Migração do Target da at.js para o SDK da Web]**: use esta opção para ativar [!DNL Web SDK] para ler e gravar o legado `mbox` e `mboxEdgeCluster` cookies usados pela at.js `1.x` ou `2.x` bibliotecas. Isso ajuda a manter o perfil do visitante ao mover de uma página que usa o SDK da Web para uma página que usa at.js `1.x` ou `2.x` bibliotecas e vice-versa.
+
+### Estilo pré-ocultação {#prehiding-style}
+
+O editor de estilo pré-ocultação permite definir regras CSS personalizadas para ocultar seções específicas de uma página. Quando a página é carregada, o SDK da Web usa esse estilo para ocultar as seções que precisam ser personalizadas, recupera a personalização e desoculta as seções de página personalizadas. Dessa forma, seus visitantes visualizam as páginas já personalizadas, sem ver o processo de recuperação da personalização.
+
+### Pré-ocultação de trecho {#prehiding-snippet}
+
+O trecho pré-ocultação é útil quando a biblioteca do SDK da Web é carregada de forma assíncrona. Nessa situação, para evitar oscilação, recomendamos ocultar o conteúdo antes que a biblioteca do SDK da Web seja carregada.
+
+Para usar o trecho pré-ocultação, copie-o e cole-o dentro do `<head>` elemento da sua página.
+
+>[!IMPORTANT]
+>
+>Ao usar o trecho pré-ocultação, o Adobe recomenda usar o mesmo [!DNL CSS] regra como a usada pelo [estilo pré-ocultação](#prehiding-style).
 
 ## Definir configurações da coleção de dados {#data-collection}
 
@@ -110,7 +122,7 @@ Isso ajuda a acionar comportamentos de sequência de dados diferentes dos tradic
 Criar uma substituição de configuração da sequência de dados é um processo de duas etapas:
 
 1. Primeiro, você deve definir as substituições de configuração da sequência na [página de configuração da sequência de dados](../../../../datastreams/configure.md).
-2. Em seguida, você deve enviar as substituições para a rede de borda por meio de um comando do SDK da Web ou usando a extensão de tag do SDK da Web.
+2. Em seguida, você deve enviar as substituições para a Rede de borda por meio de um comando do SDK da Web ou usando a extensão de tag do SDK da Web.
 
 Ver a sequência de dados [documentação de substituições de configuração](../../../../datastreams/overrides.md) para obter instruções detalhadas sobre como substituir configurações de sequência de dados.
 

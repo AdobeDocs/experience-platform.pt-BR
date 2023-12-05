@@ -2,10 +2,10 @@
 title: Visão geral da extensão do Adobe Media Analytics para áudio e vídeo
 description: Saiba mais sobre o Adobe Media Analytics para extensão de tag de áudio e vídeo na Adobe Experience Platform.
 exl-id: 426cfd08-aead-4b35-824c-45494bca2fc8
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: d23f1cc9dd0155aceae78bf938d35463e9c38181
 workflow-type: tm+mt
-source-wordcount: '987'
-ht-degree: 98%
+source-wordcount: '949'
+ht-degree: 97%
 
 ---
 
@@ -121,18 +121,19 @@ A extensão do MA expõe os módulos `get-instance` e os módulos compartilhados
 
    * Um objeto delegado válido que expõe essas funções:
 
-      | Método |  Descrição   |
-      | :--- | :--- |
-      | `getQoSObject()` | Retorna a instância `MediaObject` que contém as informações de QoS atuais. Esse método será chamado várias vezes durante uma sessão de reprodução. A implementação do reprodutor sempre deve retornar os dados de QoS mais recentes. |
-      | `getCurrentPlaybackTime()` | Retorna a posição atual do indicador de reprodução. Para rastreamento VOD, o valor é especificado em segundos a partir do início do item de mídia. Para rastreamento LIVE/LIVE, o valor é especificado em segundos a partir do início do programa. |
+     | Método |  Descrição   |
+     | :--- | :--- |
+     | `getQoSObject()` | Retorna a instância `MediaObject` que contém as informações de QoS atuais. Esse método será chamado várias vezes durante uma sessão de reprodução. A implementação do reprodutor sempre deve retornar os dados de QoS mais recentes. |
+     | `getCurrentPlaybackTime()` | Retorna a posição atual do indicador de reprodução. Para rastreamento VOD, o valor é especificado em segundos a partir do início do item de mídia. Para rastreamento LIVE/LIVE, o valor é especificado em segundos a partir do início do programa. |
 
    * Um objeto de configuração opcional que expõe essas propriedades:
 
-      | Propriedade | Descrição | Obrigatório |
-      | :--- | :--- | :--- |
-      | Online Video Provider | Nome da plataforma de vídeo online pela qual o conteúdo é distribuído. | Não. Se estiver presente, substituirá o valor definido durante a configuração da extensão. |
-      | Nome do reprodutor | Nome do reprodutor de vídeo em uso (por exemplo, &quot;AVPlayer&quot;, &quot;HTML5 Player&quot;, &quot;My Custom VideoPlayer&quot;) | Não. Se estiver presente, substituirá o valor definido durante a configuração da extensão. |
-      | Canal | Propriedade do nome do canal | Não. Se estiver presente, substituirá o valor definido durante a configuração da extensão. |
+     | Propriedade | Descrição | Obrigatório |
+     | :--- | :--- | :--- |
+     | Online Video Provider | Nome da plataforma de vídeo online pela qual o conteúdo é distribuído. | Não. Se estiver presente, substituirá o valor definido durante a configuração da extensão. |
+     | Nome do reprodutor | Nome do reprodutor de vídeo em uso (por exemplo, &quot;AVPlayer&quot;, &quot;HTML5 Player&quot;, &quot;My Custom VideoPlayer&quot;) | Não. Se estiver presente, substituirá o valor definido durante a configuração da extensão. |
+     | Canal | Propriedade do nome do canal | Não. Se estiver presente, substituirá o valor definido durante a configuração da extensão. |
+
    **Valor de retorno:** uma promessa que resolve uma instância do `MediaHeartbeat` ou a rejeita com uma mensagem de erro.
 
 1. **Constantes de acesso do MediaHeartbeat:** módulo compartilhado `media-heartbeat`
@@ -173,7 +174,7 @@ A extensão do MA expõe os módulos `get-instance` e os módulos compartilhados
    ...
    ```
 
-1. Usando a instância Media Heartbeat, siga a [documentação da Media SDK JS](https://experienceleague.adobe.com/docs/media-analytics/using/sdk-implement/setup/setup-javascript/set-up-js-2.html?lang=pt_BR) e a [documentação da API JS](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript/index.html) para implementar o rastreamento de mídia.
+1. Usando a instância Media Heartbeat, siga a [documentação da Media SDK JS](https://experienceleague.adobe.com/docs/media-analytics/using/legacy-implementations/legacy-media-sdks/setup-javascript/set-up-js-2.html) e a [documentação da API JS](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript/index.html) para implementar o rastreamento de mídia.
 
 >[!NOTE]
 >

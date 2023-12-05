@@ -2,10 +2,10 @@
 title: Notas da versão de janeiro de 2023 da Adobe Experience Platform
 description: As notas da versão de janeiro de 2023 da Adobe Experience Platform.
 exl-id: 461898ce-5683-4ab1-9167-ac25843a1ff8
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: d23f1cc9dd0155aceae78bf938d35463e9c38181
 workflow-type: tm+mt
-source-wordcount: '2408'
-ht-degree: 98%
+source-wordcount: '2224'
+ht-degree: 99%
 
 ---
 
@@ -139,7 +139,7 @@ O XDM é uma especificação de código aberto que fornece estruturas e definiç
 | --- | --- | --- |
 | Classe | [[!UICONTROL Conversão]](https://github.com/adobe/xdm/blob/master/components/classes/conversion.schema.json) | Uma classe para rastrear dados de conversão como conversões de moeda. |
 | Grupo de campos | [[!UICONTROL Detalhes da taxa de conversão de moeda]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/conversion/currency-conversion-details.schema.json) | Um grupo de campos para a classe [!UICONTROL Conversão] captura detalhes adicionais relacionados à conversão de moeda. |
-| Grupo de campos | [[!UICONTROL Mapa de resultados da avaliação de políticas de consentimento com metadados]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-consentResultsv2.schema.jsonn) | Captura detalhes para o resultado da avaliação de várias políticas de consentimento, incluindo informações de metadados sobre as entradas e saídas da política de consentimento. |
+| Grupo de campos | [[!UICONTROL Mapa de resultados da avaliação de políticas de consentimento com metadados]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-consentResultsv2.schema.json) | Captura detalhes para o resultado da avaliação de várias políticas de consentimento, incluindo informações de metadados sobre as entradas e saídas da política de consentimento. |
 
 **Componentes de XDM atualizados**
 
@@ -149,7 +149,7 @@ O XDM é uma especificação de código aberto que fornece estruturas e definiç
 | Tipo de dados | [[!UICONTROL Detalhes da proposta de decisão]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/proposition-detail.schema.json) | Um campo `selectionStrategy` que captura os detalhes de uma estratégia de seleção foi adicionado. |
 | Grupo de campos | [[!UICONTROL Evento de experiência - Interações de proposição]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/experienceevent-proposition-interaction.schema.json) | O grupo de campos agora é compatível com a classe [!UICONTROL Evento de etapa de jornada]. |
 | Tipo de dados | [[!UICONTROL Informações de detalhes do erro]](https://github.com/adobe/xdm/blob/master/components/datatypes/errordetails.schema.json) | O campo `ID` foi renomeado para `name`. |
-| Tipo de dados | [[!UICONTROL Informações de mídia]](https://github.com/adobe/xdm/blob/master/components/datatypes/media.schema.json) | Uma alteração no padrão da propriedade de segmento do vídeo foi revertida. |
+| Tipo de dados | [[!UICONTROL Informações de mídia]](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/media.schema.json) | Uma alteração no padrão da propriedade de segmento do vídeo foi revertida. |
 | Tipo de dados | [[!UICONTROL Informações detalhadas de dados de QoE]](https://github.com/adobe/xdm/blob/master/components/datatypes/qoedatadetails.schema.json) | Remoção do campo `droppedFrameCount`. |
 | Tipo de dados | [[!UICONTROL Informações de detalhes da sessão]](https://github.com/adobe/xdm/blob/master/components/datatypes/sessiondetails.schema.json) | O campo `isAuthorized` foi renomeado para `authorized` e teve seu `type`, que era um booleano, atualizado para uma string. |
 | Tipo de dados | [[!UICONTROL Envio]](https://github.com/adobe/xdm/blob/master/components/datatypes/shipping.schema.json) | Vários novos campos foram adicionados: `shipDate`, `trackingNumber`, e `trackingURL`. |

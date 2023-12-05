@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Processamento de consentimento no Adobe Experience Platform
 description: Saiba como processar sinais de consentimento do cliente no Adobe Experience Platform usando o padrão Adobe 2.0.
 exl-id: cd76a3f6-ae55-4d75-9b30-900fadb4664f
-source-git-commit: 139d6a6632532b392fdf8d69c5c59d1fd779a6d1
+source-git-commit: d23f1cc9dd0155aceae78bf938d35463e9c38181
 workflow-type: tm+mt
-source-wordcount: '1568'
+source-wordcount: '1557'
 ht-degree: 0%
 
 ---
@@ -93,7 +93,7 @@ Depois de configurar o CMP para acompanhar eventos de alteração de consentimen
 
 Se as preferências de consentimento do cliente forem necessárias no aplicativo móvel, você poderá integrar o SDK móvel do Experience Platform para recuperar e atualizar as configurações de consentimento, enviando-as para a Platform sempre que a API de consentimento for chamada.
 
-Consulte a documentação do SDK móvel para [configuração da extensão Consent mobile](https://developer.adobe.com/client-sdks/documentation/consent-for-edge-network/) e [uso da API de consentimento](https://developer.adobe.com/client-sdks/documentation/consent-for-edge-network/api-reference/). Para obter mais detalhes sobre como lidar com questões de privacidade usando o SDK móvel, consulte a seção [Privacidade e o RGPD](https://developer.adobe.com/client-sdks/documentation/resources/privacy-and-gdpr/).
+Consulte a documentação do SDK móvel para [configuração da extensão Consent mobile](https://developer.adobe.com/client-sdks/documentation/consent-for-edge-network/) e [uso da API de consentimento](https://developer.adobe.com/client-sdks/documentation/consent-for-edge-network/api-reference/). Para obter mais detalhes sobre como lidar com questões de privacidade usando o SDK móvel, consulte a seção [Privacidade e o RGPD](https://developer.adobe.com/client-sdks/resources/privacy-and-gdpr/).
 
 ### Assimilar dados de consentimento compatíveis com XDM diretamente {#batch}
 

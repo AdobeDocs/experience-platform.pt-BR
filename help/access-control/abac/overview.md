@@ -3,10 +3,10 @@ keywords: Experience Platform;página inicial;tópicos populares;controle de ace
 title: Visão Geral do Controle de Acesso Baseado em Atributo
 description: Este documento fornece informações sobre o controle de acesso baseado em atributos no Adobe Experience Platform
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: 36e38824963139414f2803ef4127706d1e521d1a
+source-git-commit: 44ffcc09edcfe35bdd456b509fac6f096ef8e022
 workflow-type: tm+mt
-source-wordcount: '1847'
-ht-degree: 17%
+source-wordcount: '1840'
+ht-degree: 13%
 
 ---
 
@@ -46,11 +46,11 @@ O controle de acesso baseado em atributos envolve os seguintes componentes:
 
 >[!IMPORTANT]
 >
->Assim que sua organização for habilitada para o controle de acesso baseado em atributos, você poderá começar a usar Permissões no Adobe Experience Cloud, em vez de Perfis de produto no Adobe Admin Console, para gerenciar permissões para usuários, funcionalidades, rótulos e outros recursos em sua organização.
+>Quando sua organização estiver habilitada para o controle de acesso baseado em atributos, você poderá começar a usar Permissões no Adobe Experience Cloud, em vez de Funções no Adobe Admin Console, para gerenciar permissões para usuários, funcionalidades, rótulos e outros recursos em sua organização.
 
 Permissões é a área do Experience Cloud em que os administradores podem definir funções de usuário e políticas de acesso para gerenciar permissões de acesso para recursos e objetos em um aplicativo de produto.
 
-Através das permissões da , , é possível criar e gerenciar funções, bem como atribuir as permissões de recurso desejadas para essas funções. As permissões também permitem gerenciar rótulos, sandboxes e usuários associados a uma função específica. Para obter mais informações, consulte [Guia de permissões](ui/browse.md).
+Através das Permissões, é possível criar e gerenciar funções, bem como atribuir as permissões de recurso desejadas para essas funções. As permissões também permitem gerenciar rótulos, sandboxes e usuários associados a uma função específica. Para obter mais informações, consulte [Guia de permissões](ui/browse.md).
 
 ## API de controle de acesso baseado em atributo
 
@@ -62,7 +62,7 @@ As seções a seguir fornecem informações sobre como o controle de acesso base
 
 ### Controle de acesso
 
-A Platform utiliza [Adobe Admin Console](https://adminconsole.adobe.com) perfis de produto para vincular usuários com permissões e sandboxes. As permissões controlam o acesso a uma variedade de recursos da Platform, incluindo modelagem de dados, gerenciamento de perfis e administração de sandbox. Assim que sua organização for habilitada para o controle de acesso baseado em atributos, você poderá começar a usar Permissões no Adobe Experience Cloud, em vez de Perfis de produto no Adobe Admin Console, para gerenciar permissões para usuários, funcionalidades, rótulos e outros recursos em sua organização.
+A Platform utiliza [Adobe Admin Console](https://adminconsole.adobe.com) funções para vincular usuários com permissões e sandboxes. As permissões controlam o acesso a uma variedade de recursos da Platform, incluindo modelagem de dados, gerenciamento de perfis e administração de sandbox. Quando sua organização estiver habilitada para o controle de acesso baseado em atributos, você poderá começar a usar Permissões no Adobe Experience Cloud, em vez de Funções no Adobe Admin Console, para gerenciar permissões para usuários, funcionalidades, rótulos e outros recursos em sua organização.
 
 Há disponibilidade limitada de controle de acesso baseado em atributos para clientes que compram os Healthcare and/ou Privacy Shields. Os recursos dessa funcionalidade incluem:
 
@@ -74,13 +74,13 @@ Os workflows de administração de todos os aplicativos alimentados por Experien
 
 >[!IMPORTANT]
 >
->Os perfis de produtos são migrados automaticamente para a interface de Permissões quando a organização é habilitada. Os perfis de produto no Admin Console permanecerão como estão por enquanto. Por favor **não** modifique os perfis de produto após habilitar a organização.
+>Suas funções são migradas automaticamente para a interface de Permissões quando a organização é habilitada. As funções no Admin Console permanecerão como estão por enquanto. Por favor **não** modifique suas funções depois que sua organização for habilitada.
 
 Para obter mais informações sobre controle de acesso, consulte a [visão geral do controle de acesso](../home.md).
 
 ### Destinos {#destinations}
 
-[!DNL Destinations] são integrações pré-construídas com plataformas de destino que permitem a ativação perfeita de dados da Platform. É possível usar destinos para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas de email, publicidade direcionada e muitos outros casos de uso.
+[!DNL Destinations] são integrações pré-criadas com plataformas de destino que permitem a ativação contínua de dados da Platform. É possível usar destinos para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas de email, publicidade direcionada e muitos outros casos de uso.
 
 Como administrador, você pode usar as funcionalidades de controle de acesso baseado em atributos para:
 
@@ -109,7 +109,7 @@ Para obter mais informações sobre [!DNL Identity Service], consulte o [[!DNL I
 
 ### Perfil do cliente em tempo real
 
-A Platform permite gerar experiências coordenadas, consistentes e relevantes para seus clientes, independentemente de onde ou quando eles interagem com sua marca. Com o Perfil do cliente em tempo real, é possível ter uma visão integral de cada cliente ao combinar dados de vários canais, incluindo online, offline, CRM e de terceiros. O Perfil permite consolidar dados diferentes do cliente em uma visualização unificada, oferecendo uma conta acionável com carimbo de data e hora de cada interação com o cliente.
+O Platform permite gerar experiências coordenadas, consistentes e relevantes para seus clientes, independentemente de onde e quando eles interagem com sua marca. Com o Perfil do cliente em tempo real, é possível ter uma visão integral de cada cliente ao combinar dados de vários canais, incluindo online, offline, CRM e de terceiros. O Perfil permite consolidar dados diferentes do cliente em uma visualização unificada, oferecendo uma conta acionável com carimbo de data e hora de cada interação com o cliente.
 
 Como administrador, você pode usar as funcionalidades de controle de acesso baseado em atributos para:
 

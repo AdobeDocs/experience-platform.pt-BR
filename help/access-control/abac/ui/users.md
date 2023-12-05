@@ -3,10 +3,10 @@ keywords: Experience Platform;página inicial;tópicos populares;controle de ace
 title: Usuários do gerenciador de controle de acesso baseado em atributos
 description: Este documento fornece informações sobre como gerenciar usuários e grupos de usuários por meio da interface de Permissões no Adobe Experience Cloud
 exl-id: 16450867-040a-4be1-a6c0-f03d0a1b90ba
-source-git-commit: fa4786b081b46c8f3c0030282ae3900891fbd652
+source-git-commit: 44ffcc09edcfe35bdd456b509fac6f096ef8e022
 workflow-type: tm+mt
-source-wordcount: '218'
-ht-degree: 1%
+source-wordcount: '217'
+ht-degree: 0%
 
 ---
 
@@ -32,7 +32,7 @@ Selecione o **[!UICONTROL Funções]** para exibir as funções às quais o usu�
 >
 >Somente administradores do sistema têm a capacidade de exibir e gerenciar credenciais de API nas Permissões.
 
-A transição para as permissões do Adobe Experience Platform tem etapas adicionais que precisam ser concluídas para o fluxo de trabalho da API do desenvolvedor, que anteriormente dependia de perfis de produto. Consulte o guia sobre [Autenticação de API](../../../landing/api-authentication.md) para obter mais informações.
+A transição para as permissões do Adobe Experience Platform tem etapas adicionais que precisam ser concluídas para o fluxo de trabalho da API do desenvolvedor, que anteriormente dependia de funções. Consulte o guia sobre [Autenticação de API](../../../landing/api-authentication.md) para obter mais informações.
 
 ## Próximas etapas
 

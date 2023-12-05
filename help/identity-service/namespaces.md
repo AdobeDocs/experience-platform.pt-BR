@@ -2,10 +2,10 @@
 title: Visão geral do namespace de identidade
 description: Saiba mais sobre namespaces de identidade no Serviço de identidade.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 98482bfdd54b70cde73c3512f8237c7862e41281
 workflow-type: tm+mt
-source-wordcount: '1691'
-ht-degree: 9%
+source-wordcount: '1787'
+ht-degree: 7%
 
 ---
 
@@ -23,11 +23,24 @@ Os namespaces de identidade exigem uma compreensão de vários serviços da Adob
 
 ## Noções básicas sobre namespaces de identidade
 
+![Uma ilustração do fluxo de trabalho de dados com o Serviço de identidade.](images/identity-service-stitching.png)
+
 Uma identidade totalmente qualificada inclui dois componentes: um **valor de identidade** e uma **namespace de identidade**. Por exemplo, se o valor de uma identidade for `scott@acme.com`, um namespace fornece contexto para esse valor, diferenciando-o como um endereço de email. Da mesma forma, um namespace pode distinguir `555-123-456` como um número de telefone, e `3126ABC` como uma ID de CRM. Essencialmente, **um namespace fornece contexto a uma determinada identidade**. Ao corresponder dados de registro em fragmentos de perfil, como quando [!DNL Real-Time Customer Profile] mescla os dados do perfil, o valor da identidade e o namespace devem corresponder.
 
 Por exemplo, dois fragmentos de perfil podem conter IDs primárias diferentes, mas compartilham o mesmo valor para o namespace &quot;Email&quot;. Portanto, o Experience Platform pode ver que esses fragmentos são realmente o mesmo indivíduo e reúne os dados no gráfico de identidade do indivíduo.
 
-![](images/identity-service-stitching.png)
+>[!BEGINSHADEBOX]
+
+**Namespace de identidade explicado**
+
+Outra maneira de entender melhor o conceito de namespace é considerar exemplos do mundo real, como cidades e seus estados correspondentes. Por exemplo, Portland, Maine e Portland, no Oregon, são dois lugares diferentes nos Estados Unidos. Enquanto as cidades compartilham o mesmo nome, o estado opera como um namespace e fornece o contexto necessário que distingue as duas cidades uma da outra.
+
+Aplicar a mesma lógica ao Serviço de identidade:
+
+* Acesso rápido, o valor de identidade de: `1-234-567-8900` pode parecer um número de telefone. No entanto, de uma perspectiva do sistema, esse valor poderia ter sido configurado como uma ID do CRM. O Serviço de identidade não teria como aplicar o contexto necessário a esse valor de identidade sem um namespace correspondente.
+* Outro exemplo é o valor de identidade de: `john@gmail.com`. Embora possa ser facilmente considerado que esse valor de identidade é um email, é totalmente possível que ele esteja configurado como uma ID de CRM de namespace personalizada. Com o namespace, você pode distinguir `Email:john@gmail.com` de `CRM ID:john@gmail.com`.
+
+>[!ENDSHADEBOX]
 
 ### Componentes de um namespace
 
@@ -61,7 +74,7 @@ Os seguintes tipos de identidade estão disponíveis no Experience Platform:
 | ID entre dispositivos | As IDs entre dispositivos identificam um indivíduo e geralmente vinculam outras IDs. Os exemplos incluem uma ID de logon, uma ID de CRM e uma ID de fidelidade. Isso é uma indicação para [!DNL Identity Service] para lidar com o valor de forma sensível. |
 | ID do dispositivo | As IDs de dispositivo identificam dispositivos de hardware, como IDFA (iPhone e iPad), GAID (Android) e RIDA (Roku), e podem ser compartilhadas por várias pessoas no domicílio. |
 | Endereço de email | Os endereços de email são frequentemente associados a uma única pessoa e, portanto, podem ser usados para identificá-la em diferentes canais. Identidades desse tipo incluem informações de identificação pessoal (PII). Isso é uma indicação para [!DNL Identity Service] para lidar com o valor de forma sensível. |
-| Identificador não de pessoas | IDs que não sejam de pessoas são usadas para armazenar identificadores que exigem namespaces, mas não estão conectados a um cluster de pessoas. Por exemplo, um SKU de produto, dados relacionados a produtos, organizações ou lojas. |
+| Identificador não pessoal | IDs que não sejam de pessoas são usadas para armazenar identificadores que exigem namespaces, mas não estão conectados a um cluster de pessoas. Por exemplo, um SKU de produto, dados relacionados a produtos, organizações ou lojas. |
 | ID de parceiro | <ul><li>IDs de parceiro são identificadores usados por parceiros de dados para representar pessoas. As IDs de parceiros geralmente são pseudônimas para não revelar a verdadeira identidade de uma pessoa e podem ser probabilísticas. No Real-time Customer Data Platform, as IDs de parceiros são usadas principalmente para ativação expandida do público-alvo e enriquecimento de dados, e não para criar vinculações de gráficos de identidade.</li><li>Os gráficos de identidade não são gerados ao assimilar uma identidade que inclui um namespace de identidade especificado como tipo de ID do parceiro.</li><li>A falha na assimilação de dados do parceiro usando o tipo de identidade da ID do parceiro pode resultar no alcance das limitações de gráfico do sistema no Serviço de identidade, bem como na mesclagem indesejada de perfis.</li><ul> |
 | Número de telefone | Os números de telefone são frequentemente associados a uma única pessoa e, portanto, podem ser usados para identificá-la em diferentes canais. As identidades desse tipo incluem PII. Isso é uma indicação para [!DNL Identity Service] para lidar com o valor de forma sensível. |
 
@@ -79,7 +92,7 @@ Os seguintes namespaces padrão são fornecidos para uso por todas as organizaç
 | Adobe Analytics (ID herdada) | Um namespace que representa o Adobe Analytics. Consulte o seguinte documento em [Namespaces do Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-namespaces.html#namespaces) para obter mais informações. |
 | Apple IDFA (ID para anunciantes) | Um namespace que representa a Apple ID para anunciantes. Consulte o seguinte documento em [anúncios baseados em interesses](https://support.apple.com/en-us/HT202074) para obter mais informações. |
 | Serviço de notificação por push da Apple | Um namespace que representa identidades coletadas usando o serviço de notificação por push da Apple. Consulte o seguinte documento em [Serviço de notificação por push da Apple](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html#//apple_ref/doc/uid/TP40008194-CH8-SW1) para obter mais informações. |
-| CORE | Um namespace que representa o Adobe Audience Manager. Esse namespace também pode ser chamado pelo nome herdado: &quot;Adobe AudienceManager&quot;. Consulte o seguinte documento em [IDs do Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/data-privacy-reference/data-privacy-ids.html#aam-ids) para obter mais informações. |
+| NÚCLEO | Um namespace que representa o Adobe Audience Manager. Esse namespace também pode ser chamado pelo nome herdado: &quot;Adobe AudienceManager&quot;. Consulte o seguinte documento em [IDs do Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/data-privacy-reference/data-privacy-ids.html#aam-ids) para obter mais informações. |
 | ECID | Um namespace que representa a ECID. Esse namespace também pode ser referenciado pelos seguintes aliases: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Consulte o seguinte documento em [ECID](./ecid.md) para obter mais informações. |
 | Email | Um namespace que representa um endereço de email. Esse tipo de namespace é frequentemente associado a uma única pessoa e, portanto, pode ser usado para identificá-la em diferentes canais. |
 | Emails (SHA256, em letras minúsculas) | Um namespace para o endereço de email com hash prévio. Os valores fornecidos neste namespace são convertidos em minúsculas antes do hash com SHA256. Espaços à esquerda e à direita precisam ser cortados antes da normalização de um endereço de email. Esta configuração não pode ser alterada retroativamente. Consulte o seguinte documento em [Suporte a hash SHA 256](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html#hashing-support) para obter mais informações. |

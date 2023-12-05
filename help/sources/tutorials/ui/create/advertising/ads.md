@@ -2,10 +2,10 @@
 title: Criar uma conexão de origem de anúncios do Google na interface
 description: Saiba como criar uma conexão de origem do Google Ads usando a interface do usuário do Adobe Experience Platform.
 exl-id: 33dd2857-aed3-4e35-bc48-1c756a8b3638
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: 12ddf87d594b7e25a0356cd419e990b262c1734e
 workflow-type: tm+mt
-source-wordcount: '682'
-ht-degree: 1%
+source-wordcount: '666'
+ht-degree: 0%
 
 ---
 
@@ -35,11 +35,11 @@ Para acessar a plataforma da conta do Google Ads, é necessário fornecer os seg
 | Credencial | Descrição |
 | ---------- | ----------- |
 | ID de cliente do cliente | A ID do cliente é o número da conta que corresponde à conta do cliente do Google Ads que você deseja gerenciar com a API do Google Ads. Essa ID segue o modelo de `123-456-7890`. |
-| ID do cliente de logon | A ID do cliente de logon é o número da conta que corresponde à sua conta de gerente do Google Ads e é usada para buscar dados de relatório de um cliente operacional específico. Para obter mais informações sobre a ID do cliente de logon, leia a [Documentação da API do Google Ads](https://developers.google.com/google-ads/api/docs/migration/login-customer-id). |
+| ID do cliente de logon | A ID do cliente de logon é o número da conta que corresponde à sua conta de gerente do Google Ads e é usada para buscar dados de relatório de um cliente operacional específico. Para obter mais informações sobre a ID do cliente de logon, leia a [Documentação da API do Google Ads](https://developers.google.com/search-ads/reporting/concepts/login-customer-id). |
 | Token do desenvolvedor | O token do desenvolvedor permite acessar a API do Google Ads. Você pode usar o mesmo token do desenvolvedor para fazer solicitações em relação a todas as suas contas do Google Ads. Recupere o token do desenvolvedor até [efetuar login em sua conta de gerente](https://ads.google.com/home/tools/manager-accounts/) e navegue até a página Centro de API. |
 | Atualizar token | O token de atualização faz parte de [!DNL OAuth2] autenticação. Esse token permite gerar novamente os tokens de acesso após a expiração. |
 | ID do cliente | A ID do cliente é usada em conjunto com o segredo do cliente como parte de [!DNL OAuth2] autenticação. Juntas, a ID do cliente e a senha do cliente permitem que o aplicativo opere em nome da sua conta, identificando o aplicativo na Google. |
-| Segredo do cliente | O segredo do cliente é usado em conjunto com a ID do cliente como parte de [!DNL OAuth2] autenticação. Juntas, a ID do cliente e a senha do cliente permitem que o aplicativo opere em nome da sua conta, identificando o aplicativo na Google. |
+| Client secret | O segredo do cliente é usado em conjunto com a ID do cliente como parte de [!DNL OAuth2] autenticação. Juntas, a ID do cliente e a senha do cliente permitem que o aplicativo opere em nome da sua conta, identificando o aplicativo na Google. |
 
 Leia o documento de visão geral da API para [mais informações sobre a introdução aos anúncios do Google](https://developers.google.com/google-ads/api/docs/first-call/overview).
 

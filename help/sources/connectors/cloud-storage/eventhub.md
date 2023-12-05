@@ -3,9 +3,9 @@ title: Visão geral do conector de origem dos Hubs de eventos do Azure
 description: Saiba como conectar os Hubs de Eventos do Azure ao Adobe Experience Platform usando APIs ou a interface do usuário.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: b4d4bc7f-2241-482d-a5c2-4422c31705bf
-source-git-commit: 087100b23f95cef527a507fb11440467feb78c9e
+source-git-commit: 12ddf87d594b7e25a0356cd419e990b262c1734e
 workflow-type: tm+mt
-source-wordcount: '538'
+source-wordcount: '517'
 ht-degree: 0%
 
 ---
@@ -36,7 +36,7 @@ Para aumentar a taxa de velocidade de assimilação no lado da Platform, a Platf
 
 ## Usar uma rede virtual para se conectar a [!DNL Event Hubs] para a Platform
 
-Você pode configurar uma rede virtual para se conectar [!DNL Event Hubs] para a Platform enquanto as medidas de firewall estão ativadas. Para configurar uma rede virtual, vá para [[!DNL Event Hubs] documento de conjunto de regras de rede](https://docs.microsoft.com/en-us/rest/api/eventhub/preview/namespaces-network-rule-set/create-or-update-network-rule-set#code-try-0) e siga as etapas listadas abaixo:
+Você pode configurar uma rede virtual para se conectar [!DNL Event Hubs] para a Platform enquanto as medidas de firewall estão ativadas. Para configurar uma rede virtual, vá para [[!DNL Event Hubs] documento de conjunto de regras de rede](https://learn.microsoft.com/en-us/azure/event-hubs/network-security) e siga as etapas listadas abaixo:
 
 * Selecionar **Experimente** no painel REST API;
 * Autentique seu [!DNL Azure] conta usando suas credenciais no mesmo navegador;
@@ -117,7 +117,7 @@ Consulte a lista abaixo para ver as diferentes regiões das sub-redes da Platfor
 }
 ```
 
-Consulte o seguinte [[!DNL Event Hubs] documento](https://docs.microsoft.com/en-us/rest/api/eventhub/preview/namespaces-network-rule-set/create-or-update-network-rule-set) para obter mais informações sobre conjuntos de regras de rede.
+Consulte o seguinte [[!DNL Event Hubs] documento](https://learn.microsoft.com/en-us/azure/event-hubs/network-security) para obter mais informações sobre conjuntos de regras de rede.
 
 ## Conectar [!DNL Event Hubs] para a Platform
 

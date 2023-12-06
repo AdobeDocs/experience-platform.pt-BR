@@ -1,16 +1,15 @@
 ---
-keywords: Google ads;google ads;google adwords;Google AdWords;Google Adwords
 title: Conexão do Google Ads
 description: O Google Ads, anteriormente conhecido como Google AdWords, é um serviço de publicidade on-line que permite que as empresas façam anúncios pagos por clique em pesquisas baseadas em texto, exibições gráficas, vídeos do YouTube e exibições móveis no aplicativo.
 exl-id: 7143f476-49a8-42aa-bfb4-b11fc2b8f5c3
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 1ec9559e762b44dd8d7639aba0a54af7ce221666
 workflow-type: tm+mt
-source-wordcount: '972'
-ht-degree: 3%
+source-wordcount: '950'
+ht-degree: 2%
 
 ---
 
-# Conexão com o [!DNL Google Ads]
+# [!DNL Google Ads] conexão
 
 ## Visão geral {#overview}
 
@@ -29,7 +28,7 @@ Observe os seguintes detalhes, específicos do [!DNL Google Ads] Destinos:
 
 ## Identidades suportadas {#supported-identities}
 
-[!DNL Google Ad Manager] O oferece suporte à ativação das identidades descritas na tabela abaixo.
+[!DNL Google Ads] O oferece suporte à ativação das identidades descritas na tabela abaixo.
 
 | Identidade de destino | Descrição | Considerações |
 |---|---|---|

@@ -3,12 +3,13 @@ solution: Experience Platform
 title: Introdução às APIs do Media Edge
 description: Introdução às APIs do Media Edge
 exl-id: 76022dea-408b-4d8e-abd4-1a6de81beceb
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 3bf13c3f5ac0506ac88effc56ff68758deb5f566
 workflow-type: tm+mt
-source-wordcount: '946'
-ht-degree: 5%
+source-wordcount: '806'
+ht-degree: 2%
 
 ---
+
 
 # Introdução à API do Media Edge
 

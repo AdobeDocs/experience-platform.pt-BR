@@ -2,10 +2,10 @@
 title: Autenticação
 description: Saiba como configurar a autenticação para a API do servidor de rede de borda do Adobe Experience Platform.
 exl-id: 73c7a186-9b85-43fe-a586-4c6260b6fa8c
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: 3bf13c3f5ac0506ac88effc56ff68758deb5f566
 workflow-type: tm+mt
-source-wordcount: '636'
-ht-degree: 2%
+source-wordcount: '633'
+ht-degree: 1%
 
 ---
 

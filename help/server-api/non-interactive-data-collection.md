@@ -2,12 +2,13 @@
 title: Coleção de dados não interativa
 description: Saiba como a API do servidor de rede de borda da Adobe Experience Platform realiza a coleta de dados não interativa.
 exl-id: 1a704e8f-8900-4f56-a843-9550007088fe
-source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
+source-git-commit: 3bf13c3f5ac0506ac88effc56ff68758deb5f566
 workflow-type: tm+mt
 source-wordcount: '217'
-ht-degree: 5%
+ht-degree: 4%
 
 ---
+
 
 # Coleção de dados não interativa
 
@@ -92,7 +93,6 @@ curl -X POST "https://server.adobedc.net/ee/v2/collect?dataStreamId={DATASTREAM_
 | `dataStreamId` | `String` | Sim | A ID da sequência de dados usada pelo ponto de extremidade de coleta de dados. |
 | `requestId` | `String` | Não | Forneça uma ID de rastreamento de solicitação externa. Se nenhum for fornecido, a rede de borda gerará um para você e o retornará no corpo/cabeçalhos de resposta. |
 | `silent` | `Boolean` | Não | Parâmetro booliano opcional que indica se a Rede de borda deve retornar um `204 No Content` resposta com uma carga vazia ou não. Erros críticos são relatados usando o código de status HTTP e a carga correspondentes. |
-
 
 ### Resposta {#response}
 

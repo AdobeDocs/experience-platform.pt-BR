@@ -4,10 +4,10 @@ description: Saiba como mapear variáveis manualmente no Adobe Analytics usando 
 seo-description: Manually map variables into Adobe Analytics using processing rules with Web SDK
 keywords: adobe analytics;análise;variáveis;mapeamento variáveis;mapear variáveis;contextData;contexto Dados;Regras de processamento;regras;xdm;esquema;
 exl-id: 395050c1-8d39-4da8-acea-6e618ed662dd
-source-git-commit: 9392a90b70699b79949095e178ea77dd34d313a3
+source-git-commit: 3bf13c3f5ac0506ac88effc56ff68758deb5f566
 workflow-type: tm+mt
-source-wordcount: '391'
-ht-degree: 25%
+source-wordcount: '333'
+ht-degree: 12%
 
 ---
 
@@ -52,8 +52,7 @@ Todos os dados coletados pela rede de borda podem ser acessados pelas [regras de
 
 Por exemplo, na regra a seguir, o Adobe Analytics é definido para preencher **Condições de pesquisa interna (eVar 2)** com os dados associados a **a.x._atag.search.term(Dados de contexto)**.
 
-![](assets/examplerule.png)
-
+![Imagem da interface do usuário do Analytics mostrando um exemplo de regra.](assets/examplerule.png)
 
 ## Esquema XDM
 

@@ -2,9 +2,9 @@
 title: Tratamento de erros
 description: Saiba mais sobre os possíveis erros que você pode encontrar ao executar solicitações de API para a API do servidor da rede de borda do Adobe Experience Platform.
 exl-id: f6b8435c-b163-4046-b5fb-50a13a897637
-source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
+source-git-commit: 3bf13c3f5ac0506ac88effc56ff68758deb5f566
 workflow-type: tm+mt
-source-wordcount: '765'
+source-wordcount: '766'
 ht-degree: 3%
 
 ---
@@ -117,7 +117,6 @@ Os erros não fatais são representados na variável _Detalhes do problema_ mas 
 ```
 
 ## Manuseio `4xx` e `5xx` Respostas
-
 
 | Código de erro | Descrição |
 |---|---|

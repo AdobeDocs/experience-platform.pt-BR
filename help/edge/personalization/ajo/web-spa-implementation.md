@@ -2,9 +2,9 @@
 title: Implementação de aplicativos de página única
 description: Saiba como implementar visualizações do SPA no Adobe Journey Optimizer
 exl-id: 1883251b-2d59-46d3-ac74-b8657edd0325
-source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
+source-git-commit: 3bf13c3f5ac0506ac88effc56ff68758deb5f566
 workflow-type: tm+mt
-source-wordcount: '859'
+source-wordcount: '866'
 ht-degree: 1%
 
 ---
@@ -92,7 +92,7 @@ Esta seção descreve dois exemplos mostrando como chamar a variável `sendEvent
 
 A equipe de marketing deseja executar testes A/B em toda a página inicial.
 
-![](assets/web-spa-home.png)
+![Página de exemplo do aplicativo de página única.](assets/web-spa-home.png)
 
 Para executar testes A/B em todo o site inicial, `sendEvent()` deve ser chamado com o XDM `viewName` definir como `home`:
 
@@ -137,7 +137,7 @@ history.listen(onViewChange);
 
 A equipe de marketing deseja personalizar a segunda linha de produtos alterando a cor do rótulo de preço para vermelho depois que um usuário clica para ver todos os produtos masculinos.
 
-![](assets/web-spa-men-products.png)
+![Página de exemplo de aplicativo de página única com produtos personalizados.](assets/web-spa-men-products.png)
 
 ```js
 function onViewChange(viewName) {

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Filtrar dados do catálogo usando parâmetros de consulta
 description: A API do Serviço de catálogo permite que os dados de resposta sejam filtrados por meio do uso de parâmetros de consulta de solicitação. Parte das práticas recomendadas para o Catálogo é usar filtros em todas as chamadas de API, pois reduzem a carga da API e ajudam a melhorar o desempenho geral.
 exl-id: 0cdb5a7e-527b-46be-9ad8-5337c8dc72b7
-source-git-commit: 24db94b959d1bad925af1e8e9cbd49f20d9a46dc
+source-git-commit: 75099d39fbdb9488105a9254bbbcca9b12349238
 workflow-type: tm+mt
-source-wordcount: '2099'
+source-wordcount: '2117'
 ht-degree: 2%
 
 ---
@@ -35,7 +35,7 @@ GET /{OBJECT_TYPE}?limit={LIMIT}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{OBJECT_TYPE}` | O tipo de [!DNL Catalog] objeto a ser recuperado. Os objetos válidos são: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | O tipo de [!DNL Catalog] objeto a ser recuperado. Os objetos válidos são: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{LIMIT}` | Um número inteiro que indica o número de objetos a serem retornados, variando de 1 a 100. |
 
 **Solicitação**
@@ -60,12 +60,12 @@ Uma resposta bem-sucedida retorna uma lista de conjuntos de dados, limitada ao n
     "5ba9452f7de80400007fc52a": {
         "name": "Sample Dataset 1",
         "description": "Description of dataset.",
-        "files": "@/dataSets/5ba9452f7de80400007fc52a/views/5ba9452f7de80400007fc52b/files"
+        "files": "@/dataSetFiles?dataSetId=5ba9452f7de80400007fc52a"
     },
     "5bb276b03a14440000971552": {
         "name": "Sample Dataset 2",
         "description": "Description of dataset.",
-        "files": "@/dataSets/5bb276b03a14440000971552/views/5bb276b01250b012f9acc75b/files"
+        "files": "@/dataSetFiles?dataSetId=5bb276b03a14440000971552"
     },
     "5bceaa4c26c115000039b24b": {
         "name": "Sample Dataset 3"
@@ -103,7 +103,7 @@ GET /{OBJECT_TYPE}/{OBJECT_ID}?properties={PROPERTY_1},{PROPERTY_2},{PROPERTY_3}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{OBJECT_TYPE}` | O tipo de [!DNL Catalog] objeto a ser recuperado. Os objetos válidos são: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | O tipo de [!DNL Catalog] objeto a ser recuperado. Os objetos válidos são: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{PROPERTY}` | O nome de um atributo a ser incluído no corpo da resposta. |
 | `{OBJECT_ID}` | O identificador exclusivo de um [!DNL Catalog] objeto sendo recuperado. |
 
@@ -172,7 +172,7 @@ GET /{OBJECT_TYPE}?start={OFFSET}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{OBJECT_TYPE}` | O tipo de objeto de Catálogo a ser recuperado. Os objetos válidos são: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | O tipo de objeto de Catálogo a ser recuperado. Os objetos válidos são: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{OFFSET}` | Um número inteiro que indica o número de objetos para deslocar a resposta. |
 
 **Solicitação**
@@ -393,7 +393,7 @@ GET /{OBJECT_TYPE}?orderBy={PROPERTY_NAME_1},desc:{PROPERTY_NAME_2}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{OBJECT_TYPE}` | O tipo de objeto de Catálogo a ser recuperado. Os objetos válidos são: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | O tipo de objeto de Catálogo a ser recuperado. Os objetos válidos são: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{PROPERTY_NAME}` | O nome de uma propriedade pela qual classificar os resultados. |
 
 **Solicitação**
@@ -474,7 +474,7 @@ GET /{OBJECT_TYPE}?{PROPERTY_NAME}=!{VALUE_1},{VALUE_2},{VALUE_3}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{OBJECT_TYPE}` | O tipo de [!DNL Catalog] objeto a ser recuperado. Os objetos válidos são: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | O tipo de [!DNL Catalog] objeto a ser recuperado. Os objetos válidos são: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{PROPERTY_NAME}` | O nome da propriedade cujo valor você deseja filtrar. |
 | `{VALUE}` | Um valor de propriedade que determina quais resultados incluir (ou excluir, dependendo da consulta). |
 
@@ -546,14 +546,14 @@ GET /{OBJECT_TYPE}?property={CONDITION}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{OBJECT_TYPE}` | O tipo de [!DNL Catalog] objeto a ser recuperado. Os objetos válidos são: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | O tipo de [!DNL Catalog] objeto a ser recuperado. Os objetos válidos são: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{CONDITION}` | Uma expressão condicional que indica qual propriedade consultar e como seu valor deve ser avaliado. Os exemplos são fornecidos abaixo. |
 
 O valor de `property` O parâmetro suporta vários tipos diferentes de expressões condicionais. A tabela a seguir descreve a sintaxe básica para expressões suportadas:
 
 | Símbolo(s) | Descrição | Exemplo |
 | --- | --- | --- |
-| (None) | Declarar o nome da propriedade sem operador retorna somente objetos nos quais a propriedade existe, independentemente do seu valor. | `property=name` |
+| (Nenhum) | Declarar o nome da propriedade sem operador retorna somente objetos nos quais a propriedade existe, independentemente do seu valor. | `property=name` |
 | ! | Prefixo de um &quot;`!`&quot; ao valor de um `property` O parâmetro retorna somente objetos nos quais a propriedade retorna **não** existe. | `property=!name` |
 | ~ | Retorna somente objetos cujos valores de propriedade (string) correspondam a uma expressão regular fornecida após o til (`~`). | `property=name~^example` |
 | == | Retorna somente objetos cujos valores de propriedade correspondam exatamente à cadeia de caracteres fornecida após o símbolo duplo de igual (`==`). | `property=name==exampleName` |

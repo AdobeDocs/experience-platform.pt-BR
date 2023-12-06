@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Substituir um objeto de catálogo
 description: Você pode substituir o conteúdo de um objeto de Catálogo usando uma solicitação PUT, em que o recurso inteiro é substituído pela carga da solicitação.
 exl-id: cd98d13c-5261-4bff-b5db-af5f06d093c9
-source-git-commit: 2226b1878ef3398554b6cf96ff400cc1767a9e4c
+source-git-commit: 2d6167ee7aaa0b79514be6e532e61602ae5cc640
 workflow-type: tm+mt
 source-wordcount: '173'
 ht-degree: 3%
@@ -27,7 +27,7 @@ PUT /{OBJECT_TYPE}/{OBJECT_ID}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{OBJECT_TYPE}` | O tipo de [!DNL Catalog] objeto a ser substituído. Os objetos válidos são: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | O tipo de [!DNL Catalog] objeto a ser substituído. Os objetos válidos são: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{OBJECT_ID}` | O identificador do objeto específico que você deseja atualizar. |
 
 **Solicitação**
@@ -50,7 +50,7 @@ curl -X PUT \
                 "sample_dataset"
             ]
         },
-        "files": "@/dataSets/5ba9452f7de80400007fc52a/views/5ba9452f7de80400007fc52b/files"
+        "files": "@/dataSetFiles?dataSetId=5ba9452f7de80400007fc52a"
     }'
 ```
 

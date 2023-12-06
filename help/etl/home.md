@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Desenvolvimento de integrações ETL para o Adobe Experience Platform
 description: O guia de integração de ETL descreve as etapas gerais para criar conectores seguros de alto desempenho para o Experience Platform e assimilar dados na plataforma.
 exl-id: 7d29b61c-a061-46f8-a31f-f20e4d725655
-source-git-commit: 76ef5638316a89aee1c6fb33370af943228b75e1
+source-git-commit: b80d8349fc54a955ebb3362d67a482d752871420
 workflow-type: tm+mt
-source-wordcount: '4081'
-ht-degree: 1%
+source-wordcount: '3978'
+ht-degree: 3%
 
 ---
 
@@ -52,11 +52,11 @@ As seções a seguir fornecem informações adicionais que você precisará sabe
 
 ### Leitura de chamadas de API de amostra
 
-Este guia fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O exemplo de JSON retornado nas respostas da API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de exemplo, consulte a seção sobre [como ler chamadas de API de exemplo](../landing/troubleshooting.md#how-do-i-format-an-api-request) no [!DNL Experience Platform] guia de solução de problemas.
+Este manual fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e conteúdos de solicitação formatados corretamente. Também fornece exemplos de JSON retornado nas respostas da API. Para obter informações sobre as convenções usadas na documentação para chamadas de API de exemplo, consulte a seção sobre [como ler chamadas de API de exemplo](../landing/troubleshooting.md#how-do-i-format-an-api-request) no [!DNL Experience Platform] guia de solução de problemas.
 
-### Coletar valores para cabeçalhos obrigatórios
+### Coletar valores para cabeçalhos necessários
 
-Para fazer chamadas para [!DNL Platform] APIs, primeiro conclua o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). Concluir o tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todos os [!DNL Experience Platform] Chamadas de API, conforme mostrado abaixo:
+Para fazer chamadas para [!DNL Platform] APIs, primeiro conclua o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). Concluir o tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API da [!DNL Experience Platform], conforme mostrado abaixo:
 
 - Autorização: Portador `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
@@ -70,7 +70,7 @@ Todos os recursos em [!DNL Experience Platform] são isolados em sandboxes virtu
 >
 >Para obter mais informações sobre sandboxes no [!DNL Platform], consulte o [documentação de visão geral da sandbox](../sandboxes/home.md).
 
-Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabeçalho adicional:
+Todas as solicitações que contêm um conteúdo (POST, PUT, PATCH) exigem um cabeçalho adicional:
 
 - Tipo de conteúdo: application/json
 
@@ -196,7 +196,7 @@ curl -X GET \
 
 O formato da resposta depende do tipo de cabeçalho Aceitar enviado na solicitação. As solicitações de pesquisa também exigem uma `version` ser incluído no cabeçalho Aceitar. A tabela a seguir descreve os cabeçalhos Aceitar disponíveis para pesquisas:
 
-| Accept | Descrição |
+| Aceitar | Descrição |
 | ------ | ----------- |
 | `application/vnd.adobe.xed-id+json` | Solicitações de lista (GET), títulos, IDs e versões |
 | `application/vnd.adobe.xed-full+json; version={major version}` | $refs e allOf resolvidos, têm títulos e descrições |
@@ -319,7 +319,7 @@ A resposta incluirá um conjunto de dados (`limit=1`) mostrando a propriedade &q
 ```json
 {
   "5bf479a6a8c862000050e3c7": {
-    "files": "@/dataSets/5bf479a6a8c862000050e3c7/views/5bf479a654f52014cfffe7f1/files"
+    "files": "@/dataSetFiles?dataSetId=5bf479a6a8c862000050e3c7"
   }
 }
 ```
@@ -775,7 +775,7 @@ Por exemplo, se o cliente persistir em um armazenamento de persistência atualiz
 
 Em outros casos, dados fora de ordem podem ser processados por aplicativos/processos downstream que classificam internamente usando um carimbo de data e hora especificado. Nesses casos, as transformações ETL paralelas podem ser viáveis para melhorar os tempos de processamento.
 
-Para lotes de origem, ele dependerá novamente da preferência do cliente e da restrição do consumidor. Se os dados de origem puderem ser coletados em paralelo, independentemente da regência/ordem de uma linha, o processo de transformação poderá criar lotes de processos com um grau mais alto de paralelismo (otimização com base no processamento fora de ordem). Mas se a transformação precisar respeitar carimbos de data e hora ou alterar a ordem de precedência, o agendador/invocador de ferramentas da API de acesso a dados ou ETL terá que garantir que os lotes não sejam processados fora de ordem, quando possível.
+Para lotes de origem, ele dependerá novamente da preferência do cliente e da restrição do consumidor. Se os dados de origem puderem ser coletados em paralelo, independentemente da regência/ordem de uma linha, o processo de transformação poderá criar lotes de processos com um grau mais alto de paralelismo (otimização baseada no processamento fora de ordem). Mas se a transformação precisar respeitar carimbos de data e hora ou alterar a ordem de precedência, o agendador/invocador de ferramentas da API de acesso a dados ou ETL terá que garantir que os lotes não sejam processados fora de ordem, quando possível.
 
 ## Adiamento
 
@@ -787,7 +787,7 @@ A Adobe Experience Platform não identifica dados adiados no momento, portanto, 
 
 | Data | Ação | Descrição |
 | ---- | ------ | ----------- |
-| 2019-01-19 | Propriedade &quot;fields&quot; removida dos conjuntos de dados | Anteriormente, os conjuntos de dados incluíam uma propriedade &quot;fields&quot; que continha uma cópia do esquema. Esse recurso não deve mais ser usado. Se a propriedade &quot;fields&quot; for encontrada, ela deverá ser ignorada e &quot;observedSchema&quot; ou &quot;schemaRef&quot; deverá ser usado em seu lugar. |
-| 2019-03-15 | Propriedade &quot;schemaRef&quot; adicionada aos conjuntos de dados | A propriedade &quot;schemaRef&quot; de um conjunto de dados contém um URI que faz referência ao esquema XDM no qual o conjunto de dados se baseia e representa todos os campos potenciais que podem ser usados pelo conjunto de dados. |
-| 2019-03-15 | Todos os identificadores do usuário final são mapeados para a propriedade &quot;identityMap&quot; | O &quot;identityMap&quot; é um encapsulamento de todos os identificadores exclusivos de um assunto, como CRM ID, ECID ou ID do programa de fidelidade. Este mapa é usado por [[!DNL Identity Service]](../identity-service/home.md) para resolver todas as identidades conhecidas e anônimas de um assunto, formando um único gráfico de identidade para cada usuário final. |
-| 2019-05-30 | EOL e remover a propriedade &quot;schema&quot; dos conjuntos de dados | A propriedade &quot;schema&quot; do conjunto de dados forneceu um link de referência para o esquema usando o modelo obsoleto `/xdms` endpoint na variável [!DNL Catalog] API. Isso foi substituído por um &quot;schemaRef&quot; que fornece a &quot;id&quot;, &quot;version&quot; e &quot;contentType&quot; do esquema conforme referenciado no novo [!DNL Schema Registry] API. |
+| 19/01/2019 | Propriedade &quot;fields&quot; removida dos conjuntos de dados | Anteriormente, os conjuntos de dados incluíam uma propriedade &quot;fields&quot; que continha uma cópia do esquema. Esse recurso não deve mais ser usado. Se a propriedade &quot;fields&quot; for encontrada, ela deverá ser ignorada e &quot;observedSchema&quot; ou &quot;schemaRef&quot; deverá ser usado em seu lugar. |
+| 03-2019-15 | Propriedade &quot;schemaRef&quot; adicionada aos conjuntos de dados | A propriedade &quot;schemaRef&quot; de um conjunto de dados contém um URI que faz referência ao esquema XDM no qual o conjunto de dados se baseia e representa todos os campos potenciais que podem ser usados pelo conjunto de dados. |
+| 03-2019-15 | Todos os identificadores do usuário final são mapeados para a propriedade &quot;identityMap&quot; | O &quot;identityMap&quot; é um encapsulamento de todos os identificadores exclusivos de um assunto, como CRM ID, ECID ou ID do programa de fidelidade. Este mapa é usado por [[!DNL Identity Service]](../identity-service/home.md) para resolver todas as identidades conhecidas e anônimas de um assunto, formando um único gráfico de identidade para cada usuário final. |
+| 30/05/2019 | EOL e remover a propriedade &quot;schema&quot; dos conjuntos de dados | A propriedade &quot;schema&quot; do conjunto de dados forneceu um link de referência para o esquema usando o modelo obsoleto `/xdms` endpoint na variável [!DNL Catalog] API. Isso foi substituído por um &quot;schemaRef&quot; que fornece a &quot;id&quot;, &quot;version&quot; e &quot;contentType&quot; do esquema conforme referenciado no novo [!DNL Schema Registry] API. |

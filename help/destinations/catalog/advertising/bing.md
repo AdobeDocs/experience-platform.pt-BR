@@ -3,14 +3,14 @@ keywords: publicidade; bing;
 title: Conexão com o Microsoft Bing
 description: Com o destino da conexão do Microsoft Bing, você pode executar redirecionamento e campanhas digitais direcionadas por público em toda a Rede de publicidade da Microsoft, incluindo Publicidade de exibição, Pesquisa e Nativo.
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
-source-git-commit: 093ddd1651e15bebf73d007fb05042fbcf02c675
+source-git-commit: a7dbb5e274058a059ae1231281fd9efd509b029f
 workflow-type: tm+mt
-source-wordcount: '690'
+source-wordcount: '684'
 ht-degree: 10%
 
 ---
 
-# Conexão com o [!DNL Microsoft Bing] {#bing-destination}
+# [!DNL Microsoft Bing] conexão {#bing-destination}
 
 ## Visão geral {#overview}
 
@@ -26,9 +26,9 @@ Como profissional de marketing, quero poder usar públicos-alvo criados com o [!
 
 ## Identidades suportadas {#supported-identities}
 
-[!DNL Microsoft Bing] O oferece suporte à ativação das identidades descritas na tabela abaixo. Saiba mais sobre [identidades](/help/identity-service/namespaces.md).
+[!DNL Microsoft Bing] O oferece suporte à ativação de públicos com base nas identidades mostradas na tabela abaixo. Saiba mais sobre [identidades](/help/identity-service/namespaces.md).
 
-| Identidade de destino | Descrição |
+| Identidade | Descrição |
 |---|---|
 | EMPREGADA | ID de publicidade do Microsoft |
 

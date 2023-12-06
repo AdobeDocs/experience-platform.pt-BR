@@ -1,17 +1,40 @@
 ---
 title: Preparo de dados para a coleção de dados
 description: Saiba como mapear seus dados para um esquema de evento do Experience Data Model (XDM) ao configurar uma sequência de dados para os SDKs da web e móvel da Adobe Experience Platform.
-exl-id: 87a70d56-1093-445c-97a5-b8fa72a28ad0
-source-git-commit: 4c9abcefb279c6e8a90744b692d86746a4896d0a
-workflow-type: ht
-source-wordcount: '914'
-ht-degree: 100%
+source-git-commit: 935881ee8c8aedb672bbd6233ea22aa7b26b28a6
+workflow-type: tm+mt
+source-wordcount: '1201'
+ht-degree: 64%
 
 ---
+
 
 # Preparo de dados para a coleção de dados
 
 O Preparo de dados é um serviço da Adobe Experience Platform que permite mapear, transformar e validar dados de e para o [Experience Data Model (XDM)](../xdm/home.md). Ao configurar uma [sequência de dados](./overview.md) habilitada pela Platform, você pode usar os recursos do Preparo de dados para mapear os dados de origem no XDM durante o envio desses dados para a rede de borda da Platform.
+
+Todos os dados enviados de uma página da Web devem chegar ao Experience Platform como XDM. Há três maneiras de traduzir dados de uma camada de dados na página para o XDM aceito pelo Experience Platform:
+
+1. Reformate a camada de dados no XDM na própria página da Web.
+2. Use a funcionalidade de elementos de dados nativos das tags para reformatar o formato de camada de dados existente de uma página da Web no XDM.
+3. Reformate o formato da camada de dados existente de uma página da Web no XDM por meio da Rede de borda, usando o Preparo de dados para a coleção de dados.
+
+Este guia foca na 3ª opção.
+
+## Quando usar o Preparo de dados para a coleção de dados {#when-to-use-data-prep}
+
+Há dois casos de uso em que o Preparo de dados para a coleção de dados é útil:
+
+1. O site tem uma camada de dados bem formada, controlada e mantida, e há uma preferência por enviá-la diretamente para a Rede de borda em vez de usar a manipulação do JavaScript para convertê-la em XDM na página (por meio de elementos de dados de tags ou por manipulação manual do JavaScript).
+2. Um sistema de marcação diferente de Tags é implantado no site.
+
+## Enviar uma camada de dados existente para a Rede de borda via SDK da Web {#send-datalayer-via-websdk}
+
+A camada de dados existente deve ser enviada usando o `data` opção do `sendEvent` conforme descrito na seção [Documentação do SDK da Web](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html#sending-non-xdm-data).
+
+Se você estiver usando Tags, deverá usar o plug-in **[!UICONTROL Dados]** do campo **[!UICONTROL Enviar evento]** tipo de ação, conforme descrito na seção [Documentação da extensão de tag do SDK da Web](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/web-sdk/action-types.html).
+
+O restante deste guia enfocará como mapear a camada de dados para padrões XDM após ter sido enviada pelo WebSDK.
 
 >[!NOTE]
 >
@@ -31,7 +54,7 @@ Para obter uma demonstração rápida do processo de preparo de dados para a col
 
 Selecione **[!UICONTROL Salvar e adicionar mapeamento]** após concluir a configuração básica de uma sequência de dados e a etapa **[!UICONTROL Selecionar dados]** será exibida. Aqui, você deve fornecer um objeto JSON de amostra que represente a estrutura dos dados que planeja enviar para a Platform.
 
-Para capturar propriedades diretamente da camada de dados, o objeto JSON deve ter uma única propriedade raiz `data`. As subpropriedades do objeto `data` devem ser construídas de forma que sejam mapeadas nas propriedades da camada de dados que você deseja capturar. Selecione a seção abaixo para ver um exemplo de objeto JSON formatado corretamente com um objeto `data` raiz.
+Para capturar propriedades diretamente da camada de dados, o objeto JSON deve ter uma única propriedade raiz `data`. As subpropriedades de `data` O objeto do deve ser construído de uma forma que mapeie para as propriedades da camada de dados que você deseja capturar. Selecione a seção abaixo para ver um exemplo de objeto JSON formatado corretamente com um objeto `data` raiz.
 
 +++Arquivo JSON de amostra com objeto `data` raiz
 
@@ -133,16 +156,20 @@ Você pode selecionar a opção para fazer upload do objeto como um arquivo ou c
 
 ![Amostra JSON de dados de entrada esperados](assets/data-prep/select-data.png)
 
+>[!NOTE]
+>
+> Use um objeto JSON de amostra que represente cada elemento de camada de dados que pode ser usado em qualquer página. Por exemplo, nem todas as páginas usam elementos de camada de dados do carrinho de compras. No entanto, os elementos da camada de dados do carrinho de compras devem ser incluídos nesta amostra de objeto JSON.
+
 ## [!UICONTROL Mapeamento]
 
 A etapa **[!UICONTROL Mapeamento]** é exibida, permitindo mapear os campos nos dados de origem para o esquema de evento de público alvo na Platform. Aqui, é possível configurar o mapeamento de duas maneiras:
 
-* [Criar novas regras de mapeamento](#create-mapping) para essa sequência de dados por meio de um processo manual.
+* [Criar regras de mapeamento](#create-mapping) para esse fluxo de dados por meio de um processo manual.
 * [Importar regras de mapeamento](#import-mapping) de uma sequência de dados existente.
 
-### Criar um novo mapeamento {#create-mapping}
+### Criar regras de mapeamento {#create-mapping}
 
-Para começar, selecione **[!UICONTROL Adicionar novo mapeamento]** para criar uma nova linha de mapeamento.
+Para criar uma regra de mapeamento, selecione **[!UICONTROL Adicionar novo mapeamento]**.
 
 ![Adicionar um novo mapeamento](assets/data-prep/add-new-mapping.png)
 
@@ -166,11 +193,11 @@ A página de mapeamento é exibida novamente com o mapeamento do campo concluíd
 
 ### Importar regras de mapeamento existentes {#import-mapping}
 
-Se você criou uma sequência de dados anteriormente, poderá reutilizar suas regras de mapeamento configuradas em uma nova sequência de dados.
+Se você tiver criado um fluxo de dados anteriormente, poderá reutilizar suas regras de mapeamento configuradas para um novo fluxo de dados.
 
 >[!WARNING]
 >
->A importação de regras de mapeamento de outra sequência de dados substituirá todos os mapeamentos de campo adicionados antes da importação.
+>A importação de regras de mapeamento de outro fluxo de dados substitui todos os mapeamentos de campo que você tenha adicionado antes da importação.
 
 Para começar, selecione **[!UICONTROL Importar mapeamento]**.
 
@@ -194,9 +221,9 @@ A próxima tela mostra uma visualização das regras de mapeamento salvas para a
 
 ### Concluir o mapeamento
 
-Para continuar, siga as etapas acima para mapear o restante dos campos para o esquema de destino. Embora não seja necessário mapear todos os campos de origem disponíveis, todos os campos no esquema de destino definidos como obrigatórios devem ser mapeados para que esta etapa seja concluída. O contador **[!UICONTROL Campos obrigatórios]** indica quantos campos obrigatórios ainda não estão mapeados na configuração atual.
+Para continuar, siga as etapas acima para mapear o restante dos campos para o esquema de destino. Embora não seja necessário mapear todos os campos de origem disponíveis, todos os campos no esquema de destino definidos como obrigatório devem ser mapeados para concluir esta etapa. O contador **[!UICONTROL Campos obrigatórios]** indica quantos campos obrigatórios ainda não estão mapeados na configuração atual.
 
-Quando a contagem de campos obrigatórios atingir zero e você estiver contente com o mapeamento que definiu, selecione **[!UICONTROL Salvar]** para finalizar as alterações.
+Quando a contagem de campos obrigatória atingir zero e você estiver satisfeito com o mapeamento, selecione **[!UICONTROL Salvar]** para finalizar as alterações.
 
 ![Mapeamento concluído](assets/data-prep/mapping-complete.png)
 

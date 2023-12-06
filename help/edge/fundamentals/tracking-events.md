@@ -1,14 +1,13 @@
 ---
 title: Rastrear eventos usando o SDK da Web da Adobe Experience Platform
 description: Saiba como rastrear eventos do Adobe Experience Platform Web SDK.
-keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;send Beacon;documentUnloading;document Unloading;onBeforeEventSend;
-exl-id: 8b221cae-3490-44cb-af06-85be4f8d280a
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 935881ee8c8aedb672bbd6233ea22aa7b26b28a6
 workflow-type: tm+mt
-source-wordcount: '1192'
-ht-degree: 1%
+source-wordcount: '1167'
+ht-degree: 0%
 
 ---
+
 
 # Rastrear eventos
 
@@ -77,11 +76,9 @@ Neste exemplo, a camada de dados é clonada serializando-a para JSON e, em segui
 
 ## Envio de dados não XDM
 
-Os dados que não correspondem a um esquema XDM devem ser enviados usando o `data` opção do `sendEvent` comando. Esse recurso é compatível com as versões 2.5.0 e posteriores do SDK da Web.
+Os dados que não correspondem a um esquema XDM devem ser enviados usando o `data` opção do `sendEvent` comando. Esse recurso é compatível com as versões 2.5.0 e posteriores do SDK da Web. Ao usar essa opção, os dados precisarão ser mapeados para um esquema XDM compatível do lado do servidor por meio de [Preparação de dados para coleção de dados](../../datastreams/data-prep.md#create-mapping).
 
-Isso é útil se você precisar atualizar um perfil do Adobe Target ou enviar atributos do Target Recommendations. [Leia mais sobre estes recursos do Target.](../personalization/adobe-target/target-overview.md#single-profile-update)
-
-No futuro, você poderá enviar sua camada de dados completa no `data` e mapeá-lo para o lado do servidor XDM.
+Esse recurso também é útil se você precisar atualizar um perfil do Adobe Target ou enviar atributos do Target Recommendations. Leia mais sobre [Personalização do Target](../personalization/adobe-target/target-overview.md#single-profile-update).
 
 **Como enviar atributos de Perfil e Recommendations para o Adobe Target:**
 
@@ -103,9 +100,9 @@ alloy("sendEvent", {
 
 ### Configuração `eventType` {#event-types}
 
-Nos esquemas XDM ExperienceEvent, há uma variável `eventType` campo. Contém o tipo de evento principal do registro. Definir um tipo de evento pode ajudar a diferenciar os eventos diferentes que você enviará. O XDM fornece vários tipos de evento predefinidos que você pode usar ou sempre criar seus próprios tipos de evento personalizados para seus casos de uso. Consulte a documentação do XDM para obter uma [lista de todos os tipos de evento predefinidos](../../xdm/classes/experienceevent.md#eventType).
+Nos esquemas XDM ExperienceEvent, há uma variável `eventType` campo. Contém o tipo de evento principal do registro. Definir um tipo de evento pode ajudar a diferenciar os eventos diferentes que você está enviando. O XDM fornece vários tipos de evento predefinidos que você pode usar ou sempre criar seus próprios tipos de evento personalizados para seus casos de uso. Consulte a documentação do XDM para obter uma [lista de todos os tipos de evento predefinidos](../../xdm/classes/experienceevent.md#eventType).
 
-Esses tipos de evento serão mostrados em uma lista suspensa se estiver usando a extensão de tag ou se você sempre puder passá-los sem tags. Eles podem ser transmitidos como parte da variável `xdm` opção.
+Esses tipos de evento são mostrados em uma lista suspensa se estiver usando a extensão de tag ou se você sempre puder passá-los sem tags. Eles podem ser transmitidos como parte da variável `xdm` opção.
 
 
 ```javascript
@@ -142,7 +139,7 @@ alloy("sendEvent", {
 >
 >A variável `datasetId` opção compatível com o `sendEvent` comando foi descontinuado. Para substituir uma ID de conjunto de dados, use [sobreposições de configuração](../../datastreams/overrides.md) em vez disso.
 
-Em alguns casos de uso, convém enviar um evento para um conjunto de dados diferente daquele configurado na interface do usuário de configuração. Para isso, é necessário definir o `datasetId` opção no `sendEvent` comando:
+Em alguns casos de uso, convém enviar um evento para um conjunto de dados diferente daquele configurado na interface do usuário de configuração. Para isso, você deve definir o `datasetId` opção no `sendEvent` comando:
 
 
 
@@ -162,8 +159,9 @@ Informações de identidade personalizadas também podem ser adicionadas ao even
 
 ## Utilização da API sendBeacon
 
-Pode ser complicado enviar dados do evento antes que o usuário da página da Web tenha saído. Se a solicitação demorar muito, o navegador pode cancelar a solicitação. Alguns navegadores implementaram uma API padrão da Web chamada `sendBeacon` para permitir que os dados sejam coletados mais facilmente durante esse período. Ao usar `sendBeacon`, o navegador faz a solicitação da web no contexto de navegação global. Isso significa que o navegador faz a solicitação de sinal em segundo plano e não mantém a navegação da página. Para informar ao Adobe Experience Platform [!DNL Web SDK] para usar `sendBeacon`, adicione a opção `"documentUnloading": true` para o comando do evento.  Exemplo:
+Pode ser complicado enviar dados do evento antes que o usuário da página da Web tenha saído. Se a solicitação demorar muito, o navegador pode cancelar a solicitação. Alguns navegadores implementaram uma API padrão da Web chamada `sendBeacon` para permitir que os dados sejam coletados mais facilmente durante esse período. Ao usar `sendBeacon`, o navegador faz a solicitação da web no contexto de navegação global. Isso significa que o navegador faz a solicitação de sinal em segundo plano e não mantém a navegação da página. Para informar ao Adobe Experience Platform [!DNL Web SDK] para usar `sendBeacon`, adicione a opção `"documentUnloading": true` para o comando do evento.
 
+**Exemplo**
 
 ```javascript
 alloy("sendEvent", {
@@ -181,7 +179,7 @@ alloy("sendEvent", {
 });
 ```
 
-Os navegadores impuseram limites à quantidade de dados que pode ser enviada com `sendBeacon` de uma só vez. Em muitos navegadores, o limite é de 64K. Se o navegador rejeitar o evento porque a carga é muito grande, o Adobe Experience Platform [!DNL Web SDK] O retorna ao uso do método de transporte normal (por exemplo, fetch).
+Os navegadores impuseram limites à quantidade de dados que pode ser enviada com `sendBeacon` de uma só vez. Em muitos navegadores, o limite é de 64 KB. Se o navegador rejeitar o evento porque a carga é muito grande, o Adobe Experience Platform [!DNL Web SDK] O retorna ao uso do método de transporte normal (por exemplo, fetch).
 
 ## Manipulação de respostas de eventos
 
@@ -214,19 +212,19 @@ alloy("sendEvent", {
 
 A variável `sendEvent` retorna uma promessa que é resolvida com uma `result` objeto. A variável `result` contém as seguintes propriedades:
 
-**apresentações**: as ofertas de personalização para as quais o visitante se qualificou. [Saiba mais sobre apresentações.](../personalization/rendering-personalization-content.md#manually-rendering-content)
-
-**decisões**: esta propriedade está obsoleta. Em vez disso, use `propositions`.
-
-**destinos**: segmentos do Adobe Experience Platform que podem ser compartilhados com plataformas de personalização externas, sistemas de gerenciamento de conteúdo, servidores de anúncios e outros aplicativos que estão sendo executados nos sites do cliente. [Saiba mais sobre destinos.](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/custom-personalization.html)
+| Propriedade | Descrição |
+|---------|----------|
+| `propositions` | As ofertas de personalização para as quais o visitante se qualificou. [Saiba mais sobre apresentações.](../personalization/rendering-personalization-content.md#manually-rendering-content) |
+| `decisions` | Essa propriedade está obsoleta. Use `propositions` no lugar dela. |
+| `destinations` | Públicos-alvo da Adobe Experience Platform que podem ser compartilhados com plataformas de personalização externas, sistemas de gerenciamento de conteúdo, servidores de anúncios e outros aplicativos que estão sendo executados nos sites do cliente. [Saiba mais sobre destinos.](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/custom-personalization.html) |
 
 >[!WARNING]
 >
->`destinations` O está atualmente na versão beta. A documentação e a funcionalidade estão sujeitas a alterações.
+>A variável `destinations` propriedade está na versão beta. A documentação e a funcionalidade estão sujeitas a alterações.
 
 ## Modificação global de eventos {#modifying-events-globally}
 
-Se quiser adicionar, remover ou modificar campos do evento globalmente, você pode configurar um `onBeforeEventSend` retorno de chamada.  Essa chamada de retorno é chamada sempre que um evento é enviado.  Essa chamada de retorno é passada em um objeto de evento com um `xdm` campo.  Modificar `content.xdm` para alterar os dados enviados com o evento.
+Se quiser adicionar, remover ou modificar campos do evento globalmente, você pode configurar um `onBeforeEventSend` retorno de chamada. Essa chamada de retorno é chamada sempre que um evento é enviado. Essa chamada de retorno é passada em um objeto de evento com um `xdm` campo. Para alterar os dados enviados com o evento, modifique `content.xdm`.
 
 
 ```javascript
@@ -246,8 +244,8 @@ alloy("configure", {
 
 `xdm` os campos são definidos nesta ordem:
 
-1. Valores passados como opções para o comando de evento `alloy("sendEvent", { xdm: ... });`
-2. Valores coletados automaticamente.  (Consulte [Informações Automáticas](../data-collection/automatic-information.md).)
+1. Valores passados como opções para o comando de evento `alloy("sendEvent", { xdm: ... });`.
+2. Valores coletados automaticamente. Consulte [Informações Automáticas](../data-collection/automatic-information.md).
 3. As alterações efetuadas no `onBeforeEventSend` retorno de chamada.
 
 Algumas observações sobre `onBeforeEventSend` retorno de chamada:
@@ -297,4 +295,4 @@ Qualquer valor de retorno diferente do booleano `false` permitirá que o evento 
 
 ## Possíveis erros acionáveis
 
-Ao enviar um evento, pode ocorrer um erro se os dados enviados forem muito grandes (mais de 32 KB para a solicitação completa). Nesse caso, é necessário reduzir a quantidade de dados que está sendo enviada.
+Ao enviar um evento, pode ocorrer um erro se os dados enviados forem muito grandes (mais de 32 KB para a solicitação completa). Nesse caso, você deve reduzir a quantidade de dados que está sendo enviada.

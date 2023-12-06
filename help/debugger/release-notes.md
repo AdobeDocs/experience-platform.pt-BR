@@ -4,14 +4,27 @@ description: As notas de versão mais recentes do Adobe Experience Platform Debu
 keywords: depurador;extensão do Experience Platform Debugger;chrome;extensão;notas de versão
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
-source-git-commit: 5b3bfc38a1b159d57c7be6733b9c2515ba72c3c6
+source-git-commit: 5ec61e3822cf42bdb89b24a17782b40cbd9dab37
 workflow-type: tm+mt
-source-wordcount: '564'
+source-wordcount: '660'
 ht-degree: 3%
 
 ---
 
 # Notas de versão do Adobe Experience Platform Debugger
+
+## Versão 1.5.3 - 6 de dezembro de 2023
+
+### Novos recursos
+
+* Adição de uma configuração &quot;bloquear a guia ativa ao abrir o Debugger&quot;.
+
+### Correções e melhorias
+
+* Correção de um problema em que as solicitações do Analytics estavam ausentes em domínios privados.
+* Correção de um problema em que os dados de Activity Map estavam ausentes na tabela de solicitações do Analytics.
+* Correção de um problema em que a exibição do Rastreamento do Target causava uma falha.
+* Adição de um aviso quando o Debugger falha ao configurar a infraestrutura na página no Firefox.
 
 ## Versão 1.5.1 - 2 de novembro de 2023
 

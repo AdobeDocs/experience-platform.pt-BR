@@ -4,10 +4,10 @@ user-guide-title: Ajuda do Serviço de consulta da Adobe Experience Platform
 breadcrumb-title: Guia do Serviço de consulta
 user-guide-description: Use o SQL padrão para consultar dados no data lake na Experience Platform.
 feature: Queries
-source-git-commit: 1e9d6b0c43461902c5b966aa1d0576103e872e0c
+source-git-commit: cd97165d4e4d8ed984c4705f614c8d77eb750ed6
 workflow-type: tm+mt
-source-wordcount: '310'
-ht-degree: 21%
+source-wordcount: '309'
+ht-degree: 19%
 
 ---
 
@@ -48,8 +48,9 @@ ht-degree: 21%
    - [Listar as exibições de página de um usuário](use-cases/list-visitor-sessions.md)
    - [Listar visitantes por suas visualizações de página](use-cases/visitors-by-number-of-page-views.md)
    - [Pontuação de tendência](use-cases/propensity-score.md)
-   - [SQLAlchemy](use-cases/sqlalchemy.md)
+   - [Exemplo de função Lambda: Recuperar registros semelhantes](use-cases/retrieve-similar-records.md)
    - [Retornar e usar variáveis de merchandising dos dados de análise](use-cases/merchandising-variables.md)
+   - [SQLAlchemy](use-cases/sqlalchemy.md)
    - [Exibir o relatório acumulado de um visitante](use-cases/roll-up-report-of-a-visitor.md)
    - [Insights de análise da Web e móvel](use-cases/analytics-insights.md)
 - Principais conceitos {#key-concepts}
@@ -74,7 +75,7 @@ ht-degree: 21%
    - [RStudio](clients/rstudio.md)
    - [Tableau](clients/tableau.md)
 - Interface do usuário do serviço de consulta {#ui}
-   - [Visão geral da interface do ](ui/overview.md)
+   - [Visão geral da interface](ui/overview.md)
    - [Guia do usuário do Editor de consultas](ui/user-guide.md)
    - [Modelos de consulta](ui/query-templates.md)
    - [Consultas parametrizadas](ui/parameterized-queries.md)

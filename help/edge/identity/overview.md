@@ -1,24 +1,23 @@
 ---
-title: Dados de identidade no SDK da Web da plataforma
+title: Dados de identidade no SDK da Web
 description: Saiba como recuperar e gerenciar Adobe Experience Cloud IDs (ECIDs) usando o SDK da Web da Adobe Experience Platform.
-keywords: Identidade;Identidade própria;Serviço de identidade;Identidade de terceiros;Migração de ID;ID de visitante;identidade de terceiros;thirdPartyCookiesEnabled;idMigrationEnabled;getIdentity;Syncing Identities;syncIdentity;sendEvent;identityMap;primary;ecid;Identity Namespace;id de namespace;authenticationState;hashEnabled;
 exl-id: 03060cdb-becc-430a-b527-60c055c2a906
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 041a1782442df5f08bb52e4e450734a51c7781ea
 workflow-type: tm+mt
-source-wordcount: '1414'
-ht-degree: 1%
+source-wordcount: '1339'
+ht-degree: 0%
 
 ---
 
-# Dados de identidade no SDK da Web da plataforma
+# Dados de identidade no SDK da Web
 
-O Adobe Experience Platform Web SDK aproveita [Adobe Experience Cloud IDs (ECIDs)](../../identity-service/ecid.md) para rastrear o comportamento do visitante. Usando ECIDs, você pode garantir que cada dispositivo tenha um identificador exclusivo que possa persistir em várias sessões, vinculando todas as ocorrências que ocorrem durante e entre sessões da Web a um dispositivo específico.
+O Adobe Experience Platform Web SDK usa [Adobe Experience Cloud IDs (ECIDs)](../../identity-service/ecid.md) para rastrear o comportamento do visitante. Usando ECIDs, você pode garantir que cada dispositivo tenha um identificador exclusivo que possa persistir em várias sessões, vinculando todas as ocorrências que ocorrem durante e entre sessões da Web a um dispositivo específico.
 
 Este documento fornece uma visão geral de como gerenciar ECIDs usando o SDK da Web da plataforma.
 
 ## Rastreamento de ECIDs usando o SDK
 
-O SDK da Web da Platform atribui e rastreia ECIDs por meio do uso de cookies, com vários métodos disponíveis para configurar como esses cookies são gerados.
+O SDK da Web da Platform atribui e rastreia ECIDs usando cookies, com vários métodos disponíveis para configurar como esses cookies são gerados.
 
 Quando um novo usuário chega ao seu site, o Serviço de identidade da Adobe Experience Cloud tenta definir um cookie de identificação de dispositivo para esse usuário. Para visitantes novos, uma ECID é gerada e retornada na primeira resposta da Rede de borda da Adobe Experience Platform. Para visitantes repetidos, a ECID é recuperada do `kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` e adicionado à carga pela Rede de borda.
 
@@ -35,7 +34,7 @@ Conforme explicado nas seções abaixo, o método de coleta de dados que você e
 
 A coleta de dados de terceiros envolve o envio de dados diretamente para o domínio da Rede de borda `adobedc.net`.
 
-Nos últimos anos, os navegadores da Web têm se tornado cada vez mais restritivos no manuseio de cookies definidos por terceiros. Alguns navegadores bloqueiam cookies de terceiros por padrão. Se você usar cookies de terceiros para identificar visitantes do site, a vida útil desses cookies é quase sempre mais curta do que o que estaria disponível usando cookies primários. Em alguns casos, um cookie de terceiros expirará em apenas sete dias.
+Nos últimos anos, os navegadores da Web têm se tornado cada vez mais restritivos no manuseio de cookies definidos por terceiros. Alguns navegadores bloqueiam cookies de terceiros por padrão. Se você usar cookies de terceiros para identificar visitantes do site, a vida útil desses cookies é quase sempre mais curta do que o que estaria disponível usando cookies primários. Às vezes, um cookie de terceiros expira em apenas sete dias.
 
 Além disso, quando a coleta de dados de terceiros é usada, alguns bloqueadores de anúncios restringem o tráfego aos endpoints de coleta de dados do Adobe.
 
@@ -47,11 +46,11 @@ Embora os navegadores tenham durante muito tempo tratado os cookies definidos po
 
 ### Efeitos da duração do cookie em aplicativos Adobe Experience Cloud {#lifespans}
 
-Independentemente de você escolher a coleta de dados própria ou de terceiros, o tempo em que um cookie pode persistir tem um impacto direto na contagem de visitantes no Adobe Analytics e no Customer Journey Analytics. Além disso, os usuários finais podem experimentar experiências de personalização inconsistentes quando o Adobe Target ou o Offer Decisioning é usado no site.
+Independentemente de você escolher a coleta de dados própria ou de terceiros, o tempo em que um cookie pode persistir tem um impacto direto na contagem de visitantes no Adobe Analytics e no Customer Journey Analytics. Além disso, os usuários finais podem experimentar experiências de personalização inconsistentes quando o Adobe Target ou o Offer Decisioning são usados no site.
 
-Por exemplo, considere uma situação em que você criou uma experiência de personalização que promoverá qualquer item para a página inicial se um usuário o tiver visualizado três vezes nos últimos sete dias.
+Por exemplo, considere uma situação em que você criou uma experiência de personalização que promove qualquer item para a página inicial se um usuário o visualizou três vezes nos últimos sete dias.
 
-Se um usuário final visitar três vezes por semana e não retornar ao site por sete dias, esse usuário poderá ser considerado um novo usuário quando retornar ao site, pois seus cookies podem ter sido excluídos por uma política do navegador (dependendo do navegador que estava usando quando visitou o site). Se isso ocorrer, a ferramenta do Analytics tratará o visitante como um novo usuário, mesmo que ele tenha visitado o site há pouco mais de sete dias. Além disso, qualquer esforço para personalizar a experiência para o usuário começará novamente.
+Se um usuário final visitar três vezes por semana e não retornar ao site por sete dias, ele poderá ser considerado um novo usuário quando retornar ao site, pois seus cookies podem ter sido excluídos por uma política do navegador (dependendo do navegador usado quando visitou o site). Se isso ocorrer, a ferramenta do Analytics tratará o visitante como um novo usuário, embora ele tenha visitado o site há pouco mais de sete dias. Além disso, qualquer esforço para personalizar a experiência do usuário começa novamente.
 
 ### IDs de dispositivo próprio
 
@@ -109,7 +108,7 @@ Cada propriedade dentro de `identityMap` representa identidades pertencentes a u
 
 >[!IMPORTANT]
 >
->A ID do namespace transmitida na variável `identityMap` O diferencia maiúsculas de minúsculas. Use a ID de namespace correta para evitar uma coleta de dados incompleta.
+>A ID do namespace transmitida na variável `identityMap` O diferencia maiúsculas e minúsculas. Use a ID de namespace correta para evitar uma coleta de dados incompleta.
 
 Cada objeto de identidade na matriz de identidades contém as seguintes propriedades:
 
@@ -127,11 +126,11 @@ Ao migrar do usando a API do visitante, também é possível migrar os cookies A
 
 * Quando algumas páginas de um domínio estão usando a API de visitante e outras páginas estão usando esse SDK. Para dar suporte a esse caso, o SDK lê os cookies AMCV existentes e grava um novo cookie com a ECID existente. Além disso, o SDK grava cookies AMCV para que, se a ECID for obtida primeiro em uma página instrumentada com o SDK, as páginas subsequentes instrumentadas com a API do visitante terão a mesma ECID.
 * Quando o Adobe Experience Platform Web SDK é configurado em uma página que também tem a API do visitante. Para dar suporte a esse caso, se o cookie AMCV não estiver definido, o SDK procurará a API do visitante na página e a chamará para obter a ECID.
-* Quando todo o site estiver usando o SDK da Web da Adobe Experience Platform e não tiver uma API de visitante, é útil migrar as ECIDs para que as informações do visitante de retorno sejam mantidas. Depois que o SDK for implantado com `idMigrationEnabled` por um período para que a maioria dos cookies do visitante seja migrada, a configuração pode ser desativada.
+* Quando o site inteiro estiver usando o SDK da Web da Adobe Experience Platform e não tiver uma API de visitante, é útil migrar as ECIDs para que as informações do visitante retornadas sejam mantidas. Depois que o SDK for implantado com `idMigrationEnabled` por um momento para que a maioria dos cookies do visitante seja migrada, a configuração pode ser desativada.
 
 ### Atualização de características para migração
 
-Quando os dados formatados em XDM são enviados para o Audience Manager, eles precisam ser convertidos em sinais ao migrar. Suas características precisarão ser atualizadas para refletir as novas chaves que o XDM fornece. Esse processo é facilitado com o uso do [Ferramenta BAAAM](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/bulk-management-tools/bulk-management-intro.html#getting-started-with-bulk-management) que o Audience Manager criou.
+Quando dados formatados em XDM são enviados para o Audience Manager, esses dados devem ser convertidos em sinais ao migrar. Suas características devem ser atualizadas para refletir as novas chaves que o XDM fornece. Esse processo é facilitado com o uso do [Ferramenta BAAAM](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/bulk-management-tools/bulk-management-intro.html#getting-started-with-bulk-management) que o Audience Manager criou.
 
 ## Usar no encaminhamento de eventos
 

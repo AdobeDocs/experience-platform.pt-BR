@@ -1,18 +1,17 @@
 ---
 title: Instalar o SDK da Web da Adobe Experience Platform
 description: Saiba como instalar o SDK da Web do Experience Platform.
-keywords: instalação do sdk da web;instalando o sdk da web;internet explorer;promessa;pacote npm
 exl-id: b1de7ca1-d0d2-4661-a273-a1acf29afcd5
-source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
+source-git-commit: 041a1782442df5f08bb52e4e450734a51c7781ea
 workflow-type: tm+mt
-source-wordcount: '924'
-ht-degree: 2%
+source-wordcount: '864'
+ht-degree: 0%
 
 ---
 
-# Instalar o SDK {#installing-the-sdk}
+# Instalar o SDK da Web {#installing-the-sdk}
 
-Há três maneiras compatíveis de usar o SDK da Web da Adobe Experience Platform:
+Há três maneiras compatíveis de instalar o SDK da Web da Adobe Experience Platform:
 
 1. A maneira preferida de usar o SDK da Web da Adobe Experience Platform é por meio da interface da Coleção de dados ou da interface do Experience Platform.
 1. O Adobe Experience Platform Web SDK também está disponível em uma rede de entrega de conteúdo (CDN) para você usar.
@@ -29,7 +28,6 @@ A versão pré-criada está disponível em um CDN. Você pode fazer referência 
 Estrutura de URL: https://cdn1.adoberesources.net/alloy/[VERSÃO]/alloy.min.js OU alloy.js para a versão não minificada.
 
 Por exemplo:
-
 
 * Minificado: [https://cdn1.adoberesources.net/alloy/2.14.0/alloy.min.js](https://cdn1.adoberesources.net/alloy/2.14.0/alloy.min.js)
 * Não minificado: [https://cdn1.adoberesources.net/alloy/2.14.0/alloy.js](https://cdn1.adoberesources.net/alloy/2.14.0/alloy.js)
@@ -97,7 +95,7 @@ Essa tag carrega um script que garante que `window.Promise` é uma implementaç�
 
 Conforme explicado na seção [Adição do código](#adding-the-code), o código base que você copiou e colou no HTML do seu site carrega um arquivo externo. O arquivo externo contém a funcionalidade principal do SDK. Qualquer comando que você tentar executar enquanto esse arquivo é carregado será enfileirado e processado depois que o arquivo for carregado. O carregamento assíncrono do arquivo é o método de instalação mais eficiente.
 
-No entanto, em determinadas circunstâncias, talvez você queira carregar o arquivo de forma síncrona \(mais detalhes sobre essas circunstâncias serão documentados posteriormente\). Isso bloqueia a análise e a renderização do restante do documento HTML pelo navegador até que o arquivo externo seja carregado e executado. Normalmente, esse atraso adicional antes de exibir o conteúdo principal aos usuários não é recomendado, mas pode fazer sentido dependendo das circunstâncias.
+No entanto, em determinadas circunstâncias, talvez você queira carregar o arquivo de forma síncrona. Isso bloqueia a análise e a renderização do restante do documento HTML pelo navegador até que o arquivo externo seja carregado e executado. Normalmente, esse atraso adicional antes de exibir o conteúdo principal aos usuários não é recomendado, mas pode fazer sentido dependendo das circunstâncias.
 
 Para carregar o arquivo de forma síncrona em vez de assíncrona, remova a variável `async` atributo do segundo `script` conforme mostrado abaixo:
 

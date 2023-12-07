@@ -1,17 +1,15 @@
 ---
 title: Configurar o SDK da Web da Adobe Experience Platform
 description: Saiba como configurar o Adobe Experience Platform Web SDK.
-seo-description: Learn how to configure the Experience Platform Web SDK
-keywords: configurar;configuração;SDK;borda;SDK da Web;configurar;edgeConfigId;contexto;web;dispositivo;ambiente;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;configurações do sdk da Web;prehideStyle;opacidade;cookieDestinationsEnabled;urlDestinationsEnabled;idMigrationEnabled;thirdPartyCookiesEnabled;
 exl-id: d1e95afc-0b8a-49c0-a20e-e2ab3d657e45
-source-git-commit: a192a746fa227b658fcdb8caa07ea6fb4ac1a944
+source-git-commit: 041a1782442df5f08bb52e4e450734a51c7781ea
 workflow-type: tm+mt
-source-wordcount: '1128'
-ht-degree: 9%
+source-wordcount: '1088'
+ht-degree: 8%
 
 ---
 
-# Configurar o SDK da Web da plataforma
+# Configurar o SDK da Web
 
 A configuração do SDK é feita com o `configure` comando.
 
@@ -56,7 +54,7 @@ Indica quais categorias de contexto coletar automaticamente, conforme descrito e
 
 >[!IMPORTANT]
 >
->Todas as propriedades de contexto, com exceção de `highEntropyUserAgentHints`, são ativados por padrão. Se você especificou propriedades de contexto manualmente na configuração do SDK da Web, deve habilitar todas as propriedades de contexto para continuar coletando as informações necessárias.
+>Todas as propriedades de contexto, exceto para `highEntropyUserAgentHints`, são ativados por padrão. Se você especificou propriedades de contexto manualmente na configuração do SDK da Web, deve habilitar todas as propriedades de contexto para continuar coletando as informações necessárias.
 
 Para habilitar [dicas do cliente de alta entropia](user-agent-client-hints.md#enabling-high-entropy-client-hints) na implantação do SDK da Web, você deve incluir os `highEntropyUserAgentHints` opção de contexto, junto com a configuração existente.
 
@@ -83,7 +81,7 @@ Indica se a depuração está habilitada. Definindo esta configuração como `tr
 
 ### `edgeDomain` {#edge-domain}
 
-Preencha este campo com seu domínio primário. Para obter mais detalhes, consulte [documentação](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html?lang=pt-BR).
+Preencha este campo com seu domínio primário. Para obter mais detalhes, consulte [documentação](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=pt-BR).
 
 O domínio é semelhante a `data.{customerdomain.com}` para obter um site em www.{customerdomain.com}.
 
@@ -107,7 +105,7 @@ Caminho após o edgeDomain usado para se comunicar e interagir com os serviços 
 
 Seu atribuído [!DNL Experience Cloud] ID da organização. Ao configurar várias instâncias em uma página, você deve configurar uma instância diferente `orgId` para cada instância.
 
-## Coleta de dados
+## Coleção de dados
 
 ### `clickCollectionEnabled` {#clickCollectionEnabled}
 
@@ -143,7 +141,7 @@ Ao filtrar o rastreamento de link usando a estrutura de elementos DOM, você pod
 
 Para alterar quais dados são enviados, modifique o `xdm` e/ou `data` objetos. Dentro do retorno de chamada, a variável `xdm` O objeto já transmitiu os dados no comando de evento e as informações coletadas automaticamente.
 
-* Qualquer valor diferente de `false` permitirá que o evento seja processado e o retorno de chamada seja enviado.
+* Qualquer valor diferente de `false` permite que o evento seja processado e o retorno de chamada seja enviado.
 * Se o retorno de chamada retornar a variável `false` for, o processamento do evento será interrompido, sem um erro, e o evento não será enviado. Esse mecanismo permite que determinados eventos sejam filtrados examinando os dados do evento e retornando `false` caso o evento não deva ser enviado.
 * Se o retorno de chamada lançar uma exceção, o processamento do evento será interrompido e o evento não será enviado.
 

@@ -1,17 +1,17 @@
 ---
-title: IDs de dispositivo próprio no SDK da Web da plataforma
+title: IDs de dispositivo próprio no SDK da Web
 description: Saiba como configurar IDs de dispositivo primário (FPIDs) para o Adobe Experience Platform Web SDK.
 exl-id: c3b17175-8a57-43c9-b8a0-b874fecca952
-source-git-commit: ffcd428f84a4dcbbc95560cb4da5fd1c6d858a28
+source-git-commit: 041a1782442df5f08bb52e4e450734a51c7781ea
 workflow-type: tm+mt
-source-wordcount: '1779'
-ht-degree: 2%
+source-wordcount: '1700'
+ht-degree: 0%
 
 ---
 
-# IDs de dispositivo próprio no SDK da Web da plataforma
+# IDs de dispositivo próprio no SDK da Web
 
-O SDK da Web da Adobe Experience Platform atribui [Adobe Experience Cloud IDs (ECIDs)](https://experienceleague.adobe.com/docs/experience-platform/identity/ecid.html?lang=pt-BR) aos visitantes do site por meio do uso de cookies, para rastrear o comportamento do usuário. Para levar em conta as restrições do navegador nas vidas do cookie, você pode optar por definir e gerenciar seus próprios identificadores de dispositivo. Elas são chamadas de IDs de dispositivo próprios (FPIDs).
+O SDK da Web da Adobe Experience Platform atribui [Adobe Experience Cloud IDs (ECIDs)](https://experienceleague.adobe.com/docs/experience-platform/identity/ecid.html?lang=pt-BR) aos visitantes do site usando cookies para rastrear o comportamento do usuário. Para levar em conta as restrições do navegador nas vidas do cookie, você pode optar por definir e gerenciar seus próprios identificadores de dispositivo. Elas são chamadas de IDs de dispositivos primários (FPIDs).
 
 >[!NOTE]
 >
@@ -25,11 +25,11 @@ Este guia supõe que você esteja familiarizado com como os dados de identidade 
 
 ## Uso de FPIDs
 
-Os FPIDs rastreiam visitantes com o uso de cookies primários. Os cookies primários são mais eficazes quando definidos com um servidor que utiliza um DNS [Registro A](https://datatracker.ietf.org/doc/html/rfc1035) (para IPv4) ou [Registro AAAA](https://datatracker.ietf.org/doc/html/rfc3596) (para IPv6), ao contrário de um CNAME DNS ou código JavaScript.
+Os FPIDs rastreiam visitantes usando cookies primários. Os cookies primários são mais eficazes quando definidos com um servidor que usa um DNS [Registro A](https://datatracker.ietf.org/doc/html/rfc1035) (para IPv4) ou [Registro AAAA](https://datatracker.ietf.org/doc/html/rfc3596) (para IPv6), ao contrário de um CNAME DNS ou código JavaScript.
 
 >[!IMPORTANT]
 >
->Os registros A ou AAAA só têm suporte para a configuração e o rastreamento de cookies. O método principal de coleta de dados é por meio de um CNAME DNS. Em outras palavras, os FPIDs são definidos usando um registro A ou AAAA e são enviados para o Adobe usando um CNAME.
+>`A` ou `AAAA` os registros só são compatíveis com a configuração e o rastreamento de cookies. O método principal de coleta de dados é por meio de um CNAME DNS. Em outras palavras, os FPIDs são definidos usando um registro A ou AAAA e são enviados para o Adobe usando um CNAME.
 >
 >A variável [Programa de certificado gerenciado pelo Adobe](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html#adobe-managed-certificate-program) O também é compatível com a coleta de dados primários.
 
@@ -64,25 +64,25 @@ Supondo que a ECID seja afetada por uma política de exclusão do navegador, mas
 
 ### Definição da expiração do cookie
 
-Definir a expiração de um cookie é algo que deve ser cuidadosamente considerado ao implementar a funcionalidade FPID. Ao tomar essa decisão, você deve levar em conta os países ou regiões em que sua organização opera, juntamente com as leis e políticas em cada uma dessas regiões.
+Definir a expiração de um cookie é algo que deve ser cuidadosamente considerado ao implementar a funcionalidade FPID. Ao decidir isso, você deve considerar os países ou regiões em que sua organização opera, juntamente com as leis e políticas em cada uma dessas regiões.
 
-Como parte dessa decisão, você pode adotar uma política de configuração de cookie em toda a empresa ou uma que varie para os usuários em cada local onde você opera.
+Como parte dessa decisão, você pode adotar uma política de configuração de cookies em toda a empresa ou uma que varie para os usuários em cada local onde você opera.
 
 Independentemente da configuração escolhida para a expiração inicial de um cookie, você deve garantir que inclua uma lógica que estenda a expiração do cookie toda vez que ocorrer uma nova visita ao site.
 
 ## Impacto dos sinalizadores de cookies
 
-Há uma variedade de sinalizadores de cookies que afetam como os cookies são tratados em navegadores diferentes:
+Há vários sinalizadores de cookies que afetam como os cookies são tratados em navegadores diferentes:
 
 * [&quot;HTTPOnly&quot;](#http-only)
-* [`Seguro`](#secure)
-* [`SameSite`](#same-site)
+* [&quot;Seguro&quot;](#secure)
+* [&quot;SameSite&quot;](#same-site)
 
 ### `HTTPOnly` {#http-only}
 
-Cookies definidos usando o `HTTPOnly` o sinalizador não pode ser acessado usando scripts do lado do cliente. Isso significa que se você definir um `HTTPOnly` ao definir o FPID, você deve utilizar uma linguagem de script do lado do servidor para ler o valor do cookie para inclusão no `identityMap`.
+Cookies definidos usando o `HTTPOnly` o sinalizador não pode ser acessado usando scripts do lado do cliente. Isso significa que se você definir um `HTTPOnly` ao definir o FPID, você deve usar uma linguagem de script do lado do servidor para ler o valor do cookie para inclusão na variável `identityMap`.
 
-Se você optar que a Platform Edge Network leia o valor do cookie FPID, definindo o `HTTPOnly` O sinalizador garantirá que o valor não esteja acessível por nenhum script do lado do cliente, mas não terá nenhum impacto negativo na capacidade da Rede de borda da plataforma de ler o cookie.
+Se você optar que a Platform Edge Network leia o valor do cookie FPID, definindo o `HTTPOnly` O sinalizador garante que o valor não esteja acessível por nenhum script do lado do cliente, mas não terá nenhum impacto negativo na capacidade da Rede de borda da plataforma de ler o cookie.
 
 >[!NOTE]
 >
@@ -94,13 +94,13 @@ Cookies definidos com o `Secure` Os atributos são enviados somente ao servidor 
 
 ### `SameSite` {#same-site}
 
-A variável `SameSite` O atributo permite que os servidores determinem se os cookies são enviados com solicitações entre sites. O atributo fornece alguma proteção contra ataques de falsificação entre sites. Existem três valores possíveis: `Strict`, `Lax` e `None`. Consulte sua equipe interna para determinar qual é a configuração certa para sua organização.
+A variável `SameSite` O atributo permite que os servidores determinem se os cookies são enviados com solicitações entre sites. O atributo fornece alguma proteção contra ataques de falsificação entre sites. Existem três valores possíveis: `Strict`, `Lax`, e `None`. Consulte sua equipe interna para determinar qual é a configuração certa para sua organização.
 
 Se não `SameSite` for especificado, a configuração padrão para alguns navegadores será `SameSite=Lax`.
 
 ## Uso de FPIDs no `identityMap` {#identityMap}
 
-Veja abaixo um exemplo de como você definiria um FPID por conta própria na variável `identityMap`:
+Veja abaixo um exemplo de como você definiria um FPID na variável `identityMap`:
 
 ```json
 {
@@ -194,7 +194,7 @@ A resposta de erro retornada pela Rede de borda nesse caso seria semelhante ao s
 
 ## Hierarquia de ID
 
-Quando uma ECID e um FPID estiverem presentes, a ECID será priorizada na identificação do usuário. Isso garantirá que, quando uma ECID existente estiver presente no armazenamento de cookies do navegador, ela continuará sendo o identificador principal e as contagens de visitantes existentes não correm o risco de ser afetadas. Para usuários existentes, o FPID não se tornará a identidade principal até que a ECID expire ou seja excluída como resultado de uma política de navegador ou processo manual.
+Quando uma ECID e uma FPID estão presentes, a ECID é priorizada na identificação do usuário. Isso garante que, quando uma ECID existente estiver presente no armazenamento de cookies do navegador, ela permanecerá o identificador principal e as contagens de visitantes existentes não correm o risco de ser afetadas. Para usuários existentes, o FPID não se tornará a identidade principal até que a ECID expire ou seja excluída como resultado de uma política de navegador ou processo manual.
 
 As identidades são priorizadas na seguinte ordem:
 
@@ -218,10 +218,10 @@ Para ajudar a ilustrar esse processo, considere um cenário que envolva um clien
 | Visita | Descrição |
 | --- | --- |
 | Primeira visita | Suponha que você ainda não tenha começado a definir o cookie FPID. A ECID contida no [cookie AMCV](https://experienceleague.adobe.com/docs/id-service/using/intro/cookies.html#section-c55af54828dc4cce89f6118655d694c8) será o identificador usado para identificar o visitante. |
-| Segunda visita | A implantação da solução de ID de dispositivo próprio foi iniciada. A ECID existente ainda está presente e continua sendo o identificador principal para identificação de visitantes. |
-| Terceira visita | Entre a segunda e a terceira visita, decorreu um período de tempo suficiente para que a ECID fosse excluída devido à política do navegador. No entanto, como o FPID foi definido usando um registro DNS A, o FPID persiste. O FPID agora é considerado a ID primária e usado para propagar a ECID, que é gravada no dispositivo do usuário final. O usuário agora seria considerado um novo visitante nas soluções Adobe Experience Platform e Experience Cloud. |
-| Quarta visita | Entre a terceira e a quarta visitas, decorreu um período de tempo suficiente para que a ECID fosse excluída devido à política do navegador. Assim como na visita anterior, o FPID permanece devido à maneira como foi definido. Desta vez, a mesma ECID é gerada como a visita anterior. O usuário é visto em todas as soluções de Experience Platform e Experience Cloud como o mesmo usuário da visita anterior. |
-| Quinta visita | Entre a quarta e a quinta visitas, o usuário final limpou todos os cookies em seu navegador. Um novo FPID é gerado e usado para propagar a criação de uma nova ECID. O usuário agora seria considerado um novo visitante nas soluções Adobe Experience Platform e Experience Cloud. |
+| Segunda visita | A implantação da solução de ID de dispositivo próprio foi iniciada. A ECID existente ainda está presente e permanece o identificador principal para a identificação do visitante. |
+| Terceira visita | Entre a segunda e a terceira visita, decorreu tempo suficiente para que a ECID fosse excluída devido à política do navegador. No entanto, como o FPID foi definido usando um registro DNS A, o FPID persiste. O FPID agora é considerado a ID primária e usado para propagar a ECID, que é gravada no dispositivo do usuário final. O usuário agora seria considerado um novo visitante nas soluções Adobe Experience Platform e Experience Cloud. |
+| Quarta visita | Entre a terceira e a quarta visita, decorreu tempo suficiente para que a ECID fosse excluída devido à política do navegador. Assim como na visita anterior, o FPID permanece devido à maneira como foi definido. Desta vez, a mesma ECID é gerada como a visita anterior. O usuário é visto em todas as soluções de Experience Platform e Experience Cloud como o mesmo usuário da visita anterior. |
+| Quinta visita | Entre a quarta e a quinta visita, o usuário final limpou todos os cookies em seu navegador. Um novo FPID é gerado e usado para propagar a criação de uma nova ECID. O usuário agora seria considerado um novo visitante nas soluções Adobe Experience Platform e Experience Cloud. |
 
 {style="table-layout:auto"}
 
@@ -235,11 +235,11 @@ O conceito de seed é exclusivo, pois o FPID transmitido ao Adobe Experience Clo
 
 ### Quando a ID de dispositivo primário deve ser gerada?
 
-Para reduzir a inflação potencial de visitantes, o FPID deve ser gerado antes de fazer sua primeira solicitação usando o SDK da Web da plataforma. No entanto, se você não conseguir fazer isso, uma ECID ainda será gerada para esse usuário e usada como o identificador principal. O FPID gerado não se tornará o identificador principal até que a ECID não esteja mais presente.
+Para reduzir a inflação potencial de visitantes, o FPID deve ser gerado antes de fazer sua primeira solicitação usando o SDK da Web. No entanto, se você não conseguir fazer isso, uma ECID ainda será gerada para esse usuário e usada como o identificador principal. O FPID gerado não se tornará o identificador principal até que a ECID não esteja mais presente.
 
 ### Quais métodos de coleta de dados oferecem suporte a IDs de dispositivos primários?
 
-Atualmente, somente o SDK da Web da Platform é compatível com FPIDs.
+Atualmente, apenas o SDK da Web é compatível com FPIDs.
 
 ### Os FPIDs são armazenados em alguma plataforma ou solução de Experience Cloud?
 

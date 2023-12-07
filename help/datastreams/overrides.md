@@ -2,10 +2,10 @@
 title: Configurar substituições de sequência de dados
 description: Saiba como configurar substituições na interface das sequências de dados e ativá-las por meio do SDK da Web.
 exl-id: 3f17a83a-dbea-467b-ac67-5462c07c884c
-source-git-commit: 252bda1395a2a31cd7e2e2789e5c2508fbd3fd5e
+source-git-commit: 041a1782442df5f08bb52e4e450734a51c7781ea
 workflow-type: tm+mt
-source-wordcount: '1466'
-ht-degree: 77%
+source-wordcount: '1450'
+ht-degree: 60%
 
 ---
 
@@ -13,23 +13,23 @@ ht-degree: 77%
 
 As substituições de sequência de dados permitem definir configurações adicionais para suas sequências de dados, que são transmitidas para a rede de borda por meio do SDK da Web.
 
-Isso ajuda a acionar comportamentos de sequência de dados diferentes dos tradicionais sem criar uma nova sequência de dados ou modificar as configurações existentes.
+Isso ajuda a acionar comportamentos de sequência de dados diferentes dos padrão, sem criar uma sequência de dados ou modificar as configurações existentes.
 
-Criar uma substituição de configuração da sequência de dados é um processo de duas etapas:
+A substituição da configuração da sequência de dados é um processo de duas etapas:
 
-1. Primeiro, você deve definir as substituições de configuração da sequência na [página de configuração da sequência de dados](configure.md).
+1. Primeiro, você deve definir a substituição da configuração do fluxo de dados na [página de configuração do fluxo de dados](configure.md).
 2. Em seguida, você deve enviar as sobreposições para a Rede de borda de uma das seguintes maneiras:
    * Por meio da `sendEvent` ou `configure` [SDK da Web](#send-overrides-web-sdk) comandos.
    * Por meio do SDK da Web [extensão de tag](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
-   * Por meio do SDK móvel [API sendEvent](#send-overrides-mobile-sdk) chame.
+   * Por meio do SDK móvel [sendEvent](#send-overrides-mobile-sdk) comando.
 
 Este artigo explica o processo completo para criar cada tipo de substituição de configuração de sequência de dados compatível.
 
 >[!IMPORTANT]
 >
->As substituições de fluxo de dados são compatíveis somente com [SDK da Web](../edge/home.md) e [SDK móvel](https://developer.adobe.com/client-sdks/documentation/) integrações. [API do servidor](../server-api/overview.md) atualmente, as integrações não aceitam substituições de fluxo de dados.
+>As substituições de fluxo de dados são compatíveis somente com [SDK da Web](../edge/home.md) e [SDK móvel](https://developer.adobe.com/client-sdks/home/) integrações. [API do servidor](../server-api/overview.md) atualmente, as integrações não aceitam substituições de fluxo de dados.
 ><br>
->As substituições de sequência de dados devem ser usadas quando você precisa que dados diferentes sejam enviados para sequências de dados diferentes. Você não deve usar substituições de sequências de dados para casos de uso de personalização ou dados de consentimento.
+>As substituições de sequência de dados devem ser usadas quando você precisa que dados diferentes sejam enviados para sequências de dados diferentes. Não use substituições de fluxo de dados para casos de uso de personalização ou dados de consentimento.
 
 ## Casos de uso {#use-cases}
 
@@ -41,11 +41,11 @@ Uma empresa tem sites ou subdomínios diferentes para países diferentes nos qua
 
 Ao usar substituições de sequência de dados, a empresa pode alternar dinamicamente o fluxo dos dados para sequências de dados diferentes, em vez do comportamento padrão de enviar dados para uma sequência de dados.
 
-Um caso de uso comum pode ser o envio de dados para uma sequência de dados específica de um país e também o envio de dados para uma sequência de dados global na qual clientes executam uma ação importante, como fazer um pedido ou atualizar o perfil do usuário.
+Um caso de uso comum pode ser o envio de dados para um fluxo de dados específico de país e também para um fluxo de dados global em que os clientes executam uma ação importante, como fazer um pedido ou atualizar o perfil do usuário.
 
 **Diferenciação de perfis e identidades para diferentes unidades de negócios**
 
-Uma empresa com várias unidades de negócios deseja usar múltiplas sandboxes da Experience Platform para armazenar dados específicos de cada unidade.
+Uma empresa com várias unidades de negócios deseja usar várias sandboxes Experience Platform para armazenar dados específicos de cada unidade de negócios.
 
 Em vez de enviar dados para uma sequência de dados padrão, a empresa pode usar substituições de sequência de dados para garantir que cada unidade de negócios tenha sua própria sequência de dados para receber dados.
 
@@ -62,7 +62,7 @@ As substituições de configuração de sequência de dados permitem modificar a
 
 Para configurar substituições para uma sequência de dados do Adobe Target, primeiro você deve criar uma sequência de dados do Adobe Target. Siga as instruções para [configurar uma sequência de dados](configure.md) com o serviço do [Adobe Target](configure.md#target).
 
-Depois de criar a sequência de dados, edite o serviço do [Adobe Target](configure.md#target) adicionado e use a seção **[!UICONTROL Substituições do token de propriedade]** para adicionar as substituições de sequência de dados desejadas, conforme mostrado na imagem abaixo. Adicione um token de propriedade por linha.
+Depois de criar o fluxo de dados, edite o [Adobe Target](configure.md#target) serviço que você adicionou e usar o **[!UICONTROL Substituições do token de propriedade]** para adicionar as substituições de fluxo de dados desejadas, conforme mostrado na imagem abaixo. Adicione um token de propriedade por linha.
 
 ![Captura de tela da interface das sequências de dados mostrando as configurações do serviço do Adobe Target, com as substituições de token de propriedade realçadas.](assets/overrides/override-target.png)
 
@@ -74,7 +74,7 @@ Agora as substituições de sequência de dados do Adobe Target devem estar conf
 
 Para configurar substituições para uma sequência de dados do Adobe Analytics, primeiro você deve criar uma sequência de dados do [Adobe Analytics](configure.md#analytics). Siga as instruções para [configurar uma sequência de dados](configure.md) com o serviço do [Adobe Analytics](configure.md#analytics).
 
-Depois de criar a sequência de dados, edite o serviço do [Adobe Analytics](configure.md#target) adicionado e use a seção **[!UICONTROL Substituições do conjunto de relatórios]** para adicionar as substituições de sequência de dados desejadas, conforme mostrado na imagem abaixo.
+Depois de criar o fluxo de dados, edite o [Adobe Analytics](configure.md#target) serviço que você adicionou e usar o **[!UICONTROL Substituições do conjunto de relatórios]** para adicionar as substituições de fluxo de dados desejadas, conforme mostrado na imagem abaixo.
 
 Selecione **[!UICONTROL Mostrar modo de lote]** para habilitar a edição em lote de substituições de conjunto de relatórios. É possível copiar e colar uma lista de substituições de conjunto de relatórios, inserindo um conjunto de relatórios por linha.
 
@@ -88,7 +88,7 @@ Agora as substituições de sequência de dados do Adobe Analytics devem estar c
 
 Para configurar substituições de sequência de dados para conjuntos de dados de evento da Experience Platform, primeiro você deve criar uma sequência de dados da [Adobe Experience Platform](configure.md#aep). Siga as instruções para [configurar uma sequência de dados](configure.md) com o serviço da [Adobe Experience Platform](configure.md#aep).
 
-Depois de criar a sequência de dados, edite o serviço da [Adobe Experience Platform](configure.md#aep) adicionado e selecione a opção **[!UICONTROL Adicionar conjunto de dados de evento]** para adicionar um ou mais conjuntos de dados de evento de substituição, conforme mostrado na imagem abaixo.
+Depois de criar o fluxo de dados, edite o [Adobe Experience Platform](configure.md#aep) serviço que você adicionou e selecione o **[!UICONTROL Adicionar conjunto de dados do evento]** opção para adicionar um ou mais conjuntos de dados do evento de substituição, conforme mostrado na imagem abaixo.
 
 ![Captura de tela da interface das sequências de dados mostrando as configurações do serviço da Adobe Experience Platform, com as substituições de conjunto de dados de evento realçadas.](assets/overrides/override-aep.png)
 
@@ -124,9 +124,9 @@ Depois de [configurar as substituições de sequência de dados](#configure-over
 
 Se estiver usando o SDK da Web, enviar as substituições para a Rede de borda por meio do `edgeConfigOverrides` é a segunda e última etapa da ativação de substituições de configuração de fluxo de dados.
 
-As substituições de configuração de sequência de dados são enviadas para a rede de borda por meio do comando `edgeConfigOverrides` do SDK da Web. Esse comando cria substituições de sequência de dados que são transmitidas para a [!DNL Edge Network] no comando seguinte ou, no caso do comando `configure`, para cada solicitação.
+As substituições de configuração de sequência de dados são enviadas para a rede de borda por meio do comando `edgeConfigOverrides` do SDK da Web. Esse comando cria substituições de sequência de dados que são passadas para o [!DNL Edge Network] no próximo comando. Se você estiver usando a variável `configure` , as substituições são passadas para cada solicitação.
 
-O comando `edgeConfigOverrides` cria substituições de sequência de dados que são transmitidas para a [!DNL Edge Network] no comando seguinte ou, no caso do `configure`, para cada solicitação.
+A variável `edgeConfigOverrides` cria substituições de fluxo de dados que são passadas para o [!DNL Edge Network] no próximo comando.
 
 Quando uma substituição de configuração é enviada com o comando `configure`, ela é incluída nos seguintes comandos do SDK da Web.
 
@@ -246,7 +246,7 @@ Edge.sendEvent(experienceEvent: experienceEvent) { (handles: [EdgeEventHandle]) 
 }
 ```
 
->[!TAB Android (Kotlin)]
+>[!TAB Android™ (Kotlin)]
 
 Este exemplo mostra como é a substituição de uma ID de sequência de dados em um SDK móvel [!DNL Android] integração.
 

@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;ativação;solução de problemas;medidas de proteção;diretrizes;limite
-title: Medidas de proteção padrão para dados de ativação
+title: Medidas de proteção padrão para ativação de dados
 solution: Experience Platform
 product: experience platform
 type: Documentation
 description: Saiba mais sobre o uso padrão da ativação de dados e os limites de taxa.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
+source-git-commit: c425d1016bed80113b879a683114861d839b79eb
 workflow-type: tm+mt
 source-wordcount: '1662'
 ht-degree: 1%
 
 ---
 
-# Medidas de proteção para dados de ativação
+# Medidas de proteção para ativação de dados
 
 Esta página fornece limites de uso e taxa padrão em relação ao comportamento de ativação. Ao revisar as medidas de proteção a seguir, presume-se que você tenha [conectado aos destinos](/help/destinations/ui/connect-destination.md).
 

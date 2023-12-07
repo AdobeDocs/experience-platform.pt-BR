@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Visão geral da Adobe Experience Platform
 breadcrumb-title: Visão geral da Experience Platform
 user-guide-description: Saiba como a Experience Platform permite oferecer experiências personalizadas a clientes em tempo real com guias, documentação e tutoriais.
-source-git-commit: 81f570f8e5401624ccac74696b2323252a4de0a9
+source-git-commit: a3ba26fd6ee7b473d74cc3cf3d142e0f3ff069bb
 workflow-type: tm+mt
-source-wordcount: '289'
-ht-degree: 30%
+source-wordcount: '276'
+ht-degree: 24%
 
 ---
 
@@ -33,7 +33,7 @@ ht-degree: 30%
    * [Assistente de IA](ai-assistant.md)
 * APIs Experience Platform {#platform-apis}
    * [Introdução às APIs da Platform](api-guide.md)
-   * [Autenticar e acessar APIs da Platform](api-authentication.md)
+   * [Autenticar e acessar APIs da plataforma](api-authentication.md)
    * [Fundamentos da API](api-fundamentals.md)
    * [Uso do Postman com APIs de plataforma](postman.md)
    * [Documentos de referência da API](https://www.adobe.com/go/platform-api-reference-en)
@@ -74,6 +74,8 @@ ht-degree: 30%
 * Uso de licença e medidas de proteção {#license}
    * [Práticas recomendadas de direito de licença de gerenciamento de dados](./license-usage-and-guardrails/data-management-best-practices.md)
    * [Painel de uso da licença](./license-usage-and-guardrails/license-usage-dashboard.md)
+   * [Medidas de proteção do Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/guardrails.html)
+   * [Medidas de proteção do Real-Time CDP](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/guardrails/overview.html)
 * [Manual de solução de problemas](troubleshooting.md)
 * [Migração de data lake Gen2](adls2-gen2-migration.md)
 * [Glossário](glossary.md)

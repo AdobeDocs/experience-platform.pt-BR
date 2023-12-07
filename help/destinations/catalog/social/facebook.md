@@ -3,14 +3,14 @@ keywords: conexão facebook;conexão facebook;destinos do facebook;facebook;inst
 title: Conexão com o facebook
 description: Ative perfis para suas campanhas do Facebook para direcionamento de público, personalização e supressão com base em emails com hash.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 05e996f9e33e0d8be3d15a9ab3baaaf6d8152b5a
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '1941'
-ht-degree: 7%
+source-wordcount: '1949'
+ht-degree: 6%
 
 ---
 
-# Conexão com o [!DNL Facebook]
+# [!DNL Facebook] conexão
 
 ## Visão geral {#overview}
 
@@ -18,7 +18,7 @@ Ativar perfis para o [!DNL Facebook] campanhas para direcionamento de público, 
 
 Você pode usar esse destino para direcionamento de público-alvo em [!DNL Facebook's] família de aplicativos compatíveis com [!DNL Custom Audiences], incluindo [!DNL Facebook], [!DNL Instagram], [!DNL Audience Network], e [!DNL Messenger]. A seleção do aplicativo no qual você deseja executar a campanha é indicada no nível de posicionamento no [!DNL Facebook Ads Manager].
 
-![Destino do facebook na interface do usuário do Adobe Experience Platform](../../assets/catalog/social/facebook/catalog.png)
+![Destino do facebook na interface do Adobe Experience Platform.](../../assets/catalog/social/facebook/catalog.png)
 
 ## Casos de uso
 
@@ -50,7 +50,7 @@ Em seguida, eles podem usar seus dados offline, incluindo IDs de associação as
 
 ## Públicos-alvo compatíveis {#supported-audiences}
 
-Esta seção descreve que tipo de público-alvo você pode exportar para esse destino.
+Esta seção descreve quais tipos de públicos-alvo você pode exportar para esse destino.
 
 | Origem do público | Suportado | Descrição |
 ---------|----------|----------|
@@ -74,7 +74,7 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 
 Antes de enviar os públicos-alvo para [!DNL Facebook], certifique-se de atender aos seguintes requisitos:
 
-* Seu [!DNL Facebook] a conta de usuário deve ter acesso total à [!DNL Facebook Business Account] que possui a conta de Anúncio que você usará.
+* Seu [!DNL Facebook] a conta de usuário deve ter acesso total à [!DNL Facebook Business Account] que é proprietária da conta de anúncio que você está usando.
 * Seu [!DNL Facebook] a conta de usuário deve ter o **[!DNL Manage campaigns]** permissão ativada para a conta de anúncio que você planeja usar.
 * A variável **Adobe Experience Cloud** conta comercial deve ser adicionada como um parceiro de publicidade em sua [!DNL Facebook Ad Account]. Use `business ID=206617933627973`. Consulte [Adicionar parceiros ao seu gerente de negócios](https://www.facebook.com/business/help/1717412048538897) na documentação do Facebook para obter detalhes.
   >[!IMPORTANT]
@@ -123,7 +123,7 @@ Se você optar por criar o hash dos endereços de email, não se esqueça de ate
 > Os dados de origem do atributo não são automaticamente transformados em hash. Quando o campo de origem contiver atributos sem hash, verifique a **[!UICONTROL Aplicar transformação]** opção, para ter [!DNL Platform] coloque automaticamente os dados em hash na ativação.
 > A variável **[!UICONTROL Aplicar transformação]** é exibida somente quando você seleciona atributos como campos de origem. Ela não é exibida ao escolher namespaces.
 
-![Transformação de mapeamento de identidade](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
+![Aplique o controle de transformação destacado na etapa de mapeamento.](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
 ## Uso de namespaces personalizados {#custom-namespaces}
 
@@ -149,7 +149,7 @@ O vídeo abaixo também demonstra as etapas para configurar um [!DNL Facebook] d
 
 1. Localize o destino do Facebook no catálogo de destino e selecione **[!UICONTROL Configurar]**.
 2. Selecionar **[!UICONTROL Conectar ao destino]**.
-   ![Autenticar no Facebook](/help/destinations/assets/catalog/social/facebook/authenticate-facebook-destination.png)
+   ![Etapa de autenticação para o Facebook mostrada no fluxo de trabalho de ativação.](/help/destinations/assets/catalog/social/facebook/authenticate-facebook-destination.png)
 3. Insira suas credenciais do Facebook e selecione **Fazer logon**.
 
 ### Preencher detalhes do destino {#destination-details}
@@ -176,7 +176,7 @@ Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICON
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_facebook_originofaudience"
 >title="Origem do público-alvo"
->abstract="Escolha como os dados do cliente no público-alvo foram coletados originalmente. Os dados serão exibidos no Facebook quando um usuário for direcionado pelo segmento"
+>abstract="Escolha como os dados do cliente no público-alvo foram coletados originalmente. Os dados são exibidos no Facebook quando um usuário é direcionado pelo segmento"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_facebook_originofaudience_customers"
@@ -202,7 +202,7 @@ Consulte [Ativar dados do público-alvo para streaming de destinos de exportaç�
 
 No **[!UICONTROL Programação de segmento]** etapa, você deve fornecer a [!UICONTROL Origem do público] ao enviar públicos-alvo para [!DNL Facebook Custom Audiences].
 
-![Origem facebook do público-alvo](../../assets/catalog/social/facebook/facebook-origin-audience.png)
+![Origem da lista suspensa de Público-alvo mostrada na etapa de ativação do Facebook.](../../assets/catalog/social/facebook/facebook-origin-audience.png)
 
 ### Exemplo de mapeamento: ativação de dados de público-alvo no [!DNL Facebook Custom Audience] {#example-facebook}
 
@@ -231,7 +231,7 @@ Selecionar campos de destino:
 > 
 >Os dados de origem do atributo não são automaticamente transformados em hash. Quando o campo de origem contiver atributos sem hash, verifique a **[!UICONTROL Aplicar transformação]** opção, para ter [!DNL Platform] coloque automaticamente os dados em hash na ativação.
 
-![Mapeamento de identidade](../../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
+![Aplique o controle de transformação destacado na etapa de mapeamento.](../../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
 
 ## Dados exportados {#exported-data}
 
@@ -251,4 +251,4 @@ Ao configurar esse destino, você pode receber o seguinte erro:
 
 Esse erro ocorre quando clientes estão usando contas recém-criadas e o [!DNL Facebook] As permissões do ainda não estão ativas.
 
-Se você receber o `400 Bad Request` mensagem de erro depois de seguir as etapas em [Pré-requisitos da conta do facebook](#facebook-account-prerequisites), aguarde alguns dias para o [!DNL Facebook] para entrar em vigor.
+Se você receber o `400 Bad Request` mensagem de erro depois de seguir as etapas em [Pré-requisitos da conta do facebook](#facebook-account-prerequisites), aguarde alguns dias para a [!DNL Facebook] para entrar em vigor.

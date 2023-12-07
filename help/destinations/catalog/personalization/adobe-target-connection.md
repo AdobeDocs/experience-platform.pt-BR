@@ -3,10 +3,10 @@ keywords: personalização do target, destino, destino do experience platform ta
 title: Conexão com o Adobe Target
 description: O Adobe Target é um aplicativo que fornece recursos de personalização e experimentação em tempo real e alimentados por IA em todas as interações de entrada de clientes em sites, aplicativos móveis e muito mais.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '1202'
-ht-degree: 17%
+source-wordcount: '1109'
+ht-degree: 15%
 
 ---
 
@@ -27,6 +27,8 @@ O Adobe Target é um aplicativo que fornece recursos de personalização e exper
 
 O Adobe Target é uma conexão de personalização no catálogo de destinos do Adobe Experience Platform.
 
+## Vídeo da visão geral {#video-overview}
+
 Para obter uma breve visão geral sobre como configurar a conexão do Adobe Target no Experience Platform, assista ao vídeo abaixo.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3418799/?quality=12&learn=on)
@@ -41,7 +43,7 @@ Configurar a conexão do Adobe Target sem usar uma ID de sequência de dados nã
 
 >[!IMPORTANT]
 >
->Antes de criar um [!DNL Adobe Target] conexão, leia o guia sobre como [configurar destinos de personalização para personalização de mesma página e próxima página](../../ui/activate-edge-personalization-destinations.md). Este guia orienta você sobre as etapas de configuração necessárias para casos de uso de personalização de mesma página e próxima página, em vários componentes do Experience Platform. A personalização de mesma página e próxima página requer que você use uma ID de fluxo de dados ao configurar a conexão do Adobe Target.
+>Antes de criar um [!DNL Adobe Target] conexão, leia o guia sobre como [configurar destinos de personalização para personalização de mesma página e próxima página](../../ui/activate-edge-personalization-destinations.md). Este guia orienta você sobre as etapas de configuração necessárias para casos de uso de personalização de mesma página e próxima página, em vários componentes do Experience Platform. Para obter casos de uso de personalização de mesma página e próxima página, você deve usar uma ID de fluxo de dados ao configurar a conexão do Adobe Target.
 
 ### Pré-requisitos no Adobe Target {#prerequisites-in-adobe-target}
 
@@ -54,7 +56,7 @@ Leia mais sobre a concessão de permissões para [Target Premium](https://experi
 
 ## Públicos-alvo compatíveis {#supported-audiences}
 
-Esta seção descreve que tipo de público-alvo você pode exportar para esse destino.
+Esta seção descreve quais tipos de públicos-alvo você pode exportar para esse destino.
 
 | Origem do público | Suportado | Descrição |
 ---------|----------|----------|
@@ -133,7 +135,7 @@ Ler [Ativar públicos para destinos de personalização de borda](../../ui/activ
 
 ## Dados exportados {#exported-data}
 
-O Adobe Target lê os dados do perfil da Rede de borda da Adobe Experience Platform, de modo que nenhum dado é exportado.
+Adobe Target *leituras* dados de perfil da Rede de borda da Adobe Experience Platform, de modo que nenhum dado é exportado.
 
 ## Uso e governança de dados {#data-usage-governance}
 

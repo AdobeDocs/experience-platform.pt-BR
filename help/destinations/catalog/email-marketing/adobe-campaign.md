@@ -3,10 +3,10 @@ keywords: email;Email;e-mail;destinos de e-mail;adobe campaign;campanha
 title: Conexão com o Adobe Campaign
 description: O Adobe Campaign é um conjunto de soluções que ajudam você a personalizar e entregar campanhas em todos os seus canais online e offline.
 exl-id: 0de91738-8f56-41f5-8745-9b14b15db76a
-source-git-commit: 8e37ff057ec0fb750bc7b4b6f566f732d9fe5d68
+source-git-commit: 8c08b3d62d58d061f62c3b0abb23de0d826e3985
 workflow-type: tm+mt
-source-wordcount: '956'
-ht-degree: 3%
+source-wordcount: '906'
+ht-degree: 2%
 
 ---
 
@@ -20,7 +20,7 @@ Para enviar dados do público-alvo para o Adobe Campaign, primeiro você deve [c
 
 ## Públicos-alvo compatíveis {#supported-audiences}
 
-Esta seção descreve que tipo de público-alvo você pode exportar para esse destino.
+Esta seção descreve quais tipos de públicos-alvo você pode exportar para esse destino.
 
 | Origem do público | Suportado | Descrição |
 ---------|----------|----------|
@@ -40,11 +40,11 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 
 {style="table-layout:auto"}
 
-## LISTA DE PERMISSÕES de endereço IP {#allow-list}
+## INCLUIR NA LISTA DE PERMISSÕES endereço IP {#allow-list}
 
-Ao configurar destinos de marketing por email com armazenamento SFTP, a Adobe recomenda adicionar determinados intervalos IP à lista de permissões.
+Ao configurar destinos de marketing por email com armazenamento SFTP, a Adobe recomenda adicionar determinados intervalos IP ao incluo na lista de permissões.
 
-Consulte [LISTA DE PERMISSÕES de endereço IP para destinos SFTP](../cloud-storage/ip-address-allow-list.md) se precisar adicionar IPs de Adobe à lista de permissões.
+Consulte [Endereço IP relacionado à inclui na lista de permissões para destinos SFTP](../cloud-storage/ip-address-allow-list.md) se você precisar adicionar IPs do Adobe ao seu incluo na lista de permissões.
 
 ## Conectar ao destino {#connect}
 
@@ -108,7 +108,7 @@ Para [!DNL Adobe Campaign] destinos, [!DNL Platform] cria um `.csv` no local de 
 >[!IMPORTANT]
 >
 >* Lembre-se [!DNL SFTP] limites de armazenamento, limites de armazenamento do banco de dados e limites do perfil ativo conforme o contrato do Adobe Campaign ao realizar essa integração.
->* Você precisa programar, importar e mapear os segmentos exportados no Adobe Campaign usando o [!DNL Campaign] fluxos de trabalho. Consulte [Configuração de uma importação recorrente](https://experienceleague.adobe.com/docs/campaign-classic/using/automating-with-workflows/use-cases/data-management/recurring-import-workflow.html) na documentação do Adobe Campaign Classic e [Sobre as atividades de gestão de dados](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/data-management-activities/about-data-management-activities.html) na documentação do Adobe Campaign Standard.
+>* Você precisa agendar, importar e mapear os segmentos exportados no Adobe Campaign usando [!DNL Campaign] fluxos de trabalho. Consulte [Configuração de uma importação recorrente](https://experienceleague.adobe.com/docs/campaign-classic/using/automating-with-workflows/use-cases/data-management/recurring-import-workflow.html) na documentação do Adobe Campaign Classic e [Sobre as atividades de gestão de dados](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/data-management-activities/about-data-management-activities.html) na documentação do Adobe Campaign Standard.
 >* O método preferido para enviar dados para o Adobe Campaign é por meio de [!DNL Amazon S3] ou [!DNL Azure Blob].
 
 Depois de se conectar [!DNL Platform] ao seu [!DNL Amazon S3] ou [!DNL Azure Blob] armazenamento, você deve configurar a importação de dados do local de armazenamento para o Adobe Campaign. Para saber como fazer isso, consulte as seguintes páginas de documentação do Adobe Campaign:

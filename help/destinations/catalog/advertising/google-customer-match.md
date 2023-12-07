@@ -3,14 +3,14 @@ keywords: correspondência do cliente do google;correspondência do cliente do G
 title: Conexão de Correspondência de cliente do Google
 description: O Google Customer Match permite usar seus dados online e offline para acessar e reengajar com seus clientes nas propriedades próprias e operadas da Google, como Search, Shopping, Gmail e YouTube.
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: 661ef040398a9e2ef8dd9cebdf7bd27d4268636b
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '1836'
+source-wordcount: '1788'
 ht-degree: 1%
 
 ---
 
-# Conexão com o [!DNL Google Customer Match]
+# [!DNL Google Customer Match] conexão
 
 ## Visão geral {#overview}
 
@@ -52,7 +52,7 @@ Alguns destinos no Experience Platform têm determinadas regras e obrigações p
 
 ## Públicos-alvo compatíveis {#supported-audiences}
 
-Esta seção descreve que tipo de público-alvo você pode exportar para esse destino.
+Esta seção descreve quais tipos de públicos-alvo você pode exportar para esse destino.
 
 | Origem do público | Suportado | Descrição |
 ---------|----------|----------|
@@ -76,13 +76,13 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 
 Antes de configurar um [!DNL Google Customer Match] destino no Experience Platform, leia e siga a política da Google para uso de [!DNL Customer Match], delineado no [Documentação de suporte do Google](https://support.google.com/google-ads/answer/6299717).
 
-Em seguida, verifique se [!DNL Google] a conta do está configurada para um [!DNL Standard] ou um nível de permissão superior. Consulte a [Documentação do Google Ads](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&amp;rd=1) para obter detalhes.
+Em seguida, verifique se o [!DNL Google] a conta do está configurada para um [!DNL Standard] ou um nível de permissão superior. Consulte a [Documentação do Google Ads](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&amp;rd=1) para obter detalhes.
 
 ### Lista de permissões {#allowlist}
 
-Antes de criar o [!DNL Google Customer Match] destino no Experience Platform, verifique se o [!DNL Google Ads] conta está em conformidade com o [[!DNL Google Customer Match] política](https://support.google.com/google-ads/answer/6299717/customer-match-policy).
+Antes de criar o [!DNL Google Customer Match] destino no Experience Platform, certifique-se de que seu [!DNL Google Ads] conta está em conformidade com o [[!DNL Google Customer Match] política](https://support.google.com/google-ads/answer/6299717/customer-match-policy).
 
-Os clientes com contas em conformidade são automaticamente permitidos listados pela Google.
+Incluir na lista de permissões Os clientes com contas em conformidade são automaticamente notificados pela Google.
 
 ## Requisitos de correspondência de ID {#id-matching-requirements}
 
@@ -132,6 +132,12 @@ The video below demonstrates the steps to configure a [!DNL Google Customer Matc
 
 >[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng) -->
 
+## Vídeo da visão geral {#video-overview}
+
+Assista ao vídeo abaixo para obter uma explicação dos benefícios e como ativar os dados para o Google Customer Match.
+
+>[!VIDEO](https://video.tv.adobe.com/v/38180/)
+
 ## Conectar ao destino {#connect}
 
 >[!IMPORTANT]
@@ -169,9 +175,9 @@ Consulte [Ativar dados do público-alvo para streaming de destinos de exportaç�
 
 No **[!UICONTROL Programação de segmento]** etapa, você deve fornecer a [!UICONTROL ID do aplicativo] ao enviar [!DNL IDFA] ou [!DNL GAID] públicos-alvo para [!DNL Google Customer Match].
 
-![ID do aplicativo de correspondência do cliente da Google](../../assets/catalog/advertising/google-customer-match/gcm-destination-appid.png)
+![O campo ID do aplicativo de correspondência do cliente do Google é realçado na etapa Agendamento de segmento do fluxo de trabalho de ativação.](../../assets/catalog/advertising/google-customer-match/gcm-destination-appid.png)
 
-Para obter detalhes sobre como encontrar o [!DNL App ID], consulte o [Documentação oficial do Google](https://developers.google.com/adwords/api/docs/reference/v201809/AdwordsUserListService.CrmBasedUserList#appid).
+Para obter detalhes sobre como encontrar o [!DNL App ID], consulte o [Documentação oficial do Google](https://developers.google.com/adwords/api/docs/reference/v201809/AdwordsUserListService.CrmBasedUserList#appid) ou pergunte ao representante da Google.
 
 ### Exemplo de mapeamento: ativação de dados de público-alvo no [!DNL Google Customer Match] {#example-gcm}
 
@@ -194,17 +200,17 @@ Selecionar campos de destino:
 * Selecione o `IDFA` ou `GAID` namespaces como identidade de destino quando os namespaces de origem são `IDFA` ou `GAID`.
 * Selecione o `User_ID` namespace como identidade de destino quando o namespace de origem é personalizado.
 
-![Mapeamento de identidade](../../assets/ui/activate-segment-streaming-destinations/identity-mapping-gcm.png)
+![Mapeamento de identidade entre campos de origem e destino mostrado na etapa Mapping do fluxo de trabalho de ativação.](../../assets/ui/activate-segment-streaming-destinations/identity-mapping-gcm.png)
 
 O hash automático é aplicado aos dados de namespaces sem hash [!DNL Platform] na ativação.
 
 Os dados de origem do atributo não são automaticamente transformados em hash. Quando o campo de origem contiver atributos sem hash, verifique a **[!UICONTROL Aplicar transformação]** opção, para ter [!DNL Platform] coloque automaticamente os dados em hash na ativação.
 
-![Transformação de mapeamento de identidade](../../assets/ui/activate-segment-streaming-destinations/identity-mapping-gcm-transformation.png)
+![Aplique o controle de transformação destacado na etapa Mapping do fluxo de trabalho de ativação.](../../assets/ui/activate-segment-streaming-destinations/identity-mapping-gcm-transformation.png)
 
 ## Verificar se a ativação do público-alvo foi bem-sucedida {#verify-activation}
 
-Após concluir o fluxo de ativação, alterne para o **[!UICONTROL Anúncios do Google]** conta. Os públicos ativados são mostrados na sua conta do Google como listas de clientes. Observe que, dependendo do tamanho do público, alguns públicos-alvo não são preenchidos, a menos que haja mais de 100 usuários ativos para atender.
+Após concluir o fluxo de ativação, alterne para o **[!UICONTROL Anúncios do Google]** conta. Os públicos ativados são mostrados na sua conta do Google como listas de clientes. Dependendo do tamanho do público-alvo, alguns públicos-alvo não são preenchidos, a menos que haja mais de 100 usuários ativos para atender.
 
 Ao mapear um público-alvo para ambos [!DNL IDFA] e [!DNL GAID] IDs móveis, [!DNL Google Customer Match] O cria um público-alvo separado para cada mapeamento de ID. Seu [!DNL Google Ads] mostra dois segmentos diferentes, um para o [!DNL IDFA], e um para o [!DNL GAID] mapeamento.
 
@@ -217,8 +223,3 @@ Ao configurar esse destino, você pode receber o seguinte erro:
 `{"message":"Google Customer Match Error: OperationAccessDenied.ACTION_NOT_PERMITTED","code":"400 BAD_REQUEST"}`
 
 Esse erro ocorre quando as contas do cliente não estão em conformidade com os [pré-requisitos](#google-account-prerequisites). Para corrigir esse problema, entre em contato com a Google e verifique se sua conta está incluída na lista de permissões e configurada para um [!DNL Standard] ou um nível de permissão superior. Consulte a [Documentação do Google Ads](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&amp;rd=1) para obter detalhes.
-
-## Recursos adicionais {#additional-resources}
-
-* [Integrar [!DNL Google Customer Match] - Tutorial em vídeo](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/integrate-with-google-customer-match.html?lang=pt-BR)
-

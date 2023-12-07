@@ -2,7 +2,7 @@
 title: Modelo de autoatendimento de documentação // Substituir pelo nome do destino
 description: Use este template para criar uma documentação pública para seu destino no catálogo do Adobe Experience Platform. // Substituir pelo parágrafo na seção Visão geral
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
-source-git-commit: afcb5f80edaa4d68ba167123feb2ba9060469243
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
 source-wordcount: '1640'
 ht-degree: 2%
@@ -76,7 +76,7 @@ Para ajudá-lo a entender melhor como e quando você deve usar o *SeuDestino* de
 
 *Adicione informações nesta seção sobre os públicos-alvo compatíveis com o seu destino. Preenchemos previamente a tabela com alguns valores padrão. Use o `✓` e `X` caracteres para marcar se o tipo de público-alvo é compatível com este destino.*
 
-Esta seção descreve que tipo de público-alvo você pode exportar para esse destino.
+Esta seção descreve quais tipos de públicos-alvo você pode exportar para esse destino.
 
 | Origem do público | Suportado | Descrição |
 ---------|----------|----------|

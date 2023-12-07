@@ -3,9 +3,9 @@ title: Destino da Data Landing Zone
 description: Saiba como se conectar à Data Landing Zone para ativar públicos e exportar conjuntos de dados.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
-source-git-commit: a1b3e59e0d5b1312b7bc22885ee679775c2a4d78
+source-git-commit: 8c08b3d62d58d061f62c3b0abb23de0d826e3985
 workflow-type: tm+mt
-source-wordcount: '1481'
+source-wordcount: '1509'
 ht-degree: 4%
 
 ---
@@ -32,7 +32,7 @@ A Platform impõe um TTL (time-to-live) rigoroso de sete dias em todos os arquiv
 
 ## Públicos-alvo compatíveis {#supported-audiences}
 
-Esta seção descreve que tipo de público-alvo você pode exportar para esse destino.
+Esta seção descreve quais tipos de públicos-alvo você pode exportar para esse destino.
 
 | Origem do público | Suportado | Descrição |
 ---------|----------|----------|
@@ -62,11 +62,11 @@ Você pode usar [[!DNL Azure Storage Explorer]](https://azure.microsoft.com/en-u
 
 No [!DNL Azure Storage Explorer] Selecione o ícone de conexão na barra de navegação esquerda. A variável **Selecionar recurso** é exibida, fornecendo opções para conexão. Selecionar **[!DNL Blob container]** para se conectar ao seu [!DNL Data Landing Zone] armazenamento.
 
-![select-resource](/help/sources/images/tutorials/create/dlz/select-resource.png)
+![Selecione o recurso destacado na interface do usuário do Azure.](/help/sources/images/tutorials/create/dlz/select-resource.png)
 
 Em seguida, selecione **URL de assinatura de acesso compartilhado (SAS)** como seu método de conexão e, em seguida, selecione **Próxima**.
 
-![select-connection-method](/help/sources/images/tutorials/create/dlz/select-connection-method.png)
+![Selecione o método de conexão destacado na interface do Azure.](/help/sources/images/tutorials/create/dlz/select-connection-method.png)
 
 Depois de selecionar o método de conexão, você deve fornecer um **nome de exibição** e a variável **[!DNL Blob]URL SAS do contêiner** que corresponde ao seu [!DNL Data Landing Zone] recipiente.
 
@@ -171,15 +171,15 @@ A resposta a seguir retorna os valores atualizados para o `SASToken` e `SASUri`.
 
 Forneça seu nome para exibição (`containerName`) e [!DNL Data Landing Zone] URL SAS, conforme retornado na chamada de API descrita acima, e selecione **Próxima**.
 
-![enter-connection-info](/help/sources/images/tutorials/create/dlz/enter-connection-info.png)
+![Insira as informações de conexão destacadas na interface do usuário do Azure.](/help/sources/images/tutorials/create/dlz/enter-connection-info.png)
 
 A variável **Resumo** é exibida, fornecendo uma visão geral de suas configurações, incluindo informações sobre [!DNL Blob] endpoint e permissões. Quando estiver pronto, selecione **Conectar**.
 
-![resumo](/help/sources/images/tutorials/create/dlz/summary.png)
+![Resumo das configurações mostradas na interface do usuário do Azure.](/help/sources/images/tutorials/create/dlz/summary.png)
 
 Uma conexão bem-sucedida atualiza seu [!DNL Azure Storage Explorer] Interface com o seu [!DNL Data Landing Zone] recipiente.
 
-![dlz-user-container](/help/sources/images/tutorials/create/dlz/dlz-user-container.png)
+![Resumo do contêiner de usuário DLZ destacado na interface do usuário do Azure.](/help/sources/images/tutorials/create/dlz/dlz-user-container.png)
 
 Com o seu [!DNL Data Landing Zone] contêiner conectado a [!DNL Azure Storage Explorer], agora é possível começar a exportar arquivos do Experience Platform para o seu [!DNL Data Landing Zone] recipiente. Para exportar arquivos, é necessário estabelecer uma conexão com o [!DNL Data Landing Zone] destino na interface do usuário do Experience Platform, conforme descrito na seção abaixo.
 
@@ -226,7 +226,7 @@ Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICON
 
 Consulte [Ativar dados do público-alvo para destinos de exportação de perfil em lote](../../ui/activate-batch-profile-destinations.md) para obter instruções sobre como ativar públicos-alvo para esse destino.
 
-### Programação
+### Agendamento
 
 No **[!UICONTROL Agendamento]** etapa, você pode [configurar o cronograma de exportação](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) para seu [!DNL Data Landing Zone] destino e você também pode [configurar o nome dos arquivos exportados](/help/destinations/ui/activate-batch-profile-destinations.md#file-names).
 

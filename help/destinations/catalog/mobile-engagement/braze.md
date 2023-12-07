@@ -3,14 +3,14 @@ keywords: mobile; braze; mensagens;
 title: Conexão Braze
 description: O Brasil é uma plataforma abrangente de engajamento do cliente que promove experiências relevantes e memoráveis entre os clientes e as marcas que eles adoram.
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: 05e996f9e33e0d8be3d15a9ab3baaaf6d8152b5a
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '1132'
+source-wordcount: '1122'
 ht-degree: 3%
 
 ---
 
-# Conexão com o [!DNL Braze]
+# [!DNL Braze] conexão
 
 ## Visão geral {#overview}
 
@@ -46,7 +46,7 @@ Como profissional de marketing, desejo direcionar os usuários em um destino de 
 
 ## Públicos-alvo compatíveis {#supported-audiences}
 
-Esta seção descreve que tipo de público-alvo você pode exportar para esse destino.
+Esta seção descreve quais tipos de públicos-alvo você pode exportar para esse destino.
 
 | Origem do público | Suportado | Descrição |
 ---------|----------|----------|
@@ -155,7 +155,7 @@ Digamos que seu esquema de perfil XDM e seu [!DNL Braze] instância contém os s
 |  | Esquema de perfil XDM | [!DNL Braze] Instância |
 |---|---|---|
 | Atributos | <ul><li><code>person.name.firstName</code></li><li><code>person.name.lastName</code></li><li><code>mobilePhone.number</code></li></ul> | <ul><li><code>Nome</code></li><li><code>Sobrenome</code></li><li><code>PhoneNumber</code></li></ul> |
-| Identidades | <ul><li><code>Email</code></li><li><code>ID de anúncio do Google (GAID)</code></li><li><code>Apple ID para anunciantes (IDFA)</code></li></ul> | <ul><li><code>external_id</code></li></ul> |
+| Identidades | <ul><li><code>E-mail</code></li><li><code>ID de anúncio do Google (GAID)</code></li><li><code>Apple ID para anunciantes (IDFA)</code></li></ul> | <ul><li><code>external_id</code></li></ul> |
 
 O mapeamento correto seria semelhante a:
 

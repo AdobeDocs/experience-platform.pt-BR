@@ -2,14 +2,14 @@
 title: Conexão com o Amazon S3
 description: Crie uma conexão de saída ativa com seu armazenamento Amazon Web Services (AWS) S3 para exportar arquivos de dados CSV da Adobe Experience Platform periodicamente para seus próprios buckets do S3.
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: 47197b745bebb6564d912d9dc045593bc076ae2a
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '1051'
-ht-degree: 17%
+source-wordcount: '1052'
+ht-degree: 16%
 
 ---
 
-# Conexão com o [!DNL Amazon S3] {#s3-connection}
+# [!DNL Amazon S3] conexão {#s3-connection}
 
 ## Log de alterações de destino {#changelog}
 
@@ -23,11 +23,11 @@ Com a versão de julho de 2023 do Experience Platform, a [!DNL Amazon S3] O dest
 ## Conecte-se ao seu [!DNL Amazon S3] armazenamento por meio da API ou da interface {#connect-api-or-ui}
 
 * Para se conectar ao seu [!DNL Amazon S3] local de armazenamento usando a interface do usuário da Platform, leia as seções [Conectar ao destino](#connect) e [Ativar públicos para este destino](#activate) abaixo.
-* Para se conectar ao seu [!DNL Amazon S3] local de armazenamento de dados de forma programática, leia as [Ative públicos para destinos baseados em arquivo usando o tutorial da API do Serviço de fluxo](../../api/activate-segments-file-based-destinations.md).
+* Para se conectar ao seu [!DNL Amazon S3] local de armazenamento de dados de forma programática, leia o guia sobre como [ativar públicos-alvo para destinos baseados em arquivo usando o tutorial da API do Serviço de fluxo](../../api/activate-segments-file-based-destinations.md).
 
 ## Públicos-alvo compatíveis {#supported-audiences}
 
-Esta seção descreve que tipo de público-alvo você pode exportar para esse destino.
+Esta seção descreve quais tipos de públicos-alvo você pode exportar para esse destino.
 
 | Origem do público | Suportado | Descrição |
 ---------|----------|----------|
@@ -47,7 +47,7 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 
 {style="table-layout:auto"}
 
-![Tipo de exportação baseada em perfil do Amazon S3](../../assets/catalog/cloud-storage/amazon-s3/catalog.png)
+![Tipo de exportação baseado em perfil do Amazon S3 destacado na UU.](../../assets/catalog/cloud-storage/amazon-s3/catalog.png)
 
 ## Conectar ao destino {#connect}
 
@@ -69,7 +69,7 @@ Para autenticar no destino, preencha os campos obrigatórios e selecione **[!UIC
 * **[!DNL Amazon S3]chave de acesso** e **[!DNL Amazon S3]chave secreta**: Em [!DNL Amazon S3], gerar um `access key - secret access key` emparelhe para conceder acesso à Platform ao seu [!DNL Amazon S3] conta. Saiba mais na [Documentação do Amazon Web Services](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
 * **[!UICONTROL Chave de criptografia]**: como opção, você pode anexar sua chave pública formatada em RSA para adicionar criptografia aos arquivos exportados. Veja um exemplo de uma chave de criptografia formatada corretamente na imagem abaixo.
 
-  ![Imagem que mostra um exemplo de uma chave PGP formatada corretamente na interface](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+  ![Imagem que mostra um exemplo de uma chave PGP formatada corretamente na interface.](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 ### Preencher detalhes do destino {#destination-details}
 

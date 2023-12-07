@@ -2,10 +2,10 @@
 title: Conexão SFTP
 description: Crie uma conexão de saída ativa com o servidor SFTP para exportar arquivos de dados delimitados da Adobe Experience Platform periodicamente.
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: 47197b745bebb6564d912d9dc045593bc076ae2a
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '1016'
-ht-degree: 11%
+source-wordcount: '1022'
+ht-degree: 8%
 
 ---
 
@@ -35,7 +35,7 @@ Crie uma conexão de saída ativa com o servidor SFTP para exportar arquivos de 
 
 ## Públicos-alvo compatíveis {#supported-audiences}
 
-Esta seção descreve que tipo de público-alvo você pode exportar para esse destino.
+Esta seção descreve quais tipos de públicos-alvo você pode exportar para esse destino.
 
 | Origem do público | Suportado | Descrição |
 ---------|----------|----------|
@@ -55,7 +55,7 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 
 {style="table-layout:auto"}
 
-![Tipo de exportação baseada em perfil SFTP](../../assets/catalog/cloud-storage/sftp/catalog.png)
+![Tipo de exportação baseado em perfil SFTP destacado no catálogo de destinos.](../../assets/catalog/cloud-storage/sftp/catalog.png)
 
 ## Conectar ao destino {#connect}
 
@@ -79,7 +79,7 @@ Para se conectar a esse destino, siga as etapas descritas no [tutorial de config
 
 Se você selecionar a variável **[!UICONTROL SFTP com senha]** tipo de autenticação para se conectar ao local SFTP:
 
-![Autenticação básica de destino SFTP](../../assets/catalog/cloud-storage/sftp/stfp-basic-authentication.png)
+![Autenticação básica de destino SFTP com senha.](../../assets/catalog/cloud-storage/sftp/stfp-basic-authentication.png)
 
 * **[!UICONTROL Domínio]**: o endereço do local de armazenamento SFTP;
 * **[!UICONTROL Nome de usuário]**: o nome de usuário para fazer logon no local de armazenamento SFTP;
@@ -87,26 +87,26 @@ Se você selecionar a variável **[!UICONTROL SFTP com senha]** tipo de autentic
 * **[!UICONTROL Senha]**: a senha para fazer logon no local de armazenamento SFTP.
 * **[!UICONTROL Chave de criptografia]**: como opção, você pode anexar sua chave pública formatada em RSA para adicionar criptografia aos arquivos exportados. Veja um exemplo de uma chave de criptografia formatada corretamente na imagem abaixo.
 
-  ![Imagem que mostra um exemplo de uma chave PGP formatada corretamente na interface](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+  ![Imagem que mostra um exemplo de uma chave PGP formatada corretamente na interface.](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 
 Se você selecionar a variável **[!UICONTROL SFTP com chave SSH]** tipo de autenticação para se conectar ao local SFTP:
 
-![Autenticação de chave SSH de destino SFTP](../../assets/catalog/cloud-storage/sftp/sftp-ssh-key-authentication.png)
+![Autenticação de chave SSH de destino SFTP.](../../assets/catalog/cloud-storage/sftp/sftp-ssh-key-authentication.png)
 
 * **[!UICONTROL Domínio]**: Preencha o endereço IP ou o nome de domínio da conta SFTP
 * **[!UICONTROL Porta]**: a porta usada pelo local de armazenamento SFTP;
 * **[!UICONTROL Nome de usuário]**: o nome de usuário para fazer logon no local de armazenamento SFTP;
-* **[!UICONTROL Chave SSH]**: a chave SSH privada usada para fazer logon no local de armazenamento SFTP. A chave privada precisa ser uma string formatada em RSA e codificada em Base64 e não pode estar protegida por senha.
+* **[!UICONTROL Chave SSH]**: a chave SSH privada usada para fazer logon no local de armazenamento SFTP. A chave privada deve ser uma string com formato RSA e codificação Base64, e não deve ser protegida por senha.
 * **[!UICONTROL Chave de criptografia]**: como opção, você pode anexar sua chave pública formatada em RSA para adicionar criptografia aos arquivos exportados. Veja um exemplo de uma chave de criptografia formatada corretamente na imagem abaixo.
 
-  ![Imagem que mostra um exemplo de uma chave PGP formatada corretamente na interface](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+  ![Imagem que mostra um exemplo de uma chave PGP formatada corretamente na interface.](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 ### Detalhes do destino {#destination-details}
 
 Depois de estabelecer a conexão de autenticação com o local SFTP, forneça as seguintes informações para o destino:
 
-![Detalhes de destino disponíveis para destino SFTP](../../assets/catalog/cloud-storage/sftp/sftp-destination-details.png)
+![Campos de detalhes do destino para o destino SFTP.](../../assets/catalog/cloud-storage/sftp/sftp-destination-details.png)
 
 * **[!UICONTROL Nome]**: insira um nome que ajude a identificar esse destino na interface do usuário do Experience Platform;
 * **[!UICONTROL Descrição]**: insira uma descrição para esse destino;
@@ -140,6 +140,6 @@ Esse destino suporta exportações de conjunto de dados. Para obter informaçõe
 
 Para [!DNL SFTP] destinos, a Platform cria uma `.csv` no local de armazenamento fornecido. Para obter mais informações sobre os arquivos, consulte [Ativar dados do público-alvo para destinos de exportação de perfil em lote](../../ui/activate-batch-profile-destinations.md) no tutorial de ativação de público-alvo.
 
-## LISTA DE PERMISSÕES de endereço IP {#ip-address-allow-list}
+## INCLUIR NA LISTA DE PERMISSÕES endereço IP {#ip-address-allow-list}
 
-Consulte [LISTA DE PERMISSÕES de endereço IP para destinos SFTP](ip-address-allow-list.md) se precisar adicionar IPs de Adobe a uma lista de permissões.
+Consulte [Endereço IP relacionado à inclui na lista de permissões para destinos SFTP](ip-address-allow-list.md) se você precisar adicionar IPs de Adobe a um incluo na lista de permissões.

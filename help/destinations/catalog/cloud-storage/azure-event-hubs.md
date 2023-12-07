@@ -4,14 +4,14 @@ title: Conexão do Azure Event Hubs
 description: Crie uma conexão de saída em tempo real com o [!DNL Azure Event Hubs] armazenamento para transmitir dados do Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
-source-git-commit: 3e2dc51e768d6bcfeedbc26e04997dc46c852e4d
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '2116'
+source-wordcount: '2084'
 ht-degree: 5%
 
 ---
 
-# Conexão com o [!DNL Azure Event Hubs]
+# [!DNL Azure Event Hubs] conexão
 
 ## Visão geral {#overview}
 
@@ -37,7 +37,7 @@ Por exemplo, um cliente potencial baixou um white paper que os qualifica em um s
 
 ## Públicos-alvo compatíveis {#supported-audiences}
 
-Esta seção descreve que tipo de público-alvo você pode exportar para esse destino.
+Esta seção descreve quais tipos de públicos-alvo você pode exportar para esse destino.
 
 | Origem do público | Suportado | Descrição |
 ---------|----------|----------|

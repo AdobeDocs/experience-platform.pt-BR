@@ -3,14 +3,14 @@ keywords: email;Email;e-mail;destinos de e-mail;destino do oracle responsys
 title: Conexão do Oracle Responsys
 description: O Responsys é uma ferramenta corporativa de marketing por email para campanhas de marketing em vários canais oferecida pelo Oracle para personalizar interações por email, dispositivos móveis, exibição e redes sociais.
 exl-id: 70f2f601-afee-4315-bf7a-ed2c92397ebe
-source-git-commit: 8e37ff057ec0fb750bc7b4b6f566f732d9fe5d68
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '714'
+source-wordcount: '704'
 ht-degree: 3%
 
 ---
 
-# Conexão com o [!DNL Oracle Responsys]
+# [!DNL Oracle Responsys] conexão
 
 ## Visão geral {#overview}
 
@@ -20,7 +20,7 @@ Para enviar dados do público-alvo para [!DNL Oracle Responsys], você deve prim
 
 ## Públicos-alvo compatíveis {#supported-audiences}
 
-Esta seção descreve que tipo de público-alvo você pode exportar para esse destino.
+Esta seção descreve quais tipos de públicos-alvo você pode exportar para esse destino.
 
 | Origem do público | Suportado | Descrição |
 ---------|----------|----------|
@@ -65,12 +65,12 @@ Enquanto [configuração](../../ui/connect-destination.md) Para esse destino, vo
 
 * Para **[!UICONTROL SFTP com senha]** conexões, você deve fornecer:
    * [!UICONTROL Domínio]
-   * [!UICONTROL Porta]
+   * [!UICONTROL Port]
    * [!UICONTROL Nome de usuário]
    * [!UICONTROL Senha]
 * Para **[!UICONTROL SFTP com chave SSH]** conexões, você deve fornecer:
    * [!UICONTROL Domínio]
-   * [!UICONTROL Porta]
+   * [!UICONTROL Port]
    * [!UICONTROL Nome de usuário]
    * [!UICONTROL Chave SSH]
 * Como opção, você pode anexar sua chave pública formatada em RSA para adicionar criptografia com PGP/GPG aos arquivos exportados no **[!UICONTROL Chave]** seção. Sua chave pública deve ser gravada como [!DNL Base64] string codificada.

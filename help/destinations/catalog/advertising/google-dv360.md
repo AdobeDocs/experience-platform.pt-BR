@@ -1,12 +1,11 @@
 ---
-keywords: Gerenciador de Lance do DoubleClick;Gerenciador de lance do DoubleClick;DoubleClick;Display & Video 360;display 360;video 360;Video 360;Display 360;display and video
 title: Conexão do Google Display & Video 360
 description: O Display & Video 360, anteriormente conhecido como DoubleClick Bid Manager, é uma ferramenta usada para executar campanhas digitais direcionadas por redirecionamento e público-alvo em fontes de inventário de vídeo, dispositivos móveis e exibição.
 exl-id: bdd3b3fd-891f-44ec-bd47-daf7f3289f92
-source-git-commit: a7dbb5e274058a059ae1231281fd9efd509b029f
+source-git-commit: c4169d9371d329e445db7c83820b870ccbba238b
 workflow-type: tm+mt
-source-wordcount: '1000'
-ht-degree: 4%
+source-wordcount: '974'
+ht-degree: 2%
 
 ---
 
@@ -14,14 +13,14 @@ ht-degree: 4%
 
 ## Visão geral {#overview}
 
-[!DNL Display & Video 360], anteriormente conhecido como [!DNL DoubleClick Bid Manager], é uma ferramenta usada para executar campanhas digitais direcionadas por público e redirecionamento em fontes de inventário de vídeo, dispositivos móveis e exibição.
+[!DNL Display & Video 360], anteriormente conhecido como [!DNL DoubleClick Bid Manager], é uma ferramenta usada para executar campanhas digitais direcionadas por público e redirecionamento em fontes de inventário para exibição, vídeo e dispositivos móveis.
 
 ## Especificações do destino {#specifics}
 
 Observe os seguintes detalhes, específicos do [!DNL Google Display & Video 360] Destinos:
 
 * Os públicos ativados são criados programaticamente na plataforma do Google.
-* A ativação de preenchimentos retroativos de público para o [!DNL Google Display & Video 360] o destino está programado para ocorrer de 24 a 48 horas depois que um público-alvo é mapeado pela primeira vez para uma conexão de destino. Essa atualização é uma resposta à política da Google de aguardar 24 horas até a assimilação de dados e tem como objetivo melhorar as taxas de correspondência entre o Real-Time CDP e o [!DNL Google Display & Video 360]. Observe que essa é uma configuração de back-end aplicável somente a esse destino e não está relacionada a nenhuma opção de agendamento configurável pelo cliente na interface.
+* A ativação de preenchimentos retroativos de público para o [!DNL Google Display & Video 360] o destino está programado para ocorrer de 24 a 48 horas depois que um público-alvo é mapeado pela primeira vez para uma conexão de destino. Essa atualização é uma resposta à política da Google de aguardar 24 horas até a assimilação de dados e tem como objetivo melhorar as taxas de correspondência entre o Real-Time CDP e o [!DNL Google Display & Video 360]. Essa é uma configuração de backend aplicável somente a esse destino e não está relacionada a nenhuma opção de agendamento configurável pelo cliente na interface do usuário do.
 
 >[!IMPORTANT]
 >
@@ -43,7 +42,7 @@ Observe os seguintes detalhes, específicos do [!DNL Google Display & Video 360]
 
 ## Públicos-alvo compatíveis {#supported-audiences}
 
-Esta seção descreve que tipo de público-alvo você pode exportar para esse destino.
+Esta seção descreve quais tipos de públicos-alvo você pode exportar para esse destino.
 
 | Origem do público | Suportado | Descrição |
 ---------|----------|----------|
@@ -67,10 +66,10 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 
 >[!NOTE]
 >
->A inclusão na lista de permissões é obrigatória antes de configurar o primeiro [!DNL Google Display & Video 360] destino na Platform. Certifique-se de que o processo de inclusão na lista de permissões descrito abaixo foi concluído até [!DNL Google] antes de criar um destino.
+>A inclusão na lista de permissões é obrigatória antes de configurar o primeiro [!DNL Google Display & Video 360] destino na Platform. Verifique se o processo de inclusão na lista de permissões descrito abaixo foi concluído até [!DNL Google] antes de criar um destino.
 >A exceção a essa regra é para [Audience Manager](https://docs.adobe.com/content/help/pt-BR/experience-cloud/user-guides/home.translate.html) clientes. Se você já tiver criado uma conexão com esse destino Google no Audience Manager, não será necessário passar pelo processo de inclusão na lista de permissões novamente e você poderá prosseguir para as próximas etapas.
 
-Antes de criar o [!DNL Google Display & Video 360] destino na Platform, você deve entrar em contato com a Google solicitando que o Adobe seja colocado na lista de provedores de dados permitidos e que sua conta seja adicionada à lista de permissões. Entre em contato com a Google e forneça as seguintes informações:
+Antes de criar o [!DNL Google Display & Video 360] destino na Platform, você deve entrar em contato com a Google solicitando que o Adobe seja incluído na lista de provedores de dados permitidos e que sua conta seja adicionada ao incluo na lista de permissões. Entre em contato com a Google e forneça as seguintes informações:
 
 * **ID da conta**: ID da conta do Adobe com o Google. ID da conta: 87933855.
 * **ID do cliente**: ID da conta do cliente Adobe com o Google. ID do cliente: 89690775.

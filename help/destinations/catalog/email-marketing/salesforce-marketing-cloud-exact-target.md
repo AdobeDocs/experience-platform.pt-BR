@@ -1,16 +1,15 @@
 ---
-keywords: email;Email;e-mail;email targets;salesforce;api salesforce marketing cloud destination
 title: (API) Conexão do Salesforce Marketing Cloud
 description: O destino do Marketing Cloud do Salesforce (anteriormente conhecido como ExactTarget) permite exportar os dados da sua conta e ativá-los no Marketing Cloud do Salesforce para as suas necessidades comerciais.
 exl-id: 0cf068e6-8a0a-4292-a7ec-c40508846e27
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '3075'
-ht-degree: 2%
+source-wordcount: '2895'
+ht-degree: 1%
 
 ---
 
-# Conexão com o [!DNL (API) Salesforce Marketing Cloud]
+# [!DNL (API) Salesforce Marketing Cloud] conexão
 
 ## Visão geral {#overview}
 
@@ -22,7 +21,7 @@ ht-degree: 2%
 
 Comparado a [!DNL Salesforce Marketing Cloud Account Engagement] mais orientada para a **B2B** marketing, a [!DNL (API) Salesforce Marketing Cloud] destino é ideal para **B2C** Casos de uso do com ciclos mais curtos de tomada de decisão transacional. Você pode consolidar conjuntos de dados maiores representando o comportamento do público-alvo para ajustar e melhorar as campanhas de marketing, priorizando e segmentando contatos, especialmente de conjuntos de dados externos [!DNL Salesforce]. *Observe que o Experience Platform também tem uma conexão para o [[!DNL Salesforce Marketing Cloud Account Engagement]](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md).*
 
-Este [!DNL Adobe Experience Platform] [destino](/help/destinations/home.md) utiliza o [!DNL Salesforce Marketing Cloud] [atualizar contatos](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/updateContacts.html) API, que permite **adicionar contatos e atualizar dados de contato** para as suas necessidades de negócios depois de ativá-las em um novo [!DNL Salesforce Marketing Cloud] segmento.
+Este [!DNL Adobe Experience Platform] [destino](/help/destinations/home.md) usa o [!DNL Salesforce Marketing Cloud] [atualizar contatos](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/updateContacts.html) API, que permite **adicionar contatos e atualizar dados de contato** para as suas necessidades de negócios depois de ativá-las em um novo [!DNL Salesforce Marketing Cloud] segmento.
 
 [!DNL Salesforce Marketing Cloud] O usa o OAuth 2 com credenciais de cliente como o mecanismo de autenticação para se comunicar com o [!DNL Salesforce Marketing Cloud] API. Instruções para autenticar em seu [!DNL Salesforce Marketing Cloud] exemplo, são apresentados mais abaixo, no [Autenticar para destino](#authenticate) seção.
 
@@ -94,7 +93,7 @@ Como esse destino requer acesso à `[!DNL data extension]`, você precisa permit
 
 ![Interface do usuário do Salesforce Marketing Cloud mostrando a extensão de dados de email com permissões permitidas.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/salesforce-permisions-list.png)
 
-Para restringir o nível de acesso, você também pode substituir acessos individuais usando privilégios granulares.
+Para restringir o nível de acesso, você também pode substituir o acesso individual usando privilégios granulares.
 ![Interface do usuário do Salesforce Marketing Cloud mostrando a extensão de dados de email com permissões granulares.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/sales-email-attribute-set-permission.png)
 
 Consulte a [[!DNL Marketing Cloud Roles]](https://help.salesforce.com/s/articleView?language=en_US&amp;id=sf.mc_overview_marketing_cloud_roles.htm&amp;type=5) e [[!DNL Marketing Cloud Roles and Permissions]](https://help.salesforce.com/s/articleView?language=en_US&amp;id=sf.mc_overview_roles.htm&amp;type=5) para obter orientação detalhada.
@@ -107,7 +106,7 @@ Anote os itens abaixo antes de autenticar na [!DNL (API) Salesforce Marketing Cl
 | --- | --- | --- |
 | Subdomain | Consulte [[!DNL Salesforce Marketing Cloud domain prefix]](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/your-subdomain-tenant-specific-endpoints.html) para saber como obter esse valor do [!DNL Salesforce Marketing Cloud] interface. | Se o seu [!DNL Salesforce Marketing Cloud] o domínio é<br> *`mcq4jrssqdlyc4lph19nnqgzzs84`.login.exacttarget.com*, <br>você precisa fornecer `mcq4jrssqdlyc4lph19nnqgzzs84` como o valor. |
 | ID do cliente | Consulte a [!DNL Salesforce Marketing Cloud] [documentação](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/access-token-s2s.html) para saber como obter esse valor do [!DNL Salesforce Marketing Cloud] interface. | r23kxxxxxxxx0z05xxxxxx |
-| Segredo do cliente | Consulte a [!DNL Salesforce Marketing Cloud] [documentação](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/access-token-s2s.html) para saber como obter esse valor do [!DNL Salesforce Marketing Cloud] interface. | ipxxxxxxxxxxT4xxxxxxxxxx |
+| Segredo do cliente | Consulte a [!DNL Salesforce Marketing Cloud] [documentação](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/access-token-s2s.html) para saber como obter esse valor do [!DNL Salesforce Marketing Cloud] interface. | ipxxxxxxxxxxT4xxxxxxxxx |
 
 {style="table-layout:auto"}
 
@@ -134,7 +133,7 @@ Anote os itens abaixo antes de autenticar na [!DNL (API) Salesforce Marketing Cl
 
 ## Públicos-alvo compatíveis {#supported-audiences}
 
-Esta seção descreve que tipo de público-alvo você pode exportar para esse destino.
+Esta seção descreve quais tipos de públicos-alvo você pode exportar para esse destino.
 
 | Origem do público | Suportado | Descrição |
 ---------|----------|----------|
@@ -170,7 +169,7 @@ Para autenticar no destino, preencha os campos obrigatórios abaixo e selecione 
 
 | [!DNL (API) Salesforce Marketing Cloud] destino | [!DNL Salesforce Marketing Cloud] |
 | --- | --- |
-| **[!UICONTROL Subdomain]** | Seu [!DNL Salesforce Marketing Cloud] prefixo do domínio. <br>Por exemplo, se o domínio for <br> *`mcq4jrssqdlyc4lph19nnqgzzs84`.login.exacttarget.com*, <br> você precisa fornecer `mcq4jrssqdlyc4lph19nnqgzzs84` como o valor. |
+| **[!UICONTROL Subdomínio]** | Seu [!DNL Salesforce Marketing Cloud] prefixo do domínio. <br>Por exemplo, se o domínio for <br> *`mcq4jrssqdlyc4lph19nnqgzzs84`.login.exacttarget.com*, <br> você precisa fornecer `mcq4jrssqdlyc4lph19nnqgzzs84` como o valor. |
 | **[!UICONTROL ID do cliente]** | Seu [!DNL Salesforce Marketing Cloud] `Client ID`. |
 | **[!UICONTROL Segredo do cliente]** | Seu [!DNL Salesforce Marketing Cloud] `Client Secret`. |
 

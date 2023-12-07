@@ -3,18 +3,18 @@ title: Conexão do Google Cloud Storage
 description: Saiba como se conectar ao Google Cloud Storage e ativar públicos ou exportar conjuntos de dados.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: ab274270-ae8c-4264-ba64-700b118e6435
-source-git-commit: 47197b745bebb6564d912d9dc045593bc076ae2a
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '1107'
-ht-degree: 3%
+source-wordcount: '1102'
+ht-degree: 2%
 
 ---
 
-# Conexão com o [!DNL Google Cloud Storage]
+# [!DNL Google Cloud Storage] conexão
 
 ## Visão geral {#overview}
 
-Criar uma conexão de saída ativa com o [!DNL Google Cloud Storage] para exportar periodicamente os arquivos de dados da Adobe Experience Platform para seus próprios buckets.
+Criar uma conexão de saída ativa com o [!DNL Google Cloud Storage] para exportar arquivos de dados do Adobe Experience Platform periodicamente para seus próprios buckets.
 
 ## Conecte-se ao seu [!DNL Google Cloud Storage] armazenamento por meio da API ou da interface {#connect-api-or-ui}
 
@@ -23,7 +23,7 @@ Criar uma conexão de saída ativa com o [!DNL Google Cloud Storage] para export
 
 ## Públicos-alvo compatíveis {#supported-audiences}
 
-Esta seção descreve que tipo de público-alvo você pode exportar para esse destino.
+Esta seção descreve quais tipos de públicos-alvo você pode exportar para esse destino.
 
 | Origem do público | Suportado | Descrição |
 ---------|----------|----------|
@@ -111,7 +111,7 @@ Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICON
 
 Consulte [Ativar dados do público-alvo para destinos de exportação de perfil em lote](../../ui/activate-batch-profile-destinations.md) para obter instruções sobre como ativar públicos-alvo para esse destino.
 
-### Programação
+### Agendamento
 
 No **[!UICONTROL Agendamento]** etapa, você pode [configurar o cronograma de exportação](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) para seu [!DNL Google Cloud Storage] destino e você também pode [configurar o nome dos arquivos exportados](/help/destinations/ui/activate-batch-profile-destinations.md#file-names).
 

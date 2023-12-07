@@ -4,9 +4,9 @@ title: Conexão da API HTTP
 description: Use o destino da API HTTP no Adobe Experience Platform para enviar dados de perfil para um endpoint HTTP de terceiros para executar sua própria análise ou executar outras operações necessárias nos dados de perfil exportados do Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 3e2dc51e768d6bcfeedbc26e04997dc46c852e4d
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '2483'
+source-wordcount: '2480'
 ht-degree: 8%
 
 ---
@@ -31,7 +31,7 @@ Os endpoints HTTP podem ser sistemas próprios dos clientes ou soluções de ter
 
 ## Públicos-alvo compatíveis {#supported-audiences}
 
-Esta seção descreve que tipo de público-alvo você pode exportar para esse destino.
+Esta seção descreve quais tipos de públicos-alvo você pode exportar para esse destino.
 
 | Origem do público | Suportado | Descrição |
 ---------|----------|----------|
@@ -65,7 +65,7 @@ Para usar o destino da API HTTP para exportar dados do Experience Platform, voc�
 
 ## INCLUIR NA LISTA DE PERMISSÕES endereço IP {#ip-address-allowlist}
 
-Para atender aos requisitos de segurança e conformidade dos clientes, o Experience Platform fornece uma lista de IPs estáticos que você pode incluir na lista de permissões pelo destino da API HTTP. Consulte [LISTA DE PERMISSÕES de endereço IP para destinos de transmissão](/help/destinations/catalog/streaming/ip-address-allow-list.md) para obter a lista completa de IPs a serem incluídos na lista de permissões.
+Para atender aos requisitos de segurança e conformidade dos clientes, o Experience Platform fornece uma lista de IPs estáticos que você pode incluir na lista de permissões pelo destino da API HTTP. Consulte [INCLUI NA LISTA DE PERMISSÕES de endereço IP para destinos de transmissão](/help/destinations/catalog/streaming/ip-address-allow-list.md) para obter a lista completa de IPs a serem incluídos na lista de permissões.
 
 ## Tipos de autenticação compatíveis {#supported-authentication-types}
 
@@ -73,7 +73,7 @@ O destino da API HTTP oferece suporte a vários tipos de autenticação para o t
 
 * Endpoint HTTP sem autenticação;
 * Autenticação do token portador;
-* [Credenciais de cliente do OAuth 2.0](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) autenticação com o formulário do corpo, com [!DNL client ID], [!DNL client secret] e [!DNL grant type] no corpo da solicitação HTTP, como mostrado no exemplo abaixo.
+* [Credenciais de cliente do OAuth 2.0](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) autenticação com o formulário do corpo, com [!DNL client ID], [!DNL client secret], e [!DNL grant type] no corpo da solicitação HTTP, como mostrado no exemplo abaixo.
 
 ```shell
 curl --location --request POST '<YOUR_API_ENDPOINT>' \
@@ -113,7 +113,7 @@ Para se conectar a esse destino, siga as etapas descritas no [tutorial de config
 
 Se você selecionar a variável **[!UICONTROL Token de portador]** tipo de autenticação para se conectar ao terminal HTTP, insira os campos abaixo e selecione **[!UICONTROL Conectar ao destino]**:
 
-![Imagem da tela da interface do usuário na qual é possível se conectar ao destino da API HTTP usando a autenticação de token de portador](../../assets/catalog/http/http-api-authentication-bearer.png)
+![Imagem da tela da interface do usuário na qual é possível se conectar ao destino da API HTTP usando a autenticação de token do portador.](../../assets/catalog/http/http-api-authentication-bearer.png)
 
 * **[!UICONTROL Token de portador]**: insira o token do portador para autenticar no local HTTP.
 
@@ -121,7 +121,7 @@ Se você selecionar a variável **[!UICONTROL Token de portador]** tipo de auten
 
 Se você selecionar a variável **[!UICONTROL Nenhum]** tipo de autenticação para se conectar ao seu ponto de extremidade HTTP:
 
-![Imagem da tela da interface do usuário onde é possível se conectar ao destino da API HTTP sem usar autenticação](../../assets/catalog/http/http-api-authentication-none.png)
+![Imagem da tela da interface do usuário onde é possível se conectar ao destino da API HTTP sem usar autenticação.](../../assets/catalog/http/http-api-authentication-none.png)
 
 Ao selecionar essa autenticação para abrir, você só precisa selecionar **[!UICONTROL Conectar ao destino]** e a conexão com o terminal for estabelecida.
 
@@ -129,7 +129,7 @@ Ao selecionar essa autenticação para abrir, você só precisa selecionar **[!U
 
 Se você selecionar a variável **[!UICONTROL Senha do OAuth 2]** tipo de autenticação para se conectar ao terminal HTTP, insira os campos abaixo e selecione **[!UICONTROL Conectar ao destino]**:
 
-![Imagem da tela da interface do usuário na qual é possível se conectar ao destino da API HTTP, usando o OAuth 2 com autenticação de senha](../../assets/catalog/http/http-api-authentication-oauth2-password.png)
+![Imagem da tela da interface do usuário na qual é possível se conectar ao destino da API HTTP, usando o OAuth 2 com autenticação de senha.](../../assets/catalog/http/http-api-authentication-oauth2-password.png)
 
 * **[!UICONTROL URL do token de acesso]**: o URL no seu lado que emite tokens de acesso e, opcionalmente, atualiza tokens.
 * **[!UICONTROL ID do cliente]**: A variável [!DNL client ID] que seu sistema atribui à Adobe Experience Platform.
@@ -141,7 +141,7 @@ Se você selecionar a variável **[!UICONTROL Senha do OAuth 2]** tipo de autent
 
 Se você selecionar a variável **[!UICONTROL Credenciais de cliente OAuth 2]** tipo de autenticação para se conectar ao terminal HTTP, insira os campos abaixo e selecione **[!UICONTROL Conectar ao destino]**:
 
-![Imagem da tela da interface do usuário na qual é possível se conectar ao destino da API HTTP, usando o OAuth 2 com autenticação de Credenciais de Cliente](../../assets/catalog/http/http-api-authentication-oauth2-client-credentials.png)
+![Imagem da tela da interface do usuário na qual você pode se conectar ao destino da API HTTP usando o OAuth 2 com autenticação de Credenciais de Cliente.](../../assets/catalog/http/http-api-authentication-oauth2-client-credentials.png)
 
 * **[!UICONTROL URL do token de acesso]**: o URL no seu lado que emite tokens de acesso e, opcionalmente, atualiza tokens.
 * **[!UICONTROL ID do cliente]**: A variável [!DNL client ID] que seu sistema atribui à Adobe Experience Platform.
@@ -179,7 +179,7 @@ Se você selecionar a variável **[!UICONTROL Credenciais de cliente OAuth 2]** 
 
 Para configurar detalhes para o destino, preencha os campos obrigatórios e opcionais abaixo. Um asterisco ao lado de um campo na interface do usuário indica que o campo é obrigatório.
 
-![Imagem da tela da interface do usuário mostrando campos concluídos para detalhes de destino HTTP](../../assets/catalog/http/http-api-destination-details.png)
+![Imagem da tela da interface do usuário mostrando campos concluídos para os detalhes de destino HTTP.](../../assets/catalog/http/http-api-destination-details.png)
 
 * **[!UICONTROL Nome]**: digite um nome pelo qual você reconhecerá esse destino no futuro.
 * **[!UICONTROL Descrição]**: insira uma descrição que ajudará a identificar esse destino no futuro.
@@ -232,7 +232,7 @@ Em relação aos dados exportados para um determinado perfil, é importante ente
 
 Por exemplo, considere esse fluxo de dados para um destino HTTP, onde três públicos-alvo são selecionados no fluxo de dados e quatro atributos são mapeados para o destino.
 
-![Fluxo de dados de destino da API HTTP](/help/destinations/assets/catalog/http/profile-export-example-dataflow.png)
+![Um exemplo de fluxo de dados de destino de API HTTP.](/help/destinations/assets/catalog/http/profile-export-example-dataflow.png)
 
 Uma exportação de perfil para o destino pode ser determinada por um perfil qualificado para ou que sai de um dos *três segmentos mapeados*. No entanto, na exportação de dados, no campo `segmentMembership` objeto (consulte [Dados exportados](#exported-data) abaixo), outros públicos-alvo não mapeados poderão ser exibidos se esse perfil específico for membro deles e se eles compartilharem a mesma política de mesclagem que o público-alvo que acionou a exportação. Se um perfil se qualificar para a variável **Cliente com DeLorean Cars** segmento, mas também é membro do **Assistido &quot;De volta ao futuro&quot;** filme e **Fãs de ficção científica** segmentos, esses outros dois públicos-alvo também estarão presentes na `segmentMembership` objeto da exportação de dados, mesmo que não estejam mapeados no fluxo de dados, se compartilharem a mesma política de mesclagem com o **Cliente com DeLorean Cars** segmento.
 

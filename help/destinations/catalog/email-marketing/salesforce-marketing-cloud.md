@@ -1,26 +1,25 @@
 ---
-keywords: email;Email;e-mail;email targets;salesforce;salesforce destination
 title: Conexão do Marketing Cloud do Salesforce
 description: O Salesforce Marketing Cloud é uma suíte de marketing digital, anteriormente conhecida como ExactTarget, que permite criar e personalizar jornadas para visitantes e clientes para personalizar sua experiência.
 exl-id: e85049a7-eaed-4f8a-b670-9999d56928f8
-source-git-commit: 8e37ff057ec0fb750bc7b4b6f566f732d9fe5d68
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '819'
-ht-degree: 4%
+source-wordcount: '795'
+ht-degree: 2%
 
 ---
 
-# Conexão com o [!DNL (Files) Salesforce Marketing Cloud]
+# [!DNL (Files) Salesforce Marketing Cloud] conexão
 
 ## Visão geral {#overview}
 
 [[!DNL Salesforce Marketing Cloud]](https://www.salesforce.com/products/marketing-cloud/email-marketing/) O é uma suíte de marketing digital, anteriormente conhecida como ExactTarget, que permite criar e personalizar jornadas para visitantes e clientes personalizarem suas experiências.
 
-Para enviar dados do público-alvo para [!DNL Salesforce Marketing Cloud], você deve primeiro [conectar o destino](#connect-destination) no Platform e, em seguida, [configurar uma importação de dados](#import-data-into-salesforce) do local de armazenamento para [!DNL Salesforce Marketing Cloud].
+Para enviar dados do público-alvo para [!DNL Salesforce Marketing Cloud], você deve primeiro [conectar ao destino](#connect-destination) no Platform e, em seguida, [configurar uma importação de dados](#import-data-into-salesforce) do local de armazenamento para [!DNL Salesforce Marketing Cloud].
 
 ## Públicos-alvo compatíveis {#supported-audiences}
 
-Esta seção descreve que tipo de público-alvo você pode exportar para esse destino.
+Esta seção descreve quais tipos de públicos-alvo você pode exportar para esse destino.
 
 | Origem do público | Suportado | Descrição |
 ---------|----------|----------|
@@ -40,11 +39,11 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 
 {style="table-layout:auto"}
 
-## LISTA DE PERMISSÕES de endereço IP {#allow-list}
+## INCLUIR NA LISTA DE PERMISSÕES endereço IP {#allow-list}
 
-Ao configurar destinos de marketing por email com armazenamento SFTP, a Adobe recomenda adicionar determinados intervalos IP à lista de permissões.
+Ao configurar destinos de marketing por email com armazenamento SFTP, a Adobe recomenda adicionar determinados intervalos IP ao incluo na lista de permissões.
 
-Consulte [LISTA DE PERMISSÕES de endereço IP para destinos SFTP](../cloud-storage/ip-address-allow-list.md) se precisar adicionar IPs de Adobe à lista de permissões.
+Consulte [Endereço IP relacionado à inclui na lista de permissões para destinos SFTP](../cloud-storage/ip-address-allow-list.md) se você precisar adicionar IPs do Adobe ao seu incluo na lista de permissões.
 
 ## Conectar ao destino {#connect}
 
@@ -72,7 +71,7 @@ Enquanto [configuração](../../ui/connect-destination.md) Para esse destino, vo
    * **[!UICONTROL Domínio]**: o endereço IP ou o nome de domínio da sua conta SFTP;
    * **[!UICONTROL Porta]**: a porta usada pelo local de armazenamento SFTP;
    * **[!UICONTROL Nome de usuário]**: o nome de usuário para fazer logon no local de armazenamento SFTP;
-   * **[!UICONTROL Chave SSH]**: a chave SSH privada usada para fazer logon no local de armazenamento SFTP. A chave privada deve ser formatada como uma string codificada em Base64 e não deve ser protegida por senha.
+   * **[!UICONTROL Chave SSH]**: a chave SSH privada usada para fazer logon no local de armazenamento SFTP. A chave privada deve ser formatada como uma cadeia de caracteres codificada em Base64 e não deve ser protegida por senha.
 
 * Como opção, você pode anexar sua chave pública formatada em RSA para adicionar criptografia com PGP/GPG aos arquivos exportados no **[!UICONTROL Chave]** seção. Sua chave pública deve ser gravada como [!DNL Base64] string codificada.
 * **[!UICONTROL Nome]**: escolha um nome relevante para o seu destino.

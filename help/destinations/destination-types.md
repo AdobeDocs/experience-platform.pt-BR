@@ -3,9 +3,9 @@ keywords: destinos;destino;destinos tipos;destinations;destination;destination t
 title: Tipos e categorias de destino
 description: Saiba mais sobre os diferentes tipos e categorias de destinos no Adobe Experience Platform.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+source-git-commit: c6019737e93756f3f524d5a85ea57383baa1a31d
 workflow-type: tm+mt
-source-wordcount: '717'
+source-wordcount: '776'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ Leia esta página para entender os diferentes tipos e categorias de destinos do 
 
 ## Tipos de destino {#destination-types}
 
-No Adobe Experience Platform, distinguimos entre diferentes tipos de destino - conexões, exportações de conjunto de dados e extensões. Há vários tipos de destinos de conexão, que permitem exportar dados para destinos baseados em API, .
+No Adobe Experience Platform, distinguimos entre diferentes tipos de destino - conexões, exportações de conjunto de dados e extensões. Há vários tipos de destinos de conexão, permitindo exportar dados para destinos baseados em API, destinos sociais, plataformas de CRM e muito mais.
 
 Por fim, as conexões também podem ser diferenciadas entre destinos públicos disponíveis em todas as organizações no catálogo de destinos e destinos privados que os clientes do Real-Time CDP Ultimate podem criar para atender aos seus casos de uso de exportação específicos.
 
@@ -68,6 +68,21 @@ Leia mais sobre como [configurar destinos de personalização para personalizaç
 O vídeo abaixo mostra as particularidades dos dois tipos de destinos:
 
 >[!VIDEO](https://video.tv.adobe.com/v/29707?quality=12)
+
+## Tipos de públicos exportados {#exported-audiences-types}
+
+Você pode exportar três tipos de públicos-alvo do Experience Platform para vários destinos:
+
+* Públicos-alvo de pessoas
+* Públicos da conta
+* Públicos-alvo potenciais
+
+Saiba mais sobre o [vários tipos de público](/help/segmentation/ui/account-audiences.md#terminology).
+
+Um símbolo no cartão de destino mostra quais tipos de públicos-alvo você pode exportar para cada destino.
+
+![Exemplo de cartão de destino com símbolos mostrando quais tipos de público-alvo podem ser exportados.](/help/destinations/assets/destination-types/types-of-audiences.png)
+
 
 ## Destinos de exportação do conjunto de dados {#dataset-export-destinations}
 

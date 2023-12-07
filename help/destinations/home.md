@@ -2,16 +2,16 @@
 title: Visão geral dos destinos
 description: Os destinos são integrações pré-criadas com plataformas de destino que permitem a ativação contínua de dados do Adobe Experience Platform. Você pode usar Destinos na Adobe Experience Platform para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas de email, publicidade direcionada e muitos outros casos de uso.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: 661ef040398a9e2ef8dd9cebdf7bd27d4268636b
+source-git-commit: d3c7b416317034c8d57663e0c05c9dc4dbe6d2d4
 workflow-type: tm+mt
-source-wordcount: '956'
+source-wordcount: '1001'
 ht-degree: 4%
 
 ---
 
 # Visão geral do [!DNL Destinations] {#overview}
 
-![Banner de visão geral dos destinos](./assets/overview/destinations-overview-banner.png)
+![Banner de visão geral dos destinos.](./assets/overview/destinations-overview-banner.png)
 
 **[!DNL Destinations]** são integrações pré-construídas com plataformas de destino que permitem a ativação perfeita de dados da Adobe Experience Platform. É possível usar destinos para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas de email, publicidade direcionada e muitos outros casos de uso.
 
@@ -29,7 +29,7 @@ Uma das funcionalidades principais da Platform é assimilar seus dados primário
 ## Etapas de destinos {#steps}
 
 * Escolha em um [catálogo de autoatendimento](./catalog/overview.md) de todos os destinos disponíveis na Platform.
-* Use destinos para enviar perfis ou públicos para plataformas de automação de marketing, plataformas de publicidade digital e muito mais.
+* Use destinos para enviar públicos ou conjuntos de dados para plataformas de automação de marketing, plataformas de publicidade digital e muito mais.
 * Agende exportações de dados para seus destinos preferidos regularmente.
 
 ## Controles {#controls}
@@ -39,12 +39,13 @@ Os controles no [espaço de trabalho de destinos](./ui/destinations-workspace.md
 * Navegue pelo catálogo de plataformas de destino onde você pode ativar seus dados;
 * Criar, editar, ativar e desativar fluxos de dados para os destinos no catálogo;
 * Criar uma conta em um local de armazenamento ou vincular a Platform à conta na plataforma de destino;
-* Selecione quais públicos-alvo devem ser ativados para destinos;
-* Selecione qual [Campos do Experience Data Model (XDM)](../xdm/home.md) para exportar ao ativar públicos para destinos de marketing por email.
+* Selecione quais públicos ou conjuntos de dados devem ser ativados para destinos;
+* Selecione qual [Campos do Experience Data Model (XDM)](../xdm/home.md) para exportar ao ativar públicos para determinados destinos, como destinos de marketing por email, plataformas de CRM, locais de armazenamento na nuvem e muito mais.
+* Ative diferentes tipos de perfis e públicos para destinos - pessoas, contas e clientes potenciais.
 
 ## Tipos e categorias de destino {#types-and-categories}
 
-Com o Experience Platform, você pode ativar dados para vários tipos de destinos para atender aos casos de uso de ativação. Os destinos variam de integrações baseadas em API a integrações com sistemas de recepção de arquivos, destinos de pesquisa de perfil e muito mais. Para obter informações detalhadas sobre todos os destinos disponíveis, consulte a [visão geral de tipos e categorias de destino](./destination-types.md).
+Com o Experience Platform, você pode ativar dados para vários tipos de destinos para atender aos casos de uso de ativação. Os destinos variam de integrações baseadas em API a integrações com sistemas de recepção de arquivos, destinos de pesquisa de perfil e muito mais. Para obter informações detalhadas sobre todos os destinos disponíveis, leia a [visão geral de tipos e categorias de destino](./destination-types.md).
 
 ## Destinos criados pelo Adobe e por parceiros {#adobe-and-partner-built-destinations}
 
@@ -54,7 +55,7 @@ Para conectores criados e mantidos pelo parceiro, isso significa que os problema
 
 ## Destinos e controles de acesso {#access-controls}
 
-A funcionalidade de destinos na Platform funciona com permissões de controle de acesso do Adobe Experience Platform. Dependendo do nível de permissão do seu usuário, você pode visualizar, gerenciar e ativar destinos. Para obter informações sobre as permissões individuais, consulte [Controle de acesso no Adobe Experience Platform](../access-control/home.md) e role até a parte inferior da página.
+A funcionalidade de destinos na Platform funciona com permissões de controle de acesso do Adobe Experience Platform. Dependendo do nível de permissão do seu usuário, você pode visualizar, gerenciar e ativar destinos. Para obter informações sobre as permissões individuais, acesse [controle de acesso no Adobe Experience Platform](../access-control/home.md) e role para baixo até a tabela na parte inferior da página
 
 A tabela a seguir descreve as permissões e as combinações de permissões necessárias para executar determinadas ações nos destinos:
 
@@ -81,7 +82,9 @@ Para obter mais informações sobre como os destinos funcionam com controles de 
 
 Depois de estabelecer uma conexão com um destino e concluir o fluxo de trabalho de ativação, é possível monitorar as exportações de dados para o sistema de recebimento. Leia o [guia sobre monitoramento de fluxos de dados para destinos na interface do](/help/dataflows/ui/monitor-destinations.md) para obter mais informações.
 
-Você também pode validar se os dados estão chegando com êxito ao seu destino. A maioria das páginas de documentação de destino no catálogo tem um *Validar seção de exportação de dados*, que indica como você pode verificar na plataforma de destino se os dados estão sendo trazidos com êxito do Experience Platform.
+![Exemplo da página de monitoramento de destinos.](./assets/overview/monitoring-page-example.png)
+
+Você também pode validar se os dados estão chegando com êxito ao seu destino. A maioria das páginas de documentação de destino no catálogo tem um *Validar seção de exportação de dados*, que indica como você pode verificar na plataforma de destino se os dados estão sendo trazidos com êxito do Experience Platform. Veja um exemplo desta seção para o [Destino do Amazon Ads](/help/destinations/catalog/advertising/amazon-ads.md#exported-data).
 
 ## Restrições de governança de dados na ativação de dados para destinos {#data-governance}
 

@@ -1,12 +1,11 @@
 ---
-keywords: ativar destinos de perfil;ativar destinos;ativar dados; ativar destinos de marketing por email; ativar destinos de armazenamento na nuvem
 title: Ativar públicos para destinos de exportação de perfil em lote
 type: Tutorial
 description: Saiba como ativar os públicos-alvo no Adobe Experience Platform enviando-os para destinos com base em perfil de lote.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 28578a7e852cbefd3c644259a4bffaed29501a9e
+source-git-commit: c6019737e93756f3f524d5a85ea57383baa1a31d
 workflow-type: tm+mt
-source-wordcount: '3781'
+source-wordcount: '3765'
 ht-degree: 11%
 
 ---
@@ -24,7 +23,7 @@ ht-degree: 11%
 
 ## Visão geral {#overview}
 
-Este artigo explica o fluxo de trabalho necessário para ativar públicos-alvo em destinos baseados em perfil de lote do Adobe Experience Platform, como destinos de armazenamento em nuvem e marketing por email.
+Este artigo explica o fluxo de trabalho necessário para ativar públicos-alvo no Adobe Experience Platform para destinos baseados em arquivo de perfil em lote, como destinos de armazenamento em nuvem e marketing por email.
 
 ## Pré-requisitos {#prerequisites}
 
@@ -46,15 +45,15 @@ Selecione o formato de arquivo desejado para exportação quando [criação de u
 
 1. Ir para **[!UICONTROL Conexões > Destinos]** e selecione a variável **[!UICONTROL Catálogo]** guia.
 
-   ![Imagem destacando como chegar à guia do catálogo de destinos](../assets/ui/activate-batch-profile-destinations/catalog-tab.png)
+   ![Imagem destacando como chegar à guia do catálogo de destinos.](../assets/ui/activate-batch-profile-destinations/catalog-tab.png)
 
 1. Selecionar **[!UICONTROL Ativar públicos]** no cartão correspondente ao destino em que deseja ativar os públicos-alvo, conforme mostrado na imagem abaixo.
 
-   ![Imagem destacando o botão Ativar públicos](../assets/ui/activate-batch-profile-destinations/activate-audiences-button.png)
+   ![Ativar controle de públicos-alvo destacado na página do catálogo.](../assets/ui/activate-batch-profile-destinations/activate-audiences-button.png)
 
 1. Selecione a conexão de destino que deseja usar para ativar os públicos-alvo e selecione **[!UICONTROL Próxima]**.
 
-   ![Imagem que destaca como selecionar um ou vários destinos para ativar os públicos-alvo](../assets/ui/activate-batch-profile-destinations/select-destination.png)
+   ![As caixas de seleção destacaram para selecionar um ou vários destinos para ativar os públicos-alvo.](../assets/ui/activate-batch-profile-destinations/select-destination.png)
 
 1. Mover para a próxima seção para [selecionar seus públicos](#select-audiences).
 
@@ -68,7 +67,7 @@ Você pode selecionar entre vários tipos de públicos-alvo, dependendo de sua o
 * **[!UICONTROL Upload personalizado]**: públicos gerados fora do Experience Platform e carregados na Platform como arquivos CSV. Para saber mais sobre públicos-alvo externos, consulte a documentação em [importação de um público](../../segmentation/ui/overview.md#import-audience).
 * Outros tipos de públicos-alvo, provenientes de outras soluções de Adobe, como [!DNL Audience Manager].
 
-![Imagem que destaca como selecionar um ou vários públicos-alvo para ativar](../assets/ui/activate-batch-profile-destinations/select-audiences.png)
+![Caixas de seleção exibidas ao selecionar um ou vários públicos-alvo para ativação.](../assets/ui/activate-batch-profile-destinations/select-audiences.png)
 
 >[!TIP]
 >
@@ -81,7 +80,7 @@ Você pode selecionar entre vários tipos de públicos-alvo, dependendo de sua o
 >title="Agendar"
 >abstract="Use o ícone de lápis para definir o tipo de exportação de arquivo (arquivos completos ou arquivos incrementais) e a frequência de exportação."
 
-[!DNL Adobe Experience Platform] exporta dados para destinos de marketing por email e armazenamento na nuvem na forma de [!DNL CSV] arquivos. No **[!UICONTROL Agendamento]** você pode configurar o agendamento e os nomes de arquivo para cada público-alvo que está exportando. A configuração do agendamento é obrigatória, mas a configuração do nome do arquivo é opcional.
+[!DNL Adobe Experience Platform] exporta dados para destinos de marketing por email e armazenamento na nuvem conforme [tipos de arquivos diferentes](#supported-file-formats-export). No **[!UICONTROL Agendamento]** você pode configurar o agendamento e os nomes de arquivo para cada público-alvo que está exportando. A configuração do agendamento é obrigatória, mas a configuração do nome do arquivo é opcional.
 
 >[!IMPORTANT]
 >
@@ -89,9 +88,9 @@ Você pode selecionar entre vários tipos de públicos-alvo, dependendo de sua o
 >
 >Nomes de arquivos divididos são anexados com um número que indica que o arquivo é parte de uma exportação maior, como: `filename.csv`, `filename_2.csv`, `filename_3.csv`.
 
-Selecione o **[!UICONTROL Criar programação]** botão correspondente ao público-alvo que você deseja enviar para o seu destino.
+Selecione o **[!UICONTROL Criar programação]** controle correspondente ao público-alvo que você deseja enviar para o seu destino.
 
-![Imagem destacando o botão Criar programação](../assets/ui/activate-batch-profile-destinations/create-schedule-button.png)
+![Crie o controle de agendamento destacado na etapa Agendamento.](../assets/ui/activate-batch-profile-destinations/create-schedule-button.png)
 
 ### Exportar arquivos completos {#export-full-files}
 
@@ -113,14 +112,14 @@ Selecione o **[!UICONTROL Criar programação]** botão correspondente ao públi
 
 Selecionar **[!UICONTROL Exportar arquivos completos]** para acionar a exportação de um arquivo contendo um instantâneo completo de todas as qualificações de perfil para o público-alvo selecionado.
 
-![Imagem da interface do usuário com a opção Exportar arquivos completos selecionada.](../assets/ui/activate-batch-profile-destinations/export-full-files.png)
+![Alternância de exportação de arquivos completos selecionada.](../assets/ui/activate-batch-profile-destinations/export-full-files.png)
 
 1. Use o **[!UICONTROL Frequência]** seletor para selecionar a frequência de exportação:
 
    * **[!UICONTROL Uma vez]**: agende uma exportação de arquivo completa sob demanda única.
    * **[!UICONTROL Diariamente]**: agende exportações completas de arquivos uma vez por dia, todos os dias, na hora especificada.
 
-1. Use o **[!UICONTROL Hora]** alterne para selecionar se a exportação deve ocorrer imediatamente após a avaliação do público-alvo ou de forma programada, em um horário especificado. Ao selecionar a variável **[!UICONTROL Agendado]** você pode usar o seletor para escolher a hora do dia, em [!DNL UTC] formato, quando a exportação deve ocorrer.
+2. Use o **[!UICONTROL Hora]** alterne para selecionar se a exportação deve ocorrer imediatamente após a avaliação do público-alvo ou de forma programada, em um horário especificado. Ao selecionar a variável **[!UICONTROL Agendado]** você pode usar o seletor para escolher a hora do dia, em [!DNL UTC] formato, quando a exportação deve ocorrer.
 
    >[!NOTE]
    >
@@ -135,13 +134,13 @@ Use o **[!UICONTROL Agendado]** opção para que o trabalho de ativação seja e
 
    ![Imagem destacando a opção Programado no fluxo de ativação para destinos em lote e mostrando o seletor de tempo.](../assets/ui/activate-batch-profile-destinations/scheduled-option.png)
 
-1. Use o **[!UICONTROL Data]** seletor para escolher o dia ou intervalo em que a exportação deve ocorrer. Para exportações diárias, a prática recomendada é definir a data de início e término para alinhar-se à duração das campanhas em suas plataformas downstream.
+3. Use o **[!UICONTROL Data]** seletor para escolher o dia ou intervalo em que a exportação deve ocorrer. Para exportações diárias, a prática recomendada é definir a data de início e término para alinhar-se à duração das campanhas em suas plataformas downstream.
 
    >[!IMPORTANT]
    >
    > Ao selecionar um intervalo de exportação, o último dia do intervalo não é incluído nas exportações. Por exemplo, se você selecionar um intervalo de 4 a 11 de janeiro, a última exportação de arquivo ocorrerá em 10 de janeiro.
 
-1. Selecionar **[!UICONTROL Criar]** para salvar o cronograma.
+4. Selecionar **[!UICONTROL Criar]** para salvar o cronograma.
 
 ### Exportar arquivos incrementais {#export-incremental-files}
 
@@ -151,22 +150,22 @@ Selecionar **[!UICONTROL Exportar arquivos incrementais]** para acionar uma expo
 >
 >O primeiro arquivo incremental exportado inclui todos os perfis qualificados para um público-alvo, funcionando como um preenchimento retroativo.
 
-![Imagem da interface do usuário com a opção Exportar arquivos incrementais selecionada.](../assets/ui/activate-batch-profile-destinations/export-incremental-files.png)
+![Alternância de exportação de arquivos incrementais selecionada.](../assets/ui/activate-batch-profile-destinations/export-incremental-files.png)
 
 1. Use o **[!UICONTROL Frequência]** seletor para selecionar a frequência de exportação:
 
    * **[!UICONTROL Diariamente]**: programe as exportações de arquivos incrementais uma vez por dia, todos os dias, no horário especificado.
    * **[!UICONTROL Por hora]**: agende exportações de arquivos incrementais a cada 3, 6, 8 ou 12 horas.
 
-1. Use o **[!UICONTROL Hora]** seletor para escolher a hora do dia, em [!DNL UTC] formato, quando a exportação deve ocorrer.
+2. Use o **[!UICONTROL Hora]** seletor para escolher a hora do dia, em [!DNL UTC] formato, quando a exportação deve ocorrer.
 
-1. Use o **[!UICONTROL Data]** seletor para escolher o intervalo em que a exportação deve ocorrer. A prática recomendada é definir as datas de início e término para que se alinhem à duração das campanhas nas plataformas downstream.
+3. Use o **[!UICONTROL Data]** seletor para escolher o intervalo em que a exportação deve ocorrer. A prática recomendada é definir as datas de início e término para que se alinhem à duração das campanhas nas plataformas downstream.
 
    >[!IMPORTANT]
    >
    >O último dia do intervalo não é incluído nas exportações. Por exemplo, se você selecionar um intervalo de 4 a 11 de janeiro, a última exportação de arquivo ocorrerá em 10 de janeiro.
 
-1. Selecionar **[!UICONTROL Criar]** para salvar o cronograma.
+4. Selecionar **[!UICONTROL Criar]** para salvar o cronograma.
 
 ### Configurar nomes de arquivo {#file-names}
 
@@ -215,7 +214,7 @@ Depois de concluir a configuração de todos os públicos-alvo, selecione **[!UI
 
 Nesta etapa, você deve selecionar os atributos de perfil que deseja adicionar aos arquivos exportados para o destino. Para selecionar atributos de perfil e identidades para exportação:
 
-1. No **[!UICONTROL Mapeamento]** selecione **[!UICONTROL Adicionar novo campo]**.
+1. No **[!UICONTROL Mapeamento]** selecione **[!UICONTROL Adicionar novo mapeamento]**.
 
    ![Adicionar novo controle de campo destacado no workflow de mapeamento.](../assets/ui/activate-batch-profile-destinations/add-new-field-mapping.png)
 
@@ -376,7 +375,7 @@ Sem a desduplicação, o arquivo de exportação conteria as seguintes entradas.
 
 Presumindo a desduplicação pelo [!DNL Email] , o arquivo de exportação conteria as entradas a seguir. O Perfil B é o mais recente qualificado para o público-alvo, portanto, é o único que está sendo exportado.
 
-| Email* | personalEmail | firstName | lastName |
+| E-mail* | personalEmail | firstName | lastName |
 |---|---|---|---|
 | johndoe_1@example.com | johndoe@example.com | John | D |
 | johndoe_2@example.com | johndoe@example.com | John | D |
@@ -434,7 +433,7 @@ Leia mais sobre [comportamento de exportação de perfil para destinos baseados 
 
 No momento, não há suporte para a seleção de namespaces de identidade para exportação, como mostrado na imagem abaixo. Selecionar qualquer namespace de identidade para exportação resultará em um erro na variável **[!UICONTROL Revisão]** etapa.
 
-![Mapeamento sem suporte mostrando exportações de identidade](../assets/ui/activate-batch-profile-destinations/unsupported-identity-mapping.png)
+![Mapeamento sem suporte mostrando exportações de identidade.](../assets/ui/activate-batch-profile-destinations/unsupported-identity-mapping.png)
 
 Como solução temporária, se você precisar adicionar namespaces de identidade aos arquivos exportados durante a versão beta, será possível:
 * Use os destinos de armazenamento na nuvem herdados para os fluxos de dados em que deseja incluir namespaces de identidade nas exportações
@@ -513,11 +512,11 @@ Se quiser ativar públicos externos para seus destinos sem exportar nenhum atrib
 
 Selecionar **[!UICONTROL Próxima]** para ir para a [Revisão](#review) etapa.
 
-## Consulte a seção {#review}
+## Revisão {#review}
 
 No **[!UICONTROL Revisão]** você poderá ver um resumo da sua seleção. Selecionar **[!UICONTROL Cancelar]** para interromper o fluxo, **[!UICONTROL Voltar]** para modificar suas configurações ou **[!UICONTROL Concluir]** para confirmar a seleção e começar a enviar dados para o destino.
 
-![Resumo da seleção na etapa de revisão.](../assets/ui/activate-batch-profile-destinations/review.png)
+![O resumo da seleção exibido na etapa de revisão.](../assets/ui/activate-batch-profile-destinations/review.png)
 
 ### Avaliação da política de consentimento {#consent-policy-evaluation}
 
@@ -532,7 +531,7 @@ Se sua organização adquiriu o **Adobe Healthcare Shield** ou o **Adobe Privacy
 
 No **[!UICONTROL Revisão]** etapa, o Experience Platform também verifica se há violações de política de uso de dados. Veja abaixo um exemplo de violação de uma política. Não é possível concluir o fluxo de trabalho de ativação de público-alvo até que a violação seja resolvida. Para obter informações sobre como resolver violações de política, leia sobre [violações de política de uso de dados](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) na seção documentação de governança de dados.
 
-![violação da política de dados](../assets/common/data-policy-violation.png)
+![Um exemplo de violação da política de dados mostrado no fluxo de trabalho de ativação.](../assets/common/data-policy-violation.png)
 
 ### Filtrar públicos {#filter-audiences}
 

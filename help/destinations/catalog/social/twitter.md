@@ -2,14 +2,14 @@
 title: Conexão com o Twitter Custom Audiences
 description: Direcione seus seguidores e clientes existentes no Twitter e crie campanhas de re-marketing relevantes ativando seus públicos-alvo criados no Adobe Experience Platform
 exl-id: fd244e58-cd94-4de7-81e4-c321eb673b65
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '874'
+source-wordcount: '859'
 ht-degree: 5%
 
 ---
 
-# Conexão com o [!DNL Twitter Custom Audiences]
+# [!DNL Twitter Custom Audiences] conexão
 
 ## Visão geral {#overview}
 
@@ -35,7 +35,7 @@ Antes de configurar seu [!DNL Twitter Custom Audiences] destino, verifique os se
 
 ## Públicos-alvo compatíveis {#supported-audiences}
 
-Esta seção descreve que tipo de público-alvo você pode exportar para esse destino.
+Esta seção descreve quais tipos de públicos-alvo você pode exportar para esse destino.
 
 | Origem do público | Suportado | Descrição |
 ---------|----------|----------|

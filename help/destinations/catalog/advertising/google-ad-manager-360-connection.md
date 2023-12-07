@@ -1,15 +1,15 @@
 ---
-title: (Beta) Conexão com o  [!DNL Google Ad Manager 360]
+title: (Beta) [!DNL Google Ad Manager 360] conexão
 description: O Google Ad Manager 360 é uma plataforma de veiculação de anúncios da Google que fornece aos editores os meios de gerenciar a exibição de anúncios em seus sites, por meio de vídeo e em aplicativos móveis.
 exl-id: 3251145a-3e4d-40aa-b120-d79c8c9c7cae
-source-git-commit: 661ef040398a9e2ef8dd9cebdf7bd27d4268636b
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '1046'
-ht-degree: 6%
+source-wordcount: '1027'
+ht-degree: 5%
 
 ---
 
-# (Beta) Conexão com o [!DNL Google Ad Manager 360]
+# (Beta) [!DNL Google Ad Manager 360] conexão
 
 ## Visão geral {#overview}
 
@@ -41,7 +41,7 @@ Observe os seguintes detalhes, específicos do [!DNL Google Ad Manager 360] dest
 
 ## Públicos-alvo compatíveis {#supported-audiences}
 
-Esta seção descreve que tipo de público-alvo você pode exportar para esse destino.
+Esta seção descreve quais tipos de públicos-alvo você pode exportar para esse destino.
 
 | Origem do público | Suportado | Descrição |
 ---------|----------|----------|

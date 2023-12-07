@@ -3,18 +3,18 @@ keywords: destino do crm;CRM;destinos do crm;crm do salesforce;destino do salesf
 title: Conexão com o Salesforce CRM
 description: O destino do Salesforce CRM permite exportar seus dados de conta e ativá-los no Salesforce CRM para suas necessidades comerciais.
 exl-id: bd9cb656-d742-4a18-97a2-546d4056d093
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '3117'
+source-wordcount: '2818'
 ht-degree: 1%
 
 ---
 
-# Conexão com o [!DNL Salesforce CRM]
+# [!DNL Salesforce CRM] conexão
 
 ## Visão geral {#overview}
 
-[[!DNL Salesforce CRM]](https://www.salesforce.com/crm/) O é uma plataforma popular de CRM (relacionamento com o cliente) e oferece suporte ao seguinte:
+[[!DNL Salesforce CRM]](https://www.salesforce.com/crm/) O é uma plataforma popular de CRM (relacionamento com o cliente) e oferece suporte aos tipos de perfis descritos abaixo:
 
 * [Clientes potenciais](https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_lead.htm) - Um cliente potencial é o nome de uma pessoa ou empresa que pode (ou não) estar interessada nos produtos ou serviços que você vende.
 * [Contatos](https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_contact.htm) - Um contato é um indivíduo com quem um dos seus representantes estabeleceu um relacionamento e foi qualificado como um cliente em potencial.
@@ -27,7 +27,7 @@ Quando [ativação de segmentos](#activate), você pode selecionar entre cliente
 
 ## Casos de uso {#use-cases}
 
-Como profissional de marketing, você pode fornecer experiências personalizadas aos seus usuários com base em atributos de seus perfis do Adobe Experience Platform. Você pode criar públicos-alvo a partir de seus dados offline e enviá-los para o Salesforce CRM, para exibição nos feeds dos usuários, assim que os públicos-alvo e os perfis forem atualizados no Adobe Experience Platform.
+Como profissional de marketing, você pode fornecer experiências personalizadas aos seus usuários com base em atributos de seus perfis do Adobe Experience Platform. Você pode criar públicos-alvo com base em seus dados offline e enviá-los para o Salesforce CRM, para atualizar a associação ao CRM assim que os públicos-alvo e os perfis forem atualizados no Adobe Experience Platform.
 
 ## Pré-requisitos {#prerequisites}
 

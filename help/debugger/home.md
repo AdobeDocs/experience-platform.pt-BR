@@ -1,21 +1,21 @@
 ---
-description: O Experience Platform Debugger examina as páginas da Web e ajuda a encontrar problemas na implementação das soluções da Experience Cloud.
+description: O Experience Platform Debugger examina as páginas da Web e ajuda a encontrar problemas na implementação das soluções de Experience Cloud.
 keywords: depurador;extensão do Experience Platform Debugger;chrome;extensão
-seo-description: Technical documentation for the Adobe Experience Platform Debugger Chrome and Firefox Extension - examine your web pages and understand problems with your Experience Cloud solution mplementations
-seo-title: Adobe Experience Platform Debugger Chrome and Firefox Extension
+seo-description: Technical documentation for the Adobe Experience Platform Debugger Chrome Extension - examine your web pages and understand problems with your Experience Cloud solution mplementations
+seo-title: Adobe Experience Platform Debugger Chrome Extension
 title: Extensão do Adobe Experience Platform Debugger
 uuid: 42e2c8a2-548a-4a3f-b57d-532535a0e7b9
 exl-id: e02bc318-fbff-4a19-980a-d5c0a21ca300
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: d81c4c8630598597ec4e253ef5be9f26c8987203
 workflow-type: tm+mt
-source-wordcount: '260'
-ht-degree: 18%
+source-wordcount: '242'
+ht-degree: 5%
 
 ---
 
-# Visão geral do Adobe Experience Platform Debugger
+# visão geral do Adobe Experience Platform Debugger
 
-A extensão do Adobe Experience Platform Debugger para [Cromo](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj) e [Firefox](https://addons.mozilla.org/pt-BR/firefox/addon/adobe-experience-platform-dbg/) O examina as páginas da Web e ajuda a encontrar problemas na implementação das soluções da Adobe Experience Cloud.
+A extensão do Adobe Experience Platform Debugger para [Cromo](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) O examina as páginas da Web e ajuda a encontrar problemas na implementação das soluções da Adobe Experience Cloud.
 
 Você pode usar o Platform Debugger com outras soluções de ativação de Adobe para executar o seguinte:
 

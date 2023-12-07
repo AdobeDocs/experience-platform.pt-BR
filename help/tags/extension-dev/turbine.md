@@ -2,9 +2,9 @@
 title: Variável sem turbina
 description: Saiba mais sobre o objeto turbine, uma variável livre que fornece informações e utilitários específicos para o tempo de execução de tag da Adobe Experience Platform.
 exl-id: 1664ab2e-8704-4a56-8b6b-acb71534084e
-source-git-commit: 27dd38cc509040ea9dc40fc7030dcdec9a182d55
+source-git-commit: d81c4c8630598597ec4e253ef5be9f26c8987203
 workflow-type: tm+mt
-source-wordcount: '619'
+source-wordcount: '606'
 ht-degree: 86%
 
 ---
@@ -112,7 +112,7 @@ Recupera um módulo que foi compartilhado de outra extensão. Se nenhum módulo 
 turbine.logger.error('Error!');
 ```
 
-O utilitário de registro é usado para registrar mensagens no console. As mensagens serão exibidas somente no console se a depuração for ativada pelo usuário. A maneira recomendada de ativar a depuração é usar o [Adobe Experience Cloud Debugger](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj?src=propaganda). Como alternativa, o usuário pode executar o comando a seguir `_satellite.setDebug(true)` no console de desenvolvimento do navegador. O agente de log tem os seguintes métodos:
+O utilitário de registro é usado para registrar mensagens no console. As mensagens serão exibidas somente no console se a depuração for ativada pelo usuário. A maneira recomendada de ativar a depuração é usar o [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob). Como alternativa, o usuário pode executar o comando a seguir `_satellite.setDebug(true)` no console de desenvolvimento do navegador. O agente de log tem os seguintes métodos:
 
 * `logger.log(message: string)`: registra uma mensagem no console.
 * `logger.info(message: string)`: registra uma mensagem informativa no console.
@@ -137,8 +137,8 @@ Um objeto que contém as seguintes configurações definidas pelo usuário para 
 
 * `propertySettings.domains: Array<String>`
 
-   Uma variedade de domínios que a propriedade abrange.
+  Uma variedade de domínios que a propriedade abrange.
 
 * `propertySettings.undefinedVarsReturnEmpty: boolean`
 
-   Os desenvolvedores de extensões não devem se preocupar com esse cenário.
+  Os desenvolvedores de extensões não devem se preocupar com esse cenário.

@@ -4,10 +4,10 @@ title: Extensão Braze Event Forwarding
 description: Essa extensão de encaminhamento de eventos do Adobe Experience Platform envia eventos da Rede de borda para o Brasil.
 last-substantial-update: 2023-03-29T00:00:00Z
 exl-id: 297f48f8-2c3b-41c2-8820-35f4558c67b3
-source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+source-git-commit: d81c4c8630598597ec4e253ef5be9f26c8987203
 workflow-type: tm+mt
-source-wordcount: '1861'
-ht-degree: 5%
+source-wordcount: '1692'
+ht-degree: 3%
 
 ---
 
@@ -51,7 +51,7 @@ A extensão usa dois de [!DNL Braze]As APIs do e seus limites são descritos aba
 
 ### Pontos de dados faturáveis
 
-Envio de atributos personalizados adicionais para o [!DNL Braze] pode aumentar o [!DNL Braze] consumo de ponto de dados. Consulte seu [!DNL Braze] gerente de conta antes de enviar atributos personalizados adicionais. Consulte a [!DNL Braze] documentação sobre [pontos de dados faturáveis](https://www.braze.com/docs/user_guide/onboarding_with_braze/data_points/#billable-data-points) para obter mais informações.
+Envio de atributos personalizados adicionais para o [!DNL Braze] pode aumentar o [!DNL Braze] consumo de ponto de dados. Consulte seu [!DNL Braze] gerente de conta antes de enviar atributos personalizados adicionais. Consulte a [!DNL Braze] documentação sobre [pontos de dados faturáveis](https://www.braze.com/docs/user_guide/data_and_analytics/data_points/?tab=billable) para obter mais informações.
 
 ### Coletar detalhes de configuração necessários {#configuration-details}
 
@@ -128,9 +128,9 @@ Os atributos do usuário podem ser um objeto JSON que contém campos que criarã
 | [!UICONTROL Sobrenome] | |
 | [!UICONTROL Telefone] | |
 | [!UICONTROL Email] | |
-| [!UICONTROL Gênero] | Uma das seguintes sequências de caracteres: &quot;M&quot;, &quot;F&quot;, &quot;O&quot; (outro), &quot;N&quot; (não aplicável), &quot;P&quot; (prefere não dizer). |
+| [!UICONTROL Sexo] | Uma das seguintes sequências de caracteres: &quot;M&quot;, &quot;F&quot;, &quot;O&quot; (outro), &quot;N&quot; (não aplicável), &quot;P&quot; (prefere não dizer). |
 | [!UICONTROL Cidade] | |
-| [!UICONTROL País] | País como uma sequência de caracteres em [ISO-3166-1 alfa-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) formato. |
+| [!UICONTROL Country] | País como uma sequência de caracteres em [ISO-3166-1 alfa-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) formato. |
 | [!UICONTROL Idioma] | Idioma como uma cadeia de caracteres em [ISO-639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) formato. |
 | [!UICONTROL Data de nascimento] | Sequência de caracteres no formato &quot;AAAA-MM-DD&quot; (por exemplo, 1980-12-21). |
 | [!UICONTROL Fuso Horário] | Nome do fuso horário de [Banco de Dados de Fuso Horário IANA](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) (por exemplo, &#39;América/Nova_York&#39; ou &#39;Hora do Leste (EUA e Canadá)&#39;). |
@@ -163,10 +163,10 @@ Depois de instalar a extensão, crie um novo encaminhamento de eventos [regra](.
 
 | Entrada | Descrição | Obrigatório |
 | --- | --- | --- |
-| [!UICONTROL Identificação do produto &#x200B;] | Identificador da compra. (por exemplo, Nome do produto ou Categoria do produto) | Sim |
+| [!UICONTROL &#x200B; da ID do produto] | Identificador da compra. (por exemplo, Nome do produto ou Categoria do produto) | Sim |
 | [!UICONTROL Tempo de Compra] | Data e hora como string em ISO 8601 ou em `yyyy-MM-dd'T'HH:mm:ss:SSSZ` formato. | Sim |
-| [!UICONTROL Moeda &#x200B;] | Moeda como sequência de caracteres em [ISO 4217](https://pt.wikipedia.org/wiki/ISO_4217) Formato alfabético de código monetário. | Sim |
-| [!UICONTROL Preço &#x200B;] | Preço. | Sim |
+| [!UICONTROL &#x200B; de moeda] | Moeda como sequência de caracteres em [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) Formato alfabético de código monetário. | Sim |
+| [!UICONTROL &#x200B; de preço] | Preço. | Sim |
 | [!UICONTROL Quantidade &#x200B;] | Se não for fornecido, o valor padrão será 1. O valor máximo deve ser inferior a 100. | |
 | [!UICONTROL Identificador do aplicativo] | O Identificador do Aplicativo ou <strong>app_id</strong> é um parâmetro que associa uma atividade a um aplicativo específico no seu grupo de aplicativos. Ele designa com qual aplicativo do grupo de aplicativos você está interagindo. Saiba mais sobre o [Tipos de identificador de API](https://www.braze.com/docs/api/identifier_types/). | |
 | [!UICONTROL Propriedades de compra &#x200B;] | Um objeto JSON que contém propriedades personalizadas da compra. |  |
@@ -187,9 +187,9 @@ Os atributos do usuário podem ser um objeto JSON que contém campos que criarã
 | [!UICONTROL Sobrenome] | |
 | [!UICONTROL Telefone] | |
 | [!UICONTROL Email] | |
-| [!UICONTROL Gênero] | Uma das seguintes sequências de caracteres: &quot;M&quot;, &quot;F&quot;, &quot;O&quot; (outro), &quot;N&quot; (não aplicável), &quot;P&quot; (prefere não dizer). |
+| [!UICONTROL Sexo] | Uma das seguintes sequências de caracteres: &quot;M&quot;, &quot;F&quot;, &quot;O&quot; (outro), &quot;N&quot; (não aplicável), &quot;P&quot; (prefere não dizer). |
 | [!UICONTROL Cidade] | |
-| [!UICONTROL País] | País como uma sequência de caracteres em [ISO-3166-1 alfa-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) formato. |
+| [!UICONTROL Country] | País como uma sequência de caracteres em [ISO-3166-1 alfa-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) formato. |
 | [!UICONTROL Idioma] | Idioma como uma cadeia de caracteres em [ISO-639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) formato. |
 | [!UICONTROL Data de nascimento] | Sequência de caracteres no formato &quot;AAAA-MM-DD&quot; (por exemplo, 1980-12-21). |
 | [!UICONTROL Fuso Horário] | Nome do fuso horário de [Banco de Dados de Fuso Horário IANA](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) (por exemplo, &#39;América/Nova_York&#39; ou &#39;Hora do Leste (EUA e Canadá)&#39;). |

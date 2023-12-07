@@ -3,10 +3,10 @@ keywords: Experience Platform;identidade;serviço de identidade;solução de pro
 title: Medidas de proteção do serviço de identidade
 description: Este documento fornece informações sobre limites de uso e taxa para dados do Serviço de identidade para ajudar você a otimizar o uso do gráfico de identidade.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: 614f48e53e981e479645da9cc48c946f3af0db26
+source-git-commit: d33be97fcb935a53a8776d2a1993ad9d2b50e913
 workflow-type: tm+mt
-source-wordcount: '1509'
-ht-degree: 1%
+source-wordcount: '1507'
+ht-degree: 0%
 
 ---
 
@@ -37,14 +37,18 @@ A tabela a seguir descreve os limites estáticos aplicados aos dados de identida
 | Número de namespaces personalizados | None | Não há limites para o número de namespaces personalizados que você pode criar. |
 | Número de caracteres para um nome para exibição de namespace ou símbolo de identidade | None | Não há limites para o número de caracteres de um nome para exibição de namespace ou símbolo de identidade. |
 
+{style="table-layout:auto"}
+
 ### Validação do valor de identidade
 
 A tabela a seguir descreve as regras existentes que devem ser seguidas para garantir uma validação bem-sucedida do valor de identidade.
 
 | Namespace | Regra de validação | Comportamento do sistema quando a regra é violada |
 | --- | --- | --- |
-| ECID | <ul><li>O valor de identidade de uma ECID deve ter exatamente 38 caracteres.</li><li>O valor de identidade de uma ECID deve consistir apenas em números.</li><li>Os valores de identidade não podem ser &quot;null&quot;, &quot;anonymous&quot;, &quot;invalid&quot; ou ser uma cadeia de caracteres vazia (por exemplo: &quot; &quot;, &quot;&quot;, &quot; &quot;).</li></ul> | <ul><li>Se o valor de identidade da ECID não tiver exatamente 38 caracteres, o registro será ignorado.</li><li>Se o valor de identidade da ECID contiver caracteres não numéricos, o registro será ignorado.</li><li>A assimilação da identidade será bloqueada.</li></ul> |
-| Não ECID | O valor de identidade não pode exceder 1024 caracteres. | Se o valor de identidade exceder 1024 caracteres, o registro será ignorado. |
+| ECID | <ul><li>O valor de identidade de uma ECID deve ter exatamente 38 caracteres.</li><li>O valor de identidade de uma ECID deve consistir apenas em números.</li></ul> | <ul><li>Se o valor de identidade da ECID não tiver exatamente 38 caracteres, o registro será ignorado.</li><li>Se o valor de identidade da ECID contiver caracteres não numéricos, o registro será ignorado.</li></ul> |
+| Não ECID | <ul><li>O valor de identidade não pode exceder 1024 caracteres.</li><li>Os valores de identidade não podem ser &quot;null&quot;, &quot;anonymous&quot;, &quot;invalid&quot; ou ser uma cadeia de caracteres vazia (por exemplo: &quot; &quot;, &quot;&quot;, &quot; &quot;).</li></ul> | <ul><li>Se o valor de identidade exceder 1024 caracteres, o registro será ignorado.</li><li>A assimilação da identidade será bloqueada.</li></ul> |
+
+{style="table-layout:auto"}
 
 ### Assimilação do namespace de identidade
 

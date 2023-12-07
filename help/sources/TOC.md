@@ -4,10 +4,10 @@ user-guide-title: Ajuda dos Conectores de origem da Adobe Experience Platform
 breadcrumb-title: Guia dos conectores de origem
 user-guide-description: Assimilar dados de várias fontes. Saiba como estruturar, rotular e aprimorar os dados já assimilados.
 feature: Sources
-source-git-commit: 7f9a0965419a85894bd2cab4e78dd336874a5933
+source-git-commit: 4c8e80c5ec61aebd84064ac2a667188b8b5ddb8c
 workflow-type: tm+mt
-source-wordcount: '989'
-ht-degree: 14%
+source-wordcount: '993'
+ht-degree: 11%
 
 ---
 
@@ -35,7 +35,7 @@ ht-degree: 14%
          - [conector Marketo Engage](connectors/adobe-applications/marketo/marketo.md)
          - [guia de autenticação do Marketo Engage](connectors/adobe-applications/marketo/marketo-auth.md)
          - [Namespaces e esquemas B2B](connectors/adobe-applications/marketo/marketo-namespaces.md)
-   - Advertising {#advertising}
+   - Publicidade {#advertising}
       - [Conector do Google Ads](connectors/advertising/ads.md)
       - [Anúncios do pinterest](connectors/advertising/pinterest-ads.md)
    - Analytics {#analytics}
@@ -50,7 +50,7 @@ ht-degree: 14%
       - [Conector de blob do Azure](connectors/cloud-storage/blob.md)
       - [Conector de Hubs de Eventos do Azure](connectors/cloud-storage/eventhub.md)
       - [Conector de armazenamento de arquivos do Azure](connectors/cloud-storage/azure-file-storage.md)
-      - [Zona de aterrissagem de dados](connectors/cloud-storage/data-landing-zone.md)
+      - [Data Landing Zone](connectors/cloud-storage/data-landing-zone.md)
       - [Conector FTP](connectors/cloud-storage/ftp.md)
       - [Conector do Google Cloud Storage](connectors/cloud-storage/google-cloud-storage.md)
       - [Google PubSub](connectors/cloud-storage/google-pubsub.md)
@@ -91,7 +91,9 @@ ht-degree: 14%
       - [Conector de transmissão Snowflake](connectors/databases/snowflake-streaming.md)
       - [conector Snowflake](connectors/databases/snowflake.md)
       - [Conector do Teradata Vantage](connectors/databases/teradata-vantage.md)
-   - eCommerce {#ecommerce}
+   - Parceiro de dados {#data-partner}
+      - [Resolução de identidade corporativa da Merkury](connectors/data-partners/merkury.md)
+   - comércio eletrônico {#ecommerce}
       - [SAP Commerce](connectors/ecommerce/sap-commerce.md)
       - [Shopify](connectors/ecommerce/shopify.md)
       - [Shopify Transmissão](connectors/ecommerce/shopify-streaming.md)
@@ -114,8 +116,8 @@ ht-degree: 14%
    - Streaming {#streaming}
       - [Conector da API HTTP](connectors/streaming/http.md)
 - Tutoriais da API {#api-tutorials}
-   - Crie uma conexão básica {#create}
-      - Advertising {#advertising}
+   - Criar uma conexão básica {#create}
+      - Publicidade {#advertising}
          - [Anúncios do Google](tutorials/api/create/advertising/ads.md)
          - [Anúncios do pinterest](tutorials/api/create/advertising/pinterest-ads.md)
       - Analytics {#analytics}
@@ -129,7 +131,7 @@ ht-degree: 14%
          - [Armazenamento Azure Data Lake Gen2](tutorials/api/create/cloud-storage/adls-gen2.md)
          - [Hubs de Eventos do Azure](tutorials/api/create/cloud-storage/eventhub.md)
          - [Armazenamento de arquivos do Azure](tutorials/api/create/cloud-storage/azure-file-storage.md)
-         - [Zona de aterrissagem de dados](tutorials/api/create/cloud-storage/data-landing-zone.md)
+         - [Data Landing Zone](tutorials/api/create/cloud-storage/data-landing-zone.md)
          - [FTP](tutorials/api/create/cloud-storage/ftp.md)
          - [Armazenamento em nuvem Google](tutorials/api/create/cloud-storage/google.md)
          - [Google PubSub](tutorials/api/create/cloud-storage/google-pubsub.md)
@@ -154,7 +156,7 @@ ht-degree: 14%
          - [Apache Hive no Azure HDInsights](tutorials/api/create/databases/hive.md)
          - [Apache Spark no Azure HDInsights](tutorials/api/create/databases/spark.md)
          - [Data Explorer do Azure](tutorials/api/create/databases/data-explorer.md)
-         - [Azure Synapse Analytics](tutorials/api/create/databases/synapse-analytics.md)
+         - [Azure synapse Analytics](tutorials/api/create/databases/synapse-analytics.md)
          - [Armazenamento de tabelas do Azure](tutorials/api/create/databases/ats.md)
          - [Couchbase](tutorials/api/create/databases/couchbase.md)
          - [Google BigQuery](tutorials/api/create/databases/bigquery.md)
@@ -170,7 +172,7 @@ ht-degree: 14%
          - [Snowflake](tutorials/api/create/databases/snowflake.md)
          - [Vantagem do teradata](tutorials/api/create/databases/teradata-vantage.md)
          - [SQL Server](tutorials/api/create/databases/sql-server.md)
-      - eCommerce {#ecommerce}
+      - comércio eletrônico {#ecommerce}
          - [SAP Commerce](tutorials/api/create/ecommerce/sap-commerce.md)
          - [Shopify](tutorials/api/create/ecommerce/shopify.md)
          - [Shopify Transmissão](tutorials/api/create/ecommerce/shopify-streaming.md)
@@ -233,7 +235,7 @@ ht-degree: 14%
          - [Atributos do cliente](tutorials/ui/create/adobe-applications/customer-attributes.md)
          - [Marketo Engage](tutorials/ui/create/adobe-applications/marketo.md)
          - [Atividades personalizadas do Marketo](tutorials/ui/create/adobe-applications/marketo-custom-activities.md)
-      - Advertising {#advertising}
+      - Publicidade {#advertising}
          - [Anúncios do Google](tutorials/ui/create/advertising/ads.md)
          - [Anúncios do pinterest](tutorials/ui/create/advertising/pinterest-ads.md)
       - Analytics {#analytics}
@@ -248,7 +250,7 @@ ht-degree: 14%
          - [Azure Blob](tutorials/ui/create/cloud-storage/blob.md)
          - [Hubs de Eventos do Azure](tutorials/ui/create/cloud-storage/eventhub.md)
          - [Armazenamento de arquivos do Azure](tutorials/ui/create/cloud-storage/azure-file-storage.md)
-         - [Zona de aterrissagem de dados](tutorials/ui/create/cloud-storage/data-landing-zone.md)
+         - [Data Landing Zone](tutorials/ui/create/cloud-storage/data-landing-zone.md)
          - [FTP](tutorials/ui/create/cloud-storage/ftp.md)
          - [Armazenamento em nuvem Google](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
          - [Google PubSub](tutorials/ui/create/cloud-storage/google-pubsub.md)
@@ -274,7 +276,7 @@ ht-degree: 14%
          - [Apache Hive no Azure HDInsights](tutorials/ui/create/databases/hive.md)
          - [Apache Spark no Azure HDInsights](tutorials/ui/create/databases/spark.md)
          - [Data Explorer do Azure](tutorials/ui/create/databases/data-explorer.md)
-         - [Azure Synapse Analytics](tutorials/ui/create/databases/synapse-analytics.md)
+         - [Azure synapse Analytics](tutorials/ui/create/databases/synapse-analytics.md)
          - [Armazenamento de tabelas do Azure](tutorials/ui/create/databases/ats.md)
          - [Couchbase](tutorials/ui/create/databases/couchbase.md)
          - [Google Big Query](tutorials/ui/create/databases/bigquery.md)
@@ -289,7 +291,9 @@ ht-degree: 14%
          - [PostgreSQL](tutorials/ui/create/databases/postgres.md)
          - [Snowflake](tutorials/ui/create/databases/snowflake.md)
          - [Vantagem do teradata](tutorials/ui/create/databases/teradata-vantage.md)
-      - eCommerce {#ecommerce}
+      - Parceiro de dados {#data-partner}
+         - [Resolução de identidade corporativa da Merkury](tutorials/ui/create/data-partners/merkury.md)
+      - comércio eletrônico {#ecommerce}
          - [SAP Commerce](tutorials/ui/create/ecommerce/sap-commerce.md)
          - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
          - [Shopify Transmissão](tutorials/ui/create/ecommerce/shopify-streaming.md)

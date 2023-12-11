@@ -5,10 +5,10 @@ product: experience platform
 type: Documentation
 description: Saiba mais sobre o desempenho e as medidas de proteção aplicadas pelo sistema para segmentação e dados de perfil para garantir o uso ideal da funcionalidade da Real-Time CDP.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 56ed0d777d9a7d489cde2e40340fee4ca0ad8c03
+source-git-commit: c7537959b1cc53998acafbccaa2f39686afd9f15
 workflow-type: tm+mt
-source-wordcount: '2230'
-ht-degree: 3%
+source-wordcount: '2282'
+ht-degree: 2%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 3%
 
 O Adobe Experience Platform permite fornecer experiências personalizadas entre canais com base em insights comportamentais e atributos do cliente na forma de Perfis de clientes em tempo real. Para dar suporte a essa nova abordagem aos perfis, o Experience Platform usa um modelo de dados híbrido altamente desnormalizado que difere do modelo de dados relacional tradicional.
 
-Este documento fornece limites de uso e taxa padrão para ajudar a modelar seus dados de perfil para obter o melhor desempenho do sistema. Ao revisar as medidas de proteção a seguir, presume-se que você tenha modelado os dados corretamente. Em caso de dúvidas sobre como modelar os dados, entre em contato com o representante do Atendimento ao cliente.
+Este documento fornece limites de uso e taxa padrão para ajudar você a modelar seus dados de perfil para obter o melhor desempenho do sistema. Ao revisar as medidas de proteção a seguir, presume-se que você tenha modelado os dados corretamente. Em caso de dúvidas sobre como modelar os dados, entre em contato com o representante do Atendimento ao cliente.
 
 >[!NOTE]
 >
@@ -89,10 +89,10 @@ As medidas de proteção a seguir se referem ao tamanho dos dados e fornecem lim
 
 | Grade de Proteção | Limite | Tipo de limite | Descrição |
 | --- | --- | --- | --- |
-| Tamanho máximo do ExperienceEvent | 10 KB | Proteção imposta pelo sistema | **O tamanho máximo de um evento é 10KB.** A assimilação continuará, mas os eventos maiores que 10 KB serão descartados. |
-| Tamanho máximo do registro de perfil | 100 KB | Proteção imposta pelo sistema | **O tamanho máximo de um registro de perfil é 100 KB.** A assimilação continuará, no entanto, registros de perfil maiores que 100 KB serão descartados. |
-| Tamanho máximo do fragmento do perfil | 50MB | Proteção imposta pelo sistema | **O tamanho máximo de um único fragmento de perfil é de 50 MB.** A segmentação, as exportações e as pesquisas podem falhar para qualquer [fragmento do perfil](#profile-fragments) que seja maior que 50 MB. |
-| Tamanho máximo de armazenamento do perfil | 50MB | Proteção de desempenho | **O tamanho máximo de um perfil armazenado é 50 MB.** Adição de novo [fragmentos de perfil](#profile-fragments) em um perfil com mais de 50 MB afetará o desempenho do sistema. Por exemplo, um perfil pode conter um único fragmento de 50 MB ou pode conter vários fragmentos em vários conjuntos de dados com um tamanho total combinado de 50 MB. Tentar armazenar um perfil com um único fragmento maior que 50 MB, ou com vários fragmentos que totalizam mais de 50 MB em tamanho combinado, afetará o desempenho do sistema. |
+| Tamanho máximo do ExperienceEvent | 10KB | Proteção imposta pelo sistema | **O tamanho máximo de um evento é 10KB.** A assimilação continuará, mas os eventos maiores que 10 KB serão descartados. |
+| Tamanho máximo do registro de perfil | 100KB | Proteção imposta pelo sistema | **O tamanho máximo de um registro de perfil é 100 KB.** A assimilação continuará, no entanto, registros de perfil maiores que 100 KB serão descartados. |
+| Tamanho máximo do fragmento do perfil | 50 MB | Proteção imposta pelo sistema | **O tamanho máximo de um único fragmento de perfil é de 50 MB.** A segmentação, as exportações e as pesquisas podem falhar para qualquer [fragmento do perfil](#profile-fragments) que seja maior que 50 MB. |
+| Tamanho máximo de armazenamento do perfil | 50 MB | Proteção de desempenho | **O tamanho máximo de um perfil armazenado é 50 MB.** Adição de novo [fragmentos de perfil](#profile-fragments) em um perfil com mais de 50 MB afetará o desempenho do sistema. Por exemplo, um perfil pode conter um único fragmento de 50 MB ou pode conter vários fragmentos em vários conjuntos de dados com um tamanho total combinado de 50 MB. Tentar armazenar um perfil com um único fragmento maior que 50 MB, ou com vários fragmentos que totalizam mais de 50 MB em tamanho combinado, afetará o desempenho do sistema. |
 | Número de lotes Profile ou ExperienceEvent assimilados por dia | 90 | Proteção de desempenho | **O número máximo de lotes Profile ou ExperienceEvent assimilados por dia é 90.** Isso significa que o total combinado de lotes Profile e ExperienceEvent assimilados a cada dia não pode exceder 90. A ingestão de lotes adicionais afetará o desempenho do sistema. |
 | Número de ExperienceEvents por registro de perfil | 5000 | Proteção de desempenho | **O número máximo de ExperienceEvents por registro de perfil é 5000.** Perfis com mais de 5000 ExperienceEvents **não** ser consideradas para segmentação. |
 
@@ -102,7 +102,7 @@ As medidas de proteção a seguir se referem ao tamanho dos dados e fornecem lim
 
 | Grade de Proteção | Limite | Tipo de limite | Descrição |
 | --- | --- | --- | --- |
-| Tamanho total de todas as entidades dimensionais | 5 GB | Proteção de desempenho | O tamanho total recomendado para todas as entidades dimensionais é 5 GB. A ingestão de entidades de dimensão grandes pode afetar o desempenho do sistema. Por exemplo, não é recomendado tentar carregar um catálogo de produtos de 10 GB como uma entidade de dimensão. |
+| Tamanho total de todas as entidades dimensionais | 5GB | Proteção de desempenho | O tamanho total recomendado para todas as entidades dimensionais é 5 GB. A ingestão de entidades de dimensão grandes pode afetar o desempenho do sistema. Por exemplo, não é recomendado tentar carregar um catálogo de produtos de 10 GB como uma entidade de dimensão. |
 | Esquema de entidade dimensional de conjuntos de dados | 5 | Proteção de desempenho | Recomenda-se um máximo de 5 conjuntos de dados associados a cada esquema de entidade dimensional. Por exemplo, se você criar um esquema para &quot;produtos&quot; e adicionar cinco conjuntos de dados de contribuição, não deverá criar um sexto conjunto de dados vinculado ao esquema de produtos. |
 | Lotes de entidades Dimension assimilados por dia | 4 por entidade | Proteção de desempenho | O número máximo recomendado de lotes de entidades de dimensão assimilados por dia é 4 por entidade. Por exemplo, você pode assimilar atualizações em um catálogo de produtos até 4 vezes por dia. A ingestão de lotes de entidades de dimensão adicionais para a mesma entidade pode afetar o desempenho do sistema. |
 
@@ -120,6 +120,7 @@ As medidas de proteção descritas nesta seção referem-se ao número e à natu
 | Públicos em lote por sandbox | 4000 | Proteção de desempenho | Uma organização pode ter mais de 4000 públicos-alvo em lote no total, desde que haja menos de 4000 públicos-alvo em lote em cada sandbox individual. Tentar criar públicos-alvo em lote adicionais pode afetar o desempenho do sistema. |
 | Públicos-alvo da conta por sandbox | 50 | Proteção imposta pelo sistema | Você pode criar no máximo 50 públicos-alvo de conta em uma sandbox. Depois de atingir 50 públicos-alvo em uma sandbox, a variável **[!UICONTROL Criar público]** o controle está desativado ao tentar criar um novo público-alvo para a conta. Leia mais sobre [públicos-alvo da conta](/help/segmentation/ui/account-audiences.md). |
 | Composições publicadas por sandbox | 10 | Proteção de desempenho | Você pode ter no máximo 10 composições publicadas em uma sandbox. Leia mais sobre [composição de público-alvo no guia da interface](/help/segmentation/ui/audience-composition.md). |
+| Tamanho máximo do público | 30 por cento | Proteção de desempenho | A associação máxima recomendada de um público-alvo é de 30% do número total de perfis no sistema. É possível criar públicos-alvo com mais de 30% dos perfis como membros ou vários públicos-alvo grandes, mas isso afetará o desempenho do sistema. |
 
 {style="table-layout:auto"}
 

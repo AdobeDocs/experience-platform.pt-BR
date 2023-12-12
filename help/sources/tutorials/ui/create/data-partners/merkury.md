@@ -2,9 +2,7 @@
 title: Criar uma conexão de origem e um fluxo de dados de resolução de identidade corporativa do Merkury na interface
 description: Saiba como criar uma conexão de origem de resolução de identidade corporativa do Merkury usando a interface do usuário do Adobe Experience Platform.
 badge: Beta
-hide: true
-hidefromtoc: true
-source-git-commit: cc87bff5ea19e2ffc9958bd645b4736d05773e3c
+source-git-commit: 12f73ac2578b6c5b024cc4ebdd75cd945c7b55c9
 workflow-type: tm+mt
 source-wordcount: '2015'
 ht-degree: 1%

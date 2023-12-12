@@ -5,10 +5,10 @@ title: Criar um fluxo de dados de transmissão para uma fonte de armazenamento e
 type: Tutorial
 description: Um fluxo de dados é uma tarefa agendada que recupera e assimila dados de uma origem para um conjunto de dados da Platform. Este tutorial fornece etapas para configurar um novo fluxo de dados usando seu conector da base de armazenamento na nuvem.
 exl-id: 75deead6-ef3c-48be-aed2-c43d1f432178
-source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
+source-git-commit: 6419ae7648a91dc7f9432281c1960beccc65bdb0
 workflow-type: tm+mt
-source-wordcount: '1055'
-ht-degree: 1%
+source-wordcount: '1071'
+ht-degree: 0%
 
 ---
 
@@ -34,6 +34,10 @@ Este tutorial requer uma compreensão funcional dos seguintes componentes do Ado
 - [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): fornece um perfil de consumidor unificado em tempo real com base em dados agregados de várias fontes.
 
 ## Adicionar dados
+
+>[!NOTE]
+>
+>Você só pode criar um fluxo de dados de origem por grupo de consumidores para um determinado Hub de Eventos.
 
 Depois de criar a sua conta de armazenamento em nuvem de streaming, a variável **[!UICONTROL Selecionar dados]** é exibida, fornecendo uma interface para você selecionar qual fluxo de dados trará para a Platform.
 
@@ -118,7 +122,7 @@ Forneça valores para o fluxo de dados e selecione **[!UICONTROL Próxima]**.
 
 ![detalhes do fluxo de dados](../../../../images/tutorials/dataflow/cloud-storage/streaming/dataflow-detail.png)
 
-### Consulte a seção
+### Revisão
 
 A variável **[!UICONTROL Revisão]** é exibida, permitindo que você revise seu novo fluxo de dados antes de ele ser criado. Os detalhes são agrupados nas seguintes categorias:
 

@@ -2,10 +2,10 @@
 title: Criar e configurar sequências de dados
 description: Saiba como conectar a integração do SDK da Web do lado do cliente a outros produtos da Adobe e destinos de terceiros.
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
-source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
+source-git-commit: 50dcfa41905c0d94ef764278a538c0c332eb3780
 workflow-type: tm+mt
-source-wordcount: '2725'
-ht-degree: 58%
+source-wordcount: '2707'
+ht-degree: 55%
 
 ---
 
@@ -44,7 +44,7 @@ As configurações de geolocalização e pesquisa de rede ajudam a definir o ní
 
 Expanda a **[!UICONTROL Localização geográfica e pesquisa de rede]** para definir as configurações descritas abaixo.
 
-![Captura de tela da interface do usuário da plataforma mostrando a tela de configuração da sequência de dados com as configurações de localização geográfica e pesquisa de rede realçadas.](assets/configure/geolookup.png)
+![Tela de configuração de sequência de dados com as configurações de geolocalização e pesquisa de rede realçadas.](assets/configure/geolookup.png)
 
 | Configuração | Descrição |
 | --- | --- |
@@ -63,7 +63,7 @@ A variável **[!UICONTROL Pesquisa de dispositivo]** As configurações do permi
 
 Expanda a **[!UICONTROL Pesquisa de dispositivo]** para definir as configurações descritas abaixo.
 
-![Captura de tela da interface do usuário da plataforma mostrando a tela de configuração da sequência de dados com as configurações de pesquisa do dispositivo realçadas.](assets/configure/device-lookup.png)
+![Tela de configuração da sequência de dados com as configurações de pesquisa de dispositivo realçadas.](assets/configure/device-lookup.png)
 
 >[!IMPORTANT]
 >
@@ -109,7 +109,7 @@ Agora, se você estiver configurando a sequência de dados para a Experience Pla
 
 Depois de configurar uma nova sequência de dados ou selecionar uma existente para exibir, a página de detalhes dessa sequência de dados é exibida. Aqui você pode encontrar mais informações sobre a sequência de dados, incluindo a ID.
 
-![Página de detalhes de uma sequência de dados criada](assets/configure/view-details.png)
+![Página de detalhes do fluxo de dados.](assets/configure/view-details.png)
 
 Na tela de detalhes da sequência de dados, é possível [adicionar serviços](#add-services) para habilitar recursos dos produtos da Adobe Experience Cloud aos quais você tem acesso. Também é possível editar a [configuração básica](#create) da sequência de dados, atualizar as [regras de mapeamento](./data-prep.md), [copiar a sequência de dados](#copy) ou excluí-la completamente.
 
@@ -117,11 +117,11 @@ Na tela de detalhes da sequência de dados, é possível [adicionar serviços](#
 
 Na página de detalhes de uma sequência de dados, selecione **[!UICONTROL Adicionar serviço]** para começar a adicionar os serviços disponíveis para essa sequência de dados.
 
-![Selecione Adicionar serviço para continuar](assets/configure/add-service.png)
+![Selecione Adicionar serviço para continuar.](assets/configure/add-service.png)
 
 Na próxima tela, use o menu suspenso para selecionar um serviço a ser configurado para essa sequência de dados. Somente os serviços aos quais você tem acesso são mostrados nesta lista.
 
-![Selecione um serviço na lista](assets/configure/service-selection.png)
+![Selecione um serviço na lista.](assets/configure/service-selection.png)
 
 Selecione o serviço desejado, preencha as opções de configuração exibidas e selecione **[!UICONTROL Salvar]** para adicionar o serviço à sequência de dados. Todos os serviços adicionados aparecem nos detalhes da sequência de dados.
 
@@ -137,7 +137,7 @@ As subseções abaixo descrevem as opções de configuração para cada serviço
 
 Esse serviço controla se e como os dados são enviados para o Adobe Analytics. Detalhes adicionais podem ser encontrados no guia de [envio de dados para o Analytics](../edge/data-collection/adobe-analytics/analytics-overview.md).
 
-![Bloco de configurações do Adobe Analytics](assets/configure/analytics-config.png)
+![Configurações de sequência de dados do Adobe Analytics.](assets/configure/analytics-config.png)
 
 | Configuração | Descrição |
 | --- | --- |
@@ -148,7 +148,7 @@ Esse serviço controla se e como os dados são enviados para o Adobe Analytics. 
 
 Esse serviço controla se e como os dados são enviados para o Adobe Audience Manager. Tudo o que é necessário para enviar dados ao Audience Manager é habilitar esta seção. As outras configurações são opcionais, mas são incentivadas.
 
-![Bloco de configurações do Adobe Audience Manager](assets/configure/audience-manager-config.png)
+![Configurações de sequência de dados do Adobe Audience Manager.](assets/configure/audience-manager-config.png)
 
 | Configuração | Descrição |
 | --- | --- |
@@ -167,7 +167,7 @@ Esse serviço controla se e como os dados são enviados para o Adobe Audience Ma
 
 Esse serviço controla se e como os dados são enviados para a Adobe Experience Platform.
 
-![Bloco de configurações da Adobe Experience Platform](assets/configure/platform-config.png)
+![Configurações de sequência de dados do Adobe Experience Platform.](assets/configure/platform-config.png)
 
 | Configuração | Descrição |
 |---| --- |
@@ -182,7 +182,7 @@ Esse serviço controla se e como os dados são enviados para a Adobe Experience 
 
 Esse serviço controla se e como os dados são enviados para o Adobe Target.
 
-![Bloco de configurações do Adobe Target](assets/configure/target-config.png)
+![Configurações de sequência de dados do Adobe Target.](assets/configure/target-config.png)
 
 | Configuração | Descrição |
 | --- | --- |
@@ -195,7 +195,7 @@ Esse serviço controla se e como os dados são enviados para o Adobe Target.
 
 Este serviço controla se e como os dados são enviados para o [encaminhamento de eventos](../tags/ui/event-forwarding/overview.md).
 
-![Seção de encaminhamento de eventos da interface de configuração](assets/configure/event-forwarding-config.png)
+![Seção Encaminhamento de eventos da tela de configuração do fluxo de dados.](assets/configure/event-forwarding-config.png)
 
 | Configuração | Descrição |
 | --- | --- |
@@ -216,15 +216,15 @@ Este serviço controla se e como os dados são enviados para o [encaminhamento d
 
 Na página principal do espaço de trabalho [!UICONTROL Sequências de dados], clique no ícone de reticências (**...**) da sequência de dados em questão e selecione **[!UICONTROL Copiar]**.
 
-![Imagem mostrando a opção [!UICONTROL Copiar] selecionada na exibição de lista da sequência de dados](assets/configure/copy-datastream-list.png)
+![Imagem mostrando a opção Copiar selecionada na exibição de lista do fluxo de dados.](assets/configure/copy-datastream-list.png)
 
 Como alternativa, você pode selecionar **[!UICONTROL Copiar sequência de dados]** na exibição de detalhes de uma determinada sequência de dados.
 
-![Imagem mostrando a opção [!UICONTROL Copiar] selecionada na exibição de detalhes da sequência de dados](assets/configure/copy-datastream-details.png)
+![Opção de cópia selecionada na exibição de detalhes da sequência de dados.](assets/configure/copy-datastream-details.png)
 
 Uma caixa de diálogo de confirmação é exibida, solicitando que você forneça um nome exclusivo para a nova sequência de dados a ser criada, juntamente com detalhes sobre as opções de configuração que serão copiadas. Quando tudo estiver pronto, selecione **[!UICONTROL Copiar]**.
 
-![Imagem da caixa de diálogo de confirmação para copiar uma sequência de dados](assets/configure/copy-datastream-confirm.png)
+![Caixa de diálogo de confirmação para copiar um fluxo de dados.](assets/configure/copy-datastream-confirm.png)
 
 A página principal do espaço de trabalho [!UICONTROL Sequências de dados] será exibida novamente com a nova sequência de dados listada.
 

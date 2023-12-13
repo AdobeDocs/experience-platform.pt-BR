@@ -1,13 +1,13 @@
 ---
 title: Preparo de dados para a coleção de dados
 description: Saiba como mapear seus dados para um esquema de evento do Experience Data Model (XDM) ao configurar uma sequência de dados para os SDKs da web e móvel da Adobe Experience Platform.
-source-git-commit: 935881ee8c8aedb672bbd6233ea22aa7b26b28a6
+exl-id: 87a70d56-1093-445c-97a5-b8fa72a28ad0
+source-git-commit: 50dcfa41905c0d94ef764278a538c0c332eb3780
 workflow-type: tm+mt
-source-wordcount: '1201'
-ht-degree: 64%
+source-wordcount: '1192'
+ht-degree: 59%
 
 ---
-
 
 # Preparo de dados para a coleção de dados
 
@@ -154,7 +154,7 @@ Para capturar propriedades de um elemento de dados de objeto XDM, as mesmas regr
 
 Você pode selecionar a opção para fazer upload do objeto como um arquivo ou colar o objeto bruto na caixa de texto fornecida. Se o JSON for válido, um esquema de visualização será exibido no painel direito. Clique em **[!UICONTROL Avançar]** para continuar.
 
-![Amostra JSON de dados de entrada esperados](assets/data-prep/select-data.png)
+![Exemplo JSON de dados de entrada esperados.](assets/data-prep/select-data.png)
 
 >[!NOTE]
 >
@@ -171,25 +171,25 @@ A etapa **[!UICONTROL Mapeamento]** é exibida, permitindo mapear os campos nos 
 
 Para criar uma regra de mapeamento, selecione **[!UICONTROL Adicionar novo mapeamento]**.
 
-![Adicionar um novo mapeamento](assets/data-prep/add-new-mapping.png)
+![Adicionar um novo mapeamento.](assets/data-prep/add-new-mapping.png)
 
 Selecione o ícone de origem (![Ícone de origem](assets/data-prep/source-icon.png)) e, na caixa de diálogo exibida, selecione o campo de origem que deseja mapear na tela fornecida. Depois de escolher um campo, use o botão **[!UICONTROL Selecionar]** para continuar.
 
-![Selecionar o campo a ser mapeado no esquema de origem](assets/data-prep/source-mapping.png)
+![Seleção do campo a ser mapeado no esquema de origem.](assets/data-prep/source-mapping.png)
 
 Em seguida, selecione o ícone de esquema (![Ícone de esquema](assets/data-prep/schema-icon.png)) para abrir uma caixa de diálogo semelhante para o esquema de evento de destino. Escolha o campo para o qual deseja mapear os dados antes de confirmar com **[!UICONTROL Selecionar]**.
 
-![Selecionar o campo a ser mapeado no esquema de destino](assets/data-prep/target-mapping.png)
+![Seleção do campo a ser mapeado no schema de destino.](assets/data-prep/target-mapping.png)
 
 A página de mapeamento é exibida novamente com o mapeamento do campo concluído. A seção **[!UICONTROL Progresso do mapeamento]** é atualizada para refletir o número total de campos que foram mapeados com sucesso.
 
-![Campo mapeado com sucesso e com o progresso atualizado](assets/data-prep/field-mapped.png)
+![Campo mapeado com êxito com o progresso refletido.](assets/data-prep/field-mapped.png)
 
 >[!TIP]
 >
 >Se quiser mapear uma matriz de objetos (no campo de origem) para uma matriz de objetos diferentes (no campo de destino), adicione `[*]` após o nome da matriz nos caminhos dos campos de origem e destino, conforme mostrado abaixo.
 >
->![Mapeamento de objeto de matriz](assets/data-prep/array-object-mapping.png)
+>![Mapeamento de objeto de matriz.](assets/data-prep/array-object-mapping.png)
 
 ### Importar regras de mapeamento existentes {#import-mapping}
 
@@ -201,11 +201,11 @@ Se você tiver criado um fluxo de dados anteriormente, poderá reutilizar suas r
 
 Para começar, selecione **[!UICONTROL Importar mapeamento]**.
 
-![Imagem mostrando o botão [!UICONTROL Importar mapeamento] sendo selecionado](assets/data-prep/import-mapping-button.png)
+![O botão Importar mapeamento está sendo selecionado.](assets/data-prep/import-mapping-button.png)
 
 Na caixa de diálogo exibida, selecione a sequência de dados cujas regras de mapeamento você deseja importar. Depois que a sequência de dados for escolhida, selecione **[!UICONTROL Visualizar]**.
 
-![Imagem mostrando uma sequência de dados existente sendo selecionada](assets/data-prep/select-mapping-rules.png)
+![Selecionar um fluxo de dados existente.](assets/data-prep/select-mapping-rules.png)
 
 >[!NOTE]
 >
@@ -213,7 +213,7 @@ Na caixa de diálogo exibida, selecione a sequência de dados cujas regras de ma
 
 A próxima tela mostra uma visualização das regras de mapeamento salvas para a sequência de dados selecionada. Verifique se os mapeamentos exibidos são os esperados e selecione **[!UICONTROL Importar]** para confirmar e adicionar os mapeamentos à nova sequência de dados.
 
-![Imagem mostrando as regras de mapeamento a serem importadas](assets/data-prep/import-mapping-rules.png)
+![Regras de mapeamento a serem importadas.](assets/data-prep/import-mapping-rules.png)
 
 >[!NOTE]
 >

@@ -3,10 +3,10 @@ keywords: Experience Platform;serviço de consulta;serviço de consulta;consulta
 title: Exemplo de caso de uso para o serviço de consulta do Adobe Experience Platform
 description: Um exemplo completo para demonstrar a versatilidade e os benefícios do Adobe Experience Platform Query Service.
 exl-id: 00bdae47-71b7-44ea-9365-a1d64c88d2bf
-source-git-commit: 79966442f5333363216da17342092a71335a14f0
+source-git-commit: 38689125a43ad0b1a12a00efe6800bb310d7557c
 workflow-type: tm+mt
-source-wordcount: '707'
-ht-degree: 2%
+source-wordcount: '695'
+ht-degree: 1%
 
 ---
 
@@ -18,7 +18,7 @@ Este documento e a apresentação em vídeo que o acompanha fornecem um fluxo de
 * Maneiras de criar a consulta com base na arquitetura de dados existente.
 * Garanta a qualidade dos dados que atenda às suas necessidades e métodos para atenuar qualquer falha.
 * O processo para agendar uma consulta para execução em uma frequência definida para uso downstream na segmentação e destinos para personalização.
-* A facilidade de os profissionais de marketing incluírem atributos derivados em seus públicos-alvo por meio do poder do [!DNL Query Service].
+* A facilidade de os profissionais de marketing incluírem conjuntos de dados derivados em seus públicos-alvo por meio do poder do [!DNL Query Service].
 
 ## Objetivos {#objectives}
 

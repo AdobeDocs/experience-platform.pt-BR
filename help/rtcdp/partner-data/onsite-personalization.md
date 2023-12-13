@@ -1,16 +1,16 @@
 ---
-title: Personalizar experiências locais para visitantes desconhecidos usando o reconhecimento de visitantes auxiliado por parceiros
+title: Personalizar experiências no site para visitantes desconhecidos usando o reconhecimento de visitantes auxiliados por parceiros
 description: Saiba como usar o reconhecimento de visitante com auxílio de parceiros para fornecer experiências de site personalizadas para visitantes.
 feature: Use Cases, Personalization, Customer Acquisition
 exl-id: 99677988-1df8-47b1-96b1-0ef6db818a1d
-source-git-commit: 3353866aa2d52c784663f355183e940e727b2af7
+source-git-commit: 2ffb8724b2aca54019820335fb21038ec7e69a7f
 workflow-type: tm+mt
-source-wordcount: '2696'
-ht-degree: 91%
+source-wordcount: '2673'
+ht-degree: 89%
 
 ---
 
-# Personalizar experiências locais para visitantes desconhecidos usando o reconhecimento de visitantes auxiliado por parceiros
+# Personalizar experiências no site para visitantes desconhecidos usando o reconhecimento de visitantes auxiliados por parceiros
 
 >[!AVAILABILITY]
 >
@@ -39,7 +39,7 @@ Essa marca aproveita a tecnologia de reconhecimento de parceiros para reconhecer
 Ao planejar usar atributos fornecidos pelo parceiro para oferecer experiências personalizadas a visitantes autenticados e não autenticados, considere os seguintes pré-requisitos no processo de planejamento:
 
 * Quais entradas são esperadas pela tecnologia de reconhecimento do seu parceiro para criar camadas de atributos adicionais?
-* Até que ponto você se sente confortável em fornecer personalização em diferentes canais e para casos de uso diferentes com base em atributos derivados probabilisticamente, em comparação a atributos confirmados deterministicamente?
+* Até que ponto você se sente confortável em fornecer personalização em diferentes canais e para casos de uso diferentes com base em conjuntos de dados derivados probabilisticamente, em comparação com atributos confirmados deterministicamente?
 * Como a experiência de visitantes pré-autenticados, mas reconhecidos, deve ser alterada durante a autenticação?
 
 ### Funcionalidade da interface, componentes da Platform e produtos da Experience Cloud que serão usados {#ui-functionality-and-elements}

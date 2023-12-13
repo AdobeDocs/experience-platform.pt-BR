@@ -1,25 +1,25 @@
 ---
-title: Caso de uso de atributos derivados baseados em decis
-description: Este guia demonstra as etapas necessárias para usar o Serviço de consulta para criar atributos derivados baseados em decis para usar com os dados do seu Perfil.
+title: Caso de uso de conjuntos de dados derivados com base em decis
+description: Este guia demonstra as etapas necessárias para usar o Serviço de consulta para criar conjuntos de dados derivados baseados em decis para usar com os dados do seu Perfil.
 exl-id: 0ec6b511-b9fd-4447-b63d-85aa1f235436
-source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
+source-git-commit: 2ffb8724b2aca54019820335fb21038ec7e69a7f
 workflow-type: tm+mt
-source-wordcount: '1505'
-ht-degree: 2%
+source-wordcount: '1511'
+ht-degree: 0%
 
 ---
 
-# Caso de uso de atributos derivados baseados em decis
+# Caso de uso de conjuntos de dados derivados com base em decis
 
-Os atributos derivados facilitam casos de uso complicados para analisar dados do data lake que podem ser usados com outros serviços downstream da Platform ou publicados nos dados do Perfil do cliente em tempo real.
+Os conjuntos de dados derivados facilitam casos de uso complicados para analisar dados do data lake que podem ser usados com outros serviços downstream da Platform ou publicados nos dados do Perfil do cliente em tempo real.
 
-Este exemplo de caso de uso demonstra como criar atributos derivados baseados em decis para uso com os dados do Perfil do cliente em tempo real. Usando um cenário de fidelidade da companhia aérea como exemplo, este guia informa como criar um conjunto de dados que usa decis categóricos para segmentar e criar públicos com base em atributos classificados.
+Este exemplo de caso de uso demonstra como criar conjuntos de dados derivados baseados em decis para uso com seus dados de Perfil do cliente em tempo real. Usando um cenário de fidelidade da companhia aérea como exemplo, este guia informa como criar um conjunto de dados que usa decis categóricos para segmentar e criar públicos com base em atributos classificados.
 
 Os principais conceitos são ilustrados a seguir:
 
 * Criação de esquema para classificação de decis.
 * Criação de decis categórica.
-* Criação de atributos derivados complexos.
+* Criação de conjuntos de dados derivados complexos.
 * Cálculo de decis em um período de pesquisa.
 * Um exemplo de consulta para demonstrar agregação, classificação e adição de identidades exclusivas para permitir que os públicos-alvo sejam gerados com base nesses intervalos de decis.
 
@@ -34,9 +34,9 @@ Este guia requer uma compreensão funcional de [execução da consulta no Servi�
 
 ## Objetivos
 
-O exemplo fornecido neste documento usa decis para criar atributos derivados para classificar dados de um esquema de fidelidade de linha aérea. Os atributos derivados permitem maximizar a utilidade dos dados identificando um público com base no primeiro &#39;n&#39; % de uma categoria escolhida.
+O exemplo fornecido neste documento usa decis para criar conjuntos de dados derivados para classificar dados de um esquema de fidelidade de linha aérea. Os conjuntos de dados derivados permitem maximizar a utilidade dos dados identificando um público com base no maior &quot;n&quot; % de uma categoria escolhida.
 
-## Criar atributos derivados baseados em decil
+## Criar conjuntos de dados derivados baseados em decil
 
 Para definir a classificação de decis com base em uma dimensão específica e uma métrica correspondente, um esquema deve ser projetado para permitir a classificação de decis.
 
@@ -56,7 +56,7 @@ O conjunto de dados inicial de fidelidade da companhia aérea para este exemplo 
 
 **Dados de exemplo**
 
-A tabela a seguir exibe os dados de exemplo contidos na variável `_profilefoundationreportingstg` objeto usado para este exemplo. Ele fornece o contexto para o uso de buckets decis para criar atributos derivados complexos.
+A tabela a seguir exibe os dados de exemplo contidos na variável `_profilefoundationreportingstg` objeto usado para este exemplo. Ele fornece contexto para o uso de buckets decis para criar conjuntos de dados derivados complexos.
 
 >[!NOTE]
 >
@@ -64,11 +64,11 @@ A tabela a seguir exibe os dados de exemplo contidos na variável `_profilefound
 
 | `.membershipNumber` | `.emailAddress.address` | `.transactionDate` | `.transactionType` | `.transactionDetails` | `.mileage` | `.loyaltyStatus` |
 |---|---|---|---|---|---|---|
-| C435678623 | sfeldmark1vr@studiopress.com | 2022-01-01 | STATUS_MILES | Novo membro | 5000 | PANFLETO |
-| B789279247 | pgalton32n@barnesandnoble.com | 2022-02-01 | AWARD_MILES | JFK-FRA | 7500 | PRATA |
-| B789279247 | pgalton32n@barnesandnoble.com | 2022-02-01 | STATUS_MILES | JFK-FRA | 7500 | PRATA |
+| C435678623 | sfeldmark1vr@studiopress.com | 01-01-2022 | STATUS_MILES | Novo membro | 5000 | PANFLETO |
+| B789279247 | pgalton32n@barnesandnoble.com | 01/02/2022 | AWARD_MILES | JFK-FRA | 7500 | PRATA |
+| B789279247 | pgalton32n@barnesandnoble.com | 01/02/2022 | STATUS_MILES | JFK-FRA | 7500 | PRATA |
 | B789279247 | pgalton32n@barnesandnoble.com | 2022-02-10 | AWARD_MILES | FRA-JFK | 5000 | PRATA |
-| A123487284 | rritson1zn@sciencedaily.com | 2022-01-07 | STATUS_MILES | Novo cartão de crédito | 10000 | PANFLETO |
+| A123487284 | rritson1zn@sciencedaily.com | 01-2022-07 | STATUS_MILES | Novo cartão de crédito | 10000 | PANFLETO |
 
 {style="table-layout:auto"}
 
@@ -98,7 +98,7 @@ O Serviço de consulta também permite definir uma identidade ou uma identidade 
 
 O exemplo a seguir demonstra a consulta SQL para calcular um decil em um período de lookback.
 
-Um modelo pode ser feito usando o Editor de consultas na interface ou por meio da [API do serviço de consulta](../api/query-templates.md#create-a-query-template).
+Um modelo pode ser feito usando o Editor de consultas na interface ou por meio do [API do serviço de consulta](../api/query-templates.md#create-a-query-template).
 
 ```sql
 CREATE TABLE AS airline_loyality_decile 
@@ -299,4 +299,4 @@ Execute a consulta para preencher o conjunto de dados decile. Você também pode
 
 ## Próximas etapas
 
-O caso de uso de exemplo fornecido acima destaca as etapas para disponibilizar atributos decis no Perfil do cliente em tempo real. Isso permite que o Serviço de segmentação, por meio de uma interface de usuário ou API RESTful, possa gerar públicos-alvo com base nesses intervalos decis. Consulte a [Visão geral do serviço de segmentação](../../segmentation/home.md) para obter informações sobre como criar, avaliar e acessar segmentos.
+O caso de uso de exemplo fornecido acima destaca as etapas para disponibilizar conjuntos de dados derivados baseados em decil no Perfil do cliente em tempo real. Isso permite que o Serviço de segmentação, por meio de uma interface de usuário ou API RESTful, possa gerar públicos-alvo com base nesses intervalos decis. Consulte a [Visão geral do serviço de segmentação](../../segmentation/home.md) para obter informações sobre como criar, avaliar e acessar segmentos.

@@ -2,9 +2,9 @@
 title: Rastrear sinais de dados para gerar o valor vitalício do cliente
 description: Este guia fornece uma demonstração completa sobre como usar o Data Distiller e painéis definidos pelo usuário com o Real-time Customer Data Platform para medir e visualizar o valor vitalício do cliente.
 exl-id: c74b5bff-feb2-4e21-9ee4-1e0973192570
-source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
+source-git-commit: 38689125a43ad0b1a12a00efe6800bb310d7557c
 workflow-type: tm+mt
-source-wordcount: '1269'
+source-wordcount: '1263'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ O infográfico a seguir descreve o ciclo de coleta, manipulação, análise e at
 
 ![O infográfico de ida e volta de dados, da observação à análise e à ação.](../images/use-cases/infographic-use-case-cycle.png)
 
-Este caso de uso completo demonstra como os sinais de dados podem ser capturados e modificados para calcular o atributo derivado de valor do tempo de vida do cliente. Esses atributos derivados podem ser aplicados aos dados de perfil do Real-Time CDP e estão disponíveis para uso com painéis definidos pelo usuário para criar um painel para análise de insights. Por meio do Data Distiller, é possível estender o modelo de dados do Real-Time CDP Insights e usar o atributo derivado do CLV e insights do painel para criar um novo público-alvo e ativá-lo para um destino desejado. Esses públicos-alvo de alto desempenho podem ser usados para potencializar sua próxima campanha de marketing.
+Este caso de uso completo demonstra como os sinais de dados podem ser capturados e modificados para calcular o atributo derivado de valor do tempo de vida do cliente. Esses conjuntos de dados derivados podem ser aplicados aos dados de perfil do Real-Time CDP e estão disponíveis para uso com painéis definidos pelo usuário para criar um painel para análise de insight. Por meio do Data Distiller, é possível estender o modelo de dados do Real-Time CDP Insights e usar os conjuntos de dados derivados do CLV e insights do painel para criar um novo público-alvo e ativá-lo para um destino desejado. Esses públicos-alvo de alto desempenho podem ser usados para potencializar sua próxima campanha de marketing.
 
 Este guia foi projetado para ajudar você a entender melhor a experiência do cliente, medindo sinais de dados nos principais pontos de contato que impulsionam o CLV e implementam um caso de uso semelhante em seu ambiente. Todo o processo está resumido na imagem abaixo.
 
@@ -34,9 +34,9 @@ Este guia requer uma compreensão funcional dos seguintes componentes do Adobe E
 
 Este guia requer que você tenha a [Distiller de dados](../data-distiller/overview.md) SKU como parte de sua oferta de pacote. Se não tiver certeza se tem essa informação, entre em contato com o representante de serviços da Adobe.
 
-## Criar um atributo derivado {#create-derived-attribute}
+## Criar um conjunto de dados derivado {#create-derived-dataset}
 
-A primeira etapa no estabelecimento do CLV é criar um atributo derivado dos sinais de dados capturados das ações do usuário. Esse caso de uso específico é registrado em um documento separado sobre um esquema de fidelidade de uma companhia aérea. Consulte o guia para saber como [use o Serviço de consulta para criar atributos derivados baseados em decile para usar com os dados do seu perfil](./deciles-use-case.md). Exemplos completos e explicações são fornecidos no documento que explica as seguintes etapas:
+A primeira etapa no estabelecimento do CLV é criar um conjunto de dados derivado dos sinais de dados capturados das ações do usuário. Esse caso de uso específico é registrado em um documento separado sobre um esquema de fidelidade de uma companhia aérea. Consulte o guia para saber como [use o Serviço de consulta para criar conjuntos de dados derivados baseados em decile para usar com os dados do seu perfil](./deciles-use-case.md). Exemplos completos e explicações são fornecidos no documento que explica as seguintes etapas:
 
 * Crie um esquema para permitir a segmentação de decis.
 * Use o Serviço de consulta para criar decis.

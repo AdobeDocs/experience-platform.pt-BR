@@ -4,7 +4,7 @@ user-guide-title: Ajuda do Serviço de consulta da Adobe Experience Platform
 breadcrumb-title: Guia do Serviço de consulta
 user-guide-description: Use o SQL padrão para consultar dados no data lake na Experience Platform.
 feature: Queries
-source-git-commit: cd97165d4e4d8ed984c4705f614c8d77eb750ed6
+source-git-commit: f319f05d600dfd2bc4840ff56aefb8098dbfb7aa
 workflow-type: tm+mt
 source-wordcount: '309'
 ht-degree: 19%
@@ -22,13 +22,13 @@ ht-degree: 19%
 - Distiller de dados {#data-distiller}
    - [Visão geral](data-distiller/overview.md)
    - [Uso da licença](data-distiller/license-usage.md)
+   - Conjuntos de dados derivados {#derived-datasets}
+      - [Visão geral](data-distiller/derived-datasets/overview.md)
+      - [Fluxo SQL contínuo](data-distiller/derived-datasets/seamless-sql-flow.md)
+      - [Criar conjuntos de dados derivados baseados em decil](data-distiller/derived-datasets/decile-based-derived-attributes.md)
    - Consultar armazenamento acelerado {#query-accelerated-store}
       - [Enviar consultas aceleradas](data-distiller/query-accelerated-store/send-accelerated-queries.md)
       - [Guia do modelo de dados de insights de relatórios](data-distiller/query-accelerated-store/reporting-insights-data-model.md)
-   - Atributos derivados {#derived-attributes}
-      - [Visão geral](data-distiller/derived-attributes/overview.md)
-      - [Fluxo SQL contínuo](data-distiller/derived-attributes/seamless-sql-flow.md)
-      - [Criar atributos derivados baseados em decil](data-distiller/derived-attributes/decile-based-derived-attributes.md)
    - Pipelines de recursos de IA/ML {#ml-feature-pipelines}
       - [Visão geral](data-distiller/ml-feature-pipelines/overview.md)
       - [Conectar-se aos Jupyter Notebooks](data-distiller/ml-feature-pipelines/establish-connection.md)
@@ -43,7 +43,7 @@ ht-degree: 19%
    - [Criar um relatório de tendências de eventos](use-cases/trended-report-of-events.md)
    - [Análise de consentimento](use-cases/consent-analysis.md)
    - [Valor vitalício do cliente](use-cases/customer-lifetime-value.md)
-   - [Atributos derivados baseados em decis](use-cases/deciles-use-case.md)
+   - [Conjuntos de dados derivados com base em decis](use-cases/deciles-use-case.md)
    - [Correspondência difusa](use-cases/fuzzy-match.md)
    - [Listar as exibições de página de um usuário](use-cases/list-visitor-sessions.md)
    - [Listar visitantes por suas visualizações de página](use-cases/visitors-by-number-of-page-views.md)

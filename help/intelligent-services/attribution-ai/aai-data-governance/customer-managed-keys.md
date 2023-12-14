@@ -3,10 +3,10 @@ keywords: insights;ia de atribuição;insights de ia de atribuição;serviço de
 title: Customer Managed Keys
 description: Saiba como configurar chaves gerenciadas pelo cliente no Attribution AI.
 exl-id: c00bf1a0-cc4c-4a34-83f1-d93829576866
-source-git-commit: f28558d5939607cabf449cbc03b7e0f5406f6326
+source-git-commit: a59c86d1f1d426d4954071032ddaff1bbc9f2781
 workflow-type: tm+mt
-source-wordcount: '171'
-ht-degree: 22%
+source-wordcount: '158'
+ht-degree: 15%
 
 ---
 
@@ -18,6 +18,6 @@ Você pode ler a documentação em [Chaves gerenciadas pelo cliente no Adobe Exp
 
 >[!NOTE]
 >
->[!DNL Customer Managed Keys] atualmente disponíveis apenas para organizações que compraram o [[!DNL Healthcare Shield or Privacy & Security Shield]](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/vertical-blueprints/healthcare-vertical.html?lang=pt-BR) oferta complementar.
+>[!DNL Customer Managed Keys] atualmente disponíveis apenas para organizações que compraram o [!DNL Healthcare Shield or Privacy & Security Shield] oferta complementar.
 
 Todos os dados utilizados pela Platform são criptografados em trânsito e em repouso para manter seus dados protegidos, com ou sem CMK. Para obter informações sobre criptografia do Adobe Experience Platform, leia a documentação em [Criptografia de dados](../../../landing/governance-privacy-security/encryption.md).

@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Endpoint da API de tipos de dados
 description: O ponto de extremidade /datatypes na API do registro de esquema permite gerenciar de forma programática os tipos de dados XDM no aplicativo de experiência.
 exl-id: 2a58d641-c681-40cf-acc8-7ad842cd6243
-source-git-commit: 342da62b83d0d804b31744a580bcd3e38412ea51
+source-git-commit: 6e58f070c0a25d7434f1f165543f92ec5a081e66
 workflow-type: tm+mt
-source-wordcount: '1215'
-ht-degree: 4%
+source-wordcount: '1247'
+ht-degree: 3%
 
 ---
 
@@ -15,9 +15,13 @@ ht-degree: 4%
 
 Os tipos de dados são usados como campos do tipo referência em classes ou grupos de campos de esquema da mesma forma que os campos literais básicos, com a principal diferença sendo que os tipos de dados podem definir vários subcampos. Embora semelhantes a grupos de campos, pois permitem o uso consistente de uma estrutura de vários campos, os tipos de dados são mais flexíveis porque podem ser incluídos em qualquer lugar na estrutura do esquema, enquanto os grupos de campos só podem ser adicionados no nível raiz. A variável `/datatypes` endpoint na variável [!DNL Schema Registry] A API permite gerenciar programaticamente os tipos de dados no aplicativo de experiência.
 
+>[!NOTE]
+>
+>Se um campo for definido como um tipo de dados específico, você não poderá criar o mesmo campo com um tipo de dados diferente em outro esquema. Essa restrição se aplica ao locatário da organização.
+
 ## Introdução
 
-O endpoint usado neste manual faz parte da [[!DNL Schema Registry] API do ](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Antes de continuar, reveja o [guia de introdução](./getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre os cabeçalhos necessários para fazer chamadas com êxito para qualquer API de Experience Platform.
+O endpoint usado neste guia faz parte da variável [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Antes de continuar, reveja o [guia de introdução](./getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre os cabeçalhos necessários para fazer chamadas com êxito para qualquer API de Experience Platform.
 
 ## Recuperar uma lista de tipos de dados {#list}
 

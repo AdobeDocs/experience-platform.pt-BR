@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Noções básicas da composição do esquema
 description: Este documento fornece uma introdução aos esquemas do Experience Data Model (XDM) e aos componentes, princípios e práticas recomendadas para a composição de esquemas a serem usados no Adobe Experience Platform.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 139d6a6632532b392fdf8d69c5c59d1fd779a6d1
+source-git-commit: 6e58f070c0a25d7434f1f165543f92ec5a081e66
 workflow-type: tm+mt
-source-wordcount: '4141'
+source-wordcount: '4143'
 ht-degree: 6%
 
 ---
@@ -222,7 +222,11 @@ Para obter a lista mais atualizada de grupos de campos XDM padrão disponíveis,
 
 Os tipos de dados são usados como tipos de campo de referência em classes ou esquemas da mesma forma que os campos literais básicos. A principal diferença é que os tipos de dados podem definir vários subcampos. Eles podem definir vários subcampos da mesma forma que grupos de campos, mas a principal diferença é que os tipos de dados podem ser incluídos em qualquer lugar de um esquema adicionando-o como o &quot;tipo de dados&quot; de um campo. Embora os grupos de campos sejam compatíveis apenas com determinadas classes, os tipos de dados podem ser incluídos em qualquer classe principal ou grupo de campos.
 
-[!DNL Experience Platform] O fornece vários tipos de dados comuns como parte da [!DNL Schema Registry] para apoiar o uso de padrões padrão para descrever estruturas de dados comuns. Isso é explicado com mais detalhes na seção [!DNL Schema Registry] tutoriais, em que ficará mais claro à medida que você percorre as etapas para definir os tipos de dados.
+>[!NOTE]
+>
+>Se um campo for definido como um tipo de dados específico, você não poderá criar o mesmo campo com um tipo de dados diferente em outro esquema. Essa restrição se aplica ao locatário da organização.
+
+[!DNL Experience Platform] O fornece vários tipos de dados comuns como parte da [!DNL Schema Registry] para apoiar o uso de padrões padrão para descrever estruturas de dados comuns. Isso é explicado com mais detalhes na seção [Tutoriais do Registro de esquema](../tutorials/create-schema-api.md), em que ficará mais claro à medida que você percorre as etapas para definir os tipos de dados.
 
 A captura de tela a seguir demonstra como os tipos de dados são representados na interface do usuário da plataforma. Um dos campos fornecidos pelo [!UICONTROL Detalhes demográficos] o grupo de campos usa o caractere &quot;[!UICONTROL Objeto]&quot; tipo de dados, conforme indicado pelo texto após o caractere de barra vertical (`|`) ao lado do nome do campo. Esse tipo de dados específico fornece vários subcampos relacionados ao nome de uma pessoa individual, uma construção que pode ser reutilizada para outros campos em que o nome de uma pessoa precisa ser capturado.
 
@@ -338,13 +342,13 @@ Há alguns fatores principais a serem considerados ao escolher objetos em vez de
 
 Os prós e contras do uso de objetos em campos de formato livre estão listados abaixo.
 
-**Pontos positivos**:
+**Vantagens**:
 
 * Os objetos são usados melhor quando você deseja criar um agrupamento lógico de determinados campos.
 * Os objetos organizam o esquema de maneira mais estruturada.
 * Os objetos indiretamente ajudam a criar uma boa estrutura de menu na interface do usuário do Construtor de segmentos. Os campos agrupados no esquema são refletidos diretamente na estrutura de pastas fornecida na interface do usuário do Construtor de segmentos.
 
-**Pontos negativos**:
+**Contras**:
 
 * Os campos ficam mais aninhados.
 * Ao usar [Serviço de consulta Adobe Experience Platform](../../query-service/home.md), strings de referência mais longas devem ser fornecidas para campos de consulta aninhados em objetos.
@@ -353,11 +357,11 @@ Os prós e contras do uso de objetos em campos de formato livre estão listados 
 
 Os prós e contras do uso de campos de forma livre sobre objetos estão listados abaixo.
 
-**Pontos positivos**:
+**Vantagens**:
 
 * Os campos de forma livre são criados diretamente no objeto raiz do esquema (`_tenantId`), aumentando a visibilidade.
 * As cadeias de caracteres de referência para campos de formato livre tendem a ser mais curtas ao usar o Serviço de consulta.
 
-**Pontos negativos**:
+**Contras**:
 
 * A localização dos campos de forma livre no esquema é ad hoc, o que significa que eles aparecem em ordem alfabética no Editor de esquemas. Isso pode tornar os esquemas menos estruturados e campos de forma livre semelhantes podem acabar sendo muito separados, dependendo de seus nomes.

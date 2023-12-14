@@ -2,10 +2,10 @@
 title: Gerenciar rótulos de uso de dados para um esquema
 description: Saiba como adicionar rótulos de uso de dados aos campos de esquema do Experience Data Model (XDM) na interface do Adobe Experience Platform.
 exl-id: 92284bf7-f034-46cc-b905-bdfb9fcd608a
-source-git-commit: c35c270afca57cb96228cea29fd5a39ec6615332
+source-git-commit: 6fe11b909369797e96d8fa52542ebd5761a27b03
 workflow-type: tm+mt
-source-wordcount: '795'
-ht-degree: 9%
+source-wordcount: '806'
+ht-degree: 8%
 
 ---
 
@@ -29,7 +29,7 @@ Este tutorial aborda as etapas para adicionar rótulos a um esquema usando o Edi
 
 Este manual necessita de uma compreensão funcional dos seguintes componentes da Adobe Experience Platform:
 
-* [[!DNL Experience Data Model (XDM) System]](../home.md): a estrutura padronizada pela qual a [!DNL Experience Platform] organiza os dados de experiência do cliente.
+* [[!DNL Experience Data Model (XDM) System]](../home.md): o quadro normalizado pelo qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
    * [Editor de esquema](../ui/overview.md): saiba como criar e gerenciar esquemas e outros recursos na interface do Platform.
 * [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md): fornece a infraestrutura para aplicar restrições de uso de dados nas operações da Platform, usando políticas que definem quais ações de marketing podem (ou não) ser executadas em dados rotulados.
 
@@ -43,6 +43,10 @@ Este manual necessita de uma compreensão funcional dos seguintes componentes da
 Para começar a adicionar rótulos, você deve primeiro [selecionar um esquema existente para editar](../ui/resources/schemas.md#edit) ou [criar um novo esquema](../ui/resources/schemas.md#create) para exibir sua estrutura no Editor de esquemas.
 
 Para editar os rótulos de um campo individual, você pode selecionar o campo na tela e selecionar **[!UICONTROL Gerenciar acesso]** no painel direito.
+
+>[!IMPORTANT]
+>
+>Um máximo de 300 rótulos podem ser aplicados a qualquer esquema.
 
 ![Selecione um campo na tela Editor de esquemas](../images/tutorials/labels/manage-access.png)
 

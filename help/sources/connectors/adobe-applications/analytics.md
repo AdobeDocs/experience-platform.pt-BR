@@ -2,10 +2,10 @@
 title: Conector de origem do Adobe Analytics para dados do conjunto de relatórios
 description: Este documento fornece uma visão geral do Analytics e descreve os casos de uso para dados do Analytics.
 exl-id: c4887784-be12-40d4-83bf-94b31eccdc2e
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 251b00e0f0e063859f8d0a0e188fa805c7bf3f87
 workflow-type: tm+mt
-source-wordcount: '1159'
-ht-degree: 6%
+source-wordcount: '1110'
+ht-degree: 2%
 
 ---
 
@@ -21,7 +21,7 @@ Este documento fornece uma visão geral de [!DNL Analytics] e descreve os casos 
 
 ![Um gráfico que ilustra a jornada de dados de diferentes aplicativos Adobe, incluindo o Adobe Analytics.](./images/analytics-data-experience-platform.png)
 
-Em um alto nível, [!DNL Analytics] O coleta dados de vários canais digitais e vários data centers em todo o mundo. Depois que os dados são coletados, as regras de identificação do visitante, arquitetura de segmentação e transformação (VISTA) e as regras de processamento são aplicadas para moldar os dados recebidos. Depois que os dados brutos passam por esse processamento leve, eles são considerados prontos para consumo pela [!DNL Real-Time Customer Profile]. Em um processo paralelo ao mencionado acima, os mesmos dados processados são microarmazenados em lote e assimilados em conjuntos de dados da plataforma para consumo pelo [!DNL Data Science Workspace], [!DNL Query Service]e outros aplicativos de detecção de dados.
+Em um alto nível, [!DNL Analytics] O coleta dados de vários canais digitais e vários data centers em todo o mundo. Depois que os dados são coletados, as regras de identificação do visitante, arquitetura de segmentação e transformação (VISTA) e as regras de processamento são aplicadas para moldar os dados recebidos. Depois que os dados brutos passam por esse processamento leve, eles são considerados prontos para consumo pela [!DNL Real-Time Customer Profile]. Em um processo paralelo ao mencionado acima, os mesmos dados processados são microarmazenados em lote e assimilados em conjuntos de dados da plataforma para consumo pelo [!DNL Query Service]e outros aplicativos de detecção de dados.
 
 Consulte a [visão geral das regras de processamento](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/processing-rules/processing-rules.html?lang=pt-BR) para obter mais informações sobre as regras de processamento.
 
@@ -91,7 +91,7 @@ Esses campos não são marcados como identidades. Em vez disso, as mesmas identi
 * `{ "key": "ECID", "value": [ { "id": "<identity>", "primary": <true or false> } ] }`
 * `{ "key": "AACUSTOMID", "value": [ { "id": "<identity>", "primary": false } ] }`
 
-No mapa de identidade, se a ECID estiver presente, ela será marcada como a identidade principal do evento. Nesse caso, a AAID pode se basear na ECID devido à [Período de carência do Serviço de identidade](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/grace-period.html). Caso contrário, a AAID é marcada como a identidade principal do evento. AACUSTOMID nunca é marcada como a ID principal do evento. No entanto, se a AACUSTOMID estiver presente, a AAID será baseada na AACUSTOMID devido à ordem Experience Cloud das operações.
+No mapa de identidade, se a ECID estiver presente, ela será marcada como a identidade principal do evento. Nesse caso, a AAID pode se basear na ECID devido à [Período de carência do Serviço de identidade](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/grace-period.html). Caso contrário, a AAID será marcada como a identidade principal do evento. AACUSTOMID nunca é marcada como a ID principal do evento. No entanto, se a AACUSTOMID estiver presente, a AAID será baseada na AACUSTOMID devido à ordem Experience Cloud das operações.
 
 >[!NOTE]
 >

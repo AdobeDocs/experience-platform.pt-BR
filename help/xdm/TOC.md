@@ -4,10 +4,10 @@ user-guide-title: Ajuda do sistema do Experience Data Model (XDM)
 breadcrumb-title: Guia do Experience Data Model (XDM)
 user-guide-description: Explore uma visão geral do sistema do Experience Data Model (XDM) na Experience Platform e saiba como usar classes e grupos de campos de esquema para padronizar os dados de experiência.
 feature: Schemas
-source-git-commit: 81f570f8e5401624ccac74696b2323252a4de0a9
+source-git-commit: 4f819dcbdf67dc0305b397c54de2b1149cff398d
 workflow-type: tm+mt
-source-wordcount: '532'
-ht-degree: 23%
+source-wordcount: '561'
+ht-degree: 16%
 
 ---
 
@@ -34,7 +34,7 @@ ht-degree: 23%
    * [XDM ExperienceEvent](./classes/experienceevent.md)
    * [Medicação](./classes/medication.md)
    * [Pagador](./classes/payer.md)
-   * [Plano](./classes/plan.md)
+   * [Planejar ](./classes/plan.md)
    * [Política](./classes/policy.md)
    * [Produto](./classes/product.md)
    * [Cliente Potencial](./classes/prospect.md)
@@ -58,7 +58,7 @@ ht-degree: 23%
       * [Detalhes do membro da área de saúde](./field-groups/profile/healthcare-member-details.md)
       * [Detalhes de fidelidade](./field-groups/profile/loyalty-details.md)
       * [Detalhes de contato pessoal](./field-groups/profile/personal-contact-details.md)
-      * [Detalhes da associação de segmento](./field-groups/profile/segmentation.md)
+      * [Detalhes da associação do segmento](./field-groups/profile/segmentation.md)
       * [Assinatura de serviço de telecomunicação](./field-groups/profile/telecom-subscription.md)
       * [Detalhes de contato comercial](./field-groups/profile/work-contact-details.md)
       * [Componentes de pessoa de negócios XDM](./field-groups/profile/business-person-components.md)
@@ -80,6 +80,7 @@ ht-degree: 23%
       * [Reserva de voo](./field-groups/event/flight-reservation.md)
       * [Consentimento IAB TCF 2.0](./field-groups/event/iab.md)
       * [Reserva de acomodação](./field-groups/event/lodging-reservation.md)
+      * [Detalhes de interação do MediaAnalytics](./field-groups/event/mediaanalytics-interaction.md)
       * [Detalhes da solicitação de orçamento](./field-groups/event/quote-request-details.md)
       * [Detalhes da reserva](./field-groups/event/reservation-details.md)
       * [Detalhes do sitetool](./field-groups/event/sitetool-details.md)
@@ -104,17 +105,22 @@ ht-degree: 23%
 * Tipos de dados {#data-types}
    * [Detalhes da conta](./data-types/account-details.md)
    * [Intervalo comercial](./data-types/ad-break.md)
+   * [Informações de detalhes de publicidade](./data-types/advertising-details-information.md)
+   * [Informações detalhadas sobre o pod de publicidade](./data-types/advertising-pod-details-information.md)
    * [Aplicativo](./data-types/application.md)
    * [Sinal](./data-types/beacon.md)
    * [Detalhes do navegador](./data-types/browser-details.md)
    * [Origem B2B](./data-types/b2b-source.md)
+   * [Informações detalhadas do capítulo](./data-types/chapter-details-information.md)
    * [Commerce](./data-types/commerce.md)
    * [String de consentimento](./data-types/consent-string.md)
    * [Consentimentos e preferências](./data-types/consents.md)
    * [Moeda](./data-types/currency.md)
+   * [Informações detalhadas de metadados personalizados](./data-types/custom-metadata-details-information.md)
    * [Dispositivo](./data-types/device.md)
    * [Endereço de email](./data-types/email-address.md)
    * [Ambiente](./data-types/environment.md)
+   * [Informações de detalhes do erro](./data-types/error-details-information.md)
    * [Canal de experiência](./data-types/experience-channel.md)
    * [Atributos de auditoria do sistema de origem externa](./data-types/external-source-system-audit-attributes.md)
    * [Conta financeira](./data-types/financial-account.md)
@@ -134,17 +140,22 @@ ht-degree: 23%
    * [Par de valores da chave](./data-types/key-value-pair.md)
    * [Marketing](./data-types/marketing.md)
    * [Medição](./data-types/measure.md)
-   * [Ordem](./data-types/order.md)
+   * [Informações de detalhes da mídia](./data-types/media-details-information.md)
+   * [Informações do evento de mídia](./data-types/media-event-information.md)
+   * [Pedido](./data-types/order.md)
    * [Item de pagamento](./data-types/payment-item.md)
    * [Pessoa](./data-types/person.md)
    * [Nome da pessoa](./data-types/person-name.md)
    * [Número de telefone](./data-types/phone-number.md)
    * [Contexto do local](./data-types/place-context.md)
+   * [Informações de dados do estado do player](./data-types/player-state-data-information.md)
    * [Detalhes do POI](./data-types/poi-details.md)
    * [Interação de POI](./data-types/poi-interaction.md)
    * [Endereço postal](./data-types/postal-address.md)
    * [Item da lista de produtos](./data-types/product-list-item.md)
+   * [Informações detalhadas de dados de QoE](./data-types/qoe-data-details-information.md)
    * [Pesquisa](./data-types/search.md)
+   * [Informações de Detalhes da Sessão](./data-types/session-details-information.md)
    * [Inscrição](./data-types/subscription.md)
    * [Assinatura de serviço de telecomunicação](./data-types/telecom-subscription.md)
    * [Transação](./data-types/transaction.md)

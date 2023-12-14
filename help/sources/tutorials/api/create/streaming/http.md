@@ -3,10 +3,10 @@ keywords: Experience Platform;início;tópicos populares;conexão de transmissã
 title: Criar uma conexão de transmissão da API HTTP usando a API do serviço de fluxo
 description: Este tutorial fornece etapas sobre como criar uma conexão de transmissão usando a fonte de API HTTP para dados brutos e XDM usando a API do serviço de fluxo
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: f94a51e22731977e120351c3b3598570666a624d
+source-git-commit: fe2e93b9595d9df9a088d627d696b559f259e80d
 workflow-type: tm+mt
-source-wordcount: '1552'
-ht-degree: 5%
+source-wordcount: '1568'
+ht-degree: 4%
 
 ---
 
@@ -30,7 +30,7 @@ Além disso, a criação de uma conexão de transmissão exige que você tenha u
 
 Para obter informações sobre como fazer chamadas para APIs da Platform com êxito, consulte o manual em [introdução às APIs da Platform](../../../../../landing/api-guide.md).
 
-## Crie uma conexão básica
+## Criar uma conexão básica
 
 Uma conexão base especifica a origem e contém as informações necessárias para tornar o fluxo compatível com as APIs de assimilação de streaming. Ao criar uma conexão básica, você tem a opção de criar uma conexão não autenticada e autenticada.
 
@@ -459,7 +459,7 @@ Uma resposta bem-sucedida retorna detalhes do mapeamento recém-criado, incluind
 | Propriedade | Descrição |
 | --- | --- |
 
-## Crie um fluxo de dados
+## Criar um fluxo de dados
 
 Com as conexões de origem e de destino criadas, agora é possível criar um fluxo de dados. O fluxo de dados é responsável por agendar e coletar dados de uma origem. Você pode criar um fluxo de dados executando uma solicitação POST para o `/flows` terminal.
 
@@ -563,6 +563,10 @@ Uma resposta bem-sucedida retorna o status HTTP 201 com detalhes do fluxo de dad
 ```
 
 ## Dados da publicação a serem assimilados na plataforma {#ingest-data}
+
+>[!NOTE]
+>
+>Você deve adicionar um atraso de pelo menos ~5 minutos entre a criação do fluxo de dados e a assimilação de quaisquer dados de transmissão. Isso permite que o fluxo de dados seja totalmente ativado, antes que quaisquer dados sejam assimilados.
 
 Agora que você criou o fluxo, é possível enviar a mensagem JSON para o ponto de extremidade de streaming criado anteriormente.
 

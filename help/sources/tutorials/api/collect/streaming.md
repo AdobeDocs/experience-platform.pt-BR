@@ -5,9 +5,9 @@ title: Criar um fluxo de dados de transmissão para dados brutos usando a API do
 type: Tutorial
 description: Este tutorial aborda as etapas para recuperar dados de transmissão e trazê-los para a Platform usando conectores de origem e APIs.
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
-source-git-commit: 9034cd965dff59d6c304b9a7c38d3860311614fe
+source-git-commit: 39b5a2b76c28033b9e98dcefc4cdcaa9964f4d2e
 workflow-type: tm+mt
-source-wordcount: '1138'
+source-wordcount: '1169'
 ht-degree: 3%
 
 ---
@@ -486,13 +486,15 @@ Uma resposta bem-sucedida retorna a ID (`id`) do fluxo de dados recém-criado.
 
 Veja abaixo a carga de amostra para obter exemplos de json bruto ou compatível com XDM que você pode enviar para assimilação.
 
->[!TIP]
+>[!NOTE]
 >
->Os exemplos a seguir se aplicam a todos os três de:
->
->- [[!DNL Amazon Kinesis]](../create/cloud-storage/kinesis.md)
->- [[!DNL Azure Event Hubs]](../create/cloud-storage/eventhub.md)
->- [[!DNL Google PubSub]](../create/cloud-storage/google-pubsub.md)
+>Você deve adicionar um atraso de pelo menos ~5 minutos entre a criação do fluxo de dados e a assimilação de quaisquer dados de transmissão. Isso permite que o fluxo de dados seja totalmente ativado, antes que quaisquer dados sejam assimilados.
+
+Os exemplos a seguir se aplicam a todos os de:
+
+- [[!DNL Amazon Kinesis]](../create/cloud-storage/kinesis.md)
+- [[!DNL Azure Event Hubs]](../create/cloud-storage/eventhub.md)
+- [[!DNL Google PubSub]](../create/cloud-storage/google-pubsub.md)
 
 >[!BEGINTABS]
 

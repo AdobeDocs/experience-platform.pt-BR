@@ -2,10 +2,10 @@
 title: Notas de versão da Adobe Experience Platform de outubro de 2022
 description: As notas de versão de outubro de 2022 para Adobe Experience Platform.
 exl-id: 61ef2472-5e79-433f-9f60-b1245f619b42
-source-git-commit: 260ba98f920c8006ab3ed7fb2519a8c1720916c8
+source-git-commit: 18c1d32bbc2732c38a9c37ee8fb9d36a23d4e515
 workflow-type: tm+mt
-source-wordcount: '1159'
-ht-degree: 34%
+source-wordcount: '1135'
+ht-degree: 29%
 
 ---
 
@@ -86,7 +86,7 @@ O XDM é uma especificação de código aberto que fornece estruturas e definiç
 | --- | --- | --- |
 | Tipo de dados | [[!UICONTROL Informações de detalhes da sessão]](https://github.com/adobe/xdm/blob/master/components/datatypes/sessiondetails.schema.json) | Atualização do `authorized` de um tipo booleano para uma string. `season` e `episode` foram alterados de números inteiros para sequências de caracteres. |
 | Tipo de dados | [[!UICONTROL Informações de detalhes de publicidade]](https://github.com/adobe/xdm/blob/master/components/datatypes/advertisingdetails.schema.json) | `name` foi renomeado para `friendlyName`, e `ID` foi renomeado para `name`. |
-| Tipo de dados | [[!UICONTROL Informações de detalhes do erro]](https://github.com/adobe/xdm/blob/master/components/datatypes/errordetails.schema.json) | A `ID` foi renomeada como `name`.  |
+| Tipo de dados | [[!UICONTROL Informações de detalhes do erro]](https://github.com/adobe/xdm/blob/master/components/datatypes/errordetails.schema.json) | `ID` foi renomeado para `name`. |
 
 {style="table-layout:auto"}
 
@@ -101,10 +101,10 @@ O Query Service permite usar SQL padrão para consultar dados no [!DNL Data Lake
 | Recurso | Descrição |
 | --- | --- |
 | Monitorar consultas por meio da interface do usuário da Platform | O Serviço de consulta [!UICONTROL Consultas programadas] A guia fornece visibilidade aprimorada para o status de todos os trabalhos de consulta por meio da interface. Agora você pode encontrar informações importantes sobre o status das execuções de consulta, incluindo mensagens de erro e códigos em caso de falha, no [!UICONTROL Consultas programadas] guia. Também é possível assinar alertas por meio da interface do usuário para qualquer uma dessas consultas com base em seus status. Consulte a [Monitorar documento de consultas](../../query-service/ui/monitor-queries.md) para saber mais sobre este recurso. |
-| Consultar modelo de dados de insights de relatórios acelerado | Como parte do SKU do Data Distiller, o armazenamento acelerado de consultas permite reduzir o tempo e o poder de processamento necessários para obter insights críticos de seus dados. Com o armazenamento acelerado da query, é possível criar um modelo de dados personalizado e/ou estender modelos de dados existentes do Adobe Real-time Customer Data Platform para melhorar os insights do relatório e suas visualizações. Consulte a [consultar documento de insights de relatórios de loja acelerada](../../query-service/data-distiller/query-accelerated-store/reporting-insights-data-model.md) para saber mais sobre este recurso. |
+| Consultar modelo de dados de insights de relatórios acelerado | Como parte do SKU do Data Distiller, o armazenamento acelerado de consultas permite reduzir o tempo e o poder de processamento necessários para obter insights críticos de seus dados. Com o armazenamento acelerado da query, é possível criar um modelo de dados personalizado e/ou estender modelos de dados existentes do Adobe Real-time Customer Data Platform para melhorar os insights do relatório e suas visualizações. Consulte a [consultar documento de insights de relatórios de loja acelerada](../../query-service/data-distiller/customizable-insights/reporting-insights-data-model.md) para saber mais sobre este recurso. |
 
 {style="table-layout:auto"}
 
-Para obter mais informações sobre o Query Service, acesse a [Visão geral do Query Service](../../query-service/home.md).
+Para obter mais informações sobre os Serviços de consulta, consulte [Visão geral do Serviço de consulta](../../query-service/home.md).
 Novos recursos na Adobe Experience Platform:
 

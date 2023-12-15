@@ -2,7 +2,7 @@
 title: Rastrear sinais de dados para gerar o valor vitalício do cliente
 description: Este guia fornece uma demonstração completa sobre como usar o Data Distiller e painéis definidos pelo usuário com o Real-time Customer Data Platform para medir e visualizar o valor vitalício do cliente.
 exl-id: c74b5bff-feb2-4e21-9ee4-1e0973192570
-source-git-commit: 38689125a43ad0b1a12a00efe6800bb310d7557c
+source-git-commit: 18c1d32bbc2732c38a9c37ee8fb9d36a23d4e515
 workflow-type: tm+mt
 source-wordcount: '1263'
 ht-degree: 0%
@@ -47,7 +47,7 @@ A primeira etapa no estabelecimento do CLV é criar um conjunto de dados derivad
 
 ## Estender o modelo de dados do Insights e agendar atualizações {#extend-data-model-and-set-refresh-schedule}
 
-Em seguida, você deve criar um modelo de dados personalizado ou estender um modelo de dados existente do Adobe Real-Time CDP para interagir com seus insights de relatórios CLV. Consulte a documentação para saber como [criar um modelo de dados de insights de relatórios por meio do Serviço de consulta para uso com dados de armazenamento acelerados e painéis definidos pelo usuário](../data-distiller/query-accelerated-store/reporting-insights-data-model.md#build-a-reporting-insights-data-model). O tutorial aborda as seguintes etapas:
+Em seguida, você deve criar um modelo de dados personalizado ou estender um modelo de dados existente do Adobe Real-Time CDP para interagir com seus insights de relatórios CLV. Consulte a documentação para saber como [criar um modelo de dados de insights de relatórios por meio do Serviço de consulta para uso com dados de armazenamento acelerados e painéis definidos pelo usuário](../data-distiller/customizable-insights/reporting-insights-data-model.md#build-a-reporting-insights-data-model). O tutorial aborda as seguintes etapas:
 
 * Crie um modelo para relatar insights com o Data Distiller.
 * Criar tabelas, relações e preencher dados.

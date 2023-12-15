@@ -2,9 +2,9 @@
 title: Governança de dados no serviço de consulta
 description: Esta visão geral abrange os principais elementos da governança de dados no Serviço de query do Experience Platform.
 exl-id: 37543d43-bd8c-4bf9-88e5-39de5efe3164
-source-git-commit: 260ba98f920c8006ab3ed7fb2519a8c1720916c8
+source-git-commit: 18c1d32bbc2732c38a9c37ee8fb9d36a23d4e515
 workflow-type: tm+mt
-source-wordcount: '3132'
+source-wordcount: '3129'
 ht-degree: 1%
 
 ---
@@ -64,7 +64,7 @@ Por meio da interface de Permissões, é possível definir o controle de acesso 
 | Permissão | Descrição |
 |---|---|
 | [!UICONTROL Gerenciar conjuntos de dados] | Esta permissão fornece acesso somente leitura a esquemas e permite acesso a conjuntos de dados de leitura, criação, edição e exclusão para uso com o Serviço de consulta. |
-| [!UICONTROL Visualizar conjuntos de dados] | Essa permissão permite acesso somente leitura a conjuntos de dados e esquemas para uso com o Serviço de consulta. |
+| [!UICONTROL Exibir conjuntos de dados] | Essa permissão permite acesso somente leitura a conjuntos de dados e esquemas para uso com o Serviço de consulta. |
 
 #### Controle de acesso para colunas/campos
 
@@ -93,7 +93,7 @@ A variável `CREATE VIEW` palavra-chave define uma view de uma consulta, mas a v
 
 #### Criar restrições de acesso baseadas em campo em conjuntos de dados acelerados {#create-field-based-access-restrictions-on-accelerated-datasets}
 
-Com o [recurso de controle de acesso baseado em atributos](../../access-control/abac/overview.md) você pode definir escopos organizacionais ou de uso de dados em conjuntos de dados de fatos e dimensões na [armazenamento acelerado](../data-distiller/query-accelerated-store/send-accelerated-queries.md). Isso permite que os administradores gerenciem o acesso a segmentos específicos e gerenciem melhor o acesso fornecido a usuários ou grupos de usuários.
+Com o [recurso de controle de acesso baseado em atributos](../../access-control/abac/overview.md) você pode definir escopos organizacionais ou de uso de dados em conjuntos de dados de fatos e dimensões na [armazenamento acelerado](../data-distiller/customizable-insights/send-accelerated-queries.md). Isso permite que os administradores gerenciem o acesso a segmentos específicos e gerenciem melhor o acesso fornecido a usuários ou grupos de usuários.
 
 Para criar restrições de acesso baseadas em campo em conjuntos de dados acelerados, você pode usar consultas CTAS do Serviço de consulta para criar conjuntos de dados acelerados e estruturar esses conjuntos de dados com base em esquemas XDM ou esquemas ad hoc existentes. Os administradores podem então [adicionar e editar rótulos de uso de dados para o esquema](../../xdm/tutorials/labels.md#edit-the-labels-for-the-schema-or-field) ou [esquema ad hoc](./ad-hoc-schema-labels.md#edit-governance-labels). Você pode aplicar, criar e editar rótulos para seus esquemas na [!UICONTROL Rótulos] espaço de trabalho no [!UICONTROL Esquemas] IU.
 

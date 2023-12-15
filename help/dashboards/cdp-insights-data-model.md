@@ -2,16 +2,16 @@
 title: Modelo de dados do Real-time Customer Data Platform Insights
 description: Saiba como usar consultas SQL com os Modelos de dados do Real-time Customer Data Platform Insights para personalizar seus próprios relatórios do Real-Time CDP para seus casos de uso de marketing e KPI.
 exl-id: 61bc7f23-9f79-4c75-a515-85dd9dda2d02
-source-git-commit: e55bbba92b0e3b9c86a9962ffa0131dfb7c15e77
+source-git-commit: 18c1d32bbc2732c38a9c37ee8fb9d36a23d4e515
 workflow-type: tm+mt
 source-wordcount: '1109'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
 # Modelo de dados do Real-time Customer Data Platform Insights
 
-O recurso Modelo de dados do Real-time Customer Data Platform Insights expõe os modelos de dados e o SQL que potencializam os insights para vários widgets de perfil, destino e segmentação. Você pode personalizar esses modelos de consulta SQL para criar relatórios do Real-Time CDP para seus casos de uso de marketing e KPI (indicador chave de desempenho). Esses insights podem ser usados como widgets personalizados para seus painéis definidos pelo usuário. Consulte a documentação dos insights de relatório da loja acelerada de consulta para saber mais [como criar um modelo de dados de insights de relatórios por meio do Serviço de consulta para uso com dados de armazenamento acelerados e painéis definidos pelo usuário](../query-service/data-distiller/query-accelerated-store/reporting-insights-data-model.md).
+O recurso Modelo de dados do Real-time Customer Data Platform Insights expõe os modelos de dados e o SQL que potencializam os insights para vários widgets de perfil, destino e segmentação. Você pode personalizar esses modelos de consulta SQL para criar relatórios do Real-Time CDP para seus casos de uso de marketing e KPI (indicador chave de desempenho). Esses insights podem ser usados como widgets personalizados para seus painéis definidos pelo usuário. Consulte a documentação dos insights de relatório da loja acelerada de consulta para saber mais [como criar um modelo de dados de insights de relatórios por meio do Serviço de consulta para uso com dados de armazenamento acelerados e painéis definidos pelo usuário](../query-service/data-distiller/customizable-insights/reporting-insights-data-model.md).
 
 ## Pré-requisitos
 
@@ -239,7 +239,7 @@ FROM
 
 #### Caso de uso de públicos ativado recentemente
 
-A lógica para o [!UICONTROL Públicos ativados recentemente] O widget fornece uma lista dos públicos-alvo mapeados mais recentemente para um destino. Essa lista fornece um instantâneo dos públicos-alvo e destinos que estão sendo usados ativamente no sistema e pode ajudar na solução de problemas de mapeamentos incorretos. Consulte a [[!UICONTROL Públicos ativados recentemente] documentação do widget](./guides/destinations.md#recently-activated-audiences) para obter mais informações.
+A lógica para o [!UICONTROL Públicos ativados recentemente] O widget fornece uma lista dos públicos-alvo mapeados mais recentemente para um destino. Esta lista fornece um instantâneo dos públicos-alvo e destinos que estão ativamente em uso no sistema e pode ajudar a solucionar problemas de mapeamentos incorretos. Consulte a [[!UICONTROL Públicos ativados recentemente] documentação do widget](./guides/destinations.md#recently-activated-audiences) para obter mais informações.
 
 O SQL que gera a variável [!UICONTROL Públicos ativados recentemente] o widget está na seção recolhível abaixo.
 

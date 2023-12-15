@@ -3,10 +3,10 @@ title: Medidas de proteção do Real-Time CDP
 description: Saiba mais sobre as medidas de proteção de dados em vários serviços e áreas do Real-Time CDP.
 feature: Guardrails, Data Management, Data Ingestion, Data Export
 exl-id: 377499b4-5707-4d50-94e3-02f88ad5bf2c
-source-git-commit: c2e308b5e743f07062be9a34e23c4bc700b27463
+source-git-commit: af37aca17f4b365b52215b8c886e733f00c4a4e8
 workflow-type: tm+mt
-source-wordcount: '391'
-ht-degree: 3%
+source-wordcount: '369'
+ht-degree: 1%
 
 ---
 
@@ -22,10 +22,12 @@ Comece aqui e siga os links abaixo para entender todas as medidas de proteção 
 * [Medidas de proteção para [!DNL Identity Service] dados](/help/identity-service/guardrails.md)
 * [Medidas de proteção para [!DNL Query Service]](/help/query-service/guardrails.md)
 * [Medidas de proteção para ativação de dados por meio de destinos](/help/destinations/guardrails.md)
+* [Medidas de proteção para o Real-Time CDP B2B](/help/rtcdp/b2b-guardrails.md)
 
 >[!TIP]
 >
->Além disso, consulte [esta página](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html) para obter informações sobre as medidas de proteção para outros aplicativos Experience Platform, como [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer.html?lang=pt-BR) e [Customer Journey Analytics](https://experienceleague.adobe.com/docs/customer-journey-analytics.html?lang=pt-BR), e [diagramas de latência de ponta a ponta](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) para vários serviços de Experience Platform.
+>Além disso, visite [os blueprints de experiência digital](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html) para obter mais informações, como [diagramas de latência de ponta a ponta](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) para vários serviços de Experience Platform.
+
 
 ## Tipos de grade de proteção {#guardrail-types}
 
@@ -46,6 +48,13 @@ Além disso, consulte os links de descrição do produto abaixo para obter infor
 * [Real-time Customer Data Platform (B2C Edition - Pacotes Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
 * [Real-time Customer Data Platform (Edição B2P - Pacotes Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
 * [Real-time Customer Data Platform (Edição B2B - Pacotes Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+
+## Medidas de proteção para outros aplicativos Experience Platform  {#guardrails-other-aep-apps}
+
+Existem medidas de proteção semelhantes para outras aplicações de Experience Platform. Acesse os links abaixo para obter mais informações:
+
+* [Medidas de proteção do Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/guardrails.html?lang=en)
+* [Grades de proteção de Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/guardrails.html)
 
 ## Próximas etapas
 

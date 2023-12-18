@@ -3,22 +3,26 @@ keywords: Experience Platform;início;tópicos populares;preparação de dados;P
 title: Enviar Atualizações Parciais De Linha Ao Perfil Do Cliente Em Tempo Real Usando O Preparo De Dados
 description: Saiba como enviar atualizações de linhas parciais para o Perfil do cliente em tempo real usando o Preparo de dados.
 exl-id: f9f9e855-0f72-4555-a4c5-598818fc01c2
-source-git-commit: c432bcb3c625b569ec5abbe4a77d683b7509e709
+source-git-commit: db6a0b45d600d16b24f7f749e414dfd0998fbf5e
 workflow-type: tm+mt
-source-wordcount: '1225'
-ht-degree: 1%
+source-wordcount: '1242'
+ht-degree: 0%
 
 ---
 
 # Enviar atualizações de linhas parciais para [!DNL Real-Time Customer Profile] usar [!DNL Data Prep]
 
+>[!WARNING]
+>
+>A assimilação de mensagens de atualização de entidade do Experience Data Model (XDM) (com operações PATCH JSON) para atualizações de perfil por meio da entrada do DCS foi descontinuada. Como alternativa, você pode [assimilar dados brutos na entrada do DCS](../sources/tutorials/api/create/streaming/http.md#sending-messages-to-an-authenticated-streaming-connection) e especifique os mapeamentos de dados necessários para transformar seus dados em mensagens compatíveis com XDM para atualizações de perfil.
+
 Upserts de transmissão em [!DNL Data Prep] permite enviar atualizações parciais de linha para [!DNL Real-Time Customer Profile] enquanto também cria e estabelece novos links de identidade com uma única solicitação de API.
 
 Ao fazer a transmissão de upserts, você pode reter o formato dos dados enquanto os traduz para [!DNL Real-Time Customer Profile] solicitações PATCH durante a assimilação. Com base nas informações fornecidas, [!DNL Data Prep] permite enviar uma única carga de API e traduzir os dados para ambos [!DNL Real-Time Customer Profile] PATCH e [!DNL Identity Service] CRIAR solicitações.
 
->[!WARNING]
+>[!NOTE]
 >
->A assimilação de mensagens de atualização de entidade do Experience Data Model (XDM) (com operações PATCH JSON) para atualizações de perfil por meio da entrada do DCS foi descontinuada. Como alternativa, você pode [assimilar dados brutos na entrada do DCS](../sources/tutorials/api/create/streaming/http.md#sending-messages-to-an-authenticated-streaming-connection) e especifique os mapeamentos de dados necessários para transformar seus dados em mensagens compatíveis com XDM para atualizações de perfil.
+>Para aproveitar a funcionalidade de substituição, é recomendável desativar as configurações compatíveis com XDM durante a assimilação de dados e remapear a carga útil recebida usando [Mapeador de Preparo de Dados](./ui/mapping.md).
 
 Este documento fornece informações sobre como fazer stream de upserts no [!DNL Data Prep].
 

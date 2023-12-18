@@ -2,12 +2,12 @@
 keywords: Experience Platform;página inicial;tópicos populares;esquema;Esquema;XDM;perfil individual;campos;esquemas;Esquemas;Design de esquema;mixin;mixins;detalhes de trabalho;trabalho de perfil;
 solution: Experience Platform
 title: Grupo de Campos de Esquema de Detalhes do Contato Comercial
-description: Este documento fornece uma visão geral do grupo de campos de esquema Detalhes do contato de trabalho.
+description: Saiba mais sobre o grupo de campos de esquema Detalhes do contato de trabalho.
 exl-id: 0133622c-e95f-4833-b2f8-3694d41751b4
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '190'
-ht-degree: 3%
+source-wordcount: '167'
+ht-degree: 2%
 
 ---
 

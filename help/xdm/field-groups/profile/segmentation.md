@@ -1,12 +1,12 @@
 ---
 solution: Experience Platform
 title: Grupo de campos Esquema de detalhes da associação do segmento
-description: Este documento fornece uma visão geral do grupo de campos de esquema Detalhes da associação do segmento.
+description: Saiba mais sobre o grupo de campos de esquema Detalhes da associação do segmento.
 exl-id: 4d463f3a-2247-4307-8afe-9527e7fd72a7
-source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '419'
-ht-degree: 2%
+source-wordcount: '398'
+ht-degree: 3%
 
 ---
 

@@ -2,12 +2,12 @@
 keywords: Experience Platform;página inicial;tópicos populares;esquema;Esquema;XDM;campos;esquemas;Esquemas;poi;interação;ponto de interesse;ponto de interesse;tipo de dados;tipo de dados;tipo de dados;
 solution: Experience Platform
 title: Tipo de dados da interação do ponto de interesse
-description: Este documento fornece uma visão geral do tipo de dados XDM da interação com o Ponto de interesse.
+description: Saiba mais sobre o tipo de dados XDM da interação do Ponto de interesse.
 exl-id: 398f56d9-1802-458d-b565-4096beb5b014
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '185'
-ht-degree: 2%
+source-wordcount: '162'
+ht-degree: 3%
 
 ---
 

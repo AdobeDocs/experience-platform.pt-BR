@@ -1,10 +1,10 @@
 ---
 title: Grupo de campos de esquema de pesquisa de site de suporte
-description: Este documento fornece uma visão geral do grupo de campos de esquema Pesquisa no site de suporte.
+description: Saiba mais sobre o grupo de campos de esquema Pesquisa de site de suporte.
 exl-id: 7bd442f0-f85c-491f-91ad-8b14b4b431eb
-source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '91'
+source-wordcount: '77'
 ht-degree: 5%
 
 ---

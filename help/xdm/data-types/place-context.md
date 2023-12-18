@@ -2,12 +2,12 @@
 keywords: Experience Platform;início;tópicos populares;esquema;Esquema;XDM;campos;esquemas;Esquemas;contexto de local;placeContext;tipo de dados;tipo de dados;tipo de dados;
 solution: Experience Platform
 title: Tipo de Dados de Contexto do Local
-description: Este documento fornece uma visão geral do tipo de dados XDM de contexto do local.
+description: Saiba mais sobre o tipo de dados XDM de contexto do local.
 exl-id: d7cf7366-0136-49ee-84d2-ec663db66eb4
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '183'
-ht-degree: 4%
+source-wordcount: '160'
+ht-degree: 3%
 
 ---
 

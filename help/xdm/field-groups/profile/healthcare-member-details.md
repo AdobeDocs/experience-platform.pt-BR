@@ -1,11 +1,11 @@
 ---
 title: Grupo de Campos de Esquema de Detalhes de Membro de Assistência Médica
-description: Este documento fornece uma visão geral do grupo de campos de esquema Detalhes do membro do setor de saúde.
+description: Saiba mais sobre o grupo de campos de esquema Detalhes do membro do plano de saúde.
 exl-id: 43ba025e-2acf-4cb7-8487-e6c7c7240867
-source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '655'
-ht-degree: 3%
+source-wordcount: '635'
+ht-degree: 2%
 
 ---
 
@@ -50,7 +50,7 @@ ht-degree: 3%
 | `deceasedDate` | DateTime | A data em que a pessoa morreu se estiver falecida. |
 | `isDeceased` | Booleano | Indica se a pessoa faleceu. |
 | `isDependent` | Booleano | Indica se a pessoa é dependente. |
-| `nationality` | String | A relação jurídica entre a pessoa e seu estado, representada usando o código ISO 3166-1 Alfa-2. |
+| `nationality` | String | A relação jurídica entre a pessoa e seu estado, representada usando o código ISO 3166-1 Alpha-2. |
 | `preferredAvailability` | String | A disponibilidade de dia e hora preferencial da pessoa para um compromisso. |
 | `primaryMemberID` | String | Um identificador exclusivo do assinante principal se a pessoa for dependente. |
 

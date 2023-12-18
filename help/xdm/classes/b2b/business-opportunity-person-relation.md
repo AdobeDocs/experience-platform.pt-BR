@@ -1,11 +1,11 @@
 ---
 title: Classe de relação pessoal de oportunidade de negócios XDM
-description: Este documento fornece uma visão geral da classe de relação pessoal de oportunidade de negócios XDM no Experience Data Model (XDM).
+description: Saiba mais sobre a classe de relação pessoal de oportunidade de negócios XDM no Experience Data Model (XDM).
 exl-id: 7be193d2-52eb-4b28-953b-5e0fc21d8f93
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '365'
-ht-degree: 2%
+source-wordcount: '354'
+ht-degree: 3%
 
 ---
 

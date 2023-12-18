@@ -2,12 +2,12 @@
 keywords: Experience Platform;página inicial;tópicos populares;esquema;Esquema;XDM;campos;esquemas;Esquemas;Detalhes da página da Web;tipo de dados;tipo de dados;tipo de dados;página da Web
 solution: Experience Platform
 title: Tipo de dados do canal de experiência
-description: Este documento fornece uma visão geral do tipo de dados Experience Channel Experience Data Model (XDM).
+description: Saiba mais sobre o tipo de dados Experience Data Model (XDM) do canal de experiência.
 exl-id: 209654f7-0bde-439a-989c-ce2e41599105
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '268'
-ht-degree: 2%
+source-wordcount: '244'
+ht-degree: 4%
 
 ---
 

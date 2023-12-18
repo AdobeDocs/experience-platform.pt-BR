@@ -1,11 +1,11 @@
 ---
 title: Classe do plano
-description: Este documento fornece uma visão geral da classe Plano no Experience Data Model (XDM).
+description: Saiba mais sobre a classe Plano no Experience Data Model (XDM).
 exl-id: ccff962d-3104-482c-8d65-d2bd2602a9be
-source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '149'
-ht-degree: 3%
+source-wordcount: '145'
+ht-degree: 4%
 
 ---
 

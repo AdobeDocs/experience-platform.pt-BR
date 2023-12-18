@@ -2,12 +2,12 @@
 keywords: Experience Platform;início;tópicos populares;esquema;Esquema;XDM;campos;esquemas;Esquemas;telecom;assinatura;tipo de dados;tipo de dados;tipo de dados;
 solution: Experience Platform
 title: Tipo de dados de assinatura de telecomunicação
-description: Este documento fornece uma visão geral do tipo de dados Telecom Subscription Experience Data Model (XDM).
+description: Saiba mais sobre o tipo de dados Telecom Subscription Experience Data Model (XDM).
 exl-id: d67915b6-daaa-489f-81b4-bd3dbe0ffa44
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '605'
-ht-degree: 9%
+source-wordcount: '572'
+ht-degree: 7%
 
 ---
 

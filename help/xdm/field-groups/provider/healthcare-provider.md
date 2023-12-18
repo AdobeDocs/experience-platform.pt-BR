@@ -1,17 +1,17 @@
 ---
 title: Grupo de campos de esquema do provedor de assistência médica
-description: Este documento fornece uma visão geral do grupo de campos Esquema de provedor de assistência médica.
+description: Saiba mais sobre o grupo de campos Esquema de provedor de assistência médica.
 exl-id: e39b4082-4b66-47b3-a8e2-951d8a96f742
-source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '267'
-ht-degree: 4%
+source-wordcount: '254'
+ht-degree: 3%
 
 ---
 
 # [!UICONTROL Provedor de assistência médica] grupo de campos de esquema
 
-[!UICONTROL Provedor de assistência médica] é um grupo de campos de esquema padrão para o [[!UICONTROL Provedor] classe](../../classes/provider.md). Ele fornece um único campo do tipo objeto `healthcareProvider` que inclui propriedades relacionadas com um profissional de saúde individual ou com uma organização de instalações de saúde licenciada para prestar serviços de diagnóstico e tratamento de cuidados de saúde.
+[!UICONTROL Provedor de assistência médica] é um grupo de campos de esquema padrão para o [[!UICONTROL Provedor] classe](../../classes/provider.md). Ele fornece um único campo do tipo objeto `healthcareProvider` que inclui propriedades relacionadas com um profissional de saúde individual ou uma organização de instalações de saúde licenciada para prestar serviços de diagnóstico e tratamento de cuidados de saúde.
 
 ![](../../images/field-groups/healthcare-provider.png)
 

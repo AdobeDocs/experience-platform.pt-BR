@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;casa;tópicos populares;esquema;Esquema;XDM;ExperienceEvent;campos;esquemas;Esquemas;Design de esquema;grupo de campos;grupo de campos;reserva;jantar;
 title: Grupo de Campos de Esquema para Reserva de Jantar
-description: Este documento fornece uma visão geral do grupo de campos do esquema Reserva de jantar.
+description: Saiba mais sobre o grupo de campos Esquema de reserva de jantar.
 exl-id: 672b7a77-c433-4502-a1ad-a17c811b253e
-source-git-commit: afbbdfff4346ab5240927f5703d3a06676776ea8
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '459'
+source-wordcount: '435'
 ht-degree: 5%
 
 ---

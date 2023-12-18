@@ -1,11 +1,11 @@
 ---
 title: Tipo de dados de impressões
-description: Este documento fornece uma visão geral do tipo de dados XDM de impressões.
+description: Saiba mais sobre o tipo de dados XDM de impressões.
 exl-id: 1e758043-a41e-45f7-ae8b-514990d0649e
-source-git-commit: afdac5ce2ed967b4688d456a586c946bc2cf4179
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '138'
-ht-degree: 4%
+source-wordcount: '115'
+ht-degree: 6%
 
 ---
 

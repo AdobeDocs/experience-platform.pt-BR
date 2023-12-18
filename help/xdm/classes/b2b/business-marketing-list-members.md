@@ -1,10 +1,10 @@
 ---
 title: Classe de membros da lista de marketing de negócios XDM
-description: Este documento fornece uma visão geral da classe de membros da lista de marketing empresarial XDM no Experience Data Model (XDM).
+description: Saiba mais sobre a classe de membros da lista de marketing empresarial XDM no Experience Data Model (XDM).
 exl-id: 069002c2-5583-4c59-84ee-c071e2acaaec
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '336'
+source-wordcount: '325'
 ht-degree: 2%
 
 ---

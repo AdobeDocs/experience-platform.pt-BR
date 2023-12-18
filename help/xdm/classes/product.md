@@ -1,11 +1,11 @@
 ---
 title: Classe do produto
-description: Este documento fornece uma visão geral da classe Product no Experience Data Model (XDM).
+description: Saiba mais sobre a classe de produto no Experience Data Model (XDM).
 exl-id: 911680ae-b761-4945-9ad3-0233eaea89b0
-source-git-commit: fdd68e5a94d841992a6f8abe10f3cffe0ebb6794
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '212'
-ht-degree: 10%
+source-wordcount: '200'
+ht-degree: 7%
 
 ---
 

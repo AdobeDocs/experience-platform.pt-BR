@@ -2,12 +2,12 @@
 keywords: Experience Platform;página inicial;tópicos populares;esquema;Esquema;XDM;campos;esquemas;Esquemas;interação na web;tipo de dados;tipo de dados;tipo de dados;
 solution: Experience Platform
 title: Tipo de Dados de Interação na Web
-description: Este documento fornece uma visão geral do tipo de dados Experience Data Model (XDM) de interação na web.
+description: Saiba mais sobre o tipo de dados Experience Data Model (XDM) de interação na Web.
 exl-id: 772d96c5-9fa3-4fed-8b38-16b8e7101743
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '187'
-ht-degree: 3%
+source-wordcount: '164'
+ht-degree: 4%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 3%
 
 | Propriedade | Tipo de dados | Descrição |
 | --- | --- | --- |
-| `linkClicks` | [[!UICONTROL Medição]](./measure.md) | Uma medida que rastreia o clique em um link da Web. |
+| `linkClicks` | [[!UICONTROL Medir]](./measure.md) | Uma medida que rastreia o clique em um link da Web. |
 | `URL` | String | O link ou URL real usado para esta interação na web. |
 | `name` | String | O nome normativo usado para este link da Web. Isso é usado para fins de classificação. |
 | `type` | String | O tipo de link. Essa propriedade deve ser igual a um dos seguintes valores de enumeração: <li> `download` </li> <li> `exit` </li> <li> `other` </li> |

@@ -1,11 +1,11 @@
 ---
 title: Tipo de Dados do Par de Valores de Chave
-description: Este documento fornece uma visão geral do tipo de dados Key Value Pair Experience Data Model (XDM).
+description: Saiba mais sobre o tipo de dados Modelo de dados de experiência (XDM) do par de valores principal.
 exl-id: 2a1a7537-9019-4cf2-bfa1-9c760f9656dd
-source-git-commit: 1d023ce6184e54693401eb68a04ceeb1464dcaa0
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '118'
-ht-degree: 3%
+source-wordcount: '104'
+ht-degree: 5%
 
 ---
 

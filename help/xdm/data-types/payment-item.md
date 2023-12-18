@@ -2,12 +2,12 @@
 keywords: Experience Platform;página inicial;tópicos populares;esquema;Esquema;XDM;campos;esquemas;Esquemas;item de pagamento;tipo de dados;tipo de dados;tipo de dados;
 solution: Experience Platform
 title: Tipo de Dados do Item de Pagamento
-description: Este documento fornece uma visão geral do tipo de dados do Modelo de dados de experiência de item de pagamento (XDM).
+description: Saiba mais sobre o tipo de dados do Modelo de dados de experiência de item de pagamento (XDM).
 exl-id: d25a358b-73c1-468b-a9c5-808385689932
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '161'
-ht-degree: 5%
+source-wordcount: '139'
+ht-degree: 7%
 
 ---
 

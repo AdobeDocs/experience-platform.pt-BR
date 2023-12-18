@@ -1,11 +1,11 @@
 ---
 title: Grupo de Campos de Esquema de Transferências de Saldo
-description: Este documento fornece uma visão geral do grupo de campos de esquema Transferências de Saldo.
+description: Saiba mais sobre o grupo de campos de esquema Transferências de saldo.
 exl-id: be0d2ed6-6547-432a-af2f-409c33e268d4
-source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '116'
-ht-degree: 1%
+source-wordcount: '101'
+ht-degree: 3%
 
 ---
 

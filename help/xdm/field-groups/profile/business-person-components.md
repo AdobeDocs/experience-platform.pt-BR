@@ -1,10 +1,10 @@
 ---
 title: Grupo de campos Esquema de componentes de pessoa de negócios XDM
-description: Este documento fornece uma visão geral do grupo de campos de esquema Componentes de pessoas de negócios XDM.
+description: Saiba mais sobre o grupo de campos de esquema Componentes de pessoas de negócios XDM.
 exl-id: 965b89f4-59f5-43f4-8778-3549e15b44d4
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '549'
+source-wordcount: '514'
 ht-degree: 2%
 
 ---

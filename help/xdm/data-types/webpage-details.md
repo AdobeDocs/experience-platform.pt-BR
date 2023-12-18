@@ -2,11 +2,11 @@
 keywords: Experience Platform;página inicial;tópicos populares;esquema;Esquema;XDM;campos;esquemas;Esquemas;Detalhes da página da Web;tipo de dados;tipo de dados;tipo de dados;página da Web
 solution: Experience Platform
 title: Tipo de Dados de Detalhes da Página da Web
-description: Este documento fornece uma visão geral do tipo de dados do Experience Data Model (XDM) da página da Web.
+description: Saiba mais sobre os detalhes da página da Web do tipo de dados do Experience Data Model (XDM).
 exl-id: 31108e57-d416-485b-a6c3-4ebc4f5b1152
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '408'
+source-wordcount: '383'
 ht-degree: 3%
 
 ---
@@ -21,7 +21,7 @@ O tipo de dados é destinado aos detalhes completos da página e aos carregament
 
 | Propriedade | Tipo de dados | Descrição |
 | --- | --- | --- |
-| `pageViews` | [[!UICONTROL Medição]](./measure.md) | O número de visualizações em uma página da Web. |
+| `pageViews` | [[!UICONTROL Medir]](./measure.md) | O número de visualizações em uma página da Web. |
 | `URL` | String | O URL normativo ou usual da página da Web. Este pode ou não ser o URL real usado para acessar a página. Para registrar o URL usado para acessar a página, use `webLink`. O formato URI deve seguir o [RFC 3986](https://tools.ietf.org/html/rfc3986) padrão. |
 | `isErrorPage` | Booleano | Essa propriedade usa um sinalizador para indicar se a página é uma página de erro ou não. Esse sinalizador é usado para categorizar amplamente as interações na web. O erro é definido pelo aplicativo e pode corresponder a uma página com um código de erro HTTP. |
 | `isHomePage` | Booleano | Essa propriedade usa um sinalizador para indicar se a página é uma página inicial ou não. Esse sinalizador é usado para categorizar amplamente as interações na web. A definição de página inicial é determinada pelo aplicativo. |

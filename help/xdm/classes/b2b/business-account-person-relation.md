@@ -1,11 +1,11 @@
 ---
 title: Classe de relação pessoal da conta comercial XDM
-description: Este documento fornece uma visão geral da classe de relação pessoal da conta comercial XDM no Experience Data Model (XDM).
+description: Saiba mais sobre a classe de relação pessoal da conta comercial XDM no Experience Data Model (XDM).
 exl-id: d51abe9b-d936-4c84-96e2-35a81ca6b67f
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '442'
-ht-degree: 2%
+source-wordcount: '432'
+ht-degree: 3%
 
 ---
 

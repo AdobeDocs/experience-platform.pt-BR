@@ -2,12 +2,12 @@
 keywords: Experience Platform;início;tópicos populares;esquema;Esquema;XDM;campos;esquemas;Esquemas;assinatura;tipo de dados;tipo de dados;
 solution: Experience Platform
 title: Tipo de Dados de Assinatura
-description: Este documento fornece uma visão geral do tipo de dados Subscription Experience Data Model (XDM).
+description: Saiba mais sobre o tipo de dados Subscription Experience Data Model (XDM).
 exl-id: 6fd1e073-441b-45f0-bb4f-54f51ab18694
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '417'
-ht-degree: 9%
+source-wordcount: '388'
+ht-degree: 6%
 
 ---
 

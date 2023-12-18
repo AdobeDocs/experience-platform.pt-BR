@@ -1,11 +1,11 @@
 ---
 title: Grupo de Campos de Esquema de Detalhes da Solicitação de Cotação
-description: Este documento fornece uma visão geral do grupo de campos de esquema Detalhes da Solicitação de Cotação.
+description: Saiba mais sobre o grupo de campos de esquema Detalhes da solicitação de cotação.
 exl-id: 19be76fa-d212-4b00-815a-d3869c1054e2
-source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '147'
-ht-degree: 4%
+source-wordcount: '133'
+ht-degree: 6%
 
 ---
 

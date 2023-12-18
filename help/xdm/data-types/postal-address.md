@@ -2,11 +2,11 @@
 keywords: Experience Platform;página inicial;tópicos populares;esquema;Esquema;XDM;campos;esquemas;Esquemas;endereço;xdm:endereço;tipo de dados;tipo de dados;tipo de dados;
 solution: Experience Platform
 title: Tipo de Dados do Endereço Postal
-description: Este documento fornece uma visão geral do tipo de dados XDM do endereço postal.
+description: Saiba mais sobre o tipo de dados XDM do endereço postal.
 exl-id: 94457fe5-80bc-4822-9f6c-48f77d56c89b
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '338'
+source-wordcount: '313'
 ht-degree: 0%
 
 ---

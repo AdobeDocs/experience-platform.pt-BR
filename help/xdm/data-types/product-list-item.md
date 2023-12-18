@@ -2,11 +2,11 @@
 keywords: Experience Platform;página inicial;tópicos populares;esquema;Esquema;XDM;campos;esquemas;Esquemas;endereço;xdm:endereço;tipo de dados;tipo de dados;tipo de dados;
 solution: Experience Platform
 title: Tipo de Dados do Item de Lista de Produtos
-description: Este documento fornece uma visão geral do tipo de dados XDM do item de lista de produtos.
+description: Saiba mais sobre o tipo de dados XDM do item de lista de produtos.
 exl-id: 056fdb5b-6782-4e29-9d62-90b270c05795
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '367'
+source-wordcount: '342'
 ht-degree: 3%
 
 ---
@@ -31,7 +31,7 @@ Os valores capturados nesse tipo de dados podem diferir do registro do produto. 
 | `product` | [!UICONTROL String] (URI) | O URI `$id` do esquema XDM que captura o próprio produto. |
 | `productAddMethod` | [!UICONTROL String] | O método usado para adicionar um item de produto à lista pelo visitante. |
 | `productImageUrl` | [!UICONTROL String] | Um URL para a imagem principal do produto. |
-| `quantity` | [!UICONTROL Número inteiro] | O número de unidades que o cliente indicou que precisa do produto. |
+| `quantity` | [!UICONTROL Integer] | O número de unidades que o cliente indicou que precisa do produto. |
 | `unitOfMeasureCode` | [!UICONTROL String] | O padrão [código de unidade de medida](https://ucum.org/ucum) para o produto, conforme relacionado ao `quantity` propriedade. |
 
 {style="table-layout:auto"}

@@ -2,12 +2,12 @@
 keywords: Experience Platform;página inicial;tópicos populares;esquema;Esquema;XDM;campos;esquemas;Esquemas;navegador;detalhes do navegador;tipo de dados;tipo de dados;tipo de dados;
 solution: Experience Platform
 title: Tipo de dados Detalhes do navegador
-description: Este documento fornece uma visão geral do tipo de dados XDM de Detalhes do navegador.
+description: Saiba mais sobre o tipo de dados XDM de Detalhes do navegador.
 exl-id: c67ff8bc-0614-4422-9bb7-689b98d7086d
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '263'
-ht-degree: 11%
+source-wordcount: '240'
+ht-degree: 7%
 
 ---
 

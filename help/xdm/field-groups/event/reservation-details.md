@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;página inicial;tópicos populares;esquema;Esquema;XDM;ExperienceEvent;campos;esquemas;Esquemas;Design de esquema;grupo de campos;grupo de campos;reserva;detalhes da reserva;
 title: Grupo de Campos de Esquema de Detalhes da Reserva
-description: Este documento fornece uma visão geral do grupo de campos do esquema Detalhes da Reserva.
+description: Saiba mais sobre o grupo de campos de esquema Detalhes da reserva.
 exl-id: 06f9ee37-9879-4db2-af68-9336366f7521
-source-git-commit: afbbdfff4346ab5240927f5703d3a06676776ea8
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '334'
-ht-degree: 4%
+source-wordcount: '310'
+ht-degree: 5%
 
 ---
 
@@ -34,7 +34,7 @@ O grupo de campos fornece um único campo do tipo objeto, `reservations`. As pro
 | `numberOfAdults` | Número inteiro | O número de adultos associados à reserva. |
 | `numberOfChildren` | Número inteiro | O número de filhos associado à reserva. |
 | `purpose` | String | O objetivo da reserva, normalmente comercial ou pessoal. |
-| `startDate` | DateTime | A data de início de retirada, saída ou check-in da reserva. |
+| `startDate` | DateTime | A data de início da retirada, saída ou check-in da reserva. |
 | `triptype` | String | Indica se a reserva é para uma viagem só de ida, ida e volta ou uma viagem em várias cidades. |
 
 {style="table-layout:auto"}

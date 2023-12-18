@@ -2,12 +2,12 @@
 keywords: Experience Platform;página inicial;tópicos populares;esquema;Esquema;XDM;campos;esquemas;Esquemas;pessoa;tipo de dados;tipo de dados;tipo de dados;
 solution: Experience Platform
 title: Tipo de dados da pessoa
-description: Este documento fornece uma visão geral do tipo de dados Modelo de dados de experiência da pessoa (XDM).
+description: Saiba mais sobre o tipo de dados Modelo de dados de experiência da pessoa (XDM).
 exl-id: f28a52be-90c7-4ed0-a460-97165bb58046
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '338'
-ht-degree: 4%
+source-wordcount: '318'
+ht-degree: 3%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 4%
 | `birthYear` | Número inteiro | O ano em que uma pessoa nasceu, incluindo o século (por exemplo, `1983`). Este campo deve ser usado quando apenas a idade da pessoa é conhecida e não a data de nascimento completa. Esse valor deve estar entre 1 e 32767. |
 | `gender` | String | A identidade de gênero da pessoa. O valor dessa propriedade deve ser igual a um dos seguintes valores de enumeração conhecidos. <li> `female` </li> <li> `male` </li> <li> `not_specified` </li> <li> `non_specific` </li> O padrão para esse valor é `not_specified`. |
 | `maritalStatus` | String | Descreve o relacionamento de uma pessoa com uma outra pessoa importante. O valor dessa propriedade deve ser igual a um dos seguintes valores de enumeração. <li> `married` </li> <li> `single` </li> <li> `divorced` </li> <li> `widowed` </li> <li> `not_specified` </li> O padrão para esse valor é `not_specified`. |
-| `nationality` | String | A relação jurídica entre uma pessoa e seu estado representado usando o código ISO 3166-1 Alfa-2. O formato dessa propriedade deve estar em conformidade com essa expressão regular `^[A-Z]{2}$`. |
+| `nationality` | String | A relação jurídica entre uma pessoa e seu estado representado usando o código ISO 3166-1 Alpha-2. O formato dessa propriedade deve estar em conformidade com essa expressão regular `^[A-Z]{2}$`. |
 | `taxId` | String | A ID fiscal ou de imposto da pessoa, como o Número de Identificação do Contribuinte (TIN) nos EUA ou o Certificado de Identificação Fiscal (CIF/NIF) na Espanha. |
 
 {style="table-layout:auto"}

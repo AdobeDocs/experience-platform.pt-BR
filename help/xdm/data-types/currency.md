@@ -2,12 +2,12 @@
 keywords: Experience Platform;página inicial;tópicos populares;esquema;Esquema;XDM;campos;esquemas;Esquemas;dispositivo;tipo de dados;tipo de dados;tipo de dados;moeda;
 solution: Experience Platform
 title: Tipo de dados da moeda
-description: Este documento fornece uma visão geral do tipo de dados Moeda XDM.
+description: Saiba mais sobre o tipo de dados Currency XDM.
 exl-id: eaf4812e-32ec-4b07-82ef-60777f03623d
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '124'
-ht-degree: 3%
+source-wordcount: '104'
+ht-degree: 5%
 
 ---
 

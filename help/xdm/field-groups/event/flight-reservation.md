@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;página inicial;tópicos populares;esquema;Esquema;XDM;ExperienceEvent;campos;esquemas;Esquemas;Design de esquema;grupo de campos;grupo de campos;reserva;voo;
 title: Grupo de Campos de Esquema de Reserva de Voo
-description: Este documento fornece uma visão geral do grupo de campos do esquema Reserva de voo.
+description: Saiba mais sobre o grupo de campos Esquema de reserva de voo.
 exl-id: df4bb525-c2d3-4e1d-921f-903142a570ac
-source-git-commit: afbbdfff4346ab5240927f5703d3a06676776ea8
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '649'
+source-wordcount: '625'
 ht-degree: 4%
 
 ---
@@ -33,7 +33,7 @@ A estrutura de cada objeto fornecido em `flightReservations` é fornecido abaixo
 | Propriedade | Tipo de dados | Descrição |
 | --- | --- | --- |
 | `flightCheckIn` | Objeto | Registra detalhes sobre o check-in do voo. O objeto inclui as seguintes propriedades:<ul><li>`arrivalAirportCode`: (String) O código do aeroporto da cidade de chegada.</li><li>`boardingGroup`: (String) O indicador específico da linha aérea do pedido de embarque.</li><li>`checkInMethod`: (String) O método usado no check-in, como contador, online, quiosque ou autoatendimento.</li><li>`checkedBags`: (número inteiro) o número de malas despachadas para o voo.</li><li>`checkedPassengers`: (Número inteiro) o número de passageiros registrados para o voo, se houver vários passageiros para o mesmo número de reserva.</li><li>`confirmationNumber`: (String) O número ou identificador de confirmação da reserva.</li><li>`departureAirportCode`: (String) O código do aeroporto da cidade de partida.</li><li>`flightNumber`: (String) O número do voo que está sendo reservado.</li></ul> |
-| `flightStatusSearch` | Objeto | Registra os detalhes retornados quando o status do voo é pesquisado. O objeto inclui as seguintes propriedades:<ul><li>`arrivalAirportCode`: (String) O código do aeroporto da cidade de chegada.</li><li>`boardingGroup`: (String) O indicador específico da linha aérea do pedido de embarque.</li><li>`departureAirportCode`: (String) O código do aeroporto da cidade de partida.</li><li>`departureDate`: (DateTime) A data de partida do voo que está sendo reservado.</li><li>`flightNumber`: (String) O número do voo que está sendo reservado.</li><li>`searchCount`: (número inteiro) o número de vezes que o status do voo reservado foi pesquisado.</li></ul> |
+| `flightStatusSearch` | Objeto | Registra os detalhes retornados quando o status do voo é pesquisado. O objeto inclui as seguintes propriedades:<ul><li>`arrivalAirportCode`: (String) O código do aeroporto da cidade de chegada.</li><li>`boardingGroup`: (String) O indicador específico da linha aérea do pedido de embarque.</li><li>`departureAirportCode`: (String) O código do aeroporto da cidade de partida.</li><li>`departureDate`: (DateTime) A data de partida do voo que está sendo reservado.</li><li>`flightNumber`: (String) O número do voo que está sendo reservado.</li><li>`searchCount`: (Número inteiro) o número de vezes que o status do voo reservado foi pesquisado.</li></ul> |
 | `agentID` | String | O agente ou a agência responsável pela realização da reserva, se aplicável. |
 | `aircraftID` | String | Um identificador da aeronave. |
 | `aircraftType` | String | O tipo de aeronave. |

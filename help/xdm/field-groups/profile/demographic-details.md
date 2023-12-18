@@ -2,12 +2,12 @@
 keywords: Experience Platform;página inicial;tópicos populares;esquema;Esquema;XDM;perfil individual;campos;esquemas;Esquemas;Design de esquema;grupo de campos;grupo de campos;pessoa;detalhes da pessoa;detalhes da pessoa do perfil;pessoa;
 solution: Experience Platform
 title: Grupo de Campos de Esquema de Detalhes Demográficos
-description: Este documento fornece uma visão geral do grupo de campos do esquema Detalhes demográficos.
+description: Saiba mais sobre o grupo de campos de esquema Detalhes demográficos.
 exl-id: 588c044c-b80d-4cb9-9f97-92f040d54bb4
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '279'
-ht-degree: 3%
+source-wordcount: '261'
+ht-degree: 4%
 
 ---
 
@@ -30,7 +30,7 @@ ht-degree: 3%
 | `person.birthYear` | Número inteiro | O ano em que uma pessoa nasceu, incluindo o século (como 1989). Este campo deve ser usado quando apenas a idade da pessoa é conhecida, não a data de nascimento completa. |
 | `person.gender` | String | A identidade de gênero da pessoa. |
 | `person.martialStatus` | String | Descreve o relacionamento de uma pessoa com uma outra pessoa importante. |
-| `person.nationality` | String | A relação jurídica entre uma pessoa e seu estado representado usando o código ISO 3166-1 Alfa-2. |
+| `person.nationality` | String | A relação jurídica entre uma pessoa e seu estado representado usando o código ISO 3166-1 Alpha-2. |
 | `person.taxId` | String | A ID fiscal da pessoa, como o TIN nos EUA ou o CIF/NIF na Espanha. |
 
 {style="table-layout:auto"}

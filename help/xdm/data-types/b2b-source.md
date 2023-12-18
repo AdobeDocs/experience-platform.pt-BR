@@ -1,11 +1,11 @@
 ---
 title: Tipo de dados de origem B2B
-description: Este documento fornece uma visão geral do tipo de dados Modelo de dados de experiência de origem (XDM) B2B.
+description: Saiba mais sobre o tipo de dados Modelo de dados de experiência de origem B2B (XDM).
 exl-id: 01b7d41c-1ab6-4cbc-b9b3-77b6af69faf3
-source-git-commit: e602f78470fe4eeb2a42e6333ba52096d8a9fe8a
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '270'
-ht-degree: 2%
+source-wordcount: '236'
+ht-degree: 3%
 
 ---
 

@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;início;tópicos populares;esquema;Esquema;XDM;ExperienceEvent;campos;esquemas;Esquemas;Design de esquema;grupo de campos;grupo de campos;reserva;hospedagem;
 title: Grupo de Campos de Esquema de Reserva de Hospedagem
-description: Este documento fornece uma visão geral do grupo de campos do esquema de Reserva de Hospedagem.
+description: Saiba mais sobre o grupo de campos de esquema Reserva de Hospedagem.
 exl-id: f0eafc83-21f1-483d-9397-1133e3777699
-source-git-commit: afbbdfff4346ab5240927f5703d3a06676776ea8
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '679'
+source-wordcount: '655'
 ht-degree: 5%
 
 ---

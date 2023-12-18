@@ -1,11 +1,11 @@
 ---
 title: Classe de Política
-description: Este documento fornece uma visão geral da classe Política no Experience Data Model (XDM).
+description: Saiba mais sobre a classe Política no Experience Data Model (XDM).
 exl-id: 56cc8c69-84a0-493e-85c5-e0cd994e4bee
-source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '241'
-ht-degree: 7%
+source-wordcount: '237'
+ht-degree: 4%
 
 ---
 

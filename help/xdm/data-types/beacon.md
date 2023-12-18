@@ -2,12 +2,12 @@
 keywords: Experience Platform;página inicial;tópicos populares;esquema;Esquema;XDM;campos;esquemas;Esquemas;beacon;detalhes de interação;tipo de dados;tipo de dados;tipo de dados;
 solution: Experience Platform
 title: Tipo de dados do sinal
-description: Este documento fornece uma visão geral da classe Perfil individual XDM.
+description: Saiba mais sobre a classe Perfil individual XDM.
 exl-id: a3767c8d-a009-49b4-81a4-b084b6e5101a
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '250'
-ht-degree: 3%
+source-wordcount: '233'
+ht-degree: 4%
 
 ---
 

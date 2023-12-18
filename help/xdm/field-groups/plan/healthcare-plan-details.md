@@ -1,11 +1,11 @@
 ---
 title: Grupo de Campos de Esquema de Detalhes do Plano de Saúde
-description: Este documento fornece uma visão geral do grupo de campos do esquema Detalhes do plano de saúde.
+description: Saiba mais sobre o grupo de campos de esquema Detalhes do plano de saúde.
 exl-id: 5a480c5b-74f8-48dd-858a-5cf2628dc7f0
-source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '216'
-ht-degree: 3%
+source-wordcount: '202'
+ht-degree: 4%
 
 ---
 

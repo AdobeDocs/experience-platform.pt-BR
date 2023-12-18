@@ -4,9 +4,9 @@ user-guide-title: Ajuda do sistema do Experience Data Model (XDM)
 breadcrumb-title: Guia do Experience Data Model (XDM)
 user-guide-description: Explore uma visão geral do sistema do Experience Data Model (XDM) na Experience Platform e saiba como usar classes e grupos de campos de esquema para padronizar os dados de experiência.
 feature: Schemas
-source-git-commit: 4f819dcbdf67dc0305b397c54de2b1149cff398d
+source-git-commit: f0d437743b33818c27de94eb522227bb950e60cb
 workflow-type: tm+mt
-source-wordcount: '561'
+source-wordcount: '589'
 ht-degree: 16%
 
 ---
@@ -58,16 +58,20 @@ ht-degree: 16%
       * [Detalhes do membro da área de saúde](./field-groups/profile/healthcare-member-details.md)
       * [Detalhes de fidelidade](./field-groups/profile/loyalty-details.md)
       * [Detalhes de contato pessoal](./field-groups/profile/personal-contact-details.md)
+      * [Enriquecimento do parceiro de perfil (amostra)](./field-groups/profile/profile-partner-enrichment.md)
       * [Detalhes da associação do segmento](./field-groups/profile/segmentation.md)
       * [Assinatura de serviço de telecomunicação](./field-groups/profile/telecom-subscription.md)
       * [Detalhes de contato comercial](./field-groups/profile/work-contact-details.md)
       * [Componentes de pessoa de negócios XDM](./field-groups/profile/business-person-components.md)
       * [Detalhes de pessoa de negócios XDM](./field-groups/profile/business-person-details.md)
+   * Perfil de cliente potencial individual XDM {#prospect-profile}
+      * [Detalhes de Cliente Potencial do Parceiro (Exemplo)](./field-groups/prospect-profile/partner-prospect-details.md)
    * XDM ExperienceEvent {#event}
       * [Extensão completa do Adobe Analytics](./field-groups/event/analytics-full-extension.md)
       * [Detalhes de publicidade](./field-groups/event/advertising-details.md)
       * [Detalhes do aplicativo](./field-groups/event/application-details.md)
       * [Transferências de saldo](./field-groups/event/balance-transfers.md)
+      * [Detecção de bot](./field-groups/event/bot-detection-information.md)
       * [Detalhes de marketing da campanha](./field-groups/event/campaign-marketing-details.md)
       * [Ações do cartão](./field-groups/event/card-actions.md)
       * [Detalhes do canal](./field-groups/event/channel-details.md)
@@ -105,14 +109,18 @@ ht-degree: 16%
 * Tipos de dados {#data-types}
    * [Detalhes da conta](./data-types/account-details.md)
    * [Intervalo comercial](./data-types/ad-break.md)
+   * [Endereço](./data-types/address.md)
    * [Informações de detalhes de publicidade](./data-types/advertising-details-information.md)
    * [Informações detalhadas sobre o pod de publicidade](./data-types/advertising-pod-details-information.md)
    * [Aplicativo](./data-types/application.md)
    * [Sinal](./data-types/beacon.md)
    * [Detalhes do navegador](./data-types/browser-details.md)
    * [Origem B2B](./data-types/b2b-source.md)
+   * [Carrinho](./data-types/cart.md)
+   * [Dados da categoria](./data-types/category-data.md)
    * [Informações detalhadas do capítulo](./data-types/chapter-details-information.md)
    * [Commerce](./data-types/commerce.md)
+   * [Escopo do Commerce](./data-types/commerce-scope.md)
    * [String de consentimento](./data-types/consent-string.md)
    * [Consentimentos e preferências](./data-types/consents.md)
    * [Moeda](./data-types/currency.md)
@@ -153,9 +161,14 @@ ht-degree: 16%
    * [Interação de POI](./data-types/poi-interaction.md)
    * [Endereço postal](./data-types/postal-address.md)
    * [Item da lista de produtos](./data-types/product-list-item.md)
+   * [Item de reembolso](./data-types/refund-item.md)
+   * [Lista de Requisições](./data-types/requisition-list.md)
+   * [Retornar](./data-types/return.md)
+   * [Retornar item](./data-types/return-item.md)
    * [Informações detalhadas de dados de QoE](./data-types/qoe-data-details-information.md)
    * [Pesquisa](./data-types/search.md)
    * [Informações de Detalhes da Sessão](./data-types/session-details-information.md)
+   * [Envio](./data-types/shipping.md)
    * [Inscrição](./data-types/subscription.md)
    * [Assinatura de serviço de telecomunicação](./data-types/telecom-subscription.md)
    * [Transação](./data-types/transaction.md)

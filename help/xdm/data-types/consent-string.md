@@ -1,12 +1,12 @@
 ---
 solution: Experience Platform
 title: Tipo de dados da string de consentimento
-description: Este documento fornece uma visão geral do tipo de dados XDM de cadeia de caracteres de consentimento.
+description: Saiba mais sobre o tipo de dados XDM da string de consentimento.
 exl-id: 288ec79e-074a-4d72-9c5f-e9cd8485b804
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '198'
-ht-degree: 3%
+source-wordcount: '176'
+ht-degree: 5%
 
 ---
 

@@ -1,11 +1,11 @@
 ---
 title: Grupo de Campos de Esquema de Detalhes de Atualização
-description: Este documento fornece uma visão geral do grupo de campos do esquema Detalhes da Atualização.
+description: Saiba mais sobre o grupo de campos de esquema Detalhes da atualização.
 exl-id: cd3f4cd9-ee0e-4bdf-a630-dd2c3c3cc8c7
-source-git-commit: afdac5ce2ed967b4688d456a586c946bc2cf4179
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '151'
-ht-degree: 1%
+source-wordcount: '126'
+ht-degree: 3%
 
 ---
 

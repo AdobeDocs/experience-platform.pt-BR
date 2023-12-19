@@ -2,9 +2,9 @@
 title: Visão geral da extensão da API de meta conversões
 description: Saiba mais sobre a extensão da API de meta conversões para encaminhamento de eventos no Adobe Experience Platform.
 exl-id: 6b5836d6-6674-4978-9165-0adc1d7087b7
-source-git-commit: b11aff782a44237e6e4ae87254163713883e3ded
+source-git-commit: e7d63ff86cdc1718129d0a8e4861b6a8c4631f75
 workflow-type: tm+mt
-source-wordcount: '2595'
+source-wordcount: '2565'
 ht-degree: 0%
 
 ---
@@ -115,6 +115,12 @@ Ao enviar eventos compartilhados, verifique se você está incluindo uma ID e um
 >* O recurso de início rápido está disponível para clientes que compraram o pacote Real-Time CDP Prime e Ultimate. Entre em contato com o representante da Adobe para obter mais informações.
 >* Esse recurso é para novas implementações e atualmente não é compatível com a instalação automática de extensões e configurações em tags existentes e propriedades de encaminhamento de eventos.
 
+>[!NOTE]
+>
+>Qualquer cliente existente pode usar os workflows de início rápido para criar uma implementação de referência que pode ser usada para o seguinte:
+>* Use-a como o início de uma implementação totalmente nova.
+>* Aproveite-a como uma implementação de referência que pode ser examinada para ver como ela foi configurada e replicar em suas implementações de produção atuais.
+
 O recurso de início rápido ajuda a configurar com facilidade e eficiência a API de Meta Conversões e as extensões Meta Pixel. Essa ferramenta automatiza várias etapas executadas em tags de Adobe e no encaminhamento de eventos, reduzindo significativamente o tempo de configuração.
 
 Esse recurso instala e configura automaticamente a API de metaconversões e as extensões de metapixels em uma propriedade de tags recém-gerada automaticamente e encaminhamento de eventos com as regras e os elementos de dados necessários. Além disso, ele também instala e configura automaticamente o SDK da Web do Experience Platform e o Datastream. Por fim, o recurso de início rápido publica automaticamente a biblioteca no URL designado em um ambiente de desenvolvimento, o que permite a coleta de dados do lado do cliente e o encaminhamento de eventos do lado do servidor em tempo real por meio do encaminhamento de eventos e da Rede de borda do Experience Platform.
@@ -152,7 +158,7 @@ No **[!UICONTROL Adicionar código ao seu site]** caixa de diálogo copiar o có
 
 ![Adicionar código na caixa de diálogo do site](../../../images/extensions/server/meta/add-code-on-your-site.png)
 
-A variável [!UICONTROL Resultados da validação] A caixa de diálogo exibe os resultados de implementação da extensão Meta. Selecione **[!UICONTROL Próximo]**. Você também pode ver resultados adicionais da validação selecionando o **[!UICONTROL Assurance]** link.
+A variável [!UICONTROL Resultados da validação] A caixa de diálogo exibe os resultados de implementação da extensão Meta. Selecionar **[!UICONTROL Próxima]**. Você também pode ver resultados adicionais da validação selecionando o **[!UICONTROL Assurance]** link.
 
 ![Caixa de diálogo Resultados do teste exibindo os resultados da implementação](../../../images/extensions/server/meta/test-results.png)
 

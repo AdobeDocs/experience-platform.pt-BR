@@ -2,9 +2,9 @@
 title: Pipelines de recursos de IA/ML
 description: Saiba como usar o Data Distiller para enriquecer seus pipelines de aprendizado de máquina com recursos derivados de dados do Adobe Experience Platform. Transforme dados brutos em recursos e forneça os dados de recursos para treinar ou pontuar um modelo que ofereça suporte aos seus casos de uso de marketing.
 exl-id: 3b452181-e254-4155-8bf5-0990533f202d
-source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
+source-git-commit: 641f507210071ee8efeb3562eec78afd0468d4f2
 workflow-type: tm+mt
-source-wordcount: '453'
+source-wordcount: '473'
 ht-degree: 1%
 
 ---
@@ -25,9 +25,9 @@ O Data Distiller permite que os cientistas e engenheiros de dados enriqueçam se
 
 ![Um infográfico detalhando o pipeline de recursos AI-ML.](../../images/data-distiller/ai-ml-feature-pipeline.png)
 
-1. Com os poderosos recursos de query do Data Distiller, você pode extrair recursos significativos dos dados comportamentais avançados disponíveis no Experience Platform e trazer os dados de recursos destilados para o ambiente de aprendizado de máquina sem a necessidade de copiar grandes volumes de dados de eventos fora do Experience Platform.
-2. Leia o conjunto de dados de recursos preparados em suas ferramentas de aprendizado de máquina preferidas e combine com outros recursos derivados de dados corporativos para treinar, experimentar, ajustar e implantar modelos personalizados adaptados à sua empresa.
-3. Gere pontuações, previsões ou recomendações de seus modelos e retorne o resultado ao Experience Platform para otimizar as experiências do cliente por meio do Real-time Customer Data Platform e do Adobe Journey Optimizer.
+- Com os poderosos recursos de query do Data Distiller, você pode extrair recursos significativos dos dados comportamentais avançados disponíveis no Experience Platform. Em seguida, você pode trazer os dados de recursos destilados para o ambiente de aprendizado de máquina sem precisar copiar grandes volumes de dados de eventos para fora do Experience Platform.
+- Leia o conjunto de dados de recursos preparados em suas ferramentas de aprendizado de máquina preferidas e combine com outros recursos derivados de dados corporativos para treinar, experimentar, ajustar e implantar modelos personalizados adaptados à sua empresa.
+- Gere pontuações, previsões ou recomendações de seus modelos e retorne o resultado ao Experience Platform para otimizar as experiências do cliente por meio do Real-time Customer Data Platform e do Adobe Journey Optimizer.
 
 ## Pré-requisitos {#prerequisites}
 
@@ -43,10 +43,13 @@ Ao ler este documento, você foi apresentado aos conceitos importantes por trás
 
 Os documentos incluídos nesta série de guias descrevem as etapas básicas para criar pipelines de recursos do Experience Platform para alimentar modelos personalizados em seu ambiente de aprendizado de máquina. Agora você está pronto para estabelecer uma conexão entre o Data Distiller e a [!DNL Jupyter Notebook].
 
-- [Conectar-se ao Data Distiller a partir de um [!DNL Python] notebook](./establish-connection.md)
-- [Explorar e analisar conjuntos de dados](./exploratory-analysis.md)
-- [Recursos do engenheiro para aprendizado de máquina](./feature-engineering.md)
-- [Exportar conjuntos de dados de recursos](./export-data.md)
+- **Configurar**: [Conectar-se ao Data Distiller a partir de um [!DNL Python] notebook](./establish-connection.md)
+
+A documentação vinculada abaixo corresponde às etapas indicadas no infográfico acima.
+
+- **Etapa 1**: [Explorar e analisar conjuntos de dados](./exploratory-analysis.md)
+- **Etapa 2**: [Recursos do engenheiro para aprendizado de máquina](./feature-engineering.md)
+- **Etapa 3**: [Exportar conjuntos de dados de recursos](./export-data.md)
 
 ## Recursos adicionais
 

@@ -2,9 +2,9 @@
 title: Empacotamento do serviço de consulta
 description: O documento a seguir descreve o pacote de recursos e produtos disponíveis para o Serviço de consulta e destaca as diferenças entre consultas ad hoc e em lote.
 exl-id: ba472d9e-afe6-423d-9abd-13ecea43f04f
-source-git-commit: 037ea8d11bb94e3b4f71ea301a535677b3cccdbd
+source-git-commit: 47f02f6d1d4017dfe0fccddcd137487e064b3039
 workflow-type: tm+mt
-source-wordcount: '1119'
+source-wordcount: '930'
 ht-degree: 2%
 
 ---
@@ -23,18 +23,6 @@ Os recursos do Serviço de consulta são fornecidos com os seguintes produtos e 
 - **Aplicativos baseados em plataforma** (Adobe Real-time Customer Data Platform, Adobe Customer Journey Analytics e Adobe Journey Optimizer): o acesso ao Serviço de consulta para executar consultas ad hoc é fornecido desde o início com cada variação e camada de aplicativos baseados na plataforma.
 - **[!DNL Data Distiller]** (pacote complementar que pode ser adquirido com o Adobe Real-Time CDP, Customer Journey Analytics e Adobe Journey Optimizer): o acesso ao Serviço de consulta para executar consultas em lote é fornecido com o [!DNL Data Distiller].
 
-## Terminologia {#terminology}
-
-A seção a seguir fornece definições para os termos principais relacionados ao empacotamento do Serviço de Consulta:
-
-- **Armazenamento de data lake**: O data lake serve principalmente os seguintes objetivos:
-   - Atua como a área de preparo para integrar dados no Experience Platform;
-   - Atua como o armazenamento de dados de longo prazo para todos os dados de Experience Platform;
-   - Permite casos de uso como análise de dados e ciência de dados.
-- **Exportação de dados**: A variável [conjunto de dados](https://experienceleague.adobe.com/docs/experience-platform/catalog/datasets/overview.html?lang=pt-BR) tipos que você pode exportar dependendo do aplicativo, do nível do produto e de qualquer complemento adquirido. Os conjuntos de dados derivados podem ser criados por meio do complemento Distiller de dados do serviço de consulta e podem ser [exportado do Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activation-overview.html) a uma vasta gama de destinos, incluindo [destinos de armazenamento na nuvem](/help/destinations/ui/export-datasets.md).
-- **Consultas aceleradas**: consultas aceleradas retornam resultados com base em dados agregados para reduzir o tempo de espera pelos resultados e fornecer uma troca de informações mais interativa. As consultas sem estado feitas no armazenamento acelerado só estão disponíveis como parte do complemento Data Distiller.
-- **Computar horas**: as horas de computação são a métrica usada para rastrear a digitalização e a gravação de dados com consultas em lote usando a API do serviço de consulta. É calculado em horas por ano e medido em todas as sandboxes. O número de horas de Cálculo fornecido para sua organização é definido no processo de escopo de negócios.
-
 ## Direitos {#entitlements}
 
 A tabela a seguir descreve os principais direitos do Serviço de consulta com base em como eles são empacotados:
@@ -47,8 +35,8 @@ A tabela a seguir descreve os principais direitos do Serviço de consulta com ba
 | Tempo Máximo de Execução | 10 minutos | 24 horas |
 | Licenciar métrica | **Consultar Simultaneidade de Usuário**: <ul><li>1 usuário simultâneo (Real-Time CDP, Adobe Journey Optimizer)&#x200B;</li><li>5 usuários simultâneos (Customer Journey Analytics)&#x200B;</li></ul> **Simultaneidade da consulta**: <ul><li>1 consulta em execução simultânea (todas as aplicações)&#x200B;</li></ul> **Complemento de pacote de usuários de consulta ad hoc adicional** pode ser adquirido para aumentar os direitos de consulta ad hoc autorizados dos clientes. <ul><li>+5 usuários simultâneos adicionais por pacote</li><li>+1 consulta de execução simultânea adicional por pacote</li></ul> | **Computar horas**: <ul><li>Variável (com base nos direitos do aplicativo do cliente)</li></ul> **Computar horas** é uma medida do tempo gasto pelo mecanismo do Serviço de consulta para ler, processar e gravar dados de volta no data lake quando uma consulta em lote é executada. |
 | Uso acelerado de consultas e relatórios | Não | Sim - Consultas aceleradas simultâneas permitem ler dados do armazenamento acelerado e exibi-los em seus painéis. Também é fornecido um direito dedicado para armazenar modelos de relatórios e conjuntos de dados no armazenamento acelerado. |
-| Capacidade de armazenamento do data lake | Sim - o direito total de armazenamento depende das licenças dos aplicativos baseados em plataforma. Por exemplo, Real-Time CDP, AJO, CJA e assim por diante. | Sim — um direito de armazenamento adicional é fornecido para manter seus conjuntos de dados brutos e derivados para casos de uso do Data Distiller além de uma data de expiração de dados de sete dias.<br>A capacidade de armazenamento do data lake é medida em terabytes (TB) e depende da quantidade de horas de Computação que você comprou. |
-| Bonificação de exportação de dados | Sim - o direito total de exportação depende das licenças dos aplicativos baseados em plataforma. Por exemplo, Real-Time CDP, AJO, CJA e assim por diante. | Sim - direitos de exportação adicionais são fornecidos para permitir a exportação de conjuntos de dados derivados criados usando o Data Distiller.<br>Sua permissão anual de exportação de dados é medida em terabytes (TB) e depende da quantidade de horas de Computação que você adquiriu. |
+| Capacidade de armazenamento do data lake | Seu direito total de armazenamento depende das licenças dos aplicativos baseados em plataforma. Por exemplo, Real-Time CDP, AJO, CJA e assim por diante. | Sim — um direito de armazenamento adicional é fornecido para manter seus conjuntos de dados brutos e derivados para casos de uso do Data Distiller além de uma data de expiração de dados de sete dias.<br>A capacidade de armazenamento do data lake é medida em terabytes (TB) e depende da quantidade de horas de Computação que você comprou. Verifique a descrição do produto para obter mais detalhes. |
+| Bonificação de exportação de dados | Seu direito total de exportação depende das licenças dos aplicativos baseados na plataforma. Por exemplo, Real-Time CDP, AJO, CJA e assim por diante. | Sim - direitos de exportação adicionais são fornecidos para permitir a exportação de conjuntos de dados derivados criados usando o Data Distiller.<br>Sua permissão anual de exportação de dados é medida em terabytes (TB) e depende da quantidade de horas de Computação que você adquiriu. Verifique a descrição do produto para obter mais detalhes. |
 | Interface de execução de consulta | <ul><li>Interface do usuário do serviço de consulta</li><li>Interface do usuário do cliente de terceiros</li><li>[!DNL PostgresSQL] interface do cliente</li></ul> | <ul><li>Interface do usuário do serviço de consulta </li><li>Interface do usuário do cliente de terceiros</li><li>[!DNL PostgresSQL] interface do cliente</li><li>REST APIs</li></ul> |
 | Resultados da Consulta Retornados via | Interface do cliente | Conjunto de dados derivado armazenado no data lake |
 | Limite do resultado | <ul><li>Interface do usuário do serviço de consulta - 100 linhas</li><li>Clientes de terceiros - 50.000</li><li>[!DNL PostgresSQL] cliente - 50.000</li></ul> | <ul><li>Interface do usuário do serviço de consulta - O número de linhas de saída pode ser [configurado com uma configuração de interface](./ui/user-guide.md#result-count) entre 50 e 500 linhas.</li><li>Clientes de terceiros (sem limite superior para linhas)</li><li>[!DNL PostgresSQL] cliente (sem limite superior para linhas)</li><li>REST APIs (sem limite superior para linhas)</li></ul> |

@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;página inicial;tópicos populares;serviço de consulta;serviço de consulta;spark sql;Spark sql;spark;funções spark;spark;query service;spark sql;functions;
+keywords: Experience Platform;página inicial;tópicos populares;serviço de consulta;serviço de consulta;spark sql;Spark sql;spark;funções spark sql;funções;
 solution: Experience Platform
 title: Funções Spark SQL no Serviço de consulta
-description: Esta documentação contém informações sobre as funções do Spark SQL que estendem a funcionalidade SQL.
+description: Saiba mais sobre as funções Spark SQL compatíveis que estendem a funcionalidade SQL.
 exl-id: 59e6d82b-3317-456d-8c56-3efd5978433a
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: 7ac1521adb916313c8b53fe2a095821d756480be
 workflow-type: tm+mt
-source-wordcount: '3866'
+source-wordcount: '1903'
 ht-degree: 1%
 
 ---
 
 # [!DNL Spark] Funções SQL
 
-O Adobe Experience Platform Query Service fornece várias funções Spark SQL incorporadas para estender a funcionalidade SQL. Este documento lista as funções do Spark SQL compatíveis com o Serviço de consulta.
+Você pode usar várias funções Spark SQL incorporadas para estender a funcionalidade SQL com o Serviço de consulta da Adobe Experience Platform. Este documento lista as funções do Spark SQL compatíveis com o Serviço de consulta.
 
-Para obter informações mais detalhadas sobre as funções, incluindo sintaxe, uso e exemplos, leia a [Documentação da função Spark SQL](https://spark.apache.org/docs/latest/api/sql/index.html).
+Para obter informações mais detalhadas sobre as funções, incluindo sintaxe, utilização e exemplos, leia a [Documentação da função Spark SQL](https://spark.apache.org/docs/latest/api/sql/index.html).
 
 >[!NOTE]
 >
@@ -70,10 +70,10 @@ Para obter informações mais detalhadas sobre as funções, incluindo sintaxe, 
 | [`percentile_approx`](https://spark.apache.org/docs/latest/api/sql/index.html#percentile_approx) | Retorna o percentil aproximado em uma determinada porcentagem |
 | [`pi`](https://spark.apache.org/docs/latest/api/sql/index.html#pi) | Retorna pi |
 | [`pmod`](https://spark.apache.org/docs/latest/api/sql/index.html#pmod) | Retorna o módulo positivo entre dois valores |
-| [`positive`](https://spark.apache.org/docs/latest/api/sql/index.html#positive) | Retorna o saldo positivo |
+| [`positive`](https://spark.apache.org/docs/latest/api/sql/index.html#positive) | Retorna o valor positivo |
 | [`pow`](https://spark.apache.org/docs/latest/api/sql/index.html#pow), [`power`](https://spark.apache.org/docs/latest/api/sql/index.html#power) | Retorna o primeiro valor à potência do segundo valor |
 | [`radians`](https://spark.apache.org/docs/latest/api/sql/index.html#radians) | Converte o valor em radianos |
-| [`rand`](https://spark.apache.org/docs/latest/api/sql/index.html#rand) | Retorna um número aleatório entre 0 e 1 |
+| [`rand`](https://spark.apache.org/docs/latest/api/sql/index.html#rand) | Retorna um número aleatório de 0 a 1 |
 | [`randn`](https://spark.apache.org/docs/latest/api/sql/index.html#randn) | Retorna um valor aleatório |
 | [`rint`](https://spark.apache.org/docs/latest/api/sql/index.html#rint) | Retorna o valor duplo mais próximo |
 | [`round`](https://spark.apache.org/docs/latest/api/sql/index.html#round) | Retorna o valor arredondado mais próximo |
@@ -95,10 +95,10 @@ Para obter informações mais detalhadas sobre as funções, incluindo sintaxe, 
 | Operador/Função | Descrição |
 | ----------------- | ----------- |
 | [`!`](https://spark.apache.org/docs/latest/api/sql/index.html#_1) ou [`not`](https://spark.apache.org/docs/latest/api/sql/index.html#not) | Not lógico |
-| [`<`](https://spark.apache.org/docs/latest/api/sql/index.html#_8) | Menos que |
-| [`<=`](https://spark.apache.org/docs/latest/api/sql/index.html#_9) | Less than or equal to |
-| [`=`](https://spark.apache.org/docs/latest/api/sql/index.html#_12) | Equal to |
-| [`>`](https://spark.apache.org/docs/latest/api/sql/index.html#_14) | Greater than |
+| [`<`](https://spark.apache.org/docs/latest/api/sql/index.html#_8) | Menor que |
+| [`<=`](https://spark.apache.org/docs/latest/api/sql/index.html#_9) | Menor que ou igual a |
+| [`=`](https://spark.apache.org/docs/latest/api/sql/index.html#_12) | Igual a |
+| [`>`](https://spark.apache.org/docs/latest/api/sql/index.html#_14) | Maior que |
 | [`>=`](https://spark.apache.org/docs/latest/api/sql/index.html#_15) | Maior que ou igual a |
 | [`^`](https://spark.apache.org/docs/latest/api/sql/index.html#_16) | Exclusivo ou bit a bit |
 | [`\|`](https://spark.apache.org/docs/latest/api/sql/index.html#_17) | Ou bit a bit |
@@ -129,7 +129,7 @@ Para obter informações mais detalhadas sobre as funções, incluindo sintaxe, 
 | [`day`](https://spark.apache.org/docs/latest/api/sql/index.html#day), [`dayofmonth`](https://spark.apache.org/docs/latest/api/sql/index.html#dayofmonth) | Retorna o dia do mês |
 | [`dayofweek`](https://spark.apache.org/docs/latest/api/sql/index.html#dayofweek) | Retorna o dia da semana (1-7) |
 | [`dayofyear`](https://spark.apache.org/docs/latest/api/sql/index.html#dayofyear) | Retorna o dia do ano |
-| [`from_unixtime`](https://spark.apache.org/docs/latest/api/sql/index.html#from_unixtime) | Retorna a data em hora Unix |
+| [`from_unixtime`](https://spark.apache.org/docs/latest/api/sql/index.html#from_unixtime) | Retorna a data no horário UNIX® |
 | [`from_utc_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#from_utc_timestamp) | Retorna a data UTC |
 | [`hour`](https://spark.apache.org/docs/latest/api/sql/index.html#hour) | Retorna a hora da entrada |
 | [`last_day`](https://spark.apache.org/docs/latest/api/sql/index.html#last_day) | Retorna o último dia do mês ao qual a data pertence |
@@ -141,10 +141,10 @@ Para obter informações mais detalhadas sobre as funções, incluindo sintaxe, 
 | [`second`](https://spark.apache.org/docs/latest/api/sql/index.html#second) | Retorna o segundo da cadeira de caracteres |
 | [`to_date`](https://spark.apache.org/docs/latest/api/sql/index.html#to_date) | Converte a cadeia de caracteres em uma data. **Nota:** A string **deve** estar no formato `yyyy-mm-ddTHH24:MM:SS`. |
 | [`to_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#to_timestamp) | Converte a cadeia de caracteres em um carimbo de data e hora. **Nota:** A string **deve** estar no formato `yyyy-mm-ddTHH24:MM:SS`. |
-| [`to_unix_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#to_unix_timestamp) | Converte a cadeia de caracteres em um carimbo de data e hora Unix |
+| [`to_unix_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#to_unix_timestamp) | Converte a string em um carimbo de data e hora UNIX® |
 | [`to_utc_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#to_utc_timestamp) | Converte a cadeia de caracteres em um carimbo de data e hora UTC |
 | [`trunc`](https://spark.apache.org/docs/latest/api/sql/index.html#trunc) | Trunca a data |
-| [`unix_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#unix_timestamp) | Retorna o carimbo de data e hora Unix |
+| [`unix_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#unix_timestamp) | Retorna o carimbo de data e hora UNIX® |
 | [`weekday`](https://spark.apache.org/docs/latest/api/sql/index.html#weekday) | Dia da semana (0-6) |
 | [`weekofyear`](https://spark.apache.org/docs/latest/api/sql/index.html#weekofyear) | Retorna a semana do ano de uma determinada data |
 | [`year`](https://spark.apache.org/docs/latest/api/sql/index.html#year) | Retorna o ano da cadeira de caracteres |
@@ -175,7 +175,7 @@ Para obter informações mais detalhadas sobre as funções, incluindo sintaxe, 
 | [`flatten`](https://spark.apache.org/docs/latest/api/sql/index.html#flatten) | Nivela um conjunto de arrays |
 | [`inline`](https://spark.apache.org/docs/latest/api/sql/index.html#inline) | Separar a matriz de structs em uma tabela, excluindo null |
 | [`inline_outer`](https://spark.apache.org/docs/latest/api/sql/index.html#inline_outer) | Separar a matriz de structs em uma tabela, incluindo null |
-| [`posexplode`](https://spark.apache.org/docs/latest/api/sql/index.html#posexplode) | Separar elementos da matriz em várias linhas com posições, excluindo valores nulos |
+| [`posexplode`](https://spark.apache.org/docs/latest/api/sql/index.html#posexplode) | Separar elementos de uma matriz em várias linhas com posições, excluindo valores nulos |
 | [`reverse`](https://spark.apache.org/docs/latest/api/sql/index.html#reverse) | Inverter elementos da matriz |
 | [`shuffle`](https://spark.apache.org/docs/latest/api/sql/index.html#shuffle) | Retorna uma permutação aleatória da matriz |
 | [`slice`](https://spark.apache.org/docs/latest/api/sql/index.html#slice) | Subconjuntos de uma matriz |

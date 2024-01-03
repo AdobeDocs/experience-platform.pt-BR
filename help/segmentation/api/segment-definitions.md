@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Endpoint da API de definições de segmento
 description: O endpoint de definições de segmento na API do Serviço de segmentação do Adobe Experience Platform permite gerenciar de forma programática as definições de segmento da sua organização.
 exl-id: e7811b96-32bf-4b28-9abb-74c17a71ffab
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: d47ec6fca05191f532b5a2e94f1943c4337258ed
 workflow-type: tm+mt
-source-wordcount: '1209'
+source-wordcount: '1228'
 ht-degree: 4%
 
 ---
@@ -152,6 +152,10 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com uma lista de definiçõe
 ## Criar uma nova definição de segmento {#create}
 
 Você pode criar uma nova definição de segmento fazendo uma solicitação POST para o `/segment/definitions` terminal.
+
+>[!IMPORTANT]
+>
+>Definições de segmento criadas por meio da API **não é possível** ser editado usando o Construtor de segmentos.
 
 **Formato da API**
 

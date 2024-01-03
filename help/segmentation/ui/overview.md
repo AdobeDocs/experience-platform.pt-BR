@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guia da interface do usuário do Serviço de segmentação
 description: Saiba como criar e gerenciar públicos e definições de segmento na interface do usuário do Adobe Experience Platform.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 692cdd3d8b30c3e5187a556e4f9ec80d675cb443
+source-git-commit: 7ee39a39aecdfc0516f63e6a9c9a06c6c4b22996
 workflow-type: tm+mt
-source-wordcount: '3910'
-ht-degree: 4%
+source-wordcount: '3933'
+ht-degree: 3%
 
 ---
 
@@ -21,13 +21,13 @@ Trabalhar com públicos-alvo e definições de segmento requer uma compreensão 
 - [[!DNL Segmentation Service]](../home.md): [!DNL Segmentation Service] permite segmentar dados armazenados no [!DNL Experience Platform] que se relaciona a indivíduos (como clientes, clientes potenciais, usuários ou organizações) em grupos menores.
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): fornece um perfil de consumidor unificado em tempo real com base em dados agregados de várias fontes.
 - [[!DNL Adobe Experience Platform Identity Service]](../../identity-service/home.md): permite a criação de perfis de clientes, unindo identidades de diferentes fontes de dados que estão sendo assimiladas na [!DNL Platform].
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): a estrutura padronizada pela qual a [!DNL Platform] organiza os dados de experiência do cliente. Para melhor usar a segmentação, verifique se seus dados são assimilados como perfis e eventos de acordo com a [práticas recomendadas para modelagem de dados](../../xdm/schema/best-practices.md).
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): o quadro normalizado pelo qual [!DNL Platform] organiza os dados de experiência do cliente. Para melhor usar a segmentação, verifique se seus dados são assimilados como perfis e eventos de acordo com a [práticas recomendadas para modelagem de dados](../../xdm/schema/best-practices.md).
 
 Você também deve compreender dois termos principais usados neste documento e a diferença entre eles:
 
 - **Público**: um conjunto de pessoas que compartilham comportamentos e/ou características semelhantes. Essa coleção de pessoas pode ser gerada pelo Adobe Experience Platform usando definições de segmento ou composição de público-alvo (público-alvo gerado pela Platform) ou de fontes externas, como uploads personalizados (público-alvo gerado externamente).
 - **Definição de segmento**: as regras que o Adobe Experience Platform usa para descrever as principais características ou comportamento de um público-alvo.
-- **Segmentar**: o ato de separar perfis em públicos-alvo.
+- **Segmento**: o ato de separar perfis em públicos.
 
 ## Visão geral
 
@@ -72,17 +72,17 @@ Ao lado de cada público há um ícone de reticências. Selecionar essa opção 
 
 | Ação | Origens | Descrição |
 | ------ | ------- | ----------- |
-| [!UICONTROL Editar] | Serviço de segmentação | Permite abrir o Construtor de segmentos para editar o público-alvo. Para obter mais informações sobre como usar o Construtor de segmentos, leia as [Guia da interface do usuário do Construtor de segmentos](./segment-builder.md). |
-| [!UICONTROL Abrir composição] | Composição de público-alvo | Permite abrir a composição de público-alvo para ver seu público-alvo. Para obter mais informações sobre a composição do público-alvo, leia a [guia da interface de composição de público-alvo](./audience-composition.md). |
-| [!UICONTROL Ativar para destino] | Serviço de segmentação | Permite ativar o público para um destino. Para obter informações mais detalhadas sobre como ativar um público-alvo para um destino, leia o [visão geral da ativação](../../destinations/ui/activation-overview.md). |
-| [!UICONTROL Compartilhar com parceiros] | Composição de público-alvo, Upload personalizado, Serviço de segmentação | Permite compartilhar seu público-alvo com outros usuários da Platform. Para obter mais informações sobre esse recurso, leia a [Visão geral da correspondência de segmentos](./segment-match/overview.md). |
-| [!UICONTROL Gerenciar tags] | Composição de público-alvo, Upload personalizado, Serviço de segmentação | Permite gerenciar as tags definidas pelo usuário que pertencem ao público-alvo. Para obter mais informações sobre esse recurso, leia a seção sobre [filtragem e marcação](#manage-audiences). |
-| [!UICONTROL Mover para a pasta] | Composição de público-alvo, Upload personalizado, Serviço de segmentação | Permite gerenciar a qual pasta o público-alvo pertence. Para obter mais informações sobre esse recurso, leia a seção sobre [filtragem e marcação](#manage-audiences). |
+| [!UICONTROL Editar] | Serviço de segmentação | Abre o Construtor de segmentos para editar o público-alvo. Observe que, se o público-alvo foi criado por meio da API, você **não** poder editá-lo usando o Construtor de segmentos. Para obter mais informações sobre como usar o Construtor de segmentos, leia as [Guia da interface do usuário do Construtor de segmentos](./segment-builder.md). |
+| [!UICONTROL Abrir composição] | Composição de público-alvo | Abre a composição de Público-alvo para ver seu público-alvo. Para obter mais informações sobre a composição do público-alvo, leia a [guia da interface de composição de público-alvo](./audience-composition.md). |
+| [!UICONTROL Ativar para destino] | Serviço de segmentação | Ativa o público-alvo para um destino. Para obter informações mais detalhadas sobre como ativar um público-alvo para um destino, leia o [visão geral da ativação](../../destinations/ui/activation-overview.md). |
+| [!UICONTROL Compartilhar com parceiros] | Composição de público-alvo, Upload personalizado, Serviço de segmentação | Compartilha seu público-alvo com outros usuários da Platform. Para obter mais informações sobre esse recurso, leia a [Visão geral da correspondência de segmentos](./segment-match/overview.md). |
+| [!UICONTROL Gerenciar tags] | Composição de público-alvo, Upload personalizado, Serviço de segmentação | Gerencia as tags definidas pelo usuário que pertencem ao público. Para obter mais informações sobre esse recurso, leia a seção sobre [filtragem e marcação](#manage-audiences). |
+| [!UICONTROL Mover para a pasta] | Composição de público-alvo, Upload personalizado, Serviço de segmentação | Gerencia a pasta à qual o público-alvo pertence. Para obter mais informações sobre esse recurso, leia a seção sobre [filtragem e marcação](#manage-audiences). |
 | [!UICONTROL Copiar] | Composição de público-alvo, Upload personalizado, Serviço de segmentação | Duplica o público selecionado. |
-| [!UICONTROL Aplicar rótulos de acesso] | Composição de público-alvo, Upload personalizado, Serviço de segmentação | Permite gerenciar os rótulos de acesso que pertencem ao público-alvo. Para obter mais informações sobre rótulos de acesso, leia a documentação em [gerenciamento de rótulos](../../access-control/abac/ui/labels.md). |
+| [!UICONTROL Aplicar rótulos de acesso] | Composição de público-alvo, Upload personalizado, Serviço de segmentação | Gerencia os rótulos de acesso que pertencem ao público. Para obter mais informações sobre rótulos de acesso, leia a documentação em [gerenciamento de rótulos](../../access-control/abac/ui/labels.md). |
 | [!UICONTROL Arquivar] | Upload personalizado | Arquiva o público-alvo selecionado. |
 | [!UICONTROL Excluir] | Composição de público-alvo, Upload personalizado, Serviço de segmentação | Exclui o público selecionado. |
-| [!UICONTROL Adicionar ao pacote] | Composição de público-alvo, Upload personalizado, Serviço de segmentação | Permite mover o público-alvo entre sandboxes. Para obter mais informações sobre esse recurso, leia a [guia de ferramentas de sandbox](../../sandboxes/ui/sandbox-tooling.md). |
+| [!UICONTROL Adicionar ao pacote] | Composição de público-alvo, Upload personalizado, Serviço de segmentação | Move o público-alvo entre sandboxes. Para obter mais informações sobre esse recurso, leia a [guia de ferramentas de sandbox](../../sandboxes/ui/sandbox-tooling.md). |
 
 >[!NOTE]
 >
@@ -142,7 +142,7 @@ Após selecionar os campos que deseja exibir, você também pode redimensionar a
 
 Para melhorar a eficiência do trabalho, você pode pesquisar públicos existentes, adicionar tags definidas pelo usuário a públicos, colocar públicos em pastas e filtrar os públicos exibidos.
 
-**Pesquisa** {#search}
+**Pesquisar** {#search}
 
 Você pode pesquisar seus públicos-alvo existentes em até 9 idiomas diferentes com [!DNL Unified Search].
 
@@ -237,7 +237,7 @@ Selecionar **[!UICONTROL Aplicar rótulos de acesso]** permite gerenciar os rót
 
 >[!BEGINTABS]
 
->[!TAB Composição de público-alvo]
+>[!TAB Composição de público]
 
 ![A página de detalhes do público-alvo é exibida, com a tag [!UICONTROL Abrir composição] botão realçado.](../images/ui/overview/audience-details-open-composition.png)
 
@@ -307,7 +307,7 @@ Um popover é exibido, permitindo que você escolha entre compor um público-alv
 
 ![Um popover que exibe os dois tipos de públicos-alvo que você pode criar.](../images/ui/overview/create-audience-type.png)
 
-**Composição de público-alvo** {#audience-composition}
+**Composição de público** {#audience-composition}
 
 Selecionar **[!UICONTROL Compor públicos]** leva você à Composição de público-alvo. Esse espaço de trabalho fornece controles intuitivos para criar e editar públicos, como arrastar e soltar blocos usados para representar ações diferentes. Para saber mais sobre como criar públicos-alvo, leia o [Guia de composição de público-alvo](./audience-composition.md).
 
@@ -399,7 +399,7 @@ Um popover é exibido, listando todos os campos que podem ser exibidos dentro da
 | [!UICONTROL Status] | O status do público. Os valores possíveis para esse campo incluem `Draft`, `Published`, e `Archived`. |
 | [!UICONTROL Criado] | A hora e a data em que o público-alvo foi criado. |
 | [!UICONTROL Criado por] | O nome da pessoa que criou o público-alvo. |
-| [!UICONTROL Atualização dos pacotes] | A hora e a data em que o público-alvo foi atualizado pela última vez. |
+| [!UICONTROL Atualizado] | A hora e a data em que o público-alvo foi atualizado pela última vez. |
 | [!UICONTROL Atualizado por] | O nome da última pessoa que atualizou o público. |
 
 Para ver como o público é composto, selecione o nome de um público na [!UICONTROL Públicos-alvo] guia.

@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Visão geral dos conjuntos de mapeamento
 description: Saiba como usar conjuntos de mapeamento com o Preparo de dados do Adobe Experience Platform.
 exl-id: b45545b7-3ae7-400d-b6fd-b2cb76061093
-source-git-commit: d39ae3a31405b907f330f5d54c91b95c0f999eee
+source-git-commit: 660948b7a43ed3c18feb74cccf8f9c607470759c
 workflow-type: tm+mt
 source-wordcount: '959'
 ht-degree: 0%
@@ -74,8 +74,8 @@ O JSON a seguir é um exemplo de um conjunto de mapeamento típico:
 | `outputSchema` | O esquema XDM ao qual os dados de entrada foram transformados para se adequar. |
 | `mappings` | Uma matriz de mapeamentos de campo para campo do esquema de origem para o esquema de destino. |
 | `sourceType` | Para cada mapeamento listado, seu `sourceType` attribute indica o tipo de origem a ser mapeada. Pode ser um de `ATTRIBUTE`, `STATIC`ou `EXPRESSION`: <ul><li> `ATTRIBUTE` é usado para qualquer valor encontrado no caminho de origem. </li><li>`STATIC` é usado para valores inseridos no caminho de destino. Esse valor permanece constante e não é afetado pelo esquema de origem.</li><li> `EXPRESSION` é usado para uma expressão, que será resolvida durante o tempo de execução. Uma lista de expressões disponíveis pode ser encontrada no [guia de funções de mapeamento](./functions.md).</li> </ul> |
-| `source` | Para cada mapeamento listado, a variável `source` attribute indica o campo que você deseja mapear. Mais informações sobre como configurar sua origem podem ser encontradas na [seção origens](#sources). |
-| `destination` | Para cada mapeamento listado, a variável `destination` atributo indica o campo, ou o caminho para o campo, onde o valor extraído do campo `source` será colocado. Mais informações sobre como configurar os destinos podem ser encontradas na [seção de destino](#destination). |
+| `source` | Para cada mapeamento listado, a variável `source` attribute indica o campo que você deseja mapear. Mais informações sobre como configurar sua origem podem ser encontradas na [visão geral das origens](../sources/home.md). |
+| `destination` | Para cada mapeamento listado, a variável `destination` atributo indica o campo, ou o caminho para o campo, onde o valor extraído do campo `source` será colocado. Mais informações sobre como configurar os destinos podem ser encontradas na [visão geral do destino](../destinations/home.md). |
 | `mappings.name` | (*Opcional*) Um nome para o mapeamento. |
 | `mappings.description` | (*Opcional*) Uma descrição do mapeamento. |
 

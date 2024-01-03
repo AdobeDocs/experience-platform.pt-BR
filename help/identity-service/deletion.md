@@ -2,9 +2,9 @@
 title: Exclusões no serviço de identidade
 description: Este documento fornece uma visão geral dos vários mecanismos que você pode usar para excluir os dados de identidade no Experience Platform e para esclarecer como os gráficos de identidade podem ser afetados.
 exl-id: 0619d845-71c1-4699-82aa-c6436815d5b3
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 44e4e83d80302f64854f6c8f9531da913a2f0942
 workflow-type: tm+mt
-source-wordcount: '1198'
+source-wordcount: '1199'
 ht-degree: 1%
 
 ---

@@ -2,9 +2,9 @@
 title: Visão geral do namespace de identidade
 description: Saiba mais sobre namespaces de identidade no Serviço de identidade.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: 98482bfdd54b70cde73c3512f8237c7862e41281
+source-git-commit: 44e4e83d80302f64854f6c8f9531da913a2f0942
 workflow-type: tm+mt
-source-wordcount: '1787'
+source-wordcount: '1779'
 ht-degree: 7%
 
 ---
@@ -22,8 +22,6 @@ Os namespaces de identidade exigem uma compreensão de vários serviços da Adob
 * [[!DNL Privacy Service]](../privacy-service/home.md): os namespaces de identidade são usados em solicitações de conformidade para regulamentos legais de privacidade, como o Regulamento Geral sobre a Proteção de Dados (GDPR). Cada solicitação de privacidade é feita em relação a um namespace para identificar quais dados dos consumidores devem ser afetados.
 
 ## Noções básicas sobre namespaces de identidade
-
-![Uma ilustração do fluxo de trabalho de dados com o Serviço de identidade.](images/identity-service-stitching.png)
 
 Uma identidade totalmente qualificada inclui dois componentes: um **valor de identidade** e uma **namespace de identidade**. Por exemplo, se o valor de uma identidade for `scott@acme.com`, um namespace fornece contexto para esse valor, diferenciando-o como um endereço de email. Da mesma forma, um namespace pode distinguir `555-123-456` como um número de telefone, e `3126ABC` como uma ID de CRM. Essencialmente, **um namespace fornece contexto a uma determinada identidade**. Ao corresponder dados de registro em fragmentos de perfil, como quando [!DNL Real-Time Customer Profile] mescla os dados do perfil, o valor da identidade e o namespace devem corresponder.
 

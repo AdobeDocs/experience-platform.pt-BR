@@ -5,9 +5,9 @@ hide: true
 hidefromtoc: true
 badge: Alfa
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: 20b8433cee719329bce562069c328adb906697a0
+source-git-commit: 07771956c22a3fee92bd76ae061b07e1e0f98b49
 workflow-type: tm+mt
-source-wordcount: '913'
+source-wordcount: '1040'
 ht-degree: 0%
 
 ---
@@ -69,12 +69,16 @@ Para obter mais informações, leia o documento em [algoritmo de otimização de
 >
 >No momento, as prioridades de namespace não estão disponíveis para alfa.
 
-Você pode usar a prioridade de namespace para definir quais namespaces são mais importantes do que outros. A hierarquia definida para os namespaces é usada para definir as identidades primárias e armazenar fragmentos de perfil. Se as configurações de prioridade estiverem definidas, a configuração de identidade principal no SDK da Web não será mais usada para determinar quais fragmentos de perfil estão armazenados.
+Você pode usar a prioridade de namespace para definir quais namespaces são mais importantes do que outros. A prioridade definida para os namespaces é usada para definir as identidades primárias, que é a identidade que armazena fragmentos de perfil (dados de atributos e eventos) no Perfil do cliente em tempo real. Se as configurações de prioridade estiverem definidas, a configuração de identidade principal no SDK da Web não será mais usada para determinar quais fragmentos de perfil estão armazenados.
 
 * Os limites e a prioridade são configurações independentes e **não** afetam-se mutuamente:
    * Limites é uma configuração de gráfico de identidade no Serviço de identidade.
    * Priority é uma configuração de fragmento de perfil no Perfil do cliente em tempo real.
    * A prioridade sim **não** afetam as medidas de proteção do sistema de gráficos de identidade.
+* **A prioridade do namespace é um valor numérico** atribuído a um namespace indicando sua importância relativa. Esta é uma propriedade de um namespace.
+* **A identidade principal é a identidade na qual um fragmento de perfil é armazenado**. Um fragmento de perfil é um registro de dados que armazena informações sobre um determinado usuário: atributos (geralmente assimilados por meio de registros do CRM) ou eventos (geralmente assimilados de eventos de experiência ou dados online).
+* A prioridade do namespace determina a identidade principal dos eventos de experiência.
+   * Para registros de perfil, você pode usar o espaço de trabalho de esquemas na interface do usuário do Experience Platform para definir campos de identidade, incluindo a identidade principal. Leia o guia em [definição de campos de identidade na interface](../../xdm/ui/fields/identity.md) para obter mais informações.
 
 >[!BEGINSHADEBOX]
 

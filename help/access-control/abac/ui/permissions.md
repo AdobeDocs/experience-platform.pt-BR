@@ -3,10 +3,10 @@ keywords: Experience Platform;página inicial;tópicos populares;controle de ace
 title: Permissões da Função Gerenciar Controle de Acesso Baseado em Atributo
 description: Este documento fornece informações sobre como configurar permissões para uma função por meio da interface de Permissões no Adobe Experience Cloud
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
-source-git-commit: 7c44683c8110d78654baba4bc53f2c3c2daf2831
+source-git-commit: ea79ac7fecd980aba87d003c8c23f271c74ec23d
 workflow-type: tm+mt
-source-wordcount: '966'
-ht-degree: 6%
+source-wordcount: '986'
+ht-degree: 3%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 6%
 
 Permissões é a área do Experience Cloud em que os administradores podem definir funções de usuário e políticas de acesso para gerenciar permissões de acesso para recursos e objetos em um aplicativo de produto.
 
-Através das permissões da , , é possível criar e gerenciar funções, bem como atribuir as permissões de recurso desejadas para essas funções. As permissões também permitem gerenciar rótulos, sandboxes e usuários associados a uma função específica.
+Através das Permissões, é possível criar e gerenciar funções, bem como atribuir as permissões de recurso desejadas para essas funções. As permissões também permitem gerenciar rótulos, sandboxes e usuários associados a uma função específica.
 
 Imediatamente após [criação de uma nova função](#create-a-new-role), você retornará à janela **[!UICONTROL Funções]** guia. Se você estiver editando permissões para uma função existente, selecione a função no menu **[!UICONTROL Funções]** guia. Como alternativa, use a opção de filtro para filtrar os resultados para localizar uma função.
 
@@ -100,6 +100,10 @@ Os usuários adicionados aparecem em **[!UICONTROL Usuários]** guia.
 Para remover um usuário de uma função, selecione a **X** ícone ao lado do nome do usuário.
 
 ![flac-remove-users](../../images/flac-ui/flac-remove-users.png)
+
+O vídeo a seguir tem como objetivo ajudá-lo a entender a criação de uma nova função e o gerenciamento de usuários para essa função.
+
+>[!VIDEO](https://video.tv.adobe.com/v/336081/?learn=on)
 
 ## Gerenciar credenciais de API para a função {#manage-api-credentials-for-role}
 

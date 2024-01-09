@@ -3,9 +3,9 @@ keywords: Experience Platform;página inicial;tópicos populares;controle de ace
 title: Usuários do gerenciador de controle de acesso baseado em atributos
 description: Este documento fornece informações sobre como gerenciar usuários e grupos de usuários por meio da interface de Permissões no Adobe Experience Cloud
 exl-id: 16450867-040a-4be1-a6c0-f03d0a1b90ba
-source-git-commit: 44ffcc09edcfe35bdd456b509fac6f096ef8e022
+source-git-commit: d410e7ea635471f2bbc93c9d332ad7e2f619d054
 workflow-type: tm+mt
-source-wordcount: '217'
+source-wordcount: '257'
 ht-degree: 0%
 
 ---
@@ -14,17 +14,17 @@ ht-degree: 0%
 
 Se quiser exibir os detalhes e as funções dos usuários aos quais eles estão atribuídos, selecione a **[!UICONTROL Usuários]** guia.
 
-![flac-users-tab](../../images/flac-ui/flac-users-tab.png)
+![Página Usuários exibida com o [!UICONTROL Usuários] guia realçada.](../../images/flac-ui/flac-users-tab.png)
 
 Uma lista de usuários é exibida. Selecione o usuário que deseja visualizar na lista. Como alternativa, use a barra de pesquisa para procurar o usuário inserindo seu nome ou endereço de email.
 
 A guia de detalhes fornece uma visão geral do usuário. A visão geral exibe o nome do usuário, o tipo de conta, o email, a ID de autenticação, as informações de contato e os detalhes de localização.
 
-![flac-users-details](../../images/flac-ui/flac-users-details.png)
+![Página de detalhes do usuário com [!UICONTROL Detalhes] e o perfil de usuário destacado.](../../images/flac-ui/flac-users-details.png)
 
 Selecione o **[!UICONTROL Funções]** para exibir as funções às quais o usuário está atribuído.
 
-![flac-users-roles](../../images/flac-ui/flac-users-roles.png)
+![A página Funções é exibida com a [!UICONTROL Funções] guia e função realçadas.](../../images/flac-ui/flac-users-roles.png)
 
 ## Desenvolvedor e controle de acesso à API com permissões de Experience Platform
 
@@ -33,6 +33,10 @@ Selecione o **[!UICONTROL Funções]** para exibir as funções às quais o usu�
 >Somente administradores do sistema têm a capacidade de exibir e gerenciar credenciais de API nas Permissões.
 
 A transição para as permissões do Adobe Experience Platform tem etapas adicionais que precisam ser concluídas para o fluxo de trabalho da API do desenvolvedor, que anteriormente dependia de funções. Consulte o guia sobre [Autenticação de API](../../../landing/api-authentication.md) para obter mais informações.
+
+O vídeo a seguir é destinado a fornecer suporte à sua compreensão das credenciais de desenvolvedor e de API do.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3426407/?learn=on)
 
 ## Próximas etapas
 

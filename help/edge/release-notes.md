@@ -3,10 +3,10 @@ title: Notas de versão do SDK da Web da Adobe Experience Platform
 description: As notas de versão mais recentes do SDK da Web da Adobe Experience Platform.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;notas de versão;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 8cec606849489ef1e8845254117d184d5dc3c70a
+source-git-commit: e46ac94a2328b045d7270b2498d6cb7ef5f0464b
 workflow-type: tm+mt
-source-wordcount: '1678'
-ht-degree: 4%
+source-wordcount: '1740'
+ht-degree: 2%
 
 ---
 
@@ -16,9 +16,17 @@ ht-degree: 4%
 Este documento aborda as notas de versão do Adobe Experience Platform Web SDK.
 Para obter as notas de versão mais recentes da extensão de tag do SDK da Web, consulte o [Notas de versão da extensão de tag do SDK da Web](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
 
+## Versão 2.19.2 - 10 de janeiro de 2024
+
+**Correções e aprimoramentos**
+
+* Correção de um problema em que os erros de identidade mascaravam outros erros e alteravam os erros de identidade para avisos.
+* Correção de um problema em que a parte inferior das chamadas de página nunca era enviada quando havia uma chamada na parte superior da página com renderDecisions definidas como false.
+* Correção de um problema em que o SDK da Web não lia identidades entre domínios quando havia vários parâmetros de sequência de consulta adobe_mc.
+
 ## Versão 2.19.1 - 10 de novembro de 2023
 
-**Correções e melhorias**
+**Correções e aprimoramentos**
 
 * Correção de um problema em que a matriz de apresentações retornava de `sendEvent` As chamadas sempre estavam vazias.
 
@@ -30,7 +38,7 @@ Para obter as notas de versão mais recentes da extensão de tag do SDK da Web, 
 * Adição de suporte para eventos na parte superior e inferior da página.
 * Adição da opção &quot;defaultPersonalizationEnabled&quot; ao comando sendEvent para controlar a solicitação do escopo de toda a página e da superfície padrão.
 
-**Correções e melhorias**
+**Correções e aprimoramentos**
 
 * A personalização combinada exibe eventos juntos ao renderizar vários tipos de personalização.
 * Correção de um problema em que os nomes de exibição do aplicativo de página única diferenciavam maiúsculas de minúsculas.
@@ -42,14 +50,14 @@ Para obter as notas de versão mais recentes da extensão de tag do SDK da Web, 
 
 * Suporte adicionado para [substituições por comando da ID do fluxo de dados](../datastreams/overrides.md).
 
-**Correções e melhorias**
+**Correções e aprimoramentos**
 
 * Correção de um problema em que os links de saída falhavam ao serem qualificados devido ao domínio fazer parte da consulta.
 * Obsoleto `edgeConfigId` a favor de `datastreamId` na configuração do SDK da Web.
 
 ## Versão 2.17.0 - 17 de maio de 2023
 
-**Correções e melhorias**
+**Correções e aprimoramentos**
 
 * O SDK da Web agora codifica os valores de destino do cookie Audience Manager, semelhantes ao [Data Integration Library (DIL)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=pt-BR).
 
@@ -66,7 +74,7 @@ Para obter as notas de versão mais recentes da extensão de tag do SDK da Web, 
 * Suporte adicionado para [`onBeforeLinkClickSend`](fundamentals/configuring-the-sdk.md#onBeforeLinkClickSend) link, clique em callback.
 * Adição de suporte para o rastreamento de cliques do Adobe Journey Optimizer.
 
-**Correções e melhorias**
+**Correções e aprimoramentos**
 
 * A coleção de links agora inclui o nome do link e a região do visitante.
 * Remoção do erro de console para destinos de URL com falha.
@@ -75,7 +83,7 @@ Para obter as notas de versão mais recentes da extensão de tag do SDK da Web, 
 
 * (Beta) Adição de suporte para superfícies e apresentações do Adobe Journey Optimizer.
 
-**Correções e melhorias**
+**Correções e aprimoramentos**
 
 * Correção de um problema com ações de código personalizado do Adobe Target VEC em que o código era inserido em um local alternativo em vez de com [!DNL at.js].
 * Correção de um problema em que, em alguns casos de borda, o cabeçalho &quot;referenciador&quot; não era definido corretamente em solicitações para a Rede de borda.
@@ -96,7 +104,7 @@ Para obter as notas de versão mais recentes da extensão de tag do SDK da Web, 
 * Adição de suporte para o novo `applyResponse` comando. Isso permite a personalização híbrida por meio do [API do servidor de rede de borda](../server-api/overview.md).
 * Os links do modo de controle de qualidade agora funcionam em várias páginas.
 
-**Correções e melhorias**
+**Correções e aprimoramentos**
 
 * Correção de um problema em que as métricas de rastreamento de cliques de personalização não eram atualizadas quando o rastreamento de link era desativado.
 * Comandos atualizados para gerar um erro de validação quando opções desconhecidas forem especificadas.
@@ -117,7 +125,7 @@ Para obter as notas de versão mais recentes da extensão de tag do SDK da Web, 
 * Agora é possível renderizar ou executar uma matriz de propostas de [!DNL Adobe Target] em aplicativos de página única, sem incrementar as métricas do analytics. Isso reduz os erros de relatório e aumenta a precisão da análise. Consulte a [documentação dedicada](personalization/rendering-personalization-content.md#applypropositions) para saber mais.
 * Foram adicionadas informações adicionais à `getLibraryInfo` incluindo os comandos disponíveis e a configuração final da instância.
 
-**Correções e melhorias**
+**Correções e aprimoramentos**
 
 * Configurações de cookie atualizadas para usar `sameSite="none"` e `secure` sinalizador ativado [!DNL HTTPS] páginas.
 * Correção de um problema em que o conteúdo personalizado não era aplicado corretamente ao usar o `eq` pseudoseletor.

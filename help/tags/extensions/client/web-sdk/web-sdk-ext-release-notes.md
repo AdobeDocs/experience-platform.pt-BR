@@ -2,10 +2,10 @@
 title: Notas de versão da extensão SDK da Web da Adobe Experience Platform
 description: Extensão de tag do SDK da Web da Adobe Experience Platform
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 8cec606849489ef1e8845254117d184d5dc3c70a
+source-git-commit: fb2cf23f4762eec4bcab1126bdfb1aaa4144e777
 workflow-type: tm+mt
-source-wordcount: '1833'
-ht-degree: 36%
+source-wordcount: '1990'
+ht-degree: 32%
 
 ---
 
@@ -14,11 +14,20 @@ ht-degree: 36%
 
 Este documento aborda as notas de versão da extensão de tag do SDK da Web da Adobe Experience Platform. Para obter as notas de versão mais recentes sobre o próprio SDK, consulte a [Notas de versão do SDK da Web da Platform](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html?lang=pt-BR).
 
+## Versão 2.21.4 - 10 de janeiro de 2024
+
+**Correções e aprimoramentos**
+
+* Correção de um problema em que salvar as Substituições de configuração sem todos os três ambientes definidos travaria a interface do usuário da extensão.
+* Correção de um problema em que a caixa de seleção limpar raiz do valor existente não era preenchida ao editar uma ação de atualização de variável.
+
+Contém a versão 2.19.2 do SDK da Web da Adobe Experience Platform.
+
 ## Versão 2.21.3 - 10 de novembro de 2023
 
 Contém a versão 2.19.1 do SDK da Web da Adobe Experience Platform.
 
-**Correções e melhorias**
+**Correções e aprimoramentos**
 
 * Correção de um problema em que a matriz de apresentações estava disponível em `Send event complete` events estava sempre vazio.
 
@@ -32,19 +41,19 @@ Contém a versão 2.19.1 do SDK da Web da Adobe Experience Platform.
 * Adicionado `Evaluate rulesets` ação e `Subscribe ruleset items` evento para mensagens no aplicativo.
 * Adicionado `Decision context` para enviar uma ação de evento.
 
-**Correções e melhorias**
+**Correções e aprimoramentos**
 
 * Contém a versão 2.19.0 do SDK da Web do Adobe Experience Platform.
 
 ## Versão 2.20.3 - 8 de agosto de 2023
 
-**Correções e melhorias**
+**Correções e aprimoramentos**
 
 * Correção de um problema em que os elementos de dados não podiam ser salvos no campo de substituição da ID do contêiner de sincronização de ID.
 
 ## Versão 2.20.1 - 3 de agosto de 2023
 
-**Correções e melhorias**
+**Correções e aprimoramentos**
 
 * Aprimorada a validação das configurações salvas de substituição de fluxo de dados.
 
@@ -54,7 +63,7 @@ Contém a versão 2.19.1 do SDK da Web da Adobe Experience Platform.
 
 * Suporte adicionado para [substituições por comando da ID do fluxo de dados](../../../../datastreams/overrides.md).
 
-**Correções e melhorias**
+**Correções e aprimoramentos**
 
 * Obsoleto `edgeConfigId` a favor de `datastreamId` na configuração do SDK.
 * Várias melhorias na experiência do usuário para a configuração da sequência de dados substitui a interface do usuário.
@@ -76,7 +85,7 @@ Contém a versão 2.19.1 do SDK da Web da Adobe Experience Platform.
 * Adicionar aviso de desativação à `datasetId` opção no `sendEvent` comando.
 
 
-**Correções e melhorias**
+**Correções e aprimoramentos**
 
 * Correção de um problema em que a rolagem no Safari fechava o seletor de sequência de dados.
 
@@ -91,7 +100,7 @@ Contém a versão 2.19.1 do SDK da Web da Adobe Experience Platform.
 * (Beta) Adicionado **[!UICONTROL Atualizar variável]** ação e **[!UICONTROL Variável]** elemento de dados.
 * Adição de configuração para [`onBeforeLinkClickSend`](../../../../edge/fundamentals/configuring-the-sdk.md#onBeforeLinkClickSend) função de retorno de chamada.
 
-**Correções e melhorias**
+**Correções e aprimoramentos**
 
 * Correção de um problema que fazia com que os cliques em elementos em uma tag de âncora não funcionassem quando a variável **[!UICONTROL Redirecionar com identidade]** ação foi usada.
 * Correção de um problema em que os elementos de dados do objeto XDM não funcionavam quando havia apenas um esquema presente.
@@ -241,7 +250,7 @@ Contém a versão 2.3.0 da biblioteca de SDK da Web da Adobe Experience Platform
 
 ## Versão 2.1.0 - 5 de agosto de 2020
 
-* Nova alteração: remove a ação `syncIdentity` e oferece suporte à transmissão dessas IDs na ação `sendEvent`. Desative qualquer regra existente que use essa ação antes de atualizar a extensão.
+* Nova alteração: remove a ação `syncIdentity` e oferece suporte à transmissão dessas IDs na ação `sendEvent`. Desabilite qualquer regra existente que use essa ação antes de atualizar a extensão.
 * Atualizar para Alloy v. 2.1.0 ([Notas de versão](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html?lang=pt-BR)).
 * Suporte ao Padrão de consentimento IAB 2.0 na ação `setConsent`.
 * Suporte à substituição da ID do conjunto de dados na ação `sendEvent`.
@@ -282,7 +291,7 @@ Essas decisões retornam do comando `sendEvent` somente se `renderDecisions` est
 * A solicitação feita durante a migração da ID é enviada para o endpoint demdex para melhorar a identificação entre domínios quando o cookie demdex não está definido.
 * A solicitação feita durante a migração de ID sempre espera uma resposta para garantir que o cookie de identidade seja definido.
 * Ao executar um comando inválido, uma lista de nomes de comando válidos será registrada no console.
-* Adição de uma caixa de seleção para alternar o suporte a cookies de terceiros na extensão de tag. Isso desativa chamadas com demdex.net.
+* Adição de uma caixa de seleção para alternar o suporte a cookies de terceiros na extensão de tag. Isso desabilita chamadas com demdex.net
 
 ## Versão 0.0.5 - 20 de dezembro de 2019
 

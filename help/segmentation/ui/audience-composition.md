@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guia da interface do usuário de públicos
 description: A Composição de público-alvo na interface do usuário do Adobe Experience Platform fornece um espaço de trabalho avançado que permite interagir com elementos de dados do perfil. O espaço de trabalho fornece controles intuitivos para criação e edição de públicos-alvo para sua organização.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: 820ba6c9cedcb85db7ff9bc199a67e56ee628c93
+source-git-commit: 5262b5e894cc6bfa2db79afcda8bfda4b496f7d5
 workflow-type: tm+mt
-source-wordcount: '1780'
+source-wordcount: '1789'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ A variável **[!UICONTROL Propriedades de composição]** popover é exibido. Vo
 
 >[!NOTE]
 >
->Se você fizer **não** Dê um título à sua composição, ela terá um título de &quot;Composição&quot; seguido pela data e hora de criação por padrão.
+>Se você fizer **não** Dê um título à sua composição, ela terá um título de &quot;Composição&quot; seguido pela data e hora de criação por padrão. Além disso, cada composição **deve** tem seu próprio nome exclusivo.
 
 Depois de atualizar os detalhes da sua composição, selecione **[!UICONTROL Salvar]** para confirmar essas atualizações. A tela de composição do público-alvo é exibida novamente.
 
@@ -220,7 +220,7 @@ Além disso, é possível limitar o número de públicos-alvo retornados ativand
 
 ![A opção Add profile limit está realçada, o que permite limitar o número de públicos-alvo retornados.](../images/ui/audience-composition/add-profile-limit.png)
 
-## [!UICONTROL Divisão] {#split-block}
+## [!UICONTROL Dividir] {#split-block}
 
 A variável **[!UICONTROL Split]** o tipo de bloco permite dividir o novo público em vários subpúblicos. Você pode dividir esse público com base na porcentagem ou por um atributo.
 

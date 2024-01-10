@@ -2,9 +2,9 @@
 description: Esta página lista e descreve as etapas para configurar um destino baseado em arquivo usando o Destination SDK.
 title: Usar o Destination SDK para configurar um destino baseado em arquivo
 exl-id: 84d73452-88e4-4e0f-8fc7-d0d8e10f9ff5
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 45ba0db386f065206f89ed30bfe7b0c1b44f6173
 workflow-type: tm+mt
-source-wordcount: '681'
+source-wordcount: '732'
 ht-degree: 1%
 
 ---
@@ -27,7 +27,7 @@ Antes de seguir para as etapas ilustradas abaixo, leia a [introdução ao Destin
 
 Iniciar por [criação de uma configuração de servidor e arquivo](../authoring-api/destination-server/create-destination-server.md) usando o `/destinations-server` terminal.
 
-Veja abaixo um exemplo de configuração de um [!DNL Amazon S3] destino. Para configurar outros tipos de destinos baseados em arquivo, consulte os respectivos [configurações do servidor](../functionality/destination-server/server-specs.md).
+Veja abaixo um exemplo de configuração de um [!DNL Amazon S3] destino. Para obter mais detalhes sobre os campos usados na configuração do e configurar outros tipos de destinos baseados em arquivo, consulte os respectivos [configurações do servidor](../functionality/destination-server/server-specs.md).
 
 **Formato da API**
 
@@ -40,7 +40,7 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
     "name": "S3 destination",
     "destinationServerType": "FILE_BASED_S3",
     "fileBasedS3Destination": {
-        "bucketName": {
+        "bucket": {
             "templatingStrategy": "PEBBLE_V1",
             "value": "{{customerData.bucketName}}"
         },
@@ -116,7 +116,7 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 
 Veja abaixo um exemplo de uma configuração de destino, criada usando o `/destinations` Endpoint da API.
 
-Para conectar o servidor e a configuração de arquivo na etapa 1 a essa configuração de destino, adicione o ID da instância do servidor e a configuração do modelo como `destinationServerId` aqui.
+Para conectar o servidor e a configuração de arquivo da etapa 1 a essa configuração de destino, adicione o `instance ID` da configuração do servidor e do arquivo como `destinationServerId` aqui.
 
 **Formato da API**
 
@@ -124,7 +124,7 @@ Para conectar o servidor e a configuração de arquivo na etapa 1 a essa configu
 POST platform.adobe.io/data/core/activation/authoring/destinations
 ```
 
-```json {line-numbers="true" highlight="84"}
+```json {line-numbers="true" highlight="83"}
 {
     "name": "Amazon S3 destination",
     "description": "Amazon S3 destination is a fictional destination, used for this example.",
@@ -189,7 +189,7 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
         }
     ],
     "uiAttributes": {
-        "documentationLink": "https://www.adobe.io/apis/experienceplatform.html",
+        "documentationLink": "https://www.adobe.com/go/destinations-YOURDESTINATION-en",
         "category": "S3",
         "connectionType": "S3",
         "flowRunsSupported": true,
@@ -232,7 +232,22 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
             "ONCE"
         ],
         "defaultFrequency": "DAILY",
-        "defaultStartTime": "00:00"
+        "defaultStartTime": "00:00",
+       "filenameConfig":{
+         "allowedFilenameAppendOptions":[
+            "SEGMENT_NAME",
+            "DESTINATION_INSTANCE_ID",
+            "DESTINATION_INSTANCE_NAME",
+            "ORGANIZATION_NAME",
+            "SANDBOX_NAME",
+            "DATETIME",
+            "CUSTOM_TEXT"
+         ],
+         "defaultFilenameAppendOptions":[
+            "DATETIME"
+         ],
+         "defaultFilename":"%DESTINATION%_%SEGMENT_ID%"
+      }
     },
     "backfillHistoricalProfileData": true
 }
@@ -244,7 +259,7 @@ Para alguns destinos, o Destination SDK exige a definição de uma configuraçã
 
 Se você usar uma configuração de metadados de público, deverá conectá-la à configuração de destino criada na etapa 2. Adicione a ID da instância da configuração de metadados de público-alvo à configuração de destino como `audienceTemplateId`.
 
-```json {line-numbers="true" highlight="91"}
+```json {line-numbers="true" highlight="90"}
 {
     "name": "Amazon S3 destination",
     "description": "Amazon S3 destination is a fictional destination, used for this example.",
@@ -309,7 +324,7 @@ Se você usar uma configuração de metadados de público, deverá conectá-la �
         }
     ],
     "uiAttributes": {
-        "documentationLink": "https://www.adobe.io/apis/experienceplatform.html",
+        "documentationLink": "http://www.adobe.com/go/destinations-YOURDESTINATION-en",
         "category": "S3",
         "connectionType": "S3",
         "flowRunsSupported": true,
@@ -358,7 +373,22 @@ Se você usar uma configuração de metadados de público, deverá conectá-la �
             "ONCE"
         ],
         "defaultFrequency": "DAILY",
-        "defaultStartTime": "00:00"
+        "defaultStartTime": "00:00",
+       "filenameConfig":{
+         "allowedFilenameAppendOptions":[
+            "SEGMENT_NAME",
+            "DESTINATION_INSTANCE_ID",
+            "DESTINATION_INSTANCE_NAME",
+            "ORGANIZATION_NAME",
+            "SANDBOX_NAME",
+            "DATETIME",
+            "CUSTOM_TEXT"
+         ],
+         "defaultFilenameAppendOptions":[
+            "DATETIME"
+         ],
+         "defaultFilename":"%DESTINATION%_%SEGMENT_ID%"
+      }
     },
     "backfillHistoricalProfileData": true
 }
@@ -367,6 +397,10 @@ Se você usar uma configuração de metadados de público, deverá conectá-la �
 ## Etapa 4: configurar autenticação {#set-up-authentication}
 
 Dependendo de você especificar ou não `"authenticationRule": "CUSTOMER_AUTHENTICATION"` ou `"authenticationRule": "PLATFORM_AUTHENTICATION"` na configuração de destino acima, você pode definir a autenticação para seu destino usando o `/destination` ou o `/credentials` terminal.
+
+>[!NOTE]
+>
+>`CUSTOMER_AUTHENTICATION` é a mais comum das duas regras de autenticação e é a que deve ser usada se você exigir que os usuários forneçam alguma forma de autenticação para o seu destino antes que possam configurar uma conexão e exportar dados.
 
 * Se você selecionou `"authenticationRule": "CUSTOMER_AUTHENTICATION"` na configuração de destino, consulte as seguintes seções para os tipos de autenticação aceitos pelo Destination SDK para destinos baseados em arquivo:
 
@@ -384,10 +418,10 @@ Dependendo de você especificar ou não `"authenticationRule": "CUSTOMER_AUTHENT
 
 Depois de definir seu destino usando os endpoints de configuração nas etapas anteriores, você pode usar o [ferramenta de teste de destino](../testing-api/batch-destinations/file-based-destination-testing-overview.md) para testar a integração entre o Adobe Experience Platform e o seu destino.
 
-Como parte do processo para testar o destino, é necessário usar a interface do usuário do Experience Platform para criar segmentos, que você ativará para o destino. Consulte os dois recursos abaixo para obter instruções sobre como criar públicos-alvo no Experience Platform:
+Como parte do processo para testar o destino, é necessário usar a interface do usuário do Experience Platform para criar públicos-alvo, que você ativará para o destino. Consulte os dois recursos abaixo para obter instruções sobre como criar públicos-alvo no Experience Platform:
 
-* [Criar uma página de documentação de público-alvo](/help/segmentation/ui/overview.md#create-segment)
-* [Criar uma apresentação de vídeo de público-alvo](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)
+* [Criar um público-alvo: página de documentação](/help/segmentation/ui/overview.md#create-segment)
+* [Criar um público-alvo - apresentação em vídeo](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)
 
 ## Etapa 6: publicar seu destino {#publish-destination}
 

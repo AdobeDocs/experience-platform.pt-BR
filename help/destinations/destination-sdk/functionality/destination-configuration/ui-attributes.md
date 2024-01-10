@@ -2,16 +2,16 @@
 description: Saiba como configurar os atributos da interface do usuário, como o link de documentação, a categoria de cartão de destino, o tipo e a frequência de conexão de destino, para destinos criados com o Destination SDK.
 title: Atributos da interface
 exl-id: aed8d868-c516-45da-b224-c7e99e4bfaf1
-source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
+source-git-commit: 995e464ca43e0738c16dd4e0ec928d27e5a8b029
 workflow-type: tm+mt
-source-wordcount: '755'
+source-wordcount: '800'
 ht-degree: 0%
 
 ---
 
 # Atributos da interface
 
-Os atributos da interface definem os elementos visuais que o Adobe deve exibir para o cartão de destino na interface do usuário do Adobe Experience Platform, como o logotipo da plataforma de destino, um link para a página de documentação, uma descrição do destino e sua categoria e tipo.
+Os atributos da interface definem os elementos visuais que o Adobe deve exibir para o cartão de destino na interface do usuário do Adobe Experience Platform, como um logotipo, um link para a página de documentação, uma descrição do destino e sua categoria e tipo.
 
 Para entender onde esse componente se encaixa em uma integração criada com o Destination SDK, consulte o diagrama no [opções de configuração](../configuration-options.md) ou consulte as seguintes páginas de visão geral da configuração de destino:
 
@@ -21,10 +21,10 @@ Para entender onde esse componente se encaixa em uma integração criada com o D
 Quando [criação de um destino](../../authoring-api/destination-configuration/create-destination-configuration.md) por meio do Destination SDK, o `uiAttributes` define as seguintes propriedades visuais do cartão de destino:
 
 * O URL da página de documentação de destino no [catálogo de destino](../../../catalog/overview.md).
-* O URL no qual você hospedou o ícone a ser exibido no cartão do catálogo de destinos.
 * A categoria em que o destino estará visível na interface do usuário da Platform.
 * A frequência de exportação de dados para seu destino.
 * O tipo de conexão de destino, como Amazon S3, Azure Blob etc.
+* O URL no qual você hospedou o ícone a ser exibido no cartão do catálogo de destinos.
 
 É possível configurar atributos de interface do usuário por meio da `/authoring/destinations` terminal. Consulte as seguintes páginas de referência de API para obter exemplos detalhados de chamadas de API, onde é possível configurar os componentes mostrados nesta página.
 
@@ -82,14 +82,6 @@ Os usuários podem ver a lista de categorias de destino no lado esquerdo da tela
 
 ![Imagem da interface do usuário mostrando o local da categoria de destino.](../../assets/functionality/destination-configuration/ui-attributes-category.png)
 
-<!-- ### `iconUrl` {#icon-url}
-
-`iconUrl` is a string parameter that refers to the URL where you hosted the icon to be displayed in the destinations catalog card. For private custom integrations, this is not required. For productized configurations, you need to share an icon with the Adobe team when you [submit the destination for review](../../guides/submit-destination.md#logo).
-
-Users can see the icon on your destination card, as shown in the image below.
-
-![UI image showing the icon location.](../../assets/functionality/destination-configuration/ui-attributes-icon.png) -->
-
 ### `connectionType` {#connection-type}
 
 `connectionType` é um parâmetro de string que se refere ao tipo de conexão, dependendo do destino. Valores compatíveis: <ul><li>`Server-to-server`</li><li>`Cloud storage`</li><li>`Azure Blob`</li><li>`Azure Data Lake Storage`</li><li>`S3`</li><li>`SFTP`</li><li>`DLZ`</li></ul>
@@ -113,6 +105,14 @@ Se o destino que você está criando com o Destination SDK estiver disponível p
 Para fazer isso, você pode usar o `isBeta: "true"` na seção Atributos da interface da configuração de destino para marcar o cartão de destino adequadamente.
 
 ![Imagem da interface do usuário mostrando um cartão de destino marcado como beta.](../../assets/functionality/destination-configuration/ui-attributes-isbeta.png)
+
+### `icon` {#icon}
+
+Você pode adicionar um ícone de logotipo ao seu destino, conforme mostrado na imagem abaixo.
+
+![Imagem da interface mostrando o local do ícone.](../../assets/functionality/destination-configuration/ui-attributes-icon.png)
+
+Para adicionar um logotipo ao cartão de destino, é necessário compartilhar a imagem desejada com a equipe do Adobe ao [enviar o destino para revisão](../../guides/submit-destination.md#logo).
 
 ## Próximas etapas {#next-steps}
 

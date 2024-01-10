@@ -5,9 +5,9 @@ product: experience platform
 type: Documentation
 description: Saiba mais sobre o desempenho e as medidas de proteção aplicadas pelo sistema para segmentação e dados de perfil para garantir o uso ideal da funcionalidade da Real-Time CDP.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: c7537959b1cc53998acafbccaa2f39686afd9f15
+source-git-commit: 17aa9029dc83454133847352c21aa9ac68f23be8
 workflow-type: tm+mt
-source-wordcount: '2282'
+source-wordcount: '2430'
 ht-degree: 2%
 
 ---
@@ -114,13 +114,27 @@ As medidas de proteção descritas nesta seção referem-se ao número e à natu
 
 | Grade de Proteção | Limite | Tipo de limite | Descrição |
 | --- | --- | --- | --- |
-| Públicos-alvo por sandbox | 4000 | Proteção de desempenho | Uma organização pode ter mais de 4000 públicos-alvo no total, desde que haja menos de 4000 públicos-alvo em cada sandbox individual. Tentar criar públicos adicionais pode afetar o desempenho do sistema. Leia mais sobre [criação de públicos](/help/segmentation/ui/segment-builder.md) por meio do construtor de segmentos. |
+| Públicos-alvo por sandbox | 4000 | Proteção de desempenho | Uma organização pode ter mais de 4000 públicos-alvo no total, desde que haja menos de 4000 públicos-alvo em cada sandbox individual. Isso inclui públicos em lote, de streaming e de borda. Tentar criar públicos adicionais pode afetar o desempenho do sistema. Leia mais sobre [criação de públicos](/help/segmentation/ui/segment-builder.md) por meio do construtor de segmentos. |
 | Públicos-alvo da borda por sandbox | 150 | Proteção de desempenho | Uma organização pode ter mais de 150 públicos-alvo de borda no total, desde que haja menos de 150 públicos-alvo de borda em cada sandbox individual. Tentar criar públicos-alvo de borda adicionais pode afetar o desempenho do sistema. Leia mais sobre [públicos-alvo de borda](/help/segmentation/ui/edge-segmentation.md). |
-| Públicos-alvo de transmissão por sandbox | 500 | Proteção de desempenho | Uma organização pode ter mais de 500 públicos-alvo de transmissão no total, desde que haja menos de 500 públicos-alvo de transmissão em cada sandbox individual. Tentar criar públicos de transmissão adicionais pode afetar o desempenho do sistema. Leia mais sobre [públicos-alvo de transmissão](/help/segmentation/ui/streaming-segmentation.md). |
+| Taxa de transferência de borda em todas as sandboxes | 1500 RPS | Proteção de desempenho | A segmentação de borda suporta até 1.500 eventos de entrada por segundo ao entrar na rede de borda da Adobe Experience Platform. A segmentação de borda pode levar até 350 milissegundos para processar um evento de entrada depois que ele entra na rede de borda da Adobe Experience Platform. Leia mais sobre [públicos-alvo de borda](/help/segmentation/ui/edge-segmentation.md). |
+| Públicos-alvo de transmissão por sandbox | 500 | Proteção de desempenho | Uma organização pode ter mais de 500 públicos-alvo de transmissão no total, desde que haja menos de 500 públicos-alvo de transmissão em cada sandbox individual. Isso inclui públicos de transmissão e de borda. Tentar criar públicos de transmissão adicionais pode afetar o desempenho do sistema. Leia mais sobre [públicos-alvo de transmissão](/help/segmentation/ui/streaming-segmentation.md). |
+| Taxa de transferência de transmissão em todas as sandboxes | 1500 RPS | Proteção de desempenho | A segmentação de transmissão suporta até 1.500 eventos de entrada por segundo. A segmentação de transmissão pode levar até 5 minutos para qualificar um perfil para associação de segmento. Leia mais sobre [públicos-alvo de transmissão](/help/segmentation/ui/streaming-segmentation.md). |
 | Públicos em lote por sandbox | 4000 | Proteção de desempenho | Uma organização pode ter mais de 4000 públicos-alvo em lote no total, desde que haja menos de 4000 públicos-alvo em lote em cada sandbox individual. Tentar criar públicos-alvo em lote adicionais pode afetar o desempenho do sistema. |
 | Públicos-alvo da conta por sandbox | 50 | Proteção imposta pelo sistema | Você pode criar no máximo 50 públicos-alvo de conta em uma sandbox. Depois de atingir 50 públicos-alvo em uma sandbox, a variável **[!UICONTROL Criar público]** o controle está desativado ao tentar criar um novo público-alvo para a conta. Leia mais sobre [públicos-alvo da conta](/help/segmentation/ui/account-audiences.md). |
 | Composições publicadas por sandbox | 10 | Proteção de desempenho | Você pode ter no máximo 10 composições publicadas em uma sandbox. Leia mais sobre [composição de público-alvo no guia da interface](/help/segmentation/ui/audience-composition.md). |
 | Tamanho máximo do público | 30 por cento | Proteção de desempenho | A associação máxima recomendada de um público-alvo é de 30% do número total de perfis no sistema. É possível criar públicos-alvo com mais de 30% dos perfis como membros ou vários públicos-alvo grandes, mas isso afetará o desempenho do sistema. |
+
+{style="table-layout:auto"}
+
+## Disponibilidade esperada
+
+A seção a seguir descreve as **esperado** disponibilidade para públicos e políticas de mesclagem em serviços downstream, como destinos do Real-Time CDP:
+
+| Tipo de sandbox | Hora |
+| ------------ | ---- |
+| Sandboxes existentes | 1 hora |
+| Novas sandboxes | 2 horas |
+| Redefinir sandboxes recentemente | 2 horas |
 
 {style="table-layout:auto"}
 

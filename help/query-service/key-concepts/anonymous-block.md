@@ -2,9 +2,9 @@
 title: Bloqueio Anônimo no Serviço de Consulta
 description: O bloco anônimo é uma sintaxe SQL compatível com o Adobe Experience Platform Query Service, que permite executar uma sequência de consultas com eficiência
 exl-id: ec497475-9d2b-43aa-bcf4-75a430590496
-source-git-commit: b7de5d3b2ceba27f5e86d48078be484dcb6f7c4b
+source-git-commit: 9193ba821409806cd7b4667c5de73a0cf2660c66
 workflow-type: tm+mt
-source-wordcount: '647'
+source-wordcount: '616'
 ht-degree: 0%
 
 ---
@@ -14,10 +14,6 @@ ht-degree: 0%
 O Serviço de consulta do Adobe Experience Platform oferece suporte a blocos anônimos. O recurso de bloqueio anônimo permite encadear uma ou mais instruções SQL que são executadas em sequência. Permitem também a opção de tratamento de exceções.
 
 O recurso de bloco anônimo é uma maneira eficiente de executar uma sequência de operações ou consultas. A cadeia de consultas no bloco pode ser salva como um modelo e agendada para execução em um horário ou intervalo específico. Essas queries podem ser usadas para gravar e anexar dados para criar um novo conjunto de dados e normalmente são usadas onde você tem uma dependência.
-
->[!IMPORTANT]
->
->No momento, o agendamento de consultas usando blocos anônimos só é possível por meio do [!DNL Query Service] API. Consulte a documentação para [complete as instruções sobre como agendar consultas por meio da API](../api/scheduled-queries.md).
 
 A tabela fornece um detalhamento das seções principais do bloco: execução e tratamento de exceções. As seções são definidas pelas palavras-chave `BEGIN`, `END`, e `EXCEPTION`.
 

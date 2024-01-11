@@ -2,12 +2,11 @@
 solution: Experience Platform
 title: Públicos-alvo semelhantes
 description: Saiba como direcionar novos públicos-alvo de alto valor no Adobe Experience Platform usando públicos-alvo semelhantes.
-badgeLimitedAvailability: label="Disponibilidade limitada" type=Caution
 exl-id: c43dac6c-18a0-482f-803e-b75e1b211e98
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: fe2bb709a7ee56323492fed381c447e6a79fd5f8
 workflow-type: tm+mt
-source-wordcount: '2121'
-ht-degree: 10%
+source-wordcount: '2212'
+ht-degree: 9%
 
 ---
 
@@ -15,7 +14,7 @@ ht-degree: 10%
 
 >[!IMPORTANT]
 >
->Observe que os insights de semelhança e os públicos de semelhança estão em **disponibilidade limitada**.
+>Os insights semelhantes e os públicos semelhantes só estão disponíveis no **Edição B2C**.
 
 No Adobe Experience Platform, os públicos-alvo semelhantes fornecem insights inteligentes sobre cada um dos públicos-alvo, aproveitando insights baseados em aprendizado de máquina para identificar e direcionar clientes de alto valor com suas campanhas de marketing.
 
@@ -29,6 +28,15 @@ Antes de começar a usar públicos-alvo semelhantes, compreenda os seguintes con
 - **Modelo semelhante**: um modelo semelhante é um modelo de aprendizado de máquina treinado em cada público-alvo básico elegível sem nenhuma contribuição do cliente. Cada modelo semelhante cria os fatores influentes e gráficos de similaridade. Um modelo semelhante não **não** obtenha pontuação.
 - **Público semelhante**: um público-alvo semelhante é o público-alvo criado quando um modelo semelhante com um limite de similaridade selecionado é aplicado ao público-alvo base. Você pode criar vários públicos-alvo semelhantes usando o mesmo modelo semelhante. O público-alvo semelhante é o que recebe a pontuação.
 - **Tamanho total do público endereçável**: o tamanho total do público-alvo endereçável é o número total de perfis nos últimos 30 dias menos a população base do público-alvo nos últimos 30 dias. Por exemplo, se um cliente tiver 10 milhões de perfis nos últimos 30 dias e o público base tiver 1 milhão de perfis nos últimos 30 dias, o tamanho total do público endereçável será de 9 milhões de perfis.
+
+## Elegibilidade {#eligibility}
+
+Para usar insights semelhantes, o público-alvo base **deve** Cumpram os seguintes critérios de elegibilidade:
+
+- O público base **deve** ser criado na Platform.
+   - Públicos-alvo gerados externamente são **não** qualificado para insights semelhantes.
+- O público base **deve** estar na política de mesclagem padrão.
+- O público base **deve** não usar campos restritos pela governança de dados.
 
 ## Detalhes do modelo semelhante {#details}
 
@@ -177,13 +185,19 @@ A página de detalhes do público-alvo é exibida. Para obter mais informações
 
 ## Excluir campos de dados da modelagem semelhante {#exclude}
 
+>[!IMPORTANT]
+>
+> **Você** são responsáveis por garantir que os dados, incluindo os dados confidenciais, sejam rotulados adequadamente e que as políticas de uso de dados tenham sido definidas e ativadas para cumprir as obrigações legais e regulamentares sob as quais você opera. Você também deve estar ciente de que os campos de dados ou associações de segmento que são **não** diretamente correlacionada a campos de dados normalmente associados a tipos de dados confidenciais ou protegidos pode ser uma fonte de potencial viés. **Você** são responsáveis pela análise de seus dados para identificar, rotular e aplicar as políticas de uso de dados apropriadas aos seus dados, incluindo quaisquer campos de dados que possam servir de proxy para tipos de dados confidenciais ou protegidos e devem ser excluídos da modelagem.
+
 Os públicos-alvo semelhantes podem ser configurados para excluir campos de dados restritos para a ação de marketing &quot;Ciência de dados&quot; aplicando os rótulos e as políticas de uso de dados relevantes. Os dados rotulados como restritos de uso para ciência de dados serão removidos da consideração ao treinar um modelo de público-alvo semelhante e ao gerar um público semelhante do modelo treinado. 
+
+>[!NOTE]
+>
+>As alterações nos rótulos de uso de dados no público-alvo base podem levar até 48 horas para entrarem em vigor.
 
 O rótulo &quot;C9&quot; padrão pode ser usado para rotular dados que não devem ser usados para ciência de dados e pode ser aplicado ativando a política &quot;Restringir ciência de dados&quot; padrão. Você também pode criar políticas adicionais para restringir o uso de dados com outros rótulos, incluindo rótulos confidenciais, para ciência de dados. Para obter mais informações sobre como gerenciar políticas de uso de dados, leia a [guia da interface de políticas de uso de dados](../../data-governance/policies/user-guide.md). Para obter mais informações sobre como gerenciar rótulos de uso de dados, leia a [guia da interface do usuário de rótulos de uso de dados](../../data-governance/labels/user-guide.md).
 
 Por padrão, o processo de modelagem para públicos-alvo semelhantes excluirá **qualquer** campo, conjunto de dados ou público-alvo com base na política de privacidade ativada para sua organização. Se o público-alvo base não tiver rótulos de contrato, o processo de modelagem excluirá **qualquer** campo, conjunto de dados ou público-alvo com base na política de privacidade ativada para sua organização.
-
-Observe que **você** são responsáveis por garantir que os dados, incluindo os dados confidenciais, sejam rotulados adequadamente e que as políticas de uso de dados tenham sido definidas e ativadas para cumprir as obrigações legais e regulamentares sob as quais você opera. Você também deve estar ciente de que os campos de dados ou as associações de segmento que estão **não** diretamente correlacionada a campos de dados normalmente associados a tipos de dados confidenciais ou protegidos pode ser uma fonte de potencial viés. **Você** são responsáveis pela análise de seus dados para identificar, rotular e aplicar as políticas de uso de dados apropriadas aos seus dados, incluindo quaisquer campos de dados que possam servir de proxy para tipos de dados confidenciais ou protegidos e devem ser excluídos da modelagem.
 
 ## Próximas etapas
 

@@ -3,9 +3,9 @@ title: Endereço IP lista de permissões destinos SFTP
 type: Documentation
 description: Esta página fornece intervalos IP que podem ser adicionados à lista de permissões para exportar dados com segurança do Experience Platform para o servidor SFTP.
 exl-id: 0b8086aa-786e-4244-b2a5-a3f57ad59a8b
-source-git-commit: 3d870975593313062d796601f0e19a0a3aec7854
+source-git-commit: 52186e03ba2a9d8b105d01ebfcd9be7666bfb6ff
 workflow-type: tm+mt
-source-wordcount: '185'
+source-wordcount: '189'
 ht-degree: 0%
 
 ---
@@ -33,9 +33,17 @@ O Adobe recomenda que você adicione os seguintes intervalos IP a um incluo na l
 
 * `52.252.71.64/29`
 
+## Clientes do Canadá
+
+* `20.220.135.16/29`
+
 ## Clientes EMEA
 
 * `51.137.8.208/29`
+
+## Clientes do Reino Unido
+
+* `20.26.133.96/29`
 
 ## Clientes da APAC
 

@@ -4,23 +4,24 @@ solution: Real-Time Customer Data Platform
 audience: user
 user-guide-title: Manual da Real-time Customer Data Platform
 user-guide-description: Reúna dados conhecidos e anônimos de várias fontes corporativas para criar perfis de clientes, e a partir deles criar segmentos de público-alvo e ativá-los para destinos de terceiros.
-source-git-commit: c76a6267230599dfab905524e613f9721b928211
+source-git-commit: 19bde5079c8f1a916bec775b64fa743e80e4e1b1
 workflow-type: tm+mt
-source-wordcount: '323'
-ht-degree: 72%
+source-wordcount: '287'
+ht-degree: 71%
 
 ---
 
 
 # Ajuda da Real-time Customer Data Platform {#rtcdp}
 
-* [Visão geral da Real-Time CDP](overview.md)
-* [Visão geral da Real-Time CDP B2B Edition](b2b-overview.md)
+* [Documentação do Real-Time CDP](home.md)
 * Introdução {#intro}
    * Real-Time CDP {#rtcdp-intro}
+      * [Visão geral da Real-Time CDP](overview.md)
       * [Introdução à Real-Time CDP](get-started.md)
       * [Página inicial](home-page-dashboards.md)
    * Real-Time CDP B2B Edition {#rtcdpb2b-intro}
+      * [Visão geral da Real-Time CDP B2B Edition](b2b-overview.md)
       * [Exemplo de caso de uso](./b2b-use-case.md)
       * [Tutorial completo](./b2b-tutorial.md)
       * [Medidas de proteção da Real-Time CDP B2B Edition](b2b-guardrails.md)
@@ -73,11 +74,12 @@ ht-degree: 72%
    * [Visão geral das fontes](sources/sources-overview.md)
    * [Fontes na Real-Time CDP B2B Edition](sources/b2b.md)
 * Casos de uso {#use-cases}
+   * [Visão geral dos casos de uso compatíveis](/help/rtcdp/use-case-guides/overview.md)
    * Personalização, insights e envolvimento {#personalization-insights-engagement}
       * [Reenvolva seus clientes de forma inteligente](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md)
    * Aquisição de clientes {#customer-acquisition}
       * [Interagir e adquirir novos clientes sem depender de cookies de terceiros](/help/rtcdp/partner-data/prospecting.md)
-      * [Personalizar experiências locais para visitantes desconhecidos usando o reconhecimento de visitantes auxiliado por parceiros](/help/rtcdp/partner-data/onsite-personalization.md)
+      * [Personalizar experiências no site para visitantes desconhecidos usando o reconhecimento de visitantes auxiliados por parceiros](/help/rtcdp/partner-data/onsite-personalization.md)
       * [Redirecionamento externo de usuários não autenticados](./partner-data/offsite-retargeting.md)
    * Enriquecimento de perfil {#profile-enrichment}
       * [Suplementar perfis próprios com atributos fornecidos por parceiros](/help/rtcdp/partner-data/supplement-first-party-profiles.md)

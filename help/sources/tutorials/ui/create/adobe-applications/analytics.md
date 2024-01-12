@@ -2,10 +2,10 @@
 title: Criar uma conexão de origem do Adobe Analytics na interface
 description: Saiba como criar uma conexão de origem do Adobe Analytics na interface do usuário para trazer dados do consumidor para o Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: c38e25a939319fa3b3301af36482c8efe6c3dd5f
 workflow-type: tm+mt
-source-wordcount: '2477'
-ht-degree: 6%
+source-wordcount: '2695'
+ht-degree: 4%
 
 ---
 
@@ -109,7 +109,7 @@ A variável [!UICONTROL Mapear campos padrão] A seção exibe painéis para [!U
 
 Para visualizar o [!DNL Analytics] Grupo de campos de esquema de modelo ExperienceEvent, selecione **[!UICONTROL Exibir]** no [!UICONTROL Mapeamentos padrão aplicados] painel.
 
-![view](../../../../images/tutorials/create/analytics/view.png)
+![exibir](../../../../images/tutorials/create/analytics/view.png)
 
 A variável [!UICONTROL Grupo de campos de esquema de modelo do Adobe Analytics ExperienceEvent] Esta página fornece uma interface a ser usada para inspecionar a estrutura do esquema. Quando terminar, selecione **[!UICONTROL Fechar]**.
 
@@ -134,7 +134,7 @@ Dependendo das suas necessidades, você pode selecionar **[!UICONTROL Adicionar 
 A documentação a seguir fornece mais recursos sobre como entender o Preparo de dados, campos calculados e funções de mapeamento:
 
 * [Visão geral do Preparo de dados](../../../../../data-prep/home.md)
-* [Funções de mapeamento do Preparo de dados](../../../../../data-prep/functions.md)
+* [Funções de mapeamento de Preparo de dados](../../../../../data-prep/functions.md)
 * [Adicionar campos calculados](../../../../../data-prep/ui/mapping.md#calculated-fields)
 
 <!-- 
@@ -177,11 +177,30 @@ With your custom mapping set completed, select **[!UICONTROL Next]** to proceed.
 
 Depois de concluir os mapeamentos para o [!DNL Analytics] dados do conjunto de relatórios, você pode aplicar regras e condições de filtragem para incluir ou excluir seletivamente dados da assimilação para o Perfil do cliente em tempo real. O suporte para filtragem só está disponível para [!DNL Analytics] Os dados do e do são filtrados somente antes da entrada [!DNL Profile.] Todos os dados são assimilados no data lake.
 
+>[!BEGINSHADEBOX]
+
+**Informações adicionais sobre Preparo de dados e filtragem de dados do Analytics para o Perfil do cliente em tempo real**
+
+* Você pode usar a funcionalidade de filtragem para dados que vão para o Perfil, mas não para dados que vão para o data lake.
+* Você pode usar a filtragem para dados em tempo real, mas não pode filtrar dados de preenchimento retroativo.
+   * A variável [!DNL Analytics] A fonte do não preenche os dados retroativamente com o Perfil.
+* Se você utilizar as configurações do Preparo de dados durante a configuração inicial de um [!DNL Analytics] Essas alterações também são aplicadas ao preenchimento retroativo automático de 13 meses.
+   * No entanto, esse não é o caso da filtragem, pois ela é reservada apenas para dados em tempo real.
+* O Preparo de dados é aplicado aos caminhos de transmissão e assimilação em lote. Se você modificar uma configuração existente de Preparo de dados, essas alterações serão aplicadas aos novos dados recebidos pelos caminhos de transmissão e assimilação em lote.
+   * No entanto, qualquer configuração de Preparo de dados não se aplica a dados que já foram assimilados no Experience Platform, independentemente de serem dados de transmissão ou em lote.
+* Os atributos padrão do Analytics são sempre mapeados automaticamente. Portanto, não é possível aplicar transformações a atributos padrão.
+   * No entanto, você pode filtrar atributos padrão, desde que eles não sejam necessários no Serviço de identidade ou Perfil.
+* Não é possível usar a filtragem em nível de coluna para filtrar campos obrigatórios e campos de identidade.
+* Embora seja possível filtrar identidades secundárias, especificamente AAID e AACustomID, não é possível filtrar a ECID.
+* Quando ocorre um erro de transformação, a coluna correspondente resulta em NULL.
+
+>[!ENDSHADEBOX]
+
 #### Filtragem em nível de linha
 
 >[!IMPORTANT]
 >
->Use a filtragem de nível de linha para aplicar condições e determinar quais dados **incluir para ingestão de perfil**. Use a filtragem de nível de coluna para selecionar as colunas de dados que deseja **excluir para ingestão de perfil**.
+>Use a filtragem de nível de linha para aplicar condições e determinar quais dados **incluir para ingestão de perfil**. Use a filtragem em nível de coluna para selecionar as colunas de dados que deseja **excluir para assimilação de perfil**.
 
 É possível filtrar dados para [!DNL Profile] assimilação no nível da linha e no nível da coluna. A filtragem em nível de linha permite definir critérios como cadeia de caracteres contém, é igual a, começa ou termina com. Também é possível usar a filtragem em nível de linha para unir condições usando `AND` bem como `OR`e negar condições usando `NOT`.
 
@@ -202,7 +221,7 @@ Para configurar condições diferentes, selecione **[!UICONTROL igual a]** e sel
 A lista de condições configuráveis inclui:
 
 * [!UICONTROL igual a]
-* [!UICONTROL não é igual]
+* [!UICONTROL não é igual a]
 * [!UICONTROL começa com]
 * [!UICONTROL termina com]
 * [!UICONTROL não termina com]
@@ -211,7 +230,7 @@ A lista de condições configuráveis inclui:
 * [!UICONTROL existe]
 * [!UICONTROL não existe]
 
-![condições](../../../../images/tutorials/create/analytics/conditions.png)
+![conditions](../../../../images/tutorials/create/analytics/conditions.png)
 
 Em seguida, insira os valores que deseja incluir com base no atributo selecionado. No exemplo abaixo, [!DNL Apple] e [!DNL Google] são selecionados para assimilação como parte da **[!UICONTROL Fabricante]** atributo.
 
@@ -255,7 +274,7 @@ A variável **[!UICONTROL Detalhes do fluxo de dados]** é exibida, onde você d
 
 ![detalhes do fluxo de dados](../../../../images/tutorials/create/analytics/dataflow-detail.png)
 
-### Consulte a seção
+### Revisão
 
 A variável [!UICONTROL Revisão] é exibida, permitindo que você revise seu novo fluxo de dados do Analytics antes de ele ser criado. Os detalhes da conexão são agrupados por categorias, incluindo:
 
@@ -298,7 +317,7 @@ A interface é atualizada para uma lista de lotes individuais, incluindo informa
 
 | Métricas | Descrição |
 | --- | --- |
-| ID em lote | A ID de um determinado lote. Esse valor é gerado internamente. |
+| ID do lote | A ID de um determinado lote. Esse valor é gerado internamente. |
 | Nome do conjunto de dados | O nome de um determinado conjunto de dados usado para os dados do Analytics. |
 | Fonte | A fonte dos dados assimilados. |
 | Atualização dos pacotes | A data da iteração de execução de fluxo mais recente. |

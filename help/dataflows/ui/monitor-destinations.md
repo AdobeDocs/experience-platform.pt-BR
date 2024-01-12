@@ -39,7 +39,7 @@ Consulte a tabela a seguir para obter mais informações sobre status:
 | Status | Descrição |
 | ------ | ----------- |
 | Ativado | A variável `Enabled` O status indica que um fluxo de dados está ativo e está exportando dados de acordo com o agendamento fornecido. |
-| Desativado | A variável `Disabled` status indica que um fluxo de dados está inativo e não está exportando dados. |
+| Desabilitado | A variável `Disabled` status indica que um fluxo de dados está inativo e não está exportando dados. |
 | Processamento | A variável `Processing` O status indica que um fluxo de dados ainda não está ativo. Esse status geralmente é encontrado imediatamente após a criação de um novo fluxo de dados. |
 | Erro | A variável `Error` O status indica que o processo de ativação de um fluxo de dados foi interrompido. |
 
@@ -48,7 +48,7 @@ Consulte a tabela a seguir para obter mais informações sobre status:
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_activation_streaming"
 >title="Detalhes de execução do fluxo de dados"
->abstract="Os detalhes de execução do fluxo de dados de destino contêm informações sobre o status de ativação do segmento e as métricas obtidas do perfil do cliente em tempo real para gerar identidades exclusivas. Para saber mais, consulte o guia de definições de métrica."
+>abstract="Os detalhes de execução do fluxo de dados de destino contêm informações sobre o status de ativação do segmento e as métricas obtidas do perfil do cliente em tempo real para gerar identidades exclusivas. Para saber mais, revise o guia de definições de métricas."
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_profiles_received_streaming"
@@ -111,7 +111,7 @@ A página de detalhes também exibe uma lista de identidades que falharam e as q
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_activation"
 >title="Detalhes de execução do fluxo de dados"
->abstract="Os detalhes de execução do fluxo de dados de destino contêm informações sobre o status de ativação do segmento e as métricas obtidas do perfil do cliente em tempo real para gerar identidades exclusivas. Para saber mais, consulte o guia de definições de métrica."
+>abstract="Os detalhes de execução do fluxo de dados de destino contêm informações sobre o status de ativação do segmento e as métricas obtidas do perfil do cliente em tempo real para gerar identidades exclusivas. Para saber mais, revise o guia de definições de métricas."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-destinations.html#dataflow-runs-for-streaming-destinations" text="O fluxo de dados é executado para destinos de transmissão"
 
 >[!CONTEXTUALHELP]

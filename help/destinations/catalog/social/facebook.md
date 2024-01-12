@@ -6,7 +6,7 @@ exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
 source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
 source-wordcount: '1949'
-ht-degree: 6%
+ht-degree: 7%
 
 ---
 
@@ -176,7 +176,7 @@ Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICON
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_facebook_originofaudience"
 >title="Origem do público-alvo"
->abstract="Escolha como os dados do cliente no público-alvo foram coletados originalmente. Os dados são exibidos no Facebook quando um usuário é direcionado pelo segmento"
+>abstract="Escolha como os dados do cliente no público-alvo foram coletados originalmente. Os dados serão exibidos no Facebook quando um usuário for direcionado pelo segmento"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_facebook_originofaudience_customers"

@@ -194,7 +194,7 @@ Para obter a lista mais atualizada de classes XDM padrão disponíveis, consulte
 >[!CONTEXTUALHELP]
 >id="platform_schemas_fieldgroup_requiredFieldgroup"
 >title="Grupo de campos obrigatório"
->abstract="Este grupo de campos é exigido pela origem que você está usando. Por esse motivo, não é possível excluí-lo do esquema."
+>abstract="Esse grupo de campos é exigido pela origem usada. Por esse motivo, não é possível excluí-lo do esquema."
 
 Um grupo de campos é um componente reutilizável que define um ou mais campos que implementam determinadas funções, como detalhes pessoais, preferências de hotel ou endereço. Os grupos de campos devem ser incluídos como parte de um esquema que implementa uma classe compatível.
 

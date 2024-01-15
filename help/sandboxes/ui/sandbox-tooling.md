@@ -2,10 +2,10 @@
 title: Ferramentas de sandboxes
 description: Exporte e importe configurações de sandbox facilmente entre sandboxes.
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: 4cb570fbdb76e53dd0a8c4ee78c31d2a886e5dc1
+source-git-commit: 1f7b7f0486d0bb2774f16a766c4a5af6bbb8848a
 workflow-type: tm+mt
-source-wordcount: '1849'
-ht-degree: 9%
+source-wordcount: '1859'
+ht-degree: 5%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 9%
 
 Melhore a precisão da configuração em sandboxes e exporte e importe configurações de sandbox facilmente entre sandboxes com o recurso de ferramenta de sandbox. Use as ferramentas de sandbox para reduzir o tempo de retorno do processo de implementação e mover configurações bem-sucedidas entre sandboxes.
 
-Você pode usar o recurso de ferramenta sandbox para selecionar objetos diferentes e exportá-los em um pacote. Um pacote pode consistir em um único objeto ou em vários objetos. <!--or an entire sandbox.-->Todos os objetos incluídos em um pacote precisam ser da mesma sandbox.
+Você pode usar o recurso de ferramenta sandbox para selecionar objetos diferentes e exportá-los em um pacote. Um pacote pode consistir em um único objeto ou em vários objetos. <!--or an entire sandbox.-->Todos os objetos incluídos em um pacote devem ser da mesma sandbox.
 
 ## Objetos compatíveis com as ferramentas de sandbox {#supported-objects}
 
@@ -42,7 +42,7 @@ Os seguintes objetos são importados, mas estão em um rascunho ou estão desabi
 | Status da importação | Fluxo de dados de origem | Rascunho |
 | Status da importação | Jornada | Rascunho |
 | Perfil unificado | Conjunto de dados | Perfil unificado desabilitado |
-| Políticas | Políticas de governança de dados | Desativado |
+| Políticas | Políticas de governança de dados | Desabilitado |
 
 ### Objetos do Adobe Journey Optimizer {#abobe-journey-optimizer-objects}
 
@@ -67,19 +67,14 @@ Os tipos de identidade personalizados não são suportados como objetos dependen
 >Todas as ações de exportação são registradas nos logs de auditoria.
 
 >[!CONTEXTUALHELP]
->id="platform_sandbox_tooling_exit_package"
->title="Salvar e sair do pacote"
->abstract="Para sair do pacote e salvar, simplesmente use a opção voltar."
-
->[!CONTEXTUALHELP]
 >id="platform_sandbox_tooling_remove_object"
 >title="Remover um objeto"
->abstract="É necessário selecionar a linha e usar a opção de exclusão (disponibilizada após a seleção) para remover a linha."
+>abstract="Para remover um objeto do pacote, selecione a linha a ser removida e use a opção delete, disponibilizada após a seleção. Observe que não é possível remover objetos de pacotes publicados."
 
 >[!CONTEXTUALHELP]
 >id="platform_sandbox_package_expiry"
 >title="Configurações de expiração do pacote"
->abstract="A data é definida para 90 dias a partir de hoje. Essa data continua sendo alterada até que o pacote seja publicado. Se você visitar o pacote com o status de rascunho amanhã, a data será movida em +1 dia (a menos que definida pelo usuário ou usuária)."
+>abstract="Os pacotes estão definidos para expirar após um período de inatividade no status de rascunho. A data padrão é definida para 90 dias a partir de hoje. Essa data continua sendo alterada até que o pacote seja publicado. Se você visitar o pacote com o status de rascunho amanhã, a data será movida em +1 dia, a menos que isso seja definido manualmente."
 
 >[!CONTEXTUALHELP]
 >id="platform_sandbox_tooling_package_status"

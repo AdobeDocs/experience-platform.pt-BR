@@ -2,10 +2,10 @@
 title: Visão geral do namespace de identidade
 description: Saiba mais sobre namespaces de identidade no Serviço de identidade.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: 44e4e83d80302f64854f6c8f9531da913a2f0942
+source-git-commit: 876613610f8e3b369bc3fd41d235c214b791fd4d
 workflow-type: tm+mt
-source-wordcount: '1779'
-ht-degree: 7%
+source-wordcount: '1869'
+ht-degree: 9%
 
 ---
 
@@ -21,7 +21,19 @@ Os namespaces de identidade exigem uma compreensão de vários serviços da Adob
 * [[!DNL Identity Service]](./home.md): obtenha uma melhor visualização dos clientes individuais e do comportamento deles ao unir as identidades de vários dispositivos e sistemas.
 * [[!DNL Privacy Service]](../privacy-service/home.md): os namespaces de identidade são usados em solicitações de conformidade para regulamentos legais de privacidade, como o Regulamento Geral sobre a Proteção de Dados (GDPR). Cada solicitação de privacidade é feita em relação a um namespace para identificar quais dados dos consumidores devem ser afetados.
 
-## Noções básicas sobre namespaces de identidade
+## Noções básicas sobre namespaces de identidade {#understanding-identity-namespaces}
+
+>[!CONTEXTUALHELP]
+>id="platform_identity_namespace"
+>title="Namespaces de identidade"
+>abstract="Um namespace de identidade é o contexto de uma determinada identidade. Por exemplo, um namespace de `Email` pode corresponder com **name<span>@acme.com**. Da mesma forma, um namespace de `Phone` pode corresponder com `555-555-1234`."
+>text="Learn more in documentation"
+
+>[!CONTEXTUALHELP]
+>id="platform_identity_value"
+>title="Valores de identidade"
+>abstract="Um valor de identidade é um identificador que representa uma pessoa, uma organização ou um ativo exclusivo. O contexto ou tipo de identidade que o valor representa é definido por um namespace de identidade correspondente. Ao corresponder os dados de registro em fragmentos de perfil, o namespace e o valor de identidade devem corresponder. Ao corresponder os dados de registro em fragmentos de perfil, o namespace e o valor da identidade devem corresponder."
+>text="Learn more in documentation"
 
 Uma identidade totalmente qualificada inclui dois componentes: um **valor de identidade** e uma **namespace de identidade**. Por exemplo, se o valor de uma identidade for `scott@acme.com`, um namespace fornece contexto para esse valor, diferenciando-o como um endereço de email. Da mesma forma, um namespace pode distinguir `555-123-456` como um número de telefone, e `3126ABC` como uma ID de CRM. Essencialmente, **um namespace fornece contexto a uma determinada identidade**. Ao corresponder dados de registro em fragmentos de perfil, como quando [!DNL Real-Time Customer Profile] mescla os dados do perfil, o valor da identidade e o namespace devem corresponder.
 

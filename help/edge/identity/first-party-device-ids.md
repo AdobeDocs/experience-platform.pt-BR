@@ -2,9 +2,9 @@
 title: IDs de dispositivo próprio no SDK da Web
 description: Saiba como configurar IDs de dispositivo primário (FPIDs) para o Adobe Experience Platform Web SDK.
 exl-id: c3b17175-8a57-43c9-b8a0-b874fecca952
-source-git-commit: 041a1782442df5f08bb52e4e450734a51c7781ea
+source-git-commit: dea75b92847320284e1dc1b939f3ae11a12077a8
 workflow-type: tm+mt
-source-wordcount: '1700'
+source-wordcount: '1734'
 ht-degree: 0%
 
 ---
@@ -16,6 +16,11 @@ O SDK da Web da Adobe Experience Platform atribui [Adobe Experience Cloud IDs (E
 >[!NOTE]
 >
 >O suporte à ID de dispositivo próprio só está disponível ao enviar dados para a Rede de borda da Platform por meio do SDK da Web da Platform.
+
+>[!IMPORTANT]
+>
+>As IDs de dispositivo próprio não são compatíveis com o [cookies de terceiros](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md#identity) no SDK da Web.
+>Você pode usar IDs de dispositivo primário ou cookies de terceiros, mas não pode usar ambos os recursos simultaneamente.
 
 Este documento aborda como configurar IDs de dispositivo primário para a implementação do SDK da Web da Platform.
 

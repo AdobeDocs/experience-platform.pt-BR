@@ -2,9 +2,9 @@
 title: Configurar a extensão de tag do SDK da Web
 description: Saiba como configurar a extensão de tag do SDK da Web do Experience Platform na interface do usuário de tags.
 exl-id: 22425daa-10bd-4f06-92de-dff9f48ef16e
-source-git-commit: ac3362fa5e8a314f85f3bb659047f77fb56c1a7c
+source-git-commit: dea75b92847320284e1dc1b939f3ae11a12077a8
 workflow-type: tm+mt
-source-wordcount: '1546'
+source-wordcount: '1580'
 ht-degree: 6%
 
 ---
@@ -83,6 +83,10 @@ Esta seção permite definir o comportamento do SDK da Web quando se trata de li
 * **[!UICONTROL Migrar ECID da VisitorAPI]**: essa opção é ativada por padrão. Quando esse recurso está ativado, o SDK pode ler a variável `AMCV` e `s_ecid` cookies e defina o `AMCV` cookie usado por [!DNL Visitor.js]. Esse recurso é importante ao migrar para o SDK da Web, pois algumas páginas ainda podem estar usando [!DNL Visitor.js]. Essa opção permite que o SDK continue usando a mesma [!DNL ECID] para que os usuários não sejam identificados como dois usuários separados.
 * **[!UICONTROL Usar cookies de terceiros]**: quando esta opção é ativada, o SDK da Web tenta armazenar um identificador do usuário em um cookie de terceiros. Se for bem-sucedido, o usuário será identificado como um único usuário durante a navegação em vários domínios, em vez de ser identificado como um usuário separado em cada domínio. Se essa opção estiver ativada, o SDK ainda poderá não ser capaz de armazenar o identificador do usuário em um cookie de terceiros se o navegador não for compatível com cookies de terceiros ou tiver sido configurado pelo usuário para não permitir cookies de terceiros. Nesse caso, o SDK armazena apenas o identificador no domínio próprio.
 
+  >[!IMPORTANT]
+  >>Cookies de terceiros não são compatíveis com o [ID do dispositivo primário](../../../../edge/identity/first-party-device-ids.md) no SDK da Web.
+Você pode usar IDs de dispositivo primário ou cookies de terceiros, mas não pode usar ambos os recursos simultaneamente.
+  >
 ## Definir configurações de personalização {#personalization}
 
 Esta seção permite configurar como você deseja ocultar determinadas partes de uma página enquanto o conteúdo personalizado é carregado. Isso garante que seus visitantes vejam apenas a página personalizada.
@@ -103,7 +107,7 @@ Para usar o trecho pré-ocultação, copie-o e cole-o dentro do `<head>` element
 
 >[!IMPORTANT]
 >
->Ao usar o trecho pré-ocultação, o Adobe recomenda usar o mesmo [!DNL CSS] regra como a usada pelo [estilo pré-ocultação](#prehiding-style).
+Ao usar o trecho pré-ocultação, o Adobe recomenda usar o mesmo [!DNL CSS] regra como a usada pelo [estilo pré-ocultação](#prehiding-style).
 
 ## Definir configurações da coleção de dados {#data-collection}
 
@@ -130,7 +134,7 @@ Como alternativa à transmissão de sobreposições por meio de um comando do SD
 
 >[!IMPORTANT]
 >
-> As substituições de fluxo de dados devem ser configuradas com base no ambiente. Os ambientes de desenvolvimento, armazenamento temporário e produção têm substituições separadas. Você pode copiar as configurações entre elas usando as opções dedicadas mostradas na tela abaixo.
+As substituições de fluxo de dados devem ser configuradas com base no ambiente. Os ambientes de desenvolvimento, armazenamento temporário e produção têm substituições separadas. Você pode copiar as configurações entre elas usando as opções dedicadas mostradas na tela abaixo.
 
 ![Imagem que mostra as sobreposições de configuração da sequência de dados na página de extensão de tag do SDK da Web.](assets/datastream-overrides.png)
 

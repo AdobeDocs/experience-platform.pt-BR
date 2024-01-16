@@ -6,9 +6,9 @@ description: A Adobe Experience Platform usa um modelo de dados híbrido não no
 badgeB2B: label="Edição B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 feature: Guardrails, B2B
 exl-id: 8eff8c3f-a250-4aec-92a1-719ce4281272
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 7c455b546b6a98936d60e6cd481cae8610c8be17
 workflow-type: tm+mt
-source-wordcount: '1662'
+source-wordcount: '1675'
 ht-degree: 2%
 
 ---
@@ -66,6 +66,7 @@ As medidas de proteção a seguir fornecem limites recomendados ao modelar dados
 | Nenhuma relação herdada aninhada | 0 | Suave | Você não deve criar uma relação entre dois[!DNL XDM Individual Profile] esquemas. A capacidade de criar relações não é recomendada para esquemas que não fazem parte da [!DNL Profile] esquema de união. |
 | Somente objetos B2B podem participar de relações muitos para um | 0 | Grave | O sistema só suporta relações muitos para um entre objetos B2B. Para obter mais informações sobre relações muitos para um, consulte o tutorial em [definição de relacionamentos de esquema B2B](../xdm/tutorials/relationship-b2b.md). |
 | Profundidade máxima de relações aninhadas entre objetos B2B | 3 | Grave | A profundidade máxima das relações aninhadas entre objetos B2B é 3. Isso significa que em um esquema altamente aninhado, você não deve ter uma relação entre objetos B2B aninhados a mais de 3 níveis de profundidade. |
+| Esquema único para cada entidade de dimensão | 1 | Grave | Cada entidade de dimensão deve ter um único esquema. Tentar usar entidades de dimensão criadas a partir de mais de um esquema pode afetar os resultados da segmentação. Espera-se que diferentes entidades de dimensão tenham esquemas separados. |
 
 ## Limites de tamanho de dados
 
@@ -93,7 +94,7 @@ As medidas de proteção a seguir se referem ao tamanho dos dados e fornecem lim
 
 | Grade de Proteção | Limite | Tipo de limite | Descrição |
 | --- | --- | --- | --- |
-| Tamanho total de todas as entidades dimensionais | 5 GB | Suave | O tamanho total recomendado para todas as entidades dimensionais é 5 GB. A ingestão de entidades de dimensão grandes pode afetar o desempenho do sistema. Por exemplo, não é recomendado tentar carregar um catálogo de produtos de 10 GB como uma entidade de dimensão. |
+| Tamanho total de todas as entidades dimensionais | 5GB | Suave | O tamanho total recomendado para todas as entidades dimensionais é 5 GB. A ingestão de entidades de dimensão grandes pode afetar o desempenho do sistema. Por exemplo, não é recomendado tentar carregar um catálogo de produtos de 10 GB como uma entidade de dimensão. |
 | Esquema de entidade dimensional de conjuntos de dados | 5 | Suave | Recomenda-se um máximo de 5 conjuntos de dados associados a cada esquema de entidade dimensional. Por exemplo, se você criar um esquema para &quot;produtos&quot; e adicionar cinco conjuntos de dados de contribuição, não deverá criar um sexto conjunto de dados vinculado ao esquema de produtos. |
 | Lotes de entidades Dimension assimilados por dia | 4 por entidade | Suave | O número máximo recomendado de lotes de entidades de dimensão assimilados por dia é 4 por entidade. Por exemplo, você pode assimilar atualizações em um catálogo de produtos até 4 vezes por dia. A ingestão de lotes de entidades de dimensão adicionais para a mesma entidade pode afetar o desempenho do sistema. |
 

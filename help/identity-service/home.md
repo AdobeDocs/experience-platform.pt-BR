@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Visão geral do serviço de identidade
 description: O Serviço de identidade da Adobe Experience Platform ajuda você a obter uma melhor visualização do cliente e do comportamento dele, unindo as identidades em dispositivos e sistemas, permitindo que você forneça experiências digitais pessoais e impactantes em tempo real.
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-source-git-commit: 4d7470a15a7cc9c9a3bcc56f5f783a967021242f
+source-git-commit: 484b1c2d37291afd02fe58723121325c837061aa
 workflow-type: tm+mt
-source-wordcount: '1522'
+source-wordcount: '1524'
 ht-degree: 2%
 
 ---
@@ -33,7 +33,7 @@ Antes de mergulhar nos detalhes do Serviço de identidade, leia a tabela a segui
 | --- | --- |
 | Identidade | Uma identidade são dados exclusivos de uma entidade. Normalmente, esse é um objeto do mundo real, como uma pessoa individual, um dispositivo de hardware ou um navegador da Web (representado por um cookie). Uma identidade totalmente qualificada consiste em dois elementos: um **namespace de identidade** e uma **valor de identidade**. |
 | Namespace de identidade | Um namespace de identidade é o contexto de uma determinada identidade. Por exemplo, um namespace de `Email` pode corresponder com **julien<span>@acme.com**. Da mesma forma, um namespace de `Phone` pode corresponder com `555-555-1234`. Para obter mais informações, leia a [visão geral do namespace de identidade](./namespaces.md) |
-| Valor de identidade | Um valor de identidade é uma string que representa uma entidade do mundo real e é categorizada no Serviço de identidade por meio de um namespace. Por exemplo, o email **julien<span>@acme.com** pode ser classificado como um `Email` namespace. |
+| Valor de identidade | Um valor de identidade é uma string que representa uma entidade do mundo real e é categorizada no Serviço de identidade por meio de um namespace. Por exemplo, o valor de identidade (string) **julien<span>@acme.com** pode ser classificado como um `Email` namespace. |
 | Tipo de identidade | Um tipo de identidade é um componente de um namespace de identidade. O tipo de identidade designa se os dados de identidade estão ou não vinculados em um gráfico de identidade. |
 | Link | Um link ou um vínculo é um método para estabelecer que duas identidades diferentes representam a mesma entidade. Por exemplo, um link entre &quot;`Email` = julien<span>@acme.com&quot; e &quot;`Phone` = 555-555-1234&quot; significa que ambas as identidades representam a mesma entidade. Isso sugere que o cliente que interagiu com sua marca com o endereço de email da julien<span>@acme.com e o telefone 555-555-1234 é o mesmo. |
 | Identity Service | O Serviço de identidade é um serviço dentro do Experience Platform que vincula (ou desvincula) identidades para manter gráficos de identidade. |
@@ -91,7 +91,7 @@ Considere o exemplo a seguir:
 * Em seguida, se você fizer logon com as mesmas credenciais no mesmo site de comércio eletrônico, mas usar o navegador da Web no telefone em vez do navegador da Web no laptop, uma nova ECID será registrada no Serviço de identidade.
 * Em segundo plano, o Serviço de identidade processa esse novo evento como `{CRM_ID:ABC, ECID:456}`, onde CRM_ID: ABC representa sua ID de cliente autenticada e ECID:456 representa o navegador da Web em seu dispositivo móvel.
 
-Considerando os cenários acima, o serviço de identidade estabelece um vínculo entre `CRM_ID:ABC, ECID:123`, bem como `{CRM_ID:ABC, ECID:456}`. Isso resulta em um gráfico de identidade, no qual você &quot;é proprietário&quot; de três identidades: uma para identificador de pessoa (ID de CRM) e duas para identificadores de cookie (ECIDs).
+Considerando os cenários acima, o serviço de identidade estabelece um vínculo entre `{CRM_ID:ABC, ECID:123}`, bem como `{CRM_ID:ABC, ECID:456}`. Isso resulta em um gráfico de identidade, no qual você &quot;é proprietário&quot; de três identidades: uma para identificador de pessoa (ID de CRM) e duas para identificadores de cookie (ECIDs).
 
 ## Gráficos de identidade
 

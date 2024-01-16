@@ -4,8 +4,8 @@ description: As notas de versão de outubro de 2023 para o Adobe Experience Plat
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: f2d0848952902d94b441566da677ef174518192e
 workflow-type: tm+mt
-source-wordcount: '1068'
-ht-degree: 32%
+source-wordcount: '1052'
+ht-degree: 31%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 32%
 
 **Data de lançamento: 25 de outubro de 2023**
 
-Atualizações dos recursos já existentes na Experience Platform:
+Atualizações dos recursos existentes no Experience Platform:
 
 - [Painéis](#dashboards)
 - [Coleção de dados](#data-collection)
@@ -48,7 +48,7 @@ A Adobe Experience Platform fornece um conjunto de tecnologias que permitem cole
 | Extensões | [!DNL LinkedIn] API de conversões | A variável [[!DNL LinkedIn] API de conversões](../../tags/extensions/server/linkedin/overview.md) A extensão do permite avaliar a eficácia de suas campanhas de marketing do LinkedIn, encaminhando dados do evento Experience Platform para a LinkedIn. |
 | Segredo | [!DNL LinkedIn] Segredo do OAuth 2 | A variável [[!DNL LinkedIn] Segredo do OAuth 2](../../tags/ui/event-forwarding/secrets.md#linkedin-oauth-2) permite enviar interações servidor-servidor para [!DNL LinkedIn] no encaminhamento de eventos. |
 | Encaminhamento de eventos | Atualização de tags e encaminhamento de eventos | Para preservar [Tags](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=pt-BR) e [Encaminhamento de evento](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html) desempenho na Platform, somente as builds mais recentes de Desenvolvimento e Preparo, bem-sucedidas e malsucedidas, serão mantidas. Todas as builds que não estão mais em uso serão removidas. Além disso, a limitação e a limitação de taxa foram implementadas para garantir que alguns usos intensos de API não prejudiquem o desempenho da API para outros. |
-| Extensões | Elementos, regras e extensões | [Elementos, regras e extensões](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/overview.html?lang=pt-BR) agora são classificados na saída da biblioteca para garantir mais consistência entre várias builds e implantações da mesma biblioteca. |
+| Extensões | Elementos, regras e extensões | [Elementos, regras e extensões](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/overview.html) agora são classificados na saída da biblioteca para garantir mais consistência entre várias builds e implantações da mesma biblioteca. |
 
 Para obter mais informações sobre a coleção de dados, leia a [visão geral das coleções de dados](../../tags/home.md).
 

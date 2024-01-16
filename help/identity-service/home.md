@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Visão geral do serviço de identidade
 description: O Serviço de identidade da Adobe Experience Platform ajuda você a obter uma melhor visualização do cliente e do comportamento dele, unindo as identidades em dispositivos e sistemas, permitindo que você forneça experiências digitais pessoais e impactantes em tempo real.
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-source-git-commit: 876613610f8e3b369bc3fd41d235c214b791fd4d
+source-git-commit: 4d7470a15a7cc9c9a3bcc56f5f783a967021242f
 workflow-type: tm+mt
-source-wordcount: '1452'
+source-wordcount: '1522'
 ht-degree: 2%
 
 ---
@@ -20,8 +20,8 @@ Atualmente, organizações e empresas enfrentam um grande volume de conjuntos de
 Você pode resolver esses desafios com o Adobe Experience Platform Identity Service e seus recursos para:
 
 * Gerar um **gráfico de identidade** que vincula identidades diferentes, fornecendo uma representação visual de como um cliente interage com sua marca em diferentes canais.
-* Forneça ferramentas para validação e depuração.
 * Crie um gráfico para o Perfil do cliente em tempo real, que é usado para criar uma visualização abrangente do cliente ao mesclar atributos e comportamentos.
+* Execute a validação e a depuração usando as várias ferramentas.
 
 Este documento fornece uma visão geral do Serviço de identidade e como você pode usar suas funcionalidades no contexto do Experience Platform.
 
@@ -39,7 +39,7 @@ Antes de mergulhar nos detalhes do Serviço de identidade, leia a tabela a segui
 | Identity Service | O Serviço de identidade é um serviço dentro do Experience Platform que vincula (ou desvincula) identidades para manter gráficos de identidade. |
 | Gráfico de identidade | O gráfico de identidade é uma coleção de identidades que representam um único cliente. Para obter mais informações, leia o guia em [uso do visualizador de gráficos de identidade](./ui/identity-graph-viewer.md). |
 | Perfil do cliente em tempo real | O Perfil do cliente em tempo real é um serviço na Adobe Experience Platform que: <ul><li>Mescla fragmentos de perfis para criar um perfil, com base em um gráfico de identidade.</li><li>Segmenta perfis para que eles possam ser enviados ao destino para ativações.</li></ul> |
-| Perfil | Um perfil é uma representação de um sujeito, uma organização ou um indivíduo. Um perfil é composto de dois elementos: <ul><li>Atributos: os atributos fornecem informações como nome, idade ou gênero.</li><li>Comportamento: os comportamentos fornecem informações sobre as atividades de um determinado perfil. Por exemplo, um comportamento de perfil pode informar se um determinado perfil estava &quot;procurando sandálias&quot; ou &quot;comprando camisetas&quot;.</li></ul> |
+| Perfil | Um perfil é uma representação de um sujeito, uma organização ou um indivíduo. Um perfil é composto de quatro elementos: <ul><li>Atributos: os atributos fornecem informações como nome, idade ou gênero.</li><li>Comportamento: os comportamentos fornecem informações sobre as atividades de um determinado perfil. Por exemplo, um comportamento de perfil pode informar se um determinado perfil estava &quot;procurando sandálias&quot; ou &quot;comprando camisetas&quot;.</li><li>Identidades: para um perfil mesclado, isso fornece informações de todas as identidades associadas à pessoa. As identidades podem ser classificadas em três categorias: Pessoa (CRMID, email, telefone), dispositivo (IDFA, GAID) e cookie (ECID, AAID).</li><li>Associações de público-alvo: os grupos aos quais o perfil pertence (usuários fiéis, usuários que vivem na Califórnia etc.)</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -67,14 +67,10 @@ Considere a seguinte jornada do cliente:
 
 O Serviço de identidade fornece as seguintes operações para atingir sua missão:
 
-Você pode usar o Serviço de identidade para realizar as seguintes operações:
-
 * Crie namespaces personalizados para atender às necessidades da sua organização.
 * Criar, atualizar e exibir gráficos de identidade.
 * Excluir identidades com base em conjuntos de dados.
 * Exclua identidades para garantir a conformidade regulamentar.
-
->[!BEGINSHADEBOX]
 
 ## Como o Serviço de identidade vincula identidades
 
@@ -97,8 +93,6 @@ Considere o exemplo a seguir:
 
 Considerando os cenários acima, o serviço de identidade estabelece um vínculo entre `CRM_ID:ABC, ECID:123`, bem como `{CRM_ID:ABC, ECID:456}`. Isso resulta em um gráfico de identidade, no qual você &quot;é proprietário&quot; de três identidades: uma para identificador de pessoa (ID de CRM) e duas para identificadores de cookie (ECIDs).
 
->[!ENDSHADEBOX]
-
 ## Gráficos de identidade
 
 Um gráfico de identidade é um mapa de relacionamentos entre diferentes namespaces de identidade, que permite visualizar e entender melhor quais identidades de clientes são unidas e como. Leia o tutorial sobre [uso do visualizador de gráficos de identidade](./ui/identity-graph-viewer.md) para obter mais informações.
@@ -111,9 +105,11 @@ O vídeo a seguir tem como objetivo fornecer suporte à sua compreensão de iden
 
 O serviço de identidade desempenha um papel vital no Experience Platform. Algumas dessas integrações principais incluem o seguinte:
 
-* [Perfil do cliente em tempo real](../profile/home.md): antes que os atributos e eventos de um determinado perfil sejam mesclados, o Perfil do cliente em tempo real pode fazer referência ao gráfico de identidade.
 * [Esquemas](../xdm/home.md): Em um determinado esquema, os campos de esquema marcados como identidade permitem a criação de gráficos de identidade.
 * [Conjuntos de dados](../catalog/datasets/overview.md): quando um conjunto de dados é ativado para assimilação no Perfil do cliente em tempo real, os gráficos de identidade são gerados a partir do conjunto de dados, considerando que o conjunto de dados tem pelo menos dois campos marcados como identidade.
+* [SDK da Web](../edge/home.md): o SDK da Web envia eventos de experiência para a Adobe Experience Platform e o Serviço de identidade gera um gráfico quando duas ou mais identidades existem no evento.
+* [Perfil do cliente em tempo real](../profile/home.md): antes que os atributos e eventos de um determinado perfil sejam mesclados, o Perfil do cliente em tempo real pode fazer referência ao gráfico de identidade.
 * [Destinos](../destinations/home.md): os destinos podem enviar informações de perfil para outros sistemas com base em um namespace de identidade, como email com hash.
 * [Correspondência de segmentos](../segmentation/ui/segment-match/overview.md): a correspondência de segmentos corresponde a dois perfis em duas sandboxes diferentes que têm o mesmo namespace de identidade e valor de identidade.
 * [Privacy Service](../privacy-service/home.md): Se a solicitação de exclusão incluir `identity`, a combinação de namespace e valor de identidade especificada pode ser excluída do Serviço de identidade usando o recurso de processamento de solicitação de privacidade no Privacy Service.
+

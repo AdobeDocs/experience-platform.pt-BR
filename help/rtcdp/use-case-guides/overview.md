@@ -2,7 +2,7 @@
 title: Casos de uso de exemplo no Real-Time CDP
 description: Visualize exemplos de casos de uso entre serviços para aproveitar ao máximo a implementação do Real-Time CDP.
 feature: Use Cases
-source-git-commit: 697f785e939b9817f80a31dfd0070f9dadd48baf
+source-git-commit: f342020a0e821172a7ceca95265a9d71f64f5347
 workflow-type: tm+mt
 source-wordcount: '351'
 ht-degree: 6%
@@ -23,7 +23,7 @@ Com cookies de terceiros definidos para desaparecerem nos próximos anos, o supo
 
 O Adobe Real-Time CDP fornece suporte abrangente para identificadores de parceiros, permitindo criar públicos-alvo de prospetos, enriquecer públicos-alvo conhecidos com atributos de parceiros e muito mais.
 
-Os casos de uso compatíveis podem ser agrupados em casos de aquisição de cliente e enriquecimento de perfil. Acesse os links de documentação abaixo para obter informações abrangentes sobre a implementação.
+Os casos de uso de amostra podem ser agrupados em casos de aquisição de cliente e enriquecimento de perfil. Acesse os links de documentação abaixo para obter informações abrangentes sobre a implementação.
 
 ### Aquisição de clientes {#customer-acquisition}
 

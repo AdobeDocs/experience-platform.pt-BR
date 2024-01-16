@@ -5,10 +5,10 @@ breadcrumb-title: Tags
 user-guide-description: Saiba como implantar e gerenciar tags de análise, marketing e publicidade para potencializar as experiências dos clientes.
 feature: Tags
 solution: Data Collection
-source-git-commit: 7b957aeff6f60665841013619d70ee962fc4c449
+source-git-commit: 30152a95a46db06948620b881092fb21df734f9d
 workflow-type: tm+mt
-source-wordcount: '1030'
-ht-degree: 37%
+source-wordcount: '770'
+ht-degree: 45%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 37%
 * Introdução {#get-started}
    * [Manual de início rápido](./quick-start/quick-start.md)
    * [Guias de implementação](./quick-start/implementation-guides.md)
-* Guias de interface {#ui}
+* Guias de interface do usuário {#ui}
    * [Visão geral](./ui/managing-resources/overview.md)
    * Extensões {#extensions}
       * [Visão geral](./ui/managing-resources/extensions/overview.md)
@@ -53,7 +53,7 @@ ht-degree: 37%
    * [Implantar tags do JavaScript para gerenciar o consentimento do cliente](./ui/client-side/consent.md)
    * [Suporte à Política de segurança de conteúdo (CSP)](./ui/client-side/content-security-policy.md)
    * [Compatibilidade de Integridade de sub-recursos (SRI)](./ui/client-side/sri.md)
-* Encaminhamento de evento {#event-forwarding}
+* Encaminhamento de eventos {#event-forwarding}
    * [Visão geral](./ui/event-forwarding/overview.md)
    * [Introdução](./ui/event-forwarding/getting-started.md)
    * [Configuração de segredos](./ui/event-forwarding/secrets.md)
@@ -194,7 +194,7 @@ ht-degree: 37%
       * [Pesquisa SDI](https://exchange.adobe.com/apps/ec/102991)
       * [SDI Toolkit](https://exchange.adobe.com/apps/ec/101460)
       * [SessionCam](https://exchange.adobe.com/apps/ec/100517)
-      * [Evento de Alteração de Exibição SPA](https://partners.adobe.com/br/exchangeprogram/experiencecloud/exchange.details.105867.html)
+      * [Evento de Alteração de Exibição SPA](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.105867.html)
       * [Spanner de armazenamento](https://exchange.adobe.com/apps/ec/102990)
       * [TAGS por horizonte de loop](https://exchange.adobe.com/apps/ec/106092)
       * [Tealium Collect](https://exchange.adobe.com/apps/ec/104217)
@@ -321,10 +321,5 @@ ht-degree: 37%
 * [Perguntas frequentes](./faq.md)
 * [Atualizações de terminologia](./term-updates.md)
 * [Substituição do suporte para o Internet Explorer 10 e 11](./ie-deprecation.md)
-* Notas de versão {#release-notes}
-   * [Mais recentes](./release-notes/current.md)
-   * [Notas de versão de 2021](./release-notes/2021.md)
-   * [Notas de versão de 2020](./release-notes/2020.md)
-   * [Notas de versão de 2019](./release-notes/2019.md)
-   * [Notas de versão de 2018](./release-notes/2018.md)
+* [Notas de versão da Platform](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=pt-BR)
 

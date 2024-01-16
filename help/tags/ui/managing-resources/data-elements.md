@@ -2,10 +2,10 @@
 title: Elementos de dados
 description: Os elementos de dados são os blocos fundamentais do seu dicionário de dados (ou mapa de dados). Use elementos de dados para coletar, organizar e entregar dados em toda a tecnologia de marketing e anúncios.
 exl-id: 1e7b03cc-5a54-403d-bf8d-dbc206cfeb2d
-source-git-commit: 9d897602c0c83d06910b8b14a87351a9c25ab5f1
+source-git-commit: 0956a28a8ff6eacb3a55f7c333293ed5b6c81cce
 workflow-type: tm+mt
-source-wordcount: '1622'
-ht-degree: 91%
+source-wordcount: '1614'
+ht-degree: 89%
 
 ---
 
@@ -91,13 +91,15 @@ Ao criar ou editar elementos, você pode salvar e construir sua [biblioteca ativ
 
 ## Tipos de elementos de dados {#types-of-data-elements}
 
-Os tipos de elementos de dados são determinados pela extensão. Não há limite para os tipos que podem ser criados.
+>[!NOTE]
+>
+>Os tipos de elementos de dados são determinados pela extensão. Não há limite para os tipos que podem ser criados.
 
-As seções a seguir descrevem os tipos de elementos de dados disponíveis na extensão principal. Outras extensões usam outros tipos de elementos de dados.
+As seções a seguir descrevem os tipos de elementos de dados disponíveis no **Extensão principal**. Outras extensões usam outros tipos de elementos de dados.
 
 ### Cookie
 
-Todo cookie de domínio disponível pode ser referido no campo campo de nome do cookie.
+Qualquer cookie de domínio disponível pode ser referenciado no campo de nome do cookie.
 
 #### Exemplo:
 

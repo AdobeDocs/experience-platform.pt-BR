@@ -2,10 +2,10 @@
 title: Visualizador de gráfico de identidade
 description: Um gráfico de identidade é um mapa dos relacionamentos entre identidades diferentes para um cliente específico, fornecendo uma representação visual de como o cliente interage com a sua marca em diferentes canais.
 exl-id: ccd5f8d8-595b-4636-9191-553214e426bd
-source-git-commit: 4bf939011e6246a553f67805ff99a70610782ea6
+source-git-commit: d4ed36bd036218fcc3428ef420490b68c9cdb121
 workflow-type: tm+mt
-source-wordcount: '1388'
-ht-degree: 6%
+source-wordcount: '1402'
+ht-degree: 5%
 
 ---
 
@@ -60,7 +60,7 @@ O gráfico de identidade exibe todas as identidades vinculadas à combinação d
 
 >[!IMPORTANT]
 >
->Um gráfico de identidade exige que pelo menos duas identidades vinculadas sejam geradas e uma combinação válida de namespace e valor de identidade. O número máximo de identidades que o visualizador de gráficos pode exibir é 150. Consulte a [apêndice](#appendix) abaixo para obter mais informações.
+>Um gráfico de identidade exige que pelo menos duas identidades vinculadas sejam geradas e uma combinação válida de namespace e valor de identidade. O número máximo de identidades que o visualizador de gráficos pode exibir é 50. Consulte a [apêndice](#appendix) abaixo para obter mais informações.
 
 ![O visualizador de gráficos de identidade com cinco identidades vinculadas.](../images/graph-viewer/graph.png)
 
@@ -82,7 +82,7 @@ A tabela a seguir fornece informações adicionais sobre as propriedades da font
 
 | Fonte de dados | Descrição |
 | --- | --- | 
-| ID em lote | O identificador gerado automaticamente que corresponde aos dados em lote. |
+| ID do lote | O identificador gerado automaticamente que corresponde aos dados em lote. |
 | ID do conjunto de dados | O identificador gerado automaticamente que corresponde ao seu conjunto de dados. |
 | Nome do conjunto de dados | O nome do conjunto de dados que contém os dados em lote. |
 | Nome do esquema | O nome do esquema. O esquema fornece um conjunto de regras que representam e validam a estrutura e o formato dos dados. |
@@ -115,7 +115,7 @@ Podem ocorrer erros ao acessar o visualizador de gráficos de identidade. Esta �
 
 - Um valor de identidade deve existir no namespace selecionado.
 - O visualizador de gráficos de identidade exige um mínimo de duas identidades vinculadas para ser gerado. É possível que haja apenas um valor de identidade e nenhuma identidade vinculada e, nesse caso, o valor só existiria em [!DNL Profile] visualizador.
-- O visualizador de gráficos de identidade não pode exceder o máximo de 150 identidades.
+- O visualizador de gráficos de identidade não pode exceder o máximo de 50 identidades.
 
 ![error-screen](../images/graph-viewer/error-screen.png)
 

@@ -5,7 +5,7 @@ product: experience platform
 type: Documentation
 description: Saiba mais sobre o desempenho e as medidas de proteção aplicadas pelo sistema para segmentação e dados de perfil para garantir o uso ideal da funcionalidade da Real-Time CDP.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: ec47f07f20e0f4ccda4c791882361bdc7a77aa98
+source-git-commit: 0542e618dfb6e5571845387fed9eced4200179b6
 workflow-type: tm+mt
 source-wordcount: '2434'
 ht-degree: 2%
@@ -36,7 +36,7 @@ Os seguintes serviços de Experience Platform estão envolvidos na modelagem de 
 Há dois tipos de limites padrão neste documento:
 
 | Tipo de grade de proteção | Descrição |
-|----------|---------|
+| -------------- | ----------- |
 | **Proteção de desempenho (limite flexível)** | As medidas de proteção de desempenho são limites de uso relacionados ao escopo dos seus casos de uso. Ao exceder as medidas de proteção de desempenho, você pode enfrentar degradação e latência do desempenho. O Adobe não é responsável por essa degradação de desempenho. Os clientes que excederem consistentemente uma garantia de desempenho podem optar por licenciar capacidade adicional para evitar a degradação do desempenho. |
 | **Medidas de proteção aplicadas pelo sistema (limite rígido)** | As medidas de proteção aplicadas pelo sistema são aplicadas pela interface do usuário ou API do Real-Time CDP. Esses são limites que você não pode exceder, pois a interface do usuário e a API o bloquearão de fazer isso ou retornarão um erro. |
 
@@ -55,7 +55,7 @@ As medidas de proteção a seguir fornecem limites recomendados ao modelar dados
 ### Medidas de proteção da entidade principal
 
 | Grade de Proteção | Limite | Tipo de limite | Descrição |
-| --- | --- | --- | --- |
+| --------- | ----- | ---------- | ----------- |
 | Conjuntos de dados da classe Perfil individual XDM | 20 | Proteção de desempenho | Recomenda-se um máximo de 20 conjuntos de dados que usam a classe Perfil individual XDM. |
 | Conjuntos de dados da classe XDM ExperienceEvent | 20 | Proteção de desempenho | Recomenda-se um máximo de 20 conjuntos de dados que usam a classe XDM ExperienceEvent. |
 | Conjuntos de dados do conjunto de relatórios do Adobe Analytics ativados para Perfil | 1 | Proteção de desempenho | No máximo um (1) conjunto de dados do conjunto de relatórios do Analytics deve estar ativado para o Perfil. A tentativa de ativar vários conjuntos de dados do Analytics para o Perfil pode ter consequências não intencionais para a qualidade dos dados. Para obter mais informações, consulte a seção sobre [Conjuntos de dados do Adobe Analytics](#aa-datasets) no apêndice. |
@@ -70,7 +70,7 @@ As medidas de proteção a seguir fornecem limites recomendados ao modelar dados
 ### Medidas de proteção de entidade Dimension
 
 | Grade de Proteção | Limite | Tipo de limite | Descrição |
-| --- | --- | --- | --- |
+| --------- | ----- | ---------- | ----------- |
 | Não são permitidos dados de séries temporais para[!DNL XDM Individual Profile] entidades | 0 | Proteção imposta pelo sistema | **Os dados de série temporal não são permitidos para[!DNL XDM Individual Profile] entidades no Serviço de perfil.** Se um conjunto de dados de séries temporais estiver associado a um[!DNL XDM Individual Profile] ID, o conjunto de dados não deve ser ativado para [!DNL Profile]. |
 | Nenhuma relação aninhada | 0 | Proteção de desempenho | Você não deve criar uma relação entre dois[!DNL XDM Individual Profile] esquemas. A capacidade de criar relações não é recomendada para esquemas que não fazem parte da [!DNL Profile] esquema de união. |
 | Profundidade JSON para o campo de ID principal | 4 | Proteção de desempenho | A profundidade máxima recomendada de JSON para o campo de ID primária é 4. Isso significa que em um esquema altamente aninhado, você não deve selecionar um campo como uma ID primária se ele estiver aninhado a mais de 4 níveis de profundidade. Um campo que esteja no quarto nível aninhado pode ser usado como uma ID primária. |
@@ -88,7 +88,7 @@ As medidas de proteção a seguir se referem ao tamanho dos dados e fornecem lim
 ### Medidas de proteção da entidade principal
 
 | Grade de Proteção | Limite | Tipo de limite | Descrição |
-| --- | --- | --- | --- |
+| --------- | ----- | ---------- | ----------- |
 | Tamanho máximo do ExperienceEvent | 10KB | Proteção imposta pelo sistema | **O tamanho máximo de um evento é 10KB.** A assimilação continuará, mas os eventos maiores que 10 KB serão descartados. |
 | Tamanho máximo do registro de perfil | 100KB | Proteção imposta pelo sistema | **O tamanho máximo de um registro de perfil é 100 KB.** A assimilação continuará, no entanto, registros de perfil maiores que 100 KB serão descartados. |
 | Tamanho máximo do fragmento do perfil | 50 MB | Proteção imposta pelo sistema | **O tamanho máximo de um único fragmento de perfil é de 50 MB.** A segmentação, as exportações e as pesquisas podem falhar para qualquer [fragmento do perfil](#profile-fragments) que seja maior que 50 MB. |
@@ -101,7 +101,7 @@ As medidas de proteção a seguir se referem ao tamanho dos dados e fornecem lim
 ### Medidas de proteção de entidade Dimension
 
 | Grade de Proteção | Limite | Tipo de limite | Descrição |
-| --- | --- | --- | --- |
+| --------- | ----- | ---------- | ----------- |
 | Tamanho total de todas as entidades dimensionais | 5GB | Proteção de desempenho | O tamanho total recomendado para todas as entidades dimensionais é 5 GB. A ingestão de entidades de dimensão grandes pode afetar o desempenho do sistema. Por exemplo, não é recomendado tentar carregar um catálogo de produtos de 10 GB como uma entidade de dimensão. |
 | Esquema de entidade dimensional de conjuntos de dados | 5 | Proteção de desempenho | Recomenda-se um máximo de 5 conjuntos de dados associados a cada esquema de entidade dimensional. Por exemplo, se você criar um esquema para &quot;produtos&quot; e adicionar cinco conjuntos de dados de contribuição, não deverá criar um sexto conjunto de dados vinculado ao esquema de produtos. |
 | Lotes de entidades Dimension assimilados por dia | 4 por entidade | Proteção de desempenho | O número máximo recomendado de lotes de entidades de dimensão assimilados por dia é 4 por entidade. Por exemplo, você pode assimilar atualizações em um catálogo de produtos até 4 vezes por dia. A ingestão de lotes de entidades de dimensão adicionais para a mesma entidade pode afetar o desempenho do sistema. |
@@ -113,7 +113,7 @@ As medidas de proteção a seguir se referem ao tamanho dos dados e fornecem lim
 As medidas de proteção descritas nesta seção referem-se ao número e à natureza dos públicos que uma organização pode criar no Experience Platform, bem como mapear e ativar públicos para destinos.
 
 | Grade de Proteção | Limite | Tipo de limite | Descrição |
-| --- | --- | --- | --- |
+| --------- | ----- | ---------- | ----------- |
 | Públicos-alvo por sandbox | 4000 | Proteção de desempenho | Uma organização pode ter mais de 4000 públicos-alvo no total, desde que haja menos de 4000 públicos-alvo em cada sandbox individual. Isso inclui públicos em lote, de streaming e de borda. Tentar criar públicos adicionais pode afetar o desempenho do sistema. Leia mais sobre [criação de públicos](/help/segmentation/ui/segment-builder.md) por meio do construtor de segmentos. |
 | Públicos-alvo da borda por sandbox | 150 | Proteção de desempenho | Uma organização pode ter mais de 150 públicos-alvo de borda no total, desde que haja menos de 150 públicos-alvo de borda em cada sandbox individual. Tentar criar públicos-alvo de borda adicionais pode afetar o desempenho do sistema. Leia mais sobre [públicos-alvo de borda](/help/segmentation/ui/edge-segmentation.md). |
 | Taxa de transferência de borda em todas as sandboxes | 1500 RPS | Proteção de desempenho | A segmentação de borda suporta um valor de pico de 1.500 eventos de entrada por segundo ao entrar na rede de borda da Adobe Experience Platform. A segmentação de borda pode levar até 350 milissegundos para processar um evento de entrada depois que ele entra na rede de borda da Adobe Experience Platform. Leia mais sobre [públicos-alvo de borda](/help/segmentation/ui/edge-segmentation.md). |

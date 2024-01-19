@@ -6,9 +6,9 @@ description: A Adobe Experience Platform usa um modelo de dados híbrido não no
 badgeB2B: label="Edição B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 feature: Guardrails, B2B
 exl-id: 8eff8c3f-a250-4aec-92a1-719ce4281272
-source-git-commit: 7c455b546b6a98936d60e6cd481cae8610c8be17
+source-git-commit: f6cfe2de5f2f485cbd42c83b539fb458b505d260
 workflow-type: tm+mt
-source-wordcount: '1675'
+source-wordcount: '1794'
 ht-degree: 2%
 
 ---
@@ -31,9 +31,10 @@ Este documento fornece limites de uso e taxa padrão para ajudar você a modelar
 
 Há dois tipos de limites padrão neste documento:
 
-* **Limite flexível:** É possível ir além de um limite flexível, no entanto, os limites flexíveis fornecem uma diretriz recomendada para o desempenho do sistema.
-
-* **Limite rígido:** Um limite rígido fornece um máximo absoluto.
+| Tipo de grade de proteção | Descrição |
+| -------------- | ----------- |
+| **Proteção de desempenho (limite flexível)** | As medidas de proteção de desempenho são limites de uso relacionados ao escopo dos seus casos de uso. Ao exceder as medidas de proteção de desempenho, você pode enfrentar degradação e latência do desempenho. O Adobe não é responsável por essa degradação de desempenho. Os clientes que excederem consistentemente uma garantia de desempenho podem optar por licenciar capacidade adicional para evitar a degradação do desempenho. |
+| **Medidas de proteção aplicadas pelo sistema (limite rígido)** | As medidas de proteção aplicadas pelo sistema são aplicadas pela interface do usuário ou API do Real-Time CDP. Esses são limites que você não pode exceder, pois a interface do usuário e a API o bloquearão de fazer isso ou retornarão um erro. |
 
 >[!INFO]
 >
@@ -50,10 +51,11 @@ As medidas de proteção a seguir fornecem limites recomendados ao modelar dados
 >Os limites do modelo de dados descritos nesta seção representam as alterações ativadas pelo Real-time Customer Data Platform B2B Edition. Para obter uma lista completa de limites padrão para o Real-Time CDP B2B Edition, combine esses limites com os limites gerais do Adobe Experience Platform descritos na [medidas de proteção para a documentação de dados do Perfil do cliente em tempo real](../profile/guardrails.md).
 
 | Grade de Proteção | Limite | Tipo de limite | Descrição |
-| --- | --- | --- | --- |
-| Conjuntos de dados da classe XDM padrão do Real-Time CDP B2B Edition | 60 | Suave | Recomenda-se um máximo de 60 conjuntos de dados que usam as classes padrão do Experience Data Model (XDM) fornecidas pelo Real-Time CDP B2B Edition. Para obter uma lista completa de classes XDM padrão para casos de uso B2B, consulte o [esquemas na documentação do Real-Time CDP B2B Edition](schemas/b2b.md). <br/><br/>*Observação: devido à natureza do modelo de dados híbrido desnormalizado de Experience Platform, a maioria dos clientes não excede esse limite. Para perguntas sobre como modelar seus dados ou se quiser saber mais sobre limites personalizados, entre em contato com o representante do Atendimento ao cliente.* |
-| Relacionamentos herdados de várias entidades | 20 | Suave | Recomenda-se um máximo de 20 relacionamentos de várias entidades definidos entre entidades primárias e entidades de dimensão. Mapeamentos de relacionamento adicionais não devem ser feitos até que um relacionamento existente seja removido ou desabilitado. |
-| Relacionamentos muitos para um por classe XDM | 2 | Suave | Recomenda-se um máximo de 2 relações muitos para um definidas por classe XDM. Uma relação adicional não deve ser feita até que uma relação existente seja removida ou desabilitada. Para obter etapas sobre como criar uma relação entre dois schemas, consulte o tutorial sobre [definição de relacionamentos de esquema B2B](../xdm/tutorials/relationship-b2b.md). |
+| --------- | ----- | ---------- | ----------- |
+| Conjuntos de dados da classe XDM padrão do Real-Time CDP B2B Edition | 60 | Proteção de desempenho | Recomenda-se um máximo de 60 conjuntos de dados que usam as classes padrão do Experience Data Model (XDM) fornecidas pelo Real-Time CDP B2B Edition. Para obter uma lista completa de classes XDM padrão para casos de uso B2B, consulte o [esquemas na documentação do Real-Time CDP B2B Edition](schemas/b2b.md). <br/><br/>*Observação: devido à natureza do modelo de dados híbrido desnormalizado de Experience Platform, a maioria dos clientes não excede esse limite. Para perguntas sobre como modelar seus dados ou se quiser saber mais sobre limites personalizados, entre em contato com o representante do Atendimento ao cliente.* |
+| Contagem de identidades da conta individual em um gráfico de identidade | 50 | Proteção de desempenho | O número máximo de identidades em um Gráfico de identidade para uma conta individual é 50. Quaisquer perfis com mais de 50 identidades são excluídos da segmentação, das exportações e das pesquisas. |
+| Relacionamentos herdados de várias entidades | 20 | Proteção de desempenho | Recomenda-se um máximo de 20 relacionamentos de várias entidades definidos entre entidades primárias e entidades de dimensão. Mapeamentos de relacionamento adicionais não devem ser feitos até que um relacionamento existente seja removido ou desabilitado. |
+| Relacionamentos muitos para um por classe XDM | 2 | Proteção de desempenho | Recomenda-se um máximo de 2 relações muitos para um definidas por classe XDM. Uma relação adicional não deve ser feita até que uma relação existente seja removida ou desabilitada. Para obter etapas sobre como criar uma relação entre dois schemas, consulte o tutorial sobre [definição de relacionamentos de esquema B2B](../xdm/tutorials/relationship-b2b.md). |
 
 ### Medidas de proteção de entidade Dimension
 
@@ -62,11 +64,11 @@ As medidas de proteção a seguir fornecem limites recomendados ao modelar dados
 >Os limites do modelo de dados descritos nesta seção representam as alterações ativadas pelo Real-time Customer Data Platform B2B Edition. Para obter uma lista completa de limites padrão para o Real-Time CDP B2B Edition, combine esses limites com os limites gerais do Adobe Experience Platform descritos na [medidas de proteção para a documentação de dados do Perfil do cliente em tempo real](../profile/guardrails.md).
 
 | Grade de Proteção | Limite | Tipo de limite | Descrição |
-| --- | --- | --- | --- |
-| Nenhuma relação herdada aninhada | 0 | Suave | Você não deve criar uma relação entre dois[!DNL XDM Individual Profile] esquemas. A capacidade de criar relações não é recomendada para esquemas que não fazem parte da [!DNL Profile] esquema de união. |
-| Somente objetos B2B podem participar de relações muitos para um | 0 | Grave | O sistema só suporta relações muitos para um entre objetos B2B. Para obter mais informações sobre relações muitos para um, consulte o tutorial em [definição de relacionamentos de esquema B2B](../xdm/tutorials/relationship-b2b.md). |
-| Profundidade máxima de relações aninhadas entre objetos B2B | 3 | Grave | A profundidade máxima das relações aninhadas entre objetos B2B é 3. Isso significa que em um esquema altamente aninhado, você não deve ter uma relação entre objetos B2B aninhados a mais de 3 níveis de profundidade. |
-| Esquema único para cada entidade de dimensão | 1 | Grave | Cada entidade de dimensão deve ter um único esquema. Tentar usar entidades de dimensão criadas a partir de mais de um esquema pode afetar os resultados da segmentação. Espera-se que diferentes entidades de dimensão tenham esquemas separados. |
+| --------- | ----- | ---------- | ----------- |
+| Nenhuma relação herdada aninhada | 0 | Proteção de desempenho | Você não deve criar uma relação entre dois[!DNL XDM Individual Profile] esquemas. A criação de relacionamentos é **não** recomendado para qualquer esquema que não faça parte do [!DNL Profile] esquema de união. |
+| Somente objetos B2B podem participar de relações muitos para um | 0 | Proteção imposta pelo sistema | O sistema só suporta relações muitos para um entre objetos B2B. Para obter mais informações sobre relações muitos para um, consulte o tutorial em [definição de relacionamentos de esquema B2B](../xdm/tutorials/relationship-b2b.md). |
+| Profundidade máxima de relações aninhadas entre objetos B2B | 3 | Proteção imposta pelo sistema | A profundidade máxima das relações aninhadas entre objetos B2B é 3. Isso significa que em um esquema altamente aninhado, você não deve ter uma relação entre objetos B2B aninhados a mais de 3 níveis de profundidade. |
+| Esquema único para cada entidade de dimensão | 1 | Proteção imposta pelo sistema | Cada entidade de dimensão deve ter um único esquema. Tentar usar entidades de dimensão criadas a partir de mais de um esquema pode afetar os resultados da segmentação. Espera-se que diferentes entidades de dimensão tenham esquemas separados. |
 
 ## Limites de tamanho de dados
 
@@ -83,8 +85,8 @@ As medidas de proteção a seguir se referem ao tamanho dos dados e fornecem lim
 >Os limites de tamanho de dados descritos nesta seção representam as alterações ativadas pelo Real-time Customer Data Platform B2B Edition. Para obter uma lista completa de limites padrão para o Real-Time CDP B2B Edition, combine esses limites com os limites gerais do Adobe Experience Platform descritos na [medidas de proteção para a documentação de dados do Perfil do cliente em tempo real](../profile/guardrails.md).
 
 | Grade de Proteção | Limite | Tipo de limite | Descrição |
-| --- | --- | --- | --- |
-| Lotes assimilados por classe XDM por dia | 45 | Suave | O número total de lotes assimilados a cada dia por classe XDM não deve exceder 45. A ingestão de lotes adicionais pode impedir o desempenho ideal. |
+| --------- | ----- | ---------- | ----------- |
+| Lotes assimilados por classe XDM por dia | 45 | Proteção de desempenho | O número total de lotes assimilados a cada dia por classe XDM não deve exceder 45. A ingestão de lotes adicionais pode impedir o desempenho ideal. |
 
 ### Medidas de proteção de entidade Dimension
 
@@ -93,10 +95,10 @@ As medidas de proteção a seguir se referem ao tamanho dos dados e fornecem lim
 >Os limites de tamanho de dados descritos nesta seção representam as alterações ativadas pelo Real-time Customer Data Platform B2B Edition. Para obter uma lista completa de limites padrão para o Real-Time CDP B2B Edition, combine esses limites com os limites gerais do Adobe Experience Platform descritos na [medidas de proteção para a documentação de dados do Perfil do cliente em tempo real](../profile/guardrails.md).
 
 | Grade de Proteção | Limite | Tipo de limite | Descrição |
-| --- | --- | --- | --- |
-| Tamanho total de todas as entidades dimensionais | 5GB | Suave | O tamanho total recomendado para todas as entidades dimensionais é 5 GB. A ingestão de entidades de dimensão grandes pode afetar o desempenho do sistema. Por exemplo, não é recomendado tentar carregar um catálogo de produtos de 10 GB como uma entidade de dimensão. |
-| Esquema de entidade dimensional de conjuntos de dados | 5 | Suave | Recomenda-se um máximo de 5 conjuntos de dados associados a cada esquema de entidade dimensional. Por exemplo, se você criar um esquema para &quot;produtos&quot; e adicionar cinco conjuntos de dados de contribuição, não deverá criar um sexto conjunto de dados vinculado ao esquema de produtos. |
-| Lotes de entidades Dimension assimilados por dia | 4 por entidade | Suave | O número máximo recomendado de lotes de entidades de dimensão assimilados por dia é 4 por entidade. Por exemplo, você pode assimilar atualizações em um catálogo de produtos até 4 vezes por dia. A ingestão de lotes de entidades de dimensão adicionais para a mesma entidade pode afetar o desempenho do sistema. |
+| --------- | ----- | ---------- | ----------- |
+| Tamanho total de todas as entidades dimensionais | 5GB | Proteção de desempenho | O tamanho total recomendado para todas as entidades dimensionais é 5 GB. A ingestão de entidades de dimensão grandes pode afetar o desempenho do sistema. Por exemplo, não é recomendado tentar carregar um catálogo de produtos de 10 GB como uma entidade de dimensão. |
+| Esquema de entidade dimensional de conjuntos de dados | 5 | Proteção de desempenho | Recomenda-se um máximo de 5 conjuntos de dados associados a cada esquema de entidade dimensional. Por exemplo, se você criar um esquema para &quot;produtos&quot; e adicionar cinco conjuntos de dados de contribuição, não deverá criar um sexto conjunto de dados vinculado ao esquema de produtos. |
+| Lotes de entidades Dimension assimilados por dia | 4 por entidade | Proteção de desempenho | O número máximo recomendado de lotes de entidades de dimensão assimilados por dia é 4 por entidade. Por exemplo, você pode assimilar atualizações em um catálogo de produtos até 4 vezes por dia. A ingestão de lotes de entidades de dimensão adicionais para a mesma entidade pode afetar o desempenho do sistema. |
 
 ## Proteções de segmentação
 
@@ -107,8 +109,8 @@ As medidas de proteção descritas nesta seção referem-se ao número e à natu
 >Os limites de segmentação descritos nesta seção representam as alterações ativadas pelo Real-time Customer Data Platform B2B Edition. Para obter uma lista completa de limites padrão para o Real-Time CDP B2B Edition, combine esses limites com os limites gerais do Adobe Experience Platform descritos na [medidas de proteção para a documentação de dados do Perfil do cliente em tempo real](../profile/guardrails.md).
 
 | Grade de Proteção | Limite | Tipo de limite | Descrição |
-| --- | --- | --- | --- |
-| Segmentos por sandbox B2B | 400 | Suave | Uma organização pode ter mais de 400 segmentos no total, desde que haja menos de 400 segmentos em cada sandbox B2B individual. Tentar criar segmentos adicionais pode afetar o desempenho do sistema. |
+| --------- | ----- | ---------- | ----------- |
+| Definições de segmento por sandbox B2B | 400 | Proteção de desempenho | Uma organização pode ter mais de 400 definições de segmento no total, desde que haja menos de 400 definições de segmento em cada sandbox B2B individual. Tentar criar definições de segmento adicionais pode afetar o desempenho do sistema. |
 
 ## Próximas etapas
 

@@ -3,9 +3,9 @@ keywords: Experience Platform;solução de problemas;medidas de proteção;diret
 title: Medidas de proteção para a assimilação de dados
 description: Este documento fornece orientação sobre medidas de proteção para a assimilação de dados no Adobe Experience Platform
 exl-id: f07751cb-f9d3-49ab-bda6-8e6fec59c337
-source-git-commit: 4debc301b930643565b25218f4822a67e88063bb
+source-git-commit: d0ee51340e1175e2820fea69269a8cb6e9d85c1c
 workflow-type: tm+mt
-source-wordcount: '588'
+source-wordcount: '571'
 ht-degree: 1%
 
 ---
@@ -37,7 +37,7 @@ A tabela a seguir descreve as medidas de proteção a serem consideradas ao usar
 
 | Tipo de assimilação | Diretrizes | Notas |
 | --- | --- | --- |
-| Fontes de transmissão | <ul><li>O tamanho máximo do registro é de 1 MB, com o tamanho recomendado de 10 KB.</li><li>As fontes de transmissão oferecem suporte a entre 4.000 e 5.000 solicitações por segundo após a criação de uma nova conexão de origem. **Nota**: pode levar até 30 minutos para que a transmissão de dados seja completamente processada para o data lake.</li><li>Você pode processar entre 4.000 e 5.000 solicitações por segundo no data lake. **Nota**: pode levar até 30 minutos para que a transmissão de dados seja completamente processada para o data lake.</li></ul> | Fontes de transmissão, como [!DNL Kafka], [!DNL Azure Event Hubs], e [!DNL Amazon Kinesis] não use o [!DNL Data Collection Core Service] (DCCS) e podem ter limites de rendimento diferentes. Consulte a [visão geral das origens](../sources/home.md) para um catálogo de fontes que você pode usar para assimilação de dados. |
+| Fontes de transmissão | <ul><li>O tamanho máximo do registro é de 1 MB, com o tamanho recomendado de 10 KB.</li><li>As fontes de transmissão oferecem suporte a entre 4.000 e 5.000 solicitações por segundo ao assimilar no data lake. Isso se aplica a conexões de origem recém-criadas além de conexões de origem existentes. **Nota**: pode levar até 30 minutos para que a transmissão de dados seja completamente processada para o data lake.</li><li>As fontes de transmissão oferecem suporte a no máximo 1500 solicitações por segundo ao assimilar dados para o perfil ou a segmentação por transmissão.</li></ul> | Fontes de transmissão, como [!DNL Kafka], [!DNL Azure Event Hubs], e [!DNL Amazon Kinesis] não use o [!DNL Data Collection Core Service] (DCCS) e podem ter limites de rendimento diferentes. Consulte a [visão geral das origens](../sources/home.md) para um catálogo de fontes que você pode usar para assimilação de dados. |
 
 ## Próximas etapas
 

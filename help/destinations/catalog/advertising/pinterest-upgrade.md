@@ -4,9 +4,9 @@ description: O pinterest está descontinuando a API do anunciante v4 usada atual
 hide: true
 hidefromtoc: true
 exl-id: c965235c-4208-4c28-9ac5-eb4c0061515d
-source-git-commit: 3968c8e2a0ebd2084a7047fb41e2b85c5da7a6e7
+source-git-commit: e3341ec6f62844858ecda7dd4db70d085f0bf217
 workflow-type: tm+mt
-source-wordcount: '672'
+source-wordcount: '531'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ Identificamos sua organização como tendo fluxos de dados ativos para ativar p�
 
 ## Qual é o plano?
 
-A Adobe está lançando uma nova placa de destino do Pinterest que aproveita a API v5 da Pinterest e preservará seus fluxos de dados existentes na nova conexão.
+O Adobe lançou uma nova placa de destino do Pinterest que aproveita a API v5 da Pinterest e preservará seus fluxos de dados existentes na nova conexão.
 
 ## Preciso fazer algo para manter meus públicos ativados funcionando?
 
@@ -45,7 +45,7 @@ Sim, antes de 18 de janeiro de 2024, é necessário autenticar no novo destino d
 
 ### Habilitar fluxos para novo destino {#disable-old-enable-new-flows}
 
-Em seguida, é necessário ativar os fluxos de dados para o novo cartão **[!UICONTROL (Novo) Pinterest]**.
+Em seguida, é necessário ativar os fluxos de dados para o novo  **[!UICONTROL Pinterest]** cartão.
 
 1. Ir para **[!UICONTROL Destinos > Navegar]** e use o filtro na tela para filtrar a variável **[!UICONTROL Pinterest]** somente destino.
    ![Filtrar fluxos de dados do Pinterest somente na guia Procurar](/help/destinations/assets/catalog/advertising/pinterest-migration/filter-pinterest-browse.png)
@@ -66,14 +66,18 @@ Sim, veja abaixo:
 
 ![Destino antigo e novo do Pinterest lado a lado](/help/destinations/assets/catalog/advertising/pinterest-migration/pinterest-two-cards-side-by-side.png)
 
+<!--
+
 >[!IMPORTANT]
 >
->Depois de 16 de novembro de 2023, o destino do Pinterest herdado será marcado **[!UICONTROL Obsoleto]**. <span class="preview">Quaisquer alterações feitas nos fluxos de dados para o destino do Pinterest (obsoleto) após 16 de novembro resultarão *não* será automaticamente transferida para o novo destino do Pinterest. </span>
->Por exemplo, *não recomendar* que você ative novos públicos-alvo para o destino antigo após 16 de novembro. Se você fizer isso, terá que seguir as etapas [etapas de ativação regular](/help/destinations/ui/activate-segment-streaming-destinations.md) para adicionar o público-alvo ao novo destino depois que as ações do cliente forem executadas.
+>After November 16th, 2023 the legacy Pinterest destination is marked **[!UICONTROL Deprecating]**. <span class="preview">Any changes that you make to dataflows to the (Deprecating) Pinterest destination after November 16th will *not* be automatically carried over to the new Pinterest destination. </span>
+>For example, we *do not recommend* that you activate new audiences to the old destination after November 16th. If you do that, you will then have to follow the [regular activation steps](/help/destinations/ui/activate-segment-streaming-destinations.md) to add the audience to the new destination once the customer actions are taken.
+
+-->
 
 **Até 15 de dezembro de 2023**: <span class="preview">Ação do cliente 1</span>. É necessário autenticar novamente no Pinterest para que o novo cartão seja conectado ao Pinterest. Exibir instruções completas em [nesta seção](#reauthenticate).
 
-<span class="preview">Ação do cliente 2</span>Em seguida, é necessário desativar os fluxos de dados para o Pinterest no cartão antigo e ativar os fluxos de dados no novo cartão. Exibir instruções completas em [nesta seção](#disable-old-enable-new-flows).
+<span class="preview">Ação do cliente 2</span>Em seguida, é necessário ativar os fluxos de dados no novo cartão. Exibir instruções completas em [nesta seção](#disable-old-enable-new-flows).
 
 <!--
 
@@ -83,8 +87,12 @@ Sim, veja abaixo:
 
 -->
 
-**Depois de 18 de janeiro de 2024**: <span class="preview">O pinterest desativou o acesso à API do anunciante V4. Todos os clientes do Real-Time CDP que não atualizaram para o novo destino agora encontrarão falhas nos fluxos de dados para o destino do Pinterest. [Reautenticar no Pinterest](#reauthenticate) e [ativar os fluxos de dados](#disable-old-enable-new-flows) ao destino atualizado para retomar suas campanhas para o Pinterest</span>.
+**Depois de 18 de janeiro de 2024**: <span class="preview">O pinterest desativou o acesso à API do anunciante V4. Todos os clientes do Real-Time CDP que não atualizaram para o novo destino agora encontrarão falhas nos fluxos de dados para o destino do Pinterest. [Reautenticar no Pinterest](#reauthenticate) e [ativar os fluxos de dados](#disable-old-enable-new-flows) ao destino atualizado para retomar suas campanhas para o Pinterest.</span>
 
-## Outros itens a serem observados
+<!--
 
-Depois de habilitar os fluxos de dados no novo cartão de destino e desabilitar os fluxos de dados nos cartões de destino antigos, você não deve ver interrupções em suas campanhas ou nos números de perfis qualificados nos públicos-alvo provenientes do Adobe Real-Time CDP.
+## Other items to note
+
+After you enable the dataflows on the new destination card and disable the dataflows on the old destination cards, you should see no disruption in your campaigns or in the numbers of qualified profiles in the audiences coming in from Adobe Real-Time CDP.
+
+-->

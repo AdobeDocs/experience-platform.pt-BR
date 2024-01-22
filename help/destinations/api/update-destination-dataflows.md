@@ -5,9 +5,9 @@ title: Atualizar fluxos de dados de destino usando a API de serviço de fluxo
 type: Tutorial
 description: Este tutorial aborda as etapas para atualizar um fluxo de dados de destino. Saiba como habilitar ou desabilitar o fluxo de dados, atualizar suas informações básicas ou adicionar e remover públicos-alvo e atributos usando a API do Serviço de fluxo.
 exl-id: 3f69ad12-940a-4aa1-a1ae-5ceea997a9ba
-source-git-commit: 9ac6b075af3805da4dad0dd6442d026ae96ab5c7
+source-git-commit: c1d4a0586111d9cd8a66f4239f67f2f7e6ac8633
 workflow-type: tm+mt
-source-wordcount: '2408'
+source-wordcount: '2404'
 ht-degree: 4%
 
 ---
@@ -499,8 +499,8 @@ curl -X PATCH \
 | `value` | O novo valor com o qual você deseja atualizar seu parâmetro. |
 | `id` | Especifique a ID do público-alvo que você está adicionando ao fluxo de dados de destino. |
 | `name` | **(Opcional)**. Especifique o nome do público-alvo que você está adicionando ao fluxo de dados de destino. Observe que esse campo não é obrigatório e que você pode adicionar um público-alvo ao fluxo de dados de destino com êxito sem fornecer seu nome. |
-| `filenameTemplate` | Para *destinos em lote* somente. Esse campo é necessário somente ao adicionar um público-alvo a um fluxo de dados em destinos de exportação de arquivos em lote, como Amazon S3, SFTP ou Azure Blob. <br> Esse campo determina o formato do nome do arquivo dos arquivos exportados para o seu destino. <br> As opções disponíveis são as seguintes: <br> <ul><li>`%DESTINATION_NAME%`: Obrigatório. Os arquivos exportados contêm o nome de destino.</li><li>`%SEGMENT_ID%`: Obrigatório. Os arquivos exportados contêm a ID do público-alvo exportado.</li><li>`%SEGMENT_NAME%`: **(Opcional)**. Os arquivos exportados contêm o nome do público exportado.</li><li>`DATETIME(YYYYMMdd_HHmmss)` ou `%TIMESTAMP%`: **(Opcional)**. Selecione uma dessas duas opções para que seus arquivos incluam a hora em que são gerados pelo Experience Platform.</li><li>`custom-text`: **(Opcional)**. Substitua esse espaço reservado por qualquer texto personalizado que queira anexar ao final dos nomes de arquivo.</li></ul> <br> Para obter mais informações sobre a configuração de nomes de arquivo, consulte a [configurar nomes de arquivo](/help/destinations/ui/activate-batch-profile-destinations.md#file-names) no tutorial de ativação de destinos em lote. |
-| `exportMode` | Para *destinos em lote* somente. Esse campo é necessário somente ao adicionar um público-alvo a um fluxo de dados em destinos de exportação de arquivos em lote, como Amazon S3, SFTP ou Azure Blob. <br> Obrigatório. Selecione `"DAILY_FULL_EXPORT"` ou `"FIRST_FULL_THEN_INCREMENTAL"`. Para obter mais informações sobre as duas opções, consulte [exportar arquivos completos](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) e [exportar arquivos incrementais](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) no tutorial de ativação de destinos em lote. |
+| `filenameTemplate` | Para *destinos em lote* somente. Esse campo é necessário somente ao adicionar um público-alvo a um fluxo de dados em destinos de exportação de arquivos em lote, como Amazon S3, SFTP ou Azure Blob. <br> Esse campo determina o formato do nome do arquivo dos arquivos exportados para o seu destino. <br> As seguintes opções estão disponíveis: <br> <ul><li>`%DESTINATION_NAME%`: Obrigatório. Os arquivos exportados contêm o nome de destino.</li><li>`%SEGMENT_ID%`: Obrigatório. Os arquivos exportados contêm a ID do público-alvo exportado.</li><li>`%SEGMENT_NAME%`: **(Opcional)**. Os arquivos exportados contêm o nome do público exportado.</li><li>`DATETIME(YYYYMMdd_HHmmss)` ou `%TIMESTAMP%`: **(Opcional)**. Selecione uma dessas duas opções para que seus arquivos incluam a hora em que são gerados pelo Experience Platform.</li><li>`custom-text`: **(Opcional)**. Substitua esse espaço reservado por qualquer texto personalizado que queira anexar ao final dos nomes de arquivo.</li></ul> <br> Para obter mais informações sobre a configuração de nomes de arquivo, consulte a [configurar nomes de arquivo](/help/destinations/ui/activate-batch-profile-destinations.md#file-names) no tutorial de ativação de destinos em lote. |
+| `exportMode` | Para *destinos em lote* somente. Esse campo é necessário somente ao adicionar um público-alvo a um fluxo de dados em destinos de exportação de arquivos em lote, como Amazon S3, SFTP ou Azure Blob. <br> Obrigatório. Selecionar `"DAILY_FULL_EXPORT"` ou `"FIRST_FULL_THEN_INCREMENTAL"`. Para obter mais informações sobre as duas opções, consulte [exportar arquivos completos](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) e [exportar arquivos incrementais](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) no tutorial de ativação de destinos em lote. |
 | `startDate` | Selecione a data em que o público-alvo deve começar a exportar perfis para o seu destino. |
 | `frequency` | Para *destinos em lote* somente. Esse campo é necessário somente ao adicionar um público-alvo a um fluxo de dados em destinos de exportação de arquivos em lote, como Amazon S3, SFTP ou Azure Blob. <br> Obrigatório. <br> <ul><li>Para o `"DAILY_FULL_EXPORT"` modo de exportação, é possível selecionar `ONCE` ou `DAILY`.</li><li>Para o `"FIRST_FULL_THEN_INCREMENTAL"` modo de exportação, é possível selecionar `"DAILY"`, `"EVERY_3_HOURS"`, `"EVERY_6_HOURS"`, `"EVERY_8_HOURS"`, `"EVERY_12_HOURS"`.</li></ul> |
 | `triggerType` | Para *destinos em lote* somente. Este campo é necessário somente ao selecionar o `"DAILY_FULL_EXPORT"` no modo `frequency` seletor. <br> Obrigatório. <br> <ul><li>Selecionar `"AFTER_SEGMENT_EVAL"` para que o trabalho de ativação seja executado imediatamente após a conclusão diária do trabalho de segmentação em lote do Platform. Isso garante que, quando o trabalho de ativação for executado, os perfis mais atualizados sejam exportados para o seu destino.</li><li>Selecionar `"SCHEDULED"` para que o trabalho de ativação seja executado em um horário fixado. Isso garante que os dados do perfil de Experience Platform sejam exportados todos os dias à mesma hora, mas os perfis exportados podem não ser os mais atualizados, dependendo se o trabalho de segmentação em lote foi concluído antes do início do trabalho de ativação. Ao selecionar essa opção, você também deve adicionar um `startTime` indicar em que momento, em UTC, as exportações diárias devem ocorrer.</li></ul> |
@@ -543,7 +543,7 @@ curl -X PATCH \
     -d '[
 {
    "op":"remove",
-   "path":"transformations/0/params/segmentSelectors/selectors/0/",
+   "path":"/transformations/0/params/segmentSelectors/selectors/0",
    "value":{
       "type":"PLATFORM_SEGMENT",
       "value":{
@@ -552,7 +552,7 @@ curl -X PATCH \
 },
 {
    "op":"remove",
-   "path":"transformations/0/params/segmentSelectors/selectors/1/",
+   "path":"/transformations/0/params/segmentSelectors/selectors/1",
    "value":{
       "type":"PLATFORM_SEGMENT",
       "value":{
@@ -565,7 +565,7 @@ curl -X PATCH \
 | Propriedade | Descrição |
 | --------- | ----------- |
 | `op` | A chamada de operação usada para definir a ação necessária para atualizar o fluxo de dados. As operações incluem: `add`, `replace`, e `remove`. Para remover um público-alvo de um fluxo de dados, use o `remove` operação. |
-| `path` | Especifica qual público-alvo existente deve ser removido do fluxo de dados de destino, com base no índice do seletor de público-alvo. GET Para recuperar a ordem dos públicos-alvo em um fluxo de dados, execute uma chamada para o `/flows` e inspecione o `transformations.segmentSelectors` propriedade. Para excluir o primeiro público-alvo no fluxo de dados, use `"path":"transformations/0/params/segmentSelectors/selectors/0/"`. |
+| `path` | Especifica qual público-alvo existente deve ser removido do fluxo de dados de destino, com base no índice do seletor de público-alvo. GET Para recuperar a ordem dos públicos-alvo em um fluxo de dados, execute uma chamada para o `/flows` e inspecione o `transformations.segmentSelectors` propriedade. Para excluir o primeiro público-alvo no fluxo de dados, use `"path":"/transformations/0/params/segmentSelectors/selectors/0"`. |
 
 
 **Resposta**

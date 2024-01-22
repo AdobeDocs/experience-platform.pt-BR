@@ -4,9 +4,9 @@ title: Identidades no Real-time Customer Data Platform
 description: O Serviço de identidade da Adobe Experience Platform ajuda você a ter uma melhor visão dos clientes e do comportamento deles ao unir as identidades de vários dispositivos e sistemas.
 feature: Get Started, Identities
 exl-id: 2b0d84de-9710-412e-ace7-56e3977245aa
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 1d2c67a2015f57238bdbb0e14c676601e092ef5f
 workflow-type: tm+mt
-source-wordcount: '431'
+source-wordcount: '422'
 ht-degree: 0%
 
 ---
@@ -23,9 +23,9 @@ Os namespaces de identidade são um componente de [!DNL Identity Service] e serv
 
 ## Gráficos de identidade
 
-Um gráfico de identidade é um mapa dos relacionamentos entre diferentes namespaces de identidade, que fornece uma representação visual de como o cliente interage com a marca em diferentes canais. Todos os gráficos de identidade do cliente são gerenciados e atualizados coletivamente pelo [!DNL Identity Service] em tempo quase real, em resposta à atividade do cliente.
+Um gráfico de identidade é um mapa dos relacionamentos entre identidades diferentes, que fornece uma representação visual de como o cliente interage com a marca em diferentes canais. Todos os gráficos de identidade do cliente são gerenciados e atualizados coletivamente pelo Serviço de identidade, em resposta à atividade do cliente.
 
-[!DNL Identity Service] O gerencia um gráfico de identidade visível somente por sua organização e criado com base em seus dados, conhecido como gráfico privado. [!DNL Identity Service] aumenta o gráfico privado quando um registro de dados assimilado contém mais de uma identidade, adicionando uma relação entre as identidades encontradas.
+[!DNL Identity Service] O gerencia um gráfico de identidade visível somente para sua organização e criado com base em seus dados. [!DNL Identity Service] aumenta o gráfico quando um registro de dados assimilado contém mais de uma identidade, adicionando uma relação entre as identidades encontradas.
 
 ## Próximas etapas
 

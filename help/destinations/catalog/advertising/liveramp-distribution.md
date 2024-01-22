@@ -2,14 +2,14 @@
 title: LiveRamp - Conexão de distribuição
 description: Saiba como usar o LiveRamp - Conector de distribuição para orquestrar e ativar públicos integrados anteriormente no LiveRamp para destinos de publicidade downstream.
 exl-id: 1b11a743-1ef9-4b01-90ef-cc072bc03c91
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
 workflow-type: tm+mt
-source-wordcount: '2716'
+source-wordcount: '2722'
 ht-degree: 38%
 
 ---
 
-# Conexão com o [!DNL LiveRamp - Distribution]
+# [!DNL LiveRamp - Distribution] conexão
 
 A variável [!DNL LiveRamp - Distribution] conexão permite ativar públicos do Experience Platform para editores premium em mídias móveis, da web, de exibição e de TV conectada.
 
@@ -65,7 +65,7 @@ Depois de ter integrado os públicos-alvo ao LiveRamp, continue o fluxo de traba
 
 >[!IMPORTANT]
 > 
->Para se conectar ao destino, você precisa da variável **[!UICONTROL Gerenciar destinos]** [permissão de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
+>Para se conectar ao destino, você precisa da variável **[!UICONTROL Exibir destinos]** e **[!UICONTROL Gerenciar destinos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
 
 Para se conectar a esse destino, siga as etapas descritas no [tutorial de configuração de destino](../../ui/connect-destination.md). No workflow de configuração de destino, preencha os campos listados nas duas seções abaixo.
 
@@ -195,7 +195,7 @@ Para configurar detalhes para o destino, preencha os campos abaixo.
 
 * **[!UICONTROL Contrato de termos de destino de dados do anunciante]**: Digite `I AGREE` para confirmar o reconhecimento e a aceitação dos termos de dados do anunciante da Disney.
 * **[!UICONTROL Nome do cliente]**: digite o nome da empresa como deseja que seja exibido ao parceiro de destino.
-* **[!UICONTROL Endereço de email]**: insira um endereço de email vinculado a um indivíduo. Esse endereço de email serve como uma assinatura do contrato de termos de dados do anunciante.
+* **[!UICONTROL Endereço de email]**: insira um endereço de email vinculado a um indivíduo. Esse endereço de email serve como uma assinatura do contrato dos termos de dados do anunciante.
 
 ### [!DNL iHeartMedia] {#iheartmedia}
 
@@ -431,7 +431,7 @@ Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICON
 
 >[!IMPORTANT]
 > 
->Para ativar os dados, é necessário **[!UICONTROL Gerenciar destinos]**, **[!UICONTROL Ativar destinos]**, **[!UICONTROL Exibir perfis]**, e **[!UICONTROL Exibir segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
+>Para ativar os dados, é necessário **[!UICONTROL Exibir destinos]**, **[!UICONTROL Ativar destinos]**, **[!UICONTROL Exibir perfis]**, e **[!UICONTROL Exibir segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
 
 A variável [!DNL LiveRamp - Distribution] A conexão ativa públicos que já foram integrados à sua conta do LiveRamp por meio do [LiveRamp - Integração](liveramp-onboarding.md) conexão.
 

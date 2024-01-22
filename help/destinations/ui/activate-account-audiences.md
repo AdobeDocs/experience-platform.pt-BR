@@ -5,9 +5,9 @@ description: Saiba como ativar públicos-alvo da conta para destinos
 badgeLimitedAvailability: label="Disponibilidade limitada" type="Caution"
 badgeB2B: label="Edição B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: ad69d0a8-bf5b-42ac-97a3-401eadda62cd
-source-git-commit: 0a572c5fe612b8e0cc866b4e2287ea53a4022b1a
+source-git-commit: fbc2a6c81682797af4674adabff358a62d973007
 workflow-type: tm+mt
-source-wordcount: '834'
+source-wordcount: '827'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ Ir para **[!UICONTROL Conexões]** > **[!UICONTROL Destinos]** e selecione a var
 
 ### Permissões necessárias {#permissions}
 
-Para ativar públicos-alvo da conta, é necessário **[!UICONTROL Gerenciar destinos]**, **[!UICONTROL Exibir destinos]**, **[!UICONTROL Ativar destinos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
+Para ativar públicos-alvo da conta, é necessário **[!UICONTROL Exibir destinos]** e **[!UICONTROL Ativar destinos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
 
 Para garantir que você tenha as permissões necessárias para ativar públicos-alvo da conta, navegue pelo catálogo de destinos. Se um destino tiver um **[!UICONTROL Ativar]** , você terá as permissões apropriadas.
 

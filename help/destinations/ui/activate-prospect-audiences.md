@@ -3,9 +3,9 @@ title: Ativar públicos-alvo potenciais para destinos
 type: Tutorial
 description: Saiba como ativar públicos-alvo potenciais para destinos
 exl-id: 3e034a14-09d0-4b08-b171-5afb62ae4b62
-source-git-commit: fdb9d7b168d6323fddaab1ac7abc44d3a390afea
+source-git-commit: fbc2a6c81682797af4674adabff358a62d973007
 workflow-type: tm+mt
-source-wordcount: '620'
+source-wordcount: '619'
 ht-degree: 12%
 
 ---
@@ -31,7 +31,7 @@ Ir para **[!UICONTROL Conexões]** > **[!UICONTROL Destinos]** e selecione a var
 
 ### Permissões necessárias {#permissions}
 
-Para ativar públicos-alvo potenciais, você precisa da **[!UICONTROL Gerenciar destinos]**, **[!UICONTROL Exibir destinos]**, **[!UICONTROL Ativar destinos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
+Para ativar públicos-alvo potenciais, você precisa da **[!UICONTROL Exibir destinos]** e **[!UICONTROL Ativar destinos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
 
 Para garantir que você tenha as permissões necessárias para ativar públicos-alvo de prospecto, navegue pelo catálogo de destinos. Se um destino tiver um **[!UICONTROL Ativar]** , você terá as permissões apropriadas.
 

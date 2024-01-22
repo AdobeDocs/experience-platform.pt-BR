@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Visão geral do serviço de consulta
 description: Saiba mais sobre a função do Serviço de consulta no Experience Platform.
 exl-id: fdaefc12-a97d-4e4e-9aed-d3dbd0f43ea0
-source-git-commit: e06519978ed9c6128be53a15cef3046a0dbc2a16
+source-git-commit: ad1827284b7070f73421d10c49e1e86e282839eb
 workflow-type: tm+mt
 source-wordcount: '837'
 ht-degree: 0%
@@ -29,7 +29,7 @@ O Serviço de consulta interage e pode ser usado com vários serviços de Experi
 
 ### [!DNL Data Science Workspace] {#data-science-workspace}
 
-Adobe Experience Platform [!DNL Data Science Workspace] O usa aprendizagem de máquina e inteligência artificial para obter insights dos dados armazenados no Experience Platform. Os cientistas de dados podem usar o [!DNL Data Science Workspace] para criar receitas com base em dados de registro e série temporal sobre clientes e suas atividades. Essas receitas facilitam previsões, como propensão de compra e ofertas recomendadas que o indivíduo provavelmente apreciará e usará. Você pode usar SQL dentro de [!DNL Data Science Workspace] por meio da integração do Serviço de consulta em [!DNL JupyterLab] para explorar, transformar e analisar dados do Adobe Analytics. Leia o [[!DNL Data Science Workspace] visão geral](../data-science-workspace/home.md) e a variável [Guia de conexão do Notebook Jypiter](./clients/jupyter-notebook.md) para obter mais informações sobre como [!DNL Data Science Workspace] O interage com o Serviço de consulta.
+Adobe Experience Platform [!DNL Data Science Workspace] O usa aprendizagem de máquina e inteligência artificial para obter insights dos dados armazenados no Experience Platform. Os cientistas de dados podem usar o [!DNL Data Science Workspace] para criar receitas com base em dados de registro e série temporal sobre clientes e suas atividades. Essas receitas facilitam previsões, como propensão de compra e ofertas recomendadas que o indivíduo provavelmente apreciará e usará. Você pode usar SQL dentro de [!DNL Data Science Workspace] por meio da integração do Serviço de consulta em [!DNL JupyterLab] para explorar, transformar e analisar dados do Adobe Analytics. Leia o [[!DNL Data Science Workspace] visão geral](../data-science-workspace/home.md) e a variável [Guia de conexão do Jupyter Notebook](./clients/jupyter-notebook.md) para obter mais informações sobre como [!DNL Data Science Workspace] O interage com o Serviço de consulta.
 
 ### [!DNL Segmentation Service] {#segmentation}
 

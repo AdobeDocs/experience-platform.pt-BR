@@ -2,9 +2,9 @@
 title: Perguntas frequentes do Audiences
 description: Descubra respostas para perguntas frequentes sobre públicos-alvo e outros conceitos relacionados à segmentação.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: 696dad52af4f927969fac38f78341f4e3c8c6607
+source-git-commit: 762a7fc7dd00657e4e710eb763c5bb63b210593a
 workflow-type: tm+mt
-source-wordcount: '2714'
+source-wordcount: '2739'
 ht-degree: 1%
 
 ---
@@ -108,6 +108,7 @@ O gráfico a seguir explica os diferentes status do ciclo de vida, o que eles re
 | Publicado | Um público-alvo na **Publicado** O estado do é um público-alvo pronto para uso em todos os serviços downstream. | Sim | Sim | Sim | Pode ser importado ou atualizado. | Avaliado usando segmentação em lote, de fluxo ou de borda. | Sim |
 | Inativo | Um público-alvo na **Inativo** estado é um público que não está em uso no momento. Ele ainda existe na Platform, mas continuará **não** ser utilizável até que seja marcado como rascunho ou publicado. | Não, mas pode ser exibido. | Não | Não | Não é mais atualizado. | Não é mais avaliado ou atualizado pela Platform. | Sim |
 | Excluído | Um público-alvo na **Excluído** estado é um público-alvo que foi excluído. A exclusão real dos dados pode levar alguns minutos para ser executada. | Não | Não | Não | Os dados subjacentes são excluídos. | Não ocorre avaliação ou execução de dados após a conclusão da exclusão. | Não |
+| Ativo | Este status foi **obsoleto** e é substituída pela **Publicado** status. | N/D | N/D | N/D | N/D | N/D | N/D |
 
 ### Como o Audience Portal e a Composição de público-alvo interagem com o lançamento dos dados de parceiros da Real-Time CDP?
 

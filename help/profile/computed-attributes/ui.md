@@ -2,10 +2,10 @@
 title: Guia da interface de atributos computados
 description: Saiba como criar, exibir e atualizar atributos computados usando a interface do usuário do Adobe Experience Platform.
 exl-id: bc621167-6dba-473e-90e4-aac7ceb6579a
-source-git-commit: cf01c18c8ea710492c8a2c8542c8a4580d5f0dcf
+source-git-commit: 762a7fc7dd00657e4e710eb763c5bb63b210593a
 workflow-type: tm+mt
-source-wordcount: '1567'
-ht-degree: 8%
+source-wordcount: '1576'
+ht-degree: 6%
 
 ---
 
@@ -24,7 +24,7 @@ Este documento fornece um guia sobre como criar e atualizar atributos calculados
 Este guia de interface do usuário requer uma compreensão dos vários [!DNL Experience Platform] serviços envolvidos no gerenciamento [!DNL Real-Time Customer Profiles]. Antes de ler este guia ou trabalhar na interface do usuário, consulte a documentação dos seguintes serviços:
 
 - [[!DNL Real-Time Customer Profile]](../home.md): fornece um perfil de consumidor unificado em tempo real com base em dados agregados de várias fontes.
-- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): a estrutura padronizada pela qual a [!DNL Experience Platform] organiza os dados de experiência do cliente.
+- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): o quadro normalizado pelo qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
 
 ## Exibir atributos calculados {#view}
 
@@ -112,7 +112,7 @@ Ao aplicar a função de agregação, você poderá ativar a atualização rápi
 
 ![A variável [!UICONTROL Atualização rápida] é realçada.](./images/ui/enable-fast-refresh.png)
 
-A atualização rápida permite manter seus atributos atualizados. Habilitar essa opção possibilita atualizar os atributos calculados diariamente, mesmo para períodos de retrospectiva mais longos, permitindo reagir rapidamente às atividades do usuário ou usuária.
+A atualização rápida permite manter seus atributos atualizados. Ativar essa opção permite atualizar os atributos calculados diariamente, mesmo por períodos de lookback mais longos, permitindo que você reaja rapidamente às atividades do usuário.
 
 Para obter mais informações sobre atualização rápida, leia a [seção atualização rápida](./overview.md#fast-refresh) da visão geral dos atributos calculados.
 
@@ -155,6 +155,10 @@ Ao selecionar um rascunho de atributo calculado, a variável **[!UICONTROL Edita
 >Por exemplo, se estiver criando uma definição de segmento que esteja procurando &quot;Todos os perfis que têm um endereço de email válido&quot;, onde o campo endereço de email é preenchido por um atributo calculado com a função mais recente, você **deve** incluir o valor do endereço de email existe **e** o carimbo de data/hora do endereço de email existe.
 
 Depois de criar um atributo calculado, você pode usar **publicado** atributos computados em outros serviços downstream. Como os atributos calculados são campos de atributo de perfil criados no esquema de união de perfis, você pode pesquisar valores de atributo calculados para um Perfil de cliente em tempo real, usá-los em um público-alvo, ativá-los para um destino ou usá-los para personalização no jornada na Adobe Journey Optimizer.
+
+>[!NOTE]
+>
+>Atributos computados **não é possível** ser usado no público-alvo **composições**.
 
 ![O Construtor de segmentos é exibido, mostrando um atributo calculado como parte da composição de definição de segmentos.](./images/ui/use-ca.png)
 

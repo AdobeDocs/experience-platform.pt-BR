@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guia da interface do usuário de públicos
 description: A Composição de público-alvo na interface do usuário do Adobe Experience Platform fornece um espaço de trabalho avançado que permite interagir com elementos de dados do perfil. O espaço de trabalho fornece controles intuitivos para criação e edição de públicos-alvo para sua organização.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: 5262b5e894cc6bfa2db79afcda8bfda4b496f7d5
+source-git-commit: e8f838c3cf8988f6028901df76ed040e7f08cb98
 workflow-type: tm+mt
-source-wordcount: '1789'
+source-wordcount: '1844'
 ht-degree: 0%
 
 ---
@@ -115,6 +115,10 @@ Se você excluir por atributo, poderá selecionar quais atributos deseja excluir
 Uma lista de atributos de perfil é exibida. Selecione o tipo de atributo que deseja excluir, seguido por **[!UICONTROL Selecionar]** para adicioná-los ao bloco excluir.
 
 ![Uma lista de atributos é exibida.](../images/ui/audience-composition/select-attribute-exclude.png)
+
+>[!IMPORTANT]
+>
+>Ao excluir por atributo, você só pode especificar **um** valor a ser excluído. Usar qualquer tipo de separador, como vírgula ou ponto e vírgula, resultará apenas na exclusão desse valor exato. Por exemplo, definir o valor como `red, blue` resultará na exclusão do termo `red, blue` do atributo, mas **não** resultado na exclusão do termo `red` ou `blue`.
 
 ## [!UICONTROL Enriquecer] {#enrich-block}
 

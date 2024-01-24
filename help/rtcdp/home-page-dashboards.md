@@ -4,10 +4,10 @@ title: Página inicial e painéis do Real-time Customer Data Platform
 description: Painéis, página inicial e experiência do usuário iniciante da Adobe Experience Platform
 feature: Dashboards, Get Started
 exl-id: ced5b69c-5bb5-4e06-9cb4-938e36e6e5cc
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: f7f49e4158f3aa95c3e96d3687642392e237aabc
 workflow-type: tm+mt
-source-wordcount: '802'
-ht-degree: 1%
+source-wordcount: '850'
+ht-degree: 2%
 
 ---
 
@@ -32,7 +32,13 @@ A variável [!UICONTROL Introdução ao Perfil de cliente em tempo real] O widge
 
 ![A página inicial da Interface do usuário do Platform que exibe o widget de introdução](assets/platform-home/getting-started-widget.png)
 
-## Painel de métricas
+## Painel de métricas {#metrics-dashboard}
+
+>[!CONTEXTUALHELP]
+>id="platform_home_metrics_totalProfiles"
+>title="Contagem total de perfis"
+>abstract="O número total de perfis que sua organização tem em Experience Platform. Essa contagem se baseia na política de mesclagem da organização e não inclui fragmentos de perfil. O número de perfis é atualizado uma vez a cada 24 horas."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/ui/user-guide.html#profile-count" text="Saiba mais na documentação"
 
 O painel de métricas exibe informações atualizadas sobre seus dados de Experience Platform. O painel é dividido em duas seções:
 
@@ -44,7 +50,7 @@ O quadro de classificação mostra o número total atual de esquemas, conjuntos 
 
 * **Total de esquemas**: A variável **Total de esquemas** O contador exibe o número de schemas no sistema. Esse contador é atualizado quando um esquema é criado. Para obter mais informações, leia a [visão geral de esquemas](../xdm/home.md).
 * **Total de conjuntos de dados**: A variável **Total de conjuntos de dados** contador mostra o número de conjuntos de dados no sistema e a quantidade de dados em [!DNL Platform]. Esse contador é atualizado quando um conjunto de dados é criado. Para obter mais informações sobre conjuntos de dados, leia a [visão geral dos conjuntos de dados](../catalog/datasets/overview.md).
-* **Total de perfis**: A variável **Perfis** count mostra o número total de pessoas com perfis no [!DNL Real-Time Customer Profile]. Ela não inclui fragmentos de perfil. Este é o seu público endereçável total. Essa contagem usa o padrão [política de mesclagem](profile/merge-policies.md) conforme definido na configuração da política de mesclagem no Perfil unificado. O número de perfis é atualizado uma vez a cada 24 horas. Para obter mais informações sobre perfis, leia a [Visão geral do Perfil do cliente em tempo real](../profile/home.md).
+* **Total de perfis**: A variável **Perfis** contagem mostra o número total de perfis que sua organização tem no Experience Platform. Ela não inclui fragmentos de perfil. Este é o seu público endereçável total. Essa contagem usa o padrão [política de mesclagem](profile/merge-policies.md) conforme definido na configuração da política de mesclagem no Perfil do cliente em tempo real. O número de perfis é atualizado uma vez a cada 24 horas. Para obter mais informações sobre perfis, leia a [Visão geral do Perfil do cliente em tempo real](../profile/home.md).
 * **Total de segmentos**: **Segmentos** mostra o número total de segmentos criados para a organização. Esse número é atualizado quando novos segmentos são criados. Para obter mais informações sobre segmentos, leia a [Visão geral do serviço de segmentação](../segmentation/home.md).
 
 ### Itens recentes

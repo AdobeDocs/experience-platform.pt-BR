@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guia da interface do Editor de consultas
 description: O Editor de consultas é uma ferramenta interativa fornecida pelo Serviço de consultas da Adobe Experience Platform, que permite gravar, validar e executar consultas para dados de experiência do cliente na interface do usuário do Experience Platform. O Editor de consultas é compatível com o desenvolvimento de consultas para análise e exploração de dados, e permite executar consultas interativas para fins de desenvolvimento, bem como consultas não interativas para preencher conjuntos de dados no Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: a78f7499b55dcedbe379e917b94946948c66e6e5
+source-git-commit: 79214671acdb0d48182423ad658be2a8b1cbc0c2
 workflow-type: tm+mt
-source-wordcount: '2304'
+source-wordcount: '2382'
 ht-degree: 3%
 
 ---
@@ -26,6 +26,13 @@ Para obter mais informações sobre os conceitos e recursos do [!DNL Query Servi
 [!DNL Query Editor] oferece execução flexível de consultas conectando-se a [!DNL Query Service], e as consultas só serão executadas enquanto essa conexão estiver ativa.
 
 ## Acessar o [!DNL Query Editor] {#accessing-query-editor}
+
+>[!CONTEXTUALHELP]
+>id="platform_queryservice_create_datagovernance"
+>title="Obrigação de governança de dados"
+>abstract="Lembre-se de que é sua única responsabilidade aderir às políticas de governança de dados de sua organização e atender aos requisitos normativos. O Experience Platform fornece ferramentas de governança de dados para você gerenciar suas obrigações de uso de dados. Aplique os rótulos de uso de dados apropriados antes de consultar ou processar dados. Consulte a documentação para saber mais sobre as ferramentas de governança de dados e as práticas recomendadas."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=pt-BR" text="Visão geral da governança de dados"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=pt-BR" text="Visão geral dos rótulos de governança de dados"
 
 No [!DNL Experience Platform] Interface, selecione **[!UICONTROL Consultas]** no menu de navegação esquerdo, para abrir a [!DNL Query Service] espaço de trabalho. Em seguida, para começar a gravar consultas, selecione **[!UICONTROL Criar consulta]** na parte superior direita da tela. Esse link está disponível em qualquer uma das páginas no [!DNL Query Service] espaço de trabalho.
 

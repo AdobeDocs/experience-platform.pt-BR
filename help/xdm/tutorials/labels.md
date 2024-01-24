@@ -2,10 +2,10 @@
 title: Gerenciar rótulos de uso de dados para um esquema
 description: Saiba como adicionar rótulos de uso de dados aos campos de esquema do Experience Data Model (XDM) na interface do Adobe Experience Platform.
 exl-id: 92284bf7-f034-46cc-b905-bdfb9fcd608a
-source-git-commit: 6fe11b909369797e96d8fa52542ebd5761a27b03
+source-git-commit: 27842e7e07b6fc5884587fb75cc89bcfb4320938
 workflow-type: tm+mt
-source-wordcount: '806'
-ht-degree: 8%
+source-wordcount: '913'
+ht-degree: 7%
 
 ---
 
@@ -39,6 +39,12 @@ Este manual necessita de uma compreensão funcional dos seguintes componentes da
 >id="platform_schemas_editgovernancelabels"
 >title="Editar rótulos de governança"
 >abstract="Aplique um rótulo a um campo de esquema para indicar as políticas de uso que se aplicam aos dados contidos nesse campo específico."
+
+>[!CONTEXTUALHELP]
+>id="platform_schemas_labelusageacknowledgement"
+>title="Uso de rótulos"
+>abstract="Antes de editar os rótulos para este objeto, anote os seguintes efeitos de downstream:<br>Políticas de governança: use rótulos para determinar se os dados podem ser ativados para destinos downstream. O uso incorreto de rótulos pode impedir que os dados sejam acessíveis a jusante.<br>Políticas de consentimento: use rótulos para aplicar os consentimentos e preferências do cliente ao incluir perfis em segmentos. O uso incorreto de rótulos pode impedir que os dados sejam acessíveis a jusante.<br>Política de acesso: o controle de acesso baseado em atributos usa rótulos para determinar quais funções de usuário podem acessar ativos específicos. O uso não intencional de rótulos pode impedir que algumas pessoas na sua organização usem ativos aos quais tinham acesso anteriormente."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/overview.html?lang=pt-BR" text="Visão geral do controle de acesso baseado em atributos"
 
 Para começar a adicionar rótulos, você deve primeiro [selecionar um esquema existente para editar](../ui/resources/schemas.md#edit) ou [criar um novo esquema](../ui/resources/schemas.md#create) para exibir sua estrutura no Editor de esquemas.
 

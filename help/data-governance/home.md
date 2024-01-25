@@ -4,14 +4,21 @@ solution: Experience Platform
 title: Visão geral da governança de dados
 description: O Adobe Experience Platform Data Governance permite gerenciar dados de clientes e garantir conformidade com regulamentos, restrições e políticas aplicáveis ao uso de dados. Ela desempenha uma função essencial na Experience Platform em vários níveis, incluindo catalogação, linhagem de dados, rotulagem de uso de dados, políticas de uso de dados e controle do uso de dados para ações de marketing.
 exl-id: 00ca6bc2-1c58-4ea2-8bb5-30fd3fa5944a
-source-git-commit: 2b16ecb840e63baa244d8061a0349a9e39e726b2
+source-git-commit: 1a050cfb41a28053606f07931c7c97d15989ac3e
 workflow-type: tm+mt
-source-wordcount: '1554'
-ht-degree: 3%
+source-wordcount: '1623'
+ht-degree: 4%
 
 ---
 
-# Visão geral da governança de dados
+# Visão geral da governança de dados {#data-governance-overview}
+
+>[!CONTEXTUALHELP]
+>id="platform_datagovernance_framework"
+>title="Obrigação de governança de dados"
+>abstract="Lembre-se de que é sua única responsabilidade aderir às políticas de governança de dados de sua organização e atender aos requisitos normativos. O Experience Platform fornece ferramentas de governança de dados para você gerenciar suas obrigações de uso de dados. Aplique os rótulos de uso de dados apropriados antes de consultar ou processar dados. Consulte a documentação para saber mais sobre as ferramentas de governança de dados e as práticas recomendadas."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=pt-BR" text="Visão geral da governança de dados"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=pt-BR" text="Visão geral dos rótulos de governança de dados"
 
 Um dos principais recursos do Adobe Experience Platform é reunir dados de vários sistemas corporativos para permitir que os profissionais de marketing identifiquem, compreendam e envolvam os clientes de maneira mais eficiente. Esses dados podem estar sujeitos a restrições de uso definidas por sua organização ou por regulamentos legais. Portanto, é importante garantir que suas operações de dados dentro do [!DNL Platform] são compatíveis com as políticas de uso de dados.
 

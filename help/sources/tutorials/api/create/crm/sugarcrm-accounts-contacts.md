@@ -2,9 +2,9 @@
 title: Crie uma conexão de origem e um fluxo de dados para Contas e Contatos do SugarCRM usando a API do Serviço de Fluxo
 description: Saiba como conectar o Adobe Experience Platform a contas e contatos do SugarCRM usando a API de serviço de fluxo.
 exl-id: 2b422b39-5b86-4313-a214-725044d9812c
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 0edc7a6a68ee4dc5ea24f16a8bc12aba85af0dff
 workflow-type: tm+mt
-source-wordcount: '2160'
+source-wordcount: '2104'
 ht-degree: 2%
 
 ---
@@ -15,7 +15,7 @@ O tutorial a seguir guiará você pelas etapas para criar um [!DNL SugarCRM Acco
 
 ## Introdução
 
-Este manual necessita de uma compreensão funcional dos seguintes componentes da Experience Platform:
+Este guia requer entendimento prático dos seguintes componentes do Experience Platform:
 
 * [Origens](../../../../home.md): o Experience Platform permite que os dados sejam assimilados de várias fontes e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma.
 * [Sandboxes](../../../../../sandboxes/home.md): o Experience Platform fornece sandboxes virtuais que particionam uma única instância da Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
@@ -36,7 +36,7 @@ Para se conectar [!DNL SugarCRM Accounts & Contacts] Para o Platform, você deve
 
 A seguir estão descritas as etapas que devem ser realizadas para autenticar o [!DNL SugarCRM] , crie uma conexão de origem e um fluxo de dados para trazer seus dados de contas e contatos para o Experience Platform.
 
-### Crie uma conexão básica {#base-connection}
+### Criar uma conexão básica {#base-connection}
 
 Uma conexão base retém informações entre sua origem e a Platform, incluindo as credenciais de autenticação da origem, o estado atual da conexão e sua ID de conexão base exclusiva. A ID de conexão básica permite explorar e navegar pelos arquivos de dentro da origem e identificar os itens específicos que deseja assimilar, incluindo informações sobre os tipos de dados e formatos.
 
@@ -350,6 +350,8 @@ Uma resposta bem-sucedida retorna uma estrutura, como abaixo.
 ```
 
 >[!TAB Contatos]
+
+Uma resposta bem-sucedida retorna uma estrutura, como abaixo.
 
 ```json
 {

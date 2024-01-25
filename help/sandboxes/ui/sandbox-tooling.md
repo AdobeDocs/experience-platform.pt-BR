@@ -5,7 +5,7 @@ exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
 source-git-commit: 1f7b7f0486d0bb2774f16a766c4a5af6bbb8848a
 workflow-type: tm+mt
 source-wordcount: '1859'
-ht-degree: 5%
+ht-degree: 9%
 
 ---
 
@@ -69,12 +69,12 @@ Os tipos de identidade personalizados não são suportados como objetos dependen
 >[!CONTEXTUALHELP]
 >id="platform_sandbox_tooling_remove_object"
 >title="Remover um objeto"
->abstract="Para remover um objeto do pacote, selecione a linha a ser removida e use a opção delete, disponibilizada após a seleção. Observe que não é possível remover objetos de pacotes publicados."
+>abstract="Para remover um objeto do pacote, selecione a linha a ser removida e use a opção Excluir disponibilizada após a seleção. Observe que não é possível remover objetos de pacotes publicados."
 
 >[!CONTEXTUALHELP]
 >id="platform_sandbox_package_expiry"
 >title="Configurações de expiração do pacote"
->abstract="Os pacotes estão definidos para expirar após um período de inatividade no status de rascunho. A data padrão é definida para 90 dias a partir de hoje. Essa data continua sendo alterada até que o pacote seja publicado. Se você visitar o pacote com o status de rascunho amanhã, a data será movida em +1 dia, a menos que isso seja definido manualmente."
+>abstract="Os pacotes estão definidos para expirar após um período de inatividade no status de rascunho. O prazo padrão é de 90 dias a partir do dia atual. Essa data continua sendo alterada até que o pacote seja publicado. Se você visitar o pacote com status de rascunho amanhã, a data será alterada em +1 dia, a menos que você defina manualmente."
 
 >[!CONTEXTUALHELP]
 >id="platform_sandbox_tooling_package_status"

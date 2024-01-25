@@ -2,9 +2,9 @@
 title: Lógica de vinculação do serviço de identidade
 description: Saiba mais sobre como o Serviço de identidade vincula identidades diferentes para criar uma visualização abrangente de um cliente.
 exl-id: 1c958c0e-0777-48db-862c-eb12b2e7a03c
-source-git-commit: 45170c78b9d15c7cc9d71f2d0dab606ea988a783
+source-git-commit: 2b6700b2c19b591cf4e60006e64ebd63b87bdb2a
 workflow-type: tm+mt
-source-wordcount: '772'
+source-wordcount: '980'
 ht-degree: 1%
 
 ---
@@ -17,6 +17,17 @@ Há dois tipos de identidades que são vinculadas:
 
 * **Registros de perfil**: essas identidades geralmente vêm de sistemas CRM.
 * **Eventos de experiência**: essas identidades geralmente vêm da implementação do SDK da Web ou da fonte do Adobe Analytics.
+
+## Significado semântico do estabelecimento de vínculos
+
+Uma identidade representa uma entidade real. Se houver um vínculo estabelecido entre duas identidades, significa que as duas identidades estão associadas uma à outra. Veja a seguir alguns exemplos que ilustram esse conceito:
+
+| Ação | Links estabelecidos | Significado |
+| --- | --- | --- |
+| Um usuário final faz logon usando um computador. | A ID do CRM e a ECID estão vinculadas. | Uma pessoa (ID de CRM) tem um dispositivo com um navegador (ECID). |
+| Um usuário final navega anonimamente usando uma iPhone. | O IDFA está vinculado à ECID. | O dispositivo de hardware da Apple (IDFA), como uma iPhone, está associado ao navegador (ECID). |
+| Um usuário final faz logon usando o Google Chrome e, em seguida, o Firefox. | A ID do CRM está vinculada a duas ECIDs diferentes. | Uma pessoa (ID do CRM) está associada a dois navegadores da Web (**Nota**: cada navegador terá sua própria ECID). |
+| Um engenheiro de dados assimila um registro do CRM que inclui dois campos marcados como uma identidade: ID do CRM e Email. | A ID do CRM e o email estão vinculados. | Uma pessoa (ID do CRM) está associada ao endereço de email. |
 
 ## Compreender a lógica de vinculação do Serviço de identidade
 
@@ -85,10 +96,13 @@ Você também implementou o SDK da Web e assimilou um conjunto de dados do SDK d
 | `t=3` | ECID:44675 | Exibir página inicial |
 | `t=4` | ECID:44675, ID DO CRM: 31260XYZ | Exibir histórico de compras |
 
+A identidade principal de cada evento será determinada com base em [como configurar tipos de elementos de dados](../../tags/extensions/client/web-sdk/data-element-types.md).
+
 >[!NOTE]
 >
->* `*` - Denota um campo marcado como identidade, com a ECID marcada como primária.
->* Por padrão, o identificador de pessoa (nesse caso, a ID de CRM) é designado como a identidade principal. Se o identificador de pessoa não existir, o identificador de cookie (nesse caso, a ECID) se tornará a identidade principal.
+>* Se você selecionar a ID do CRM como principal, os eventos autenticados (eventos com mapa de identidade contendo a ID do CRM e a ECID) terão uma identidade principal da ID do CRM. Para eventos não autenticados (eventos com o mapa de identidade contendo apenas a ECID), terá uma identidade principal da ECID. O Adobe recomenda essa opção.
+>
+>* Se você selecionar a ECID como a principal, independentemente do estado de autenticação, a ECID se tornará a identidade principal.
 
 Neste exemplo:
 

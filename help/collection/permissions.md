@@ -2,7 +2,7 @@
 title: Gerenciamento de permissões para coleta de dados no Experience Platform
 description: Uma visão geral de alto nível sobre como gerenciar permissões e controlar o acesso aos recursos de coleção de dados no Adobe Experience Platform.
 exl-id: 8426d54b-ec1d-475a-a769-f45a8c924fe7
-source-git-commit: dd0856075867b5fc226068fa856942edcbe4a7a6
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1285'
 ht-degree: 28%
@@ -34,7 +34,7 @@ As permissões no Adobe Experience Platform incluem acesso a sequências de dado
 | Sandboxes | (N/D) | Dependendo do [sandboxes](../sandboxes/home.md) que foram criadas em sua organização, você pode controlar o acesso a cada uma delas por meio desta categoria de permissão no Admin Console. |
 | Modelagem de dados | Gerenciar esquemas | Concede a capacidade de exibir, criar e editar [Esquemas do Experience Data Model (XDM)](../xdm/home.md). |
 | Modelagem de dados | Visualizar esquemas | Concede acesso somente leitura a esquemas. |
-| Gerenciamento de identidade | Gerenciar namespaces de identidade | Concede a capacidade de exibir, criar e editar [namespaces de identidade](../identity-service/namespaces.md). |
+| Gerenciamento de identidade | Gerenciar namespaces de identidade | Concede a capacidade de exibir, criar e editar [namespaces de identidade](../identity-service/features/namespaces.md). |
 | Gerenciamento de identidade | Exibir namespaces de identidade | Concede acesso somente leitura a namespaces de identidade. |
 | Coleção de dados | Gerenciar fluxos de dados | Concede a capacidade de exibir, criar e editar [sequências de dados](../datastreams/overview.md). |
 | Coleção de dados | Exibir fluxos de dados | Concede acesso somente leitura a sequências de dados. |

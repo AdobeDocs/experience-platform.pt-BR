@@ -2,10 +2,10 @@
 title: Namespaces e esquemas B2B
 description: Este documento fornece uma visão geral dos namespaces personalizados necessários ao criar um conector de origem B2B.
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '1717'
-ht-degree: 5%
+source-wordcount: '1622'
+ht-degree: 4%
 
 ---
 
@@ -42,7 +42,7 @@ A tabela a seguir contém valores de exemplo, bem como informações adicionais 
 | `ACCESS_TOKEN` | O token de autorização necessário para completar chamadas para APIs de Experience Platform. Veja o tutorial sobre [autenticação e acesso às APIs do Experience Platform](../../../../landing/api-authentication.md) para obter informações sobre como recuperar o `{ACCESS_TOKEN}`. | `Bearer {ACCESS_TOKEN}` |
 | `META_SCOPE` | No que diz respeito a [!DNL Marketo], esse valor é fixo e sempre é definido como: `ent_dataservices_sdk`. | `ent_dataservices_sdk` |
 | `CONTAINER_ID` | A variável `global` o container contém todas as classes padrão fornecidas por Adobe e parceiros de Experience Platform, grupos de campos de esquema, tipos de dados e esquemas. No que diz respeito a [!DNL Marketo], esse valor é fixo e sempre é definido como `global`. | `global` |
-| `PRIVATE_KEY` | Uma credencial usada para autenticar seu [!DNL Postman] para APIs Experience Platform. Consulte o tutorial sobre a configuração do console do desenvolvedor e [configuração do console do desenvolvedor e [!DNL Postman]](../../../../landing/postman.md) para obter instruções sobre como recuperar sua {PRIVATE_KEY}. | `{PRIVATE_KEY}` |
+| `PRIVATE_KEY` | Uma credencial usada para autenticar seu [!DNL Postman] para APIs Experience Platform. Consulte o tutorial sobre a configuração do console do desenvolvedor e [configuração do console do desenvolvedor e [!DNL Postman]](../../../../landing/postman.md) para obter instruções sobre como recuperar o {PRIVATE_KEY}. | `{PRIVATE_KEY}` |
 | `TECHNICAL_ACCOUNT_ID` | Uma credencial usada para integrar ao Adobe I/O. | `D42AEVJZTTJC6LZADUBVPA15@techacct.adobe.com` |
 | `IMS` | O Sistema Identity Management (IMS) fornece a estrutura para autenticação de serviços da Adobe. No que diz respeito a [!DNL Marketo], esse valor é fixo e sempre é definido como: `ims-na1.adobelogin.com`. | `ims-na1.adobelogin.com` |
 | `IMS_ORG` | Uma entidade corporativa que pode ser proprietária ou licenciar produtos e serviços e permitir acesso a seus membros. Veja o tutorial sobre [configuração do console do desenvolvedor e [!DNL Postman]](../../../../landing/postman.md) para obter instruções sobre como recuperar o `{ORG_ID}` informações. | `ABCEH0D9KX6A7WA7ATQE0TE@adobeOrg` |
@@ -68,7 +68,7 @@ Uma solicitação bem-sucedida cria os namespaces e esquemas necessários para o
 
 ## Namespaces B2B
 
-Os namespaces de identidade são um componente de [[!DNL Identity Service]](../../../../identity-service/home.md) que servem para distinguir o contexto ou tipo de identidade. Uma identidade totalmente qualificada inclui um valor de ID e um namespace. Consulte a [visão geral dos namespaces](../../../../identity-service/namespaces.md) para obter mais informações.
+Os namespaces de identidade são um componente de [[!DNL Identity Service]](../../../../identity-service/home.md) que servem para distinguir o contexto ou tipo de identidade. Uma identidade totalmente qualificada inclui um valor de ID e um namespace. Consulte a [visão geral dos namespaces](../../../../identity-service/features/namespaces.md) para obter mais informações.
 
 Os namespaces B2B são usados na identidade principal da entidade.
 

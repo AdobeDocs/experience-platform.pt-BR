@@ -4,7 +4,7 @@ title: Conexão com o Microsoft Dynamics 365
 description: O destino do Microsoft Dynamics 365 permite exportar os dados da conta e ativá-los no Microsoft Dynamics 365 para atender às suas necessidades comerciais.
 last-substantial-update: 2022-11-08T00:00:00Z
 exl-id: 49bb5c95-f4b7-42e1-9aae-45143bbb1d73
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '2019'
 ht-degree: 1%
@@ -82,7 +82,7 @@ A variável [Limites de solicitações e alocações](https://docs.microsoft.com
 
 ## Identidades suportadas {#supported-identities}
 
-[!DNL Dynamics 365] O oferece suporte à atualização de identidades descritas na tabela abaixo. Saiba mais sobre [identidades](/help/identity-service/namespaces.md).
+[!DNL Dynamics 365] O oferece suporte à atualização de identidades descritas na tabela abaixo. Saiba mais sobre [identidades](/help/identity-service/features/namespaces.md).
 
 | Identidade de destino | Exemplo | Descrição | Considerações |
 |---|---|---|---|

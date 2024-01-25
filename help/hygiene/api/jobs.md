@@ -4,10 +4,10 @@ description: Saiba como corrigir ou excluir programaticamente os dados pessoais 
 hide: true
 hidefromtoc: true
 exl-id: d80a4be3-e072-4bb4-a56d-b34a20f88c78
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '480'
-ht-degree: 3%
+ht-degree: 6%
 
 ---
 
@@ -25,7 +25,7 @@ Você pode acessar a API por meio do mesmo caminho raiz da variável [API PRIVAC
 
 Esta seção fornece uma introdução aos conceitos principais que você precisa saber antes de tentar fazer chamadas para a API de higiene de dados.
 
-### Coletar valores para cabeçalhos obrigatórios
+### Coletar valores para cabeçalhos necessários
 
 Para fazer chamadas para a API de higiene de dados, primeiro colete suas credenciais de autenticação. Essas são as mesmas credenciais usadas para acessar a API Privacy Service. Consulte a [Visão geral da API](./overview.md#getting-started) para gerar valores para cada um dos cabeçalhos necessários para a API de higiene de dados, conforme mostrado abaixo:
 
@@ -33,7 +33,7 @@ Para fazer chamadas para a API de higiene de dados, primeiro colete suas credenc
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {ORG_ID}`
 
-Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabeçalho adicional:
+Todas as solicitações que contêm um conteúdo (POST, PUT, PATCH) exigem um cabeçalho adicional:
 
 * `Content-Type: application/json`
 
@@ -107,8 +107,8 @@ curl -X POST \
 
 | Propriedade | Descrição |
 | --- | --- |
-| `companyContexts` | Uma matriz que contém informações de autenticação para sua organização. Ele deve conter um único objeto com as seguintes propriedades: <ul><li>`namespace`: Deve ser definido como `imsOrgID`.</li><li>`value`: Sua ID de organização. Esse é o mesmo valor fornecido na variável `x-gw-ims-org-id` cabeçalho.</li></ul> |
-| `users` | Uma matriz que contém uma coleção de pelo menos um usuário cujas informações você deseja excluir. Cada objeto de usuário contém as seguintes informações: <ul><li>`key`: um identificador para um usuário que é usado para qualificar as IDs de trabalho separadas nos dados de resposta. É uma prática recomendada escolher uma string exclusiva e de fácil identificação para esse valor, para que ele possa ser referenciado ou pesquisado posteriormente.</li><li>`action`: uma matriz que lista as ações desejadas para tomar os dados do usuário. Deve conter um único valor de sequência de caracteres: `delete`.</li><li>`userIDs`: uma coleção de identidades para o usuário. O número de identidades que um único usuário pode ter é limitado a nove. Cada identidade contém as seguintes propriedades: <ul><li>`namespace`: A variável [namespace de identidade](../../identity-service/namespaces.md) associado à ID. Isso pode ser um [namespace padrão](../../privacy-service/api/appendix.md#standard-namespaces) reconhecido pela Platform ou pode ser um namespace personalizado definido por sua organização. O tipo de namespace usado deve ser refletido no `type` propriedade.</li><li>`value`: o valor da identidade.</li><li>`type`: deve ser definido como `standard` se estiver usando um namespace reconhecido globalmente ou `custom` se estiver usando um namespace definido por sua organização.</li></ul></li></ul> |
+| `companyContexts` | Uma matriz que contém informações de autenticação para sua organização. Ele deve conter um único objeto com as seguintes propriedades: <ul><li>`namespace`: deve ser definido como `imsOrgID`.</li><li>`value`: a ID da organização. Esse é o mesmo valor fornecido na variável `x-gw-ims-org-id` cabeçalho.</li></ul> |
+| `users` | Uma matriz que contém uma coleção de pelo menos um usuário cujas informações você deseja excluir. Cada objeto de usuário contém as seguintes informações: <ul><li>`key`: um identificador para um usuário que é usado para qualificar as IDs de trabalho separadas nos dados de resposta. É uma prática recomendada escolher uma string exclusiva e de fácil identificação para esse valor, para que ele possa ser referenciado ou pesquisado posteriormente.</li><li>`action`: uma matriz que lista as ações desejadas para tomar os dados do usuário. Deve conter um único valor de sequência de caracteres: `delete`.</li><li>`userIDs`: uma coleção de identidades para o usuário. O número de identidades que um único usuário pode ter é limitado a nove. Cada identidade contém as seguintes propriedades: <ul><li>`namespace`: A variável [namespace de identidade](../../identity-service/features/namespaces.md) associado à ID. Isso pode ser um [namespace padrão](../../privacy-service/api/appendix.md#standard-namespaces) reconhecido pela Platform ou pode ser um namespace personalizado definido por sua organização. O tipo de namespace usado deve ser refletido no `type` propriedade.</li><li>`value`: o valor da identidade.</li><li>`type`: deve ser definido como `standard` se estiver usando um namespace reconhecido globalmente ou `custom` se estiver usando um namespace definido por sua organização.</li></ul></li></ul> |
 
 {style="table-layout:auto"}
 

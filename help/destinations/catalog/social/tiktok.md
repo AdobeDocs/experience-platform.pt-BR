@@ -3,7 +3,7 @@ title: Conexão com o TikTok
 description: Crie públicos-alvo personalizados no TikTok com seus dados para direcionar com suas campanhas de publicidade. Esses públicos-alvo podem ser de pessoas que visitaram o site ou interagiram com o conteúdo. Empurre de maneira rápida e segura o público-alvo desejado do Adobe Experience Platform para o TikTok usando a integração em tempo real do Adobe com o TikTok Ads Manager.
 last-substantial-update: 2023-03-20T00:00:00Z
 exl-id: 7b12d17f-7d9a-4615-9830-92bffe3f6927
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1027'
 ht-degree: 3%
@@ -36,7 +36,7 @@ Antes de enviar dados para sua conta do TikTok Ads Manager, será necessário co
 
 ## Identidades suportadas {#supported-identities}
 
-O TikTok é compatível com a ativação das identidades descritas na tabela abaixo. Saiba mais sobre [identidades](/help/identity-service/namespaces.md).
+O TikTok é compatível com a ativação das identidades descritas na tabela abaixo. Saiba mais sobre [identidades](/help/identity-service/features/namespaces.md).
 
 | Identidade de destino | Descrição | Considerações |
 |---|---|---|

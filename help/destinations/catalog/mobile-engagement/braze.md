@@ -3,7 +3,7 @@ keywords: mobile; braze; mensagens;
 title: Conexão Braze
 description: O Brasil é uma plataforma abrangente de engajamento do cliente que promove experiências relevantes e memoráveis entre os clientes e as marcas que eles adoram.
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1125'
 ht-degree: 3%
@@ -40,7 +40,7 @@ Como profissional de marketing, desejo direcionar os usuários em um destino de 
 
 | Identidade de destino | Descrição | Considerações |
 |---|---|---|
-| external_id | Personalizado [!DNL Braze] identificador que oferece suporte ao mapeamento de qualquer identidade. | Você pode enviar qualquer [identidade](../../../identity-service/namespaces.md) para o [!DNL Braze] destino, contanto que você o mapeie para a variável [!DNL Braze] [`external_id`](https://www.braze.com/docs/api/basics/#external-user-id-explanation). |
+| external_id | Personalizado [!DNL Braze] identificador que oferece suporte ao mapeamento de qualquer identidade. | Você pode enviar qualquer [identidade](../../../identity-service/features/namespaces.md) para o [!DNL Braze] destino, contanto que você o mapeie para a variável [!DNL Braze] [`external_id`](https://www.braze.com/docs/api/basics/#external-user-id-explanation). |
 
 {style="table-layout:auto"}
 

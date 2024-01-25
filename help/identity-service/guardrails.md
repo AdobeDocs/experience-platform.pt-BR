@@ -3,7 +3,7 @@ keywords: Experience Platform;identidade;serviço de identidade;solução de pro
 title: Medidas de proteção do serviço de identidade
 description: Este documento fornece informações sobre limites de uso e taxa para dados do Serviço de identidade para ajudar você a otimizar o uso do gráfico de identidade.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: d33be97fcb935a53a8776d2a1993ad9d2b50e913
+source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
 workflow-type: tm+mt
 source-wordcount: '1507'
 ht-degree: 0%
@@ -186,7 +186,7 @@ Finalmente, o processo de exclusão produz dois gráficos menores.
 Consulte a documentação a seguir para obter mais informações sobre [!DNL Identity Service]:
 
 * [Visão geral do [!DNL Identity Service]](home.md)
-* [Visualizador de gráficos de identidade](ui/identity-graph-viewer.md)
+* [Visualizador de gráficos de identidade](features/identity-graph-viewer.md)
 
 Consulte a documentação a seguir para obter mais informações sobre outras medidas de proteção dos serviços de Experience Platform, informações de latência de ponta a ponta e informações de licenciamento dos documentos Descrição do produto Real-Time CDP:
 

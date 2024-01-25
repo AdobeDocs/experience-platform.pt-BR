@@ -2,10 +2,10 @@
 title: Definir uma relação entre dois esquemas no Real-time Customer Data Platform B2B Edition
 description: Saiba como definir uma relação muitos para um entre dois esquemas no Adobe Real-time Customer Data Platform B2B Edition.
 exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
-source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '1391'
-ht-degree: 16%
+source-wordcount: '1363'
+ht-degree: 15%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 16%
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_b2b_reference_schema"
->title="esquema de referência"
+>title="Esquema de referência"
 >abstract="Selecione o esquema com o qual deseja estabelecer uma relação. Dependendo da classe do esquema, ele também pode ter relacionamentos existentes com outras entidades no contexto B2B. Consulte a documentação para saber como as classes de esquema B2B se relacionam umas com as outras."
 
 O Adobe Real-time Customer Data Platform B2B Edition fornece várias classes do Experience Data Model (XDM) que capturam entidades fundamentais de dados B2B, incluindo [contas](../classes/b2b/business-account.md), [oportunidades](../classes/b2b/business-opportunity.md), [campanhas](../classes/b2b/business-campaign.md)e muito mais. Criando esquemas com base nessas classes e permitindo seu uso em [Perfil do cliente em tempo real](../../profile/home.md), você pode mesclar dados de fontes diferentes em uma representação unificada chamada esquema de união.
@@ -61,7 +61,7 @@ Para levar em conta isso, todas as classes B2B padrão contêm campos &quot;chav
 
 >[!NOTE]
 >
->Quando [definição de um campo XDM como uma identidade](../ui/fields/identity.md), você deve fornecer um namespace de identidade para definir a identidade em. Pode ser um namespace padrão fornecido pelo Adobe ou um namespace personalizado definido por sua organização. Na prática, o namespace é simplesmente uma sequência contextual e pode ser definido com qualquer valor desejado, desde que seja significativo para sua organização categorizar o tipo de identidade. Consulte a visão geral em [namespaces de identidade](../../identity-service/namespaces.md) para obter mais informações.
+>Quando [definição de um campo XDM como uma identidade](../ui/fields/identity.md), você deve fornecer um namespace de identidade para definir a identidade em. Pode ser um namespace padrão fornecido pelo Adobe ou um namespace personalizado definido por sua organização. Na prática, o namespace é simplesmente uma sequência contextual e pode ser definido com qualquer valor desejado, desde que seja significativo para sua organização categorizar o tipo de identidade. Consulte a visão geral em [namespaces de identidade](../../identity-service/features/namespaces.md) para obter mais informações.
 
 Para fins de referência, as seções a seguir descrevem a estrutura de cada esquema usado neste tutorial antes que uma relação seja definida. Anote onde as identidades primárias foram definidas na estrutura do esquema e nos namespaces personalizados que elas usam.
 

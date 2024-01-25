@@ -5,9 +5,9 @@ title: Processamento de solicitação de privacidade no perfil do cliente em tem
 type: Documentation
 description: O Adobe Experience Platform Privacy Service processa solicitações de clientes para acessar, cancelar a venda ou excluir seus dados pessoais, conforme definido por várias regulamentações de privacidade. Este documento aborda os conceitos essenciais relacionados ao processamento de solicitações de privacidade para o Perfil do cliente em tempo real.
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-source-git-commit: 6d9f8eceeb8fbe550b4e1e7e0964f2fff0cd3c70
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '1739'
+source-wordcount: '1743'
 ht-degree: 0%
 
 ---
@@ -42,7 +42,7 @@ Adobe Experience Platform [!DNL Identity Service] conecta os dados de identidade
 
 O Serviço de identidade mantém um armazenamento de namespaces de identidade definidos globalmente (padrão) e definidos pelo usuário (personalizado). Os namespaces padrão estão disponíveis para todas as organizações (por exemplo, &quot;Email&quot; e &quot;ECID&quot;), enquanto sua organização também pode criar namespaces personalizados para atender às suas necessidades específicas.
 
-Para obter mais informações sobre namespaces de identidade no [!DNL Experience Platform], consulte o [visão geral do namespace de identidade](../identity-service/namespaces.md).
+Para obter mais informações sobre namespaces de identidade no [!DNL Experience Platform], consulte o [visão geral do namespace de identidade](../identity-service/features/namespaces.md).
 
 ## Envio de solicitações {#submit}
 

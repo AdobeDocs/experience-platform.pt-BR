@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Dados de identidade para solicitações de privacidade
 description: Este documento fornece orientação geral sobre como configurar as operações de dados e aproveitar as tecnologias Adobe para recuperar efetivamente as informações de identidade apropriadas para as solicitações de privacidade do cliente.
 exl-id: 43b0292a-ea4d-4858-b584-ba71029724f6
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '645'
-ht-degree: 2%
+source-wordcount: '632'
+ht-degree: 1%
 
 ---
 
@@ -25,7 +25,7 @@ Por exemplo, ao manipular solicitações de dados do cliente no [!DNL Privacy Se
 
 Por conseguinte, exige-se que cada identidade enviada [!DNL Privacy Service] é acompanhado de um namespace que fornece contexto ao relacionar o valor de identidade ao seu sistema de origem. Um namespace pode representar um conceito genérico, como um endereço de email (&quot;Email&quot;) ou associar a identidade a um aplicativo específico, como uma Adobe Advertising Cloud ID (&quot;AdCloud&quot;) ou Adobe Target ID (&quot;TNTID&quot;).
 
-O Adobe Experience Platform Identity Service mantém um armazenamento de namespaces de identidade definidos globalmente e pelo usuário. Para obter informações mais detalhadas sobre namespaces, consulte o [visão geral do namespace de identidade](../identity-service/namespaces.md). Para obter uma lista de namespaces padrão e qualificadores de namespace que são comumente usados em [!DNL Privacy Service], consulte o [seção apêndice](api/appendix.md) no guia da API.
+O Adobe Experience Platform Identity Service mantém um armazenamento de namespaces de identidade definidos globalmente e pelo usuário. Para obter informações mais detalhadas sobre namespaces, consulte o [visão geral do namespace de identidade](../identity-service/features/namespaces.md). Para obter uma lista de namespaces padrão e qualificadores de namespace que são comumente usados em [!DNL Privacy Service], consulte o [seção apêndice](api/appendix.md) no guia da API.
 
 ## ECID e serviço de Opt-in
 

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Criar conjuntos de dados para capturar dados de consentimento da TCF 2.0 do IAB
 description: Este documento fornece etapas para configurar os dois conjuntos de dados necessários para coletar dados de consentimento da TCF 2.0 do IAB.
 exl-id: 36b2924d-7893-4c55-bc33-2c0234f1120e
-source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '1655'
+source-wordcount: '1674'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ Este tutorial requer uma compreensão funcional dos seguintes componentes do Ado
 * [Experience Data Model (XDM)](../../../../xdm/home.md): o quadro normalizado pelo qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
    * [Noções básicas da composição do esquema](../../../../xdm/schema/composition.md): saiba mais sobre os blocos de construção básicos de esquemas XDM.
 * [Serviço de identidade da Adobe Experience Platform](../../../../identity-service/home.md): permite conectar as identidades dos clientes a partir de diferentes fontes de dados em dispositivos e sistemas.
-   * [Namespaces de identidade](../../../../identity-service/namespaces.md): os dados de identidade do cliente devem ser fornecidos em um namespace de identidade específico reconhecido pelo Serviço de identidade.
+   * [Namespaces de identidade](../../../../identity-service/features/namespaces.md): os dados de identidade do cliente devem ser fornecidos em um namespace de identidade específico reconhecido pelo Serviço de identidade.
 * [Perfil do cliente em tempo real](../../../../profile/home.md): Aproveita [!DNL Identity Service] para permitir que você crie perfis detalhados do cliente a partir de seus conjuntos de dados em tempo real. [!DNL Real-Time Customer Profile] O extrai dados do Data Lake e mantém perfis de clientes em seu próprio armazenamento de dados separado.
 
 ## Grupos de campos TCF 2.0 {#field-groups}

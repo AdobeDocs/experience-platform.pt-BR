@@ -3,7 +3,7 @@ title: Envolvimento da conta de Marketing Cloud do Salesforce
 description: Saiba como usar o destino Salesforce Marketing Cloud Account Engagement (antigo Pardot) para exportar os dados da sua conta e ativá-los no Salesforce Marketing Cloud Account Engagement para atender às suas necessidades comerciais.
 last-substantial-update: 2023-04-14T00:00:00Z
 exl-id: fca9d4f4-8717-4bfa-9992-5164ba98bea4
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1532'
 ht-degree: 2%
@@ -72,7 +72,7 @@ Consulte a [!DNL Marketing Cloud Account Engagement] [limites de taxa](https://d
 
 ## Identidades suportadas {#supported-identities}
 
-[!DNL Marketing Cloud Account Engagement] O oferece suporte à ativação das identidades descritas na tabela abaixo. Saiba mais sobre [identidades](/help/identity-service/namespaces.md).
+[!DNL Marketing Cloud Account Engagement] O oferece suporte à ativação das identidades descritas na tabela abaixo. Saiba mais sobre [identidades](/help/identity-service/features/namespaces.md).
 
 | Identidade de destino | Descrição | Considerações |
 |---|---|---|

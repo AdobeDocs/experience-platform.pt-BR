@@ -3,7 +3,7 @@ keywords: destino do crm;CRM;crm destinos;Outreach;Destino do Outreach crm
 title: Conexão de alcance
 description: O destino do Outreach permite exportar os dados da sua conta e ativá-los no Outreach para as suas necessidades comerciais.
 exl-id: 7433933d-7a4e-441d-8629-a09cb77d5220
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1678'
 ht-degree: 2%
@@ -71,7 +71,7 @@ Consulte a [[!DNL Outreach] documentação](https://api.outreach.io/api/v2/docs#
 
 ## Identidades suportadas {#supported-identities}
 
-[!DNL Outreach] O oferece suporte à atualização de identidades descritas na tabela abaixo. Saiba mais sobre [identidades](/help/identity-service/namespaces.md).
+[!DNL Outreach] O oferece suporte à atualização de identidades descritas na tabela abaixo. Saiba mais sobre [identidades](/help/identity-service/features/namespaces.md).
 
 | Identidade do público alvo | Descrição | Considerações |
 |---|---|---|

@@ -2,9 +2,9 @@
 title: Criar uma conexão de origem de Marketo Engage e um fluxo de dados para dados de atividade personalizados na interface do
 description: Este tutorial fornece etapas para criar uma conexão de origem de Marketo Engage e um fluxo de dados na interface do usuário para trazer dados de atividades personalizadas para o Adobe Experience Platform.
 exl-id: 05a7b500-11d2-4d58-be43-a2c4c0ceeb87
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '1480'
+source-wordcount: '1470'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ Este tutorial requer uma compreensão funcional dos seguintes componentes do Ado
 * [Origens](../../../../home.md): o Experience Platform permite que os dados sejam assimilados de várias fontes e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma.
 * [Experience Data Model (XDM)](../../../../../xdm/home.md): a estrutura padronizada pela qual o Experience Platform organiza os dados de experiência do cliente.
    * [Criar e editar esquemas na interface](../../../../../xdm/ui/resources/schemas.md): saiba como criar e editar esquemas na interface do usuário.
-* [Namespaces de identidade](../../../../../identity-service/namespaces.md): os namespaces de identidade são um componente de [!DNL Identity Service] que servem como indicadores do contexto ao qual uma identidade está relacionada. Uma identidade totalmente qualificada inclui um valor de ID e um namespace.
+* [Namespaces de identidade](../../../../../identity-service/features/namespaces.md): os namespaces de identidade são um componente de [!DNL Identity Service] que servem como indicadores do contexto ao qual uma identidade está relacionada. Uma identidade totalmente qualificada inclui um valor de ID e um namespace.
 * [[!DNL Real-Time Customer Profile]](/help/profile/home.md): fornece um perfil de consumidor unificado em tempo real com base em dados agregados de várias fontes.
 * [Sandboxes](../../../../../sandboxes/home.md): o Experience Platform fornece sandboxes virtuais que particionam uma única instância da Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
@@ -87,7 +87,7 @@ A última etapa na preparação do esquema é adicionar campos individuais dentr
 
 ![Um grupo de subcampos adicionados a um campo no esquema.](../../../../images/tutorials/create/marketo-custom-activities/add-sub-fields.png)
 
-## Crie um fluxo de dados
+## Criar um fluxo de dados
 
 Com a configuração do esquema concluída, agora é possível prosseguir para criar um fluxo de dados para seus dados de atividade personalizados.
 
@@ -135,7 +135,7 @@ Repita as etapas para adicionar o restante dos campos de mapeamento de atividade
 
 ![Todos os mapeamentos para dados de origem e de destino.](../../../../images/tutorials/create/marketo-custom-activities/all-mappings.png)
 
-### Consulte a seção
+### Revisão
 
 A variável *[!UICONTROL Revisão]* é exibida, permitindo que você revise seu novo fluxo de dados antes de ele ser criado. Os detalhes são agrupados nas seguintes categorias:
 

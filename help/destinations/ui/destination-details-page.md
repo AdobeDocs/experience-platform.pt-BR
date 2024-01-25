@@ -3,9 +3,9 @@ keywords: destinos;destino;página detalhes de destinos;página detalhes de dest
 title: Exibir detalhes do destino
 description: A página de detalhes de um destino individual fornece uma visão geral dos detalhes do destino. Os detalhes do destino incluem o nome do destino, a ID, os públicos mapeados para o destino e os controles para editar a ativação e habilitar e desabilitar o fluxo de dados.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '926'
+source-wordcount: '925'
 ht-degree: 1%
 
 ---
@@ -60,7 +60,7 @@ A tabela a seguir abrange os controles e os detalhes fornecidos pelo painel dire
 | [!UICONTROL Categoria] | Indica o tipo de destino. Consulte a [catálogo de destinos](../catalog/overview.md) para obter mais informações. |
 | [!UICONTROL Tipo de conexão] | Indica o formulário pelo qual seus públicos-alvo estão sendo enviados para o destino. Os valores possíveis incluem [!UICONTROL Cookie] e [!UICONTROL Baseado em perfil]. |
 | [!UICONTROL Frequência] | Indica a frequência com que os públicos-alvo são enviados para o destino. Os valores possíveis incluem [!UICONTROL Streaming] e [!UICONTROL Lote]. |
-| [!UICONTROL Identidade] | Representa o namespace de identidade aceito pelo destino, como `GAID`, `IDFA`ou `email`. Para obter mais informações sobre namespaces de identidade aceitos, consulte a [visão geral do namespace de identidade](../../identity-service/namespaces.md). |
+| [!UICONTROL Identidade] | Representa o namespace de identidade aceito pelo destino, como `GAID`, `IDFA`ou `email`. Para obter mais informações sobre namespaces de identidade aceitos, consulte a [visão geral do namespace de identidade](../../identity-service/features/namespaces.md). |
 | [!UICONTROL Criado por] | Indica o usuário que criou esse destino. |
 | [!UICONTROL Criado] | Indica a data e hora UTC em que esse destino foi criado. |
 

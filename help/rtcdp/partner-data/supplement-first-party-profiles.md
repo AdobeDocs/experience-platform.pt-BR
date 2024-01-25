@@ -3,9 +3,9 @@ title: Suplementar perfis próprios com atributos fornecidos por parceiros
 description: Saiba como suplementar perfis próprios com atributos de parceiros de dados confiáveis para melhorar sua base de dados, obter novos insights sobre sua base de clientes e aprimorar a otimização do público-alvo.
 feature: Use Cases, Profile Enrichment
 exl-id: ee21b988-88f9-4c8e-bd82-7fc55c37ec24
-source-git-commit: 3353866aa2d52c784663f355183e940e727b2af7
+source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
 workflow-type: tm+mt
-source-wordcount: '1263'
+source-wordcount: '1256'
 ht-degree: 79%
 
 ---
@@ -56,7 +56,7 @@ Assista ao tutorial em vídeo abaixo para obter uma apresentação de como compl
 1. Como **cliente**, você licencia atributos de **parceiros de dados**.
 2. Como **cliente**, você estende seus dados de perfil e o modelo de governança para acomodar atributos fornecidos por **parceiros**.
 3. Como **cliente**, você integra os públicos-alvo que deseja enriquecer com o parceiro de dados. Geralmente, esses públicos-alvo são desconectados de identificadores de entrada, como elementos de Informações de identificação pessoal (PII), por exemplo, email, nome, endereço ou outros.
-4. O **parceiro** anexa atributos licenciados nos perfis com os quais pode corresponder. De forma opcional, uma [ID do Parceiro](/help/identity-service/namespaces.md) pode ser incluída e assimilada no namespace da ID com escopo do parceiro.
+4. O **parceiro** anexa atributos licenciados nos perfis com os quais pode corresponder. De forma opcional, uma [ID do Parceiro](/help/identity-service/features/namespaces.md) pode ser incluída e assimilada no namespace da ID com escopo do parceiro.
 5. Como **cliente**, você carrega os atributos do parceiro de dados nos perfis de cliente na Real-Time CDP.
 
 ## Como atingir o caso de uso: instruções passo a passo {#step-by-step-instructions}
@@ -99,9 +99,9 @@ Além disso, nesta etapa, pense em como seu modelo de governança de dados mudar
 
 >[!TIP]
 >
->Se optar por suplementar os perfis de clientes com um identificador com base em pessoas do fornecedor de dados, será possível criar um novo tipo de identidade: **[[!UICONTROL ID do Parceiro]](/help/identity-service/namespaces.md)**.
+>Se optar por suplementar os perfis de clientes com um identificador com base em pessoas do fornecedor de dados, será possível criar um novo tipo de identidade: **[[!UICONTROL ID do Parceiro]](/help/identity-service/features/namespaces.md)**.
 >
->Leia mais sobre a ID do parceiro na [seção de tipos de identidade](/help/identity-service/namespaces.md).
+>Leia mais sobre a ID do parceiro na [seção de tipos de identidade](/help/identity-service/features/namespaces.md).
 >Leia sobre [como definir campos de identidade](/help/xdm/ui/fields/identity.md) na interface da Experience Platform.
 
 ### Exporte os públicos-alvo que deseja enriquecer ao desconectar informações de identificação pessoal (PII) ou PII com hash {#export-audiences}
@@ -130,7 +130,7 @@ Alguns conectores de origem recomendados para essa finalidade podem ser:
 
 Observe as seguintes limitações ao explorar o caso de uso descrito nesta página:
 
-* Se optar por usar IDs do parceiro, saiba que essas IDs não são usadas ao criar o [gráfico de identidade](/help/identity-service/ui/identity-graph-viewer.md).
+* Se optar por usar IDs do parceiro, saiba que essas IDs não são usadas ao criar o [gráfico de identidade](/help/identity-service/features/identity-graph-viewer.md).
 
 ## Outros casos de uso obtidos por meio da compatibilidade com dados de parceiros {#other-use-cases}
 

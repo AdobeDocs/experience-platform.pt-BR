@@ -2,10 +2,10 @@
 title: Ponto de acesso da API de modelo CSV para conversão de esquema
 description: O endpoint /rpc/csv2schema na API do Registro de esquema permite usar modelos CSV para criar esquemas do Experience Data Model (XDM) automaticamente.
 exl-id: cf08774a-db94-4ea1-a22e-bb06385f8d0e
-source-git-commit: b4c186c8c40d1372fb5011f49979523e1201fb0b
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '854'
-ht-degree: 6%
+source-wordcount: '849'
+ht-degree: 5%
 
 ---
 
@@ -23,7 +23,7 @@ A variável `/rpc/csv2schema` O ponto de extremidade faz parte das chamadas de p
 
 Para usar esse endpoint, primeiro crie um arquivo CSV com cabeçalhos de coluna apropriados e valores correspondentes. Algumas colunas são necessárias, enquanto o restante é opcional. A tabela abaixo descreve essas colunas e sua função na construção do schema.
 
-| Posição do cabeçalho do CSV | Nome do cabeçalho CSV | Obrigatório / Opcional | Descrição |
+| Posição do cabeçalho do CSV | Nome do cabeçalho CSV | Obrigatório/Opcional | Descrição |
 | --- | --- | --- | --- |
 | 1 | `isIgnored` | Opcional | Quando incluído e definido como `true`, indica que o campo não está pronto para o upload da API e deve ser ignorado. |
 | 2 | `isCustom` | Obrigatório | Indica se o campo é personalizado ou não. |
@@ -36,7 +36,7 @@ Para usar esse endpoint, primeiro crie um arquivo CSV com cabeçalhos de coluna 
 | 9 | `isRequired` | Opcional | Indica se o campo é necessário para assimilação de dados. |
 | 10 | `isArray` | Opcional | Indica se o campo é uma matriz de seus `dataType`. |
 | 11 | `isIdentity` | Opcional | Indica se o campo é um campo de identidade. |
-| 12 | `identityNamespace` | Obrigatório se `isIdentity` é verdadeiro | A variável [namespace de identidade](../../identity-service/namespaces.md) para o campo de identidade. |
+| 12 | `identityNamespace` | Obrigatório se `isIdentity` é verdadeiro | A variável [namespace de identidade](../../identity-service/features/namespaces.md) para o campo de identidade. |
 | 13 | `isPrimaryIdentity` | Opcional | Indica se o campo é a identidade principal do esquema. |
 | 14 | `minimum` | Opcional | (Somente para campos numéricos) O valor mínimo do campo. |
 | 15 | `maximum` | Opcional | (Somente para campos numéricos) O valor máximo do campo. |

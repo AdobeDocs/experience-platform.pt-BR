@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Visão geral da interface do Experience Platform
 description: Adobe Experience Platform
 exl-id: 47f9a3fb-731d-4ade-8069-faaa18f224dc
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '1797'
-ht-degree: 2%
+source-wordcount: '1795'
+ht-degree: 1%
 
 ---
 
@@ -131,7 +131,7 @@ A variável **[!UICONTROL Perfis]** permite navegar pelos perfis do cliente, exi
 
 A variável **[!UICONTROL Segmentos]** permite criar e gerenciar definições de segmento. Para saber mais sobre como usar o [!UICONTROL Segmentos] , leia a seção [guia do usuário de segmentação](../segmentation/ui/overview.md). Mais informações sobre o Serviço de segmentação podem ser encontradas no [Visão geral do serviço de segmentação](../segmentation/home.md).
 
-A variável **[!UICONTROL Identidades]** permite criar e gerenciar namespaces de identidade. Para obter mais informações sobre o [!UICONTROL Identidades] , incluindo informações sobre namespaces de identidade e como usar identidades na interface do usuário da Platform, consulte a [visão geral do namespace de identidade](../identity-service/namespaces.md).
+A variável **[!UICONTROL Identidades]** permite criar e gerenciar namespaces de identidade. Para obter mais informações sobre o [!UICONTROL Identidades] , incluindo informações sobre namespaces de identidade e como usar identidades na interface do usuário da Platform, consulte a [visão geral do namespace de identidade](../identity-service/features/namespaces.md).
 
 ### [!UICONTROL Privacidade]
 
@@ -147,7 +147,7 @@ A variável **[!UICONTROL Modelos]** permite usar o aprendizado de máquina e a 
 
 A variável **[!UICONTROL Serviços]** permite gerenciar os modelos publicados para treinamento e pontuação programados ou usar os Serviços inteligentes do Adobe, um conjunto de serviços de IA que proporcionam experiências do cliente personalizadas e em tempo real. Mais informações sobre a seção Serviços podem ser encontradas no [Tutorial de publicação de um modelo como um serviço](../data-science-workspace/models-recipes/publish-model-service-ui.md).
 
-### [!UICONTROL Gerenciamento de dados]
+### [!UICONTROL Gestão de dados]
 
 A variável **[!UICONTROL Esquemas]** permite criar e gerenciar esquemas do Experience Data Model (XDM). Para saber mais sobre esquemas, leia o tutorial em [criação de um schema](../xdm/tutorials/create-schema-ui.md). Mais informações sobre o XDM podem ser encontradas na [Visão geral do sistema XDM](../xdm/home.md).
 

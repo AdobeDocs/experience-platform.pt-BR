@@ -3,7 +3,7 @@ title: Personalizar experiências no site para visitantes desconhecidos usando o
 description: Saiba como usar o reconhecimento de visitante com auxílio de parceiros para fornecer experiências de site personalizadas para visitantes.
 feature: Use Cases, Personalization, Customer Acquisition
 exl-id: 99677988-1df8-47b1-96b1-0ef6db818a1d
-source-git-commit: 2ffb8724b2aca54019820335fb21038ec7e69a7f
+source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
 workflow-type: tm+mt
 source-wordcount: '2673'
 ht-degree: 89%
@@ -51,7 +51,7 @@ Para implementar com sucesso esse caso de uso, você deve usar várias áreas da
    * [Tags](/help/tags/home.md)
    * [Sequências de dados](/help/datastreams/overview.md)
 * Gerenciamento de dados na Real-Time CDP
-   * [Identidades](/help/identity-service/namespaces.md)
+   * [Identidades](/help/identity-service/features/namespaces.md)
    * [Esquemas](/help/xdm/home.md)
    * [Rótulos de uso de dados](/help/data-governance/labels/overview.md)
    * [Conjuntos de dados](/help/catalog/datasets/overview.md)
@@ -279,7 +279,7 @@ Agora está tudo pronto para a integração com um mecanismo de personalização
 
 Observe as seguintes limitações ao explorar o caso de uso descrito nesta página:
 
-* Se optar por usar IDs de parceiro, saiba que essas IDs não são usadas ao criar o [gráfico de identidade](/help/identity-service/ui/identity-graph-viewer.md).
+* Se optar por usar IDs de parceiro, saiba que essas IDs não são usadas ao criar o [gráfico de identidade](/help/identity-service/features/identity-graph-viewer.md).
 
 ## Outros casos de uso obtidos por meio da compatibilidade com dados de parceiros {#other-use-cases}
 

@@ -5,10 +5,10 @@ title: Definir uma relação entre dois esquemas usando o editor de esquemas
 description: Este documento fornece um tutorial para definir uma relação entre dois esquemas usando o Editor de esquemas na interface do usuário Experience Platform.
 type: Tutorial
 exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
-source-git-commit: 8b5c1776804bbacad5c3d72dd48c1716380cca79
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '1161'
-ht-degree: 11%
+source-wordcount: '1158'
+ht-degree: 10%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 11%
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_1to1_reference_schema"
->title="esquema de referência"
+>title="Esquema de referência"
 >abstract="Selecione o esquema com o qual deseja estabelecer uma relação. Esse esquema pode ser uma classe diferente do esquema atual. Consulte a documentação para obter mais informações sobre relações de esquema."
 
 >[!CONTEXTUALHELP]
@@ -73,11 +73,11 @@ O schema de origem &quot;[!DNL Loyalty Members]&quot; baseia-se no [!DNL XDM Ind
 
 O schema de referência &quot;[!DNL Hotels]&quot; é baseado em um &quot; personalizado&quot;[!DNL Hotels]&quot; e contém campos que descrevem um hotel. Para participar de um relacionamento, o schema de referência também deve ter uma identidade primária definida e estar habilitado para [!UICONTROL Perfil]. Nesse caso, `_tenantId.hotelId`atua como a identidade principal do esquema, usando uma &quot;[!DNL Hotel ID]&quot; namespace de identidade.
 
-![Ative para o Perfil](../images/tutorials/relationship/hotels.png)
+![Ativar para perfil](../images/tutorials/relationship/hotels.png)
 
 >[!NOTE]
 >
->Para saber como criar namespaces de identidade personalizados, consulte a [Documentação do Serviço de identidade](../../identity-service/namespaces.md#manage-namespaces).
+>Para saber como criar namespaces de identidade personalizados, consulte a [Documentação do Serviço de identidade](../../identity-service/features/namespaces.md#manage-namespaces).
 
 ## Criar um grupo de campos de relacionamento
 

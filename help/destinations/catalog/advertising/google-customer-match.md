@@ -3,7 +3,7 @@ keywords: correspondência do cliente do google;correspondência do cliente do G
 title: Conexão de Correspondência de cliente do Google
 description: O Google Customer Match permite usar seus dados online e offline para acessar e reengajar com seus clientes nas propriedades próprias e operadas da Google, como Search, Shopping, Gmail e YouTube.
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1791'
 ht-degree: 1%
@@ -38,7 +38,7 @@ Alguns destinos no Experience Platform têm determinadas regras e obrigações p
 
 ## Identidades suportadas {#supported-identities}
 
-[!DNL Google Customer Match] O oferece suporte à ativação das identidades descritas na tabela abaixo. Saiba mais sobre [identidades](/help/identity-service/namespaces.md).
+[!DNL Google Customer Match] O oferece suporte à ativação das identidades descritas na tabela abaixo. Saiba mais sobre [identidades](/help/identity-service/features/namespaces.md).
 
 | Identidade de destino | Descrição | Considerações |
 |---|---|---|

@@ -3,9 +3,9 @@ keywords: Experience Platform;perfil;perfil de cliente em tempo real;solução d
 title: Visualizar ponto de extremidade da API Status de amostra (Visualização de perfil)
 description: O ponto de extremidade de status da amostra de visualização da API do perfil do cliente em tempo real permite visualizar a amostra bem-sucedida mais recente dos dados do perfil, listar a distribuição do perfil por conjunto de dados e por identidade e gerar relatórios mostrando a sobreposição do conjunto de dados, a sobreposição de identidade e os perfis não compilados.
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '2868'
+source-wordcount: '2906'
 ht-degree: 1%
 
 ---
@@ -208,7 +208,7 @@ A resposta inclui uma `data` matriz, contendo uma lista de objetos de conjunto d
 
 Você pode executar uma solicitação do GET para o `/previewsamplestatus/report/namespace` para exibir o detalhamento por namespace de identidade em todos os perfis mesclados na Loja de perfis. Isso inclui as identidades padrão fornecidas pelo Adobe, bem como as identidades personalizadas definidas pela sua organização.
 
-Os namespaces de identidade são um componente importante do Serviço de identidade da Adobe Experience Platform que serve como indicadores do contexto ao qual os dados do cliente se relacionam. Para saber mais, comece lendo o [visão geral do namespace de identidade](../../identity-service/namespaces.md).
+Os namespaces de identidade são um componente importante do Serviço de identidade da Adobe Experience Platform que serve como indicadores do contexto ao qual os dados do cliente se relacionam. Para saber mais, comece lendo o [visão geral do namespace de identidade](../../identity-service/features/namespaces.md).
 
 >[!NOTE]
 >
@@ -298,7 +298,7 @@ A resposta inclui uma `data` com objetos individuais contendo os detalhes de cad
 | `fullIDsFragmentCount` | O número total de fragmentos de perfil no namespace. |
 | `fullIDsCount` | O número total de perfis mesclados no namespace. |
 | `fullIDsPercentage` | A variável `fullIDsCount` como uma porcentagem do total de perfis mesclados (a variável `totalRows` como retornado na variável [status da última amostra](#view-last-sample-status)), expresso em formato decimal. |
-| `code` | A variável `code` para o namespace. Isso pode ser encontrado ao trabalhar com namespaces usando o [API do serviço de identidade da Adobe Experience Platform](../../identity-service/api/list-namespaces.md) e também é conhecida como a [!UICONTROL Símbolo de identidade] na interface do Experience Platform. Para saber mais, visite o [visão geral do namespace de identidade](../../identity-service/namespaces.md). |
+| `code` | A variável `code` para o namespace. Isso pode ser encontrado ao trabalhar com namespaces usando o [API do serviço de identidade da Adobe Experience Platform](../../identity-service/api/list-namespaces.md) e também é conhecida como a [!UICONTROL Símbolo de identidade] na interface do Experience Platform. Para saber mais, visite o [visão geral do namespace de identidade](../../identity-service/features/namespaces.md). |
 | `value` | A variável `id` para o namespace. Isso pode ser encontrado ao trabalhar com namespaces usando o [API do serviço de identidade](../../identity-service/api/list-namespaces.md). |
 
 ## Gerar o relatório de sobreposição do conjunto de dados
@@ -444,7 +444,7 @@ Uma solicitação bem-sucedida retorna o Status HTTP 200 (OK) e o relatório de 
 | Propriedade | Descrição |
 |---|---|
 | `data` | A variável `data` O objeto contém listas separadas por vírgulas com combinações exclusivas de códigos de namespace de identidade e suas respectivas contagens de perfil. |
-| Códigos de namespace | A variável `code` é um formulário curto para cada nome de namespace de identidade. Um mapeamento de cada `code` à sua `name` pode ser encontrado usando o [API do serviço de identidade da Adobe Experience Platform](../../identity-service/api/list-namespaces.md). A variável `code` também é conhecido como [!UICONTROL Símbolo de identidade] na interface do Experience Platform. Para saber mais, visite o [visão geral do namespace de identidade](../../identity-service/namespaces.md). |
+| Códigos de namespace | A variável `code` é um formulário curto para cada nome de namespace de identidade. Um mapeamento de cada `code` à sua `name` pode ser encontrado usando o [API do serviço de identidade da Adobe Experience Platform](../../identity-service/api/list-namespaces.md). A variável `code` também é conhecido como [!UICONTROL Símbolo de identidade] na interface do Experience Platform. Para saber mais, visite o [visão geral do namespace de identidade](../../identity-service/features/namespaces.md). |
 | `reportTimestamp` | O carimbo de data e hora do relatório. Se um `date` foi fornecido durante a solicitação, o relatório retornado refere-se à data fornecida. Se não `date` for fornecido, o relatório mais recente será retornado. |
 
 ### Interpretação do relatório de sobreposição de namespace de identidade

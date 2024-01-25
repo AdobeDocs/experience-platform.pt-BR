@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Processamento de solicitação de privacidade no Data Lake
 description: A Adobe Experience Platform Privacy Service processa solicitações de clientes para acessar, cancelar a venda ou excluir seus dados pessoais, conforme definido pelas regulamentações legais e organizacionais de privacidade. Este documento aborda conceitos essenciais relacionados ao processamento de solicitações de privacidade para dados do cliente armazenados no data lake.
 exl-id: c06b0a44-be1a-4938-9c3e-f5491a3dfc19
-source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '1428'
+source-wordcount: '1429'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ Adobe Experience Platform [!DNL Identity Service] conecta os dados de identidade
 
 [!DNL Identity Service] O mantém um armazenamento de namespaces de identidade definidos globalmente (padrão) e definidos pelo usuário (personalizado). Os namespaces padrão estão disponíveis para todas as organizações (por exemplo, &quot;Email&quot; e &quot;ECID&quot;), enquanto sua organização também pode criar namespaces personalizados para atender às suas necessidades específicas.
 
-Para obter mais informações sobre namespaces de identidade no [!DNL Experience Platform], consulte o [visão geral do namespace de identidade](../identity-service/namespaces.md).
+Para obter mais informações sobre namespaces de identidade no [!DNL Experience Platform], consulte o [visão geral do namespace de identidade](../identity-service/features/namespaces.md).
 
 ## Adição de dados de identidade a conjuntos de dados
 
@@ -61,7 +61,7 @@ Há dois métodos de adicionar um descritor de identidade a um esquema de conjun
 
 ### Uso da interface {#identity-ui}
 
-No [!DNL Experience Platform ]interface do usuário, a variável **[!UICONTROL Esquemas]** O espaço de trabalho do permite editar os esquemas XDM existentes. Para adicionar um descritor de identidade a um esquema, selecione o esquema na lista e siga as etapas para [definição de um campo de esquema como um campo de identidade](../xdm/tutorials/create-schema-ui.md#identity-field) no [!DNL Schema Editor] tutorial.
+No [!DNL Experience Platform]interface do usuário, a variável **[!UICONTROL Esquemas]** O espaço de trabalho do permite editar os esquemas XDM existentes. Para adicionar um descritor de identidade a um esquema, selecione o esquema na lista e siga as etapas para [definição de um campo de esquema como um campo de identidade](../xdm/tutorials/create-schema-ui.md#identity-field) no [!DNL Schema Editor] tutorial.
 
 Depois de definir os campos apropriados no esquema como campos de identidade, você pode prosseguir para a próxima seção em [envio de solicitações de privacidade](#submit).
 

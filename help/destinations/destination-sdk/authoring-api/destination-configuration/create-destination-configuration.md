@@ -2,9 +2,9 @@
 description: Saiba como estruturar uma chamada de API para criar uma configuração de destino por meio do Adobe Experience Platform Destination SDK.
 title: Criar uma configuração de destino
 exl-id: aae4aaa8-1dd0-4041-a86c-5c86f04d7d13
-source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '1205'
+source-wordcount: '1194'
 ht-degree: 3%
 
 ---
@@ -42,7 +42,7 @@ Você pode criar uma nova configuração de destino fazendo uma solicitação PO
 
 >[!TIP]
 >
->**Ponto de acesso da API**: `platform.adobe.io/data/core/activation/authoring/destinations`
+>**Endpoint da API**: `platform.adobe.io/data/core/activation/authoring/destinations`
 
 **Formato da API**
 
@@ -193,7 +193,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 |---------|----------|------|
 | `name` | String | Indica o título do destino no catálogo de Experience Platform. |
 | `description` | String | Forneça uma descrição que o Adobe usará no catálogo de destinos de Experience Platform para o cartão de destino. Mire não mais do que 4-5 frases. ![Imagem da interface do usuário da Platform mostrando a descrição do destino.](../../assets/authoring-api/destination-configuration/destination-description.png "Descrição do destino"){width="100" zoomable="yes"} |
-| `status` | String | Indica o status do ciclo de vida do cartão de destino. Os valores aceitos são `TEST`, `PUBLISHED` e `DELETED`. Uso `TEST` ao configurar seu destino pela primeira vez. |
+| `status` | String | Indica o status do ciclo de vida do cartão de destino. Os valores aceitos são `TEST`, `PUBLISHED`, e `DELETED`. Uso `TEST` ao configurar seu destino pela primeira vez. |
 | `customerAuthenticationConfigurations.authType` | String | Indica a configuração usada para autenticar clientes do Experience Platform no servidor de destino. Consulte [configuração de autenticação do cliente](../../functionality/destination-configuration/customer-authentication.md) para obter informações detalhadas sobre os tipos de autenticação compatíveis. |
 | `customerDataFields.name` | String | Forneça um nome para o campo personalizado que você está introduzindo. <br/><br/> Consulte [Campos de dados do cliente](../../functionality/destination-configuration/customer-data-fields.md) para obter informações detalhadas sobre essas configurações. ![Imagem da interface do usuário da Platform mostrando campos de dados do cliente.](../../assets/authoring-api/destination-configuration/customer-data-fields.png "Campo de dados do cliente"){width="100" zoomable="yes"} |
 | `customerDataFields.type` | String | Indica o tipo de campo personalizado que você está introduzindo. Os valores aceitos são `string`, `object`, `integer`. <br/><br/> Consulte [Campos de dados do cliente](../../functionality/destination-configuration/customer-data-fields.md) para obter informações detalhadas sobre essas configurações. |
@@ -208,9 +208,9 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `uiAttributes.connectionType` | String | O tipo de conexão, dependendo do destino. Valores compatíveis: <ul><li>`Server-to-server`</li><li>`Cloud storage`</li><li>`Azure Blob`</li><li>`Azure Data Lake Storage`</li><li>`S3`</li><li>`SFTP`</li><li>`DLZ`</li></ul> |
 | `uiAttributes.frequency` | String | Refere-se ao tipo de exportação de dados compatível com o destino. Defina como `Streaming` para integrações baseadas em API, ou `Batch` ao exportar arquivos para seus destinos. |
 | `identityNamespaces.externalId.acceptsAttributes` | Booleano | Indica se os clientes podem mapear atributos de perfil padrão para a identidade que você está configurando. |
-| `identityNamespaces.externalId.acceptsCustomNamespaces` | Booleano | Indica se os clientes podem mapear identidades pertencentes a [namespaces personalizados](/help/identity-service/namespaces.md#manage-namespaces) à identidade que você está configurando. |
+| `identityNamespaces.externalId.acceptsCustomNamespaces` | Booleano | Indica se os clientes podem mapear identidades pertencentes a [namespaces personalizados](/help/identity-service/features/namespaces.md#manage-namespaces) à identidade que você está configurando. |
 | `identityNamespaces.externalId.transformation` | String | _Não mostrado no exemplo de configuração_. Usado, por exemplo, quando a variável [!DNL Platform] o cliente tem endereços de email simples como um atributo e sua plataforma aceita apenas emails com hash. É aqui que você forneceria a transformação que precisa ser aplicada (por exemplo, transformar o email em minúsculas e depois em hash). |
-| `identityNamespaces.externalId.acceptedGlobalNamespaces` | - | Indica qual [namespaces de identidade padrão](/help/identity-service/namespaces.md#standard) (por exemplo, IDFA), os clientes podem mapear para a identidade que você está configurando. <br> Quando você usa `acceptedGlobalNamespaces`, você pode usar `"requiredTransformation":"sha256(lower($))"` para endereços de email ou números de telefone em letras minúsculas e com hash. |
+| `identityNamespaces.externalId.acceptedGlobalNamespaces` | - | Indica qual [namespaces de identidade padrão](/help/identity-service/features/namespaces.md#standard) (por exemplo, IDFA), os clientes podem mapear para a identidade que você está configurando. <br> Quando você usa `acceptedGlobalNamespaces`, você pode usar `"requiredTransformation":"sha256(lower($))"` para endereços de email ou números de telefone em letras minúsculas e com hash. |
 | `destinationDelivery.authenticationRule` | String | Indica como [!DNL Platform] Os clientes do se conectam ao seu destino. Os valores aceitos são `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>Uso `CUSTOMER_AUTHENTICATION` se os clientes da Platform fizerem logon no sistema por meio de um nome de usuário e senha, um token de portador ou outro método de autenticação. Por exemplo, você selecionaria essa opção se também selecionasse `authType: OAUTH2` ou `authType:BEARER` in `customerAuthenticationConfigurations`. </li><li> Uso `PLATFORM_AUTHENTICATION` se houver um sistema de autenticação global entre o Adobe e seu destino e a [!DNL Platform] O cliente não precisa fornecer credenciais de autenticação para se conectar ao seu destino. Nesse caso, você deve criar um objeto de credenciais usando o [API de credenciais](../../credentials-api/create-credential-configuration.md) configuração. </li><li>Uso `NONE` se nenhuma autenticação for necessária para enviar dados para a plataforma de destino. </li></ul> |
 | `destinationDelivery.destinationServerId` | String | A variável `instanceId` do [modelo do servidor de destino](../destination-server/create-destination-server.md) usado para este destino. |
 | `backfillHistoricalProfileData` | Booleano | Controla se os dados históricos do perfil são exportados quando os públicos são ativados para o destino. Sempre definir como `true`. |

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guia de solução de problemas do serviço de identidade
 description: Este documento fornece respostas a perguntas frequentes sobre o Adobe Experience Platform Identity Service, bem como um guia de solução de problemas para erros comuns.
 exl-id: dac31bc3-7003-46d6-9d41-9f6fd3645c2c
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: 3fe94be9f50d64fc893b16555ab9373604b62e59
 workflow-type: tm+mt
-source-wordcount: '2176'
+source-wordcount: '2166'
 ht-degree: 0%
 
 ---
@@ -73,7 +73,7 @@ Para obter instruções passo a passo sobre como definir um namespace ao criar u
 
 ## Quais são os namespaces de identidade padrão fornecidos pelo Experience Platform? {#standard-namespaces}
 
-Os namespaces de identidade padrão são namespaces disponíveis para todas as organizações. Consulte a [Visão geral dos namespaces de identidade](./namespaces.md) para obter uma lista completa de namespaces padrão disponíveis.
+Os namespaces de identidade padrão são namespaces disponíveis para todas as organizações. Consulte a [Visão geral dos namespaces de identidade](./features/namespaces.md) para obter uma lista completa de namespaces padrão disponíveis.
 
 ## Onde posso encontrar a lista de namespaces de identidade disponíveis para minha organização?
 

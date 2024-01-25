@@ -3,7 +3,7 @@ keywords: Experience Platform;página inicial;tópicos populares;controle de ace
 title: Visão Geral do Controle de Acesso Baseado em Atributo
 description: Este documento fornece informações sobre o controle de acesso baseado em atributos no Adobe Experience Platform
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: 44ffcc09edcfe35bdd456b509fac6f096ef8e022
+source-git-commit: 0d111241658b4014d1ca2e6013d21a4782d81be9
 workflow-type: tm+mt
 source-wordcount: '1840'
 ht-degree: 13%
@@ -103,7 +103,7 @@ Para obter mais informações sobre [!DNL Destinations], consulte o [[!DNL Desti
 
 Adobe Experience Platform [!DNL Identity Service] O ajuda você a obter uma melhor visualização do cliente e do comportamento dele, unindo identidades em dispositivos e sistemas, permitindo que você forneça experiências digitais pessoais e impactantes em tempo real.
 
-Como parte do controle de acesso baseado em atributos, a variável `view-identity-graph` A permissão de permite determinar quais usuários em sua organização podem acessar o gráfico de identidade por meio da interface ou das APIs. Para obter mais informações, consulte o manual sobre [uso do visualizador de gráficos de identidade](../../identity-service/ui/identity-graph-viewer.md).
+Como parte do controle de acesso baseado em atributos, a variável `view-identity-graph` A permissão de permite determinar quais usuários em sua organização podem acessar o gráfico de identidade por meio da interface ou das APIs. Para obter mais informações, consulte o manual sobre [uso do visualizador de gráficos de identidade](../../identity-service/features/identity-graph-viewer.md).
 
 Para obter mais informações sobre [!DNL Identity Service], consulte o [[!DNL Identity Service] visão geral](../../identity-service/home.md).
 

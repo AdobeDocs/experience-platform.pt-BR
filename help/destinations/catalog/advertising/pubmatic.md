@@ -2,7 +2,7 @@
 title: PubMatic Connect
 description: A PubMatic maximiza o valor para o cliente fornecendo a cadeia de suprimento de marketing digital programática do futuro. O PubMatic Connect combina tecnologia de plataforma e serviço dedicado para aprimorar o modo como o inventário e os dados são empacotados e transacionados.
 last-substantial-update: 2023-12-14T00:00:00Z
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '923'
 ht-degree: 3%
@@ -36,7 +36,7 @@ Fale com o seu [!DNL PubMatic] Gerente de contas para garantir que sua conta est
 
 ## Identidades suportadas {#supported-identities}
 
-[!DNL PubMatic Connect] O oferece suporte à ativação das identidades descritas na tabela abaixo. Saiba mais sobre [identidades](/help/identity-service/namespaces.md).
+[!DNL PubMatic Connect] O oferece suporte à ativação das identidades descritas na tabela abaixo. Saiba mais sobre [identidades](/help/identity-service/features/namespaces.md).
 
 | Identidade de destino | Descrição | Considerações |
 | --------------- | ------ | --- |

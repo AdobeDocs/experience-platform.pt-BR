@@ -3,9 +3,9 @@ title: Interagir e adquirir novos clientes sem depender de cookies de terceiros
 description: Saiba como engajar e adquirir novos clientes por meio de casos de uso de prospecção, sem depender de cookies de terceiros.
 feature: Use Cases, Customer Acquisition
 exl-id: b9e7b3af-2a13-4904-bd12-e3ed05a1988e
-source-git-commit: 3353866aa2d52c784663f355183e940e727b2af7
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '2077'
+source-wordcount: '2074'
 ht-degree: 86%
 
 ---
@@ -65,7 +65,7 @@ Leia as seções abaixo, que incluem links para documentação adicional, para c
 
 Ao concluir as etapas para implementar o caso de uso, você usará a seguinte funcionalidade e elementos da interface da Real-Time CDP (listados na ordem em que serão usados). Verifique se possui as permissões de controle de acesso baseadas em atributos necessárias para todas essas áreas ou solicite ao(à) administrador(a) do sistema que as conceda a você.
 
-* [Identidades](/help/identity-service/namespaces.md)
+* [Identidades](/help/identity-service/features/namespaces.md)
 * [Esquemas](/help/xdm/home.md)
 * [Rótulos de uso de dados](/help/data-governance/labels/overview.md)
 * [Conjuntos de dados](/help/catalog/datasets/overview.md)
@@ -95,7 +95,7 @@ Comece criando um novo tipo de identidade para os perfis que você receberá do 
 
 ![Crie um novo namespace de identidade de ID de parceiro.](/help/rtcdp/assets/partner-data/prospecting/create-partner-identity-namespace.png)
 
-* Leia mais sobre namespaces de ID de parceiro na [seção de tipos de identidade](/help/identity-service/namespaces.md).
+* Leia mais sobre namespaces de ID de parceiro na [seção de tipos de identidade](/help/identity-service/features/namespaces.md).
 * Leia sobre [como definir campos de identidade](/help/xdm/ui/fields/identity.md) na interface da Experience Platform.
 
 #### Crie um novo esquema com a classe **[!UICONTROL Perfil individual em potencial do XDM]**

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guia de solução de problemas do sistema XDM
 description: Encontre respostas para perguntas frequentes sobre o Experience Data Model (XDM), incluindo etapas para resolver erros comuns de API.
 exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '2073'
+source-wordcount: '1947'
 ht-degree: 0%
 
 ---
@@ -136,7 +136,6 @@ Esse erro é exibido quando o sistema não consegue encontrar um recurso especí
 >* `http://ns.adobe.com/aep/errors/XDM-1016-404`
 >* `http://ns.adobe.com/aep/errors/XDM-1017-404`
 
-
 Para obter mais informações sobre como construir caminhos de pesquisa na API, consulte a [container](./api/getting-started.md#container) e [identificação de recursos](api/getting-started.md#resource-identification) seções na [!DNL Schema Registry] guia do desenvolvedor.
 
 ### Título não exclusivo
@@ -189,7 +188,6 @@ Os recursos definidos pela organização devem incluir os namespaces dos campos 
 >* `http://ns.adobe.com/aep/errors/XDM-1023-400`
 >* `http://ns.adobe.com/aep/errors/XDM-1024-400`
 
-
 Exemplos detalhados de estruturas de dados adequadas para recursos XDM podem ser encontrados no guia da API do registro de esquema:
 
 * [Criar uma classe personalizada](./api/classes.md#create)
@@ -225,7 +223,6 @@ Dependendo do endpoint que você estiver usando, a variável `detailed-message` 
 >* `http://ns.adobe.com/aep/errors/XDM-1007-400`
 >* `http://ns.adobe.com/aep/errors/XDM-1008-400`
 >* `http://ns.adobe.com/aep/errors/XDM-1009-400`
-
 
 Para obter listas de cabeçalhos Accept compatíveis para diferentes solicitações de API, consulte as seções correspondentes no [Guia do desenvolvedor do Registro de esquema](./api/overview.md).
 
@@ -277,7 +274,7 @@ Para habilitar esquemas que contenham descritores de relacionamento para uso em 
 
 Certifique-se de que o `xdm:namespace` valor do campo de identidade do esquema de referência corresponde ao do `xdm:identityNamespace` no descritor de identidade de referência do campo de origem para resolver esse problema.
 
-Para obter uma lista de códigos de namespace de identidade padrão, consulte a seção sobre [namespaces padrão](../identity-service/namespaces.md) na visão geral do namespace de identidade.
+Para obter uma lista de códigos de namespace de identidade padrão, consulte a seção sobre [namespaces padrão](../identity-service/features/namespaces.md) na visão geral do namespace de identidade.
 
 #### O esquema deve incluir um identityMap ou identidade primária
 

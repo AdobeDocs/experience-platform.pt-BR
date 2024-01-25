@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guia de solução de problemas de assimilação de streaming
 description: Este documento fornece respostas a perguntas frequentes sobre a assimilação de streaming no Adobe Experience Platform.
 exl-id: 5d5deccf-25b8-44c9-ae27-9a4713ced274
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '1024'
+source-wordcount: '1026'
 ht-degree: 0%
 
 ---
@@ -97,6 +97,6 @@ O JSON a seguir é um objeto de resposta de exemplo para uma solicitação de AP
 
 Se [!DNL Real-Time Customer Profile] rejeitar uma mensagem, provavelmente devido a informações de identidade incorretas. Isso pode ser o resultado de fornecer um valor ou namespace inválido para uma identidade.
 
-Há dois tipos de namespaces de identidade: padrão e personalizado. Ao usar namespaces personalizados, verifique se o namespace foi registrado em [!DNL Identity Service]. Consulte a [visão geral do namespace de identidade](../../identity-service/namespaces.md) para obter mais informações sobre o uso de namespaces padrão e personalizados.
+Há dois tipos de namespaces de identidade: padrão e personalizado. Ao usar namespaces personalizados, verifique se o namespace foi registrado em [!DNL Identity Service]. Consulte a [visão geral do namespace de identidade](../../identity-service/features/namespaces.md) para obter mais informações sobre o uso de namespaces padrão e personalizados.
 
 Você pode usar o [[!DNL Experience Platform UI]](https://platform.adobe.com) para ver mais informações sobre por que uma mensagem falhou na assimilação. Clique em **[!UICONTROL Monitoramento]** no painel de navegação esquerdo, exiba a **[!UICONTROL Transmissão de ponta a ponta]** para ver os lotes de mensagens transmitidos durante um período selecionado.

@@ -2,7 +2,7 @@
 title: (API) Conexão do Salesforce Marketing Cloud
 description: O destino do Marketing Cloud do Salesforce (anteriormente conhecido como ExactTarget) permite exportar os dados da sua conta e ativá-los no Marketing Cloud do Salesforce para as suas necessidades comerciais.
 exl-id: 0cf068e6-8a0a-4292-a7ec-c40508846e27
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '2895'
 ht-degree: 1%
@@ -125,7 +125,7 @@ Anote os itens abaixo antes de autenticar na [!DNL (API) Salesforce Marketing Cl
 
 ## Identidades suportadas {#supported-identities}
 
-[!DNL (API) Salesforce Marketing Cloud] O oferece suporte à ativação das identidades descritas na tabela abaixo. Saiba mais sobre [identidades](/help/identity-service/namespaces.md).
+[!DNL (API) Salesforce Marketing Cloud] O oferece suporte à ativação das identidades descritas na tabela abaixo. Saiba mais sobre [identidades](/help/identity-service/features/namespaces.md).
 
 | Identidade de destino | Descrição | Considerações |
 |---|---|---|

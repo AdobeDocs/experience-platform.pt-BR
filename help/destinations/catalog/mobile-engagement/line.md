@@ -4,7 +4,7 @@ title: Conexão LINE
 description: O destino LINE permite adicionar perfis ao público-alvo da Platform e fornecer experiências personalizadas aos usuários conectados.
 last-substantial-update: 2022-11-08T00:00:00Z
 exl-id: 9981798a-61f2-4a09-9a33-57e63eb36d43
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1190'
 ht-degree: 2%
@@ -54,7 +54,7 @@ Consulte a [[!DNL LINE] documentação](https://developers.line.biz/en/docs/mess
 
 ## Identidades suportadas {#supported-identities}
 
-[!DNL LINE] O oferece suporte à atualização e exportação de identidades descritas na tabela abaixo. Saiba mais sobre [identidades](/help/identity-service/namespaces.md).
+[!DNL LINE] O oferece suporte à atualização e exportação de identidades descritas na tabela abaixo. Saiba mais sobre [identidades](/help/identity-service/features/namespaces.md).
 
 | Identidade de destino | Descrição |
 |---|---|

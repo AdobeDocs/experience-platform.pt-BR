@@ -3,7 +3,7 @@ title: Anúncios do Amazon
 description: O Amazon Ads oferece uma variedade de opções para ajudá-lo a atingir suas metas de publicidade para vendedores registrados, fornecedores, fornecedores de livros, autores de KDP (Kindle Direct Publishing), desenvolvedores de aplicativos e/ou agências. A integração do Amazon Ads com o Adobe Experience Platform fornece integração pronta para uso com produtos Amazon Ads, incluindo o Amazon DSP (ADSP). Usando o destino do Amazon Ads no Adobe Experience Platform, os usuários podem definir públicos-alvo do anunciante para direcionamento e ativação no Amazon DSP.
 last-substantial-update: 2023-03-29T00:00:00Z
 exl-id: 724f3d32-65e0-4612-a882-33333e07c5af
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1344'
 ht-degree: 2%
@@ -38,7 +38,7 @@ Para usar a conexão do Amazon Ads com o Adobe Experience Platform, os usuários
 
 ## Identidades suportadas {#supported-identities}
 
-A variável *Anúncios do Amazon* A conexão suporta a ativação de identidades descritas na tabela abaixo. Saiba mais sobre [identidades](/help/identity-service/namespaces.md). Para obter mais detalhes sobre as identidades compatíveis com o Amazon Ads, visite o [Centro de suporte ao Amazon DSP](https://advertising.amazon.com/dsp/help/ss/en/audiences#GA6BC9BW52YFXBNE).
+A variável *Anúncios do Amazon* A conexão suporta a ativação de identidades descritas na tabela abaixo. Saiba mais sobre [identidades](/help/identity-service//features/namespaces.md). Para obter mais detalhes sobre as identidades compatíveis com o Amazon Ads, visite o [Centro de suporte ao Amazon DSP](https://advertising.amazon.com/dsp/help/ss/en/audiences#GA6BC9BW52YFXBNE).
 
 | Identidade de destino | Descrição | Considerações |
 |---|---|---|

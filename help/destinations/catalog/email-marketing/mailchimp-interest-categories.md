@@ -3,7 +3,7 @@ title: Categorias de interesse do Mailchimp
 description: O Mailchimp (também conhecido como Intuit Mailchimp) é uma plataforma de automação de marketing popular e um serviço de marketing por email usado pelas empresas para gerenciar e conversar com contatos (clientes, clientes ou outras partes interessadas) usando listas de endereçamento e campanhas de marketing por email. Use esse conector para classificar seus contatos com base em seus interesses e preferências.
 last-substantial-update: 2023-05-24T00:00:00Z
 exl-id: bdce8295-7305-4d54-81c1-7fa3e580ce70
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '2299'
 ht-degree: 2%
@@ -78,7 +78,7 @@ Além disso, consulte o [!DNL Mailchimp] [limites de taxa](https://mailchimp.com
 
 ## Identidades suportadas {#supported-identities}
 
-[!DNL Mailchimp] O oferece suporte à ativação das identidades descritas na tabela abaixo. Saiba mais sobre [identidades](/help/identity-service/namespaces.md).
+[!DNL Mailchimp] O oferece suporte à ativação das identidades descritas na tabela abaixo. Saiba mais sobre [identidades](/help/identity-service/features/namespaces.md).
 
 | Identidade de destino | Descrição | Considerações |
 |---|---|---|

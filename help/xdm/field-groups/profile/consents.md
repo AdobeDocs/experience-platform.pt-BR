@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Grupo de campos de esquema de consentimentos e preferências
 description: Saiba mais sobre o grupo de campos de esquema Consentimentos e Preferências.
 exl-id: ec592102-a9d3-4cac-8b94-58296a138573
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '933'
 ht-degree: 0%
@@ -106,7 +106,7 @@ O JSON a seguir mostra um exemplo do tipo de dados que o [!UICONTROL Consentimen
 >* Se o cliente tiver optado por não participar no nível do canal, quaisquer consentimentos ou preferências equivalentes em `idSpecific` são ignorados.
 >* Se o consentimento ou a preferência no nível do canal não estiver definido, ou se o cliente tiver optado, os consentimentos ou preferências equivalentes em `idSpecific` são honrados.
 
-Cada chave no `idSpecific` O objeto representa um namespace de identidade específico reconhecido pelo Adobe Experience Platform Identity Service. Embora você possa definir seus próprios namespaces personalizados para categorizar identificadores diferentes, é recomendável usar um dos namespaces padrão fornecidos pelo Serviço de identidade para reduzir os tamanhos de armazenamento do Perfil do cliente em tempo real. Para obter mais informações sobre namespaces de identidade, consulte o [visão geral do namespace de identidade](../../../identity-service/namespaces.md) na documentação do Serviço de identidade.
+Cada chave no `idSpecific` O objeto representa um namespace de identidade específico reconhecido pelo Adobe Experience Platform Identity Service. Embora você possa definir seus próprios namespaces personalizados para categorizar identificadores diferentes, é recomendável usar um dos namespaces padrão fornecidos pelo Serviço de identidade para reduzir os tamanhos de armazenamento do Perfil do cliente em tempo real. Para obter mais informações sobre namespaces de identidade, consulte o [visão geral do namespace de identidade](../../../identity-service/features/namespaces.md) na documentação do Serviço de identidade.
 
 As chaves para cada objeto de namespace representam os valores de identidade exclusivos para os quais o cliente definiu preferências. Cada valor de identidade pode conter um conjunto completo de consentimentos e preferências, formatados da mesma forma que `consents`.
 

@@ -2,7 +2,7 @@
 title: Conexão Snap Inc
 description: Saiba como se conectar à plataforma Snapchat Ads e exportar seus públicos do Experience Platform.
 exl-id: 1f0f2dc0-5f3d-424b-9b22-b1a14ac30039
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1012'
 ht-degree: 2%
@@ -37,7 +37,7 @@ Para usar este destino, você precisa ter uma conta do Snapchat Ads. Consulte es
 
 ## Identidades suportadas {#supported-identities}
 
-A variável *Snap Inc* o destino oferece suporte à ativação das identidades descritas na tabela abaixo. Saiba mais sobre [identidades](/help/identity-service/namespaces.md).
+A variável *Snap Inc* o destino oferece suporte à ativação das identidades descritas na tabela abaixo. Saiba mais sobre [identidades](/help/identity-service/features/namespaces.md).
 
 Todos os identificadores enviados para o *Snap Inc* o destino deve ter hash no formato SHA-256. Para aplicar hash a identificadores de texto sem formatação antes de enviá-los para o destino, verifique **[!UICONTROL Aplicar transformação]** ao mapear identificadores de destino para o destino.
 

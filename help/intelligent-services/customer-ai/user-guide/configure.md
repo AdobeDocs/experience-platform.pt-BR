@@ -5,9 +5,9 @@ feature: Customer AI
 title: Configurar uma instância da IA do cliente
 description: Os Serviços de IA/ML fornecem IA do cliente como um serviço da Adobe Sensei simples de usar que pode ser configurado para casos de uso diferentes. As seções a seguir fornecem etapas para configurar uma instância da IA do cliente.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-source-git-commit: 973a9cae711780448e5c708622a71ba928695beb
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '2824'
+source-wordcount: '2827'
 ht-degree: 0%
 
 ---
@@ -113,7 +113,7 @@ Caso haja mais de uma identidade disponível em um namespace, selecione o campo 
 
 >[!NOTE]
 >
-> Se não existir um tipo de identidade (namespace) válido para um conjunto de dados, você deverá definir uma identidade primária e atribuí-la a um namespace de identidade usando o [editor de esquema](../../../xdm/schema/composition.md#identity). Para saber mais sobre namespaces e identidades, visite o [Namespaces do serviço de identidade](../../../identity-service/namespaces.md) documentação.
+> Se não existir um tipo de identidade (namespace) válido para um conjunto de dados, você deverá definir uma identidade primária e atribuí-la a um namespace de identidade usando o [editor de esquema](../../../xdm/schema/composition.md#identity). Para saber mais sobre namespaces e identidades, visite o [Namespaces do serviço de identidade](../../../identity-service/features/namespaces.md) documentação.
 
 ## Definir meta {#define-a-goal}
 

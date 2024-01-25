@@ -4,7 +4,7 @@ title: Ative públicos para destinos baseados em arquivo usando a API do Serviç
 description: Saiba como usar a API do Serviço de fluxo para exportar arquivos com perfis qualificados para destinos de armazenamento na nuvem.
 type: Tutorial
 exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '4335'
 ht-degree: 4%
@@ -3424,7 +3424,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/idnamespace/i
 
 +++ Exibir identidades disponíveis para usar no esquema de entrada
 
-A resposta retorna as identidades que você pode usar ao criar o esquema de entrada. Observe que essa resposta retorna ambos [padrão](/help/identity-service/namespaces.md#standard) e [personalizado](/help/identity-service/namespaces.md#manage-namespaces) namespaces de identidade que você configurou no Experience Platform.
+A resposta retorna as identidades que você pode usar ao criar o esquema de entrada. Observe que essa resposta retorna ambos [padrão](/help/identity-service/features/namespaces.md#standard) e [personalizado](/help/identity-service/features/namespaces.md#manage-namespaces) namespaces de identidade que você configurou no Experience Platform.
 
 ```json
 [

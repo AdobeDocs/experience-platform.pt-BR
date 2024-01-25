@@ -1,15 +1,15 @@
 ---
 description: Esta página aborda o formato da mensagem e a transformação do perfil nos dados exportados do Adobe Experience Platform para destinos.
-title: Formato de mensagem
+title: Formato da mensagem
 exl-id: ab05d34e-530f-456c-b78a-7f3389733d35
-source-git-commit: b42ef11681bb50141c7f3dc76d8c79d71e55e73c
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '2502'
-ht-degree: 1%
+source-wordcount: '2489'
+ht-degree: 0%
 
 ---
 
-# Formato de mensagem
+# Formato da mensagem
 
 ## Pré-requisitos - Conceitos do Adobe Experience Platform {#prerequisites}
 
@@ -380,7 +380,7 @@ Perfil 2:
 
 ### Identidades {#identities}
 
-Para obter informações sobre identidades no Experience Platform, consulte [Visão geral do namespace de identidade](../../../../identity-service/namespaces.md).
+Para obter informações sobre identidades no Experience Platform, consulte [Visão geral do namespace de identidade](../../../../identity-service/features/namespaces.md).
 
 **Entrada**
 

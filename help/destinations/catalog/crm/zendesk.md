@@ -3,7 +3,7 @@ title: Conexão do Zendesk
 description: O destino do Zendesk permite exportar seus dados de conta e ativá-los no Zendesk para suas necessidades comerciais.
 last-substantial-update: 2023-03-14T00:00:00Z
 exl-id: e7fcbbf4-5d6c-4abb-96cb-ea5b67a88711
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1469'
 ht-degree: 2%
@@ -48,7 +48,7 @@ A variável [Preços e Limites de Taxa](https://developer.zendesk.com/api-refere
 
 ## Identidades suportadas {#supported-identities}
 
-[!DNL Zendesk] O oferece suporte à atualização de identidades descritas na tabela abaixo. Saiba mais sobre [identidades](/help/identity-service/namespaces.md).
+[!DNL Zendesk] O oferece suporte à atualização de identidades descritas na tabela abaixo. Saiba mais sobre [identidades](/help/identity-service/features/namespaces.md).
 
 | Identidade de destino | Exemplo | Descrição | Obrigatório |
 |---|---|---|---|

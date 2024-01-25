@@ -2,9 +2,9 @@
 title: Práticas recomendadas de direitos de licença de gerenciamento de dados
 description: Saiba mais sobre as práticas recomendadas e as ferramentas que você pode usar para gerenciar melhor seus direitos de licença na Adobe Experience Platform.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '2283'
+source-wordcount: '2264'
 ht-degree: 2%
 
 ---
@@ -124,7 +124,7 @@ A Loja de perfis é composta pelos seguintes componentes:
 | Fragmentos de perfil | Cada perfil de cliente é composto de vários **fragmentos de perfil** que foram mescladas para formar uma única visualização desse cliente. Por exemplo, se um cliente interagir com sua marca em vários canais, sua organização terá vários **fragmentos de perfil** relacionados a esse único cliente que aparece em vários conjuntos de dados. Quando esses fragmentos são assimilados na Platform, eles são agrupados usando o gráfico de identidade para criar um único perfil para esse cliente. **Fragmentos de perfil** consistir num namespace de identidade como identificador, com dados de registro e/ou dados de séries cronológicas associados. |
 | Registrar dados (Atributos) | Um perfil é uma representação de um sujeito, uma organização ou um indivíduo, composto por muitos **Atributos** (também conhecido como **dados de registro**). Por exemplo, o perfil de um produto pode incluir uma SKU e uma descrição, enquanto o perfil de uma pessoa contém informações como nome, sobrenome e endereço de email. **Registrar dados** é geralmente baixo/moderado em volume, mas valioso por longos períodos de tempo. |
 | Dados de série temporal (Comportamento) | **Dados de série temporal** fornece informações sobre um comportamento do usuário. Representado pela classe de esquema padrão Experience Data Model (XDM) [!DNL ExperienceEvent], os dados de série temporal podem descrever eventos como itens adicionados a um carrinho, links clicados e vídeos visualizados. O valor do comportamento pode diminuir com o tempo. |
-| Namespace de identidade (identidades) | À medida que os dados do cliente se unem, eles são mesclados em um único perfil por meio do uso de **namespaces de identidade** e a capacidade de unir essas identidades conforme obtemos mais informações sobre o usuário. Consulte a [visão geral dos namespaces de identidade](../../identity-service/namespaces.md) para obter mais informações. |
+| Namespace de identidade (identidades) | À medida que os dados do cliente se unem, eles são mesclados em um único perfil por meio do uso de **namespaces de identidade** e a capacidade de unir essas identidades conforme obtemos mais informações sobre o usuário. Consulte a [visão geral dos namespaces de identidade](../../identity-service/features/namespaces.md) para obter mais informações. |
 
 {style="table-layout:auto"}
 

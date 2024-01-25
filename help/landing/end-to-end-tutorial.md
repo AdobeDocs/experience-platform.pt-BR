@@ -3,10 +3,10 @@ keywords: Experience Platform;página inicial;tópicos populares;CJA;análise de
 title: Exemplo de fluxo de trabalho de ponta a ponta do Adobe Experience Platform
 description: Conheça o fluxo de trabalho básico completo do Adobe Experience Platform em alto nível.
 exl-id: 0a4d3b68-05a5-43ef-bf0d-5738a148aa77
-source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
+source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
 workflow-type: tm+mt
-source-wordcount: '1836'
-ht-degree: 3%
+source-wordcount: '1832'
+ht-degree: 1%
 
 ---
 
@@ -34,7 +34,7 @@ Esse fluxo de trabalho completo usa vários serviços da Adobe Experience Platfo
 
 Antes de assimilar dados na Platform, primeiro você deve criar um esquema XDM para descrever a estrutura desses dados. Ao assimilar seus dados na próxima etapa, você mapeará os dados recebidos para esse esquema. Para saber como criar um exemplo de esquema XDM, leia o tutorial em [criação de um esquema usando o Editor de esquemas](../xdm/tutorials/create-schema-ui.md).
 
-O tutorial acima mostra como definir campos de identidade para seus esquemas. Um campo de identidade representa um campo que pode ser usado para identificar uma pessoa individual relacionada a um registro ou evento de série temporal. Os campos de identidade são um componente essencial em como os gráficos de identidade do cliente são construídos na Platform, o que afeta como o Perfil do cliente em tempo real mescla fragmentos de dados diferentes para obter uma visão completa do cliente. Para obter mais detalhes sobre como visualizar gráficos de identidade na Platform, consulte o tutorial em [como usar o visualizador de gráficos de identidade](../identity-service/ui/identity-graph-viewer.md).
+O tutorial acima mostra como definir campos de identidade para seus esquemas. Um campo de identidade representa um campo que pode ser usado para identificar uma pessoa individual relacionada a um registro ou evento de série temporal. Os campos de identidade são um componente essencial em como os gráficos de identidade do cliente são construídos na Platform, o que afeta como o Perfil do cliente em tempo real mescla fragmentos de dados diferentes para obter uma visão completa do cliente. Para obter mais detalhes sobre como visualizar gráficos de identidade na Platform, consulte o tutorial em [como usar o visualizador de gráficos de identidade](../identity-service/features/identity-graph-viewer.md).
 
 Você precisa ativar seu esquema para usar no Perfil do cliente em tempo real para que os perfis do cliente possam ser construídos a partir dos dados baseados no seu esquema. Consulte a seção sobre [ativar um esquema para Perfil](../xdm/ui/resources/schemas.md#profile) no guia da interface de schemas para obter mais informações.
 

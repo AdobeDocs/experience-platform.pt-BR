@@ -3,7 +3,7 @@ keywords: publicidade; a trade desk; advertising trade desk
 title: A conexão com a Trade Desk
 description: A Trade Desk é uma plataforma de autoatendimento para compradores de anúncios para executar campanhas digitais direcionadas por público e redirecionamento em fontes de inventário para exibição, vídeo e dispositivos móveis.
 exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '742'
 ht-degree: 3%
@@ -26,7 +26,7 @@ Como profissional de marketing, quero poder usar públicos-alvo criados com o [!
 
 ## Identidades suportadas {#supported-identities}
 
-[!DNL The Trade Desk] O oferece suporte à ativação de públicos com base nas identidades mostradas na tabela abaixo. Saiba mais sobre [identidades](/help/identity-service/namespaces.md).
+[!DNL The Trade Desk] O oferece suporte à ativação de públicos com base nas identidades mostradas na tabela abaixo. Saiba mais sobre [identidades](/help/identity-service/features/namespaces.md).
 
 | Identidade | Descrição |
 |---|---|

@@ -3,7 +3,7 @@ keywords: destino do crm;CRM;destinos do crm;crm do salesforce;destino do salesf
 title: Conexão com o Salesforce CRM
 description: O destino do Salesforce CRM permite exportar seus dados de conta e ativá-los no Salesforce CRM para suas necessidades comerciais.
 exl-id: bd9cb656-d742-4a18-97a2-546d4056d093
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '2821'
 ht-degree: 1%
@@ -123,7 +123,7 @@ Se o seu [!DNL Salesforce] administrador da conta impôs restrições de IP, ser
 
 ## Identidades suportadas {#supported-identities}
 
-[!DNL Salesforce CRM] O oferece suporte à atualização de identidades descritas na tabela abaixo. Saiba mais sobre [identidades](/help/identity-service/namespaces.md).
+[!DNL Salesforce CRM] O oferece suporte à atualização de identidades descritas na tabela abaixo. Saiba mais sobre [identidades](/help/identity-service/features/namespaces.md).
 
 | Identidade de destino | Descrição | Considerações |
 |---|---|---|

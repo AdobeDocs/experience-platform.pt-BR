@@ -2,7 +2,7 @@
 title: Classe de perfil de cliente potencial individual XDM
 description: Saiba mais sobre a classe Perfil de cliente potencial individual XDM no Experience Data Model (XDM).
 exl-id: 10fd9d16-4123-4ad4-971f-b715231ee6a9
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '356'
 ht-degree: 3%
@@ -23,7 +23,7 @@ No Experience Data Model (XDM), a variável [!UICONTROL Perfil de cliente potenc
 | `_id` | [!UICONTROL String] | Um identificador de sequência de caracteres exclusivo gerado pelo sistema para o registro. Este campo é usado para rastrear a exclusividade de um registro individual, impedir a duplicação de dados e pesquisar esse registro nos serviços downstream.<br><br>Como esse campo é gerado pelo sistema, ele não fornece um valor explícito durante a assimilação de dados. No entanto, você pode optar por fornecer seus próprios valores de ID exclusivos, se desejar. |
 | `createdByBatchID` | [!UICONTROL String] | A ID do lote assimilado que causou a criação do registro. |
 | `modifiedByBatchID` | [!UICONTROL String] | A ID do último lote assimilado que causou a atualização do registro. |
-| `partnerID` | [!UICONTROL String] | Normalmente, um identificador exclusivo de pseudônimo que identifica um prospecto individual. Consulte a documentação em [tipos de identidade](../../identity-service/namespaces.md#identity-type) para saber mais sobre a ID do parceiro e outros tipos de identidade disponíveis no Adobe Experience Platform. |
+| `partnerID` | [!UICONTROL String] | Normalmente, um identificador exclusivo de pseudônimo que identifica um prospecto individual. Consulte a documentação em [tipos de identidade](../../identity-service/features/namespaces.md#identity-type) para saber mais sobre a ID do parceiro e outros tipos de identidade disponíveis no Adobe Experience Platform. |
 | `repositoryCreatedBy` | [!UICONTROL String] | A ID do usuário que criou o registro. |
 | `repositoryLastModifiedBy` | [!UICONTROL String] | A ID do usuário que modificou o registro pela última vez. Quando o registro é criado, a variável `modifiedByUser` é definido como o `createdByUser` valor. |
 

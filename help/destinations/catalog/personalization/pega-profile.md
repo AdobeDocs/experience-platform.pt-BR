@@ -3,7 +3,7 @@ title: Conector do perfil Pega
 description: Use o Conector de perfil Pega para Amazon S3 no Adobe Experience Platform para exportar dados de perfil completos ou incrementais, ou ambos, para o armazenamento em nuvem do Amazon S3. No Pega Customer Decision Hub, os trabalhos de dados podem ser agendados no Customer Profile Designer para importar dados do perfil periodicamente do armazenamento do Amazon S3.
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: f422f21b-174a-4b93-b05d-084b42623314
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1115'
 ht-degree: 3%
@@ -45,7 +45,7 @@ Antes de usar esse destino para exportar dados do Adobe Experience Platform e im
 
 ## Identidades suportadas {#supported-identities}
 
-[!DNL Pega Customer Decision Hub] O é compatível com a ativação de IDs de usuário personalizadas descritas na tabela abaixo. Para obter mais detalhes, consulte [identidades](/help/identity-service/namespaces.md).
+[!DNL Pega Customer Decision Hub] O é compatível com a ativação de IDs de usuário personalizadas descritas na tabela abaixo. Para obter mais detalhes, consulte [identidades](/help/identity-service/features/namespaces.md).
 
 | Identidade de destino | Descrição |
 |---|---|

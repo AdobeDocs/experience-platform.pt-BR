@@ -5,9 +5,9 @@ hide: true
 hidefromtoc: true
 badge: Alfa
 exl-id: bccd5b7a-3836-47d8-b976-51747b9c1803
-source-git-commit: 20b8433cee719329bce562069c328adb906697a0
+source-git-commit: 3fe94be9f50d64fc893b16555ab9373604b62e59
 workflow-type: tm+mt
-source-wordcount: '436'
+source-wordcount: '437'
 ht-degree: 1%
 
 ---
@@ -70,5 +70,5 @@ Para obter mais informações sobre regras de vinculação de gráficos de ident
 
 * [Visão geral das regras de vinculação do gráfico de identidade](./overview.md)
 * [Algoritmo de otimização de identidade](./identity-optimization-algorithm.md)
-* [Serviço de identidade e perfil do cliente em tempo real](identity-and-profile.md)
-* [Lógica de vinculação de identidade](./identity-linking-logic.md)
+* [Serviço de identidade e perfil do cliente em tempo real](../identity-and-profile.md)
+* [Lógica de vinculação de identidade](../features/identity-linking-logic.md)

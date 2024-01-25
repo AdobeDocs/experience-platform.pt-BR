@@ -2,9 +2,9 @@
 title: Excluir Registros
 description: Saiba como excluir registros na interface do Adobe Experience Platform.
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-source-git-commit: 6e97b3a6b3830cf88802a8dd89944b6ce8791f02
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '1553'
+source-wordcount: '1557'
 ht-degree: 4%
 
 ---
@@ -27,7 +27,7 @@ A exclusão de registros requer um entendimento prático de como os campos de id
 Consulte a seguinte documentação para obter mais informações sobre identidades na Platform:
 
 * [Serviço de identidade da Adobe Experience Platform](../../identity-service/home.md): une as identidades em dispositivos e sistemas, vinculando conjuntos de dados com base nos campos de identidade definidos pelos esquemas XDM aos quais estão em conformidade.
-* [Namespaces de identidade](../../identity-service/namespaces.md): os namespaces de identidade definem os diferentes tipos of informações de identidade que podem estar relacionadas a uma única pessoa e são um componente obrigatório para cada campo de identidade.
+* [Namespaces de identidade](../../identity-service/features/namespaces.md): os namespaces de identidade definem os diferentes tipos of informações de identidade que podem estar relacionadas a uma única pessoa e são um componente obrigatório para cada campo de identidade.
 * [Perfil do cliente em tempo real](../../profile/home.md): usa gráficos de identidade para fornecer perfis de consumidor unificados com base em dados agregados de várias fontes, atualizados em tempo quase real.
 * [Experience Data Model (XDM)](../../xdm/home.md): fornece definições e estruturas padrão para dados da Platform por meio do uso de esquemas. Todos os conjuntos de dados da Platform estão em conformidade com um esquema XDM específico, e o esquema define quais campos são identidades.
 * [Campos de identidade](../../xdm/ui/fields/identity.md): saiba como um campo de identidade é definido em um esquema XDM.

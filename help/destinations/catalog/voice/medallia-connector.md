@@ -2,7 +2,7 @@
 title: Conexão com Medallia
 description: Ative perfis para pesquisas direcionadas do Medallia e coleta de feedback para entender melhor as necessidades e expectativas dos clientes.
 exl-id: 2c2766eb-7be1-418c-bf17-d119d244de92
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1135'
 ht-degree: 2%
@@ -44,7 +44,7 @@ Trabalhe com a equipe de entrega da Medallia para obter esses detalhes.
 
 ## Identidades suportadas {#supported-identities}
 
-O Medallia suporta a ativação de identidades descritas na tabela abaixo. Saiba mais sobre [identidades](/help/identity-service/namespaces.md).
+O Medallia suporta a ativação de identidades descritas na tabela abaixo. Saiba mais sobre [identidades](/help/identity-service/features/namespaces.md).
 
 | Identidade de destino | Descrição | Considerações |
 |---|---|---|

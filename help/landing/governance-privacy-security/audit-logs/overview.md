@@ -2,10 +2,10 @@
 title: Visão geral dos logs de auditoria
 description: Saiba como os logs de auditoria permitem ver quem realizou quais ações na Adobe Experience Platform.
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
 workflow-type: tm+mt
-source-wordcount: '1294'
-ht-degree: 46%
+source-wordcount: '1291'
+ht-degree: 42%
 
 ---
 
@@ -34,7 +34,7 @@ Este documento aborda logs de auditoria na Platform, incluindo como visualizá-l
 
 ## Tipos de evento capturados por logs de auditoria {#category}
 
-A tabela a seguir descreve quais ações, em quais recursos do , são registradas por logs de auditoria:
+A tabela a seguir descreve quais ações em quais recursos são registrados por logs de auditoria:
 
 | Recurso | Ações |
 | --- | --- |
@@ -50,16 +50,16 @@ A tabela a seguir descreve quais ações, em quais recursos do , são registrada
 | [Tipos de dados](../../../xdm/schema/composition.md#data-type) | <ul><li>Criar</li><li>Atualização</li><li>Excluir</li></ul> |
 | [Destino](../../../destinations/home.md) | <ul><li>Criar</li><li>Atualização</li><li>Excluir</li><li>Ativar</li><li>Desativar</li><li>Ativar conjunto de dados</li><li>Remoção do conjunto de dados</li><li>Ativar perfil</li><li>Remover perfil</li></ul> |
 | [Grupo de campos](../../../xdm/schema/composition.md#field-group) | <ul><li>Criar</li><li>Atualização</li><li>Excluir</li></ul> |
-| [Gráfico de identidade](../../../identity-service/ui/identity-graph-viewer.md) | <ul><li>Exibir</li></ul> |
-| [Namespace de identidade](../../../identity-service/ui/identity-graph-viewer.md) | <ul><li>Criar</li><li>Atualização</li></ul> |
+| [Gráfico de identidade](../../../identity-service/features/identity-graph-viewer.md) | <ul><li>Exibir</li></ul> |
+| [Namespace de identidade](../../../identity-service/features/namespaces.md) | <ul><li>Criar</li><li>Atualização</li></ul> |
 | [Política de mesclagem](../../../profile/merge-policies/overview.md) | <ul><li>Criar</li><li>Atualização</li><li>Excluir</li></ul> |
-| [Perfil de produto](../../../access-control/home.md) | <ul><li>Criar</li><li>Atualização</li><li>Excluir</li></ul> |
-| [Consulta](../../../query-service/ui/overview.md) | <ul><li>Executar</li></ul> |
+| [Perfil do produto](../../../access-control/home.md) | <ul><li>Criar</li><li>Atualização</li><li>Excluir</li></ul> |
+| [Query](../../../query-service/ui/overview.md) | <ul><li>Executar</li></ul> |
 | [Modelo de consulta](../../../query-service/ui/overview.md) | <ul><li>Criar</li><li>Atualização</li><li>Excluir</li></ul> |
 | [Função (controle de acesso baseado em atributo)](../../../access-control/home.md) | <ul><li>Criar</li><li>Atualização</li><li>Excluir</li><li>Adicionar usuário</li><li>Remover usuário</li></ul> |
 | [Sandbox](../../../sandboxes/home.md) | <ul><li>Criar</li><li>Atualização</li><li>Redefinir</li><li>Excluir</li></ul> |
 | [Consulta agendada](../../../query-service/ui/overview.md) | <ul><li>Criar</li><li>Atualização</li><li>Excluir</li></ul> |
-| [Esquema](../../../xdm/schema/composition.md) | <ul><li>Criar</li><li>Atualização</li><li>Excluir</li><li>Ative para o Perfil</li></ul> |
+| [Esquema](../../../xdm/schema/composition.md) | <ul><li>Criar</li><li>Atualização</li><li>Excluir</li><li>Ativar para perfil</li></ul> |
 | [Segmento](../../../segmentation/home.md) | <ul><li>Criar</li><li>Excluir</li><li>Ativação de segmento</li><li>Remoção de segmento</li></ul> |
 | [Fluxo de dados de origem](../../../sources/connectors/tutorials/ui/../../../tutorials/ui/update.md) | <ul><li>Criar</li><li>Atualização</li><li>Excluir</li><li>Ativar</li><li>Desativar</li><li>Ativação do conjunto de dados</li><li>Remoção do conjunto de dados</li><li>Ativar perfil</li><li>Remover perfil</li></ul> |
 | [Ordem de serviço](../../../hygiene/home.md) | <ul><li>Criar</li></ul> |
@@ -136,7 +136,7 @@ Na caixa de diálogo exibida, selecione o formato preferido ( **[!UICONTROL CSV]
 
 ## Gerenciamento de logs de auditoria na API
 
-Todas as ações que você pode executar na interface do usuário também podem ser realizadas usando chamadas de API. Consulte a [documentação de referência da API do ](https://www.adobe.io/experience-platform-apis/references/audit-query/) para obter mais informações.
+Todas as ações que você pode executar na interface do usuário também podem ser realizadas usando chamadas de API. Consulte a [Documento de referência da API](https://www.adobe.io/experience-platform-apis/references/audit-query/) para obter mais informações.
 
 ## Gerenciamento de logs de auditoria para o Adobe Admin Console
 

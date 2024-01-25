@@ -4,10 +4,10 @@ feature: Attribution AI
 title: Guia da interface do Attribution AI
 description: Este documento serve como um guia para interagir com o Attribution AI na interface do usuário dos Serviços inteligentes.
 exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '2442'
-ht-degree: 1%
+source-wordcount: '2450'
+ht-degree: 0%
 
 ---
 
@@ -103,7 +103,7 @@ Caso haja mais de uma identidade disponível em um namespace, selecione o campo 
 
 >[!NOTE]
 >
-> Se não existir um tipo de identidade (namespace) válido para um conjunto de dados, você deverá definir uma identidade primária e atribuí-la a um namespace de identidade usando o [editor de esquema](../../xdm/schema/composition.md#identity). Para saber mais sobre namespaces e identidades, visite o [Namespaces do serviço de identidade](../../identity-service/namespaces.md) documentação.
+> Se não existir um tipo de identidade (namespace) válido para um conjunto de dados, você deverá definir uma identidade primária e atribuí-la a um namespace de identidade usando o [editor de esquema](../../xdm/schema/composition.md#identity). Para saber mais sobre namespaces e identidades, visite o [Namespaces do serviço de identidade](../../identity-service/features/namespaces.md) documentação.
 
 ## Mapeamento de canais de mídia e campos de campanha {#aai-mapping}
 

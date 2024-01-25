@@ -4,7 +4,7 @@ title: Identidades no Real-time Customer Data Platform
 description: O Serviço de identidade da Adobe Experience Platform ajuda você a ter uma melhor visão dos clientes e do comportamento deles ao unir as identidades de vários dispositivos e sistemas.
 feature: Get Started, Identities
 exl-id: 2b0d84de-9710-412e-ace7-56e3977245aa
-source-git-commit: 1d2c67a2015f57238bdbb0e14c676601e092ef5f
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '422'
 ht-degree: 0%
@@ -19,7 +19,7 @@ Agora, em vez de cinco clientes separados interagirem com sua marca em cinco can
 
 ## Namespaces de identidade
 
-Os namespaces de identidade são um componente de [!DNL Identity Service] e servem como indicadores que fornecem contexto adicional para as identidades dos clientes. Um exemplo de namespace de ID usado com frequência seria &quot;Email&quot;, em que o uso do mesmo endereço de email em vários sites permite unir várias identidades diferentes, cada uma com uma ID de cliente exclusiva, como realmente pertencente ao mesmo cliente. [!DNL Experience Platform] O permite usar namespaces de ID para procurar perfis individuais na interface. Para obter mais informações sobre visualização de perfis, consulte a [visão geral de navegação de perfil](profile-browse.md). Para saber mais sobre namespaces de identidade, consulte a [visão geral do namespace de identidade](../../identity-service/namespaces.md).
+Os namespaces de identidade são um componente de [!DNL Identity Service] e servem como indicadores que fornecem contexto adicional para as identidades dos clientes. Um exemplo de namespace de ID usado com frequência seria &quot;Email&quot;, em que o uso do mesmo endereço de email em vários sites permite unir várias identidades diferentes, cada uma com uma ID de cliente exclusiva, como realmente pertencente ao mesmo cliente. [!DNL Experience Platform] O permite usar namespaces de ID para procurar perfis individuais na interface. Para obter mais informações sobre visualização de perfis, consulte a [visão geral de navegação de perfil](profile-browse.md). Para saber mais sobre namespaces de identidade, consulte a [visão geral do namespace de identidade](../../identity-service/features/namespaces.md).
 
 ## Gráficos de identidade
 

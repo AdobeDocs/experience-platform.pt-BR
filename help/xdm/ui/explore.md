@@ -5,7 +5,7 @@ title: Explorar recursos do esquema na interface do
 description: Saiba como explorar esquemas, classes, grupos de campos de esquema e tipos de dados existentes na interface do usuário do Experience Platform.
 type: Tutorial
 exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
-source-git-commit: f08aa017b7f971a54197b95023e9331832ecb7f1
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '993'
 ht-degree: 0%
@@ -86,7 +86,7 @@ Se o campo que você está inspecionando for um campo de enumeração, o painel 
 
 Ao inspecionar esquemas que contêm campos de identidade, esses campos são listados no painel à esquerda na classe ou no grupo de campos que os fornece ao esquema. Selecione o nome do campo de identidade no painel à esquerda para revelar o campo na tela, independentemente da profundidade em que ele está aninhado.
 
-Os campos de identidade são realçados na tela com um ícone de impressão digital (![Imagem do ícone de impressão digital](../images/ui/explore/identity-symbol.png)). Se você selecionar o nome do campo de identidade, poderá exibir informações adicionais, como a variável [namespace de identidade](../../identity-service/namespaces.md) e se o campo é ou não a identidade principal do esquema.
+Os campos de identidade são realçados na tela com um ícone de impressão digital (![Imagem do ícone de impressão digital](../images/ui/explore/identity-symbol.png)). Se você selecionar o nome do campo de identidade, poderá exibir informações adicionais, como a variável [namespace de identidade](../../identity-service/features/namespaces.md) e se o campo é ou não a identidade principal do esquema.
 
 ![](../images/ui/explore/identity-field.png)
 

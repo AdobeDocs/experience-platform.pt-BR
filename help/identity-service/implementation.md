@@ -1,9 +1,9 @@
 ---
 title: Guia de implementação do Identity Service
 description: Saiba como os dados fornecidos ao Adobe Experience Platform são processados antes de serem usados pelo Serviço de identidade para criar gráficos de identidade.
-source-git-commit: bdda234c44b63999d7582857975afa64fdb93605
+source-git-commit: f1273c1deac32559e214d1d99d10f6ca25fe4264
 workflow-type: tm+mt
-source-wordcount: '566'
+source-wordcount: '581'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ Dependendo da sua estratégia de coleta de dados da empresa, os campos de dados 
 
 ## Criar namespaces de identidade adicionais
 
-Embora o Experience Platform ofereça uma variedade de namespaces padrão, talvez seja necessário criar namespaces adicionais para categorizar corretamente suas identidades. Para obter mais informações, leia o guia em [criação de namespaces personalizados para sua organização](./namespaces.md).
+Embora o Experience Platform ofereça uma variedade de namespaces padrão, talvez seja necessário criar namespaces adicionais para categorizar corretamente suas identidades. Para obter mais informações, leia o guia em [criação de namespaces personalizados para sua organização](./features/namespaces.md).
 
 >[!NOTE]
 >
@@ -45,6 +45,8 @@ Por exemplo, ao rotular campos de número de telefone como campos de identidade,
 >
 >* Campos de tipo de matriz e mapa não são aceitos e não podem ser marcados e rotulados como campos de identidade.
 >* O namespace das identidades resultantes é fornecido no momento em que o campo é rotulado.
+
+Para obter mais informações, leia o guia no [definição de campos de identidade na interface](../xdm/ui/fields/identity.md).
 
 ## Configurar um conjunto de dados para o Serviço de identidade
 

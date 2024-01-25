@@ -5,9 +5,9 @@ hide: true
 hidefromtoc: true
 badge: Alfa
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: 07771956c22a3fee92bd76ae061b07e1e0f98b49
+source-git-commit: f21b5519440f7ffd272361954c9e32ccca2ec2bc
 workflow-type: tm+mt
-source-wordcount: '1040'
+source-wordcount: '1022'
 ht-degree: 0%
 
 ---
@@ -23,8 +23,6 @@ ht-degree: 0%
 * [Visão geral](./overview.md)
 * [Algoritmo de otimização de identidade](./identity-optimization-algorithm.md)
 * [Exemplos de cenários](./example-scenarios.md)
-* [Serviço de identidade e perfil do cliente em tempo real](identity-and-profile.md)
-* [Lógica de vinculação de identidade](./identity-linking-logic.md)
 
 Com o Serviço de identidade da Adobe Experience Platform e o Perfil do cliente em tempo real, é fácil supor que seus dados são assimilados perfeitamente e que todos os perfis mesclados representam uma única pessoa por meio de um identificador de pessoa, como uma ID de CRM. No entanto, há possíveis cenários em que determinados dados podem tentar mesclar vários perfis diferentes em um único perfil (&quot;colapso de perfil&quot;). Para evitar essas mesclagens indesejadas, é possível usar as configurações fornecidas por meio das regras de vinculação do gráfico de identidade e permitir a personalização precisa para seus usuários.
 
@@ -114,5 +112,3 @@ Para obter mais informações sobre regras de vinculação de gráficos de ident
 
 * [Algoritmo de otimização de identidade](./identity-optimization-algorithm.md)
 * [Exemplos de cenários para configurar regras de vinculação de gráficos de identidade](./example-scenarios.md)
-* [Serviço de identidade e perfil do cliente em tempo real](identity-and-profile.md)
-* [Lógica de vinculação de identidade](./identity-linking-logic.md)

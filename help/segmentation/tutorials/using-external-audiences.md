@@ -5,9 +5,9 @@ description: Siga este tutorial para saber como usar públicos externos com o Ad
 exl-id: 56fc8bd3-3e62-4a09-bb9c-6caf0523f3fe
 hide: true
 hidefromtoc: true
-source-git-commit: c83070d85177c72b2e4c4ae472b89c08c20ee743
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '1722'
+source-wordcount: '1724'
 ht-degree: 0%
 
 ---
@@ -46,7 +46,7 @@ As definições de segmento incluem informações como nome, descrição, expres
 
 A primeira etapa para usar públicos-alvo externos é criar um namespace de identidade. Os namespaces de identidade permitem que a Platform associe de onde um público-alvo se origina.
 
-Para criar um namespace de identidade, siga as instruções na [guia de namespace de identidade](../../identity-service/namespaces.md#manage-namespaces). Ao criar o namespace de identidade, adicione os detalhes de origem ao namespace de identidade e marque sua [!UICONTROL Tipo] as a **[!UICONTROL Identificador não pessoal]**.
+Para criar um namespace de identidade, siga as instruções na [guia de namespace de identidade](../../identity-service/features/namespaces.md#manage-namespaces). Ao criar o namespace de identidade, adicione os detalhes de origem ao namespace de identidade e marque sua [!UICONTROL Tipo] as a **[!UICONTROL Identificador não pessoal]**.
 
 ![O identificador não pessoal é realçado no modal Criar namespace de identidade.](../images/tutorials/external-audiences/identity-namespace-info.png)
 

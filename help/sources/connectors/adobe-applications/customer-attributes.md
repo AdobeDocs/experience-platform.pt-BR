@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Visão geral do conector de origem de atributos do cliente
 description: Saiba como conectar atributos do cliente à Adobe Experience Platform usando APIs ou a interface do usuário
 exl-id: 63765ecd-ddb5-4992-a3de-d53f054bfb28
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '405'
-ht-degree: 10%
+source-wordcount: '381'
+ht-degree: 7%
 
 ---
 
@@ -25,7 +25,7 @@ A variável [!DNL Customer Attributes] A origem cria automaticamente o conjunto 
 
 ## Identidades
 
-A identidade principal de um conjunto de dados está contida na primeira coluna do arquivo CSV dos dados de origem. A variável [!DNL Customer Attributes] A origem presume que a identidade é sempre mapeada para o [`CORE` namespace](../../../identity-service/namespaces.md), um namespace gerado pelo sistema que é suportado pela [[!DNL Identity Service]](../../../identity-service/home.md).
+A identidade principal de um conjunto de dados está contida na primeira coluna do arquivo CSV dos dados de origem. A variável [!DNL Customer Attributes] A origem presume que a identidade é sempre mapeada para o [`CORE` namespace](../../../identity-service/features/namespaces.md), um namespace gerado pelo sistema que é suportado pela [[!DNL Identity Service]](../../../identity-service/home.md).
 
 Não é possível selecionar um namespace existente para a identidade ao usar [!DNL Customer Attributes] origem porque [!DNL Customer Attributes] O presume que a identidade primária do esquema está sempre no mapa de identidade. [!DNL Customer Attributes] Em seguida, o cria o mapeamento da ID de origem para a UUID do mapa de identidade de maneira automatizada.
 

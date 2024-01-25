@@ -3,7 +3,7 @@ keywords: conexão facebook;conexão facebook;destinos do facebook;facebook;inst
 title: Conexão com o facebook
 description: Ative perfis para suas campanhas do Facebook para direcionamento de público, personalização e supressão com base em emails com hash.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1952'
 ht-degree: 7%
@@ -38,7 +38,7 @@ Em seguida, eles podem usar seus dados offline, incluindo IDs de associação as
 
 ## Identidades suportadas {#supported-identities}
 
-[!DNL Facebook Custom Audiences] O oferece suporte à ativação das identidades descritas na tabela abaixo. Saiba mais sobre [identidades](/help/identity-service/namespaces.md).
+[!DNL Facebook Custom Audiences] O oferece suporte à ativação das identidades descritas na tabela abaixo. Saiba mais sobre [identidades](/help/identity-service/features/namespaces.md).
 
 | Identidade de destino | Descrição | Considerações |
 |---|---|---|

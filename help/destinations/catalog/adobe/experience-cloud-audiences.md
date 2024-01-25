@@ -3,7 +3,7 @@ title: Públicos-alvo da Experience Cloud
 description: Saiba como compartilhar públicos do Real-time Customer Data Platform com vários aplicativos Experience Cloud.
 last-substantial-update: 2023-09-28T00:00:00Z
 exl-id: 2bdbcda3-2efb-4a4e-9702-4fd9991e9461
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: b82bbdf7957e5a8d331d61f02293efdaf878971c
 workflow-type: tm+mt
 source-wordcount: '1678'
 ht-degree: 2%
@@ -106,11 +106,11 @@ Os metadados, como nomes de público-alvo, estão disponíveis no Audience Manag
 
 ## Identidades suportadas {#supported-identities}
 
-Os perfis exportados para o [!UICONTROL Públicos do Experience Cloud] destino são mapeados de acordo com as identidades descritas na tabela abaixo. Saiba mais sobre [identidades](/help/identity-service/namespaces.md).
+Os perfis exportados para o [!UICONTROL Públicos do Experience Cloud] destino são mapeados de acordo com as identidades descritas na tabela abaixo. Saiba mais sobre [identidades](/help/identity-service/features/namespaces.md).
 
 | Identidade de destino | Descrição | Considerações |
 |---|---|---|
-| ECID | Experience Cloud ID | Um namespace que representa a ECID. Esse namespace também pode ser referenciado pelos seguintes aliases: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Consulte o seguinte documento em [ECID](/help/identity-service/ecid.md) para obter mais informações. |
+| ECID | Experience Cloud ID | Um namespace que representa a ECID. Esse namespace também pode ser referenciado pelos seguintes aliases: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Consulte o seguinte documento em [ECID](/help/identity-service/features/ecid.md) para obter mais informações. |
 | GAID | ID de publicidade do Google | Perfis assimilados na Real-Time CDP com uma identidade principal da Google Advertising ID (GAID) podem ser exportados para esse destino. |
 | IDFA | Apple ID para anunciantes | Os perfis assimilados na Real-Time CDP com uma identidade principal da Apple ID para anunciantes (IDFA) podem ser exportados para esse destino. |
 | email_lc_sha256 | Endereços de email com hash com o algoritmo SHA256 | Os perfis assimilados na Real-Time CDP com uma identidade principal de endereço de email com hash podem ser exportados para esse destino. |

@@ -1,15 +1,15 @@
 ---
-title: Manuseio de identidade no fluxo de trabalho de ativação de destinos
+title: Manuseio de identidade no workflow de ativação de destinos
 description: Saiba como a exportação de identidade é tratada no fluxo de trabalho de ativação, dependendo do tipo de destino
 exl-id: f4894a08-c7a9-4d57-a6d3-660c49206d6a
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
 workflow-type: tm+mt
-source-wordcount: '1180'
-ht-degree: 3%
+source-wordcount: '1163'
+ht-degree: 1%
 
 ---
 
-# Manuseio de identidade no fluxo de trabalho de ativação de destinos
+# Manuseio de identidade no workflow de ativação de destinos
 
 Esta página descreve as particularidades de como as identidades são exportadas para diferentes tipos de destino e ensina como encontrar quais identidades estão disponíveis para exportação, dependendo do destino.
 
@@ -23,7 +23,7 @@ Cada destino no [catálogo](/help/destinations/catalog/overview.md) O é um pouc
 
 Para [destinos baseados em arquivo](/help/destinations/destination-types.md#file-based) (por exemplo [!DNL Amazon S3], SFTP, a maioria dos destinos de marketing por email, como [!DNL Adobe Campaign], [!DNL Oracle Eloqua], [!DNL Salesforce Marketing Cloud]), a configuração de identidade na maioria desses destinos está aberta, o que significa que você não precisa selecionar nenhuma identidade na [Selecionar atributos](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes) etapa do fluxo de trabalho de ativação em lote.
 
-Se você optar por adicionar identidades às exportações de arquivo, observe que apenas uma única identidade da [namespace de identidade](/help/identity-service/ui/identity-graph-viewer.md#access-identity-graph-viewer) podem ser selecionados em uma exportação. Quando você seleciona uma identidade para exportação, ela é automaticamente selecionada como [atributo obrigatório](/help/destinations/ui/activate-batch-profile-destinations.md#mandatory-attributes) e [chave de desduplicação](/help/destinations/ui/activate-batch-profile-destinations.md#deduplication-keys).
+Se você optar por adicionar identidades às exportações de arquivo, observe que apenas uma única identidade da [namespace de identidade](/help/identity-service/features/identity-graph-viewer.md#access-identity-graph-viewer) podem ser selecionados em uma exportação. Quando você seleciona uma identidade para exportação, ela é automaticamente selecionada como [atributo obrigatório](/help/destinations/ui/activate-batch-profile-destinations.md#mandatory-attributes) e [chave de desduplicação](/help/destinations/ui/activate-batch-profile-destinations.md#deduplication-keys).
 
 ![Uma identidade selecionada como atributo obrigatório e chave de desduplicação.](/help/destinations/assets/how-destinations-work/selected-identity.png)
 

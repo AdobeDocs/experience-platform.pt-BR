@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guia da interface do construtor de segmentos
 description: O Construtor de segmentos na interface do usuário do Adobe Experience Platform fornece um espaço de trabalho avançado que permite a interação com elementos de dados de perfil. O espaço de trabalho fornece controles intuitivos para criar e editar regras, como arrastar e soltar blocos usados para representar propriedades de dados.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: b028bf86bb8596c6fc97829d6d27eec498c4ef11
 workflow-type: tm+mt
-source-wordcount: '3352'
-ht-degree: 8%
+source-wordcount: '3426'
+ht-degree: 7%
 
 ---
 
@@ -78,7 +78,7 @@ Por exemplo, considere uma situação em que você tinha dois conjuntos de relat
 | eVar3 | URL | Nome da página |
 | eVar4 | Pesquisar termos | Nome do produto |
 | evento 1 | Cliques | Page Views |
-| evento 2 | Page Views | Adições ao carrinho |
+| event2 | Page Views | Adições ao carrinho |
 | event3 | Adições ao carrinho | Finalizações |
 | event4 | Compras | Compras |
 
@@ -265,7 +265,11 @@ A variável **[!UICONTROL Propriedades do segmento]** é também onde você pode
 
 >[!NOTE]
 >
->As estimativas de público-alvo são geradas usando um tamanho de amostra dos dados de amostra desse dia. Se houver menos de 1 milhão de entidades no armazenamento de perfil, o conjunto de dados completo será usado; para entre 1 e 20 milhões de entidades, será usado 1 milhão de entidades; e para mais de 20 milhões de entidades, será usado 5% do total de entidades. Mais informações sobre como gerar estimativas para definições de segmento podem ser encontradas no [seção geração de estimativa](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) do tutorial de criação de definição de segmento.
+>As estimativas de público-alvo são geradas usando um tamanho de amostra dos dados de amostra desse dia. Se houver menos de 1 milhão de entidades no armazenamento de perfil, o conjunto de dados completo será usado; para entre 1 e 20 milhões de entidades, será usado 1 milhão de entidades; e para mais de 20 milhões de entidades, será usado 5% do total de entidades.
+>
+>Além disso, essa estimativa se baseia em quando o último trabalho de amostra de perfil foi executado. Isso significa que se estiver usando uma função de data relativa, como &quot;Hoje&quot; ou &quot;Esta semana&quot;, a estimativa baseará seus cálculos no último tempo de execução do trabalho de amostra do perfil. Por exemplo, se hoje for 24 de janeiro e o último trabalho de amostra de perfil for executado em 22 de janeiro, a função de data relativa &quot;Ontem&quot; será baseada em 21 de janeiro, e não 23 de janeiro.
+>
+>Mais informações sobre como gerar estimativas para definições de segmento podem ser encontradas no [seção geração de estimativa](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) do tutorial de criação de definição de segmento.
 
 Você também pode selecionar seu método de avaliação. Se você souber qual método de avaliação deseja usar, poderá selecionar o método de avaliação desejado usando a lista suspensa. Se quiser saber para quais tipos de avaliação essa definição de segmento se qualifica, é possível selecionar o ícone procurar ![ícone de pasta com uma lupa](../images/ui/segment-builder/segment-evaluation-select-icon.png) para ver uma lista dos métodos de avaliação de definição de segmento disponíveis.
 

@@ -4,10 +4,10 @@ title: Criar, compartilhar e reutilizar instâncias do manual de estratégia
 description: Saiba como criar, compartilhar e reutilizar instâncias do manual de estratégia para concluir seu caso de uso de marketing.
 badgeBeta: label="Beta" type="Informative"
 exl-id: b06d8186-c41f-4150-bac4-69c616151ef9
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: f477cb4d410058b8bf2692a7afde70bf23a5aac7
 workflow-type: tm+mt
-source-wordcount: '725'
-ht-degree: 100%
+source-wordcount: '745'
+ht-degree: 97%
 
 ---
 
@@ -20,6 +20,11 @@ ht-degree: 100%
 Para usar um manual de estratégia, navegue até **[!UICONTROL Manuais de estratégia de caso de uso] > [!UICONTROL Manuais de estratégia]**. Explore e use as várias opções de pesquisa e filtragem na página para selecionar e começar a usar um manual de estratégia específico.
 
 ## Criar uma instância do manual de estratégia {#create-playbook-instance}
+
+>[!CONTEXTUALHELP]
+>id="platform_playbooks_create"
+>title="Criar instância"
+>abstract="Gere uma lista de ativos como jornadas, públicos, esquemas ou destinos para usar em cenários de jornada ou ativação."
 
 Antes de criar uma instância do manual de estratégia, explore os manuais disponíveis para [encontrar o manual de estratégia correto para você](/help/use-case-playbooks/playbooks/discover.md). Quando estiver pronto para criar uma instância, selecione **[!UICONTROL Criar instância]** para continuar com o manual de estratégia e gerar ativos técnicos.
 

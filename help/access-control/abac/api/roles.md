@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Endpoint da API de Funções
 description: O ponto de extremidade /roles na API de controle de acesso baseado em atributos permite gerenciar programaticamente funções no Adobe Experience Platform.
 exl-id: 049f7a18-7d06-437b-8ce9-25d7090ba782
-source-git-commit: 4b48fa5e9a1e9933cd33bf45b73ff6b0d831f06f
+source-git-commit: 01574f37593c707f092a8b4aa03d3d67e8c20780
 workflow-type: tm+mt
-source-wordcount: '1666'
+source-wordcount: '1665'
 ht-degree: 6%
 
 ---
@@ -440,13 +440,13 @@ curl -X PUT \
 
 **Resposta**
 
-Um bem-sucedido retorna sua função atualizada, incluindo novos valores para seu nome, descrição e tipo de função.
+Uma resposta bem-sucedida retorna a função atualizada, incluindo novos valores para o nome, a descrição e o tipo de função.
 
 ```json
 {
   "id": "3dfa045d-de58-4dfd-8ea9-e4e2c1b6d809",
-  "name": "Administrator Role",
-  "description": "Role with permission sets for admin type of access",
+  "name": "Administrator role for ACME",
+  "description": "New administrator role for ACME",
   "roleType": "user-defined",
   "permissionSets": [
     "manage-datasets",
@@ -486,7 +486,7 @@ Para atualizar os assuntos associados a uma função, faça uma solicitação PA
 **Formato da API**
 
 ```http
-PATCH /roles/{ROLE_ID}
+PATCH /roles/{ROLE_ID}/subjects
 ```
 
 | Parâmetro | Descrição |
@@ -520,7 +520,34 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/acces
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o status HTTP 204 (Sem conteúdo) e um corpo em branco.
+Uma resposta bem-sucedida retorna sua função atualizada, incluindo novos valores para os assuntos.
+
+```json
+{
+  "subjects": [
+    [
+      {
+        "subjectId": "03Z07HFQCCUF3TUHAX274206@AdobeID",
+        "subjectType": "user"
+      }
+    ]
+  ],
+  "_page": {
+    "limit": 1,
+    "count": 1
+  },
+  "_links": {
+    "self": {
+      "href": "https://platform.adobe.io:443/data/foundation/access-control/administration/roles/{ROLE_ID}/subjects",
+      "templated": true
+    },
+    "page": {
+      "href": "https://platform.adobe.io:443/data/foundation/access-control/administration/roles/{ROLE_ID}/subjects?limit={limit}&start={start}&orderBy={orderBy}&property={property}",
+      "templated": true
+    }
+  }
+}
+```
 
 ## Excluir uma função {#delete}
 

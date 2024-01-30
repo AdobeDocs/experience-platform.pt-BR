@@ -2,20 +2,15 @@
 solution: Experience Platform
 title: Encontrar o manual de estratégia correto
 description: Saiba como encontrar o manual de estratégia correto para o seu caso de uso de habilitar manuais.
-badgeBeta: label="Beta" type="Informative"
 exl-id: 3dae6ad6-adb3-4606-ad63-c0d4ef6beeba
-source-git-commit: f477cb4d410058b8bf2692a7afde70bf23a5aac7
+source-git-commit: 0decef848fe90e5c60352aeb42aabdd678eeb8f8
 workflow-type: tm+mt
-source-wordcount: '776'
+source-wordcount: '752'
 ht-degree: 91%
 
 ---
 
-# (Beta) Encontrar o manual de estratégia correto
-
->[!AVAILABILITY]
->
->No momento, essa funcionalidade está na versão beta e não está disponível para todas as pessoas. A documentação e a funcionalidade estão sujeitas a alterações.
+# Encontrar o manual de estratégia correto
 
 Para usar um manual de estratégia, navegue até **[!UICONTROL Manuais de estratégia de caso de uso] > [!UICONTROL Manuais de estratégia]**. Explore e use as várias opções de pesquisa e filtragem na página para selecionar e começar a usar um manual de estratégia específico.
 
@@ -48,7 +43,6 @@ Use a seção de mapa mental de um manual de estratégia para entender as etapas
 O mapa mental começa com uma definição de quem se atinge com a jornada do usuário e descreve, em cada etapa, se algo é entregue pela Adobe, como uma nova mensagem ou um lembrete, ou se alguma ação tomada pela personalidade direcionada aciona a próxima mensagem ou evento.
 
 ![Mapa mental do manual de estratégia realçado.](/help/use-case-playbooks/assets/playbooks/ui-guide/playbook-mindmap.png)
-
 
 ### Resumo {#summary}
 

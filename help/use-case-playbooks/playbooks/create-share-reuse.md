@@ -2,20 +2,15 @@
 solution: Experience Platform
 title: Criar, compartilhar e reutilizar instâncias do manual de estratégia
 description: Saiba como criar, compartilhar e reutilizar instâncias do manual de estratégia para concluir seu caso de uso de marketing.
-badgeBeta: label="Beta" type="Informative"
 exl-id: b06d8186-c41f-4150-bac4-69c616151ef9
-source-git-commit: f477cb4d410058b8bf2692a7afde70bf23a5aac7
+source-git-commit: bf6bcbe3314e87cd3162afe23068cfff12aa78a8
 workflow-type: tm+mt
-source-wordcount: '745'
-ht-degree: 97%
+source-wordcount: '740'
+ht-degree: 86%
 
 ---
 
-# (Beta) Criar, compartilhar e reutilizar instâncias do manual de estratégia
-
->[!AVAILABILITY]
->
->No momento, essa funcionalidade está na versão beta e não está disponível para todas as pessoas. A documentação e a funcionalidade estão sujeitas a alterações.
+# Criar, compartilhar e reutilizar instâncias do manual de estratégia
 
 Para usar um manual de estratégia, navegue até **[!UICONTROL Manuais de estratégia de caso de uso] > [!UICONTROL Manuais de estratégia]**. Explore e use as várias opções de pesquisa e filtragem na página para selecionar e começar a usar um manual de estratégia específico.
 
@@ -48,7 +43,7 @@ Depois de criar uma instância com base em um manual de estratégia, é possíve
 
 É importante entender que os ativos gerados diferem com base no caso de uso sendo habilitado:
 
-* Ativos diferentes são gerados para diferentes tipos de manuais de estratégia. Esses ativos são criados especificamente para o caso de uso atingido através do manual de estratégia. Por exemplo, um manual de estratégia gera um esquema, um segmento, uma jornada e mensagens. Outro manual de estratégia gera um esquema, um segmento e um destino para ativar os dados.
+* Ativos diferentes são gerados para diferentes tipos de manuais de estratégia. Esses ativos são criados especificamente para o caso de uso atingido através do manual de estratégia. Por exemplo, um manual gera um esquema, um público-alvo, uma jornada e mensagens. Outro manual gera um esquema, um público-alvo e um destino para ativar os dados.
 * Os ativos em si diferem entre os manuais de estratégia. Por exemplo, para o manual de estratégia **[!UICONTROL Enviar uma mensagem de aniversário aos convidados]**, o público-alvo que será criado terá a regra `birthday=today AND year=any`.
 
 Para ilustrar um exemplo, para o manual de estratégia **[!UICONTROL Carrinho abandonado: mercadorias]**, você pode ver que uma jornada específica será criada e incluirá as mensagens criadas para esse caso de uso.
@@ -67,7 +62,7 @@ O comportamento descrito acima se aplica para todos os ativos criados, exceto pa
 >
 >Teste na sandbox de desenvolvimento e vá para a produção quando estiver pronto.
 >
->Depois que os objetos forem gerados, será possível continuar os testes nas sandboxes de desenvolvimento adicionando dados. Você pode testar os ativos conforme desejar na sandbox de desenvolvimento e pode replicar a lógica do ativo (definições de segmento, jornadas, esquemas e assim por diante) na sandbox de produção quando estiver pronto.
+>Depois que os objetos forem gerados, será possível continuar os testes nas sandboxes de desenvolvimento adicionando dados. Você pode testar os ativos conforme desejar na sandbox de desenvolvimento e pode replicar a lógica do ativo (definições de público-alvo, jornadas, esquemas e assim por diante) na sandbox de produção quando estiver pronto. Você pode mover para a sandbox de desenvolvimento e, em seguida, para a sandbox de produção usando o [funcionalidade de reconhecimento de dados](/help/use-case-playbooks/playbooks/data-awareness.md).
 
 ## Reutilizar manuais de estratégia {#reuse-playbooks}
 

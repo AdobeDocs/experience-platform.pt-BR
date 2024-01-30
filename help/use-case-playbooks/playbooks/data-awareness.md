@@ -2,18 +2,19 @@
 solution: Experience Platform
 title: Visão geral do reconhecimento de dados nos manuais de caso de uso
 description: Saiba como acelerar o tempo de implantação copiando os ativos gerados na sandbox inspiradora final para outras sandboxes.
-badgeBeta: label="Beta" type="Informative"
-source-git-commit: cbf5f2aaf9bb8113ad5eadac888e9b4f85b199b8
+exl-id: 537eff13-f5fe-4cc9-9769-ab47b3cecda7
+source-git-commit: d6be5d3e21ea924ff98c400b972709b1f60c25eb
 workflow-type: tm+mt
-source-wordcount: '843'
+source-wordcount: '921'
 ht-degree: 0%
 
 ---
 
-
 # Visão geral do reconhecimento de dados nos manuais de caso de uso
 
-Os manuais de casos de uso são modelos de marketing projetados para gerar ativos, como públicos, esquemas ou jornadas, para casos de uso de marketing comum. No Adobe Experience Platform, esses modelos fazem referência a vários campos padrão e grupos de campos. No entanto, em certos casos, você já pode ter configurado seus próprios esquemas, campos e grupos de campos. Isso pode tornar alguns dos ativos gerados pelos modelos de caso de uso, como jornadas, incompatíveis com seus dados. Para entender como usar a funcionalidade de reconhecimento de dados para alinhar e complementar melhor os ativos gerados com seus ativos existentes, leia este tutorial.
+Os manuais de casos de uso são modelos de marketing criados para gerar ativos, como públicos, esquemas ou jornadas, para casos de uso de marketing comum. Você pode testar os ativos criados por manuais na sandbox inspiradora e, quando estiver pronto, poderá importar os ativos para outras sandboxes de desenvolvimento para testes adicionais com os dados disponíveis nessas sandboxes. Quando estiver satisfeito com o teste, você poderá mover os ativos das sandboxes de desenvolvimento para as sandboxes de produção.
+
+No entanto, em certos casos, você já pode ter configurado seus próprios esquemas, campos e grupos de campos em outras sandboxes de desenvolvimento. Isso pode tornar alguns dos ativos gerados pelos modelos de caso de uso, como jornadas, incompatíveis com seus dados. Para entender como usar a funcionalidade de reconhecimento de dados para alinhar e complementar melhor os ativos gerados com seus ativos existentes, leia este tutorial.
 
 ## Pré-requisitos {#prerequisites}
 
@@ -22,6 +23,10 @@ Antes de ler este tutorial, navegue pelo [modelos de manual de caso de uso dispo
 A criação de uma instância gera um conjunto de ativos, como jornadas, segmentos, esquemas e mensagens na sandbox inspiradora. Leia para saber como copiar esses ativos em outras sandboxes.
 
 ### Criar e publicar um pacote {#create-publish-package}
+
+>[!NOTE]
+>
+> Você pode importar pacotes somente para outras sandboxes de desenvolvimento. Depois de fazer todas as alterações ou atualizações necessárias, você pode importar os ativos ou pacotes dessas sandboxes de desenvolvimento para a produção. Não é possível importar diretamente das sandboxes de manuais de caso de uso para a produção.
 
 1. Para importar objetos da sandbox inspiradora para outra sandbox, navegue até uma instância desejada de um manual de casos de uso e selecione **[!UICONTROL Publicar em uma sandbox diferente]** para exportar os artefatos como um pacote.
 
@@ -48,10 +53,6 @@ A criação de uma instância gera um conjunto de ativos, como jornadas, segment
 5. Selecione o **+** controlar e iniciar o fluxo de trabalho para importar os ativos gerados pelo manual do caso de uso para a **[!UICONTROL Sandbox do Target]**. Selecione uma sandbox de destino e confirme o nome do pacote que deseja importar usando a lista suspensa. Adicione os detalhes do job, como nome e descrição do job, antes de prosseguir para a próxima etapa.
 
    ![Inicie o fluxo de trabalho de importação, selecione target, confirme o pacote e adicione detalhes do trabalho.](/help/use-case-playbooks/assets/playbooks/data-awareness/import-package-import-settings.png)
-
-   >[!NOTE]
-   >
-   > Você pode importar pacotes somente para outras sandboxes de desenvolvimento. A sandbox de produção está desativada para essas importações.
 
 6. No **[!UICONTROL Exibir dependências]** etapa, você pode mapear esquemas e copiar outros ativos da sandbox inspiradora para a sandbox de destino. A variável **[!UICONTROL Concluir]** estará desativado até que você mapeie cada schema.
 
@@ -96,3 +97,7 @@ A criação de uma instância gera um conjunto de ativos, como jornadas, segment
 ## Próximas etapas
 
 Depois de ler este guia, agora você tem uma melhor compreensão de como aproveitar os manuais de casos de uso juntamente com o [ferramentas de sandbox](/help/sandboxes/ui/sandbox-tooling.md#monitor-import-jobs-and-view-import-objects-details) para criar jornadas executáveis que façam referência aos seus esquemas. Saiba mais sobre o comum [Casos de uso do Real-Time CDP](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md).
+
+### Mais ajuda sobre este tópico
+
+[Ferramentas de sandbox](/help/sandboxes/ui/sandbox-tooling.md)

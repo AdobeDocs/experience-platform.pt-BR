@@ -4,9 +4,9 @@ title: Guia do Painel de públicos-alvo
 description: A Adobe Experience Platform fornece um painel por meio do qual você pode exibir informações importantes sobre os públicos-alvo criados por sua organização.
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: cd57ca50537d928025a5164b6a7d0ead490162ba
+source-git-commit: 78cf435f506a21ddd2348642c07380ad810bc693
 workflow-type: tm+mt
-source-wordcount: '3053'
+source-wordcount: '3133'
 ht-degree: 9%
 
 ---
@@ -50,6 +50,10 @@ Selecionar **[!UICONTROL Adicionar widget]** para navegar até a biblioteca de w
 ![A variável [!UICONTROL Públicos-alvo] visão geral do painel com [!UICONTROL Adicionar widget] destacado.](../images/audiences/audiences-overview-add-widget.png)
 
 Na biblioteca de widgets, você pode navegar pela seleção de widgets de público-alvo padrão e personalizados. Para obter informações sobre como adicionar widgets, consulte a documentação da biblioteca de widgets sobre como [adicionar um widget](../customize/widget-library.md#add-widgets).
+
+### Exibir SQL {#view-sql}
+
+Você pode exibir o SQL que gera os insights visualizados em seu painel com uma alternância no [!UICONTROL Visão geral] espaço de trabalho. Você pode se inspirar no SQL de seus insights existentes para criar novas consultas que obtenham insights exclusivos dos dados da plataforma com base nas necessidades comerciais. Para saber mais sobre esse recurso, consulte a [Exibir guia de IU do SQL](../view-sql.md).
 
 ## Selecionar um público {#select-audience}
 

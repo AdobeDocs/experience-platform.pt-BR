@@ -4,10 +4,10 @@ title: Guia do Painel de destinos
 description: A Adobe Experience Platform fornece um painel por meio do qual você pode exibir informações importantes sobre os destinos ativos da sua organização.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: d9ce17bbe17df175db30d283387d8fa569b97dee
+source-git-commit: 78cf435f506a21ddd2348642c07380ad810bc693
 workflow-type: tm+mt
-source-wordcount: '3171'
-ht-degree: 20%
+source-wordcount: '3244'
+ht-degree: 19%
 
 ---
 
@@ -51,6 +51,10 @@ Selecionar **[!UICONTROL Adicionar widget]** para navegar até a biblioteca de w
 
 Na biblioteca de widgets, você pode navegar pela seleção de widgets de público-alvo padrão e personalizados. Para obter informações sobre como adicionar widgets, consulte a documentação da biblioteca de widgets sobre como [adicionar um widget](../customize/widget-library.md#add-widgets).
 
+### Exibir SQL {#view-sql}
+
+Você pode exibir o SQL que gera os insights visualizados em seu painel com uma alternância no [!UICONTROL Visão geral] espaço de trabalho. Você pode se inspirar no SQL de seus insights existentes para criar novas consultas que obtenham insights exclusivos dos dados da plataforma com base nas necessidades comerciais. Para saber mais sobre esse recurso, consulte a [Exibir guia de IU do SQL](../view-sql.md).
+
 ## Widgets padrão {#default-widgets}
 
 Uma transferência de widget padrão é fornecida para todas as novas instâncias do Adobe Experience Platform que destacam os insights mais recentes disponíveis de seus dados. Os widgets a seguir são pré-configurados na visualização de segmentos desde o início. Veja abaixo detalhes completos sobre a finalidade e a função dos dispositivos.
@@ -87,7 +91,7 @@ Para saber mais sobre cada um dos widgets padrão disponíveis, selecione o nome
 * [[!UICONTROL Tendência de tamanho do público-alvo]](#audience-size-trend)
 * [[!UICONTROL Públicos-alvo não mapeados por identidade]](#unmapped-audiences-by-identity)
 * [[!UICONTROL Públicos-alvo mapeados por identidade]](#mapped-audiences-by-identity)
-* [[!UICONTROL Públicos-alvo comuns]](#common-audiences)
+* [[!UICONTROL Públicos comuns]](#common-audiences)
 * [[!UICONTROL Públicos mapeados]](#mapped-audiences)
 * [[!UICONTROL Integridade do público mapeado]](#mapped-audience-health)
 * [[!UICONTROL Contagem de destinos]](#destinations-count)

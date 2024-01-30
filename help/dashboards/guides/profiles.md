@@ -4,10 +4,10 @@ title: Guia do painel de perfis
 description: A Adobe Experience Platform fornece um painel por meio do qual você pode visualizar informações importantes sobre os dados do Perfil do cliente em tempo real da sua organização.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 57f4b365f510935f75f3ef92d71d66fe255269b4
+source-git-commit: 78cf435f506a21ddd2348642c07380ad810bc693
 workflow-type: tm+mt
-source-wordcount: '4900'
-ht-degree: 10%
+source-wordcount: '4996'
+ht-degree: 9%
 
 ---
 
@@ -27,7 +27,7 @@ Os dados do atributo no instantâneo mostram os dados exatamente como aparecem n
 >
 >Quaisquer alterações ou atualizações feitas nos dados desde que o instantâneo foi tirado não serão refletidas no painel até que o próximo instantâneo seja tirado.
 
-## Explorar o painel de perfis
+## Explore o painel Perfis {#explore-dashboard}
 
 Para navegar até o painel Perfis na interface do Platform, selecione **[!UICONTROL Perfis]** no painel à esquerda, selecione a variável **[!UICONTROL Visão geral]** para exibir o painel.
 
@@ -37,7 +37,7 @@ Para navegar até o painel Perfis na interface do Platform, selecione **[!UICONT
 
 ![O painel Perfis Experience Platform com Perfis e Visão geral realçados.](../images/profiles/dashboard-overview.png)
 
-### Modificação do painel Perfis
+### Modificar o painel Perfis {#modify-dashboard}
 
 Você pode modificar a aparência do painel Perfis selecionando **[!UICONTROL Modificar painel]**. Você pode mover, adicionar, redimensionar e remover widgets do painel, bem como acessar o **[!UICONTROL Biblioteca de widgets]** para explorar widgets disponíveis e criar widgets personalizados para sua organização.
 
@@ -50,6 +50,10 @@ Selecionar **[!UICONTROL Adicionar widget]** para navegar até a biblioteca de w
 ![A visão geral do painel Perfis com a opção adicionar widget realçada.](../images/profiles/profiles-overview-add-widget.png)
 
 Na biblioteca de widgets, você pode navegar pela seleção de widgets de público-alvo padrão e personalizados. Para obter informações sobre como adicionar widgets, consulte a documentação da biblioteca de widgets sobre como [adicionar um widget](../customize/widget-library.md#add-widgets).
+
+### Exibir SQL {#view-sql}
+
+Você pode exibir o SQL que gera os insights visualizados em seu painel com uma alternância no [!UICONTROL Visão geral] espaço de trabalho. Você pode se inspirar no SQL de seus insights existentes para criar novas consultas que obtenham insights exclusivos dos dados da plataforma com base nas necessidades comerciais. Para saber mais sobre esse recurso, consulte a [Exibir guia de IU do SQL](../view-sql.md).
 
 <!-- ## (Beta) Profile efficacy insights {#profile-efficacy-insights}
 

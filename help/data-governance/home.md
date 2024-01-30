@@ -7,7 +7,7 @@ exl-id: 00ca6bc2-1c58-4ea2-8bb5-30fd3fa5944a
 source-git-commit: 1a050cfb41a28053606f07931c7c97d15989ac3e
 workflow-type: tm+mt
 source-wordcount: '1623'
-ht-degree: 4%
+ht-degree: 8%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 4%
 >[!CONTEXTUALHELP]
 >id="platform_datagovernance_framework"
 >title="Obrigação de governança de dados"
->abstract="Lembre-se de que é sua única responsabilidade aderir às políticas de governança de dados de sua organização e atender aos requisitos normativos. O Experience Platform fornece ferramentas de governança de dados para você gerenciar suas obrigações de uso de dados. Aplique os rótulos de uso de dados apropriados antes de consultar ou processar dados. Consulte a documentação para saber mais sobre as ferramentas de governança de dados e as práticas recomendadas."
+>abstract="Lembre-se de que é de sua única responsabilidade aderir às políticas de governança de dados da sua organização e atender aos requisitos normativos. A Experience Platform fornece ferramentas de governança de dados para você gerenciar suas obrigações de uso de dados. Aplique os rótulos de uso de dados apropriados antes de consultar ou processar dados. Consulte a documentação para saber mais sobre as ferramentas de governança de dados e as práticas recomendadas."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=pt-BR" text="Visão geral da governança de dados"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=pt-BR" text="Visão geral dos rótulos de governança de dados"
 

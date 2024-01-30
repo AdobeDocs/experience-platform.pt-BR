@@ -7,7 +7,7 @@ exl-id: ced5b69c-5bb5-4e06-9cb4-938e36e6e5cc
 source-git-commit: f7f49e4158f3aa95c3e96d3687642392e237aabc
 workflow-type: tm+mt
 source-wordcount: '850'
-ht-degree: 2%
+ht-degree: 7%
 
 ---
 
@@ -37,8 +37,8 @@ A variável [!UICONTROL Introdução ao Perfil de cliente em tempo real] O widge
 >[!CONTEXTUALHELP]
 >id="platform_home_metrics_totalProfiles"
 >title="Contagem total de perfis"
->abstract="O número total de perfis que sua organização tem em Experience Platform. Essa contagem se baseia na política de mesclagem da organização e não inclui fragmentos de perfil. O número de perfis é atualizado uma vez a cada 24 horas."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/ui/user-guide.html#profile-count" text="Saiba mais na documentação"
+>abstract="O número total de perfis que a organização possui na Experience Platform. Essa contagem se baseia na política de mesclagem da organização e não inclui fragmentos de perfil. O número de perfis é atualizado a cada 24 horas."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/ui/user-guide.html?lang=pt-BR#profile-count" text="Saiba mais na documentação"
 
 O painel de métricas exibe informações atualizadas sobre seus dados de Experience Platform. O painel é dividido em duas seções:
 

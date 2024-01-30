@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Guia da interface do Editor de consultas
 description: O Editor de consultas é uma ferramenta interativa fornecida pelo Serviço de consultas da Adobe Experience Platform, que permite gravar, validar e executar consultas para dados de experiência do cliente na interface do usuário do Experience Platform. O Editor de consultas é compatível com o desenvolvimento de consultas para análise e exploração de dados, e permite executar consultas interativas para fins de desenvolvimento, bem como consultas não interativas para preencher conjuntos de dados no Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 1a050cfb41a28053606f07931c7c97d15989ac3e
+source-git-commit: 202bd42596608d27f99baea9e0a4a6ec92cf469f
 workflow-type: tm+mt
-source-wordcount: '2313'
-ht-degree: 3%
+source-wordcount: '2550'
+ht-degree: 2%
 
 ---
 
@@ -85,13 +85,13 @@ A execução de várias consultas em uma sequência gera uma entrada de log. No 
 ### Executar consulta selecionada {#execute-selected-query}
 
 Se tiver escrito várias consultas, mas precisar executar apenas uma, destaque a consulta escolhida e selecione a variável
-[!UICONTROL Executar consulta selecionada] ícone. Esse ícone é desativado por padrão, a menos que você selecione uma consulta no editor.
+[!UICONTROL Executar consulta selecionada] ícone. Esse ícone é desativado por padrão até que você selecione a sintaxe de consulta no editor.
 
 ![O Editor de consultas com o [!UICONTROL Executar consulta selecionada] ícone realçado.](../images/ui/query-editor/run-selected-query.png)
 
 ### Contagem de resultados {#result-count}
 
-O Editor de consultas tem uma saída máxima de 50.000 linhas. No entanto, apenas 50 linhas são exibidas de cada vez no console do Editor de consultas. Para alterar o número de linhas exibidas no console, selecione a variável **[!UICONTROL Contagem de resultados]** e escolha entre 50, 100, 150, 300 e 500 valores.
+O Editor de consultas tem uma saída máxima de 50.000 linhas. Você pode escolher o número de linhas que são exibidas ao mesmo tempo no console do Editor de consultas. Para alterar o número de linhas exibidas no console, selecione a variável **[!UICONTROL Contagem de resultados]** e selecione entre as opções 50, 100, 150, 300 e 500.
 
 ![O Editor de consultas com a lista suspensa de contagem de resultados realçada.](../images/ui/query-editor/result-count.png)
 
@@ -101,7 +101,7 @@ O Editor de consultas tem uma saída máxima de 50.000 linhas. No entanto, apena
 
 ![O Editor de consultas com o campo de entrada SQL e Reproduzir realçados.](../images/ui/query-editor/editor.png)
 
-Para minimizar o tempo de desenvolvimento, é recomendável desenvolver as consultas com limites nas linhas retornadas. Por exemplo, `SELECT fields FROM table WHERE conditions LIMIT number_of_rows`. Após verificar que sua consulta produz a saída esperada, remova os limites e execute a consulta com `CREATE TABLE tablename AS SELECT` para gerar um conjunto de dados com a saída.
+Para minimizar o tempo de desenvolvimento, é recomendável desenvolver consultas com limites no número de linhas retornadas. Por exemplo, `SELECT fields FROM table WHERE conditions LIMIT number_of_rows`. Após verificar que sua consulta produz a saída esperada, remova os limites e execute a consulta com `CREATE TABLE tablename AS SELECT` para gerar um conjunto de dados com a saída.
 
 ## Gravando ferramentas em [!DNL Query Editor] {#writing-tools}
 
@@ -123,6 +123,12 @@ A variável [!UICONTROL Formatar texto] Esse recurso torna a consulta mais legí
 
 ![O Editor de consultas com [!UICONTROL Formatar texto] e as instruções SQL destacadas.](../images/ui/query-editor/format-text.png)
 
+<!-- ### Undo text {#undo-text}
+
+If you format your SQL in the Query Editor, you can undo the formatting applied by the [!UICONTROL Format text] feature. To return your SQL back to its original form, select **[!UICONTROL Undo text]**.
+
+![The Query Editor with [!UICONTROL Undo text] and the SQL statements highlighted.](../images/ui/query-editor/undo-text.png) -->
+
 ### Copiar SQL {#copy-sql}
 
 Selecione o ícone de cópia para copiar o SQL do Editor de consultas para a área de transferência. Esse recurso de cópia está disponível para modelos de consulta e consultas recém-criadas no Editor de consultas.
@@ -134,6 +140,10 @@ Selecione o ícone de cópia para copiar o SQL do Editor de consultas para a ár
 A variável [!DNL Query Editor] A sugere automaticamente possíveis palavras-chave SQL junto com detalhes de tabela ou coluna para a consulta à medida que ela é escrita. O recurso de preenchimento automático é ativado por padrão e pode ser desativado ou ativado a qualquer momento selecionando o [!UICONTROL Sintaxe de preenchimento automático] Alterne para a parte superior direita do Editor de consultas.
 
 A definição de configuração de preenchimento automático é por usuário e lembrada pelos logons consecutivos desse usuário.
+
+>[!NOTE]
+>
+>A opção de preenchimento automático de sintaxe só está disponível para a versão herdada do Editor de consultas.
 
 ![Editor de consultas com a opção de preenchimento automático de sintaxe realçada.](../images/ui/query-editor/auto-complete-toggle.png)
 
@@ -159,21 +169,47 @@ Para desativar o recurso de preenchimento automático, selecione a opção de co
 
 [!DNL Query Editor] valida automaticamente uma consulta à medida que ela é gravada, fornecendo validação de SQL genérica e validação de execução específica. Se um sublinhado vermelho aparecer abaixo da consulta (como mostrado na imagem abaixo), ele representa um erro na consulta.
 
+<!-- ... Image below needs updating couldn't replicate the effect -->
+
 ![A entrada do Editor de consultas exibindo o SQL sublinhado em vermelho para indicar um erro.](../images/ui/query-editor/syntax-error-highlight.png)
 
 Quando erros são detectados, é possível exibir as mensagens de erro específicas ao passar o mouse sobre o código SQL.
+
+<!-- ... Image below needs updating couldn't replicate the effect -->
 
 ![Um diálogo com uma mensagem de erro.](../images/ui/query-editor/linting-error.png)
 
 ### Detalhes da consulta {#query-details}
 
-Para exibir uma consulta no Editor de consultas, selecione qualquer modelo salvo na [!UICONTROL Modelos] guia. O painel de detalhes da consulta fornece mais informações e ferramentas para gerenciar a consulta selecionada.
+Para exibir uma consulta no Editor de consultas, selecione qualquer modelo salvo na [!UICONTROL Modelos] guia. O painel de detalhes da consulta fornece mais informações e ferramentas para gerenciar a consulta selecionada. Ela também mostra metadados úteis, como a última vez que a consulta foi modificada e quem a modificou, se aplicável.
+
+>[!NOTE]
+>
+>A variável [!UICONTROL Exibir programação], [!UICONTROL Adicionar programação] e [!UICONTROL Excluir consulta] As opções só estarão disponíveis depois que a consulta for salva como template. A variável [!UICONTROL Adicionar programação] leva você diretamente para o construtor de agendamentos a partir do Editor de consultas. A variável [!UICONTROL Exibir programação] a opção leva você diretamente ao inventário de programação para essa consulta. Consulte a documentação dos cronogramas de consulta para saber como [criar agendamentos de consulta na interface](./query-schedules.md#create-schedule).
 
 ![O Editor de consultas com o painel de detalhes da consulta realçado.](../images/ui/query-editor/query-details.png)
 
-Esse painel permite gerar um conjunto de dados de saída diretamente da interface do usuário, excluir ou nomear a consulta exibida e adicionar um agendamento à consulta.
+No painel de detalhes, é possível gerar um conjunto de dados de saída diretamente da interface do usuário, excluir ou nomear a consulta exibida, exibir o agendamento de execução da consulta e adicionar a consulta a um agendamento.
 
-Esse painel também mostra metadados úteis, como a última vez que a consulta foi modificada e quem a modificou, se aplicável. Para gerar um conjunto de dados, selecione **[!UICONTROL Conjunto de dados de saída]**. A variável **[!UICONTROL Conjunto de dados de saída]** será exibida. Insira um nome e uma descrição, depois selecione **[!UICONTROL Executar consulta]**. O novo conjunto de dados é exibido na **[!UICONTROL Conjuntos de dados]** na guia [!DNL Query Service] interface de usuário ativada [!DNL Platform].
+Para gerar um conjunto de dados de saída, selecione **[!UICONTROL Executar como CTAS]**. A variável **[!UICONTROL Inserir detalhes do conjunto de dados de saída]** será exibida. Insira um nome e uma descrição, depois selecione **[!UICONTROL Executar como CTAS]**. O novo conjunto de dados é exibido na **[!UICONTROL Conjuntos de dados]** Guia Procurar. Consulte [a documentação exibir conjuntos de dados](../../catalog/datasets/user-guide.md#view-datasets) para saber mais sobre conjuntos de dados disponíveis para sua organização.
+
+>[!NOTE]
+>
+>A variável [!UICONTROL Executar como CTAS] A opção só estará disponível se a consulta tiver **não** foi programado.
+
+![A variável [!UICONTROL Inserir detalhes do conjunto de dados de saída] diálogo.](../images/ui/query-editor/output-dataset-details.png)
+
+Depois de executar o **[!UICONTROL Executar como CTAS]** ação, uma mensagem de confirmação será exibida para notificá-lo sobre a ação bem-sucedida. Esta mensagem pop-up contém um link que fornece uma maneira conveniente de navegar até o espaço de trabalho de logs de consulta. Consulte a [documentação dos logs de consulta](./query-logs.md) para obter mais informações sobre logs de consulta.
+
+### Salvamento de consultas {#saving-queries}
+
+A variável [!DNL Query Editor] O fornece uma função salvar que permite salvar uma consulta e trabalhar nela posteriormente. Para salvar uma consulta, selecione **[!UICONTROL Salvar]** no canto superior direito de [!DNL Query Editor]. Para que uma consulta possa ser salva, um nome deve ser fornecido para ela usando o **[!UICONTROL Detalhes da consulta]** painel.
+
+>[!NOTE]
+>
+>Consultas nomeadas e salvas no usando o Editor de consultas estão disponíveis como modelos no painel Consulta [!UICONTROL Modelos] guia. Consulte a [documentação de modelos](./query-templates.md) para obter mais informações.
+
+Quando você salva uma consulta no Editor de consultas, uma mensagem de confirmação aparece para notificá-lo sobre a ação bem-sucedida. Esta mensagem pop-up contém um link que fornece uma maneira conveniente de navegar até o espaço de trabalho de agendamento de consultas. Consulte a [documentação de consultas de agendamento](./query-schedules.md) para saber como executar consultas em uma cadência personalizada.
 
 ### Consultas programadas {#scheduled-queries}
 
@@ -185,13 +221,6 @@ Consulte a documentação dos cronogramas de consulta para saber como [criar age
 
 Quaisquer consultas programadas são adicionadas à lista no [!UICONTROL Consultas programadas] guia. Nesse espaço de trabalho, é possível monitorar o status de todos os trabalhos de consulta agendados por meio da interface do usuário. No [!UICONTROL Consultas programadas] você pode encontrar informações importantes sobre as execuções de consulta e assinar alertas. As informações disponíveis incluem status, detalhes da programação e mensagens/códigos de erro se uma execução falhar. Consulte a [Monitorar documento de consultas programadas](./monitor-queries.md) para obter mais informações.
 
-### Salvamento de consultas {#saving-queries}
-
-A variável [!DNL Query Editor] O fornece uma função salvar que permite salvar uma consulta e trabalhar nela posteriormente. Para salvar uma consulta, selecione **[!UICONTROL Salvar]** no canto superior direito de [!DNL Query Editor]. Para que uma consulta possa ser salva, um nome deve ser fornecido para ela usando o **[!UICONTROL Detalhes da consulta]** painel.
-
->[!NOTE]
->
->Consultas nomeadas e salvas no usando o Editor de consultas estão disponíveis como modelos no painel Consulta [!UICONTROL Modelos] guia. Consulte a [documentação de modelos](./query-templates.md) para obter mais informações.
 
 ### Como encontrar consultas anteriores {#previous-queries}
 
@@ -219,7 +248,7 @@ O console fornece informações sobre o status e a operação do [!DNL Query Ser
 
 ### Resultados da consulta {#query-results}
 
-Após a conclusão de um query, os resultados são exibidos no **[!UICONTROL Resultados]** , ao lado da guia **[!UICONTROL Console]** guia. Essa visualização mostra a saída tabular do query, exibindo até 100 linhas. Essa visualização permite verificar se sua consulta produz a saída esperada. Para gerar um conjunto de dados com sua consulta, remova os limites nas linhas retornadas e execute a consulta com `CREATE TABLE tablename AS SELECT` para gerar um conjunto de dados com a saída. Consulte a [tutorial sobre geração de conjuntos de dados](./create-datasets.md) para obter instruções sobre como gerar um conjunto de dados a partir dos resultados da consulta em [!DNL Query Editor].
+Após a conclusão de um query, os resultados são exibidos no **[!UICONTROL Resultados]** , ao lado da guia **[!UICONTROL Console]** guia. Essa exibição mostra a saída tabular do query, exibindo entre 50 e 500 linhas de resultados, dependendo da opção escolhida [contagem de resultados](#result-count). Essa visualização permite verificar se sua consulta produz a saída esperada. Para gerar um conjunto de dados com sua consulta, remova os limites nas linhas retornadas e execute a consulta com `CREATE TABLE tablename AS SELECT` para gerar um conjunto de dados com a saída. Consulte a [tutorial sobre geração de conjuntos de dados](./create-datasets.md) para obter instruções sobre como gerar um conjunto de dados a partir dos resultados da consulta em [!DNL Query Editor].
 
 ![A guia Resultados do console do Editor de consultas exibindo os resultados de uma execução de consulta.](../images/ui/query-editor/query-results.png)
 

@@ -2,10 +2,10 @@
 title: Consultas com parâmetros
 description: Saiba como usar consultas com parâmetros na interface do usuário do Adobe Experience Platform.
 exl-id: 5c5ac691-5e29-4262-ba53-84dcc56e744f
-source-git-commit: 1e9d6b0c43461902c5b966aa1d0576103e872e0c
+source-git-commit: 9cf8dabfdf3f20f4032a79ba191bd2dc8123a369
 workflow-type: tm+mt
-source-wordcount: '734'
-ht-degree: 10%
+source-wordcount: '690'
+ht-degree: 11%
 
 ---
 
@@ -47,21 +47,17 @@ SELECT
 
 Para criar sua consulta parametrizada na interface do usuário do, navegue até o Editor de consultas. Consulte a seção sobre [acesso ao Editor de consultas](./user-guide.md#accessing-query-editor) para obter mais instruções.
 
-Use o prefácio `'$'` para inserir um parâmetro na sua consulta no editor de texto. Em seguida, adicione o valor ausente para a chave no [!UICONTROL Parâmetros de consulta] seção abaixo do editor. A consulta não pode ser executada se você não adicionar um valor a qualquer uma das chaves necessárias. Um ícone de alerta (![Um ícone de alerta.](../images/ui/parameterized-queries/alert-icon.png)) aparece na seção Parâmetros de consulta ao lado de qualquer [!UICONTROL Valor] campos de entrada.
+Use o prefácio `'$'` para inserir um parâmetro na sua consulta no editor de texto. Em seguida, selecione o **[!UICONTROL Parâmetros de consulta]** ao lado da guia [!UICONTROL Console] adicione o valor missing para a chave. A consulta não pode ser executada se você não adicionar um valor a qualquer uma das chaves necessárias. Um ícone de alerta (![Um ícone de alerta.](../images/ui/parameterized-queries/alert-icon.png)) aparece na seção Parâmetros de consulta ao lado de qualquer [!UICONTROL Valor] campos de entrada.
+
+>[!NOTE]
+>
+>Se a consulta não usar parâmetros, você ainda poderá inserir parâmetros desnecessários no Editor de consultas. O Editor de consultas ignora todos os pares de valores chave desnecessários e não têm efeito na execução ou nos resultados da consulta.
 
 ![O Editor de consultas com uma consulta parametrizada e a seção Parâmetros de consulta destacados.](../images/ui/parameterized-queries/parameterized-query.png)
 
 >[!TIP]
 >
 >Alterar guias de [!UICONTROL Parâmetros de consulta] para [!UICONTROL Console] para exibir a saída do console do query.
-
-Se você remover um parâmetro e tentar executar a consulta novamente após ela já ter sido executada, uma mensagem de erro será exibida na [!UICONTROL Parâmetros de consulta] seção para alertá-lo.
-
->[!NOTE]
->
->Se a consulta não usar parâmetros, você ainda poderá inserir parâmetros desnecessários no Editor de consultas. O Editor de consultas ignora todos os pares de valores chave desnecessários e não têm efeito na execução ou nos resultados da consulta.
-
-![O Editor de consultas com um campo de valor vazio e o erro nos parâmetros de consulta foi realçado.](../images/ui/parameterized-queries/query-parameter-error.png)
 
 ## Usar detalhes de logs de consulta para verificar valores de parâmetros {#check-parameter-values}
 

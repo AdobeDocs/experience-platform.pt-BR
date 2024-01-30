@@ -2,9 +2,9 @@
 title: Agendamentos de consulta
 description: Saiba como automatizar execuções de consultas programadas, excluir ou desativar um agendamento de consultas e utilizar as opções de agendamento disponíveis por meio da interface do usuário do Adobe Experience Platform.
 exl-id: 984d5ddd-16e8-4a86-80e4-40f51f37a975
-source-git-commit: 75ef9c58aa7c5f1cc628d1f13b6c5f56b362458a
+source-git-commit: 7d2027bf315ae6e354c906e4aabf6371a92e4148
 workflow-type: tm+mt
-source-wordcount: '886'
+source-wordcount: '1084'
 ht-degree: 0%
 
 ---
@@ -19,19 +19,31 @@ Você pode automatizar as execuções de consulta criando programações de cons
 
 Quaisquer consultas programadas são adicionadas à lista no [!UICONTROL Consultas programadas] guia. Nesse espaço de trabalho, é possível monitorar o status de todos os trabalhos de consulta agendados por meio da interface do usuário. No [!UICONTROL Consultas programadas] guia, você pode encontrar informações importantes sobre as execuções de consulta e assinar alertas. As informações disponíveis incluem o status, os detalhes da programação e as mensagens/códigos de erro em caso de falha na execução. Consulte a [Monitorar documento de consultas programadas](./monitor-queries.md) para obter mais informações.
 
-## Criar agendamentos de consulta {#create-schedule}
+Esse fluxo de trabalho abrange o processo de agendamento na interface do usuário do serviço de consulta. Para saber como adicionar agendas usando a API, leia o [guia de endpoint de consultas programadas](../api/scheduled-queries.md).
 
-Para adicionar um agendamento a uma consulta, selecione um modelo de consulta no [!UICONTROL Modelos] ou na guia [!UICONTROL Consultas programadas] para navegar até o Editor de consultas.
+## Criar um agendamento de consulta {#create-schedule}
 
-Para saber como adicionar agendas usando a API, leia o [guia de endpoint de consultas programadas](../api/scheduled-queries.md).
+Para agendar uma consulta, selecione um modelo de consulta no [!UICONTROL Modelos] ou na guia [!UICONTROL Modelo] coluna da [!UICONTROL Consultas programadas] guia. A seleção do nome do modelo leva você ao Editor de consultas.
 
-Quando uma consulta salva é acessada pelo Editor de consultas, a variável [!UICONTROL Agendamentos] é exibida abaixo do nome da consulta. Selecionar **[!UICONTROL Agendamentos]**.
+Se você acessar uma consulta salva no Editor de consultas, poderá criar uma programação para a consulta ou exibir a programação da consulta no painel de detalhes.
+
+>[!TIP]
+>
+>Selecionar **[!UICONTROL Exibir programação]** para navegar até o espaço de trabalho agendamentos e ver as execuções de consultas agendadas rapidamente.
+
+![O Editor de consultas com [!UICONTROL Exibir programação] e [!UICONTROL Adicionar programação] destacado.](../images/ui/query-schedules/view-add-schedule.png)
+
+Selecionar **[!UICONTROL Adicionar programação]** para navegar até o [página de detalhes da programação](#schedule-details).
+
+Como alternativa, selecione o **[!UICONTROL Agendamentos]** abaixo do nome do query.
 
 ![O Editor de consultas com a guia Agendamentos realçada.](../images/ui/query-schedules/schedules-tab.png)
 
 O espaço de trabalho de agendamentos é exibido. Selecionar **[!UICONTROL Adicionar programação]** para criar um agendamento.
 
 ![O espaço de trabalho Agendamento do Editor de Consultas com Adicionar agendamento realçado.](../images/ui/query-schedules/add-schedule.png)
+
+### Editar os detalhes da programação {#schedule-details}
 
 A página de detalhes da programação é exibida. Nesta página, você pode escolher a frequência da consulta programada, as datas de início e término, o dia da semana em que a consulta programada será executada, bem como para qual conjunto de dados exportar a consulta.
 
@@ -45,7 +57,7 @@ Você pode escolher as seguintes opções para **[!UICONTROL Frequência]**:
 - **[!UICONTROL Mensal]**: A consulta selecionada será executada mensalmente no dia, hora e período de data selecionados. Observe que o horário selecionado está em **UTC**, e não o fuso horário local.
 - **[!UICONTROL Anual]**: A consulta selecionada será executada todos os anos no dia, mês, hora e período de data selecionados. Observe que o horário selecionado está em **UTC**, e não o fuso horário local.
 
-Para o conjunto de dados de saída, você tem a opção de usar um conjunto de dados existente ou criar um novo.
+Para o conjunto de dados de saída, você tem a opção de usar a opção de anexar em um conjunto de dados existente ou criar e anexar em um novo conjunto de dados. A segunda opção significa que, se você executar um query pela primeira vez e criar um conjunto de dados, qualquer execução subsequente continuará inserindo dados nesse conjunto de dados.
 
 >[!IMPORTANT]
 >
@@ -66,6 +78,18 @@ Se você estiver criando uma consulta programada para uma consulta parametrizada
 Após confirmar todos esses detalhes, selecione **[!UICONTROL Salvar]** para criar um agendamento. Você retorna ao espaço de trabalho de agendamentos que exibe detalhes do agendamento recém-criado, incluindo a ID do agendamento, o próprio agendamento e o conjunto de dados de saída do agendamento. Você pode usar a ID de agendamento para pesquisar mais informações sobre as execuções da própria consulta agendada. Para saber mais, leia o [guia de endpoints de execução de consulta agendada](../api/runs-scheduled-queries.md).
 
 ![O espaço de trabalho de agendamentos com o agendamento recém-criado destacado.](../images/ui/query-schedules/schedules-workspace.png)
+
+## Exibir execuções de consulta programada {#scheduled-query-runs}
+
+Para exibir uma lista de execuções programadas de um modelo de consulta, navegue até a [!UICONTROL Consultas programadas] e selecione um nome de template na lista disponível.
+
+![A guia Scheduled queries com um modelo nomeado realçado.](../images/ui/query-schedules/view-scheduled-runs.png)
+
+A lista de execuções de consulta para a consulta programada é exibida.
+
+![A seção de detalhes do espaço de trabalho Consultas agendadas com uma lista de execuções de consulta é destacada para uma consulta agendada.](../images/ui/query-schedules/list-of-scheduled-runs.png)
+
+Consulte a [guia consultado agendado do monitor](./monitor-queries.md#inline-actions) para obter informações completas sobre como monitorar o status de todos os trabalhos de consulta por meio da interface.
 
 ## Excluir ou desabilitar um agendamento {#delete-schedule}
 

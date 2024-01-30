@@ -2,9 +2,9 @@
 title: Modelos de consulta
 description: Os modelos de consulta são consultas SQL salvas reutilizáveis que podem ser reutilizadas por outros usuários para economizar tempo e esforço. Eles podem ser criados usando o Editor de consultas ou a API de serviço de consultas e estão disponíveis para uso em todos os conjuntos de dados de Experience Platform.
 exl-id: e74d058f-bb89-45ed-83cc-2e3a33401270
-source-git-commit: d5d69134627b1a162691bda95732d989bd6e3469
+source-git-commit: 1a44be939a4678078b414658199472e07dee153b
 workflow-type: tm+mt
-source-wordcount: '504'
+source-wordcount: '590'
 ht-degree: 0%
 
 ---
@@ -27,6 +27,10 @@ Você pode criar modelos de consulta por meio de dois métodos, fazendo uma soli
 
 Consulte a documentação para obter instruções sobre como usar o Editor de consultas para [gravação](./user-guide.md#query-authoring) e [salvar consultas](./user-guide.md#saving-queries). Depois de nomear e salvar sua consulta, ela estará disponível para ser reutilizada como um template de consulta no [!UICONTROL Modelos] guia.
 
+>[!TIP]
+>
+>Quando você salva uma consulta no Editor de consultas, uma mensagem de confirmação aparece para notificá-lo sobre a ação bem-sucedida. Esta mensagem pop-up contém um link que fornece uma maneira conveniente de navegar até o espaço de trabalho de agendamento de consultas. Consulte a [documentação de consultas de agendamento](./query-schedules.md) para saber como executar consultas em uma cadência personalizada.
+
 ## Procurar modelos de consulta {#browse}
 
 No espaço de trabalho Queries da interface do Platform, selecione **[!UICONTROL Modelos]** para exibir a lista de consultas salvas disponíveis.
@@ -37,10 +41,11 @@ Para encontrar informações relevantes sobre o modelo, selecione qualquer model
 
 ![O painel de detalhes no espaço de trabalho de consultas com a ID de consulta destacada.](../images/ui/query-templates/details-panel.png)
 
-No painel de detalhes, é possível executar quatro ações separadas:
+No painel de detalhes, é possível executar as seguintes ações:
 
-* Selecionar **[!UICONTROL Conjunto de dados de saída]** para editar o conjunto de dados de saída do modelo selecionado.
-* Selecionar **[!UICONTROL Exibir programação]** para navegar até o [!UICONTROL Agendamentos] guia. Essa exibição contém todas as informações de agendamento associadas à consulta.
+* Selecionar **[!UICONTROL Executar como CTAS]** para criar uma nova tabela selecionando dados de uma tabela ou tabelas existentes. Essa opção só estará disponível se você tiver uma consulta SELECT.
+* Selecionar **[!UICONTROL Adicionar programação]** para começar a editar o agendamento do seu modelo de query.
+* Selecionar **[!UICONTROL Exibir programação]** para navegar até o [!UICONTROL Agendamentos] do Editor de consultas. Essa exibição contém todas as informações de agendamento associadas à consulta.
 * Selecionar **[!UICONTROL Excluir consulta]** para excluir o modelo.
 * Selecione o nome do modelo para navegar até o Editor de consultas onde o SQL está pré-preenchido para edição.
 

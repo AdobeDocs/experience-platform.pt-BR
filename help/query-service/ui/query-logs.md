@@ -2,9 +2,9 @@
 title: Logs de consulta
 description: Os logs de consulta são gerados automaticamente cada vez que uma consulta é executada e ficam disponíveis por meio da interface do usuário para ajudar na solução de problemas. Este documento descreve como usar e navegar na seção Logs do serviço de consulta da interface do usuário.
 exl-id: 929e9fba-a9ba-4bf9-a363-ca8657a84f75
-source-git-commit: 88498a1382202bed057b8dc52d09359ba02748ea
+source-git-commit: 445738f78f44ab8eb1632dbda82c4dd69dbebefd
 workflow-type: tm+mt
-source-wordcount: '899'
+source-wordcount: '931'
 ht-degree: 0%
 
 ---
@@ -41,9 +41,13 @@ Cada linha representa dados de log para uma execução de consulta associada a u
 
 ![O espaço de trabalho Log de Queries com uma linha selecionada e os dados de log na barra lateral direita destacados.](../images/ui/query-log/log-details.png)
 
-No painel de detalhes do log, é possível selecionar um novo conjunto de dados de saída e ver ou copiar a consulta SQL completa usada na execução.
+No painel de detalhes do log, é possível executar várias ações. Você pode executar a consulta como CTAS, que cria um novo conjunto de dados de saída, ver ou copiar a consulta SQL completa que foi usada na execução ou excluir a consulta.
 
-![O espaço de trabalho Log de consultas com uma linha selecionada e o conjunto de dados de saída e a consulta SQL realçados.](../images/ui/query-log/edit-output-dataset.png)
+>[!NOTE]
+>
+>A opção de [!UICONTROL Executar como CTAS] só está disponível para uma consulta SELECT.
+
+![O espaço de trabalho Log de Consultas com uma linha selecionada, Executar como CTAS, Excluir consulta e o ícone Copiar SQL destacados.](../images/ui/query-log/edit-output-dataset.png)
 
 >[!IMPORTANT]
 >
@@ -78,7 +82,7 @@ A tabela a seguir provou uma descrição de cada filtro.
 | Filtro | Descrição |
 | ------ | ----------- |
 | [!UICONTROL Excluir consultas do painel] | Essa caixa de seleção está ativada por padrão e exclui logs gerados pelas consultas usadas para gerar insights. Essas consultas são geradas pelo sistema e obscurecem os registros de logs gerados pelo usuário necessários para monitoramento, administração e solução de problemas. Para exibir logs gerados pelo sistema, desmarque a caixa de seleção. |
-| [!UICONTROL Data de início] | Para filtrar os logs de consultas criadas durante um período específico, defina o [!UICONTROL Início] e [!UICONTROL Fim] datas no [!UICONTROL Data inicial] seção. |
+| [!UICONTROL Data inicial] | Para filtrar os logs de consultas criadas durante um período específico, defina o [!UICONTROL Início] e [!UICONTROL Fim] datas no [!UICONTROL Data inicial] seção. |
 | [!UICONTROL Data de conclusão] | Para filtrar os logs de consultas concluídas durante um período específico, defina o [!UICONTROL Início] e [!UICONTROL Fim] datas no [!UICONTROL Data de conclusão] seção. |
 | [!UICONTROL Status] | Para filtrar logs com base na variável [!UICONTROL Status] da consulta, selecione o botão de opção apropriado. As opções disponíveis incluem [!UICONTROL Enviado], [!UICONTROL Em andamento], [!UICONTROL Sucesso], e [!UICONTROL Failed]. Você só pode filtrar logs com base em uma condição de status por vez. |
 | [!UICONTROL Cliente] | Para filtrar logs com base no cliente de query usado, insira um dos seguintes valores aceitos no campo de texto livre: `API`, `Adobe Query Service UI`ou `QsAccel`. |

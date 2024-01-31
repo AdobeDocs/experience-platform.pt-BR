@@ -1,10 +1,9 @@
 ---
-title: Notas de versão da Adobe Experience Platform
+title: Notas da versão de janeiro de 2024 da Adobe Experience Platform
 description: As notas da versão de janeiro de 2024 da Adobe Experience Platform.
-exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: 6af6fef49e365457a1341665b09f53ee48cf26d2
 workflow-type: tm+mt
-source-wordcount: '776'
+source-wordcount: '778'
 ht-degree: 50%
 
 ---

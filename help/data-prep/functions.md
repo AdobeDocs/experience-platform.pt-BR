@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Funções de mapeamento de preparação de dados
 description: Este documento apresenta as funções de mapeamento usadas com o Preparo de dados.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: ff61ec7bc1e67191a46f7d9bb9af642e9d601c3a
+source-git-commit: f250d8e6e5368a785dcb154dbe0b611baed73a4c
 workflow-type: tm+mt
-source-wordcount: '5080'
+source-wordcount: '5459'
 ht-degree: 2%
 
 ---
@@ -151,6 +151,9 @@ As tabelas a seguir listam todas as funções de mapeamento compatíveis, inclui
 | map_get_values | Pega um mapa e uma entrada de chave. Se a entrada for uma única chave, a função retornará o valor associado a essa chave. Se a entrada for uma matriz de sequência, a função retornará todos os valores correspondentes às chaves fornecidas. Se o mapa de entrada tiver chaves duplicadas, o valor de retorno deverá desduplicar as chaves e retornar valores exclusivos. | <ul><li>MAPA: **Obrigatório** Os dados do mapa de entrada.</li><li>CHAVE:  **Obrigatório** A chave pode ser uma única string ou uma matriz de string. Se qualquer outro tipo primitivo (dados / número) for fornecido, ele será tratado como uma string.</li></ul> | get_values(MAP, KEY) | Consulte a [apêndice](#map_get_values) para obter uma amostra de código. | |
 | map_has_keys | Se uma ou mais chaves de entrada forem fornecidas, a função retornará true. Se uma matriz de string for fornecida como entrada, a função retornará true na primeira chave encontrada. | <ul><li>MAPA:  **Obrigatório** Os dados do mapa de entrada</li><li>CHAVE:  **Obrigatório** A chave pode ser uma única string ou uma matriz de string. Se qualquer outro tipo primitivo (dados / número) for fornecido, ele será tratado como uma string.</li></ul> | map_has_keys(MAP, KEY) | Consulte a [apêndice](#map_has_keys) para obter uma amostra de código. | |
 | add_to_map | Aceita pelo menos duas entradas. Qualquer número de mapas pode ser fornecido como entrada. O Preparo de dados retorna um único mapa que tem todos os pares de valores-chave de todas as entradas. Se uma ou mais chaves forem repetidas (no mesmo mapa ou entre mapas), o Preparo de dados desduplica as chaves para que o primeiro par de valores-chave persista na ordem em que foram passadas na entrada. | MAPA: **Obrigatório** Os dados do mapa de entrada. | add_to_map(MAP 1, MAP 2, MAP 3, ...) | Consulte a [apêndice](#add_to_map) para obter uma amostra de código. | |
+| object_to_map (Sintaxe 1) | Use esta função para criar tipos de dados de Mapa. | <ul><li>CHAVE: **Obrigatório** As chaves devem ser uma sequência de caracteres. Se quaisquer outros valores primitivos, como números inteiros ou datas, forem fornecidos, eles serão convertidos automaticamente em cadeias de caracteres e serão tratados como cadeias de caracteres.</li><li>QUALQUER_TIPO: **Obrigatório** Refere-se a qualquer tipo de dados XDM compatível, exceto Mapas.</li></ul> | object_to_map(CHAVE, ANY_TYPE, CHAVE, ANY_TYPE, ... ) | Consulte a [apêndice](#object_to_map) para obter uma amostra de código. | |
+| object_to_map (Sintaxe 2) | Use esta função para criar tipos de dados de Mapa. | <ul><li>OBJETO: **Obrigatório** Você pode fornecer um objeto de entrada ou uma matriz de objetos e apontar para um atributo dentro do objeto como chave.</li></ul> | object_to_map(OBJECT) | Consulte a [apêndice](#object_to_map) para obter uma amostra de código. |
+| object_to_map (Sintaxe 3) | Use esta função para criar tipos de dados de Mapa. | <ul><li>OBJETO: **Obrigatório** Você pode fornecer um objeto de entrada ou uma matriz de objetos e apontar para um atributo dentro do objeto como chave.</li></ul> | object_to_map(OBJECT_ARRAY, ATTRIBUTE_IN_OBJECT_TO_BE_USED_AS_A_KEY) | Consulte a [apêndice](#object_to_map) para obter uma amostra de código. |
 
 {style="table-layout:auto"}
 
@@ -173,6 +176,20 @@ Para obter informações sobre o recurso de cópia de objeto, consulte a seção
 | size_of | Retorna o tamanho da entrada. | <ul><li>ENTRADA: **Obrigatório** O objeto do qual você está tentando encontrar o tamanho.</li></ul> | size_of(INPUT) | `size_of([1, 2, 3, 4])` | 4 |
 | upsert_array_append | Esta função é usada para anexar todos os elementos na matriz de entrada inteira ao final da matriz no Perfil. Esta função é **somente** aplicável durante as atualizações. Se usada no contexto de inserções, essa função retorna a entrada como está. | <ul><li>MATRIZ: **Obrigatório** A matriz à qual anexar a matriz no Perfil.</li></ul> | upsert_array_append(ARRAY) | `upsert_array_append([123, 456])` | [123.456] |
 | upsert_array_replace | Esta função é usada para substituir elementos em uma matriz. Esta função é **somente** aplicável durante as atualizações. Se usada no contexto de inserções, essa função retorna a entrada como está. | <ul><li>MATRIZ: **Obrigatório** A matriz para substituir a matriz no Perfil.</li></li> | upsert_array_replace(ARRAY) | `upsert_array_replace([123, 456], 1)` | [123.456] |
+
+{style="table-layout:auto"}
+
+### Hierarquias - Mapa {#map}
+
+>[!NOTE]
+>
+>Role a tela para a esquerda/direita para visualizar o conteúdo completo da tabela.
+
+| Função | Descrição | Parâmetros | Sintaxe | Expressão | Saída de exemplo |
+| -------- | ----------- | ---------- | -------| ---------- | ------------- |
+| array_to_map | Esta função pega uma matriz de objetos e uma chave como entrada e retorna um mapa do campo da chave com o valor como chave e o elemento da matriz como valor. | <ul><li>ENTRADA: **Obrigatório** A matriz de objetos da qual você deseja localizar o primeiro objeto não nulo.</li><li>CHAVE:  **Obrigatório** A chave deve ser um nome de campo na matriz de objetos e o objeto como valor.</li></ul> | array_to_map(OBJECT[] ENTRADAS, CHAVE) | Leia o [apêndice](#object_to_map) para obter uma amostra de código. |
+| object_to_map | Essa função pega um objeto como argumento e retorna um mapa de pares de valores-chave. | <ul><li>ENTRADA: **Obrigatório** A matriz de objetos da qual você deseja localizar o primeiro objeto não nulo.</li></ul> | object_to_map(OBJECT_INPUT) | &quot;object_to_map(address) onde a entrada é &quot; + &quot;address: {line1 : \&quot;345 park ave\&quot;,line2: \&quot;bldg 2\&quot;,City : \&quot;san jose\&quot;,State : \&quot;CA\&quot;,type: \&quot;office\&quot;}&quot; | Retorna um mapa com determinado nome de campo e pares de valores ou nulo se a entrada for nula. Por exemplo: `"{line1 : \"345 park ave\",line2: \"bldg 2\",City : \"san jose\",State : \"CA\",type: \"office\"}"` |
+| to_map | Esta função pega uma lista de pares de valor-chave e retorna um mapa de pares de valor-chave. | | to_map(OBJECT_INPUT) | &quot;to_map(\&quot;firstName\&quot;, \&quot;John\&quot;, \&quot;lastName\&quot;, \&quot;Doe\&quot;)&quot; | Retorna um mapa com determinado nome de campo e pares de valores ou nulo se a entrada for nula. Por exemplo: `"{\"firstName\" : \"John\", \"lastName\": \"Doe\"}"` |
 
 {style="table-layout:auto"}
 
@@ -455,3 +472,150 @@ example = "add_to_map(book_details, book_details2) where input is {\n" +
 ```
 
 +++
+
+#### object_to_map {#object_to_map}
+
+**Sintaxe 1**
+
++++Selecione para exibir o exemplo
+
+```json
+example = "object_to_map(\"firstName\", \"John\", \"lastName\", \"Doe\")",
+result = "{\"firstName\" : \"John\", \"lastName\": \"Doe\"}"
+```
+
++++
+
+**Sintaxe 2**
+
++++Selecione para exibir o exemplo
+
+```json
+example = "object_to_map(address) where input is " +
+  "address: {line1 : \"345 park ave\",line2: \"bldg 2\",City : \"san jose\",State : \"CA\",type: \"office\"}",
+result = "{line1 : \"345 park ave\",line2: \"bldg 2\",City : \"san jose\",State : \"CA\",type: \"office\"}"
+```
+
++++
+
+**Sintaxe 3**
+
++++Selecione para exibir o exemplo
+
+```json
+example = "object_to_map(addresses,type)" +
+        "\n" +
+        "[\n" +
+        "    {\n" +
+        "        \"line1\": \"345 park ave\",\n" +
+        "        \"line2\": \"bldg 2\",\n" +
+        "        \"City\": \"san jose\",\n" +
+        "        \"State\": \"CA\",\n" +
+        "        \"type\": \"home\"\n" +
+        "    },\n" +
+        "    {\n" +
+        "        \"line1\": \"345 park ave\",\n" +
+        "        \"line2\": \"bldg 2\",\n" +
+        "        \"City \": \"san jose\",\n" +
+        "        \"State\": \"CA\",\n" +
+        "        \"type\": \"work\"\n" +
+        "    },\n" +
+        "    {\n" +
+        "        \"line1\": \"345 park ave\",\n" +
+        "        \"line2\": \"bldg 2\",\n" +
+        "        \"City \": \"san jose\",\n" +
+        "        \"State\": \"CA\",\n" +
+        "        \"type\": \"office\"\n" +
+        "    }\n" +
+        "]" ,
+result = "{\n" +
+        "    \"home\":\n" +
+        "    {\n" +
+        "        \"line1\": \"345 park ave\",\n" +
+        "        \"line2\": \"bldg 2\",\n" +
+        "        \"City\": \"san jose\",\n" +
+        "        \"State\": \"CA\",\n" +
+        "        \"type\": \"home\"\n" +
+        "    },\n" +
+        "    \"work\":\n" +
+        "    {\n" +
+        "        \"line1\": \"345 park ave\",\n" +
+        "        \"line2\": \"bldg 2\",\n" +
+        "        \"City \": \"san jose\",\n" +
+        "        \"State\": \"CA\",\n" +
+        "        \"type\": \"work\"\n" +
+        "    },\n" +
+        "    \"office\":\n" +
+        "    {\n" +
+        "        \"line1\": \"345 park ave\",\n" +
+        "        \"line2\": \"bldg 2\",\n" +
+        "        \"City \": \"san jose\",\n" +
+        "        \"State\": \"CA\",\n" +
+        "        \"type\": \"office\"\n" +
+        "    }\n" +
+        "}" 
+```
+
++++
+
+#### array_to_map {#array_to_map}
+
++++Selecione para exibir o exemplo
+
+```json
+example = "array_to_map(addresses, \"type\") where addresses is\n" +
+  "\n" +
+  "[\n" +
+  "    {\n" +
+  "        \"line1\": \"345 park ave\",\n" +
+  "        \"line2\": \"bldg 2\",\n" +
+  "        \"City\": \"san jose\",\n" +
+  "        \"State\": \"CA\",\n" +
+  "        \"type\": \"home\"\n" +
+  "    },\n" +
+  "    {\n" +
+  "        \"line1\": \"345 park ave\",\n" +
+  "        \"line2\": \"bldg 2\",\n" +
+  "        \"City \": \"san jose\",\n" +
+  "        \"State\": \"CA\",\n" +
+  "        \"type\": \"work\"\n" +
+  "    },\n" +
+  "    {\n" +
+  "        \"line1\": \"345 park ave\",\n" +
+  "        \"line2\": \"bldg 2\",\n" +
+  "        \"City \": \"san jose\",\n" +
+  "        \"State\": \"CA\",\n" +
+  "        \"type\": \"office\"\n" +
+  "    }\n" +
+  "]" ,
+result = "{\n" +
+  "    \"home\":\n" +
+  "    {\n" +
+  "        \"line1\": \"345 park ave\",\n" +
+  "        \"line2\": \"bldg 2\",\n" +
+  "        \"City\": \"san jose\",\n" +
+  "        \"State\": \"CA\",\n" +
+  "        \"type\": \"home\"\n" +
+  "    },\n" +
+  "    \"work\":\n" +
+  "    {\n" +
+  "        \"line1\": \"345 park ave\",\n" +
+  "        \"line2\": \"bldg 2\",\n" +
+  "        \"City \": \"san jose\",\n" +
+  "        \"State\": \"CA\",\n" +
+  "        \"type\": \"work\"\n" +
+  "    },\n" +
+  "    \"office\":\n" +
+  "    {\n" +
+  "        \"line1\": \"345 park ave\",\n" +
+  "        \"line2\": \"bldg 2\",\n" +
+  "        \"City \": \"san jose\",\n" +
+  "        \"State\": \"CA\",\n" +
+  "        \"type\": \"office\"\n" +
+  "    }\n" +
+  "}",
+returns = "Returns a map with given field name and value pairs or null if input is null"
+```
+
++++
+

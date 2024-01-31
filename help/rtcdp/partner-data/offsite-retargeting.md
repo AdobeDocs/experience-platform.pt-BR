@@ -3,10 +3,10 @@ title: Redirecionamento externo de visitantes não autenticados
 description: Saiba como redirecionar usuários não autenticados usando IDs de prospecto para criar um atributo computado que pode ser usado para criar um público-alvo de usuários não autenticados.
 feature: Use Cases, Customer Acquisition
 exl-id: cffa3873-d713-445a-a3e1-1edf1aa8eebb
-source-git-commit: c2e308b5e743f07062be9a34e23c4bc700b27463
+source-git-commit: 0ef76fd950ef2e82e390cb39e2cd984004a140f2
 workflow-type: tm+mt
-source-wordcount: '1449'
-ht-degree: 2%
+source-wordcount: '1462'
+ht-degree: 1%
 
 ---
 
@@ -67,7 +67,7 @@ A variável **[!UICONTROL Criar atributo calculado]** é exibida. Nesta página,
 
 Para este caso de uso, você pode criar um atributo calculado que, se a ID do parceiro existir, obterá o valor mais recente da ID do parceiro nas últimas 24 horas.
 
-Usando a barra de pesquisa, você pode localizar e adicionar o evento &quot;ID do parceiro&quot; à tela de atributos computados.
+Usando a barra de pesquisa, você pode localizar e adicionar o evento &quot;ID do parceiro&quot; que [você criou durante o caso de uso de personalização no local](#get-data-in) para a tela de atributo calculado.
 
 ![A variável [!UICONTROL Eventos] e a barra de pesquisa são realçadas.](../assets/offsite-retargeting/ca-add-partner-id.png)
 
@@ -109,7 +109,7 @@ Selecione o novo adicionado **[!UICONTROL Exibição da página]** evento. Alter
 
 Depois de adicionar o evento, será necessário adicionar um atributo. Como você está trabalhando com visitantes não autenticados, é possível adicionar o atributo calculado que acabou de criar. Este atributo calculado recém-criado permite vincular IDs de parceiros a um público-alvo.
 
-Para adicionar o atributo calculado, em **[!UICONTROL Atributos]**, selecione **[!UICONTROL Perfil individual XDM]**, seguido por **[!UICONTROL _atag]**, **[!UICONTROL AtributosComputadosdoSistema]**, e **[!UICONTROL PartnerID]**. Agora, adicione o **[!UICONTROL Valor]** do atributo calculado para a seção atributos da tela.
+Para adicionar o atributo calculado, em **[!UICONTROL Atributos]**, selecione **[!UICONTROL Perfil individual XDM]**, seguido por **[ID do locatário da sua organização](../../xdm/api/getting-started.md#know-your-tenant-id).**, **[!UICONTROL AtributosComputadosdoSistema]**, e **[!UICONTROL PartnerID]**. Agora, adicione o **[!UICONTROL Valor]** do atributo calculado para a seção atributos da tela.
 
 ![O caminho da pasta para acessar o atributo calculado é exibido.](../assets/offsite-retargeting/access-computed-attribute.png)
 

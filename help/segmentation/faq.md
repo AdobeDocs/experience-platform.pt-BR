@@ -2,9 +2,9 @@
 title: Perguntas frequentes do Audiences
 description: Descubra respostas para perguntas frequentes sobre públicos-alvo e outros conceitos relacionados à segmentação.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: 762a7fc7dd00657e4e710eb763c5bb63b210593a
+source-git-commit: dbc14c639ef02b8504cc9895c6aacb6e205549b2
 workflow-type: tm+mt
-source-wordcount: '2739'
+source-wordcount: '2746'
 ht-degree: 1%
 
 ---
@@ -29,7 +29,7 @@ Sim, públicos-alvo pré-criados gerados externamente são compatíveis com o Au
 
 ### Quais permissões são necessárias para fazer upload de públicos-alvo gerados externamente?
 
-Para carregar públicos gerados externamente, você precisa ter as permissões &quot;Gerenciar públicos-alvo/segmentos&quot; e &quot;Gerenciar conjuntos de dados&quot;. Não há controles de função específicos necessários para fazer upload de públicos-alvo gerados externamente.
+Para carregar públicos gerados externamente, você precisa ter as permissões &quot;Exibir públicos-alvo/segmentos&quot;, &quot;Gerenciar públicos-alvo/segmentos&quot;, &quot;Exibir conjuntos de dados&quot;, &quot;Gerenciar conjuntos de dados&quot;, &quot;Exibir fontes&quot; e &quot;Gerenciar fontes&quot;. Não há controles de função específicos necessários para fazer upload de públicos-alvo gerados externamente.
 
 ### O que acontece quando carrego um público-alvo gerado externamente?
 

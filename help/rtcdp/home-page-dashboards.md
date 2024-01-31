@@ -4,10 +4,10 @@ title: Página inicial e painéis do Real-time Customer Data Platform
 description: Painéis, página inicial e experiência do usuário iniciante da Adobe Experience Platform
 feature: Dashboards, Get Started
 exl-id: ced5b69c-5bb5-4e06-9cb4-938e36e6e5cc
-source-git-commit: f7f49e4158f3aa95c3e96d3687642392e237aabc
+source-git-commit: d052f307d91890f89d6cb3f18525fe395c116f95
 workflow-type: tm+mt
-source-wordcount: '850'
-ht-degree: 7%
+source-wordcount: '915'
+ht-degree: 6%
 
 ---
 
@@ -25,10 +25,10 @@ Este documento fornece uma visão geral da página inicial da Real-Time CDP e do
 
 A variável [!UICONTROL Introdução ao Perfil de cliente em tempo real] O widget está dividido em quatro seções:
 
-* **Assimilar dados na plataforma**: este widget direciona você para o catálogo de códigos-fonte. Use o catálogo de fontes para selecionar uma fonte e assimilar seus dados no Experience Platform. Para obter mais informações, leia a [visão geral das origens](../sources/home.md)
-* **Estruturas de dados do modelo**: este widget direciona você para a visão geral dos esquemas. Use a visão geral de esquemas para procurar esquemas existentes ou criar blocos de construção que descrevam a estrutura dos dados. Para obter mais informações, leia a [visão geral de esquemas](../xdm/home.md).
-* **Segmentar públicos**: esse widget direciona você para a [!DNL Segment Builder] na interface. Use o [!DNL Segment Builder] para interagir com elementos de dados do perfil e definir regras para seus segmentos. Para obter mais informações, leia a [Visão geral do serviço de segmentação](../segmentation/home.md).
-* **Enviar dados para destinos**: esse widget direciona você para o catálogo de destinos. Use o catálogo de destinos para selecionar um destino ao qual você possa se conectar e enviar segmentos. Para obter mais informações, leia a [visão geral dos destinos](../destinations/home.md)
+* **Assimilar dados na plataforma**: este widget direciona você para o catálogo de códigos-fonte. Use o catálogo de fontes para selecionar uma fonte e assimilar seus dados no Experience Platform. Selecionar **[Configurar fontes]** para navegar até o catálogo de origens. Para obter mais informações, leia a [visão geral das origens](../sources/home.md).
+* **Estruturas de dados do modelo**: este widget direciona você para a visão geral dos esquemas. Use a visão geral de esquemas para procurar esquemas existentes ou criar um blueprint que descreva a estrutura de seus dados. Selecionar **[!UICONTROL Criar esquema]** para navegar até a interface de criação do esquema. Para obter mais informações, leia a [visão geral de esquemas](../xdm/home.md).
+* **Criar públicos-alvo**: esse widget direciona você para o Construtor de segmentos na interface do usuário. Use o Construtor de segmentos para interagir com elementos de dados do Perfil e definir os critérios para a definição do segmento. Selecionar **[!UICONTROL Criar público]** para navegar até o Construtor de segmentos. Para obter mais informações, leia a [Visão geral do serviço de segmentação](../segmentation/home.md).
+* **Enviar dados para destinos**: esse widget direciona você para o catálogo de destinos. Use o catálogo de destinos para selecionar um destino ao qual você possa se conectar e enviar segmentos. Selecionar **[!UICONTROL Configurar destinos]** para navegar até o catálogo de destinos. Para obter mais informações, leia a [visão geral dos destinos](../destinations/home.md).
 
 ![A página inicial da Interface do usuário do Platform que exibe o widget de introdução](assets/platform-home/getting-started-widget.png)
 
@@ -49,9 +49,9 @@ O quadro de classificação mostra o número total atual de esquemas, conjuntos 
 ![A seção de quadro de classificação na página inicial da interface do usuário da plataforma.](assets/platform-home/leaderboard.png)
 
 * **Total de esquemas**: A variável **Total de esquemas** O contador exibe o número de schemas no sistema. Esse contador é atualizado quando um esquema é criado. Para obter mais informações, leia a [visão geral de esquemas](../xdm/home.md).
-* **Total de conjuntos de dados**: A variável **Total de conjuntos de dados** contador mostra o número de conjuntos de dados no sistema e a quantidade de dados em [!DNL Platform]. Esse contador é atualizado quando um conjunto de dados é criado. Para obter mais informações sobre conjuntos de dados, leia a [visão geral dos conjuntos de dados](../catalog/datasets/overview.md).
-* **Total de perfis**: A variável **Perfis** contagem mostra o número total de perfis que sua organização tem no Experience Platform. Ela não inclui fragmentos de perfil. Este é o seu público endereçável total. Essa contagem usa o padrão [política de mesclagem](profile/merge-policies.md) conforme definido na configuração da política de mesclagem no Perfil do cliente em tempo real. O número de perfis é atualizado uma vez a cada 24 horas. Para obter mais informações sobre perfis, leia a [Visão geral do Perfil do cliente em tempo real](../profile/home.md).
-* **Total de segmentos**: **Segmentos** mostra o número total de segmentos criados para a organização. Esse número é atualizado quando novos segmentos são criados. Para obter mais informações sobre segmentos, leia a [Visão geral do serviço de segmentação](../segmentation/home.md).
+* **Total de conjuntos de dados**: A variável **Total de conjuntos de dados** o contador mostra o número de conjuntos de dados no sistema e a quantidade de dados no Experience Platform. Esse contador é atualizado quando um conjunto de dados é criado. Para obter mais informações sobre conjuntos de dados, leia a [visão geral dos conjuntos de dados](../catalog/datasets/overview.md).
+* **Total de perfis**: A variável **Perfis** contagem mostra o número total de perfis que sua organização tem no Experience Platform. Ela não inclui fragmentos de perfil. Este é o seu público endereçável total. Essa contagem usa o padrão [política de mesclagem](profile/merge-policies.md) conforme definido na configuração da política de mesclagem no Perfil do cliente em tempo real. O número de perfis é atualizado uma vez a cada 24 horas. Selecionar **[!UICONTROL Perfis]** para navegar até a página Visão geral de perfis e visualizar todas as suas Métricas de perfil. Para obter mais informações sobre perfis, leia a [Visão geral do Perfil do cliente em tempo real](../profile/home.md).
+* **Total de públicos**: A variável **Total de públicos** contador mostra o número total de públicos-alvo criados para sua organização. Esse número é atualizado quando novos públicos-alvo são criados. Para obter mais informações sobre públicos-alvo, leia a [Visão geral do serviço de segmentação](../segmentation/home.md).
 
 ### Itens recentes
 

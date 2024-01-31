@@ -3,10 +3,10 @@ title: Documentação do produto Real-Time CDP
 description: Saiba como usar o Adobe Real-Time CDP.
 solution: Real-Time Customer Data Platform
 product: Real-Time Customer Data Platform
-source-git-commit: 697f785e939b9817f80a31dfd0070f9dadd48baf
+source-git-commit: d5a8faa7b854f6d0b4ef36dc86bd78bf4e6ad6f4
 workflow-type: tm+mt
-source-wordcount: '1006'
-ht-degree: 3%
+source-wordcount: '1071'
+ht-degree: 4%
 
 ---
 
@@ -20,17 +20,17 @@ Dê uma olhada nos últimos aprimoramentos feitos no produto e na documentação
 
 >[!BEGINTABS]
 
+>[!TAB Playbooks de caso de uso]
+
+A variável [!UICONTROL Playbooks de caso de uso] A funcionalidade do agora está disponível para todos os clientes do Real-Time CDP e do Adobe Journey Optimizer. [!UICONTROL Playbooks de caso de uso] foram projetados para ajudar os usuários a superar os desafios ao começar a usar o Real-time Customer Data Platform ou o Adobe Journey Optimizer. Quando não tiver certeza de onde começar ou como criar os ativos certos para os casos de uso desejados, os manuais de casos de uso fornecem inspiração e criam ativos diferentes para que você teste e importe para ambientes de produção quando estiver pronto.
+
+[![imagem](assets/do-not-localize/learn-more-button.svg)](/help/use-case-playbooks/playbooks/overview.md)
+
 >[!TAB Ferramentas de sandbox]
 
 Use o recurso de ferramenta de sandbox para melhorar a precisão da configuração em sandboxes e exportar e importar configurações facilmente entre sandboxes. Você pode usar o recurso de ferramenta sandbox para selecionar objetos diferentes e exportá-los em um pacote.
 
 [![imagem](assets/do-not-localize/learn-more-button.svg)](/help/sandboxes/ui/sandbox-tooling.md)
-
->[!TAB (Disponibilidade limitada) Ativar públicos-alvo da conta]
-
-Os clientes B2B do Real-Time CDP agora podem ativar [públicos-alvo da conta](/help/segmentation/ui/account-audiences.md) para certos destinos.
-
-[![imagem](assets/do-not-localize/learn-more-button.svg)](/help/destinations/ui/activate-account-audiences.md)
 
 >[!TAB Atributos computados]
 
@@ -202,4 +202,4 @@ Assista a estes três vídeos introdutórios para obter uma compreensão mais pr
 </tr></table>
 
 <table style="table-layout:auto"><tr style="border: 0;"><td><img src="assets/do-not-localize/newsletter.png"></td><td>
-<b>Mantenha-se informado, contribua com a comunidade e aprimore sua experiência com o Adobe Real-Time CDP!</b><br/>Visite a comunidade do Real-time Customer Data Platform para discutir a funcionalidade com outros profissionais. <a href="https://experienceleaguecommunities.adobe.com/t5/real-time-customer-data-platform/ct-p/Real-time-CDP">Participe da comunidade hoje mesmo!</a></td></tr></table>
+<b>Mantenha-se informado, contribua com a comunidade e aprimore sua experiência com o Adobe Real-Time CDP!</b><br/>Visite a comunidade do Real-time Customer Data Platform para discutir a funcionalidade com outros profissionais. <a href="https://experienceleaguecommunities.adobe.com/t5/real-time-customer-data-platform/ct-p/Real-time-CDP">Participe da comunidade hoje mesmo.</a></td></tr></table>

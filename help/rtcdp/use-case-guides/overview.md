@@ -2,7 +2,7 @@
 title: Casos de uso de exemplo no Real-Time CDP
 description: Visualize exemplos de casos de uso entre serviços para aproveitar ao máximo a implementação do Real-Time CDP.
 feature: Use Cases
-source-git-commit: f342020a0e821172a7ceca95265a9d71f64f5347
+source-git-commit: a58476e0a52cce763a114b2b4f4314fdb2e3f4c9
 workflow-type: tm+mt
 source-wordcount: '351'
 ht-degree: 6%
@@ -76,11 +76,11 @@ Os casos de uso de amostra podem ser agrupados em casos de aquisição de client
 <table style="margin-top: 0 !important">
 <tr>
   <td>
-    <a href="../partner-data/prospecting.md">
+    <a href="../partner-data/supplement-first-party-profiles.md">
       <img alt="Suplementar perfis próprios com atributos fornecidos por parceiros" src="/help/rtcdp/assets/partner-data/prospecting/prospecting-use-case-overview.png" />
     </a>
     <div>
-      <a href="../partner-data/prospecting.md">
+      <a href="../partner-data/supplement-first-party-profiles.md">
     <strong>Suplemente perfis primários com atributos fornecidos pelo parceiro</strong>
     </a>
     </div>

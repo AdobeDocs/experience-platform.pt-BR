@@ -2,10 +2,11 @@
 solution: Experience Platform
 title: Introdução
 description: Saiba como começar a usar a funcionalidade dos manuais de estratégia de casos de uso.
+role: Admin
 exl-id: 1c39792e-49fe-4c5f-9796-fa29f60b7461
-source-git-commit: d6be5d3e21ea924ff98c400b972709b1f60c25eb
+source-git-commit: ecce42e2c759bda31bc37d0aae1da2c7b3d141fc
 workflow-type: tm+mt
-source-wordcount: '928'
+source-wordcount: '927'
 ht-degree: 14%
 
 ---
@@ -65,7 +66,7 @@ Para criar e gerenciar esquemas, utilize as permissões de modelagem de dados; *
 
 **Permissões para destinos**
 
-Para criar e gerenciar destinos, use as permissões de Destinos; **[!UICONTROL Gerenciar]**, **[!UICONTROL Destinos]**, **[!UICONTROL Exibir destinos]**, **[!UICONTROL Ativar destinos]**, **[!UICONTROL Ativar segmento sem mapeamento]**, **[!UICONTROL Gerenciar e ativar destino do conjunto de dados]**, UICONTROL Criação de destino*.
+Para criar e gerenciar destinos, use as permissões de Destinos; **[!UICONTROL Gerenciar]**, **[!UICONTROL Destinos]**, **[!UICONTROL Exibir destinos]**, **[!UICONTROL Ativar destinos]**, **[!UICONTROL Ativar segmento sem mapeamento]**, **[!UICONTROL Gerenciar e ativar destino do conjunto de dados]**, **[!UICONTROL Criação de destino]**.
 
 **Permissões para jornadas**
 

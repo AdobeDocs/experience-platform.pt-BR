@@ -4,8 +4,7 @@ user-guide-title: Manuais de estratégia de casos de uso da Adobe Experience Pla
 breadcrumb-title: Manuais de estratégia de casos de uso da Adobe Experience Platform
 user-guide-description: Use os manuais de estratégias da Adobe Experience Platform para gerar ativos e começar a usar vários casos de uso de marketing.
 feature: Playbooks
-hide: true
-source-git-commit: 3db5a24f970d6778ec737857ab5d06beaabfc18a
+source-git-commit: 93b28a2cf89cac811d17bb990fc78fa87ee86969
 workflow-type: tm+mt
 source-wordcount: '66'
 ht-degree: 81%

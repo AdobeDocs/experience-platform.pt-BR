@@ -2,15 +2,16 @@
 solution: Experience Platform
 title: Visão geral do reconhecimento de dados nos manuais de caso de uso
 description: Saiba como acelerar o tempo de implantação copiando os ativos gerados na sandbox inspiradora final para outras sandboxes.
+role: Developer
 exl-id: 537eff13-f5fe-4cc9-9769-ab47b3cecda7
-source-git-commit: d6be5d3e21ea924ff98c400b972709b1f60c25eb
+source-git-commit: ecce42e2c759bda31bc37d0aae1da2c7b3d141fc
 workflow-type: tm+mt
-source-wordcount: '921'
+source-wordcount: '912'
 ht-degree: 0%
 
 ---
 
-# Visão geral do reconhecimento de dados nos manuais de caso de uso
+# Publicar ativos gerados pelo manual em outras sandboxes {#publish-to-other-sandboxes}
 
 Os manuais de casos de uso são modelos de marketing criados para gerar ativos, como públicos, esquemas ou jornadas, para casos de uso de marketing comum. Você pode testar os ativos criados por manuais na sandbox inspiradora e, quando estiver pronto, poderá importar os ativos para outras sandboxes de desenvolvimento para testes adicionais com os dados disponíveis nessas sandboxes. Quando estiver satisfeito com o teste, você poderá mover os ativos das sandboxes de desenvolvimento para as sandboxes de produção.
 
@@ -97,7 +98,3 @@ A criação de uma instância gera um conjunto de ativos, como jornadas, segment
 ## Próximas etapas
 
 Depois de ler este guia, agora você tem uma melhor compreensão de como aproveitar os manuais de casos de uso juntamente com o [ferramentas de sandbox](/help/sandboxes/ui/sandbox-tooling.md#monitor-import-jobs-and-view-import-objects-details) para criar jornadas executáveis que façam referência aos seus esquemas. Saiba mais sobre o comum [Casos de uso do Real-Time CDP](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md).
-
-### Mais ajuda sobre este tópico
-
-[Ferramentas de sandbox](/help/sandboxes/ui/sandbox-tooling.md)

@@ -2,11 +2,12 @@
 solution: Experience Platform
 title: Criar, compartilhar e reutilizar instâncias do manual de estratégia
 description: Saiba como criar, compartilhar e reutilizar instâncias do manual de estratégia para concluir seu caso de uso de marketing.
+role: User, Developer
 exl-id: b06d8186-c41f-4150-bac4-69c616151ef9
-source-git-commit: bf6bcbe3314e87cd3162afe23068cfff12aa78a8
+source-git-commit: c4be3864c680a569166d53f18ec0ee28a52c9ea7
 workflow-type: tm+mt
-source-wordcount: '740'
-ht-degree: 86%
+source-wordcount: '787'
+ht-degree: 81%
 
 ---
 
@@ -73,6 +74,12 @@ Ao criar várias instâncias do mesmo manual de estratégia, é possível implem
 É possível compartilhar a instância gerada e os ativos com outros membros da equipe. Para fazer isso, copie o link do URL do navegador e compartilhe-o com sua equipe para fornecer uma visão geral dos ativos gerados.
 
 ![URL destacado em uma visualização do manual de estratégia de caso de uso.](/help/use-case-playbooks/assets/playbooks/ui-guide/playbook-url.png)
+
+## Apresentação em vídeo do processo completo do manual
+
+Assista a este vídeo para saber como descobrir, criar, publicar e solucionar problemas de instâncias de um manual de casos de uso de ponta a ponta, bem como copiar os ativos gerados pelo manual para outras sandboxes configuradas em sua organização.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3427058/?learn=on)
 
 ## Próximas etapas {#next-steps}
 

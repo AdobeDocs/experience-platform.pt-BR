@@ -2,10 +2,11 @@
 solution: Experience Platform
 title: Limitações conhecidas e solução de problemas com os manuais
 description: Saiba mais sobre os problemas conhecidos e os problemas comuns com os manuais e como solucioná-los
+role: User, Developer, Admin
 exl-id: 2604ce26-bcf9-46e1-bc10-30252a113159
-source-git-commit: d6be5d3e21ea924ff98c400b972709b1f60c25eb
+source-git-commit: ecce42e2c759bda31bc37d0aae1da2c7b3d141fc
 workflow-type: tm+mt
-source-wordcount: '356'
+source-wordcount: '395'
 ht-degree: 2%
 
 ---
@@ -13,7 +14,11 @@ ht-degree: 2%
 
 # Solução de problemas e limitações conhecidas {#troubleshooting-known-limitations}
 
+Saiba como solucionar erros ao trabalhar com manuais de casos de uso e entender as limitações conhecidas da versão de disponibilidade geral.
+
 ## Solução de problemas {#troubleshooting}
+
+Exibir sugestões de solução de problemas para erros comuns ao trabalhar com manuais de casos de uso
 
 ### Superfícies do Adobe Journey Optimizer não configuradas
 
@@ -35,7 +40,7 @@ Algumas limitações conhecidas são exibidas ao criar uma instância de um manu
 
 * Ao usar o [funcionalidade de reconhecimento de dados](/help/use-case-playbooks/playbooks/data-awareness.md) para promover o esquema da sandbox inspiradora para a sandbox de desenvolvimento, você pode ver alguns erros semelhantes aos abaixo:
 
-![schema-errors](/help/use-case-playbooks/assets/playbooks/troubleshooting/schema-errors.png)
+![Erros exibidos no fluxo de trabalho de mapeamento de esquema.](/help/use-case-playbooks/assets/playbooks/troubleshooting/schema-errors.png){width="1000" zoomable="yes"}
 
 Isso ocorre porque alguns campos gerados a partir do esquema não estão presentes no esquema na sandbox de desenvolvimento para a qual você está copiando. Procure o que são esses campos. Em seguida, volte para a sandbox de desenvolvimento, onde é possível:
 

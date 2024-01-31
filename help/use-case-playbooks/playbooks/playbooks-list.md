@@ -2,9 +2,10 @@
 solution: Experience Platform
 title: Playbooks de caso de uso disponíveis para Real-time Customer Data Platform e Adobe Journey Optimizer.
 description: Uma lista de todos os manuais no Real-time Customer Data Platform e no Adobe Journey Optimizer.
-source-git-commit: bf6bcbe3314e87cd3162afe23068cfff12aa78a8
+role: User
+source-git-commit: ecce42e2c759bda31bc37d0aae1da2c7b3d141fc
 workflow-type: tm+mt
-source-wordcount: '765'
+source-wordcount: '753'
 ht-degree: 0%
 
 ---
@@ -54,18 +55,18 @@ Leia esta página para obter uma visão geral de todos os manuais disponíveis q
 
 | Nome do manual | Descrição |
 | ------------- | ----------- |
-| Carrinho abandonado: Mercadorias - Para ativação | Redirecione os fãs depois que eles deixarem seu site ou aplicativo após adicionar a mercadoria ao carrinho. |
-| Carrinho abandonado: Produto - Para ativação | Redirecione os compradores depois que eles deixarem o site ou aplicativo após adicionar produtos ao carrinho. |
-| Carrinho abandonado: Reserva - Para ativação | Redirecione os convidados depois que eles deixarem seu site ou aplicativo após adicionar uma nova reserva ao carrinho. |
-| Promoção de destino - Para ativação | Convidados do Target para fazer uma Reserva durante uma promoção de destino de viagem em andamento. |
-| Promoção de Jogos - Para Ativação | Direcione os fãs para comprar ingressos para um jogo futuro. |
+| Carrinho abandonado: Mercadorias — para ativação | Redirecione os fãs depois que eles deixarem seu site ou aplicativo após adicionar a mercadoria ao carrinho. |
+| Carrinho Abandonado: Produto - Para Ativação | Redirecione os compradores depois que eles deixarem o site ou aplicativo após adicionar produtos ao carrinho. |
+| Carrinho Abandonado: Reserva — Para Ativação | Redirecione os convidados depois que eles deixarem seu site ou aplicativo após adicionar uma nova reserva ao carrinho. |
+| Promoção de Destino - Para Ativação | Convidados do Target para fazer uma Reserva durante uma promoção de destino de viagem em andamento. |
+| Promoção de Jogos—Para Ativação | Direcione os fãs para comprar ingressos para um jogo futuro. |
 | Aumentar Compra De Mercadorias Durante O Jogo - Para Ativação | Direcione os fãs para comprar mercadorias enquanto eles estão perto do site do jogo. |
-| Aumentar compra de produto durante visita à loja - Para ativação | Compradores-alvo podem comprar mercadorias enquanto estão próximos à loja. |
-| Aumentar a compra de produtos e serviços durante a permanência - Para ativação | Direcione os convidados a comprar produtos e serviços enquanto estiverem na propriedade. |
-| Promoção Do Produto - Para Ativação Em | Direcione os compradores a comprar produtos durante uma campanha promocional contínua de produtos. |
-| Enviar Uma Mensagem De Aniversário Para Os Fãs - Para Ativação | Direcione os fãs em seu aniversário com uma mensagem de &quot;Feliz aniversário&quot; e uma oferta exclusiva. |
+| Aumente a compra de produtos durante a visita à loja — para ativação | Compradores-alvo podem comprar mercadorias enquanto estão próximos à loja. |
+| Aumente a compra de produtos e serviços durante a permanência — para ativação | Direcione os convidados a comprar produtos e serviços enquanto estiverem na propriedade. |
+| Promoção do Produto - Para Ativação | Direcione os compradores a comprar produtos durante uma campanha promocional contínua de produtos. |
+| Envie Uma Mensagem De Aniversário Para Os Fãs - Para Ativação | Direcione os fãs em seu aniversário com uma mensagem de &quot;Feliz aniversário&quot; e uma oferta exclusiva. |
 | Envie Uma Mensagem De Aniversário Aos Convidados - Para Ativação | Direcione os convidados em seu aniversário com uma mensagem de &quot;Feliz Aniversário&quot; e uma oferta exclusiva. |
-| Enviar uma mensagem de aniversário aos compradores - Para ativação | Direcione os compradores em seu aniversário com uma mensagem de &quot;Feliz aniversário&quot; e uma oferta exclusiva. |
+| Envie Uma Mensagem De Aniversário Aos Compradores - Para Ativação | Direcione os compradores em seu aniversário com uma mensagem de &quot;Feliz aniversário&quot; e uma oferta exclusiva. |
 
 {style="table-layout:auto"}
 

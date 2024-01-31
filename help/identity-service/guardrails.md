@@ -3,9 +3,9 @@ keywords: Experience Platform;identidade;serviço de identidade;solução de pro
 title: Medidas de proteção do serviço de identidade
 description: Este documento fornece informações sobre limites de uso e taxa para dados do Serviço de identidade para ajudar você a otimizar o uso do gráfico de identidade.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
+source-git-commit: 1576405e6f1d674a75446f887c2912c4480d0e28
 workflow-type: tm+mt
-source-wordcount: '1507'
+source-wordcount: '1526'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ A tabela a seguir descreve os limites estáticos aplicados aos dados de identida
 
 | Grade de Proteção | Limite | Notas |
 | --- | --- | --- |
-| Número de identidades em um gráfico | 50 | Quando um gráfico com 50 identidades vinculadas é atualizado, o Serviço de identidade aplica um mecanismo &quot;primeiro a entrar, primeiro a sair&quot; e exclui a identidade mais antiga para abrir espaço para a identidade mais recente. A exclusão se baseia no tipo de identidade e no carimbo de data e hora. O limite é aplicado no nível da sandbox. Para obter mais informações, leia a seção sobre [noções básicas sobre a lógica de exclusão](#deletion-logic). |
+| Número de identidades em um gráfico | 50 | Quando um gráfico com 50 identidades vinculadas é atualizado, o Serviço de identidade aplica um mecanismo &quot;primeiro a entrar, primeiro a sair&quot; e exclui a identidade mais antiga para abrir espaço para a identidade mais recente desse gráfico (**Nota**: o Perfil do cliente em tempo real não é afetado). A exclusão se baseia no tipo de identidade e no carimbo de data e hora. O limite é aplicado no nível da sandbox. Para obter mais informações, leia a seção sobre [noções básicas sobre a lógica de exclusão](#deletion-logic). |
 | Número de links para uma identidade para uma única assimilação em lote | 50 | Um único lote pode conter identidades anômalas que causam mesclagens de gráficos indesejadas. Para evitar que isso aconteça, o Serviço de identidade não assimilará identidades que já estejam vinculadas a 50 ou mais identidades. |
 | Número de identidades em um registro XDM | 20 | O número mínimo de registros XDM necessários é dois. |
 | Número de namespaces personalizados | None | Não há limites para o número de namespaces personalizados que você pode criar. |
@@ -135,7 +135,7 @@ Neste exemplo, ECID:32110 é assimilado e vinculado a um gráfico grande em `tim
 
 >[!TAB Processo de exclusão]
 
-Como resultado, o Serviço de identidade exclui a identidade mais antiga com base no carimbo de data e hora e no tipo de identidade. Nesse caso, a ECID:35577 é excluída.
+Como resultado, o Serviço de identidade exclui a identidade mais antiga com base no carimbo de data e hora e no tipo de identidade. Nesse caso, a ECID:35577 é excluída somente do gráfico de identidade.
 
 ![](./images/guardrails/during-split.png)
 
@@ -166,7 +166,7 @@ No exemplo abaixo, ECID:21011 é assimilado e vinculado ao gráfico em `timestam
 
 >[!TAB Processo de exclusão]
 
-Como resultado, o Serviço de identidade exclui a identidade mais antiga, que neste caso é ECID:35577. A supressão da referência ECID:35577 também resulta na supressão do seguinte:
+Como resultado, o Serviço de identidade exclui a identidade mais antiga somente do gráfico de identidade, que neste caso é ECID:35577. A supressão da referência ECID:35577 também resulta na supressão do seguinte:
 
 * O link entre a ID de CRM: 60013 e a ECID:35577 excluída agora, resultando em um cenário de divisão de gráfico.
 * IDFA: 32110, IDFA: 02383, e as identidades restantes representadas por `(...)`. Essas identidades são excluídas porque, individualmente, não estão vinculadas a outras identidades e, portanto, não podem ser representadas em um gráfico.

@@ -1,7 +1,7 @@
 ---
 title: Notas da versão de janeiro de 2024 da Adobe Experience Platform
 description: As notas da versão de janeiro de 2024 da Adobe Experience Platform.
-source-git-commit: 88dc2fc84002ae4400e4a11370ac3354cd38cd0e
+source-git-commit: a4d6c72cc2c3f5f547a3c66e509d520d3fed29ea
 workflow-type: tm+mt
 source-wordcount: '976'
 ht-degree: 40%
@@ -45,7 +45,7 @@ A preparação de dados permite que os engenheiros de dados mapeiem, transformem
 
 | Recurso | Descrição |
 | --- | --- |
-| Novas funções do mapeador | <ul><li>`object_to_map`: Use o `object_to_map` função para criar tipos de dados de mapa. Esta função suporta várias sintaxes diferentes. Para obter mais informações, leia o guia em [funções para hierarquias - objetos](../../data-prep/functions.md#objects). </li><li>`to_map`: Use o `to_map` Função para criar um mapa com determinado nome de campo e pares de valores usando objetos. Para obter mais informações, leia o guia em [funções para hierarquias - mapas](../../data-prep/functions.md#objects). </li><li>`array_to_map`: Use o `array_to_map` Função para criar um mapa com determinado nome de campo e pares de valores usando matrizes de objetos. Para obter mais informações, leia o guia em [funções para hierarquias - mapas](../../data-prep/functions.md#objects). |
+| Novas funções do mapeador | <ul><li>`object_to_map`: Use o `object_to_map` função para criar tipos de dados de mapa. Esta função suporta várias sintaxes diferentes. Para obter mais informações, leia o guia em [funções para hierarquias - objetos](../../data-prep/functions.md#objects). </li><li>`to_map`: Use o `to_map` Função para criar um mapa com determinado nome de campo e pares de valores usando objetos. Para obter mais informações, leia o guia em [funções para hierarquias - mapas](../../data-prep/functions.md#map). </li><li>`array_to_map`: Use o `array_to_map` Função para criar um mapa com determinado nome de campo e pares de valores usando matrizes de objetos. Para obter mais informações, leia o guia em [funções para hierarquias - mapas](../../data-prep/functions.md#map). |
 
 {style="table-layout:auto"}
 

@@ -1,10 +1,10 @@
 ---
 title: Notas da versão de janeiro de 2024 da Adobe Experience Platform
 description: As notas da versão de janeiro de 2024 da Adobe Experience Platform.
-source-git-commit: a4d6c72cc2c3f5f547a3c66e509d520d3fed29ea
+source-git-commit: fc7183cbc1ca3e27999d0ddd64c83ee19ccb1200
 workflow-type: tm+mt
-source-wordcount: '976'
-ht-degree: 40%
+source-wordcount: '1038'
+ht-degree: 38%
 
 ---
 
@@ -74,6 +74,14 @@ Para obter mais informações sobre painéis, incluindo como conceder permissõe
 | Destino | Descrição |
 | ----------- | ----------- |
 | [Conexão pública](../../destinations/catalog/advertising/pubmatic.md) | Use este destino para enviar dados de público-alvo para a [!DNL PubMatic Connect] plataforma. |
+
+{style="table-layout:auto"}
+
+**Funcionalidades novas ou atualizadas** {#destinations-new-updated-functionality}
+
+| Funcionalidade | Descrição |
+| ----------- | ----------- |
+| Novo **função assumida** tipo de autenticação para destinos do Amazon S3 | Use o novo tipo de autenticação de função assumida ao conectar o Experience Platform aos buckets do Amazon S3 se não quiser compartilhar chaves de conta e chaves secretas com o Experience Platform. Leia mais sobre o novo método de autenticação na seção [seção de autenticação](/help/destinations/catalog/cloud-storage/amazon-s3.md#assumed-role-authentication) da documentação do Amazon S3. |
 
 {style="table-layout:auto"}
 

@@ -2,10 +2,10 @@
 title: Conexão com o Amazon S3
 description: Crie uma conexão de saída ativa com seu armazenamento Amazon Web Services (AWS) S3 para exportar arquivos de dados CSV da Adobe Experience Platform periodicamente para seus próprios buckets do S3.
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: c126e6179309ccfbedfbfe2609cfcfd1ea45f870
 workflow-type: tm+mt
-source-wordcount: '1055'
-ht-degree: 16%
+source-wordcount: '1354'
+ht-degree: 13%
 
 ---
 
@@ -13,12 +13,17 @@ ht-degree: 16%
 
 ## Log de alterações de destino {#changelog}
 
-Com a versão de julho de 2023 do Experience Platform, a [!DNL Amazon S3] O destino fornece novas funcionalidades, conforme listado abaixo:
++++ Exibir changelog
 
-* [Suporte à exportação de conjuntos de dados](/help/destinations/ui/export-datasets.md).
-* [Opções de nomenclatura de arquivo](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) adicionais.
-* Capacidade de definir cabeçalhos de arquivos personalizados em seus arquivos exportados por meio da [etapa de mapeamento aprimorado](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
-* [Capacidade de personalizar a formatação de arquivos de dados CSV exportados](/help/destinations/ui/batch-destinations-file-formatting-options.md).
+
+| Mês de lançamento | Tipo de atualização | Descrição |
+|---|---|---|
+| Janeiro de 2024 | Atualização de funcionalidade e documentação | O conector de destino do Amazon S3 agora oferece suporte a um novo tipo de autenticação de função presumida. Leia mais sobre isso no [seção de autenticação](#assumed-role-authentication). |
+| Julho de 2023 | Atualização de funcionalidade e documentação | Com a versão de julho de 2023 do Experience Platform, a [!DNL Amazon S3] O destino fornece novas funcionalidades, conforme listado abaixo: <br><ul><li>[Suporte à exportação de conjuntos de dados](/help/destinations/ui/export-datasets.md)</li><li>[Opções de nomenclatura de arquivo](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) adicionais.</li><li>Capacidade de definir cabeçalhos de arquivos personalizados em seus arquivos exportados por meio da [etapa de mapeamento aprimorado](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).</li><li>[Capacidade de personalizar a formatação de arquivos de dados CSV exportados](/help/destinations/ui/batch-destinations-file-formatting-options.md).</li></ul> |
+
+{style="table-layout:auto"}
+
++++
 
 ## Conecte-se ao seu [!DNL Amazon S3] armazenamento por meio da API ou da interface {#connect-api-or-ui}
 
@@ -64,12 +69,37 @@ Para se conectar a esse destino, siga as etapas descritas no [tutorial de config
 >title="Chave pública RSA"
 >abstract="Opcionalmente, é possível anexar sua chave pública formatada em RSA para adicionar criptografia aos arquivos exportados. Veja um exemplo de uma chave corretamente formatada no link da documentação abaixo."
 
-Para autenticar no destino, preencha os campos obrigatórios e selecione **[!UICONTROL Conectar ao destino]**.
+Para autenticar no destino, preencha os campos obrigatórios e selecione **[!UICONTROL Conectar ao destino]**. O destino do Amazon S3 é compatível com dois métodos de autenticação:
+
+* Autenticação da chave de acesso e da chave secreta
+* Autenticação de função presumida
+
+#### Autenticação da chave de acesso e da chave secreta
+
+Use esse método de autenticação quando quiser inserir sua chave de acesso e chave secreta do Amazon S3 para permitir que o Experience Platform exporte dados para suas propriedades do Amazon S3.
+
+![Imagem dos campos obrigatórios ao selecionar a autenticação de chave de acesso e chave secreta.](/help/destinations/assets/catalog/cloud-storage/amazon-s3/access-key-secret-key-authentication.png)
 
 * **[!DNL Amazon S3]chave de acesso** e **[!DNL Amazon S3]chave secreta**: Em [!DNL Amazon S3], gerar um `access key - secret access key` emparelhe para conceder acesso à Platform ao seu [!DNL Amazon S3] conta. Saiba mais na [Documentação do Amazon Web Services](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
 * **[!UICONTROL Chave de criptografia]**: como opção, você pode anexar sua chave pública formatada em RSA para adicionar criptografia aos arquivos exportados. Veja um exemplo de uma chave de criptografia formatada corretamente na imagem abaixo.
 
   ![Imagem que mostra um exemplo de uma chave PGP formatada corretamente na interface.](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+
+#### Função presumida {#assumed-role-authentication}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_s3_assumed_role"
+>title="Autenticação de função presumida"
+>abstract="Use esse tipo de autenticação se preferir não compartilhar chaves de conta e chaves secretas com o Adobe. Em vez disso, o Experience Platform se conecta ao local do Amazon S3 usando acesso com base em função. Cole o ARN da função que você criou no AWS para o usuário Adobe. O padrão é semelhante a `arn:aws:iam::800873819705:role/destinations-role-customer` "
+
+![Imagem dos campos obrigatórios ao selecionar a autenticação de função presumida.](/help/destinations/assets/catalog/cloud-storage/amazon-s3/assumed-role-authentication.png)
+
+Use esse tipo de autenticação se preferir não compartilhar chaves de conta e chaves secretas com o Adobe. Em vez disso, o Experience Platform se conecta ao local do Amazon S3 usando acesso com base em função.
+
+Para fazer isso, é necessário criar no console do AWS um usuário presumido para o Adobe com o [permissões necessárias corretas](#required-s3-permission) para gravar em seus buckets do Amazon S3. Criar um **[!UICONTROL Entidade confiável]** no AWS com a conta Adobe **[!UICONTROL 670664943635]**. Para obter mais informações, consulte [Documentação do AWS sobre criação de funções](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html).
+
+* **[!DNL Role]**: Cole o ARN da função que você criou no AWS para o usuário Adobe. O padrão é semelhante a `arn:aws:iam::800873819705:role/destinations-role-customer`.
+* **[!UICONTROL Chave de criptografia]**: como opção, você pode anexar sua chave pública formatada em RSA para adicionar criptografia aos arquivos exportados. Veja um exemplo de uma chave de criptografia formatada corretamente na imagem abaixo.
 
 ### Preencher detalhes do destino {#destination-details}
 

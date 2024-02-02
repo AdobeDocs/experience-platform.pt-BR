@@ -4,9 +4,9 @@ user-guide-title: Guia de destinos
 user-guide-description: Ative seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas por email, publicidade direcionada e muito mais.
 description: Este documento lista o índice dos destinos do Adobe Experience Platform
 feature: Destinations
-source-git-commit: 2e8aac316f5e5edf169181b9e371dcd91e81c40d
+source-git-commit: 1d8ba11b1043fa68bf3c0205e8cecc2de8910234
 workflow-type: tm+mt
-source-wordcount: '1188'
+source-wordcount: '1190'
 ht-degree: 5%
 
 ---
@@ -128,7 +128,7 @@ ht-degree: 5%
       * [Data Landing Zone](./catalog/cloud-storage/data-landing-zone.md)
       * [Armazenamento em nuvem Google](./catalog/cloud-storage/google-cloud-storage.md)
       * [Conexão SFTP](./catalog/cloud-storage/sftp.md)
-      * [Endereço IP relacionado à inclui na lista de permissões para destinos SFTP](./catalog/cloud-storage/ip-address-allow-list.md)
+      * [Endereço IP do arquivo de inclui na lista de permissões para destinos de armazenamento na nuvem baseado em arquivo](./catalog/cloud-storage/ip-address-allow-list.md)
    * Destinos do Gerenciamento de Relacionamento com o Cliente (CRM) {#crm}
       * [Conexão de Hubspot](./catalog/crm/hubspot.md)
       * [Conexão com o Salesforce CRM](./catalog/crm/salesforce.md)

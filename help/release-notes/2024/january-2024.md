@@ -1,10 +1,10 @@
 ---
 title: Notas da versão de janeiro de 2024 da Adobe Experience Platform
 description: As notas da versão de janeiro de 2024 da Adobe Experience Platform.
-source-git-commit: 7691e2dd434e13f3cff715fcba9431d985b2be60
+source-git-commit: 7b694ad1b064279fcc0dd09bd1e8761e734e7556
 workflow-type: tm+mt
-source-wordcount: '1478'
-ht-degree: 30%
+source-wordcount: '1553'
+ht-degree: 28%
 
 ---
 
@@ -77,7 +77,7 @@ A Adobe Experience Platform fornece vários painéis para você visualizar insig
 
 | Recurso | Descrição |
 | --- | --- |
-| Exibir SQL | Agora você pode visualizar o SQL por trás de seus Perfis, Públicos, Destinos e insights personalizados e, em seguida, executar a consulta sob demanda por meio do Editor de consultas. Inspire-se no SQL de mais de 40 insights existentes para criar novas consultas que obtêm insights exclusivos dos dados da plataforma com base nas necessidades da empresa. Para obter mais informações, leia o guia em [exibição de insight SQL](../../dashboards/view-sql.md). |
+| Exibir SQL | Agora você pode visualizar o SQL por trás de seus Perfis, Públicos, Destinos e insights personalizados com a opção Exibir SQL e, em seguida, executar a consulta sob demanda por meio do Editor de consultas. Acessar o SQL que capacita seus insights do Real-time Customer Data Platform ajuda a entender a lógica por trás da análise de seu modelo de dados. Essa transparência torna seus dados da Adobe da Real-time CDP mais acessíveis, compreensíveis e impactantes para a tomada de decisões.<br>Inspire-se no SQL de mais de 40 insights existentes para criar novas consultas que obtêm insights exclusivos dos dados da plataforma com base nas necessidades da empresa. O SQL também está disponível para o [Perfis](../../dashboards/insights/profiles.md), [Públicos-alvo](../../dashboards/insights/audiences.md), e [Destinos](../../dashboards/insights/destinations.md) insights na documentação do Experience League. Esses documentos destacam os casos de uso de negócios que podem ser respondidos com os insights padrão. Para obter mais informações, leia o guia em [exibição de insight SQL](../../dashboards/view-sql.md). |
 
 {style="table-layout:auto"}
 

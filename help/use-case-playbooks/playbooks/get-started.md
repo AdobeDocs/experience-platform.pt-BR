@@ -4,9 +4,9 @@ title: Introdução
 description: Saiba como começar a usar a funcionalidade dos manuais de estratégia de casos de uso.
 role: Admin
 exl-id: 1c39792e-49fe-4c5f-9796-fa29f60b7461
-source-git-commit: ecce42e2c759bda31bc37d0aae1da2c7b3d141fc
+source-git-commit: 785e32b27372cef9d23761f648bcbaa431448ce7
 workflow-type: tm+mt
-source-wordcount: '927'
+source-wordcount: '943'
 ht-degree: 14%
 
 ---
@@ -29,6 +29,11 @@ Assista a este vídeo para saber mais sobre as etapas necessárias para criar su
 ## Criar uma sandbox de desenvolvimento {#create-development-sandbox}
 
 Os manuais de casos de uso usam um tipo especial de sandbox de desenvolvimento. Para começar e obter acesso à funcionalidade dos [[!UICONTROL manuais de estratégia de casos de uso]](/help/use-case-playbooks/playbooks/overview.md), [, crie uma nova sandbox de desenvolvimento](/help/sandboxes/ui/user-guide.md#create) (não selecione uma sandbox de produção) com um nome (não um título) que contenha o sufixo `-ucp` ou `-UCP`, conforme mostrado abaixo.
+
+>[!IMPORTANT]
+>
+>Ao criar uma nova sandbox de desenvolvimento, verifique se o nome contém `-ucp` ou `-UCP` no sufixo.
+
 
 ![Criar uma sandbox de desenvolvimento para manuais de estratégia de casos de uso](/help/use-case-playbooks/assets/playbooks/get-started/create-sandbox-ucp.png)
 

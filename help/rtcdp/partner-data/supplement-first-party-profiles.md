@@ -3,7 +3,7 @@ title: Suplementar perfis próprios com atributos fornecidos por parceiros
 description: Saiba como suplementar perfis próprios com atributos de parceiros de dados confiáveis para melhorar sua base de dados, obter novos insights sobre sua base de clientes e aprimorar a otimização do público-alvo.
 feature: Use Cases, Profile Enrichment
 exl-id: ee21b988-88f9-4c8e-bd82-7fc55c37ec24
-source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
+source-git-commit: 9737508bd8435f4edf0e60a3559c1b4352ccb29f
 workflow-type: tm+mt
 source-wordcount: '1256'
 ht-degree: 79%
@@ -30,7 +30,7 @@ A Adobe entende que não há uma abordagem única para todos os casos e permite 
 
 Por exemplo, siga as etapas descritas neste caso de uso quando precisar enriquecer os registros do cliente com sinais demográficos e de intenção.
 
-## Pré-requisitos e planejamento {#prerequisites-and-planning}
+## Pré-requisitos e planejamento
 
 Ao considerar suplementar seus perfis próprios com atributos de parceiros de dados, é recomendável discutir e abordar os seguintes detalhes sobre o ciclo de enriquecimento de dados com o parceiro de dados:
 

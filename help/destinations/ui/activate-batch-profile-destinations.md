@@ -3,10 +3,10 @@ title: Ativar públicos para destinos de exportação de perfil em lote
 type: Tutorial
 description: Saiba como ativar os públicos-alvo no Adobe Experience Platform enviando-os para destinos com base em perfil de lote.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: fbc2a6c81682797af4674adabff358a62d973007
+source-git-commit: a66c4397a02da81e4b3304f3bc975f725f8f8d76
 workflow-type: tm+mt
-source-wordcount: '3765'
-ht-degree: 11%
+source-wordcount: '3797'
+ht-degree: 12%
 
 ---
 
@@ -142,7 +142,12 @@ Use o **[!UICONTROL Agendado]** opção para que o trabalho de ativação seja e
 
 4. Selecionar **[!UICONTROL Criar]** para salvar o cronograma.
 
-### Exportar arquivos incrementais {#export-incremental-files}
+### Exportar arquivos incrementais
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_something"
+>title="Configurar nome de arquivo"
+>abstract="Para destinos com base em arquivo, um nome de arquivo exclusivo é gerado por público-alvo. Use o editor de nome de arquivo para criar e editar um nome de arquivo exclusivo ou manter o nome padrão."
 
 Selecionar **[!UICONTROL Exportar arquivos incrementais]** para acionar uma exportação em que o primeiro arquivo é um instantâneo completo de todas as qualificações de perfil do público-alvo selecionado, e os arquivos subsequentes são qualificações de perfil incrementais desde a exportação anterior.
 
@@ -167,7 +172,7 @@ Selecionar **[!UICONTROL Exportar arquivos incrementais]** para acionar uma expo
 
 4. Selecionar **[!UICONTROL Criar]** para salvar o cronograma.
 
-### Configurar nomes de arquivo {#file-names}
+### Configurar nomes de arquivo
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_filename"

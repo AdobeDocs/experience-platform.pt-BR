@@ -4,7 +4,7 @@ title: Assinar notificações de eventos Adobe I/O
 description: Este documento fornece etapas sobre como assinar notificações de eventos Adobe I/O para serviços da Adobe Experience Platform. Também são fornecidas informações de referência sobre os tipos de evento disponíveis, juntamente com links para documentação adicional sobre como interpretar os dados retornados do evento para cada tipo aplicável [!DNL Platform] serviço.
 feature: Alerts
 exl-id: c0ad7217-ce84-47b0-abf6-76bcf280f026
-source-git-commit: eccd53a8b2076fe23a65aa2e933a7cb871e97f72
+source-git-commit: 06ea57d41269e98ddd984c898f41c478ddefc618
 workflow-type: tm+mt
 source-wordcount: '768'
 ht-degree: 2%
@@ -41,7 +41,7 @@ Acesse o [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) e f
 
 >[!NOTE]
 >
->A notificação de assimilação de dados será descontinuada da assinatura de E/S de Adobe. Em vez disso, você deve usar o **Informações de execução do fluxo de fontes** Evento de E/S.
+>O evento de notificação de assimilação de dados foi descontinuado no Adobe I/O. Em vez disso, você deve usar o **Informações de execução do fluxo de fontes** Evento de E/S.
 
 Depois de criar um novo projeto, acesse a tela de visão geral do projeto. Aqui, selecione **[!UICONTROL Adicionar evento]**.
 

@@ -7,7 +7,7 @@ exl-id: b06d8186-c41f-4150-bac4-69c616151ef9
 source-git-commit: c4be3864c680a569166d53f18ec0ee28a52c9ea7
 workflow-type: tm+mt
 source-wordcount: '787'
-ht-degree: 81%
+ht-degree: 83%
 
 ---
 
@@ -20,7 +20,7 @@ Para usar um manual de estratégia, navegue até **[!UICONTROL Manuais de estrat
 >[!CONTEXTUALHELP]
 >id="platform_playbooks_create"
 >title="Criar instância"
->abstract="Gere uma lista de ativos como jornadas, públicos, esquemas ou destinos para usar em cenários de jornada ou ativação."
+>abstract="Gere uma lista de ativos como jornadas, públicos-alvo, esquemas ou destinos para usar em cenários de jornada ou ativação."
 
 Antes de criar uma instância do manual de estratégia, explore os manuais disponíveis para [encontrar o manual de estratégia correto para você](/help/use-case-playbooks/playbooks/discover.md). Quando estiver pronto para criar uma instância, selecione **[!UICONTROL Criar instância]** para continuar com o manual de estratégia e gerar ativos técnicos.
 

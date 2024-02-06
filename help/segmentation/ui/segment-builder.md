@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guia da interface do construtor de segmentos
 description: O Construtor de segmentos na interface do usuário do Adobe Experience Platform fornece um espaço de trabalho avançado que permite a interação com elementos de dados de perfil. O espaço de trabalho fornece controles intuitivos para criar e editar regras, como arrastar e soltar blocos usados para representar propriedades de dados.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: b028bf86bb8596c6fc97829d6d27eec498c4ef11
+source-git-commit: c6d471d7bb8cb9d5e376cc49c9c89c39e663d7f9
 workflow-type: tm+mt
-source-wordcount: '3426'
-ht-degree: 7%
+source-wordcount: '3562'
+ht-degree: 6%
 
 ---
 
@@ -255,9 +255,17 @@ Para selecionar uma política de mesclagem para a definição do segmento, selec
 >abstract="Você pode atualizar as estimativas do seu segmento para ver imediatamente uma visualização de quantos perfis se qualificariam para a definição do segmento proposto. As estimativas de público-alvo são geradas usando um tamanho de amostra dos dados de amostra desse dia."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=pt-BR#estimate-and-preview-an-audience" text="Estimar e visualizar um público-alvo"
 
-Ao criar uma definição de segmento, a variável **[!UICONTROL Propriedades do segmento]** no lado direito do espaço de trabalho exibe uma estimativa do tamanho da definição de segmento resultante, permitindo ajustar a definição do segmento conforme necessário antes de criar o público-alvo em si.
+Ao criar uma definição de segmento, a variável **[!UICONTROL Propriedades do público]** no lado direito do espaço de trabalho exibe uma estimativa do tamanho da definição de segmento resultante, permitindo ajustar a definição do segmento conforme necessário antes de criar o público-alvo em si.
 
-A variável **[!UICONTROL Propriedades do segmento]** é também onde você pode especificar informações importantes sobre a definição do segmento, incluindo nome, descrição e tipo de avaliação. Os nomes de definição de segmento são usados para identificar sua definição de segmento entre os definidos pela organização e, portanto, devem ser descritivos, concisos e exclusivos.
+**[!UICONTROL Perfis qualificados]** indica o **real** número de perfis que correspondem às regras da definição de segmento. Esse número é atualizado a cada 24 horas, após a execução do trabalho de avaliação do segmento.
+
+O carimbo de data e hora para perfis qualificados indica o mais recente **lote** trabalho de avaliação de segmento e está **não** exibido para definições de segmento avaliadas usando transmissão ou segmentação de borda. Se você editar a definição do segmento, o número de perfis qualificados permanecerá o mesmo até que o próximo trabalho de avaliação de segmento seja executado.
+
+**[!UICONTROL Perfis estimados]** indica um **aproximado** número de perfis com base na **trabalho de exemplo**. Você pode ver uma versão atualizada desse valor depois de adicionar as novas regras ou condições e selecionar **[!UICONTROL Atualizar estimativa]**. Selecionar a bolha de informações fornece o limite de erro e a hora do trabalho de amostra mais recente.
+
+![Os Perfis qualificados e Estimados são realçados na seção Propriedades de público-alvo.](../images/ui/segment-builder/audience-estimates.png)
+
+A variável **[!UICONTROL Propriedades do público]** é também onde você pode especificar informações importantes sobre a definição do segmento, incluindo nome, descrição e tipo de avaliação. Os nomes de definição de segmento são usados para identificar sua definição de segmento entre os definidos pela organização e, portanto, devem ser descritivos, concisos e exclusivos.
 
 À medida que você continua a criar a definição do segmento, pode visualizar uma visualização paginada do público-alvo selecionando **[!UICONTROL Exibir perfis]**.
 

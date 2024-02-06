@@ -2,10 +2,10 @@
 title: Notas de versão da Adobe Experience Platform
 description: As notas da versão de janeiro de 2024 da Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 7b694ad1b064279fcc0dd09bd1e8761e734e7556
+source-git-commit: c6d471d7bb8cb9d5e376cc49c9c89c39e663d7f9
 workflow-type: tm+mt
-source-wordcount: '1551'
-ht-degree: 28%
+source-wordcount: '1653'
+ht-degree: 30%
 
 ---
 
@@ -26,6 +26,7 @@ Atualizações dos recursos existentes no Experience Platform:
 - [Identity Service](#identity-service)
 - [Real-Time Customer Data Platform](#rtcdp)
 - [Perfil do cliente em tempo real](#profile)
+- [Serviço de segmentação](#segmentation)
 - [Origens](#sources)
 
 ## Playbooks de caso de uso {#use-case-playbooks}
@@ -156,6 +157,21 @@ A Adobe Experience Platform permite gerar experiências coordenadas, consistente
 {style="table-layout:auto"}
 
 Para saber mais sobre o Perfil do cliente em tempo real, leia o [Visão geral do perfil](../../profile/home.md)
+
+## Serviço de segmentação {#segmentation}
+
+O [!DNL Segmentation Service] define um subconjunto específico de perfis descrevendo os critérios que distinguem um grupo de pessoas na sua base de clientes que pode ser direcionado por campanhas de marketing. Os segmentos podem ser baseados em dados de registro (como informações demográficas) ou em eventos de séries temporais que representam interações de clientes com sua marca.
+
+**Recursos novos ou atualizados**
+
+| Recurso | Descrição |
+| ------- | ----------- |
+| Upload de público gerado externamente | O número máximo de colunas foi aumentado para **25**. |
+| Estimativas do Construtor de segmentos | Estimativas e perfis qualificados agora são exibidos na seção de propriedades do público-alvo. Para obter mais informações sobre essa alteração, leia a [Guia da interface do usuário do Construtor de segmentos](../../segmentation/ui/segment-builder.md). |
+
+{style="table-layout:auto"}
+
+Para obter mais informações sobre o [!DNL Segmentation Service], consulte a [Visão geral de segmentação](../../segmentation/home.md).
 
 ## Origens {#sources}
 

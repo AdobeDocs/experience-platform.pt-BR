@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Guia da interface do usuário do Serviço de segmentação
 description: Saiba como criar e gerenciar públicos e definições de segmento na interface do usuário do Adobe Experience Platform.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 7ee39a39aecdfc0516f63e6a9c9a06c6c4b22996
+source-git-commit: c6d471d7bb8cb9d5e376cc49c9c89c39e663d7f9
 workflow-type: tm+mt
 source-wordcount: '3933'
 ht-degree: 3%
@@ -237,7 +237,7 @@ Selecionar **[!UICONTROL Aplicar rótulos de acesso]** permite gerenciar os rót
 
 >[!BEGINTABS]
 
->[!TAB Composição de público]
+>[!TAB Composição do público-alvo]
 
 ![A página de detalhes do público-alvo é exibida, com a tag [!UICONTROL Abrir composição] botão realçado.](../images/ui/overview/audience-details-open-composition.png)
 
@@ -331,7 +331,7 @@ A variável **[!UICONTROL Importar CSV de público-alvo]** workflow aparece. Voc
 
 >[!NOTE]
 >
->O público gerado externo **deve** estar no formato CSV, ter uma **máximo** de 11 colunas e ser inferior a 1 GB.
+>O público gerado externo **deve** estar no formato CSV, ter uma **máximo** 25 colunas e ser inferior a 1 GB.
 
 Depois de selecionar o arquivo CSV a ser importado, uma lista de dados de amostra é mostrada para esse público-alvo gerado externamente. Depois de confirmar que os dados de amostra estão corretos, selecione **[!UICONTROL Próxima]**.
 

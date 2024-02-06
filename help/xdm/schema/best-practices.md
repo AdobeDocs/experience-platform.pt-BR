@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Práticas Recomendadas Para Modelagem De Dados
 description: Este documento fornece uma introdução aos esquemas do Experience Data Model (XDM) e aos componentes, princípios e práticas recomendadas para a composição de esquemas a serem usados no Adobe Experience Platform.
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
-source-git-commit: b82bbdf7957e5a8d331d61f02293efdaf878971c
+source-git-commit: 8e13918abe9a63b186970b24b87bf85d1c73c3a8
 workflow-type: tm+mt
-source-wordcount: '3096'
+source-wordcount: '3245'
 ht-degree: 1%
 
 ---
@@ -231,13 +231,27 @@ Para o Adobe Analytics, a ECID é a identidade principal padrão. Se um valor de
 
 ## Campos de validação de dados {#data-validation-fields}
 
-Para evitar que dados incorretos sejam assimilados na Platform, é recomendável definir os critérios de validação em nível de campo ao criar seus esquemas. Para definir restrições em um campo específico, selecione o campo no Editor de esquemas para abrir a variável [!UICONTROL Propriedades do campo] barra lateral. Consulte a documentação em [propriedades do campo específico do tipo](../ui/fields/overview.md#type-specific-properties) para obter descrições exatas dos campos disponíveis.
+Ao assimilar dados no data lake, a validação de dados é imposta apenas para campos restritos. Para validar um campo específico durante uma assimilação em lote, você deve marcar o campo como restrito no esquema XDM. Para evitar que dados incorretos sejam assimilados na Platform, é recomendável definir os critérios de validação em nível de campo ao criar seus esquemas.
+
+>[!IMPORTANT]
+>
+>A validação não se aplica a colunas aninhadas. Se o formato do campo estiver localizado em uma coluna de matriz, os dados não serão validados.
+
+Para definir restrições em um campo específico, selecione o campo no Editor de esquemas para abrir a variável **[!UICONTROL Propriedades do campo]** barra lateral. Consulte a documentação em [propriedades do campo específico do tipo](../ui/fields/overview.md#type-specific-properties) para obter descrições exatas dos campos disponíveis.
 
 ![O Editor de esquemas com os campos de restrição realçados no [!UICONTROL Propriedades do campo] barra lateral.](../images/best-practices/data-validation-fields.png)
 
->[!TIP]
->
->Veja a seguir uma coleção de sugestões para modelagem de dados ao criar um schema:<br><ul><li>**Considerar identidades primárias**: para produtos Adobe, como SDK da Web, SDK móvel, Adobe Analytics e Adobe Journey Optimizer, o `identityMap` O campo geralmente serve como a identidade principal. Evite designar campos adicionais como identidades primárias para esse esquema.</li><li>**Evite usar `_id` como uma identidade**: Evite usar o `_id` em Esquemas de evento de experiência como uma identidade. Destina-se a registrar a exclusividade, não para uso como identidade.</li><li>**Definir restrições de comprimento**: É prática recomendada definir comprimentos mínimos e máximos em campos marcados como identidades. Essas limitações ajudam a manter a consistência e a qualidade dos dados.</li><li>**Aplicar padrões para valores consistentes**: Se os valores de identidade seguirem um padrão específico, use o [!UICONTROL Padrão] configuração para aplicar essa restrição. Essa configuração pode incluir regras como somente dígitos, maiúsculas ou minúsculas ou combinações de caracteres específicas. Use expressões regulares para corresponder padrões em suas cadeias de caracteres.</li><li>**Limitar eVars no esquema do Analytics**: Normalmente, um esquema do Analytics deve ter apenas um eVar designado como uma identidade. Se você pretende usar mais de um eVar como identidade, verifique novamente se a estrutura de dados pode ser otimizada.</li><li>**Garantir a exclusividade de um campo selecionado**: o campo escolhido deve ser exclusivo em comparação à identidade principal no esquema. Se não estiver, não marque-a como uma identidade. Por exemplo, se vários clientes puderem fornecer o mesmo endereço de email, esse namespace não será uma identidade adequada. Esse princípio também se aplica a outros namespaces de identidade, como números de telefone.</li></ul>
+### Dicas para manter a integridade dos dados {#data-integrity-tips}
+
+Veja a seguir uma coleção de sugestões para manter a integridade dos dados ao criar um esquema.
+
+* **Considerar identidades primárias**: para produtos Adobe, como SDK da Web, SDK móvel, Adobe Analytics e Adobe Journey Optimizer, o `identityMap` O campo geralmente serve como a identidade principal. Evite designar campos adicionais como identidades primárias para esse esquema.
+* **Evite usar `_id` como uma identidade**: Evite usar o `_id` em Esquemas de evento de experiência como uma identidade. Destina-se a registrar a exclusividade, não para uso como identidade.
+* **Definir restrições de comprimento**: É prática recomendada definir comprimentos mínimos e máximos em campos marcados como identidades. Um aviso será acionado se você tentar atribuir um namespace personalizado a um campo de identidade sem atender às restrições de comprimento mínimo e máximo. Essas limitações ajudam a manter a consistência e a qualidade dos dados.
+* **Aplicar padrões para valores consistentes**: Se os valores de identidade seguirem um padrão específico, use o **[!UICONTROL Padrão]** configuração para aplicar essa restrição. Essa configuração pode incluir regras como somente dígitos, maiúsculas ou minúsculas ou combinações de caracteres específicas. Use expressões regulares para corresponder padrões em suas cadeias de caracteres.
+* **Limitar eVars em esquemas do Analytics**: Normalmente, um esquema do Analytics deve ter apenas um eVar designado como uma identidade. Se você pretende usar mais de um eVar como identidade, verifique novamente se a estrutura de dados pode ser otimizada.
+* **Garantir a exclusividade de um campo selecionado**: o campo escolhido deve ser exclusivo em comparação à identidade principal no esquema. Se não estiver, não marque-a como uma identidade. Por exemplo, se vários clientes puderem fornecer o mesmo endereço de email, esse namespace não será uma identidade adequada. Esse princípio também se aplica a outros namespaces de identidade, como números de telefone.
+* **As restrições acionam avisos para campos de namespace personalizados**: defina restrições para acionar um aviso quando um campo de esquema for marcado com um namespace personalizado sem especificar os comprimentos mínimo e máximo. O aviso serve como um cuidado importante para manter a integridade dos dados. Consulte a [propriedades do campo específico do tipo](../ui/fields/overview.md#type-specific-properties) documentação para obter informações sobre como definir restrições em um campo específico.
 
 ## Próximas etapas
 

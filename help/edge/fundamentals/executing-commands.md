@@ -3,10 +3,10 @@ title: Executar comandos do SDK da Web do Adobe Experience Platform
 description: Saiba como executar comandos do SDK da Web do Experience Platform
 keywords: Executar comandos;commandName;Promises;getLibraryInfo;response objects;consent;
 exl-id: dda98b3e-3e37-48ac-afd7-d8852b785b83
-source-git-commit: f3344c9c9b151996d94e40ea85f2b0cf9c9a6235
+source-git-commit: ffc60e83285188bc5b0f6eb7a20fafee16d51d4d
 workflow-type: tm+mt
-source-wordcount: '416'
-ht-degree: 2%
+source-wordcount: '405'
+ht-degree: 0%
 
 ---
 
@@ -35,7 +35,7 @@ Cada vez que um comando é executado, uma promessa é retornada. A promessa repr
 alloy("commandName", options)
   .then(function(result) {
     // The command succeeded.
-    // "value" is whatever the command returned
+    // "result" is whatever the command returned
   })
   .catch(function(error) {
     // The command failed.
@@ -53,7 +53,7 @@ alloy("commandName", options)
   });
 ```
 
-Da mesma forma, se não for importante saber quando o comando falhará, você poderá remover a variável `catch` chame.
+Da mesma forma, se saber quando o comando falha não for importante para você, remova a variável `catch` chame.
 
 ```javascript
 alloy("commandName", options)

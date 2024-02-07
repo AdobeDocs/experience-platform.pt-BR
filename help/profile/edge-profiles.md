@@ -2,10 +2,10 @@
 title: Perfis de borda
 description: Saiba mais sobre perfis de borda, bem como terminologia relacionada, regiões disponíveis para perfis de borda, bem como serviços disponíveis para perfis de borda.
 exl-id: dcae267f-1d5a-4e90-b634-afd42b0d4edc
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: dde38e230a6bcb10cd38a12f644f2dd03f0cebaf
 workflow-type: tm+mt
-source-wordcount: '837'
-ht-degree: 1%
+source-wordcount: '795'
+ht-degree: 0%
 
 ---
 
@@ -61,7 +61,7 @@ O Serviço de perfil expresso (XPS) recupera os perfis em bordas diferentes. Ess
 
 ## Próximas etapas
 
-Depois de ler este manual, você deve ter uma compreensão básica dos perfis de borda, incluindo informações sobre as regiões e serviços disponíveis para perfis de borda. Para obter mais informações sobre projeções de borda, leia o [guia de ponto de extremidade de projeções de borda](./api/edge-projections.md). Para obter mais informações sobre o Adobe Experience Edge, leia o [Visão geral da borda](../edge/home.md).
+Depois de ler este manual, você deve ter uma compreensão básica dos perfis de borda, incluindo informações sobre as regiões e serviços disponíveis para perfis de borda. Para obter mais informações sobre o Adobe Experience Edge, leia o [Visão geral da borda](../edge/home.md).
 
 ## Apêndice
 
@@ -77,6 +77,4 @@ Além disso, cada perfil de borda tem um atributo de esquema chamado de Região 
 
 ### Como as expirações de dados funcionam com perfis de borda?
 
-Para perfis de borda, a expiração de dados determina quanto tempo o perfil permanecerá na borda antes de ser removido. A expiração dos dados é **rolagem**, o que significa que sempre que o perfil é acessado na borda, o tempo de expiração dos dados é redefinido.
-
-Você pode adicionar a expiração de dados em seus perfis de borda ao adicioná-la à [projeção de borda](./api/edge-projections.md). Por padrão, a expiração dos dados dura 14 dias, mas pode ser definida como no mínimo 1 hora e no máximo 90 dias.
+Para perfis de borda, a expiração de dados determina quanto tempo o perfil permanecerá na borda antes de ser removido. A expiração dos dados é **rolagem**, o que significa que sempre que o perfil é acessado na borda, o tempo de expiração dos dados é redefinido. Por padrão, a expiração dos dados dura 14 dias.

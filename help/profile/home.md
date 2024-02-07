@@ -2,9 +2,9 @@
 title: Visão geral do Perfil do cliente em tempo real
 description: O Perfil do cliente em tempo real mescla dados de várias fontes e fornece acesso a esses dados na forma de perfis de clientes individuais e eventos de séries de tempo relacionados. Esse recurso permite que os profissionais de marketing promovam experiências coordenadas, consistentes e relevantes com seus públicos-alvo em vários canais.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: 5dad03dd33855b225bb67391dbc51e5b31bf4d5e
+source-git-commit: dde38e230a6bcb10cd38a12f644f2dd03f0cebaf
 workflow-type: tm+mt
-source-wordcount: '1973'
+source-wordcount: '1821'
 ht-degree: 1%
 
 ---
@@ -104,10 +104,6 @@ Adobe Experience Platform [!DNL Segmentation Service] O produz os públicos-alvo
 ### Assimilação e segmentação de transmissão
 
 A entrada em tempo real é possibilitada por meio de um processo chamado assimilação de streaming. À medida que os dados de perfil e série temporal são assimilados, [!DNL Real-Time Customer Profile] O decide automaticamente incluir ou excluir esses dados dos públicos-alvo por meio de um processo contínuo chamado segmentação por transmissão, antes de mesclá-los aos dados existentes e atualizar a visualização de união. Como resultado, você pode realizar cálculos instantaneamente e tomar decisões para fornecer experiências aprimoradas e individualizadas aos clientes, à medida que eles interagem com sua marca. Enquanto são assimilados, os dados também são submetidos a validação para garantir que sejam assimilados corretamente e estejam em conformidade com o esquema no qual o conjunto de dados se baseia. Para obter mais informações sobre qual validação é feita durante a assimilação, comece lendo o [visão geral da qualidade de assimilação de dados](../ingestion/quality/overview.md).
-
-## Projeções de borda
-
-Para impulsionar experiências coordenadas, consistentes e personalizadas para seus clientes em vários canais em tempo real, os dados certos precisam estar prontamente disponíveis e continuamente atualizados à medida que as alterações ocorrem. O Adobe Experience Platform permite esse acesso em tempo real aos dados por meio do uso do que é conhecido como bordas. Uma borda é um servidor geograficamente posicionado que armazena dados e os torna prontamente acessíveis aos aplicativos. Por exemplo, aplicativos Adobe, como Adobe Target e Adobe Campaign, usam bordas para fornecer experiências personalizadas ao cliente em tempo real. Os dados são roteados para uma borda por uma projeção, com um destino de projeção que define a borda para a qual os dados serão enviados e uma configuração de projeção que define as informações específicas que serão disponibilizadas na borda. Para saber mais e começar a trabalhar com projeções usando o [!DNL Real-Time Customer Profile] API, consulte a [guia de endpoints de projeção de borda](api/edge-projections.md).
 
 ## Assimilar dados no [!DNL Profile]
 

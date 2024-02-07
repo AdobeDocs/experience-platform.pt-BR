@@ -3,10 +3,10 @@ keywords: Experience Platform;perfil;perfil de cliente em tempo real;solução d
 title: Guia da API do Perfil do cliente em tempo real
 description: A API de perfil do cliente em tempo real permite que os desenvolvedores explorem e trabalhem com dados de perfil, incluindo a visualização de perfis, a criação e a atualização de políticas de mesclagem, a exportação ou a amostragem de dados de perfil e a exclusão de dados de perfil que não são mais necessários ou que foram adicionados por engano. Siga este manual para saber como executar operações importantes usando a API.
 exl-id: ce39b95b-cff7-46cf-a14c-8203017c8826
-source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
+source-git-commit: dde38e230a6bcb10cd38a12f644f2dd03f0cebaf
 workflow-type: tm+mt
-source-wordcount: '961'
-ht-degree: 1%
+source-wordcount: '881'
+ht-degree: 2%
 
 ---
 
@@ -31,10 +31,6 @@ Os atributos computados são funções usadas para agregar dados no nível do ev
 Cada atributo calculado contém uma expressão, ou &quot;regra&quot;, que avalia os dados recebidos e armazena o valor resultante em um atributo de perfil. Esses cálculos ajudam a responder facilmente a perguntas relacionadas a coisas como valor de compra vitalício, tempo entre compras ou número de aberturas de aplicativo, sem exigir que você realize cálculos complexos manualmente sempre que as informações forem necessárias. Esses valores de atributos calculados podem ser exibidos em um perfil, usados para criar um público ou acessados por meio de vários padrões de acesso diferentes.
 
 Você pode criar, exibir, editar e excluir atributos calculados usando a `ca/attributes/` terminal. Para saber como usar atributos calculados, consulte a [visão geral dos atributos computados](../computed-attributes/overview.md). Para operações de API, visite o [manual de endpoint da API de atributos computados](../computed-attributes/api.md).
-
-## Projeções de borda {#edge-projections}
-
-O Adobe Experience Platform permite a personalização em tempo real das experiências do cliente, tornando os dados facilmente acessíveis em servidores localizados estrategicamente, chamados de &quot;bordas&quot;. A variável [!DNL Real-Time Customer Profile] A API fornece endpoints para trabalhar com bordas por meio de componentes chamados &quot;projeções&quot;. Isso inclui configurações de projeção para determinar quais dados devem ser projetados para cada borda, bem como destinos de projeção para definir onde rotear uma projeção. Para obter informações detalhadas sobre como trabalhar com projeções de borda, visite o [guia de endpoints de configurações e destinos de projeção](edge-projections.md).
 
 ## Entidades ([!DNL Profile] access) {#entities}
 

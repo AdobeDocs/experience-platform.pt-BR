@@ -2,9 +2,9 @@
 title: Conecte sua conta do Salesforce Marketing Cloud ao Experience Platform por meio da interface
 description: Saiba como conectar sua conta do Salesforce Marketing Cloud ao Experience Platform por meio da interface do usuário.
 exl-id: 1d9bde60-31e0-489c-9c1c-b6471e0ea554
-source-git-commit: 5bb95c2823ce7baa09cbc84c2f1ccf70a0796549
+source-git-commit: 30f1e8a0424ee0f81d8e98fb24886ad1480b270c
 workflow-type: tm+mt
-source-wordcount: '500'
+source-wordcount: '498'
 ht-degree: 1%
 
 ---
@@ -34,7 +34,7 @@ Para acessar seu [!DNL Salesforce Marketing Cloud] na Platform, você deve forne
 
 | Credencial | Descrição |
 | ---------- | ----------- |
-| Host | O servidor host do aplicativo. Esse geralmente é o seu subdomínio. **Nota:** Ao inserir seu `host` , é necessário especificar o `{subdomain}.rest.marketingcloudapis.com`. Por exemplo, se o URL do host for `https://acme-ab12c3d4e5fg6hijk7lmnop8qrst.rest.marketingcloudapis.com/`, então você só precisa inserir `acme-ab12c3d4e5fg6hijk7lmnop8qrst.rest.marketingcloudapis.com/` como valor de host. |
+| Host | O servidor host do aplicativo. Esse geralmente é o seu subdomínio. **Nota:** Ao inserir seu `host` , é necessário especificar o `{subdomain}.rest.marketingcloudapis.com`. Por exemplo, se o URL do host for `https://acme-ab12c3d4e5fg6hijk7lmnop8qrst.auth.marketingcloudapis.com/`, você deverá inserir `acme-ab12c3d4e5fg6hijk7lmnop8qrst.rest.marketingcloudapis.com/` como valor de host. |
 | ID do cliente | A ID do cliente associada à [!DNL Salesforce Marketing Cloud] aplicação. |
 | Client secret | O segredo do cliente associado à [!DNL Salesforce Marketing Cloud] aplicação. |
 

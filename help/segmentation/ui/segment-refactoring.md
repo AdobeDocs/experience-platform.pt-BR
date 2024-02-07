@@ -3,27 +3,40 @@ solution: Experience Platform
 title: Guia da interface de usuário de restrições de tempo de segmentação refatorada
 description: O Construtor de segmentos fornece um espaço de trabalho avançado que permite a você interagir com elementos de dados do Perfil. O espaço de trabalho fornece controles intuitivos para criar e editar regras, como arrastar e soltar blocos usados para representar propriedades de dados.
 exl-id: 3a352d46-829f-4a58-b676-73c3147f792c
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: 665bbd1904e857336a4fb677230389d7977f6b60
 workflow-type: tm+mt
-source-wordcount: '286'
+source-wordcount: '354'
 ht-degree: 0%
 
 ---
 
-# Refatoração de restrições de tempo
+# Refatoração de restrições de tempo {#refactorization}
 
-A versão de outubro de 2020 para o Adobe Experience Platform introduziu alterações de desempenho no Serviço de segmentação do Adobe Experience Platform que adicionam novas restrições ao uso dos operadores lógicos OR e AND. Essas alterações afetarão os segmentos recém-criados ou editados que usam a interface do usuário do Construtor de segmentos. Este guia explica como atenuar essas alterações.
+>[!CONTEXTUALHELP]
+>id="platform_audiences_segmentBuilder_constraints"
+>title="Refatoração de restrições de tempo"
+>abstract="As restrições de tempo em nível de regra e de grupo foram removidas para esclarecer o uso das restrições de tempo. Reescreva sua restrição como uma restrição de tempo em nível de tela ou cartão."
 
-Antes da versão de outubro de 2020, todas as restrições de tempo no nível da regra, do grupo e do evento se referiam redundantemente ao mesmo carimbo de data e hora. Para esclarecer o uso da restrição de tempo, as restrições de tempo em nível de regra e de grupo foram removidas. Para acomodar essa alteração, todas as restrições de tempo devem ser regravadas como restrições de tempo no nível do evento.
+A versão de janeiro de 2024 do Adobe Experience Platform introduziu alterações no Serviço de segmentação da Adobe Experience Platform que adicionam novas restrições, nas quais as restrições de tempo podem ser definidas. Essas alterações afetam os segmentos recém-criados ou editados que usam a interface do usuário do Construtor de segmentos. Este guia explica como atenuar essas alterações.
 
-Anteriormente, um evento individual podia ter várias regras de restrição de tempo anexadas a ele.
+Antes da versão de janeiro de 2024, todas as restrições de tempo no nível da regra, do grupo e da tela se referiam redundantemente ao mesmo carimbo de data e hora. Para esclarecer o uso da restrição de tempo, as restrições de tempo em nível de regra e de grupo foram removidas. Para acomodar essa alteração, todas as restrições de tempo **deve** ser regravada como **nível da tela** ou **nível de cartão** restrições de tempo.
 
-![O estilo anterior de restrições de tempo é destacado no Construtor de segmentos.](../images/ui/segment-refactoring/former-time-constraint.png)
+Anteriormente, um evento individual podia ter várias regras de restrição de tempo anexadas a ele. Com esta atualização recente, a tentativa de adicionar uma restrição de tempo a uma regra agora resultará em uma **erro**.
 
-Como você pode ver, esse segmento tem duas restrições no nível da regra: uma para &quot;[!UICONTROL Hoje]&quot; e o outro para &quot;[!UICONTROL Ontem]&quot;.
+![A restrição de tempo em nível de regra é realçada. O erro que ocorrerá posteriormente também é destacado. ](../images/ui/segment-refactoring/rule-time-constraint.png)
 
-O segmento anterior é equivalente ao seguinte segmento — ambas as restrições de tempo no nível do evento foram conectadas usando um operador AND. A primeira restrição de tempo no nível do evento faz referência a um evento de clique cujo nome é igual a &quot;Treinamento&quot; e está acontecendo hoje, enquanto a segunda restrição de tempo no nível do evento faz referência a um evento de clique cujo nome é igual a &quot;Animais de estimação&quot; e aconteceu ontem.
+As restrições de tempo agora só podem ser aplicadas no nível da tela ou do cartão.
 
-![O novo estilo de restrições de tempo é destacado no Construtor de segmentos.](../images/ui/segment-refactoring/time-constraint-1.png) ![O novo estilo de restrições de tempo é destacado no Construtor de segmentos.](../images/ui/segment-refactoring/time-constraint-2.png)
+Ao aplicar uma restrição de tempo no nível da tela de desenho, ainda é possível selecionar todas as restrições de tempo disponíveis.
 
-Essa refatoração de restrições de tempo também afeta restrições de tempo que são conectadas usando um operador OR.
+>[!NOTE]
+>
+>Se só houver **um** na tela, a aplicação da restrição de tempo ao cartão é **equivalente** para aplicar a restrição de tempo no nível da tela.
+>
+>Se houver **múltiplo** cartões na tela, a aplicação da restrição de tempo ao nível da tela aplicará essa restrição de tempo a **all** cartões na tela.
+
+![A restrição de tempo em nível de tela de desenho é realçada.](../images/ui/segment-refactoring/canvas-time-constraint.png)
+
+Para aplicar uma restrição de tempo no nível do cartão, selecione o cartão específico ao qual deseja aplicar a restrição de tempo. A variável **[!UICONTROL Regras de evento]** container (contêiner) é exibido. Agora é possível selecionar a restrição de tempo que deseja aplicar ao cartão.
+
+![A restrição de tempo em nível de cartão é realçada.](../images/ui/segment-refactoring/card-time-constraint.png)

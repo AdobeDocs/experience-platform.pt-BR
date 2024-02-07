@@ -4,8 +4,8 @@ description: Saiba como criar uma conexão de origem do Mixpanel usando a interf
 exl-id: 2a02f6a4-08ed-468c-8052-f5b7be82d183
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '841'
-ht-degree: 11%
+source-wordcount: '797'
+ht-degree: 10%
 
 ---
 

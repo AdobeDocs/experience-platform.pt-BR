@@ -6,8 +6,8 @@ description: O Serviço de consulta da Adobe Experience Platform fornece uma int
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
 source-git-commit: 74e3dc2fa5fc84b5ce4b09e2adb0093ecb94bd82
 workflow-type: tm+mt
-source-wordcount: '1517'
-ht-degree: 3%
+source-wordcount: '1504'
+ht-degree: 2%
 
 ---
 
@@ -134,7 +134,7 @@ A tabela abaixo descreve os parâmetros normalmente necessários para se conecta
 | Parâmetro | Descrição | Exemplo |
 |---|---|---|
 | **Servidor/Host** | O nome do servidor/host ao qual você está se conectando. <ul><li>Esse valor é usado para credenciais que estão ou não expirando e assume a forma de `server.adobe.io`. O valor é encontrado em **[!UICONTROL Host]** no [!UICONTROL CREDENCIAIS QUE EXPIRAM] seção.</ul></li> | `acme.platform.adobe.io` |
-| **Porta** | A porta do servidor/host ao qual você está se conectando. <ul><li>Esse valor é usado para credenciais que estão ou não expirando e é encontrado em **[!UICONTROL Porta]** no [!UICONTROL CREDENCIAIS QUE EXPIRAM] seção.</ul></li> | `80` |
+| **Port** | A porta do servidor/host ao qual você está se conectando. <ul><li>Esse valor é usado para credenciais que estão ou não expirando e é encontrado em **[!UICONTROL Porta]** no [!UICONTROL CREDENCIAIS QUE EXPIRAM] seção.</ul></li> | `80` |
 | **Banco de dados** | O banco de dados ao qual você está se conectando. <ul><li>Esse valor é usado para credenciais que estão ou não expirando e é encontrado em **[!UICONTROL Banco de dados]** no [!UICONTROL CREDENCIAIS QUE EXPIRAM] seção. </ul></li> | `prod:all` |
 | **Nome de usuário** | O nome de usuário do usuário que está se conectando ao cliente externo. <ul><li>Esse valor é usado para credenciais com e sem expiração. Assume a forma de uma sequência alfanumérica antes de `@AdobeOrg`. Esse valor é encontrado em **[!UICONTROL Nome de usuário]**.</li></ul> | `ECBB80245ECFC73E8A095EC9@AdobeOrg` |
 | **Senha** | A senha do usuário que está se conectando ao cliente externo. <ul><li>Se você estiver usando credenciais com expiração, isso poderá ser encontrado em **[!UICONTROL Senha]** no prazo de [!UICONTROL CREDENCIAIS QUE EXPIRAM] seção.</li><li>Se você estiver usando credenciais sem expiração, esse valor serão os argumentos concatenados de technicalAccountID e a credencial retirada do arquivo JSON de configuração. O valor da senha tem o formato: `{technicalAccountId}:{credential}`.</li></ul> | <ul><li>Uma senha de credencial que expira tem mais de mil caracteres alfanuméricos. Nenhum exemplo será dado.</li><li>Uma senha de credencial sem expiração é a seguinte:<br>`4F2611B8613DK3670V495N55:3d182fa9e0b54f33a7881305c06203ee`</li></ul> |

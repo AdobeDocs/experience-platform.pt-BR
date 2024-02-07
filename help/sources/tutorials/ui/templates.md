@@ -5,8 +5,8 @@ badge1: "Beta"
 exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
 source-git-commit: deca8300ebbada548a409de9c6a7b7178d0032e0
 workflow-type: tm+mt
-source-wordcount: '2259'
-ht-degree: 11%
+source-wordcount: '2241'
+ht-degree: 10%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 11%
 >
 >A documentação e as funcionalidades estão sujeitas a alterações.
 
-A Adobe Experience Platform fornece modelos pré-configurados que você pode usar para acelerar o processo de assimilação de dados. Os modelos incluem ativos gerados automaticamente, como esquemas, conjuntos de dados, identidades, regras de mapeamento, namespaces de identidade e fluxos de dados que você pode usar ao trazer dados de uma fonte para a Experience Platform.
+A Adobe Experience Platform fornece modelos pré-configurados que você pode usar para acelerar o processo de assimilação de dados. Os modelos incluem ativos gerados automaticamente, como esquemas, conjuntos de dados, identidades, regras de mapeamento, namespaces de identidade e fluxos de dados que você pode usar ao trazer dados de uma origem para o Experience Platform.
 
 Com os modelos, é possível:
 
@@ -135,7 +135,7 @@ Com sua conta autenticada, agora é possível selecionar o modelo que deseja usa
 | [!DNL Salesforce] Modelos B2C | Descrição |
 | --- | --- |
 | Contato | O modelo Contato captura atributos para contatos, como detalhes demográficos, informações de contato e entidades comerciais relacionadas. |
-| Cliente potencial | O modelo de cliente potencial captura atributos para clientes potenciais, como detalhes demográficos, informações de contato e entidades comerciais relacionadas. |
+| Lead | O modelo de cliente potencial captura atributos para clientes potenciais, como detalhes demográficos, informações de contato e entidades comerciais relacionadas. |
 
 {style="table-layout:auto"}
 
@@ -163,7 +163,7 @@ Com sua conta autenticada, agora é possível selecionar o modelo que deseja usa
 | [!DNL Microsoft Dynamics] Modelos B2C | Descrição |
 | --- | --- |
 | Contato | O modelo Contato captura atributos para contatos, como detalhes demográficos, informações de contato e entidades comerciais relacionadas. |
-| Cliente potencial | O modelo de cliente potencial captura atributos para clientes potenciais, como detalhes demográficos, informações de contato e entidades comerciais relacionadas. |
+| Lead | O modelo de cliente potencial captura atributos para clientes potenciais, como detalhes demográficos, informações de contato e entidades comerciais relacionadas. |
 
 {style="table-layout:auto"}
 

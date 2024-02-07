@@ -6,8 +6,8 @@ description: Este guia do usuário fornece etapas sobre como monitorar os dados 
 exl-id: 85711a06-2756-46f9-83ba-1568310c9f73
 source-git-commit: 9399a242b855e151e5822035bc952efa89fe4bf0
 workflow-type: tm+mt
-source-wordcount: '657'
-ht-degree: 4%
+source-wordcount: '649'
+ht-degree: 3%
 
 ---
 

@@ -6,8 +6,8 @@ description: Saiba como usar a interface do usuário do Privacy Service para coo
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
 source-git-commit: 9d05752f3db78d9d10fd91fd0d3fed924217199c
 workflow-type: tm+mt
-source-wordcount: '1475'
-ht-degree: 15%
+source-wordcount: '1456'
+ht-degree: 14%
 
 ---
 
@@ -38,18 +38,18 @@ O painel para a [!DNL Privacy Service] A interface do usuário fornece dois widg
 
 | Rótulo da interface | Regulação |
 | --- | --- |
-| [!UICONTROL APA_AUS] | As seleções de menu [!DNL Australia Privacy Act (Privacy Act)] |
-| [!UICONTROL CPA] | As seleções de menu [!DNL Colorado Privacy Act] |
-| [!UICONTROL CCPA] | As seleções de menu [!DNL California Consumer Privacy Act] |
-| [!UICONTROL CPRA_EUA] | As seleções de menu [!DNL California Consumer Privacy Rights Act (CPRA)] |
-| [!UICONTROL CTDPA] | As seleções de menu [!DNL Connecticut Data Privacy Act] |
+| [!UICONTROL APA_AUS] | O [!DNL Australia Privacy Act (Privacy Act)] |
+| [!UICONTROL CPA] | O [!DNL Colorado Privacy Act] |
+| [!UICONTROL CCPA] | O [!DNL California Consumer Privacy Act] |
+| [!UICONTROL CPRA_EUA] | O [!DNL California Consumer Privacy Rights Act (CPRA)] |
+| [!UICONTROL CTDPA] | O [!DNL Connecticut Data Privacy Act] |
 | [!UICONTROL GDPR] | A política da União Europeia [!DNL General Data Protection Regulation] |
-| [!UICONTROL HIPAA_AUS] | As seleções de menu [!DNL Health Insurance Portability and Accountability Act] |
+| [!UICONTROL HIPAA_AUS] | O [!DNL Health Insurance Portability and Accountability Act] |
 | [!UICONTROL LGPD_BRA] | O do Brasil [!DNL Lei Geral de Proteção de Dados] |
 | [!UICONTROL NZPA_NZL] | Nova Zelândia [!DNL Privacy Act] |
 | [!UICONTROL PDPA_THA] | da Tailândia [!DNL Personal Data Protection Act] |
-| [!UICONTROL UCPA] | As seleções de menu [!DNL Utah Consumer Privacy Act] |
-| [!UICONTROL VCDPA_USA] | As seleções de menu [!DNL Virginia Consumer Data Protection Act] |
+| [!UICONTROL UCPA] | O [!DNL Utah Consumer Privacy Act] |
+| [!UICONTROL VCDPA_USA] | O [!DNL Virginia Consumer Data Protection Act] |
 
 {style="table-layout:auto"}
 

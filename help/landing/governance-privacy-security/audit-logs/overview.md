@@ -91,7 +91,7 @@ Selecione um evento na lista para exibir seus detalhes no painel direito.
 
 >[!NOTE]
 >
-Como esse é um novo recurso, os dados exibidos só retornam a março de 2022. Dependendo do recurso selecionado, dados anteriores poderão estar disponíveis a partir de janeiro de 2022.
+>Como esse é um novo recurso, os dados exibidos só retornam a março de 2022. Dependendo do recurso selecionado, dados anteriores poderão estar disponíveis a partir de janeiro de 2022.
 
 
 Selecione o ícone de funil (![Ícone Filtrar](../../images/audit-logs/icon.png)) para exibir uma lista de controles de filtro para ajudar a limitar os resultados. Somente os últimos 1000 registros são exibidos independentemente dos vários filtros selecionados.

@@ -5,8 +5,8 @@ description: Saiba mais sobre o Serviço de segmentação da Adobe Experience Pl
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
 source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
-source-wordcount: '1635'
-ht-degree: 13%
+source-wordcount: '1627'
+ht-degree: 12%
 
 ---
 
@@ -62,7 +62,7 @@ Para obter informações sobre como criar definições de segmento usando a API,
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_streaming"
 >title="Avaliação de transmissão"
->abstract="A segmentação por transmissão é um processo contínuo de seleção de dados que atualiza os públicos-alvo em resposta à atividade do usuário."
+>abstract="A segmentação de transmissão é um processo contínuo de seleção de dados que atualiza os públicos-alvo em resposta à atividade do usuário."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/api/streaming-segmentation.html?lang=pt-BR" text="Avaliar eventos em tempo quase real com a segmentação de transmissão"
 
 Atualmente, a Platform aceita três métodos de avaliação de públicos-alvo: segmentação de transmissão, segmentação em lote e segmentação de borda.

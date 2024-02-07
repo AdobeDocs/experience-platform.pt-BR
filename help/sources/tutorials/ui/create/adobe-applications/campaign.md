@@ -6,7 +6,7 @@ exl-id: 067ed558-b239-4845-8c85-3bf9b1d4caed
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1149'
-ht-degree: 7%
+ht-degree: 6%
 
 ---
 
@@ -16,7 +16,7 @@ Este tutorial fornece etapas para criar uma conexão de origem a fim de trazer s
 
 ## Introdução
 
-Este manual necessita de uma compreensão funcional dos seguintes componentes da Experience Platform:
+Este guia requer entendimento prático dos seguintes componentes do Experience Platform:
 
 * [Origens](../../../../home.md): a Platform permite que os dados sejam assimilados de várias fontes e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da Platform.
 * [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): a estrutura padronizada pela qual o Experience Platform organiza os dados de experiência do cliente.

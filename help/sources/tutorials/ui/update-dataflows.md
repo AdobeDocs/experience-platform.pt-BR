@@ -8,7 +8,7 @@ exl-id: 0499a2a3-5a22-47b1-ac0e-76a432bd26c0
 source-git-commit: cef5c203acf3318445399669336166e6627ebe66
 workflow-type: tm+mt
 source-wordcount: '782'
-ht-degree: 9%
+ht-degree: 8%
 
 ---
 
@@ -80,7 +80,7 @@ Aqui, você pode usar a interface de mapeamento para modificar os conjuntos de m
 
 ![mapeamento](../../images/tutorials/update-dataflows/mapping.png)
 
-### Programação
+### Agendamento
 
 A variável [!UICONTROL Agendamento] A etapa é exibida, permitindo atualizar a programação de assimilação do fluxo de dados e assimilar automaticamente os dados de origem selecionados com os mapeamentos atualizados.
 
@@ -100,7 +100,7 @@ A variável **[!UICONTROL Editar programação]** A caixa de diálogo fornece op
 
 ![agenda-pop-up](../../images/tutorials/update-dataflows/schedule-pop-up.png)
 
-### Consulte a seção
+### Revisão
 
 A variável **[!UICONTROL Revisão]** é exibida, permitindo que você revise seu fluxo de dados antes que ele seja atualizado.
 

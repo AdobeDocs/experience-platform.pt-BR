@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Visão geral do serviço de identidade
 description: O Serviço de identidade da Adobe Experience Platform ajuda você a obter uma melhor visualização do cliente e do comportamento dele, unindo as identidades em dispositivos e sistemas, permitindo que você forneça experiências digitais pessoais e impactantes em tempo real.
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-source-git-commit: 3fe94be9f50d64fc893b16555ab9373604b62e59
+source-git-commit: ed2c9824d4c2f7bf8dd6a2f8431e93fe833c899c
 workflow-type: tm+mt
-source-wordcount: '1554'
+source-wordcount: '1560'
 ht-degree: 2%
 
 ---
@@ -32,7 +32,7 @@ Antes de mergulhar nos detalhes do Serviço de identidade, leia a tabela a segui
 | Termo | Definição |
 | --- | --- |
 | Identidade | Uma identidade são dados exclusivos de uma entidade. Normalmente, esse é um objeto do mundo real, como uma pessoa individual, um dispositivo de hardware ou um navegador da Web (representado por um cookie). Uma identidade totalmente qualificada consiste em dois elementos: um **namespace de identidade** e uma **valor de identidade**. |
-| Namespace de identidade | Um namespace de identidade é o contexto de uma determinada identidade. Por exemplo, um namespace de `Email` pode corresponder com **julien<span>@acme.com**. Da mesma forma, um namespace de `Phone` pode corresponder com `555-555-1234`. Para obter mais informações, leia a [visão geral do namespace de identidade](./features/namespaces.md) |
+| Namespace de identidade | Um namespace de identidade é o contexto de uma determinada identidade. Por exemplo, um namespace de `Email` pode corresponder ao valor de identidade: **julien<span>@acme.com**. Da mesma forma, um namespace de `Phone` pode corresponder ao valor de identidade: `555-555-1234`. Para obter mais informações, leia a [visão geral do namespace de identidade](./features/namespaces.md). |
 | Valor de identidade | Um valor de identidade é uma string que representa uma entidade do mundo real e é categorizada no Serviço de identidade por meio de um namespace. Por exemplo, o valor de identidade (string) **julien<span>@acme.com** pode ser classificado como um `Email` namespace. |
 | Tipo de identidade | Um tipo de identidade é um componente de um namespace de identidade. O tipo de identidade designa se os dados de identidade estão ou não vinculados em um gráfico de identidade. |
 | Link | Um link ou um vínculo é um método para estabelecer que duas identidades diferentes representam a mesma entidade. Por exemplo, um link entre &quot;`Email` = julien<span>@acme.com&quot; e &quot;`Phone` = 555-555-1234&quot; significa que ambas as identidades representam a mesma entidade. Isso sugere que o cliente que interagiu com sua marca com o endereço de email da julien<span>@acme.com e o telefone 555-555-1234 é o mesmo. |

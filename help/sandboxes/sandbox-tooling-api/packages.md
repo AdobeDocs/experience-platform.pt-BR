@@ -2,10 +2,10 @@
 title: Endpoint da API de Pacotes de Ferramentas de Sandbox
 description: O ponto de extremidade /packages na API de ferramentas da sandbox permite gerenciar programaticamente pacotes no Adobe Experience Platform.
 exl-id: 46efee26-d897-4941-baf4-d5ca0b8311f0
-source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
+source-git-commit: 8ff9c50b4999a49413f8c45274815225ba58361c
 workflow-type: tm+mt
-source-wordcount: '1553'
-ht-degree: 8%
+source-wordcount: '1531'
+ht-degree: 7%
 
 ---
 
@@ -747,11 +747,11 @@ POST /packages/import
 
 **Solicitação**
 
-A solicitação a seguir recupera o pacote usando o {PACKAGE_ID} fornecidos. O payload é um mapa de substituições em que, se existir uma entrada, a chave é o `artifactId` fornecido pelo pacote, e a alternativa é o valor. Se o mapa ou a carga for **vazio**, nenhuma substituição é executada.
+A solicitação a seguir recupera pacotes a serem importados. O payload é um mapa de substituições em que, se existir uma entrada, a chave é o `artifactId` fornecido pelo pacote, e a alternativa é o valor. Se o mapa ou a carga for **vazio**, nenhuma substituição é executada.
 
 ```shell
 curl -X POST \
-  https://platform.adobe.io/data/foundation/exim/packages/{PACKAGE_ID}/import?targetSandbox=targetSandboxName \
+  https://platform.adobe.io/data/foundation/exim/packages/import/ \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -775,7 +775,6 @@ curl -X POST \
 
 | Propriedade | Descrição | Tipo | Obrigatório |
 | --- | --- | --- | --- |
-| `id` | A ID do pacote. | String | Sim |
 | `alternatives` | `alternatives` representa o mapeamento dos artefatos da sandbox de origem para os artefatos da sandbox de destino existentes. Como já estão lá, o trabalho de importação evita a criação desses artefatos na sandbox de destino. | String | Não |
 
 **Resposta**

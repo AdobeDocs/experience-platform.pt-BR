@@ -2,22 +2,18 @@
 title: Extensão da camada de dados do Google
 description: Saiba mais sobre a extensão de tag da Camada de dados do cliente da Google na Adobe Experience Platform.
 exl-id: 7990351d-8669-432b-94a9-4f9db1c2b3fe
-source-git-commit: 9c608f69f6ba219f9cb4e938a77bd4838158d42c
+source-git-commit: c61afdc2c3df98a0ef815d7cb034ba2907c52908
 workflow-type: tm+mt
-source-wordcount: '867'
-ht-degree: 13%
+source-wordcount: '937'
+ht-degree: 12%
 
 ---
 
 # Extensão da camada de dados do Google
 
-A extensão Camada de dados da Google permite usar uma camada de dados da Google na implementação de tags. A extensão pode ser usada de forma independente ou simultânea com as soluções da Google e com o código aberto da Google [Biblioteca de ajuda da camada de dados](https://github.com/google/data-layer-helper).
+A extensão Camada de dados do Google permite usar uma camada de dados do Google na implementação de tags. A extensão pode ser usada de forma independente ou simultânea com as soluções da Google e com o código aberto da Google [Biblioteca de ajuda da camada de dados](https://github.com/google/data-layer-helper).
 
-A Biblioteca de ajuda fornece funcionalidade semelhante orientada por eventos para o Adobe Client Data Day (ACDL). Os elementos de dados, as regras e as ações da extensão da Camada de dados do Google fornecem funcionalidade semelhante àqueles na [Extensão ACDL](../client-data-layer/overview.md).
-
-## Maturidade
-
-A versão 1.2.x é um beta tardio que está em uso de produção.
+A Biblioteca de ajuda fornece funcionalidade semelhante orientada por eventos para a Camada de dados de clientes Adobe (ACDL). Os elementos de dados, as regras e as ações da extensão da Camada de dados do Google fornecem funcionalidade semelhante àqueles na [Extensão ACDL](../client-data-layer/overview.md).
 
 ## Instalação
 
@@ -44,13 +40,22 @@ O nome padrão da camada de dados é o nome padrão do Google `dataLayer`.
 > - Eventos JavaScript.
 > - Os dados enviados para a camada de dados com o _evento_ palavra-chave.
 
-
 A extensão oferece a possibilidade de acompanhar as alterações na camada de dados.
 
 >[!NOTE]
 >
 >É importante compreender a utilização do _evento_ palavra-chave quando os dados são enviados para uma camada de dados do Google, de forma semelhante à Camada de dados do cliente Adobe. A variável _evento_ Essa palavra-chave altera o comportamento da camada de dados do Google e, portanto, dessa extensão.\
 > Leia a documentação do Google ou faça uma pesquisa se não tiver certeza sobre esse ponto.
+
+### Tipos de evento do Google
+
+O Google oferece suporte a dois meios de enviar eventos: o Google Tag Manager, usando o `push()` e Google Analytics 4, utilizando o método `gtag()` método.
+
+As versões de extensão da Camada de dados do Google anteriores à 1.2.1 eram compatíveis apenas com eventos criados pela `push()`, conforme mostrado nos exemplos de código desta página.
+
+As versões 1.2.1 e posteriores são compatíveis com eventos criados com o `gtag()`.  Isso é opcional e pode ser ativado na caixa de diálogo Configuração de extensão.
+
+Para obter mais informações sobre `push()` e `gtag()` eventos, consulte a [Documentação do Google](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtag).  As informações também são fornecidas nas caixas de diálogo de configuração e regra da extensão.
 
 ### Analise todos os envios para a camada de dados
 
@@ -121,11 +126,11 @@ A ação de texto livre permite usar elementos de dados diretamente no JSON. No 
 
 ```json
 {
-    "page": {
-        "url": "%url%",
-        "previous_url": "%previous_url%",
-        "concatenated_values": "static string %dataElement%"
-    }
+  "page": {
+    "url": "%url%",
+    "previous_url": "%previous_url%",
+    "concatenated_values": "static string %dataElement%"
+  }
 }
 ```
 

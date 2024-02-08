@@ -2,10 +2,10 @@
 title: Notas de versão da extensão de camada de dados do Google
 description: As notas de versão mais recentes da extensão de tag da Camada de dados da Google na Adobe Experience Platform.
 exl-id: 740b6e3a-d469-475d-9523-03b0b48b11c8
-source-git-commit: 0b9fa104777f21fc9bc893784ae3155d887a48d2
+source-git-commit: c1bad7d5414e62f4d77f7d5903f4b2bf4d9081f8
 workflow-type: tm+mt
-source-wordcount: '247'
-ht-degree: 1%
+source-wordcount: '265'
+ht-degree: 5%
 
 ---
 
@@ -37,3 +37,7 @@ Um aprimoramento significativo e uma versão de correção de erros resultante d
 * Correção de um erro que causava um erro ao salvar um elemento de dados em algumas circunstâncias.
 * Adiciona documentação à caixa de diálogo do evento explicando o uso do objeto de evento Tags.
 * Adiciona um aviso sobre loops infinitos à caixa de diálogo de eventos.
+
+## Versão 1.2.2
+
+* Adiciona suporte para eventos Google Analytics gtag().

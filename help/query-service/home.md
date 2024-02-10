@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Visão geral do serviço de consulta
 description: Saiba mais sobre a função do Serviço de consulta no Experience Platform.
 exl-id: fdaefc12-a97d-4e4e-9aed-d3dbd0f43ea0
-source-git-commit: ad1827284b7070f73421d10c49e1e86e282839eb
+source-git-commit: 5bf54374773fd95ae1c40dd00b5dbe633031b70e
 workflow-type: tm+mt
-source-wordcount: '837'
+source-wordcount: '860'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,16 @@ Você pode usar o Serviço de consulta para conectar a jornada de cliente online
 
 ## Uso do Serviço de consulta {#usage}
 
-Para analisar seus dados, você pode usar a interface do usuário do Serviço de consulta e uma API RESTful, a partir da qual você pode criar consultas SQL. Com a interface do usuário do, você pode gravar e executar consultas, visualizar consultas executadas anteriormente e acessar consultas salvas por usuários em sua organização. Você pode usar o Editor de consultas como uma sandbox para testar suas consultas antes de executá-las em seu conjunto de dados mais amplo. Consulte a [Guia da interface do usuário do Serviço de consulta](ui/overview.md) para obter mais informações sobre o uso da interface do usuário. A API RESTful fornece uma experiência semelhante. Você pode usar a API do Serviço de consulta para gravar e executar consultas de forma programática, agendar consultas para uso e repetição futuros, bem como criar modelos para consultas que deseja gravar. Mais informações sobre como usar a API do Serviço de consulta podem ser encontradas no [Guia do desenvolvedor do Serviço de consulta](api/getting-started.md).
+Para analisar seus dados, crie e execute consultas SQL com a interface do usuário do Serviço de consulta ou com a API RESTful.
+Com a interface do serviço de consulta, é possível gravar, executar e agendar consultas, exibir consultas executadas anteriormente e acessar consultas salvas por usuários em sua organização. Você também pode testar suas consultas antes de executá-las em seu conjunto de dados mais amplo com o Editor de consultas. Consulte a [Guia da interface do usuário do Serviço de consulta](ui/overview.md) para obter uma visão geral da funcionalidade da interface do usuário.
+
+A API RESTful fornece uma experiência semelhante. Você pode usar a API do Serviço de consulta para gravar e executar consultas de forma programática, criar e salvar modelos para consultas que você deseja adaptar ou agendar consultas para execução automatizada. Consulte a [Guia do desenvolvedor do Serviço de consulta](api/getting-started.md) para obter mais informações sobre como usar a API do Serviço de consulta.
+
+Para começar rapidamente a usar os recursos do Serviço de consulta, é recomendável ler os seguintes documentos:
+
+- [Orientação geral para execução de consulta](./best-practices/writing-queries.md)
+- [Sintaxe SQL no Serviço de consulta](./sql/syntax.md)
+- [Criar conjuntos de dados derivados com SQL](./data-distiller/derived-datasets/create-derived-datasets-with-sql.md)
 
 ## Serviço de consulta e serviços Experience Platform {#experience-platform-services}
 

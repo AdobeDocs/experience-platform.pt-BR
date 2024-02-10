@@ -2,7 +2,7 @@
 title: Notas da versão de fevereiro de 2023 da Adobe Experience Platform
 description: Notas da versão de fevereiro de 2023 da Adobe Experience Platform.
 exl-id: 1c30a646-d9f8-4749-ac25-40bc48365a40
-source-git-commit: 38689125a43ad0b1a12a00efe6800bb310d7557c
+source-git-commit: 5bf54374773fd95ae1c40dd00b5dbe633031b70e
 workflow-type: tm+mt
 source-wordcount: '1255'
 ht-degree: 97%
@@ -102,7 +102,7 @@ O Query Service permite usar SQL padrão para consultar dados no [!DNL Data Lake
 
 | Recurso | Descrição |
 | --- | --- |
-| Habilitar conjuntos de dados para perfil com SQL | [Use LABELs em consultas CTAS para tornar um conjunto de dados &quot;habilitado para perfil&quot;](../../query-service/sql/syntax.md#create-table-as-select) ou use ALTER para atualizar conjuntos de dados já existentes e habilitá-los para perfil. Você pode usar essa construção de SQL estendido para fornecer suporte contínuo a conjuntos de dados derivados para seus casos de uso de negócios do Perfil do cliente em tempo real. Consulte a [Fluxo SQL contínuo para o documento de conjuntos de dados derivados](../../query-service/data-distiller/derived-datasets/seamless-sql-flow.md) para obter mais detalhes. |
+| Habilitar conjuntos de dados para perfil com SQL | [Use LABELs em consultas CTAS para tornar um conjunto de dados &quot;habilitado para perfil&quot;](../../query-service/sql/syntax.md#create-table-as-select) ou use ALTER para atualizar conjuntos de dados já existentes e habilitá-los para perfil. Você pode usar essa construção de SQL estendido para fornecer suporte contínuo a conjuntos de dados derivados para seus casos de uso de negócios do Perfil do cliente em tempo real. Consulte a [Fluxo SQL contínuo para o documento de conjuntos de dados derivados](../../query-service/data-distiller/derived-datasets/create-derived-datasets-with-sql.md) para obter mais detalhes. |
 | Monitorar consultas programadas | Use a [guia Consultas programadas](../../query-service/ui/monitor-queries.md) para encontrar informações importantes sobre suas consultas e assinar alertas. Monitore consultas para obter detalhes de agendamento, status e mensagens/códigos de erro caso haja falha. |
 | Alternar recurso de preenchimento automático | Elimine determinados comandos de metadados e melhore os tempos de processamento ao [ativar o recurso de preenchimento automático do Editor de consultas](../../query-service/ui/user-guide.md#auto-complete). Esse recurso sugere automaticamente possíveis palavras-chave SQL e detalhes da tabela para a consulta à medida que ela é escrita. |
 | Amostras de conjunto de dados | Especifique uma taxa de amostragem em sua consulta e [use amostras de conjunto de dados para criar uma amostra aleatória uniforme](../../query-service/key-concepts/dataset-samples.md), ou crie amostras condicionais com base em critérios específicos. |

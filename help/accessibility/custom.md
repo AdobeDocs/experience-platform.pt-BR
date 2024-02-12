@@ -4,9 +4,9 @@ title: Soluções personalizadas de acessibilidade para o Experience Platform
 type: Documentation
 description: Saiba mais sobre as soluções de acessibilidade personalizadas na interface do usuário do Adobe Experience Platform.
 exl-id: cb5ad99e-8a95-4c9e-aae6-1d0036ecf052
-source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
+source-git-commit: 2cf28acb5b0ddb4965b2d5120333659e0ac460bf
 workflow-type: tm+mt
-source-wordcount: '1615'
+source-wordcount: '1663'
 ht-degree: 0%
 
 ---
@@ -142,6 +142,10 @@ Os seguintes recursos de acessibilidade estão disponíveis no editor do Serviç
 
 * O contraste de cores na interface do editor do Serviço de consulta atende à conformidade de acessibilidade.
 * A navegação pelo teclado é suportada fora da interface do editor. A interface do usuário do editor é um Espelho de código incorporado.
+
+>[!NOTE]
+>
+>O Editor de consultas não lida com o **Guia** por padrão. Para invocar **Guia** enquanto estiver no editor, você deve pressionar a tecla **Escape** e pressione **Guia** diretamente após ele. Pressione **Guia** novamente, para mover o foco para além do editor.
 
 ## Guia Exibição de sistema em Origens e Destinos
 

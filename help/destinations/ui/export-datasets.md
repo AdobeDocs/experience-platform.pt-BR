@@ -3,9 +3,9 @@ title: Exportar conjuntos de dados para destinos de armazenamento na nuvem
 type: Tutorial
 description: Saiba como exportar conjuntos de dados do Adobe Experience Platform para o local de armazenamento em nuvem de sua preferência.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: c4169d9371d329e445db7c83820b870ccbba238b
+source-git-commit: 4d662bc8ec8729654589c8675c5e598b94957ed7
 workflow-type: tm+mt
-source-wordcount: '1739'
+source-wordcount: '1838'
 ht-degree: 4%
 
 ---
@@ -52,6 +52,11 @@ Entenda, na tabela abaixo, quais tipos de conjunto de dados você pode exportar 
   <tr>
     <td>Ultimate</td>
     <td>Consulte a <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html#datasets"> Adobe Journey Optimizer</a> documentação.</td>
+  </tr>
+  <tr>
+    <td>Customer Journey Analytics</td>
+    <td>Todas</td>
+    <td> Conjuntos de dados de Perfil e Evento de experiência criados na interface do Experience Platform após assimilar ou coletar dados por meio de Fontes, SDK da Web, SDK móvel, Conector de dados do Analytics e Audience Manager. Leia sobre as permissões necessárias no <a href="https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/cja-access-control.html#product-admin-additional-permissions"> Documentação do Customer Journey Analytics</a>.  <br> <b>Observação sobre disponibilidade:</b> A capacidade de exportar conjuntos de dados para a nuvem está na fase de Teste limitado da versão e pode ainda não estar disponível em seu ambiente. Essa nota será removida quando a funcionalidade estiver com disponibilidade geral. Para obter informações sobre o processo de lançamento do Customer Journey Analytics, consulte <a href="https://experienceleague.adobe.com/docs/analytics-platform/using/releases/releases.html"> Versões de recursos do Customer Journey Analytics</a>. </td>
   </tr>
   <tr>
     <td>Distiller de dados</td>

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Endpoint da API de descritores
 description: O ponto de extremidade /descriptors na API do registro de esquema permite gerenciar programaticamente os descritores XDM no aplicativo de experiência.
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 786801975dbde52b5d81a407618ef3b574a6afa3
 workflow-type: tm+mt
-source-wordcount: '1872'
+source-wordcount: '1905'
 ht-degree: 2%
 
 ---
@@ -23,7 +23,7 @@ A variável `/descriptors` endpoint na variável [!DNL Schema Registry] A API pe
 
 ## Introdução
 
-O endpoint usado neste manual faz parte da [[!DNL Schema Registry] API do ](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Antes de continuar, reveja o [guia de introdução](./getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre os cabeçalhos necessários para fazer chamadas com êxito para qualquer API de Experience Platform.
+O endpoint usado neste guia faz parte da variável [[!DNL Schema Registry] API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Antes de continuar, reveja o [guia de introdução](./getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre os cabeçalhos necessários para fazer chamadas com êxito para qualquer API de Experience Platform.
 
 ## Recuperar uma lista de descritores {#list}
 
@@ -58,7 +58,7 @@ O formato de resposta depende do `Accept` cabeçalho enviado na solicitação. O
 | `application/vnd.adobe.xdm-id+json` | Retorna uma matriz de IDs de descritor |
 | `application/vnd.adobe.xdm-link+json` | Retorna uma matriz de caminhos de API do descritor |
 | `application/vnd.adobe.xdm+json` | Retorna uma matriz de objetos de descritor expandidos |
-| `application/vnd.adobe.xdm-v2+json` | Este `Accept` o cabeçalho deve ser usado para utilizar os recursos de paginação. |
+| `application/vnd.adobe.xdm-v2+json` | Este `Accept` o cabeçalho deve ser usado para usar recursos de paginação. |
 
 {style="table-layout:auto"}
 
@@ -248,7 +248,7 @@ Uma resposta bem-sucedida retorna o status HTTP 201 (Criado) e a variável `@id`
 }
 ```
 
-Executar um [solicitação de pesquisa (GET)](#lookup) para visualizar o descritor mostrará que os campos foram atualizados para refletir as alterações enviadas na solicitação PUT.
+Executar um [solicitação de pesquisa (GET)](#lookup) para exibir o descritor mostra que os campos foram atualizados para refletir as alterações enviadas na solicitação PUT.
 
 ## Excluir um descritor {#delete}
 
@@ -291,6 +291,10 @@ A seção a seguir fornece informações adicionais sobre como trabalhar com des
 
 As seções a seguir fornecem uma visão geral dos tipos de descritores disponíveis, incluindo os campos obrigatórios para definir um descritor de cada tipo.
 
+>[!IMPORTANT]
+>
+>Não é possível rotular o objeto de namespace do locatário, pois o sistema aplicaria esse rótulo a cada campo personalizado nessa sandbox. Em vez disso, você deve especificar o nó de folha sob esse objeto que você precisa rotular.
+
 #### Descritor de identidade
 
 Um descritor de identidade sinaliza que &quot;[!UICONTROL sourceProperty]&quot; do &quot;[!UICONTROL sourceSchema]&quot; é um [!DNL Identity] conforme descrito por [Serviço de identidade da Adobe Experience Platform](../../identity-service/home.md).
@@ -314,7 +318,7 @@ Um descritor de identidade sinaliza que &quot;[!UICONTROL sourceProperty]&quot; 
 | `xdm:sourceSchema` | A variável `$id` URI do esquema no qual o descritor está sendo definido. |
 | `xdm:sourceVersion` | A versão principal do esquema de origem. |
 | `xdm:sourceProperty` | O caminho para a propriedade específica que será a identidade. O caminho deve começar com &quot;/&quot; e não terminar com um. Não inclua &quot;propriedades&quot; no caminho (por exemplo, use &quot;/personalEmail/address&quot; em vez de &quot;/properties/personalEmail/properties/address&quot;) |
-| `xdm:namespace` | A variável `id` ou `code` valor do namespace de identidade. Uma lista de namespaces pode ser encontrada usando o [[!DNL Identity Service API]](https://www.adobe.io/experience-platform-apis/references/identity-service). |
+| `xdm:namespace` | A variável `id` ou `code` valor do namespace de identidade. Uma lista de namespaces pode ser encontrada usando o [[!DNL Identity Service API]](https://developer.adobe.com/experience-platform-apis/references/identity-service). |
 | `xdm:property` | Ou `xdm:id` ou `xdm:code`, dependendo da `xdm:namespace` usado. |
 | `xdm:isPrimary` | Um valor booleano opcional. Quando verdadeiro, indica o campo como a identidade principal. Os esquemas podem conter apenas uma identidade principal. |
 

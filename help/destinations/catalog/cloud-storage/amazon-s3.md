@@ -5,7 +5,7 @@ exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
 source-git-commit: c126e6179309ccfbedfbfe2609cfcfd1ea45f870
 workflow-type: tm+mt
 source-wordcount: '1354'
-ht-degree: 13%
+ht-degree: 18%
 
 ---
 
@@ -90,11 +90,11 @@ Use esse método de autenticação quando quiser inserir sua chave de acesso e c
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_s3_assumed_role"
 >title="Autenticação de função presumida"
->abstract="Use esse tipo de autenticação se preferir não compartilhar chaves de conta e chaves secretas com o Adobe. Em vez disso, o Experience Platform se conecta ao local do Amazon S3 usando acesso com base em função. Cole o ARN da função que você criou no AWS para o usuário Adobe. O padrão é semelhante a `arn:aws:iam::800873819705:role/destinations-role-customer` "
+>abstract="Use esse tipo de autenticação se preferir não compartilhar chaves de conta e chaves secretas com a Adobe. Em vez disso, a Experience Platform se conecta ao local do Amazon S3 usando acesso com base em função. Cole o ARN da função que você criou no AWS para o usuário da Adobe. O padrão é semelhante a `arn:aws:iam::800873819705:role/destinations-role-customer` "
 
 ![Imagem dos campos obrigatórios ao selecionar a autenticação de função presumida.](/help/destinations/assets/catalog/cloud-storage/amazon-s3/assumed-role-authentication.png)
 
-Use esse tipo de autenticação se preferir não compartilhar chaves de conta e chaves secretas com o Adobe. Em vez disso, o Experience Platform se conecta ao local do Amazon S3 usando acesso com base em função.
+Use esse tipo de autenticação se preferir não compartilhar chaves de conta e chaves secretas com a Adobe. Em vez disso, o Experience Platform se conecta ao local do Amazon S3 usando acesso com base em função.
 
 Para fazer isso, é necessário criar no console do AWS um usuário presumido para o Adobe com o [permissões necessárias corretas](#required-s3-permission) para gravar em seus buckets do Amazon S3. Criar um **[!UICONTROL Entidade confiável]** no AWS com a conta Adobe **[!UICONTROL 670664943635]**. Para obter mais informações, consulte [Documentação do AWS sobre criação de funções](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html).
 

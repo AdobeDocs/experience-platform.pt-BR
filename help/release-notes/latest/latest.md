@@ -4,7 +4,7 @@ description: As notas da versão de janeiro de 2024 da Adobe Experience Platform
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: c6d471d7bb8cb9d5e376cc49c9c89c39e663d7f9
 workflow-type: tm+mt
-source-wordcount: '1653'
+source-wordcount: '1657'
 ht-degree: 30%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 30%
 
 Novos recursos na Adobe Experience Platform:
 
-- [Playbooks de caso de uso](#use-case-playbooks)
+- [Manuais de casos de uso ](#use-case-playbooks)
 
 Atualizações dos recursos existentes no Experience Platform:
 
@@ -29,7 +29,7 @@ Atualizações dos recursos existentes no Experience Platform:
 - [Serviço de segmentação](#segmentation)
 - [Origens](#sources)
 
-## Playbooks de caso de uso {#use-case-playbooks}
+## Manuais de casos de uso  {#use-case-playbooks}
 
 A variável [!UICONTROL Playbooks de caso de uso] A funcionalidade do agora está disponível para todos os clientes do Real-Time CDP e do Adobe Journey Optimizer. [!UICONTROL Playbooks de caso de uso] foram projetados para ajudar os usuários a superar os desafios ao começar a usar o Real-time Customer Data Platform ou o Adobe Journey Optimizer. Quando não tiver certeza de onde começar ou como criar os ativos certos para os casos de uso desejados, os manuais de casos de uso fornecem inspiração e criam ativos diferentes para que você teste e importe para ambientes de produção quando estiver pronto.
 
@@ -181,8 +181,8 @@ A Experience Platform fornece uma API RESTful e uma interface interativa que per
 
 | Recurso | Descrição |
 | --- | --- |
-| [!BADGE  Beta]{type=Informative}[!DNL Oracle NetSuite] origens | Use o [!DNL Oracle NetSuite] integrações no catálogo de fontes para trazer dados de seus [[!DNL Oracle NetSuite Activities]](../../sources/tutorials/ui/create/marketing-automation/oracle-netsuite-activities.md) e [[!DNL Oracle NetSuite Entities]](../../sources/tutorials/ui/create/marketing-automation/oracle-netsuite-entities.md) contas para o Experience Platform. |
-| [!BADGE Beta]{type=Informative}[!DNL Braze Currents] origem | Use o [[!DNL Braze Currents]](../../sources/tutorials/ui/create/marketing-automation/braze.md) integração no catálogo de fontes para trazer dados de seu [!DNL Braze] conta para Experience Platform. |
+| [!BADGE Beta]{type=Informativo} [!DNL Oracle NetSuite] origens | Use o [!DNL Oracle NetSuite] integrações no catálogo de fontes para trazer dados de seus [[!DNL Oracle NetSuite Activities]](../../sources/tutorials/ui/create/marketing-automation/oracle-netsuite-activities.md) e [[!DNL Oracle NetSuite Entities]](../../sources/tutorials/ui/create/marketing-automation/oracle-netsuite-entities.md) contas para o Experience Platform. |
+| [!BADGE Beta]{type=Informativo} [!DNL Braze Currents] origem | Use o [[!DNL Braze Currents]](../../sources/tutorials/ui/create/marketing-automation/braze.md) integração no catálogo de fontes para trazer dados de seu [!DNL Braze] conta para Experience Platform. |
 | Suporte para autenticação de par de chaves para [!DNL Snowflake] origem do lote | Agora você pode usar a autenticação de par de chaves ao criar um novo [!DNL Snowflake] para dados em lote. Para obter mais informações, leia o guia em [criação de um [!DNL Snowflake] conta usando a API](../../sources/tutorials/api/create/databases/snowflake.md) ou o guia sobre [criação de um [!DNL Snowflake] conta usando a interface](../../sources/tutorials/ui/create/databases/snowflake.md). |
 
 {style="table-layout:auto"}

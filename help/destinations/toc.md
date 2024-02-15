@@ -4,9 +4,9 @@ user-guide-title: Guia de destinos
 user-guide-description: Ative seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas por email, publicidade direcionada e muito mais.
 description: Este documento lista o índice dos destinos do Adobe Experience Platform
 feature: Destinations
-source-git-commit: ed3d672c2f6c06259c341c87451d049d00a41268
+source-git-commit: 7ad013cb4359f2d65e78e30bc8472f62f4505b3a
 workflow-type: tm+mt
-source-wordcount: '1194'
+source-wordcount: '1196'
 ht-degree: 5%
 
 ---
@@ -107,6 +107,7 @@ ht-degree: 5%
       * [Extensão Decibel](./catalog/analytics/decibel.md)
       * [Extensão Demandbase](./catalog/analytics/demandbase.md)
       * [Extensão DialogTech](./catalog/analytics/dialogtech.md)
+      * [Gainsight PX](./catalog/analytics/gainsight-px.md)
       * [Extensão global de tag do site da Google](./catalog/analytics/gtag-analytics.md)
       * [Extensão do Google Universal Analytics](./catalog/analytics/google-universal-analytics.md)
       * [Extensão JW Player Analytics (Beta)](./catalog/analytics/jw-player-analytics.md)

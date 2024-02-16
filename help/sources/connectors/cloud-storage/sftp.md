@@ -4,14 +4,18 @@ solution: Experience Platform
 title: Visão geral do conector de origem SFTP
 description: Saiba como conectar um servidor SFTP ao Adobe Experience Platform usando APIs ou a interface do usuário.
 exl-id: d5bced3d-cd33-40ea-bce0-32c76ecd2790
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 6c22f8243269bb304b12a4e4978ed141ed092c67
 workflow-type: tm+mt
-source-wordcount: '721'
+source-wordcount: '750'
 ht-degree: 0%
 
 ---
 
 # Conector SFTP
+
+>[!IMPORTANT]
+>
+>A variável [!DNL SFTP] o servidor ao qual o Adobe Experience Platform se conecta deve ser capaz de oferecer suporte ao agrupamento, o que significa várias conexões com um único arquivo. Se o seu [!DNL SFTP] O servidor do não suporta fragmentação, então você pode receber um erro que impede a assimilação de arquivos.
 
 O Adobe Experience Platform fornece conectividade nativa para provedores de nuvem, como o AWS, [!DNL Google Cloud Platform], e [!DNL Azure], permitindo que você traga seus dados desses sistemas.
 
@@ -36,7 +40,7 @@ Veja a seguir uma lista de restrições que você deve considerar ao nomear seu 
 
 A variável [!DNL SFTP] a origem suporta autenticação usando [!DNL Base64]chave privada OpenSSH codificada por. Consulte as etapas abaixo para obter informações sobre como gerar sua chave privada OpenSSH codificada na Base64 e conectar [!DNL SFTP] para a Platform.
 
-### [!DNL Windows] users
+### [!DNL Windows] usuários
 
 Se você estiver usando um [!DNL Windows] máquina, abra a **Início** e selecione **Configurações**.
 
@@ -88,7 +92,7 @@ C:\Users\lucy> [convert]::ToBase64String((Get-Content -path "C:\Users\lucy\.ssh\
 
 O comando acima salva a variável [!DNL Base64]-codificada no caminho de arquivo designado. Em seguida, você pode usar essa chave privada para se autenticar no [!DNL SFTP] e conecte-se à Platform.
 
-### [!DNL Mac] users
+### [!DNL Mac] usuários
 
 Se você estiver usando um [!DNL Mac], abrir **Terminal** e execute o seguinte comando para gerar a chave privada (nesse caso, a chave privada será salva em `/Documents/id_rsa`):
 

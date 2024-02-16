@@ -2,9 +2,9 @@
 title: Endpoint de consultas aceleradas
 description: Saiba como acessar o armazenamento acelerado de consultas de maneira sem estado para retornar resultados rapidamente com base em dados agregados. Este documento fornece um exemplo de solicitação HTTP e resposta para o endpoint de consultas aceleradas do Serviço de consulta.
 exl-id: 29ea4d25-9c46-4b29-a6d7-45ac33dcb0fb
-source-git-commit: 037ea8d11bb94e3b4f71ea301a535677b3cccdbd
+source-git-commit: ea2a1cddf299bec750875c4a9125cdd065f18d8b
 workflow-type: tm+mt
-source-wordcount: '561'
+source-wordcount: '560'
 ht-degree: 1%
 
 ---
@@ -40,7 +40,7 @@ POST /accelerated-queries
 A solicitação a seguir envia uma consulta SQL no corpo da solicitação para o armazenamento acelerado.
 
 ```shell
-curl -X POST https://platform.adobe.io/data/foundation/query/acceleated-queries
+curl -X POST https://platform.adobe.io/data/foundation/query/accelerated-queries
  -H 'Authorization: {ACCESS_TOKEN}'
  -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}'
@@ -60,7 +60,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/acceleated-queries
 Essa solicitação alternativa envia uma ID de modelo no corpo da solicitação para o armazenamento acelerado. O SQL do modelo correspondente é usado para consultar o armazenamento acelerado.
 
 ```shell
-curl -X POST https://platform.adobe.io/data/foundation/query/acceleated-queries
+curl -X POST https://platform.adobe.io/data/foundation/query/accelerated-queries
  -H 'Authorization: {ACCESS_TOKEN}'
  -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}'

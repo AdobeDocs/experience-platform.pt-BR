@@ -2,9 +2,9 @@
 title: Conector de origem do Adobe Analytics para dados do conjunto de relatórios
 description: Este documento fornece uma visão geral do Analytics e descreve os casos de uso para dados do Analytics.
 exl-id: c4887784-be12-40d4-83bf-94b31eccdc2e
-source-git-commit: ae88ce6f24db669577941b59fdaf18f43e32768f
+source-git-commit: 7812cfa44e1fcbe71d7b6231dc0b31c727c93a31
 workflow-type: tm+mt
-source-wordcount: '1139'
+source-wordcount: '1145'
 ht-degree: 2%
 
 ---
@@ -52,11 +52,11 @@ A latência esperada para dados do Analytics na plataforma é descrita na tabela
 | Novos dados para o [!DNL Real-Time Customer Profile] (A4T **não** ativado) | &lt; 2 minutos |
 | Novos dados para o [!DNL Real-Time Customer Profile] (A4T **é** ativado) | até 30 minutos |
 | Novos dados para o Data Lake | &lt; 2,25 horas |
-| Novos dados para o CJA sem [compilação](https://experienceleague.adobe.com/docs/analytics-platform/using/stitching/overview.html?lang=en) | &lt; 3,75 horas |
-| Novos dados para o CJA com compilação | &lt; 7 horas |
+| Novos dados para o Customer Journey Analytics sem [compilação](https://experienceleague.adobe.com/docs/analytics-platform/using/stitching/overview.html?lang=en) | &lt; 3,75 horas |
+| Novos dados para o Customer Journey Analytics com compilação | &lt; 7 horas |
 | Preenchimento retroativo de menos de 10 bilhões de eventos | &lt; 4 semanas |
 
-Para obter mais informações sobre latências do CJA, consulte: [Grades de Proteção do Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/guardrails.html?lang=en).
+Para obter mais informações sobre latências de Customer Journey Analytics, consulte: [Grades de Proteção do Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/guardrails.html?lang=en).
 
 O preenchimento retroativo do Analytics para sandboxes de produção assume o padrão de 13 meses. Para dados do Analytics em sandboxes de não produção, o preenchimento retroativo é definido como três meses. O limite de 10 bilhões de eventos mencionados na tabela acima diz respeito estritamente à latência esperada.
 

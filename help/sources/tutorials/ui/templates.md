@@ -3,7 +3,7 @@ description: Saiba como usar modelos na interface do usuário do Adobe Experienc
 title: Criar um fluxo de dados de origem usando modelos na interface
 badge1: "Beta"
 exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
-source-git-commit: deca8300ebbada548a409de9c6a7b7178d0032e0
+source-git-commit: 4a9cae014a8eba20f93023913f3a73103b16d944
 workflow-type: tm+mt
 source-wordcount: '2241'
 ht-degree: 10%
@@ -51,7 +51,7 @@ Este tutorial requer um entendimento prático dos seguintes componentes do Exper
 >id="platform_sources_templates_accounttype"
 >title="Selecionar tipo de empresa"
 >abstract="Selecione o tipo de empresa apropriado para seu caso de uso. O acesso pode variar dependendo da conta de assinatura da Real-time Customer Data Platform."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html?lang=pt-BR" text="Visão geral da Real-Time CDP"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html" text="Visão geral da Real-Time CDP"
 
 Na interface do usuário da Platform, selecione **[!UICONTROL Origens]** na navegação à esquerda, para acessar a [!UICONTROL Origens] e veja um catálogo de fontes disponíveis no Experience Platform.
 

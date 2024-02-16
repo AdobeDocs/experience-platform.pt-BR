@@ -4,9 +4,9 @@ user-guide-title: Ajuda dos Conectores de origem da Adobe Experience Platform
 breadcrumb-title: Guia dos conectores de origem
 user-guide-description: Assimilar dados de várias fontes. Saiba como estruturar, rotular e aprimorar os dados já assimilados.
 feature: Sources
-source-git-commit: 8a9cf0547720927018d728d7cecbf377a1282f6f
+source-git-commit: 345cd259cba2faa2b2b4bafd8ef9d2691d101fd1
 workflow-type: tm+mt
-source-wordcount: '1008'
+source-wordcount: '1012'
 ht-degree: 11%
 
 ---
@@ -296,6 +296,7 @@ ht-degree: 11%
          - [Vantagem do teradata](tutorials/ui/create/databases/teradata-vantage.md)
       - Parceiro de dados {#data-partner}
          - [Resolução de identidade corporativa da Merkury](tutorials/ui/create/data-partners/merkury.md)
+         - [Importação de dados de prospecção da Acxiom](tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md)
       - comércio eletrônico {#ecommerce}
          - [SAP Commerce](tutorials/ui/create/ecommerce/sap-commerce.md)
          - [Shopify](tutorials/ui/create/ecommerce/shopify.md)

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Funções de mapeamento de preparação de dados
 description: Este documento apresenta as funções de mapeamento usadas com o Preparo de dados.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: f250d8e6e5368a785dcb154dbe0b611baed73a4c
+source-git-commit: 5525e81afe0945716c510ff7a0b06cc7e4d5ee6c
 workflow-type: tm+mt
-source-wordcount: '5459'
+source-wordcount: '5908'
 ht-degree: 2%
 
 ---
@@ -282,6 +282,27 @@ Para obter mais informações sobre valores de campo de dispositivo, leia a [lis
 | ua_agent_version_major | Extrai o nome do agente e a versão principal da sequência de agente do usuário. | <ul><li>USER_AGENT: **Obrigatório** A sequência de agente do usuário.</li></ul> | ua_agent_version_major&#x200B;(USER_AGENT) | ua_agent_version_major&#x200B;(&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | Safari 5 |
 | ua_agent_name | Extrai o nome do agente da sequência de agente do usuário. | <ul><li>USER_AGENT: **Obrigatório** A sequência de agente do usuário.</li></ul> | ua_agent_name&#x200B;(USER_AGENT) | ua_agent_name&#x200B;(&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | Safari |
 | ua_device_class | Extrai a classe de dispositivo da sequência de agente do usuário. | <ul><li>USER_AGENT: **Obrigatório** A sequência de agente do usuário.</li></ul> | ua_device_class&#x200B;(USER_AGENT) | ua_device_class&#x200B;(&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | Telefone |
+
+{style="table-layout:auto"}
+
+### Funções do Analytics {#analytics}
+
+>[!NOTE]
+>
+>Role a tela para a esquerda/direita para visualizar o conteúdo completo da tabela.
+
+| Função | Descrição | Parâmetros | Sintaxe | Expressão | Saída de exemplo |
+| -------- | ----------- | ---------- | -------| ---------- | ------------- |
+| get_event_id | Extrai a ID de evento de uma string de evento do Analytics. | <ul><li>CADEIA_DE_CARACTERES_DO_EVENTO: **Obrigatório** A sequência de eventos do Analytics separada por vírgulas.</li><li>NOME_EVENTO: **Obrigatório** O nome do evento do qual extrair e ID.</li></ul> | get_event_id(EVENT_STRING, EVENT_NAME) | get_event_id(&quot;event101=5:123456,scOpen&quot;, &quot;event101&quot;) | 123456 |
+| get_event_value | Extrai o valor de evento de uma string de evento do Analytics. Se o valor do evento não for especificado, 1 será retornado. | <ul><li>CADEIA_DE_CARACTERES_DO_EVENTO: **Obrigatório** A sequência de eventos do Analytics separada por vírgulas.</li><li>NOME_EVENTO: **Obrigatório** O nome do evento do qual extrair um valor.</li></ul> | get_event_value(EVENT_STRING, EVENT_NAME) | get_event_value(&quot;event101=5:123456,scOpen&quot;, &quot;event101&quot;) | 5 |
+| get_product_categories | Extrai a categoria de produto de uma string de produtos do Analytics. | <ul><li>PRODUCTS_STRING: **Obrigatório** A string de produtos do Analytics.</li></ul> | get_product_categories(PRODUCTS_STRING) | get_product_categories(&quot;;Exemplo de produto 1;1;3.50,Exemplo de categoria 2;Exemplo de produto 2;1;5.99&quot;) | [null,&quot;Exemplo de categoria 2&quot;] |
+| get_product_names | Extrai o nome do produto de uma string de produtos do Analytics. | <ul><li>PRODUCTS_STRING: **Obrigatório** A string de produtos do Analytics.</li></ul> | get_product_names(PRODUCTS_STRING) | get_product_names(&quot;;Exemplo produto 1;1;3.50,Exemplo categoria 2;Exemplo produto 2;1;5.99&quot;) | [&quot;Exemplo de produto 1&quot;,&quot;Exemplo de produto 2&quot;] |
+| get_product_quantity | Extrai as quantidades de uma string de produtos do Analytics. | <ul><li>PRODUCTS_STRING: **Obrigatório** A string de produtos do Analytics.</li></ul> | get_product_quantity(PRODUCTS_STRING) | get_product_quantity(&quot;;Exemplo produto 1;1;3.50,Exemplo categoria 2;Exemplo produto 2&quot;) | [&quot;1&quot;, nulo] |
+| get_product_price | Extrai o preço de uma string de produtos do Analytics. | <ul><li>PRODUCTS_STRING: **Obrigatório** A string de produtos do Analytics.</li></ul> | get_product_price(PRODUCTS_STRING) | get_product_price(&quot;;Exemplo produto 1;1;3.50,Exemplo categoria 2;Exemplo produto 2&quot;) | [&quot;3.50&quot;, nulo] |
+| get_product_events | Extrai um evento nomeado da string de produtos como uma matriz de objetos. | <ul><li>PRODUCTS_STRING: **Obrigatório** A string de produtos do Analytics.</li><li>NOME_EVENTO: **Obrigatório** O nome do evento do qual extrair valores.</li></ul> | get_product_events(PRODUCTS_STRING, EVENT_NAME) | get_product_events(&quot;;Exemplo produto 1;1;4.20;event1=2.3\|event2=5:1,;Exemplo produto 2;1;4.20;event1=3\|event2=2:2&quot;, &quot;event2&quot;) | [`{"id": "1","value", "5"}`, `{"id": "2","value", "1"}`] |
+| get_product_event_ids | Extrai as IDs do evento nomeado da string de produtos como uma matriz de strings. | <ul><li>PRODUCTS_STRING: **Obrigatório** A string de produtos do Analytics.</li><li>NOME_EVENTO: **Obrigatório** O nome do evento do qual extrair valores.</li></ul> | get_product_events_ids(PRODUCTS_STRING, EVENT_NAME) | get_product_event_ids(&quot;;Exemplo produto 1;1;4.20;event1=2.3\|event2=5:1,;Exemplo produto 2;1;4.20;event1=3\|event2=2:2&quot;, &quot;event2&quot;) | [&quot;1&quot;, &quot;2&quot;] |
+| get_product_event_values | Extrai valores para o evento nomeado da string de produtos como uma matriz de strings. | <ul><li>PRODUCTS_STRING: **Obrigatório** A string de produtos do Analytics.</li><li>NOME_EVENTO: **Obrigatório** O nome do evento do qual extrair valores.</li></ul> | get_product_events_values(PRODUCTS_STRING, EVENT_NAME) | get_product_event_values(&quot;;Exemplo produto 1;1;4.20;event1=2.3\|event2=5:1,;Exemplo produto 2;1;4.20;event1=3\|event2=2:2&quot;, &quot;event1&quot;) | [&quot;2.3&quot;, &quot;3&quot;] |
+| get_product_evars | Extrai os valores de evar do evento nomeado da string de produtos como uma matriz de strings. | <ul><li>PRODUCTS_STRING: **Obrigatório** A string de produtos do Analytics.</li><li>EVAR_NAME: **Obrigatório** O nome do eVar para extrair.</li></ul> | get_product_evars(PRODUCTS_STRING, EVENT_NAME) | get_product_evars(&quot;;Exemplo product;1;6.69;;eVar 1=valor de merchandising&quot;, &quot;eVar 1&quot;) | [&quot;Valor de merchandising&quot;] |
 
 {style="table-layout:auto"}
 

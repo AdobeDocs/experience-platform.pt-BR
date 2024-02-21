@@ -4,9 +4,9 @@ user-guide-title: Guia de destinos
 user-guide-description: Ative seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas por email, publicidade direcionada e muito mais.
 description: Este documento lista o índice dos destinos do Adobe Experience Platform
 feature: Destinations
-source-git-commit: 7ad013cb4359f2d65e78e30bc8472f62f4505b3a
+source-git-commit: c2e446ed89ef8a2c4496cd1d442d0204843dab2e
 workflow-type: tm+mt
-source-wordcount: '1196'
+source-wordcount: '1202'
 ht-degree: 5%
 
 ---
@@ -139,6 +139,8 @@ ht-degree: 5%
    * Destinos da Plataforma de gerenciamento de dados {#data-management}
       * [Visão geral dos destinos da Plataforma de gerenciamento de dados (DMP)](./catalog/data-management/overview.md)
       * [extensão Audience Manager DIL](./catalog/data-management/aam-dil-extension.md)
+   * Destinos de comércio eletrônico {#ecommerce}
+      * [SAP Commerce](./catalog/ecommerce/sap-commerce.md)
    * Destinos de email {#email}
       * [Extensão Bizible](./catalog/email/bizible.md)
       * [Extensão do Marketo](./catalog/email/marketo.md)
@@ -149,6 +151,7 @@ ht-degree: 5%
       * [Conexão com o Adobe Campaign](./catalog/email-marketing/adobe-campaign.md)
       * [Conexão com o Adobe Campaign Managed Cloud Services](./catalog/email-marketing/adobe-campaign-managed-services.md)
       * [Categorias de interesse do Mailchimp](./catalog/email-marketing/mailchimp-interest-categories.md)
+      * [Tags do Mailchimp](./catalog/email-marketing/mailchimp-tags.md)
       * [(API) Conexão Oracle Eloqua](./catalog/email-marketing/oracle-eloqua-api.md)
       * [(Arquivos) Conexão Oracle Eloqua](./catalog/email-marketing/oracle-eloqua.md)
       * [Conexão do Oracle Responsys](./catalog/email-marketing/oracle-responsys.md)

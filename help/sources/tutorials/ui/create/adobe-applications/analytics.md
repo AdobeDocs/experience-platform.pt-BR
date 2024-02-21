@@ -2,10 +2,10 @@
 title: Criar uma conexão de origem do Adobe Analytics na interface
 description: Saiba como criar uma conexão de origem do Adobe Analytics na interface do usuário para trazer dados do consumidor para o Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: c38e25a939319fa3b3301af36482c8efe6c3dd5f
+source-git-commit: f177a8058f6533151978bfd7b8bba4845792f5ed
 workflow-type: tm+mt
-source-wordcount: '2695'
-ht-degree: 4%
+source-wordcount: '2755'
+ht-degree: 3%
 
 ---
 
@@ -168,7 +168,7 @@ With your custom mapping set completed, select **[!UICONTROL Next]** to proceed.
 
 ![complete-custom-mapping](../../../../images/tutorials/create/analytics/complete-custom-mapping.png) -->
 
-### Filtragem para o perfil do cliente em tempo real {#filtering-for-profile}
+## Filtragem para o perfil do cliente em tempo real {#filtering-for-profile}
 
 >[!CONTEXTUALHELP]
 >id="platform_data_prep_analytics_filtering"
@@ -196,7 +196,7 @@ Depois de concluir os mapeamentos para o [!DNL Analytics] dados do conjunto de r
 
 >[!ENDSHADEBOX]
 
-#### Filtragem em nível de linha
+### Filtragem em nível de linha
 
 >[!IMPORTANT]
 >
@@ -254,7 +254,7 @@ Quando terminar, selecione **[!UICONTROL Próxima]**.
 
 ![exclude-examples](../../../../images/tutorials/create/analytics/exclude-examples.png)
 
-#### Filtragem em nível de coluna
+### Filtragem em nível de coluna
 
 Selecionar **[!UICONTROL Filtro de coluna]** no cabeçalho para aplicar a filtragem em nível de coluna.
 
@@ -267,6 +267,14 @@ Por padrão, todas as [!DNL Analytics] ir para [!DNL Profile] e esse processo pe
 Quando terminar, selecione **[!UICONTROL Próxima]**.
 
 ![colunas selecionadas](../../../../images/tutorials/create/analytics/columns-selected.png)
+
+### Filtrar identidades secundárias
+
+Use um filtro de coluna para excluir identidades secundárias da assimilação de perfis. Para filtrar identidades secundárias, selecione **[!UICONTROL Filtro de coluna]** e selecione **[!UICONTROL _identidades]**.
+
+O filtro se aplica somente quando uma identidade é marcada como secundária. Se as identidades forem selecionadas, mas um evento chegar com uma das identidades marcadas como primárias, elas não serão filtradas.
+
+![identidades secundárias](../../../../images/tutorials/create/analytics/secondary-identities.png)
 
 ### Fornecer detalhes do fluxo de dados
 

@@ -4,10 +4,10 @@ title: Visão geral dos destinos de marketing por email
 type: Tutorial
 description: Os Provedores de serviços de email (ESPs) permitem gerenciar atividades de marketing por email, como o envio de campanhas de email promocionais. Saiba quais ESPs são compatíveis como destinos de Experience Platform.
 exl-id: e07f8c5a-0424-4de5-810f-3d5711ef4606
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 4566d5241f287801569e0cfa5b86ea6210fd1638
 workflow-type: tm+mt
-source-wordcount: '374'
-ht-degree: 5%
+source-wordcount: '376'
+ht-degree: 3%
 
 ---
 
@@ -24,6 +24,7 @@ O Adobe Experience Platform é compatível com os seguintes destinos de marketin
 * [Adobe Campaign](adobe-campaign.md)
 * [Adobe Campaign Managed Cloud Services](adobe-campaign-managed-services.md)
 * [Categorias de interesse do Mailchimp](mailchimp-interest-categories.md)
+* [Tags do Mailchimp](mailchimp-tags.md)
 * [(API) Oracle Eloqua](oracle-eloqua-api.md)
 * [(API) [!DNL Salesforce Marketing Cloud]](salesforce-marketing-cloud-exact-target.md)
 * [(Arquivos) Oracle Eloqua](oracle-eloqua.md)
@@ -63,7 +64,7 @@ No seletor de campo Esquema, escolha quais outros campos você deseja exportar p
 | Estado do endereço | `homeAddress.stateProvince` |
 | CEP do endereço | `homeAddress.postalCode` |
 | Aniversário | `person.birthDayAndMonth` |
-| Segmento de afiliação | `segmentMembership.status` |
+| Associação de segmento | `segmentMembership.status` |
 
 {style="table-layout:auto"}
 

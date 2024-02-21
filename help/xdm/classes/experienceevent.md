@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Classe XDM ExperienceEvent
 description: Saiba mais sobre a classe XDM ExperienceEvent e as práticas recomendadas para modelagem de dados de evento.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: 8113b5298120f710f43c5a02504f19ca3af67c5a
+source-git-commit: f7d8cd295dd6aa11048c3cb0f9a54a3702b83473
 workflow-type: tm+mt
-source-wordcount: '2656'
+source-wordcount: '2672'
 ht-degree: 1%
 
 ---
@@ -28,7 +28,7 @@ A variável [!DNL XDM ExperienceEvent] A própria classe fornece vários campos 
 | `eventType` | Uma string que indica o tipo ou categoria do evento. Esse campo pode ser usado se você quiser distinguir tipos de evento diferentes no mesmo esquema e conjunto de dados, como distinguir um evento de exibição de produto de um evento de carrinho de compras para uma empresa de varejo.<br><br>Os valores padrão para essa propriedade são fornecidos na variável [seção apêndice](#eventType), incluindo descrições do caso de uso pretendido. Esse campo é um enum extensível, o que significa que você também pode usar suas próprias cadeias de caracteres de tipo de evento para categorizar os eventos que você está rastreando.<br><br>`eventType` O limita o uso de apenas um evento por ocorrência no aplicativo e, portanto, você deve usar campos calculados para informar ao sistema qual evento é mais importante. Para obter mais informações, consulte a seção sobre [práticas recomendadas para campos calculados](#calculated). |
 | `producedBy` | Um valor de string que descreve o produtor ou a origem do evento. Esse campo pode ser usado para filtrar determinados produtores de eventos, se necessário, para fins de segmentação.<br><br>Alguns valores sugeridos para essa propriedade são fornecidos na [seção apêndice](#producedBy). Esse campo é um enum extensível, o que significa que você também pode usar suas próprias cadeias de caracteres para representar diferentes produtores de evento. |
 | `identityMap` | Um campo de mapa que contém um conjunto de identidades com namespace para o indivíduo ao qual o evento se aplica. Este campo é atualizado automaticamente pelo sistema à medida que os dados de identidade são assimilados. Para utilizar adequadamente esse campo para [Perfil do cliente em tempo real](../../profile/home.md), não tente atualizar manualmente o conteúdo do campo em suas operações de dados.<br /><br />Consulte a seção sobre mapas de identidade na [noções básicas da composição do esquema](../schema/composition.md#identityMap) para obter mais informações sobre o caso de uso. |
-| `timestamp`<br>**(Obrigatório)** | Um carimbo de data e hora ISO 8601 de quando o evento ocorreu, formatado conforme [RFC 3339 Seção 5.6](https://datatracker.ietf.org/doc/html/rfc3339). Esse carimbo de data e hora deve ocorrer no passado. Consulte a seção abaixo em [carimbos de data e hora](#timestamps) para obter as práticas recomendadas de uso deste campo. |
+| `timestamp`<br>**(Obrigatório)** | Um carimbo de data e hora ISO 8601 de quando o evento ocorreu, formatado conforme [RFC 3339 Seção 5.6](https://datatracker.ietf.org/doc/html/rfc3339). Este carimbo de data e hora **deve** ocorrer no passado, mas **deve** a partir de 1970. Consulte a seção abaixo em [carimbos de data e hora](#timestamps) para obter as práticas recomendadas de uso deste campo. |
 
 {style="table-layout:auto"}
 
@@ -38,7 +38,7 @@ As seções a seguir abordam as práticas recomendadas para criar esquemas do Ex
 
 ### Carimbos de data e hora {#timestamps}
 
-A raiz `timestamp` de um esquema de evento pode **somente** representam a observação do próprio evento e devem ocorrer no passado. Se os casos de uso de segmentação exigirem o uso de carimbos de data e hora que podem ocorrer no futuro, esses valores deverão ser restritos em outro lugar no esquema do Evento de experiência.
+A raiz `timestamp` de um esquema de evento pode **somente** representam a observação do próprio evento e devem ocorrer no passado. No entanto, o evento **deve** a partir de 1970. Se os casos de uso de segmentação exigirem o uso de carimbos de data e hora que podem ocorrer no futuro, esses valores deverão ser restritos em outro lugar no esquema do Evento de experiência.
 
 Por exemplo, se uma empresa no setor de viagens e hospitalidade estiver modelando um evento de reserva de voo, o nível de classe `timestamp` field representa a hora em que o evento de reserva foi observado. Outros carimbos de data e hora relacionados ao evento, como a data de início da reserva de viagem, devem ser capturados em campos separados fornecidos por grupos de campos padrão ou personalizados.
 

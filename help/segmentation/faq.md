@@ -2,9 +2,9 @@
 title: Perguntas frequentes do Audiences
 description: Descubra respostas para perguntas frequentes sobre públicos-alvo e outros conceitos relacionados à segmentação.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: dbc14c639ef02b8504cc9895c6aacb6e205549b2
+source-git-commit: b129efacb077af0148a743e43ec23f9f8b8d7d3e
 workflow-type: tm+mt
-source-wordcount: '2746'
+source-wordcount: '3122'
 ht-degree: 1%
 
 ---
@@ -246,6 +246,26 @@ Para obter mais informações sobre o bloco Split, leia o [Guia da interface do 
 
 Sim, todos os tipos de segmentação ([segmentação em lote, segmentação por transmissão e segmentação de borda](./home.md#evaluate-segments)) são compatíveis com o fluxo de trabalho Composição de público-alvo. No entanto, como as composições atualmente são executadas apenas uma vez por dia, mesmo se os públicos avaliados por transmissão ou borda forem incluídos, o resultado será baseado na associação do público no momento em que a composição foi executada.
 
-## Como posso confirmar a associação de um perfil em um público-alvo?
+## associação de público
+
+A seção a seguir lista perguntas relacionadas à associação de público-alvo.
+
+### Como posso confirmar a associação de um perfil em um público-alvo?
 
 Para confirmar a associação de público-alvo de um perfil, visite a página de detalhes do perfil do perfil que deseja confirmar. Selecionar **[!UICONTROL Atributos]**, seguido por **[!UICONTROL Exibir JSON]** e você poderá confirmar que a variável `segmentMembership` O objeto contém a ID do público-alvo.
+
+### Como a segmentação em lote resolve a associação de perfis?
+
+Os públicos avaliados usando a segmentação em lote são resolvidos diariamente, com os resultados da associação de público sendo registrados no do perfil `segmentMembership` atributo. As pesquisas de perfil geram uma versão nova do perfil no momento da pesquisa, mas isso acontece **não** atualize os resultados da segmentação em lote.
+
+Como resultado, quando alterações são feitas no perfil, como mesclar dois perfis, essas alterações **irá** aparecem no perfil quando pesquisados, mas **não** devem refletir-se na `segmentMembership` até que o trabalho de avaliação de segmento tenha sido executado novamente.
+
+Por exemplo, digamos que você tenha criado dois públicos mutuamente exclusivos: o público-alvo A é para pessoas que vivem em Washington e o B é para pessoas que vivem **não** viver em Washington. Há dois perfis - perfil 1 para uma pessoa que mora em Washington e perfil 2 para uma pessoa que mora em Oregon.
+
+Quando o trabalho de avaliação de segmentação em lote é executado, o perfil 1 vai para o Público-alvo A, enquanto o perfil 2 vai para o Público-alvo B. Posteriormente, mas antes da execução do trabalho de avaliação de segmentação em lote do próximo dia, um evento que reconcilia os dois perfis entra na Platform. Como resultado, um único perfil mesclado que contém os perfis 1 e 2 é criado.
+
+Até que o próximo trabalho de avaliação de segmento em lote seja executado, o novo perfil mesclado terá a associação de público-alvo no **ambos** perfil 1 e perfil 2. Como resultado, isso significa que será um membro de **ambos** Público-alvo A e público-alvo B, apesar de terem definições contraditórias. Para o usuário final, essa é a variável **mesma situação exata** como antes, os perfis estavam conectados, já que sempre havia apenas uma pessoa envolvida, e a Platform apenas **não** Ter informações suficientes para conectar os dois perfis.
+
+Se você usar a pesquisa de perfil para recuperar o perfil recém-criado e observar sua associação de público-alvo, ela mostrará que é um membro de **ambos** Público-alvo A e público-alvo B, apesar de ambos terem definições contraditórias. Quando o trabalho diário de avaliação da segmentação em lote for executado, a associação de público-alvo será atualizada para refletir esse estado atualizado dos dados do perfil.
+
+Se você precisar de mais resolução de público em tempo real, use a transmissão ou a segmentação de borda.

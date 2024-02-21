@@ -6,7 +6,7 @@ exl-id: 3a352d46-829f-4a58-b676-73c3147f792c
 source-git-commit: 665bbd1904e857336a4fb677230389d7977f6b60
 workflow-type: tm+mt
 source-wordcount: '354'
-ht-degree: 0%
+ht-degree: 9%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="platform_audiences_segmentBuilder_constraints"
 >title="Refatoração de restrições de tempo"
->abstract="As restrições de tempo em nível de regra e de grupo foram removidas para esclarecer o uso das restrições de tempo. Reescreva sua restrição como uma restrição de tempo em nível de tela ou cartão."
+>abstract="As restrições de tempo em nível de regra e de grupo foram removidas para esclarecer o uso das restrições de tempo. Reescreva sua restrição de tempo no nível da tela ou do cartão."
 
 A versão de janeiro de 2024 do Adobe Experience Platform introduziu alterações no Serviço de segmentação da Adobe Experience Platform que adicionam novas restrições, nas quais as restrições de tempo podem ser definidas. Essas alterações afetam os segmentos recém-criados ou editados que usam a interface do usuário do Construtor de segmentos. Este guia explica como atenuar essas alterações.
 

@@ -2,9 +2,9 @@
 title: Namespaces e esquemas B2B
 description: Este documento fornece uma visão geral dos namespaces personalizados necessários ao criar um conector de origem B2B.
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 5e8bb04ca18159eab98b2f7f0bba8cb1488a1f26
 workflow-type: tm+mt
-source-wordcount: '1622'
+source-wordcount: '1620'
 ht-degree: 4%
 
 ---
@@ -68,7 +68,7 @@ Uma solicitação bem-sucedida cria os namespaces e esquemas necessários para o
 
 ## Namespaces B2B
 
-Os namespaces de identidade são um componente de [[!DNL Identity Service]](../../../../identity-service/home.md) que servem para distinguir o contexto ou tipo de identidade. Uma identidade totalmente qualificada inclui um valor de ID e um namespace. Consulte a [visão geral dos namespaces](../../../../identity-service/features/namespaces.md) para obter mais informações.
+Os namespaces de identidade são um componente de [[!DNL Identity Service]](../../../../identity-service/home.md) que servem para distinguir o contexto de uma identidade. Uma identidade totalmente qualificada inclui um valor de identidade e um namespace. Leia o [visão geral dos namespaces](../../../../identity-service/features/namespaces.md) para obter mais informações.
 
 Os namespaces B2B são usados na identidade principal da entidade.
 

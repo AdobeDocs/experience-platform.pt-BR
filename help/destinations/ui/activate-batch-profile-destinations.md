@@ -3,10 +3,10 @@ title: Ativar públicos para destinos de exportação de perfil em lote
 type: Tutorial
 description: Saiba como ativar os públicos-alvo no Adobe Experience Platform enviando-os para destinos com base em perfil de lote.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: a66c4397a02da81e4b3304f3bc975f725f8f8d76
+source-git-commit: 5e3c4f5c9a5540e0a796785c743a77c1e11821f8
 workflow-type: tm+mt
-source-wordcount: '3797'
-ht-degree: 12%
+source-wordcount: '3879'
+ht-degree: 11%
 
 ---
 
@@ -73,6 +73,10 @@ Você pode selecionar entre vários tipos de públicos-alvo, dependendo de sua o
 >
 >Seleção de públicos-alvo originados de **[!UICONTROL Uploads personalizados]** ativa automaticamente a variável [Selecionar atributos de enriquecimento](#select-enrichment-attributes) etapa.
 
+>[!TIP]
+>
+>Você pode remover públicos-alvo de fluxos de ativação existentes da **[!UICONTROL Dados de ativação]** página. Consulte a [documentação dedicada](../ui/destination-details-page.md#bulk-remove) para obter detalhes.
+
 ## Programar exportação de público-alvo {#scheduling}
 
 >[!CONTEXTUALHELP]
@@ -80,17 +84,21 @@ Você pode selecionar entre vários tipos de públicos-alvo, dependendo de sua o
 >title="Agendar"
 >abstract="Use o ícone de lápis para definir o tipo de exportação de arquivo (arquivos completos ou arquivos incrementais) e a frequência de exportação."
 
-[!DNL Adobe Experience Platform] exporta dados para destinos de marketing por email e armazenamento na nuvem conforme [tipos de arquivos diferentes](#supported-file-formats-export). No **[!UICONTROL Agendamento]** você pode configurar o agendamento e os nomes de arquivo para cada público-alvo que está exportando. A configuração do agendamento é obrigatória, mas a configuração do nome do arquivo é opcional.
+[!DNL Adobe Experience Platform] exporta dados para destinos de marketing por email e armazenamento na nuvem conforme [tipos de arquivos diferentes](#supported-file-formats-export). No **[!UICONTROL Agendamento]** você pode configurar o agendamento e os nomes de arquivo para cada público-alvo que está exportando.
+
+O Experience Platform define automaticamente um agendamento padrão para cada exportação de arquivo. Você pode modificar o agendamento padrão de acordo com suas necessidades, selecionando o ícone de lápis ao lado de cada agendamento e definindo um agendamento personalizado.
+
+![O controle Editar programação é destacado na etapa Programação.](../assets/ui/activate-batch-profile-destinations/edit-default-schedule.png)
+
+>[!TIP]
+>
+>É possível editar os agendamentos de ativação de público para os fluxos de ativação existentes na **[!UICONTROL Dados de ativação]** página. Consulte a documentação em [agendamentos de ativação de edição em massa](../ui/destination-details-page.md#bulk-edit-schedule) para obter detalhes.
 
 >[!IMPORTANT]
 >
 >[!DNL Adobe Experience Platform] O divide automaticamente os arquivos de exportação em 5 milhões de registros (linhas) por arquivo. Cada linha representa um perfil.
 >
 >Nomes de arquivos divididos são anexados com um número que indica que o arquivo é parte de uma exportação maior, como: `filename.csv`, `filename_2.csv`, `filename_3.csv`.
-
-Selecione o **[!UICONTROL Criar programação]** controle correspondente ao público-alvo que você deseja enviar para o seu destino.
-
-![Crie o controle de agendamento destacado na etapa Agendamento.](../assets/ui/activate-batch-profile-destinations/create-schedule-button.png)
 
 ### Exportar arquivos completos {#export-full-files}
 
@@ -247,6 +255,14 @@ Nesta etapa, você deve selecionar os atributos de perfil que deseja adicionar a
 1. O campo selecionado para exportação agora aparece na exibição de mapeamento e mostra o cabeçalho editado no arquivo exportado.
 
    ![Janela modal mostrando atributos de perfil que podem ser exportados para o destino.](../assets/ui/activate-batch-profile-destinations/select-target-field-updated.png)
+
+1. [!BADGE Beta]{type=Informative}
+
+   >[!NOTE]
+   >
+   >Esse recurso está na versão beta e só está disponível para clientes selecionados. Para solicitar acesso a esse recurso, entre em contato com o representante da Adobe.
+
+   ![Gravação mostrando a reorganização dos campos de mapeamento por arrastar e soltar.](../assets/ui/activate-batch-profile-destinations/reorder-fields.gif)
 
 1. (Opcional) É possível selecionar seu campo exportado para ser um [chave obrigatória](#mandatory-keys) ou um [chave de desduplicação](#deduplication-keys).
 

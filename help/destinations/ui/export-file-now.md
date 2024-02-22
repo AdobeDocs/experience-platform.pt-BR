@@ -3,9 +3,9 @@ title: (Beta) Exportar arquivos sob demanda para destinos em lote usando a inter
 type: Tutorial
 description: Saiba como exportar arquivos sob demanda para destinos em lote usando a interface do usuário do Experience Platform.
 exl-id: 0cbe5089-b73d-4584-8451-2fc34d47c357
-source-git-commit: fbc2a6c81682797af4674adabff358a62d973007
+source-git-commit: 64833e29d062225bc774a14ae60b102b293bb5c4
 workflow-type: tm+mt
-source-wordcount: '743'
+source-wordcount: '722'
 ht-degree: 8%
 
 ---
@@ -48,13 +48,9 @@ Para exportar arquivos sob demanda para destinos em lote, você deve ter o [cone
 
    ![Imagem destacando um fluxo de dados filtrado.](../assets/ui/activate-on-demand/filtered-dataflow.png)
 
-3. Selecione o **[!UICONTROL Dados de ativação]** e selecione o público-alvo para o qual deseja exportar um arquivo por demanda e selecione o **[!UICONTROL Exportar arquivo agora]** controle para acionar uma exportação única que entregará um arquivo ao destino do lote.
+3. Selecione o **[!UICONTROL Dados de ativação]** e selecione os públicos para os quais deseja exportar arquivos por demanda e selecione o **[!UICONTROL Exportar arquivo agora]** controle para acionar uma exportação única que fornecerá um arquivo para cada público-alvo selecionado para o destino do lote.
 
-   >[!IMPORTANT]
-   >
-   >No momento, não há suporte na interface do usuário para selecionar vários públicos-alvo para exportar arquivos sob demanda em massa. Use o [API de ativação ad-hoc](/help/destinations/api/ad-hoc-activation-api.md) para esse efeito.
-
-   ![Imagem destacando o botão Exportar arquivo agora.](../assets/ui/activate-on-demand/activate-segment-on-demand.png)
+   ![Imagem destacando o botão Exportar arquivo agora.](../assets/ui/activate-on-demand/bulk-export-file-now.png)
 
 4. Selecionar **[!UICONTROL Sim]** para confirmar e acionar a exportação do arquivo.
 

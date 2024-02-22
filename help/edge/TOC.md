@@ -5,10 +5,10 @@ user-guide-title: Ajuda do SDK da Web da Adobe Experience Platform
 breadcrumb-title: Guia do SDK da Web
 user-guide-description: Interaja com os serviços da Experience Cloud por meio da Rede de borda.
 feature: Web SDK
-source-git-commit: 221a9348803e111a1842b3abf2e74f7408da5994
+source-git-commit: 82eede9e59338e8438c361d58b476960b7faa5cb
 workflow-type: tm+mt
-source-wordcount: '184'
-ht-degree: 28%
+source-wordcount: '188'
+ht-degree: 23%
 
 ---
 
@@ -32,7 +32,7 @@ ht-degree: 28%
    * [Visão geral](identity/overview.md)
    * [IDs de dispositivo próprio](identity/first-party-device-ids.md)
    * [Compartilhamento de ID de dispositivo móvel para Web e entre domínios](identity/id-sharing.md)
-* Coleção de dados {#data-collection}
+* Coleta de dados {#data-collection}
    * [Informações coletadas automaticamente](data-collection/automatic-information.md)
    * [Rastrear links](data-collection/track-links.md)
    * [Coletar dados de comércio, produto e pedido](data-collection/collect-commerce-data.md)
@@ -46,6 +46,7 @@ ht-degree: 28%
    * [Renderizar conteúdo personalizado](personalization/rendering-personalization-content.md)
    * [Personalização por meio de implementação híbrida](personalization/hybrid-personalization.md)
    * [Gerenciar cintilação](personalization/manage-flicker.md)
+
    * Adobe Target {#adobe-target}
       * [Visão geral](personalization/adobe-target/target-overview.md)
       * [Implementação de aplicativos de página única](personalization/adobe-target/spa-implementation.md)
@@ -53,14 +54,15 @@ ht-degree: 28%
       * [Uso da ID de terceiros da mbox](personalization/adobe-target/using-mbox-3rdpartyid.md)
       * [Comparação da biblioteca at.js com o SDK da Web](personalization/adobe-target/web-sdk-atjs-comparison.md)
       * Registro do Analytics for Target (A4T) {#a4t}
-         * [Visão geral ](personalization/adobe-target/analytics-logging/overview.md)
-         * [Lado do cliente fazendo logon](personalization/adobe-target/analytics-logging/client-side.md)
+         * [Visão geral](personalization/adobe-target/analytics-logging/overview.md)
+         * [Registro no lado do cliente](personalization/adobe-target/analytics-logging/client-side.md)
          * [Registro do lado do servidor](personalization/adobe-target/analytics-logging/server-side.md)
-   * Offer Decisioning {#offer-decisioning}
+   * Offer decisioning {#offer-decisioning}
       * [Visão geral](personalization/offer-decisioning/offer-decisioning-overview.md)
    * Adobe Journey Optimizer {#ajo}
       * [Visão geral](personalization/ajo/overview.md)
       * [Implementação de aplicativos de página única](personalization/ajo/web-spa-implementation.md)
+      * [Configurar mensagens no aplicativo da Web](personalization/web-in-app-messaging.md)
 * Consentimento {#consent}
    * [Suporte ao consentimento](consent/supporting-consent.md)
    * Estrutura de transparência e consentimento 2.0 do IAB {#iab-tcf}

@@ -4,14 +4,18 @@ solution: Experience Platform
 title: Namespace no Experience Data Model (XDM)
 description: Saiba como o namespace no Experience Data Model (XDM) permite estender seus esquemas e evitar colisões de campo enquanto diferentes componentes do esquema são trazidos juntos.
 exl-id: b351dfaf-5219-4750-a7a9-cf4689a5b736
-source-git-commit: edd285c3d0638b606876c015dffb18309887dfb5
+source-git-commit: d26a0586a992948e1b278bae91a985fe3d9f1ee8
 workflow-type: tm+mt
-source-wordcount: '631'
+source-wordcount: '668'
 ht-degree: 0%
 
 ---
 
 # Namespace no Experience Data Model (XDM)
+
+>[!IMPORTANT]
+>
+>No XDM, o namespace (o tópico desta página) é usado para distinguir campos em um esquema. Isso é diferente do conceito de namespace de identidade no Serviço de identidade, em que o namespace é usado para distinguir valores de identidade. Leia a documentação em [namespace no serviço de identidade](../../identity-service/features/namespaces.md) para obter mais informações.
 
 Todos os campos nos esquemas do Experience Data Model (XDM) têm um namespace associado. Esses namespaces permitem estender seus esquemas e evitar colisões de campo à medida que diferentes componentes de esquema são reunidos. Este documento fornece uma visão geral dos namespaces no XDM e como eles são representados na variável [API do registro de esquema](../api/overview.md).
 

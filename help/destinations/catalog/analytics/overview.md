@@ -3,9 +3,9 @@ keywords: destinos do analytics;destino do analytics
 title: Visão geral dos destinos do Analytics
 description: Os destinos do Analytics rastreiam como os visitantes interagem com o conteúdo do site e coletam dados para entender o comportamento do público-alvo. Essas plataformas fornecem insights exclusivos sobre o engajamento e a conversão de seus visitantes mais valiosos.
 exl-id: d7a2351b-c2ce-4776-a2b7-f8bb5e73b45b
-source-git-commit: 7ad013cb4359f2d65e78e30bc8472f62f4505b3a
+source-git-commit: 767ebd1ef693f9484e11facc7e8b73d91f632956
 workflow-type: tm+mt
-source-wordcount: '175'
+source-wordcount: '176'
 ht-degree: 2%
 
 ---
@@ -28,7 +28,7 @@ Atualmente, o Adobe Experience Platform é compatível com os destinos de análi
 * [Extensão Decibel](decibel.md)
 * [Extensão Demandbase](demandbase.md)
 * [Extensão Dialogtech](dialogtech.md)
-* [Gainsight PX](gainsight-px.md)
+* [Conexão Gainsight PX](gainsight-px.md)
 * [Extensão do Google Global Site Tag Analytics](gtag-analytics.md)
 * [Extensão do Google Universal Analytics](google-universal-analytics.md)
 * [Extensão JW Player Analytics (Beta)](jw-player-analytics.md)

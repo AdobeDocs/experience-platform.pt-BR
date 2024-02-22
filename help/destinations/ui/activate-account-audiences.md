@@ -2,12 +2,12 @@
 title: Ativar públicos-alvo da conta para destinos
 type: Tutorial
 description: Saiba como ativar públicos-alvo da conta para destinos
-badgeLimitedAvailability: label="Disponibilidade limitada" type="Caution"
-badgeB2B: label="Edição B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="Edição B2B" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
+badgeB2P: label="Edição B2P" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 exl-id: ad69d0a8-bf5b-42ac-97a3-401eadda62cd
-source-git-commit: fbc2a6c81682797af4674adabff358a62d973007
+source-git-commit: f07eb12b4625bce117e1fe524727c00b7188aa5e
 workflow-type: tm+mt
-source-wordcount: '827'
+source-wordcount: '810'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->A funcionalidade para ativar públicos-alvo da conta para destinos só está disponível na [Edição B2B do Real-time Customer Data Platform](../../rtcdp/b2b-overview.md). Além disso, a funcionalidade de público-alvo da conta está atualmente em **disponibilidade limitada**. Entre em contato com o Atendimento ao cliente da Adobe ou com seu representante da Adobe para solicitar acesso a essa funcionalidade.
+>A funcionalidade para ativar públicos-alvo da conta para destinos está disponível para empresas que compram a [B2B](/help/rtcdp/overview.md#rtcdp-b2b) e [Negócio para pessoa](/help/rtcdp/overview.md#rtcdp-b2b) Real-time Customer Data Platform.
 
 Este artigo explica o workflow necessário para exportar [públicos-alvo da conta](/help/segmentation/ui/account-audiences.md) do Adobe Experience Platform para o destino de sua preferência.
 
@@ -79,7 +79,7 @@ No restante do fluxo de trabalho de ativação para exportar públicos da conta,
 
 ## Chamadas importantes e limitações conhecidas {#important-callouts-known-limitations}
 
-Observe as importantes chamadas a seguir e as limitações conhecidas da versão de disponibilidade limitada da funcionalidade para ativar públicos-alvo da conta.
+Observe as importantes chamadas a seguir e as limitações conhecidas da versão de disponibilidade geral da funcionalidade para ativar públicos-alvo da conta.
 
 ### Pares de mapeamento necessários na etapa de mapeamento ao ativar públicos-alvo da conta para o **[!UICONTROL (Empresas) Públicos-alvo correspondentes do LinkedIn]** destino {#required-mappings}
 

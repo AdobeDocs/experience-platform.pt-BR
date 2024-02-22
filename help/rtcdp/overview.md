@@ -4,7 +4,7 @@ title: Visão geral do Real-time Customer Data Platform
 description: Visão geral do Adobe Real-time Customer Data Platform
 feature: Get Started
 exl-id: 8be51bf0-b372-4a81-ba45-f4fe4b7e1718
-source-git-commit: ab87434b753c1231f01cde85637081eb08fce356
+source-git-commit: f89665837b75dc4305073d675c4c05b04302c85e
 workflow-type: tm+mt
 source-wordcount: '668'
 ht-degree: 0%
@@ -49,11 +49,11 @@ Obtenha informações completas sobre a funcionalidade incluída nos níveis Pri
 * [Real-time Customer Data Platform (Edição B2B - Pacotes Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
 * [Real-time Customer Data Platform (Edição B2P - Pacotes Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
 
-### Adobe Real-time Customer Data Platform - Edição B2C (Business-to-Consumer, empresa para consumidor)
+### Adobe Real-time Customer Data Platform - Edição B2C (Business-to-Consumer, empresa para consumidor) {#rtcdp-b2c}
 
 O B2C (Business-to-Consumer, negócio para consumidor) da Real-Time CDP foi desenvolvido especificamente para os profissionais de marketing B2C unificarem, controlarem e ativarem todas *dados do consumidor* em sistemas e canais para proporcionar experiências do cliente mais personalizadas e tranquilidade completa para os dados.
 
-### Adobe Real-time Customer Data Platform - Edição B2B (Business-to-Business)
+### Adobe Real-time Customer Data Platform - Edição B2B (Business-to-Business) {#rtcdp-b2b}
 
 O Real-Time CDP Business-to-Business (B2B) foi desenvolvido especificamente para profissionais de marketing B2B unificarem, controlarem e ativarem todas *dados de clientes potenciais e de conta* em sistemas e canais para proporcionar experiências do cliente mais personalizadas e tranquilidade completa para os dados
 
@@ -61,7 +61,7 @@ O Real-Time CDP B2B Edition permite que os profissionais de marketing criem perf
 
 Consulte [a visão geral sobre o Real-Time CDP B2B Edition](./b2b-overview.md) para obter informações mais abrangentes.
 
-### Adobe Real-time Customer Data Platform - Edição B2P (Business-to-Person)
+### Adobe Real-time Customer Data Platform - Edição B2P (Business-to-Person) {#rtcdp-b2p}
 
 Com a edição Business-to-Person (B2P) do Real-Time CDP, você pode unificar, controlar e ativar seus *Dados de clientes B2C e B2B* usar uma única CDP para direcionar a mesma pessoa em todas as linhas de negócios, com uma experiência perfeita e total tranquilidade com os dados.
 

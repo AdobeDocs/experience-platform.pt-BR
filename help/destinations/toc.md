@@ -4,9 +4,9 @@ user-guide-title: Guia de destinos
 user-guide-description: Ative seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas por email, publicidade direcionada e muito mais.
 description: Este documento lista o índice dos destinos do Adobe Experience Platform
 feature: Destinations
-source-git-commit: 767ebd1ef693f9484e11facc7e8b73d91f632956
+source-git-commit: 05ff789d71c693854fb84d1661c2bef8aba0bff8
 workflow-type: tm+mt
-source-wordcount: '1203'
+source-wordcount: '1201'
 ht-degree: 5%
 
 ---
@@ -43,7 +43,7 @@ ht-degree: 5%
       * [Ativar públicos para destinos de personalização de borda](./ui/activate-edge-personalization-destinations.md)
       * [Ativar públicos para destinos com curadoria com base em identificadores do LiveRamp](./ui/activate-curated-destinations.md)
       * [Ativar públicos-alvo potenciais para destinos](./ui/activate-prospect-audiences.md)
-      * [(Disponibilidade limitada) Ativar públicos-alvo da conta para destinos](./ui/activate-account-audiences.md)
+      * [Ativar públicos-alvo da conta para destinos](./ui/activate-account-audiences.md)
       * [(Beta) Exportar arquivos sob demanda para destinos em lote usando a interface do Experience Platform](./ui/export-file-now.md)
       * [Exportar conjuntos de dados usando a interface do usuário do Experience Platform](./ui/export-datasets.md)
       * [(Beta) Usar o atributo XDM do último horário de qualificação nos novos destinos de armazenamento na nuvem beta](./ui/activate-last-qualification-time.md)

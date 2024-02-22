@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Visão geral dos conectores de origem
 description: O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 632cff3ee4ca82d391e9a1df0cb38d903e8a5428
+source-git-commit: bf7e2e08d54f113c6e2cc5060f51725555c2c049
 workflow-type: tm+mt
-source-wordcount: '1526'
+source-wordcount: '1528'
 ht-degree: 1%
 
 ---
@@ -137,10 +137,11 @@ O Experience Platform fornece suporte para assimilação de dados de um banco de
 - [[!DNL Snowflake]](connectors/databases/snowflake.md) [!BADGE Lote]{type=Informative}
 - [[!DNL Teradata Vantage]](connectors/databases/teradata-vantage.md) [!BADGE Lote]{type=Informative}
 
-### Parceiro de dados {#data-partner}
+### Parceiros de dados e identidade {#data-partner}
 
 O Experience Platform fornece suporte para assimilação de dados de um banco de dados de terceiros. Consulte os seguintes documentos relacionados para obter mais informações sobre conectores de origem específicos:
 
+- [[!DNL Acxiom Prospecting Data Import]](tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md) [!BADGE Lote]{type=Informative}
 - [[!DNL Merkury Enterprise Identity Resolution]](connectors/data-partners/merkury.md) [!BADGE Lote]{type=Informative}
 
 ### eCommerce {#ecommerce}

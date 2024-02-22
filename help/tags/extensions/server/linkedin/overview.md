@@ -3,9 +3,9 @@ title: Extensão de encaminhamento de eventos da API de conversões do Linkedin
 description: Essa extensão de encaminhamento de eventos do Adobe Experience Platform permite medir o desempenho da sua campanha de marketing do Linkedin.
 last-substantial-update: 2023-10-25T00:00:00Z
 exl-id: 411e7b77-081e-4139-ba34-04468e519ea5
-source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
+source-git-commit: 0d6ade1a0b6c00a4f87395d476dd7e7915489ea5
 workflow-type: tm+mt
-source-wordcount: '758'
+source-wordcount: '790'
 ht-degree: 2%
 
 ---
@@ -16,11 +16,11 @@ ht-degree: 2%
 
 ## Pré-requisitos {#prerequisites}
 
-Você deve criar uma regra de conversão em seu [!DNL LinkedIn] conta de anúncios de campanha. [!DNL Adobe] A recomenda incluir &quot;CAPI&quot; no início do nome da regra de conversa para separá-lo de outros tipos de regras de conversão que você possa ter configurado.
+Você deve [criar uma regra de conversão](https://www.linkedin.com/help/lms/answer/a1657171) no seu [!DNL LinkedIn Campaign Manager] conta. [!DNL Adobe] A recomenda incluir &quot;CAPI&quot; no início do nome da regra de conversa para separá-lo de outros tipos de regras de conversão que você possa ter configurado.
 
 ### Criar um segredo e um elemento de dados
 
-Criar um novo [!DNL LinkedIn] [segredo de encaminhamento de eventos](../../../ui/event-forwarding/secrets.md) e forneça um nome exclusivo que signifique o membro de autenticação. Ele será usado para autenticar a conexão com sua conta, mantendo o valor seguro.
+Criar um novo [!DNL LinkedIn] [segredo de encaminhamento de eventos](../../../ui/event-forwarding/secrets.md) e forneça a ele um nome exclusivo que signifique o membro de autenticação. Ele será usado para autenticar a conexão com sua conta, mantendo o valor seguro.
 
 Em seguida, [criar um elemento de dados](../../../ui/managing-resources/data-elements.md#create-a-data-element) usando o [!UICONTROL Núcleo] extensão e um [!UICONTROL Segredo] tipo de elemento de dados para fazer referência ao `LinkedIn` segredo que acabou de criar.
 
@@ -40,7 +40,7 @@ Na próxima tela, digite o segredo do elemento de dados criado anteriormente na 
 
 Depois que todos os elementos de dados forem configurados, você poderá começar a criar regras de encaminhamento de eventos que determinam quando e como seus eventos serão enviados para o [!DNL LinkedIn].
 
-Criar um novo encaminhamento de eventos [regra](../../../ui/managing-resources/rules.md) na propriedade de encaminhamento de eventos. Em **[!UICONTROL Ações]**, adicione uma nova ação e defina a extensão para **[!UICONTROL LinkedIn]**. Em seguida, selecione **[!UICONTROL Enviar conversão da Web]** para o **[!UICONTROL Tipo de ação]**.
+Criar um novo encaminhamento de eventos [regra](../../../ui/managing-resources/rules.md) na propriedade de encaminhamento de eventos. Em **[!UICONTROL Ações]**, adicione uma nova ação e defina a extensão para **[!UICONTROL LinkedIn]**. Em seguida, selecione **[!UICONTROL Enviar conversão]** para o **[!UICONTROL Tipo de ação]**.
 
 ![A visualização Regras de propriedade do encaminhamento de eventos, com os campos necessários para adicionar uma configuração de ação de regra de encaminhamento de eventos destacados.](../../../images/extensions/server/linkedin/linkedin-event-action.png)
 
@@ -62,11 +62,11 @@ Após a seleção, controles adicionais são exibidos para configurar ainda mais
 
 | Entrada | Descrição |
 | --- | --- |
-| [!UICONTROL Conversão] | A ID da regra de conversão criada em [Gerente de campanha do linkedIn](https://www.linkedin.com/help/lms/answer/a1657171) ou por meio de [!DNL LinkedIn Campaign Manager]. |
+| [!UICONTROL Conversão] | A ID da regra de conversão criada em [Gerente de campanha do linkedIn](https://www.linkedin.com/help/lms/answer/a1657171). Selecione a regra de conversão para obter a ID e copie a ID do URL do navegador (por exemplo, `/campaignmanager/accounts/508111232/conversions/15588877`) como `/conversions/<id>`. |
 | [!UICONTROL Tempo de conversão] | Cada carimbo de data e hora em milissegundos em que o evento de conversão aconteceu. <br><br> Observação: se a fonte registrar o carimbo de data e hora de conversão em segundos, insira 000 no final para transformá-lo em milissegundos. |
 | [!UICONTROL Moeda] | Código de moeda em formato ISO. |
 | [!UICONTROL Quantidade] | Valor da conversão em sequência decimal (por exemplo, &quot;100,05&quot;). |
-| [!UICONTROL ID de evento] | A ID exclusiva gerada pelos anunciantes para indicar cada evento. Este campo é opcional e é usado para desduplicação. |
+| [!UICONTROL ID de evento] | A ID exclusiva gerada pelos anunciantes para indicar cada evento. Este campo é opcional e é usado para [desduplicação](https://learn.microsoft.com/en-us/linkedin/marketing/conversions/deduplication?view=li-lms-2024-02). |
 
 {style="table-layout:auto"}
 
@@ -74,7 +74,7 @@ Após a seleção, controles adicionais são exibidos para configurar ainda mais
 
 **[!UICONTROL Substituições de configuração]**
 
-> OBSERVAÇÃO 
+>NOTA
 >
 >A variável [!UICONTROL Substituições de configuração] permite que um usuário defina um campo diferente [!DNL LinkedIn] em cada regra, permitindo que cada regra use um token de acesso que possa ter acesso a diferentes [!DNL LinkedIn] contas de publicidade.
 
@@ -86,4 +86,6 @@ Após a seleção, controles adicionais são exibidos para configurar ainda mais
 
 ## Próximas etapas
 
-Este guia abordou como enviar dados para o [!DNL LinkedIn] usando o [!DNL LinkedIn Conversions API] extensão de encaminhamento de eventos. Para obter mais informações sobre os recursos de encaminhamento de eventos do [!DNL Adobe Experience Platform], consulte o [visão geral do encaminhamento de eventos](../../../ui/event-forwarding/overview.md).
+Este guia abordou como enviar dados para o [!DNL LinkedIn] usando o [!DNL LinkedIn Conversions API] extensão de encaminhamento de eventos. Para obter mais informações sobre os recursos de encaminhamento de eventos do [!DNL Adobe Experience Platform], leia o [visão geral do encaminhamento de eventos](../../../ui/event-forwarding/overview.md).
+
+Para obter detalhes sobre como depurar sua implementação usando o Depurador de Experience Platform e a ferramenta de Monitoramento de encaminhamento de eventos, leia a [visão geral do Adobe Experience Platform Debugger](../../../../debugger/home.md) e [Monitorar atividades no encaminhamento de eventos](../../../ui/event-forwarding/monitoring.md).

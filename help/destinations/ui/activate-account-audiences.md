@@ -5,7 +5,7 @@ description: Saiba como ativar públicos-alvo da conta para destinos
 badgeB2B: label="Edição B2B" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 badgeB2P: label="Edição B2P" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 exl-id: ad69d0a8-bf5b-42ac-97a3-401eadda62cd
-source-git-commit: f07eb12b4625bce117e1fe524727c00b7188aa5e
+source-git-commit: 3c0b7c4eee7c790a8ffae95c05a8db6ba7c3b285
 workflow-type: tm+mt
 source-wordcount: '810'
 ht-degree: 0%
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->A funcionalidade para ativar públicos-alvo da conta para destinos está disponível para empresas que compram a [B2B](/help/rtcdp/overview.md#rtcdp-b2b) e [Negócio para pessoa](/help/rtcdp/overview.md#rtcdp-b2b) Real-time Customer Data Platform.
+>A funcionalidade para ativar públicos-alvo da conta para destinos está disponível para empresas que compram a [B2B](/help/rtcdp/overview.md#rtcdp-b2b) e [Negócio para pessoa](/help/rtcdp/overview.md#rtcdp-b2p) Real-time Customer Data Platform.
 
 Este artigo explica o workflow necessário para exportar [públicos-alvo da conta](/help/segmentation/ui/account-audiences.md) do Adobe Experience Platform para o destino de sua preferência.
 

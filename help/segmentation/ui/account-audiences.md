@@ -1,12 +1,12 @@
 ---
 title: Públicos da conta
 description: Saiba como criar e usar públicos-alvo da conta para direcionar perfis de conta em destinos downstream.
-badgeLimitedAvailability: label="Disponibilidade limitada" type="Caution"
 badgeB2B: label="Edição B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2P: label="Edição B2P" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 047930d6-939f-4418-bbcb-8aafd2cf43ba
-source-git-commit: 1ff4cb004b7c2f474e2d64f4bcc239c7060f9439
+source-git-commit: 3c0b7c4eee7c790a8ffae95c05a8db6ba7c3b285
 workflow-type: tm+mt
-source-wordcount: '1050'
+source-wordcount: '1039'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->Os públicos-alvo da conta só estão disponíveis no [Edição B2B do Real-time Customer Data Platform](../../rtcdp/b2b-overview.md). Além disso, a funcionalidade de público-alvo da conta está atualmente em **disponibilidade limitada**. Entre em contato com o Atendimento ao cliente da Adobe ou com seu representante da Adobe para solicitar acesso a essa funcionalidade.
+>Os públicos-alvo da conta só estão disponíveis no [Edição B2B do Real-time Customer Data Platform](../../rtcdp/overview.md#rtcdp-b2b) e a variável [Edição B2P do Real-time Customer Data Platform](../../rtcdp/overview.md#rtcdp-b2p).
 
 Com a segmentação de conta, o Adobe Experience Platform permite que você ofereça a total facilidade e sofisticação da experiência de segmentação de marketing de públicos com base em pessoas para públicos com base em conta.
 

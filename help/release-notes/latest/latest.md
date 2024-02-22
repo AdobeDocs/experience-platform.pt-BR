@@ -2,7 +2,7 @@
 title: Notas de versão da Adobe Experience Platform
 description: As notas da versão de janeiro de 2024 da Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: b41a69244c7eb1111759b2af5c1ae6a0fb90be32
+source-git-commit: 3c0b7c4eee7c790a8ffae95c05a8db6ba7c3b285
 workflow-type: tm+mt
 source-wordcount: '1242'
 ht-degree: 22%
@@ -17,7 +17,6 @@ Atualizações dos recursos existentes no Experience Platform:
 
 - [Alertas](#alerts)
 - [Coleção de dados](#data-collection)
-<!-- - [Data Prep](#data-prep) -->
 - [Destinos](#destinations)
 - [Sandboxes](#sandboxes)
 - [Serviço de segmentação](#segmentation)
@@ -79,7 +78,7 @@ For more information on Data Prep, read the [Data Prep overview](../../data-prep
 
 | Funcionalidade | Descrição |
 | ----------- | ----------- |
-| Ativar públicos-alvo de conta disponíveis no geral | A funcionalidade para ativar públicos-alvo da conta para determinados destinos agora está geralmente disponível para empresas que compram o [B2B](/help/rtcdp/overview.md#rtcdp-b2b) e [Negócio para pessoa](/help/rtcdp/overview.md#rtcdp-b2b) Real-time Customer Data Platform. Leia o tutorial sobre [ativação de públicos da conta](/help/destinations/ui/activate-account-audiences.md) para obter informações completas, incluindo destinos compatíveis. |
+| Ativar públicos-alvo de conta disponíveis no geral | A funcionalidade para ativar públicos-alvo da conta para determinados destinos agora está geralmente disponível para empresas que compram o [B2B](/help/rtcdp/overview.md#rtcdp-b2b) e [Negócio para pessoa](/help/rtcdp/overview.md#rtcdp-b2p) Real-time Customer Data Platform. Leia o tutorial sobre [ativação de públicos da conta](/help/destinations/ui/activate-account-audiences.md) para obter informações completas, incluindo destinos compatíveis. |
 | Ferramentas de aplicação de consentimento da Lei de Mercados Digitais para destinos Google | A Google está lançando alterações no [API do Google Ads](https://developers.google.com/google-ads/api/docs/start), [Correspondência de Cliente](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html), e o [API de vídeo e exibição 360](https://developers.google.com/display-video/api/guides/getting-started/overview) a fim de apoiar os requisitos de conformidade e consentimento definidos no [Lei dos Mercados Digitais](https://digital-markets-act.ec.europa.eu/index_en) (DMA) na União Europeia ([Política de consentimento do usuário da UE](https://www.google.com/about/company/user-consent-policy/)). A aplicação dessas alterações aos requisitos de consentimento deve entrar em vigor a partir de 6 de março de 2024. <br/><br/> Para aderir à política de consentimento do usuário da UE e continuar criando listas de públicos-alvo para usuários no Espaço Econômico Europeu (EEE), anunciantes e parceiros devem garantir que eles transmitem o consentimento do usuário final ao fazer upload dos dados de público-alvo. Como Parceiro da Google, o Adobe fornece as ferramentas necessárias para cumprir esses requisitos de consentimento de acordo com a DMA na União Europeia.<br/><br/>Clientes que compraram o Adobe Privacy &amp; Security Shield e configuraram um [política de consentimento](../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) para filtrar perfis não consentidos, não é necessário tomar nenhuma ação.<br/><br/>Os clientes que não compraram o Adobe Privacy &amp; Security Shield devem usar o [definição de segmento](../../segmentation/home.md#segment-definitions) recursos no [Construtor de segmentos](../../segmentation/ui/segment-builder.md) para filtrar perfis não consentidos, a fim de continuar usando os destinos existentes do Real-Time CDP Google sem interrupção. |
 | [!BADGE Beta]{type=Informative} Reordenar campos de mapeamento para destinos em lote | Agora é possível alterar a ordem das colunas nas exportações de CSV arrastando e soltando os campos de mapeamento na [mapeamento](../../destinations/ui/activate-batch-profile-destinations.md#mapping) etapa. A ordem dos campos mapeados na interface reflete a ordem das colunas no arquivo CSV exportado, de cima para baixo, com a linha superior sendo a coluna mais à esquerda do arquivo CSV. <br/><br/> Esse recurso está na versão beta e só está disponível para clientes selecionados. Para solicitar acesso a esse recurso, entre em contato com o representante da Adobe. |
 | [!BADGE Beta]{type=Informative} Agendamentos de exportação padrão pré-selecionados para destinos em lote | O Experience Platform agora define automaticamente um agendamento padrão para cada exportação de arquivo. Consulte a documentação em [agendamento de exportações de público](../../destinations/ui/activate-batch-profile-destinations.md#scheduling) para saber como modificar o cronograma padrão. <br/><br/> Esse recurso está na versão beta e só está disponível para clientes selecionados. Para solicitar acesso a esse recurso, entre em contato com o representante da Adobe. |

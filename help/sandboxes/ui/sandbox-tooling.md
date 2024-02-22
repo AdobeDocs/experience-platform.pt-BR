@@ -2,10 +2,10 @@
 title: Ferramentas de sandboxes
 description: Exporte e importe configurações de sandbox facilmente entre sandboxes.
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: 1f7b7f0486d0bb2774f16a766c4a5af6bbb8848a
+source-git-commit: 888608bdf3ccdfc56edd41c164640e258a4c5dd7
 workflow-type: tm+mt
-source-wordcount: '1859'
-ht-degree: 9%
+source-wordcount: '1961'
+ht-degree: 8%
 
 ---
 
@@ -30,10 +30,11 @@ A tabela abaixo lista [!DNL Adobe Real-Time Customer Data Platform] objetos atua
 | Plataforma | Objeto | Detalhes |
 | --- | --- | --- |
 | Plataforma de dados do cliente | Origens | As credenciais da conta de origem não são replicadas na sandbox de destino por motivos de segurança e precisarão ser atualizadas manualmente. O fluxo de dados de origem é copiado em um status de rascunho por padrão. |
-| Plataforma de dados do cliente | Públicos-alvo | Somente o **[!UICONTROL Público-alvo do cliente]** type **[!UICONTROL Serviço de segmentação]** é compatível. Os rótulos existentes para consentimento e governança serão copiados no mesmo trabalho de importação. |
+| Plataforma de dados do cliente | Públicos-alvo | Somente o **[!UICONTROL Público-alvo do cliente]** type **[!UICONTROL Serviço de segmentação]** é compatível. Os rótulos existentes para consentimento e governança serão copiados no mesmo trabalho de importação. O sistema selecionará automaticamente a Política de mesclagem padrão na sandbox de destino com a mesma classe XDM ao verificar as dependências da política de mesclagem. |
 | Plataforma de dados do cliente | Identidades | O sistema deduplicará automaticamente os namespaces de identidade padrão do Adobe ao criar na sandbox de destino. Os públicos só podem ser copiados quando todos os atributos nas regras de público-alvo estão habilitados no esquema de união. Os esquemas necessários devem ser movidos e ativados para o perfil unificado primeiro. |
-| Plataforma de dados do cliente | Esquemas | Os rótulos existentes para consentimento e governança serão copiados no mesmo trabalho de importação. O status do perfil unificado do esquema será copiado como está da sandbox de origem. Se o esquema estiver ativado para o perfil unificado na sandbox de origem, todos os atributos serão movidos para o esquema de união. O caso de borda das relações de esquema não está incluído no pacote. |
+| Plataforma de dados do cliente | Esquemas | Os rótulos existentes para consentimento e governança serão copiados no mesmo trabalho de importação. O usuário tem a flexibilidade de importar esquemas sem a opção Perfil unificado ativada. O caso de borda das relações de esquema não está incluído no pacote. |
 | Plataforma de dados do cliente | Conjuntos de dados | Os conjuntos de dados são copiados com a configuração de perfil unificado desativada por padrão. |
+| Plataforma de dados do cliente | Políticas de consentimento e governança | Adicionar políticas personalizadas criadas por um usuário a um pacote e movê-las para sandboxes. |
 
 Os seguintes objetos são importados, mas estão em um rascunho ou estão desabilitados:
 
@@ -52,6 +53,7 @@ A tabela abaixo lista [!DNL Adobe Journey Optimizer] objetos atualmente compatí
 | --- | --- | --- |
 | [!DNL Adobe Journey Optimizer] | Público-alvo | Um público-alvo pode ser copiado como um objeto dependente do objeto de jornada. Você pode selecionar criar um novo público ou reutilizar um existente na sandbox de destino. |
 | [!DNL Adobe Journey Optimizer] | Esquema | Os esquemas usados na jornada podem ser copiados como objetos dependentes. Você pode selecionar criar um novo esquema ou reutilizar um existente na sandbox de destino. |
+| [!DNL Adobe Journey Optimizer] | Política de mesclagem | As políticas de mesclagem usadas na jornada podem ser copiadas como objetos dependentes. Na sandbox do Target, você **não é possível** criar uma nova política de mesclagem, você só pode utilizar uma já existente. |
 | [!DNL Adobe Journey Optimizer] | Jornada - detalhes da tela | A representação da jornada na tela inclui os objetos na jornada, como condições, ações, eventos, públicos-alvo de leitura e assim por diante, que são copiados. A atividade de salto é excluída da cópia. |
 | [!DNL Adobe Journey Optimizer] | Evento | Os eventos e detalhes do evento usados na jornada são copiados. Ele sempre criará uma nova versão na sandbox de destino. |
 | [!DNL Adobe Journey Optimizer] | Ação | As mensagens de email e de push usadas na jornada podem ser copiadas como objetos dependentes. As atividades de ação de canal usadas nos campos de jornada, que são usadas para personalização na mensagem, não são verificadas para verificação de integridade. Os blocos de conteúdo não são copiados.<br><br>A ação de perfil de atualização usada na jornada pode ser copiada. Ações personalizadas e detalhes de ação usados na jornada também são copiados. Ele sempre criará uma nova versão na sandbox de destino. |
@@ -135,19 +137,23 @@ Para importar o pacote para uma sandbox de destino, navegue até as Sandboxes **
 
 ![As sandboxes **[!UICONTROL Procurar]** guia destacando a seleção do pacote de importação.](../images/ui/sandbox-tooling/browse-sandboxes.png)
 
-Usando o menu suspenso, selecione a variável **[!UICONTROL Nome do pacote]** você deseja importar para a sandbox de destino. Adicione um opcional **[!UICONTROL Nome do trabalho]**, que será usado para monitoramento futuro, selecione **[!UICONTROL Próxima]**.
+Usando o menu suspenso, selecione a variável **[!UICONTROL Nome do pacote]** você deseja importar para a sandbox de destino. Adicione um opcional **[!UICONTROL Nome do trabalho]**, que serão usados para monitoramento futuro. Por padrão, o perfil unificado será desativado quando os schemas do pacote forem importados. Alternar **Ativar esquemas para o perfil** para habilitar isso, selecione **[!UICONTROL Próxima]**.
 
 ![A página de detalhes da importação mostrando o [!UICONTROL Nome do pacote] seleção suspensa](../images/ui/sandbox-tooling/import-package-to-sandbox.png)
 
-A variável [!UICONTROL Objeto e dependências do pacote] A página fornece uma lista de todos os ativos incluídos neste pacote. O sistema detecta automaticamente objetos dependentes que são necessários para a importação bem-sucedida de objetos pai selecionados.
+A variável [!UICONTROL Objeto e dependências do pacote] A página fornece uma lista de todos os ativos incluídos neste pacote. O sistema detecta automaticamente objetos dependentes que são necessários para a importação bem-sucedida de objetos pai selecionados. Todos os atributos ausentes são exibidos na parte superior da página. Selecionar **[!UICONTROL Exibir detalhes]** para obter uma análise mais detalhada.
 
-![A variável [!UICONTROL Objeto e dependências do pacote] A página mostra uma lista de ativos incluídos no pacote.](../images/ui/sandbox-tooling/package-objects-and-dependencies.png)
+![A variável [!UICONTROL Objeto e dependências do pacote] mostra os atributos ausentes.](../images/ui/sandbox-tooling/missing-attributes.png)
 
 >[!NOTE]
 >
 >Objetos dependentes podem ser substituídos por objetos existentes na sandbox de destino, o que permite reutilizar objetos existentes em vez de criar uma nova versão. Por exemplo, ao importar um pacote incluindo esquemas, você pode reutilizar grupos de campos personalizados existentes e namespaces de identidade na sandbox de destino. Como alternativa, ao importar um pacote incluindo Jornadas, você pode reutilizar segmentos existentes na sandbox de destino.
 
-Para usar um objeto existente, selecione o ícone de lápis ao lado do objeto dependente. As opções para criar um novo ou usar um existente são exibidas. Selecionar **[!UICONTROL Usar existente]**.
+Para usar um objeto existente, selecione o ícone de lápis ao lado do objeto dependente.
+
+![A variável [!UICONTROL Objeto e dependências do pacote] A página mostra uma lista de ativos incluídos no pacote.](../images/ui/sandbox-tooling/package-objects-and-dependencies.png)
+
+As opções para criar um novo ou usar um existente são exibidas. Selecionar **[!UICONTROL Usar existente]**.
 
 ![A variável [!UICONTROL Objeto e dependências do pacote] página mostrando opções de objeto dependente [!UICONTROL Criar novo] e [!UICONTROL Usar existente].](../images/ui/sandbox-tooling/use-existing-object.png)
 

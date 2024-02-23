@@ -1,7 +1,7 @@
 ---
 title: Configurar o suporte a mensagens no aplicativo da Web no SDK da Web
 description: Saiba como configurar a extensão de tag do SDK da Web para oferecer suporte a mensagens no aplicativo da Web.
-source-git-commit: 82eede9e59338e8438c361d58b476960b7faa5cb
+source-git-commit: a020f880be2606024c6a986dc468d70a2fbdc30f
 workflow-type: tm+mt
 source-wordcount: '967'
 ht-degree: 0%

@@ -3,7 +3,7 @@ keywords: google ad manager;google ad;doubleclick;DoubleClick AdX;DoubleClick;Go
 title: Conexão com o Google Ad Manager
 description: O Google Ad Manager, anteriormente conhecido como DoubleClick for Publishers ou DoubleClick AdX, é uma plataforma de veiculação de anúncios da Google que fornece aos editores os meios para gerenciar a exibição de anúncios em seus sites, por meio de vídeos e aplicativos móveis.
 exl-id: e93f1bd5-9d29-43a1-a9a6-8933f9d85150
-source-git-commit: d5a22d4692226c865f6489c821366b4ce8bc2887
+source-git-commit: 7d43abd507b5cee2b5c5d90af253d3e9290013a2
 workflow-type: tm+mt
 source-wordcount: '1122'
 ht-degree: 4%
@@ -15,11 +15,11 @@ ht-degree: 4%
 >[!IMPORTANT]
 >
 > A Google está lançando alterações no [API do Google Ads](https://developers.google.com/google-ads/api/docs/start), [Correspondência de Cliente](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html), e o [API de vídeo e exibição 360](https://developers.google.com/display-video/api/guides/getting-started/overview) a fim de apoiar os requisitos de conformidade e consentimento definidos no [Lei dos Mercados Digitais](https://digital-markets-act.ec.europa.eu/index_en) (DMA) na União Europeia ([Política de consentimento do usuário da UE](https://www.google.com/about/company/user-consent-policy/)). A aplicação dessas alterações aos requisitos de consentimento deve entrar em vigor a partir de 6 de março de 2024.
-><br/><br/>
+><br/>
 >Para aderir à política de consentimento do usuário da UE e continuar criando listas de públicos-alvo para usuários no Espaço Econômico Europeu (EEE), anunciantes e parceiros devem garantir que eles transmitem o consentimento do usuário final ao fazer upload dos dados de público-alvo. Como Parceiro da Google, o Adobe fornece as ferramentas necessárias para cumprir esses requisitos de consentimento de acordo com a DMA na União Europeia.
-><br/><br/>
+><br/>
 >Clientes que compraram o Adobe Privacy &amp; Security Shield e configuraram um [política de consentimento](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) para filtrar perfis não consentidos, não é necessário tomar nenhuma ação.
-><br/><br/>
+><br/>
 >Os clientes que não compraram o Adobe Privacy &amp; Security Shield devem usar o [definição de segmento](../../../segmentation/home.md#segment-definitions) recursos no [Construtor de segmentos](../../../segmentation/ui/segment-builder.md) para filtrar perfis não consentidos, a fim de continuar usando os Destinos existentes do Real-Time CDP Google sem interrupção.
 
 

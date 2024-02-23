@@ -28,7 +28,7 @@ O Experience Platform permite assinar alertas baseados em eventos para várias a
 **Recursos novos ou atualizados**
 | Recurso | Descrição | | — | — | | Guia Histórico de alertas | Como administrador de Experience Platform, você pode usar o recurso gerenciar assinantes de alertas para atribuir um alerta a uma ID de usuário Adobe, endereço de email externo ou uma lista de grupo de email. Para obter mais informações, consulte [documentação da interface de alertas](../../observability/alerts/ui.md) para obter mais informações sobre a guia histórico. |
 
-{style="table-layout:auto"}
+
 
 Para saber mais sobre alertas, leia a [[!DNL Observability Insights] visão geral](../../observability/home.md).
 

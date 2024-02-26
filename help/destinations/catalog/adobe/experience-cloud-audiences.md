@@ -3,9 +3,9 @@ title: Públicos-alvo da Experience Cloud
 description: Saiba como compartilhar públicos do Real-time Customer Data Platform com vários aplicativos Experience Cloud.
 last-substantial-update: 2023-09-28T00:00:00Z
 exl-id: 2bdbcda3-2efb-4a4e-9702-4fd9991e9461
-source-git-commit: b82bbdf7957e5a8d331d61f02293efdaf878971c
+source-git-commit: 188398e3483541ca482f5c1cfdce307160ada2da
 workflow-type: tm+mt
-source-wordcount: '1678'
+source-wordcount: '1703'
 ht-degree: 2%
 
 ---
@@ -95,6 +95,7 @@ Observe as seguintes limitações conhecidas e chamadas importantes ao usar o ca
 * Atualmente, há suporte para um único destino de Públicos-alvo de Experience Cloud. A tentativa de configurar uma segunda conexão de destino resulta em um erro.
 * Ao se conectar ao destino, você pode ver uma opção para [ativar alertas de fluxo de dados](../../ui/alerts.md). Embora visível na interface do usuário, a variável **a opção ativar alertas não é suportada no momento**.
 * **Suporte ao preenchimento retroativo de público**: a primeira exportação para Audience Manager ou outras soluções de Experience Cloud inclui uma população histórica dos públicos-alvo. Usuários do [integração herdada de compartilhamento de público](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam) que estão configurando esse destino devem esperar uma diferença de preenchimento retroativo de aproximadamente seis horas.
+* Públicos-alvo originados de [Composição de público](../../../segmentation/ui/audience-composition.md) não são compatíveis diretamente. Para ativar públicos-alvo compostos para esse destino, você deve criar uma definição de público-alvo por meio de [Construtor de segmentos](../../../segmentation/ui/segment-builder.md) com base no público-alvo composto e ativar o público-alvo recém-criado.
 
 ### Latência ao ativar públicos {#audience-activation-latency}
 
@@ -199,4 +200,4 @@ Os públicos-alvo e características no Audience Manager estão sujeitos a [Cont
 
 Os públicos exportados do Real-Time CDP são atribuídos a uma fonte de dados específica no Audience Manager, chamada **[!UICONTROL Segmentos Experience Platform]**.
 
-Para permitir que apenas determinados usuários acessem os públicos-alvo, você pode aplicar controles de acesso aos públicos-alvo pertencentes à fonte de dados. Defina novas permissões de controle de acesso no Audience Manager para esses públicos-alvo e características criadas a partir de segmentos do Real-Time CDP.
+Para permitir que apenas determinados usuários acessem os públicos-alvo, use [Controles de acesso com base em função](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/administration/administration-overview.html) para configurar o acesso do usuário aos públicos-alvo e características criadas a partir dos públicos-alvo da Real-Time CDP.

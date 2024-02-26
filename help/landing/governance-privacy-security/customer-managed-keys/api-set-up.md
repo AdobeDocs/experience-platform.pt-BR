@@ -2,10 +2,10 @@
 title: Definir e configurar chaves gerenciadas pelo cliente usando a API
 description: Saiba como configurar seu aplicativo CMK com seu locatário do Azure e enviar sua ID de chave de criptografia para a Adobe Experience Platform.
 exl-id: c9a1888e-421f-4bb4-b4c7-968fb1d61746
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 4f08e8fcc8d53b981af60226f1397a1d1ac4d8dc
 workflow-type: tm+mt
-source-wordcount: '1012'
-ht-degree: 2%
+source-wordcount: '1002'
+ht-degree: 1%
 
 ---
 
@@ -78,6 +78,10 @@ Após concluir o processo de autenticação, navegue de volta para a [!DNL Azure
 
 A próxima tela solicita que você escolha uma função para esta atribuição. Selecionar **[!DNL Key Vault Crypto Service Encryption User]** antes de selecionar **[!DNL Next]** para continuar.
 
+>[!NOTE]
+>
+>Se você tiver o [!DNL Managed-HSM Key Vault] , você deverá selecionar a variável **[!DNL Managed HSM Crypto Service Encryption User]** função de usuário.
+
 ![O painel do Microsoft Azure com o [!DNL Key Vault Crypto Service Encryption User] destacado.](../../images/governance-privacy-security/customer-managed-keys/select-role.png)
 
 Na próxima tela, escolha **[!DNL Select members]** para abrir um diálogo no painel direito. Use a barra de pesquisa para localizar a entidade de serviço para a aplicação CMK e selecione-a na lista. Quando terminar, selecione **[!DNL Save]**.
@@ -133,8 +137,8 @@ curl -X POST \
 | --- | --- |
 | `name` | Um nome para a configuração. Lembre-se desse valor, pois ele é necessário para verificar o status da configuração em um [etapa posterior](#check-status). O valor diferencia maiúsculas e minúsculas. |
 | `type` | O tipo de configuração. Deve ser definido como `BYOK_CONFIG`. |
-| `imsOrgId` | Sua ID de organização. Essa ID deve ter o mesmo valor fornecido em `x-gw-ims-org-id` cabeçalho. |
-| `configData` | Essa propriedade contém os seguintes detalhes sobre a configuração:<ul><li>`providerType`: Deve ser definido como `AZURE_KEYVAULT`.</li><li>`keyVaultKeyIdentifier`: o URI do cofre de chaves que você copiou [anterior](#send-to-adobe).</li></ul> |
+| `imsOrgId` | Sua ID da organização. Essa ID deve ter o mesmo valor fornecido em `x-gw-ims-org-id` cabeçalho. |
+| `configData` | Essa propriedade contém os seguintes detalhes sobre a configuração:<ul><li>`providerType`: deve ser definido como `AZURE_KEYVAULT`.</li><li>`keyVaultKeyIdentifier`: o URI do cofre de chaves que você copiou [anterior](#send-to-adobe).</li></ul> |
 
 +++
 

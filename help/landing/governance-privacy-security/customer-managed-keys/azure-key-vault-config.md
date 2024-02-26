@@ -2,9 +2,9 @@
 title: Configurar um Cofre de Chaves do Azure
 description: Saiba como criar uma nova conta corporativa com o Azure ou usar uma conta corporativa existente e criar o Cofre da Chave.
 exl-id: 670e3ca3-a833-4b28-9ad4-73685fa5d74d
-source-git-commit: 4ec87482c5a38404217ecd910b6a27ee2d0e00eb
+source-git-commit: 4f08e8fcc8d53b981af60226f1397a1d1ac4d8dc
 workflow-type: tm+mt
-source-wordcount: '565'
+source-wordcount: '561'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ As chaves gerenciadas pelo cliente (CMK) só aceitam chaves de um [!DNL Microsof
 
 >[!IMPORTANT]
 >
->Somente os níveis de serviço Premium e Standard para [!DNL Azure] O Cofre de Chaves é compatível. [!DNL Azure Managed HSM], [!DNL Azure Dedicated HSM] e [!DNL Azure Payments HSM] não são compatíveis. Consulte a [[!DNL Azure] documentação](https://learn.microsoft.com/en-us/azure/security/fundamentals/key-management#azure-key-management-services) para obter mais informações sobre os principais serviços de gerenciamento oferecidos.
+>Somente os níveis de HSM padrão, premium e gerenciado para [!DNL Azure] O Cofre de Chaves é compatível. [!DNL Azure Dedicated HSM] e [!DNL Azure Payments HSM] não são compatíveis. Consulte a [[!DNL Azure] documentação](https://learn.microsoft.com/en-us/azure/security/fundamentals/key-management#azure-key-management-services) para obter mais informações sobre os principais serviços de gerenciamento oferecidos.
 
 >[!NOTE]
 >
@@ -63,7 +63,7 @@ Depois de criar um Cofre de Chaves, você pode gerar uma nova chave. Navegue at�
 
 ![A variável [!DNL Keys] guia de [!DNL Azure] com [!DNL Generate import] destacado.](../../images/governance-privacy-security/customer-managed-keys/view-keys.png)
 
-Use o formulário fornecido para fornecer um nome para a chave e selecione **RSA** para o tipo de chave. No mínimo, a variável **[!DNL RSA key size]** deve ser pelo menos **3072** bits conforme exigido pelo [!DNL Cosmos DB]. [!DNL Azure Data Lake Storage] também é compatível com o RSA 3027.
+Use o formulário fornecido para fornecer um nome para a chave e selecione **RSA** ou **RSA-HSM** para o tipo de chave. No mínimo, a variável **[!DNL RSA key size]** deve ser pelo menos **3072** bits conforme exigido pelo [!DNL Cosmos DB]. [!DNL Azure Data Lake Storage] também é compatível com o RSA 3027.
 
 >[!NOTE]
 >
@@ -71,7 +71,7 @@ Use o formulário fornecido para fornecer um nome para a chave e selecione **RSA
 
 Use os controles restantes para configurar a chave que deseja gerar ou importar conforme desejado. Quando terminar, selecione **[!DNL Create]**.
 
-![A janela Criar um painel de chaves com [!DNL 3072] bits realçados.](../../images/governance-privacy-security/customer-managed-keys/configure-key.png)
+![A variável [!DNL Create a key] painel com [!DNL 3072] bits realçados.](../../images/governance-privacy-security/customer-managed-keys/configure-key.png)
 
 A chave configurada é exibida na lista de chaves do Vault.
 

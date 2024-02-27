@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Guia da interface do usuário de públicos
 description: A Composição de público-alvo na interface do usuário do Adobe Experience Platform fornece um espaço de trabalho avançado que permite interagir com elementos de dados do perfil. O espaço de trabalho fornece controles intuitivos para criação e edição de públicos-alvo para sua organização.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: e8f838c3cf8988f6028901df76ed040e7f08cb98
+source-git-commit: 10079216cbfa5ace68127d1529d47e83f4448049
 workflow-type: tm+mt
 source-wordcount: '1844'
 ht-degree: 0%
@@ -220,9 +220,9 @@ Uma lista de atributos de perfil é exibida. Nesse popover, você pode seleciona
 
 Depois de selecionar o atributo, você pode selecionar a ordem pela qual ele será classificado. É em ordem crescente (do mais baixo para o mais alto) ou decrescente (do mais alto para o mais baixo).
 
-Além disso, é possível limitar o número de públicos-alvo retornados ativando o **[!UICONTROL Adicionar limite de perfil]** alternar. Quando essa opção estiver ativada, você poderá definir o número máximo de públicos-alvo retornados na variável **[!UICONTROL Perfis incluídos]** campo.
+Além disso, é possível limitar o número de perfis retornados ativando o **[!UICONTROL Adicionar limite de perfil]** alternar. Quando essa opção estiver ativada, é possível definir o número máximo de perfis retornados na variável **[!UICONTROL Perfis incluídos]** campo.
 
-![A opção Add profile limit está realçada, o que permite limitar o número de públicos-alvo retornados.](../images/ui/audience-composition/add-profile-limit.png)
+![A opção Add profile limit é realçada, o que permite limitar o número de perfis retornados.](../images/ui/audience-composition/add-profile-limit.png)
 
 ## [!UICONTROL Dividir] {#split-block}
 

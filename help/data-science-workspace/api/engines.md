@@ -3,11 +3,12 @@ keywords: Experience Platform;guia do desenvolvedor;endpoint;Data Science Worksp
 solution: Experience Platform
 title: Endpoint da API de mecanismos
 description: Os mecanismos são as bases para modelos de aprendizado de máquina no Espaço de trabalho de ciência de dados. Eles contêm algoritmos de aprendizado de máquina que resolvem problemas específicos, pipelines de recursos para executar engenharia de recursos ou ambos.
+role: Developer
 exl-id: 7c670abd-636c-47d8-bd8c-5ce0965ce82f
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '1165'
-ht-degree: 3%
+ht-degree: 2%
 
 ---
 
@@ -473,7 +474,7 @@ Uma resposta bem-sucedida retorna uma carga útil contendo os detalhes atualizad
 
 ## Excluir um mecanismo
 
-Você pode excluir um mecanismo executando uma solicitação DELETE enquanto especifica a ID do mecanismo de destino no caminho da solicitação. A exclusão de um mecanismo excluirá em cascata todas as MLInstances que fazem referência a esse mecanismo, incluindo quaisquer Experimentos e execuções de Experimentos que pertençam a essas MLInstances.
+Você pode excluir um mecanismo executando uma solicitação DELETE enquanto especifica a ID do mecanismo de destino no caminho da solicitação. A exclusão de um mecanismo excluirá em cascata todas as MLInstances que fazem referência a esse mecanismo, incluindo quaisquer Experimentos e execuções de Experimentos pertencentes a essas MLInstances.
 
 **Formato da API**
 

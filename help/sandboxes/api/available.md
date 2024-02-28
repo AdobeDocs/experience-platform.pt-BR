@@ -3,8 +3,9 @@ keywords: Experience Platform;página inicial;tópicos populares;lista sandboxes
 solution: Experience Platform
 title: Endpoint da API de sandboxes disponível
 description: Você pode listar as sandboxes que estão disponíveis para o usuário atual fazendo uma solicitação GET para o ponto de extremidade das sandboxes disponíveis.
+role: Developer
 exl-id: 9b0719af-c1ca-439a-9c8b-86c7fa26a3b8
-source-git-commit: 130f3a9b65befc1cc8cf400b8ca8ca4d6e7f71e4
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '256'
 ht-degree: 3%

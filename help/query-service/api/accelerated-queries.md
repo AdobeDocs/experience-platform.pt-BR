@@ -1,8 +1,9 @@
 ---
 title: Endpoint de consultas aceleradas
 description: Saiba como acessar o armazenamento acelerado de consultas de maneira sem estado para retornar resultados rapidamente com base em dados agregados. Este documento fornece um exemplo de solicitação HTTP e resposta para o endpoint de consultas aceleradas do Serviço de consulta.
+role: Developer
 exl-id: 29ea4d25-9c46-4b29-a6d7-45ac33dcb0fb
-source-git-commit: ea2a1cddf299bec750875c4a9125cdd065f18d8b
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '560'
 ht-degree: 1%

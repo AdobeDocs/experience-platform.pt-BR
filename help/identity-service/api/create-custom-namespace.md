@@ -3,8 +3,9 @@ keywords: Experience Platform;página inicial;tópicos populares;namespace;names
 solution: Experience Platform
 title: Criar um namespace personalizado na API do serviço de identidade
 description: Usando a API de namespace de identidade, você pode criar um namespace de identidade personalizado que estará disponível somente para sua organização.
+role: Developer
 exl-id: 6015a225-4508-49cc-9dda-fb9f73a8746c
-source-git-commit: ad9fb0bcc7bca55da432c72adc94d49e3c63ad6e
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '120'
 ht-degree: 5%

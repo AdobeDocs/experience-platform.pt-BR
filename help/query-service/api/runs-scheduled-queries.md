@@ -3,10 +3,11 @@ keywords: Experience Platform;início;tópicos populares;serviço de consulta;ex
 solution: Experience Platform
 title: Ponto de Extremidade da API de Execuções de Consulta Agendada
 description: As seções a seguir abordam as várias chamadas de API que podem ser feitas para executar consultas programadas com a API de serviço de consulta.
+role: Developer
 exl-id: 1e69b467-460a-41ea-900c-00348c3c923c
-source-git-commit: e9639cb90a561adc59388ac77984edaf90f4bfdd
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '774'
+source-wordcount: '782'
 ht-degree: 3%
 
 ---

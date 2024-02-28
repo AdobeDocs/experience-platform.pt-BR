@@ -1,8 +1,9 @@
 ---
 title: Endpoint da API de Cota
 description: O ponto de extremidade /quota na API da higiene de dados permite monitorar o uso do gerenciamento avançado do ciclo de vida dos dados em relação aos limites de cota mensais de sua organização para cada tipo de processo.
+role: Developer
 exl-id: 91858a13-e5ce-4b36-a69c-9da9daf8cd66
-source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '327'
 ht-degree: 3%

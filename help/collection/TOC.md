@@ -5,7 +5,8 @@ user-guide-title: Coleção de dados
 breadcrumb-title: Coleção de dados
 user-guide-description: Saiba como habilitar a coleção de dados do lado do(a) cliente para a rede de borda da Adobe Experience Platform e saiba mais sobre as tecnologias de coleção de dados usadas.
 feature: Data Collection
-source-git-commit: b6230760c1e25a3ef0901d80160fb0992578c41e
+role: Developer
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '49'
 ht-degree: 71%

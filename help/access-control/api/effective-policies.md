@@ -3,8 +3,9 @@ keywords: Experience Platform;página inicial;tópicos populares;políticas efet
 solution: Experience Platform
 title: Endpoint da API de Políticas Efetivas
 description: Saiba como visualizar políticas de acesso eficazes usando a API de controle de acesso para o Adobe Experience Platform.
+role: Developer
 exl-id: 555d73db-115d-4f4c-8bd2-b91477799591
-source-git-commit: 16d85a2a4ee8967fc701a3fe631c9daaba9c9d70
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '318'
 ht-degree: 2%

@@ -3,11 +3,12 @@ keywords: Experience Platform;página inicial;tópicos populares;identidade;Iden
 solution: Experience Platform
 title: Listar Mapeamentos de Identidade
 description: Um mapeamento é uma coleção de todas as identidades em um cluster para um namespace especificado.
+role: Developer
 exl-id: db80c783-620b-4ba3-b55c-75c1fd6e90b1
-source-git-commit: 6d01bb4c5212ed1bb69b9a04c6bfafaad4b108f9
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '270'
-ht-degree: 4%
+source-wordcount: '278'
+ht-degree: 3%
 
 ---
 

@@ -3,10 +3,11 @@ keywords: Experience Platform;página inicial;tópicos populares;serviço de con
 solution: Experience Platform
 title: Endpoint da API de Modelos de Consulta
 description: Este guia detalha as várias chamadas de API do modelo de consulta que você pode fazer usando a API do Serviço de consulta.
+role: Developer
 exl-id: 14cd7907-73d2-478f-8992-da3bdf08eacc
-source-git-commit: 958d5c322ff26f7372f8ab694a70ac491cbff56c
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '969'
+source-wordcount: '977'
 ht-degree: 3%
 
 ---

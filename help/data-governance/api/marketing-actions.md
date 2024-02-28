@@ -3,10 +3,11 @@ keywords: Experience Platform;página inicial;tópicos populares;Imposição de 
 solution: Experience Platform
 title: Endpoint da API de ações de marketing
 description: Uma ação de marketing, no contexto da Governança de dados da Adobe Experience Platform, é uma ação que um consumidor de dados de Experience Platform toma, para a qual é necessário verificar violações das políticas de uso de dados.
+role: Developer
 exl-id: bc16b318-d89c-4fe6-bf5a-1a4255312f54
-source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '732'
+source-wordcount: '734'
 ht-degree: 3%
 
 ---

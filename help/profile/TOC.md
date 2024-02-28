@@ -3,7 +3,8 @@ audience: user
 user-guide-title: Guia do Perfil do cliente em tempo real
 user-guide-description: Mescle dados do cliente para criar uma exibição unificada de interações do cliente entre canais.
 feature: Profiles
-source-git-commit: dde38e230a6bcb10cd38a12f644f2dd03f0cebaf
+role: User
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '129'
 ht-degree: 24%

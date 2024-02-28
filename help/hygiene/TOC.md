@@ -4,10 +4,11 @@ user-guide-title: Ajuda do gerenciamento avançado do ciclo de vida dos dados
 breadcrumb-title: Guia avançado de gerenciamento do ciclo de vida dos dados
 user-guide-description: Exclua registros individuais e programe as expirações dos conjuntos de dados na Experience Platform para limpeza de dados, remoção de dados anônimos e minimização de dados.
 feature: Data Hygiene
-source-git-commit: 35f598d3a03b459e2bbed58a006c7d020aba7dac
+role: User, Developer, Admin
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '65'
-ht-degree: 60%
+ht-degree: 63%
 
 ---
 
@@ -22,7 +23,7 @@ ht-degree: 60%
    * [Navegar pelas ordens de trabalho do ciclo de vida dos dados](./ui/browse.md)
 * API de higiene de dados {#api}
    * [Visão geral](./api/overview.md)
-   * [Expirações do conjunto de dados](./api/dataset-expiration.md)
+   * [Expirações de conjuntos de dados](./api/dataset-expiration.md)
    * [Exclusões de registro](./api/jobs.md)
    * [(Beta) Exclusões de registro](./api/workorder.md)
    * [Cota](./api/quota.md)

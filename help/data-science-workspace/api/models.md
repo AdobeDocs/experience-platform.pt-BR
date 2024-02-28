@@ -3,8 +3,9 @@ keywords: Experience Platform;guia do desenvolvedor;endpoint;Data Science Worksp
 solution: Experience Platform
 title: Endpoint da API de modelos
 description: Um modelo é uma instância de uma fórmula de aprendizado de máquina treinada com dados históricos e configurações para resolver em um caso de uso comercial.
+role: Developer
 exl-id: e66119a9-9552-497c-9b3a-b64eb3b51fcf
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '864'
 ht-degree: 4%

@@ -3,10 +3,11 @@ keywords: Experience Platform;página inicial;tópicos populares;serviço de con
 solution: Experience Platform
 title: Endpoint de agendamentos
 description: As seções a seguir abordam as várias chamadas de API que podem ser feitas para consultas programadas com a API de serviço de consulta.
+role: Developer
 exl-id: f57dbda5-da50-4812-a924-c8571349f1cd
-source-git-commit: 958d5c322ff26f7372f8ab694a70ac491cbff56c
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '1212'
+source-wordcount: '1214'
 ht-degree: 3%
 
 ---

@@ -3,11 +3,12 @@ keywords: Experience Platform;guia do desenvolvedor;endpoint;Data Science Worksp
 solution: Experience Platform
 title: Endpoint da API MLInstances
 description: Uma MLInstance é um emparelhamento de um Engine existente com um conjunto apropriado de configurações que define quaisquer parâmetros de treinamento, parâmetros de pontuação ou configurações de recursos de hardware.
+role: Developer
 exl-id: e78cda69-1ff9-47ce-b25d-915de4633e11
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '619'
-ht-degree: 4%
+ht-degree: 3%
 
 ---
 

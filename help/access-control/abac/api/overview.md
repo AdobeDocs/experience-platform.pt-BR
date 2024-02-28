@@ -3,11 +3,12 @@ keywords: Experience Platform;página inicial;tópicos populares;api;controle de
 solution: Experience Platform
 title: Guia da API de controle de acesso baseado em atributo
 description: A API de controle de acesso baseado em atributos permite gerenciar programaticamente funções e políticas de acesso no Adobe Experience Platform. Siga este manual para saber como executar operações importantes usando a API.
+role: Developer
 exl-id: 0fc32354-4869-4392-9501-b1dbea1bc55e
-source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '450'
-ht-degree: 15%
+ht-degree: 8%
 
 ---
 
@@ -25,7 +26,7 @@ Esses endpoints são descritos abaixo. Acesse os manuais de endpoint individuais
 
 ## Funções
 
-As funções definem o acesso que um administrador, um especialista ou um usuário final tem aos recursos em sua organização. Em um ambiente de controle de acesso baseado em funções, o provisionamento de acesso do usuário é agrupado por meio de responsabilidades e necessidades comuns. Uma função tem um determinado conjunto de permissões, e os membros da organização podem ter uma ou mais funções atribuídas, dependendo do escopo do acesso de visualização ou gravação necessário. Consulte a [guia de endpoint de funções](./roles.md) para obter mais informações sobre como trabalhar com funções na API.
+As funções definem o acesso que um administrador, um especialista ou um usuário final tem aos recursos em sua organização. Em um ambiente de controle de acesso baseado em funções, o provisionamento de acesso do usuário é agrupado por meio de responsabilidades e necessidades comuns. Uma função tem um determinado conjunto de permissões e os membros da organização podem ser atribuídos a uma ou mais funções, dependendo do escopo de visualização ou acesso de gravação de que precisam. Consulte a [guia de endpoint de funções](./roles.md) para obter mais informações sobre como trabalhar com funções na API.
 
 ## Políticas
 

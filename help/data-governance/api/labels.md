@@ -3,10 +3,11 @@ keywords: Experience Platform;página inicial;tópicos populares
 solution: Experience Platform
 title: Endpoint da API de rótulos
 description: Saiba como gerenciar rótulos de uso de dados no Experience Platform usando a API de serviço de política.
+role: Developer
 exl-id: 9a01f65c-01f1-4298-bdcf-b7e00ccfe9f2
-source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '506'
+source-wordcount: '504'
 ht-degree: 4%
 
 ---

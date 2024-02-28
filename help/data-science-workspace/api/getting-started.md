@@ -3,11 +3,12 @@ keywords: Experience Platform;guia do desenvolvedor;endpoint;Data Science Worksp
 solution: Experience Platform
 title: Guia da API do Sensei Machine Learning
 description: A API do Sensei Machine Learning permite que os desenvolvedores executem operações CRUD em vários recursos do Espaço de trabalho de ciência de dados. Siga este manual para saber como executar operações importantes usando a API.
+role: Developer
 exl-id: d51d0eb2-b1e9-4cc1-889a-9487395703b0
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '243'
-ht-degree: 10%
+source-wordcount: '232'
+ht-degree: 15%
 
 ---
 
@@ -31,7 +32,7 @@ Todos os recursos em [!DNL Experience Platform] são isolados em sandboxes virtu
 
 Para obter mais informações sobre sandboxes no [!DNL Platform], consulte o [documentação de visão geral da sandbox](../../sandboxes/home.md).
 
-Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabeçalho adicional:
+Todas as solicitações que contêm um conteúdo (POST, PUT, PATCH) exigem um cabeçalho adicional:
 
 * Tipo de conteúdo: application/json
 

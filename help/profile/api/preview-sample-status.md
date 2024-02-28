@@ -2,8 +2,9 @@
 keywords: Experience Platform;perfil;perfil de cliente em tempo real;solução de problemas;API;visualização;amostra;profile;real-time customer profile;troubleshooting;API;preview;sample
 title: Visualizar ponto de extremidade da API Status de amostra (Visualização de perfil)
 description: O ponto de extremidade de status da amostra de visualização da API do perfil do cliente em tempo real permite visualizar a amostra bem-sucedida mais recente dos dados do perfil, listar a distribuição do perfil por conjunto de dados e por identidade e gerar relatórios mostrando a sobreposição do conjunto de dados, a sobreposição de identidade e os perfis não compilados.
+role: Developer
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '2906'
 ht-degree: 1%

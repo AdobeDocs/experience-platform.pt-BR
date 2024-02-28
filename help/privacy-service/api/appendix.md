@@ -3,8 +3,9 @@ keywords: Experience Platform;página inicial;tópicos populares
 solution: Experience Platform
 title: Apêndice do guia de API do Privacy Service
 description: Este documento contém informações adicionais para trabalhar com a API Privacy Service.
+role: Developer
 exl-id: 7099e002-b802-486e-8863-0630d66e330f
-source-git-commit: b0b49badd46601571be59afba84fad874ca1b368
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '476'
 ht-degree: 6%
@@ -72,7 +73,7 @@ A tabela a seguir descreve os valores aceitos para especificar um produto Adobe 
 | Adobe Pass Authentication | `primetimeAuthentication` |
 | Adobe Target | `target` |
 | Atributos do cliente (CRS) | `CRS` |
-| Identity Service | `identity` |
+| Serviço de identidade | `identity` |
 | Marketo Engage | `marketo` |
 
 {style="table-layout:auto"}

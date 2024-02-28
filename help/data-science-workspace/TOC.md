@@ -5,9 +5,10 @@ breadcrumb-title: Guia do espaço de trabalho do Data Science
 user-guide-description: Use o aprendizado de máquina para desenvolver, treinar e pontuar modelos e receitas com Adobe Sensei e notebooks JupyterLab.
 feature: Data Science Workspace
 solution: Experience Platform
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+role: User, Developer
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '236'
+source-wordcount: '225'
 ht-degree: 18%
 
 ---
@@ -62,6 +63,6 @@ ht-degree: 18%
    * [Publicar um modelo como um serviço (UI)](models-recipes/publish-model-service-ui.md)
    * [Publicar um modelo como um serviço (API)](models-recipes/publish-model-service-api.md)
    * [Programar treinamento automatizado e pontuação em um serviço (UI)](models-recipes/schedule-models-ui.md)
-* [Guia de solução de problemas](troubleshooting-guide.md)
+* [Manual de solução de problemas](troubleshooting-guide.md)
 * [Referência da API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)
 * [Notas de versão da Platform](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=pt-BR)

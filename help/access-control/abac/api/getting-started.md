@@ -2,11 +2,12 @@
 keywords: Experience Platform;página inicial;tópicos populares;Controle de acesso baseado em atributos;controle de acesso baseado em atributos
 title: Introdução à API de controle de acesso baseado em atributos
 description: A API de controle de acesso baseado em atributos permite gerenciar programaticamente funções e políticas de acesso no Adobe Experience Platform. Siga este manual para saber como executar operações importantes usando a API.
+role: Developer
 exl-id: d1a66afa-dff4-49d7-b57c-527f05977155
-source-git-commit: 54e15234d1b1050ea2cdb8b7d37c79a133a339f1
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '330'
-ht-degree: 4%
+source-wordcount: '327'
+ht-degree: 17%
 
 ---
 
@@ -16,9 +17,9 @@ Este guia do desenvolvedor fornece etapas para ajudar você a usar a API de cont
 
 ## Leitura de chamadas de API de amostra
 
-Este guia fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O exemplo de JSON retornado nas respostas da API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de exemplo, consulte a seção sobre [como ler chamadas de API de exemplo](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) no guia de solução de problemas de Experience Platform.
+Este manual fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e conteúdos de solicitação formatados corretamente. Também fornece exemplos de JSON retornado nas respostas da API. Para obter informações sobre as convenções usadas na documentação para chamadas de API de exemplo, consulte a seção sobre [como ler chamadas de API de exemplo](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) no guia de solução de problemas de Experience Platform.
 
-## Coletar valores para cabeçalhos obrigatórios
+## Coletar valores para cabeçalhos necessários
 
 Este guia requer que você tenha concluído o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en) para fazer chamadas com êxito para APIs da Platform. Concluir o tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API de Experience Platform, conforme mostrado abaixo:
 

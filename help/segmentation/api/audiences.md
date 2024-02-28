@@ -1,8 +1,9 @@
 ---
 title: Endpoint da API de públicos-alvo
 description: Use o endpoint de públicos-alvo na API do serviço de segmentação do Adobe Experience Platform para criar, gerenciar e atualizar programaticamente os públicos-alvo da sua organização.
+role: Developer
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
-source-git-commit: 9277ad00f72b44d7e75e444f034c38f000e7909f
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '1879'
 ht-degree: 4%
@@ -195,7 +196,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com uma lista de públicos-a
 
 +++
 
-## Crie um novo público-alvo {#create}
+## Criar um novo público {#create}
 
 Você pode criar um novo público-alvo fazendo uma solicitação POST para a `/audiences` terminal.
 
@@ -722,7 +723,7 @@ curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513
 | `namespace` | O namespace do público. |
 | `description` | Uma descrição do público. |
 | `type` | Um campo gerado pelo sistema que mostra se o público-alvo é gerado pela Platform ou um público-alvo gerado externamente. Os valores possíveis incluem `SegmentDefinition` e `ExternalSegment`. A `SegmentDefinition` refere-se a um público-alvo gerado na Platform, enquanto um `ExternalSegment` refere-se a um público-alvo que não foi gerado na Platform. |
-| `lifecycleState` | O status do público. Os valores possíveis incluem `draft`, `published` e `inactive`. `draft` representa quando o público é criado, `published` quando o público-alvo é publicado e `inactive` quando o público-alvo não estiver mais ativo. |
+| `lifecycleState` | O status do público. Os valores possíveis incluem `draft`, `published`, e `inactive`. `draft` representa quando o público é criado, `published` quando o público-alvo é publicado e `inactive` quando o público-alvo não estiver mais ativo. |
 | `datasetId` | A ID do conjunto de dados em que os dados de público-alvo podem ser encontrados. |
 | `labels` | Uso de dados no nível do objeto e rótulos de controle de acesso baseados em atributos que são relevantes para o público-alvo. |
 

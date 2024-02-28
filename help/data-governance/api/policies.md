@@ -3,10 +3,11 @@ keywords: Experience Platform;página inicial;tópicos populares;Imposição de 
 solution: Experience Platform
 title: Ponto de extremidade da API de políticas de governança de dados
 description: As políticas de governança de dados são regras adotadas pela sua organização que descrevem os tipos de ações de marketing que você tem permissão ou restrição para executar em dados no Experience Platform. O ponto de extremidade /policies é usado para todas as chamadas de API relacionadas à exibição, criação, atualização ou exclusão de políticas de governança de dados.
+role: Developer
 exl-id: 62a6f15b-4c12-4269-bf90-aaa04c147053
-source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '1865'
+source-wordcount: '1863'
 ht-degree: 3%
 
 ---

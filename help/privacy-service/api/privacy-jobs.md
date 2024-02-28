@@ -3,10 +3,11 @@ keywords: Experience Platform;página inicial;tópicos populares
 solution: Experience Platform
 title: Ponto de extremidade da API de trabalhos de privacidade
 description: Saiba como gerenciar processos de privacidade para aplicativos Experience Cloud usando a API de Privacy Service.
+role: Developer
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
-source-git-commit: 8e21bcc7b9d7fe3f4d26f80f953d454f090b0928
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '1546'
+source-wordcount: '1552'
 ht-degree: 2%
 
 ---

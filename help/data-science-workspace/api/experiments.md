@@ -3,8 +3,9 @@ keywords: Experience Platform;guia do desenvolvedor;endpoint;Data Science Worksp
 solution: Experience Platform
 title: Endpoint da API de experimentos
 description: O desenvolvimento e o treinamento de modelos ocorrem no nível do Experimento, em que um Experimento consiste em uma MLInstance, execuções de treinamento e execuções de pontuação.
+role: Developer
 exl-id: 6ca5106e-896d-4c03-aecc-344632d5307d
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '783'
 ht-degree: 4%

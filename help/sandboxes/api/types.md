@@ -3,10 +3,11 @@ keywords: Experience Platform;página inicial;tópicos populares;listar sandboxe
 solution: Experience Platform
 title: Ponto de acesso da API de tipos de sandbox
 description: Você pode recuperar uma lista de tipos de sandbox compatíveis para sua organização fazendo uma solicitação GET para o endpoint /sandboxTypes.
+role: Developer
 exl-id: eb5e1b44-37f5-4ed5-98f5-ac8db8792c7d
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '162'
+source-wordcount: '158'
 ht-degree: 3%
 
 ---

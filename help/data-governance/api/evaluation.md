@@ -3,10 +3,11 @@ keywords: Experience Platform;página inicial;tópicos populares;Imposição de 
 solution: Experience Platform
 title: Pontos de Extremidade da API de Avaliação de Política
 description: Depois que ações de marketing tiverem sido criadas e as políticas tiverem sido definidas, você poderá usar a API de serviço de política para avaliar se alguma política foi violada por determinadas ações. As restrições retornadas tomam a forma de um conjunto de políticas que seriam violadas ao tentar a ação de marketing nos dados especificados que contêm rótulos de uso de dados.
+role: Developer
 exl-id: f9903939-268b-492c-aca7-63200bfe4179
-source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '1542'
+source-wordcount: '1538'
 ht-degree: 2%
 
 ---

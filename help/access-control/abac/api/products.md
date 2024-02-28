@@ -3,10 +3,11 @@ keywords: Experience Platform;página inicial;tópicos populares;api;Controle de
 solution: Experience Platform
 title: Endpoint da API de produtos
 description: O endpoint /products na API de controle de acesso baseado em atributos permite gerenciar programaticamente os produtos no Adobe Experience Platform.
+role: Developer
 exl-id: 44ee9a9d-7a13-4d59-a1a9-97764dbd3763
-source-git-commit: 16d85a2a4ee8967fc701a3fe631c9daaba9c9d70
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '515'
+source-wordcount: '513'
 ht-degree: 4%
 
 ---

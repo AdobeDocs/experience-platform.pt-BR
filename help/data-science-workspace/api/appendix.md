@@ -3,11 +3,12 @@ keywords: Experience Platform;guia do desenvolvedor;endpoint;Data Science Worksp
 solution: Experience Platform
 title: Apêndice do Guia da API de Aprendizado de Máquina do Sensei
 description: As seções a seguir fornecem informações de referência para vários recursos da API do Sensei Machine Learning.
+role: Developer
 exl-id: 2c8d3ae8-7ad7-4ff6-8d6b-3a42d3eccdff
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '330'
-ht-degree: 3%
+ht-degree: 2%
 
 ---
 

@@ -3,10 +3,11 @@ keywords: Experience Platform;página inicial;tópicos populares
 solution: Experience Platform
 title: Endpoint da API de consentimento
 description: Saiba como gerenciar solicitações de consentimento do cliente para aplicativos Experience Cloud usando a API Privacy Service.
+role: Developer
 exl-id: ec505749-c0a9-4050-be56-4c0657807ec7
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '244'
+source-wordcount: '245'
 ht-degree: 2%
 
 ---

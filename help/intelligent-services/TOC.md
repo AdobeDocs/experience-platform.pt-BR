@@ -4,9 +4,10 @@ audience: user
 user-guide-title: Ajuda dos Serviços inteligentes
 breadcrumb-title: Guia dos Serviços inteligentes
 user-guide-description: Utilize os serviços inteligentes de IA para gerar pontuações, descobrir insights e criar segmentos a partir dos dados dos eventos de marketing.
-source-git-commit: a8a721cde2ebd68e72a1ee36b6d9274792474b3d
+role: User
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '139'
+source-wordcount: '136'
 ht-degree: 32%
 
 ---
@@ -16,7 +17,7 @@ ht-degree: 32%
 
 - [Visão geral dos Serviços inteligentes](home.md)
 - [Preparar dados para uso nos Serviços inteligentes](data-preparation.md)
-- IA de atribuição {#attribution-ai}
+- Attribution AI {#attribution-ai}
    - [Visão geral](attribution-ai/overview.md)
    - [Introdução ao Attribution AI](attribution-ai/getting-started.md)
    - [Entrada e saída](attribution-ai/input-output.md)

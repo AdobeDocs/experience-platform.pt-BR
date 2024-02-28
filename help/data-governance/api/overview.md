@@ -3,10 +3,11 @@ keywords: Experience Platform;página inicial;tópicos populares
 solution: Experience Platform
 title: Guia da API do Serviço de política
 description: A API de serviço de política permite que os desenvolvedores gerenciem rótulos e políticas de uso de dados no Experience Platform. Siga este manual para saber como executar operações importantes usando a API.
+role: Developer
 exl-id: 23c05670-7107-4b96-bc24-0a51b5d267b2
-source-git-commit: 0c09db51d97bc0cf321c5d2fd57c42d194b25d5f
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '547'
+source-wordcount: '543'
 ht-degree: 4%
 
 ---

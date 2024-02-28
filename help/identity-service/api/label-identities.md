@@ -3,8 +3,9 @@ keywords: Experience Platform;página inicial;tópicos populares;identidade do r
 solution: Experience Platform
 title: Rotular um campo como uma identidade
 description: Os campos que contêm informações de identificação pessoal (PII) podem ser rotulados como campos de identidade. Um valor fornecido em um campo de identidade é interpretado como uma identidade pelo Serviço de identidade. O namespace da identidade é especificado como parte da rotulagem do campo.
+role: Developer
 exl-id: f0b3f18b-7302-4a0b-b444-2d4b59787681
-source-git-commit: 6d01bb4c5212ed1bb69b9a04c6bfafaad4b108f9
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '196'
 ht-degree: 1%

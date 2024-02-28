@@ -3,10 +3,11 @@ keywords: Experience Platform;página inicial;tópicos populares;lista identidad
 solution: Experience Platform
 title: Listar Todas as Identidades em um Cluster
 description: As identidades relacionadas em um gráfico de identidade, independentemente do namespace, são consideradas parte do mesmo "cluster" nesse gráfico de identidade. As opções abaixo fornecem o meio de acessar todos os membros do cluster.
+role: Developer
 exl-id: 0fb9eac9-2dc2-4881-8598-02b3053d0b31
-source-git-commit: 6d01bb4c5212ed1bb69b9a04c6bfafaad4b108f9
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '359'
+source-wordcount: '365'
 ht-degree: 2%
 
 ---

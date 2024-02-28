@@ -4,10 +4,11 @@ user-guide-title: Ajuda da Ingestão de dados da Adobe Experience Platform
 breadcrumb-title: Guia da Ingestão de dados
 user-guide-description: Traga seus dados para a Experience Platform por meio de uma assimilação em lote ou por transmissão.
 feature: Data Ingestion
-source-git-commit: 6110bf51cbd0005428e7dab4552944c5c9b54d03
+role: Developer
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '156'
-ht-degree: 26%
+source-wordcount: '145'
+ht-degree: 21%
 
 ---
 
@@ -15,7 +16,7 @@ ht-degree: 26%
 # Assimilação de dados Adobe Experience Platform {#ingestion}
 
 - [Visão geral da assimilação de dados](home.md)
-- Assimilação por streaming {#streaming}
+- Assimilação por transmissão {#streaming}
    - [Visão geral](streaming-ingestion/overview.md)
    - [Conector Kafka](streaming-ingestion/kafka.md)
    - [Solução de problemas](streaming-ingestion/troubleshooting.md)

@@ -3,11 +3,12 @@ keywords: Experience Platform;perfil;perfil de cliente em tempo real;solução d
 title: Introdução à API de perfil do cliente em tempo real
 type: Documentation
 description: O guia de introdução à API de perfil descreve os principais conceitos e a funcionalidade básica que você precisa saber para usar os endpoints da API de perfil do cliente em tempo real para executar operações CRUD básicas em relação aos dados do perfil.
+role: Developer
 exl-id: 7e30610a-a7e7-43ab-a45d-fd84ef6e36ef
-source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '410'
-ht-degree: 12%
+source-wordcount: '407'
+ht-degree: 6%
 
 ---
 
@@ -27,7 +28,7 @@ As seções a seguir fornecem informações adicionais que você precisará sabe
 
 ## Leitura de chamadas de API de amostra
 
-A variável [!DNL Real-Time Customer Profile] A documentação da API fornece exemplos de chamadas de API para demonstrar como formatar solicitações corretamente. Isso inclui caminhos, cabeçalhos necessários e conteúdos de solicitação formatados corretamente. Também fornece exemplos de JSON retornado nas respostas da API. Para obter informações sobre as convenções usadas na documentação para chamadas de API de exemplo, consulte a seção sobre [como ler chamadas de API de exemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) no manual de solução de problemas da [!DNL Experience Platform].
+A variável [!DNL Real-Time Customer Profile] A documentação da API fornece exemplos de chamadas de API para demonstrar como formatar solicitações corretamente. Isso inclui caminhos, cabeçalhos necessários e conteúdos de solicitação formatados corretamente. Também fornece exemplos de JSON retornado nas respostas da API. Para obter informações sobre as convenções usadas na documentação para chamadas de API de exemplo, consulte a seção sobre [como ler chamadas de API de exemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) no [!DNL Experience Platform] guia de solução de problemas.
 
 ## Cabeçalhos obrigatórios
 

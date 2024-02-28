@@ -1,11 +1,12 @@
 ---
 title: Autentique e acesse a API do Privacy Service
 description: Saiba como autenticar para a API de Privacy Service e como interpretar chamadas de API de exemplo na documentação.
+role: Developer
 exl-id: c1d05e30-ef8f-4adf-87e0-1d6e3e9e9f9e
-source-git-commit: 2c8ac35e9bf72c91743714da1591c3414db5c5e9
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '862'
-ht-degree: 17%
+source-wordcount: '851'
+ht-degree: 16%
 
 ---
 

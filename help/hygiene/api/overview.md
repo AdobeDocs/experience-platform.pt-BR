@@ -1,11 +1,12 @@
 ---
 title: Guia da API de higiene de dados
 description: Saiba como corrigir ou excluir programaticamente os dados pessoais armazenados dos clientes no Adobe Experience Platform.
+role: Developer
 exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
-source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '445'
-ht-degree: 5%
+ht-degree: 6%
 
 ---
 
@@ -35,7 +36,7 @@ Todas as solicitações que contêm um conteúdo (POST, PUT, PATCH) exigem um ca
 
 Este documento fornece um exemplo de chamada de API para demonstrar como formatar suas solicitações. Para obter informações sobre as convenções usadas na documentação para chamadas de API de exemplo, consulte a seção sobre [como ler chamadas de API de exemplo](../../landing/api-guide.md#sample-api) no guia de introdução às APIs Experience Platform.
 
-## Expirações do conjunto de dados
+## Expirações de conjuntos de dados
 
 A expiração de um conjunto de dados é uma ação de &quot;exclusão de um conjunto de dados&quot; atrasada. Ao criar uma expiração de conjunto de dados, você está especificando um momento futuro em que esse conjunto de dados deve ser excluído. Consulte a [guia de ponto de extremidade de expiração do conjunto de dados](./dataset-expiration.md) para obter detalhes sobre como agendar as expirações do conjunto de dados na API.
 

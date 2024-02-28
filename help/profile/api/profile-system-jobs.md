@@ -3,10 +3,11 @@ keywords: Experience Platform;perfil;perfil de cliente em tempo real;solução d
 title: Ponto de extremidade da API de trabalhos do sistema de perfil
 type: Documentation
 description: O Adobe Experience Platform permite excluir um conjunto de dados ou lote do Armazenamento de perfis para remover os dados do Perfil do cliente em tempo real que não são mais necessários ou que foram adicionados por engano. Isso requer o uso da API de perfil para criar um trabalho de sistema de perfil ou excluir solicitação.
+role: Developer
 exl-id: 75ddbf2f-9a54-424d-8569-d6737e9a590e
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '1316'
+source-wordcount: '1313'
 ht-degree: 3%
 
 ---

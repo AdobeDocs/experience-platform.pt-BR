@@ -3,10 +3,11 @@ audience: user
 user-guide-title: Guia de catálogo e conjuntos de dados
 user-guide-description: Explore a linhagem de dados, os metadados, as descrições de arquivos, os diretórios e os conjuntos de dados no Data Lake e saiba mais sobre o sistema do Serviço de catálogo.
 feature: Catalog
-source-git-commit: 81f570f8e5401624ccac74696b2323252a4de0a9
+role: Developer
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '119'
-ht-degree: 36%
+source-wordcount: '112'
+ht-degree: 33%
 
 ---
 
@@ -28,7 +29,7 @@ ht-degree: 36%
    * [Rótulos de uso de dados](api/labels.md)
    * [Apêndice](api/appendix.md)
 * Conjuntos de dados {#datasets}
-   * [Conjuntos de dados visão geral](datasets/overview.md)
+   * [Visão geral dos conjuntos de dados](datasets/overview.md)
    * [Guia do usuário de conjuntos de dados](datasets/user-guide.md)
    * [Criar e preencher um conjunto de dados usando APIs](datasets/create.md)
    * [Ativar um conjunto de dados para Perfil e Identidade](datasets/enable-for-profile.md)

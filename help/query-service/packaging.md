@@ -2,9 +2,9 @@
 title: Empacotamento do serviço de consulta
 description: O documento a seguir descreve o pacote de recursos e produtos disponíveis para o Serviço de consulta e destaca as diferenças entre consultas ad hoc e em lote.
 exl-id: ba472d9e-afe6-423d-9abd-13ecea43f04f
-source-git-commit: 2bea95d855d24aa9d5763ab541ec282f0d8d1d56
+source-git-commit: 0f55a836321e974b3f29d2285c38cc8461636f39
 workflow-type: tm+mt
-source-wordcount: '1004'
+source-wordcount: '963'
 ht-degree: 2%
 
 ---
@@ -39,7 +39,7 @@ A tabela a seguir descreve os principais direitos do Serviço de consulta com ba
 | Bonificação de exportação de dados | Seu direito total de exportação depende das licenças dos aplicativos baseados na plataforma. Por exemplo, Real-Time CDP, AJO, CJA e assim por diante. | Sim - um direito de exportação adicional é fornecido para permitir a exportação de conjuntos de dados derivados criados usando o Data Distiller.<br>Sua permissão anual de exportação de dados é medida em terabytes (TB) e depende da quantidade de horas de Computação que você adquiriu. Verifique a descrição do produto para obter mais detalhes. |
 | Interface de execução de consulta | <ul><li>Interface do usuário do serviço de consulta</li><li>Interface do usuário do cliente de terceiros</li><li>[!DNL PostgresSQL] interface do cliente</li></ul> | <ul><li>Interface do usuário do serviço de consulta </li><li>Interface do usuário do cliente de terceiros</li><li>[!DNL PostgresSQL] interface do cliente</li><li>REST APIs</li></ul> |
 | Resultados da Consulta Retornados via | Interface do cliente | Conjunto de dados derivado armazenado no data lake |
-| Limite do resultado | <ul><li>Interface do usuário do serviço de consulta - O número de linhas de saída pode ser [configurado com uma configuração de interface](./ui/user-guide.md#result-count) entre 50 e 500 linhas.</li><li>Clientes de terceiros - 50.000</li><li>[!DNL PostgresSQL] cliente - 50.000</li></ul> | <ul><li>Interface do usuário do serviço de consulta - O número de linhas de saída pode ser [configurado com uma configuração de interface](./ui/user-guide.md#result-count) entre 50 e 500 linhas.<br>Observação: as consultas CTAS e ITAS geram mensagens de sucesso apenas quando a saída da consulta é armazenada em conjuntos de dados derivados.</li><li>Clientes de terceiros (sem limite superior para linhas)</li><li>[!DNL PostgresSQL] cliente (sem limite superior para linhas)</li><li>REST APIs (sem limite superior para linhas)</li></ul> |
+| Limite do resultado | <ul><li>Interface do usuário do serviço de consulta - O número de linhas de saída pode ser [configurado com uma configuração de interface](./ui/user-guide.md#result-count) entre 50 e 500 linhas.</li><li>Clientes de terceiros - 50.000</li><li>[!DNL PostgresSQL] cliente - 50.000</li></ul> | Consultas CTAS e ITAS geram mensagens de sucesso apenas quando a saída da consulta é armazenada em conjuntos de dados derivados. |
 | Capacidade do conjunto de dados de leitura | Sim | Sim |
 | Capacidade do conjunto de dados de gravação | Não | Sim |
 | Capacidade de programação | Não | Sim |

@@ -4,9 +4,9 @@ description: Saiba como criar e usar públicos-alvo da conta para direcionar per
 badgeB2B: label="Edição B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="Edição B2P" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 047930d6-939f-4418-bbcb-8aafd2cf43ba
-source-git-commit: 3c0b7c4eee7c790a8ffae95c05a8db6ba7c3b285
+source-git-commit: 7d630c3673304060ad26375955602440a495f354
 workflow-type: tm+mt
-source-wordcount: '1039'
+source-wordcount: '1130'
 ht-degree: 0%
 
 ---
@@ -41,19 +41,29 @@ A variável [!UICONTROL Procurar] será exibida, mostrando uma lista de todos os
 
 Essa exibição lista informações sobre o público-alvo, incluindo nome, contagem de perfis, origem, status do ciclo de vida, data de criação e data da última atualização.
 
+Você também pode usar a funcionalidade de pesquisa e filtragem para pesquisar e classificar rapidamente por públicos-alvo específicos da conta. Mais informações sobre esse recurso podem ser encontradas no [guia da interface de segmentação](./overview.md#manage-audiences).
+
 ## Criar público-alvo {#create}
+
+>[!NOTE]
+>
+>Os públicos-alvo da conta são avaliados usando **lote** segmentação e serão avaliados a cada 24 horas.
 
 Para criar um público-alvo para a conta, selecione **[!UICONTROL Criar público]** no [!UICONTROL Procurar] página.
 
 ![A variável [!UICONTROL Criar público] O botão é realçado na página de navegação do público-alvo da conta.](../images/ui/account-audiences/select-create-audience.png)
 
-O Construtor de segmentos é exibido. Os atributos da conta são exibidos na barra de navegação esquerda.
+O Construtor de segmentos é exibido. Os atributos e os públicos-alvo da conta são exibidos na barra de navegação esquerda. No [!UICONTROL Atributos] , é possível adicionar atributos personalizados e criados pela Platform.
 
-![O Construtor de segmentos é exibido. Observe que somente os atributos são exibidos.](../images/ui/account-audiences/segment-builder.png)
+![O Construtor de segmentos é exibido. Observe que somente os atributos e os públicos-alvo são exibidos.](../images/ui/account-audiences/segment-builder.png)
 
 Ao criar públicos-alvo de conta, observe que os eventos estão listados em **[!UICONTROL Pessoas]**, em vez de serem sua própria guia, já que esses atributos estão associados a pessoas.
 
 ![O local para localizar eventos, que está dentro da variável [!UICONTROL Pessoas] , está realçada.](../images/ui/account-audiences/attributes.png)
+
+No [!UICONTROL Públicos-alvo] você pode adicionar públicos-alvo com base em pessoas criados anteriormente para criar novos públicos-alvo ao criar seu próprio público-alvo de conta.
+
+![A guia Públicos-alvo no Construtor de segmentos é realçada.](../images/ui/account-audiences/audiences.png)
 
 Para obter mais informações sobre como usar o Construtor de segmentos, leia as [Guia da interface do usuário do Construtor de segmentos](./segment-builder.md).
 

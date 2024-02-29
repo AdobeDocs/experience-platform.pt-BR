@@ -5,9 +5,9 @@ breadcrumb-title: Tags
 user-guide-description: Saiba como implantar e gerenciar tags de análise, marketing e publicidade para potencializar as experiências dos clientes.
 feature: Tags
 solution: Data Collection
-source-git-commit: 30152a95a46db06948620b881092fb21df734f9d
+source-git-commit: 1e61b2258f943a09cba30aa1c0bc1c6647b9fd16
 workflow-type: tm+mt
-source-wordcount: '770'
+source-wordcount: '773'
 ht-degree: 45%
 
 ---
@@ -53,6 +53,7 @@ ht-degree: 45%
    * [Implantar tags do JavaScript para gerenciar o consentimento do cliente](./ui/client-side/consent.md)
    * [Suporte à Política de segurança de conteúdo (CSP)](./ui/client-side/content-security-policy.md)
    * [Compatibilidade de Integridade de sub-recursos (SRI)](./ui/client-side/sri.md)
+   * [Segurança da camada de transporte](./ui/client-side/transport-layer-security.md)
 * Encaminhamento de eventos {#event-forwarding}
    * [Visão geral](./ui/event-forwarding/overview.md)
    * [Introdução](./ui/event-forwarding/getting-started.md)

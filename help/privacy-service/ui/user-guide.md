@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Gerenciar processos de privacidade na interface do Privacy Service
 description: Saiba como usar a interface do usuário do Privacy Service para coordenar e monitorar solicitações de privacidade em vários aplicativos Experience Cloud.
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
-source-git-commit: 9d05752f3db78d9d10fd91fd0d3fed924217199c
+source-git-commit: b16eae9698de6c20022fdf1a3ff659df35e440f6
 workflow-type: tm+mt
-source-wordcount: '1456'
+source-wordcount: '1458'
 ht-degree: 14%
 
 ---
@@ -46,6 +46,7 @@ O painel para a [!DNL Privacy Service] A interface do usuário fornece dois widg
 | [!UICONTROL GDPR] | A política da União Europeia [!DNL General Data Protection Regulation] |
 | [!UICONTROL HIPAA_AUS] | O [!DNL Health Insurance Portability and Accountability Act] |
 | [!UICONTROL LGPD_BRA] | O do Brasil [!DNL Lei Geral de Proteção de Dados] |
+| [!UICONTROL MHMDA] | O [!DNL Washington My Health My Data Act] |
 | [!UICONTROL NZPA_NZL] | Nova Zelândia [!DNL Privacy Act] |
 | [!UICONTROL PDPA_THA] | da Tailândia [!DNL Personal Data Protection Act] |
 | [!UICONTROL UCPA] | O [!DNL Utah Consumer Privacy Act] |

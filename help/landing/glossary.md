@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Glossário do Adobe Experience Platform
 description: Um glossário de termos importantes na Experience Platform.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: 9d05752f3db78d9d10fd91fd0d3fed924217199c
+source-git-commit: b16eae9698de6c20022fdf1a3ff659df35e440f6
 workflow-type: tm+mt
-source-wordcount: '7979'
+source-wordcount: '7996'
 ht-degree: 0%
 
 ---
@@ -319,7 +319,7 @@ ht-degree: 0%
 
 **[!DNL Jupyter Notebook]**: Integrado ao JupyterLab, o Jupyter Notebooks permite realizar limpeza e transformação de dados, simulação numérica, modelagem estatística, visualização de dados, aprendizado de máquina e muito mais em seus dados de Experience Platform em uma variedade de linguagens, como Python, Scala e PySpark.
 
-##  mil
+## K
 
 ## L
 
@@ -344,6 +344,8 @@ ht-degree: 0%
 **Método de mesclagem**: ao definir uma política de mesclagem usando a interface da Platform, o método de mesclagem especifica como os fragmentos de dados devem ser priorizados quando ocorrer um conflito. Ao usar a API de perfil do cliente em tempo real para definir uma política de mesclagem, o método de mesclagem é determinado usando o `attributeMerge` objeto.
 
 **Política de mesclagem**: as políticas de mesclagem são regras que o Experience Platform usa para determinar como os fragmentos de dados do cliente de várias fontes serão combinados para criar um perfil individual. Quando ocorre um conflito de dados, a política de mesclagem determina quais dados devem ser priorizados para inclusão no perfil.
+
+**MHMDAa**: A variável [[!DNL Washington My Health My Data Act]](https://app.leg.wa.gov/RCW/default.aspx?cite=19.373&amp;full=true) reforça os direitos de privacidade dos consumidores no que diz respeito aos seus dados de saúde. Ela exige a divulgação, o consentimento do consumidor e os direitos de exclusão dos dados de saúde, e proíbe a venda de dados de saúde sem autorização. Além disso, a lei torna ilegal o uso de geofencing em instalações de saúde.
 
 **Mixin**: Consulte &quot;Grupo de campos de esquema&quot;.
 

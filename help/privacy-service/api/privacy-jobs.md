@@ -5,10 +5,10 @@ title: Ponto de extremidade da API de trabalhos de privacidade
 description: Saiba como gerenciar processos de privacidade para aplicativos Experience Cloud usando a API de Privacy Service.
 role: Developer
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 0ffc9648fbc6e6aa3c43a7125f25a98452e8af9a
 workflow-type: tm+mt
-source-wordcount: '1552'
-ht-degree: 2%
+source-wordcount: '1857'
+ht-degree: 1%
 
 ---
 
@@ -26,25 +26,34 @@ Você pode exibir uma lista de todos os processos de privacidade disponíveis em
 
 **Formato da API**
 
-Este formato de solicitação usa um `regulation` parâmetro de consulta no `/jobs` ponto de extremidade, portanto, começa com um ponto de interrogação (`?`) conforme mostrado abaixo. A resposta é paginada, permitindo que você use outros parâmetros de consulta (`page` e `size`) para filtrar a resposta. É possível separar vários parâmetros usando &quot;E&quot; comercial (`&`).
+Este formato de solicitação usa um `regulation` parâmetro de consulta no `/jobs` ponto de extremidade, portanto, começa com um ponto de interrogação (`?`) conforme mostrado abaixo. Ao listar recursos, a API de Privacy Service retorna até 1000 tarefas e pagina a resposta. Usar outros parâmetros de consulta (`page`, `size`e filtros de data) para filtrar a resposta. É possível separar vários parâmetros usando &quot;E&quot; comercial (`&`).
+
+>[!TIP]
+>
+>Use parâmetros de consulta adicionais para filtrar ainda mais os resultados de consultas específicas. Por exemplo, você pode descobrir quantos trabalhos de privacidade foram enviados em um determinado período e qual status está usando o `status`, `fromDate`, e `toDate` parâmetros de consulta.
 
 ```http
 GET /jobs?regulation={REGULATION}
 GET /jobs?regulation={REGULATION}&page={PAGE}
 GET /jobs?regulation={REGULATION}&size={SIZE}
 GET /jobs?regulation={REGULATION}&page={PAGE}&size={SIZE}
+GET /jobs?regulation={REGULATION}&fromDate={FROMDATE}&toDate={TODATE}&status={STATUS}
 ```
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{REGULATION}` | O tipo de regulamento a ser consultado. Os valores aceitos incluem: <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpa`</li><li>`cpra_usa`</li><li>`ctdpa`</li><li>`ctdpa_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`ucpa_usa`</li><li>`vcdpa_usa`</li></ul><br>Consulte a visão geral em [regulamentos suportados](../regulations/overview.md) para obter mais informações sobre as regras de privacidade que os valores acima representam. |
+| `{REGULATION}` | O tipo de regulamento a ser consultado. Os valores aceitos incluem: <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpa`</li><li>`cpra_usa`</li><li>`ctdpa`</li><li>`ctdpa_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`mhmda`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`ucpa_usa`</li><li>`vcdpa_usa`</li></ul><br>Consulte a visão geral em [regulamentos suportados](../regulations/overview.md) para obter mais informações sobre as regras de privacidade que os valores acima representam. |
 | `{PAGE}` | A página de dados a ser exibida, usando a numeração com base em 0. O padrão é `0`. |
-| `{SIZE}` | O número de resultados a serem exibidos em cada página. O padrão é `1` e o máximo é `100`. Exceder o máximo faz com que a API retorne um erro de código 400. |
+| `{SIZE}` | O número de resultados a serem exibidos em cada página. O padrão é `100` e o máximo é `1000`. Exceder o máximo faz com que a API retorne um erro de código 400. |
+| `{status}` | O comportamento padrão é incluir todos os status. Se você especificar um tipo de status, a solicitação retornará somente os processos de privacidade que correspondam a esse tipo de status. Os valores aceitos incluem: <ul><li>`processing`</li><li>`complete`</li><li>`error`</li></ul> |
+| `{toDate}` | Esse parâmetro limita os resultados aos processados antes de uma data especificada. A partir da data da solicitação, o sistema pode consultar 45 dias. No entanto, o intervalo não pode ser superior a 30 dias.<br>Ele aceita o formato AAAA-MM-DD. A data fornecida é interpretada como a data de encerramento expressa no Horário de Greenwich (GMT).<br>Se você não fornecer esse parâmetro (e uma variável `fromDate`), o comportamento padrão retorna tarefas cujos dados foram retornados nos últimos sete dias. Se você usar `toDate`, você também deve usar o `fromDate` parâmetro de consulta. Se você não usar ambos, a chamada retornará um erro 400. |
+| `{fromDate}` | Esse parâmetro limita os resultados aos processados após uma data especificada. A partir da data da solicitação, o sistema pode consultar 45 dias. No entanto, o intervalo não pode ser superior a 30 dias.<br>Ele aceita o formato AAAA-MM-DD. A data fornecida é interpretada como a data de origem da solicitação expressa na Hora Média de Greenwich (GMT).<br>Se você não fornecer esse parâmetro (e uma variável `toDate`), o comportamento padrão retorna tarefas cujos dados foram retornados nos últimos sete dias. Se você usar `fromDate`, você também deve usar o `toDate` parâmetro de consulta. Se você não usar ambos, a chamada retornará um erro 400. |
+| `{filterDate}` | Esse parâmetro limita os resultados aos processados em uma data especificada. Ele aceita o formato AAAA-MM-DD. O sistema pode analisar os últimos 45 dias. |
 
 {style="table-layout:auto"}
 
 <!-- Not released yet:
-<li>`pdpd_vnm`</li>
+<li>`pdpd_vnm`</li> 
  -->
 
 **Solicitação**

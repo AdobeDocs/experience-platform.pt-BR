@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Terminologia dos regulamentos de privacidade
 description: Este documento fornece definições para termos-chave relacionados a regulamentos de privacidade compatíveis com o Adobe Experience Cloud.
 exl-id: 9c0a7d26-0571-41d4-8cf5-6356025d51ef
-source-git-commit: 9d05752f3db78d9d10fd91fd0d3fed924217199c
+source-git-commit: b16eae9698de6c20022fdf1a3ff659df35e440f6
 workflow-type: tm+mt
-source-wordcount: '1796'
+source-wordcount: '1842'
 ht-degree: 2%
 
 ---
@@ -91,7 +91,7 @@ Este documento fornece definições para termos-chave relacionados a regulamento
 
 ## J
 
-##  mil
+## K
 
 ## L
 
@@ -100,6 +100,8 @@ Este documento fornece definições para termos-chave relacionados a regulamento
 ## M
 
 **Estabelecimento principal**: O local dentro da União onde são tomadas as principais decisões em relação ao processamento de dados; no que diz respeito ao processador.
+
+**MHMDAa**: A variável [[!DNL Washington My Health My Data Act]](https://app.leg.wa.gov/RCW/default.aspx?cite=19.373&amp;full=true) reforça os direitos de privacidade dos consumidores no que diz respeito aos seus dados de saúde. Ela exige a divulgação, o consentimento do consumidor e os direitos de exclusão dos dados de saúde, e proíbe a venda de dados de saúde sem autorização. Além disso, a lei torna ilegal o uso de geofencing em instalações de saúde.
 
 ## N
 

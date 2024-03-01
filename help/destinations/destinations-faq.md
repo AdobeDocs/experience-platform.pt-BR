@@ -3,10 +3,10 @@ keywords: destinos, perguntas, perguntas frequentes, faq, perguntas frequentes s
 title: Perguntas frequentes
 description: Respostas às perguntas mais frequentes sobre destinos do Adobe Experience Platform
 exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: dff460f0b0d365d3d643744544642d9f9488e18a
 workflow-type: tm+mt
-source-wordcount: '1634'
-ht-degree: 3%
+source-wordcount: '1673'
+ht-degree: 2%
 
 ---
 
@@ -48,6 +48,15 @@ Você reativa o público-alvo atualizado para o mesmo destino, mas como não há
 Para garantir que todos os perfis sejam enviados para o seu destino, você deve criar um novo público-alvo com a nova configuração e ativá-lo para o seu destino.
 
 +++
+
+### Quando um público-alvo é removido de um destino, há algum sinal enviado para o destino indicando que o público-alvo foi removido?
+
++++Resposta
+
+Não, não há dependência entre o destino do Experience Platform e a instância do cliente do sistema de destino. Do lado da recepção, a única indicação que o sistema de direcionamento veria é que pararia de receber esses dados do público-alvo.
+
++++
+
 <!--
 ## [!DNL Experience Cloud Audiences] {#eca-faq}
 

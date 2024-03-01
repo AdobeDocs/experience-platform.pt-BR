@@ -5,10 +5,10 @@ description: Saiba como ativar públicos-alvo da conta para destinos
 badgeB2B: label="Edição B2B" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 badgeB2P: label="Edição B2P" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 exl-id: ad69d0a8-bf5b-42ac-97a3-401eadda62cd
-source-git-commit: 3c0b7c4eee7c790a8ffae95c05a8db6ba7c3b285
+source-git-commit: dff460f0b0d365d3d643744544642d9f9488e18a
 workflow-type: tm+mt
-source-wordcount: '810'
-ht-degree: 0%
+source-wordcount: '834'
+ht-degree: 1%
 
 ---
 
@@ -25,6 +25,12 @@ Este artigo explica o workflow necessário para exportar [públicos-alvo da cont
 Ir para **[!UICONTROL Conexões]** > **[!UICONTROL Destinos]** e selecione a variável **[!UICONTROL Catálogo]** guia. Use o **[!UICONTROL Tipos de dados]** filtrar e selecionar **[!UICONTROL Contas]** para ver os destinos que oferecem suporte à ativação de públicos-alvo da conta. Atualmente, a exportação de públicos-alvo da conta está disponível somente para determinados destinos de armazenamento em nuvem ([Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [ADLS Ger 2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [Armazenamento Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md), [Data Landing Zone](/help/destinations/catalog/cloud-storage/data-landing-zone.md), e [SFTP](/help/destinations/catalog/cloud-storage/sftp.md)) e o [(Empresas) Públicos-alvo correspondentes do LinkedIn](/help/destinations/catalog/social/linkedin.md) destino.
 
 ![Destinos que oferecem suporte a públicos-alvo da conta.](/help/destinations/assets/ui/activate-account-audiences/data-types-filter.png)
+
+## Vídeo da visão geral
+
+Assista ao vídeo abaixo para obter uma visão geral da criação e ativação de públicos-alvo de conta, e os casos de uso compatíveis ao ativar públicos-alvo de conta.
+
+>[!VIDEO](https://video.tv.adobe.com/v/338252/?learn=on)
 
 ## Pré-requisitos {#prerequisites}
 

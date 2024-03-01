@@ -1,7 +1,8 @@
 ---
 title: Tags do Mailchimp
 description: O destino de Tags do Mailchimp permite exportar os dados da sua conta e ativá-los no Mailchimp para interagir com os contatos.
-source-git-commit: b32d619b78502e38e98a410bd14379992543c63c
+last-substantial-update: 2024-02-20T00:00:00Z
+source-git-commit: dff460f0b0d365d3d643744544642d9f9488e18a
 workflow-type: tm+mt
 source-wordcount: '1646'
 ht-degree: 2%

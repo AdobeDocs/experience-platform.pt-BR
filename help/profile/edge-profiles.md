@@ -2,9 +2,9 @@
 title: Perfis de borda
 description: Saiba mais sobre perfis de borda, bem como terminologia relacionada, regiões disponíveis para perfis de borda, bem como serviços disponíveis para perfis de borda.
 exl-id: dcae267f-1d5a-4e90-b634-afd42b0d4edc
-source-git-commit: dde38e230a6bcb10cd38a12f644f2dd03f0cebaf
+source-git-commit: 16e49628df73d5ce97ef890dbc0a6f2c8e7de346
 workflow-type: tm+mt
-source-wordcount: '795'
+source-wordcount: '796'
 ht-degree: 0%
 
 ---
@@ -61,7 +61,7 @@ O Serviço de perfil expresso (XPS) recupera os perfis em bordas diferentes. Ess
 
 ## Próximas etapas
 
-Depois de ler este manual, você deve ter uma compreensão básica dos perfis de borda, incluindo informações sobre as regiões e serviços disponíveis para perfis de borda. Para obter mais informações sobre o Adobe Experience Edge, leia o [Visão geral da borda](../edge/home.md).
+Depois de ler este manual, você deve ter uma compreensão básica dos perfis de borda, incluindo informações sobre as regiões e serviços disponíveis para perfis de borda. Para obter mais informações sobre o Adobe Experience Edge, leia o [Visão geral da rede de borda](../web-sdk/home.md).
 
 ## Apêndice
 

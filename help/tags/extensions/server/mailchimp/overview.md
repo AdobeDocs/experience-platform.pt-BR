@@ -7,10 +7,10 @@ level: Beginner
 role: User, Developer, Admin
 topic: Integrations
 exl-id: a52870c4-10e6-45a0-a502-f48da3398f3f
-source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '1303'
-ht-degree: 5%
+source-wordcount: '1267'
+ht-degree: 4%
 
 ---
 
@@ -83,7 +83,7 @@ Em uma propriedade de encaminhamento de eventos, [criar um [!UICONTROL Token] se
 
 Em seguida, [criar um elemento de dados](../../../ui/managing-resources/data-elements.md#create-a-data-element) usando o [!UICONTROL Núcleo] extensão e um [!UICONTROL Segredo] tipo de elemento de dados para fazer referência ao `Mailchimp API Key` segredo que acabou de criar. Enter `Mailchimp Token` como o nome do elemento de dados.
 
-### Instalação e configuração da extensão do 
+### Instalar e configurar a extensão
 
 Na mesma propriedade de encaminhamento de eventos, selecione **[!UICONTROL Extensões],** depois **[!UICONTROL Catálogo]** para exibir as extensões disponíveis para instalação. Aqui, pesquise a extensão Mailchimp e selecione **[!UICONTROL Instalar]**.
 
@@ -105,7 +105,7 @@ A extensão agora está instalada e configurada para uso na propriedade.
 
 Ao usar essa extensão em uma [regra](../../../ui/managing-resources/rules.md), há vários valores de dados que a extensão envia para o Mailchimp com cada evento. Para uma implementação típica, é possível configurar o [Extensão SDK da Web do Adobe Experience Platform](../../client/web-sdk/overview.md) para enviar esses dados ao [!DNL Platform Edge Network] para uso pela extensão na propriedade de encaminhamento de eventos.
 
-Os dados necessários para essa extensão podem ser enviados do SDK da Web como dados XDM ou dados não XDM. Consulte a documentação para saber mais sobre [envio de dados XDM](../../../../edge/fundamentals/tracking-events.md#sending-non-xdm-data).
+Os dados necessários para essa extensão podem ser enviados do SDK da Web como dados XDM (usando o [`xdm`](/help/web-sdk/commands/sendevent/xdm.md) objeto) ou dados não XDM (usando o método [`data`](/help/web-sdk/commands/sendevent/data.md) objeto).
 
 Por exemplo, se um cliente fizer uma compra ou se registrar para um evento em seu site, você poderá enviar um email de confirmação por meio do Mailchimp com essa extensão. Depois de enviar as informações necessárias do SDK da Web para a Rede de borda, a extensão acionará o email com o Mailchimp.
 

@@ -1,7 +1,7 @@
 ---
 title: Notas da versão de fevereiro de 2024 da Adobe Experience Platform
 description: Notas da versão de fevereiro de 2024 da Adobe Experience Platform.
-source-git-commit: 3c0b7c4eee7c790a8ffae95c05a8db6ba7c3b285
+source-git-commit: 16e49628df73d5ce97ef890dbc0a6f2c8e7de346
 workflow-type: tm+mt
 source-wordcount: '1244'
 ht-degree: 22%
@@ -27,7 +27,7 @@ O Experience Platform permite assinar alertas baseados em eventos para várias a
 **Recursos novos ou atualizados**
 | Recurso | Descrição | | — | — | | Guia Histórico de alertas | Como administrador de Experience Platform, você pode usar o recurso gerenciar assinantes de alertas para atribuir um alerta a uma ID de usuário Adobe, endereço de email externo ou uma lista de grupo de email. Para obter mais informações, consulte [documentação da interface de alertas](../../observability/alerts/ui.md) para obter mais informações sobre a guia histórico. |
 
-
+{style="table-layout:auto"}
 
 Para saber mais sobre alertas, leia a [[!DNL Observability Insights] visão geral](../../observability/home.md).
 
@@ -39,7 +39,7 @@ A Adobe Experience Platform fornece um conjunto de tecnologias que permitem cole
 
 | Recurso | Descrição |
 | --- | --- |
-| [Suporte a mensagens no aplicativo da Web no SDK da Web](../../edge/personalization/web-in-app-messaging.md) | O Adobe Experience Platform Web SDK agora é compatível com a configuração de mensagens no aplicativo da Web para campanhas do Adobe Journey Optimizer. |
+| [Suporte a mensagens no aplicativo da Web no SDK da Web](../../web-sdk/personalization/web-in-app-messaging.md) | O Adobe Experience Platform Web SDK agora é compatível com a configuração de mensagens no aplicativo da Web para campanhas do Adobe Journey Optimizer. |
 
 {style="table-layout:auto"}
 

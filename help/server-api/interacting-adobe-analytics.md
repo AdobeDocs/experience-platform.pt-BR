@@ -2,10 +2,10 @@
 title: Interação com o Adobe Analytics
 description: Saiba como usar a API do servidor de rede de borda para interagir com o Adobe Analytics.
 exl-id: b5e7a4d0-9aea-4e70-a7d6-b9aad09aaddf
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: 5de1ec17b78c97be21c0d2afd6f0b119a6074b6f
 workflow-type: tm+mt
-source-wordcount: '179'
-ht-degree: 2%
+source-wordcount: '180'
+ht-degree: 1%
 
 ---
 
@@ -13,9 +13,7 @@ ht-degree: 2%
 
 ## Visão geral {#overview}
 
-A coleção de dados do Adobe Analytics funciona traduzindo dados XDM em um formato que o Adobe Analytics pode entender. Vários campos XDM são [mapeado automaticamente](../edge/data-collection/adobe-analytics/automatically-mapped-vars.md) para variáveis do Analytics.
-
-Também é possível [mapear manualmente valores XDM](../edge/data-collection/adobe-analytics/manually-mapping-variables.md) para variáveis herdadas do Analytics.
+A coleção de dados do Adobe Analytics funciona traduzindo dados XDM em um formato que o Adobe Analytics pode entender. Vários campos XDM são [mapeado automaticamente](https://experienceleague.adobe.com/docs/analytics/implementation/aep-edge/variable-mapping.html?lang=pt-BR) para variáveis do Analytics. Você também pode mapear manualmente valores XDM para variáveis herdadas do Analytics.
 
 Para permitir que o Adobe Analytics receba dados da API do servidor, é necessário [configurar seu fluxo de dados](../datastreams/overview.md#adobe-analytics-settings) para encaminhar eventos ao Adobe Analytics, ao inserir a ID do conjunto de relatórios na página de configuração do fluxo de dados.
 

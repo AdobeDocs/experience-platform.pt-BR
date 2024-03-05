@@ -2,10 +2,10 @@
 title: Visão geral da personalização
 description: Saiba como usar a API do servidor de rede de borda da Adobe Experience Platform para recuperar conteúdo personalizado de soluções de personalização Adobe.
 exl-id: 11be9178-54fe-49d0-b578-69e6a8e6ab90
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '739'
-ht-degree: 11%
+source-wordcount: '729'
+ht-degree: 10%
 
 ---
 
@@ -15,7 +15,7 @@ Com o [!DNL Server API], você poderá recuperar o conteúdo personalizado nas s
 
 Além disso, a [!DNL Server API] O capacita recursos de personalização de mesma página e próxima página por meio de destinos de personalização do Adobe Experience Platform, como [Adobe Target](../destinations/catalog/personalization/adobe-target-connection.md) e a variável [conexão de personalização personalizada](../destinations/catalog/personalization/custom-personalization.md). Para saber como configurar o Experience Platform para personalização de mesma página e próxima página, consulte o [guia dedicado](../destinations/ui/activate-edge-personalization-destinations.md).
 
-Ao usar a API do servidor, você deve integrar a resposta fornecida pelo mecanismo de personalização com a lógica usada para renderizar o conteúdo em seu site. Ao contrário do [SDK da Web](../edge/home.md), o [!DNL Server API] não tem um mecanismo para aplicar automaticamente o conteúdo retornado por [!DNL Adobe Target] e [!DNL Offer Decisioning].
+Ao usar a API do servidor, você deve integrar a resposta fornecida pelo mecanismo de personalização com a lógica usada para renderizar o conteúdo em seu site. Ao contrário do [SDK da Web](../web-sdk/home.md), o [!DNL Server API] não tem um mecanismo para aplicar automaticamente o conteúdo retornado por [!DNL Adobe Target] e [!DNL Offer Decisioning].
 
 ## Terminologia {#terminology}
 

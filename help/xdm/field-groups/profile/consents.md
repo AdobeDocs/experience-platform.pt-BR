@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Grupo de campos de esquema de consentimentos e preferências
 description: Saiba mais sobre o grupo de campos de esquema Consentimentos e Preferências.
 exl-id: ec592102-a9d3-4cac-8b94-58296a138573
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
 workflow-type: tm+mt
 source-wordcount: '933'
 ht-degree: 0%
@@ -185,7 +185,7 @@ Veja o tutorial sobre [criação de um esquema na interface](https://www.adobe.c
 
 ## Lidar com alterações de consentimento e preferência
 
-Quando um cliente altera os consentimentos ou preferências no site, essas alterações devem ser coletadas e aplicadas imediatamente usando o [Adobe Experience Platform Web SDK](../../../edge/consent/supporting-consent.md). Se um cliente recusar a coleta de dados, toda a coleta de dados deverá ser interrompida imediatamente. Se um cliente optar por não ser personalizado, não deverá haver personalização na próxima página que visitar.
+Quando um cliente altera os consentimentos ou preferências no site, essas alterações devem ser coletadas e aplicadas imediatamente usando o [Adobe Experience Platform Web SDK](/help/web-sdk/consent/supporting-consent.md). Se um cliente recusar a coleta de dados, toda a coleta de dados deverá ser interrompida imediatamente. Se um cliente optar por não ser personalizado, não deverá haver personalização na próxima página que visitar.
 
 ## Próximas etapas
 

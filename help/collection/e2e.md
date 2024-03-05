@@ -2,10 +2,10 @@
 title: Visão geral de ponta a ponta da coleta de dados
 description: Uma visão geral de alto nível de como enviar dados do evento para soluções da Adobe Experience Cloud usando os recursos de coleta de dados da Adobe Experience Platform.
 exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '2621'
-ht-degree: 1%
+source-wordcount: '2616'
+ht-degree: 0%
 
 ---
 
@@ -113,8 +113,8 @@ Depois de criar um esquema e um fluxo de dados, a próxima etapa é instalar e c
 >
 >Esta seção usa a interface da Coleção de dados para configurar a extensão de tag do SDK da Web, mas você também pode instalá-la e configurá-la usando código bruto. Consulte os seguintes guias para obter mais informações:
 >
->* [Instalar o SDK](../edge/fundamentals/installing-the-sdk.md)
->* [Configurar o SDK](../edge/fundamentals/configuring-the-sdk.md)
+>* [Instalar o SDK](/help/web-sdk/install/overview.md)
+>* [Configurar o SDK](/help/web-sdk/commands/configure/overview.md)
 >
 >Observe também que mesmo se você quiser usar apenas o encaminhamento de eventos, ainda será necessário instalar e configurar o SDK conforme descrito antes de configurar o encaminhamento de eventos em um [etapa posterior](#event-forwarding).
 
@@ -216,7 +216,7 @@ A página de configuração do evento é exibida. Para configurar um evento, pri
 
 O evento de envio de formulário permite usar um [Seletor de CSS](https://www.w3schools.com/css/css_selectors.asp) para fazer referência a um elemento específico para o acionamento da regra. No exemplo abaixo, a ID `add-to-cart-form` é usado para que essa regra seja acionada somente para o formulário &quot;Adicionar ao carrinho&quot;. Selecionar **[!UICONTROL Manter alterações]** para adicionar o evento à regra.
 
-![Configuração de evento](./images/e2e/event-config.png)
+![Configuração do evento](./images/e2e/event-config.png)
 
 A página de configuração da regra será exibida novamente, mostrando que o evento foi adicionado. Você pode restringir o &quot;[!UICONTROL Se]&quot; adicionando outras condições à regra.
 

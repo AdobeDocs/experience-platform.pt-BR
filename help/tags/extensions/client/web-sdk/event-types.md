@@ -3,16 +3,16 @@ title: Tipos de evento na extensão SDK da Web do Adobe Experience Platform
 description: Saiba mais sobre como usar os tipos de evento fornecidos pela extensão Adobe Experience Platform Web SDK no Adobe Experience Platform Launch.
 solution: Experience Platform
 exl-id: b3162406-c5ce-42ec-ab01-af8ac8c63560
-source-git-commit: 2772660936444e39124a75deda6f78d97f7793f2
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '1024'
-ht-degree: 1%
+source-wordcount: '1006'
+ht-degree: 0%
 
 ---
 
 # Tipos de evento
 
-Esta página descreve os tipos de evento do Adobe Experience Platform fornecidos pela extensão de tag do SDK da Web da Adobe Experience Platform. Eles são usados para [regras de build](https://experienceleague.adobe.com/docs/platform-learn/data-collection/tags/build-rules.html) e não devem ser confundidas com o [`eventType` campo no XDM](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=pt-BR).
+Esta página descreve os tipos de evento do Adobe Experience Platform fornecidos pela extensão de tag do SDK da Web da Adobe Experience Platform. Eles são usados para [regras de build](https://experienceleague.adobe.com/docs/platform-learn/data-collection/tags/build-rules.html) e não devem ser confundidas com o `eventType` no campo [`xdm` objeto](/help/web-sdk/commands/sendevent/xdm.md).
 
 ## [!UICONTROL Enviar evento concluído]
 

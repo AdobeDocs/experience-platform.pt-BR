@@ -1,7 +1,7 @@
 ---
 title: Manipulação de duplicação de eventos no Experience Platform
 description: Saiba como o Adobe Experience Platform lida com a duplicação de eventos
-source-git-commit: 89cdb0832009bcee31b4339f021bc5a0ce254752
+source-git-commit: bc3ae849bd7fd8a9f50ba98528adc43d7282df90
 workflow-type: tm+mt
 source-wordcount: '442'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 O Adobe Experience Platform é um sistema altamente distribuído, projetado para maximizar a confiabilidade e, ao mesmo tempo, dimensionar para volumes de dados cada vez maiores.
 
-Para a coleta de dados em tempo real, [Eventos de experiência](../xdm/classes/experienceevent.md) são coletados por meio do [Rede de borda](../edge/home.md#edge-network), de fontes do lado do cliente, como [SDK da Web](../edge/home.md) ou [SDK móvel](https://developer.adobe.com/client-sdks/home/)e fornecidos para camadas de processamento e armazenamento de Experience Platform. Essas camadas compõem soluções como Experience Platform, [Real-Time CDP](../rtcdp/home.md), [Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=pt-BR), e [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=pt-BR).
+Para a coleta de dados em tempo real, [Eventos de experiência](../xdm/classes/experienceevent.md) são coletados por meio do [Rede de borda](../web-sdk/home.md#edge-network), de fontes do lado do cliente, como [SDK da Web](../web-sdk/home.md) ou [SDK móvel](https://developer.adobe.com/client-sdks/home/)e fornecidos para camadas de processamento e armazenamento de Experience Platform. Essas camadas compõem soluções como Experience Platform, [Real-Time CDP](../rtcdp/home.md), [Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=pt-BR), e [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=pt-BR).
 
 Para minimizar a perda de eventos de experiência, os SDKs do lado do cliente e o serviço de entrega de Experience Platform interno esperam uma confirmação de que um evento foi coletado com êxito.
 

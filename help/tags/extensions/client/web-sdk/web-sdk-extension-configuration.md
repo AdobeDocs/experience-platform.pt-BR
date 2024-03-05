@@ -2,9 +2,9 @@
 title: Configurar a extensão de tag do SDK da Web
 description: Saiba como configurar a extensão de tag do SDK da Web do Experience Platform na interface do usuário de tags.
 exl-id: 22425daa-10bd-4f06-92de-dff9f48ef16e
-source-git-commit: dea75b92847320284e1dc1b939f3ae11a12077a8
+source-git-commit: 16e49628df73d5ce97ef890dbc0a6f2c8e7de346
 workflow-type: tm+mt
-source-wordcount: '1580'
+source-wordcount: '1552'
 ht-degree: 6%
 
 ---
@@ -84,7 +84,7 @@ Esta seção permite definir o comportamento do SDK da Web quando se trata de li
 * **[!UICONTROL Usar cookies de terceiros]**: quando esta opção é ativada, o SDK da Web tenta armazenar um identificador do usuário em um cookie de terceiros. Se for bem-sucedido, o usuário será identificado como um único usuário durante a navegação em vários domínios, em vez de ser identificado como um usuário separado em cada domínio. Se essa opção estiver ativada, o SDK ainda poderá não ser capaz de armazenar o identificador do usuário em um cookie de terceiros se o navegador não for compatível com cookies de terceiros ou tiver sido configurado pelo usuário para não permitir cookies de terceiros. Nesse caso, o SDK armazena apenas o identificador no domínio próprio.
 
   >[!IMPORTANT]
-  >>Cookies de terceiros não são compatíveis com o [ID do dispositivo primário](../../../../edge/identity/first-party-device-ids.md) no SDK da Web.
+  >>Cookies de terceiros não são compatíveis com o [ID do dispositivo primário](../../../../web-sdk/identity/first-party-device-ids.md) no SDK da Web.
 Você pode usar IDs de dispositivo primário ou cookies de terceiros, mas não pode usar ambos os recursos simultaneamente.
   >
 ## Definir configurações de personalização {#personalization}
@@ -113,9 +113,9 @@ Ao usar o trecho pré-ocultação, o Adobe recomenda usar o mesmo [!DNL CSS] reg
 
 ![Imagem que mostra as configurações da coleção de dados da extensão de tag do SDK da Web na interface do usuário de tags](assets/web-sdk-ext-collection.png)
 
-* **[!UICONTROL Função de retorno de chamada]**: a função de retorno de chamada fornecida na extensão também é chamada de [`onBeforeEventSend` função](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=pt-BR) na biblioteca. Essa função permite modificar eventos globalmente antes que sejam enviados para a Rede de borda. Informações mais detalhadas sobre como usar esta função podem ser encontradas [aqui](../../../../edge/fundamentals/tracking-events.md#modifying-events-globally).
+* **[!UICONTROL Função de retorno de chamada]**: a função de retorno de chamada fornecida na extensão também é chamada de [`onBeforeEventSend` função](/help/web-sdk/commands/configure/onbeforeeventsend.md) na biblioteca. Essa função permite modificar eventos globalmente antes que sejam enviados para a Rede de borda.
 * **[!UICONTROL Ativar a coleta de dados de cliques]**: o SDK da Web pode coletar automaticamente informações de cliques em links para você. Por padrão, esse recurso está ativado, mas pode ser desativado usando essa opção. Os links também são rotulados como links de download se contiverem uma das expressões de download listadas no [!UICONTROL Baixar qualificador de link] caixa de texto. O Adobe fornece alguns qualificadores padrão de link de download. Você pode editá-los de acordo com suas necessidades.
-* **[!UICONTROL Dados de contexto coletados automaticamente]**: por padrão, o SDK da Web coleta determinados dados de contexto relacionados ao dispositivo, Web, ambiente e contexto de local. Se quiser ver uma lista dos Adobe de informações coletados, você pode encontrá-la [aqui](../../../../edge/data-collection/automatic-information.md). Se não quiser que esses dados sejam coletados ou se quiser apenas determinadas categorias de dados, selecione **[!UICONTROL Informações de contexto específicas]** e selecione os dados que deseja coletar.
+* **[!UICONTROL Dados de contexto coletados automaticamente]**: por padrão, o SDK da Web coleta determinados dados de contexto relacionados ao dispositivo, Web, ambiente e contexto de local. Se não quiser que esses dados sejam coletados ou se quiser apenas determinadas categorias de dados, selecione **[!UICONTROL Informações de contexto específicas]** e selecione os dados que deseja coletar. Consulte [`context`](/help/web-sdk/commands/configure/context.md) para obter mais informações.
 
 ## Configurar substituições de sequência de dados {#datastream-overrides}
 
@@ -125,10 +125,10 @@ Isso ajuda a acionar comportamentos de sequência de dados diferentes dos tradic
 
 Criar uma substituição de configuração da sequência de dados é um processo de duas etapas:
 
-1. Primeiro, você deve definir as substituições de configuração da sequência na [página de configuração da sequência de dados](../../../../datastreams/configure.md).
+1. Primeiro, você deve definir as substituições de configuração da sequência na [página de configuração da sequência de dados](/help/datastreams/configure.md).
 2. Em seguida, você deve enviar as substituições para a Rede de borda por meio de um comando do SDK da Web ou usando a extensão de tag do SDK da Web.
 
-Ver a sequência de dados [documentação de substituições de configuração](../../../../datastreams/overrides.md) para obter instruções detalhadas sobre como substituir configurações de sequência de dados.
+Ver a sequência de dados [documentação de substituições de configuração](/help/datastreams/overrides.md) para obter instruções detalhadas sobre como substituir configurações de sequência de dados.
 
 Como alternativa à transmissão de sobreposições por meio de um comando do SDK da Web, você pode configurar as sobreposições na tela de extensão de tag mostrada abaixo.
 
@@ -136,10 +136,10 @@ Como alternativa à transmissão de sobreposições por meio de um comando do SD
 >
 As substituições de fluxo de dados devem ser configuradas com base no ambiente. Os ambientes de desenvolvimento, armazenamento temporário e produção têm substituições separadas. Você pode copiar as configurações entre elas usando as opções dedicadas mostradas na tela abaixo.
 
-![Imagem que mostra as sobreposições de configuração da sequência de dados na página de extensão de tag do SDK da Web.](assets/datastream-overrides.png)
+![Imagem que mostra as sobreposições de configuração da sequência de dados usando a página de extensão de tag do SDK da Web.](assets/datastream-overrides.png)
 
 ## Definir configurações avançadas
 
 Use o **[!UICONTROL Caminho base da borda]** se precisar alterar o caminho base usado para interagir com a rede de borda. Isso não deve exigir atualização, mas no caso de você participar de um beta ou alfa, o Adobe pode solicitar que você altere esse campo.
 
-![Imagem que mostra as configurações avançadas na página de extensão de tag do SDK da Web.](assets/advanced-settings.png)
+![Imagem mostrando as configurações avançadas usando a página de extensão de tag do SDK da Web.](assets/advanced-settings.png)

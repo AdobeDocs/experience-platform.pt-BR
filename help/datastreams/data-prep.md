@@ -2,10 +2,10 @@
 title: Preparo de dados para a coleção de dados
 description: Saiba como mapear seus dados para um esquema de evento do Experience Data Model (XDM) ao configurar uma sequência de dados para os SDKs da web e móvel da Adobe Experience Platform.
 exl-id: 87a70d56-1093-445c-97a5-b8fa72a28ad0
-source-git-commit: 50dcfa41905c0d94ef764278a538c0c332eb3780
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '1192'
-ht-degree: 59%
+source-wordcount: '1183'
+ht-degree: 60%
 
 ---
 
@@ -30,9 +30,9 @@ Há dois casos de uso em que o Preparo de dados para a coleção de dados é út
 
 ## Enviar uma camada de dados existente para a Rede de borda via SDK da Web {#send-datalayer-via-websdk}
 
-A camada de dados existente deve ser enviada usando o `data` opção do `sendEvent` conforme descrito na seção [Documentação do SDK da Web](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html#sending-non-xdm-data).
+A camada de dados existente deve ser enviada usando o [`data`](/help/web-sdk/commands/sendevent/data.md) objeto dentro do `sendEvent` comando.
 
-Se você estiver usando Tags, deverá usar o plug-in **[!UICONTROL Dados]** do campo **[!UICONTROL Enviar evento]** tipo de ação, conforme descrito na seção [Documentação da extensão de tag do SDK da Web](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/web-sdk/action-types.html).
+Se você estiver usando Tags, deverá usar o plug-in **[!UICONTROL Dados]** do campo **[!UICONTROL Enviar evento]** tipo de ação, conforme descrito na seção [Documentação da extensão de tag do SDK da Web](/help/tags/extensions/client/web-sdk/action-types.md).
 
 O restante deste guia enfocará como mapear a camada de dados para padrões XDM após ter sido enviada pelo WebSDK.
 

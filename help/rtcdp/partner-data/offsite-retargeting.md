@@ -3,7 +3,7 @@ title: Redirecionamento externo de visitantes não autenticados
 description: Saiba como redirecionar usuários não autenticados usando IDs de prospecto para criar um atributo computado que pode ser usado para criar um público-alvo de usuários não autenticados.
 feature: Use Cases, Customer Acquisition
 exl-id: cffa3873-d713-445a-a3e1-1edf1aa8eebb
-source-git-commit: 0ef76fd950ef2e82e390cb39e2cd984004a140f2
+source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
 workflow-type: tm+mt
 source-wordcount: '1462'
 ht-degree: 1%
@@ -39,7 +39,7 @@ Além disso, para implementar o caso de uso, você usará a seguinte funcionalid
 - [Públicos-alvo](../../segmentation/home.md)
 - [Atributos computados](../../profile/computed-attributes/overview.md)
 - [Destinos](../../destinations/home.md)
-- [Web SDK](../../edge/home.md)
+- [Web SDK](../../web-sdk/home.md)
 
 ## Obter dados de parceiros na Real-Time CDP {#get-data-in}
 

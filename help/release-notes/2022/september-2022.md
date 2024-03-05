@@ -2,16 +2,16 @@
 title: Notas de versão da Adobe Experience Platform de setembro de 2022
 description: As notas de versão de setembro de 2022 para o Adobe Experience Platform.
 exl-id: a7a4dcf8-2cf3-4e39-879d-bdfcbacb737a
-source-git-commit: 1e9d6b0c43461902c5b966aa1d0576103e872e0c
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '2938'
-ht-degree: 19%
+source-wordcount: '2762'
+ht-degree: 18%
 
 ---
 
 # Notas de versão da Adobe Experience Platform
 
-**Data de lançamento: 28 de setembro de 2022**
+**Data de lançamento: quinta-feira, 28 de setembro de 2022**
 
 Novos recursos na Adobe Experience Platform:
 
@@ -25,7 +25,7 @@ Atualizações dos recursos já existentes na Adobe Experience Platform:
 - [Coleção de dados](#data-collection)
 - [Destinos](#destinations)
 - [Experience Data Model (XDM)](#xdm)
-- [Identity Service](#identity-service)
+- [Serviço de identidade](#identity-service)
 - [Query Service](#query-service)
 - [Origens](#sources)
 
@@ -110,8 +110,8 @@ A Adobe Experience Platform fornece um conjunto de tecnologias que permitem cole
 | Integração da navegação à esquerda na interface do usuário da Platform | Todos os recursos que antes eram exclusivos da interface da Coleção de dados (incluindo tags, encaminhamento de eventos e fluxos de dados) agora também estão disponíveis por meio da navegação à esquerda no Experience Platform, na categoria **[!UICONTROL Coleta de dados]**. Isso elimina a necessidade de alternar entre as interfaces do usuário ao trabalhar com recursos de coleção de dados na Platform. |
 | Atribuição de usuário em tags e encaminhamento de eventos | Quando a lista estiver disponível [!UICONTROL Propriedades] em tags e encaminhamento de eventos, cada propriedade listada agora mostra quando foi atualizada pela última vez e qual usuário fez a atualização. |
 | [[!DNL Snap Conversions API] extensão](https://exchange.adobe.com/apps/ec/108550) para encaminhamento de eventos | Agora você pode enviar dados para o [!DNL Snapchat Conversions API] usando um [encaminhamento de eventos](../../tags/ui/event-forwarding/overview.md) extensão. Para obter mais informações sobre como autenticar e usar a API, consulte o [[!DNL Snapchat Marketing API] documentação](https://marketingapi.snapchat.com/docs/conversion.html). |
-| [[!DNL User-Agent Client Hints] no SDK da Web](../../edge/fundamentals/user-agent-client-hints.md) | O SDK da Web agora é compatível [[!DNL User-Agent Client Hints]](https://developer.chrome.com/docs/privacy-sandbox/user-agent/). As dicas do cliente permitem que os proprietários de sites acessem muitas das informações disponíveis no [!DNL User-Agent] sequência de caracteres, mas de uma forma mais preservadora da privacidade. |
-| [Migração página por página do SDK da Web](../../edge/home.md#migrating-to-web-sdk) | Agora você pode migrar suas propriedades da Web existentes de outras bibliotecas do Experience Cloud, como [!DNL at.js], para o SDK da Web, uma página por vez. Isso permite uma abordagem em fases para a migração do SDK da Web, sem a necessidade de migrar todas as suas páginas de uma só vez. |
+| [User-Agent Client Hints no SDK da Web](/help/web-sdk/use-cases/client-hints.md) | O SDK da Web agora é compatível [User-Agent Client Hints (Notas do cliente do usuário-agente)](https://developer.chrome.com/docs/privacy-sandbox/user-agent/). As dicas do cliente permitem que os proprietários de sites acessem muitas das informações disponíveis no [!DNL User-Agent] sequência de caracteres, mas de uma forma mais preservadora da privacidade. |
+| [Migração página por página do SDK da Web](../../web-sdk/home.md#migrating-to-web-sdk) | Agora você pode migrar suas propriedades da Web existentes de outras bibliotecas do Experience Cloud, como [!DNL at.js], para o SDK da Web, uma página por vez. Isso permite uma abordagem em fases para a migração do SDK da Web, sem a necessidade de migrar todas as suas páginas de uma só vez. |
 | [[!DNL Adobe Journey Optimizer] suporte para sequências de dados](../../datastreams/overview.md#aep) | O serviço Adobe Experience Platform para fluxos de dados agora oferece suporte a [!DNL Adobe Journey Optimizer]. Essa opção permite usar canais de entrada baseados na Web e em aplicativos no [!DNL Adobe Journey Optimizer]. |
 
 {style="table-layout:auto"}
@@ -126,7 +126,7 @@ Para obter mais informações sobre a coleta de dados na Platform, consulte a [v
 
 | Recurso | Descrição |
 | ----------- | ----------- |
-| SDK de destino | O Destination SDK agora oferece suporte total para parceiros e clientes que criam destinos produzidos em lote (ou baseados em arquivo) ou privados. Leia as seguintes páginas de documentação para obter mais informações: <ul><li>[Visão geral do Destination SDK](../../destinations/destination-sdk/overview.md)</li><li>[Configurar um destino baseado em arquivo](../../destinations/destination-sdk/guides/configure-file-based-destination-instructions.md)</li><li>[Configurar opções de formatação de arquivo para destinos baseados em arquivo](../../destinations/destination-sdk/guides/batch/configure-file-formatting-options.md)</li><li>[Testar os destinos com base em arquivo](../../destinations/destination-sdk/testing-api/batch-destinations/file-based-destination-testing-overview.md)</li></ul> |
+| Destination SDK | O Destination SDK agora oferece suporte total para parceiros e clientes que criam destinos produzidos em lote (ou baseados em arquivo) ou privados. Leia as seguintes páginas de documentação para obter mais informações: <ul><li>[Visão geral do Destination SDK](../../destinations/destination-sdk/overview.md)</li><li>[Configurar um destino baseado em arquivo](../../destinations/destination-sdk/guides/configure-file-based-destination-instructions.md)</li><li>[Configurar opções de formatação de arquivo para destinos baseados em arquivo](../../destinations/destination-sdk/guides/batch/configure-file-formatting-options.md)</li><li>[Testar os destinos com base em arquivo](../../destinations/destination-sdk/testing-api/batch-destinations/file-based-destination-testing-overview.md)</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -192,7 +192,7 @@ O XDM é uma especificação de código aberto que fornece estruturas e definiç
 
 Para obter mais informações sobre o XDM na Platform, consulte a [Visão geral do sistema de XDM](../../xdm/home.md).
 
-## Identity Service {#identity-service}
+## Serviço de identidade {#identity-service}
 
 Para fornecer experiências digitais relevantes, é necessário ter uma compreensão completa do cliente. Isso se torna mais difícil quando os dados do cliente são fragmentados em sistemas diferentes, fazendo com que cada cliente pareça ter várias &quot;identidades&quot;.
 
@@ -204,7 +204,7 @@ O Serviço de identidade da Adobe Experience Platform ajuda você a ter uma melh
 | --- | --- |
 | Suporte para exclusão do conjunto de dados | O Serviço de identidade agora oferece suporte à exclusão do conjunto de dados ao solicitar por meio do [API do serviço de catálogo](https://developer.adobe.com/experience-platform-apis/references/catalog/), interface ou higiene de dados. Leia o guia em [exclusão de conjuntos de dados na interface](../../catalog/datasets/user-guide.md#delete-a-dataset) para obter mais informações. |
 
-Para saber mais sobre o Identity Service, leia a [Visão geral do Identity Service](../../identity-service/home.md).
+Para saber mais sobre o Serviço de identidade, leia a [Visão geral do serviço de identidade](../../identity-service/home.md).
 
 ## Query Service {#query-service}
 

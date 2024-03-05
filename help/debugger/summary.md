@@ -6,10 +6,10 @@ seo-description: Experience Platform Debugger Summary Screen
 seo-title: Summary Tab
 uuid: 46b17eaa-b611-43cf-8c6a-67b2e9b9d940
 exl-id: 91234125-15c4-4111-9ee4-f3af093a3c4d
-source-git-commit: f94bba7eb4763230dae6794eb70a75f53a853c53
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '909'
-ht-degree: 74%
+source-wordcount: '711'
+ht-degree: 82%
 
 ---
 
@@ -81,7 +81,7 @@ O Experience Platform Debugger mostra as seguintes informações para cada solu�
   </tr> 
   <tr> 
    <td colname="col1"> <p>Versão </p> </td> 
-   <td colname="col2"> <p>A versão da Turbina.</a> </p> </td> 
+   <td colname="col2"> <p>A versão da Turbina</a> </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>Data de build </p> </td> 
@@ -104,7 +104,7 @@ O Experience Platform Debugger mostra as seguintes informações para cada solu�
  <tbody> 
   <tr> 
    <td colname="col1"> <p>Versão da biblioteca </p> </td> 
-   <td colname="col2"> <p>O número da <a href="https://experienceleague.adobe.com/docs/experience-platform/edge/extension/web-sdk-ext-release-notes.html" format="html" scope="external">versão da biblioteca</a> do SDK da Web da Adobe Experience Platform. </p> </td> 
+   <td colname="col2"> <p>O número da <a href="https://experienceleague.adobe.com/docs/experience-platform/web-sdk/extension/web-sdk-ext-release-notes.html" format="html" scope="external">versão da biblioteca</a> do SDK da Web da Adobe Experience Platform. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>Namespace</p> </td> 
@@ -185,7 +185,7 @@ O Experience Platform Debugger mostra as seguintes informações para cada solu�
    <td colname="col2"> <p>A ID da experiência do Target. Disponível sem autenticação somente se você implementar o ouvinte de eventos de Depuração no código ou gerenciador de tags e ativar os <a href="https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html" format="html" scope="external"> tokens de resposta</a> necessários na interface do usuário do Target. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <p>Oferta Nome</p> </td> 
+   <td colname="col1"> <p>Nome da oferta</p> </td> 
    <td colname="col2"> <p>O nome da <a href="https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html" format="html" scope="external"> oferta</a> do Target. Disponível sem autenticação somente se você implementar o ouvinte de eventos de Depuração no código ou gerenciador de tags e ativar os <a href="https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html" format="html" scope="external"> tokens de resposta</a> necessários na interface do usuário do Target. </p> </td> 
   </tr> 
   <tr> 

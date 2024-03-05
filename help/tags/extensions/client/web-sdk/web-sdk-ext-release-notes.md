@@ -2,9 +2,9 @@
 title: Notas de versão da extensão SDK da Web da Adobe Experience Platform
 description: Extensão de tag do SDK da Web da Adobe Experience Platform
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: fb2cf23f4762eec4bcab1126bdfb1aaa4144e777
+source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
 workflow-type: tm+mt
-source-wordcount: '1990'
+source-wordcount: '1983'
 ht-degree: 32%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 32%
 
 # Notas de versão da extensão SDK da Web da Adobe Experience Platform
 
-Este documento aborda as notas de versão da extensão de tag do SDK da Web da Adobe Experience Platform. Para obter as notas de versão mais recentes sobre o próprio SDK, consulte a [Notas de versão do SDK da Web da Platform](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html?lang=pt-BR).
+Este documento aborda as notas de versão da extensão de tag do SDK da Web da Adobe Experience Platform. Para obter as notas de versão mais recentes sobre o próprio SDK, consulte a [Notas de versão do SDK da Web da Platform](/help/web-sdk/release-notes.md).
 
 ## Versão 2.21.4 - 10 de janeiro de 2024
 
@@ -81,7 +81,7 @@ Contém a versão 2.19.1 do SDK da Web da Adobe Experience Platform.
 **Novos recursos**
 
 * Contém a versão 2.16.0 do SDK da Web do Adobe Experience Platform.
-* Suporte adicionado para [substituições de configuração da sequência de dados](../../../../datastreams/overrides.md).
+* Suporte adicionado para [substituições de configuração da sequência de dados](/help/datastreams/overrides.md).
 * Adicionar aviso de desativação à `datasetId` opção no `sendEvent` comando.
 
 
@@ -98,7 +98,7 @@ Contém a versão 2.19.1 do SDK da Web da Adobe Experience Platform.
 **Novos recursos**
 
 * (Beta) Adicionado **[!UICONTROL Atualizar variável]** ação e **[!UICONTROL Variável]** elemento de dados.
-* Adição de configuração para [`onBeforeLinkClickSend`](../../../../edge/fundamentals/configuring-the-sdk.md#onBeforeLinkClickSend) função de retorno de chamada.
+* Adição de configuração para [`onBeforeLinkClickSend`](/help/web-sdk/commands/configure/onbeforelinkclicksend.md) função de retorno de chamada.
 
 **Correções e aprimoramentos**
 
@@ -176,7 +176,7 @@ Contém a versão 2.8.0 da biblioteca de SDK da Web da Adobe Experience Platform
 
 Contém a versão 2.7.0 da biblioteca de SDK da Web da Adobe Experience Platform.
 
-* Informações adicionais da Edge Network estão disponíveis no evento Enviar evento concluído, incluindo `inferences` e `destinations`. O formato dessas propriedades pode mudar, pois esses recursos estão sendo lançados como parte de uma versão beta. Para obter mais informações, consulte [Rastreamento de eventos.](../../../../edge/fundamentals/tracking-events.md)
+* Informações adicionais da Edge Network estão disponíveis no evento Enviar evento concluído, incluindo `inferences` e `destinations`. O formato dessas propriedades pode mudar, pois esses recursos estão sendo lançados como parte de uma versão beta.
 
 ## Versão 2.7.3 - 7 de setembro de 2021
 
@@ -223,10 +223,10 @@ Contém a versão 2.5.0 da biblioteca de SDK da Web da Adobe Experience Platform
 
 Contém a versão 2.4.0 da biblioteca de SDK da Web da Adobe Experience Platform.
 
-* Adicionado [&quot;descarregamento de documento&quot;](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html#using-the-sendbeacon-api) para Enviar a interface de ação de Evento.
-* Adição de suporte para um `out` opção quando [configuração do consentimento padrão](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#default-consent) que elimina todos os eventos até que o consentimento seja recebido (o evento `pending` opção enfileira eventos e os envia quando o consentimento é recebido).
+* Adicionado [&quot;Descarregamento de documento&quot;](/help/web-sdk/commands/sendevent/documentunloading.md) para Enviar a interface de ação de Evento.
+* Adição de suporte para um `out` opção quando [configuração do consentimento padrão](/help/web-sdk/commands/configure/defaultconsent.md) que elimina todos os eventos até que o consentimento seja recebido (o evento `pending` opção enfileira eventos e os envia quando o consentimento é recebido).
 * Adição de uma dica de ferramenta ao campo de consentimento padrão.
-* Suporte adicionado para [Adobe Consent 2.0 padrão](https://experienceleague.adobe.com/docs/experience-platform/edge/consent/supporting-consent.html?communicating-consent-preferences-via-the-adobe-standard).
+* Adição de suporte para o padrão Adobe Consent 2.0 ao usar o [`setConsent`](/help/web-sdk/commands/setconsent.md) comando.
 * Um erro melhor agora é exibido na interface do usuário do elemento de dados Objeto XDM se o token de acesso do usuário for inválido ou provisionado incorretamente.
 * Correção de um erro entre origens (que não afeta a operação da extensão) que aparecia no console do desenvolvedor do navegador ao visualizar um elemento de dados do Objeto XDM.
 
@@ -251,7 +251,7 @@ Contém a versão 2.3.0 da biblioteca de SDK da Web da Adobe Experience Platform
 ## Versão 2.1.0 - 5 de agosto de 2020
 
 * Nova alteração: remove a ação `syncIdentity` e oferece suporte à transmissão dessas IDs na ação `sendEvent`. Desabilite qualquer regra existente que use essa ação antes de atualizar a extensão.
-* Atualizar para Alloy v. 2.1.0 ([Notas de versão](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html?lang=pt-BR)).
+* Atualizar para Alloy v. 2.1.0 ([Notas de versão](/help/web-sdk/release-notes.md)).
 * Suporte ao Padrão de consentimento IAB 2.0 na ação `setConsent`.
 * Suporte à substituição da ID do conjunto de dados na ação `sendEvent`.
 * Adiciona um novo Elemento de dados do tipo `IdentityMap`, que pode ser usado para preencher a entrada `identityMap` no Elemento de dados do objeto XDM (agora ativado) e na ação `setConsent`.

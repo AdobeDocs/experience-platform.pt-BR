@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Visão geral do serviço de segmentação
 description: Saiba mais sobre o Serviço de segmentação da Adobe Experience Platform e a função que ele desempenha no ecossistema da plataforma.
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
 source-wordcount: '1627'
 ht-degree: 12%
@@ -92,7 +92,7 @@ Os públicos-alvo em lote são avaliados automaticamente a cada 24 horas. Se qui
 >abstract="A segmentação de borda é a capacidade de avaliar segmentos na rede de borda da Platform instantaneamente, permitindo casos de uso de personalização da mesma página ou da próxima página."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/edge-segmentation.html?lang=pt-BR" text="Guia da interface de segmentação de borda"
 
-A segmentação de borda é a capacidade de avaliar segmentos na Platform instantaneamente [na rede de borda](../edge/home.md), permitindo casos de uso de personalização de mesma página e próxima página.
+A segmentação de borda é a capacidade de avaliar segmentos na Platform instantaneamente [na rede de borda](../web-sdk/home.md), permitindo casos de uso de personalização de mesma página e próxima página.
 
 Para saber mais sobre a segmentação de borda, leia as seções [Documentação da API](./api/edge-segmentation.md) ou o [Documentação da interface](./ui/edge-segmentation.md).
 

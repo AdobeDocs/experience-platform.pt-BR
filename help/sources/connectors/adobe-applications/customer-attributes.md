@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Visão geral do conector de origem de atributos do cliente
 description: Saiba como conectar atributos do cliente à Adobe Experience Platform usando APIs ou a interface do usuário
 exl-id: 63765ecd-ddb5-4992-a3de-d53f054bfb28
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
 workflow-type: tm+mt
-source-wordcount: '381'
+source-wordcount: '380'
 ht-degree: 7%
 
 ---
@@ -31,7 +31,7 @@ Não é possível selecionar um namespace existente para a identidade ao usar [!
 
 Para [!DNL Customer Attributes] dados a serem vinculados a outros [!DNL Profile] conjuntos de dados, seus dados e identidades devem poder corresponder a uma ID de Experience Cloud.
 
-É possível estabelecer a variável `CORE` definindo a ID do Experience Cloud para o visitante usando [SDK da Web](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html), [SDK móvel](https://developer.adobe.com/client-sdks/documentation/mobile-core/identity/)ou a variável [API do serviço de ID do Experience Cloud](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=pt-BR).
+É possível estabelecer a variável `CORE` definindo a ID do Experience Cloud para o visitante usando [SDK da Web](/help/web-sdk/identity/overview.md), [SDK móvel](https://developer.adobe.com/client-sdks/documentation/mobile-core/identity/)ou a variável [API do serviço de ID do Experience Cloud](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=pt-BR).
 
 A variável [!DNL Customer Attributes] O arquivo não preenche ainda mais nenhuma outra relação de identidade. Por exemplo, se um [!DNL Customer Attributes] o conjunto de dados de origem contém um **E-mail** e uma **ID de fidelidade** , esses campos devem ser rotulados como campos de identidade no esquema para serem processados em [!DNL Identity Service].
 

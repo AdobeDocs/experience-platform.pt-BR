@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Visão geral da coleção de dados
 description: Saiba mais sobre as várias tecnologias envolvidas na coleta de dados sobre as experiências do cliente no Adobe Experience Platform.
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: 139d6a6632532b392fdf8d69c5c59d1fd779a6d1
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '515'
-ht-degree: 9%
+source-wordcount: '489'
+ht-degree: 6%
 
 ---
 
@@ -26,8 +26,8 @@ A coleta de dados se concentra na descoberta e na acessibilidade de conjuntos de
 * [Rede de borda da Adobe Experience Platform](https://experienceleague.adobe.com/docs/web-sdk-learn/tutorials/introduction-to-web-sdk-and-edge-network.html)
 * [Tags](../tags/home.md)
 * [Sequências de dados](../datastreams/overview.md)
-* [Encaminhamento de evento](../tags/ui/event-forwarding/overview.md)
-* [SDK da Web da Adobe Experience Platform](../edge/home.md)
+* [Encaminhamento de eventos](../tags/ui/event-forwarding/overview.md)
+* [SDK da Web da Adobe Experience Platform](../web-sdk/home.md)
 * [SDK móvel da Adobe Experience Platform](https://developer.adobe.com/client-sdks/documentation/)
 * [API do servidor da rede de borda](../server-api/overview.md)
 * [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob?hl=pt-BR)
@@ -56,7 +56,7 @@ Além disso, os fluxos de dados são integrados a vários recursos da Platform q
 >
 >Para obter uma introdução de alto nível à Platform Edge Network, consulte o seguinte [tour interativo do produto](https://adobe-ideacloud.forgedx.com/adobe-adobe-edge-collection/adobe-experience-edge/public/mx?SUID=hgb1a48ICSCpbM6MzBYHbxnsh9DgjUy1).
 
-## Encaminhamento de evento
+## Encaminhamento de eventos
 
 [Encaminhamento de eventos](../tags/ui/event-forwarding/overview.md) O pode acessar qualquer sequência de dados de Experience Platform, permitindo transformar, enriquecer e enviar dados para qualquer destino que não seja de Adobe com latência extremamente baixa e sem adicionar código de terceiros ao dispositivo cliente.
 

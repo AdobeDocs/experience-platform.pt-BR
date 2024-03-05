@@ -2,9 +2,9 @@
 title: Notas de versão de abril de 2023 da Adobe Experience Platform
 description: As notas de versão de abril de 2023 da Adobe Experience Platform.
 exl-id: 7b501467-99a7-4aee-ae86-66c851250ecf
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 5de1ec17b78c97be21c0d2afd6f0b119a6074b6f
 workflow-type: tm+mt
-source-wordcount: '2082'
+source-wordcount: '2038'
 ht-degree: 98%
 
 ---
@@ -67,7 +67,7 @@ A Adobe Experience Platform fornece um conjunto de tecnologias que permitem cole
 | Recurso | Descrição |
 | --- | --- |
 | Ofuscação de endereço IP para sequências de dados | Agora é possível definir opções de ofuscação parcial ou completa de IP no nível da sequência de dados por meio da [interface de configuração de sequência de dados](../../datastreams/configure.md). <br><br>A configuração de ofuscação de IP no nível da sequência de dados tem precedência sobre qualquer ofuscação de IP configurada no Adobe Target e no Audience Manager. <br><br>Os dados enviados para o Adobe Analytics não são afetados pela configuração de [!UICONTROL Ofuscação de IP] definida no nível da sequência de dados. Atualmente, o Adobe Analytics recebe endereços IP não ofuscados. Para que o Analytics receba endereços IP ofuscados, você deve configurar a ofuscação de IP separadamente no Adobe Analytics. Esse comportamento será atualizado em versões futuras.<br><br> Para obter mais detalhes sobre a ofuscação de IP e instruções sobre como configurá-la, consulte a [documentação de configuração da sequência de dados](../../datastreams/configure.md#advanced-options). |
-| [Substituições de configuração da sequência de dados](../../datastreams/overrides.md) | Agora é possível definir opções de configuração adicionais para sequências de dados, o que pode ser usado para substituir configurações específicas, como conjuntos de dados de eventos, tokens de propriedade do Target, containers de sincronização de ID e conjuntos de relatórios do Analytics. <br><br>Substituir as configurações da sequência de dados é um processo de duas etapas: <ol><li>Primeiro, você deve definir as substituições de configuração da sequência na [página de configuração da sequência de dados](../../datastreams/configure.md).</li><li>Em seguida, você deve enviar as substituições para a rede de borda por meio de um comando do SDK da Web ou usando a [extensão de tag](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) do SDK da Web.</li></ol> |
+| [Substituições de configuração da sequência de dados](../../datastreams/overrides.md) | Agora é possível definir opções de configuração adicionais para sequências de dados, o que pode ser usado para substituir configurações específicas, como conjuntos de dados de eventos, tokens de propriedade do Target, containers de sincronização de ID e conjuntos de relatórios do Analytics. <br><br>Substituir as configurações da sequência de dados é um processo de duas etapas: <ol><li>Primeiro, você deve definir as substituições de configuração da sequência na [página de configuração da sequência de dados](../../datastreams/configure.md).</li><li>Em seguida, você deve enviar as substituições para a rede de borda por meio de um comando do SDK da Web ou usando a [extensão de tag](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) do SDK da Web.</li></ol> |
 | Segredo JWT do OAuth  | O [Segredo JWT do OAuth](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html) permite aos clientes usar tokens de serviço da Adobe e do Google para oferecer compatibilidade com interações de servidor para servidor no encaminhamento de eventos. |
 | Extensão do [!DNL Pinterest Conversions API] | A extensão de encaminhamento de eventos da [[!DNL Pinterest Conversions API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/pinterest/overview.html?lang=pt-BR) permite aproveitar os dados capturados na rede de borda da Adobe Experience Platform e enviá-los para o [!DNL Pinterest] na forma de eventos do lado do servidor usando a [!DNL Pinterest Conversions API]. |
 

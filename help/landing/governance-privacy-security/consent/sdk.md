@@ -2,9 +2,9 @@
 title: Processar dados de consentimento do cliente usando o SDK da Web da Adobe Experience Platform
 description: Saiba como integrar o Adobe Experience Platform Web SDK para processar dados de consentimento do cliente no Adobe Experience Platform.
 exl-id: 3a53d908-fc61-452b-bec3-af519dfefa41
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '1349'
+source-wordcount: '1311'
 ht-degree: 2%
 
 ---
@@ -24,15 +24,15 @@ Este tutorial presume que você já determinou como gerar dados de consentimento
 
 Este guia segue o fluxo de trabalho para configurar o SDK usando a extensão de tag na interface do usuário. Se você não quiser usar a extensão e preferir incorporar diretamente a versão independente do SDK ao seu site, consulte os seguintes documentos em vez deste guia:
 
-* [Configurar uma sequência de dados](../../../datastreams/overview.md)
-* [Instalar o SDK](../../../edge/fundamentals/installing-the-sdk.md)
-* [Configurar o SDK para comandos de consentimento](../../../edge/consent/supporting-consent.md)
+* [Configurar uma sequência de dados](/help/datastreams/overview.md)
+* [Instalar o SDK](/help/web-sdk/install/overview.md)
+* [Configurar o SDK para comandos de consentimento](/help/web-sdk/commands/configure/defaultconsent.md)
 
 As etapas de instalação neste guia exigem um entendimento prático das extensões de tag e como elas são instaladas em aplicativos web. Consulte a seguinte documentação para obter mais informações:
 
-* [Visão geral das tags](../../../tags/home.md)
-* [Manual de início rápido](../../../tags/quick-start/quick-start.md)
-* [Visão geral da publicação](../../../tags/ui/publishing/overview.md)
+* [Visão geral das tags](/help/tags/home.md)
+* [Manual de início rápido](/help/tags/quick-start/quick-start.md)
+* [Visão geral da publicação](/help/tags/ui/publishing/overview.md)
 
 ## Configurar um fluxo de dados
 
@@ -110,14 +110,7 @@ Há dois cenários em que `setConsent` deve ser chamado em seu site:
 
 ### `setConsent` sintaxe
 
->[!NOTE]
->
->Para obter uma introdução à sintaxe comum para comandos do SDK da Platform, consulte o documento em [execução de comandos](../../../edge/fundamentals/executing-commands.md).
-
-A variável `setConsent` O comando espera dois argumentos:
-
-1. Uma string que indica o tipo de comando (nesse caso, `"setConsent"`)
-1. Um objeto de carga que contém uma única propriedade de tipo de matriz: `consent`. A variável `consent` a matriz deve conter pelo menos um objeto que forneça os campos de consentimento necessários para o padrão Adobe.
+A variável [`setConsent`](/help/web-sdk/commands/setconsent.md) O comando espera um objeto de carga que contenha uma única propriedade de tipo de matriz: `consent`. A variável `consent` a matriz deve conter pelo menos um objeto que forneça os campos de consentimento necessários para o padrão Adobe.
 
 Os campos de consentimento obrigatórios para o padrão Adobe são mostrados no exemplo a seguir `setConsent` ligue para:
 
@@ -139,7 +132,7 @@ alloy("setConsent", {
         }
       },
       metadata: {
-        time: "2020-10-12T15:52:25+00:00"
+        time: "YYYY-10-12T15:52:25+00:00"
       }
     }
   }]
@@ -200,7 +193,7 @@ var setConsent = function () {
 
 ## Tratamento de respostas do SDK
 
-Todos [!DNL Platform SDK] Os comandos do retornam promessas que indicam se a chamada foi bem-sucedida ou falhou. Em seguida, você pode usar essas respostas para obter lógica adicional, como exibir mensagens de confirmação ao cliente. Consulte a seção sobre [lidando com sucesso ou falha](../../../edge/fundamentals/executing-commands.md#handling-success-or-failure) no guia sobre a execução de comandos do SDK para obter exemplos específicos.
+Todos [!DNL Platform SDK] Os comandos do retornam promessas que indicam se a chamada foi bem-sucedida ou falhou. Em seguida, você pode usar essas respostas para obter lógica adicional, como exibir mensagens de confirmação ao cliente. Consulte [Respostas de comando](/help/web-sdk/commands/command-responses.md) para obter mais informações.
 
 Depois de fazer `setConsent` Chamadas com o SDK, você pode usar o visualizador de perfil na interface do usuário da plataforma para verificar se os dados estão chegando ao armazenamento de perfis. Consulte a seção sobre [procurar perfis por identidade](../../../profile/ui/user-guide.md#browse-identity) para obter mais informações.
 

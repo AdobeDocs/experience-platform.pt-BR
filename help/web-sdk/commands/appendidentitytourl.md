@@ -1,0 +1,102 @@
+---
+title: appendIdentityToUrl
+description: Ofereça experiências personalizadas com mais precisão entre aplicativos, Web e domínios.
+source-git-commit: f75dcfc945be2f45c1638bdd4d670288aef6e1e6
+workflow-type: tm+mt
+source-wordcount: '412'
+ht-degree: 0%
+
+---
+
+# `appendIdentityToUrl`
+
+A variável `appendIdentityToUrl` permite adicionar um identificador do usuário ao URL como uma string de consulta. Essa ação permite que você carregue a identidade de um visitante entre domínios, evitando contagens de visitantes duplicadas para conjuntos de dados que incluem domínios ou canais. Ele está disponível nas versões 2.11.0 ou posteriores do SDK da Web.
+
+A sequência de consulta gerada e anexada ao URL é `adobe_mc`. Se o SDK da Web não puder encontrar uma ECID, ele chamará a `/acquire` endpoint para gerar um.
+
+>[!NOTE]
+>
+>Se o consentimento não tiver sido fornecido, o URL desse método será retornado inalterado. Este comando é executado imediatamente; ele não espera por uma atualização de consentimento.
+
+## Anexar identidade ao URL usando a extensão SDK da Web
+
+Anexar uma identidade a um URL é executado como uma ação em uma regra na interface das tags da Coleção de dados da Adobe Experience Platform.
+
+1. Efetue logon no [experience.adobe.com](https://experience.adobe.com) usando suas credenciais do Adobe ID.
+1. Navegue até **[!UICONTROL Coleta de dados]** > **[!UICONTROL Tags]**.
+1. Selecione a propriedade de tag desejada.
+1. Navegue até **[!UICONTROL Regras]** e selecione a regra desejada.
+1. Em [!UICONTROL Ações], selecione uma ação existente ou crie uma ação.
+1. Defina o [!UICONTROL Extensão] campo suspenso até **[!UICONTROL Adobe Experience Platform Web SDK]** e defina o [!UICONTROL Tipo de ação] para **[!UICONTROL Redirecionar com identidade]**.
+1. Clique em **[!UICONTROL Manter alterações]**, em seguida, execute o fluxo de trabalho de publicação.
+
+Normalmente, esse comando é usado com uma regra específica que ouve cliques e verifica domínios desejados.
+
++++Critérios de evento da regra
+
+Acionado quando uma tag de âncora com um `href` é clicada.
+
+* **[!UICONTROL Extensão]**: Principal
+* **[!UICONTROL Tipo de evento]**: Clique
+* **[!UICONTROL Quando o usuário clica em]**: Elementos específicos
+* **[!UICONTROL Elementos que correspondem ao seletor de CSS]**: `a[href]`
+
+![Evento de regra](../assets/id-sharing-event-configuration.png)
+
++++
+
+Condição +++Regra
+
+Aciona somente nos domínios desejados.
+
+* **[!UICONTROL Tipo lógico]**: Regular
+* **[!UICONTROL Extensão]**: Principal
+* **[!UICONTROL Tipo de condição]**: Comparação de valores
+* **[!UICONTROL Operando esquerdo]**: `%this.hostname%`
+* **[!UICONTROL Operador]**: Corresponde a Regex
+* **[!UICONTROL Operando Direito]**: uma expressão regular que corresponde aos domínios desejados. Por exemplo, `adobe.com$|behance.com$`
+
+![Condição da regra](../assets/id-sharing-condition-configuration.png)
+
++++
+
+Ação +++Regra
+
+Anexe a identidade ao URL.
+
+* **[!UICONTROL Extensão]**: Adobe Experience Platform Web SDK
+* **[!UICONTROL Tipo de ação]**: Redirecionar com identidade
+
+![Ação da regra](../assets/id-sharing-action-configuration.png)
+
++++
+
+## Anexar identidade ao URL usando a biblioteca JavaScript do SDK da Web
+
+Execute o `appendIdentityToUrl` comando com um URL como parâmetro. O método retorna um URL com o identificador anexado como uma string de consulta.
+
+```js
+alloy("appendIdentityToUrl",document.location);
+```
+
+Você pode adicionar um ouvinte de eventos para todos os cliques recebidos na página e verificar se o URL corresponde a algum domínio desejado. Se isso acontecer, anexe a identidade ao URL e redirecione o usuário.
+
+```js
+document.addEventListener("click", event => {
+  // Check if the click was a link
+  const anchor = event.target.closest("a");
+  if (!anchor || !anchor.href) return;
+
+  // Check if the link points to the desired domain
+  const url = new URL(anchor.href);
+  if (!url.hostname.endsWith(".adobe.com") && !url.hostname.endsWith(".behance.com")) return;
+
+  // Append the identity to the URL, then direct the user to the URL
+  event.preventDefault();
+  alloy("appendIdentityToUrl", {url: anchor.href}).then(result => {document.location = result.url;});
+});
+```
+
+## Objeto de resposta
+
+Se você decidir [lidar com respostas](command-responses.md) com esse comando, o objeto de resposta contém **`url`**, o novo URL com informações de identidade adicionada como parâmetro de sequência de consulta.

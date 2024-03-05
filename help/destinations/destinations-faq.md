@@ -3,7 +3,7 @@ keywords: destinos, perguntas, perguntas frequentes, faq, perguntas frequentes s
 title: Perguntas frequentes
 description: Respostas às perguntas mais frequentes sobre destinos do Adobe Experience Platform
 exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
-source-git-commit: dff460f0b0d365d3d643744544642d9f9488e18a
+source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
 workflow-type: tm+mt
 source-wordcount: '1673'
 ht-degree: 2%
@@ -185,11 +185,11 @@ Para obter explicações detalhadas sobre os requisitos de correspondência de I
 
 ### Preciso usar o SDK da Web do Experience Platform para enviar públicos-alvo e atributos para a Adobe Target?
 
-+++Número de resposta, [SDK da Web](../edge/home.md) não é necessário ativar públicos para [Adobe Target](catalog/personalization/adobe-target-connection.md).
++++Número de resposta, [SDK da Web](../web-sdk/home.md) não é necessário ativar públicos para [Adobe Target](catalog/personalization/adobe-target-connection.md).
 
 No entanto, se [[!DNL at.js]](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html?lang=pt-BR) é usada em vez do SDK da Web, somente a personalização da próxima sessão é compatível.
 
-Para [personalização de mesma página e próxima página](ui/activate-edge-personalization-destinations.md) casos de uso, você deve usar [SDK da Web](../edge/home.md) ou o [API do servidor de rede de borda](../server-api/overview.md). Consulte a documentação em [ativação de públicos-alvo para destinos de borda](ui/activate-edge-personalization-destinations.md) para obter mais detalhes sobre a implementação.
+Para [personalização de mesma página e próxima página](ui/activate-edge-personalization-destinations.md) casos de uso, você deve usar [SDK da Web](../web-sdk/home.md) ou o [API do servidor de rede de borda](../server-api/overview.md). Consulte a documentação em [ativação de públicos-alvo para destinos de borda](ui/activate-edge-personalization-destinations.md) para obter mais detalhes sobre a implementação.
 +++
 
 ### Há um limite no número de atributos que posso enviar do Real-time Customer Data Platform para o Adobe Target ou um destino de Personalização personalizada?
@@ -208,7 +208,7 @@ Yes, you can activate a maximum of 150 edge audiences per sandbox.  For more inf
 
 ### Depois de criar um público-alvo no Experience Platform, quanto tempo levará para que esse público-alvo fique disponível para casos de uso de segmentação de borda?
 
-+++Resposta As definições de público-alvo são propagadas para a [Rede de borda](../edge/home.md) em até uma hora. No entanto, se um público-alvo for ativado dentro dessa primeira hora, alguns visitantes que se qualificariam para o público-alvo poderão ser perdidos.
++++Resposta As definições de público-alvo são propagadas para a [Rede de borda](../web-sdk/home.md) em até uma hora. No entanto, se um público-alvo for ativado dentro dessa primeira hora, alguns visitantes que se qualificariam para o público-alvo poderão ser perdidos.
 +++
 
 ### Onde posso ver os atributos ativados no Adobe Target?

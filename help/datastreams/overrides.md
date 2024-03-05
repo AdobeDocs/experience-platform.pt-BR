@@ -2,10 +2,10 @@
 title: Configurar substituições de sequência de dados
 description: Saiba como configurar substituições na interface das sequências de dados e ativá-las por meio do SDK da Web.
 exl-id: 3f17a83a-dbea-467b-ac67-5462c07c884c
-source-git-commit: 11feeae0409822f0b1ccba2df263f0be466d54e3
+source-git-commit: 90493d179e620604337bda96cb3b7f5401ca4a81
 workflow-type: tm+mt
-source-wordcount: '1303'
-ht-degree: 67%
+source-wordcount: '1180'
+ht-degree: 61%
 
 ---
 
@@ -27,7 +27,7 @@ Este artigo explica o processo completo para criar cada tipo de substituição d
 
 >[!IMPORTANT]
 >
->As substituições de fluxo de dados são compatíveis somente com [SDK da Web](../edge/home.md) e [SDK móvel](https://developer.adobe.com/client-sdks/home/) integrações. [API do servidor](../server-api/overview.md) atualmente, as integrações não aceitam substituições de fluxo de dados.
+>As substituições de fluxo de dados são compatíveis somente com [SDK da Web](../web-sdk/home.md) e [SDK móvel](https://developer.adobe.com/client-sdks/home/) integrações. [API do servidor](../server-api/overview.md) atualmente, as integrações não aceitam substituições de fluxo de dados.
 ><br>
 >As substituições de sequência de dados devem ser usadas quando você precisa que dados diferentes sejam enviados para sequências de dados diferentes. Não use substituições de fluxo de dados para casos de uso de personalização ou dados de consentimento.
 
@@ -116,110 +116,155 @@ Agora as substituições do container de sincronização de ID devem estar confi
 
 ## Enviar as substituições para a rede de borda por meio do SDK da Web {#send-overrides-web-sdk}
 
->[!NOTE]
->
->Como alternativa ao envio de substituições de configuração por meio de comandos do SDK da Web, você pode adicioná-las à [extensão de tag](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) do SDK da Web.
+Depois de configurar as substituições de fluxo de dados na interface da Coleção de dados, você pode enviar as substituições para a Rede de borda por meio do SDK da Web ou do SDK móvel.
 
-Depois de [configurar as substituições de sequência de dados](#configure-overrides) na interface da coleção de dados, é possível enviar as substituições para a rede de borda por meio do SDK da Web.
+* **SDK da Web**: Consulte [substituições de configuração da sequência de dados](../web-sdk/commands/datastream-overrides.md#library) para obter instruções sobre a extensão da tag e exemplos de código da biblioteca JavaScript.
+* **SDK móvel**: veja abaixo.
 
-Se estiver usando o SDK da Web, enviar as substituições para a Rede de borda por meio do `edgeConfigOverrides` é a segunda e última etapa da ativação de substituições de configuração de fluxo de dados.
+### Substituição de ID de sequência de dados pelo SDK móvel {#id-override-mobile}
 
-As substituições de configuração de sequência de dados são enviadas para a rede de borda por meio do comando `edgeConfigOverrides` do SDK da Web. Esse comando cria substituições de sequência de dados que são passadas para o [!DNL Edge Network] no próximo comando. Se você estiver usando a variável `configure` , as substituições são passadas para cada solicitação.
+Os exemplos abaixo mostram como seria uma substituição de ID de sequência de dados em uma integração com o SDK móvel. Selecione as guias abaixo para ver a [!DNL iOS] e [!DNL Android] exemplos.
 
-A variável `edgeConfigOverrides` cria substituições de fluxo de dados que são passadas para o [!DNL Edge Network] no próximo comando.
+>[!BEGINTABS]
 
-Quando uma substituição de configuração é enviada com o comando `configure`, ela é incluída nos seguintes comandos do SDK da Web.
+>[!TAB iOS (Swift)]
 
-* [sendEvent](../edge/fundamentals/tracking-events.md)
-* [setConsent](../edge/consent/iab-tcf/overview.md)
-* [getIdentity](../edge/identity/overview.md)
-* [appendIdentityToUrl](../edge/identity/id-sharing.md#cross-domain-sharing)
-* [configure](../edge/fundamentals/configuring-the-sdk.md)
+Este exemplo mostra como é a substituição de uma ID de sequência de dados em um SDK móvel [!DNL iOS] integração.
 
-As opções definidas globalmente podem ser substituídas pela opção de configuração em comandos individuais.
+```swift
+// Create Experience event from dictionary
+var xdmData: [String: Any] = [
+  "eventType": "SampleXDMEvent",
+  "sample": "data",
+]
+let experienceEvent = ExperienceEvent(xdm: xdmData, datastreamIdOverride: "SampleDatastreamId")
 
-### Envio de substituições de configuração por meio do SDK da Web `sendEvent` comando {#send-event}
-
-O exemplo abaixo mostra como seria uma substituição de configuração em um comando `sendEvent`.
-
-```js {line-numbers="true" highlight="5-25"}
-alloy("sendEvent", {
-  xdm: {
-    /* ... */
-  },
-  edgeConfigOverrides: {
-    datastreamId: "{DATASTREAM_ID}"
-    com_adobe_experience_platform: {
-      datasets: {
-        event: {
-          datasetId: "SampleEventDatasetIdOverride"
-        }
-      }
-    },
-    com_adobe_analytics: {
-      reportSuites: [
-        "MyFirstOverrideReportSuite",
-        "MySecondOverrideReportSuite",
-        "MyThirdOverrideReportSuite"
-        ]
-    },
-    com_adobe_identity: {
-      idSyncContainerId: "1234567"
-    },
-    com_adobe_target: {
-      propertyToken: "63a46bbc-26cb-7cc3-def0-9ae1b51b6c62"
-    }
-  }
-});
+Edge.sendEvent(experienceEvent: experienceEvent) { (handles: [EdgeEventHandle]) in
+  // Handle the Edge Network response
+}
 ```
 
-| Parâmetro | Descrição |
-|---|---|
-| `edgeConfigOverrides.datastreamId` | Use esse parâmetro para permitir que uma única solicitação seja enviada para uma sequência de dados diferente da definida pelo comando `configure`. |
+>[!TAB Android™ (Kotlin)]
 
-### Envio de substituições de configuração por meio do SDK da Web `configure` comando {#send-configure}
+Este exemplo mostra como é a substituição de uma ID de sequência de dados em um SDK móvel [!DNL Android] integração.
 
-O exemplo abaixo mostra como seria uma substituição de configuração em um comando `configure`.
+```kotlin
+// Create experience event from Map
+val xdmData = mutableMapOf < String, Any > ()
+xdmData["eventType"] = "SampleXDMEvent"
+xdmData["sample"] = "data"
 
-```js {line-numbers="true" highlight="8-30"}
-alloy("configure", {
-  defaultConsent: "in",
-  edgeDomain: "etc",
-  edgeBasePath: "ee",
-  datastreamId: "{DATASTREAM_ID}",
-  orgId: "org",
-  debugEnabled: true,
-  edgeConfigOverrides: {
-    "com_adobe_experience_platform": {
-      "datasets": {
-        "event": {
-          datasetId: "SampleProfileDatasetIdOverride"
-        }
-      }
-    },
-    "com_adobe_analytics": {
-      "reportSuites": [
-        "MyFirstOverrideReportSuite",
-        "MySecondOverrideReportSuite",
-        "MyThirdOverrideReportSuite"
+val experienceEvent = ExperienceEvent.Builder()
+    .setXdmSchema(xdmData)
+    .setDatastreamIdOverride("SampleDatastreamId")
+    .build()
+
+Edge.sendEvent(experienceEvent) {
+    // Handle the Edge Network response
+}
+```
+
+>[!ENDTABS]
+
+### Substituição da configuração da sequência de dados pelo SDK móvel {#config-override-mobile}
+
+Os exemplos abaixo mostram como seria uma substituição de configuração de sequência de dados em uma integração com o SDK móvel. Selecione as guias abaixo para ver a [!DNL iOS] e [!DNL Android] exemplos.
+
+>[!BEGINTABS]
+
+>[!TAB iOS (Swift)]
+
+Este exemplo mostra como é a substituição de uma configuração de sequência de dados em um SDK móvel [!DNL iOS] integração.
+
+```swift
+// Create Experience event from dictionary
+var xdmData: [String: Any] = [
+  "eventType": "SampleXDMEvent",
+  "sample": "data",
+]
+
+let configOverrides: [String: Any] = [
+  "com_adobe_experience_platform": [
+    "datasets": [
+      "event": [
+        "datasetId": "SampleEventDatasetIdOverride"
       ]
-    },
-    "com_adobe_identity": {
-      "idSyncContainerId": "1234567"
-    },
-    "com_adobe_target": {
-      "propertyToken": "63a46bbc-26cb-7cc3-def0-9ae1b51b6c62"
-    }
-  },
-  onBeforeEventSend: function() { /* … */ });
-};
+    ]
+  ],
+  "com_adobe_analytics": [
+  "reportSuites": [
+        "MyFirstOverrideReportSuite",
+          "MySecondOverrideReportSuite",
+          "MyThirdOverrideReportSuite"
+      ]
+  ],
+  "com_adobe_identity": [
+    "idSyncContainerId": "1234567"
+  ],
+  "com_adobe_target": [
+    "propertyToken": "63a46bbc-26cb-7cc3-def0-9ae1b51b6c62"
+ ],
+]
+
+let experienceEvent = ExperienceEvent(xdm: xdmData, datastreamConfigOverride: configOverrides)
+
+Edge.sendEvent(experienceEvent: experienceEvent) { (handles: [EdgeEventHandle]) in
+  // Handle the Edge Network response
+}
 ```
 
-## Enviar as substituições para a Rede de borda por meio do SDK móvel {#send-overrides-mobile-sdk}
+>[!TAB Android (Kotlin)]
 
-Depois [configurar as substituições do fluxo de dados](#configure-overrides) na interface da Coleção de dados, agora é possível enviar as substituições para a Rede de borda, por meio do SDK móvel.
+Este exemplo mostra como é a substituição de uma configuração de sequência de dados em um SDK móvel [!DNL Android] integração.
 
-Para saber como enviar as sobreposições para a Rede de borda, leia o [guia sobre envio de sobreposições usando sendEvent](https://developer.adobe.com/client-sdks/edge/edge-network/tutorials/send-overrides-sendevent/) ou [guia sobre como enviar substituições usando regras](https://developer.adobe.com/client-sdks/edge/edge-network/tutorials/send-overrides-rules/).
+```kotlin
+// Create experience event from Map
+val xdmData = mutableMapOf < String, Any > ()
+xdmData["eventType"] = "SampleXDMEvent"
+xdmData["sample"] = "data"
+
+val configOverrides = mapOf(
+    "com_adobe_experience_platform"
+    to mapOf(
+        "datasets"
+        to mapOf(
+            "event"
+            to mapOf("datasetId"
+                to "SampleEventDatasetIdOverride")
+        )
+    ),
+    "com_adobe_analytics"
+    to mapOf(
+        "reportSuites"
+        to listOf(
+            "MyFirstOverrideReportSuite",
+            "MySecondOverrideReportSuite",
+            "MyThirdOverrideReportSuite"
+        )
+    ),
+    "com_adobe_identity"
+    to mapOf(
+        "idSyncContainerId"
+        to "1234567"
+    ),
+    "com_adobe_target"
+    to mapOf(
+        "propertyToken"
+        to "63a46bbc-26cb-7cc3-def0-9ae1b51b6c62"
+    )
+)
+
+val experienceEvent = ExperienceEvent.Builder()
+    .setXdmSchema(xdmData)
+    .setDatastreamConfigOverride(configOverrides)
+    .build()
+
+Edge.sendEvent(experienceEvent) {
+    // Handle the Edge Network response
+}
+```
+
+>[!ENDTABS]
 
 ## Exemplo de conteúdo {#payload-example}
 

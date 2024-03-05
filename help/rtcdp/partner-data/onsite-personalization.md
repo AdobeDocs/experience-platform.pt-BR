@@ -3,7 +3,7 @@ title: Personalizar experiências no site para visitantes desconhecidos usando o
 description: Saiba como usar o reconhecimento de visitante com auxílio de parceiros para fornecer experiências de site personalizadas para visitantes.
 feature: Use Cases, Personalization, Customer Acquisition
 exl-id: 99677988-1df8-47b1-96b1-0ef6db818a1d
-source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
+source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
 workflow-type: tm+mt
 source-wordcount: '2673'
 ht-degree: 89%
@@ -47,7 +47,7 @@ Ao planejar usar atributos fornecidos pelo parceiro para oferecer experiências 
 Para implementar com sucesso esse caso de uso, você deve usar várias áreas da Real-time Customer Data Platform e outras soluções da Experience Cloud. Verifique se tem as [permissões de controle de acesso baseado em atributo](/help/access-control/abac/overview.md) necessárias para todas essas áreas, ou solicite ao(à) administrador(a) que as conceda a você.
 
 * Coleção de dados
-   * [SDK da Web da Adobe Experience Platform](/help/edge/home.md)
+   * [SDK da Web da Adobe Experience Platform](/help/web-sdk/home.md)
    * [Tags](/help/tags/home.md)
    * [Sequências de dados](/help/datastreams/overview.md)
 * Gerenciamento de dados na Real-Time CDP

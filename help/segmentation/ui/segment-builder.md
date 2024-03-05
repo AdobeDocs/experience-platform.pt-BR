@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guia da interface do construtor de segmentos
 description: O Construtor de segmentos na interface do usuário do Adobe Experience Platform fornece um espaço de trabalho avançado que permite a interação com elementos de dados de perfil. O espaço de trabalho fornece controles intuitivos para criar e editar regras, como arrastar e soltar blocos usados para representar propriedades de dados.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: c6d471d7bb8cb9d5e376cc49c9c89c39e663d7f9
+source-git-commit: a16f4e8d97a3ab195bd48803980b257c9ec3bfe1
 workflow-type: tm+mt
-source-wordcount: '3562'
+source-wordcount: '3629'
 ht-degree: 6%
 
 ---
@@ -282,6 +282,8 @@ A variável **[!UICONTROL Propriedades do público]** é também onde você pode
 Você também pode selecionar seu método de avaliação. Se você souber qual método de avaliação deseja usar, poderá selecionar o método de avaliação desejado usando a lista suspensa. Se quiser saber para quais tipos de avaliação essa definição de segmento se qualifica, é possível selecionar o ícone procurar ![ícone de pasta com uma lupa](../images/ui/segment-builder/segment-evaluation-select-icon.png) para ver uma lista dos métodos de avaliação de definição de segmento disponíveis.
 
 A variável [!UICONTROL Elegibilidade do método de avaliação] popover é exibido. Esse popover exibe os métodos de avaliação disponíveis, que são batch, streaming e edge. O popover mostra quais métodos de avaliação são elegíveis e inelegíveis. Dependendo dos parâmetros usados na definição do segmento, ele pode não se qualificar para determinados métodos de avaliação. Para obter mais informações sobre os requisitos de cada método de avaliação, leia a [segmentação por transmissão](./streaming-segmentation.md#query-types) ou o [segmentação de borda](./edge-segmentation.md#query-types) visões gerais.
+
+Você também pode alterar o método de avaliação da definição do segmento depois de terminar de criá-lo. Se você alterar o método de avaliação do Edge ou Streaming para Batch, você **não** ser capaz de alterá-lo de volta para Edge ou Streaming. A alteração do método de avaliação **somente** entrará em vigor depois que você selecionar **[!UICONTROL Salvar]** no popover. O cancelamento da caixa de diálogo **manter** o método de avaliação original.
 
 ![A janela pop-up de elegibilidade do método de avaliação é exibida. Isso mostra quais métodos de avaliação são elegíveis e inelegíveis para a definição do segmento.](../images/ui/segment-builder/select-evaluation-method.png)
 

@@ -5,17 +5,17 @@ description: Saiba como resolver um problema com a restrição de tempo ignorar 
 source-git-commit: d0bd7990f0d77cd5f8d30da735b89c188e13c780
 workflow-type: tm+mt
 source-wordcount: '208'
-ht-degree: 0%
+ht-degree: 9%
 
 ---
 
 
-# Ignorar atualização de restrição de tempo do ano {#ignore-year}
+# Ignorar atualização de restrição de tempo anual {#ignore-year}
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_segmentBuilder_ignoreYear"
->title="Ignorar atualização de ano"
->abstract="A restrição de tempo para ignorar ano foi atualizada. Salve novamente o público."
+>title="Ignorar atualização anual"
+>abstract="A restrição ignorar tempo anual foi atualizada. Salve novamente o público-alvo."
 
 A versão de fevereiro de 2024 do Adobe Experience Platform introduziu alterações no Serviço de segmentação do Adobe Experience Platform que soluciona um problema com a opção &quot;ignorar ano&quot; na criação e avaliação de públicos-alvo.
 

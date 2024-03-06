@@ -7,7 +7,7 @@ exl-id: 047930d6-939f-4418-bbcb-8aafd2cf43ba
 source-git-commit: 7d630c3673304060ad26375955602440a495f354
 workflow-type: tm+mt
 source-wordcount: '1130'
-ht-degree: 0%
+ht-degree: 27%
 
 ---
 
@@ -98,28 +98,28 @@ A seção a seguir fornece informações adicionais sobre os públicos-alvo da c
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_combinationMaxDepth"
->title="Erro de profundidade máxima de contêiner aninhado"
->abstract="A profundidade máxima de contêineres aninhados é **5**. Isso significa que você **não é possível** ter mais de cinco containers aninhados ao criar seu público-alvo."
+>title="Erro de profundidade máxima de container aninhado"
+>abstract="A profundidade máxima de containers aninhados é de **5**. Isso significa que você **não pode** ter mais de cinco containers aninhados ao criar seu público-alvo."
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_combinationMaxBreadth"
 >title="Erro de valor máximo de regras"
->abstract="O número máximo de regras em um único container é **5**. Isso significa que você **não é possível** ter mais de cinco regras em um único contêiner ao criar seu público-alvo."
+>abstract="O número máximo de regras em um único container é **5**. Isso significa que você **não pode** ter mais de cinco regras em um único container ao criar seu público-alvo."
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_crossEntityMaxDepth"
->title="Erro de valor máximo entre entidades"
->abstract="O número máximo de entidades cruzadas que podem ser usadas em um único público é **5**. Uma entidade cruzada é quando você altera entre entidades diferentes no seu público-alvo. Por exemplo, ir de uma Conta para uma Pessoa e uma Lista de marketing."
+>title="Erro de valor máximo de entidade cruzada"
+>abstract="O número máximo de entidades cruzadas que podem ser usadas em um único público-alvo é **5**. Uma entidade cruzada é quando você altera entre entidades diferentes no seu público-alvo. Por exemplo, ir de uma Conta para uma Pessoa e de lá para uma Lista de marketing."
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_allowCustomEntity"
 >title="Erro de entidade personalizada"
->abstract="As entidades personalizadas são **não** permitido."
+>abstract="Entidades personalizadas **não** são permitidas."
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_b2bBuiltInEntities"
->title="Erro de entidade B2B inválido"
->abstract="Somente as seguintes entidades B2B podem ser usadas: `_xdm.context.account`, `_xdm.content.opportunity`, `_xdm.context.profile`, `_xdm.context.experienceevent`, `_xdm.context.account-person`, `_xdm.classes.opportunity-person`, `_xdm.classes.marketing-list-member`, `_xdm.classes.marketing-list`, `_xdm.context.campaign-member`, e `_xdm.classes.campaign`."
+>title="Erro de entidade B2B inválida"
+>abstract="Somente as seguintes entidades B2B podem ser usadas: `_xdm.context.account`, `_xdm.content.opportunity`, `_xdm.context.profile`, `_xdm.context.experienceevent`, `_xdm.context.account-person`, `_xdm.classes.opportunity-person`, `_xdm.classes.marketing-list-member`, `_xdm.classes.marketing-list`, `_xdm.context.campaign-member` e `_xdm.classes.campaign`."
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_rhsMaxOptions"
@@ -129,22 +129,22 @@ A seção a seguir fornece informações adicionais sobre os públicos-alvo da c
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_allowInSegmentByReference"
 >title="Erro de evento inSegment"
->abstract="Os eventos inSegment são **não** permitido."
+>abstract="Eventos inSegment **não** são permitidos."
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_allowInSegmentByValue"
 >title="Erro de evento inSegment"
->abstract="Os eventos inSegment são **não** permitido."
+>abstract="Eventos inSegment **não** são permitidos."
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_allowSequentialEvents"
 >title="Erro de eventos sequenciais"
->abstract="Os eventos sequenciais são **não** permitido."
+>abstract="Eventos sequenciais **não** são permitidos."
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_allowMaps"
->title="Erro de propriedade do tipo de mapa"
->abstract="As propriedades do tipo mapa são **não** permitido."
+>title="Erro de propriedade do tipo mapa"
+>abstract="Propriedades do tipo mapa **não** são permitidas."
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_maxNestedAggregationDepth"
@@ -153,7 +153,7 @@ A seção a seguir fornece informações adicionais sobre os públicos-alvo da c
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_maxObjectNestingLevel"
->title="Erro de valor máximo de objeto aninhado"
+>title="Erro de quantidade máxima de objetos aninhados"
 >abstract="O número máximo de objetos aninhados permitido é **10**."
 
 >[!CONTEXTUALHELP]
@@ -169,11 +169,11 @@ Ao usar públicos-alvo da conta, o público-alvo **deve** estar em conformidade 
 
 - A janela de pesquisa máxima para Eventos de experiência é **30 dias**.
 - A profundidade máxima de contêineres aninhados é **5**.
-   - Isso significa que você **não é possível** ter mais de cinco containers aninhados ao criar seu público-alvo.
+   - Isso significa que você **não pode** ter mais de cinco containers aninhados ao criar seu público-alvo.
 - O número máximo de regras em um único container é **5**.
    - Isso significa que seu público-alvo **não é possível** ter mais de cinco regras que compõem seu público-alvo.
 - O número máximo de entidades cruzadas que podem ser usadas é **5**.
-   - Uma entidade cruzada é quando você altera entre entidades diferentes no seu público-alvo. Por exemplo, ir de uma Conta para uma Pessoa e uma Lista de marketing.
+   - Uma entidade cruzada é quando você altera entre entidades diferentes no seu público-alvo. Por exemplo, ir de uma Conta para uma Pessoa e de lá para uma Lista de marketing.
 - Entidades personalizadas **não é possível** ser utilizado.
 - O número máximo de valores que podem ser verificados para um único campo é **50**.
    - Por exemplo, se você tiver um campo de &quot;Nome da cidade&quot;, será possível verificar esse valor em relação a 50 nomes de cidade.

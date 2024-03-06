@@ -3,18 +3,18 @@ title: Criar um fluxo de dados para dados brasileiros na interface
 description: Saiba como criar um fluxo de dados para sua conta do Brasil usando a interface do usuário do Adobe Experience Platform.
 last-substantial-update: 2024-01-30T00:00:00Z
 badge: Beta
-source-git-commit: 632cff3ee4ca82d391e9a1df0cb38d903e8a5428
+source-git-commit: bfcea2a30a0ecadcafaddf7660eef90952dcade6
 workflow-type: tm+mt
-source-wordcount: '665'
+source-wordcount: '689'
 ht-degree: 1%
 
 ---
 
-# Criar um [!DNL Braze] conexão de origem na interface
+# Criar um [!DNL Braze Currents] conexão de origem na interface
 
 >[!NOTE]
 >
->A variável [!DNL Braze] a fonte está na versão beta. Leia as [visão geral das origens](../../../../home.md#terms-and-conditions) para obter mais informações sobre o uso de fontes rotuladas como beta.
+>A variável [!DNL Braze Currents] a fonte está na versão beta. Leia as [visão geral das origens](../../../../home.md#terms-and-conditions) para obter mais informações sobre o uso de fontes rotuladas como beta.
 
 [!DNL Braze] O capacita interações centradas no cliente entre consumidores e marcas em tempo real. [!DNL Braze Currents] é um fluxo de dados em tempo real de eventos de engajamento da plataforma Braze que é a exportação mais robusta, mas granular, do [!DNL Braze] plataforma.
 
@@ -44,7 +44,7 @@ Se você já tiver uma [!DNL Braze] conexão, você pode ignorar o restante dest
 
 Na interface do usuário da Platform, selecione **[!UICONTROL Origens]** na navegação à esquerda, para acessar a [!UICONTROL Origens] espaço de trabalho. Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar a fonte específica com a qual deseja trabalhar usando a opção de pesquisa.
 
-No *Automação de marketing* categoria, selecione **[!UICONTROL Braze]** e selecione **[!UICONTROL Adicionar dados]**.
+No *Automação de marketing* categoria, selecione **[!UICONTROL Correntes Brasis]** e selecione **[!UICONTROL Adicionar dados]**.
 
 ![O catálogo de origens na interface do usuário do Experience Platform com a origem de Correntes brasileiras selecionada.](../../../../images/tutorials/create/braze/catalog.png)
 
@@ -67,16 +67,16 @@ Em seguida, configure o mapeamento para os dados usando a interface de mapeament
 
 ### Coletar credenciais necessárias
 
-Depois que a conexão for criada, é necessário coletar os seguintes valores de credencial, que você fornecerá no Painel Brasileiro para enviar dados ao [!DNL Platform]. Para obter mais informações, leia a [!DNL Braze] [guia sobre como navegar até Correntes](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/#step-2-navigate-to-currents).
+Depois que a conexão for criada, é necessário coletar os seguintes valores de credencial, que você fornecerá no Painel do Brasil para enviar dados para o Experience Platform. Para obter mais informações, leia a [!DNL Braze] [guia sobre como navegar até Correntes](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/#step-2-navigate-to-currents).
 
 | Campo | Descrição |
-| ---------- | ----------- |
-| `Client ID` | A ID do cliente associada à [!DNL Platform] origem. |
-| `Client Secret` | O segredo do cliente associado à [!DNL Platform] origem. |
-| `Tenant ID` | A ID do locatário associada à [!DNL Platform] origem. |
-| `Sandbox Name` | A sandbox associada ao seu [!DNL Platform] origem. |
-| `Dataflow ID` | A ID do fluxo de dados associado à [!DNL Platform] origem. |
-| `Streaming Endpoint` | O terminal de transmissão associado à [!DNL Platform] origem. Observe que o Braze converterá automaticamente isso no endpoint de transmissão em lote. |
+| --- | --- |
+| ID do cliente | A ID do cliente associada à origem do Experience Platform. |
+| Segredo do cliente | O segredo do cliente associado à sua origem de Experience Platform. |
+| ID do inquilino | A ID do locatário associada à origem do Experience Platform. |
+| Nome da sandbox | A sandbox associada à origem do Experience Platform. |
+| ID do fluxo de dados | A ID de fluxo de dados associada à origem do Experience Platform. |
+| Endpoint de transmissão | O ponto final de transmissão associado à fonte do Experience Platform. **Nota**: [!DNL Braze] O converte automaticamente isso no endpoint de transmissão em lote. |
 
 ### Configurar [!DNL Braze Currents] para transmitir dados para sua fonte de dados
 

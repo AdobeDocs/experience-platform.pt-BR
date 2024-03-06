@@ -5,10 +5,10 @@ breadcrumb-title: Guia dos conectores de origem
 user-guide-description: Assimilar dados de várias fontes. Saiba como estruturar, rotular e aprimorar os dados já assimilados.
 feature: Sources
 role: Developer
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 5e31c127344aeb1a9d3d19b98c43d1502a4af623
 workflow-type: tm+mt
-source-wordcount: '1012'
-ht-degree: 11%
+source-wordcount: '1021'
+ht-degree: 10%
 
 ---
 
@@ -92,7 +92,8 @@ ht-degree: 11%
       - [Conector de transmissão Snowflake](connectors/databases/snowflake-streaming.md)
       - [conector Snowflake](connectors/databases/snowflake.md)
       - [Conector do Teradata Vantage](connectors/databases/teradata-vantage.md)
-   - Parceiro de dados {#data-partner}
+   - Parceiro de dados e identidade {#data-partner}
+      - [Importação de dados de prospecção da Acxiom](connectors/data-partners/acxiom-prospecting-data-import.md)
       - [Resolução de identidade corporativa da Merkury](connectors/data-partners/merkury.md)
    - comércio eletrônico {#ecommerce}
       - [SAP Commerce](connectors/ecommerce/sap-commerce.md)
@@ -101,6 +102,7 @@ ht-degree: 11%
    - Sistema local {#local-system}
       - [Conector de upload de arquivo local](connectors/local-system/local-file-upload.md)
    - Automação de marketing {#marketing-automation}
+      - [Correntes Brasis](connectors/marketing-automation/braze.md)
       - [Chatlio](connectors/marketing-automation/chatlio-webhook.md)
       - [Customer.io](connectors/marketing-automation/customerio-webhook.md)
       - [Conector HubSpot](connectors/marketing-automation/hubspot.md)
@@ -295,7 +297,7 @@ ht-degree: 11%
          - [PostgreSQL](tutorials/ui/create/databases/postgres.md)
          - [Snowflake](tutorials/ui/create/databases/snowflake.md)
          - [Vantagem do teradata](tutorials/ui/create/databases/teradata-vantage.md)
-      - Parceiro de dados {#data-partner}
+      - Parceiro de dados e identidade {#data-partner}
          - [Resolução de identidade corporativa da Merkury](tutorials/ui/create/data-partners/merkury.md)
          - [Importação de dados de prospecção da Acxiom](tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md)
       - comércio eletrônico {#ecommerce}
@@ -305,7 +307,7 @@ ht-degree: 11%
       - Sistema local {#local-system}
          - [Upload de arquivo local](tutorials/ui/create/local-system/local-file-upload.md)
       - Automação de marketing {#marketing-automation}
-         - [Braze](tutorials/ui/create/marketing-automation/braze.md)
+         - [Correntes Brasis](tutorials/ui/create/marketing-automation/braze.md)
          - [Chatlio](tutorials/ui/create/marketing-automation/chatlio-webhook.md)
          - [Customer.io](tutorials/ui/create/marketing-automation/customerio-webhook.md)
          - [HubSpot](tutorials/ui/create/marketing-automation/hubspot.md)

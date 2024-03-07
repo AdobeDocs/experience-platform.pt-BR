@@ -3,10 +3,10 @@ title: Visão geral da extensão de encaminhamento de eventos principais
 description: Saiba mais sobre a extensão de encaminhamento de eventos principais na Adobe Experience Platform.
 feature: Event Forwarding
 exl-id: b5ee4ccf-6fa5-4472-be04-782930f07e20
-source-git-commit: c7344d0ac5b65c6abae6a040304f27dc7cd77cbb
+source-git-commit: 2ba02f94ff20281953d74b3213033e5f0a7fa111
 workflow-type: tm+mt
-source-wordcount: '1724'
-ht-degree: 98%
+source-wordcount: '1715'
+ht-degree: 97%
 
 ---
 
@@ -26,7 +26,7 @@ Esta seção descreve os tipos de condição disponíveis na extensão principal
 
 ### Custom Code
 
-Especifique qualquer código personalizado que deve existir como uma condição do evento. Use o editor de código incorporado para inserir o código personalizado. O encaminhamento de eventos na Adobe Experience Platform é compatível com ES6.
+Especifique qualquer código personalizado que deve existir como uma condição do evento. Use o editor de código incorporado para inserir o código personalizado. O encaminhamento de eventos no Adobe Experience Platform é compatível com ES13.
 
 1. Selecione **[!UICONTROL Abrir editor]**.
 1. Digite o código personalizado.
@@ -155,7 +155,7 @@ Esta seção descreve os tipos de ação disponíveis na extensão principal.
 
 ### Custom Code
 
-Forneça o código que é executado depois que o evento é acionado e as condições são avaliadas. O encaminhamento de eventos na Adobe Experience Platform é compatível com ES6.
+Forneça o código que é executado depois que o evento é acionado e as condições são avaliadas. O encaminhamento de eventos no Adobe Experience Platform é compatível com ES13.
 
 1. Dê um nome ao código da ação.
 1. Selecione **[!UICONTROL Abrir editor]**.

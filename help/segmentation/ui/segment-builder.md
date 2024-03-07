@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guia da interface do construtor de segmentos
 description: O Construtor de segmentos na interface do usuário do Adobe Experience Platform fornece um espaço de trabalho avançado que permite a interação com elementos de dados de perfil. O espaço de trabalho fornece controles intuitivos para criar e editar regras, como arrastar e soltar blocos usados para representar propriedades de dados.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: a16f4e8d97a3ab195bd48803980b257c9ec3bfe1
+source-git-commit: 6a17febf845d2b9566e49423fc68491315b2d4d7
 workflow-type: tm+mt
-source-wordcount: '3629'
+source-wordcount: '3633'
 ht-degree: 6%
 
 ---
@@ -103,7 +103,7 @@ Depois que os conjuntos de relatórios forem mapeados, você poderá usar esses 
 >
 >Para públicos criados na Platform, somente públicos-alvo que tenham a **igual** a política de mesclagem será exibida.
 
-A variável **[!UICONTROL Públicos-alvo]** A guia lista todos os públicos-alvo importados de fontes externas, como o Adobe Audience Manager, bem como os públicos-alvo criados no [!DNL Experience Platform].
+A variável **[!UICONTROL Públicos-alvo]** A guia lista todos os públicos-alvo importados de fontes externas, como Adobe Audience Manager ou Customer Journey Analytics, bem como os públicos-alvo criados no [!DNL Experience Platform].
 
 No **[!UICONTROL Públicos-alvo]** você pode ver todas as fontes disponíveis como um grupo de pastas. À medida que você seleciona as pastas, as subpastas e os públicos-alvo disponíveis podem ser vistos. Além disso, você pode selecionar o ícone de pasta (como mostrado na imagem à direita) para visualizar a estrutura de pastas (uma marca de seleção indica a pasta em que você está no momento) e navegar facilmente de volta pelas pastas selecionando o nome de uma pasta na árvore.
 

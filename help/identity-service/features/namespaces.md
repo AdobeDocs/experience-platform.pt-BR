@@ -2,9 +2,9 @@
 title: Visão geral do namespace de identidade
 description: Saiba mais sobre namespaces de identidade no Serviço de identidade.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: 576b17842ee1c5722332ba49e26b037537ec96ed
+source-git-commit: 6ae3626c2e0f7e58968b5582ca1895bd03ab1c32
 workflow-type: tm+mt
-source-wordcount: '1863'
+source-wordcount: '1920'
 ht-degree: 12%
 
 ---
@@ -134,6 +134,10 @@ Um diretório de namespaces na organização é exibido, exibindo informações 
 Dependendo dos dados organizacionais e casos de uso, talvez você precise de namespaces personalizados. Os namespaces personalizados podem ser criados usando o [[!DNL Identity Service]](../api/create-custom-namespace.md) ou por meio da interface do usuário.
 
 Para criar um namespace personalizado, selecione **[!UICONTROL Criar namespace de identidade]**.
+
+>[!TIP]
+>
+>As identidades de integração são namespaces usados para se conectar a outros sistemas. Não são usados na resolução de identidades, nem são usados para compilar identidades. Selecionar **[!UICONTROL Exibir identidades de integração]** para atualizar a lista e incluir identidades de integração. No entanto, as identidades de integração estão ocultas por padrão, pois são somente visualização e não é necessário configurá-las.
 
 ![O botão criar namespace de identidade no espaço de trabalho de identidades.](../images/namespace/create-identity-namespace.png)
 

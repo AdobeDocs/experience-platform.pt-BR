@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Criar e editar grupos de campos de esquema na interface
 description: Saiba como criar e editar grupos de campos de esquema na interface do usuário do Experience Platform.
 exl-id: 928d70a6-0468-4fb7-a53a-6686ac77f2a3
-source-git-commit: 0375ddcb7d06208199bf1172b157aa6eb28811f6
+source-git-commit: c04e5a49f2a4e90345ca20ecd0547d02b5004fcf
 workflow-type: tm+mt
 source-wordcount: '985'
 ht-degree: 8%
@@ -24,7 +24,7 @@ Um grupo de campos define com quais classes é compatível, com base no comporta
 
 O Adobe Experience Platform fornece muitos grupos de campo padrão que abrangem uma grande variedade de casos de uso de marketing. No entanto, você também pode criar e editar seus próprios grupos de campos personalizados para definir conceitos adicionais relacionados à sua empresa nos esquemas XDM. Este guia fornece uma visão geral de como criar, editar e gerenciar grupos de campos personalizados para sua organização na interface do usuário da Platform.
 
-## Pré-requisitos
+## Pré-requisitos {#prerequisites}
 
 Este guia requer uma compreensão funcional do Sistema XDM. Consulte a [Visão geral do XDM](../../home.md) para obter uma introdução ao papel do XDM no ecossistema de Experience Platform, e a [noções básicas da composição do esquema](../../schema/composition.md) para saber como os grupos de campos contribuem para esquemas XDM.
 
@@ -90,7 +90,7 @@ Depois que o campo é adicionado ao esquema, ele é atribuído ao grupo de campo
 
 Se o mesmo grupo de campos já estiver empregado em outros esquemas, os campos recém-adicionados aparecerão automaticamente nesses esquemas.
 
-## Próximas etapas
+## Próximas etapas {#next-steps}
 
 Este guia abordou como criar e editar grupos de campos usando a interface do usuário da Platform. Para obter mais informações sobre os recursos do [!UICONTROL Esquemas] espaço de trabalho, consulte a [[!UICONTROL Esquemas] visão geral do espaço de trabalho](../overview.md).
 

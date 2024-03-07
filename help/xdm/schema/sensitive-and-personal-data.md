@@ -2,9 +2,9 @@
 title: Informações confidenciais e pessoais no XDM
 description: Saiba mais sobre as principais considerações sobre informações pessoais confidenciais (SPI) e informações de identificação pessoal (PII) no Experience Data Model (XDM).
 exl-id: 92a8b6ad-3c45-4772-8178-60f857ab13e2
-source-git-commit: 9785b252b7c9cb3513858476753b6b4f71277ed7
+source-git-commit: 302dca9a9f834dba1fd3fdac15284ea4e2fba282
 workflow-type: tm+mt
-source-wordcount: '526'
+source-wordcount: '567'
 ht-degree: 0%
 
 ---
@@ -45,6 +45,10 @@ A Platform permite definir seus próprios grupos de campos personalizados e tipo
 * Remove fields from standard field groups pre-ingestion
 * Deprecate fields post-ingestion
 -->
+
+>[!IMPORTANT]
+>
+>SPI e PII só devem ser salvas na variável [Perfil individual XDM](../classes/individual-profile.md) e [XDM ExperienceEvent](../classes/experienceevent.md) classes. Como prática recomendada para fins de exclusão de dados e privacidade e governança, não salve a SPI e a PII em nenhuma outra classe XDM personalizada ou padrão.
 
 ## Próximas etapas
 

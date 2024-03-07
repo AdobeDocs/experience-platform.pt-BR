@@ -5,7 +5,7 @@ title: Criar e editar tipos de dados usando a interface
 type: Tutorial
 description: Saiba como criar e editar tipos de dados na interface do usuário do Experience Platform.
 exl-id: 2c917154-c425-463c-b8c8-04ba37d9247b
-source-git-commit: 6e58f070c0a25d7434f1f165543f92ec5a081e66
+source-git-commit: c04e5a49f2a4e90345ca20ecd0547d02b5004fcf
 workflow-type: tm+mt
 source-wordcount: '1384'
 ht-degree: 6%
@@ -29,7 +29,7 @@ O Adobe Experience Platform fornece vários tipos de dados padrão que podem ser
 
 Este tutorial aborda as etapas para a criação e edição de tipos de dados personalizados na interface do usuário da Platform.
 
-## Pré-requisitos
+## Pré-requisitos {#prerequisites}
 
 Este guia requer uma compreensão funcional do Sistema XDM. Consulte a [Visão geral do XDM](../../home.md) para obter uma introdução ao papel do XDM no ecossistema de Experience Platform, e a [noções básicas da composição do esquema](../../schema/composition.md) para saber como os tipos de dados contribuem para esquemas XDM.
 
@@ -105,7 +105,7 @@ Isso demonstra como tipos de dados podem ser flexíveis em termos de descrição
 
 Quando terminar de adicionar campos ao tipo de dados, selecione **[!UICONTROL Salvar]** para salvar suas alterações e adicionar o tipo de dados à [!DNL Schema Library].
 
-## Adicionar o tipo de dados a um esquema
+## Adicionar o tipo de dados a um esquema {#add-data-type}
 
 Depois de criar um tipo de dados, você pode começar a usá-lo em seus schemas. Como os esquemas XDM são compostos de uma classe e zero ou mais grupos de campos, os campos fornecidos por um tipo de dados não podem ser adicionados diretamente a um esquema. Em vez disso, eles devem ser incluídos em uma classe ou em um grupo de campos.
 
@@ -123,7 +123,7 @@ A tela atualiza o tipo de dados do campo de &quot;[!UICONTROL Objeto]&quot; para
 
 ![](../../images/ui/resources/data-types/converted.png)
 
-## Próximas etapas
+## Próximas etapas {#next-steps}
 
 Este guia abordou como criar e editar tipos de dados usando a interface do usuário da plataforma. Para obter mais informações sobre os recursos do [!UICONTROL Esquemas] espaço de trabalho, consulte a [[!UICONTROL Esquemas] visão geral do espaço de trabalho](../overview.md).
 

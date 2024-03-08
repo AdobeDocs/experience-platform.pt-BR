@@ -4,9 +4,9 @@ title: Extensão de encaminhamento de eventos do Twitter
 description: Essa extensão de encaminhamento de eventos do Adobe Experience Platform permite assimilar eventos no Twitter para atender aos requisitos da sua empresa.
 last-substantial-update: 2023-05-24T00:00:00Z
 exl-id: 54c240e5-6160-4654-ac5b-6afa8d99a765
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 4ee895cb8371646fd2013e2a8f65c2ffdae95850
 workflow-type: tm+mt
-source-wordcount: '1141'
+source-wordcount: '1048'
 ht-degree: 3%
 
 ---
@@ -97,11 +97,11 @@ Após a seleção, controles adicionais são exibidos para configurar ainda mais
 
 | Nome do campo | Descrição | Exemplo | Obrigatório |
 | --- | --- | --- | --- |
-| [!UICONTROL Tempo de conversão] | Data e hora como string em ISO 8601 ou em aaaa-MM-dd&#39;T&#39;HH:mm:formato ss:SSZ. | 2022-02-18T01:14:00,603Z | Sim |
+| [!UICONTROL Tempo de conversão] | Data e hora como string em ISO 8601 ou em `yyyy-MM-dd'T'HH:mm:ss:SSSZ` formato. | 2022-02-18T01:14:00,603Z | Sim |
 | [!UICONTROL ID do evento] | A ID de base 36 de um evento específico. Essa ID deve corresponder a um evento pré-configurado contido em seu [!DNL Twitter] conta de publicidade. Isso é conhecido como a ID do evento correspondente no Gerenciador de eventos. | o87ne ou tw-o8z6j-o87ne (tw-pixel_id-event-id) | Sim |
 | [!UICONTROL Número de itens] | O número de itens sendo comprados no evento. Deve ser um número positivo maior que 0. | 4 | Não |
 | [!UICONTROL Moeda] | A moeda dos itens que estão sendo comprados no evento. Isso é expresso em ISO-4217 e, se não for fornecido, o padrão será USD. | USD | Não |
-| [!UICONTROL Valor] | O valor do preço dos itens que estão sendo comprados no evento. | 100.00 | Não |
+| [!UICONTROL Valor] | O valor do preço dos itens que estão sendo comprados no evento. | 100,00 | Não |
 | [!UICONTROL ID de conversão] | Um identificador para um evento de conversão que pode ser usado para desduplicação entre conversões de Pixel da Web e API de conversão na mesma tag de evento. | 23294827 | Não |
 | [!UICONTROL Descrição] | Uma descrição com todas as informações adicionais sobre as conversões. | Testar conversão | Não |
 

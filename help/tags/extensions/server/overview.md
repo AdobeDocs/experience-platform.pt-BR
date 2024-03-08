@@ -2,10 +2,10 @@
 title: Referência a extensões de encaminhamento de eventos
 description: Encontre a documentação de extensões de encaminhamento de eventos no Adobe Experience Platform.
 exl-id: e7b42241-b41c-4d12-8551-4df14e3c9b74
-source-git-commit: af3353000e5545e6d2dc729d6f0bb91a00683b04
+source-git-commit: 8896ffb78ae01bfe6d7974d781acea104a6356a9
 workflow-type: tm+mt
-source-wordcount: '189'
-ht-degree: 20%
+source-wordcount: '166'
+ht-degree: 19%
 
 ---
 
@@ -32,7 +32,7 @@ Esta é uma lista de documentação das extensões de encaminhamento de eventos 
 * [[!DNL AWS]](./aws/overview.md)
 * [[!DNL Braze]](./braze/overview.md)
 * [Conector de nuvem do Google Analytics](https://exchange.adobe.com/apps/ec/106542)*
-* [Conector de nuvem do Google Analytics 4](https://partners.adobe.com/br/exchangeprogram/experiencecloud/exchange.details.109820.html)*
+<!-- * [Cloud Connector for Google Analytics 4](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.109820.html)* -->
 * [Núcleo](./core/overview.md)
 * [API de evento Epsilon](https://exchange.adobe.com/apps/ec/109127)*
 * [Conversões aprimoradas do Google Ads](./google-ads-enhanced-conversions/overview.md)

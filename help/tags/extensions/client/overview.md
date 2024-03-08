@@ -2,10 +2,10 @@
 title: Referência a extensões de tag
 description: Encontre a documentação de extensões de tag na Adobe Experience Platform.
 exl-id: 226948f4-7738-4cfd-ad22-5934820b1399
-source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
+source-git-commit: 8896ffb78ae01bfe6d7974d781acea104a6356a9
 workflow-type: tm+mt
-source-wordcount: '714'
-ht-degree: 10%
+source-wordcount: '469'
+ht-degree: 9%
 
 ---
 
@@ -106,7 +106,7 @@ Esta é uma lista de documentação para extensões de tag do lado do cliente. P
 * [Pesquisa SDI](https://exchange.adobe.com/apps/ec/102991)*
 * [SDI Toolkit](https://exchange.adobe.com/apps/ec/101460)*
 * [SessionCam](https://exchange.adobe.com/apps/ec/100517)*
-* [Evento de Alteração de Exibição SPA](https://partners.adobe.com/br/exchangeprogram/experiencecloud/exchange.details.105867.html)
+<!-- * [SPA View Change Event](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.105867.html) -->
 * [Spanner de armazenamento](https://exchange.adobe.com/apps/ec/102990)*
 * [TAGS por horizonte de loop](https://exchange.adobe.com/apps/ec/106092)*
 * [Tealium Collect](https://exchange.adobe.com/apps/ec/104217)*

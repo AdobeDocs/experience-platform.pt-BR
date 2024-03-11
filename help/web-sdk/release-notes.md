@@ -3,9 +3,9 @@ title: Notas de versão do SDK da Web da Adobe Experience Platform
 description: As notas de versão mais recentes do SDK da Web da Adobe Experience Platform.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;notas de versão;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: cf6df4d005486aa297dcced7c8811f87f5e988c2
+source-git-commit: 58cd6300307881c3de7c52e07c401bf2ed908517
 workflow-type: tm+mt
-source-wordcount: '1723'
+source-wordcount: '1725'
 ht-degree: 1%
 
 ---
@@ -213,8 +213,8 @@ Para obter as notas de versão mais recentes da extensão de tag do SDK da Web, 
 
 ## Versão 2.2.0 - outubro de 2020
 
-* Correção de erros: o objeto de aceitação estava impedindo que o Alloy fizesse chamadas quando `idMigrationEnabled` é `true`.
-* Correção de erros: torne o Alloy ciente das solicitações que devem retornar ofertas de personalização para evitar um problema de oscilação.
+* Correção de erros: o objeto de aceitação impedia o SDK da Web de fazer chamadas quando `idMigrationEnabled` é `true`.
+* Correção de erros: torne o SDK da Web ciente das solicitações que devem retornar ofertas de personalização para evitar um problema de oscilação.
 
 ## Versão 2.1.0 - agosto de 2020
 
@@ -222,5 +222,5 @@ Para obter as notas de versão mais recentes da extensão de tag do SDK da Web, 
 * Suporte ao Padrão de consentimento IAB 2.0.
 * Suporte à transmissão de IDs adicionais no `setConsent` comando.
 * Suporte para substituição de `datasetId` no `sendEvent` comando.
-* Monitores de liga de suporte ([Leia mais](https://github.com/adobe/alloy/wiki/Monitoring-Hooks))
+* Ganchos de monitoramento de suporte ([Leia mais](https://github.com/adobe/alloy/wiki/Monitoring-Hooks))
 * Aprovado `environment: browser` nos dados de contexto de detalhes da implementação.

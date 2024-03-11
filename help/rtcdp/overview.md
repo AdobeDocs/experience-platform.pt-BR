@@ -4,9 +4,9 @@ title: Visão geral do Real-time Customer Data Platform
 description: Visão geral do Adobe Real-time Customer Data Platform
 feature: Get Started
 exl-id: 8be51bf0-b372-4a81-ba45-f4fe4b7e1718
-source-git-commit: f89665837b75dc4305073d675c4c05b04302c85e
+source-git-commit: 8838fc59685f287a3e66a37c87b0b9c55e29c71e
 workflow-type: tm+mt
-source-wordcount: '668'
+source-wordcount: '682'
 ht-degree: 0%
 
 ---
@@ -79,3 +79,7 @@ A documentação a seguir é recomendada para ajudar você a começar a usar o R
 * [Como criar públicos-alvo do](segmentation/segmentation-overview.md)
 * [Como ativar públicos para destinos](destinations/overview.md)
 * [Como definir e aplicar políticas de governança de dados](privacy/data-governance-overview.md)
+
+## Glossário
+
+Use o [**Glossário**](/help/landing/glossary.md) página para analisar a terminologia do Real-Time CDP e do Adobe Experience Platform.

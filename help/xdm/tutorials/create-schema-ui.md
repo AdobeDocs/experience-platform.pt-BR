@@ -5,9 +5,9 @@ title: Criar um esquema usando o Editor de esquemas
 type: Tutorial
 description: Este tutorial aborda as etapas para a criação de um esquema usando o Editor de esquemas na Experience Platform.
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
-source-git-commit: ff49189d6f3331db5b7853be36afe0bb6176916f
+source-git-commit: 0e1fb15cfa56fb4c2a4a645578327f0a4bd22e68
 workflow-type: tm+mt
-source-wordcount: '4632'
+source-wordcount: '4695'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Para fins de demonstração, as etapas deste tutorial envolvem a criação de um
 
 Este tutorial requer uma compreensão funcional dos vários aspectos do Adobe Experience Platform envolvidos na criação do esquema. Antes de iniciar este tutorial, revise a documentação dos seguintes conceitos:
 
-* [[!DNL Experience Data Model (XDM)]](../home.md): a estrutura padronizada pela qual a [!DNL Platform] organiza os dados de experiência do cliente.
+* [[!DNL Experience Data Model (XDM)]](../home.md): o quadro normalizado pelo qual [!DNL Platform] organiza os dados de experiência do cliente.
    * [Noções básicas da composição do esquema](../schema/composition.md): uma visão geral dos esquemas XDM e seus blocos de construção, incluindo classes, grupos de campos de esquema, tipos de dados e campos individuais.
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md): fornece um perfil de consumidor unificado em tempo real com base em dados agregados de várias fontes.
 
@@ -116,6 +116,12 @@ Para este tutorial, selecione a variável **[!UICONTROL Detalhes demográficos]*
 A tela do esquema será exibida novamente. A variável **[!UICONTROL Grupos de campos]** A seção agora lista &quot;[!UICONTROL Detalhes demográficos]&quot; e o **[!UICONTROL Estrutura]** inclui os campos contribuídos pelo grupo de campos. Você pode selecionar o nome do grupo de campos na **[!UICONTROL Grupos de campos]** para realçar os campos específicos fornecidos na tela.
 
 ![O Editor de esquemas com os grupos de campos Detalhes demográficos destacados.](../images/tutorials/create-schema/demographic-details-structure.png)
+
+>[!NOTE]
+>
+>No Editor de esquemas, classes e grupos de campos padrão (gerados por Adobe) são indicados com o ícone de cadeado (![Um ícone de cadeado.](../images/ui/explore/padlock-icon.png). O cadeado é exibido no painel à esquerda, ao lado do nome da classe ou do grupo de campos, e também ao lado de qualquer campo no diagrama de esquema que faça parte de um recurso gerado pelo sistema.
+>
+>![O Editor de esquemas com o ícone de cadeado realçado](../images/ui/explore/padlock-icon-highlight.png)
 
 Este grupo de campos contribui com vários campos sob o nome do nível superior `person` com o tipo de dados &quot;[!UICONTROL Person]&quot;. Esse grupo de campos descreve informações sobre um indivíduo, incluindo nome, data de nascimento e sexo.
 

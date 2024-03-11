@@ -2,9 +2,9 @@
 title: Rastreamento e análise de consentimento
 description: Saiba como criar um painel de análise de consentimento para rastrear a tendência do consentimento do usuário ao longo do tempo.
 exl-id: 34accae5-8b4f-4281-8333-187a91db8199
-source-git-commit: 7cde32f841497edca7de0c995cc4c14501206b1a
+source-git-commit: 454f485a327233ca1a5b37ea58f16b7b53255ba6
 workflow-type: tm+mt
-source-wordcount: '1912'
+source-wordcount: '1909'
 ht-degree: 0%
 
 ---
@@ -22,13 +22,9 @@ Os casos de uso abordados neste guia são tendência de consentimento e sobrepos
 - **Tendência de consentimento** rastreia a tendência do consentimento do usuário ao longo do tempo. A análise das alterações de preferência de consentimento ajuda os profissionais de marketing a planejar e executar campanhas que se adaptam a essas alterações de preferência do usuário. Por exemplo, você pode querer executar campanhas educacionais direcionadas, campanhas de transparência e confiança ou campanhas de incentivo para impulsionar opções de consentimento. Você também pode correlacionar campanhas que podem ter um impacto negativo no consentimento para reduzir proativamente a frequência dessas campanhas.
 - **Sobreposição de consentimento** O usa a sobreposição entre canais de consentimento para fornecer mensagens personalizadas consistentes em vários canais para seus clientes que consentiram com vários canais. Os profissionais de marketing podem priorizar e alocar recursos para determinados canais em que um grau mais alto de consentimento e mensagens personalizadas podem repercutir nos clientes e gerar taxas de resposta mais altas.
 
-<!-- ## Build a consent dashboard {#build-a-consent-dashboard} -->
-
 ## Criar públicos-alvo com consentimento {#create-consent-audiences}
 
 Para criar um painel de consentimento, primeiro crie um público-alvo de todos os perfis que consentiram em entrar em contato com o. Para navegar até o Construtor de segmentos do Real-time Customer Data Platform, selecione **[!UICONTROL Públicos-alvo]** na navegação à esquerda da interface do usuário da Platform. No menu [!UICONTROL Cliente] guia do [!UICONTROL Públicos-alvo] painel, selecione **[!UICONTROL Criar público]** na parte superior direita da exibição, depois **[!UICONTROL Criar regras]**.
-
-<!-- Update screenshot below to include Create audience -->s
 
 ![A variável [!UICONTROL Públicos-alvo] painel com [!UICONTROL Cliente], [!UICONTROL Públicos-alvo], e [!UICONTROL Criar segmento] destacado.](../images/insights-use-cases/consent-analysis/create-audience.png)
 

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guia da interface do Editor de consultas
 description: O Editor de consultas é uma ferramenta interativa fornecida pelo Serviço de consultas da Adobe Experience Platform, que permite gravar, validar e executar consultas para dados de experiência do cliente na interface do usuário do Experience Platform. O Editor de consultas é compatível com o desenvolvimento de consultas para análise e exploração de dados, e permite executar consultas interativas para fins de desenvolvimento, bem como consultas não interativas para preencher conjuntos de dados no Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 29a33dd5823ac425cc567e948a5def948aedb44e
+source-git-commit: 454f485a327233ca1a5b37ea58f16b7b53255ba6
 workflow-type: tm+mt
-source-wordcount: '2576'
+source-wordcount: '2647'
 ht-degree: 2%
 
 ---
@@ -255,6 +255,10 @@ O console fornece informações sobre o status e a operação do [!DNL Query Ser
 Após a conclusão de um query, os resultados são exibidos no **[!UICONTROL Resultados]** , ao lado da guia **[!UICONTROL Console]** guia. Essa exibição mostra a saída tabular do query, exibindo entre 50 e 500 linhas de resultados, dependendo da opção escolhida [contagem de resultados](#result-count). Essa visualização permite verificar se sua consulta produz a saída esperada. Para gerar um conjunto de dados com sua consulta, remova os limites nas linhas retornadas e execute a consulta com `CREATE TABLE tablename AS SELECT` para gerar um conjunto de dados com a saída. Consulte a [tutorial sobre geração de conjuntos de dados](./create-datasets.md) para obter instruções sobre como gerar um conjunto de dados a partir dos resultados da consulta em [!DNL Query Editor].
 
 ![A guia Resultados do console do Editor de consultas exibindo os resultados de uma execução de consulta.](../images/ui/query-editor/query-results.png)
+
+## Casos de uso {#use-cases}
+
+O Serviço de consulta fornece soluções para uma variedade de casos de uso em todos os setores e cenários de negócios. Esses exemplos práticos demonstram a flexibilidade e o impacto do serviço em atender a diversas necessidades. Para [descubra como o Serviço de consulta pode agregar valor às suas necessidades de negócios específicas](../use-cases/overview.md), explore a coleção abrangente de documentos de casos de uso. Saiba como usar o Serviço de consulta para fornecer insights e soluções para melhorar a eficiência operacional e o sucesso dos negócios.
 
 ## Executar consultas com [!DNL Query Service] vídeo tutorial {#query-tutorial-video}
 

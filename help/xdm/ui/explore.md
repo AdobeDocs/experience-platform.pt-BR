@@ -5,9 +5,9 @@ title: Explorar recursos do esquema na interface do
 description: Saiba como explorar esquemas, classes, grupos de campos de esquema e tipos de dados existentes na interface do usuário do Experience Platform.
 type: Tutorial
 exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 0e1fb15cfa56fb4c2a4a645578327f0a4bd22e68
 workflow-type: tm+mt
-source-wordcount: '993'
+source-wordcount: '1078'
 ht-degree: 0%
 
 ---
@@ -53,6 +53,14 @@ Depois de selecionar um recurso, sua estrutura é aberta na tela.
 Todos os campos do tipo de objeto que contêm subpropriedades são recolhidos por padrão quando aparecem pela primeira vez na tela. Para mostrar as subpropriedades de qualquer campo, selecione o ícone ao lado do nome.
 
 ![](../images/ui/explore/field-expand.png)
+
+### Indicador padrão de classe e grupo de campos {#standard-class-and-field-group-indicator}
+
+No Editor de esquemas, classes e grupos de campos padrão (gerados por Adobe) são indicados com o ícone de cadeado (![Um ícone de cadeado.](../images/ui/explore/padlock-icon.png). O cadeado é exibido no painel à esquerda, ao lado do nome da classe ou do grupo de campos, e também ao lado de qualquer campo no diagrama de esquema que faça parte de um recurso gerado pelo sistema.
+
+![O Editor de esquemas com o ícone de cadeado realçado](../images/ui/explore/schema-editor-padlock-icon.png)
+
+Consulte a [Adicionar campos personalizados a grupos de campos padrão](./resources/schemas.md) para obter orientação. Não é possível editar uma classe padrão.
 
 ### Campos gerados pelo sistema {#system-fields}
 

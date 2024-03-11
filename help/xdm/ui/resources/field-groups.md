@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Criar e editar grupos de campos de esquema na interface
 description: Saiba como criar e editar grupos de campos de esquema na interface do usuário do Experience Platform.
 exl-id: 928d70a6-0468-4fb7-a53a-6686ac77f2a3
-source-git-commit: c04e5a49f2a4e90345ca20ecd0547d02b5004fcf
+source-git-commit: 0e1fb15cfa56fb4c2a4a645578327f0a4bd22e68
 workflow-type: tm+mt
-source-wordcount: '985'
+source-wordcount: '999'
 ht-degree: 8%
 
 ---
@@ -56,7 +56,7 @@ A lista de grupos de campos disponíveis é pré-filtrada com base em como foram
 
 >[!NOTE]
 >
->Somente grupos de campos personalizados definidos por sua organização podem ser totalmente editados e personalizados. Para grupos de campos principais definidos por Adobe, somente os nomes de exibição de seus campos podem ser editados no contexto de esquemas individuais. Consulte a seção sobre [edição de nomes de exibição para campos de esquema](./schemas.md#display-names) para obter detalhes.
+>Somente grupos de campos personalizados definidos por sua organização podem ser totalmente editados e personalizados. Para grupos de campos principais definidos por Adobe, somente os nomes de exibição de seus campos podem ser editados no contexto de esquemas individuais. Elas são indicadas no Editor de esquemas por um ícone de cadeado (![Um ícone de cadeado.](../../images/ui/explore/padlock-icon.png)). Consulte a seção sobre [edição de nomes de exibição para campos de esquema](./schemas.md#display-names) para obter detalhes.
 >
 >Depois que um grupo de campos personalizado é salvo e usado em um esquema para assimilação de dados, somente alterações aditivas podem ser feitas no grupo de campos depois disso. Consulte a [regras de evolução do schema](../../schema/composition.md#evolution) para obter mais informações.
 

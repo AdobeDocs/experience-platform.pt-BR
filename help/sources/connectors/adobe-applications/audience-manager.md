@@ -4,14 +4,21 @@ solution: Experience Platform
 title: Visão geral da origem do Audience Manager
 description: A origem do Adobe Audience Manager transmite dados primários coletados no Audience Manager para o Adobe Experience Platform.
 exl-id: be90db33-69e1-4f42-9d1a-4f8f26405f0f
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 8ef9fedcc77f39707ef5191988a5b7360e1118cc
 workflow-type: tm+mt
-source-wordcount: '1059'
+source-wordcount: '1127'
 ht-degree: 0%
 
 ---
 
 # origem do Audience Manager
+
+>[!IMPORTANT]
+>
+>Na configuração inicial, a origem Adobe Audience Manager retorna uma mensagem de erro que explica que um namespace de identidade com um determinado `namespaceCode={VALUE}` não existe. **Nota**: no back-end, `namespaceCode` é usado para se referir ao símbolo de identidade. Para concluir a integração, você deve:
+>
+>- [Criar um namespace personalizado no Serviço de identidade](../../../identity-service/features/namespaces.md#create-custom-namespaces) com o símbolo de identidade especificado (`VALUE`).
+>- Assimile novamente seus dados.
 
 A origem do Adobe Audience Manager transmite dados primários coletados no Adobe Audience Manager para ativação no Adobe Experience Platform. A fonte de Audience Manager assimila dois tipos de dados para a Platform:
 

@@ -2,9 +2,9 @@
 title: Conexão do Blob do Azure
 description: Crie uma conexão de saída ativa com seu armazenamento Azure Blob para exportar arquivos de dados CSV da Adobe Experience Platform periodicamente.
 exl-id: 8099849b-e3d2-48a5-902a-ca5a5ec88207
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: 8771aa0df001e8ef81d4ad712f4d1f9661b405b2
 workflow-type: tm+mt
-source-wordcount: '1048'
+source-wordcount: '1089'
 ht-degree: 7%
 
 ---
@@ -62,11 +62,18 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 
 {style="table-layout:auto"}
 
-## Formatos de arquivo não compatíveis {#file-formats}
+## Exportar conjuntos de dados {#export-datasets}
 
-[!DNL Experience Platform] O suporta o seguinte formato de arquivo a ser exportado para o [!DNL Azure Blob]:
+Esse destino suporta exportações de conjunto de dados. Para obter informações completas sobre como configurar exportações de conjunto de dados, leia os tutoriais:
 
-* Valores separados por vírgula (CSV): no momento, o suporte para arquivos de dados exportados está limitado a valores separados por vírgula.
+* Como [exportar conjuntos de dados usando a interface do usuário da Platform](/help/destinations/ui/export-datasets.md).
+* Como [exportar conjuntos de dados de forma programática usando a API do Serviço de fluxo](/help/destinations/api/export-datasets.md).
+
+## Formato de arquivo dos dados exportados {#file-format}
+
+Ao exportar *dados de público*, a Platform cria um `.csv`, `parquet`ou `.json` no local de armazenamento fornecido. Para obter mais informações sobre os arquivos, consulte [formatos de arquivo compatíveis com a exportação](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export) no tutorial de ativação de público-alvo.
+
+Ao exportar *conjuntos de dados*, a Platform cria um `.parquet` ou `.json` no local de armazenamento fornecido. Para obter mais informações sobre os arquivos, consulte [verificar exportação bem-sucedida do conjunto de dados](../../ui/export-datasets.md#verify) no tutorial exportar conjuntos de dados.
 
 ## Conectar ao destino {#connect}
 
@@ -123,13 +130,6 @@ Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICON
 
 Consulte [Ativar dados do público-alvo para destinos de exportação de perfil em lote](../../ui/activate-batch-profile-destinations.md) para obter instruções sobre como ativar públicos-alvo para esse destino.
 
-## Exportar conjuntos de dados {#export-datasets}
+## Validar exportação de dados bem-sucedida {#exported-data}
 
-Esse destino suporta exportações de conjunto de dados. Para obter informações completas sobre como configurar exportações de conjunto de dados, leia os tutoriais:
-
-* Como [exportar conjuntos de dados usando a interface do usuário da Platform](/help/destinations/ui/export-datasets.md).
-* Como [exportar conjuntos de dados de forma programática usando a API do Serviço de fluxo](/help/destinations/api/export-datasets.md).
-
-## Dados exportados {#exported-data}
-
-Para [!DNL Azure Blob Storage] destinos, [!DNL Platform] cria um `.csv` no local de armazenamento fornecido. Para obter mais informações sobre os arquivos, consulte [Ativar dados do público-alvo para destinos de exportação de perfil em lote](../../ui/activate-batch-profile-destinations.md) no tutorial de ativação de público-alvo.
+Para verificar se os dados foram exportados com êxito, verifique [!DNL Azure Blob] armazenamento e verifique se os arquivos exportados contêm as populações de perfis esperadas.

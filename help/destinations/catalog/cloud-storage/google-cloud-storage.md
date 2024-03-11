@@ -3,9 +3,9 @@ title: Conexão do Google Cloud Storage
 description: Saiba como se conectar ao Google Cloud Storage e ativar públicos ou exportar conjuntos de dados.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: ab274270-ae8c-4264-ba64-700b118e6435
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: 8771aa0df001e8ef81d4ad712f4d1f9661b405b2
 workflow-type: tm+mt
-source-wordcount: '1105'
+source-wordcount: '1199'
 ht-degree: 2%
 
 ---
@@ -42,6 +42,19 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 | Frequência de exportação | **[!UICONTROL Lote]** | Os destinos em lote exportam arquivos para plataformas downstream em incrementos de três, seis, oito, doze ou vinte e quatro horas. Leia mais sobre [destinos baseados em arquivo em lote](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
+
+## Exportar conjuntos de dados {#export-datasets}
+
+Esse destino suporta exportações de conjunto de dados. Para obter informações completas sobre como configurar exportações de conjunto de dados, leia os tutoriais:
+
+* Como [exportar conjuntos de dados usando a interface do usuário da Platform](/help/destinations/ui/export-datasets.md).
+* Como [exportar conjuntos de dados de forma programática usando a API do Serviço de fluxo](/help/destinations/api/export-datasets.md).
+
+## Formato de arquivo dos dados exportados {#file-format}
+
+Ao exportar *dados de público*, a Platform cria um `.csv`, `parquet`ou `.json` no local de armazenamento fornecido. Para obter mais informações sobre os arquivos, consulte [formatos de arquivo compatíveis com a exportação](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export) no tutorial de ativação de público-alvo.
+
+Ao exportar *conjuntos de dados*, a Platform cria um `.parquet` ou `.json` no local de armazenamento fornecido. Para obter mais informações sobre os arquivos, consulte [verificar exportação bem-sucedida do conjunto de dados](../../ui/export-datasets.md#verify) no tutorial exportar conjuntos de dados.
 
 ## Pré-requisito de configuração para a conexão com o [!DNL Google Cloud Storage] account {#prerequisites}
 
@@ -119,13 +132,10 @@ No **[!UICONTROL Agendamento]** etapa, você pode [configurar o cronograma de ex
 
 No **[!UICONTROL Mapeamento]** etapa, você pode selecionar quais campos de atributo e identidade serão exportados para seus perfis. Você também pode optar por alterar os cabeçalhos no arquivo exportado para qualquer nome amigável. Para obter mais informações, consulte [etapa de mapeamento](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) no tutorial ativar interface do usuário de destinos em lote.
 
-## Exportar conjuntos de dados {#export-datasets}
-
-Esse destino suporta exportações de conjunto de dados. Para obter informações completas sobre como configurar exportações de conjunto de dados, leia os tutoriais:
-
-* Como [exportar conjuntos de dados usando a interface do usuário da Platform](/help/destinations/ui/export-datasets.md).
-* Como [exportar conjuntos de dados de forma programática usando a API do Serviço de fluxo](/help/destinations/api/export-datasets.md).
-
 ## Validar exportação de dados bem-sucedida {#exported-data}
 
 Para verificar se os dados foram exportados com êxito, verifique [!DNL Google Cloud Storage] e verifique se os arquivos exportados contêm as populações de perfis esperadas.
+
+## INCLUIR NA LISTA DE PERMISSÕES endereço IP {#ip-address-allow-list}
+
+Consulte a [INCLUIR NA LISTA DE PERMISSÕES endereço IP](ip-address-allow-list.md) consulte este artigo se precisar adicionar IPs de Adobe a um incluo na lista de permissões.

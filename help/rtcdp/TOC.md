@@ -5,7 +5,7 @@ audience: user
 user-guide-title: Manual da Real-time Customer Data Platform
 user-guide-description: Reúna dados conhecidos e anônimos de várias fontes corporativas para criar perfis de clientes, e a partir deles criar segmentos de público-alvo e ativá-los para destinos de terceiros.
 role: Admin
-source-git-commit: 267857cfdcc75310c7e490fdbae3494ecd5a8fb7
+source-git-commit: 472852b383f117281fd235ad39dedba401df7679
 workflow-type: tm+mt
 source-wordcount: '293'
 ht-degree: 69%
@@ -76,14 +76,14 @@ ht-degree: 69%
    * [Fontes na Real-Time CDP B2B Edition](sources/b2b.md)
 * Casos de uso {#use-cases}
    * [Visão geral de casos de uso de exemplo](/help/rtcdp/use-case-guides/overview.md)
-   * Personalização, insights e envolvimento {#personalization-insights-engagement}
-      * [Reenvolva seus clientes de forma inteligente](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md)
-      * [Reenvolva seus clientes de forma inteligente: exemplos da Luma](/help/rtcdp/use-case-guides/intelligent-re-engagement/use-cases-luma.md)
    * Aquisição de clientes {#customer-acquisition}
       * [Interagir e adquirir novos clientes sem depender de cookies de terceiros](/help/rtcdp/partner-data/prospecting.md)
       * [Personalizar experiências no site para visitantes desconhecidos usando o reconhecimento de visitantes auxiliados por parceiros](/help/rtcdp/partner-data/onsite-personalization.md)
       * [Redirecionamento externo de usuários não autenticados](./partner-data/offsite-retargeting.md)
    * Enriquecimento de perfil {#profile-enrichment}
       * [Suplementar perfis próprios com atributos fornecidos por parceiros](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
+   * Personalização, insights e envolvimento {#personalization-insights-engagement}
+      * [Reenvolva seus clientes de forma inteligente](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md)
+      * [Reenvolva seus clientes de forma inteligente: exemplos da Luma](/help/rtcdp/use-case-guides/intelligent-re-engagement/use-cases-luma.md)
 * [Notas de versão da Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=pt-BR)
 * [Glossário da Experience Platform](https://www.adobe.com/go/platform-glossary-en)

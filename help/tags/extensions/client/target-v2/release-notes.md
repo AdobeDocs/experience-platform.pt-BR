@@ -2,10 +2,10 @@
 title: Notas de versão da extensão do Adobe Target v2
 description: As mais recentes notas de versão de extensão de tag do Adobe Target v2 na Adobe Experience Platform.
 exl-id: c1a04e62-026d-4b16-aa70-bc6d5dbe6b2d
-source-git-commit: edef000bfe6c4de69a037e2ad6871759c1404580
+source-git-commit: a062305e3ed0eb4d127f93ff37efe15e41eaa601
 workflow-type: tm+mt
-source-wordcount: '794'
-ht-degree: 48%
+source-wordcount: '834'
+ht-degree: 42%
 
 ---
 
@@ -14,6 +14,11 @@ ht-degree: 48%
 >[!NOTE]
 >
 >O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+
+## v0.20.3 (23 de janeiro de 2024)
+
+- Atualizado para oferecer suporte `at.js` 2.11.4
+- Correção de um erro para impedir que dados geográficos inválidos fossem enviados para a API de entrega.
 
 ## v0.20.2 (29 de novembro de 2023)
 
@@ -62,7 +67,7 @@ ht-degree: 48%
 - Atualizado para oferecer suporte `at.js` v2.8.1
 - Fixo `pageLoad` não está sendo mapeado para `target-global-mbox` no modo de execução híbrido ODD
 - Correção de um problema com detalhes de análise para `mbox` solicitação
-- As dependências de desenvolvimento foram atualizadas para corrigirem vulnerabilidades de segurança
+- As dependências de desenvolvimento foram atualizadas para corrigir vulnerabilidades de segurança
 
 ## v0.17.0 (7 de janeiro de 2022)
 
@@ -102,7 +107,7 @@ ht-degree: 48%
 
 ## v0.14 (14 de maio de 2021)
 
-- Adição de uma nova ação Carregar o Target com a [Decisão no dispositivo](./overview.md#load-target-with-on-device-decisioning), que carrega a 2.5 com recursos da Decisão no dispositivo.`at.js`
+- Adição de uma nova ação Carregar o Target com [Decisão no dispositivo](./overview.md#load-target-with-on-device-decisioning), que carrega `at.js` 2.5 com recursos da Decisão no dispositivo
 - Atualizado `at.js` para 2.5
 
 

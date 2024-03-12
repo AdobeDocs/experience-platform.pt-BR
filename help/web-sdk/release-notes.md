@@ -3,9 +3,9 @@ title: Notas de versão do SDK da Web da Adobe Experience Platform
 description: As notas de versão mais recentes do SDK da Web da Adobe Experience Platform.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;notas de versão;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 58cd6300307881c3de7c52e07c401bf2ed908517
+source-git-commit: bc48f45bd6b9b7f7cc446ae84d712376292718d2
 workflow-type: tm+mt
-source-wordcount: '1725'
+source-wordcount: '1777'
 ht-degree: 1%
 
 ---
@@ -15,6 +15,12 @@ ht-degree: 1%
 
 Este documento aborda as notas de versão do Adobe Experience Platform Web SDK.
 Para obter as notas de versão mais recentes da extensão de tag do SDK da Web, consulte o [Notas de versão da extensão de tag do SDK da Web](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
+
+>[!IMPORTANT]
+>
+>Google [anunciou](https://developers.google.com/privacy-sandbox/3pcd/prepare/prepare-for-phaseout) planeja descontinuar o suporte do Chrome para cookies de terceiros no segundo semestre de 2024. Consequentemente, os cookies de terceiros não serão mais compatíveis com a maioria dos navegadores.
+>
+>Quando essa alteração for implementada, o Adobe descontinuará o suporte para o `demdex` cookie atualmente compatível com o SDK da Web.
 
 ## Versão 2.19.2 - 10 de janeiro de 2024
 

@@ -2,7 +2,7 @@
 title: Notas de versão da Adobe Experience Platform
 description: As notas da versão de janeiro de 2024 da Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 16e49628df73d5ce97ef890dbc0a6f2c8e7de346
+source-git-commit: aa33f7006b1a3abf7d19ffe3e0d5e5ee39fe9a5d
 workflow-type: tm+mt
 source-wordcount: '1242'
 ht-degree: 22%
@@ -25,10 +25,11 @@ Atualizações dos recursos existentes no Experience Platform:
 ## Alertas {#alerts}
 
 O Experience Platform permite assinar alertas baseados em eventos para várias atividades da Platform. É possível assinar diferentes regras de alerta por meio da [!UICONTROL Alertas] na interface do usuário da Platform e podem optar por receber mensagens de alerta na própria interface ou por notificações por email.
+
 **Recursos novos ou atualizados**
 
-| Recurso | Descrição | 
-| --- | --- | 
+| Recurso | Descrição |
+| --- | --- |
 | Guia Histórico de alertas | Como administrador de Experience Platform, você pode usar o recurso gerenciar assinantes de alertas para atribuir um alerta a uma ID de usuário Adobe, endereço de email externo ou uma lista de grupo de email. Para obter mais informações, consulte [documentação da interface de alertas](../../observability/alerts/ui.md) para obter mais informações sobre a guia histórico. |
 
 {style="table-layout:auto"}

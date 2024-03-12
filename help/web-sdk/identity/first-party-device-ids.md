@@ -2,12 +2,13 @@
 title: IDs de dispositivo próprio no SDK da Web
 description: Saiba como configurar IDs de dispositivo primário (FPIDs) para o Adobe Experience Platform Web SDK.
 exl-id: c3b17175-8a57-43c9-b8a0-b874fecca952
-source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
+source-git-commit: 9f10d48357b7fb28dc54375a4d077d0a1961a746
 workflow-type: tm+mt
-source-wordcount: '1734'
+source-wordcount: '1990'
 ht-degree: 0%
 
 ---
+
 
 # IDs de dispositivo próprio no SDK da Web
 
@@ -47,6 +48,28 @@ Para enviar um FPID para um visitante do site para a Rede de borda da Platform, 
 A Platform Edge Network aceita somente IDs que estejam em conformidade com a [Formato UUIDv4](https://datatracker.ietf.org/doc/html/rfc4122). As IDs de dispositivo que não estão no formato UUIDv4 serão rejeitadas.
 
 A geração de uma UUID quase sempre resultará em uma ID exclusiva e aleatória, com a probabilidade de ocorrência de uma colisão sendo negligenciável. UUIDv4 não pode ser propagado usando endereços IP ou quaisquer outras informações pessoais identificáveis (PII). Os UUIDs são universais e as bibliotecas podem ser encontradas para praticamente todas as linguagens de programação gerá-los.
+
+## Definição de um cookie de ID próprio na interface dos fluxos de dados {#setting-cookie-datastreams}
+
+Você pode especificar um nome de cookie na interface dos Fluxos de dados, onde a variável [!DNL FPID] em vez de ter que ler o valor do cookie e incluir o FPID no Mapa de identidade.
+
+>[!IMPORTANT]
+>
+>Esse recurso exige que você tenha [Coleta de dados próprios](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=en) ativado.
+
+Consulte a [documentação dos datastreams](../../datastreams/configure.md) para obter informações detalhadas sobre como configurar um fluxo de dados.
+
+Ao configurar seu fluxo de dados, ative a opção **[!UICONTROL Cookie de ID próprio]** opção. Essa configuração informa à Rede de borda a consultar um cookie especificado ao pesquisar uma ID de dispositivo primário, em vez de pesquisar esse valor na variável [Mapa de identidade](#identityMap).
+
+Consulte a documentação em [cookies próprios](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=pt-BR) para obter mais detalhes sobre como eles trabalham com o Adobe Experience Cloud.
+
+![Imagem da interface do usuário da plataforma mostrando a configuração do fluxo de dados, destacando a configuração do cookie de ID primária](../assets/first-party-id-datastreams.png)
+
+Ao ativar essa configuração, você deve fornecer o nome do cookie no qual a ID deve ser armazenada.
+
+Ao usar IDs primárias, não é possível executar sincronizações de ID de terceiros. As sincronizações de ID de terceiros dependem do [!DNL Visitor ID] serviço e o `UUID` por esse serviço. Ao usar a funcionalidade de ID própria, a ECID é gerada sem o uso da [!DNL Visitor ID] o que torna impossíveis as sincronizações de ID de terceiros.
+
+Quando você usa IDs primárias, os recursos de Audience Manager direcionados para ativação em plataformas de parceiros não são compatíveis, considerando que as sincronizações de ID de parceiro de Audience Manager se baseiam principalmente em `UUIDs` ou `DIDs`. A ECID derivada de uma ID própria não está vinculada a uma `UUID`, tornando-o não endereçável.
 
 ## Configurar um cookie usando seu próprio servidor
 

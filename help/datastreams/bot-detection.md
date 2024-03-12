@@ -4,9 +4,9 @@ description: Saiba como configurar a detecção de bot para sequências de dados
 hide: true
 hidefromtoc: true
 exl-id: 6b221d97-0145-4d3e-a32d-746d72534add
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: 7757cd869607bf25bff1e9861732cf4b80b38966
 workflow-type: tm+mt
-source-wordcount: '1320'
+source-wordcount: '1367'
 ht-degree: 0%
 
 ---
@@ -36,6 +36,8 @@ Essa pontuação de bot ajuda as soluções que recebem a solicitação a identi
 >[!IMPORTANT]
 >
 >A detecção de bot não elimina nenhuma solicitação de bot. Ele atualiza somente o esquema XDM com a pontuação de bot e encaminha o evento para o [serviço de sequência de dados](configure.md) que você configurou.
+>
+>As soluções de Adobe podem lidar com a pontuação de bot de maneiras diferentes. Por exemplo, o Adobe Analytics usa seu próprio [serviço de filtragem de bot](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/bot-removal/bot-rules.html) e não usa a pontuação definida pela Rede de borda. Os dois serviços usam o mesmo [Lista de bot IAB](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/), portanto, a pontuação de bot é idêntica.
 
 As regras de detecção de bot podem levar até 15 minutos para se propagarem pela Rede de borda após serem criadas.
 

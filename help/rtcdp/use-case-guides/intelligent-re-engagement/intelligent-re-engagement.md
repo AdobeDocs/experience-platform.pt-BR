@@ -3,7 +3,7 @@ title: Reengajamento inteligente
 description: Ofereça experiências atraentes e conectadas durante os principais momentos de conversão para engajar novamente clientes pouco frequentes de forma inteligente.
 feature: Use Cases
 exl-id: 13f6dbc9-7471-40bf-824d-27922be0d879
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: 151695e348764a25f2b2e986dcbdc1970a67ad47
 workflow-type: tm+mt
 source-wordcount: '3772'
 ht-degree: 4%
@@ -60,7 +60,7 @@ Abaixo está uma visão geral de alto nível dos três exemplos de cenários de 
 O cenário de navegação de produto abandonado segmenta a navegação de produto abandonada no site e no aplicativo móvel. Esse cenário é acionado quando um produto foi visualizado, mas não foi comprado ou adicionado ao carrinho. Neste exemplo, o engajamento da marca é acionado após três dias se não houver adições à lista nas últimas 24 horas.<p>![Visão geral visual de alto nível do cenário de navegação inteligente de produto abandonada do cliente.](../intelligent-re-engagement/images/re-engagement-journey.png "Visão geral visual de alto nível do cenário de navegação inteligente de produto abandonada do cliente."){width="1920" zoomable="yes"}</p>
 
 1. Crie esquemas e conjuntos de dados e ative para [!UICONTROL Perfil].
-2. Você assimila dados no Experience Platform via SDK da Web, SDK móvel ou API. O Conector de dados do Analytics também pode ser usado, mas pode resultar em latência de jornada.
+2. Você assimila dados no Experience Platform via SDK da Web, SDK móvel ou API. O Conector de origem do Analytics também pode ser usado, mas pode resultar na latência da jornada.
 3. Você assimila dados adicionais ativados por perfil, que podem ser vinculados ao visitante da Web e do aplicativo móvel autenticado por meio de gráficos de identidade.
 4. Você cria públicos-alvo focados a partir da lista de perfis para verificar se uma **cliente** fez um compromisso nos últimos três dias.
 5. Você cria uma jornada de navegação de produto abandonada no [!DNL Adobe Journey Optimizer].
@@ -72,7 +72,7 @@ O cenário de navegação de produto abandonado segmenta a navegação de produt
 O cenário de carrinho abandonado se aplica quando os produtos foram colocados no carrinho, mas ainda não foram comprados no site e no aplicativo móvel. Além disso, as campanhas de Mídia paga são iniciadas e interrompidas usando esse método.<p>![Visão geral visual de alto nível do cenário de carrinho abandonado pelo cliente.](../intelligent-re-engagement/images/abandoned-cart-journey.png "Visão geral visual de alto nível do cenário de carrinho abandonado pelo cliente."){width="1920" zoomable="yes"}</p>
 
 1. Crie esquemas e conjuntos de dados, a habilitação para [!UICONTROL Perfil].
-2. Você assimila dados no Experience Platform via SDK da Web, SDK móvel ou API. O Conector de dados do Analytics também pode ser usado, mas pode resultar em latência de jornada.
+2. Você assimila dados no Experience Platform via SDK da Web, SDK móvel ou API. O Conector de origem do Analytics também pode ser usado, mas pode resultar na latência da jornada.
 3. Você assimila dados adicionais ativados por perfil, que podem ser vinculados ao visitante da Web e do aplicativo móvel autenticado por meio de gráficos de identidade.
 4. Você cria públicos-alvo focados a partir da lista de perfis para verificar se uma **cliente** colocou um item no carrinho, mas não concluiu a compra. A variável **[!UICONTROL Adicionar ao carrinho]** O evento inicia um temporizador que aguarda 30 minutos e verifica a compra. Se nenhuma compra tiver sido feita, a variável **cliente** é adicionado à **[!UICONTROL Abandonar carrinho]** públicos-alvo.
 5. Você cria uma jornada de carrinho abandonada no [!DNL Adobe Journey Optimizer].
@@ -84,7 +84,7 @@ O cenário de carrinho abandonado se aplica quando os produtos foram colocados n
 O cenário de confirmação de pedido se concentra nas compras de produtos feitas pelo site e pelo aplicativo móvel.<p>![Visão geral visual de alto nível do cenário de confirmação de pedido do cliente.](../intelligent-re-engagement/images/order-confirmation-journey.png "Visão geral visual de alto nível do cenário de confirmação de pedido do cliente."){width="1920" zoomable="yes"}</p>
 
 1. Crie esquemas e conjuntos de dados e ative para [!UICONTROL Perfil].
-2. Você assimila dados no Experience Platform via SDK da Web, SDK móvel ou API. O Conector de dados do Analytics também pode ser usado, mas pode resultar em latência de jornada.
+2. Você assimila dados no Experience Platform via SDK da Web, SDK móvel ou API. O Conector de origem do Analytics também pode ser usado, mas pode resultar na latência da jornada.
 3. Você assimila dados adicionais ativados por perfil, que podem ser vinculados ao visitante da Web e do aplicativo móvel autenticado por meio de gráficos de identidade.
 4. Você cria uma jornada de confirmação no [!DNL Adobe Journey Optimizer].
 5. [!DNL Adobe Journey Optimizer] O envia uma mensagem de confirmação de pedido usando o canal preferencial.

@@ -2,9 +2,9 @@
 title: Conecte sua conta do Salesforce usando a interface do Experience Platform
 description: Saiba como conectar sua conta do Salesforce e trazer seus dados de CRM para o Experience Platform usando a interface do usuário.
 exl-id: b67fa4c4-d8ff-4d2d-aa76-5d9d32aa22d6
-source-git-commit: 57cdcbd5018e7f57261f09c6bddf5e2a8dcfd0d5
+source-git-commit: a5ecd4ab1c543805870b846cfe0fccc5474333d4
 workflow-type: tm+mt
-source-wordcount: '524'
+source-wordcount: '542'
 ht-degree: 0%
 
 ---
@@ -34,7 +34,7 @@ Para autenticar seu [!DNL Salesforce] conta em relação ao Experience Platform,
 | `username` | O nome de usuário para o [!DNL Salesforce] conta de usuário. |
 | `password` | A senha para o [!DNL Salesforce] conta de usuário. |
 | `securityToken` | O token de segurança para o [!DNL Salesforce] conta de usuário. |
-| `apiVersion` | (Opcional) A versão da API REST do [!DNL Salesforce] instância que você está usando. Se esse campo ficar em branco, o Experience Platform usará automaticamente a versão mais recente disponível. |
+| `apiVersion` | (Opcional) A versão da API REST do [!DNL Salesforce] instância que você está usando. O valor da versão da API deve ser formatado com um decimal. Por exemplo, se você estiver usando a versão da API `52`, você deverá inserir o valor como `52.0` Se esse campo ficar em branco, o Experience Platform usará automaticamente a versão mais recente disponível. |
 
 Para obter mais informações sobre autenticação, consulte [este [!DNL Salesforce] guia de autenticação](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/quickstart_oauth.htm).
 

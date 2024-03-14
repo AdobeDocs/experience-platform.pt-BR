@@ -5,7 +5,7 @@ audience: user
 user-guide-title: Manual da Real-time Customer Data Platform
 user-guide-description: Reúna dados conhecidos e anônimos de várias fontes corporativas para criar perfis de clientes, e a partir deles criar segmentos de público-alvo e ativá-los para destinos de terceiros.
 role: Admin
-source-git-commit: 472852b383f117281fd235ad39dedba401df7679
+source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
 workflow-type: tm+mt
 source-wordcount: '293'
 ht-degree: 69%
@@ -85,5 +85,5 @@ ht-degree: 69%
    * Personalização, insights e envolvimento {#personalization-insights-engagement}
       * [Reenvolva seus clientes de forma inteligente](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md)
       * [Reenvolva seus clientes de forma inteligente: exemplos da Luma](/help/rtcdp/use-case-guides/intelligent-re-engagement/use-cases-luma.md)
-* [Notas de versão da Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=pt-BR)
+* [Notas de versão da Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
 * [Glossário da Experience Platform](https://www.adobe.com/go/platform-glossary-en)

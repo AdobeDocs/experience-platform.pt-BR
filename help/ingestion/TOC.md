@@ -5,10 +5,10 @@ breadcrumb-title: Guia da Ingestão de dados
 user-guide-description: Traga seus dados para a Experience Platform por meio de uma assimilação em lote ou por transmissão.
 feature: Data Ingestion
 role: Developer
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
 workflow-type: tm+mt
 source-wordcount: '145'
-ht-degree: 21%
+ht-degree: 20%
 
 ---
 
@@ -49,4 +49,4 @@ ht-degree: 21%
 - [Conectores de origem](source-connectors.md)
 - [Referência da API de assimilação em lote](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/)
 - [Referência da API de assimilação de fluxo](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/)
-- [Notas de versão da Platform](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=pt-BR)
+- [Notas de versão da Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

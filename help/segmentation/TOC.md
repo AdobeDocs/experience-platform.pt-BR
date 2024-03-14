@@ -5,10 +5,10 @@ breadcrumb-title: Guia do Serviço de segmentação
 user-guide-description: Crie públicos-alvo a partir dos dados do perfil do cliente em tempo real usando definições de segmento geradas pela Adobe Experience Platform ou fontes externas.
 feature: Segments
 role: User
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
 workflow-type: tm+mt
 source-wordcount: '183'
-ht-degree: 36%
+ht-degree: 35%
 
 ---
 
@@ -73,4 +73,4 @@ ht-degree: 36%
    - [Impor a conformidade de uso de dados para segmentos](tutorials/governance.md)
 - [Perguntas frequentes](./faq.md)
 - [Referência da API](https://www.adobe.io/experience-platform-apis/references/segmentation/)
-- [Notas de versão da Platform](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=pt-BR)
+- [Notas de versão da Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

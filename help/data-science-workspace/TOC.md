@@ -6,7 +6,7 @@ user-guide-description: Use o aprendizado de máquina para desenvolver, treinar 
 feature: Data Science Workspace
 solution: Experience Platform
 role: User, Developer
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
 workflow-type: tm+mt
 source-wordcount: '225'
 ht-degree: 18%
@@ -65,4 +65,4 @@ ht-degree: 18%
    * [Programar treinamento automatizado e pontuação em um serviço (UI)](models-recipes/schedule-models-ui.md)
 * [Manual de solução de problemas](troubleshooting-guide.md)
 * [Referência da API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)
-* [Notas de versão da Platform](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=pt-BR)
+* [Notas de versão da Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

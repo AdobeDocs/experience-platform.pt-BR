@@ -3,9 +3,9 @@ title: Reengajamento inteligente
 description: Ofereça experiências atraentes e conectadas durante os principais momentos de conversão para engajar novamente clientes pouco frequentes de forma inteligente.
 feature: Use Cases
 exl-id: 13f6dbc9-7471-40bf-824d-27922be0d879
-source-git-commit: 151695e348764a25f2b2e986dcbdc1970a67ad47
+source-git-commit: 6991bad03b298373a0d55258dacc60ea8d797fd8
 workflow-type: tm+mt
-source-wordcount: '3772'
+source-wordcount: '3894'
 ht-degree: 4%
 
 ---
@@ -147,7 +147,7 @@ Este grupo de campos permite testar sua jornada antes de ela ser publicada, usan
 
 #### Esquema de transações digitais do cliente
 
-Esse esquema é usado para estruturar e fazer referência aos dados do evento que compõem a atividade do cliente que ocorre no site ou nas plataformas digitais associadas. Normalmente, esses dados são assimilados na [!DNL Adobe Experience Platform] via [SDK da Web](/help/web-sdk/home.md) e é necessário fazer referência aos vários eventos de navegação e conversão usados para acionar jornadas, análises detalhadas de clientes online e recursos aprimorados de público-alvo.
+Esse esquema é usado para estruturar e fazer referência aos dados do evento que compõem a atividade do cliente que ocorre no site ou nas plataformas digitais associadas. Normalmente, esses dados são assimilados na [!DNL Adobe Experience Platform] via [SDK da Web](/help/web-sdk/home.md) e é necessário para fazer referência aos vários eventos de navegação e conversão usados para acionar jornadas, análises detalhadas de clientes online, recursos aprimorados de público-alvo e mensagens personalizadas.
 
 O schema de transações digitais do cliente é representado por um [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) classe.
 
@@ -178,6 +178,25 @@ A variável [Detalhes da ID do usuário final](/help/xdm/field-groups/event/endu
 
 +++
 
++++Detalhes do comércio (Grupo de campos)
+
+A variável [Detalhes do comércio](/help/xdm/field-groups/event/commerce-details.md) o grupo de campos é usado para descrever dados de comércio, como informações do produto (SKU, nome, quantidade) e operações padrão do carrinho (pedido, check-out, abandono).
+
+| Campos | Descrição |
+| --- | --- |
+| `commerce.cart.cartID` | Uma ID para o carrinho de compras. |
+| `commerce.order.orderType` | Um objeto que descreve o tipo de pedido do produto. |
+| `commerce.order.payments.paymentAmount` | Um objeto que descreve o valor do pagamento da ordem do produto. |
+| `commerce.order.payments.paymentType` | Um objeto que descreve o tipo de pagamento de ordem de produto. |
+| `commerce.order.payments.transactionID` | Um ID de transação de ordem de produto de objeto. |
+| `commerce.order.purchaseID` | Uma ID de compra da ordem de produto do objeto. |
+| `productListItems.name` | Uma lista de nomes de itens que representam os produtos selecionados por um cliente. |
+| `productListItems.priceTotal` | O preço total da lista de itens que representam os produtos selecionados por um cliente. |
+| `productListItems.product` | Os produtos selecionados. |
+| `productListItems.quantity` | A quantidade de itens da lista que representam os produtos selecionados por um cliente. |
+
++++
+
 +++Detalhes de auditoria do sistema de origem externo (grupo de campos)
 
 Atributos de auditoria do sistema de origem externa é um tipo de dados padrão do Experience Data Model (XDM) que captura os detalhes de auditoria sobre um sistema de origem externa.
@@ -186,7 +205,7 @@ Atributos de auditoria do sistema de origem externa é um tipo de dados padrão 
 
 #### Esquema de transações offline do cliente
 
-Esse esquema é usado para estruturar e fazer referência aos dados do evento que compõem a atividade do cliente que ocorre em plataformas fora do site. Normalmente, esses dados são assimilados na [!DNL Adobe Experience Platform] de um PDV (ou sistema semelhante) e geralmente transmitido para a Platform por meio de uma conexão de API. Seu objetivo é fazer referência aos vários eventos de conversão offline usados para acionar jornadas, análises profundas online e offline do cliente e recursos aprimorados de público-alvo.
+Esse esquema é usado para estruturar e fazer referência aos dados do evento que compõem a atividade do cliente que ocorre em plataformas fora do site. Normalmente, esses dados são assimilados na [!DNL Adobe Experience Platform] de um PDV (ou sistema semelhante) e geralmente transmitido para a Platform por meio de uma conexão de API. Seu objetivo é fazer referência aos vários eventos de conversão offline usados para acionar jornadas, análises profundas online e offline do cliente, recursos aprimorados de público-alvo e mensagens personalizadas.
 
 O schema de transações offline do cliente é representado por um [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) classe.
 
@@ -346,7 +365,7 @@ O evento a seguir é usado para o cenário de navegação de produto abandonada 
 Os seguintes campos e condições são obrigatórios ao configurar este público-alvo:
 
 * `eventType: commerce.productViews`
-* E `THEN` (evento sequencial) excluir `eventType: commerce.productListAdds` ou `application.launch` ou `web.webpagedetails.pageViews` ou `commerce.purchases` (isso inclui online e offline)
+* E `THEN` (evento sequencial) excluir `eventType: commerce.productListAdds` E `application.launch` E `web.webpagedetails.pageViews` E `commerce.purchases` (isso inclui online e offline)
    * `Timestamp: > 3 days after productView`
 * `Timestamp: > 4 days`
 
@@ -359,7 +378,7 @@ O evento a seguir é usado para o cenário de navegação de produto abandonado 
 Os seguintes campos e condições são obrigatórios ao configurar este público-alvo:
 
 * `eventType: commerce.productViews`
-* E `THEN` (evento sequencial) incluir `eventType: commerce.productListAdds` ou `application.launch` ou `web.webpagedetails.pageViews` ou `commerce.purchases` (isso inclui online e offline)
+* E `THEN` (evento sequencial) incluir `eventType: commerce.productListAdds` OU `application.launch` OU `web.webpagedetails.pageViews` OU `commerce.purchases` (isso inclui online e offline)
    * `Timestamp: > 3 days after productView`
 * `Timestamp: > 4 days`
 +++
@@ -370,7 +389,7 @@ O evento a seguir é usado para o cenário de navegação de produto abandonado 
 
 Os seguintes campos e condições são obrigatórios ao configurar este público-alvo:
 
-* `eventType: commerce.productListAdds or application.launch or web.webpagedetails.pageViews or commerce.purchases`
+* `eventType: commerce.productListAdds OR application.launch OR web.webpagedetails.pageViews OR commerce.purchases`
    * `Timestamp: in last 1 day` (Transmissão)
 
 +++
@@ -381,7 +400,7 @@ O evento a seguir é usado para o cenário de navegação de produto abandonado 
 
 Os seguintes campos e condições são obrigatórios ao configurar este público-alvo:
 
-* `EventType: commerce.productListAdds or application.launch or web.webpagedetails.pageViews or commerce.purchases`
+* `EventType: commerce.productListAdds OR application.launch OR web.webpagedetails.pageViews OR commerce.purchases`
    * `Timestamp: in last 3 days` (Lote)
 
 +++
@@ -395,7 +414,7 @@ Os eventos a seguir são usados para o cenário de carrinho abandonado em que os
 Os seguintes campos e condições são obrigatórios ao configurar este público-alvo:
 
 * `eventType: commerce.productListAdds`
-   * `Timestamp: >= 1 days before now and <= 4 days before now `
+   * `Timestamp: >= 1 days before now AND <= 4 days before now `
 * `eventType: commerce.purchases`
    * `Timestamp: <= 4 days before now`
 * `eventType: commerce.productListRemovals`

@@ -2,10 +2,10 @@
 title: Personalização via Adobe Target
 description: Saiba como usar a API do servidor para fornecer e renderizar experiências personalizadas criadas no Adobe Target.
 exl-id: c9e2f7ef-5022-4dc4-82b4-ecc210f27270
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: ddffe9bf30741b457f7de1099b50ac1624fca927
 workflow-type: tm+mt
-source-wordcount: '591'
-ht-degree: 2%
+source-wordcount: '664'
+ht-degree: 1%
 
 ---
 
@@ -287,3 +287,9 @@ A tabela abaixo explica os principais elementos dessa parte da resposta.
 | `items[].data.id` | A ID da oferta proposta. | `"id": "282484"` |
 | `items[].data.format` | O formato do conteúdo associado à oferta proposta. | `"format: "application/json` |
 | `items[].data.content` | Conteúdo associado à oferta proposta. Ele será usado para personalização do conteúdo do aplicativo de chamada. | `"content": "<CONTENT CONFIGURED IN TARGET>"` |
+
+## Aplicativo de amostra de personalização do lado do servidor {#sample}
+
+O aplicativo de amostra encontrado em [este URL](https://github.com/adobe/alloy-samples/tree/main/target/personalization-server-side) demonstra o uso do Adobe Experience Platform para obter conteúdo de personalização do Adobe Target. A página da Web muda com base no conteúdo de personalização retornado.
+
+Esta amostra não _não_ dependem de bibliotecas do lado do cliente, como a [!DNL Web SDK] para obter conteúdo de personalização. Em vez disso, ele usa as APIs do Adobe Experience Platform para buscar conteúdo de personalização. Em seguida, a implementação gera o lado do servidor do HTML com base no conteúdo de personalização retornado.

@@ -5,9 +5,9 @@ breadcrumb-title: Guia dos conectores de origem
 user-guide-description: Assimilar dados de várias fontes. Saiba como estruturar, rotular e aprimorar os dados já assimilados.
 feature: Sources
 role: Developer
-source-git-commit: 5e31c127344aeb1a9d3d19b98c43d1502a4af623
+source-git-commit: c05bdceb5092278f6fefb2cb286bf25d97716cf7
 workflow-type: tm+mt
-source-wordcount: '1021'
+source-wordcount: '1027'
 ht-degree: 10%
 
 ---
@@ -93,6 +93,7 @@ ht-degree: 10%
       - [conector Snowflake](connectors/databases/snowflake.md)
       - [Conector do Teradata Vantage](connectors/databases/teradata-vantage.md)
    - Parceiro de dados e identidade {#data-partner}
+      - [Assimilação de dados da Acxiom](connectors/data-partners/acxiom-data-ingestion.md)
       - [Importação de dados de prospecção da Acxiom](connectors/data-partners/acxiom-prospecting-data-import.md)
       - [Resolução de identidade corporativa da Merkury](connectors/data-partners/merkury.md)
    - comércio eletrônico {#ecommerce}
@@ -298,8 +299,9 @@ ht-degree: 10%
          - [Snowflake](tutorials/ui/create/databases/snowflake.md)
          - [Vantagem do teradata](tutorials/ui/create/databases/teradata-vantage.md)
       - Parceiro de dados e identidade {#data-partner}
-         - [Resolução de identidade corporativa da Merkury](tutorials/ui/create/data-partners/merkury.md)
+         - [Assimilação de dados da Acxiom](tutorials/ui/create/data-partners/acxiom-data-ingestion.md)
          - [Importação de dados de prospecção da Acxiom](tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md)
+         - [Resolução de identidade corporativa da Merkury](tutorials/ui/create/data-partners/merkury.md)
       - comércio eletrônico {#ecommerce}
          - [SAP Commerce](tutorials/ui/create/ecommerce/sap-commerce.md)
          - [Shopify](tutorials/ui/create/ecommerce/shopify.md)

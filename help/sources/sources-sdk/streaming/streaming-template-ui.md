@@ -1,13 +1,11 @@
 ---
 title: Modelo de autoatendimento de documentação para interface de usuário do SDK de streaming
 description: Saiba como trazer dados de transmissão de uma origem para a Adobe Experience Platform usando a interface do usuário.
-hide: true
-hidefromtoc: true
 exl-id: 82254be0-fa31-4114-a0ec-179a990e0904
-source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
+source-git-commit: 36de441a68a7cb9248d058e12e6ca3ed60f899ef
 workflow-type: tm+mt
-source-wordcount: '1198'
-ht-degree: 1%
+source-wordcount: '1186'
+ht-degree: 0%
 
 ---
 
@@ -101,7 +99,7 @@ Depois que os dados de origem forem mapeados com sucesso, selecione **[!UICONTRO
 
 ![A etapa de mapeamento do fluxo de trabalho de origens.](../assets/streaming/mapping.png)
 
-## Consulte a seção
+## Revisão
 
 A variável **[!UICONTROL Revisão]** é exibida, permitindo que você revise seu novo fluxo de dados antes de ele ser criado. Os detalhes são agrupados nas seguintes categorias:
 

@@ -1,12 +1,10 @@
 ---
 title: Crie uma nova especificação de conexão para o SDK de streaming usando a API do serviço de fluxo
 description: O documento a seguir fornece etapas sobre como criar uma especificação de conexão usando a API de Serviço de Fluxo e integrar uma nova origem por meio de Origens de Autoatendimento.
-hide: true
-hidefromtoc: true
 exl-id: ad8f6004-4e82-49b5-aede-413d72a1482d
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 36de441a68a7cb9248d058e12e6ca3ed60f899ef
 workflow-type: tm+mt
-source-wordcount: '748'
+source-wordcount: '736'
 ht-degree: 1%
 
 ---
@@ -27,7 +25,7 @@ Para criar uma nova fonte de transmissão usando Fontes de autoatendimento, prim
 
 Depois de fornecido, você deve estruturar seu repositório Git privado da seguinte maneira:
 
-* Fontes
+* Origens
    * {your_source}
       * Artefatos
          * {your_source}-category.txt

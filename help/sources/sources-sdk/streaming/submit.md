@@ -1,12 +1,10 @@
 ---
 title: Testar E Enviar Sua Fonte
 description: O documento a seguir fornece etapas sobre como testar e verificar uma nova fonte usando a API do Serviço de fluxo e integrar uma nova fonte por meio de Fontes de autoatendimento (SDK de transmissão).
-hide: true
-hidefromtoc: true
 exl-id: 2ae0c3ad-1501-42ab-aaaa-319acea94ec2
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 36de441a68a7cb9248d058e12e6ca3ed60f899ef
 workflow-type: tm+mt
-source-wordcount: '1249'
+source-wordcount: '1245'
 ht-degree: 0%
 
 ---
@@ -71,7 +69,7 @@ Com a nova fonte agora disponível na sandbox, você deve seguir o fluxo de trab
 
 ![O catálogo de fontes exibindo a nova fonte de transmissão.](../assets/testing/catalog-test.png)
 
-A variável [!UICONTROL Adicionar dados] é exibida. Para testar se a origem pode transmitir dados, use o lado esquerdo da interface para fazer upload [uma amostra de dados JSON](../assets/testing/raw.json.zip). Depois que os dados forem carregados, o lado direito da interface será atualizado para uma pré-visualização da hierarquia de arquivos dos dados. Selecionar **[!UICONTROL Próxima]** para continuar.
+A variável [!UICONTROL Adicionar dados] é exibida. Para testar se a origem pode transmitir dados, use o lado esquerdo da interface para fazer upload [uma amostra de dados JSON](../assets/testing/raw.json.zip). Depois que os dados forem carregados, o lado direito da interface será atualizado para uma pré-visualização da hierarquia de arquivos dos dados. Selecione **[!UICONTROL Próximo]** para continuar.
 
 ![A etapa adicionar dados no fluxo de trabalho de fontes, onde é possível fazer upload e visualizar os dados antes da assimilação.](../assets/testing/add-data-test.png)
 

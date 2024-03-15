@@ -3,7 +3,7 @@ title: Endpoint da API de Ordem de Serviço
 description: O ponto de extremidade /workorder na API de higiene de dados permite gerenciar de forma programática tarefas de exclusão para identidades.
 role: Developer
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 4e92b6937c4fa383b398ec99faa6d97907c128d6
 workflow-type: tm+mt
 source-wordcount: '1281'
 ht-degree: 2%
@@ -126,9 +126,9 @@ Uma resposta bem-sucedida retorna os detalhes da exclusão do registro.
 
 {style="table-layout:auto"}
 
-## Recuperar o status de uma exclusão de registro (#lookup)
+## Recuperar o status de uma exclusão de registro {#lookup}
 
-Depois [criando uma solicitação de exclusão de registro](#create), é possível verificar o status usando uma solicitação do GET.
+Depois que você [criar uma solicitação de exclusão de registro](#create), é possível verificar o status usando uma solicitação do GET.
 
 **Formato da API**
 

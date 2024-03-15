@@ -4,24 +4,24 @@ solution: Experience Platform
 title: Aplicação automática de política
 description: Este documento aborda como as políticas de uso de dados são aplicadas automaticamente ao ativar públicos para destinos no Experience Platform.
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: f4f4deda02c96e567cbd0815783f192d1c54096c
+source-git-commit: 4e92b6937c4fa383b398ec99faa6d97907c128d6
 workflow-type: tm+mt
-source-wordcount: '1899'
+source-wordcount: '2012'
 ht-degree: 0%
 
 ---
 
 # Aplicação automática de política
 
+Os rótulos e políticas de uso de dados estão disponíveis para todos os usuários do Adobe Experience Platform. Defina políticas de uso de dados e aplique rótulos de uso de dados para garantir que todos os dados confidenciais, identificáveis ou contratuais sejam tratados com precisão. Essas medidas ajudam a aplicar as regras de governança de dados de sua organização sobre como os dados podem ser acessados, processados, armazenados e compartilhados.
+
+Para ajudar a proteger sua organização contra possíveis riscos e passivos, a Platform impõe automaticamente políticas de uso caso ocorram violações ao ativar públicos para destinos.
+
 >[!IMPORTANT]
 >
->A aplicação automática de políticas só está disponível para organizações que compraram **Adobe Healthcare Shield** ou **Proteção de segurança e privacidade do Adobe**.
+>As políticas de consentimento e a aplicação automática da política de consentimento só estão disponíveis para organizações que compraram **Adobe Healthcare Shield** ou **Proteção de segurança e privacidade do Adobe**.
 
-Depois que os dados forem rotulados e as políticas de uso de dados forem definidas, você poderá impor a conformidade do uso de dados com as políticas. Ao ativar públicos-alvo para destinos, o Adobe Experience Platform aplica automaticamente políticas de uso caso ocorram violações.
-
->[!NOTE]
->
->Este documento se concentra na aplicação da governança de dados e das políticas de consentimento. Para obter informações sobre políticas de controle de acesso, consulte a documentação em [controle de acesso baseado em atributos](../../access-control/abac/overview.md).
+Este documento se concentra na aplicação da governança de dados e das políticas de consentimento. Para obter informações sobre políticas de controle de acesso, consulte a documentação em [controle de acesso baseado em atributos](../../access-control/abac/overview.md).
 
 ## Pré-requisitos
 
@@ -94,27 +94,31 @@ Se ocorrer uma violação de política ao tentar ativar um público (ou [fazer e
 
 Selecione uma violação de política na coluna esquerda do popover para exibir detalhes dessa violação.
 
-![](../images/enforcement/violation-policy-select.png)
+![Uma caixa de diálogo que indica que ocorreu uma violação de política com o nome da política destacado.](../images/enforcement/violation-policy-select.png)
 
 A mensagem de violação fornece um resumo da política que foi violada, incluindo as condições que a política está configurada para verificar, a ação específica que acionou a violação e uma lista de possíveis resoluções para a ocorrência.
 
-![](../images/enforcement/violation-summary.png)
+![Uma caixa de diálogo de violação de política com o resumo da violação destacado.](../images/enforcement/violation-summary.png)
 
 Um gráfico de linhagem de dados é exibido abaixo do resumo da violação, permitindo visualizar quais conjuntos de dados, políticas de mesclagem, públicos-alvo e destinos estavam envolvidos na violação de política. A entidade que você está alterando no momento está destacada no gráfico, indicando qual ponto no fluxo está causando a violação. Você pode selecionar um nome de entidade no gráfico para abrir a página de detalhes da entidade em questão.
 
-![](../images/enforcement/data-lineage.png)
+![Uma caixa de diálogo de violação de política com o gráfico de linhagem de dados em destaque.](../images/enforcement/data-lineage.png)
 
 Você também pode usar a variável **[!UICONTROL Filtro]** ícone (![](../images/enforcement/filter.png)) para filtrar as entidades exibidas por categoria. Pelo menos duas categorias devem ser selecionadas para que os dados sejam exibidos.
 
-![](../images/enforcement/lineage-filter.png)
+![Uma caixa de diálogo de violação de política com o filtro de linhagem de dados e o menu suspenso destacados.](../images/enforcement/lineage-filter.png)
 
 Selecionar **[!UICONTROL Exibição de lista]** para exibir a linhagem de dados como uma lista. Para voltar para o gráfico visual, selecione **[!UICONTROL Exibição de caminho]**.
 
-![](../images/enforcement/list-view.png)
+![Uma caixa de diálogo de violação de política com a exibição do caminho de linhagem de dados em destaque.](../images/enforcement/list-view.png)
 
 ### Avaliação da política de consentimento {#consent-policy-evaluation}
 
-Se você tiver [políticas de consentimento criadas](../policies/user-guide.md#consent-policy) e estiverem ativando um público-alvo para um destino, você poderá ver como suas políticas de consentimento afetam a porcentagem de perfis incluídos na ativação.
+Ao ativar um público-alvo para um destino, você pode ver como [políticas de consentimento](../policies/user-guide.md#consent-policy) afetam porcentagens diferentes dos perfis incluídos na ativação.
+
+>[!NOTE]
+>
+>As políticas de consentimento só estão disponíveis para organizações que compraram o Adobe Healthcare Shield ou o Adobe Privacy &amp; Security Shield.
 
 #### Aprimoramento da política de consentimento para mídia paga {#consent-policy-enhancement}
 

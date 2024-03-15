@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Visão geral da interface do Privacy Service
 description: Introdução ao uso da interface do usuário do Privacy Service para coordenar e monitorar solicitações de privacidade em vários aplicativos Experience Cloud.
 exl-id: 5624691f-0b9a-4565-8277-ea273a0d239a
-source-git-commit: 20a737cf36bf08415a15db78599f36659207ace1
+source-git-commit: dbdeabf9036f1736a5b43d9057e77b82baf915cd
 workflow-type: tm+mt
 source-wordcount: '226'
 ht-degree: 18%
@@ -18,7 +18,7 @@ ht-degree: 18%
 >title="Solicitações do titular de dados"
 >abstract="Esse widget mostra o número de solicitações enviadas e concluídas do titular dos dados processadas pelo Privacy Service para um determinado dia. Para obter mais informações sobre os processos do Privacy Service, selecione **Solicitações** no painel de navegação esquerdo."
 
-A interface do Privacy Service [!DNL Privacy Service] O permite coordenar solicitações de privacidade e conformidade em vários aplicativos da Adobe Experience Cloud.
+A interface do usuário do Privacy Service permite coordenar solicitações de privacidade e conformidade em vários aplicativos da Adobe Experience Cloud.
 
 >[!NOTE]
 >

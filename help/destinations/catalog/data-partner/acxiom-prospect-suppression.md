@@ -3,9 +3,9 @@ title: Acxiom Prospect-Suppression
 description: Exporte seus públicos-alvo primários para o destino da Acxiom, para permitir que a Acxiom suprima clientes conhecidos ou convertidos. Em seguida, use o conector de origem da Acxiom para assimilar e ativar listas de clientes potenciais da Acxiom, com seus clientes conhecidos ou convertidos removidos.
 last-substantial-update: 2024-03-14T00:00:00Z
 badge: Beta
-source-git-commit: c881f8375bc0eccb8e64666a888735c03018421c
+source-git-commit: c35eec2b83f92a7fb165bad13213ec50a6c9863e
 workflow-type: tm+mt
-source-wordcount: '1476'
+source-wordcount: '1466'
 ht-degree: 2%
 
 ---
@@ -102,7 +102,7 @@ Para definir um novo local do Acxiom Managed S3:
 
 ### Conta existente
 
-As contas já definidas usando o cartão Prospect-Suppression da Acxiom serão exibidas em um pop-up de lista e, quando selecionadas, fornecerão detalhes sobre a conta.  Isso é mostrado abaixo no exemplo da interface do usuário, ao navegar para **Destinos** > **Contas**;
+Contas já definidas usando o [!DNL Acxiom Prospect Suppression] destino aparecem em um pop-up de lista. Quando selecionada, você poderá ver os detalhes da conta no painel direito. Veja o exemplo da interface do usuário ao navegar para **[!UICONTROL Destinos]** > **[!UICONTROL Contas]**:
 
 ![Conta existente](../../assets/catalog/data-partner/acxiom/image-destination-account.png)
 
@@ -145,14 +145,14 @@ O processamento requer elementos de nome e endereço, enquanto nem todos os elem
 
 | Campo de destino | Descrição da origem |
 |--------------|-------------------------------------------------------------|
-| name | O valor person.name.fullName em Experience Platform. |
-| firstName | O valor person.name.firstName em Experience Platform. |
-| lastName | O valor person.name.lastName em Experience Platform. |
-| address1 | O valor mailingAddress.street1 em Experience Platform. |
-| address2 | O valor mailingAddress.street2 em Experience Platform. |
-| city | O valor mailingAddress.city em Experience Platform. |
-| estado | O valor mailingAddress.state em Experience Platform. |
-| CEP | O valor mailingAddress.postalCode no Experience Platform. |
+| name | A variável `person.name.fullName` valor em Experience Platform. |
+| firstName | A variável `person.name.firstName` valor em Experience Platform. |
+| lastName | A variável `person.name.lastName` valor em Experience Platform. |
+| address1 | A variável `mailingAddress.street1` valor em Experience Platform. |
+| address2 | A variável `mailingAddress.street2` valor em Experience Platform. |
+| city | A variável `mailingAddress.city` valor em Experience Platform. |
+| estado | A variável `mailingAddress.state` valor em Experience Platform. |
+| CEP | A variável `mailingAddress.postalCode` valor em Experience Platform. |
 
 {style="table-layout:auto"}
 

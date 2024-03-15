@@ -5,9 +5,9 @@ user-guide-description: Ative seus dados conhecidos e desconhecidos para campanh
 description: Este documento lista o índice dos destinos do Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+source-git-commit: c35eec2b83f92a7fb165bad13213ec50a6c9863e
 workflow-type: tm+mt
-source-wordcount: '1215'
+source-wordcount: '1218'
 ht-degree: 5%
 
 ---
@@ -142,6 +142,7 @@ ht-degree: 5%
       * [extensão Audience Manager DIL](./catalog/data-management/aam-dil-extension.md)
    * Parceiro de dados e identidade {#data-partner}
       * [Supressão de prospecto da Acxiom](./catalog/data-partner/acxiom-prospect-suppression.md)
+      * [Aprimoramento de dados da Acxiom](./catalog/data-partner/acxiom-data-enhancement.md)
    * Destinos de comércio eletrônico {#ecommerce}
       * [SAP Commerce](./catalog/ecommerce/sap-commerce.md)
    * Destinos de email {#email}

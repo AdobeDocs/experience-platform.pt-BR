@@ -2,7 +2,7 @@
 title: Assimilação de dados da Acxiom
 description: Saiba como assimilar [!DNL Acxiom] para o Real-time Customer Data Platform, enriqueça perfis primários, melhore o público-alvo e ative em canais de marketing.
 badge: Beta
-source-git-commit: 9419da451616ca7f087ecea7aa66a6c10a474fb3
+source-git-commit: d841975249262fa5908a408e4c27c5f76b92d96e
 workflow-type: tm+mt
 source-wordcount: '473'
 ht-degree: 1%
@@ -54,3 +54,4 @@ As restrições listadas abaixo devem ser consideradas ao nomear o arquivo ou di
 ## Próximas etapas
 
 Ao ler este documento, você concluiu a configuração de pré-requisito necessária para trazer dados do seu [!DNL Acxiom] conta para Experience Platform. Agora você pode prosseguir para o guia em [conectando [!DNL Acxiom Data Ingestion] para Experience Platform usando a interface do usuário](../../tutorials/ui/create/data-partners/acxiom-data-ingestion.md).
+

@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guia da interface do usuário do Serviço de segmentação
 description: Saiba como criar e gerenciar públicos e definições de segmento na interface do usuário do Adobe Experience Platform.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: c6d471d7bb8cb9d5e376cc49c9c89c39e663d7f9
+source-git-commit: 0e8147a9e4589747b212ce1dd0f0bc215f3bab4c
 workflow-type: tm+mt
-source-wordcount: '3933'
+source-wordcount: '4018'
 ht-degree: 3%
 
 ---
@@ -212,6 +212,18 @@ A lista de filtros disponíveis é exibida.
 | [!UICONTROL Data de modificação] | Permite filtrar com base na data da última modificação do público-alvo. Você pode escolher um intervalo de datas para filtrar quando o público-alvo foi modificado pela última vez. |
 
 ![Os filtros disponíveis são exibidos e realçados na página Procurar públicos.](../images/ui/overview/filter-audiences.png)
+
+**Ações em massa** {#bulk-actions}
+
+Além disso, você pode selecionar até 25 públicos diferentes e executar várias ações nesses públicos. Essas ações incluem [mover para uma pasta](#folders), [edição ou aplicação de uma tag](#tags), [aplicação de rótulos de acesso](../../access-control/abac/ui/labels.md), e [excluindo](#browse).
+
+![As opções disponíveis para ações em massa são destacadas.](../images/ui/overview/bulk-actions.png)
+
+Quando você aplica ações em massa a esses públicos, as seguintes condições se aplicam:
+
+- Você **pode** selecione públicos-alvo de páginas diferentes.
+- Você **não é possível** exclua um público-alvo que esteja sendo usado em uma ativação de destino.
+- Se você selecionar um filtro, os públicos selecionados **irá** redefinir.
 
 ### Detalhes do público {#audience-details}
 

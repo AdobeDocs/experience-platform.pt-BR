@@ -1,10 +1,8 @@
 ---
 title: Assimilar dados de pagamentos de seu [!DNL Stripe] conta para Experience Platform usando APIs
 description: Saiba como assimilar dados de pagamentos de sua conta do Stripe para o Experience Platform usando a API de serviço de fluxo
-hide: true
-hidefromtoc: true
 badge: Beta
-source-git-commit: b5e791882ddb7cb8c87c15d4812470b3bbc9a72e
+source-git-commit: f8df3ddb96ad0810a7a46b0a55125336c427aebd
 workflow-type: tm+mt
 source-wordcount: '1998'
 ht-degree: 2%

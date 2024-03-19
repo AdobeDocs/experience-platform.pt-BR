@@ -1,11 +1,11 @@
 ---
 title: Anúncios do Amazon
 description: O Amazon Ads oferece uma variedade de opções para ajudá-lo a atingir suas metas de publicidade para vendedores registrados, fornecedores, fornecedores de livros, autores de KDP (Kindle Direct Publishing), desenvolvedores de aplicativos e/ou agências. A integração do Amazon Ads com o Adobe Experience Platform fornece integração pronta para uso com produtos Amazon Ads, incluindo o Amazon DSP (ADSP). Usando o destino do Amazon Ads no Adobe Experience Platform, os usuários podem definir públicos-alvo do anunciante para direcionamento e ativação no Amazon DSP.
-last-substantial-update: 2023-03-29T00:00:00Z
+last-substantial-update: 2024-02-20T00:00:00Z
 exl-id: 724f3d32-65e0-4612-a882-33333e07c5af
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 24f7463f7005f77f8d93e7cb2c04efc0fb4e3a0b
 workflow-type: tm+mt
-source-wordcount: '1344'
+source-wordcount: '1646'
 ht-degree: 2%
 
 ---
@@ -14,31 +14,44 @@ ht-degree: 2%
 
 ## Visão geral {#overview}
 
-O Amazon Ads oferece uma variedade de opções para ajudá-lo a atingir suas metas de publicidade para vendedores registrados, fornecedores, fornecedores de livros, autores de KDP (Kindle Direct Publishing), desenvolvedores de aplicativos e/ou agências.
+[!DNL Amazon Ads] O oferece uma variedade de opções para ajudar você a atingir suas metas de publicidade para vendedores registrados, fornecedores, fornecedores de livros, autores de Kindle Direct Publishing (KDP), desenvolvedores de aplicativos e/ou agências.
 
-A integração do Amazon Ads com o Adobe Experience Platform fornece integração pronta para uso com produtos Amazon Ads, incluindo o Amazon DSP (ADSP). Usando o destino do Amazon Ads no Adobe Experience Platform, os usuários podem definir públicos-alvo do anunciante para direcionamento e ativação no Amazon DSP.
+A variável [!DNL Amazon Ads] integração com o Adobe Experience Platform fornece integração pronta para uso para [!DNL Amazon Ads] incluindo o Amazon DSP (ADSP) e a Amazon Marketing Cloud (AMC).
+
+Usar o [!DNL Amazon Ads] destino no Adobe Experience Platform, os usuários podem definir públicos-alvo do anunciante para direcionamento e ativação no Amazon DSP.  Além disso, os usuários podem fazer upload de seus dados no [!DNL Amazon Marketing Cloud] para entender o desempenho por público-alvo, dimensões fornecidas pelo anunciante, associação a segmentos do Amazon ou outros sinais disponíveis na AMC. Depois de fazer upload dos públicos-alvo do anunciante para a AMC, os usuários podem usar [!DNL Amazon Marketing Cloud] para modificar, aprimorar ou anexar a membros do público usando sinais do Amazon de dentro do [!DNL Amazon Marketing Cloud].
+
+A AMC reúne sinais únicos de todas as propriedades próprias e operadas da Amazon, abrangendo mídia, incluindo exibição, vídeo, transmissão de TV, áudio e anúncios patrocinados. Os usuários podem enviar facilmente segmentos com curadoria do Adobe Experience Platform para a AMC a fim de aprimorar o aprendizado, como grupos dentro do mercado, coortes de estilo de vida e padrões de engajamento da marca. Segmentos aumentados podem ser usados para otimizar ativações de mídia no Amazon DSP.
 
 >[!IMPORTANT]
 >
->Esse conector de destino e a página de documentação são criados e mantidos pelo *Anúncios do Amazon* equipe. No momento, esse é um produto beta e a funcionalidade está sujeita a alterações. Para qualquer consulta ou solicitação de atualização, entre em contato diretamente em *`amc-support@amazon.com`.*
+>Esse conector de destino e a página de documentação são criados e mantidos pelo *[!DNL Amazon Ads]* equipe. No momento, esse é um produto beta e a funcionalidade está sujeita a alterações. Para qualquer consulta ou solicitação de atualização, entre em contato diretamente em *`amc-support@amazon.com`.*
 
 ## Casos de uso {#use-cases}
 
-Para ajudá-lo a entender melhor como e quando você deve usar o *Anúncios do Amazon* destino, aqui estão exemplos de casos de uso que os clientes do Adobe Experience Platform podem resolver usando esse destino.
+Para ajudá-lo a entender melhor como e quando você deve usar o *[!DNL Amazon Ads]* destino, aqui estão exemplos de casos de uso que os clientes do Adobe Experience Platform podem resolver usando esse destino.
 
 ### Ativação e direcionamento {#activation-and-targeting}
 
-Essa integração com o Amazon DSP permite que os anunciantes do Amazon Ads transmitam os públicos-alvo de CDP do anunciante do Adobe Experience Platform para o Amazon DSP a fim de criar públicos-alvo de anunciante para direcionamento de publicidade. Os públicos podem ser selecionados no DSP do Amazon para direcionamento positivo, bem como direcionamento negativo (supressão).
+Essa integração com o Amazon DSP permite [!DNL Amazon Ads] anunciantes passem públicos-alvo de CDP do anunciante do Adobe Experience Platform para o DSP da Amazon para criar públicos-alvo de anunciantes com direcionamento de publicidade. Os públicos podem ser selecionados no DSP do Amazon para direcionamento positivo, bem como direcionamento negativo (supressão).
+
+### Analytics e Measurement {#analytics-and-measurement}
+
+Essa integração com [!DNL Amazon Marketing Cloud] (AMC) permite [!DNL Amazon Ads] anunciantes passarem segmentos de CDP do formulário do Adobe Experience Platform para a AMC. Os anunciantes podem então se associar às entradas de CDP com [!DNL Amazon Ads] O sinaliza e faz análises personalizadas em tópicos como impacto de mídia, segmentos de público-alvo e jornadas do cliente em formato compatível com a privacidade. Por exemplo, um anunciante pode fazer upload de uma lista de seus clientes existentes para entender o desempenho agregado da campanha de publicidade ou estatísticas agregadas de eventos de conversão no Amazon, como visualizar uma página de detalhes do produto, adicionar um produto a um carrinho de compras ou comprar um produto.
+
+### Otimização de publicidade:
+
+Essa integração com [!DNL Amazon Marketing Cloud] (AMC) permite que os anunciantes façam upload de suas próprias listas de clientes e usem [!DNL Amazon Marketing Cloud] SQL, executar análise de sobreposição, supressões, adições ou otimizações para públicos-alvo de forma recorrente antes de criar um público pronto para ativação no Amazon DSP para direcionamento.
 
 ## Pré-requisitos {#prerequisites}
 
-Para usar a conexão do Amazon Ads com o Adobe Experience Platform, os usuários devem primeiro ter acesso a uma conta de anunciante do Amazon DSP. Para provisionar essas instâncias, visite a seguinte página no site do Amazon Ads:
+Para usar o [!DNL Amazon Ads] com o Adobe Experience Platform, os usuários devem primeiro ter acesso a uma conta de anunciante do Amazon DSP ou a uma [!DNL Amazon Marketing Cloud] instância. Para provisionar essas instâncias, visite a seguinte página no [!DNL Amazon Ads] site:
 
-* [Introdução ao Amazon DSP](https://advertising.amazon.com/solutions/products/amazon-dsp?ref_=a20m_us_hnav_p_dsp_adtech)
+* [Introdução ao Amazon DSP](https://advertising.amazon.com/solutions/products/amazon-dsp)
+* [Introdução ao Amazon Marketing Cloud](https://advertising.amazon.com/solutions/products/amazon-marketing-cloud)
 
 ## Identidades suportadas {#supported-identities}
 
-A variável *Anúncios do Amazon* A conexão suporta a ativação de identidades descritas na tabela abaixo. Saiba mais sobre [identidades](/help/identity-service//features/namespaces.md). Para obter mais detalhes sobre as identidades compatíveis com o Amazon Ads, visite o [Centro de suporte ao Amazon DSP](https://advertising.amazon.com/dsp/help/ss/en/audiences#GA6BC9BW52YFXBNE).
+A variável *[!DNL Amazon Ads]* A conexão suporta a ativação de identidades descritas na tabela abaixo. Saiba mais sobre [identidades](/help/identity-service//features/namespaces.md). Para obter mais detalhes sobre as identidades compatíveis com o [!DNL Amazon Ads], visite o [Centro de suporte ao Amazon DSP](https://advertising.amazon.com/dsp/help/ss/en/audiences#GA6BC9BW52YFXBNE).
 
 | Identidade de destino | Descrição | Considerações |
 |---|---|---|
@@ -53,7 +66,7 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 
 | Item | Tipo | Notas |
 ---------|----------|---------|
-| Tipo de exportação | **[!UICONTROL Exportação de público]** | Você está exportando todos os membros de um público-alvo com os identificadores (nome, número de telefone ou outros) usados no *Anúncios do Amazon* destino. |
+| Tipo de exportação | **[!UICONTROL Exportação de público]** | Você está exportando todos os membros de um público-alvo com os identificadores (nome, número de telefone ou outros) usados no *[!DNL Amazon Ads]* destino. |
 | Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil é atualizado em Experience Platform com base na avaliação do público-alvo, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de transmissão](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
@@ -70,7 +83,7 @@ Para se conectar a esse destino, siga as etapas descritas no [tutorial de config
 
 Para autenticar no destino, preencha os campos obrigatórios e selecione **[!UICONTROL Conectar ao destino]**.
 
-Você é levado para a interface de conexão do Amazon Ads, onde primeiro seleciona as contas de anunciante às quais deseja se conectar. Após a conexão, você será redirecionado de volta ao Adobe Experience Platform com uma nova conexão, fornecida com a ID da conta do anunciante selecionada. Selecione a Conta do anunciante apropriada na tela de configuração de destino para continuar.
+Você é levado para o [!DNL Amazon Ads] interface de conexão na qual você seleciona primeiro as contas de anunciante às quais deseja se conectar. Após a conexão, você será redirecionado de volta ao Adobe Experience Platform com uma nova conexão, fornecida com a ID da conta do anunciante selecionada. Selecione a Conta do anunciante apropriada na tela de configuração de destino para continuar.
 
 * **[!UICONTROL Token de portador]**: Preencha o token do portador para autenticar no destino.
 
@@ -80,11 +93,11 @@ Para configurar detalhes para o destino, preencha os campos obrigatórios e opci
 
 * **[!UICONTROL Nome]**: um nome pelo qual você reconhecerá esse destino no futuro.
 * **[!UICONTROL Descrição]**: uma descrição que ajudará você a identificar esse destino no futuro.
-* **[!UICONTROL ID do anunciante do Amazon Ads]**: selecione a ID da conta do Amazon Ads de destino usada para o destino.
+* **[!UICONTROL Conexão do Amazon Ads]**: selecione a ID do público alvo [!DNL Amazon Ads] conta usada para o destino.
 
 >[!NOTE]
 >
->Depois de salvar a configuração de destino, não será possível alterar a ID do anunciante do Amazon Ads, mesmo se você reautenticar por meio da conta do Amazon. Para usar uma ID de anunciante do Amazon Ads diferente, você deve criar uma nova conexão de destino.
+>Depois de salvar a configuração de destino, você não poderá alterar a variável [!DNL Amazon Ads] ID do anunciante, mesmo se você reautenticar por meio da sua conta da Amazon. Para usar um [!DNL Amazon Ads] ID do anunciante, você deve criar uma nova conexão de destino.
 
 * **[!UICONTROL Região do anunciante]**: selecione a região apropriada na qual seu Anunciante está hospedado. Para obter mais informações sobre os mercados apoiados por cada região, visite o [Documentação do Amazon Ads](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints).
 
@@ -109,7 +122,7 @@ Ler [Ativar perfis e públicos para destinos de exportação de público de tran
 
 ### Mapear atributos e identidades {#map}
 
-A conexão do Amazon Ads é compatível com endereços de email com hash e números de telefone com hash para fins de correspondência de identidade. A captura de tela abaixo fornece um exemplo de correspondência compatível com a conexão do Amazon Ads:
+A variável [!DNL Amazon Ads] A conexão aceita endereços de email com hash e números de telefone com hash para fins de correspondência de identidade. A captura de tela abaixo fornece um exemplo de correspondência compatível com o [!DNL Amazon Ads] conexão:
 
 ![Mapeamento de Adobe para anúncios do Amazon](../../assets/catalog/advertising/amazon_ads_image_2.png)
 
@@ -117,7 +130,9 @@ A conexão do Amazon Ads é compatível com endereços de email com hash e núme
 * Para mapear números de telefone com hash, selecione o `Phone_SHA256` namespace de identidade como um campo de origem.
 * Para mapear endereços de email com hash ou números de telefone, selecione os namespaces de identidade correspondentes como campos de origem e verifique a `Apply Transformation` opção para que o Platform coloque as identidades em hash na ativação.
 
-É altamente recomendável mapear quantos campos estiverem disponíveis. Se apenas um atributo de origem estiver disponível, você poderá mapear um único campo. O destino do Amazon Ads utiliza todos os campos mapeados para fins de mapeamento, produzindo taxas de correspondência mais altas se mais campos forem fornecidos. Para obter mais informações sobre os identificadores aceitos, visite o [Página de ajuda do público-alvo com hash do Amazon Ads](https://advertising.amazon.com/dsp/help/ss/en/audiences#GA6BC9BW52YFXBNE).
+Você só seleciona um determinado campo de destino uma vez em uma configuração de destino do [!DNL Amazon Ads] conector.  Por exemplo, se você enviar um email comercial, não poderá mapear o email pessoal na mesma configuração de destino.
+
+É altamente recomendável mapear quantos campos estiverem disponíveis. Se apenas um atributo de origem estiver disponível, você poderá mapear um único campo. A variável [!DNL Amazon Ads] o destino utiliza todos os campos mapeados para fins de mapeamento, produzindo taxas de correspondência mais altas se mais campos forem fornecidos. Para obter mais informações sobre os identificadores aceitos, visite o [Página de ajuda do público-alvo com hash do Amazon Ads](https://advertising.amazon.com/dsp/help/ss/en/audiences#GA6BC9BW52YFXBNE).
 
 ## Dados exportados / Validar exportação de dados {#exported-data}
 
@@ -125,9 +140,18 @@ Depois que o público-alvo for carregado, você poderá validar se o público-al
 
 **Para o Amazon DSP**
 
-Navegue até a ID do anunciante → Públicos → Públicos do anunciante. Se o público-alvo for criado com sucesso e atender ao número mínimo de membros do público-alvo, você verá um Status de `Active`. Detalhes adicionais sobre o tamanho e o alcance do seu público-alvo podem ser encontrados no painel Alcance previsto no lado direito da interface do usuário do Amazon DSP.
+Navegue até o **[!UICONTROL ID do anunciante]** > **[!UICONTROL Públicos-alvo]** > **[!UICONTROL Públicos-alvo do anunciante]**. Se o público-alvo for criado com sucesso e atender ao número mínimo de membros do público-alvo, você verá um Status de `Active`. Detalhes adicionais sobre o tamanho e o alcance do seu público-alvo podem ser encontrados no painel Alcance previsto no lado direito da interface do usuário do Amazon DSP.
 
 ![Validação da criação de público do Amazon DSP](../../assets/catalog/advertising/amazon_ads_image_3.png)
+
+**Para[!DNL Amazon Marketing Cloud]**
+
+No navegador de esquema esquerdo, encontre seu público-alvo em **[!UICONTROL Anunciante carregado]** > **[!UICONTROL aep_audiences]**. Você pode então consultar seu público no editor AMC SQL com a seguinte cláusula:
+
+`select count(user_id) from aep_audiences where audienceId = '1234567'`
+
+![Validação da criação de público-alvo do Amazon Marketing Cloud](../../assets/catalog/advertising/amazon_ads_image_5.png)
+
 
 ## Uso e governança de dados {#data-usage-governance}
 
@@ -135,7 +159,7 @@ Todos [!DNL Adobe Experience Platform] os destinos estão em conformidade com as
 
 ## Recursos adicionais {#additional-resources}
 
-Para obter a documentação de ajuda adicional, visite os seguintes recursos de ajuda do Amazon Ads:
+Para obter a documentação de ajuda adicional, visite o seguinte [!DNL Amazon Ads] recursos de ajuda:
 
 * [Centro de ajuda do Amazon DSP](https://www.amazon.com/ap/signin?openid.pape.max_auth_age=28800&amp;openid.return_to=https%3A%2F%2Fadvertising.amazon.com%2Fdsp%2Fhelp%2Fss%2Fen%2Faudiences&amp;openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&amp;openid.assoc_handle=amzn_bt_desktop_us&amp;openid.mode=checkid_setup&amp;openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&amp;openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0)
 
@@ -147,6 +171,7 @@ Esta seção captura a funcionalidade e as atualizações de documentação sign
 
 | Mês de lançamento | Tipo de atualização | Descrição |
 |---|---|---|
+| Fevereiro de 2024 | Atualização de funcionalidade e documentação | Adicionada a opção de exportar públicos-alvo para serem usados no [!DNL Amazon Marketing Cloud] AMC). |
 | Maio de 2023 | Atualização de funcionalidade e documentação | <ul><li>Adição de suporte para a seleção da Região do anunciante no [fluxo de trabalho da conexão de destino](#destination-details).</li><li>Atualização da documentação para refletir a adição da seleção da Região do anunciante. Para obter mais informações sobre como selecionar a Região do anunciante correta, consulte [Documentação do Amazon](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints).</li></ul> |
 | Março de 2023 | Versão inicial | Versão inicial de destino e documentação publicada. |
 

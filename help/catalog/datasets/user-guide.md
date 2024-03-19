@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Guia da interface de conjuntos de dados
 description: Saiba como executar ações comuns ao trabalhar com conjuntos de dados na interface do usuário do Adobe Experience Platform.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 859b8432986e7426b8fdcfedf1242c3269eae5f1
+source-git-commit: aee82356f1f519398f381e161be14789532561f1
 workflow-type: tm+mt
-source-wordcount: '2769'
-ht-degree: 4%
+source-wordcount: '2932'
+ht-degree: 3%
 
 ---
 
@@ -20,7 +20,7 @@ Este guia do usuário fornece instruções sobre como executar ações comuns ao
 Este guia do usuário requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
 * [Conjuntos de dados](overview.md): a construção de armazenamento e gerenciamento para a persistência de dados no [!DNL Experience Platform].
-* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): a estrutura padronizada pela qual a [!DNL Experience Platform] organiza os dados de experiência do cliente.
+* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): o quadro normalizado pelo qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
    * [Noções básicas da composição do esquema](../../xdm/schema/composition.md): saiba mais sobre os componentes básicos dos esquemas XDM, incluindo princípios fundamentais e práticas recomendadas na composição do esquema.
    * [Editor de esquema](../../xdm/tutorials/create-schema-ui.md): saiba como criar seus próprios esquemas XDM personalizados usando o [!DNL Schema Editor] no prazo de [!DNL Platform] interface do usuário.
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md): fornece um perfil de consumidor unificado em tempo real com base em dados agregados de várias fontes.
@@ -41,12 +41,36 @@ Este guia do usuário requer uma compreensão funcional dos seguintes componente
 
 No [!DNL Experience Platform] Interface, selecione **[!UICONTROL Conjuntos de dados]** no painel de navegação esquerdo para abrir a **[!UICONTROL Conjuntos de dados]** painel. O painel lista todos os conjuntos de dados disponíveis para sua organização. Os detalhes são exibidos para cada conjunto de dados listado, incluindo seu nome, o esquema ao qual o conjunto de dados adere e o status da execução de ingestão mais recente.
 
-![Uma imagem que destaca o item Conjuntos de dados na barra de navegação esquerda.](../images/datasets/user-guide/browse-datasets.png)
+![A interface do usuário da Platform com o item Conjuntos de dados realçado na barra de navegação à esquerda.](../images/datasets/user-guide/browse-datasets.png)
 
 Selecione o nome de um conjunto de dados na [!UICONTROL Procurar] para acessar seu **[!UICONTROL Atividade do conjunto de dados]** e veja detalhes do conjunto de dados selecionado. A guia Atividade inclui um gráfico que visualiza a taxa de mensagens que estão sendo consumidas, bem como uma lista de lotes bem-sucedidos e com falha.
 
-![Os detalhes do conjunto de dados selecionado são destacados.](../images/datasets/user-guide/dataset-activity-1.png)
-![Os lotes de amostra que pertencem ao conjunto de dados selecionado são destacados.](../images/datasets/user-guide/dataset-activity-2.png)
+![As métricas e visualizações do conjunto de dados selecionado são destacadas.](../images/datasets/user-guide/dataset-activity-1.png)
+![Os lotes de amostra relacionados ao conjunto de dados selecionado são destacados.](../images/datasets/user-guide/dataset-activity-2.png)
+
+## Mais ações {#more-actions}
+
+Você pode [!UICONTROL Excluir] ou [!UICONTROL Ativar um conjunto de dados para o Perfil] do [!UICONTROL Conjunto de dados] exibição de detalhes. Para ver as ações disponíveis, selecione **[!UICONTROL .. Mais]** na parte superior direita da interface do usuário. O menu suspenso é exibido.
+
+![O espaço de trabalho dos conjuntos de dados com o [!UICONTROL .. Mais] menu suspenso realçado.](../images/datasets/user-guide/more-actions.png)
+
+Se você selecionar **[!UICONTROL Ativar um conjunto de dados para o Perfil]**, uma caixa de diálogo de confirmação será exibida. Selecionar **[!UICONTROL Ativar]** para confirmar sua escolha.
+
+>[!NOTE]
+>
+>Para habilitar um conjunto de dados para o Perfil, o esquema que o conjunto de dados segue deve ser compatível para uso no Perfil do cliente em tempo real. Consulte a [Ativar um conjunto de dados para o perfil](#enable-profile) para obter mais informações.
+
+![A caixa de diálogo de confirmação Habilitar conjunto de dados.](../images/datasets/user-guide/profile-enable-confirmation-dialog.png)
+
+Se você selecionar **[!UICONTROL Excluir]**, o [!UICONTROL Excluir conjunto de dados] confirmação será exibida. Selecionar **[!UICONTROL Excluir]** para confirmar sua escolha.
+
+>[!NOTE]
+>
+>Não é possível excluir conjuntos de dados do sistema.
+
+Você também pode excluir um conjunto de dados ou adicionar um conjunto de dados para uso com o Perfil de cliente em tempo real a partir das ações embutidas encontradas no [!UICONTROL Procurar] guia. Consulte a [seção ações embutidas](#inline-actions) para obter mais informações.
+
+![O diálogo de confirmação Excluir conjunto de dados.](../images/datasets/user-guide/delete-confirmation-dialog.png)
 
 ## Ações embutidas do conjunto de dados {#inline-actions}
 
@@ -135,14 +159,14 @@ Para obter métodos mais robustos para acessar seus dados, [!DNL Experience Plat
 
 ## Criar um conjunto de dados {#create}
 
-Para criar um novo conjunto de dados, comece selecionando **[!UICONTROL Criar conjunto de dados]** no painel Conjuntos de dados .****
+Para criar um novo conjunto de dados, comece selecionando **[!UICONTROL Criar conjunto de dados]** no **[!UICONTROL Conjuntos de dados]** painel.
 
 ![O botão Criar conjunto de dados é realçado.](../images/datasets/user-guide/select-create.png)
 
 Na próxima tela, você verá as duas opções a seguir para criar um novo conjunto de dados:
 
 * [Criar conjunto de dados a partir do esquema](#schema)
-* [Criar um conjunto de dados a partir de um arquivo CSV](#csv)
+* [Criar conjunto de dados a partir de arquivo CSV](#csv)
 
 ### Criar um conjunto de dados com um esquema existente {#schema}
 

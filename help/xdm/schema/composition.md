@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Noções básicas da composição do esquema
 description: Saiba mais sobre esquemas do Experience Data Model (XDM) e os componentes, princípios e práticas recomendadas para a composição de esquemas no Adobe Experience Platform.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 8113b5298120f710f43c5a02504f19ca3af67c5a
+source-git-commit: 1b3d20610a48fc48c84dc4901d7b09db4bb8fa1f
 workflow-type: tm+mt
-source-wordcount: '4229'
+source-wordcount: '4236'
 ht-degree: 6%
 
 ---
@@ -261,7 +261,7 @@ Os intervalos válidos desses tipos escalares podem ser ainda mais restritos a d
 
 >[!NOTE]
 >
->O tipo de campo &quot;map&quot; permite dados de par de valores chave, incluindo vários valores para uma única chave. Os mapas podem ser encontrados em classes XDM padrão e grupos de campos, mas você também pode definir mapas personalizados usando a API do Registro de esquema. Veja o tutorial sobre [definição de campos personalizados](../tutorials/custom-fields-api.md#custom-maps) para obter mais informações.
+>O tipo de campo &quot;map&quot; permite dados de par de valores chave, incluindo vários valores para uma única chave. Os mapas podem ser encontrados em classes XDM padrão e grupos de campos, mas você também pode definir mapas personalizados. Consulte o tutorial da API em [definição de campos de mapa personalizados](../tutorials/custom-fields-api.md#custom-maps) ou o guia sobre [definição de campos de mapa na interface](../ui/fields/map.md) para obter mais informações.
 
 ## Exemplo de composição {#composition-example}
 

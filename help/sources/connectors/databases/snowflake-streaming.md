@@ -5,7 +5,7 @@ badgeBeta: label="Beta" type="Informative"
 badgeUltimate: label="Ultimate" type="Positive"
 last-substantial-update: 2023-05-25T00:00:00Z
 exl-id: ed937689-e844-487e-85fb-e3536c851fe5
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: c80535cbb5dda55f1cf145f9f40bbcd40c78e63e
 workflow-type: tm+mt
 source-wordcount: '710'
 ht-degree: 1%
@@ -47,7 +47,6 @@ A fim de [!DNL Flow Service] para se conectar com [!DNL Snowflake], você deve f
 | `role` | (Opcional) Uma função definida personalizada que pode ser fornecida para um usuário, para uma determinada conexão. Se não for fornecido, esse valor assumirá como padrão `public`. |
 | `connectionSpec.id` | A especificação de conexão retorna as propriedades do conector de uma origem, incluindo especificações de autenticação relacionadas à criação das conexões de base e de origem. A ID da especificação de conexão para [!DNL Snowflake] é `51ae16c2-bdad-42fd-9fce-8d5dfddaf140`. |
 
-Para obter mais informações sobre autenticação, consulte esta [[!DNL Snowflake] documento](<https://docs.snowflake.com/en/user-guide/key-pair-auth.html>).
 
 ### Definir configurações de função {#configure-role-settings}
 
@@ -83,3 +82,4 @@ Para obter mais informações sobre o gerenciamento de funções e privilégios,
 O tutorial a seguir fornece etapas sobre como conectar seus [!DNL Snowflake] origem de transmissão para o Experience Platform usando a API:
 
 * [Transmitir dados de um [!DNL Snowflake] banco de dados para Experience Platform usando a API do Serviço de fluxo](../../tutorials/api/create/databases/snowflake-streaming.md)
+* [Transmitir dados de um [!DNL Snowflake] banco de dados para Experience Platform usando o espaço de trabalho de origens na interface de usuário do Experience Platform](../../tutorials/ui/create/databases/snowflake-streaming.md)

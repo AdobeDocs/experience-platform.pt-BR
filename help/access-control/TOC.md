@@ -5,10 +5,10 @@ breadcrumb-title: Guia de controle de acesso
 user-guide-description: Use perfis de produto no Adobe Admin Console para gerenciar permissões de usuário. Saiba como atribuir usuários a produtos e sandboxes.
 feature: Access Control
 role: Admin
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+source-git-commit: e27695a96d7b61e2552387611c4eb63ebc6daf47
 workflow-type: tm+mt
-source-wordcount: '117'
-ht-degree: 48%
+source-wordcount: '127'
+ht-degree: 44%
 
 ---
 
@@ -19,6 +19,7 @@ ht-degree: 48%
 * Controle de acesso baseado em atributos {#abac}
    * [Visão geral](abac/overview.md)
    * [Guia completo](abac/end-to-end-guide.md)
+   * [Usar rótulos de acesso para gerenciar o acesso do usuário aos fluxos de dados de destino](/help/access-control/abac/apply-access-labels-destinations.md)
    * Permissões {#permissions-ui}
       * [Navegar](abac/ui/browse.md)
       * [Rótulos](abac/ui/labels.md)

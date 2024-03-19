@@ -1,10 +1,9 @@
 ---
-title: Notas de versão da Adobe Experience Platform
-description: As notas da versão de janeiro de 2024 da Adobe Experience Platform.
-exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
+title: Notas da versão de março de 2024 da Adobe Experience Platform
+description: As notas da versão de março de 2024 da Adobe Experience Platform.
 source-git-commit: 53424842fb93315ed71f4245f04141bccfb2a8ac
 workflow-type: tm+mt
-source-wordcount: '1041'
+source-wordcount: '1043'
 ht-degree: 33%
 
 ---
@@ -117,3 +116,4 @@ A Experience Platform fornece uma API RESTful e uma interface interativa que per
 {style="table-layout:auto"}
 
 Para obter mais informações sobre fontes, leia a [visão geral das origens](../../sources/home.md).
+

@@ -1,10 +1,10 @@
 ---
 title: Notas da versão de março de 2024 da Adobe Experience Platform
 description: As notas da versão de março de 2024 da Adobe Experience Platform.
-source-git-commit: 7c913d0cbab0f4f9d2b7b5a476076b0c87795a0d
+source-git-commit: 33952028a4323b2292cdd313da290a5dd079c93f
 workflow-type: tm+mt
-source-wordcount: '1177'
-ht-degree: 34%
+source-wordcount: '1211'
+ht-degree: 33%
 
 ---
 
@@ -81,6 +81,7 @@ Para obter mais informações sobre o Preparo de dados, leia a [Visão geral do 
 | [(Beta) Conexão com o Acxiom Data Enhancement](../../destinations/catalog/data-partner/acxiom-data-enhancement.md) | Novo | Use esse conector para ativar perfis primários da Real-Time CDP para a Acxiom para enriquecimento de dados e uso em canais de marketing. Em seguida, você pode usar a origem Acxiom para importar os perfis com dados aprimorados e trabalhar com eles no Real-Time CDP. |
 | [(Beta) Conexão do Acxiom Prospect Suppression](../../destinations/catalog/data-partner/acxiom-prospect-suppression.md) | Novo | Exporte seus públicos-alvo primários para o destino da Acxiom, para permitir que a Acxiom suprima clientes conhecidos ou convertidos. Em seguida, use o [Importação de dados de prospecção da Acxiom](../../sources/connectors/data-partners/acxiom-prospecting-data-import.md) conector de origem para assimilar e ativar listas de clientes potenciais da Acxiom, com seus clientes conhecidos ou convertidos removidos. |
 | [Conexão do Amazon Ads](../../destinations/catalog/advertising/amazon-ads.md) | Atualização | Ao exportar dados para o destino do Amazon Ads, agora é possível roteá-los para o Amazon DSP ou para o Marketing Cloud do Amazon (novo). |
+| [Conexão de integração do LiveRamp](../../destinations/catalog/advertising/liveramp-onboarding.md) | Atualização | O destino de integração do LiveRamp agora tem suporte para entregas para a Europa e a Austrália [!DNL LiveRamp] [!DNL SFTP] instâncias. O tamanho máximo de arquivo exportado também foi aumentado para 10 milhões de linhas (de 5 milhões, anteriormente). |
 
 {style="table-layout:auto"}
 

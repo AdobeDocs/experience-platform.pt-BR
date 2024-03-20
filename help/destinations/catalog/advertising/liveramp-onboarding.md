@@ -3,9 +3,9 @@ title: LiveRamp - Conexão de integração
 description: Saiba como usar o conector do LiveRamp para integrar públicos do Adobe Real-time Customer Data Platform ao LiveRamp Connect.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: a235f9a66ea15fc5e72dd6ed03e4a6a384fd30a4
 workflow-type: tm+mt
-source-wordcount: '1759'
+source-wordcount: '1941'
 ht-degree: 3%
 
 ---
@@ -70,6 +70,9 @@ Para autenticar no destino, preencha os campos obrigatórios e selecione **[!UIC
 
 ![Captura de tela de exemplo mostrando como autenticar no destino usando SFTP com senha](../../assets/catalog/advertising/liveramp-onboarding/liveramp-sftp-password.png)
 
+* **[!UICONTROL Porta]**: A porta usada para o [!DNL LiveRamp - Onboarding] local de armazenamento.  Use a porta que corresponde à sua localização geográfica, conforme descrito abaixo:
+   * **[!UICONTROL ND]**: Usar porta `22`
+   * **[!UICONTROL AU]**: Usar porta `2222`
 * **[!UICONTROL Nome de usuário]**: O nome de usuário do [!DNL LiveRamp - Onboarding] local de armazenamento.
 * **[!UICONTROL Senha]**: A senha do [!DNL LiveRamp - Onboarding] local de armazenamento.
 * **[!UICONTROL Chave de criptografia PGP/GPG]**: como opção, você pode anexar sua chave pública formatada em RSA para adicionar criptografia aos arquivos exportados. Veja um exemplo de uma chave de criptografia formatada corretamente na imagem abaixo.
@@ -80,6 +83,8 @@ Para autenticar no destino, preencha os campos obrigatórios e selecione **[!UIC
 
 ![Captura de tela de exemplo mostrando como autenticar no destino usando a chave SSH](../../assets/catalog/advertising/liveramp-onboarding/liveramp-sftp-ssh.png)
 
+* **[!UICONTROL Porta]**: A porta usada para o [!DNL LiveRamp - Onboarding] local de armazenamento.  Use a porta que corresponde à sua localização geográfica, conforme descrito abaixo:
+   * **[!UICONTROL UE]**: Usar porta `4222`
 * **[!UICONTROL Nome de usuário]**: O nome de usuário do [!DNL LiveRamp - Onboarding] local de armazenamento.
 * **[!UICONTROL Chave SSH]**: O privado [!DNL SSH] chave usada para fazer logon no seu [!DNL LiveRamp - Onboarding] local de armazenamento. A chave privada deve ser formatada como um [!DNL Base64]-encoded e não deve ser protegido por senha.
 
@@ -99,10 +104,11 @@ Para autenticar no destino, preencha os campos obrigatórios e selecione **[!UIC
 
 Para configurar detalhes para o destino, preencha os campos obrigatórios e opcionais abaixo. Um asterisco ao lado de um campo na interface do usuário indica que o campo é obrigatório.
 
-![Captura de tela da interface do usuário da plataforma mostrando como preencher detalhes para o seu destino](../../assets/catalog/advertising/liveramp-onboarding/liveramp-connection-details.png)
+![Captura de tela da interface do usuário da plataforma mostrando como preencher detalhes para o seu destino](../../assets/catalog/advertising/liveramp-onboarding/liveramp-sftp-destination-details.png)
 
 * **[!UICONTROL Nome]**: um nome pelo qual você reconhecerá esse destino no futuro.
 * **[!UICONTROL Descrição]**: uma descrição que ajudará você a identificar esse destino no futuro.
+* **[!UICONTROL Região]**: região geográfica para sua instância do armazenamento SFTP do LiveRamp.
 * **[!UICONTROL Caminho da pasta]**: O caminho para o [!DNL LiveRamp] `uploads` que hospedará os arquivos exportados. A variável `uploads` O prefixo é adicionado automaticamente ao caminho da pasta. [!DNL LiveRamp] A recomenda a criação de uma subpasta dedicada para deliveries do Adobe Real-Time CDP para manter os arquivos separados de quaisquer outros feeds existentes e garantir que toda a automação seja executada sem problemas.
    * Por exemplo, se você deseja exportar seus arquivos para `uploads/my_export_folder`, digite `my_export_folder` no **[!UICONTROL Caminho da pasta]** campo.
 * **[!UICONTROL Formato de compactação]**: selecione o tipo de compactação que o Experience Platform deve usar para os arquivos exportados. As opções disponíveis são **[!UICONTROL GZIP]** ou **[!UICONTROL Nenhum]**.
@@ -179,6 +185,8 @@ Depois de adicionar todos os mapeamentos desejados, selecione **[!UICONTROL Pró
 
 Seus dados são exportados para o [!DNL LiveRamp - Onboarding] local de armazenamento que você configurou, como arquivos CSV.
 
+Os arquivos exportados têm um tamanho máximo de 10 milhões de linhas. O Experience Platform gera vários arquivos por delivery se os públicos-alvo selecionados excederem 10 milhões de linhas. Se você espera exceder o limite de arquivo único, entre em contato com o [!DNL LiveRamp] e solicite que eles configurem a assimilação de lotes para você.
+
 Ao exportar arquivos para o [!DNL LiveRamp - Onboarding] destino, a Platform gera um arquivo CSV para cada [ID da política de mesclagem](../../../profile/merge-policies/overview.md).
 
 Por exemplo, vamos considerar os seguintes públicos-alvo:
@@ -238,3 +246,18 @@ Todos [!DNL Adobe Experience Platform] os destinos estão em conformidade com as
 ## Recursos adicionais {#additional-resources}
 
 Para obter mais detalhes sobre como configurar [!DNL LiveRamp - Onboarding] armazenamento, consulte a seção [documentação oficial](https://docs.liveramp.com/connect/en/upload-a-file-via-liveramp-s-sftp.html).
+
+## Changelog {#changelog}
+
+Esta seção captura a funcionalidade e as atualizações de documentação significativas feitas neste conector de destino.
+
++++ Exibir changelog
+
+| Mês de lançamento | Tipo de atualização | Descrição |
+|---|---|---|
+| Março de 2024 | Atualização de funcionalidade e documentação | <ul><li>Suporte adicionado para entregas na Europa e na Austrália [!DNL LiveRamp] [!DNL SFTP] instâncias.</li><li>Atualização da documentação para descrever configurações específicas para regiões recém-compatíveis.</li><li>O tamanho máximo do arquivo foi aumentado para 10 milhões de linhas (de 5 milhões, anteriormente).</li><li>Atualização da documentação para refletir o aumento do tamanho dos arquivos.</li></ul> |
+| Julho de 2023 | Versão inicial | Versão inicial de destino e documentação publicada. |
+
+{style="table-layout:auto"}
+
++++

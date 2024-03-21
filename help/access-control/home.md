@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Visão geral do controle de acesso
 description: O controle de acesso do Adobe Experience Platform é fornecido por meio da Adobe Admin Console. Essa funcionalidade aproveita perfis de produto no Admin Console, que vinculam usuários com permissões e sandboxes.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: fbc2a6c81682797af4674adabff358a62d973007
+source-git-commit: df24799e4644a98941b707bb216a4ad434f5ebf9
 workflow-type: tm+mt
-source-wordcount: '1706'
+source-wordcount: '1707'
 ht-degree: 1%
 
 ---
@@ -27,7 +27,7 @@ Um workflow de alto nível para obter e atribuir permissões de acesso pode ser 
 
 - Após licenciar o Adobe Experience Platform ou um Serviço de aplicativo/aplicativo que use o Experience Platform, um email é enviado ao administrador especificado durante o licenciamento.
 - O administrador faz logon no [Adobe Admin Console](#adobe-admin-console) e seleciona **Adobe Experience Platform** na lista de produtos na página visão geral.
-- Para conceder acesso ao Experience Platform, o administrador precisará adicionar usuários ao perfil de produto padrão: `AEP-Default-All-Users`.
+- Para conceder acesso ao Experience Platform, é recomendável que o administrador adicione usuários ao perfil de produto padrão: `AEP-Default-All-Users`.
 - Nas Permissões do Experience Platform, o administrador pode criar novas funções ou editar as permissões e os usuários de qualquer função existente.
 - Ao criar ou editar uma função, o administrador adiciona usuários à função usando o **[!UICONTROL usuários]** e concede permissões a esses usuários (como &quot;[!UICONTROL Ler conjuntos de dados]&quot; ou &quot;[!UICONTROL Gerenciar esquemas]&quot;) editando as permissões da função. Da mesma forma, o administrador pode atribuir acesso a sandboxes usando a mesma opção de edição.
 - Quando os usuários fazem logon na interface do usuário do Experience Platform, o acesso aos recursos do Experience Platform é orientado pelas permissões concedidas a eles na etapa anterior. Por exemplo, se um usuário não tiver o [!UICONTROL Exibir conjuntos de dados] permissão, a variável **[!UICONTROL Conjuntos de dados]** no menu lateral não estará visível para esse usuário.

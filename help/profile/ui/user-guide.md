@@ -3,10 +3,10 @@ keywords: Experience Platform;perfil;perfil de cliente em tempo real;solução d
 title: Guia da interface do usuário do Perfil do cliente em tempo real
 description: O Perfil do cliente em tempo real cria uma visualização integral de cada cliente individual, combinando dados de vários canais, inclusive dados online, offline, de CRM e de terceiros. Este documento serve como um guia para interagir com o Perfil do cliente em tempo real na interface do usuário do Adobe Experience Platform.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
+source-git-commit: 8cf3771145e09aa8b59a5d569f4f3a7c4820811d
 workflow-type: tm+mt
-source-wordcount: '2008'
-ht-degree: 1%
+source-wordcount: '2103'
+ht-degree: 0%
 
 ---
 
@@ -20,7 +20,7 @@ Este guia de interface do usuário requer uma compreensão dos vários [!DNL Exp
 
 * [[!DNL Real-Time Customer Profile] visão geral](../home.md): fornece um perfil de consumidor unificado em tempo real com base em dados agregados de várias fontes.
 * [[!DNL Identity Service]](../../identity-service/home.md): Habilita [!DNL Real-Time Customer Profile] identidades de diferentes fontes de dados à medida que são assimiladas na [!DNL Platform].
-* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): a estrutura padronizada pela qual a [!DNL Platform] organiza os dados de experiência do cliente.
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): o quadro normalizado pelo qual [!DNL Platform] organiza os dados de experiência do cliente.
 
 ## [!UICONTROL Visão geral]
 
@@ -144,6 +144,12 @@ Esses atributos também podem ser exibidos como um objeto JSON ao selecionar par
 
 ![A guia Atributos é realçada. Os atributos do perfil são exibidos.](../images/user-guide/attributes.png)
 
+Para exibir os atributos disponíveis na borda, selecione **[!UICONTROL Edge]** no seletor de local de dados.
+
+![O seletor de local de dados na guia de atributos é realçado.](../images/user-guide/attributes-select.png)
+
+Para obter mais informações sobre perfis de borda, leia a [documentação de perfis de borda](../edge-profiles.md).
+
 ### Guia Eventos
 
 A variável **[!UICONTROL Eventos]** A guia contém dados dos 100 ExperienceEvents mais recentes associados ao cliente. Esses dados podem incluir aberturas de email, atividades de carrinho e exibições de página. Selecionar **[!UICONTROL Exibir todos]** para qualquer evento individual fornece campos adicionais e capturas de valores como parte do evento.
@@ -158,7 +164,11 @@ A variável **[!UICONTROL associação de público]** A guia exibe uma lista com
 
 Para obter mais informações sobre segmentação em Experience Platform, consulte a [Documentação do Adobe Experience Platform Segmentation Service](../../segmentation/home.md).
 
-![A guia Associação de público-alvo é realçada. Os detalhes de associação do público-alvo do perfil são exibidos.](../images/user-guide/segment-membership.png)
+![A guia Associação de público-alvo é realçada. Os detalhes de associação do público-alvo do perfil são exibidos.](../images/user-guide/audience-membership.png)
+
+Para exibir a associação de público-alvo dos perfis disponíveis no Edge, selecione **[!UICONTROL Edge]** no seletor de local de dados. Mais informações sobre segmentação de borda podem ser encontradas no [guia de segmentação de borda](../../segmentation/ui/edge-segmentation.md).
+
+![O seletor de local de dados na guia de associação de público-alvo é realçado.](../images/user-guide/audience-membership-select.png)
 
 ## Políticas de mesclagem
 

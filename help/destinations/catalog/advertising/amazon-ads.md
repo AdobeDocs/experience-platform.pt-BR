@@ -3,7 +3,7 @@ title: Anúncios do Amazon
 description: O Amazon Ads oferece uma variedade de opções para ajudá-lo a atingir suas metas de publicidade para vendedores registrados, fornecedores, fornecedores de livros, autores de KDP (Kindle Direct Publishing), desenvolvedores de aplicativos e/ou agências. A integração do Amazon Ads com o Adobe Experience Platform fornece integração pronta para uso com produtos Amazon Ads, incluindo o Amazon DSP (ADSP). Usando o destino do Amazon Ads no Adobe Experience Platform, os usuários podem definir públicos-alvo do anunciante para direcionamento e ativação no Amazon DSP.
 last-substantial-update: 2024-02-20T00:00:00Z
 exl-id: 724f3d32-65e0-4612-a882-33333e07c5af
-source-git-commit: 24f7463f7005f77f8d93e7cb2c04efc0fb4e3a0b
+source-git-commit: ba768b3148d57e9df12a34f0324c086a17a6d45a
 workflow-type: tm+mt
 source-wordcount: '1646'
 ht-degree: 2%
@@ -16,7 +16,7 @@ ht-degree: 2%
 
 [!DNL Amazon Ads] O oferece uma variedade de opções para ajudar você a atingir suas metas de publicidade para vendedores registrados, fornecedores, fornecedores de livros, autores de Kindle Direct Publishing (KDP), desenvolvedores de aplicativos e/ou agências.
 
-A variável [!DNL Amazon Ads] integração com o Adobe Experience Platform fornece integração pronta para uso para [!DNL Amazon Ads] incluindo o Amazon DSP (ADSP) e a Amazon Marketing Cloud (AMC).
+A variável [!DNL Amazon Ads] integração com o Adobe Experience Platform fornece integração pronta para uso para [!DNL Amazon Ads] incluindo o Amazon DSP (ADSP) e o Amazon Marketing Cloud (AMC).
 
 Usar o [!DNL Amazon Ads] destino no Adobe Experience Platform, os usuários podem definir públicos-alvo do anunciante para direcionamento e ativação no Amazon DSP.  Além disso, os usuários podem fazer upload de seus dados no [!DNL Amazon Marketing Cloud] para entender o desempenho por público-alvo, dimensões fornecidas pelo anunciante, associação a segmentos do Amazon ou outros sinais disponíveis na AMC. Depois de fazer upload dos públicos-alvo do anunciante para a AMC, os usuários podem usar [!DNL Amazon Marketing Cloud] para modificar, aprimorar ou anexar a membros do público usando sinais do Amazon de dentro do [!DNL Amazon Marketing Cloud].
 
@@ -171,7 +171,7 @@ Esta seção captura a funcionalidade e as atualizações de documentação sign
 
 | Mês de lançamento | Tipo de atualização | Descrição |
 |---|---|---|
-| Fevereiro de 2024 | Atualização de funcionalidade e documentação | Adicionada a opção de exportar públicos-alvo para serem usados no [!DNL Amazon Marketing Cloud] AMC). |
+| Março de 2024 | Atualização de funcionalidade e documentação | Adicionada a opção de exportar públicos-alvo para serem usados no [!DNL Amazon Marketing Cloud] AMC). |
 | Maio de 2023 | Atualização de funcionalidade e documentação | <ul><li>Adição de suporte para a seleção da Região do anunciante no [fluxo de trabalho da conexão de destino](#destination-details).</li><li>Atualização da documentação para refletir a adição da seleção da Região do anunciante. Para obter mais informações sobre como selecionar a Região do anunciante correta, consulte [Documentação do Amazon](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints).</li></ul> |
 | Março de 2023 | Versão inicial | Versão inicial de destino e documentação publicada. |
 

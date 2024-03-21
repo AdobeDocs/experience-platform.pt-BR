@@ -3,10 +3,10 @@ title: Monitorar atividades no encaminhamento de eventos
 description: Saiba como monitorar uso, erros e tempo de computação nas propriedades do encaminhamento de eventos.
 feature: Event Forwarding
 exl-id: 9d8572a3-816e-4b66-afe6-344fe8a15f22
-source-git-commit: 9313ebe6d51d5ef42915d154def9cb0612407439
+source-git-commit: f8988d08e7009cc613a00f34e8151e8560c479d4
 workflow-type: tm+mt
-source-wordcount: '548'
-ht-degree: 1%
+source-wordcount: '561'
+ht-degree: 0%
 
 ---
 
@@ -24,7 +24,7 @@ A variável **[!UICONTROL Monitoramento]** A guia na interface da Coleção de d
 
 Este guia pressupõe que você adquiriu o encaminhamento de eventos e que possui uma compreensão funcional de como funciona o encaminhamento de eventos. Consulte a [visão geral do encaminhamento de eventos](./overview.md) para obter mais informações.
 
-## Vídeo de visão geral
+## Vídeo da visão geral
 
 Assista ao vídeo a seguir para obter uma visão geral de alto nível do recurso de monitoramento:
 
@@ -39,6 +39,10 @@ Para mostrar métricas para uma única propriedade, selecione o menu suspenso de
 ![Imagem mostrando os menus suspensos do ambiente de propriedade na interface do usuário](../../images/ui/event-forwarding/monitoring/property-environment.png)
 
 ## [!UICONTROL Uso]
+
+>[!NOTE]
+>
+>Os dados de uso são atualizados todos os meses após o término do mês anterior.
 
 A variável **[!UICONTROL Uso]** O relatório de mostra chamadas de entrada e saída para um determinado período. As chamadas de entrada representam dados enviados para o encaminhamento de eventos. Chamadas de saída representam dados enviados do encaminhamento de eventos. A variável **[!UICONTROL Total de eventos]** number no painel à esquerda é a soma das chamadas de entrada e saída para o período determinado.
 

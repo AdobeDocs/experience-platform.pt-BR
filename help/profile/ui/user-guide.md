@@ -3,9 +3,9 @@ keywords: Experience Platform;perfil;perfil de cliente em tempo real;solução d
 title: Guia da interface do usuário do Perfil do cliente em tempo real
 description: O Perfil do cliente em tempo real cria uma visualização integral de cada cliente individual, combinando dados de vários canais, inclusive dados online, offline, de CRM e de terceiros. Este documento serve como um guia para interagir com o Perfil do cliente em tempo real na interface do usuário do Adobe Experience Platform.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: 8cf3771145e09aa8b59a5d569f4f3a7c4820811d
+source-git-commit: 804f87563abf36a1aa203cb675a687dd262231a7
 workflow-type: tm+mt
-source-wordcount: '2103'
+source-wordcount: '2108'
 ht-degree: 0%
 
 ---
@@ -190,9 +190,9 @@ Para obter mais informações sobre esquemas de união, visite o [guia da interf
 
 A partir do principal **[!UICONTROL Perfis]** selecione o **[!UICONTROL Atributos computados]** para exibir uma lista de atributos computados que pertencem à sua organização.
 
-Para obter mais informações sobre atributos computados, leia a [visão geral dos atributos computados](../computed-attributes/overview.md). Para obter mais informações sobre como usar atributos computados na interface do usuário da Platform, leia a [guia da interface de atributos computados](../computed-attributes/ui.md).
+![A guia Computed attributes (Atributos calculados) é realçada.](../images/user-guide/computed-attributes.png)
 
-IMAGEM
+Para obter mais informações sobre atributos computados, leia a [visão geral dos atributos computados](../computed-attributes/overview.md). Para obter mais informações sobre como usar atributos computados na interface do usuário da Platform, leia a [guia da interface de atributos computados](../computed-attributes/ui.md).
 
 ## Próximas etapas
 

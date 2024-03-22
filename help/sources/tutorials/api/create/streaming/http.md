@@ -3,9 +3,9 @@ keywords: Experience Platform;início;tópicos populares;conexão de transmissã
 title: Criar uma conexão de transmissão da API HTTP usando a API do serviço de fluxo
 description: Este tutorial fornece etapas sobre como criar uma conexão de transmissão usando a fonte de API HTTP para dados brutos e XDM usando a API do serviço de fluxo
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: fe2e93b9595d9df9a088d627d696b559f259e80d
+source-git-commit: afe632181295cc1460b3489d9b0306ef9342abfe
 workflow-type: tm+mt
-source-wordcount: '1568'
+source-wordcount: '1658'
 ht-degree: 4%
 
 ---
@@ -456,9 +456,6 @@ Uma resposta bem-sucedida retorna detalhes do mapeamento recém-criado, incluind
 }
 ```
 
-| Propriedade | Descrição |
-| --- | --- |
-
 ## Criar um fluxo de dados
 
 Com as conexões de origem e de destino criadas, agora é possível criar um fluxo de dados. O fluxo de dados é responsável por agendar e coletar dados de uma origem. Você pode criar um fluxo de dados executando uma solicitação POST para o `/flows` terminal.
@@ -579,16 +576,16 @@ POST /collection/{INLET_URL}
 | Parâmetro | Descrição |
 | --------- | ----------- |
 | `{INLET_URL}` | O URL do ponto de extremidade de streaming. Você pode recuperar esse URL fazendo uma solicitação GET para o `/connections` ao fornecer a ID de conexão básica. |
-| `{FLOW_ID}` | A ID do fluxo de dados de transmissão da API HTTP. |
+| `{FLOW_ID}` | A ID do fluxo de dados de transmissão da API HTTP. Essa ID é necessária para dados XDM e RAW. |
 
 **Solicitação**
 
 >[!BEGINTABS]
 
->[!TAB XDM]
+>[!TAB Enviar dados XDM]
 
 ```shell
-curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec?x-adobe-flow-id=e5895dc9-b0c8-4431-bab7-bb0d2b4be5db \
+curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec \
   -H 'Content-Type: application/json' \
   -d '{
         "header": {
@@ -625,10 +622,36 @@ curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20
       }'
 ```
 
->[!TAB Dados brutos]
+>[!TAB Enviar dados brutos com ID de fluxo como um cabeçalho HTTP]
+
+Ao enviar dados brutos, você pode especificar sua ID de fluxo como um parâmetro de consulta ou como parte de seu cabeçalho HTTP. O exemplo a seguir especifica a ID do fluxo como um cabeçalho HTTP.
 
 ```shell
-curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec?x-adobe-flow-id=e5895dc9-b0c8-4431-bab7-bb0d2b4be5db \
+curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec \
+  -H 'Content-Type: application/json' 
+  -H 'x-adobe-flow-id=f2ae0194-8bd8-4a40-a4d9-f07bdc3e6ce2' \
+  -d '{
+      "name": "Johnson Smith",
+      "location": {
+          "city": "Seattle",
+          "country": "United State of America",
+          "address": "3692 Main Street"
+      },
+      "gender": "Male",
+      "birthday": {
+          "year": 1984,
+          "month": 6,
+          "day": 9
+      }
+  }'
+```
+
+>[!TAB Enviar dados brutos com a ID de fluxo como um parâmetro de consulta]
+
+Ao enviar dados brutos, você pode especificar sua ID de fluxo como um parâmetro de consulta ou como um cabeçalho HTTP. O exemplo a seguir especifica a ID de fluxo como um parâmetro de consulta.
+
+```shell
+curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec?x-adobe-flow-id=f2ae0194-8bd8-4a40-a4d9-f07bdc3e6ce2 \
   -H 'Content-Type: application/json' \
   -d '{
       "name": "Johnson Smith",

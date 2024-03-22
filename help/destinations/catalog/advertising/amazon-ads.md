@@ -3,7 +3,7 @@ title: Anúncios do Amazon
 description: O Amazon Ads oferece uma variedade de opções para ajudá-lo a atingir suas metas de publicidade para vendedores registrados, fornecedores, fornecedores de livros, autores de KDP (Kindle Direct Publishing), desenvolvedores de aplicativos e/ou agências. A integração do Amazon Ads com o Adobe Experience Platform fornece integração pronta para uso com produtos Amazon Ads, incluindo o Amazon DSP (ADSP). Usando o destino do Amazon Ads no Adobe Experience Platform, os usuários podem definir públicos-alvo do anunciante para direcionamento e ativação no Amazon DSP.
 last-substantial-update: 2024-02-20T00:00:00Z
 exl-id: 724f3d32-65e0-4612-a882-33333e07c5af
-source-git-commit: ba768b3148d57e9df12a34f0324c086a17a6d45a
+source-git-commit: 8e34e5488ab80cd1f3c8086bf7c16d3f22527540
 workflow-type: tm+mt
 source-wordcount: '1646'
 ht-degree: 2%
@@ -38,7 +38,7 @@ Essa integração com o Amazon DSP permite [!DNL Amazon Ads] anunciantes passem 
 
 Essa integração com [!DNL Amazon Marketing Cloud] (AMC) permite [!DNL Amazon Ads] anunciantes passarem segmentos de CDP do formulário do Adobe Experience Platform para a AMC. Os anunciantes podem então se associar às entradas de CDP com [!DNL Amazon Ads] O sinaliza e faz análises personalizadas em tópicos como impacto de mídia, segmentos de público-alvo e jornadas do cliente em formato compatível com a privacidade. Por exemplo, um anunciante pode fazer upload de uma lista de seus clientes existentes para entender o desempenho agregado da campanha de publicidade ou estatísticas agregadas de eventos de conversão no Amazon, como visualizar uma página de detalhes do produto, adicionar um produto a um carrinho de compras ou comprar um produto.
 
-### Otimização de publicidade:
+### Otimização de publicidade
 
 Essa integração com [!DNL Amazon Marketing Cloud] (AMC) permite que os anunciantes façam upload de suas próprias listas de clientes e usem [!DNL Amazon Marketing Cloud] SQL, executar análise de sobreposição, supressões, adições ou otimizações para públicos-alvo de forma recorrente antes de criar um público pronto para ativação no Amazon DSP para direcionamento.
 

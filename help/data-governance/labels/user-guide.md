@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Gerenciar rótulos de uso de dados na interface
 description: Este guia aborda etapas para trabalhar com rótulos de uso de dados na interface do usuário do Adobe Experience Platform.
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-source-git-commit: 663d1e20a7b8a56b1395047124fdf4b6fc3c214b
+source-git-commit: ea58ece75d2208ae96bd71c2f51e14279769640f
 workflow-type: tm+mt
-source-wordcount: '1465'
-ht-degree: 19%
+source-wordcount: '1538'
+ht-degree: 17%
 
 ---
 
@@ -29,6 +29,14 @@ Consulte o guia sobre como [configurar permissões](https://experienceleague.ado
 ## Gerenciar rótulos no nível do esquema
 
 Você pode adicionar rótulos diretamente a um esquema ou campos dentro desse esquema. Quaisquer campos aplicados no nível do esquema serão propagados para todos os conjuntos de dados baseados nesse esquema.
+
+>[!NOTE]
+>
+>Se suas políticas de uso de dados foram criadas antes de você rotular o campo, é possível encontrar uma caixa de diálogo de violação de política de governança ao aplicar rótulos ao novo esquema. Esta caixa de diálogo indica que a aplicação deste rótulo violará uma política de uso existente. Use o diagrama de linhagem de dados para entender quais outras alterações de configuração precisam ser feitas antes de você poder adicionar o rótulo ao campo de esquema.
+>
+>![A violação da política de governança de dados detectou uma caixa de diálogo com o resumo da violação e o diagrama de linhagem de dados em destaque.](../images/labels/policy-violation-dialog.png)
+>
+>Consulte a [documentação de violação da política de uso de dados](https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/enforcement/auto-enforcement#data-usage-violation) para obter mais informações sobre violações parciais de políticas.
 
 Para gerenciar rótulos de uso de dados no nível do esquema, você deve selecionar um esquema existente ou criar um novo. Depois de fazer logon no Adobe Experience Platform, selecione **[!UICONTROL Esquemas]** no painel de navegação esquerdo para abrir a **[!UICONTROL Esquemas]** espaço de trabalho. Essa página lista todos os esquemas criados que pertencem à sua organização, juntamente com detalhes úteis relacionados a cada esquema.
 

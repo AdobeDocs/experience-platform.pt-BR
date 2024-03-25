@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Aplicação automática de política
 description: Este documento aborda como as políticas de uso de dados são aplicadas automaticamente ao ativar públicos para destinos no Experience Platform.
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: 4e92b6937c4fa383b398ec99faa6d97907c128d6
+source-git-commit: ea58ece75d2208ae96bd71c2f51e14279769640f
 workflow-type: tm+mt
-source-wordcount: '2012'
+source-wordcount: '2109'
 ht-degree: 0%
 
 ---
@@ -92,7 +92,7 @@ As seções abaixo descrevem as diferentes mensagens de aplicação de política
 
 Se ocorrer uma violação de política ao tentar ativar um público (ou [fazer edições em um público já ativado](#policy-enforcement-for-activated-audiences)) a ação é impedida e um popover é exibido indicando que uma ou mais políticas foram violadas. Depois que uma violação é acionada, a variável **[!UICONTROL Salvar]** O botão estará desativado para a entidade que você está modificando até que os componentes apropriados sejam atualizados para estar em conformidade com as políticas de uso de dados.
 
-Selecione uma violação de política na coluna esquerda do popover para exibir detalhes dessa violação.
+Selecione um nome de política para exibir detalhes dessa violação.
 
 ![Uma caixa de diálogo que indica que ocorreu uma violação de política com o nome da política destacado.](../images/enforcement/violation-policy-select.png)
 
@@ -104,13 +104,21 @@ Um gráfico de linhagem de dados é exibido abaixo do resumo da violação, perm
 
 ![Uma caixa de diálogo de violação de política com o gráfico de linhagem de dados em destaque.](../images/enforcement/data-lineage.png)
 
-Você também pode usar a variável **[!UICONTROL Filtro]** ícone (![](../images/enforcement/filter.png)) para filtrar as entidades exibidas por categoria. Pelo menos duas categorias devem ser selecionadas para que os dados sejam exibidos.
+Você também pode usar a variável **[!UICONTROL Filtro]** ícone (![Um ícone de filtro.](../images/enforcement/filter.png)) para filtrar as entidades exibidas por categoria. Pelo menos duas categorias devem ser selecionadas para que os dados sejam exibidos.
 
 ![Uma caixa de diálogo de violação de política com o filtro de linhagem de dados e o menu suspenso destacados.](../images/enforcement/lineage-filter.png)
 
 Selecionar **[!UICONTROL Exibição de lista]** para exibir a linhagem de dados como uma lista. Para voltar para o gráfico visual, selecione **[!UICONTROL Exibição de caminho]**.
 
 ![Uma caixa de diálogo de violação de política com a exibição do caminho de linhagem de dados em destaque.](../images/enforcement/list-view.png)
+
+#### Rótulos aplicados com sucesso {#labels-successfully-applied}
+
+Se você criar políticas de uso de dados antes de rotular os campos do esquema, poderá encontrar uma caixa de diálogo de violação de política de governança assim que aplicar rótulos ao esquema. Nesse caso, você pode rotular parte do esquema com êxito. A variável [!UICONTROL Rótulos aplicados com sucesso] indica quais rótulos foram aplicados com êxito, pois não há restrições de política nesse campo.
+
+Use o diagrama de linhagem de dados para entender quais outras alterações de configuração precisam ser feitas antes de você poder adicionar o rótulo ao campo de esquema.
+
+![Um diálogo de violação de política com a [!UICONTROL Rótulos aplicados com sucesso] guia realçada.](../images/enforcement/labels-successfully-applied.png)
 
 ### Avaliação da política de consentimento {#consent-policy-evaluation}
 

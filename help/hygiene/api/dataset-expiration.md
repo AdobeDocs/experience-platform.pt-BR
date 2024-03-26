@@ -3,7 +3,7 @@ title: Ponto de extremidade da API de expiração do conjunto de dados
 description: O ponto de extremidade /ttl na API da higiene de dados permite agendar programaticamente as expirações do conjunto de dados no Adobe Experience Platform.
 role: Developer
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
-source-git-commit: 0d59f159e12ad83900e157a3ce5ab79a2f08d0c1
+source-git-commit: 04d49282d60b2e886a6d2dae281b98b60e6ce9b3
 workflow-type: tm+mt
 source-wordcount: '2083'
 ht-degree: 2%
@@ -489,3 +489,4 @@ A tabela a seguir descreve os parâmetros de consulta disponíveis quando [lista
 | `updatedDate` / `updatedToDate` / `updatedFromDate` | Curtir `createdDate` / `createdFromDate` / `createdToDate`, mas corresponde a uma hora de atualização de expiração de conjunto de dados, em vez da hora de criação.<br><br>Uma expiração é considerada atualizada em cada edição, incluindo quando é criada, cancelada ou executada. | `updatedDate=2022-01-01` |
 
 {style="table-layout:auto"}
+

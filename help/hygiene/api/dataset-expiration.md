@@ -3,9 +3,9 @@ title: Ponto de extremidade da API de expiração do conjunto de dados
 description: O ponto de extremidade /ttl na API da higiene de dados permite agendar programaticamente as expirações do conjunto de dados no Adobe Experience Platform.
 role: Developer
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 0d59f159e12ad83900e157a3ce5ab79a2f08d0c1
 workflow-type: tm+mt
-source-wordcount: '1726'
+source-wordcount: '2083'
 ht-degree: 2%
 
 ---
@@ -130,8 +130,6 @@ curl -X GET \
 
 Uma resposta bem-sucedida retorna os detalhes da expiração do conjunto de dados.
 
-<!-- Is there a different response from making a GET request to either '/ttl/{DATASET_ID}?include=history' or '/ttl/{TTL_ID}'? If so please can you provide the response for both (or just the ttl endpoint itf it differs from teh example) -->
-
 ```json
 {
     "ttlId": "SD-c8c75921-2416-4be7-9cfd-9ab01de66c5f",
@@ -186,29 +184,105 @@ O JSON a seguir representa uma resposta truncada para os detalhes de um conjunto
 }
 ```
 
-## Criar ou atualizar uma expiração de conjunto de dados {#create-or-update}
+## Criar uma expiração de conjunto de dados {#create}
 
-Crie ou atualize uma data de expiração para um conjunto de dados por meio de uma solicitação PUT. A solicitação PUT usa o `datasetId` ou o `ttlId`.
+Para garantir que os dados sejam removidos do sistema após um período especificado, programe uma expiração para um conjunto de dados específico fornecendo a ID do conjunto de dados e a data e hora de expiração no formato ISO 8601.
+
+Para criar uma expiração do conjunto de dados, execute uma solicitação POST, como mostrado abaixo, e forneça os valores mencionados abaixo na carga.
 
 **Formato da API**
 
 ```http
-PUT /ttl/{DATASET_ID}
-PUT /ttl/{TTL_ID}
+POST /ttl
 ```
-
-| Parâmetro | Descrição |
-| --- | --- |
-| `{DATASET_ID}` | A ID do conjunto de dados para o qual você deseja agendar uma expiração. |
-| `{TTL_ID}` | A ID da expiração do conjunto de dados. |
 
 **Solicitação**
 
-A solicitação a seguir agenda um conjunto de dados `5b020a27e7040801dedbf46e` para exclusão no final de 2022 (Hora Média de Greenwich). Se nenhuma expiração existente for encontrada para o conjunto de dados, uma nova expiração será criada. Se o conjunto de dados já tiver uma expiração pendente, essa expiração será atualizada com o novo `expiry` valor.
+```shell
+curl -X POST \
+  https://platform.adobe.io/data/core/hygiene/ttl \
+  -H `Authorization: Bearer {ACCESS_TOKEN}`
+  -H `x-gw-ims-org-id: {ORG_ID}`
+  -H `x-api-key: {API_KEY}`
+  -H `Accept: application/json`
+  -d {
+      "datasetId": "5b020a27e7040801dedbf46e",
+      "expiry": "2030-12-31T23:59:59Z"
+      "displayName": "Delete Acme Data before 2025",
+      "description": "The Acme information in this dataset is licensed for our use through the end of 2024."
+      }
+```
+
+| Propriedade | Descrição |
+| --- | --- |
+| `datasetId` | **Obrigatório** A ID do conjunto de dados de destino para o qual você deseja agendar uma expiração. |
+| `expiry` | **Obrigatório** Uma data e hora no formato ISO 8601. Se a cadeia de caracteres não tiver deslocamento de fuso horário explícito, o fuso horário será considerado UTC. O tempo de vida dos dados no sistema é definido de acordo com o valor de expiração fornecido.<br>Nota:<ul><li>A solicitação falhará se uma expiração de conjunto de dados já existir para o conjunto de dados.</li><li>Esta data e hora devem ser pelo menos **24 horas no futuro**.</li></ul> |
+| `displayName` | Um nome de exibição opcional para a solicitação de expiração do conjunto de dados. |
+| `description` | Uma descrição opcional para a solicitação de expiração. |
+
+**Resposta**
+
+Uma resposta bem-sucedida retorna um status HTTP 201 (Criado) e o novo estado da expiração do conjunto de dados, se não houver expiração do conjunto de dados pré-existente.
+
+```json
+{
+  "ttlId":       "SD-c8c75921-2416-4be7-9cfd-9ab01de66c5f",
+  "datasetId":   "5b020a27e7040801dedbf46e",
+  "datasetName": "Acme licensed data",
+  "sandboxName": "prod",
+  "imsOrg":      "{ORG_ID}",
+  "status":      "pending",
+  "expiry":      "2030-12-31T23:59:59Z",
+  "updatedAt":   "2021-08-19T11:14:16Z",
+  "updatedBy":   "Jane Doe <jdoe@adobe.com> 77A51F696282E48C0A494 012@64d18d6361fae88d49412d.e",
+  "displayName": "Delete Acme Data before 2031",
+  "description": "The Acme information in this dataset is licensed for our use through the end of 2030."
+}
+```
+
+| Propriedade | Descrição |
+| --- | --- |
+| `ttlId` | A ID da expiração do conjunto de dados. |
+| `datasetId` | A ID do conjunto de dados ao qual essa expiração se aplica. |
+| `datasetName` | O nome de exibição do conjunto de dados ao qual esta expiração se aplica. |
+| `sandboxName` | O nome da sandbox em que o conjunto de dados de destino está localizado. |
+| `imsOrg` | A ID da sua organização. |
+| `status` | O status atual da expiração do conjunto de dados. |
+| `expiry` | A data e a hora agendadas em que o conjunto de dados será excluído. |
+| `updatedAt` | Um carimbo de data e hora de quando a expiração foi atualizada pela última vez. |
+| `updatedBy` | O usuário que atualizou a expiração pela última vez. |
+| `displayName` | Um nome de exibição para a solicitação de expiração. |
+| `description` | Uma descrição para a solicitação de expiração. |
+
+Um status HTTP 400 (Solicitação inválida) ocorre se a expiração de um conjunto de dados já existir para o conjunto de dados. Uma resposta sem sucesso retornará um status HTTP 404 (Não encontrado) se essa expiração de conjunto de dados não existir (ou se você não tiver acesso a ela).
+
+## Atualizar uma expiração de conjunto de dados {#update}
+
+Para atualizar uma data de expiração para um conjunto de dados, use uma solicitação PUT e a variável `ttlId`. Você pode atualizar o `displayName`, `description`, e/ou `expiry` informações.
+
+>[!NOTE]
+>
+>Se você alterar a data e a hora de expiração, ela deverá ser de pelo menos 24 horas no futuro. Esse atraso imposto oferece uma oportunidade para cancelar ou reagendar a expiração e evitar qualquer perda acidental de dados.
+
+**Formato da API**
+
+```http
+PUT /ttl/{TTL_ID}
+```
+
+<!-- We should be avoiding usage of TTL, Can I change that to {EXPIRY_ID} or {EXPIRATION_ID} instead? -->
+
+| Parâmetro | Descrição |
+| --- | --- |
+| `{TTL_ID}` | A ID da expiração do conjunto de dados que você deseja alterar. |
+
+**Solicitação**
+
+A solicitação a seguir reprograma a expiração de um conjunto de dados `SD-c8c75921-2416-4be7-9cfd-9ab01de66c5f` no final de 2024 (Hora Média de Greenwich). Se a expiração do conjunto de dados existente for encontrada, essa expiração será atualizada com a nova `expiry` valor.
 
 ```shell
 curl -X PUT \
-  https://platform.adobe.io/data/core/hygiene/ttl/5b020a27e7040801dedbf46e \
+  https://platform.adobe.io/data/core/hygiene/ttl/SD-c8c75921-2416-4be7-9cfd-9ab01de66c5f \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -223,7 +297,7 @@ curl -X PUT \
 
 | Propriedade | Descrição |
 | --- | --- |
-| `expiry` | Uma data e hora no formato ISO 8601. Se a cadeia de caracteres não tiver deslocamento de fuso horário explícito, o fuso horário será considerado UTC. O tempo de vida dos dados no sistema é definido de acordo com o valor de expiração fornecido. Qualquer carimbo de data e hora de expiração anterior do mesmo conjunto de dados será substituído pelo novo valor de expiração fornecido. |
+| `expiry` | **Obrigatório** Uma data e hora no formato ISO 8601. Se a cadeia de caracteres não tiver deslocamento de fuso horário explícito, o fuso horário será considerado UTC. O tempo de vida dos dados no sistema é definido de acordo com o valor de expiração fornecido. Qualquer carimbo de data e hora de expiração anterior do mesmo conjunto de dados será substituído pelo novo valor de expiração fornecido. Esta data e hora devem ser pelo menos **24 horas no futuro**. |
 | `displayName` | Um nome de exibição para a solicitação de expiração. |
 | `description` | Uma descrição opcional para a solicitação de expiração. |
 
@@ -231,7 +305,7 @@ curl -X PUT \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna os detalhes da expiração do conjunto de dados, com o status HTTP 200 (OK) se uma expiração pré-existente foi atualizada ou 201 (Criado) se não houver uma expiração pré-existente.
+Uma resposta bem-sucedida retorna o novo estado da expiração do conjunto de dados e um status HTTP 200 (OK) se uma expiração pré-existente tiver sido atualizada.
 
 ```json
 {
@@ -258,6 +332,8 @@ Uma resposta bem-sucedida retorna os detalhes da expiração do conjunto de dado
 | `updatedBy` | O usuário que atualizou a expiração pela última vez. |
 
 {style="table-layout:auto"}
+
+Uma resposta sem sucesso retornará um status HTTP 404 (Não encontrado) se essa expiração de conjunto de dados não existir.
 
 ## Cancelar a expiração de um conjunto de dados {#delete}
 

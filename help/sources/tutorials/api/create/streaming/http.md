@@ -3,7 +3,7 @@ keywords: Experience Platform;início;tópicos populares;conexão de transmissã
 title: Criar uma conexão de transmissão da API HTTP usando a API do serviço de fluxo
 description: Este tutorial fornece etapas sobre como criar uma conexão de transmissão usando a fonte de API HTTP para dados brutos e XDM usando a API do serviço de fluxo
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: afe632181295cc1460b3489d9b0306ef9342abfe
+source-git-commit: 84ffbb86e8973c2795d19122d3866e980949759d
 workflow-type: tm+mt
 source-wordcount: '1658'
 ht-degree: 4%
@@ -718,3 +718,4 @@ Se a variável `Authorization` não houver cabeçalho ou um token de acesso inv�
     }
 }
 ```
+

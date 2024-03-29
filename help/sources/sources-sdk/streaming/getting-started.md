@@ -2,14 +2,19 @@
 title: Introdução a fontes de autoatendimento (SDK de transmissão)
 description: Este documento fornece uma introdução às informações de pré-requisito que você precisa saber antes de tentar criar uma nova fonte usando Fontes de autoatendimento (SDK de transmissão).
 exl-id: 6cc13279-ce0b-45bc-ad25-e2e6aafc2af0
-source-git-commit: 36de441a68a7cb9248d058e12e6ca3ed60f899ef
+badge: Beta
+source-git-commit: 256857103b4037b2cd7b5b52d6c5385121af5a9f
 workflow-type: tm+mt
-source-wordcount: '523'
+source-wordcount: '543'
 ht-degree: 12%
 
 ---
 
 # Introdução a fontes de autoatendimento (SDK de transmissão)
+
+>[!NOTE]
+>
+>O SDK de transmissão de fontes de autoatendimento está na versão beta. Leia as [visão geral das origens](../../home.md#terms-and-conditions) para obter mais informações sobre o uso de fontes rotuladas como beta.
 
 Fontes de autoatendimento (SDK de transmissão) permitem integrar sua própria fonte para trazer dados de transmissão para a Adobe Experience Platform. Este documento fornece uma introdução aos conceitos principais que você precisa saber antes de tentar fazer chamadas para o [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 

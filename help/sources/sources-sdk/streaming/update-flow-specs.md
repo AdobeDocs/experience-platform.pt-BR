@@ -2,14 +2,19 @@
 title: Atualizar especificações de fluxo para SDK de streaming usando a API de serviço de fluxo
 description: O documento a seguir fornece etapas sobre como recuperar e atualizar especificações de fluxo usando a API de serviço de fluxo para fontes de autoatendimento (SDK de transmissão).
 exl-id: cc9dab7a-08fa-4c6c-bbac-cb658a6376fb
-source-git-commit: 36de441a68a7cb9248d058e12e6ca3ed60f899ef
+badge: Beta
+source-git-commit: 256857103b4037b2cd7b5b52d6c5385121af5a9f
 workflow-type: tm+mt
-source-wordcount: '403'
-ht-degree: 2%
+source-wordcount: '423'
+ht-degree: 3%
 
 ---
 
 # Atualizar especificações de fluxo usando o [!DNL Flow Service] API
+
+>[!NOTE]
+>
+>O SDK de transmissão de fontes de autoatendimento está na versão beta. Leia as [visão geral das origens](../../home.md#terms-and-conditions) para obter mais informações sobre o uso de fontes rotuladas como beta.
 
 Depois de gerar uma nova ID de especificação de conexão, você deve adicionar essa ID a uma especificação de fluxo para criar um fluxo de dados.
 

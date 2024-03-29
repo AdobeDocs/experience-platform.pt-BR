@@ -2,14 +2,19 @@
 title: Documentar sua fonte (SDK de transmissão)
 description: A etapa final antes que a nova fonte possa ser ativada no Adobe Experience Platform é documentar a nova fonte.
 exl-id: 65ca7a4d-3e02-4f54-bf07-ea2c92b8dbf1
-source-git-commit: 36de441a68a7cb9248d058e12e6ca3ed60f899ef
+badge: Beta
+source-git-commit: 256857103b4037b2cd7b5b52d6c5385121af5a9f
 workflow-type: tm+mt
-source-wordcount: '389'
+source-wordcount: '409'
 ht-degree: 0%
 
 ---
 
 # Documentar sua fonte (SDK de transmissão)
+
+>[!NOTE]
+>
+>O SDK de transmissão de fontes de autoatendimento está na versão beta. Leia as [visão geral das origens](../../home.md#terms-and-conditions) para obter mais informações sobre o uso de fontes rotuladas como beta.
 
 A etapa final antes que a nova fonte possa ser definida como ativa no Adobe Experience Platform é documentar a nova fonte.
 

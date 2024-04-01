@@ -1,9 +1,10 @@
 ---
 title: Definir campos de mapa na interface
 description: Saiba como definir um campo de mapa na interface do usuário do Experience Platform.
-source-git-commit: 8eea73c91d0671b1ddaeb8da0dc18b3e5e306f57
+exl-id: 657428a2-f184-4d7c-b657-4fc60d77d5c6
+source-git-commit: 57a0381401c6084513ce7413b66dec56044b4492
 workflow-type: tm+mt
-source-wordcount: '351'
+source-wordcount: '453'
 ht-degree: 0%
 
 ---
@@ -25,6 +26,19 @@ A [!UICONTROL Mapear tipo de valor] é exibida. Este valor é necessário para [
 Depois de configurar o subcampo, você deve atribuí-lo a um grupo de campos. Use o **[!UICONTROL Grupo de campos]** menu suspenso ou campo de pesquisa e selecione **[!UICONTROL Aplicar]**. Você pode continuar a adicionar campos ao objeto usando o mesmo processo ou selecionar **[!UICONTROL Salvar]** para confirmar as configurações.
 
 ![Uma gravação da seleção e das configurações do grupo de campos que estão sendo aplicadas.](../../images/ui/fields/special/assign-to-field-group.gif)
+
+## Restrições de uso {#restrictions}
+
+O XDM impõe as seguintes restrições ao uso desse tipo de dados:
+
+* Os tipos de mapa DEVEM ser do tipo `object`.
+* Os tipos de mapa NÃO DEVEM ter propriedades definidas (em outras palavras, eles definem objetos &quot;vazios&quot;).
+* Os tipos de mapa DEVEM incluir um `additionalProperties.type` que descreve os valores que podem ser colocados no mapa, seja `string` ou `integer`.
+
+Certifique-se de que você só esteja usando campos do tipo mapa quando for absolutamente necessário, pois eles apresentam as seguintes desvantagens de desempenho:
+
+* Tempo de resposta de [Serviço de consulta Adobe Experience Platform](../../../query-service/home.md) degrada de três segundos a dez segundos para 100 milhões de registros.
+* Os mapas devem ter menos de 16 chaves, caso contrário, haverá risco de degradação adicional.
 
 >[!NOTE]
 >

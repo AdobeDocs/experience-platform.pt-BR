@@ -1,10 +1,10 @@
 ---
 title: Visão geral da extensão de string do produto Adobe Analytics
-description: Saiba mais sobre a extensão de tag da Sequência de caracteres do produto do Adobe Analytics na Adobe Experience Platform.
+description: Saiba mais sobre a extensão de tag da string do produto do Adobe Analytics na Adobe Experience Platform.
 exl-id: a49feb4e-f166-41d2-9f85-639f6ff8bb8f
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 36ca1e63c043baa776f27b627cdbe493b2ced674
 workflow-type: tm+mt
-source-wordcount: '525'
+source-wordcount: '516'
 ht-degree: 96%
 
 ---
@@ -33,7 +33,7 @@ Para obter a documentação completa, visite [Produtos](https://experienceleague
 
 ### Configuração de ação
 
-Adicione a ação &quot;Cadeia de caracteres de produto do Adobe Analytics - Definir s.products&quot; à regra.
+Adicione a ação &quot;String de produto do Adobe Analytics - Definir s.products&quot; à regra.
 
 ![Configuração de ação](./images/screenshot-action-config.png)
 
@@ -89,7 +89,7 @@ Se sua implementação usar eventos personalizados ou eVars de comercialização
 
 Essa ação deve ser acompanhada por uma ação &quot;Adobe Analytics - Definir variáveis&quot; que define os eventos bem-sucedidos correspondentes, bem como uma ação &quot;Adobe Analytics - Enviar beacon&quot;. A sequência correta de ações está ilustrada abaixo.
 
-![Campos padrão](./images/screenshot-price-type.png)
+![Campos padrão](./images/screenshot-action-type.png)
 
 ### Exigências
 

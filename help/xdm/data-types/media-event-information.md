@@ -1,10 +1,11 @@
 ---
 title: Tipo de dados das informações do evento de mídia
 description: Saiba mais sobre o tipo de dados Modelo de dados de experiência (XDM) de informações de evento de mídia.
-source-git-commit: 65f3dcf1cacfbc4e8a598244810d238bd88f64bd
+exl-id: 91bb7f28-b629-4044-b687-768c545ac8a2
+source-git-commit: b81afb8f6c4eaedb19a58b6fe3896286f1486804
 workflow-type: tm+mt
-source-wordcount: '93'
-ht-degree: 6%
+source-wordcount: '107'
+ht-degree: 5%
 
 ---
 
@@ -16,7 +17,7 @@ ht-degree: 6%
 
 | Propriedade | Tipo de dados | Descrição |
 | --- | --- | --- |
-| `mediaCollection` | [[!UICONTROL mediaDetails]](./media-details-information.md) | Informações detalhadas da mídia relacionadas ao evento de experiência. |
+| `mediaCollection` | [!UICONTROL mediaDetails] | Informações detalhadas da mídia relacionadas ao evento de experiência. Esse tipo de dados é usado para [coleção de dados de mídia](./media-collection-details.md) e [relatórios de dados de mídia](./media-reporting-details.md). |
 | `mediaEventTimestamp` | [!UICONTROL String] | A hora em que um evento de mídia ocorreu. |
 | `mediaEventType` | [!UICONTROL String] | O tipo de evento de mídia. |
 

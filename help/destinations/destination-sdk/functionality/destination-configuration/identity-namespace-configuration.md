@@ -2,9 +2,9 @@
 description: Saiba como configurar as identidades de destino compatíveis para destinos criados com o Destination SDK.
 title: Configuração do namespace de identidade
 exl-id: 30c0939f-b968-43db-b09b-ce5b34349c6e
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 20fb966c4cc8a2b09ea64da3e688688b34a0b5d1
 workflow-type: tm+mt
-source-wordcount: '842'
+source-wordcount: '892'
 ht-degree: 4%
 
 ---
@@ -13,9 +13,11 @@ ht-degree: 4%
 
 O Experience Platform usa namespaces de identidade para descrever o tipo de identidades específicas. Por exemplo, um namespace de identidade chamado `Email` identifica um valor como `name@email.com` como um endereço de email.
 
-Ao criar um destino por meio do Destination SDK, além do [configuração de um schema de parceiro](schema-configuration.md) para que os usuários possam mapear atributos de perfil e identidades, você também pode definir namespaces de identidade compatíveis com sua plataforma de destino.
+Ao criar destinos em tempo real (transmissão) por meio do Destination SDK, além de [configuração de um schema de parceiro](schema-configuration.md) para que os usuários possam mapear atributos de perfil e identidades, você também deve definir namespaces de identidade compatíveis com sua plataforma de destino. Por exemplo, se sua plataforma de destino aceitar emails com hash e [!DNL IDFA], você deve definir essas duas identidades como [descrita mais adiante neste documento](#supported-parameters).
 
-Ao fazer isso, os usuários têm a opção adicionada de selecionar identidades de destino, além de atributos de perfil de destino.
+Ao ativar públicos para destinos de transmissão, os usuários também devem mapear identidades de destino, além de atributos de perfil de destino. Caso contrário, os públicos-alvo não serão ativados para a plataforma de destino.
+
+Ao criar um destino baseado em arquivo por meio do Destination SDK, a configuração dos namespaces de identidade é opcional.
 
 Para saber mais sobre namespaces de identidade no Experience Platform, consulte [documentação de namespaces de identidade](../../../../identity-service/features/namespaces.md).
 
@@ -44,8 +46,8 @@ Consulte a tabela abaixo para obter detalhes sobre quais tipos de integrações 
 
 | Tipo de integração | Suporte à funcionalidade |
 |---|---|
-| Integrações em tempo real (streaming) | Sim |
-| Integrações baseadas em arquivo (lote) | Sim |
+| Integrações em tempo real (streaming) | Sim (obrigatório) |
+| Integrações baseadas em arquivo (lote) | Sim (opcional) |
 
 ## Parâmetros compatíveis {#supported-parameters}
 

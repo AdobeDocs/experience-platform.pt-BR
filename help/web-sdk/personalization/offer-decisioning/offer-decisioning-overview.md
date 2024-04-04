@@ -3,9 +3,9 @@ title: Utilização do Offer Decisioning com o SDK da Web da plataforma
 description: O SDK da Web da Adobe Experience Platform pode fornecer e renderizar ofertas personalizadas gerenciadas no Offer Decisioning. Você pode criar suas ofertas e outros objetos relacionados usando a interface do usuário ou a API do Offer Decisioning.
 keywords: offer decisioning;decisão;SDK da Web;SDK da Web da plataforma;ofertas personalizadas;entregar ofertas;entrega de ofertas;personalização de ofertas;
 exl-id: 4ab51f9d-3c44-4855-b900-aa2cde673a9a
-source-git-commit: 0449718b1f536055d3dca27dfed1346c066e0325
+source-git-commit: 22477c11a977059849d9b47871a5c2aef1da4b24
 workflow-type: tm+mt
-source-wordcount: '849'
+source-wordcount: '818'
 ht-degree: 3%
 
 ---
@@ -27,8 +27,6 @@ Adobe Experience Platform [!DNL Web SDK] O pode entregar e renderizar ofertas pe
 ## Terminologia
 
 É importante entender a seguinte terminologia ao trabalhar com o Offer Decisioning. Para obter mais informações e visualizar os termos adicionais, visite o [glossário do Offer Decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/glossary.html).
-
-* **Contêiner:** Um container é um mecanismo de isolamento destinado a manter diferentes problemas separados. A ID do container é o primeiro elemento de caminho para todas as APIs do repositório. Todos os objetos de decisão residem em um container.
 
 * **Escopos de decisão:** Para o Offer Decisioning, os escopos de decisão são as cadeias de caracteres codificadas na Base64 de JSON que contêm as IDs de atividade e posicionamento que você deseja que o serviço do offer decisioning use para propor ofertas.
 

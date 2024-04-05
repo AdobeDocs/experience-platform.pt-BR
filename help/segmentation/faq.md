@@ -2,9 +2,9 @@
 title: Perguntas frequentes do Audiences
 description: Descubra respostas para perguntas frequentes sobre públicos-alvo e outros conceitos relacionados à segmentação.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: b129efacb077af0148a743e43ec23f9f8b8d7d3e
+source-git-commit: 81e1ce90b1778bb29c770e1468461949a1ea468c
 workflow-type: tm+mt
-source-wordcount: '3122'
+source-wordcount: '3189'
 ht-degree: 1%
 
 ---
@@ -269,3 +269,10 @@ Até que o próximo trabalho de avaliação de segmento em lote seja executado, 
 Se você usar a pesquisa de perfil para recuperar o perfil recém-criado e observar sua associação de público-alvo, ela mostrará que é um membro de **ambos** Público-alvo A e público-alvo B, apesar de ambos terem definições contraditórias. Quando o trabalho diário de avaliação da segmentação em lote for executado, a associação de público-alvo será atualizada para refletir esse estado atualizado dos dados do perfil.
 
 Se você precisar de mais resolução de público em tempo real, use a transmissão ou a segmentação de borda.
+
+### Quanto tempo leva para que os dados de transmissão estejam disponíveis em workflows de segmentação em lote?
+
+Pode levar até três horas para que os dados de transmissão estejam disponíveis em workflows de segmentação em lote.
+
+Por exemplo, se um trabalho de segmentação em lote for executado às 21h, haverá garantia de que ele conterá a transmissão de dados assimilados **até** 18H. Transmissão de dados assimilados que foram assimilados após 18h, mas antes das 9h **maio** ser incluídos.
+

@@ -4,9 +4,9 @@ title: Avaliar eventos em tempo quase real com a segmentação de transmissão
 description: Este documento contém exemplos sobre como usar a segmentação por transmissão com a API do Serviço de segmentação do Adobe Experience Platform.
 role: Developer
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 2afd0ff97478938f4101e5a4b583e56a760840a2
 workflow-type: tm+mt
-source-wordcount: '1962'
+source-wordcount: '2038'
 ht-degree: 4%
 
 ---
@@ -454,3 +454,7 @@ Como resultado, se você vir que o número em &quot;Últimos X dias&quot; é zer
 ### Quanto tempo leva para uma definição de segmento ficar disponível?
 
 Leva até uma hora para uma definição de segmento estar disponível.
+
+### Existem limitações para os dados que estão sendo transmitidos?
+
+Para que os dados transmitidos sejam usados na segmentação por transmissão, há **deve** deve ser o espaçamento entre os eventos transmitidos. Se muitos eventos forem transmitidos no mesmo segundo, a Platform tratará esses eventos como dados gerados pelo bot e eles serão descartados. Como prática recomendada, você deve **pelo menos** cinco segundos entre os dados do evento para garantir que os dados sejam usados corretamente.

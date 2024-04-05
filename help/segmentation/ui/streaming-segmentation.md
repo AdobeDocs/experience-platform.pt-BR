@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guia da interface de segmentação de streaming
 description: A segmentação por transmissão no Adobe Experience Platform permite fazer a segmentação em tempo quase real, concentrando-se na riqueza de dados. Com a segmentação por transmissão, a qualificação de segmentos agora acontece à medida que os dados chegam à Platform, reduzindo a necessidade de agendar e executar trabalhos de segmentação. Com esse recurso, a maioria das regras de segmento agora pode ser avaliada à medida que os dados são passados para a Platform, o que significa que a associação do segmento será mantida atualizada sem executar trabalhos de segmentação programados.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: 23504dd0909488e2ee63bf356fba4c7f0f7320dc
+source-git-commit: 88f2c8723ef16ff5601dc7e45a9f77b25f45acfd
 workflow-type: tm+mt
-source-wordcount: '1442'
+source-wordcount: '1529'
 ht-degree: 0%
 
 ---
@@ -119,3 +119,7 @@ Como resultado, se você vir que o número em &quot;Últimos X dias&quot; é zer
 ### Quanto tempo leva para uma definição de segmento ficar disponível?
 
 Leva até uma hora para uma definição de segmento estar disponível.
+
+### Existem limitações para os dados que estão sendo transmitidos?
+
+Para que os dados transmitidos sejam usados na segmentação por transmissão, há **deve** deve ser o espaçamento entre os eventos transmitidos. Se muitos eventos forem transmitidos no mesmo segundo, a Platform tratará esses eventos como dados gerados pelo bot e eles serão descartados. Como prática recomendada, você deve **pelo menos** cinco segundos entre os dados do evento para garantir que os dados sejam usados corretamente.

@@ -2,7 +2,7 @@
 title: Empacotamento do serviço de consulta
 description: O documento a seguir descreve o pacote de recursos e produtos disponíveis para o Serviço de consulta e destaca as diferenças entre consultas ad hoc e em lote.
 exl-id: ba472d9e-afe6-423d-9abd-13ecea43f04f
-source-git-commit: 58d961e26874bf5be421fc24cf6c9d7e8855d64b
+source-git-commit: 1e18a60478e2755f49d37d4d3bf4bd3ca6dbf23b
 workflow-type: tm+mt
 source-wordcount: '980'
 ht-degree: 2%
@@ -85,3 +85,4 @@ As sandboxes são partições virtuais dentro de uma única instância do Experi
 ## Próximas etapas
 
 Ao ler este documento, você deve ter uma melhor compreensão dos diferentes tipos de empacotamento e recursos de execução de consulta disponíveis no Serviço de consulta. Para saber mais sobre o Serviço de consulta, como casos de uso conhecidos do setor, leia o [documentação do caso de uso](./use-cases/abandoned-browse.md). Para obter informações mais gerais, visite o [Visão geral do Serviço de consulta](./home.md).
+

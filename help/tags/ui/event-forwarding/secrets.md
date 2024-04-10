@@ -44,7 +44,7 @@ Você também deve ter uma compreensão funcional do fluxo de publicação de ta
 >id="platform_eventforwarding_secrets_environments"
 >title="Ambientes para segredos"
 >abstract="Para que um segredo possa ser usado pelo encaminhamento de eventos, ele deve ser atribuído a um ambiente existente. Se você não tiver nenhum ambiente criado para sua propriedade de encaminhamento de eventos, será necessário configurá-los antes de continuar."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html" text="Visão geral dos ambientes"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html?lang=pt-BR" text="Visão geral dos ambientes"
 
 Para criar um segredo, selecione **[!UICONTROL Encaminhamento de evento]** na navegação à esquerda, abra a propriedade de encaminhamento de eventos em que deseja adicionar o segredo. Em seguida, selecione **[!UICONTROL Segredos]** na navegação à esquerda, seguido por **[!UICONTROL Criar novo segredo]**.
 

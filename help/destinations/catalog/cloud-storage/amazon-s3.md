@@ -125,7 +125,7 @@ Para fazer isso, é necessário criar no console do AWS um usuário presumido pa
 >id="platform_destinations_connect_s3_folderpath"
 >title="Caminho da pasta"
 >abstract="Deve conter somente caracteres A-Z, a-z, 0-9 e pode incluir os seguintes caracteres especiais: `/!-_.'()"^[]+$%.*"`. Para criar uma pasta por arquivo de público-alvo, insira a macro `/%SEGMENT_NAME%` ou `/%SEGMENT_ID%` ou `/%SEGMENT_NAME%/%SEGMENT_ID%` no campo de texto. Macros só podem ser inseridas no final do caminho da pasta. Veja exemplos de macro na documentação."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/cloud-storage/overview.html#use-macros" text="Use macros para criar uma pasta no seu local de armazenamento"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/cloud-storage/overview.html?lang=pt-BR#use-macros" text="Use macros para criar uma pasta no seu local de armazenamento"
 
 Para configurar detalhes para o destino, preencha os campos obrigatórios e opcionais abaixo. Um asterisco ao lado de um campo na interface do usuário indica que o campo é obrigatório.
 

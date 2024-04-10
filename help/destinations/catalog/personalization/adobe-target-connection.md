@@ -83,7 +83,7 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 >id="platform_destinations_target_datastream"
 >title="Sobre IDs de sequências de dados"
 >abstract="Essa opção determina em qual sequência de coleção de dados os públicos-alvo serão incluídos. O menu suspenso mostra apenas as sequências de dados que têm a configuração do Target ativada. Para usar a segmentação de borda, você deve selecionar uma ID de sequência de dados. Selecionar Nenhum desabilita todos os casos de uso que usam segmentação de borda."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/adobe-target-connection.html#parameters" text="Saiba mais sobre a seleção de sequências de dados"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/adobe-target-connection.html?lang=pt-BR#parameters" text="Saiba mais sobre a seleção de sequências de dados"
 
 >[!IMPORTANT]
 > 

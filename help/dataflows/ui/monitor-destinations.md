@@ -112,7 +112,7 @@ A página de detalhes também exibe uma lista de identidades que falharam e as q
 >id="platform_monitoring_dataflow_run_details_activation"
 >title="Detalhes de execução do fluxo de dados"
 >abstract="Os detalhes de execução do fluxo de dados de destino contêm informações sobre o status de ativação do segmento e as métricas obtidas do perfil do cliente em tempo real para gerar identidades exclusivas. Para saber mais, revise o guia de definições de métricas."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-destinations.html#dataflow-runs-for-streaming-destinations" text="O fluxo de dados é executado para destinos de transmissão"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-destinations.html?lang=pt-BR#dataflow-runs-for-streaming-destinations" text="O fluxo de dados é executado para destinos de transmissão"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_profiles_received_batch"

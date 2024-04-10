@@ -27,7 +27,7 @@ As sandboxes são partições virtuais dentro de uma única instância do Experi
 >id="platform_sandboxes_sandboxtypes"
 >title="Tipo de sandbox"
 >abstract="O tipo de sandbox indica se é uma sandbox de produção ou desenvolvimento. As sandbox de produção incluem dados em tempo real e as sandbox de desenvolvimento são usadas para testes e desenvolvimento."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/sandbox/ui/user-guide.html#create" text="Criar uma sandbox na interface"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/sandbox/ui/user-guide.html?lang=pt-BR#create" text="Criar uma sandbox na interface"
 
 Há dois tipos de sandbox disponíveis no Experience Platform:
 

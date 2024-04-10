@@ -1,9 +1,10 @@
 ---
 title: Notas da versão de março de 2024 da Adobe Experience Platform
 description: As notas da versão de março de 2024 da Adobe Experience Platform.
-source-git-commit: 33952028a4323b2292cdd313da290a5dd079c93f
+exl-id: cab47a76-04f3-48ec-82aa-d17645e4eb15
+source-git-commit: d698bf0b8b0dbdb85909008bb3b60efb0575accc
 workflow-type: tm+mt
-source-wordcount: '1211'
+source-wordcount: '1191'
 ht-degree: 33%
 
 ---
@@ -29,10 +30,6 @@ Atualizações dos recursos existentes no Experience Platform:
 ## Serviço de catálogo {#catalog-service}
 
 O Serviço de catálogo é o sistema de registro para localização e linhagem de dados na Adobe Experience Platform. Embora todos os dados assimilados no Experience Platform sejam armazenados no data lake como arquivos e diretórios, o Catálogo retém os metadados e a descrição desses arquivos e diretórios para fins de pesquisa e monitoramento.
-
->[!NOTE]
->
->Estamos cientes e trabalhando para corrigir um problema de exibição em que a sintaxe desnecessária é renderizada ao lado das imagens nas tabelas.
 
 | Recurso | Descrição |
 | --- | --- |
@@ -136,4 +133,3 @@ A Experience Platform fornece uma API RESTful e uma interface interativa que per
 {style="table-layout:auto"}
 
 Para obter mais informações sobre fontes, leia a [visão geral das origens](../../sources/home.md).
-

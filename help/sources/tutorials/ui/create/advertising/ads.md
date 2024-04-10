@@ -2,14 +2,18 @@
 title: Criar uma conexão de origem de anúncios do Google na interface
 description: Saiba como criar uma conexão de origem do Google Ads usando a interface do usuário do Adobe Experience Platform.
 exl-id: 33dd2857-aed3-4e35-bc48-1c756a8b3638
-source-git-commit: 12ddf87d594b7e25a0356cd419e990b262c1734e
+source-git-commit: ce3dabe4ab08a41e581b97b74b3abad352e3267c
 workflow-type: tm+mt
-source-wordcount: '666'
+source-wordcount: '680'
 ht-degree: 0%
 
 ---
 
 # Criar uma conexão de origem do Google Ads na interface
+
+>[!WARNING]
+>
+>A variável [!DNL Google Ads] a origem está temporariamente indisponível. O Adobe está trabalhando para resolver problemas com esta fonte.
 
 >[!NOTE]
 >

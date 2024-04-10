@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Gerenciar processos de privacidade na interface do Privacy Service
 description: Saiba como usar a interface do usuário do Privacy Service para coordenar e monitorar solicitações de privacidade em vários aplicativos Experience Cloud.
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
-source-git-commit: 93d9e5965e0f5556ff2b584c8b66bd7a7be15d23
+source-git-commit: 8ba06a5d572310e2822a5b3c9f82ff0721540f69
 workflow-type: tm+mt
-source-wordcount: '1511'
-ht-degree: 13%
+source-wordcount: '1722'
+ht-degree: 12%
 
 ---
 
@@ -90,17 +90,25 @@ Para exibir mais detalhes sobre determinado ponto de dados, selecione o ponto de
 >
 >Quando um filtro é aplicado ao widget Solicitações de tarefa, é possível removê-lo selecionando o **X** na pílula de filtro. As solicitações de tarefa retornam à lista de rastreamento padrão.
 
-### Solicitações de tarefa
+### Solicitações de tarefa {#job-requests}
 
-O widget Solicitações de trabalho lista todas as solicitações de trabalho disponíveis em sua organização, incluindo detalhes como tipo de solicitação, status atual, data de vencimento e email do solicitante.
+A variável [!UICONTROL Solicitações de tarefa] o espaço de trabalho lista detalhes sobre as solicitações de trabalho recentes em sua organização. Os detalhes incluem tipo de solicitação, status atual, data de vencimento, email do solicitante e assim por diante. Conjuntos de 100 registros são carregados de cada vez. Por padrão, os trabalhos criados mais recentemente são exibidos na parte superior com mais conjuntos de registros carregados à medida que você rolar a tela para baixo para navegar.
 
 >[!NOTE]
 >
 >Os dados de trabalhos criados anteriormente só podem ser acessados por 30 dias após a data de conclusão.
 
-Você pode filtrar a lista digitando palavras-chave na barra de pesquisa abaixo do título Solicitações de tarefa. A lista filtra automaticamente à medida que você digita, mostrando solicitações que contêm valores correspondentes aos termos da pesquisa. Você também pode usar a variável **[!UICONTROL Solicitado em]** para selecionar um intervalo de tempo para os trabalhos listados.
+Você pode filtrar a lista digitando palavras-chave na barra de pesquisa abaixo de [!UICONTROL Solicitações de tarefa] título. A lista filtra automaticamente à medida que você digita, mostrando solicitações que contêm valores correspondentes aos termos da pesquisa. O campo de pesquisa executa uma pesquisa &quot;rápida&quot; que corresponde IDs de trabalho de privacidade aos trabalhos renderizados/carregados atualmente na interface do usuário. Não é uma pesquisa abrangente de todas as tarefas submetidas. Em vez disso, é um filtro aplicado aos resultados carregados. Use a API do Privacy Service para [retornar trabalhos com base em um regulamento específico, intervalos de datas ou um único trabalho](../api/privacy-jobs.md#list).
 
-![Opções de pesquisa da Solicitação de trabalho](../images/user-guide/job-search.png)
+>[!TIP]
+>
+>Para carregar registros na interface dos últimos 30 dias, role a tabela para baixo e carregue mais lotes de registros.
+
+![A seção Solicitação de trabalho do Console de privacidade com o campo de pesquisa destacado.](../images/user-guide/job-search.png)
+
+Como alternativa, use o botão de pesquisa para executar uma consulta de trabalho de privacidade que abrange um intervalo de datas específico. Essa ação retorna todas as tarefas de privacidade enviadas por sua organização durante o período determinado. Selecione o **[!UICONTROL Solicitado em]** menu suspenso para escolher uma data de início e término para a consulta. As opções disponíveis incluem [!UICONTROL Hoje], [!UICONTROL Últimos 7 dias], [!UICONTROL Últimas 2 semanas], [!UICONTROL Últimos 30 dias]ou [!UICONTROL Personalizado]. Quando usado com o [!UICONTROL Solicitado em] , o recurso de pesquisa exibe somente as solicitações de trabalho que foram enviadas entre os intervalos de datas escolhidos.
+
+![A seção Solicitação de trabalho com o campo de pesquisa, o menu suspenso Solicitado em e o botão Pesquisar destacados.](../images/user-guide/requested-on-dropdown-menu.png)
 
 Para exibir os detalhes de uma solicitação de trabalho específica, selecione a ID do trabalho da solicitação na lista para abrir a **[!UICONTROL Detalhes do trabalho]** página.
 
@@ -117,7 +125,7 @@ Para baixar os dados completos do processo como um arquivo CSV, selecione **[!UI
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_requests_instructions"
 >title="Instruções"
->abstract="<ul><li>Selecione <a href="https://experienceleague.adobe.com/docs/experience-platform/privacy/ui/overview.html#logging-in-from-experience-platform">Solicitações</a> na navegação à esquerda para abrir a Interface de privacidade e, em seguida, selecione <b>Criar solicitação</b>.</li><li>Aqui, você pode usar o construtor de solicitações ou fazer upload de um arquivo JSON de titulares de dados.</li><li>Se estiver usando o construtor de solicitações, selecione o tipo de tarefa (acesso e/ou exclusão) e escolha o tipo de identidade que você está fornecendo (email, ECID ou AAID) ou insira um namespace de identidade personalizado. Insira os valores de identidade apropriados para os clientes e selecione <b>Criar</b> quando terminar.</li><li>Se estiver carregando um arquivo JSON, selecione a seta ao lado de Criar solicitação. Na lista de opções, selecione <b>Upload de JSON</b> e faça upload do arquivo. Se não tiver um arquivo JSON para fazer upload, selecione <b>Baixar Adobe-GDPR-Request.json</b> para baixar um modelo que pode ser preenchido. Faça upload do JSON e selecione <b>Criar</b> quando terminar.</li><li>Para obter mais ajuda com esse recurso, consulte o <a href="https://experienceleague.adobe.com/docs/experience-platform/privacy/ui/user-guide.html?lang=pt-BR">Guia do usuário do Serviço de Privacidade</a> na Experience League.</li></ul>"
+>abstract="<ul><li>Selecione <a href="https://experienceleague.adobe.com/docs/experience-platform/privacy/ui/overview.html?lang=pt-BR#logging-in-from-experience-platform">Solicitações</a> na navegação à esquerda para abrir a Interface de privacidade e, em seguida, selecione <b>Criar solicitação</b>.</li><li>Aqui, você pode usar o construtor de solicitações ou fazer upload de um arquivo JSON de titulares de dados.</li><li>Se estiver usando o construtor de solicitações, selecione o tipo de tarefa (acesso e/ou exclusão) e escolha o tipo de identidade que você está fornecendo (email, ECID ou AAID) ou insira um namespace de identidade personalizado. Insira os valores de identidade apropriados para os clientes e selecione <b>Criar</b> quando terminar.</li><li>Se estiver carregando um arquivo JSON, selecione a seta ao lado de Criar solicitação. Na lista de opções, selecione <b>Upload de JSON</b> e faça upload do arquivo. Se não tiver um arquivo JSON para fazer upload, selecione <b>Baixar Adobe-GDPR-Request.json</b> para baixar um modelo que pode ser preenchido. Faça upload do JSON e selecione <b>Criar</b> quando terminar.</li><li>Para obter mais ajuda com esse recurso, consulte o <a href="https://experienceleague.adobe.com/docs/experience-platform/privacy/ui/user-guide.html?lang=pt-BR">Guia do usuário do Serviço de Privacidade</a> na Experience League.</li></ul>"
 
 >[!NOTE]
 >

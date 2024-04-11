@@ -3,9 +3,9 @@ title: Ponto de extremidade da API de expiração do conjunto de dados
 description: O ponto de extremidade /ttl na API da higiene de dados permite agendar programaticamente as expirações do conjunto de dados no Adobe Experience Platform.
 role: Developer
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
-source-git-commit: 04d49282d60b2e886a6d2dae281b98b60e6ce9b3
+source-git-commit: 0c6e6d23be42b53eaf1fca365745e6502197c329
 workflow-type: tm+mt
-source-wordcount: '2083'
+source-wordcount: '2141'
 ht-degree: 2%
 
 ---
@@ -22,7 +22,7 @@ A expiração de um conjunto de dados é apenas uma operação de exclusão com 
 
 A qualquer momento antes da exclusão do conjunto de dados ser iniciada, você pode cancelar a expiração ou modificar a hora do acionador. Depois de cancelar uma expiração de conjunto de dados, você pode reabri-la definindo uma nova expiração.
 
-Depois que a exclusão do conjunto de dados for iniciada, seu trabalho de expiração será marcado como `executing`e não poderá ser alterada. O conjunto de dados em si pode ser recuperável por até sete dias, mas somente por meio de um processo manual iniciado por meio de uma solicitação de serviço da Adobe. À medida que a solicitação é executada, o data lake, o Serviço de identidade e o Perfil do cliente em tempo real iniciam processos separados para remover o conteúdo do conjunto de dados de seus respectivos serviços. Depois que os dados forem excluídos dos três serviços, a expiração será marcada como `executed`.
+Depois que a exclusão do conjunto de dados for iniciada, seu trabalho de expiração será marcado como `executing`e não poderá ser alterada. O conjunto de dados em si pode ser recuperável por até sete dias, mas somente por meio de um processo manual iniciado por meio de uma solicitação de serviço da Adobe. À medida que a solicitação é executada, o data lake, o Serviço de identidade e o Perfil do cliente em tempo real iniciam processos separados para remover o conteúdo do conjunto de dados de seus respectivos serviços. Depois que os dados forem excluídos dos três serviços, a expiração será marcada como `completed`.
 
 >[!WARNING]
 >
@@ -56,7 +56,7 @@ GET /ttl?{QUERY_PARAMETERS}
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/core/hygiene/ttl?updatedToDate=2021-08-01&author=LIKE%Jane Doe%25 \
+  https://platform.adobe.io/data/core/hygiene/ttl?updatedToDate=2021-08-01&author=LIKE%20%25Jane%20Doe%25 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -66,6 +66,10 @@ curl -X GET \
 **Resposta**
 
 Uma resposta bem-sucedida lista as expirações do conjunto de dados resultantes. O exemplo a seguir foi truncado por questões de espaço.
+
+>[!IMPORTANT]
+>
+>A variável `ttlId` na resposta é também referido como o `{DATASET_EXPIRATION_ID}`. Ambos se referem ao identificador exclusivo para a expiração do conjunto de dados.
 
 ```json
 {
@@ -90,26 +94,30 @@ Uma resposta bem-sucedida lista as expirações do conjunto de dados resultantes
 
 | Propriedade | Descrição |
 | --- | --- |
-| `totalRecords` | A contagem de expirações do conjunto de dados que corresponderam aos parâmetros da chamada de listagem. |
-| `ttlDetails` | Contém os detalhes das expirações do conjunto de dados retornadas. Para obter mais detalhes sobre as propriedades de uma expiração de conjunto de dados, consulte a seção resposta para fazer uma [chamada de pesquisa](#lookup). |
+| `total_count` | A contagem de expirações do conjunto de dados que corresponderam aos parâmetros da chamada de listagem. |
+| `results` | Contém os detalhes das expirações do conjunto de dados retornadas. Para obter mais detalhes sobre as propriedades de uma expiração de conjunto de dados, consulte a seção resposta para fazer uma [chamada de pesquisa](#lookup). |
 
 {style="table-layout:auto"}
 
 ## Pesquisar uma expiração de conjunto de dados {#lookup}
 
-Para pesquisar uma expiração de conjunto de dados, faça uma solicitação GET com o `datasetId` ou o `ttlId`.
+Para pesquisar uma expiração de conjunto de dados, faça uma solicitação GET com o `{DATASET_ID}` ou o `{DATASET_EXPIRATION_ID}`.
+
+>[!IMPORTANT]
+>
+>A variável `{DATASET_EXPIRATION_ID}` é referido como o `ttlId` na resposta. Ambos se referem ao identificador exclusivo para a expiração do conjunto de dados.
 
 **Formato da API**
 
 ```http
 GET /ttl/{DATASET_ID}?include=history
-GET /ttl/{TTL_ID}
+GET /ttl/{DATASET_EXPIRATION_ID}
 ```
 
 | Parâmetro | Descrição |
 | --- | --- |
 | `{DATASET_ID}` | A ID do conjunto de dados cuja expiração você deseja pesquisar. |
-| `{TTL_ID}` | A ID da expiração do conjunto de dados. |
+| `{DATASET_EXPIRATION_ID}` | A ID da expiração do conjunto de dados. |
 
 {style="table-layout:auto"}
 
@@ -222,7 +230,7 @@ curl -X POST \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna um status HTTP 201 (Criado) e o novo estado da expiração do conjunto de dados, se não houver expiração do conjunto de dados pré-existente.
+Uma resposta bem-sucedida retorna um status HTTP 201 (Criado) e o novo estado da expiração do conjunto de dados.
 
 ```json
 {
@@ -254,7 +262,7 @@ Uma resposta bem-sucedida retorna um status HTTP 201 (Criado) e o novo estado da
 | `displayName` | Um nome de exibição para a solicitação de expiração. |
 | `description` | Uma descrição para a solicitação de expiração. |
 
-Um status HTTP 400 (Solicitação inválida) ocorre se a expiração de um conjunto de dados já existir para o conjunto de dados. Uma resposta sem sucesso retornará um status HTTP 404 (Não encontrado) se essa expiração de conjunto de dados não existir (ou se você não tiver acesso a ela).
+Um status HTTP 400 (Solicitação inválida) ocorre se a expiração de um conjunto de dados já existir para o conjunto de dados. Uma resposta sem sucesso retornará um status HTTP 404 (Não encontrado) se essa expiração de conjunto de dados não existir (ou se você não tiver acesso ao conjunto de dados).
 
 ## Atualizar uma expiração de conjunto de dados {#update}
 
@@ -267,14 +275,12 @@ Para atualizar uma data de expiração para um conjunto de dados, use uma solici
 **Formato da API**
 
 ```http
-PUT /ttl/{TTL_ID}
+PUT /ttl/{DATASET_EXPIRATION_ID}
 ```
-
-<!-- We should be avoiding usage of TTL, Can I change that to {EXPIRY_ID} or {EXPIRATION_ID} instead? -->
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{TTL_ID}` | A ID da expiração do conjunto de dados que você deseja alterar. |
+| `{DATASET_EXPIRATION_ID}` | A ID da expiração do conjunto de dados que você deseja alterar. Observação: isso é chamado de `ttlId` na resposta. |
 
 **Solicitação**
 
@@ -297,7 +303,7 @@ curl -X PUT \
 
 | Propriedade | Descrição |
 | --- | --- |
-| `expiry` | **Obrigatório** Uma data e hora no formato ISO 8601. Se a cadeia de caracteres não tiver deslocamento de fuso horário explícito, o fuso horário será considerado UTC. O tempo de vida dos dados no sistema é definido de acordo com o valor de expiração fornecido. Qualquer carimbo de data e hora de expiração anterior do mesmo conjunto de dados será substituído pelo novo valor de expiração fornecido. Esta data e hora devem ser pelo menos **24 horas no futuro**. |
+| `expiry` | **Obrigatório** Uma data e hora no formato ISO 8601. Se a cadeia de caracteres não tiver deslocamento de fuso horário explícito, o fuso horário será considerado UTC. O tempo de vida dos dados no sistema é definido de acordo com o valor de expiração fornecido. Qualquer carimbo de data e hora de expiração anterior do mesmo conjunto de dados deve ser substituído pelo novo valor de expiração fornecido. Esta data e hora devem ser pelo menos **24 horas no futuro**. |
 | `displayName` | Um nome de exibição para a solicitação de expiração. |
 | `description` | Uma descrição opcional para a solicitação de expiração. |
 
@@ -374,19 +380,19 @@ Uma resposta bem-sucedida retorna o status HTTP 204 (Sem conteúdo), e a expira�
 
 ## Recuperar o histórico do status de expiração de um conjunto de dados {#retrieve-expiration-history}
 
-Você pode consultar o histórico do status de expiração de um conjunto de dados específico usando o parâmetro de consulta `include=history` em uma solicitação de pesquisa. O resultado inclui informações sobre a criação da expiração do conjunto de dados, quaisquer atualizações que tenham sido aplicadas e seu cancelamento ou execução (se aplicável). Você também pode usar a variável `ttlId` da expiração do conjunto de dados.
+Para consultar o histórico do status de expiração de um conjunto de dados específico, use o `{DATASET_ID}` e `include=history` parâmetro de consulta em uma solicitação de pesquisa. O resultado inclui informações sobre a criação da expiração do conjunto de dados, quaisquer atualizações que tenham sido aplicadas e seu cancelamento ou execução (se aplicável). Você também pode usar a variável `{DATASET_EXPIRATION_ID}` para recuperar o histórico do status de expiração do conjunto de dados.
 
 **Formato da API**
 
 ```http
 GET /ttl/{DATASET_ID}?include=history
-GET /ttl/{TTL_ID}
+GET /ttl/{DATASET_EXPIRATION_ID}?include=history
 ```
 
 | Parâmetro | Descrição |
 | --- | --- |
 | `{DATASET_ID}` | A ID do conjunto de dados cujo histórico de expiração você deseja pesquisar. |
-| `{TTL_ID}` | A ID da expiração do conjunto de dados. |
+| `{DATASET_EXPIRATION_ID}` | A ID da expiração do conjunto de dados. Observação: isso é chamado de `ttlId` na resposta. |
 
 {style="table-layout:auto"}
 

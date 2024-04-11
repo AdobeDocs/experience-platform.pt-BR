@@ -4,9 +4,9 @@ title: Guia completo do controle de acesso baseado em atributos
 description: Este documento fornece um guia completo sobre o controle de acesso baseado em atributos no Adobe Experience Platform
 role: Developer
 exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: c89ae9befa3befbffab9d6468f3c207ab8e7b74f
 workflow-type: tm+mt
-source-wordcount: '1714'
+source-wordcount: '1736'
 ht-degree: 17%
 
 ---
@@ -132,6 +132,10 @@ A variável **[!UICONTROL Editar rótulos]** será exibida, permitindo que você
 >Quando um rótulo é adicionado a um campo, esse rótulo é aplicado ao recurso principal desse campo (uma classe ou um grupo de campos). Se a classe pai ou o grupo de campos for empregado por outros esquemas, esses esquemas herdarão o mesmo rótulo.
 
 ## Aplicar rótulos a segmentos
+
+>[!NOTE]
+>
+>Qualquer segmento que utilize um atributo rotulado também deve ser rotulado se você quiser que as mesmas restrições de acesso se apliquem a ele.
 
 Depois de concluir a rotulagem dos campos de esquema, você pode começar a rotular os segmentos.
 

@@ -2,10 +2,10 @@
 title: Visão geral da extensão de rastreamento de vídeo do YouTube
 description: Saiba mais sobre a extensão de tag de rastreamento de vídeo do YouTube na Adobe Experience Platform.
 exl-id: 703f7b04-f72f-415f-80d6-45583fa661bc
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 627835011784ffca8487d446c04c6948dfff059d
 workflow-type: tm+mt
-source-wordcount: '891'
-ht-degree: 97%
+source-wordcount: '895'
+ht-degree: 81%
 
 ---
 
@@ -23,13 +23,13 @@ Cada propriedade de tag da Adobe Experience Platform exige que as seguintes exte
 * Serviço do Experience Cloud Visitor ID
 * Extensão principal
 
-Use o trecho de código [&quot;Incorpore um reprodutor usando uma tag \&lt;iframe\>&quot;](https://developers.google.com/youtube/player_parameters#Manual_IFrame_Embeds) dos documentos de desenvolvedor do Google no HTML de cada página da Web em que um reprodutor de vídeo deve ser renderizado.
+Use o [&quot;Incorporar um player usando um \&lt;iframe> tag&quot;](https://developers.google.com/youtube/player_parameters#Manual_IFrame_Embeds) trecho de código dos documentos do desenvolvedor do Google no HTML de cada página da Web em que um player de vídeo deve ser renderizado.
 
 Esta extensão, versão 2.0.1, aceita a incorporação de um ou mais vídeos do YouTube em uma única página da Web inserindo um atributo `id` com um valor único na tag de script iframe e anexando `enablejsapi=1` e `rel=0` ao final do valor de atributo `src`, se ainda não estiver incluído. Por exemplo:
 
 `<iframe id="player1" width="560" height="315" src="https://www.youtube.com/embed/xpatB77BzYE?enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
 
-Essa extensão também foi projetada para verificar dinamicamente se há um valor de atributo de identificador exclusivo, como `player1`, independendemente de os parâmetros de sequência de consulta `enablejsapi` e `rel` existirem e de os respectivos valores esperados estarem corretos. Como resultado, a tag do script do YouTube pode ser adicionada a uma página da Web com ou sem o atributo `id` e se os parâmetros da sequência de consulta `enablejsapi` e `rel` estão ou não incluídos.
+Essa extensão também foi projetada para verificar dinamicamente se há um valor de atributo de identificador exclusivo, como `player1`, independendemente de os parâmetros de string de consulta `enablejsapi` e `rel` existirem e de os respectivos valores esperados estarem corretos. Como resultado, a tag do script do YouTube pode ser adicionada a uma página da Web com ou sem o atributo `id` e se os parâmetros da string de consulta `enablejsapi` e `rel` estão ou não incluídos.
 
 >[!NOTE]
 >
@@ -76,7 +76,7 @@ Uma regra de tag pode ser definida para cada evento de vídeo (os sete eventos l
 As regras têm três ações:
 
 * **Definir variáveis:** defina as variáveis do Adobe Analytics (mapeie para todos os elementos de dados incluídos ou alguns deles).
-* **Enviar beacon:** envie o beacon do Adobe Analytics como uma chamada de rastreamento de link personalizado e forneça um valor &quot;Nome do link&quot;.
+* **Enviar sinal:** Envie o sinal do Adobe Analytics como uma chamada de rastreamento de link personalizado e forneça um valor &quot;Nome do link&quot;.
 * **Limpar variáveis:** limpe as variáveis do Adobe Analytics.
 
 ## Exemplo de regra de tag para &quot;Início do vídeo&quot;
@@ -87,7 +87,7 @@ Os objetos de extensão de vídeo a seguir devem ser incluídos.
 
 * **Condição**: nenhuma
 
-* **Ações**: Use a **Extensão do Analytics** para a ação &quot;Definir variáveis&quot; para mapear:
+* **Ações**: Use o **Extensão do Analytics** para a ação &quot;Definir variáveis&quot;, para mapear:
 
    * O evento para Início do vídeo,
    * Uma prop/eVar para o elemento de dados Duração do vídeo
@@ -95,7 +95,7 @@ Os objetos de extensão de vídeo a seguir devem ser incluídos.
    * Uma prop/eVar para o elemento de dados Nome do vídeo
    * Uma prop/eVar para o elemento de dados URL do vídeo
 
-   Em seguida, inclua a ação &quot;Enviar beacon&quot; (`s.tl`) com o nome do link &quot;iniciar vídeo&quot;, seguido da ação &quot;Limpar variáveis&quot;.
+  Em seguida, inclua a ação &quot;Enviar beacon&quot; (`s.tl`) com o nome do link &quot;início do vídeo&quot;, seguido pela ação &quot;Limpar variáveis&quot;.
 
 >[!TIP]
 > 
@@ -114,3 +114,5 @@ r.push(_satellite.getVar('Extension Version'));
 
 return r.join('|');
 ```
+
+Para obter mais informações sobre como criar e aproveitar elementos de dados com eficiência na Platform, leia o [elementos de dados](../../../ui/managing-resources/data-elements.md) documentação.

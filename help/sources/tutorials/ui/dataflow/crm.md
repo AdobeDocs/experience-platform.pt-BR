@@ -5,9 +5,9 @@ title: Criar um fluxo de dados usando uma origem de CRM na interface
 type: Tutorial
 description: Um fluxo de dados é uma tarefa agendada que recupera e assimila dados de uma origem para um conjunto de dados da Platform. Este tutorial fornece etapas sobre como criar um fluxo de dados para uma origem de CRM usando a interface do usuário da plataforma.
 exl-id: e14eafa7-6594-48e6-ab7a-f6c928d1e5fb
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: f5ac10980e08843f6ed9e892f7e1d4aefc8f0de7
 workflow-type: tm+mt
-source-wordcount: '1425'
+source-wordcount: '1444'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,8 @@ Um fluxo de dados é uma tarefa agendada que recupera e assimila dados de uma or
 
 >[!NOTE]
 >
->Para criar um fluxo de dados, você já deve ter uma conta autenticada com uma fonte do CRM. Uma lista de tutoriais para criar diferentes contas de origem do CRM na interface do usuário pode ser encontrada no [visão geral das origens](../../../home.md#crm).
+>* Para criar um fluxo de dados, você já deve ter uma conta autenticada com uma fonte do CRM. Uma lista de tutoriais para criar diferentes contas de origem do CRM na interface do usuário pode ser encontrada no [visão geral das origens](../../../home.md#crm).
+>* Para Experience Platform assimilar dados, os fusos horários de todas as fontes de lote baseadas em tabela devem ser configurados como UTC.
 
 ## Introdução
 

@@ -5,9 +5,9 @@ title: Criar um fluxo de dados usando uma fonte de sucesso do cliente na interfa
 type: Tutorial
 description: Um fluxo de dados é uma tarefa agendada que recupera e assimila dados de uma origem para um conjunto de dados da Platform. Este tutorial fornece etapas sobre como criar um fluxo de dados para uma fonte de sucesso do cliente usando a interface do usuário da plataforma.
 exl-id: d348a7f8-6302-45f1-9961-bab56ad0407e
-source-git-commit: 62ca31bc8499e822e0da25270bd4fe8871520f9b
+source-git-commit: f5ac10980e08843f6ed9e892f7e1d4aefc8f0de7
 workflow-type: tm+mt
-source-wordcount: '1441'
+source-wordcount: '1461'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,8 @@ Um fluxo de dados é uma tarefa agendada que recupera e assimila dados de uma or
 
 >[!NOTE]
 >
->Para criar um fluxo de dados, você já deve ter uma conta autenticada com uma fonte de sucesso do cliente. Uma lista de tutoriais para criar diferentes contas de origem de sucesso do cliente na interface do pode ser encontrada no [visão geral das origens](../../../home.md#customer-success).
+>* Para criar um fluxo de dados, você já deve ter uma conta autenticada com uma fonte de sucesso do cliente. Uma lista de tutoriais para criar diferentes contas de origem de sucesso do cliente na interface do pode ser encontrada no [visão geral das origens](../../../home.md#customer-success).
+>* Para Experience Platform assimilar dados, os fusos horários de todas as fontes de lote baseadas em tabela devem ser configurados como UTC.
 
 ## Introdução
 

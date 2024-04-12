@@ -5,9 +5,9 @@ title: Criar um fluxo de dados para origens de protocolos usando a API de servi�
 type: Tutorial
 description: Este tutorial aborda as etapas para recuperar dados de um aplicativo de protocolos e assimilá-los na Platform usando conectores de origem e APIs.
 exl-id: e14e75c2-2a93-45d8-8056-f06075bd4b8d
-source-git-commit: 92f39f970402ab907f711d23a8f5f599668f0fe0
+source-git-commit: f5ac10980e08843f6ed9e892f7e1d4aefc8f0de7
 workflow-type: tm+mt
-source-wordcount: '1338'
+source-wordcount: '1314'
 ht-degree: 2%
 
 ---
@@ -18,7 +18,7 @@ Este tutorial aborda as etapas para recuperar dados de uma origem de protocolos 
 
 >[!NOTE]
 >
->Para criar um fluxo de dados, você já deve ter uma ID de conexão base válida com uma origem de protocolos. Se você não tiver essa ID, consulte a [visão geral das origens](../../../home.md#protocols) para obter uma lista de origens de protocolos com as quais você pode criar uma conexão base.
+>* Para criar um fluxo de dados, você já deve ter uma ID de conexão base válida com uma origem de protocolos. Se você não tiver essa ID, consulte a [visão geral das origens](../../../home.md#protocols) para obter uma lista de origens de protocolos com as quais você pode criar uma conexão base.
 
 ## Introdução
 
@@ -606,7 +606,7 @@ Uma resposta bem-sucedida retorna os detalhes da especificação do fluxo de dad
 
 +++
 
-## Crie um fluxo de dados
+## Criar um fluxo de dados
 
 A última etapa para coletar dados é criar um fluxo de dados. Nesse ponto, os seguintes valores obrigatórios devem ser preparados:
 

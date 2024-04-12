@@ -5,9 +5,9 @@ title: Criar um fluxo de dados usando uma fonte de consentimento e preferências
 type: Tutorial
 description: Um fluxo de dados é uma tarefa agendada que recupera e assimila dados de uma origem para um conjunto de dados da Platform. Este tutorial fornece etapas sobre como criar um fluxo de dados para uma fonte de consentimento e preferências usando a interface do usuário da plataforma.
 exl-id: 340b5945-baa1-4f79-88fa-2572606f6083
-source-git-commit: 62ca31bc8499e822e0da25270bd4fe8871520f9b
+source-git-commit: f5ac10980e08843f6ed9e892f7e1d4aefc8f0de7
 workflow-type: tm+mt
-source-wordcount: '1469'
+source-wordcount: '1489'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,8 @@ Um fluxo de dados é uma tarefa agendada que recupera e assimila dados de uma or
 
 >[!NOTE]
 >
->Para criar um fluxo de dados, você já deve ter uma conta autenticada com o [!DNL OneTrust Integration] origem. Veja o tutorial sobre [criação de um [!DNL OneTrust Integration] conexão de origem na interface](../../ui/create/consent-and-preferences/onetrust.md) para obter mais informações.
+>* Para criar um fluxo de dados, você já deve ter uma conta autenticada com o [!DNL OneTrust Integration] origem. Veja o tutorial sobre [criação de um [!DNL OneTrust Integration] conexão de origem na interface](../../ui/create/consent-and-preferences/onetrust.md) para obter mais informações.
+>* Para Experience Platform assimilar dados, os fusos horários de todas as fontes de lote baseadas em tabela devem ser configurados como UTC.
 
 ## Introdução
 

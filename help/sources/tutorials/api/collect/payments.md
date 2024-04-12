@@ -5,9 +5,9 @@ title: Criar um Fluxo de Dados para Origens de Pagamentos Usando a API de Servi�
 type: Tutorial
 description: Este tutorial aborda as etapas para recuperar dados de um aplicativo de pagamentos e assimilá-los na Plataforma usando conectores de origem e APIs.
 exl-id: b75e2a3d-6590-4079-a261-fa4e9626e8dc
-source-git-commit: 92f39f970402ab907f711d23a8f5f599668f0fe0
+source-git-commit: f5ac10980e08843f6ed9e892f7e1d4aefc8f0de7
 workflow-type: tm+mt
-source-wordcount: '1370'
+source-wordcount: '1363'
 ht-degree: 2%
 
 ---
@@ -18,7 +18,8 @@ Este tutorial aborda as etapas para recuperar dados de uma fonte de pagamentos e
 
 >[!NOTE]
 >
->Para criar um fluxo de dados, você já deve ter uma ID de conexão base válida com uma fonte de pagamentos. Se você não tiver essa ID, consulte a [visão geral das origens](../../../home.md#payments) para obter uma lista de origens de pagamentos com as quais você pode criar uma conexão-base.
+>* Para criar um fluxo de dados, você já deve ter uma ID de conexão base válida com uma fonte de pagamentos. Se você não tiver essa ID, consulte a [visão geral das origens](../../../home.md#payments) para obter uma lista de origens de pagamentos com as quais você pode criar uma conexão-base.
+>* Para Experience Platform assimilar dados, os fusos horários de todas as fontes de lote baseadas em tabela devem ser configurados como UTC.
 
 ## Introdução
 
@@ -603,7 +604,7 @@ Uma resposta bem-sucedida retorna os detalhes da especificação do fluxo de dad
 
 +++
 
-## Crie um fluxo de dados
+## Criar um fluxo de dados
 
 A última etapa para coletar dados é criar um fluxo de dados. Nesse ponto, os seguintes valores obrigatórios devem ser preparados:
 

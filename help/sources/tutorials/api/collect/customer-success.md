@@ -5,9 +5,9 @@ title: Criar um fluxo de dados para fontes de sucesso do cliente usando a API do
 type: Tutorial
 description: Este tutorial aborda as etapas para recuperar dados de um sistema de sucesso do cliente e assimilá-los na plataforma usando conectores de origem e APIs.
 exl-id: 0fae04d0-164b-4113-a274-09677f4bbde5
-source-git-commit: 92f39f970402ab907f711d23a8f5f599668f0fe0
+source-git-commit: f5ac10980e08843f6ed9e892f7e1d4aefc8f0de7
 workflow-type: tm+mt
-source-wordcount: '1264'
+source-wordcount: '1257'
 ht-degree: 2%
 
 ---
@@ -18,7 +18,8 @@ Este tutorial aborda as etapas para recuperar dados de uma fonte de sucesso do c
 
 >[!NOTE]
 >
->Para criar um fluxo de dados, você já deve ter uma ID de conexão base válida com uma fonte de sucesso do cliente. Se você não tiver essa ID, consulte a [visão geral das origens](../../../home.md#customer-success) para obter uma lista de fontes de sucesso do cliente com as quais você pode criar uma conexão básica.
+>* Para criar um fluxo de dados, você já deve ter uma ID de conexão base válida com uma fonte de sucesso do cliente. Se você não tiver essa ID, consulte a [visão geral das origens](../../../home.md#customer-success) para obter uma lista de fontes de sucesso do cliente com as quais você pode criar uma conexão básica.
+>* Para Experience Platform assimilar dados, os fusos horários de todas as fontes de lote baseadas em tabela devem ser configurados como UTC.
 
 ## Introdução
 

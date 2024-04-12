@@ -5,9 +5,9 @@ title: Criar um fluxo de dados usando uma origem de banco de dados na interface
 type: Tutorial
 description: Um fluxo de dados é uma tarefa agendada que recupera e assimila dados de uma origem para um conjunto de dados da Platform. Este tutorial fornece etapas sobre como criar um fluxo de dados para uma origem de banco de dados usando a interface do usuário da plataforma.
 exl-id: 9fd8a7ec-bbd8-4890-9860-e6defc6cade3
-source-git-commit: 62ca31bc8499e822e0da25270bd4fe8871520f9b
+source-git-commit: f5ac10980e08843f6ed9e892f7e1d4aefc8f0de7
 workflow-type: tm+mt
-source-wordcount: '1406'
+source-wordcount: '1441'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,9 @@ Um fluxo de dados é uma tarefa agendada que recupera e assimila dados de uma or
 
 >[!NOTE]
 >
->Para criar um fluxo de dados, você já deve ter uma conta autenticada com uma fonte de banco de dados. Uma lista de tutoriais para criar diferentes contas de origem de banco de dados na interface do usuário pode ser encontrada no [visão geral das origens](../../../home.md#database).
+>* Para criar um fluxo de dados, você já deve ter uma conta autenticada com uma fonte de banco de dados. Uma lista de tutoriais para criar diferentes contas de origem de banco de dados na interface do usuário pode ser encontrada no [visão geral das origens](../../../home.md#database).
+>
+>* Para Experience Platform assimilar dados, os fusos horários de todas as fontes de lote baseadas em tabela devem ser configurados como UTC. O único carimbo de data/hora compatível com o [[!DNL Snowflake] origem](../../../connectors/databases/snowflake.md) é TIMESTAMP_NTZ com a hora UTC.
 
 ## Introdução
 

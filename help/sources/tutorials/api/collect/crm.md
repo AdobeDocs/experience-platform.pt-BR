@@ -5,9 +5,9 @@ title: Criar um fluxo de dados para fontes de CRM usando a API do serviço de fl
 type: Tutorial
 description: Este tutorial aborda as etapas para recuperar dados de um sistema CRM de terceiros e trazê-los para a Platform usando conectores de origem e APIs.
 exl-id: b07dd640-bce6-4699-9d2b-b7096746934a
-source-git-commit: 92f39f970402ab907f711d23a8f5f599668f0fe0
+source-git-commit: f5ac10980e08843f6ed9e892f7e1d4aefc8f0de7
 workflow-type: tm+mt
-source-wordcount: '1374'
+source-wordcount: '1367'
 ht-degree: 2%
 
 ---
@@ -18,7 +18,8 @@ Este tutorial aborda as etapas para recuperar dados de uma origem de CRM e traz�
 
 >[!NOTE]
 >
->Para criar um fluxo de dados, você já deve ter uma ID de conexão base válida com uma origem de CRM. Se você não tiver essa ID, consulte a [visão geral das origens](../../../home.md#customer-relationship-management) para obter uma lista de fontes CRM com as quais você pode criar uma conexão base.
+>* Para criar um fluxo de dados, você já deve ter uma ID de conexão base válida com uma origem de CRM. Se você não tiver essa ID, consulte a [visão geral das origens](../../../home.md#customer-relationship-management) para obter uma lista de fontes CRM com as quais você pode criar uma conexão base.
+>* Para Experience Platform assimilar dados, os fusos horários de todas as fontes de lote baseadas em tabela devem ser configurados como UTC.
 
 ## Introdução
 
@@ -581,7 +582,7 @@ Uma resposta bem-sucedida retorna os detalhes da especificação do fluxo de dad
 
 +++
 
-## Crie um fluxo de dados
+## Criar um fluxo de dados
 
 A última etapa para coletar dados do CRM é criar um fluxo de dados. Até agora, você tem os seguintes valores necessários preparados:
 

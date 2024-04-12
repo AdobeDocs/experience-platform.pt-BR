@@ -5,10 +5,10 @@ title: Criar um Fluxo de Dados para Origens de Banco de Dados Usando a API de Se
 type: Tutorial
 description: Este tutorial aborda as etapas para recuperar dados de um banco de dados e assimilá-los na Platform usando conectores de origem e APIs.
 exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
-source-git-commit: 92f39f970402ab907f711d23a8f5f599668f0fe0
+source-git-commit: f5ac10980e08843f6ed9e892f7e1d4aefc8f0de7
 workflow-type: tm+mt
-source-wordcount: '1408'
-ht-degree: 3%
+source-wordcount: '1416'
+ht-degree: 2%
 
 ---
 
@@ -18,7 +18,8 @@ Este tutorial aborda as etapas para recuperar dados de uma fonte de banco de dad
 
 >[!NOTE]
 >
->Para criar um fluxo de dados, você já deve ter uma ID de conexão base válida com uma origem de banco de dados. Se você não tiver essa ID, consulte a [visão geral das origens](../../../home.md#database) para obter uma lista de origens de banco de dados com as quais você pode criar uma conexão base.
+>* Para criar um fluxo de dados, você já deve ter uma ID de conexão base válida com uma origem de banco de dados. Se você não tiver essa ID, consulte a [visão geral das origens](../../../home.md#database) para obter uma lista de origens de banco de dados com as quais você pode criar uma conexão base.
+>* Para Experience Platform assimilar dados, os fusos horários de todas as fontes de lote baseadas em tabela devem ser configurados como UTC. O único carimbo de data/hora compatível com o [[!DNL Snowflake] origem](../../../connectors/databases/snowflake.md) é TIMESTAMP_NTZ com a hora UTC.
 
 ## Introdução
 
@@ -587,7 +588,7 @@ Uma resposta bem-sucedida retorna os detalhes da especificação do fluxo de dad
 
 +++
 
-## Crie um fluxo de dados
+## Criar um fluxo de dados
 
 A última etapa para coletar dados é criar um fluxo de dados. Nesse ponto, os seguintes valores obrigatórios devem ser preparados:
 

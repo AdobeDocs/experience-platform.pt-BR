@@ -5,9 +5,9 @@ title: Criar um fluxo de dados para fontes de publicidade usando a API do servi�
 type: Tutorial
 description: Este tutorial aborda as etapas para recuperar dados de um aplicativo de publicidade de terceiros e assimilá-los na Platform usando conectores de origem e a API do Serviço de fluxo.
 exl-id: 2a0eb13b-d09e-4bc1-aae3-84c8741eead1
-source-git-commit: 92f39f970402ab907f711d23a8f5f599668f0fe0
+source-git-commit: f5ac10980e08843f6ed9e892f7e1d4aefc8f0de7
 workflow-type: tm+mt
-source-wordcount: '1347'
+source-wordcount: '1340'
 ht-degree: 2%
 
 ---
@@ -18,7 +18,8 @@ Este tutorial aborda as etapas para recuperar dados de um aplicativo de publicid
 
 >[!NOTE]
 >
->Para criar um fluxo de dados, você já deve ter uma ID de conexão base válida com uma fonte de publicidade. Se você não tiver essa ID, consulte a [visão geral das origens](../../../home.md#advertising) para obter uma lista de fontes de publicidade com as quais você pode criar uma conexão base.
+>* Para criar um fluxo de dados, você já deve ter uma ID de conexão base válida com uma fonte de publicidade. Se você não tiver essa ID, consulte a [visão geral das origens](../../../home.md#advertising) para obter uma lista de fontes de publicidade com as quais você pode criar uma conexão base.
+>* Para Experience Platform assimilar dados, os fusos horários de todas as fontes de lote baseadas em tabela devem ser configurados como UTC.
 
 ## Introdução
 
@@ -592,7 +593,7 @@ Uma resposta bem-sucedida retorna os detalhes da especificação do fluxo de dad
 
 +++
 
-## Crie um fluxo de dados
+## Criar um fluxo de dados
 
 A última etapa para coletar dados de publicidade é criar um fluxo de dados. Até agora, você tem os seguintes valores necessários preparados:
 

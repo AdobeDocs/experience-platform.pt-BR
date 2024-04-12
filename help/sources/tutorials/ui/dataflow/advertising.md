@@ -5,9 +5,9 @@ title: Criar um fluxo de dados usando uma fonte de publicidade na interface
 type: Tutorial
 description: Um fluxo de dados é uma tarefa agendada que recupera e assimila dados de uma origem para um conjunto de dados da Platform. Este tutorial fornece etapas sobre como criar um fluxo de dados para uma fonte de publicidade usando a interface do usuário da plataforma.
 exl-id: 8dd1d809-e812-4a13-8831-189726b2430e
-source-git-commit: 62ca31bc8499e822e0da25270bd4fe8871520f9b
+source-git-commit: f5ac10980e08843f6ed9e892f7e1d4aefc8f0de7
 workflow-type: tm+mt
-source-wordcount: '1431'
+source-wordcount: '1451'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,8 @@ Um fluxo de dados é uma tarefa agendada que recupera e assimila dados de uma or
 
 >[!NOTE]
 >
->Para criar um fluxo de dados, você já deve ter uma conta autenticada com uma fonte de publicidade. Uma lista de tutoriais para criar diferentes contas de fonte de publicidade na interface do usuário pode ser encontrada no [visão geral das origens](../../../home.md#advertising).
+>* Para criar um fluxo de dados, você já deve ter uma conta autenticada com uma fonte de publicidade. Uma lista de tutoriais para criar diferentes contas de fonte de publicidade na interface do usuário pode ser encontrada no [visão geral das origens](../../../home.md#advertising).
+>* Para Experience Platform assimilar dados, os fusos horários de todas as fontes de lote baseadas em tabela devem ser configurados como UTC.
 
 ## Introdução
 

@@ -5,9 +5,9 @@ title: Criar um fluxo de dados para fontes de automação de marketing usando a 
 type: Tutorial
 description: Este tutorial aborda as etapas para recuperar dados de um sistema de automação de marketing e trazê-los para o Adobe Experience Platform usando conectores de origem e APIs.
 exl-id: f3754bd0-ed31-4bf2-8f97-975bf6a9b076
-source-git-commit: 92f39f970402ab907f711d23a8f5f599668f0fe0
+source-git-commit: f5ac10980e08843f6ed9e892f7e1d4aefc8f0de7
 workflow-type: tm+mt
-source-wordcount: '1356'
+source-wordcount: '1349'
 ht-degree: 2%
 
 ---
@@ -18,7 +18,8 @@ Este tutorial aborda as etapas para recuperar dados de uma fonte de automação 
 
 >[!NOTE]
 >
->Para criar um fluxo de dados, você já deve ter uma ID de conexão base válida com uma fonte de automação de marketing. Se você não tiver essa ID, consulte a [visão geral das origens](../../../home.md#marketing-automation) para obter uma lista de fontes de automação de marketing com as quais você pode criar uma conexão base.
+>* Para criar um fluxo de dados, você já deve ter uma ID de conexão base válida com uma fonte de automação de marketing. Se você não tiver essa ID, consulte a [visão geral das origens](../../../home.md#marketing-automation) para obter uma lista de fontes de automação de marketing com as quais você pode criar uma conexão base.
+>* Para Experience Platform assimilar dados, os fusos horários de todas as fontes de lote baseadas em tabela devem ser configurados como UTC.
 
 ## Introdução
 
@@ -558,7 +559,7 @@ Uma resposta bem-sucedida retorna os detalhes da especificação do fluxo de dad
 
 +++
 
-## Crie um fluxo de dados
+## Criar um fluxo de dados
 
 A última etapa para coletar dados de automação de marketing é criar um fluxo de dados. Até agora, você tem os seguintes valores necessários preparados:
 

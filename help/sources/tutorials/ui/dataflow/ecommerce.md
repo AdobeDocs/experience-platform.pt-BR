@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;início;tópicos populares;conector de comércio eletrônico;comércio eletrônico;;home;popular topics;eCommerce connector;eCommerce
 solution: Experience Platform
-title: Criar um fluxo de dados usando uma fonte de comércio eletrônico na interface
+title: Criar um fluxo de dados usando uma fonte E-Commerce na interface
 type: Tutorial
 description: Um fluxo de dados é uma tarefa agendada que recupera e assimila dados de uma origem para um conjunto de dados da Platform. Este tutorial fornece etapas sobre como criar um fluxo de dados para uma fonte de comércio eletrônico usando a interface do usuário do Platform.
 exl-id: ee1382c5-78ac-4765-8883-0a922772bb20
-source-git-commit: 62ca31bc8499e822e0da25270bd4fe8871520f9b
+source-git-commit: f5ac10980e08843f6ed9e892f7e1d4aefc8f0de7
 workflow-type: tm+mt
-source-wordcount: '1430'
+source-wordcount: '1450'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,8 @@ Um fluxo de dados é uma tarefa agendada que recupera e assimila dados de uma or
 
 >[!NOTE]
 >
->Para criar um fluxo de dados, você já deve ter uma conta autenticada com uma fonte de comércio eletrônico. Uma lista de tutoriais para criar diferentes contas de origem de comércio eletrônico na interface do usuário pode ser encontrada no [visão geral das origens](../../../home.md#ecommerce).
+>* Para criar um fluxo de dados, você já deve ter uma conta autenticada com uma fonte de comércio eletrônico. Uma lista de tutoriais para criar diferentes contas de origem de comércio eletrônico na interface do usuário pode ser encontrada no [visão geral das origens](../../../home.md#ecommerce).
+>* Para Experience Platform assimilar dados, os fusos horários de todas as fontes de lote baseadas em tabela devem ser configurados como UTC.
 
 ## Introdução
 

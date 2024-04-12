@@ -4,9 +4,9 @@ description: Uma visão geral da função das fontes no Adobe Real-time Customer
 feature: Sources, Data Ingestion, Get Started, B2B
 badgeB2B: label="Edição B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: eeea4b2e-67c5-4491-9b8e-4b8987e44777
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: a8c9543bb003a99dcd85712d202482511c0a5608
 workflow-type: tm+mt
-source-wordcount: '261'
+source-wordcount: '241'
 ht-degree: 0%
 
 ---
@@ -30,6 +30,6 @@ Consulte a [visão geral dos conectores de origem](../../sources/home.md) para o
 Os documentos a seguir fornecem mais informações sobre o uso de [!DNL Marketo] para trazer dados B2B para a Platform:
 
 * Para obter informações sobre como conectar seu [!DNL Marketo] para a Platform, consulte o tutorial em [criação de um conector de origem do Marketo na interface](../../sources/tutorials/ui/create/adobe-applications/marketo.md).
-* Para obter informações sobre a configuração subjacente dos namespaces B2B e esquemas usados com [!DNL Marketo], consulte a documentação para [Namespaces e esquemas B2B](../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md).
+* Para obter informações sobre a configuração subjacente para os namespaces e esquemas B2B, consulte a documentação para [Namespaces e esquemas B2B](../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md).
 * Para obter informações sobre como encontrar o [!DNL Marketo] ID do Munchkin e gerando suas credenciais, consulte a [[!DNL Marketo] guia de autenticação](../../sources/connectors/adobe-applications/marketo/marketo-auth.md).
 * Para obter informações sobre as regras de mapeamento específicas aplicáveis a [!DNL Marketo] conjuntos de dados, consulte a documentação em [[!DNL Marketo] mapeamentos de campo](../../sources/connectors/adobe-applications//mapping/marketo.md).

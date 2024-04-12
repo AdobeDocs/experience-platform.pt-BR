@@ -4,9 +4,9 @@ title: Visão geral da governança de dados
 description: O controle de dados permite gerenciar dados de clientes e garantir a conformidade com regulamentos, restrições e políticas aplicáveis ao uso de dados.
 feature: Get Started, Data Governance
 exl-id: eb501d85-cabd-4667-a1cd-2210ec83fb71
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 82535ec3ac2dd27e685bb591fdf661d3ab5dd2c9
 workflow-type: tm+mt
-source-wordcount: '690'
+source-wordcount: '689'
 ht-degree: 3%
 
 ---
@@ -37,7 +37,7 @@ Para obter informações detalhadas sobre como trabalhar com rótulos de uso de 
 >
 >Para obter mais informações sobre ações de marketing e seu uso em políticas de uso de dados, consulte [visão geral das políticas de uso de dados](../../data-governance/policies/overview.md) no [!DNL Experience Platform] documentação.
 
-Definir ações de marketing em destinos permite garantir que todos os perfis ou segmentos enviados para esses destinos estejam em conformidade com as políticas de uso de dados. Portanto, você deve adicionar as ações de marketing apropriadas aos seus destinos com base nas necessidades da sua organização para aplicar restrições de política na ativação.
+Definir ações de marketing em destinos permite garantir que todos os perfis ou públicos enviados para esses destinos estejam em conformidade com as políticas de uso de dados. Portanto, você deve adicionar as ações de marketing apropriadas aos seus destinos com base nas necessidades da sua organização para aplicar restrições de política na ativação.
 
 As ações de marketing só podem ser selecionadas ao configurar um destino pela primeira vez. Dependendo do tipo de destino com o qual você está trabalhando, a oportunidade de configurar ações de marketing aparecerá em diferentes pontos do fluxo de trabalho de configuração. Consulte a [documentação de destinos](../destinations/overview.md) para obter etapas sobre como configurar seu destino específico.
 
@@ -49,7 +49,7 @@ A Adobe Experience Platform fornece várias políticas principais para casos de 
 
 ## Impor conformidade com o uso de dados {#enforce}
 
-Depois que os dados forem rotulados e as políticas de uso forem definidas, você poderá impor a conformidade do uso de dados com as políticas. Ao ativar segmentos de público-alvo para destinos no Real-Time CDP, a Governança de dados impõe automaticamente políticas de uso caso ocorram violações.
+Depois que os dados forem rotulados e as políticas de uso forem definidas, você poderá impor a conformidade do uso de dados com as políticas. Ao ativar públicos para destinos na Real-Time CDP, a Governança de dados impõe automaticamente políticas de uso caso ocorram violações.
 
 Consulte o documento sobre [aplicação automática de política](../../data-governance/enforcement/auto-enforcement.md) para obter mais informações.
 

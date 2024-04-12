@@ -5,9 +5,9 @@ description: Este modelo de cenário fornece um exemplo para a configuração da
 feature: Get Started, Use Cases, B2B
 badgeB2B: label="Edição B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 15505980-ac33-44b2-8989-c08cbabd212b
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 2704184446f7945c744e7e2d2a8c3cda3fc12527
 workflow-type: tm+mt
-source-wordcount: '1146'
+source-wordcount: '1151'
 ht-degree: 2%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 2%
 O Real-time Customer Data Platform B2B Edition expande as ofertas existentes do Real-Time CDP e do Adobe Experience Platform para oferecer suporte a dados e workflows B2B. Este documento fornece um exemplo de caso de uso que demonstra os benefícios adicionais fornecidos pela B2B Edition. Eles incluem:
 
 - Combine dados de pessoas e contas de diferentes fontes de dados em silos para produzir uma exibição abrangente que permita uma melhor compreensão dos clientes e uma segmentação mais precisa. Consulte a documentação em [criação de relacionamentos de esquema XDM](./schemas/b2b.md) para uso com fontes B2B variadas para obter mais informações.
-- Segmentar um público com base em atributos de entidades relacionadas. Isso inclui Contas, Oportunidades, Campanhas e Listas de marketing. Os segmentos não estão mais limitados apenas a Atributos de pessoa e Eventos de experiência. Consulte a [Documentação de segmentação B2B](./segmentation/b2b.md) para obter mais exemplos de criação de públicos-alvo específicos B2B.
+- Segmentar um público com base em atributos de entidades relacionadas. Isso inclui Contas, Oportunidades, Campanhas e Listas de marketing. Os públicos-alvo não estão mais limitados apenas a Atributos de pessoa e Eventos de experiência. Consulte a [Documentação de segmentação B2B](./segmentation/b2b.md) para obter mais exemplos de criação de públicos-alvo específicos B2B.
 - Suporte nativo ao caso de uso de uma pessoa relacionada a várias contas.
 
 ## Caso de uso
@@ -50,9 +50,9 @@ Como as informações relevantes do Townsend são registradas como Account 1 no 
 
 Isso proíbe que a equipe de marketing da Bodea direcione contatos comerciais específicos com eficiência nessas empresas com essa nova oportunidade.
 
-Até o momento, Townsend gastou mais de um milhão de dólares cumulativamente em produtos Bodea em todas as suas contas. No entanto, um segmento criado usando seu sistema antigo não incluiria ninguém da Townsend, a menos que o total gasto em um único sistema de vendas totalizasse mais de 1 milhão de dólares. Isso ocorre porque os dados da receita são colocados em silos nas contas em diferentes sistemas de vendas.
+Até o momento, Townsend gastou mais de um milhão de dólares cumulativamente em produtos Bodea em todas as suas contas. No entanto, um público-alvo criado usando seu sistema antigo não incluiria ninguém da Townsend, a menos que o total gasto em um único sistema de vendas totalizasse mais de 1 milhão de dólares. Isso ocorre porque os dados da receita são colocados em silos nas contas em diferentes sistemas de vendas.
 
-Como os gastos do Townsend são divididos em diferentes sistemas de vendas e não totalizam individualmente mais de um milhão, o segmento não encontraria ninguém qualificado no Marketo 1 ou no Marketo 2.
+Como os gastos do Townsend são divididos em diferentes sistemas de vendas e não totalizam individualmente mais de um milhão, a definição do segmento não encontraria ninguém qualificado no Marketo 1 ou no Marketo 2.
 
 ### Como o Real-Time CDP B2B Edition resolve o problema
 
@@ -77,7 +77,7 @@ Para simplificar e para o propósito deste exemplo, as pessoas estão sendo iden
 | Oportunidade 1, US$ 200 mil |
 | Oportunidade 2, US$ 900 mil |
 
-- Crie segmentos únicos usando esses dados agregados para iniciativas de marketing variadas. Neste exemplo, o segmento encontra todas as pessoas que:
+- Crie públicos-alvo exclusivos usando esses dados agregados para iniciativas de marketing variadas. Neste exemplo, a definição do segmento encontra todas as pessoas que:
 
    - Têm oportunidades associadas (em TODAS as contas) que excedem US$ 1 milhão em valor
    - AND

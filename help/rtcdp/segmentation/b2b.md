@@ -4,9 +4,9 @@ description: Uma visão geral dos vários casos de uso disponíveis do Adobe Rea
 feature: Get Started, Audiences, Segments, B2B
 badgeB2B: label="Edição B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 2a99b85e-71b3-4781-baf7-a4d5436339d3
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 8a487d948d2eb7db167298b61045ef8dd2099da6
 workflow-type: tm+mt
-source-wordcount: '1438'
+source-wordcount: '1422'
 ht-degree: 0%
 
 ---
@@ -24,9 +24,9 @@ Este documento fornece exemplos de definições de segmento no Adobe Real-time C
 Antes de usar os atributos de segmentação para classes B2B, você deve realizar as seguintes etapas:
 
 1. Crie esquemas que usam as classes B2B. As classes B2B Edition incluem Conta, Campanha, Oportunidade, Lista de marketing e muito mais. Para obter informações sobre [como configurar esquemas para uso com classes B2B](../schemas/b2b.md) consulte a documentação do esquema.
-1. Crie relacionamentos entre seus esquemas B2B do Experience Data Model (XDM). Os segmentos baseados em atributos da B2B Edition exigem relações entre as classes para usar totalmente a funcionalidade estendida de Segmentação B2B. Consulte a documentação em [como definir uma relação entre dois esquemas B2B](../../xdm/tutorials/relationship-b2b.md) para obter mais informações.
-1. Assimilar dados usando conjuntos de dados com base em seus esquemas B2B. Consulte a documentação de origens para [informações sobre como assimilar dados](../../sources/connectors/adobe-applications/marketo/marketo.md).
-1. Leia o [Guia do usuário do Construtor de segmentos](../../segmentation/ui/segment-builder.md) para obter uma orientação mais detalhada sobre como criar públicos-alvo.
+2. Crie relacionamentos entre seus esquemas B2B do Experience Data Model (XDM). Os públicos-alvo com base nos atributos da B2B Edition exigem relações entre as classes para usar totalmente a funcionalidade estendida de Segmentação B2B. Consulte a documentação em [como definir uma relação entre dois esquemas B2B](../../xdm/tutorials/relationship-b2b.md) para obter mais informações.
+3. Assimilar dados usando conjuntos de dados com base em seus esquemas B2B. Consulte a documentação de origens para [informações sobre como assimilar dados](../../sources/connectors/adobe-applications/marketo/marketo.md).
+4. Leia o [Guia do usuário do Construtor de segmentos](../../segmentation/ui/segment-builder.md) para obter uma orientação mais detalhada sobre como criar públicos-alvo.
 
 Depois que esses requisitos forem atendidos, você poderá combinar esses atributos para casos de uso comuns de B2B.
 
@@ -54,7 +54,7 @@ Essa relação é refletida no Construtor de segmentos por meio do uso de `Key` 
 
 Consulte a [esquemas na documentação do Real-time Customer Data Platform B2B Edition](../schemas/b2b.md) para obter mais informações sobre as classes B2B disponíveis.
 
-Os casos de uso abaixo fornecem informações sobre quais classes são usadas para estabelecer relações entre os diferentes esquemas para alcançar esses resultados. Esses exemplos podem ser usados para ajudar você a criar seus próprios segmentos.
+Os casos de uso abaixo fornecem informações sobre quais classes são usadas para estabelecer relações entre os diferentes esquemas para alcançar esses resultados. Esses exemplos podem ser usados para ajudar você a criar seus próprios públicos.
 
 ## Exemplos de casos de uso de segmentação diferentes {#use-cases}
 

@@ -5,10 +5,10 @@ description: Uma visão geral e mais informações sobre o recurso contas relaci
 feature: Get Started, Profiles, B2B
 badgeB2B: label="Edição B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 37fd2cdb-87c0-4e5e-9599-ad4f397f7c28
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 82535ec3ac2dd27e685bb591fdf661d3ab5dd2c9
 workflow-type: tm+mt
-source-wordcount: '441'
-ht-degree: 6%
+source-wordcount: '435'
+ht-degree: 4%
 
 ---
 
@@ -32,7 +32,7 @@ Com contas relacionadas, [!DNL Real-Time CDP B2B] O agora mostra uma lista de co
 
 ![Tela mostrando contas relacionadas na interface do usuário do Experience Platform.](/help/rtcdp/b2b-ai-ml-services/assets/related-accounts-in-ui.png)
 
-Use esse recurso para exibir perfis de conta relacionados para um perfil de conta na interface do usuário do Experience Platform e, em seguida, incluir as contas relacionadas nas definições de segmento para ampliar seu alcance ou aplicar critérios mais amplos em seus segmentos.
+Use esse recurso para exibir perfis de conta relacionados para um perfil de conta na interface do usuário do Experience Platform e, em seguida, incluir as contas relacionadas nas definições de segmento para ampliar seu alcance ou aplicar critérios mais amplos em seus públicos.
 
 ## Habilitar o serviço de contas relacionado {#enable}
 

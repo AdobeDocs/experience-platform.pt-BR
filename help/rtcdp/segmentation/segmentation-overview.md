@@ -1,12 +1,12 @@
 ---
 keywords: segmentação; segmentação rtcdp;segmentação da plataforma de dados do cliente em tempo real
 title: Serviço de segmentação na Real-time Customer Data Platform
-description: A plataforma Adobe Real-Time Customer Dat é construída sobre a Adobe Experience Platform e utiliza muitos dos serviços e funcionalidades da Experience Platform. Com o Serviço de segmentação, você pode fornecer marketing sob medida dividindo seus clientes em grupos menores com características semelhantes.
+description: O Adobe Real-time Customer Data Platform é construído sobre o Adobe Experience Platform e utiliza muitos dos serviços e funcionalidades do Experience Platform. Com o Serviço de segmentação, você pode fornecer marketing sob medida dividindo seus clientes em grupos menores com características semelhantes.
 feature: Get Started, Audiences, Segments
 exl-id: 140667c0-e288-40c4-8c45-c275e348b84a
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 2704184446f7945c744e7e2d2a8c3cda3fc12527
 workflow-type: tm+mt
-source-wordcount: '540'
+source-wordcount: '543'
 ht-degree: 4%
 
 ---
@@ -19,11 +19,11 @@ O Real-Time CDP foi desenvolvido com base no Adobe Experience Platform e utiliza
 
 ## Segmentação
 
-A segmentação é o processo de definir atributos ou comportamentos específicos compartilhados por um subconjunto de perfis da sua loja de perfis para distinguir um grupo comercializável de pessoas da sua base de clientes. Por exemplo, em uma campanha de email chamada &quot;Você se esqueceu de comprar seu tênis?&quot;, você pode querer um público de todos os usuários que procuraram tênis de corrida nos últimos 30 dias, mas que não concluíram uma compra. Usando segmentos diferentes, você pode se concentrar em seus vários públicos, fornecendo uma experiência de marketing mais personalizada.
+A segmentação é o processo de definir atributos ou comportamentos específicos compartilhados por um subconjunto de perfis da sua loja de perfis para distinguir um grupo comercializável de pessoas da sua base de clientes. Por exemplo, em uma campanha de email chamada &quot;Você se esqueceu de comprar seu tênis?&quot;, você pode querer um público de todos os usuários que procuraram tênis de corrida nos últimos 30 dias, mas que não concluíram uma compra. Usando diferentes definições de segmento, você pode se concentrar em seus vários públicos, fornecendo uma experiência de marketing mais personalizada.
 
 ## [!DNL Segment Builder]
 
-[!DNL Platform] O permite criar e acessar segmentos facilmente, além de usar diferentes blocos de construção para caracterizar ainda mais seus segmentos. Para obter mais informações sobre como usar o Construtor de segmentos, leia o [Guia do Construtor de segmentos](./segment-builder-guide.md).
+[!DNL Platform] O permite criar e acessar facilmente definições de segmento, bem como usar diferentes blocos de construção para caracterizar ainda mais seus públicos-alvo. Para obter mais informações sobre como usar o Construtor de segmentos, leia o [Guia do Construtor de segmentos](./segment-builder-guide.md).
 
 ## IA do cliente
 
@@ -36,7 +36,7 @@ Com a ajuda de fatores influentes, a IA do cliente pode informar o que um client
 * Fornecendo opções personalizáveis para os casos de uso e dados exclusivos de sua empresa.
 * Aprimoramento do Perfil do cliente em tempo real com pontuações de propensão do cliente, como churn e conversão.
 * Aprimoramento dos perfis do cliente com fatores influentes para pontuações de propensão.
-* Criar segmentos de clientes com base em fatores influentes e pontuações de propensão.
+* Criar públicos-alvo de clientes com base em fatores influentes e pontuações de propensão.
 
 A IA do cliente está localizada na **[!UICONTROL Serviços]** em **[!UICONTROL Serviços da Adobe]**.
 
@@ -44,7 +44,7 @@ A IA do cliente está localizada na **[!UICONTROL Serviços]** em **[!UICONTROL 
 
 ### Introdução à IA do cliente
 
-Para começar a usar a IA do cliente, é necessário seguir o [tutorial de preparação de dados](../../intelligent-services/data-preparation.md) e configure o schema de entrada com base no seu caso de uso. Em seguida, será necessário [configurar uma instância da IA do cliente](../../intelligent-services/customer-ai/user-guide/configure.md). Após configurar uma instância, um modelo é gerado, onde você pode [exibir seus insights e pontuações](../../intelligent-services/customer-ai/user-guide/discover-insights.md). Usando os dados gerados a partir de seu modelo, você pode criar segmentos para ativação orientada por dados.
+Para começar a usar a IA do cliente, é necessário seguir o [tutorial de preparação de dados](../../intelligent-services/data-preparation.md) e configure o schema de entrada com base no seu caso de uso. Em seguida, será necessário [configurar uma instância da IA do cliente](../../intelligent-services/customer-ai/user-guide/configure.md). Após configurar uma instância, um modelo é gerado, onde você pode [exibir seus insights e pontuações](../../intelligent-services/customer-ai/user-guide/discover-insights.md). Usando os dados gerados a partir do seu modelo, você pode criar públicos-alvo para a ativação orientada por dados.
 
 Para saber mais sobre a IA do cliente, comece visitando o [Visão geral do Customer AI](../../intelligent-services/customer-ai/overview.md). Além disso, o vídeo a seguir mostra como o Customer AI enriquece os perfis do cliente com propensões baseadas em IA e capacita os esforços de segmentação e direcionamento do cliente.
 

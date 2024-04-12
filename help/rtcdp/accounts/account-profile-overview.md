@@ -5,10 +5,10 @@ description: Saiba como a Adobe Real-time Customer Data Platform B2B Edition per
 badgeB2B: label="Edição B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 feature: Profiles, B2B
 exl-id: 67515fe0-975e-4ee1-b172-60bc93ba1010
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 2704184446f7945c744e7e2d2a8c3cda3fc12527
 workflow-type: tm+mt
-source-wordcount: '288'
-ht-degree: 7%
+source-wordcount: '305'
+ht-degree: 6%
 
 ---
 
@@ -25,3 +25,10 @@ Ao unir os dados da conta de diferentes fontes, você pode começar a ver uma im
 ## Visualizador de perfil da conta
 
 Com o Real-Time CDP, B2B Edition, você pode usar a interface de usuário do Experience Platform para exibir perfis de conta e pesquisar contas específicas usando uma ID de conta de uma fonte corporativa conectada ou inserindo os detalhes da fonte diretamente. Para obter mais informações sobre como visualizar perfis de conta na interface do usuário da Platform, consulte o [guia da interface do usuário do perfil da conta](account-profile-ui-guide.md).
+
+## Criar e ativar públicos-alvo da conta
+
+Você pode criar públicos-alvo que consistem em perfis de conta e ativá-los para vários destinos disponíveis no catálogo de destinos do Real-Time CDP. Leia mais abaixo:
+
+* [Públicos da conta](/help/segmentation/ui/account-audiences.md)
+* [Ativar públicos-alvo da conta](/help/destinations/ui/activate-account-audiences.md)

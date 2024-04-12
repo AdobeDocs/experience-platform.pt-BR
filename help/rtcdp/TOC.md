@@ -3,12 +3,12 @@ product: adobe experience platform
 solution: Real-Time Customer Data Platform
 audience: user
 user-guide-title: Manual da Real-time Customer Data Platform
-user-guide-description: Reúna dados conhecidos e anônimos de várias fontes corporativas para criar perfis de clientes, e a partir deles criar segmentos de público-alvo e ativá-los para destinos de terceiros.
+user-guide-description: Reúna dados conhecidos e anônimos de várias fontes corporativas para criar perfis de clientes, criar públicos a partir desses perfis e ativar esses públicos para destinos de terceiros.
 role: Admin
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+source-git-commit: 8a487d948d2eb7db167298b61045ef8dd2099da6
 workflow-type: tm+mt
-source-wordcount: '293'
-ht-degree: 69%
+source-wordcount: '294'
+ht-degree: 58%
 
 ---
 
@@ -33,6 +33,11 @@ ht-degree: 69%
    * [Guia da interface do perfil da conta](accounts/account-profile-ui-guide.md)
 * Administração {#admin}
    * [Visão geral da administração](administration/admin-overview.md)
+* Públicos-alvo e segmentação {#segmentation}
+   * [Visão geral da segmentação](segmentation/segmentation-overview.md)
+   * [Guia do Construtor de segmentos](segmentation/segment-builder-guide.md)
+   * [Segmentação na Real-Time CDP B2B Edition](segmentation/b2b.md)
+   * [IA do cliente](segmentation/customer-ai.md)
 * Conjuntos de dados {#datasets}
    * [Conjuntos de dados](datasets/dataset.md)
    * [Qualidade dos dados na Platform](datasets/data-quality.md)
@@ -66,11 +71,6 @@ ht-degree: 69%
 * Esquemas {#schemas}
    * [Visão geral dos esquemas](schemas/overview.md)
    * [Esquemas no Real-Time CDP B2B Edition](schemas/b2b.md)
-* Segmentos {#segmentation}
-   * [Visão geral da segmentação](segmentation/segmentation-overview.md)
-   * [Guia do construtor de segmentos](segmentation/segment-builder-guide.md)
-   * [Segmentação na Real-Time CDP B2B Edition](segmentation/b2b.md)
-   * [IA do cliente](segmentation/customer-ai.md)
 * Fontes {#sources}
    * [Visão geral das fontes](sources/sources-overview.md)
    * [Fontes na Real-Time CDP B2B Edition](sources/b2b.md)

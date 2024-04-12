@@ -6,7 +6,7 @@ description: A Adobe Experience Platform usa um modelo de dados híbrido não no
 badgeB2B: label="Edição B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 feature: Guardrails, B2B
 exl-id: 8eff8c3f-a250-4aec-92a1-719ce4281272
-source-git-commit: f6cfe2de5f2f485cbd42c83b539fb458b505d260
+source-git-commit: 2704184446f7945c744e7e2d2a8c3cda3fc12527
 workflow-type: tm+mt
 source-wordcount: '1794'
 ht-degree: 2%
@@ -102,7 +102,7 @@ As medidas de proteção a seguir se referem ao tamanho dos dados e fornecem lim
 
 ## Proteções de segmentação
 
-As medidas de proteção descritas nesta seção referem-se ao número e à natureza dos segmentos que uma organização pode criar no Experience Platform, bem como mapear e ativar segmentos para destinos.
+As medidas de proteção descritas nesta seção referem-se ao número e à natureza dos públicos que uma organização pode criar no Experience Platform, bem como mapear e ativar públicos para destinos.
 
 >[!NOTE]
 >
@@ -134,7 +134,7 @@ Os atributos independentes do tempo, também conhecidos como &quot;dados de regi
 
 #### entidade Dimension
 
-Embora o armazenamento de dados do perfil que mantém os dados do perfil não seja um armazenamento relacional, o Perfil permite a integração com entidades de pequena dimensão para criar segmentos de maneira simplificada e intuitiva. Essa integração é conhecida como [segmentação de várias entidades](../segmentation/multi-entity-segmentation.md).
+Embora o armazenamento de dados do perfil que mantém os dados do perfil não seja um armazenamento relacional, o Perfil permite a integração com entidades de pequena dimensão para criar públicos-alvo de maneira simplificada e intuitiva. Essa integração é conhecida como [segmentação de várias entidades](../segmentation/multi-entity-segmentation.md).
 
 Sua organização também pode definir classes XDM para descrever coisas que não sejam indivíduos, como lojas, produtos ou propriedades. Esses programas,[!DNL XDM Individual Profile] os esquemas são chamados de &quot;entidades de dimensão&quot; (também conhecidas como &quot;entidades de pesquisa&quot;) e não contêm dados de série temporal. Os esquemas que representam entidades de dimensão são vinculados a entidades de perfil por meio do uso de [relacionamentos de esquema](../xdm/tutorials/relationship-ui.md).
 

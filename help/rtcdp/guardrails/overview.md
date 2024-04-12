@@ -3,7 +3,7 @@ title: Medidas de proteção do Real-Time CDP
 description: Saiba mais sobre as medidas de proteção de dados em vários serviços e áreas do Real-Time CDP.
 feature: Guardrails, Data Management, Data Ingestion, Data Export
 exl-id: 377499b4-5707-4d50-94e3-02f88ad5bf2c
-source-git-commit: af37aca17f4b365b52215b8c886e733f00c4a4e8
+source-git-commit: 2704184446f7945c744e7e2d2a8c3cda3fc12527
 workflow-type: tm+mt
 source-wordcount: '369'
 ht-degree: 1%
@@ -27,7 +27,6 @@ Comece aqui e siga os links abaixo para entender todas as medidas de proteção 
 >[!TIP]
 >
 >Além disso, visite [os blueprints de experiência digital](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html) para obter mais informações, como [diagramas de latência de ponta a ponta](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) para vários serviços de Experience Platform.
-
 
 ## Tipos de grade de proteção {#guardrail-types}
 

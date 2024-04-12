@@ -2,9 +2,9 @@
 title: Notas de versão da Adobe Experience Platform
 description: As notas de versão de setembro de 2023 para o Adobe Experience Platform.
 exl-id: ff7fb0c1-6941-4339-8648-58f9b9e9a91f
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: fc55e9a0849767d43c7f2a3bc3c540e776c8a072
 workflow-type: tm+mt
-source-wordcount: '2257'
+source-wordcount: '2263'
 ht-degree: 24%
 
 ---
@@ -26,7 +26,7 @@ Atualizações dos recursos existentes no Experience Platform:
 - [Higiene de dados](#hygiene)
 - [Destinos](#destinations)
 - [Experience Data Model (XDM)](#xdm)
-- [Identity Service](#identity-service)
+- [Serviço de identidade](#identity-service)
 - [Query Service](#query-service)
 - [Serviço de segmentação](#segmentation)
 - [Fontes](#sources)
@@ -70,7 +70,7 @@ A Adobe Experience Platform fornece um conjunto de tecnologias que permitem cole
 | Tipo | Recurso | Descrição |
 | --- | --- | --- |
 | Sequências de dados | Suporte à pesquisa de dispositivo | Ao configurar um fluxo de dados, agora é possível selecionar o nível de informações de pesquisa de dispositivo a serem coletadas. As informações de pesquisa do dispositivo incluem dados sobre o dispositivo, hardware, sistema operacional e navegador usados para interagir com a página. <br>  As informações de pesquisa de dispositivo não podem ser coletadas junto com o agente do usuário e as dicas do cliente. Optar por coletar informações do dispositivo desativará a coleta de agentes do usuário e dicas do cliente, e vice-versa. Todas as informações de pesquisa do dispositivo são armazenadas no `xdm:device` grupo de campos. Saiba mais na documentação sobre [configurando sequências de dados](../../datastreams/configure.md#geolocation-device-lookup). |
-| Extensões | [!DNL TikTok] extensão da API de eventos da web | A variável [[!DNL TikTok] API de eventos da Web](https://exchange.adobe.com/apps/ec/109834/tiktok-web-events-api) permite que você aproveite os dados capturados na Rede de borda da Adobe Experience Platform e os envie para [!DNL TikTok] na forma de eventos do lado do servidor usando o [!DNL TikTok] API de eventos da Web. |
+| Extensões | [!DNL TikTok] extensão da API de eventos da web | A variável [[!DNL TikTok] API de eventos da Web](https://exchange.adobe.com/apps/ec/109834/tiktok-web-events-api) permite aproveitar os dados capturados no Edge Network do Adobe Experience Platform e enviá-los para o [!DNL TikTok] na forma de eventos do lado do servidor usando o [!DNL TikTok] API de eventos da Web. |
 
 {style="table-layout:auto"}
 
@@ -98,7 +98,7 @@ O Experience Platform fornece um conjunto de recursos de higiene de dados que pe
 
 | Recurso | Descrição |
 | --- | --- |
-| [!BADGE  Beta]{type=Informative} | Gerencie o ciclo de vida dos dados em todos os armazenamentos de dados para atender aos compromissos do cliente e aos contratos de licença com recursos avançados de gerenciamento do ciclo de vida dos dados no Adobe Experience Platform: expiração automatizada do conjunto de dados e exclusão de registro.<br>Com a expiração automatizada do conjunto de dados, é possível excluir conjuntos de dados inteiros e definir uma data e hora para o conjunto de dados ser excluído.<br>A Exclusão de Registro permite que você exclua perfis de consumidores individuais direcionando suas identidades principais. Você pode fornecer as identidades primárias individualmente por meio da interface do usuário ou por meio de upload de arquivo CSV/JSON. Consulte a [Documentação de exclusão de registro](../../hygiene/ui/record-delete.md) para obter mais informações |
+| [!BADGE Beta]{type=Informative} Exclusão de registro (versão limitada) | Gerencie o ciclo de vida dos dados em todos os armazenamentos de dados para atender aos compromissos do cliente e aos contratos de licença com os recursos avançados de gerenciamento do ciclo de vida dos dados no Adobe Experience Platform: expiração automatizada do conjunto de dados e exclusão de registro.<br>Com a expiração automatizada do conjunto de dados, é possível excluir conjuntos de dados inteiros e definir uma data e hora para o conjunto de dados ser excluído.<br>A Exclusão de Registro permite que você exclua perfis de consumidores individuais direcionando suas identidades principais. Você pode fornecer as identidades primárias individualmente por meio da interface do usuário ou por meio de upload de arquivo CSV/JSON. Consulte a [Documentação de exclusão de registro](../../hygiene/ui/record-delete.md) para obter mais informações |
 | Expirações de conjuntos de dados | Minimize seus dados e mantenha o controle de seus contratos de licença com a Expiração automatizada do conjunto de dados. Reduza os volumes de dados excluindo conjuntos de dados inteiros e defina uma data e hora para o conjunto de dados ser excluído. Consulte a [documentação de expirações do conjunto de dados](../../hygiene/ui/dataset-expiration.md) para obter mais informações. |
 
 {style="table-layout:auto"}
@@ -182,9 +182,9 @@ O XDM é uma especificação de código aberto que fornece estruturas e definiç
 
 Para obter mais informações sobre o XDM na Platform, consulte a [Visão geral do sistema de XDM](../../xdm/home.md)
 
-## Identity Service {#identity-service}
+## Serviço de identidade {#identity-service}
 
-O Identity Service da Adobe Experience Platform fornece uma visão abrangente dos clientes e seu comportamento ao unir identidades entre dispositivos e sistemas, permitindo fornecer experiências digitais pessoais de impacto em tempo real.
+O Serviço de identidade da Adobe Experience Platform fornece uma visão abrangente dos clientes e seu comportamento ao unir identidades entre dispositivos e sistemas, permitindo fornecer experiências digitais pessoais de impacto em tempo real.
 
 **Recursos novos ou atualizados**
 

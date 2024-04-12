@@ -3,9 +3,9 @@ title: Ponto de extremidade da API de expiração do conjunto de dados
 description: O ponto de extremidade /ttl na API da higiene de dados permite agendar programaticamente as expirações do conjunto de dados no Adobe Experience Platform.
 role: Developer
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
-source-git-commit: 0c6e6d23be42b53eaf1fca365745e6502197c329
+source-git-commit: 20d616463469a4d78fe0e7b6be0ec76b293789d6
 workflow-type: tm+mt
-source-wordcount: '2141'
+source-wordcount: '2166'
 ht-degree: 2%
 
 ---
@@ -197,6 +197,10 @@ O JSON a seguir representa uma resposta truncada para os detalhes de um conjunto
 Para garantir que os dados sejam removidos do sistema após um período especificado, programe uma expiração para um conjunto de dados específico fornecendo a ID do conjunto de dados e a data e hora de expiração no formato ISO 8601.
 
 Para criar uma expiração do conjunto de dados, execute uma solicitação POST, como mostrado abaixo, e forneça os valores mencionados abaixo na carga.
+
+>[!NOTE]
+>
+>Se você receber um erro 404, verifique se a solicitação não tem barras &quot;/&quot; adicionais. Uma barra à direita pode causar falha em uma solicitação POST.
 
 **Formato da API**
 

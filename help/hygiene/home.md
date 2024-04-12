@@ -1,11 +1,11 @@
 ---
 title: Visão geral do gerenciamento avançado do ciclo de vida dos dados
-description: O gerenciamento avançado do ciclo de vida dos dados permite gerenciar o ciclo de vida dos dados ao atualizar ou remover registros desatualizados ou imprecisos.
+description: O Gerenciamento avançado do ciclo de vida dos dados permite gerenciar o ciclo de vida dos dados atualizando ou removendo registros desatualizados ou imprecisos.
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
-source-git-commit: 45dac5647e44ac35d9821d407eddeee72523faf9
+source-git-commit: fc55e9a0849767d43c7f2a3bc3c540e776c8a072
 workflow-type: tm+mt
-source-wordcount: '589'
-ht-degree: 1%
+source-wordcount: '583'
+ht-degree: 2%
 
 ---
 
@@ -70,4 +70,4 @@ The following takes place when a [record delete request](./ui/record-delete.md) 
 
 ## Próximas etapas
 
-Este documento forneceu uma visão geral dos recursos de ciclo de vida de dados da Platform. Para começar a fazer solicitações de higiene de dados na interface do usuário, consulte [Guia da interface do usuário](./ui/overview.md). Para saber como criar trabalhos do ciclo de vida de dados de forma programática, consulte o [Guia da API de higiene de dados](./api/overview.md)
+Este documento forneceu uma visão geral dos recursos de ciclo de vida dos dados da plataforma. Para começar a fazer solicitações de higiene de dados na interface do usuário, consulte [Guia da interface do usuário](./ui/overview.md). Para saber como criar trabalhos do Ciclo de Vida de Dados de forma programática, consulte o [Guia da API de higiene de dados](./api/overview.md)

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guia da interface do Editor de consultas
 description: O Editor de consultas é uma ferramenta interativa fornecida pelo Serviço de consultas da Adobe Experience Platform, que permite gravar, validar e executar consultas para dados de experiência do cliente na interface do usuário do Experience Platform. O Editor de consultas é compatível com o desenvolvimento de consultas para análise e exploração de dados, e permite executar consultas interativas para fins de desenvolvimento, bem como consultas não interativas para preencher conjuntos de dados no Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: ab2ebc5e2ba63d415ef39feba0392d08026050ba
+source-git-commit: ce937f1335283382189fa40f65aa268735c02715
 workflow-type: tm+mt
-source-wordcount: '2647'
+source-wordcount: '2661'
 ht-degree: 2%
 
 ---
@@ -49,7 +49,7 @@ Usar [!DNL Query Editor], você pode gravar, executar e salvar consultas para da
 
 >[!IMPORTANT]
 >
->O editor herdado será desativado em 30 de abril de 2024 e não estará mais disponível para uso.
+>Em 30 de abril de 2024, o Editor de consultas aprimorado será o editor padrão para todos os usuários. O editor herdado será descontinuado em 30 de maio de 2024 e não estará mais disponível para uso.
 
 ## Controle de alternância aprimorado no editor de consultas {#enhanced-editor-toggle}
 

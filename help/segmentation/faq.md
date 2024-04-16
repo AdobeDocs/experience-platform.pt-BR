@@ -2,9 +2,9 @@
 title: Perguntas frequentes do Audiences
 description: Descubra respostas para perguntas frequentes sobre públicos-alvo e outros conceitos relacionados à segmentação.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: 81e1ce90b1778bb29c770e1468461949a1ea468c
+source-git-commit: f9235763746e12bd62f19094372dcff41cb41d65
 workflow-type: tm+mt
-source-wordcount: '3189'
+source-wordcount: '3161'
 ht-degree: 1%
 
 ---
@@ -86,7 +86,7 @@ Se ativados para um destino em lote, os dados do público-alvo gerado externamen
 
 ### Posso excluir um público-alvo gerado externamente?
 
-Nesse momento, só é possível desativar um público gerado externamente. Nesse estado, os perfis **irá** permanecem ativos para uso em aplicativos downstream. O suporte para excluir públicos-alvo gerados externamente será adicionado em uma versão subsequente.
+Sim! Públicos gerados externamente podem ser excluídos no Portal de público-alvo.
 
 ### O que devo fazer se fiz upload acidentalmente de um público-alvo gerado externamente?
 

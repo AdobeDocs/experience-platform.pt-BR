@@ -4,9 +4,9 @@ title: Segmentação de borda usando a API
 description: Este documento contém exemplos sobre como usar a segmentação de borda com a API de serviço de segmentação do Adobe Experience Platform.
 role: Developer
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: c14c6b8037993b3696b4a99633c80c6ee9679399
 workflow-type: tm+mt
-source-wordcount: '1195'
+source-wordcount: '1207'
 ht-degree: 1%
 
 ---
@@ -64,6 +64,7 @@ Uma definição de segmento **não** ser ativado para segmentação de borda nos
 
 - A definição de segmento inclui uma combinação de um único evento e uma `inSegment` evento.
    - No entanto, se o segmento contido na variável `inSegment` evento é somente perfil, a definição do segmento **irá** ser ativado para segmentação de borda.
+- A definição do segmento usa &quot;Ignorar ano&quot; como parte de suas restrições de tempo.
 
 ## Recuperar todos os segmentos habilitados para segmentação de borda
 
@@ -279,6 +280,6 @@ Para saber como executar ações semelhantes e trabalhar com segmentos usando a 
 
 A seção a seguir lista as perguntas frequentes sobre a segmentação de borda:
 
-### Quanto tempo leva para um segmento ficar disponível na Rede de borda?
+### Quanto tempo leva para um segmento ficar disponível no Edge Network?
 
-Leva até uma hora para um segmento estar disponível na Rede de borda.
+Leva até uma hora para um segmento estar disponível no Edge Network.

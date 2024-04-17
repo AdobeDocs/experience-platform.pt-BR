@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guia da interface de segmentação de borda
 description: Saiba como usar a segmentação de borda para avaliar definições de segmento na Platform instantaneamente na borda, permitindo casos de uso de personalização da mesma página e da próxima página.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
+source-git-commit: c14c6b8037993b3696b4a99633c80c6ee9679399
 workflow-type: tm+mt
-source-wordcount: '958'
+source-wordcount: '970'
 ht-degree: 0%
 
 ---
@@ -55,6 +55,7 @@ Uma definição de segmento **não** ser ativado para segmentação de borda no 
 
 - A definição de segmento inclui uma combinação de um único evento e uma `inSegment` evento.
    - No entanto, se a definição de segmento contida na variável `inSegment` evento é somente perfil, a definição do segmento **irá** ser ativado para segmentação de borda.
+- A definição do segmento usa &quot;Ignorar ano&quot; como parte de suas restrições de tempo.
 
 ## Próximas etapas
 
@@ -64,6 +65,6 @@ Este guia explica como avaliar definições de segmento com segmentação de bor
 
 A seção a seguir lista as perguntas frequentes sobre a segmentação de borda:
 
-### Quanto tempo leva para uma definição de segmento ficar disponível na Rede de borda?
+### Quanto tempo leva para uma definição de segmento ficar disponível no Edge Network?
 
-Demora até uma hora para uma definição de segmento estar disponível na rede de borda.
+Leva até uma hora para uma definição de segmento estar disponível no Edge Network.

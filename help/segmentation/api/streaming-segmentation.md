@@ -4,9 +4,9 @@ title: Avaliar eventos em tempo quase real com a segmentação de transmissão
 description: Este documento contém exemplos sobre como usar a segmentação por transmissão com a API do Serviço de segmentação do Adobe Experience Platform.
 role: Developer
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: 2afd0ff97478938f4101e5a4b583e56a760840a2
+source-git-commit: c14c6b8037993b3696b4a99633c80c6ee9679399
 workflow-type: tm+mt
-source-wordcount: '2038'
+source-wordcount: '2050'
 ht-degree: 4%
 
 ---
@@ -87,6 +87,7 @@ Uma definição de segmento **não** ser ativado para segmentação por transmis
 - A definição do segmento inclui várias entidades (consultas de várias entidades).
 - A definição de segmento inclui uma combinação de um único evento e uma `inSegment` evento.
    - No entanto, se o segmento contido na variável `inSegment` evento é somente perfil, a definição do segmento **irá** ser ativado para segmentação por transmissão.
+- A definição do segmento usa &quot;Ignorar ano&quot; como parte de suas restrições de tempo.
 
 Observe que as seguintes diretrizes se aplicam ao fazer a segmentação por transmissão:
 

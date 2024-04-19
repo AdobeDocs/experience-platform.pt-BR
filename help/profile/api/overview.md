@@ -4,9 +4,9 @@ title: Guia da API do Perfil do cliente em tempo real
 description: A API de perfil do cliente em tempo real permite que os desenvolvedores explorem e trabalhem com dados de perfil, incluindo a visualização de perfis, a criação e a atualização de políticas de mesclagem, a exportação ou a amostragem de dados de perfil e a exclusão de dados de perfil que não são mais necessários ou que foram adicionados por engano. Siga este manual para saber como executar operações importantes usando a API.
 role: Developer
 exl-id: ce39b95b-cff7-46cf-a14c-8203017c8826
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: b033f96002ed6da25cd6eb7012c397405dd85896
 workflow-type: tm+mt
-source-wordcount: '881'
+source-wordcount: '883'
 ht-degree: 2%
 
 ---
@@ -53,7 +53,7 @@ Para saber mais sobre as políticas de mesclagem e sua função na Platform, com
 
 ## Trabalhos do sistema de perfil {#profile-system-jobs}
 
-Dados habilitados para perfil que são assimilados em [!DNL Platform] é armazenado no [!DNL Data Lake] bem como a [!DNL Real-Time Customer Profile] armazenamento de dados. Ocasionalmente, pode ser necessário excluir um conjunto de dados ou lote do [!DNL Profile] armazene para remover dados que não são mais necessários ou que foram adicionados por engano. Isso requer o uso da API para criar uma [!DNL Profile System Job], também conhecido como &quot;[!DNL delete request]&quot;, que pode ser modificado, monitorado ou excluído, se necessário. Para saber como trabalhar com solicitações de exclusão usando o `/system/jobs` endpoint na variável [!DNL Real-Time Customer Profile] , siga as etapas descritas na seção [guia de ponto de extremidade de trabalhos do sistema de perfis](profile-system-jobs.md).
+Dados habilitados para perfil que são assimilados em [!DNL Platform] é armazenado no [!DNL Data Lake] bem como a [!DNL Real-Time Customer Profile] armazenamento de dados. Ocasionalmente, pode ser necessário excluir dados de perfil associados a um conjunto de dados do armazenamento de Perfil para remover dados que não são mais necessários ou foram adicionados por engano. Isso requer o uso da API para criar uma [!DNL Profile System Job], também conhecido como &quot;[!DNL delete request]&quot;, que pode ser modificado, monitorado ou excluído, se necessário. Para saber como trabalhar com solicitações de exclusão usando o `/system/jobs` endpoint na variável [!DNL Real-Time Customer Profile] , siga as etapas descritas na seção [guia de ponto de extremidade de trabalhos do sistema de perfis](profile-system-jobs.md).
 
 ## Atualizar atributos de perfis {#update-profile}
 

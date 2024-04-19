@@ -5,16 +5,16 @@ type: Documentation
 description: O Adobe Experience Platform permite excluir um conjunto de dados ou lote do Armazenamento de perfis para remover os dados do Perfil do cliente em tempo real que não são mais necessários ou que foram adicionados por engano. Isso requer o uso da API de perfil para criar um trabalho de sistema de perfil ou excluir solicitação.
 role: Developer
 exl-id: 75ddbf2f-9a54-424d-8569-d6737e9a590e
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 42c83c7449a14eec5b91f82811bce4234e47cb51
 workflow-type: tm+mt
-source-wordcount: '1313'
+source-wordcount: '1327'
 ht-degree: 3%
 
 ---
 
 # Endpoint de trabalhos do sistema de perfil (solicitações de exclusão)
 
-O Adobe Experience Platform permite assimilar dados de várias fontes e criar perfis robustos para clientes individuais. Dados assimilados na [!DNL Platform] é armazenado no [!DNL Data Lake]e se os conjuntos de dados tiverem sido habilitados para o Perfil, esses dados serão armazenados no [!DNL Real-Time Customer Profile] armazenamento de dados também. Ocasionalmente, pode ser necessário excluir um conjunto de dados ou lote do Armazenamento de perfis para remover dados que não são mais necessários ou foram adicionados por engano. Isso requer o uso da [!DNL Real-Time Customer Profile] API para criar um [!DNL Profile] trabalho do sistema, ou `delete request`, que também podem ser modificados, monitorados ou removidos, se necessário.
+O Adobe Experience Platform permite assimilar dados de várias fontes e criar perfis robustos para clientes individuais. Dados assimilados na [!DNL Platform] é armazenado no [!DNL Data Lake]e se os conjuntos de dados tiverem sido habilitados para o Perfil, esses dados serão armazenados no [!DNL Real-Time Customer Profile] armazenamento de dados também. Ocasionalmente, pode ser necessário excluir dados de perfil associados a um conjunto de dados do armazenamento de Perfil para remover dados que não são mais necessários ou foram adicionados por engano. Isso requer o uso da [!DNL Real-Time Customer Profile] API para criar um [!DNL Profile] trabalho do sistema, ou `delete request`, que também podem ser modificados, monitorados ou removidos, se necessário.
 
 >[!NOTE]
 >
@@ -102,9 +102,9 @@ A resposta inclui uma matriz &quot;filho&quot; com um objeto para cada solicita�
 
 A inicialização de uma nova solicitação de exclusão é feita por meio de uma solicitação POST para o `/systems/jobs` endpoint, em que a ID do conjunto de dados ou lote a ser excluído é fornecida no corpo da solicitação.
 
-### Excluir um conjunto de dados
+### Excluir um conjunto de dados e dados de perfil associados
 
-Para excluir um conjunto de dados do armazenamento de Perfis, a ID do conjunto de dados deve ser incluída no corpo da solicitação POST. Esta ação excluirá TODOS os dados de um determinado conjunto de dados. [!DNL Experience Platform] O permite excluir conjuntos de dados com base em esquemas de registro e série temporal.
+Para excluir um conjunto de dados e todos os dados de perfil associados ao conjunto de dados do armazenamento de Perfil, a ID do conjunto de dados deve ser incluída no corpo da solicitação POST. Esta ação excluirá TODOS os dados de um determinado conjunto de dados. [!DNL Experience Platform] O permite excluir conjuntos de dados com base em esquemas de registro e série temporal.
 
 **Formato da API**
 

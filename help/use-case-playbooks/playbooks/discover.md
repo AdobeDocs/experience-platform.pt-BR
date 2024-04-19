@@ -5,9 +5,9 @@ description: Saiba como encontrar o manual de estratégia correto para o seu cas
 role: User
 exl-id: 3dae6ad6-adb3-4606-ad63-c0d4ef6beeba
 source-git-commit: ecce42e2c759bda31bc37d0aae1da2c7b3d141fc
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '752'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -19,7 +19,7 @@ Para usar um manual de estratégia, navegue até **[!UICONTROL Manuais de estrat
 
 Use a janela de pesquisa e os filtros disponíveis na página para encontrar o manual de estratégia correto para o seu caso de uso.
 
-Por exemplo, você pode filtrar os manuais de estratégia que podem ser usados de acordo com o estágio do funil de marketing que deseja direcionar: conversão, engajamento ou retenção. Você também pode filtrar os manuais exibidos pelo setor em que você está ou pelo direito do produto ao qual você tem acesso: Adobe Journey Optimizer ou Real-Time CDP.
+Por exemplo, você pode filtrar os manuais de estratégia que podem ser usados de acordo com o estágio do funil de marketing que deseja direcionar: conversão, engajamento ou retenção. Você também pode filtrar os manuais de estratégia exibidos pelo setor em que está ou pelo direito do produto ao qual você tem acesso: Adobe Journey Optimizer ou Real-time CDP.
 
 ![Filtrar manuais de estratégia por funil de marketing, setor ou produto](/help/use-case-playbooks/assets/playbooks/ui-guide/filter-by-funnel-industry-product.gif)
 
@@ -49,7 +49,7 @@ O mapa mental começa com uma definição de quem se atinge com a jornada do usu
 
 >[!CONTEXTUALHELP]
 >id="platform_playbooks_assets"
->title="Assets"
+>title="Ativos"
 >abstract="Esses são os ativos gerados por este manual de estratégia. Depois de criar uma instância do manual de estratégia, você poderá ver os ativos na sandbox de inspiração e promovê-los para outras sandboxes, conforme desejado."
 
 Inspecione a seção de resumo para entender quais ativos são gerados depois que você cria instâncias do manual de estratégia. Os ativos gerados para cada manual de estratégia são adaptados ao caso de uso que o manual possibilita. Obtenha mais informações abaixo sobre todos os itens na seção de resumo.

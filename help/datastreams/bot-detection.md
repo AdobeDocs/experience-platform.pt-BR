@@ -4,7 +4,7 @@ description: Saiba como configurar a detecção de bot para sequências de dados
 hide: true
 hidefromtoc: true
 exl-id: 6b221d97-0145-4d3e-a32d-746d72534add
-source-git-commit: 7757cd869607bf25bff1e9861732cf4b80b38966
+source-git-commit: c7853855ade1867cf33ea935a8a776080be2e5ab
 workflow-type: tm+mt
 source-wordcount: '1367'
 ht-degree: 0%
@@ -15,13 +15,13 @@ ht-degree: 0%
 
 O tráfego proveniente de entidades não humanas, como programas automatizados, web scrapers, spiders e scanners com script, pode dificultar a identificação de eventos que ocorrem de visitantes humanos. Esse tipo de tráfego pode afetar negativamente métricas comerciais importantes, resultando em relatórios de tráfego incorretos.
 
-A detecção de bot permite identificar eventos gerados pelo[SDK da Web](../web-sdk/home.md), [SDK móvel](https://developer.adobe.com/client-sdks/home/) e [[!DNL Server API]](../server-api/overview.md) como sendo gerado por aranhas e bots conhecidos.
+A detecção de bot permite identificar eventos gerados pelo [SDK da Web](../web-sdk/home.md), [SDK móvel](https://developer.adobe.com/client-sdks/home/) e [[!DNL Server API]](../server-api/overview.md) como sendo gerado por aranhas e bots conhecidos.
 
 Ao configurar a detecção de bot para seus fluxos de dados, você pode identificar endereços IP, intervalos de IP e cabeçalhos de solicitação específicos que gostaria de classificar como eventos de bot.
 
 A identificação do tráfego de bot pode fornecer uma medida mais precisa da atividade do usuário no seu site ou aplicativo móvel.
 
-Quando uma solicitação para a Rede de borda corresponde a qualquer uma das regras de detecção de bot, o esquema XDM é atualizado com uma pontuação de bot (sempre definida como 1), conforme mostrado abaixo.
+Quando uma solicitação para o Edge Network corresponde a qualquer uma das regras de detecção de bot, o esquema XDM é atualizado com uma pontuação de bot (sempre definida como 1), conforme mostrado abaixo.
 
 ```json
 {
@@ -37,9 +37,9 @@ Essa pontuação de bot ajuda as soluções que recebem a solicitação a identi
 >
 >A detecção de bot não elimina nenhuma solicitação de bot. Ele atualiza somente o esquema XDM com a pontuação de bot e encaminha o evento para o [serviço de sequência de dados](configure.md) que você configurou.
 >
->As soluções de Adobe podem lidar com a pontuação de bot de maneiras diferentes. Por exemplo, o Adobe Analytics usa seu próprio [serviço de filtragem de bot](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/bot-removal/bot-rules.html) e não usa a pontuação definida pela Rede de borda. Os dois serviços usam o mesmo [Lista de bot IAB](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/), portanto, a pontuação de bot é idêntica.
+>As soluções de Adobe podem lidar com a pontuação de bot de maneiras diferentes. Por exemplo, o Adobe Analytics usa seu próprio [serviço de filtragem de bot](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/bot-removal/bot-rules.html) e não usa a pontuação definida pelo Edge Network. Os dois serviços usam o mesmo [Lista de bot IAB](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/), portanto, a pontuação de bot é idêntica.
 
-As regras de detecção de bot podem levar até 15 minutos para se propagarem pela Rede de borda após serem criadas.
+As regras de detecção de bot podem levar até 15 minutos para se propagarem pelo Edge Network após serem criadas.
 
 ## Pré-requisitos {#prerequisites}
 

@@ -1,11 +1,11 @@
 ---
 title: Assistente de IA para o Adobe Experience Platform
 description: Saiba como usar o Assistente de IA para navegar e entender os conceitos de Experience Platform e Real-time Customer Data Platform, e as informações de uso sobre seus objetos.
-badge: Alfa
+badge: Beta
 hide: true
 hidefromtoc: true
 exl-id: 8be1c222-3ccd-4a41-978e-33ac9b730f8c
-source-git-commit: f38f528c421c7cbf7116cc0ee323e8e7dcde6292
+source-git-commit: 2bf445144789a05e8a789994d30b884be7a8843d
 workflow-type: tm+mt
 source-wordcount: '2730'
 ht-degree: 0%
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
-> O Assistente de IA para Adobe Experience Platform está atualmente em Alpha. O recurso e a documentação estão sujeitos a alterações.
+> O Assistente de IA para Adobe Experience Platform está atualmente na versão beta. O recurso e a documentação estão sujeitos a alterações.
 
 O Assistente de IA é um recurso da interface do usuário que você pode usar para navegar e entender os conceitos do Adobe Experience Platform e do Real-time Customer Data Platform e as informações de uso sobre seus objetos.
 

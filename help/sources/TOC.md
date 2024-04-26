@@ -5,9 +5,9 @@ breadcrumb-title: Guia dos conectores de origem
 user-guide-description: Assimilar dados de várias fontes. Saiba como estruturar, rotular e aprimorar os dados já assimilados.
 feature: Sources
 role: Developer
-source-git-commit: 0d85f37ee2da4857205819a3a4dea3f25eaad26e
+source-git-commit: 18f6c253aec6815cf84272cbce340a9aa7ed8ab9
 workflow-type: tm+mt
-source-wordcount: '1033'
+source-wordcount: '1036'
 ht-degree: 10%
 
 ---
@@ -97,7 +97,7 @@ ht-degree: 10%
       - [Importação de dados de prospecção da Acxiom](connectors/data-partners/acxiom-prospecting-data-import.md)
       - [Resolução de identidade corporativa da Merkury](connectors/data-partners/merkury.md)
    - comércio eletrônico {#ecommerce}
-      - [SAP Commerce](connectors/ecommerce/sap-commerce.md)
+      - [SAP COMMERCE](connectors/ecommerce/sap-commerce.md)
       - [Shopify](connectors/ecommerce/shopify.md)
       - [Shopify Transmissão](connectors/ecommerce/shopify-streaming.md)
    - Sistema local {#local-system}
@@ -111,6 +111,7 @@ ht-degree: 10%
       - [Conector Eloqua do Oracle](connectors/marketing-automation/oracle-eloqua.md)
       - [Oracle NetSuite](connectors/marketing-automation/oracle-netsuite.md)
       - [Conector do Responsys para Oracle](connectors/marketing-automation/oracle-responsys.md)
+      - [PathFactory](connectors/marketing-automation/pathfactory.md)
       - [Marketing Cloud do Salesforce](connectors/marketing-automation/salesforce-marketing-cloud.md)
    - Pagamentos {#payments}
       - [Conector do PayPal](connectors/payments/paypal.md)
@@ -179,7 +180,7 @@ ht-degree: 10%
          - [Vantagem do teradata](tutorials/api/create/databases/teradata-vantage.md)
          - [SQL Server](tutorials/api/create/databases/sql-server.md)
       - comércio eletrônico {#ecommerce}
-         - [SAP Commerce](tutorials/api/create/ecommerce/sap-commerce.md)
+         - [SAP COMMERCE](tutorials/api/create/ecommerce/sap-commerce.md)
          - [Shopify](tutorials/api/create/ecommerce/shopify.md)
          - [Shopify Transmissão](tutorials/api/create/ecommerce/shopify-streaming.md)
       - Automação de marketing {#marketing-automation}
@@ -192,6 +193,7 @@ ht-degree: 10%
          - [Atividades do NetSuite do Oracle](tutorials/api/create/marketing-automation/oracle-netsuite-activities.md)
          - [Entidades NetSuite do Oracle](tutorials/api/create/marketing-automation/oracle-netsuite-entities.md)
          - [Oracle Responsys](tutorials/api/create/marketing-automation/oracle-responsys.md)
+         - [PathFactory](tutorials/api/create/marketing-automation/pathfactory.md)
          - [Marketing Cloud do Salesforce](tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
       - Pagamentos {#payments}
          - [PayPal](tutorials/api/create/payments/paypal.md)
@@ -306,7 +308,7 @@ ht-degree: 10%
          - [Importação de dados de prospecção da Acxiom](tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md)
          - [Resolução de identidade corporativa da Merkury](tutorials/ui/create/data-partners/merkury.md)
       - comércio eletrônico {#ecommerce}
-         - [SAP Commerce](tutorials/ui/create/ecommerce/sap-commerce.md)
+         - [SAP COMMERCE](tutorials/ui/create/ecommerce/sap-commerce.md)
          - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
          - [Shopify Transmissão](tutorials/ui/create/ecommerce/shopify-streaming.md)
       - Sistema local {#local-system}
@@ -322,6 +324,7 @@ ht-degree: 10%
          - [Atividades do NetSuite do Oracle](tutorials/ui/create/marketing-automation/oracle-netsuite-activities.md)
          - [Entidades NetSuite do Oracle](tutorials/ui/create/marketing-automation/oracle-netsuite-entities.md)
          - [Oracle Responsys](tutorials/ui/create/marketing-automation/oracle-responsys.md)
+         - [PathFactory](tutorials/ui/create/marketing-automation/pathfactory.md)
          - [Marketing Cloud do Salesforce](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
       - Pagamentos {#payments}
          - [PayPal](tutorials/ui/create/payments/paypal.md)

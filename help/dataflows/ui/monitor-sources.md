@@ -1,30 +1,23 @@
 ---
-keywords: Experience Platform;página inicial;tópicos populares;monitorar contas;monitorar fluxos de dados;fluxos de dados;fontes
-description: Este tutorial fornece etapas para monitorar seu fluxo de dados, usando a visualização de monitoramento agregado e o monitoramento entre serviços.
-solution: Experience Platform
+description: Saiba como usar o painel de monitoramento para monitorar dados assimilados de fontes.
 title: Monitorar fluxos de dados para fontes na interface do usuário
-type: Tutorial
 exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
-source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
+source-git-commit: 51f8a8c77518a0b2e9e4b914c891f97433db1ef2
 workflow-type: tm+mt
-source-wordcount: '1069'
+source-wordcount: '1256'
 ht-degree: 8%
 
 ---
 
-# Monitorar fluxos de dados para fontes na interface
+# Monitorar fluxos de dados de fontes na interface
 
 >[!IMPORTANT]
 >
 >Fontes de transmissão, como o [Fonte da API HTTP](../../sources/connectors/streaming/http.md) atualmente, não são compatíveis com o painel de monitoramento. Nesse momento, você só pode usar o painel para monitorar origens de lote.
 
-No Adobe Experience Platform, os dados são assimilados de uma grande variedade de fontes, analisados no Experience Platform e ativados para uma grande variedade de destinos. O Platform facilita o processo de rastreamento desse fluxo de dados potencialmente não linear, fornecendo transparência aos fluxos de dados.
+Leia este documento para saber como usar o painel de monitoramento para monitorar seus fluxos de dados de fontes na interface do usuário do Experience Platform.
 
-O painel de monitoramento fornece uma representação visual da jornada de um fluxo de dados. Você pode usar uma exibição de monitoramento agregada e navegar verticalmente do nível da origem, até um fluxo de dados e até uma execução de fluxo de dados, permitindo visualizar as métricas correspondentes que contribuem para o sucesso ou a falha de um fluxo de dados. Você também pode usar a capacidade de monitoramento entre serviços do painel de monitoramento para monitorar a jornada de um fluxo de dados de uma origem para [!DNL Identity Service], e para [!DNL Profile].
-
-Este tutorial fornece etapas para monitorar seu fluxo de dados, usando a visualização de monitoramento agregado e o monitoramento entre serviços.
-
-## Introdução {#getting-started}
+## Introdução {#get-started}
 
 Este tutorial requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
@@ -35,7 +28,7 @@ Este tutorial requer uma compreensão funcional dos seguintes componentes do Ado
 * [Perfil do cliente em tempo real](../../profile/home.md): fornece um perfil de consumidor unificado em tempo real com base em dados agregados de várias fontes.
 * [Sandboxes](../../sandboxes/home.md): o Experience Platform fornece sandboxes virtuais que particionam uma única instância da Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
-## Exibição de monitoramento agregada {#aggregated-monitoring-view}
+## Monitorar os dados de origens usando o painel de monitoramento
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_source_ingestion"
@@ -49,89 +42,101 @@ Este tutorial requer uma compreensão funcional dos seguintes componentes do Ado
 >abstract="O processamento de fontes contém informações sobre o status da atividade de dados e métricas no serviço do data lake, incluindo registros assimilados e registros que falharam. Consulte o guia de definição de métricas para saber mais sobre métricas e gráficos."
 >text="Learn more in documentation"
 
-No [Interface do Platform](https://platform.adobe.com), selecione **[!UICONTROL Monitoramento]** na navegação à esquerda, para acessar a [!UICONTROL Monitoramento] painel. A variável [!UICONTROL Monitoramento] O painel contém métricas e informações sobre todos os fluxos de dados de origens, incluindo insights sobre a integridade do tráfego de dados de uma origem para [!DNL Identity Service], e para [!DNL Profile].
+<!-- In the [Platform UI](https://platform.adobe.com), select **[!UICONTROL Monitoring]** from the left navigation to access the [!UICONTROL Monitoring] dashboard. The [!UICONTROL Monitoring] dashboard contains metrics and information on all sources dataflows, including insights into the health of data traffic from a source to [!DNL Identity Service], and to [!DNL Profile].
 
-No centro do painel está a variável [!UICONTROL Assimilação de origem] painel, que contém métricas e gráficos que exibem dados sobre registros assimilados e registros com falha.
+At the center of the dashboard is the [!UICONTROL Source ingestion] panel, which contains metrics and graphs that display data on records ingested and records failed. -->
 
-![monitoring-dashboard](../assets/ui/monitor-sources/monitoring-dashboard.png)
+No painel de monitoramento, selecione [!UICONTROL Origens] no cabeçalho principal para atualizar o painel com uma exibição da taxa de assimilação do fluxo de dados de suas fontes.
 
-Por padrão, os dados exibidos contêm taxas de assimilação das últimas 24 horas. Selecionar **[!UICONTROL Últimas 24 horas]** para ajustar o intervalo de tempo dos registros exibidos.
+![O painel de monitoramento com o cartão de origens selecionado.](../assets/ui/monitor-sources/sources.png)
 
-![data de alteração](../assets/ui/monitor-sources/change-date.png)
+A variável [!UICONTROL Taxa de assimilação] O gráfico exibe a taxa de assimilação de dados com base no intervalo de tempo configurado. Por padrão, o painel de monitoramento exibe a taxa de assimilação das últimas 24 horas. Para obter etapas sobre como configurar o intervalo de tempo, leia o guia em [configuração do intervalo de tempo de monitoramento](monitor.md#configure-monitoring-time-frame).
 
-Uma janela pop-up de calendário é exibida, fornecendo opções para intervalos de tempo de assimilação alternativos. Selecionar **[!UICONTROL Últimos 30 dias]** e selecione **[!UICONTROL Aplicar]**
+O gráfico é ativado para exibir por padrão. Para ocultar o gráfico, selecione **[!UICONTROL Métricas e gráficos]** para desativar a alternância e ocultar o gráfico.
 
-![ajustar intervalo de tempo](../assets/ui/monitor-sources/adjust-timeframe.png)
+![O gráfico de métricas da taxa de assimilação.](../assets/ui/monitor-sources/metrics-graph.png)
 
-Os gráficos são ativados por padrão e você pode desativá-los para expandir a lista de fontes abaixo. Selecione o **[!UICONTROL Métricas e gráficos]** ativar para desativar os gráficos.
+A parte inferior do painel exibe uma tabela que descreve o relatório de métricas atuais para todos os fluxos de dados de fontes existentes.
 
-![métricas e gráficos](../assets/ui/monitor-sources/metrics-graphs.png)
+![A tabela de métricas do painel de monitoramento.](../assets/ui/monitor-sources/metrics-table.png)
 
-| Ingestão de origem | Descrição |
-| ---------------- | ----------- |
-| [!UICONTROL Registros assimilados] | O número total de registros assimilados. |
-| [!UICONTROL Registros com falha] | O número total de registros que não foram assimilados devido a erros nos dados. |
-| [!UICONTROL Total de fluxos de dados com falha] | O número total de fluxos de dados com um `failed` status. |
+| Métricas | Descrição |
+| --- | --- |
+| Registros recebidos | O número total de registros recebidos da origem. |
+| Registros assimilados | O número total de registros assimilados no data lake. |
+| Registros ignorados | O número total de registros ignorados. |
+| Registros com falha | O número total de registros que não puderam ser assimilados devido a erros. |
+| Taxa assimilada | A porcentagem de registros assimilados com base no número total de registros recebidos. |
+| Total de fluxos de dados com falha | O número total de fluxos de dados que falharam. |
 
-A lista de assimilação de origem exibe todas as origens que contêm pelo menos uma conta existente. A lista também inclui informações sobre a taxa de assimilação de cada origem, o número de registros com falha e o número total de fluxos de dados com falha com base no período aplicado.
+{style="table-layout:auto"}
 
-![source-ingestion](../assets/ui/monitor-sources/source-ingestion.png)
+Você pode filtrar ainda mais seus dados usando as opções fornecidas acima da tabela de métricas:
 
-Para classificar pela lista de fontes, selecione **[!UICONTROL Minhas fontes]** e, em seguida, selecione a categoria de sua escolha no menu suspenso. Por exemplo, para se concentrar em armazenamentos na nuvem, selecione  **[!UICONTROL armazenamento na nuvem]**
+| Opções de filtro | Descrição |
+| --- | --- |
+| Pesquisa | Use a barra de pesquisa para filtrar sua exibição para um único tipo de origem. |
+| Origens | Selecionar **[!UICONTROL Origens]** para filtrar sua exibição e exibir dados de métrica por tipo de origem. Essa é a exibição padrão que o painel de monitoramento usa. |
+| Fluxos de dados | Selecionar **[!UICONTROL Fluxos de dados]** para filtrar sua visualização e exibir dados de métrica por fluxo de dados. |
+| Mostrar somente falhas | Selecionar **[!UICONTROL Mostrar somente falhas]** para filtrar sua visualização e exibir somente os fluxos de dados que relataram falhas de assimilação. |
+| Minhas fontes | Você pode filtrar ainda mais sua visualização usando o [!UICONTROL Minhas fontes] menu suspenso. Use o menu suspenso para filtrar sua visualização por categoria. Como alternativa, você pode selecionar **[!UICONTROL Todas as fontes]** para exibir métricas em todas as fontes ou selecione **[!UICONTROL Minhas fontes]** para exibir somente as fontes com as quais você tem uma conta correspondente. |
 
-![classificar por categoria](../assets/ui/monitor-sources/sort-by-category.png)
+{style="table-layout:auto"}
 
-Para exibir todos os fluxos de dados existentes em todas as fontes, selecione **[!UICONTROL Fluxos de dados]**.
+Para monitorar os dados que estão sendo assimilados em um fluxo de dados específico, selecione o ícone de filtro ![filtro](../assets/ui/monitor-sources/filter.png) ao lado de uma origem.
 
-![exibir todos os fluxos de dados](../assets/ui/monitor-sources/view-all-dataflows.png)
+![Monitore um fluxo de dados específico selecionando o ícone de filtro ao lado de uma determinada fonte.](../assets/ui/monitor-sources/monitor-dataflow.png)
 
-Como alternativa, você pode informar uma origem na barra de pesquisa para isolar uma única origem. Depois de identificar a fonte, selecione o ícone de filtro ![filtro](../assets/ui/monitor-sources/filter.png) ao lado dele para ver uma lista de seus fluxos de dados ativos.
+A tabela de métricas é atualizada para uma tabela de fluxos de dados ativos que correspondem à origem selecionada. Durante essa etapa, você pode visualizar informações adicionais sobre os fluxos de dados, incluindo o conjunto de dados e o tipo de dados correspondentes, bem como um carimbo de data e hora para indicar quando eles estavam ativos pela última vez.
 
-![pesquisa](../assets/ui/monitor-sources/search.png)
+Para inspecionar ainda mais um fluxo de dados, selecione o ícone de filtro ![filtro](../assets/ui/monitor-sources/filter.png) ao lado de um fluxo de dados.
 
-Uma lista de fluxos de dados é exibida. Para restringir a lista e se concentrar em fluxos de dados com erros, selecione **[!UICONTROL Mostrar somente falhas]**.
+![A tabela de fluxos de dados no painel de monitoramento.](../assets/ui/monitor-sources/select-dataflow.png)
 
-![show-failures-only](../assets/ui/monitor-sources/show-failures-only.png)
+Em seguida, você é direcionado a uma interface que lista todas as iterações de execução do fluxo de dados selecionado.
 
-Localize o fluxo de dados que deseja monitorar e selecione o ícone de filtro ![filtro](../assets/ui/monitor-sources/filter.png) ao lado dele, para ver mais informações sobre o status de execução.
+As execuções de fluxo de dados representam uma instância da execução do fluxo de dados. Por exemplo, se um fluxo de dados estiver programado para ser executado por hora às 9h, 10h e 11h, você terá três instâncias de um fluxo em execução. As execuções de fluxo são específicas para sua organização específica.
 
-![fluxo de dados](../assets/ui/monitor-sources/dataflow.png)
+Para inspecionar métricas de uma iteração de execução de fluxo de dados específica, selecione o ícone de filtro ![filtro](../assets/ui/monitor-sources/filter.png) ao lado do fluxo de dados.
 
-A página de execução do fluxo de dados exibe informações sobre a data de início da execução do fluxo de dados, o tamanho dos dados, o status e a duração do tempo de processamento. Selecione o ícone de filtro ![filtro](../assets/ui/monitor-sources/filter.png) ao lado da hora de início da execução do fluxo de dados para ver os detalhes da execução do fluxo de dados.
+![A página de métrica de execução do fluxo de dados.](../assets/ui/monitor-sources/dataflow-page.png)
 
-![dataflow-run-start](../assets/ui/monitor-sources/dataflow-run-start.png)
+Use a página de detalhes da execução do fluxo de dados para exibir métricas e informações da iteração de execução selecionada.
 
-A variável [!UICONTROL Detalhes da execução do fluxo de dados] A página exibe informações sobre os metadados do fluxo de dados, status de assimilação parcial e resumo do erro. O resumo de erros contém o erro de nível superior específico que mostra em qual etapa o processo de assimilação encontrou um erro.
+![A página de detalhes da execução do fluxo de dados.](../assets/ui/monitor-sources/dataflow-run-details.png)
 
-Role para baixo para ver informações mais específicas sobre o erro que ocorreu.
+| Detalhes de execução do fluxo de dados | Descrição |
+| --- | --- |
+| Registros assimilados | O número total de registros assimilados da execução do fluxo de dados. |
+| Registros com falha | O número total de registros que não foram assimilados devido a erros na execução do fluxo de dados. |
+| Total de arquivos | O número total de arquivos na execução do fluxo de dados. |
+| Tamanho dos dados | O tamanho total dos dados contidos na execução do fluxo de dados. |
+| ID de execução do fluxo de dados | A ID da iteração de execução do fluxo de dados. |
+| ID da organização | A ID da organização na qual a execução do fluxo de dados foi criada. |
+| Status | O status da execução do fluxo de dados. |
+| Início da execução do fluxo de dados | Um carimbo de data e hora que indica quando a execução do fluxo de dados foi iniciada. |
+| Fim da execução do fluxo de dados | Um carimbo de data e hora que indica quando a execução do fluxo de dados terminou. |
+| Conjunto de dados | O conjunto de dados usado para criar o fluxo de dados. |
+| Tipo de dados | O tipo de dados que estava no fluxo de dados. |
+| Assimilação parcial | A assimilação parcial de lotes é a capacidade de assimilar dados que contêm erros até um determinado limite configurável. Esse recurso permite assimilar com sucesso todos os seus dados precisos no Experience Platform, enquanto todos os seus dados incorretos são armazenados em lote separadamente com informações sobre por que são inválidos. Você pode ativar a assimilação parcial durante o processo de criação do fluxo de dados. |
+| Diagnóstico de erro | O diagnóstico de erro instrui a origem a produzir diagnósticos de erro que você poderá consultar posteriormente ao monitorar a atividade do conjunto de dados e o status do fluxo de dados. Você pode habilitar diagnósticos de erro durante o processo de criação do fluxo de dados. |
+| Resumo do erro | Dada uma execução de fluxo de dados com falha, o resumo do erro exibe um código e uma descrição do erro para resumir por que a iteração de execução falhou. |
 
-![dataflow-run-details](../assets/ui/monitor-sources/dataflow-run-details.png)
+{style="table-layout:auto"}
 
-A variável [!UICONTROL Erros de execução de fluxo de dados] exibe o erro específico e o código de erro que resultou na falha de assimilação do fluxo de dados. Nesse cenário, ocorreu um erro de transformação do mapeador, resultando na falha de 24 registros.
+Se o fluxo de dados executar o relata erros, é possível rolar para baixo até a parte inferior da página usar o [!UICONTROL Erros de execução de fluxo de dados] interface.
 
-Selecionar **[!UICONTROL Arquivos]** para obter mais informações.
+Use o [!UICONTROL Registros com falha] seção para exibir métricas em registros que não foram assimilados devido a erros. Para exibir um relatório de erros abrangente, selecione **[!UICONTROL Visualizar diagnóstico de erro]**. Para baixar uma cópia do diagnóstico de erro e do manifesto de arquivo, selecione **[!UICONTROL Baixar]** e copie a chamada de API de exemplo a ser usada com o [!DNL Data Access] API.
 
-![dataflow-run-errors](../assets/ui/monitor-sources/dataflow-run-errors.png)
+>[!NOTE]
+>
+>Você só poderá usar diagnósticos de erro se o recurso tiver sido habilitado durante o processo de criação da conexão de origem.
 
-A variável [!UICONTROL Arquivos] contém informações sobre o nome e o caminho do arquivo.
-
-Para obter uma representação mais granular do erro, selecione **[!UICONTROL Visualizar diagnóstico de erro]**.
-
-![arquivos](../assets/ui/monitor-sources/files.png)
-
-A variável [!UICONTROL Visualização do diagnóstico de erro] é exibida, exibindo uma visualização de até 100 erros no fluxo de dados. É possível selecionar **[!UICONTROL Baixar]** para recuperar um comando curl, que permite baixar os diagnósticos de erro.
-
-Quando terminar, selecione **[!UICONTROL Fechar]**
-
-![error-diagnostics](../assets/ui/monitor-sources/error-diagnostics.png)
-
-Você pode usar o sistema de navegação estrutural no cabeçalho superior para navegar de volta para a [!UICONTROL Monitoramento] painel. Selecionar **[!UICONTROL Início da execução: 14/02/2021, 21:47]** para retornar à página anterior, e selecione **[!UICONTROL Fluxo de dados: Demonstração da assimilação de dados de fidelidade - Falha]** para retornar à página fluxos de dados.
-
-![navegações estruturais](../assets/ui/monitor-sources/breadcrumbs.png)
+![O painel de erros de execução do fluxo de dados.](../assets/ui/monitor-sources/errors.png)
 
 ## Próximas etapas {#next-steps}
 
 Ao seguir este tutorial, você monitorou com sucesso o fluxo de dados de assimilação no nível da origem usando o **[!UICONTROL Monitoramento]** painel. Você também identificou com sucesso erros que contribuíram para a falha dos fluxos de dados durante o processo de assimilação. Consulte os seguintes documentos para obter mais detalhes:
 
-* [Monitoramento de identidades em fluxos de dados](./monitor-identities.md)
-* [Monitoramento de perfis em fluxos de dados](./monitor-profiles.md)
+* [Monitoramento de dados de identidade](./monitor-identities.md).
+* [Monitoramento de dados do perfil](./monitor-profiles.md).

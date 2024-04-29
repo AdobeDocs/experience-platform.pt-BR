@@ -3,9 +3,9 @@ keywords: Experience Platform;página inicial;tópicos populares;Zona de aterris
 title: Conectar a zona de aterrissagem de dados à plataforma usando a interface do
 description: Saiba como criar um conector de origem da Zona de aterrissagem de dados usando a interface do usuário da Platform.
 exl-id: 653c9958-5d89-4b0c-af3d-a3e74aa47a08
-source-git-commit: 9cffd508c1bff7ce133f84ca686c414e997343b8
+source-git-commit: 9372e6f961015c989bfcb0d1e2b0129da965c522
 workflow-type: tm+mt
-source-wordcount: '672'
+source-wordcount: '747'
 ht-degree: 0%
 
 ---
@@ -60,23 +60,41 @@ Quando terminar, selecione **[!UICONTROL Próxima]**.
 
 Para obter um guia passo a passo detalhado sobre como criar um fluxo de dados para uma fonte de armazenamento na nuvem, consulte o tutorial sobre [criação de um fluxo de dados de armazenamento em nuvem para trazer dados para a Platform](../../dataflow/batch/cloud-storage.md).
 
-## Recupere e atualize seu [!DNL Data Landing Zone] credenciais
+## Recupere seu [!DNL Data Landing Zone] credenciais
 
-[!DNL Data Landing Zone] O é uma fonte pronta para uso que acompanha a licença das Fontes Adobe Experience Platform. [!DNL Data Landing Zone] O usa uma autenticação baseada em token SAS e URI SAS. Você pode recuperar e atualizar suas credenciais de autenticação da [!UICONTROL Catálogo de origens] página.
+[!DNL Data Landing Zone] O é uma origem fornecida com sua licença do Adobe Experience Platform Sources. [!DNL Data Landing Zone] O usa uma autenticação baseada em token SAS e URI SAS. Você pode recuperar suas credenciais de autenticação da [!UICONTROL Catálogo de origens] página.
 
-No [!UICONTROL Catálogo de origens], no âmbito do [!UICONTROL armazenamento na nuvem] selecione as reticências (**..**) do **[!UICONTROL Data Landing Zone]** cartão. No menu suspenso exibido, selecione **[!UICONTROL Exibir credenciais]**.
+Para recuperar suas credenciais, selecione a **[!UICONTROL Data Landing Zone]** e copie suas credenciais do painel direito exibido.
 
-![Uma lista de opções de exibição para a Data Landing Zone.](../../../../images/tutorials/create/dlz/options.png)
+![Uma lista de opções de exibição para a Data Landing Zone.](../../../../images/tutorials/create/dlz/view-credentials.png)
 
 Um pop-over é exibido, exibindo o nome do container, o token SAS, o nome da conta de armazenamento, o URI SAS e a data de expiração.
 
-Selecionar **[!UICONTROL Atualizar credenciais]** e aguarde alguns segundos para que suas credenciais atualizadas sejam processadas.
+## Atualize seu [!DNL Data Landing Zone] credenciais
 
->[!TIP]
->
->Seu [!DNL Data Landing Zone] As credenciais do estão definidas para expirar automaticamente após 90 dias e você deve usar novas credenciais para se reconectar ao [!DNL Data Landing Zone] após a expiração. Seus fluxos de dados na Platform não são afetados pelas credenciais de expiração e você ainda pode continuar trabalhando com fluxos de dados novos e existentes com suas novas credenciais.
+Seu [!DNL Data Landing Zone] As credenciais do estão definidas para expirar automaticamente após 90 dias e você deve usar novas credenciais para se reconectar ao [!DNL Data Landing Zone] após a expiração. Seus fluxos de dados no Experience Platform não são afetados pelas credenciais de expiração e você ainda pode continuar trabalhando com fluxos de dados novos e existentes com suas novas credenciais.
 
-![As credenciais associadas a uma determinada conta da Data Landing Zone.](../../../../images/tutorials/create/dlz/view-credentials.png)
+Há duas maneiras de atualizar seu [!DNL Data Landing Zone] credenciais:
+
+>[!BEGINTABS]
+
+>[!TAB Usar o cartão de origem]
+
+Para atualizar suas credenciais na página de catálogo de origens, selecione as reticências (**`...`**) no [!DNL Data Landing Zone] e selecione **[!UICONTROL Atualizar credenciais]**.
+
+![Atualize as credenciais usando o cartão de origem.](../../../../images/tutorials/create/dlz/refresh-with-card.png)
+
+Uma janela pop-up é exibida, solicitando sua confirmação antes de você poder continuar. Quando estiver pronto, selecione **[!UICONTROL Atualizar credenciais]**.
+
+![A janela de confirmação de atualização de credenciais.](../../../../images/tutorials/create/dlz/confirm.png)
+
+>[!TAB Usar o painel direito]
+
+Para atualizar suas credenciais usando o painel direito, selecione a **[!UICONTROL Data Landing Zone]** cartão de origem e selecione **[!UICONTROL Mais ações]**. Em seguida, selecione **[!UICONTROL Atualizar credenciais]** e, em seguida, confirme usando a janela pop-up exibida.
+
+![Atualize as credenciais usando o painel direito.](../../../../images/tutorials/create/dlz/refresh-with-right-rail.png)
+
+>[!ENDTABS]
 
 ## Próximas etapas
 

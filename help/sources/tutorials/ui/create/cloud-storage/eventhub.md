@@ -3,9 +3,9 @@ title: Criar uma conexão de origem dos Hubs de eventos do Azure na interface
 description: Saiba como criar uma conexão de origem do Azure Event Hubs usando a interface do usuário do Adobe Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 7e67e213-8ccb-4fa5-b09f-ae77aba8614c
-source-git-commit: 1680cc4e1d5c1576767053a74e560bc2eb8c24cb
+source-git-commit: e4ea21af3f0d9e810959330488dc06bc559cf72c
 workflow-type: tm+mt
-source-wordcount: '689'
+source-wordcount: '1094'
 ht-degree: 1%
 
 ---
@@ -52,9 +52,32 @@ Para autenticar seu [!DNL Event Hubs] conector de origem, você deve fornecer va
 | Namespace | O namespace do [!DNL Event Hubs] que você está acessando. Um [!DNL Event Hubs] O namespace fornece um contêiner de escopo exclusivo, no qual você pode criar um ou mais [!DNL Event Hubs]. |
 | Nome do Hub de Eventos | O nome do seu [!DNL Event Hubs] origem. |
 
->[!ENDTABS]
+Para obter mais informações sobre a autenticação de assinaturas de acesso compartilhado (SAS) para [!DNL Event Hubs], leia o [[!DNL Azure] guia sobre o uso de SAS](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
 
-Para obter mais informações sobre esses valores, consulte [este documento de Hubs de Eventos](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
+>[!TAB Autenticação do Ative Diretory do Azure Hub de Eventos]
+
+| Credencial | Descrição |
+| --- | --- |
+| ID do inquilino | A ID do locatário da qual você deseja solicitar permissão. Sua ID de locatário pode ser formatada como um GUID ou como um nome amigável. **Nota**: A ID do locatário é chamada de &quot;ID do diretório&quot; na [!DNL Microsoft Azure] interface. |
+| ID do cliente | A ID do aplicativo atribuída ao seu aplicativo. Você pode recuperar essa ID do [!DNL Microsoft Entra ID] portal onde você registrou seu [!DNL Azure Active Directory]. |
+| Valor do segredo do cliente | O segredo do cliente usado com a ID do cliente para autenticar seu aplicativo. Você pode recuperar o segredo do cliente na [!DNL Microsoft Entra ID] portal onde você registrou seu [!DNL Azure Active Directory]. |
+| Namespace | O namespace do [!DNL Event Hubs] que você está acessando. Um [!DNL Event Hubs] O namespace fornece um contêiner de escopo exclusivo, no qual você pode criar um ou mais [!DNL Event Hubs]. |
+
+Para obter mais informações sobre [!DNL Azure Active Directory], leia o [Guia do Azure sobre o uso da Microsoft Entra ID](https://learn.microsoft.com/en-us/azure/healthcare-apis/register-application).
+
+>[!TAB Autenticação do Azure Ative Diretory no Escopo do Hub de Eventos]
+
+| Credencial | Descrição |
+| --- | --- |
+| ID do inquilino | A ID do locatário da qual você deseja solicitar permissão. Sua ID de locatário pode ser formatada como um GUID ou como um nome amigável. **Nota**: A ID do locatário é chamada de &quot;ID do diretório&quot; na [!DNL Microsoft Azure] interface. |
+| ID do cliente | A ID do aplicativo atribuída ao seu aplicativo. Você pode recuperar essa ID do [!DNL Microsoft Entra ID] portal onde você registrou seu [!DNL Azure Active Directory]. |
+| Valor do segredo do cliente | O segredo do cliente usado com a ID do cliente para autenticar seu aplicativo. Você pode recuperar o segredo do cliente na [!DNL Microsoft Entra ID] portal onde você registrou seu [!DNL Azure Active Directory]. |
+| Namespace | O namespace do [!DNL Event Hubs] que você está acessando. Um [!DNL Event Hubs] O namespace fornece um contêiner de escopo exclusivo, no qual você pode criar um ou mais [!DNL Event Hubs]. |
+| Nome do Hub de Eventos | O nome do seu [!DNL Event Hubs] origem. |
+
+Para obter mais informações sobre [!DNL Azure Active Directory], leia o [Guia do Azure sobre o uso da Microsoft Entra ID](https://learn.microsoft.com/en-us/azure/healthcare-apis/register-application).
+
+>[!ENDTABS]
 
 Depois de obter as credenciais necessárias, siga as etapas abaixo para vincular [!DNL Event Hubs] conta para Experience Platform.
 
@@ -90,7 +113,7 @@ Para criar uma nova conta, selecione **[!UICONTROL Nova conta]** e forneça um n
 
 >[!TAB Autenticação padrão]
 
-Para criar uma [!DNL Event Hubs] conta com autenticação padrão, selecione **[!UICONTROL Autenticação padrão]** e forneça valores para o [!UICONTROL Nome da chave SAS], [!UICONTROL Chave SAS], e [!UICONTROL Namespace].
+Para criar uma [!DNL Event Hubs] conta com autenticação padrão, use o [!UICONTROL Autenticação de conta] menu suspenso e selecione **[!UICONTROL Autenticação padrão]**. Em seguida, forneça valores para o [!UICONTROL Nome da chave SAS], [!UICONTROL Chave SAS], e [!UICONTROL Namespace].
 
 Depois de inserir suas credenciais de autenticação, selecione **[!UICONTROL Conectar à origem]**.
 
@@ -98,11 +121,23 @@ Depois de inserir suas credenciais de autenticação, selecione **[!UICONTROL Co
 
 >[!TAB Autenticação SAS]
 
-Para criar uma [!DNL Event Hubs] com autenticação SAS, selecione **[!UICONTROL Autenticação SAS]** e forneça valores para o [!UICONTROL Nome da chave SAS], [!UICONTROL Chave SAS], [!UICONTROL Namespace], e [!UICONTROL Nome dos Hubs de Eventos].
+Para criar uma [!DNL Event Hubs] conta com autenticação SAS, use o [!UICONTROL Autenticação de conta] menu suspenso e selecione **[!UICONTROL Autenticação SAS]**. Em seguida, forneça valores para o [!UICONTROL Nome da chave SAS], [!UICONTROL Chave SAS], [!UICONTROL Namespace], e [!UICONTROL Nome dos Hubs de Eventos].
 
 Depois de inserir suas credenciais de autenticação, selecione **[!UICONTROL Conectar à origem]**.
 
 ![A interface de autenticação SAS para os Hubs de Eventos do Azure.](../../../../images/tutorials/create/eventhub/sas.png)
+
+>[!TAB Autenticação do Ative Diretory do Azure Hub de Eventos]
+
+Para criar uma [!DNL Event Hubs] com autenticação do Ative Diretory do Azure Hub de Eventos, use o [!UICONTROL Autenticação de conta] menu suspenso e selecione **[!UICONTROL Ative Diretory do Azure Hub de Eventos]**. Em seguida, forneça valores para o [!UICONTROL ID do inquilino], [!UICONTROL ID do cliente], [!UICONTROL Valor do segredo do cliente], e [!UICONTROL Namespace].
+
+![Autenticação do Ative Diretory do Azure Event Hub](../../../../images/tutorials/create/eventhub/active-directory.png)
+
+>[!TAB Autenticação do Azure Ative Diretory no Escopo do Hub de Eventos]
+
+Para criar uma [!DNL Event Hubs] com autenticação do Azure Ative Diretory com Escopo de Hub de Eventos, use o [!UICONTROL Autenticação de conta] menu suspenso e selecione **[!UICONTROL Azure Ative Diretory com Escopo de Hub de Eventos]**. Em seguida, forneça valores para o [!UICONTROL ID do inquilino], [!UICONTROL ID do cliente], [!UICONTROL Valor do segredo do cliente], [!UICONTROL Namespace], e [!UICONTROL Nome do Hub de Eventos].
+
+![Autenticação do Azure Activity Diretory com Escopo do Hub de Eventos do Azure](../../../../images/tutorials/create/eventhub/scoped.png)
 
 >[!ENDTABS]
 

@@ -2,7 +2,7 @@
 title: Notas da versão de março de 2024 da Adobe Experience Platform
 description: As notas da versão de março de 2024 da Adobe Experience Platform.
 exl-id: cab47a76-04f3-48ec-82aa-d17645e4eb15
-source-git-commit: d698bf0b8b0dbdb85909008bb3b60efb0575accc
+source-git-commit: 708bb791ad85b6ee8f3671ffc574e4f27fdddd0a
 workflow-type: tm+mt
 source-wordcount: '1191'
 ht-degree: 33%
@@ -39,20 +39,6 @@ O Serviço de catálogo é o sistema de registro para localização e linhagem d
 
 Para obter mais informações sobre o serviço de catálogo, consulte a [visão geral do serviço de catálogo](../../catalog/home.md).
 
-## Coleção de dados {#data-collection}
-
-A Adobe Experience Platform fornece um conjunto de tecnologias que permitem coletar dados da experiência do cliente e enviá-los à Rede de borda da Adobe Experience Platform, onde eles podem ser enriquecidos, transformados e distribuídos para destinos da Adobe ou de outras empresas.
-
-**Novos recursos**
-
-| Tipo | Recurso | Descrição |
-| --- | --- | --- |
-| Extensões | [!DNL Merkury] Extensão de tag | A variável [[!DNL Merkury] extensão de tag](https://exchange.adobe.com/apps/ec/600027/merkury-tag) fornece taxas de correspondência líderes do setor para visitantes anônimos de sites a um [!DNL Merkury] ID. As marcas podem alavancar o poder do [!DNL Merkury] tag e Adobe para oferecer experiências personalizadas de site em tempo real. Além disso, a [!DNL Merkury] A tag do permite o crescimento de dados digitais primários, juntamente com perfis de clientes online e offline conectados. |
-
-{style="table-layout:auto"}
-
-Para saber mais sobre a coleta de dados, leia o [visão geral da coleção de dados](../../tags/home.md).
-
 ## Preparação de dados {#data-prep}
 
 A preparação de dados permite que os engenheiros de dados mapeiem, transformem e validem dados de e para o Experience Data Model (XDM).
@@ -66,6 +52,20 @@ A preparação de dados permite que os engenheiros de dados mapeiem, transformem
 {style="table-layout:auto"}
 
 Para obter mais informações sobre o Preparo de dados, leia a [Visão geral do Preparo de dados](../../data-prep/home.md).
+
+## Coleção de dados {#data-collection}
+
+A Adobe Experience Platform fornece um conjunto de tecnologias que permitem coletar dados da experiência do cliente e enviá-los à Rede de borda da Adobe Experience Platform, onde eles podem ser enriquecidos, transformados e distribuídos para destinos da Adobe ou de outras empresas.
+
+**Novos recursos**
+
+| Tipo | Recurso | Descrição |
+| --- | --- | --- |
+| Extensões | [!DNL Merkury] Extensão de tag | A variável [[!DNL Merkury] extensão de tag](https://exchange.adobe.com/apps/ec/600027/merkury-tag) fornece taxas de correspondência líderes do setor para visitantes anônimos de sites a um [!DNL Merkury] ID. As marcas podem alavancar o poder do [!DNL Merkury] tag e Adobe para oferecer experiências personalizadas de site em tempo real. Além disso, a [!DNL Merkury] A tag do permite o crescimento de dados digitais primários, juntamente com perfis de clientes online e offline conectados. |
+
+{style="table-layout:auto"}
+
+Para saber mais sobre a coleta de dados, leia o [visão geral da coleção de dados](../../tags/home.md).
 
 ## Destinos {#destinations}
 

@@ -1,7 +1,7 @@
 ---
 keywords: RTCDP;CDP;Real-time Customer Data Platform;real time customer data platform;real time cdp;cdp;rtcdp
 title: Introdução ao Real-time Customer Data Platform
-description: Use esse modelo de cenário como exemplo ao configurar sua implementação da Adobe Real-time Customer Data Platform.
+description: Use esse modelo de cenário como exemplo ao configurar sua implementação da Adobe Real-Time Customer Data Platform.
 feature: Get Started, Use Cases
 exl-id: 9f775d33-27a1-4a49-a4c5-6300726a531b
 source-git-commit: 82535ec3ac2dd27e685bb591fdf661d3ab5dd2c9

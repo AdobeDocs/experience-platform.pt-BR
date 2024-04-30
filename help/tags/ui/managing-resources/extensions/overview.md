@@ -2,10 +2,10 @@
 title: Extensões
 description: Saiba como as extensões funcionam na Adobe Experience Platform.
 exl-id: e911bedd-6c67-4339-91d7-839c8b00c153
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 31811b7448a285ee5d25872641354a6981c64471
 workflow-type: tm+mt
-source-wordcount: '497'
-ht-degree: 93%
+source-wordcount: '523'
+ht-degree: 88%
 
 ---
 
@@ -43,13 +43,13 @@ A página Extensões fornece três exibições:
 
 * instalados
 
-   Mostra todas as extensões instaladas.
+  Mostra todas as extensões instaladas.
 
 * Catálogo
 * Mostra todas as extensões disponíveis.
 * Atualizações
 
-   Mostra as atualizações de extensões instaladas.
+  Mostra as atualizações de extensões instaladas.
 
 Selecione **[!UICONTROL Extensões]** para ver todas as extensões instaladas. Você também pode usar o catálogo para ver uma lista de todas as extensões disponíveis e quais extensões têm atualizações disponíveis.
 
@@ -59,13 +59,17 @@ Consulte [Referência de extensões](../../../extensions/client/overview.md) par
 
 As tags são altamente extensíveis. Extensões adicionam funcionalidade importante a tags. Um uso comum das extensões é criar integrações com outros aplicativos.
 
+>[!TIP]
+>
+>Use o na ajuda do produto, no painel direito, para saber mais sobre extensões e visualizar os recursos adicionais disponíveis.
+
 1. Na página de visão geral de uma propriedade, abra a guia **[!UICONTROL Extensões]**.
 1. Selecione uma extensão.
 
-   ![Extensão principal](../../../images/extensions.png)
+   ![Guia Catálogo mostrando as extensões principais na guia Extensões.](../../../images/extensions.png)
 
    * Se a extensão existir, selecione-a no catálogo de extensões.
-   * Passe o mouse sobre uma extensão na lista para configurá-la ou desativá-la.
+   * Passe o mouse sobre uma extensão na lista para configurá-la ou desabilitá-la.
    * Adicione outras extensões no catálogo, se elas não estiverem na lista.
 
    A extensão principal é o ponto de partida para a nova extensão. A extensão padrão fornece:

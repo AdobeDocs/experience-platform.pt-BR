@@ -2,10 +2,10 @@
 title: Regras
 description: Saiba como as extensões funcionam na Adobe Experience Platform.
 exl-id: 2beca2c9-72b7-4ea0-a166-50a3b8edb9cd
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 77190e4acf7aad448bbfdebd8ada4dbe9a55f8e0
 workflow-type: tm+mt
-source-wordcount: '1973'
-ht-degree: 81%
+source-wordcount: '2028'
+ht-degree: 73%
 
 ---
 
@@ -51,15 +51,19 @@ As ações são a parte *Then* de uma regra. Elas definem o que você quer que a
 
 Crie uma regra especificando quais ações ocorrem se uma condição for atendida.
 
+>[!TIP]
+>
+>Você pode exibir recursos adicionais disponíveis para saber mais sobre este recurso selecionando ![sobre](../../images/ui/event-forwarding/overview/about.png) no painel direito.
+
 1. Abra a guia [!UICONTROL Regras] e selecione **[!UICONTROL Criar nova regra]**.
 
-   ![](../../images/launch-rule-builder.jpg)
+   ![Guia Regras destacando o campo de nome.](../../images/launch-rule-builder.png)
 
 1. Atribua um nome à regra.
 1. Selecione o ícone de eventos **[!UICONTROL Adicionar]**.
-1. Escolha sua extensão e um dos tipos de evento disponíveis para essa extensão e configure as definições do evento.
+1. Selecione sua extensão e um dos tipos de evento disponíveis para essa extensão e defina as configurações do evento.
 
-   ![](../../images/rule-event-config.png)
+   ![Página de configuração do evento de regras.](../../images/rule-event-config.png)
 
    Os tipos de evento disponíveis dependem da extensão selecionada. As configurações do evento serão diferentes de acordo com o tipo de evento. Alguns eventos não têm configurações que precisam ser definidas.
 
@@ -85,11 +89,11 @@ Crie uma regra especificando quais ações ocorrem se uma condição for atendid
    * Regras que têm a mesma ordem são executadas sem ordem específica.
    * As regras são acionadas em ordem, mas não são necessariamente encerradas na mesma ordem. Se a Regra A e a Regra B compartilharem um evento e você atribuir uma ordem para que a Regra A venha primeiro, caso a Regra A faça algo de maneira assíncrona, não há garantia de que a Regra A seja concluída antes que a Regra B seja iniciada.
 
-      Se quiser que um componente seja executado depois, dê a ele um número maior que 50. Para obter mais informações sobre a ordenação, consulte [Ordenação de regra](rules.md#rule-ordering).
+     Se quiser que um componente seja executado depois, dê a ele um número maior que 50. Para obter mais informações sobre a ordenação, consulte [Ordenação de regra](rules.md#rule-ordering).
 
-1. Selecione o ícone de condições **[!UICONTROL Adicionar]**, escolha um tipo de lógica, extensão, tipo de condição e defina as configurações para sua condição. Em seguida, selecione **[!UICONTROL Manter alterações]**.
+1. Selecione as condições **[!UICONTROL Adicionar]** e selecione um tipo lógico, uma extensão, um tipo de condição e defina as configurações da sua condição. Em seguida, selecione **[!UICONTROL Manter alterações]**.
 
-   ![](../../images/condition-settings.png)
+   ![Página de configuração da condição de regras.](../../images/condition-settings.png)
 
    Os tipos de condição disponíveis dependem da extensão selecionada. As configurações de condição serão diferentes de acordo com o tipo de condição.
 
@@ -102,9 +106,9 @@ Crie uma regra especificando quais ações ocorrem se uma condição for atendid
 
    Você pode adicionar quantas condições desejar. Várias condições dentro da mesma regra são unidas por AND.
 
-1. Selecione o ícone de ações **[!UICONTROL Adicionar]**, escolha sua extensão e um dos tipos de ação disponíveis para essa extensão, defina as configurações para a ação e selecione **[!UICONTROL Manter alterações]**.
+1. Selecionar as ações **[!UICONTROL Adicionar]** e selecione sua extensão e um dos tipos de ação disponíveis para essa extensão, defina as configurações para a ação e selecione **[!UICONTROL Manter alterações]**.
 
-   ![](../../images/action-settings.png)
+   ![Página de configuração da ação de regras.](../../images/action-settings.png)
 
    Os tipos de ação disponíveis dependem da extensão selecionada. As configurações de ação serão diferentes de acordo com o tipo de ação.
 
@@ -163,7 +167,7 @@ A Adobe não pode garantir que qualquer outra regra será acionada e que o códi
 
 ## Sequência de componentes da regra {#sequencing}
 
-O comportamento do ambiente de tempo de execução do depende de a opção **[!UICONTROL Executar os componentes da regra em sequência]** estar ativada ou desativada na propriedade. Essa configuração determina se os componentes de uma regra podem ser avaliados em paralelo (de forma assíncrona) ou se devem ser avaliados em sequência.
+O comportamento do ambiente de tempo de execução depende se **[!UICONTROL Executar componentes da regra em sequência]** está ativado ou desativado para sua propriedade. Essa configuração determina se os componentes de uma regra podem ser avaliados em paralelo (de forma assíncrona) ou se devem ser avaliados em sequência.
 
 >[!IMPORTANT]
 >
@@ -179,8 +183,8 @@ Se uma condição for avaliada como falsa ou atingir o tempo limite definido, as
 
 Se uma ação falhar ou atingir o tempo limite definido, as ações subsequentes dessa regra serão removidas da fila.
 
-### Desativado
+### Desabilitado
 
-Se estiver desativado, quando um evento é acionado no tempo de execução, as condições da regra são avaliadas imediatamente. Várias condições são avaliadas em paralelo.
+Se estiver desabilitado, quando um evento é acionado no tempo de execução, as condições da regra são avaliadas imediatamente. Várias condições são avaliadas em paralelo.
 
 Se todas as condições retornarem o resultado true (e as exceções retornarem false), as ações da regra serão executadas imediatamente. As ações são chamadas em ordem, mas as tags não esperam que uma seja concluída antes de chamar a próxima. Se as ações forem síncronas, elas ainda serão executadas em ordem. Se uma ou mais ações forem assíncronas, algumas ações serão executadas em paralelo.

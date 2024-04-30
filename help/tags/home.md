@@ -2,10 +2,10 @@
 title: Visão geral das tags
 description: As tags no Adobe Experience Platform são a última palavra em gerenciamento de tags da Adobe. As tags oferecem aos clientes uma forma simples de implantar e gerenciar todas as tags de análise, de marketing e de anúncios necessárias para potencializar experiências de cliente relevantes.
 exl-id: 23d882a5-1ddd-404b-a7e9-3000f1804971
-source-git-commit: 81f25e74931354003d89a57adedb578ddfe00704
+source-git-commit: 31811b7448a285ee5d25872641354a6981c64471
 workflow-type: tm+mt
-source-wordcount: '562'
-ht-degree: 96%
+source-wordcount: '588'
+ht-degree: 92%
 
 ---
 
@@ -28,6 +28,10 @@ As tags são oferecidas aos [!DNL Adobe Experience Cloud] clientes como um recur
 * Experiências atraentes por meio da integração da tecnologia de marketing e de dados com o uso do construtor de regras.
 
 ## Recursos principais {#key-features}
+
+Use a na ajuda do produto, no painel direito, para saber mais sobre tags e visualizar recursos adicionais disponíveis.
+
+![Propriedades de tags na interface da Coleção de dados.](./images/ui/tags-overview/tags-properties.png)
 
 ### Extensões {#extensions}
 

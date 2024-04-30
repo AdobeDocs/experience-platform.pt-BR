@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guia da interface do Editor de consultas
 description: O Editor de consultas é uma ferramenta interativa fornecida pelo Serviço de consultas da Adobe Experience Platform, que permite gravar, validar e executar consultas para dados de experiência do cliente na interface do usuário do Experience Platform. O Editor de consultas é compatível com o desenvolvimento de consultas para análise e exploração de dados, e permite executar consultas interativas para fins de desenvolvimento, bem como consultas não interativas para preencher conjuntos de dados no Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: ce937f1335283382189fa40f65aa268735c02715
+source-git-commit: 02ecc6bd2ff85d2d837ffe25b090fd65043779a9
 workflow-type: tm+mt
-source-wordcount: '2661'
+source-wordcount: '2794'
 ht-degree: 2%
 
 ---
@@ -88,6 +88,16 @@ Se tiver escrito várias consultas, mas precisar executar apenas uma, destaque a
 [!UICONTROL Executar consulta selecionada] ícone. Esse ícone é desativado por padrão até que você selecione a sintaxe de consulta no editor.
 
 ![O Editor de consultas com o [!UICONTROL Executar consulta selecionada] ícone realçado.](../images/ui/query-editor/run-selected-query.png)
+
+### Cancelar sessão do Editor de consultas {#cancel-query}
+
+Assuma o controle da execução de consultas e melhore sua produtividade cancelando consultas de longa execução. Essa ação limpa o Editor de consultas durante uma execução de consulta. Esteja ciente de que a consulta continua a ser executada em segundo plano. Se for uma consulta CTAS, ela ainda gerará um conjunto de dados de saída. Para cancelar a execução no editor e continuar compondo uma instrução SQL, selecione **[!UICONTROL Cancelar consulta]** após executar uma consulta.
+
+![O Editor de consultas com [!UICONTROL Cancelar consulta] destacado.](../images/ui/query-editor/cancel-query-run.png)
+
+Uma caixa de diálogo de confirmação é exibida. Selecionar **[!UICONTROL Confirmar o]** para cancelar a execução da consulta.
+
+![A caixa de diálogo de confirmação Cancelar consulta com Confirmar foi realçada.](../images/ui/query-editor/cancel-query-confirmation-dialog.png)
 
 ### Contagem de resultados {#result-count}
 
@@ -219,7 +229,11 @@ Quando você salva uma consulta no Editor de consultas, uma mensagem de confirma
 
 As consultas que foram salvas como um modelo podem ser agendadas no Editor de consultas. O agendamento de consultas permite automatizar as execuções de consultas em uma cadência personalizada. Você pode agendar consultas com base na frequência, data e hora e também escolher um conjunto de dados de saída para seus resultados, se necessário. Os agendamentos de query também podem ser desativados ou excluídos por meio da interface do usuário.
 
-Os cronogramas são definidos no Editor de consultas. Ao usar o Editor de consultas, você só pode adicionar um agendamento a uma consulta que já tenha sido criada, salva e executada. A mesma limitação não se aplica ao [!DNL Query Service] API:
+Os cronogramas são definidos no Editor de consultas. Ao usar o Editor de consultas, você só pode adicionar um agendamento a uma consulta que já tenha sido criada, salva e executada. A mesma limitação não se aplica ao [!DNL Query Service] API.
+
+>[!NOTE]
+>
+>Consultas programadas que falharem em dez execuções consecutivas são colocadas automaticamente em um [!UICONTROL Em quarentena] status. Uma consulta com esse status requer sua intervenção antes que qualquer outra execução possa ocorrer. Consulte a [consultas em quarentena](./monitor-queries.md#quarantined-queries) para obter mais detalhes.
 
 Consulte a documentação dos cronogramas de consulta para saber como [criar agendamentos de consulta na interface](./query-schedules.md). Como alternativa, para saber como adicionar agendas usando a API, leia o [guia de endpoint de consultas programadas](../api/scheduled-queries.md).
 

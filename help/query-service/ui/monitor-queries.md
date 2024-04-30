@@ -2,9 +2,9 @@
 title: Monitorar consultas programadas
 description: Saiba como monitorar consultas por meio da interface do usuário do Serviço de consulta.
 exl-id: 4640afdd-b012-4768-8586-32f1b8232879
-source-git-commit: 7e0259f8807e96118dbcd1085d8b3b3186fc8317
+source-git-commit: e63e3344dd530fc9111f29948f2dfbd4daedf28c
 workflow-type: tm+mt
-source-wordcount: '1818'
+source-wordcount: '2030'
 ht-degree: 0%
 
 ---
@@ -32,12 +32,12 @@ A tabela abaixo descreve cada coluna disponível.
 | **[!UICONTROL Nome]** | O campo name é o nome do template ou os primeiros caracteres da query SQL. Qualquer consulta criada por meio da interface do usuário com o Editor de consultas é nomeada no início. Se a consulta foi criada por meio da API, seu nome se torna um trecho do SQL inicial usado para criar a consulta. Para ver uma lista de todas as execuções associadas à consulta, selecione um item na lista [!UICONTROL Nome] coluna. Para obter mais informações, consulte [detalhes da programação de execuções de consulta](#query-runs) seção. |
 | **[!UICONTROL Modelo]** | O nome do modelo da consulta. Selecione um nome de modelo para navegar até o Editor de consultas. O modelo de consulta é exibido no Editor de consultas para conveniência. Se não houver nome do modelo, a linha será marcada com um hífen e não haverá capacidade de redirecionar para o Editor de consultas para exibir a consulta. |
 | **[!UICONTROL SQL]** | Um trecho da consulta SQL. |
-| **[!UICONTROL Frequência de execução]** | A cadência na qual sua consulta está definida para execução. Os valores disponíveis são `Run once` e `Scheduled`. As consultas podem ser filtradas de acordo com a frequência de execução. |
+| **[!UICONTROL Frequência de execução]** | A cadência na qual sua consulta está definida para execução. Os valores disponíveis são `Run once` e `Scheduled`. |
 | **[!UICONTROL Criado por]** | O nome do usuário que criou a consulta. |
 | **[!UICONTROL Criado]** | O carimbo de data e hora quando a consulta foi criada, em formato UTC. |
 | **[!UICONTROL Carimbo de data/hora da última execução]** | O carimbo de data e hora mais recente quando a consulta foi executada. Esta coluna destaca se uma consulta foi executada de acordo com seu agendamento atual. |
 | **[!UICONTROL Status da última execução]** | O status da execução de consulta mais recente. Os valores de status são: `Success`, `Failed`, `In progress`, e `No runs`. |
-| **[!UICONTROL Status do Calendário]** | O status atual da consulta agendada. Há cinco valores em potencial, [!UICONTROL Registrando], [!UICONTROL Ativo], [!UICONTROL Inativo], [!UICONTROL Excluído]e um hífen. <ul><li>O hífen indica que a consulta agendada é uma consulta única e não recorrente.</li><li>A variável [!UICONTROL Registrando] status indica que o sistema ainda está processando a criação do novo agendamento para a consulta. Observe que você não pode desativar ou excluir uma consulta programada enquanto ela estiver se registrando.</li><li>A variável [!UICONTROL Ativo] status indica que a consulta programada foi **ainda não passado** data e hora de conclusão.</li><li>A variável [!UICONTROL Inativo] status indica que a consulta programada foi **aprovado** data e hora de conclusão.</li><li>A variável [!UICONTROL Excluído] status indica que a programação de consulta foi excluída.</li></ul> |
+| **[!UICONTROL Status do Calendário]** | O status atual da consulta agendada. Há seis valores em potencial, [!UICONTROL Registrando], [!UICONTROL Ativo], [!UICONTROL Inativo], [!UICONTROL Excluído], um hífen e [!UICONTROL Em quarentena].<ul><li>A variável **[!UICONTROL Registrando]** status indica que o sistema ainda está processando a criação do novo agendamento para a consulta. Observe que você não pode desativar ou excluir uma consulta programada enquanto ela estiver se registrando.</li><li>A variável **[!UICONTROL Ativo]** status indica que a consulta programada foi **ainda não passado** data e hora de conclusão.</li><li>A variável **[!UICONTROL Inativo]** status indica que a consulta programada foi **aprovado** sua data e hora de conclusão ou foi marcado por um usuário para estar em um estado inativo.</li><li>A variável **[!UICONTROL Excluído]** status indica que a programação de consulta foi excluída.</li><li>O hífen indica que a consulta agendada é uma consulta única e não recorrente.</li><li>A variável **[!UICONTROL Em quarentena]** O status indica que a consulta falhou em dez execuções consecutivas e requer sua intervenção antes que qualquer execução adicional possa ocorrer.</li></ul> |
 
 >[!TIP]
 >
@@ -63,15 +63,19 @@ Alterne as caixas de seleção relevantes para remover ou adicionar uma coluna d
 
 ## Gerenciar consultas programadas com ações integradas {#inline-actions}
 
-A variável [!UICONTROL Consultas programadas] view oferece várias ações em linha para gerenciar todas as consultas programadas de um único local. As ações em linha são indicadas em cada linha com reticências. Selecione as reticências de uma consulta agendada que você deseja gerenciar para ver as opções disponíveis em um menu pop-up. As opções disponíveis incluem [[!UICONTROL Desativar programação]](#disable) ou [!UICONTROL Ativar programação], [[!UICONTROL Excluir programação]](#delete), e [[!UICONTROL Assinar]](#alert-subscription) para consultar alertas.
+A variável [!UICONTROL Consultas programadas] view oferece várias ações em linha para gerenciar todas as consultas programadas de um único local. As ações em linha são indicadas em cada linha com reticências. Selecione as reticências de uma consulta agendada que você deseja gerenciar para ver as opções disponíveis em um menu pop-up. As opções disponíveis incluem [[!UICONTROL Desativar programação]](#disable) ou [!UICONTROL Ativar programação], [[!UICONTROL Excluir programação]](#delete), [[!UICONTROL Assinar]](#alert-subscription) para consultar alertas, e [Ativar ou [!UICONTROL Desativar quarentena]](#quarantined-queries).
 
-![A guia Consultas agendadas com as reticências da ação em linha e o menu pop-up realçado.](../images/ui/monitor-queries/disable-inline.png)
+![A guia Consultas agendadas com as reticências da ação em linha e o menu pop-up realçado.](../images/ui/monitor-queries/inline-actions.png)
 
 ### Desativar ou ativar uma consulta programada {#disable}
 
 Para desativar uma consulta programada, selecione as reticências de uma consulta programada que deseja gerenciar e selecione **[!UICONTROL Desativar programação]** nas opções do menu pop-up. Uma caixa de diálogo é exibida para confirmar a ação. Selecionar **[!UICONTROL Desativar]** para confirmar suas configurações.
 
 Quando uma consulta programada é desativada, você pode ativar a programação por meio do mesmo processo. Selecione as reticências e selecione **[!UICONTROL Ativar programação]** nas opções disponíveis.
+
+>[!NOTE]
+>
+>Se uma consulta tiver sido colocada em quarentena, você deverá revisar o SQL do modelo antes de ativar sua programação. Isso evita o desperdício de horas de computação se a consulta do modelo ainda tiver problemas.
 
 ### Excluir uma consulta agendada {#delete}
 
@@ -91,6 +95,10 @@ A variável [!UICONTROL Alertas] será aberta. A variável [!UICONTROL Alertas] 
 
 ![A caixa de diálogo de assinaturas do alerta.](../images/ui/monitor-queries/alert-subscription-dialog.png)
 
+>[!NOTE]
+>
+>Para ser notificado de que as execuções de consulta estão em quarentena, primeiro você deve inscrever as execuções de consulta programadas no [recurso de quarentena](#quarantined-queries).
+
 Consulte a [documentação da API de assinaturas de alerta](../api/alert-subscriptions.md) para obter mais informações.
 
 ### Exibir os detalhes da consulta {#query-details}
@@ -98,6 +106,16 @@ Consulte a [documentação da API de assinaturas de alerta](../api/alert-subscri
 Selecione o ícone de informações (![Um ícone de informações.](../images/ui/monitor-queries/information-icon.png)) para ver o painel de detalhes da consulta. O painel de detalhes contém todas as informações relevantes sobre a consulta além dos fatos incluídos na tabela de consultas programadas. As informações adicionais incluem a ID da consulta, a data da última modificação, o SQL da consulta, a ID da programação e a programação definida atual.
 
 ![A guia Consultas agendadas com o ícone de informações e o painel de detalhes destacados.](../images/ui/monitor-queries/details-panel.png)
+
+### Consultas em quarentena {#quarantined-queries}
+
+Quando inscrito no recurso de quarentena, qualquer consulta agendada que falhar dez execuções consecutivas é colocada automaticamente em um [!UICONTROL Em quarentena] status. Uma consulta com esse status fica inativa e não é executada na sua cadência programada. Em seguida, ele requer sua intervenção antes que qualquer outra execução possa ocorrer. Isso protege os recursos do sistema, pois você deve revisar e corrigir os problemas com seu SQL antes que ocorram mais execuções.
+
+Para habilitar uma consulta agendada para o recurso de quarentena, selecione as reticências (`...`) seguido por [!UICONTROL Ativar quarentena] no menu suspenso exibido.
+
+![A guia scheduled queries com as reticências e Enable quarantine é realçada no menu suspenso de ações em linha.](../images/ui/monitor-queries/inline-enable.png)
+
+As consultas também podem ser inscritas no recurso de quarentena durante o processo de criação do agendamento. Consulte a [documentação de agendamentos de consulta](./query-schedules.md#quarantine) para obter mais informações.
 
 ## Filtrar consultas {#filter}
 
@@ -128,7 +146,7 @@ Essas informações são fornecidas em uma tabela de cinco colunas. Cada linha d
 | **[!UICONTROL ID de execução da consulta]** | A ID de execução da consulta para a execução diária. Selecione o **[!UICONTROL ID de execução da consulta]** para navegar até o [!UICONTROL Visão geral da execução da consulta]. |
 | **[!UICONTROL Início da execução da consulta]** | O carimbo de data e hora quando a consulta foi executada. O carimbo de data/hora está no formato UTC. |
 | **[!UICONTROL Execução de consulta concluída]** | O carimbo de data e hora quando a consulta foi concluída. O carimbo de data/hora está no formato UTC. |
-| **[!UICONTROL Status]** | O status da execução de consulta mais recente. Os três valores de status são: `successful` `failed` ou `in progress`. |
+| **[!UICONTROL Status]** | O status da execução de consulta mais recente. Os valores de status são: `Success`, `Failed`, `In progress`ou `Quarantined`. |
 | **[!UICONTROL Conjunto de dados]** | O conjunto de dados envolvido na execução. |
 
 Detalhes da consulta que está sendo agendada podem ser vistos na [!UICONTROL Propriedades] painel. Esse painel inclui a ID de consulta inicial, o tipo de cliente, o nome do modelo, o SQL de consulta e a cadência do agendamento.

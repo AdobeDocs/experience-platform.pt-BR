@@ -2,10 +2,10 @@
 description: Saiba como criar campos de entrada na interface do usuário do Experience Platform que permitem que os usuários especifiquem várias informações relevantes para conexão e exportação de dados para o seu destino.
 title: Campos de dados do cliente
 exl-id: 7f5b8278-175c-4ab8-bf67-8132d128899e
-source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
+source-git-commit: 6366686e3b3f656d200aa245fc148f00e623713c
 workflow-type: tm+mt
-source-wordcount: '1580'
-ht-degree: 5%
+source-wordcount: '1742'
+ht-degree: 1%
 
 ---
 
@@ -51,7 +51,7 @@ Consulte a tabela abaixo para obter detalhes sobre quais tipos de integrações 
 
 Ao criar seus próprios campos de dados do cliente, você pode usar os parâmetros descritos na tabela abaixo para configurar seu comportamento.
 
-| Parâmetro | Tipo | Obrigatório / Opcional | Descrição |
+| Parâmetro | Tipo | Obrigatório/Opcional | Descrição |
 |---------|----------|------|---|
 | `name` | String | Obrigatório | Forneça um nome para o campo personalizado que você está introduzindo. Esse nome não está visível na interface do usuário da Platform, a menos que `title` está vazio ou ausente. |
 | `type` | String | Obrigatório | Indica o tipo do campo personalizado que você está introduzindo. Valores aceitos: <ul><li>`string`</li><li>`object`</li><li>`integer`</li></ul> |
@@ -62,7 +62,7 @@ Ao criar seus próprios campos de dados do cliente, você pode usar os parâmetr
 | `enum` | String | Opcional | Renderiza o campo personalizado como um menu suspenso e lista as opções disponíveis para o usuário. |
 | `default` | String | Opcional | Define o valor padrão a partir de um `enum` lista. |
 | `hidden` | Booleano | Opcional | Indica se o campo de dados do cliente é mostrado na interface do usuário ou não. |
-| `unique` | Booleano | Opcional | use esse parâmetro quando precisar criar um campo de dados do cliente cujo valor deve ser exclusivo em todos os fluxos de dados de destino configurados pela organização de um usuário. Por exemplo, o campo **[!UICONTROL Alias de integração]** no destino [Personalização individual](../../../catalog/personalization/custom-personalization.md) deve ser exclusivo, o que significa que dois fluxos de dados separados para esse destino não podem ter o mesmo valor nesse campo. |
+| `unique` | Booleano | Opcional | Use esse parâmetro quando precisar criar um campo de dados do cliente cujo valor deve ser exclusivo em todos os fluxos de dados de destino configurados pela organização de um usuário. Por exemplo, a variável **[!UICONTROL Alias de integração]** no campo [Personalização personalizada](../../../catalog/personalization/custom-personalization.md) o destino deve ser exclusivo, o que significa que dois fluxos de dados separados para esse destino não podem ter o mesmo valor para esse campo. |
 | `readOnly` | Booleano | Opcional | Indica se o cliente pode ou não alterar o valor do campo. |
 
 {style="table-layout:auto"}
@@ -340,6 +340,56 @@ Para criar um seletor suspenso dinâmico, você deve configurar dois componentes
 
 Defina o `destinationServerId` parâmetro para a ID do servidor de destino criado na etapa 1. Você pode ver a ID do servidor de destino na resposta do [recuperar uma configuração do servidor de destino](../../authoring-api/destination-server/retrieve-destination-server.md) chamada à API.
 
+## Criar campos aninhados de dados do cliente {#nested-fields}
+
+É possível criar campos de dados aninhados do cliente para padrões complexos de integração. Isso permite encadear uma série de seleções para o cliente.
+
+Por exemplo, você pode adicionar campos de dados aninhados do cliente para exigir que os clientes selecionem um tipo de integração com seu destino, seguido imediatamente por outra seleção. A segunda seleção é um campo aninhado dentro do tipo de integração.
+
+Para adicionar um campo aninhado, use o `properties` como mostrado abaixo. No exemplo de configuração abaixo, você pode ver três campos aninhados separados dentro do **Seu destino - Configurações específicas de integração** campo de dados do cliente.
+
+>[!TIP]
+>
+>A partir da versão de abril de 2024, você pode definir uma `isRequired` em campos aninhados. Por exemplo, no trecho de configuração abaixo, os dois primeiros campos aninhados são marcados como obrigatórios (linha destacada xxx) e os clientes não podem continuar a menos que selecionem um valor para o campo. Leia mais sobre os campos obrigatórios na [parâmetros compatíveis](#supported-parameters) seção.
+
+```json {line-numbers="true" highlight="10,19"}
+    {
+      "name": "yourdestination",
+      "title": "Yourdestination - Integration Specific Settings",
+      "type": "object",
+      "properties": [
+        {
+          "name": "agreement",
+          "title": "Advertiser data destination terms agreement. Enter I AGREE.",
+          "type": "string",
+          "isRequired": true,
+          "pattern": "I AGREE",
+          "readOnly": false,
+          "hidden": false
+        },
+        {
+          "name": "account-name",
+          "title": "Account name",
+          "type": "string",
+          "isRequired": true,
+          "readOnly": false,
+          "hidden": false
+        },
+        {
+          "name": "email",
+          "title": "Email address",
+          "type": "string",
+          "isRequired": false,
+          "pattern": "^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$",
+          "readOnly": false,
+          "hidden": false
+        }
+      ],
+      "isRequired": false,
+      "readOnly": false,
+      "hidden": false,
+```
+
 ## Criar campos condicionais de dados do cliente {#conditional-options}
 
 É possível criar campos condicionais de dados do cliente, que são exibidos no fluxo de trabalho de ativação somente quando os usuários selecionam uma determinada opção.
@@ -358,7 +408,7 @@ Para definir um campo como condicional, use o `conditional` conforme mostrado ab
 }
 ```
 
-Em um contexto mais amplo, você pode ver `conditional` que está sendo usado na configuração de destino abaixo, junto com o campo `fileType` e a variável `csvOptions` objeto no qual é definido.
+Em um contexto mais amplo, você pode ver `conditional` que está sendo usado na configuração de destino abaixo, junto com o campo `fileType` e a variável `csvOptions` objeto no qual é definido. Os campos condicionais são definidos no campo `properties` parâmetro.
 
 ```json {line-numbers="true" highlight="3-15, 21-25"}
 "customerDataFields":[

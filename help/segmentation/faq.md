@@ -2,10 +2,10 @@
 title: Perguntas frequentes do Audiences
 description: Descubra respostas para perguntas frequentes sobre públicos-alvo e outros conceitos relacionados à segmentação.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: f9235763746e12bd62f19094372dcff41cb41d65
+source-git-commit: 27571f3ed57399eb588865e1a52e7569957ffbff
 workflow-type: tm+mt
-source-wordcount: '3161'
-ht-degree: 1%
+source-wordcount: '3976'
+ht-degree: 0%
 
 ---
 
@@ -98,18 +98,6 @@ A expiração dos dados atuais de públicos gerados externamente é **30 dias**.
 
 Depois que o período de expiração dos dados passar, o conjunto de dados associado ainda estará visível no inventário do conjunto de dados, mas você **não** ser capaz de ativar o público-alvo e a contagem de perfis será exibida como zero.
 
-### O que representam os diferentes estados do ciclo de vida?
-
-O gráfico a seguir explica os diferentes status do ciclo de vida, o que eles representam, onde os públicos-alvo com esse status podem ser usados, bem como o impacto nas medidas de proteção de segmentação.
-
-| Estado | Definição | Visível no Audience Portal? | Visível nos destinos? | Afeta os limites de segmentação? | Impacto nos públicos-alvo baseados em arquivos | Impacto na avaliação do público-alvo | Pode ser usado em outros públicos-alvo? |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| Rascunho | Um público-alvo na **Rascunho** state é um público que ainda está em desenvolvimento e não está pronto para ser usado em outros serviços. | Sim, mas pode ser oculto. | Não | Sim | Podem ser importadas ou atualizadas durante o processo de refinamento. | Podem ser avaliadas para obter contagens precisas de publicações. | Sim, mas não é recomendável usar. |
-| Publicado | Um público-alvo na **Publicado** O estado do é um público-alvo pronto para uso em todos os serviços downstream. | Sim | Sim | Sim | Pode ser importado ou atualizado. | Avaliado usando segmentação em lote, de fluxo ou de borda. | Sim |
-| Inativo | Um público-alvo na **Inativo** estado é um público que não está em uso no momento. Ele ainda existe na Platform, mas continuará **não** ser utilizável até que seja marcado como rascunho ou publicado. | Não, mas pode ser exibido. | Não | Não | Não é mais atualizado. | Não é mais avaliado ou atualizado pela Platform. | Sim |
-| Excluído | Um público-alvo na **Excluído** estado é um público-alvo que foi excluído. A exclusão real dos dados pode levar alguns minutos para ser executada. | Não | Não | Não | Os dados subjacentes são excluídos. | Não ocorre avaliação ou execução de dados após a conclusão da exclusão. | Não |
-| Ativo | Este status foi **obsoleto** e é substituída pela **Publicado** status. | N/D | N/D | N/D | N/D | N/D | N/D |
-
 ### Como o Audience Portal e a Composição de público-alvo interagem com o lançamento dos dados de parceiros da Real-Time CDP?
 
 O Portal de público-alvo e a Composição de público-alvo interagirão com os Dados do parceiro de duas maneiras:
@@ -130,9 +118,108 @@ Os atributos de enriquecimento são atributos que vêm de um conjunto de dados e
 | Destinos do Real-Time CDP | Os atributos de carga e os públicos-alvo podem ser ativados. | Somente o público-alvo pode ser ativado. Atributos de enriquecimento **não é possível** ser ativados. |
 | Campanhas do Adobe Journey Optimizer | Nem o público-alvo nem os atributos de carga podem ser ativados. | É possível ativar o público-alvo e os atributos de enriquecimento. |
 
+## Estados do ciclo de vida {#lifecycle-states}
+
+A seção a seguir lista perguntas relacionadas aos estados do ciclo de vida e ao gerenciamento do estado do ciclo de vida no Portal de público-alvo.
+
+### O que representam os diferentes estados do ciclo de vida?
+
+O gráfico a seguir explica os diferentes status do ciclo de vida, o que eles representam, onde os públicos-alvo com esse status podem ser usados, bem como o impacto nas medidas de proteção de segmentação.
+
+| Estado | Definição | Visível no Audience Portal? | Visível nos destinos? | Afeta os limites de segmentação? | Impacto nos públicos-alvo baseados em arquivos | Impacto na avaliação do público-alvo | Pode ser usado em outros públicos-alvo? | Editável |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Rascunho | Um público-alvo na **Rascunho** state é um público que ainda está em desenvolvimento e não está pronto para ser usado em outros serviços. | Sim, mas pode ser oculto. | Não | Sim | Podem ser importadas ou atualizadas durante o processo de refinamento. | Podem ser avaliadas para obter contagens precisas de publicações. | Sim, mas não é recomendável usar. | Sim |
+| Publicado | Um público-alvo na **Publicado** O estado do é um público-alvo pronto para uso em todos os serviços downstream. | Sim | Sim | Sim | Pode ser importado ou atualizado. | Avaliado usando segmentação em lote, de fluxo ou de borda. | Sim | Sim |
+| Inativo | Um público-alvo na **Inativo** estado é um público que não está em uso no momento. Ele ainda existe na Platform, mas continuará **não** ser utilizável até que seja marcado como rascunho ou publicado. | Não, mas pode ser exibido. | Não | Não | Não é mais atualizado. | Não é mais avaliado ou atualizado pela Platform. | Sim | Sim |
+| Excluído | Um público-alvo na **Excluído** estado é um público-alvo que foi excluído. A exclusão real dos dados pode levar alguns minutos para ser executada. | Não | Não | Não | Os dados subjacentes são excluídos. | Não ocorre avaliação ou execução de dados após a conclusão da exclusão. | Não | Não |
+
+### Em quais estados posso editar meus públicos-alvo?
+
+Os públicos-alvo podem ser editados nos seguintes estados do ciclo de vida:
+
+- **Rascunho**: se um público-alvo for editado no estado de rascunho, ele permanecerá no estado de rascunho, a menos que seja publicado explicitamente.
+- **Publicado**: se um público-alvo for editado no estado publicado, ele permanecerá publicado e o público-alvo será atualizado automaticamente.
+- **Inativo**: se um público-alvo for editado no estado inativo, ele permanecerá inativo. Isso significa que ele não será avaliado ou atualizado. Se precisar atualizar o público-alvo, você precisará publicá-lo.
+
+Depois que um público-alvo é excluído, ele **não é possível** ser editado.
+
+### Para quais estados do ciclo de vida posso mover um público-alvo?
+
+Os possíveis estados do ciclo de vida para os quais um público-alvo pode ser movido dependem do estado atual do público-alvo.
+
+![Um diagrama descrevendo as possíveis transições de estado do ciclo de vida disponíveis para os públicos-alvo.](./images/faq/lifecycle-state-transition.png)
+
+Se o público-alvo estiver no estado de rascunho, você poderá publicá-lo ou excluí-lo se o público-alvo não tiver dependentes.
+
+Se o público-alvo estiver no estado publicado, você poderá desativá-lo ou excluí-lo se o público-alvo não tiver dependentes.
+
+Se o público-alvo estiver no estado inativo, você poderá republicá-lo ou excluí-lo se o público-alvo não tiver dependentes.
+
+### Existem limitações para públicos-alvo em determinados estados do ciclo de vida?
+
+Os públicos-alvo no estado publicado só poderão ser movidos para outro estado se o público-alvo **não** têm dependentes. Isso significa que, se o público-alvo for usado em um serviço downstream, ele não poderá ser desativado ou excluído.
+
+Se um público avaliado usando a segmentação em lote for republicado, isto é, quando um público passa de inativo para publicado, o público será atualizado **após** o trabalho em lotes diário. Quando for republicado pela primeira vez, os perfis e os dados serão os **igual** como quando o público-alvo foi inativado.
+
+### Como colocar um público-alvo no estado de rascunho?
+
+O método para colocar um público no estado de rascunho depende da origem do público.
+
+Para públicos-alvo criados usando o Construtor de segmentos, é possível definir o público-alvo para o estado de rascunho ao selecionar &quot;[!UICONTROL Salvar como rascunho]&quot; no Construtor de segmentos.
+
+Para públicos-alvo criados na Composição de público-alvo, os públicos-alvo são salvos automaticamente como rascunho até serem publicados.
+
+Para públicos criados externamente, os públicos são publicados automaticamente.
+
+Quando o público-alvo está no estado publicado, você **não é possível** alterar o público original de volta para o estado de rascunho. No entanto, se você copiar o público-alvo, ele estará no estado de rascunho.
+
+### Como colocar um público-alvo no estado publicado?
+
+Para públicos-alvo criados usando o Construtor de segmentos ou a Composição de público-alvo, é possível definir o público-alvo para o estado publicado ao selecionar &quot;[!UICONTROL Publish]&quot; em suas respectivas interfaces do usuário.
+
+Os públicos-alvo criados externamente são definidos como publicados automaticamente.
+
+### Como colocar um público-alvo no estado inativo?
+
+Você pode colocar um público publicado no estado inativo abrindo o menu de ações rápidas no Portal de público-alvo e selecionando &quot;[!UICONTROL Desativar]&quot;.
+
+### Como faço para republicar um público-alvo?
+
+>[!NOTE]
+>
+>O estado &quot;republicado&quot; é igual ao estado publicado para o comportamento do público-alvo.
+
+Você pode republicar um público selecionando um público que esteja no estado inativo, abrindo o menu de ações rápidas no Portal de público e selecionando [!UICONTROL Publish].
+
+### Como colocar um público-alvo no estado excluído?
+
+>[!IMPORTANT]
+>
+>Você só pode excluir públicos-alvo que estejam **não** usado em qualquer ativação downstream. Além disso, não é possível excluir um público referenciado em outro público. Se não for possível excluir o público-alvo, verifique se você está **não** usá-lo em qualquer serviço downstream ou como um bloco de construção de outro público-alvo.
+
+Para colocar um público-alvo no estado de exclusão, abra o menu de ações rápidas no Portal de público-alvo e selecione [!UICONTROL Excluir].
+
+### O uso de um público-alvo como público-alvo secundário afeta as transições de estado do ciclo de vida?
+
+>[!NOTE]
+>
+>Um público-alvo principal é um público-alvo que **usos** outro público-alvo como uma dependência do público-alvo.
+>
+>Um público-alvo filho é um público-alvo que é **usado como** uma dependência para o público-alvo.
+
+Sim, usar um público-alvo como público-alvo filho afeta os estados de ciclo de vida que o público-alvo filho e pai pode realizar.
+
+Para que um público-alvo filho seja movido para o estado publicado, todo o público-alvo pai **deve** estar no estado publicado. Os públicos-alvo principais podem ser publicados antes da publicação do público-alvo secundário ou, se o usuário confirmar, podem ser publicados automaticamente quando o público-alvo secundário é publicado.
+
+Para que o público-alvo principal seja movido para o estado inativo ou excluído, todos os públicos-alvo secundários **deve** ser desativados ou excluídos.
+
+### Posso me referir a um público que esteja em um estado de ciclo de vida diferente?
+
+Sim! Se o público-alvo estiver no estado de rascunho, você poderá fazer referência a públicos-alvo no estado publicado ou inativo. No entanto, para publicar esse público-alvo, você **deve** publicar os outros públicos-alvo principais.
+
 ## Inventário de público
 
-As seções a seguir listam as perguntas relacionadas ao inventário de público-alvo no Portal de público-alvo.
+A seção a seguir lista perguntas relacionadas ao inventário de público-alvo no Portal de público-alvo.
 
 ### Preciso de permissões adicionais para usar os recursos de inventário de público-alvo?
 

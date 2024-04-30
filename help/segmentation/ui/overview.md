@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guia da interface do usuário do Serviço de segmentação
 description: Saiba como criar e gerenciar públicos e definições de segmento na interface do usuário do Adobe Experience Platform.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: dc899a4aa64b6e734322020e4c10aee687c6d8c5
+source-git-commit: c1a2d55cb99a1f66698289751a967f8c5f80a7bf
 workflow-type: tm+mt
-source-wordcount: '4014'
+source-wordcount: '4105'
 ht-degree: 3%
 
 ---
@@ -80,7 +80,8 @@ Ao lado de cada público há um ícone de reticências. Selecionar essa opção 
 | [!UICONTROL Mover para a pasta] | Composição de público-alvo, Upload personalizado, Serviço de segmentação | Gerencia a pasta à qual o público-alvo pertence. Para obter mais informações sobre esse recurso, leia a seção sobre [filtragem e marcação](#manage-audiences). |
 | [!UICONTROL Copiar] | Serviço de segmentação | Duplica o público selecionado. |
 | [!UICONTROL Aplicar rótulos de acesso] | Composição de público-alvo, Upload personalizado, Serviço de segmentação | Gerencia os rótulos de acesso que pertencem ao público. Para obter mais informações sobre rótulos de acesso, leia a documentação em [gerenciamento de rótulos](../../access-control/abac/ui/labels.md). |
-| [!UICONTROL Arquivar] | Upload personalizado | Arquiva o público-alvo selecionado. |
+| [!UICONTROL Publish] | Upload personalizado, Serviço de segmentação | Publica o público selecionado. Para obter mais informações sobre o gerenciamento do status do ciclo de vida, leia a [seção estado do ciclo de vida das Perguntas frequentes sobre segmentação](../faq.md#lifecycle-states). |
+| [!UICONTROL Desativar] | Upload personalizado, Serviço de segmentação | Desativa o público selecionado. Para obter mais informações sobre o gerenciamento do status do ciclo de vida, leia a [seção estado do ciclo de vida das Perguntas frequentes sobre segmentação](../faq.md#lifecycle-states). |
 | [!UICONTROL Excluir] | Composição de público-alvo, Upload personalizado, Serviço de segmentação | Exclui o público selecionado. |
 | [!UICONTROL Adicionar ao pacote] | Composição de público-alvo, Upload personalizado, Serviço de segmentação | Move o público-alvo entre sandboxes. Para obter mais informações sobre esse recurso, leia a [guia de ferramentas de sandbox](../../sandboxes/ui/sandbox-tooling.md). |
 
@@ -102,9 +103,9 @@ Selecionar **[!UICONTROL Criar público]** O permitirá a criação de um públi
 
 ![O botão Update frequency summary é realçado.](../images/ui/overview/browse-audience-update-frequency-summary.png)
 
-O gráfico de pizza é exibido, mostrando um detalhamento dos públicos-alvo por frequência de atualização. O gráfico exibe o número total de públicos-alvo no meio. Se você passar o mouse sobre as diferentes partes do público-alvo, ele exibirá o número de públicos-alvo que pertencem a cada tipo de frequência de atualização.
+O gráfico de pizza é exibido, mostrando um detalhamento dos públicos-alvo por frequência de atualização. O gráfico exibe o número total de públicos-alvo no meio e o tempo diário de avaliação do lote em UTC na parte inferior. Se você passar o mouse sobre as diferentes partes do público-alvo, ele exibirá o número de públicos-alvo que pertencem a cada tipo de frequência de atualização.
 
-![O gráfico de pizza de frequência de atualização é exibido.](../images/ui/overview/update-frequency-chart.png)
+![O gráfico de pizza de frequência de atualização é realçado, com o tempo de avaliação da segmentação em lote também exibido.](../images/ui/overview/update-frequency-chart.png)
 
 ### Personalizar {#customize}
 
@@ -115,7 +116,7 @@ O gráfico de pizza é exibido, mostrando um detalhamento dos públicos-alvo por
 | [!UICONTROL Nome] | O nome do público-alvo. |
 | [!UICONTROL Contagem de perfis] | O número total de perfis qualificados para o público-alvo. |
 | [!UICONTROL Origem] | A origem do público. Isso indica de onde o público-alvo vem. Os valores possíveis incluem Serviço de segmentação, Upload personalizado, Composição de público-alvo e Audience Manager. |
-| [!UICONTROL Status do ciclo de vida] | O status do público. Os valores possíveis para esse campo incluem `Draft`, `Published`, e `Archived`. |
+| [!UICONTROL Status do ciclo de vida] | O status do público. Os valores possíveis para esse campo incluem `Draft`, `Inactive`, `Published`, e `Archived`. Mais informações sobre os status do ciclo de vida, incluindo o que significam os diferentes estados e como mover públicos para diferentes estados do ciclo de vida, leia a [seção status do ciclo de vida das Perguntas frequentes sobre segmentação](../faq.md#lifecycle-status). |
 | [!UICONTROL Frequência das atualizações] | Um valor que indica a frequência com que os dados do público-alvo são atualizados. Os valores possíveis para esse campo incluem [!UICONTROL Lote], [!UICONTROL Streaming], [!UICONTROL Edge], e [!UICONTROL Não Agendado]. |
 | [!UICONTROL Última atualização realizada por] | O nome da última pessoa que atualizou o público. |
 | [!UICONTROL Criado] | A data e a hora, em UTC, em que o público-alvo foi criado. |
@@ -205,7 +206,7 @@ A lista de filtros disponíveis é exibida.
 | ------ | ----------- |
 | [!UICONTROL Origem] | Permite filtrar com base na origem do público-alvo. As opções disponíveis incluem Serviço de segmentação, Upload personalizado, Composição de público-alvo e Audience Manager. |
 | [!UICONTROL Tem qualquer tag] | Permite filtrar por tags. Você pode selecionar entre **[!UICONTROL Tem qualquer tag]** e **[!UICONTROL Tem todas as tags]**. Quando **[!UICONTROL Tem qualquer tag]** for selecionada, os públicos-alvo filtrados incluirão **qualquer** das tags adicionadas. Quando **[!UICONTROL Tem todas as tags]** for selecionada, os públicos-alvo filtrados deverão incluir **all** das tags adicionadas. |
-| [!UICONTROL Status do ciclo de vida] | Permite filtrar com base no status do ciclo de vida do público-alvo. As opções disponíveis incluem [!UICONTROL Ativo], [!UICONTROL Arquivado], [!UICONTROL Excluído], [!UICONTROL Rascunho], [!UICONTROL Inativo], e [!UICONTROL Publicado]. |
+| [!UICONTROL Status do ciclo de vida] | Permite filtrar com base no status do ciclo de vida do público-alvo. As opções disponíveis incluem [!UICONTROL Excluído], [!UICONTROL Rascunho], [!UICONTROL Inativo], e [!UICONTROL Publicado]. |
 | [!UICONTROL Frequência das atualizações] | Permite filtrar com base na frequência de atualização do público-alvo. As opções disponíveis incluem [!UICONTROL Agendado], [!UICONTROL Contínuo], e [!UICONTROL Por demanda]. |
 | [!UICONTROL Criado por] | Permite filtrar com base na pessoa que criou o público. |
 | [!UICONTROL Data de criação] | Permite filtrar com base na data de criação do público-alvo. Você pode escolher um intervalo de datas para filtrar quando o público-alvo foi criado. |
@@ -408,7 +409,7 @@ Um popover é exibido, listando todos os campos que podem ser exibidos dentro da
 | Campo | Descrição |
 | ----- | ----------- | 
 | [!UICONTROL Nome] | O nome do público-alvo. |
-| [!UICONTROL Status] | O status do público. Os valores possíveis para esse campo incluem `Draft`, `Published`, e `Archived`. |
+| [!UICONTROL Status] | O status do público. Os valores possíveis para esse campo incluem `Draft`, `Inactive`, `Published`, e `Archived`. |
 | [!UICONTROL Criado] | A hora e a data em que o público-alvo foi criado. |
 | [!UICONTROL Criado por] | O nome da pessoa que criou o público-alvo. |
 | [!UICONTROL Atualizado] | A hora e a data em que o público-alvo foi atualizado pela última vez. |

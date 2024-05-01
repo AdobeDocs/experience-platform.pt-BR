@@ -3,9 +3,9 @@ keywords: destinos;destino;página detalhes de destinos;página detalhes de dest
 title: Exibir detalhes do destino
 description: A página de detalhes de um destino individual fornece uma visão geral dos detalhes do destino. Os detalhes do destino incluem o nome do destino, a ID, os públicos mapeados para o destino e os controles para editar a ativação e habilitar e desabilitar o fluxo de dados.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: 5e3c4f5c9a5540e0a796785c743a77c1e11821f8
+source-git-commit: 9d3b6409013edc38ef41dd2a184ccbdcf7ab9edd
 workflow-type: tm+mt
-source-wordcount: '1100'
+source-wordcount: '1154'
 ht-degree: 1%
 
 ---
@@ -115,11 +115,15 @@ A variável [!UICONTROL Dados de ativação] A guia exibe uma lista de públicos
 
 ![Destino de transmissão da visualização de dados de ativação](../assets/ui/details-page/activation-data-streaming.png)
 
-<!-- ### Remove multiple audiences from activation flows {#bulk-remove}
+### [!BADGE Beta]{type=Informative} Remover vários públicos dos fluxos de ativação {#bulk-remove}
 
-To remove multiple audiences from existing activation flows, select the audiences and then select **[!UICONTROL Remove audiences]**.
+>[!NOTE]
+>
+Esse recurso está na versão beta e só está disponível para clientes selecionados. Para solicitar acesso a esse recurso, entre em contato com o representante da Adobe.
 
-![Activation data screen highlighting the Remove audiences option.](../assets/ui/details-page/bulk-remove-audiences.png) -->
+Para remover vários públicos-alvo de fluxos de ativação existentes, selecione os públicos-alvo e, em seguida, **[!UICONTROL Remover públicos]**.
+
+![Tela de dados de ativação destacando a opção Remover públicos.](../assets/ui/details-page/bulk-remove-audiences.png)
 
 ### [!BADGE Beta]{type=Informative} Exportar vários arquivos sob demanda para destinos em lote {#bulk-export}
 

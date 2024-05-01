@@ -3,9 +3,9 @@ title: Exportar conjuntos de dados para destinos de armazenamento na nuvem
 type: Tutorial
 description: Saiba como exportar conjuntos de dados do Adobe Experience Platform para o local de armazenamento em nuvem de sua preferência.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 5d9384f57765126709f6bfcc005334ba4120595a
+source-git-commit: 9d3b6409013edc38ef41dd2a184ccbdcf7ab9edd
 workflow-type: tm+mt
-source-wordcount: '1857'
+source-wordcount: '1891'
 ht-degree: 4%
 
 ---
@@ -211,15 +211,13 @@ Para remover conjuntos de dados de um fluxo de dados existente, siga as etapas a
 
    ![A opção de navegação dos conjuntos de dados disponíveis é realçada na coluna de dados Ativation.](../assets/ui/export-datasets/go-to-datasets-data.png)
 
-1. A variável **[!UICONTROL Dados de ativação]** para o destino é exibida. Selecione o conjunto de dados que deseja remover e selecione **[!UICONTROL Remover conjunto de dados]** no painel direito para acionar a caixa de diálogo de confirmação de remoção do conjunto de dados.
+1. [!BADGE Beta] A variável **[!UICONTROL Dados de ativação]** para o destino é exibida. Use as caixas de seleção no lado esquerdo da lista de conjuntos de dados para selecionar os conjuntos de dados que deseja remover e, em seguida, selecione **[!UICONTROL Remover conjuntos de dados]** no painel direito para acionar a caixa de diálogo de confirmação remover conjunto de dados.
 
-   ![Caixa de diálogo Remover conjunto de dados mostrando o controle Remover conjunto de dados no painel direito.](../assets/ui/export-datasets/remove-dataset-control.png)
+   >[!NOTE]
+   >
+Esse recurso está na versão beta e só está disponível para clientes selecionados. Para solicitar acesso a esse recurso, entre em contato com o representante da Adobe.
 
-<!-- USE THIS FOR BULK REMOVE RELEASE
-
-1. The **[!UICONTROL Activation data]** page for the destination appears. Use the checkboxes on the left side of the dataset list to select the datasets which you want to remove, then select **[!UICONTROL Remove datasets]** in the right rail to trigger the remove dataset confirmation dialog. 
-
-    ![Remove dataset dialog showing the Remove dataset control in the right rail.](../assets/ui/export-datasets/bulk-remove-datasets.png) -->
+   ![Caixa de diálogo Remover conjunto de dados mostrando o controle Remover conjunto de dados no painel direito.](../assets/ui/export-datasets/bulk-remove-datasets.png)
 
 1. Na caixa de diálogo de confirmação, selecione **[!UICONTROL Remover]** para remover imediatamente o conjunto de dados das exportações para o destino.
 

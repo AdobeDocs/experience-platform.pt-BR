@@ -2,9 +2,9 @@
 title: Definir campos de mapa na interface
 description: Saiba como definir um campo de mapa na interface do usuário do Experience Platform.
 exl-id: 657428a2-f184-4d7c-b657-4fc60d77d5c6
-source-git-commit: 57a0381401c6084513ce7413b66dec56044b4492
+source-git-commit: ee27fc42a1ee23ef650d320df64e5970a84d0d38
 workflow-type: tm+mt
-source-wordcount: '453'
+source-wordcount: '452'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 O Adobe Experience Platform permite personalizar totalmente a estrutura de suas classes personalizadas do Experience Data Model (XDM), grupos de campos de esquema e tipos de dados.
 
-Você também pode definir campos de mapa no Editor de esquemas para modelar estruturas de dados flexíveis e dinâmicas ou armazenar uma coleção de pares de valores chave. A estrutura de dados do mapa permite pesquisas, inserções e exclusões rápidas e eficientes onde as informações são organizadas e acessadas com base em identificadores exclusivos.
+Você também pode definir campos de mapa no Editor de esquemas para modelar estruturas de dados flexíveis e dinâmicas ou armazenar uma coleção de pares de valores chave.
 
 Ao definir um novo campo na interface do usuário (UI) da Platform, use o **[!UICONTROL Tipo]** selecione &quot;**[!UICONTROL Mapa]**&quot; na lista.
 
@@ -34,6 +34,8 @@ O XDM impõe as seguintes restrições ao uso desse tipo de dados:
 * Os tipos de mapa DEVEM ser do tipo `object`.
 * Os tipos de mapa NÃO DEVEM ter propriedades definidas (em outras palavras, eles definem objetos &quot;vazios&quot;).
 * Os tipos de mapa DEVEM incluir um `additionalProperties.type` que descreve os valores que podem ser colocados no mapa, seja `string` ou `integer`.
+* A segmentação de várias entidades só pode ser definida com base nas chaves do mapa, e não nos valores.
+* Os mapas não são compatíveis com os públicos-alvo da conta.
 
 Certifique-se de que você só esteja usando campos do tipo mapa quando for absolutamente necessário, pois eles apresentam as seguintes desvantagens de desempenho:
 

@@ -2,7 +2,7 @@
 title: Perguntas frequentes do Audiences
 description: Descubra respostas para perguntas frequentes sobre públicos-alvo e outros conceitos relacionados à segmentação.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: 27571f3ed57399eb588865e1a52e7569957ffbff
+source-git-commit: d4fc95532a82fe32b4172870a5521e41ce313bab
 workflow-type: tm+mt
 source-wordcount: '3976'
 ht-degree: 0%
@@ -127,7 +127,7 @@ A seção a seguir lista perguntas relacionadas aos estados do ciclo de vida e a
 O gráfico a seguir explica os diferentes status do ciclo de vida, o que eles representam, onde os públicos-alvo com esse status podem ser usados, bem como o impacto nas medidas de proteção de segmentação.
 
 | Estado | Definição | Visível no Audience Portal? | Visível nos destinos? | Afeta os limites de segmentação? | Impacto nos públicos-alvo baseados em arquivos | Impacto na avaliação do público-alvo | Pode ser usado em outros públicos-alvo? | Editável |
-| --- | --- | --- | --- | --- | --- | --- | --- |
+| --- | --- | --- | --- | --- | --- | --- | --- | -- |
 | Rascunho | Um público-alvo na **Rascunho** state é um público que ainda está em desenvolvimento e não está pronto para ser usado em outros serviços. | Sim, mas pode ser oculto. | Não | Sim | Podem ser importadas ou atualizadas durante o processo de refinamento. | Podem ser avaliadas para obter contagens precisas de publicações. | Sim, mas não é recomendável usar. | Sim |
 | Publicado | Um público-alvo na **Publicado** O estado do é um público-alvo pronto para uso em todos os serviços downstream. | Sim | Sim | Sim | Pode ser importado ou atualizado. | Avaliado usando segmentação em lote, de fluxo ou de borda. | Sim | Sim |
 | Inativo | Um público-alvo na **Inativo** estado é um público que não está em uso no momento. Ele ainda existe na Platform, mas continuará **não** ser utilizável até que seja marcado como rascunho ou publicado. | Não, mas pode ser exibido. | Não | Não | Não é mais atualizado. | Não é mais avaliado ou atualizado pela Platform. | Sim | Sim |

@@ -3,9 +3,9 @@ title: Criar uma conexão de origem dos Hubs de eventos do Azure na interface
 description: Saiba como criar uma conexão de origem do Azure Event Hubs usando a interface do usuário do Adobe Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 7e67e213-8ccb-4fa5-b09f-ae77aba8614c
-source-git-commit: e4ea21af3f0d9e810959330488dc06bc559cf72c
+source-git-commit: 22f3b76c02e641d2f4c0dd7c0e5cc93038782836
 workflow-type: tm+mt
-source-wordcount: '1094'
+source-wordcount: '1096'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 1%
 >
 >A variável [!DNL Azure Event Hubs] origem está disponível no catálogo de origens para usuários que compraram o Real-time Customer Data Platform Ultimate.
 
-Este tutorial fornece etapas para criar um [!DNL Azure Event Hubs] usando a interface do usuário do Adobe Experience Platform.
+Leia este tutorial para saber como criar um [!DNL Azure Event Hubs] usando a interface do usuário do Adobe Experience Platform.
 
 ## Introdução
 

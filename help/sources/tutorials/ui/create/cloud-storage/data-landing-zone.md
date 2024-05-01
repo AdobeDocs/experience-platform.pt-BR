@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform;página inicial;tópicos populares;Zona de aterrissagem de dados;zona de aterrissagem de dados
 title: Conectar a zona de aterrissagem de dados à plataforma usando a interface do
 description: Saiba como criar um conector de origem da Zona de aterrissagem de dados usando a interface do usuário da Platform.
 exl-id: 653c9958-5d89-4b0c-af3d-a3e74aa47a08
-source-git-commit: 9372e6f961015c989bfcb0d1e2b0129da965c522
+source-git-commit: 22f3b76c02e641d2f4c0dd7c0e5cc93038782836
 workflow-type: tm+mt
-source-wordcount: '747'
+source-wordcount: '736'
 ht-degree: 0%
 
 ---

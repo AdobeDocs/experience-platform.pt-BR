@@ -2,10 +2,10 @@
 title: Notas de versão da Adobe Experience Platform
 description: As notas de versão de abril de 2024 da Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 4ec4335d19695e8d6e26390358356dedd048594e
+source-git-commit: fea62a2aa3c7d175afbfa808f392c3a93a0d31a0
 workflow-type: tm+mt
-source-wordcount: '1849'
-ht-degree: 16%
+source-wordcount: '1841'
+ht-degree: 17%
 
 ---
 
@@ -51,7 +51,7 @@ A Adobe Experience Platform fornece um conjunto de tecnologias que permitem cole
 
 | Tipo | Recurso | Descrição |
 | --- | --- | --- |
-| Insights | [!DNL Acxiom] Insights de visitante anônimo | Descubra de onde os visitantes do seu site vêm com a [!DNL Acxiom's] Insights do visitante. Ao utilizar a tecnologia de pesquisa geográfica de IP, identificamos a localização de navegadores anônimos. Uma vez identificada, uma pesquisa rápida em nosso banco de dados organizado produz insights adicionais que são enviados de volta ao navegador. Para criadores de conteúdo, isso significa uma oportunidade de ouro para adaptar seu conteúdo para corresponder a esses pontos de dados, fornecendo uma experiência mais personalizada e envolvente para os visitantes, mesmo que eles tenham começado como estranhos. |
+| Extensões | [!DNL Acxiom Anonymous Visitor Insights] Extensão de tags | Descubra de onde os visitantes do seu site vêm com a [!DNL Acxiom's Visitor Insights]. Utilizando a tecnologia de pesquisa geográfica de IP, a Acxiom pode identificar a localização de navegadores anônimos. Uma vez identificada, uma pesquisa em seu banco de dados organizado produz insights adicionais que são enviados de volta para o navegador. Assim, os criadores de conteúdo podem adaptar seu conteúdo para corresponder a esses pontos de dados, fornecendo uma experiência mais personalizada e envolvente para os visitantes, mesmo que eles tenham começado como estranhos. |
 | Sequências de dados | [Detecção de bot Edge Network](../../datastreams/bot-detection.md) | O tráfego proveniente de entidades não humanas, como programas automatizados, web scrapers, spiders e scanners com script, pode dificultar a identificação de eventos que ocorrem de visitantes humanos. Esse tipo de tráfego pode afetar negativamente métricas comerciais importantes, resultando em relatórios de tráfego incorretos. <br>A detecção de bot permite identificar eventos gerados pelo [SDK da Web](../../web-sdk/home.md), [SDK móvel](https://developer.adobe.com/client-sdks/home/) e [[!DNL Server API]](../../server-api/overview.md) como sendo gerado por aranhas e bots conhecidos. Ao configurar a detecção de bot para seus fluxos de dados, você pode identificar endereços IP, intervalos de IP e cabeçalhos de solicitação específicos que gostaria de classificar como eventos de bot. <br> A identificação do tráfego de bot pode fornecer uma medida mais precisa da atividade do usuário no seu site ou aplicativo móvel. |
 | SDK móvel | Versão principal | Novas versões principais do SDK móvel foram lançadas para as seguintes plataformas: iOS Mobile Core 5.x e extensões compatíveis do iOS, Android Mobile Core 3.x e extensões compatíveis do Android, React Native Core 6.x e extensões compatíveis do React Native, Flutter Core 4.x e extensões compatíveis do Flutter. Essas versões fornecem vários novos recursos e melhorias, incluindo suporte no Android SDK para Jetpack Compose, suporte para experiências baseadas em código Adobe Journey Optimizer e disponibilidade geral da extensão do Adobe Journey Optimizer Messaging para Flutter. Para obter notas de versão mais detalhadas, consulte [Notas de versão do SDK móvel](https://developer.adobe.com/client-sdks/home/release-notes/). |
 | SDK móvel | Privacidade | Devido à atualização da política do Apple, a partir de 1 de maio de 2024, os desenvolvedores deverão implementar novos recursos de privacidade para enviar para o App Store. Todos os clientes do Adobe que usam o SDK móvel precisarão atualizar para a versão 5.x do SDK se quiserem receber a aprovação da App Store após 1º de maio. |

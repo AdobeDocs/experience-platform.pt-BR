@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;perfil;público;públicos;segmentação;interface do usuário;UI;personalização;painel;painel;;profile;audience;audiences;segmentation;user interface;UI;customization;audience dashboard;dashboard
-title: Guia do Painel de públicos-alvo
+title: Painel de públicos
 description: A Adobe Experience Platform fornece um painel por meio do qual você pode exibir informações importantes sobre os públicos-alvo criados por sua organização.
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: 78cf435f506a21ddd2348642c07380ad810bc693
+source-git-commit: a8b5ed09e8e28075a3a4f37ad30f01c1cc389b9c
 workflow-type: tm+mt
-source-wordcount: '3133'
+source-wordcount: '3132'
 ht-degree: 9%
 
 ---

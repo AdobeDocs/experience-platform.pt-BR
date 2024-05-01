@@ -1,9 +1,10 @@
 ---
 title: Insights de destinos
 description: Descubra o SQL que capacita seus insights de destino e use essas consultas para gerar insights personalizados e explorar ainda mais a ativação de dados do Adobe Experience Platform.
-source-git-commit: 3d5dd6300952409e2dddb32eb11547fb43a5feac
+exl-id: 762a9960-e7a5-4796-80c7-ef745157cc04
+source-git-commit: d4baf6cfaa772e5d46cef470fb35818c7af868b1
 workflow-type: tm+mt
-source-wordcount: '1097'
+source-wordcount: '1139'
 ht-degree: 2%
 
 ---
@@ -14,8 +15,7 @@ Os insights derivados da análise do modelo de dados tornam os dados do Adobe Re
 
 Entenda seus insights de destino acessando o SQL que os capacita e gere seus próprios insights para explorar ainda mais a ativação de dados do Adobe Experience Platform para suas plataformas de destino. Transforme seus dados brutos em novos insights acionáveis usando o SQL modelo de dados do Real-Time CDP existente como inspiração para criar consultas para suas necessidades comerciais exclusivas.
 
-<!-- This link will go in during the January release.
-See the [View SQL documentation]() for more information on how to adapt your insights' SQL directly through the PLatform UI.  -->
+Consulte a [Exibir documentação SQL](../view-sql.md) para obter mais informações sobre como adaptar o SQL dos seus insights diretamente pela interface do Platform.
 
 Os seguintes insights estão disponíveis para você usar como parte da [Painel de destinos](../guides/destinations.md) ou um personalizado [painel definido pelo usuário](../user-defined-dashboards.md). Consulte a [visão geral da personalização](../customize/overview.md) para obter instruções sobre como personalizar seu painel ou [criar e editar novos widgets](../customize/custom-widgets.md) na biblioteca de widgets e [painel definido pelo usuário](../user-defined-dashboards.md#create-widget).
 
@@ -511,13 +511,6 @@ See the [Unmapped audiences by identity widget documentation](../guides/destinat
 
 Ao ler este documento, você agora entende o SQL que gera insights de painel e quais perguntas comuns essa análise resolve. Agora você pode editar e iterar essas consultas SQL para gerar seus próprios insights.
 
-<!-- This link will go in during the January release.
-See the [View SQL documentation]() for more information on how to adapt your insights' SQL directly through the PLatform UI. -->
+Consulte a [Exibir documentação SQL](../view-sql.md) para obter mais informações sobre como adaptar o SQL dos seus insights diretamente pela interface do Platform.
 
-Você também pode ler e entender o SQL que gera insights para o [Perfis](./profiles.md) e [Públicos-alvo](./audiences.md) painéis.
-
-<!-- 
-SQL MISSING FROM WIKI:
-Unmapped audiences by identity
-Mapped audiences by identity 
--->
+Você também pode ler e entender o SQL que gera insights para o [Perfis](./profiles.md), [Perfis de conta](./account-profiles.md) e [Públicos-alvo](./audiences.md) painéis.

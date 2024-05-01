@@ -1,9 +1,10 @@
 ---
 title: Insights do perfil
 description: Descubra o SQL que possibilita os insights do perfil e use essas consultas para gerar insights personalizados que explorem ainda mais seus clientes e as experiências do consumidor.
-source-git-commit: ee9ef2cf777c72fbd19cfccd80a37ea66591216d
+exl-id: f3792076-3e01-4e26-8788-32927202a2e5
+source-git-commit: 34eb9151cc6bb8551553b0a8427e58871acb4dbb
 workflow-type: tm+mt
-source-wordcount: '1639'
+source-wordcount: '1661'
 ht-degree: 1%
 
 ---
@@ -14,12 +15,9 @@ Os insights derivados da análise do modelo de dados tornam os dados do Adobe Re
 
 Entenda seus insights de perfil acessando o SQL que os capacita e gere seus próprios insights para explorar ainda mais seus clientes e as experiências do consumidor que compõem seus perfis. Transforme seus dados brutos em novos insights acionáveis usando o SQL modelo de dados do Real-Time CDP existente como inspiração para criar consultas para suas necessidades comerciais exclusivas.
 
-<!-- This link will go in during the January release.
-See the [View SQL documentation]() for more information on how to adapt your insights' SQL directly through the PLatform UI.  -->
+Consulte a [Exibir documentação SQL](../view-sql.md) para obter mais informações sobre como adaptar o SQL dos seus insights diretamente pela interface do usuário da plataforma.
 
 Os seguintes insights estão disponíveis para você usar como parte da [Painel de perfis](../guides/profiles.md) ou um personalizado [painel definido pelo usuário](../user-defined-dashboards.md). Consulte a [visão geral da personalização](../customize/overview.md) para obter instruções sobre como personalizar seu painel ou [criar e editar novos widgets](../customize/custom-widgets.md) na biblioteca de widgets e [painel definido pelo usuário](../user-defined-dashboards.md#create-widget).
-
-Os seguintes insights estão disponíveis para você usar como parte da [Painel do perfil](../guides/profiles.md) ou um painel personalizado.
 
 ## Sobreposição de público por política de mesclagem {#audience-overlap-by-merge-policy}
 
@@ -781,7 +779,6 @@ Consulte a [Documentação do widget de perfis não segmentados](../guides/profi
 
 Ao ler este documento, você agora entende o SQL que gera insights de painel e quais perguntas comuns essa análise resolve. Agora você pode editar e iterar no SQL para gerar seus próprios insights.
 
-<!-- This link will go in during the January release.
-See the [View SQL documentation]() for more information on how to adapt your insights' SQL directly through the PLatform UI. -->
+Consulte a [Exibir documentação SQL](../view-sql.md) para obter mais informações sobre como adaptar o SQL dos seus insights diretamente pela interface do Platform.
 
-Você também pode ler e entender o SQL que gera insights para o [Públicos-alvo](./audiences.md) e [Destinos](./destinations.md) painéis.
+Você também pode ler e entender o SQL que gera insights para o [Públicos-alvo](./audiences.md), [Perfis de conta](./account-profiles.md), e [Destinos](./destinations.md) painéis.

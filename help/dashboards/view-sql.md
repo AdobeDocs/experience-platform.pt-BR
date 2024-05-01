@@ -1,7 +1,8 @@
 ---
 title: Exibir Insight SQL
 description: Visualize o SQL por trás de seu perfil, público-alvo, destino e insights personalizados e execute a consulta sob demanda por meio do Editor de consultas.
-source-git-commit: be90cf38970a54431f48799bf506fb0a20ec0166
+exl-id: fd728926-c113-4593-92b1-916a02d09d41
+source-git-commit: e0af1f0110ceb514a5b249c42a05bf780ea834c6
 workflow-type: tm+mt
 source-wordcount: '409'
 ht-degree: 0%
@@ -58,4 +59,4 @@ O Editor de consultas é exibido. Agora você pode editar a instrução e consul
 
 ## Próximas etapas
 
-Depois de ler este documento, agora você entende como acessar o SQL para qualquer insight nos painéis padrão ou em um painel definido pelo usuário. Se ainda não tiver feito isso, é recomendável que você leia a [Documento do modelo de dados do Real-time Customer Data Platform Insights](./cdp-insights-data-model.md). Esse documento contém insights sobre como personalizar modelos SQL para relatórios Real-Time CDP personalizados para suas necessidades de marketing e KPI.
+Depois de ler este documento, agora você entende como acessar o SQL para qualquer insight nos painéis padrão ou em um painel definido pelo usuário. Se ainda não tiver feito isso, é recomendável que você leia a [Documento do modelo de dados do Real-time Customer Data Platform Insights](./data-models/cdp-insights-data-model-b2c.md). Esse documento contém insights sobre como personalizar modelos SQL para relatórios Real-Time CDP personalizados para suas necessidades de marketing e KPI.

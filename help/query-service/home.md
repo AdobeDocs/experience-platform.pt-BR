@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Visão geral do serviço de consulta
 description: Saiba mais sobre a função do Serviço de consulta no Experience Platform.
 exl-id: fdaefc12-a97d-4e4e-9aed-d3dbd0f43ea0
-source-git-commit: 5bf54374773fd95ae1c40dd00b5dbe633031b70e
+source-git-commit: e0af1f0110ceb514a5b249c42a05bf780ea834c6
 workflow-type: tm+mt
 source-wordcount: '860'
 ht-degree: 0%
@@ -54,7 +54,7 @@ Este [o exemplo de abandono de navegação se concentra no uso do Adobe [!DNL An
 
 ## Gerar insights com painéis personalizados {#custom-dashboards}
 
-Com o Adobe Experience Platform, você pode assimilar, armazenar, estruturar e obter todos os conjuntos de dados armazenados, incluindo dados comportamentais, de CRM e de ponto de venda. Usar [!DNL Experience Platform's Query Service], você pode consultar esses conjuntos de dados, responder perguntas específicas sobre os negócios e começar a gerar insights de impacto. Saiba como criar e gerenciar painéis personalizados onde você pode criar, adicionar e editar widgets personalizados para visualizar as métricas principais com o [painéis definidos pelo usuário](../dashboards/user-defined-dashboards.md). Você pode até [personalizar seus próprios relatórios do Real-Time CDP](../dashboards/cdp-insights-data-model.md) para seus casos de uso de marketing e KPI usando consultas SQL com os Modelos de dados do Real-time Customer Data Platform Insights.
+Com o Adobe Experience Platform, você pode assimilar, armazenar, estruturar e obter todos os conjuntos de dados armazenados, incluindo dados comportamentais, de CRM e de ponto de venda. Usar [!DNL Experience Platform's Query Service], você pode consultar esses conjuntos de dados, responder perguntas específicas sobre os negócios e começar a gerar insights de impacto. Saiba como criar e gerenciar painéis personalizados onde você pode criar, adicionar e editar widgets personalizados para visualizar as métricas principais com o [painéis definidos pelo usuário](../dashboards/user-defined-dashboards.md). Você pode até [personalizar seus próprios relatórios do Real-Time CDP](../dashboards/data-models/cdp-insights-data-model-b2c.md) para seus casos de uso de marketing e KPI usando consultas SQL com os Modelos de dados do Real-time Customer Data Platform Insights.
 
 ## Próximas etapas e recursos adicionais
 

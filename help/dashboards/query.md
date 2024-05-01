@@ -4,10 +4,10 @@ title: Explorar, verificar e processar conjuntos de dados do painel usando o ser
 type: Documentation
 description: Saiba como usar o Serviço de consulta para explorar e processar conjuntos de dados brutos que potencializam o perfil, o público-alvo e os painéis de destino no Experience Platform.
 exl-id: 0087dcab-d5fe-4a24-85f6-587e9ae74fb8
-source-git-commit: e808af41b0df7603ce6f44464d1e6e883d3f6208
+source-git-commit: e0af1f0110ceb514a5b249c42a05bf780ea834c6
 workflow-type: tm+mt
-source-wordcount: '946'
-ht-degree: 0%
+source-wordcount: '944'
+ht-degree: 1%
 
 ---
 
@@ -86,7 +86,7 @@ Para entender o esquema completo do conjunto de dados de destino do DIM, você p
 
 O recurso Modelos de dados de insights da CDP expõe o SQL que habilita os insights para vários widgets de perfil, destino e segmentação. Você pode personalizar esses modelos de consulta SQL para criar relatórios CDP para seus casos de uso de marketing e KPI.
 
-Os relatórios da CDP fornecem insights sobre os dados do perfil e sua relação com públicos-alvo e destinos. Consulte a documentação do Modelo de dados de insights da CDP para obter informações detalhadas sobre como [aplique os Modelos de dados dos Insights de CDP a seus casos de uso de KPI específicos](./cdp-insights-data-model.md).
+Os relatórios da CDP fornecem insights sobre os dados do perfil e sua relação com públicos-alvo e destinos. Consulte a documentação do Modelo de dados de insights da CDP para obter informações detalhadas sobre como [aplique os Modelos de dados dos Insights de CDP a seus casos de uso de KPI específicos](./data-models/cdp-insights-data-model-b2c.md).
 
 ## Exemplo de consultas
 
@@ -100,7 +100,7 @@ Esse insight do perfil fornece um detalhamento das identidades em todos os perfi
 >
 >O número total de perfis por identidade (em outras palavras, somando os valores mostrados para cada namespace) pode ser maior que o número total de perfis mesclados, pois um perfil pode ter vários namespaces associados a ele. Por exemplo, se um cliente interagir com sua marca em mais de um canal, vários namespaces serão associados a esse cliente individual.
 
-**Consulta**
+**Query**
 
 ```sql
 Select

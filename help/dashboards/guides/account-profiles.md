@@ -1,10 +1,10 @@
 ---
-title: Guia do Painel de Perfis de Conta
+title: Painel de perfis de conta
 description: A Adobe Experience Platform fornece um painel por meio do qual você pode visualizar informações importantes sobre os perfis de conta B2B da sua organização.
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
-source-git-commit: 79966442f5333363216da17342092a71335a14f0
+source-git-commit: b7875128592b17044b068d8064de082bf00a8309
 workflow-type: tm+mt
-source-wordcount: '1052'
+source-wordcount: '1715'
 ht-degree: 0%
 
 ---
@@ -13,15 +13,15 @@ ht-degree: 0%
 
 A interface do usuário (UI) do Adobe Experience Platform fornece um painel por meio do qual você pode visualizar informações importantes sobre os perfis de conta, conforme capturados durante um instantâneo diário. Este guia descreve como acessar e trabalhar com a [!UICONTROL Perfis de conta] painel na interface do usuário e fornece mais informações sobre as visualizações exibidas no painel.
 
-Para obter uma visão geral de todos os recursos na interface do usuário do perfil da conta, visite o [guia da interface do usuário do perfil da conta](../../rtcdp/accounts/account-profile-ui-guide.md).
+Este documento fornece uma visão geral dos recursos da [!UICONTROL Perfis de conta] e detalha os insights padrão disponíveis. Consulte a [[!UICONTROL Perfis de conta] Guia da interface do usuário](../../rtcdp/accounts/account-profile-ui-guide.md) para obter detalhes abrangentes sobre os recursos disponíveis.
 
 ## Introdução
 
 Você deve ter direito a [Adobe Real-time Customer Data Platform B2B Edition](../../rtcdp/b2b-overview.md) para acessar o B2B [!UICONTROL Perfis de conta] painel.
 
-## Dados de perfis de conta
+## Dados de perfis de conta {#data}
 
-A variável [!UICONTROL Perfis de conta] o painel exibe um instantâneo das informações unificadas da conta de várias fontes em seus canais de marketing e dos diversos sistemas que sua organização usa atualmente para armazenar informações de conta do cliente.
+A variável [!UICONTROL Perfis de conta] O painel exibe um instantâneo das informações unificadas da conta. Essas informações de conta vêm de várias fontes em seus canais de marketing e dos diversos sistemas que sua organização usa atualmente para armazenar informações de conta do cliente.
 
 Os dados do perfil no instantâneo mostram os dados exatamente como aparecem no momento específico em que o instantâneo foi tirado. Em outras palavras, o instantâneo não é uma aproximação ou uma amostra dos dados, e o [!UICONTROL Perfis de conta] O painel do não é atualizado em tempo real.
 
@@ -29,17 +29,33 @@ Os dados do perfil no instantâneo mostram os dados exatamente como aparecem no 
 >
 >Quaisquer alterações ou atualizações feitas nos dados desde que o instantâneo foi tirado não serão refletidas no painel até que o próximo instantâneo seja tirado.
 
-## Explore o [!UICONTROL Perfis de conta] painel
+## Explore o [!UICONTROL Perfis de conta] painel {#explore}
 
 Para navegar até o [!UICONTROL Perfis de conta] no painel da interface do Platform, selecione **[!UICONTROL Perfis]** em [!UICONTROL Contas] no painel de navegação esquerdo.
 
 ![A interface do usuário da Platform com Perfis de conta na navegação à esquerda é realçada e a guia Visão geral é exibida.](../images/account-profiles/account-profiles-dashboard.png)
 
-No [!UICONTROL Perfis de conta] painel que você pode [procure os perfis de conta assimilados em sua organização](#browse-account-profiles)ou [visualizar todos os dados do perfil da sua conta rapidamente usando widgets](#standard-widgets) que visualizam aspectos dos dados.
+No [!UICONTROL Perfis de conta] painel de controle, você pode [procure os perfis de conta assimilados em sua organização](#browse-account-profiles)ou [visualizar todos os dados do perfil da sua conta rapidamente usando widgets](#standard-widgets).
+
+### Filtro de data {#date-filter}
+
+A variável [!UICONTROL Visão geral] A guia é composta de widgets que fornecem métricas somente leitura para transmitir informações importantes sobre os perfis da sua conta. Selecione o ícone ou as datas do calendário para alterar o filtro de datas global dos seus widgets.
+
+>[!IMPORTANT]
+>
+>O intervalo de datas selecionado no calendário suspenso afeta todos os insights, exceto os dois widgets de pontuação preditiva ([distribuição](#predictive-scoring-distribution) e [principais fatores influentes](#predictive-scoring-top-influential-factors)).
+
+![A guia de visão geral Perfis de conta com o seletor de datas e o ícone de filtro destacados.](../images/account-profiles/date-filter.png)
+
+### Configurar o cliente potencial para o serviço de correspondência de contas {#lead-to-account-matching-service}
+
+Selecionar **[!UICONTROL Configurações]** para configurar o cliente em potencial para o serviço de correspondência de contas no [!UICONTROL Configurações da conta] diálogo. Para obter detalhes completos sobre como configurar seu lead para correspondência de contas, consulte a [Guia da interface do usuário](../../rtcdp/accounts/account-profile-ui-guide.md#configure-lead-to-account-matching). Para saber mais sobre correspondência entre lead e conta, consulte a [levar à correspondência de contas na documentação B2B do Real-Time CDP](../../rtcdp/b2b-ai-ml-services/lead-to-account-matching.md).
+
+![O painel Perfis de conta com Configurações realçadas.](../images/account-profiles/settings.png)
 
 ## Procurar perfis de conta {#browse-account-profiles}
 
-A variável [!UICONTROL Procurar] A guia permite pesquisar e visualizar os perfis de conta somente leitura assimilados em sua organização usando uma ID de conta de uma origem corporativa conectada ou inserindo os detalhes da origem diretamente. Aqui você pode ver informações importantes pertencentes ao perfil da conta, incluindo nome, setor, receita e público-alvo, entre outros.
+No [!UICONTROL Procurar] você pode pesquisar e visualizar os perfis de conta somente leitura assimilados em sua organização. Use uma ID de conta de uma fonte corporativa conectada ou insira os detalhes da fonte diretamente. Nesse espaço de trabalho, você pode ver informações importantes pertencentes ao perfil da conta, incluindo nome, setor, receita e público-alvo, entre outros.
 
 Selecione o [!UICONTROL ID do perfil] a partir dos resultados exibidos no [!UICONTROL Procurar] para abrir a guia [!UICONTROL Detalhes] para o perfil da conta.
 
@@ -47,42 +63,79 @@ Selecione o [!UICONTROL ID do perfil] a partir dos resultados exibidos no [!UICO
 
 As informações de perfil da conta exibidas na variável [!UICONTROL Detalhes] A guia foi mesclada de vários fragmentos de perfil para formar uma única visualização da conta individual. Consulte a documentação em [procurar perfis de conta no Adobe Real-time Customer Data Platform](../../rtcdp/accounts/account-profile-ui-guide.md#browse-account-profiles) para saber mais sobre os recursos de visualização de perfil da conta na interface do usuário da plataforma.
 
-## A variável [!UICONTROL Perfis de conta] [!UICONTROL Visão geral] {#overview}
-
-A variável [!UICONTROL Visão geral] A guia é composta de widgets que fornecem métricas somente leitura para transmitir informações importantes sobre os perfis da sua conta. Selecionar **[!UICONTROL Modificar painel]** para alterar a aparência da variável [!UICONTROL Visão geral] movendo e redimensionando widgets.
-
-![A guia de visão geral Perfis de conta com o painel Modificar realçado.](../images/account-profiles/modify-dashboard.png)
-
-Consulte o documento sobre [modificação de painéis](../customize/modify.md) e a variável [Visão geral da biblioteca de widgets](../customize/widget-library.md) para saber mais.
-
 ## Widgets padrão {#standard-widgets}
 
 O Adobe fornece widgets padrão que você pode usar para visualizar métricas diferentes relacionadas aos seus perfis de conta.
 
 Para saber mais sobre cada um dos widgets padrão disponíveis, selecione o nome de um widget na lista a seguir:
 
-* [Total de contas por setor](#total-accounts-by-industry)
 * [Perfis de conta adicionados](#account-profiles-added)
+* [Contas por setor](#accounts-by-industry)
+* [Contas por tipo](#accounts-by-type)
+* [Oportunidades adicionadas](#opportunities-added)
+* [Oportunidades por função de pessoa](#opportunities-by-person-role)
+* [Oportunidades por receita](#opportunities-by-revenue)
+* [Oportunidades por status e estágio](#opportunities-by-status-&-stage)
+* [Oportunidades conquistadas](#opportunities-won)
 * [Distribuição de pontuação preditiva](#predictive-scoring-distribution)
 * [Principais fatores influentes da pontuação preditiva](#predictive-scoring-top-influential-factors)
-
-### Total de contas por setor {#total-accounts-by-industry}
-
-Este widget exibe o número total de contas em uma única métrica e usa um gráfico de rosca para ilustrar os tamanhos proporcionais das contagens para os setores que compõem o número geral. A chave fornece informações de codificação de cores para os diferentes setores que compõem o gráfico de rosca.
-
-As contagens individuais para os diferentes setores são exibidas em uma caixa de diálogo quando o cursor passa sobre a respectiva seção do gráfico de rosca.
-
-![O widget do total de contas por setor.](../images/account-profiles/total-accounts-by-industry-widget.png)
+* [Total de contas por setor](#total-accounts-by-industry)
 
 ### Perfis de conta adicionados {#account-profiles-added}
 
-Este widget usa um gráfico de barras codificado por cores para ilustrar a contagem de perfis adicionados a uma conta em um determinado período e a proporção de diferentes setores que constituem esses perfis adicionados. Os setores são codificados por cores, e uma tecla fornece as informações de codificação por cores para os diferentes setores que compõem o gráfico de barras. O período de análise é selecionado no menu suspenso widget. O gráfico de barras pode ser visualizado em um período de 30 dias, 90 dias e 12 meses.
+A variável [!UICONTROL Perfis de conta adicionados] O widget usa um gráfico de linhas para exibir o número de perfis de conta adicionados a cada dia durante um período. Use o filtro de data global localizado na parte superior do painel para determinar o período de análise. Se nenhum filtro de data for fornecido, o comportamento padrão listará os perfis de conta adicionados para o ano anterior a hoje. Os resultados podem ser usados para inferir uma tendência no número de perfis de conta adicionados.
+
+![O widget Perfis de conta foram adicionados.](../images/account-profiles/account-profiles-added.png)
+
+### Contas por setor {#accounts-by-industry}
+
+A variável [!UICONTROL Contas por setor] exibe o número total de contas em uma única métrica dentro de um gráfico de rosca. O gráfico de rosca ilustra a composição relativa de diferentes setores que compõem esse total. Uma chave codificada por cores fornece um detalhamento de todos os setores incluídos. As contagens individuais de cada setor são exibidas em uma caixa de diálogo quando o cursor passa o mouse sobre a respectiva seção do gráfico de rosca.
+
+![O widget Contas por setor.](../images/account-profiles/accounts-by-industry.png)
+
+### Contas por tipo {#accounts-by-type}
+
+A variável [!UICONTROL Contas por tipo] exibe o número total de contas em uma única métrica dentro de um gráfico de rosca. O gráfico de rosca ilustra a composição relativa de diferentes tipos de conta que compõem esse total. Uma chave com código de cores fornece um detalhamento de todos os tipos de conta incluídos. As contagens individuais de cada tipo de conta são exibidas em uma caixa de diálogo quando o cursor passa o mouse sobre a respectiva seção do gráfico de rosca.
+
+![O widget Contas por tipo.](../images/account-profiles/accounts-by-type.png)
+
+### Oportunidades adicionadas {#opportunities-added}
+
+A variável [!UICONTROL Oportunidades adicionadas] O widget usa um gráfico de linhas para exibir o número de oportunidades adicionadas a cada dia durante um período. Use o filtro de data global localizado na parte superior do painel para determinar o período de análise. Se nenhum filtro de data for fornecido, o comportamento padrão listará as oportunidades adicionadas para o ano anterior a hoje. Os resultados podem ser usados para inferir uma tendência no número de oportunidades adicionadas.
+
+<!-- Link to date filter documentation from Annamalai -->
+
+![O widget Oportunidades adicionadas.](../images/account-profiles/opportunities-added.png)
+
+### Oportunidades por função de pessoa {#opportunities-by-person-role}
+
+A variável [!UICONTROL Oportunidades por função de pessoa] O widget exibe o número total de suas oportunidades em uma única métrica dentro de um gráfico de rosca. O gráfico de rosca ilustra a composição relativa de funções que compõem esse número total de oportunidades. Uma chave codificada por cores fornece um detalhamento de todas as funções incluídas. As contagens individuais de cada função são exibidas em uma caixa de diálogo quando o cursor passa o mouse sobre a respectiva seção do gráfico de rosca.
 
 >[!NOTE]
 >
->Como os perfis são adicionados somente a uma conta e nunca são removidos, o menor número possível de perfis adicionados em um período é zero.
+>A variável [!UICONTROL Nenhum dado encontrado] ou [!UICONTROL Não foi possível carregar] O erro é causado quando a tabela de ponte &quot;Oportunidade-Pessoa&quot; não é usada no esquema. Se o seu insight exibir um desses erros, verifique o esquema de união e verifique se o grupo de campos &quot;Oportunidade-Pessoa&quot; está assimilando dados.
 
-![O widget Perfis de conta foram adicionados.](../images/account-profiles/accounts-profiles-added-widget.png)
+![O widget Oportunidades por função de pessoa.](../images/account-profiles/opportunities-by-person-role.png)
+
+### Oportunidades por receita {#opportunities-by-revenue}
+
+A variável [!UICONTROL Oportunidades por receita] O widget usa um gráfico de barras para ilustrar a quantidade total estimada de receita gerada por suas oportunidades. O widget suporta até seis oportunidades.
+
+Para ver uma caixa de diálogo que contém o total de receita específico de uma oportunidade, use o cursor para passar o mouse sobre barras individuais.
+
+![O widget Oportunidades por receita.](../images/account-profiles/opportunities-by-revenue.png)
+
+### Oportunidades por status e estágio {#opportunities-by-status-&-stage}
+
+Esse widget usa um gráfico de barras para ilustrar o número de oportunidades que estão abertas ou fechadas em todos os estágios do funil de marketing/vendas. O widget usa cores para diferenciar o estágio das oportunidades. Uma chave codificada por cores indica os estágios disponíveis para oportunidades.
+
+![O widget Oportunidades por status e estágio.](../images/account-profiles/opportunities-by-status-&-stage.png)
+
+### Oportunidades conquistadas {#opportunities-won}
+
+A variável [!UICONTROL Oportunidades conquistadas] O widget exibe o número total de oportunidades que foram finalizadas com êxito em uma única métrica dentro de um gráfico de rosca. O gráfico de rosca ilustra a composição relativa de oportunidades que são ganhas ou não. Uma chave codificada por cores distingue entre oportunidades ganhas e não ganhas. As contagens individuais de cada função são exibidas em uma caixa de diálogo quando o cursor passa o mouse sobre a respectiva seção do gráfico de rosca.
+
+![O widget Oportunidades ganhas.](../images/account-profiles/opportunities-won.png)
 
 ### Distribuição de pontuação preditiva {#predictive-scoring-distribution}
 
@@ -94,6 +147,10 @@ O gráfico de colunas fornece um detalhamento de pontuação mais granular. Cada
 
 O menu suspenso no widget permite selecionar o modelo de pontuação da conta.
 
+>[!NOTE]
+>
+>Os filtros de intervalo de datas global não se aplicam aos insights de pontuação preditiva. Os widgets de pontuação preditiva analisam dados com base no modelo de pontuação de conta selecionado na lista suspensa.
+
 ![O widget de distribuição Pontuação preditiva.](../images/account-profiles/predictive-scoring-distribution.png)
 
 ### Principais fatores influentes da pontuação preditiva {#predictive-scoring-top-influential-factors}
@@ -104,8 +161,20 @@ Este widget mostra os principais fatores influentes para cada um dos intervalos 
 
 O menu suspenso no widget permite selecionar o modelo de pontuação da conta.
 
+>[!NOTE]
+>
+>Os filtros de intervalo de datas global não se aplicam aos insights de pontuação preditiva. Os widgets de pontuação preditiva analisam dados com base no modelo de pontuação de conta selecionado na lista suspensa.
+
 ![O widget Principais fatores influentes da pontuação preditiva.](../images/account-profiles/predictive-scoring-top-influential-factors.png)
+
+### Total de contas por setor {#total-accounts-by-industry}
+
+Este widget exibe o número total de contas em uma única métrica e usa um gráfico de rosca para ilustrar os tamanhos proporcionais das contagens para os setores que compõem o número geral. A chave fornece informações de codificação de cores para os diferentes setores que compõem o gráfico de rosca.
+
+As contagens individuais para os diferentes setores são exibidas em uma caixa de diálogo quando o cursor passa sobre a respectiva seção do gráfico de rosca.
+
+![O widget do total de contas por setor.](../images/account-profiles/total-accounts-by-industry-widget.png)
 
 ## Próximas etapas
 
-Ao seguir este documento, agora você deve saber como localizar o [!UICONTROL Perfis de conta] painel. Você também deve entender as métricas exibidas nos widgets disponíveis. Para saber mais sobre como trabalhar com perfis de conta como parte de seus dados B2B na interface do usuário do Experience Platform, consulte o [visão geral dos perfis de conta](../../rtcdp/accounts/account-profile-overview.md) para o Adobe Real-Time CDP, B2B Edition.
+Ao seguir este documento, agora você deve saber como localizar o [!UICONTROL Perfis de conta] e também entendem as métricas exibidas nos widgets disponíveis. Para saber mais sobre como trabalhar com perfis de conta como parte de seus dados B2B na interface do usuário do Experience Platform, consulte o [visão geral dos perfis de conta](../../rtcdp/accounts/account-profile-overview.md) para o Adobe Real-Time CDP, B2B Edition.

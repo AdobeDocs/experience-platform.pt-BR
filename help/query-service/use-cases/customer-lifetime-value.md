@@ -2,7 +2,7 @@
 title: Rastrear sinais de dados para gerar o valor vitalício do cliente
 description: Este guia fornece uma demonstração completa sobre como usar o Data Distiller e painéis definidos pelo usuário com o Real-time Customer Data Platform para medir e visualizar o valor vitalício do cliente.
 exl-id: c74b5bff-feb2-4e21-9ee4-1e0973192570
-source-git-commit: 18c1d32bbc2732c38a9c37ee8fb9d36a23d4e515
+source-git-commit: e0af1f0110ceb514a5b249c42a05bf780ea834c6
 workflow-type: tm+mt
 source-wordcount: '1263'
 ht-degree: 0%
@@ -56,7 +56,7 @@ Em seguida, você deve criar um modelo de dados personalizado ou estender um mod
 * Crie tabelas de dimensão para estender seu modelo de insights de relatórios.
 * Consulte seu modelo de dados de insights de relatório de armazenamento acelerado estendido
 
-Consulte a documentação do Modelo de dados do Real-time Customer Data Platform Insights para saber como [personalizar seus modelos de consulta SQL para criar relatórios do Real-Time CDP para seus casos de uso de marketing e KPI (indicador principal de desempenho)](../../dashboards/cdp-insights-data-model.md).
+Consulte a documentação do Modelo de dados do Real-time Customer Data Platform Insights para saber como [personalizar seus modelos de consulta SQL para criar relatórios do Real-Time CDP para seus casos de uso de marketing e KPI (indicador principal de desempenho)](../../dashboards/data-models/cdp-insights-data-model-b2c.md).
 
 Defina um agendamento para atualizar seu modelo de dados personalizado regularmente. Isso garante que os dados retornem como parte do pipeline de assimilação, conforme necessário, e preenche os painéis definidos pelo usuário. Consulte a [guia de agendamento de consultas](../ui/query-schedules.md#create-schedule) para saber como configurar sua programação.
 

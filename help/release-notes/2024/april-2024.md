@@ -1,10 +1,11 @@
 ---
 title: Notas de versão de abril de 2024 da Adobe Experience Platform
 description: As notas de versão de abril de 2024 da Adobe Experience Platform.
-source-git-commit: 6ad7d55ca0a544879db9738c0a4ab914fdc363bd
+exl-id: 86d72fd8-a464-4715-abc9-4177236e423c
+source-git-commit: 4ec4335d19695e8d6e26390358356dedd048594e
 workflow-type: tm+mt
-source-wordcount: '1728'
-ht-degree: 18%
+source-wordcount: '1851'
+ht-degree: 17%
 
 ---
 
@@ -73,12 +74,12 @@ Para saber mais sobre coleções de dados, leia o [visão geral da coleção de 
 | Funcionalidade | Descrição |
 | ----------- | ----------- |
 | `isRequired` parâmetro agora disponível para campos de dados aninhados do cliente no Destination SDK | Ao configurar um destino no Destination SDK, agora é possível [defina campos de dados aninhados do cliente conforme necessário](/help/destinations/destination-sdk/functionality/destination-configuration/customer-data-fields.md#nested-fields). Dessa forma, os usuários que configuram seu destino não podem continuar com o fluxo de ativação até que selecionem um valor para esse campo. |
+| A segmentação de borda não é mais um requisito obrigatório ao configurar um destino do Adobe Target com o SDK da Web | Anteriormente, ao configurar um [Destino do Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) com o SDK da Web, a sequência de dados precisava ser habilitada para personalização e segmentação de borda. O requisito de que o fluxo de dados seja habilitado para segmentação de borda [foi removido](/help/destinations/ui/activate-edge-personalization-destinations.md#configure-datastream). Observe que esse padrão de integração permite que você se beneficie de um subconjunto de casos de uso de personalização ao usar o Adobe Target com o Real-Time CDP. Leia mais sobre o [casos de uso ativados pelo tipo de integração](/help/destinations/catalog/personalization/adobe-target-connection.md#parameters). |
+| [!BADGE Beta]{type=Informative} Remover vários públicos-alvo e conjuntos de dados dos fluxos de ativação | Agora é possível selecionar e remover vários públicos-alvo e conjuntos de dados dos fluxos de ativação de destino. Consulte a [detalhes do destino](../../destinations/ui/destination-details-page.md#bulk-remove) e [exportação do conjunto de dados](../../destinations/ui/export-datasets.md) para obter mais detalhes. |
 
 {style="table-layout:auto"}
 
 Para obter informações mais gerais sobre destinos, consulte a [visão geral de destinos](../../destinations/home.md).
-
-<!--| [!BADGE Beta]{type=Informative} Remove multiple audiences and datasets from activation flows | You can now select and remove multiple audiences and datasets from destination activation flows. See the [destination details](../../destinations/ui/destination-details-page.md#bulk-remove) and [dataset export](../../destinations/ui/export-datasets.md) documentation for more details. |-->
 
 ## Serviço de identidade {#identity-service}
 

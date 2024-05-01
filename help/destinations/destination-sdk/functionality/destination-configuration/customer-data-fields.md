@@ -2,7 +2,7 @@
 description: Saiba como criar campos de entrada na interface do usuário do Experience Platform que permitem que os usuários especifiquem várias informações relevantes para conexão e exportação de dados para o seu destino.
 title: Campos de dados do cliente
 exl-id: 7f5b8278-175c-4ab8-bf67-8132d128899e
-source-git-commit: 6366686e3b3f656d200aa245fc148f00e623713c
+source-git-commit: b35f584d13fb241c06b4045b525d84775ef8317c
 workflow-type: tm+mt
 source-wordcount: '1742'
 ht-degree: 1%
@@ -352,7 +352,7 @@ Para adicionar um campo aninhado, use o `properties` como mostrado abaixo. No ex
 >
 >A partir da versão de abril de 2024, você pode definir uma `isRequired` em campos aninhados. Por exemplo, no trecho de configuração abaixo, os dois primeiros campos aninhados são marcados como obrigatórios (linha destacada xxx) e os clientes não podem continuar a menos que selecionem um valor para o campo. Leia mais sobre os campos obrigatórios na [parâmetros compatíveis](#supported-parameters) seção.
 
-```json {line-numbers="true" highlight="10,19"}
+```json {line-numbers="true" highlight="11,20"}
     {
       "name": "yourdestination",
       "title": "Yourdestination - Integration Specific Settings",

@@ -3,9 +3,9 @@ title: Ativar públicos para destinos de personalização de borda
 description: Saiba como ativar públicos do Adobe Experience Platform para destinos de personalização de borda para casos de uso de personalização de mesma página e próxima página.
 type: Tutorial
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: fbc2a6c81682797af4674adabff358a62d973007
+source-git-commit: c113d9615a276af67714f38b8325e69737b23964
 workflow-type: tm+mt
-source-wordcount: '1922'
+source-wordcount: '1957'
 ht-degree: 2%
 
 ---
@@ -47,7 +47,7 @@ Para obter uma breve visão geral de como compartilhar públicos-alvo e atributo
 
 ## Casos de uso {#use-cases}
 
-Use as soluções de personalização de Adobe, como o Adobe Target, ou suas próprias plataformas de parceiros de personalização (por exemplo, [!DNL Optimizely], [!DNL Pega]), bem como sistemas proprietários (por exemplo, CMS interno) para potencializar uma experiência mais profunda de personalização do cliente por meio da [Personalização personalizada](../catalog/personalization/custom-personalization.md) destino. Tudo isso enquanto também aproveita os recursos de coleta de dados e segmentação da Rede de borda do Experience Platform.
+Use as soluções de personalização de Adobe, como o Adobe Target, ou suas próprias plataformas de parceiros de personalização (por exemplo, [!DNL Optimizely], [!DNL Pega]), bem como sistemas proprietários (por exemplo, CMS interno) para potencializar uma experiência mais profunda de personalização do cliente por meio da [Personalização personalizada](../catalog/personalization/custom-personalization.md) destino. Tudo isso enquanto também aproveita os recursos de coleta e segmentação de dados do Experience Platform Edge Network.
 
 Os casos de uso descritos abaixo incluem personalização do site e publicidade direcionada no site.
 
@@ -78,6 +78,10 @@ Uma empresa de vendas e aluguel de residências quer personalizar sua página in
 A primeira etapa na configuração do destino de personalização é configurar um fluxo de dados para o SDK da Web do Experience Platform. Isso é feito na interface da Coleção de dados.
 
 Ao configurar o fluxo de dados, em **[!UICONTROL Adobe Experience Platform]** verifique se ambos **[!UICONTROL Segmentação de borda]** e **[!UICONTROL Destinos de personalização]** são selecionados.
+
+>[!TIP]
+>
+>A partir da versão de abril de 2024, não é necessário marcar a caixa de seleção Segmentação de borda quando [configuração da conexão com o Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md). Nesse caso, [personalização da próxima sessão](#next-session) O é o único caso de uso de personalização disponível.
 
 ![Configuração da sequência de dados com Destinos de segmentação e personalização de borda destacados!](../assets/ui/activate-edge-personalization-destinations/datastream-config.png)
 
@@ -146,7 +150,7 @@ Você pode selecionar entre vários tipos de públicos-alvo, dependendo de sua o
 
 >[!IMPORTANT]
 >
->Os atributos do perfil podem conter dados confidenciais. Para proteger esses dados, a variável **[!UICONTROL Personalização personalizada]** o destino exige que você use o [API do servidor de rede de borda](../../server-api/overview.md) ao configurar o destino para personalização baseada em atributo. Todas as chamadas à API do servidor devem ser feitas em um [contexto autenticado](../../server-api/authentication.md).
+>Os atributos do perfil podem conter dados confidenciais. Para proteger esses dados, a variável **[!UICONTROL Personalização personalizada]** o destino exige que você use o [API do servidor Edge Network](../../server-api/overview.md) ao configurar o destino para personalização baseada em atributo. Todas as chamadas à API do servidor devem ser feitas em um [contexto autenticado](../../server-api/authentication.md).
 >
 ><br>Se você já estiver usando o SDK da Web ou o SDK móvel para a integração, poderá recuperar atributos por meio da API do servidor adicionando uma integração do lado do servidor.
 >

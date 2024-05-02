@@ -3,9 +3,10 @@ title: Edição B2B do Modelo de dados do Real-time Customer Data Platform Insig
 description: Saiba como usar consultas SQL com os Modelos de dados do Real-time Customer Data Platform Insights (B2B Edition) para personalizar seus próprios relatórios do Real-Time CDP para seus casos de uso de marketing e KPI.
 badgeB2B: label="Edição B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="Edição B2P" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
-source-git-commit: 52f67037756af97bac97908d4736a3cbafce6844
+exl-id: 7b77ca19-e4c6-4e93-b9e7-c4ef77d6d6d1
+source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
 workflow-type: tm+mt
-source-wordcount: '468'
+source-wordcount: '475'
 ht-degree: 0%
 
 ---
@@ -49,15 +50,15 @@ O diagrama abaixo exibe os campos de dados relevantes em cada conjunto de dados,
 
 ![O diagrama relacional de entidade para o modelo de Perfil de Conta.](../images/data-models/account-profile-model.png)
 
-#### O caso de uso Contas por setor {#accounts-by-industry}
+#### As novas contas por caso de uso de setor {#accounts-by-industry}
 
-A lógica usada para o [!UICONTROL Contas por setor] o insight retorna os cinco principais setores de acordo com o número de perfis de conta e o tamanho relativo entre si. Consulte a [[!UICONTROL Contas por setor] documentação do widget](../guides/account-profiles.md#accounts-by-industry) para obter mais informações.
+A lógica usada para o [!UICONTROL Novas contas por setor] o insight retorna os cinco principais setores de acordo com o número de perfis de conta e o tamanho relativo entre si. Consulte a [[!UICONTROL Contas por setor] documentação do widget](../guides/account-profiles.md#accounts-by-industry) para obter mais informações.
 
 >[!TIP]
 >
 >Você pode personalizar essa consulta SQL para retornar mais ou menos do que os cinco principais setores.
 
-O SQL que gera a variável [!UICONTROL Contas por setor] o insight é visto na seção recolhível abaixo.
+O SQL que gera a variável [!UICONTROL Novas contas por setor] o insight é visto na seção recolhível abaixo.
 
 Consulta +++SQL
 
@@ -94,11 +95,11 @@ LIMIT 5000;
 
 +++
 
-#### O caso de uso Contas por tipo {#accounts-by-type}
+#### O caso de uso Novas contas por tipo {#accounts-by-type}
 
-A lógica usada para o [!UICONTROL Contas por tipo] insight retorna o detalhamento numérico das contas por seu tipo. Este insight pode ajudar a orientar a estratégia e as operações de negócios, incluindo a alocação de recursos ou as estratégias de marketing. Consulte a [[!UICONTROL Contas por tipo] documentação do widget](../guides/account-profiles.md#accounts-by-type) para obter mais informações.
+A lógica usada para o [!UICONTROL Novas contas por tipo] insight retorna o detalhamento numérico das contas por seu tipo. Este insight pode ajudar a orientar a estratégia e as operações de negócios, incluindo a alocação de recursos ou as estratégias de marketing. Consulte a [[!UICONTROL Novas contas por tipo] documentação do widget](../guides/account-profiles.md#accounts-by-type) para obter mais informações.
 
-O SQL que gera a variável [!UICONTROL Contas por tipo] o insight é visto na seção recolhível abaixo.
+O SQL que gera a variável [!UICONTROL Novas contas por tipo] o insight é visto na seção recolhível abaixo.
 
 Consulta +++SQL
 

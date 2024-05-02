@@ -3,9 +3,10 @@ title: Insights do perfil da conta
 description: Descubra o SQL que potencializa os insights do Perfil da conta e use essas consultas para gerar insights personalizados que exploram ainda mais seus clientes e as experiências do consumidor.
 badgeB2B: label="Edição B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="Edição B2P" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
-source-git-commit: b7875128592b17044b068d8064de082bf00a8309
+exl-id: a953dd56-7dd8-4cd0-baa0-85f92d192789
+source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
 workflow-type: tm+mt
-source-wordcount: '543'
+source-wordcount: '549'
 ht-degree: 0%
 
 ---
@@ -46,7 +47,7 @@ ORDER BY date_key limit 5000;
 
 +++
 
-## Contas por setor {#accounts-by-industry}
+## Novas contas por setor {#accounts-by-industry}
 
 Perguntas respondidas por este insight:
 
@@ -82,7 +83,7 @@ ORDER BY total_accounts DESC limit 5000;
 
 +++
 
-## Contas por tipo {#accounts-by-type}
+## Novas contas por tipo {#accounts-by-type}
 
 Perguntas respondidas por este insight:
 
@@ -128,7 +129,7 @@ LIMIT  5000;
 
 +++
 
-## Oportunidades por função de pessoa {#opportunities-by-person-role}
+## Novas oportunidades por função de pessoa {#opportunities-by-person-role}
 
 Perguntas respondidas por este insight:
 
@@ -150,7 +151,7 @@ LIMIT  5000;
 
 +++
 
-## Oportunidades por receita {#opportunities-by-revenue}
+## Novas oportunidades por receita {#opportunities-by-revenue}
 
 Perguntas respondidas por este insight:
 
@@ -190,7 +191,7 @@ ORDER BY total_expected_revenue DESC limit 5000;
 
 +++
 
-## Oportunidades por status e estágio {#opportunities-by-status-and-stage}
+## Novas oportunidades por status e estágio {#opportunities-by-status-and-stage}
 
 Perguntas respondidas por este insight:
 
@@ -223,7 +224,7 @@ FROM   opportunities_by_isclosed limit 5000;
 
 +++
 
-## Oportunidades conquistadas {#opportunities-won}
+## Novas oportunidades conquistadas {#opportunities-won}
 
 Perguntas respondidas por este insight:
 

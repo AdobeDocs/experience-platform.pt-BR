@@ -2,9 +2,9 @@
 title: Notas de versão de abril de 2024 da Adobe Experience Platform
 description: As notas de versão de abril de 2024 da Adobe Experience Platform.
 exl-id: 86d72fd8-a464-4715-abc9-4177236e423c
-source-git-commit: fea62a2aa3c7d175afbfa808f392c3a93a0d31a0
+source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
 workflow-type: tm+mt
-source-wordcount: '1843'
+source-wordcount: '1897'
 ht-degree: 17%
 
 ---
@@ -31,15 +31,15 @@ Atualizações dos recursos existentes no Experience Platform:
 
 ## Painéis {#dashboards}
 
-O Adobe Experience Platform fornece vários painéis por meio dos quais você pode visualizar insights importantes sobre os dados de sua organização, conforme capturados durante instantâneos diários.
+A Adobe Experience Platform fornece vários painéis para você visualizar insights importantes sobre os dados de sua organização, que são capturados por instantâneos diários.
 
 **Recursos novos ou atualizados**
 
 | Recurso | Descrição |
 | --- | --- |
-| Insights B2B do Real-time Customer Data Platform | Explore insights de dados B2B pré-configurados do Real-Time CDP sobre contas e oportunidades para ajudá-lo a entender seus dados e informar suas decisões de negócios. Você também pode criar seus próprios insights usando o Modelo de dados B2B do Real-Time CDP para visualizar e explorar seus dados e salvar suas visualizações personalizadas no painel. |
+| Insights B2B do Real-time Customer Data Platform | Explorar pré-configurado [Insights de dados B2B do Real-Time CDP sobre contas e oportunidades](../../dashboards/insights/account-profiles.md) para ajudá-lo a entender seus dados e informar suas decisões comerciais. Também é possível [criar seus próprios insights usando o modelo de dados B2B do Real-Time CDP](../../dashboards/data-models/cdp-insights-data-model-b2c.md) para visualizar e explorar seus dados e salvar suas visualizações personalizadas no painel. |
 
-{style=“table-layout:auto”}
+{style="table-layout:auto"}
 
 Para obter mais informações sobre painéis, incluindo como conceder permissões de acesso e criar widgets personalizados, comece lendo a [visão geral dos painéis](../../dashboards/home.md).
 
@@ -117,14 +117,14 @@ O Query Service permite usar SQL padrão para consultar dados no [!DNL Data Lake
 
 | Recurso | Descrição |
 | --- | --- |
-| Quarentena de consulta | Isole automaticamente as execuções de consulta com falha para evitar interrupções e manter o desempenho consistente. |
-| Cancelar consulta | Assuma o controle da execução de consultas e melhore sua produtividade cancelando consultas de longa execução. |
-| Alertas de consulta agendada | Mantenha-se informado com notificações proativas enquanto agenda consultas, garantindo um gerenciamento de tarefas eficiente e oportuno. Você pode assinar alertas ao criar uma consulta ou usar as ações em linha para consultas agendadas existentes. |
-| Navegação de consulta programada aprimorada | Navegue facilmente entre modelos de consulta e execuções programadas para aumentar a produtividade. |
-| Saída de consulta estendida | Acesse até 500 linhas de resultados de query no console para uma análise mais profunda dos dados. |
-| Encerramento do Editor de Consulta Herdada | A partir de 30 de abril de 2024, o Editor de consultas aprimorado se tornou o editor padrão para todos os usuários. O editor herdado será descontinuado em 30 de maio de 2024 e não estará mais disponível para uso. |
+| Quarentena de consulta | Isole automaticamente as execuções de consulta com falha para evitar interrupções e manter o desempenho consistente. Consulte a [quarentena de consulta](../../query-service/ui/query-schedules.md#quarantine) para obter mais informações. |
+| Cancelar consulta | Assuma o controle da execução da consulta e melhore sua produtividade cancelando consultas de longa execução. Consulte o [cancelar consulta](../../query-service/ui/user-guide.md#cancel-query) para obter mais informações. |
+| Alertas de consulta agendada | Mantenha-se informado com notificações proativas enquanto agenda consultas, garantindo um gerenciamento de tarefas eficiente e oportuno. Você pode [assinar alertas ao criar uma consulta](../../query-service/ui/query-schedules.md#alerts-for-query-status) ou usando as ações em linha para consultas programadas existentes. Consulte a [assinar alertas com ações em linha](../../query-service/ui/monitor-queries.md#alert-subscription) para obter mais informações. |
+| Navegação de consulta programada aprimorada | Navegue facilmente entre modelos de consulta e execuções programadas para aumentar a produtividade. Consulte a documentação em [exibição de execuções de consulta programada](../../query-service/ui/query-schedules.md#scheduled-query-runs) para obter mais informações. |
+| Saída de consulta estendida | Acesse até 500 linhas de resultados de query no console para uma análise mais profunda de seus dados. Consulte a [contagem de resultados](../../query-service/ui/user-guide.md#result-count) para obter mais informações. |
+| Encerramento do Editor de Consulta Herdada | A partir de 30 de abril de 2024, o Editor de consultas aprimorado se tornou o editor padrão para todos os usuários. O editor herdado será descontinuado em 30 de maio de 2024 e não estará mais disponível para uso. Consulte a [Guia do usuário do Editor de consultas](../../query-service/ui/user-guide.md) para obter mais informações. |
 
-{style=“table-layout:auto”}
+{style="table-layout:auto"}
 
 Para obter mais informações sobre o Query Service, acesse a [Visão geral do Query Service](../../query-service/home.md).
 

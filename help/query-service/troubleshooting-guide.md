@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Perguntas frequentes
 description: Este documento contém perguntas e respostas comuns relacionadas ao Serviço de consulta. Os tópicos incluem exportação de dados, ferramentas de terceiros e erros de PSQL.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 006b693c71cd45408bccb7c051f367f140260370
+source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
 workflow-type: tm+mt
-source-wordcount: '4450'
-ht-degree: 1%
+source-wordcount: '4425'
+ht-degree: 0%
 
 ---
 
@@ -18,7 +18,7 @@ Este documento fornece respostas a perguntas frequentes sobre o Serviço de cons
 A lista de respostas a seguir para perguntas frequentes está dividida nas seguintes categorias:
 
 - [Geral](#general)
-- [Exportar dados](#exporting-data)
+- [Exportação de dados](#exporting-data)
 - [Ferramentas de terceiros](#third-party-tools)
 - [Erros de API PostgreSQL](#postgresql-api-errors)
 - [Erros de REST API](#rest-api-errors)
@@ -277,7 +277,7 @@ SELECT count(1) FROM myTableName
 
 Você também deve consultar a documentação para obter orientação sobre como executar o [consultas agendadas na interface do](./ui/user-guide.md#scheduled-queries) e até [a API](./api/scheduled-queries.md).
 
-Esteja ciente de que, ao usar [!DNL Query Editor] você só pode adicionar um agendamento a uma consulta que já tenha sido criada, salva e executada. Isso não se aplica à [!DNL Query Service] API.
+Esteja ciente de que, ao usar [!DNL Query Editor] você só pode adicionar um agendamento a uma consulta que já foi criada e salva. Isso não se aplica à [!DNL Query Service] API.
 +++
 
 ### O que significa o erro &quot;Limite de sessão atingido&quot;?
@@ -552,7 +552,7 @@ WHERE T2.ID IS NULL
 +++Responda Sim. Embora alguns clientes de terceiros, como DbVisualizer, possam exigir um identificador separado antes e depois de um bloco SQL para indicar que uma parte de um script deve ser tratada como uma única instrução. Mais detalhes podem ser encontrados na [documentação de bloqueio anônimo](./key-concepts/anonymous-block.md) ou em [a documentação oficial do DbVisualizer](https://confluence.dbvis.com/display/UG120/Executing+Complex+Statements#ExecutingComplexStatements-UsinganSQLDialect).
 +++
 
-## Exportar dados {#exporting-data}
+## Exportação de dados {#exporting-data}
 
 Esta seção fornece informações sobre exportação de dados e limites.
 

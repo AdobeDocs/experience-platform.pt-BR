@@ -2,9 +2,9 @@
 title: Painel de perfis de conta
 description: A Adobe Experience Platform fornece um painel por meio do qual você pode visualizar informações importantes sobre os perfis de conta B2B da sua organização.
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
-source-git-commit: b7875128592b17044b068d8064de082bf00a8309
+source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
 workflow-type: tm+mt
-source-wordcount: '1715'
+source-wordcount: '1800'
 ht-degree: 0%
 
 ---
@@ -67,16 +67,20 @@ As informações de perfil da conta exibidas na variável [!UICONTROL Detalhes] 
 
 O Adobe fornece widgets padrão que você pode usar para visualizar métricas diferentes relacionadas aos seus perfis de conta.
 
+>[!IMPORTANT]
+>
+>Se você não fornecer um filtro de datas, o comportamento padrão dos insights analisará os dados adicionados do ano anterior até hoje.
+
 Para saber mais sobre cada um dos widgets padrão disponíveis, selecione o nome de um widget na lista a seguir:
 
 * [Perfis de conta adicionados](#account-profiles-added)
-* [Contas por setor](#accounts-by-industry)
-* [Contas por tipo](#accounts-by-type)
+* [Novas contas por setor](#accounts-by-industry)
+* [Novas contas por tipo](#accounts-by-type)
 * [Oportunidades adicionadas](#opportunities-added)
-* [Oportunidades por função de pessoa](#opportunities-by-person-role)
-* [Oportunidades por receita](#opportunities-by-revenue)
-* [Oportunidades por status e estágio](#opportunities-by-status-&-stage)
-* [Oportunidades conquistadas](#opportunities-won)
+* [Novas oportunidades por função de pessoa](#opportunities-by-person-role)
+* [Novas oportunidades por receita](#opportunities-by-revenue)
+* [Novas oportunidades por status e estágio](#opportunities-by-status-&-stage)
+* [Novas oportunidades conquistadas](#opportunities-won)
 * [Distribuição de pontuação preditiva](#predictive-scoring-distribution)
 * [Principais fatores influentes da pontuação preditiva](#predictive-scoring-top-influential-factors)
 * [Total de contas por setor](#total-accounts-by-industry)
@@ -87,17 +91,17 @@ A variável [!UICONTROL Perfis de conta adicionados] O widget usa um gráfico de
 
 ![O widget Perfis de conta foram adicionados.](../images/account-profiles/account-profiles-added.png)
 
-### Contas por setor {#accounts-by-industry}
+### Novas contas por setor {#accounts-by-industry}
 
-A variável [!UICONTROL Contas por setor] exibe o número total de contas em uma única métrica dentro de um gráfico de rosca. O gráfico de rosca ilustra a composição relativa de diferentes setores que compõem esse total. Uma chave codificada por cores fornece um detalhamento de todos os setores incluídos. As contagens individuais de cada setor são exibidas em uma caixa de diálogo quando o cursor passa o mouse sobre a respectiva seção do gráfico de rosca.
+A variável [!UICONTROL Novas contas por setor] exibe o número total de contas em uma única métrica dentro de um gráfico de rosca. O gráfico de rosca ilustra a composição relativa de diferentes setores que compõem esse total. Uma chave codificada por cores fornece um detalhamento de todos os setores incluídos. As contagens individuais de cada setor são exibidas em uma caixa de diálogo quando o cursor passa o mouse sobre a respectiva seção do gráfico de rosca.
 
-![O widget Contas por setor.](../images/account-profiles/accounts-by-industry.png)
+![O widget Novas contas por setor.](../images/account-profiles/new-accounts-by-industry.png)
 
-### Contas por tipo {#accounts-by-type}
+### Novas contas por tipo {#accounts-by-type}
 
-A variável [!UICONTROL Contas por tipo] exibe o número total de contas em uma única métrica dentro de um gráfico de rosca. O gráfico de rosca ilustra a composição relativa de diferentes tipos de conta que compõem esse total. Uma chave com código de cores fornece um detalhamento de todos os tipos de conta incluídos. As contagens individuais de cada tipo de conta são exibidas em uma caixa de diálogo quando o cursor passa o mouse sobre a respectiva seção do gráfico de rosca.
+A variável [!UICONTROL Novas contas por tipo] exibe o número total de contas em uma única métrica dentro de um gráfico de rosca. O gráfico de rosca ilustra a composição relativa de diferentes tipos de conta que compõem esse total. Uma chave com código de cores fornece um detalhamento de todos os tipos de conta incluídos. As contagens individuais de cada tipo de conta são exibidas em uma caixa de diálogo quando o cursor passa o mouse sobre a respectiva seção do gráfico de rosca.
 
-![O widget Contas por tipo.](../images/account-profiles/accounts-by-type.png)
+![O widget Novas contas por tipo.](../images/account-profiles/new-accounts-by-type.png)
 
 ### Oportunidades adicionadas {#opportunities-added}
 
@@ -107,35 +111,35 @@ A variável [!UICONTROL Oportunidades adicionadas] O widget usa um gráfico de l
 
 ![O widget Oportunidades adicionadas.](../images/account-profiles/opportunities-added.png)
 
-### Oportunidades por função de pessoa {#opportunities-by-person-role}
+### Novas oportunidades por função de pessoa {#opportunities-by-person-role}
 
-A variável [!UICONTROL Oportunidades por função de pessoa] O widget exibe o número total de suas oportunidades em uma única métrica dentro de um gráfico de rosca. O gráfico de rosca ilustra a composição relativa de funções que compõem esse número total de oportunidades. Uma chave codificada por cores fornece um detalhamento de todas as funções incluídas. As contagens individuais de cada função são exibidas em uma caixa de diálogo quando o cursor passa o mouse sobre a respectiva seção do gráfico de rosca.
+A variável [!UICONTROL Novas oportunidades por função de pessoa] O widget exibe o número total de suas oportunidades em uma única métrica dentro de um gráfico de rosca. O gráfico de rosca ilustra a composição relativa de funções que compõem esse número total de oportunidades. Uma chave codificada por cores fornece um detalhamento de todas as funções incluídas. As contagens individuais de cada função são exibidas em uma caixa de diálogo quando o cursor passa o mouse sobre a respectiva seção do gráfico de rosca.
 
 >[!NOTE]
 >
 >A variável [!UICONTROL Nenhum dado encontrado] ou [!UICONTROL Não foi possível carregar] O erro é causado quando a tabela de ponte &quot;Oportunidade-Pessoa&quot; não é usada no esquema. Se o seu insight exibir um desses erros, verifique o esquema de união e verifique se o grupo de campos &quot;Oportunidade-Pessoa&quot; está assimilando dados.
 
-![O widget Oportunidades por função de pessoa.](../images/account-profiles/opportunities-by-person-role.png)
+![O widget Novas oportunidades por função de pessoa.](../images/account-profiles/new-opportunities-by-person-role.png)
 
-### Oportunidades por receita {#opportunities-by-revenue}
+### Novas oportunidades por receita {#opportunities-by-revenue}
 
-A variável [!UICONTROL Oportunidades por receita] O widget usa um gráfico de barras para ilustrar a quantidade total estimada de receita gerada por suas oportunidades. O widget suporta até seis oportunidades.
+A variável [!UICONTROL Novas oportunidades por receita] O widget usa um gráfico de barras para ilustrar a quantidade total estimada de receita gerada por suas oportunidades. O widget suporta até seis oportunidades.
 
 Para ver uma caixa de diálogo que contém o total de receita específico de uma oportunidade, use o cursor para passar o mouse sobre barras individuais.
 
-![O widget Oportunidades por receita.](../images/account-profiles/opportunities-by-revenue.png)
+![O widget Novas oportunidades por receita.](../images/account-profiles/new-opportunities-by-revenue.png)
 
-### Oportunidades por status e estágio {#opportunities-by-status-&-stage}
+### Novas oportunidades por status e estágio {#opportunities-by-status-&-stage}
 
 Esse widget usa um gráfico de barras para ilustrar o número de oportunidades que estão abertas ou fechadas em todos os estágios do funil de marketing/vendas. O widget usa cores para diferenciar o estágio das oportunidades. Uma chave codificada por cores indica os estágios disponíveis para oportunidades.
 
-![O widget Oportunidades por status e estágio.](../images/account-profiles/opportunities-by-status-&-stage.png)
+![O widget Novas oportunidades por status e estágio.](../images/account-profiles/new-opportunities-by-status-&-stage.png)
 
-### Oportunidades conquistadas {#opportunities-won}
+### Novas oportunidades conquistadas {#opportunities-won}
 
-A variável [!UICONTROL Oportunidades conquistadas] O widget exibe o número total de oportunidades que foram finalizadas com êxito em uma única métrica dentro de um gráfico de rosca. O gráfico de rosca ilustra a composição relativa de oportunidades que são ganhas ou não. Uma chave codificada por cores distingue entre oportunidades ganhas e não ganhas. As contagens individuais de cada função são exibidas em uma caixa de diálogo quando o cursor passa o mouse sobre a respectiva seção do gráfico de rosca.
+A variável [!UICONTROL Novas oportunidades conquistadas] O widget exibe o número total de oportunidades que foram finalizadas com êxito em uma única métrica dentro de um gráfico de rosca. O gráfico de rosca ilustra a composição relativa de oportunidades que são ganhas ou não. Uma chave codificada por cores distingue entre oportunidades ganhas e não ganhas. As contagens individuais de cada função são exibidas em uma caixa de diálogo quando o cursor passa o mouse sobre a respectiva seção do gráfico de rosca.
 
-![O widget Oportunidades ganhas.](../images/account-profiles/opportunities-won.png)
+![Widget de Novas oportunidades ganhas.](../images/account-profiles/new-opportunities-won.png)
 
 ### Distribuição de pontuação preditiva {#predictive-scoring-distribution}
 
@@ -170,6 +174,10 @@ O menu suspenso no widget permite selecionar o modelo de pontuação da conta.
 ### Total de contas por setor {#total-accounts-by-industry}
 
 Este widget exibe o número total de contas em uma única métrica e usa um gráfico de rosca para ilustrar os tamanhos proporcionais das contagens para os setores que compõem o número geral. A chave fornece informações de codificação de cores para os diferentes setores que compõem o gráfico de rosca.
+
+>[!NOTE]
+>
+>As informações exibidas por esse insight dependem do intervalo de datas especificado por você. Se você não fornecer um filtro de datas, o comportamento padrão do insight analisa os dados adicionados do ano anterior até hoje.
 
 As contagens individuais para os diferentes setores são exibidas em uma caixa de diálogo quando o cursor passa sobre a respectiva seção do gráfico de rosca.
 

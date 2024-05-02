@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guia da interface do usuário de públicos
 description: A Composição de público-alvo na interface do usuário do Adobe Experience Platform fornece um espaço de trabalho avançado que permite interagir com elementos de dados do perfil. O espaço de trabalho fornece controles intuitivos para criação e edição de públicos-alvo para sua organização.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: 10079216cbfa5ace68127d1529d47e83f4448049
+source-git-commit: d22f8b4a39cb76dab4c976d8ea883d5170ee34e4
 workflow-type: tm+mt
-source-wordcount: '1844'
+source-wordcount: '1889'
 ht-degree: 0%
 
 ---
@@ -55,6 +55,8 @@ Para adicionar públicos-alvo ao bloco Público-alvo. selecionar **[!UICONTROL A
 >[!IMPORTANT]
 >
 >Observe que **somente** os públicos-alvo definidos usando a política de mesclagem padrão serão exibidos.
+>
+>Além disso, apenas **publicado** públicos-alvo criados usando o Construtor de segmentos podem ser usados. Os públicos-alvo criados usando a Composição de público-alvo e públicos gerados externamente são **não** disponíveis.
 
 Uma lista de públicos-alvo é exibida. Selecione os públicos que deseja incluir, seguido por **[!UICONTROL Adicionar]** para anexá-los ao bloco de público-alvo.
 
@@ -101,6 +103,10 @@ A variável **[!UICONTROL Excluir]** bloco é adicionado. Quando esse bloco for 
 Se excluir por público, você pode selecionar quais públicos deseja excluir selecionando **[!UICONTROL Adicionar público-alvo]**.
 
 ![A variável [!UICONTROL Adicionar público-alvo] for selecionado, o que permite escolher qual público-alvo você deseja excluir.](../images/ui/audience-composition/add-excluded-audience.png)
+
+>[!IMPORTANT]
+>
+>Somente **publicado** públicos-alvo criados usando o Construtor de segmentos podem ser usados. Os públicos-alvo criados usando a Composição de público-alvo e públicos gerados externamente são **não** disponíveis.
 
 Uma lista de públicos-alvo é exibida. Selecionar **[!UICONTROL Adicionar]** para adicionar os públicos-alvo que você deseja excluir ao bloco excluir.
 

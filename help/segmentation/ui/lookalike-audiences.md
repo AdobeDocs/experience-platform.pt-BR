@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Públicos-alvo semelhantes
 description: Saiba como direcionar novos públicos-alvo de alto valor no Adobe Experience Platform usando públicos-alvo semelhantes.
 exl-id: c43dac6c-18a0-482f-803e-b75e1b211e98
-source-git-commit: fe2bb709a7ee56323492fed381c447e6a79fd5f8
+source-git-commit: 36fffcddb09444dd6e010a4b5afeec6bf0b5c3bf
 workflow-type: tm+mt
-source-wordcount: '2212'
+source-wordcount: '2193'
 ht-degree: 9%
 
 ---
@@ -197,7 +197,7 @@ Os públicos-alvo semelhantes podem ser configurados para excluir campos de dado
 
 O rótulo &quot;C9&quot; padrão pode ser usado para rotular dados que não devem ser usados para ciência de dados e pode ser aplicado ativando a política &quot;Restringir ciência de dados&quot; padrão. Você também pode criar políticas adicionais para restringir o uso de dados com outros rótulos, incluindo rótulos confidenciais, para ciência de dados. Para obter mais informações sobre como gerenciar políticas de uso de dados, leia a [guia da interface de políticas de uso de dados](../../data-governance/policies/user-guide.md). Para obter mais informações sobre como gerenciar rótulos de uso de dados, leia a [guia da interface do usuário de rótulos de uso de dados](../../data-governance/labels/user-guide.md).
 
-Por padrão, o processo de modelagem para públicos-alvo semelhantes excluirá **qualquer** campo, conjunto de dados ou público-alvo com base na política de privacidade ativada para sua organização. Se o público-alvo base não tiver rótulos de contrato, o processo de modelagem excluirá **qualquer** campo, conjunto de dados ou público-alvo com base na política de privacidade ativada para sua organização.
+Por padrão, se um público-alvo base não tiver rótulos de contrato, o processo de modelagem para públicos-alvo semelhantes será excluído **qualquer** campo, conjunto de dados ou público-alvo com base na política de privacidade ativada para sua organização.
 
 ## Próximas etapas
 

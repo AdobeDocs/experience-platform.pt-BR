@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guia da interface do usuário do Serviço de segmentação
 description: Saiba como criar e gerenciar públicos e definições de segmento na interface do usuário do Adobe Experience Platform.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: c1a2d55cb99a1f66698289751a967f8c5f80a7bf
+source-git-commit: 795b76465c59fc375542b92cdd3deefce8c000ca
 workflow-type: tm+mt
-source-wordcount: '4105'
+source-wordcount: '4274'
 ht-degree: 3%
 
 ---
@@ -82,12 +82,8 @@ Ao lado de cada público há um ícone de reticências. Selecionar essa opção 
 | [!UICONTROL Aplicar rótulos de acesso] | Composição de público-alvo, Upload personalizado, Serviço de segmentação | Gerencia os rótulos de acesso que pertencem ao público. Para obter mais informações sobre rótulos de acesso, leia a documentação em [gerenciamento de rótulos](../../access-control/abac/ui/labels.md). |
 | [!UICONTROL Publish] | Upload personalizado, Serviço de segmentação | Publica o público selecionado. Para obter mais informações sobre o gerenciamento do status do ciclo de vida, leia a [seção estado do ciclo de vida das Perguntas frequentes sobre segmentação](../faq.md#lifecycle-states). |
 | [!UICONTROL Desativar] | Upload personalizado, Serviço de segmentação | Desativa o público selecionado. Para obter mais informações sobre o gerenciamento do status do ciclo de vida, leia a [seção estado do ciclo de vida das Perguntas frequentes sobre segmentação](../faq.md#lifecycle-states). |
-| [!UICONTROL Excluir] | Composição de público-alvo, Upload personalizado, Serviço de segmentação | Exclui o público selecionado. |
+| [!UICONTROL Excluir] | Composição de público-alvo, Upload personalizado, Serviço de segmentação | Exclui o público selecionado. Públicos-alvo usados em destinos downstream ou que são dependentes de outros públicos-alvo **não é possível** ser excluídos. Para obter mais informações sobre exclusão de público-alvo, leia a [perguntas frequentes sobre segmentação](../faq.md#lifecycle-states). |
 | [!UICONTROL Adicionar ao pacote] | Composição de público-alvo, Upload personalizado, Serviço de segmentação | Move o público-alvo entre sandboxes. Para obter mais informações sobre esse recurso, leia a [guia de ferramentas de sandbox](../../sandboxes/ui/sandbox-tooling.md). |
-
->[!NOTE]
->
-> Você vai **não** ser capaz de excluir um público-alvo usado em uma ativação de destino.
 
 Na parte superior da página há opções para adicionar todos os públicos-alvo a um agendamento, importar um público-alvo, criar um novo público-alvo e exibir um detalhamento da frequência de atualização.
 
@@ -356,6 +352,15 @@ Ao importar o público gerado externamente, você deve selecionar uma das coluna
 
 ![A variável [!UICONTROL Detalhes do público] é exibida.](../images/ui/overview/import-audience-audience-details.png)
 
+Opcionalmente, também é possível adicionar alguns detalhes extras ao público-alvo gerado externamente, incluindo fornecer uma ID, definir a política de mesclagem ou editar o tipo de dados da coluna.
+
+>[!NOTE]
+>
+>Se você usar uma ID de público-alvo externa personalizada, ela deverá seguir as seguintes diretrizes:
+>
+> - É **deve** comece com uma letra (a-z ou A-Z), um sublinhado (_) ou um cifrão ($).
+> - Todos os caracteres subsequentes podem ser alfanuméricos (a-z, A-Z, 0-9), sublinhados (_) ou cifrões ($).
+
 Depois de preencher os detalhes do público-alvo, selecione **[!UICONTROL Próxima]**.
 
 ![A variável [!UICONTROL Próxima] O botão está realçado no link [!UICONTROL Detalhes do público] página.](../images/ui/overview/import-audience-filled-details.png)
@@ -397,6 +402,14 @@ Selecione o **[!UICONTROL Composições]** para ver uma lista de todos os públi
 ![Uma lista de públicos-alvo criada na Composição de público-alvo para sua organização.](../images/ui/overview/compositions.png)
 
 Por padrão, essa exibição lista informações sobre os públicos-alvo, incluindo nome, status, data de criação, criado por, data da última atualização e atualizado pela última vez por.
+
+Ao lado de cada público há um ícone de reticências. Selecionar essa opção exibe uma lista de ações rápidas disponíveis para o público-alvo.
+
+| Ação | Descrição |
+| ------ | ----------- |
+| Duplicar | Copia o público selecionado. |
+| Gerenciar acesso | Gerencia os rótulos de acesso que pertencem ao público. Para obter mais informações sobre rótulos de acesso, leia a documentação em [gerenciamento de rótulos](../../access-control/abac/ui/labels.md). |
+| Excluir | Exclui o público selecionado. Públicos-alvo usados em destinos downstream ou que são dependentes de outros públicos-alvo **não é possível** ser excluídos. Para obter mais informações sobre exclusão de público-alvo, leia a [perguntas frequentes sobre segmentação](../faq.md#lifecycle-states). |
 
 É possível selecionar a variável ![Personalizar tabela](../images/ui/overview/customize-table.png) ícone para alterar os campos exibidos.
 

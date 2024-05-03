@@ -2,9 +2,9 @@
 title: Notas de versão da extensão SDK da Web da Adobe Experience Platform
 description: Extensão de tag do SDK da Web da Adobe Experience Platform
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
+source-git-commit: ea3df4f05850547c75358fb15bf7a1e6a1d19dbf
 workflow-type: tm+mt
-source-wordcount: '1983'
+source-wordcount: '2024'
 ht-degree: 32%
 
 ---
@@ -13,6 +13,15 @@ ht-degree: 32%
 # Notas de versão da extensão SDK da Web da Adobe Experience Platform
 
 Este documento aborda as notas de versão da extensão de tag do SDK da Web da Adobe Experience Platform. Para obter as notas de versão mais recentes sobre o próprio SDK, consulte a [Notas de versão do SDK da Web da Platform](/help/web-sdk/release-notes.md).
+
+## Versão 2.22.0 - 3 de maio de 2024
+
+**Novos recursos**
+
+* Estenda o elemento de dados variável para suportar objetos de dados.
+* A ação Atualizar variável agora é compatível com a modificação de dados de passagem do Adobe Analytics, Adobe Audience Manager e Adobe Target.
+
+Contém a versão 2.19.2 do SDK da Web da Adobe Experience Platform.
 
 ## Versão 2.21.4 - 10 de janeiro de 2024
 

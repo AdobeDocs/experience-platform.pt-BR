@@ -5,7 +5,7 @@ exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
 source-git-commit: 51f8a8c77518a0b2e9e4b914c891f97433db1ef2
 workflow-type: tm+mt
 source-wordcount: '1256'
-ht-degree: 8%
+ht-degree: 9%
 
 ---
 
@@ -28,7 +28,7 @@ Este tutorial requer uma compreensão funcional dos seguintes componentes do Ado
 * [Perfil do cliente em tempo real](../../profile/home.md): fornece um perfil de consumidor unificado em tempo real com base em dados agregados de várias fontes.
 * [Sandboxes](../../sandboxes/home.md): o Experience Platform fornece sandboxes virtuais que particionam uma única instância da Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
-## Monitorar os dados de origens usando o painel de monitoramento
+## Monitore os dados das suas fontes usando o painel de monitoramento
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_source_ingestion"

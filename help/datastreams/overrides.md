@@ -1,17 +1,17 @@
 ---
 title: Configurar substituições de sequência de dados
-description: Saiba como configurar substituições na interface das sequências de dados e ativá-las por meio do SDK da Web.
+description: Saiba como configurar substituições de sequência de dados na interface do usuário de sequências de dados e ativá-las por meio do SDK da Web ou do SDK móvel.
 exl-id: 3f17a83a-dbea-467b-ac67-5462c07c884c
-source-git-commit: b9b6320b15ee93807ebf8b48f31be7386a6f4a19
+source-git-commit: 17ed5f3c14d4787352f72d3d7721cbb6416d533e
 workflow-type: tm+mt
-source-wordcount: '1067'
-ht-degree: 68%
+source-wordcount: '1081'
+ht-degree: 57%
 
 ---
 
 # Configurar substituições de sequência de dados
 
-As substituições de sequência de dados permitem definir configurações adicionais para suas sequências de dados, que são transmitidas para a rede de borda por meio do SDK da Web.
+As substituições de sequência de dados permitem definir configurações adicionais para as sequências de dados, que são transmitidas para o Edge Network por meio do SDK da Web ou do SDK móvel.
 
 Isso ajuda a acionar comportamentos de sequência de dados diferentes dos padrão, sem criar uma sequência de dados ou modificar as configurações existentes.
 
@@ -68,7 +68,7 @@ Depois de criar o fluxo de dados, edite o [Adobe Target](configure.md#target) se
 
 Depois de adicionar as substituições desejadas, salve as configurações da sequência de dados.
 
-Agora as substituições de sequência de dados do Adobe Target devem estar configuradas. O próximo passo é [enviar as substituições para a rede de borda por meio do SDK da Web](#send-overrides).
+Agora as substituições de sequência de dados do Adobe Target devem estar configuradas. Agora é possível [enviar as substituições para o Edge Network pelo SDK da Web ou SDK móvel](#send-overrides).
 
 ### Substituições de sequência de dados para o Adobe Analytics {#analytics-overrides}
 
@@ -82,7 +82,7 @@ Selecione **[!UICONTROL Mostrar modo de lote]** para habilitar a edição em lot
 
 Depois de adicionar as substituições desejadas, salve as configurações da sequência de dados.
 
-Agora as substituições de sequência de dados do Adobe Analytics devem estar configuradas. O próximo passo é [enviar as substituições para a rede de borda por meio do SDK da Web](#send-overrides).
+Agora as substituições de sequência de dados do Adobe Analytics devem estar configuradas. Agora é possível [enviar as substituições para o Edge Network pelo SDK da Web ou SDK móvel](#send-overrides).
 
 ### Substituições de sequência de dados para conjuntos de dados de eventos da Experience Platform {#event-dataset-overrides}
 
@@ -94,7 +94,7 @@ Depois de criar o fluxo de dados, edite o [Adobe Experience Platform](configure.
 
 Depois de adicionar as substituições desejadas, salve as configurações da sequência de dados.
 
-Agora as substituições de sequência de dados da Adobe Experience Platform devem estar configuradas. O próximo passo é [enviar as substituições para a rede de borda por meio do SDK da Web](#send-overrides).
+Agora as substituições de sequência de dados da Adobe Experience Platform devem estar configuradas. Agora é possível [enviar as substituições para o Edge Network pelo SDK da Web ou SDK móvel](#send-overrides).
 
 ### Substituições de sequência de dados para containers de sincronização de ID de terceiros {#container-overrides}
 
@@ -112,9 +112,9 @@ Em seguida, use a seção **[!UICONTROL Substituições de ID de container]** pa
 
 Depois de adicionar as substituições desejadas, salve as configurações da sequência de dados.
 
-Agora as substituições do container de sincronização de ID devem estar configuradas. O próximo passo é [enviar as substituições para a rede de borda por meio do SDK da Web](#send-overrides).
+Agora as substituições do container de sincronização de ID devem estar configuradas. Agora é possível [enviar as substituições para o Edge Network pelo SDK da Web ou SDK móvel](#send-overrides).
 
-## Enviar as substituições para a rede de borda por meio do SDK da Web {#send-overrides}
+## Enviar as sobreposições para o Edge Network {#send-overrides}
 
 Depois de configurar as substituições de fluxo de dados na interface da Coleção de dados, você pode enviar as substituições para o Edge Network por meio do SDK da Web ou do SDK móvel.
 

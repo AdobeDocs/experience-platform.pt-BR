@@ -2,16 +2,16 @@
 title: Assimilação de dados criptografados
 description: Saiba como assimilar arquivos criptografados por meio de fontes de lote de armazenamento na nuvem usando a API.
 exl-id: 83a7a154-4f55-4bf0-bfef-594d5d50f460
-source-git-commit: a92a3d4ce16e50d9eec97448e677ca603931fa44
+source-git-commit: adb48b898c85561efb2d96b714ed98a0e3e4ea9b
 workflow-type: tm+mt
-source-wordcount: '1473'
+source-wordcount: '1736'
 ht-degree: 2%
 
 ---
 
 # Assimilação de dados criptografados
 
-O Adobe Experience Platform permite assimilar arquivos criptografados por meio de fontes em lote de armazenamento na nuvem. Com a assimilação de dados criptografados, você pode aproveitar os mecanismos assimétricos de criptografia para transferir com segurança os dados em lote para o Experience Platform. Atualmente, os mecanismos de criptografia assimétrica compatíveis são PGP e GPG.
+Você pode assimilar arquivos de dados criptografados na Adobe Experience Platform usando fontes de lote de armazenamento na nuvem. Com a assimilação de dados criptografados, você pode aproveitar os mecanismos assimétricos de criptografia para transferir com segurança os dados em lote para o Experience Platform. Atualmente, os mecanismos de criptografia assimétrica compatíveis são PGP e GPG.
 
 O processo de assimilação de dados criptografados é o seguinte:
 
@@ -27,7 +27,7 @@ O processo de assimilação de dados criptografados é o seguinte:
 
 Este documento fornece etapas sobre como gerar um par de chaves de criptografia para criptografar seus dados e assimilar esses dados criptografados no Experience Platform usando fontes de armazenamento na nuvem.
 
-## Introdução
+## Introdução {#get-started}
 
 Este tutorial requer que você tenha uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
@@ -39,9 +39,9 @@ Este tutorial requer que você tenha uma compreensão funcional dos seguintes co
 
 Para obter informações sobre como fazer chamadas para APIs da Platform com êxito, consulte o manual em [introdução às APIs da Platform](../../../landing/api-guide.md).
 
-### Extensões de arquivo compatíveis com arquivos criptografados
+### Extensões de arquivo compatíveis com arquivos criptografados {#supported-file-extensions-for-encrypted-files}
 
-A lista de extensões de arquivo compatíveis com arquivos criptografados é a seguinte:
+A lista de extensões de arquivo compatíveis com arquivos criptografados é:
 
 * .csv
 * .tsv
@@ -74,6 +74,8 @@ POST /data/foundation/connectors/encryption/keys
 
 **Solicitação**
 
++++Exibir solicitação de exemplo
+
 A solicitação a seguir gera um par de chaves de criptografia usando o algoritmo de criptografia PGP.
 
 ```shell
@@ -97,7 +99,11 @@ curl -X POST \
 | `encryptionAlgorithm` | O tipo de algoritmo de criptografia que você está usando. Os tipos de criptografia compatíveis são `PGP` e `GPG`. |
 | `params.passPhrase` | A senha fornece uma camada adicional de proteção para suas chaves de criptografia. Após a criação, o Experience Platform armazena a senha em um cofre seguro diferente da chave pública. Você deve fornecer uma sequência de caracteres não vazia como senha. |
 
++++
+
 **Resposta**
+
++++Exibir resposta de exemplo
 
 Uma resposta bem-sucedida retorna a chave pública codificada na Base64, a ID da chave pública e o tempo de expiração das chaves. O tempo de expiração é automaticamente definido como 180 dias após a data de geração da chave. A hora de expiração não pode ser configurada no momento.
 
@@ -115,9 +121,93 @@ Uma resposta bem-sucedida retorna a chave pública codificada na Base64, a ID da
 | `publicKeyId` | A ID da chave pública é usada para criar um fluxo de dados e assimilar os dados criptografados do armazenamento na nuvem no Experience Platform. |
 | `expiryTime` | O tempo de expiração define a data de expiração do par de chaves de criptografia. Essa data é definida automaticamente para 180 dias após a data de geração da chave e é exibida no formato de carimbo de data e hora unix. |
 
-+++(Opcional) Criar par de chaves de verificação de assinatura para dados assinados
++++
 
-### Criar par de chaves gerenciado pelo cliente
+### Recuperar chaves de criptografia {#retrieve-encryption-keys}
+
+Para recuperar todas as chaves de criptografia em sua organização, faça uma solicitação GET ao `/encryption/keys` endpoint=nt.
+
+**Formato da API**
+
+```http
+GET /data/foundation/connectors/encryption/keys
+```
+
+**Solicitação**
+
++++Exibir solicitação de exemplo
+
+A solicitação a seguir recupera todas as chaves de criptografia na organização.
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/connectors/encryption/keys' \
+  -H 'Authorization: Bearer {{ACCESS_TOKEN}}' \
+  -H 'x-api-key: {{API_KEY}}' \
+  -H 'x-gw-ims-org-id: {{ORG_ID}}' \
+```
+
++++
+
+**Resposta**
+
++++Exibir resposta de exemplo
+
+Uma resposta bem-sucedida retorna o algoritmo de criptografia, a chave pública, a ID de chave pública e o tempo de expiração correspondente de suas chaves.
+
+```json
+{
+    "encryptionAlgorithm": "{ENCRYPTION_ALGORITHM}",
+    "publicKeyId": "{PUBLIC_KEY_ID}",
+    "publicKey": "{PUBLIC_KEY}",
+    "expiryTime": "{EXPIRY_TIME}"
+}
+```
+
++++
+
+### Recuperar chaves de criptografia por ID {#retrieve-encryption-keys-by-id}
+
+Para recuperar um conjunto específico de chaves de criptografia, faça uma solicitação GET ao `/encryption/keys` e forneça sua ID de chave pública como um parâmetro de cabeçalho.
+
+**Formato da API**
+
+```http
+GET /data/foundation/connectors/encryption/keys/{PUBLIC_KEY_ID}
+```
+
+**Solicitação**
+
++++Exibir solicitação de exemplo
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/connectors/encryption/keys/{publicKeyId}' \
+  -H 'Authorization: Bearer {{ACCESS_TOKEN}}' \
+  -H 'x-api-key: {{API_KEY}}' \
+  -H 'x-gw-ims-org-id: {{ORG_ID}}' \
+```
+
++++
+
+**Resposta**
+
++++Exibir resposta de exemplo
+
+Uma resposta bem-sucedida retorna o algoritmo de criptografia, a chave pública, a ID de chave pública e o tempo de expiração correspondente de suas chaves.
+
+```json
+{
+    "encryptionAlgorithm": "{ENCRYPTION_ALGORITHM}",
+    "publicKeyId": "{PUBLIC_KEY_ID}",
+    "publicKey": "{PUBLIC_KEY}",
+    "expiryTime": "{EXPIRY_TIME}"
+}
+```
+
++++
+
+### Criar par de chaves gerenciado pelo cliente {#create-customer-managed-key-pair}
 
 Opcionalmente, é possível criar um par de chaves de verificação de assinatura para assinar e assimilar os dados criptografados.
 
@@ -134,6 +224,8 @@ POST /data/foundation/connectors/encryption/customer-keys
 ```
 
 **Solicitação**
+
++++Exibir solicitação de exemplo
 
 ```shell
 curl -X POST \
@@ -154,7 +246,11 @@ curl -X POST \
 | `encryptionAlgorithm` | O tipo de algoritmo de criptografia que você está usando. Os tipos de criptografia compatíveis são `PGP` e `GPG`. |
 | `publicKey` | A chave pública que corresponde às chaves gerenciadas pelo cliente usadas para assinar o criptografado. Essa chave deve ser codificada na Base64. |
 
++++
+
 **Resposta**
+
++++Exibir resposta de exemplo
 
 ```json
 {    
@@ -179,7 +275,7 @@ Primeiro, você deve criar uma conexão base para autenticar sua origem na Platf
 * [Azure Blob](../api/create/cloud-storage/blob.md)
 * [Armazenamento Azure Data Lake Gen2](../api/create/cloud-storage/adls-gen2.md)
 * [Armazenamento de arquivos do Azure](../api/create/cloud-storage/azure-file-storage.md)
-* [Zona de aterrissagem de dados](../api/create/cloud-storage/data-landing-zone.md)
+* [Data Landing Zone](../api/create/cloud-storage/data-landing-zone.md)
 * [FTP](../api/create/cloud-storage/ftp.md)
 * [Armazenamento em nuvem Google](../api/create/cloud-storage/google.md)
 * [Armazenamento de objetos de oracle](../api/create/cloud-storage/oracle-object-storage.md)
@@ -196,7 +292,7 @@ Depois de criar uma conexão básica, siga as etapas descritas no tutorial para 
 >* [ID da chave pública](#create-encryption-key-pair)
 >* [ID da conexão de origem](../api/collect/cloud-storage.md#source)
 >* [ID da conexão de destino](../api/collect/cloud-storage.md#target)
->* [ID de mapeamento](../api/collect/cloud-storage.md#mapping)
+>* [ID do mapeamento](../api/collect/cloud-storage.md#mapping)
 
 Para criar um fluxo de dados, faça uma solicitação POST ao `/flows` endpoint do [!DNL Flow Service] API. Para assimilar dados criptografados, é necessário adicionar um `encryption` para a `transformations` propriedade e incluir a `publicKeyId` criado em uma etapa anterior.
 
@@ -206,11 +302,13 @@ Para criar um fluxo de dados, faça uma solicitação POST ao `/flows` endpoint 
 POST /flows
 ```
 
-**Solicitação**
-
 >[!BEGINTABS]
 
 >[!TAB Criar um fluxo de dados para assimilação de dados criptografados]
+
+**Solicitação**
+
++++Exibir solicitação de exemplo
 
 A solicitação a seguir cria um fluxo de dados para assimilar dados criptografados de uma fonte de armazenamento na nuvem.
 
@@ -268,8 +366,28 @@ curl -X POST \
 | `scheduleParams.frequency` | A frequência com que o fluxo de dados coletará dados. Os valores aceitáveis incluem: `once`, `minute`, `hour`, `day`ou `week`. |
 | `scheduleParams.interval` | O intervalo designa o período entre duas execuções de fluxo consecutivas. O valor do intervalo deve ser um inteiro diferente de zero. O intervalo não é necessário quando a frequência está definida como `once` e deve ser maior ou igual a `15` para outros valores de frequência. |
 
++++
+
+**Resposta**
+
++++Exibir resposta de exemplo
+
+Uma resposta bem-sucedida retorna a ID (`id`) do fluxo de dados recém-criado para seus dados criptografados.
+
+```json
+{
+    "id": "dbc5c132-bc2a-4625-85c1-32bc2a262558",
+    "etag": "\"8e000533-0000-0200-0000-5f3c40fd0000\""
+}
+```
+
++++
 
 >[!TAB Criar um fluxo de dados para assimilar dados criptografados e assinados]
+
+**Solicitação**
+
++++Exibir solicitação de exemplo
 
 ```shell
 curl -X POST \
@@ -318,9 +436,11 @@ curl -X POST \
 | --- | --- |
 | `params.signVerificationKeyId` | A ID da chave de verificação de sinal é a mesma que a ID da chave pública que foi recuperada após compartilhar sua chave pública codificada em Base64 com o Experience Platform. |
 
->[!ENDTABS]
++++
 
 **Resposta**
+
++++Exibir resposta de exemplo
 
 Uma resposta bem-sucedida retorna a ID (`id`) do fluxo de dados recém-criado para seus dados criptografados.
 
@@ -331,10 +451,92 @@ Uma resposta bem-sucedida retorna a ID (`id`) do fluxo de dados recém-criado pa
 }
 ```
 
++++
 
->[!BEGINSHADEBOX]
+>[!ENDTABS]
 
-**Restrições à assimilação recorrente**
+### Excluir chaves de criptografia {#delete-encryption-keys}
+
+Para excluir suas chaves de criptografia, faça uma solicitação DELETE ao `/encryption/keys` e forneça sua ID de chave pública como um parâmetro de cabeçalho.
+
+**Formato da API**
+
+```http
+DELETE /data/foundation/connectors/encryption/keys/{PUBLIC_KEY_ID}
+```
+
+**Solicitação**
+
++++Exibir solicitação de exemplo
+
+```shell
+curl -X DELETE \
+  'https://platform.adobe.io/data/foundation/connectors/encryption/keys/{publicKeyId}' \
+  -H 'Authorization: Bearer {{ACCESS_TOKEN}}' \
+  -H 'x-api-key: {{API_KEY}}' \
+  -H 'x-gw-ims-org-id: {{ORG_ID}}' \
+```
+
++++
+
+**Resposta**
+
+Uma resposta bem-sucedida retorna o status HTTP 204 (Sem conteúdo) e um corpo em branco.
+
+### Validar chaves de criptografia {#validate-encryption-keys}
+
+Para validar suas chaves de criptografia, faça uma solicitação GET ao `/encryption/keys/validate/` e forneça a ID de chave pública que você deseja validar como um parâmetro de cabeçalho.
+
+```http
+GET /data/foundation/connectors/encryption/keys/validate/{PUBLIC_KEY_ID}
+```
+
+**Solicitação**
+
++++Exibir solicitação de exemplo
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/connectors/encryption/keys/validate/{publicKeyId}' \
+  -H 'Authorization: Bearer {{ACCESS_TOKEN}}' \
+  -H 'x-api-key: {{API_KEY}}' \
+  -H 'x-gw-ims-org-id: {{ORG_ID}}' \
+```
+
++++
+
+**Resposta**
+
+Uma resposta bem-sucedida retorna uma confirmação de que suas IDs são válidas ou são inválidas.
+
+>[!BEGINTABS]
+
+>[!TAB Válido]
+
+Uma ID de chave pública válida retorna um status de `Active` junto com a ID de chave pública.
+
+```json
+{
+    "publicKeyId": "{PUBLIC_KEY_ID}",
+    "status": "Active"
+}
+```
+
+>[!TAB Inválido]
+
+Uma ID de chave pública inválida retorna um status de `Expired` junto com a ID de chave pública.
+
+```json
+{
+    "publicKeyId": "{PUBLIC_KEY_ID}",
+    "status": "Expired"
+}
+```
+
+>[!ENDTABS]
+
+
+## Restrições à assimilação recorrente {#restrictions-on-recurring-ingestion}
 
 A assimilação de dados criptografados não oferece suporte à assimilação de pastas recorrentes ou de vários níveis nas fontes. Todos os arquivos criptografados devem estar contidos em uma única pasta. Também não há suporte para curingas com várias pastas em um único caminho de origem.
 
@@ -356,14 +558,13 @@ Nesse cenário, a execução do fluxo falhará e retornará uma mensagem de erro
 * Clientes ACME
    * File1.csv.gpg
    * File2.json.gpg
-   * Subfolder1
+   * Subpasta1
       * File3.csv.gpg
       * File4.json.gpg
       * File5.csv.gpg
 * Fidelização por ACME
    * File6.csv.gpg
 
->[!ENDSHADEBOX]
 
 ## Próximas etapas
 

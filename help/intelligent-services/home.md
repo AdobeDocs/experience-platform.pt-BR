@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Visão geral dos Serviços inteligentes
 description: Os Serviços inteligentes capacitam analistas e profissionais de marketing a aproveitar o potencial da inteligência artificial e do aprendizado de máquina em casos de uso de experiência do cliente. Isso permite que os analistas de marketing definam previsões específicas para as necessidades de uma empresa usando configurações de nível empresarial sem a necessidade de conhecimento especializado em ciência de dados. Além disso, os profissionais de marketing podem ativar previsões no Adobe Experience Cloud, Adobe Experience Platform e aplicativos de terceiros.
 exl-id: db080c83-2a45-4fd5-8502-d9cae2a063be
-source-git-commit: edc812c2725f92d71af30a3107de067f85ca1235
+source-git-commit: d6a4b149b911cd6e7dbbd6c1289fce64be76b506
 workflow-type: tm+mt
 source-wordcount: '505'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 # Visão geral dos Serviços inteligentes {#intelligent-services-overview}
 
 >[!CONTEXTUALHELP]
->id="platform_intelligent-services_home"
+>id="platform_intelligentservices_home"
 >title="Visão geral dos Serviços inteligentes"
 >abstract=""
 

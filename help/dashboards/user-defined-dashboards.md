@@ -1,17 +1,18 @@
 ---
-title: Painéis definidos pelo usuário
+title: Painéis personalizados
 description: Saiba como criar e gerenciar painéis personalizados onde você pode criar, adicionar e editar widgets personalizados para visualizar as métricas principais.
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
-source-git-commit: b3bd7a5ba1847518beafd12240c0d3a433a891d0
+source-git-commit: 17ad52864bbca09844c0241b6451e6811bd8f413
 workflow-type: tm+mt
-source-wordcount: '1608'
-ht-degree: 4%
+source-wordcount: '1624'
+ht-degree: 2%
 
 ---
 
-# Painéis definidos pelo usuário
+# Painéis personalizados
 
-Os Painéis do Adobe Experience Platform ajudam você a acelerar insights e personalizar a visualização por meio do recurso de painéis definido pelo usuário. Este recurso permite que você crie e gerencie painéis personalizados onde é possível criar, adicionar e editar widgets personalizados para visualizar as métricas principais relevantes para sua organização.
+Use os Painéis do Adobe Experience Platform para acelerar insights e personalizar a visualização por meio do recurso Painéis. Use esse recurso para criar e gerenciar painéis personalizados, nos quais você pode criar, adicionar e editar widgets de bespoke para visualizar as métricas principais relevantes para sua organização.
+
 
 <!-- Getting started / permissions section commented out for Beta. This will be necessary after GA only
 
@@ -25,15 +26,18 @@ Para criar um painel personalizado, primeiro, navegue até o inventário do pain
 
 ![O inventário do painel com Painéis na navegação à esquerda e &quot;Criar painel&quot; destacados.](./images/user-defined-dashboards/create-dashboard.png)
 
-Antes de adicionar um painel personalizado, o inventário de painéis está vazio e exibe &quot;Nenhum painel encontrado&quot;. mensagem. Depois de criado, todos os painéis definidos pelo usuário são listados no inventário de painéis.
+Antes de adicionar um painel personalizado, o inventário de painéis está vazio e exibe &quot;Nenhum painel encontrado&quot;. mensagem. Depois de criado, todos os painéis são listados no inventário de painéis.
 
->[!NOTE]
+<!-- >[!NOTE]
 >
->Para editar um painel existente, selecione o nome do painel na lista de inventário seguido pelo ícone de lápis (![Um lápis.](./images/user-defined-dashboards/edit-icon.png))
+>To edit an existing dashboard, select the dashboard name from the inventory list followed by the pencil icon (![A pencil icon.](./images/user-defined-dashboards/edit-icon.png))
+>![A custom inventory listed in the dashboard inventory.](./images/user-defined-dashboards/dashbaord-inventory.png "A custom inventory listed in the dashboard inventory."){width="100" zoomable="yes"} -->
 
 A variável [!UICONTROL Criar painel] será exibida. Insira um nome descritivo amigável para a coleção de dispositivos que você deseja criar e selecione **[!UICONTROL Salvar]**.
 
 ![A caixa de diálogo Criar painel.](./images/user-defined-dashboards/create-dashboard-dialog.png)
+
+Os usuários que compraram o Data Distiller SKU têm a opção de usar consultas SQL personalizadas para criar seus insights. Consulte a [Guia de criação de insights personalizável](./data-distiller/customizable-insights/overview.md) para obter instruções sobre esse fluxo de trabalho.
 
 O painel em branco recém-criado é exibido com o nome escolhido no canto superior esquerdo da exibição.
 
@@ -42,13 +46,13 @@ O painel em branco recém-criado é exibido com o nome escolhido no canto superi
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_udd_maxwidgets"
 >title="Número máximo de widgets"
->abstract="Painéis definidos pelo usuário comportam até dez widgets. Depois de adicionar dez widgets ao painel, a opção [!UICONTROL Adicionar novo widget] fica desativada e é exibida em cinza."
+>abstract="O Dashboard Service oferece suporte para até dez widgets. Depois de adicionar dez widgets ao painel, a opção [!UICONTROL Adicionar novo widget] fica desativada e é exibida em cinza."
 
 Na nova visualização de painel, selecione **[!UICONTROL Adicionar novo widget]** para iniciar o processo de criação do widget.
 
 >[!IMPORTANT]
 >
->Painéis definidos pelo usuário comportam até dez widgets. Depois de adicionar dez widgets ao painel, a opção [!UICONTROL Adicionar novo widget] fica desativada e é exibida em cinza.
+>Cada painel aceita até dez widgets. Depois de adicionar dez widgets ao painel, a opção [!UICONTROL Adicionar novo widget] fica desativada e é exibida em cinza.
 
 ![O novo painel vazio com Adicionar novo widget realçado.](./images/user-defined-dashboards/add-new-widget.png)
 
@@ -150,21 +154,25 @@ Os widgets podem ser reorganizados e redimensionados enquanto estiverem neste es
 
 Para garantir que cada consulta de um painel de insights do Adobe Real-time Customer Data Platform tenha recursos suficientes para ser executada com eficiência, a API rastreia o uso de recursos atribuindo slots de simultaneidade a cada consulta. O sistema pode processar até quatro queries simultâneas e, portanto, quatro slots de query simultâneos estarão disponíveis a qualquer momento. As consultas são colocadas em uma fila com base em slots de simultaneidade e, em seguida, aguardam na fila até que slots de simultaneidade suficientes estejam disponíveis.
 
-### Duplicar um widget
+### Editar, duplicar ou excluir um widget {#duplicate}
 
-Depois de criar um widget, você pode duplicar todo o widget e personalizar seus atributos para criar um widget exclusivo sem precisar começar do zero. Para duplicar um widget, primeiro, navegue até o inventário do painel. Em seguida, selecione o nome do painel na lista de inventário. O painel personalizado é exibido.
+Depois de criar um widget, você pode editar, duplicar ou excluir widgets inteiros de seu painel personalizado.
 
-![A interface do usuário da Platform com painéis e um nome de painel personalizado destacado.](./images/user-defined-dashboards/dashbaord-inventory.png)
+>[!TIP]
+>
+>Para alternar entre qualquer um dos painéis personalizados existentes, selecione Painéis na barra de navegação à esquerda e, em seguida, selecione o nome do painel na lista de inventário.
 
 Selecione o ícone de lápis (![Um lápis.](./images/user-defined-dashboards/edit-icon.png)) na parte superior direita do painel personalizado para entrar no modo de edição.
 
 ![Um painel personalizado com o ícone de lápis realçado.](./images/user-defined-dashboards/edit-mode.png)
 
-Em seguida, selecione as reticências na parte superior direita do widget que você deseja copiar, seguidas por **[!UICONTROL Duplicar]** na lista de opções disponíveis.
+Em seguida, selecione as reticências na parte superior direita do widget que você deseja editar, copiar ou excluir. Selecione a ação apropriada no menu suspenso.
 
-![Um widget em um painel definido pelo usuário com as reticências e o widget Duplicar realçados.](./images/user-defined-dashboards/duplicate.png)
+![Um widget em um painel personalizado com as reticências e o widget Duplicar realçados.](./images/user-defined-dashboards/duplicate.png)
 
-Um widget duplicado é exibido no painel definido pelo usuário. Selecione as reticências do novo widget, seguido por **[!UICONTROL Editar]**, para personalizar o novo widget.
+>[!NOTE]
+>
+>A duplicação permite personalizar os atributos de um insight para criar um widget exclusivo sem precisar começar do zero. Se você duplicar um widget, ele aparecerá no painel personalizado. É possível então selecionar as reticências do novo widget, seguidas por **[!UICONTROL Editar]**, para personalizar seu insight.
 
 ## Próximas etapas e recursos adicionais
 
@@ -172,6 +180,6 @@ Ao ler este documento, você tem uma melhor compreensão de como criar um painel
 
 Para descobrir as métricas e visualizações pré-configuradas disponíveis para o [perfis](./guides/profiles.md#standard-widgets), [segmentos](./guides/audiences.md#standard-widgets), e [destinos](./guides/destinations.md#standard-widgets) painéis, consulte a lista de widgets padrão em sua respectiva documentação.
 
-Para reforçar sua compreensão dos painéis definidos pelo usuário no Experience Platform, assista ao vídeo a seguir:
+Para reforçar sua compreensão dos painéis no Experience Platform, assista ao seguinte vídeo:
 
 >[!VIDEO](https://video.tv.adobe.com/v/3409637?quality=12&learn=on)

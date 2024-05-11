@@ -1,9 +1,10 @@
 ---
 title: Insights personalizáveis
 description: Saiba mais sobre os casos de uso, recursos essenciais e etapas necessárias para desenvolver um painel de insights personalizável com o Data Distiller. Descubra como o recurso de Insights personalizáveis no Data Distiller pode melhorar a transparência e obter insights operacionais em diferentes dimensões, como perfis, públicos, campanhas, jornadas, direitos e consentimento.
-source-git-commit: 18c1d32bbc2732c38a9c37ee8fb9d36a23d4e515
+exl-id: f807d0fd-c8ec-42d4-96a0-5ffc5681943b
+source-git-commit: bb95e0aa8ee92aee5a2f126d85e78308e652a061
 workflow-type: tm+mt
-source-wordcount: '886'
+source-wordcount: '941'
 ht-degree: 0%
 
 ---
@@ -11,6 +12,8 @@ ht-degree: 0%
 # Insights personalizáveis
 
 Crie modelos de dados de relatórios sob medida para extrair insights mais profundos, otimizar estratégias e adaptar a análise para atender às necessidades específicas dos negócios com os insights personalizáveis do Data Distiller. Use o recurso Insights personalizáveis para melhorar a transparência e obter insights operacionais dos dados do Adobe Experience Platform em dimensões como perfis, públicos, campanhas, jornadas, direitos e consentimento. Esse recurso oferece uma solução versátil e adaptável para adaptar os modelos de dados de relatórios de sua organização às necessidades específicas de seus negócios.
+
+Para [visualizar seus Insights Personalizáveis](../../../dashboards/data-distiller/overview.md) você pode usar [modo pro da consulta](../../../dashboards/data-distiller/customizable-insights/query-pro-mode.md) para realizar análises complexas com queries SQL personalizadas e transformar seus dados em gráficos de fácil interpretação. Use o modo query pro para criar insights e visualizações sob medida em seus painéis e atender a públicos técnicos e não técnicos baixando seus insights como arquivos CSV.
 
 Este documento aborda os casos de uso, os recursos essenciais e as etapas necessárias para desenvolver um painel de insights personalizável com o Data Distiller.
 

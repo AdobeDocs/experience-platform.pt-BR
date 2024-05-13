@@ -2,7 +2,8 @@
 title: Evoluir valor único do cliente para valor vitalício
 description: Saiba como criar campanhas personalizadas para oferecer os melhores produtos ou serviços complementares com base nos atributos, comportamento e compras anteriores de um cliente específico.
 feature: Use Cases
-source-git-commit: 1134ca4d8a5901b8fe125578ad7f0bc81f6a320f
+exl-id: 45f72b5e-a63b-44ac-a186-28bac9cdd442
+source-git-commit: 2f1008791a35f33a0379cba14b90334aebf83187
 workflow-type: tm+mt
 source-wordcount: '3179'
 ht-degree: 2%
@@ -53,7 +54,7 @@ Para isso, a tecnologia necessária consiste nos dois aplicativos Experience Pla
 
 Abaixo está uma visualização de arquitetura de alto nível dos vários componentes do Real-Time CDP e do Journey Optimizer. Este diagrama mostra como os dados fluem pelos dois aplicativos Experience Platform, desde a coleta de dados até o ponto em que são ativados por meio de jornadas ou campanhas para destinos, para obter o caso de uso descrito nesta página.
 
-![Visão geral visual de alto nível da arquitetura.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/architecture-diagram.png){width="1000" zoomable="yes"}
+![Visão geral visual de alto nível da arquitetura.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/architecture-diagram.png){width="600" zoomable="yes"}
 
 ## Como atingir o caso de uso: visão geral de alto nível {#achieve-the-use-case-high-level}
 
@@ -69,7 +70,7 @@ Você começa enviando uma mensagem para o seu público-alvo de clientes altamen
 
 >[!BEGINSHADEBOX]
 
-![Evolua passo a passo do valor único para o valor vitalício visão geral visual de alto nível.](../evolve-one-time-value-lifetime-value/images/step-by-step.png){width="1000" zoomable="yes"}
+![Evolua passo a passo do valor único para o valor vitalício visão geral visual de alto nível.](../evolve-one-time-value-lifetime-value/images/step-by-step.png){width="600" zoomable="yes"}
 
 1. Crie esquemas e conjuntos de dados e marque-os para [!UICONTROL Perfil].
 2. Os dados são coletados e integrados ao Experience Platform via SDK da Web, SDK de borda móvel ou API. O Conector de dados do Analytics também pode ser usado, mas pode resultar em latência de jornada.
@@ -303,7 +304,7 @@ Esse caso de uso exige a criação de dois públicos-alvo para definir atributos
 
 Você deve criar e usar dois públicos-alvo em etapas diferentes do caso de uso, conforme mostrado na imagem abaixo.
 
-![Públicos-alvo destacados.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/audiences-highlighted-in-diagram.png){width="1000" zoomable="yes"}
+![Públicos-alvo destacados.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/audiences-highlighted-in-diagram.png){width="600" zoomable="yes"}
 
 >[!BEGINTABS]
 
@@ -350,7 +351,7 @@ Para realizar esse caso de uso, você deve criar duas jornadas separadas:
 * A jornada vitalícia, que inclui a mensagem que você envia aos seus clientes de alto valor e baixa frequência
 * A jornada de confirmação do pedido para os usuários que respondem à sua chamada e compram uma assinatura.
 
-![Jornadas realçadas.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/journeys-highlighted-in-diagram.png){width="1000" zoomable="yes"}
+![Jornadas realçadas.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/journeys-highlighted-in-diagram.png){width="600" zoomable="yes"}
 
 Os dados precisos necessários para cada ramificação de Jornada estão listados abaixo.
 
@@ -360,7 +361,7 @@ Os dados precisos necessários para cada ramificação de Jornada estão listado
 
 A jornada vitalícia aborda o público-alvo de clientes de alto valor e baixa frequência que não foram direcionados nos últimos 30 dias. Uma mensagem é mostrada a esses clientes e, se após 7 dias eles ainda não comprarem, você poderá incluir os não compradores em um público para o qual poderá mostrar anúncios de mídia pagos. Se eles comprarem, você poderá definir os compradores em uma jornada de confirmação de pedido, detalhada na guia separada.
 
-![Visão geral visual de alto nível da jornada vitalícia.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/lifetime-journey.png "Valor único para a visão geral de alto nível da jornada vitalícia."){width="2560" zoomable="yes"}
+![Visão geral visual de alto nível da jornada vitalícia.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/lifetime-journey.png "Valor único para a visão geral de alto nível da jornada vitalícia."){width="600" zoomable="yes"}
 
 +++Lógica de Jornada detalhada
 
@@ -382,7 +383,7 @@ A jornada mostrada acima segue a lógica a seguir.
 
 A jornada de confirmação de pedido foca se uma compra foi feita pelo site ou aplicativo móvel. Depois que um cliente concluir com êxito a compra, por exemplo, de uma assinatura com sua empresa, você pode defini-los em uma jornada de confirmação de pedido.
 
-![Visão geral visual de alto nível da jornada de confirmação de pedido do cliente.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/order-confirmation-journey.png "Visão geral visual de alto nível da jornada de confirmação de pedido do cliente."){width="2560" zoomable="yes"}
+![Visão geral visual de alto nível da jornada de confirmação de pedido do cliente.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/order-confirmation-journey.png "Visão geral visual de alto nível da jornada de confirmação de pedido do cliente."){width="600" zoomable="yes"}
 
 +++lógica de Jornada
 

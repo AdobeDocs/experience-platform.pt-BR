@@ -7,7 +7,7 @@ exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
 source-git-commit: 93430a9ba5911bf8dc901ec3f82f06a6b25b8dc4
 workflow-type: tm+mt
 source-wordcount: '3337'
-ht-degree: 6%
+ht-degree: 10%
 
 ---
 
@@ -50,7 +50,7 @@ Consulte a tabela a seguir para obter mais informações sobre status:
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_activation_streaming"
 >title="Detalhes de execução do fluxo de dados"
->abstract="Os detalhes da execução do fluxo de dados de destino contêm informações sobre o status de ativação de um público-alvo e as métricas extraídas do Perfil do cliente em tempo real para gerar identidades exclusivas. Para saber mais, revise o guia de definições de métricas."
+>abstract="Os detalhes de execução do fluxo de dados de destino contêm informações sobre o status de ativação de um público-alvo e métricas obtidas do Perfil do cliente em tempo real para gerar identidades exclusivas. Para saber mais, revise o guia de definições de métricas."
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_profiles_received_streaming"
@@ -60,7 +60,7 @@ Consulte a tabela a seguir para obter mais informações sobre status:
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesactivated_streaming"
 >title="Identidades ativadas"
->abstract="A contagem de identidades de perfil individuais ativadas com êxito para o destino selecionado. Essa métrica inclui identidades que são criadas, atualizadas e removidas dos públicos exportados."
+>abstract="A contagem de identidades de perfil individuais ativadas com êxito para o destino selecionado. Essa métrica inclui identidades que são criadas, atualizadas e removidas de públicos-alvo exportados."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesexcluded_streaming"
@@ -78,7 +78,7 @@ As identidades representam as diferentes facetas de um perfil. Por exemplo, se u
 
 Uma lista de execuções individuais e suas métricas específicas é exibida, juntamente com os seguintes totais de identidades:
 
-- **[!UICONTROL Identidades ativadas]**: o número total de identidades de perfil ativadas com êxito no destino selecionado. Essa métrica inclui identidades que são criadas, atualizadas e removidas dos públicos exportados.
+- **[!UICONTROL Identidades ativadas]**: o número total de identidades de perfil ativadas com êxito no destino selecionado. Essa métrica inclui identidades que são criadas, atualizadas e removidas de públicos-alvo exportados.
 - **[!UICONTROL Identidades excluídas]**: o número total de identidades de perfil que são ignoradas para ativação com base em atributos ausentes e violação de consentimento.
 - **[!UICONTROL Falha nas identidades]**: o número total de identidades de perfil que não estão ativadas para o destino devido a erros.
 
@@ -91,7 +91,7 @@ Cada execução de fluxo de dados individual mostra os seguintes detalhes:
    - Para **[!UICONTROL concluído]** for executada, a métrica tempo de processamento sempre mostrará uma hora.
    - Para execuções de fluxo de dados que ainda estão em uma **[!UICONTROL processando]** , a janela para capturar todas as métricas permanece aberta por mais de uma hora, para processar todas as métricas que correspondem à execução do fluxo de dados. Por exemplo, uma execução de fluxo de dados iniciada às 9h30 pode permanecer em um estado de processamento por uma hora e trinta minutos para capturar e processar todas as métricas. Em seguida, quando a janela de processamento for fechada e o status da execução do fluxo de dados for atualizado para **concluído**, o tempo de processamento exibido é alterado para uma hora.
 - **[!UICONTROL Perfis recebidos]**: o número total de perfis recebidos no fluxo de dados.
-- **[!UICONTROL Identidades ativadas]**: o número total de identidades de perfil que foram ativadas com êxito para o destino selecionado como parte da execução do fluxo de dados. Essa métrica inclui identidades que são criadas, atualizadas e removidas dos públicos exportados.
+- **[!UICONTROL Identidades ativadas]**: o número total de identidades de perfil que foram ativadas com êxito para o destino selecionado como parte da execução do fluxo de dados. Essa métrica inclui identidades que são criadas, atualizadas e removidas de públicos-alvo exportados.
 - **[!UICONTROL Identidades excluídas]**: o número total de identidades de perfil excluídas da ativação com base em atributos ausentes e violação de consentimento.
 - **[!UICONTROL Falha nas identidades]** O número total de identidades de perfil que não estão ativadas para o destino devido a erros.
 - **[!UICONTROL Taxa de ativação]**: a porcentagem de identidades recebidas que foram ativadas ou ignoradas com êxito. A fórmula a seguir demonstra como esse valor é calculado:
@@ -113,7 +113,7 @@ A página de detalhes também exibe uma lista de identidades que falharam e as q
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_activation"
 >title="Detalhes de execução do fluxo de dados"
->abstract="Os detalhes da execução do fluxo de dados de destino contêm informações sobre o status de ativação de um público-alvo e as métricas extraídas do Perfil do cliente em tempo real para gerar identidades exclusivas. Para saber mais, revise o guia de definições de métricas."
+>abstract="Os detalhes de execução do fluxo de dados de destino contêm informações sobre o status de ativação de um público-alvo e métricas obtidas do Perfil do cliente em tempo real para gerar identidades exclusivas. Para saber mais, revise o guia de definições de métricas."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-destinations.html?lang=pt-BR#dataflow-runs-for-streaming-destinations" text="O fluxo de dados é executado para destinos de transmissão"
 
 >[!CONTEXTUALHELP]
@@ -124,7 +124,7 @@ A página de detalhes também exibe uma lista de identidades que falharam e as q
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesactivated_batch"
 >title="Identidades ativadas"
->abstract="A contagem de identidades de perfil individuais ativadas com êxito para o destino selecionado. Essa métrica inclui identidades que são criadas, atualizadas e removidas dos públicos exportados."
+>abstract="A contagem de identidades de perfil individuais ativadas com êxito para o destino selecionado. Essa métrica inclui identidades que são criadas, atualizadas e removidas de públicos-alvo exportados."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesexcluded_batch"
@@ -133,7 +133,7 @@ A página de detalhes também exibe uma lista de identidades que falharam e as q
 
 Para destinos em lote, a variável [!UICONTROL O fluxo de dados é executado] A guia fornece dados de métrica sobre suas execuções de fluxo de dados. Uma lista de execuções individuais e suas métricas específicas é exibida, juntamente com os seguintes totais de identidades:
 
-- **[!UICONTROL Identidades ativadas]**: o número total de identidades de perfil ativadas com êxito no destino selecionado. Essa métrica inclui identidades que são criadas, atualizadas e removidas dos públicos exportados.
+- **[!UICONTROL Identidades ativadas]**: o número total de identidades de perfil ativadas com êxito no destino selecionado. Essa métrica inclui identidades que são criadas, atualizadas e removidas de públicos-alvo exportados.
 - **[!UICONTROL Identidades excluídas]**: a contagem de identidades de perfil individuais excluídas da ativação para o destino selecionado, com base nos atributos ausentes e na violação de consentimento.
 
 ![O fluxo de dados executa a exibição para destinos em lote.](../assets/ui/monitor-destinations/dataflow-runs-batch.png)
@@ -144,7 +144,7 @@ Cada execução de fluxo de dados individual mostra os seguintes detalhes:
 - **[!UICONTROL Público]**: o nome do público-alvo associado a cada execução de fluxo de dados.
 - **[!UICONTROL Tempo de processamento]**: O tempo necessário para a execução do fluxo de dados ser processada.
 - **[!UICONTROL Perfis recebidos]**: o número total de perfis recebidos no fluxo de dados. Esse valor é atualizado a cada 60 minutos.
-- **[!UICONTROL Identidades ativadas]**: o número total de identidades de perfil que foram ativadas com êxito para o destino selecionado como parte da execução do fluxo de dados. Essa métrica inclui identidades que são criadas, atualizadas e removidas dos públicos exportados.
+- **[!UICONTROL Identidades ativadas]**: o número total de identidades de perfil que foram ativadas com êxito para o destino selecionado como parte da execução do fluxo de dados. Essa métrica inclui identidades que são criadas, atualizadas e removidas de públicos-alvo exportados.
 - **[!UICONTROL Identidades excluídas]**: o número total de identidades de perfil excluídas da ativação com base em atributos ausentes e violação de consentimento.
 - **[!UICONTROL Status]**: representa o estado em que o fluxo de dados está. Pode ser um destes três estados: [!UICONTROL Sucesso], [!UICONTROL Failed], e [!UICONTROL Processando]. [!UICONTROL Sucesso] significa que o fluxo de dados está ativo e exportando dados de acordo com a programação fornecida. [!UICONTROL Failed] significa que a ativação de dados foi suspensa devido a erros. [!UICONTROL Processando] significa que o fluxo de dados ainda não está ativo e geralmente é encontrado quando um novo fluxo de dados é criado.
 
@@ -176,7 +176,7 @@ A página de detalhes também exibe uma lista de identidades que falharam e as q
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_activation"
 >title="Activation"
->abstract="A visualização de ativação de destino contém informações sobre o status de ativação de um público-alvo e as métricas extraídas do Perfil do cliente em tempo real para gerar identidades exclusivas."
+>abstract="A visualização da ativação de destino contém informações sobre o status de ativação de um público-alvo e as métricas obtidas do Perfil do cliente em tempo real para gerar identidades exclusivas."
 
 Para acessar o [!UICONTROL Monitoramento] painel, selecione **[!UICONTROL Monitoramento]** (![ícone de monitoramento](../assets/ui/monitor-destinations/monitoring-icon.png)) na navegação à esquerda. Uma vez no [!UICONTROL Monitoramento] selecione [!UICONTROL Destinos]. A variável [!UICONTROL Monitoramento] o painel contém métricas e informações sobre os jobs de execução do destino.
 

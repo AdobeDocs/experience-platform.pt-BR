@@ -2,9 +2,9 @@
 title: Tipos de elementos de dados na extensão SDK da Web do Adobe Experience Platform
 description: Saiba mais sobre os diferentes tipos de elementos de dados fornecidos pela extensão de tag do Adobe Experience Platform Web SDK.
 exl-id: 3c2c257f-1fbc-4722-8040-61ad19aa533f
-source-git-commit: 44fac57a30295b476910c0b37314eaebba175157
+source-git-commit: 8c652e96fa79b587c7387a4053719605df012908
 workflow-type: tm+mt
-source-wordcount: '603'
+source-wordcount: '599'
 ht-degree: 5%
 
 ---
@@ -52,11 +52,14 @@ Observe que quando você abre determinados campos do esquema, como `web.webPageD
 
 ## Variable {#variable}
 
-Outra maneira de criar objetos XDM é usar o **[!UICONTROL Variável]** elemento de dados. Embora o elemento de dados do objeto XDM seja criado quando referenciado, como dentro de um `sendEvent` , o **[!UICONTROL Variável]** o elemento de dados pode ser atualizado via [!UICONTROL Atualizar variável] ações. Para usar o elemento de dados, selecione a sandbox e o esquema corretos do Adobe Experience Platform.
+É possível criar objetos de carga útil usando o **[!UICONTROL Variável]** elemento de dados. Ambos [!UICONTROL XDM] e [!UICONTROL Dados] objetos são suportados.
 
-![Imagem da interface mostrando a tela Criar elemento de dados.](assets/variable-data-element.png)
+* Ao selecionar [!UICONTROL XDM], selecione o desejado [!UICONTROL Sandbox] e [!UICONTROL Esquema].
+* Ao selecionar [!UICONTROL Dados], selecione as soluções desejadas. As soluções disponíveis incluem [!UICONTROL Adobe Analytics] e [!UICONTROL Adobe Target].
 
-Depois de criar esse elemento de dados, você pode usar [Atualizar variável](./action-types.md#update-variable) ações para modificar o elemento de dados. Em seguida, nas ações enviar evento, use o elemento de dados variável para a opção XDM.
+![Imagem da interface de tags mostrando as opções do elemento de dados.](assets/variable-data-element.png)
+
+Após criar esse elemento de dados, você pode usar a variável [Atualizar variável](./action-types.md#update-variable) ação para modificá-la. Quando estiver pronto, você poderá incluir esse elemento de dados na variável [Enviar evento](./action-types.md#send-event) ação para enviar dados a um fluxo de dados.
 
 ## Próximas etapas {#next-steps}
 

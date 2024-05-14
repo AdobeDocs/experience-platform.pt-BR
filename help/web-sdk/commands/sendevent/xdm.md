@@ -1,9 +1,10 @@
 ---
 title: xdm
-description: O objeto alinhado ao esquema enviado para o Adobe.
-source-git-commit: f75dcfc945be2f45c1638bdd4d670288aef6e1e6
+description: Saiba como enviar dados para o Adobe por meio do objeto alinhado ao esquema XDM.
+exl-id: 1d8ef191-aed6-4c8b-a1fd-614bd8ed73da
+source-git-commit: 8c652e96fa79b587c7387a4053719605df012908
 workflow-type: tm+mt
-source-wordcount: '242'
+source-wordcount: '248'
 ht-degree: 0%
 
 ---
@@ -14,11 +15,11 @@ A variável `xdm` objeto contém a carga de dados enviada para o Adobe. Os campo
 
 A Adobe Experience Platform usa esquemas para descrever a estrutura dos dados de forma consistente e reutilizável. Ao definir os dados de forma consistente em todos os sistemas, fica mais fácil manter o significado e, portanto, obter valor dos dados.
 
-Este campo tem um limite máximo de 32 KB.
+Este objeto tem um limite máximo de 32 KB.
 
 ## Configurar o objeto XDM usando a extensão SDK da Web
 
-Defina o **[!UICONTROL XDM]** nas ações de uma regra de tag. A variável [Objeto XDM](/help/tags/extensions/client/web-sdk/data-element-types.md#xdm-object) O fornece uma interface intuitiva para mapear outros elementos de dados para seus respectivos campos XDM.
+Defina o **[!UICONTROL XDM]** objeto nas ações de uma regra de tag. A variável [Objeto XDM](/help/tags/extensions/client/web-sdk/data-element-types.md#xdm-object) O fornece uma interface intuitiva para mapear outros elementos de dados para seus respectivos campos XDM.
 
 1. Efetue logon no [experience.adobe.com](https://experience.adobe.com) usando suas credenciais do Adobe ID.
 1. Navegue até **[!UICONTROL Coleta de dados]** > **[!UICONTROL Tags]**.
@@ -39,7 +40,7 @@ alloy("sendEvent", {
 });
 ```
 
-O exemplo a seguir usa o [Grupo de campos de esquema de Detalhes do comércio](/help/xdm/field-groups/event/commerce-details.md):
+O exemplo a seguir usa o [Grupo de campos de esquema Detalhes do Commerce](/help/xdm/field-groups/event/commerce-details.md):
 
 ```javascript
 alloy("sendEvent",{

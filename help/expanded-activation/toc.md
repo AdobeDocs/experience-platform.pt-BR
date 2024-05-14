@@ -1,14 +1,14 @@
 ---
 audience: user
-user-guide-title: Guia de ativação expandido do Audience Manager
-user-guide-description: Ative públicos do Audience Manager para destinos sociais e de publicidade por meio da Ativação expandida do Audience Manager.
+user-guide-title: Guia de Ativação expandida do Audience Manager
+user-guide-description: Ative públicos-alvo do Audience Manager para destinos de redes sociais e de publicidade por meio da ativação expandida do Audience Manager.
 description: Este documento lista o índice da Ativação expandida do Adobe Audience Manager
 feature: Destinations
 role: Admin,User
 source-git-commit: 2ca2558d2bfdae9f5ba58489c8161c83909a8e27
 workflow-type: tm+mt
 source-wordcount: '45'
-ht-degree: 8%
+ht-degree: 62%
 
 ---
 

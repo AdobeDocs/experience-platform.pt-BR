@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Guia da interface do usuário do Serviço de segmentação
 description: Saiba como criar e gerenciar públicos e definições de segmento na interface do usuário do Adobe Experience Platform.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: bc501b96a9ec6b723f4598d048b399fef82d54b2
+source-git-commit: 5182ee22ae7952f74c29969c0d484397a2850a4c
 workflow-type: tm+mt
 source-wordcount: '4274'
 ht-degree: 3%
@@ -112,7 +112,7 @@ O gráfico de pizza é exibido, mostrando um detalhamento dos públicos-alvo por
 | [!UICONTROL Nome] | O nome do público-alvo. |
 | [!UICONTROL Contagem de perfis] | O número total de perfis qualificados para o público-alvo. |
 | [!UICONTROL Origem] | A origem do público. Isso indica de onde o público-alvo vem. Os valores possíveis incluem Serviço de segmentação, Upload personalizado, Composição de público-alvo e Audience Manager. |
-| [!UICONTROL Status do ciclo de vida] | O status do público. Os valores possíveis para esse campo incluem `Draft`, `Inactive`, `Published`, e `Archived`. Mais informações sobre os status do ciclo de vida, incluindo o que significam os diferentes estados e como mover públicos para diferentes estados do ciclo de vida, leia a [seção status do ciclo de vida das Perguntas frequentes sobre segmentação](../faq.md#lifecycle-status). |
+| [!UICONTROL Status do ciclo de vida] | O status do público. Os valores possíveis para esse campo incluem `Draft`, `Inactive`, e `Published`. Mais informações sobre os status do ciclo de vida, incluindo o que significam os diferentes estados e como mover públicos para diferentes estados do ciclo de vida, leia a [seção status do ciclo de vida das Perguntas frequentes sobre segmentação](../faq.md#lifecycle-status). |
 | [!UICONTROL Frequência das atualizações] | Um valor que indica a frequência com que os dados do público-alvo são atualizados. Os valores possíveis para esse campo incluem [!UICONTROL Lote], [!UICONTROL Streaming], [!UICONTROL Edge], e [!UICONTROL Não Agendado]. |
 | [!UICONTROL Última atualização realizada por] | O nome da última pessoa que atualizou o público. |
 | [!UICONTROL Criado] | A data e a hora, em UTC, em que o público-alvo foi criado. |
@@ -422,7 +422,7 @@ Um popover é exibido, listando todos os campos que podem ser exibidos dentro da
 | Campo | Descrição |
 | ----- | ----------- | 
 | [!UICONTROL Nome] | O nome do público-alvo. |
-| [!UICONTROL Status] | O status do público. Os valores possíveis para esse campo incluem `Draft`, `Inactive`, `Published`, e `Archived`. |
+| [!UICONTROL Status] | O status do público. Os valores possíveis para esse campo incluem `Draft`, `Inactive`, e `Published`. |
 | [!UICONTROL Criado] | A hora e a data em que o público-alvo foi criado. |
 | [!UICONTROL Criado por] | O nome da pessoa que criou o público-alvo. |
 | [!UICONTROL Atualizado] | A hora e a data em que o público-alvo foi atualizado pela última vez. |

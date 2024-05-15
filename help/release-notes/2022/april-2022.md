@@ -2,16 +2,16 @@
 title: Notas de versão de abril de 2022 da Adobe Experience Platform
 description: As notas de versão de abril de 2022 da Adobe Experience Platform.
 exl-id: 39233787-3089-4469-8363-b006ae41ae21
-source-git-commit: 4bdbb987905b6010f4b4f75bee060828d0e07368
+source-git-commit: 710fa6930b27f95d34539a18881c0f9d23e1debd
 workflow-type: tm+mt
-source-wordcount: '2904'
-ht-degree: 18%
+source-wordcount: '2670'
+ht-degree: 19%
 
 ---
 
 # Notas de versão da Adobe Experience Platform
 
-**Data de lançamento: 27 de abril de 2022**
+**Data de lançamento: quinta-feira, 27 de abril de 2022**
 
 Atualizações dos recursos já existentes na Adobe Experience Platform:
 
@@ -69,7 +69,7 @@ Os fluxos de dados são uma representação de trabalhos que movem dados pela Pl
 
 | Recurso | Descrição |
 | ------- | ----------- |
-| Painel de segmentos | Agora você pode usar o painel de monitoramento para monitorar fluxos de dados para segmentos. Para saber mais, leia o guia em [monitoramento de segmentos na interface do usuário](../../dataflows/ui/monitor-segments.md) |
+| Painel de segmentos | Agora você pode usar o painel de monitoramento para monitorar fluxos de dados para segmentos. Para saber mais, leia o guia em [monitoramento de segmentos na interface do usuário](../../dataflows/ui/monitor-audiences.md) |
 
 Para obter informações mais gerais sobre fluxos de dados, consulte o [visão geral dos fluxos de dados](../../dataflows/home.md). Para saber mais sobre segmentação, consulte o [visão geral da segmentação](../../segmentation/home.md).
 

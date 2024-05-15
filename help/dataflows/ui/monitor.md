@@ -1,7 +1,8 @@
 ---
 title: Visão geral do painel de monitoramento
 description: Saiba como usar o painel de monitoramento na interface do usuário do Adobe Experience Platform
-source-git-commit: 21c69ff834dbd0e32831c5c9071e4255fd8258e1
+exl-id: 06ea5380-d66e-45ae-aa02-c8060667da4e
+source-git-commit: 710fa6930b27f95d34539a18881c0f9d23e1debd
 workflow-type: tm+mt
 source-wordcount: '1031'
 ht-degree: 1%
@@ -100,7 +101,7 @@ Selecionar **[!UICONTROL Perfis]** para exibir a taxa de sucesso do processament
 
 >[!TAB Públicos-alvo]
 
-Selecionar **[!UICONTROL Públicos-alvo]** para visualizar métricas sobre seus públicos-alvo e trabalhos de segmentação. Leia o guia em [monitoramento de dados de público](monitor-segments.md) para obter mais informações.
+Selecionar **[!UICONTROL Públicos-alvo]** para visualizar métricas sobre seus públicos-alvo e trabalhos de segmentação. Leia o guia em [monitoramento de dados de público](monitor-audiences.md) para obter mais informações.
 
 ![O painel de monitoramento na interface do usuário com o cartão de públicos selecionado.](../assets/ui/monitor-overview/audiences.png)
 
@@ -135,5 +136,5 @@ Agora, ao ler este documento, você pode navegar pelo painel de monitoramento na
 * [Monitorar dados de fontes](monitor-sources.md).
 * [Monitorar dados de identidade](monitor-identities.md).
 * [Monitorar dados do perfil](monitor-profiles.md).
-* [Monitorar dados do público](monitor-segments.md).
+* [Monitorar dados do público](monitor-audiences.md).
 * [Monitorar dados de destinos](monitor-destinations.md).

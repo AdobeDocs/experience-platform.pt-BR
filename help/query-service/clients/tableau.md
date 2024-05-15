@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Conectar o Tableau ao Serviço de consulta
 description: Este documento aborda as etapas para conectar o Tableau ao Serviço de consulta da Adobe Experience Platform.
 exl-id: f380aacd-5091-41bc-97ca-593e0b1670fd
-source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
+source-git-commit: 26f0725f0f239707bd719ed46929648f8d557155
 workflow-type: tm+mt
-source-wordcount: '447'
-ht-degree: 1%
+source-wordcount: '476'
+ht-degree: 0%
 
 ---
 
@@ -31,6 +31,10 @@ Instruções sobre como [conectar-se a um servidor PostgreSQL com Tableau](https
 | **[!DNL Password]** | Esta sequência alfanumérica é o seu Experience Platform **[!UICONTROL Senha]** credencial. Se você quiser usar credenciais sem expiração, esse valor será os argumentos concatenados do `technicalAccountID` e a variável `credential` baixado no arquivo JSON de configuração. O valor da senha tem o formato: {technicalAccountId}:{credential}. O arquivo JSON de configuração para credenciais sem expiração é um download único durante a inicialização do qual o Adobe não mantém uma cópia. |
 
 Para obter mais informações sobre como localizar seu nome de usuário, senha e credenciais de login, leia a [guia de credenciais](../ui/credentials.md). Para encontrar suas credenciais, faça logon no [!DNL Platform]e selecione **[!UICONTROL Consultas]**, seguido por **[!UICONTROL Credenciais]**.
+
+>[!IMPORTANT]
+>
+>Como usuário do Tableau ou do Power BI, você pode conectar o Customer Journey Analytics às ferramentas de BI na guia de credenciais do Serviço de consulta. Consulte a documentação de credenciais para obter instruções sobre como [conectar suas ferramentas de BI ao Customer Journey Analytics](../ui/credentials.md#connect-to-customer-journey-analytics).
 
 Verifique se você marcou a opção **[!UICONTROL Exigir SSL]** antes de tentar se conectar. Consulte a [Documentação de modos SSL](./ssl-modes.md) para saber mais sobre o suporte SSL para conexões de terceiros ao Adobe Experience Platform Query Service.
 

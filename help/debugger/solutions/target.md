@@ -2,10 +2,10 @@
 title: Testar uma implementação do Adobe Target com o Adobe Experience Platform Debugger
 description: Saiba como usar o Adobe Experience Platform Debugger para testar e depurar um site habilitado com o Adobe Target.
 exl-id: f99548ff-c6f2-4e99-920b-eb981679de2d
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: bc6069f2cfa4459860fe98588b293ffeed7fb1f1
 workflow-type: tm+mt
-source-wordcount: '1209'
-ht-degree: 5%
+source-wordcount: '1035'
+ht-degree: 2%
 
 ---
 
@@ -109,7 +109,7 @@ Selecionar **[!DNL Configuration]** para ativar ou desativar uma seleção de fe
 | Ferramenta de depuração | Descrição |
 | --- | --- |
 | [!DNL Target Console Logging] | Quando ativado, permite acessar os logs do at.js na guia do console do navegador. Esse recurso também pode ser ativado adicionando um `mboxDebug` parâmetro de consulta (com qualquer valor) ao URL do navegador. |
-| [!DNL Target Diable] | Quando ativadas, todas as funcionalidades do Target são desativadas na página. Isso pode ser usado para determinar se uma oferta específica do Target está causando o problema na página. |
+| [!DNL Target Disable] | Quando ativadas, todas as funcionalidades do Target são desativadas na página. Isso pode ser usado para determinar se uma oferta específica do Target está causando o problema na página. |
 | [!DNL Target Trace] | **Nota**: Você deve estar conectado para ativar esse recurso.<br><br>Quando ativados, os tokens de rastreamento são enviados com cada busca e um objeto de rastreamento é retornado em cada resposta. `at.js` analisa a resposta `window.__targetTraces`. Cada objeto de rastreamento contém as mesmas informações que o [[!DNL Network Requests] com as seguintes adições:<ul><li>Um instantâneo de perfil, que permite ver atributos antes e depois das solicitações.</li><li>Correspondente e não correspondente [atividades](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html), mostrando por que o perfil atual se qualificou ou não para atividades específicas.<ul><li>Isso pode ajudar a identificar para quais públicos um perfil está se qualificando em um determinado momento e por quê.</li><li>Os documentos do Target contêm mais informações sobre diferentes tipos de atividades</li></ul></li></ul> |
 
 {style="table-layout:auto"}

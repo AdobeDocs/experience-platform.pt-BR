@@ -3,9 +3,9 @@ title: Comparação da at.js com o SDK da Web do Experience Platform
 description: Saiba como os recursos da at.js se comparam ao SDK da Web do Experience Platform
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisionScopes;ocultando previamente o trecho;vec;Criador de experiências baseado em formulário;xdm;públicos-alvo;decisões;escopo;esquema;diagrama do sistema;diagrama
 exl-id: b63fe47d-856a-4cae-9057-51917b3e58dd
-source-git-commit: f75dcfc945be2f45c1638bdd4d670288aef6e1e6
+source-git-commit: ca1574f3f95840fce246fb4ed8845583fa0ff093
 workflow-type: tm+mt
-source-wordcount: '2136'
+source-wordcount: '2175'
 ht-degree: 5%
 
 ---
@@ -608,6 +608,27 @@ alloy("sendEvent", {
 
 [Saiba mais](../rendering-personalization-content.md#manually-rendering-content)
 
+**Exemplo 3 - Rastrear um evento acionado após executar uma ação**
+
+Este exemplo rastreia um evento que foi acionado após a execução de uma ação específica, como clicar em um botão.
+É possível adicionar outros parâmetros personalizados por meio da `__adobe.target` objeto de dados.
+
+```js
+//replicates an at.js trackEvent call
+alloy("sendEvent", {
+    "type": "decisioning.propositionDisplay",
+    "xdm": {
+        "_experience": {
+            "decisioning": {
+                "propositions": [{
+                    "scope": "sumbitButtonClick" // Or any mbox/location name you want to use in Adobe Target
+                }]
+            }
+        }
+    }
+});
+```
+
 ## Como acionar uma alteração de exibição em um Aplicativo de página única
 
 ### Uso da at.js
@@ -893,7 +914,7 @@ O registro no lado do servidor do Analytics é ativado quando o Analytics é ati
 
 ![Interface dos fluxos de dados mostrando as configurações do Analytics.](assets/analytics-enabled-datastream-config.png)
 
-Quando o Registro de análise do lado do servidor estiver ativado, a carga do A4T que precisa ser compartilhada com o Analytics para que os relatórios do Analytics mostrem impressões e conversões corretas são compartilhadas no nível da Rede de borda, para que o cliente não precise fazer nenhum processamento adicional.
+Quando o Registro de análise do lado do servidor estiver ativado, a carga do A4T que precisa ser compartilhada com o Analytics para que os relatórios do Analytics mostrem impressões e conversões corretas são compartilhadas no nível do Edge Network, para que o cliente não precise fazer nenhum processamento adicional.
 
 Veja como os dados fluem para nossos sistemas quando o registro do Server Side Analytics está ativado:
 

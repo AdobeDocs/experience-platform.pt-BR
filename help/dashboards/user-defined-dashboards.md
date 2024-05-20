@@ -5,7 +5,7 @@ exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
 source-git-commit: 17ad52864bbca09844c0241b6451e6811bd8f413
 workflow-type: tm+mt
 source-wordcount: '1624'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -45,14 +45,14 @@ O painel em branco recém-criado é exibido com o nome escolhido no canto superi
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_udd_maxwidgets"
->title="Número máximo de widgets"
->abstract="O Dashboard Service oferece suporte para até dez widgets. Depois de adicionar dez widgets ao painel, a opção [!UICONTROL Adicionar novo widget] fica desativada e é exibida em cinza."
+>title="Número máximo de dispositivos"
+>abstract="O serviço do painel permite até 10 dispositivos. Depois de adicionar dez dispositivos ao painel, a opção [!UICONTROL Adicionar novo dispositivo] fica desabilitada e esmaecida."
 
 Na nova visualização de painel, selecione **[!UICONTROL Adicionar novo widget]** para iniciar o processo de criação do widget.
 
 >[!IMPORTANT]
 >
->Cada painel aceita até dez widgets. Depois de adicionar dez widgets ao painel, a opção [!UICONTROL Adicionar novo widget] fica desativada e é exibida em cinza.
+>Cada painel aceita até dez widgets. Depois de adicionar dez dispositivos ao painel, a opção [!UICONTROL Adicionar novo dispositivo] fica desabilitada e esmaecida.
 
 ![O novo painel vazio com Adicionar novo widget realçado.](./images/user-defined-dashboards/add-new-widget.png)
 

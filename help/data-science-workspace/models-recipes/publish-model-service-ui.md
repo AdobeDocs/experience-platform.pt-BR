@@ -8,11 +8,11 @@ exl-id: ebbec1b1-20d3-43b5-82d3-89c79757625a
 source-git-commit: d6a4b149b911cd6e7dbbd6c1289fce64be76b506
 workflow-type: tm+mt
 source-wordcount: '505'
-ht-degree: 0%
+ht-degree: 4%
 
 ---
 
-# Publicar um modelo como um serviço na interface do usuário do Data Science Workspace {#publish-a-model-as-a-service}
+# Publicar um modelo como um serviço na interface do usuário do Espaço de trabalho de ciência de dados {#publish-a-model-as-a-service}
 
 >[!CONTEXTUALHELP]
 >id="platform_intelligentservices_publishmodel"

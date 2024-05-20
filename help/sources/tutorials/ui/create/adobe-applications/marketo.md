@@ -2,10 +2,10 @@
 title: Criar uma conexão de origem de Marketo Engage e um fluxo de dados na interface
 description: Este tutorial fornece etapas para criar uma conexão de origem de Marketo Engage e fluxo de dados na interface do usuário para trazer dados B2B para o Adobe Experience Platform.
 exl-id: a6aa596b-9cfa-491e-86cb-bd948fb561a8
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 744098777141c61ac27fe6f150c05469d5705dee
 workflow-type: tm+mt
-source-wordcount: '1675'
-ht-degree: 1%
+source-wordcount: '1831'
+ht-degree: 2%
 
 ---
 
@@ -31,10 +31,10 @@ Este tutorial requer uma compreensão funcional dos seguintes componentes do Ado
 
 ### Coletar credenciais necessárias
 
-Para acessar seu [!DNL Marketo] na Platform, você deve fornecer os seguintes valores:
+Para acessar seu [!DNL Marketo] conta no Experience Platform, você deve fornecer os seguintes valores:
 
 | Credencial | Descrição |
-| ---------- | ----------- |
+| ---- | ---- |
 | `munchkinId` | A ID do Munchkin é o identificador exclusivo de um [!DNL Marketo] instância. |
 | `clientId` | A ID exclusiva do cliente do [!DNL Marketo] instância. |
 | `clientSecret` | O segredo exclusivo do cliente do [!DNL Marketo] instância. |
@@ -45,27 +45,37 @@ Depois de obter as credenciais necessárias, você poderá seguir as etapas da p
 
 ## Conecte seu [!DNL Marketo] account
 
-Na interface do usuário da Platform, selecione **[!UICONTROL Origens]** na barra de navegação esquerda, para acessar a [!UICONTROL Origens] espaço de trabalho. A variável [!UICONTROL Catálogo] exibe uma variedade de fontes com as quais você pode criar uma conta.
+Na interface do usuário da Platform, selecione **[!UICONTROL Origens]** na navegação à esquerda, para acessar a [!UICONTROL Origens] espaço de trabalho. Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar a fonte específica com a qual deseja trabalhar usando a opção de pesquisa.
 
-Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar a fonte específica com a qual deseja trabalhar usando a barra de pesquisa.
+No *aplicativos Adobe* categoria, selecione **[!UICONTROL Marketo Engage]** e selecione **[!UICONTROL Adicionar dados]**.
 
-No [!UICONTROL aplicativos Adobe] categoria, selecione **[!UICONTROL Marketo Engage]**. Em seguida, selecione **[!UICONTROL Adicionar dados]** para criar um novo [!DNL Marketo] fluxo de dados.
+>[!TIP]
+>
+>As origens no catálogo de origens exibem a variável **[!UICONTROL Configurar]** opção quando uma determinada fonte ainda não tiver uma conta autenticada. Quando uma conta autenticada existir, essa opção será alterada para **[!UICONTROL Adicionar dados]**.
 
-![catálogo](../../../../images/tutorials/create/marketo/catalog.png)
+![O catálogo de origens com a origem de Marketo Engage selecionada.](../../../../images/tutorials/create/marketo/catalog.png)
 
 A variável **[!UICONTROL Conectar conta Marketo Engage]** é exibida. Nesta página, você pode usar uma nova conta ou acessar uma conta existente.
 
-### Conta existente
+>[!BEGINTABS]
 
-Para criar um fluxo de dados com uma conta existente, selecione **[!UICONTROL Conta existente]** e, em seguida, selecione a [!DNL Marketo] conta que deseja usar. Selecione **[!UICONTROL Próximo]** para continuar.
+>[!TAB Criar uma nova conta]
 
-![existente](../../../../images/tutorials/create/marketo/existing.png)
+Para criar uma nova conta, selecione **[!UICONTROL Nova conta]** e forneça um nome, uma descrição opcional e suas credenciais.
 
-### Nova conta
+Quando terminar, selecione **[!UICONTROL Conectar à origem]** e aguarde algum tempo para estabelecer a nova conexão.
 
-Se estiver criando uma nova conta, selecione **[!UICONTROL Nova conta]**. No formulário de entrada que aparece, forneça um nome de conta, uma descrição opcional e sua [!DNL Marketo] credenciais de autenticação. Quando terminar, selecione **[!UICONTROL Conectar à origem]** e aguarde algum tempo para estabelecer a nova conexão.
+![A nova interface de conta para autenticar uma nova conta do Marketo.](../../../../images/tutorials/create/marketo/new.png)
 
-![novo](../../../../images/tutorials/create/marketo/new.png)
+>[!TAB Usar uma conta existente]
+
+Para usar uma conta existente, selecione **[!UICONTROL Conta existente]** e selecione a conta que deseja usar no catálogo de contas existente.
+
+Selecione **[!UICONTROL Próximo]** para continuar.
+
+![A interface de conta existente, onde é possível selecionar uma conta existente do Marketo.](../../../../images/tutorials/create/marketo/existing.png)
+
+>[!ENDTABS]
 
 ## Selecionar um conjunto de dados
 
@@ -77,59 +87,65 @@ A metade esquerda da interface é um navegador de diretórios, exibindo as 10 [!
 >
 >Para fins de brevidade, o tutorial a seguir usa [!UICONTROL Oportunidades] exemplo, mas as etapas descritas abaixo aplicam-se a qualquer um dos 10 [!DNL Marketo] conjuntos de dados.
 
-Selecione o conjunto de dados que deseja assimilar primeiro e selecione **[!UICONTROL Próxima]**.
+Selecione o conjunto de dados que você deseja assimilar. Isso atualiza a interface para exibir uma visualização do conjunto de dados. Quando terminar, selecione **[!UICONTROL Próxima]**.
 
-![select-data](../../../../images/tutorials/create/marketo/select-data.png)
+![A interface de visualização](../../../../images/tutorials/create/marketo/preview.png)
 
-## Fornecer detalhes do fluxo de dados {#provide-dataflow-details}
+## Fornecer detalhes do conjunto de dados e do fluxo de dados {#provide-dataset-and-dataflow-details}
 
-A variável [!UICONTROL Detalhes do fluxo de dados] permite selecionar se deseja usar um conjunto de dados existente ou um novo conjunto de dados. Durante esse processo, você também pode definir configurações para [!UICONTROL Conjunto de dados Perfil], [!UICONTROL Diagnóstico de erro], [!UICONTROL Assimilação parcial], e [!UICONTROL Alertas].
+Em seguida, você deve fornecer informações sobre seu conjunto de dados e seu fluxo de dados.
 
-![dataflow-details](../../../../images/tutorials/create/marketo/dataflow-details.png)
+### Detalhes do conjunto de dados {#dataset-details}
+
+Um conjunto de dados é uma construção de armazenamento e gerenciamento para uma coleção de dados, normalmente uma tabela, que contém um esquema (colunas) e campos (linhas). Os dados assimilados com sucesso no Experience Platform são armazenados no data lake como conjuntos de dados. Durante essa etapa, você pode criar um novo conjunto de dados ou usar um conjunto de dados existente.
 
 >[!BEGINTABS]
 
->[!TAB Usar um conjunto de dados existente]
-
-Para assimilar dados em um conjunto de dados existente, selecione **[!UICONTROL Conjunto de dados existente]**. É possível recuperar um conjunto de dados existente usando o [!UICONTROL Pesquisa avançada] ou rolando pela lista de conjuntos de dados existentes no menu suspenso. Depois de selecionar um conjunto de dados, forneça um nome e uma descrição para o fluxo de dados.
-
-![conjunto de dados existente](../../../../images/tutorials/create/marketo/existing-dataset.png)
-
 >[!TAB Usar um novo conjunto de dados]
 
-Para assimilar em um novo conjunto de dados, selecione **[!UICONTROL Novo conjunto de dados]** e forneça um nome de conjunto de dados de saída e uma descrição opcional. Em seguida, selecione um esquema para mapear usando o [!UICONTROL Pesquisa avançada] ou rolando pela lista de esquemas existentes no menu suspenso. Depois de selecionar um esquema, forneça um nome e uma descrição para o fluxo de dados.
+Para usar um novo conjunto de dados, selecione **[!UICONTROL Novo conjunto de dados]** e forneça um nome e uma descrição opcional para seu conjunto de dados. Você também deve selecionar um esquema do Experience Data Model (XDM) ao qual seu conjunto de dados adere.
 
-![novo conjunto de dados](../../../../images/tutorials/create/marketo/new-dataset.png)
+![A nova interface de seleção do conjunto de dados.](../../../../images/tutorials/create/marketo/new-dataset.png)
+
+>[!TAB Usar um conjunto de dados existente]
+
+Se você já tiver um conjunto de dados, selecione **[!UICONTROL Conjunto de dados existente]** e, em seguida, use o **[!UICONTROL Pesquisa avançada]** opção para exibir uma janela de todos os conjuntos de dados em sua organização, incluindo seus respectivos detalhes, como se eles estão habilitados para assimilação no Perfil do cliente em tempo real ou não.
+
+![A interface de seleção do conjunto de dados existente.](../../../../images/tutorials/create/marketo/existing-dataset.png)
 
 >[!ENDTABS]
 
-### Ativar [!DNL Profile] e diagnóstico de erro
-
-Em seguida, selecione o **[!UICONTROL Conjunto de dados Perfil]** ativar ou desativar o conjunto de dados para [!DNL Profile]. Isso permite criar uma visualização integral dos atributos e comportamentos de uma entidade. Dados de todos [!DNL Profile]Os conjuntos de dados habilitados para serão incluídos no [!DNL Profile] As alterações e são aplicadas quando você salva o fluxo de dados.
-
-[!UICONTROL Diagnóstico de erro] permite a geração de mensagens de erro detalhadas para qualquer registro incorreto que ocorra em seu fluxo de dados, enquanto [!UICONTROL Assimilação parcial] O permite assimilar dados que contêm erros, até um determinado limite definido manualmente. Consulte a [visão geral da assimilação parcial de lotes](../../../../../ingestion/batch-ingestion/partial.md) para obter mais informações.
+### Configurações de fluxo de dados {#dataflow-configurations}
 
 >[!IMPORTANT]
 >
 >A variável [!DNL Marketo] A origem usa a assimilação em lote para assimilar todos os registros históricos e a assimilação por transmissão para atualizações em tempo real. Isso permite que a origem continue a transmitir enquanto assimila registros incorretos. Ativar o **[!UICONTROL Assimilação parcial]** alterne e defina o [!UICONTROL Limite de erro %] ao máximo para evitar a falha do fluxo de dados.
 
-![perfil e erros](../../../../images/tutorials/create/marketo/profile-and-errors.png)
+Se o conjunto de dados estiver ativado para o Perfil de cliente em tempo real, durante essa etapa é possível alternar **[!UICONTROL Conjunto de dados Perfil]** para ativar seus dados para assimilação de perfis. Você também pode usar esta etapa para habilitar **[!UICONTROL Diagnóstico de erro]** e **[!UICONTROL Assimilação parcial]**.
 
-### Ativar alertas
+* **[!UICONTROL Diagnóstico de erro]**: Selecionar **[!UICONTROL Diagnóstico de erro]** para instruir a origem a produzir diagnósticos de erro que você poderá consultar posteriormente ao monitorar a atividade do conjunto de dados e o status do fluxo de dados.
+* **[!UICONTROL Assimilação parcial]**: [Assimilação parcial de lote](../../../../../ingestion/batch-ingestion/partial.md) é a capacidade de assimilar dados que contêm erros, até um determinado limite configurável. Esse recurso permite assimilar com sucesso todos os seus dados precisos no Experience Platform, enquanto todos os seus dados incorretos são armazenados em lote separadamente com informações sobre por que são inválidos.
 
-Você pode ativar os alertas para receber notificações sobre o status do fluxo de dados. Selecione um alerta na lista para assinar e receber notificações sobre o status do seu fluxo de dados. Para obter mais informações sobre alertas, consulte o manual sobre [assinatura de alertas de origens usando a interface do usuário](../../alerts.md).
+Durante essa etapa, é possível ativar **[!UICONTROL Fluxo de dados de exemplo]** limitar a assimilação de dados e evitar custos adicionais decorrentes da assimilação de todos os dados históricos, incluindo identidades de pessoa.
 
-Quando terminar de fornecer detalhes ao seu fluxo de dados, selecione **[!UICONTROL Próxima]**.
+>[!BEGINSHADEBOX]
 
-![alertas](../../../../images/tutorials/create/marketo/alerts.png)
+**Guia rápido sobre como usar amostra de fluxo de dados**
 
-### Ignorar contas não solicitadas ao assimilar dados de empresas
+A amostra de fluxo de dados é uma configuração que pode ser definida para o seu [!DNL Marketo] fluxo de dados para limitar a taxa de assimilação e experimentar os recursos de Experience Platform sem precisar assimilar grandes quantidades de dados.
 
-Ao criar um fluxo de dados para assimilar dados do conjunto de dados das empresas, você pode configurar [!UICONTROL Excluir contas não solicitadas] para excluir ou incluir contas não solicitadas da assimilação.
+* Ative o fluxo de dados de amostra para limitar os dados históricos, assimilando até 100 mil (da maior ID de registro) registros ou até os últimos 10 dias de atividade durante o trabalho de preenchimento retroativo.
+* Ao usar a configuração de fluxo de dados de amostra para todas as entidades B2B, você deve considerar que é possível que alguns registros relacionados possam estar ausentes, pois todo o histórico dos dados de origem não é assimilado.
+
+>[!ENDSHADEBOX]
+
+![A seção de configurações do fluxo de dados da página de detalhes do fluxo de dados.](../../../../images/tutorials/create/marketo/dataflow-configurations.png)
+
+Além disso, se estiver assimilando dados do conjunto de dados das empresas, você pode ativar **[!UICONTROL Excluir contas não solicitadas]** para excluir da assimilação contas não solicitadas.
 
 Quando indivíduos preenchem um formulário, [!DNL Marketo] cria um registro de conta fantasma com base no Nome da empresa que não contém outros dados. Para novos fluxos de dados, a alternância para excluir contas não solicitadas é habilitada por padrão. Para fluxos de dados existentes, você pode ativar ou desativar o recurso, com alterações aplicáveis a dados recém-assimilados e a dados não existentes.
 
-![contas não solicitadas](../../../../images/tutorials/create/marketo/unclaimed-accounts.png)
+![Excluir contas não solicitadas](../../../../images/tutorials/create/marketo/unclaimed-accounts.png)
 
 ## Mapeie seu [!DNL Marketo] campos de origem do conjunto de dados para campos XDM de destino
 
@@ -150,7 +166,7 @@ Each [!DNL Marketo] O conjunto de dados tem suas próprias regras de mapeamento 
 
 Com base nas suas necessidades, você pode optar por mapear campos diretamente ou usar funções de preparação de dados para transformar dados de origem para derivar valores calculados ou calculados. Para obter etapas abrangentes sobre como usar a interface de mapeamento, consulte [Guia da interface de preparação de dados](../../../../../data-prep/ui/mapping.md).
 
-![mapeamento](../../../../images/tutorials/create/marketo/mapping.png)
+![A interface de mapeamento dos dados do Marketo.](../../../../images/tutorials/create/marketo/mapping.png)
 
 Quando os conjuntos de mapeamento estiverem prontos, selecione **[!UICONTROL Próxima]** e aguarde alguns instantes para que o novo fluxo de dados seja criado.
 
@@ -163,7 +179,7 @@ A variável **[!UICONTROL Revisão]** é exibida, permitindo que você revise se
 
 Depois de revisar o fluxo de dados, selecione **[!UICONTROL Salvar e assimilar]** e aguarde algum tempo para criar o fluxo de dados.
 
-![revisão](../../../../images/tutorials/create/marketo/review.png)
+![A página de revisão onde é possível confirmar os detalhes do fluxo de dados antes da assimilação.](../../../../images/tutorials/create/marketo/review.png)
 
 ## Monitorar seu fluxo de dados
 
@@ -179,10 +195,7 @@ Os atributos personalizados em conjuntos de dados não podem ser ocultos ou remo
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você criou com sucesso um fluxo de dados para trazer [!DNL Marketo] dados. Os dados de entrada agora podem ser usados por serviços downstream da plataforma, como [!DNL Real-Time Customer Profile] e [!DNL Data Science Workspace]. Consulte os seguintes documentos para obter mais detalhes:
-
-* [Visão geral do [!DNL Real-Time Customer Profile]](/help/profile/home.md)
-* [Visão geral do [!DNL Data Science Workspace]](/help/data-science-workspace/home.md)
+Ao seguir este tutorial, você criou com sucesso um fluxo de dados para assimilar dados B2B de suas [!DNL Marketo Engage] origem para Experience Platform.
 
 ## Apêndice {#appendix}
 

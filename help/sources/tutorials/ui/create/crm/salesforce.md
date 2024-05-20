@@ -2,10 +2,10 @@
 title: Conecte sua conta do Salesforce usando a interface do Experience Platform
 description: Saiba como conectar sua conta do Salesforce e trazer seus dados de CRM para o Experience Platform usando a interface do usuário.
 exl-id: b67fa4c4-d8ff-4d2d-aa76-5d9d32aa22d6
-source-git-commit: a5ecd4ab1c543805870b846cfe0fccc5474333d4
+source-git-commit: c543590ef1806e5259da2ffb6833cd030d573ca7
 workflow-type: tm+mt
-source-wordcount: '542'
-ht-degree: 0%
+source-wordcount: '737'
+ht-degree: 1%
 
 ---
 
@@ -26,17 +26,38 @@ Se você já tiver um [!DNL Salesforce] conta, você pode ignorar o restante des
 
 ### Coletar credenciais necessárias {#gather-required-credentials}
 
-Para autenticar seu [!DNL Salesforce] conta em relação ao Experience Platform, você deve fornecer valores que correspondam ao seguinte [!DNL Salesforce] credenciais:
+A variável [!DNL Salesforce] A origem oferece suporte à autenticação básica e à Credencial do Cliente OAuth2.
+
+>[!BEGINTABS]
+
+>[!TAB Autenticação básica]
+
+Você deve fornecer valores para as credenciais a seguir para conectar seu [!DNL Salesforce] conta usando autenticação básica.
 
 | Credencial | Descrição |
 | --- | --- |
-| `environmentUrl` | O URL do [!DNL Salesforce] instância de origem. |
-| `username` | O nome de usuário para o [!DNL Salesforce] conta de usuário. |
-| `password` | A senha para o [!DNL Salesforce] conta de usuário. |
-| `securityToken` | O token de segurança para o [!DNL Salesforce] conta de usuário. |
-| `apiVersion` | (Opcional) A versão da API REST do [!DNL Salesforce] instância que você está usando. O valor da versão da API deve ser formatado com um decimal. Por exemplo, se você estiver usando a versão da API `52`, você deverá inserir o valor como `52.0` Se esse campo ficar em branco, o Experience Platform usará automaticamente a versão mais recente disponível. |
+| URL do ambiente | O URL do [!DNL Salesforce] instância de origem. |
+| Nome de usuário | O nome de usuário para o [!DNL Salesforce] conta de usuário. |
+| Senha | A senha para o [!DNL Salesforce] conta de usuário. |
+| Token de segurança | O token de segurança para o [!DNL Salesforce] conta de usuário. |
+| Versão da API | (Opcional) A versão da API REST do [!DNL Salesforce] instância que você está usando. O valor da versão da API deve ser formatado com um decimal. Por exemplo, se você estiver usando a versão da API `52`, você deverá inserir o valor como `52.0` Se esse campo ficar em branco, o Experience Platform usará automaticamente a versão mais recente disponível. |
 
 Para obter mais informações sobre autenticação, consulte [este [!DNL Salesforce] guia de autenticação](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/quickstart_oauth.htm).
+
+>[!TAB Credencial do cliente OAuth2]
+
+Você deve fornecer valores para as credenciais a seguir para conectar seu [!DNL Salesforce] usando a credencial do cliente OAuth2.
+
+| Credencial | Descrição |
+| --- | --- |
+| URL do ambiente | O URL do [!DNL Salesforce] instância de origem. |
+| ID do cliente | A ID do cliente é usada em conjunto com o segredo do cliente como parte da autenticação OAuth2. Juntas, a ID do cliente e o segredo do cliente permitem que o aplicativo opere em nome da conta identificando o aplicativo para [!DNL Salesforce]. |
+| Client secret | O segredo do cliente é usado em conjunto com a ID do cliente como parte da autenticação OAuth2. Juntas, a ID do cliente e o segredo do cliente permitem que o aplicativo opere em nome da conta identificando o aplicativo para [!DNL Salesforce]. |
+| Versão da API | (Opcional) A versão da API REST do [!DNL Salesforce] instância que você está usando. O valor da versão da API deve ser formatado com um decimal. Por exemplo, se você estiver usando a versão da API `52`, você deverá inserir o valor como `52.0` Se esse campo ficar em branco, o Experience Platform usará automaticamente a versão mais recente disponível. |
+
+Para obter mais informações sobre como usar o OAuth para [!DNL Salesforce], leia o [[!DNL Salesforce] guia sobre fluxos de autorização OAuth](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&amp;type=5).
+
+>[!ENDTABS]
 
 Depois de obter as credenciais necessárias, siga as etapas abaixo para conectar seu [!DNL Salesforce] conta para Experience Platform.
 

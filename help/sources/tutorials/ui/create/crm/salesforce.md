@@ -2,9 +2,9 @@
 title: Conecte sua conta do Salesforce usando a interface do Experience Platform
 description: Saiba como conectar sua conta do Salesforce e trazer seus dados de CRM para o Experience Platform usando a interface do usuário.
 exl-id: b67fa4c4-d8ff-4d2d-aa76-5d9d32aa22d6
-source-git-commit: c543590ef1806e5259da2ffb6833cd030d573ca7
+source-git-commit: 8d62cf4ca0071e84baa9399e0a25f7ebfb096c1a
 workflow-type: tm+mt
-source-wordcount: '737'
+source-wordcount: '829'
 ht-degree: 1%
 
 ---
@@ -40,7 +40,7 @@ Você deve fornecer valores para as credenciais a seguir para conectar seu [!DNL
 | Nome de usuário | O nome de usuário para o [!DNL Salesforce] conta de usuário. |
 | Senha | A senha para o [!DNL Salesforce] conta de usuário. |
 | Token de segurança | O token de segurança para o [!DNL Salesforce] conta de usuário. |
-| Versão da API | (Opcional) A versão da API REST do [!DNL Salesforce] instância que você está usando. O valor da versão da API deve ser formatado com um decimal. Por exemplo, se você estiver usando a versão da API `52`, você deverá inserir o valor como `52.0` Se esse campo ficar em branco, o Experience Platform usará automaticamente a versão mais recente disponível. |
+| Versão da API | (Opcional) A versão da API REST do [!DNL Salesforce] instância que você está usando. O valor da versão da API deve ser formatado com um decimal. Por exemplo, se você estiver usando a versão da API `52`, você deverá inserir o valor como `52.0`. Se esse campo ficar em branco, o Experience Platform usará automaticamente a versão mais recente disponível. |
 
 Para obter mais informações sobre autenticação, consulte [este [!DNL Salesforce] guia de autenticação](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/quickstart_oauth.htm).
 
@@ -51,9 +51,9 @@ Você deve fornecer valores para as credenciais a seguir para conectar seu [!DNL
 | Credencial | Descrição |
 | --- | --- |
 | URL do ambiente | O URL do [!DNL Salesforce] instância de origem. |
-| ID do cliente | A ID do cliente é usada em conjunto com o segredo do cliente como parte da autenticação OAuth2. Juntas, a ID do cliente e o segredo do cliente permitem que o aplicativo opere em nome da conta identificando o aplicativo para [!DNL Salesforce]. |
-| Client secret | O segredo do cliente é usado em conjunto com a ID do cliente como parte da autenticação OAuth2. Juntas, a ID do cliente e o segredo do cliente permitem que o aplicativo opere em nome da conta identificando o aplicativo para [!DNL Salesforce]. |
-| Versão da API | (Opcional) A versão da API REST do [!DNL Salesforce] instância que você está usando. O valor da versão da API deve ser formatado com um decimal. Por exemplo, se você estiver usando a versão da API `52`, você deverá inserir o valor como `52.0` Se esse campo ficar em branco, o Experience Platform usará automaticamente a versão mais recente disponível. |
+| ID do cliente | A ID do cliente é usada em conjunto com o segredo do cliente como parte da autenticação OAuth2. Juntos, a ID do cliente e o segredo do cliente permitem que o aplicativo opere em nome da sua conta, identificando o aplicativo para [!DNL Salesforce]. |
+| Client secret | O segredo do cliente é usado em conjunto com a ID do cliente como parte da autenticação OAuth2. Juntos, a ID do cliente e o segredo do cliente permitem que o aplicativo opere em nome da sua conta, identificando o aplicativo para [!DNL Salesforce]. |
+| Versão da API | A versão da API REST do [!DNL Salesforce] instância que você está usando. O valor da versão da API deve ser formatado com um decimal. Por exemplo, se você estiver usando a versão da API `52`, você deverá inserir o valor como `52.0`. Se esse campo ficar em branco, o Experience Platform usará automaticamente a versão mais recente disponível. |
 
 Para obter mais informações sobre como usar o OAuth para [!DNL Salesforce], leia o [[!DNL Salesforce] guia sobre fluxos de autorização OAuth](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&amp;type=5).
 
@@ -63,29 +63,59 @@ Depois de obter as credenciais necessárias, siga as etapas abaixo para conectar
 
 ## Conecte seu [!DNL Salesforce] account
 
-Na interface do usuário da Platform, selecione **[!UICONTROL Origens]** na navegação à esquerda, para acessar o espaço de trabalho de fontes. A variável *[!UICONTROL Catálogo]* A tela exibe uma variedade de fontes disponíveis no catálogo de fontes do Experience Platform.
+Na interface do usuário da Platform, selecione **[!UICONTROL Origens]** na navegação à esquerda, para acessar a [!UICONTROL Origens] espaço de trabalho. Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar a fonte específica com a qual deseja trabalhar usando a opção de pesquisa.
 
-Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar uma fonte específica usando a opção de pesquisa.
+No *CRM* categoria, selecione **[!DNL Salesforce]** e selecione **[!UICONTROL Adicionar dados]**.
 
-Selecionar **[!UICONTROL CRM]** na lista de categorias de origens e selecione **[!UICONTROL Adicionar dados]** do [!DNL Salesforce] cartão.
+>[!TIP]
+>
+>As origens no catálogo de origens exibem a variável **[!UICONTROL Configurar]** opção quando uma determinada fonte ainda não tiver uma conta autenticada. Quando uma conta autenticada existir, essa opção será alterada para **[!UICONTROL Adicionar dados]**.
 
 ![O catálogo de origens na interface do usuário do Experience Platform com o cartão de origem do Salesforce selecionado.](../../../../images/tutorials/create/salesforce/catalog.png)
 
 A variável **[!UICONTROL Conectar-se ao Salesforce]** é exibida. Nesta página, você pode usar credenciais novas ou existentes.
 
->[!BEGINTABS]
-
->[!TAB Usar uma conta existente do Salesforce]
+### Usar uma conta existente
 
 Para usar uma conta existente, selecione **[!UICONTROL Conta existente]** e, em seguida, selecione a conta que deseja usar na lista exibida. Quando terminar, selecione **[!UICONTROL Próxima]** para continuar.
 
 ![Uma lista de contas autenticadas do Salesforce que já existem em sua organização.](../../../../images/tutorials/create/salesforce/existing.png)
 
->[!TAB Criar uma nova conta do Salesforce]
+### Criar uma nova conta
 
-Para usar uma nova conta, selecione **[!UICONTROL Nova conta]** e forneça um nome, uma descrição e sua [!DNL Salesforce] credenciais de autenticação. Quando terminar, selecione **[!UICONTROL Conectar à origem]** e aguarde alguns segundos para que a nova conexão seja estabelecida.
+Para criar uma nova conta, selecione **[!UICONTROL Nova conta]** e forneça um nome e uma descrição para o seu novo [!DNL Salesforce] conta.
 
 ![A interface na qual você pode criar uma nova conta do Salesforce fornecendo as credenciais de autenticação apropriadas.](../../../../images/tutorials/create/salesforce/new.png)
+
+Em seguida, selecione o tipo de autenticação que deseja usar para a nova conta.
+
+>[!BEGINTABS]
+
+>[!TAB Autenticação básica]
+
+Para autenticação básica, selecione **[!UICONTROL Autenticação básica]** e, em seguida, forneça valores para as seguintes credenciais:
+
+* URL do ambiente
+* Nome de usuário
+* Senha
+* Versão da API (opcional)
+
+Quando terminar, selecione **[!UICONTROL Conectar à origem]**.
+
+![A interface de autenticação básica para a criação de conta do Salesforce.](../../../../images/tutorials/create/salesforce/basic.png)
+
+>[!TAB Credencial do cliente OAuth2]
+
+Para a credencial do cliente OAuth 2, selecione **[!UICONTROL Credencial do cliente OAuth2]** e, em seguida, forneça valores para as seguintes credenciais:
+
+* URL do ambiente
+* ID do cliente
+* Client secret
+* Versão da API
+
+Quando terminar, selecione **[!UICONTROL Conectar à origem]**.
+
+![A interface OAuth para a criação de conta do Salesforce.](../../../../images/tutorials/create/salesforce/oauth2.png)
 
 >[!ENDTABS]
 

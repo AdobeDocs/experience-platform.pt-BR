@@ -4,7 +4,7 @@ title: Ative públicos para destinos baseados em arquivo usando a API do Serviç
 description: Saiba como usar a API do Serviço de fluxo para exportar arquivos com perfis qualificados para destinos de armazenamento na nuvem.
 type: Tutorial
 exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
-source-git-commit: b94828381da56fa957b44b77aefa00a8ddd4bbd6
+source-git-commit: 8cd0da12784d8fac3f0ce9afeb881d7a3916795f
 workflow-type: tm+mt
 source-wordcount: '4404'
 ht-degree: 4%
@@ -745,7 +745,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
-++[!DNL Amazon S3] - Solicitação de conexão básica com autenticação de função assumida
++++[!DNL Amazon S3] - Solicitação de conexão básica com autenticação de função assumida
 
 >[!TIP]
 >

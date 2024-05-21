@@ -2,9 +2,9 @@
 title: Logs de consulta
 description: Os logs de consulta são gerados automaticamente cada vez que uma consulta é executada e ficam disponíveis por meio da interface do usuário para ajudar na solução de problemas. Este documento descreve como usar e navegar na seção Logs do serviço de consulta da interface do usuário.
 exl-id: 929e9fba-a9ba-4bf9-a363-ca8657a84f75
-source-git-commit: 445738f78f44ab8eb1632dbda82c4dd69dbebefd
+source-git-commit: 41c069ef1c0a19f34631e77afd7a80b8967c5060
 workflow-type: tm+mt
-source-wordcount: '931'
+source-wordcount: '1012'
 ht-degree: 0%
 
 ---
@@ -19,9 +19,13 @@ O Adobe Experience Platform mantém um log de todos os eventos de consulta que o
 
 Os arquivos de log são gerados automaticamente por qualquer evento de consulta e contêm informações, incluindo o SQL usado, o status da consulta, quanto tempo ela levou e o último tempo de execução. Você pode usar os dados do log de consultas como uma ferramenta poderosa para solucionar problemas de consultas ineficientes ou com problemas. Informações de log mais abrangentes são mantidas como parte do recurso de log de auditoria e podem ser encontradas na [documentação do log de auditoria](../../landing/governance-privacy-security/audit-logs/overview.md).
 
-## Verificar logs de consulta
+## Verificar logs de consulta {#check-query-logs}
 
 Para verificar os logs de consulta, selecione [!UICONTROL Consultas] para navegar até o espaço de trabalho do Serviço de consulta e selecionar [!UICONTROL Log] nas opções disponíveis.
+
+>[!NOTE]
+>
+>As consultas do sistema e do painel são excluídas por padrão. Consulte a [filtros](#filter-logs) para obter informações sobre como refinar os logs exibidos com base em suas configurações.
 
 ![A interface do usuário da Platform com Queries e Log está realçada.](../images/ui/query-log/logs.png)
 
@@ -77,11 +81,12 @@ A lista de filtros disponíveis é exibida.
 
 ![O espaço de trabalho Log de Queries com as opções de filtro exibidas e realçadas.](../images/ui/query-log/log-filter-settings.png)
 
-A tabela a seguir provou uma descrição de cada filtro.
+A tabela a seguir fornece uma descrição de cada filtro.
 
 | Filtro | Descrição |
 | ------ | ----------- |
 | [!UICONTROL Excluir consultas do painel] | Essa caixa de seleção está ativada por padrão e exclui logs gerados pelas consultas usadas para gerar insights. Essas consultas são geradas pelo sistema e obscurecem os registros de logs gerados pelo usuário necessários para monitoramento, administração e solução de problemas. Para exibir logs gerados pelo sistema, desmarque a caixa de seleção. |
+| [!UICONTROL Excluir consultas do sistema] | Essa caixa de seleção é ativada por padrão e exclui logs gerados pelo sistema. As consultas geradas pelo sistema geralmente incluem tarefas em segundo plano ou operações de manutenção que podem não ser relevantes para monitoramento, administração ou solução de problemas do usuário. Se você precisar inspecionar registros gerados pelo sistema, desmarque essa caixa de seleção para incluí-los na visualização de log. |
 | [!UICONTROL Data inicial] | Para filtrar os logs de consultas criadas durante um período específico, defina o [!UICONTROL Início] e [!UICONTROL Fim] datas no [!UICONTROL Data inicial] seção. |
 | [!UICONTROL Data de conclusão] | Para filtrar os logs de consultas concluídas durante um período específico, defina o [!UICONTROL Início] e [!UICONTROL Fim] datas no [!UICONTROL Data de conclusão] seção. |
 | [!UICONTROL Status] | Para filtrar logs com base na variável [!UICONTROL Status] da consulta, selecione o botão de opção apropriado. As opções disponíveis incluem [!UICONTROL Enviado], [!UICONTROL Em andamento], [!UICONTROL Sucesso], e [!UICONTROL Failed]. Você só pode filtrar logs com base em uma condição de status por vez. |

@@ -2,9 +2,9 @@
 title: Agendamentos de consulta
 description: Saiba como automatizar execuções de consultas programadas, excluir ou desativar um agendamento de consultas e utilizar as opções de agendamento disponíveis por meio da interface do usuário do Adobe Experience Platform.
 exl-id: 984d5ddd-16e8-4a86-80e4-40f51f37a975
-source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
+source-git-commit: 41c069ef1c0a19f34631e77afd7a80b8967c5060
 workflow-type: tm+mt
-source-wordcount: '1572'
+source-wordcount: '1822'
 ht-degree: 0%
 
 ---
@@ -93,9 +93,23 @@ Você também pode inscrever uma consulta agendada no recurso de quarentena a pa
 
 ### Definir alertas para um status de consulta agendada {#alerts-for-query-status}
 
-Você também pode assinar alertas de consulta como parte das configurações de consulta programada. Isso significa que você receberá notificações sobre uma alteração no status do query. Os alertas podem ser recebidos como notificações pop-up ou emails. As opções de alerta de estado de consulta disponíveis incluem início, sucesso e falha. Marque a caixa de seleção para assinar alertas para esse status de consulta agendada.
+Você também pode assinar alertas de consulta como parte das configurações de consulta programada. Você pode definir suas configurações para receber notificações para uma variedade de situações. Os alertas podem ser definidos para um estado em quarentena, atrasos no processamento da consulta ou uma alteração no status da consulta. As opções de alerta de estado de consulta disponíveis incluem início, sucesso e falha. Os alertas podem ser recebidos como notificações pop-up ou emails. Marque a caixa de seleção para assinar alertas para esse status de consulta agendada.
 
 ![O painel Schedule details com as opções de Alerta é realçado.](../images/ui/query-editor/alerts.png)
+
+A tabela abaixo explica os tipos de alerta de consulta aceitos:
+
+| Tipo de alerta | Descrição |
+|---|---|
+| `start` | Este alerta notifica quando uma execução de consulta programada é iniciada ou começa a ser processada. |
+| `success` | Esse alerta informa quando uma execução de consulta programada é concluída com sucesso, indicando que a consulta foi executada sem erros. |
+| `failed` | Esse alerta é disparado quando uma execução de consulta agendada encontra um erro ou falha na execução. Isso ajuda a identificar e solucionar problemas prontamente. |
+| `quarantine` | Esse alerta é ativado quando uma execução de consulta agendada é colocada em quarentena. Quando uma consulta é [inscrito no recurso de quarentena](#quarantine), qualquer consulta programada que falhar dez execuções consecutivas será colocada automaticamente em uma [!UICONTROL Em quarentena] estado. Uma consulta em quarentena exige sua intervenção antes que qualquer outra execução possa ocorrer. Observação: as consultas devem ser inscritas no recurso de quarentena para que você possa assinar alertas de quarentena. |
+| `delay` | Este alerta o notifica se houver uma [atraso no resultado de uma execução de consulta agendada](./monitor-queries.md#query-run-delay) além de um limite especificado. Você pode definir um horário personalizado que acione o alerta quando a consulta for executada por essa duração sem ser concluída ou falhar. O comportamento padrão define um alerta por 150 minutos após o início do processamento da consulta. |
+
+>[!NOTE]
+>
+>Se você optar por definir um [!UICONTROL Atraso na execução da consulta] alerta, você deve definir o tempo de atraso desejado em minutos na interface do usuário da Platform. Insira a duração em minutos. O atraso máximo é de 24 horas (1440 minutos).
 
 Para obter uma visão geral dos alertas no Adobe Experience Platform, incluindo a estrutura de como as regras de alerta são definidas, consulte [visão geral dos alertas](../../observability/alerts/overview.md). Para obter orientação sobre como gerenciar alertas e regras de alerta na interface do Adobe Experience Platform, consulte [Guia da interface de alertas](../../observability/alerts/ui.md).
 

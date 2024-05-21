@@ -2,9 +2,9 @@
 title: Monitorar consultas programadas
 description: Saiba como monitorar consultas por meio da interface do usuário do Serviço de consulta.
 exl-id: 4640afdd-b012-4768-8586-32f1b8232879
-source-git-commit: e63e3344dd530fc9111f29948f2dfbd4daedf28c
+source-git-commit: 41c069ef1c0a19f34631e77afd7a80b8967c5060
 workflow-type: tm+mt
-source-wordcount: '2030'
+source-wordcount: '2454'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ A tabela abaixo descreve cada coluna disponível.
 
 >[!NOTE]
 >
->O ícone de assinaturas de alerta está contido em cada linha de uma coluna sem título. Consulte a [assinaturas de alerta](#alert-subscription) para obter mais informações.
+>O ícone de assinaturas de alerta (![Um ícone de assinatura de alerta.](../images/ui/monitor-queries/alert-subscription-icon.png)) está contido em cada linha em uma coluna sem título. Consulte a [assinaturas de alerta](#alert-subscription) para obter mais informações.
 
 | Coluna | Descrição |
 |---|---|
@@ -69,7 +69,7 @@ A variável [!UICONTROL Consultas programadas] view oferece várias ações em l
 
 ### Desativar ou ativar uma consulta programada {#disable}
 
-Para desativar uma consulta programada, selecione as reticências de uma consulta programada que deseja gerenciar e selecione **[!UICONTROL Desativar programação]** nas opções do menu pop-up. Uma caixa de diálogo é exibida para confirmar a ação. Selecionar **[!UICONTROL Desativar]** para confirmar suas configurações.
+Para desativar uma consulta programada, selecione as reticências da consulta programada que deseja gerenciar e selecione **[!UICONTROL Desativar programação]** nas opções do menu pop-up. Uma caixa de diálogo é exibida para confirmar a ação. Selecionar **[!UICONTROL Desativar]** para confirmar suas configurações.
 
 Quando uma consulta programada é desativada, você pode ativar a programação por meio do mesmo processo. Selecione as reticências e selecione **[!UICONTROL Ativar programação]** nas opções disponíveis.
 
@@ -79,21 +79,33 @@ Quando uma consulta programada é desativada, você pode ativar a programação 
 
 ### Excluir uma consulta agendada {#delete}
 
-Para excluir uma consulta agendada, selecione as reticências de uma consulta agendada que deseja gerenciar e selecione **[!UICONTROL Excluir programação]** nas opções do menu pop-up. Uma caixa de diálogo é exibida para confirmar a ação. Selecionar **[!UICONTROL Excluir]** para confirmar suas configurações.
+Para excluir uma consulta agendada, selecione as reticências da consulta agendada que deseja gerenciar e selecione **[!UICONTROL Excluir programação]** nas opções do menu pop-up. Uma caixa de diálogo é exibida para confirmar a ação. Selecionar **[!UICONTROL Excluir]** para confirmar suas configurações.
 
-Depois que uma consulta programada é excluída, ela é **não** removida da lista de consultas agendadas. As ações em linha fornecidas pelas reticências são removidas e substituídas pelo ícone de adição de alerta esmaecido. Não é possível assinar alertas para o agendamento excluído. A linha permanece na interface do usuário para fornecer informações sobre execuções realizadas como parte da consulta programada.
+Depois que uma consulta programada é excluída, ela é **não** removida da lista de consultas agendadas. As ações em linha fornecidas pelas reticências são removidas e substituídas pelo ícone de assinatura de adição de alerta esmaecido. Não é possível assinar alertas para o agendamento excluído. A linha permanece na interface do usuário para fornecer informações sobre execuções realizadas como parte da consulta programada.
 
-![A guia Consultas agendadas com uma consulta agendada excluída e o ícone de alerta esmaecido está realçado.](../images/ui/monitor-queries/post-delete.png)
+![A guia Consultas agendadas com uma consulta agendada excluída e o ícone de inscrição de alerta esmaecido está destacado.](../images/ui/monitor-queries/post-delete.png)
 
 Se quiser programar execuções para esse modelo de consulta, selecione o nome do modelo na linha apropriada para navegar até o Editor de consultas e, em seguida, siga as [instruções para adicionar um agendamento a uma consulta](./query-schedules.md#create-schedule) conforme descrito na documentação.
 
-### Assinatura de alertas {#alert-subscription}
+### Assinar alertas {#alert-subscription}
 
-Para assinar alertas para execuções de consultas agendadas, selecione as reticências de uma consulta agendada que deseja gerenciar e selecione **[!UICONTROL Assinar]** nas opções do menu pop-up.
+Para assinar alertas para execuções de consulta programadas, selecione a `...` (reticências) ou ícone de assinatura de alerta (![Um ícone de alerta de assinatura.](../images/ui/monitor-queries/alert-subscription-icon.png)) para a consulta agendada que deseja gerenciar. O menu suspenso de ações em linha é exibido. Em seguida, selecione **[!UICONTROL Assinar]** nas opções disponíveis.
 
-A variável [!UICONTROL Alertas] será aberta. A variável [!UICONTROL Alertas] A caixa de diálogo inscreve você em notificações da interface do usuário e alertas de email. Os alertas são baseados no status da consulta. Há três opções disponíveis: `start`, `success`, e `failure`. Marque as caixas apropriadas e selecione **[!UICONTROL Salvar]** para se inscrever. Você pode assinar alertas, desde que eles não tenham uma [!UICONTROL Carimbo de data/hora da última execução] valor.
+![O espaço de trabalho de consultas agendadas com reticências, ícone de assinatura de alerta e o menu suspenso de ações em linha são destacados.](../images/ui/monitor-queries/subscribe.png)
+
+A variável [!UICONTROL Alertas] será aberta. A variável [!UICONTROL Alertas] A caixa de diálogo inscreve você em notificações da interface do usuário e alertas de email. Há várias opções de assinatura de alerta disponíveis: `start`, `success`, `failure`, `quarantine`, e `delay`. Marque as caixas apropriadas e selecione **[!UICONTROL Salvar]** para se inscrever.
 
 ![A caixa de diálogo de assinaturas do alerta.](../images/ui/monitor-queries/alert-subscription-dialog.png)
+
+A tabela abaixo explica os tipos de alerta de consulta aceitos:
+
+| Tipo de alerta | Descrição |
+|---|---|
+| `start` | Este alerta notifica quando uma execução de consulta programada é iniciada ou começa a ser processada. |
+| `success` | Esse alerta informa quando uma execução de consulta programada é concluída com sucesso, indicando que a consulta foi executada sem erros. |
+| `failed` | Esse alerta é disparado quando uma execução de consulta agendada encontra um erro ou falha na execução. Isso ajuda a identificar e solucionar problemas prontamente. |
+| `quarantine` | Esse alerta é ativado quando uma execução de consulta agendada é colocada em quarentena. Quando as consultas são inscritas no [recurso de quarentena](#quarantined-queries), qualquer consulta programada que falhar dez execuções consecutivas será colocada automaticamente em uma [!UICONTROL Em quarentena] estado. Eles então exigem sua intervenção antes que qualquer outra execução possa ocorrer. |
+| `delay` | Este alerta o notifica se houver uma [atraso no resultado de uma execução de consulta](#query-run-delay) além de um limite especificado. Você pode definir um horário personalizado para acionar o alerta quando a consulta for executada por essa duração sem ser concluída ou falhar. |
 
 >[!NOTE]
 >
@@ -107,7 +119,11 @@ Selecione o ícone de informações (![Um ícone de informações.](../images/ui
 
 ![A guia Consultas agendadas com o ícone de informações e o painel de detalhes destacados.](../images/ui/monitor-queries/details-panel.png)
 
-### Consultas em quarentena {#quarantined-queries}
+## Consultas em quarentena {#quarantined-queries}
+
+>[!NOTE]
+>
+>O alerta de quarentena não está disponível para consultas ad hoc &quot;run-once&quot;. O alerta de quarentena só é aplicável a consultas de lote agendado (CTAS e ITAS).
 
 Quando inscrito no recurso de quarentena, qualquer consulta agendada que falhar dez execuções consecutivas é colocada automaticamente em um [!UICONTROL Em quarentena] status. Uma consulta com esse status fica inativa e não é executada na sua cadência programada. Em seguida, ele requer sua intervenção antes que qualquer outra execução possa ocorrer. Isso protege os recursos do sistema, pois você deve revisar e corrigir os problemas com seu SQL antes que ocorram mais execuções.
 
@@ -116,6 +132,22 @@ Para habilitar uma consulta agendada para o recurso de quarentena, selecione as 
 ![A guia scheduled queries com as reticências e Enable quarantine é realçada no menu suspenso de ações em linha.](../images/ui/monitor-queries/inline-enable.png)
 
 As consultas também podem ser inscritas no recurso de quarentena durante o processo de criação do agendamento. Consulte a [documentação de agendamentos de consulta](./query-schedules.md#quarantine) para obter mais informações.
+
+## Atraso na execução da consulta {#query-run-delay}
+
+Mantenha o controle das horas computacionais definindo alertas para atrasos de consulta. Você poderá monitorar o desempenho da consulta e receber notificações se o status de uma consulta permanecer inalterado após um período específico. Use o &#39;[!UICONTROL Atraso na execução da consulta]&quot;alerta a ser notificado se uma consulta continuar sendo processada após um período específico sem conclusão.
+
+Quando você [assinar alertas](#alert-subscription) para execuções de consulta programadas, um dos alertas disponíveis é o [!UICONTROL Atraso na execução da consulta]. Esse alerta exige que você defina um limite para o tempo gasto na execução, momento em que você será notificado sobre o atraso no processamento.
+
+Para escolher uma duração de limite que aciona a notificação, insira um número no campo de entrada de texto ou use as setas para cima e para baixo para aumentar em incrementos de um minuto. Como o limite é definido em minutos, a duração máxima para observar um atraso de execução de consulta é de 1440 minutos (24 horas). O período padrão para um atraso de execução é de 150 minutos.
+
+>[!NOTE]
+>
+>Uma execução de consulta só pode ter um tempo de atraso de execução. Se você alterar o limite de atraso, ele será alterado para o usuário que se inscreveu no alerta e para toda a organização.
+
+![A caixa de diálogo Alerts na guia scheduled queries com o campo de entrada query run delay realçado.](../images/ui/monitor-queries/query-run-delay-input.png)
+
+Consulte a seção assinar alertas para saber como [assinar [!UICONTROL Atraso na execução da consulta] alertas](#alert-subscription).
 
 ## Filtrar consultas {#filter}
 

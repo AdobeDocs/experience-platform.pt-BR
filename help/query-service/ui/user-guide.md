@@ -4,83 +4,76 @@ solution: Experience Platform
 title: Guia da interface do Editor de consultas
 description: O Editor de consultas é uma ferramenta interativa fornecida pelo Serviço de consultas da Adobe Experience Platform, que permite gravar, validar e executar consultas para dados de experiência do cliente na interface do usuário do Experience Platform. O Editor de consultas é compatível com o desenvolvimento de consultas para análise e exploração de dados, e permite executar consultas interativas para fins de desenvolvimento, bem como consultas não interativas para preencher conjuntos de dados no Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
+source-git-commit: 5189e8bbe4cd93c4e1f355f09da9667f5eb5708d
 workflow-type: tm+mt
-source-wordcount: '2825'
-ht-degree: 2%
+source-wordcount: '2432'
+ht-degree: 0%
 
 ---
 
-# [!DNL Query Editor] Guia da interface do usuário
+# Guia da interface do Editor de consultas
 
 >[!NOTE]
 >
->Em 30 de abril de 2024, a [Editor de consultas aprimorado](#enhanced-editor-toggle) tornou-se o editor padrão para todos os usuários. O editor herdado será descontinuado em 30 de maio de 2024 e não estará mais disponível para uso.
+>O editor herdado foi descontinuado em 30 de maio de 2024. Ele não está mais acessível para uso. Agora você pode usar o [Editor de consultas aprimorado](#enhanced-editor-toggle) para gravar, validar e executar suas consultas
 
-[!DNL Query Editor] é uma ferramenta interativa fornecida pelo Adobe Experience Platform [!DNL Query Service], que permite gravar, validar e executar consultas para dados de experiência do cliente na [!DNL Experience Platform] interface do usuário. [!DNL Query Editor] O oferece suporte ao desenvolvimento de consultas para análise e exploração de dados e permite executar consultas interativas para fins de desenvolvimento, bem como consultas não interativas para preencher conjuntos de dados no [!DNL Experience Platform].
+O Editor de consultas é uma ferramenta interativa fornecida pelo Serviço de consultas Adobe Experience Platform, que permite gravar, validar e executar consultas para dados de experiência do cliente no [!DNL Experience Platform] interface do usuário. O Editor de consultas é compatível com o desenvolvimento de consultas para análise e exploração de dados e permite executar consultas interativas para fins de desenvolvimento, bem como consultas não interativas para preencher conjuntos de dados no [!DNL Experience Platform].
 
-Para obter mais informações sobre os conceitos e recursos do [!DNL Query Service], consulte o [Visão geral do Serviço de consulta](../home.md). Para saber mais sobre como navegar na interface do usuário do Serviço de consulta em [!DNL Platform], consulte o [Visão geral da interface do usuário do serviço de consulta](./overview.md).
-
->[!NOTE]
->
->Determinadas funcionalidades do Serviço de consulta não são fornecidas pela versão herdada do Editor de consultas. As capturas de tela usadas neste documento são tiradas usando a versão aprimorada do Editor de consultas, a menos que declarado o contrário. Consulte a seção sobre o [Editor de consultas aprimorado](#enhanced-editor-toggle) para obter mais detalhes.
+Para obter mais informações sobre os conceitos e recursos do Serviço de consulta, consulte [Visão geral do Serviço de consulta](../home.md). Para saber mais sobre como navegar na interface do usuário do Serviço de consulta em [!DNL Platform], consulte o [Visão geral da interface do usuário do serviço de consulta](./overview.md).
 
 ## Introdução {#getting-started}
 
-[!DNL Query Editor] oferece execução flexível de consultas conectando-se a [!DNL Query Service], e as consultas só serão executadas enquanto essa conexão estiver ativa.
+O Editor de consultas fornece execução flexível de consultas conectando-se ao Serviço de consulta, e as consultas somente são executadas enquanto essa conexão está ativa.
 
-## Acessar o [!DNL Query Editor] {#accessing-query-editor}
+## Acesso ao Editor de consultas {#accessing-query-editor}
 
-No [!DNL Experience Platform] Interface, selecione **[!UICONTROL Consultas]** no menu de navegação esquerdo, para abrir a [!DNL Query Service] espaço de trabalho. Em seguida, para começar a gravar consultas, selecione **[!UICONTROL Criar consulta]** na parte superior direita da tela. Esse link está disponível em qualquer uma das páginas no [!DNL Query Service] espaço de trabalho.
+No [!DNL Experience Platform] Interface, selecione **[!UICONTROL Consultas]** no menu de navegação esquerdo, para abrir o espaço de trabalho do Serviço de consulta. Em seguida, para começar a gravar consultas, selecione **[!UICONTROL Criar consulta]** na parte superior direita da tela. Esse link está disponível em qualquer uma das páginas no espaço de trabalho do Serviço de consulta.
 
 ![A guia de visão geral do espaço de trabalho Consultas com Create query realçado.](../images/ui/query-editor/create-query.png)
 
-### Conectando ao [!DNL Query Service] {#connecting-to-query-service}
+### Conexão com o Serviço de consulta {#connecting-to-query-service}
 
 O Editor de consultas demora alguns segundos para inicializar e se conectar ao Serviço de consulta quando ele é aberto. O console informa quando está conectado, conforme mostrado abaixo. Se você tentar executar uma consulta antes que o editor se conecte, a execução será atrasada até que a conexão seja concluída.
 
 ![A saída do console do Editor de consultas na conexão inicial.](../images/ui/query-editor/connect.png)
 
-### Como as consultas são executadas a partir de [!DNL Query Editor] {#run-a-query}
+### Como as consultas são executadas no Editor de consultas {#run-a-query}
 
-Consultas executadas a partir de [!DNL Query Editor] executar interativamente, o que significa que se você fechar o navegador ou sair, a consulta será cancelada. O mesmo é verdadeiro para consultas feitas para gerar conjuntos de dados a partir de saídas de consulta.
+As consultas executadas no Editor de consultas são executadas interativamente, o que significa que, se você fechar o navegador ou sair, a consulta será cancelada. O mesmo é verdadeiro para consultas feitas para gerar conjuntos de dados a partir de saídas de consulta.
 
-A edição aprimorada do Editor de consultas permite escrever mais de uma consulta no Editor de consultas e executar todas as consultas sequencialmente. Consulte a seção sobre [execução de várias consultas sequenciais](#execute-multiple-sequential-queries) para obter mais informações.
+## Criação de consultas usando o Editor de consultas aprimorado {#query-authoring}
 
-## Criação de consulta usando [!DNL Query Editor] {#query-authoring}
-
-Usar [!DNL Query Editor], você pode gravar, executar e salvar consultas para dados de experiência do cliente. Todas as consultas executadas ou salvas em [!DNL Query Editor] estão disponíveis para todos os usuários em sua organização com acesso ao [!DNL Query Service].
-
->[!IMPORTANT]
+>[!NOTE]
 >
->Em 30 de abril de 2024, o Editor de consultas aprimorado será o editor padrão para todos os usuários. O editor herdado será descontinuado em 30 de maio de 2024 e não estará mais disponível para uso.
+>O editor herdado foi descontinuado em 30 de maio de 2024. Ele não está mais acessível para uso. Agora você pode usar o Editor de consultas aprimorado para gravar, validar e executar suas consultas.
 
-## Controle de alternância aprimorado no editor de consultas {#enhanced-editor-toggle}
+Usando o Editor de consultas, você pode gravar, executar e salvar consultas para dados de experiência do cliente. Todas as consultas executadas ou salvas no Editor de consultas estão disponíveis para todos os usuários em sua organização com acesso ao Serviço de consulta.
 
->[!CONTEXTUALHELP]
->id="platform_queryService_queryEditor_enhancedEditorToggle"
->title="Botão de alternância do editor aprimorado"
->abstract="Alterne entre a versão herdada e a versão aprimorada do Editor de consultas. A versão herdada é habilitada por padrão, embora a versão aprimorada forneça melhor acessibilidade e compatibilidade com multitemas. Para saber mais sobre essas alterações, consulte a documentação."
+### Configurações {#settings}
 
-Um botão de alternância de interface permite alternar entre a versão herdada e a versão aprimorada do Editor de consultas. A versão herdada é habilitada por padrão, embora a versão aprimorada forneça melhor acessibilidade e compatibilidade com multitemas. Ative a versão aprimorada para acessar as configurações do Editor de consultas.
-
-![O Editor de consultas com a opção aprimorada Editor de consultas está realçado.](../images/ui/query-editor/enhanced-query-editor-toggle.png)
-
-A ativação do botão alterna o editor para o tema claro e melhora a legibilidade da sintaxe. Um ícone de configurações também aparece acima do campo de entrada do Editor de consultas que incorpora a opção de preenchimento automático. No ícone de configurações, é possível ativar o tema escuro ou desativar/ativar o preenchimento automático.
+Um ícone de configurações acima do campo de entrada do Editor de consultas inclui uma opção para ativar/desativar o tema escuro ou desativar/ativar o preenchimento automático.
 
 >[!TIP]
 >
->Com o Editor de consultas aprimorado, você pode [!UICONTROL Desativar preenchimento automático de sintaxe] ao criar uma consulta sem perder seu progresso. Normalmente, se você desativar o recurso de preenchimento automático durante a edição, todas as alterações no query serão perdidas.
+>Você pode [!UICONTROL Desativar preenchimento automático de sintaxe] ao criar uma consulta sem perder seu progresso.
 
 Para ativar temas escuros ou claros, selecione o ícone de configurações (![Um ícone de configurações.](../images/ui/query-editor/settings-icon.png)) seguido pela opção no menu suspenso que é exibida.
 
 ![O Editor de consultas com o ícone de configurações e a opção de menu suspenso Ativar tema escuro estão realçados.](../images/ui/query-editor/query-editor-settings.png)
 
+#### Preenchimento automático {#auto-complete}
+
+O Editor de consultas sugere automaticamente possíveis palavras-chave SQL, juntamente com detalhes de tabela ou coluna para a consulta à medida que ela é gravada. O recurso de preenchimento automático é ativado por padrão e pode ser desativado ou ativado a qualquer momento nas configurações do Editor de consultas.
+
+A definição de configuração de preenchimento automático é por usuário e lembrada pelos logons consecutivos desse usuário. A desativação desse recurso impede que vários comandos de metadados sejam processados e fornece recomendações que normalmente beneficiam a velocidade do autor ao editar consultas.
+
+<!-- Currently editing the auto complete setting info. -->
+
+
+
 ### Executar várias consultas sequenciais {#execute-multiple-sequential-queries}
 
-A edição aprimorada do Editor de consultas permite escrever mais de uma consulta no Editor de consultas e executar todas as consultas de maneira sequencial.
-
-A execução de várias consultas em uma sequência gera uma entrada de log. No entanto, somente os resultados da primeira consulta são exibidos no console do Editor de consultas. Verifique o log de consultas se precisar solucionar problemas ou confirmar as consultas executadas. Consulte a [documentação dos logs de consulta](./query-logs.md) para obter mais informações.
+Use o Editor de consultas aprimorado para gravar mais de uma consulta e executar todas as consultas de maneira sequencial. A execução de várias consultas em uma sequência gera uma entrada de log. No entanto, somente os resultados da primeira consulta são exibidos no console do Editor de consultas. Verifique o log de consultas se precisar solucionar problemas ou confirmar as consultas executadas. Consulte a [documentação dos logs de consulta](./query-logs.md) para obter mais informações.
 
 >[!NOTE]
 > 
@@ -117,7 +110,7 @@ O Editor de consultas tem uma saída máxima de 50.000 linhas. Você pode escolh
 
 Para minimizar o tempo de desenvolvimento, é recomendável desenvolver consultas com limites no número de linhas retornadas. Por exemplo, `SELECT fields FROM table WHERE conditions LIMIT number_of_rows`. Após verificar que sua consulta produz a saída esperada, remova os limites e execute a consulta com `CREATE TABLE tablename AS SELECT` para gerar um conjunto de dados com a saída.
 
-## Gravando ferramentas em [!DNL Query Editor] {#writing-tools}
+## Ferramentas de escrita no Editor de consultas {#writing-tools}
 
 - **Realce automático da sintaxe:** Facilita a leitura e a organização do SQL.
 
@@ -153,50 +146,6 @@ Selecione o ícone de cópia para copiar o SQL do Editor de consultas para a ár
 
 ![O espaço de trabalho Consultas com um modelo de consulta de exemplo com o ícone de cópia destacado.](../images/ui/query-editor/copy-sql.png)
 
-### Alternância de configuração da interface de preenchimento automático {#auto-complete}
-
-A variável [!DNL Query Editor] A sugere automaticamente possíveis palavras-chave SQL junto com detalhes de tabela ou coluna para a consulta à medida que ela é escrita. O recurso de preenchimento automático é ativado por padrão e pode ser desativado ou ativado a qualquer momento selecionando o [!UICONTROL Sintaxe de preenchimento automático] Alterne para a parte superior direita do Editor de consultas.
-
-A definição de configuração de preenchimento automático é por usuário e lembrada pelos logons consecutivos desse usuário.
-
->[!NOTE]
->
->A opção de preenchimento automático de sintaxe só está disponível para a versão herdada do Editor de consultas.
-
-![Editor de consultas com a opção de preenchimento automático de sintaxe realçada.](../images/ui/query-editor/auto-complete-toggle.png)
-
-A desativação desse recurso impede que vários comandos de metadados sejam processados e fornece recomendações que normalmente beneficiam a velocidade do autor ao editar consultas.
-
-Quando você usa o botão para ativar o recurso de preenchimento automático, as sugestões recomendadas para nomes de tabela e coluna, bem como palavras-chave SQL, ficam disponíveis após uma pequena pausa. Uma mensagem de sucesso no console, abaixo do Editor de consultas, indica que o recurso está ativo.
-
-Se você desativar o recurso de preenchimento automático, será necessária uma atualização de página para que o recurso entre em vigor. Uma caixa de diálogo de confirmação é exibida com três opções quando você desativa o [!UICONTROL Sintaxe de preenchimento automático] alternar:
-
-- [!UICONTROL Cancelar]
-- [!UICONTROL Salvar alterações e atualizar]
-- [!UICONTROL Atualizar sem salvar as alterações]
-
->[!IMPORTANT]
->
->Se estiver gravando ou editando uma consulta ao desabilitar este recurso, salve as alterações na consulta antes de atualizar a página, caso contrário todo o progresso será perdido.
-
-![A caixa de diálogo de confirmação para desativar o recurso de preenchimento automático.](../images/ui/query-editor/confirmation-dialog.png)
-
-Para desativar o recurso de preenchimento automático, selecione a opção de confirmação apropriada.
-
-### Detecção de erro {#error-detection}
-
-[!DNL Query Editor] valida automaticamente uma consulta à medida que ela é gravada, fornecendo validação de SQL genérica e validação de execução específica. Se um sublinhado vermelho aparecer abaixo da consulta (como mostrado na imagem abaixo), ele representa um erro na consulta.
-
-<!-- ... Image below needs updating couldn't replicate the effect -->
-
-![A entrada do Editor de consultas exibindo o SQL sublinhado em vermelho para indicar um erro.](../images/ui/query-editor/syntax-error-highlight.png)
-
-Quando erros são detectados, é possível exibir as mensagens de erro específicas ao passar o mouse sobre o código SQL.
-
-<!-- ... Image below needs updating couldn't replicate the effect -->
-
-![Um diálogo com uma mensagem de erro.](../images/ui/query-editor/linting-error.png)
-
 ### Detalhes da consulta {#query-details}
 
 Para exibir uma consulta no Editor de consultas, selecione qualquer modelo salvo na [!UICONTROL Modelos] guia. O painel de detalhes da consulta fornece mais informações e ferramentas para gerenciar a consulta selecionada. Ela também mostra metadados úteis, como a última vez que a consulta foi modificada e quem a modificou, se aplicável.
@@ -221,7 +170,7 @@ Depois de executar o **[!UICONTROL Executar como CTAS]** ação, uma mensagem de
 
 ### Salvamento de consultas {#saving-queries}
 
-A variável [!DNL Query Editor] O fornece uma função salvar que permite salvar uma consulta e trabalhar nela posteriormente. Para salvar uma consulta, selecione **[!UICONTROL Salvar]** no canto superior direito de [!DNL Query Editor]. Para que uma consulta possa ser salva, um nome deve ser fornecido para ela usando o **[!UICONTROL Detalhes da consulta]** painel.
+O Editor de consultas fornece uma função salvar que permite salvar uma consulta e trabalhar nela posteriormente. Para salvar uma consulta, selecione **[!UICONTROL Salvar]** no canto superior direito do Editor de consultas. Para que uma consulta possa ser salva, um nome deve ser fornecido para ela usando o **[!UICONTROL Detalhes da consulta]** painel.
 
 >[!NOTE]
 >
@@ -233,7 +182,7 @@ Quando você salva uma consulta no Editor de consultas, uma mensagem de confirma
 
 As consultas que foram salvas como um modelo podem ser agendadas no Editor de consultas. O agendamento de consultas permite automatizar as execuções de consultas em uma cadência personalizada. Você pode agendar consultas com base na frequência, data e hora e também escolher um conjunto de dados de saída para seus resultados, se necessário. Os agendamentos de query também podem ser desativados ou excluídos por meio da interface do usuário.
 
-Os cronogramas são definidos no Editor de consultas. Ao usar o Editor de consultas, você só pode adicionar um agendamento a uma consulta que já foi criada e salva. A mesma limitação não se aplica ao [!DNL Query Service] API.
+Os cronogramas são definidos no Editor de consultas. Ao usar o Editor de consultas, você só pode adicionar um agendamento a uma consulta que já foi criada e salva. A mesma limitação não se aplica à API do Serviço de consulta.
 
 >[!NOTE]
 >
@@ -246,21 +195,21 @@ Quaisquer consultas programadas são adicionadas à lista no [!UICONTROL Consult
 
 ### Como encontrar consultas anteriores {#previous-queries}
 
-Todas as consultas executadas de [!DNL Query Editor] são capturados na tabela Log. Você pode usar a funcionalidade de pesquisa no **[!UICONTROL Log]** para localizar execuções de consulta. As consultas salvas estão listadas no **[!UICONTROL Modelos]** guia.
+Todas as consultas executadas no Editor de consultas são capturadas na tabela Log. Você pode usar a funcionalidade de pesquisa no **[!UICONTROL Log]** para localizar execuções de consulta. As consultas salvas estão listadas no **[!UICONTROL Modelos]** guia.
 
 Se um query foi agendado, a variável [!UICONTROL Consultas programadas] fornece visibilidade aprimorada por meio da interface para esses trabalhos de consulta. Consulte a [documentação de monitoramento de consultas](./monitor-queries.md) para obter mais informações.
 
 >[!NOTE]
 >
->As consultas que não são executadas não são salvas pelo Log. Para que a consulta esteja disponível no [!DNL Query Service], ela deve ser executada ou salva em [!DNL Query Editor].
+>As consultas que não são executadas não são salvas pelo Log. Para que a consulta esteja disponível no Serviço de consulta, ela deve ser executada ou salva no Editor de consultas.
 
 ## Execução de consultas usando o Editor de consultas {#executing-queries}
 
-Para executar uma consulta no [!DNL Query Editor], você poderá inserir o SQL no editor ou carregar uma consulta anterior do **[!UICONTROL Log]** ou **[!UICONTROL Modelos]** e selecione **Reproduzir**. O status da execução da consulta é exibido no **[!UICONTROL Console]** e os dados de saída serão mostrados na guia **[!UICONTROL Resultados]** guia.
+Para executar uma consulta no Editor de consultas, você pode inserir SQL no editor ou carregar uma consulta anterior do **[!UICONTROL Log]** ou **[!UICONTROL Modelos]** e selecione **Reproduzir**. O status da execução da consulta é exibido no **[!UICONTROL Console]** e os dados de saída serão mostrados na guia **[!UICONTROL Resultados]** guia.
 
 ### Console {#console}
 
-O console fornece informações sobre o status e a operação do [!DNL Query Service]. O console exibe o status da conexão para [!DNL Query Service], operações de consulta que estão sendo executadas e qualquer mensagem de erro que resultar dessas consultas.
+O console fornece informações sobre o status e a operação do Serviço de consulta. O console exibe o status da conexão com o Serviço de consulta, as operações de consulta que estão sendo executadas e as mensagens de erro resultantes dessas consultas.
 
 ![A guia Console do console do Editor de consultas.](../images/ui/query-editor/console.png)
 
@@ -270,7 +219,7 @@ O console fornece informações sobre o status e a operação do [!DNL Query Ser
 
 ### Resultados da consulta {#query-results}
 
-Após a conclusão de um query, os resultados são exibidos no **[!UICONTROL Resultados]** , ao lado da guia **[!UICONTROL Console]** guia. Essa exibição mostra a saída tabular do query, exibindo entre 50 e 500 linhas de resultados, dependendo da opção escolhida [contagem de resultados](#result-count). Essa visualização permite verificar se sua consulta produz a saída esperada. Para gerar um conjunto de dados com sua consulta, remova os limites nas linhas retornadas e execute a consulta com `CREATE TABLE tablename AS SELECT` para gerar um conjunto de dados com a saída. Consulte a [tutorial sobre geração de conjuntos de dados](./create-datasets.md) para obter instruções sobre como gerar um conjunto de dados a partir dos resultados da consulta em [!DNL Query Editor].
+Após a conclusão de um query, os resultados são exibidos no **[!UICONTROL Resultados]** , ao lado da guia **[!UICONTROL Console]** guia. Essa exibição mostra a saída tabular do query, exibindo entre 50 e 500 linhas de resultados, dependendo da opção escolhida [contagem de resultados](#result-count). Essa visualização permite verificar se sua consulta produz a saída esperada. Para gerar um conjunto de dados com sua consulta, remova os limites nas linhas retornadas e execute a consulta com `CREATE TABLE tablename AS SELECT` para gerar um conjunto de dados com a saída. Consulte a [tutorial sobre geração de conjuntos de dados](./create-datasets.md) para obter instruções sobre como gerar um conjunto de dados a partir dos resultados da consulta no Editor de consultas.
 
 ![A guia Resultados do console do Editor de consultas exibindo os resultados de uma execução de consulta.](../images/ui/query-editor/query-results.png)
 
@@ -278,12 +227,18 @@ Após a conclusão de um query, os resultados são exibidos no **[!UICONTROL Res
 
 O Serviço de consulta fornece soluções para uma variedade de casos de uso em todos os setores e cenários de negócios. Esses exemplos práticos demonstram a flexibilidade e o impacto do serviço em atender a diversas necessidades. Para [descubra como o Serviço de consulta pode agregar valor às suas necessidades de negócios específicas](../use-cases/overview.md), explore a coleção abrangente de documentos de casos de uso. Saiba como usar o Serviço de consulta para fornecer insights e soluções para melhorar a eficiência operacional e o sucesso dos negócios.
 
-## Executar consultas com [!DNL Query Service] vídeo tutorial {#query-tutorial-video}
+<!-- This video is from 2019. The logic is sounds but the workflow is too outdated. -->
+
+## Vídeo tutorial Executar consultas com o Serviço de consulta {#query-tutorial-video}
 
 O vídeo a seguir mostra como executar queries na interface do Adobe Experience Platform e em um cliente PSQL. O vídeo também demonstra o uso de propriedades individuais em um objeto XDM, funções definidas por Adobe e como usar consultas CREATE TABLE AS SELECT (CTAS).
+
+>[!NOTE]
+>
+>A interface do usuário descrita no vídeo está desatualizada, mas a lógica usada no fluxo de trabalho permanece a mesma.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
 
 ## Próximas etapas
 
-Agora que você sabe quais recursos estão disponíveis no [!DNL Query Editor] e como navegar no aplicativo, você pode começar a criar suas próprias consultas diretamente no [!DNL Platform]. Para obter mais informações sobre a execução de consultas SQL em conjuntos de dados na [!DNL Data Lake], consulte o guia sobre [execução de consultas](../best-practices/writing-queries.md).
+Agora que você sabe quais recursos estão disponíveis no Editor de consultas e como navegar pelo aplicativo, pode começar a criar suas próprias consultas diretamente no [!DNL Platform]. Para obter mais informações sobre a execução de consultas SQL em conjuntos de dados na [!DNL Data Lake], consulte o guia sobre [execução de consultas](../best-practices/writing-queries.md).

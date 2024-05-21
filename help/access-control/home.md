@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Visão geral do controle de acesso
 description: O controle de acesso do Adobe Experience Platform é fornecido por meio da Adobe Admin Console. Essa funcionalidade aproveita perfis de produto no Admin Console, que vinculam usuários com permissões e sandboxes.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: df24799e4644a98941b707bb216a4ad434f5ebf9
+source-git-commit: 16313e2109152329a427be9f13fcbd6382353797
 workflow-type: tm+mt
-source-wordcount: '1707'
+source-wordcount: '1718'
 ht-degree: 1%
 
 ---
@@ -100,6 +100,7 @@ A tabela a seguir descreve as permissões disponíveis para Experience Platform 
 | [!DNL Profile Management] | [!UICONTROL Exibir segmentos] | Acesso somente leitura aos segmentos disponíveis. |
 | [!DNL Profile Management] | [!UICONTROL Gerenciar políticas de mesclagem] | Acesso para ler, criar, editar e excluir políticas de mesclagem. |
 | [!DNL Profile Management] | [!UICONTROL Exibir Políticas de Mesclagem] | Acesso somente leitura às políticas de mesclagem disponíveis. |
+| [!DNL Profile Management] | [!UICONTROL Importar públicos] | Acesso para ler, criar, editar e excluir públicos importados. |
 | [!DNL Profile Management] | [!UICONTROL Exportar público-alvo para segmento] | Capacidade de exportar um segmento de público avaliado para um conjunto de dados. |
 | [!DNL Profile Management] | [!UICONTROL Avaliar um segmento para um público-alvo] | Capacidade de gerar perfis para um público-alvo avaliando uma definição de segmento. |
 | [!DNL Profile Management] | [!UICONTROL Exibir IA B2B] | Acesso somente leitura às definições e configurações para todos os serviços de IA/ML B2B. |

@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guia da interface do usuário do Serviço de segmentação
 description: Saiba como criar e gerenciar públicos e definições de segmento na interface do usuário do Adobe Experience Platform.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 5182ee22ae7952f74c29969c0d484397a2850a4c
+source-git-commit: 4c1f29e61ee716a9655bc389bbe08b386ddd643b
 workflow-type: tm+mt
-source-wordcount: '4274'
+source-wordcount: '4334'
 ht-degree: 3%
 
 ---
@@ -85,7 +85,11 @@ Ao lado de cada público há um ícone de reticências. Selecionar essa opção 
 | [!UICONTROL Excluir] | Composição de público-alvo, Upload personalizado, Serviço de segmentação | Exclui o público selecionado. Públicos-alvo usados em destinos downstream ou que são dependentes de outros públicos-alvo **não é possível** ser excluídos. Para obter mais informações sobre exclusão de público-alvo, leia a [perguntas frequentes sobre segmentação](../faq.md#lifecycle-states). |
 | [!UICONTROL Adicionar ao pacote] | Composição de público-alvo, Upload personalizado, Serviço de segmentação | Move o público-alvo entre sandboxes. Para obter mais informações sobre esse recurso, leia a [guia de ferramentas de sandbox](../../sandboxes/ui/sandbox-tooling.md). |
 
-Na parte superior da página há opções para adicionar todos os públicos-alvo a um agendamento, importar um público-alvo, criar um novo público-alvo e exibir um detalhamento da frequência de atualização.
+>[!IMPORTANT]
+>
+>Antes de excluir o público-alvo, verifique se ele está **não** usado como um componente em um público-alvo baseado em conta ou usado no Adobe Journey Optimizer.
+
+Na parte superior da página há opções para adicionar todos os públicos-alvo a um agendamento, importar um público-alvo, criar um novo público-alvo e exibir um resumo da avaliação do público-alvo.
 
 Alternando **[!UICONTROL Agendar todos os públicos-alvo]** habilitará a segmentação agendada. Mais informações sobre segmentação agendada podem ser encontradas na [seção segmentação programada deste guia do usuário](#scheduled-segmentation).
 
@@ -95,13 +99,13 @@ Selecionar **[!UICONTROL Criar público]** O permitirá a criação de um públi
 
 ![A barra de navegação superior na página de navegação do público-alvo é realçada. Essa barra contém um botão para criar um público-alvo e um botão para importar um público-alvo.](../images/ui/overview/browse-audiences-top.png)
 
-É possível selecionar **[!UICONTROL Atualizar resumo de frequência]** para exibir um gráfico de pizza que mostre a frequência de atualização.
+É possível selecionar **[!UICONTROL Resumo da avaliação]** para exibir um gráfico de pizza que mostra um resumo das avaliações de público-alvo.
 
-![O botão Update frequency summary é realçado.](../images/ui/overview/browse-audience-update-frequency-summary.png)
+![O botão Evaluation summary é realçado.](../images/ui/overview/browse-audience-evaluation-summary.png)
 
-O gráfico de pizza é exibido, mostrando um detalhamento dos públicos-alvo por frequência de atualização. O gráfico exibe o número total de públicos-alvo no meio e o tempo diário de avaliação do lote em UTC na parte inferior. Se você passar o mouse sobre as diferentes partes do público-alvo, ele exibirá o número de públicos-alvo que pertencem a cada tipo de frequência de atualização.
+O gráfico de pizza é exibido, mostrando um detalhamento dos públicos-alvo por avaliação de público-alvo. O gráfico exibe o número total de públicos-alvo no meio e o tempo diário de avaliação do lote em UTC na parte inferior. Se você passar o mouse sobre as diferentes partes do público-alvo, ele exibirá o número de públicos-alvo que pertencem a cada tipo de frequência de atualização.
 
-![O gráfico de pizza de frequência de atualização é realçado, com o tempo de avaliação da segmentação em lote também exibido.](../images/ui/overview/update-frequency-chart.png)
+![O gráfico de pizza de avaliação de público-alvo é destacado, com o tempo de avaliação da segmentação em lote também exibido.](../images/ui/overview/evaluation-summary.png)
 
 ### Personalizar {#customize}
 
@@ -203,7 +207,7 @@ A lista de filtros disponíveis é exibida.
 | [!UICONTROL Origem] | Permite filtrar com base na origem do público-alvo. As opções disponíveis incluem Serviço de segmentação, Upload personalizado, Composição de público-alvo e Audience Manager. |
 | [!UICONTROL Tem qualquer tag] | Permite filtrar por tags. Você pode selecionar entre **[!UICONTROL Tem qualquer tag]** e **[!UICONTROL Tem todas as tags]**. Quando **[!UICONTROL Tem qualquer tag]** for selecionada, os públicos-alvo filtrados incluirão **qualquer** das tags adicionadas. Quando **[!UICONTROL Tem todas as tags]** for selecionada, os públicos-alvo filtrados deverão incluir **all** das tags adicionadas. |
 | [!UICONTROL Status do ciclo de vida] | Permite filtrar com base no status do ciclo de vida do público-alvo. As opções disponíveis incluem [!UICONTROL Excluído], [!UICONTROL Rascunho], [!UICONTROL Inativo], e [!UICONTROL Publicado]. |
-| [!UICONTROL Frequência das atualizações] | Permite filtrar com base na frequência de atualização do público-alvo. As opções disponíveis incluem [!UICONTROL Agendado], [!UICONTROL Contínuo], e [!UICONTROL Por demanda]. |
+| [!UICONTROL Frequência das atualizações] | Permite filtrar com base na frequência de atualização do público-alvo (método de avaliação). As opções disponíveis incluem [!UICONTROL Agendado], [!UICONTROL Contínuo], e [!UICONTROL Por demanda]. |
 | [!UICONTROL Criado por] | Permite filtrar com base na pessoa que criou o público. |
 | [!UICONTROL Data de criação] | Permite filtrar com base na data de criação do público-alvo. Você pode escolher um intervalo de datas para filtrar quando o público-alvo foi criado. |
 | [!UICONTROL Data de modificação] | Permite filtrar com base na data da última modificação do público-alvo. Você pode escolher um intervalo de datas para filtrar quando o público-alvo foi modificado pela última vez. |
@@ -329,6 +333,10 @@ Selecionar **[!UICONTROL Criar regra]** direciona você ao Construtor de segment
 ![A área de trabalho do Construtor de segmentos é exibida.](../images/ui/overview/segment-builder.png)
 
 ### Importação de um público-alvo {#import-audience}
+
+>[!IMPORTANT]
+>
+>Para importar um público gerado externamente, você **deve** têm as seguintes permissões: [!UICONTROL Exibir segmentos], [!UICONTROL Gerenciar segmentos], e [!UICONTROL Importar público]. Para obter mais informações sobre essas permissões, leia a [visão geral do controle de acesso](../../access-control/home.md#permissions).
 
 É possível selecionar **[!UICONTROL Importar público]** para importar um público gerado externamente.
 

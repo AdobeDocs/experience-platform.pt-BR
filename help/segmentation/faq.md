@@ -2,9 +2,9 @@
 title: Perguntas frequentes do Audiences
 description: Descubra respostas para perguntas frequentes sobre públicos-alvo e outros conceitos relacionados à segmentação.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: d4fc95532a82fe32b4172870a5521e41ce313bab
+source-git-commit: 6088dc06af6db2ce1a86a9638df23453184864b2
 workflow-type: tm+mt
-source-wordcount: '3976'
+source-wordcount: '4056'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ Sim, públicos-alvo pré-criados gerados externamente são compatíveis com o Au
 
 ### Quais permissões são necessárias para fazer upload de públicos-alvo gerados externamente?
 
-Para carregar públicos gerados externamente, você precisa ter as permissões &quot;Exibir públicos-alvo/segmentos&quot;, &quot;Gerenciar públicos-alvo/segmentos&quot;, &quot;Exibir conjuntos de dados&quot;, &quot;Gerenciar conjuntos de dados&quot;, &quot;Exibir fontes&quot; e &quot;Gerenciar fontes&quot;. Não há controles de função específicos necessários para fazer upload de públicos-alvo gerados externamente.
+Para carregar públicos gerados externamente, você precisa ter as permissões &quot;Exibir segmentos&quot;, &quot;Gerenciar segmentos&quot; e &quot;Importar públicos&quot;. Não há controles de função específicos necessários para fazer upload de públicos-alvo gerados externamente.
 
 ### O que acontece quando carrego um público-alvo gerado externamente?
 
@@ -198,6 +198,14 @@ Você pode republicar um público selecionando um público que esteja no estado 
 >Você só pode excluir públicos-alvo que estejam **não** usado em qualquer ativação downstream. Além disso, não é possível excluir um público referenciado em outro público. Se não for possível excluir o público-alvo, verifique se você está **não** usá-lo em qualquer serviço downstream ou como um bloco de construção de outro público-alvo.
 
 Para colocar um público-alvo no estado de exclusão, abra o menu de ações rápidas no Portal de público-alvo e selecione [!UICONTROL Excluir].
+
+### Existem limitações para as transições de estado do ciclo de vida?
+
+Sim, há alguns avisos a serem observados quando você estiver usando públicos-alvo em serviços downstream, como o Adobe Journey Optimizer, ou públicos-alvo não baseados em clientes, como públicos-alvo baseados em conta.
+
+Neste momento, você **deve** verifique manualmente se o público-alvo é usado downstream no Adobe Journey Optimizer, pois esse status não é verificado automaticamente no momento.
+
+Além disso, você **deve** verifique manualmente se o público-alvo é usado como um componente de um público-alvo baseado em conta, pois esse status também não é verificado automaticamente no momento.
 
 ### O uso de um público-alvo como público-alvo secundário afeta as transições de estado do ciclo de vida?
 

@@ -3,10 +3,10 @@ title: Criar uma conexão de origem Google PubSub usando a API do serviço de fl
 description: Saiba como conectar o Adobe Experience Platform a uma conta Google PubSub usando a API do Serviço de fluxo.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: f5b8f9bf-8a6f-4222-8eb2-928503edb24f
-source-git-commit: a826bda356a7205f3d4c0e0836881530dbaaf54e
+source-git-commit: fcac805e151d6142886eb8e05da0eb1babad2f69
 workflow-type: tm+mt
-source-wordcount: '1153'
-ht-degree: 3%
+source-wordcount: '1147'
+ht-degree: 2%
 
 ---
 
@@ -29,7 +29,7 @@ As seções a seguir fornecem informações adicionais que você precisará sabe
 
 ### Coletar credenciais necessárias
 
-A fim de [!DNL Flow Service] para se conectar a [!DNL PubSub], você deve fornecer valores para as seguintes propriedades de conexão:
+Você deve fornecer valores para as propriedades de conexão descritas abaixo para conectar seu [!DNL PubSub] conta para [!DNL Flow Service]. Para obter mais informações sobre autenticação e configuração de pré-requisitos, leia a [[!DNL PubSub source] visão geral](../../../../connectors/cloud-storage/google-pubsub.md#prerequisites).
 
 >[!BEGINTABS]
 
@@ -52,7 +52,7 @@ A fim de [!DNL Flow Service] para se conectar a [!DNL PubSub], você deve fornec
 
 >[!ENDTABS]
 
-Para obter mais informações sobre esses valores, consulte esta [[!DNL PubSub] autenticação](https://cloud.google.com/pubsub/docs/authentication) documento. Para usar autenticação baseada em conta de serviço, consulte esta [[!DNL PubSub] guia sobre a criação de contas de serviço](https://cloud.google.com/docs/authentication/production#create_service_account) para obter etapas sobre como gerar suas credenciais.
+Para obter mais informações sobre esses valores, leia este [[!DNL PubSub] autenticação](https://cloud.google.com/pubsub/docs/authentication) documento. Para usar autenticação baseada em conta de serviço, leia este [[!DNL PubSub] guia sobre a criação de contas de serviço](https://cloud.google.com/docs/authentication/production#create_service_account) para obter etapas sobre como gerar suas credenciais.
 
 >[!TIP]
 >
@@ -62,7 +62,7 @@ Para obter mais informações sobre esses valores, consulte esta [[!DNL PubSub] 
 
 Para obter informações sobre como fazer chamadas para APIs da Platform com êxito, consulte o manual em [introdução às APIs da Platform](../../../../../landing/api-guide.md).
 
-## Crie uma conexão básica
+## Criar uma conexão básica
 
 >[!TIP]
 >

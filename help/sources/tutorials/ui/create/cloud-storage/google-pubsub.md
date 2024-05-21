@@ -3,9 +3,9 @@ title: Criar uma conexão de origem Google PubSub na interface
 description: Saiba como criar um conector de origem Google PubSub usando a interface do usuário da Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: fb8411f2-ccae-4bb5-b1bf-52b1144534ed
-source-git-commit: 563ad16304894cab1ee1ead06f63a5b3f65c4ec2
+source-git-commit: fcac805e151d6142886eb8e05da0eb1babad2f69
 workflow-type: tm+mt
-source-wordcount: '1099'
+source-wordcount: '1098'
 ht-degree: 1%
 
 ---
@@ -29,7 +29,8 @@ Se você já tiver um [!DNL PubSub] conexão, você pode ignorar o restante dest
 
 ### Coletar credenciais necessárias
 
-Para se conectar [!DNL PubSub] Para o Platform, você deve fornecer um valor válido para as seguintes credenciais:
+Você deve fornecer valores para as propriedades de conexão descritas abaixo para conectar seu [!DNL PubSub] conta para Experience Platform. Para obter mais informações sobre autenticação e configuração de pré-requisitos, leia a [[!DNL PubSub source] visão geral](../../../../connectors/cloud-storage/google-pubsub.md#prerequisites).
+
 
 >[!BEGINTABS]
 
@@ -37,7 +38,7 @@ Para se conectar [!DNL PubSub] Para o Platform, você deve fornecer um valor vá
 
 | Credencial | Descrição |
 | --- | --- |
-| Projeto  ID | A ID do projeto necessária para a autenticação [!DNL PubSub]. |
+| ID do projeto | A ID do projeto necessária para a autenticação [!DNL PubSub]. |
 | Credenciais | A credencial necessária para autenticar [!DNL PubSub]. Certifique-se de colocar o arquivo JSON completo após remover os espaços em branco de suas credenciais. |
 
 >[!TAB Tópico e autenticação por assinatura]

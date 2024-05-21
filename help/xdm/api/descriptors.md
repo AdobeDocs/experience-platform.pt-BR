@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Endpoint da API de descritores
 description: O ponto de extremidade /descriptors na API do registro de esquema permite gerenciar programaticamente os descritores XDM no aplicativo de experiência.
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: 786801975dbde52b5d81a407618ef3b574a6afa3
+source-git-commit: 44355aa2ddf03b20aca64c6675414b73682bc2b5
 workflow-type: tm+mt
-source-wordcount: '1905'
+source-wordcount: '1919'
 ht-degree: 2%
 
 ---
@@ -288,6 +288,10 @@ Para confirmar se o descritor foi excluído, é possível executar um [solicita�
 A seção a seguir fornece informações adicionais sobre como trabalhar com descritores na [!DNL Schema Registry] API.
 
 ### Definição de descritores {#defining-descriptors}
+
+>[!NOTE]
+>
+>O número máximo de descritores que podem ser aplicados a um esquema é 4000.
 
 As seções a seguir fornecem uma visão geral dos tipos de descritores disponíveis, incluindo os campos obrigatórios para definir um descritor de cada tipo.
 

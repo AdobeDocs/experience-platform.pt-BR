@@ -1,10 +1,9 @@
 ---
-title: Notas de versão de abril de 2024 da Adobe Experience Platform
+title: Notas de versão da Adobe Experience Platform
 description: As notas de versão de abril de 2024 da Adobe Experience Platform.
-exl-id: 86d72fd8-a464-4715-abc9-4177236e423c
-source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
+source-git-commit: 2bddb4963ba0bd10485efe0351d854c01c9a5a3a
 workflow-type: tm+mt
-source-wordcount: '1897'
+source-wordcount: '1895'
 ht-degree: 17%
 
 ---
@@ -117,7 +116,7 @@ O Query Service permite usar SQL padrão para consultar dados no [!DNL Data Lake
 
 | Recurso | Descrição |
 | --- | --- |
-| Quarentena de consulta | Isole automaticamente as execuções de consulta com falha para evitar interrupções e manter o desempenho consistente. Consulte a [quarentena de consulta](../../query-service/ui/query-schedules.md#quarantine) para obter mais informações. |
+| Quarentena de consultas | Isole automaticamente as execuções de consulta com falha para evitar interrupções e manter o desempenho consistente. Consulte a [quarentena de consulta](../../query-service/ui/query-schedules.md#quarantine) para obter mais informações. |
 | Cancelar consulta | Assuma o controle da execução da consulta e melhore sua produtividade cancelando consultas de longa execução. Consulte o [cancelar consulta](../../query-service/ui/user-guide.md#cancel-query) para obter mais informações. |
 | Alertas de consulta agendada | Mantenha-se informado com notificações proativas enquanto agenda consultas, garantindo um gerenciamento de tarefas eficiente e oportuno. Você pode [assinar alertas ao criar uma consulta](../../query-service/ui/query-schedules.md#alerts-for-query-status) ou usando as ações em linha para consultas programadas existentes. Consulte a [assinar alertas com ações em linha](../../query-service/ui/monitor-queries.md#alert-subscription) para obter mais informações. |
 | Navegação de consulta programada aprimorada | Navegue facilmente entre modelos de consulta e execuções programadas para aumentar a produtividade. Consulte a documentação em [exibição de execuções de consulta programada](../../query-service/ui/query-schedules.md#scheduled-query-runs) para obter mais informações. |

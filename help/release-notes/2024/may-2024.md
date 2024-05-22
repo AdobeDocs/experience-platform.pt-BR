@@ -1,10 +1,10 @@
 ---
 title: Notas da versão de maio de 2024 da Adobe Experience Platform
 description: As notas de versão de maio de 2024 da Adobe Experience Platform.
-source-git-commit: 85acffec03986cf56aeba6b8973ac1edf56a9cd6
+source-git-commit: 58de22b51bc721ec584b11e3f87c0ee210c0add5
 workflow-type: tm+mt
-source-wordcount: '1546'
-ht-degree: 20%
+source-wordcount: '1596'
+ht-degree: 19%
 
 ---
 
@@ -71,9 +71,9 @@ A Governança de dados da Adobe Experience Platform é uma série de estratégia
 
 | Funcionalidade | Descrição |
 | ----------- | ----------- |
-| Reordenar campos de mapeamento para destinos em lote | Agora é possível alterar a ordem das colunas nas exportações de CSV arrastando e soltando os campos de mapeamento na [etapa de mapeamento](../../destinations/ui/activate-batch-profile-destinations.md#mapping). A ordem dos campos mapeados na interface reflete a ordem das colunas no arquivo CSV exportado, de cima para baixo, com a linha superior sendo a coluna mais à esquerda do arquivo CSV. |
+| Reordenar campos de mapeamento para destinos em lote | Agora é possível alterar a ordem das colunas nas exportações de CSV arrastando e soltando os campos de mapeamento na [etapa de mapeamento](../../destinations/ui/activate-batch-profile-destinations.md#mapping). A ordem dos campos mapeados na interface reflete a ordem das colunas no arquivo CSV exportado, de cima para baixo, com a linha superior sendo a coluna mais à esquerda do arquivo CSV. <br> ![Exibição de como os mapeamentos podem ser reordenados.](../2024/assets/may/reorder-mappings.gif "Exibição de como os mapeamentos podem ser reordenados."){width="100" zoomable="yes"} |
 | Agendamentos de exportação padrão pré-selecionados para destinos de lote | O Experience Platform agora define automaticamente um agendamento padrão para cada exportação de arquivo. Consulte a documentação em [agendamento de exportações de público](../../destinations/ui/activate-batch-profile-destinations.md#scheduling) para saber como modificar o cronograma padrão. |
-| Editar vários agendamentos de ativação de público para destinos em lote | Agora é possível editar o agendamento de ativação para vários públicos-alvo da [página de detalhes do destino](../../destinations/ui/destination-details-page.md#bulk-edit-schedule). |
+| Editar vários agendamentos de ativação de público para destinos em lote | Agora é possível editar o agendamento de ativação para vários públicos-alvo exportados para um destino em lote (baseado em arquivo) no **[!UICONTROL Dados de ativação]** guia do [página de detalhes do destino](../../destinations/ui/destination-details-page.md#bulk-edit-schedule). <br> ![Visualização de como selecionar vários públicos-alvo e editar o agendamento de exportação de arquivos.](../2024/assets/may/bulk-edit-schedule.gif "Visualização de como selecionar vários públicos-alvo e editar o agendamento de exportação de arquivos."){width="100" zoomable="yes"} |
 | Exportar vários públicos-alvo sob demanda para destinos em lote | Agora é possível selecionar e exportar vários públicos para destinos em lote por meio do [exportar arquivos por demanda](../../destinations/ui/export-file-now.md) funcionalidade. |
 
 {style="table-layout:auto"}

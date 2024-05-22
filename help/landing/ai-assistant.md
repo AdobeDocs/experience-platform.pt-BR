@@ -5,9 +5,9 @@ badge: Beta
 hide: true
 hidefromtoc: true
 exl-id: 8be1c222-3ccd-4a41-978e-33ac9b730f8c
-source-git-commit: 6beaefb23f4deb382b7844fcf58efbd72b1da2ec
+source-git-commit: 65714e2b18dc787abe074e8448aa1d640c867338
 workflow-type: tm+mt
-source-wordcount: '3122'
+source-wordcount: '3042'
 ht-degree: 0%
 
 ---
@@ -80,13 +80,7 @@ A interface do Assistente de IA é exibida, fornecendo imediatamente informaçõ
 * [!UICONTROL O que é um esquema?]
 * [!UICONTROL Conte-me alguns casos de uso comuns do Real-Time CDP]
 
-![A seção &quot;ideias de introdução&quot; do Assistente de IA.](./images/ai-assistant/ideas-to-get-started.png)
-
-Para interagir com o AI Assistant, use a caixa de entrada para digitar suas consultas ou comandos. Você também pode usar o (**`+`**) para utilizar a função de preenchimento automático e o ícone de marcador para acessar suas consultas e comandos marcados.
-
-![A caixa de entrada do Assistente de IA está realçada.](./images/ai-assistant/interact.png)
-
-## Exemplo de caso de uso: usar o AI Assistant para acelerar seu processo de criação de esquema
+## Guia da interface do assistente de IA
 
 >[!NOTE]
 >
@@ -104,97 +98,137 @@ O Assistente de IA consulta sua base de conhecimento e calcula uma resposta. Ap�
 
 Depois de receber uma resposta do Assistente de IA, você pode selecionar entre várias opções para decidir como deseja continuar.
 
-### Salve sua consulta {#save-your-query}
+### Recursos do Assistente de IA {#features}
 
-+++Selecione para exibir um exemplo de como salvar uma consulta
+Esta seção descreve os diferentes recursos do Assistente de IA que você pode usar durante os fluxos de trabalho no Experience Platform.
 
-Para salvar a consulta, selecione o ícone de marcador ao lado da pergunta.
+<!-- 
+### Save your query {#save-your-query}
 
-![Captura de tela de um marcador selecionado.](./images/ai-assistant/save-your-query.png)
++++Select to view an example of how to save a query
 
-Para acessar as consultas salvas, selecione o ícone de marcador abaixo da caixa de entrada e selecione a consulta que deseja executar.
+To save your query, select the bookmark icon beside your question.
 
-![Captura de tela do ícone do marcador e uma lista de consultas salvas.](./images/ai-assistant/bookmarks.png)
+![Screenshot of a selected bookmark.](./images/ai-assistant/save-your-query.png)
 
-+++
+To access your saved queries, select the bookmark icon below the input box, then select the query you would like to run.
+
+![Screenshot of bookmark icon and a list of saved queries.](./images/ai-assistant/bookmarks.png)
+
++++ -->
 
 ### Exibir dados em sua sandbox {#view-data-in-your-sandbox}
 
+Dependendo da sua consulta, o Assistente de IA fornece informações adicionais relacionadas aos dados da sandbox. Para exibir como a resposta à sua consulta se aplica à sandbox específica, selecione **[!UICONTROL Em sua sandbox].**
+
+Ao visualizar dados pertencentes à sua sandbox, o Assistente de IA pode fornecer links diretos para páginas específicas da interface do usuário que exibem seus dados consultados.
+
 +++Selecione para exibir o exemplo
 
-Dependendo da sua consulta, o Assistente de IA fornece informações adicionais relacionadas aos dados da sandbox. Para exibir como a resposta à sua consulta se aplica à sandbox, selecione **[!UICONTROL Em sua sandbox].**
+Neste exemplo, o Assistente de IA retorna informações adicionais sobre os esquemas XDM existentes na sandbox, incluindo a contagem total e os cinco campos mais usados.
 
-Durante essa etapa, o Assistente de IA pode fornecer links diretos para as páginas da interface do usuário de determinados objetos em questão. No exemplo abaixo, o Assistente de IA fornece links diretos para o [!UICONTROL Esquemas] e [!UICONTROL Segmentos] Páginas de interface do usuário.
-
-![Captura de tela da opção &quot;Em sua sandbox&quot;.](./images/ai-assistant/in-your-sandbox.png)
+![A janela suspensa &quot;em sua sandbox&quot; é aberta, exibindo informações adicionais sobre os esquemas.](./images/ai-assistant/in-your-sandbox.png)
 
 +++
 
-### Verificar a resposta {#verify-the-response}
+### Exibir citações {#view-citations}
+
+Você pode verificar as respostas retornadas pelo Assistente de IA revisando as citações disponíveis em cada resposta.
 
 +++Selecione para exibir um exemplo de como exibir fontes
 
-Para exibir citações e validar a resposta do Assistente de IA, selecione **[!UICONTROL Mostrar fontes]**. O Assistente de IA fornece links para a documentação que confirma sua resposta. Você também pode usar as consultas fornecidas pelo Assistente de IA em [!UICONTROL Sugestões relacionadas] para explorar mais tópicos relacionados à sua consulta original.
+Para exibir citações e validar a resposta do Assistente de IA, selecione **[!UICONTROL Mostrar fontes]**.
 
-![Captura de tela de &quot;Mostrar fontes&quot;.](./images/ai-assistant/show-sources.png)
+![A resposta do Assistente de IA com &quot;Mostrar fontes&quot; selecionada.](./images/ai-assistant/show-sources.png)
+
+O Assistente de IA atualiza a interface e fornece links para a documentação que corroboram a resposta inicial. Além disso, quando as citações são ativadas, o Assistente de IA atualiza a resposta para incluir notas de rodapé a fim de indicar as partes específicas da resposta que fazem referência à documentação fornecida.
+
+![Um menu suspenso das citações que o Assistente de IA fornece para perguntas de conceito.](./images/ai-assistant/citations.png)
+
+Você também pode usar as consultas fornecidas pelo Assistente de IA em **[!UICONTROL Sugestões relacionadas]** para explorar mais tópicos relacionados à sua consulta original.
+
+![Uma lista de consultas fornecidas pelo Assistente de IA como sugestões relacionadas.](./images/ai-assistant/related-suggestions.png)
 
 +++
 
 ### Dados e visualização de uso {#usage-data-and-visualization}
 
+Você deve estar em uma sandbox ativa para que o Assistente de IA responda suficientemente a uma pergunta sobre seus dados de uso.
+
 +++Selecione para exibir um exemplo de perguntas de dados de uso e visualização de dados
 
-Para que o Assistente de IA responda a uma consulta sobre dados de uso na organização, você deve estar em uma sandbox ativa.
+No exemplo abaixo, o Assistente de IA é solicitado a fazer a seguinte consulta: **&quot;Mostrar os fluxos de dados criados usando a origem do Amazon S3&quot;** O, Assistente de IA, responde com uma tabela listando seus fluxos de dados e as IDs correspondentes. Para exibir toda a tabela de dados, selecione o ícone de expansão na parte superior direita.
 
-No exemplo abaixo, o Assistente de IA é fornecido com a seguinte consulta: **&quot;Mostre-me definições de segmento com mais de 1000 perfis e inclua o status de ativação.&quot;** O Assistente de IA responde com um gráfico que visualiza os dados de segmento e perfil.
+![Pergunta de acompanhamento sobre dados de uso.](./images/ai-assistant/usage-data-question.png)
 
-![Pergunta de acompanhamento sobre dados de uso.](./images/ai-assistant/data-usage-question.png)
+Uma exibição expandida da tabela é exibida, fornecendo uma lista mais abrangente de fluxos de dados com base nos parâmetros da sua consulta.
 
-Você pode passar o mouse sobre uma barra individual para visualizar dados específicos. Você também pode selecionar o ícone de expansão para obter uma exibição maior do gráfico.
+![Uma exibição da tabela expandida.](./images/ai-assistant/table.png)
 
-![Pergunta de acompanhamento que ilustra a visualização de dados.](./images/ai-assistant/data-visualization.png)
+Quando solicitado com uma pergunta sobre dados de uso, o Assistente de IA fornece uma explicação de como ele calculou a resposta. No exemplo abaixo, o Assistente de IA descreve as etapas executadas para identificar os fluxos de dados criados usando o [!DNL Amazon S3] origem.
 
-Uma exibição expandida da visualização é exibida. É possível usar a modal expandida para inspecionar ainda mais os dados, além de ser especialmente útil quando a visualização retorna com um grande número de colunas.
+![Faça uma pergunta complementar sobre definições de segmento que ilustra como o Assistente de IA calculou a resposta.](./images/ai-assistant/answer-explained.png)
 
-![Gráfico expandido.](./images/ai-assistant/chart-expanded.png)
-
-Quando solicitado com uma pergunta sobre dados de uso, o Assistente de IA fornece uma explicação de como ele calculou a resposta. No exemplo abaixo, o Assistente de IA descreve as etapas executadas para exibir definições de segmento com mais de 1000 perfis e seus respectivos status de ativação.
-
-![Faça uma pergunta complementar sobre definições de segmento que ilustra como o Assistente de IA calculou a resposta.](./images/ai-assistant/results-explained.png)
-
-Você também pode fornecer filtros e modificações às suas consultas e instruir o Assistente de IA a renderizar suas descobertas com base nos filtros incluídos. Por exemplo, você pode pedir ao Assistente de IA para mostrar uma tendência das definições de segmento de contagem na ordem de sua data de criação, remover definições de segmento com zero total de perfis e usar nomes de meses em vez de números inteiros ao exibir os dados.
+Você também pode fornecer filtros e modificações às suas consultas e instruir o Assistente de IA a renderizar suas descobertas com base nos filtros incluídos. Por exemplo, você pode solicitar que o Assistente de IA mostre uma tendência da contagem de definições de segmento na ordem de sua data de criação, remover definições de segmento com total de perfis zero e usar nomes de meses em vez de números inteiros ao exibir os dados.
 
 +++
 
 ### Usar preenchimento automático {#use-auto-complete}
 
-+++Selecione para exibir um exemplo de preenchimento automático
-
 Você pode usar a função de preenchimento automático para receber uma lista de objetos de dados que existem na sandbox. As recomendações de preenchimento automático estão disponíveis para os seguintes domínios: públicos-alvo, esquemas, conjuntos de dados, fontes e destinos.
+
++++Selecione para exibir um exemplo de preenchimento automático
 
 Você pode usar o preenchimento automático incluindo o símbolo de mais (**`+`**) na sua query. Como alternativa, você também pode selecionar o sinal de mais (**`+`**) localizado na parte inferior da caixa de entrada de texto. Uma janela é exibida com uma lista de objetos de dados recomendados da sandbox.
 
-![Exemplo de preenchimento automático](./images/ai-assistant/auto-complete-one.png)
-
-Em seguida, selecione o objeto de dados que deseja consultar para concluir a pergunta e, em seguida, envie a pergunta.
-
-![Exemplo de preenchimento automático com pergunta e resposta](./images/ai-assistant/auto-complete-two.png)
+![Exemplo de preenchimento automático](./images/ai-assistant/autocomplete.png)
 
 +++
 
 ### Usar voltas múltiplas {#use-multi-turn}
 
-+++Selecione para exibir um exemplo de curva múltipla
-
 Você pode usar os recursos de várias rodadas do Assistente de IA para ter uma conversa mais natural durante sua experiência. O Assistente de IA pode responder perguntas de acompanhamento, fornecidas. contexto pode ser deduzido de uma interação anterior.
 
-No exemplo abaixo, o Assistente de IA é solicitado a fornecer o número total de fluxos de dados na organização atual.
++++Selecione para exibir um exemplo de curva múltipla
 
-![Exemplo de voltas múltiplas](./images/ai-assistant/multi-turn-one.png)
+No exemplo abaixo, o Assistente de IA é solicitado primeiro a fornecer o número total de fluxos de dados e, em seguida, é solicitado a listar os 10 fluxos de dados mais recentes.
 
-Em seguida, o Assistente de IA recebe outra solicitação de acompanhamento. Desta vez, o Assistente de IA responde listando os fluxos de dados que existem atualmente em sua organização.
+![Exemplo de voltas múltiplas](./images/ai-assistant/multi-turn.png)
 
-![Exemplo de turno múltiplo com pergunta e resposta](./images/ai-assistant/multi-turn-two.png)
++++
+
+## Fornecer feedback {#feedback}
+
+Você pode fornecer feedback sobre sua experiência com o Assistente de IA usando as opções fornecidas com a resposta.
+
+Para fornecer feedback, selecione polegares para cima, polegares para baixo ou um sinalizador depois de receber uma resposta do Assistente de IA e, em seguida, insira seu feedback na caixa de texto fornecida.
+
+![A opção de feedback no Assistente de IA.](./images/ai-assistant/provide-feedback.png)
+
+
++++Selecione para exibir mais exemplos
+
+>[!BEGINTABS]
+
+>[!TAB Polegar para cima]
+
+Selecione o ícone de miniatura para fornecer feedback sobre o que aconteceu de bom com a sua experiência com o Assistente de IA.
+
+![A janela de feedback positivo.](./images/ai-assistant/thumbs-up.png)
+
+>[!TAB Polegar para baixo]
+
+Selecione o ícone com miniaturas para fornecer feedback sobre o que pode ser melhorado com base na sua experiência com o Assistente de IA. Durante essa etapa, você também pode fornecer comentários específicos sobre a sua experiência. O feedback fornecido nos comentários é revisado diariamente.
+
+![A janela de feedback negativo.](./images/ai-assistant/thumbs-down.png)
+
+>[!TAB Sinalizador]
+
+Selecione o ícone de sinalizador para fornecer mais relatórios sobre a experiência usando o Assistente de IA.
+
+![A janela de resultados do relatório.](./images/ai-assistant/flag.png)
+
+>[!ENDTABS]
 
 +++
 
@@ -261,44 +295,6 @@ Leia a tabela abaixo para obter mais orientações sobre as práticas recomendad
 
 {style="table-layout:auto"}
 
-## Fornecer feedback {#feedback}
-
->[!BEGINSHADEBOX]
-
-**Seu feedback é solicitado**
-
-Durante esse estágio de Alpha, você é convidado a fornecer feedback sobre as respostas recebidas do Assistente de IA. Todas as respostas e comentários enviados são revisados para continuar a melhorar a experiência do Assistente de IA.
-
-Para fornecer feedback, selecione polegares para cima ou para baixo depois de receber uma resposta do Assistente de IA e, em seguida, insira seu feedback na caixa de texto fornecida. Em seguida, selecione **[!UICONTROL Enviar feedback]** para enviar.
-
->[!ENDSHADEBOX]
-
-+++Fornecer feedback
-
->[!BEGINTABS]
-
->[!TAB Polegar para cima]
-
-Selecione o ícone de miniatura para fornecer feedback sobre o que aconteceu de bom com a sua experiência com o Assistente de IA.
-
-![A janela de feedback positivo.](./images/ai-assistant/thumbs-up.png)
-
->[!TAB Polegar para baixo]
-
-Selecione o ícone com miniaturas para fornecer feedback sobre o que pode ser melhorado com base na sua experiência com o Assistente de IA. Durante essa etapa, você também pode fornecer comentários específicos sobre a sua experiência. O feedback fornecido nos comentários é revisado diariamente.
-
-![A janela de feedback negativo.](./images/ai-assistant/thumbs-down.png)
-
->[!TAB Sinalizador]
-
-Selecione o ícone de sinalizador para fornecer mais relatórios sobre a experiência usando o Assistente de IA.
-
-![A janela de resultados do relatório.](./images/ai-assistant/flag.png)
-
->[!ENDTABS]
-
-+++
-
 ## Informações adicionais {#additional-information}
 
 Consulte esta seção para obter informações adicionais sobre o Assistente de IA para o Experience Platform.
@@ -321,21 +317,26 @@ O Assistente de IA pode dar uma impressão imprecisa do que pode fazer. Ele pode
 | &quot;Você sabe **x** idioma?&quot; | Atualmente, o Assistente de IA só oferece suporte ao inglês, mas pode responder &quot;sim&quot;, pois o modelo subjacente é compatível. |
 | &quot;Você pode fazer...?&quot; | O Assistente de IA pode responder sim, mesmo que não possa. |
 
-### Dicas {#tips}
+## Perguntas frequentes {#faq}
 
-A seção a seguir descreve algumas dicas e soluções alternativas a serem consideradas ao usar o Assistente de IA.
+Veja a seguir uma lista de respostas para perguntas frequentes sobre o Assistente de IA.
 
-#### As perguntas podem ser respondidas com a fonte de informações errada
+### As informações do Assistente de IA são fornecidas em tempo real?
 
-Há casos em que sua pergunta sobre os dados de uso pode resultar em uma resposta com base na documentação. Isso ocorre porque o Assistente de IA pode rotear incorretamente sua pergunta para a fonte de informações errada. Você pode evitar isso ao:
+Os dados apresentados nas respostas do Assistente de IA são atualizados diariamente. Isso significa que os dados em respostas podem ser até 24 horas mais antigos do que os dados que você pode ver na interface do usuário do Experience Platform, no momento da resposta.
 
-* Reformular sua pergunta para usar uma linguagem mais SQL
-* Explicitamente chamando a fonte de informações a ser usada.
+### A quais aplicativos do Adobe o Assistente de IA oferece suporte?
 
-Leia a tabela abaixo para ver exemplos:
+O Assistente de IA oferece suporte a perguntas de conceito do Adobe Experience Platform, Real-time Customer Data Platform e Adobe Journey Optimizer. Para perguntas sobre o uso de dados, no momento, o Assistente de IA é compatível apenas com objetos de dados do Real-Time CDP.
 
-| Pergunta inválida | Boa pergunta | Notas |
-| --- | --- | --- |
-| Qual é o meu maior público-alvo? | Qual é o meu maior público-alvo? Uso de dados. | Informe explicitamente ao Assistente de IA que você deseja que a resposta seja baseada em dados. |
-| Qual é o meu maior público-alvo? | Liste meu maior público. | Há casos em que uma pergunta &quot;o que...&quot; pode ser confundida com uma pergunta baseada em documentação. Usar um comando como &quot;lista&quot; é um indicador mais forte de que você está fazendo uma pergunta com dados em contexto. |
-| Quantos conjuntos de dados eu tenho? | Contar meus conjuntos de dados. | A pergunta original funciona para públicos-alvo, mas pode não funcionar com conjuntos de dados. |
+### Quais são os recursos do Assistente de IA?
+
+O Assistente de IA pode abordar consultas de conceito de Adobe e responder perguntas relacionadas ao uso de objetos Experience Platform. (Por exemplo, &quot;Quantos públicos-alvo são ativados?&quot;).
+
+### O Assistente de IA pode fornecer informações sobre dados de perfil?
+
+Não. O Assistente de IA não tem acesso aos dados no nível do perfil.
+
+### Minhas informações pessoais serão usadas nos dados de treinamento do Assistente de IA?
+
+O Assistente de IA não usa informações pessoais para fins de treinamento. Não forneça nenhuma informação pessoal sobre você (incluindo seu nome ou informações de contato) ou qualquer outra pessoa ao Assistente de IA.

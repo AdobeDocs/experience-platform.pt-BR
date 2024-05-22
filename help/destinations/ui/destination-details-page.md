@@ -3,10 +3,10 @@ keywords: destinos;destino;página detalhes de destinos;página detalhes de dest
 title: Exibir detalhes do destino
 description: A página de detalhes de um destino individual fornece uma visão geral dos detalhes do destino. Os detalhes do destino incluem o nome do destino, a ID, os públicos mapeados para o destino e os controles para editar a ativação e habilitar e desabilitar o fluxo de dados.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: 9d3b6409013edc38ef41dd2a184ccbdcf7ab9edd
+source-git-commit: f206ea853d44410c93463e1e515279b39afd1fd9
 workflow-type: tm+mt
-source-wordcount: '1154'
-ht-degree: 1%
+source-wordcount: '1106'
+ht-degree: 0%
 
 ---
 
@@ -125,21 +125,13 @@ Para remover vários públicos-alvo de fluxos de ativação existentes, selecion
 
 ![Tela de dados de ativação destacando a opção Remover públicos.](../assets/ui/details-page/bulk-remove-audiences.png)
 
-### [!BADGE Beta]{type=Informative} Exportar vários arquivos sob demanda para destinos em lote {#bulk-export}
-
->[!NOTE]
->
-Esse recurso está na versão beta e só está disponível para clientes selecionados. Para solicitar acesso a esse recurso, entre em contato com o representante da Adobe.
+### Exportar vários arquivos sob demanda para destinos em lote {#bulk-export}
 
 Você pode [exportar vários arquivos por demanda](../ui/export-file-now.md) do **[!UICONTROL Dados de ativação]** página. Para fazer isso, selecione os públicos para os quais deseja exportar arquivos por demanda e selecione o **[!UICONTROL Exportar arquivo agora]** controle para acionar uma exportação única que fornecerá um arquivo para cada público-alvo selecionado para o destino do lote.
 
 ![Imagem destacando o botão Exportar arquivo agora.](../assets/ui/details-page/bulk-export-file-now.png)
 
-### [!BADGE Beta]{type=Informative} Edite as programações de ativação para vários públicos exportados para destinos em lote {#bulk-edit-schedule}
-
->[!NOTE]
->
-Esse recurso está na versão beta e só está disponível para clientes selecionados. Para solicitar acesso a esse recurso, entre em contato com o representante da Adobe.
+### Editar agendamentos de ativação para vários públicos-alvo exportados para destinos em lote {#bulk-edit-schedule}
 
 Para editar o agendamento de ativação existente de vários públicos-alvo ao mesmo tempo, selecione os públicos-alvo desejados e **[!UICONTROL Editar programação]**. Para obter informações detalhadas sobre como definir ou editar um agendamento de exportação, leia o [agendar exportação de público](../ui/activate-batch-profile-destinations.md#scheduling) seção.
 

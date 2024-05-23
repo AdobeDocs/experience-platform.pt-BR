@@ -47,7 +47,10 @@ O Serviço de catálogo é o sistema de registro para localização e linhagem d
 A Adobe Experience Platform fornece vários painéis para você visualizar insights importantes sobre os dados de sua organização, que são capturados por instantâneos diários.
 
 **Recursos novos ou atualizados**
-| Recurso | Descrição | | — | — | | Insights personalizáveis para relatórios estendidos do aplicativo | Perfeitamente [transforme o resultado da análise SQL em formatos visuais compreensíveis e amigáveis para os negócios](../../dashboards/data-distiller/customizable-insights/overview.md). Use consultas SQL personalizadas para manipulação de dados precisa e a criação de gráficos dinâmicos de diversos conjuntos de dados estruturados. Você pode usar o modo pro de consulta para executar análises complexas com SQL e, em seguida, compartilhar essa análise com usuários não técnicos por meio de gráficos em seu painel personalizado ou exportá-los em arquivos CSV. |
+
+| Recurso | Descrição |
+| --- | --- |
+| Insights personalizáveis para relatórios estendidos do aplicativo | Perfeitamente [transforme o resultado da análise SQL em formatos visuais compreensíveis e amigáveis para os negócios](../../dashboards/data-distiller/customizable-insights/overview.md). Use consultas SQL personalizadas para manipulação de dados precisa e a criação de gráficos dinâmicos de diversos conjuntos de dados estruturados. Você pode usar o modo pro de consulta para executar análises complexas com SQL e, em seguida, compartilhar essa análise com usuários não técnicos por meio de gráficos em seu painel personalizado ou exportá-los em arquivos CSV. |
 
 {style="table-layout:auto"}
 

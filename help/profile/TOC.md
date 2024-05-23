@@ -4,10 +4,10 @@ user-guide-title: Guia do Perfil do cliente em tempo real
 user-guide-description: Mescle dados do cliente para criar uma exibição unificada de interações do cliente entre canais.
 feature: Profiles
 role: User
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+source-git-commit: e7af4992b1a2d4c9ada89dea474ce8e5412313f9
 workflow-type: tm+mt
-source-wordcount: '129'
-ht-degree: 23%
+source-wordcount: '132'
+ht-degree: 14%
 
 ---
 
@@ -21,6 +21,7 @@ ht-degree: 23%
 * [Perfis de borda](edge-profiles.md)
 * [Expirações do evento de experiência](event-expirations.md)
 * [Expirações de perfil pseudônimo](pseudonymous-profiles.md)
+* [Solicitação de carimbo de data e hora do cliente](customer-timestamp-ordering.md)
 * [!DNL Profile] API {#api}
    * [Visão geral](api/overview.md)
    * [Introdução](api/getting-started.md)
@@ -31,7 +32,7 @@ ht-degree: 23%
 * Interface do usuário do perfil {#ui}
    * [[!DNL Profile] Guia da interface do usuário](ui/user-guide.md)
    * [[!DNL Profile] personalização de detalhes](ui/profile-customization.md)
-   * [Perfis de cliente potencial](ui/prospect-profile.md)
+   * [Perfis em potencial](ui/prospect-profile.md)
 * Atributos computados {#computed-attributes}
    * [Visão geral](computed-attributes/overview.md)
    * [Guia da API de atributos computados](computed-attributes/api.md)
@@ -49,8 +50,8 @@ ht-degree: 23%
    * [Adicionar dados ao Perfil do cliente em tempo real](tutorials/add-profile-data.md)
    * [Configurar um conjunto de dados para o Perfil](tutorials/dataset-configuration.md)
    * [Gerar o relatório de sobreposição do conjunto de dados](tutorials/dataset-overlap-report.md)
-   * [Mais tutoriais](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html?lang=pt-BR)
+   * [Mais tutoriais](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html)
 * [Processamento de solicitação de privacidade](privacy.md)
 * [[!DNL Profile] guia de solução de problemas](troubleshooting.md)
 * [Referência da API do perfil](https://www.adobe.com/go/profile-apis-en)
-* [Notas de versão da Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [Notas de versão da Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest?lang=pt-BR)

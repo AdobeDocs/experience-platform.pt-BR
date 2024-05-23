@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Visão geral da API de assimilação em lote
 description: A API de assimilação em lote do Adobe Experience Platform permite assimilar dados na Platform como arquivos em lote. Os dados assimilados podem ser os dados do perfil de um arquivo simples em um sistema CRM (como um arquivo Parquet) ou dados que estejam em conformidade com um esquema conhecido no registro do Experience Data Model (XDM).
 exl-id: ffd1dc2d-eff8-4ef7-a26b-f78988f050ef
-source-git-commit: 9d3a8aac120119ce0361685f9cb8d3bfc28dc7fd
+source-git-commit: 6cd4bff07d042401d4ebc90d6fc2e70a1f8a7cb0
 workflow-type: tm+mt
 source-wordcount: '1388'
-ht-degree: 6%
+ht-degree: 4%
 
 ---
 
@@ -56,15 +56,15 @@ Ao assimilar dados, é importante entender como [!DNL Experience Data Model] Os 
 
 Há alguma flexibilidade ao assimilar dados - se um tipo não corresponder ao que está no esquema do público-alvo, os dados serão convertidos no tipo de público-alvo expresso. Se não puder, ocorrerá falha no lote com uma `TypeCompatibilityException`.
 
-Por exemplo, nem o JSON nem o CSV têm um `date` ou `date-time` tipo. Como resultado, esses valores são expressos usando [Strings formatadas em ISO 8061](https://www.iso.org/iso-8601-date-and-time-format.html) (&quot;2018-07-10T15:05:59.000-08:00&quot;) ou Horário Unix formatado em milissegundos (1531263959000) e convertido no momento da assimilação para o tipo XDM de destino.
+Por exemplo, nem o JSON nem o CSV têm um `date` ou `date-time` tipo. Como resultado, esses valores são expressos usando [Strings formatadas em ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) (&quot;2018-07-10T15:05:59.000-08:00&quot;) ou Horário Unix formatado em milissegundos (1531263959000) e convertido no momento da assimilação para o tipo XDM de destino.
 
 A tabela abaixo mostra as conversões compatíveis ao assimilar dados.
 
-| Entrada (linha) vs. Destino (coluna) | String | Byte | Short | Número inteiro | Longo | Duplo | Data | Data e hora | Objeto | Mapa |
+| Entrada (linha) vs. Destino (coluna) | String | Byte | Curto | Número inteiro | Longo | Duplo | Data | Data e hora | Objeto | Mapa |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | String | X | X | X | X | X | X | X | X |   |   |
 | Byte | X | X | X | X | X | X |   |   |   |   |
-| Short | X | X | X | X | X | X |   |   |   |   |
+| Curto | X | X | X | X | X | X |   |   |   |   |
 | Número inteiro | X | X | X | X | X | X |   |   |   |   |
 | Longo | X | X | X | X | X | X | X | X |   |   |
 | Duplo | X | X | X | X | X | X |   |   |   |   |
@@ -411,11 +411,11 @@ A variável `"status"` é o que mostra o status atual do lote solicitado. Os lot
 | Anulado | Uma operação de anulação foi **explicitamente** (por meio da API de assimilação em lote) do lote especificado. Quando o lote estiver no estado &quot;Carregado&quot;, ele não poderá ser abortado. |
 | Ativo | O lote foi promovido com sucesso e está disponível para consumo downstream. Esse status pode ser usado alternadamente com &quot;Sucesso&quot;. |
 | Excluído | Os dados do lote foram completamente removidos. |
-| Falhou | Um estado terminal que resulta de uma configuração incorreta e/ou de dados incorretos. Os dados de um lote com falha **não** apareça. Esse status pode ser usado alternadamente com &quot;Falha&quot;. |
+| Falha | Um estado terminal que resulta de uma configuração incorreta e/ou de dados incorretos. Os dados de um lote com falha **não** apareça. Esse status pode ser usado alternadamente com &quot;Falha&quot;. |
 | Inativo | O lote foi promovido com sucesso, mas foi revertido ou expirou. O lote não está mais disponível para consumo downstream. |
 | Carregado | Os dados do lote estão concluídos e o lote está pronto para promoção. |
 | Carregando | Os dados deste lote estão sendo carregados e o lote está no momento **não** pronto para ser promovido. |
-| Tentando novamente | Os dados desse lote estão sendo processados. No entanto, devido a um erro de sistema ou transitório, o lote falhou; como resultado, esse lote está sendo repetido. |
+| Repetindo | Os dados desse lote estão sendo processados. No entanto, devido a um erro de sistema ou transitório, o lote falhou; como resultado, esse lote está sendo repetido. |
 | Preparado | A fase de preparo do processo de promoção de um lote está concluída e o trabalho de assimilação foi executado. |
 | Armazenamento temporário | Os dados do lote estão sendo processados. |
 | Paralisado | Os dados do lote estão sendo processados. No entanto, a promoção em lote foi interrompida após várias tentativas. |

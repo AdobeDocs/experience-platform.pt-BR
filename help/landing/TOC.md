@@ -2,11 +2,11 @@
 audience: user
 user-guide-title: Visão geral da Adobe Experience Platform
 breadcrumb-title: Visão geral da Experience Platform
-user-guide-description: Saiba como a Experience Platform permite oferecer experiências personalizadas a clientes em tempo real com guias, documentação e tutoriais.
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+user-guide-description: Saiba como o Experience Platform permite oferecer experiências personalizadas a seus clientes em tempo real, com guias, documentação e tutoriais.
+source-git-commit: cb37eda87b8fcc0d0284db7a0bab8d48eab5aae6
 workflow-type: tm+mt
-source-wordcount: '282'
-ht-degree: 23%
+source-wordcount: '281'
+ht-degree: 14%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 23%
 
 * [Visão geral da plataforma](home.md)
 * [Visão geral da plataforma (Vídeo)](video/platform-overview.md)
-* [Tutoriais da Platform](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html?lang=pt-BR)
+* [Tutoriais da Platform](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html)
 * [Uma experiência do cliente viabilizada pela Platform (Vídeo)](video/customer-experience.md)
 * [Nos bastidores de uma experiência do cliente viabilizada pela Platform (Vídeo)](video/customer-experience-bts.md)
 * Introdução {#getting-started}
@@ -40,7 +40,7 @@ ht-degree: 23%
 * Documentação da plataforma {#documentation}
    * [Visão geral](documentation/overview.md)
    * [Suporte de idioma](documentation/language-support.md)
-* Serviços de aplicativos criados na plataforma {#ecosystem}
+* Aplicativos criados na Platform {#ecosystem}
    * [Visão geral](application-services.md)
    * [Adobe Real-time Customer Data Platform (todas as edições)](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html)
    * [Serviços inteligentes e de aplicativos (Vídeo)](video/application-intelligent-services.md)
@@ -81,4 +81,4 @@ ht-degree: 23%
 * [Manual de solução de problemas](troubleshooting.md)
 * [Migração de data lake Gen2](adls2-gen2-migration.md)
 * [Glossário](glossary.md)
-* [Notas de versão](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [Notas de versão](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest?lang=pt-BR)

@@ -53,7 +53,7 @@ As seguintes métricas estão disponíveis para essa visualização de painel:
 
 | Métrica | Descrição |
 | ------ | ----------- |
-| **[!UICONTROL Nome do público]** | O nome do público-alvo. |
+| **[!UICONTROL Nome do público]** | O nome do público. |
 | **[!UICONTROL Tipo de dados]** | O tipo de dados do público. Os valores possíveis incluem **[!UICONTROL Cliente]**, **[!UICONTROL Conta]**, e **[!UICONTROL Cliente Potencial]**. Você pode exibir para públicos-alvo de um tipo de dados especificado usando o [!UICONTROL Tipo de dados] filtro acima da faixa de opções de cartões. |
 | **[!UICONTROL Carimbo de data e hora da última avaliação]** | A data e a hora em que o último trabalho de avaliação do público-alvo foi executado. |
 | **[!UICONTROL Status da última avaliação]** | O status do último trabalho de avaliação do público-alvo. Os valores possíveis incluem **[!UICONTROL Sucesso]**, **[!UICONTROL Nenhuma execução]**, e **[!UICONTROL Failed]**. |
@@ -84,7 +84,7 @@ As seguintes métricas estão disponíveis para essa visualização de painel:
 | **[!UICONTROL Tipo]** | Indica o tipo do trabalho de segmentação. Os dois tipos de trabalho compatíveis são **ativação** e **avaliação** tarefas. |
 | **[!UICONTROL Trabalho concluído]** | A data e a hora em que o trabalho de segmentação foi concluído. |
 | **[!UICONTROL Tempo de processamento]** | O tempo necessário para a conclusão do trabalho de segmentação. |
-| **[!UICONTROL Status da tarefa]** | O status do trabalho de segmentação. Os valores compatíveis incluem **[!UICONTROL Sucesso]**, **[!UICONTROL Em andamento]**, e **[!UICONTROL Failed]**. |
+| **[!UICONTROL Status do trabalho]** | O status do trabalho de segmentação. Os valores compatíveis incluem **[!UICONTROL Sucesso]**, **[!UICONTROL Em andamento]**, e **[!UICONTROL Failed]**. |
 | **[!UICONTROL Contagem de perfis]** | O número de perfis que o trabalho de segmentação está avaliando. Cada usuário deve ter um perfil exclusivo. |
 | **[!UICONTROL Identidade ativada]** | O número de identidades que o trabalho de segmentação está ativando. Cada perfil pode ter várias identidades. Por exemplo, um perfil pode ter um email, um número de telefone e um número de fidelidade como identidades. |
 | **[!UICONTROL Nome do destino]** | O nome do destino em que o trabalho de segmentação está sendo ativado. |
@@ -169,7 +169,7 @@ Para o [!UICONTROL Públicos-alvo] , as seguintes métricas estão disponíveis:
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_segment_jobs"
->title="Trabalhos de segmentação"
+>title="Processos de segmentação"
 >abstract="A visualização de trabalhos de segmentação contém informações sobre os trabalhos de avaliação e exportação para todos os públicos-alvo."
 
 Para acessar o **[!UICONTROL Trabalhos de segmentação]** painel, selecione **[!UICONTROL Trabalhos de segmentação]** no [!UICONTROL Públicos-alvo] painel. A variável [!UICONTROL Monitoramento] o painel contém métricas e informações sobre os trabalhos de avaliação e exportação.

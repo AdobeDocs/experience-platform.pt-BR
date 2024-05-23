@@ -1,13 +1,13 @@
 ---
 title: sendEvent
-description: Envie dados para a Rede de borda da Adobe Experience Platform.
-source-git-commit: f75dcfc945be2f45c1638bdd4d670288aef6e1e6
+description: Envie dados para o Edge Network Adobe Experience Platform.
+exl-id: 83de368d-78d4-4e28-aadd-afaea1ca091d
+source-git-commit: 9ea7b678f5cfa19c7fd1e3ba6633cdeed4084b18
 workflow-type: tm+mt
 source-wordcount: '257'
 ht-degree: 0%
 
 ---
-
 
 # `sendEvent`
 
@@ -32,7 +32,7 @@ Execute o `sendEvent` ao chamar a instância configurada do SDK da Web. Certifiq
 ```js
 alloy("sendEvent", {
   "data": dataObject,
-  "documentUnloading": true,
+  "documentUnloading": false,
   "edgeConfigOverrides": { "datastreamId": "0dada9f4-fa94-4c9c-8aaf-fdbac6c56287" },
   "renderDecisions": true,
   "type": "commerce.purchases",
@@ -44,6 +44,6 @@ alloy("sendEvent", {
 
 Se você decidir [lidar com respostas](../command-responses.md) com esse comando, as seguintes propriedades estão disponíveis no objeto de resposta:
 
-* **`propositions`**: uma matriz de propostas retornadas pela Rede de borda. As apresentações renderizadas automaticamente incluem o sinalizador `renderAttempted` definir como `true`.
+* **`propositions`**: uma matriz de propostas retornadas pelo Edge Network. As apresentações renderizadas automaticamente incluem o sinalizador `renderAttempted` definir como `true`.
 * **`inferences`**: uma matriz de objetos de inferência, que contém informações de aprendizado de máquina sobre este usuário.
-* **`destinations`**: uma matriz de objetos de destino retornados pela Rede de borda.
+* **`destinations`**: uma matriz de objetos de destino retornados pelo Edge Network.

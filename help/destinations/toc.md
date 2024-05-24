@@ -5,10 +5,10 @@ user-guide-description: Ative seus dados conhecidos e desconhecidos para campanh
 description: Este documento lista o índice dos destinos do Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: c35eec2b83f92a7fb165bad13213ec50a6c9863e
+source-git-commit: e872d8f8a0c73fe3375e538260d23da1f145621c
 workflow-type: tm+mt
-source-wordcount: '1218'
-ht-degree: 5%
+source-wordcount: '1224'
+ht-degree: 3%
 
 ---
 
@@ -83,6 +83,7 @@ ht-degree: 5%
       * [Conexão com o Google Ad Manager](./catalog/advertising/google-ad-manager.md)
       * [(Beta) Conexão do Google Ad Manager 360](./catalog/advertising/google-ad-manager-360-connection.md)
       * [Conexão de Correspondência de cliente do Google](./catalog/advertising/google-customer-match.md)
+      * [(Beta) Google Customer Match + conexão DV360](./catalog/advertising/google-customer-match-dv360.md)
       * [Conexão do Google Display &amp; Video 360](./catalog/advertising/google-dv360.md)
       * [extensão gtag do Google](./catalog/advertising/gtag-advertising.md)
       * [Extensão de tag do linkedIn Insight](./catalog/advertising/linkedin.md)
@@ -125,10 +126,10 @@ ht-degree: 5%
       * [Conexão com o Amazon Kinesis](./catalog/cloud-storage/amazon-kinesis.md)
       * [Conexão com o Amazon S3](./catalog/cloud-storage/amazon-s3.md)
       * [Conexão do Blob do Azure](./catalog/cloud-storage/azure-blob.md)
-      * [Armazenamento Azure Data Lake Gen2](./catalog/cloud-storage/adls-gen2.md)
+      * [Azure Data Lake Storage Gen2](./catalog/cloud-storage/adls-gen2.md)
       * [Conexão do Azure Event Hubs](./catalog/cloud-storage/azure-event-hubs.md)
       * [Data Landing Zone](./catalog/cloud-storage/data-landing-zone.md)
-      * [Armazenamento em nuvem Google](./catalog/cloud-storage/google-cloud-storage.md)
+      * [Google Cloud Storage](./catalog/cloud-storage/google-cloud-storage.md)
       * [Conexão SFTP](./catalog/cloud-storage/sftp.md)
       * [Endereço IP do arquivo de inclui na lista de permissões para destinos de armazenamento na nuvem baseado em arquivo](./catalog/cloud-storage/ip-address-allow-list.md)
    * Destinos do Gerenciamento de Relacionamento com o Cliente (CRM) {#crm}
@@ -144,7 +145,7 @@ ht-degree: 5%
       * [Supressão de prospecto da Acxiom](./catalog/data-partner/acxiom-prospect-suppression.md)
       * [Aprimoramento de dados da Acxiom](./catalog/data-partner/acxiom-data-enhancement.md)
    * Destinos de comércio eletrônico {#ecommerce}
-      * [SAP Commerce](./catalog/ecommerce/sap-commerce.md)
+      * [SAP COMMERCE](./catalog/ecommerce/sap-commerce.md)
    * Destinos de email {#email}
       * [Extensão Bizible](./catalog/email/bizible.md)
       * [Extensão do Marketo](./catalog/email/marketo.md)
@@ -297,4 +298,4 @@ ht-degree: 5%
       * [Modelo de autoatendimento de documentação](./destination-sdk/docs-framework/self-service-template.md)
       * [Práticas recomendadas de criação](./destination-sdk/docs-framework/authoring-best-practices.md)
 * [Perguntas frequentes](./destinations-faq.md)
-* [Notas de versão da Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [Notas de versão da Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest?lang=pt-BR)

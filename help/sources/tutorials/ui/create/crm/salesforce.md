@@ -2,10 +2,10 @@
 title: Conecte sua conta do Salesforce usando a interface do Experience Platform
 description: Saiba como conectar sua conta do Salesforce e trazer seus dados de CRM para o Experience Platform usando a interface do usuário.
 exl-id: b67fa4c4-d8ff-4d2d-aa76-5d9d32aa22d6
-source-git-commit: 8d62cf4ca0071e84baa9399e0a25f7ebfb096c1a
+source-git-commit: 7930a869627130a5db34780e64b809cda0c1e5f4
 workflow-type: tm+mt
 source-wordcount: '829'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
@@ -51,8 +51,8 @@ Você deve fornecer valores para as credenciais a seguir para conectar seu [!DNL
 | Credencial | Descrição |
 | --- | --- |
 | URL do ambiente | O URL do [!DNL Salesforce] instância de origem. |
-| ID do cliente | A ID do cliente é usada em conjunto com o segredo do cliente como parte da autenticação OAuth2. Juntos, a ID do cliente e o segredo do cliente permitem que o aplicativo opere em nome da sua conta, identificando o aplicativo para [!DNL Salesforce]. |
-| Client secret | O segredo do cliente é usado em conjunto com a ID do cliente como parte da autenticação OAuth2. Juntos, a ID do cliente e o segredo do cliente permitem que o aplicativo opere em nome da sua conta, identificando o aplicativo para [!DNL Salesforce]. |
+| ID de cliente | A ID do cliente é usada em conjunto com o segredo do cliente como parte da autenticação OAuth2. Juntos, a ID do cliente e o segredo do cliente permitem que o aplicativo opere em nome da sua conta, identificando o aplicativo para [!DNL Salesforce]. |
+| Segredo do cliente | O segredo do cliente é usado em conjunto com a ID do cliente como parte da autenticação OAuth2. Juntos, a ID do cliente e o segredo do cliente permitem que o aplicativo opere em nome da sua conta, identificando o aplicativo para [!DNL Salesforce]. |
 | Versão da API | A versão da API REST do [!DNL Salesforce] instância que você está usando. O valor da versão da API deve ser formatado com um decimal. Por exemplo, se você estiver usando a versão da API `52`, você deverá inserir o valor como `52.0`. Se esse campo ficar em branco, o Experience Platform usará automaticamente a versão mais recente disponível. |
 
 Para obter mais informações sobre como usar o OAuth para [!DNL Salesforce], leia o [[!DNL Salesforce] guia sobre fluxos de autorização OAuth](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&amp;type=5).
@@ -65,7 +65,7 @@ Depois de obter as credenciais necessárias, siga as etapas abaixo para conectar
 
 Na interface do usuário da Platform, selecione **[!UICONTROL Origens]** na navegação à esquerda, para acessar a [!UICONTROL Origens] espaço de trabalho. Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar a fonte específica com a qual deseja trabalhar usando a opção de pesquisa.
 
-No *CRM* categoria, selecione **[!DNL Salesforce]** e selecione **[!UICONTROL Adicionar dados]**.
+Selecionar **[!DNL Salesforce]** no *[!UICONTROL CRM]* e selecione **[!UICONTROL Adicionar dados]**.
 
 >[!TIP]
 >
@@ -109,8 +109,8 @@ Quando terminar, selecione **[!UICONTROL Conectar à origem]**.
 Para a credencial do cliente OAuth 2, selecione **[!UICONTROL Credencial do cliente OAuth2]** e, em seguida, forneça valores para as seguintes credenciais:
 
 * URL do ambiente
-* ID do cliente
-* Client secret
+* ID de cliente
+* Segredo do cliente
 * Versão da API
 
 Quando terminar, selecione **[!UICONTROL Conectar à origem]**.

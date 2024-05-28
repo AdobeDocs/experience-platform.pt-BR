@@ -2,9 +2,9 @@
 title: Perguntas frequentes do Audiences
 description: Descubra respostas para perguntas frequentes sobre públicos-alvo e outros conceitos relacionados à segmentação.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: 6088dc06af6db2ce1a86a9638df23453184864b2
+source-git-commit: 3852fc4eca8ea4b6b3fdcfb6aaa54315d83038b4
 workflow-type: tm+mt
-source-wordcount: '4056'
+source-wordcount: '4064'
 ht-degree: 0%
 
 ---
@@ -333,7 +333,11 @@ A divisão de público-alvo permite ainda subdefinir o público-alvo em grupos m
 
 Ao dividir por atributo, há exclusividade mútua entre os grupos. Isso significa que se um registro atender aos critérios de vários caminhos divididos, ele receberá a **primeiro** caminho a partir da esquerda e **não** atribuído a qualquer outro caminho.
 
-Ao dividir por porcentagem, as divisões são **aleatoriamente** concluído. Isso significa que os perfis serão atribuídos aleatoriamente a cada caminho. A divisão é **não** persistente, para que o perfil possa estar em um subpúblico-alvo diferente em cada avaliação.
+Ao dividir por porcentagem, as divisões são **aleatoriamente** concluído. Isso significa que os perfis serão atribuídos aleatoriamente a cada caminho. A divisão **é** persistente, o que significa que o perfil estará no mesmo subpúblico-alvo em cada avaliação.
+
+>[!NOTE]
+>
+>Anteriormente, as divisões na Composição de público eram **não** persistente.
 
 Para obter mais informações sobre o bloco Split, leia o [Guia da interface do usuário da Composição de público-alvo](./ui/audience-composition.md#split).
 
@@ -341,7 +345,7 @@ Para obter mais informações sobre o bloco Split, leia o [Guia da interface do 
 
 Sim, todos os tipos de segmentação ([segmentação em lote, segmentação por transmissão e segmentação de borda](./home.md#evaluate-segments)) são compatíveis com o fluxo de trabalho Composição de público-alvo. No entanto, como as composições atualmente são executadas apenas uma vez por dia, mesmo se os públicos avaliados por transmissão ou borda forem incluídos, o resultado será baseado na associação do público no momento em que a composição foi executada.
 
-## associação de público
+## Associação de público-alvo
 
 A seção a seguir lista perguntas relacionadas à associação de público-alvo.
 

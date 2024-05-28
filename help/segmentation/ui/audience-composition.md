@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guia da interface do usuário de públicos
 description: A Composição de público-alvo na interface do usuário do Adobe Experience Platform fornece um espaço de trabalho avançado que permite interagir com elementos de dados do perfil. O espaço de trabalho fornece controles intuitivos para criação e edição de públicos-alvo para sua organização.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: d22f8b4a39cb76dab4c976d8ea883d5170ee34e4
+source-git-commit: 3852fc4eca8ea4b6b3fdcfb6aaa54315d83038b4
 workflow-type: tm+mt
-source-wordcount: '1889'
+source-wordcount: '1913'
 ht-degree: 0%
 
 ---
@@ -34,7 +34,7 @@ Depois de atualizar os detalhes da sua composição, selecione **[!UICONTROL Sal
 
 A tela de composição de público-alvo é composta por quatro tipos diferentes de blocos: **[[!UICONTROL Público]](#audience-block)**, **[[!UICONTROL Excluir]](#exclude-block)**, **[[!UICONTROL Classificação]](#rank-block)**, e **[[!UICONTROL Split]](#split-block)**.
 
-## [!UICONTROL Público-alvo] {#audience-block}
+## [!UICONTROL Público] {#audience-block}
 
 A variável **[!UICONTROL Público]** O tipo de bloco permite adicionar os subpúblicos que você deseja compor para seu novo público-alvo maior. Por padrão, uma variável **[!UICONTROL Público]** bloco é incluído na parte superior da tela de composição.
 
@@ -230,9 +230,9 @@ Além disso, é possível limitar o número de perfis retornados ativando o **[!
 
 ![A opção Add profile limit é realçada, o que permite limitar o número de perfis retornados.](../images/ui/audience-composition/add-profile-limit.png)
 
-## [!UICONTROL Dividir] {#split-block}
+## [!UICONTROL Split] {#split-block}
 
-A variável **[!UICONTROL Split]** o tipo de bloco permite dividir o novo público em vários subpúblicos. Você pode dividir esse público com base na porcentagem ou por um atributo.
+A variável **[!UICONTROL Split]** o tipo de bloco permite dividir o novo público em vários subpúblicos. Você pode dividir esse público com base na porcentagem ou por um atributo. Ao dividir o público em subpúblicos, essa divisão é **persistente**. Isso significa que o perfil estará no mesmo subpúblico-alvo em cada avaliação.
 
 Para adicionar um **[!UICONTROL Split]** selecione o **+** ícone, seguido por **[!UICONTROL Split]**.
 

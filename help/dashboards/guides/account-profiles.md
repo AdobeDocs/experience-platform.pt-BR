@@ -2,10 +2,10 @@
 title: Painel de perfis de conta
 description: A Adobe Experience Platform fornece um painel por meio do qual você pode visualizar informações importantes sobre os perfis de conta B2B da sua organização.
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
-source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
+source-git-commit: 4f67df5d3667218c79504535534de57f871b0650
 workflow-type: tm+mt
-source-wordcount: '1800'
-ht-degree: 0%
+source-wordcount: '1675'
+ht-degree: 1%
 
 ---
 
@@ -76,14 +76,13 @@ Para saber mais sobre cada um dos widgets padrão disponíveis, selecione o nome
 * [Perfis de conta adicionados](#account-profiles-added)
 * [Novas contas por setor](#accounts-by-industry)
 * [Novas contas por tipo](#accounts-by-type)
-* [Oportunidades adicionadas](#opportunities-added)
 * [Novas oportunidades por função de pessoa](#opportunities-by-person-role)
 * [Novas oportunidades por receita](#opportunities-by-revenue)
 * [Novas oportunidades por status e estágio](#opportunities-by-status-&-stage)
 * [Novas oportunidades conquistadas](#opportunities-won)
+* [Oportunidades adicionadas](#opportunities-added)
 * [Distribuição de pontuação preditiva](#predictive-scoring-distribution)
 * [Principais fatores influentes da pontuação preditiva](#predictive-scoring-top-influential-factors)
-* [Total de contas por setor](#total-accounts-by-industry)
 
 ### Perfis de conta adicionados {#account-profiles-added}
 
@@ -102,14 +101,6 @@ A variável [!UICONTROL Novas contas por setor] exibe o número total de contas 
 A variável [!UICONTROL Novas contas por tipo] exibe o número total de contas em uma única métrica dentro de um gráfico de rosca. O gráfico de rosca ilustra a composição relativa de diferentes tipos de conta que compõem esse total. Uma chave com código de cores fornece um detalhamento de todos os tipos de conta incluídos. As contagens individuais de cada tipo de conta são exibidas em uma caixa de diálogo quando o cursor passa o mouse sobre a respectiva seção do gráfico de rosca.
 
 ![O widget Novas contas por tipo.](../images/account-profiles/new-accounts-by-type.png)
-
-### Oportunidades adicionadas {#opportunities-added}
-
-A variável [!UICONTROL Oportunidades adicionadas] O widget usa um gráfico de linhas para exibir o número de oportunidades adicionadas a cada dia durante um período. Use o filtro de data global localizado na parte superior do painel para determinar o período de análise. Se nenhum filtro de data for fornecido, o comportamento padrão listará as oportunidades adicionadas para o ano anterior a hoje. Os resultados podem ser usados para inferir uma tendência no número de oportunidades adicionadas.
-
-<!-- Link to date filter documentation from Annamalai -->
-
-![O widget Oportunidades adicionadas.](../images/account-profiles/opportunities-added.png)
 
 ### Novas oportunidades por função de pessoa {#opportunities-by-person-role}
 
@@ -141,6 +132,14 @@ A variável [!UICONTROL Novas oportunidades conquistadas] O widget exibe o núme
 
 ![Widget de Novas oportunidades ganhas.](../images/account-profiles/new-opportunities-won.png)
 
+### Oportunidades adicionadas {#opportunities-added}
+
+A variável [!UICONTROL Oportunidades adicionadas] O widget usa um gráfico de linhas para exibir o número de oportunidades adicionadas a cada dia durante um período. Use o filtro de data global localizado na parte superior do painel para determinar o período de análise. Se nenhum filtro de data for fornecido, o comportamento padrão listará as oportunidades adicionadas para o ano anterior a hoje. Os resultados podem ser usados para inferir uma tendência no número de oportunidades adicionadas.
+
+<!-- Link to date filter documentation from Annamalai -->
+
+![O widget Oportunidades adicionadas.](../images/account-profiles/opportunities-added.png)
+
 ### Distribuição de pontuação preditiva {#predictive-scoring-distribution}
 
 A variável [!UICONTROL Distribuição de pontuação preditiva] O widget mostra a distribuição de pontuação de todos os perfis de conta para ajudar você a entender rapidamente a integridade do pipeline de vendas. Os dados de pontuação são transmitidos por um gráfico de rosca e um gráfico de coluna.
@@ -170,18 +169,6 @@ O menu suspenso no widget permite selecionar o modelo de pontuação da conta.
 >Os filtros de intervalo de datas global não se aplicam aos insights de pontuação preditiva. Os widgets de pontuação preditiva analisam dados com base no modelo de pontuação de conta selecionado na lista suspensa.
 
 ![O widget Principais fatores influentes da pontuação preditiva.](../images/account-profiles/predictive-scoring-top-influential-factors.png)
-
-### Total de contas por setor {#total-accounts-by-industry}
-
-Este widget exibe o número total de contas em uma única métrica e usa um gráfico de rosca para ilustrar os tamanhos proporcionais das contagens para os setores que compõem o número geral. A chave fornece informações de codificação de cores para os diferentes setores que compõem o gráfico de rosca.
-
->[!NOTE]
->
->As informações exibidas por esse insight dependem do intervalo de datas especificado por você. Se você não fornecer um filtro de datas, o comportamento padrão do insight analisa os dados adicionados do ano anterior até hoje.
-
-As contagens individuais para os diferentes setores são exibidas em uma caixa de diálogo quando o cursor passa sobre a respectiva seção do gráfico de rosca.
-
-![O widget do total de contas por setor.](../images/account-profiles/total-accounts-by-industry-widget.png)
 
 ## Próximas etapas
 

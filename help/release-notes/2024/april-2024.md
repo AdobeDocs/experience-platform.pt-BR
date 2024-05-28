@@ -1,7 +1,7 @@
 ---
 title: Notas de versão da Adobe Experience Platform
 description: As notas de versão de abril de 2024 da Adobe Experience Platform.
-source-git-commit: 2bddb4963ba0bd10485efe0351d854c01c9a5a3a
+source-git-commit: 45eab8f894819eea36465ea0b8f3f3dd8f91fbe0
 workflow-type: tm+mt
 source-wordcount: '1895'
 ht-degree: 17%
@@ -121,7 +121,7 @@ O Query Service permite usar SQL padrão para consultar dados no [!DNL Data Lake
 | Alertas de consulta agendada | Mantenha-se informado com notificações proativas enquanto agenda consultas, garantindo um gerenciamento de tarefas eficiente e oportuno. Você pode [assinar alertas ao criar uma consulta](../../query-service/ui/query-schedules.md#alerts-for-query-status) ou usando as ações em linha para consultas programadas existentes. Consulte a [assinar alertas com ações em linha](../../query-service/ui/monitor-queries.md#alert-subscription) para obter mais informações. |
 | Navegação de consulta programada aprimorada | Navegue facilmente entre modelos de consulta e execuções programadas para aumentar a produtividade. Consulte a documentação em [exibição de execuções de consulta programada](../../query-service/ui/query-schedules.md#scheduled-query-runs) para obter mais informações. |
 | Saída de consulta estendida | Acesse até 500 linhas de resultados de query no console para uma análise mais profunda de seus dados. Consulte a [contagem de resultados](../../query-service/ui/user-guide.md#result-count) para obter mais informações. |
-| Encerramento do Editor de Consulta Herdada | A partir de 30 de abril de 2024, o Editor de consultas aprimorado se tornou o editor padrão para todos os usuários. O editor herdado será descontinuado em 30 de maio de 2024 e não estará mais disponível para uso. Consulte a [Guia do usuário do Editor de consultas](../../query-service/ui/user-guide.md) para obter mais informações. |
+| Encerramento do Editor de Consulta Herdada | A partir de 30 de abril de 2024, o Editor de consultas aprimorado se tornou o editor padrão para todos os usuários. O editor herdado será descontinuado em 24 de maio de 2024 e não estará mais disponível para uso. Consulte a [Guia do usuário do Editor de consultas](../../query-service/ui/user-guide.md) para obter mais informações. |
 
 {style="table-layout:auto"}
 

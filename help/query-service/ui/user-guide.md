@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guia da interface do Editor de consultas
 description: O Editor de consultas é uma ferramenta interativa fornecida pelo Serviço de consultas da Adobe Experience Platform, que permite gravar, validar e executar consultas para dados de experiência do cliente na interface do usuário do Experience Platform. O Editor de consultas é compatível com o desenvolvimento de consultas para análise e exploração de dados, e permite executar consultas interativas para fins de desenvolvimento, bem como consultas não interativas para preencher conjuntos de dados no Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 5189e8bbe4cd93c4e1f355f09da9667f5eb5708d
+source-git-commit: 45eab8f894819eea36465ea0b8f3f3dd8f91fbe0
 workflow-type: tm+mt
 source-wordcount: '2432'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->O editor herdado foi descontinuado em 30 de maio de 2024. Ele não está mais acessível para uso. Agora você pode usar o [Editor de consultas aprimorado](#enhanced-editor-toggle) para gravar, validar e executar suas consultas
+>O editor herdado foi descontinuado em 24 de maio de 2024. Ele não está mais acessível para uso. Agora você pode usar o [Editor de consultas aprimorado](#enhanced-editor-toggle) para gravar, validar e executar suas consultas
 
 O Editor de consultas é uma ferramenta interativa fornecida pelo Serviço de consultas Adobe Experience Platform, que permite gravar, validar e executar consultas para dados de experiência do cliente no [!DNL Experience Platform] interface do usuário. O Editor de consultas é compatível com o desenvolvimento de consultas para análise e exploração de dados e permite executar consultas interativas para fins de desenvolvimento, bem como consultas não interativas para preencher conjuntos de dados no [!DNL Experience Platform].
 
@@ -45,7 +45,7 @@ As consultas executadas no Editor de consultas são executadas interativamente, 
 
 >[!NOTE]
 >
->O editor herdado foi descontinuado em 30 de maio de 2024. Ele não está mais acessível para uso. Agora você pode usar o Editor de consultas aprimorado para gravar, validar e executar suas consultas.
+>O editor herdado foi descontinuado em 24 de maio de 2024. Ele não está mais acessível para uso. Agora você pode usar o Editor de consultas aprimorado para gravar, validar e executar suas consultas.
 
 Usando o Editor de consultas, você pode gravar, executar e salvar consultas para dados de experiência do cliente. Todas as consultas executadas ou salvas no Editor de consultas estão disponíveis para todos os usuários em sua organização com acesso ao Serviço de consulta.
 

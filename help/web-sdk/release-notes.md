@@ -1,11 +1,11 @@
 ---
 title: Notas de versão do SDK da Web da Adobe Experience Platform
-description: As notas de versão mais recentes do SDK da Web da Adobe Experience Platform.
+description: As notas de versão mais recentes do Adobe Experience Platform Web SDK.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;notas de versão;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: bc48f45bd6b9b7f7cc446ae84d712376292718d2
+source-git-commit: 060f6bb0ff6f57a84698a27bd9f640c0178e5b51
 workflow-type: tm+mt
-source-wordcount: '1777'
+source-wordcount: '1811'
 ht-degree: 1%
 
 ---
@@ -21,6 +21,16 @@ Para obter as notas de versão mais recentes da extensão de tag do SDK da Web, 
 >Google [anunciou](https://developers.google.com/privacy-sandbox/3pcd/prepare/prepare-for-phaseout) planeja descontinuar o suporte do Chrome para cookies de terceiros no segundo semestre de 2024. Consequentemente, os cookies de terceiros não serão mais compatíveis com a maioria dos navegadores.
 >
 >Quando essa alteração for implementada, o Adobe descontinuará o suporte para o `demdex` cookie atualmente compatível com o SDK da Web.
+
+## Versão 2.20.0 - 21 de maio de 2024
+
+**Novos recursos**
+
+* Suporte adicionado para [Coleção de mídia de streaming](../web-sdk/commands/configure/streamingmedia.md).
+
+**Correções e aprimoramentos**
+
+* Correção de um bug que fazia com que o conteúdo padrão ficasse oculto pelo trecho pré-ocultação quando o consentimento era recusado.
 
 ## Versão 2.19.2 - 10 de janeiro de 2024
 
@@ -92,7 +102,7 @@ Para obter as notas de versão mais recentes da extensão de tag do SDK da Web, 
 **Correções e aprimoramentos**
 
 * Correção de um problema com ações de código personalizado do Adobe Target VEC em que o código era inserido em um local alternativo em vez de com [!DNL at.js].
-* Correção de um problema em que, em alguns casos de borda, o cabeçalho &quot;referenciador&quot; não era definido corretamente em solicitações para a Rede de borda.
+* Correção de um problema em que, em alguns casos, o cabeçalho &quot;referenciador&quot; não era definido corretamente nas solicitações para o Edge Network.
 * Correção de um problema em que [dica do cliente do agente do usuário](/help/web-sdk/use-cases/client-hints.md) as propriedades podem ser definidas como um tipo incorreto.
 * Correção de um problema em que `placeContext.localTime` não corresponde ao esquema.
 
@@ -107,7 +117,7 @@ Para obter as notas de versão mais recentes da extensão de tag do SDK da Web, 
 
 * Suporte adicionado para [Migração completa de página por página](home.md#migrating-to-web-sdk). O perfil do Adobe Target agora será preservado à medida que um visitante se move entre páginas da at.js e do SDK da Web.
 * Adição de suporte configurável para [Client Hints de usuário-agente de alta entropia](/help/web-sdk/use-cases/client-hints.md).
-* Adição de suporte para o [`applyResponse`](/help/web-sdk/commands/applyresponse.md) comando. Isso permite a personalização híbrida por meio do [API do servidor de rede de borda](../server-api/overview.md).
+* Adição de suporte para o [`applyResponse`](/help/web-sdk/commands/applyresponse.md) comando. Isso permite a personalização híbrida por meio do [API do servidor Edge Network](../server-api/overview.md).
 * Os links do modo de controle de qualidade agora funcionam em várias páginas.
 
 **Correções e aprimoramentos**
@@ -120,7 +130,7 @@ Para obter as notas de versão mais recentes da extensão de tag do SDK da Web, 
 
 ## Versão 2.12.0 - 29 de junho de 2022
 
-* Altere as solicitações para que a Rede de borda use a opção `cluster` dica de localização do cookie como parte do URL. Isso garante que os usuários que mudam de localização (por exemplo, por meio de uma VPN ou ao dirigir com dispositivos móveis etc.) no meio da sessão atinjam a mesma borda e tenham o mesmo perfil de personalização.
+* Altere as solicitações para o Edge Network para usar o `cluster` dica de localização do cookie como parte do URL. Isso garante que os usuários que mudam de localização (por exemplo, por meio de uma VPN ou ao dirigir com dispositivos móveis etc.) no meio da sessão atinjam a mesma borda e tenham o mesmo perfil de personalização.
 * Restrinja as funções configuradas na resposta do comando getLibraryInfo.
 
 ## Versão 2.11.0 - 13 de junho de 2022
@@ -152,7 +162,7 @@ Para obter as notas de versão mais recentes da extensão de tag do SDK da Web, 
 * Otimização dos eventos de alteração de visualização para aplicativos de página única. A notificação de exibição agora é incluída no evento de alteração de visualização quando as experiências personalizadas são renderizadas.
 * Remoção do aviso do console quando não `eventType` está presente.
 * Correção de um problema em que a variável `propositions` a propriedade foi retornada somente de um `sendEvent` comando quando as experiências foram solicitadas ou recuperadas do cache. A variável `propositions` agora, a propriedade sempre será definida como uma matriz.
-* Correção de um problema em que os contêineres ocultos não eram exibidos quando um erro era retornado da Rede de borda.
+* Correção de um problema em que os contêineres ocultos não eram exibidos quando um erro era retornado do Edge Network.
 * Correção de um problema em que os eventos interativos não eram contados no Adobe Target. Isso foi corrigido adicionando o nome da exibição ao XDM em web.webPageDetails.viewName.
 * Corrigir links de documentação corrompidos nas mensagens do console.
 
@@ -164,7 +174,7 @@ Para obter as notas de versão mais recentes da extensão de tag do SDK da Web, 
 
 ## Versão 2.7.0 - 26 de outubro de 2021
 
-* Expor informações adicionais da Rede de borda no valor de retorno de `sendEvent`, incluindo `inferences` e `destinations`. O formato dessas propriedades pode mudar, pois esses recursos estão sendo lançados como parte de uma versão beta.
+* Expor informações adicionais do Edge Network no valor de retorno do `sendEvent`, incluindo `inferences` e `destinations`. O formato dessas propriedades pode mudar, pois esses recursos estão sendo lançados como parte de uma versão beta.
 
 ## Versão 2.6.4 - 7 de setembro de 2021
 
@@ -202,10 +212,10 @@ Para obter as notas de versão mais recentes da extensão de tag do SDK da Web, 
 * A variável [`getIdentity`](/help/web-sdk/commands/getidentity.md) O comando agora retorna a ID da região da borda ao lado da identidade.
 * Os avisos e erros recebidos do servidor foram aprimorados e são tratados de maneira mais apropriada.
 * Adição de suporte para o padrão Adobe Consent 2.0 para o [`setConsent`](/help/web-sdk/commands/setconsent.md) comando.
-* As preferências de consentimento, quando recebidas, são colocadas em hash e armazenadas no armazenamento local para uma integração otimizada entre CMPs, SDK da Web da plataforma e rede de borda da plataforma. Se estiver coletando preferências de consentimento, agora recomendamos que você ligue para `setConsent` em cada carregamento de página.
+* As preferências de consentimento, quando recebidas, são colocadas em hash e armazenadas no armazenamento local para uma integração otimizada entre CMPs, SDK da Web da plataforma e Edge Network da plataforma. Se estiver coletando preferências de consentimento, agora recomendamos que você ligue para `setConsent` em cada carregamento de página.
 * Dois [monitoração de ganchos](https://github.com/adobe/alloy/wiki/Monitoring-Hooks), `onCommandResolved` e `onCommandRejected`, foram adicionadas.
 * Correção de erros: os eventos de notificação da interação de personalização conteriam informações duplicadas sobre a mesma atividade quando um usuário navegasse para uma nova exibição de aplicativo de página única, retornasse à exibição original e clicasse em um elemento qualificado para conversão.
-* Correção de erros: se o primeiro evento enviado pelo SDK tivesse `documentUnloading` definir como `true`, [`sendBeacon`](https://developer.mozilla.org/pt-BR/docs/Web/API/Navigator/sendBeacon) seria usado para enviar o evento, resultando em um erro relacionado a uma identidade que não está sendo estabelecida.
+* Correção de erros: se o primeiro evento enviado pelo SDK tivesse `documentUnloading` definir como `true`, [`sendBeacon`](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon) seria usado para enviar o evento, resultando em um erro relacionado a uma identidade que não está sendo estabelecida.
 
 ## Versão 2.3.0 - novembro de 2020
 

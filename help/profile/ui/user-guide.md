@@ -3,7 +3,7 @@ keywords: Experience Platform;perfil;perfil de cliente em tempo real;solução d
 title: Guia da interface do usuário do Perfil do cliente em tempo real
 description: O Perfil do cliente em tempo real cria uma visualização integral de cada cliente individual, combinando dados de vários canais, inclusive dados online, offline, de CRM e de terceiros. Este documento serve como um guia para interagir com o Perfil do cliente em tempo real na interface do usuário do Adobe Experience Platform.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: 804f87563abf36a1aa203cb675a687dd262231a7
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '2108'
 ht-degree: 0%
@@ -40,7 +40,7 @@ Para saber mais, visite o [guia do painel de perfis](../../dashboards/guides/pro
 
 ## [!UICONTROL Procurar] métricas de guia
 
-Selecione o **[!UICONTROL Procurar]** para exibir várias métricas relacionadas aos dados de perfil de sua organização. Você também pode usar essa guia para navegar no armazenamento de perfis usando uma política de mesclagem ou uma identidade, conforme descrito na próxima seção deste guia.
+Selecione o **[!UICONTROL Procurar]** para exibir várias métricas relacionadas aos dados de perfil de sua organização. Você também pode usar essa guia para navegar no armazenamento de Perfil usando uma política de mesclagem ou uma identidade, conforme descrito na próxima seção deste guia.
 
 No lado direito do **[!UICONTROL Procurar]** é a guia [contagem de perfis](#profile-count) bem como uma lista de [perfis por namespace](#profiles-by-namespace).
 
@@ -64,7 +64,7 @@ Quando a assimilação de registros na variável [!DNL Profile] A loja aumenta o
 
 ### [!UICONTROL Perfis por namespace] {#profiles-by-namespace}
 
-A variável **[!UICONTROL Perfis por namespace]** Esta métrica exibe a contagem total e o detalhamento dos namespaces em todos os perfis mesclados na Loja de perfis. O número total de perfis por namespace (em outras palavras, somando os valores mostrados para cada namespace) sempre será maior que a métrica de contagem de perfis, pois um perfil pode ter vários namespaces associados a ele. Por exemplo, se um cliente interagir com sua marca em mais de um canal, vários namespaces serão associados a esse cliente individual.
+A variável **[!UICONTROL Perfis por namespace]** exibe a contagem total e o detalhamento dos namespaces em todos os perfis mesclados no armazenamento de perfis. O número total de perfis por namespace (em outras palavras, somando os valores mostrados para cada namespace) sempre será maior que a métrica de contagem de perfis, pois um perfil pode ter vários namespaces associados a ele. Por exemplo, se um cliente interagir com sua marca em mais de um canal, vários namespaces serão associados a esse cliente individual.
 
 #### Atualização do [!UICONTROL Perfis por namespace] métrica
 
@@ -90,7 +90,7 @@ Para escolher uma política de mesclagem na **[!UICONTROL Selecionar política d
 
 ![Uma caixa de diálogo na qual você pode selecionar a política de mesclagem para filtrar é exibida.](../images/user-guide/select-merge-policy.png)
 
-Os perfis mostrados representam uma amostra de até 20 perfis do armazenamento de perfis da sua organização, depois que a política de mesclagem selecionada é aplicada. Os perfis de exemplo para a política de mesclagem selecionada são atualizados quando novos dados são adicionados ao armazenamento de perfil da organização.
+Os perfis exibidos representam uma amostra de até 20 perfis do armazenamento de perfis da sua organização, depois que a política de mesclagem selecionada é aplicada. Os perfis de exemplo para a política de mesclagem selecionada são atualizados quando novos dados são adicionados ao armazenamento de perfis da sua organização.
 
 Para exibir os detalhes de um dos perfis de amostra, selecione o **[!UICONTROL ID do perfil]**. Para obter mais informações, consulte a seção mais adiante neste guia sobre [exibição de detalhes do perfil](#profile-detail).
 

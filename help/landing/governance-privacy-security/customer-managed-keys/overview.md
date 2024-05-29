@@ -2,10 +2,10 @@
 title: Chaves gerenciadas pelo cliente no Adobe Experience Platform
 description: Saiba como configurar suas próprias chaves de criptografia para dados armazenados no Adobe Experience Platform.
 exl-id: cd33e6c2-8189-4b68-a99b-ec7fccdc9b91
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
-source-wordcount: '761'
-ht-degree: 3%
+source-wordcount: '716'
+ht-degree: 0%
 
 ---
 
@@ -15,7 +15,7 @@ Os dados armazenados no Adobe Experience Platform são criptografados em repouso
 
 >[!NOTE]
 >
->Os dados no data lake da Adobe Experience Platform e no Armazenamento de perfis são criptografados usando CMK. Eles são considerados seus principais armazenamentos de dados.
+>Os dados no data lake e no armazenamento de perfis da Adobe Experience Platform são criptografados usando CMK. Eles são considerados seus principais armazenamentos de dados.
 
 Este documento fornece uma visão geral de alto nível do processo de ativação do recurso de chaves gerenciadas pelo cliente (CMK) na Platform e as informações de pré-requisitos necessárias para concluir essas etapas.
 
@@ -27,7 +27,7 @@ Este documento fornece uma visão geral de alto nível do processo de ativação
 
 Para visualizar e visitar o [!UICONTROL Criptografia] no Adobe Experience Platform, você deve ter criado uma função e atribuído a [!UICONTROL Gerenciar Chave Gerenciada Pelo Cliente] permissão para essa função. Qualquer usuário que tenha o [!UICONTROL Gerenciar Chave Gerenciada Pelo Cliente] permissão pode habilitar o CMK para sua organização.
 
-Para obter mais informações sobre atribuição de funções e permissões no Experience Platform, consulte o [configurar documentação de permissões](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html?lang=pt-BR).
+Para obter mais informações sobre atribuição de funções e permissões no Experience Platform, consulte o [configurar documentação de permissões](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html).
 
 Para habilitar o CMK, seu [!DNL Azure] O Cofre da Chave deve ser configurado com as seguintes configurações:
 
@@ -66,7 +66,7 @@ Após remover o acesso à chave ou desabilitar/excluir a chave do [!DNL Azure] c
 
 >[!NOTE]
 >
->Há duas exceções específicas de caso de uso para a expiração do conjunto de dados de sete dias em dados não primários (em cache/transitórios). Consulte a respectiva documentação para obter mais informações sobre esses recursos.<ul><li>[Encurtador de URL do Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/sms/sms-configuration.html?lang=pt-BR#message-preset-sms)</li><li>[Projeções de borda](https://experienceleague.adobe.com/docs/experience-platform/profile/home.html#edge-projections)</li></ul>
+>Há duas exceções específicas de caso de uso para a expiração do conjunto de dados de sete dias em dados não primários (em cache/transitórios). Consulte a respectiva documentação para obter mais informações sobre esses recursos.<ul><li>[Encurtador de URL do Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/sms/sms-configuration.html#message-preset-sms)</li><li>[Projeções de borda](https://experienceleague.adobe.com/docs/experience-platform/profile/home.html#edge-projections)</li></ul>
 
 ## Próximas etapas
 

@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Gerenciar políticas de uso de dados na interface
 description: O Adobe Experience Platform Data Governance fornece uma interface que permite criar e gerenciar políticas de uso de dados. Este documento fornece uma visão geral das ações que você pode executar no espaço de trabalho Políticas, na interface do usuário do Experience Platform.
 exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
-source-git-commit: ed9ab1f2a4b4466841b3bedef48a6e0a07ec3d10
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '1768'
-ht-degree: 16%
+ht-degree: 1%
 
 ---
 
@@ -15,8 +15,8 @@ ht-degree: 16%
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataUsagePolicies_description"
->title="Integrar e aplicar o consentimento do cliente nos dados do seu perfil"
->abstract="<h2>Descrição</h2><p>A Platform permite integrar os dados de consentimento coletados dos clientes nos seus respectivos perfis. É possível configurar políticas de consentimento para determinar se esses dados podem ser incluídos em segmentos ativados para determinados destinos.</p>"
+>title="Integrar e executar o consentimento do cliente nos dados do perfil"
+>abstract="<h2>Descrição</h2><p>O Platform permite integrar os dados de consentimento coletados dos clientes aos respectivos perfis. Em seguida, você pode configurar políticas de consentimento para determinar se esses dados podem ser incluídos em segmentos que são ativados para determinados destinos.</p>"
 
 Este documento aborda como usar o **[!UICONTROL Políticas]** na interface do usuário do Adobe Experience Platform para criar e gerenciar políticas de uso de dados.
 
@@ -104,7 +104,7 @@ A variável **[!UICONTROL Procurar]** será exibida novamente, listando agora a 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataUsagePolicies_instructions"
 >title="Instruções"
->abstract="<ul><li>Certifique-se de que está assimilando dados de preferência em seus esquemas de união por meio do conector de origem do OneTrust ou do esquema XDM padrão para consentimento.</li><li>Selecione <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html?lang=pt-BR">Políticas</a> na navegação à esquerda, e depois <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html?lang=pt-BR#create-governance-policy">Criar Política</a>.</li><li>Na seção <b>Se</b>, descreva as condições ou ações que acionarão a verificação de política.</li><li>Na seção <b>Então</b>, insira os atributos de consentimento que devem estar presentes para que um perfil seja incluído na ação que acionou a política.</li><li>Selecionar <b>Salvar</b> para criar a política. Para ativar a política, selecione o botão <b>Status</b> no painel direito.</li><li>A Experience Platform aplica automaticamente suas políticas de consentimento ativadas quando você ativa segmentos para destinos e fornece detalhes sobre como cada política afeta o tamanho do público.</li><li>Para obter mais ajuda com esse recurso, consulte o guia em <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html?lang=pt-BR#consent-policy">criação de políticas de consentimento</a> na Experience League.</li></ul>"
+>abstract="<ul><li>Assegure-se de que você esteja assimilando dados de preferência em seus esquemas de união por meio do conector de origem do OneTrust ou do esquema XDM padrão para consentimento.</li><li>Selecionar <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html?lang=pt-BR">Políticas</a> na navegação à esquerda, selecione <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html#create-governance-policy">Criar política</a>.</li><li>No <b>Se</b> descreva as condições ou ações que acionarão a verificação de política.</li><li>No <b>Depois</b> insira os atributos de consentimento que devem estar presentes para que um perfil seja incluído na ação que acionou a política.</li><li>Selecionar <b>Salvar</b> para criar a política. Para habilitar a política, selecione o <b>Status</b> no painel direito.</li><li>O Experience Platform aplica automaticamente suas políticas de consentimento ativadas ao ativar segmentos para destinos e fornece detalhes sobre como cada política afeta o tamanho do público-alvo.</li><li>Para obter mais ajuda com esse recurso, consulte o guia no <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html?lang=pt-BR#consent-policy">criação de políticas de consentimento</a> no Experience League.</li></ul>"
 
 >[!IMPORTANT]
 >
@@ -125,8 +125,8 @@ As políticas de consentimento são compostas de dois componentes lógicos:
 
 >[!CONTEXTUALHELP]
 >id="platform_governance_policies_consentif"
->title="Condição “Se”"
->abstract="Comece definindo as condições que acionarão a verificação de política. As condições podem incluir determinadas ações de marketing que estão sendo executadas, determinados rótulos de governança de dados que estão presentes ou uma combinação de ambos."
+>title="Condição If"
+>abstract="Comece definindo as condições que acionarão a verificação de política. As condições podem incluir determinadas ações de marketing, a presença de determinados rótulos de governança de dados ou uma combinação de ambos."
 
 No **[!UICONTROL Se]** selecione as ações de marketing e/ou os rótulos de uso de dados que devem acionar essa política. Selecionar **[!UICONTROL Exibir todos]** e **[!UICONTROL Selecionar rótulos]** para visualizar as listas completas de ações e rótulos de marketing disponíveis, respectivamente.
 
@@ -142,8 +142,8 @@ Se você selecionar mais de uma condição, poderá usar o ícone que aparece en
 
 >[!CONTEXTUALHELP]
 >id="platform_governance_policies_consentthen"
->title="Condição “Então”"
->abstract="Depois que a condição “Se” for definida, use a seção “Então” para selecionar pelo menos um atributo de consentimento do esquema de união. Esse é o atributo que deve estar presente para que os perfis sejam incluídos na ação regida por essa política."
+>title="Condição Then"
+>abstract="Depois que a condição &quot;If&quot; for definida, use a seção &quot;Then&quot; para selecionar pelo menos um atributo de consentimento do esquema de união. Esse é o atributo que deve estar presente para que os perfis sejam incluídos na ação regida por essa política."
 
 No **[!UICONTROL Depois]** selecione pelo menos um atributo de consentimento do esquema de união. Esse é o atributo que deve estar presente para que os perfis sejam incluídos na ação regida por essa política. Você pode escolher uma das opções fornecidas na lista ou selecionar **[!UICONTROL Exibir todos]** para escolher o atributo diretamente do esquema de união.
 
@@ -151,7 +151,7 @@ Ao selecionar o atributo de consentimento, escolha os valores para o atributo qu
 
 ![](../images/policies/select-schema-field.png)
 
-Após selecionar pelo menos um atributo de consentimento, a variável **[!UICONTROL Propriedades da política]** atualizações do painel para mostrar o número estimado de perfis que seriam permitidos sob esta política, incluindo a porcentagem do armazenamento total do perfil. Essa estimativa é atualizada automaticamente à medida que você ajusta a configuração da política.
+Após selecionar pelo menos um atributo de consentimento, a variável **[!UICONTROL Propriedades da política]** atualizações do painel para mostrar o número estimado de perfis que seriam permitidos sob esta política, incluindo a porcentagem do armazenamento total do Perfil. Essa estimativa é atualizada automaticamente à medida que você ajusta a configuração da política.
 
 ![](../images/policies/audience-preview.png)
 

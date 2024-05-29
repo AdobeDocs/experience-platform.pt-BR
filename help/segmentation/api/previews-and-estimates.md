@@ -4,10 +4,10 @@ title: Visualizações e estimativas de endpoints de API
 description: À medida que a definição de segmento é desenvolvida, é possível usar as ferramentas de estimativa e pré-visualização no Adobe Experience Platform para exibir informações em nível de resumo e ajudar a garantir que você esteja isolando o público-alvo esperado.
 role: Developer
 exl-id: 2c204f29-825f-4a5e-a7f6-40fc69263614
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '971'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -36,7 +36,7 @@ Quando a assimilação de registros no armazenamento de Perfil aumenta ou diminu
 
 O tamanho da amostra da verificação depende do número geral de entidades no armazenamento de perfis. Esses tamanhos de amostra são representados na tabela a seguir:
 
-| Entidades na loja de perfis | Tamanho da amostra |
+| Entidades no armazenamento de perfis | Tamanho da amostra |
 | ------------------------- | ----------- |
 | Menos de 1 milhão | Conjunto de dados completo |
 | 1 a 20 milhões | 1 milhão |

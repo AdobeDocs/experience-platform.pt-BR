@@ -5,7 +5,7 @@ title: Processamento de solicitação de privacidade no perfil do cliente em tem
 type: Documentation
 description: O Adobe Experience Platform Privacy Service processa solicitações de clientes para acessar, cancelar a venda ou excluir seus dados pessoais, conforme definido por várias regulamentações de privacidade. Este documento aborda os conceitos essenciais relacionados ao processamento de solicitações de privacidade para o Perfil do cliente em tempo real.
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '1743'
 ht-degree: 0%

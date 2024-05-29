@@ -4,7 +4,7 @@ title: Ativar um conjunto de dados para atualizações de perfil usando APIs
 type: Tutorial
 description: Este tutorial mostra como usar APIs do Adobe Experience Platform para ativar um conjunto de dados com recursos de "substituição" a fim de fazer atualizações nos dados do Perfil do cliente em tempo real.
 exl-id: fc89bc0a-40c9-4079-8bfc-62ec4da4d16a
-source-git-commit: b80d8349fc54a955ebb3362d67a482d752871420
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '1067'
 ht-degree: 7%
@@ -183,7 +183,7 @@ Para configurar um conjunto de dados habilitado para perfil para atualizações,
 
 >[!WARNING]
 >
->Os dados assimilados no conjunto de dados enquanto ele estiver desativado não serão assimilados no Armazenamento de perfis. Você deve evitar assimilar dados no conjunto de dados até que ele seja reativado para o Perfil.
+>Os dados assimilados no conjunto de dados enquanto ele estiver desativado não serão assimilados no armazenamento de Perfil. Você deve evitar assimilar dados no conjunto de dados até que ele seja reativado para o Perfil.
 
 **Formato da API**
 

@@ -4,10 +4,10 @@ title: Painel de perfis
 description: A Adobe Experience Platform fornece um painel por meio do qual você pode visualizar informações importantes sobre os dados do Perfil do cliente em tempo real da sua organização.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: a8b5ed09e8e28075a3a4f37ad30f01c1cc389b9c
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '4995'
-ht-degree: 9%
+ht-degree: 0%
 
 ---
 
@@ -19,7 +19,7 @@ Consulte a [Guia da interface do usuário do Perfil do cliente em tempo real](..
 
 ## Dados do painel de perfil
 
-O painel Perfis exibe um instantâneo dos dados do atributo (registro) que sua organização tem na Loja de perfis do Experience Platform. O instantâneo não inclui dados de evento (série temporal).
+O painel Perfis exibe um instantâneo dos dados do atributo (registro) que sua organização tem na área de armazenamento Perfil do Experience Platform. O instantâneo não inclui dados de evento (série temporal).
 
 Os dados do atributo no instantâneo mostram os dados exatamente como aparecem no momento específico em que o instantâneo foi tirado. Em outras palavras, o instantâneo não é uma aproximação ou amostra dos dados, e o painel Perfil não é atualizado em tempo real.
 
@@ -185,7 +185,7 @@ Uma transferência de widget padrão é fornecida para todas as novas instância
 
 * [[!UICONTROL Contagem de perfis]](#profile-count)
 * [[!UICONTROL Alteração na contagem de perfis]](#profile-count-change)
-* [[!UICONTROL Tendência da alteração da contagem de perfis]](#profiles-count-change-trend)
+* [[!UICONTROL Tendência de alteração da contagem de perfis]](#profiles-count-change-trend)
 * [[!UICONTROL Perfis por identidade]](#profiles-by-identity)
 * [[!UICONTROL Sobreposição de identidade]](#identity-overlap)
 
@@ -195,17 +195,17 @@ Uma transferência de widget padrão é fornecida para todas as novas instância
 
 ## Widgets da IA do cliente {#customer-ai-profiles-widgets}
 
-o Customer AI é usado para gerar pontuações de propensão personalizadas, como churn e conversão para perfis individuais em escala. A IA do cliente faz isso analisando dados existentes do Evento de experiência do consumidor para prever **pontuações de propensão de churn ou conversão**. Esses modelos de propensão de alta precisão do cliente permitem segmentação e direcionamento mais exatos. A variável [distribuição de pontuações](#customer-ai-distribution-of-scores) e [resumo de pontuação](#customer-ai-scoring-summary) os insights demonstram a divisão no público-alvo. Eles destacam quais perfis são a propensão alta/baixa/média e como eles são distribuídos na contagem de perfis.
+A IA do cliente é usada para gerar pontuações de propensão personalizadas, como churn e conversão para perfis individuais em escala. A IA do cliente faz isso analisando dados existentes do Evento de experiência do consumidor para prever **pontuações de propensão de churn ou conversão**. Esses modelos de propensão de alta precisão do cliente permitem segmentação e direcionamento mais exatos. A variável [distribuição de pontuações](#customer-ai-distribution-of-scores) e [resumo de pontuação](#customer-ai-scoring-summary) os insights demonstram a divisão no público-alvo. Eles destacam quais perfis são a propensão alta/baixa/média e como eles são distribuídos na contagem de perfis.
 
-* [[!UICONTROL Resumo de pontuação da IA do cliente]](#customer-ai-scoring-summary)
+* [[!UICONTROL Resumo de pontuação do Customer AI]](#customer-ai-scoring-summary)
 * [[!UICONTROL Distribuição de pontuações da IA do cliente]](#customer-ai-distribution-of-scores)
 
 ### [!UICONTROL Distribuição de pontuações da IA do cliente] {#customer-ai-distribution-of-scores}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_distributionOfScores"
->title="Distribuição das pontuações"
->abstract="Este dispositivo visualiza a distribuição do número total de perfis por suas pontuações de propensão em incrementos de cinco por cento. A distribuição da contagem de perfis é determinada pelo modelo de IA e pela política de mesclagem selecionada. É possível alterar o modelo de IA no menu suspenso sob o título do dispositivo."
+>title="Distribuição de pontuações"
+>abstract="Este widget visualiza a distribuição do número total de perfis por suas pontuações de propensão em incrementos de cinco por cento. A distribuição da contagem de perfis é determinada pelo modelo de IA e pela política de mesclagem selecionada. Você pode alterar o modelo de IA no menu suspenso sob o título do widget."
 
 A variável [!UICONTROL Distribuição de pontuações da IA do cliente] O widget categoriza o número total de perfis por suas pontuações de propensão. A distribuição da contagem de perfis é determinada pelo modelo de IA e pela política de mesclagem selecionada e, em seguida, visualizada em incrementos de cinco por cento que indicam sua propensão. A contagem de perfis é fornecida ao longo do eixo Y e as pontuações de propensão são fornecidas ao longo do eixo X.
 
@@ -229,12 +229,12 @@ A página de insights detalhados do modelo é exibida.
 
 Mais informações sobre a IA do cliente podem ser encontradas no [guia da interface do usuário do discover insights](../../intelligent-services/customer-ai/user-guide/discover-insights.md).
 
-### [!UICONTROL Resumo de pontuação da IA do cliente] {#customer-ai-scoring-summary}
+### [!UICONTROL Resumo de pontuação do Customer AI] {#customer-ai-scoring-summary}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_scoringSummary"
->title="Resumo da pontuação"
->abstract="Este dispositivo exibe o número total de perfis pontuados e os categoriza em compartimentos de propensão alta, média e baixa. O gráfico de rosquinha ilustra a composição proporcional dos perfis totais de propensão alta, média e baixa."
+>title="Resumo de pontuação"
+>abstract="Este widget exibe o número total de perfis pontuados e os categoriza em compartimentos que contêm alta, média e baixa propensão. O gráfico de rosca ilustra a composição proporcional dos perfis totais em alta, média e baixa propensão."
 
 Este widget exibe o número total de perfis pontuados e os categoriza em compartimentos que contêm alta, média e baixa propensão como verde, amarelo e vermelho, respectivamente. Um gráfico de rosca ilustra a composição proporcional de perfis entre propensões alta, média e baixa. Um perfil se qualifica para alta propensão acima de 75, média propensão entre 25 e 74 e baixa propensão abaixo de 24. Uma legenda indica o código de cor e os limites de propensões. As contagens de perfil para as tendências alta, média e baixa são exibidas em uma caixa de diálogo quando o cursor passa o mouse sobre a respectiva seção do gráfico de rosca.
 
@@ -261,13 +261,13 @@ Para saber mais sobre cada um dos widgets padrão disponíveis, selecione o nome
 * [[!UICONTROL Contagem de perfis]](#profile-count)
 * [[!UICONTROL Tendência de contagem de perfis]](#profile-count-trend)
 * [[!UICONTROL Alteração na contagem de perfis]](#profile-count-change)
-* [[!UICONTROL Tendência da alteração da contagem de perfis]](#profiles-count-change-trend)
+* [[!UICONTROL Tendência de alteração da contagem de perfis]](#profiles-count-change-trend)
 * [[!UICONTROL Tendência de alteração na contagem de perfis por identidade]](#profiles-count-change-trend-by-identity)
 * [[!UICONTROL Perfis por identidade]](#profiles-by-identity)
 * [[!UICONTROL Sobreposição de identidade]](#identity-overlap)
 * [[!UICONTROL Perfis de identidade única]](#single-identity-profiles)
 * [[!UICONTROL Perfis de identidade únicos por identidade]](#single-identity-profiles-by-identity)
-* [[!UICONTROL Perfis não segmentados]](#unsegmented-profiles)
+* [[!UICONTROL Perfis sem segmentos]](#unsegmented-profiles)
 * [[!UICONTROL Tendência de alteração de perfis não segmentados]](#unsegmented-profiles-change-trend)
 * [[!UICONTROL Perfis não segmentados por identidade]](#unsegmented-profiles-by-identity)
 * [[!UICONTROL Públicos-alvo]](#audiences)
@@ -281,9 +281,9 @@ Para saber mais sobre cada um dos widgets padrão disponíveis, selecione o nome
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_profilecount"
 >title="Contagem de perfis"
->abstract="Esse widget exibe o número total de perfis mesclados no Armazenamento de perfis no momento em que o instantâneo foi tirado. O número depende da política de mesclagem selecionada que está sendo aplicada aos dados de perfil."
+>abstract="Este widget exibe o número total de perfis mesclados no armazenamento Perfil no momento em que o instantâneo foi tirado. O número depende da política de mesclagem selecionada que está sendo aplicada aos dados do seu perfil."
 
-A variável **[!UICONTROL Contagem de perfis]** O widget exibe o número total de perfis mesclados no Armazenamento de perfis no momento em que o instantâneo foi tirado. Esse número é o resultado da política de mesclagem selecionada que está sendo aplicada aos dados do seu Perfil para mesclar fragmentos de perfil para formar um único perfil para cada indivíduo.
+A variável **[!UICONTROL Contagem de perfis]** O widget exibe o número total de perfis mesclados no armazenamento Perfil no momento em que o instantâneo foi tirado. Esse número é o resultado da política de mesclagem selecionada que está sendo aplicada aos dados do seu Perfil para mesclar fragmentos de perfil para formar um único perfil para cada indivíduo.
 
 Consulte a [seção sobre políticas de mesclagem anterior neste documento](#merge-policies) para saber mais.
 
@@ -306,24 +306,24 @@ A variável [!UICONTROL Tendência de contagem de perfis] O widget usa um gráfi
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_profilescountchange"
 >title="Alteração na contagem de perfis"
->abstract="Esse widget exibe o número total de perfis mesclados **adicionados** ao Armazenamento de perfis no momento do último instantâneo. O número depende da política de mesclagem selecionada que está sendo aplicada aos dados de perfil."
+>abstract="Este widget exibe o número total de perfis mesclados **adicionado** para a área de armazenamento Perfil no momento do último instantâneo. O número depende da política de mesclagem selecionada que está sendo aplicada aos dados do seu perfil."
 
-A variável **[!UICONTROL Alteração na contagem de perfis]** exibe o número de perfis mesclados adicionados à Loja de perfis desde o instantâneo anterior. Esse número é o resultado da política de mesclagem selecionada que está sendo aplicada aos dados do seu Perfil para mesclar fragmentos de perfil para formar um único perfil para cada indivíduo. Você pode usar o seletor suspenso para exibir o número de perfis adicionados nos últimos 30 dias, 90 dias ou 12 meses.
+A variável **[!UICONTROL Alteração na contagem de perfis]** O widget exibe o número de perfis mesclados adicionados ao armazenamento Perfil desde o instantâneo anterior. Esse número é o resultado da política de mesclagem selecionada que está sendo aplicada aos dados do seu Perfil para mesclar fragmentos de perfil para formar um único perfil para cada indivíduo. Você pode usar o seletor suspenso para exibir o número de perfis adicionados nos últimos 30 dias, 90 dias ou 12 meses.
 
 >[!NOTE]
 >
->A variável [!UICONTROL Alteração na contagem de perfis] O widget reflete o número de perfis adicionados **após** a assimilação inicial de perfis e a configuração da Loja de perfis. Em outras palavras, se sua organização configurasse a Loja de perfis e assimilasse 4.000.000 no Dia 1, dentro de 24 horas o painel estaria disponível, no entanto, a variável [!UICONTROL Alteração na contagem de perfis] O widget será definido como 0. Esse método de contagem é feito para evitar um pico associado à assimilação inicial de perfis no sistema. Nos próximos 30 dias, sua organização assimilará mais 1.000.000 perfis na Loja de perfis. Depois que o próximo instantâneo for tirado, a variável [!UICONTROL Alteração na contagem de perfis] mostra um total de 1,000,000 perfis adicionados, ao passo que o [!UICONTROL Contagem de perfis] O widget exibiria um total de 5.000.000 perfis.
+>A variável [!UICONTROL Alteração na contagem de perfis] O widget reflete o número de perfis adicionados **após** a assimilação inicial de perfis e a configuração da loja de perfis. Em outras palavras, se sua organização configurasse o armazenamento de Perfil e assimilasse 4.000.000 no Dia 1, dentro de 24 horas o painel estaria disponível, no entanto, o [!UICONTROL Alteração na contagem de perfis] O widget será definido como 0. Esse método de contagem é feito para evitar um pico associado à assimilação inicial de perfis no sistema. Nos próximos 30 dias, sua organização assimilará mais 1.000.000 perfis na loja de perfis. Depois que o próximo instantâneo for tirado, a variável [!UICONTROL Alteração na contagem de perfis] mostra um total de 1,000,000 perfis adicionados, ao passo que o [!UICONTROL Contagem de perfis] O widget exibiria um total de 5.000.000 perfis.
 
 ![O painel Perfis da interface do usuário da plataforma com o widget de alteração Contagem de perfis realçado.](../images/profiles/profile-count-change.png)
 
-### [!UICONTROL Tendência da alteração da contagem de perfis] {#profiles-count-change-trend}
+### [!UICONTROL Tendência de alteração da contagem de perfis] {#profiles-count-change-trend}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_profilesaddedtrend"
->title="Tendência da alteração da contagem de perfis"
->abstract="Esse widget exibe o número de perfis mesclados que foram adicionados ao Armazenamento de perfis diariamente nos últimos 30 dias, 90 dias ou 12 meses. O número também depende da política de mesclagem selecionada que está sendo aplicada aos dados de perfil."
+>title="Tendência de alteração da contagem de perfis"
+>abstract="Este widget exibe o número de perfis mesclados que foram adicionados ao armazenamento Perfil diariamente nos últimos 30 dias, 90 dias ou 12 meses. O número também depende da política de mesclagem selecionada que está sendo aplicada aos dados do seu perfil."
 
-A variável **[!UICONTROL Tendência de alteração da contagem de perfis]** O widget exibe o número total de perfis mesclados que foram adicionados à Loja de perfis diariamente nos últimos 30 dias, 90 dias ou 12 meses. Esse número é atualizado todos os dias quando o instantâneo é tirado. Portanto, se você assimilasse perfis na Platform, o número de perfis não seria refletido até que o próximo instantâneo fosse tirado. A contagem de perfis adicionados é o resultado da política de mesclagem selecionada que está sendo aplicada aos dados do seu Perfil para mesclar fragmentos de perfil para formar um único perfil para cada indivíduo.
+A variável **[!UICONTROL Tendência de alteração da contagem de perfis]** O widget exibe o número total de perfis mesclados que foram adicionados ao armazenamento Perfil diariamente nos últimos 30 dias, 90 dias ou 12 meses. Esse número é atualizado todos os dias quando o instantâneo é tirado. Portanto, se você assimilasse perfis na Platform, o número de perfis não seria refletido até que o próximo instantâneo fosse tirado. A contagem de perfis adicionados é o resultado da política de mesclagem selecionada que está sendo aplicada aos dados do seu Perfil para mesclar fragmentos de perfil para formar um único perfil para cada indivíduo.
 
 Para saber mais, consulte o [seção sobre políticas de mesclagem anterior neste documento](#merge-policies).
 
@@ -350,9 +350,9 @@ Este widget ajuda você a gerenciar as necessidades de ativação de destino, de
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_profilesbyidentity"
 >title="Perfis por identidade"
->abstract="Esse widget exibe o detalhamento de todos os perfis mesclados no Armazenamento de perfis por identidades."
+>abstract="Este widget exibe o detalhamento de todos os perfis mesclados no armazenamento de perfis por identidades."
 
-A variável **[!UICONTROL Perfis por identidade]** O widget exibe o detalhamento das identidades em todos os perfis mesclados na sua Loja de perfis. O número total de perfis por identidade (em outras palavras, somando os valores mostrados para cada namespace) pode ser maior que o número total de perfis mesclados, pois um perfil pode ter vários namespaces associados a ele. Por exemplo, se um cliente interagir com sua marca em mais de um canal, vários namespaces serão associados a esse cliente individual.
+A variável **[!UICONTROL Perfis por identidade]** O widget exibe o detalhamento das identidades em todos os perfis mesclados na sua loja de perfis. O número total de perfis por identidade (em outras palavras, somando os valores mostrados para cada namespace) pode ser maior que o número total de perfis mesclados, pois um perfil pode ter vários namespaces associados a ele. Por exemplo, se um cliente interagir com sua marca em mais de um canal, vários namespaces serão associados a esse cliente individual.
 
 Para saber mais, consulte o [seção sobre políticas de mesclagem anterior neste documento](#merge-policies).
 
@@ -371,9 +371,9 @@ Para saber mais sobre identidades, consulte a [Documentação do serviço de ide
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_identityoverlap"
 >title="Sobreposição de identidade"
->abstract="Esse widget usa um diagrama Venn para exibir a sobreposição de perfis no Armazenamento de perfis que contém as duas identidades selecionadas."
+>abstract="Este widget usa um diagrama Venn para exibir a sobreposição de perfis no armazenamento Perfil que contém as duas identidades selecionadas."
 
-A variável **[!UICONTROL Sobreposição de identidade]** O widget usa um diagrama de Venn ou define um diagrama para exibir a sobreposição de perfis na sua Loja de perfis que contém as duas identidades selecionadas.
+A variável **[!UICONTROL Sobreposição de identidade]** O widget usa um diagrama de Venn ou define um diagrama para exibir a sobreposição de perfis na sua loja de perfis que contém as duas identidades selecionadas.
 
 Use os menus suspensos do widget para selecionar as identidades que deseja comparar. Círculos exibem a contagem total relativa de perfis que contêm cada identidade. O número de perfis contendo ambas as identidades é representado pelo tamanho da sobreposição entre os círculos. Se um cliente interagir com sua marca em mais de um canal, várias identidades serão associadas a esse cliente individual. Nessa situação, é provável que sua organização tenha vários perfis contendo fragmentos de mais de uma identidade.
 
@@ -388,7 +388,7 @@ Para saber mais sobre identidades, consulte a [Documentação do serviço de ide
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_singleidentityprofiles"
 >title="Perfis de identidade única"
->abstract="Esse widget fornece uma contagem dos perfis de sua organização que têm apenas um tipo de ID que cria sua identidade. Esse tipo de ID pode ser um email ou uma ECID."
+>abstract="Esse widget fornece uma contagem dos perfis da sua organização que têm apenas um tipo de ID que cria a identidade. Esse tipo de ID pode ser um email ou uma ECID."
 
 A variável [!UICONTROL Perfis de identidade únicos] O widget fornece uma contagem dos perfis da sua organização que têm apenas um tipo de ID que cria a identidade. Esse tipo de ID pode ser um email ou uma ECID. A contagem de perfis é gerada a partir dos dados contidos no instantâneo mais recente.
 
@@ -402,12 +402,12 @@ Para ver uma caixa de diálogo detalhando a contagem total de perfis de uma iden
 
 ![O widget Perfis de identidade únicos por identidade.](../images/profiles/single-identity-profiles-by-identity.png)
 
-### [!UICONTROL Perfis não segmentados] {#unsegmented-profiles}
+### [!UICONTROL Perfis sem segmentos] {#unsegmented-profiles}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_unsegmentedprofiles"
 >title="Perfis não segmentados"
->abstract="Esse dispositivo fornece o número total de perfis que não estão conectados a um público-alvo e representa a oportunidade de ativação de perfis em sua organização."
+>abstract="Este widget fornece o número total de todos os perfis não anexados a nenhum público-alvo e representa a oportunidade de ativação de perfis em sua organização."
 
 A variável [!UICONTROL Perfis não segmentados] widget fornece o número total de todos os perfis não anexados a nenhum público-alvo. O número gerado é preciso desde o último instantâneo e representa a oportunidade de ativação de perfil em sua organização. Também indica a oportunidade de eliminar perfis que não fornecem ROI adequado.
 
@@ -418,7 +418,7 @@ A variável [!UICONTROL Perfis não segmentados] widget fornece o número total 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_unsegmentedprofilestrend"
 >title="Tendência de perfis não segmentados"
->abstract="Esse dispositivo fornece uma ilustração de gráfico de linhas para o número de perfis que não estão conectados a um público-alvo em um determinado período. A tendência dos perfis não conectados a um público-alvo pode ser visualizada ao longo de períodos de 30 dias, 90 dias e 12 meses."
+>abstract="Este widget fornece uma ilustração de gráfico de linhas para o número de perfis que não são anexados a nenhum público-alvo em um determinado período. A tendência dos perfis não anexados a um público-alvo pode ser visualizada em períodos de 30 dias, 90 dias e 12 meses."
 
 A variável [!UICONTROL Tendência de alteração de perfis não segmentados] O widget usa um gráfico de linhas para ilustrar o número de perfis adicionados desde o último instantâneo diário que não estão anexados a nenhum público-alvo. A tendência de alteração dos perfis não anexados a nenhum público-alvo pode ser visualizada em períodos de 30 dias, 90 dias e 12 meses. O período é escolhido em um menu suspenso no widget. A contagem de perfis é refletida no eixo y e a hora no eixo x.
 

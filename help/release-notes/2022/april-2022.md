@@ -2,10 +2,10 @@
 title: Notas de versão de abril de 2022 da Adobe Experience Platform
 description: As notas de versão de abril de 2022 da Adobe Experience Platform.
 exl-id: 39233787-3089-4469-8363-b006ae41ae21
-source-git-commit: 710fa6930b27f95d34539a18881c0f9d23e1debd
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '2670'
-ht-degree: 19%
+ht-degree: 18%
 
 ---
 
@@ -36,7 +36,7 @@ Os seguintes widgets estão disponíveis na Biblioteca de widgets nos respectivo
 
 | Widget | Painel | Descrição |
 | ------ | --------- | ----------- |
-| [!UICONTROL Tendência de perfis adicionados] | Perfis | Este widget usa um gráfico de linhas para ilustrar o número total de perfis mesclados que foram adicionados diariamente à Loja de perfis nos últimos 30 dias, 90 dias ou 12 meses. |
+| [!UICONTROL Tendência de perfis adicionados] | Perfis | Este widget usa um gráfico de linhas para ilustrar o número total de perfis mesclados que foram adicionados ao armazenamento Perfil diariamente nos últimos 30 dias, 90 dias ou 12 meses. |
 | [!UICONTROL Públicos mapeados para o status de destino] | Perfis | Este widget exibe o número total de públicos mapeados e não mapeados em uma única métrica e usa um gráfico de rosca para ilustrar a diferença proporcional entre seus totais. |
 | [!UICONTROL Tamanho dos públicos] | Perfis | Esse widget fornece uma tabela de duas colunas que lista até 20 segmentos e o número total de públicos-alvo contidos em cada segmento. A lista depende da política de mesclagem aplicada e ordenada de cima para baixo de acordo com o número total de públicos-alvo. |
 | [!UICONTROL Tendência de contagem de perfis] | Perfis | Esse widget usa um gráfico de linhas para ilustrar a tendência do número total de perfis contidos no sistema ao longo do tempo. Os dados podem ser visualizados por períodos de 30 dias, 90 dias e 12 meses. |
@@ -45,7 +45,7 @@ Os seguintes widgets estão disponíveis na Biblioteca de widgets nos respectivo
 | [!UICONTROL Destinos ativos por plataforma de destino] | Destinos | Este widget usa uma tabela de duas colunas para mostrar uma lista de plataformas de destino ativas e o número total de destinos ativos para cada plataforma de destino. |
 | [!UICONTROL Públicos ativados em todos os destinos] | Destinos | Este widget fornece o número total de públicos ativados em todos os destinos em uma única métrica. |
 | [!UICONTROL Ordem de ativação de público] | Segmentos | Esse widget fornece uma tabela de três colunas que lista o nome do destino, a plataforma e a data de ativação do público-alvo. |
-| [!UICONTROL Tendência de tamanho do público-alvo] | Segmentos | Este widget fornece uma ilustração de gráfico de linhas para o número total de perfis que atendem aos critérios de qualquer definição de segmento durante períodos de 30 dias, 90 dias e 12 meses. |
+| [!UICONTROL Tendência de tamanho do público] | Segmentos | Este widget fornece uma ilustração de gráfico de linhas para o número total de perfis que atendem aos critérios de qualquer definição de segmento durante períodos de 30 dias, 90 dias e 12 meses. |
 | [!UICONTROL Tendência de alteração de tamanho do público] | Segmentos | Este widget fornece uma ilustração de gráfico de linhas da diferença no número total de perfis qualificados para um determinado segmento entre os instantâneos diários mais recentes. O período da análise de tendência pode ser visualizado em períodos de 30 dias, 90 dias e 12 meses. |
 | [!UICONTROL Tendência de tamanho do público por identidade] | Segmentos | Este widget ilustra a tendência do tamanho do público-alvo para um segmento específico com base em um tipo de identidade selecionado. O período da análise de tendência pode ser visualizado em períodos de 30 dias, 90 dias e 12 meses. |
 

@@ -4,10 +4,10 @@ title: Impor a conformidade do uso de dados para um segmento de público-alvo us
 type: Tutorial
 description: Este tutorial aborda as etapas para aplicar definições de segmento de conformidade de uso de dados usando APIs.
 exl-id: 2299328c-d41a-4fdc-b7ed-72891569eaf2
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
-source-wordcount: '1355'
-ht-degree: 9%
+source-wordcount: '1348'
+ht-degree: 6%
 
 ---
 
@@ -21,7 +21,7 @@ Este tutorial requer um entendimento prático dos seguintes componentes do [!DNL
 
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): [!DNL Real-Time Customer Profile] é um armazenamento de entidade de pesquisa genérico usado para gerenciar [!DNL Experience Data Model (XDM)] dados em [!DNL Platform]. O perfil mescla dados em vários ativos de dados corporativos e fornece acesso a esses dados em uma apresentação unificada.
    - [Políticas de mesclagem](../../profile/api/merge-policies.md): regras usadas por [!DNL Real-Time Customer Profile] para determinar quais dados podem ser mesclados em uma visualização unificada em determinadas condições. As políticas de mesclagem podem ser configuradas para fins de governança de dados.
-- [[!DNL Segmentation]](../home.md): Como [!DNL Real-Time Customer Profile] O divide um grande grupo de indivíduos contidos no armazenamento de perfil em grupos menores que compartilham características semelhantes e responderão de forma semelhante às estratégias de marketing.
+- [[!DNL Segmentation]](../home.md): Como [!DNL Real-Time Customer Profile] O divide um grande grupo de indivíduos contidos na loja de Perfis em grupos menores que compartilham características semelhantes e responderão de forma semelhante às estratégias de marketing.
 - [Governança de dados](../../data-governance/home.md): a Governança de dados fornece a infraestrutura para rotulagem e aplicação do uso de dados, usando os seguintes componentes:
    - [Rótulos de uso de dados](../../data-governance/labels/user-guide.md): rótulos usados para descrever conjuntos de dados e campos em termos do nível de sensibilidade com o qual lidar com seus respectivos dados.
    - [Políticas de uso de dados](../../data-governance/policies/overview.md): configurações que indicam quais ações de marketing são permitidas nos dados categorizados por rótulos de uso de dados específicos.
@@ -32,11 +32,11 @@ As seções a seguir fornecem informações adicionais que você precisará sabe
 
 ### Leitura de chamadas de API de amostra
 
-Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e conteúdos de solicitação formatados corretamente. Também fornece exemplos de JSON retornado nas respostas da API. Para obter informações sobre as convenções usadas na documentação para chamadas de API de exemplo, consulte a seção sobre [como ler chamadas de API de exemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) no manual de solução de problemas da [!DNL Experience Platform].
+Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e conteúdos de solicitação formatados corretamente. Também fornece exemplos de JSON retornado nas respostas da API. Para obter informações sobre as convenções usadas na documentação para chamadas de API de exemplo, consulte a seção sobre [como ler chamadas de API de exemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) no [!DNL Experience Platform] guia de solução de problemas.
 
 ### Coletar valores para cabeçalhos necessários
 
-Para fazer chamadas para APIs da [!DNL Platform], primeiro conclua o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). Concluir o tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API da [!DNL Experience Platform], conforme mostrado abaixo:
+Para fazer chamadas para [!DNL Platform] APIs, primeiro conclua o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). Concluir o tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API da [!DNL Experience Platform], conforme mostrado abaixo:
 
 - Autorização: Portador `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`

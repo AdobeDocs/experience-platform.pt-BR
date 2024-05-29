@@ -4,7 +4,7 @@ description: Saiba como usar consultas SQL com os Modelos de dados do Real-time 
 badgeB2B: label="Edição B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="Edição B2P" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 61bc7f23-9f79-4c75-a515-85dd9dda2d02
-source-git-commit: ee27fc42a1ee23ef650d320df64e5970a84d0d38
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '1155'
 ht-degree: 0%
@@ -45,7 +45,7 @@ A imagem abaixo contém os campos de dados relevantes em cada conjunto de dados.
 
 #### O caso de uso de contagem de perfis {#profile-count}
 
-A lógica usada para o [!UICONTROL Contagem de perfis] O widget retorna o número total de perfis mesclados no Armazenamento de perfis no momento em que o instantâneo foi tirado. Consulte a [[!UICONTROL Contagem de perfis] documentação do widget](../guides/profiles.md#profile-count) para obter mais informações.
+A lógica usada para o [!UICONTROL Contagem de perfis] O widget retorna o número total de perfis mesclados no armazenamento Perfil no momento em que o instantâneo foi tirado. Consulte a [[!UICONTROL Contagem de perfis] documentação do widget](../guides/profiles.md#profile-count) para obter mais informações.
 
 O SQL que gera a variável [!UICONTROL Contagem de perfis] o widget está na seção recolhível abaixo.
 
@@ -98,7 +98,7 @@ A imagem abaixo contém os campos de dados relevantes em cada conjunto de dados.
 
 #### Caso de uso de perfis por identidade {#profiles-by-identity}
 
-A variável [!UICONTROL Perfis por identidade] O widget exibe o detalhamento das identidades em todos os perfis mesclados na sua Loja de perfis. Consulte a [[!UICONTROL Perfis por identidade] documentação do widget](../guides/profiles.md#profiles-by-identity) para obter mais informações.
+A variável [!UICONTROL Perfis por identidade] O widget exibe o detalhamento das identidades em todos os perfis mesclados na sua loja de perfis. Consulte a [[!UICONTROL Perfis por identidade] documentação do widget](../guides/profiles.md#profiles-by-identity) para obter mais informações.
 
 O SQL que gera a variável [!UICONTROL Perfis por identidade] o widget está na seção recolhível abaixo.
 

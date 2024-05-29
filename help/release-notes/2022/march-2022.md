@@ -2,16 +2,16 @@
 title: Notas da versão de março de 2022 da Adobe Experience Platform
 description: As notas da versão de março de 2022 da Adobe Experience Platform.
 exl-id: 0d499aa6-e25d-4d34-ad32-5e4ab361cba1
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
-source-wordcount: '1176'
-ht-degree: 19%
+source-wordcount: '1172'
+ht-degree: 11%
 
 ---
 
 # Notas de versão da Adobe Experience Platform
 
-**Data de lançamento: 30 de março de 2022**
+**Data de lançamento: quinta-feira, 30 de março de 2022**
 
 Novos recursos na Adobe Experience Platform:
 
@@ -34,7 +34,7 @@ O Experience Platform permite auditar a atividade do usuário em vários serviç
 
 | Recurso | Descrição |
 | --- | --- |
-| Logs de auditoria para conjunto de dados, esquema, classe, grupo de campo, tipo de dados, sandbox, destino, segmento, política de mesclagem, atributo calculado, perfil de produto e conta (Adobe) | Esses são os recursos que são registrados pelos logs de auditoria. Se o recurso estiver ativado, os logs de auditoria serão coletados automaticamente conforme a atividade ocorrer. Não é necessário ativar manualmente a coleção de log. |
+| Logs de auditoria para conjunto de dados, esquema, classe, grupo de campo, tipo de dados, sandbox, destino, segmento, política de mesclagem, atributo calculado, perfil de produto e conta (Adobe) | Esses são os recursos que são registrados pelos logs de auditoria. Se o recurso estiver ativado, os logs de auditoria serão coletados automaticamente conforme a atividade ocorrer. Não é necessário ativar manualmente a coleção de logs. |
 | Exportar logs de auditoria | Os logs de auditoria podem ser baixados como um `CSV` ou `JSON` arquivo. Os arquivos gerados são salvos diretamente em sua máquina. |
 
 {style="table-layout:auto"}
@@ -77,15 +77,15 @@ O Adobe Experience Platform fornece vários [!DNL dashboards] por meio do qual v
 
 ### Painéis de Perfil
 
-O painel Perfis exibe um instantâneo dos dados do atributo (registro) que sua organização tem na Loja de perfis do Experience Platform.
+O painel Perfis exibe um instantâneo dos dados do atributo (registro) que sua organização tem na área de armazenamento Perfil do Experience Platform.
 
 **Recursos atualizados**
 
 | Recurso | Descrição |
 | --- | --- |
 | Widget de Perfis não segmentados | O widget fornece o número total de todos os perfis não anexados a nenhum segmento. O número gerado é preciso desde o último instantâneo e representa a oportunidade de ativação de perfil em sua organização. Consulte a [documentação de widgets padrão de perfis](../../dashboards/guides/profiles.md#standard-widgets) para obter mais informações. |
-| Widget de Tendência de perfis não segmentados | Esse widget fornece uma ilustração de gráfico de linhas para o número de perfis que não estão anexados a nenhum segmento em um determinado período. A tendência pode ser visualizada em períodos de 30 dias, 90 dias e 12 meses. Consulte a [documentação de widgets padrão de perfis](../../dashboards/guides/profiles.md#standard-widgets) para obter mais informações. |
-| Widget Perfis não segmentados por identidade | Esse widget categoriza o número total de perfis não segmentados por seu identificador exclusivo. Os dados são visualizados em um gráfico de barras. Consulte a [documentação de widgets padrão de perfis](../../dashboards/guides/profiles.md#standard-widgets) para obter mais informações. |
+| Widget de Tendência de perfis não segmentados | Este widget fornece uma ilustração de gráfico de linhas para o número de perfis que não estão anexados a nenhum segmento em um determinado período. A tendência pode ser visualizada em períodos de 30 dias, 90 dias e 12 meses. Consulte a [documentação de widgets padrão de perfis](../../dashboards/guides/profiles.md#standard-widgets) para obter mais informações. |
+| Widget Perfis não segmentados por identidade | Este widget categoriza o número total de perfis não segmentados por seu identificador exclusivo. Os dados são visualizados em um gráfico de barras. Consulte a [documentação de widgets padrão de perfis](../../dashboards/guides/profiles.md#standard-widgets) para obter mais informações. |
 | Widget de perfis de identidade únicos | Esse widget fornece uma contagem dos perfis da sua organização que têm apenas um tipo de ID que cria a identidade, seja um email ou ECID. Consulte a [documentação de widgets padrão de perfis](../../dashboards/guides/profiles.md#standard-widgets) para obter mais informações. |
 
 {style="table-layout:auto"}
@@ -94,7 +94,7 @@ Para obter mais informações sobre painéis de perfis, consulte a [Visão geral
 
 ### Painéis de destinos
 
-O painel Destinos exibe um instantâneo dos destinos que sua organização ativou no Experience Platform.
+O painel Destinos exibe um instantâneo dos destinos que sua organização ativou na Experience Platform.
 
 **Recursos atualizados**
 
@@ -108,20 +108,20 @@ Para obter mais informações sobre Painéis de destinos na Platform, consulte o
 
 ## Coleção de dados {#data-collection}
 
-A Platform fornece um conjunto de tecnologias que permitem coletar dados da experiência do cliente e enviá-los à Rede de borda da Adobe Experience Platform, onde eles podem ser enriquecidos, transformados e distribuídos para destinos da Adobe ou de outras empresas.
+A Platform fornece um conjunto de tecnologias que permitem coletar dados de experiência do cliente do lado do cliente e enviá-los para o Edge Network da Adobe Experience Platform, onde podem ser enriquecidos, transformados e distribuídos para destinos Adobe ou não Adobe.
 
 **Novos recursos**
 
 | Recurso | Descrição |
 | --- | --- |
 | Configurações globais de sequência de dados | Agora você pode definir várias novas configurações globais ao configurar um fluxo de dados: localização geográfica, cookie de ID primária e sincronização de ID de terceiros. Consulte a seção sobre [configurar um fluxo de dados](../../datastreams/overview.md#create) no guia da interface dos fluxos de dados para obter mais informações. |
-| [API do servidor da rede de borda](../../server-api/overview.md) | A API do servidor permite que os clientes interajam com a Rede de borda do Experience Platform usando um novo endpoint autenticado para potencializar uma variedade de casos de uso de coleta de dados, personalização, publicidade e marketing. |
+| [API do servidor Edge Network](../../server-api/overview.md) | A API do servidor permite que os clientes interajam com o Edge Network Experience Platform usando um novo endpoint autenticado para atender a uma variedade de casos de uso de coleta de dados, personalização, publicidade e marketing. |
 
 Para obter mais informações sobre a coleta de dados na Platform, consulte a [visão geral da coleção de dados](../../collection/home.md).
 
 ## Query Service {#query-service}
 
-[!DNL Query Service]O permite usar SQL padrão para consultar dados no [!DNL Data Lake] da Adobe Experience Platform. Você pode associar qualquer conjunto de dados da [!DNL Data Lake] e capture os resultados da consulta como um novo conjunto de dados para usar em relatórios, no Data Science Workspace ou para assimilação no Perfil do cliente em tempo real.
+[!DNL Query Service] permite usar SQL padrão para consultar dados no Adobe Experience Platform [!DNL Data Lake]. Você pode associar qualquer conjunto de dados da [!DNL Data Lake] e capture os resultados da consulta como um novo conjunto de dados para usar em relatórios, no Data Science Workspace ou para assimilação no Perfil do cliente em tempo real.
 
 **Recursos atualizados**
 

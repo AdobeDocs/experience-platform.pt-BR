@@ -3,7 +3,7 @@ title: Evoluir valor único do cliente para valor vitalício
 description: Saiba como criar campanhas personalizadas para oferecer os melhores produtos ou serviços complementares com base nos atributos, comportamento e compras anteriores de um cliente específico.
 feature: Use Cases
 exl-id: 45f72b5e-a63b-44ac-a186-28bac9cdd442
-source-git-commit: 8cd0da12784d8fac3f0ce9afeb881d7a3916795f
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '3179'
 ht-degree: 2%
@@ -33,7 +33,7 @@ Considere esses clientes que visitam suas propriedades e compram esporadicamente
 
 Considerando que internamente você definiu uma meta e um objetivo comerciais para aumentar a fidelidade à marca. Isso pode se traduzir na execução de um caso de uso para impulsionar o engajamento e a fidelidade do cliente.
 
-Para isso, a tecnologia necessária consiste nos dois aplicativos Experience Platform [Real-Time CDP](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html?lang=pt-BR) e [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/get-started.html?lang=pt-BR). A seguir estão listados vários elementos de funcionalidade e interface do usuário dos dois aplicativos que você usará ao implementar o caso de uso.
+Para isso, a tecnologia necessária consiste nos dois aplicativos Experience Platform [Real-Time CDP](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html) e [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/get-started.html?lang=pt-BR). A seguir estão listados vários elementos de funcionalidade e interface do usuário dos dois aplicativos que você usará ao implementar o caso de uso.
 
 >[!TIP]
 >
@@ -46,8 +46,8 @@ Para isso, a tecnologia necessária consiste nos dois aplicativos Experience Pla
    * [Públicos-alvo](/help/segmentation/home.md)
    * [Destinos](/help/destinations/home.md)
 * [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html): projete jornadas, configure acionadores e crie as mensagens certas para endereçar seus visitantes.
-   * [Acionador de evento ou público-alvo](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/collect-event-data/data-collection.html?lang=pt-BR)
-   * [Públicos-alvo e eventos](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/about-audiences.html?lang=pt-BR)
+   * [Acionador de evento ou público-alvo](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/collect-event-data/data-collection.html)
+   * [Públicos-alvo e eventos](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/about-audiences.html)
    * [Jornadas](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)
 
 ## Arquitetura do Real-Time CDP e do Journey Optimizer

@@ -4,14 +4,14 @@ title: Serviço de segmentação na Real-time Customer Data Platform
 description: O Adobe Real-time Customer Data Platform é construído sobre o Adobe Experience Platform e utiliza muitos dos serviços e funcionalidades do Experience Platform. Com o Serviço de segmentação, você pode fornecer marketing sob medida dividindo seus clientes em grupos menores com características semelhantes.
 feature: Get Started, Audiences, Segments
 exl-id: 140667c0-e288-40c4-8c45-c275e348b84a
-source-git-commit: 2704184446f7945c744e7e2d2a8c3cda3fc12527
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '543'
-ht-degree: 4%
+ht-degree: 0%
 
 ---
 
-# [!DNL Segmentation Service] no [!DNL Real-Time Customer Data Platform]
+# [!DNL Segmentation Service] in [!DNL Real-Time Customer Data Platform]
 
 [!DNL Adobe Real-Time Customer Data Platform] O (Real-Time CDP) permite trazer dados de várias fontes para impulsionar uma experiência coordenada e consistente para seus clientes. A entrega de campanhas de marketing personalizadas relevantes pode ser realizada usando o [!DNL Segmentation Service], parte da Adobe Experience Platform.
 
@@ -19,7 +19,7 @@ O Real-Time CDP foi desenvolvido com base no Adobe Experience Platform e utiliza
 
 ## Segmentação
 
-A segmentação é o processo de definir atributos ou comportamentos específicos compartilhados por um subconjunto de perfis da sua loja de perfis para distinguir um grupo comercializável de pessoas da sua base de clientes. Por exemplo, em uma campanha de email chamada &quot;Você se esqueceu de comprar seu tênis?&quot;, você pode querer um público de todos os usuários que procuraram tênis de corrida nos últimos 30 dias, mas que não concluíram uma compra. Usando diferentes definições de segmento, você pode se concentrar em seus vários públicos, fornecendo uma experiência de marketing mais personalizada.
+A segmentação é o processo de definir atributos ou comportamentos específicos compartilhados por um subconjunto de perfis da sua loja de Perfis para distinguir um grupo comercializável de pessoas da sua base de clientes. Por exemplo, em uma campanha de email chamada &quot;Você se esqueceu de comprar seu tênis?&quot;, você pode querer um público de todos os usuários que procuraram tênis de corrida nos últimos 30 dias, mas que não concluíram uma compra. Usando diferentes definições de segmento, você pode se concentrar em seus vários públicos, fornecendo uma experiência de marketing mais personalizada.
 
 ## [!DNL Segment Builder]
 

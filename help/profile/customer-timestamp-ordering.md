@@ -4,9 +4,9 @@ description: Saiba como adicionar a ordem de carimbo de data e hora do cliente a
 badgePrivateBeta: label="Beta privado" type="Informative"
 hide: true
 hidefromtoc: true
-source-git-commit: c5789b872be49c3bd4a1ca61a2d44392ebd4a746
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
-source-wordcount: '334'
+source-wordcount: '406'
 ht-degree: 0%
 
 ---
@@ -14,26 +14,27 @@ ht-degree: 0%
 
 # Solicitação de carimbo de data e hora do cliente
 
-No Adobe Experience Platform, a ordem dos dados não é garantida automaticamente ao assimilar dados por meio da assimilação de streaming na loja de perfis. Com a solicitação de carimbo de data e hora do cliente, você pode garantir que a mensagem mais recente, de acordo com o carimbo de data e hora fornecido pelo cliente, será retida na loja de perfis. Como resultado, permite que os dados de perfil sejam consistentes e permite que os dados de perfil permaneçam sincronizados com os sistemas de origem.
+No Adobe Experience Platform, a ordem dos dados não é garantida automaticamente ao assimilar dados por meio da assimilação de streaming na loja de perfis. Com a solicitação de carimbo de data e hora do cliente, você pode garantir que a mensagem mais recente, de acordo com o carimbo de data e hora fornecido pelo cliente, será retida na loja de perfis. Todas as mensagens obsoletas serão descartadas e **não** estar disponíveis para uso em serviços downstream que usam dados de perfil como segmentação e destinos. Como resultado, permite que os dados de perfil sejam consistentes e permite que os dados de perfil permaneçam sincronizados com os sistemas de origem.
 
-Para habilitar a solicitação do carimbo de data e hora do cliente, é necessário usar o `lastUpdatedDate` campo dentro do [Tipo de dados Atributos de auditoria do sistema de origem externa](../xdm/data-types/external-source-system-audit-attributes.md) e entre em contato com o Gerente técnico de conta do Adobe ou com o Atendimento ao cliente do Adobe com suas informações de sandbox e conjunto de dados.
+Para habilitar a solicitação de carimbo de data e hora do cliente, use o `extSourceSystemAudit.lastUpdatedDate` campo dentro do [Tipo de dados Atributos de auditoria do sistema de origem externa](../xdm/data-types/external-source-system-audit-attributes.md) e entre em contato com o Gerente técnico de conta do Adobe ou com o Atendimento ao cliente do Adobe com suas informações de sandbox e conjunto de dados.
 
 ## Restrições
 
 Durante esse beta privado, as seguintes restrições se aplicam ao usar a solicitação de carimbo de data e hora do cliente:
 
-- Você só pode usar a solicitação de carimbo de data e hora do cliente com **atributos de perfil** assimilado com **assimilação por transmissão**.
+- Você só pode usar a solicitação de carimbo de data e hora do cliente com **atributos de perfil** assimilado com **assimilação por transmissão** na loja de Perfis.
+   - Há **não** solicitar garantias fornecidas para dados no data lake ou no Serviço de identidade.
 - Você só pode usar a solicitação de carimbo de data e hora do cliente em **não produção** sandboxes.
 - Você só pode aplicar a solicitação de carimbo de data e hora do cliente a **5** conjuntos de dados por sandbox.
-- A variável `lastUpdatedDate` o campo deve estar na [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) formato.
-- Todas as linhas de dados assimiladas **deve** contém o `lastUpdatedDate` campo. Se esse campo estiver ausente ou em um formato incorreto, a assimilação falhará.
+- Você **não é possível** use upserts de transmissão para enviar atualizações parciais de linha em um conjunto de dados que tenha a ordem de carimbo de data e hora do cliente ativada.
+- A variável `extSourceSystemAudit.lastUpdatedDate` campo **deve** estar no [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) formato. Ao usar o formato ISO 8601, ele **deve** ser como um datetime completo no formato `yyyy-MM-ddTHH:mm:ss.sssZ` (por exemplo, `2028-11-13T15:06:49.001Z`).
+- Todas as linhas de dados assimiladas **deve** contém o `extSourceSystemAudit.lastUpdatedDate` como um grupo de campos de nível superior. Isso significa que esse campo **deve** não podem ser aninhados no esquema XDM. Se esse campo estiver ausente ou em um formato incorreto, o registro malformado **não** será assimilado e uma mensagem de erro correspondente será enviada.
 - Qualquer conjunto de dados habilitado para a solicitação de carimbo de data e hora do cliente **deve** ser um novo conjunto de dados sem dados assimilados anteriormente.
-- Para qualquer fragmento de perfil específico, somente as linhas que contêm um `lastUpdatedDate` serão assimilados. Se a linha não contiver um atributo mais recente `lastUpdatedDate`, a linha será descartada.
+- Para qualquer fragmento de perfil específico, somente as linhas que contêm um `extSourceSystemAudit.lastUpdatedDate` serão assimilados. Se a linha não contiver um atributo mais recente `extSourceSystemAudit.lastUpdatedDate`, a linha será descartada.
 
 ## Recomendações
 
 Ao implementar a solicitação de carimbo de data e hora do cliente, lembre-se das seguintes considerações:
 
-- Você é responsável por sincronizar os relógios em todos os sistemas internos que enviam dados para o armazenamento de perfil.
+- Você é responsável por sincronizar os relógios em todos os sistemas internos que enviam dados para o armazenamento de Perfil.
 - Você deve ter precisão de nível de milissegundo em seus carimbos de data e hora formatados em ISO 8061.
-- O uso do Preparo de dados em coordenação com a solicitação de carimbo de data e hora do cliente é **altamente recomendado**, o cria uma cópia de todas as linhas assimiladas junto com seus carimbos de data e hora, o que permite uma melhor depuração caso surjam problemas.

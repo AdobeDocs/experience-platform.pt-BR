@@ -5,7 +5,7 @@ type: Documentation
 description: O Adobe Experience Platform permite excluir um conjunto de dados ou lote do Armazenamento de perfis para remover os dados do Perfil do cliente em tempo real que não são mais necessários ou que foram adicionados por engano. Isso requer o uso da API de perfil para criar um trabalho de sistema de perfil ou excluir solicitação.
 role: Developer
 exl-id: 75ddbf2f-9a54-424d-8569-d6737e9a590e
-source-git-commit: 42c83c7449a14eec5b91f82811bce4234e47cb51
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '1327'
 ht-degree: 3%
@@ -305,4 +305,4 @@ Uma solicitação de exclusão bem-sucedida retorna o Status HTTP 200 (OK) e um 
 
 ## Próximas etapas
 
-Agora que você sabe as etapas envolvidas na exclusão de conjuntos de dados e lotes do [!DNL Profile Store] no prazo de [!DNL Experience Platform], é possível excluir com segurança dados que foram adicionados incorretamente ou que sua organização não precisa mais. Lembre-se de que uma solicitação de exclusão não pode ser desfeita, portanto, você só deve excluir dados de que está confiante de que não são necessários agora e não serão necessários no futuro.
+Agora que você sabe as etapas envolvidas na exclusão de conjuntos de dados e lotes do [!DNL Profile store] no prazo de [!DNL Experience Platform], é possível excluir com segurança dados que foram adicionados incorretamente ou que sua organização não precisa mais. Lembre-se de que uma solicitação de exclusão não pode ser desfeita, portanto, você só deve excluir dados de que está confiante de que não são necessários agora e não serão necessários no futuro.

@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Guia da interface de conjuntos de dados
 description: Saiba como executar ações comuns ao trabalhar com conjuntos de dados na interface do usuário do Adobe Experience Platform.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: ed0a259c72832e4fb219855e2a2fc49b3381b85d
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '3080'
-ht-degree: 3%
+ht-degree: 2%
 
 ---
 
@@ -26,18 +26,18 @@ Este guia do usuário requer uma compreensão funcional dos seguintes componente
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md): fornece um perfil de consumidor unificado em tempo real com base em dados agregados de várias fontes.
 * [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md): garanta a conformidade com as regulamentações, as restrições e as políticas relacionadas ao uso dos dados do cliente.
 
-## Visualizar conjuntos de dados {#view-datasets}
+## Exibir conjuntos de dados {#view-datasets}
 
 >[!CONTEXTUALHELP]
 >id="platform_datasets_negative_numbers"
 >title="Números negativos na atividade do conjunto de dados"
->abstract="Números negativos em registros assimilados significam que um usuário excluiu determinados lotes em um intervalo de tempo selecionado."
+>abstract="Números negativos em registros assimilados significa que um usuário excluiu determinados lotes em um intervalo de tempo selecionado."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_datasets_browse_daysRemaining"
 >title="Expiração do conjunto de dados"
->abstract="Esta coluna indica o número de dias que o conjunto de dados de destino tem antes de expirar automaticamente."
+>abstract="Essa coluna indica o número de dias que o conjunto de dados de destino deixou antes de expirar automaticamente."
 
 No [!DNL Experience Platform] Interface, selecione **[!UICONTROL Conjuntos de dados]** no painel de navegação esquerdo para abrir a **[!UICONTROL Conjuntos de dados]** painel. O painel lista todos os conjuntos de dados disponíveis para sua organização. Os detalhes são exibidos para cada conjunto de dados listado, incluindo seu nome, o esquema ao qual o conjunto de dados adere e o status da execução de ingestão mais recente.
 
@@ -262,7 +262,7 @@ Para criar um novo conjunto de dados, comece selecionando **[!UICONTROL Criar co
 
 Na próxima tela, você verá as duas opções a seguir para criar um novo conjunto de dados:
 
-* [Criar conjunto de dados a partir do esquema](#schema)
+* [Criar conjunto de dados a partir de esquema](#schema)
 * [Criar conjunto de dados a partir de arquivo CSV](#csv)
 
 ### Criar um conjunto de dados com um esquema existente {#schema}
@@ -313,7 +313,7 @@ Se desejar excluir o lote, selecione **[!UICONTROL Excluir lote]** próximo à p
 
 >[!NOTE]
 >
->Se os dados assimilados tiverem sido ativados para Perfil e processados, a exclusão de um lote não excluirá esses dados da Loja de perfis.
+>Se os dados assimilados tiverem sido ativados para Perfil e processados, a exclusão de um lote não excluirá esses dados do armazenamento de Perfil.
 
 ![O botão Excluir lote é realçado na página de detalhes do conjunto de dados.](../images/datasets/user-guide/delete-batch.png)
 

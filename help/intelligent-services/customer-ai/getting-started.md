@@ -3,12 +3,12 @@ keywords: Experience Platform;introdução;ia do cliente;tópicos populares;gett
 solution: Experience Platform, Real-Time Customer Data Platform
 feature: Customer AI
 title: Introdução à IA do cliente
-description: Este manual fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e conteúdos de solicitação formatados corretamente.
+description: Este manual fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente.
 exl-id: 90c9a83a-8e66-4239-b2d6-2049a6319b25
-source-git-commit: 07a110f6d293abff38804b939014e28f308e3b30
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
-source-wordcount: '572'
-ht-degree: 11%
+source-wordcount: '570'
+ht-degree: 8%
 
 ---
 
@@ -20,7 +20,7 @@ Os guias da IA do cliente exigem uma compreensão funcional dos vários serviço
 - [Noções básicas da composição do esquema](../../xdm/schema/composition.md): este documento fornece uma introdução aos esquemas do Experience Data Model (XDM) e aos elementos, princípios e práticas recomendadas para a composição de esquemas a serem usados no [!DNL Adobe Experience Platform].
 - [Criação de esquemas](../../xdm/tutorials/create-schema-ui.md): Este tutorial aborda as etapas para a criação de um esquema usando o Editor de esquemas no Experience Platform.
 - [Visão geral do Perfil do cliente em tempo real](../../rtcdp/overview.md): Criado em [!DNL Adobe Experience Platform], o Adobe Real-time Customer Data Platform (Real-Time CDP) ajuda as empresas a unirem dados conhecidos e desconhecidos para ativar perfis de clientes com decisões inteligentes em toda a jornada do cliente. A Real-Time CDP combina várias fontes de dados corporativas para criar perfis unificados em tempo real, que podem ser usados para fornecer experiências personalizadas individuais do cliente em todos os canais e dispositivos.
-- [Visão geral do serviço de segmentação](../../segmentation/home.md): a segmentação é o processo de definir atributos ou comportamentos específicos compartilhados por um subconjunto de perfis da sua loja de perfis para distinguir um grupo comercializável de pessoas da sua base de clientes. Por exemplo, em uma campanha de email chamada &quot;Você se esqueceu de comprar seu tênis?&quot;, você pode querer um público de todos os usuários que procuraram tênis de corrida nos últimos 30 dias, mas que não concluíram uma compra. Usando segmentos diferentes, você pode se concentrar em seus vários públicos, fornecendo uma experiência de marketing mais personalizada.
+- [Visão geral do serviço de segmentação](../../segmentation/home.md): a segmentação é o processo de definir atributos ou comportamentos específicos compartilhados por um subconjunto de perfis da sua loja de Perfis para distinguir um grupo comercializável de pessoas da sua base de clientes. Por exemplo, em uma campanha de email chamada &quot;Você se esqueceu de comprar seu tênis?&quot;, você pode querer um público de todos os usuários que procuraram tênis de corrida nos últimos 30 dias, mas que não concluíram uma compra. Usando segmentos diferentes, você pode se concentrar em seus vários públicos, fornecendo uma experiência de marketing mais personalizada.
 - [Guia do usuário do Construtor de segmentos](../../segmentation/tutorials/create-a-segment.md): O Platform permite que você crie e acesse segmentos facilmente, bem como use diferentes blocos de construção para caracterizar ainda mais seus segmentos.
 
 ## Download das pontuações da IA do cliente

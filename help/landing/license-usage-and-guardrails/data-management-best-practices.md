@@ -2,10 +2,10 @@
 title: Práticas recomendadas de direitos de licença de gerenciamento de dados
 description: Saiba mais sobre as práticas recomendadas e as ferramentas que você pode usar para gerenciar melhor seus direitos de licença na Adobe Experience Platform.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '2237'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
@@ -139,7 +139,7 @@ Há vários relatórios disponíveis para ajudá-lo a entender a composição do
 
 #### Expirações de dados do perfil de pseudônimo {#pseudonymous-profile-expirations}
 
-Esse recurso permite remover automaticamente perfis pseudônimos obsoletos da Loja de perfis. Para obter mais informações sobre esse recurso, leia a [Visão geral da expiração de dados do perfil de pseudônimo](../../profile/pseudonymous-profiles.md).
+Esse recurso permite remover automaticamente perfis pseudônimos obsoletos da loja de perfis. Para obter mais informações sobre esse recurso, leia a [Visão geral da expiração de dados do perfil de pseudônimo](../../profile/pseudonymous-profiles.md).
 
 #### Expirações do evento de experiência {#event-expirations}
 

@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Visão geral da API de assimilação em lote
 description: A API de assimilação em lote do Adobe Experience Platform permite assimilar dados na Platform como arquivos em lote. Os dados assimilados podem ser os dados do perfil de um arquivo simples em um sistema CRM (como um arquivo Parquet) ou dados que estejam em conformidade com um esquema conhecido no registro do Experience Data Model (XDM).
 exl-id: ffd1dc2d-eff8-4ef7-a26b-f78988f050ef
-source-git-commit: 6cd4bff07d042401d4ebc90d6fc2e70a1f8a7cb0
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '1388'
 ht-degree: 4%
@@ -146,7 +146,7 @@ Depois de criar um novo lote para upload com sucesso, os arquivos podem ser carr
 
 >[!NOTE]
 >
->A assimilação em lote pode ser usada para atualizar dados de forma incremental na Loja de perfis. Para obter mais informações, consulte a seção sobre [atualização de um lote](#patch-a-batch) no [guia do desenvolvedor de assimilação em lote](api-overview.md).
+>A assimilação em lote pode ser usada para atualizar dados de forma incremental no armazenamento de perfis. Para obter mais informações, consulte a seção sobre [atualização de um lote](#patch-a-batch) no [guia do desenvolvedor de assimilação em lote](api-overview.md).
 
 >[!INFO]
 >

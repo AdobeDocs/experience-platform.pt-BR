@@ -2,7 +2,7 @@
 title: Perfis de borda
 description: Saiba mais sobre perfis de borda, bem como terminologia relacionada, regiões disponíveis para perfis de borda, bem como serviços disponíveis para perfis de borda.
 exl-id: dcae267f-1d5a-4e90-b634-afd42b0d4edc
-source-git-commit: 804f87563abf36a1aa203cb675a687dd262231a7
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '656'
 ht-degree: 0%
@@ -55,7 +55,7 @@ O Serviço de perfil expresso (XPS) recupera os perfis em bordas diferentes. Ess
 
 ## Próximas etapas
 
-Depois de ler este manual, você deve ter uma compreensão básica dos perfis de borda, incluindo informações sobre as regiões e serviços disponíveis para perfis de borda. Para obter mais informações sobre o Adobe Experience Edge, leia o [Visão geral da rede de borda](../web-sdk/home.md#edge-network).
+Depois de ler este manual, você deve ter uma compreensão básica dos perfis de borda, incluindo informações sobre as regiões e serviços disponíveis para perfis de borda. Para obter mais informações sobre o Adobe Experience Edge, leia o [visão geral do Edge Network](../web-sdk/home.md#edge-network).
 
 ## Apêndice
 
@@ -73,4 +73,4 @@ Para perfis de borda, a expiração de dados determina quanto tempo o perfil per
 
 ### Quais dados são armazenados no perfil de borda?
 
-O perfil do Edge armazena os atributos do perfil, as IDs do perfil, bem como as IDs de público-alvo qualificado. Por padrão, a expiração dos dados dura 14 dias.
+O Perfil de borda armazena os atributos do perfil, as IDs do perfil, bem como as IDs de público-alvo qualificado. Por padrão, a expiração dos dados dura 14 dias.

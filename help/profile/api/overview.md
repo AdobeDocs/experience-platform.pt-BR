@@ -4,10 +4,10 @@ title: Guia da API do Perfil do cliente em tempo real
 description: A API de perfil do cliente em tempo real permite que os desenvolvedores explorem e trabalhem com dados de perfil, incluindo a visualização de perfis, a criação e a atualização de políticas de mesclagem, a exportação ou a amostragem de dados de perfil e a exclusão de dados de perfil que não são mais necessários ou que foram adicionados por engano. Siga este manual para saber como executar operações importantes usando a API.
 role: Developer
 exl-id: ce39b95b-cff7-46cf-a14c-8203017c8826
-source-git-commit: b033f96002ed6da25cd6eb7012c397405dd85896
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '883'
-ht-degree: 2%
+ht-degree: 1%
 
 ---
 
@@ -49,7 +49,7 @@ Para saber mais sobre as políticas de mesclagem e sua função na Platform, com
 
 ## Visualizar status da amostra ([!DNL Profile] preview) {#profile-preview}
 
-À medida que os dados são assimilados na Platform, um trabalho de amostra é executado para atualizar a contagem de perfis e outras métricas relacionadas aos dados do Perfil do cliente em tempo real. Os resultados deste trabalho de amostra podem ser exibidos usando o `/previewsamplestatus` endpoint, parte da API de Perfil do cliente em tempo real. Esse endpoint também pode ser usado para listar distribuições de perfil por conjunto de dados e namespace de identidade, bem como para gerar vários relatórios para obter visibilidade sobre a composição da Loja de perfis da sua organização.  Para começar a usar o `/profilepreviewstatus` endpoint, consulte a [visualizar guia de endpoint de status de amostra](preview-sample-status.md).
+À medida que os dados são assimilados na Platform, um trabalho de amostra é executado para atualizar a contagem de perfis e outras métricas relacionadas aos dados do Perfil do cliente em tempo real. Os resultados deste trabalho de amostra podem ser exibidos usando o `/previewsamplestatus` endpoint, parte da API de Perfil do cliente em tempo real. Esse endpoint também pode ser usado para listar distribuições de perfil por conjunto de dados e namespace de identidade, bem como para gerar vários relatórios para obter visibilidade sobre a composição do armazenamento de perfis de sua organização.  Para começar a usar o `/profilepreviewstatus` endpoint, consulte a [visualizar guia de endpoint de status de amostra](preview-sample-status.md).
 
 ## Trabalhos do sistema de perfil {#profile-system-jobs}
 
@@ -57,7 +57,7 @@ Dados habilitados para perfil que são assimilados em [!DNL Platform] é armazen
 
 ## Atualizar atributos de perfis {#update-profile}
 
-Ocasionalmente, pode ser necessário atualizar os dados na Loja de perfis da sua organização. Por exemplo, talvez seja necessário corrigir registros ou alterar um valor de atributo. Isso pode ser feito por meio da assimilação em lote e requer um conjunto de dados habilitado para perfil configurado com uma tag upsert. Para obter mais informações sobre como configurar um conjunto de dados para atualizações de atributo, consulte o tutorial para [ativar um conjunto de dados para Perfil e substituição](../../catalog/datasets/enable-upsert.md).
+Ocasionalmente, pode ser necessário atualizar os dados no armazenamento de perfil de sua organização. Por exemplo, talvez seja necessário corrigir registros ou alterar um valor de atributo. Isso pode ser feito por meio da assimilação em lote e requer um conjunto de dados habilitado para perfil configurado com uma tag upsert. Para obter mais informações sobre como configurar um conjunto de dados para atualizações de atributo, consulte o tutorial para [ativar um conjunto de dados para Perfil e substituição](../../catalog/datasets/enable-upsert.md).
 
 ## Próximas etapas {#next-steps}
 

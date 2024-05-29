@@ -1,12 +1,12 @@
 ---
 title: Reengajamento inteligente
-description: Ofereça experiências atraentes e conectadas durante os principais momentos de conversão para engajar novamente clientes pouco frequentes de forma inteligente.
+description: Ofereça experiências atraentes e conectadas durante os principais momentos de conversão para reengajar clientes pouco frequentes de forma inteligente.
 feature: Use Cases
 exl-id: 13f6dbc9-7471-40bf-824d-27922be0d879
-source-git-commit: 6991bad03b298373a0d55258dacc60ea8d797fd8
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '3894'
-ht-degree: 4%
+ht-degree: 2%
 
 ---
 
@@ -46,7 +46,7 @@ Ao concluir as etapas para implementar o caso de uso, você usará a seguinte fu
 
 * [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer-learn/tutorials/introduction-to-journey-optimizer/introduction.html?lang=pt-BR) - Ajuda a fornecer experiências conectadas, contextuais e personalizadas aos clientes.
    * [Acionador de evento ou público-alvo](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/collect-event-data/data-collection.html)
-   * [Públicos/ eventos](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/about-audiences.html?lang=pt-BR)
+   * [Públicos/ eventos](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/about-audiences.html)
    * [Jornada ações](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)
 
 ## Como obter o caso de uso {#achieve-use-case-instruction}
@@ -178,9 +178,9 @@ A variável [Detalhes da ID do usuário final](/help/xdm/field-groups/event/endu
 
 +++
 
-+++Detalhes do comércio (Grupo de campos)
++++Detalhes do Commerce (Grupo de campos)
 
-A variável [Detalhes do comércio](/help/xdm/field-groups/event/commerce-details.md) o grupo de campos é usado para descrever dados de comércio, como informações do produto (SKU, nome, quantidade) e operações padrão do carrinho (pedido, check-out, abandono).
+A variável [Detalhes do Commerce](/help/xdm/field-groups/event/commerce-details.md) o grupo de campos é usado para descrever dados de comércio, como informações do produto (SKU, nome, quantidade) e operações padrão do carrinho (pedido, check-out, abandono).
 
 | Campos | Descrição |
 | --- | --- |
@@ -221,9 +221,9 @@ A variável [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent
 
 +++
 
-+++Detalhes do comércio (Grupo de campos)
++++Detalhes do Commerce (Grupo de campos)
 
-A variável [Detalhes do comércio](/help/xdm/field-groups/event/commerce-details.md) o grupo de campos é usado para descrever dados de comércio, como informações do produto (SKU, nome, quantidade) e operações padrão do carrinho (pedido, check-out, abandono).
+A variável [Detalhes do Commerce](/help/xdm/field-groups/event/commerce-details.md) o grupo de campos é usado para descrever dados de comércio, como informações do produto (SKU, nome, quantidade) e operações padrão do carrinho (pedido, check-out, abandono).
 
 | Campos | Descrição |
 | --- | --- |
@@ -446,7 +446,7 @@ O cenário de navegação de produto abandonado segmenta a navegação de produt
 
 +++Eventos
 
-Os eventos permitem acionar as jornadas de forma unitária para enviar mensagens em tempo real à pessoa que flui para a jornada. Para obter mais informações sobre eventos, leia a [guia de eventos gerais](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html).
+Os Eventos permitem acionar as jornadas de forma unitária para enviar mensagens, em tempo real, ao indivíduo que flui para a jornada. Para obter mais informações sobre eventos, leia a [guia de eventos gerais](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html).
 
 * Evento 1: visualizações do produto
    * Esquema: Transações digitais do cliente
@@ -571,7 +571,7 @@ O cenário de carrinho abandonado segmenta os produtos que foram colocados no ca
 
 +++Eventos
 
-Os eventos permitem acionar as jornadas de forma unitária para enviar mensagens em tempo real à pessoa que flui para a jornada. Para obter mais informações sobre eventos, leia a [guia de eventos gerais](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html).
+Os Eventos permitem acionar as jornadas de forma unitária para enviar mensagens, em tempo real, ao indivíduo que flui para a jornada. Para obter mais informações sobre eventos, leia a [guia de eventos gerais](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html).
 
 * Evento 2: Adicionar ao carrinho
    * Esquema: Transações digitais do cliente
@@ -704,7 +704,7 @@ O cenário de confirmação de pedido se concentra nas compras de produtos feita
 
 +++Eventos
 
-Os eventos permitem acionar as jornadas de forma unitária para enviar mensagens em tempo real à pessoa que flui para a jornada. Para obter mais informações sobre eventos, leia a [guia de eventos gerais](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html).
+Os Eventos permitem acionar as jornadas de forma unitária para enviar mensagens, em tempo real, ao indivíduo que flui para a jornada. Para obter mais informações sobre eventos, leia a [guia de eventos gerais](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html).
 
 * Evento 4: compras online
    * Esquema: Transações digitais do cliente

@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Visão geral do serviço de segmentação
 description: Saiba mais sobre o Serviço de segmentação da Adobe Experience Platform e a função que ele desempenha no ecossistema da plataforma.
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '1627'
-ht-degree: 12%
+ht-degree: 2%
 
 ---
 
@@ -26,7 +26,7 @@ Você deve entender os seguintes termos principais usados neste documento:
 
 ## Como a segmentação funciona
 
-A segmentação é o processo de definir atributos ou comportamentos específicos compartilhados por um subconjunto de perfis da sua loja de perfis para distinguir um grupo comercializável de pessoas da sua base de clientes. Por exemplo, em uma campanha de email chamada &quot;Você se esqueceu de comprar seu tênis?&quot;, você pode querer um público de todos os usuários que procuraram tênis de corrida nos últimos 30 dias, mas que não concluíram uma compra.
+A segmentação é o processo de definir atributos ou comportamentos específicos compartilhados por um subconjunto de perfis da sua loja de Perfis para distinguir um grupo comercializável de pessoas da sua base de clientes. Por exemplo, em uma campanha de email chamada &quot;Você se esqueceu de comprar seu tênis?&quot;, você pode querer um público de todos os usuários que procuraram tênis de corrida nos últimos 30 dias, mas que não concluíram uma compra.
 
 Depois que um público-alvo é definido conceitualmente, ele é incorporado [!DNL Experience Platform]. Normalmente, os públicos-alvo são criados pelo profissional de marketing ou especialista em público-alvo, embora algumas organizações prefiram que sejam criados pelo departamento de marketing em colaboração com os analistas de dados. Ao examinar os dados enviados para o [!DNL Platform], o analista de dados pode criar o público-alvo de duas maneiras: criando uma definição de segmento ao selecionar quais campos e valores serão usados para criar as regras ou condições do público-alvo ou compondo um público-alvo usando a Composição de público-alvo.
 
@@ -57,15 +57,15 @@ Para obter informações sobre como criar definições de segmento usando a API,
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation"
 >title="Métodos de avaliação"
->abstract="Atualmente, a Platform aceita três métodos de avaliação de públicos-alvo: segmentação de transmissão, segmentação em lote e segmentação de borda."
+>abstract="Atualmente, a Platform oferece suporte a três métodos de avaliação de públicos-alvo: segmentação por transmissão, segmentação em lote e segmentação de borda."
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_streaming"
 >title="Avaliação de transmissão"
->abstract="A segmentação de transmissão é um processo contínuo de seleção de dados que atualiza os públicos-alvo em resposta à atividade do usuário."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/api/streaming-segmentation.html?lang=pt-BR" text="Avaliar eventos em tempo quase real com a segmentação de transmissão"
+>abstract="A segmentação de transmissão é um processo contínuo de seleção de dados que atualiza seus públicos-alvo em resposta à atividade do usuário."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/api/streaming-segmentation.html" text="Avaliar eventos em tempo quase real com a segmentação por transmissão"
 
-Atualmente, a Platform aceita três métodos de avaliação de públicos-alvo: segmentação de transmissão, segmentação em lote e segmentação de borda.
+Atualmente, a Platform oferece suporte a três métodos de avaliação de públicos-alvo: segmentação por transmissão, segmentação em lote e segmentação de borda.
 
 ### Segmentação de transmissão {#streaming}
 
@@ -78,9 +78,9 @@ Para saber mais sobre a segmentação por transmissão, leia o [documentação d
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_batch"
 >title="Avaliação em lote"
->abstract="Como alternativa a um processo de seleção de dados contínuo, a segmentação em lote move todos os dados do perfil de uma só vez por meio das definições de segmento para produzir públicos correspondentes. Depois de criado, o público-alvo é salvo e armazenado para que você possa exportá-lo para uso."
+>abstract="Como alternativa a um processo de seleção de dados em andamento, a segmentação em lote move todos os dados de perfil de uma só vez pelas definições de segmento para produzir públicos correspondentes. Depois de criado, o público-alvo é salvo e armazenado para que você possa exportá-lo para uso."
 
-Como alternativa a um processo de seleção de dados contínuo, a segmentação em lote move todos os dados do perfil de uma só vez por meio das definições de segmento para produzir públicos correspondentes. Depois de criado, o público-alvo resultante é salvo e armazenado para que você possa exportá-lo para uso.
+Como alternativa a um processo de seleção de dados em andamento, a segmentação em lote move todos os dados de perfil de uma só vez pelas definições de segmento para produzir públicos correspondentes. Depois de criado, o público-alvo resultante é salvo e armazenado para que você possa exportá-lo para uso.
 
 Os públicos-alvo em lote são avaliados automaticamente a cada 24 horas. Se quiser avaliar um público-alvo em lote sob demanda, você pode usar um trabalho de segmento. Para saber mais sobre tarefas do segmento, leia o [documentação de tarefas do segmento](./api/segment-jobs.md).
 
@@ -88,11 +88,11 @@ Os públicos-alvo em lote são avaliados automaticamente a cada 24 horas. Se qui
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_edge"
->title="Avaliação da borda"
->abstract="A segmentação de borda é a capacidade de avaliar segmentos na rede de borda da Platform instantaneamente, permitindo casos de uso de personalização da mesma página ou da próxima página."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/edge-segmentation.html?lang=pt-BR" text="Guia da interface de segmentação de borda"
+>title="Avaliação de borda"
+>abstract="A segmentação de borda é a capacidade de avaliar segmentos na Platform instantaneamente no Edge Network, permitindo casos de uso de personalização de mesma página e próxima página."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/edge-segmentation.html" text="Guia da interface de segmentação de borda"
 
-A segmentação de borda é a capacidade de avaliar segmentos na Platform instantaneamente [na rede de borda](../web-sdk/home.md), permitindo casos de uso de personalização de mesma página e próxima página.
+A segmentação de borda é a capacidade de avaliar segmentos na Platform instantaneamente [no Edge Network](../web-sdk/home.md), permitindo casos de uso de personalização de mesma página e próxima página.
 
 Para saber mais sobre a segmentação de borda, leia as seções [Documentação da API](./api/edge-segmentation.md) ou o [Documentação da interface](./ui/edge-segmentation.md).
 

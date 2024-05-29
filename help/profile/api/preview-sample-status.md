@@ -4,7 +4,7 @@ title: Visualizar ponto de extremidade da API Status de amostra (Visualização 
 description: O ponto de extremidade de status da amostra de visualização da API do perfil do cliente em tempo real permite visualizar a amostra bem-sucedida mais recente dos dados do perfil, listar a distribuição do perfil por conjunto de dados e por identidade e gerar relatórios mostrando a sobreposição do conjunto de dados, a sobreposição de identidade e os perfis não compilados.
 role: Developer
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '2906'
 ht-degree: 1%
@@ -15,7 +15,7 @@ ht-degree: 1%
 
 O Adobe Experience Platform permite assimilar dados do cliente de várias fontes para criar um perfil robusto e unificado para cada cliente individual. À medida que os dados são assimilados na Platform, um trabalho de amostra é executado para atualizar a contagem de perfis e outras métricas relacionadas aos dados do Perfil do cliente em tempo real.
 
-Os resultados deste trabalho de amostra podem ser exibidos usando o `/previewsamplestatus` endpoint, parte da API de Perfil do cliente em tempo real. Esse endpoint também pode ser usado para listar distribuições de perfil por conjunto de dados e namespace de identidade, bem como para gerar vários relatórios para obter visibilidade sobre a composição da Loja de perfis da sua organização. Este guia aborda as etapas necessárias para exibir essas métricas usando o `/previewsamplestatus` Endpoint da API.
+Os resultados deste trabalho de amostra podem ser exibidos usando o `/previewsamplestatus` endpoint, parte da API de Perfil do cliente em tempo real. Esse endpoint também pode ser usado para listar distribuições de perfil por conjunto de dados e namespace de identidade, bem como para gerar vários relatórios para obter visibilidade sobre a composição do armazenamento de perfis de sua organização. Este guia aborda as etapas necessárias para exibir essas métricas usando o `/previewsamplestatus` Endpoint da API.
 
 >[!NOTE]
 >
@@ -37,10 +37,10 @@ Para saber mais sobre perfis e sua função no Experience Platform, comece lendo
 
 ## Como o trabalho de amostra é acionado
 
-Como os dados ativados para o Perfil do cliente em tempo real são assimilados na [!DNL Platform], ele é armazenado no armazenamento de dados do Perfil. Quando a assimilação de registros no Armazenamento de perfis aumenta ou diminui a contagem total de perfis em mais de 5%, um trabalho de amostragem é acionado para atualizar a contagem. O modo como a amostra é acionada depende do tipo de ingestão sendo usado:
+Como os dados ativados para o Perfil do cliente em tempo real são assimilados na [!DNL Platform], ele é armazenado no armazenamento de dados do Perfil. Quando a assimilação de registros no armazenamento de Perfil aumenta ou diminui a contagem total de perfis em mais de 5%, um trabalho de amostragem é acionado para atualizar a contagem. O modo como a amostra é acionada depende do tipo de ingestão sendo usado:
 
 * Para **fluxos de trabalho de dados de transmissão**, uma verificação é feita por hora para determinar se o limite de aumento ou diminuição de 5% foi atingido. Se tiver sido, um trabalho de amostra será automaticamente acionado para atualizar a contagem.
-* Para **assimilação em lote** No entanto, dentro de 15 minutos após a assimilação bem-sucedida de um lote no Armazenamento de perfis, se o limite de aumento ou diminuição de 5% for atingido, um trabalho será executado para atualizar a contagem. Usando a API de perfil, é possível visualizar o trabalho de amostra bem-sucedido mais recente, bem como listar a distribuição do perfil por conjunto de dados e por namespace de identidade.
+* Para **assimilação em lote**, dentro de 15 minutos após a assimilação bem-sucedida de um lote no Armazenamento de perfis, se o limite de aumento ou diminuição de 5% for atingido, um trabalho será executado para atualizar a contagem. Usando a API de perfil, é possível visualizar o trabalho de amostra bem-sucedido mais recente, bem como listar a distribuição do perfil por conjunto de dados e por namespace de identidade.
 
 A contagem de perfis e as métricas de perfil por namespace também estão disponíveis nas [!UICONTROL Perfis] seção da interface do Experience Platform. Para obter informações sobre como acessar os dados do perfil usando a interface do, visite o [[!DNL Profile] Guia da interface do usuário](../ui/user-guide.md).
 
@@ -100,9 +100,9 @@ A resposta inclui os detalhes do último trabalho de amostra bem-sucedido execut
 | Propriedade | Descrição |
 |---|---|
 | `numRowsToRead` | O número total de perfis mesclados na amostra. |
-| `sampleJobRunning` | Um valor booleano que retorna `true` quando um trabalho de amostra está em andamento. Fornece transparência na latência que ocorre de quando um arquivo em lote é carregado para quando ele é realmente adicionado à Loja de perfil. |
+| `sampleJobRunning` | Um valor booleano que retorna `true` quando um trabalho de amostra está em andamento. Fornece transparência na latência que ocorre de quando um arquivo em lote é carregado para quando ele é realmente adicionado ao armazenamento de Perfil. |
 | `cosmosDocCount` | Contagem total de documentos no Cosmos. |
-| `totalFragmentCount` | Número total de fragmentos de perfil no Armazenamento de perfis. |
+| `totalFragmentCount` | Número total de fragmentos de perfil no armazenamento Perfil. |
 | `lastSuccessfulBatchTimestamp` | Carimbo de data e hora da última assimilação de lote bem-sucedida. |
 | `streamingDriven` | *Este campo foi descontinuado e não tem significado para a resposta.* |
 | `totalRows` | Número total de perfis mesclados no Experience Platform, também conhecido como &quot;contagem de perfis&quot;. |
@@ -207,7 +207,7 @@ A resposta inclui uma `data` matriz, contendo uma lista de objetos de conjunto d
 
 ## Listar distribuição de perfil por namespace de identidade
 
-Você pode executar uma solicitação do GET para o `/previewsamplestatus/report/namespace` para exibir o detalhamento por namespace de identidade em todos os perfis mesclados na Loja de perfis. Isso inclui as identidades padrão fornecidas pelo Adobe, bem como as identidades personalizadas definidas pela sua organização.
+Você pode executar uma solicitação do GET para o `/previewsamplestatus/report/namespace` ponto de extremidade para exibir o detalhamento por namespace de identidade em todos os perfis mesclados no armazenamento do Perfil. Isso inclui as identidades padrão fornecidas pelo Adobe, bem como as identidades personalizadas definidas pela sua organização.
 
 Os namespaces de identidade são um componente importante do Serviço de identidade da Adobe Experience Platform que serve como indicadores do contexto ao qual os dados do cliente se relacionam. Para saber mais, comece lendo o [visão geral do namespace de identidade](../../identity-service/features/namespaces.md).
 
@@ -304,7 +304,7 @@ A resposta inclui uma `data` com objetos individuais contendo os detalhes de cad
 
 ## Gerar o relatório de sobreposição do conjunto de dados
 
-O relatório de sobreposição de conjunto de dados fornece visibilidade sobre a composição do Armazenamento de perfis da sua organização, expondo os conjuntos de dados que mais contribuem para seu público-alvo endereçável (perfis mesclados). Além de fornecer insights sobre seus dados, esse relatório pode ajudá-lo a tomar medidas para otimizar o uso da licença, como definir expirações para determinados conjuntos de dados.
+O relatório de sobreposição de conjunto de dados fornece visibilidade sobre a composição do armazenamento de perfis da sua organização, expondo os conjuntos de dados que mais contribuem para seu público-alvo endereçável (perfis mesclados). Além de fornecer insights sobre seus dados, esse relatório pode ajudá-lo a tomar medidas para otimizar o uso da licença, como definir expirações para determinados conjuntos de dados.
 
 Você pode gerar o relatório de sobreposição do conjunto de dados executando uma solicitação GET para o `/previewsamplestatus/report/dataset/overlap` terminal.
 
@@ -372,7 +372,7 @@ Esse relatório fornece as seguintes informações:
 
 ## Gerar o relatório de sobreposição de namespace de identidade {#identity-overlap-report}
 
-O relatório de sobreposição de namespace de identidade fornece visibilidade sobre a composição da Loja de perfis da sua organização, expondo os namespaces de identidade que mais contribuem para seu público-alvo endereçável (perfis mesclados). Isso inclui os namespaces de identidade padrão fornecidos pelo Adobe, bem como os namespaces de identidade personalizados definidos pela sua organização.
+O relatório de sobreposição de namespace de identidade fornece visibilidade sobre a composição do armazenamento de perfis da sua organização, expondo os namespaces de identidade que mais contribuem para seu público-alvo endereçável (perfis mesclados). Isso inclui os namespaces de identidade padrão fornecidos pelo Adobe, bem como os namespaces de identidade personalizados definidos pela sua organização.
 
 Você pode gerar o relatório de sobreposição de namespace de identidade executando uma solicitação GET para o `/previewsamplestatus/report/namespace/overlap` terminal.
 
@@ -468,7 +468,7 @@ Esse relatório fornece as seguintes informações:
 
 ## Gerar o relatório de perfis não compilados
 
-Você pode obter mais visibilidade sobre a composição da Loja de perfis da sua organização por meio do relatório de perfis não compilados. Um perfil &quot;não corrigido&quot; é um perfil que contém apenas um fragmento de perfil. Um perfil &quot;desconhecido&quot; é um perfil associado a namespaces de identidade pseudônimos, como `ECID` e `AAID`. Perfis desconhecidos estão inativos, o que significa que eles não adicionaram novos eventos no período especificado. O relatório de perfis não compilados fornece um detalhamento de perfis por um período de 7, 30, 60, 90 e 120 dias.
+Você pode obter mais visibilidade sobre a composição do armazenamento de perfis de sua organização por meio do relatório de perfis não compilados. Um perfil &quot;não corrigido&quot; é um perfil que contém apenas um fragmento de perfil. Um perfil &quot;desconhecido&quot; é um perfil associado a namespaces de identidade pseudônimos, como `ECID` e `AAID`. Perfis desconhecidos estão inativos, o que significa que eles não adicionaram novos eventos no período especificado. O relatório de perfis não compilados fornece um detalhamento de perfis por um período de 7, 30, 60, 90 e 120 dias.
 
 Você pode gerar o relatório de perfis não compilados executando uma solicitação GET para o `/previewsamplestatus/report/unstitchedProfiles` terminal.
 
@@ -549,8 +549,8 @@ Uma solicitação bem-sucedida retorna o Status HTTP 200 (OK) e o relatório de 
 | Propriedade | Descrição |
 |---|---|
 | `data` | A variável `data` objeto contém as informações retornadas para o relatório de perfis não compilados. |
-| `totalNumberOfProfiles` | A contagem total de perfis únicos no Armazenamento de perfis. Isso é equivalente à contagem de público-alvo endereçável. Inclui perfis conhecidos e não compilados. |
-| `totalNumberOfEvents` | O número total de ExperienceEvents no Armazenamento de perfis. |
+| `totalNumberOfProfiles` | A contagem total de perfis únicos no armazenamento de Perfil. Isso é equivalente à contagem de público-alvo endereçável. Inclui perfis conhecidos e não compilados. |
+| `totalNumberOfEvents` | O número total de ExperienceEvents no armazenamento de Perfil. |
 | `unstitchedProfiles` | Um objeto que contém um detalhamento de perfis não compilados por período de tempo. O relatório de perfis não compilados fornece um detalhamento dos perfis por períodos de 7, 30, 60, 90 e 120 dias. |
 | `countOfProfiles` | A contagem de perfis não compilados para o período de tempo ou a contagem de perfis não compilados para o namespace. |
 | `eventsAssociated` | O número de ExperienceEvents para o intervalo de tempo ou o número de eventos para o namespace. |
@@ -559,7 +559,7 @@ Uma solicitação bem-sucedida retorna o Status HTTP 200 (OK) e o relatório de 
 
 ### Interpretação do relatório de perfis não compilados
 
-Os resultados do relatório podem fornecer insights sobre quantos perfis não compilados e inativos sua organização tem em sua Loja de perfis.
+Os resultados do relatório podem fornecer insights sobre quantos perfis não compilados e inativos sua organização tem em seu armazenamento de Perfil.
 
 Considere o seguinte trecho do `data` objeto:
 
@@ -593,5 +593,5 @@ Esse relatório fornece as seguintes informações:
 
 ## Próximas etapas
 
-Agora que você sabe como visualizar dados de amostra no Armazenamento de perfis e executar vários relatórios sobre os dados, também é possível usar os endpoints de estimativa e pré-visualização da API do serviço de segmentação para exibir informações de nível de resumo sobre as definições de segmento. Essas informações ajudam a garantir que você esteja isolando o público-alvo esperado. Para saber mais sobre como trabalhar com visualizações e estimativas usando a API de segmentação, visite o [guia de visualização e estimativa de endpoints](../../segmentation/api/previews-and-estimates.md).
+Agora que você sabe como visualizar dados de amostra no armazenamento de perfis e executar vários relatórios sobre os dados, também é possível usar os endpoints de estimativa e pré-visualização da API do serviço de segmentação para exibir informações de nível de resumo sobre as definições de segmento. Essas informações ajudam a garantir que você esteja isolando o público-alvo esperado. Para saber mais sobre como trabalhar com visualizações e estimativas usando a API de segmentação, visite o [guia de visualização e estimativa de endpoints](../../segmentation/api/previews-and-estimates.md).
 

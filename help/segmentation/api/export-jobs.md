@@ -4,7 +4,7 @@ title: Endpoint da API de trabalhos de exportação de segmento
 description: Os trabalhos de exportação são processos assíncronos usados para manter membros do segmento de público-alvo em conjuntos de dados. Você pode usar o endpoint /export/jobs na API do Serviço de segmentação do Adobe Experience Platform, o que permite recuperar, criar e cancelar trabalhos de exportação de forma programática.
 role: Developer
 exl-id: 5b504a4d-291a-4969-93df-c23ff5994553
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '1615'
 ht-degree: 2%

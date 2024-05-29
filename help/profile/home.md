@@ -2,7 +2,7 @@
 title: Visão geral do Perfil do cliente em tempo real
 description: O Perfil do cliente em tempo real mescla dados de várias fontes e fornece acesso a esses dados na forma de perfis de clientes individuais e eventos de séries de tempo relacionados. Esse recurso permite que os profissionais de marketing promovam experiências coordenadas, consistentes e relevantes com seus públicos-alvo em vários canais.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: dde38e230a6bcb10cd38a12f644f2dd03f0cebaf
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '1821'
 ht-degree: 1%
@@ -117,9 +117,9 @@ A entrada em tempo real é possibilitada por meio de um processo chamado assimil
 
 Os Insights de capacidade de observação permitem expor as métricas principais no Adobe Experience Platform. Além de [!DNL Experience Platform] estatísticas de uso e indicadores de desempenho para vários [!DNL Platform] existem métricas específicas relacionadas ao perfil que permitem obter informações sobre taxas de solicitação recebidas, taxas de assimilação bem-sucedidas, tamanhos de registro assimilados e muito mais. Para saber mais, comece lendo o [Visão geral da API do Observability Insights](../observability/api/overview.md)e para obter uma lista completa das métricas do Perfil do cliente em tempo real, consulte a documentação em [métricas disponíveis](../observability/api/metrics.md#available-metrics).
 
-## Atualizar dados da Loja de Perfis
+## Atualizar dados do repositório de perfis
 
-Ocasionalmente, pode ser necessário atualizar os dados na Loja de perfis da sua organização. Por exemplo, talvez seja necessário corrigir registros ou alterar um valor de atributo. Isso pode ser feito por meio da assimilação em lote e requer um conjunto de dados habilitado para perfil configurado com uma tag upsert. Para obter mais informações sobre como configurar um conjunto de dados para atualizações de atributo, consulte o tutorial para [ativar um conjunto de dados para Perfil e substituição](../catalog/datasets/enable-upsert.md).
+Ocasionalmente, pode ser necessário atualizar os dados no armazenamento de perfil de sua organização. Por exemplo, talvez seja necessário corrigir registros ou alterar um valor de atributo. Isso pode ser feito por meio da assimilação em lote e requer um conjunto de dados habilitado para perfil configurado com uma tag upsert. Para obter mais informações sobre como configurar um conjunto de dados para atualizações de atributo, consulte o tutorial para [ativar um conjunto de dados para Perfil e substituição](../catalog/datasets/enable-upsert.md).
 
 ## Governança de dados e [!DNL Privacy]
 

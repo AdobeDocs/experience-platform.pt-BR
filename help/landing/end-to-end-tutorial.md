@@ -3,7 +3,7 @@ keywords: Experience Platform;página inicial;tópicos populares;CJA;análise de
 title: Exemplo de fluxo de trabalho de ponta a ponta do Adobe Experience Platform
 description: Conheça o fluxo de trabalho básico completo do Adobe Experience Platform em alto nível.
 exl-id: 0a4d3b68-05a5-43ef-bf0d-5738a148aa77
-source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '1832'
 ht-degree: 1%
@@ -56,7 +56,7 @@ Ao fazer upload dos dados para um novo conjunto de dados pela primeira vez ou ao
 
 ## Avalie seus dados
 
-Depois de gerar perfis com sucesso a partir dos dados assimilados, você pode avaliar os dados usando a segmentação. A segmentação é o processo de definir atributos ou comportamentos específicos compartilhados por um subconjunto de indivíduos da loja de perfis, a fim de distinguir um grupo comercializável de pessoas da sua base de clientes. Para saber mais sobre segmentação, leia o [visão geral do serviço de segmentação](../segmentation/home.md).
+Depois de gerar perfis com sucesso a partir dos dados assimilados, você pode avaliar os dados usando a segmentação. A segmentação é o processo de definir atributos ou comportamentos específicos compartilhados por um subconjunto de indivíduos da loja de Perfis para distinguir um grupo comercializável de pessoas da sua base de clientes. Para saber mais sobre segmentação, leia o [visão geral do serviço de segmentação](../segmentation/home.md).
 
 ### Criar uma definição de segmento
 

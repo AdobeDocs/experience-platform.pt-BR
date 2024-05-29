@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guia da interface do usuário do Serviço de segmentação
 description: Saiba como criar e gerenciar públicos e definições de segmento na interface do usuário do Adobe Experience Platform.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 4c1f29e61ee716a9655bc389bbe08b386ddd643b
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '4334'
-ht-degree: 3%
+ht-degree: 1%
 
 ---
 
@@ -45,22 +45,22 @@ Para saber mais, visite o [guia do painel de públicos-alvo](../../dashboards/gu
 
 ![O painel do público-alvo é exibido. Ele mostra vários widgets, incluindo o tamanho do público, perfis por identidade, sobreposição de identidade e a tendência de alteração do tamanho do público.](../../dashboards/images/segments/dashboard-overview.png)
 
-## Navegar {#browse}
+## Procurar {#browse}
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_browse_churncolumnname"
 >title="Churn"
->abstract="O churn representa a porcentagem de perfis que estão mudando em um público-alvo em comparação à última vez que a tarefa do segmento foi executada."
+>abstract="O churn representa a porcentagem de perfis que estão mudando em um público em comparação à última vez que o trabalho do segmento foi executado."
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_browse_evaluationmethodcolumnname"
 >title="Método de avaliação"
->abstract="Os métodos de avaliação de públicos-alvo incluem lote, transmissão e borda."
+>abstract="Os métodos de avaliação para públicos-alvo incluem lote, streaming e borda."
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_browse_addallsegmentstoschedule"
->title="Adicionar todos os públicos-alvo à programação"
->abstract="Permite incluir todos os públicos-alvo avaliados usando a segmentação em lote na atualização diária programada. Desabilite para remover todos os públicos-alvo da atualização programada."
+>title="Adicionar todos os públicos-alvo ao agendamento"
+>abstract="Permite incluir todos os públicos avaliados usando a segmentação em lote na atualização diária agendada. Desativar para remover todos os públicos-alvo da atualização agendada."
 
 Selecione o **[!UICONTROL Procurar]** para ver uma lista de todos os públicos-alvo da sua organização. Essa exibição lista as informações sobre os públicos-alvo, incluindo a contagem de perfis, a origem, a data de criação, a data da última modificação, as tags e o detalhamento.
 
@@ -113,7 +113,7 @@ O gráfico de pizza é exibido, mostrando um detalhamento dos públicos-alvo por
 
 | Campo | Descrição |
 | ----- | ----------- |
-| [!UICONTROL Nome] | O nome do público-alvo. |
+| [!UICONTROL Nome] | O nome do público. |
 | [!UICONTROL Contagem de perfis] | O número total de perfis qualificados para o público-alvo. |
 | [!UICONTROL Origem] | A origem do público. Isso indica de onde o público-alvo vem. Os valores possíveis incluem Serviço de segmentação, Upload personalizado, Composição de público-alvo e Audience Manager. |
 | [!UICONTROL Status do ciclo de vida] | O status do público. Os valores possíveis para esse campo incluem `Draft`, `Inactive`, e `Published`. Mais informações sobre os status do ciclo de vida, incluindo o que significam os diferentes estados e como mover públicos para diferentes estados do ciclo de vida, leia a [seção status do ciclo de vida das Perguntas frequentes sobre segmentação](../faq.md#lifecycle-status). |
@@ -226,7 +226,7 @@ Quando você aplica ações em massa a esses públicos, as seguintes condições
 - Você **não é possível** exclua um público-alvo que esteja sendo usado em uma ativação de destino.
 - Se você selecionar um filtro, os públicos selecionados **irá** redefinir.
 
-### Detalhes do público {#audience-details}
+### Detalhes do público-alvo {#audience-details}
 
 Para ver mais detalhes sobre um público específico, selecione o nome de um público na **[!UICONTROL Procurar]** guia.
 
@@ -250,7 +250,7 @@ Selecionar **[!UICONTROL Aplicar rótulos de acesso]** permite gerenciar os rót
 
 >[!BEGINTABS]
 
->[!TAB Composição do público-alvo]
+>[!TAB Composição de público]
 
 ![A página de detalhes do público-alvo é exibida, com a tag [!UICONTROL Abrir composição] botão realçado.](../images/ui/overview/audience-details-open-composition.png)
 
@@ -278,7 +278,7 @@ Selecionar **[!UICONTROL Editar propriedades]** O permite editar os detalhes bá
 
 A variável **[!UICONTROL Total de público]** mostra o número total de perfis qualificados para o público-alvo.
 
-As estimativas são geradas usando um tamanho de amostra dos dados de amostra desse dia. Se houver menos de 1 milhão de entidades no armazenamento de perfil, o conjunto de dados completo será usado; para entre 1 e 20 milhões de entidades, será usado 1 milhão de entidades; e para mais de 20 milhões de entidades, será usado 5% do total de entidades. Mais informações sobre a geração de estimativas podem ser encontradas na [seção geração de estimativa](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) do tutorial de criação de público-alvo.
+As estimativas são geradas usando um tamanho de amostra dos dados de amostra desse dia. Se houver menos de 1 milhão de entidades no armazenamento do Perfil, o conjunto de dados completo será usado; para entre 1 e 20 milhões de entidades, será usado 1 milhão de entidades; e para mais de 20 milhões de entidades, será usado 5% do total de entidades. Mais informações sobre a geração de estimativas podem ser encontradas na [seção geração de estimativa](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) do tutorial de criação de público-alvo.
 
 **Destinos ativados** {#activated-destinations}
 
@@ -294,13 +294,13 @@ Abaixo está uma amostra de perfis qualificados para o segmento, detalhando info
 
 A maneira como a amostragem de dados é acionada depende do método de assimilação.
 
-Para assimilação em lote, o armazenamento de perfil é automaticamente verificado a cada quinze minutos para ver se um novo lote foi assimilado com êxito desde que o último trabalho de amostragem foi executado. Se esse for o caso, o armazenamento de perfil será digitalizado posteriormente para ver se houve pelo menos uma alteração de 5% no número de registros. Se essas condições forem atendidas, um novo trabalho de amostragem será acionado.
+Para assimilação em lote, o Armazenamento de perfis é automaticamente verificado a cada quinze minutos para ver se um novo lote foi assimilado com êxito desde que o último trabalho de amostragem foi executado. Se esse for o caso, o armazenamento de perfil será digitalizado posteriormente para ver se houve pelo menos uma alteração de 5% no número de registros. Se essas condições forem atendidas, um novo trabalho de amostragem será acionado.
 
-Para a assimilação por transmissão, o armazenamento de perfil é verificado automaticamente a cada hora para ver se houve pelo menos 5% de alteração no número de registros. Se essa condição for atendida, um novo trabalho de amostragem será acionado.
+Para a assimilação de streaming, o armazenamento de perfil é automaticamente verificado a cada hora para ver se houve pelo menos 5% de alteração no número de registros. Se essa condição for atendida, um novo trabalho de amostragem será acionado.
 
 O tamanho da amostra da verificação depende do número geral de entidades no armazenamento de perfis. Esses tamanhos de amostra são representados na tabela a seguir:
 
-| Entidades na loja de perfis | Tamanho da amostra |
+| Entidades no armazenamento de perfis | Tamanho da amostra |
 | ------------------------- | ----------- |
 | Menos de 1 milhão | Conjunto de dados completo |
 | 1 a 20 milhões | 1 milhão |
@@ -332,7 +332,7 @@ Selecionar **[!UICONTROL Criar regra]** direciona você ao Construtor de segment
 
 ![A área de trabalho do Construtor de segmentos é exibida.](../images/ui/overview/segment-builder.png)
 
-### Importação de um público-alvo {#import-audience}
+### Importação de um público {#import-audience}
 
 >[!IMPORTANT]
 >
@@ -429,7 +429,7 @@ Um popover é exibido, listando todos os campos que podem ser exibidos dentro da
 
 | Campo | Descrição |
 | ----- | ----------- | 
-| [!UICONTROL Nome] | O nome do público-alvo. |
+| [!UICONTROL Nome] | O nome do público. |
 | [!UICONTROL Status] | O status do público. Os valores possíveis para esse campo incluem `Draft`, `Inactive`, e `Published`. |
 | [!UICONTROL Criado] | A hora e a data em que o público-alvo foi criado. |
 | [!UICONTROL Criado por] | O nome da pessoa que criou o público-alvo. |

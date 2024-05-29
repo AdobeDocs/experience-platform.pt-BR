@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Guia da API de assimilação em lote
 description: Este documento fornece um guia abrangente para desenvolvedores que trabalham com APIs de assimilação em lote para o Adobe Experience Platform.
 exl-id: 4ca9d18d-1b65-4aa7-b608-1624bca19097
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
-source-wordcount: '2411'
-ht-degree: 5%
+source-wordcount: '2383'
+ht-degree: 6%
 
 ---
 
@@ -750,7 +750,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ## Correção de um lote
 
-Ocasionalmente, pode ser necessário atualizar os dados na Loja de perfis da sua organização. Por exemplo, talvez seja necessário corrigir registros ou alterar um valor de atributo. A Adobe Experience Platform oferece suporte à atualização ou ao patch de dados da Loja de perfis por meio de uma ação de substituição ou &quot;patch de um lote&quot;.
+Ocasionalmente, pode ser necessário atualizar os dados no armazenamento de perfil de sua organização. Por exemplo, talvez seja necessário corrigir registros ou alterar um valor de atributo. A Adobe Experience Platform oferece suporte à atualização ou correção de dados do Repositório de perfis por meio de uma ação de substituição ou &quot;correção de um lote&quot;.
 
 >[!NOTE]
 >
@@ -759,7 +759,7 @@ Ocasionalmente, pode ser necessário atualizar os dados na Loja de perfis da sua
 Para corrigir um lote, é necessário o seguinte:
 
 - **Um conjunto de dados ativado para Atualizações de perfil e atributo.** Isso é feito por meio de tags de conjunto de dados e requer uma `isUpsert:true` tag a ser adicionada à `unifiedProfile` matriz. Para obter detalhes sobre as etapas que mostram como criar um conjunto de dados ou configurar um conjunto de dados existente para substituição, siga o tutorial para [ativar um conjunto de dados para atualizações de Perfil](../../catalog/datasets/enable-upsert.md).
-- **Um arquivo Parquet contendo os campos a serem corrigidos e campos de identidade para o Perfil.** O formato de dados para corrigir um lote é semelhante ao processo normal de assimilação de lote. A entrada necessária é um arquivo Parquet e, além dos campos que serão atualizados, os dados carregados devem conter os campos de identidade para corresponder aos dados na Loja de Perfis.
+- **Um arquivo Parquet contendo os campos a serem corrigidos e campos de identidade para o Perfil.** O formato de dados para corrigir um lote é semelhante ao processo normal de assimilação de lote. A entrada necessária é um arquivo Parquet e, além dos campos que serão atualizados, os dados carregados devem conter os campos de identidade para corresponder aos dados no armazenamento de Perfil.
 
 Depois de ativar um conjunto de dados para Perfil e substituição e um arquivo do Parquet contendo os campos que você deseja corrigir, bem como os campos de identidade necessários, você pode seguir as etapas para [Assimilar arquivos do Parquet](#ingest-parquet-files) para concluir o patch por meio da assimilação em lote.
 

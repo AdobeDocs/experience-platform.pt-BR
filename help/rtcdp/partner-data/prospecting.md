@@ -3,10 +3,10 @@ title: Interagir e adquirir novos clientes sem depender de cookies de terceiros
 description: Saiba como engajar e adquirir novos clientes por meio de casos de uso de prospecção, sem depender de cookies de terceiros.
 feature: Use Cases, Customer Acquisition
 exl-id: b9e7b3af-2a13-4904-bd12-e3ed05a1988e
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '2074'
-ht-degree: 86%
+ht-degree: 84%
 
 ---
 
@@ -70,8 +70,8 @@ Ao concluir as etapas para implementar o caso de uso, você usará a seguinte fu
 * [Rótulos de uso de dados](/help/data-governance/labels/overview.md)
 * [Conjuntos de dados](/help/catalog/datasets/overview.md)
 * [Origens](/help/sources/home.md)
-* [Perfis de cliente potencial](/help/profile/ui/prospect-profile.md)
-* [Públicos-alvo potenciais](/help/segmentation/ui/prospect-audience.md)
+* [Perfis em potencial](/help/profile/ui/prospect-profile.md)
+* [Públicos-alvo em potencial](/help/segmentation/ui/prospect-audience.md)
 * [Destinos](/help/destinations/home.md)
 
 ### Detalhes de licença de perfil de terceiros do parceiro {#license-profiles-from-partner}
@@ -110,7 +110,7 @@ A classe **[!UICONTROL Perfil individual em potencial do XDM]** vem pré-configu
 
 ![Campos pré-configurados para a classe Perfil individual em potencial do XDM.](/help/rtcdp/assets/partner-data/prospecting/preconfigured-fields-individual-prospect-class.png)
 
-Em seguida, selecione a identidade partnerID criada anteriormente como a identidade principal do esquema. Os registros de perfil devem ter um identificador principal. Essa etapa é necessária para garantir que os dados do prospecto possam ser carregados no armazenamento de perfis e disponibilizados para segmentação e ativação.
+Em seguida, selecione a identidade partnerID criada anteriormente como a identidade principal do esquema. Os registros de perfil devem ter um identificador principal. Essa etapa é necessária para garantir que os dados de clientes potenciais possam ser carregados no armazenamento de Perfil e disponibilizados para segmentação e ativação.
 
 >[!AVAILABILITY]
 >

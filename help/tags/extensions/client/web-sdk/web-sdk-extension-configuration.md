@@ -2,16 +2,16 @@
 title: Configurar a extensão de tag do SDK da Web
 description: Saiba como configurar a extensão de tag do SDK da Web do Experience Platform na interface do usuário de tags.
 exl-id: 22425daa-10bd-4f06-92de-dff9f48ef16e
-source-git-commit: 16e49628df73d5ce97ef890dbc0a6f2c8e7de346
+source-git-commit: 1d1bb754769defd122faaa2160e06671bf02c974
 workflow-type: tm+mt
-source-wordcount: '1552'
+source-wordcount: '1734'
 ht-degree: 6%
 
 ---
 
 # Configurar a extensão de tag do SDK da Web
 
-A variável [!DNL Web SDK] A extensão de tag envia dados para a Adobe Experience Cloud a partir das propriedades da Web por meio da Rede de borda do Experience Platform.
+A variável [!DNL Web SDK] a extensão de tag envia dados para a Adobe Experience Cloud a partir das propriedades da web por meio do Edge Network Experience Platform.
 
 A extensão permite transmitir dados para a Platform, sincronizar identidades, processar sinais de consentimento do cliente e coletar automaticamente dados de contexto.
 
@@ -47,7 +47,7 @@ As opções de configuração na parte superior da página informam à Adobe Exp
 
 Essa seção permite selecionar os fluxos de dados que devem ser usados para cada um dos três ambientes disponíveis (produção, preparo e desenvolvimento).
 
-Quando uma solicitação é enviada para a Rede de borda, uma ID de fluxo de dados é usada para fazer referência à configuração do lado do servidor. Você pode atualizar a configuração sem precisar fazer alterações de código no site.
+Quando uma solicitação é enviada para o Edge Network, uma ID de sequência de dados é usada para fazer referência à configuração do lado do servidor. Você pode atualizar a configuração sem precisar fazer alterações de código no site.
 
 Consulte o guia sobre [sequências de dados](../../../../datastreams/overview.md) para saber como configurar um fluxo de dados.
 
@@ -113,9 +113,24 @@ Ao usar o trecho pré-ocultação, o Adobe recomenda usar o mesmo [!DNL CSS] reg
 
 ![Imagem que mostra as configurações da coleção de dados da extensão de tag do SDK da Web na interface do usuário de tags](assets/web-sdk-ext-collection.png)
 
-* **[!UICONTROL Função de retorno de chamada]**: a função de retorno de chamada fornecida na extensão também é chamada de [`onBeforeEventSend` função](/help/web-sdk/commands/configure/onbeforeeventsend.md) na biblioteca. Essa função permite modificar eventos globalmente antes que sejam enviados para a Rede de borda.
+* **[!UICONTROL Função de retorno de chamada]**: a função de retorno de chamada fornecida na extensão também é chamada de [`onBeforeEventSend` função](/help/web-sdk/commands/configure/onbeforeeventsend.md) na biblioteca. Essa função permite modificar eventos globalmente antes que sejam enviados para o Edge Network.
 * **[!UICONTROL Ativar a coleta de dados de cliques]**: o SDK da Web pode coletar automaticamente informações de cliques em links para você. Por padrão, esse recurso está ativado, mas pode ser desativado usando essa opção. Os links também são rotulados como links de download se contiverem uma das expressões de download listadas no [!UICONTROL Baixar qualificador de link] caixa de texto. O Adobe fornece alguns qualificadores padrão de link de download. Você pode editá-los de acordo com suas necessidades.
 * **[!UICONTROL Dados de contexto coletados automaticamente]**: por padrão, o SDK da Web coleta determinados dados de contexto relacionados ao dispositivo, Web, ambiente e contexto de local. Se não quiser que esses dados sejam coletados ou se quiser apenas determinadas categorias de dados, selecione **[!UICONTROL Informações de contexto específicas]** e selecione os dados que deseja coletar. Consulte [`context`](/help/web-sdk/commands/configure/context.md) para obter mais informações.
+
+## Definir configurações de coleção de mídia {#media-collection}
+
+O recurso de coleção de mídia ajuda a coletar dados relacionados a sessões de mídia no site.
+
+Os dados coletados podem incluir informações sobre reprodução de mídia, pausas, conclusões e outros eventos relacionados. Depois de coletados, é possível enviar esses dados para a Adobe Experience Platform e/ou Adobe Analytics para gerar relatórios. Esse recurso fornece uma solução abrangente para rastrear e entender o comportamento de consumo de mídia no site.
+
+![Imagem que mostra as configurações da coleção de mídia da extensão de tag do SDK da Web na interface do usuário de tags](assets/media-collection.png)
+
+
+* **[!UICONTROL Canal]**: o nome do canal em que a coleção de mídia ocorre. Exemplo: `Video channel`.
+* **[!UICONTROL Nome do player]**: o nome do reprodutor de mídia.
+* **[!UICONTROL Versão do aplicativo]**: a versão do aplicativo do reprodutor de mídia.
+* **[!UICONTROL Intervalo de ping principal]**: Frequência de pings para o conteúdo principal, em segundos. O valor padrão é `10`. Os valores podem variar de `10` para `50` segundos.  Se nenhum valor for especificado, o valor padrão será usado ao usar [sessões rastreadas automaticamente](../../../../web-sdk/commands/createmediasession.md#automatic).
+* **[!UICONTROL Intervalo de ping do anúncio]**: Frequência de pings para conteúdo de anúncio, em segundos. O valor padrão é `10`. Os valores podem variar de `1` para `10` segundos. Se nenhum valor for especificado, o valor padrão será usado ao usar [sessões rastreadas automaticamente](../../../../web-sdk/commands/createmediasession.md#automatic)
 
 ## Configurar substituições de sequência de dados {#datastream-overrides}
 
@@ -126,7 +141,7 @@ Isso ajuda a acionar comportamentos de sequência de dados diferentes dos tradic
 Criar uma substituição de configuração da sequência de dados é um processo de duas etapas:
 
 1. Primeiro, você deve definir as substituições de configuração da sequência na [página de configuração da sequência de dados](/help/datastreams/configure.md).
-2. Em seguida, você deve enviar as substituições para a Rede de borda por meio de um comando do SDK da Web ou usando a extensão de tag do SDK da Web.
+2. Em seguida, você deve enviar as substituições para o Edge Network por meio de um comando do SDK da Web ou usando a extensão de tag do SDK da Web.
 
 Ver a sequência de dados [documentação de substituições de configuração](/help/datastreams/overrides.md) para obter instruções detalhadas sobre como substituir configurações de sequência de dados.
 
@@ -140,6 +155,6 @@ As substituições de fluxo de dados devem ser configuradas com base no ambiente
 
 ## Definir configurações avançadas
 
-Use o **[!UICONTROL Caminho base da borda]** se precisar alterar o caminho base usado para interagir com a rede de borda. Isso não deve exigir atualização, mas no caso de você participar de um beta ou alfa, o Adobe pode solicitar que você altere esse campo.
+Use o **[!UICONTROL Caminho base da borda]** se precisar alterar o caminho base usado para interagir com o Edge Network. Isso não deve exigir atualização, mas no caso de você participar de um beta ou alfa, o Adobe pode solicitar que você altere esse campo.
 
 ![Imagem mostrando as configurações avançadas usando a página de extensão de tag do SDK da Web.](assets/advanced-settings.png)

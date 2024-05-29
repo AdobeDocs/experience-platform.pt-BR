@@ -1,15 +1,15 @@
 ---
 solution: Data Collection
 audience: user
-user-guide-title: Ajuda do SDK da Web da Adobe Experience Platform
+user-guide-title: Ajuda do SDK da Web do Adobe Experience Platform
 breadcrumb-title: Guia do SDK da Web
-user-guide-description: Interaja com os serviços da Experience Cloud por meio da Rede de borda.
+user-guide-description: Interaja com os serviços Experience Cloud por meio da rede de borda.
 feature: Web SDK
 role: Developer
-source-git-commit: 091aee1a5bb81d86925cbcde7c2ae3b354a3aebe
+source-git-commit: ec801c550740c4cba3481a961599f548518bb032
 workflow-type: tm+mt
-source-wordcount: '222'
-ht-degree: 23%
+source-wordcount: '226'
+ht-degree: 14%
 
 ---
 
@@ -35,6 +35,7 @@ ht-degree: 23%
       * [edgeConfigId](commands/configure/edgeconfigid.md)
       * [edgeDomain](commands/configure/edgedomain.md)
       * [idMigrationEnabled](commands/configure/idmigrationenabled.md)
+      * [streamingMedia](commands/configure/streamingmedia.md)
       * [onBeforeEventSend](commands/configure/onbeforeeventsend.md)
       * [onBeforeLinkClickSend](commands/configure/onbeforelinkclicksend.md)
       * [orgId](commands/configure/orgid.md)
@@ -47,17 +48,20 @@ ht-degree: 23%
       * [documentUnloading](commands/sendevent/documentunloading.md)
       * [personalização](commands/sendevent/personalization.md)
       * [renderDecision](commands/sendevent/renderdecisions.md)
-      * [Tipo](commands/sendevent/type.md)
+      * [tipo](commands/sendevent/type.md)
       * [xdm](commands/sendevent/xdm.md)
    * [appendIdentityToUrl](commands/appendidentitytourl.md)
    * [applyPropositions](commands/applypropositions.md)
    * [applyResponse](commands/applyresponse.md)
+   * [createMediaSession](commands/createmediasession.md)
    * [getIdentity](commands/getidentity.md)
    * [getLibraryInfo](commands/getlibraryinfo.md)
    * [setConsent](commands/setconsent.md)
    * [setDebug](commands/setdebug.md)
+   * [sendMediaEvent](commands/sendmediaevent.md)
    * [Configurar substituições da sequência de dados](commands/datastream-overrides.md)
    * [Respostas de comando](commands/command-responses.md)
+   * [getMediaAnalyticsTracker](commands/getmediaanalyticstracker.md)
 
 * Identidade {#identity}
    * [Visão geral](identity/overview.md)

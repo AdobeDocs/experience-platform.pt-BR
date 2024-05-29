@@ -3,10 +3,10 @@ title: Tipos de ação na extensão SDK da Web do Adobe Experience Platform
 description: Saiba mais sobre os diferentes tipos de ação fornecidos pela extensão de tag do Adobe Experience Platform Web SDK.
 solution: Experience Platform
 exl-id: a4bf0bb9-59b4-4c43-97e6-387768176517
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: 377be6d97e6da9b4aaacfa23a188131bd38e66f4
 workflow-type: tm+mt
-source-wordcount: '741'
-ht-degree: 2%
+source-wordcount: '1036'
+ht-degree: 1%
 
 ---
 
@@ -48,6 +48,33 @@ O esquema XDM usado para o editor é o esquema selecionado na variável [!UICONT
 ![](assets/update-variable-set-property.png)
 
 Há algumas diferenças entre o editor na ação de atualização de variáveis e o editor no elemento de dados do objeto XDM. Primeiro, a ação atualizar variável tem um item de nível raiz rotulado como &quot;xdm&quot;. Se você clicar nesse item, poderá especificar um elemento de dados a ser usado para definir o objeto inteiro. Segundo, a ação de atualização da variável tem caixas de seleção para limpar os dados do objeto xdm. Clique em uma das propriedades à esquerda e marque a caixa de seleção à direita para limpar o valor. Isso limpará o valor atual antes de definir quaisquer valores na variável.
+
+## Enviar evento de mídia {#send-media-event}
+
+Envia um evento de mídia para o Adobe Experience Platform e/ou Adobe Analytics. Essa ação é útil ao rastrear eventos de mídia no site. Selecione uma instância (se você tiver mais de uma). A ação requer um `playerId` que representa um identificador exclusivo de uma sessão de mídia rastreada. Exige também uma **[!UICONTROL Qualidade da experiência]** e uma `playhead` elemento de dados ao iniciar uma sessão de mídia.
+
+![Imagem da interface do usuário da Platform mostrando a tela de evento enviar mídia.](assets/send-media-event.png)
+
+A variável **[!UICONTROL Enviar evento de mídia]** o tipo de ação é compatível com as seguintes propriedades:
+
+- **[!UICONTROL Instância]**: a instância do SDK da Web que está sendo usada.
+- **[!UICONTROL Tipo de evento de mídia]**: o tipo de evento de mídia que está sendo rastreado.
+- **[!UICONTROL ID do player]**: O identificador exclusivo da sessão de mídia.
+- **[!UICONTROL Indicador de reprodução]**: a posição atual da reprodução de mídia, em segundos.
+- **[!UICONTROL Detalhes da sessão de mídia]**: ao enviar um evento de início de mídia, os detalhes da sessão de mídia necessários devem ser especificados.
+- **[!UICONTROL Detalhes do capítulo]**: nesta seção, você pode especificar os detalhes do capítulo ao enviar um evento de mídia de início de capítulo.
+- **[!UICONTROL Detalhes de publicidade]**: ao enviar um `AdBreakStart` evento, você deve especificar os detalhes de publicidade necessários.
+- **[!UICONTROL Detalhes do pod de publicidade]**: detalhes sobre o pod de publicidade ao enviar um `AdStart` evento.
+- **[!UICONTROL Detalhes do erro]**: detalhes sobre o erro de reprodução que está sendo rastreado.
+- **[!UICONTROL Detalhes da atualização de estado]**: o estado do player que está sendo atualizado.
+- **[!UICONTROL Metadados personalizados]**: os metadados personalizados sobre o evento de mídia que está sendo rastreado.
+- **[!UICONTROL Qualidade da experiência]**: a qualidade da mídia dos dados de experiência que estão sendo rastreados.
+
+## Obter o Media Analytics Tracker {#get-media-analytics-tracker}
+
+Essa ação é usada para obter a API herdada do Media Analytics. Ao configurar a ação e um nome de objeto é fornecido, a API herdada do Media Analytics será exportada para esse objeto de janela. Se nenhum for fornecido, ele será exportado para `window.Media` como a biblioteca Media JS atual faz.
+
+![Imagem da interface do usuário da plataforma mostrando o tipo de ação Obter rastreador do Media Analytics.](assets/get-media-analytics-tracker.png)
 
 ## Próximas etapas {#next-steps}
 

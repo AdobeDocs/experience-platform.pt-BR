@@ -4,10 +4,10 @@ title: Painel de Uso da Licença
 description: A Adobe Experience Platform fornece um painel por meio do qual você pode visualizar informações importantes sobre o uso de licença da sua organização.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: a8b5ed09e8e28075a3a4f37ad30f01c1cc389b9c
+source-git-commit: b277de0bd7b65f8e3828c7ab0b4e00644eeddde5
 workflow-type: tm+mt
-source-wordcount: '2107'
-ht-degree: 8%
+source-wordcount: '2069'
+ht-degree: 1%
 
 ---
 
@@ -16,13 +16,13 @@ ht-degree: 8%
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseUsage"
 >title="Painel de uso da licença"
->abstract="O painel de uso da licença oferece informações sobre os produtos da Adobe Experience Platform que você adquiriu. A visão geral do painel exibe as métricas principais de seus produtos, incluindo o uso de cada uma das métricas principais e o período de licença contratado. O espaço de trabalho de detalhes exibe um detalhamento das métricas para cada produto em sandboxes específicas."
+>abstract="O painel de uso de licença oferece informações sobre os produtos Adobe Experience Platform que você adquiriu. A visão geral do painel exibe as métricas principais de seus produtos, incluindo o uso de cada uma das métricas principais e a quantidade de licença contratada. O espaço de trabalho de detalhes exibe um detalhamento das métricas para cada produto em sandboxes específicas."
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseUsage_prediction"
 >title="Painel de uso da licença"
->abstract="O painel de uso da licença oferece informações sobre os produtos da Adobe Experience Platform que você adquiriu. A visão geral do painel exibe as métricas principais de seus produtos, incluindo o uso de cada uma das métricas principais e o período de licença contratado. O espaço de trabalho de detalhes exibe um detalhamento das métricas para cada produto em sandboxes específicas.<br><br>As previsões de uso são atualizadas mensalmente no final do mês e preveem seu uso para o próximo período de seis meses. Para reduzir o uso, configure a expiração de conjuntos de dados ou de perfis pseudônimos para as sandboxes e os conjuntos de dados."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html?lang=pt-BR" text="Expirações de conjuntos de dados"
+>abstract="O painel de uso de licença oferece informações sobre os produtos Adobe Experience Platform que você adquiriu. A visão geral do painel exibe as métricas principais de seus produtos, incluindo o uso de cada uma das métricas principais e a quantidade de licença contratada. O espaço de trabalho de detalhes exibe um detalhamento das métricas para cada produto em sandboxes específicas."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html" text="Expirações do conjunto de dados"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=pt-BR" text="Expirações de dados de perfis pseudônimos"
 
 Você pode exibir informações importantes sobre o uso de licenças da sua organização por meio da Adobe Experience Platform [!UICONTROL Uso da licença] painel. As informações exibidas aqui são capturadas durante um instantâneo diário da sua instância da Platform.

@@ -2,10 +2,10 @@
 title: Criar e configurar sequências de dados
 description: Saiba como conectar a integração do SDK da Web do lado do cliente a outros produtos da Adobe e destinos de terceiros.
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
-source-git-commit: 370ab0b2a575cc2b5d17f3ae2b3b0b6a6999c462
+source-git-commit: 43d97ea4d850a36d350894d70a082464a21e449d
 workflow-type: tm+mt
-source-wordcount: '2738'
-ht-degree: 54%
+source-wordcount: '2753'
+ht-degree: 53%
 
 ---
 
@@ -175,7 +175,7 @@ Esse serviço controla se e como os dados são enviados para a Adobe Experience 
 | [!UICONTROL Conjunto de dados do evento] | **(Obrigatório)** Selecione o conjunto de dados da Platform para o qual os dados do evento de cliente serão transmitidos. Este esquema deve usar a [classe XDM ExperienceEvent](../xdm/classes/experienceevent.md). Para adicionar outros conjuntos de dados, selecione **[!UICONTROL Adicionar conjunto de dados do evento]**. |
 | [!UICONTROL Conjunto de dados do perfil] | Selecione o conjunto de dados da Platform para o qual os dados do atributo de cliente serão enviados. Este esquema deve usar a [classe de perfil individual XDM](../xdm/classes/individual-profile.md). |
 | [!UICONTROL Offer Decisioning] | Habilita o Offer Decisioning para implementações do SDK da Web. Consulte o guia sobre [utilização do Offer Decisioning com o SDK da Web](../web-sdk/personalization/offer-decisioning/offer-decisioning-overview.md) para obter mais detalhes sobre a implementação.<br><br>Para obter mais informações sobre os recursos do Offer Decisioning, consulte a [documentação do Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/get-started-decision/starting-offer-decisioning.html?lang=pt-BR). |
-| [!UICONTROL Segmentação de borda] | Habilita [segmentação de borda](../segmentation/ui/edge-segmentation.md) para esse fluxo de dados. Quando o SDK envia dados por meio de uma sequência de dados habilitada para segmentação de borda, todas as associações de segmento atualizadas do perfil em questão são enviadas de volta na resposta.<br><br>Essa opção pode ser usada em combinação com os [!UICONTROL destinos de personalização] para [casos de uso de personalização da próxima página](../destinations/ui/activate-edge-personalization-destinations.md). |
+| [!UICONTROL Segmentação de borda] | Habilita [segmentação de borda](../segmentation/ui/edge-segmentation.md) para esse fluxo de dados. Quando a variável [SDK da Web](../web-sdk/home.md) ou [API do servidor Edge Network](../server-api/overview.md) O envia dados por meio de um fluxo de dados com a segmentação de borda ativada. As associações de público-alvo atualizadas para o perfil em questão são enviadas de volta na resposta.<br><br>Você pode usar essa opção em combinação com **[!UICONTROL Destinos de personalização]** para casos de uso de personalização de mesma página e próxima página por meio do [destinos de borda](../destinations/ui/activate-edge-personalization-destinations.md) ou [!DNL Offer Decisioning]. |
 | [!UICONTROL Destinos de personalização] | Ao habilitar essa opção após marcar a caixa de seleção [!UICONTROL Segmentação de borda], ela permite que a sequência de dados se conecte a destinos de personalização, como a [personalização individual](../destinations/catalog/personalization/custom-personalization.md).<br><br>Consulte a documentação de destinos para obter etapas específicas sobre [configuração de destinos de personalização](../destinations/ui/activate-edge-personalization-destinations.md). |
 | [!UICONTROL Adobe Journey Optimizer] | Habilita [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=pt-BR) para esse fluxo de dados. <br><br> Habilitar essa opção permite que a sequência de dados retorne conteúdo personalizado de campanhas de entrada baseadas na Web e em aplicativos no [!DNL Adobe Journey Optimizer]. Esta opção exige que a [!UICONTROL Segmentação de borda] esteja ativa. Se [!UICONTROL Segmentação de borda] estiver desmarcada, essa opção ficará esmaecida. |
 

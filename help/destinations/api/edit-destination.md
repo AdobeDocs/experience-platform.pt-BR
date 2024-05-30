@@ -4,9 +4,9 @@ title: Editar conexões de destino usando a API do Serviço de fluxo
 type: Tutorial
 description: Saiba como editar vários componentes de uma conexão de destino usando a API de serviço de fluxo.
 exl-id: d6d27d5a-e50c-4170-bb3a-c4cbf2b46653
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 2a72f6886f7a100d0a1bf963eedaed8823a7b313
 workflow-type: tm+mt
-source-wordcount: '1580'
+source-wordcount: '1605'
 ht-degree: 5%
 
 ---
@@ -54,7 +54,7 @@ Todos os recursos no Experience Platform, incluindo os que pertencem a [!DNL Flo
 >
 >Se a variável `x-sandbox-name` cabeçalho não for especificado, as solicitações serão resolvidas no `prod` sandbox.
 
-Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabeçalho de tipo de mídia adicional:
+Todas as solicitações que contêm uma carga (`POST`, `PUT`, `PATCH`) exigem um cabeçalho de tipo de mídia adicional:
 
 * `Content-Type: application/json`
 
@@ -177,17 +177,19 @@ Uma resposta bem-sucedida retorna os detalhes atuais do fluxo de dados, incluind
 
 Os componentes de uma conexão de destino diferem de acordo com o destino. Por exemplo, para [!DNL Amazon S3] destinos, é possível atualizar o compartimento e o caminho para onde os arquivos são exportados. Para [!DNL Pinterest] destinos, você poderá atualizar seus [!DNL Pinterest Advertiser ID] e para [!DNL Google Customer Match] você pode atualizar seu [!DNL Pinterest Account ID].
 
-Para atualizar componentes de uma conexão de destino, execute uma solicitação PATCH para o `/targetConnections/{TARGET_CONNECTION_ID}` ao fornecer a ID da conexão de destino, a versão e os novos valores que deseja usar. Lembre-se de que você obteve a ID de conexão de destino na etapa anterior, ao inspecionar um fluxo de dados existente para o destino desejado.
+Para atualizar componentes de uma conexão de destino, execute uma `PATCH` solicitação à `/targetConnections/{TARGET_CONNECTION_ID}` ao fornecer a ID da conexão de destino, a versão e os novos valores que deseja usar. Lembre-se de que você obteve a ID de conexão de destino na etapa anterior, ao inspecionar um fluxo de dados existente para o destino desejado.
 
 >[!IMPORTANT]
 >
->A variável `If-Match` o cabeçalho é necessário ao fazer uma solicitação PATCH. O valor desse cabeçalho é a versão exclusiva da conexão de destino que você deseja atualizar. O valor da tag é atualizado com cada atualização bem-sucedida de uma entidade de fluxo, como fluxo de dados, conexão de destino e outras.
+>A variável `If-Match` o cabeçalho é necessário ao criar um `PATCH` solicitação. O valor desse cabeçalho é a versão exclusiva da conexão de destino que você deseja atualizar. O valor da tag é atualizado com cada atualização bem-sucedida de uma entidade de fluxo, como fluxo de dados, conexão de destino e outras.
 >
 > Para obter a versão mais recente do valor da tag, execute uma solicitação GET para o `/targetConnections/{TARGET_CONNECTION_ID}` endpoint, onde `{TARGET_CONNECTION_ID}` é a ID de conexão de destino que você deseja atualizar.
+>
+> Certifique-se de vincular o valor do `If-Match` cabeçalho entre aspas duplas, como nos exemplos abaixo, ao criar `PATCH` solicitações.
 
 Abaixo estão alguns exemplos de atualização de parâmetros na especificação de conexão de destino para diferentes tipos de destinos. Mas a regra geral para atualizar parâmetros para qualquer destino é a seguinte:
 
-Obtenha a ID de fluxo de dados da conexão > obtenha a ID de conexão de destino > PATCH a conexão de destino com valores atualizados para os parâmetros desejados.
+Obter a ID do fluxo de dados da conexão > obter a ID da conexão de destino > `PATCH` a conexão de destino com valores atualizados para os parâmetros desejados.
 
 >[!BEGINSHADEBOX]
 
@@ -332,19 +334,21 @@ Uma resposta bem-sucedida retorna a ID de conexão de destino e uma tag atualiza
 
 Edite a conexão básica quando quiser atualizar as credenciais de um destino. Os componentes de uma conexão base diferem por destino. Por exemplo, para [!DNL Amazon S3] destinos, você poderá atualizar a chave de acesso e a chave secreta para o [!DNL Amazon S3] localização.
 
-Para atualizar componentes de uma conexão base, execute uma solicitação PATCH para o `/connections` ao fornecer a ID de conexão básica, a versão e os novos valores que deseja usar.
+Para atualizar componentes de uma conexão básica, execute uma `PATCH` solicitação à `/connections` ao fornecer a ID de conexão básica, a versão e os novos valores que deseja usar.
 
 Lembre-se de que você recebeu a ID de conexão básica em um [etapa anterior](#look-up-dataflow-details), quando você inspecionou um fluxo de dados existente para o destino desejado referente ao parâmetro `baseConnection`.
 
 >[!IMPORTANT]
 >
->A variável `If-Match` o cabeçalho é necessário ao fazer uma solicitação PATCH. O valor desse cabeçalho é a versão exclusiva da conexão base que você deseja atualizar. O valor da tag é atualizado com cada atualização bem-sucedida de uma entidade de fluxo, como fluxo de dados, conexão de base e outras.
+>A variável `If-Match` o cabeçalho é necessário ao criar um `PATCH` solicitação. O valor desse cabeçalho é a versão exclusiva da conexão base que você deseja atualizar. O valor da tag é atualizado com cada atualização bem-sucedida de uma entidade de fluxo, como fluxo de dados, conexão de base e outras.
 >
 > Para obter a versão mais recente do valor Etag, execute uma solicitação GET para o `/connections/{BASE_CONNECTION_ID}` endpoint, onde `{BASE_CONNECTION_ID}` é a ID de conexão básica que você deseja atualizar.
+>
+> Certifique-se de vincular o valor do `If-Match` cabeçalho entre aspas duplas, como nos exemplos abaixo, ao criar `PATCH` solicitações.
 
 Abaixo estão alguns exemplos de atualização de parâmetros na especificação de conexão de base para diferentes tipos de destinos. Mas a regra geral para atualizar parâmetros para qualquer destino é a seguinte:
 
-Obtenha a ID do fluxo de dados da conexão > obtenha a ID da conexão base > PATCH da conexão base com valores atualizados para os parâmetros desejados.
+Obter a ID do fluxo de dados da conexão > obter a ID da conexão base > `PATCH` a conexão básica com os valores atualizados para os parâmetros desejados.
 
 >[!BEGINSHADEBOX]
 

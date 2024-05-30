@@ -2,10 +2,10 @@
 title: Gerenciamento de permissões para coleta de dados no Experience Platform
 description: Uma visão geral de alto nível sobre como gerenciar permissões e controlar o acesso aos recursos de coleção de dados no Adobe Experience Platform.
 exl-id: 8426d54b-ec1d-475a-a769-f45a8c924fe7
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 60590a77859320891717244eec58b556935354b5
 workflow-type: tm+mt
-source-wordcount: '1285'
-ht-degree: 28%
+source-wordcount: '1338'
+ht-degree: 26%
 
 ---
 
@@ -33,9 +33,9 @@ As permissões no Adobe Experience Platform incluem acesso a sequências de dado
 | --- | --- | --- |
 | Sandboxes | (N/D) | Dependendo do [sandboxes](../sandboxes/home.md) que foram criadas em sua organização, você pode controlar o acesso a cada uma delas por meio desta categoria de permissão no Admin Console. |
 | Modelagem de dados | Gerenciar esquemas | Concede a capacidade de exibir, criar e editar [Esquemas do Experience Data Model (XDM)](../xdm/home.md). |
-| Modelagem de dados | Visualizar esquemas | Concede acesso somente leitura a esquemas. |
-| Gerenciamento de identidade | Gerenciar namespaces de identidade | Concede a capacidade de exibir, criar e editar [namespaces de identidade](../identity-service/features/namespaces.md). |
-| Gerenciamento de identidade | Exibir namespaces de identidade | Concede acesso somente leitura a namespaces de identidade. |
+| Modelagem de dados | Exibir esquemas | Concede acesso somente leitura a esquemas. |
+| Identity Management | Gerenciar namespaces de identidade | Concede a capacidade de exibir, criar e editar [namespaces de identidade](../identity-service/features/namespaces.md). |
+| Identity Management | Exibir namespaces de identidade | Concede acesso somente leitura a namespaces de identidade. |
 | Coleção de dados | Gerenciar fluxos de dados | Concede a capacidade de exibir, criar e editar [sequências de dados](../datastreams/overview.md). |
 | Coleção de dados | Exibir fluxos de dados | Concede acesso somente leitura a sequências de dados. |
 
@@ -56,7 +56,7 @@ As permissões em Coleta de dados da Adobe Experience Platform controlam o acess
 | Direitos de propriedade | Editar propriedade | Concede a capacidade de editar a configuração básica das propriedades às quais um usuário tem acesso. |
 | Direitos de propriedade | Gerenciar ambientes | Concede a capacidade de gerenciar o [ambientes](../tags/ui/publishing/environments.md) para as propriedades às quais um usuário tem acesso. |
 | Direitos de propriedade | Gerenciar extensões | Concede a capacidade de gerenciar o [extensões](../tags/ui/managing-resources/extensions/overview.md) para as propriedades às quais um usuário tem acesso. |
-| Direitos de propriedade | Publicação | Concede a capacidade de publicar um build de biblioteca como parte da [fluxo de publicação](../tags/ui/publishing/publishing-flow.md). |
+| Direitos de propriedade | Publicar | Concede a capacidade de publicar um build de biblioteca como parte da [fluxo de publicação](../tags/ui/publishing/publishing-flow.md). |
 | Direitos da empresa | Desenvolver extensões | Concede a capacidade de criar e modificar pacotes de extensão de propriedade de sua organização, incluindo versões privadas e solicitações de lançamento de versão pública. |
 | Direitos da empresa | Gerenciar configurações do aplicativo | Essa permissão só é aplicável se você tiver uma licença do Adobe Journey Optimizer ou outra solução que conceda acesso a mensagens móveis no aplicativo e por push. Isso permite gerenciar os aplicativos que o Adobe Experience Cloud conhece, juntamente com as credenciais de push necessárias para se comunicar com o serviço Firebase Cloud Messaging e o serviço Apple Push Notification. |
 | Direitos da empresa | Gerenciar propriedades | Concede a capacidade de criar e gerenciar tags (propriedade da Web), encaminhamento de eventos (propriedade de borda) e propriedades móveis. |
@@ -78,7 +78,15 @@ Consulte as subseções abaixo para ver as etapas sobre como gerenciar as permis
 
 ### Gerenciar permissões no Adobe Experience Platform {#manage-platform}
 
-No **[!UICONTROL Permissões]** no Adobe Experience Platform selecione a função que deseja editar.
+>[!NOTE]
+>
+>Para gerenciar permissões para uma função, serão necessários direitos de administrador. Se você não tiver privilégios de administrador, entre em contato com o administrador do sistema.
+
+Experience Cloud **[!UICONTROL Permissões]** permite definir funções e políticas de usuário para gerenciar o acesso a recursos e objetos em um aplicativo de produto do.
+
+Até [!UICONTROL Permissões], você pode criar e gerenciar funções e atribuir as permissões de recurso desejadas para essas funções.
+
+![Adobe Experience Cloud destacando o produto Permissões.](./images/permissions/permissions-product.png)
 
 Para acessar os recursos de coleção de dados, é necessário habilitar todas as permissões no **[!UICONTROL Sandboxes]**, **[!UICONTROL Modelagem de dados]**, **[!UICONTROL Identity Management]**, e **[!UICONTROL Coleta de dados]** categorias.
 

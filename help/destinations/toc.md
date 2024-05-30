@@ -5,9 +5,9 @@ user-guide-description: Ative seus dados conhecidos e desconhecidos para campanh
 description: Este documento lista o índice dos destinos do Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: e872d8f8a0c73fe3375e538260d23da1f145621c
+source-git-commit: a6bc9c5d2b4ec9032c70dcf625075e5d3e0442cc
 workflow-type: tm+mt
-source-wordcount: '1224'
+source-wordcount: '1223'
 ht-degree: 3%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 3%
    * [Ativar dados para destinos baseados em arquivo usando a API do Serviço de fluxo](/help/destinations/api/activate-segments-file-based-destinations.md)
    * [Conectar-se a destinos de streaming e ativar dados usando a API de Serviço de Fluxo](./api/streaming-destinations.md)
    * [Conecte-se aos destinos de marketing por email baseado em arquivo e ative os dados usando a API do Serviço de fluxo](./api/connect-activate-batch-destinations.md)
-   * [(Beta) Ative públicos para destinos em lote por meio da API de ativação ad-hoc](./api/ad-hoc-activation-api.md)
+   * [Ativar públicos para destinos em lote por meio da API de ativação ad-hoc](./api/ad-hoc-activation-api.md)
    * [Editar destino](./api/edit-destination.md)
    * [Atualizar fluxos de dados de destino](./api/update-destination-dataflows.md)
    * [Excluir contas de destino](./api/delete-destination-account.md)

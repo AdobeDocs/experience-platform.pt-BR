@@ -2,7 +2,7 @@
 description: Saiba como estruturar uma chamada de API para criar uma configuração de destino por meio do Adobe Experience Platform Destination SDK.
 title: Criar uma configuração de destino
 exl-id: aae4aaa8-1dd0-4041-a86c-5c86f04d7d13
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 20cb2dbfbfc8e73c765073818c8e7e561d4e6629
 workflow-type: tm+mt
 source-wordcount: '1194'
 ht-degree: 3%
@@ -217,7 +217,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `segmentMappingConfig.mapUserInput` | Booleano | Controla se a ID do mapeamento de público no fluxo de trabalho de ativação de destino é entrada pelo usuário. |
 | `segmentMappingConfig.mapExperiencePlatformSegmentId` | Booleano | Controla se a ID de mapeamento de público-alvo no fluxo de trabalho de ativação de destino é a ID de público-alvo Experience Platform. |
 | `segmentMappingConfig.mapExperiencePlatformSegmentName` | Booleano | Controla se a ID de mapeamento de público no fluxo de trabalho de ativação de destino é o nome do público-alvo Experience Platform. |
-| `segmentMappingConfig.audienceTemplateId` | Booleano | A variável `instanceId` do [modelo de metadados de público](../../metadata-api/create-audience-template.md) usado para este destino. |
+| `segmentMappingConfig.audienceTemplateId` | String | A variável `instanceId` do [modelo de metadados de público](../../metadata-api/create-audience-template.md) usado para este destino. |
 | `schemaConfig.profileFields` | Matriz | Quando você adiciona predefinidos `profileFields` conforme mostrado na configuração acima, os usuários terão a opção de mapear atributos de Experience Platform para os atributos predefinidos no lado do destino. |
 | `schemaConfig.profileRequired` | Booleano | Uso `true` se os usuários precisarem mapear atributos de perfil do Experience Platform para atributos personalizados no seu destino, conforme mostrado no exemplo de configuração acima. |
 | `schemaConfig.segmentRequired` | Booleano | Sempre usar `segmentRequired:true`. |

@@ -2,7 +2,7 @@
 description: Saiba como definir as configurações de metadados de público-alvo para destinos criados com o Destination SDK.
 title: Configuração de metadados de público
 exl-id: ae71df4f-b753-4084-835f-03559b4986cb
-source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
+source-git-commit: 20cb2dbfbfc8e73c765073818c8e7e561d4e6629
 workflow-type: tm+mt
 source-wordcount: '405'
 ht-degree: 3%
@@ -57,7 +57,7 @@ Ao criar a configuração de metadados de público-alvo, você pode usar os par�
 | `mapExperiencePlatformSegmentName` | Booleano | Indica se a variável [[!UICONTROL ID do mapeamento]](../../../ui/activate-segment-streaming-destinations.md#scheduling) no workflow de ativação de destino deve ser o nome do público-alvo Experience Platform. |
 | `mapExperiencePlatformSegmentId` | Booleano | Indica se a variável [[!UICONTROL ID do mapeamento]](../../../ui/activate-segment-streaming-destinations.md#scheduling) no workflow de ativação de destino deve ser a ID de público-alvo do Experience Platform. |
 | `mapUserInput` | Booleano | Ativa ou desativa a entrada do usuário para o [[!UICONTROL ID do mapeamento]](../../../ui/activate-segment-streaming-destinations.md#scheduling) no workflow de ativação de destino. Se definida como `true`, `audienceTemplateId` não pode estar presente. |
-| `audienceTemplateId` | Booleano | A variável `instanceId` do [modelo de metadados de público](../../metadata-api/create-audience-template.md) usado para o seu destino. |
+| `audienceTemplateId` | String | A variável `instanceId` do [modelo de metadados de público](../../metadata-api/create-audience-template.md) usado para o seu destino. |
 
 {style="table-layout:auto"}
 

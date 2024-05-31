@@ -4,9 +4,9 @@ description: Saiba como adicionar a ordem de carimbo de data e hora do cliente a
 badgePrivateBeta: label="Beta privado" type="Informative"
 hide: true
 hidefromtoc: true
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: f73b7ac38c681ec5161e2b5e7075f31946a6563e
 workflow-type: tm+mt
-source-wordcount: '406'
+source-wordcount: '410'
 ht-degree: 0%
 
 ---
@@ -14,9 +14,9 @@ ht-degree: 0%
 
 # Solicitação de carimbo de data e hora do cliente
 
-No Adobe Experience Platform, a ordem dos dados não é garantida automaticamente ao assimilar dados por meio da assimilação de streaming na loja de perfis. Com a solicitação de carimbo de data e hora do cliente, você pode garantir que a mensagem mais recente, de acordo com o carimbo de data e hora fornecido pelo cliente, será retida na loja de perfis. Todas as mensagens obsoletas serão descartadas e **não** estar disponíveis para uso em serviços downstream que usam dados de perfil como segmentação e destinos. Como resultado, permite que os dados de perfil sejam consistentes e permite que os dados de perfil permaneçam sincronizados com os sistemas de origem.
+No Adobe Experience Platform, a ordem dos dados não é garantida por padrão ao assimilar dados por meio da assimilação de streaming na loja de perfis. Com a solicitação de carimbo de data e hora do cliente, você pode garantir que a mensagem mais recente, de acordo com o carimbo de data e hora fornecido pelo cliente, será retida na loja de perfis. Todas as mensagens obsoletas serão descartadas e **não** estar disponíveis para uso em serviços downstream que usam dados de perfil como segmentação e destinos. Como resultado, permite que os dados de perfil sejam consistentes e permite que os dados de perfil permaneçam sincronizados com os sistemas de origem.
 
-Para habilitar a solicitação de carimbo de data e hora do cliente, use o `extSourceSystemAudit.lastUpdatedDate` campo dentro do [Tipo de dados Atributos de auditoria do sistema de origem externa](../xdm/data-types/external-source-system-audit-attributes.md) e entre em contato com o Gerente técnico de conta do Adobe ou com o Atendimento ao cliente do Adobe com suas informações de sandbox e conjunto de dados.
+Para habilitar a solicitação de carimbo de data e hora do cliente, use o `extSourceSystemAudit.lastUpdatedDate` campo dentro do [Tipo de dados Atributos de auditoria do sistema de origem externa](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/shared/external-source-system-audit-details.schema.md) e entre em contato com o Gerente técnico de conta do Adobe ou com o Atendimento ao cliente do Adobe com suas informações de sandbox e conjunto de dados.
 
 ## Restrições
 
@@ -30,7 +30,7 @@ Durante esse beta privado, as seguintes restrições se aplicam ao usar a solici
 - A variável `extSourceSystemAudit.lastUpdatedDate` campo **deve** estar no [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) formato. Ao usar o formato ISO 8601, ele **deve** ser como um datetime completo no formato `yyyy-MM-ddTHH:mm:ss.sssZ` (por exemplo, `2028-11-13T15:06:49.001Z`).
 - Todas as linhas de dados assimiladas **deve** contém o `extSourceSystemAudit.lastUpdatedDate` como um grupo de campos de nível superior. Isso significa que esse campo **deve** não podem ser aninhados no esquema XDM. Se esse campo estiver ausente ou em um formato incorreto, o registro malformado **não** será assimilado e uma mensagem de erro correspondente será enviada.
 - Qualquer conjunto de dados habilitado para a solicitação de carimbo de data e hora do cliente **deve** ser um novo conjunto de dados sem dados assimilados anteriormente.
-- Para qualquer fragmento de perfil específico, somente as linhas que contêm um `extSourceSystemAudit.lastUpdatedDate` serão assimilados. Se a linha não contiver um atributo mais recente `extSourceSystemAudit.lastUpdatedDate`, a linha será descartada.
+- Para qualquer fragmento de perfil específico, somente as linhas que contêm um `extSourceSystemAudit.lastUpdatedDate` serão assimilados. Linhas que contêm um `extSourceSystemAudit.lastUpdatedDate` que seja mais velho ou da mesma idade será descartada.
 
 ## Recomendações
 

@@ -3,11 +3,11 @@ keywords: Experience Platform;página inicial;tópicos populares;interface;XDM;s
 solution: Experience Platform
 title: Criar um esquema usando o Editor de esquemas
 type: Tutorial
-description: Este tutorial aborda as etapas para a criação de um esquema usando o Editor de esquemas na Experience Platform.
+description: Este tutorial aborda as etapas para a criação de um esquema usando o Editor de esquemas no Experience Platform.
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
-source-git-commit: 0e1fb15cfa56fb4c2a4a645578327f0a4bd22e68
+source-git-commit: c8c8e8b8571c215cb470dd5bdb9e9172d564f9d8
 workflow-type: tm+mt
-source-wordcount: '4695'
+source-wordcount: '4813'
 ht-degree: 0%
 
 ---
@@ -353,11 +353,36 @@ Selecionar **[!UICONTROL Ativar]** para confirmar sua escolha. É possível sele
 
 ## Mais ações {#more}
 
-No Editor de esquemas, você também pode realizar ações rápidas para copiar a estrutura JSON do esquema ou excluir o esquema se ele não tiver sido ativado para o Perfil do cliente em tempo real ou tiver conjuntos de dados associados. Selecionar [!UICONTROL Mais] na parte superior da exibição para exibir uma lista suspensa com ações rápidas.
-
-A funcionalidade Copiar estrutura JSON permite ver como seria uma carga de amostra enquanto você ainda está criando o esquema e seus pipelines de dados. É especialmente útil para situações em que há estruturas complexas de mapa de objetos no esquema, como um mapa de identidade.
+No Editor de esquemas, você também pode realizar ações rápidas para copiar a estrutura JSON do esquema ou excluir o esquema. Selecionar [!UICONTROL Mais] na parte superior da exibição para exibir uma lista suspensa com ações rápidas.
 
 ![O Editor de esquemas com o botão Mais realçado e as opções suspensas exibidas.](../images/tutorials/create-schema/more-actions.png)
+
+### Excluir um esquema {#delete-a-schema}
+
+>[!CONTEXTUALHELP]
+>id="platform_schemas_delete_profileenabledwithdatasets"
+>title="Não é possível excluir o esquema"
+>abstract="O esquema não pode ser excluído porque foi habilitado para o Perfil e tem conjuntos de dados associados."
+
+>[!CONTEXTUALHELP]
+>id="platform_schemas_delete_profileenablednodatasets"
+>title="Não é possível excluir o esquema"
+>abstract="O esquema não pode ser excluído porque foi habilitado para o Perfil."
+
+>[!CONTEXTUALHELP]
+>id="platform_schemas_delete_withdatasetsnotprofileenabled"
+>title="Não é possível excluir o esquema"
+>abstract="O esquema não pode ser excluído porque tem conjuntos de dados associados."
+
+Um esquema pode ser excluído da interface do usuário no Editor de esquemas usando [!UICONTROL Mais] ações e também dos detalhes do schema no [!UICONTROL Procurar] guia. Há determinadas condições que impedem a exclusão de um esquema. Um esquema não pode ser excluído se:
+
+* O esquema é ativado para o Perfil.
+* O esquema é ativado para o Perfil e tem conjuntos de dados associados.
+* O esquema tem conjuntos de dados associados, mas não está habilitado para o Perfil.
+
+### Copiar estrutura JSON {#copy-json-structure}
+
+Selecionar **[!UICONTROL Copiar estrutura JSON]** para gerar uma carga de exportação para qualquer esquema na Biblioteca de esquemas. Essa ação copia a estrutura JSON para a área de transferência. Seu JSON exportado pode ser usado para importar o esquema e quaisquer recursos relacionados para uma sandbox ou organização diferente. Isso torna simples e eficiente o compartilhamento e a reutilização de esquemas entre diferentes ambientes.
 
 ## Próximas etapas e recursos adicionais
 

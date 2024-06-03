@@ -2,7 +2,7 @@
 title: Grupo de campos de esquema de extensão completa do Adobe Analytics ExperienceEvent
 description: Saiba mais sobre o grupo de campos de esquema Extensão completa do Adobe Analytics ExperienceEvent.
 exl-id: b5e17f4a-a582-4059-bbcb-435d46932775
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 5eb15a7dfff7e6d8ba815ae4f89142ba50166620
 workflow-type: tm+mt
 source-wordcount: '811'
 ht-degree: 5%
@@ -37,7 +37,7 @@ O grupo de campos fornece um único `_experience` objeto a um esquema, que cont�
 
 ## `customDimensions` {#custom-dimensions}
 
-`customDimensions` captura personalizado [dimensões](https://experienceleague.adobe.com/docs/analytics/components/dimensions/overview.html?lang=pt-BR) que são rastreados pelo Analytics.
+`customDimensions` captura personalizado [dimensões](https://experienceleague.adobe.com/docs/analytics/components/dimensions/overview.html) que são rastreados pelo Analytics.
 
 ![campo customDimensions](../../images/field-groups/analytics-full-extension/customDimensions.png)
 
@@ -72,12 +72,12 @@ O grupo de campos fornece um único `_experience` objeto a um esquema, que cont�
 
 | Propriedade | Tipo de dados | Descrição |
 | --- | --- | --- |
-| `browserIDStr` | String | O identificador Adobe Analytics do navegador usado (conhecido como [dimensão tipo de navegador](https://experienceleague.adobe.com/docs/analytics/components/dimensions/browser-type.html?lang=pt-BR)). |
-| `operatingSystemIDStr` | String | O identificador Adobe Analytics do sistema operacional usado (conhecido como [dimensão de tipo de sistema operacional](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-system-types.html?lang=pt-BR)). |
+| `browserIDStr` | String | O identificador Adobe Analytics do navegador usado (conhecido como [dimensão tipo de navegador](https://experienceleague.adobe.com/docs/analytics/components/dimensions/browser-type.html)). |
+| `operatingSystemIDStr` | String | O identificador Adobe Analytics do sistema operacional usado (conhecido como [dimensão de tipo de sistema operacional](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-system-types.html)). |
 
 ## Campos de evento personalizados {#events}
 
-O grupo de campos de extensão do Analytics fornece dez campos de objeto que capturam até 100 [métricas de evento personalizadas](https://experienceleague.adobe.com/docs/analytics/components/metrics/custom-events.html?lang=pt-BR) cada, para um total de 1000 para o grupo de campos.
+O grupo de campos de extensão do Analytics fornece dez campos de objeto que capturam até 100 [métricas de evento personalizadas](https://experienceleague.adobe.com/docs/analytics/components/metrics/custom-events.html) cada, para um total de 1000 para o grupo de campos.
 
 Cada objeto de evento de nível superior contém os objetos de evento individuais para seu respectivo intervalo. Por exemplo, `event101to200` contém os eventos chaveados de `event101` para `event200`.
 

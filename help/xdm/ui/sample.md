@@ -3,14 +3,19 @@ solution: Experience Platform
 title: Gerar dados de amostra para um esquema XDM na interface do
 description: Saiba como gerar dados JSON de amostra com base em um esquema existente na interface do usuário do Adobe Experience Platform.
 exl-id: e60eedb2-2245-42cd-b574-43caf9e3426c
-source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
+source-git-commit: 19a9341a9f53559fe3f619b2f157015e53b25b64
 workflow-type: tm+mt
-source-wordcount: '336'
-ht-degree: 0%
+source-wordcount: '399'
+ht-degree: 1%
 
 ---
 
-# Gerar dados de amostra para um esquema XDM na interface do
+# Gerar dados de amostra para um esquema XDM na interface do {#generate-sample-data-for-an-xdm-schema}
+
+>[!CONTEXTUALHELP]
+>id="platform_xdm_downloadsamplefile"
+>title="Baixar arquivo de amostra"
+>abstract="Gere um objeto JSON de amostra que esteja em conformidade com a estrutura do esquema escolhido. Esse objeto pode servir como modelo para garantir que os dados estejam formatados corretamente para assimilação em conjuntos de dados que utilizam esse esquema. O arquivo JSON de amostra será baixado pelo seu navegador."
 
 Para assimilar dados na Adobe Experience Platform, o formato e a estrutura dos dados devem estar em conformidade com um esquema existente do Experience Data Model (XDM). Dependendo da complexidade do esquema para um conjunto de dados específico, pode ser difícil determinar a forma exata dos dados que o conjunto de dados espera após a assimilação.
 
@@ -18,7 +23,7 @@ Para qualquer esquema definido na interface do usuário do Experience Platform, 
 
 Na interface do usuário da Platform, selecione **[!UICONTROL Esquemas]** no painel de navegação esquerdo. No **[!UICONTROL Procurar]** localize o esquema para o qual deseja gerar dados de amostra. Selecione-a na lista e o painel direito é atualizado para mostrar detalhes sobre o esquema. Aqui, selecione **[!UICONTROL Baixar arquivo de amostra]**.
 
-![](../images/ui/sample/sample-data.png)
+![A guia Procurar do espaço de trabalho Esquemas com um esquema selecionado e o arquivo de amostra de download destacado.](../images/ui/sample/sample-data.png)
 
 Um exemplo de arquivo JSON é baixado pelo navegador. Agora você pode usar esse arquivo como uma referência para estruturar seus dados ao assimilar em conjuntos de dados que empregam esse esquema.
 

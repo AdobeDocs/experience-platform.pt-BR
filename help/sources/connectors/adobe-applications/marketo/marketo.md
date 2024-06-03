@@ -4,10 +4,10 @@ solution: Experience Platform
 title: conector Marketo Engage
 description: Este documento fornece uma visão geral do conector de origem do Marketo Engage, incluindo informações sobre autenticação, mapeamento e latência de dados.
 exl-id: 063ec5d9-d643-4141-bf6d-878273f22b33
-source-git-commit: 50b97ebb8496636a0fccd64d57d7829b1342f87c
+source-git-commit: 0c695e11e7d7c14ef7e047cd007668e1099bf127
 workflow-type: tm+mt
-source-wordcount: '678'
-ht-degree: 5%
+source-wordcount: '683'
+ht-degree: 1%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 5%
 
 O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
 
-[[!DNL Marketo Engage]](https://www.marketo.com/software/) é uma solução completa para o gerenciamento de clientes potenciais e para os profissionais de marketing B2B que procuram transformar as experiências dos clientes ao se envolverem em todas as jornadas de compras complexas.
+[[!DNL Marketo Engage]](https://www.marketo.com/software/) O é uma solução completa para o gerenciamento de clientes potenciais e para os profissionais de marketing B2B que procuram transformar as experiências dos clientes envolvendo-se em cada estágio de jornadas de compra complexas.
 
 Com o [!DNL Marketo Engage] conector de origem, é possível trazer dados B2B de [!DNL Marketo Engage] para a Platform e mantenha esses dados atualizados usando aplicativos conectados à Platform.
 
@@ -83,6 +83,7 @@ A documentação a seguir fornece mais informações sobre a criação de um [!D
 
 * Para obter informações sobre como conectar seu [!DNL Marketo Engage] dados para a Platform, leia o tutorial em [criação de um [!DNL Marketo Engage] conexão de origem na interface](../../../tutorials/ui/create/adobe-applications/marketo.md).
    * Para obter informações sobre como configurar seus esquemas e assimilar dados de atividade personalizados, leia o tutorial sobre [criação de uma conexão de origem e fluxo de dados para [!DNL Marketo Engage] dados de atividade personalizados](../../../tutorials/ui/create/adobe-applications/marketo-custom-activities.md)
+   * Para obter informações sobre como migrar o mapeamento ECID do [!DNL Person] conjunto de dados [!DNL Activity] conjunto de dados, leia o [Guia de migração de mapeamento ECID](./migration.md).
 * Para obter informações sobre a configuração subjacente dos namespaces B2B e esquemas usados com [!DNL Marketo Engage], leia a documentação de [Namespaces e esquemas B2B](./marketo-namespaces.md).
 * Para obter informações sobre como encontrar o [!DNL Marketo Engage] munchkin ID e gerando suas credenciais, leia o [[!DNL Marketo Engage] guia de autenticação](./marketo-auth.md).
 * Para obter informações sobre as regras de mapeamento específicas aplicáveis a [!DNL Marketo Engage] conjuntos de dados, leia a documentação em [[!DNL Marketo Engage] mapeamentos de campo](../mapping/marketo.md).

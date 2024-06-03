@@ -4,14 +4,14 @@ solution: Experience Platform
 title: Visão geral da assimilação de fluxo
 description: A assimilação de streaming para o Adobe Experience Platform fornece aos usuários um método para enviar dados de dispositivos cliente e do lado do servidor para o Experience Platform em tempo real.
 exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
-source-git-commit: c6cff4d30815d3f7bfb61d1672a5d0228a0da60d
+source-git-commit: d6424e2a9afc046f4bff329797954fd43939a819
 workflow-type: tm+mt
-source-wordcount: '357'
+source-wordcount: '424'
 ht-degree: 2%
 
 ---
 
-# Visão geral da assimilação de streaming
+# Visão geral da assimilação por transmissão
 
 A assimilação de streaming para o Adobe Experience Platform fornece aos usuários um método para enviar dados de dispositivos no lado do cliente e do servidor para o [!DNL Experience Platform] em tempo real.
 
@@ -35,7 +35,11 @@ Depois de ter certeza de que os dados estão limpos, você poderá ativar os con
 
 Para obter mais informações sobre como habilitar um conjunto de dados para [!DNL Profile] e [!DNL Identity Service], leia o [configurar um guia de conjunto de dados](../../profile/tutorials/dataset-configuration.md).
 
-## Qual é a latência esperada para assimilação por transmissão no [!DNL Platform]?
+## Qual é a latência esperada para assimilação por transmissão no Experience Platform?
+
+>[!IMPORTANT]
+>
+>As garantias para a assimilação por transmissão são calculadas no nível da organização, e não no nível da sandbox. Isso significa que o uso de dados por sandbox está vinculado ao direito de uso total de licença que corresponde a toda a organização. Além disso, o uso de dados em sandboxes de desenvolvimento é limitado a 10% do total de perfis. Para obter mais informações sobre direitos de uso de licença, leia o [guia de práticas recomendadas de gerenciamento de dados](../../landing/license-usage-and-guardrails/data-management-best-practices.md).
 
 | Destino | Latência esperada |
 | --------- | ---------------- |

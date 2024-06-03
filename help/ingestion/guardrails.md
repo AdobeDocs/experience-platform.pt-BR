@@ -3,14 +3,18 @@ keywords: Experience Platform;solução de problemas;medidas de proteção;diret
 title: Medidas de proteção para a assimilação de dados
 description: Saiba mais sobre as medidas de proteção para a assimilação de dados no Adobe Experience Platform.
 exl-id: f07751cb-f9d3-49ab-bda6-8e6fec59c337
-source-git-commit: 9d3a8aac120119ce0361685f9cb8d3bfc28dc7fd
+source-git-commit: cdc5bb01ef6de8134c6ad4ef6601a748571bf86f
 workflow-type: tm+mt
-source-wordcount: '579'
-ht-degree: 1%
+source-wordcount: '646'
+ht-degree: 0%
 
 ---
 
 # Medidas de proteção para a assimilação de dados
+
+>[!IMPORTANT]
+>
+>As garantias para assimilação em lote e por transmissão são calculadas no nível da organização, e não no nível da sandbox. Isso significa que o uso de dados por sandbox está vinculado ao direito de uso total de licença que corresponde a toda a organização. Além disso, o uso de dados em sandboxes de desenvolvimento é limitado a 10% do total de perfis. Para obter mais informações sobre direitos de uso de licença, leia o [guia de práticas recomendadas de gerenciamento de dados](../landing/license-usage-and-guardrails/data-management-best-practices.md).
 
 As garantias são limites que fornecem orientação para o uso de dados e do sistema, otimização do desempenho e prevenção de erros ou resultados inesperados no Adobe Experience Platform. As garantias podem se referir ao uso ou consumo de dados e processamento em relação aos seus direitos de licenciamento.
 

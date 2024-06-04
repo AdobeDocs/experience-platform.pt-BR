@@ -1,9 +1,10 @@
 ---
 title: Privacidade, segurança e governança no Assistente de IA
 description: Saiba mais sobre as práticas de privacidade, segurança e governança do Assistente de IA.
-source-git-commit: 0820ba0f14e9eae5d89cd48490b1af5f9afcda70
+exl-id: 371e065d-c2dd-4233-b78e-a42757fce853
+source-git-commit: 1762fcbcc730ccb08340a71383c90404c3fea614
 workflow-type: tm+mt
-source-wordcount: '312'
+source-wordcount: '295'
 ht-degree: 0%
 
 ---
@@ -17,7 +18,6 @@ Leia este documento para saber mais sobre os recursos focados na confiança do c
 * Nenhum dado pessoal está sendo usado pelo Assistente de IA hoje, mesmo para fins de treinamento.
 * O Assistente de IA não tem conhecimento dos dados do consumidor.
 * Todos os existentes [controle de acesso](../access-control/home.md) As políticas do serão respeitadas pelo Assistente de IA.
-   * O controle de acesso no nível do objeto é suportado para objetos. O suporte para controle de acesso no nível do objeto para atributos será lançado em breve.
    * Quaisquer novas políticas de controle de acesso baseadas em atributos serão refletidas no Assistente de IA após um máximo de 24 horas*
 * Você deve receber permissão explícita para interagir com o Assistente de IA.
    * É possível definir permissões de forma diferente para o Experience Platform e o Journey Optimizer usando o [Interface de permissões](../access-control/abac/ui/permissions.md) e você pode usar o [Admin Console](../access-control/ui/browse.md) para atribuir permissões para Customer Journey Analytics.

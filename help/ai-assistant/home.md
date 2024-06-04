@@ -1,11 +1,9 @@
 ---
 title: Visão geral do Assistente de IA no Adobe Experience Platform
 description: Saiba mais sobre o AI Assistant, suas nuances e casos de uso e como você pode usá-lo para acelerar seu fluxo de trabalho com o Adobe Experience Platform e o Real-time Customer Data Platform.
-hide: true
-hidefromtoc: true
-source-git-commit: fe87a487079f5154f238b2d425cdd249a4724762
+source-git-commit: dd3a7d07c0c78d76c552affef892d5e5c0f0bfb5
 workflow-type: tm+mt
-source-wordcount: '2294'
+source-wordcount: '2371'
 ht-degree: 0%
 
 ---
@@ -72,6 +70,13 @@ Você pode fazer perguntas ao Assistente de IA sobre seus insights operacionais 
 * Origens _(Perguntas relacionadas a contas não podem ser respondidas neste momento.)_
 
 Para perguntas sobre insights operacionais, as respostas podem não refletir o estado atual da interface do usuário. Os dados que sustentam essas perguntas são atualizados uma vez a cada 24 horas. Por exemplo, as alterações que os usuários fazem no Real-Time CDP durante o dia são sincronizadas com os armazenamentos de dados à noite e, em seguida, ficam disponíveis para perguntas do usuário de manhã. Você precisará fazer logon em uma sandbox para consultar sobre dados específicos relacionados a objetos.
+
+### Escopo do recurso {#feature-scope}
+
+Atualmente, o escopo do Assistente de IA é o seguinte:
+
+* [Conhecimento do produto](./home.md#product-knowledge): O Assistente de IA pode responder a perguntas de conhecimento de produto do Experience Platform, Real-time Customer Data Platform e Adobe Journey Optimizer. Você também pode se aprofundar em tópicos de conhecimento sobre produtos para o Customer Journey Analytics, mas somente por meio da interface do usuário do Customer Journey Analytics.
+* [Insights operacionais](./home.md#operational-insights): Você pode fazer perguntas ao Assistente de IA sobre insights operacionais nos seguintes objetos de dados: atributos, públicos-alvo, fluxos de dados, conjuntos de dados, destinos, jornadas, esquemas e fontes.
 
 ## Acesso ao recurso {#feature-access}
 

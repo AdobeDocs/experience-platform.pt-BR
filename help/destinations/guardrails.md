@@ -6,14 +6,18 @@ product: experience platform
 type: Documentation
 description: Saiba mais sobre o uso padrão da ativação de dados e os limites de taxa.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: c425d1016bed80113b879a683114861d839b79eb
+source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
 workflow-type: tm+mt
-source-wordcount: '1662'
-ht-degree: 1%
+source-wordcount: '1685'
+ht-degree: 2%
 
 ---
 
 # Medidas de proteção para ativação de dados
+
+>[!IMPORTANT]
+>
+>Verifique os direitos de licença em sua Ordem de venda e a correspondência [Descrição do produto](https://helpx.adobe.com/legal/product-descriptions.html?lang=pt-BR) sobre os limites de uso reais, além desta página de medidas de proteção.
 
 Esta página fornece limites de uso e taxa padrão em relação ao comportamento de ativação. Ao revisar as medidas de proteção a seguir, presume-se que você tenha [conectado aos destinos](/help/destinations/ui/connect-destination.md).
 

@@ -3,18 +3,22 @@ title: Proteções padrão para dados e segmentação do perfil do cliente em te
 solution: Experience Platform
 product: experience platform
 type: Documentation
-description: Saiba mais sobre o desempenho e as medidas de proteção aplicadas pelo sistema para segmentação e dados de perfil para garantir o uso ideal da funcionalidade da Real-Time CDP.
+description: Saiba mais sobre o desempenho e as medidas de proteção aplicadas pelo sistema para dados de perfil e segmentação para garantir o uso ideal da funcionalidade do Real-Time CDP.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 0542e618dfb6e5571845387fed9eced4200179b6
+source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
 workflow-type: tm+mt
-source-wordcount: '2434'
-ht-degree: 2%
+source-wordcount: '2457'
+ht-degree: 1%
 
 ---
 
 # Proteções padrão para [!DNL Real-Time Customer Profile] dados e segmentação
 
 O Adobe Experience Platform permite fornecer experiências personalizadas entre canais com base em insights comportamentais e atributos do cliente na forma de Perfis de clientes em tempo real. Para dar suporte a essa nova abordagem aos perfis, o Experience Platform usa um modelo de dados híbrido altamente desnormalizado que difere do modelo de dados relacional tradicional.
+
+>[!IMPORTANT]
+>
+>Verifique os direitos de licença em sua Ordem de venda e a correspondência [Descrição do produto](https://helpx.adobe.com/legal/product-descriptions.html?lang=pt-BR) sobre os limites de uso reais, além desta página de medidas de proteção.
 
 Este documento fornece limites de uso e taxa padrão para ajudar você a modelar seus dados de perfil para obter o melhor desempenho do sistema. Ao revisar as medidas de proteção a seguir, presume-se que você tenha modelado os dados corretamente. Em caso de dúvidas sobre como modelar os dados, entre em contato com o representante do Atendimento ao cliente.
 
@@ -89,8 +93,8 @@ As medidas de proteção a seguir se referem ao tamanho dos dados e fornecem lim
 
 | Grade de Proteção | Limite | Tipo de limite | Descrição |
 | --------- | ----- | ---------- | ----------- |
-| Tamanho máximo do ExperienceEvent | 10KB | Proteção imposta pelo sistema | **O tamanho máximo de um evento é 10KB.** A assimilação continuará, mas os eventos maiores que 10 KB serão descartados. |
-| Tamanho máximo do registro de perfil | 100KB | Proteção imposta pelo sistema | **O tamanho máximo de um registro de perfil é 100 KB.** A assimilação continuará, no entanto, registros de perfil maiores que 100 KB serão descartados. |
+| Tamanho máximo do ExperienceEvent | 10 KB | Proteção imposta pelo sistema | **O tamanho máximo de um evento é 10KB.** A assimilação continuará, mas os eventos maiores que 10 KB serão descartados. |
+| Tamanho máximo do registro de perfil | 100 KB | Proteção imposta pelo sistema | **O tamanho máximo de um registro de perfil é 100 KB.** A assimilação continuará, no entanto, registros de perfil maiores que 100 KB serão descartados. |
 | Tamanho máximo do fragmento do perfil | 50 MB | Proteção imposta pelo sistema | **O tamanho máximo de um único fragmento de perfil é de 50 MB.** A segmentação, as exportações e as pesquisas podem falhar para qualquer [fragmento do perfil](#profile-fragments) que seja maior que 50 MB. |
 | Tamanho máximo de armazenamento do perfil | 50 MB | Proteção de desempenho | **O tamanho máximo de um perfil armazenado é 50 MB.** Adição de novo [fragmentos de perfil](#profile-fragments) em um perfil com mais de 50 MB afetará o desempenho do sistema. Por exemplo, um perfil pode conter um único fragmento de 50 MB ou pode conter vários fragmentos em vários conjuntos de dados com um tamanho total combinado de 50 MB. Tentar armazenar um perfil com um único fragmento maior que 50 MB, ou com vários fragmentos que totalizam mais de 50 MB em tamanho combinado, afetará o desempenho do sistema. |
 | Número de lotes Profile ou ExperienceEvent assimilados por dia | 90 | Proteção de desempenho | **O número máximo de lotes Profile ou ExperienceEvent assimilados por dia é 90.** Isso significa que o total combinado de lotes Profile e ExperienceEvent assimilados a cada dia não pode exceder 90. A ingestão de lotes adicionais afetará o desempenho do sistema. |
@@ -116,7 +120,7 @@ As medidas de proteção descritas nesta seção referem-se ao número e à natu
 | --------- | ----- | ---------- | ----------- |
 | Públicos-alvo por sandbox | 4000 | Proteção de desempenho | Uma organização pode ter mais de 4000 públicos-alvo no total, desde que haja menos de 4000 públicos-alvo em cada sandbox individual. Isso inclui públicos em lote, de streaming e de borda. Tentar criar públicos adicionais pode afetar o desempenho do sistema. Leia mais sobre [criação de públicos](/help/segmentation/ui/segment-builder.md) por meio do construtor de segmentos. |
 | Públicos-alvo da borda por sandbox | 150 | Proteção de desempenho | Uma organização pode ter mais de 150 públicos-alvo de borda no total, desde que haja menos de 150 públicos-alvo de borda em cada sandbox individual. Tentar criar públicos-alvo de borda adicionais pode afetar o desempenho do sistema. Leia mais sobre [públicos-alvo de borda](/help/segmentation/ui/edge-segmentation.md). |
-| Taxa de transferência de borda em todas as sandboxes | 1500 RPS | Proteção de desempenho | A segmentação de borda suporta um valor de pico de 1.500 eventos de entrada por segundo ao entrar na rede de borda da Adobe Experience Platform. A segmentação de borda pode levar até 350 milissegundos para processar um evento de entrada depois que ele entra na rede de borda da Adobe Experience Platform. Leia mais sobre [públicos-alvo de borda](/help/segmentation/ui/edge-segmentation.md). |
+| Taxa de transferência de borda em todas as sandboxes | 1500 RPS | Proteção de desempenho | A segmentação de borda suporta um valor de pico de 1.500 eventos de entrada por segundo ao entrar no Edge Network Adobe Experience Platform. A segmentação de borda pode levar até 350 milissegundos para processar um evento de entrada depois que ele entrar no Edge Network Adobe Experience Platform. Leia mais sobre [públicos-alvo de borda](/help/segmentation/ui/edge-segmentation.md). |
 | Públicos-alvo de transmissão por sandbox | 500 | Proteção de desempenho | Uma organização pode ter mais de 500 públicos-alvo de transmissão no total, desde que haja menos de 500 públicos-alvo de transmissão em cada sandbox individual. Isso inclui públicos de transmissão e de borda. Tentar criar públicos de transmissão adicionais pode afetar o desempenho do sistema. Leia mais sobre [públicos-alvo de transmissão](/help/segmentation/ui/streaming-segmentation.md). |
 | Taxa de transferência de transmissão em todas as sandboxes | 1500 RPS | Proteção de desempenho | A segmentação de transmissão oferece suporte a um valor de pico de 1500 eventos de entrada por segundo. A segmentação de transmissão pode levar até 5 minutos para qualificar um perfil para associação de segmento. Leia mais sobre [públicos-alvo de transmissão](/help/segmentation/ui/streaming-segmentation.md). |
 | Públicos em lote por sandbox | 4000 | Proteção de desempenho | Uma organização pode ter mais de 4000 públicos-alvo em lote no total, desde que haja menos de 4000 públicos-alvo em lote em cada sandbox individual. Tentar criar públicos-alvo em lote adicionais pode afetar o desempenho do sistema. |

@@ -2,14 +2,14 @@
 keywords: perfil;perfil do cliente em tempo real;solução de problemas;medidas de proteção;diretrizes;limite;entidade;entidade primária;entidade de dimensão;RTCDP;CDP;B2B Edition;Real-time Customer Data Platform;plataforma de dados do cliente em tempo real;cdp em tempo real;b2b;cdp;
 title: Proteções padrão para o Real-time Customer Data Platform B2B Edition
 type: Documentation
-description: A Adobe Experience Platform usa um modelo de dados híbrido não normalizado que difere do modelo de dados relacional tradicional. Este documento fornece limites de uso e taxa padrão para ajudar você a modelar seus dados para obter o melhor desempenho do sistema usando o Adobe Real-time Customer Data Platform B2B Edition.
+description: O Adobe Experience Platform usa um modelo de dados híbrido não normalizado que difere do modelo de dados relacional tradicional. Este documento fornece limites de uso e taxa padrão para ajudar você a modelar seus dados para obter o melhor desempenho do sistema usando o Adobe Real-time Customer Data Platform B2B Edition.
 badgeB2B: label="Edição B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 feature: Guardrails, B2B
 exl-id: 8eff8c3f-a250-4aec-92a1-719ce4281272
-source-git-commit: 2704184446f7945c744e7e2d2a8c3cda3fc12527
+source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
 workflow-type: tm+mt
-source-wordcount: '1794'
-ht-degree: 2%
+source-wordcount: '1817'
+ht-degree: 1%
 
 ---
 
@@ -20,6 +20,10 @@ ht-degree: 2%
 >Os limites descritos neste documento representam as alterações ativadas pelo Real-time Customer Data Platform B2B Edition. Para obter uma lista completa de limites padrão para o Real-Time CDP B2B Edition, combine esses limites com os limites gerais do Adobe Experience Platform descritos na [medidas de proteção para a documentação de dados do Perfil do cliente em tempo real](../profile/guardrails.md).
 
 O Real-time Customer Data Platform B2B Edition permite que você forneça experiências personalizadas entre canais com base em insights comportamentais e atributos do cliente na forma de Perfis de clientes em tempo real e Perfis de conta. Para dar suporte a essa nova abordagem aos perfis, o Experience Platform usa um modelo de dados híbrido altamente desnormalizado que difere do modelo de dados relacional tradicional.
+
+>[!IMPORTANT]
+>
+>Verifique os direitos de licença em sua Ordem de venda e a correspondência [Descrição do produto](https://helpx.adobe.com/legal/product-descriptions.html?lang=pt-BR) sobre os limites de uso reais, além desta página de medidas de proteção.
 
 Este documento fornece limites de uso e taxa padrão para ajudar você a modelar seus dados para obter o melhor desempenho do sistema. Ao revisar as medidas de proteção a seguir, presume-se que você tenha modelado os dados corretamente. Em caso de dúvidas sobre como modelar os dados, entre em contato com o representante do Atendimento ao cliente.
 

@@ -3,9 +3,9 @@ title: Medidas de proteção do Real-Time CDP
 description: Saiba mais sobre as medidas de proteção de dados em vários serviços e áreas do Real-Time CDP.
 feature: Guardrails, Data Management, Data Ingestion, Data Export
 exl-id: 377499b4-5707-4d50-94e3-02f88ad5bf2c
-source-git-commit: 2704184446f7945c744e7e2d2a8c3cda3fc12527
+source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
 workflow-type: tm+mt
-source-wordcount: '369'
+source-wordcount: '392'
 ht-degree: 1%
 
 ---
@@ -13,6 +13,10 @@ ht-degree: 1%
 # Medidas de proteção do Real-Time CDP
 
 As garantias são limites que fornecem orientação para o uso de dados e do sistema, otimização do desempenho e prevenção de erros ou resultados inesperados no Real-Time CDP. As garantias podem se referir ao uso ou consumo de dados e processamento em relação aos seus direitos de licenciamento.
+
+>[!IMPORTANT]
+>
+>Verifique os direitos de licença em sua Ordem de venda e a correspondência [Descrição do produto](https://helpx.adobe.com/legal/product-descriptions.html?lang=pt-BR) sobre os limites de uso reais, além desta página de medidas de proteção.
 
 Comece aqui e siga os links abaixo para entender todas as medidas de proteção nos vários serviços e áreas do Real-Time CDP:
 

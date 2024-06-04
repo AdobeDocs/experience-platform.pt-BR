@@ -3,16 +3,20 @@ keywords: Experience Platform;identidade;serviço de identidade;solução de pro
 title: Medidas de proteção do serviço de identidade
 description: Este documento fornece informações sobre limites de uso e taxa para dados do Serviço de identidade para ajudar você a otimizar o uso do gráfico de identidade.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
+source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
 workflow-type: tm+mt
-source-wordcount: '1526'
-ht-degree: 0%
+source-wordcount: '1549'
+ht-degree: 1%
 
 ---
 
 # Medidas de proteção para [!DNL Identity Service] dados
 
 Este documento fornece informações sobre limites de uso e taxa para [!DNL Identity Service] dados para ajudá-lo a otimizar o uso do gráfico de identidade. Ao revisar as medidas de proteção a seguir, presume-se que você tenha modelado os dados corretamente. Em caso de dúvidas sobre como modelar os dados, entre em contato com o representante do Atendimento ao cliente.
+
+>[!IMPORTANT]
+>
+>Verifique os direitos de licença em sua Ordem de venda e a correspondência [Descrição do produto](https://helpx.adobe.com/legal/product-descriptions.html?lang=pt-BR) sobre os limites de uso reais, além desta página de medidas de proteção.
 
 ## Introdução
 
@@ -62,7 +66,7 @@ Quando um gráfico de identidade completo é atualizado, o Serviço de identidad
 
 A prioridade de exclusão é a seguinte:
 
-1. ID de cookies
+1. ID do cookie
 2. ID do dispositivo
 3. ID entre dispositivos, email e telefone
 

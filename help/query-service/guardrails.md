@@ -3,9 +3,9 @@ keywords: Experience Platform;consulta;serviço de consulta;solução de problem
 title: Medidas de proteção do serviço de consulta
 description: Este documento fornece informações sobre limites de uso para dados do Serviço de consulta para ajudar você a otimizar o uso da consulta.
 exl-id: 1ad5dcf4-d048-49ff-97e3-07040392b65b
-source-git-commit: ab2bb6f4cafe60aec7d8745cca9d2f7f0227a938
+source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
 workflow-type: tm+mt
-source-wordcount: '1177'
+source-wordcount: '1181'
 ht-degree: 2%
 
 ---
@@ -13,8 +13,11 @@ ht-degree: 2%
 # Medidas de proteção do serviço de consulta
 
 As garantias são limites que orientam o uso do sistema e dos dados, a otimização do desempenho e a prevenção de erros ou resultados inesperados no Adobe Experience Platform.
-
 Este documento fornece limites de uso padrão para dados do Serviço de consulta para ajudar você a otimizar o desempenho do sistema ao consultar dados em relação aos seus direitos de licença.
+
+>[!IMPORTANT]
+>
+>Verifique os direitos de licença em sua Ordem de venda e a correspondência [Descrição do produto](https://helpx.adobe.com/legal/product-descriptions.html?lang=pt-BR) sobre os limites de uso reais, além desta página de medidas de proteção.
 
 ## Pré-requisitos
 
@@ -73,7 +76,7 @@ As tabelas abaixo fornecem os limites de proteção e descrições recomendados 
 | Usuários do Serviço de Consulta Concorrente para Lote Não Programado | <ul><li>Conforme especificado na descrição do produto do aplicativo.</li><li>+5 (com cada pacote complementar de usuários de query ad hoc adicional adquirido)</li></ul> | Proteção imposta pelo sistema | Para consultas em lote não agendadas (por exemplo, consultas CTAS/ITAS no modo interativo), isso define quantos usuários podem criar sessões simultaneamente para uma organização específica. Se o limite de simultaneidade for excedido, o usuário receberá uma `Session Limit Reached` erro. |
 | Usuários do Serviço de Consulta Simultâneos para um Lote agendado | Sem limitação de usuário | N/D | As consultas em lote agendadas são trabalhos assíncronos, portanto, não há limitação de usuário. |
 | Horas computacionais para processamento de dados em lote | Conforme especificado na Ordem de venda de SKU personalizada de Consulta de Adobe Experience Platform Intelligence do Cliente | Proteção de desempenho | Isso define a quantidade de tempo computacional por ano que um cliente tem permissão para executar consultas em lote para digitalizar, processar e gravar dados de volta no data lake. |
-| Consultar simultaneidade | Suportado | N/D | As consultas em lote agendadas são trabalhos assíncronos, portanto, as consultas simultâneas são compatíveis. |
+| Consultar simultaneidade | Compatível | N/D | As consultas em lote agendadas são trabalhos assíncronos, portanto, as consultas simultâneas são compatíveis. |
 | Conector do cliente e limite de saída do resultado | Conector do cliente<ul><li>Interface do usuário de consulta (sem limite superior para linhas)</li><li>Cliente de terceiros (sem limite superior para linhas)</li><li>[!DNL PostgresSQL] cliente (sem limite superior para linhas)</li><li>REST APIs (sem limite superior para linhas)</li></ul> | Proteção imposta pelo sistema | O resultado de um query pode ser disponibilizado usando os seguintes métodos:<ul><li>Pode ser armazenado como conjuntos de dados derivados</li><li>Pode ser inserido nos conjuntos de dados derivados existentes</li></ul>Observação: não há limite superior para o número de contagem de registros no resultado da consulta. |
 | Resultados retornados via | Conjunto de dados | N/D | Isso define como os resultados são disponibilizados aos usuários. |
 

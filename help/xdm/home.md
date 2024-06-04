@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Visão geral do sistema XDM
 description: A padronização e a interoperabilidade são os principais conceitos por trás da Adobe Experience Platform. O Experience Data Model (XDM), orientado pelo Adobe, é um esforço para padronizar os dados de experiência do cliente e definir esquemas para o gerenciamento da experiência do cliente.
 exl-id: 294d5f02-850f-47ea-9333-8b94a0bb291e
-source-git-commit: 8113b5298120f710f43c5a02504f19ca3af67c5a
+source-git-commit: 48caa318f0e951979db4fd2c94624a73311422d6
 workflow-type: tm+mt
-source-wordcount: '2117'
-ht-degree: 4%
+source-wordcount: '2101'
+ht-degree: 0%
 
 ---
 
@@ -23,7 +23,7 @@ Saiba mais sobre a função do sistema XDM no Experience Platform.
 
 ## Esquemas XDM {#xdm-schemas}
 
-A Experience Platform utiliza esquemas para descrever a estrutura dos dados de forma consistente e reutilizável. Ao definir os dados de forma consistente em todos os sistemas, fica mais fácil manter o significado e, portanto, obter valor dos dados.
+O Experience Platform usa esquemas para descrever a estrutura dos dados de forma consistente e reutilizável. Ao definir os dados de forma consistente em todos os sistemas, fica mais fácil manter o significado e, portanto, obter valor dos dados.
 
 Antes que os dados possam ser assimilados na Platform, um esquema deve ser composto para descrever a estrutura dos dados e fornecer restrições ao tipo de dados que podem estar contidos em cada campo. Os esquemas consistem em uma classe base e zero ou mais grupos de campos de esquema.
 
@@ -53,7 +53,7 @@ Para obter mais informações sobre como gerenciar e interagir com schemas na Pl
 >[!CONTEXTUALHELP]
 >id="platform_schemas_behavior"
 >title="Comportamentos de dados"
->abstract="Os dados destinados ao uso na Experience Platform são agrupados em três tipos de comportamento: registro, série de tempo e ad hoc. Os esquemas de registro fornecem informações sobre os atributos de um assunto, enquanto os esquemas de séries de tempo capturam um instantâneo do sistema no momento em que uma ação foi tomada. Os esquemas ad hoc capturam campos que são namespaces usados somente por um único conjunto de dados. Consulte a documentação para obter mais informações sobre comportamentos de dados na Platform."
+>abstract="Os dados destinados ao uso no Experience Platform são agrupados em três tipos de comportamento: registro, série temporal e ad hoc. Os esquemas de registro fornecem informações sobre os atributos de um assunto, enquanto os esquemas de série temporal capturam um instantâneo do sistema no momento em que uma ação foi tomada. Esquemas ad hoc capturam campos com namespace para uso somente por um único conjunto de dados. Consulte a documentação para obter mais informações sobre comportamentos de dados na Platform."
 
 Os dados destinados ao uso no Experience Platform são agrupados em três tipos de comportamento:
 
@@ -118,10 +118,6 @@ Consulte a [Visão geral do Serviço de consulta](../query-service/home.md) para
 O Perfil do cliente em tempo real fornece um perfil do cliente centralizado para gerenciamento de experiência direcionado e personalizado. Cada perfil contém dados agregados em todos os sistemas e inclui contas acionáveis com carimbo de data e hora de eventos que envolvem o assunto do perfil. Esses eventos podem ter ocorrido em qualquer um dos sistemas utilizados com o Experience Platform.
 
 O Perfil do cliente em tempo real consome dados formatados por esquema com base na [!UICONTROL Perfil individual XDM] e [!UICONTROL XDM ExperienceEvent] classes e responde a consultas com base nesses dados.
-
->[!NOTE]
->
->O Perfil do cliente em tempo real **não** esquemas de suporte baseados em classes diferentes da [!UICONTROL XDM ExperienceEvent] classe.
 
 O sistema mantém uma instância de cada perfil de cliente, mesclando dados para formar uma &quot;única fonte da verdade&quot; para o indivíduo. Esses dados unificados são representados usando o que é conhecido como &quot;esquema de união&quot; (às vezes chamado de &quot;visualização de união&quot;). Um esquema de união agrega os campos de todos os esquemas que implementam a mesma classe em um único esquema. Ao compor um esquema usando a interface ou a API do, você pode ativar o esquema para uso com o Perfil do cliente em tempo real e marcá-lo para inclusão na união. O esquema marcado participará da definição do esquema que está sendo alimentado para o Perfil.
 

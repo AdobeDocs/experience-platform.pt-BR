@@ -4,9 +4,9 @@ title: Painel de Uso da Licença
 description: A Adobe Experience Platform fornece um painel por meio do qual você pode visualizar informações importantes sobre o uso de licença da sua organização.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 0613a0c713ea3559e03d2228e2b9e6be7232a1f0
+source-git-commit: b1fac3d523ebdf765bec038cde6a667d9af71243
 workflow-type: tm+mt
-source-wordcount: '2101'
+source-wordcount: '2135'
 ht-degree: 1%
 
 ---
@@ -158,6 +158,10 @@ O painel de uso da licença relata várias métricas exclusivas que são aplicá
 | [!UICONTROL Número de pacotes de segmentação de streaming] | Os pacotes atualizam a associação de segmento para um perfil de pessoa à medida que novos dados entram no Serviço de segmentação por meio de um fluxo de transmissão. A associação do segmento é avaliada com base nos atributos atuais do perfil da pessoa e no valor do evento atual, sem levar em conta o comportamento histórico. A segmentação de transmissão é um recurso compartilhado. |
 
 <!-- |  [!UICONTROL Sandbox No of Packs] |  A logical separation within your instance of any Adobe On-demand Service that accesses Adobe Experience Platform isolating data and operations | -->
+
+>[!TIP]
+>
+>Você pode verificar seus direitos de licença em seu Pedido de vendas para calcular métricas como sua &quot;Permissão de armazenamento&quot;.<br>Por exemplo,<ul><li>Abatimento de armazenamento = o número de &quot;perfis autorizados&quot; em seu contrato X Perfil médio Riqueza</li></ul>
 
 A disponibilidade dessas métricas e a definição específica de cada uma delas variam de acordo com o licenciamento adquirido pela sua organização. Para obter definições detalhadas de cada métrica, consulte a documentação apropriada Descrição do produto:
 

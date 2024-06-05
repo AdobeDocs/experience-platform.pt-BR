@@ -2,9 +2,9 @@
 title: Visão geral do Assistente de IA no Adobe Experience Platform
 description: Saiba mais sobre o AI Assistant, suas nuances e casos de uso e como você pode usá-lo para acelerar seu fluxo de trabalho com o Adobe Experience Platform e o Real-time Customer Data Platform.
 exl-id: cfd4ac22-fff3-4b50-bbc2-85b6328f603c
-source-git-commit: a1092e21940c5e4ba9b598bc51ba1243b57a0051
+source-git-commit: b51291e6c3663c6d6e6d416f0d2c37563c852155
 workflow-type: tm+mt
-source-wordcount: '678'
+source-wordcount: '679'
 ht-degree: 1%
 
 ---
@@ -19,7 +19,7 @@ O Assistente de IA no Adobe Experience Platform é uma experiência de conversa�
 
 >[!IMPORTANT]
 >
->Você deve concordar com um contrato de usuário antes de usar o Assistente de IA. O contrato de usuário também contém o contrato público beta. Para que você possa usar os recursos adicionais do Assistente de IA à medida que eles forem implantados na capacidade beta.
+>Você deve concordar com um [contrato do usuário](https://www.adobe.com/legal/licenses-terms/adobe-dx-gen-ai-user-guidelines.html) antes de usar o Assistente de IA. O contrato de usuário também contém o contrato público beta. Para que você possa usar os recursos adicionais do Assistente de IA à medida que eles forem implantados na capacidade beta.
 
 +++Selecione para exibir a interface do contrato do usuário
 

@@ -2,9 +2,9 @@
 title: Visão geral da extensão da API de meta conversões
 description: Saiba mais sobre a extensão da API de meta conversões para encaminhamento de eventos no Adobe Experience Platform.
 exl-id: 6b5836d6-6674-4978-9165-0adc1d7087b7
-source-git-commit: f7fdfbf9afcecb255668d5d6393b87918114b067
+source-git-commit: 3cd937f49f27006e3cab60df1692d33138944ce2
 workflow-type: tm+mt
-source-wordcount: '2578'
+source-wordcount: '2583'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 A variável [[!DNL Meta Conversions API]](https://developers.facebook.com/docs/marketing-api/conversions-api/) permite conectar seus dados de marketing do lado do servidor ao [!DNL Meta] para otimizar o direcionamento de seus anúncios, reduzir o custo por ação e medir os resultados. Os eventos estão vinculados a um [[!DNL Meta Pixel]](https://developers.facebook.com/docs/meta-pixel/) e são processados de maneira semelhante aos eventos do lado do cliente.
 
-Usar o [!DNL Meta Conversions API] você pode aproveitar os recursos da API em sua [encaminhamento de eventos](../../../ui/event-forwarding/overview.md) regras para enviar dados para [!DNL Meta] da Rede de borda da Adobe Experience Platform. Este documento aborda como instalar a extensão e usar seus recursos em um encaminhamento de eventos [regra](../../../ui/managing-resources/rules.md).
+Usar o [!DNL Meta Conversions API] você pode aproveitar os recursos da API em sua [encaminhamento de eventos](../../../ui/event-forwarding/overview.md) regras para enviar dados para [!DNL Meta] do Edge Network Adobe Experience Platform. Este documento aborda como instalar a extensão e usar seus recursos em um encaminhamento de eventos [regra](../../../ui/managing-resources/rules.md).
 
 ## Demonstração
 
@@ -53,15 +53,15 @@ Quando terminar, selecione **[!UICONTROL Salvar]**
 
 A extensão é instalada e agora você pode empregar seus recursos nas regras de encaminhamento de eventos.
 
-## Integração com o Meta Business Extension (MBE) {#mbe}
+## Integração com a extensão do Facebook e do Instagram {#facebook}
 
-A integração com o aprimoramento Meta Business Extensions (MBE) permite a autenticação rápida em sua conta Meta Business. Em seguida, preenche automaticamente o [!UICONTROL ID de pixel] e a API de meta conversões [!UICONTROL Token de acesso], facilitando a instalação e a configuração da API de metaconversões.
+A integração usando a extensão Facebook e Instagram permite que você se autentique rapidamente em sua conta Meta Business. Em seguida, preenche automaticamente o [!UICONTROL ID de pixel] e a API de meta conversões [!UICONTROL Token de acesso], facilitando a instalação e a configuração da API de metaconversões.
 
-Um prompt da caixa de diálogo para autenticar no MBE é exibido ao instalar o [!UICONTROL API de meta conversões] extensão.
+Um prompt da caixa de diálogo para autenticar no Facebook e no Instagram é exibido ao instalar o [!UICONTROL API de meta conversões] extensão.
 
 ![A variável [!UICONTROL Extensão da API de meta conversões] realce da página de instalação [!UICONTROL Conectar ao Meta].](../../../images/extensions/server/meta/mbe-extension-install.png)
 
-Um prompt da caixa de diálogo para autenticar no MBE também aparece na interface do fluxo de trabalho de início rápido no encaminhamento de eventos.
+Um prompt da caixa de diálogo para autenticar no Facebook e no Instagram também é exibido na interface do fluxo de trabalho de início rápido no encaminhamento de eventos.
 
 ![Destaque da interface de fluxo de trabalho de início rápido [!UICONTROL Conectar ao Meta].](../../../images/extensions/server/meta/mbe-extension-quick-start.png)
 
@@ -129,7 +129,7 @@ Ao enviar eventos compartilhados, verifique se você está incluindo uma ID e um
 
 O recurso de início rápido ajuda a configurar com facilidade e eficiência a API de Meta Conversões e as extensões Meta Pixel. Essa ferramenta automatiza várias etapas executadas em tags de Adobe e no encaminhamento de eventos, reduzindo significativamente o tempo de configuração.
 
-Esse recurso instala e configura automaticamente a API de metaconversões e as extensões de metapixels em uma propriedade de tags recém-gerada automaticamente e encaminhamento de eventos com as regras e os elementos de dados necessários. Além disso, ele também instala e configura automaticamente o SDK da Web do Experience Platform e o Datastream. Por fim, o recurso de início rápido publica automaticamente a biblioteca no URL designado em um ambiente de desenvolvimento, o que permite a coleta de dados do lado do cliente e o encaminhamento de eventos do lado do servidor em tempo real por meio do encaminhamento de eventos e da Rede de borda do Experience Platform.
+Esse recurso instala e configura automaticamente a API de metaconversões e as extensões de metapixels em uma propriedade de tags recém-gerada automaticamente e encaminhamento de eventos com as regras e os elementos de dados necessários. Além disso, ele também instala e configura automaticamente o SDK da Web do Experience Platform e o Datastream. Por fim, o recurso de início rápido publica automaticamente a biblioteca no URL designado em um ambiente de desenvolvimento, o que permite a coleta de dados do lado do cliente e o encaminhamento de eventos do lado do servidor em tempo real por meio do encaminhamento de eventos e do Edge Network Experience Platform.
 
 O vídeo a seguir fornece uma introdução ao recurso de início rápido.
 

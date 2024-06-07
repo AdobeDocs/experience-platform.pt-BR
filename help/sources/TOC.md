@@ -5,10 +5,10 @@ breadcrumb-title: Guia dos conectores de origem
 user-guide-description: Assimilar dados de várias fontes. Saiba como estruturar, rotular e aprimorar os dados já assimilados.
 feature: Sources
 role: Developer
-source-git-commit: 9399ac0e2e0a284799874af15188bbf4a4a380a7
+source-git-commit: 485881d4cbba09ae89d26b3613907174c0f24cc3
 workflow-type: tm+mt
-source-wordcount: '1043'
-ht-degree: 24%
+source-wordcount: '1046'
+ht-degree: 23%
 
 ---
 
@@ -350,6 +350,7 @@ ht-degree: 24%
       - [Fluxo de dados de conexão de protocolo](tutorials/ui/dataflow/protocols.md)
    - [Criar um fluxo de dados de fontes usando modelos na interface](tutorials/ui/templates.md)
    - [Filtrar objetos de fontes](tutorials/ui/filter.md)
+   - [Assimilar dados criptografados](tutorials/ui/encryped-ingestion.md)
    - [Assimilação sob demanda](tutorials/ui/on-demand-ingestion.md)
    - [Monitorar fluxos de dados em lote](tutorials/ui/monitor.md)
    - [Monitorar fluxos de dados de transmissão](tutorials/ui/monitor-streaming.md)

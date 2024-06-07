@@ -3,9 +3,9 @@ title: Visão geral do encaminhamento de eventos
 description: Saiba mais sobre o encaminhamento de eventos da Adobe Experience Platform, que permite usar a Platform Edge Network para executar tarefas sem alterar a sua implementação de tag.
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: 31811b7448a285ee5d25872641354a6981c64471
+source-git-commit: 16f9ee9d14326f857b444c2361b894aca06b04d6
 workflow-type: tm+mt
-source-wordcount: '1160'
+source-wordcount: '1178'
 ht-degree: 7%
 
 ---
@@ -112,6 +112,12 @@ A variável [!UICONTROL Ações] de uma regra de encaminhamento de eventos é se
 ## Segredos {#secrets}
 
 O encaminhamento de eventos permite criar, gerenciar e armazenar segredos que podem ser usados para autenticação nos servidores para os quais você está enviando dados. Consulte o guia sobre [segredos](./secrets.md) sobre os diferentes tipos de tipos de segredos disponíveis e como eles são implementados na interface do usuário do.
+
+## Visão geral do vídeo {#video}
+
+O vídeo a seguir tem como objetivo ajudá-lo a entender melhor o Encaminhamento de eventos e as conexões do Real-Time CDP.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3429308)
 
 ## Próximas etapas
 

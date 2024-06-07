@@ -3,9 +3,9 @@ keywords: personalização do target, destino, destino do experience platform ta
 title: Conexão com o Adobe Target
 description: O Adobe Target é um aplicativo que fornece recursos de personalização e experimentação em tempo real e alimentados por IA em todas as interações de entrada de clientes em sites, aplicativos móveis e muito mais.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: ddc15a36e83ebe059f3b4f81f3feccb2d3a4a4f0
+source-git-commit: e5c34ffb9b27ddad0c6523a7279fdf712c84f3ff
 workflow-type: tm+mt
-source-wordcount: '1531'
+source-wordcount: '1555'
 ht-degree: 2%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 2%
 
 | Mês de lançamento | Tipo de atualização | Descrição |
 |---|---|---|
-| Abril de 2024 | Atualização de funcionalidade e documentação | Ao se conectar ao destino com o usando uma ID de fluxo de dados, você agora *não precisam* para ativar necessariamente a sequência de dados para segmentação de borda. Isso significa que o destino funcionará com públicos-alvo em lote e de transmissão, embora os casos de uso que você pode fazer sejam diferentes. Exibir a tabela no [parâmetros de conexão](#parameters) para obter mais informações. |
+| Abril de 2024 | Atualização de funcionalidade e documentação | Ao se conectar ao destino e usar uma ID de fluxo de dados, você agora *não precisam* para ativar necessariamente a sequência de dados para segmentação de borda. Isso significa que o destino funcionará com públicos-alvo em lote e de transmissão, embora os casos de uso que você pode fazer sejam diferentes. Exibir a tabela no [parâmetros de conexão](#parameters) para obter mais informações. |
 | Janeiro de 2024 | Atualização de funcionalidade e documentação | Agora é possível compartilhar públicos-alvo e atributos de perfil na conexão do Adobe Target para a sandbox de produção padrão e outras sandboxes não padrão. |
 | Junho de 2023 | Atualização de funcionalidade e documentação | A partir de junho de 2023, você poderá selecionar o espaço de trabalho do Adobe Target para o qual deseja compartilhar públicos ao configurar uma nova conexão de destino do Adobe Target. Consulte a seção [parâmetros de conexão](#parameters) para obter mais informações. Além disso, consulte o tutorial sobre a [configuração de espaços de trabalho](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html) no Adobe Target para obter mais informações sobre espaços de trabalho. |
 | Maio de 2023 | Atualização de funcionalidade e documentação | A partir de maio de 2023, a **[!UICONTROL Adobe Target]** suporte para conexão [personalização baseada em atributos](../../ui/activate-edge-personalization-destinations.md#map-attributes) e está disponível para todos os clientes. |
@@ -62,9 +62,9 @@ Esta seção descreve quais tipos de públicos-alvo você pode exportar para ess
 
 >[!IMPORTANT]
 >
->Os públicos-alvo ativados para esse destino devem usar o [Política de mesclagem ativa na borda](../../../segmentation/ui/segment-builder.md#merge-policies). A variável [!DNL Active-On-Edge] a política de mesclagem garante que os públicos-alvo sejam avaliados constantemente [na borda](../../../segmentation/ui/edge-segmentation.md) e estão disponíveis para caso de uso de personalização em tempo real e na próxima página.
-> Se você mapear públicos-alvo que usam uma política de mesclagem diferente para destinos de borda, esses públicos-alvo não serão avaliados.
-> Siga as instruções em [criação de uma política de mesclagem](../../../profile/merge-policies/ui-guide.md#create-a-merge-policy)e certifique-se de ativar o **[!UICONTROL Política de mesclagem ativa na borda]** alternar.
+>Ao ativar *públicos-alvo de borda para casos de uso de personalização de mesma página e próxima página*, os públicos-alvo *deve* usar um [política de mesclagem ativa na borda](../../../segmentation/ui/segment-builder.md#merge-policies). A variável [!DNL active-on-edge] a política de mesclagem garante que os públicos-alvo sejam avaliados constantemente [na borda](../../../segmentation/ui/edge-segmentation.md) e estão disponíveis para casos de uso de personalização em tempo real e na próxima página.  Ler sobre [todos os casos de uso disponíveis](#parameter), com base no tipo de implementação.
+>Se você mapear públicos-alvo de borda que usam uma política de mesclagem diferente para destinos do Adobe Target, esses públicos-alvo não serão avaliados para casos de uso em tempo real e na próxima página.
+>Siga as instruções em [criação de uma política de mesclagem](../../../profile/merge-policies/ui-guide.md#create-a-merge-policy)e certifique-se de ativar o **[!UICONTROL Política de mesclagem ativa na borda]** alternar.
 
 
 | Origem do público | Compatível | Descrição |

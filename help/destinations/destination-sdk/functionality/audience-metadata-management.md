@@ -2,9 +2,9 @@
 description: Use modelos de metadados de público-alvo para criar, atualizar ou excluir públicos-alvo no destino de forma programática. O Adobe fornece um modelo extensível de metadados de público-alvo, que pode ser configurado com base nas especificações da API de marketing. Depois de definir, testar e enviar o modelo, ele será usado pelo Adobe para estruturar as chamadas de API para o seu destino.
 title: Gerenciamento de metadados de público
 exl-id: 795e8adb-c595-4ac5-8d1a-7940608d01cd
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 3660c3a342af07268d2ca2c907145df8237872a1
 workflow-type: tm+mt
-source-wordcount: '1037'
+source-wordcount: '1047'
 ht-degree: 0%
 
 ---
@@ -523,7 +523,7 @@ Observe que em alguns exemplos, campos de macro como `{{authData.accessToken}}` 
 
 Encontre descrições de todos os parâmetros no modelo na [Criar um modelo de público-alvo](../metadata-api/create-audience-template.md) Referência da API.
 
-## Macros usadas em modelos de metadados de público
+## Macros usadas em modelos de metadados de público {#macros}
 
 Para transmitir informações como IDs de público-alvo, tokens de acesso, mensagens de erro e muito mais entre o Experience Platform e a API, os modelos de público-alvo incluem macros que você pode usar. Leia abaixo uma descrição das macros usadas nos três exemplos de configuração desta página:
 

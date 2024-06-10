@@ -5,10 +5,10 @@ user-guide-description: Ative seus dados conhecidos e desconhecidos para campanh
 description: Este documento lista o índice dos destinos do Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: a6bc9c5d2b4ec9032c70dcf625075e5d3e0442cc
+source-git-commit: e0f4ee0ae0f14df43bfe36375d8fe8e9eac79369
 workflow-type: tm+mt
-source-wordcount: '1223'
-ht-degree: 3%
+source-wordcount: '1224'
+ht-degree: 4%
 
 ---
 
@@ -216,6 +216,7 @@ ht-degree: 3%
    * [Visão geral](./destination-sdk/overview.md)
    * [Pré-requisitos de integração](./destination-sdk/integration-prerequisites.md)
    * [Introdução ao Destination SDK](./destination-sdk/getting-started.md)
+   * [Glossário](/help/destinations/destination-sdk/glossary.md)
    * Recurso {#functionality}
       * [Opções de configuração](./destination-sdk/functionality/configuration-options.md)
       * Componentes do servidor de destino {#destination-server}

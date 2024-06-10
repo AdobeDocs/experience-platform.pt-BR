@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Funções de mapeamento de preparação de dados
 description: Este documento apresenta as funções de mapeamento usadas com o Preparo de dados.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: ac90dc055a1e4d1d8127899f668e619deab2d19e
+source-git-commit: 6509447ff2e67eac7b6b41754981cd18eb52562e
 workflow-type: tm+mt
-source-wordcount: '5792'
-ht-degree: 2%
+source-wordcount: '5805'
+ht-degree: 1%
 
 ---
 
@@ -25,11 +25,13 @@ Se um nome de campo não seguir essa convenção, o nome do campo deverá ser co
 >
 >Ao interagir com hierarquias, se um atributo filho tiver um ponto (`.`), você deve usar uma barra invertida (`\`) para evitar caracteres especiais. Para obter mais informações, leia o guia em [saída de caracteres especiais](home.md#escape-special-characters).
 
-Além disso, se um nome de campo for **qualquer** das seguintes palavras-chave reservadas, deve ser encapsulado com `${}`:
+Se um nome de campo for **qualquer** das seguintes palavras-chave reservadas, deve ser encapsulado com `${}{}`:
 
 ```console
-new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continue, else, and, ne, true, le, if, ge, return, _errors
+new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continue, else, and, ne, true, le, if, ge, return, _errors, do, function, empty, size
 ```
+
+Além disso, as palavras-chave reservadas também incluem qualquer uma das funções do mapeador listadas nesta página.
 
 Os dados em subcampos podem ser acessados usando a notação de pontos. Por exemplo, se houver uma variável `name` objeto, para acessar o `firstName` campo, use `name.firstName`.
 
@@ -169,7 +171,7 @@ Para obter informações sobre o recurso de cópia de objeto, consulte a seção
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | coalescência | Retorna o primeiro objeto não nulo em uma determinada matriz. | <ul><li>ENTRADA: **Obrigatório** A matriz da qual você deseja localizar o primeiro objeto não nulo.</li></ul> | coalesce(INPUT) | coalesce(null, null, null, &quot;primeiro&quot;, null, &quot;segundo&quot;) | &quot;first&quot; |
 | primeiro | Recupera o primeiro elemento da matriz especificada. | <ul><li>ENTRADA: **Obrigatório** A matriz da qual você deseja encontrar o primeiro elemento.</li></ul> | first(ENTRADA) | first(&quot;1&quot;, &quot;2&quot;, &quot;3&quot;) | &quot;1&quot; |
-| último | Recupera o último elemento da matriz especificada. | <ul><li>ENTRADA: **Obrigatório** A matriz da qual você deseja encontrar o último elemento.</li></ul> | last(INPUT) | last(&quot;1&quot;, &quot;2&quot;, &quot;3&quot;) | &quot;3&quot; |
+| últimos | Recupera o último elemento da matriz especificada. | <ul><li>ENTRADA: **Obrigatório** A matriz da qual você deseja encontrar o último elemento.</li></ul> | last(INPUT) | last(&quot;1&quot;, &quot;2&quot;, &quot;3&quot;) | &quot;3&quot; |
 | add_to_array | Adiciona elementos ao final da matriz. | <ul><li>MATRIZ: **Obrigatório** A matriz à qual você está adicionando elementos.</li><li>VALORES: os elementos que você deseja anexar à matriz.</li></ul> | add_to_array&#x200B;(MATRIZ, VALORES) | add_to_array&#x200B;([&#39;a&#39;, &#39;b&#39;], &#39;c&#39;, &#39;d&#39;) | [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;] |
 | join_arrays | Combina os arrays entre si. | <ul><li>MATRIZ: **Obrigatório** A matriz à qual você está adicionando elementos.</li><li>VALORES: a(s) matriz(es) que você deseja anexar à matriz principal.</li></ul> | join_arrays&#x200B;(MATRIZ, VALORES) | join_arrays&#x200B;([&#39;a&#39;, &#39;b&#39;], [&#39;c&#39;], [&#39;d&#39;, &#39;e&#39;]) | [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;] |
 | to_array | Pega uma lista de entradas e a converte em uma matriz. | <ul><li>INCLUDE_NULLS: **Obrigatório** Um valor booleano para indicar se inclui ou não nulos na matriz de resposta.</li><li>VALORES: **Obrigatório** Os elementos a serem convertidos em uma matriz.</li></ul> | to_array&#x200B;(INCLUDE_NULLS, VALUES) | to_array(false, 1, null, 2, 3) | `[1, 2, 3]` |
@@ -275,13 +277,13 @@ Para obter mais informações sobre valores de campo de dispositivo, leia a [lis
 | Função | Descrição | Parâmetros | Sintaxe | Expressão | Saída de exemplo |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | ua_os_name | Extrai o nome do sistema operacional da sequência de agente do usuário. | <ul><li>USER_AGENT: **Obrigatório** A sequência de agente do usuário.</li></ul> | ua_os_name&#x200B;(USER_AGENT) | ua_os_name&#x200B;(&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | iOS |
-| ua_os_version_major | Extrai a versão principal do sistema operacional da sequência de agente do usuário. | <ul><li>USER_AGENT: **Obrigatório** A sequência de agente do usuário.</li></ul> | ua_os_version_major&#x200B;(USER_AGENT) | ua_os_version_major&#x200B;s(&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | iOS 5 |
+| ua_os_version_major | Extrai a versão principal do sistema operacional da sequência de agente do usuário. | <ul><li>USER_AGENT: **Obrigatório** A sequência de agente do usuário.</li></ul> | ua_os_version_major&#x200B;(USER_AGENT) | ua_os_version_major&#x200B;s(&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | IOS 5 |
 | ua_os_version | Extrai a versão do sistema operacional da sequência de agente do usuário. | <ul><li>USER_AGENT: **Obrigatório** A sequência de agente do usuário.</li></ul> | ua_os_version&#x200B;(USER_AGENT) | ua_os_version&#x200B;(&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | 5.1.1 |
 | ua_os_name_version | Extrai o nome e a versão do sistema operacional da sequência de agente do usuário. | <ul><li>USER_AGENT: **Obrigatório** A sequência de agente do usuário.</li></ul> | ua_os_name_version&#x200B;(USER_AGENT) | ua_os_name_version&#x200B;(&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | iOS 5.1.1 |
 | ua_agent_version | Extrai a versão do agente da sequência de agente do usuário. | <ul><li>USER_AGENT: **Obrigatório** A sequência de agente do usuário.</li></ul> | ua_agent_version&#x200B;(USER_AGENT) | ua_agent_version&#x200B;(&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | 5,1 |
 | ua_agent_version_major | Extrai o nome do agente e a versão principal da sequência de agente do usuário. | <ul><li>USER_AGENT: **Obrigatório** A sequência de agente do usuário.</li></ul> | ua_agent_version_major&#x200B;(USER_AGENT) | ua_agent_version_major&#x200B;(&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | Safari 5 |
 | ua_agent_name | Extrai o nome do agente da sequência de agente do usuário. | <ul><li>USER_AGENT: **Obrigatório** A sequência de agente do usuário.</li></ul> | ua_agent_name&#x200B;(USER_AGENT) | ua_agent_name&#x200B;(&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | Safari |
-| ua_device_class | Extrai a classe de dispositivo da sequência de agente do usuário. | <ul><li>USER_AGENT: **Obrigatório** A sequência de agente do usuário.</li></ul> | ua_device_class&#x200B;(USER_AGENT) | ua_device_class&#x200B;(&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | Telefone |
+| ua_device_class | Extrai a classe de dispositivo da sequência de agente do usuário. | <ul><li>USER_AGENT: **Obrigatório** A sequência de agente do usuário.</li></ul> | ua_device_class&#x200B;(USER_AGENT) | ua_device_class&#x200B;(&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | Telefone  |
 
 {style="table-layout:auto"}
 
@@ -362,7 +364,7 @@ A tabela abaixo descreve uma lista de caracteres reservados e seus caracteres co
 | --- | --- |
 | espaço | %20 |
 | ! | %21 |
-| ” | %22 |
+| &quot; | %22 |
 | # | %23 |
 | $ | %24 |
 | % | %25 |
@@ -401,7 +403,7 @@ A tabela abaixo descreve uma lista de valores de campo de dispositivo e suas des
 | Desconhecido | Um dispositivo desconhecido. Normalmente, `useragents` que não contêm informações sobre o dispositivo. |
 | Dispositivo móvel | Um dispositivo móvel que ainda não foi identificado. Esse dispositivo móvel pode ser um eReader, um tablet, um telefone, um relógio etc. |
 | Tablet | Um dispositivo móvel com tela grande (geralmente > 7 pol). |
-| Telefone | Um dispositivo móvel com tela pequena (geralmente &lt; 7 pol). |
+| Telefone  | Um dispositivo móvel com tela pequena (geralmente &lt; 7 pol). |
 | Observar | Um dispositivo móvel com uma tela pequena (geralmente &lt; 2 pol). Esses dispositivos normalmente funcionam como uma tela adicional para um dispositivo do tipo telefone/tablet. |
 | Realidade aumentada | Um dispositivo móvel com recursos de AR. |
 | Realidade virtual | Um dispositivo móvel com recursos VR. |

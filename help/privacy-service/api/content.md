@@ -3,11 +3,10 @@ title: Endpoint da API de conteúdo
 description: Saiba como recuperar seus dados de acesso usando a API do Privacy Service.
 role: Developer
 badgePrivateBeta: label="Beta privado" type="Informative"
-hide: true
-hidefromtoc: true
-source-git-commit: c527771e051d39032642afae33945a45e5183a5f
+exl-id: b3b7ea0f-957d-4e51-bf92-121e9ae795f5
+source-git-commit: e3a453ad166fe244b82bd1f90e669579fcf09d17
 workflow-type: tm+mt
-source-wordcount: '693'
+source-wordcount: '696'
 ht-degree: 1%
 
 ---
@@ -18,15 +17,13 @@ ht-degree: 1%
 >
 >A variável `/content` o endpoint está atualmente na versão beta e sua organização pode ainda não ter acesso a ele. A funcionalidade e a documentação estão sujeitas a alterações.
 
-<!-- Q) Should this be called 'access information' or 'customer content'? -->
-
-Aproveite a segurança aprimorada ao recuperar &quot;informações de acesso&quot; (as informações que um titular de privacidade pode solicitar legitimamente para acessar). O URL de download fornecido na resposta a uma `/jobs/{JOB_ID}` A solicitação do GET agora aponta para um ponto de acesso de serviço da Adobe. Em seguida, você pode fazer uma solicitação GET para `/jobs/:JOB_ID/content` para retornar os dados do cliente no formato JSON. Esse método de acesso implementa várias camadas de autenticação e controle de acesso para melhorar a segurança.
+Use o `/content` endpoint para recuperar com segurança *informações de acesso* (as informações que um titular de privacidade pode solicitar legitimamente para acessar) para seus clientes. O URL de download fornecido na resposta a uma `/jobs/{JOB_ID}` A solicitação do GET aponta para um ponto de acesso de serviço da Adobe. Em seguida, você pode fazer uma solicitação GET para `/jobs/:JOB_ID/content` para retornar os dados do cliente no formato JSON. Esse método de acesso implementa várias camadas de autenticação e controle de acesso para melhorar a segurança.
 
 Antes de usar este guia, consulte o [guia de introdução](./getting-started.md) para obter informações sobre os cabeçalhos de autenticação necessários, apresentados na chamada de API de exemplo abaixo.
 
 >[!TIP]
 >
->Se, atualmente, você não souber a ID do trabalho para as informações de acesso necessárias, faça uma chamada para o `/jobs`e use parâmetros de consulta adicionais para filtrar os resultados. Uma lista completa dos parâmetros de consulta disponíveis pode ser encontrada no [manual de endpoint de processos de privacidade](./privacy-jobs.md).
+>Se, atualmente, você não souber a ID do trabalho para as informações de acesso necessárias, faça uma chamada para o `/jobs` e use parâmetros de consulta adicionais para filtrar os resultados. Uma lista completa dos parâmetros de consulta disponíveis pode ser encontrada no [manual de endpoint de processos de privacidade](./privacy-jobs.md).
 
 ## Recuperar informações do trabalho de privacidade
 
@@ -81,7 +78,7 @@ Uma resposta bem-sucedida retorna os detalhes do trabalho especificado.
         "processedDate":"04/12/2024 04:08 PM GMT",
         "productStatusResponse":{"status":"submitted"
         }}],
-    "downloadUrl":"https://platform-stage.adobe.io/data/core/privacy/jobs/dbe3a6a6-f8e6-11ee-a365-8d1d6df81cc5/content",
+    "downloadUrl":"https://platform.adobe.io/data/core/privacy/jobs/dbe3a6a6-f8e6-11ee-a365-8d1d6df81cc5/content",
     "regulation":"gdpr"
 }
 ```
@@ -144,10 +141,3 @@ curl -X GET \
 
 A resposta é um arquivo zip (*.zip). Normalmente, as informações são retornadas no formato JSON, embora isso não possa ser garantido. Os dados extraídos podem ser retornados em qualquer formato.
 
-<!-- ## Constraints {#constraints}
-
-During this private beta, the following constraints apply when using the `/content` endpoint:
-
-- The new `/content` download URL is only available in STAGE environments. It is not yet available in PROD environments
-- The `downloadUrl` should not be present in the JSON response unless the job has a `complete` status. Within the beta, the `downloadUrl` appears before a privacy job is complete.
-- The `downloadUrl` is also currently provided for `delete` jobs (which should never have a download URL). -->

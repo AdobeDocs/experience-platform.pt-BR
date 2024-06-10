@@ -3,10 +3,10 @@ title: Excluir Registros
 description: Saiba como excluir registros na interface do Adobe Experience Platform.
 badgeBeta: label="Beta" type="Informative"
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-source-git-commit: d9d2ab2da87adce45242cbb0c4132a4d17fcc4a6
+source-git-commit: 9981f35732b041a92c5a371e727a8facb6636cf5
 workflow-type: tm+mt
-source-wordcount: '1566'
-ht-degree: 8%
+source-wordcount: '1567'
+ht-degree: 0%
 
 ---
 
@@ -23,7 +23,7 @@ Use o [[!UICONTROL Ciclo de vida dos dados] espaço de trabalho](./overview.md) 
 
 ## Pré-requisitos {#prerequisites}
 
-A exclusão de registros requer um entendimento prático de como os campos de identidade funcionam no Experience Platform. Especificamente, você deve saber os valores de identidade principais das entidades cujos registros deseja excluir, dependendo do conjunto de dados (ou conjuntos de dados) do qual você está excluindo.
+A exclusão de registros requer um entendimento prático de como os campos de identidade funcionam no Experience Platform. Especificamente, você deve conhecer os valores de namespace de identidade das entidades cujos registros deseja excluir, dependendo do conjunto de dados (ou conjuntos de dados) do qual você está excluindo.
 
 Consulte a seguinte documentação para obter mais informações sobre identidades na Platform:
 
@@ -43,13 +43,13 @@ O workflow de criação da solicitação é exibido. Por padrão, a variável **
 
 >[!IMPORTANT]
 > 
->Como parte das alterações contínuas para melhorar a eficiência e reduzir o custo das operações do conjunto de dados, as organizações que foram movidas para o formato Delta podem excluir dados do Serviço de identidade, do Perfil do cliente em tempo real e do data lake. Esse tipo de usuário é chamado de delta-migrado. Os usuários de organizações que receberam a migração delta podem optar por excluir registros de um único conjunto de dados ou de todos eles. Os usuários de organizações que não foram migradas pelo delta não podem optar por excluir registros de um único conjunto de dados ou de todos os conjuntos de dados, como visto na imagem abaixo. Nesse caso, prossiga para o [fornecer identidades](#provide-identities) seção do guia.
+>Para melhorar a eficiência e tornar as operações do conjunto de dados mais baratas, as organizações que foram movidas para o formato Delta podem excluir dados do Serviço de identidade, do Perfil do cliente em tempo real e do data lake. Esse tipo de usuário é chamado de delta-migrado. Os usuários de organizações que receberam a migração delta podem optar por excluir registros de um único conjunto de dados ou de todos eles. Os usuários de organizações que não passaram pela migração delta não podem excluir seletivamente registros de um único conjunto de dados ou de todos os conjuntos de dados, conforme mostrado na imagem abaixo. Nesse caso, prossiga para o [Fornecer identidades](#provide-identities) seção do guia.
 
 ![O fluxo de trabalho de criação da solicitação com o [!UICONTROL Excluir registro] selecionada e realçada.](../images/ui/record-delete/delete-record.png)
 
 ## Selecionar conjuntos de dados {#select-dataset}
 
-A próxima etapa é determinar se você deseja excluir registros de um único conjunto de dados ou de todos os conjuntos de dados. Se esta opção não estiver disponível para você, continue para a [fornecer identidades](#provide-identities) seção do guia.
+A próxima etapa é determinar se você deseja excluir registros de um único conjunto de dados ou de todos os conjuntos de dados. Se esta opção não estiver disponível para você, continue para a [Fornecer identidades](#provide-identities) seção do guia.
 
 No **[!UICONTROL Detalhes do registro]** use o botão de opção para selecionar entre um conjunto de dados específico e todos os conjuntos de dados. Se você escolher **[!UICONTROL Selecionar conjunto de dados]**, prossiga para selecionar o ícone do banco de dados (![O ícone do banco de dados](../images/ui/record-delete/database-icon.png)) para abrir uma caixa de diálogo que fornece uma lista de conjuntos de dados disponíveis. Selecione o conjunto de dados desejado na lista seguida por **[!UICONTROL Concluído]**.
 
@@ -67,30 +67,30 @@ Se desejar excluir registros de todos os conjuntos de dados, selecione **[!UICON
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_primaryidentity"
->title="Identidade principal"
->abstract="Uma identidade principal é um atributo que vincula um registro ao perfil do consumidor na Experience Platform. O campo de identidade principal de um conjunto de dados é definido pelo esquema em que o conjunto de dados se baseia. Nessa coluna, você deve fornecer o tipo (ou namespace) da identidade principal do registro, como `email` para endereços de email e `ecid` para IDs da Experience Cloud. Para saber mais, consulte o manual da interface do ciclo de vida dos dados."
+>title="Namespace de identidade"
+>abstract="Um namespace de identidade é um atributo que vincula um registro ao perfil de um consumidor no Experience Platform. O campo de namespace de identidade de um conjunto de dados é definido pelo esquema no qual o conjunto de dados se baseia. Nesta coluna, você deve fornecer o tipo (ou namespace) para o namespace de identidade do registro, como `email` para endereços de email e `ecid` para IDs de Experience Cloud. Para saber mais, consulte o guia da interface do usuário do ciclo de vida dos dados."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_identityvalue"
->title="Valor de identidade"
->abstract="Nessa coluna, você deve fornecer o valor da identidade principal do registro, que deve corresponder ao tipo de identidade fornecido na coluna esquerda. Se o tipo de identidade principal for `email`, o valor deve ser o endereço de email do registro. Para saber mais, consulte o manual da interface do ciclo de vida dos dados."
+>title="Valor de identidade principal"
+>abstract="Nesta coluna, você deve fornecer o valor para o namespace de identidade do registro, que deve corresponder ao tipo de identidade fornecido na coluna à esquerda. Se o tipo de namespace de identidade for `email`, o valor deve ser o endereço de email do registro. Para saber mais, consulte o guia da interface do usuário do ciclo de vida dos dados."
 
-Ao excluir registros, você deve fornecer informações de identidade para que o sistema possa determinar quais registros devem ser excluídos. Para qualquer conjunto de dados na Plataforma, os registros são excluídos com base no **identidade principal** que é definido pelo esquema do conjunto de dados.
+Ao excluir registros, você deve fornecer informações de identidade para que o sistema possa determinar quais registros devem ser excluídos. Para qualquer conjunto de dados na Plataforma, os registros são excluídos com base no **namespace de identidade** que é definido pelo esquema do conjunto de dados.
 
-Como todos os campos de identidade na Platform, uma identidade primária é composta de duas coisas: uma **type** (às vezes chamado de namespace de identidade) e um **value**. O tipo de identidade fornece contexto sobre como o campo identifica um registro (como um endereço de email), e o valor representa a identidade específica de um registro para esse tipo (por exemplo, `jdoe@example.com` para o `email` tipo de identidade). Campos comuns usados como identidades incluem informações da conta, IDs do dispositivo e IDs de cookie.
+Como todos os campos de identidade na Platform, um namespace de identidade é composto de dois itens: um **type** (às vezes chamado de namespace de identidade) e um **value**. O tipo de identidade fornece contexto sobre como o campo identifica um registro (como um endereço de email). O valor representa a identidade específica de um registro para esse tipo (por exemplo, `jdoe@example.com` para o `email` tipo de identidade). Campos comuns usados como identidades incluem informações da conta, IDs do dispositivo e IDs de cookie.
 
 >[!TIP]
 >
->Se você não souber a identidade principal de um conjunto de dados específico, poderá encontrá-la na interface do usuário da plataforma. No **[!UICONTROL Conjuntos de dados]** selecione o conjunto de dados em questão na lista. Na página de detalhes do conjunto de dados, passe o mouse sobre o nome do esquema do conjunto de dados no painel direito. A identidade principal é exibida junto com o nome e a descrição do schema.
+>Se você não souber o namespace de identidade de um conjunto de dados específico, poderá encontrá-lo na interface do usuário da plataforma. No **[!UICONTROL Conjuntos de dados]** selecione o conjunto de dados em questão na lista. Na página de detalhes do conjunto de dados, passe o mouse sobre o nome do esquema do conjunto de dados no painel direito. O namespace de identidade é exibido junto com o nome e a descrição do esquema.
 >
 >![O painel Conjuntos de dados com um conjunto de dados selecionado e uma caixa de diálogo de esquema aberta no painel Detalhes do conjunto de dados. A ID primária do conjunto de dados é realçada.](../images/ui/record-delete/dataset-primary-identity.png)
 
-Se você estiver excluindo registros de um único conjunto de dados, todas as identidades fornecidas deverão ser do mesmo tipo, já que um conjunto de dados só pode ter uma identidade principal. Se estiver excluindo de todos os conjuntos de dados, você poderá incluir vários tipos de identidade, pois conjuntos de dados diferentes podem ter identidades principais diferentes.
+Se você estiver excluindo registros de um único conjunto de dados, todas as identidades fornecidas deverão ter o mesmo tipo, já que um conjunto de dados só pode ter um namespace de identidade. Se estiver excluindo de todos os conjuntos de dados, você poderá incluir vários tipos de identidade, pois conjuntos de dados diferentes podem ter identidades principais diferentes.
 
 Há duas opções para fornecer identidades ao excluir registros:
 
 * [Fazer upload de um arquivo JSON](#upload-json)
-* [Inserir valores de identidade manualmente](#manual-identity)
+* [Inserir valores de identidade primários manualmente](#manual-identity)
 
 ### Fazer upload de um arquivo JSON {#upload-json}
 
@@ -116,7 +116,7 @@ O arquivo JSON deve ser formatado como uma matriz de objetos, cada objeto repres
 | Propriedade | Descrição |
 | --- | --- |
 | `namespaceCode` | O tipo de identidade. |
-| `value` | O valor de identidade conforme indicado pelo tipo. |
+| `value` | O valor de identidade principal conforme indicado pelo tipo. |
 
 Depois que o arquivo for carregado, você poderá continuar para [enviar a solicitação](#submit).
 
@@ -126,7 +126,7 @@ Para inserir identidades manualmente, selecione **[!UICONTROL Adicionar identida
 
 ![O fluxo de trabalho de criação da solicitação com o [!UICONTROL Adicionar identidade] opção realçada.](../images/ui/record-delete/add-identity.png)
 
-São exibidos controles que permitem inserir identidades, uma de cada vez. Em **[!UICONTROL Identidade principal]**, use o menu suspenso para selecionar o tipo de identidade. Em **[!UICONTROL Valor de identidade]**, fornecem o valor de identidade principal do registro.
+São exibidos controles que permitem inserir identidades, uma de cada vez. Em **[!UICONTROL namespace de identidade]**, use o menu suspenso para selecionar o tipo de identidade. Em **[!UICONTROL Valor de identidade principal]**, forneça o valor do namespace de identidade para o registro.
 
 ![O fluxo de trabalho de criação da solicitação com um campo de identidade adicionado manualmente.](../images/ui/record-delete/identity-added.png)
 

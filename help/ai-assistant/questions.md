@@ -1,9 +1,10 @@
 ---
 title: Guia de perguntas do Assistente de IA
 description: Leia este documento para conhecer exemplos de perguntas que você pode usar ao consultar o Assistente de IA.
-source-git-commit: a1092e21940c5e4ba9b598bc51ba1243b57a0051
+exl-id: d16d1262-cc2d-45c9-94c4-b86132183442
+source-git-commit: 26e27e7a62731fe43ef203741121b22226078b28
 workflow-type: tm+mt
-source-wordcount: '1224'
+source-wordcount: '1206'
 ht-degree: 0%
 
 ---
@@ -33,20 +34,56 @@ As seguintes perguntas de exemplo são agrupadas por objetivos que você pode re
 
 As perguntas a seguir são agrupadas por objetos de dados e são classificadas como [insights operacionais](./home.md#operational-insights) ou [conhecimento do produto](./home.md#product-knowledge).
 
-| Objeto | Descrição |
-| --- | --- |
-| Públicos-alvo - insights operacionais | <ul><li>Quais públicos-alvo usam outros públicos-alvo?</li><li>Qual é a distribuição do número de perfis entre os públicos-alvo?</li><li>Mostre-me os públicos que foram modificados pela última vez antes {RELATIVE_DATE}.</li><li>Quais públicos-alvo têm 0 perfis?</li><li>É {USE_AUTOCOMPLETE_TO_FILL_AUDIENCE_NAME} usado em qualquer outro público-alvo?</li></ul> |
-| Atributos - Insights operacionais | <ul><li>Quais públicos-alvo têm atributo XDM {ATTRIBUTE_PATH} na definição do segmento?</li><li>Quantos atributos de esquema XDM não são usados em nenhum público-alvo?</li><li>Quais esquemas têm atributo XDM {ATTRIBUTE_PATH} neles?</li><li>Quais atributos XDM são ativados?</li><li>Quais atributos XDM são usados em públicos-alvo com mais de 10 perfis</li></ul> |
-| Fluxos de dados - Insights operacionais | <ul><li>Para quais fluxos de dados contribuem {DATASET_NAME} conjunto de dados?</li><li>Quais fluxos de dados de origem não estão sendo usados ou não têm mais dados chegando?</li><li> |
-| Conjuntos de dados - Insights operacionais | <ul><li>Quantos conjuntos de dados foram assimilados usando o mesmo esquema?</li><li>A qual conector de origem está associado {DATASET_NAME} conjunto de dados</li><li>Quais conjuntos de dados são usados em cada público-alvo?</li><li>Quais esquemas não são usados em nenhum conjunto de dados?</li><li>Quantos conjuntos de dados eu tenho?</li></ul> |
-| Destinos - Insights operacionais | <ul><li>Quais destinos estão em um estado ativo?</li><li>Quais contas de destino têm 0 públicos-alvo ativados?</li><li> |
-| Jornada - Insights operacionais | <ul><li>Quantas jornadas eu tenho?</li><li>Quais jornadas foram criadas em {RELATIVE_DATE} (por exemplo, semana passada) ou {RELATIVE_DATE} (por exemplo, antes/depois/em uma data específica)?</li><li>Mostre-me a lista de jornadas que foram modificadas em {RELATIVE_DATE} (por exemplo, semana passada) ou {RELATIVE_DATE} (por exemplo, antes/depois/em uma data específica)?</li><li>Listar as jornadas que eu tenho.</li><li>Liste os públicos-alvo que são usados em jornadas ativas.</li></ul> |
-| Esquemas - Insights operacionais | <ul><li>Quais campos do esquema contribuíram para a maioria dos públicos-alvo?</li><li>Quantos esquemas são ativados por perfil?</li><li>Lista todos os esquemas modificados na última semana.</li><li>Quais esquemas não são usados em nenhum conjunto de dados?</li><li>Lista todos os esquemas criados na última semana.</li></ul> |
-| Origens - Insights operacionais | <ul><li>Quais origens estão em um estado ativo?</li><li>Qual conector de origem está associado ao conjunto de dados {DATASET_NAME}?</li><li>Qual conector de origem tem o número mais alto de contas associadas?</li><li>Mostre-me os fluxos de dados e seus conectores de origem associados.</li></ul> |
-| Aprendizado direcionado - Conhecimento do produto (Real-Time CDP e Journey Optimizer) | <ul><li>Com o que o Assistente de IA pode ajudar?</li><li>O que são públicos-alvo semelhantes?</li><li>Como os grupos de usuários estão relacionados às funções?</li><li>Quando devo usar um tipo de dados vs um grupo de campos?</li><li>Qual é a diferença entre uma identidade e uma chave primária ou estrangeira?</li><li>Como a riqueza do perfil é calculada?</li></ul> |
-| Solução de problemas - Conhecimento do produto (Real-Time CDP e Journey Optimizer) | <ul><li>Com o que o Assistente de IA pode ajudar?</li><li>Posso excluir um esquema habilitado para perfil depois que os dados forem assimilados?</li><li>Por que não posso excluir um público-alvo?</li><li>Quanto tempo leva para que os públicos-alvo sejam avaliados e os resultados sejam disponibilizados para direcionamento?</li></ul> |
-
-{style="table-layout:auto"}
+* **Públicos-alvo - insights operacionais**
+   * Quais públicos-alvo usam outros públicos-alvo?
+   * Qual é a distribuição do número de perfis entre os públicos-alvo?
+   * Mostre-me os públicos que foram modificados pela última vez antes {RELATIVE_DATE}.
+   * Quais públicos-alvo têm 0 perfis?
+   * É {USE_AUTO_COMPLETE_TO_FILL_AUDIENCE_NAME} usado em qualquer outro público-alvo?
+* **Atributos - Insights operacionais**
+   * Quais públicos-alvo têm atributo xdm {ATTRIBUTE_PATH} na definição do segmento?
+   * Quantos atributos de esquema XDM não são usados em nenhum público-alvo?
+   * Quais esquemas têm atributo xdm {ATTRIBUTE_PATH} neles?
+   * Quais atributos XDM são ativados?
+   * Quais atributos XDM são usados em públicos-alvo com mais de 10 perfis?
+* **Fluxos de dados - Insights operacionais**
+   * Para quais fluxos de dados contribuem {USE_AUTO_COMPLETE_TO_FILL_DATASET_NAME} conjunto de dados?
+   * Quais fluxos de dados de origem não estão sendo usados ou não têm mais dados chegando?
+   * Listar os fluxos de dados de origem que tenho.
+   * Quais fluxos de dados são configurados para cada conector de origem?
+* **Conjuntos de dados - Insights operacionais**
+   * Quantos conjuntos de dados foram assimilados usando o mesmo esquema?
+   * A qual conector de origem está associado {USE_AUTO_COMPLETE_TO_FILL_DATASET_NAME} conjunto de dados?
+   * Quais conjuntos de dados são usados em cada público-alvo?
+   * Quais esquemas não são usados em nenhum conjunto de dados?
+   * Quantos conjuntos de dados eu tenho?
+* **Destinos - Insights operacionais**
+   * Quais destinos estão em um estado ativo?
+   * Quais contas de destino têm 0 públicos-alvo ativados?
+   * Quantos públicos-alvo são ativados para cada destino?
+   * Quais destinos têm o maior número de públicos ativados?
+* **Jornada - Insights operacionais**
+   * Quantas jornadas eu tenho?
+   * Quais jornadas foram criadas em {RELATIVE_DATE} (por exemplo, a última semana) ou {RELATIVE_DATE} (por exemplo, antes/depois/em uma data específica)?
+   * Mostre-me a lista de jornadas que foram modificadas em {RELATIVE_DATE} (por exemplo, a última semana) ou {RELATIVE_DATE} (por exemplo, antes/depois/em uma data específica)?
+   * Listar as jornadas ao vivo que eu tenho.
+   * Liste os públicos-alvo que são usados em jornadas ativas.
+* **Origens - Insights operacionais**
+   * Quais origens estão em um estado ativo?
+   * Qual conector de origem está associado ao conjunto de dados {USE_AUTO_COMPLETE_TO_FILL_DATASET_NAME}.
+   * Qual conector de origem tem o número mais alto de contas associadas?
+   * Mostre-me os fluxos de dados e seus conectores de origem associados.
+* **Aprendizado direcionado - Conhecimento do produto (Real-Time CDP e Journey Optimizer)**
+   * O que são públicos-alvo semelhantes?
+   * Como os grupos de usuários estão relacionados às funções?
+   * Quando devo usar um tipo de dados vs um grupo de campos?
+   * Qual é a diferença entre uma identidade e uma chave primária ou estrangeira?
+   * Como a riqueza do perfil é calculada?
+* **Solução de problemas - Conhecimento do produto (Real-Time CDP e Journey Optimizer)**
+   * Com o que o Assistente de IA pode ajudar?
+   * Posso excluir um esquema ativado por perfil depois que os dados forem assimilados?
+   * Por que não posso excluir um público-alvo?
+   * Quanto tempo leva para que os públicos-alvo sejam avaliados e os resultados sejam disponibilizados para direcionamento?
 
 ## Formular suas perguntas {#phrasing-your-questions}
 

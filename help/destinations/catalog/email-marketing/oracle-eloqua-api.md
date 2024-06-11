@@ -3,10 +3,10 @@ title: (API) Conexão Oracle Eloqua
 description: O destino (API) Oracle Eloqua permite exportar os dados da conta e ativá-los no Oracle Eloqua para as necessidades comerciais.
 last-substantial-update: 2023-03-14T00:00:00Z
 exl-id: 97ff41a2-2edd-4608-9557-6b28e74c4480
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: cf7ad18fa3d8f074371a0f03e09e218d37be5e01
 workflow-type: tm+mt
-source-wordcount: '2042'
-ht-degree: 4%
+source-wordcount: '2033'
+ht-degree: 1%
 
 ---
 
@@ -27,7 +27,7 @@ O departamento de marketing de uma plataforma online deseja transmitir uma campa
 
 ### Pré-requisitos do Experience Platform {#prerequisites-in-experience-platform}
 
-Antes de ativar os dados para o [!DNL Oracle Eloqua] destino, você deve ter um [schema](/help/xdm/schema/composition.md), um [conjunto de dados](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=pt-BR), e [segmentos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) criado em [!DNL Experience Platform].
+Antes de ativar os dados para o [!DNL Oracle Eloqua] destino, você deve ter um [schema](/help/xdm/schema/composition.md), um [conjunto de dados](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html), e [segmentos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) criado em [!DNL Experience Platform].
 
 Consulte a documentação do Experience Platform para [Grupo de campos de esquema Detalhes da associação do público](/help/xdm/field-groups/profile/segmentation.md) se precisar de orientação sobre os status do público-alvo.
 
@@ -92,12 +92,12 @@ Para se conectar a esse destino, siga as etapas descritas no [tutorial de config
 
 Dentro de **[!UICONTROL Destinos]** > **[!UICONTROL Catálogo]** pesquisar [!DNL (API) Oracle Eloqua]. Como alternativa, você pode localizá-lo na **[!UICONTROL Marketing por email]** categoria.
 
-### Autenticar para o destino {#authenticate}
+### Autenticar para destino {#authenticate}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_apioracleeloqua_companyname_username"
->title="Nome da empresa\nome de usuário"
->abstract="Preencha este campo com o nome da empresa e o nome de usuário do Oracle Eloqua no formulário `{COMPANY_NAME}\{USERNAME}`"
+>title="Nome da empresa\Nome de usuário"
+>abstract="Preencha este campo com o nome da sua empresa e nome de usuário do Oracle Eloqua no formulário `{COMPANY_NAME}\{USERNAME}`"
 
 Preencha os campos obrigatórios abaixo. Consulte a [Coletar [!DNL Oracle Eloqua] credenciais](#gather-credentials) para obter orientação.
 * **[!UICONTROL Senha]**: A senha do [!DNL Oracle Eloqua] conta.
@@ -113,8 +113,9 @@ Se os detalhes fornecidos forem válidos, a interface exibirá uma **[!UICONTROL
 >[!CONTEXTUALHELP]
 >id="platform_destinations_apioracleeloqua_pod"
 >title="Pod"
->abstract="Para encontrar o número do seu pod, faça logon no Oracle Eloqua. Observe o URL no seu navegador após relizar o logon com sucesso. "
->additional-url="https://support.oracle.com/knowledge/Oracle%20Cloud/2307176_1.html" text="Knowledge base do Oracle - Descubra o número do seu pod"
+>abstract="Para encontrar o número do seu pod, faça login no Oracle Eloqua. Anote o URL no navegador depois de fazer logon com êxito. "
+
+<!-- >additional-url="https://support.oracle.com/knowledge/Oracle%20Cloud/2307176_1.html" text="Oracle Knowledge base - find out your Pod number" -->
 
 Para configurar detalhes para o destino, preencha os campos obrigatórios e opcionais abaixo. Um asterisco ao lado de um campo na interface do usuário indica que o campo é obrigatório.
 ![Captura de tela da interface do usuário da plataforma mostrando os detalhes do destino.](../../assets/catalog/email-marketing/oracle-eloqua-api/destination-details.png)
@@ -129,7 +130,7 @@ Você pode ativar os alertas para receber notificações sobre o status do fluxo
 
 Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICONTROL Próxima]**.
 
-## Ativar públicos-alvo para esse destino {#activate}
+## Ativar públicos para este destino {#activate}
 
 >[!IMPORTANT]
 > 

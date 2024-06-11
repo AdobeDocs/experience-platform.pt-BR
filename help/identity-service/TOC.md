@@ -1,14 +1,14 @@
 ---
 audience: user
 user-guide-title: Serviço de identidade da Adobe Experience Platform
-breadcrumb-title: Guia do Serviço de identidade do Platform
-user-guide-description: Une as identidades dos clientes em todos os dispositivos e sistemas para entregar experiências digitais personalizadas.
+breadcrumb-title: Guia do Serviço de identidade da Platform
+user-guide-description: Une as identidades dos clientes em todos os dispositivos e sistemas para fornecer experiências digitais personalizadas.
 feature: Identities
 role: Admin,Developer
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+source-git-commit: 2afdfd54b420bcf59423ea64048d928422ea61c9
 workflow-type: tm+mt
-source-wordcount: '124'
-ht-degree: 28%
+source-wordcount: '126'
+ht-degree: 18%
 
 ---
 
@@ -40,7 +40,8 @@ ht-degree: 28%
 - [Regras de vinculação do gráfico de identidade] {#identity-graph-linking-rules}
    - [Visão geral do recurso](./identity-graph-linking-rules/overview.md)
    - [Algoritmo de otimização de identidade](./identity-graph-linking-rules/identity-optimization-algorithm.md)
+   - [Prioridade de namespace](./identity-graph-linking-rules/namespace-priority.md)
    - [Exemplos de cenários](./identity-graph-linking-rules/example-scenarios.md)
 - [Processamento de solicitação de privacidade](privacy.md)
 - [Manual de solução de problemas](troubleshooting-guide.md)
-- [Notas de versão da Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+- [Notas de versão da Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest?lang=pt-BR)

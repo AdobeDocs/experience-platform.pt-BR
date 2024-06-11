@@ -3,10 +3,10 @@ title: Ativar dados do público-alvo para destinos de transmissão
 type: Tutorial
 description: Saiba como ativar os públicos-alvo no Adobe Experience Platform mapeando-os para destinos de transmissão.
 exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
-source-git-commit: fbc2a6c81682797af4674adabff358a62d973007
+source-git-commit: f741e62b3340b743e465edf3f7a007580b3f61be
 workflow-type: tm+mt
-source-wordcount: '1121'
-ht-degree: 7%
+source-wordcount: '1164'
+ht-degree: 1%
 
 ---
 
@@ -62,6 +62,10 @@ Você pode selecionar entre vários tipos de públicos-alvo, dependendo de sua o
 >[!IMPORTANT]
 >
 >Esta etapa se aplica somente a alguns destinos de transmissão de público. Se o seu destino não tiver um **[!UICONTROL Mapeamento]** etapa, saltar para [agendamento de público](#scheduling).
+>
+>Ao ativar públicos para destinos de transmissão, você também deve mapear *pelo menos um namespace de identidade de destino*, além dos atributos do perfil de público-alvo. Caso contrário, os públicos-alvo não serão ativados para a plataforma de destino.
+> ![Imagem da etapa de mapeamento mostrando um mapeamento de namespace de identidade obrigatório.](../assets/ui/activate-segment-streaming-destinations/identity-mapping-mandatory.png) {zoomable="yes"}
+
 
 Alguns destinos de transmissão de público exigem que você selecione atributos de origem ou namespaces de identidade para mapear como identidades de destino no destino.
 
@@ -92,18 +96,18 @@ Alguns destinos de transmissão de público exigem que você selecione atributos
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_applytransformation"
 >title="Aplicar transformação"
->abstract="Marque essa opção ao usar campos de origem sem hash, para que a Adobe Experience Platform faça o hash automaticamente na ativação."
+>abstract="Marque essa opção ao usar campos de origem com hash não atribuídos, para que o Adobe Experience Platform os coloque automaticamente com hash na ativação."
 
 Ao mapear atributos de origem com hash não atribuídos para atributos de destino que o destino espera que tenham hash (por exemplo: `email_lc_sha256` ou `phone_sha256`), verifique a **Aplicar transformação** opção para que o Adobe Experience Platform coloque automaticamente os atributos de origem em hash na ativação.
 
 ![Aplique o controle de transformação destacado na etapa Mapeamento de identidade.](../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
 
-## Programar exportação de público-alvo {#scheduling}
+## Agendar exportação de público {#scheduling}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_enddate"
 >title="Data de término"
->abstract="A adição de uma data final para a programação de público-alvo não está disponível."
+>abstract="A adição de uma data final à programação de público-alvo não está disponível."
 
 Por padrão, a variável **[!UICONTROL Programação de público]** A página mostra apenas os públicos-alvo recém-selecionados que você escolheu no fluxo de ativação atual.
 
@@ -129,15 +133,15 @@ Para ver todos os públicos-alvo sendo ativados para o seu destino, use a opçã
 
 1. Selecionar **[!UICONTROL Próxima]** para acessar o [!UICONTROL Revisão] página.
 
-## Revisão {#review}
+## Revisar {#review}
 
 No **[!UICONTROL Revisão]** você poderá ver um resumo da sua seleção. Selecionar **[!UICONTROL Cancelar]** para interromper o fluxo, **[!UICONTROL Voltar]** para modificar suas configurações ou **[!UICONTROL Concluir]** para confirmar a seleção e começar a enviar dados para o destino.
 
 ![Resumo da seleção na etapa de revisão.](../assets/ui/activate-segment-streaming-destinations/review.png)
 
-### Avaliação da política de consentimento {#consent-policy-evaluation}
+### Avaliação de política de consentimento {#consent-policy-evaluation}
 
-Se sua organização adquiriu o **Adobe Healthcare Shield** ou o **Adobe Privacy &amp; Security Shield**, selecione **[!UICONTROL Exibir políticas de consentimento aplicáveis]** para ver quais políticas de consentimento são aplicadas e quantos perfis são incluídos na ativação como resultado delas. Ler sobre [avaliação da política de consentimento](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) para obter mais informações.
+Se sua organização comprou **Adobe Healthcare Shield** ou **Proteção de segurança e privacidade do Adobe**, selecione **[!UICONTROL Exibir políticas de consentimento aplicáveis]** para ver quais políticas de consentimento são aplicadas e quantos perfis são incluídos na ativação como resultado delas. Ler sobre [avaliação da política de consentimento](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) para obter mais informações.
 
 ### Verificações de política de uso de dados {#data-usage-policy-checks}
 

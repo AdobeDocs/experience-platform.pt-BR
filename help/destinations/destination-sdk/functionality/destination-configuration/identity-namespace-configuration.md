@@ -2,10 +2,10 @@
 description: Saiba como configurar as identidades de destino compatíveis para destinos criados com o Destination SDK.
 title: Configuração do namespace de identidade
 exl-id: 30c0939f-b968-43db-b09b-ce5b34349c6e
-source-git-commit: 20fb966c4cc8a2b09ea64da3e688688b34a0b5d1
+source-git-commit: 606685c1f0b607ca586e477cb9825ec551d537cc
 workflow-type: tm+mt
-source-wordcount: '892'
-ht-degree: 4%
+source-wordcount: '918'
+ht-degree: 1%
 
 ---
 
@@ -13,11 +13,15 @@ ht-degree: 4%
 
 O Experience Platform usa namespaces de identidade para descrever o tipo de identidades específicas. Por exemplo, um namespace de identidade chamado `Email` identifica um valor como `name@email.com` como um endereço de email.
 
-Ao criar destinos em tempo real (transmissão) por meio do Destination SDK, além de [configuração de um schema de parceiro](schema-configuration.md) para que os usuários possam mapear atributos de perfil e identidades, você também deve definir namespaces de identidade compatíveis com sua plataforma de destino. Por exemplo, se sua plataforma de destino aceitar emails com hash e [!DNL IDFA], você deve definir essas duas identidades como [descrita mais adiante neste documento](#supported-parameters).
+Dependendo do tipo de destino que você criar (streaming ou baseado em arquivo), lembre-se dos seguintes requisitos de namespace de identidade:
 
-Ao ativar públicos para destinos de transmissão, os usuários também devem mapear identidades de destino, além de atributos de perfil de destino. Caso contrário, os públicos-alvo não serão ativados para a plataforma de destino.
+* Ao criar destinos em tempo real (transmissão) por meio do Destination SDK, além de [configuração de um schema de parceiro](schema-configuration.md) para os quais os usuários podem mapear atributos de perfil e identidades, você também deve definir *pelo menos um* namespaces de identidade compatíveis com sua plataforma de destino. Por exemplo, se sua plataforma de destino aceitar emails com hash e [!DNL IDFA], você deve definir essas duas identidades como [descritos mais adiante neste documento](#supported-parameters).
 
-Ao criar um destino baseado em arquivo por meio do Destination SDK, a configuração dos namespaces de identidade é opcional.
+  >[!IMPORTANT]
+  >
+  >Ao ativar públicos para destinos de transmissão, os usuários também devem mapear _pelo menos uma identidade de destino_, além dos atributos do perfil de público-alvo. Caso contrário, os públicos-alvo não serão ativados para a plataforma de destino.
+
+* Ao criar destinos baseados em arquivo por meio do Destination SDK, a configuração dos namespaces de identidade é _opcional_.
 
 Para saber mais sobre namespaces de identidade no Experience Platform, consulte [documentação de namespaces de identidade](../../../../identity-service/features/namespaces.md).
 
@@ -114,7 +118,7 @@ A configuração abaixo habilita a configuração [Aplicar transformação](../.
    }
 ```
 
-Marque essa opção ao usar campos de origem sem hash, para que a Adobe Experience Platform faça o hash automaticamente na ativação.
+Marque essa opção ao usar campos de origem com hash não atribuídos, para que o Adobe Experience Platform os coloque automaticamente com hash na ativação.
 
 Ao mapear atributos de origem com hash não atribuídos para atributos de destino que o destino espera que tenham hash (por exemplo: `email_lc_sha256` ou `phone_sha256`), verifique a **Aplicar transformação** opção para que o Adobe Experience Platform coloque automaticamente os atributos de origem em hash na ativação.
 

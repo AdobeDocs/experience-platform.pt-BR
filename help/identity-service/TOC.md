@@ -5,7 +5,7 @@ breadcrumb-title: Guia do Serviço de identidade da Platform
 user-guide-description: Une as identidades dos clientes em todos os dispositivos e sistemas para fornecer experiências digitais personalizadas.
 feature: Identities
 role: Admin,Developer
-source-git-commit: 2afdfd54b420bcf59423ea64048d928422ea61c9
+source-git-commit: f04587fe325c1515545e4067845976aafc7d68ed
 workflow-type: tm+mt
 source-wordcount: '126'
 ht-degree: 18%
@@ -22,6 +22,11 @@ ht-degree: 18%
    - [Lógica de vinculação de identidade](./features/identity-linking-logic.md)
    - [Visualizador de gráficos de identidade](./features/identity-graph-viewer.md)
    - [Exclusões no serviço de identidade](./features/deletion.md)
+   - Regras de vinculação do gráfico de identidade {#identity-graph-linking-rules}
+      - [Visão geral do recurso](./identity-graph-linking-rules/overview.md)
+      - [Algoritmo de otimização de identidade](./identity-graph-linking-rules/identity-optimization-algorithm.md)
+      - [Prioridade de namespace](./identity-graph-linking-rules/namespace-priority.md)
+      - [Exemplos de cenários](./identity-graph-linking-rules/example-scenarios.md)
    - [Visão geral da ECID](./features/ecid.md)
 - [Guia de implementação](implementation.md)
 - [Medidas de proteção de dados de identidade](guardrails.md)
@@ -37,11 +42,6 @@ ht-degree: 18%
    - [Referência da API](https://www.adobe.io/experience-platform-apis/references/identity-service)
 - [Detecção de dispositivo compartilhado](shared-device-detection.md)
 - [Definir campos de identidade na interface](label-identities.md)
-- [Regras de vinculação do gráfico de identidade] {#identity-graph-linking-rules}
-   - [Visão geral do recurso](./identity-graph-linking-rules/overview.md)
-   - [Algoritmo de otimização de identidade](./identity-graph-linking-rules/identity-optimization-algorithm.md)
-   - [Prioridade de namespace](./identity-graph-linking-rules/namespace-priority.md)
-   - [Exemplos de cenários](./identity-graph-linking-rules/example-scenarios.md)
 - [Processamento de solicitação de privacidade](privacy.md)
 - [Manual de solução de problemas](troubleshooting-guide.md)
 - [Notas de versão da Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest?lang=pt-BR)

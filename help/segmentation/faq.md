@@ -2,9 +2,9 @@
 title: Perguntas frequentes do Audiences
 description: Descubra respostas para perguntas frequentes sobre públicos-alvo e outros conceitos relacionados à segmentação.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: 3852fc4eca8ea4b6b3fdcfb6aaa54315d83038b4
+source-git-commit: b41a60942460e22556714699975f9eb281d76335
 workflow-type: tm+mt
-source-wordcount: '4064'
+source-wordcount: '4060'
 ht-degree: 0%
 
 ---
@@ -128,9 +128,9 @@ O gráfico a seguir explica os diferentes status do ciclo de vida, o que eles re
 
 | Estado | Definição | Visível no Audience Portal? | Visível nos destinos? | Afeta os limites de segmentação? | Impacto nos públicos-alvo baseados em arquivos | Impacto na avaliação do público-alvo | Pode ser usado em outros públicos-alvo? | Editável |
 | --- | --- | --- | --- | --- | --- | --- | --- | -- |
-| Rascunho | Um público-alvo na **Rascunho** state é um público que ainda está em desenvolvimento e não está pronto para ser usado em outros serviços. | Sim, mas pode ser oculto. | Não | Sim | Podem ser importadas ou atualizadas durante o processo de refinamento. | Podem ser avaliadas para obter contagens precisas de publicações. | Sim, mas não é recomendável usar. | Sim |
+| Rascunho | Um público-alvo na **Rascunho** state é um público que ainda está em desenvolvimento e não está pronto para ser usado em outros serviços. | Sim, mas pode ser oculto. | Não | Sim | Podem ser importadas ou atualizadas durante o processo de refinamento. | Avaliado para obter contagens de publicação precisas. | Sim, mas não é recomendável usar. | Sim |
 | Publicado | Um público-alvo na **Publicado** O estado do é um público-alvo pronto para uso em todos os serviços downstream. | Sim | Sim | Sim | Pode ser importado ou atualizado. | Avaliado usando segmentação em lote, de fluxo ou de borda. | Sim | Sim |
-| Inativo | Um público-alvo na **Inativo** estado é um público que não está em uso no momento. Ele ainda existe na Platform, mas continuará **não** ser utilizável até que seja marcado como rascunho ou publicado. | Não, mas pode ser exibido. | Não | Não | Não é mais atualizado. | Não é mais avaliado ou atualizado pela Platform. | Sim | Sim |
+| Inativo | Um público-alvo na **Inativo** estado é um público que não está em uso no momento. Ele ainda existe na Platform, mas continuará **não** ser utilizável até que seja marcado como rascunho ou publicado. | Não, mas pode ser exibido. | Não | Não | Não é mais atualizado. | Não é mais avaliado ou atualizado pela Platform. | Não | Sim |
 | Excluído | Um público-alvo na **Excluído** estado é um público-alvo que foi excluído. A exclusão real dos dados pode levar alguns minutos para ser executada. | Não | Não | Não | Os dados subjacentes são excluídos. | Não ocorre avaliação ou execução de dados após a conclusão da exclusão. | Não | Não |
 
 ### Em quais estados posso editar meus públicos-alvo?
@@ -223,7 +223,7 @@ Para que o público-alvo principal seja movido para o estado inativo ou excluíd
 
 ### Posso me referir a um público que esteja em um estado de ciclo de vida diferente?
 
-Sim! Se o público-alvo estiver no estado de rascunho, você poderá fazer referência a públicos-alvo no estado publicado ou inativo. No entanto, para publicar esse público-alvo, você **deve** publicar os outros públicos-alvo principais.
+Sim! Se o público-alvo estiver no estado de rascunho, você poderá fazer referência a públicos-alvo no estado de rascunho ou publicado. No entanto, para publicar esse público-alvo, você **deve** publicar os outros públicos-alvo principais.
 
 ## Inventário de público
 

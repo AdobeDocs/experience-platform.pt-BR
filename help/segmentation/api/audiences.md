@@ -3,10 +3,10 @@ title: Endpoint da API de públicos-alvo
 description: Use o endpoint de públicos-alvo na API do serviço de segmentação do Adobe Experience Platform para criar, gerenciar e atualizar programaticamente os públicos-alvo da sua organização.
 role: Developer
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 87b491339469e69653cad79b657bd1edfbca1de9
 workflow-type: tm+mt
 source-wordcount: '1879'
-ht-degree: 4%
+ht-degree: 2%
 
 ---
 
@@ -49,7 +49,7 @@ A solicitação a seguir recupera os dois últimos públicos-alvo criados em sua
 +++Uma solicitação de amostra para recuperar uma lista de públicos-alvo.
 
 ```shell
-curl -X GET https: //platform.adobe.io/data/core/ups/audiences?limit=2 \
+curl -X GET https://platform.adobe.io/data/core/ups/audiences?limit=2 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'x-gw-ims-org-id: {IMS_ORG}' \
  -H 'x-api-key: {API_KEY}' \
@@ -180,7 +180,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com uma lista de públicos-a
 | `schema` | Ambos | O esquema do Experience Data Model (XDM) do público-alvo. |
 | `imsOrgId` | Ambos | A ID da organização à qual o público pertence. |
 | `sandbox` | Ambos | Informações sobre a sandbox à qual o público-alvo pertence. Mais informações sobre sandboxes podem ser encontradas no [visão geral das sandboxes](../../sandboxes/home.md). |
-| `name` | Ambos | O nome do público-alvo. |
+| `name` | Ambos | O nome do público. |
 | `description` | Ambos | Uma descrição do público. |
 | `expression` | Gerado pela plataforma | A expressão Profile Query Language (PQL) do público-alvo. Mais informações sobre expressões PQL podem ser encontradas no [Guia de expressões PQL](../pql/overview.md). |
 | `mergePolicyId` | Gerado pela plataforma | A ID da política de mesclagem à qual o público-alvo está associado. Mais informações sobre políticas de mesclagem podem ser encontradas no [guia de políticas de mesclagem](../../profile/api/merge-policies.md). |
@@ -243,7 +243,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/audiences
 
 | Propriedade | Descrição |
 | -------- | ----------- | 
-| `name` | O nome do público-alvo. |
+| `name` | O nome do público. |
 | `description` | Uma descrição do público. |
 | `type` | Um campo que mostra se o público-alvo é gerado pela Platform ou um público-alvo gerado externamente. Os valores possíveis incluem `SegmentDefinition` e `ExternalSegment`. A `SegmentDefinition` refere-se a um público-alvo gerado na Platform, enquanto um `ExternalSegment` refere-se a um público-alvo que não foi gerado na Platform. |
 | `expression` | A expressão Profile Query Language (PQL) do público-alvo. Mais informações sobre expressões PQL podem ser encontradas no [Guia de expressões PQL](../pql/overview.md). |
@@ -285,7 +285,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/audiences
 | Propriedade | Descrição |
 | -------- | ----------- | 
 | `audienceId` | Uma ID fornecida pelo usuário para o público-alvo. |
-| `name` | O nome do público-alvo. |
+| `name` | O nome do público. |
 | `namespace` | O namespace do público. |
 | `description` | Uma descrição do público. |
 | `type` | Um campo que mostra se o público-alvo é gerado pela Platform ou um público-alvo gerado externamente. Os valores possíveis incluem `SegmentDefinition` e `ExternalSegment`. A `SegmentDefinition` refere-se a um público-alvo gerado na Platform, enquanto um `ExternalSegment` refere-se a um público-alvo que não foi gerado na Platform. |
@@ -719,7 +719,7 @@ curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513
 | Propriedade | Descrição |
 | -------- | ----------- | 
 | `audienceId` | A ID da audiência. Para públicos gerados externamente, esse valor pode ser fornecido pelo usuário. |
-| `name` | O nome do público-alvo. |
+| `name` | O nome do público. |
 | `namespace` | O namespace do público. |
 | `description` | Uma descrição do público. |
 | `type` | Um campo gerado pelo sistema que mostra se o público-alvo é gerado pela Platform ou um público-alvo gerado externamente. Os valores possíveis incluem `SegmentDefinition` e `ExternalSegment`. A `SegmentDefinition` refere-se a um público-alvo gerado na Platform, enquanto um `ExternalSegment` refere-se a um público-alvo que não foi gerado na Platform. |

@@ -5,9 +5,9 @@ description: Com o uso de perfis de conta, o Adobe Real-time Customer Data Platf
 badgeB2B: label="Edição B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 feature: Profiles, B2B
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
-source-git-commit: bbcc056e416e2c1a8b6fd1a411c0fba4c0ff8dbb
+source-git-commit: 96f29d5c64bb29125d8a63dd3ddb3bdedb5ebd52
 workflow-type: tm+mt
-source-wordcount: '1664'
+source-wordcount: '1680'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Para saber mais sobre como os perfis de conta são criados como parte do fluxo d
 
 Selecionar **[!UICONTROL Perfis]** em [!UICONTROL Contas] no painel de navegação esquerdo para exibir a visão geral dos perfis de conta. No [!UICONTROL Visão geral] , o painel mostra um gráfico ou gráfico exibindo widgets em um único ponto de entrada.
 
-![Guia Visão geral exibindo widgets](images/b2b-account-profile-overview.png)
+![A guia Visão geral de perfis de conta com Perfis na navegação à esquerda e Visão geral realçada.](images/b2b-account-profile-overview.png)
 
 Consulte a documentação no [[!UICONTROL Perfis de conta]](../../dashboards/guides/account-profiles.md) painel para saber mais. Consulte a documentação em [Edição B2B do modelo de dados do Real-time Customer Data Platform Insights](../../dashboards/data-models/cdp-insights-data-model-b2b.md) para obter mais informações sobre como os modelos de dados do insights podem ser usados para criar gráficos personalizados para seus painéis.
 
@@ -38,7 +38,7 @@ Consulte a documentação no [[!UICONTROL Perfis de conta]](../../dashboards/gui
 
 Para configurar o cliente potencial para correspondência de contas, selecione **[!UICONTROL Perfis]** em [!UICONTROL Contas] no painel de navegação esquerdo. No **[!UICONTROL Visão geral]** selecione **[!UICONTROL Configurações]** no canto superior direito.
 
-![Selecionar configurações](images/b2b-configuring-accounts-profile.png)
+![A guia Visão geral dos perfis de conta com a Configuração realçada.](images/b2b-configuring-accounts-profile.png)
 
 A variável **[!UICONTROL Configurações da conta]** será aberta. Aqui, selecione a variável **[!UICONTROL Habilitar correspondência entre lead e conta]** para ativar o recurso. Use o menu suspenso para selecionar **[!UICONTROL Diariamente]** para o **[!UICONTROL Cadência de correspondência]** configuração. Por último, selecione as opções **[!UICONTROL Critérios de correspondência]** opções seguidas por **[!UICONTROL Salvar]** para confirmar suas configurações e retornar ao **[!UICONTROL Perfis de conta]** tela.
 

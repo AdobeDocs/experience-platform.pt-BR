@@ -1,21 +1,19 @@
 ---
-title: Pipelines de recursos de IA/ML
+title: Pipelines de recursos de inteligência artificial/aprendizado de máquina
 description: Saiba como usar o Data Distiller para enriquecer seus pipelines de aprendizado de máquina com recursos derivados de dados do Adobe Experience Platform. Transforme dados brutos em recursos e forneça os dados de recursos para treinar ou pontuar um modelo que ofereça suporte aos seus casos de uso de marketing.
 exl-id: 3b452181-e254-4155-8bf5-0990533f202d
-source-git-commit: 641f507210071ee8efeb3562eec78afd0468d4f2
+source-git-commit: df0912bcb7122152da127c4e6b625cff73f7fa72
 workflow-type: tm+mt
 source-wordcount: '473'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
-# Pipelines de recursos de IA/ML
+# Pipelines de recursos de inteligência artificial/aprendizado de máquina
 
 <!-- This guide illustrates a new workflow to enrich your preferred machine learning (ML) data pipelines with curated data from Adobe Experience Platform. The use case demonstrates how to transform raw data into features, and deliver the feature data to train or score a model that supports your marketing use cases. Use the provided [!DNL Python] notebooks in your machine learning environments to leverage Data Distiller capabilities and explore, curate, and access customer data from Adobe Experience Platform to enrich and enhance your AI/ML models.
 
 This document provides an overview of the AI/ML feature pipelines use case and details the steps required to get started with the cloud machine learning environment (CMLE) notebooks. -->
-
-<!--  -->
 
 O Data Distiller permite que os cientistas e engenheiros de dados enriqueçam seus pipelines de aprendizado de máquina com dados de experiência do cliente de alto valor que foram coletados e preparados no Adobe Experience Platform. De um [!DNL Python] em qualquer ambiente, você pode explorar interativamente os dados do cliente no Experience Platform, definir e calcular os recursos dos dados e ler os recursos computados no seu ambiente de aprendizado de máquina para modelagem.
 

@@ -2,9 +2,9 @@
 title: Painel de perfis de conta
 description: A Adobe Experience Platform fornece um painel por meio do qual você pode visualizar informações importantes sobre os perfis de conta B2B da sua organização.
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
-source-git-commit: 4f67df5d3667218c79504535534de57f871b0650
+source-git-commit: 8e05b0ae06250f8cd55b361a8176963e0dce8e92
 workflow-type: tm+mt
-source-wordcount: '1675'
+source-wordcount: '1763'
 ht-degree: 1%
 
 ---
@@ -169,6 +169,14 @@ O menu suspenso no widget permite selecionar o modelo de pontuação da conta.
 >Os filtros de intervalo de datas global não se aplicam aos insights de pontuação preditiva. Os widgets de pontuação preditiva analisam dados com base no modelo de pontuação de conta selecionado na lista suspensa.
 
 ![O widget Principais fatores influentes da pontuação preditiva.](../images/account-profiles/predictive-scoring-top-influential-factors.png)
+
+### Erro Não é possível carregar dados {#errors}
+
+Se um widget for exibido *[!UICONTROL Não foi possível carregar. Tente novamente.]* isso ocorre porque não há dados disponíveis para a entidade B2B. Por exemplo, o widget exibido abaixo [!UICONTROL Novas oportunidades por função de pessoa], mostra a mensagem &quot;[!UICONTROL Não foi possível carregar. Tente novamente.]&quot;, pois essa sandbox não tem dados de oportunidade disponíveis.
+
+![Erro Não foi possível carregar o insight.](../images/account-profiles/unable-to-load.png)
+
+Para resolver o problema, você deve assimilar dados da entidade B2B, como *pessoa da oportunidade* dados, na sandbox. Após 48 horas, os dados são refletidos nos widgets.
 
 ## Próximas etapas
 

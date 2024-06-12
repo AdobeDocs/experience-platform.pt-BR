@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Noções básicas da composição do esquema
 description: Saiba mais sobre esquemas do Experience Data Model (XDM) e os componentes, princípios e práticas recomendadas para a composição de esquemas no Adobe Experience Platform.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 1b3d20610a48fc48c84dc4901d7b09db4bb8fa1f
+source-git-commit: 42038ecfeecc774b3a57e05d961bbd80f3178c21
 workflow-type: tm+mt
-source-wordcount: '4236'
-ht-degree: 6%
+source-wordcount: '4293'
+ht-degree: 2%
 
 ---
 
@@ -53,7 +53,7 @@ Os esquemas de registro e série temporal contêm um mapa de identidades (`xdm:i
 >[!CONTEXTUALHELP]
 >id="platform_schemas_identities"
 >title="Identidades em esquemas"
->abstract="Identidades são campos principais em um esquema que podem ser usados para identificar um assunto, como um endereço de email ou uma ID de marketing. Esses campos são usados para criar o gráfico de identidade de cada pessoa e criar perfis de cliente. Consulte a documentação para obter mais informações sobre identidades em esquemas."
+>abstract="As identidades são campos principais em um esquema que podem ser usados para identificar um assunto, como um endereço de email ou uma ID de marketing. Esses campos são usados para criar o gráfico de identidade para cada indivíduo e criar perfis de cliente. Consulte a documentação para obter mais informações sobre identidades em esquemas."
 
 Os esquemas são usados para assimilar dados no Experience Platform. Esses dados podem ser usados em vários serviços para criar uma visualização única e unificada de uma entidade individual. Portanto, é importante ao projetar esquemas para identidades de clientes considerar quais campos podem ser usados para identificar um assunto, independentemente de onde os dados possam vir.
 
@@ -170,7 +170,12 @@ Os esquemas são compostos usando a seguinte fórmula:
 >[!CONTEXTUALHELP]
 >id="platform_schemas_class"
 >title="Classe"
->abstract="Cada esquema se baseia em uma única classe. A classe define o comportamento do esquema e as propriedades comuns que todos os esquemas baseados nessa classe devem conter. Consulte a documentação para saber mais sobre como as classes estão envolvidas na composição do esquema."
+>abstract="Cada esquema é baseado em uma única classe. A classe define o comportamento do esquema e as propriedades comuns que todos os esquemas baseados nessa classe devem conter. Consulte a documentação para saber mais sobre como as classes estão envolvidas na composição do esquema."
+
+>[!CONTEXTUALHELP]
+>id="platform_schemas_class_industries"
+>title="Tipo de setor"
+>abstract="Se você selecionar um setor relevante para sua empresa, o modelo de aprendizado de máquina poderá fornecer uma melhor organização de dados, mapeando com mais precisão os campos de origem com grupos de campos padrão alinhados aos padrões do setor. Isso garante que a integração de dados seja personalizada para as necessidades específicas do setor e resulta em insights de dados mais precisos e relevantes."
 
 A composição de um esquema começa com a atribuição de uma classe. As classes definem os aspectos comportamentais dos dados que o esquema conterá (registro ou série temporal). Além disso, as classes descrevem o menor número de propriedades comuns que todos os esquemas baseados nessa classe precisariam incluir e fornecem uma maneira de vários conjuntos de dados compatíveis serem mesclados.
 
@@ -189,12 +194,12 @@ Para obter a lista mais atualizada de classes XDM padrão disponíveis, consulte
 >[!CONTEXTUALHELP]
 >id="platform_schemas_fieldgroup"
 >title="Grupo de campos"
->abstract="Os grupos de campos são componentes reutilizáveis que permitem estender esquemas com atributos adicionais. A maioria dos grupos de campos é compatível somente com determinadas classes. Você pode usar grupos de campos padrão definidos pela Adobe ou pode definir manualmente seus próprios grupos de campos personalizados. Consulte a documentação para saber mais sobre como os grupos de campos estão envolvidos na composição do esquema."
+>abstract="Os grupos de campos são componentes reutilizáveis que permitem estender esquemas com atributos adicionais. A maioria dos grupos de campos é compatível somente com determinadas classes. Você pode usar grupos de campos padrão definidos por Adobe ou pode definir manualmente seus próprios grupos de campos personalizados. Consulte a documentação para saber mais sobre como os grupos de campos estão envolvidos na composição do esquema."
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_fieldgroup_requiredFieldgroup"
 >title="Grupo de campos obrigatório"
->abstract="Esse grupo de campos é exigido pela origem usada. Por esse motivo, não é possível excluí-lo do esquema."
+>abstract="Este grupo de campos é exigido pela origem que você está usando. Por esse motivo, não é possível excluí-lo do esquema."
 
 Um grupo de campos é um componente reutilizável que define um ou mais campos que implementam determinadas funções, como detalhes pessoais, preferências de hotel ou endereço. Os grupos de campos devem ser incluídos como parte de um esquema que implementa uma classe compatível.
 
@@ -251,9 +256,9 @@ Um campo é o bloco de construção mais básico de um esquema. Os campos fornec
 
 Os intervalos válidos desses tipos escalares podem ser ainda mais restritos a determinados padrões, formatos, mínimos/máximos ou valores predefinidos. Usando essas restrições, uma grande variedade de tipos de campos mais específicos pode ser representada, incluindo:
 
-* Enum
+* Enumeração
 * Longo
-* Short
+* Curto
 * Byte
 * Data
 * Data e hora

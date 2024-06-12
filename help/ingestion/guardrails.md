@@ -3,7 +3,7 @@ keywords: Experience Platform;solução de problemas;medidas de proteção;diret
 title: Medidas de proteção para a assimilação de dados
 description: Saiba mais sobre as medidas de proteção para a assimilação de dados no Adobe Experience Platform.
 exl-id: f07751cb-f9d3-49ab-bda6-8e6fec59c337
-source-git-commit: 7a2463e1bb09180ae7e02674d0c0040c8c874ad5
+source-git-commit: 583eb70235174825dd542b95463784638bdef235
 workflow-type: tm+mt
 source-wordcount: '669'
 ht-degree: 0%
@@ -30,7 +30,7 @@ A tabela a seguir descreve as medidas de proteção que devem ser consideradas a
 
 | Tipo de assimilação | Diretrizes | Notas |
 | --- | --- | --- |
-| Assimilação do data lake usando a API de assimilação em lote | <ul><li>Você pode assimilar até 20 GB de dados por hora no data lake usando a API de assimilação em lote.</li><li>O número máximo de arquivos por lote é 1500.</li><li>O tamanho máximo do lote é de 100 GB.</li><li>O número máximo de propriedades ou campos por linha é 10000.</li><li>O número máximo de lotes por minuto por usuário é 138.</li></ul> | |
+| Assimilação do data lake usando a API de assimilação em lote | <ul><li>Você pode assimilar até 20 GB de dados por hora no data lake usando a API de assimilação em lote.</li><li>O número máximo de arquivos por lote é 1500.</li><li>O tamanho máximo do lote é de 100 GB.</li><li>O número máximo de propriedades ou campos por linha é 10000.</li><li>O número máximo de lotes por minuto por usuário é 2000.</li></ul> | |
 | Assimilação do data lake usando fontes de lote | <ul><li>Você pode assimilar até 200 GB de dados por hora no data lake usando fontes de assimilação em lote, como [!DNL Azure Blob], [!DNL Amazon S3], e [!DNL SFTP].</li><li>O tamanho do lote deve estar entre 256 MB e 100 GB. Isso se aplica a dados descompactados e compactados. Quando dados compactados são descompactados no data lake, essas limitações se aplicam.</li><li>O número máximo de arquivos por lote é 1500.</li><li>O tamanho mínimo de um arquivo ou pasta é de 1 byte. Não é possível assimilar arquivos ou pastas de tamanho 0 byte.</li></ul> | Leia o [visão geral das origens](../sources/home.md) para um catálogo de fontes que você pode usar para assimilação de dados. |
 | Assimilação em lote para Perfil | <ul><li>O tamanho máximo de uma classe de registro é 100 KB (rígido).</li><li>O tamanho máximo de uma classe ExperienceEvent é 10 KB (rígido).</li></ul> | |
 | Número de lotes Profile ou ExperienceEvent assimilados por dia | **O número máximo de lotes Profile ou ExperienceEvent assimilados por dia é 90.** Isso significa que o total combinado de lotes Profile e ExperienceEvent assimilados a cada dia não pode exceder 90. A ingestão de lotes adicionais afetará o desempenho do sistema. | Este é um limite flexível. É possível ir além de um limite flexível, no entanto, os limites flexíveis fornecem uma diretriz recomendada para o desempenho do sistema. |

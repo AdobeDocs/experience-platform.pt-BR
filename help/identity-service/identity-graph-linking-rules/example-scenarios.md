@@ -1,22 +1,20 @@
 ---
 title: Exemplos De Cenários Para Definir Configurações De Identidade
 description: Saiba mais sobre exemplos de cenários para definir configurações de identidade.
-hide: true
-hidefromtoc: true
-badge: Alfa
+badge: Beta
 exl-id: bccd5b7a-3836-47d8-b976-51747b9c1803
-source-git-commit: 3fe94be9f50d64fc893b16555ab9373604b62e59
+source-git-commit: f1779ee75c877649a69f9fa99f3872aea861beca
 workflow-type: tm+mt
-source-wordcount: '437'
+source-wordcount: '455'
 ht-degree: 1%
 
 ---
 
 # Exemplos de cenários para configurar regras de vinculação de gráficos de identidade
 
->[!IMPORTANT]
+>[!AVAILABILITY]
 >
->As regras de vinculação do gráfico de identidade estão atualmente em Alpha. O recurso e a documentação estão sujeitos a alterações.
+>Esse recurso ainda não está disponível; o programa beta para regras de vinculação de gráficos de identidade deve começar em julho nas sandboxes de desenvolvimento. Entre em contato com a equipe de conta do Adobe para obter informações sobre os critérios de participação.
 
 Este documento descreve cenários de exemplo que você pode considerar ao configurar regras de vinculação de gráficos de identidade.
 

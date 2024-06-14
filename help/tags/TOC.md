@@ -1,15 +1,15 @@
 ---
 audience: user
-user-guide-title: Ajuda das tags
+user-guide-title: Ajuda de tags
 breadcrumb-title: Tags
 user-guide-description: Saiba como implantar e gerenciar tags de análise, marketing e publicidade para potencializar as experiências dos clientes.
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: 3c3863aa61a7bbdb2df585b842e55f2d7291c727
+source-git-commit: 8000bbf36e6763b8fca17c2ae0d5c2fe53bc6964
 workflow-type: tm+mt
-source-wordcount: '764'
-ht-degree: 45%
+source-wordcount: '765'
+ht-degree: 44%
 
 ---
 
@@ -251,6 +251,8 @@ ht-degree: 45%
          * [Visão geral](./extensions/server/twitter/overview.md)
       * [!DNL Tiktok] API de eventos da Web {#tiktok}
          * [Visão geral](./extensions/server/tiktok/overview.md)
+      * [!DNL The Trade Desk] {#thetradedesk}
+         * [Visão geral](./extensions/server/tradedesk/overview.md)
       * [!DNL Zendesk] API de eventos {#zendesk}
          * [Visão geral](./extensions/server/zendesk/overview.md)
 * Desenvolvimento de extensão {#extension-dev}
@@ -322,5 +324,5 @@ ht-degree: 45%
 * [Perguntas frequentes](./faq.md)
 * [Atualizações de terminologia](./term-updates.md)
 * [Substituição do suporte para o Internet Explorer 10 e 11](./ie-deprecation.md)
-* [Notas de versão da Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [Notas de versão da Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest?lang=pt-BR)
 

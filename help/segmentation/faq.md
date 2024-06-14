@@ -2,9 +2,9 @@
 title: Perguntas frequentes do Audiences
 description: Descubra respostas para perguntas frequentes sobre públicos-alvo e outros conceitos relacionados à segmentação.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: b41a60942460e22556714699975f9eb281d76335
+source-git-commit: 147dded9f5eb6c2e153a80fa80b18e9fe96a6faa
 workflow-type: tm+mt
-source-wordcount: '4060'
+source-wordcount: '4096'
 ht-degree: 0%
 
 ---
@@ -206,6 +206,10 @@ Sim, há alguns avisos a serem observados quando você estiver usando públicos-
 Neste momento, você **deve** verifique manualmente se o público-alvo é usado downstream no Adobe Journey Optimizer, pois esse status não é verificado automaticamente no momento.
 
 Além disso, você **deve** verifique manualmente se o público-alvo é usado como um componente de um público-alvo baseado em conta, pois esse status também não é verificado automaticamente no momento.
+
+### O que acontece quando copio um público-alvo? {#copy}
+
+Ao copiar um público-alvo, ele estará no estado de rascunho e manterá as mesmas pastas, tags e rótulos que foram aplicados ao público-alvo original.
 
 ### O uso de um público-alvo como público-alvo secundário afeta as transições de estado do ciclo de vida?
 

@@ -3,18 +3,16 @@ title: Visão geral da extensão da API de conversões em tempo real do Trade De
 description: Saiba mais sobre a extensão da API de conversões em tempo real do Trade Desk para encaminhamento de eventos no Adobe Experience Platform.
 hide: true
 hidefromtoc: true
-source-git-commit: 8000bbf36e6763b8fca17c2ae0d5c2fe53bc6964
+source-git-commit: d9d185685106ac160dcbefc5e9567a85c8302a73
 workflow-type: tm+mt
-source-wordcount: '897'
+source-wordcount: '930'
 ht-degree: 2%
 
 ---
 
 # [!DNL The Trade Desk Real-Time Conversions API] visão geral da extensão
 
-[[!DNL The Trade Desk Real-Time Conversions API]](https://partner.thetradedesk.com/v3/portal/data/doc/DataConversionEventsApi) permite enviar eventos para [!DNL The Trade Desk] para aproveitar o redirecionamento e a atribuição.
-
-Você pode usar o [!DNL The Trade Desk Real-Time Conversions API] extensão para enviar dados do Edge Network Adobe Experience Platform para o [!DNL The Trade Desk] utilizando os recursos da API em seu [encaminhamento de eventos](../../../ui/event-forwarding/overview.md) regras.
+Você pode usar o [[!DNL The Trade Desk Real-Time Conversions API]](https://partner.thetradedesk.com/v3/portal/data/doc/DataConversionEventsApi) extensão para enviar dados do Edge Network Adobe Experience Platform para o [!DNL The Trade Desk] utilizando os recursos da API em seu [encaminhamento de eventos](../../../ui/event-forwarding/overview.md) regras.
 
 Usar [!DNL The Trade Desk Real-Time Conversions API] você pode aproveitar os recursos da API em sua [encaminhamento de eventos](../../../ui/event-forwarding/overview.md) regras para enviar dados para [!DNL The Trade Desk] do Edge Network Adobe Experience Platform.
 
@@ -79,7 +77,7 @@ As opções de configuração são divididas em três seções principais, confo
 | IP do cliente | O endereço IP do cliente IPv4 ou IPv6. |
 | ID do anúncio | A ID de anúncio exclusiva do evento. |
 | Tipo de ID do anúncio | O tipo de ID de publicidade, especificado na propriedade da ID do AD: TDID, IDFA, AAID, DAID, NAID, IDL, EUID ou UID2. |
-| Impressão | Uma sequência de 36 caracteres (incluindo traços) que serve como o identificador exclusivo da impressão à qual o evento é atribuído. |
+| impressão | Uma sequência de 36 caracteres (incluindo traços) que serve como o identificador exclusivo da impressão à qual o evento é atribuído. |
 | ID do pedido | O identificador de pedido associado do evento. |
 | td1-td10 | Dez propriedades dinâmicas personalizadas numeradas sequencialmente que podem ser usadas para fornecer metadados de conversão adicionais. |
 
@@ -91,7 +89,8 @@ Consulte a [!DNL The Trade Desk] para obter mais informações sobre o [propried
 
 **[!UICONTROL Parâmetros de solicitação de objeto]**
 
-Leia a seção a seguir para saber mais sobre os parâmetros de solicitação formatados em JSON, como Itens, Privacidade e Processamento de dados.
+Um objeto JSON que contém mais informações. Você tem a opção de usar um conjunto reduzido de entradas de valores-chave ou fornecer JSON bruto. Além disso, você pode recuperar dados dinâmicos de um elemento de dados selecionando os discos (![Ícone de disco](../../../images/extensions/server/tradedesk/disk-icon.png)à direita.
+
 
 ![A variável [!DNL Object Request Parameters] mostrando os campos disponíveis.](../../../images/extensions/server/tradedesk/configure-object-request-params.png)
 
@@ -99,14 +98,14 @@ Consulte a [Evento de conversões em tempo real](https://partner.thetradedesk.co
 
 **[!UICONTROL Substituições de configuração]**
 
->NOTA
+>[!NOTE]
 >
 >A variável [!UICONTROL Substituições de configuração] permitem que você defina um campo diferente [!DNL Advertiser ID] e/ou [!DNL Merchant ID] em cada regra.
 
 | Entrada | Descrição |
 | --- | --- |
-| ID do anunciante | A ID do anunciante que você deseja substituir pela ID do anunciante fornecida na configuração da extensão. |
-| ID do comerciante | A ID do comerciante que você deseja substituir pela ID do comerciante fornecida na configuração da extensão. |
+| ID de anunciante | Identificador exclusivo do anunciante ao qual este evento está associado. Uma ID do anunciante diferente pode ser fornecida para substituir a ID fornecida na configuração da extensão. |
+| ID do comerciante | O identificador exclusivo pelo qual cada comerciante é fornecido [!DNL The Trade Desk] durante todo o procedimento de integração. Uma ID de comerciante diferente pode ser fornecida para substituir a ID fornecida na configuração da extensão. |
 
 ![A variável [!DNL Configuration Overrides] mostrando os campos disponíveis.](../../../images/extensions/server/tradedesk/configure-overrides.png)
 

@@ -4,10 +4,10 @@ type: Tutorial
 description: Saiba como usar campos calculados para exportar matrizes em arquivos de esquema simples do Real-Time CDP para destinos de armazenamento na nuvem.
 badge: Beta
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: b6bdfef8b9ac5ef03ea726d668477b8629b70b6c
+source-git-commit: 787aaef26fab5ca3acff8303f928efa299cafa93
 workflow-type: tm+mt
-source-wordcount: '1497'
-ht-degree: 7%
+source-wordcount: '1477'
+ht-degree: 5%
 
 ---
 
@@ -31,9 +31,13 @@ Obtenha informações abrangentes sobre campos calculados - o que são e por que
 * [Guia e visão geral da interface](/help/data-prep/ui/mapping.md#calculated-fields)
 * [Funções de Preparo de dados](/help/data-prep/functions.md)
 
+<!--
+
 >[!IMPORTANT]
 >
->Nem todas as funções listadas acima são suportadas *ao exportar campos para destinos de armazenamento na nuvem* usando a funcionalidade de campos calculados. Consulte a [seção funções suportadas](#supported-functions) mais abaixo para obter mais informações.
+>Not all functions listed above are supported *when exporting fields to cloud storage destinations* using the calculated fields functionality. See the [supported functions section](#supported-functions) further below for more information.
+
+-->
 
 ## Matrizes e outros tipos de objetos na Platform {#arrays-strings-other-objects}
 
@@ -86,7 +90,9 @@ Quando estiver pronto, selecione **[!UICONTROL Próxima]** para prosseguir para 
 
 ## Funções compatíveis {#supported-functions}
 
-Observe que somente as seguintes funções são compatíveis com a versão beta de campos calculados e com a matriz de suporte para destinos:
+Todos os documentos [Funções de Preparo de dados](/help/data-prep/functions.md) são compatíveis quando dados são ativados para destinos baseados em arquivo.
+
+No entanto, observe que descrições abrangentes de casos de uso e informações de saída de exemplo são fornecidas atualmente apenas para as seguintes funções na versão beta de campos calculados e suporte de matriz para destinos:
 
 * `join`
 * `coalesce`

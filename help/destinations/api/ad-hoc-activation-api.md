@@ -5,10 +5,10 @@ title: Ativar públicos para destinos em lote por meio da API de ativação ad-h
 description: Este artigo ilustra o fluxo de trabalho completo para ativar públicos-alvo por meio da API de ativação ad-hoc, incluindo os trabalhos de segmentação que ocorrem antes da ativação.
 type: Tutorial
 exl-id: 1a09f5ff-0b04-413d-a9f6-57911a92b4e4
-source-git-commit: 6304dabb6125b7eddcac16bcbf8abcc36a4c9dc2
+source-git-commit: deecaf0af269b64af507126dba0523d2b16a5721
 workflow-type: tm+mt
-source-wordcount: '1550'
-ht-degree: 1%
+source-wordcount: '1612'
+ht-degree: 0%
 
 ---
 
@@ -167,15 +167,19 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/d
 | Propriedade | Descrição |
 | -------- | ----------- |
 | <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | As IDs das instâncias de destino para as quais você deseja ativar públicos. Você pode obter essas IDs na interface do usuário da Platform navegando até **[!UICONTROL Destinos]** > **[!UICONTROL Procurar]** e clicando na linha de destino desejada para exibir a ID de destino no painel direito. Para obter mais informações, leia a [documentação do espaço de trabalho de destinos](/help/destinations/ui/destinations-workspace.md#browse). |
-| <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul> | As IDs dos públicos-alvo que você deseja ativar para o destino selecionado. |
+| <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul> | As IDs dos públicos-alvo que você deseja ativar para o destino selecionado. Você pode usar a API ad-hoc para exportar públicos gerados pela Platform, bem como públicos externos (upload personalizado). Ao ativar públicos externos, use a ID gerada pelo sistema em vez da ID de público-alvo. Você pode encontrar a ID gerada pelo sistema na exibição de resumo de público-alvo na interface do usuário para públicos-alvo. <br> ![Exibição da ID de público-alvo que não deve ser selecionada.](/help/destinations/assets/api/ad-hoc-activation/audience-id-do-not-use.png "Exibição da ID de público-alvo que não deve ser selecionada."){width="100" zoomable="yes"} <br> ![Exibição da ID de público-alvo gerada pelo sistema que deve ser usada.](/help/destinations/assets/api/ad-hoc-activation/system-generated-id-to-use.png "Exibição da ID de público-alvo gerada pelo sistema que deve ser usada."){width="100" zoomable="yes"} |
 
 {style="table-layout:auto"}
 
-### Solicitação com IDs de exportação (a ser descontinuada) {#request-deprecated}
+### Solicitação com IDs de exportação {#request-export-ids}
+
+<!--
 
 >[!IMPORTANT]
 >
->**Tipo de solicitação obsoleta**. Esse tipo de exemplo descreve o tipo de solicitação para a API versão 1. Na v2 da API de ativação ad-hoc, não é necessário incluir a ID de trabalho de exportação de público-alvo mais recente.
+>**Deprecated request type**. This example type describes the request type for the API version 1. In the v2 of the ad-hoc activation API, you do not need to include the latest audience export job ID.
+
+-->
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/disflowprovider/adhocrun \

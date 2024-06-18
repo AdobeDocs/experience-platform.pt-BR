@@ -4,9 +4,9 @@ title: Introdução aos manuais de caso de uso
 description: Saiba como começar a usar a funcionalidade dos manuais de estratégia de casos de uso.
 role: Admin
 exl-id: 1c39792e-49fe-4c5f-9796-fa29f60b7461
-source-git-commit: fe87b8cdeaca5e4e852a8819534f4a5c4023ca52
+source-git-commit: dfb4549a09628f2fed947ddf76167db28354eb92
 workflow-type: tm+mt
-source-wordcount: '947'
+source-wordcount: '953'
 ht-degree: 15%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 15%
 
 # Introdução
 
-Saiba como configurar sua conta para manuais de casos de uso, projetados para Real-time Customer Data Platform e Adobe Journey Optimizer. As três etapas principais de configuração são:
+Saiba como configurar sua conta para manuais de casos de uso, projetados para Real-time Customer Data Platform e Adobe Journey Optimizer se não forem configurados automaticamente. As três etapas principais de configuração são:
 
 * Criar uma sandbox
 * Configuração de permissões de usuários e usuárias

@@ -1,85 +1,74 @@
 ---
 solution: Experience Platform
-title: Encontrar o manual de estratégia correto
-description: Saiba como encontrar o manual de estratégia correto para o seu caso de uso de habilitar manuais.
+title: Descubra os manuais
+description: Saiba como descobrir uma galeria de manuais e começar a usar uma sandbox inspiradora.
 role: User
-exl-id: 3dae6ad6-adb3-4606-ad63-c0d4ef6beeba
-source-git-commit: ecce42e2c759bda31bc37d0aae1da2c7b3d141fc
-workflow-type: ht
-source-wordcount: '752'
-ht-degree: 100%
+source-git-commit: ad3f746580f85e77cba390208d147b35b6854e10
+workflow-type: tm+mt
+source-wordcount: '711'
+ht-degree: 2%
 
 ---
 
-# Encontrar o manual de estratégia correto
+# Descubra os manuais
 
-Para usar um manual de estratégia, navegue até **[!UICONTROL Manuais de estratégia de caso de uso] > [!UICONTROL Manuais de estratégia]**. Explore e use as várias opções de pesquisa e filtragem na página para selecionar e começar a usar um manual de estratégia específico.
+Os manuais de casos de uso estão disponíveis sem custo extra para todos os clientes do Adobe Experience Platform. Para acessar uma galeria avançada de manuais de casos de uso na interface do usuário do Experience Platform, selecione **[!UICONTROL Playbooks]** no painel de navegação esquerdo.
 
-## Pesquisar e filtrar {#search-and-filter}
+![Galeria do manual do caso de uso.](/help/use-case-playbooks/assets/playbooks/discover/playbooks-gallery.png)
 
-Use a janela de pesquisa e os filtros disponíveis na página para encontrar o manual de estratégia correto para o seu caso de uso.
+![Acesso direto aos manuais de casos de uso na barra de navegação à esquerda.](/help/use-case-playbooks/assets/playbooks/discover/left-nav-playbooks.png)
 
-Por exemplo, você pode filtrar os manuais de estratégia que podem ser usados de acordo com o estágio do funil de marketing que deseja direcionar: conversão, engajamento ou retenção. Você também pode filtrar os manuais de estratégia exibidos pelo setor em que está ou pelo direito do produto ao qual você tem acesso: Adobe Journey Optimizer ou Real-time CDP.
+Selecione qualquer manual para ir para a página de detalhes e selecione **[!UICONTROL Ir para uma sandbox inspiradora]**. Uma modal de confirmação é exibida. Selecionar **Confirmar o** para ir para a sandbox inspiradora, onde você pode explorar e experimentar os diferentes casos de uso.
 
-![Filtrar manuais de estratégia por funil de marketing, setor ou produto](/help/use-case-playbooks/assets/playbooks/ui-guide/filter-by-funnel-industry-product.gif)
+Se você não tiver permissão para criar sandboxes, entre em contato com o administrador para obter assistência na criação de uma sandbox inspiradora.
 
-Também é possível usar a funcionalidade de pesquisa para encontrar o manual de estratégia certo para você. Veja abaixo um exemplo de como encontrar um manual de estratégia que ajude a interagir com usuários que podem ter abandonado o carrinho de compras.
+>[!TIP]
+>
+>Uma sandbox inspiradora é uma sandbox de desenvolvimento no Adobe Experience Platform em que você pode criar, testar e experimentar diferentes casos de uso antes de implementá-los em um ambiente de produção em tempo real.
 
-![Interaja com usuários que possam ter abandonado o carrinho.](/help/use-case-playbooks/assets/playbooks/ui-guide/engage-abandoned-cart.gif)
+![Vá para uma caixa de areia inspiradora.](/help/use-case-playbooks/assets/playbooks/discover/inspirational-sandbox.png)
 
-Ou você pode filtrar os manuais de estratégia disponíveis pelos canais que planeja usar para alcançar seus clientes, como pode ver abaixo:
+Se ainda não tiver configurado nenhuma sandbox inspiradora, selecione **[!UICONTROL Criar uma sandbox inspiradora]**. Uma modal é exibida. Insira o **Nome** e **Título** nas caixas de campo obrigatórias e selecione **Criar**. Depois de criar a sandbox inspiradora, verifique se [definir permissões](/help/access-control/home.md) antes de voltar para a página detalhes dos manuais de caso de uso para criar uma instância.
 
-![Filtrar por canal](/help/use-case-playbooks/assets/playbooks/ui-guide/channel-select-filter.gif)
+![Criar uma sandbox inspiradora.](/help/use-case-playbooks/assets/playbooks/discover/create-inspirational-sandbox.png)
 
-Experimente com as opções de filtros e pesquisa e encontre o manual de estratégia certo para você.
+![Insira o nome e o título para criar uma sandbox inspiradora.](/help/use-case-playbooks/assets/playbooks/discover/create-inspirational-sandbox-modal.png)
 
-## Exibir o manual de estratégia e gerar ativos {#view-playbook-generate-assets}
+Se você selecionar um manual de casos de uso de fora de uma sandbox inspiradora, não será possível criar uma instância. Na página de detalhes, selecione **Ir para sandbox inspiradora** para ir para uma sandbox inspiracional existente e selecione **[!UICONTROL Criar instância]**.
 
-Antes de definir um manual de estratégia e criar instâncias, você deve inspecionar o manual para verificar se atende às suas necessidades. Para ajudar a entender melhor os casos de uso abordados, todos os manuais de estratégia contêm as seções listadas abaixo. Quando desejar continuar e gerar ativos, selecione **[!UICONTROL Criar instância]**.
+Se você não tiver permissão para criar sandboxes, entre em contato com o administrador para obter assistência na criação de uma sandbox inspiradora.
 
-### Mapa mental {#mindmap}
+![Não há permissões para criar sandbox.](/help/use-case-playbooks/assets/playbooks/discover/no-permissions-to-create-sandbox.png)
 
-Use a seção de mapa mental de um manual de estratégia para entender as etapas do fluxo de trabalho que o manual de estratégia pode ajudar a resolver. Veja a forma como todos os objetos gerados podem ajudar a atingir o caso de uso, da perspectiva da personalidade direcionada no caso de uso.
+Se você tiver atingido o limite do número de sandboxes que foram alocadas para você, será exibida uma mensagem solicitando que você entre em contato com o administrador da organização para aumentar o limite ou desativar ou remover algumas sandboxes ativas. Depois que o limite da sandbox for ajustado ou o número de sandboxes ativas for reduzido, você pode continuar a criar a sandbox inspiradora.
 
-O mapa mental começa com uma definição de quem se atinge com a jornada do usuário e descreve, em cada etapa, se algo é entregue pela Adobe, como uma nova mensagem ou um lembrete, ou se alguma ação tomada pela personalidade direcionada aciona a próxima mensagem ou evento.
+![Limite de sandbox atingido.](/help/use-case-playbooks/assets/playbooks/discover/sandbox-limit-reached.png)
 
-![Mapa mental do manual de estratégia realçado.](/help/use-case-playbooks/assets/playbooks/ui-guide/playbook-mindmap.png)
+Observe que, ao criar uma sandbox inspiradora, as superfícies de canal para notificações por email, push e SMS não são configuradas automaticamente. Entre em contato com o administrador de TI para configurá-los manualmente ou a criação da instância pode falhar.
 
-### Resumo {#summary}
+![Configurar predefinições de canal.](/help/use-case-playbooks/assets/playbooks/discover/configure-channel-presets.png)
 
->[!CONTEXTUALHELP]
->id="platform_playbooks_assets"
->title="Ativos"
->abstract="Esses são os ativos gerados por este manual de estratégia. Depois de criar uma instância do manual de estratégia, você poderá ver os ativos na sandbox de inspiração e promovê-los para outras sandboxes, conforme desejado."
+## Configurar sandbox e superfícies de canal no Journey Optimizer {#configure-channel-surfaces}
 
-Inspecione a seção de resumo para entender quais ativos são gerados depois que você cria instâncias do manual de estratégia. Os ativos gerados para cada manual de estratégia são adaptados ao caso de uso que o manual possibilita. Obtenha mais informações abaixo sobre todos os itens na seção de resumo.
+Se sua organização tiver uma licença para [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=pt-BR), e quiser usar os manuais projetados para o Journey Optimizer, será necessário configurar as predefinições de canal em sua sandbox, que definem os parâmetros técnicos necessários para suas mensagens. [Saiba como configurar superfícies de canal no Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/channel-surfaces.html?lang=pt-BR).
 
-| Item | Descrição |
----------|----------|
-| **[!UICONTROL Público-alvo]** | Descreve as personalidades que você deseja alcançar por meio deste manual de estratégia de casos de uso. |
-| **[!UICONTROL Canais de marketing]** | Descreve os canais usados para acessar as personalidades direcionadas no manual de estratégia. |
-| **[!UICONTROL Ativos técnicos]** | Uma lista dos ativos técnicos que são gerados após a criação de instâncias do manual de estratégia. Os ativos gerados diferem por manual de estratégia, dependendo do caso de uso. Alguns manuais de estratégia podem gerar esquemas, segmentos e jornadas. Outros podem gerar destinos. Consulte a seção [Entender os ativos gerados](/help/use-case-playbooks/playbooks/create-share-reuse.md#understand-assets) (mais adiante no guia sobre criação e reutilização de instâncias) para obter mais informações sobre como usar e reutilizar os ativos gerados. |
+Para criar instâncias de manuais no Journey Optimizer, é necessário configurar superfícies de canal para notificações por email, push e SMS.
 
-{style="table-layout:auto"}
+### Superfície de canal de email
 
-![Resumo do manual de estratégia realçado](/help/use-case-playbooks/assets/playbooks/ui-guide/playbook-summary.png)
+Ir para `Channels` na interface do Journey Optimizer. Configure subdomínios e pools de IP separados para emails de marketing e mensagens transacionais, se ainda não estiver configurado. Essas são as práticas recomendadas para garantir que mensagens transacionais, como emails de confirmação de pedidos, sejam enviadas aos clientes. Insira nomes, endereços de email e configurações adicionais. Selecionar **Enviar** na parte superior direita da página para criar a superfície de canal de marketing. Leia a documentação em [como configurar superfícies de canal de email](https://experienceleague.adobe.com/docs/journey-optimizer/using/email/configure-email/email-settings.html).
 
-### Instâncias {#instances}
+### Superfície de canal de SMS
 
-Role para baixo até a seção de instâncias para obter uma visão geral das instâncias do manual de estratégia que você ou integrantes de sua equipe já criaram. Você pode usar vários controles para classificar e filtrar as instâncias exibidas, por exemplo, para ver apenas as que você criou. Você também pode ver várias informações sobre cada instância, conforme listado abaixo.
+Para criar uma superfície de canal de SMS, primeiro crie uma credencial de API de SMS e selecione o fornecedor preferencial (por exemplo, Sinch). Nomeie a superfície de canal SMS (por exemplo, Marketing de SMS), selecione a configuração e insira um número de remetente. Selecionar **Enviar** na parte superior direita da página para salvar a superfície de canal de SMS. Leia a documentação em [como configurar superfícies de canal de SMS](https://experienceleague.adobe.com/docs/journey-optimizer/using/sms/sms-configuration.html?lang=br#message-preset-sms).
 
-| Item | Descrição |
-|---------|----------|
-| **[!UICONTROL Nome]** | O nome da instância com base no manual de estratégia. Você pode personalizar o nome e a descrição de uma instância. Leia a seção sobre [como editar metadados da instância](/help/use-case-playbooks/playbooks/create-share-reuse.md#edit-instance-metadata) para obter mais informações. |
-| **[!UICONTROL Status]** | Indica o status da instância. Uma instância **[!UICONTROL enviada]** está pronta para uso. |
-| **[!UICONTROL Criado]** | Indica quando a instância foi criada. |
-| **[!UICONTROL Criada por]** | Indica quem criou a instância. |
-| **[!UICONTROL Última modificação]** | Indica quando a instância foi modificada pela última vez. |
+Também configure canais para manuais que contenham mensagens transacionais, como confirmações de pedidos.
 
-{style="table-layout:auto"}
+### Superfície de canal de push
 
-![Instância do manual de estratégia realçada.](/help/use-case-playbooks/assets/playbooks/ui-guide/playbook-instances.png)
+Confirme se as superfícies do aplicativo estão configuradas na interface Experience Platform ou Coleções de dados. É assim que as superfícies do aplicativo se parecem no ambiente de Coleções de dados.
 
-## Próximas etapas - Criar uma instância do manual de estratégia {#next-steps-create-instance}
+## Próximas etapas {#next-steps}
 
-Quando desejar continuar e criar uma instância do manual de estratégia, selecione **[!UICONTROL Criar instância]** para continuar com o manual e gerar ativos técnicos. Leia o guia sobre [como criar, compartilhar e reutilizar instâncias do manual de estratégia](/help/use-case-playbooks/playbooks/create-share-reuse.md) para obter mais informações.
+Agora que você leu este documento, deve saber como configurar uma sandbox inspiradora e conhecer diferentes maneiras de acessar manuais de casos de uso na Platform. Como próxima etapa, leia sobre como [localizar](/help/use-case-playbooks/playbooks/find.md) o manual certo.
+

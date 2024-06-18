@@ -3,9 +3,9 @@ keywords: Experience Platform;perfil;perfil de cliente em tempo real;solução d
 title: Guia da interface do usuário do Perfil do cliente em tempo real
 description: O Perfil do cliente em tempo real cria uma visualização integral de cada cliente individual, combinando dados de vários canais, inclusive dados online, offline, de CRM e de terceiros. Este documento serve como um guia para interagir com o Perfil do cliente em tempo real na interface do usuário do Adobe Experience Platform.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: e6c64ebbde0301c796a4d681d962f1edb3d79a12
 workflow-type: tm+mt
-source-wordcount: '2108'
+source-wordcount: '2155'
 ht-degree: 0%
 
 ---
@@ -132,9 +132,13 @@ Depois de selecionar um **[!UICONTROL ID do perfil]**, o **[!UICONTROL Detalhe]*
 
 Os campos padrão mostrados também podem ser alterados em um nível organizacional para exibir atributos de perfil preferenciais. Para saber mais sobre como personalizar esses campos, incluindo instruções passo a passo para adicionar e remover atributos e redimensionar painéis de painel, leia o [guia de personalização de detalhes do perfil](profile-customization.md).
 
-![A guia Details (Detalhes) é realçada. Os detalhes do perfil são exibidos.](../images/user-guide/profile-detail.png)
+![A guia Details (Detalhes) é realçada. Os detalhes do perfil são exibidos.](../images/user-guide/profile-detail-row-name.png)
 
-Você pode exibir informações adicionais relacionadas ao perfil de cliente individual selecionando outra das guias disponíveis. Essas guias incluem atributos, eventos e a guia de associação de público-alvo que mostra os públicos para os quais o perfil está qualificado no momento.
+Você também pode optar por alternar entre visualizar os nomes de atributo como seus nomes de exibição e os nomes de caminho do campo. Para alternar entre essas duas exibições, selecione a **[!UICONTROL Mostrar nomes para exibição]** alternar.
+
+![A opção Mostrar nomes de exibição é realçada e os nomes de exibição são mostrados sob os atributos.](../images/user-guide/profile-detail.png)
+
+Para exibir informações adicionais relacionadas ao perfil de cliente individual, selecione uma das outras guias disponíveis. Essas guias incluem atributos, eventos e a guia de associação de público-alvo que mostra os públicos para os quais o perfil está qualificado no momento.
 
 ### Guia Atributos
 

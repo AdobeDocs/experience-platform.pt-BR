@@ -3,9 +3,9 @@ keywords: Experience Platform;perfil;perfil de cliente em tempo real;interface d
 title: Personalização de detalhes do perfil na interface
 description: Este guia fornece instruções passo a passo para personalizar a forma como os dados do Perfil do cliente em tempo real são exibidos na interface do usuário do Adobe Experience Platform.
 exl-id: 76cf8420-cc50-4a56-9f6d-5bfc01efcdb3
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: 69ac6d3f98675df11183082ecbbb49d18ddb57af
 workflow-type: tm+mt
-source-wordcount: '1350'
+source-wordcount: '1394'
 ht-degree: 0%
 
 ---
@@ -56,7 +56,11 @@ A variável **[!UICONTROL Atributos Selecionados]** A seção no lado direito da
 
 ![Os atributos que atualmente compõem os atributos no cartão são destacados.](../images/profile-customization/select-before.png)
 
-Selecione qualquer um dos campos de esquema de união disponíveis para personalizar os atributos no cartão que você está editando. Os campos selecionados são mostrados com uma marca de seleção ao lado deles e são adicionados automaticamente à lista de atributos selecionados. Depois de adicionar todos os atributos que gostaria de exibir no cartão, escolha **[!UICONTROL Selecionar]** para retornar ao **[!UICONTROL Editar widget]** tela.
+Selecione qualquer um dos campos de esquema de união disponíveis para personalizar os atributos no cartão que você está editando. Ao selecionar os campos, você pode optar por ver o nome do caminho do arquivo ou o nome de exibição. Para alternar entre essas duas exibições, selecione a **[!UICONTROL Mostrar nomes para exibição]** alternar.
+
+![A variável [!UICONTROL Mostrar nomes para exibição] A opção de alternar é realçada na página Detalhes do perfil.](../images/profile-customization/show-display-names.png)
+
+Os campos selecionados são mostrados com uma marca de seleção ao lado deles e são adicionados automaticamente à lista de atributos selecionados. Depois de adicionar todos os atributos que gostaria de exibir no cartão, escolha **[!UICONTROL Selecionar]** para retornar ao **[!UICONTROL Editar widget]** tela.
 
 ![Os atributos recém-adicionados são destacados.](../images/profile-customization/select-after.png)
 

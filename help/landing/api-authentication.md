@@ -4,17 +4,17 @@ title: Autenticar e acessar APIs de Experience Platform
 type: Tutorial
 description: Este documento fornece um tutorial passo a passo para obter acesso a uma conta de desenvolvedor da Adobe Experience Platform para fazer chamadas para APIs da Experience Platform.
 exl-id: dfe8a7be-1b86-4d78-a27e-87e4ed8b3d42
-source-git-commit: f598c6dabe9296044055d8e961cf5177a655f5fa
+source-git-commit: 2fb0da385baeb96d5665ecc25bf353c7516ef9f7
 workflow-type: tm+mt
-source-wordcount: '2204'
-ht-degree: 9%
+source-wordcount: '2149'
+ht-degree: 3%
 
 ---
 
 
 # Autenticar e acessar APIs da Experience Platform
 
-Este documento fornece um tutorial passo a passo para obter acesso a uma conta de desenvolvedor da Adobe Experience Platform para fazer chamadas para APIs da Experience Platform. No final deste tutorial, você terá gerado ou coletado as seguintes credenciais que são necessárias como cabeçalhos em todas as chamadas de API da plataforma:
+Este documento fornece um tutorial passo a passo para obter acesso a uma conta de desenvolvedor do Adobe Experience Platform para fazer chamadas para APIs Experience Platform. No final deste tutorial, você terá gerado ou coletado as seguintes credenciais que são necessárias como cabeçalhos em todas as chamadas de API da plataforma:
 
 * `{ACCESS_TOKEN}`
 * `{API_KEY}`
@@ -50,7 +50,7 @@ Antes de criar integrações no Console do Adobe Developer, sua conta deve ter p
 
 ### Obter acesso de desenvolvedor {#gain-developer-access}
 
-Entre em contato com um [!DNL Admin Console] administrador na organização para adicioná-lo como desenvolvedor a um perfil de produto Experience Platform usando o [[!DNL Admin Console]](https://adminconsole.adobe.com/). Consulte a [!DNL Admin Console] para obter instruções específicas sobre como [gerenciar o acesso de desenvolvedor para perfis de produtos](https://helpx.adobe.com/br/enterprise/admin-guide.html/enterprise/using/manage-developers.ug.html).
+Entre em contato com um [!DNL Admin Console] administrador na organização para adicioná-lo como desenvolvedor a um perfil de produto Experience Platform usando o [[!DNL Admin Console]](https://adminconsole.adobe.com/). Consulte a [!DNL Admin Console] para obter instruções específicas sobre como [gerenciar o acesso de desenvolvedor para perfis de produtos](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/manage-developers.ug.html).
 
 Depois de atribuído como desenvolvedor, você pode começar a criar integrações no [Console do Adobe Developer](https://www.adobe.com/go/devs_console_ui). Essas integrações são um pipeline de aplicativos e serviços externos para APIs Adobe.
 
@@ -88,15 +88,15 @@ A tela **[!UICONTROL Adicionar uma API]** é exibida. Selecione o ícone de prod
 >
 >Selecione o **[!UICONTROL Exibir documentos]** opção para navegar em uma janela de navegador separada até a conclusão [Documentação de referência da API do Experience Platform](https://developer.adobe.com/experience-platform-apis/).
 
-### Selecione o tipo de autenticação de servidor para servidor OAuth {#select-oauth-server-to-server}
+### Selecione o [!UICONTROL Servidor OAuth para servidor] tipo de autenticação {#select-oauth-server-to-server}
 
-Em seguida, selecione o tipo de autenticação para gerar tokens de acesso e acessar a API Experience Platform.
+Em seguida, selecione o [!UICONTROL Servidor OAuth para servidor] tipo de autenticação para gerar tokens de acesso e acessar a API Experience Platform.
 
 >[!IMPORTANT]
 >
->Selecione o **[!UICONTROL Servidor OAuth para servidor]** como esse será o único método compatível a partir de agora. A variável **[!UICONTROL Conta de serviço (JWT)]** está obsoleto. Embora as integrações que usam o método de autenticação JWT continuem a funcionar até 1º de janeiro de 2025, a Adobe recomenda que você migre as integrações existentes para o novo método servidor para servidor OAuth antes dessa data. Obter mais informações na seção [!BADGE Obsoleto]{type=negative}[Gerar um JSON Web Token (JWT)](#jwt).
+>A variável **[!UICONTROL Servidor OAuth para servidor]** Este é o único método de geração de token compatível a partir de agora. O compatível anteriormente **[!UICONTROL Conta de serviço (JWT)]** O método está obsoleto e não pode ser selecionado para novas integrações. Embora as integrações existentes que usam o método de autenticação JWT continuem a funcionar até 1º de janeiro de 2025, a Adobe recomenda que você migre as integrações existentes para o novo [!UICONTROL Servidor OAuth para servidor] antes dessa data. Obter mais informações na seção [!BADGE Obsoleto]{type=negative}[Gerar um JSON Web Token (JWT)](#jwt).
 
-![Selecione Experience Platform API.](./images/api-authentication/oauth-authentication-method.png)
+![Selecione o método de autenticação de servidor para servidor OAuth para a API de Experience Platform.](./images/api-authentication/oauth-authentication-method.png)
 
 ### Selecione os perfis de produto para sua integração {#select-product-profiles}
 
@@ -154,7 +154,7 @@ Você também pode usar um ambiente e uma coleção do Postman para gerar tokens
 
 >[!WARNING]
 >
-O método JWT para gerar tokens de acesso foi descontinuado. Todas as novas integrações devem ser criadas usando o [Método de autenticação de servidor para servidor OAuth](#select-oauth-server-to-server). A Adobe também recomenda migrar as integrações já existentes para o método OAuth. Leia a seguinte documentação importante:
+O método JWT para gerar tokens de acesso foi descontinuado. Todas as novas integrações devem ser criadas usando o [Método de autenticação de servidor para servidor OAuth](#select-oauth-server-to-server). O Adobe também exige que você migre suas integrações existentes para o método OAuth até 1º de janeiro de 2025 para que suas integrações continuem funcionando. Leia a seguinte documentação importante:
 > 
 * [Guia de migração para seus aplicativos do JWT para o OAuth](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/)
 * [Guia de implementação para aplicativos novos e antigos com o OAuth](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation/)
@@ -313,7 +313,7 @@ Antes de criar integrações no Console do Adobe Developer, sua conta deve ter p
 
 ### Adicionar desenvolvedores ao perfil do produto {#add-developers-to-product-profile}
 
-Acesse [[!DNL Admin Console]](https://adminconsole.adobe.com/) e faça logon com sua Adobe ID.
+Ir para [[!DNL Admin Console]](https://adminconsole.adobe.com/) e faça logon com sua Adobe ID.
 
 Selecionar **[!UICONTROL Produtos]** e selecione **[!UICONTROL Adobe Experience Platform]** da lista de produtos.
 

@@ -6,7 +6,7 @@ exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
 source-git-commit: 9981f35732b041a92c5a371e727a8facb6636cf5
 workflow-type: tm+mt
 source-wordcount: '1567'
-ht-degree: 0%
+ht-degree: 8%
 
 ---
 
@@ -68,12 +68,12 @@ Se desejar excluir registros de todos os conjuntos de dados, selecione **[!UICON
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_primaryidentity"
 >title="Namespace de identidade"
->abstract="Um namespace de identidade é um atributo que vincula um registro ao perfil de um consumidor no Experience Platform. O campo de namespace de identidade de um conjunto de dados é definido pelo esquema no qual o conjunto de dados se baseia. Nesta coluna, você deve fornecer o tipo (ou namespace) para o namespace de identidade do registro, como `email` para endereços de email e `ecid` para IDs de Experience Cloud. Para saber mais, consulte o guia da interface do usuário do ciclo de vida dos dados."
+>abstract="Um namespace de identidade é um atributo que vincula um registro ao perfil de consumidor na Experience Platform. O campo de namespace de identidade de um conjunto de dados é definido pelo esquema em que o conjunto de dados se baseia. Nessa coluna, é necessário fornecer o tipo (ou namespace) para namespace da identidade do registro, como `email` para endereços de email e `ecid` para IDs da Experience Cloud. Para saber mais, consulte o guia da interface do ciclo de vida dos dados."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_identityvalue"
 >title="Valor de identidade principal"
->abstract="Nesta coluna, você deve fornecer o valor para o namespace de identidade do registro, que deve corresponder ao tipo de identidade fornecido na coluna à esquerda. Se o tipo de namespace de identidade for `email`, o valor deve ser o endereço de email do registro. Para saber mais, consulte o guia da interface do usuário do ciclo de vida dos dados."
+>abstract="Nessa coluna, é necessário fornecer o valor do namespace de identidade do registro, que deve corresponder ao tipo de identidade fornecido na coluna esquerda. Se o tipo de namespace de identidade for `email`, o valor deverá ser o endereço de email do registro. Para saber mais, consulte o guia da interface do ciclo de vida dos dados."
 
 Ao excluir registros, você deve fornecer informações de identidade para que o sistema possa determinar quais registros devem ser excluídos. Para qualquer conjunto de dados na Plataforma, os registros são excluídos com base no **namespace de identidade** que é definido pelo esquema do conjunto de dados.
 

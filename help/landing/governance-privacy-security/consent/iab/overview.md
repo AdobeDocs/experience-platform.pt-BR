@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Suporte IAB TCF 2.0 no Experience Platform
 description: Saiba como configurar suas operações de dados e esquemas para transmitir as opções de consentimento do cliente ao ativar segmentos para destinos no Adobe Experience Platform.
 exl-id: af787adf-b46e-43cf-84ac-dfb0bc274025
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: b08c6cf12a38f79e019544dea91913a77bd6490a
 workflow-type: tm+mt
 source-wordcount: '2492'
 ht-degree: 0%
@@ -41,7 +41,7 @@ Este guia também requer uma compreensão funcional dos seguintes serviços da p
 * [Serviço de identidade da Adobe Experience Platform](/help/identity-service/home.md): soluciona o desafio fundamental apresentado pela fragmentação dos dados de experiência do cliente, unindo identidades em dispositivos e sistemas.
 * [Perfil do cliente em tempo real](/help/profile/home.md): Usos [!DNL Identity Service] para criar perfis detalhados do cliente a partir de seus conjuntos de dados em tempo real. [!DNL Real-Time Customer Profile] O extrai dados do Data Lake e mantém perfis de clientes em seu próprio armazenamento de dados separado.
 * [Adobe Experience Platform Web SDK](/help/web-sdk/home.md): uma biblioteca JavaScript do lado do cliente que permite integrar vários serviços da plataforma ao seu site voltado para o cliente.
-   * [Comandos de consentimento do SDK](/help/web-sdk/consent/supporting-consent.md): uma visão geral dos casos de uso dos comandos do SDK relacionados a consentimento mostrados neste guia.
+   * [Comandos de consentimento do SDK](../../../../web-sdk/commands/setconsent.md): uma visão geral dos casos de uso dos comandos do SDK relacionados a consentimento mostrados neste guia.
 * [Serviço de segmentação do Adobe Experience Platform](/help/segmentation/home.md): permite dividir [!DNL Real-Time Customer Profile] em grupos de indivíduos que compartilham características semelhantes e respondem de forma semelhante às estratégias de marketing.
 
 Além dos serviços da Platform listados acima, você também deve estar familiarizado com [destinos](/help/data-governance/home.md) e seu papel no ecossistema da plataforma.

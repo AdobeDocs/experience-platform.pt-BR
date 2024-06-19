@@ -3,7 +3,7 @@ title: Tipos de ação na extensão SDK da Web do Adobe Experience Platform
 description: Saiba mais sobre os diferentes tipos de ação fornecidos pela extensão de tag do Adobe Experience Platform Web SDK.
 solution: Experience Platform
 exl-id: a4bf0bb9-59b4-4c43-97e6-387768176517
-source-git-commit: e5fd8a53cfd612034d12a761ac4779ed930557d4
+source-git-commit: fb9f7757d77b221c733bbed5124fa576a6b02ed2
 workflow-type: tm+mt
 source-wordcount: '1264'
 ht-degree: 1%
@@ -47,7 +47,7 @@ Há alguns outros campos no tipo de ação Enviar evento que também podem ser �
 
 ## Definir consentimento {#set-consent}
 
-Após receber o consentimento do usuário, esse consentimento deve ser comunicado ao SDK da Web da Adobe Experience Platform usando o tipo de ação &quot;Definir consentimento&quot;. Atualmente, há suporte para dois tipos de padrões: &quot;Adobe&quot; e &quot;IAB TCF&quot;. Consulte [Suporte às preferências de consentimento do cliente](/help/web-sdk/consent/supporting-consent.md). Ao usar a versão 2.0 do Adobe, somente um valor de elemento de dados é compatível. Será necessário criar um elemento de dados que resolva para o objeto de consentimento.
+Após receber o consentimento do usuário, esse consentimento deve ser comunicado ao SDK da Web da Adobe Experience Platform usando o tipo de ação &quot;Definir consentimento&quot;. Atualmente, há suporte para dois tipos de padrões: &quot;Adobe&quot; e &quot;IAB TCF&quot;. Consulte [Suporte às preferências de consentimento do cliente](../../../../web-sdk/commands/setconsent.md). Ao usar a versão 2.0 do Adobe, somente um valor de elemento de dados é compatível. Será necessário criar um elemento de dados que resolva para o objeto de consentimento.
 
 Nesta ação, você também recebe um campo opcional para incluir um Mapa de identidade, de modo que as identidades possam ser sincronizadas assim que o consentimento for recebido. A sincronização é útil quando o consentimento é configurado como &quot;Pendente&quot; ou &quot;Fora&quot;, pois a chamada de consentimento provavelmente é a primeira chamada a ser acionada.
 

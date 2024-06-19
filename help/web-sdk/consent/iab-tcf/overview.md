@@ -3,9 +3,9 @@ title: Suporte ao IAB TCF 2.0 no SDK da Web da Adobe Experience Platform
 description: Saiba como oferecer suporte às preferências de consentimento da TCF 2.0 do IAB usando o SDK da Web da Adobe Experience Platform
 keywords: consentimento;setConsent;Grupo de campos de privacidade de perfil;Grupo de campos de privacidade de evento de experiência;Grupo de campos de privacidade;IAB TCF 2.0;Real-Time CDP;
 exl-id: 78e728f4-1604-40bf-9e21-a056024bbc98
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: b08c6cf12a38f79e019544dea91913a77bd6490a
 workflow-type: tm+mt
-source-wordcount: '860'
+source-wordcount: '862'
 ht-degree: 0%
 
 ---
@@ -69,16 +69,16 @@ Por exemplo, se você tiver um cliente que não esteja na jurisdição do Regula
 
 ### Definição do consentimento quando ele é alterado
 
-O Adobe Experience Platform Web SDK tem um `setConsent` , que comunica as preferências de consentimento do cliente para todos os serviços da Adobe usando a TCF do IAB 2.0. Se você estiver integrando o com o Real-Time CDP, isso atualizará o perfil do cliente. Se você estiver integrando o com o Audience Manager, isso atualizará as informações de seu cliente. Chamar isso também define um cookie com uma preferência de consentimento &quot;tudo ou nada&quot; que controla se os eventos de experiência futuros podem ser enviados. Essa ação deve ser chamada sempre que o consentimento for alterado. Em carregamentos de página futuros, o cookie de consentimento da Rede de borda será lido para determinar se os Eventos de experiência podem ser enviados e se um cookie de identidade pode ser definido.
+O Adobe Experience Platform Web SDK tem um `setConsent` , que comunica as preferências de consentimento do cliente para todos os serviços da Adobe usando a TCF do IAB 2.0. Se você estiver integrando o com o Real-Time CDP, isso atualizará o perfil do cliente. Se você estiver integrando o com o Audience Manager, isso atualizará as informações de seu cliente. Chamar isso também define um cookie com uma preferência de consentimento &quot;tudo ou nada&quot; que controla se os eventos de experiência futuros podem ser enviados. Essa ação deve ser chamada sempre que o consentimento for alterado. Em carregamentos de página futuros, o cookie de consentimento Edge Network será lido para determinar se os Eventos de experiência podem ser enviados e se um cookie de identidade pode ser definido.
 
-Semelhante à integração do Audience Manager IAB TCF 2.0, a Rede de borda consente quando um cliente consente explicitamente com as seguintes finalidades:
+Semelhante à integração do Audience Manager IAB TCF 2.0, o Edge Network consente quando um cliente consente explicitamente com as seguintes finalidades:
 
 - **Finalidade 1:** Armazenar e/ou acessar informações em um dispositivo
 - **Finalidade 10:** Desenvolver e aprimorar produtos
 - **Finalidade especial 1:** Garanta a segurança, evite fraudes e depure. (De acordo com os regulamentos da TCF do IAB, isso é sempre aceito)
 - **Permissão de fornecedor Adobe:** Consentimento para Adobe (Fornecedor 565)
 
-Para obter mais informações sobre o `setConsent` , leia a documentação em [Suporte ao consentimento](../../consent/supporting-consent.md).
+Para obter mais informações sobre o `setConsent` , leia a documentação dedicada do SDK da Web em [setConsent](../../../web-sdk/commands/setconsent.md).
 
 ### Adicionar consentimento a eventos de experiência
 

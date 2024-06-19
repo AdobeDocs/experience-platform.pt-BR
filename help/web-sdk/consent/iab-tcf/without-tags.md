@@ -3,9 +3,9 @@ title: Integrar o suporte ao IAB TCF 2.0 usando o SDK da Web da Adobe Experience
 description: Saiba como configurar o suporte IAB TCF 2.0 para seu site sem usar tags.
 seo-description: Learn how to set up IAB TCF 2.0 consent with Adobe Experience Platform Web SDK
 exl-id: 14f1802a-0f8d-487f-ae17-5daaaab05162
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: b08c6cf12a38f79e019544dea91913a77bd6490a
 workflow-type: tm+mt
-source-wordcount: '618'
+source-wordcount: '615'
 ht-degree: 0%
 
 ---
@@ -77,7 +77,7 @@ window.__tcfapi('addEventListener', 2, function (tcData, success) {
 });
 ```
 
-Este bloco de código escuta a `useractioncomplete` evento e, em seguida, define o consentimento, transmitindo a cadeia de consentimento e a variável `gdprApplies` sinalizador. Se você tiver identidades personalizadas para seus clientes, preencha o `identityMap` variável. Consulte o guia em [consentimento de suporte](../../consent/supporting-consent.md) para obter mais informações sobre como chamar `setConsent`.
+Este bloco de código escuta a `useractioncomplete` evento e, em seguida, define o consentimento, transmitindo a cadeia de consentimento e a variável `gdprApplies` sinalizador. Se você tiver identidades personalizadas para seus clientes, preencha o `identityMap` variável. Consulte o guia em [setConsent](../../../web-sdk/commands/setconsent.md) para obter mais informações.
 
 ## Inclusão de informações de consentimento em sendEvent
 

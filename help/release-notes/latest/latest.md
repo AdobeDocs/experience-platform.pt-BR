@@ -2,10 +2,10 @@
 title: Notas de versão da Adobe Experience Platform de junho de 2024
 description: As notas de versão de junho de 2024 da Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: e1b56c6150274748c35fedfc1e1b6bbbf66d1bfb
+source-git-commit: b9707c40beec3000456510a8a384a0af58d6d9fa
 workflow-type: tm+mt
-source-wordcount: '1195'
-ht-degree: 20%
+source-wordcount: '1357'
+ht-degree: 18%
 
 ---
 
@@ -23,6 +23,7 @@ Novos recursos na Adobe Experience Platform:
 - [Autenticação para APIs da Experience Platform](#authentication-platform-apis)
 - [Preparação de dados](#data-prep)
 - [Destinos](#destinations)
+- [Serviço de identidade](#identity-service)
 - [Privacy Service](#privacy)
 - [Serviço de segmentação](#segmentation)
 - [Manuais de casos de uso ](#use-case-playbooks)
@@ -48,7 +49,7 @@ O método JWT para obter tokens de acesso agora está obsoleto para novas integr
 
 Embora as integrações de API já existentes que usam o método de autenticação JWT continuem funcionando até 1º de janeiro de 2025, a Adobe recomenda fortemente que você migre essas integrações para o novo método servidor para servidor OAuth antes dessa data. Leia o manual em [migração da credencial de conta de serviço (JWT) para a credencial de servidor para servidor do OAuth](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/).
 
-## Preparação de dados (#data-prep)
+## Preparação de dados {#data-prep}
 
 Use o preparo de dados para mapear, transformar e validar dados de e para o Experience Data Model (XDM).
 
@@ -56,7 +57,7 @@ Use o preparo de dados para mapear, transformar e validar dados de e para o Expe
 
 | Recurso | Descrição |
 | --- | --- |
-| Adições à lista de palavras-chave reservadas | As seguintes palavras foram adicionadas à lista de palavras-chave reservadas do preparo de dados:<ul><li>`do`</li><li>`empty`</li><li>`function`</li><li>`size`</li></ul>. Para obter mais informações, leia as [guia de funções de preparação de dados](../../data-prep/functions.md). |
+| Adições à lista de palavras-chave reservadas | As seguintes palavras foram adicionadas à lista de palavras-chave reservadas do preparo de dados:<ul><li>`do`</li><li>`empty`</li><li>`function`</li><li>`size`</li></ul> Para obter mais informações, leia as [guia de funções de preparação de dados](../../data-prep/functions.md). |
 
 {style="table-layout:auto"}
 
@@ -77,6 +78,20 @@ Para obter mais informações sobre o Preparo de dados, leia a [Visão geral do 
 {style="table-layout:auto"}
 
 Para obter informações mais gerais sobre destinos, consulte a [visão geral de destinos](../../destinations/home.md).
+
+## Serviço de identidade {#identity-service}
+
+Use o Serviço de identidade da Adobe Experience Platform para criar uma visualização abrangente dos clientes e seus comportamentos, unindo identidades em dispositivos e sistemas, permitindo que você forneça experiências digitais pessoais e de impacto em tempo real.
+
+**Recursos futuros**
+
+| Recurso | Descrição |
+| --- | --- |
+| [!BADGE Beta]{type=Informative} Regras de vinculação do gráfico de identidade | Os participantes do programa beta podem usar regras de vinculação de gráficos de identidade para garantir a representação da entidade da pessoa no sistema, evitando o &quot;dispositivo compartilhado&quot; e outros cenários de recolhimento de gráficos. Para atingir essa meta, os participantes durante o programa beta terão acesso a três recursos em um ambiente de sandbox de desenvolvimento: <ul><li>A ferramenta de simulação de gráficos para entender como o algoritmo de gráfico funciona.</li><li>A tela de configurações de identidade para configurar namespaces exclusivos e prioridades de namespace.</li><li>Um painel de identidade para obter insights sobre gráficos assimilados.</li></ul> Além disso, o programa beta incluirá melhorias na estabilidade do comportamento do perfil. Para obter mais informações, leia a [regras de vinculação do gráfico de identidade](../../identity-service/identity-graph-linking-rules/overview.md) documentação. |
+
+{style="table-layout:auto"}
+
+Para obter mais informações sobre o Serviço de identidade, leia a [Visão geral do serviço de identidade](../../identity-service/home.md).
 
 ## [!DNL Privacy Service] {#privacy}
 

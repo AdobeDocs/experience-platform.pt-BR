@@ -2,9 +2,9 @@
 title: Assistente de IA no Adobe Experience Platform
 description: Saiba como usar o Assistente de IA para navegar e entender os conceitos de Experience Platform e Real-time Customer Data Platform, e as informações de uso sobre seus objetos.
 exl-id: 3fed2b1d-75fc-47ce-98d1-a811eb8a1d8e
-source-git-commit: 1c228eb95075d4302ab6d3544fff8766087411bf
+source-git-commit: 94245fe25828025b60ea57ddebede2b3ccf890eb
 workflow-type: tm+mt
-source-wordcount: '1379'
+source-wordcount: '1517'
 ht-degree: 0%
 
 ---
@@ -12,6 +12,10 @@ ht-degree: 0%
 # Guia da interface do assistente de IA
 
 Leia este guia para saber como usar o Assistente de IA na interface do usuário do Adobe Experience Platform.
+
+O vídeo a seguir é destinado a fornecer suporte à sua compreensão do Assistente de IA.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3429845?learn=on)
 
 ## Acessar o assistente de IA na interface do usuário do Experience Platform
 
@@ -111,6 +115,22 @@ Você também pode fornecer filtros e modificações às suas perguntas e instru
 
 +++
 
+### Verificar respostas dos insights operacionais {#verify-responses}
+
+Você pode verificar cada resposta relacionada às perguntas dos insights operacionais usando uma consulta SQL fornecida pelo Assistente de IA.
+
++++Selecione para exibir um exemplo de verificação das respostas dos insights operacionais
+
+Depois de receber uma resposta para uma pergunta de insights operacionais, selecione **[!UICONTROL Mostrar fontes]** e selecione **[!UICONTROL Exibir consulta de origem]**.
+
+![exibir consulta de origem](./images/view-source-query.png)
+
+Quando consultado sobre uma pergunta de insights operacionais, o Assistente de IA fornece uma consulta SQL que pode ser usada para verificar o processo necessário para calcular sua resposta. Esta consulta de origem é somente para fins de verificação e não tem suporte no Serviço de consulta.
+
+![exemplo de consulta de origem](./images/source-query.png)
+
++++
+
 ### Usar preenchimento automático {#use-auto-complete}
 
 Você pode usar a função de preenchimento automático para receber uma lista de objetos de dados que existem na sandbox. As recomendações de preenchimento automático estão disponíveis para os seguintes domínios: públicos-alvo, esquemas, conjuntos de dados, fontes e destinos.
@@ -132,6 +152,14 @@ Você pode usar os recursos de várias rodadas do Assistente de IA para ter uma 
 No exemplo abaixo, o Assistente de IA é solicitado primeiro a fornecer o número total de fluxos de dados e, em seguida, é solicitado a listar os 10 fluxos de dados mais recentes.
 
 ![Exemplo de voltas múltiplas](./images/multiturn.png)
+
++++
+
+### Iniciar uma nova conversa
+
+Você pode alterar tópicos com o Assistente de IA redefinindo e iniciando uma nova conversa.
+
++++Selecione para exibir um exemplo de redefinição da conversa
 
 Para redefinir, selecione as reticências (**`...`**) na interface do Assistente de IA e selecione **[!UICONTROL Iniciar nova conversa]**. Isso informa ao Assistente de IA que você pretende alterar tópicos e pode ser particularmente útil ao solucionar problemas de consultas que estão falhando ou fazendo referência a informações incorretas.
 

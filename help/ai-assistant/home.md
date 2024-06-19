@@ -1,11 +1,11 @@
 ---
 title: Visão geral do Assistente de IA no Adobe Experience Platform
-description: Saiba mais sobre o AI Assistant, suas nuances e casos de uso e como você pode usá-lo para acelerar seu fluxo de trabalho com o Adobe Experience Platform e o Real-time Customer Data Platform.
+description: Saiba mais sobre o Assistente de IA, suas nuances e casos de uso e como você pode usá-lo para acelerar seu fluxo de trabalho com a Adobe Experience Platform e a Real-time Customer Data Platform.
 exl-id: cfd4ac22-fff3-4b50-bbc2-85b6328f603c
-source-git-commit: 9ee39ee1f877fa13acdca8a1d8549cf4692b39aa
+source-git-commit: e8939132c1508e1dfc4028e6c8ff23662d6c2b2b
 workflow-type: tm+mt
-source-wordcount: '679'
-ht-degree: 1%
+source-wordcount: '820'
+ht-degree: 6%
 
 ---
 
@@ -69,14 +69,18 @@ Os insights operacionais se referem às respostas que o AI Assistant gera sobre 
 
 Você pode fazer perguntas ao Assistente de IA sobre seus insights operacionais nos seguintes domínios:
 
-* Atributos
-* Públicos-alvo
-* Fluxos de dados
-* Conjuntos de dados
-* Destinos _(Perguntas sobre contas e algumas perguntas sobre fluxo de dados não podem ser respondidas no momento.)_
-* Jornadas
-* Esquemas _(Perguntas relacionadas a grupos de campos não podem ser respondidas neste momento.)_
-* Origens _(Perguntas relacionadas a contas não podem ser respondidas neste momento.)_
+| Domínio | Metadados compatíveis |
+| --- | --- |
+| Atributos | <ul><li>Pesquisas de nome de atributo</li><li>Atributo - relacionamento de esquema</li><li>Relação atributo-conjunto de dados</li><li>Atributo - relacionamento de público</li><li>Relação atributo-destino</li><li>Atributos não utilizados</li></ul> |
+| Públicos-alvo | <ul><li>Contagem de público-alvo</li><li>Tipo de público-alvo (streaming ou lote)</li><li>Datas de criação/modificação</li><li>Status de ativação</li><li>Contagem de perfis</li><li>Duplicar públicos</li><li>Pesquisas de definição de público-alvo</li><li>Público-alvo - relação de atributo</li><li>Público-alvo - relação do conjunto de dados</li><li>Público-alvo - relacionamento de destino</li><li>Regras InSegment</li><li>Pesquisas de nome</li><li>Pesquisas de nome e ID |
+| Fluxos de dados | <ul><li>Contagens de fluxo de dados</li><li>Status do fluxo de dados</li><li>Fluxo de dados - relação do conjunto de dados</li><li>Fluxo de dados - relacionamento de origem</li></ul> |
+| Conjuntos de dados | <ul><li>Contagem do conjunto de dados</li><li>Status de habilitação do perfil</li><li>Data de criação/modificação</li><li>Relação entre conjunto de dados e esquema</li><li>Conjunto de dados - relacionamento de público-alvo</li><li>Conjunto de dados - relação de atributo</li><li>Relação entre conjunto de dados e fluxo de dados</li><li>Pesquisas de nome </li><li>Pesquisas de nome e ID</li></ul> |
+| Destinos | <ul><li>Contagens de destino configuradas</li><li>Relação destino - público</li><li>Relação de atributo de destino</li></ul> |
+| Jornadas | <ul><li>Contagens</li><li>Pesquisas de nome</li><li>Pesquisas de nome e ID</li><li>Status da jornada</li><li>Status acionado (público-alvo vs. eventos)</li><li>Datas de criação/modificação</li><li>Frequência recorrente</li></ul> |
+| Esquemas | <ul><li>Contagens de esquema</li><li>Data de criação/modificação</li><li>Tipo de classe de esquema</li><li>Esquema - Relação de atributo</li><li>Relação esquema - conjunto de dados</li><li>Esquema - relacionamento de público</li><li>Status de habilitação do perfil</li><li>Pesquisas de nome</li><li>Pesquisas de nome e ID</li></ul> |
+| Origens | <ul><li>Contagens de conta</li><li>Status da conta</li><li>Fluxos de dados ativos/inativos para cada conta</li><li>Conector de origem - relação de fluxo de dados</li><li>Conta de origem - relação de fluxo de dados</li></ul> |
+
+{style="table-layout:auto"}
 
 Para perguntas sobre insights operacionais, as respostas podem não refletir o estado atual da interface do usuário. Os dados que sustentam essas perguntas são atualizados uma vez a cada 24 horas. Por exemplo, as alterações que os usuários fazem no Real-Time CDP durante o dia são sincronizadas com os armazenamentos de dados à noite e, em seguida, ficam disponíveis para perguntas do usuário de manhã. Você precisará fazer logon em uma sandbox para consultar sobre dados específicos relacionados a objetos.
 

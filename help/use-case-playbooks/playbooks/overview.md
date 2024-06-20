@@ -4,10 +4,10 @@ title: Visão geral dos manuais de estratégia de caso de uso
 description: Saiba como usar o recurso de manuais de estratégia de caso de uso na Experience Platform para começar a usar vários casos de uso de marketing
 role: Developer, User, Admin, Leader
 exl-id: 9c5c4f61-ea99-4f54-9b77-d486be29813c
-source-git-commit: ecce42e2c759bda31bc37d0aae1da2c7b3d141fc
+source-git-commit: 54b3d2ef22f7afb47fa8c9430c5c1645c94c837d
 workflow-type: tm+mt
-source-wordcount: '528'
-ht-degree: 31%
+source-wordcount: '533'
+ht-degree: 30%
 
 ---
 
@@ -20,7 +20,7 @@ O que há neste guia de documentação:
 * **[Visão geral dos manuais de estratégia de caso de uso](#overview)**
 * [Introdução às configurações e permissões necessárias](/help/use-case-playbooks/playbooks/get-started.md)
 * [Playbooks de caso de uso disponíveis](/help/use-case-playbooks/playbooks/playbooks-list.md)
-* [Encontrar o manual de estratégia correto](/help/use-case-playbooks/playbooks/discover.md)
+* [Escolher de uma seleção de manuais](/help/use-case-playbooks/playbooks/choose.md)
 * [Criar, compartilhar e reutilizar instâncias do manual de estratégia](/help/use-case-playbooks/playbooks/create-share-reuse.md)
 * [Copiar ativos gerados pelo manual para outros ambientes usando a funcionalidade de reconhecimento de dados](/help/use-case-playbooks/playbooks/data-awareness.md)
 * [Solução de problemas e limitações conhecidas](troubleshooting.md)
@@ -42,7 +42,7 @@ Por exemplo, se você selecionar um manual do Real-Time CDP, seu objetivo poder�
 
 Crie uma instância de um manual para gerar ativos específicos, como esquemas, públicos ou jornadas, que são adaptados ao seu caso de uso e são reutilizáveis no Experience Platform. O objetivo desses objetos é ajudar você a entender todos os recursos necessários para implementar seu caso de uso específico. Eles não contêm dados e são criados em sandboxes de desenvolvimento. Comece a usar esses ativos ou faça edições neles antes de usá-los e compartilhá-los com sua equipe no Real-Time CDP ou no Journey Optimizer. Promova os ativos desejados da sandbox inspiradora para uma sandbox de desenvolvimento e, em seguida, para uma sandbox de produção.
 
-### Vídeo da visão geral
+### Visão geral do vídeo
 
 Assista a este vídeo para saber como descobrir, criar, publicar e solucionar problemas de instâncias de um manual de casos de uso de ponta a ponta, bem como copiar os ativos gerados pelo manual para outras sandboxes configuradas em sua organização.
 
@@ -54,7 +54,7 @@ Alguns [!UICONTROL Playbooks de caso de uso] são adaptados aos casos de uso do 
 
 ## Guias de interface {#ui-guides}
 
-Depois de decidir sobre o manual de estratégia que deseja usar, selecione-o na interface e comece a usá-lo. Leia os guias de interface do usuário no [como descobrir o manual correto](/help/use-case-playbooks/playbooks/discover.md) para você e [como criar, compartilhar e reutilizar instâncias do manual](/help/use-case-playbooks/playbooks/create-share-reuse.md) para obter informações completas sobre como criar instâncias e aproveitar ao máximo um manual. Para saber como promover vários ativos da sandbox inspiradora para outras sandboxes de desenvolvimento e, em seguida, para produção, leia a documentação em [percepção de dados](/help/use-case-playbooks/playbooks/data-awareness.md).
+Depois de decidir sobre o manual de estratégia que deseja usar, selecione-o na interface e comece a usá-lo. Leia os guias de interface do usuário no [como escolher o manual correto a partir de uma seleção](/help/use-case-playbooks/playbooks/choose.md) para você e [como criar, compartilhar e reutilizar instâncias do manual](/help/use-case-playbooks/playbooks/create-share-reuse.md) para obter informações completas sobre como criar instâncias e aproveitar ao máximo um manual. Para saber como promover vários ativos da sandbox inspiradora para outras sandboxes de desenvolvimento e, em seguida, para produção, leia a documentação em [percepção de dados](/help/use-case-playbooks/playbooks/data-awareness.md).
 
 ## Solução de problemas e limitações conhecidas {#trouble-shooting-known-limitations}
 

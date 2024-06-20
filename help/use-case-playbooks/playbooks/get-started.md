@@ -4,7 +4,7 @@ title: Introdução aos manuais de caso de uso
 description: Saiba como começar a usar a funcionalidade dos manuais de estratégia de casos de uso.
 role: Admin
 exl-id: 1c39792e-49fe-4c5f-9796-fa29f60b7461
-source-git-commit: dfb4549a09628f2fed947ddf76167db28354eb92
+source-git-commit: 54b3d2ef22f7afb47fa8c9430c5c1645c94c837d
 workflow-type: tm+mt
 source-wordcount: '953'
 ht-degree: 15%
@@ -113,4 +113,4 @@ Leia a documentação em [como configurar superfícies de canal de push](https:/
 
 ## Próximas etapas {#next-steps}
 
-Agora que você seguiu todas as etapas deste documento, deveria ter criado uma sandbox de desenvolvimento com manuais de casos de uso disponíveis na navegação à esquerda. Agora você também sabe como conceder aos membros da equipe as permissões necessárias para exibir e gerenciar manuais e gerar ativos. Como próxima etapa, leia como [descubra o manual correto](/help/use-case-playbooks/playbooks/discover.md) para você e [criar instâncias a partir dele](/help/use-case-playbooks/playbooks/create-share-reuse.md).
+Agora que você seguiu todas as etapas deste documento, deveria ter criado uma sandbox de desenvolvimento com manuais de casos de uso disponíveis na navegação à esquerda. Agora você também sabe como conceder aos membros da equipe as permissões necessárias para exibir e gerenciar manuais e gerar ativos. Como próxima etapa, leia como [escolha o manual correto](/help/use-case-playbooks/playbooks/choose.md) para você e [criar instâncias a partir dele](/help/use-case-playbooks/playbooks/create-share-reuse.md).

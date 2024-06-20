@@ -5,10 +5,10 @@ breadcrumb-title: Manuais de estratégia de casos de uso da Adobe Experience Pla
 user-guide-description: Use os manuais de estratégias da Adobe Experience Platform para gerar ativos e começar a usar vários casos de uso de marketing.
 feature: Playbooks
 role: User
-source-git-commit: 4ca1a93d611f3790fda9b2ed77520e9b2a5c11ec
+source-git-commit: df470839af2830e6b6e04462c42e062e62f006fc
 workflow-type: tm+mt
-source-wordcount: '68'
-ht-degree: 73%
+source-wordcount: '70'
+ht-degree: 71%
 
 ---
 
@@ -18,9 +18,9 @@ ht-degree: 73%
 * Manuais de estratégia {#playbooks}
    * [Visão geral](/help/use-case-playbooks/playbooks/overview.md)
    * [Introdução](/help/use-case-playbooks/playbooks/get-started.md)
-   * [Descubra os manuais](/help/use-case-playbooks/playbooks/discover.md)
+   * [Descubra os manuais](/help/use-case-playbooks/playbooks/navigate.md)
    * [Playbooks de caso de uso disponíveis](/help/use-case-playbooks/playbooks/playbooks-list.md)
-   * [Encontre o manual correto](/help/use-case-playbooks/playbooks/find.md)
+   * [Escolher de uma seleção de manuais](/help/use-case-playbooks/playbooks/choose.md)
    * [Criar, compartilhar e reutilizar instâncias do manual de estratégia](/help/use-case-playbooks/playbooks/create-share-reuse.md)
    * [Visão geral do reconhecimento de dados nos manuais de caso de uso](/help/use-case-playbooks/playbooks/data-awareness.md)
    * [Solução de problemas e limitações conhecidas](/help/use-case-playbooks/playbooks/troubleshooting.md)

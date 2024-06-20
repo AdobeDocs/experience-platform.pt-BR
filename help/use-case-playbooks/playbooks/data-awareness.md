@@ -4,14 +4,14 @@ title: Visão geral do reconhecimento de dados nos manuais de caso de uso
 description: Saiba como acelerar o tempo de implantação copiando os ativos gerados na sandbox inspiradora final para outras sandboxes.
 role: Developer
 exl-id: 537eff13-f5fe-4cc9-9769-ab47b3cecda7
-source-git-commit: ecce42e2c759bda31bc37d0aae1da2c7b3d141fc
+source-git-commit: 54b3d2ef22f7afb47fa8c9430c5c1645c94c837d
 workflow-type: tm+mt
 source-wordcount: '912'
 ht-degree: 0%
 
 ---
 
-# Publicar ativos gerados pelo manual em outras sandboxes {#publish-to-other-sandboxes}
+# Ativos gerados pelo manual do Publish para outras sandboxes {#publish-to-other-sandboxes}
 
 Os manuais de casos de uso são modelos de marketing criados para gerar ativos, como públicos, esquemas ou jornadas, para casos de uso de marketing comum. Você pode testar os ativos criados por manuais na sandbox inspiradora e, quando estiver pronto, poderá importar os ativos para outras sandboxes de desenvolvimento para testes adicionais com os dados disponíveis nessas sandboxes. Quando estiver satisfeito com o teste, você poderá mover os ativos das sandboxes de desenvolvimento para as sandboxes de produção.
 
@@ -19,7 +19,7 @@ No entanto, em certos casos, você já pode ter configurado seus próprios esque
 
 ## Pré-requisitos {#prerequisites}
 
-Antes de ler este tutorial, navegue pelo [modelos de manual de caso de uso disponíveis](/help/use-case-playbooks/playbooks/discover.md#search-and-filter) e [criar uma instância](/help/use-case-playbooks/playbooks/create-share-reuse.md) de um manual preferencial.
+Antes de ler este tutorial, navegue pelo [modelos de manual de caso de uso disponíveis](/help/use-case-playbooks/playbooks/choose.md#search-and-filter) e [criar uma instância](/help/use-case-playbooks/playbooks/create-share-reuse.md) de um manual preferencial.
 
 A criação de uma instância gera um conjunto de ativos, como jornadas, segmentos, esquemas e mensagens na sandbox inspiradora. Leia para saber como copiar esses ativos em outras sandboxes.
 
@@ -29,11 +29,11 @@ A criação de uma instância gera um conjunto de ativos, como jornadas, segment
 >
 > Você pode importar pacotes somente para outras sandboxes de desenvolvimento. Depois de fazer todas as alterações ou atualizações necessárias, você pode importar os ativos ou pacotes dessas sandboxes de desenvolvimento para a produção. Não é possível importar diretamente das sandboxes de manuais de caso de uso para a produção.
 
-1. Para importar objetos da sandbox inspiradora para outra sandbox, navegue até uma instância desejada de um manual de casos de uso e selecione **[!UICONTROL Publicar em uma sandbox diferente]** para exportar os artefatos como um pacote.
+1. Para importar objetos da sandbox inspiradora para outra sandbox, navegue até uma instância desejada de um manual de casos de uso e selecione **[!UICONTROL Publish para uma sandbox diferente]** para exportar os artefatos como um pacote.
 
    ![GIF mostrando as diferentes instâncias de caso de uso](/help/use-case-playbooks/assets/playbooks/data-awareness/browse-to-existing-instances-of-playbook.gif)
 
-2. Depois de selecionar a variável **[!UICONTROL Publicar em uma sandbox diferente]** será exibida uma modal. Preencha o nome e a descrição opcional e selecione **[!UICONTROL Criar]**. Esta etapa agrupa os ativos gerados em um pacote que pode ser importado para uma sandbox diferente.
+2. Depois de selecionar a variável **[!UICONTROL Publish para uma sandbox diferente]** será exibida uma modal. Preencha o nome e a descrição opcional e selecione **[!UICONTROL Criar]**. Esta etapa agrupa os ativos gerados em um pacote que pode ser importado para uma sandbox diferente.
 
    ![Um modal para criar um pacote](/help/use-case-playbooks/assets/playbooks/data-awareness/create-package-modal.png)
 

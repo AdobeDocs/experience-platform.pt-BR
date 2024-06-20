@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Sintaxe SQL no Serviço de consulta
 description: Este documento detalha e explica a sintaxe SQL suportada pelo Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 42f4d8d7a03173aec703cf9bc7cccafb21df0b69
+source-git-commit: 4b1d17afa3d9c7aac81ae869e2743a5def81cf83
 workflow-type: tm+mt
-source-wordcount: '4111'
+source-wordcount: '4256'
 ht-degree: 2%
 
 ---
@@ -104,20 +104,34 @@ Esta cláusula pode ser usada para ler incrementalmente os dados em uma tabela c
 #### Exemplo
 
 ```sql
-SELECT * FROM Customers SNAPSHOT SINCE 123;
+SELECT * FROM table_to_be_queried SNAPSHOT SINCE start_snapshot_id;
 
-SELECT * FROM Customers SNAPSHOT AS OF 345;
+SELECT * FROM table_to_be_queried SNAPSHOT AS OF end_snapshot_id;
 
-SELECT * FROM Customers SNAPSHOT BETWEEN 123 AND 345;
+SELECT * FROM table_to_be_queried SNAPSHOT BETWEEN start_snapshot_id AND end_snapshot_id;
 
-SELECT * FROM Customers SNAPSHOT BETWEEN HEAD AND 123;
+SELECT * FROM table_to_be_queried SNAPSHOT BETWEEN HEAD AND start_snapshot_id;
 
-SELECT * FROM Customers SNAPSHOT BETWEEN 345 AND TAIL;
+SELECT * FROM table_to_be_queried SNAPSHOT BETWEEN end_snapshot_id AND TAIL;
 
-SELECT * FROM (SELECT id FROM CUSTOMERS BETWEEN 123 AND 345) C 
+SELECT * FROM (SELECT id FROM table_to_be_queried BETWEEN start_snapshot_id AND end_snapshot_id) C 
 
-SELECT * FROM Customers SNAPSHOT SINCE 123 INNER JOIN Inventory AS OF 789 ON Customers.id = Inventory.id;
+(SELECT * FROM table_to_be_queried SNAPSHOT SINCE start_snapshot_id) a
+  INNER JOIN 
+(SELECT * from table_to_be_joined SNAPSHOT AS OF your_chosen_snapshot_id) b 
+  ON a.id = b.id;
 ```
+
+A tabela abaixo explica o significado de cada opção de sintaxe na cláusula SNAPSHOT.
+
+| Sintaxe | Significado |
+|-------------------------------------------------------------------|------------------------------------------------------------------------------------------|
+| `SINCE start_snapshot_id` | Lê dados iniciando da ID de instantâneo especificada (exclusivo). |
+| `AS OF end_snapshot_id` | Lê os dados como estavam na ID de instantâneo especificada (inclusive). |
+| `BETWEEN start_snapshot_id AND end_snapshot_id` | Lê dados entre as IDs de instantâneo de início e término especificadas. É exclusivo do `start_snapshot_id` e incluindo a `end_snapshot_id`. |
+| `BETWEEN HEAD AND start_snapshot_id` | Lê dados desde o início (antes do primeiro instantâneo) até a ID de instantâneo inicial especificada (inclusive). Observação: retorna apenas linhas em `start_snapshot_id`. |
+| `BETWEEN end_snapshot_id AND TAIL` | Lê os dados do logo após o especificado `end-snapshot_id` até o fim do conjunto de dados (excluindo a ID do instantâneo). Isto significa que, se `end_snapshot_id` for o último instantâneo no conjunto de dados, a consulta retornará zero linhas porque não há instantâneos além do último instantâneo. |
+| `SINCE start_snapshot_id INNER JOIN table_to_be_joined AS OF your_chosen_snapshot_id ON table_to_be_queried.id = table_to_be_joined.id` | Lê dados iniciando da ID de instantâneo especificada em `table_to_be_queried` e une-se a ele com os dados de `table_to_be_joined` como estava em `your_chosen_snapshot_id`. A associação é baseada em IDs correspondentes das colunas ID das duas tabelas que estão sendo unidas. |
 
 A `SNAPSHOT` A cláusula funciona com um alias de tabela ou tabela, mas não na parte superior de uma subconsulta ou view. A `SNAPSHOT` A cláusula funciona em qualquer lugar que um `SELECT` a consulta em uma tabela pode ser aplicada.
 
@@ -128,8 +142,6 @@ Além disso, você pode usar `HEAD` e `TAIL` como valores de deslocamento especi
 >Se você estiver consultando entre duas IDs de snapshot, os dois cenários a seguir poderão ocorrer se o snapshot inicial tiver expirado e o sinalizador de comportamento de fallback opcional (`resolve_fallback_snapshot_on_failure`) está definido:
 >
 >- Se o sinalizador de comportamento de fallback opcional estiver definido, o Serviço de Consulta escolherá o instantâneo disponível mais antigo, definirá-o como o instantâneo inicial e retornará os dados entre o instantâneo disponível mais antigo e o instantâneo final especificado. Esses dados são **inclusivo** do instantâneo mais antigo disponível.
->
->- Se o sinalizador de comportamento de fallback opcional não estiver definido, um erro será retornado.
 
 ### Cláusula WHERE
 

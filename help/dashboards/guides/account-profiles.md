@@ -2,7 +2,7 @@
 title: Painel de perfis de conta
 description: A Adobe Experience Platform fornece um painel por meio do qual você pode visualizar informações importantes sobre os perfis de conta B2B da sua organização.
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
-source-git-commit: 8e05b0ae06250f8cd55b361a8176963e0dce8e92
+source-git-commit: b6811d447f76a671adc98bddef6e760c8be8cd9b
 workflow-type: tm+mt
 source-wordcount: '1763'
 ht-degree: 1%
@@ -170,7 +170,7 @@ O menu suspenso no widget permite selecionar o modelo de pontuação da conta.
 
 ![O widget Principais fatores influentes da pontuação preditiva.](../images/account-profiles/predictive-scoring-top-influential-factors.png)
 
-### Erro Não é possível carregar dados {#errors}
+## Erro Não é possível carregar dados {#errors}
 
 Se um widget for exibido *[!UICONTROL Não foi possível carregar. Tente novamente.]* isso ocorre porque não há dados disponíveis para a entidade B2B. Por exemplo, o widget exibido abaixo [!UICONTROL Novas oportunidades por função de pessoa], mostra a mensagem &quot;[!UICONTROL Não foi possível carregar. Tente novamente.]&quot;, pois essa sandbox não tem dados de oportunidade disponíveis.
 

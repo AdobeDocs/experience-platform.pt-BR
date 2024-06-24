@@ -5,10 +5,10 @@ user-guide-description: Ative seus dados conhecidos e desconhecidos para campanh
 description: Este documento lista o índice dos destinos do Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: e0f4ee0ae0f14df43bfe36375d8fe8e9eac79369
+source-git-commit: 791d854599cf1476f1ebb9584198433c91765efa
 workflow-type: tm+mt
-source-wordcount: '1224'
-ht-degree: 4%
+source-wordcount: '1227'
+ht-degree: 6%
 
 ---
 
@@ -141,6 +141,7 @@ ht-degree: 4%
    * Destinos da Plataforma de gerenciamento de dados {#data-management}
       * [Visão geral dos destinos da Plataforma de gerenciamento de dados (DMP)](./catalog/data-management/overview.md)
       * [extensão Audience Manager DIL](./catalog/data-management/aam-dil-extension.md)
+      * [Plataforma de marketing Zeta](/help/destinations/catalog/data-management/zeta-marketing-platform.md)
    * Parceiro de dados e identidade {#data-partner}
       * [Supressão de prospecto da Acxiom](./catalog/data-partner/acxiom-prospect-suppression.md)
       * [Aprimoramento de dados da Acxiom](./catalog/data-partner/acxiom-data-enhancement.md)

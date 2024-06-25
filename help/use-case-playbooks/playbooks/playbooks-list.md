@@ -7,7 +7,7 @@ exl-id: 00f16761-3759-4de0-882d-b77e18f7c1fe
 source-git-commit: 54b3d2ef22f7afb47fa8c9430c5c1645c94c837d
 workflow-type: tm+mt
 source-wordcount: '776'
-ht-degree: 0%
+ht-degree: 3%
 
 ---
 
@@ -15,12 +15,12 @@ ht-degree: 0%
 
 Leia esta página para obter uma visão geral de todos os manuais disponíveis que você pode descobrir e usar no Real-time Customer Data Platform e no Adobe Journey Optimizer.
 
-## Playbooks de caso de uso no Journey Optimizer {#optimizer-playbooks}
+## Manuais de estratégia de casos de uso no Journey Optimizer {#optimizer-playbooks}
 
 >[!CONTEXTUALHELP]
 >id="platform_playbooks_list"
->title="Livros de reprodução disponíveis"
->abstract="Uma lista de todos os manuais no Real-time Customer Data Platform e no Adobe Journey Optimizer."
+>title="Manuais de estratégia disponíveis"
+>abstract="Uma lista de todos os manuais de estratégia na Real-time Customer Data Platform e no Adobe Journey Optimizer."
 
 | Nome do manual | Descrição |
 | ------------- |  ----------- |

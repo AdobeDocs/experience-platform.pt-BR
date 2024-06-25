@@ -5,9 +5,9 @@ title: Ponto de extremidade da API de trabalhos de privacidade
 description: Saiba como gerenciar processos de privacidade para aplicativos Experience Cloud usando a API de Privacy Service.
 role: Developer
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
-source-git-commit: 0ffc9648fbc6e6aa3c43a7125f25a98452e8af9a
+source-git-commit: e8e8a9267ddcf7ee9d1d199da8d157ed5f36d344
 workflow-type: tm+mt
-source-wordcount: '1857'
+source-wordcount: '1821'
 ht-degree: 1%
 
 ---
@@ -42,7 +42,7 @@ GET /jobs?regulation={REGULATION}&fromDate={FROMDATE}&toDate={TODATE}&status={ST
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{REGULATION}` | O tipo de regulamento a ser consultado. Os valores aceitos incluem: <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpa`</li><li>`cpra_usa`</li><li>`ctdpa`</li><li>`ctdpa_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`mhmda`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`ucpa_usa`</li><li>`vcdpa_usa`</li></ul><br>Consulte a visão geral em [regulamentos suportados](../regulations/overview.md) para obter mais informações sobre as regras de privacidade que os valores acima representam. |
+| `{REGULATION}` | O tipo de regulamento a ser consultado. Os valores aceitos incluem: <ul><li>`apa_aus`</li><li>`cpa_usa`</li><li>`cpra_usa`</li><li>`ctdpa_usa`</li><li>`gdpr` - Observação: isso também é usado para solicitações relacionadas a **ccpa** regulamentação.</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`mhmda_usa`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`ucpa_usa`</li><li>`vcdpa_usa`</li></ul><br>Consulte a visão geral em [regulamentos suportados](../regulations/overview.md) para obter mais informações sobre as regras de privacidade que os valores acima representam. |
 | `{PAGE}` | A página de dados a ser exibida, usando a numeração com base em 0. O padrão é `0`. |
 | `{SIZE}` | O número de resultados a serem exibidos em cada página. O padrão é `100` e o máximo é `1000`. Exceder o máximo faz com que a API retorne um erro de código 400. |
 | `{status}` | O comportamento padrão é incluir todos os status. Se você especificar um tipo de status, a solicitação retornará somente os processos de privacidade que correspondam a esse tipo de status. Os valores aceitos incluem: <ul><li>`processing`</li><li>`complete`</li><li>`error`</li></ul> |
@@ -165,7 +165,6 @@ curl -X POST \
     "include": ["Analytics", "AudienceManager","profileService"],
     "expandIds": false,
     "priority": "normal",
-    "analyticsDeleteMethod": "anonymize",
     "mergePolicyId": 124,
     "regulation": "ccpa"
 }'
@@ -178,7 +177,6 @@ curl -X POST \
 | `include` **(Obrigatório)** | Uma matriz de produtos Adobe a serem incluídos no processamento. Se esse valor estiver ausente ou vazio, a solicitação será rejeitada. Inclua somente produtos com os quais sua organização tenha uma integração. Consulte a seção sobre [valores de produto aceitos](appendix.md) no apêndice para obter mais informações. |
 | `expandIDs` | Uma propriedade opcional que, quando definida como `true`, representa uma otimização para o processamento de IDs nos aplicativos (atualmente compatível apenas com o [!DNL Analytics]). Se omitido, esse valor assumirá como padrão `false`. |
 | `priority` | Uma propriedade opcional usada pelo Adobe Analytics que define a prioridade para processar solicitações. Os valores aceitos são `normal` e `low`. Se `priority` for omitido, o comportamento padrão será `normal`. |
-| `analyticsDeleteMethod` | Uma propriedade opcional que especifica como o Adobe Analytics deve lidar com os dados pessoais. Dois valores possíveis são aceitos para este atributo: <ul><li>`anonymize`: todos os dados referenciados pela coleção de IDs de usuário fornecida se tornam anônimos. Se `analyticsDeleteMethod` for omitido, esse será o comportamento padrão.</li><li>`purge`: Todos os dados são removidos completamente.</li></ul> |
 | `mergePolicyId` | Ao fazer solicitações de privacidade para o Perfil do cliente em tempo real (`profileService`), você pode fornecer opcionalmente a ID do [política de mesclagem](../../profile/merge-policies/overview.md) que você deseja usar para a compilação de ID. Ao especificar uma política de mesclagem, as solicitações de privacidade podem incluir informações de público-alvo ao retornar dados sobre um cliente. Somente uma política de mesclagem pode ser especificada por solicitação. Se nenhuma política de mesclagem for fornecida, as informações de segmentação não serão incluídas na resposta. |
 | `regulation` **(Obrigatório)** | O regulamento para o trabalho de privacidade. Os seguintes valores são aceitos: <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpra_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`vcdpa_usa`</li></ul><br>Consulte a visão geral em [regulamentos suportados](../regulations/overview.md) para obter mais informações sobre as regras de privacidade que os valores acima representam. |
 

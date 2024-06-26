@@ -5,9 +5,9 @@ user-guide-description: Ative seus dados conhecidos e desconhecidos para campanh
 description: Este documento lista o índice dos destinos do Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: 791d854599cf1476f1ebb9584198433c91765efa
+source-git-commit: 60bd377c87fe301985193c50cbfc4b44b734dd78
 workflow-type: tm+mt
-source-wordcount: '1227'
+source-wordcount: '1233'
 ht-degree: 6%
 
 ---
@@ -145,6 +145,8 @@ ht-degree: 6%
    * Parceiro de dados e identidade {#data-partner}
       * [Supressão de prospecto da Acxiom](./catalog/data-partner/acxiom-prospect-suppression.md)
       * [Aprimoramento de dados da Acxiom](./catalog/data-partner/acxiom-data-enhancement.md)
+      * [Conexões Merkury Enterprise](/help/destinations/catalog/data-partners/merkury-enterprise-connections.md)
+      * [Identidade da Merkury Enterprise](/help/destinations/catalog/data-partners/merkury-enterprise-identity.md)
    * Destinos de comércio eletrônico {#ecommerce}
       * [SAP COMMERCE](./catalog/ecommerce/sap-commerce.md)
    * Destinos de email {#email}

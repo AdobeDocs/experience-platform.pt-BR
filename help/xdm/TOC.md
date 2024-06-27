@@ -5,10 +5,10 @@ breadcrumb-title: Guia do Experience Data Model (XDM)
 user-guide-description: Explore uma visão geral do sistema do Experience Data Model (XDM) na Experience Platform e saiba como usar classes e grupos de campos de esquema para padronizar os dados de experiência.
 feature: Schemas
 role: Developer
-source-git-commit: fe239bee3c853d43c04200092f59537dfeb00c87
+source-git-commit: 948a86f78ca6a6305adaf3232ca98a5437d701a6
 workflow-type: tm+mt
-source-wordcount: '627'
-ht-degree: 18%
+source-wordcount: '633'
+ht-degree: 46%
 
 ---
 
@@ -35,10 +35,10 @@ ht-degree: 18%
    * [XDM ExperienceEvent](./classes/experienceevent.md)
    * [Medicação](./classes/medication.md)
    * [Pagador](./classes/payer.md)
-   * [Planejar ](./classes/plan.md)
+   * [Plano](./classes/plan.md)
    * [Política](./classes/policy.md)
    * [Produto](./classes/product.md)
-   * [Cliente Potencial](./classes/prospect.md)
+   * [Potencial](./classes/prospect.md)
    * [Provedor](./classes/provider.md)
    * [Definição do segmento](./classes/segment-definition.md)
    * Classes B2B {#b2b}
@@ -49,7 +49,7 @@ ht-degree: 18%
       * [Oportunidade de negócios XDM](./classes/b2b/business-opportunity.md)
       * [Relação pessoal de oportunidade de negócios XDM](./classes/b2b/business-opportunity-person-relation.md)
       * [Lista de marketing de negócios XDM](./classes/b2b/business-marketing-list.md)
-      * [Membros da lista de marketing de negócios XDM](./classes/b2b/business-marketing-list-members.md)
+      * [Membros da lista de marketing empresarial XDM](./classes/b2b/business-marketing-list-members.md)
 * Grupos de campos {#field-groups}
    * Perfil individual XDM {#profile}
       * [Consentimentos e preferências](./field-groups/profile/consents.md)
@@ -73,10 +73,10 @@ ht-degree: 18%
       * [Detalhes do aplicativo](./field-groups/event/application-details.md)
       * [Transferências de saldo](./field-groups/event/balance-transfers.md)
       * [Detecção de bot](./field-groups/event/bot-detection-information.md)
-      * [Detalhes de marketing da campanha](./field-groups/event/campaign-marketing-details.md)
+      * [Detalhes de marketing de campanha](./field-groups/event/campaign-marketing-details.md)
       * [Ações do cartão](./field-groups/event/card-actions.md)
       * [Detalhes do canal](./field-groups/event/channel-details.md)
-      * [Detalhes do comércio](./field-groups/event/commerce-details.md)
+      * [Detalhes de comércio](./field-groups/event/commerce-details.md)
       * [Detalhes do depósito](./field-groups/event/deposit-details.md)
       * [Detalhes de troca do dispositivo](./field-groups/event/device-trade-in-details.md)
       * [Reserva para o jantar](./field-groups/event/dining-reservation.md)
@@ -89,8 +89,8 @@ ht-degree: 18%
       * [Detalhes da solicitação de orçamento](./field-groups/event/quote-request-details.md)
       * [Detalhes da reserva](./field-groups/event/reservation-details.md)
       * [Detalhes do sitetool](./field-groups/event/sitetool-details.md)
-      * [Pesquisa no site de suporte](./field-groups/event/support-site-search.md)
-      * [Detalhes da atualização](./field-groups/event/upgrade-details.md)
+      * [Pesquisa de sites de suporte](./field-groups/event/support-site-search.md)
+      * [Atualizar detalhes](./field-groups/event/upgrade-details.md)
       * [Detalhes de venda adicional](./field-groups/event/upsell-details.md)
       * [Detalhes da Web](./field-groups/event/web-details.md)
    * Campanha de negócios XDM {#b2b-campaign}
@@ -106,18 +106,20 @@ ht-degree: 18%
       * [Categoria do produto](./field-groups/product/product-category.md)
    * Provedor {#provider}
       * [Provedor de assistência médica](./field-groups/provider/healthcare-provider.md)
+   * Compartilhado {#shared}
+      * [Detalhes de auditoria sobre sistema de origem externo](./field-groups/shared/external-source-system-audit-details.md)
    * [Atualizações de nome de grupo de campos](./field-groups/name-updates.md)
 * Tipos de dados {#data-types}
    * [Detalhes da conta](./data-types/account-details.md)
    * [Ad Break](./data-types/ad-break.md)
    * [Endereço](./data-types/address.md)
-   * [Coleção de detalhes de publicidade](./data-types/advertising-details-collection.md)
-   * [Relatório de detalhes de publicidade](./data-types/advertising-details-reporting.md)
-   * [Coleção de detalhes do pod de publicidade](./data-types/advertising-pod-details-collection.md)
-   * [Relatório de detalhes do pod de publicidade](./data-types/advertising-pod-details-reporting.md)
+   * [Coleção de detalhes do Advertising](./data-types/advertising-details-collection.md)
+   * [Relatório de detalhes do Advertising](./data-types/advertising-details-reporting.md)
+   * [Coleção de detalhes do pod do Advertising](./data-types/advertising-pod-details-collection.md)
+   * [Relatório de detalhes do pod Advertising](./data-types/advertising-pod-details-reporting.md)
    * [Aplicativo](./data-types/application.md)
    * [Origem B2B](./data-types/b2b-source.md)
-   * [Sinal](./data-types/beacon.md)
+   * [Beacon](./data-types/beacon.md)
    * [Detalhes do navegador](./data-types/browser-details.md)
    * [Carrinho](./data-types/cart.md)
    * [Dados da categoria](./data-types/category-data.md)
@@ -127,11 +129,11 @@ ht-degree: 18%
    * [Commerce](./data-types/commerce.md)
    * [String de consentimento](./data-types/consent-string.md)
    * [Consentimentos e preferências](./data-types/consents.md)
-   * [Moeda](./data-types/currency.md)
+   * [Currency](./data-types/currency.md)
    * [Coleção de detalhes de metadados personalizados](./data-types/custom-metadata-details-collection.md)
    * [Relatórios de detalhes de metadados personalizados](./data-types/custom-metadata-details-reporting.md)
    * [Dispositivo](./data-types/device.md)
-   * [Endereço de email](./data-types/email-address.md)
+   * [Endereço de e-mail](./data-types/email-address.md)
    * [Ambiente](./data-types/environment.md)
    * [Coleção de detalhes do erro](./data-types/error-details-collection.md)
    * [Canal de experiência](./data-types/experience-channel.md)
@@ -145,11 +147,11 @@ ht-degree: 18%
    * [Coordenadas geográficas](./data-types/geo-coordinates.md)
    * [Forma geográfica](./data-types/geo-shape.md)
    * [Detalhes de Interação Geográfica](./data-types/geo-interaction-details.md)
-   * [Geografia  ](./data-types/geo.md)
+   * [Geo](./data-types/geo.md)
    * [Identidade](./data-types/identity.md)
-   * [Detalhes da implementação](./data-types/implementation-details.md)
+   * [Detalhes de implementação](./data-types/implementation-details.md)
    * [Impressões](./data-types/impressions.md)
-   * [Pesquisa interna do site](./data-types/internal-site-search.md)
+   * [Pesquisa interna de sites](./data-types/internal-site-search.md)
    * [Par de valores da chave](./data-types/key-value-pair.md)
    * [Lista de Coleção de Términos de Estados](./data-types/list-of-states-end-collection.md)
    * [Lista de Estados que iniciam a coleção](./data-types/list-of-states-start-collection.md)
@@ -179,7 +181,7 @@ ht-degree: 18%
    * [Coleção de Detalhes da Sessão](./data-types/session-details-collection.md)
    * [Relatório de detalhes da sessão](./data-types/session-details-reporting.md)
    * [Envio](./data-types/shipping.md)
-   * [Inscrição](./data-types/subscription.md)
+   * [Assinatura](./data-types/subscription.md)
    * [Assinatura de serviço de telecomunicação](./data-types/telecom-subscription.md)
    * [Transação](./data-types/transaction.md)
    * [Informações da Web](./data-types/web-information.md)
@@ -218,7 +220,7 @@ ht-degree: 18%
    * [CSV para conversão de esquema](api/csv-to-schema.md)
    * [Exportar](api/export.md)
    * [Importar](api/import.md)
-   * [Dados de exemplo](api/sample-data.md)
+   * [Dados de amostra](api/sample-data.md)
    * [Log de auditoria](api/audit-log.md)
    * [Esquemas ad-hoc](api/ad-hoc.md)
    * [Mixins (obsoleto)](api/mixins.md)
@@ -238,4 +240,4 @@ ht-degree: 18%
    * [Criar um esquema ad hoc](tutorials/ad-hoc.md)
 * [Manual de solução de problemas](troubleshooting-guide.md)
 * [Referência da API](https://www.adobe.io/experience-platform-apis/references/schema-registry/)
-* [Notas de versão da Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [Notas de versão da Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest?lang=pt-BR)

@@ -5,9 +5,9 @@ user-guide-description: Ative seus dados conhecidos e desconhecidos para campanh
 description: Este documento lista o índice dos destinos do Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: c7eaea9c98dc51f75b5abafd8296eadb384d9ce2
+source-git-commit: 82e9263293462a223b635e828b95cb2b098886c7
 workflow-type: tm+mt
-source-wordcount: '1237'
+source-wordcount: '1241'
 ht-degree: 6%
 
 ---
@@ -89,7 +89,8 @@ ht-degree: 6%
       * [Extensão de tag do linkedIn Insight](./catalog/advertising/linkedin.md)
       * [LiveRamp - Conexão de integração](./catalog/advertising/liveramp-onboarding.md)
       * [LiveRamp - Conexão de distribuição](./catalog/advertising/liveramp-distribution.md)
-      * [Magnite Streaming Conexão em tempo real](/help/destinations/catalog/advertising/magnite-streaming.md)
+      * [(Beta) Lote Magnite](/help/destinations/catalog/advertising/magnite-batch.md)
+      * [(Beta) Magnite Streaming Conexão em tempo real](/help/destinations/catalog/advertising/magnite-streaming.md)
       * [Conexão com o Microsoft Bing](./catalog/advertising/bing.md)
       * [Extensão de rastreamento de conversão do pinterest](./catalog/advertising/pinterest-extension.md)
       * [Conexão com a Lista de clientes do pinterest](./catalog/advertising/pinterest.md)

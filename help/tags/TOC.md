@@ -1,14 +1,14 @@
 ---
 audience: user
-user-guide-title: Ajuda de tags
+user-guide-title: Ajuda das tags
 breadcrumb-title: Tags
 user-guide-description: Saiba como implantar e gerenciar tags de análise, marketing e publicidade para potencializar as experiências dos clientes.
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: 8000bbf36e6763b8fca17c2ae0d5c2fe53bc6964
+source-git-commit: aca7597d524633e86d88cc3b40f292c8d1673839
 workflow-type: tm+mt
-source-wordcount: '765'
+source-wordcount: '769'
 ht-degree: 44%
 
 ---
@@ -142,7 +142,7 @@ ht-degree: 44%
          * [Visão geral](./extensions/client/brightcove/overview.md)
          * [Notas de versão](./extensions/client/brightcove/release-notes.md)
       * [CallTrackingMetrics](https://exchange.adobe.com/apps/ec/107695)
-      * [Identificador de origem do canal](https://exchange.adobe.com/apps/ec/101412)
+      * [Identificador do canal Source](https://exchange.adobe.com/apps/ec/101412)
       * [Experiências do Cheetah](https://exchange.adobe.com/apps/ec/102759)
       * [Clicktale](https://exchange.adobe.com/apps/ec/100082)
       * Plug-ins comuns do Analytics {#plugins}
@@ -299,6 +299,7 @@ ht-degree: 44%
       * [Regras](./api/endpoints/rules.md)
       * [Componentes da regra](./api/endpoints/rule-components.md)
       * [Pacotes de extensão](./api/endpoints/extension-packages.md)
+      * [Autorizações de uso de pacote de extensão](./api/endpoints/extension-package-usage-authorizations.md)
       * [Extensões](./api/endpoints/extensions.md)
       * [Bibliotecas](./api/endpoints/libraries.md)
       * [Builds](./api/endpoints/builds.md)

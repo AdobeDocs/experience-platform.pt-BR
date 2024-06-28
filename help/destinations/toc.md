@@ -5,9 +5,9 @@ user-guide-description: Ative seus dados conhecidos e desconhecidos para campanh
 description: Este documento lista o índice dos destinos do Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: 60bd377c87fe301985193c50cbfc4b44b734dd78
+source-git-commit: c7eaea9c98dc51f75b5abafd8296eadb384d9ce2
 workflow-type: tm+mt
-source-wordcount: '1233'
+source-wordcount: '1237'
 ht-degree: 6%
 
 ---
@@ -65,8 +65,8 @@ ht-degree: 6%
       * [conexão Marketo Engage](./catalog/adobe/marketo-engage.md)
       * [Conexão com o Marketo Measure Ultimate](./catalog/adobe/marketo-measure-ultimate.md)
       * [compartilhamento de público do Experience Platform](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
-   * Destinos de publicidade{#advertising}
-      * [Visão geral de destinos de publicidade](./catalog/advertising/overview.md)
+   * Destinos do Advertising{#advertising}
+      * [Visão geral dos destinos do Advertising](./catalog/advertising/overview.md)
       * [Conexão com o Adobe Advertising Cloud](./catalog/advertising/adobe-advertising-cloud-connection.md)
       * [Extensão do Adobe Advertising Cloud](./catalog/advertising/adobe-advertising-cloud.md)
       * [(Beta) Conexão com o Amazon Ads](./catalog/advertising/amazon-ads.md)
@@ -89,6 +89,7 @@ ht-degree: 6%
       * [Extensão de tag do linkedIn Insight](./catalog/advertising/linkedin.md)
       * [LiveRamp - Conexão de integração](./catalog/advertising/liveramp-onboarding.md)
       * [LiveRamp - Conexão de distribuição](./catalog/advertising/liveramp-distribution.md)
+      * [Magnite Streaming Conexão em tempo real](/help/destinations/catalog/advertising/magnite-streaming.md)
       * [Conexão com o Microsoft Bing](./catalog/advertising/bing.md)
       * [Extensão de rastreamento de conversão do pinterest](./catalog/advertising/pinterest-extension.md)
       * [Conexão com a Lista de clientes do pinterest](./catalog/advertising/pinterest.md)
@@ -96,7 +97,7 @@ ht-degree: 6%
       * [Conexão PubMatic Connect](./catalog/advertising/pubmatic.md)
       * [Conexão com o Snapchat Ads](./catalog/advertising/snap-inc.md)
       * [A conexão com a Trade Desk](./catalog/advertising/tradedesk.md)
-      * [(Beta) A conexão CRM da Trade Desk](./catalog/advertising/tradedesk-emails.md)
+      * [(Beta) A conexão do CRM da Trade Desk](./catalog/advertising/tradedesk-emails.md)
       * [Extensão de tag do site universal do Twitter](./catalog/advertising/twitter-uwt.md)
       * [Conexão de dadosX Yahoo/Verizon](./catalog/advertising/datax.md)
    * Destinos do Analytics {#analytics}
@@ -112,7 +113,7 @@ ht-degree: 6%
       * [Conexão Gainsight PX](./catalog/analytics/gainsight-px.md)
       * [Extensão global de tag do site da Google](./catalog/analytics/gtag-analytics.md)
       * [Extensão do Google Universal Analytics](./catalog/analytics/google-universal-analytics.md)
-      * [Extensão JW Player Analytics (Beta)](./catalog/analytics/jw-player-analytics.md)
+      * [Extensão do JW Player Analytics (Beta)](./catalog/analytics/jw-player-analytics.md)
       * [Extensão BSDK Nielsen](./catalog/analytics/nielsen-bsdk.md)
       * [Extensão do Manipulador de IMA Nielsen](./catalog/analytics/nielsen-ima.md)
       * [Extensão de Manipulador Nielsen VideoJS Player](./catalog/analytics/nielsen-videojs.md)
@@ -176,8 +177,8 @@ ht-degree: 6%
       * [Conexão Braze](./catalog/mobile-engagement/braze.md)
       * [Conexão de linha](./catalog/mobile-engagement/line.md)
       * [Conexão Moengage](./catalog/mobile-engagement/moengage.md)
-   * Destinos de personalização {#personalization}
-      * [Visão geral dos destinos de personalização](./catalog/personalization/overview.md)
+   * Destinos do Personalization {#personalization}
+      * [Visão geral dos destinos do Personalization](./catalog/personalization/overview.md)
       * [(Disponibilidade limitada) Audience Analysis](./catalog/personalization/audience-analysis.md)
       * [Conexão com o Adobe Commerce](./catalog/personalization/adobe-commerce.md)
       * [Conexão com o Adobe Target](./catalog/personalization/adobe-target-connection.md)

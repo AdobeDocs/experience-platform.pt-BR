@@ -3,9 +3,9 @@ title: Ativar públicos para destinos de exportação de perfil em lote
 type: Tutorial
 description: Saiba como ativar os públicos-alvo no Adobe Experience Platform enviando-os para destinos com base em perfil de lote.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 30ad6c32d8ae8a2a68dfafd78f306209ce49b6d5
+source-git-commit: f0f66146bc65a9c5a1bcfee21aba44546cda6900
 workflow-type: tm+mt
-source-wordcount: '3961'
+source-wordcount: '3975'
 ht-degree: 11%
 
 ---
@@ -131,7 +131,7 @@ Selecionar **[!UICONTROL Exportar arquivos completos]** para acionar a exportaç
 
    >[!NOTE]
    >
-   >A variável **[!UICONTROL Após a avaliação do segmento]** A opção descrita abaixo está disponível somente para clientes Beta selecionados.
+   >A variável **[!UICONTROL Após a avaliação do segmento]** A opção descrita abaixo está disponível somente para clientes selecionados do Beta.
 
    Use o **[!UICONTROL Após a avaliação do segmento]** opção para que o trabalho de ativação seja executado imediatamente após a conclusão diária do trabalho de segmentação em lote do Platform. Essa opção garante que, quando o trabalho de ativação for executado, os perfis mais atualizados sejam exportados para o seu destino.
 
@@ -231,7 +231,7 @@ Nesta etapa, você deve selecionar os atributos de perfil que deseja adicionar a
 
    ![Adicionar novo controle de campo destacado no workflow de mapeamento.](../assets/ui/activate-batch-profile-destinations/add-new-field-mapping.png)
 
-1. Selecione a seta à direita da **[!UICONTROL Campo de origem]** entrada.
+1. Selecione a seta à direita da **[!UICONTROL Campo do Source]** entrada.
 
    ![Selecione o controle de campo de origem realçado no fluxo de trabalho de mapeamento.](../assets/ui/activate-batch-profile-destinations/select-source-field.png)
 
@@ -442,13 +442,22 @@ O novo **[!UICONTROL Mapeamento]** A página tem as seguintes limitações conhe
 
 #### O atributo de associação de público não pode ser selecionado por meio do fluxo de trabalho de mapeamento
 
-Devido a uma limitação conhecida, não é possível usar o **[!UICONTROL Selecionar campo]** janela para adicionar `segmentMembership.status` para suas exportações de arquivo. Em vez disso, você precisa colar manualmente o valor `xdm: segmentMembership.status` no campo schema, conforme mostrado abaixo.
+Devido a uma limitação conhecida, não é possível usar o **[!UICONTROL Selecionar campo]** janela para adicionar `segmentMembership.seg_namespace.seg_id.status` para suas exportações de arquivo. Em vez disso, você precisa colar manualmente o valor `xdm: segmentMembership.seg_namespace.seg_id.status` no campo schema, conforme mostrado abaixo.
 
 ![Gravação de tela mostrando a solução alternativa de associação de público na etapa de mapeamento do fluxo de trabalho de ativação.](../assets/ui/activate-batch-profile-destinations/segment-membership-mapping-step.gif)
 
-As exportações de arquivos variam das seguintes maneiras, dependendo se `segmentMembership.status` está selecionado:
-* Se a variável `segmentMembership.status` for selecionado, os arquivos exportados serão **[!UICONTROL Ativo]** membros no instantâneo completo inicial e em eventos **[!UICONTROL Ativo]** e **[!UICONTROL Expirado]** membros em exportações incrementais subsequentes.
-* Se a variável `segmentMembership.status` não estiver selecionado, os arquivos exportados incluirão apenas **[!UICONTROL Ativo]** membros no instantâneo completo inicial e em exportações incrementais subsequentes.
+
+>[!NOTE]
+>
+Para destinos de armazenamento em nuvem, os seguintes atributos são adicionados ao mapeamento por padrão:
+>
+* `segmentMembership.seg_namespace.seg_id.status`
+* `segmentMembership.seg_namespace.seg_id.lastQualificationTime`
+
+As exportações de arquivos variam das seguintes maneiras, dependendo se `segmentMembership.seg_namespace.seg_id.status` está selecionado:
+
+* Se a variável `segmentMembership.seg_namespace.seg_id.status` for selecionado, os arquivos exportados serão **[!UICONTROL Ativo]** membros no instantâneo completo inicial e em eventos **[!UICONTROL Ativo]** e **[!UICONTROL Expirado]** membros em exportações incrementais subsequentes.
+* Se a variável `segmentMembership.seg_namespace.seg_id.status` não estiver selecionado, os arquivos exportados incluirão apenas **[!UICONTROL Ativo]** membros no instantâneo completo inicial e em exportações incrementais subsequentes.
 
 Leia mais sobre [comportamento de exportação de perfil para destinos baseados em arquivo](/help/destinations/how-destinations-work/profile-export-behavior.md#file-based-destinations).
 
@@ -488,19 +497,19 @@ Para destinos baseados em perfil, você deve selecionar os atributos de perfil q
 
 >[!NOTE]
 >
-O Adobe Experience Platform preenche sua seleção com quatro atributos recomendados, usados com frequência a partir do esquema: `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.status`.
+O Adobe Experience Platform preenche sua seleção com quatro atributos recomendados, usados com frequência a partir do esquema: `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.seg_namespace.seg_id.status`.
 
 ![Imagem mostrando atributos recomendados preenchidos previamente na etapa de mapeamento do fluxo de trabalho de ativação de público-alvo.](../assets/ui/activate-batch-profile-destinations/prefilled-fields.png)
 
 >[!IMPORTANT]
 >
-Devido a uma limitação conhecida, não é possível usar o **[!UICONTROL Selecionar campo]** janela para adicionar `segmentMembership.status` para suas exportações de arquivo. Em vez disso, cole manualmente o valor `xdm: segmentMembership.status` no campo schema, conforme mostrado abaixo.
+Devido a uma limitação conhecida, não é possível usar o **[!UICONTROL Selecionar campo]** janela para adicionar `segmentMembership.seg_namespace.seg_id.status` para suas exportações de arquivo. Em vez disso, cole manualmente o valor `xdm: segmentMembership.seg_namespace.seg_id.status` no campo schema, conforme mostrado abaixo.
 >
 ![Gravação de tela mostrando a solução alternativa de associação de público na etapa de mapeamento do fluxo de trabalho de ativação.](..//assets/ui/activate-batch-profile-destinations/segment-membership.gif)
 
-As exportações de arquivos variam das seguintes maneiras, dependendo se `segmentMembership.status` está selecionado:
-* Se a variável `segmentMembership.status` for selecionado, os arquivos exportados serão **[!UICONTROL Ativo]** membros no instantâneo completo inicial e **[!UICONTROL Ativo]** e **[!UICONTROL Expirado]** membros em exportações incrementais subsequentes.
-* Se a variável `segmentMembership.status` não estiver selecionado, os arquivos exportados incluirão apenas **[!UICONTROL Ativo]** membros no instantâneo completo inicial e em exportações incrementais subsequentes.
+As exportações de arquivos variam das seguintes maneiras, dependendo se `segmentMembership.seg_namespace.seg_id.status` está selecionado:
+* Se a variável `segmentMembership.seg_namespace.seg_id.status` for selecionado, os arquivos exportados serão **[!UICONTROL Ativo]** membros no instantâneo completo inicial e **[!UICONTROL Ativo]** e **[!UICONTROL Expirado]** membros em exportações incrementais subsequentes.
+* Se a variável `segmentMembership.seg_namespace.seg_id.status` não estiver selecionado, os arquivos exportados incluirão apenas **[!UICONTROL Ativo]** membros no instantâneo completo inicial e em exportações incrementais subsequentes.
 
 ## Selecionar atributos de enriquecimento {#select-enrichment-attributes}
 

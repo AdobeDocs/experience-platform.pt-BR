@@ -2,9 +2,9 @@
 title: Visão geral do gerenciamento avançado do ciclo de vida dos dados
 description: O Gerenciamento avançado do ciclo de vida dos dados permite gerenciar o ciclo de vida dos dados atualizando ou removendo registros desatualizados ou imprecisos.
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
-source-git-commit: fc55e9a0849767d43c7f2a3bc3c540e776c8a072
+source-git-commit: 1f82403d4f8f5639f6a9181a7ea98bd27af54904
 workflow-type: tm+mt
-source-wordcount: '583'
+source-wordcount: '636'
 ht-degree: 2%
 
 ---
@@ -24,6 +24,10 @@ O Adobe Experience Platform fornece um conjunto robusto de ferramentas para gere
 
 Essas atividades podem ser realizadas usando o [[!UICONTROL Ciclo de vida dos dados] Workspace da interface do usuário](#ui) ou o [API de higiene de dados](#api). Quando um trabalho do ciclo de vida dos dados é executado, o sistema fornece atualizações de transparência em cada etapa do processo. Consulte a seção sobre [linhas do tempo e transparência](#timelines-and-transparency) para obter mais informações sobre como cada tipo de job é representado no sistema.
 
+>[!NOTE]
+>
+>O Gerenciamento avançado do ciclo de vida dos dados permite exclusões de conjuntos de dados por meio da [ponto de extremidade de expiração do conjunto de dados](./api/dataset-expiration.md) e exclusões de ID (dados em nível de linha) usando identidades primárias por meio da [ponto de extremidade da ordem de trabalho](./api/workorder.md). Você também pode gerenciar [expirações do conjunto de dados](./ui/dataset-expiration.md) e [exclusões de registro](./ui/record-delete.md) por meio da interface do usuário da Platform. Consulte a documentação vinculada para obter mais informações. Observe que o ciclo de vida dos dados não oferece suporte à exclusão de lotes.
+
 ## [!UICONTROL Ciclo de vida dos dados] Workspace da interface do usuário {#ui}
 
 A variável [!UICONTROL Ciclo de vida dos dados] O espaço de trabalho na interface do usuário da Platform permite configurar e agendar operações do ciclo de vida dos dados, ajudando a garantir que seus registros sejam mantidos conforme esperado.
@@ -42,7 +46,7 @@ A variável [!UICONTROL Ciclo de vida dos dados] A interface do usuário é cria
 
 O seguinte ocorre quando uma [solicitação de expiração do conjunto de dados](./ui/dataset-expiration.md) é criado:
 
-| Fase | Tempo após a expiração programada | Descrição |
+| Preparo | Tempo após a expiração programada | Descrição |
 | --- | --- | --- |
 | A solicitação foi enviada | 0 horas | Um administrador de dados ou analista de privacidade envia uma solicitação para que um conjunto de dados expire em um determinado momento. A solicitação está visível no [!UICONTROL Interface do usuário do ciclo de vida dos dados] após ser enviada, e permanece em um status pendente até o tempo de expiração programado, após o qual a solicitação será executada. |
 | Conjunto de dados descartado | 1 hora | O conjunto de dados é descartado da variável [página inventário do conjunto de dados](../catalog/datasets/user-guide.md) na interface. Os dados no data lake são excluídos apenas por software e permanecerão assim até o final do processo, após o qual serão excluídos com dificuldade. |

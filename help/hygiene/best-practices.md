@@ -1,9 +1,10 @@
 ---
 title: Práticas recomendadas para gerenciamento avançado do ciclo de vida dos dados
 description: Saiba como gerenciar com eficiência as solicitações de higiene de dados no Adobe Experience Platform usando a interface do usuário do gerenciamento avançado do ciclo de vida dos dados e a API de higiene de dados. Este guia aborda as práticas recomendadas, como maximizar identidades por solicitação, especificar conjuntos de dados individuais e estar atento à limitação da API para evitar lentidão. O documento inclui diretrizes para a configuração da limpeza automática do conjunto de dados, como monitorar os status das ordens de serviço e métodos detalhados de recuperação de resposta. Siga estas práticas para simplificar o processamento de solicitações e otimizar os tempos de resposta.
-source-git-commit: 92667fd4da093e56dcf06ae1696484671d9fdd38
+exl-id: 75e2a97b-ce6c-4ebd-8fc8-597887f77037
+source-git-commit: 5174529d606ac0186ff3193790ada70a46c7e274
 workflow-type: tm+mt
-source-wordcount: '779'
+source-wordcount: '769'
 ht-degree: 0%
 
 ---
@@ -26,10 +27,9 @@ Você pode usar o `/workorder` na API da Limpeza de dados para gerenciar de form
 
 Siga estas diretrizes para otimizar os envios de solicitações de limpeza:
 
-1. **Maximizar identidades por solicitação:** Inclua até 100.000 identidades por solicitação de limpeza para melhorar a eficiência. Agrupar várias identidades em uma única solicitação ajuda a reduzir a frequência de chamadas de API e minimiza o risco de problemas de desempenho devido a solicitações excessivas de identidade única.
+1. **Maximizar identidades por solicitação:** Inclua até 100.000 identidades por solicitação de limpeza para melhorar a eficiência. Agrupar várias identidades em uma única solicitação ajuda a reduzir a frequência de chamadas de API e minimiza o risco de problemas de desempenho devido a solicitações excessivas de identidade única. Submeta solicitações com o máximo de contagens de identidade para obter um processamento mais rápido, já que as ordens de serviço são processadas em lote para eficiência.
 2. **Especificar conjuntos de dados individuais:** Para obter eficiência máxima, especifique o conjunto de dados individual a ser processado.
-3. **Enviar várias solicitações:** Submeta várias solicitações com o máximo de contagens de identidade para obter um processamento mais rápido, à medida que as ordens de serviço são processadas em lote para obter eficiência.
-4. **Considerações de limitação de API:** Considere a limitação da API para evitar lentidão. Solicitações menores (&lt; 100 IDs) em frequências mais altas podem resultar em 429 respostas e exigir o reenvio em taxas aceitáveis.
+3. **Considerações de limitação de API:** Considere a limitação da API para evitar lentidão. Solicitações menores (&lt; 100 IDs) em frequências mais altas podem resultar em 429 respostas e exigir o reenvio em taxas aceitáveis.
 
 ### Gerenciar erros 429 {#manage-429-errors}
 
@@ -41,13 +41,13 @@ Se você receber um erro 429, ele indica que você excedeu o número permitido d
 
 ## Expiração do conjunto de dados {#dataset-expiration}
 
-Configure a limpeza automática do conjunto de dados para dados de vida curta. Use o `/ttl` na API de higiene de dados para agendar datas de expiração para conjuntos de dados. Use o `/ttl` ponto de extremidade para acionar uma limpeza do conjunto de dados com base em uma hora ou data especificada. Consulte o manual de endpoint de expiração do conjunto de dados para saber como [criar uma expiração do conjunto de dados](./api/dataset-expiration.md) e a variável [parâmetros de consulta aceitos](./api/dataset-expiration.md#query-params).
+Configure a limpeza automática do conjunto de dados para dados de vida curta. Use o `/ttl` na API de higiene de dados para agendar datas de expiração para conjuntos de dados para limpeza com base em uma hora ou data especificada. Consulte o manual de endpoint de expiração do conjunto de dados para saber como [criar uma expiração do conjunto de dados](./api/dataset-expiration.md) e a variável [parâmetros de consulta aceitos](./api/dataset-expiration.md#query-params).
 
 ## Monitorar status de expiração da ordem de trabalho e do conjunto de dados {#monitor}
 
 Você pode monitorar com eficiência o progresso do gerenciamento do ciclo de vida dos dados por meio do uso de **Eventos de E/S**. Um Evento de E/S é um mecanismo para receber notificações em tempo real sobre alterações ou atualizações em vários serviços na Plataforma.
 
-Os alertas de Evento de E/S podem ser enviados para um webhook configurado para habilitar a automação do monitoramento de atividades. Para receber alertas via webhook, você deve registrar o webhook para alertas da Platform no Console do Adobe Developer. Consulte o guia sobre [assinatura de notificações de Adobe I/O Event](../observability/alerts/subscribe.md) para obter as instruções detalhadas.
+Os alertas de Evento de E/S podem ser enviados para um webhook configurado para habilitar a automação do monitoramento de atividades. Para receber alertas via webhook, você deve registrar o webhook para alertas da Platform na Adobe Developer Console. Consulte o guia sobre [assinatura de notificações de Adobe I/O Event](../observability/alerts/subscribe.md) para obter as instruções detalhadas.
 
 Use os seguintes métodos e diretrizes do ciclo de vida dos dados para recuperar e monitorar efetivamente os status dos trabalhos:
 
@@ -63,7 +63,7 @@ Para monitorar com eficiência o progresso das tarefas do ciclo de vida dos dado
 
 Para obter informações detalhadas sobre ordens de serviço individuais, use a seguinte abordagem:
 
-- Faça uma solicitação GET para o `/workorder{work_order_id}` para obter dados de resposta detalhados.
+- Faça uma solicitação GET para o `/workorder/{work_order_id}` para obter dados de resposta detalhados.
 - Recupere respostas específicas do produto e mensagens de sucesso.
 - Evite usar esse método para atividades de pesquisa regulares.
 

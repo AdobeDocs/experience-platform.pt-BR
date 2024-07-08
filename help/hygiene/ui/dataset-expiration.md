@@ -2,10 +2,10 @@
 title: Expirações do conjunto de dados automatizado
 description: Saiba como programar a expiração de um conjunto de dados na interface do usuário do Adobe Experience Platform.
 exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
-source-git-commit: 45dac5647e44ac35d9821d407eddeee72523faf9
+source-git-commit: 2aba88ac657e73a12be14d2c3a67dd5714513c97
 workflow-type: tm+mt
-source-wordcount: '820'
-ht-degree: 19%
+source-wordcount: '871'
+ht-degree: 18%
 
 ---
 
@@ -26,7 +26,13 @@ Este documento aborda como agendar e automatizar as expirações do conjunto de 
 
 >[!NOTE]
 >
->No momento, a expiração do conjunto de dados não exclui dados da Rede de borda da Adobe Experience Platform. No entanto, não há possibilidade de os dados permanecerem na Rede de borda após o conjunto de dados estar definido para expirar. Isso ocorre porque o contrato de licença de serviço de 15 dias para expiração do conjunto de dados se sobrepõe ao período de 14 dias em que os dados existem na rede de borda antes de serem descartados.
+>No momento, a expiração do conjunto de dados não exclui dados do Edge Network Adobe Experience Platform. No entanto, não há possibilidade de os dados permanecerem no Edge Network após o conjunto de dados estar definido para expirar. Isso ocorre porque o contrato de licença de serviço de 15 dias para a expiração do conjunto de dados se sobrepõe ao período de 14 dias em que os dados existem dentro do Edge Network antes de serem descartados.
+
+O Gerenciamento avançado do ciclo de vida dos dados permite exclusões de conjuntos de dados por meio da [ponto de extremidade de expiração do conjunto de dados](../api/dataset-expiration.md) e exclusões de ID (dados em nível de linha) usando identidades primárias por meio da [ponto de extremidade da ordem de trabalho](../api/workorder.md). Também é possível gerenciar as expirações do conjunto de dados e [exclusões de registro](./record-delete.md) por meio da interface do usuário da Platform. Consulte a documentação vinculada para obter mais informações.
+
+>[!NOTE]
+>
+>O ciclo de vida dos dados não oferece suporte à exclusão em lote.
 
 ## Programar uma expiração de conjunto de dados {#schedule-dataset-expiration}
 

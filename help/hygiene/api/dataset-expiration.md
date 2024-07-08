@@ -3,9 +3,9 @@ title: Ponto de extremidade da API de expiração do conjunto de dados
 description: O ponto de extremidade /ttl na API da higiene de dados permite agendar programaticamente as expirações do conjunto de dados no Adobe Experience Platform.
 role: Developer
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
-source-git-commit: 20d616463469a4d78fe0e7b6be0ec76b293789d6
+source-git-commit: 4fb8313f8209b68acef1484fc873b9bd014492be
 workflow-type: tm+mt
-source-wordcount: '2166'
+source-wordcount: '2217'
 ht-degree: 2%
 
 ---
@@ -27,6 +27,12 @@ Depois que a exclusão do conjunto de dados for iniciada, seu trabalho de expira
 >[!WARNING]
 >
 >Se um conjunto de dados estiver definido para expirar, você deverá alterar manualmente todos os fluxos de dados que possam estar assimilando dados nesse conjunto de dados para que seus fluxos de trabalho downstream não sejam afetados negativamente.
+
+O Gerenciamento avançado do ciclo de vida dos dados é compatível com exclusões de conjuntos de dados por meio do ponto de extremidade de expiração do conjunto de dados e exclusões de ID (dados em nível de linha) usando identidades primárias por meio do [ponto de extremidade da ordem de trabalho](./workorder.md). Você também pode gerenciar [expirações do conjunto de dados](../ui/dataset-expiration.md) e [exclusões de registro](../ui/record-delete.md) por meio da interface do usuário da Platform. Consulte a documentação vinculada para obter mais informações.
+
+>[!NOTE]
+>
+>O ciclo de vida dos dados não oferece suporte à exclusão em lote.
 
 ## Introdução
 

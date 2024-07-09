@@ -1,39 +1,38 @@
 ---
 title: Destino das conexões corporativas do Merkury
 description: Saiba como criar uma conexão de destino do Merkury Enterprise Connections usando a interface do usuário do Adobe Experience Platform.
-hide: true
-hidefromtoc: true
-source-git-commit: 66a0a085e696dbe13d0368da395f655c7ca01a97
+source-git-commit: 01ce38d26cf61706de84ec143e3dd8af720d0591
 workflow-type: tm+mt
-source-wordcount: '1397'
+source-wordcount: '1375'
 ht-degree: 3%
 
 ---
+
 
 # Destino das conexões corporativas do Merkury
 
 >[!NOTE]
 >
->O conector de destino e a página de documentação são criados e mantidos pela equipe do Merkury. Para quaisquer consultas ou pedidos de atualização, entre em contato com o seu representante de conta Merkury.
+>O conector de destino e a página de documentação são criados e mantidos pelo [!DNL Merkury] equipe. Para qualquer consulta ou solicitação de atualização, entre em contato com o [!DNL Merkury] representante de conta.
 
 ## Visão geral
 
-Use o destino das Conexões corporativas do Merkury para entregar com segurança os públicos-alvo ao Merkury. A Merkury fornece aos profissionais de marketing correspondência e entrega fáceis de públicos-alvo com base em pessoas para as conexões de TV/CTV, editor e tecnologia de anúncios endereçáveis premium da Merkury em mais de 80 anos. Merkury é alimentado por um gráfico abrangente de identidade do consumidor adulto dos EUA de 268+ milhões de pessoas.
+Use o [!DNL Merkury Enterprise Connections] destino para fornecer públicos-alvo com segurança [!DNL Merkury]. [!DNL Merkury] O fornece aos profissionais de marketing correspondência e entrega fáceis de públicos-alvo com base em pessoas para [!DNL Merkury]O tem mais de 80 conexões premium endereçáveis de TV/CTV, editoras e de tecnologia de anúncios. [!DNL Merkury] O é alimentado por um gráfico abrangente de identidade do consumidor adulto dos EUA de 268 milhões de pessoas.
 
 ![Um diagrama mostrando a interconexão entre Merkury e Experience Platform, incluindo assimilação e ativação](../../assets/catalog/data-partners/merkury-connections/media/image1.png)
 
-Siga as etapas nesta página de documentação para criar uma conexão de destino das Conexões do Merkury e ativar públicos-alvo usando a interface do usuário do Adobe Experience Platform.
+Siga as etapas desta página de documentação para criar uma [!DNL Merkury Connections] conexão de destino e ativar públicos-alvo usando a interface do Adobe Experience Platform.
 
 >[!NOTE]
 >
->Se você deseja ativar públicos para destinos de mídia com sua conta do Merkury Connect, use nosso destino de Conexões do Merkury.
+>Se estiver procurando ativar públicos para destinos de mídia com sua [!DNL Merkury Connect] conta, use o [!DNL Merkury Connections] destino em vez disso.
 
 ![O cartão de destino Merkury Enterprise Connections é destacado no catálogo de destinos do Experience Platform.](../../assets/catalog/data-partners/merkury-connections/media/image2.png)
 
 ## Casos de uso
 
-* **Ativação de mídia digital**: fácil correspondência e entrega dos perfis de público-alvo para mais de 50 editores premium endereçáveis e conexões de tecnologia de anúncios do Merkury.
-* **Aumente a eficiência**: melhore o alcance de mídia endereçável e sem cookies, melhore a eficiência da definição de metas e o ROAS (Return on Advertising Spend, retorno sobre o investimento em publicidade).
+* **Ativação de mídia digital**: fácil correspondência e entrega dos perfis de público-alvo para [!DNL Merkury]Os mais de 50 editores endereçáveis premium do e conexões ad-tech.
+* **Aumente a eficiência**: melhore o alcance de mídia endereçável e sem cookies, melhore a eficiência da definição de metas e o ROAS (Return on Advertising Spend, retorno sobre o investimento no).
 
 ## Pré-requisitos
 
@@ -46,7 +45,7 @@ Siga as etapas nesta página de documentação para criar uma conexão de destin
 
 | Identidade de destino | Descrição | Considerações |
 |---|---|---|
-| GAID | ID de publicidade do Google | Selecione a identidade de destino GAID quando a identidade de origem for um namespace GAID. |
+| GAID | GOOGLE ADVERTISING ID | Selecione a identidade de destino GAID quando a identidade de origem for um namespace GAID. |
 | IDFA | Apple ID para anunciantes | Selecione a identidade de destino do IDFA quando a identidade de origem for um namespace do IDFA. |
 | ECID | Experience Cloud ID | Um namespace que representa a ECID. Esse namespace também pode ser referenciado pelos seguintes aliases: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Consulte o seguinte documento em [ECID](/help/identity-service/features/ecid.md) para obter mais informações. |
 | phone_sha256 | Números de telefone com hash com o algoritmo SHA256 | Os números de telefone com hash SHA256 e texto sem formatação são compatíveis com o Adobe Experience Platform. Quando o campo de origem contiver atributos sem hash, verifique a **[!UICONTROL Aplicar transformação]** opção, para ter [!DNL Platform] coloque automaticamente os dados em hash na ativação. |
@@ -116,15 +115,15 @@ Para configurar detalhes para o destino, preencha os campos obrigatórios e opci
 
 >[!NOTE]
 >
->Ao selecionar as opções CSV, Delimitador, Caractere de citação, Caractere de escape, Valor vazio, Valor nulo, Formato de compactação e Incluir arquivo de manifesto serão apresentadas, consulte sua equipe do Merkury para obter as configurações apropriadas para sua conta.
+>Ao selecionar a opção CSV, as opções Delimitador, Citação, Caractere de escape, Valor vazio, Valor nulo, Formato de compactação e Incluir arquivo de manifesto serão apresentadas. Consulte sua equipe do Merkury para obter as configurações apropriadas para sua conta.
 
 ![imagem das opções do csv](../../assets/catalog/data-partners/merkury-connections/media/image8.png)
 
 ### Conta existente
 
-As contas já definidas usando o destino Merkury Enterprise Connections aparecem em um pop-up de lista. Quando selecionada, você poderá ver os detalhes da conta no painel direito. Veja o exemplo da interface do usuário ao navegar para **Destinos** > **Contas**;
+As contas já definidas usando o destino Merkury Enterprise Connections aparecem em um pop-up de lista. Quando selecionada, você poderá ver os detalhes da conta no painel direito. Veja o exemplo da interface do usuário ao navegar para **Destinos** > **Contas**:
 
-![Uma captura de tela da conta de destino na página de contas de destino](../../assets/catalog/data-partners/merkury-connections/media/image5.png)
+![Uma captura de tela da conta de destino na página de contas de destino.](../../assets/catalog/data-partners/merkury-connections/media/image5.png)
 
 ## Ativar alertas
 
@@ -136,21 +135,21 @@ Quando terminar de fornecer detalhes da conexão de destino, selecione **Próxi
 
 >[!IMPORTANT]
 >
->* Para ativar dados, você precisa das permissões de controle de acesso Exibir destinos, Ativar destinos, Exibir perfis e Exibir segmentos. Leia a visão geral do controle de acesso ou entre em contato com o administrador do produto para obter as permissões necessárias.
->* Para exportar identidades, você precisa da permissão de controle de acesso Exibir gráfico de identidade.
+>* Para ativar os dados, é necessário **Exibir destinos**, **Ativar destinos**, **Exibir perfis**, e **Exibir segmentos** permissões de controle de acesso. Leia a visão geral do controle de acesso ou entre em contato com o administrador do produto para obter as permissões necessárias.
+>* Para exportar identidades, é necessário **Exibir gráfico de identidade** permissão de controle de acesso.
 
 
 Ler [Ativar dados do público-alvo para destinos de exportação de perfil em lote](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations) para obter instruções sobre como ativar públicos-alvo para esse destino.
 
 ## Sugestões de mapeamento
 
-O processamento correto de arquivos no lado do Merkury requer elementos de nome e endereço. Embora nem todos os elementos sejam necessários, fornecer o máximo possível ajudará na correspondência bem-sucedida.
+O processamento correto dos arquivos no [!DNL Merkury] O lado requer elementos de nome e endereço. Embora nem todos os elementos sejam necessários, fornecer o máximo possível ajudará na correspondência bem-sucedida.
 
-As sugestões de mapeamento são fornecidas na tabela abaixo, listando os atributos no seu lado de destino que são usados pelo processamento do Merkury para os quais os clientes podem mapear atributos de perfil. Trate esses elementos como sugestões, pois nem todos os elementos são obrigatórios. Os valores de origem dependerão das necessidades da conta.
+As sugestões de mapeamento são fornecidas na tabela abaixo, listando os atributos no seu lado de destino que são usados pelo [!DNL Merkury] processamento ao qual os clientes podem mapear atributos de perfil. Trate esses elementos como sugestões, pois nem todos os elementos são obrigatórios. Os valores de origem dependerão das necessidades da conta.
 
-| Campo de público alvo | Descrição da origem |
+| Campo de público alvo | Descrição do Source |
 |---|---|
-| ID | Campo de identidade a ser usado para mapear dados de merkury para o Experience Platform por meio do conector de origem de resolução de identidade corporativa do Merkury |
+| ID | Campo de identidade a ser usado para mapear [!DNL Merkury] dados para o Experience Platform por meio do [!DNL Merkury Enterprise Identity] Conector do Source |
 | Input_First_Name | A variável `person.name.firstName` valor em Experience Platform. |
 | Input_Last_Name | A variável `person.name.lastName` valor em Experience Platform. |
 | Input_Address_Line_1 | A variável `mailingAddress.street` valor em Experience Platform. |
@@ -173,4 +172,4 @@ Todos os destinos do Adobe Experience Platform estão em conformidade com as pol
 
 ## Próximas etapas
 
-Seguindo este tutorial, você criou com sucesso um fluxo de dados para exportar dados do perfil do Experience Platform para sua localização do S3 gerenciado pelo Merkury. Em seguida, entre em contato com o representante do Merkury com o nome da conta, os nomes dos arquivos e o caminho do bucket, para que o processamento possa ser configurado.
+Ao seguir este tutorial, você criou com sucesso um fluxo de dados para exportar dados do perfil do Experience Platform para sua [!DNL Merkury] local do S3 gerenciado. Em seguida, entre em contato com o [!DNL Merkury] representante com o nome da conta, nomes de arquivo e o caminho do bucket para que o processamento possa ser configurado.

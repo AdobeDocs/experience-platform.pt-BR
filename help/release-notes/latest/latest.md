@@ -2,7 +2,7 @@
 title: Notas de versão da Adobe Experience Platform de junho de 2024
 description: As notas de versão de junho de 2024 da Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: af27ca20b7d611bb6f6b13b57dfc2df1f643a0b6
+source-git-commit: 01ce38d26cf61706de84ec143e3dd8af720d0591
 workflow-type: tm+mt
 source-wordcount: '1357'
 ht-degree: 18%
@@ -72,7 +72,7 @@ Para obter mais informações sobre o Preparo de dados, leia a [Visão geral do 
 | Funcionalidade | Descrição |
 | ----------- | ----------- |
 | Aprimoramento da API de exportação ad hoc para exportar públicos externos | Agora você pode usar a API de exportação ad-hoc para exportar públicos externos (upload personalizado). [Leia mais](/help/destinations/api/ad-hoc-activation-api.md) . |
-| (Beta) Funções adicionais compatíveis com a fase beta do suporte a matriz de exportação | Anteriormente, ao ativar públicos-alvo para destinos baseados em arquivo e selecionar Usar campo calculado, você estava limitado a usar um subconjunto dos públicos-alvo disponíveis por meio do preparo de dados. Essa limitação foi removida e os clientes têm acesso a todas as funções disponíveis por meio do preparo de dados ao exportar públicos-alvo para destinos baseados em arquivo. [Leia mais](/help/destinations/ui/export-arrays-calculated-fields.md#supported-functions). |
+| (Beta) Outras funções compatíveis com a fase beta do suporte a matriz de exportação | Anteriormente, ao ativar públicos-alvo para destinos baseados em arquivo e selecionar Usar campo calculado, você estava limitado a usar um subconjunto dos públicos-alvo disponíveis por meio do preparo de dados. Essa limitação foi removida e os clientes têm acesso a todas as funções disponíveis por meio do preparo de dados ao exportar públicos-alvo para destinos baseados em arquivo. [Leia mais](/help/destinations/ui/export-arrays-calculated-fields.md#supported-functions). |
 | Mostrar apenas campos com dados na etapa de mapeamento | Ao mapear atributos de perfil para seus destinos, agora é possível alternar entre todos os atributos de perfil ou apenas aqueles que contêm dados. Por padrão, somente os campos com dados são exibidos. Consulte os guias de ativação para [lote](../../destinations/ui/activate-batch-profile-destinations.md#mapping) e [transmissão](../../destinations/ui/activate-segment-streaming-destinations.md#mapping) destinos para obter mais detalhes. |
 
 {style="table-layout:auto"}

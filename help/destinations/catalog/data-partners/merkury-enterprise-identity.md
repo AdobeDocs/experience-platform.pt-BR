@@ -75,9 +75,11 @@ Esta seção descreve que tipo de público-alvo você pode exportar para esse de
 ## Tipo e frequência de exportação
 
 Consulte a tabela abaixo para obter informações sobre o tipo e a frequência da exportação de destino.
-|**Público**|**Compatível**|**Origem da descrição**|\
-|—|—|—|\
-✓ |Serviço de segmentação|µ|Públicos-alvo gerados pelo Experience Platform [[Serviço de segmentação]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/home).| Uploads personalizados|X|Públicos-alvo [[importado]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience) para o Experience Platform de arquivos CSV.
+
+|**Público**|**Compatível**|**Origem da descrição**|
+|---|---|---|
+|Segmentation Service|✓|Audiences generated through the Experience Platform [[Segmentation Service]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/home).|
+|Custom uploads|X|Audiences [[imported]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience) into Experience Platform from CSV files.|
 
 {style="table-layout:auto"}
 

@@ -1,9 +1,9 @@
 ---
 title: Visão geral do Audience Portal
 description: Saiba como usar o Audience Portal para exibir, gerenciar e criar públicos no Adobe Experience Platform.
-source-git-commit: 6b186030c66598cddcdfcf509b8863e10d4fd0a7
+source-git-commit: 531bee643c14ad407a1207cca9093e210e5227a5
 workflow-type: tm+mt
-source-wordcount: '3646'
+source-wordcount: '3674'
 ht-degree: 3%
 
 ---
@@ -387,7 +387,7 @@ Depois de confirmar que os detalhes estão corretos, selecione **[!UICONTROL Con
 >
 >Por padrão, os públicos-alvo gerados externamente têm uma expiração de dados de 30 dias. A expiração dos dados é redefinida se o público-alvo for atualizado ou modificado de alguma forma.
 >
->Além disso, se o público-alvo gerado externamente contiver informações confidenciais e/ou relacionadas à assistência médica, você **deve** aplique os rótulos de uso de dados necessários antes de ativá-los em qualquer destino. Para obter mais informações sobre como aplicar rótulos de uso de dados, leia a documentação em [gerenciamento de rótulos](../../access-control/abac/ui/labels.md).
+>Além disso, se o público-alvo gerado externamente contiver informações confidenciais e/ou relacionadas à assistência médica, você **deve** aplique os rótulos de uso de dados necessários antes de ativá-los em qualquer destino. Como as variáveis de públicos-alvo gerados externamente são armazenadas no data lake em vez de no Perfil do cliente em tempo real, você deve **não** Incluir dados de consentimento no arquivo CSV. Para obter mais informações sobre como aplicar rótulos de uso de dados, leia a documentação em [gerenciamento de rótulos](../../access-control/abac/ui/labels.md).
 
 ## Próximas etapas
 

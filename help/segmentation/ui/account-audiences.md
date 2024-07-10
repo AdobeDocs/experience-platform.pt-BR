@@ -4,14 +4,14 @@ description: Saiba como criar e usar públicos-alvo da conta para direcionar per
 badgeB2B: label="Edição B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="Edição B2P" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 047930d6-939f-4418-bbcb-8aafd2cf43ba
-source-git-commit: 7d630c3673304060ad26375955602440a495f354
+source-git-commit: c2f9bcd9aeb0073b8b26413ec29e2dff1ee5c80d
 workflow-type: tm+mt
 source-wordcount: '1130'
 ht-degree: 27%
 
 ---
 
-# Públicos da conta
+# Públicos-alvo da conta
 
 >[!AVAILABILITY]
 >
@@ -41,9 +41,9 @@ A variável [!UICONTROL Procurar] será exibida, mostrando uma lista de todos os
 
 Essa exibição lista informações sobre o público-alvo, incluindo nome, contagem de perfis, origem, status do ciclo de vida, data de criação e data da última atualização.
 
-Você também pode usar a funcionalidade de pesquisa e filtragem para pesquisar e classificar rapidamente por públicos-alvo específicos da conta. Mais informações sobre esse recurso podem ser encontradas no [guia da interface de segmentação](./overview.md#manage-audiences).
+Você também pode usar a funcionalidade de pesquisa e filtragem para pesquisar e classificar rapidamente por públicos-alvo específicos da conta. Mais informações sobre esse recurso podem ser encontradas no [Visão geral do portal de público](./audience-portal.md#manage-audiences).
 
-## Criar público-alvo {#create}
+## Criar público {#create}
 
 >[!NOTE]
 >
@@ -67,7 +67,7 @@ No [!UICONTROL Públicos-alvo] você pode adicionar públicos-alvo com base em p
 
 Para obter mais informações sobre como usar o Construtor de segmentos, leia as [Guia da interface do usuário do Construtor de segmentos](./segment-builder.md).
 
-## Ativar público {#activate}
+## Ativar público-alvo {#activate}
 
 >[!NOTE]
 >

@@ -2,10 +2,10 @@
 title: (Beta) [!DNL Google Ad Manager 360] conexão
 description: O Google Ad Manager 360 é uma plataforma de veiculação de anúncios da Google que fornece aos editores os meios de gerenciar a exibição de anúncios em seus sites, por meio de vídeo e em aplicativos móveis.
 exl-id: 3251145a-3e4d-40aa-b120-d79c8c9c7cae
-source-git-commit: 153b827d385b4a3f86a2432bf533ec543f12ea4e
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1206'
-ht-degree: 1%
+ht-degree: 4%
 
 ---
 
@@ -27,7 +27,7 @@ Para obter mais detalhes sobre como os identificadores fornecidos pelo editor fu
 
 >[!IMPORTANT]
 >
->No momento, esse destino está na versão beta e só está disponível para um número limitado de clientes. Para solicitar acesso à [!DNL Google Ad Manager 360] conexão, entre em contato com o representante da Adobe e forneça [!DNL organization ID].
+>Atualmente, esse destino está no Beta e só está disponível para um número limitado de clientes. Para solicitar acesso à [!DNL Google Ad Manager 360] conexão, entre em contato com o representante da Adobe e forneça [!DNL organization ID].
 
 A variável [!DNL Google Ad Manager 360] exportações de destino [!DNL CSV] arquivos para seu [!DNL Google Cloud Storage] balde. Depois de exportar o [!DNL CSV] arquivos, você deve importá-los para o [!DNL Google Ad Manager 360] conta.
 
@@ -51,10 +51,10 @@ Observe os seguintes detalhes, específicos do [!DNL Google Ad Manager 360] dest
 
 Esta seção descreve quais tipos de públicos-alvo você pode exportar para esse destino.
 
-| Origem do público | Compatível | Descrição |
----------|----------|----------|
+| Origem do público | Suportado | Descrição |
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Públicos-alvo gerados pelo Experience Platform [Serviço de segmentação](../../../segmentation/home.md). |
-| Uploads personalizados | ✓ | Públicos-alvo [importado](../../../segmentation/ui/overview.md#import-audience) para o Experience Platform de arquivos CSV. |
+| Uploads personalizados | ✓ | Públicos-alvo [importado](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV. |
 
 {style="table-layout:auto"}
 
@@ -91,7 +91,7 @@ A inclusão na lista de permissões é obrigatória antes de configurar o primei
 
 Para se conectar a esse destino, siga as etapas descritas no [tutorial de configuração de destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html). No workflow da configuração de destino, preencha os campos listados nas duas seções abaixo.
 
-### Autenticar para destino {#authenticate}
+### Autenticar para o destino {#authenticate}
 
 Para autenticar no destino, preencha os campos obrigatórios e selecione **[!UICONTROL Conectar ao destino]**.
 
@@ -105,7 +105,7 @@ Para obter mais informações sobre esses valores, consulte [Chaves HMAC do Goog
 >[!CONTEXTUALHELP]
 >id="platform_destinations_gam360_appendSegmentID"
 >title="Anexar ID de público-alvo ao nome do público-alvo"
->abstract="Selecione esta opção para que o nome do público-alvo neste destino inclua a ID de público-alvo do Experience Platform, desta forma: `Audience Name (Audience ID)`"
+>abstract="Selecione essa opção para que o nome do público-alvo nesse destino inclua a ID do público-alvo da Experience Platform, da seguinte maneira: `Audience Name (Audience ID)`"
 
 Para configurar detalhes para o destino, preencha os campos obrigatórios e opcionais abaixo. Um asterisco ao lado de um campo na interface do usuário indica que o campo é obrigatório.
 
@@ -125,7 +125,7 @@ Você pode ativar os alertas para receber notificações sobre o status do fluxo
 
 Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICONTROL Próxima]**.
 
-## Ativar públicos para este destino {#activate}
+## Ativar públicos-alvo para esse destino {#activate}
 
 >[!IMPORTANT]
 > 

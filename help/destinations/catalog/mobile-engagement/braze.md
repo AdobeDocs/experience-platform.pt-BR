@@ -3,7 +3,7 @@ keywords: mobile; braze; mensagens;
 title: Conexão Braze
 description: O Brasil é uma plataforma abrangente de engajamento do cliente que promove experiências relevantes e memoráveis entre os clientes e as marcas que eles adoram.
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1125'
 ht-degree: 3%
@@ -49,9 +49,9 @@ Como profissional de marketing, desejo direcionar os usuários em um destino de 
 Esta seção descreve quais tipos de públicos-alvo você pode exportar para esse destino.
 
 | Origem do público | Suportado | Descrição |
----------|----------|----------|
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Públicos-alvo gerados pelo Experience Platform [Serviço de segmentação](../../../segmentation/home.md). |
-| Uploads personalizados | ✓ | Públicos-alvo [importado](../../../segmentation/ui/overview.md#import-audience) para o Experience Platform de arquivos CSV. |
+| Uploads personalizados | ✓ | Públicos-alvo [importado](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV. |
 
 {style="table-layout:auto"}
 
@@ -115,18 +115,18 @@ No [!UICONTROL Mapeamento] clique em **[!UICONTROL Adicionar novo mapeamento]**.
 
 ![Adicionar mapeamento de destino brasileiro](../../assets/catalog/mobile-engagement/braze/mapping.png)
 
-No [!UICONTROL Campo de origem] clique no botão de seta ao lado do campo vazio.
+No [!UICONTROL Campo do Source] clique no botão de seta ao lado do campo vazio.
 
-![Mapeamento de origem de destino do Brasil](../../assets/catalog/mobile-engagement/braze/mapping-source.png)
+![Mapeamento de Source de destino do Brasil](../../assets/catalog/mobile-engagement/braze/mapping-source.png)
 
 No [!UICONTROL Selecionar campo de origem] você pode escolher entre duas categorias de campos XDM:
 * [!UICONTROL Selecionar atributos]: use essa opção para mapear um campo específico do esquema XDM para um campo [!DNL Braze] atributo.
 
-![Atributos da Origem de Mapeamento de Destino Brasileiro](../../assets/catalog/mobile-engagement/braze/mapping-attributes.png)
+![Mapeamento de Destino Brasileiro - Atributo Source](../../assets/catalog/mobile-engagement/braze/mapping-attributes.png)
 
 * [!UICONTROL Selecionar namespace de identidade]: use essa opção para mapear um [!DNL Platform] namespace de identidade para um [!DNL Braze] namespace.
 
-![Namespace de Origem do Mapeamento de Destino Brasileiro](../../assets/catalog/mobile-engagement/braze/mapping-namespaces.png)
+![Namespace Source do mapeamento de destino brasileiro](../../assets/catalog/mobile-engagement/braze/mapping-namespaces.png)
 
 Escolha o campo de origem e clique em **[!UICONTROL Selecionar]**.
 

@@ -3,14 +3,14 @@ title: Públicos-alvo potenciais
 description: Saiba como criar e usar públicos-alvo potenciais para direcionar clientes desconhecidos usando informações de terceiros.
 type: Documentation
 exl-id: b48cc0cf-f1c4-46fe-bb1d-cad53a9439dc
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: c2f9bcd9aeb0073b8b26413ec29e2dff1ee5c80d
 workflow-type: tm+mt
-source-wordcount: '399'
-ht-degree: 1%
+source-wordcount: '395'
+ht-degree: 2%
 
 ---
 
-# Públicos-alvo potenciais
+# Públicos-alvo em potencial
 
 O Adobe Experience Platform permite oferecer a total facilidade e sofisticação da experiência de segmentação compatível com o profissional de marketing para [perfis de cliente potencial](../../profile/ui/prospect-profile.md). Você pode reduzir bastante o tempo gasto na montagem de públicos-alvo criando seus próprios públicos-alvo de prospecto e, ao mesmo tempo, usando com responsabilidade os dados do parceiro.
 
@@ -28,9 +28,9 @@ Essa exibição lista as informações sobre o público-alvo, incluindo nome, co
 
 É possível adicionar outros campos a essa exibição selecionando ![o ícone do atributo de filtro](../images/ui/prospect-audience/filter-attribute.png). Esses campos adicionais incluem frequência de atualização e a última atualização realizada por.
 
-Mais informações sobre a página de navegação, incluindo informações detalhadas sobre os campos listados, podem ser encontradas na [seção procurar do guia de interface do usuário de segmentação](./overview.md#browse).
+Mais informações sobre a página de navegação, incluindo informações detalhadas sobre os campos listados, podem ser encontradas na [Visão geral do portal de público](./audience-portal.md#list).
 
-## Detalhes do público {#details}
+## Detalhes do público-alvo {#details}
 
 Para exibir detalhes sobre um público-alvo potencial específico, selecione um público-alvo na [!UICONTROL Procurar] página.
 
@@ -40,9 +40,9 @@ A página de detalhes do público-alvo potencial é exibida. As informações, i
 
 ![A página de detalhes do público-alvo potencial é exibida.](../images/ui/prospect-audience/audience-details.png)
 
-Para obter mais informações sobre a página de detalhes do público, leia a [seção de detalhes do público-alvo do guia de interface do usuário de segmentação](./overview.md).
+Para obter mais informações sobre a página de detalhes do público, leia a [seção detalhes do público da visão geral do Portal de público-alvo](./audience-portal.md#audience-details).
 
-## Criar público-alvo {#create}
+## Criar público {#create}
 
 Para criar um público-alvo de prospecto, no [!UICONTROL Procurar] selecione **[!UICONTROL Criar público]**.
 

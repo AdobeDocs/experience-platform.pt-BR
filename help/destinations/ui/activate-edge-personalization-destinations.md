@@ -3,7 +3,7 @@ title: Ativar públicos para destinos de personalização de borda
 description: Saiba como ativar públicos do Adobe Experience Platform para destinos de personalização de borda para casos de uso de personalização de mesma página e próxima página.
 type: Tutorial
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: c113d9615a276af67714f38b8325e69737b23964
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1957'
 ht-degree: 2%
@@ -47,13 +47,13 @@ Para obter uma breve visão geral de como compartilhar públicos-alvo e atributo
 
 ## Casos de uso {#use-cases}
 
-Use as soluções de personalização de Adobe, como o Adobe Target, ou suas próprias plataformas de parceiros de personalização (por exemplo, [!DNL Optimizely], [!DNL Pega]), bem como sistemas proprietários (por exemplo, CMS interno) para potencializar uma experiência mais profunda de personalização do cliente por meio da [Personalização personalizada](../catalog/personalization/custom-personalization.md) destino. Tudo isso enquanto também aproveita os recursos de coleta e segmentação de dados do Experience Platform Edge Network.
+Use as soluções de personalização de Adobe, como o Adobe Target, ou suas próprias plataformas de parceiros de personalização (por exemplo, [!DNL Optimizely], [!DNL Pega]), bem como sistemas proprietários (por exemplo, CMS interno) para potencializar uma experiência mais profunda de personalização do cliente por meio da [Personalization personalizado](../catalog/personalization/custom-personalization.md) destino. Tudo isso enquanto também aproveita os recursos de coleta e segmentação de dados do Experience Platform Edge Network.
 
 Os casos de uso descritos abaixo incluem personalização do site e publicidade direcionada no site.
 
-Para habilitar esses casos de uso, os clientes precisam de uma maneira rápida e simplificada de recuperar informações de públicos-alvo e atributos de perfil do Experience Platform e de enviar essas informações para a [Adobe Target](../catalog/personalization/adobe-target-connection.md) ou o [Personalização personalizada](../catalog/personalization/custom-personalization.md) conexões na interface do Experience Platform.
+Para habilitar esses casos de uso, os clientes precisam de uma maneira rápida e simplificada de recuperar informações de públicos-alvo e atributos de perfil do Experience Platform e de enviar essas informações para a [Adobe Target](../catalog/personalization/adobe-target-connection.md) ou o [Personalization personalizado](../catalog/personalization/custom-personalization.md) conexões na interface do Experience Platform.
 
-### Personalização da mesma página {#same-page}
+### Personalização de mesma página {#same-page}
 
 Um usuário visita uma página do site. Você pode usar as informações de visita da página atual (por exemplo, URL de referência, idioma do navegador, informações do produto incorporadas) para selecionar a próxima ação ou decisão (por exemplo, personalização), usando o [Personalização personalizada](../catalog/personalization/custom-personalization.md) para plataformas não-Adobe (por exemplo, [!DNL Pega], [!DNL Optimizely] ou outros.).
 
@@ -77,13 +77,13 @@ Uma empresa de vendas e aluguel de residências quer personalizar sua página in
 
 A primeira etapa na configuração do destino de personalização é configurar um fluxo de dados para o SDK da Web do Experience Platform. Isso é feito na interface da Coleção de dados.
 
-Ao configurar o fluxo de dados, em **[!UICONTROL Adobe Experience Platform]** verifique se ambos **[!UICONTROL Segmentação de borda]** e **[!UICONTROL Destinos de personalização]** são selecionados.
+Ao configurar o fluxo de dados, em **[!UICONTROL Adobe Experience Platform]** verifique se ambos **[!UICONTROL Segmentação do Edge]** e **[!UICONTROL Destinos do Personalization]** são selecionados.
 
 >[!TIP]
 >
->A partir da versão de abril de 2024, não é necessário marcar a caixa de seleção Segmentação de borda quando [configuração da conexão com o Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md). Nesse caso, [personalização da próxima sessão](#next-session) O é o único caso de uso de personalização disponível.
+>A partir da versão de abril de 2024, não é necessário marcar a caixa de seleção Segmentação do Edge quando [configuração da conexão com o Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md). Nesse caso, [personalização da próxima sessão](#next-session) O é o único caso de uso de personalização disponível.
 
-![Configuração da sequência de dados com Destinos de segmentação e personalização de borda destacados!](../assets/ui/activate-edge-personalization-destinations/datastream-config.png)
+![Configuração da sequência de dados com a Segmentação do Edge e os Destinos do Personalization realçados!](../assets/ui/activate-edge-personalization-destinations/datastream-config.png)
 
 Para obter mais detalhes sobre como configurar um fluxo de dados, siga as instruções descritas em [Documentação do SDK da Web da Platform](../../datastreams/configure.md#aep).
 
@@ -93,9 +93,9 @@ Depois de criar a conexão de destino, você deve criar um [!DNL Active-On-Edge]
 
 >[!IMPORTANT]
 >
->Atualmente, os destinos de borda só oferecem suporte à ativação de públicos-alvo que usam o [Política de mesclagem ativa na borda](../../segmentation/ui/segment-builder.md#merge-policies) defina como padrão. Se você mapear públicos-alvo que usam uma política de mesclagem diferente para destinos de borda, esses públicos-alvo não serão avaliados.
+>Atualmente, os destinos de borda só oferecem suporte à ativação de públicos-alvo que usam o [Política de mesclagem ativa no Edge](../../segmentation/ui/segment-builder.md#merge-policies) defina como padrão. Se você mapear públicos-alvo que usam uma política de mesclagem diferente para destinos de borda, esses públicos-alvo não serão avaliados.
 
-Siga as instruções em [criação de uma política de mesclagem](../../profile/merge-policies/ui-guide.md#create-a-merge-policy)e certifique-se de ativar o **[!UICONTROL Política de mesclagem ativa na borda]** alternar.
+Siga as instruções em [criação de uma política de mesclagem](../../profile/merge-policies/ui-guide.md#create-a-merge-policy)e certifique-se de ativar o **[!UICONTROL Política de mesclagem ativa no Edge]** alternar.
 
 ### Criar um novo público na Platform {#create-audience}
 
@@ -141,7 +141,7 @@ Para selecionar os públicos que deseja ativar para o destino, use as caixas de 
 Você pode selecionar entre vários tipos de públicos-alvo, dependendo de sua origem:
 
 * **[!UICONTROL Serviço de segmentação]**: públicos-alvo gerados no Experience Platform pelo serviço de segmentação. Consulte a [documentação de segmentação](../../segmentation/ui/overview.md) para obter mais detalhes.
-* **[!UICONTROL Upload personalizado]**: públicos gerados fora do Experience Platform e carregados na Platform como arquivos CSV. Para saber mais sobre públicos-alvo externos, consulte a documentação em [importação de um público](../../segmentation/ui/overview.md#import-audience).
+* **[!UICONTROL Upload personalizado]**: públicos gerados fora do Experience Platform e carregados na Platform como arquivos CSV. Para saber mais sobre públicos-alvo externos, consulte a documentação em [importação de um público](../../segmentation/ui/audience-portal.md#import-audience).
 * Outros tipos de públicos-alvo, provenientes de outras soluções de Adobe, como [!DNL Audience Manager].
 
 ![Selecione a etapa de públicos do fluxo de trabalho de ativação com vários públicos destacados.](../assets/ui/activate-edge-personalization-destinations/select-audiences.png)
@@ -150,7 +150,7 @@ Você pode selecionar entre vários tipos de públicos-alvo, dependendo de sua o
 
 >[!IMPORTANT]
 >
->Os atributos do perfil podem conter dados confidenciais. Para proteger esses dados, a variável **[!UICONTROL Personalização personalizada]** o destino exige que você use o [API do servidor Edge Network](../../server-api/overview.md) ao configurar o destino para personalização baseada em atributo. Todas as chamadas à API do servidor devem ser feitas em um [contexto autenticado](../../server-api/authentication.md).
+>Os atributos do perfil podem conter dados confidenciais. Para proteger esses dados, a variável **[!UICONTROL Personalization personalizado]** o destino exige que você use o [API do servidor Edge Network](../../server-api/overview.md) ao configurar o destino para personalização baseada em atributo. Todas as chamadas à API do servidor devem ser feitas em um [contexto autenticado](../../server-api/authentication.md).
 >
 ><br>Se você já estiver usando o SDK da Web ou o SDK móvel para a integração, poderá recuperar atributos por meio da API do servidor adicionando uma integração do lado do servidor.
 >
@@ -164,7 +164,7 @@ A adição de atributos é opcional, e você ainda pode prosseguir para a próxi
 
 ### Selecionar atributos de origem {#select-source-attributes}
 
-Para adicionar atributos de origem, selecione o **[!UICONTROL Adicionar novo campo]** controle no **[!UICONTROL Campo de origem]** e pesquise ou navegue até o campo de atributo XDM desejado, conforme mostrado abaixo.
+Para adicionar atributos de origem, selecione o **[!UICONTROL Adicionar novo campo]** controle no **[!UICONTROL Campo do Source]** e pesquise ou navegue até o campo de atributo XDM desejado, conforme mostrado abaixo.
 
 ![Gravação de tela mostrando como selecionar um atributo de direcionamento na etapa de mapeamento.](../assets/ui/activate-edge-personalization-destinations/mapping-step-select-attribute.gif)
 
@@ -174,7 +174,7 @@ Para adicionar atributos de destino, selecione a variável **[!UICONTROL Adicion
 
 >[!NOTE]
 >
->A seleção de atributos do target se aplica somente ao [Personalização personalizada](../catalog/personalization/custom-personalization.md) fluxo de trabalho de ativação, para oferecer suporte ao mapeamento de campos de nome amigável na plataforma de destino.
+>A seleção de atributos do target se aplica somente ao [Personalization personalizado](../catalog/personalization/custom-personalization.md) fluxo de trabalho de ativação, para oferecer suporte ao mapeamento de campos de nome amigável na plataforma de destino.
 
 ![Gravação de tela mostrando como selecionar um atributo XDM na etapa de mapeamento](../assets/ui/activate-edge-personalization-destinations/mapping-step-select-target-attribute.gif)
 
@@ -192,7 +192,7 @@ No **[!UICONTROL Programação de público]** selecione cada público e use a va
 
 Selecionar **[!UICONTROL Próxima]** para acessar o [!UICONTROL Revisão] página.
 
-## Revisão {#review}
+## Revisar {#review}
 
 No **[!UICONTROL Revisão]** você poderá ver um resumo da sua seleção. Selecionar **[!UICONTROL Cancelar]** para interromper o fluxo, **[!UICONTROL Voltar]** para modificar suas configurações ou **[!UICONTROL Concluir]** para confirmar a seleção e começar a enviar dados para o destino.
 

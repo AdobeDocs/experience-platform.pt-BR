@@ -3,9 +3,9 @@ keywords: Experience Platform;página inicial;tópicos populares;controle de ace
 title: Visão Geral do Controle de Acesso Baseado em Atributo
 description: Este documento fornece informações sobre o controle de acesso baseado em atributos no Adobe Experience Platform
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: 900e0dc323e9055a92313788a4a191c615d0b8cd
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
-source-wordcount: '1866'
+source-wordcount: '1864'
 ht-degree: 13%
 
 ---
@@ -98,7 +98,7 @@ Como administrador, você pode usar as funcionalidades de controle de acesso bas
 >
 >Em resumo, lembre-se das seguintes implicações ao trabalhar com destinos e controle de acesso baseado em atributos:
 >
->* Você só pode ativar segmentos aos quais tem permissão para acessar e visualizar no [visualização de navegação de segmento](/help/segmentation/ui/overview.md#browse) e [selecionar etapa do segmento](/help/destinations/ui/activate-batch-profile-destinations.md#select-segments) do workflow de ativação.
+>* Você só pode ativar públicos-alvo aos quais tenha permissão para acessar e exibir no [Portal de público](/help/segmentation/ui/audience-portal.md#browse) e [selecionar etapa do segmento](/help/destinations/ui/activate-batch-profile-destinations.md#select-segments) do workflow de ativação.
 >* No [etapa de mapeamento do fluxo de trabalho de ativação](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping), você só poderá exibir e selecionar para ativação os campos aos quais tem permissão de acesso.
 >* Quando estiver procurando ativar segmentos adicionais para um destino existente no qual você não tem acesso a todos os campos mapeados para exportação, o fluxo de trabalho de ativação será bloqueado para você.
 

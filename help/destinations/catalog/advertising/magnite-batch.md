@@ -4,7 +4,7 @@ description: Use esse destino para fornecer públicos-alvo da CDP do Adobe para 
 badgeBeta: label="Beta" type="Informative"
 hide: true
 hidefromtoc: true
-source-git-commit: 0e6d95e2f68d97805af439d91b4a53230eaf773f
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1685'
 ht-degree: 1%
@@ -77,7 +77,7 @@ A Magnite Streaming: o destino do lote pode receber *qualquer* fontes de identid
 | Origem do público | Suportado | Descrição |
 |-----------------------------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Públicos-alvo gerados pelo Experience Platform [Serviço de segmentação](../../../segmentation/home.md). |
-| Uploads personalizados | ✓ | Públicos-alvo [importado](../../../segmentation/ui/overview.md#import-audience) para o Experience Platform de arquivos CSV. |
+| Uploads personalizados | ✓ | Públicos-alvo [importado](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV. |
 
 {style="table-layout:auto"}
 

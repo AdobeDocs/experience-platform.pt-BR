@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guia da interface de segmentação de streaming
 description: A segmentação por transmissão no Adobe Experience Platform permite fazer a segmentação em tempo quase real, concentrando-se na riqueza de dados. Com a segmentação por transmissão, a qualificação de segmentos agora acontece à medida que os dados chegam à Platform, reduzindo a necessidade de agendar e executar trabalhos de segmentação. Com esse recurso, a maioria das regras de segmento agora pode ser avaliada à medida que os dados são passados para a Platform, o que significa que a associação do segmento será mantida atualizada sem executar trabalhos de segmentação programados.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: c14c6b8037993b3696b4a99633c80c6ee9679399
+source-git-commit: c2f9bcd9aeb0073b8b26413ec29e2dff1ee5c80d
 workflow-type: tm+mt
-source-wordcount: '1541'
+source-wordcount: '1537'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Segmentação de transmissão ativada [!DNL Adobe Experience Platform] O permite
 
 >[!NOTE]
 >
->Para que a segmentação por transmissão funcione, é necessário habilitar a segmentação agendada para a organização. Para obter detalhes sobre como ativar a segmentação programada, consulte [a seção segmentação por transmissão no guia do usuário Segmentação](./overview.md#scheduled-segmentation).
+>Para que a segmentação por transmissão funcione, é necessário habilitar a segmentação agendada para a organização. Para obter detalhes sobre como ativar a segmentação programada, consulte [a visão geral do Audience Portal](./audience-portal.md#scheduled-segmentation).
 
 Uma consulta será avaliada automaticamente com a segmentação por transmissão se atender a qualquer um dos seguintes critérios:
 
@@ -75,7 +75,7 @@ Abaixo está um gráfico de linhas que mostra o número de novos públicos-alvo 
 >
 >Uma definição de segmento é considerada qualificada se passar de sem status para realizado ou se passar de encerrado para realizado. Uma definição de segmento é considerada não qualificada se for da realização à saída.
 >
->Mais informações sobre esses status podem ser encontradas na tabela de status dentro do [visão geral da segmentação](./overview.md#browse).
+>Mais informações sobre esses status podem ser encontradas na tabela de status dentro do [Visão geral do portal de público](./audience-portal.md#customize).
 
 ![O cartão Perfis ao longo do tempo é realçado, mostrando um gráfico de linhas dos perfis ao longo do tempo.](../images/ui/streaming-segmentation/monitoring-streaming-segment-graph.png)
 

@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Públicos-alvo semelhantes
 description: Saiba como direcionar novos públicos-alvo de alto valor no Adobe Experience Platform usando públicos-alvo semelhantes.
 exl-id: c43dac6c-18a0-482f-803e-b75e1b211e98
-source-git-commit: 36fffcddb09444dd6e010a4b5afeec6bf0b5c3bf
+source-git-commit: c2f9bcd9aeb0073b8b26413ec29e2dff1ee5c80d
 workflow-type: tm+mt
-source-wordcount: '2193'
+source-wordcount: '2192'
 ht-degree: 9%
 
 ---
@@ -179,7 +179,7 @@ Para exibir detalhes de um público-alvo semelhante, selecione-o na caixa **[!UI
 
 ![A seção Públicos-alvo semelhantes é destacada.](../images/ui/lookalike-audiences/select-laa.png)
 
-A página de detalhes do público-alvo é exibida. Para obter mais informações nesta página, leia a [seção de detalhes do público-alvo do guia da interface do usuário do Serviço de segmentação](./overview.md#audience-details).
+A página de detalhes do público-alvo é exibida. Para obter mais informações nesta página, leia a [seção detalhes do público da visão geral do Portal de público-alvo](./audience-portal.md#audience-details).
 
 ![Detalhes do público-alvo semelhante são exibidos.](../images/ui/lookalike-audiences/laa-details.png)
 

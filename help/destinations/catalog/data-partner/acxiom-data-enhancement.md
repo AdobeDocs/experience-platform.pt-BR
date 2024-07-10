@@ -3,10 +3,11 @@ title: Aprimoramento de dados da Acxiom
 description: Use esse conector para ativar perfis de Adobe primários no Real-Time CDP para Acxiom para enriquecimento de dados e usar em canais de marketing. Em seguida, você pode usar a origem Acxiom para importar os perfis com dados aprimorados e trabalhar com eles no Real-Time CDP.
 last-substantial-update: 2024-03-14T00:00:00Z
 badge: Beta
-source-git-commit: c35eec2b83f92a7fb165bad13213ec50a6c9863e
+exl-id: 59edc43d-ae8e-4c3d-820c-b5be1c4483f9
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1346'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -56,7 +57,7 @@ Esta seção descreve que tipo de público-alvo você pode exportar para esse de
 | Origem do público | Suportado | Descrição |
 |-----------------------------|-----------|---------------------------------------------------------------------------------------------------------------------|
 | [!DNL Segmentation Service] | ✓ | Públicos-alvo gerados pelo Experience Platform [Serviço de segmentação](../../../segmentation/home.md). |
-| Uploads personalizados | x | Públicos-alvo [importado](../../../segmentation/ui/overview.md#import-audience) para o Experience Platform de arquivos CSV. |
+| Uploads personalizados | x | Públicos-alvo [importado](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV. |
 
 {style="table-layout:auto"}
 
@@ -143,7 +144,7 @@ O processamento correto de arquivos no lado da Acxiom requer elementos de nome e
 
 As sugestões de mapeamento são fornecidas na tabela abaixo, listando os atributos no seu lado de destino que são usados pelo processamento da Acxiom para os quais os clientes podem mapear atributos de perfil. Trate esses elementos como sugestões, pois nem todos os elementos são necessários e os valores de origem dependerão das necessidades da conta.
 
-| Campo de destino | Descrição da origem |
+| Campo de público alvo | Descrição do Source |
 |--------------|-------------------------------------------------------------|
 | name | A variável `person.name.fullName` valor em Experience Platform. |
 | firstName | A variável `person.name.firstName` valor em Experience Platform. |
@@ -152,7 +153,7 @@ As sugestões de mapeamento são fornecidas na tabela abaixo, listando os atribu
 | address2 | A variável `mailingAddress.street2` valor em Experience Platform. |
 | city | A variável `mailingAddress.city` valor em Experience Platform. |
 | estado | A variável `mailingAddress.state` valor em Experience Platform. |
-| CEP | A variável `mailingAddress.postalCode` valor em Experience Platform. |
+| zip | A variável `mailingAddress.postalCode` valor em Experience Platform. |
 
 >[!NOTE]
 >

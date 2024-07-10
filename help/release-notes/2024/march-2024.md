@@ -2,9 +2,9 @@
 title: Notas da versão de março de 2024 da Adobe Experience Platform
 description: As notas da versão de março de 2024 da Adobe Experience Platform.
 exl-id: cab47a76-04f3-48ec-82aa-d17645e4eb15
-source-git-commit: 708bb791ad85b6ee8f3671ffc574e4f27fdddd0a
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
-source-wordcount: '1191'
+source-wordcount: '1190'
 ht-degree: 33%
 
 ---
@@ -76,7 +76,7 @@ Para saber mais sobre a coleta de dados, leia o [visão geral da coleção de da
 | Destino | Tipo | Descrição |
 | ----------- | --------- | ----------- |
 | [(Beta) Conexão com o Acxiom Data Enhancement](../../destinations/catalog/data-partner/acxiom-data-enhancement.md) | Novo | Use esse conector para ativar perfis primários da Real-Time CDP para a Acxiom para enriquecimento de dados e uso em canais de marketing. Em seguida, você pode usar a origem Acxiom para importar os perfis com dados aprimorados e trabalhar com eles no Real-Time CDP. |
-| [(Beta) Conexão do Acxiom Prospect Suppression](../../destinations/catalog/data-partner/acxiom-prospect-suppression.md) | Novo | Exporte seus públicos-alvo primários para o destino da Acxiom, para permitir que a Acxiom suprima clientes conhecidos ou convertidos. Em seguida, use o [Importação de dados de prospecção da Acxiom](../../sources/connectors/data-partners/acxiom-prospecting-data-import.md) conector de origem para assimilar e ativar listas de clientes potenciais da Acxiom, com seus clientes conhecidos ou convertidos removidos. |
+| [(Beta) Conexão da Acxiom Prospect Suppression](../../destinations/catalog/data-partner/acxiom-prospect-suppression.md) | Novo | Exporte seus públicos-alvo primários para o destino da Acxiom, para permitir que a Acxiom suprima clientes conhecidos ou convertidos. Em seguida, use o [Importação de dados de prospecção da Acxiom](../../sources/connectors/data-partners/acxiom-prospecting-data-import.md) conector de origem para assimilar e ativar listas de clientes potenciais da Acxiom, com seus clientes conhecidos ou convertidos removidos. |
 | [Conexão do Amazon Ads](../../destinations/catalog/advertising/amazon-ads.md) | Atualização | Ao exportar dados para o destino do Amazon Ads, agora é possível roteá-los para o Amazon DSP ou para o Marketing Cloud do Amazon (novo). |
 | [Conexão de integração do LiveRamp](../../destinations/catalog/advertising/liveramp-onboarding.md) | Atualização | O destino de integração do LiveRamp agora tem suporte para entregas para a Europa e a Austrália [!DNL LiveRamp] [!DNL SFTP] instâncias. O tamanho máximo de arquivo exportado também foi aumentado para 10 milhões de linhas (de 5 milhões, anteriormente). |
 
@@ -112,7 +112,7 @@ O [!DNL Segmentation Service] permite segmentar dados relacionados a indivíduos
 
 | Recurso | Descrição |
 | ------- | ----------- |
-| Ações em massa | O inventário de público-alvo agora é compatível com ações em massa. Usando ações em massa, você pode selecionar rapidamente vários públicos-alvo para movê-los para uma pasta, aplicar tags, aplicar rótulos de acesso ou excluir. <br> ![Ações em massa no espaço de trabalho da interface do usuário do Audiences.](../2024/assets/march/bulk-actions.png "Ações em massa no espaço de trabalho da interface do usuário do Audiences."){width="100" zoomable="yes"} <br>Para obter mais informações sobre esse recurso, leia a [Guia da interface do usuário do serviço de segmentação](../../segmentation/ui/overview.md#bulk-actions). |
+| Ações em massa | O inventário de público-alvo agora é compatível com ações em massa. Usando ações em massa, você pode selecionar rapidamente vários públicos-alvo para movê-los para uma pasta, aplicar tags, aplicar rótulos de acesso ou excluir. <br> ![Ações em massa no espaço de trabalho da interface do usuário do Audiences.](../2024/assets/march/bulk-actions.png "Ações em massa no espaço de trabalho da interface do usuário do Audiences."){width="100" zoomable="yes"} <br>Para obter mais informações sobre esse recurso, leia a [Visão geral do portal de público](../../segmentation/ui/audience-portal.md#bulk-actions). |
 
 {style="table-layout:auto"}
 

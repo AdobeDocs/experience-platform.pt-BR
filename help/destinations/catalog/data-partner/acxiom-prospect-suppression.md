@@ -3,10 +3,11 @@ title: Acxiom Prospect-Suppression
 description: Exporte seus públicos-alvo primários para o destino da Acxiom, para permitir que a Acxiom suprima clientes conhecidos ou convertidos. Em seguida, use o conector de origem da Acxiom para assimilar e ativar listas de clientes potenciais da Acxiom, com seus clientes conhecidos ou convertidos removidos.
 last-substantial-update: 2024-03-14T00:00:00Z
 badge: Beta
-source-git-commit: c35eec2b83f92a7fb165bad13213ec50a6c9863e
+exl-id: d82e8cd3-970c-44af-99b0-ea154eb3655e
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1466'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -58,7 +59,7 @@ Esta seção descreve que tipo de público-alvo você pode exportar para esse de
 | Origem do público | Suportado | Descrição |
 |-----------------------------|-----------|---------------------------------------------------------------------------------------------------------------------|
 | [!DNL Segmentation Service] | ✓ | Públicos-alvo gerados pelo Experience Platform [Serviço de segmentação](../../../segmentation/home.md). |
-| Uploads personalizados | x | Públicos-alvo [importado](../../../segmentation/ui/overview.md#import-audience) para o Experience Platform de arquivos CSV. |
+| Uploads personalizados | x | Públicos-alvo [importado](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV. |
 
 {style="table-layout:auto"}
 
@@ -143,7 +144,7 @@ Ler [Ativar dados do público-alvo para destinos de exportação de perfil em lo
 
 O processamento requer elementos de nome e endereço, enquanto nem todos os elementos são necessários, fornecendo o máximo possível para ajudar na correspondência bem-sucedida.  As sugestões de mapeamento são fornecidas na tabela abaixo, listando os atributos no seu lado de destino que são usados pelo processamento da Acxiom para os quais os clientes podem mapear atributos de perfil.  Isso deve ser tratado como sugestões, pois nem todos os elementos são necessários e os valores de origem dependerão das necessidades da conta.
 
-| Campo de destino | Descrição da origem |
+| Campo de público alvo | Descrição do Source |
 |--------------|-------------------------------------------------------------|
 | name | A variável `person.name.fullName` valor em Experience Platform. |
 | firstName | A variável `person.name.firstName` valor em Experience Platform. |
@@ -152,7 +153,7 @@ O processamento requer elementos de nome e endereço, enquanto nem todos os elem
 | address2 | A variável `mailingAddress.street2` valor em Experience Platform. |
 | city | A variável `mailingAddress.city` valor em Experience Platform. |
 | estado | A variável `mailingAddress.state` valor em Experience Platform. |
-| CEP | A variável `mailingAddress.postalCode` valor em Experience Platform. |
+| zip | A variável `mailingAddress.postalCode` valor em Experience Platform. |
 
 {style="table-layout:auto"}
 
@@ -164,7 +165,7 @@ O processamento requer elementos de nome e endereço, enquanto nem todos os elem
 
 Use a página de revisão para obter um resumo do seu fluxo de dados antes do envio
 
-![Consulte a seção](../../assets/catalog/data-partner/acxiom/image-destination-review.png)
+![Revisão](../../assets/catalog/data-partner/acxiom/image-destination-review.png)
 
 ## Validar exportação de dados {#exported-data}
 

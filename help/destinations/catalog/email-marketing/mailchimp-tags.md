@@ -2,7 +2,8 @@
 title: Tags do Mailchimp
 description: O destino de Tags do Mailchimp permite exportar os dados da sua conta e ativá-los no Mailchimp para interagir com os contatos.
 last-substantial-update: 2024-02-20T00:00:00Z
-source-git-commit: dff460f0b0d365d3d643744544642d9f9488e18a
+exl-id: 0f278ca8-4fcf-4c47-b538-9cffa45a3d90
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1646'
 ht-degree: 2%
@@ -86,9 +87,9 @@ Consulte a [!DNL Mailchimp] [limites de taxa](https://mailchimp.com/developer/ma
 Esta seção descreve que tipo de público-alvo você pode exportar para esse destino.
 
 | Origem do público | Suportado | Descrição |
----------|----------|----------|
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Públicos-alvo gerados pelo Experience Platform [Serviço de segmentação](../../../segmentation/home.md). |
-| Uploads personalizados | ✓ | Públicos-alvo [importado](../../../segmentation/ui/overview.md#import-audience) para o Experience Platform de arquivos CSV. |
+| Uploads personalizados | ✓ | Públicos-alvo [importado](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV. |
 
 {style="table-layout:auto"}
 
@@ -120,7 +121,7 @@ Para autenticar no destino, preencha os campos obrigatórios abaixo e selecione 
 | Campo | Descrição |
 | --- | --- |
 | **[!UICONTROL Nome de usuário]** | Seu [!DNL Mailchimp] usuário. |
-| **[!UICONTROL Senha]** | Seu [!DNL Mailchimp] **Chave de API**, que você anotou na [Coletar [!DNL Mailchimp] credenciais](#gather-credentials) seção.<br> Sua chave de API assume a forma de `{KEY}-{DC}`, em que o `{KEY}` porção refere-se ao valor anotado na variável [[!DNL Mailchimp] Chave de API](#gather-credentials) seção e o `{DC}` parte refere-se à [[!DNL Mailchimp] data center](#identify-data-center). <br>Você pode fornecer a variável `{KEY}` parte ou o formulário inteiro.<br> Por exemplo, se sua chave de API for <br>*`0123456789abcdef0123456789abcde-us14`*,<br> você pode fornecer *`0123456789abcdef0123456789abcde`*ou *`0123456789abcdef0123456789abcde-us14`*como o valor. |
+| **[!UICONTROL Password]** | Seu [!DNL Mailchimp] **Chave de API**, que você anotou na [Coletar [!DNL Mailchimp] credenciais](#gather-credentials) seção.<br> Sua chave de API assume a forma de `{KEY}-{DC}`, em que o `{KEY}` porção refere-se ao valor anotado na variável [[!DNL Mailchimp] Chave de API](#gather-credentials) seção e o `{DC}` parte refere-se à [[!DNL Mailchimp] data center](#identify-data-center). <br>Você pode fornecer a variável `{KEY}` parte ou o formulário inteiro.<br> Por exemplo, se sua chave de API for <br>*`0123456789abcdef0123456789abcde-us14`*,<br> você pode fornecer *`0123456789abcdef0123456789abcde`*ou *`0123456789abcdef0123456789abcde-us14`*como o valor. |
 
 {style="table-layout:auto"}
 
@@ -167,13 +168,13 @@ Para mapear corretamente os campos XDM para o [!DNL Mailchimp Tags] campos de de
 1. No **[!UICONTROL Mapeamento]** etapa, selecione **[!UICONTROL Adicionar novo mapeamento]**. Você verá uma nova linha de mapeamento na tela.
 1. No **[!UICONTROL Selecionar campo de origem]** escolha **[!UICONTROL Selecionar namespace de identidade]** e selecione o `Email` namespace de identidade.
 
-   ![Captura de tela da interface do usuário da plataforma com o campo Origem como Email do namespace de identidade.](../../assets/catalog/email-marketing/mailchimp-tags/source-field.png)
+   ![Captura de tela da interface do usuário da plataforma com o campo Source como email do namespace de identidade.](../../assets/catalog/email-marketing/mailchimp-tags/source-field.png)
 
 1. No **[!UICONTROL Selecionar campo de destino]** escolha **[!UICONTROL Selecionar namespace de identidade]** e selecione o `Email` namespace de identidade.
 
    ![Captura de tela da interface do usuário da plataforma com o campo Target como email do namespace de identidade.](../../assets/catalog/email-marketing/mailchimp-tags/target-field.png)
 
-   Os mapeamentos entre o esquema de perfil XDM e o [!DNL Mailchimp Tags] será conforme abaixo: | Campo de origem | Campo de destino | Obrigatório | | — | — | — | |`IdentityMap: Email`|`Identity: Email`| Sim |
+   Os mapeamentos entre o esquema de perfil XDM e o [!DNL Mailchimp Tags] será conforme abaixo: | Campo do Source | Campo de destino | Obrigatório | | — | — | — | |`IdentityMap: Email`|`Identity: Email`| Sim |
 
    Um exemplo com os mapeamentos concluídos é mostrado abaixo:
    ![Exemplo de captura de tela da interface do usuário do Platform mostrando mapeamentos de campo.](../../assets/catalog/email-marketing/mailchimp-tags/mappings.png)

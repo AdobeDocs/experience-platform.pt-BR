@@ -2,7 +2,7 @@
 title: (API) Conexão do Salesforce Marketing Cloud
 description: O destino do Marketing Cloud do Salesforce (anteriormente conhecido como ExactTarget) permite exportar os dados da sua conta e ativá-los no Marketing Cloud do Salesforce para as suas necessidades comerciais.
 exl-id: 0cf068e6-8a0a-4292-a7ec-c40508846e27
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '2895'
 ht-degree: 1%
@@ -37,7 +37,7 @@ O departamento de vendas de uma plataforma de aluguel de residências quer trans
 
 ### Pré-requisitos no Experience Platform {#prerequisites-in-experience-platform}
 
-Antes de ativar os dados para o [!DNL (API) Salesforce Marketing Cloud] destino, você deve ter um [schema](/help/xdm/schema/composition.md), um [conjunto de dados](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=pt-BR), e [segmentos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) criado em [!DNL Experience Platform].
+Antes de ativar os dados para o [!DNL (API) Salesforce Marketing Cloud] destino, você deve ter um [schema](/help/xdm/schema/composition.md), um [conjunto de dados](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html), e [segmentos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) criado em [!DNL Experience Platform].
 
 ### Pré-requisitos no [!DNL (API) Salesforce Marketing Cloud] {#prerequisites-destination}
 
@@ -105,7 +105,7 @@ Anote os itens abaixo antes de autenticar na [!DNL (API) Salesforce Marketing Cl
 | Credencial | Descrição | Exemplo |
 | --- | --- | --- |
 | Subdomain | Consulte [[!DNL Salesforce Marketing Cloud domain prefix]](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/your-subdomain-tenant-specific-endpoints.html) para saber como obter esse valor do [!DNL Salesforce Marketing Cloud] interface. | Se o seu [!DNL Salesforce Marketing Cloud] o domínio é<br> *`mcq4jrssqdlyc4lph19nnqgzzs84`.login.exacttarget.com*, <br>você precisa fornecer `mcq4jrssqdlyc4lph19nnqgzzs84` como o valor. |
-| ID do cliente | Consulte a [!DNL Salesforce Marketing Cloud] [documentação](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/access-token-s2s.html) para saber como obter esse valor do [!DNL Salesforce Marketing Cloud] interface. | r23kxxxxxxxx0z05xxxxxx |
+| ID de cliente | Consulte a [!DNL Salesforce Marketing Cloud] [documentação](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/access-token-s2s.html) para saber como obter esse valor do [!DNL Salesforce Marketing Cloud] interface. | r23kxxxxxxxx0z05xxxxxx |
 | Segredo do cliente | Consulte a [!DNL Salesforce Marketing Cloud] [documentação](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/access-token-s2s.html) para saber como obter esse valor do [!DNL Salesforce Marketing Cloud] interface. | ipxxxxxxxxxxT4xxxxxxxxx |
 
 {style="table-layout:auto"}
@@ -136,9 +136,9 @@ Anote os itens abaixo antes de autenticar na [!DNL (API) Salesforce Marketing Cl
 Esta seção descreve quais tipos de públicos-alvo você pode exportar para esse destino.
 
 | Origem do público | Suportado | Descrição |
----------|----------|----------|
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Públicos-alvo gerados pelo Experience Platform [Serviço de segmentação](../../../segmentation/home.md). |
-| Uploads personalizados | X | Públicos-alvo [importado](../../../segmentation/ui/overview.md#import-audience) para o Experience Platform de arquivos CSV. |
+| Uploads personalizados | X | Públicos-alvo [importado](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV. |
 
 {style="table-layout:auto"}
 
@@ -219,7 +219,7 @@ Para mapear corretamente os campos XDM para o [!DNL (API) Salesforce Marketing C
 
    * Repita essas etapas para adicionar os seguintes mapeamentos entre o esquema de perfil XDM e [!DNL (API) Salesforce Marketing Cloud]:
 
-     | Campo de origem | Campo de destino | Obrigatório |
+     | Campo de origem | Campo de público alvo | Obrigatório |
      |---|---|---|
      | `IdentityMap: contactKey` | `Identity: salesforceContactKey` | `Mandatory` |
      | `xdm: personalEmail.address` | `Attribute: Email Address` do [!DNL Salesforce Marketing Cloud] [!DNL Email Addresses] extensão de dados. | `Mandatory`, ao adicionar novos contatos. |

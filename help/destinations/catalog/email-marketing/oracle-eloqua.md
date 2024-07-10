@@ -3,7 +3,7 @@ keywords: email;Email;e-mail;destinos de e-mail;oracle eloqua;oracle;email;Email
 title: (Arquivos) Conexão Oracle Eloqua
 description: O Oracle Eloqua é uma plataforma de software as a service (SaaS) para automação de marketing oferecida pelo Oracle, que tem como objetivo ajudar profissionais e organizações B2B a gerenciar campanhas de marketing e a geração de leads de vendas.
 exl-id: 6eaa79ff-8874-423b-bdff-aa04f6101a53
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '717'
 ht-degree: 3%
@@ -21,9 +21,9 @@ Para enviar dados do público-alvo para [!DNL Oracle Eloqua], você deve primeir
 Esta seção descreve quais tipos de públicos-alvo você pode exportar para esse destino.
 
 | Origem do público | Suportado | Descrição |
----------|----------|----------|
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Públicos-alvo gerados pelo Experience Platform [Serviço de segmentação](../../../segmentation/home.md). |
-| Uploads personalizados | ✓ | Públicos-alvo [importado](../../../segmentation/ui/overview.md#import-audience) para o Experience Platform de arquivos CSV. |
+| Uploads personalizados | ✓ | Públicos-alvo [importado](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV. |
 
 {style="table-layout:auto"}
 
@@ -65,7 +65,7 @@ Enquanto [configuração](../../ui/connect-destination.md) Para esse destino, vo
    * [!UICONTROL Domínio]
    * [!UICONTROL Port]
    * [!UICONTROL Nome de usuário]
-   * [!UICONTROL Senha]
+   * [!UICONTROL Password]
 * Para **[!UICONTROL SFTP com chave SSH]** conexões, você deve fornecer:
    * [!UICONTROL Domínio]
    * [!UICONTROL Port]

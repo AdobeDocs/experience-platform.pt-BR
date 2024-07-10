@@ -3,7 +3,7 @@ keywords: personalização personalizada, destino, destino personalizado da expe
 title: Conexão de personalização personalizada
 description: Esse destino fornece personalização externa, sistemas de gerenciamento de conteúdo, servidores de anúncios e outros aplicativos que estão sendo executados no site uma maneira de recuperar informações de público-alvo do Adobe Experience Platform. Esse destino fornece personalização em tempo real com base na associação do público-alvo do perfil do usuário.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '906'
 ht-degree: 10%
@@ -23,7 +23,7 @@ ht-degree: 10%
 
 >[!IMPORTANT]
 >
->Os atributos do perfil podem conter dados confidenciais. Para proteger esses dados, você deve usar o [API do servidor de rede de borda](/help/server-api/overview.md) ao configurar o **[!UICONTROL Personalização personalizada]** destino para personalização baseada em atributo. Todas as chamadas à API do servidor devem ser feitas em um [contexto autenticado](../../../server-api/authentication.md).
+>Os atributos do perfil podem conter dados confidenciais. Para proteger esses dados, você deve usar o [API do servidor Edge Network](/help/server-api/overview.md) ao configurar o **[!UICONTROL Personalization personalizado]** destino para personalização baseada em atributo. Todas as chamadas à API do servidor devem ser feitas em um [contexto autenticado](../../../server-api/authentication.md).
 >
 ><br>Se você já estiver usando o SDK da Web ou o SDK móvel para a integração, poderá recuperar atributos por meio da API do servidor adicionando uma integração do lado do servidor.
 >
@@ -46,9 +46,9 @@ Essa integração é viabilizada pelo [Adobe Experience Platform Web SDK](/help/
 Esta seção descreve quais tipos de públicos-alvo você pode exportar para esse destino.
 
 | Origem do público | Suportado | Descrição |
----------|----------|----------|
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Públicos-alvo gerados pelo Experience Platform [Serviço de segmentação](../../../segmentation/home.md). |
-| Uploads personalizados | ✓ | Públicos-alvo [importado](../../../segmentation/ui/overview.md#import-audience) para o Experience Platform de arquivos CSV. |
+| Uploads personalizados | ✓ | Públicos-alvo [importado](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV. |
 
 {style="table-layout:auto"}
 
@@ -156,11 +156,11 @@ alloy("sendEvent", {
   });
 ```
 
-### Exemplo de resposta para [!UICONTROL Personalização personalizada com atributos]
+### Exemplo de resposta para [!UICONTROL Personalization personalizado com atributos]
 
-Ao usar **[!UICONTROL Personalização personalizada com atributos]**, a resposta da API será semelhante ao exemplo abaixo.
+Ao usar **[!UICONTROL Personalization personalizado com atributos]**, a resposta da API será semelhante ao exemplo abaixo.
 
-A diferença entre **[!UICONTROL Personalização personalizada com atributos]** e **[!UICONTROL Personalização personalizada]** é a inclusão da `attributes` na resposta da API.
+A diferença entre **[!UICONTROL Personalization personalizado com atributos]** e **[!UICONTROL Personalization personalizado]** é a inclusão da `attributes` na resposta da API.
 
 ```json
 [

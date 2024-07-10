@@ -2,7 +2,7 @@
 title: Perguntas frequentes do Audiences
 description: Descubra respostas para perguntas frequentes sobre públicos-alvo e outros conceitos relacionados à segmentação.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: 147dded9f5eb6c2e153a80fa80b18e9fe96a6faa
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '4096'
 ht-degree: 0%
@@ -239,11 +239,11 @@ Não, você não. Desde que você tenha permissões de edição para públicos-a
 
 ### Há um limite para o número de pastas que posso criar?
 
-Não, não há limite para o número de pastas que você pode criar. Para obter mais informações sobre pastas, leia a [seção inventário de público](./ui/overview.md#folders) da visão geral da interface do usuário do serviço de segmentação.
+Não, não há limite para o número de pastas que você pode criar. Para obter mais informações sobre pastas, leia a [seção inventário de público](./ui/audience-portal.md#folders) da visão geral da interface do usuário do serviço de segmentação.
 
 ### Há um limite para o número de tags que podem ser adicionadas a um público-alvo?
 
-Não, não há limite para o número de tags que podem ser adicionadas a um público-alvo. Para obter mais informações sobre tags, leia a [seção inventário de público](./ui/overview.md#tags) da visão geral da interface do usuário do serviço de segmentação.
+Não, não há limite para o número de tags que podem ser adicionadas a um público-alvo. Para obter mais informações sobre tags, leia a [seção inventário de público](./ui/audience-portal.md#tags) da visão geral da interface do usuário do serviço de segmentação.
 
 ### Há um limite para o número de tags que posso criar?
 
@@ -251,7 +251,7 @@ Não, não há limite para o número de tags que podem ser criadas. No entanto, 
 
 ### Quando procuro um público-alvo por nome ou tag em uma pasta principal, também posso pesquisar pelas pastas secundárias relacionadas?
 
-Não, esse comportamento não é compatível. No entanto, é possível alterar a exibição do inventário de público-alvo para analisar **Todos os públicos-alvo**, em seguida, pesquise em todas as pastas. Para obter mais informações sobre como usar a pesquisa no inventário de público-alvo, leia a [seção de pesquisa](./ui/overview.md#search) da visão geral da interface do usuário do serviço de segmentação.
+Não, esse comportamento não é compatível. No entanto, é possível alterar a exibição do inventário de público-alvo para analisar **Todos os públicos-alvo**, em seguida, pesquise em todas as pastas. Para obter mais informações sobre como usar a pesquisa no inventário de público-alvo, leia a [seção de pesquisa](./ui/audience-portal.md#search) da visão geral da interface do usuário do serviço de segmentação.
 
 ### Posso atribuir automaticamente um público-alvo a uma pasta no momento da criação?
 

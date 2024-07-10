@@ -3,7 +3,7 @@ keywords: atributos do dirigível;destino do dirigível
 title: Conexão com os atributos do dirigível
 description: Transmita dados de público-alvo do Adobe para o dirigível como atributos de público-alvo para direcionamento no dirigível.
 exl-id: bfc1b52f-2d68-40d6-9052-c2ee1e877961
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1039'
 ht-degree: 2%
@@ -40,9 +40,9 @@ Antes de enviar os públicos-alvo para [!DNL Airship], você deve:
 Esta seção descreve quais tipos de públicos-alvo você pode exportar para esse destino.
 
 | Origem do público | Suportado | Descrição |
----------|----------|----------|
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Públicos-alvo gerados pelo Experience Platform [Serviço de segmentação](../../../segmentation/home.md). |
-| Uploads personalizados | ✓ | Públicos-alvo [importado](../../../segmentation/ui/overview.md#import-audience) para o Experience Platform de arquivos CSV. |
+| Uploads personalizados | ✓ | Públicos-alvo [importado](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV. |
 
 {style="table-layout:auto"}
 
@@ -124,13 +124,13 @@ Consulte [Ativar dados do público-alvo para streaming de destinos de exportaç�
 
 ## Considerações de mapeamento {#mapping-considerations}
 
-[!DNL Airship] os atributos podem ser definidos em um canal, que representa a instância do dispositivo, por exemplo, iPhone, ou em um usuário nomeado, que mapeia todos os dispositivos de um usuário para um identificador comum, como uma ID de cliente. Se você tiver endereços de email de texto sem formatação (com hash) como identidade principal no esquema, selecione o campo de email no **[!UICONTROL Atributos de origem]** e mapear para o [!DNL Airship] usuário nomeado na coluna à direita em **[!UICONTROL Identidades do Target]**, conforme mostrado abaixo.
+[!DNL Airship] os atributos podem ser definidos em um canal, que representa a instância do dispositivo, por exemplo, iPhone, ou em um usuário nomeado, que mapeia todos os dispositivos de um usuário para um identificador comum, como uma ID de cliente. Se você tiver endereços de email de texto sem formatação (com hash) como identidade principal no esquema, selecione o campo de email no **[!UICONTROL Atributos Source]** e mapear para o [!DNL Airship] usuário nomeado na coluna à direita em **[!UICONTROL Identidades do Target]**, conforme mostrado abaixo.
 
 ![Mapeamento de usuário nomeado](../../assets/catalog/mobile-engagement/airship/mapping.png)
 
 Para identificadores que devem ser mapeados para um canal, ou seja, um dispositivo, mapeie para o canal apropriado com base na origem. As imagens a seguir mostram como dois mapeamentos são criados:
 
-* ID de publicidade do IDFA iOS para um [!DNL Airship] Canal do iOS
+* ID do iOS Advertising IDFA para um [!DNL Airship] Canal do iOS
 * Adobe `fullName` atributo para [!DNL Airship] Atributo &quot;Nome completo&quot;
 
 >[!NOTE]

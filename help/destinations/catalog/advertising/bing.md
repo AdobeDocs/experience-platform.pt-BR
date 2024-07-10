@@ -1,9 +1,9 @@
 ---
 keywords: publicidade; bing;
 title: Conexão com o Microsoft Bing
-description: Com o destino da conexão do Microsoft Bing, você pode executar redirecionamento e campanhas digitais direcionadas por público em toda a Rede de publicidade da Microsoft, incluindo Publicidade de exibição, Pesquisa e Nativo.
+description: Com o destino da conexão do Microsoft Bing, você pode executar campanhas digitais direcionadas por público e redirecionamento em toda a Microsoft Advertising Network, incluindo Publicidade de exibição, Pesquisa e Nativo.
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '687'
 ht-degree: 10%
@@ -16,7 +16,7 @@ ht-degree: 10%
 
 Use o [!DNL Microsoft Bing] destino para enviar dados de perfil a todo o [!DNL Microsoft Advertising Network], incluindo [!DNL Display Advertising], [!DNL Search], e [!DNL Native].
 
-A variável [!DNL Microsoft Bing] o destino cria *[!DNL Custom Audiences]* no Microsoft. Estes estão disponíveis tanto no [!DNL Microsoft Search Network] e [!DNL Audience Network] ([!DNL Native] /[!DNL Display] /[!DNL Programmatic]), conforme indicado na [Documentação da Microsoft Advertising](https://help.ads.microsoft.com/#apex/ads/en/56892/1-500).
+A variável [!DNL Microsoft Bing] o destino cria *[!DNL Custom Audiences]* no Microsoft. Estes estão disponíveis tanto no [!DNL Microsoft Search Network] e [!DNL Audience Network] ([!DNL Native] /[!DNL Display] /[!DNL Programmatic]), conforme indicado na [Documentação do Microsoft Advertising](https://help.ads.microsoft.com/#apex/ads/en/56892/1-500).
 
 Para enviar dados de perfil para [!DNL Microsoft Bing], você deve primeiro se conectar ao destino.
 
@@ -30,7 +30,7 @@ Como profissional de marketing, quero poder usar públicos-alvo criados com o [!
 
 | Identidade | Descrição |
 |---|---|
-| EMPREGADA | ID de publicidade do Microsoft |
+| EMPREGADA | MICROSOFT ADVERTISING ID |
 
 {style="table-layout:auto"}
 
@@ -39,9 +39,9 @@ Como profissional de marketing, quero poder usar públicos-alvo criados com o [!
 Esta seção descreve quais tipos de públicos-alvo você pode exportar para esse destino.
 
 | Origem do público | Suportado | Descrição |
----------|----------|----------|
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Públicos-alvo gerados pelo Experience Platform [Serviço de segmentação](../../../segmentation/home.md). |
-| Uploads personalizados | ✓ | Públicos-alvo [importado](../../../segmentation/ui/overview.md#import-audience) para o Experience Platform de arquivos CSV. |
+| Uploads personalizados | ✓ | Públicos-alvo [importado](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV. |
 
 {style="table-layout:auto"}
 
@@ -62,7 +62,7 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 
 >[!IMPORTANT]
 >
->Se você deseja criar seu primeiro destino com o [!DNL Microsoft Bing] e não ativaram o [Funcionalidade de sincronização de ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) no Serviço de ID de Experience Cloud no passado (com o Adobe Audience Manager ou outros aplicativos), entre em contato com a Consultoria de Adobe ou com o Atendimento ao cliente para ativar as sincronizações de ID. Se você já configurou o [!DNL Microsoft Bing] integrações no Audience Manager, as sincronizações de ID configuradas para serem transferidas para a Platform.
+>Se você deseja criar seu primeiro destino com o [!DNL Microsoft Bing] e não ativaram o [Funcionalidade de sincronização de ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) no Serviço de ID de Experience Cloud anterior (com o Adobe Audience Manager ou outros aplicativos), entre em contato com a Adobe Consulting ou com o Atendimento ao cliente para ativar as sincronizações de ID. Se você já configurou o [!DNL Microsoft Bing] integrações no Audience Manager, as sincronizações de ID configuradas para serem transferidas para a Platform.
 
 Ao configurar o destino, você deve fornecer as seguintes informações:
 

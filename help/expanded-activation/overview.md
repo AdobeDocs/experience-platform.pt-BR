@@ -1,13 +1,13 @@
 ---
 title: Ativação expandida do Audience Manager
 description: Saiba como ativar públicos-alvo do Audience Manager para destinos sociais e de publicidade, por meio da Ativação expandida do Audience Manager.
-source-git-commit: 5bc8d6c7173f221c2830a9b15c8ec6241e8bc59d
+exl-id: 1f209578-a688-40b8-8f13-dab0d4380b3b
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '473'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
-
 
 # Ativação expandida do Audience Manager
 
@@ -21,8 +21,8 @@ Integrada no Adobe Experience Platform, a Ativação expandida de Audience Manag
 
 A Ativação expandida do Audience Manager usa conceitos e componentes do Adobe Experience Platform. Para entender melhor o fluxo de trabalho de Ativação expandida e os componentes que você usará, verifique se você tem uma compreensão básica dos seguintes conceitos:
 
-* [Públicos-alvo](../segmentation/ui/overview.md): públicos são conjuntos de pessoas que compartilham comportamentos e/ou características semelhantes. Essa coleção de pessoas pode ser gerada pelo Adobe Experience Platform usando definições de segmento ou composição de público-alvo (público-alvo gerado pela Platform) ou de fontes externas, como uploads personalizados (público-alvo gerado externamente). Na Ativação expandida, os segmentos de Audience Manager (públicos-alvo) são importados como [uploads personalizados](../segmentation/ui/overview.md#import-audience).
-* [Conectores de origem](../sources/home.md): conectores de origem (também conhecidos como fontes) ajudam os usuários do Experience Platform a assimilar dados de várias fontes, permitindo a estruturação, o rótulo e o aprimoramento de dados usando serviços de Experience Platform. Os dados podem ser assimilados de várias fontes, como armazenamento baseado em nuvem, software de terceiros e sistemas de CRM.
+* [Públicos-alvo](../segmentation/ui/overview.md): públicos são conjuntos de pessoas que compartilham comportamentos e/ou características semelhantes. Essa coleção de pessoas pode ser gerada pelo Adobe Experience Platform usando definições de segmento ou composição de público-alvo (público-alvo gerado pela Platform) ou de fontes externas, como uploads personalizados (público-alvo gerado externamente). Na Ativação expandida, os segmentos de Audience Manager (públicos-alvo) são importados como [uploads personalizados](../segmentation/ui/audience-portal.md#import-audience).
+* [Conectores do Source](../sources/home.md): os conectores do Source (também conhecidos como fontes) ajudam os usuários do Experience Platform a assimilar dados de várias fontes com facilidade, permitindo a estruturação, o rótulo e o aprimoramento de dados usando os serviços de Experience Platform. Os dados podem ser assimilados de várias fontes, como armazenamento baseado em nuvem, software de terceiros e sistemas de CRM.
 * [Conectores de destino](../destinations/home.md): os destinos descrevem qualquer endpoint, como um aplicativo Adobe, uma plataforma de publicidade, um serviço de armazenamento em nuvem ou um serviço de marketing, em que um público-alvo é ativado e entregue. [!DNL Expanded Activation] O oferece suporte à ativação de públicos-alvo para [publicidade](../destinations/catalog/advertising/overview.md) e [social](../destinations/catalog/social/overview.md) conectores de destino.
 
 ## Pré-requisitos {#prerequisites}
@@ -43,4 +43,3 @@ Para ativar públicos-alvo por meio do [!DNL Expanded Activation], verifique se 
 ## Próximas etapas {#next-steps}
 
 Agora que você conhece melhor os casos de uso e os benefícios do [!DNL Expanded Activation], start [configuração da sua conta](administration.md) e depois [ativar seus públicos-alvo](activate-audiences.md).
-

@@ -1,11 +1,12 @@
 ---
-title: Conexão com o SAP Commerce
+title: Conexão SAP Commerce
 description: Use o conector de destino do SAP Commerce para atualizar os registros do cliente em sua conta SAP.
 last-substantial-update: 2024-02-20T00:00:00Z
-source-git-commit: 9bb2cf5adcd48f9d111ba04b8c93129367dd12f8
+exl-id: 3bd1a2a7-fb56-472d-b9bd-603b94a8937e
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
-source-wordcount: '2245'
-ht-degree: 2%
+source-wordcount: '2246'
+ht-degree: 3%
 
 ---
 
@@ -29,7 +30,7 @@ Consulte as seções abaixo para obter os pré-requisitos que você deve configu
 
 ### Pré-requisitos do Experience Platform {#prerequisites-in-experience-platform}
 
-Antes de ativar os dados para o [!DNL SAP Commerce] destino, você deve ter um [schema](/help/xdm/schema/composition.md), um [conjunto de dados](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=pt-BR), e [públicos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html) criado em [!DNL Experience Platform].
+Antes de ativar os dados para o [!DNL SAP Commerce] destino, você deve ter um [schema](/help/xdm/schema/composition.md), um [conjunto de dados](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html), e [públicos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html) criado em [!DNL Experience Platform].
 
 Consulte a documentação do Experience Platform para [Grupo de campos de esquema Detalhes da associação do público](/help/xdm/field-groups/profile/segmentation.md) se precisar de orientação sobre os status do público-alvo.
 
@@ -44,8 +45,8 @@ Para exportar dados da Platform para o seu [!DNL SAP Commerce] conta, é necess�
 #### Gerar uma chave de serviço {#prerequisites-service-key}
 
 * A variável [!DNL SAP Commerce] a chave de serviço permite acessar a variável [!DNL SAP Subscription Billing] API por meio do Experience Platform. Consulte a [!DNL SAP Commerce] [criar uma Chave de serviço com a ID do cliente e o Segredo do cliente](https://help.sap.com/docs/CLOUD_TO_CASH_OD/1216e7b79c984675b0a6f0005e351c74/87c11a0f5dc3494eaf3baa355925c030.html#create-a-service-key-with-client-id-and-client-secret) para criar uma chave de serviço. O [!DNL SAP Commerce] exige o seguinte:
-   * ID do cliente
-   * Client secret
+   * ID de cliente
+   * Segredo do cliente
    * URL. O padrão de URL é o seguinte: `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`. Esse valor será usado posteriormente para obter valores para `Region` e `Endpoint`.
 
 +++Selecione para ver um exemplo da chave de serviço
@@ -93,8 +94,8 @@ Para conectar [!DNL SAP Commerce] para Experience Platform, você deve fornecer 
 
 | Credencial | Descrição |
 | --- | --- |
-| ID do cliente | O valor de `clientId` da chave de serviço. |
-| Client secret | O valor de `clientSecret` da chave de serviço. |
+| ID de cliente | O valor de `clientId` da chave de serviço. |
+| Segredo do cliente | O valor de `clientSecret` da chave de serviço. |
 | Endpoint | O valor de `url` na chave de serviço, é semelhante a `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`. |
 | Região | O local do data center. A região está presente no `url` e tem um valor semelhante a `eu10` ou `us10`. Por exemplo, se a variável `url` é `https://eu10.revenue.cloud.sap/api` você precisa `eu10`. |
 
@@ -118,10 +119,10 @@ Esse destino suporta a ativação de todos os públicos-alvo gerados pelo Experi
 
 Esse destino também suporta a ativação dos públicos-alvo descritos na tabela abaixo.
 
-| Tipo de público | Descrição |
----------|----------|
+| Tipo de público | Suportado | Descrição |
+| ------------- | --------- | ----------- |
 | [!DNL Segmentation Service] | ✓ | Públicos-alvo gerados pelo Experience Platform [Serviço de segmentação](../../../segmentation/home.md). |
-| Uploads personalizados | ✓ | Públicos-alvo [importado](../../../segmentation/ui/overview.md#import-audience) para o Experience Platform de arquivos CSV. |
+| Uploads personalizados | ✓ | Públicos-alvo [importado](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV. |
 
 {style="table-layout:auto"}
 
@@ -200,7 +201,7 @@ A variável `customerNumberSAP` a identidade é um mapeamento obrigatório para 
 1. No **[!UICONTROL Selecionar campo de destino]** escolha a **[!UICONTROL Selecionar namespace de identidade]** e selecione o `customerNumber` identidade.
    ![Captura de tela da interface do usuário da plataforma selecionando o email como um atributo de destino a ser mapeado como identidade.](../../assets/catalog/ecommerce/sap-commerce/mapping-select-target-identity.png)
 
-| Campo de origem | Campo de destino | Obrigatório |
+| Campo de origem | Campo de público alvo | Obrigatório |
 | --- | --- | --- |
 | `IdentityMap: customerNumberSAP` | `Identity: customerNumber` | Sim |
 
@@ -229,14 +230,14 @@ Os mapeamentos de atributos obrigatórios dependem do **[!UICONTROL Tipo de clie
 
 >[!TAB Cliente individual]
 
-| Campo de origem | Campo de destino | Obrigatório |
+| Campo de origem | Campo de público alvo | Obrigatório |
 | --- | --- | --- |
 | `xdm: person.lastName` | `Attribute: lastName` | Sim |
 | `xdm: workAddress.countryCode` | `Attribute: countryCode` | Sim |
 
 >[!TAB Cliente corporativo]
 
-| Campo de origem | Campo de destino | Obrigatório |
+| Campo de origem | Campo de público alvo | Obrigatório |
 | --- | --- | --- |
 | `xdm: b2b.companyName` | `Attribute: company` | Sim |
 | `xdm: workAddress.countryCode` | `Attribute: countryCode` | Sim |
@@ -251,7 +252,7 @@ Em seguida, você pode adicionar mapeamentos adicionais entre o esquema de perfi
 
 >[!TAB Cliente individual]
 
-| Campo de origem | Campo de destino | Obrigatório |
+| Campo de origem | Campo de público alvo | Obrigatório |
 | --- | --- | --- |
 | `xdm: person.name.firstName` | `Attribute: firstName` | Não |
 | `xdm: workAddress.street1` | `Attribute: street` | Não |
@@ -262,7 +263,7 @@ Um exemplo com mapeamentos de atributos obrigatórios e opcionais, em que o clie
 
 >[!TAB Cliente corporativo]
 
-| Campo de origem | Campo de destino | Obrigatório |
+| Campo de origem | Campo de público alvo | Obrigatório |
 | --- | --- | --- |
 | `xdm: workAddress.street1` | `Attribute: street` | Não |
 | `xdm: workAddress.city` | `Attribute: city` | Não |

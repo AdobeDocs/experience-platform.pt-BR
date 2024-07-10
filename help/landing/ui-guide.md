@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Visão geral da interface do Experience Platform
 description: Adobe Experience Platform
 exl-id: 47f9a3fb-731d-4ade-8069-faaa18f224dc
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1795'
 ht-degree: 1%
@@ -75,7 +75,7 @@ Selecionar o alternador abre um menu suspenso de organizações às quais você 
 
 ### Alternar aplicativos
 
-O próximo item no lado direito da navegação superior é a variável **alternador de aplicativos**, representado pela ![alternador de aplicativos](./images/user-guide/app-switcher-icon.png) ícone. Ao selecionar esse ícone, você pode alternar entre os aplicativos do Adobe aos quais sua organização tem acesso, como o Experience Platform, Analytics, Assets e outros.
+O próximo item no lado direito da navegação superior é a variável **alternador de aplicativos**, representado pela ![alternador de aplicativos](./images/user-guide/app-switcher-icon.png) ícone. Ao selecionar esse ícone, você pode alternar entre aplicativos Adobe aos quais sua organização tem acesso, como Experience Platform, Analytics, Assets e outros.
 
 ### Ajuda
 
@@ -129,7 +129,7 @@ A variável **[!UICONTROL Destinos]** permite criar, atualizar e excluir destino
 
 A variável **[!UICONTROL Perfis]** permite navegar pelos perfis do cliente, exibir métricas de perfil, criar e gerenciar políticas de mesclagem e exibir esquemas de união. Para saber mais sobre como usar o [!UICONTROL Perfis] , leia a seção [[!DNL Profile] guia do usuário](../profile/ui/user-guide.md). Mais informações sobre o Perfil do cliente em tempo real podem ser encontradas na [Visão geral do Perfil do cliente em tempo real](../profile/home.md).
 
-A variável **[!UICONTROL Segmentos]** permite criar e gerenciar definições de segmento. Para saber mais sobre como usar o [!UICONTROL Segmentos] , leia a seção [guia do usuário de segmentação](../segmentation/ui/overview.md). Mais informações sobre o Serviço de segmentação podem ser encontradas no [Visão geral do serviço de segmentação](../segmentation/home.md).
+A variável **[!UICONTROL Públicos-alvo]** permite criar e gerenciar definições de segmento. Para saber mais sobre como usar o [!UICONTROL Públicos-alvo] , leia a seção [guia do usuário de segmentação](../segmentation/ui/overview.md). Mais informações sobre o Serviço de segmentação podem ser encontradas no [Visão geral do serviço de segmentação](../segmentation/home.md).
 
 A variável **[!UICONTROL Identidades]** permite criar e gerenciar namespaces de identidade. Para obter mais informações sobre o [!UICONTROL Identidades] , incluindo informações sobre namespaces de identidade e como usar identidades na interface do usuário da Platform, consulte a [visão geral do namespace de identidade](../identity-service/features/namespaces.md).
 
@@ -141,7 +141,7 @@ A variável **[!UICONTROL Solicitações]** permite criar e gerenciar solicitaç
 
 ### [!UICONTROL Ciência de dados]
 
-A variável **[!UICONTROL Notebooks]** fornece acesso ao JupyterLab, um ambiente de desenvolvimento interativo que permite explorar, analisar e modelar seus dados. Para saber mais sobre como usar a seção Notebooks, leia a [Guia do usuário do JupyterLab](../data-science-workspace/jupyterlab/overview.md). Mais informações sobre o Data Science Workspace podem ser encontradas na [Visão geral do Espaço de trabalho de ciência de dados](../data-science-workspace/home.md)
+A variável **[!UICONTROL Notebooks]** fornece acesso ao JupyterLab, um ambiente de desenvolvimento interativo que permite explorar, analisar e modelar seus dados. Para saber mais sobre como usar a seção Notebooks, leia a [Guia do usuário do JupyterLab](../data-science-workspace/jupyterlab/overview.md). Mais informações sobre o Data Science Workspace podem ser encontradas na [Visão geral do Data Science Workspace](../data-science-workspace/home.md)
 
 A variável **[!UICONTROL Modelos]** permite usar o aprendizado de máquina e a inteligência artificial para criar, desenvolver, treinar e ajustar modelos e fazer previsões. Mais informações sobre a seção Modelos podem ser encontradas no tutorial sobre [treinamento e avaliação de um modelo](../data-science-workspace/models-recipes/train-evaluate-model-ui.md).
 

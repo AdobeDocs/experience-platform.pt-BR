@@ -4,10 +4,10 @@ type: Tutorial
 description: Saiba como ativar os dados de público-alvo no Adobe Experience Platform enviando públicos-alvo para destinos com base em perfil de transmissão.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: bc0f781e-60de-44a5-93cb-06b4a3148591
-source-git-commit: fbc2a6c81682797af4674adabff358a62d973007
+source-git-commit: 6b186030c66598cddcdfcf509b8863e10d4fd0a7
 workflow-type: tm+mt
-source-wordcount: '763'
-ht-degree: 0%
+source-wordcount: '764'
+ht-degree: 1%
 
 ---
 
@@ -28,7 +28,7 @@ Este artigo explica o fluxo de trabalho necessário para ativar dados de públic
 Este artigo se aplica aos três destinos a seguir:
 
 * [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md)
-* [Hubs de Eventos do Azure](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)
+* [Hubs de eventos do Azure](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)
 * [Destino da API HTTP](/help/destinations/catalog/streaming/http-destination.md).
 
 ## Pré-requisitos {#prerequisites}
@@ -57,8 +57,8 @@ Para selecionar os públicos que deseja ativar para o destino, use as caixas de 
 
 Você pode selecionar entre vários tipos de públicos-alvo, dependendo de sua origem:
 
-* **[!UICONTROL Serviço de segmentação]**: públicos-alvo gerados no Experience Platform pelo serviço de segmentação. Consulte a [documentação de segmentação](../../segmentation/ui/overview.md) para obter mais detalhes.
-* **[!UICONTROL Upload personalizado]**: públicos gerados fora do Experience Platform e carregados na Platform como arquivos CSV. Para saber mais sobre públicos-alvo externos, consulte a documentação em [importação de um público](../../segmentation/ui/overview.md#import-audience).
+* **[!UICONTROL Serviço de segmentação]**: públicos-alvo gerados no Experience Platform pelo serviço de segmentação. Consulte a [Documentação do Audience Portal](../../segmentation/ui/audience-portal.md) para obter mais detalhes.
+* **[!UICONTROL Upload personalizado]**: públicos gerados fora do Experience Platform e carregados na Platform como arquivos CSV. Para saber mais sobre públicos-alvo externos, consulte a documentação em [importação de um público](../../segmentation/ui/audience-portal.md#import-audience).
 * Outros tipos de públicos-alvo, provenientes de outras soluções de Adobe, como [!DNL Audience Manager].
 
 ![Imagem destacando a seleção das caixas de seleção na etapa Selecionar públicos do fluxo de trabalho de ativação.](../assets/ui/activate-streaming-profile-destinations/select-audiences.png)
@@ -81,7 +81,7 @@ No **[!UICONTROL Mapeamento]** selecione os atributos de perfil que deseja envia
 
 1. Para adicionar mais campos, repita as etapas de 1 a 3 e selecione **[!UICONTROL Próxima]**.
 
-## Revisão {#review}
+## Revisar {#review}
 
 No **[!UICONTROL Revisão]** você poderá ver um resumo da sua seleção. Selecionar **[!UICONTROL Cancelar]** para interromper o fluxo, **[!UICONTROL Voltar]** para modificar suas configurações ou **[!UICONTROL Concluir]** para confirmar a seleção e começar a enviar dados para o destino.
 

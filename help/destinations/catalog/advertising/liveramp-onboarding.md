@@ -3,10 +3,10 @@ title: LiveRamp - Conexão de integração
 description: Saiba como usar o conector do LiveRamp para integrar públicos do Adobe Real-time Customer Data Platform ao LiveRamp Connect.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
-source-git-commit: a235f9a66ea15fc5e72dd6ed03e4a6a384fd30a4
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1941'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -37,9 +37,9 @@ No [etapa de mapeamento](#map) do workflow de ativação, você deve definir os 
 Esta seção descreve quais tipos de públicos-alvo você pode exportar para esse destino.
 
 | Origem do público | Suportado | Descrição |
----------|----------|----------|
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Públicos-alvo gerados pelo Experience Platform [Serviço de segmentação](../../../segmentation/home.md). |
-| Uploads personalizados | ✓ | Públicos-alvo [importado](../../../segmentation/ui/overview.md#import-audience) para o Experience Platform de arquivos CSV. |
+| Uploads personalizados | ✓ | Públicos-alvo [importado](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV. |
 
 {style="table-layout:auto"}
 
@@ -127,7 +127,7 @@ Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICON
 
 Ler [Ativar dados do público-alvo para destinos de exportação de perfil em lote](/help/destinations/ui/activate-batch-profile-destinations.md) para obter instruções sobre como ativar públicos-alvo para esse destino.
 
-### Agendamento {#scheduling}
+### Agendando {#scheduling}
 
 No [!UICONTROL Agendamento] crie um agendamento de exportação para cada público-alvo, com as configurações mostradas abaixo.
 
@@ -211,7 +211,7 @@ Os perfis incluídos nos arquivos exportados podem corresponder a um dos seguint
 * `Expired`: o perfil não está mais qualificado para o público-alvo, mas se qualificou no passado.
 * `""`(sequência de caracteres vazia): o perfil nunca se qualificou para o público-alvo.
 
-Por exemplo, um arquivo CSV exportado com um `email` atributo, dois públicos-alvo originados do Experience Platform [Serviço de segmentação](../../../segmentation/home.md), e um [importado](../../../segmentation/ui/overview.md#importing-an-audience) público externo, pode ter esta aparência:
+Por exemplo, um arquivo CSV exportado com um `email` atributo, dois públicos-alvo originados do Experience Platform [Serviço de segmentação](../../../segmentation/home.md), e um [importado](../../../segmentation/ui/audience-portal.md#import-audience) público externo, pode ter esta aparência:
 
 ```csv
 email,ups_aa2e3d98-974b-4f8b-9507-59f65b6442df,ups_45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f,CustomerAudienceUpload_7729e537-4e42-418e-be3b-dce5e47aaa1e
@@ -223,7 +223,7 @@ abc107@testemailabc.com,active,expired,active
 abc101@testemailabc.com,active,active,
 ```
 
-No exemplo acima, a variável `ups_aa2e3d98-974b-4f8b-9507-59f65b6442df` e `ups_45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f` descrevem os públicos-alvo provenientes do Serviço de segmentação, enquanto `CustomerAudienceUpload_7729e537-4e42-418e-be3b-dce5e47aaa1e` descreve um público-alvo importado para o Platform as a [upload personalizado](../../../segmentation/ui/overview.md#importing-an-audience).
+No exemplo acima, a variável `ups_aa2e3d98-974b-4f8b-9507-59f65b6442df` e `ups_45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f` descrevem os públicos-alvo provenientes do Serviço de segmentação, enquanto `CustomerAudienceUpload_7729e537-4e42-418e-be3b-dce5e47aaa1e` descreve um público-alvo importado para o Platform as a [upload personalizado](../../../segmentation/ui/audience-portal.md#import-audience).
 
 Como a Platform gera um arquivo CSV para cada [ID da política de mesclagem](../../../profile/merge-policies/overview.md), ele também gera um fluxo de dados separado para cada ID de política de mesclagem.
 

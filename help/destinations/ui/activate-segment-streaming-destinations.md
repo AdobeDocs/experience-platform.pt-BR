@@ -3,7 +3,7 @@ title: Ativar dados do público-alvo para destinos de transmissão
 type: Tutorial
 description: Saiba como ativar os públicos-alvo no Adobe Experience Platform mapeando-os para destinos de transmissão.
 exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
-source-git-commit: 30ad6c32d8ae8a2a68dfafd78f306209ce49b6d5
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1188'
 ht-degree: 6%
@@ -52,7 +52,7 @@ Para selecionar os públicos que deseja ativar para o destino, use as caixas de 
 Você pode selecionar entre vários tipos de públicos-alvo, dependendo de sua origem:
 
 * **[!UICONTROL Serviço de segmentação]**: públicos-alvo gerados no Experience Platform pelo serviço de segmentação. Consulte a [documentação de segmentação](../../segmentation/ui/overview.md) para obter mais detalhes.
-* **[!UICONTROL Upload personalizado]**: públicos gerados fora do Experience Platform e carregados na Platform como arquivos CSV. Para saber mais sobre públicos-alvo externos, consulte a documentação em [importação de um público](../../segmentation/ui/overview.md#import-audience).
+* **[!UICONTROL Upload personalizado]**: públicos gerados fora do Experience Platform e carregados na Platform como arquivos CSV. Para saber mais sobre públicos-alvo externos, consulte a documentação em [importação de um público](../../segmentation/ui/audience-portal.md#import-audience).
 * Outros tipos de públicos-alvo, provenientes de outras soluções de Adobe, como [!DNL Audience Manager].
 
 ![Vários públicos-alvo destacados na etapa Selecionar públicos-alvo.](../assets/ui/activate-segment-streaming-destinations/select-audiences.png)
@@ -73,7 +73,7 @@ Alguns destinos de transmissão de público exigem que você selecione atributos
 
    ![Adicionar novo controle de mapeamento realçado.](../assets/ui/activate-segment-streaming-destinations/add-new-mapping.png)
 
-1. Selecione a seta à direita da **[!UICONTROL Campo de origem]** entrada.
+1. Selecione a seta à direita da **[!UICONTROL Campo do Source]** entrada.
 
    ![Selecione o controle de campo de origem realçado.](../assets/ui/activate-segment-streaming-destinations/select-source-field.png)
 

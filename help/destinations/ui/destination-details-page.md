@@ -3,7 +3,7 @@ keywords: destinos;destino;página detalhes de destinos;página detalhes de dest
 title: Exibir detalhes do destino
 description: A página de detalhes de um destino individual fornece uma visão geral dos detalhes do destino. Os detalhes do destino incluem o nome do destino, a ID, os públicos mapeados para o destino e os controles para editar a ativação e habilitar e desabilitar o fluxo de dados.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: f206ea853d44410c93463e1e515279b39afd1fd9
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1106'
 ht-degree: 0%
@@ -139,4 +139,4 @@ Para editar o agendamento de ativação existente de vários públicos-alvo ao m
 
 >[!NOTE]
 >
-Para obter detalhes sobre como explorar a página de detalhes de um público-alvo, consulte a [Visão geral da interface de segmentação](../../segmentation/ui/overview.md#segment-details).
+Para obter detalhes sobre como explorar a página de detalhes de um público-alvo, consulte a [Visão geral do portal de público](../../segmentation/ui/audience-portal.md#segment-details).

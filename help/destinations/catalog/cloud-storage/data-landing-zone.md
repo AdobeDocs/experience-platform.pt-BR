@@ -3,10 +3,10 @@ title: Destino da Data Landing Zone
 description: Saiba como se conectar à Data Landing Zone para ativar públicos e exportar conjuntos de dados.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
-source-git-commit: cb37eda87b8fcc0d0284db7a0bab8d48eab5aae6
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1585'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -34,10 +34,10 @@ A Platform impõe um TTL (time-to-live) rigoroso de sete dias em todos os arquiv
 
 Esta seção descreve quais tipos de públicos-alvo você pode exportar para esse destino.
 
-| Origem do público | Compatível | Descrição |
----------|----------|----------|
+| Origem do público | Suportado | Descrição |
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Públicos-alvo gerados pelo Experience Platform [Serviço de segmentação](../../../segmentation/home.md). |
-| Uploads personalizados | ✓ | Públicos-alvo [importado](../../../segmentation/ui/overview.md#import-audience) para o Experience Platform de arquivos CSV. |
+| Uploads personalizados | ✓ | Públicos-alvo [importado](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV. |
 
 {style="table-layout:auto"}
 
@@ -204,7 +204,7 @@ Com o seu [!DNL Data Landing Zone] contêiner conectado a [!DNL Azure Storage Ex
 
 Para se conectar a esse destino, siga as etapas descritas no [tutorial de configuração de destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html). No workflow da configuração de destino, preencha os campos listados nas duas seções abaixo.
 
-### Autenticar para destino {#authenticate}
+### Autenticar para o destino {#authenticate}
 
 Verifique se você conectou o [!DNL Data Landing Zone] contêiner para [!DNL Azure Storage Explorer] conforme descrito na seção [pré-requisitos](#prerequisites) seção. Porque [!DNL Data Landing Zone] é um armazenamento provisionado por Adobe, não é necessário executar outras etapas na interface do usuário do Experience Platform para autenticar no destino.
 
@@ -230,7 +230,7 @@ Você pode ativar os alertas para receber notificações sobre o status do fluxo
 
 Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICONTROL Próxima]**.
 
-## Ativar públicos para este destino {#activate}
+## Ativar públicos-alvo para esse destino {#activate}
 
 >[!IMPORTANT]
 > 

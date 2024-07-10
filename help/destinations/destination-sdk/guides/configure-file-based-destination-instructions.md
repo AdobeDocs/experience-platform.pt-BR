@@ -2,7 +2,7 @@
 description: Esta página lista e descreve as etapas para configurar um destino baseado em arquivo usando o Destination SDK.
 title: Usar o Destination SDK para configurar um destino baseado em arquivo
 exl-id: 84d73452-88e4-4e0f-8fc7-d0d8e10f9ff5
-source-git-commit: 45ba0db386f065206f89ed30bfe7b0c1b44f6173
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '732'
 ht-degree: 1%
@@ -407,7 +407,7 @@ Dependendo de você especificar ou não `"authenticationRule": "CUSTOMER_AUTHENT
    * [Autenticação Amazon S3](../functionality/destination-configuration/customer-authentication.md#s3)
    * [Azure Blob](../functionality/destination-configuration/customer-authentication.md#blob)
    * [Armazenamento Azure Data Lake](../functionality/destination-configuration/customer-authentication.md#adls)
-   * [Armazenamento em nuvem Google](../functionality/destination-configuration/customer-authentication.md#gcs)
+   * [Google Cloud Storage](../functionality/destination-configuration/customer-authentication.md#gcs)
    * [Autenticação SFTP com chave SSH](../functionality/destination-configuration/customer-authentication.md#sftp-ssh)
    * [Autenticação SFTP com senha](../functionality/destination-configuration/customer-authentication.md#sftp-password)
 
@@ -420,10 +420,10 @@ Depois de definir seu destino usando os endpoints de configuração nas etapas a
 
 Como parte do processo para testar o destino, é necessário usar a interface do usuário do Experience Platform para criar públicos-alvo, que você ativará para o destino. Consulte os dois recursos abaixo para obter instruções sobre como criar públicos-alvo no Experience Platform:
 
-* [Criar um público-alvo: página de documentação](/help/segmentation/ui/overview.md#create-segment)
+* [Criar um público-alvo: página de documentação](/help/segmentation/ui/audience-portal.md#create-audience)
 * [Criar um público-alvo - apresentação em vídeo](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)
 
-## Etapa 6: publicar seu destino {#publish-destination}
+## Etapa 6: Publish seu destino {#publish-destination}
 
 >[!NOTE]
 >

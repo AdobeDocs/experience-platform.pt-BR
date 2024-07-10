@@ -4,10 +4,10 @@ title: Conexão da API HTTP
 description: Use o destino da API HTTP no Adobe Experience Platform para enviar dados de perfil para um endpoint HTTP de terceiros para executar sua própria análise ou executar outras operações necessárias nos dados de perfil exportados do Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: e9ed96a15d6bba16165c67e53467b7f51a866014
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '2639'
-ht-degree: 0%
+ht-degree: 8%
 
 ---
 
@@ -33,10 +33,10 @@ Os endpoints HTTP podem ser sistemas próprios dos clientes ou soluções de ter
 
 Esta seção descreve quais tipos de públicos-alvo você pode exportar para esse destino.
 
-| Origem do público | Compatível | Descrição |
----------|----------|----------|
+| Origem do público | Suportado | Descrição |
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Públicos-alvo gerados pelo Experience Platform [Serviço de segmentação](../../../segmentation/home.md). |
-| Uploads personalizados | ✓ | Públicos-alvo [importado](../../../segmentation/ui/overview.md#import-audience) para o Experience Platform de arquivos CSV. |
+| Uploads personalizados | ✓ | Públicos-alvo [importado](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV. |
 
 {style="table-layout:auto"}
 
@@ -121,7 +121,7 @@ Para se conectar a esse destino, siga as etapas descritas no [tutorial de config
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_clientcredentialstype"
 >title="Tipo de credenciais do cliente"
->abstract="Selecionar **Formulário de corpo codificado** para incluir a ID do cliente e o segredo do cliente no corpo da solicitação ou **Autorização básica** para incluir a ID do cliente e o segredo do cliente em um cabeçalho de autorização. Veja exemplos na documentação."
+>abstract="Selecione **Corpo codificado em formato** para incluir a ID do cliente e o segredo do cliente no corpo da solicitação ou **Autorização básica** para incluir a ID do cliente e o segredo do cliente em um cabeçalho de autorização. Veja exemplos na documentação."
 
 #### Autenticação de token do portador {#bearer-token-authentication}
 
@@ -169,27 +169,27 @@ Se você selecionar a variável **[!UICONTROL Credenciais de cliente OAuth 2]** 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_headers"
 >title="Cabeçalhos"
->abstract="Insira todos os cabeçalhos personalizados que deseja incluir nas chamadas de destino, seguindo este formato: `header1:value1,header2:value2,...headerN:valueN`"
+>abstract="Insira os cabeçalhos personalizados que você deseja incluir nas chamadas de destino, seguindo este formato: `header1:value1,header2:value2,...headerN:valueN`"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_endpoint"
->title="Endpoint HTTP"
->abstract="A URL do endpoint HTTP para o qual você deseja enviar os dados do perfil."
+>title="Ponto de acesso HTTP"
+>abstract="O URL do ponto de acesso HTTP para o qual você deseja enviar os dados do perfil."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_includesegmentnames"
 >title="Incluir nomes de segmentos"
->abstract="Alterne se quiser que a exportação de dados inclua os nomes dos públicos-alvo que você está exportando. Exiba a documentação de um exemplo de exportação de dados com esta opção selecionada."
+>abstract="Ative se quiser que a exportação de dados inclua os nomes dos públicos-alvo que você está exportando. Veja a documentação para ter um exemplo de exportação de dados com esta opção selecionada."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_includesegmenttimestamps"
 >title="Incluir carimbos de data e hora do segmento"
->abstract="Ative se desejar que a exportação de dados inclua o carimbo de data e hora UNIX quando os públicos-alvo foram criados e atualizados, bem como o carimbo de data e hora UNIX quando os públicos-alvo foram mapeados para o destino para ativação. Exiba a documentação de um exemplo de exportação de dados com esta opção selecionada."
+>abstract="Ative se quiser que a exportação de dados inclua o carimbo de data e hora UNIX de quando os públicos-alvo foram criados e atualizados, bem como o carimbo de data e hora UNIX de quando os públicos-alvo foram mapeados para o destino para ativação. Consulte a documentação para ver um exemplo de exportação de dados com esta opção selecionada."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_queryparameters"
 >title="Parâmetros de consulta"
->abstract="Como opção, você pode adicionar parâmetros de consulta ao URL do endpoint HTTP. Formate os parâmetros de consulta que você usa desta forma: `parameter1=value&parameter2=value`."
+>abstract="Opcionalmente, é possível adicionar parâmetros de consulta ao URL do ponto de acesso HTTP. Formate os parâmetros de consulta usados desta forma: `parameter1=value&parameter2=value`."
 
 Para configurar detalhes para o destino, preencha os campos obrigatórios e opcionais abaixo. Um asterisco ao lado de um campo na interface do usuário indica que o campo é obrigatório.
 
@@ -199,7 +199,7 @@ Para configurar detalhes para o destino, preencha os campos obrigatórios e opci
 * **[!UICONTROL Descrição]**: insira uma descrição que ajudará a identificar esse destino no futuro.
 * **[!UICONTROL Cabeçalhos]**: insira todos os cabeçalhos personalizados que deseja incluir nas chamadas de destino, seguindo este formato: `header1:value1,header2:value2,...headerN:valueN`.
 * **[!UICONTROL Endpoint HTTP]**: o URL do endpoint HTTP para o qual você deseja enviar os dados do perfil.
-* **[!UICONTROL Parâmetros de consulta]**: Opcionalmente, é possível adicionar parâmetros de consulta ao URL do endpoint HTTP. Formate os parâmetros de consulta que você usa desta forma: `parameter1=value&parameter2=value`.
+* **[!UICONTROL Parâmetros de consulta]**: Opcionalmente, é possível adicionar parâmetros de consulta ao URL do endpoint HTTP. Formate os parâmetros de consulta usados desta forma: `parameter1=value&parameter2=value`.
 * **[!UICONTROL Incluir nomes de segmentos]**: alterne se quiser que a exportação de dados inclua os nomes dos públicos-alvo que você está exportando. Para obter um exemplo de exportação de dados com essa opção selecionada, consulte [Dados exportados](#exported-data) seção mais abaixo.
 * **[!UICONTROL Incluir carimbos de data e hora do segmento]**: ative se desejar que a exportação de dados inclua o carimbo de data e hora UNIX quando os públicos-alvo foram criados e atualizados, bem como o carimbo de data e hora UNIX quando os públicos-alvo foram mapeados para o destino para ativação. Para obter um exemplo de exportação de dados com essa opção selecionada, consulte [Dados exportados](#exported-data) seção mais abaixo.
 
@@ -209,7 +209,7 @@ Você pode ativar os alertas para receber notificações sobre o status do fluxo
 
 Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICONTROL Próxima]**.
 
-## Ativar públicos para este destino {#activate}
+## Ativar públicos-alvo para esse destino {#activate}
 
 >[!IMPORTANT]
 > 

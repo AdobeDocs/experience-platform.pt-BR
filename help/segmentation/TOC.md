@@ -5,10 +5,10 @@ breadcrumb-title: Guia do Serviço de segmentação
 user-guide-description: Crie públicos-alvo a partir dos dados do perfil do cliente em tempo real usando definições de segmento geradas pela Adobe Experience Platform ou fontes externas.
 feature: Segments
 role: User
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+source-git-commit: 62a174e6f3b1bd1b0bc518ff7e5f236893e9e5d3
 workflow-type: tm+mt
-source-wordcount: '183'
-ht-degree: 35%
+source-wordcount: '185'
+ht-degree: 43%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 35%
    - [Segmentação de borda](api/edge-segmentation.md)
    - [Exportar trabalhos](api/export-jobs.md)
    - [Visualizações e estimativas](api/previews-and-estimates.md)
-   - [Agendamentos](api/schedules.md)
+   - [Programações](api/schedules.md)
    - [Definições de segmento](api/segment-definitions.md)
    - [Trabalhos do segmento](api/segment-jobs.md)
    - [Pesquisa de segmentos](api/segment-search.md)
@@ -33,11 +33,12 @@ ht-degree: 35%
 - Interface de segmentação {#ui}
    - [Visão geral](ui/overview.md)
    - [Painel de público-alvo](ui/audience-dashboard.md)
+   - [Portal de público-alvo](ui/audience-portal.md)
    - [Composição de público-alvo](ui/audience-composition.md)
    - [Construtor de segmentos](ui/segment-builder.md)
-   - [Públicos da conta](ui/account-audiences.md)
+   - [Públicos-alvo da conta](ui/account-audiences.md)
    - [Públicos-alvo semelhantes](ui/lookalike-audiences.md)
-   - [Públicos-alvo potenciais](ui/prospect-audience.md)
+   - [Públicos-alvo em potencial](ui/prospect-audience.md)
    - [Segmentação de borda](ui/edge-segmentation.md)
    - [Segmentação de transmissão](ui/streaming-segmentation.md)
    - [Segmentação de transmissão (Vídeo)](video/streaming-segmentation-overview.md)
@@ -48,7 +49,7 @@ ht-degree: 35%
       - [Solução de problemas](ui/segment-match/troubleshooting.md)
 - [Cumprimento do consentimento](consents.md)
 - [Segmentação de várias entidades](multi-entity-segmentation.md)
-- Idioma de consulta do perfil {#pql}
+- Profile Query Language {#pql}
    - [Visão geral](pql/overview.md)
    - [Funções booleanas](pql/boolean-functions.md)
    - [Funções de comparação](pql/comparison-functions.md)
@@ -73,4 +74,4 @@ ht-degree: 35%
    - [Impor a conformidade de uso de dados para segmentos](tutorials/governance.md)
 - [Perguntas frequentes](./faq.md)
 - [Referência da API](https://www.adobe.io/experience-platform-apis/references/segmentation/)
-- [Notas de versão da Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+- [Notas de versão da Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest?lang=pt-BR)

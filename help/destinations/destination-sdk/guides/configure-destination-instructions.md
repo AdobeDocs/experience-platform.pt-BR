@@ -2,7 +2,7 @@
 description: Esta página lista e descreve as etapas para configurar um destino de transmissão usando o Destination SDK.
 title: Usar o Destination SDK para configurar um destino de transmissão
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: 52be44ece950ee57a66a13ab7962907b2b7c0fb1
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '865'
 ht-degree: 0%
@@ -279,10 +279,10 @@ Depois de definir seu destino usando os endpoints de configuração nas etapas a
 
 Como parte do processo para testar o destino, é necessário usar a interface do usuário do Experience Platform para criar segmentos, que você ativará para o destino. Consulte os dois recursos abaixo para obter instruções sobre como criar públicos-alvo no Experience Platform:
 
-* [Criar uma página de documentação de público-alvo](/help/segmentation/ui/overview.md#create-segment)
+* [Criar uma página de documentação de público-alvo](/help/segmentation/ui/audience-portal.md#create-audience)
 * [Criar uma apresentação de vídeo de público-alvo](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)
 
-## Etapa 7: publicar seu destino {#publish-destination}
+## Etapa 7: Publish seu destino {#publish-destination}
 
 >[!NOTE]
 >

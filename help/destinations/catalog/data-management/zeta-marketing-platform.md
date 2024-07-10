@@ -3,7 +3,7 @@ title: Plataforma de marketing Zeta
 description: A Zeta Marketing Platform (ZMP) é um sistema baseado em nuvem que ajuda a adquirir, expandir e reter clientes com mais eficiência, alimentado por inteligência (dados proprietários e IA).
 hide: true
 hidefromtoc: true
-source-git-commit: bf553371316d9d9cb368fc4d1be14196201ef680
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1352'
 ht-degree: 1%
@@ -62,9 +62,9 @@ Um anunciante tem como objetivo direcionar os usuários dentro de públicos-alvo
 Esta seção descreve que tipo de público-alvo você pode exportar para esse destino.
 
 | Origem do público | Suportado | Descrição |
----------|----------|----------|
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Públicos-alvo gerados pelo Experience Platform [Serviço de segmentação](../../../segmentation/home.md). |
-| Uploads personalizados | X | Públicos-alvo [importado](../../../segmentation/ui/overview.md#import-audience) para o Experience Platform de arquivos CSV. |
+| Uploads personalizados | X | Públicos-alvo [importado](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV. |
 
 {style="table-layout:auto"}
 

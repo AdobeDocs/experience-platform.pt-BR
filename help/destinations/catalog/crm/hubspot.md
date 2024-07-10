@@ -3,10 +3,10 @@ title: Conexão HubSpot
 description: O destino HubSpot permite gerenciar registros de contato na sua conta HubSpot.
 last-substantial-update: 2023-09-28T00:00:00Z
 exl-id: e2114bde-b7c3-43da-9f3a-919322000ef4
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1543'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -30,7 +30,7 @@ Consulte as seções abaixo para obter os pré-requisitos que você precisa conf
 
 ### Pré-requisitos do Experience Platform {#prerequisites-in-experience-platform}
 
-Antes de ativar os dados para o [!DNL HubSpot] destino, você deve ter um [schema](/help/xdm/schema/composition.md), um [conjunto de dados](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=pt-BR), e [públicos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html) criado em [!DNL Experience Platform].
+Antes de ativar os dados para o [!DNL HubSpot] destino, você deve ter um [schema](/help/xdm/schema/composition.md), um [conjunto de dados](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html), e [públicos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html) criado em [!DNL Experience Platform].
 
 Consulte a documentação do Experience Platform para [Grupo de campos de esquema Detalhes da associação do público](/help/xdm/field-groups/profile/segmentation.md) se precisar de orientação sobre os status do público-alvo.
 
@@ -79,8 +79,8 @@ Esse destino suporta a ativação de todos os públicos-alvo gerados pelo Experi
 Esse destino também suporta a ativação dos públicos-alvo descritos na tabela abaixo.
 
 | Tipo de público | Descrição |
----------|----------|
-| Uploads personalizados | Públicos-alvo [importado](../../../segmentation/ui/overview.md#import-audience) para o Experience Platform de arquivos CSV. |
+|---------|----------|
+| Uploads personalizados | Públicos-alvo [importado](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV. |
 
 {style="table-layout:auto"}
 
@@ -153,7 +153,7 @@ A variável `Email` a identidade é um mapeamento obrigatório para este destino
 1. No **[!UICONTROL Selecionar campo de destino]** escolha a **[!UICONTROL Selecionar atributos]** e selecione `email`.
    ![Captura de tela da interface do usuário da plataforma selecionando o email como um atributo de destino a ser mapeado como identidade.](../../assets/catalog/crm/hubspot/mapping-select-target-identity.png)
 
-| Campo de origem | Campo de destino | Obrigatório |
+| Campo de origem | Campo de público alvo | Obrigatório |
 | --- | --- | --- |
 | `IdentityMap: Email` | `Identity: email` | Sim |
 
@@ -172,7 +172,7 @@ Para adicionar outros atributos que você deseja atualizar entre o esquema de pe
 
 Alguns mapeamentos disponíveis entre o esquema de perfil XDM e [!DNL Hubspot] são mostrados abaixo:
 
-| Campo de origem | Campo de destino |
+| Campo de origem | Campo de público alvo |
 | --- | --- |
 | `xdm: person.name.firstName` | `Attribute: firstname` |
 | `xdm: person.name.lastName` | `Attribute: lastname` |

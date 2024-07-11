@@ -11,7 +11,7 @@ ht-degree: 0%
 
 ---
 
-# Glossário da Adobe Experience Platform {#adobe-experience-platform-glossary}
+# Glossário do Adobe Experience Platform {#adobe-experience-platform-glossary}
 
 ## A
 
@@ -333,7 +333,7 @@ ht-degree: 0%
 
 **Aprendizado de máquina (ML)**: O aprendizado de máquina é o campo de estudo que permite que os computadores aprendam sem serem explicitamente programados.
 
-**Modelo de aprendizado de máquina**: um modelo de aprendizado de máquina é um exemplo de uma fórmula de aprendizado de máquina que é treinada usando dados históricos e configurações para resolver em um caso de uso de negócios. No Espaço de trabalho de ciência de dados da Adobe Experience Platform, os modelos de aprendizado de máquina são chamados de receitas.
+**Modelo de aprendizado de máquina**: um modelo de aprendizado de máquina é um exemplo de uma fórmula de aprendizado de máquina que é treinada usando dados históricos e configurações para resolver em um caso de uso de negócios. Na Adobe Experience Platform Data Science Workspace, os modelos de aprendizado de máquina são chamados de receitas.
 
 **Atributo obrigatório**: uma caixa de seleção ativada pelo usuário que garante que todos os registros de perfil contenham o atributo selecionado. Por exemplo: todos os perfis exportados contêm um endereço de email.
 
@@ -389,7 +389,7 @@ ht-degree: 0%
 
 **Ofertas personalizadas**: uma oferta personalizada é uma mensagem de marketing personalizável baseada em regras de elegibilidade e restrições.
 
-**Posicionamentos**: um posicionamento é o local e/ou contexto em que uma oferta é exibida para um usuário final.
+**Posicionamentos**: um posicionamento é o local e/ou contexto em que uma oferta é exibida para o usuário final.
 
 **Espaço de trabalho Políticas**: um espaço de trabalho na interface do usuário da Platform que permite que os administradores de dados visualizem e gerenciem rótulos e políticas de uso de dados para sua organização.
 
@@ -511,15 +511,15 @@ ht-degree: 0%
 
 **Rótulo de uso de dados S2**: Um `S2` o rótulo de uso de dados é usado para classificar dados que podem ser usados para determinar uma área de cerca geográfica amplamente definida.
 
-**Origem**: uma origem é um termo geral para qualquer conector de entrada na Platform. Consulte também: Conector de origem
+**Source**: uma origem é um termo geral para qualquer conector de entrada na Platform. Consulte também: Conector do Source
 
-**Atributo de origem**: um atributo de origem é um campo no conjunto de dados de origem. Os atributos de origem são mapeados para campos de esquema de destino.
+**Atributo do Source**: um atributo de origem é um campo no conjunto de dados de origem. Os atributos do Source são mapeados para campos de esquema de destino.
 
-**Catálogo de origem**: o catálogo de origem é a lista de conectores de origem disponíveis no Experience Platform.
+**Catálogo Source**: o catálogo de origem é a lista de conectores de origem disponíveis no Experience Platform.
 
-**Categoria de origem**: uma categoria de origem é um agrupamento de origens que têm características semelhantes.
+**Categoria do Source**: uma categoria de origem é um agrupamento de origens que têm características semelhantes.
 
-**Conector de origem**: conectores de origem (também conhecidos como fontes) ajudam os usuários a assimilar dados facilmente de várias fontes, permitindo a estruturação, o rótulo e o aprimoramento de dados usando serviços de Experience Platform. Os dados podem ser assimilados de várias fontes, como armazenamento baseado em nuvem, software de terceiros e sistemas de CRM.
+**Conector do Source**: os conectores do Source (também conhecidos como fontes) ajudam os usuários a assimilar dados facilmente de várias fontes, permitindo a estruturação, o rótulo e o aprimoramento de dados usando serviços de Experience Platform. Os dados podem ser assimilados de várias fontes, como armazenamento baseado em nuvem, software de terceiros e sistemas de CRM.
 
 **Conexão de transmissão**: uma conexão de transmissão é um endpoint exclusivo fornecido pelo Adobe e vinculado à sua organização para transmitir dados para o Experience Platform.
 

@@ -2,10 +2,10 @@
 title: Configurar a extensão de tag do SDK da Web
 description: Saiba como configurar a extensão de tag do SDK da Web do Experience Platform na interface do usuário de tags.
 exl-id: 22425daa-10bd-4f06-92de-dff9f48ef16e
-source-git-commit: 1d1bb754769defd122faaa2160e06671bf02c974
+source-git-commit: 660d4e72bd93ca65001092520539a249eae23bfc
 workflow-type: tm+mt
-source-wordcount: '1734'
-ht-degree: 6%
+source-wordcount: '2012'
+ht-degree: 5%
 
 ---
 
@@ -41,7 +41,7 @@ As opções de configuração na parte superior da página informam à Adobe Exp
 
 * **[!UICONTROL Nome]**: a extensão SDK da Web do Adobe Experience Platform oferece suporte a várias instâncias na página. O nome é usado para enviar dados para várias organizações com uma configuração de tag. O nome da instância é padronizado como `alloy`. No entanto, é possível alterar o nome da instância para qualquer nome de objeto JavaScript válido.
 * **[!UICONTROL IMS organization ID]**: a ID da organização para a qual você deseja que os dados sejam enviados no Adobe. Na maioria das vezes, use o valor padrão preenchido automaticamente. Quando houver várias instâncias na página, preencha esse campo com o valor da segunda organização para a qual deseja enviar dados.
-* **[!UICONTROL Domínio de borda]**: o domínio do qual a extensão envia e recebe dados. O Adobe recomenda usar um domínio próprio (CNAME) para essa extensão. O domínio padrão de terceiros funciona em ambientes de desenvolvimento, mas não é adequado para ambientes de produção. As instruções sobre como configurar um CNAME primário estão listadas [aqui](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html?lang=pt-BR).
+* **[!UICONTROL Domínio do Edge]**: o domínio do qual a extensão envia e recebe dados. O Adobe recomenda usar um domínio próprio (CNAME) para essa extensão. O domínio padrão de terceiros funciona em ambientes de desenvolvimento, mas não é adequado para ambientes de produção. As instruções sobre como configurar um CNAME primário estão listadas [aqui](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html?lang=pt-BR).
 
 ## Definir configurações de sequência de dados {#datastreams}
 
@@ -111,11 +111,29 @@ Ao usar o trecho pré-ocultação, o Adobe recomenda usar o mesmo [!DNL CSS] reg
 
 ## Definir configurações da coleção de dados {#data-collection}
 
-![Imagem que mostra as configurações da coleção de dados da extensão de tag do SDK da Web na interface do usuário de tags](assets/web-sdk-ext-collection.png)
+Gerenciar definições de configuração da coleta de dados. Configurações semelhantes na biblioteca do JavaScript estão disponíveis usando o [`configure`](/help/web-sdk/commands/configure/overview.md) comando.
 
-* **[!UICONTROL Função de retorno de chamada]**: a função de retorno de chamada fornecida na extensão também é chamada de [`onBeforeEventSend` função](/help/web-sdk/commands/configure/onbeforeeventsend.md) na biblioteca. Essa função permite modificar eventos globalmente antes que sejam enviados para o Edge Network.
-* **[!UICONTROL Ativar a coleta de dados de cliques]**: o SDK da Web pode coletar automaticamente informações de cliques em links para você. Por padrão, esse recurso está ativado, mas pode ser desativado usando essa opção. Os links também são rotulados como links de download se contiverem uma das expressões de download listadas no [!UICONTROL Baixar qualificador de link] caixa de texto. O Adobe fornece alguns qualificadores padrão de link de download. Você pode editá-los de acordo com suas necessidades.
-* **[!UICONTROL Dados de contexto coletados automaticamente]**: por padrão, o SDK da Web coleta determinados dados de contexto relacionados ao dispositivo, Web, ambiente e contexto de local. Se não quiser que esses dados sejam coletados ou se quiser apenas determinadas categorias de dados, selecione **[!UICONTROL Informações de contexto específicas]** e selecione os dados que deseja coletar. Consulte [`context`](/help/web-sdk/commands/configure/context.md) para obter mais informações.
+![Imagem que mostra as configurações da coleção de dados da extensão de tag do SDK da Web na interface do usuário de tags.](assets/web-sdk-ext-collection.png)
+
+* **[!UICONTROL Ativado antes do retorno de chamada do envio do evento]**: uma função de retorno de chamada para avaliar e modificar o payload enviado para o Adobe. Use o `content` na função de retorno de chamada para modificar a carga. Este retorno de chamada é a tag equivalente a [`onBeforeEventSend`](/help/web-sdk/commands/configure/onbeforeeventsend.md) na biblioteca do JavaScript.
+* **[!UICONTROL Coletar cliques internos em links]**: uma caixa de seleção que permite a coleta de dados de rastreamento de links internos no site ou na propriedade. Quando você ativa essa caixa de seleção, as opções de agrupamento de eventos são exibidas:
+   * **[!UICONTROL Nenhum agrupamento de eventos]**: os dados de rastreamento de link são enviados para o Adobe em eventos separados. Os cliques em links enviados em eventos separados podem aumentar o uso contratual dos dados enviados para o Adobe Experience Platform.
+   * **[!UICONTROL Agrupamento de eventos usando armazenamento de sessão]**: armazene os dados de rastreamento de link no armazenamento da sessão até o evento da próxima página. Na página a seguir, os dados de rastreamento de link armazenados e os dados de exibição de página são enviados para o Adobe ao mesmo tempo. A Adobe recomenda ativar essa configuração ao rastrear links internos.
+   * **[!UICONTROL Agrupamento de eventos usando objeto local]**: armazene os dados de rastreamento de link em um objeto local até o evento da próxima página. Se um visitante navega para uma nova página, os dados de rastreamento de link são perdidos. Essa configuração é mais benéfica no contexto de aplicativos de página única.
+* **[!UICONTROL Coletar cliques em links externos]**: uma caixa de seleção que permite a coleta de links externos.
+* **[!UICONTROL Coletar cliques em links de download]**: uma caixa de seleção que permite a coleta de links de download.
+* **[!UICONTROL Qualificador de link de download]**: uma expressão regular que qualifica um URL de link como um link de download.
+* **[!UICONTROL Propriedades de clique de filtro]**: uma função de retorno de chamada para avaliar e modificar propriedades relacionadas a cliques antes da coleção. Essa função é executada antes da variável [!UICONTROL Ativado antes do retorno de chamada do envio do evento].
+* **Configurações de contexto**: colete automaticamente as informações do visitante, que preenchem campos XDM específicos para você. Você pode escolher **[!UICONTROL Todas as informações de contexto padrão]** ou **[!UICONTROL Informações de contexto específicas]**. É a tag equivalente a [`context`](/help/web-sdk/commands/configure/context.md) na biblioteca do JavaScript.
+   * **[!UICONTROL Web]**: coleta informações sobre a página atual.
+   * **[!UICONTROL Dispositivo]**: coleta informações sobre o dispositivo do usuário.
+   * **[!UICONTROL Ambiente]**: coleta informações sobre o navegador do usuário.
+   * **[!UICONTROL Contexto do local]**: coleta informações sobre a localização do usuário.
+   * **[!UICONTROL Dicas de agente do usuário de alta entropia]**: coleta informações mais detalhadas sobre o dispositivo do usuário.
+
+>[!TIP]
+>
+A variável **[!UICONTROL Ativado antes do envio de clique em links]** é um retorno de chamada obsoleto que só é visível para propriedades que já o têm configurado. É a tag equivalente a [`onBeforeLinkClickSend`](/help/web-sdk/commands/configure/onbeforelinkclicksend.md) na biblioteca do JavaScript. Use o **[!UICONTROL Propriedades de clique de filtro]** retorno de chamada para filtrar ou ajustar dados de cliques, ou use o **[!UICONTROL Ativado antes do retorno de chamada do envio do evento]** para filtrar ou ajustar o conteúdo geral enviado para o Adobe. Se ambas as opções **[!UICONTROL Propriedades de clique de filtro]** retorno de chamada e o **[!UICONTROL Ativado antes do envio de clique em links]** retorno de chamada estiverem definidos, somente a variável **[!UICONTROL Propriedades de clique de filtro]** o retorno de chamada é executado.
 
 ## Definir configurações de coleção de mídia {#media-collection}
 
@@ -155,6 +173,6 @@ As substituições de fluxo de dados devem ser configuradas com base no ambiente
 
 ## Definir configurações avançadas
 
-Use o **[!UICONTROL Caminho base da borda]** se precisar alterar o caminho base usado para interagir com o Edge Network. Isso não deve exigir atualização, mas no caso de você participar de um beta ou alfa, o Adobe pode solicitar que você altere esse campo.
+Use o **[!UICONTROL Caminho base do Edge]** se precisar alterar o caminho base usado para interagir com o Edge Network. Isso não deve exigir atualização, mas no caso de você participar de um beta ou alfa, o Adobe pode solicitar que você altere esse campo.
 
 ![Imagem mostrando as configurações avançadas usando a página de extensão de tag do SDK da Web.](assets/advanced-settings.png)

@@ -1,12 +1,13 @@
 ---
 title: onBeforeEventSend
-description: Retorno de chamada que é executado antes do envio dos dados.
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+description: Saiba como configurar o SDK da Web para registrar uma função do JavaScript que pode alterar os dados enviados antes que esses dados sejam enviados para o Adobe.
+source-git-commit: 660d4e72bd93ca65001092520539a249eae23bfc
 workflow-type: tm+mt
-source-wordcount: '447'
+source-wordcount: '381'
 ht-degree: 0%
 
 ---
+
 
 # `onBeforeEventSend`
 
@@ -16,7 +17,7 @@ A variável `onBeforeEventSend` O retorno de chamada permite registrar uma funç
 >
 >Esse retorno de chamada permite o uso do código personalizado. Se qualquer código incluído no retorno de chamada acionar uma exceção não capturada, o processamento do evento será interrompido. Os dados não são enviados para o Adobe.
 
-## Ativado antes do envio do evento usando a extensão de tag do SDK da Web
+## Configure em antes do retorno de chamada do envio do evento usando a extensão de tag do SDK da Web {#tag-extension}
 
 Selecione o **[!UICONTROL Fornecer código de retorno de chamada antes do envio do evento]** botão quando [configuração da extensão de tag](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md). Esse botão abre uma janela modal onde você pode inserir o código desejado.
 
@@ -28,21 +29,14 @@ Selecione o **[!UICONTROL Fornecer código de retorno de chamada antes do envio 
 1. Esse botão abre uma janela modal com um editor de código. Insira o código desejado e clique em **[!UICONTROL Salvar]** para fechar a janela modal.
 1. Clique em **[!UICONTROL Salvar]** em configurações de extensão, publique as alterações.
 
-No editor de código, é possível adicionar, editar ou remover elementos no `content` objeto. Este objeto contém o conteúdo enviado para o Adobe. Não é necessário definir a variável `content` objeto ou envolva qualquer código dentro de uma função. Quaisquer variáveis definidas fora do `content` podem ser usados, mas não estão incluídos na carga útil enviada para o Adobe.
+No editor de código, você tem acesso às seguintes variáveis:
 
->[!TIP]
->
->Os objetos `content.xdm` e `content.data` são sempre definidas neste contexto, portanto, não é necessário verificar se elas existem. Algumas variáveis nesses objetos dependem da implementação e da camada de dados. A Adobe recomenda verificar valores indefinidos nesses objetos para evitar erros de JavaScript.
+* **`content.xdm`**: A variável [XDM](../sendevent/xdm.md) carga útil do evento.
+* **`content.data`**: A variável [dados](../sendevent/data.md) carga útil do objeto para o evento.
+* **`return true`**: saia imediatamente do retorno de chamada e envie dados para o Adobe com os valores atuais na `content` objeto.
+* **`return false`**: saia imediatamente do retorno de chamada e interrompa o envio de dados para o Adobe.
 
-Por exemplo, se você deseja:
-
-* Adicionar o elemento XDM `xdm.commerce.order.purchaseID`
-* Forçar todos os caracteres em `xdm.marketing.trackingCode` para minúsculas
-* Excluir `xdm.environment.operatingSystemVersion`
-* Se um tipo de evento for um clique em links, enviar dados imediatamente, independentemente do código abaixo dele
-* Cancelamento do envio de dados para o Adobe se um bot for detectado
-
-O código equivalente na janela modal seria o seguinte:
+Quaisquer variáveis definidas fora do `content` podem ser usados, mas não estão incluídos na carga útil enviada para o Adobe.
 
 ```js
 // Use nullish coalescing assignments to add objects if they don't yet exist
@@ -69,19 +63,18 @@ if (myBotDetector.isABot()) {
 }
 ```
 
->[!NOTE]
->
+>[!TIP]
 >Evite retornar `false` no primeiro evento em uma página. Retornando `false` no primeiro evento pode afetar negativamente a personalização.
 
-## Ativado antes do evento enviar retorno de chamada usando a biblioteca JavaScript do SDK da Web
+## Configure em antes do evento enviar retorno de chamada usando a biblioteca JavaScript do SDK da Web {#library}
 
 Registre o `onBeforeEventSend` retorno de chamada ao executar o `configure` comando. Você pode alterar a `content` Variable name para qualquer valor desejado alterando a variável de parâmetro dentro da função inline.
 
 ```js
 alloy("configure", {
-  "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
-  "orgId": "ADB3LETTERSANDNUMBERS@AdobeOrg",
-  "onBeforeEventSend": function(content) {
+  edgeConfigId: "ebebf826-a01f-4458-8cec-ef61de241c93",
+  orgId: "ADB3LETTERSANDNUMBERS@AdobeOrg",
+  onBeforeEventSend: function(content) {
     // Use nullish coalescing assignments to add a new value
     content.xdm._experience ??= {};
     content.xdm._experience.analytics ??= {};
@@ -121,8 +114,8 @@ function lastChanceLogic(content) {
 }
 
 alloy("configure", {
-  "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
-  "orgId": "ADB3LETTERSANDNUMBERS@AdobeOrg",
-  "onBeforeEventSend": lastChanceLogic
+  edgeConfigId: "ebebf826-a01f-4458-8cec-ef61de241c93",
+  orgId: "ADB3LETTERSANDNUMBERS@AdobeOrg",
+  onBeforeEventSend: lastChanceLogic
 });    
 ```

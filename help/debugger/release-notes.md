@@ -4,21 +4,34 @@ description: As notas de versão mais recentes do Adobe Experience Platform Debu
 keywords: depurador;extensão do Experience Platform Debugger;chrome;extensão;notas de versão
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
-source-git-commit: a381760d3f19e04a70581d4adbb8095c92fb2e56
+source-git-commit: c99234cf3f5af9abe590c90fbdefc7d50c1539da
 workflow-type: tm+mt
-source-wordcount: '704'
-ht-degree: 3%
+source-wordcount: '758'
+ht-degree: 4%
 
 ---
 
 # Notas de versão do Adobe Experience Platform Debugger
+
+## Versão 1.6.0 - 11 de julho de 2024
+
+### Novos recursos
+
+* Permita que os usuários aceitem/recusem a coleta de dados técnicos e pessoais.
+
+### Correções e melhorias
+
+* Corrija a injeção de script do Firefox e o link da política de privacidade.
+* Capture as solicitações do Analytics ausentes.
+* Corrigir falhas em páginas com muitas mensagens complexas do console.
+* Atualize o Adobe Experience Platform Debugger para uma extensão Manifest v3.
 
 ## Versão 1.5.4 - 19 de dezembro de 2023
 
 ### Correções e melhorias
 
 * Correção de um problema em que as configurações não eram mantidas.
-* Correção de um problema que causava a falha do Debugger ao visualizar ocorrências pós-processadas do Analytics.
+* Correção de um problema que causava a falha do Debugger ao visualizar ocorrências processadas pelo Post do Analytics.
 
 ## Versão 1.5.3 - 6 de dezembro de 2023
 
@@ -47,7 +60,7 @@ ht-degree: 3%
 
 * Correção de problemas em que os eventos do Analytics eram ignorados ou duplicados.
 * Correção de um problema em que o tamanho máximo de armazenamento de estado era excedido.
-* Correção de um problema em que a pesquisa de Logs de borda não filtrava eventos.
+* Correção de um problema em que a pesquisa de Logs do Edge não filtrava eventos.
 
 ## Versão 1.5.0 - 19 de outubro de 2023
 
@@ -100,7 +113,7 @@ ht-degree: 3%
 * Adição do link Sobre para mostrar a versão atual e as notas.
 * Adição de um botão para exibir ocorrências pós-processadas para solicitações do Analytics. O botão de alternância está disponível na seção Analytics.
 * Correção de um problema de sessão de depuração remota quando a sessão era fechada fora do depurador.
-* Correção da notificação de erro que estava visível na guia Transações de borda do SDK da Web.
+* Correção da notificação de erro que estava visível na guia Transações do Edge do SDK da Web.
 * Corrigidas as tags Adobe no aviso de descontinuação da página quando o depurador acessava o objeto _satellite.
 * Correção de alguns casos em que uma instância do AppMeasurement não era encontrada na página.
 * Correção de um problema de conexão de página que ocorria ao abrir a janela do depurador pela primeira vez.
@@ -112,7 +125,7 @@ ht-degree: 3%
 
 ## Versão 1.1.0 - 5 de outubro de 2021
 
-* Visualização de depuração remota - Organize os eventos de depuração remota em um fluxograma visual na seção Adobe Experience Platform Web SDK > Transações de borda.
+* Visualização de depuração remota - Organize os eventos de depuração remota em um fluxograma visual na seção Adobe Experience Platform Web SDK > Transações do Edge.
 * Exigir que a organização do Adobe Experience Platform Web SDK usada na página corresponda à organização conectada ao iniciar uma nova sessão de depuração remota.
 * Mostrar somente as transações de borda da guia conectada. Os logs de rastreamento do Target ainda estão disponíveis na seção Logs > Edge.
 * Permitir a substituição da configuração da ID de fluxo de dados separada para cada instância do SDK da Web da Adobe Experience Platform na página. Adicionar alternância habilitada para depuração.

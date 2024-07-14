@@ -2,10 +2,10 @@
 title: Visão geral do Assistente de IA no Adobe Experience Platform
 description: Saiba mais sobre o Assistente de IA, suas nuances e casos de uso e como você pode usá-lo para acelerar seu fluxo de trabalho com a Adobe Experience Platform e a Real-time Customer Data Platform.
 exl-id: cfd4ac22-fff3-4b50-bbc2-85b6328f603c
-source-git-commit: e8939132c1508e1dfc4028e6c8ff23662d6c2b2b
+source-git-commit: 2bafd80771dc76384d380100f10216853278da2e
 workflow-type: tm+mt
-source-wordcount: '820'
-ht-degree: 6%
+source-wordcount: '928'
+ht-degree: 8%
 
 ---
 
@@ -15,11 +15,11 @@ Leia este documento para saber mais sobre o Assistente de IA na Adobe Experience
 
 O Assistente de IA no Adobe Experience Platform é uma experiência de conversação que você pode usar para acelerar seus fluxos de trabalho em aplicativos Adobe. Você pode usar o AI Assistant para entender melhor o conhecimento do produto, solucionar problemas ou pesquisar informações e encontrar insights operacionais. O Assistente de IA é compatível com Experience Platform, Real-time Customer Data Platform, Adobe Journey Optimizer e Customer Journey Analytics.
 
-![A interface do Assistente de IA com a experiência do usuário acionada pela primeira vez.](./images/ai-assistant-full.png)
+![A interface do Assistente de IA com a primeira experiência de usuário foi acionada.](./images/ai-assistant-full.png)
 
 >[!IMPORTANT]
 >
->Você deve concordar com um [contrato do usuário](https://www.adobe.com/legal/licenses-terms/adobe-dx-gen-ai-user-guidelines.html) antes de usar o Assistente de IA. O contrato de usuário também contém o contrato público beta. Para que você possa usar os recursos adicionais do Assistente de IA à medida que eles forem implantados na capacidade beta.
+>Você deve concordar com um [contrato de usuário](https://www.adobe.com/legal/licenses-terms/adobe-dx-gen-ai-user-guidelines.html) antes de usar o Assistente de IA. O contrato de usuário também contém o contrato público beta. Para que você possa usar os recursos adicionais do Assistente de IA à medida que eles forem implantados na capacidade beta.
 
 +++Selecione para exibir a interface do contrato do usuário
 
@@ -33,9 +33,9 @@ O Assistente de IA no Adobe Experience Platform é uma experiência de conversa�
 
 O Assistente de IA responde às perguntas enviadas consultando um banco de dados e, em seguida, traduzindo os dados do banco de dados em uma resposta legível.
 
-Essa representação interna de dados subjacentes também é conhecida como **[!DNL Knowledge Graph]** - uma ampla rede de conceitos, dados e metadados para uma determinada resposta.
+Essa representação interna de dados subjacentes também é conhecida como **[!DNL Knowledge Graph]** - uma Web abrangente de conceitos, dados e metadados para uma determinada resposta.
 
-A variável [!DNL Knowledge Graph] consiste em subgráficos que são referenciados sempre que as consultas são enviadas:
+[!DNL Knowledge Graph] consiste em subgráficos que são referenciados sempre que as consultas são enviadas:
 
 * Insights operacionais do cliente.
 * Insights operacionais do cliente em várias meta lojas.
@@ -59,7 +59,7 @@ O conhecimento do produto refere-se aos conceitos e tópicos baseados na documen
 
 >[!IMPORTANT]
 >
->As respostas dos insights operacionais estão na versão beta. Qualquer pessoa que tenha acesso à **Exibir Insights Operacionais** A permissão do terá acesso às respostas dos insights operacionais.
+>As respostas dos insights operacionais estão na versão beta. Qualquer pessoa com acesso à permissão **Exibir Insights Operacionais** terá acesso às respostas dos insights operacionais.
 
 Os insights operacionais se referem às respostas que o AI Assistant gera sobre os objetos de metadados (atributos, públicos, fluxos de dados, conjuntos de dados, destinos, jornadas, esquemas e fontes), incluindo contagens, pesquisas e impacto de linhagem. Ele não analisa dados na sandbox.
 
@@ -69,16 +69,16 @@ Os insights operacionais se referem às respostas que o AI Assistant gera sobre 
 
 Você pode fazer perguntas ao Assistente de IA sobre seus insights operacionais nos seguintes domínios:
 
-| Domínio | Metadados compatíveis |
-| --- | --- |
-| Atributos | <ul><li>Pesquisas de nome de atributo</li><li>Atributo - relacionamento de esquema</li><li>Relação atributo-conjunto de dados</li><li>Atributo - relacionamento de público</li><li>Relação atributo-destino</li><li>Atributos não utilizados</li></ul> |
-| Públicos-alvo | <ul><li>Contagem de público-alvo</li><li>Tipo de público-alvo (streaming ou lote)</li><li>Datas de criação/modificação</li><li>Status de ativação</li><li>Contagem de perfis</li><li>Duplicar públicos</li><li>Pesquisas de definição de público-alvo</li><li>Público-alvo - relação de atributo</li><li>Público-alvo - relação do conjunto de dados</li><li>Público-alvo - relacionamento de destino</li><li>Regras InSegment</li><li>Pesquisas de nome</li><li>Pesquisas de nome e ID |
-| Fluxos de dados | <ul><li>Contagens de fluxo de dados</li><li>Status do fluxo de dados</li><li>Fluxo de dados - relação do conjunto de dados</li><li>Fluxo de dados - relacionamento de origem</li></ul> |
-| Conjuntos de dados | <ul><li>Contagem do conjunto de dados</li><li>Status de habilitação do perfil</li><li>Data de criação/modificação</li><li>Relação entre conjunto de dados e esquema</li><li>Conjunto de dados - relacionamento de público-alvo</li><li>Conjunto de dados - relação de atributo</li><li>Relação entre conjunto de dados e fluxo de dados</li><li>Pesquisas de nome </li><li>Pesquisas de nome e ID</li></ul> |
-| Destinos | <ul><li>Contagens de destino configuradas</li><li>Relação destino - público</li><li>Relação de atributo de destino</li></ul> |
-| Jornadas | <ul><li>Contagens</li><li>Pesquisas de nome</li><li>Pesquisas de nome e ID</li><li>Status da jornada</li><li>Status acionado (público-alvo vs. eventos)</li><li>Datas de criação/modificação</li><li>Frequência recorrente</li></ul> |
-| Esquemas | <ul><li>Contagens de esquema</li><li>Data de criação/modificação</li><li>Tipo de classe de esquema</li><li>Esquema - Relação de atributo</li><li>Relação esquema - conjunto de dados</li><li>Esquema - relacionamento de público</li><li>Status de habilitação do perfil</li><li>Pesquisas de nome</li><li>Pesquisas de nome e ID</li></ul> |
-| Origens | <ul><li>Contagens de conta</li><li>Status da conta</li><li>Fluxos de dados ativos/inativos para cada conta</li><li>Conector de origem - relação de fluxo de dados</li><li>Conta de origem - relação de fluxo de dados</li></ul> |
+| Domínio | Metadados compatíveis | Metadados incompatíveis |
+| --- | --- | --- |
+| Atributos | <ul><li>Pesquisas de nome de atributo</li><li>Atributo - relacionamento de esquema</li><li>Relação atributo-conjunto de dados</li><li>Atributo - relacionamento de público</li><li>Relação atributo-destino</li></ul> | <ul><li>Classe de atributo</li><li>Auditoria</li><li>Status de desativação</li><li>Rótulos</li><li>Valor armazenado em atributos</li></ul> |
+| Públicos-alvo | <ul><li>Contagem de público-alvo</li><li>Tipo de público-alvo (streaming ou lote)</li><li>Datas de criação/modificação</li><li>Status de ativação</li><li>Contagem de perfis</li><li>Duplicar públicos</li><li>Pesquisas de definição de público-alvo</li><li>Público-alvo - relação de atributo</li><li>Público-alvo - relação do conjunto de dados</li><li>Público-alvo - relacionamento de destino</li><li>Regras InSegment</li><li>Pesquisas de nome</li><li>Pesquisas de nome e ID | <ul><li>Sobreposições de público</li><li>Ativação de público-alvo</li><li>Público-alvo - relacionamentos de campanha</li><li>Auditoria</li><li>Criar/modificar</li><li>Rótulos</li><li>Tendências de qualificação de perfil</li></ul> |
+| Fluxos de dados | <ul><li>Contagens de fluxo de dados</li><li>Status do fluxo de dados</li><li>Fluxo de dados - relação do conjunto de dados</li><li>Fluxo de dados - relacionamento de origem</li></ul> | <ul><li>Criação/modificação</li><li>Relações fluxo-lote de dados</li><li>Contagem de perfis de assimilação</li></ul> |
+| Conjuntos de dados | <ul><li>Contagem do conjunto de dados</li><li>Status de habilitação do perfil</li><li>Data de criação/modificação</li><li>Relação entre conjunto de dados e esquema</li><li>Conjunto de dados - relacionamento de público-alvo</li><li>Conjunto de dados - relação de atributo</li><li>Relação entre conjunto de dados e fluxo de dados</li><li>Pesquisas de nome </li><li>Pesquisas de nome e ID</li></ul> | <ul><li>Auditoria</li><li>Criado por</li><li>Relação entre conjunto de dados e lote</li><li>Criação/modificação do conjunto de dados</li><li>Tamanho do conjunto de dados</li><li>Número de perfis</li><li>Número de linhas</li><li>Pesquisas de valor</li></ul> |
+| Destinos | <ul><li>Contagens de destino configuradas</li><li>Relação destino - público</li><li>Relação de atributo de destino</li></ul> | <ul><li>Configuração de conta</li><li>Informações de credencial da conta</li><li>Perfis únicos ativados</li></ul> |
+| Jornadas | <ul><li>Contagens</li><li>Pesquisas de nome</li><li>Pesquisas de nome e ID</li><li>Status da jornada</li><li>Status acionado (público-alvo vs. eventos)</li><li>Datas de criação/modificação</li><li>Frequência recorrente</li></ul> | <ul><li>Atributos - Relacionamentos de jornada</li><li>Auditoria</li><li>Criação/modificação</li><li>Criado por</li><li>Eventos</li><li>Jornada - conjunto de dados</li><li>Jornada - esquema</li><li>Ofertas</li><li>Tendências de qualificação de perfil</li><li>Eventos de etapa</li></ul> |
+| Esquemas | <ul><li>Contagens de esquema</li><li>Data de criação/modificação</li><li>Tipo de classe de esquema</li><li>Esquema - Relação de atributo</li><li>Relação esquema - conjunto de dados</li><li>Esquema - relacionamento de público</li><li>Status de habilitação do perfil</li><li>Pesquisas de nome</li><li>Pesquisas de nome e ID</li></ul> | <ul><li>Auditoria</li><li>Criação/modificação</li><li>Criado por</li><li>Grupos de campos</li><li>Identidades</li><li>Namespaces de identidade</li><li>Rótulos</li><li>Número de perfis</li></ul> |
+| Origens | <ul><li>Contagens de conta</li><li>Status da conta</li><li>Fluxos de dados ativos/inativos para cada conta</li><li>Source connector - relação de fluxo de dados</li><li>Relação conta Source - fluxo de dados</li></ul> | <ul><li>Informações de credenciais da conta</li><li>Configuração de conta</li><li>Métricas de assimilação de dados</li><li>Número de perfis</li><li>Source - relacionamentos em lote</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -88,8 +88,8 @@ Para perguntas sobre insights operacionais, as respostas podem não refletir o e
 
 Atualmente, o escopo do Assistente de IA é o seguinte:
 
-* [Conhecimento do produto](./home.md#product-knowledge): O Assistente de IA pode responder a perguntas de conhecimento de produto do Experience Platform, Real-time Customer Data Platform e Adobe Journey Optimizer. Você também pode se aprofundar em tópicos de conhecimento sobre produtos para o Customer Journey Analytics, mas somente por meio da interface do usuário do Customer Journey Analytics.
-* [Insights operacionais](./home.md#operational-insights): Você pode fazer perguntas ao Assistente de IA sobre insights operacionais nos seguintes objetos de dados: atributos, públicos-alvo, fluxos de dados, conjuntos de dados, destinos, jornadas, esquemas e fontes.
+* [Conhecimento de produto](./home.md#product-knowledge): o AI Assistant pode responder a perguntas de conhecimento de produto do Experience Platform, Real-time Customer Data Platform e Adobe Journey Optimizer. Você também pode se aprofundar em tópicos de conhecimento sobre produtos para o Customer Journey Analytics, mas somente por meio da interface do usuário do Customer Journey Analytics.
+* [Insights operacionais](./home.md#operational-insights): você pode fazer perguntas ao Assistente de IA sobre insights operacionais nos seguintes objetos de dados: atributos, públicos, fluxos de dados, conjuntos de dados, destinos, jornadas, esquemas e fontes.
 
 ## Próximas etapas
 

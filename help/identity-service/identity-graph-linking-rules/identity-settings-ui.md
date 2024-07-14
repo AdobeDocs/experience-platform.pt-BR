@@ -1,12 +1,10 @@
 ---
 title: Interface de configurações de identidade
 description: Saiba como usar a interface do usuário de configurações de identidade.
-hide: true
-hidefromtoc: true
 badge: Beta
-source-git-commit: 605aa5ed2db2bfd7f787f2dff9fa00cee2afbce6
+source-git-commit: 72773f9ba5de4387c631bd1aa0c4e76b74e5f1dc
 workflow-type: tm+mt
-source-wordcount: '478'
+source-wordcount: '524'
 ht-degree: 0%
 
 ---
@@ -19,44 +17,47 @@ ht-degree: 0%
 
 As configurações de identidade são um recurso na interface do serviço de identidade da Adobe Experience Platform que pode ser usado para designar namespaces exclusivos e configurar a prioridade de namespace.
 
-Leia este guia para saber como usar a ferramenta de configurações de identidade.
+Leia este guia para saber como definir suas configurações de identidade na interface do usuário.
 
-## Pré-requisito
+## Pré-requisitos
 
 Leia os seguintes documentos antes de começar a trabalhar com configurações de identidade:
 
+* [Guia de configuração das regras de vinculação do gráfico de identidade](./configuration.md)
 * [Algoritmo de otimização de identidade](./identity-optimization-algorithm.md)
 * [Prioridade de namespace](./namespace-priority.md)
 * [Simulação de gráfico](./graph-simulation.md)
 
 ## Definir suas configurações de identidade
 
-Para acessar as configurações de identidade, navegue até o espaço de trabalho do Serviço de identidade na interface do usuário do Adobe Experience Platform e selecione **[!UICONTROL Configurações]**.
+Para acessar as configurações de identidade, navegue até o espaço de trabalho Serviço de Identidade na interface do usuário do Adobe Experience Platform e selecione **[!UICONTROL Configurações]**.
 
-![O botão de configurações de identidade selecionado.](../images/rules/identity-ui.png)
+![Botão de configurações de identidade selecionado.](../images/rules/identities-ui.png)
 
-A página de configurações de identidade é exibida e você recebe uma mensagem de confirmação para lembrá-lo de testar e validar primeiro suas configurações de identidade em uma sandbox de desenvolvimento antes de concluir as configurações em uma sandbox de produção.
-
-![A página de configurações de identidade.](../images/rules/identity-settings.png)
-
-A página de configurações de identidade é dividida em duas seções: [!UICONTROL Namespaces de pessoas] e [!UICONTROL Namespaces de dispositivo ou cookie]. Os namespaces de pessoa são identificadores de indivíduos únicos. Eles podem ser IDs entre dispositivos, endereços de email e números de telefone. Os namespaces de dispositivo ou cookie são identificadores de dispositivos e navegadores da Web e não podem receber uma prioridade mais alta do que os namespaces de pessoa. Você também não pode designar um dispositivo ou namespace de cookie como um namespace exclusivo.
-
-### Designar seu namespace exclusivo
-
-Para designar um namespace exclusivo, selecione o [!UICONTROL Exclusivo por gráfico] que corresponde a esse namespace. Você pode selecionar mais de um namespace exclusivo para sua configuração de definições de identidade.
-
-![Dois namespaces exclusivos selecionados.](../images/rules/unique-namespaces.png)
-
-Depois que os namespaces exclusivos forem estabelecidos, os gráficos não poderão mais ter várias identidades que contenham um namespace exclusivo. Por exemplo, se você designou a ID personalizada do Analytics como um namespace exclusivo, um gráfico só pode ter uma identidade com o namespace da ID personalizada do Analytics. Para obter mais informações, leia a [visão geral do algoritmo de otimização de identidade](./identity-optimization-algorithm.md#unique-namespace).
+A página de configurações de identidade está dividida em duas seções: [!UICONTROL Namespaces de pessoa] e [!UICONTROL Namespaces de dispositivo ou cookie]. Os namespaces de pessoa são identificadores de indivíduos únicos. Eles podem ser IDs entre dispositivos, endereços de email e números de telefone. Os namespaces de dispositivo ou cookie são identificadores de dispositivos e navegadores da Web e não podem receber uma prioridade mais alta do que os namespaces de pessoa. Você também não pode designar um dispositivo ou namespace de cookie como um namespace exclusivo.
 
 ### Configurar prioridade de namespace
 
 Para configurar a prioridade de namespace, selecione um namespace no menu de configurações de identidade e arraste e solte esse namespace na ordem de sua preferência. Coloque um namespace mais alto na lista para dar a ele uma prioridade mais alta e, inversamente, coloque um namespace mais baixo na lista para dar a ele uma prioridade mais baixa. O namespace com a maior prioridade também deve ser designado como um namespace exclusivo.
 
-Quando terminar as configurações, selecione **[!UICONTROL Próxima]**. Uma mensagem de confirmação é exibida. Use esta oportunidade para verificar se suas configurações estão corretas e selecione **[!UICONTROL Concluir]**.
+![O espaço de trabalho de configurações de identidades com um namespace de pessoa realçado.](../images/rules/namespace-priority.png)
 
-![A página de validação.](../images/rules/validate.png)
+### Designar seu namespace exclusivo
 
-Um aviso é exibido indicando que as novas configurações não terão implicações nos links existentes em um gráfico de identidade e nos fragmentos de perfil de evento de experiência que já foram assimilados. Para confirmar, digite o nome da sandbox e selecione **[!UICONTROL Confirmar o]**.
+Para designar um namespace exclusivo, marque a caixa de seleção [!UICONTROL Exclusivo por gráfico] que corresponde a esse namespace. Você pode selecionar mais de um namespace exclusivo para sua configuração de definições de identidade.
 
-![A janela de confirmação.](../images/rules/confirm.png)
+![Dois namespaces selecionados e definidos como exclusivos.](../images/rules/unique-namespace.png)
+
+Depois que os namespaces exclusivos forem estabelecidos, os gráficos não poderão mais ter várias identidades que contenham um namespace exclusivo. Por exemplo, se você designou a ID do CRM como um namespace exclusivo, um gráfico só pode ter uma identidade com o namespace da ID do CRM. Para obter mais informações, leia a [visão geral do algoritmo de otimização de identidade](./identity-optimization-algorithm.md#unique-namespace).
+
+Quando você terminar as configurações, selecione **[!UICONTROL Avançar]**. Uma mensagem de confirmação é exibida. Use esta oportunidade para verificar se as configurações estão corretas e selecione **[!UICONTROL Concluir]**.
+
+![Página de validação com Término realçada.](../images/rules/finish.png)
+
+Um aviso é exibido indicando que as novas configurações não terão implicações nos links existentes em um gráfico de identidade e nos fragmentos de perfil de evento de experiência que já foram assimilados. Além disso, você será notificado de que levará até seis horas para que suas novas configurações sejam refletidas no sistema. Para confirmar, digite o nome da sandbox e selecione **[!UICONTROL Confirmar]**.
+
+![A janela de confirmação que exibe um aviso de atraso de cerca de seis horas antes que as configurações sejam processadas.](../images/rules/confirm-settings.png)
+
+## Próximas etapas
+
+Agora você configurou as prioridades de namespace e designou os namespaces exclusivos usando a página de interface do usuário de configurações de identidade. Para obter mais informações, leia a [visão geral das regras de vinculação do gráfico de identidade](./overview.md).

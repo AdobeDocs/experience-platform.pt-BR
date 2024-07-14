@@ -3,9 +3,9 @@ title: Visão geral das regras de vinculação do gráfico de identidade
 description: Saiba mais sobre as regras de vinculação do gráfico de identidade no Serviço de identidade.
 badge: Beta
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: 67b08acaecb4adf4d30d6d4aa7b8c24b30dfac2e
+source-git-commit: 72773f9ba5de4387c631bd1aa0c4e76b74e5f1dc
 workflow-type: tm+mt
-source-wordcount: '1114'
+source-wordcount: '1173'
 ht-degree: 1%
 
 ---
@@ -26,11 +26,11 @@ Com o Serviço de identidade da Adobe Experience Platform e o Perfil do cliente 
 
 ## Exemplos de cenários em que o colapso de gráficos pode ocorrer
 
-* **Dispositivo compartilhado**: Dispositivo compartilhado refere-se aos dispositivos usados por mais de um indivíduo. Exemplos de dispositivos compartilhados incluem tablets, computadores de biblioteca e quiosques.
-* **Email e números de telefone incorretos**: emails e números de telefone incorretos se referem a usuários finais que registram informações de contato inválidas, como &quot;test&quot;<span>@test.com&quot; para email e &quot;+1-111-111-1111&quot; para número de telefone.
-* **Valores de identidade incorretos ou incorretos**: valores de identidade errados ou inválidos se referem a valores de identidade não exclusivos que podem mesclar IDs de CRM. Por exemplo, embora os IDFAs devam ter 36 caracteres (32 caracteres alfanuméricos e quatro hifens), há cenários em que um IDFA com um valor de identidade de &quot;user_null&quot; pode ser assimilado. Da mesma forma, os números de telefone suportam apenas caracteres numéricos, mas um namespace de telefone com um valor de identidade &quot;não especificado&quot; pode ser assimilado.
+* **Dispositivo compartilhado**: dispositivo compartilhado refere-se a dispositivos que são usados por mais de um indivíduo. Exemplos de dispositivos compartilhados incluem tablets, computadores de biblioteca e quiosques.
+* **Email e números de telefone incorretos**: emails e números de telefone incorretos se referem a usuários finais que registram informações de contato inválidas, como &quot;test<span>@test.com&quot; para email e &quot;+1-111-111-1111&quot; para número de telefone.
+* **Valores de identidade errados ou inválidos**: valores de identidade errados ou inválidos se referem a valores de identidade não exclusivos que poderiam mesclar IDs de CRM. Por exemplo, embora os IDFAs devam ter 36 caracteres (32 caracteres alfanuméricos e quatro hifens), há cenários em que um IDFA com um valor de identidade de &quot;user_null&quot; pode ser assimilado. Da mesma forma, os números de telefone suportam apenas caracteres numéricos, mas um namespace de telefone com um valor de identidade &quot;não especificado&quot; pode ser assimilado.
 
-Para obter mais informações sobre cenários de caso de uso para regras de vinculação de gráficos de identidade, leia o documento sobre [exemplos de cenários](./example-scenarios.md).
+Para obter mais informações sobre cenários de caso de uso para regras de vinculação de gráficos de identidade, leia o documento em [exemplos de cenários](./example-scenarios.md).
 
 ## Regras de vinculação do gráfico de identidade {#identity-graph-linking-rules}
 
@@ -53,11 +53,11 @@ Você pode configurar um namespace para ser exclusivo usando o espaço de trabal
 
 Considere o seguinte cenário:
 
-* Scott usa um tablet e abre seu navegador Google Chrome para ir ao Nike<span>.com, onde ele se inscreve e procura por novos sapatos de basquete.
+* Scott usa um tablet e abre seu navegador Google Chrome para ir até nike<span>.com, onde ele entra e navega por novos sapatos de basquete.
    * Nos bastidores, esse cenário registra as seguintes identidades:
       * Um namespace e valor de ECID para representar o uso do navegador
       * Um namespace e valor de ID do CRM para representar o usuário autenticado (Scott entrou com sua combinação de nome de usuário e senha).
-* Seu filho Peter, em seguida, usa o mesmo tablet e também usa Google Chrome para ir ao Nike<span>.com, onde ele se conecta com sua própria conta para procurar por equipamentos de futebol.
+* Seu filho Peter usa o mesmo tablet e também usa o Google Chrome para ir até nike<span>.com, onde ele entra com sua própria conta para procurar equipamentos de futebol.
    * Nos bastidores, esse cenário registra as seguintes identidades:
       * O mesmo namespace e valor de ECID para representar o navegador.
       * Um novo namespace e valor de ID do CRM para representar o usuário autenticado.
@@ -72,7 +72,7 @@ Você deve configurar um namespace exclusivo para informar o algoritmo de otimiz
 
 A prioridade de namespace refere-se à importância relativa dos namespaces em comparação uns com os outros. A prioridade de namespace é configurável por meio da interface do usuário e você pode classificar namespaces em um determinado gráfico de identidade.
 
-Uma maneira pela qual a prioridade do namespace é usada é determinar a identidade principal dos fragmentos de evento de experiência (comportamento do usuário) no Perfil do cliente em tempo real. Se as configurações de prioridade estiverem definidas, a configuração de identidade principal no SDK da Web não será mais usada para determinar quais fragmentos de perfil estão armazenados.
+Uma maneira pela qual a prioridade do namespace é usada é ao determinar a identidade principal dos fragmentos de evento de experiência (comportamento do usuário) no Perfil do cliente em tempo real. Se as configurações de prioridade estiverem definidas, a configuração de identidade principal no SDK da Web não será mais usada para determinar quais fragmentos de perfil estão armazenados.
 
 Namespaces exclusivos e prioridades de namespace podem ser configurados no espaço de trabalho da interface do usuário de configurações de identidade. No entanto, os efeitos de suas configurações são diferentes:
 
@@ -82,12 +82,13 @@ Namespaces exclusivos e prioridades de namespace podem ser configurados no espa�
 | Prioridade de namespace | No Identity Service, para gráficos com várias camadas, a prioridade do namespace determinará se os links apropriados foram removidos. | Quando um evento de experiência é assimilado no Perfil, o namespace com a prioridade mais alta se torna a identidade principal do fragmento de perfil. |
 
 * A prioridade de namespace não afeta o comportamento do gráfico quando o limite de 50 identidades por gráfico é atingido.
-* **A prioridade do namespace é um valor numérico** atribuído a um namespace indicando sua importância relativa. Esta é uma propriedade de um namespace.
-* **A identidade principal é a identidade na qual um fragmento de perfil é armazenado**. Um fragmento de perfil é um registro de dados que armazena informações sobre um determinado usuário: atributos (geralmente assimilados por meio de registros do CRM) ou eventos (geralmente assimilados de eventos de experiência ou dados online).
+* **A prioridade de namespace é um valor numérico** atribuído a um namespace indicando sua importância relativa. Esta é uma propriedade de um namespace.
+* **Identidade principal é a identidade na qual um fragmento de perfil é armazenado**. Um fragmento de perfil é um registro de dados que armazena informações sobre um determinado usuário: atributos (geralmente assimilados por meio de registros do CRM) ou eventos (geralmente assimilados de eventos de experiência ou dados online).
 * A prioridade do namespace determina a identidade principal dos fragmentos de evento de experiência.
-   * Para registros de perfil, você pode usar o espaço de trabalho de esquemas na interface do usuário do Experience Platform para definir campos de identidade, incluindo a identidade principal. Leia o guia em [definição de campos de identidade na interface](../../xdm/ui/fields/identity.md) para obter mais informações.
+   * Para registros de perfil, você pode usar o espaço de trabalho de esquemas na interface do usuário do Experience Platform para definir campos de identidade, incluindo a identidade principal. Leia o manual sobre [definição de campos de identidade na interface](../../xdm/ui/fields/identity.md) para obter mais informações.
+* Se um evento de experiência tiver duas ou mais identidades com a maior prioridade de namespace no identityMap, ele será rejeitado da assimilação porque será considerado como &quot;dado incorreto&quot;. Por exemplo, se identityMap contiver `{ECID: 111, CRMID: John, CRMID: Jane}`, o evento inteiro será rejeitado como dados inválidos porque implica que o evento está associado a `CRMID: John` e `CRMID: Jane` simultaneamente.
 
-Para obter mais informações, leia o guia em [prioridade de namespace](./namespace-priority.md).
+Para obter mais informações, leia o manual sobre [prioridade de namespace](./namespace-priority.md).
 
 ## Próximas etapas
 

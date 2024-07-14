@@ -3,10 +3,10 @@ title: Prioridade de namespace
 description: Saiba mais sobre a prioridade de namespace no Serviço de identidade.
 badge: Beta
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: 5674309e4e8f17ad4c951ec4a5cb0cbc0a15ab03
+source-git-commit: 5d19a22dc8d1b7f0151008d14b2f5bf89c85c638
 workflow-type: tm+mt
-source-wordcount: '1519'
-ht-degree: 1%
+source-wordcount: '1574'
+ht-degree: 2%
 
 ---
 
@@ -49,15 +49,15 @@ Uma identidade representa um objeto real. Há três objetos que são representad
 
 Os namespaces de pessoa são relativamente imutáveis em comparação a dispositivos de hardware (como IDFA, GAID), que são relativamente imutáveis em comparação a navegadores da Web. Basicamente, você (pessoa) sempre será uma única entidade, que pode ter vários dispositivos de hardware (telefone, laptop, tablet etc.) e usar vários navegadores (Google Chrome, Safari, FireFox etc.)
 
-Outra maneira de abordar este tópico é através da cardinalidade. Para uma determinada entidade de pessoa, quantas identidades serão criadas? Na maioria dos casos, uma pessoa terá uma ID de CRM, alguns identificadores de dispositivo de hardware (redefinições de IDFA/GAID não devem ocorrer com frequência) e ainda mais cookies (um indivíduo pode navegar em vários dispositivos, usar o modo incógnito ou redefinir cookies a qualquer momento). Em geral, **cardinalidade mais baixa indica um namespace com um valor mais alto**.
+Outra maneira de abordar este tópico é através da cardinalidade. Para uma determinada entidade de pessoa, quantas identidades serão criadas? Na maioria dos casos, uma pessoa terá uma ID de CRM, alguns identificadores de dispositivo de hardware (redefinições de IDFA/GAID não devem ocorrer com frequência) e ainda mais cookies (um indivíduo pode navegar em vários dispositivos, usar o modo incógnito ou redefinir cookies a qualquer momento). Geralmente, **a cardinalidade mais baixa indica um namespace com um valor maior**.
 
 ## Validar as configurações de prioridade do namespace
 
-Depois de ter uma ideia de como priorizar seus namespaces, você pode usar a ferramenta Simulação de gráfico para testar vários cenários de recolhimento de gráficos e garantir que suas configurações de prioridade retornem os resultados esperados do gráfico. Para obter mais informações, leia o guia sobre como usar o [Ferramenta Simulação de gráfico](./graph-simulation.md).
+Depois de ter uma ideia de como priorizar seus namespaces, você pode usar a ferramenta Simulação de gráfico para testar vários cenários de recolhimento de gráficos e garantir que suas configurações de prioridade retornem os resultados esperados do gráfico. Para obter mais informações, leia o manual sobre como usar a [Ferramenta de simulação de gráfico](./graph-simulation.md).
 
 ## Configurar prioridade de namespace
 
-A prioridade de namespace pode ser configurada usando [!UICONTROL Configurações de identidade]. No [!UICONTROL Configurações de identidade] você pode arrastar e soltar um namespace para determinar sua importância relativa.
+A prioridade de namespace pode ser configurada usando [!UICONTROL Configurações de Identidade]. Na interface [!UICONTROL Configurações de identidade], você pode arrastar e soltar um namespace para determinar sua importância relativa.
 
 >[!IMPORTANT]
 >
@@ -65,28 +65,28 @@ A prioridade de namespace pode ser configurada usando [!UICONTROL Configuraçõe
 
 ## Uso da prioridade de namespace
 
-Atualmente, a prioridade do namespace influencia o comportamento do sistema do Perfil do cliente em tempo real. O diagrama abaixo ilustra esse conceito. Para obter mais informações, leia o guia em [Diagramas da arquitetura de aplicativos e Adobe Experience Platform](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/platform-applications).
+Atualmente, a prioridade do namespace influencia o comportamento do sistema do Perfil do cliente em tempo real. O diagrama abaixo ilustra esse conceito. Para obter mais informações, leia o guia em [diagramas de arquitetura de Adobe Experience Platform e aplicativos](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/platform-applications).
 
-![Um diagrama do escopo do aplicativo de prioridade de namespace](../images/namespace-priority/application-scope.png)
+![Um diagrama do escopo de aplicativo de prioridade de namespace](../images/namespace-priority/application-scope.png)
 
 ### Serviço de identidade: algoritmo de otimização de identidade
 
-Para estruturas de gráficos relativamente complexas, a prioridade de namespace desempenha um papel importante para garantir que os links corretos sejam removidos quando ocorrem cenários de recolhimento de gráficos. Para obter mais informações, leia a [[!DNL Identity Optimization Algorithm] visão geral](../identity-graph-linking-rules/identity-optimization-algorithm.md).
+Para estruturas de gráficos relativamente complexas, a prioridade de namespace desempenha um papel importante para garantir que os links corretos sejam removidos quando ocorrem cenários de recolhimento de gráficos. Para obter mais informações, leia a [visão geral do algoritmo de otimização de identidade](../identity-graph-linking-rules/identity-optimization-algorithm.md).
 
 ### Perfil do cliente em tempo real: determinação de identidade principal para eventos de experiência
 
 * Para eventos de experiência, depois de definir as Configurações de identidade para uma determinada sandbox, a identidade primária será determinada pela prioridade de namespace mais alta a partir de agora.
    * Isso ocorre porque os eventos de experiência são de natureza dinâmica. Um mapa de identidade pode conter três ou mais identidades, e a prioridade do namespace garante que o namespace mais importante esteja associado ao evento de experiência.
-* Como resultado, as seguintes configurações **não será mais usado pelo Perfil de cliente em tempo real**:
+* Como resultado, as seguintes configurações **não serão mais usadas pelo Perfil de Cliente em Tempo Real**:
    * Caixa de seleção &quot;Primário&quot; no tipo de elemento de dados no WebSDK.
    * Quaisquer campos marcados como identidade primária em um esquema de Classe de evento de experiência XDM.
    * Configurações de identidade primária padrão no conector de origem do Adobe Analytics (ECID ou AAID).
-* Por outro lado, **a prioridade de namespace não determina a identidade principal para registros de perfil**.
-   * Para registros de perfil, você pode usar o espaço de trabalho de esquemas na interface do usuário do Experience Platform para definir os campos de identidade, incluindo a identidade principal. Leia o guia em [definição de campos de identidade na interface](../../xdm/ui/fields/identity.md) para obter mais informações.
+* Por outro lado, a **prioridade de namespace não determina a identidade principal dos registros de perfil**.
+   * Para registros de perfil, você pode usar o espaço de trabalho de esquemas na interface do usuário do Experience Platform para definir os campos de identidade, incluindo a identidade principal. Leia o manual sobre [definição de campos de identidade na interface](../../xdm/ui/fields/identity.md) para obter mais informações.
 
 >[!NOTE]
 >
->* A prioridade do namespace é **uma propriedade de um namespace**. É um valor numérico atribuído a um namespace para indicar sua importância relativa.
+>* A prioridade de namespace é **uma propriedade de um namespace**. É um valor numérico atribuído a um namespace para indicar sua importância relativa.
 >
 >* A identidade principal é a identidade na qual um fragmento de perfil é armazenado. Um fragmento de perfil é um registro de dados que armazena informações sobre um determinado usuário: atributos (geralmente assimilados por meio de registros do CRM) ou eventos (geralmente assimilados de eventos de experiência ou dados online).
 
@@ -120,7 +120,7 @@ Dadas as configurações descritas acima, as ações do usuário e a determinaç
 
 ### Serviço de segmentação: armazenamento de metadados de associação de segmento
 
-![Um diagrama do armazenamento de associação do segmento](../images/namespace-priority/segment-membership-storage.png)
+![Um diagrama de armazenamento de associação de segmento](../images/namespace-priority/segment-membership-storage.png)
 
 Para um determinado perfil mesclado, as associações de segmento serão armazenadas em relação à identidade com o namespace de prioridade mais alta.
 
@@ -146,17 +146,23 @@ A exclusão de registros da higiene de dados solicita funções da seguinte mane
 
 Para obter mais informações, leia a [visão geral avançada do gerenciamento do ciclo de vida](../../hygiene/home.md).
 
+### Atributos computados
+
+Os atributos computados não usam a prioridade de namespace para calcular valores. Se estiver usando atributos calculados, você deve garantir que a ID do CRM seja designada como sua identidade primária para o WebSDK. Essa limitação deve ser resolvida em agosto de 2024.
+
+Para obter mais informações, leia o [guia da interface do usuário de atributos computados](../../profile/computed-attributes/ui.md).
+
 ### Data lake
 
-A assimilação de dados no data lake continuará respeitando as configurações de identidade principais definidas em [SDK da Web](../../tags/extensions/client/web-sdk/data-element-types.md#identity-map) e esquemas.
+A assimilação de dados no data lake continuará respeitando as configurações de identidade primárias definidas no [SDK da Web](../../tags/extensions/client/web-sdk/data-element-types.md#identity-map) e nos esquemas.
 
 O data lake não determinará a identidade principal com base na prioridade do namespace. Por exemplo, o Adobe Customer Journey Analytics continuará a usar valores no mapa de identidade mesmo após a prioridade do namespace ser ativada (como adicionar um conjunto de dados a uma nova conexão), porque o Customer Journey Analytics consome seus dados do data lake.
 
 ### Esquemas do Experience Data Model (XDM)
 
-Qualquer esquema que não seja um Evento de experiência XDM, como Perfis individuais XDM, continuará a honrar qualquer [campos marcados como identidade](../../xdm/ui/fields/identity.md).
+Qualquer esquema que não seja um Evento de experiência XDM, como Perfis individuais XDM, continuará respeitando qualquer [campo que você marcar como uma identidade](../../xdm/ui/fields/identity.md).
 
-Para obter mais informações sobre esquemas XDM, leia a [visão geral de esquemas](../../xdm/home.md).
+Para obter mais informações sobre esquemas XDM, leia a [visão geral dos esquemas](../../xdm/home.md).
 
 ### Serviços inteligentes
 
@@ -171,7 +177,7 @@ Para obter mais informações sobre, leia os documentos em [Attribution AI](../.
 
 ### Privacy Service
 
-[solicitações de exclusão do Privacy Service](../privacy.md) função da seguinte maneira, para uma determinada identidade:
+[as solicitações de exclusão Privacy Service](../privacy.md) funcionam da seguinte maneira para uma determinada identidade:
 
 * Perfil do cliente em tempo real: exclui qualquer fragmento de perfil com valor de identidade especificado como identidade principal. **A identidade principal no Perfil agora será determinada com base na prioridade do namespace.**
 * Data lake: exclui qualquer registro com a identidade especificada como identidade primária ou secundária.

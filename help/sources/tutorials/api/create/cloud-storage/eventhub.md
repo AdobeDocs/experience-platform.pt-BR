@@ -1,35 +1,35 @@
 ---
-title: Criar uma conexão de origem dos Hubs de eventos do Azure usando a API do Serviço de fluxo
+title: Criar uma conexão do Source com os Hubs de Eventos do Azure usando a API do Serviço de Fluxo
 description: Saiba como conectar o Adobe Experience Platform a uma conta do Azure Event Hubs usando a API do Serviço de fluxo.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: a4d0662d-06e3-44f3-8cb7-4a829c44f4d9
-source-git-commit: 22f3b76c02e641d2f4c0dd7c0e5cc93038782836
+source-git-commit: 1256f0c76b29edad4808fc4be1d61399bfbae8fa
 workflow-type: tm+mt
-source-wordcount: '1474'
+source-wordcount: '1492'
 ht-degree: 2%
 
 ---
 
-# Criar um [!DNL Azure Event Hubs] conexão de origem usando o [!DNL Flow Service] API
+# Criar uma conexão de origem [!DNL Azure Event Hubs] usando a API [!DNL Flow Service]
 
 >[!IMPORTANT]
 >
->A variável [!DNL Azure Event Hubs] origem está disponível no catálogo de origens para usuários que compraram o Real-time Customer Data Platform Ultimate.
+>A origem [!DNL Azure Event Hubs] está disponível no catálogo de origens para usuários que compraram o Real-time Customer Data Platform Ultimate.
 
-Leia este tutorial para saber como se conectar [!DNL Azure Event Hubs] (a seguir designado por &quot;[!DNL Event Hubs]&quot;) para Experience Platform, usando o [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Leia este tutorial para saber como conectar [!DNL Azure Event Hubs] (a seguir denominado &quot;[!DNL Event Hubs]&quot;) ao Experience Platform, usando a [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Introdução
 
 Este manual necessita de uma compreensão funcional dos seguintes componentes da Adobe Experience Platform:
 
-- [Origens](../../../../home.md): [!DNL Experience Platform] O permite que os dados sejam assimilados de várias fontes e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando o [!DNL Platform] serviços.
-- [Sandboxes](../../../../../sandboxes/home.md): [!DNL Experience Platform] O fornece sandboxes virtuais que particionam uma única [!DNL Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
+- [Fontes](../../../../home.md): [!DNL Experience Platform] permite que os dados sejam assimilados de várias fontes e fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços do [!DNL Platform].
+- [Sandboxes](../../../../../sandboxes/home.md): [!DNL Experience Platform] fornece sandboxes virtuais que particionam uma única instância do [!DNL Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
-As seções a seguir fornecem informações adicionais que você precisará saber para se conectar com êxito [!DNL Event Hubs] para a Platform usando o [!DNL Flow Service] API.
+As seções a seguir fornecem informações adicionais que você precisará saber para se conectar com êxito ao [!DNL Event Hubs] à Platform usando a API [!DNL Flow Service].
 
 ### Coletar credenciais necessárias
 
-A fim de [!DNL Flow Service] para se conectar com o seu [!DNL Event Hubs] você deve fornecer valores para as seguintes propriedades de conexão:
+Para que [!DNL Flow Service] se conecte à sua conta [!DNL Event Hubs], você deve fornecer valores para as seguintes propriedades de conexão:
 
 >[!BEGINTABS]
 
@@ -38,60 +38,60 @@ A fim de [!DNL Flow Service] para se conectar com o seu [!DNL Event Hubs] você 
 | Credencial | Descrição |
 | --- | --- |
 | `sasKeyName` | O nome da regra de autorização, que também é conhecido como o nome da chave SAS. |
-| `sasKey` | A chave primária do [!DNL Event Hubs] namespace. A variável `sasPolicy` que o `sasKey` corresponde a deve ter `manage` direitos configurados para a variável [!DNL Event Hubs] lista a ser preenchida. |
-| `namespace` | O namespace do [!DNL Event Hubs] que você está acessando. Um [!DNL Event Hubs] O namespace fornece um contêiner de escopo exclusivo, no qual você pode criar um ou mais [!DNL Event Hubs]. |
-| `connectionSpec.id` | A especificação de conexão retorna as propriedades do conector de uma origem, incluindo especificações de autenticação relacionadas à criação das conexões de base e de origem. A variável [!DNL Event Hubs] A ID da especificação de conexão é: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e`. |
+| `sasKey` | A chave primária do namespace [!DNL Event Hubs]. O `sasPolicy` ao qual `sasKey` corresponde deve ter direitos `manage` configurados para que a lista [!DNL Event Hubs] seja preenchida. |
+| `namespace` | O namespace do [!DNL Event Hub] que você está acessando. Um namespace [!DNL Event Hub] fornece um contêiner de escopo exclusivo, no qual você pode criar um ou mais [!DNL Event Hubs]. |
+| `connectionSpec.id` | A especificação de conexão retorna as propriedades do conector de uma origem, incluindo especificações de autenticação relacionadas à criação das conexões de base e de origem. A ID da especificação de conexão [!DNL Event Hubs] é: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e`. |
 
 >[!TAB Autenticação SAS]
 
 | Credencial | Descrição |
 | --- | --- |
 | `sasKeyName` | O nome da regra de autorização, que também é conhecido como o nome da chave SAS. |
-| `sasKey` | A chave primária do [!DNL Event Hubs] namespace. A variável `sasPolicy` que o `sasKey` corresponde a deve ter `manage` direitos configurados para a variável [!DNL Event Hubs] lista a ser preenchida. |
-| `namespace` | O namespace do [!DNL Event Hubs] que você está acessando. Um [!DNL Event Hubs] O namespace fornece um contêiner de escopo exclusivo, no qual você pode criar um ou mais [!DNL Event Hubs]. |
-| `eventHubName` | O nome do seu [!DNL Event Hubs] origem. |
-| `connectionSpec.id` | A especificação de conexão retorna as propriedades do conector de uma origem, incluindo especificações de autenticação relacionadas à criação das conexões de base e de origem. A variável [!DNL Event Hubs] A ID da especificação de conexão é: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e`. |
+| `sasKey` | A chave primária do namespace [!DNL Event Hubs]. O `sasPolicy` ao qual `sasKey` corresponde deve ter direitos `manage` configurados para que a lista [!DNL Event Hubs] seja preenchida. |
+| `namespace` | O namespace do [!DNL Event Hub] que você está acessando. Um namespace [!DNL Event Hub] fornece um contêiner de escopo exclusivo, no qual você pode criar um ou mais [!DNL Event Hubs]. |
+| `eventHubName` | Preencha seu nome [!DNL Azure Event Hub]. Leia a [documentação do Microsoft](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) para obter mais informações sobre os nomes de [!DNL Event Hub]. |
+| `connectionSpec.id` | A especificação de conexão retorna as propriedades do conector de uma origem, incluindo especificações de autenticação relacionadas à criação das conexões de base e de origem. A ID da especificação de conexão [!DNL Event Hubs] é: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e`. |
 
-Para obter mais informações sobre a autenticação de assinaturas de acesso compartilhado (SAS) para [!DNL Event Hubs], leia o [[!DNL Azure] guia sobre o uso de SAS](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
+Para obter mais informações sobre a autenticação SAS (assinaturas de acesso compartilhado) para [!DNL Event Hubs], leia o [[!DNL Azure] guia sobre como usar SAS](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
 
 >[!TAB Autenticação do Ative Diretory do Azure Hub de Eventos]
 
 | Credencial | Descrição |
 | --- | --- |
-| `tenantId` | A ID do locatário da qual você deseja solicitar permissão. Sua ID de locatário pode ser formatada como um GUID ou como um nome amigável. **Nota**: A ID do locatário é chamada de &quot;ID do diretório&quot; na [!DNL Microsoft Azure] interface. |
-| `clientId` | A ID do aplicativo atribuída ao seu aplicativo. Você pode recuperar essa ID do [!DNL Microsoft Entra ID] portal onde você registrou seu [!DNL Azure Active Directory]. |
-| `clientSecretValue` | O segredo do cliente usado com a ID do cliente para autenticar seu aplicativo. Você pode recuperar o segredo do cliente na [!DNL Microsoft Entra ID] portal onde você registrou seu [!DNL Azure Active Directory]. |
-| `namespace` | O namespace do [!DNL Event Hubs] que você está acessando. Um [!DNL Event Hubs] O namespace fornece um contêiner de escopo exclusivo, no qual você pode criar um ou mais [!DNL Event Hubs]. |
+| `tenantId` | A ID do locatário da qual você deseja solicitar permissão. Sua ID de locatário pode ser formatada como um GUID ou como um nome amigável. **Observação**: a ID do locatário é chamada de &quot;ID do Diretório&quot; na interface [!DNL Microsoft Azure]. |
+| `clientId` | A ID do aplicativo atribuída ao seu aplicativo. Você pode recuperar essa ID do portal do [!DNL Microsoft Entra ID] no qual você registrou o [!DNL Azure Active Directory]. |
+| `clientSecretValue` | O segredo do cliente usado com a ID do cliente para autenticar seu aplicativo. Você pode recuperar o segredo do cliente no portal [!DNL Microsoft Entra ID] em que registrou o [!DNL Azure Active Directory]. |
+| `namespace` | O namespace do [!DNL Event Hub] que você está acessando. Um namespace [!DNL Event Hub] fornece um contêiner de escopo exclusivo, no qual você pode criar um ou mais [!DNL Event Hubs]. |
 
 Para obter mais informações sobre [!DNL Azure Active Directory], leia o [Guia do Azure sobre o uso da Microsoft Entra ID](https://learn.microsoft.com/en-us/azure/healthcare-apis/register-application).
 
->[!TAB Autenticação do Azure Ative Diretory no Escopo do Hub de Eventos]
+>[!TAB Autenticação do Azure Ative Diretory com Escopo do Hub de Eventos]
 
 | Credencial | Descrição |
 | --- | --- |
-| `tenantId` | A ID do locatário da qual você deseja solicitar permissão. Sua ID de locatário pode ser formatada como um GUID ou como um nome amigável. **Nota**: A ID do locatário é chamada de &quot;ID do diretório&quot; na [!DNL Microsoft Azure] interface. |
-| `clientId` | A ID do aplicativo atribuída ao seu aplicativo. Você pode recuperar essa ID do [!DNL Microsoft Entra ID] portal onde você registrou seu [!DNL Azure Active Directory]. |
-| `clientSecretValue` | O segredo do cliente usado com a ID do cliente para autenticar seu aplicativo. Você pode recuperar o segredo do cliente na [!DNL Microsoft Entra ID] portal onde você registrou seu [!DNL Azure Active Directory]. |
-| `namespace` | O namespace do [!DNL Event Hubs] que você está acessando. Um [!DNL Event Hubs] O namespace fornece um contêiner de escopo exclusivo, no qual você pode criar um ou mais [!DNL Event Hubs]. |
-| `eventHubName` | O nome do seu [!DNL Event Hubs] origem. |
+| `tenantId` | A ID do locatário da qual você deseja solicitar permissão. Sua ID de locatário pode ser formatada como um GUID ou como um nome amigável. **Observação**: a ID do locatário é chamada de &quot;ID do Diretório&quot; na interface [!DNL Microsoft Azure]. |
+| `clientId` | A ID do aplicativo atribuída ao seu aplicativo. Você pode recuperar essa ID do portal do [!DNL Microsoft Entra ID] no qual você registrou o [!DNL Azure Active Directory]. |
+| `clientSecretValue` | O segredo do cliente usado com a ID do cliente para autenticar seu aplicativo. Você pode recuperar o segredo do cliente no portal [!DNL Microsoft Entra ID] em que registrou o [!DNL Azure Active Directory]. |
+| `namespace` | O namespace do [!DNL Event Hub] que você está acessando. Um namespace [!DNL Event Hub] fornece um contêiner de escopo exclusivo, no qual você pode criar um ou mais [!DNL Event Hubs]. |
+| `eventHubName` | Preencha seu nome [!DNL Azure Event Hub]. Leia a [documentação do Microsoft](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) para obter mais informações sobre os nomes de [!DNL Event Hub]. |
 
 >[!ENDTABS]
 
-Para obter mais informações sobre esses valores, consulte [este documento de Hubs de Eventos](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
+Para obter mais informações sobre esses valores, consulte [este documento dos Hubs de Eventos](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
 
 ### Uso de APIs da plataforma
 
-Para obter informações sobre como fazer chamadas para APIs da Platform com êxito, consulte o manual em [introdução às APIs da Platform](../../../../../landing/api-guide.md).
+Para obter informações sobre como fazer chamadas para APIs da Platform com êxito, consulte o manual sobre [introdução às APIs da Platform](../../../../../landing/api-guide.md).
 
 ## Criar uma conexão básica
 
 >[!TIP]
 >
->Depois de criado, não é possível alterar o tipo de autenticação de um [!DNL Event Hubs] conexão básica. Para alterar o tipo de autenticação, você deve criar uma nova conexão base.
+>Depois de criada, você não pode alterar o tipo de autenticação de uma conexão de base [!DNL Event Hubs]. Para alterar o tipo de autenticação, você deve criar uma nova conexão base.
 
-A primeira etapa na criação de uma conexão de origem é autenticar seu [!DNL Event Hubs] origem e gere uma ID de conexão básica. Uma ID de conexão básica permite explorar e navegar pelos arquivos de dentro da origem e identificar itens específicos que você deseja assimilar, incluindo informações sobre os tipos de dados e formatos.
+A primeira etapa na criação de uma conexão de origem é autenticar sua origem [!DNL Event Hubs] e gerar uma ID de conexão base. Uma ID de conexão básica permite explorar e navegar pelos arquivos de dentro da origem e identificar itens específicos que você deseja assimilar, incluindo informações sobre os tipos de dados e formatos.
 
-Para criar um ID de conexão base, faça uma solicitação POST ao `/connections` ao fornecer sua [!DNL Event Hubs] credenciais de autenticação como parte dos parâmetros de solicitação.
+Para criar uma ID de conexão base, faça uma solicitação POST para o ponto de extremidade `/connections` enquanto fornece suas credenciais de autenticação [!DNL Event Hubs] como parte dos parâmetros de solicitação.
 
 **Formato da API**
 
@@ -103,7 +103,7 @@ POST /connections
 
 >[!TAB Autenticação padrão]
 
-Para criar uma conta usando a autenticação padrão, faça uma solicitação de POST para o `/connections` ao fornecer valores para o seu `sasKeyName`, `sasKey`, e `namespace`.
+Para criar uma conta usando a autenticação padrão, faça uma solicitação POST para o ponto de extremidade `/connections` enquanto fornece valores para os seus `sasKeyName`, `sasKey` e `namespace`.
 
 +++Solicitação
 
@@ -138,7 +138,7 @@ curl -X POST \
 | `auth.params.sasKeyName` | O nome da regra de autorização, que também é conhecido como o nome da chave SAS. |
 | `auth.params.sasKey` | A assinatura de acesso compartilhado gerada. |
 | `auth.params.namespace` | O namespace do [!DNL Event Hubs] que você está acessando. |
-| `connectionSpec.id` | A variável [!DNL Event Hubs] A ID da especificação de conexão é: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
+| `connectionSpec.id` | A ID da especificação de conexão [!DNL Event Hubs] é: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
 
 +++
 
@@ -157,7 +157,7 @@ Uma resposta bem-sucedida retorna detalhes da conexão base recém-criada, inclu
 
 >[!TAB Autenticação SAS]
 
-Para criar uma conta usando a autenticação SAS, faça uma solicitação de POST para o `/connections` ao fornecer valores para o seu `sasKeyName`, `sasKey`,`namespace`, e `eventHubName`.
+Para criar uma conta usando a autenticação SAS, faça uma solicitação POST para o ponto de extremidade `/connections` ao fornecer valores para os seus `sasKeyName`, `sasKey`,`namespace` e `eventHubName`.
 
 +++Solicitação
 
@@ -193,8 +193,8 @@ curl -X POST \
 | `auth.params.sasKeyName` | O nome da regra de autorização, que também é conhecido como o nome da chave SAS. |
 | `auth.params.sasKey` | A assinatura de acesso compartilhado gerada. |
 | `auth.params.namespace` | O namespace do [!DNL Event Hubs] que você está acessando. |
-| `params.eventHubName` | O nome do seu [!DNL Event Hubs] origem. |
-| `connectionSpec.id` | A variável [!DNL Event Hubs] A ID da especificação de conexão é: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
+| `params.eventHubName` | O nome da sua origem [!DNL Event Hubs]. |
+| `connectionSpec.id` | A ID da especificação de conexão [!DNL Event Hubs] é: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
 
 +++
 
@@ -213,7 +213,7 @@ Uma resposta bem-sucedida retorna detalhes da conexão base recém-criada, inclu
 
 >[!TAB Autenticação do Ative Diretory do Azure Hub de Eventos]
 
-Para criar uma conta usando a Autenticação do Azure Ative Diretory, faça uma solicitação POST para o `/connections` ao fornecer valores para o seu `tenantId`, `clientId`,`clientSecretValue`, e `namespace`.
+Para criar uma conta usando a Autenticação do Azure Ative Diretory, faça uma solicitação POST para o ponto de extremidade `/connections` ao fornecer valores para os seus `tenantId`, `clientId`,`clientSecretValue` e `namespace`.
 
 +++Solicitação
 
@@ -246,11 +246,11 @@ curl -X POST \
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `auth.params.tenantId` | A ID do locatário do seu aplicativo. **Nota**: A ID do locatário é chamada de &quot;ID do diretório&quot; na [!DNL Microsoft Azure] interface. |
+| `auth.params.tenantId` | A ID do locatário do seu aplicativo. **Observação**: a ID do locatário é chamada de &quot;ID do Diretório&quot; na interface [!DNL Microsoft Azure]. |
 | `auth.params.clientId` | A ID do cliente da sua organização. |
 | `auth.params.clientSecretValue` | O valor do segredo do cliente da sua organização. |
 | `auth.params.namespace` | O namespace do [!DNL Event Hubs] que você está acessando. |
-| `connectionSpec.id` | A variável [!DNL Event Hubs] A ID da especificação de conexão é: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
+| `connectionSpec.id` | A ID da especificação de conexão [!DNL Event Hubs] é: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
 
 +++
 
@@ -267,9 +267,9 @@ Uma resposta bem-sucedida retorna detalhes da conexão base recém-criada, inclu
 
 +++
 
->[!TAB Autenticação do Azure Ative Diretory no Escopo do Hub de Eventos]
+>[!TAB Autenticação do Azure Ative Diretory com Escopo do Hub de Eventos]
 
-Para criar uma conta usando a Autenticação do Azure Ative Diretory, faça uma solicitação POST para o `/connections` ao fornecer valores para o seu `tenantId`, `clientId`,`clientSecretValue`, `namespace`, e `eventHubName`.
+Para criar uma conta usando a Autenticação do Azure Ative Diretory, faça uma solicitação POST para o ponto de extremidade `/connections` ao fornecer valores para os seus `tenantId`, `clientId`,`clientSecretValue`, `namespace` e `eventHubName`.
 
 +++Solicitação
 
@@ -303,12 +303,12 @@ curl -X POST \
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `auth.params.tenantId` | A ID do locatário do seu aplicativo. **Nota**: A ID do locatário é chamada de &quot;ID do diretório&quot; na [!DNL Microsoft Azure] interface. |
+| `auth.params.tenantId` | A ID do locatário do seu aplicativo. **Observação**: a ID do locatário é chamada de &quot;ID do Diretório&quot; na interface [!DNL Microsoft Azure]. |
 | `auth.params.clientId` | A ID do cliente da sua organização. |
 | `auth.params.clientSecretValue` | O valor do segredo do cliente da sua organização. |
 | `auth.params.namespace` | O namespace do [!DNL Event Hubs] que você está acessando. |
-| `auth.params.eventHubName` | O nome do seu [!DNL Event Hubs] origem. |
-| `connectionSpec.id` | A variável [!DNL Event Hubs] A ID da especificação de conexão é: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
+| `auth.params.eventHubName` | O nome da sua origem [!DNL Event Hubs]. |
+| `connectionSpec.id` | A ID da especificação de conexão [!DNL Event Hubs] é: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
 
 +++
 
@@ -331,11 +331,11 @@ Uma resposta bem-sucedida retorna detalhes da conexão base recém-criada, inclu
 
 >[!TIP]
 >
->Um [!DNL Event Hubs] o grupo de consumidores só pode ser usado para um único fluxo em um determinado momento.
+>Um grupo de consumidores [!DNL Event Hubs] só pode ser usado para um único fluxo em um determinado momento.
 
 Uma conexão de origem cria e gerencia a conexão com a origem externa de onde os dados são assimilados. Uma conexão de origem consiste em informações como fonte de dados, formato de dados e uma ID de conexão de origem necessária para criar um fluxo de dados. Uma instância de conexão de origem é específica para um locatário e uma organização.
 
-Para criar uma conexão de origem, faça uma solicitação POST ao `/sourceConnections` endpoint do [!DNL Flow Service] API.
+Para criar uma conexão de origem, faça uma solicitação POST para o ponto de extremidade `/sourceConnections` da API [!DNL Flow Service].
 
 **Formato da API**
 
@@ -377,14 +377,14 @@ curl -X POST \
 | --- | --- |
 | `name` | O nome da sua conexão de origem. Certifique-se de que o nome da conexão de origem seja descritivo, pois você pode usá-lo para pesquisar informações sobre a conexão de origem. |
 | `description` | Um valor opcional que pode ser fornecido para incluir mais informações sobre a conexão de origem. |
-| `baseConnectionId` | A ID da conexão do [!DNL Event Hubs] que foi gerado na etapa anterior. |
-| `connectionSpec.id` | A ID de especificação de conexão fixa para [!DNL Event Hubs]. Essa ID é: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e`. |
-| `data.format` | O formato do [!DNL Event Hubs] dados que você deseja assimilar. No momento, o único formato de dados compatível é `json`. |
-| `params.eventHubName` | O nome do seu [!DNL Event Hubs] origem. |
-| `params.dataType` | Esse parâmetro define o tipo de dados que está sendo assimilado. Os tipos de dados compatíveis incluem: `raw` e `xdm`. |
-| `params.reset` | Esse parâmetro define como os dados serão lidos. Uso `latest` para começar a ler os dados mais recentes e use `earliest` para começar a ler os primeiros dados disponíveis no fluxo. Esse parâmetro é opcional e assume como padrão `earliest` se não fornecido. |
-| `params.consumerGroup` | O mecanismo de publicação ou subscrição a ser usado para [!DNL Event Hubs]. Esse parâmetro é opcional e assume como padrão `$Default` se não fornecido. Consulte esta [[!DNL Event Hubs] guia sobre consumidores de eventos](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-features#event-consumers) para obter mais informações. **Nota**: Um [!DNL Event Hubs] o grupo de consumidores só pode ser usado para um único fluxo em um determinado momento. |
+| `baseConnectionId` | A ID de conexão da origem [!DNL Event Hubs] que foi gerada na etapa anterior. |
+| `connectionSpec.id` | A ID de especificação de conexão fixa para [!DNL Event Hubs]. Esta ID é: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e`. |
+| `data.format` | O formato dos dados [!DNL Event Hubs] que você deseja assimilar. Atualmente, o único formato de dados com suporte é `json`. |
+| `params.eventHubName` | O nome da sua origem [!DNL Event Hubs]. |
+| `params.dataType` | Esse parâmetro define o tipo de dados que está sendo assimilado. Os tipos de dados suportados incluem: `raw` e `xdm`. |
+| `params.reset` | Esse parâmetro define como os dados serão lidos. Use `latest` para começar a ler os dados mais recentes e use `earliest` para começar a ler os primeiros dados disponíveis no fluxo. Este parâmetro é opcional e o padrão é `earliest` se não for fornecido. |
+| `params.consumerGroup` | O mecanismo de publicação ou assinatura a ser usado para [!DNL Event Hubs]. Este parâmetro é opcional e o padrão é `$Default` se não for fornecido. Consulte este [[!DNL Event Hubs] guia sobre consumidores de eventos](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-features#event-consumers) para obter mais informações. **Observação**: um grupo de consumidores [!DNL Event Hubs] só pode ser usado para um único fluxo em um determinado momento. |
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você criou um [!DNL Event Hubs] conexão de origem usando o [!DNL Flow Service] API. Você pode usar essa ID de conexão de origem no próximo tutorial para [crie um fluxo de dados de transmissão usando o [!DNL Flow Service] API](../../collect/streaming.md).
+Seguindo este tutorial, você criou uma conexão de origem [!DNL Event Hubs] usando a API [!DNL Flow Service]. Você pode usar esta ID de conexão de origem no próximo tutorial para [criar um fluxo de dados de streaming usando a [!DNL Flow Service] API](../../collect/streaming.md).

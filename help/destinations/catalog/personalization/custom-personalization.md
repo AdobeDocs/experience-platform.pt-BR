@@ -3,9 +3,9 @@ keywords: personalização personalizada, destino, destino personalizado da expe
 title: Conexão de personalização personalizada
 description: Esse destino fornece personalização externa, sistemas de gerenciamento de conteúdo, servidores de anúncios e outros aplicativos que estão sendo executados no site uma maneira de recuperar informações de público-alvo do Adobe Experience Platform. Esse destino fornece personalização em tempo real com base na associação do público-alvo do perfil do usuário.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 182176aa2e588aa356d5fea23b49f17bc8a50314
 workflow-type: tm+mt
-source-wordcount: '906'
+source-wordcount: '912'
 ht-degree: 10%
 
 ---
@@ -17,15 +17,15 @@ ht-degree: 10%
 
 | Mês de lançamento | Tipo de atualização | Descrição |
 |---|---|---|
-| Maio de 2023 | Atualização de funcionalidade e documentação | A partir de maio de 2023, a **[!UICONTROL Personalização personalizada]** suporte para conexão [personalização baseada em atributos](../../ui/activate-edge-personalization-destinations.md#map-attributes) e está disponível para todos os clientes. |
+| Maio de 2023 | Atualização de funcionalidade e documentação | A partir de maio de 2023, a conexão **[!UICONTROL Personalização personalizada]** oferecerá suporte à [personalização baseada em atributos](../../ui/activate-edge-personalization-destinations.md#map-attributes) e estará disponível para todos os clientes. |
 
 {style="table-layout:auto"}
 
 >[!IMPORTANT]
 >
->Os atributos do perfil podem conter dados confidenciais. Para proteger esses dados, você deve usar o [API do servidor Edge Network](/help/server-api/overview.md) ao configurar o **[!UICONTROL Personalization personalizado]** destino para personalização baseada em atributo. Todas as chamadas à API do servidor devem ser feitas em um [contexto autenticado](../../../server-api/authentication.md).
+>Os atributos do perfil podem conter dados confidenciais. Para proteger esses dados, você deve usar a [API do Edge Network Server](/help/server-api/overview.md) ao configurar o destino do **[!UICONTROL Personalization Personalizado]** para personalização baseada em atributos. Todas as chamadas da API do Servidor devem ser feitas em um [contexto autenticado](../../../server-api/authentication.md).
 >
-><br>Se você já estiver usando o SDK da Web ou o SDK móvel para a integração, poderá recuperar atributos por meio da API do servidor adicionando uma integração do lado do servidor.
+><br>Você pode recuperar atributos de perfil por meio da [API do Edge Network Server](/help/server-api/overview.md) adicionando uma integração do lado do servidor que utiliza a mesma sequência de dados que você já está usando para a implementação do SDK da Web ou do Mobile.
 >
 ><br>Se você não seguir os requisitos acima, a personalização será baseada somente na associação ao público-alvo.
 
@@ -35,11 +35,11 @@ Configure esse destino para permitir que plataformas de personalização externa
 
 ## Pré-requisitos {#prerequisites}
 
-Essa integração é viabilizada pelo [Adobe Experience Platform Web SDK](/help/web-sdk/home.md) ou o [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/). Você deve usar um desses SDKs para usar esse destino.
+Esta integração é fornecida pelo [Adobe Experience Platform Web SDK](/help/web-sdk/home.md) ou pelo [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/). Você deve usar um desses SDKs para usar esse destino.
 
 >[!IMPORTANT]
 >
->Antes de criar uma conexão de personalização personalizada, leia o guia sobre como [ativar dados do público-alvo para destinos de personalização de borda](../../ui/activate-edge-personalization-destinations.md). Este guia orienta você sobre as etapas de configuração necessárias para casos de uso de personalização de mesma página e próxima página, em vários componentes do Experience Platform.
+>Antes de criar uma conexão de personalização personalizada, leia o guia sobre como [ativar dados de público-alvo para destinos de personalização de borda](../../ui/activate-edge-personalization-destinations.md). Este guia orienta você sobre as etapas de configuração necessárias para casos de uso de personalização de mesma página e próxima página, em vários componentes do Experience Platform.
 
 ## Públicos-alvo compatíveis {#supported-audiences}
 
@@ -47,8 +47,8 @@ Esta seção descreve quais tipos de públicos-alvo você pode exportar para ess
 
 | Origem do público | Suportado | Descrição |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Públicos-alvo gerados pelo Experience Platform [Serviço de segmentação](../../../segmentation/home.md). |
-| Uploads personalizados | ✓ | Públicos-alvo [importado](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV. |
+| [!DNL Segmentation Service] | ✓ | Públicos gerados por meio do [Serviço de segmentação](../../../segmentation/home.md) do Experience Platform. |
+| Uploads personalizados | ✓ | Públicos [importados](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV. |
 
 {style="table-layout:auto"}
 
@@ -56,8 +56,8 @@ Esta seção descreve quais tipos de públicos-alvo você pode exportar para ess
 
 | Item | Tipo | Notas |
 ---------|----------|---------|
-| Tipo de exportação | **[!DNL Profile request]** | Você está solicitando todos os públicos mapeados no destino de personalização personalizado para um único perfil. Diferentes destinos de personalização personalizados podem ser configurados para diferentes [Fluxos de dados de Coleção de dados do Adobe](../../../datastreams/overview.md). |
-| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil é atualizado em Experience Platform com base na avaliação do público-alvo, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de transmissão](/help/destinations/destination-types.md#streaming-destinations). |
+| Tipo de exportação | **[!DNL Profile request]** | Você está solicitando todos os públicos mapeados no destino de personalização personalizado para um único perfil. Destinos de personalização personalizados diferentes podem ser configurados para [sequências de dados de Coleção de dados de Adobe](../../../datastreams/overview.md) diferentes. |
+| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil é atualizado em Experience Platform com base na avaliação do público-alvo, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 ## Conectar ao destino {#connect}
 
@@ -69,38 +69,38 @@ Esta seção descreve quais tipos de públicos-alvo você pode exportar para ess
 
 >[!IMPORTANT]
 > 
->Para se conectar ao destino, você precisa da variável **[!UICONTROL Exibir destinos]** e **[!UICONTROL Gerenciar destinos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
+>Para se conectar ao destino, você precisa de **[!UICONTROL Exibir Destinos]** e **[!UICONTROL Gerenciar Destinos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 
-Para se conectar a esse destino, siga as etapas descritas no [tutorial de configuração de destino](../../ui/connect-destination.md).
+Para se conectar a este destino, siga as etapas descritas no [tutorial de configuração de destino](../../ui/connect-destination.md).
 
 ### Parâmetros de conexão {#parameters}
 
-Enquanto [configuração](../../ui/connect-destination.md) Para esse destino, você deve fornecer as seguintes informações:
+Ao [configurar](../../ui/connect-destination.md) este destino, você deve fornecer as seguintes informações:
 
-* **[!UICONTROL Nome]**: Preencha o nome preferencial para este destino.
-* **[!UICONTROL Descrição]**: digite uma descrição para o destino. Por exemplo, você pode mencionar para qual campanha está usando esse destino. Este campo é opcional.
-* **[!UICONTROL Alias de integração]**: esse valor é enviado para o SDK da Web do Experience Platform como um nome de objeto JSON.
-* **[!UICONTROL ID da sequência de dados]**: determina em qual sequência de dados de Coleção de dados os públicos-alvo serão incluídos na resposta à página. O menu suspenso mostra apenas as sequências de dados com a configuração de destino habilitada. Consulte [Configurar um fluxo de dados](../../../datastreams/overview.md) para obter mais detalhes.
+* **[!UICONTROL Nome]**: preencha o nome preferencial para este destino.
+* **[!UICONTROL Descrição]**: insira uma descrição para o seu destino. Por exemplo, você pode mencionar para qual campanha está usando esse destino. Este campo é opcional.
+* **[!UICONTROL Alias de integração]**: esse valor é enviado ao SDK da Web do Experience Platform como um nome de objeto JSON.
+* **[!UICONTROL ID da Sequência de Dados]**: Isso determina em qual sequência de dados de Coleção de Dados os públicos-alvo serão incluídos na resposta à página. O menu suspenso mostra apenas as sequências de dados com a configuração de destino habilitada. Consulte [Configurando uma sequência de dados](../../../datastreams/overview.md) para obter mais detalhes.
 
 ### Ativar alertas {#enable-alerts}
 
-Você pode ativar os alertas para receber notificações sobre o status do fluxo de dados para o seu destino. Selecione um alerta na lista para assinar e receber notificações sobre o status do seu fluxo de dados. Para obter mais informações sobre alertas, consulte o manual sobre [assinatura de alertas de destinos usando a interface do](../../ui/alerts.md).
+Você pode ativar os alertas para receber notificações sobre o status do fluxo de dados para o seu destino. Selecione um alerta na lista para assinar e receber notificações sobre o status do seu fluxo de dados. Para obter mais informações sobre alertas, consulte o manual sobre [assinatura de alertas de destinos usando a interface](../../ui/alerts.md).
 
-Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICONTROL Próxima]**.
+Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICONTROL Avançar]**.
 
 ## Ativar públicos-alvo para esse destino {#activate}
 
 >[!IMPORTANT]
 > 
->Para ativar os dados, é necessário **[!UICONTROL Exibir destinos]**, **[!UICONTROL Ativar destinos]**, **[!UICONTROL Exibir perfis]**, e **[!UICONTROL Exibir segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
+>Para ativar dados, você precisa de **[!UICONTROL Exibir Destinos]**, **[!UICONTROL Ativar Destinos]**, **[!UICONTROL Exibir Perfis]** e **[!UICONTROL Exibir Segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 
-Ler [Ativar destinos de personalização de borda de perfis e públicos](../../ui/activate-edge-personalization-destinations.md) para obter instruções sobre como ativar públicos-alvo para esse destino.
+Leia [Ativar perfis e públicos-alvo para destinos de personalização de borda](../../ui/activate-edge-personalization-destinations.md) para obter instruções sobre como ativar públicos-alvo para este destino.
 
 ## Dados exportados {#exported-data}
 
-Se você estiver usando [Tags no Adobe Experience Platform](../../../tags/home.md) para implantar o SDK da Web do Experience Platform, use o [evento de envio concluído](../../../tags/extensions/client/web-sdk/event-types.md) e sua ação de código personalizado terá uma `event.destinations` que você pode usar para ver os dados exportados.
+Se você estiver usando [Tags no Adobe Experience Platform](../../../tags/home.md) para implantar o SDK da Web do Experience Platform, use a funcionalidade [enviar conclusão do evento](../../../tags/extensions/client/web-sdk/event-types.md) e sua ação de código personalizado terá uma variável `event.destinations` que você pode usar para ver os dados exportados.
 
-Este é um exemplo de valor para a variável `event.destinations` Variável:
+Este é um exemplo de valor para a variável `event.destinations`:
 
 ```
 [
@@ -120,7 +120,7 @@ Este é um exemplo de valor para a variável `event.destinations` Variável:
 ]
 ```
 
-Se você não estiver usando [Tags](/help/tags/home.md) para implantar o SDK da Web do Experience Platform, use [respostas do comando](/help/web-sdk/commands/command-responses.md) para ver os dados exportados.
+Se você não estiver usando [Tags](/help/tags/home.md) para implantar o SDK da Web do Experience Platform, use [respostas de comando](/help/web-sdk/commands/command-responses.md) para ver os dados exportados.
 
 A resposta JSON do Adobe Experience Platform pode ser analisada para encontrar o alias de integração correspondente do aplicativo que você está integrando com o Adobe Experience Platform. As IDs de público-alvo podem ser passadas para o código do aplicativo como parâmetros de direcionamento. Abaixo está uma amostra do que isso pareceria específico para a resposta de destino.
 
@@ -156,11 +156,11 @@ alloy("sendEvent", {
   });
 ```
 
-### Exemplo de resposta para [!UICONTROL Personalization personalizado com atributos]
+### Exemplo de resposta para [!UICONTROL Personalization Personalizado com Atributos]
 
-Ao usar **[!UICONTROL Personalization personalizado com atributos]**, a resposta da API será semelhante ao exemplo abaixo.
+Ao usar a **[!UICONTROL Personalization Personalizada com Atributos]**, a resposta da API será semelhante ao exemplo abaixo.
 
-A diferença entre **[!UICONTROL Personalization personalizado com atributos]** e **[!UICONTROL Personalization personalizado]** é a inclusão da `attributes` na resposta da API.
+A diferença entre **[!UICONTROL Personalization Personalizado com Atributos]** e **[!UICONTROL Personalization Personalizado]** é a inclusão da seção `attributes` na resposta da API.
 
 ```json
 [
@@ -190,4 +190,4 @@ A diferença entre **[!UICONTROL Personalization personalizado com atributos]** 
 
 ## Uso e governança de dados {#data-usage-governance}
 
-Todos [!DNL Adobe Experience Platform] os destinos estão em conformidade com as políticas de uso de dados ao manipular seus dados. Para obter informações detalhadas sobre como [!DNL Adobe Experience Platform] fiscaliza a governança de dados, leia o [Visão geral da governança de dados](../../../data-governance/home.md).
+Todos os destinos do [!DNL Adobe Experience Platform] são compatíveis com as políticas de uso de dados ao manipular seus dados. Para obter informações detalhadas sobre como o [!DNL Adobe Experience Platform] fiscaliza a governança de dados, leia a [Visão geral da Governança de Dados](../../../data-governance/home.md).

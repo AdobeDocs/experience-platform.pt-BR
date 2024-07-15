@@ -2,9 +2,9 @@
 title: Visão geral do Assistente de IA no Adobe Experience Platform
 description: Saiba mais sobre o Assistente de IA, suas nuances e casos de uso e como você pode usá-lo para acelerar seu fluxo de trabalho com a Adobe Experience Platform e a Real-time Customer Data Platform.
 exl-id: cfd4ac22-fff3-4b50-bbc2-85b6328f603c
-source-git-commit: 2bafd80771dc76384d380100f10216853278da2e
+source-git-commit: d950e7ef524dfb487176e51ef25e98c0b5fe8b6c
 workflow-type: tm+mt
-source-wordcount: '928'
+source-wordcount: '925'
 ht-degree: 8%
 
 ---
@@ -77,7 +77,7 @@ Você pode fazer perguntas ao Assistente de IA sobre seus insights operacionais 
 | Conjuntos de dados | <ul><li>Contagem do conjunto de dados</li><li>Status de habilitação do perfil</li><li>Data de criação/modificação</li><li>Relação entre conjunto de dados e esquema</li><li>Conjunto de dados - relacionamento de público-alvo</li><li>Conjunto de dados - relação de atributo</li><li>Relação entre conjunto de dados e fluxo de dados</li><li>Pesquisas de nome </li><li>Pesquisas de nome e ID</li></ul> | <ul><li>Auditoria</li><li>Criado por</li><li>Relação entre conjunto de dados e lote</li><li>Criação/modificação do conjunto de dados</li><li>Tamanho do conjunto de dados</li><li>Número de perfis</li><li>Número de linhas</li><li>Pesquisas de valor</li></ul> |
 | Destinos | <ul><li>Contagens de destino configuradas</li><li>Relação destino - público</li><li>Relação de atributo de destino</li></ul> | <ul><li>Configuração de conta</li><li>Informações de credencial da conta</li><li>Perfis únicos ativados</li></ul> |
 | Jornadas | <ul><li>Contagens</li><li>Pesquisas de nome</li><li>Pesquisas de nome e ID</li><li>Status da jornada</li><li>Status acionado (público-alvo vs. eventos)</li><li>Datas de criação/modificação</li><li>Frequência recorrente</li></ul> | <ul><li>Atributos - Relacionamentos de jornada</li><li>Auditoria</li><li>Criação/modificação</li><li>Criado por</li><li>Eventos</li><li>Jornada - conjunto de dados</li><li>Jornada - esquema</li><li>Ofertas</li><li>Tendências de qualificação de perfil</li><li>Eventos de etapa</li></ul> |
-| Esquemas | <ul><li>Contagens de esquema</li><li>Data de criação/modificação</li><li>Tipo de classe de esquema</li><li>Esquema - Relação de atributo</li><li>Relação esquema - conjunto de dados</li><li>Esquema - relacionamento de público</li><li>Status de habilitação do perfil</li><li>Pesquisas de nome</li><li>Pesquisas de nome e ID</li></ul> | <ul><li>Auditoria</li><li>Criação/modificação</li><li>Criado por</li><li>Grupos de campos</li><li>Identidades</li><li>Namespaces de identidade</li><li>Rótulos</li><li>Número de perfis</li></ul> |
+| Esquemas | <ul><li>Contagens de esquema</li><li>Data de criação/modificação</li><li>Esquema - Relação de atributo</li><li>Relação esquema - conjunto de dados</li><li>Esquema - relacionamento de público</li><li>Status de habilitação do perfil</li><li>Pesquisas de nome</li><li>Pesquisas de nome e ID</li></ul> | <ul><li>Auditoria</li><li>Criação/modificação</li><li>Criado por</li><li>Grupos de campos</li><li>Identidades</li><li>Namespaces de identidade</li><li>Rótulos</li><li>Número de perfis</li></ul> |
 | Origens | <ul><li>Contagens de conta</li><li>Status da conta</li><li>Fluxos de dados ativos/inativos para cada conta</li><li>Source connector - relação de fluxo de dados</li><li>Relação conta Source - fluxo de dados</li></ul> | <ul><li>Informações de credenciais da conta</li><li>Configuração de conta</li><li>Métricas de assimilação de dados</li><li>Número de perfis</li><li>Source - relacionamentos em lote</li></ul> |
 
 {style="table-layout:auto"}

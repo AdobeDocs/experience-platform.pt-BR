@@ -2,9 +2,9 @@
 title: Guia de perguntas do Assistente de IA
 description: Leia este documento para conhecer exemplos de perguntas que você pode usar ao consultar o Assistente de IA.
 exl-id: d16d1262-cc2d-45c9-94c4-b86132183442
-source-git-commit: 6860e1dc03920feaf0dfa83d09c4fca8f85a2ac2
+source-git-commit: 196a39edd493dcc8296f4b6d2904393dd6f6cdd4
 workflow-type: tm+mt
-source-wordcount: '1694'
+source-wordcount: '1524'
 ht-degree: 1%
 
 ---
@@ -85,30 +85,6 @@ As perguntas a seguir são agrupadas por objetos de dados e são classificadas c
    * Por que não posso excluir um público-alvo?
    * Quanto tempo leva para que os públicos-alvo sejam avaliados e os resultados sejam disponibilizados para direcionamento?
 
-+++Selecione para exibir uma lista adicional de prompts sugeridos
-
-* Posso excluir um esquema ativado por perfil depois que os dados forem assimilados?
-* Como os grupos de usuários estão relacionados às funções?
-* Quando devo usar um tipo de dados vs um grupo de campos?&#39;
-* Qual a diferença entre uma identidade e uma chave primária ou estrangeira?&#39;
-* Quanto tempo leva para que os Segmentos sejam avaliados e os resultados sejam disponibilizados para o direcionamento?
-* Como é calculada a riqueza do perfil?&#39;
-* Conte-me alguns casos de uso comuns do Real-Time CDP.
-* Por que não posso excluir um segmento?
-* Que tipo de alterações posso fazer depois que um esquema é ativado para o perfil?
-* Por que não posso acessar painéis na AEP?
-* Quantos segmentos usam o atributo xdm {FIELD_PATH}
-* Existem segmentos usados em outros segmentos?
-* Quais campos no esquema {SCHEMA_NAME} contêm {STRING}?
-* Quais públicos-alvo têm o atributo xdm {FULL_ATTRIBUTE_PATH} na definição de seu segmento?
-* Quais esquemas contêm o atributo xdm {FULL_ATTRIBUTE_PATH}?
-* Quais fluxos de dados de origem não estão sendo usados ou não têm mais dados chegando?
-* Listar as jornadas ao vivo que eu tenho.
-* Liste os públicos-alvo que são usados em jornadas ativas.
-* Quais origens estão em um estado ativo?
-
-+++
-
 ## Formular suas perguntas {#phrasing-your-questions}
 
 Você deve enviar suas perguntas ao Assistente de IA com clareza e contexto para obter uma resposta o mais precisa possível. Consulte a seguinte lista de dicas para obter orientação sobre como fazer uma pergunta clara com contexto:
@@ -147,7 +123,7 @@ Veja a seguir uma lista de exemplos de perguntas que não são suportadas no mom
 
 ### Insights operacionais
 
-* Quantos perfis nesta sandbox [atendem a um critério específico, por exemplo, &quot;vive na Califórnia&quot;]?
+* Quantos perfis nesta sandbox vivem na Califórnia? (**Observação**: para perguntas semelhantes, você deve fornecer um critério específico para fornecer contexto suficiente para a sua solicitação; neste caso, o critério específico é &quot;live in California&quot;).
 * Quais são os segmentos deste perfil {PROFILE_INFO/ATTRIBUTE_VALUE}?
 * Quantos perfis no conjunto de dados têm um email?
 * Qual conjunto de dados constitui o número máximo de perfis nesta sandbox?

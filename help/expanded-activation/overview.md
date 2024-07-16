@@ -11,19 +11,19 @@ ht-degree: 2%
 
 # Ativação expandida do Audience Manager
 
-Integrada no Adobe Experience Platform, a Ativação expandida de Audience Manager ajuda os [Audience Manager](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/aam-home) os usuários ativam os públicos para [social](../destinations/catalog/social/overview.md) e [publicidade](../destinations/catalog/advertising/overview.md) plataformas de destino da Real-Time CDP, como [Facebook](../destinations/catalog/social/facebook.md), [Anúncios do Google](../destinations/catalog/advertising/google-ads-destination.md)e muito mais.
+Integrada no Adobe Experience Platform, a Ativação Expandida do Audience Manager ajuda os usuários existentes do [Audience Manager](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/aam-home) a ativar os públicos para as plataformas de destino do [social](../destinations/catalog/social/overview.md) e do [advertising](../destinations/catalog/advertising/overview.md) da Real-Time CDP, como o [Facebook](../destinations/catalog/social/facebook.md), o [Google Ads](../destinations/catalog/advertising/google-ads-destination.md) e muito mais.
 
 >[!IMPORTANT]
 >
->[!DNL Audience Manager Expanded Activation] está disponível somente para [!DNL Audience Manager] usuários.
+>[!DNL Audience Manager Expanded Activation] está disponível somente para usuários [!DNL Audience Manager] existentes.
 
 ## Terminologia {#terminology}
 
 A Ativação expandida do Audience Manager usa conceitos e componentes do Adobe Experience Platform. Para entender melhor o fluxo de trabalho de Ativação expandida e os componentes que você usará, verifique se você tem uma compreensão básica dos seguintes conceitos:
 
-* [Públicos-alvo](../segmentation/ui/overview.md): públicos são conjuntos de pessoas que compartilham comportamentos e/ou características semelhantes. Essa coleção de pessoas pode ser gerada pelo Adobe Experience Platform usando definições de segmento ou composição de público-alvo (público-alvo gerado pela Platform) ou de fontes externas, como uploads personalizados (público-alvo gerado externamente). Na Ativação expandida, os segmentos de Audience Manager (públicos-alvo) são importados como [uploads personalizados](../segmentation/ui/audience-portal.md#import-audience).
-* [Conectores do Source](../sources/home.md): os conectores do Source (também conhecidos como fontes) ajudam os usuários do Experience Platform a assimilar dados de várias fontes com facilidade, permitindo a estruturação, o rótulo e o aprimoramento de dados usando os serviços de Experience Platform. Os dados podem ser assimilados de várias fontes, como armazenamento baseado em nuvem, software de terceiros e sistemas de CRM.
-* [Conectores de destino](../destinations/home.md): os destinos descrevem qualquer endpoint, como um aplicativo Adobe, uma plataforma de publicidade, um serviço de armazenamento em nuvem ou um serviço de marketing, em que um público-alvo é ativado e entregue. [!DNL Expanded Activation] O oferece suporte à ativação de públicos-alvo para [publicidade](../destinations/catalog/advertising/overview.md) e [social](../destinations/catalog/social/overview.md) conectores de destino.
+* [Públicos-alvo](../segmentation/ui/overview.md): são conjuntos de pessoas que compartilham comportamentos e/ou características semelhantes. Essa coleção de pessoas pode ser gerada pelo Adobe Experience Platform usando definições de segmento ou composição de público-alvo (público-alvo gerado pela Platform) ou de fontes externas, como uploads personalizados (público-alvo gerado externamente). Na Ativação Estendida, seus segmentos de Audience Manager (públicos-alvo) são importados como [uploads personalizados](../segmentation/ui/audience-portal.md#import-audience).
+* [conectores do Source](../sources/home.md): os conectores do Source (também conhecidos como fontes) ajudam os usuários do Experience Platform a assimilar dados facilmente de várias fontes, permitindo a estruturação, rotulagem e aprimoramento de dados usando serviços Experience Platform. Os dados podem ser assimilados de várias fontes, como armazenamento baseado em nuvem, software de terceiros e sistemas de CRM.
+* [Conectores de destino](../destinations/home.md): os destinos descrevem qualquer ponto de extremidade, como um aplicativo Adobe, uma plataforma de publicidade, um serviço de armazenamento na nuvem ou um serviço de marketing, em que um público-alvo é ativado e entregue. [!DNL Expanded Activation] dá suporte à ativação de públicos para os conectores de destino [advertising](../destinations/catalog/advertising/overview.md) e [social](../destinations/catalog/social/overview.md).
 
 ## Pré-requisitos {#prerequisites}
 
@@ -31,15 +31,15 @@ Antes de ativar públicos-alvo por meio da Ativação expandida, verifique se vo
 
 ### Requisitos de usuário e função {#permission-requirements}
 
-Antes que você possa usar [!DNL Expanded Activation], você deve criar uma conta de usuário do Admin Console e atribuí-la à [!DNL Expanded Activation] função. Consulte a [administração](administration.md) para obter instruções detalhadas sobre como fazer isso.
+Antes de usar [!DNL Expanded Activation], você deve criar uma conta de usuário do Admin Console e atribuí-la à função [!DNL Expanded Activation]. Consulte a página [administração](administration.md) para obter instruções detalhadas sobre como fazer isso.
 
 ### Requisitos de público {#audience-requirements}
 
-Para ativar públicos-alvo por meio do [!DNL Expanded Activation], verifique se os públicos-alvo do Audience Manager são baseados em **endereços de email com hash**. Há duas maneiras de garantir isso, com base no uso do Audience Manager:
+Para ativar públicos-alvo por meio do [!DNL Expanded Activation], verifique se os públicos-alvo do Audience Manager estão baseados em **endereços de email com hash**. Há duas maneiras de garantir isso, com base no uso do Audience Manager:
 
-* Se você estiver usando a variável [Audience Manager Destinos com base em pessoas](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview) , você já estará assimilando endereços de email com hash no Audience Manager. Não há nenhuma etapa adicional que você precise executar neste caso. Você pode pular para [Ativação de públicos-alvo por meio da Ativação expandida](activate-audiences.md).
-* Se você estiver _não_ usando o [Audience Manager Destinos com base em pessoas](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview) , você deve criar uma nova fonte de dados no Audience Manager e usá-la para armazenar endereços de email com hash. Consulte a documentação em [configuração de uma fonte de dados para workflows de email com hash](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/features/data-sources/create-data-source-hashed-emails) para saber como fazer isso. Depois de assimilar endereços de email com hash na fonte de dados do Audience Manager, leia a documentação em [Ativação de públicos-alvo por meio da Ativação expandida](activate-audiences.md).
+* Se você estiver usando a funcionalidade [Audience Manager Destinos com base em pessoas](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview), você já está assimilando endereços de email com hash no Audience Manager. Não há nenhuma etapa adicional que você precise executar neste caso. Você pode pular para [ativação de públicos por meio da Ativação Estendida](activate-audiences.md).
+* Se você estiver _não_ usando a funcionalidade [Audience Manager Destinos com base em pessoas](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview), deverá criar uma nova fonte de dados no Audience Manager e usá-la para armazenar endereços de email com hash. Consulte a documentação sobre [configuração de uma fonte de dados para fluxos de trabalho de email com hash](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/features/data-sources/create-data-source-hashed-emails) para saber como fazer isso. Depois de assimilar endereços de email com hash na fonte de dados do Audience Manager, leia a documentação em [ativando públicos-alvo por meio da Ativação expandida](activate-audiences.md).
 
 ## Próximas etapas {#next-steps}
 
-Agora que você conhece melhor os casos de uso e os benefícios do [!DNL Expanded Activation], start [configuração da sua conta](administration.md) e depois [ativar seus públicos-alvo](activate-audiences.md).
+Agora que você conhece melhor os casos de uso e benefícios do [!DNL Expanded Activation], comece [configurando sua conta](administration.md) e [ativando seus públicos](activate-audiences.md).

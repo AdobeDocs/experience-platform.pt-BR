@@ -4,22 +4,22 @@ description: Este documento explica como usar o Serviço de consulta para criar 
 exl-id: f64e61ef-0157-4f0a-88f8-bbe4f9aa83f0
 source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
 workflow-type: tm+mt
-source-wordcount: '232'
+source-wordcount: '237'
 ht-degree: 1%
 
 ---
 
 # Insights do Analytics para interações da Web e móveis
 
-O Adobe Experience Platform permite assimilar dados dos conjuntos de relatórios do Adobe Analytics usando campos do Experience Data Model (XDM) para preencher conjuntos de dados. Esses dados de análise foram modificados para estarem em conformidade com a [!DNL XDM ExperienceEvent] classe. O Serviço de consulta pode então usar esses dados executando consultas SQL para gerar insights valiosos do comportamento de um usuário nas plataformas digitais.
+O Adobe Experience Platform permite assimilar dados dos conjuntos de relatórios do Adobe Analytics usando campos do Experience Data Model (XDM) para preencher conjuntos de dados. Estes dados de análise foram modificados para estarem em conformidade com a classe [!DNL XDM ExperienceEvent]. O Serviço de consulta pode então usar esses dados executando consultas SQL para gerar insights valiosos do comportamento de um usuário nas plataformas digitais.
 
 Este documento fornece uma variedade de exemplos de consultas SQL que demonstram casos de uso comuns ao criar insights de dados da Web e de dispositivos móveis do Analytics.
 
-Consulte a [Documentação de mapeamentos de campo do Analytics](../../sources/connectors/adobe-applications/mapping/analytics.md) para obter mais informações sobre assimilação e mapeamento de dados do analytics.
+Consulte a [documentação de mapeamentos de campo do Analytics](../../sources/connectors/adobe-applications/mapping/analytics.md) para obter mais informações sobre assimilação e mapeamento de dados de análise.
 
 ## Introdução
 
-Para cada um dos seguintes casos de uso, um exemplo de consulta SQL parametrizada é fornecido como um template para você personalizar. Forneça parâmetros onde quer que você veja `{ }` nos exemplos SQL do conjunto de dados, eVar, evento ou intervalo de tempo que você está interessado em avaliar.
+Para cada um dos seguintes casos de uso, um exemplo de consulta SQL parametrizada é fornecido como um template para você personalizar. Forneça parâmetros sempre que você vir `{ }` nos exemplos de SQL para o conjunto de dados, eVar, evento ou intervalo de tempo que deseja avaliar.
 
 ## Objetivos
 

@@ -51,7 +51,7 @@ ht-degree: 46%
       * [Lista de marketing de negócios XDM](./classes/b2b/business-marketing-list.md)
       * [Membros da lista de marketing empresarial XDM](./classes/b2b/business-marketing-list-members.md)
 * Grupos de campos {#field-groups}
-   * Perfil individual XDM {#profile}
+   * Perfil Individual XDM {#profile}
       * [Consentimentos e preferências](./field-groups/profile/consents.md)
       * [Detalhes demográficos](./field-groups/profile/demographic-details.md)
       * [Consentimento IAB TCF 2.0](./field-groups/profile/iab.md)
@@ -65,7 +65,7 @@ ht-degree: 46%
       * [Detalhes de contato comercial](./field-groups/profile/work-contact-details.md)
       * [Componentes de pessoa de negócios XDM](./field-groups/profile/business-person-components.md)
       * [Detalhes de pessoa de negócios XDM](./field-groups/profile/business-person-details.md)
-   * Perfil de cliente potencial individual XDM {#prospect-profile}
+   * Perfil de Cliente Potencial Individual XDM {#prospect-profile}
       * [Detalhes de Cliente Potencial do Parceiro (Exemplo)](./field-groups/prospect-profile/partner-prospect-details.md)
    * XDM ExperienceEvent {#event}
       * [Extensão completa do Adobe Analytics](./field-groups/event/analytics-full-extension.md)
@@ -207,7 +207,7 @@ ht-degree: 46%
    * [Workflows em campo](./ui/field-based-workflows.md)
    * [Gerar dados de amostra XDM](./ui/sample.md)
    * [Exportar esquemas XDM](./ui/export.md)
-* API do registro de esquema {#api}
+* API do Registro de Esquema {#api}
    * [Visão geral](api/overview.md)
    * [Introdução](api/getting-started.md)
    * [Esquemas](api/schemas.md)

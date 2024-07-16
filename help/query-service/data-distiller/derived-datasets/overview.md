@@ -50,4 +50,4 @@ Você também pode calcular métricas comerciais como um atributo derivado e us�
 
 ## Próximas etapas e casos de uso
 
-Ao ler este documento, você entende melhor como os conjuntos de dados derivados do Serviço de consulta facilitam casos de uso complexos para maximizar a utilidade dos seus dados. Em seguida, leia a [caso de uso de atributo derivado baseado em decil](../../use-cases/deciles-use-case.md) para ver como esse recurso é aplicado em um cenário real.
+Ao ler este documento, você entende melhor como os conjuntos de dados derivados do Serviço de consulta facilitam casos de uso complexos para maximizar a utilidade dos seus dados. Em seguida, você deve ler o [caso de uso de atributo derivado baseado em decil](../../use-cases/deciles-use-case.md) para ver como esse recurso é aplicado em um cenário real.

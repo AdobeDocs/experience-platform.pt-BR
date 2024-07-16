@@ -4,7 +4,7 @@ description: Saiba como criptografar valores confidenciais ao usar a API do Reac
 exl-id: d89e7f43-3bdb-40a5-a302-bad6fd1f4596
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
-source-wordcount: '392'
+source-wordcount: '366'
 ht-degree: 100%
 
 ---
@@ -58,7 +58,7 @@ Esse comando pode ser detalhado da seguinte maneira:
 * A entrada é fornecida para o comando `gpg`.
 * `--armor` cria saída blindada ASCII em vez de binária. Isso simplifica a transferência do valor por meio do JSON.
 * `--encrypt` instrui o GPG para criptografar os dados.
-* `-r` define o recipient dos dados. Somente o recipient (o detentor da chave privada que corresponde à chave pública) pode descriptografar os dados. Para encontrar o nome do recipient da chave desejada, examine a saída de `gpg --list-keys`.
+* `-r` define o destinatário dos dados. Somente o destinatário (o detentor da chave privada que corresponde à chave pública) pode descriptografar os dados. Para encontrar o nome do destinatário da chave desejada, examine a saída de `gpg --list-keys`.
 
 O comando acima usa a chave pública de `Tags Data Encryption <launch@adobe.com>` para criptografar o valor, `Example value`, no formato ASCII blindado.
 

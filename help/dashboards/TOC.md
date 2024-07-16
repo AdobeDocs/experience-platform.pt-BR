@@ -8,7 +8,7 @@ role: Developer,User
 source-git-commit: 3ebd17eced73424135fc93a90f05d758912eb7d0
 workflow-type: tm+mt
 source-wordcount: '132'
-ht-degree: 28%
+ht-degree: 34%
 
 ---
 
@@ -37,7 +37,7 @@ ht-degree: 28%
    * [Públicos-alvo](guides/audiences.md)
    * [Destinos](guides/destinations.md)
    * [Uso da licença](guides/license-usage.md)
-* Insights disponíveis {#insights}
+* Insights Disponíveis {#insights}
    * [Perfis](insights/profiles.md)
    * [Públicos-alvo](insights/audiences.md)
    * [Destinos](insights/destinations.md)
@@ -45,7 +45,7 @@ ht-degree: 28%
 * Personalizar painéis {#customize}
    * [Visão geral da personalização](customize/overview.md)
    * [Modificar painéis](customize/modify.md)
-   * [Biblioteca de widgets](customize/widget-library.md)
+   * [Biblioteca de dispositivos](customize/widget-library.md)
    * [Widgets padrão](customize/standard-widgets.md)
    * [Widgets personalizados](customize/custom-widgets.md)
    * [Editar esquema](customize/edit-schema.md)

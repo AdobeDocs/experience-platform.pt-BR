@@ -7,13 +7,13 @@ exl-id: 9893cb67-b0c7-4f91-a0d4-96f7b87d9510
 source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
 source-wordcount: '160'
-ht-degree: 6%
+ht-degree: 11%
 
 ---
 
-# [!UICONTROL Pesquisar] tipo de dados
+# Tipo de dados de [!UICONTROL Pesquisa]
 
-[!UICONTROL Pesquisar] é um tipo de dados padrão do Experience Data Model (XDM) que contém informações sobre a atividade de pesquisa na web.
+[!UICONTROL A Pesquisa] é um tipo de dados padrão do Experience Data Model (XDM) que contém informações sobre a atividade de pesquisa na Web.
 
 <img src="../images/data-types/search.PNG" width="500" /><br />
 
@@ -25,7 +25,7 @@ ht-degree: 6%
 | `position` | Número inteiro | A posição ou classificação da lista na página de resultados da pesquisa. |
 | `searchEngine` | String | O mecanismo de pesquisa usado pela pesquisa. |
 | `searchEngineID` | String | O identificador específico do aplicativo usado para identificar o mecanismo de pesquisa. |
-| `slot` | String | A seção nomeada da página onde o resultado da pesquisa apareceu. O valor dessa propriedade deve ser igual a um dos valores de enumeração conhecidos definidos, como `top`, `side`ou `bottom`. |
+| `slot` | String | A seção nomeada da página onde o resultado da pesquisa apareceu. O valor dessa propriedade deve ser igual a um dos valores de enumeração conhecidos definidos, como `top`, `side` ou `bottom`. |
 
 {style="table-layout:auto"}
 

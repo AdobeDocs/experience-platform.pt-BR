@@ -4,18 +4,18 @@ description: Saiba como usar o Data Distiller para explorar e analisar dados de 
 exl-id: 1dd4cf6e-f7cc-4f4b-afbd-bfc1d342a2c3
 source-git-commit: 27834417a1683136a173996cff1fd422305e65b9
 workflow-type: tm+mt
-source-wordcount: '808'
-ht-degree: 16%
+source-wordcount: '760'
+ht-degree: 13%
 
 ---
 
 # Análise exploratória de dados
 
-Este documento fornece alguns exemplos básicos e práticas recomendadas para usar o Data Distiller para explorar e analisar dados de uma [!DNL Python] notebook.
+Este documento fornece alguns exemplos básicos e práticas recomendadas para usar o Data Distiller para explorar e analisar dados de um bloco de anotações [!DNL Python].
 
 ## Introdução
 
-Antes de continuar com este guia, verifique se você criou uma conexão com o Data Distiller em seu [!DNL Python] notebook. Consulte a documentação para obter instruções sobre como [conectar um [!DNL Python] notebook para o Data Distiller](./establish-connection.md).
+Antes de continuar com este guia, verifique se você criou uma conexão com o Data Distiller no bloco de anotações [!DNL Python]. Consulte a documentação para obter instruções sobre como [conectar um bloco de anotações [!DNL Python] ao Data Distiller](./establish-connection.md).
 
 ## Adquirir estatísticas básicas {#basic-statistics}
 
@@ -34,7 +34,7 @@ df = qs_cursor.query(basic_statistics_query, output="dataframe")
 df
 ```
 
-**Saída de exemplo**
+**Exemplo de saída**
 
 |     | totalRows | distinctUsers |
 | --- | ----------- | -------------- |
@@ -42,9 +42,9 @@ df
 
 ## Criar uma versão de amostra de conjuntos de dados grandes {#create-dataset-sample}
 
-Se o conjunto de dados que você deseja consultar for muito grande ou se os resultados exatos das consultas exploratórias não forem necessários, use o [funcionalidade de amostragem](../../key-concepts/dataset-samples.md) disponível para consultas do Data Distiller. Este é um processo de duas etapas:
+Se o conjunto de dados que você deseja consultar for muito grande, ou se os resultados exatos das consultas exploratórias não forem necessários, use a [funcionalidade de amostragem](../../key-concepts/dataset-samples.md) disponível para consultas do Data Distiller. Este é um processo de duas etapas:
 
-- Primeiro, **analyse** o conjunto de dados para criar uma versão de amostra com uma taxa de amostragem especificada
+- Primeiro, **analise** o conjunto de dados para criar uma versão de amostra com uma taxa de amostragem especificada
 - Em seguida, consulte a versão de amostra do conjunto de dados. Dependendo das funções aplicadas ao conjunto de dados de amostra, talvez você queira dimensionar a saída para os números para o conjunto de dados completo
 
 ### Criar uma amostra de 5% {#create-sample}
@@ -64,7 +64,7 @@ qs_cursor.query(analyze_table_query, output="raw")
 
 ### Veja suas amostras {#view-sample}
 
-Você pode usar o `sample_meta` Função para exibir todas as amostras que foram criadas de um determinado conjunto de dados. O trecho de código abaixo demonstra como usar a variável `sample_meta` função.
+Você pode usar a função `sample_meta` para exibir quaisquer amostras que foram criadas a partir de um determinado conjunto de dados. O trecho de código abaixo demonstra como usar a função `sample_meta`.
 
 ```python
 sampled_version_of_table_query = f'''SELECT sample_meta('{table_name}')'''
@@ -73,11 +73,11 @@ df_samples = qs_cursor.query(sampled_version_of_table_query, output="dataframe")
 df_samples
 ```
 
-**Saída de exemplo**:
+**Exemplo de saída**:
 
 |   | sample_table_name | sample_dataset_id | parent_dataset_id | sample_type | taxa_de_amostragem | filter_condition_on_source_dataset | sample_num_rows | criado |
 |---|---|---|---|---|---|---|---|---|
-| 0 | cmle_summary_data_experience_event_dataset_c... | 650f7a09ed6c3e28d34d7fc2 | 64fb4d7a7d748828d304a2f4 | uniforme | 0.5 | 6427 | 23/09/2023 | 11:51:37 |
+| 0 | cmle_summary_data_experience_event_dataset_c... | 650f7a09ed6c3e28d34d7fc2 | 64fb4d7a7d748828d304a2f4 | uniforme | 0,5 | 6427 | 09/23/2023 | 11:51:37 |
 
 {style="table-layout:auto"}
 
@@ -97,7 +97,7 @@ approx_count = df["cnt"].iloc[0] / (sampling_rate / 100)
 print(f"Approximate count: {approx_count} using {sampling_rate *10}% sample")
 ```
 
-**Saída de exemplo**
+**Exemplo de saída**
 
 ```console
 Approximate count: 1284600.0 using 5.0% sample
@@ -105,7 +105,7 @@ Approximate count: 1284600.0 using 5.0% sample
 
 ## Análise de funil de email {#email-funnel-analysis}
 
-Uma análise de funil é um método para entender as etapas necessárias para atingir um resultado desejado e quantos usuários passam por cada uma dessas etapas. O exemplo abaixo ilustra uma simples análise de funil das etapas que levam um usuário a assinar um boletim informativo. O resultado da assinatura é representado por um tipo de evento de `web.formFilledOut`.
+Uma análise de funil é um método para entender as etapas necessárias para atingir um resultado desejado e quantos usuários passam por cada uma dessas etapas. O exemplo abaixo ilustra uma simples análise de funil das etapas que levam um usuário a assinar um boletim informativo. A assinatura é representada por um tipo de evento de `web.formFilledOut`.
 
 Primeiro, execute uma query para obter o número de usuários em cada etapa.
 
@@ -116,7 +116,7 @@ funnel_df = qs_cursor.query(simple_funnel_analysis_query, output="dataframe")
 funnel_df
 ```
 
-**Saída de exemplo**
+**Exemplo de saída**
 
 |   | eventType | distinctUsers | distinctEvents |
 |---|---|---|---|
@@ -138,7 +138,7 @@ funnel_df
 
 ### Plotar resultados da consulta {#plot-results}
 
-Em seguida, plote os resultados da consulta usando o [!DNL Python] `plotly` biblioteca:
+Em seguida, plote os resultados da consulta usando a biblioteca [!DNL Python] `plotly`:
 
 ```python
 import plotly.express as px
@@ -150,20 +150,20 @@ fig = px.funnel(email_funnel_df, y='eventType', x='distinctUsers')
 fig.show()
 ```
 
-**Saída de exemplo**
+**Exemplo de saída**
 
 ![Um infográfico do funil de email eventType.](../../images/data-distiller/email-funnel.png)
 
 ## Correlações de evento {#event-correlations}
 
-Outra análise comum é calcular correlações entre tipos de evento e um tipo de evento de conversão de destino. Neste exemplo, o evento de subscrição é representado por `web.formFilledOut`. Este exemplo usa o [!DNL Spark] Funções disponíveis em queries do Data Distiller para realizar as seguintes etapas:
+Outra análise comum é calcular correlações entre tipos de evento e um tipo de evento de conversão de destino. Neste exemplo, o evento de assinatura é representado por `web.formFilledOut`. Este exemplo usa as funções [!DNL Spark] disponíveis nas consultas do Data Distiller para realizar as seguintes etapas:
 
 1. Conte o número de eventos para cada tipo de evento por perfil.
-2. Agregue as contagens de cada tipo de evento nos perfis e calcule as correlações de cada tipo de evento com `web,formFilledOut`.
+2. Agregar as contagens de cada tipo de evento nos perfis e calcular as correlações de cada tipo de evento com `web,formFilledOut`.
 3. Transforme o quadro de dados de contagens e correlações em uma tabela de coeficientes de correlação Pearson de cada recurso (contagens do tipo de evento) com o evento de destino.
 4. Visualizar os resultados em um gráfico.
 
-A variável [!DNL Spark] As funções agregam os dados para retornar uma pequena tabela de resultados, de modo que você possa executar esse tipo de consulta no conjunto de dados completo.
+As funções [!DNL Spark] agregam os dados para retornar uma pequena tabela de resultados, de modo que você possa executar esse tipo de consulta no conjunto de dados completo.
 
 ```python
 large_correlation_query=f'''
@@ -211,11 +211,11 @@ large_correlation_df = qs_cursor.query(large_correlation_query, output="datafram
 large_correlation_df
 ```
 
-**Saída de exemplo**:
+**Exemplo de saída**:
 
 |   | webFormsFilled_totalUsers | advertisingClicks_totalUsers | productViews_totalUsers | productPurchases_totalUsers | propositionDismisses_totalUsers | propositionDisplays_totalUsers | propositionInteracts_totalUsers | emailClicks_totalUsers | emailOpens_totalUsers | webLinksClicks_totalUsers | .. | webForms_advertisingClicks | webForms_productViews | webForms_productPurchases | webForms_propositionDismisses | webForms_propositionInteracts | webForms_emailClicks | webForms_emailOpens | webForms_emailSends | webForms_webLinkClicks | webForms_webPageViews |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 0 | 17860 | 7610 | 37915 | 0 | 2889 | 37650 | 2964 | 51581 | 239028 | 37581 | … | 0.026805 | 0.2779 | None | 0.06014 | 0.143656 | 0.305657 | 0.218874 | 0.192836 | 0.259353 | None |
+| 0 | 17860 | 7610 | 37915 | 0 | 2889 | 37650 | 2964 | 51581 | 239028 | 37581 | .. | 0,026805 | 0,2779 | None | 0,06014 | 0,143656 | 0,305657 | 0,218874 | 0,192836 | 0,259353 | None |
 
 {style="table-layout:auto"}
 
@@ -232,24 +232,24 @@ corrdf["pearsonCorrelation"] = corrdf["value"]
 corrdf.fillna(0)
 ```
 
-**Saída de exemplo**:
+**Exemplo de saída**:
 
-|    | variável | Valor de  | recurso | pearsonCorrelation |
+|    | variável | valor | recurso | pearsonCorrelation |
 | --- | ---  |  ---  |  ---  | --- |
-| 0 | `webForms_EmailOpens` | 0.218874 | EmailOpens | 0.218874 |
-| 1 | `webForms_advertisingClicks` | 0.026805 | advertisingClicks | 0.026805 |
-| 2 | `webForms_productViews` | 0.277900 | productViews | 0.277900 |
-| 3 | `webForms_productPurchases` | 0.000000 | productPurchases | 0.000000 |
-| 4 | `webForms_propositionDismisses` | 0.060140 | propositionDismisses | 0.060140 |
-| 5 | `webForms_propositionInteracts` | 0.143656 | propositionInteracts | 0.143656 |
-| 6 | `webForms_emailClicks` | 0.305657 | emailClicks | 0.305657 |
-| 7 | `webForms_emailOpens` | 0.218874 | emailOpens | 0.218874 |
-| 8 | `webForms_emailSends` | 0.192836 | emailSends | 0.192836 |
-| 9 | `webForms_webLinkClicks` | 0.259353 | webLinkClicks | 0.259353 |
-| 10 | `webForms_webPageViews` | 0.000000 | webPageViews | 0.000000 |
+| 0 | `webForms_EmailOpens` | 0,218874 | EmailOpens | 0,218874 |
+| 1 | `webForms_advertisingClicks` | 0,026805 | advertisingClicks | 0,026805 |
+| 2 | `webForms_productViews` | 0,277900 | productViews | 0,277900 |
+| 3 | `webForms_productPurchases` | 0,000000 | productPurchases | 0,000000 |
+| 4 | `webForms_propositionDismisses` | 0,060140 | propositionDismisses | 0,060140 |
+| 5 | `webForms_propositionInteracts` | 0,143656 | propositionInteracts | 0,143656 |
+| 6 | `webForms_emailClicks` | 0,305657 | emailClicks | 0,305657 |
+| 7 | `webForms_emailOpens` | 0,218874 | emailOpens | 0,218874 |
+| 8 | `webForms_emailSends` | 0,192836 | emailSends | 0,192836 |
+| 9 | `webForms_webLinkClicks` | 0,259353 | webLinkClicks | 0,259353 |
+| 10 | `webForms_webPageViews` | 0,000000 | webPageViews | 0,000000 |
 
 
-Por fim, é possível visualizar as correlações com a variável `matplotlib` [!DNL Python] biblioteca:
+Finalmente, você pode visualizar as correlações com a biblioteca `matplotlib` [!DNL Python]:
 
 ```python
 import matplotlib.pyplot as plt
@@ -262,4 +262,4 @@ ax.set_title("Pearson Correlation of Events with the outcome event")
 
 ## Próximas etapas
 
-Ao ler este documento, você aprendeu a usar o Data Distiller para explorar e analisar dados de uma [!DNL Python] notebook. A próxima etapa na criação de pipelines de recursos, do Experience Platform para alimentar modelos personalizados no ambiente de aprendizado de máquina, é criar pipelines de recursos [recursos de engenharia para aprendizado de máquina](./feature-engineering.md).
+Ao ler este documento, você aprendeu a usar o Data Distiller para explorar e analisar dados de um bloco de anotações [!DNL Python]. A próxima etapa na criação de pipelines de recursos, do Experience Platform para alimentar modelos personalizados no ambiente de aprendizado de máquina, é [projetar recursos para aprendizado de máquina](./feature-engineering.md).

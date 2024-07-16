@@ -6,7 +6,7 @@ description: Este documento apresenta o Preparo de dados na Adobe Experience Pla
 exl-id: f15eeb50-a531-4560-a524-1a670fbda706
 source-git-commit: d39ae3a31405b907f330f5d54c91b95c0f999eee
 workflow-type: tm+mt
-source-wordcount: '788'
+source-wordcount: '789'
 ht-degree: 0%
 
 ---
@@ -26,39 +26,39 @@ O Preparo de dados também aplica várias validações de dados intrínsecas par
 
 >[!NOTE]
 >
->A menos que a mensagem resultante seja um XDM inválido, qualquer erro de transformação no Preparo de dados resultará na definição desses atributos como `null`, enquanto o restante da linha será assimilado. Se a linha não resolver para XDM inválido, a linha **não** ser assimilados. Em ambos os casos, o erro será documentado.
+>A menos que a mensagem resultante seja um XDM inválido, quaisquer erros de transformação no Preparo de dados resultarão na definição desses atributos como `null`, enquanto o restante da linha será assimilado. Se a linha não resolver para XDM inválido, a linha **não** será assimilada. Em ambos os casos, o erro será documentado.
 
 ## Mapeamento
 
 Um mapeamento é uma associação de um atributo de entrada ou campo calculado a um atributo XDM. Um único atributo pode ser mapeado para vários atributos XDM criando mapeamentos individuais.
 
-Para saber mais sobre as diferentes funções de mapeamento, leia a [guia de funções de mapeamento](./functions.md).
+Para saber mais sobre as diferentes funções de mapeamento, leia o [guia de funções de mapeamento](./functions.md).
 
 ### Campos calculados
 
 Os campos calculados permitem que valores sejam criados com base nos atributos no esquema de entrada. Esses valores podem ser atribuídos a atributos no esquema de destino e receber um nome e uma descrição para facilitar a referência. Os campos calculados têm um comprimento máximo de 4096 caracteres.
 
-Para saber mais sobre campos calculados, leia a [guia de campos calculados](./functions.md#calculated-fields).
+Para saber mais sobre campos calculados, leia o [guia de campos calculados](./functions.md#calculated-fields).
 
 ### Evitar caracteres especiais {#escape-special-characters}
 
-É possível escapar caracteres especiais em um campo usando `${...}`. No entanto, os arquivos JSON que contêm campos com um ponto (`.`) não são compatíveis com esse mecanismo. Ao interagir com hierarquias, se um atributo filho tiver um ponto (`.`), você deve usar uma barra invertida (`\`) para evitar caracteres especiais. Por exemplo, `address` é um objeto que contém o atributo `street.name`, pode ser referido como `address.street\.name` em vez de `address.street.name`.
+Você pode escapar caracteres especiais em um campo usando `${...}`. No entanto, arquivos JSON que contêm campos com um ponto (`.`) não são suportados por esse mecanismo. Ao interagir com hierarquias, se um atributo filho tiver um ponto (`.`), você deverá usar uma barra invertida (`\`) para usar escape em caracteres especiais. Por exemplo, `address` é um objeto que contém o atributo `street.name`, ele pode ser chamado de `address.street\.name` em vez de `address.street.name`.
 
-## Conjunto de mapeamento
+## Conjunto de mapeamentos
 
 Um conjunto de mapeamentos que transformam um esquema em outro é coletivamente conhecido como um conjunto de mapeamentos. Um único conjunto de mapeamento é criado como parte de cada fluxo de dados. Um conjunto de mapeamento é parte integral dos fluxos de dados e é criado, editado e monitorado como parte dos fluxos de dados.
 
-Para saber mais sobre conjuntos de mapeamento, incluindo como usar os campos em um conjunto de mapeamento, leia a [guia do conjunto de mapeamento](./mapping-set.md). Para saber como criar um conjunto de mapeamento e usar outras chamadas de API relacionadas aos conjuntos de mapeamento, leia a seção do conjunto de mapeamento na [guia do desenvolvedor](./api/mapping-set.md).
+Para saber mais sobre conjuntos de mapeamento, incluindo como usar os campos em um conjunto de mapeamento, leia o [guia do conjunto de mapeamento](./mapping-set.md). Para saber como criar um conjunto de mapeamento e usar outras chamadas de API relacionadas aos conjuntos de mapeamento, leia a seção sobre o conjunto de mapeamento no [guia do desenvolvedor](./api/mapping-set.md).
 
 ## Manuseio de formato de dados
 
-O Preparo de dados pode lidar com diferentes formatos de dados assimilados na Platform. Para saber mais sobre como o Preparo de dados lida com diferentes tipos de dados, leia o [visão geral do manuseio de formato de dados](./data-handling.md).
+O Preparo de dados pode lidar com diferentes formatos de dados assimilados na Platform. Para saber mais sobre como o Preparo de Dados lida com diferentes tipos de dados, leia a [visão geral do manuseio de formato de dados](./data-handling.md).
 
 ## Enviar atualizações parciais de linha usando [!DNL Data Prep]
 
-Upserts de transmissão em [!DNL Data Prep] permite enviar atualizações parciais de linha para [!DNL Profile Service] enquanto também cria e estabelece novos links de identidade com uma única solicitação de API. Para saber mais sobre como fazer stream de upserts no [!DNL Data Prep], consulte o documento sobre [enviando atualizações de linhas parciais](./upserts.md).
+A transmissão de sobreposições em [!DNL Data Prep] permite enviar atualizações de linhas parciais para dados de [!DNL Profile Service], além de criar e estabelecer novos links de identidade com uma única solicitação de API. Para saber mais sobre como fazer streaming de upserts em [!DNL Data Prep], consulte o documento em [enviando atualizações de linhas parciais](./upserts.md).
 
-## Controle de acesso baseado em atributos no [!DNL Data Prep]
+## Controle de acesso baseado em atributo em [!DNL Data Prep]
 
 O controle de acesso baseado em atributos no Adobe Experience Platform permite que os administradores controlem o acesso a objetos e/ou recursos específicos com base em atributos.
 
@@ -68,4 +68,4 @@ Consulte a [visão geral do controle de acesso baseado em atributos](../access-c
 
 ## Próximas etapas
 
-Esse documento abordou as noções básicas sobre o Preparo de dados no Adobe Experience Platform. Para saber mais sobre as diferentes funções de mapeamento, leia a [guia de funções de mapeamento](./functions.md). Para saber mais sobre como o Preparo de dados lida com diferentes tipos de dados, leia o [guia de manipulação de formato de dados](./data-handling.md#dates). Para saber como usar a API de Preparo de dados, leia o [Guia do desenvolvedor de Preparo de dados](api/overview.md).
+Esse documento abordou as noções básicas sobre o Preparo de dados no Adobe Experience Platform. Para saber mais sobre as diferentes funções de mapeamento, leia o [guia de funções de mapeamento](./functions.md). Para saber mais sobre como o Preparo de Dados lida com diferentes tipos de dados, leia o [guia de manipulação de formato de dados](./data-handling.md#dates). Para saber como usar a API de Preparo de Dados, leia o [guia do desenvolvedor de Preparo de Dados](api/overview.md).

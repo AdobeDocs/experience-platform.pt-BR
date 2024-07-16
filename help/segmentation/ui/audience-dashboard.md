@@ -10,12 +10,12 @@ ht-degree: 0%
 
 ---
 
-# [!UICONTROL Públicos-alvo] painel {#audience-dashboard}
+# Painel de [!UICONTROL Públicos-alvo] {#audience-dashboard}
 
 A interface do usuário (UI) do Adobe Experience Platform fornece um painel por meio do qual você pode exibir informações importantes sobre seus públicos-alvo, conforme capturadas durante um instantâneo diário.
 
-Para obter instruções detalhadas sobre como acessar e interagir com o painel de públicos-alvo na interface do, e saber mais sobre as métricas disponíveis exibidas no painel, visite o [guia do painel de públicos-alvo](../../dashboards/guides/audiences.md).
+Para obter instruções detalhadas sobre como acessar e interagir com o painel de públicos-alvo na interface, e para saber mais sobre as métricas disponíveis exibidas no painel, visite o [guia do painel de públicos-alvo](../../dashboards/guides/audiences.md).
 
-Para obter uma visão geral de todos os recursos do painel na interface do usuário do Experience Platform, comece lendo o [visão geral dos painéis](../../dashboards/home.md).
+Para obter uma visão geral de todos os recursos do painel na interface do usuário do Experience Platform, comece lendo a [visão geral dos painéis](../../dashboards/home.md).
 
-![O painel de públicos-alvo. Isso mostra três widgets: o widget de tamanho do público-alvo, o widget de tendência de alteração de tamanho do público-alvo e os perfis por widget de identidade.](../../dashboards/images/segments/dashboard-overview.png)
+![O painel de públicos-alvo. Isso está mostrando três widgets: o widget de tamanho de público-alvo, o widget de tendência de alteração de tamanho de público-alvo e o widget perfis por identidade.](../../dashboards/images/segments/dashboard-overview.png)

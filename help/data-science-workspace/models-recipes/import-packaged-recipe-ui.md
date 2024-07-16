@@ -3,7 +3,7 @@ keywords: Experience Platform;importar receita empacotada;Data Science Workspace
 solution: Experience Platform
 title: Importar uma fórmula empacotada na interface do usuário do Data Science Workspace
 type: Tutorial
-description: Este tutorial fornece informações sobre como configurar e importar uma fórmula em pacote usando o exemplo fornecido de Vendas de Varejo. Ao final deste tutorial, você estará pronto para criar, treinar e avaliar um Modelo no Espaço de trabalho de ciência de dados da Adobe Experience Platform.
+description: Este tutorial fornece informações sobre como configurar e importar uma fórmula em pacote usando o exemplo fornecido de Vendas de Varejo. Ao final deste tutorial, você estará pronto para criar, treinar e avaliar um Modelo no Adobe Experience Platform Data Science Workspace.
 exl-id: 2556e1f0-3f9c-4884-a699-06c041d5c4d1
 source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
@@ -22,7 +22,7 @@ Este tutorial requer uma fórmula em pacote no formato de um URL de imagem do Do
 
 ## Fluxo de trabalho da interface do usuário
 
-Importação de uma fórmula em pacote para [!DNL Data Science Workspace] O requer configurações de fórmula específicas, compiladas em um único arquivo JSON (JavaScript Object Notation). Essa compilação de configurações de fórmula é chamada de arquivo de configuração. Uma fórmula em pacote com um conjunto específico de configurações é chamada de instância de fórmula. Uma fórmula pode ser usada para criar muitas instâncias de fórmula no [!DNL Data Science Workspace].
+A importação de uma fórmula em pacote para o [!DNL Data Science Workspace] requer configurações de fórmula específicas, compiladas em um único arquivo JSON (JavaScript Object Notation). Essa compilação de configurações de fórmula é conhecida como o arquivo de configuração. Uma fórmula em pacote com um conjunto específico de configurações é chamada de instância de fórmula. Uma fórmula pode ser usada para criar muitas instâncias de fórmula em [!DNL Data Science Workspace].
 
 O fluxo de trabalho para importar uma fórmula de pacote consiste nas seguintes etapas:
 - [Configurar uma fórmula](#configure)
@@ -33,7 +33,7 @@ O fluxo de trabalho para importar uma fórmula de pacote consiste nas seguintes 
 
 ### Configurar uma fórmula {#configure}
 
-Cada instância de fórmula em [!DNL Data Science Workspace] O é acompanhado de um conjunto de configurações que adaptam a instância da fórmula para se adequar a um caso de uso específico. Os arquivos de configuração definem os comportamentos padrão de treinamento e pontuação de um Modelo criado usando essa instância de fórmula.
+Cada instância da fórmula em [!DNL Data Science Workspace] é acompanhada por um conjunto de configurações que adaptam a instância da fórmula para atender a um caso de uso específico. Os arquivos de configuração definem os comportamentos padrão de treinamento e pontuação de um Modelo criado usando essa instância de fórmula.
 
 >[!NOTE]
 >
@@ -118,151 +118,151 @@ Abaixo está um arquivo de configuração de exemplo que mostra os comportamento
 | `evaluation.metrics` | String | Lista separada por vírgulas de métricas de avaliação a serem usadas para avaliar um Modelo. |
 | `ACP_DSW_SCORING_RESULTS_XDM_SCHEMA` | String | O esquema de saída usado para pontuar um Modelo. Deixe isso em branco ao importar na interface do usuário, substitua por SchemaID de pontuação ao importar usando a API. |
 
-Para o propósito deste tutorial, você pode deixar os arquivos de configuração padrão para a fórmula de Vendas de varejo na [!DNL Data Science Workspace] Referencie como eles são.
+Para o propósito deste tutorial, você pode deixar os arquivos de configuração padrão para a fórmula de Vendas de Varejo na [!DNL Data Science Workspace] Referencie como estão.
 
 ### Importar fórmula baseada no Docker - [!DNL Python] {#python}
 
-Comece navegando e selecionando **[!UICONTROL Fluxos de trabalho]** localizado na parte superior esquerda do [!DNL Platform] IU. Em seguida, selecione **Importar fórmula** e selecione **[!UICONTROL Launch]**.
+Comece navegando e selecionando **[!UICONTROL Fluxos de trabalho]** localizados na parte superior esquerda da interface do usuário do [!DNL Platform]. Em seguida, selecione **Importar fórmula** e selecione **[!UICONTROL Iniciar]**.
 
 ![](../images/models-recipes/import-package-ui/launch-import.png)
 
-A variável **Configurar** página para a **Importar fórmula** workflow aparece. Insira um nome e uma descrição para a fórmula e selecione **[!UICONTROL Próxima]** no canto superior direito.
+A página **Configurar** para o fluxo de trabalho **Importar fórmula** é exibida. Insira um nome e uma descrição para a fórmula e selecione **[!UICONTROL Avançar]** no canto superior direito.
 
 ![configurar fluxo de trabalho](../images/models-recipes/import-package-ui/configure-workflow.png)
 
 >[!NOTE]
 >
-> No [Compactar arquivos de origem em uma fórmula](./package-source-files-recipe.md) tutorial, um URL do Docker foi fornecido no final da criação da fórmula de vendas de varejo usando arquivos de origem Python.
+> No tutorial [Empacotar arquivos de origem em uma Receita](./package-source-files-recipe.md), uma URL Docker foi fornecida no final da criação da fórmula de Vendas de Varejo usando arquivos de origem Python.
 
-Quando estiver no estado **Selecionar origem** cole o URL do Docker correspondente à fórmula em pacote criada com o [!DNL Python] arquivos de origem no **[!UICONTROL URL de origem]** campo. Em seguida, importe o arquivo de configuração fornecido arrastando e soltando ou use o sistema de arquivos **Navegador**. O arquivo de configuração fornecido pode ser encontrado em `experience-platform-dsw-reference/recipes/python/retail/retail.config.json`. Selecionar **[!UICONTROL Python]** no **Tempo de execução** e **[!UICONTROL Classificação]** no **Tipo** lista suspensa. Depois que tudo for preenchido, selecione **[!UICONTROL Próxima]** no canto superior direito para prosseguir para **Gerenciar esquemas**.
+Quando você estiver na página **Selecionar origem**, cole a URL do Docker correspondente à fórmula em pacote criada usando arquivos de origem [!DNL Python] no campo **[!UICONTROL URL do Source]**. Em seguida, importe o arquivo de configuração fornecido arrastando e soltando ou use o **Navegador** do sistema de arquivos. O arquivo de configuração fornecido pode ser encontrado em `experience-platform-dsw-reference/recipes/python/retail/retail.config.json`. Selecione **[!UICONTROL Python]** no menu suspenso **Tempo de Execução** e **[!UICONTROL Classificação]** no menu suspenso **Tipo**. Depois que tudo estiver preenchido, selecione **[!UICONTROL Avançar]** no canto superior direito para prosseguir para **Gerenciar esquemas**.
 
 >[!NOTE]
 >
-> Suporte de tipo **[!UICONTROL Classificação]** e **[!UICONTROL Regressão]**. Se o modelo não estiver em um desses tipos, selecione **[!UICONTROL Personalizado]**.
+> O tipo dá suporte a **[!UICONTROL Classificação]** e **[!UICONTROL Regressão]**. Se o seu modelo não se enquadrar em um desses tipos, selecione **[!UICONTROL Personalizado]**.
 
 ![](../images/models-recipes/import-package-ui/recipe_source_python.png)
 
-Em seguida, selecione os schemas de entrada e saída Retail Sales na seção **Gerenciar esquemas**, eles foram criados usando o script de inicialização fornecido no [criar o esquema e o conjunto de dados de vendas de varejo](../models-recipes/create-retails-sales-dataset.md) tutorial.
+Em seguida, selecione os esquemas de entrada e saída de Vendas de Varejo na seção **Gerenciar esquemas**, que foram criados usando o script de inicialização fornecido no [tutorial criar esquema e conjunto de dados de vendas de varejo](../models-recipes/create-retails-sales-dataset.md).
 
 ![](../images/models-recipes/import-package-ui/recipe_schema.png)
 
-No **Gerenciamento de recursos** selecione na identificação do locatário no visualizador de esquema para expandir o esquema de entrada Vendas de varejo. Selecione os recursos de entrada e saída, realçando o recurso desejado e selecionando **[!UICONTROL Recurso de entrada]** ou **[!UICONTROL Recurso do Target]** à direita **[!UICONTROL Propriedades do campo]** janela. Para o propósito deste tutorial, defina **[!UICONTROL weeklySales]** como o  **[!UICONTROL Recurso do Target]** e tudo mais como **[!UICONTROL Recurso de entrada]**. Selecionar **[!UICONTROL Próxima]** para revisar sua nova fórmula configurada.
+Na seção **Gerenciamento de recursos**, selecione em sua identificação de locatário no visualizador de esquema para expandir o esquema de entrada de Vendas de Varejo. Selecione os recursos de entrada e saída, realçando o recurso desejado e selecionando **[!UICONTROL Recurso de Entrada]** ou **[!UICONTROL Recurso de Destino]** na janela direita **[!UICONTROL Propriedades do Campo]**. Para fins deste tutorial, defina **[!UICONTROL weeklySales]** como o **[!UICONTROL Recurso do Target]** e tudo o mais como **[!UICONTROL Recurso de Entrada]**. Selecione **[!UICONTROL Avançar]** para revisar sua nova fórmula configurada.
 
-Revise a fórmula, adicione, modifique ou remova configurações conforme necessário. Selecionar **[!UICONTROL Concluir]** para criar a fórmula.
+Revise a fórmula, adicione, modifique ou remova configurações conforme necessário. Selecione **[!UICONTROL Concluir]** para criar a fórmula.
 
 ![](../images/models-recipes/import-package-ui/recipe_review.png)
 
-Vá para a página [próximas etapas](#next-steps) para descobrir como criar um Modelo no [!DNL Data Science Workspace] usando a fórmula recém-criada de Vendas de Varejo.
+Prossiga para as [próximas etapas](#next-steps) para descobrir como criar um Modelo no [!DNL Data Science Workspace] usando a fórmula de Vendas de Varejo recém-criada.
 
 ### Importar fórmula baseada no Docker - R {#r}
 
-Comece navegando e selecionando **[!UICONTROL Fluxos de trabalho]** localizado na parte superior esquerda do [!DNL Platform] IU. Em seguida, selecione **Importar fórmula** e selecione **[!UICONTROL Launch]**.
+Comece navegando e selecionando **[!UICONTROL Fluxos de trabalho]** localizados na parte superior esquerda da interface do usuário do [!DNL Platform]. Em seguida, selecione **Importar fórmula** e selecione **[!UICONTROL Iniciar]**.
 
 ![](../images/models-recipes/import-package-ui/launch-import.png)
 
-A variável **Configurar** página para a **Importar fórmula** workflow aparece. Insira um nome e uma descrição para a fórmula e selecione **[!UICONTROL Próxima]** no canto superior direito.
+A página **Configurar** para o fluxo de trabalho **Importar fórmula** é exibida. Insira um nome e uma descrição para a fórmula e selecione **[!UICONTROL Avançar]** no canto superior direito.
 
 ![configurar fluxo de trabalho](../images/models-recipes/import-package-ui/configure-workflow.png)
 
 >[!NOTE]
 >
-> No [Compactar arquivos de origem em uma fórmula](./package-source-files-recipe.md) tutorial, um URL do Docker foi fornecido no final da criação da fórmula de vendas de varejo usando arquivos de origem do R.
+> No tutorial [Empacotar arquivos de origem em uma Fórmula](./package-source-files-recipe.md), uma URL Docker foi fornecida no final da criação da fórmula de Vendas de Varejo usando arquivos de origem R.
 
-Quando estiver no estado **Selecionar origem** cole o URL do Docker correspondente à fórmula em pacote criada usando arquivos de origem R na **[!UICONTROL URL de origem]** campo. Em seguida, importe o arquivo de configuração fornecido arrastando e soltando ou use o sistema de arquivos **Navegador**. O arquivo de configuração fornecido pode ser encontrado em `experience-platform-dsw-reference/recipes/R/Retail\ -\ GradientBoosting/retail.config.json`. Selecionar **[!UICONTROL R]** no **Tempo de execução** e **[!UICONTROL Classificação]** no **Tipo** lista suspensa. Depois que tudo for preenchido, selecione **[!UICONTROL Próxima]** no canto superior direito para prosseguir para **Gerenciar esquemas**.
+Quando você estiver na página **Selecionar origem**, cole a URL do Docker correspondente à fórmula em pacote criada usando arquivos de origem R no campo **[!UICONTROL URL do Source]**. Em seguida, importe o arquivo de configuração fornecido arrastando e soltando ou use o **Navegador** do sistema de arquivos. O arquivo de configuração fornecido pode ser encontrado em `experience-platform-dsw-reference/recipes/R/Retail\ -\ GradientBoosting/retail.config.json`. Selecione **[!UICONTROL R]** no menu suspenso **Tempo de Execução** e **[!UICONTROL Classificação]** no menu suspenso **Tipo**. Depois que tudo estiver preenchido, selecione **[!UICONTROL Avançar]** no canto superior direito para prosseguir para **Gerenciar esquemas**.
 
 >[!NOTE]
 >
-> *Tipo* suporta **[!UICONTROL Classificação]** e **[!UICONTROL Regressão]**. Se o modelo não estiver em um desses tipos, selecione **[!UICONTROL Personalizado]**.
+> *Type* dá suporte a **[!UICONTROL Classification]** e **[!UICONTROL Regression]**. Se o seu modelo não se enquadrar em um desses tipos, selecione **[!UICONTROL Personalizado]**.
 
 ![](../images/models-recipes/import-package-ui/recipe_source_R.png)
 
-Em seguida, selecione os schemas de entrada e saída Retail Sales na seção **Gerenciar esquemas**, eles foram criados usando o script de inicialização fornecido no [criar o esquema e o conjunto de dados de vendas de varejo](../models-recipes/create-retails-sales-dataset.md) tutorial.
+Em seguida, selecione os esquemas de entrada e saída de Vendas de Varejo na seção **Gerenciar esquemas**, que foram criados usando o script de inicialização fornecido no [tutorial criar esquema e conjunto de dados de vendas de varejo](../models-recipes/create-retails-sales-dataset.md).
 
 ![](../images/models-recipes/import-package-ui/recipe_schema.png)
 
-No *Gerenciamento de recursos* selecione na identificação do locatário no visualizador de esquema para expandir o esquema de entrada Vendas de varejo. Selecione os recursos de entrada e saída, realçando o recurso desejado e selecionando **[!UICONTROL Recurso de entrada]** ou **[!UICONTROL Recurso do Target]** à direita **[!UICONTROL Propriedades do campo]** janela. Para o propósito deste tutorial, defina **[!UICONTROL weeklySales]** como o  **[!UICONTROL Recurso do Target]** e tudo mais como **[!UICONTROL Recurso de entrada]**. Selecionar **[!UICONTROL Próxima]** para revisar sua nova fórmula Configurada.
+Na seção *Gerenciamento de recursos*, selecione em sua identificação de locatário no visualizador de esquema para expandir o esquema de entrada de Vendas de Varejo. Selecione os recursos de entrada e saída, realçando o recurso desejado e selecionando **[!UICONTROL Recurso de Entrada]** ou **[!UICONTROL Recurso de Destino]** na janela direita **[!UICONTROL Propriedades do Campo]**. Para fins deste tutorial, defina **[!UICONTROL weeklySales]** como o **[!UICONTROL Recurso do Target]** e tudo o mais como **[!UICONTROL Recurso de Entrada]**. Selecione **[!UICONTROL Avançar]** para revisar sua nova fórmula Configurada.
 
-Revise a fórmula, adicione, modifique ou remova configurações conforme necessário. Selecionar **Concluir** para criar a fórmula.
+Revise a fórmula, adicione, modifique ou remova configurações conforme necessário. Selecione **Concluir** para criar a fórmula.
 
 ![](../images/models-recipes/import-package-ui/recipe_review.png)
 
-Vá para a página [próximas etapas](#next-steps) para descobrir como criar um Modelo no [!DNL Data Science Workspace] usando a fórmula recém-criada de Vendas de Varejo.
+Prossiga para as [próximas etapas](#next-steps) para descobrir como criar um Modelo no [!DNL Data Science Workspace] usando a fórmula de Vendas de Varejo recém-criada.
 
 ### Importar fórmula baseada no Docker - PySpark {#pyspark}
 
-Comece navegando e selecionando **[!UICONTROL Fluxos de trabalho]** localizado na parte superior esquerda do [!DNL Platform] IU. Em seguida, selecione **Importar fórmula** e selecione **[!UICONTROL Launch]**.
+Comece navegando e selecionando **[!UICONTROL Fluxos de trabalho]** localizados na parte superior esquerda da interface do usuário do [!DNL Platform]. Em seguida, selecione **Importar fórmula** e selecione **[!UICONTROL Iniciar]**.
 
 ![](../images/models-recipes/import-package-ui/launch-import.png)
 
-A variável **Configurar** página para a **Importar fórmula** workflow aparece. Insira um nome e uma descrição para a fórmula e selecione **[!UICONTROL Próxima]** no canto superior direito para continuar.
+A página **Configurar** para o fluxo de trabalho **Importar fórmula** é exibida. Insira um nome e uma descrição para a fórmula e selecione **[!UICONTROL Avançar]** no canto superior direito para continuar.
 
 ![configurar fluxo de trabalho](../images/models-recipes/import-package-ui/configure-workflow.png)
 
 >[!NOTE]
 >
-> No [Compactar arquivos de origem em uma fórmula](./package-source-files-recipe.md) tutorial, um URL do Docker foi fornecido no final da criação da fórmula de vendas de varejo usando arquivos de origem do PySpark.
+> No tutorial [Empacotar arquivos de origem em uma Receita](./package-source-files-recipe.md), uma URL Docker foi fornecida no final da criação da fórmula de Vendas de Varejo usando arquivos de origem do PySpark.
 
-Quando estiver no estado **Selecionar origem** cole o URL do Docker correspondente à fórmula em pacote criada usando os arquivos de origem do PySpark no **[!UICONTROL URL de origem]** campo. Em seguida, importe o arquivo de configuração fornecido arrastando e soltando ou use o sistema de arquivos **Navegador**. O arquivo de configuração fornecido pode ser encontrado em `experience-platform-dsw-reference/recipes/pyspark/retail/pipeline.json`. Selecionar **[!UICONTROL PySpark]** no **Tempo de execução** lista suspensa. Depois que o tempo de execução do PySpark é selecionado, o artefato padrão é preenchido automaticamente para **[!UICONTROL Docker]**. Em seguida, selecione **[!UICONTROL Classificação]** no **Tipo** lista suspensa. Depois que tudo for preenchido, selecione **[!UICONTROL Próxima]** no canto superior direito para prosseguir para **Gerenciar esquemas**.
+Quando você estiver na página **Selecionar origem**, cole a URL do Docker correspondente à fórmula em pacote criada usando arquivos de origem do PySpark no campo **[!UICONTROL URL do Source]**. Em seguida, importe o arquivo de configuração fornecido arrastando e soltando ou use o **Navegador** do sistema de arquivos. O arquivo de configuração fornecido pode ser encontrado em `experience-platform-dsw-reference/recipes/pyspark/retail/pipeline.json`. Selecione **[!UICONTROL PySpark]** no menu suspenso **Tempo de Execução**. Depois que o tempo de execução do PySpark é selecionado, o artefato padrão é preenchido automaticamente para **[!UICONTROL Docker]**. Em seguida, selecione **[!UICONTROL Classificação]** no menu suspenso **Tipo**. Depois que tudo estiver preenchido, selecione **[!UICONTROL Avançar]** no canto superior direito para prosseguir para **Gerenciar esquemas**.
 
 >[!NOTE]
 >
-> *Tipo* suporta **[!UICONTROL Classificação]** e **[!UICONTROL Regressão]**. Se o modelo não estiver em um desses tipos, selecione **[!UICONTROL Personalizado]**.
+> *Type* dá suporte a **[!UICONTROL Classification]** e **[!UICONTROL Regression]**. Se o seu modelo não se enquadrar em um desses tipos, selecione **[!UICONTROL Personalizado]**.
 
 ![](../images/models-recipes/import-package-ui/pyspark-databricks.png)
 
-Em seguida, selecione os esquemas de entrada e saída Retail Sales usando o **Gerenciar esquemas** esquemas foram criados usando o script de inicialização fornecido no [criar o esquema e o conjunto de dados de vendas de varejo](../models-recipes/create-retails-sales-dataset.md) tutorial.
+Em seguida, selecione os esquemas de entrada e saída de Vendas de Varejo usando o seletor **Gerenciar esquemas**. Os esquemas foram criados usando o script de inicialização fornecido no [tutorial criar esquema e conjunto de dados de vendas de varejo](../models-recipes/create-retails-sales-dataset.md).
 
 ![gerenciar esquemas](../images/models-recipes/import-package-ui/manage-schemas.png)
 
-No **Gerenciamento de recursos** selecione na identificação do locatário no visualizador de esquema para expandir o esquema de entrada Vendas de varejo. Selecione os recursos de entrada e saída, realçando o recurso desejado e selecionando **[!UICONTROL Recurso de entrada]** ou **[!UICONTROL Recurso do Target]** à direita **[!UICONTROL Propriedades do campo]** janela. Para o propósito deste tutorial, defina **[!UICONTROL weeklySales]** como o  **[!UICONTROL Recurso do Target]** e tudo mais como **[!UICONTROL Recurso de entrada]**. Selecionar **[!UICONTROL Próxima]** para revisar sua nova fórmula configurada.
+Na seção **Gerenciamento de recursos**, selecione em sua identificação de locatário no visualizador de esquema para expandir o esquema de entrada de Vendas de Varejo. Selecione os recursos de entrada e saída, realçando o recurso desejado e selecionando **[!UICONTROL Recurso de Entrada]** ou **[!UICONTROL Recurso de Destino]** na janela direita **[!UICONTROL Propriedades do Campo]**. Para fins deste tutorial, defina **[!UICONTROL weeklySales]** como o **[!UICONTROL Recurso do Target]** e tudo o mais como **[!UICONTROL Recurso de Entrada]**. Selecione **[!UICONTROL Avançar]** para revisar sua nova fórmula configurada.
 
 ![](../images/models-recipes/import-package-ui/recipe_schema.png)
 
-Revise a fórmula, adicione, modifique ou remova configurações conforme necessário. Selecionar **[!UICONTROL Concluir]** para criar a fórmula.
+Revise a fórmula, adicione, modifique ou remova configurações conforme necessário. Selecione **[!UICONTROL Concluir]** para criar a fórmula.
 
 ![](../images/models-recipes/import-package-ui/recipe_review.png)
 
-Vá para a página [próximas etapas](#next-steps) para descobrir como criar um Modelo no [!DNL Data Science Workspace] usando a fórmula recém-criada de Vendas de Varejo.
+Prossiga para as [próximas etapas](#next-steps) para descobrir como criar um Modelo no [!DNL Data Science Workspace] usando a fórmula de Vendas de Varejo recém-criada.
 
 ### Importar fórmula baseada no Docker - Scala {#scala}
 
-Comece navegando e selecionando **[!UICONTROL Fluxos de trabalho]** localizado na parte superior esquerda do [!DNL Platform] IU. Em seguida, selecione **Importar fórmula** e selecione **[!UICONTROL Launch]**.
+Comece navegando e selecionando **[!UICONTROL Fluxos de trabalho]** localizados na parte superior esquerda da interface do usuário do [!DNL Platform]. Em seguida, selecione **Importar fórmula** e selecione **[!UICONTROL Iniciar]**.
 
 ![](../images/models-recipes/import-package-ui/launch-import.png)
 
-A variável **Configurar** página para a **Importar fórmula** workflow aparece. Insira um nome e uma descrição para a fórmula e selecione **[!UICONTROL Próxima]** no canto superior direito para continuar.
+A página **Configurar** para o fluxo de trabalho **Importar fórmula** é exibida. Insira um nome e uma descrição para a fórmula e selecione **[!UICONTROL Avançar]** no canto superior direito para continuar.
 
 ![configurar fluxo de trabalho](../images/models-recipes/import-package-ui/configure-workflow.png)
 
 >[!NOTE]
 >
-> No [Compactar arquivos de origem em uma fórmula](./package-source-files-recipe.md) tutorial, um URL do Docker foi fornecido no final da criação da fórmula de Vendas de varejo usando o Scala ([!DNL Spark]) arquivos de origem.
+> No tutorial [Empacotar arquivos de origem em uma Fórmula](./package-source-files-recipe.md), uma URL Docker foi fornecida no final da criação da fórmula de Vendas de Varejo usando arquivos de origem Scala ([!DNL Spark]).
 
-Quando estiver no estado **Selecionar origem** cole o URL do Docker correspondente à fórmula em pacote criada usando arquivos de origem Scala no campo URL de origem. Em seguida, importe o arquivo de configuração fornecido arrastando e soltando ou use o navegador do sistema de arquivos. O arquivo de configuração fornecido pode ser encontrado em `experience-platform-dsw-reference/recipes/scala/retail/pipelineservice.json`. Selecionar **[!UICONTROL Spark]** no **Tempo de execução** lista suspensa. Quando a variável [!DNL Spark] tempo de execução for selecionado, o artefato padrão será preenchido automaticamente **[!UICONTROL Docker]**. Em seguida, selecione **[!UICONTROL Regressão]** do **Tipo** lista suspensa. Depois que tudo for preenchido, selecione **[!UICONTROL Próxima]** no canto superior direito para prosseguir para **Gerenciar esquemas**.
+Quando você estiver na página **Selecionar origem**, cole a URL do Docker correspondente à fórmula em pacote criada usando arquivos de origem Scala no campo URL do Source. Em seguida, importe o arquivo de configuração fornecido arrastando e soltando ou use o navegador do sistema de arquivos. O arquivo de configuração fornecido pode ser encontrado em `experience-platform-dsw-reference/recipes/scala/retail/pipelineservice.json`. Selecione **[!UICONTROL Spark]** no menu suspenso **Tempo de Execução**. Depois que o tempo de execução [!DNL Spark] for selecionado, o artefato padrão será preenchido automaticamente para **[!UICONTROL Docker]**. Em seguida, selecione **[!UICONTROL Regressão]** no menu suspenso **Tipo**. Depois que tudo estiver preenchido, selecione **[!UICONTROL Avançar]** no canto superior direito para prosseguir para **Gerenciar esquemas**.
 
 >[!NOTE]
 >
-> Suporte de tipo **[!UICONTROL Classificação]** e **[!UICONTROL Regressão]**. Se o modelo não estiver em um desses tipos, selecione **[!UICONTROL Personalizado]**.
+> O tipo dá suporte a **[!UICONTROL Classificação]** e **[!UICONTROL Regressão]**. Se o seu modelo não se enquadrar em um desses tipos, selecione **[!UICONTROL Personalizado]**.
 
 ![](../images/models-recipes/import-package-ui/scala-databricks.png)
 
-Em seguida, selecione os esquemas de entrada e saída Retail Sales usando o **Gerenciar esquemas** esquemas foram criados usando o script de inicialização fornecido no [criar o esquema e o conjunto de dados de vendas de varejo](../models-recipes/create-retails-sales-dataset.md) tutorial.
+Em seguida, selecione os esquemas de entrada e saída de Vendas de Varejo usando o seletor **Gerenciar esquemas**. Os esquemas foram criados usando o script de inicialização fornecido no [tutorial criar esquema e conjunto de dados de vendas de varejo](../models-recipes/create-retails-sales-dataset.md).
 
 ![gerenciar esquemas](../images/models-recipes/import-package-ui/manage-schemas.png)
 
-No **Gerenciamento de recursos** selecione na identificação do locatário no visualizador de esquema para expandir o esquema de entrada Vendas de varejo. Selecione os recursos de entrada e saída, realçando o recurso desejado e selecionando **[!UICONTROL Recurso de entrada]** ou **[!UICONTROL Recurso do Target]** à direita **[!UICONTROL Propriedades do campo]** janela. Para o propósito deste tutorial, defina &quot;[!UICONTROL weeklySales]&quot; como o  **[!UICONTROL Recurso do Target]** e tudo mais como **[!UICONTROL Recurso de entrada]**. Selecionar **[!UICONTROL Próxima]** para revisar sua nova fórmula configurada.
+Na seção **Gerenciamento de recursos**, selecione em sua identificação de locatário no visualizador de esquema para expandir o esquema de entrada de Vendas de Varejo. Selecione os recursos de entrada e saída, realçando o recurso desejado e selecionando **[!UICONTROL Recurso de Entrada]** ou **[!UICONTROL Recurso de Destino]** na janela direita **[!UICONTROL Propriedades do Campo]**. Para fins deste tutorial, defina &quot;[!UICONTROL weeklySales]&quot; como o **[!UICONTROL Recurso do Target]** e tudo o mais como **[!UICONTROL Recurso de Entrada]**. Selecione **[!UICONTROL Avançar]** para revisar sua nova fórmula configurada.
 
 ![](../images/models-recipes/import-package-ui/recipe_schema.png)
 
-Revise a fórmula, adicione, modifique ou remova configurações conforme necessário. Selecionar **[!UICONTROL Concluir]** para criar a fórmula.
+Revise a fórmula, adicione, modifique ou remova configurações conforme necessário. Selecione **[!UICONTROL Concluir]** para criar a fórmula.
 
 ![](../images/models-recipes/import-package-ui/recipe_review.png)
 
-Vá para a página [próximas etapas](#next-steps) para descobrir como criar um Modelo no [!DNL Data Science Workspace] usando a fórmula recém-criada de Vendas de Varejo.
+Prossiga para as [próximas etapas](#next-steps) para descobrir como criar um Modelo no [!DNL Data Science Workspace] usando a fórmula de Vendas de Varejo recém-criada.
 
 ## Próximas etapas {#next-steps}
 
-Este tutorial forneceu informações sobre a configuração e importação de uma fórmula para o [!DNL Data Science Workspace]. Agora você pode criar, treinar e avaliar um Modelo usando a fórmula recém-criada.
+Este tutorial forneceu informações sobre como configurar e importar uma fórmula para o [!DNL Data Science Workspace]. Agora você pode criar, treinar e avaliar um Modelo usando a fórmula recém-criada.
 
 - [Treinar e avaliar um modelo na interface do usuário](./train-evaluate-model-ui.md)
 - [Treinar e avaliar um modelo usando a API](./train-evaluate-model-api.md)

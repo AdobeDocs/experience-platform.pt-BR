@@ -16,13 +16,13 @@ ht-degree: 3%
 
 ## Exemplos de chamadas de API
 
-As seções a seguir descrevem as várias chamadas de API que podem ser feitas usando o [!DNL Query Service] API. Cada chamada inclui o formato da API geral, uma solicitação de amostra mostrando os cabeçalhos necessários e uma resposta de amostra.
+As seções a seguir descrevem as várias chamadas de API que você pode fazer usando a API [!DNL Query Service]. Cada chamada inclui o formato da API geral, uma solicitação de amostra mostrando os cabeçalhos necessários e uma resposta de amostra.
 
-Consulte a [Documentação de modelos de consulta de interface do usuário](../ui/query-templates.md) para obter informações sobre como criar modelos por meio da interface do usuário do Experience Platform.
+Consulte a [documentação de modelos de consulta da interface](../ui/query-templates.md) para obter informações sobre como criar modelos por meio da interface do Experience Platform.
 
 ### Recuperar uma lista de modelos de consulta
 
-Você pode recuperar uma lista de todos os modelos de consulta para sua organização fazendo uma solicitação GET à `/query-templates` terminal.
+Você pode recuperar uma lista de todos os modelos de consulta para sua organização fazendo uma solicitação GET para o ponto de extremidade `/query-templates`.
 
 **Formato da API**
 
@@ -41,10 +41,10 @@ Veja a seguir uma lista de parâmetros de consulta disponíveis para listar mode
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `orderby` | Especifica o campo pelo qual ordenar resultados. Os campos compatíveis são `created` e `updated`. Por exemplo, `orderby=created` Os resultados serão classificados por criados em ordem crescente. Adicionar um `-` antes de criar (`orderby=-created`) classificará os itens por criados em ordem decrescente. |
+| `orderby` | Especifica o campo pelo qual ordenar resultados. Os campos com suporte são `created` e `updated`. Por exemplo, `orderby=created` classificará os resultados por ordem crescente criada. Adicionar um `-` antes de criar (`orderby=-created`) classificará os itens por ordem decrescente. |
 | `limit` | Especifica o limite de tamanho de página para controlar o número de resultados incluídos em uma página. (*Valor padrão: 20*) |
-| `start` | Especifique um carimbo de data e hora no formato ISO para ordenar os resultados. Se nenhuma data de início for especificada, a chamada à API retornará primeiro os modelos criados mais antigos e, em seguida, continuará a listar os resultados mais recentes.<br> Os carimbos de data e hora ISO permitem diferentes níveis de granularidade na data e hora. Os carimbos de data e hora ISO básicos têm o formato de: `2020-09-07` para expressar a data em 7 de setembro de 2020. Um exemplo mais complexo seria escrito como `2022-11-05T08:15:30-05:00` e corresponde a 5 de novembro de 2022, 8:15:30 da manhã, Hora Padrão do Leste dos EUA. Um fuso horário pode ser fornecido com um deslocamento UTC e é indicado pelo sufixo &quot;Z&quot; (`2020-01-01T01:01:01Z`). Se nenhum fuso horário for fornecido, o padrão será zero. |
-| `property` | Filtrar resultados com base em campos. Os filtros **deve** ser escapado por HTML. As vírgulas são usadas para combinar vários conjuntos de filtros. Os campos compatíveis são `name` e `userId`. O único operador compatível é `==` (igual a). Por exemplo, `name==my_template` retornará todos os modelos de consulta com o nome `my_template`. |
+| `start` | Especifique um carimbo de data e hora no formato ISO para ordenar os resultados. Se nenhuma data de início for especificada, a chamada à API retornará primeiro os modelos criados mais antigos e, em seguida, continuará a listar os resultados mais recentes.Os carimbos de data e hora ISO <br> permitem diferentes níveis de granularidade na data e hora. Os carimbos de data e hora ISO básicos assumem o formato de: `2020-09-07` para expressar a data em 7 de setembro de 2020. Um exemplo mais complexo seria escrito como `2022-11-05T08:15:30-05:00` e corresponde a 5 de novembro de 2022, às 8:15:30 am, Hora Padrão do Leste dos EUA. Um fuso horário pode ser fornecido com um deslocamento UTC e é indicado pelo sufixo &quot;Z&quot; (`2020-01-01T01:01:01Z`). Se nenhum fuso horário for fornecido, o padrão será zero. |
+| `property` | Filtrar resultados com base em campos. Os filtros **devem** ter HTML de escape. As vírgulas são usadas para combinar vários conjuntos de filtros. Os campos com suporte são `name` e `userId`. O único operador com suporte é `==` (igual a). Por exemplo, `name==my_template` retornará todos os modelos de consulta com o nome `my_template`. |
 
 **Solicitação**
 
@@ -113,7 +113,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com uma lista de modelos de 
 
 ### Criar um modelo de consulta
 
-Você pode criar um template de query fazendo uma solicitação POST para o `/query-templates` terminal.
+Você pode criar um modelo de consulta fazendo uma solicitação POST para o ponto de extremidade `/query-templates`.
 
 **Formato da API**
 
@@ -140,9 +140,9 @@ curl -X POST https://platform.adobe.io/data/foundation/query/query-templates
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `sql` | A consulta SQL que você deseja criar. Você pode usar SQL padrão ou uma substituição de parâmetro. Para usar uma substituição de parâmetro no SQL, você deve anexar a chave de parâmetro a uma `$`. Por exemplo, `$key`e fornecem os parâmetros usados no SQL como pares de valores-chave JSON no `queryParameters` campo. Os valores transmitidos aqui serão os parâmetros padrão usados no modelo. Se quiser substituir esses parâmetros, você deverá substituí-los na solicitação POST. |
+| `sql` | A consulta SQL que você deseja criar. Você pode usar SQL padrão ou uma substituição de parâmetro. Para usar uma substituição de parâmetro no SQL, você deve anexar uma `$` à chave de parâmetro. Por exemplo, `$key` e forneça os parâmetros usados no SQL como pares de valores da chave JSON no campo `queryParameters`. Os valores transmitidos aqui serão os parâmetros padrão usados no modelo. Se quiser substituir esses parâmetros, você deverá substituí-los na solicitação POST. |
 | `name` | O nome do modelo de consulta. |
-| `queryParameters` | Um par de valores chave para substituir quaisquer valores parametrizados na instrução SQL. É apenas obrigatório **se** você está usando substituições de parâmetros no SQL fornecido. Nenhuma verificação de tipo de valor será feita nesses pares de valores principais. |
+| `queryParameters` | Um par de valores chave para substituir quaisquer valores parametrizados na instrução SQL. Somente é necessário **se** você estiver usando substituições de parâmetros no SQL fornecido. Nenhuma verificação de tipo de valor será feita nesses pares de valores principais. |
 
 **Resposta**
 
@@ -180,7 +180,7 @@ Uma resposta bem-sucedida retorna o status HTTP 202 (Aceito) com detalhes do mod
 
 ### Recuperar um modelo de consulta especificado
 
-Você pode recuperar um template de query específico fazendo uma solicitação GET para o `/query-templates/{TEMPLATE_ID}` e fornecendo a ID do modelo de consulta no caminho da solicitação.
+Você pode recuperar um modelo de consulta específico fazendo uma solicitação GET para o ponto de extremidade `/query-templates/{TEMPLATE_ID}` e fornecendo a ID do modelo de consulta no caminho da solicitação.
 
 **Formato da API**
 
@@ -190,7 +190,7 @@ GET /query-templates/{TEMPLATE_ID}
 
 | Propriedade | Descrição |
 | -------- | ----------- | 
-| `{TEMPLATE_ID}` | A variável `id` do modelo de consulta que você deseja recuperar. |
+| `{TEMPLATE_ID}` | O valor `id` do modelo de consulta que você deseja recuperar. |
 
 **Solicitação**
 
@@ -238,7 +238,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes do modelo de co
 
 ### Atualizar um modelo de consulta especificado
 
-Você pode atualizar um template de query específico fazendo uma solicitação PUT para o `/query-templates/{TEMPLATE_ID}` e fornecendo a ID do modelo de consulta no caminho da solicitação.
+Você pode atualizar um modelo de consulta específico fazendo uma solicitação PUT para o ponto de extremidade `/query-templates/{TEMPLATE_ID}` e fornecendo a ID do modelo de consulta no caminho da solicitação.
 
 **Formato da API**
 
@@ -248,13 +248,13 @@ PUT /query-templates/{TEMPLATE_ID}
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `{TEMPLATE_ID}` | A variável `id` do modelo de consulta que você deseja recuperar. |
+| `{TEMPLATE_ID}` | O valor `id` do modelo de consulta que você deseja recuperar. |
 
 **Solicitação**
 
 >[!NOTE]
 >
->A solicitação PUT exige que os campos sql e name sejam preenchidos, e **substituir** o conteúdo atual desse modelo de consulta.
+>A solicitação PUT exige que os campos sql e name sejam preenchidos e **substituirá** o conteúdo atual desse modelo de consulta.
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/query/query-templates/0094d000-9062-4e6a-8fdb-05606805f08f
@@ -273,9 +273,9 @@ curl -X PUT https://platform.adobe.io/data/foundation/query/query-templates/0094
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `sql` | A consulta SQL que você deseja criar. Você pode usar SQL padrão ou uma substituição de parâmetro. Para usar uma substituição de parâmetro no SQL, você deve anexar a chave de parâmetro a uma `$`. Por exemplo, `$key`e fornecem os parâmetros usados no SQL como pares de valores-chave JSON no `queryParameters` campo. Os valores transmitidos aqui serão os parâmetros padrão usados no modelo. Se quiser substituir esses parâmetros, você deverá substituí-los na solicitação POST. |
+| `sql` | A consulta SQL que você deseja criar. Você pode usar SQL padrão ou uma substituição de parâmetro. Para usar uma substituição de parâmetro no SQL, você deve anexar uma `$` à chave de parâmetro. Por exemplo, `$key` e forneça os parâmetros usados no SQL como pares de valores da chave JSON no campo `queryParameters`. Os valores transmitidos aqui serão os parâmetros padrão usados no modelo. Se quiser substituir esses parâmetros, você deverá substituí-los na solicitação POST. |
 | `name` | O nome do modelo de consulta. |
-| `queryParameters` | Um par de valores chave para substituir quaisquer valores parametrizados na instrução SQL. É apenas obrigatório **se** você está usando substituições de parâmetros no SQL fornecido. Nenhuma verificação de tipo de valor será feita nesses pares de valores principais. |
+| `queryParameters` | Um par de valores chave para substituir quaisquer valores parametrizados na instrução SQL. Somente é necessário **se** você estiver usando substituições de parâmetros no SQL fornecido. Nenhuma verificação de tipo de valor será feita nesses pares de valores principais. |
 
 **Resposta**
 
@@ -314,7 +314,7 @@ Uma resposta bem-sucedida retorna o status HTTP 202 (Aceito) com as informaçõe
 
 ### Excluir um modelo de consulta especificado
 
-É possível excluir um template de query específico fazendo uma solicitação DELETE para o `/query-templates/{TEMPLATE_ID}` e fornecendo a ID do modelo de consulta no caminho da solicitação.
+Você pode excluir um modelo de consulta específico fazendo uma solicitação DELETE para `/query-templates/{TEMPLATE_ID}` e fornecendo a ID do modelo de consulta no caminho da solicitação.
 
 **Formato da API**
 
@@ -324,7 +324,7 @@ DELETE /query-templates/{TEMPLATE_ID}
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `{TEMPLATE_ID}` | A variável `id` do modelo de consulta que você deseja recuperar. |
+| `{TEMPLATE_ID}` | O valor `id` do modelo de consulta que você deseja recuperar. |
 
 **Solicitação**
 

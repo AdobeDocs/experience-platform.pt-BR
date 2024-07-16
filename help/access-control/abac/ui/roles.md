@@ -16,13 +16,13 @@ As funções definem o acesso que um administrador, um especialista ou um usuár
 
 ## Criar uma nova função
 
-Para criar uma nova função, selecione o **[!UICONTROL Funções]** na barra lateral e selecione **[!UICONTROL Criar Função]**.
+Para criar uma nova função, selecione a guia **[!UICONTROL Funções]** na barra lateral e selecione **[!UICONTROL Criar Função]**.
 
 ![flac-new-role](../../images/flac-ui/flac-new-role.png)
 
-A variável **[!UICONTROL Criar uma nova função]** será exibida, solicitando que você insira um nome e uma descrição opcional.
+A caixa de diálogo **[!UICONTROL Criar uma nova função]** é exibida, solicitando que você insira um nome e uma descrição opcional.
 
-Quando terminar, selecione **[!UICONTROL Confirmar o]**.
+Quando terminar, selecione **[!UICONTROL Confirmar]**.
 
 ![flac-create-new-role](../../images/flac-ui/flac-create-new-role.png)
 
@@ -42,11 +42,11 @@ Selecione as permissões de recurso que deseja incluir na função usando o menu
 
 ![flac-save-resources](../../images/flac-ui/flac-save-resources.png)
 
-A nova função foi criada com sucesso e você será redirecionado para a **[!UICONTROL Funções]** página, onde você verá que a função recém-criada aparece na lista.
+A nova função foi criada com êxito, e você será redirecionado para a página **[!UICONTROL Funções]**, onde verá que a função recém-criada aparece na lista.
 
-![flac-função-salva](../../images/flac-ui/flac-role-saved.png)
+![flac-role-saved](../../images/flac-ui/flac-role-saved.png)
 
-Consulte as seções sobre [gerenciando permissões para uma função](#manage-permissions-for-a-role) para obter mais detalhes sobre como gerenciar permissões de função depois de criadas.
+Consulte as seções sobre [gerenciamento de permissões para uma função](#manage-permissions-for-a-role) para obter mais detalhes sobre como gerenciar permissões de função após sua criação.
 
 O vídeo a seguir tem como objetivo ajudá-lo a entender a criação de uma nova função e o gerenciamento de usuários para essa função.
 
@@ -54,7 +54,7 @@ O vídeo a seguir tem como objetivo ajudá-lo a entender a criação de uma nova
 
 ## Duplicar uma função
 
-Para duplicar uma função existente, selecione a função na **[!UICONTROL Funções]** guia. Como alternativa, use a opção de filtro para filtrar os resultados e encontrar a função que deseja duplicar.
+Para duplicar uma função existente, selecione a função na guia **[!UICONTROL Funções]**. Como alternativa, use a opção de filtro para filtrar os resultados e encontrar a função que deseja duplicar.
 
 ![flac-duplicate-role](../../images/flac-ui/flac-duplicate-role.png)
 
@@ -62,17 +62,17 @@ Em seguida, selecione **[!UICONTROL Duplicar]** na parte superior direita da tel
 
 ![flac-duplicate](../../images/flac-ui/flac-duplicate.png)
 
-A variável **[!UICONTROL Duplicar função]** será exibida, solicitando que você confirme a duplicação.
+A caixa de diálogo **[!UICONTROL Duplicar função]** é exibida, solicitando que você confirme a duplicação.
 
 ![flac-duplicate-confirm](../../images/flac-ui/flac-duplicate-confirm.png)
 
-Em seguida, você será levado à página de detalhes da função, na qual poderá alterar o nome e as permissões da função. Os detalhes, rótulos e sandboxes são duplicados da função anterior. Os usuários precisarão ser adicionados por meio da guia Users. É possível exibir a [gerenciar permissões para uma função](permissions.md) documento para saber mais sobre como adicionar Detalhes, Rótulos, Sandboxes e Usuários a uma função.
+Em seguida, você será levado à página de detalhes da função, na qual poderá alterar o nome e as permissões da função. Os detalhes, rótulos e sandboxes são duplicados da função anterior. Os usuários precisarão ser adicionados por meio da guia Users. Você pode exibir o documento [gerenciar permissões para uma função](permissions.md) para saber mais sobre como adicionar Detalhes, Rótulos, Sandboxes e Usuários a uma função.
 
-Clique na seta à esquerda para retornar à **[!UICONTROL Funções]** guia.
+Clique na seta à esquerda para retornar à guia **[!UICONTROL Funções]**.
 
-![flac-retorno-para-funções](../../images/flac-ui/flac-return-to-roles.png)
+![flac-return-to-roles](../../images/flac-ui/flac-return-to-roles.png)
 
-A nova função aparecerá na lista da **[!UICONTROL Funções]** página.
+A nova função aparecerá na lista na página **[!UICONTROL Funções]**.
 
 ![flac-role-duplicate-saved](../../images/flac-ui/flac-role-duplicate-saved.png)
 
@@ -82,11 +82,11 @@ Selecione as reticências (`…`) ao lado do nome de uma função, e uma lista s
 
 ![flac-role-delete](../../images/flac-ui/flac-role-delete.png)
 
-A variável **[!UICONTROL Excluir função de usuário]** será exibida, solicitando que você confirme a exclusão.
+A caixa de diálogo **[!UICONTROL Excluir função de usuário]** é exibida, solicitando que você confirme a exclusão.
 
 ![flac-confirm-role-delete](../../images/flac-ui/flac-confirm-role-delete.png)
 
-Você será redirecionado para a **[!UICONTROL Funções]** guia.
+Você retornará à guia **[!UICONTROL Funções]**.
 
 ## Próximas etapas
 

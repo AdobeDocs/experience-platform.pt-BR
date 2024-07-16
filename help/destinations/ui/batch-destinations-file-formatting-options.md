@@ -4,7 +4,7 @@ title: Configurar opções de formatação de arquivo para destinos baseados em 
 exl-id: f59b1952-e317-40ba-81d1-35535e132a72
 source-git-commit: 0eb17d4d7ad9db3737a14f383bdafe40d59eb12c
 workflow-type: tm+mt
-source-wordcount: '1188'
+source-wordcount: '1193'
 ht-degree: 19%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 19%
 > 
 >As opções de formatação de arquivo descritas neste documento estão disponíveis somente para arquivos CSV.
 
-A opção para configurar várias opções de formatação de arquivo para os arquivos exportados está disponível quando você [conectar](/help/destinations/ui/connect-destination.md) para um destino baseado em arquivo, como [Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md#connect), [Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md#connect)ou [SFTP](/help/destinations/catalog/cloud-storage/sftp.md#connect).
+A opção para configurar várias opções de formatação de arquivo para os arquivos exportados está disponível ao [conectar](/help/destinations/ui/connect-destination.md) a um destino baseado em arquivo, como o [Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md#connect), o [Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md#connect) ou o [SFTP](/help/destinations/catalog/cloud-storage/sftp.md#connect).
 
 Você pode configurar várias opções de formatação de arquivo para arquivos exportados usando a interface do usuário do Experience Platform. Você pode modificar várias propriedades dos arquivos exportados para corresponder aos requisitos do sistema de recebimento de arquivos do seu lado, a fim de ler e interpretar de maneira ideal os arquivos recebidos do Experience Platform.
 
@@ -26,13 +26,13 @@ Você pode configurar várias opções de formatação de arquivo para arquivos 
 
 ## Configuração da formatação de arquivo para arquivos CSV {#file-configuration}
 
-Para exibir as opções de formatação de arquivo, inicie o [conectar ao destino](/help/destinations/ui/connect-destination.md) fluxo de trabalho. Selecionar **Tipo de dados: Segmentos** e **Tipo de arquivo: CSV** para exibir as configurações de formatação de arquivo disponíveis para o `CSV` arquivos.
+Para exibir as opções de formatação de arquivo, inicie o fluxo de trabalho [conectar ao destino](/help/destinations/ui/connect-destination.md). Selecione **Tipo de dados: Segmentos** e **Tipo de arquivo: CSV** para exibir as configurações de formatação de arquivo disponíveis para os arquivos `CSV` exportados.
 
 >[!IMPORTANT]
 >
 >O destino ao qual você está se conectando pode não ter todas essas opções disponíveis. Cabe ao desenvolvedor de destino determinar quais opções de formatação de arquivo ele deseja suportar em seu destino. O desenvolvedor de destino pode determinar quais opções estão disponíveis ao se conectar ao destino. As opções obrigatórias estão marcadas com um asterisco na interface do usuário do Experience Platform.
 > 
->Os destinos de armazenamento na nuvem criados pelo Adobe - [Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md), [Armazenamento Azure Data Lake Gen2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [Data Landing Zone](/help/destinations/catalog/cloud-storage/data-landing-zone.md), [Armazenamento em nuvem Google](/help/destinations/catalog/cloud-storage/google-cloud-storage.md), [SFTP](/help/destinations/catalog/cloud-storage/sftp.md) - atualmente, o suporta apenas as seis opções de CSV destacadas abaixo.
+>Os destinos de armazenamento na nuvem criados pelo Adobe - [Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md), [Azure Data Lake Storage Gen2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [Data Landing Zone](/help/destinations/catalog/cloud-storage/data-landing-zone.md), [Google Cloud Storage](/help/destinations/catalog/cloud-storage/google-cloud-storage.md), [SFTP](/help/destinations/catalog/cloud-storage/sftp.md) - atualmente só oferecem suporte às seis opções de CSV destacadas abaixo.
 
 ![Imagem mostrando algumas das opções de formatação de arquivo disponíveis.](../assets/ui/batch-destinations-file-formatting-options/file-formatting-options.png)
 
@@ -45,9 +45,9 @@ Para exibir as opções de formatação de arquivo, inicie o [conectar ao destin
 
 Use esse controle para definir um separador para cada campo e valor nos arquivos CSV exportados. As opções disponíveis são:
 
-* Dois-pontos `(:)`
+* Dois pontos `(:)`
 * Vírgula `(,)`
-* Estágio `(|)`
+* Pipe `(|)`
 * Ponto e vírgula `(;)`
 * Guia `(\t)`
 
@@ -55,11 +55,11 @@ Use esse controle para definir um separador para cada campo e valor nos arquivos
 
 Veja os exemplos abaixo do conteúdo nos arquivos CSV exportados com cada uma das seleções na interface do usuário.
 
-* Exemplo de saída com **[!UICONTROL Dois pontos`(:)`]** selecionado: `male:John:Doe`
-* Exemplo de saída com **[!UICONTROL Vírgula`(,)`]** selecionado: `male,John,Doe`
-* Exemplo de saída com **[!UICONTROL Tubulação`(|)`]** selecionado: `male|John|Doe`
+* Exemplo de saída com **[!UICONTROL Dois-pontos`(:)`]** selecionados: `male:John:Doe`
+* Exemplo de saída com **[!UICONTROL Vírgula`(,)`]** selecionada: `male,John,Doe`
+* Exemplo de saída com **[!UICONTROL Pipe`(|)`]** selecionado: `male|John|Doe`
 * Exemplo de saída com **[!UICONTROL Ponto e vírgula`(;)`]** selecionado: `male;John;Doe`
-* Exemplo de saída com **[!UICONTROL Guia`(\t)`]** selecionado: `male \t John \t Doe`
+* Exemplo de saída com **[!UICONTROL Tab`(\t)`]** selecionada: `male \t John \t Doe`
 
 ### Caractere de aspas {#quote-character}
 
@@ -71,14 +71,14 @@ Veja os exemplos abaixo do conteúdo nos arquivos CSV exportados com cada uma da
 Use essa opção se desejar remover as aspas duplas das strings exportadas. As opções disponíveis são:
 
 * **[!UICONTROL Caractere Nulo (\0000)]**. Use essa opção para remover aspas duplas de arquivos CSV exportados.
-* **[!UICONTROL Aspas duplas (&quot;)]**. Use essa opção para manter aspas duplas nos arquivos CSV exportados.
+* **[!UICONTROL Aspas Duplas (&quot;)]**. Use essa opção para manter aspas duplas nos arquivos CSV exportados.
 
 #### Exemplos
 
 Veja os exemplos abaixo do conteúdo de arquivos CSV exportados com cada uma das seleções na interface.
 
-* Exemplo de saída com **[!UICONTROL Caractere Nulo (\0000)]** selecionado: `Test,John,LastName`
-* Exemplo de saída com **[!UICONTROL Aspas duplas (&quot;)]** selecionado: `"Test","John","LastName"`
+* Exemplo de saída com **[!UICONTROL Caractere nulo (\0000)]** selecionado: `Test,John,LastName`
+* Exemplo de saída com **[!UICONTROL Aspas Duplas (&quot;)]** selecionadas: `"Test","John","LastName"`
 
 ### Caractere de escape {#escape-character}
 
@@ -96,8 +96,8 @@ Use esta opção para definir um caractere único para aspas de escape dentro de
 
 Veja os exemplos abaixo do conteúdo de arquivos CSV exportados com cada uma das seleções na interface.
 
-* Exemplo de saída com **[!UICONTROL Barra invertida`(\)`]** selecionado: `"Test,\"John\",LastName"`
-* Exemplo de saída com **[!UICONTROL Aspas simples`(')`]** selecionado: `"Test,'"John'",LastName"`
+* Exemplo de saída com **[!UICONTROL Barra invertida`(\)`]** selecionada: `"Test,\"John\",LastName"`
+* Exemplo de saída com **[!UICONTROL Aspas simples`(')`]** selecionadas: `"Test,'"John'",LastName"`
 
 ### Saída de valor vazio {#empty-value-output}
 
@@ -108,17 +108,17 @@ Veja os exemplos abaixo do conteúdo de arquivos CSV exportados com cada uma das
 
 Use este controle para definir a representação da sequência de caracteres de um valor vazio. Essa opção determina como os valores vazios são representados nos arquivos CSV exportados. As opções disponíveis são:
 
-* **[!UICONTROL Null (null)]**
-* **String vazia entre aspas duplas (&quot;&quot;)**
-* **[!UICONTROL String vazia]**
+* **[!UICONTROL Nulo (nulo)]**
+* **Cadeia de Caracteres Vazia entre Aspas Duplas (&quot;&quot;)**
+* **[!UICONTROL Cadeia de caracteres vazia]**
 
 #### Exemplos
 
 Veja os exemplos abaixo do conteúdo de arquivos CSV exportados com cada uma das seleções na interface.
 
 * Exemplo de saída com **[!UICONTROL null]** selecionado: `male,NULL,TestLastName`. Nesse caso, o Experience Platform transforma o valor vazio em um valor nulo.
-* Exemplo de saída com **&quot;&quot;** selecionado: `male,"",TestLastName`. Nesse caso, Experience Platform transforma o valor vazio em um par de aspas duplas.
-* Exemplo de saída com **[!UICONTROL String vazia]** selecionado: `male,,TestLastName`. Nesse caso, o Experience Platform mantém o valor vazio e o exporta como está (sem aspas duplas).
+* Exemplo de saída com **&quot;** selecionado: `male,"",TestLastName`. Nesse caso, Experience Platform transforma o valor vazio em um par de aspas duplas.
+* Exemplo de saída com **[!UICONTROL Cadeia de caracteres vazia]** selecionada: `male,,TestLastName`. Nesse caso, o Experience Platform mantém o valor vazio e o exporta como está (sem aspas duplas).
 
 >[!TIP]
 >
@@ -133,17 +133,17 @@ Veja os exemplos abaixo do conteúdo de arquivos CSV exportados com cada uma das
 
 Use esse controle para definir como as strings de valor nulo devem ser representadas nos arquivos exportados. Essa opção determina como os valores nulos são representados nos arquivos CSV exportados. As opções disponíveis são:
 
-* **[!UICONTROL Null (null)]**
-* **String vazia entre aspas duplas (&quot;&quot;)**
-* **[!UICONTROL String vazia]**
+* **[!UICONTROL Nulo (nulo)]**
+* **Cadeia de Caracteres Vazia entre Aspas Duplas (&quot;&quot;)**
+* **[!UICONTROL Cadeia de caracteres vazia]**
 
 #### Exemplos
 
 Veja os exemplos abaixo do conteúdo de arquivos CSV exportados com cada uma das seleções na interface.
 
 * Exemplo de saída com **[!UICONTROL null]** selecionado: `male,NULL,TestLastName`. Nesse caso, não ocorre nenhuma transformação e o arquivo CSV contém o valor nulo.
-* Exemplo de saída com **&quot;&quot;** selecionado: `male,"",TestLastName`. Nesse caso, o Experience Platform substitui o valor nulo por aspas duplas em torno de uma string vazia.
-* Exemplo de saída com **[!UICONTROL String vazia]** selecionado: `male,,TestLastName`. Nesse caso, o Experience Platform substitui o valor nulo por uma string vazia (sem aspas duplas).
+* Exemplo de saída com **&quot;** selecionado: `male,"",TestLastName`. Nesse caso, o Experience Platform substitui o valor nulo por aspas duplas em torno de uma string vazia.
+* Exemplo de saída com **[!UICONTROL Cadeia de caracteres vazia]** selecionada: `male,,TestLastName`. Nesse caso, o Experience Platform substitui o valor nulo por uma string vazia (sem aspas duplas).
 
 ### Formato de compactação {#compression-format}
 
@@ -184,4 +184,4 @@ Exemplo de saída com **[!UICONTROL Falso]** selecionado: `"male ","John","TestL
 
 ### Próximas etapas {#next-steps}
 
-Depois de ler este documento, agora você sabe como configurar as opções de exportação de arquivo para seus arquivos de dados CSV para adaptar o conteúdo do arquivo aos requisitos do sistema de recebimento de arquivos downstream. Em seguida, você pode ler o [tutorial de ativação de destinos baseados em arquivo](/help/destinations/ui/activate-batch-profile-destinations.md) para começar a exportar arquivos para o local de armazenamento na nuvem de sua preferência.
+Depois de ler este documento, agora você sabe como configurar as opções de exportação de arquivo para seus arquivos de dados CSV para adaptar o conteúdo do arquivo aos requisitos do sistema de recebimento de arquivos downstream. Em seguida, você pode ler o [tutorial de ativação de destinos baseados em arquivo](/help/destinations/ui/activate-batch-profile-destinations.md) para começar a exportar arquivos para seu local de armazenamento na nuvem preferido.

@@ -18,6 +18,6 @@ ht-degree: 0%
 
 Este vídeo fornece uma rápida introdução ao Experience Platform e descreve alguns dos desafios empresariais que ele soluciona.
 
-Para saber mais, comece lendo o [visão geral do Experience Platform](../home.md).
+Para saber mais, comece lendo a [visão geral do Experience Platform](../home.md).
 
 >[!VIDEO](https://video.tv.adobe.com/v/32797?quality=12&learn=on)

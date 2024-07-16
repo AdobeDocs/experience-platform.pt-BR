@@ -6,8 +6,8 @@ description: Este documento fornece uma visão geral de como diferentes tipos de
 exl-id: 4ad253b7-3f83-48cd-9c46-8b5ba627c09e
 source-git-commit: d39ae3a31405b907f330f5d54c91b95c0f999eee
 workflow-type: tm+mt
-source-wordcount: '575'
-ht-degree: 13%
+source-wordcount: '602'
+ht-degree: 11%
 
 ---
 
@@ -19,9 +19,9 @@ O Preparo de dados pode lidar com diferentes formatos de dados assimilados na Ad
 
 Se o tipo de origem for uma string e o tipo de destino for um booleano, o Preparo de dados poderá analisar automaticamente o valor e converter o valor de origem em um booleano.
 
-Os valores `y`, `yes`, `Y`, `YES`, `on`, `ON`, `true`, e `TRUE` são automaticamente analisadas para serem `true`.
+Os valores `y`, `yes`, `Y`, `YES`, `on`, `ON`, `true` e `TRUE` são automaticamente analisados para serem `true`.
 
-Os valores `n`, `N`, `no`, `NO`, `off`, `OFF`, `false`, e `FALSE` são automaticamente analisadas para serem `false`.
+Os valores `n`, `N`, `no`, `NO`, `off`, `OFF`, `false` e `FALSE` são automaticamente analisados para serem `false`.
 
 ## Datas {#dates}
 
@@ -40,10 +40,10 @@ date({DATE}, {FORMAT}, {DEFAULT_DATE})
 | Parâmetro | Descrição |
 | --------- | ----------- |
 | `{DATE}` | Obrigatório. A cadeia de caracteres que representa a data. |
-| `{FORMAT}` | Opcional. A cadeia de caracteres que representa o formato da data de origem. Mais informações sobre a formatação de cadeias de caracteres podem ser encontradas no [seção de cadeia de caracteres de formato de data/hora](#format). |
+| `{FORMAT}` | Opcional. A cadeia de caracteres que representa o formato da data de origem. Mais informações sobre a formatação de cadeia de caracteres podem ser encontradas na [seção de cadeia de caracteres de formato de data/hora](#format). |
 | `{DEFAULT_DATE}` | Opcional. A data padrão a ser retornada se a data fornecida for nula. |
 
-Por exemplo, a expressão `date(orderDate, "yyyy-MM-dd")` converterá um `orderDate` valor de &quot;31 de dezembro de 2020&quot; em um valor datetime de &quot;31-12-2020&quot;.
+Por exemplo, a expressão `date(orderDate, "yyyy-MM-dd")` converterá um valor `orderDate` de &quot;31 de dezembro de 2020&quot; em um valor datetime de &quot;2020-12-31&quot;.
 
 ### Conversões da função de data
 
@@ -94,7 +94,7 @@ A tabela a seguir mostra quais letras do padrão são definidas para cadeias de 
 | a | Marcador AM/PM | Texto | PM |
 | H | Hora do dia (0-23) | Número | 0 |
 | k | Hora do dia (1-24) | Número | 24 |
-|  mil | Hora em AM/PM (0-11) | Número | 0 |
+| K | Hora em AM/PM (0-11) | Número | 0 |
 | h | Hora em AM/PM (1-12) | Número | 12 |
 | m | Minuto na hora | Número | 38 |
 | s | Segundo no minuto | Número | 44 |
@@ -108,4 +108,4 @@ A tabela a seguir mostra quais letras do padrão são definidas para cadeias de 
 
 ## Mapas {#maps}
 
-No momento, os mapas não são compatíveis com o [!DNL Data Prep].
+No momento, não há suporte para mapas no [!DNL Data Prep].

@@ -20,15 +20,15 @@ ht-degree: 6%
 
 As funções definem o acesso que um administrador, um especialista ou um usuário final tem aos recursos em sua organização. Em um ambiente de controle de acesso baseado em funções, o provisionamento de acesso do usuário é agrupado por meio de responsabilidades e necessidades comuns. Uma função tem um determinado conjunto de permissões, e os membros da organização podem ter uma ou mais funções atribuídas, dependendo do escopo do acesso de visualização ou gravação necessário.
 
-A variável `/roles` O endpoint na API de controle de acesso baseada em atributos permite gerenciar de forma programática as funções na organização.
+O ponto de extremidade `/roles` na API de controle de acesso baseada em atributos permite gerenciar programaticamente funções em sua organização.
 
 ## Introdução
 
-O endpoint da API usado neste guia faz parte da API de controle de acesso baseada em atributos. Antes de continuar, reveja o [guia de introdução](./getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre os cabeçalhos necessários para fazer chamadas com êxito para qualquer API de Experience Platform.
+O endpoint da API usado neste guia faz parte da API de controle de acesso baseada em atributos. Antes de continuar, consulte o [guia de introdução](./getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre os cabeçalhos necessários para fazer chamadas para qualquer API Experience Platform com êxito.
 
 ## Recuperar uma lista de funções {#list}
 
-Você pode listar todas as funções existentes pertencentes à sua organização fazendo uma solicitação GET para `/roles` terminal.
+Você pode listar todas as funções existentes pertencentes à sua organização fazendo uma solicitação GET para o ponto de extremidade `/roles`.
 
 **Formato da API**
 
@@ -113,7 +113,7 @@ Uma resposta bem-sucedida retorna uma lista de funções na organização, inclu
 
 ## Pesquisar uma função {#lookup}
 
-Você pode pesquisar uma função individual fazendo uma solicitação GET que inclua a função correspondente `roleId` no caminho da solicitação.
+Você pode pesquisar uma função individual fazendo uma solicitação GET que inclua o `roleId` correspondente no caminho da solicitação.
 
 **Formato da API**
 
@@ -127,7 +127,7 @@ GET /roles/{ROLE_ID}
 
 **Solicitação**
 
-A solicitação a seguir recupera informações para `{ROLE_ID}`.
+A solicitação a seguir recupera informações de `{ROLE_ID}`.
 
 ```shell
 curl -X GET \
@@ -180,7 +180,7 @@ Uma resposta bem-sucedida retorna detalhes da ID de função consultada, incluin
 
 ## Pesquisar assuntos por ID de função
 
-Também é possível recuperar assuntos fazendo uma solicitação GET para a `/roles` ao fornecer um {ROLE_ID}.
+Você também pode recuperar assuntos fazendo uma solicitação GET para o ponto de extremidade `/roles` ao fornecer um {ROLE_ID}.
 
 **Formato da API**
 
@@ -256,7 +256,7 @@ Uma resposta bem-sucedida retorna os assuntos associados à ID de função consu
 
 ## Criar uma função {#create}
 
-Para criar uma nova função, faça uma solicitação POST ao `/roles` ao fornecer valores para o nome, a descrição e o tipo de função da sua função.
+Para criar uma nova função, faça uma solicitação POST para o ponto de extremidade `/roles` enquanto fornece valores para o nome, a descrição e o tipo de função da sua função.
 
 **Formato da API**
 
@@ -328,7 +328,7 @@ Uma resposta bem-sucedida retorna a função recém-criada, com a ID de função
 
 ## Atualizar uma função {#patch}
 
-Você pode atualizar as propriedades de uma função fazendo uma solicitação PATCH para o `/roles` ao fornecer a ID de função e os valores correspondentes para as operações que deseja aplicar.
+Você pode atualizar as propriedades de uma função fazendo uma solicitação PATCH para o ponto de extremidade `/roles` enquanto fornece a ID de função e os valores correspondentes para as operações que você deseja aplicar.
 
 **Formato da API**
 
@@ -361,7 +361,7 @@ curl -X PATCH \
 
 | Operações | Descrição |
 | --- | --- |
-| `op` | A chamada de operação usada para definir a ação necessária para atualizar a função. As operações incluem: `add`, `replace`, e `remove`. |
+| `op` | A chamada de operação usada para definir a ação necessária para atualizar a função. As operações incluem: `add`, `replace` e `remove`. |
 | `path` | O caminho do parâmetro a ser atualizado. |
 | `value` | O novo valor com o qual você deseja atualizar seu parâmetro. |
 
@@ -408,7 +408,7 @@ Uma resposta bem-sucedida retorna a função atualizada, incluindo novos valores
 
 ## Atualizar uma função por ID de função {#put}
 
-Você pode atualizar uma função fazendo uma solicitação PUT para o `/roles` e especificando a ID de função que corresponde à função que você deseja atualizar.
+Você pode atualizar uma função fazendo uma solicitação PUT para o ponto de extremidade `/roles` e especificando a ID da função que corresponde à função que você deseja atualizar.
 
 **Formato da API**
 
@@ -482,7 +482,7 @@ Uma resposta bem-sucedida retorna a função atualizada, incluindo novos valores
 
 ## Atualizar assunto por ID de função
 
-Para atualizar os assuntos associados a uma função, faça uma solicitação PATCH ao `/roles` ao fornecer a ID de função dos assuntos que deseja atualizar.
+Para atualizar os assuntos associados a uma função, faça uma solicitação PATCH para o ponto de extremidade `/roles` enquanto fornece a ID de função dos assuntos que você deseja atualizar.
 
 **Formato da API**
 
@@ -515,7 +515,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/acces
 
 | Operações | Descrição |
 | --- | --- |
-| `op` | A chamada de operação usada para definir a ação necessária para atualizar a função. As operações incluem: `add`, `replace`, e `remove`. |
+| `op` | A chamada de operação usada para definir a ação necessária para atualizar a função. As operações incluem: `add`, `replace` e `remove`. |
 | `path` | O caminho do parâmetro a ser atualizado. |
 | `value` | O novo valor com o qual você deseja atualizar seu parâmetro. |
 
@@ -552,7 +552,7 @@ Uma resposta bem-sucedida retorna sua função atualizada, incluindo novos valor
 
 ## Excluir uma função {#delete}
 
-Para excluir uma função, faça uma solicitação DELETE à `/roles` ao especificar a ID da função que deseja excluir.
+Para excluir uma função, faça uma solicitação DELETE para o ponto de extremidade `/roles` enquanto especifica a ID da função que você deseja excluir.
 
 **Formato da API**
 
@@ -584,7 +584,7 @@ Você pode confirmar a exclusão tentando uma solicitação de pesquisa (GET) pa
 
 ## Adicionar uma credencial de API {#apicredential}
 
-Para adicionar uma credencial de API, faça uma solicitação PATCH para `/roles` ao fornecer a ID de função dos sujeitos.
+Para adicionar uma credencial de API, faça uma solicitação PATCH para o ponto de extremidade `/roles` ao fornecer a ID de função dos assuntos.
 
 **Formato da API**
 
@@ -605,7 +605,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/acces
 
 | Operações | Descrição |
 | --- | --- |
-| `op` | A chamada de operação usada para definir a ação necessária para atualizar a função. As operações incluem: `add`, `replace`, e `remove`. |
+| `op` | A chamada de operação usada para definir a ação necessária para atualizar a função. As operações incluem: `add`, `replace` e `remove`. |
 | `path` | O caminho do parâmetro a ser adicionado. |
 | `value` | O valor com o qual você deseja adicionar o parâmetro. |
 

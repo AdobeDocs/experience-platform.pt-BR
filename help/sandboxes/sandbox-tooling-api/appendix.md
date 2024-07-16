@@ -4,14 +4,14 @@ description: Este documento fornece informações adicionais relacionadas ao tra
 exl-id: fdfa019d-ce0e-456b-b591-7d96d1115e02
 source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
 workflow-type: tm+mt
-source-wordcount: '179'
+source-wordcount: '180'
 ht-degree: 1%
 
 ---
 
 # Apêndice do guia de API de sandbox
 
-Este documento fornece informações adicionais relacionadas ao trabalho com o [!DNL Sandbox] API.
+Este documento fornece informações adicionais relacionadas ao trabalho com a API [!DNL Sandbox].
 
 ## Uso de parâmetros de consulta {#query}
 
@@ -19,7 +19,7 @@ A API de ferramentas de sandbox suporta o uso de parâmetros de consulta para pa
 
 >[!NOTE]
 >
->A variável `limit` podem ser transmitidos e iniciados individualmente.
+>O `limit` pode ser passado e iniciado individualmente.
 
 | Parâmetro | Descrição |
 | --- | --- |

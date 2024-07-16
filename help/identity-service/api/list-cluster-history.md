@@ -14,12 +14,12 @@ ht-degree: 2%
 
 # Obter o histórico de cluster de uma identidade
 
-As identidades podem mover clusters ao longo de várias execuções de gráficos de dispositivos. [!DNL Identity Service] O fornece visibilidade sobre as associações de cluster de uma determinada identidade ao longo do tempo.
+As identidades podem mover clusters ao longo de várias execuções de gráficos de dispositivos. [!DNL Identity Service] fornece visibilidade sobre as associações de cluster de uma determinada identidade ao longo do tempo.
 
-Usar opcional `graph-type` parâmetro para indicar o tipo de saída do qual obter o cluster. As opções são:
+Use o parâmetro `graph-type` opcional para indicar o tipo de saída do qual obter o cluster. As opções são:
 
-- `None` - Não realizar a compilação de identidade.
-- `Private Graph` - Execute a compilação de identidade com base em seu gráfico de identidade privado. Se não `graph-type` for fornecido, esse será o padrão.
+- `None` - Não executar compilação de identidade.
+- `Private Graph` - Executar compilação de identidade com base em seu gráfico de identidade privado. Se nenhum `graph-type` for fornecido, este será o padrão.
 
 ## Obter o histórico de cluster de uma única identidade
 
@@ -31,7 +31,7 @@ GET https://platform-{REGION}.adobe.io/data/core/identity/cluster/history
 
 **Solicitação**
 
-Opção 1: fornecer a identidade como namespace (`nsId`, por ID) e valor de ID (`id`).
+Opção 1: Forneça a identidade como namespace (`nsId`, por ID) e valor de ID (`id`).
 
 ```shell
 curl -X GET \
@@ -42,7 +42,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Opção 2: fornecer a identidade como namespace (`ns`, por nome) e valor de ID (`id`).
+Opção 2: Forneça a identidade como namespace (`ns`, por nome) e valor de ID (`id`).
 
 ```shell
 curl -X GET \
@@ -53,7 +53,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Opção 3: fornecer a identidade como XID (`xid`). Para obter mais informações sobre como obter o XID de uma identidade, consulte a seção deste documento que aborda [obter o XID de uma identidade](./list-native-id.md).
+Opção 3: Forneça a identidade como XID (`xid`). Para obter mais informações sobre como obter o XID de uma identidade, consulte a seção deste documento que aborda a [obtenção do XID de uma identidade](./list-native-id.md).
 
 ```shell
 curl -X GET \
@@ -66,7 +66,7 @@ curl -X GET \
 
 ## Obter o histórico do cluster de várias identidades
 
-Use o `POST` como um lote equivalente ao `GET` método descrito acima para retornar os históricos de cluster de várias identidades.
+Use o método `POST` como um equivalente em lote do método `GET` descrito acima para retornar os históricos de cluster de várias identidades.
 
 >[!NOTE]
 >
@@ -78,7 +78,7 @@ Use o `POST` como um lote equivalente ao `GET` método descrito acima para retor
 POST https://platform-va7.adobe.io/data/core/identity/clusters/history
 ```
 
-**Corpo da solicitação**
+**Solicitar corpo**
 
 Opção 1: Forneça uma lista de XIDs para os quais recuperar membros de cluster.
 
@@ -109,7 +109,7 @@ Opção 2: forneça uma lista de identidades como IDs compostas, onde cada uma n
 
 **Solicitação de stub**
 
-Uso do `x-uis-cst-ctx: stub` o cabeçalho retornará uma resposta com stubbed. Esta é uma solução temporária para facilitar o progresso do desenvolvimento da integração inicial, enquanto os serviços estão sendo concluídos. Isso será descontinuado quando não for mais necessário.
+O uso do cabeçalho `x-uis-cst-ctx: stub` retornará uma resposta com stub. Esta é uma solução temporária para facilitar o progresso do desenvolvimento da integração inicial, enquanto os serviços estão sendo concluídos. Isso será descontinuado quando não for mais necessário.
 
 ```shell
 curl -X POST \
@@ -126,7 +126,7 @@ curl -X POST \
       }'
 ```
 
-**Uso de XIDs**
+**Usando XIDs**
 
 ```shell
 curl -X POST \
@@ -142,7 +142,7 @@ curl -X POST \
       }' | json_pp
 ```
 
-**Uso de UIDs**
+**Usando UIDs**
 
 ```shell
 curl -X POST \
@@ -218,4 +218,4 @@ curl -X POST \
 
 ## Próximas etapas
 
-Prosseguir para o próximo tutorial para [listar mapeamentos de identidade](./list-identity-mappings.md)
+Prossiga para o próximo tutorial para [listar mapeamentos de identidade](./list-identity-mappings.md)

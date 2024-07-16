@@ -6,38 +6,38 @@ description: Este documento aborda as etapas necessárias para gerenciar detalhe
 exl-id: ac9c2213-f2fb-44be-9334-87fada8a4717
 source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
 workflow-type: tm+mt
-source-wordcount: '303'
+source-wordcount: '293'
 ht-degree: 0%
 
 ---
 
 # Gerenciar detalhes e serviços adicionais para um perfil de produto
 
-Você pode configurar os detalhes de um perfil e o acesso a serviços adicionais no **[!UICONTROL Configurações do perfil]** menu. Para acessar o menu, selecione **[!UICONTROL Configurações]** do **[!UICONTROL Perfil do produto]** página.
+Você pode configurar os detalhes de um perfil e acessar serviços adicionais no menu **[!UICONTROL Configurações de perfil]**. Para acessar o menu, selecione **[!UICONTROL Configurações]** na página **[!UICONTROL Perfil de Produto]**.
 
 ![configurações](../images/settings.png)
 
-A variável **[!UICONTROL Editar perfil de produto]** é exibido, iniciando no **[!UICONTROL Editar detalhes do perfil]** guia. Esta guia permite inserir e editar o nome e a descrição do perfil. Você também pode modificar o nome para exibição, bem como as configurações de notificação por email da sua conta.
+O menu **[!UICONTROL Editar perfil de produto]** é exibido, iniciando na guia **[!UICONTROL Editar detalhes do perfil]**. Esta guia permite inserir e editar o nome e a descrição do perfil. Você também pode modificar o nome para exibição, bem como as configurações de notificação por email da sua conta.
 
-![edit-product-profile](../images/edit-product-profile.png)
+![editar-perfil-produto](../images/edit-product-profile.png)
 
-Selecionar **[!UICONTROL Próxima]** para acessar o **[!UICONTROL Habilitar serviços]** página.
+Selecione **[!UICONTROL Avançar]** para acessar a página **[!UICONTROL Habilitar serviços]**.
 
-A variável **[!UICONTROL Habilitar serviços]** permite modificar o acesso de um perfil a informações adicionais [!DNL Platform] serviços que foram configurados inicialmente quando o perfil foi criado. Dependendo do [!DNL Platform] assinatura, esses serviços podem incluir:
+O menu **[!UICONTROL Habilitar serviços]** permite modificar o acesso de um perfil a serviços [!DNL Platform] adicionais que foram configurados inicialmente quando o perfil foi criado. Dependendo da sua assinatura do [!DNL Platform], esses serviços podem incluir:
 
 - [!DNL Data Science Workspace]
 - [!DNL Query Service]
-- [!DNL Adobe Real-Time Customer Data Platform] Interface do usuário (somente para Real-Time CDP)
+- Interface do usuário do [!DNL Adobe Real-Time Customer Data Platform] (somente para Real-Time CDP)
 - IU B2B
 
-Clique no botão de alternância no lado direito de um serviço específico para ativá-lo ou desativá-lo. Você também pode selecionar a variável **[!UICONTROL Todos em]** para ativar ou desativar todos os serviços listados.
+Clique no botão de alternância no lado direito de um serviço específico para ativá-lo ou desativá-lo. Você também pode marcar a caixa de seleção **[!UICONTROL Tudo em]** para habilitar ou desabilitar todos os serviços listados.
 
 Quando terminar, selecione **[!UICONTROL Salvar]**.
 
-![enable-services](../images/enable-services.png)
+![habilitar-serviços](../images/enable-services.png)
 
-Os clientes com direito ao B2B ou B2P Edition têm acesso à interface do usuário B2B. A interface B2B pode ser provisionada para usuários por meio do [!UICONTROL Ativar menu de serviços]. Selecione a alternância ao lado [!UICONTROL IU B2B] para habilitar o serviço para um perfil de produto específico e selecione **[!UICONTROL Salvar]**.
+Os clientes com direito ao B2B ou B2P Edition têm acesso à interface do usuário B2B. A interface B2B pode ser provisionada para usuários por meio do [!UICONTROL menu Habilitar serviços]. Selecione a alternância ao lado da [!UICONTROL Interface B2B] para habilitar o serviço para um perfil de produto específico e selecione **[!UICONTROL Salvar]**.
 
-A alternância da interface do usuário B2B permite que os usuários visualizem fluxos de trabalho B2B em torno do gerenciamento de contas e oportunidades, bem como criem segmentos relacionados a B2B. Para obter mais informações, consulte a documentação em [[!DNL Adobe Real-Time Customer Data Platform B2B Edition]](../../rtcdp/b2b-overview.md).
+A alternância da interface do usuário B2B permite que os usuários visualizem fluxos de trabalho B2B em torno do gerenciamento de contas e oportunidades, bem como criem segmentos relacionados a B2B. Para obter mais informações, consulte a documentação sobre [[!DNL Adobe Real-Time Customer Data Platform B2B Edition]](../../rtcdp/b2b-overview.md).
 
-![enable-b2b](../images/enable-b2b.png)
+![habilitar-b2b](../images/enable-b2b.png)

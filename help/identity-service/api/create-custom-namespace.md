@@ -14,9 +14,9 @@ ht-degree: 5%
 
 # Criar um namespace personalizado na API do serviço de identidade
 
-Usar o [!DNL Identity Namespace] , você poderá criar um namespace de identidade personalizado que estará disponível somente para sua organização.
+Usando a API [!DNL Identity Namespace], você pode criar um namespace de identidade personalizado que estará disponível somente para sua organização.
 
-Para obter recomendações sobre como criar namespaces personalizados, consulte [a documentação de Perguntas frequentes do Serviço de identidade](../troubleshooting-guide.md).
+Para obter recomendações sobre como criar namespaces personalizados, consulte [a documentação de Perguntas frequentes do Serviço de Identidade](../troubleshooting-guide.md).
 
 >[!NOTE]
 >
@@ -64,4 +64,4 @@ curl -X POST \
 
 ## Próximas etapas
 
-Prosseguir para o próximo tutorial para [listar a ID nativa de uma identidade](./list-native-id.md)
+Prossiga para o próximo tutorial para [listar a ID nativa de uma identidade](./list-native-id.md)

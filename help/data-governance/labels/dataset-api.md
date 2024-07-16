@@ -6,30 +6,30 @@ description: A API de serviço do conjunto de dados permite aplicar e editar ró
 exl-id: 24a8d870-eb81-4255-8e47-09ae7ad7a721
 source-git-commit: 8db484e4a65516058d701ca972fcbcb6b73abb31
 workflow-type: tm+mt
-source-wordcount: '1318'
+source-wordcount: '1314'
 ht-degree: 2%
 
 ---
 
 # Gerenciar rótulos de uso de dados para conjuntos de dados usando APIs
 
-A variável [[!DNL Dataset Service API]](https://www.adobe.io/experience-platform-apis/references/dataset-service/) O permite aplicar e editar rótulos de uso para conjuntos de dados. Isso faz parte dos recursos do catálogo de dados da Adobe Experience Platform, mas é separado da variável [!DNL Catalog Service] API que gerencia metadados do conjunto de dados.
+O [[!DNL Dataset Service API]](https://www.adobe.io/experience-platform-apis/references/dataset-service/) permite aplicar e editar rótulos de uso para conjuntos de dados. Ela faz parte dos recursos de catálogo de dados da Adobe Experience Platform, mas é separada da API [!DNL Catalog Service] que gerencia metadados do conjunto de dados.
 
 >[!IMPORTANT]
 >
->A aplicação de rótulos no nível do conjunto de dados só é compatível com casos de uso de governança de dados. Se estiver tentando criar políticas de acesso para os dados, você deverá [aplicar rótulos ao esquema](../../xdm/tutorials/labels.md) em que o conjunto de dados se baseia. Consulte a visão geral em [controle de acesso baseado em atributos](../../access-control/abac/overview.md) para obter mais informações.
+>A aplicação de rótulos no nível do conjunto de dados só é compatível com casos de uso de governança de dados. Se você estiver tentando criar políticas de acesso para os dados, deverá [aplicar rótulos ao esquema](../../xdm/tutorials/labels.md) no qual o conjunto de dados se baseia. Consulte a visão geral no [controle de acesso baseado em atributos](../../access-control/abac/overview.md) para obter mais informações.
 
-Este documento aborda como gerenciar rótulos para conjuntos de dados e campos usando o [!DNL Dataset Service API]. Para obter etapas sobre como gerenciar os próprios rótulos de uso de dados usando chamadas de API, consulte a seção [guia de endpoint de rótulos](../api/labels.md) para o [!DNL Policy Service API].
+Este documento aborda como gerenciar rótulos para conjuntos de dados e campos usando o [!DNL Dataset Service API]. Para obter etapas sobre como gerenciar os próprios rótulos de uso de dados usando chamadas de API, consulte o [manual de ponto de extremidade de rótulos](../api/labels.md) para o [!DNL Policy Service API].
 
 ## Introdução
 
-Antes de ler este guia, siga as etapas descritas na seção [seção de introdução](../../catalog/api/getting-started.md) no guia do desenvolvedor do Catálogo para coletar as credenciais necessárias para fazer chamadas para [!DNL Platform] APIs.
+Antes de ler este guia, siga as etapas descritas na [seção de introdução](../../catalog/api/getting-started.md) do guia de desenvolvedor do Catálogo para coletar as credenciais necessárias para fazer chamadas para APIs do [!DNL Platform].
 
-Para fazer chamadas para os endpoints descritos neste documento, você deve ter o `id` para um conjunto de dados específico. Se você não tiver esse valor, consulte o manual sobre [listando objetos do Catálogo](../../catalog/api/list-objects.md) para encontrar as IDs dos conjuntos de dados existentes.
+Para fazer chamadas para os pontos de extremidade descritos neste documento, você deve ter o valor `id` exclusivo para um conjunto de dados específico. Se você não tiver esse valor, consulte o manual em [listando objetos de Catálogo](../../catalog/api/list-objects.md) para encontrar as IDs dos seus conjuntos de dados existentes.
 
 ## Pesquisar rótulos para um conjunto de dados {#look-up}
 
-Você pode pesquisar os rótulos de uso de dados que foram aplicados a um conjunto de dados existente fazendo uma solicitação GET para o [!DNL Dataset Service] API.
+Você pode pesquisar os rótulos de uso de dados que foram aplicados a um conjunto de dados existente fazendo uma solicitação GET para a API [!DNL Dataset Service].
 
 **Formato da API**
 
@@ -39,7 +39,7 @@ GET /datasets/{DATASET_ID}/labels
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{DATASET_ID}` | O único `id` valor do conjunto de dados cujos rótulos você deseja pesquisar. |
+| `{DATASET_ID}` | O valor `id` exclusivo do conjunto de dados cujos rótulos você deseja pesquisar. |
 
 **Solicitação**
 
@@ -82,7 +82,7 @@ Uma resposta bem-sucedida retorna os rótulos de uso de dados aplicados ao conju
 
 ## Aplicar rótulos a um conjunto de dados {#apply}
 
-Você pode aplicar um conjunto de rótulos para um conjunto de dados inteiro fornecendo-os na carga de uma solicitação POST ou PUT para o [!DNL Dataset Service] API. O corpo da solicitação é o mesmo para ambas as chamadas. Não é possível adicionar rótulos a campos de conjunto de dados individuais.
+Você pode aplicar um conjunto de rótulos para um conjunto de dados inteiro fornecendo-os na carga de uma solicitação POST ou PUT para a API [!DNL Dataset Service]. O corpo da solicitação é o mesmo para ambas as chamadas. Não é possível adicionar rótulos a campos de conjunto de dados individuais.
 
 **Formato da API**
 
@@ -93,19 +93,19 @@ PUT /datasets/{DATASET_ID}/labels
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{DATASET_ID}` | O único `id` valor do conjunto de dados para o qual você está criando rótulos. |
+| `{DATASET_ID}` | O valor `id` exclusivo do conjunto de dados para o qual você está criando rótulos. |
 
 **Solicitação**
 
-O exemplo de solicitação POST abaixo atualiza todo o conjunto de dados com um `C1` rótulo. Os campos fornecidos na carga são os mesmos que seriam necessários para uma solicitação PUT.
+O exemplo de solicitação POST abaixo atualiza todo o conjunto de dados com um rótulo `C1`. Os campos fornecidos na carga são os mesmos que seriam necessários para uma solicitação PUT.
 
-Ao fazer chamadas de API que atualizam os rótulos existentes de um conjunto de dados (PUT), um `If-Match` cabeçalho que indica que a versão atual da entidade do rótulo do conjunto de dados no Serviço de conjunto de dados deve ser incluída. Para evitar colisões de dados, o serviço atualizará a entidade do conjunto de dados somente se o `If-Match` A sequência de caracteres corresponde à tag da versão mais recente gerada pelo sistema para esse conjunto de dados.
+Ao fazer chamadas de API que atualizam os rótulos existentes de um conjunto de dados (PUT), um cabeçalho `If-Match` que indica a versão atual da entidade do rótulo do conjunto de dados no Serviço de conjunto de dados deve ser incluído. Para evitar colisões de dados, o serviço só atualizará a entidade do conjunto de dados se a cadeia de caracteres `If-Match` incluída corresponder à marca da versão mais recente gerada pelo sistema para esse conjunto de dados.
 
 >[!NOTE]
 >
->Se houver rótulos para o conjunto de dados em questão, novos rótulos só poderão ser adicionados por meio de uma solicitação PUT, o que requer um `If-Match` cabeçalho. Depois que os rótulos são adicionados a um conjunto de dados, o mais recente `etag` O valor é necessário para atualizar ou remover os rótulos posteriormente<br>Antes de executar o método PUT, você deve executar uma solicitação GET nos rótulos do conjunto de dados. Atualize somente os campos específicos destinados à modificação na solicitação, deixando o restante inalterado. Além disso, verifique se a chamada de PUT mantém as mesmas entidades principais que a chamada de GET. Qualquer discrepância resultaria em um erro para o cliente.
+>Se houver rótulos para o conjunto de dados em questão, novos rótulos só poderão ser adicionados por meio de uma solicitação PUT, o que requer um cabeçalho `If-Match`. Depois que os rótulos forem adicionados a um conjunto de dados, o valor `etag` mais recente será necessário para atualizar ou remover os rótulos posteriormente<br>Antes de executar o método PUT, execute uma solicitação GET nos rótulos do conjunto de dados. Atualize somente os campos específicos destinados à modificação na solicitação, deixando o restante inalterado. Além disso, verifique se a chamada de PUT mantém as mesmas entidades principais que a chamada de GET. Qualquer discrepância resultaria em um erro para o cliente.
 
-Para recuperar a versão mais recente da entidade de rótulo do conjunto de dados, faça uma [solicitação GET](#look-up) para o `/datasets/{DATASET_ID}/labels` terminal. O valor atual é retornado na resposta sob um `etag` cabeçalho. Ao atualizar rótulos de conjuntos de dados existentes, a prática recomendada é executar primeiro uma solicitação de pesquisa para o conjunto de dados para buscar o mais recente `etag` antes de usar esse valor na variável `If-Match` cabeçalho da solicitação PUT subsequente.
+GET Para recuperar a versão mais recente da entidade de rótulo do conjunto de dados, faça uma [solicitação](#look-up) ao ponto de extremidade `/datasets/{DATASET_ID}/labels`. O valor atual é retornado na resposta sob um cabeçalho `etag`. Ao atualizar rótulos de conjuntos de dados existentes, a prática recomendada é executar primeiro uma solicitação de pesquisa para o conjunto de dados para buscar seu valor `etag` mais recente antes de usar esse valor no cabeçalho `If-Match` de sua solicitação PUT subsequente.
 
 ```shell
 curl -X POST \
@@ -131,11 +131,11 @@ curl -X POST \
 | Propriedade | Descrição |
 | --- | --- |
 | `entityId` | Isso identifica a entidade do conjunto de dados específico que deve ser atualizada. |
-| `entityId.namespace` | Isso é usado para evitar colisões de ID. A variável `namespace` é `AEP`. |
-| `entityId.id` | A ID do recurso sendo atualizado. Refere-se ao `datasetId`. |
+| `entityId.namespace` | Isso é usado para evitar colisões de ID. O `namespace` é `AEP`. |
+| `entityId.id` | A ID do recurso sendo atualizado. Isso se refere ao `datasetId`. |
 | `entityId.type` | O tipo do recurso que está sendo atualizado. Isso sempre será `dataset`. |
 | `labels` | Uma lista de rótulos de uso de dados que você deseja adicionar ao conjunto de dados inteiro. |
-| `parents` | A variável `parents` matriz contém uma lista de `entityId`para que esse conjunto de dados herde rótulos do. Os conjuntos de dados podem herdar rótulos de esquemas e/ou conjuntos de dados. |
+| `parents` | A matriz `parents` contém uma lista de `entityId`s da qual esse conjunto de dados herdará rótulos. Os conjuntos de dados podem herdar rótulos de esquemas e/ou conjuntos de dados. |
 
 **Resposta**
 
@@ -143,7 +143,7 @@ Uma resposta bem-sucedida retorna o conjunto atualizado de rótulos para o conju
 
 >[!IMPORTANT]
 >
->A variável `optionalLabels` A propriedade foi descontinuada para uso com solicitações POST. Não é mais possível adicionar rótulos de dados a campos de conjunto de dados. Uma operação POST emitirá um erro se uma `optionalLabel` valor está presente. No entanto, é possível excluir rótulos de campos individuais usando uma solicitação PUT e a variável `optionalLabels` propriedade. Para obter mais informações, consulte a seção sobre [remoção de rótulos de um conjunto de dados](#remove).
+>A propriedade `optionalLabels` foi descontinuada para uso com solicitações POST. Não é mais possível adicionar rótulos de dados a campos de conjunto de dados. Uma operação POST gerará um erro se um valor `optionalLabel` estiver presente. Entretanto, é possível excluir rótulos de campos individuais usando uma solicitação PUT e a propriedade `optionalLabels`. Para obter mais informações, consulte a seção sobre [remoção de rótulos de um conjunto de dados](#remove).
 
 ```json
 {
@@ -165,7 +165,7 @@ Uma resposta bem-sucedida retorna o conjunto atualizado de rótulos para o conju
 
 ## Remover rótulos de um conjunto de dados {#remove}
 
-Você pode remover qualquer rótulo de campo aplicado anteriormente atualizando o existente `optionalLabels` valor(es) com um subconjunto dos rótulos de campo existentes ou uma lista vazia para removê-los totalmente. Faça uma solicitação PUT para o [!DNL Dataset Service] API para atualizar ou remover rótulos aplicados anteriormente.
+Você pode remover qualquer rótulo de campo aplicado anteriormente atualizando o(s) valor(es) `optionalLabels` existente(s) com um subconjunto dos rótulos de campo existentes ou com uma lista vazia para removê-los totalmente. Faça uma solicitação PUT à API [!DNL Dataset Service] para atualizar ou remover rótulos aplicados anteriormente.
 
 **Formato da API**
 
@@ -175,13 +175,13 @@ PUT /datasets/{DATASET_ID}/labels
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{DATASET_ID}` | O único `id` valor do conjunto de dados para o qual você está criando rótulos. |
+| `{DATASET_ID}` | O valor `id` exclusivo do conjunto de dados para o qual você está criando rótulos. |
 
 **Solicitação**
 
 O conjunto de dados abaixo no qual a operação PUT é aplicada tinha C1 optionalLabel no campo properties/person/properties/address e C1, C2 optionalLabels no campo /properties/person/properties/name/properties/fullName. Após a operação put, o primeiro campo não terá rótulo (o rótulo C1 foi removido) e o segundo campo terá apenas o rótulo C1 (o rótulo C2 foi removido)
 
-No exemplo de cenário abaixo, uma solicitação PUT é usada para remover rótulos adicionados a campos individuais. Antes de o pedido ser apresentado, a `fullName` o campo tinha o `C1` e `C2` rótulos aplicados e a variável `address` o campo já tinha um `C1` rótulo aplicado. A solicitação PUT substitui os rótulos existentes `C1, C2` rótulos do `fullName` campo com um `C1` rótulo usando o `optionalLabels.labels` parâmetro. A solicitação também substitui a variável `C1` rótulo do `address` com um conjunto vazio de rótulos de campo.
+No exemplo de cenário abaixo, uma solicitação PUT é usada para remover rótulos adicionados a campos individuais. Antes da solicitação ser feita, o campo `fullName` tinha os rótulos `C1` e `C2` aplicados, e o campo `address` já tinha um rótulo `C1` aplicado. A solicitação PUT substitui rótulos `C1, C2` existentes do campo `fullName` por um rótulo `C1` usando o parâmetro `optionalLabels.labels`. A solicitação também substitui o rótulo `C1` do campo `address` por um conjunto vazio de rótulos de campo.
 
 ```shell
 curl -X PUT \
@@ -233,10 +233,10 @@ curl -X PUT \
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `entityId` | Isso identifica a entidade do conjunto de dados específico que deve ser atualizada. A variável `entityId` deve incluir os três valores a seguir:<br/><br/>`namespace`: é usado para evitar colisões de ID. A variável `namespace` é `AEP`.<br/>`id`: a ID do recurso que está sendo atualizado. Refere-se ao `datasetId`.<br/>`type`: o tipo de recurso que está sendo atualizado. Isso sempre será `dataset`. |
+| `entityId` | Isso identifica a entidade do conjunto de dados específico que deve ser atualizada. O `entityId` deve incluir os três valores a seguir:<br/><br/>`namespace`: Isso é usado para evitar colisões de ID. O `namespace` é `AEP`.<br/>`id`: A ID do recurso que está sendo atualizado. Isso se refere ao `datasetId`.<br/>`type`: o tipo de recurso que está sendo atualizado. Isso sempre será `dataset`. |
 | `labels` | Uma lista de rótulos de uso de dados que você deseja adicionar ao conjunto de dados inteiro. |
-| `parents` | A variável `parents` matriz contém uma lista de `entityId`para que esse conjunto de dados herde rótulos do. Os conjuntos de dados podem herdar rótulos de esquemas e/ou conjuntos de dados. |
-| `optionalLabels` | Esse parâmetro é usado para remover rótulos aplicados anteriormente a um campo de conjunto de dados. Uma lista de campos individuais no conjunto de dados do qual você deseja remover os rótulos. Cada item nesta matriz deve ter as seguintes propriedades: <br/><br/>`option`: um objeto que contém a variável [!DNL Experience Data Model] Atributos de (XDM) do campo. As três propriedades a seguir são obrigatórias:<ul><li><code>id</code>: O URI <code>$id</code> valor do schema associado ao campo.</li><li><code>contentType</code>: O tipo de conteúdo e o número da versão do esquema. Esta deve assumir a forma de um dos <a href="../../xdm/api/getting-started.md#accept">Aceitar cabeçalhos</a> para uma solicitação de pesquisa XDM.</li><li><code>schemaPath</code>: O caminho para o campo no esquema do conjunto de dados.</li></ul>`labels`: esse valor deve conter um subconjunto dos rótulos de campo existentes aplicados ou estar vazio para remover todos os rótulos de campo existentes. Os métodos PUT ou POST agora retornam um erro se a variável `optionalLabels` O campo tem rótulos novos ou modificados. |
+| `parents` | A matriz `parents` contém uma lista de `entityId`s da qual esse conjunto de dados herdará rótulos. Os conjuntos de dados podem herdar rótulos de esquemas e/ou conjuntos de dados. |
+| `optionalLabels` | Esse parâmetro é usado para remover rótulos aplicados anteriormente a um campo de conjunto de dados. Uma lista de campos individuais no conjunto de dados do qual você deseja remover os rótulos. Cada item nesta matriz deve ter as seguintes propriedades: <br/><br/>`option`: um objeto que contenha os atributos [!DNL Experience Data Model] (XDM) do campo. As três propriedades a seguir são obrigatórias:<ul><li><code>id</code>: O URI <code>$id</code> valor do schema associado ao campo.</li><li><code>contentType</code>: O tipo de conteúdo e o número da versão do esquema. Isso deve tomar a forma de um dos <a href="../../xdm/api/getting-started.md#accept">cabeçalhos Aceitar</a> válidos para uma solicitação de pesquisa XDM.</li><li><code>schemaPath</code>: O caminho para o campo no esquema do conjunto de dados.</li></ul>`labels`: este valor deve conter um subconjunto dos rótulos de campo existentes aplicados ou estar vazio para remover todos os rótulos de campo existentes. Os métodos PUT ou POST agora retornam um erro se o campo `optionalLabels` tiver rótulos novos ou modificados. |
 
 **Resposta**
 
@@ -262,6 +262,6 @@ Uma resposta bem-sucedida retorna o conjunto atualizado de rótulos para o conju
 
 ## Próximas etapas
 
-Ao ler este documento, você aprendeu a gerenciar rótulos de uso de dados para conjuntos de dados e campos usando o [!DNL Dataset Service] API. Agora você pode definir [políticas de uso de dados](../policies/overview.md) e [políticas de controle de acesso](../../access-control/abac/ui/policies.md) com base nos rótulos aplicados.
+Ao ler este documento, você aprendeu a gerenciar rótulos de uso de dados para conjuntos de dados e campos usando a API [!DNL Dataset Service]. Agora você pode definir [políticas de uso de dados](../policies/overview.md) e [políticas de controle de acesso](../../access-control/abac/ui/policies.md) com base nos rótulos aplicados.
 
-Para obter mais informações sobre o gerenciamento de conjuntos de dados no [!DNL Experience Platform], consulte o [visão geral dos conjuntos de dados](../../catalog/datasets/overview.md).
+Para obter mais informações sobre como gerenciar conjuntos de dados no [!DNL Experience Platform], consulte a [visão geral sobre conjuntos de dados](../../catalog/datasets/overview.md).

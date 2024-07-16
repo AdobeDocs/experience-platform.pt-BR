@@ -6,7 +6,7 @@ exl-id: 5d51edaa-ecba-4ac0-8d3c-49010466b9a5
 source-git-commit: 9120377f5f2048579d7e2a4740cfcbc56d49d61a
 workflow-type: tm+mt
 source-wordcount: '842'
-ht-degree: 6%
+ht-degree: 7%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 6%
 >
 >Alertas não são aceitos em sandboxes de não produção. Para assinar alertas, você deve garantir que esteja usando uma sandbox de produção.
 
-O Adobe Experience Platform permite assinar alertas baseados em eventos relacionados a atividades do Adobe Experience Platform. Os alertas reduzem ou eliminam a necessidade de sondar os [[!DNL Observability Insights] API](../../../observability/api/overview.md) para verificar se um trabalho foi concluído, se uma determinada etapa em um fluxo de trabalho foi atingida ou se ocorreram erros.
+O Adobe Experience Platform permite assinar alertas baseados em eventos relacionados a atividades do Adobe Experience Platform. Os alertas reduzem ou eliminam a necessidade de sondar a [[!DNL Observability Insights] API](../../../observability/api/overview.md) para verificar se um trabalho foi concluído, se um determinado marco em um fluxo de trabalho foi atingido ou se ocorreram erros.
 
 Você pode assinar alertas ao criar um fluxo de dados para receber mensagens de alerta sobre o status, o sucesso ou a falha da execução do fluxo.
 
@@ -26,9 +26,9 @@ Este documento fornece etapas sobre como assinar mensagens de alertas de recebim
 
 Este documento requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
-* [Origens](../../home.md): [!DNL Experience Platform] O permite que os dados sejam assimilados de várias fontes e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando o [!DNL Platform] serviços.
-* [Observabilidade](../../../observability/home.md): [!DNL Observability Insights] O permite monitorar as atividades da Platform por meio do uso de métricas estatísticas e notificações de eventos.
-   * [Alertas](../../../observability/alerts/overview.md): quando um determinado conjunto de condições em suas operações do Platform é atingido (como um problema em potencial quando o sistema viola um limite), o Platform pode enviar mensagens de alerta a qualquer usuário em sua organização que se inscreveu neles.
+* [Fontes](../../home.md): [!DNL Experience Platform] permite que os dados sejam assimilados de várias fontes e fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços do [!DNL Platform].
+* [Observabilidade](../../../observability/home.md): [!DNL Observability Insights] permite monitorar as atividades da Platform por meio do uso de métricas estatísticas e notificações de eventos.
+   * [Alertas](../../../observability/alerts/overview.md): quando um determinado conjunto de condições em suas operações da Platform é atingido (como um problema em potencial quando o sistema ultrapassa um limite), a Platform pode enviar mensagens de alerta para qualquer usuário em sua organização que tenha feito a assinatura.
 
 ## Assinar os alertas da interface {#subscribe-sources-alerts}
 
@@ -42,7 +42,7 @@ Este documento requer uma compreensão funcional dos seguintes componentes do Ad
 >
 >Você deve ativar notificações instantâneas de emails para sua conta da Platform a fim de receber notificações de alerta baseadas em email para seus fluxos de dados.
 
-Você pode ativar alertas para seus fluxos de dados durante o [!UICONTROL Detalhes do fluxo de dados] etapa do fluxo de trabalho de origens no espaço de trabalho de origens.
+Você pode habilitar alertas para seus fluxos de dados durante a etapa [!UICONTROL detalhes do fluxo de dados] do fluxo de trabalho de fontes no espaço de trabalho de fontes.
 
 ![detalhes do fluxo de dados](../../images/tutorials/alerts/dataflow-detail.png)
 
@@ -58,14 +58,14 @@ Os alertas disponíveis para fluxos de dados de origens são:
 | Êxito na execução do fluxo de fontes | Esse alerta envia uma mensagem quando os dados da fonte são assimilados com êxito na Platform. |
 | Falha na execução do fluxo de fontes | Esse alerta envia uma mensagem se ocorrer um erro no fluxo de dados. |
 
-Selecione os alertas que deseja assinar e selecione **[!UICONTROL Próxima]** para revisar e concluir o fluxo de dados.
+Selecione os alertas que você deseja assinar e selecione **[!UICONTROL Avançar]** para revisar e concluir seu fluxo de dados.
 
-![select-alerts](../../images/tutorials/alerts/select-alerts.png)
+![selecionar-alertas](../../images/tutorials/alerts/select-alerts.png)
 
 Consulte os guias a seguir para obter etapas detalhadas sobre como criar um fluxo de dados de origens na interface do usuário:
 
 * [Advertising](./dataflow/advertising.md)
-* [armazenamento na nuvem](./dataflow/batch/cloud-storage.md)
+* [Armazenamento na nuvem](./dataflow/batch/cloud-storage.md)
 * [CRM](./dataflow/crm.md)
 * [Banco de dados](./dataflow/databases.md)
 * [Comércio eletrônico](./dataflow/ecommerce.md)
@@ -86,7 +86,7 @@ Os alertas são representados na interface do usuário por um ícone de notifica
 
 O painel de notificações é exibido, exibindo uma lista de atualizações de status no fluxo de dados criado.
 
-![janela de alerta](../../images/tutorials/alerts/alert-window.png)
+![janela-alerta](../../images/tutorials/alerts/alert-window.png)
 
 Você pode passar o mouse em uma mensagem de alerta para marcá-las como lidas ou selecionar o ícone do relógio para definir lembretes futuros sobre o status do fluxo de dados.
 
@@ -94,17 +94,17 @@ Você pode passar o mouse em uma mensagem de alerta para marcá-las como lidas o
 
 Selecione a mensagem de alerta para ver informações específicas sobre o fluxo de dados.
 
-![select-alert-message](../../images/tutorials/alerts/select-alert-message.png)
+![selecionar-mensagem-alerta](../../images/tutorials/alerts/select-alert-message.png)
 
-A variável [!UICONTROL Visão geral da execução do fluxo de dados] é exibida. A metade superior da tela exibe uma visão geral do fluxo de dados, incluindo informações sobre seus atributos, a ID de execução do fluxo de dados correspondente e um resumo de erros de alto nível.
+A página [!UICONTROL Visão geral da execução do fluxo de dados] é exibida. A metade superior da tela exibe uma visão geral do fluxo de dados, incluindo informações sobre seus atributos, a ID de execução do fluxo de dados correspondente e um resumo de erros de alto nível.
 
-![fluxo de dados-visão geral](../../images/tutorials/alerts/dataflow-overview.png)
+![visão geral do fluxo de dados](../../images/tutorials/alerts/dataflow-overview.png)
 
-A metade inferior da página exibe qualquer [!UICONTROL Erros de execução de fluxo de dados] que ocorreu durante o estágio de execução do fluxo de dados. Aqui, você pode visualizar diagnósticos de erro ou usar o [[!DNL Data Access] API](https://www.adobe.io/experience-platform-apis/references/data-access/) para baixar o diagnóstico de erro ou o manifesto de arquivo que corresponde ao seu fluxo de dados.
+A metade inferior da página exibe [!UICONTROL erros de execução do fluxo de dados] ocorridos durante o estágio de execução do fluxo de dados. Aqui, você pode visualizar o diagnóstico de erros ou usar a [[!DNL Data Access] API](https://www.adobe.io/experience-platform-apis/references/data-access/) para baixar o diagnóstico de erros ou o manifesto de arquivo que corresponde ao seu fluxo de dados.
 
-![dataflow-run-errors](../../images/tutorials/alerts/dataflow-run-error.png)
+![erros de execução de fluxo de dados](../../images/tutorials/alerts/dataflow-run-error.png)
 
-Para obter mais informações sobre como manipular erros de fluxo de dados, consulte o manual no [monitoramento de fluxos de dados de fontes na interface do](../../../dataflows/ui/monitor-sources.md).
+Para obter mais informações sobre como manipular erros de fluxo de dados, consulte o manual sobre [monitoramento de fluxos de dados de fontes na interface](../../../dataflows/ui/monitor-sources.md).
 
 ### Por email
 
@@ -112,20 +112,20 @@ Os alertas para seus fluxos de dados também são entregues a você por email. S
 
 ![email](../../images/tutorials/alerts/email.png)
 
-Semelhante ao alerta da interface do usuário, o [!UICONTROL Visão geral da execução do fluxo de dados] é exibida, fornecendo uma interface para investigar quaisquer erros associados ao fluxo de dados.
+Semelhante ao alerta da interface do usuário, a página [!UICONTROL Visão geral da execução do fluxo de dados] é exibida, fornecendo uma interface para investigar quaisquer erros associados ao seu fluxo de dados.
 
-![fluxo de dados-visão geral](../../images/tutorials/alerts/dataflow-overview.png)
+![visão geral do fluxo de dados](../../images/tutorials/alerts/dataflow-overview.png)
 
 ## Assinar e cancelar inscrição em alertas
 
-Você pode assinar mais alertas ou cancelar a assinatura de alertas estabelecidos para um fluxo de dados existente na [!UICONTROL Fluxos de dados] página. Localize o fluxo de dados criado na lista e selecione as reticências (`...`) para ver um menu suspenso de opções. Em seguida, selecione **[!UICONTROL Assinar alertas]** para modificar as configurações de alerta do seu fluxo de dados.
+Você pode assinar mais alertas ou cancelar a assinatura de alertas estabelecidos para um fluxo de dados existente na página [!UICONTROL Fluxos de Dados]. Localize o fluxo de dados criado na lista e selecione as reticências (`...`) para ver um menu suspenso de opções. Em seguida, selecione **[!UICONTROL Assinar alertas]** para modificar as configurações de alerta do seu fluxo de dados.
 
 ![opções](../../images/tutorials/alerts/options.png)
 
 Uma janela pop-up é exibida, fornecendo uma lista de fontes e alertas. Selecione os alertas que deseja assinar ou desmarque os alertas dos quais deseja cancelar a assinatura. Quando terminar, selecione **[!UICONTROL Salvar]**.
 
-![save](../../images/tutorials/alerts/save.png)
+![salvar](../../images/tutorials/alerts/save.png)
 
 ## Próximas etapas
 
-Este documento forneceu um guia passo a passo sobre como assinar alertas em contexto para seus fluxos de dados de fontes. Para obter mais informações, consulte [guia da interface de alertas](../../../observability/alerts/ui.md).
+Este documento forneceu um guia passo a passo sobre como assinar alertas em contexto para seus fluxos de dados de fontes. Para obter mais informações, consulte o [guia da interface de alertas](../../../observability/alerts/ui.md).

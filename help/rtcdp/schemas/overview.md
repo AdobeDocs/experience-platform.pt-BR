@@ -5,8 +5,8 @@ feature: Get Started, Data Management, Schemas
 exl-id: e56873d2-825d-4c0f-a0fe-1ae6e83438f0
 source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
-source-wordcount: '146'
-ht-degree: 11%
+source-wordcount: '143'
+ht-degree: 0%
 
 ---
 
@@ -16,4 +16,4 @@ Todos os dados trazidos para o Adobe Real-time Customer Data Platform devem esta
 
 Depois de criar esquemas, você pode mapear a estrutura dos dados para o XDM para que ele possa ser assimilado no sistema.
 
-Para obter mais informações sobre o XDM e como gerenciar schemas na interface do usuário, consulte o [Documentação XDM](../../xdm/home.md). Se você estiver usando o Real-time Customer Platform B2B Edition, consulte o documento em [esquemas no Real-Time CDP B2B Edition](./b2b.md) para obter informações sobre aplicativos específicos B2B para XDM.
+Para obter mais informações sobre o XDM e como gerenciar esquemas na interface do usuário, consulte a [documentação sobre XDM](../../xdm/home.md). Se você estiver usando o Real-Time Customer Platform B2B Edition, consulte o documento sobre [esquemas no Real-Time CDP B2B Edition](./b2b.md) para obter informações sobre aplicativos específicos para B2B para XDM.

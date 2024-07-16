@@ -9,14 +9,14 @@ ht-degree: 68%
 
 ---
 
-# Melhorar a coleta de dados com dados meteorológicos do [!DNL The Weather Channel]
+# Aprimorar a coleta de dados com dados meteorológicos de [!DNL The Weather Channel]
 
 A Adobe fez parceria com o [!DNL [The Weather Company]](https://www.ibm.com/weather) para trazer o contexto adicional de clima dos Estados Unidos para os dados coletados por sequências de dados. Você pode usar esses dados para análise, direcionamento e criação de público no Experience Platform.
 
-Há três tipos de dados disponíveis no [!DNL The Weather Channel]:
+Há três tipos de dados disponíveis em [!DNL The Weather Channel]:
 
 * **[!UICONTROL Clima atual]**: as condições meteorológicas atuais do usuário, com base em sua localização. Isso inclui a temperatura atual, precipitação, cobertura de nuvens e muito mais.
-* **[!UICONTROL Previsão do tempo]**: A previsão inclui a previsão de 1, 2, 3, 5, 7 e 10 dias para o local do usuário.
+* **[!UICONTROL Previsão do tempo]**: a previsão inclui 1, 2, 3, 5, 7 e 10 dias para a localização do usuário.
 * **[!UICONTROL Acionadores]**: combinações específicas mapeadas para condições meteorológicas de diferentes semânticas. Existem três tipos diferentes de acionadores meteorológicos:
 
    * **[!UICONTROL Acionadores meteorológicos]**: condições semânticas significativas, como “clima frio” ou “chuvoso”. Essas definições podem diferir em vários climas.
@@ -27,8 +27,8 @@ Há três tipos de dados disponíveis no [!DNL The Weather Channel]:
 
 Antes de usar os dados meteorológicos, verifique se os seguintes pré-requisitos estão sendo atendidos:
 
-* Você deve licenciar os dados meteorológicos que usará no [!DNL The Weather Channel]. Eles serão então habilitados na sua conta.
-* Os dados meteorológicos estão disponíveis somente por meio de sequências de dados. Para usar os dados meteorológicos, você deve usar [!DNL Web SDK], [!DNL Mobile Edge Extension] ou o [API do servidor](../../server-api/overview.md) para incluir esses dados.
+* Você deve licenciar os dados meteorológicos que usará a partir de [!DNL The Weather Channel]. Eles serão então habilitados na sua conta.
+* Os dados meteorológicos estão disponíveis somente por meio de sequências de dados. Para usar os dados meteorológicos, você deve usar o [!DNL Web SDK], o [!DNL Mobile Edge Extension] ou a [API de Servidor](../../server-api/overview.md) para incluir esses dados.
 * Sua sequência de dados deve estar com a [[!UICONTROL Localização geográfica]](../configure.md#advanced-options) habilitada.
 * Adicione o [grupo de campos meteorológicos](#schema-configuration) ao esquema que você está usando.
 
@@ -62,11 +62,11 @@ Você pode encontrar a lista de campos que podem ser mapeados na página de [ref
 
 ### Adobe Customer Journey Analytics {#cja}
 
-No [!DNL Adobe Customer Journey Analytics], os dados meteorológicos estão disponíveis no conjunto de dados especificado na sequência de dados. Contanto que os atributos meteorológicos sejam [adicionado ao esquema](#prerequisites-prerequisites), eles estão disponíveis para [adicionar a uma visualização de dados](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-dataviews/create-dataview.html?lang=pt-BR) in [!DNL Customer Journey Analytics].
+No [!DNL Adobe Customer Journey Analytics], os dados meteorológicos estão disponíveis no conjunto de dados especificado na sequência de dados. Desde que os atributos meteorológicos sejam [adicionados ao seu esquema](#prerequisites-prerequisites), eles estarão disponíveis para [adicionar a uma visualização de dados](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-dataviews/create-dataview.html?lang=pt-BR) em [!DNL Customer Journey Analytics].
 
 ### Real-Time Customer Data Platform {#rtcdp}
 
-Os dados meteorológicos estão disponíveis no [Real-time Customer Data Platform](../../rtcdp/overview.md), para uso em públicos-alvo. Os dados meteorológicos são anexados aos eventos.
+Os dados meteorológicos estão disponíveis na [Real-time Customer Data Platform](../../rtcdp/overview.md) para serem usados nos públicos-alvo. Os dados meteorológicos são anexados aos eventos.
 
 ![Construtor de segmentos mostrando eventos meteorológicos](../assets/data-enrichment/weather/schema-builder.png)
 

@@ -15,4 +15,4 @@ ht-degree: 0%
 
 O tutorial para habilitar um conjunto de dados para uso no Perfil do cliente em tempo real e no Serviço de identidade da Adobe Experience Platform inclui etapas para criar um novo conjunto de dados e configurar um conjunto de dados existente. O tutorial também aborda etapas para assimilar dados no conjunto de dados e confirmar a assimilação bem-sucedida de dados no Perfil e no Serviço de identidade.
 
-Para acessar este tutorial, visite o [Tutorial Ativar um conjunto de dados para Perfil e identidade usando APIs](../../catalog/datasets/enable-for-profile.md), parte da documentação dos conjuntos de dados.
+Para acessar este tutorial, visite o [Tutorial de habilitação de um conjunto de dados para perfil e identidade usando APIs](../../catalog/datasets/enable-for-profile.md), parte da documentação dos conjuntos de dados.

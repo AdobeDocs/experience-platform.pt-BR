@@ -6,7 +6,7 @@ exl-id: b9e7b3af-2a13-4904-bd12-e3ed05a1988e
 source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '2074'
-ht-degree: 84%
+ht-degree: 85%
 
 ---
 
@@ -197,7 +197,7 @@ Você também pode selecionar qualquer perfil em potencial para uma inspeção a
 
 ![Exemplo de como inspecionar perfis em potencial.](/help/rtcdp/assets/partner-data/prospecting/inspect-prospect-profile.gif)
 
-Leia mais sobre [perfis de cliente potencial](/help/profile/ui/prospect-profile.md).
+Leia mais sobre [perfis de clientes potenciais](/help/profile/ui/prospect-profile.md).
 
 ### Criar públicos-alvo em potencial {#create-prospect-audiences}
 
@@ -213,7 +213,7 @@ Observe que a experiência de criação de públicos-alvo para perfis em potenci
 * Avaliação de perfis em lote, apenas.
 * Não permite a criação de públicos-alvo com base em eventos de série temporal.
 
-Leia mais sobre [públicos-alvo potenciais](/help/segmentation/ui/prospect-audience.md).
+Leia mais sobre [públicos-alvo em potencial](/help/segmentation/ui/prospect-audience.md).
 
 ### Ativar perfis em potencial para destinos {#activate-to-destinations}
 
@@ -228,5 +228,5 @@ Utilize os públicos-alvo em potencial exportando-os para destinos. Atualmente, 
 Conheça outros casos de uso habilitados por meio da compatibilidade com dados de parceiros na Real-Time CDP:
 
 * [Suplemente perfis próprios com atributos de parceiros de dados confiáveis para melhorar sua base de dados, obter novos insights sobre sua base de clientes e aprimorar a otimização do público-alvo.](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
-* [Personalizar experiências no site para visitantes desconhecidos usando o reconhecimento de visitantes auxiliados por parceiros](/help/rtcdp/partner-data/onsite-personalization.md) durante a visita sem que o usuário autentique ou tenha um histórico anterior com sua marca.
-* [Ativação ampliada de perfis de clientes potenciais e públicos-alvo de clientes potenciais](/help/destinations/ui/activate-prospect-audiences.md) para selecionar destinos.
+* [Personalize experiências no site para visitantes desconhecidos usando o reconhecimento de visitante auxiliado por parceiro](/help/rtcdp/partner-data/onsite-personalization.md) durante a visita sem que o usuário se autentique ou tenha um histórico anterior com sua marca.
+* [Ativação ampliada de perfis de prospecto e públicos-alvo de prospecto](/help/destinations/ui/activate-prospect-audiences.md) para selecionar destinos.

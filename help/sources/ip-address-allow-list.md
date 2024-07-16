@@ -2,7 +2,7 @@
 keywords: Experience Platform;página inicial;tópicos populares;endereço ip;endereços ip;lista de permissões de endereço ip; lista de permissões
 description: Os endereços IP devem ser adicionados a uma lista de permissões antes de trabalhar com conectores de origem.
 solution: Experience Platform
-title: LISTA DE PERMISSÕES de Endereço IP para Conexões de Origem
+title: LISTA DE PERMISSÕES de endereço IP para conexões do Source
 exl-id: 40093c80-dbdb-4dc1-97bb-81a8200b731f
 source-git-commit: bcd74083169c40966d7de8ba7b79082931a6744d
 workflow-type: tm+mt
@@ -69,7 +69,7 @@ Você pode definir controles de acesso à rede por meio do firewall de rede. Ao 
 
 ## LISTA DE PERMISSÕES de endereço IP para fontes de transmissão {#streaming}
 
-Você deve adicionar os seguintes endereços IP à lista de permissões para permitir o tráfego do serviço de transferência de dados para fontes de transmissão, como [[!DNL Amazon Kinesis]](./connectors/cloud-storage/kinesis.md), [[!DNL Azure Event Hub]](./connectors/cloud-storage/eventhub.md), [[!DNL Google PubSub]](./connectors/cloud-storage/google-pubsub.md), e [[!DNL Snowflake Streaming]](./connectors/databases/snowflake-streaming.md).
+Você deve adicionar os seguintes endereços IP à lista de permissões para permitir o tráfego do serviço de transferência de dados para fontes de streaming como [[!DNL Amazon Kinesis]](./connectors/cloud-storage/kinesis.md), [[!DNL Azure Event Hub]](./connectors/cloud-storage/eventhub.md), [[!DNL Google PubSub]](./connectors/cloud-storage/google-pubsub.md) e [[!DNL Snowflake Streaming]](./connectors/databases/snowflake-streaming.md).
 
 >[!BEGINTABS]
 

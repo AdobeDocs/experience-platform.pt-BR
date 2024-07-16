@@ -4,8 +4,8 @@ description: Saiba como fazer chamadas para o ponto de extremidade /hosts na API
 exl-id: 9d0d2a65-49e9-429c-a665-754b59a11cf1
 source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '796'
-ht-degree: 90%
+source-wordcount: '793'
+ht-degree: 91%
 
 ---
 
@@ -228,7 +228,7 @@ curl -X POST \
 | `attributes.path` | O caminho a ser anexado ao URL `server`. |
 | `attributes.port` | Um número inteiro que indica a porta específica do servidor que será usada. |
 | `attributes.server` | O URL do host do servidor. |
-| `attributes.skip_symlinks`<br><br>(Somente para hosts SFTP) | Por padrão, todos os hosts SFTP usam links simbólicos (symlinks) para fazer referência às builds de biblioteca que são salvas no servidor. No entanto, nem todos os servidores suportam o uso de symlinks. Quando este atributo é incluído e definido como `true`, o host usa uma operação de cópia para atualizar os ativos de build diretamente, em vez de usar symlinks. |
+| `attributes.skip_symlinks`<br><br>(Somente para hosts SFTP) | Por padrão, todos os hosts SFTP usam links simbólicos (symlinks) para fazer referência às builds de biblioteca que são salvas no servidor. No entanto, nem todos os servidores suportam o uso de symlinks. Quando este atributo é incluído e definido como `true`, o host usa uma operação de cópia para atualizar os ativos de compilação diretamente em vez de usar symlinks. |
 | `attributes.username` | Um nome de usuário opcional para autenticação. |
 | `type` | O tipo de recurso que está sendo atualizado. Para esse endpoint, o valor deve ser `hosts`. |
 

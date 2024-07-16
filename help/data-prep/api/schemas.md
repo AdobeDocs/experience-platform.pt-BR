@@ -5,8 +5,8 @@ title: Endpoint da API de esquemas
 description: Você pode usar o endpoint "/schemas" na API do Adobe Experience Platform para recuperar, criar e atualizar esquemas de forma programática para uso com o Mapeador na plataforma.
 source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '611'
-ht-degree: 5%
+source-wordcount: '616'
+ht-degree: 4%
 
 ---
 
@@ -14,19 +14,19 @@ ht-degree: 5%
 
 # Endpoint de esquemas
 
-Os esquemas podem ser usados com o Mapeador para garantir que os dados assimilados na Adobe Experience Platform correspondam ao que você deseja assimilar. Você pode usar o `/schemas` ponto de extremidade para criar, listar e obter esquemas personalizados de forma programática para uso com o Mapeador na plataforma.
+Os esquemas podem ser usados com o Mapeador para garantir que os dados assimilados na Adobe Experience Platform correspondam ao que você deseja assimilar. Você pode usar o ponto de extremidade `/schemas` para criar, listar e obter esquemas personalizados de forma programática para usar com o Mapeador na Plataforma.
 
 >[!NOTE]
 >
->Os esquemas criados usando esse endpoint são usados exclusivamente com Mapeadores e conjuntos de mapeamento. Para criar esquemas acessíveis por outros serviços da Platform, leia o [Guia do desenvolvedor do Registro de esquema](../../xdm/api/schemas.md).
+>Os esquemas criados usando esse endpoint são usados exclusivamente com Mapeadores e conjuntos de mapeamento. Para criar esquemas acessíveis por outros serviços da Platform, leia o [guia do desenvolvedor do Registro de Esquemas](../../xdm/api/schemas.md).
 
 ## Obter todos os esquemas
 
-Você pode recuperar uma lista de todos os esquemas do mapeador disponíveis para sua organização fazendo uma solicitação GET para o `/schemas` terminal.
+Você pode recuperar uma lista de todos os esquemas do Mapeador disponíveis para sua organização fazendo uma solicitação GET para o ponto de extremidade `/schemas`.
 
 **Formato da API**
 
-A variável `/schemas` O endpoint oferece suporte a vários parâmetros de consulta para ajudar você a filtrar os resultados. Embora a maioria desses parâmetros seja opcional, seu uso é altamente recomendado para ajudar a reduzir a sobrecarga cara. No entanto, você deve incluir os `start` e `limit` parâmetros como parte da solicitação. Vários parâmetros podem ser incluídos, separados por &quot;E&quot; comercial (`&`).
+O ponto de extremidade `/schemas` dá suporte a vários parâmetros de consulta para ajudar você a filtrar os resultados. Embora a maioria desses parâmetros seja opcional, seu uso é altamente recomendado para ajudar a reduzir a sobrecarga cara. No entanto, você deve incluir os parâmetros `start` e `limit` como parte de sua solicitação. Vários parâmetros podem ser incluídos, separados por &quot;E&quot; comercial (`&`).
 
 ```http
 GET /schemas?limit={LIMIT}&start={START}
@@ -39,7 +39,7 @@ GET /schemas?limit={LIMIT}&start={START}&orderBy={ORDER_BY}
 | `{LIMIT}` | **Obrigatório**. Especifica o número de esquemas retornados. |
 | `{START}` | **Obrigatório**. Especifica o deslocamento das páginas de resultados. Para obter a primeira página de resultados, defina o valor como `start=0`. |
 | `{NAME}` | Filtra o esquema com base no nome. |
-| `{ORDER_BY}` | Classifica a ordem dos resultados. Os campos compatíveis são `modifiedDate` e `createdDate`. Você pode anexar a propriedade ao `+` ou `-` para classificá-la por ordem crescente ou decrescente, respectivamente. |
+| `{ORDER_BY}` | Classifica a ordem dos resultados. Os campos com suporte são `modifiedDate` e `createdDate`. Você pode anexar a propriedade a `+` ou `-` como prefixo para classificá-la por ordem crescente ou decrescente, respectivamente. |
 
 **Solicitação**
 
@@ -132,7 +132,7 @@ A resposta a seguir retorna o status HTTP 200 com uma lista dos esquemas solicit
 
 ## Criar um esquema
 
-Você pode criar um esquema para validação fazendo uma solicitação POST para a `/schemas` terminal. Há três maneiras de criar um esquema: enviando um [Esquema JSON](https://json-schema.org/), usando dados de amostra ou fazendo referência a um esquema XDM existente.
+Você pode criar um esquema para validação fazendo uma solicitação POST para o ponto de extremidade `/schemas`. Há três maneiras de criar um esquema: enviar um [Esquema JSON](https://json-schema.org/), usar dados de exemplo ou fazer referência a um esquema XDM existente.
 
 ```http
 POST /schemas
@@ -269,7 +269,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas \
 | -------- | ----------- |
 | `name` | O nome do esquema que você deseja criar. |
 | `schemaRef.id` | A ID do esquema que você está referenciando. |
-| `schemaRef.contentType` | Determina o formato de resposta do esquema referenciado. Mais informações sobre esse campo podem ser encontradas no [guia do desenvolvedor do registro de esquema](../../xdm/api/schemas.md#lookup) |
+| `schemaRef.contentType` | Determina o formato de resposta do esquema referenciado. Mais informações sobre este campo podem ser encontradas no [guia do desenvolvedor do registro de esquema](../../xdm/api/schemas.md#lookup) |
 
 **Resposta**
 
@@ -334,7 +334,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com informações sobre o es
 
 ## Recuperar um esquema específico
 
-Você pode recuperar informações sobre um esquema específico fazendo uma solicitação GET ao `/schemas` e fornecendo a ID do esquema que deseja recuperar no caminho da solicitação.
+Você pode recuperar informações sobre um esquema específico fazendo uma solicitação GET para o ponto de extremidade `/schemas` e fornecendo a ID do esquema que você deseja recuperar no caminho da solicitação.
 
 **Formato da API**
 

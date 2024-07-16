@@ -11,9 +11,9 @@ ht-degree: 0%
 
 # `appendIdentityToUrl`
 
-A variável `appendIdentityToUrl` permite adicionar um identificador do usuário ao URL como uma string de consulta. Essa ação permite que você carregue a identidade de um visitante entre domínios, evitando contagens de visitantes duplicadas para conjuntos de dados que incluem domínios ou canais. Ele está disponível nas versões 2.11.0 ou posteriores do SDK da Web.
+O comando `appendIdentityToUrl` permite adicionar um identificador de usuário à URL como uma cadeia de caracteres de consulta. Essa ação permite que você carregue a identidade de um visitante entre domínios, evitando contagens de visitantes duplicadas para conjuntos de dados que incluem domínios ou canais. Ele está disponível nas versões 2.11.0 ou posteriores do SDK da Web.
 
-A sequência de consulta gerada e anexada ao URL é `adobe_mc`. Se o SDK da Web não puder encontrar uma ECID, ele chamará a `/acquire` endpoint para gerar um.
+A cadeia de consulta gerada e anexada à URL é `adobe_mc`. Se o SDK da Web não puder encontrar uma ECID, ele chamará o ponto de extremidade `/acquire` para gerar uma.
 
 >[!NOTE]
 >
@@ -23,24 +23,24 @@ A sequência de consulta gerada e anexada ao URL é `adobe_mc`. Se o SDK da Web 
 
 Anexar uma identidade a um URL é executado como uma ação em uma regra na interface das tags da Coleção de dados da Adobe Experience Platform.
 
-1. Efetue logon no [experience.adobe.com](https://experience.adobe.com) usando suas credenciais do Adobe ID.
-1. Navegue até **[!UICONTROL Coleta de dados]** > **[!UICONTROL Tags]**.
+1. Faça logon em [experience.adobe.com](https://experience.adobe.com) usando suas credenciais da Adobe ID.
+1. Navegue até **[!UICONTROL Coleção de dados]** > **[!UICONTROL Marcas]**.
 1. Selecione a propriedade de tag desejada.
 1. Navegue até **[!UICONTROL Regras]** e selecione a regra desejada.
 1. Em [!UICONTROL Ações], selecione uma ação existente ou crie uma ação.
-1. Defina o [!UICONTROL Extensão] campo suspenso até **[!UICONTROL Adobe Experience Platform Web SDK]** e defina o [!UICONTROL Tipo de ação] para **[!UICONTROL Redirecionar com identidade]**.
-1. Clique em **[!UICONTROL Manter alterações]**, em seguida, execute o fluxo de trabalho de publicação.
+1. Defina o campo suspenso [!UICONTROL Extensão] como **[!UICONTROL Adobe Experience Platform Web SDK]** e defina o [!UICONTROL Tipo de Ação] como **[!UICONTROL Redirecionar com identidade]**.
+1. Clique em **[!UICONTROL Manter alterações]** e execute o fluxo de trabalho de publicação.
 
 Normalmente, esse comando é usado com uma regra específica que ouve cliques e verifica domínios desejados.
 
 +++Critérios de evento da regra
 
-Acionado quando uma tag de âncora com um `href` é clicada.
+Acionado quando um tag de âncora com uma propriedade `href` é clicado.
 
-* **[!UICONTROL Extensão]**: Principal
-* **[!UICONTROL Tipo de evento]**: Clique
-* **[!UICONTROL Quando o usuário clica em]**: Elementos específicos
-* **[!UICONTROL Elementos que correspondem ao seletor de CSS]**: `a[href]`
+* **[!UICONTROL Extensão]**: principal
+* **[!UICONTROL Tipo de evento]**: clique
+* **[!UICONTROL Quando o usuário clicar em]**: elementos específicos
+* **[!UICONTROL Elementos correspondentes ao seletor de CSS]**: `a[href]`
 
 ![Evento de regra](../assets/id-sharing-event-configuration.png)
 
@@ -50,14 +50,14 @@ Condição +++Regra
 
 Aciona somente nos domínios desejados.
 
-* **[!UICONTROL Tipo lógico]**: Regular
-* **[!UICONTROL Extensão]**: Principal
-* **[!UICONTROL Tipo de condição]**: Comparação de valores
-* **[!UICONTROL Operando esquerdo]**: `%this.hostname%`
+* **[!UICONTROL Tipo lógico]**: regular
+* **[!UICONTROL Extensão]**: principal
+* **[!UICONTROL Tipo de Condição]**: Comparação de Valores
+* **[!UICONTROL Operando Esquerdo]**: `%this.hostname%`
 * **[!UICONTROL Operador]**: Corresponde a Regex
 * **[!UICONTROL Operando Direito]**: uma expressão regular que corresponde aos domínios desejados. Por exemplo, `adobe.com$|behance.com$`
 
-![Condição da regra](../assets/id-sharing-condition-configuration.png)
+![Condição de regra](../assets/id-sharing-condition-configuration.png)
 
 +++
 
@@ -66,7 +66,7 @@ Ação +++Regra
 Anexe a identidade ao URL.
 
 * **[!UICONTROL Extensão]**: Adobe Experience Platform Web SDK
-* **[!UICONTROL Tipo de ação]**: Redirecionar com identidade
+* **[!UICONTROL Tipo de ação]**: redirecionar com identidade
 
 ![Ação da regra](../assets/id-sharing-action-configuration.png)
 
@@ -74,7 +74,7 @@ Anexe a identidade ao URL.
 
 ## Anexar identidade ao URL usando a biblioteca JavaScript do SDK da Web
 
-Execute o `appendIdentityToUrl` comando com um URL como parâmetro. O método retorna um URL com o identificador anexado como uma string de consulta.
+Execute o comando `appendIdentityToUrl` com uma URL como parâmetro. O método retorna um URL com o identificador anexado como uma string de consulta.
 
 ```js
 alloy("appendIdentityToUrl",document.location);
@@ -100,4 +100,4 @@ document.addEventListener("click", event => {
 
 ## Objeto de resposta
 
-Se você decidir [lidar com respostas](command-responses.md) com esse comando, o objeto de resposta contém **`url`**, o novo URL com informações de identidade adicionada como parâmetro de sequência de consulta.
+Se você decidir [manipular respostas](command-responses.md) com este comando, o objeto de resposta conterá **`url`**, a nova URL com informações de identidade adicionada como parâmetro de sequência de consulta.

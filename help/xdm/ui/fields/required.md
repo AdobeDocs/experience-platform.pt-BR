@@ -18,9 +18,9 @@ No Experience Data Model (XDM), um campo obrigatório indica que ele deve recebe
 >
 >Independentemente de um campo de esquema ser obrigatório ou não, a Platform não aceita `null` ou valores vazios para qualquer campo assimilado. Se não houver valor para um campo específico em um registro ou evento, a chave desse campo deverá ser excluída da carga de assimilação.
 
-Quando [definição de um novo campo](./overview.md#define) na interface do usuário do Adobe Experience Platform, é possível defini-lo como um campo obrigatório selecionando o **[!UICONTROL Obrigatório]** no painel direito. Selecionar **[!UICONTROL Aplicar]** para aplicar a alteração ao esquema.
+Ao [definir um novo campo](./overview.md#define) na interface do usuário do Adobe Experience Platform, você pode defini-lo como um campo obrigatório marcando a caixa de seleção **[!UICONTROL Obrigatório]** no painel direito. Selecione **[!UICONTROL Aplicar]** para aplicar a alteração ao esquema.
 
-![Caixa de seleção Obrigatória](../../images/ui/fields/required/root.png)
+![Caixa de seleção necessária](../../images/ui/fields/required/root.png)
 
 Se o campo for um atributo de nível raiz sob o objeto de ID do locatário, seu caminho aparecerá imediatamente em **[!UICONTROL Campos obrigatórios]** no painel esquerdo.
 
@@ -28,7 +28,7 @@ Se o campo for um atributo de nível raiz sob o objeto de ID do locatário, seu 
 
 No entanto, se um campo obrigatório estiver aninhado em um objeto que não esteja marcado como obrigatório, o campo aninhado não aparecerá em **[!UICONTROL Campos obrigatórios]** no painel esquerdo.
 
-No exemplo abaixo, a variável `internalSKU` o campo é definido como obrigatório, mas seu objeto principal `SKUs` não é. Nesse caso, não ocorreriam erros de validação se `SKUs` é excluído ao assimilar dados, mesmo que o campo filho `internalSKU` está marcado como obrigatório. Por outras palavras, `SKUs` é opcional e deve conter um `internalSKU` caso seja incluído.
+No exemplo abaixo, o campo `internalSKU` está definido como obrigatório, mas seu objeto pai `SKUs` não está. Nesse caso, nenhum erro de validação ocorrerá se `SKUs` for excluído ao assimilar dados, mesmo que o campo filho `internalSKU` esteja marcado como obrigatório. Em outras palavras, embora `SKUs` seja opcional, ele deve conter um campo `internalSKU` caso seja incluído.
 
 ![Campo obrigatório aninhado](../../images/ui/fields/required/nested.png)
 
@@ -38,4 +38,4 @@ Se quiser que um campo aninhado seja sempre obrigatório em um esquema, também 
 
 ## Próximas etapas
 
-Este guia abordou como definir um campo obrigatório na interface do usuário do. Consulte a visão geral em [definição de campos na interface](./overview.md#special) para saber como definir outros tipos de campo XDM na variável [!DNL Schema Editor].
+Este guia abordou como definir um campo obrigatório na interface do usuário do. Consulte a visão geral em [definindo campos na interface](./overview.md#special) para saber como definir outros tipos de campos XDM no [!DNL Schema Editor].

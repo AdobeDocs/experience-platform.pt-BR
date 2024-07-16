@@ -5,7 +5,7 @@ exl-id: 762a9960-e7a5-4796-80c7-ef745157cc04
 source-git-commit: d4baf6cfaa772e5d46cef470fb35818c7af868b1
 workflow-type: tm+mt
 source-wordcount: '1139'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -15,11 +15,11 @@ Os insights derivados da análise do modelo de dados tornam os dados do Adobe Re
 
 Entenda seus insights de destino acessando o SQL que os capacita e gere seus próprios insights para explorar ainda mais a ativação de dados do Adobe Experience Platform para suas plataformas de destino. Transforme seus dados brutos em novos insights acionáveis usando o SQL modelo de dados do Real-Time CDP existente como inspiração para criar consultas para suas necessidades comerciais exclusivas.
 
-Consulte a [Exibir documentação SQL](../view-sql.md) para obter mais informações sobre como adaptar o SQL dos seus insights diretamente pela interface do Platform.
+Consulte a [Exibir documentação do SQL](../view-sql.md) para obter mais informações sobre como adaptar o SQL dos seus insights diretamente pela interface do PLatform.
 
-Os seguintes insights estão disponíveis para você usar como parte da [Painel de destinos](../guides/destinations.md) ou um personalizado [painel definido pelo usuário](../user-defined-dashboards.md). Consulte a [visão geral da personalização](../customize/overview.md) para obter instruções sobre como personalizar seu painel ou [criar e editar novos widgets](../customize/custom-widgets.md) na biblioteca de widgets e [painel definido pelo usuário](../user-defined-dashboards.md#create-widget).
+Os seguintes insights estão todos disponíveis para você usar como parte do [Painel de destinos](../guides/destinations.md) ou de um [painel definido pelo usuário](../user-defined-dashboards.md) personalizado. Consulte a [visão geral da personalização](../customize/overview.md) para obter instruções sobre como personalizar seu painel ou [criar e editar novos widgets](../customize/custom-widgets.md) na biblioteca de widgets e no [painel definido pelo usuário](../user-defined-dashboards.md#create-widget).
 
-## Públicos ativados {#activated-audiences}
+## Públicos-alvo ativados {#activated-audiences}
 
 Perguntas respondidas por este insight:
 
@@ -48,7 +48,7 @@ WHERE
 
 +++
 
-Consulte a [Documentação do widget Públicos ativados](../guides/destinations.md#activated-audiences) para obter informações sobre a aparência e a funcionalidade desse insight.
+Consulte a [documentação do widget Públicos ativados](../guides/destinations.md#activated-audiences) para obter informações sobre a aparência e a funcionalidade desse insight.
 
 ## Públicos ativados em todos os destinos {#activated-audiences-across-all-destinations}
 
@@ -71,7 +71,7 @@ WHERE
 
 +++
 
-Consulte a [Documentação do widget Públicos ativados em todos os destinos](../guides/destinations.md#activated-audiences-across-all-destinations) para obter informações sobre a aparência e a funcionalidade desse insight.
+Consulte a [documentação do widget Públicos ativados em todos os destinos](../guides/destinations.md#activated-audiences-across-all-destinations) para obter informações sobre a aparência e a funcionalidade desse insight.
 
 ## Destinos ativos por plataforma de destino {#active-destinations-by-destination-platform}
 
@@ -96,7 +96,7 @@ SELECT destination_platform_name AS Destination_Platform_Name,
 
 +++
 
-Consulte a [Documentação do widget Destinos ativos por plataforma de destino](../guides/destinations.md#active-destinations-by-destination-platform) para obter informações sobre a aparência e a funcionalidade desse insight.
+Consulte a [documentação do widget Destinos ativos por plataforma de destino](../guides/destinations.md#active-destinations-by-destination-platform) para obter informações sobre a aparência e a funcionalidade desse insight.
 
 ## Tendência de tamanho do público-alvo {#audience-size-trend}
 
@@ -142,7 +142,7 @@ SELECT d.destination_name,
 
 +++
 
-Consulte a [Documentação do widget de tendência de tamanho do público](../guides/destinations.md#audience-size-trend) para obter informações sobre a aparência e a funcionalidade desse insight.
+Consulte a [Documentação do widget Tendência de tamanho de público](../guides/destinations.md#audience-size-trend) para obter informações sobre a aparência e a funcionalidade desse insight.
 
 ## Públicos-alvo comuns {#common-audiences}
 
@@ -214,7 +214,7 @@ SELECT k.destination_name1,
 
 +++
 
-Consulte a [Documentação do widget Públicos-alvo comuns](../guides/destinations.md#common-audiences) para obter informações sobre a aparência e a funcionalidade desse insight.
+Consulte a [documentação do widget Públicos-alvo comuns](../guides/destinations.md#common-audiences) para obter informações sobre a aparência e a funcionalidade desse insight.
 
 ## Status do destino {#destination-status}
 
@@ -238,7 +238,7 @@ FROM qsaccel.profile_agg.adwh_dim_destination;
 
 +++
 
-Consulte a [Documentação do widget de status de destino](../guides/destinations.md#destination-status) para obter informações sobre a aparência e a funcionalidade desse insight.
+Consulte a [Documentação do widget de status de destino](../guides/destinations.md#destination-status) para obter informações sobre a aparência e a funcionalidade deste insight.
 
 ## Contagem de destinos {#destinations-count}
 
@@ -256,7 +256,7 @@ SELECT count(destination_id) AS total_number_of_destinations
 
 +++
 
-Consulte a [Documentação do widget de contagem de destinos](../guides/destinations.md#destinations-count) para obter informações sobre a aparência e a funcionalidade desse insight.
+Consulte a [documentação do widget Contagem de destinos](../guides/destinations.md#destinations-count) para obter informações sobre a aparência e a funcionalidade deste insight.
 
 ## Integridade do público mapeado {#mapped-audience-health}
 
@@ -325,9 +325,9 @@ SELECT destination_name,
 
 +++
 
-Consulte a [Documentação do widget de integridade do público mapeado](../guides/destinations.md#mapped-audience-health) para obter informações sobre a aparência e a funcionalidade desse insight.
+Consulte a [documentação do widget de integridade do público-alvo mapeado](../guides/destinations.md#mapped-audience-health) para obter informações sobre a aparência e a funcionalidade desse insight.
 
-## Públicos mapeados {#mapped-audiences}
+## Públicos-alvo mapeados {#mapped-audiences}
 
 Perguntas respondidas por este insight:
 
@@ -345,7 +345,7 @@ WHERE destination_id = 1458738325;
 
 +++
 
-Consulte a [Documentação do widget Públicos mapeados](../guides/destinations.md#mapped-audiences) para obter informações sobre a aparência e a funcionalidade desse insight.
+Consulte a [documentação do widget Públicos mapeados](../guides/destinations.md#mapped-audiences) para obter informações sobre a aparência e a funcionalidade desse insight.
 
 <!-- Commented out until the Jan release as the SQL IS MISSING:
 ## Mapped audiences by identity {#mapped-audiences-by-identity}
@@ -393,7 +393,7 @@ SELECT qsaccel.profile_agg.adwh_dim_destination.destination_name,
 
 +++
 
-Consulte a [Documentação do widget de destinos mais usados](../guides/destinations.md#most-used-destinations) para obter informações sobre a aparência e a funcionalidade desse insight.
+Consulte a [Documentação do widget de destinos mais usados](../guides/destinations.md#most-used-destinations) para obter informações sobre a aparência e a funcionalidade deste insight.
 
 ## Públicos-alvo ativados recentemente {#recently-activated-audiences}
 
@@ -424,7 +424,7 @@ LIMIT
 
 +++
 
-Consulte a [Documentação do widget Públicos ativados recentemente](../guides/destinations.md#recently-activated-audiences) para obter informações sobre a aparência e a funcionalidade desse insight.
+Consulte a [Documentação do widget Públicos recentemente ativados](../guides/destinations.md#recently-activated-audiences) para obter informações sobre a aparência e a funcionalidade desse insight.
 
 ## Públicos-alvo ativados recentemente por destino {#recently-activated-audiences-by-destination}
 
@@ -455,7 +455,7 @@ SELECT c.destination_name,
 
 +++
 
-Consulte a [Documentação de widgets Públicos ativados recentemente por destino](../guides/destinations.md#recently-activated-audiences-by-destination) para obter informações sobre a aparência e a funcionalidade desse insight.
+Consulte a [Documentação de widget Públicos recentemente ativados por destino](../guides/destinations.md#recently-activated-audiences-by-destination) para obter informações sobre a aparência e a funcionalidade deste insight.
 
 ## Destinos criados recentemente {#recently-created-destinations}
 
@@ -484,7 +484,7 @@ LIMIT
 
 +++
 
-Consulte a [Documentação de widget de destinos criados recentemente](../guides/destinations.md#recently-created-destinations) para obter informações sobre a aparência e a funcionalidade desse insight.
+Consulte a [Documentação do widget de destinos recém-criado](../guides/destinations.md#recently-created-destinations) para obter informações sobre a aparência e a funcionalidade deste insight.
 
 <!-- Commented out until the Jan release as SQL MISSING FROM WIKI:
 
@@ -511,6 +511,6 @@ See the [Unmapped audiences by identity widget documentation](../guides/destinat
 
 Ao ler este documento, você agora entende o SQL que gera insights de painel e quais perguntas comuns essa análise resolve. Agora você pode editar e iterar essas consultas SQL para gerar seus próprios insights.
 
-Consulte a [Exibir documentação SQL](../view-sql.md) para obter mais informações sobre como adaptar o SQL dos seus insights diretamente pela interface do Platform.
+Consulte a [Exibir documentação do SQL](../view-sql.md) para obter mais informações sobre como adaptar o SQL dos seus insights diretamente pela interface do PLatform.
 
-Você também pode ler e entender o SQL que gera insights para o [Perfis](./profiles.md), [Perfis de conta](./account-profiles.md) e [Públicos-alvo](./audiences.md) painéis.
+Você também pode ler e entender o SQL que gera insights para os painéis [Perfis](./profiles.md), [Perfis de Conta](./account-profiles.md) e [Públicos-alvo](./audiences.md).

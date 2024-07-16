@@ -4,8 +4,8 @@ description: As notas de versão mais recentes da extensão principal no Adobe E
 exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
 source-git-commit: 4f75bbfee6b550552d2c9947bac8540a982297eb
 workflow-type: tm+mt
-source-wordcount: '1644'
-ht-degree: 62%
+source-wordcount: '1632'
+ht-degree: 60%
 
 ---
 
@@ -31,7 +31,7 @@ v3.4.1
       * Query String Parameter
       * Traffic Source
       * Variable
-* Altera o delegado events/EntersViewport para usar o [API do observador de interseção](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) em vez da detecção manual de elementos que entram no visor.
+* Altera o representante events/EntersViewport para usar a [API de Observador de Interseção](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) em vez da detecção manual de elementos que entram no visor.
 * Remove o código que estava migrando cookies do DTM para o LocalStorage.
 * Registra um aviso no console quando as APIs LocalStorage e SessionStorage não estão disponíveis.
 
@@ -39,7 +39,7 @@ v3.4.1
 
 v3.3.0
 
-* Altera o [Acionar ação de chamada direta](./overview.md#direct-call-action) para que você possa fornecer informações de evento personalizadas para enviar para as regras de chamada direta.
+* Altera a [ação de Acionar Chamada Direta](./overview.md#direct-call-action) para que você possa fornecer informações de evento personalizadas para enviar a regras de chamada direta.
 
 ## 8 de outubro de 2021
 
@@ -79,7 +79,7 @@ Novos elementos de dados foram adicionados:
 * Objeto mesclado - Selecione vários elementos de dados que fornecerão um objeto. Esses objetos serão profundamente (recursivamente) mesclados para produzir um novo objeto.
 * Valor condicional - Retorna um dos dois valores (conditionalValue ou fallbackValue) com base no resultado da comparação.
 * Ambiente de tempo de execução - Retorna uma das seguintes variáveis de ambiente do Launch: estágio do ambiente, data de criação da biblioteca, nome da propriedade, ID da propriedade, nome da regra, ID da regra, tipo de evento, carga de detalhes do evento, identificador de chamada direta.
-* Ferramentas JavaScript - Wrapper para operações JavaScript comuns: manipulação básica de string (replace, substring, regex match, first e last index, split, slice), operações básicas de array (slice, join, pop, shift) e operações universais básicas (slice, length).
+* Ferramentas do JavaScript - Wrapper para operações comuns do JavaScript: manipulação básica de string (replace, substring, regex match, first e last index, split, slice), operações básicas de array (slice, join, pop, shift) e operações universais básicas (slice, length).
 * Atributos do dispositivo - Retorna atributos do dispositivo como tamanho da janela ou tamanho da tela.
 
 ## 11 de agosto de 2021
@@ -88,7 +88,7 @@ v3.0.0
 
 * PDCL-6153: adiciona suporte para obter de forma confiável o URL totalmente qualificado para ações de código personalizado em cache.
 
-A v3.0.0 da Extensão principal é combinada com alterações no [v27.2.0 do tempo de execução da Web do Turbine](https://github.com/adobe/reactor-turbine/releases/tag/v27.2.0), que permite que os usuários carreguem sua biblioteca entre muitas regiões de hospedagem gerenciadas por Adobe se a empresa do usuário suportar o CDN Premium.
+A v3.0.0 da Extensão principal é combinada com alterações no [v27.2.0 do tempo de execução da Web do Turbine](https://github.com/adobe/reactor-turbine/releases/tag/v27.2.0), que permite que os usuários carreguem sua biblioteca entre muitas regiões de hospedagem gerenciadas por Adobe se a empresa do usuário oferecer suporte à CDN Premium.
 
 Essa atualização é opcional e compatível com versões anteriores para usuários sem a CDN Premium e obrigatória para clientes que têm a CDN Premium ativada em suas empresas.
 
@@ -117,7 +117,7 @@ v2.0.4
 
 * Adição de Suporte ao elemento de dados para vários campos - O suporte ao elemento de dados foi adicionado aos seguintes eventos: &quot;Tempo na página&quot;, &quot;Insere Viewport&quot;, &quot;Passe o mouse&quot; e &quot;Tempo de mídia reproduzido&quot;. Além das seguintes condições: &quot;Tempo no site&quot; e &quot;Comparação de valores&quot;
 * Adiciona suporte para comportamento padrão para ctrl/cmd + clique e clique do meio do mouse ao usar o atraso de link
-* **Atraso de link marcado no evento de clique como &quot;não é mais compatível&quot;.** — mais informações podem ser encontradas no [Blog de coleção de dados](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/explainer-link-delay/ba-p/398403) da Adobe Experience Platform
+* **Atraso de link marcado no evento de clique como &quot;não é mais suportado&quot;.** — mais informações podem ser encontradas no [Blog de coleção de dados](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/explainer-link-delay/ba-p/398403) da Adobe Experience Platform
 
 ## 6 de janeiro de 2021
 
@@ -181,7 +181,7 @@ v1.6.2
 
 v1.6.1
 
-* **Suporte para CSP Nonce** - a extensão principal agora tem um parâmetro de configuração opcional. Você pode adicionar um elemento de dados que faça referência a um nonce. Se configurado, todos os scripts incorporados adicionados pela tag à página usarão o nonce que você configurou. Essa alteração aceita o uso de uma Política de segurança de conteúdo com um nonce para que os scripts de tag ainda possam ser carregados em um ambiente CSP. Você pode ler mais sobre como usar tags com um CSP [aqui](../../../ui/client-side/content-security-policy.md).
+* **Suporte para CSP Nonce** - a extensão principal agora tem um parâmetro de configuração opcional. Você pode adicionar um elemento de dados que faça referência a um nonce. Se configurado, todos os scripts incorporados adicionados pela tag à página usarão o nonce que você configurou. Essa alteração aceita o uso de uma Política de segurança de conteúdo com um nonce para que os scripts de tag ainda possam ser carregados em um ambiente CSP. Você pode ler mais sobre como usar marcas com um CSP [aqui](../../../ui/client-side/content-security-policy.md).
 
 ## 18 de junho de 2019
 
@@ -210,7 +210,7 @@ v1.4.2
 
 * **Opção Persisti Cohort** - A opção para persistir uma cohort foi adicionada à condição de amostragem. Essa opção tem o efeito de manter um usuário dentro ou fora da coorte de amostra nas sessões. Por exemplo, se a caixa de seleção &quot;persist cohort&quot; estiver marcada e a condição retornar &quot;true&quot; na primeira vez em que for executada para um determinado visitante, ela retornará &quot;true&quot; em todas as execuções subsequentes da condição para o mesmo visitante. Da mesma forma, se a caixa de seleção &quot;persist cohort&quot; estiver marcada e a condição retornar &quot;false&quot; na primeira vez em que for executada para um determinado visitante, ela retornará &quot;false&quot; em todas as execuções subsequentes da condição para o mesmo visitante.
 * **Correção de erros** — foi corrigido um problema em que uma regra que usava um evento Page Bottom e uma ação de código personalizado em uma página em que tags estavam sendo carregadas sincronicamente, mas estavam incorretamente instaladas (sem chamada para `_satellite.pageBottom()`) limpava o conteúdo do site.
-* **Correção de erros** - Correção de um problema em que Enters Viewport não funcionava se a biblioteca de tags fosse carregada de forma assíncrona e terminasse de ser carregada após o evento DOMContentLoaded do navegador ser disparado.
+* **Correção de erros** - Corrigido um problema em que a opção Enters Viewport não funcionava se a biblioteca de marcas fosse carregada de forma assíncrona e terminasse de ser carregada após o evento DOMContentLoaded do navegador ser disparado.
 
 ## 24 de maio de 2018
 

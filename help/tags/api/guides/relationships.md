@@ -4,7 +4,7 @@ description: Saiba como as relações de recursos são estabelecidas na API do r
 exl-id: 23976978-a639-4eef-91b6-380a29ec1c14
 source-git-commit: 7e4bc716e61b33563e0cb8059cb9f1332af7fd36
 workflow-type: tm+mt
-source-wordcount: '762'
+source-wordcount: '809'
 ht-degree: 99%
 
 ---
@@ -150,8 +150,8 @@ As tabelas a seguir descrevem as relações disponíveis para cada tipo de recur
 
 | Relação | Obrigatório | Criar por carga | Criar por URL |
 | :--- | :---: | :---: | :---: |
-| `property` | ✓ |  |  |
-| `entity` | ✓ |  |  |
+| `property` | ✓ | | |
+| `entity` | ✓ | | |
 
 {style="table-layout:auto"}
 
@@ -159,12 +159,12 @@ As tabelas a seguir descrevem as relações disponíveis para cada tipo de recur
 
 | Relação | Obrigatório | Criar por carga | Criar por URL |
 | :--- | :---: | :---: | :---: |
-| `data_elements` |  |  |  |
-| `extensions` |  |  |  |
-| `rules` |  |  |  |
-| `environment` | ✓ |  |  |
-| `library` | ✓ |  |  |
-| `property` | ✓ |  |  |
+| `data_elements` | | | |
+| `extensions` | | | |
+| `rules` | | | |
+| `environment` | ✓ | | |
+| `library` | ✓ | | |
+| `property` | ✓ | | |
 
 {style="table-layout:auto"}
 
@@ -172,7 +172,7 @@ As tabelas a seguir descrevem as relações disponíveis para cada tipo de recur
 
 | Relação | Obrigatório | Criar por carga | Criar por URL |
 | :--- | :---: | :---: | :---: |
-| `property` | ✓ |  |  |
+| `property` | ✓ | | |
 
 {style="table-layout:auto"}
 
@@ -180,7 +180,7 @@ As tabelas a seguir descrevem as relações disponíveis para cada tipo de recur
 
 | Relação | Obrigatório | Criar por carga | Criar por URL |
 | :--- | :---: | :---: | :---: |
-| `properties` |  |  |  |
+| `properties` | | | |
 
 {style="table-layout:auto"}
 
@@ -188,14 +188,14 @@ As tabelas a seguir descrevem as relações disponíveis para cada tipo de recur
 
 | Relação | Obrigatório | Criar por carga | Criar por URL |
 | :--- | :---: | :---: | :---: |
-| `libraries` |  |  |  |
-| `revisions` | ✓ |  |  |
-| `notes` |  |  |  |
-| `property` | ✓ |  |  |
-| `origin` | ✓ |  |  |
-| `extension` | ✓ | ✓ |  |
-| `updated_with_extension` | ✓ |  |  |
-| `updated_with_extension_package` | ✓ |  |  |
+| `libraries` | | | |
+| `revisions` | ✓ | | |
+| `notes` | | | |
+| `property` | ✓ | | |
+| `origin` | ✓ | | |
+| `extension` | ✓ | ✓ | |
+| `updated_with_extension` | ✓ | | |
+| `updated_with_extension_package` | ✓ | | |
 
 {style="table-layout:auto"}
 
@@ -203,10 +203,10 @@ As tabelas a seguir descrevem as relações disponíveis para cada tipo de recur
 
 | Relação | Obrigatório | Criar por carga | Criar por URL |
 | :--- | :---: | :---: | :---: |
-| `library` |  |  |  |
-| `builds` |  |  |  |
-| `host` | ✓ | ✓ |  |
-| `property` | ✓ |  |  |
+| `library` | | | |
+| `builds` | | | |
+| `host` | ✓ | ✓ | |
+| `property` | ✓ | | |
 
 {style="table-layout:auto"}
 
@@ -214,13 +214,13 @@ As tabelas a seguir descrevem as relações disponíveis para cada tipo de recur
 
 | Relação | Obrigatório | Criar por carga | Criar por URL |
 | :--- | :---: | :---: | :---: |
-| `libraries` |  |  |  |
-| `revisions` | ✓ |  |  |
-| `notes` |  |  |  |
-| `property` | ✓ |  |  |
-| `origin` | ✓ |  |  |
-| `extension_package` | ✓ | ✓ |  |
-| `updated_with_extension_package` | ✓ |  |  |
+| `libraries` | | | |
+| `revisions` | ✓ | | |
+| `notes` | | | |
+| `property` | ✓ | | |
+| `origin` | ✓ | | |
+| `extension_package` | ✓ | ✓ | |
+| `updated_with_extension_package` | ✓ | | |
 
 {style="table-layout:auto"}
 
@@ -228,7 +228,7 @@ As tabelas a seguir descrevem as relações disponíveis para cada tipo de recur
 
 | Relação | Obrigatório | Criar por carga | Criar por URL |
 | :--- | :---: | :---: | :---: |
-| `property` | ✓ |  |  |
+| `property` | ✓ | | |
 
 {style="table-layout:auto"}
 
@@ -236,15 +236,15 @@ As tabelas a seguir descrevem as relações disponíveis para cada tipo de recur
 
 | Relação | Obrigatório | Criar por carga | Criar por URL |
 | :--- | :---: | :---: | :---: |
-| `builds` |  |  |  |
-| `environment` |  |  | ✓ |
-| `data_elements` |  |  | ✓ |
-| `extensions` |  |  | ✓ |
-| `rules` |  |  | ✓ |
-| `notes` |  |  |  |
-| `upstream_library` | ✓ |  |  |
-| `property` | ✓ |  |  |
-| `last_build` |  |  |  |
+| `builds` | | | |
+| `environment` | | | ✓ |
+| `data_elements` | | | ✓ |
+| `extensions` | | | ✓ |
+| `rules` | | | ✓ |
+| `notes` | | | |
+| `upstream_library` | ✓ | | |
+| `property` | ✓ | | |
+| `last_build` | | | |
 
 {style="table-layout:auto"}
 
@@ -252,7 +252,7 @@ As tabelas a seguir descrevem as relações disponíveis para cada tipo de recur
 
 | Relação | Obrigatório | Criar por carga | Criar por URL |
 | :--- | :---: | :---: | :---: |
-| `resource` | ✓ |  |  |
+| `resource` | ✓ | | |
 
 {style="table-layout:auto"}
 
@@ -260,13 +260,13 @@ As tabelas a seguir descrevem as relações disponíveis para cada tipo de recur
 
 | Relação | Obrigatório | Criar por carga | Criar por URL |
 | :--- | :---: | :---: | :---: |
-| `company` | ✓ |  |  |
-| `callbacks` |  |  |  |
-| `environments` |  |  |  |
-| `libraries` |  |  |  |
-| `data_elements` |  |  |  |
-| `extensions` |  |  |  |
-| `extensions` |  |  |  |
+| `company` | ✓ | | |
+| `callbacks` | | | |
+| `environments` | | | |
+| `libraries` | | | |
+| `data_elements` | | | |
+| `extensions` | | | |
+| `extensions` | | | |
 
 {style="table-layout:auto"}
 
@@ -274,14 +274,14 @@ As tabelas a seguir descrevem as relações disponíveis para cada tipo de recur
 
 | Relação | Obrigatório | Criar por carga | Criar por URL |
 | :--- | :---: | :---: | :---: |
-| `updated_with_extensions_package` | ✓ |  |  |
-| `updated_with_extension` | ✓ |  |  |
-| `extension` | ✓ | ✓ |  |
-| `notes` |  |  |  |
-| `origin` | ✓ |  |  |
-| `property` | ✓ |  |  |
-| `rules` | ✓ | ✓ |  |
-| `revisions` | ✓ |  |  |
+| `updated_with_extensions_package` | ✓ | | |
+| `updated_with_extension` | ✓ | | |
+| `extension` | ✓ | ✓ | |
+| `notes` | | | |
+| `origin` | ✓ | | |
+| `property` | ✓ | | |
+| `rules` | ✓ | ✓ | |
+| `revisions` | ✓ | | |
 
 {style="table-layout:auto"}
 
@@ -289,17 +289,17 @@ As tabelas a seguir descrevem as relações disponíveis para cada tipo de recur
 
 | Relação | Obrigatório | Criar por carga | Criar por URL |
 | :--- | :---: | :---: | :---: |
-| `libraries` |  |  |  |
-| `revisions` | ✓ |  |  |
-| `notes` |  |  |  |
-| `property` | ✓ |  |  |
-| `origin` | ✓ |  |  |
-| `rule_components` |  |  |  |
+| `libraries` | | | |
+| `revisions` | ✓ | | |
+| `notes` | | | |
+| `property` | ✓ | | |
+| `origin` | ✓ | | |
+| `rule_components` | | | |
 
 ### Segredos
 
 | Relação | Obrigatório | Criar por carga | Criar por URL |
 | :--- | :---: | :---: | :---: |
-| `property` | ✓ |  | ✓ |
-| `environment` | ✓ | ✓ |  |
+| `property` | ✓ | | ✓ |
+| `environment` | ✓ | ✓ | |
 

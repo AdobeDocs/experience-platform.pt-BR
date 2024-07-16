@@ -15,11 +15,11 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Os itens de ação do cliente nessa página se aplicam se sua organização tiver configurado fluxos de dados para exportar dados para o Pinterest antes de 16 de novembro de 2023, data em que o novo **[!UICONTROL Pinterest]** O destino, usando a API mais recente do Pinterest, foi adicionado ao catálogo de destinos.
+>Os itens de ação do cliente nesta página se aplicam se sua organização tiver configurado fluxos de dados para exportar dados para o Pinterest antes de 16 de novembro de 2023, data em que o novo destino **[!UICONTROL Pinterest]**, usando a API mais recente do Pinterest, foi adicionado ao catálogo de destinos.
 
 ## O que está acontecendo?
 
-O pinterest substituiu a API do anunciante v4 que foi usada pelo [Destino do pinterest](/help/destinations/catalog/advertising/pinterest.md) no Real-Time CDP. Adobe atualizou o destino para usar o [API do anunciante v5](https://developers.pinterest.com/docs/getting-started/migration/). Leia esta página para entender seus itens de ação e fazer a transição para a nova API sem interrupção das campanhas do Pinterest.
+O pinterest substituiu a API v4 do anunciante que foi usada pelo [destino do Pinterest](/help/destinations/catalog/advertising/pinterest.md) no Real-Time CDP. O Adobe atualizou o destino para usar a [v5 API do anunciante](https://developers.pinterest.com/docs/getting-started/migration/). Leia esta página para entender seus itens de ação e fazer a transição para a nova API sem interrupção das campanhas do Pinterest.
 
 ## Por que estou sendo notificado?
 
@@ -35,21 +35,21 @@ Sim, antes de 18 de janeiro de 2024, é necessário autenticar no novo destino d
 
 ### Reautenticar no Pinterest {#reauthenticate}
 
-1. Ir para **[!UICONTROL Destinos > Contas]** e use o filtro na tela para filtrar somente o destino do Pinterest.
-   ![Filtrar somente contas do Pinterest](/help/destinations/assets/catalog/advertising/pinterest-migration/filter-pinterest-acconts-only.png)
-2. No **Pinterest** , selecione o símbolo de três pontos ... e selecione **[!UICONTROL Editar detalhes]**.
+1. Vá para **[!UICONTROL Destinos > Contas]** e use o filtro na tela para filtrar somente o destino do Pinterest.
+   ![Filtrar apenas contas do Pinterest](/help/destinations/assets/catalog/advertising/pinterest-migration/filter-pinterest-acconts-only.png)
+2. No destino **Pinterest**, selecione o símbolo de três pontos ... e selecione **[!UICONTROL Editar detalhes]**.
    ![Selecione Editar detalhes](/help/destinations/assets/catalog/advertising/pinterest-migration/edit-details-pinterest.png)
-3. Selecionar **[!UICONTROL Reconectar OAuth]** e faça logon na sua conta da Pinterest.
-   ![Selecione Reconectar OAuth](/help/destinations/assets/catalog/advertising/pinterest-migration/reconnect-oauth-pinterest.png)
+3. Selecione **[!UICONTROL Reconectar OAuth]** e faça logon em sua conta da Pinterest.
+   ![Selecionar Reconectar OAuth](/help/destinations/assets/catalog/advertising/pinterest-migration/reconnect-oauth-pinterest.png)
 4. Vá para o item de ação na seção abaixo
 
 ### Habilitar fluxos para novo destino {#disable-old-enable-new-flows}
 
-Em seguida, é necessário ativar os fluxos de dados para o novo  **[!UICONTROL Pinterest]** cartão.
+Em seguida, é necessário habilitar os fluxos de dados para o novo cartão **[!UICONTROL Pinterest]**.
 
-1. Ir para **[!UICONTROL Destinos > Navegar]** e use o filtro na tela para filtrar a variável **[!UICONTROL Pinterest]** somente destino.
+1. Vá para **[!UICONTROL Destinos > Procurar]** e use o filtro na tela para filtrar somente o destino **[!UICONTROL Pinterest]**.
    ![Filtrar fluxos de dados do Pinterest somente na guia Procurar](/help/destinations/assets/catalog/advertising/pinterest-migration/filter-pinterest-browse.png)
-2. Selecione o nome da conexão com hiperlink (Campanha de fidelidade no exemplo de captura de tela acima) para o **[!UICONTROL Pinterest]** destino e alterne o **[!UICONTROL Ativar]** alternar para **em**.
+2. Selecione o nome da conexão com hiperlink (Campanha de fidelidade no exemplo da captura de tela acima) para o destino **[!UICONTROL Pinterest]** e alterne a opção **[!UICONTROL Habilitar]** para **em**.
    ![Ativar para novas conexões e desativar para conexões antigas](/help/destinations/assets/catalog/advertising/pinterest-migration/enable-disable-toggle-new-destination.png)
 
 <!--
@@ -75,9 +75,9 @@ Sim, veja abaixo:
 
 -->
 
-**Até 15 de dezembro de 2023**: <span class="preview">Ação do cliente 1</span>. É necessário autenticar novamente no Pinterest para que o novo cartão seja conectado ao Pinterest. Exibir instruções completas em [nesta seção](#reauthenticate).
+**Até 15 de dezembro de 2023**: <span class="preview">Ação do cliente 1</span>. É necessário autenticar novamente no Pinterest para que o novo cartão seja conectado ao Pinterest. Exibir instruções completas em [esta seção](#reauthenticate).
 
-<span class="preview">Ação do cliente 2</span>Em seguida, é necessário ativar os fluxos de dados no novo cartão. Exibir instruções completas em [nesta seção](#disable-old-enable-new-flows).
+<span class="preview">Ação do cliente 2</span>.Em seguida, é necessário habilitar os fluxos de dados no novo cartão. Exibir instruções completas em [esta seção](#disable-old-enable-new-flows).
 
 <!--
 
@@ -87,7 +87,7 @@ Sim, veja abaixo:
 
 -->
 
-**Depois de 18 de janeiro de 2024**: <span class="preview">O pinterest desativou o acesso à API do anunciante V4. Todos os clientes do Real-Time CDP que não atualizaram para o novo destino agora encontrarão falhas nos fluxos de dados para o destino do Pinterest. [Reautenticar no Pinterest](#reauthenticate) e [ativar os fluxos de dados](#disable-old-enable-new-flows) ao destino atualizado para retomar suas campanhas para o Pinterest.</span>
+**Após 18 de janeiro de 2024**: <span class="preview">o Pinterest desativou o acesso à API do anunciante V4. Todos os clientes do Real-Time CDP que não atualizaram para o novo destino agora encontrarão falhas nos fluxos de dados para o destino do Pinterest. [Refaça a autenticação no Pinterest](#reauthenticate) e [habilite os fluxos de dados](#disable-old-enable-new-flows) para o destino atualizado para retomar suas campanhas no Pinterest.</span>
 
 <!--
 

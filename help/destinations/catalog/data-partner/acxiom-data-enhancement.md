@@ -15,21 +15,21 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->A variável [!DNL Acxiom Data Enhancement] o destino está na versão beta.  Esse conector de destino e a página de documentação são criados e mantidos pela equipe da Acxiom. Para quaisquer consultas ou solicitações de atualização, entre em contato diretamente em acxiom-adobe-help@acxiom.com.
+>O destino [!DNL Acxiom Data Enhancement] está na versão beta.  Esse conector de destino e a página de documentação são criados e mantidos pela equipe da Acxiom. Para quaisquer consultas ou solicitações de atualização, entre em contato diretamente em acxiom-adobe-help@acxiom.com.
 
 ## Visão geral {#overview}
 
-Use o [!DNL Acxiom Data Enhancement] conector para fornecer dados descritivos adicionais aos perfis do cliente, para uso em aplicativos de análise, segmentação e direcionamento. Com centenas de elementos disponíveis, você pode segmentar e modelar melhor os dados, resultando em direcionamento mais preciso e modelagem preditiva.
+Use o conector [!DNL Acxiom Data Enhancement] para fornecer dados descritivos adicionais aos perfis do cliente, para uso em aplicativos de análise, segmentação e direcionamento. Com centenas de elementos disponíveis, você pode segmentar e modelar melhor os dados, resultando em direcionamento mais preciso e modelagem preditiva.
 
 ![Diagrama de marketing para exportar dados primários para a Acxiom e, em seguida, importar dados enriquecidos de volta para o Real-Time CDP](/help/destinations/assets/catalog/data-partner/acxiom/marketing-workflow-data-enhancement.png)
 
-Este tutorial fornece etapas para criar um [!DNL Acxiom Data Enhancement] conexão de destino e fluxo de dados usando a interface do usuário do Adobe Experience Platform. Esse conector é usado para fornecer dados ao serviço de aprimoramento da Acxiom usando o Amazon S3 como ponto de queda.
+Este tutorial fornece etapas para criar uma conexão de destino e um fluxo de dados do [!DNL Acxiom Data Enhancement] usando a interface do usuário do Adobe Experience Platform. Esse conector é usado para fornecer dados ao serviço de aprimoramento da Acxiom usando o Amazon S3 como ponto de queda.
 
 ![O catálogo de destino com o destino Acxiom selecionado.](../../assets/catalog/data-partner/acxiom/image-destination-enhancement-catalog.png)
 
 ## Casos de uso {#use-cases}
 
-Para ajudá-lo a entender melhor como e quando você deve usar o [!DNL Acxiom Data Enhancement] destino, aqui estão exemplos de casos de uso que os clientes do Adobe Experience Platform podem resolver usando esse destino.
+Para ajudá-lo a entender melhor como e quando você deve usar o destino [!DNL Acxiom Data Enhancement], veja a seguir exemplos de casos de uso que os clientes da Adobe Experience Platform podem resolver usando esse destino.
 
 ### Aprimorar os dados do cliente {#enhance-customer-data}
 
@@ -41,14 +41,14 @@ O caso de uso é executado por meio de uma combinação de conectores de destino
 
 Você pode começar exportando seus registros de clientes existentes para enriquecimento usando esse conector de destino. O serviço da Acxiom pesquisaria o arquivo, recuperaria-o, enriqueceria-o com os dados da Acxiom e geraria um arquivo.
 
-Em seguida, o cliente utilizaria o [Assimilação de dados da Acxiom](/help/sources/connectors/data-partners/acxiom-data-ingestion.md) cartão-fonte para assimilar os perfis hidratados do cliente de volta na Adobe Real-Time CDP.
+O cliente usaria o cartão de origem [Assimilação de dados da Acxiom](/help/sources/connectors/data-partners/acxiom-data-ingestion.md) correspondente para assimilar os perfis hidratados do cliente de volta na Adobe Real-Time CDP.
 
 ## Pré-requisitos {#prerequisites}
 
 >[!IMPORTANT]
 >
->* Para se conectar ao destino, você precisa da variável **[!UICONTROL Exibir destinos]** e **[!UICONTROL Gerenciar destinos]**, **[!UICONTROL Ativar destinos]**, **[!UICONTROL Exibir perfis]**, e **[!UICONTROL Exibir segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
->* Para exportar *identidades*, você precisará do **[!UICONTROL Exibir gráfico de identidade]** [permissão de controle de acesso](/help/access-control/home.md#permissions). <br> ![Selecione o namespace de identidade destacado no fluxo de trabalho para ativar públicos para destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecione o namespace de identidade destacado no fluxo de trabalho para ativar públicos para destinos."){width="100" zoomable="yes"}
+>* Para se conectar ao destino, você precisa de **[!UICONTROL Exibir Destinos]** e **[!UICONTROL Gerenciar Destinos]**, **[!UICONTROL Ativar Destinos]**, **[!UICONTROL Exibir Perfis]** e **[!UICONTROL Exibir Segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
+>* Para exportar *identidades*, você precisa da **[!UICONTROL permissão Exibir Gráfico de Identidade]** [controle de acesso](/help/access-control/home.md#permissions). <br> ![Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos."){width="100" zoomable="yes"}
 
 ## Públicos-alvo compatíveis {#supported-audiences}
 
@@ -56,8 +56,8 @@ Esta seção descreve que tipo de público-alvo você pode exportar para esse de
 
 | Origem do público | Suportado | Descrição |
 |-----------------------------|-----------|---------------------------------------------------------------------------------------------------------------------|
-| [!DNL Segmentation Service] | ✓ | Públicos-alvo gerados pelo Experience Platform [Serviço de segmentação](../../../segmentation/home.md). |
-| Uploads personalizados | x | Públicos-alvo [importado](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV. |
+| [!DNL Segmentation Service] | ✓ | Públicos gerados por meio do [Serviço de segmentação](../../../segmentation/home.md) do Experience Platform. |
+| Uploads personalizados | x | Públicos [importados](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV. |
 
 {style="table-layout:auto"}
 
@@ -68,8 +68,8 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 
 | Item | Tipo | Notas |
 |------------------|--------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Tipo de exportação | **[!UICONTROL Baseado em perfil]** | Você está exportando todos os membros de um segmento, juntamente com os campos de esquema desejados (por exemplo: endereço de email, número de telefone, sobrenome), conforme escolhido na tela selecionar atributos de perfil da [workflow de ativação de destino](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
-| Frequência de exportação | **[!UICONTROL Lote]** | Os destinos em lote exportam arquivos para plataformas downstream em incrementos de três, seis, oito, doze ou vinte e quatro horas. Leia mais sobre [destinos baseados em arquivo em lote](/help/destinations/destination-types.md#file-based). |
+| Tipo de exportação | **[!UICONTROL Baseado em perfil]** | Você está exportando todos os membros de um segmento, juntamente com os campos de esquema desejados (por exemplo: endereço de email, número de telefone, sobrenome), conforme escolhido na tela selecionar atributos de perfil do [fluxo de trabalho de ativação de destino](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
+| Frequência de exportação | **[!UICONTROL Lote]** | Os destinos em lote exportam arquivos para plataformas downstream em incrementos de três, seis, oito, doze ou vinte e quatro horas. Leia mais sobre [destinos com base em arquivo de lote](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
 
@@ -77,9 +77,9 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 
 >[!IMPORTANT]
 >
->Para se conectar ao destino, você precisa da variável **[!UICONTROL Exibir destinos]** e **[!UICONTROL Gerenciar e ativar destinos do conjunto de dados]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
+>Para se conectar ao destino, você precisa de **[!UICONTROL Exibir Destinos]** e **[!UICONTROL Gerenciar e Ativar Destinos de Conjuntos de Dados]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 
-Para se conectar a esse destino, siga as etapas descritas no [tutorial de configuração de destino](../../ui/connect-destination.md). No workflow da configuração de destino, preencha os campos listados nas duas seções abaixo.
+Para se conectar a este destino, siga as etapas descritas no [tutorial de configuração de destino](../../ui/connect-destination.md). No workflow da configuração de destino, preencha os campos listados nas duas seções abaixo.
 
 ### Autenticar para o destino {#authenticate}
 
@@ -89,54 +89,54 @@ Para acessar seu bucket no Experience Platform, é necessário fornecer valores 
 
 | Credencial | Descrição |
 |---------------|----------------------------------------------------------------------------------------------------------|
-| Chave de acesso S3 | A ID da chave de acesso do seu bucket. Você pode recuperar esse valor da variável [!DNL Acxiom] equipe. |
-| Chave secreta S3 | A ID da chave secreta para o seu bucket. Você pode recuperar esse valor da variável [!DNL Acxiom] equipe. |
-| Nome do bucket | Esse é o seu bucket onde os arquivos serão compartilhados. Você pode recuperar esse valor da variável [!DNL Acxiom] equipe. |
+| Chave de acesso S3 | A ID da chave de acesso do seu bucket. Você pode recuperar esse valor da equipe [!DNL Acxiom]. |
+| Chave secreta S3 | A ID da chave secreta para o seu bucket. Você pode recuperar esse valor da equipe [!DNL Acxiom]. |
+| Nome do bucket | Esse é o seu bucket onde os arquivos serão compartilhados. Você pode recuperar esse valor da equipe [!DNL Acxiom]. |
 
 ### Nova conta
 
 Para definir um novo local do Acxiom Managed S3:
 
-![Nova conta](../../assets/catalog/data-partner/acxiom/image-destination-new-account.png)
+![Nova Conta](../../assets/catalog/data-partner/acxiom/image-destination-new-account.png)
 
 ### Conta existente
 
-Contas já definidas usando o [!DNL Acxiom Data Enhancement] destino aparecem em um pop-up de lista. Quando selecionada, você poderá ver os detalhes da conta no painel direito. Veja o exemplo da interface do usuário ao navegar para **[!UICONTROL Destinos]** > **[!UICONTROL Contas]**;
+As contas já definidas usando o destino [!DNL Acxiom Data Enhancement] aparecem em um pop-up de lista. Quando selecionada, você poderá ver os detalhes da conta no painel direito. Veja o exemplo da interface do usuário ao navegar até **[!UICONTROL Destinos]** > **[!UICONTROL Contas]**;
 
-![Conta existente](../../assets/catalog/data-partner/acxiom/image-destination-enhancement-account.png)
+![Conta Existente](../../assets/catalog/data-partner/acxiom/image-destination-enhancement-account.png)
 
 ### Preencher detalhes do destino {#destination-details}
 
 Para configurar detalhes para o destino, preencha os campos obrigatórios e opcionais abaixo. Um asterisco ao lado de um campo na interface do usuário indica que o campo é obrigatório.
 
-![Detalhe do destino](../../assets/catalog/data-partner/acxiom/image-destination-details.png)
+![Detalhes do destino](../../assets/catalog/data-partner/acxiom/image-destination-details.png)
 
-* **Nome (obrigatório)** - O nome em que o destino será salvo
+* **Nome (Obrigatório)** - O nome com o qual o destino será salvo
 * **Descrição** - Breve explicação da finalidade do destino
-* **Nome do Período (Obrigatório)** - Nome do bucket do Amazon S3 configurado no S3
-* **Caminho da pasta (obrigatório)** - Se os subdiretórios em um bucket forem usados, um caminho deverá ser definido, ou &#39;/&#39; para fazer referência ao caminho raiz.
+* **Nome do bucket (obrigatório)** - Nome do bucket do Amazon S3 configurado no S3
+* **Caminho da Pasta (Obrigatório)** - Se os subdiretórios em um compartimento forem usados, um caminho deverá ser definido ou &#39;/&#39; para fazer referência ao caminho raiz.
 * **Tipo de arquivo** - Selecione o formato que o Experience Platform deve usar para os arquivos exportados. Atualmente, o único tipo de arquivo que o processamento da Acxiom espera é o CSV
 
 >[!IMPORTANT]
 >
->Ao selecionar a opção CSV, *Delimitador*, *Caractere de citação*, *Caractere de escape*, *Valor vazio*, *Valor nulo*, *Formato de compactação*, e *Incluir arquivo de manifesto* opções serão apresentadas, o documento a seguir explica essas configurações com mais detalhes [configurar as opções de formatação](../../ui/batch-destinations-file-formatting-options.md).
+>Ao selecionar a opção CSV *Delimitador*, *Aspas*, *Caracteres de Escape*, *Valor Vazio*, *Valor Nulo*, *Formato de compactação* e *Incluir arquivo de manifesto*, as opções serão apresentadas. O documento a seguir explica essas configurações com mais detalhes [configure as opções de formatação](../../ui/batch-destinations-file-formatting-options.md).
 
 ![Opções de CSV](../../assets/catalog/data-partner/acxiom/image-destination-csv-options.png)
 
 ### Ativar alertas {#enable-alerts}
 
-Você pode ativar os alertas para receber notificações sobre o status do fluxo de dados para o seu destino. Selecione um alerta na lista para assinar e receber notificações sobre o status do seu fluxo de dados. Para obter mais informações sobre alertas, consulte o manual sobre [assinatura de alertas de destinos usando a interface do](../../ui/alerts.md).
+Você pode ativar os alertas para receber notificações sobre o status do fluxo de dados para o seu destino. Selecione um alerta na lista para assinar e receber notificações sobre o status do seu fluxo de dados. Para obter mais informações sobre alertas, consulte o manual sobre [assinatura de alertas de destinos usando a interface](../../ui/alerts.md).
 
-Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICONTROL Próxima]**.
+Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICONTROL Avançar]**.
 
 ## Ativar públicos-alvo para esse destino {#activate}
 
 >[!IMPORTANT]
 >
->* Para ativar os dados, é necessário **[!UICONTROL Exibir destinos]**, **[!UICONTROL Ativar destinos]**, **[!UICONTROL Exibir perfis]**, e **[!UICONTROL Exibir segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
->* Para exportar *identidades*, você precisará do **[!UICONTROL Exibir gráfico de identidade]** [permissão de controle de acesso](/help/access-control/home.md#permissions). <br> ![Selecione o namespace de identidade destacado no fluxo de trabalho para ativar públicos para destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecione o namespace de identidade destacado no fluxo de trabalho para ativar públicos para destinos."){width="100" zoomable="yes"}
+>* Para ativar dados, você precisa de **[!UICONTROL Exibir Destinos]**, **[!UICONTROL Ativar Destinos]**, **[!UICONTROL Exibir Perfis]** e **[!UICONTROL Exibir Segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
+>* Para exportar *identidades*, você precisa da **[!UICONTROL permissão Exibir Gráfico de Identidade]** [controle de acesso](/help/access-control/home.md#permissions). <br> ![Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos."){width="100" zoomable="yes"}
 
-Ler [Ativar dados do público-alvo para destinos de exportação de perfil em lote](/help/destinations/ui/activate-batch-profile-destinations.md) para obter instruções sobre como ativar públicos-alvo para esse destino.
+Leia [Ativar dados de público-alvo para destinos de exportação de perfil em lote](/help/destinations/ui/activate-batch-profile-destinations.md) para obter instruções sobre como ativar públicos-alvo para esse destino.
 
 ### Sugestões de mapeamento
 
@@ -146,14 +146,14 @@ As sugestões de mapeamento são fornecidas na tabela abaixo, listando os atribu
 
 | Campo de público alvo | Descrição do Source |
 |--------------|-------------------------------------------------------------|
-| name | A variável `person.name.fullName` valor em Experience Platform. |
-| firstName | A variável `person.name.firstName` valor em Experience Platform. |
-| lastName | A variável `person.name.lastName` valor em Experience Platform. |
-| address1 | A variável `mailingAddress.street1` valor em Experience Platform. |
-| address2 | A variável `mailingAddress.street2` valor em Experience Platform. |
-| city | A variável `mailingAddress.city` valor em Experience Platform. |
-| estado | A variável `mailingAddress.state` valor em Experience Platform. |
-| zip | A variável `mailingAddress.postalCode` valor em Experience Platform. |
+| name | O valor `person.name.fullName` em Experience Platform. |
+| firstName | O valor `person.name.firstName` em Experience Platform. |
+| lastName | O valor `person.name.lastName` em Experience Platform. |
+| address1 | O valor `mailingAddress.street1` em Experience Platform. |
+| address2 | O valor `mailingAddress.street2` em Experience Platform. |
+| city | O valor `mailingAddress.city` em Experience Platform. |
+| estado | O valor `mailingAddress.state` em Experience Platform. |
+| zip | O valor `mailingAddress.postalCode` em Experience Platform. |
 
 >[!NOTE]
 >
@@ -161,15 +161,15 @@ As sugestões de mapeamento são fornecidas na tabela abaixo, listando os atribu
 
 ## Validar exportação de dados {#exported-data}
 
-Para verificar se os dados foram exportados com êxito, verifique [!DNL Amazon S3 Storage] e verifique se os arquivos exportados contêm as populações de perfis esperadas.
+Para verificar se os dados foram exportados com êxito, verifique o bucket [!DNL Amazon S3 Storage] e se os arquivos exportados contêm as populações de perfis esperadas.
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você criou com sucesso um fluxo de dados para exportar dados do perfil do Experience Platform para sua [!DNL Acxiom] local do S3 gerenciado. Em seguida, entre em contato com o representante da Acxiom com o nome da conta, os nomes dos arquivos e o caminho do bucket para que o processamento possa ser configurado.
+Seguindo este tutorial, você criou com êxito um fluxo de dados para exportar dados do perfil do Experience Platform para sua localização do S3 gerenciado pelo [!DNL Acxiom]. Em seguida, entre em contato com o representante da Acxiom com o nome da conta, os nomes dos arquivos e o caminho do bucket para que o processamento possa ser configurado.
 
 ## Uso e governança de dados {#data-usage-governance}
 
-Todos [!DNL Adobe Experience Platform] os destinos estão em conformidade com as políticas de uso de dados ao manipular seus dados. Para obter informações detalhadas sobre como [!DNL Adobe Experience Platform] fiscaliza a governança de dados, leia o [Visão geral da governança de dados](/help/data-governance/home.md).
+Todos os destinos do [!DNL Adobe Experience Platform] são compatíveis com as políticas de uso de dados ao manipular seus dados. Para obter informações detalhadas sobre como o [!DNL Adobe Experience Platform] fiscaliza a governança de dados, leia a [Visão geral da Governança de Dados](/help/data-governance/home.md).
 
 ## Recursos adicionais {#additional-resources}
 

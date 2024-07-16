@@ -20,22 +20,22 @@ A API de controle de acesso baseada em atributos é usada para acessar funções
 
 >[!IMPORTANT]
 >
->O controle de acesso baseado em atributos não deve ser confundido com os recursos de governança de dados do Experience Platform, que permitem usar rótulos e políticas para controlar como os dados são usados na Platform, em vez de quais usuários em sua organização têm acesso a eles. Consulte a [Guia da API do Serviço de política](../../../data-governance/api/overview.md) para obter etapas sobre como aproveitar programaticamente esses recursos.
+>O controle de acesso baseado em atributos não deve ser confundido com os recursos de governança de dados do Experience Platform, que permitem usar rótulos e políticas para controlar como os dados são usados na Platform, em vez de quais usuários em sua organização têm acesso a eles. Consulte o [Guia da API do Serviço de Política](../../../data-governance/api/overview.md) para obter etapas sobre como aproveitar esses recursos de forma programática.
 
-Esses endpoints são descritos abaixo. Acesse os manuais de endpoint individuais para obter detalhes e consulte a [guia de introdução](./getting-started.md) para obter informações importantes sobre cabeçalhos necessários, ler chamadas de API de exemplo e muito mais.
+Esses endpoints são descritos abaixo. Visite os manuais de endpoint individuais para obter detalhes e consulte o [guia de introdução](./getting-started.md) para obter informações importantes sobre cabeçalhos necessários, como ler chamadas de API de exemplo e muito mais.
 
 ## Funções
 
-As funções definem o acesso que um administrador, um especialista ou um usuário final tem aos recursos em sua organização. Em um ambiente de controle de acesso baseado em funções, o provisionamento de acesso do usuário é agrupado por meio de responsabilidades e necessidades comuns. Uma função tem um determinado conjunto de permissões e os membros da organização podem ser atribuídos a uma ou mais funções, dependendo do escopo de visualização ou acesso de gravação de que precisam. Consulte a [guia de endpoint de funções](./roles.md) para obter mais informações sobre como trabalhar com funções na API.
+As funções definem o acesso que um administrador, um especialista ou um usuário final tem aos recursos em sua organização. Em um ambiente de controle de acesso baseado em funções, o provisionamento de acesso do usuário é agrupado por meio de responsabilidades e necessidades comuns. Uma função tem um determinado conjunto de permissões e os membros da organização podem ser atribuídos a uma ou mais funções, dependendo do escopo de visualização ou acesso de gravação de que precisam. Consulte o [manual de ponto de extremidade de funções](./roles.md) para obter mais informações sobre como trabalhar com funções na API.
 
 ## Políticas
 
-Políticas são declarações que reúnem atributos para estabelecer ações permitidas e não permitidas. As políticas podem ser locais ou globais e podem substituir outras políticas. A variável `/policies` O endpoint permite gerenciar políticas de forma programática em sua organização. Consulte a [manual de endpoint de políticas](./policies.md) para obter mais informações sobre como trabalhar com políticas na API.
+Políticas são declarações que reúnem atributos para estabelecer ações permitidas e não permitidas. As políticas podem ser locais ou globais e podem substituir outras políticas. O ponto de extremidade `/policies` permite que você gerencie políticas de forma programática em sua organização. Consulte o [manual de endpoint de políticas](./policies.md) para obter mais informações sobre como trabalhar com políticas na API.
 
 ## Produtos
 
-A variável `/products` O endpoint na API de controle de acesso baseada em atributos permite gerenciar de forma programática os produtos, bem como as categorias de permissões e os conjuntos de permissões associados aos produtos em sua organização. Consulte a [manual de endpoint de produtos](./products.md) para obter mais informações sobre como trabalhar com produtos e suas categorias de permissão e conjuntos de permissões correspondentes na API.
+O ponto de extremidade `/products` na API de controle de acesso baseado em atributos permite gerenciar programaticamente os produtos, bem como as categorias de permissões e os conjuntos de permissões associados aos produtos em sua organização. Consulte o [manual de endpoint de produtos](./products.md) para obter mais informações sobre como trabalhar com produtos e suas categorias de permissão e conjuntos de permissões correspondentes na API.
 
 ## Próximas etapas
 
-Para começar a fazer chamadas usando a API de controle de acesso baseada em atributos, leia a [guia de introdução](./getting-started.md) em seguida, selecione um dos manuais de endpoint para saber como usar endpoints específicos.
+Para começar a fazer chamadas usando a API de controle de acesso baseado em atributos, leia o [guia de introdução](./getting-started.md) e selecione um dos manuais de endpoint para saber como usar endpoints específicos.

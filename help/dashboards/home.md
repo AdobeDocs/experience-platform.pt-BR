@@ -22,9 +22,9 @@ Os painéis fornecem relatórios prontos para uso sobre os dados da sua organiza
 
 ## Introdução aos painéis
 
-Para exibir e gerenciar painéis, navegue até **[!UICONTROL Painéis]** na interface do usuário (UI) do Experience Platform e selecione a variável **[!UICONTROL Procurar]** para acessar o inventário do painel.
+Para exibir e gerenciar painéis, navegue até **[!UICONTROL Painéis]** na interface do usuário (UI) do Experience Platform e selecione a guia **[!UICONTROL Procurar]** para acessar o inventário do painel.
 
-Você também pode acessar painéis navegando até a seção apropriada na interface do usuário do painel que deseja visualizar. Para exibir o painel de perfis, por exemplo, navegue até o **[!UICONTROL Perfis]** e selecione o **[!UICONTROL Visão geral]** guia.
+Você também pode acessar painéis navegando até a seção apropriada na interface do usuário do painel que deseja visualizar. Para exibir o painel de perfis, por exemplo, navegue até o espaço de trabalho **[!UICONTROL Perfis]** e selecione a guia **[!UICONTROL Visão geral]**.
 
 Os dados no instantâneo mostram os dados exatamente como aparecem no momento específico em que o instantâneo foi tirado. Em outras palavras, o instantâneo não é uma aproximação ou amostra dos dados e os painéis não são atualizados em tempo real.
 
@@ -34,7 +34,7 @@ Os dados no instantâneo mostram os dados exatamente como aparecem no momento es
 
 ## Inventário do painel
 
-Para obter etapas detalhadas sobre como usar a variável **[!UICONTROL Painéis]** espaço de trabalho para exibir todos os painéis disponíveis, consulte o [guia de inventário do painel](./inventory.md).
+Para obter etapas detalhadas sobre como usar o espaço de trabalho **[!UICONTROL Painéis]** para exibir todos os painéis disponíveis, consulte o [guia de inventário do painel](./inventory.md).
 
 ## Painéis de controle disponíveis
 

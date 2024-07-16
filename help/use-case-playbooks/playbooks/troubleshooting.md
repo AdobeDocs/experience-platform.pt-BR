@@ -22,11 +22,11 @@ Ao criar uma instância de um manual, você pode ver a mensagem abaixo exibida.
 
 ![Solução de problemas](/help/use-case-playbooks/assets/playbooks/troubleshooting/troubleshooting-ajo.png)
 
-Isso ocorre porque os manuais do Journey Optimizer criam mensagens para canais de email, push e SMS. Leia o [introdução](/help/use-case-playbooks/playbooks/get-started.md#configure-sandbox-and-channel-surfaces-in-journey-optimizer) guia para configurar as diferentes superfícies.
+Isso ocorre porque os manuais do Journey Optimizer criam mensagens para canais de email, push e SMS. Leia o guia de [introdução](/help/use-case-playbooks/playbooks/get-started.md#configure-sandbox-and-channel-surfaces-in-journey-optimizer) para configurar as diferentes superfícies.
 
-## Status *falhou* ao criar uma nova instância {#status-failed}
+## Falha no status *ao criar uma nova instância* {#status-failed}
 
-Se você vir uma mensagem de falha ao tentar criar uma instância, talvez o administrador não tenha concedido as permissões de usuário necessárias. Um manual contém muitos ativos diferentes e seu usuário precisa de permissões para criar esses ativos e poder criar a instância do manual com êxito. Consulte a [permissões](/help/use-case-playbooks/playbooks/get-started.md#grant-your-team-the-required-access-permissions) seção deste guia sobre como configurar permissões.
+Se você vir uma mensagem de falha ao tentar criar uma instância, talvez o administrador não tenha concedido as permissões de usuário necessárias. Um manual contém muitos ativos diferentes e seu usuário precisa de permissões para criar esses ativos e poder criar a instância do manual com êxito. Consulte a seção [permissões](/help/use-case-playbooks/playbooks/get-started.md#grant-your-team-the-required-access-permissions) deste guia sobre como configurar permissões.
 
 ## Falha na importação {#import-failure}
 

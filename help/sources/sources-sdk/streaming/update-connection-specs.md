@@ -14,7 +14,7 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->O SDK de transmissão de fontes de autoatendimento está na versão beta. Leia as [visão geral das origens](../../home.md#terms-and-conditions) para obter mais informações sobre o uso de fontes rotuladas como beta.
+>O SDK de transmissão de fontes de autoatendimento está na versão beta. Leia a [visão geral das fontes](../../home.md#terms-and-conditions) para obter mais informações sobre o uso de fontes com rótulo beta.
 
 Você pode atualizar as propriedades de uma especificação de conexão por meio de uma operação PUT. Ao atualizar uma especificação de conexão por meio de uma solicitação PUT, o corpo deve incluir todos os campos que seriam necessários ao criar uma nova especificação de conexão em uma solicitação POST.
 
@@ -196,4 +196,4 @@ Uma chamada bem-sucedida retorna os detalhes atualizados da especificação da c
 
 ## Próximas etapas
 
-Após concluir as atualizações na especificação da conexão, você pode prosseguir para [testar e enviar sua origem para integração](./submit.md).
+Após concluir as atualizações na especificação da conexão, você pode prosseguir para o [teste e enviar sua origem para integração](./submit.md).

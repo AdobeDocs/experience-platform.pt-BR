@@ -17,7 +17,7 @@ Todos os dados enviados de uma página da Web devem chegar ao Experience Platfor
 
 1. Reformate a camada de dados no XDM na própria página da Web.
 2. Use a funcionalidade de elementos de dados nativos das tags para reformatar o formato de camada de dados existente de uma página da Web no XDM.
-3. Reformate o formato da camada de dados existente de uma página da Web no XDM por meio da Rede de borda, usando o Preparo de dados para a coleção de dados.
+3. Reformate um formato de camada de dados existente da página da Web no XDM por meio do Edge Network, usando o Preparo de dados para coleção de dados.
 
 Este guia foca na 3ª opção.
 
@@ -25,14 +25,14 @@ Este guia foca na 3ª opção.
 
 Há dois casos de uso em que o Preparo de dados para a coleção de dados é útil:
 
-1. O site tem uma camada de dados bem formada, controlada e mantida, e há uma preferência por enviá-la diretamente para a Rede de borda em vez de usar a manipulação do JavaScript para convertê-la em XDM na página (por meio de elementos de dados de tags ou por manipulação manual do JavaScript).
+1. O site tem uma camada de dados bem formada, controlada e mantida, e há uma preferência por enviá-la diretamente para o Edge Network em vez de usar a manipulação do JavaScript para convertê-la em XDM na página (por meio de elementos de dados de tags ou por manipulação manual do JavaScript).
 2. Um sistema de marcação diferente de Tags é implantado no site.
 
-## Enviar uma camada de dados existente para a Rede de borda via SDK da Web {#send-datalayer-via-websdk}
+## Enviar uma camada de dados existente para o Edge Network via WebSDK {#send-datalayer-via-websdk}
 
-A camada de dados existente deve ser enviada usando o [`data`](/help/web-sdk/commands/sendevent/data.md) objeto dentro do `sendEvent` comando.
+A camada de dados existente deve ser enviada usando o objeto [`data`](/help/web-sdk/commands/sendevent/data.md) dentro do comando `sendEvent`.
 
-Se você estiver usando Tags, deverá usar o plug-in **[!UICONTROL Dados]** do campo **[!UICONTROL Enviar evento]** tipo de ação, conforme descrito na seção [Documentação da extensão de tag do SDK da Web](/help/tags/extensions/client/web-sdk/action-types.md).
+Se você estiver usando Marcas, deverá usar o campo **[!UICONTROL Dados]** do tipo de ação **[!UICONTROL Enviar Evento]**, conforme descrito na [documentação da extensão de marca do SDK da Web](/help/tags/extensions/client/web-sdk/action-types.md).
 
 O restante deste guia enfocará como mapear a camada de dados para padrões XDM após ter sido enviada pelo WebSDK.
 
@@ -54,7 +54,7 @@ Para obter uma demonstração rápida do processo de preparo de dados para a col
 
 Selecione **[!UICONTROL Salvar e adicionar mapeamento]** após concluir a configuração básica de uma sequência de dados e a etapa **[!UICONTROL Selecionar dados]** será exibida. Aqui, você deve fornecer um objeto JSON de amostra que represente a estrutura dos dados que planeja enviar para a Platform.
 
-Para capturar propriedades diretamente da camada de dados, o objeto JSON deve ter uma única propriedade raiz `data`. As subpropriedades de `data` O objeto do deve ser construído de uma forma que mapeie para as propriedades da camada de dados que você deseja capturar. Selecione a seção abaixo para ver um exemplo de objeto JSON formatado corretamente com um objeto `data` raiz.
+Para capturar propriedades diretamente da camada de dados, o objeto JSON deve ter uma única propriedade raiz `data`. As subpropriedades do objeto `data` devem ser construídas de uma forma que mapeie para as propriedades da camada de dados que você deseja capturar. Selecione a seção abaixo para ver um exemplo de objeto JSON formatado corretamente com um objeto `data` raiz.
 
 +++Arquivo JSON de amostra com objeto `data` raiz
 
@@ -154,7 +154,7 @@ Para capturar propriedades de um elemento de dados de objeto XDM, as mesmas regr
 
 Você pode selecionar a opção para fazer upload do objeto como um arquivo ou colar o objeto bruto na caixa de texto fornecida. Se o JSON for válido, um esquema de visualização será exibido no painel direito. Clique em **[!UICONTROL Avançar]** para continuar.
 
-![Exemplo JSON de dados de entrada esperados.](assets/data-prep/select-data.png)
+![Amostra JSON dos dados de entrada esperados.](assets/data-prep/select-data.png)
 
 >[!NOTE]
 >
@@ -164,26 +164,26 @@ Você pode selecionar a opção para fazer upload do objeto como um arquivo ou c
 
 A etapa **[!UICONTROL Mapeamento]** é exibida, permitindo mapear os campos nos dados de origem para o esquema de evento de público alvo na Platform. Aqui, é possível configurar o mapeamento de duas maneiras:
 
-* [Criar regras de mapeamento](#create-mapping) para esse fluxo de dados por meio de um processo manual.
+* [Crie regras de mapeamento](#create-mapping) para esta sequência de dados por meio de um processo manual.
 * [Importar regras de mapeamento](#import-mapping) de uma sequência de dados existente.
 
 ### Criar regras de mapeamento {#create-mapping}
 
 Para criar uma regra de mapeamento, selecione **[!UICONTROL Adicionar novo mapeamento]**.
 
-![Adicionar um novo mapeamento.](assets/data-prep/add-new-mapping.png)
+![Adicionando um novo mapeamento.](assets/data-prep/add-new-mapping.png)
 
 Selecione o ícone de origem (![Ícone de origem](assets/data-prep/source-icon.png)) e, na caixa de diálogo exibida, selecione o campo de origem que deseja mapear na tela fornecida. Depois de escolher um campo, use o botão **[!UICONTROL Selecionar]** para continuar.
 
-![Seleção do campo a ser mapeado no esquema de origem.](assets/data-prep/source-mapping.png)
+![Selecionando o campo a ser mapeado no esquema de origem.](assets/data-prep/source-mapping.png)
 
 Em seguida, selecione o ícone de esquema (![Ícone de esquema](assets/data-prep/schema-icon.png)) para abrir uma caixa de diálogo semelhante para o esquema de evento de destino. Escolha o campo para o qual deseja mapear os dados antes de confirmar com **[!UICONTROL Selecionar]**.
 
-![Seleção do campo a ser mapeado no schema de destino.](assets/data-prep/target-mapping.png)
+![Selecionando o campo a ser mapeado no esquema de destino.](assets/data-prep/target-mapping.png)
 
 A página de mapeamento é exibida novamente com o mapeamento do campo concluído. A seção **[!UICONTROL Progresso do mapeamento]** é atualizada para refletir o número total de campos que foram mapeados com sucesso.
 
-![Campo mapeado com êxito com o progresso refletido.](assets/data-prep/field-mapped.png)
+![Campo mapeado com êxito com progresso refletido.](assets/data-prep/field-mapped.png)
 
 >[!TIP]
 >
@@ -201,11 +201,11 @@ Se você tiver criado um fluxo de dados anteriormente, poderá reutilizar suas r
 
 Para começar, selecione **[!UICONTROL Importar mapeamento]**.
 
-![O botão Importar mapeamento está sendo selecionado.](assets/data-prep/import-mapping-button.png)
+![Botão Importar Mapeamento sendo selecionado.](assets/data-prep/import-mapping-button.png)
 
 Na caixa de diálogo exibida, selecione a sequência de dados cujas regras de mapeamento você deseja importar. Depois que a sequência de dados for escolhida, selecione **[!UICONTROL Visualizar]**.
 
-![Selecionar um fluxo de dados existente.](assets/data-prep/select-mapping-rules.png)
+![Selecionando uma sequência de dados existente.](assets/data-prep/select-mapping-rules.png)
 
 >[!NOTE]
 >
@@ -223,7 +223,7 @@ A próxima tela mostra uma visualização das regras de mapeamento salvas para a
 
 Para continuar, siga as etapas acima para mapear o restante dos campos para o esquema de destino. Embora não seja necessário mapear todos os campos de origem disponíveis, todos os campos no esquema de destino definidos como obrigatório devem ser mapeados para concluir esta etapa. O contador **[!UICONTROL Campos obrigatórios]** indica quantos campos obrigatórios ainda não estão mapeados na configuração atual.
 
-Quando a contagem de campos obrigatória atingir zero e você estiver satisfeito com o mapeamento, selecione **[!UICONTROL Salvar]** para finalizar as alterações.
+Quando a contagem de campos necessária atingir zero e você estiver satisfeito com o mapeamento, selecione **[!UICONTROL Salvar]** para finalizar as alterações.
 
 ![Mapeamento concluído](assets/data-prep/mapping-complete.png)
 

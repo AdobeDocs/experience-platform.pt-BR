@@ -13,9 +13,9 @@ ht-degree: 0%
 
 # Guia de solução de problemas do Perfil do cliente em tempo real
 
-Este documento fornece respostas a perguntas frequentes sobre o Perfil do cliente em tempo real, bem como um guia de solução de problemas para erros comuns. Para perguntas e soluções de problemas relacionados a outros serviços na Adobe Experience Platform, consulte o [guia de solução de problemas do Experience Platform](../landing/troubleshooting.md).
+Este documento fornece respostas a perguntas frequentes sobre o Perfil do cliente em tempo real, bem como um guia de solução de problemas para erros comuns. Para perguntas e soluções de problemas relacionados a outros serviços na Adobe Experience Platform, consulte o [guia de solução de problemas de Experience Platform](../landing/troubleshooting.md).
 
-Com [!DNL Real-Time Customer Profile]No entanto, você pode ter uma visão holística de cada cliente individual ao combinar dados de vários canais, incluindo online, offline, CRM e de terceiros. Isso permite que os profissionais de marketing promovam experiências coordenadas, consistentes e relevantes para clientes em vários canais.
+Com o [!DNL Real-Time Customer Profile], você pode ter uma visão holística de cada cliente individual ao combinar dados de vários canais, incluindo online, offline, CRM e de terceiros. Isso permite que os profissionais de marketing promovam experiências coordenadas, consistentes e relevantes para clientes em vários canais.
 
 ## Perguntas frequentes
 
@@ -23,11 +23,11 @@ Veja a seguir uma lista de respostas para perguntas frequentes sobre o Perfil do
 
 ### Que tipos de dados são aceitos para o Perfil do cliente em tempo real?
 
-O perfil aceita ambos **gravar** e **série temporal** dados, desde que os dados em questão contenham pelo menos um valor de identidade que associe os dados a uma única pessoa.
+O perfil aceita dados de **registro** e **série temporal**, desde que os dados em questão contenham pelo menos um valor de identidade que associe os dados a uma pessoa individual exclusiva.
 
-Como todos os serviços da plataforma, o Perfil exige que seus dados sejam semanticamente estruturados em um esquema do Experience Data Model (XDM). Por sua vez, esse esquema deve ter um **identidade principal** definido e ser ativado para uso no Perfil.
+Como todos os serviços da plataforma, o Perfil exige que seus dados sejam semanticamente estruturados em um esquema do Experience Data Model (XDM). Por sua vez, este esquema deve ter uma **identidade principal** definida e estar habilitada para uso no Perfil.
 
-Se você não estiver familiarizado com o XDM, comece com o [Visão geral do XDM](../xdm/home.md) para saber mais. Em seguida, consulte o guia do usuário XDM para obter etapas sobre como [definir campos de identidade](../xdm/tutorials/create-schema-ui.md#identity-field) e [ativar um esquema para o Perfil](../xdm/tutorials/create-schema-ui.md#profile).
+Se você não estiver familiarizado com o XDM, comece com a [visão geral do XDM](../xdm/home.md) para saber mais. Em seguida, consulte o guia do usuário XDM para obter etapas sobre como [definir campos de identidade](../xdm/tutorials/create-schema-ui.md#identity-field) e [habilitar um esquema para o Perfil](../xdm/tutorials/create-schema-ui.md#profile).
 
 ### Onde os dados do perfil são armazenados?
 
@@ -37,7 +37,7 @@ O Perfil do cliente em tempo real mantém seu próprio armazenamento de dados (c
 
 Se os dados tiverem sido assimilados em um conjunto de dados que não seja de Perfil, você deverá assimilá-los novamente em um conjunto de dados habilitado para torná-lo disponível no armazenamento de Perfil. É possível habilitar um conjunto de dados existente para o Perfil, no entanto, os dados assimilados antes dessa configuração ainda não aparecerão no armazenamento do Perfil.
 
-Se quiser adicionar dados assimilados anteriormente ao armazenamento de Perfis, siga as [tutorial de configuração do conjunto de dados](./tutorials/dataset-configuration.md) para criar um novo conjunto de dados ou converter um conjunto de dados existente para ser ativado para o Perfil e, em seguida, assimilar novamente os dados desejados nesse conjunto de dados.
+Se quiser adicionar dados assimilados anteriormente ao repositório de perfis, siga o [tutorial de configuração de conjunto de dados](./tutorials/dataset-configuration.md) para criar um novo conjunto de dados ou converter um conjunto de dados existente para ser habilitado para o Perfil e, em seguida, assimile novamente os dados desejados nesse conjunto de dados.
 
 ### Como posso exibir meus dados de perfil assimilados?
 
@@ -45,19 +45,19 @@ Há vários métodos de exibição de Dados de perfil, dependendo se você está
 
 #### Uso da API
 
-Se você souber as IDs das entidades de Perfil que deseja acessar, poderá usar a variável `/entities` (Acesso ao perfil) na API do perfil para pesquisar essas entidades. Consulte a seção sobre [entidades](./api/entities.md) no guia do desenvolvedor para obter mais informações.
+Se você souber as IDs das entidades de Perfil que deseja acessar, poderá usar o ponto de extremidade `/entities` (acesso ao perfil) na API de Perfil para pesquisar essas entidades. Consulte a seção sobre [entidades](./api/entities.md) no guia do desenvolvedor para obter mais informações.
 
-Você também pode usar a API do Serviço de segmentação do Adobe Experience Platform para acessar perfis individuais de clientes que se qualificaram para uma associação de público-alvo. Consulte a [Visão geral do serviço de segmentação](../segmentation/home.md) para obter mais informações.
+Você também pode usar a API do Serviço de segmentação do Adobe Experience Platform para acessar perfis individuais de clientes que se qualificaram para uma associação de público-alvo. Consulte a [visão geral do Serviço de segmentação](../segmentation/home.md) para obter mais informações.
 
 #### Uso da interface
 
-Na interface do Experience Platform, a variável **[!UICONTROL Procurar]** na guia **[!UICONTROL Perfis]** o workspace permite exibir a contagem total de perfis e pesquisar perfis individuais pelo valor de identidade. Consulte a [Guia do usuário do perfil](./ui/user-guide.md) para obter mais informações.
+Na interface do usuário do Experience Platform, a guia **[!UICONTROL Procurar]** no espaço de trabalho **[!UICONTROL Perfis]** permite que você visualize a contagem total de perfis e pesquise por perfis individuais por seu valor de identidade. Consulte o [Guia do usuário do perfil](./ui/user-guide.md) para obter mais informações.
 
-Você também pode exibir uma lista de públicos-alvo na **[!UICONTROL Procurar]** na guia **[!UICONTROL Públicos-alvo]** espaço de trabalho. Após selecionar um público-alvo, uma amostra de perfis qualificados para esse público-alvo é exibida. Em seguida, você pode selecionar qualquer um desses perfis listados para exibir seus detalhes. Consulte a [Visão geral da interface de segmentação](../segmentation/ui/overview.md) para obter mais informações.
+Você também pode exibir uma lista de seus públicos na guia **[!UICONTROL Procurar]** do espaço de trabalho **[!UICONTROL Públicos-alvo]**. Após selecionar um público-alvo, uma amostra de perfis qualificados para esse público-alvo é exibida. Em seguida, você pode selecionar qualquer um desses perfis listados para exibir seus detalhes. Consulte a [Visão geral da interface do usuário de segmentação](../segmentation/ui/overview.md) para obter mais informações.
 
 ## Códigos de erro
 
-Veja a seguir uma lista de mensagens de erro que você pode encontrar ao trabalhar com a API de perfil do cliente em tempo real. Se o erro encontrado não estiver listado aqui, você pode encontrá-lo no modo geral [Guia de solução de problemas da Platform](../landing/troubleshooting.md) em vez disso.
+Veja a seguir uma lista de mensagens de erro que você pode encontrar ao trabalhar com a API de perfil do cliente em tempo real. Se o erro encontrado não estiver listado aqui, você pode encontrá-lo no [Guia de solução de problemas da Platform](../landing/troubleshooting.md).
 
 ### Não foi possível pesquisar o esquema do atributo computado para o caminho fornecido
 
@@ -68,9 +68,9 @@ Veja a seguir uma lista de mensagens de erro que você pode encontrar ao trabalh
 }
 ```
 
-Ao criar um novo atributo calculado, esse erro ocorre quando o sistema não pôde encontrar o esquema fornecido na carga da solicitação. Verifique se você forneceu a ID de locatário correta na `path` propriedade e que os valores de `schema.name` é um nome de esquema válido.
+Ao criar um novo atributo calculado, esse erro ocorre quando o sistema não pôde encontrar o esquema fornecido na carga da solicitação. Verifique se você forneceu a ID de locatário correta na propriedade `path` da carga e se os valores de `schema.name` são um nome de esquema válido.
 
-Se você não souber sua ID de locatário, poderá recuperá-la seguindo as etapas da seção [Guia do desenvolvedor do Registro de esquema](../xdm/api/getting-started.md).
+Se você não souber sua ID de locatário, poderá recuperá-la seguindo as etapas no [guia do desenvolvedor do Registro de Esquemas](../xdm/api/getting-started.md).
 
 ### Já existe uma função com o mesmo nome para o esquema especificado ou definedOn
 
@@ -81,7 +81,7 @@ Se você não souber sua ID de locatário, poderá recuperá-la seguindo as etap
 }
 ```
 
-Ao criar um novo atributo calculado, esse erro ocorre quando o atributo fornecido `name` A propriedade já está sendo usada para o esquema indicado em `schema.name`. Substitua o valor por um nome exclusivo antes de tentar novamente.
+Ao criar um novo atributo computado, esse erro ocorre quando a propriedade `name` fornecida já está sendo usada para o esquema indicado em `schema.name`. Substitua o valor por um nome exclusivo antes de tentar novamente.
 
 ### O esquema de retorno da expressão não é igual ao esquema do atributo calculado no esquema XDM
 
@@ -92,7 +92,7 @@ Ao criar um novo atributo calculado, esse erro ocorre quando o atributo fornecid
 }
 ```
 
-Ao criar um novo atributo calculado, esse erro ocorre quando o atributo fornecido `name` A propriedade já está sendo usada para o esquema indicado em `schema.name`. Substitua o valor por um nome exclusivo antes de tentar novamente.
+Ao criar um novo atributo computado, esse erro ocorre quando a propriedade `name` fornecida já está sendo usada para o esquema indicado em `schema.name`. Substitua o valor por um nome exclusivo antes de tentar novamente.
 
 ### Solicitação de exclusão inválida (Trabalho do Sistema de Perfil)
 
@@ -103,7 +103,7 @@ Ao criar um novo atributo calculado, esse erro ocorre quando o atributo fornecid
 }
 ```
 
-Esse erro ocorre quando uma carga inválida é fornecida para um trabalho de exclusão do sistema. Certifique-se de que você esteja fornecendo um conjunto de dados ou ID de lote válido no `dataSetID` ou `batchID` propriedade, respectivamente. Consulte a seção sobre [criar uma solicitação de exclusão](./api/profile-system-jobs.md#create-a-delete-request) no guia do desenvolvedor de perfis para obter mais informações.
+Esse erro ocorre quando uma carga inválida é fornecida para um trabalho de exclusão do sistema. Verifique se você está fornecendo um conjunto de dados ou ID de lote válido na propriedade `dataSetID` ou `batchID` da carga, respectivamente. Consulte a seção sobre [criação de uma solicitação de exclusão](./api/profile-system-jobs.md#create-a-delete-request) no guia do desenvolvedor de perfis para obter mais informações.
 
 ### Lote não encontrado para o conjunto de dados do perfil
 

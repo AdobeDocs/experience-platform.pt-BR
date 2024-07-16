@@ -6,8 +6,8 @@ description: Uma referência para restrições de tipo de campo no Experience Da
 exl-id: 63839a28-6d26-46f1-8bbf-b524e82ac4df
 source-git-commit: 88caea133bd2bf994587bda5b31cddd22f2c90cb
 workflow-type: tm+mt
-source-wordcount: '654'
-ht-degree: 5%
+source-wordcount: '666'
+ht-degree: 2%
 
 ---
 
@@ -17,9 +17,9 @@ Em esquemas do Experience Data Model (XDM), o tipo de um campo restringe o tipo 
 
 ## Introdução
 
-Antes de usar este guia, revise o [noções básicas da composição do esquema](./composition.md) para obter uma introdução a esquemas XDM, classes e grupos de campos de esquema.
+Antes de usar este guia, revise as [noções básicas da composição de esquema](./composition.md) para obter uma introdução aos esquemas XDM, classes e grupos de campos de esquema.
 
-Se você planeja definir seus próprios tipos de campo na API, é altamente recomendável começar com a variável [Guia do desenvolvedor do Registro de esquema](../api/getting-started.md) para saber como criar grupos de campos e tipos de dados para incluir seus campos personalizados no. Se você estiver usando a interface do Experience Platform para criar seus esquemas, consulte o manual em [definição de campos na interface](../ui/fields/overview.md) para saber como implementar restrições em campos definidos em grupos de campos personalizados e tipos de dados.
+Se você planeja definir seus próprios tipos de campo na API, é altamente recomendável começar com o [guia do desenvolvedor do Registro de Esquema](../api/getting-started.md) para saber como criar grupos de campos e tipos de dados para incluir seus campos personalizados no. Se você estiver usando a interface do Experience Platform para criar seus esquemas, consulte o manual em [definindo campos na interface](../ui/fields/overview.md) para saber como implementar restrições em campos definidos em grupos de campos personalizados e tipos de dados.
 
 ## Estrutura básica e exemplos {#basic-types}
 
@@ -27,7 +27,7 @@ O XDM é criado sobre o Esquema JSON e, portanto, os campos XDM herdam uma sinta
 
 >[!NOTE]
 >
->Consulte a [Guia de fundamentos de API](../../landing/api-fundamentals.md#json-schema) para obter mais informações sobre o Esquema JSON e outras tecnologias subjacentes nas APIs da plataforma.
+>Consulte o [guia de fundamentos de API](../../landing/api-fundamentals.md#json-schema) para obter mais informações sobre o Esquema JSON e outras tecnologias subjacentes nas APIs da plataforma.
 
 A tabela a seguir descreve como cada tipo de XDM é representado no Esquema JSON, juntamente com um valor de exemplo que está em conformidade com o tipo:
 
@@ -60,7 +60,11 @@ A tabela a seguir descreve como cada tipo de XDM é representado no Esquema JSON
       <td>[!UICONTROL Long]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{ "type": "integer", "maximum": 9007199254740991, "minimum": -9007199254740991 }</pre>
+{
+  "type": "integer",
+  "maximum": 9007199254740991,
+  "mínimo": -9007199254740991
+}</pre>
       </td>
       <td><code>1478108935</code></td>
     </tr>
@@ -68,7 +72,11 @@ A tabela a seguir descreve como cada tipo de XDM é representado no Esquema JSON
       <td>[!UICONTROL Inteiro]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{ "type": "integer", "maximum": 2147483648, "minimum": -2147483648 }</pre>
+{
+  "type": "integer",
+  "máximo": 2147483648,
+  "minimum": -2147483648
+}</pre>
       </td>
       <td><code>24906290</code></td>
     </tr>
@@ -76,7 +84,11 @@ A tabela a seguir descreve como cada tipo de XDM é representado no Esquema JSON
       <td>[!UICONTROL Short]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{ "type": "integer", "maximum": 32768, "minimum": -32768 }</pre>
+{
+  "type": "integer",
+  "maximum": 32768,
+  "minimum": -32768
+}</pre>
       </td>
       <td><code>15781</code></td>
     </tr>
@@ -84,7 +96,11 @@ A tabela a seguir descreve como cada tipo de XDM é representado no Esquema JSON
       <td>[!UICONTROL Byte]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{ "type": "integer", "maximum": 128, "minimum": -128 }</pre>
+{
+  "type": "integer",
+  "maximum": 128,
+  "minimum": -128
+}</pre>
       </td>
       <td><code>90</code></td>
     </tr>
@@ -92,7 +108,10 @@ A tabela a seguir descreve como cada tipo de XDM é representado no Esquema JSON
       <td>[!UICONTROL Data]*</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{ "type": "string", "format": "date" }</pre>
+{
+  "type": "string",
+  "format": "date"
+}</pre>
       </td>
       <td><code>"2019-05-15"</code></td>
     </tr>
@@ -100,7 +119,10 @@ A tabela a seguir descreve como cada tipo de XDM é representado no Esquema JSON
       <td>[!UICONTROL DateTime]*</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{ "type": "string", "format": "date-time" }</pre>
+{
+  "type": "string",
+  "format": "date-time"
+}</pre>
       </td>
       <td><code>"2019-05-15T20:20:39+00:00"</code></td>
     </tr>
@@ -115,7 +137,7 @@ A tabela a seguir descreve como cada tipo de XDM é representado no Esquema JSON
   </tbody>
 </table>
 
-**Todas as strings formatadas por data devem estar em conformidade com o padrão ISO 8601 ([RFC 3339, seção 5.6](https://tools.ietf.org/html/rfc3339#section-5.6)).*
+**Todas as cadeias de caracteres formatadas por data devem estar em conformidade com o padrão ISO 8601 ([RFC 3339, seção 5.6](https://tools.ietf.org/html/rfc3339#section-5.6)).*
 
 ## Mapeamento tipos XDM para outros formatos
 
@@ -127,9 +149,9 @@ As seções abaixo descrevem como cada tipo de XDM é mapeado para outros format
 
 >[!NOTE]
 >
->Entre os tipos XDM padrão listados nas tabelas abaixo, a variável [!UICONTROL Mapa] O tipo de também está incluído. Os mapas são usados em esquemas padrão quando os dados são representados como chaves que mapeiam para determinados valores ou quando as chaves não podem ser incluídas razoavelmente em um esquema estático e devem ser tratadas como valores de dados.
+>Entre os tipos XDM padrão listados nas tabelas abaixo, o tipo [!UICONTROL Map] também está incluído. Os mapas são usados em esquemas padrão quando os dados são representados como chaves que mapeiam para determinados valores ou quando as chaves não podem ser incluídas razoavelmente em um esquema estático e devem ser tratadas como valores de dados.
 >
->Muitos componentes XDM padrão usam tipos de mapa e você também pode [definir campos de mapa personalizados](../tutorials/custom-fields-api.md#custom-maps) se desejado. A inclusão do tipo de mapa nas tabelas abaixo tem como objetivo ajudar você a determinar como mapear os dados existentes para o XDM se eles estiverem armazenados em qualquer um dos formatos listados abaixo.
+>Muitos componentes XDM padrão usam tipos de mapa, e você também pode [definir campos de mapa personalizados](../tutorials/custom-fields-api.md#custom-maps), se desejar. A inclusão do tipo de mapa nas tabelas abaixo tem como objetivo ajudar você a determinar como mapear os dados existentes para o XDM se eles estiverem armazenados em qualquer um dos formatos listados abaixo.
 
 ### Parquet, Spark SQL e Java {#parquet}
 
@@ -138,13 +160,13 @@ As seções abaixo descrevem como cada tipo de XDM é mapeado para outros format
 | [!UICONTROL String] | Tipo: `BYTE_ARRAY`<br>Anotação: `UTF8` | `StringType` | `java.lang.String` |
 | [!UICONTROL Número] | Tipo: `DOUBLE` | `LongType` | `java.lang.Double` |
 | [!UICONTROL Longo] | Tipo: `INT64` | `LongType` | `java.lang.Long` |
-| [!UICONTROL Número inteiro] | Tipo: `INT32`<br>Anotação: `INT_32` | `IntegerType` | `java.lang.Integer` |
-| [!UICONTROL Short] | Tipo: `INT32`<br>Anotação: `INT_16` | `ShortType` | `java.lang.Short` |
+| [!UICONTROL Inteiro] | Tipo: `INT32`<br>Anotação: `INT_32` | `IntegerType` | `java.lang.Integer` |
+| [!UICONTROL Curto] | Tipo: `INT32`<br>Anotação: `INT_16` | `ShortType` | `java.lang.Short` |
 | [!UICONTROL Byte] | Tipo: `INT32`<br>Anotação: `INT_8` | `ByteType` | `java.lang.Short` |
 | [!UICONTROL Data] | Tipo: `INT32`<br>Anotação: `DATE` | `DateType` | `java.util.Date` |
 | [!UICONTROL DateTime] | Tipo: `INT64`<br>Anotação: `TIMESTAMP_MILLIS` | `TimestampType` | `java.util.Date` |
 | [!UICONTROL Booleano] | Tipo: `BOOLEAN` | `BooleanType` | `java.lang.Boolean` |
-| [!UICONTROL Mapa] | `MAP`grupo anotado<br><br>(`<key-type>` deve ser `STRING`) | `MapType`<br><br>(`keyType` deve ser `StringType`) | `java.util.Map` |
+| [!UICONTROL Mapa] | Grupo `MAP` anotado<br><br>(`<key-type>` deve ser `STRING`) | `MapType`<br><br>(`keyType` deve ser `StringType`) | `java.util.Map` |
 
 {style="table-layout:auto"}
 
@@ -155,8 +177,8 @@ As seções abaixo descrevem como cada tipo de XDM é mapeado para outros format
 | [!UICONTROL String] | `String` | `System.String` | `String` |
 | [!UICONTROL Número] | `Double` | `System.Double` | `Number` |
 | [!UICONTROL Longo] | `Long` | `System.Int64` | `Number` |
-| [!UICONTROL Número inteiro] | `Int` | `System.Int32` | `Number` |
-| [!UICONTROL Short] | `Short` | `System.Int16` | `Number` |
+| [!UICONTROL Inteiro] | `Int` | `System.Int32` | `Number` |
+| [!UICONTROL Curto] | `Short` | `System.Int16` | `Number` |
 | [!UICONTROL Byte] | `Byte` | `System.SByte` | `Number` |
 | [!UICONTROL Data] | `java.util.Date` | `System.DateTime` | `String` |
 | [!UICONTROL DateTime] | `java.util.Date` | `System.DateTime` | `String` |
@@ -172,11 +194,11 @@ As seções abaixo descrevem como cada tipo de XDM é mapeado para outros format
 | [!UICONTROL String] | `string` | `String` | `string` |
 | [!UICONTROL Número] | `double` | `Double` | `double` |
 | [!UICONTROL Longo] | `long` | `Integer` | `int64` |
-| [!UICONTROL Número inteiro] | `int` | `Integer` | `int32` |
-| [!UICONTROL Short] | `int` | `Integer` | `int32` |
+| [!UICONTROL Inteiro] | `int` | `Integer` | `int32` |
+| [!UICONTROL Curto] | `int` | `Integer` | `int32` |
 | [!UICONTROL Byte] | `int` | `Integer` | `int32` |
-| [!UICONTROL Data] | `date` | `Integer`<br>(milissegundos Unix) | `int64`<br>(milissegundos Unix) |
-| [!UICONTROL DateTime] | `timestamp` | `Integer`<br>(milissegundos Unix) | `int64`<br>(milissegundos Unix) |
+| [!UICONTROL Data] | `date` | `Integer`<br>(Unix milissegundos) | `int64`<br>(Unix milissegundos) |
+| [!UICONTROL DateTime] | `timestamp` | `Integer`<br>(Unix milissegundos) | `int64`<br>(Unix milissegundos) |
 | [!UICONTROL Booleano] | `bool` | `Integer`<br>(0/1 binário) | `bool` |
 | [!UICONTROL Mapa] | `object` | `map` | `map<key_type, value_type>` |
 
@@ -184,4 +206,4 @@ As seções abaixo descrevem como cada tipo de XDM é mapeado para outros format
 
 ## Definição de tipos de campo XDM na API {#define-fields}
 
-A API do Registro de esquema permite definir campos personalizados por meio do uso de formatos e restrições opcionais. Consulte o guia sobre [definição de campos personalizados na API do registro de esquema](../tutorials/custom-fields-api.md) para obter mais informações.
+A API do Registro de esquema permite definir campos personalizados por meio do uso de formatos e restrições opcionais. Consulte o manual sobre [definição de campos personalizados na API do Registro de Esquema](../tutorials/custom-fields-api.md) para obter mais informações.

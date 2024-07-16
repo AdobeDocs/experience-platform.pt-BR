@@ -9,9 +9,9 @@ ht-degree: 6%
 
 ---
 
-# [!UICONTROL Detalhes da solicitação de orçamento] grupo de campos de esquema
+# [!UICONTROL Detalhes da Solicitação de Cotação] grupo de campos de esquema
 
-[!UICONTROL Detalhes da solicitação de orçamento] é um grupo de campos de esquema padrão para o [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md). O grupo de campos fornece um único `quotes` faça objeto a um esquema, que captura os detalhes do processo de solicitação para vários tipos de cotações, incluindo apólices de seguro, saúde, pedidos de fabricação e pedidos de alta tecnologia.
+[!UICONTROL Detalhes da Solicitação de Cotação] é um grupo de campos de esquema padrão para a [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md). O grupo de campos fornece um único objeto `quotes` para um esquema, que captura os detalhes do processo de solicitação para vários tipos de cotações, incluindo apólices de seguro, saúde, pedidos de fabricação e pedidos de alta tecnologia.
 
 ![](../../images/field-groups/quote-request-details.png)
 
@@ -25,4 +25,4 @@ ht-degree: 6%
 
 {style="table-layout:auto"}
 
-Para obter mais informações sobre o grupo de campos, consulte o [repositório XDM público](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/experienceevent-quote-request-details.schema.json).
+Para obter mais detalhes sobre o grupo de campos, consulte o [repositório XDM público](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/experienceevent-quote-request-details.schema.json).

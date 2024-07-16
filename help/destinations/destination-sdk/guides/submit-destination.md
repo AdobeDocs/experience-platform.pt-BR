@@ -25,19 +25,19 @@ ht-degree: 0%
 >
 >* A linha do tempo de revisão e os artefatos necessários são os mesmos para novos destinos e destinos existentes que você está atualizando.
 
-Antes que seu destino possa ser publicado na [catálogo de destinos Experience Platform](/help/destinations/catalog/overview.md), você deve fornecer ao Adobe determinadas informações sobre o destino e os testes realizados, para garantir que os usuários desfrutem da melhor experiência possível ao ativar dados na sua plataforma.
+Antes de publicar seu destino no [catálogo de destinos de Experience Platform](/help/destinations/catalog/overview.md), forneça ao Adobe determinadas informações sobre o destino e os testes realizados, para garantir que os usuários desfrutem da melhor experiência possível ao ativar dados na sua plataforma.
 
-Esta página lista todas as informações que você precisa fornecer ao enviar ou atualizar um destino criado usando o Adobe Experience Platform Destination SDK. Para enviar um destino no Adobe Experience Platform com sucesso, envie um email para <aepdestsdk@adobe.com> que inclui:
+Esta página lista todas as informações que você precisa fornecer ao enviar ou atualizar um destino criado usando o Adobe Experience Platform Destination SDK. Para enviar um destino no Adobe Experience Platform com êxito, envie um email para <aepdestsdk@adobe.com> que inclua:
 
 * Uma descrição dos casos de uso que seu destino resolve. Isso só será necessário se você estiver enviando uma nova configuração de destino.
 * Uma descrição do motivo para o envio do seu destino. Isso só será necessário se você estiver atualizando uma configuração de destino existente.
 * Teste os resultados após usar o endpoint da API de destino de teste para executar uma chamada HTTP no destino. Compartilhe com o Adobe uma chamada de API feita para o endpoint de destino e a resposta da API recebida do endpoint de destino.
 * Requisitos adicionais para destinos baseados em arquivo:
-   * Compartilhar uma solicitação e uma amostra de resposta após usar a API de teste para [teste seu destino baseado em arquivo com perfis de amostra](../testing-api/batch-destinations/file-based-destination-testing-api.md).
+   * Compartilhe uma solicitação e uma amostra de resposta após usar a API de teste para [testar seu destino baseado em arquivo com perfis de amostra](../testing-api/batch-destinations/file-based-destination-testing-api.md).
    * Anexe um arquivo de amostra gerado pelo destino e exportado para o local de armazenamento.
    * Envie alguma forma de prova de que você assimilou com êxito o arquivo exportado do local de armazenamento no sistema.
-* Prova de que você enviou uma solicitação de publicação de destino para o seu destino usando o [API de publicação de destino](../publishing-api/create-publishing-request.md).
-* Uma PR (pull request) de documentação, seguindo as instruções descritas no [processo de documentação de autoatendimento](../docs-framework/documentation-instructions.md).
+* Prova de que você enviou uma solicitação de publicação de destino para o seu destino usando a [API de publicação de destino](../publishing-api/create-publishing-request.md).
+* Uma PR (solicitação de pull) de documentação, seguindo as instruções descritas no [processo de documentação de autoatendimento](../docs-framework/documentation-instructions.md).
 * Um arquivo de imagem que será exibido como um logotipo para o cartão de destino no catálogo de destinos de Experience Platform.
 
 Você pode encontrar informações detalhadas sobre cada item nas seções abaixo:
@@ -46,8 +46,8 @@ Você pode encontrar informações detalhadas sobre cada item nas seções abaix
 
 Forneça uma descrição dos casos de uso que seu destino resolve para clientes do Experience Platform. Suas descrições podem ser semelhantes aos casos de uso de parceiros existentes:
 
-* [Pinterest](/help/destinations/catalog/advertising/pinterest.md): crie públicos-alvo a partir de suas listas de clientes, de pessoas que visitaram seu site ou de pessoas que já interagiram com seu conteúdo no Pinterest.
-* [Dados X do Yahoo](/help/destinations/catalog/advertising/datax.md#use-cases): as APIs DataX estão disponíveis para anunciantes que desejam direcionar um grupo de público-alvo específico destacado de endereços de email na Verizon Media (VMG). Elas podem criar rapidamente um novo público-alvo e enviar o grupo de público-alvo desejado usando a API quase em tempo real do VMG.
+* [Pinterest](/help/destinations/catalog/advertising/pinterest.md): crie públicos-alvo a partir de suas listas de clientes, pessoas que visitaram seu site ou pessoas que já interagiram com seu conteúdo no Pinterest.
+* [Yahoo Data X](/help/destinations/catalog/advertising/datax.md#use-cases): as APIs DataX estão disponíveis para anunciantes que desejam direcionar um grupo de público-alvo específico digitado de endereços de email na Verizon Media (VMG). Elas podem criar rapidamente um novo público-alvo e enviar por push o grupo de público-alvo desejado usando a API quase em tempo real do VMG.
 
 ## Motivo da atualização {#reason-for-update}
 
@@ -59,7 +59,7 @@ Forneça uma breve descrição do problema que seu envio resolve para o destino 
 
 ## Resultados do teste após usar a API de destino de teste {#testing-api-response}
 
-Fornecer resultados de teste após o uso de [API de destino de teste](../testing-api/streaming-destinations/streaming-destination-testing-overview.md) para executar uma chamada HTTP para o seu destino. Isso inclui:
+Forneça resultados de teste após usar o ponto de extremidade da [API de destino de teste](../testing-api/streaming-destinations/streaming-destination-testing-overview.md) para executar uma chamada HTTP para o seu destino. Isso inclui:
 
 * A solicitação completa da API (cabeçalhos e corpo) feita para o endpoint de destino usando a API de teste.
 * A resposta da API recebida do endpoint de destino.
@@ -233,7 +233,7 @@ Para destinos baseados em arquivo, você deve fornecer prova adicional de que co
 
 ### Teste de resposta da API {#testing-api-response-file-based}
 
-Inclua uma solicitação e uma amostra de resposta após usar a API de teste para [teste seu destino baseado em arquivo com perfis de amostra](../testing-api/batch-destinations/file-based-destination-testing-api.md).
+Inclua uma solicitação e uma amostra de resposta após usar a API de teste para [testar seu destino baseado em arquivo com perfis de amostra](../testing-api/batch-destinations/file-based-destination-testing-api.md).
 
 ### Anexar arquivo exportado {#attach-exported-file}
 
@@ -249,13 +249,13 @@ Por fim, você deve fornecer alguma forma de prova de que os dados foram assimil
 
 ## Prova de que você enviou uma solicitação de publicação de destino {#destination-publishing-request-proof}
 
-Depois de testar o destino com êxito, você deve usar o [API de publicação de destino](../publishing-api/create-publishing-request.md) para enviar o destino ao Adobe para revisão e publicação.
+Depois de testar o destino com êxito, você deve usar a [API de publicação de destino](../publishing-api/create-publishing-request.md) para enviar o destino ao Adobe para revisão e publicação.
 
 Forneça a ID da solicitação de publicação para o destino. Para obter informações sobre como recuperar a ID da solicitação de publicação, leia como [recuperar solicitações de publicação de destino](../publishing-api/retrieve-publishing-request.md).
 
 ## PR (pull request) da documentação de destino para integrações produzidas {#documentation-pr}
 
-Se você for um ISV (Independent Software Vendor, Fornecedor independente de software) ou um SI (System Integrator, integrador de sistemas), crie um [integração produtiva](../overview.md#productized-custom-integrations), você deve usar o [processo de documentação de autoatendimento](../docs-framework/documentation-instructions.md) para criar uma página de documentação do produto para o seu destino. Como parte do processo de envio, forneça a solicitação de pull (PR) para sua documentação de destino.
+Se você for um ISV (Fornecedor Independente de Software) ou um SI (Integrador de Sistemas) criando uma [integração de produtos](../overview.md#productized-custom-integrations), deverá usar o [processo de documentação de autoatendimento](../docs-framework/documentation-instructions.md) para criar uma página de documentação do produto para o seu destino. Como parte do processo de envio, forneça a solicitação de pull (PR) para sua documentação de destino.
 
 ## Logotipo para o seu destino {#logo}
 
@@ -267,4 +267,4 @@ Os requisitos de imagem são:
 
 ## Baixar email de amostra {#download-sample-email}
 
-[Baixar](../assets/guides/sample-email-submit-destination.rtf) um email de amostra com todas as informações que você precisa fornecer ao Adobe.
+[Baixe](../assets/guides/sample-email-submit-destination.rtf) um email de exemplo com todas as informações que você precisa fornecer ao Adobe.

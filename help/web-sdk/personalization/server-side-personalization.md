@@ -1,6 +1,6 @@
 ---
-title: Personalização do lado do servidor usando a API do servidor de rede de borda
-description: Este artigo demonstra como você pode usar a API do Servidor de rede de borda para implantar a personalização do lado do servidor nas suas propriedades da Web.
+title: Personalização do lado do servidor usando a API do servidor Edge Network
+description: Este artigo demonstra como usar a API do servidor Edge Network para implantar a personalização do lado do servidor nas propriedades da Web.
 keywords: personalização, api do servidor, rede de borda, lado do servidor,
 source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
@@ -10,11 +10,11 @@ ht-degree: 2%
 ---
 
 
-# Personalização do lado do servidor usando a API do servidor de rede de borda
+# Personalização do lado do servidor usando a API do servidor Edge Network
 
 ## Visão geral {#overview}
 
-A personalização do lado do servidor envolve o uso da variável [API do servidor de rede de borda](../../server-api/overview.md) para personalizar a experiência do cliente em suas propriedades da web.
+A personalização no lado do servidor envolve o uso da [API do Edge Network Server](../../server-api/overview.md) para personalizar a experiência do cliente em suas propriedades da Web.
 
 No exemplo descrito neste artigo, o conteúdo de personalização é recuperado no lado do servidor, usando a API do servidor. Em seguida, o HTML é renderizado no lado do servidor, com base no conteúdo de personalização recuperado.
 
@@ -30,19 +30,19 @@ A tabela abaixo mostra um exemplo de conteúdo personalizado e não personalizad
 
 Os cookies são usados para manter a identidade do usuário e as informações do cluster.  Ao usar uma implementação do lado do servidor, o servidor de aplicativos manipula o armazenamento e o envio desses cookies durante o ciclo de vida da solicitação.
 
-| Cookie | Propósito | Armazenado por | Enviado por |
+| Cookie | Finalidade | Armazenado por | Enviado por |
 |---|---|---|---|
 | `kndctr_AdobeOrg_identity` | Contém detalhes da identidade do usuário. | Servidor de aplicativos | Servidor de aplicativos |
-| `kndctr_AdobeOrg_cluster` | Indica qual cluster da Rede de Borda deve ser usado para atender às solicitações. | Servidor de aplicativos | Servidor de aplicativos |
+| `kndctr_AdobeOrg_cluster` | Indica qual cluster de Edge Network deve ser usado para atender às solicitações. | Servidor de aplicativos | Servidor de aplicativos |
 
 ### Solicitar posicionamento {#request-placement}
 
-As solicitações de personalização são necessárias para obter apresentações e enviar uma notificação de exibição. Ao usar uma implementação do lado do servidor, o servidor de aplicativos faz essas solicitações para a API do servidor da rede de borda.
+As solicitações do Personalization são necessárias para obter apresentações e enviar uma notificação de exibição. Ao usar uma implementação do lado do servidor, o servidor de aplicativos faz essas solicitações para a API do servidor Edge Network.
 
 | Solicitação | Feito por |
 |---|---|
-| Solicitação do Interact para recuperar apresentações | Servidor de aplicativos que chama a API de Servidor de Rede de Borda. |
-| Solicitação do Interact para enviar notificações de exibição | Servidor de aplicativos que chama a API de Servidor de Rede de Borda. |
+| Solicitação do Interact para recuperar apresentações | Servidor de aplicativos que chama a API do servidor de Edge Network. |
+| Solicitação do Interact para enviar notificações de exibição | Servidor de aplicativos que chama a API do servidor de Edge Network. |
 
 ## Aplicativo de amostra {#sample-app}
 
@@ -50,14 +50,14 @@ O processo descrito abaixo usa um aplicativo de amostra que você pode usar como
 
 Você pode baixar essa amostra e personalizá-la de acordo com suas necessidades. Por exemplo, você pode alterar as variáveis de ambiente para que o aplicativo de amostra obtenha ofertas de sua própria configuração de Experience Platform.
 
-Para fazer isso, abra o `.env` arquivo na raiz do repositório e modifique as variáveis de acordo com sua configuração. Reinicie o aplicativo de amostra e estará pronto para experimentar usando seu próprio conteúdo de personalização.
+Para fazer isso, abra o arquivo `.env` na raiz do repositório e modifique as variáveis de acordo com sua configuração. Reinicie o aplicativo de amostra e estará pronto para experimentar usando seu próprio conteúdo de personalização.
 
 ### Execução da amostra {#running-sample}
 
 Siga as etapas abaixo para executar o aplicativo de amostra.
 
-1. Clonar [este repositório](https://github.com/adobe/alloy-samples) ao computador local.
-2. Abra um terminal e navegue até o `personalization-server-side` pasta.
+1. Clonar [este repositório](https://github.com/adobe/alloy-samples) no computador local.
+2. Abra um terminal e navegue até a pasta `personalization-server-side`.
 3. Executar `npm install`.
 4. Executar `npm start`.
 5. Abra o navegador da Web e navegue até `http://localhost`.
@@ -66,9 +66,9 @@ Siga as etapas abaixo para executar o aplicativo de amostra.
 
 Esta seção descreve as etapas usadas na recuperação do conteúdo de personalização.
 
-1. [Expresso](https://expressjs.com/) é usado para uma implementação enxuta do lado do servidor. Isso lida com roteamento e solicitações básicas do servidor.
+1. O [Express](https://expressjs.com/) é usado para uma implementação enxuta do lado do servidor. Isso lida com roteamento e solicitações básicas do servidor.
 2. O navegador solicita a página da Web. Todos os cookies armazenados anteriormente pelo navegador, com o prefixo `kndctr_`, estão incluídos.
-3. Quando a página é solicitada no servidor de aplicativos, um evento é enviado para o [ponto de extremidade de coleção de dados interativa](../../../server-api/interactive-data-collection.md) para buscar conteúdo de personalização. O aplicativo de amostra usa métodos auxiliares para simplificar a criação e o envio de solicitações para a API (consulte [aepEdgeClient.js](https://github.com/adobe/alloy-samples/blob/main/common/aepEdgeClient.js)). A variável `POST` contém um `event` e uma `query`. Os cookies da etapa anterior, se disponíveis, estão incluídos na variável `meta>state>entries` matriz.
+3. Quando a página é solicitada no servidor de aplicativos, um evento é enviado ao [ponto de extremidade de coleta de dados interativa](../../../server-api/interactive-data-collection.md) para buscar conteúdo de personalização. O aplicativo de amostra usa métodos auxiliares para simplificar a criação e o envio de solicitações para a API (consulte [aepEdgeClient.js](https://github.com/adobe/alloy-samples/blob/main/common/aepEdgeClient.js)). A solicitação `POST` contém um `event` e um `query`. Os cookies da etapa anterior, se disponíveis, estão incluídos na matriz `meta>state>entries`.
 
    ```js
    fetch(
@@ -196,5 +196,5 @@ Esta seção descreve as etapas usadas na recuperação do conteúdo de personal
    }
    ```
 
-6. [!DNL Visual Experience Composer (VEC)] As ofertas são ignoradas, pois só podem ser renderizadas por meio do SDK da Web.
+6. [!DNL Visual Experience Composer (VEC)] ofertas são ignoradas, pois só podem ser renderizadas via SDK da Web.
 7. Quando a resposta do HTML é retornada, a identidade e os cookies de cluster são definidos na resposta pelo servidor de aplicativos.

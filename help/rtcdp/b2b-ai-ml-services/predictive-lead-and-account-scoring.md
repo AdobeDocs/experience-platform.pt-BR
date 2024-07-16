@@ -7,7 +7,7 @@ badgeB2B: label="Edição B2B" type="Informative" url="https://helpx.adobe.com/l
 exl-id: d3afbabb-005d-4537-831a-857c88043759
 source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
-source-wordcount: '869'
+source-wordcount: '859'
 ht-degree: 2%
 
 ---
@@ -26,7 +26,7 @@ O serviço de pontuação preditiva de leads e contas lida com os desafios acima
 
 >[!NOTE]
 >
->[!DNL Marketo] a fonte de dados é necessária no momento, pois é a única fonte de dados que pode fornecer os eventos de conversão no nível do perfil de pessoa.
+>A fonte de dados [!DNL Marketo] é necessária no momento, pois é a única fonte de dados que pode fornecer os eventos de conversão no nível do perfil da pessoa.
 
 A Pontuação preditiva de leads e contas usa um método de aprendizado de máquina baseado em árvore (aumento aleatório de floresta/gradiente) para criar o modelo preditivo de pontuação de leads.
 
@@ -37,13 +37,13 @@ A pontuação preditiva de leads e contas é compatível com os seguintes tipos 
 | Tipo de meta | Campos |
 | --- | --- |
 | `leadOperation.convertLead` | <ul><li>`leadOperation.convertLead.convertedStatus`</li><li>`leadOperation.convertLead.assignTo`</li></ul> |
-| `opportunityEvent.opportunityUpdated` | <ul><li>`opportunityEvent.dataValueChanges.attributeName`</li><li>`opportunityEvent.dataValueChanges.newValue`</li><li>`opportunityEvent.dataValueChanges.oldValue`</li>Exemplo: `opportunityEvent.dataValueChanges.attributeName` igual a `Stage` e `opportunityEvent.dataValueChanges.newValue` igual a `Contract`</ul> |
+| `opportunityEvent.opportunityUpdated` | <ul><li>`opportunityEvent.dataValueChanges.attributeName`</li><li>`opportunityEvent.dataValueChanges.newValue`</li><li>`opportunityEvent.dataValueChanges.oldValue`</li>Exemplo: `opportunityEvent.dataValueChanges.attributeName` é igual a `Stage` e `opportunityEvent.dataValueChanges.newValue` é igual a `Contract`</ul> |
 
 O algoritmo considera os seguintes atributos e dados de entrada:
 
 * Perfil de pessoa
 
-| Campo XDM | Obrigatório / Opcional |
+| Campo XDM | Obrigatório/ Opcional |
 | --- | --- |
 | `personComponents.sourceAccountKey.sourceKey` | Obrigatório |
 | `workAddress.country` | Opcional |
@@ -52,11 +52,11 @@ O algoritmo considera os seguintes atributos e dados de entrada:
 
 >[!NOTE]
 > 
->O algoritmo só inspeciona `sourceAccountKey.sourceKey` no grupo de campos Person:personComponents.
+>O algoritmo inspeciona apenas o campo `sourceAccountKey.sourceKey` no grupo de campos Person:personComponents.
 
 * Perfil da conta
 
-| Campo XDM | Obrigatório / Opcional |
+| Campo XDM | Obrigatório/ Opcional |
 | --- | --- |
 | `accountKey.sourceKey` | Obrigatório |
 | `extSourceSystemAudit.createdDate` | Obrigatório |
@@ -66,7 +66,7 @@ O algoritmo considera os seguintes atributos e dados de entrada:
 
 * Evento de experiência
 
-| Campo XDM | Obrigatório / Opcional |
+| Campo XDM | Obrigatório/ Opcional |
 | --- | --- |
 | `_id` | Obrigatório |
 | `personKey.sourceKey` | Obrigatório |
@@ -86,7 +86,7 @@ Os requisitos de qualidade dos dados são os seguintes:
 
 Os trabalhos de pontuação são executados diariamente e os resultados são salvos como atributos de perfil e atributos de conta, que podem ser usados em definições de segmento e personalização. Os insights de análise prontos para uso também estão disponíveis no painel de visão geral da conta.
 
-Consulte a documentação para obter mais informações sobre como [gerenciar lead preditivo e pontuação de conta](/help/rtcdp/b2b-ai-ml-services/manage-predictive-lead-and-account-scoring.md) serviço.
+Consulte a documentação para obter mais informações sobre como [gerenciar o serviço de pontuação preditiva de leads e contas](/help/rtcdp/b2b-ai-ml-services/manage-predictive-lead-and-account-scoring.md).
 
 ## Exibir resultados preditivos de pontuação de leads e contas {#how-to-view}
 
@@ -102,13 +102,13 @@ Após a execução do trabalho, os resultados são salvos em um novo conjunto de
 
 ### Exibir pontuações de perfil de cliente
 
-Para exibir as pontuações preditivas de um perfil de pessoa, selecione **[!UICONTROL Perfis]** na seção customer do painel esquerdo e insira o namespace de identidade e o valor de identidade. Depois de concluído, selecione **[!UICONTROL Exibir]**.
+Para exibir as pontuações preditivas de um perfil de pessoa, selecione **[!UICONTROL Perfis]** na seção de cliente, no painel esquerdo, e insira o namespace de identidade e o valor de identidade. Depois de concluído, selecione **[!UICONTROL Exibir]**.
 
 Em seguida, selecione o perfil na lista.
 
 ![Perfil do cliente](/help/rtcdp/accounts/images/b2b-view-customer-profile.png)
 
-A variável **[!UICONTROL Detalhe]** A página agora inclui as pontuações preditivas. Clique no ícone do gráfico ao lado da pontuação preditiva.
+A página **[!UICONTROL Detalhes]** agora inclui as pontuações preditivas. Clique no ícone do gráfico ao lado da pontuação preditiva.
 
 ![Pontuação preditiva de perfil do cliente](/help/rtcdp/accounts/images/b2b-view-customer-profile-predictive-score.png)
 
@@ -124,4 +124,4 @@ Você pode monitorar métricas básicas e status diário de execução de trabal
 * Próximo trabalho de pontuação (data)
 * Próximo trabalho de treinamento (data)
 
-Para obter mais informações, consulte a documentação em [monitoramento de trabalhos para lead preditivo e pontuação de conta](/help/dataflows/ui/b2b/monitor-profile-enrichment.md).
+Para obter mais informações, consulte a documentação em [monitorando trabalhos para lead preditivo e pontuação de conta](/help/dataflows/ui/b2b/monitor-profile-enrichment.md).

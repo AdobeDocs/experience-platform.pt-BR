@@ -12,13 +12,13 @@ exl-id: cdc91194-771f-4026-808f-97d70db436d9
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '117'
-ht-degree: 0%
+ht-degree: 3%
 
 ---
 
 # Visão geral do Perfil do cliente em tempo real
 
-Este vídeo fornece uma compreensão básica do Perfil do cliente em tempo real no Adobe Experience Platform e descreve como os dados de várias fontes são reunidos para formar um perfil centralizado para cada um de seus clientes individuais. Para saber mais sobre os recursos e a funcionalidade do Perfil do cliente em tempo real, comece lendo o [Visão geral do Perfil do cliente em tempo real](../home.md).
+Este vídeo fornece uma compreensão básica do Perfil do cliente em tempo real no Adobe Experience Platform e descreve como os dados de várias fontes são reunidos para formar um perfil centralizado para cada um de seus clientes individuais. Para saber mais sobre os recursos e a funcionalidade do Perfil do cliente em tempo real, comece lendo a [Visão geral do Perfil do cliente em tempo real](../home.md).
 
 >[!NOTE]
 >

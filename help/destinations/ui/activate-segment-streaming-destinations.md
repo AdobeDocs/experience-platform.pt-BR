@@ -15,11 +15,11 @@ ht-degree: 6%
 
 >[!IMPORTANT]
 > 
-> * Para ativar públicos-alvo e ativar a [etapa de mapeamento](#mapping) do fluxo de trabalho, é necessário **[!UICONTROL Exibir destinos]**, **[!UICONTROL Ativar destinos]**, **[!UICONTROL Exibir perfis]**, e **[!UICONTROL Exibir segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions).
-> * Para ativar públicos-alvo sem passar pela [etapa de mapeamento](#mapping) do fluxo de trabalho, é necessário **[!UICONTROL Exibir destinos]**, **[!UICONTROL Ativar segmento sem mapeamento]**, **[!UICONTROL Exibir perfis]**, e **[!UICONTROL Exibir segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions).
->* Para exportar *identidades*, você precisará do **[!UICONTROL Exibir gráfico de identidade]** [permissão de controle de acesso](/help/access-control/home.md#permissions). <br> ![Selecione o namespace de identidade destacado no fluxo de trabalho para ativar públicos para destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecione o namespace de identidade destacado no fluxo de trabalho para ativar públicos para destinos."){width="100" zoomable="yes"}
+> * Para ativar públicos e habilitar a [etapa de mapeamento](#mapping) do fluxo de trabalho, você precisa das **[!UICONTROL Exibir Destinos]**, **[!UICONTROL Ativar Destinos]**, **[!UICONTROL Exibir Perfis]** e **[!UICONTROL Exibir Segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions).
+> * Para ativar os públicos-alvo sem passar pela [etapa de mapeamento](#mapping) do fluxo de trabalho, você precisa das **[!UICONTROL Exibir Destinos]**, **[!UICONTROL Ativar Segmento sem Mapeamento]**, **[!UICONTROL Exibir Perfis]** e **[!UICONTROL Exibir Segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions).
+>* Para exportar *identidades*, você precisa da **[!UICONTROL permissão Exibir Gráfico de Identidade]** [controle de acesso](/help/access-control/home.md#permissions). <br> ![Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos."){width="100" zoomable="yes"}
 > 
-> Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
+> Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 
 ## Visão geral {#overview}
 
@@ -27,33 +27,33 @@ Este artigo explica o fluxo de trabalho necessário para ativar públicos-alvo e
 
 ## Pré-requisitos {#prerequisites}
 
-Para ativar públicos para destinos, você deve ter o [conectado a um destino](./connect-destination.md). Se ainda não tiver feito isso, acesse o [catálogo de destinos](../catalog/overview.md), navegue pelos destinos compatíveis e configure o destino que deseja usar.
+Para ativar públicos para destinos, você deve ter [se conectado com êxito a um destino](./connect-destination.md). Se ainda não tiver feito isso, vá para o [catálogo de destinos](../catalog/overview.md), navegue pelos destinos compatíveis e configure o destino que deseja usar.
 
 ## Selecione seu destino {#select-destination}
 
-1. Ir para **[!UICONTROL Conexões > Destinos]** e selecione a variável **[!UICONTROL Catálogo]** guia.
+1. Vá para **[!UICONTROL Conexões > Destinos]** e selecione a guia **[!UICONTROL Catálogo]**.
 
-   ![Guia Catálogo de destino mostrando vários destinos de streaming.](../assets/ui/activate-segment-streaming-destinations/catalog-tab.png)
+   ![Guia Catálogo de Destino mostrando vários destinos de streaming.](../assets/ui/activate-segment-streaming-destinations/catalog-tab.png)
 
-1. Selecionar **[!UICONTROL Ativar públicos]** no cartão correspondente ao destino em que deseja ativar os públicos-alvo, conforme mostrado na imagem abaixo.
+1. Selecione **[!UICONTROL Ativar públicos-alvo]** no cartão correspondente ao destino em que você deseja ativar os públicos-alvo, conforme mostrado na imagem abaixo.
 
-   ![Ative o controle destacado no catálogo de destinos.](../assets/ui/activate-segment-streaming-destinations/activate-audiences-button.png)
+   ![Ativar controle realçado no catálogo de destinos.](../assets/ui/activate-segment-streaming-destinations/activate-audiences-button.png)
 
-1. Selecione a conexão de destino que deseja usar para ativar os públicos-alvo e selecione **[!UICONTROL Próxima]**.
+1. Selecione a conexão de destino que você deseja usar para ativar seus públicos e selecione **[!UICONTROL Avançar]**.
 
-   ![Uma conexão de destino destacada na etapa Selecionar destino.](../assets/ui/activate-segment-streaming-destinations/select-destination.png)
+   ![Uma conexão de destino foi realçada na etapa Selecionar destino.](../assets/ui/activate-segment-streaming-destinations/select-destination.png)
 
-1. Mover para a próxima seção para [selecionar seus públicos](#select-audiences).
+1. Mova para a próxima seção para [selecionar seus públicos-alvo](#select-audiences).
 
 ## Selecione seus públicos-alvo {#select-audiences}
 
-Para selecionar os públicos que deseja ativar para o destino, use as caixas de seleção à esquerda dos nomes dos públicos e selecione **[!UICONTROL Próxima]**.
+Para selecionar os públicos que você deseja ativar para o destino, use as caixas de seleção à esquerda dos nomes de público e selecione **[!UICONTROL Avançar]**.
 
 Você pode selecionar entre vários tipos de públicos-alvo, dependendo de sua origem:
 
-* **[!UICONTROL Serviço de segmentação]**: públicos-alvo gerados no Experience Platform pelo serviço de segmentação. Consulte a [documentação de segmentação](../../segmentation/ui/overview.md) para obter mais detalhes.
-* **[!UICONTROL Upload personalizado]**: públicos gerados fora do Experience Platform e carregados na Platform como arquivos CSV. Para saber mais sobre públicos-alvo externos, consulte a documentação em [importação de um público](../../segmentation/ui/audience-portal.md#import-audience).
-* Outros tipos de públicos-alvo, provenientes de outras soluções de Adobe, como [!DNL Audience Manager].
+* **[!UICONTROL Serviço de segmentação]**: públicos-alvo gerados em Experience Platform pelo serviço de segmentação. Consulte a [documentação de segmentação](../../segmentation/ui/overview.md) para obter mais detalhes.
+* **[!UICONTROL Upload personalizado]**: públicos-alvo gerados fora do Experience Platform e carregados na Platform como arquivos CSV. Para saber mais sobre públicos-alvo externos, consulte a documentação sobre [importação de um público-alvo](../../segmentation/ui/audience-portal.md#import-audience).
+* Outros tipos de públicos-alvo, originados de outras soluções de Adobe, como o [!DNL Audience Manager].
 
 ![Vários públicos-alvo destacados na etapa Selecionar públicos-alvo.](../assets/ui/activate-segment-streaming-destinations/select-audiences.png)
 
@@ -61,35 +61,35 @@ Você pode selecionar entre vários tipos de públicos-alvo, dependendo de sua o
 
 >[!IMPORTANT]
 >
->Esta etapa se aplica somente a alguns destinos de transmissão de público. Se o seu destino não tiver um **[!UICONTROL Mapeamento]** etapa, saltar para [agendamento de público](#scheduling).
+>Esta etapa se aplica somente a alguns destinos de transmissão de público. Se o destino não tiver uma etapa de **[!UICONTROL Mapeamento]**, pule para [agendamento de público-alvo](#scheduling).
 >
->Ao ativar públicos para destinos de transmissão, você também deve mapear *pelo menos um namespace de identidade de destino*, além dos atributos do perfil de público-alvo. Caso contrário, os públicos-alvo não serão ativados para a plataforma de destino.
+>Ao ativar públicos para destinos de streaming, você também deve mapear *pelo menos um namespace de identidade de destino*, além dos atributos de perfil de destino. Caso contrário, os públicos-alvo não serão ativados para a plataforma de destino.
 > ![Imagem da etapa de mapeamento mostrando um mapeamento de namespace de identidade obrigatório.](../assets/ui/activate-segment-streaming-destinations/identity-mapping-mandatory.png) {zoomable="yes"}
 
 
 Alguns destinos de transmissão de público exigem que você selecione atributos de origem ou namespaces de identidade para mapear como identidades de destino no destino.
 
-1. No **[!UICONTROL Mapeamento]** selecione **[!UICONTROL Adicionar novo mapeamento]**.
+1. Na página **[!UICONTROL Mapeamento]**, selecione **[!UICONTROL Adicionar novo mapeamento]**.
 
    ![Adicionar novo controle de mapeamento realçado.](../assets/ui/activate-segment-streaming-destinations/add-new-mapping.png)
 
-1. Selecione a seta à direita da **[!UICONTROL Campo do Source]** entrada.
+1. Selecione a seta à direita da entrada **[!UICONTROL Source field]**.
 
-   ![Selecione o controle de campo de origem realçado.](../assets/ui/activate-segment-streaming-destinations/select-source-field.png)
+   ![Selecionar controle de campo de origem realçado.](../assets/ui/activate-segment-streaming-destinations/select-source-field.png)
 
-1. No **[!UICONTROL Selecionar campo de origem]** , use o **[!UICONTROL Selecionar atributos]** ou o **[!UICONTROL Selecionar namespace de identidade]** opções para alternar entre as duas categorias de campos de origem disponíveis. No disponível [!DNL XDM] atributos de perfil e namespaces de identidade, selecione aqueles que deseja mapear para o destino e escolha **[!UICONTROL Selecionar]**.
+1. Na página **[!UICONTROL Selecionar campo de origem]**, use as opções **[!UICONTROL Selecionar atributos]** ou **[!UICONTROL Selecionar namespace de identidade]** para alternar entre as duas categorias de campos de origem disponíveis. Nos atributos de perfil e namespaces de identidade [!DNL XDM] disponíveis, selecione aqueles que você deseja mapear para o destino e escolha **[!UICONTROL Selecionar]**.
 
-   Use o **[!UICONTROL Mostrar apenas campos com dados]** alternar para exibir apenas campos de esquema preenchidos com valores. Por padrão, somente os campos de esquema preenchidos são exibidos.
+   Use a opção **[!UICONTROL Mostrar apenas campos com dados]** para exibir apenas campos de esquema preenchidos com valores. Por padrão, somente os campos de esquema preenchidos são exibidos.
 
-   ![Página Selecionar campo de origem mostrando vários campos de origem disponíveis.](../assets/ui/activate-segment-streaming-destinations/select-source-field-modal.png)
+   ![Selecionar página de campo de origem mostrando vários campos de origem disponíveis.](../assets/ui/activate-segment-streaming-destinations/select-source-field-modal.png)
 
-1. Selecione o botão à direita da **[!UICONTROL Campo de destino]** entrada.
+1. Selecione o botão à direita da entrada **[!UICONTROL Campo de destino]**.
 
-   ![Selecione o campo de destino em destaque.](../assets/ui/activate-segment-streaming-destinations/select-target-field.png)
+   ![Selecionar campo de destino realçado.](../assets/ui/activate-segment-streaming-destinations/select-target-field.png)
 
-1. No **[!UICONTROL Selecionar campo de destino]** selecione o namespace de identidade de destino para o qual deseja mapear o campo de origem e escolha **[!UICONTROL Selecionar]**.
+1. Na página **[!UICONTROL Selecionar campo de destino]**, selecione o namespace de identidade de destino para o qual você deseja mapear o campo de origem e escolha **[!UICONTROL Selecionar]**.
 
-   ![Página Selecionar campo de destino mostrando as opções disponíveis para mapeamentos de campo de destino.](../assets/ui/activate-segment-streaming-destinations/target-field-page.png)
+   ![Selecionar página de campo de destino mostrando as opções disponíveis para mapeamentos de campo de destino.](../assets/ui/activate-segment-streaming-destinations/target-field-page.png)
 
 1. Para adicionar mais mapeamentos, repita as etapas de 1 a 5.
 
@@ -100,9 +100,9 @@ Alguns destinos de transmissão de público exigem que você selecione atributos
 >title="Aplicar transformação"
 >abstract="Marque essa opção ao usar campos de origem sem hash, para que a Adobe Experience Platform faça o hash automaticamente na ativação."
 
-Ao mapear atributos de origem com hash não atribuídos para atributos de destino que o destino espera que tenham hash (por exemplo: `email_lc_sha256` ou `phone_sha256`), verifique a **Aplicar transformação** opção para que o Adobe Experience Platform coloque automaticamente os atributos de origem em hash na ativação.
+Ao mapear atributos de origem com hash não atribuídos para atributos de destino que o destino espera que tenham hash (por exemplo: `email_lc_sha256` ou `phone_sha256`), marque a opção **Aplicar transformação** para que o Adobe Experience Platform coloque os atributos de origem em hash automaticamente na ativação.
 
-![Aplique o controle de transformação destacado na etapa Mapeamento de identidade.](../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
+![Aplicar controle de transformação realçado na etapa Mapeamento de identidade.](../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
 
 ## Programar exportação de público-alvo {#scheduling}
 
@@ -111,45 +111,45 @@ Ao mapear atributos de origem com hash não atribuídos para atributos de destin
 >title="Data de término"
 >abstract="A adição de uma data final para a programação de público-alvo não está disponível."
 
-Por padrão, a variável **[!UICONTROL Programação de público]** A página mostra apenas os públicos-alvo recém-selecionados que você escolheu no fluxo de ativação atual.
+Por padrão, a página **[!UICONTROL Agenda de público-alvo]** mostra apenas os públicos-alvo recém-selecionados que você escolheu no fluxo de ativação atual.
 
-Para ver todos os públicos-alvo sendo ativados para o seu destino, use a opção de filtragem e desative a variável **[!UICONTROL Mostrar somente novos públicos-alvo]** filtro.
+Para ver todos os públicos-alvo sendo ativados para o seu destino, use a opção de filtragem e desabilite o filtro **[!UICONTROL Mostrar somente novos públicos-alvo]**.
 
 ![Todos os públicos-alvo](../assets/ui/activate-segment-streaming-destinations/all-audiences.png)
 
-1. No **[!UICONTROL Programação de público]** selecione cada público e use a variável **[!UICONTROL Data inicial]** e **[!UICONTROL Data final]** seletores para configurar o intervalo de tempo para enviar dados ao seu destino.
+1. Na página **[!UICONTROL Agenda de público-alvo]**, selecione cada público-alvo e use os seletores **[!UICONTROL Data de início]** e **[!UICONTROL Data de término]** para configurar o intervalo de tempo para enviar os dados ao seu destino.
 
-   ![Filtro de agendamento de público realçado.](../assets/ui/activate-segment-streaming-destinations/audience-schedule.png)
+   ![Filtro de agendamento de público-alvo realçado.](../assets/ui/activate-segment-streaming-destinations/audience-schedule.png)
 
-   * Alguns destinos exigem que você selecione a variável **[!UICONTROL Origem do público]** para cada público-alvo, usando o menu suspenso abaixo dos seletores de calendário. Se o destino não incluir esse seletor, ignore esta etapa.
+   * Alguns destinos exigem que você selecione a **[!UICONTROL Origem do público-alvo]** para cada público-alvo, usando o menu suspenso abaixo dos seletores de calendário. Se o destino não incluir esse seletor, ignore esta etapa.
 
-     ![Lista suspensa ID de mapeamento realçada.](../assets/ui/activate-segment-streaming-destinations/origin-of-audience.png)
+     ![Lista suspensa de ID de mapeamento realçada.](../assets/ui/activate-segment-streaming-destinations/origin-of-audience.png)
 
-   * Alguns destinos exigem o mapeamento manual [!DNL Platform] públicos-alvo à contraparte no destino-alvo. Para fazer isso, selecione cada público e insira a ID de público correspondente na plataforma de destino na **[!UICONTROL ID do mapeamento]** campo. Se o destino não incluir esse campo, ignore esta etapa.
+   * Alguns destinos exigem que você mapeie manualmente [!DNL Platform] públicos-alvo para seus homólogos no destino-alvo. Para fazer isso, selecione cada público e insira a ID de público correspondente na plataforma de destino no campo **[!UICONTROL ID de mapeamento]**. Se o destino não incluir esse campo, ignore esta etapa.
 
-     ![Origem da lista suspensa de públicos-alvo destacada.](../assets/ui/activate-segment-streaming-destinations/mapping-id.png)
+     ![Origem da lista suspensa de público-alvo destacada.](../assets/ui/activate-segment-streaming-destinations/mapping-id.png)
 
-   * Alguns destinos exigem que você insira um **[!UICONTROL ID do aplicativo]** ao ativar [!DNL IDFA] ou [!DNL GAID] públicos-alvo. Se o destino não incluir esse campo, ignore esta etapa.
+   * Alguns destinos exigem que você insira um **[!UICONTROL ID do aplicativo]** ao ativar públicos-alvo do [!DNL IDFA] ou do [!DNL GAID]. Se o destino não incluir esse campo, ignore esta etapa.
 
      ![Lista suspensa de ID do aplicativo realçada.](../assets/ui/activate-segment-streaming-destinations/destination-appid.png)
 
-1. Selecionar **[!UICONTROL Próxima]** para acessar o [!UICONTROL Revisão] página.
+1. Selecione **[!UICONTROL Avançar]** para ir para a página [!UICONTROL Revisão].
 
 ## Revisar {#review}
 
-No **[!UICONTROL Revisão]** você poderá ver um resumo da sua seleção. Selecionar **[!UICONTROL Cancelar]** para interromper o fluxo, **[!UICONTROL Voltar]** para modificar suas configurações ou **[!UICONTROL Concluir]** para confirmar a seleção e começar a enviar dados para o destino.
+Na página **[!UICONTROL Revisão]**, você pode ver um resumo da sua seleção. Selecione **[!UICONTROL Cancelar]** para interromper o fluxo, **[!UICONTROL Voltar]** para modificar suas configurações ou **[!UICONTROL Concluir]** para confirmar sua seleção e começar a enviar dados ao destino.
 
 ![Resumo da seleção na etapa de revisão.](../assets/ui/activate-segment-streaming-destinations/review.png)
 
 ### Avaliação da política de consentimento {#consent-policy-evaluation}
 
-Se sua organização adquiriu o **Adobe Healthcare Shield** ou o **Adobe Privacy &amp; Security Shield**, selecione **[!UICONTROL Exibir políticas de consentimento aplicáveis]** para ver quais políticas de consentimento são aplicadas e quantos perfis são incluídos na ativação como resultado delas. Ler sobre [avaliação da política de consentimento](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) para obter mais informações.
+Se sua organização adquiriu o **Adobe Healthcare Shield** ou o **Adobe Privacy &amp; Security Shield**, selecione **[!UICONTROL Exibir políticas de consentimento aplicáveis]** para ver quais políticas de consentimento são aplicadas e quantos perfis são incluídos na ativação como resultado delas. Leia sobre [avaliação de política de consentimento](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) para obter mais informações.
 
 ### Verificações de política de uso de dados {#data-usage-policy-checks}
 
-No **[!UICONTROL Revisão]** etapa, o Experience Platform também verifica se há violações de política de uso de dados. Veja abaixo um exemplo de violação de uma política. Não é possível concluir o fluxo de trabalho de ativação de público-alvo até que a violação seja resolvida. Para obter informações sobre como resolver violações de política, leia sobre [violações de política de uso de dados](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) na seção documentação de governança de dados.
+Na etapa **[!UICONTROL Revisar]**, o Experience Platform também verifica se há violações de política de uso de dados. Veja abaixo um exemplo de violação de uma política. Não é possível concluir o fluxo de trabalho de ativação de público-alvo até que a violação seja resolvida. Para obter informações sobre como resolver violações de política, leia sobre [violações de política de uso de dados](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) na seção de documentação sobre governança de dados.
 
-![Um exemplo de violação da política de dados mostrada no fluxo de trabalho de ativação.](../assets/common/data-policy-violation.png)
+![Um exemplo de violação de política de dados mostrada no fluxo de trabalho de ativação.](../assets/common/data-policy-violation.png)
 
 ### Filtrar públicos {#filter-audiences}
 
@@ -157,11 +157,11 @@ Também nesta etapa é possível usar os filtros disponíveis na página para ex
 
 ![Gravação de tela mostrando os filtros de público-alvo disponíveis na etapa de revisão.](../assets/ui/activate-segment-streaming-destinations/filter-audiences-review-step.gif)
 
-Se estiver satisfeito com a sua seleção e nenhuma violação de política tiver sido detectada, selecione **[!UICONTROL Concluir]** para confirmar a seleção e começar a enviar dados para o destino.
+Se você estiver satisfeito com sua seleção e nenhuma violação de política for detectada, selecione **[!UICONTROL Concluir]** para confirmar sua seleção e começar a enviar dados para o destino.
 
 ## Verificar ativação de público {#verify}
 
-Verifique a [documentação de monitoramento de destino](../../dataflows/ui/monitor-destinations.md) para obter informações detalhadas sobre como monitorar o fluxo de dados para seus destinos.
+Consulte a [documentação de monitoramento de destino](../../dataflows/ui/monitor-destinations.md) para obter informações detalhadas sobre como monitorar o fluxo de dados para seus destinos.
 
 <!-- 
 For [!DNL Facebook Custom Audience], a successful activation means that a [!DNL Facebook] custom audience would be created programmatically in [[!UICONTROL Facebook Ads Manager]](https://www.facebook.com/adsmanager/manage/). Audience membership in the audience would be added and removed as users are qualified or disqualified for the activated audiences.

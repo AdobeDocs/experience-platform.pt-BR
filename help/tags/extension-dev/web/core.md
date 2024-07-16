@@ -4,8 +4,8 @@ description: Saiba mais sobre os módulos principais da biblioteca que você pod
 exl-id: 7fb63208-aed0-4add-b6da-8e4aea063d0a
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
-source-wordcount: '350'
-ht-degree: 94%
+source-wordcount: '295'
+ht-degree: 93%
 
 ---
 
@@ -48,7 +48,7 @@ console.log(document.location);
 
 ### [!DNL reactor-query-string]
 
-`reactor-query-string` é um utilitário para analisar e serializar [sequências de consulta](https://developer.mozilla.org/en-US/docs/Web/API/HTMLHyperlinkElementUtils/search).
+`reactor-query-string` é um utilitário para analisar e serializar [strings de consulta](https://developer.mozilla.org/en-US/docs/Web/API/HTMLHyperlinkElementUtils/search).
 
 ```javascript
 var queryString = require('@adobe/reactor-query-string');
@@ -62,8 +62,8 @@ var stringified = queryString.stringify(obj);
 
 O utilitário tem os seguintes métodos:
 
-* `queryString.parse({STRING})`: analisa uma sequência de consulta em um objeto. Caracteres `?`, `#` e `&` à esquerda na sequência de consulta são ignorados.
-* `queryString.stringify({OBJECT})`: transforma um objeto em uma sequência de consulta.
+* `queryString.parse({STRING})`: analisa uma string de consulta em um objeto. Caracteres `?`, `#` e `&` à esquerda na string de consulta são ignorados.
+* `queryString.stringify({OBJECT})`: transforma um objeto em uma string de consulta.
 
 ### [!DNL reactor-load-script]
 

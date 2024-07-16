@@ -4,8 +4,8 @@ description: Saiba como definir visualizações para módulos de biblioteca em e
 exl-id: 4471df3e-75e2-4257-84c0-dd7b708be417
 source-git-commit: 41efcb14df44524b58be2293d2b943bd890c1621
 workflow-type: tm+mt
-source-wordcount: '2083'
-ht-degree: 97%
+source-wordcount: '2061'
+ht-degree: 98%
 
 ---
 
@@ -73,7 +73,7 @@ O método `init` será chamado pelas tags assim que a visualização for carrega
 | `extensionSettings` | Configurações salvas da visualização de configuração de extensão. Isso pode ser útil para acessar configurações de extensão em visualizações que não sejam a de configuração de extensão. Se a visualização atual for a de configuração de extensão, use `settings`. |
 | `propertySettings` | Um objeto que contém configurações da propriedade. Consulte o [guia de objetos de turbina](../turbine.md#property-settings) para obter detalhes sobre o que está contido nesse objeto. |
 | `tokens` | Um objeto que contém tokens de API. Para acessar as APIs da Adobe na visualização, geralmente é necessário usar um token IMS em `tokens.imsAccess`. Esse token será disponibilizado somente para extensões desenvolvidas pela Adobe. Se você for um funcionário da Adobe que representa uma extensão criada pela Adobe, [envie um email à equipe de engenharia de coleta de dados](mailto:reactor@adobe.com) e forneça o nome da extensão para que seja possível adicioná-la à lista de permissões. |
-| `company` | Um objeto que contém uma única propriedade, `orgId`, que representa ela mesma sua Adobe Experience Cloud ID (uma sequência alfanumérica de 24 caracteres). |
+| `company` | Um objeto que contém uma única propriedade, `orgId`, que representa ela mesma sua Adobe Experience Cloud ID (uma string alfanumérica de 24 caracteres). |
 | `schema` | Um objeto no formato de [esquema JSON](https://json-schema.org/). Este objeto será proveniente do [manifesto da extensão](../manifest.md) e pode ser útil para validar o formulário. |
 
 A visualização deve usar essas informações para renderizar e gerenciar o formulário. É provável que você só precise lidar com `info.settings`, mas as outras informações são fornecidas, caso sejam necessárias.
@@ -172,7 +172,7 @@ Para indicar onde pode ser útil para os usuários usar elementos de dados e fac
 
 >[!NOTE]
 >
->Para baixar o ícone apropriado, navegue até o [página de ícones no Adobe Spectrum](https://spectrum.adobe.com/page/icons/) e pesquisar por &quot;[!DNL Data]&quot;.
+>Para baixar o ícone apropriado, navegue até a página [ícones no Adobe Spectrum](https://spectrum.adobe.com/page/icons/) e procure por &quot;[!DNL Data]&quot;.
 
 Quando um usuário clicar no botão ao lado do campo de texto, chamar `window.extensionBridge.openDataElementSelector` como [descrito acima](#open-data-element). Isso exibirá uma lista dos elementos de dados do usuário que ele pode escolher, em vez de forçá-lo a lembrar o nome e digitar os sinais de porcentagem. Depois que o usuário selecionar um elemento de dados, você receberá o nome do elemento de dados selecionado encapsulado em sinais de porcentagem (a menos que a opção `tokenize` esteja definida como `false`). Recomendamos que você preencha o campo de texto com o resultado.
 
@@ -194,9 +194,9 @@ E, se no tempo de execução, o valor do elemento de dados `productname` fosse `
 }
 ```
 
-Sempre que for encontrado um valor em um objeto de configurações que consista em um sinal de porcentagem, em seguida, uma sequência de caracteres, um sinal de porcentagem, _e nada mais_, ele será substituído pelo valor do elemento de dados _sem alterar o tipo do valor do elemento de dados_.
+Sempre que for encontrado um valor em um objeto de configurações que consista em um sinal de porcentagem, em seguida, uma string, um sinal de porcentagem, _e nada mais_, ele será substituído pelo valor do elemento de dados _sem alterar o tipo do valor do elemento de dados_.
 
-Por exemplo, se o valor de `productname` no tempo de execução fosse o número `538` (não uma sequência de caracteres), o objeto de configurações passado para o módulo da biblioteca seria o seguinte:
+Por exemplo, se o valor de `productname` no tempo de execução fosse o número `538` (não uma string), o objeto de configurações passado para o módulo da biblioteca seria o seguinte:
 
 ```js
 {
@@ -204,7 +204,7 @@ Por exemplo, se o valor de `productname` no tempo de execução fosse o número 
 }
 ```
 
-Observe que o `538` resultante é um número aqui e não uma sequência de caracteres. Da mesma maneira, se o valor do elemento de dados em tempo de execução fosse uma função (um caso de uso raro, mas possível), o objeto de configurações resultante seria o seguinte:
+Observe que o `538` resultante é um número aqui e não uma string. Da mesma maneira, se o valor do elemento de dados em tempo de execução fosse uma função (um caso de uso raro, mas possível), o objeto de configurações resultante seria o seguinte:
 
 ```js
 {
@@ -220,7 +220,7 @@ Por outro lado, vamos supor que os objetos de configurações persistentes sejam
 }
 ```
 
-Nesse caso, como o valor de `productName` é maior que um token de elemento de dados único, o resultado sempre será uma sequência de caracteres. Cada token de elemento de dados será substituído pelo respectivo valor depois de ser convertido em uma sequência de caracteres. Se, no tempo de execução, o valor de `productname` fosse `Ceiling Medallion Pro` (uma sequência de caracteres) e `modelnumber` fosse `2000` (um número), o objeto de configurações resultante passado para o módulo de biblioteca seria:
+Nesse caso, como o valor de `productName` é maior que um token de elemento de dados único, o resultado sempre será uma string. Cada token de elemento de dados será substituído pelo respectivo valor depois de ser convertido em uma string. Se, no tempo de execução, o valor de `productname` fosse `Ceiling Medallion Pro` (uma string) e `modelnumber` fosse `2000` (um número), o objeto de configurações resultante passado para o módulo de biblioteca seria:
 
 ```js
 {

@@ -6,7 +6,7 @@ description: A marcação de conteúdo é um conjunto de serviços de IA que per
 exl-id: 65c527d7-b1bd-414f-aba1-8445676a7052
 source-git-commit: a42bb4af3ec0f752874827c5a9bf70a66beb6d91
 workflow-type: tm+mt
-source-wordcount: '319'
+source-wordcount: '322'
 ht-degree: 1%
 
 ---
@@ -24,13 +24,13 @@ O conteúdo é um componente essencial dessas experiências. Para responder melh
 | Tipo de conteúdo | Recursos | Visão geral da funcionalidade |
 | --- | --- | --- |
 | Texto | - Marcação de palavra-chave <br> | : extrai automaticamente palavras-chave e tags de documentos corporativos e páginas da Web usando um serviço de IA pronto para uso. <br> |
-| Imagens | - Marcação de cores <br> - OCR (Optical Character Recognition, reconhecimento ótico de caracteres) | - Extrair com precisão as cores dominantes (rótulos e valores hexadecimais) e sua espessura de uma imagem do produto. <br> - Extrair com precisão qualquer texto presente de uma imagem do produto. |
+| Imagens | - Marcação de cores <br> - OCR (Reconhecimento Óptico de Caracteres) | - Extrair com precisão as cores dominantes (rótulos e valores hexadecimais) e sua espessura de uma imagem do produto. <br> - Extrair com precisão qualquer texto presente de uma imagem do produto. |
 
 ## Como entender a marcação de conteúdo
 
 A visão geral da Marcação de conteúdo é dividida em três etapas para realizar o envolvimento ideal do cliente e maximizar KPIs orientados pelo cliente.
 
-**Etapa 1: Compreensão do conteúdo**
+**Etapa 1: Compreender o conteúdo**
 - Extrair recursos e metadados inteligentes.
 - Organize o conteúdo (marque, categorize, agrupe, remova a duplicação).
 - Associar dados de conteúdo a ativos.
@@ -40,7 +40,7 @@ A visão geral da Marcação de conteúdo é dividida em três etapas para reali
 - Obtenha as preferências e afinidades do cliente a partir do conteúdo e das ações.
 - Adicione preferências ao perfil do cliente.
 
-**Etapa 3: Ativação da otimização de experiência**
+**Etapa 3: Habilitando a otimização de experiência**
 - Use o perfil do cliente para fornecer experiências aprimoradas e personalizadas na sessão e para experiências subsequentes.
 - Use recursos de conteúdo para obter insights sobre os comportamentos dos clientes que direcionam KPIs.
 - Use insights de conteúdo para melhorar a criação, a criação e a seleção de conteúdo.

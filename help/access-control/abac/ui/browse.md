@@ -12,7 +12,7 @@ ht-degree: 2%
 
 # Guia de permissões
 
-[!UICONTROL Permissões] é a área do Adobe Experience Platform em que os administradores podem definir funções de usuário e políticas de acesso para gerenciar permissões de acesso para recursos e objetos em um aplicativo de produto do.
+[!UICONTROL Permissões] é a área do Adobe Experience Platform em que os administradores podem definir funções de usuário e políticas de acesso para gerenciar permissões de acesso para recursos e objetos em um aplicativo de produto.
 
 Com [!UICONTROL Permissões], você pode configurar:
 
@@ -23,26 +23,26 @@ Com [!UICONTROL Permissões], você pode configurar:
 * [Sandboxes](./sandboxes.md)
 * [Usuários](./users.md)
 
-Para acessar permissões de controle de acesso baseado em atributos para [!DNL Adobe Experience Platform], você deve ser um administrador da organização que tem uma assinatura do [!DNL Adobe Experience Platform]. Embora o Adobe ofereça suporte a hierarquias flexíveis de administradores para suas organizações, você deve ser um administrador de produto para [!DNL Adobe Experience Platform] para configurar permissões. Consulte o artigo da Adobe Help Center sobre [funções administrativas](https://helpx.adobe.com/br/enterprise/using/admin-roles.html) para obter mais informações.
+Para acessar permissões de controle de acesso baseado em atributos para [!DNL Adobe Experience Platform], você deve ser um administrador para sua organização que tenha uma assinatura do [!DNL Adobe Experience Platform]. Embora o Adobe ofereça suporte a hierarquias de administrador flexíveis para suas organizações, você deve ser um administrador de produto para [!DNL Adobe Experience Platform] configurar permissões. Consulte o artigo da Adobe Help Center sobre [funções administrativas](https://helpx.adobe.com/br/enterprise/using/admin-roles.html) para obter mais informações.
 
 Se você não tiver privilégios de administrador, entre em contato com o administrador do sistema para obter acesso.
 
-Quando tiver privilégios de administrador, acesse [Adobe Experience Platform](https://experience.adobe.com/) e faça logon usando o [!DNL Adobe] credenciais. Depois de conectado, a variável **[!UICONTROL Visão geral]** é exibida para sua organização para a qual você tem privilégios de administrador. Esta página mostra os produtos nos quais sua organização está inscrita, juntamente com outros controles para adicionar usuários e administradores à organização como um todo. Selecionar **[!UICONTROL Permissões]** para abrir o espaço de trabalho de controle de acesso baseado em atributos para sua integração com a Platform.
+Depois de ter privilégios de administrador, vá para [Adobe Experience Platform](https://experience.adobe.com/) e entre usando suas credenciais do [!DNL Adobe]. Depois de conectado, a página **[!UICONTROL Visão geral]** é exibida para a sua organização para a qual você tem privilégios de administrador. Esta página mostra os produtos nos quais sua organização está inscrita, juntamente com outros controles para adicionar usuários e administradores à organização como um todo. Selecione **[!UICONTROL Permissões]** para abrir o espaço de trabalho de controle de acesso baseado em atributos para sua integração com a Platform.
 
 ![flac-select-product](../../images/flac-ui/flac-select-product.png)
 
-O espaço de trabalho de controle de acesso baseado em atributos da Platform é exibido, abrindo no **[!UICONTROL Funções]** página. Esta página permite exibir todas as funções e gerenciar várias configurações conforme descrito neste documento.
+O espaço de trabalho de controle de acesso baseado em atributos para a Platform é exibido, abrindo na página **[!UICONTROL Funções]**. Esta página permite exibir todas as funções e gerenciar várias configurações conforme descrito neste documento.
 
 >[!IMPORTANT]
 >
->Para gerenciar permissões para usuários, funcionalidades, rótulos e outros recursos em sua organização, agora você deve usar Permissões em [!DNL Adobe Experience Platform] em vez de Funções no [!DNL Adobe Admin Console].
+>Para gerenciar permissões para usuários, funcionalidades, rótulos e outros recursos em sua organização, agora você deve usar Permissões em [!DNL Adobe Experience Platform] em vez de Funções em [!DNL Adobe Admin Console].
 
-Agora você deve usar as Permissões em [!DNL Adobe Experience Platform], em vez de Funções no Adobe Admin Console, para gerenciar permissões de usuários, funcionalidades, rótulos e outros recursos na organização.
+Agora você deve usar Permissões em [!DNL Adobe Experience Platform], em vez de Funções no Adobe Admin Console, para gerenciar permissões para usuários, funcionalidades, rótulos e outros recursos em sua organização.
 
-![flac-select-roles](../../images/flac-ui/flac-select-roles.png)
+![funções de seleção de flac](../../images/flac-ui/flac-select-roles.png)
 
 Este guia do usuário se concentra em como usar o [!DNL Adobe Experience Platform] para atribuir permissões de acesso à Platform. Para obter informações mais gerais sobre como navegar no [!DNL Admin Console], consulte o [guia do usuário do Admin Console](https://helpx.adobe.com/br/enterprise/using/admin-console.html).
 
 ## Próximas etapas
 
-Depois de ter navegado pelo espaço de trabalho de permissões, vá para a próxima etapa para [criar uma nova função](roles.md).
+Depois de navegar no espaço de trabalho de permissões, vá para a próxima etapa para [criar uma nova função](roles.md).

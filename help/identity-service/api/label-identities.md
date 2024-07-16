@@ -22,8 +22,8 @@ Os seguintes critérios devem ser atendidos para que um campo seja rotulado como
 - As identidades só são reconhecidas nos dados de registro e de séries cronológicas
 - Somente campos PII devem ser marcados como identidade. Escolher um campo que represente dados mais genéricos resultaria em relacionamentos menos precisos e potencialmente erros ao acessar identidades relacionadas no gráfico de identidade
 
-Para obter instruções sobre como usar a API do Registro de esquema para rotular um campo como identidade, visite [guia de endpoint de descritores](../../xdm/api/descriptors.md#create).
+Para obter instruções sobre como usar a API do Registro de Esquema para rotular um campo como identidade, visite [manual de endpoint de descritores](../../xdm/api/descriptors.md#create).
 
 ## Próximas etapas
 
-Prosseguir para o próximo tutorial para [listar identidades de cluster](./list-cluster-identites.md)
+Prossiga para o próximo tutorial para [listar identidades de cluster](./list-cluster-identites.md)

@@ -15,7 +15,7 @@ ht-degree: 26%
 
 # Guia Logs
 
-A variável **Logs** A guia fornece informações específicas para tags e implementações do Adobe Experience Platform Web SDK. É possível filtrar pelas soluções implementadas por meio das ferramentas associadas.
+A guia **Logs** fornece informações específicas para tags e implementações do SDK da Web da Adobe Experience Platform. É possível filtrar pelas soluções implementadas por meio das ferramentas associadas.
 
 ![](images/logs.jpg)
 
@@ -34,6 +34,6 @@ A guia Logs mostra informações em quatro colunas:
 
 **[!UICONTROL Mensagem de log]:** Descreve o problema.
 
-Algumas mensagens de registro incluem uma opção Mostrar código. Selecionar **[!UICONTROL Mostrar código]** para exibir o código condicional que determina se uma regra deve ser acionada.
+Algumas mensagens de registro incluem uma opção Mostrar código. Selecione **[!UICONTROL Mostrar Código]** para exibir o código condicional que determina se uma regra deve ser acionada.
 
-Para limpar o registro, selecione **[!UICONTROL Remover logs]**.
+Para limpar o log, selecione **[!UICONTROL Remover Logs]**.

@@ -41,7 +41,7 @@ Com as regras de vinculação do gráfico de identidade, você pode:
 
 Também há instâncias de usuários que fornecem valores falsos como números de telefone e/ou endereços de email ao se registrar. Nesses casos, se os limites não estiverem ativados, as identidades relacionadas a telefone/email acabarão sendo vinculadas a várias IDs de CRM diferentes.
 
-![invalid-email-phone](../images/identity-settings/invalid-email-phone.png)
+![telefone-email-inválido](../images/identity-settings/invalid-email-phone.png)
 
 Com as regras de vinculação do gráfico de identidade, você pode:
 

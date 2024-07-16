@@ -10,15 +10,15 @@ ht-degree: 1%
 
 ---
 
-# [!UICONTROL Campo de preferência de marketing genérico com assinaturas] tipo de dados
+# [!UICONTROL Campo de Preferência de Marketing Genérico com Assinaturas] tipo de dados
 
-[!UICONTROL Campo de preferência de marketing genérico com assinaturas] é um tipo de dados XDM padrão que descreve a seleção de um cliente para uma preferência de marketing específica.
+O [!UICONTROL Campo de Preferência de Marketing Genérico com Assinaturas] é um tipo de dados XDM padrão que descreve a seleção de um cliente para uma preferência de marketing específica.
 
 >[!NOTE]
 >
->Esse tipo de dados é destinado a ser usado para personalizar a estrutura dos esquemas de consentimento de sua organização usando o [[!UICONTROL Consentimentos e preferências] grupo de campos](../field-groups/profile/consents.md) como linha de base.
+>Este tipo de dados deve ser usado para personalizar a estrutura dos esquemas de consentimento de sua organização usando o grupo de campos [[!UICONTROL Consentimentos e Preferências]](../field-groups/profile/consents.md) como linha de base.
 >
->Se você não precisar de uma `subscriptions` para um campo de preferência de marketing específico, é possível usar a variável [tipo de dados básico de campo de marketing](./marketing-field.md) em vez disso.
+>Se você não precisar de um mapa `subscriptions` para um campo de preferência de marketing específico, poderá usar o [tipo de dados básicos de campo de marketing](./marketing-field.md).
 
 ![](../images/data-types/marketing-field-subscriptions.png)
 
@@ -27,7 +27,7 @@ ht-degree: 1%
 | `reason` | String | Quando um cliente recusa um caso de uso de marketing, esse campo de string representa o motivo pelo qual o cliente recusou. |
 | `subscriptions` | Mapa | Um mapa de preferências de marketing do cliente para assinaturas específicas. Consulte a seção sobre [assinaturas](#subscriptions) para obter mais informações. |
 | `time` | DateTime | Um carimbo de data e hora ISO 8601 que indica quando a preferência de marketing foi alterada, se aplicável. |
-| `val` | String | A opção de preferência fornecida pelo cliente para este caso de uso de marketing. Consulte a [próxima seção](#val) para obter valores e definições aceitos. |
+| `val` | String | A opção de preferência fornecida pelo cliente para este caso de uso de marketing. Consulte a [próxima seção](#val) para obter os valores e as definições aceitos. |
 
 {style="table-layout:auto"}
 
@@ -37,9 +37,9 @@ A tabela a seguir descreve os valores aceitos para `val`:
 
 | Valor | Título | Descrição |
 | --- | --- | --- |
-| `y` | Sim (aceitação) | O cliente optou pela preferência. Por outras palavras, **fazer** consentimento à utilização dos seus dados, tal como indicado pela preferência em questão. |
-| `n` | Não (recusar) | O cliente recusou a preferência. Por outras palavras, **não** consentimento à utilização dos seus dados, tal como indicado pela preferência em questão. |
-| `p` | Verificação pendente | O sistema ainda não recebeu um valor final de preferência. Isso é usado com mais frequência como parte de um consentimento que requer verificação em duas etapas. Por exemplo, se um cliente optar por receber emails, esse consentimento será definido como `p` até que selecionem um link em um email para verificar se forneceram o endereço de email correto, momento em que o consentimento será atualizado para `y`.<br><br>Se essa preferência não usar um processo de verificação de dois conjuntos, a variável `p` em vez disso, a opção pode ser usada para indicar que o cliente ainda não respondeu ao prompt de consentimento. Por exemplo, você pode definir o valor automaticamente como `p` na primeira página de um site, antes que o cliente tenha respondido ao prompt de consentimento. Em jurisdições que não exigem consentimento explícito, você também pode usá-lo para indicar que o cliente não recusou explicitamente (em outras palavras, o consentimento é presumido). |
+| `y` | Sim (aceitação) | O cliente optou pela preferência. Em outras palavras, eles **consentem** o uso de seus dados conforme indicado pela preferência em questão. |
+| `n` | Não (recusar) | O cliente recusou a preferência. Em outras palavras, **não** consente com o uso de seus dados conforme indicado pela preferência em questão. |
+| `p` | Verificação pendente | O sistema ainda não recebeu um valor final de preferência. Isso é usado com mais frequência como parte de um consentimento que requer verificação em duas etapas. Por exemplo, se um cliente optar por receber emails, esse consentimento será definido como `p` até que ele selecione um link em um email para verificar se forneceu o endereço de email correto. Nesse momento, o consentimento será atualizado para `y`.<br><br>Se esta preferência não usar um processo de verificação de dois conjuntos, a opção `p` poderá ser usada para indicar que o cliente ainda não respondeu ao prompt de consentimento. Por exemplo, você pode definir automaticamente o valor como `p` na primeira página de um site, antes que o cliente tenha respondido ao prompt de consentimento. Em jurisdições que não exigem consentimento explícito, você também pode usá-lo para indicar que o cliente não recusou explicitamente (em outras palavras, o consentimento é presumido). |
 | `u` | Desconhecido | As informações de preferência do cliente são desconhecidas. |
 | `dy` | Padrão de Sim (aceitação) | O cliente não forneceu um valor de consentimento e é tratado como uma aceitação (&quot;Sim&quot;) por padrão. Em outras palavras, o consentimento é presumido até que o cliente indique o contrário.<br><br>Observe que, se leis ou alterações na política de privacidade da sua empresa resultarem em alterações nos padrões de alguns ou de todos os usuários, será necessário atualizar manualmente todos os perfis que contenham valores padrão. |
 | `dn` | Padrão de Não (recusar) | O cliente não forneceu um valor de consentimento e é tratado como uma opção de não participação (&quot;Não&quot;) por padrão. Em outras palavras, presume-se que o cliente tenha negado o consentimento até que indique o contrário.<br><br>Observe que, se leis ou alterações na política de privacidade da sua empresa resultarem em alterações nos padrões de alguns ou de todos os usuários, será necessário atualizar manualmente todos os perfis que contenham valores padrão. |
@@ -55,7 +55,7 @@ A tabela a seguir descreve os valores aceitos para `val`:
 
 Algumas empresas permitem que os clientes optem por assinaturas diferentes associadas a um canal de marketing específico. Por exemplo, uma empresa bancária pode permitir que os clientes assinem alertas de telefone para contas com saldo negativo ou recebam chamadas de vendas para ofertas de programa de fidelidade.
 
-O JSON a seguir representa um exemplo de campo de marketing para um canal de marketing por chamada telefônica que contém um `subscriptions` mapa. Cada chave no `subscriptions` representa uma assinatura individual do canal de marketing. Cada assinatura contém um valor de aceitação (`val`).
+O JSON a seguir representa um exemplo de campo de marketing para um canal de marketing por chamada telefônica que contém um mapa `subscriptions`. Cada chave no objeto `subscriptions` representa uma assinatura individual do canal de marketing. Cada assinatura contém um valor de aceitação (`val`).
 
 ```json
 "email-marketing-field": {
@@ -94,10 +94,10 @@ O JSON a seguir representa um exemplo de campo de marketing para um canal de mar
 
 | Propriedade | Descrição |
 | --- | --- |
-| `val` | A variável [valor de consentimento](#val) para a assinatura. |
+| `val` | O [valor de consentimento](#val) da assinatura. |
 | `type` | O tipo de assinatura. Pode ser qualquer string descritiva, desde que tenha 15 caracteres ou menos. |
 | `topics` | Uma matriz de strings que representa as áreas de interesse que um cliente assinou, que pode ser usada para enviar conteúdo relevante para ele. |
-| `subscribers` | Um campo opcional do tipo mapa que representa um conjunto de identificadores (como endereços de email ou números de telefone) que assinaram uma determinada assinatura. Cada chave nesse objeto representa o identificador em questão e contém duas subpropriedades: <ul><li>`time`: um carimbo de data e hora ISO 8601 que indica quando a identidade foi assinada, se aplicável.</li><li>`source`: a origem da qual o assinante se originou. Pode ser qualquer string descritiva, desde que tenha 15 caracteres ou menos.</li></ul> |
+| `subscribers` | Um campo opcional do tipo mapa que representa um conjunto de identificadores (como endereços de email ou números de telefone) que assinaram uma determinada assinatura. Cada chave nesse objeto representa o identificador em questão e contém duas subpropriedades: <ul><li>`time`: um carimbo de data e hora ISO 8601 de quando a identidade foi assinada, se aplicável.</li><li>`source`: a origem da qual o assinante se originou. Pode ser qualquer string descritiva, desde que tenha 15 caracteres ou menos.</li></ul> |
 
 {style="table-layout:auto"}
 

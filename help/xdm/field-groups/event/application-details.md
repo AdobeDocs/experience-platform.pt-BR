@@ -5,13 +5,13 @@ exl-id: 5df99f9a-b36a-4c2b-a4a4-d3cf054f09b8
 source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
 source-wordcount: '123'
-ht-degree: 4%
+ht-degree: 3%
 
 ---
 
-# [!UICONTROL Detalhes do aplicativo] grupo de campos de esquema
+# Grupo de campos de esquema [!UICONTROL Detalhes do aplicativo]
 
-[!UICONTROL Detalhes do aplicativo] é um grupo de campos de esquema padrão para o [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md). O grupo de campos fornece um único `application` para um esquema, que captura detalhes relacionados ao aplicativo, como travamentos, uso de recursos, inicializações e atualizações.
+[!UICONTROL Detalhes do Aplicativo] é um grupo de campos de esquema padrão para a [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md). O grupo de campos fornece um único objeto `application` para um esquema, que captura detalhes relacionados ao aplicativo, como falhas, uso de recursos, inicializações e atualizações.
 
 ![](../../images/field-groups/application-details.png)
 
@@ -21,4 +21,4 @@ ht-degree: 4%
 
 {style="table-layout:auto"}
 
-Para obter mais informações sobre o grupo de campos, consulte o [repositório XDM público](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/experienceevent-application.schema.json).
+Para obter mais detalhes sobre o grupo de campos, consulte o [repositório XDM público](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/experienceevent-application.schema.json).

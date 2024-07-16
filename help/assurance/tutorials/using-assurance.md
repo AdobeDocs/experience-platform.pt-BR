@@ -3,8 +3,8 @@ title: Utilização do Adobe Experience Platform Assurance
 description: Este guia explica como usar o Adobe Experience Platform Assurance após sua instalação e implementação.
 exl-id: 872c83d1-82e8-40d8-9b66-3e51a91a955f
 source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
-workflow-type: ht
-source-wordcount: '402'
+workflow-type: tm+mt
+source-wordcount: '400'
 ht-degree: 100%
 
 ---

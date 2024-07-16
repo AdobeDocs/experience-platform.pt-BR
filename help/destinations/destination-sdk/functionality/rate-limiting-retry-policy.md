@@ -4,7 +4,7 @@ title: Política de limitação de taxa e tentativa para destinos de transmissã
 exl-id: aad10039-9957-4e9e-a0b7-7bf65eb3eaa9
 source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
-source-wordcount: '426'
+source-wordcount: '436'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Os destinos criados por parceiros podem retornar vários erros e ter diferentes políticas de limitação de taxa. Esta página explica como o Experience Platform lida com diferentes tipos de erros retornados por destinos de streaming.
 
-Ao configurar um destino usando o Destination SDK, você pode selecionar entre dois tipos de agregação - [agregação de melhor esforço](../functionality/destination-configuration/aggregation-policy.md#best-effort-aggregation) e [agregação configurável](../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation). Dependendo do tipo de agregação selecionado, leia abaixo como o Experience Platform trata os erros e as limitações de taxa.
+Ao configurar um destino usando Destination SDK, você pode selecionar entre dois tipos de agregação - [agregação de melhor esforço](../functionality/destination-configuration/aggregation-policy.md#best-effort-aggregation) e [agregação configurável](../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation). Dependendo do tipo de agregação selecionado, leia abaixo como o Experience Platform trata os erros e as limitações de taxa.
 
 ## Agregação de melhor esforço {#best-effort-aggregation}
 
@@ -26,7 +26,7 @@ No caso de plataformas de destino configuradas com agregação configurável, o 
 * Erros em que o Experience Platform tenta enviar os dados para a sua plataforma:
    * Códigos de resposta HTTP 420 e 429
    * Códigos de resposta HTTP maiores que 500
-* Erros em que Experience Platform *não* tentar enviar novamente os dados para sua plataforma: todos os outros retornados pela plataforma
+* Erros em que o Experience Platform *não* tenta enviar novamente os dados para a sua plataforma: todos os outros são retornados pela sua plataforma
 
 ### Abordagem de repetição descrita {#retry-approach}
 

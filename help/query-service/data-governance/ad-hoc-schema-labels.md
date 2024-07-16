@@ -26,15 +26,15 @@ Este documento fornece um tutorial para gerenciar o acesso a dados confidenciais
 Este manual necessita de uma compreensão funcional dos seguintes componentes da Adobe Experience Platform:
 
 * [Sistema do Experience Data Model (XDM)](../../xdm/home.md): a estrutura padronizada pela qual o Experience Platform organiza os dados de experiência do cliente.
-   * [[!DNL Schema Editor]](../../xdm/ui/overview.md): saiba como criar e gerenciar esquemas e outros recursos na interface do Platform.
-* [[!DNL Data Governance]](../../data-governance/home.md): saiba como [!DNL Data Governance] O permite gerenciar os dados do cliente e garantir a conformidade com os regulamentos, as restrições e as políticas aplicáveis ao uso de dados.
-* [Controle de acesso baseado em atributos](../../access-control/abac/overview.md): o controle de acesso baseado em atributos é um recurso do Adobe Experience Platform que permite aos administradores controlar o acesso a objetos e/ou recursos específicos com base em atributos. Os atributos podem ser metadados adicionados a um objeto, como um rótulo adicionado a um campo de esquema ad hoc ou regular. Um administrador define políticas de acesso que incluem atributos para gerenciar permissões de acesso do usuário.
+   * [[!DNL Schema Editor]](../../xdm/ui/overview.md): Saiba como criar e gerenciar esquemas e outros recursos na interface do usuário da plataforma.
+* [[!DNL Data Governance]](../../data-governance/home.md): saiba como o [!DNL Data Governance] permite gerenciar dados de clientes e garantir a conformidade com regulamentos, restrições e políticas aplicáveis ao uso de dados.
+* [Controle de acesso baseado em atributos](../../access-control/abac/overview.md): o controle de acesso baseado em atributos é um recurso da Adobe Experience Platform que permite aos administradores controlar o acesso a objetos e/ou recursos específicos com base em atributos. Os atributos podem ser metadados adicionados a um objeto, como um rótulo adicionado a um campo de esquema ad hoc ou regular. Um administrador define políticas de acesso que incluem atributos para gerenciar permissões de acesso do usuário.
 
 ## Criar um esquema ad hoc
 
 Depois que a consulta for executada e os resultados forem gerados, um esquema ad hoc será gerado automaticamente e adicionado ao inventário do esquema.
 
-Para adicionar um rótulo de dados, navegue até [!UICONTROL Esquemas] guia procurar do painel selecionando [!UICONTROL Esquemas] no painel esquerdo da interface do usuário da Platform. O inventário do esquema é exibido.
+Para adicionar um rótulo de dados, navegue até a guia [!UICONTROL Esquemas] do painel de navegação selecionando [!UICONTROL Esquemas] no painel esquerdo da interface do usuário da plataforma. O inventário do esquema é exibido.
 
 >[!NOTE]
 >
@@ -42,9 +42,9 @@ Para adicionar um rótulo de dados, navegue até [!UICONTROL Esquemas] guia proc
 
 ## Descubra esquemas ad hoc no inventário de esquemas da interface do usuário da plataforma {#discover-ad-hoc-schemas}
 
-Para ativar a exibição de esquemas ad hoc na interface do usuário da Platform, selecione o ícone de filtro (![Um ícone de filtro.](../images/data-governance/filter.png)) à esquerda do campo de pesquisa e selecione **[!UICONTROL Mostrar esquemas adhoc] no painel esquerdo exibido.
+Para habilitar a exibição de esquemas ad hoc na interface do usuário da Platform, selecione o ícone de filtro (![Um ícone de filtro.](../images/data-governance/filter.png)) à esquerda do campo de pesquisa e selecione **[!UICONTROL Mostrar esquemas adhoc] no painel esquerdo exibido.
 
-![As opções de filtro do painel Esquema ficam no painel com a opção &quot;Mostrar esquema adhoc&quot; ativada.](../images/data-governance/adhoc-schema-toggle.png)
+![As opções de filtro do painel Esquema ficaram com a opção &#39;Mostrar esquema adhoc&#39; habilitada.](../images/data-governance/adhoc-schema-toggle.png)
 
 Selecione o nome do esquema ad hoc criado recentemente na lista disponível. Uma visualização da estrutura do schema ad hoc é exibida.
 
@@ -52,21 +52,21 @@ Selecione o nome do esquema ad hoc criado recentemente na lista disponível. Uma
 
 ## Editar rótulos de governança
 
-Para editar rótulos de dados para o esquema ad hoc, selecione o [!UICONTROL Rótulos] guia. O espaço de trabalho de rótulos permite aplicar, criar e editar rótulos para seus campos de esquema ad hoc e controlar permissões de acesso por meio da interface. Todos os campos no esquema ad hoc são representados aqui.
+Para editar rótulos de dados para o esquema ad hoc, selecione a guia [!UICONTROL Rótulos]. O espaço de trabalho de rótulos permite aplicar, criar e editar rótulos para seus campos de esquema ad hoc e controlar permissões de acesso por meio da interface. Todos os campos no esquema ad hoc são representados aqui.
 
 ## Editar rótulos para o esquema ou campo
 
-Para editar os rótulos para todo o esquema, selecione o ícone de lápis (![Um lápis.](../images/data-governance/edit-icon.png)) ao lado do nome do esquema sob o [!UICONTROL Rótulos] guia.
+Para editar os rótulos de todo o esquema, selecione o ícone de lápis (![Um ícone de lápis.](../images/data-governance/edit-icon.png)) ao lado do nome do esquema na guia [!UICONTROL Rótulos].
 
-![A exibição de rótulos na área de trabalho de esquemas com o ícone de lápis realçado.](../images/data-governance/edit-entire-schema-labels.png)
+![A exibição de rótulos no espaço de trabalho de esquemas com o ícone de lápis realçado.](../images/data-governance/edit-entire-schema-labels.png)
 
-Para aplicar um rótulo a um campo existente, selecione um ou mais campos na lista seguido de [!UICONTROL Editar rótulos de governança] na barra lateral direita.
+Para aplicar um rótulo a um campo existente, selecione um ou mais campos na lista seguida por [!UICONTROL Editar rótulos de governança] na barra lateral direita.
 
-![A exibição de rótulos no espaço de trabalho de esquemas com a opção &quot;Editar rótulos de governança&quot; realçada na barra lateral direita.](../images/data-governance/edit-governance-labels.png)
+![A exibição de rótulos no espaço de trabalho de esquemas com a opção &#39;Editar rótulos de governança&#39; realçada na barra lateral direita.](../images/data-governance/edit-governance-labels.png)
 
 ## Popover Editar rótulos
 
-A variável [!UICONTROL Editar rótulos] popover é exibido. Nesta visualização, é possível criar ou editar rótulos de governança existentes por meio da interface do usuário.
+O popover [!UICONTROL Editar rótulos] é exibido. Nesta visualização, é possível criar ou editar rótulos de governança existentes por meio da interface do usuário.
 
 ![Popover Editar rótulos.](../images/data-governance/edit-labels-popover.png)
 
@@ -76,7 +76,7 @@ Consulte a documentação para obter orientação sobre como [criar ou editar r�
 >
 >Criar um novo rótulo ou editar um rótulo existente requer permissões de administrador para sua organização. Se você não tiver privilégios de administrador, entre em contato com o administrador do sistema para obter acesso.
 
-Rótulos também podem ser criados usando o espaço de trabalho de permissões. Consulte a [guia sobre a criação de rótulos no espaço de trabalho de permissões](../../access-control/abac/ui/labels.md) para obter instruções.
+Rótulos também podem ser criados usando o espaço de trabalho de permissões. Consulte o [guia sobre criação de rótulos no espaço de trabalho de permissões](../../access-control/abac/ui/labels.md) para obter instruções.
 
 Depois que o nível apropriado de controle de acesso baseado em atributos for aplicado, o seguinte comportamento do sistema será aplicado a qualquer consulta executada por meio do Serviço de consulta quando um usuário tentar acessar dados não acessíveis:
 

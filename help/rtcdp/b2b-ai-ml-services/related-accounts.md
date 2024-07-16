@@ -8,7 +8,7 @@ exl-id: 37fd2cdb-87c0-4e5e-9599-ad4f397f7c28
 source-git-commit: 82535ec3ac2dd27e685bb591fdf661d3ab5dd2c9
 workflow-type: tm+mt
 source-wordcount: '435'
-ht-degree: 4%
+ht-degree: 5%
 
 ---
 
@@ -28,7 +28,7 @@ As empresas B2B geralmente têm suas informações de clientes armazenadas em v�
 
 {style="table-layout:auto"}
 
-Com contas relacionadas, [!DNL Real-Time CDP B2B] O agora mostra uma lista de contas semelhantes à conta que você está navegando.
+Com contas relacionadas, o [!DNL Real-Time CDP B2B] agora mostra uma lista de contas semelhantes à conta que você está navegando.
 
 ![Tela mostrando contas relacionadas na interface do usuário do Experience Platform.](/help/rtcdp/b2b-ai-ml-services/assets/related-accounts-in-ui.png)
 
@@ -36,34 +36,34 @@ Use esse recurso para exibir perfis de conta relacionados para um perfil de cont
 
 ## Habilitar o serviço de contas relacionado {#enable}
 
-Para habilitar o serviço, selecione **[!UICONTROL Perfis]** na barra lateral seguida por **[!UICONTROL Configurações]**.
+Para habilitar o serviço, selecione **[!UICONTROL Perfis]** na barra lateral seguido de **[!UICONTROL Configurações]**.
 
-![Interface do Experience Platform destacando perfis e configurações.](../assets/../b2b-ai-ml-services/assets/related-account-settings.png)
+![IU do Experience Platform destacando perfis e configurações.](../assets/../b2b-ai-ml-services/assets/related-account-settings.png)
 
-Selecione a alternância ao lado [!UICONTROL Habilitar contas relacionadas] para habilitar o serviço e selecione **[!UICONTROL Salvar]**.
+Selecione a opção ao lado de [!UICONTROL Habilitar contas relacionadas] para habilitar o serviço e selecione **[!UICONTROL Salvar]**.
 
-![Tela de configurações da conta destacando a alternância e salvar.](../assets/../b2b-ai-ml-services/assets/related-account-toggle.png)
+![Tela de configurações da conta destacando a alternância e salve.](../assets/../b2b-ai-ml-services/assets/related-account-toggle.png)
 
 ## Como funciona {#how-it-works}
 
 As tarefas de aprendizado de máquina executadas diariamente usam um algoritmo hierárquico para agrupar perfis de conta semelhantes em grupos com base em três fatores:
 
 * Link da conta principal
-* Domínio da Web
+* Domínio da web
 * Nome da conta
 
-Após um trabalho de processamento bem-sucedido, cada membro do grupo de perfis de conta é marcado com a lista Contas relacionadas. É possível exibir a lista no **Contas relacionadas** da página Perfil da Conta, e use as contas relacionadas nas definições de segmento.
+Após um trabalho de processamento bem-sucedido, cada membro do grupo de perfis de conta é marcado com a lista Contas relacionadas. Você pode exibir a lista na guia **Contas relacionadas** da página Perfil da conta e usar as contas relacionadas nas definições de segmento.
 
-Consulte a documentação para obter mais informações sobre o [trabalhos de contas relacionadas ao enriquecimento de perfil](/help/dataflows/ui/b2b/monitor-profile-enrichment.md).
+Consulte a documentação para obter mais informações sobre os [trabalhos de contas relacionados ao enriquecimento de perfil](/help/dataflows/ui/b2b/monitor-profile-enrichment.md).
 
 ## Como visualizar contas relacionadas {#how-to-view}
 
 É possível visualizar as contas relacionadas de uma conta que você está navegando na interface do usuário do Experience Platform.
 
-Consulte a documentação para obter mais informações sobre o [como localizar contas relacionadas na interface](/help/rtcdp/accounts/account-profile-ui-guide.md#related-accounts-tab).
+Consulte a documentação para obter mais informações sobre [como localizar contas relacionadas na interface](/help/rtcdp/accounts/account-profile-ui-guide.md#related-accounts-tab).
 
 ## Como você pode usar contas relacionadas {#how-to-use}
 
 Você pode usar contas e contas relacionadas na segmentação. A decisão de usar contas relacionadas nas definições de segmento depende do caso de uso de marketing. Por exemplo, você pode usar contas relacionadas para marketing por email ou campanhas publicitárias nas quais pode aceitar uma precisão menor em troca de um alcance mais amplo.
 
-Consulte uma [exemplo de segmentação](/help/rtcdp/segmentation/b2b.md#related-accounts) que usa contas relacionadas.
+Veja um [exemplo de segmentação](/help/rtcdp/segmentation/b2b.md#related-accounts) que usa contas relacionadas.

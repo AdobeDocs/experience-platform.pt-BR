@@ -38,8 +38,8 @@ Leia esta página para obter uma visão geral de todos os manuais disponíveis q
 | Aumentar a compra de produtos durante a visita à loja | Solicite aos compradores que comprem os produtos quando eles estiverem perto da loja. |
 | Aumentar a compra de produtos e serviços durante a permanência | Solicite aos hóspedes que comprem produtos e serviços enquanto estiverem na propriedade. |
 | Aumentar compras de jogos individuais | Direcione os fãs para aumentar as compras repetidas de jogos únicos. |
-| Pesquisa pós-evento e promoção de incentivo | Solicite aos fãs que respondam a uma pesquisa pós-evento oferecendo uma promoção de incentivo. |
-| Pesquisa pós-viagem | Solicite aos convidados que respondam a uma pesquisa pós-viagem oferecendo uma promoção de incentivo. |
+| Pesquisa de evento da Post e promoção de incentivo | Solicite aos fãs que respondam a uma pesquisa pós-evento oferecendo uma promoção de incentivo. |
+| Pesquisa Post-Trip | Solicite aos convidados que respondam a uma pesquisa pós-viagem oferecendo uma promoção de incentivo. |
 | Promoção do produto | Solicite aos compradores que comprem produtos durante uma campanha promocional contínua de produtos. |
 | Confirmação de compra: merchandise | Confirme uma nova compra de mercadoria Fan. |
 | Confirmação de compra: produto | Confirme um novo comprador de compra de produto. |
@@ -77,4 +77,4 @@ Leia esta página para obter uma visão geral de todos os manuais disponíveis q
 
 ## Próximas etapas
 
-Agora que você está ciente dos manuais disponíveis, leia este [guia](/help/use-case-playbooks/playbooks/choose.md) para entender como começar a usar os manuais e escolher o correto para você na interface.
+Agora que você tem conhecimento dos manuais disponíveis, leia este [guia](/help/use-case-playbooks/playbooks/choose.md) para entender como começar a usar os manuais e escolher o correto para você na interface do usuário.

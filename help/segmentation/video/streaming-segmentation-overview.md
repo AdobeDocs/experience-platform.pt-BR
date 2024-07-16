@@ -19,12 +19,12 @@ ht-degree: 0%
 
 # Segmentação de transmissão na interface do usuário do Experience Platform
 
-O vídeo a seguir é destinado a ajudá-lo a entender a segmentação por transmissão. Ele mostra um exemplo de experiência do cliente, seguida de um rápido tour pelos principais recursos na [!DNL Platform] interface. Para saber mais sobre a segmentação por transmissão e como fazer a segmentação por transmissão na interface do usuário, leia o [guia da interface de segmentação por transmissão](../ui/streaming-segmentation.md).
+O vídeo a seguir é destinado a ajudá-lo a entender a segmentação por transmissão. Ele mostra um exemplo de experiência do cliente seguido por um rápido tour pelos principais recursos na interface do [!DNL Platform]. Para saber mais sobre a segmentação por transmissão e como fazer a segmentação por transmissão na interface do usuário, leia o [guia da interface de segmentação por transmissão](../ui/streaming-segmentation.md).
 
 Se você estiver interessado na segmentação por transmissão usando a API de segmentação, leia o [guia da API de segmentação por transmissão](../api/streaming-segmentation.md).
 
 >[!NOTE]
 >
->A interface do usuário do Experience Platform é atualizada com frequência e pode ter mudado desde a gravação deste vídeo. Para obter as informações mais atualizadas, consulte o [guia da interface de segmentação por transmissão](../ui/streaming-segmentation.md).
+>A interface do usuário do Experience Platform é atualizada com frequência e pode ter mudado desde a gravação deste vídeo. Para obter as informações mais atualizadas, consulte o [guia da interface de segmentação de streaming](../ui/streaming-segmentation.md).
 
 >[!VIDEO](https://video.tv.adobe.com/v/36184?quality=12&learn=on)

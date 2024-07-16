@@ -28,7 +28,7 @@ GET https://platform-{REGION}.adobe.io/data/core/identity/mapping
 
 **Solicitação**
 
-Opção 1: fornecer a identidade como namespace (`nsId`, por ID) e valor de ID (`id`).
+Opção 1: Forneça a identidade como namespace (`nsId`, por ID) e valor de ID (`id`).
 
 ```shell
 curl -X GET \
@@ -39,7 +39,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Opção 2: fornecer a identidade como namespace (`ns`, por nome) e valor de ID (`id`).
+Opção 2: Forneça a identidade como namespace (`ns`, por nome) e valor de ID (`id`).
 
 ```shell
 curl -X GET \
@@ -50,7 +50,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Opção 3: fornecer a identidade como XID (`xid`). Para obter mais informações sobre como obter o XID de uma identidade, consulte a seção deste documento que aborda [obter o XID de uma identidade](./list-native-id.md).
+Opção 3: Forneça a identidade como XID (`xid`). Para obter mais informações sobre como obter o XID de uma identidade, consulte a seção deste documento que aborda a [obtenção do XID de uma identidade](./list-native-id.md).
 
 ```shell
 curl -X GET \
@@ -63,7 +63,7 @@ curl -X GET \
 
 ### Obter mapeamentos de identidade para várias identidades
 
-Use o `POST` como um lote equivalente ao `GET` método descrito acima para recuperar mapeamentos para várias identidades.
+Use o método `POST` como um equivalente em lote do método `GET` descrito acima para recuperar mapeamentos para várias identidades.
 
 >[!NOTE]
 >
@@ -75,7 +75,7 @@ Use o `POST` como um lote equivalente ao `GET` método descrito acima para recup
 POST https://platform.adobe.io/data/core/identity/mappings
 ```
 
-**Corpo da solicitação**
+**Solicitar corpo**
 
 Opção 1: forneça uma lista de XIDs para os quais recuperar mapeamentos.
 
@@ -86,7 +86,7 @@ Opção 1: forneça uma lista de XIDs para os quais recuperar mapeamentos.
 }
 ```
 
-Opção 2: forneça uma lista de identidades como IDs compostas, onde cada uma nomeia o valor da ID e o namespace pela ID do namespace. Este exemplo demonstra o uso desse método ao substituir o padrão `graph-type` de &quot;Gráfico privado&quot;.
+Opção 2: forneça uma lista de identidades como IDs compostas, onde cada uma nomeia o valor da ID e o namespace pela ID do namespace. Este exemplo demonstra o uso deste método ao substituir o padrão `graph-type` de &quot;Gráfico privado&quot;.
 
 ```shell
 {
@@ -105,7 +105,7 @@ Opção 2: forneça uma lista de identidades como IDs compostas, onde cada uma n
 
 **Solicitação**
 
-**Uso de XIDs**
+**Usando XIDs**
 
 ```shell
 curl -X POST \
@@ -121,7 +121,7 @@ curl -X POST \
       }' | json_pp
 ```
 
-**Uso de UIDs**
+**Usando UIDs**
 
 ```shell
 curl -X POST \
@@ -145,7 +145,7 @@ curl -X POST \
       }' | json_pp
 ```
 
-Se nenhuma identidade relacionada for encontrada com a entrada fornecida, uma `HTTP 204` o código de resposta é retornado sem conteúdo.
+Se nenhuma identidade relacionada for encontrada com a entrada fornecida, um código de resposta `HTTP 204` será retornado sem conteúdo.
 
 **Resposta**
 
@@ -183,9 +183,9 @@ Se nenhuma identidade relacionada for encontrada com a entrada fornecida, uma `H
 }
 ```
 
-- `lastAssociationTime`: O carimbo de data e hora quando a identidade de entrada foi associada pela última vez a essa identidade.
-- `regions`: Fornece a `regionId` e `lastAssociationTime` para onde a identidade foi vista.
+- `lastAssociationTime`: O carimbo de data/hora quando a identidade de entrada foi associada pela última vez a esta identidade.
+- `regions`: Fornece o `regionId` e o `lastAssociationTime` para onde a identidade foi vista.
 
 ## Próximas etapas
 
-Prosseguir para o próximo tutorial para [listar namespaces disponíveis](./list-namespaces.md).
+Prossiga para o próximo tutorial para [listar namespaces disponíveis](./list-namespaces.md).

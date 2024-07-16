@@ -4,7 +4,7 @@ description: Saiba como definir um módulo de biblioteca do tipo condição para
 exl-id: fe13420e-ffa7-49d6-92c4-965ebd9d7390
 source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '412'
+source-wordcount: '403'
 ht-degree: 68%
 
 ---

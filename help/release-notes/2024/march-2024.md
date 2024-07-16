@@ -15,7 +15,7 @@ ht-degree: 33%
 
 >[!TIP]
 >
->Use o [Glossário do Adobe Experience Platform](/help/landing/glossary.md) para conhecer a terminologia usada no Real-time Customer Data Platform e no Adobe Experience Platform. Se você não conseguir encontrar um termo específico que esteja procurando, use as opções de feedback na página para solicitar que novos termos sejam adicionados ao glossário.
+>Use o [glossário do Adobe Experience Platform](/help/landing/glossary.md) para se familiarizar com a terminologia usada no Real-time Customer Data Platform e no Adobe Experience Platform. Se você não conseguir encontrar um termo específico que esteja procurando, use as opções de feedback na página para solicitar que novos termos sejam adicionados ao glossário.
 
 Atualizações dos recursos existentes no Experience Platform:
 
@@ -33,7 +33,7 @@ O Serviço de catálogo é o sistema de registro para localização e linhagem d
 
 | Recurso | Descrição |
 | --- | --- |
-| Mais ações | Para tornar as operações mais flexíveis e ajudar a gerenciar seus dados, agora é possível usar o recurso &quot;Mais ações&quot; na exibição de detalhes para executar tarefas adicionais em um conjunto de dados. Você pode excluir o conjunto de dados ou habilitá-lo para uso com o Perfil de cliente em tempo real na página de detalhes de um conjunto de dados escolhido.<br>**Nota:** se você habilitar um conjunto de dados para assimilação de Perfil, o esquema do conjunto de dados deverá ser compatível com o Perfil do cliente em tempo real.<br>![O espaço de trabalho dos conjuntos de dados com o [!UICONTROL .. Mais] menu suspenso realçado.](../2024/assets/march/more-actions.png "O espaço de trabalho Conjuntos de dados com o menu suspenso Mais realçado."){width="100" zoomable="yes"}.<br>Leia o [guia do usuário de conjuntos de dados](../../catalog/datasets/user-guide.md) documentação para obter informações adicionais. |
+| Mais ações | Para tornar as operações mais flexíveis e ajudar a gerenciar seus dados, agora é possível usar o recurso &quot;Mais ações&quot; na exibição de detalhes para executar tarefas adicionais em um conjunto de dados. Você pode excluir o conjunto de dados ou habilitá-lo para uso com o Perfil de cliente em tempo real na página de detalhes de um conjunto de dados escolhido.<br>**Observação:** se você habilitar um conjunto de dados para assimilação de Perfil, o esquema do conjunto de dados deverá ser compatível com o Perfil de Cliente em Tempo Real.<br>![O espaço de trabalho dos Conjuntos de Dados com o [!UICONTROL ... Menu suspenso Mais] realçado.](../2024/assets/march/more-actions.png "O espaço de trabalho Conjuntos de Dados com o menu suspenso Mais realçado."){width="100" zoomable="yes"}.<br>Leia a documentação do [guia do usuário dos conjuntos de dados](../../catalog/datasets/user-guide.md) para obter mais informações. |
 
 {style="table-layout:auto"}
 
@@ -47,11 +47,11 @@ A preparação de dados permite que os engenheiros de dados mapeiem, transformem
 
 | Recurso | Descrição |
 | --- | --- |
-| Novas funções de mapeador para o Adobe Analytics | Agora você pode usar as seguintes funções para extrair dados do evento do Adobe Analytics: <ul><li>`aa_get_event_id`</li><li>`aa_get_event_value`</li><li>`aa_get_product_categories`</li><li>`aa_get_product_names`</li><li>`aa_get_product_quantities`</li><li>`aa_get_product_prices`</li><li>`aa_get_product_event_values`</li><li>`aa_get_product_evars`</li></ul> Para obter mais informações sobre essas funções, leia a [Guia de funções do Preparo de dados](../../data-prep/functions.md#analytics-functions) |
+| Novas funções de mapeador para o Adobe Analytics | Agora você pode usar as seguintes funções para extrair dados do evento do Adobe Analytics: <ul><li>`aa_get_event_id`</li><li>`aa_get_event_value`</li><li>`aa_get_product_categories`</li><li>`aa_get_product_names`</li><li>`aa_get_product_quantities`</li><li>`aa_get_product_prices`</li><li>`aa_get_product_event_values`</li><li>`aa_get_product_evars`</li></ul> Para obter mais informações sobre essas funções, leia o [Guia de funções de Preparo de Dados](../../data-prep/functions.md#analytics-functions) |
 
 {style="table-layout:auto"}
 
-Para obter mais informações sobre o Preparo de dados, leia a [Visão geral do Preparo de dados](../../data-prep/home.md).
+Para obter mais informações sobre Preparo de Dados, leia a [Visão geral do Preparo de Dados](../../data-prep/home.md).
 
 ## Coleção de dados {#data-collection}
 
@@ -61,11 +61,11 @@ A Adobe Experience Platform fornece um conjunto de tecnologias que permitem cole
 
 | Tipo | Recurso | Descrição |
 | --- | --- | --- |
-| Extensões | [!DNL Merkury] Extensão de tag | A variável [[!DNL Merkury] extensão de tag](https://exchange.adobe.com/apps/ec/600027/merkury-tag) fornece taxas de correspondência líderes do setor para visitantes anônimos de sites a um [!DNL Merkury] ID. As marcas podem alavancar o poder do [!DNL Merkury] tag e Adobe para oferecer experiências personalizadas de site em tempo real. Além disso, a [!DNL Merkury] A tag do permite o crescimento de dados digitais primários, juntamente com perfis de clientes online e offline conectados. |
+| Extensões | Extensão de tag [!DNL Merkury] | A [[!DNL Merkury] extensão de tag](https://exchange.adobe.com/apps/ec/600027/merkury-tag) fornece taxas de correspondência líderes do setor para visitantes anônimos de sites com uma ID [!DNL Merkury]. As marcas podem aproveitar o poder da tag e Adobe do [!DNL Merkury] para fornecer experiências personalizadas de site em tempo real. Além disso, a tag [!DNL Merkury] permite o crescimento de dados digitais primários juntamente com perfis de clientes online e offline conectados. |
 
 {style="table-layout:auto"}
 
-Para saber mais sobre a coleta de dados, leia o [visão geral da coleção de dados](../../tags/home.md).
+Para saber mais sobre a coleta de dados, leia a [visão geral da coleta de dados](../../tags/home.md).
 
 ## Destinos {#destinations}
 
@@ -75,10 +75,10 @@ Para saber mais sobre a coleta de dados, leia o [visão geral da coleção de da
 
 | Destino | Tipo | Descrição |
 | ----------- | --------- | ----------- |
-| [(Beta) Conexão com o Acxiom Data Enhancement](../../destinations/catalog/data-partner/acxiom-data-enhancement.md) | Novo | Use esse conector para ativar perfis primários da Real-Time CDP para a Acxiom para enriquecimento de dados e uso em canais de marketing. Em seguida, você pode usar a origem Acxiom para importar os perfis com dados aprimorados e trabalhar com eles no Real-Time CDP. |
-| [(Beta) Conexão da Acxiom Prospect Suppression](../../destinations/catalog/data-partner/acxiom-prospect-suppression.md) | Novo | Exporte seus públicos-alvo primários para o destino da Acxiom, para permitir que a Acxiom suprima clientes conhecidos ou convertidos. Em seguida, use o [Importação de dados de prospecção da Acxiom](../../sources/connectors/data-partners/acxiom-prospecting-data-import.md) conector de origem para assimilar e ativar listas de clientes potenciais da Acxiom, com seus clientes conhecidos ou convertidos removidos. |
-| [Conexão do Amazon Ads](../../destinations/catalog/advertising/amazon-ads.md) | Atualização | Ao exportar dados para o destino do Amazon Ads, agora é possível roteá-los para o Amazon DSP ou para o Marketing Cloud do Amazon (novo). |
-| [Conexão de integração do LiveRamp](../../destinations/catalog/advertising/liveramp-onboarding.md) | Atualização | O destino de integração do LiveRamp agora tem suporte para entregas para a Europa e a Austrália [!DNL LiveRamp] [!DNL SFTP] instâncias. O tamanho máximo de arquivo exportado também foi aumentado para 10 milhões de linhas (de 5 milhões, anteriormente). |
+| [(Beta) Conexão de aprimoramento de dados da Acxiom](../../destinations/catalog/data-partner/acxiom-data-enhancement.md) | Novo | Use esse conector para ativar perfis primários da Real-Time CDP para a Acxiom para enriquecimento de dados e uso em canais de marketing. Em seguida, você pode usar a origem Acxiom para importar os perfis com dados aprimorados e trabalhar com eles no Real-Time CDP. |
+| [(Beta) Conexão de Supressão de Cliente Potencial da Acxiom](../../destinations/catalog/data-partner/acxiom-prospect-suppression.md) | Novo | Exporte seus públicos-alvo primários para o destino da Acxiom, para permitir que a Acxiom suprima clientes conhecidos ou convertidos. Em seguida, use o conector de origem [Acxiom prospecting data import](../../sources/connectors/data-partners/acxiom-prospecting-data-import.md) para assimilar e ativar listas de clientes potenciais da Acxiom, com seus clientes conhecidos ou convertidos removidos. |
+| [Conexão com o Amazon Ads](../../destinations/catalog/advertising/amazon-ads.md) | Atualização | Ao exportar dados para o destino do Amazon Ads, agora é possível roteá-los para o Amazon DSP ou para o Marketing Cloud do Amazon (novo). |
+| [Conexão de integração do LiveRamp](../../destinations/catalog/advertising/liveramp-onboarding.md) | Atualização | O destino de integração do LiveRamp agora tem suporte para entregas em instâncias [!DNL LiveRamp] [!DNL SFTP] da Europa e Austrália. O tamanho máximo de arquivo exportado também foi aumentado para 10 milhões de linhas (de 5 milhões, anteriormente). |
 
 {style="table-layout:auto"}
 
@@ -98,7 +98,7 @@ O XDM é uma especificação de código aberto que fornece estruturas e definiç
 
 | Recurso | Descrição |
 | --- | --- |
-| Suporte a tipo de dados de mapa de interface do Experience Platform | Personalize ainda mais sua estrutura de dados do Experience Data Model (XDM) definindo campos de mapa na interface do usuário da plataforma. Agora é possível criar campos de mapa no Editor de esquemas para modelar estruturas de dados flexíveis ou armazenar pares de valores-chave com eficiência. Selecione &quot;Mapear&quot; na lista suspensa Tipo ao definir um novo campo para configurar subcampos e atribuí-los a grupos de campos. Os tipos de valor de mapa compatíveis são string e integer.<br>![O Editor de esquemas com os campos Type e Map value type realçados.](../2024/assets/march/maps.png "O Editor de esquemas com os campos Type e Map value type realçados."){width="100" zoomable="yes"}<br> Para saber como [definir campos de mapa na interface](../../xdm/ui/fields/map.md), consulte o guia da interface do usuário. |
+| Suporte a tipo de dados de mapa de interface do Experience Platform | Personalize ainda mais sua estrutura de dados do Experience Data Model (XDM) definindo campos de mapa na interface do usuário da plataforma. Agora é possível criar campos de mapa no Editor de esquemas para modelar estruturas de dados flexíveis ou armazenar pares de valores-chave com eficiência. Selecione &quot;Mapear&quot; na lista suspensa Tipo ao definir um novo campo para configurar subcampos e atribuí-los a grupos de campos. Os tipos de valor de mapa compatíveis são string e integer.<br>![O Editor de esquemas com os campos de tipo de valor Tipo e Mapa realçados.](../2024/assets/march/maps.png "O Editor de esquemas com os campos de tipo de valor Tipo e Mapa realçados."){width="100" zoomable="yes"}<br> Para saber como [definir campos de mapa na interface](../../xdm/ui/fields/map.md), consulte o manual da interface. |
 
 {style="table-layout:auto"}
 
@@ -112,24 +112,24 @@ O [!DNL Segmentation Service] permite segmentar dados relacionados a indivíduos
 
 | Recurso | Descrição |
 | ------- | ----------- |
-| Ações em massa | O inventário de público-alvo agora é compatível com ações em massa. Usando ações em massa, você pode selecionar rapidamente vários públicos-alvo para movê-los para uma pasta, aplicar tags, aplicar rótulos de acesso ou excluir. <br> ![Ações em massa no espaço de trabalho da interface do usuário do Audiences.](../2024/assets/march/bulk-actions.png "Ações em massa no espaço de trabalho da interface do usuário do Audiences."){width="100" zoomable="yes"} <br>Para obter mais informações sobre esse recurso, leia a [Visão geral do portal de público](../../segmentation/ui/audience-portal.md#bulk-actions). |
+| Ações em massa | O inventário de público-alvo agora é compatível com ações em massa. Usando ações em massa, você pode selecionar rapidamente vários públicos-alvo para movê-los para uma pasta, aplicar tags, aplicar rótulos de acesso ou excluir. <br> ![Ações em massa no espaço de trabalho da interface do usuário de Públicos-alvo.](../2024/assets/march/bulk-actions.png "Ações em massa no espaço de trabalho da interface do usuário de Públicos-alvo."){width="100" zoomable="yes"} <br>Para obter mais informações sobre este recurso, leia a [Visão geral do Portal de Público](../../segmentation/ui/audience-portal.md#bulk-actions). |
 
 {style="table-layout:auto"}
 
-Para saber mais sobre o Serviço de segmentação, leia o [Visão geral do serviço de segmentação](../../segmentation/home.md).
+Para saber mais sobre o Serviço de segmentação, leia a [Visão geral do serviço de segmentação](../../segmentation/home.md).
 
 ## Origens {#sources}
 
 A Experience Platform fornece uma API RESTful e uma interface interativa que permite configurar conexões de origem para vários provedores de dados com facilidade. Essas conexões de origem permitem autenticar e conectar a sistemas de armazenamento externos e serviços de CRM, definir períodos para execuções de assimilação e gerenciar a taxa de transferência de assimilação de dados.
 
-**Origens novas e atualizadas**
+**Fontes novas e atualizadas**
 
 | Recurso | Tipo | Descrição |
 | --- | --- | --- |
-| [!BADGE Beta]{type=Informativo} [!DNL Acxiom Data Ingestion] | Novo | Use o [[!DNL Acxiom Data Ingestion] origem](../../sources/tutorials/ui/create/data-partners/acxiom-data-ingestion.md) para assimilar [!DNL Acxiom] dados no Real-time Customer Data Platform e enriquece perfis primários. Em seguida, você pode usar seu [!DNL Acxiom]Perfis primários aprimorados do para melhorar os públicos e ativar em canais de marketing. <br> ![A fonte de assimilação de dados da Acxiom.](../2024/assets/march/acxiom-data-ingestion.png "Nova fonte de assimilação de dados da Acxiom."){width="100" zoomable="yes"} <br> Leia o [[!DNL Acxiom Data Ingestion] visão geral](../../sources/connectors/data-partners/acxiom-data-ingestion.md) para obter informações sobre como começar. |
-| [!BADGE Beta]{type=Informativo} [!DNL Stripe] | Novo | Use o [[!DNL Stripe] origem](../../sources/connectors/payments/stripe.md) para assimilar dados capturados durante o fluxo de compra pelos clientes no Experience Platform. Depois de assimilados, você pode usar esses dados para criar ofertas personalizadas e desbloquear insights de negócios mais avançados. <br> ![A fonte do Stripe.](../2024/assets/march/stripe.png "Nova fonte de Stripe."){width="100" zoomable="yes"} <br> Leia o [[!DNL Stripe] visão geral](../../sources/connectors/payments/stripe.md) para obter informações sobre como começar. |
-| Suporte à interface do usuário para [!DNL Snowflake Streaming] | Novo | Agora você pode usar o [[!DNL Snowflake Streaming] origem](../../sources/tutorials/ui/create/databases/snowflake-streaming.md) na interface do usuário do Experience Platform, para transmitir dados de seu [!DNL Snowflake] banco de dados. <br> ![A fonte de transmissão do Snowflake.](../2024/assets/march/snowflake-streaming.png "Nova fonte de Snowflake Streaking."){width="100" zoomable="yes"} <br> Leia o [[!DNL Snowflake Streaming] visão geral](../../sources/connectors/databases/snowflake-streaming.md) para obter informações sobre como começar. |
+| [!BADGE Beta]{type=Informative} [!DNL Acxiom Data Ingestion] | Novo | Use a [[!DNL Acxiom Data Ingestion] origem](../../sources/tutorials/ui/create/data-partners/acxiom-data-ingestion.md) para assimilar dados de [!DNL Acxiom] na Real-time Customer Data Platform e enriquecer perfis próprios. Em seguida, você pode usar seus perfis primários enriquecidos com [!DNL Acxiom] para melhorar os públicos e ativar em canais de marketing. <br> ![A fonte de assimilação de dados da Acxiom.](../2024/assets/march/acxiom-data-ingestion.png "Nova fonte de assimilação de dados da Acxiom."){width="100" zoomable="yes"} <br> Leia a [[!DNL Acxiom Data Ingestion] visão geral](../../sources/connectors/data-partners/acxiom-data-ingestion.md) para obter informações sobre como começar. |
+| [!BADGE Beta]{type=Informative} [!DNL Stripe] | Novo | Use a [[!DNL Stripe] fonte](../../sources/connectors/payments/stripe.md) para assimilar dados capturados durante o fluxo de compra pelos seus clientes no Experience Platform. Depois de assimilados, você pode usar esses dados para criar ofertas personalizadas e desbloquear insights de negócios mais avançados. <br> ![A origem do Stripe.](../2024/assets/march/stripe.png "Nova origem de Stripe."){width="100" zoomable="yes"} <br> Leia a [[!DNL Stripe] visão geral](../../sources/connectors/payments/stripe.md) para obter informações sobre como começar. |
+| Suporte à interface do usuário para [!DNL Snowflake Streaming] | Novo | Agora você pode usar a [[!DNL Snowflake Streaming] origem](../../sources/tutorials/ui/create/databases/snowflake-streaming.md) na interface do usuário do Experience Platform para transmitir dados do banco de dados [!DNL Snowflake]. <br> ![A fonte de transmissão do Snowflake.](../2024/assets/march/snowflake-streaming.png "Nova origem de Streaking Snowflake."){width="100" zoomable="yes"} <br> Leia a [[!DNL Snowflake Streaming] visão geral](../../sources/connectors/databases/snowflake-streaming.md) para obter informações sobre como começar. |
 
 {style="table-layout:auto"}
 
-Para obter mais informações sobre fontes, leia a [visão geral das origens](../../sources/home.md).
+Para obter mais informações sobre fontes, leia a [visão geral das fontes](../../sources/home.md).

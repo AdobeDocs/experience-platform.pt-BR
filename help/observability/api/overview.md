@@ -6,17 +6,17 @@ description: Os Insights de observação são uma API RESTful que permite aos de
 exl-id: 3dee20e2-0551-43db-ba89-bc049b56af08
 source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
 workflow-type: tm+mt
-source-wordcount: '155'
+source-wordcount: '151'
 ht-degree: 1%
 
 ---
 
 # [!DNL Observability Insights] Manual da API
 
-A variável [!DNL Observability Insights] A API fornece um endpoint que permite recuperar e monitorar programaticamente os dados de métrica para vários recursos do Adobe Experience Platform. Esse endpoint é descrito abaixo. Acesse o manual do endpoint para obter detalhes e consulte o [guia de introdução](./getting-started.md) para obter informações importantes sobre cabeçalhos necessários, ler chamadas de API de exemplo e muito mais.
+A API [!DNL Observability Insights] fornece um ponto de extremidade que permite recuperar e monitorar programaticamente os dados de métrica de vários recursos do Adobe Experience Platform. Esse endpoint é descrito abaixo. Visite o manual do endpoint para obter detalhes e consulte o [guia de introdução](./getting-started.md) para obter informações importantes sobre cabeçalhos necessários, como ler chamadas de API de exemplo e muito mais.
 
-Para exibir todos os endpoints e operações CRUD disponíveis, visite o [[!DNL Observability Insights] API swagger](https://www.adobe.io/experience-platform-apis/references/observability-insights/).
+Para exibir todos os pontos de extremidade e operações CRUD disponíveis, visite o [[!DNL Observability Insights] API swagger](https://www.adobe.io/experience-platform-apis/references/observability-insights/).
 
 ## Métricas
 
-As métricas de observação fornecem insights sobre estatísticas de uso, tendências históricas e indicadores de desempenho para vários recursos no Adobe Experience Platform. Para saber como recuperar métricas usando a API, consulte a [guia de endpoint de métricas](./metrics.md).
+As métricas de observação fornecem insights sobre estatísticas de uso, tendências históricas e indicadores de desempenho para vários recursos no Adobe Experience Platform. Para saber como recuperar métricas usando a API, consulte o [manual de endpoint de métricas](./metrics.md).

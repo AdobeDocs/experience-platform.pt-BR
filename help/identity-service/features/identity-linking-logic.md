@@ -5,7 +5,7 @@ exl-id: 1c958c0e-0777-48db-862c-eb12b2e7a03c
 source-git-commit: 2b6700b2c19b591cf4e60006e64ebd63b87bdb2a
 workflow-type: tm+mt
 source-wordcount: '980'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -16,7 +16,7 @@ Um link entre duas identidades é estabelecido quando o namespace de identidade 
 Há dois tipos de identidades que são vinculadas:
 
 * **Registros de perfil**: essas identidades geralmente vêm de sistemas CRM.
-* **Eventos de experiência**: essas identidades geralmente vêm da implementação do SDK da Web ou da fonte do Adobe Analytics.
+* **Eventos de experiência**: essas identidades geralmente vêm da implementação do SDK da Web ou da origem do Adobe Analytics.
 
 ## Significado semântico do estabelecimento de vínculos
 
@@ -26,7 +26,7 @@ Uma identidade representa uma entidade real. Se houver um vínculo estabelecido 
 | --- | --- | --- |
 | Um usuário final faz logon usando um computador. | A ID do CRM e a ECID estão vinculadas. | Uma pessoa (ID de CRM) tem um dispositivo com um navegador (ECID). |
 | Um usuário final navega anonimamente usando uma iPhone. | O IDFA está vinculado à ECID. | O dispositivo de hardware da Apple (IDFA), como uma iPhone, está associado ao navegador (ECID). |
-| Um usuário final faz logon usando o Google Chrome e, em seguida, o Firefox. | A ID do CRM está vinculada a duas ECIDs diferentes. | Uma pessoa (ID do CRM) está associada a dois navegadores da Web (**Nota**: cada navegador terá sua própria ECID). |
+| Um usuário final faz logon usando o Google Chrome e, em seguida, o Firefox. | A ID do CRM está vinculada a duas ECIDs diferentes. | Uma pessoa (ID do CRM) está associada a dois navegadores da Web (**Observação**: cada navegador terá sua própria ECID). |
 | Um engenheiro de dados assimila um registro do CRM que inclui dois campos marcados como uma identidade: ID do CRM e Email. | A ID do CRM e o email estão vinculados. | Uma pessoa (ID do CRM) está associada ao endereço de email. |
 
 ## Compreender a lógica de vinculação do Serviço de identidade
@@ -61,7 +61,7 @@ Um par de identidades é assimilado em seu gráfico e esse par contém:
 * ID DO CRM: 60013ABC
 * ECID:100066526
 
-![dados de entrada](../images/identity-settings/incoming-data.png)
+![dados recebidos](../images/identity-settings/incoming-data.png)
 
 >[!TAB Gráfico atualizado]
 
@@ -82,7 +82,7 @@ Você é um engenheiro de dados e assimila o seguinte conjunto de dados do CRM (
 
 >[!NOTE]
 >
->* `**` - Indica o campo marcado como identidade principal.
+>* `**` - Denota um campo marcado como identidade primária.
 >* `*` - Indica o campo marcado como identidade secundária.
 >
 >O serviço de identidade não faz distinção entre a identidade primária e secundária. Desde que um campo esteja marcado como uma identidade, ele será assimilado no Serviço de identidade.
@@ -96,7 +96,7 @@ Você também implementou o SDK da Web e assimilou um conjunto de dados do SDK d
 | `t=3` | ECID:44675 | Exibir página inicial |
 | `t=4` | ECID:44675, ID DO CRM: 31260XYZ | Exibir histórico de compras |
 
-A identidade principal de cada evento será determinada com base em [como configurar tipos de elementos de dados](../../tags/extensions/client/web-sdk/data-element-types.md).
+A identidade primária para cada evento será determinada com base em [como você configura os tipos de elementos de dados](../../tags/extensions/client/web-sdk/data-element-types.md).
 
 >[!NOTE]
 >
@@ -107,15 +107,15 @@ A identidade principal de cada evento será determinada com base em [como config
 Neste exemplo:
 
 * `t=1`, usou um computador desktop (ECID:38652) e para exibir a navegação da página inicial de forma anônima.
-* `t=2`, usou o mesmo computador desktop, fez logon (ID do CRM:31260XYZ) e procurou sapatos.
+* `t=2`, usou o mesmo computador desktop, fez logon (CRM ID:31260XYZ) e procurou sapatos.
    * Depois que um usuário é conectado, o evento envia a ECID e a ID do CRM para o Serviço de identidade.
 * `t=3`, usou um laptop (ECID:44675) e navegou anonimamente.
-* `t=4`, usou o mesmo notebook, fez logon (ID de CRM: 31260XYZ) e visualizou o histórico de compras.
+* `t=4`, usou o mesmo laptop, fez logon (ID do CRM: 31260XYZ) e, em seguida, visualizou o histórico de compras.
 
 
 >[!BEGINTABS]
 
->[!TAB timestamp=0]
+>[!TAB carimbo de data/hora=0]
 
 Em `timestamp=0`, você tem dois gráficos de identidade para dois clientes diferentes. Ambos são representados por três identidades vinculadas.
 
@@ -124,30 +124,30 @@ Em `timestamp=0`, você tem dois gráficos de identidade para dois clientes dife
 | Cliente um | 60013ABC | julien<span>@acme.com | 555-555-1234 |
 | Cliente dois | 31260XYZ | evan<span>@acme.com | 777-777-6890 |
 
-![timestamp-zero](../images/identity-settings/timestamp-zero.png)
+![carimbo de data/hora-zero](../images/identity-settings/timestamp-zero.png)
 
->[!TAB timestamp=1]
+>[!TAB carimbo de data/hora=1]
 
-Em `timestamp=1`, um cliente usa um laptop para visitar seu site de comércio eletrônico, visualizar sua página inicial e navegar anonimamente. Esse evento de navegação anônimo é identificado como ECID:38652. Como o Serviço de identidade armazena apenas eventos com pelo menos duas identidades, essas informações não são armazenadas.
+No `timestamp=1`, um cliente usa um laptop para visitar seu site de comércio eletrônico, exibir sua home page e navegar anonimamente. Esse evento de navegação anônimo é identificado como ECID:38652. Como o Serviço de identidade armazena apenas eventos com pelo menos duas identidades, essas informações não são armazenadas.
 
-![timestamp-um](../images/identity-settings/timestamp-one.png)
+![carimbo-de-data-hora-um](../images/identity-settings/timestamp-one.png)
 
->[!TAB timestamp=2]
+>[!TAB carimbo de data/hora=2]
 
-Em `timestamp=2`, um cliente usa o mesmo laptop para visitar o site de comércio eletrônico. Eles fazem logon com sua combinação de nome de usuário e senha e procuram sapatos. O serviço de identidade identifica a conta do cliente quando ele faz logon, pois ela corresponde à ID do CRM: 31260XYZ. Além disso, o Serviço de identidade relaciona ECID:38562 à CRM ID:31260XYZ, pois ambos usam o mesmo navegador no mesmo dispositivo.
+No `timestamp=2`, um cliente usa o mesmo laptop para visitar o site de comércio eletrônico. Eles fazem logon com sua combinação de nome de usuário e senha e procuram sapatos. O serviço de identidade identifica a conta do cliente quando ele faz logon, pois ela corresponde à ID do CRM: 31260XYZ. Além disso, o Serviço de identidade relaciona ECID:38562 à CRM ID:31260XYZ, pois ambos usam o mesmo navegador no mesmo dispositivo.
 
-![carimbo de data e hora-dois](../images/identity-settings/timestamp-two.png)
+![carimbo de data/hora-dois](../images/identity-settings/timestamp-two.png)
 
->[!TAB timestamp=3]
+>[!TAB carimbo de data/hora=3]
 
-Em `timestamp=3` um cliente usa um tablet para visitar seu site de comércio eletrônico e navegar anonimamente. Esse evento de navegação anônimo é identificado como ECID:44675. Como o Serviço de identidade armazena apenas eventos com pelo menos duas identidades, essas informações não são armazenadas.
+No `timestamp=3`, um cliente usa um tablet para visitar seu site de comércio eletrônico e navegar anonimamente. Esse evento de navegação anônimo é identificado como ECID:44675. Como o Serviço de identidade armazena apenas eventos com pelo menos duas identidades, essas informações não são armazenadas.
 
-![timestamp-três](../images/identity-settings/timestamp-three.png)
+![carimbo de data/hora-três](../images/identity-settings/timestamp-three.png)
 
->[!TAB timestamp=4]
+>[!TAB carimbo de data/hora=4]
 
 Em `timestamp=4`, um cliente usa o mesmo tablet, faz logon em sua conta (ID do CRM:31260XYZ) e visualiza o histórico de compras. Esse evento vincula sua ID de CRM:31260XYZ ao identificador de cookie atribuído à atividade de navegação anônima, ECID:44675, e vincula ECID:44675 ao gráfico de identidade do cliente dois.
 
-![timestamp-quatro](../images/identity-settings/timestamp-four.png)
+![carimbo-data-hora-quatro](../images/identity-settings/timestamp-four.png)
 
 >[!ENDTABS]

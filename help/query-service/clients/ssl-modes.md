@@ -10,77 +10,77 @@ ht-degree: 1%
 
 ---
 
-# [!DNL Query Service] Opções de SSL
+# [!DNL Query Service] opções de SSL
 
-Para maior segurança, o Adobe Experience Platform [!DNL Query Service] O oferece suporte nativo a conexões SSL para criptografar comunicações de cliente/servidor. Este documento aborda as opções de SSL disponíveis para conexões de clientes de terceiros com o [!DNL Query Service] e como se conectar usando o `verify-full` Valor do parâmetro SSL.
+Para maior segurança, o Adobe Experience Platform [!DNL Query Service] fornece suporte nativo para conexões SSL para criptografar comunicações cliente/servidor. Este documento aborda as opções de SSL disponíveis para conexões de clientes de terceiros com o [!DNL Query Service] e como se conectar usando o valor do parâmetro SSL `verify-full`.
 
 ## Pré-requisitos
 
-Este documento supõe que você já tenha baixado um aplicativo de cliente de desktop de terceiros para uso com os dados da plataforma. Instruções específicas sobre como incorporar segurança SSL ao se conectar com um cliente de terceiros são encontradas em sua respectiva documentação do guia de conexão. Para obter uma lista de todas as [!DNL Query Service] clientes suportados, consulte a seção [visão geral das conexões de clientes](./overview.md).
+Este documento supõe que você já tenha baixado um aplicativo de cliente de desktop de terceiros para uso com os dados da plataforma. Instruções específicas sobre como incorporar segurança SSL ao se conectar com um cliente de terceiros são encontradas em sua respectiva documentação do guia de conexão. Para obter uma lista de todos os clientes [!DNL Query Service] compatíveis, consulte a [visão geral das conexões de clientes](./overview.md).
 
 ## Opções de SSL disponíveis {#available-ssl-options}
 
 A Platform oferece suporte a várias opções SSL para atender às suas necessidades de segurança de dados e equilibrar a sobrecarga de processamento da criptografia e do intercâmbio de chaves.
 
-Os diferentes `sslmode` Os valores de parâmetro do fornecem diferentes níveis de proteção. Ao criptografar seus dados em movimento com certificados SSL, ajuda a impedir ataques &quot;man-in-the-middle&quot; (MITM), espionagem e representação. A tabela abaixo fornece um detalhamento dos diferentes modos SSL disponíveis e o nível de proteção fornecido.
+Os diferentes valores de parâmetro `sslmode` fornecem diferentes níveis de proteção. Ao criptografar seus dados em movimento com certificados SSL, ajuda a impedir ataques &quot;man-in-the-middle&quot; (MITM), espionagem e representação. A tabela abaixo fornece um detalhamento dos diferentes modos SSL disponíveis e o nível de proteção fornecido.
 
 >[!NOTE]
 >
-> O valor SSL `disable` O não é compatível com o Adobe Experience Platform devido à conformidade necessária com a proteção de dados.
+> O valor SSL `disable` não tem suporte da Adobe Experience Platform devido à conformidade de proteção de dados necessária.
 
 | sslmode | Proteção contra espionagem | Proteção MITM | Descrição |
 |---|---|---|---|
 | `allow` | Parcial | Não | A segurança não é uma prioridade, a velocidade e uma baixa sobrecarga de processamento são mais importantes. Esse modo só optará pela criptografia se o servidor insistir nela. |
 | `prefer` | Parcial | Não | A criptografia não é necessária, mas a comunicação será criptografada se o servidor permitir. |
 | `require` | Sim | Não | A criptografia é necessária em todas as comunicações. A rede é confiável para se conectar ao servidor correto. A validação do certificado SSL do servidor não é necessária. |
-| `verify-ca` | Sim | Depende da política de CA | A criptografia é necessária em todas as comunicações. A validação do servidor é necessária antes que os dados sejam compartilhados. Isso requer que você configure um certificado raiz em seu [!DNL PostgreSQL] diretório inicial. [Os detalhes são fornecidos abaixo](#instructions) |
-| `verify-full` | Sim | Sim | A criptografia é necessária em todas as comunicações. A validação do servidor é necessária antes que os dados sejam compartilhados. Isso requer que você configure um certificado raiz em seu [!DNL PostgreSQL] diretório inicial. [Os detalhes são fornecidos abaixo](#instructions). |
+| `verify-ca` | Sim | Depende da política de CA | A criptografia é necessária em todas as comunicações. A validação do servidor é necessária antes que os dados sejam compartilhados. Isso requer que você configure um certificado raiz no seu diretório base do [!DNL PostgreSQL]. [Detalhes fornecidos abaixo](#instructions) |
+| `verify-full` | Sim | Sim | A criptografia é necessária em todas as comunicações. A validação do servidor é necessária antes que os dados sejam compartilhados. Isso requer que você configure um certificado raiz no seu diretório base do [!DNL PostgreSQL]. [Os detalhes são fornecidos abaixo](#instructions). |
 
 >[!NOTE]
 >
->A diferença entre `verify-ca` e `verify-full` depende da política da autoridade de certificação (CA) raiz. Se você criou sua própria CA local para emitir certificados privados para seus aplicativos, usando `verify-ca` O geralmente fornece proteção suficiente. Se estiver usando uma CA pública, `verify-ca` permite conexões com um servidor que outra pessoa pode ter registrado com a CA. `verify-full` deve ser sempre usado com uma CA raiz pública.
+>A diferença entre `verify-ca` e `verify-full` depende da política da CA (autoridade de certificação) raiz. Se você criou sua própria CA local para emitir certificados privados para seus aplicativos, o uso do `verify-ca` geralmente fornece proteção suficiente. Se estiver usando uma CA pública, o `verify-ca` permitirá conexões com um servidor que outra pessoa pode ter registrado com a CA. `verify-full` deve ser sempre usado com uma CA raiz pública.
 
-Ao estabelecer uma conexão de terceiros com um banco de dados da Platform, é recomendável usar `sslmode=require` no mínimo, para garantir uma conexão segura para seus dados em movimento. A variável `verify-full` O modo SSL é recomendado para uso na maioria dos ambientes sensíveis à segurança.
+Ao estabelecer uma conexão de terceiros com um banco de dados da Platform, é recomendável usar `sslmode=require` no mínimo para garantir uma conexão segura para seus dados em movimento. O modo SSL `verify-full` é recomendado para uso na maioria dos ambientes sensíveis à segurança.
 
 ## Configurar um certificado raiz para verificação do servidor {#root-certificate}
 
 >[!IMPORTANT]
 >
->Os certificados TLS/SSL em ambientes de Produção para a API Postgres interativa do serviço de consulta foram atualizados na quarta-feira, 24 de janeiro de 2024.<br>Embora esse seja um requisito anual, nessa ocasião o certificado raiz na cadeia também foi alterado, pois o provedor de certificados TLS/SSL do Adobe atualizou sua hierarquia de certificados. Isso pode afetar determinados clientes Postgres se a lista de Autoridades de certificação não tiver o certificado raiz. Por exemplo, um cliente PSQL CLI pode precisar ter os certificados raiz adicionados a um arquivo explícito `~/postgresql/root.crt`, caso contrário, poderá resultar em um erro. Por exemplo, `psql: error: SSL error: certificate verify failed`. Consulte a [Documentação oficial do PostgreSQL](https://www.postgresql.org/docs/current/libpq-ssl.html#LIBQ-SSL-CERTIFICATES) para obter mais informações sobre esse problema.<br>O certificado raiz a ser adicionado pode ser baixado de [https://cacerts.digicert.com/DigiCertGlobalRootG2.crt.pem](https://cacerts.digicert.com/DigiCertGlobalRootG2.crt.pem).
+>Os certificados TLS/SSL em ambientes de Produção para a API Postgres interativa do serviço de consulta foram atualizados na quarta-feira, 24 de janeiro de 2024.<br>Embora esse seja um requisito anual, nesta ocasião o certificado raiz na cadeia também foi alterado, pois o provedor de certificados TLS/SSL do Adobe atualizou sua hierarquia de certificados. Isso pode afetar determinados clientes Postgres se a lista de Autoridades de certificação não tiver o certificado raiz. Por exemplo, um cliente PSQL CLI pode precisar ter os certificados raiz adicionados a um arquivo explícito `~/postgresql/root.crt`, caso contrário, isso pode resultar em um erro. Por exemplo, `psql: error: SSL error: certificate verify failed`. Consulte a [documentação oficial do PostgreSQL](https://www.postgresql.org/docs/current/libpq-ssl.html#LIBQ-SSL-CERTIFICATES) para obter mais informações sobre esse problema.<br>O certificado raiz a ser adicionado pode ser baixado de [https://cacerts.digicert.com/DigiCertGlobalRootG2.crt.pem](https://cacerts.digicert.com/DigiCertGlobalRootG2.crt.pem).
 
 Para garantir uma conexão segura, o uso do SSL deve ser configurado no cliente e no servidor antes que a conexão seja feita. Se o SSL só estiver configurado no servidor, o cliente poderá enviar informações confidenciais, como senhas, antes de se estabelecer que o servidor requer alta segurança.
 
-Por padrão, [!DNL PostgreSQL] O não executa nenhuma verificação do certificado do servidor. Para verificar a identidade do servidor e garantir uma conexão segura antes que quaisquer dados confidenciais sejam enviados (como parte do SSL) `verify-full` ), você deve colocar um certificado raiz (autoassinado) no computador local (`root.crt`) e um certificado folha assinado pelo certificado raiz no servidor.
+Por padrão, [!DNL PostgreSQL] não executa nenhuma verificação do certificado do servidor. Para verificar a identidade do servidor e garantir uma conexão segura antes que dados confidenciais sejam enviados (como parte do modo SSL `verify-full`), você deve colocar um certificado raiz (autoassinado) no computador local (`root.crt`) e um certificado folha assinado pelo certificado raiz no servidor.
 
-Se a variável `sslmode` está definido como `verify-full`, libpq verificará se o servidor é confiável verificando a cadeia de certificados até o certificado raiz armazenado no cliente. Em seguida, ele verifica se o nome do host corresponde ao nome armazenado no certificado do servidor.
+Se o parâmetro `sslmode` estiver configurado como `verify-full`, a libpq verificará se o servidor é confiável verificando a cadeia de certificados até o certificado raiz armazenado no cliente. Em seguida, ele verifica se o nome do host corresponde ao nome armazenado no certificado do servidor.
 
-Para permitir a verificação do certificado do servidor, coloque um ou mais certificados raiz (`root.crt`) no [!DNL PostgreSQL] arquivo no seu diretório inicial. O caminho do arquivo seria semelhante a `~/.postgresql/root.crt`.
+Para permitir a verificação do certificado do servidor, você deve colocar um ou mais certificados raiz (`root.crt`) no arquivo [!DNL PostgreSQL] em seu diretório base. O caminho do arquivo seria semelhante a `~/.postgresql/root.crt`.
 
-## Ativar o modo Verificar SSL completo para uso com terceiros [!DNL Query Service] conexão {#instructions}
+## Habilitar o modo SSL verify-full para uso com uma conexão [!DNL Query Service] de terceiros {#instructions}
 
-Se você precisar de um controle de segurança mais rigoroso do que `sslmode=require`, você pode seguir as etapas destacadas para conectar um cliente de terceiros ao [!DNL Query Service] usar `verify-full` Modo SSL.
+Se você precisar de um controle de segurança mais rigoroso que o `sslmode=require`, poderá seguir as etapas destacadas para conectar um cliente de terceiros ao [!DNL Query Service] usando o modo SSL do `verify-full`.
 
 >[!NOTE]
 >
 >Há muitas opções disponíveis para obter um certificado SSL. Devido a uma tendência crescente em certificados não autorizados, a DigiCert é usada neste guia, pois eles são um provedor global confiável de soluções de alta garantia TLS/SSL, PKI, IoT e assinatura.
 
 1. Navegue até [a lista de certificados raiz DigiCert disponíveis](https://www.digicert.com/kb/digicert-root-certificates.htm)
-1. Pesquisar por &quot;[!DNL DigiCert Global Root G2]&quot; na lista de certificados disponíveis.
-1. Selecionar [!DNL **Baixar PEM**] para baixar o arquivo no computador local.
+1. Pesquise por &quot;[!DNL DigiCert Global Root G2]&quot; na lista de certificados disponíveis.
+1. Selecione [!DNL **Baixar PEM**] para baixar o arquivo no computador local.
    ![A lista de certificados raiz DigiCert disponíveis com Download PEM realçado.](../images/clients/ssl-modes/digicert.png)
 1. Renomeie o arquivo de certificado de segurança para `root.crt`.
-1. Copie o arquivo para a [!DNL PostgreSQL] pasta. O caminho de arquivo necessário é diferente dependendo do seu sistema operacional. Se a pasta ainda não existir, crie-a.
-   - Se você estiver usando o macOS, o caminho será `/Users/<username>/.postgresql`
-   - Se você estiver usando o Windows, o caminho será `%appdata%\postgresql`
+1. Copie o arquivo para a pasta [!DNL PostgreSQL]. O caminho de arquivo necessário é diferente dependendo do seu sistema operacional. Se a pasta ainda não existir, crie-a.
+   - Se você estiver usando o macOS, o caminho é `/Users/<username>/.postgresql`
+   - Se você estiver usando o Windows, o caminho é `%appdata%\postgresql`
 
 >[!TIP]
 >
->Para encontrar o `%appdata%` local do arquivo em um sistema operacional Windows, pressione Windows **Win + R** e entrada `%appdata%` no campo de pesquisa.
+>Para encontrar o local do arquivo `%appdata%` em um sistema operacional Windows, pressione Windows **Win + R** e insira `%appdata%` no campo de pesquisa.
 
-Depois que a variável [!DNL DigiCert Global Root G2] O arquivo CRT está disponível em [!DNL PostgreSQL] , você pode se conectar a [!DNL Query Service] usando o `sslmode=verify-full` ou `sslmode=verify-ca` opção.
+Depois que o arquivo CRT [!DNL DigiCert Global Root G2] estiver disponível na pasta [!DNL PostgreSQL], você poderá se conectar a [!DNL Query Service] usando a opção `sslmode=verify-full` ou `sslmode=verify-ca`.
 
 ## Próximas etapas
 
-Ao ler este documento, você compreenderá melhor as opções de SSL disponíveis para conectar um cliente de terceiros ao [!DNL Query Service]e também como habilitar a função `verify-full` Opção SSL para criptografar seus dados em movimento.
+Ao ler este documento, você compreenderá melhor as opções de SSL disponíveis para conectar um cliente de terceiros ao [!DNL Query Service] e também como habilitar a opção SSL `verify-full` para criptografar seus dados em movimento.
 
-Se ainda não tiver feito isso, siga as orientações em [conexão de um cliente de terceiros ao [!DNL Query Service]](./overview.md).
+Se ainda não tiver feito isso, siga as orientações em [conectando um cliente de terceiros ao [!DNL Query Service]](./overview.md).

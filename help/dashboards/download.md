@@ -23,17 +23,17 @@ Este documento fornece um resumo de como baixar painéis usando a interface do u
 
 ## Baixar painel
 
-Para começar a baixar um painel, navegue até o painel que deseja baixar (por exemplo, o [!UICONTROL Perfis] ) e, em seguida, selecione o menu mais opções (**`...`**) no canto superior direito do painel. Em seguida, selecione **[!UICONTROL Baixar]**.
+Para começar a baixar um painel, navegue até o painel que deseja baixar (por exemplo, o painel [!UICONTROL Perfis]) e selecione o menu de mais opções (**`...`**) no canto superior direito do painel. Em seguida, selecione **[!UICONTROL Baixar]**.
 
-![O painel Perfis de Experience Platform com as reticências e a lista suspensa de Download destacadas.](images/download/download-button.png)
+![O painel Perfis de Experience Platform com as reticências e a lista suspensa de Download está realçado.](images/download/download-button.png)
 
 ## Visualizar PDF
 
-Depois de selecionar **[!UICONTROL Baixar]**, o menu de impressão padrão do navegador é aberto. Neste exemplo, o menu de impressão do Google Chrome é exibido.
+Depois de selecionar **[!UICONTROL Baixar]**, o menu de impressão padrão do seu navegador será aberto. Neste exemplo, o menu de impressão do Google Chrome é exibido.
 
 O menu de impressão permite que você visualize o PDF que será salvo. O PDF é uma representação real dos widgets do painel conforme aparecem na interface do usuário da plataforma, e o tamanho do PDF é automaticamente ajustado para exibir todos os widgets do painel visíveis no momento em uma única página.
 
-![A visão geral do Perfil é exibida em um formato de página única com o painel Opções de impressão à direita.](images/download/download-chrome-print.png)
+![A visão geral do Perfil exibida em um formato de página única com o painel Opções de impressão à direita.](images/download/download-chrome-print.png)
 
 O PDF inclui um cabeçalho gerado automaticamente contendo o logotipo do Experience Platform, o nome do painel, seu nome e a data e hora em que o painel foi baixado. Essas informações são somente leitura e não podem ser editadas no PDF.
 
@@ -41,13 +41,13 @@ O PDF inclui um cabeçalho gerado automaticamente contendo o logotipo do Experie
 
 ## Salvar como PDF
 
-Após visualizar o PDF, selecione **Salvar** para escolher o local em que deseja salvar o PDF.
+Depois de visualizar o PDF, selecione **Salvar** para escolher o local em que deseja salvar seu PDF.
 
 >[!NOTE]
 >
->Se necessário, você poderá usar o **Destino** lista suspensa para selecionar **Salvar como PDF** se essa opção não for selecionada automaticamente para você.
+>Se necessário, você pode usar a lista suspensa **Destino** para selecionar **Salvar como PDF** se essa opção não for selecionada automaticamente para você.
 
-![A visão geral do Perfil exibida em um formato de página única com a opção de impressão Salvar como PDF selecionada na lista suspensa Destino.](images/download/download-chrome-print-destination.png)
+![A visão geral do Perfil exibida em um formato de página única com a opção suspensa de impressão Salvar como PDF de Destino realçada.](images/download/download-chrome-print-destination.png)
 
 ## Personalizar PDF do painel
 
@@ -55,13 +55,13 @@ O PDF gerado corresponde ao painel que você pode ver na interface do usuário e
 
 Por exemplo, você pode modificar a aparência do painel de perfis para incluir vários widgets de largura total empilhados acima de três widgets padrão.
 
-![O painel Perfil que demonstra o widget alongado é exibido.](images/download/download-modify.png)
+![O painel de Perfil que demonstra o widget alongado é exibido.](images/download/download-modify.png)
 
 Selecionar para baixar o painel atualizado resulta em uma nova visualização do PDF que corresponde à aparência do painel de perfis personalizados. Ele também ajusta automaticamente o tamanho do PDF para garantir que todos os widgets visíveis sejam incluídos em um PDF de uma página.
 
-![A visão geral do Perfil é exibida em um formato de página única com o painel Opções de impressão à direita.](images/download/download-chrome-print-modified.png)
+![A visão geral do Perfil exibida em um formato de página única com o painel Opções de impressão à direita.](images/download/download-chrome-print-modified.png)
 
-Para saber mais sobre como personalizar painéis, comece lendo o [visão geral da personalização do painel](customize/overview.md).
+Para saber mais sobre como personalizar painéis, comece lendo a [visão geral de personalização de painel](customize/overview.md).
 
 ## Próximas etapas
 

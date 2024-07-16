@@ -13,19 +13,19 @@ ht-degree: 3%
 
 # Endpoint de agendamentos
 
-Os cronogramas são uma ferramenta que pode ser usada para executar automaticamente trabalhos de segmentação em lote uma vez por dia. Você pode usar o `/config/schedules` endpoint para recuperar uma lista de agendamentos, criar um novo agendamento, recuperar detalhes de um agendamento específico, atualizar um agendamento específico ou excluir um agendamento específico.
+Os cronogramas são uma ferramenta que pode ser usada para executar automaticamente trabalhos de segmentação em lote uma vez por dia. Você pode usar o ponto de extremidade `/config/schedules` para recuperar uma lista de agendamentos, criar um novo agendamento, recuperar detalhes de um agendamento específico, atualizar um agendamento específico ou excluir um agendamento específico.
 
 ## Introdução
 
-Os endpoints usados neste guia fazem parte da [!DNL Adobe Experience Platform Segmentation Service] API. Antes de continuar, reveja o [guia de introdução](./getting-started.md) para obter informações importantes que você precisa saber para fazer chamadas com êxito para a API, incluindo cabeçalhos necessários e como ler chamadas de API de exemplo.
+Os pontos de extremidade usados neste guia fazem parte da API [!DNL Adobe Experience Platform Segmentation Service]. Antes de continuar, consulte o [guia de introdução](./getting-started.md) para obter informações importantes que você precisa saber para fazer chamadas com êxito para a API, incluindo os cabeçalhos necessários e como ler as chamadas de exemplo da API.
 
 ## Recuperar uma lista de agendamentos {#retrieve-list}
 
-Você pode recuperar uma lista de todas as programações para sua organização fazendo uma solicitação GET para a `/config/schedules` terminal.
+Você pode recuperar uma lista de todas as agendas para sua organização fazendo uma solicitação GET para o ponto de extremidade `/config/schedules`.
 
 **Formato da API**
 
-A variável `/config/schedules` O endpoint oferece suporte a vários parâmetros de consulta para ajudar a filtrar os resultados. Embora esses parâmetros sejam opcionais, seu uso é altamente recomendado para ajudar a reduzir a sobrecarga cara. Fazer uma chamada para esse endpoint sem parâmetros recuperará todas as agendas disponíveis para sua organização. Vários parâmetros podem ser incluídos, separados por &quot;E&quot; comercial (`&`).
+O ponto de extremidade `/config/schedules` dá suporte a vários parâmetros de consulta para ajudar a filtrar os resultados. Embora esses parâmetros sejam opcionais, seu uso é altamente recomendado para ajudar a reduzir a sobrecarga cara. Fazer uma chamada para esse endpoint sem parâmetros recuperará todas as agendas disponíveis para sua organização. Vários parâmetros podem ser incluídos, separados por &quot;E&quot; comercial (`&`).
 
 ```http
 GET /config/schedules
@@ -98,13 +98,13 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com uma lista de agendamento
 | `children.name` | O nome do agendamento como uma cadeia de caracteres. |
 | `children.type` | O tipo de trabalho como uma string. Os dois tipos compatíveis são &quot;batch_segmentation&quot; e &quot;export&quot;. |
 | `children.properties` | Um objeto que contém propriedades adicionais relacionadas ao agendamento. |
-| `children.properties.segments` | Usar `["*"]` A garante que todos os segmentos sejam incluídos. |
-| `children.schedule` | Uma string contendo o agendamento do job. Os jobs só podem ser programados para serem executados uma vez por dia, o que significa que você não pode programar um job para ser executado mais de uma vez durante um período de 24 horas. Para obter mais informações sobre cronogramas cron, leia o apêndice no [formato de expressão do cron](#appendix). Neste exemplo, &quot;0 0 1 * *&quot; significa que este agendamento será executado às 1:00 AM todos os dias. |
+| `children.properties.segments` | Usar `["*"]` garante que todos os segmentos sejam incluídos. |
+| `children.schedule` | Uma string contendo o agendamento do job. Os jobs só podem ser programados para serem executados uma vez por dia, o que significa que você não pode programar um job para ser executado mais de uma vez durante um período de 24 horas. Para obter mais informações sobre cronogramas cron, leia o apêndice no [formato de expressão cron](#appendix). Neste exemplo, &quot;0 0 1 * *&quot; significa que este agendamento será executado às 1:00 AM todos os dias. |
 | `children.state` | Uma string que contém o estado do agendamento. Os dois estados compatíveis são &quot;ativo&quot; e &quot;inativo&quot;. Por padrão, o estado é definido como &quot;inativo&quot;. |
 
 ## Criar um novo agendamento {#create}
 
-Você pode criar um novo agendamento fazendo uma solicitação POST para o `/config/schedules` terminal.
+Você pode criar um novo agendamento fazendo uma solicitação POST para o ponto de extremidade `/config/schedules`.
 
 **Formato da API**
 
@@ -138,11 +138,11 @@ curl -X POST https://platform.adobe.io/data/core/ups/config/schedules \
 | Propriedade | Descrição |
 | -------- | ------------ |
 | `name` | **Obrigatório.** O nome do agendamento como uma cadeia de caracteres. |
-| `type` | **Obrigatório.** O tipo de trabalho como uma string. Os dois tipos compatíveis são &quot;batch_segmentation&quot; e &quot;export&quot;. |
+| `type` | **Obrigatório.** O tipo de trabalho como uma cadeia de caracteres. Os dois tipos compatíveis são &quot;batch_segmentation&quot; e &quot;export&quot;. |
 | `properties` | **Obrigatório.** Um objeto que contém propriedades adicionais relacionadas ao agendamento. |
-| `properties.segments` | **Obrigatório ao `type` é igual a &quot;batch_segmentation&quot;.** Usar `["*"]` A garante que todos os segmentos sejam incluídos. |
-| `schedule` | *Opcional.* Uma string contendo o agendamento do job. Os jobs só podem ser programados para serem executados uma vez por dia, o que significa que você não pode programar um job para ser executado mais de uma vez durante um período de 24 horas. Para obter mais informações sobre cronogramas cron, leia o apêndice no [formato de expressão do cron](#appendix). Neste exemplo, &quot;0 0 1 * *&quot; significa que este agendamento será executado às 1:00 AM todos os dias. <br><br>Se esta string não for fornecida, um agendamento gerado pelo sistema será gerado automaticamente. |
-| `state` | *Opcional.* Uma string que contém o estado do agendamento. Os dois estados compatíveis são &quot;ativo&quot; e &quot;inativo&quot;. Por padrão, o estado é definido como &quot;inativo&quot;. |
+| `properties.segments` | **Obrigatório quando `type` é igual a &quot;batch_segmentation&quot;.** usar `["*"]` garante que todos os segmentos sejam incluídos. |
+| `schedule` | *Opcional.* Uma cadeia de caracteres que contém o cronograma do trabalho. Os jobs só podem ser programados para serem executados uma vez por dia, o que significa que você não pode programar um job para ser executado mais de uma vez durante um período de 24 horas. Para obter mais informações sobre cronogramas cron, leia o apêndice no [formato de expressão cron](#appendix). Neste exemplo, &quot;0 0 1 * *&quot; significa que este agendamento será executado às 1:00 AM todos os dias. <br><br>Se esta cadeia de caracteres não for fornecida, um agendamento gerado pelo sistema será gerado automaticamente. |
+| `state` | *Opcional.* Uma cadeia de caracteres que contém o estado do agendamento. Os dois estados compatíveis são &quot;ativo&quot; e &quot;inativo&quot;. Por padrão, o estado é definido como &quot;inativo&quot;. |
 
 **Resposta**
 
@@ -174,7 +174,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes do agendamento 
 
 ## Recuperar uma programação específica {#get}
 
-Você pode recuperar informações detalhadas sobre uma programação específica fazendo uma solicitação GET para a `/config/schedules` e fornecendo a ID do agendamento que deseja recuperar no caminho da solicitação.
+Você pode recuperar informações detalhadas sobre um agendamento específico fazendo uma solicitação GET para o ponto de extremidade `/config/schedules` e fornecendo a ID do agendamento que você deseja recuperar no caminho da solicitação.
 
 **Formato da API**
 
@@ -184,7 +184,7 @@ GET /config/schedules/{SCHEDULE_ID}
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `{SCHEDULE_ID}` | A variável `id` valor do agendamento que deseja recuperar. |
+| `{SCHEDULE_ID}` | O valor `id` do agendamento que você deseja recuperar. |
 
 **Solicitação**
 
@@ -227,21 +227,21 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com informações detalhadas
 | Propriedade | Descrição |
 | -------- | ------------ |
 | `name` | O nome do agendamento como uma cadeia de caracteres. |
-| `type` | O tipo de trabalho como uma string. Os dois tipos compatíveis são `batch_segmentation` e `export`. |
+| `type` | O tipo de trabalho como uma string. Os dois tipos suportados são `batch_segmentation` e `export`. |
 | `properties` | Um objeto que contém propriedades adicionais relacionadas ao agendamento. |
-| `properties.segments` | Usar `["*"]` A garante que todos os segmentos sejam incluídos. |
-| `schedule` | Uma string contendo o agendamento do job. As ordens de produção só podem ser programadas para serem executadas uma vez por dia, o que significa que não é possível programar uma ordem de produção para ser executada mais de uma vez durante um período de 24 horas. Para obter mais informações sobre cronogramas cron, leia o apêndice no [formato de expressão do cron](#appendix). Neste exemplo, &quot;0 0 1 * *&quot; significa que este agendamento será executado às 1:00 AM todos os dias. |
-| `state` | Uma string que contém o estado do agendamento. Os dois estados compatíveis são `active` e `inactive`. Por padrão, o estado é definido como `inactive`. |
+| `properties.segments` | Usar `["*"]` garante que todos os segmentos sejam incluídos. |
+| `schedule` | Uma string contendo o agendamento do job. As ordens de produção só podem ser programadas para serem executadas uma vez por dia, o que significa que não é possível programar uma ordem de produção para ser executada mais de uma vez durante um período de 24 horas. Para obter mais informações sobre cronogramas cron, leia o apêndice no [formato de expressão cron](#appendix). Neste exemplo, &quot;0 0 1 * *&quot; significa que este agendamento será executado às 1:00 AM todos os dias. |
+| `state` | Uma string que contém o estado do agendamento. Os dois estados com suporte são `active` e `inactive`. Por padrão, o estado é definido como `inactive`. |
 
 ## Atualizar detalhes de um agendamento específico {#update}
 
-Você pode atualizar um agendamento específico fazendo uma solicitação PATCH para o `/config/schedules` e forneça a ID do agendamento que está tentando atualizar no caminho da solicitação.
+Você pode atualizar um agendamento específico fazendo uma solicitação PATCH para o ponto de extremidade `/config/schedules` e fornecendo a ID do agendamento que você está tentando atualizar no caminho da solicitação.
 
-A solicitação PATCH permite atualizar o plug-in [state](#update-state) ou o [cronograma cron](#update-schedule) para uma programação individual.
+A solicitação PATCH permite atualizar o [estado](#update-state) ou o [cron schedule](#update-schedule) para um agendamento individual.
 
 ### Atualizar estado da programação {#update-state}
 
-Você pode usar uma operação de patch de JSON para atualizar o estado da programação. Para atualizar o estado, você declara o `path` propriedade como `/state` e defina o `value` para `active` ou `inactive`. Para obter mais informações sobre o Patch JSON, leia o [Patch JSON](https://datatracker.ietf.org/doc/html/rfc6902) documentação.
+Você pode usar uma operação de patch de JSON para atualizar o estado da programação. Para atualizar o estado, declare a propriedade `path` como `/state` e defina o `value` como `active` ou `inactive`. Para obter mais informações sobre o Patch JSON, leia a documentação do [Patch JSON](https://datatracker.ietf.org/doc/html/rfc6902).
 
 **Formato da API**
 
@@ -251,7 +251,7 @@ PATCH /config/schedules/{SCHEDULE_ID}
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `{SCHEDULE_ID}` | A variável `id` valor da programação que deseja atualizar. |
+| `{SCHEDULE_ID}` | O valor `id` do agendamento que você deseja atualizar. |
 
 **Solicitação**
 
@@ -273,8 +273,8 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/4e538382-
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `path` | O caminho do valor que você deseja corrigir. Nesse caso, como você está atualizando o estado do agendamento, é necessário definir o valor de `path` para &quot;/state&quot;. |
-| `value` | O valor atualizado do estado do agendamento. Esse valor pode ser definido como &quot;ativo&quot; ou &quot;inativo&quot; para ativar ou desativar o agendamento. Observe que você **não é possível** desabilite uma agenda se a organização tiver sido habilitada para streaming. |
+| `path` | O caminho do valor que você deseja corrigir. Nesse caso, como você está atualizando o estado do agendamento, é necessário definir o valor de `path` como &quot;/state&quot;. |
+| `value` | O valor atualizado do estado do agendamento. Esse valor pode ser definido como &quot;ativo&quot; ou &quot;inativo&quot; para ativar ou desativar o agendamento. Observe que você **não pode** desabilitar um agendamento se a organização tiver sido habilitada para streaming. |
 
 **Resposta**
 
@@ -282,7 +282,7 @@ Uma resposta bem-sucedida retorna o status HTTP 204 (Sem conteúdo).
 
 ### Atualizar cronograma cron {#update-schedule}
 
-Você pode usar uma operação de patch de JSON para atualizar a programação cron. Para atualizar o cronograma, você declara o `path` propriedade como `/schedule` e defina o `value` para uma programação cron válida. Para obter mais informações sobre o Patch JSON, leia o [Patch JSON](https://datatracker.ietf.org/doc/html/rfc6902) documentação. Para obter mais informações sobre cronogramas cron, leia o apêndice no [formato de expressão do cron](#appendix).
+Você pode usar uma operação de patch de JSON para atualizar a programação cron. Para atualizar o agendamento, declare a propriedade `path` como `/schedule` e defina `value` como um agendamento cron válido. Para obter mais informações sobre o Patch JSON, leia a documentação do [Patch JSON](https://datatracker.ietf.org/doc/html/rfc6902). Para obter mais informações sobre cronogramas cron, leia o apêndice no [formato de expressão cron](#appendix).
 
 **Formato da API**
 
@@ -292,7 +292,7 @@ PATCH /config/schedules/{SCHEDULE_ID}
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `{SCHEDULE_ID}` | A variável `id` valor da programação que deseja atualizar. |
+| `{SCHEDULE_ID}` | O valor `id` do agendamento que você deseja atualizar. |
 
 **Solicitação**
 
@@ -314,7 +314,7 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/4e538382-
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `path` | O caminho do valor que você deseja atualizar. Nesse caso, como você está atualizando o cronograma cron, é necessário definir o valor de `path` para `/schedule`. |
+| `path` | O caminho do valor que você deseja atualizar. Nesse caso, como você está atualizando o agendamento do cron, é necessário definir o valor de `path` como `/schedule`. |
 | `value` | O valor atualizado do cronograma cron. Esse valor precisa estar no formato de um cronograma cron. Neste exemplo, a programação será executada no segundo dia de cada mês. |
 
 **Resposta**
@@ -323,7 +323,7 @@ Uma resposta bem-sucedida retorna o status HTTP 204 (Sem conteúdo).
 
 ## Excluir um agendamento específico
 
-Você pode solicitar a exclusão de um agendamento específico fazendo uma solicitação DELETE para o `/config/schedules` e fornecendo a ID do agendamento que deseja excluir no caminho da solicitação.
+Você pode solicitar a exclusão de um agendamento específico fazendo uma solicitação DELETE para o ponto de extremidade `/config/schedules` e fornecendo a ID do agendamento que deseja excluir no caminho da solicitação.
 
 **Formato da API**
 
@@ -333,7 +333,7 @@ DELETE /config/schedules/{SCHEDULE_ID}
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `{SCHEDULE_ID}` | A variável `id` valor da programação que deseja excluir. |
+| `{SCHEDULE_ID}` | O valor `id` do agendamento que você deseja excluir. |
 
 **Solicitação**
 
@@ -377,20 +377,20 @@ Em uma sequência de expressão cron, o primeiro campo representa os segundos, o
 
 >[!NOTE]
 >
->Os nomes dos meses e dos dias da semana são **não** distinção entre maiúsculas e minúsculas. Por conseguinte, `SUN` é equivalente a usar `sun`.
+>Os nomes dos meses e dos dias da semana **não** diferenciam maiúsculas de minúsculas. Portanto, `SUN` é equivalente a usar `sun`.
 
 Os caracteres especiais permitidos representam os seguintes significados:
 
 | Caractere especial | Descrição |
 | ----------------- | ----------- |
-| `*` | Esse valor é usado para selecionar **all** em um campo. Por exemplo, colocando `*` no campo de horas significaria **a cada** hora. |
-| `?` | Esse valor significa que nenhum valor específico é necessário. Isso geralmente é usado para especificar algo em um campo onde o caractere é permitido, mas não especificá-lo no outro. Por exemplo, se você quiser que um evento seja acionado todo dia 3 do mês, mas não se importar com o dia da semana, coloque `3` no campo dia do mês e `?` no campo dia da semana. |
-| `-` | Este valor é usado para especificar **inclusivo** intervalos para o campo. Por exemplo, se você colocar `9-15` no campo hours, isso significa que as horas incluiriam 9, 10, 11, 12, 13, 14 e 15. |
-| `,` | Este valor é usado para especificar valores adicionais. Por exemplo, se você colocar `MON, FRI, SAT` no campo dia da semana, significa que os dias da semana incluiriam segunda-feira, sexta-feira e sábado. |
-| `/` | Esse valor é usado para especificar incrementos. O valor colocado antes da variável `/` determina de onde ele é incrementado, enquanto o valor colocado depois da variável `/` determina quanto ele aumenta. Por exemplo, se você colocar `1/7` no campo minutes, isso significa que os minutos incluem 1, 8, 15, 22, 29, 36, 43, 50 e 57. |
-| `L` | Este valor é usado para especificar `Last`, e tem um significado diferente dependendo de qual campo é usado. Se for usado com o campo day of the month, representará o último dia do mês. Se for usado com o campo day of the week sozinho, ele representará o último dia da semana, que é sábado (`SAT`). Se for usado com o campo day of the week, juntamente com outro valor, ele representará o último dia desse tipo para o mês. Por exemplo, se você colocar `5L` no campo dia da semana, seria **somente** inclua a última sexta-feira do mês. |
-| `W` | Esse valor é usado para especificar o dia da semana mais próximo do dia determinado. Por exemplo, se você colocar `18W` no campo dia do mês, e o dia 18 daquele mês era um sábado, ele dispararia na sexta-feira 17, que é o dia da semana mais próximo. Se o dia 18 daquele mês fosse um domingo, dispararia na segunda-feira dia 19, que é o dia da semana mais próximo. Observe que, se você colocar `1W` no campo dia do mês, e o dia da semana mais próximo seria no mês anterior, o evento ainda será acionado no dia da semana mais próximo do **atual** mês.</br></br>Além disso, é possível combinar `L` e `W` para fazer `LW`, que especificaria o último dia da semana do mês. |
-| `#` | Esse valor é usado para especificar o enésimo dia da semana em um mês. O valor colocado antes da variável `#` representa o dia da semana, enquanto o valor colocado depois de `#` representa qual ocorrência no mês é. Por exemplo, se você colocar `1#3`, o evento será acionado no terceiro domingo do mês. Observe que, se você colocar `X#5` e não houver quinta ocorrência desse dia da semana nesse mês, o evento será **não** ser acionado. Por exemplo, se você colocar `1#5`, e não há quinto domingo naquele mês, o evento vai **não** ser acionado. |
+| `*` | Este valor é usado para selecionar **todos** valores em um campo. Por exemplo, colocar `*` no campo de horas significaria **a cada** hora. |
+| `?` | Esse valor significa que nenhum valor específico é necessário. Isso geralmente é usado para especificar algo em um campo onde o caractere é permitido, mas não especificá-lo no outro. Por exemplo, se você quiser que um evento seja acionado todo dia 3 do mês, mas não se importar com o dia da semana, coloque `3` no campo de dia do mês e `?` no campo de dia da semana. |
+| `-` | Este valor é usado para especificar intervalos **inclusivos** para o campo. Por exemplo, se você colocar `9-15` no campo de horas, isso significa que as horas incluiriam 9, 10, 11, 12, 13, 14 e 15. |
+| `,` | Este valor é usado para especificar valores adicionais. Por exemplo, se você colocar `MON, FRI, SAT` no campo de dia da semana, isso significa que os dias da semana incluiriam segunda, sexta e sábado. |
+| `/` | Esse valor é usado para especificar incrementos. O valor colocado antes de `/` determina de onde ele é incrementado, enquanto o valor colocado depois de `/` determina o quanto ele é incrementado. Por exemplo, se você colocar `1/7` no campo de minutos, isso significa que os minutos incluirão 1, 8, 15, 22, 29, 36, 43, 50 e 57. |
+| `L` | Este valor é usado para especificar `Last`, e tem um significado diferente dependendo de qual campo é usado. Se for usado com o campo day of the month, representará o último dia do mês. Se for usado com o campo de dia da semana sozinho, ele representará o último dia da semana, que é sábado (`SAT`). Se for usado com o campo day of the week, juntamente com outro valor, ele representará o último dia desse tipo para o mês. Por exemplo, se você colocar `5L` no campo de dia da semana, **somente** incluirá a última sexta-feira do mês. |
+| `W` | Esse valor é usado para especificar o dia da semana mais próximo do dia determinado. Por exemplo, se você colocar `18W` no campo de dia do mês, e o dia 18 daquele mês for um sábado, ele será acionado na sexta-feira 17, que é o dia da semana mais próximo. Se o dia 18 daquele mês fosse um domingo, dispararia na segunda-feira dia 19, que é o dia da semana mais próximo. Observe que se você colocar `1W` no campo de dia do mês, e o dia da semana mais próximo estiver no mês anterior, o evento ainda será acionado no dia da semana mais próximo do mês **atual**.</br></br>Além disso, você pode combinar `L` e `W` para criar `LW`, que especificaria o último dia da semana do mês. |
+| `#` | Esse valor é usado para especificar o enésimo dia da semana em um mês. O valor colocado antes de `#` representa o dia da semana, enquanto o valor colocado depois de `#` representa qual ocorrência no mês é. Por exemplo, se você colocar `1#3`, o evento será acionado no terceiro domingo do mês. Observe que se você colocar `X#5` e não houver quinta ocorrência desse dia da semana nesse mês, o evento **não** será acionado. Por exemplo, se você colocar `1#5` e não houver quinto domingo nesse mês, o evento **não** será acionado. |
 
 ### Exemplos
 

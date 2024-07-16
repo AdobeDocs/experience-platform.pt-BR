@@ -29,7 +29,7 @@ Este documento aborda como definir tipos de ação para uma extensão da Web no 
 
 Os tipos de ação geralmente consistem no seguinte:
 
-1. A [exibir](./views.md) mostrado na interface do Experience Platform e na interface da Coleção de dados que permite aos usuários modificar as configurações da ação.
+1. Uma [visualização](./views.md) mostrada na interface do usuário do Experience Platform e na interface da Coleção de dados que permite aos usuários modificar as configurações da ação.
 2. Um módulo de biblioteca emitido na biblioteca de tempo de execução de tag para interpretar as configurações e executar uma ação.
 
 ```js

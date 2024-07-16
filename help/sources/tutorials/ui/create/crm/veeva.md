@@ -1,69 +1,69 @@
 ---
 keywords: Experience Platform;página inicial;tópicos populares;Veeva CRM;veeva
 solution: Experience Platform
-title: Criar uma conexão de origem do Veeva CRM na interface
+title: Criar uma conexão com o Veeva CRM Source na interface
 type: Tutorial
 description: Saiba como criar uma conexão de origem do Veeva CRM usando a interface do Adobe Experience Platform.
 exl-id: 4ef76c28-9bd2-4e54-a3d6-dceb89162337
 source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
-source-wordcount: '429'
-ht-degree: 1%
+source-wordcount: '425'
+ht-degree: 2%
 
 ---
 
-# Criar um [!DNL Veeva CRM] conexão de origem na interface
+# Criar uma conexão de origem [!DNL Veeva CRM] na interface
 
-Os conectores de origem no Adobe Experience Platform fornecem a capacidade de assimilar dados de CRM de origem externa de forma programada. Este tutorial fornece etapas para a criação de um [!DNL Veeva CRM] conector de origem usando o [!DNL Platform] interface do usuário.
+Os conectores do Source no Adobe Experience Platform fornecem a capacidade de assimilar dados de CRM originados externamente de forma programada. Este tutorial fornece etapas para a criação de um conector de origem [!DNL Veeva CRM] usando a interface do usuário [!DNL Platform].
 
 ## Introdução
 
 Este tutorial requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): o quadro normalizado pelo qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
-   * [Noções básicas da composição do esquema](../../../../../xdm/schema/composition.md): saiba mais sobre os componentes básicos dos esquemas XDM, incluindo princípios fundamentais e práticas recomendadas na composição do esquema.
+* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): a estrutura padronizada pela qual o [!DNL Experience Platform] organiza os dados de experiência do cliente.
+   * [Noções básicas sobre a composição de esquema](../../../../../xdm/schema/composition.md): saiba mais sobre os blocos de construção básicos de esquemas XDM, incluindo princípios-chave e práticas recomendadas na composição de esquema.
    * [Tutorial do Editor de esquemas](../../../../../xdm/tutorials/create-schema-ui.md): saiba como criar esquemas personalizados usando a interface do Editor de esquemas.
-* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): fornece um perfil de consumidor unificado em tempo real com base em dados agregados de várias fontes.
+* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Fornece um perfil de consumidor unificado em tempo real com base em dados agregados de várias fontes.
 
-Se você já tiver um [!DNL Veeva CRM] conta, você pode ignorar o restante deste documento e prosseguir para o tutorial em [configuração de um fluxo de dados](../../dataflow/crm.md).
+Se você já tiver uma conta válida do [!DNL Veeva CRM], ignore o restante deste documento e prossiga para o tutorial em [configurando um fluxo de dados](../../dataflow/crm.md).
 
 ### Coletar credenciais necessárias
 
 | Credencial | Descrição |
 | ---------- | ----------- |
-| `environmentUrl` | O URL do [!DNL Veeva CRM] instância de origem. |
-| `username` | O nome de usuário para o [!DNL Veeva CRM] conta de usuário. |
-| `password` | A senha para o [!DNL Veeva CRM] conta de usuário. |
-| `securityToken` | O token de segurança para o [!DNL Veeva CRM] conta de usuário. |
+| `environmentUrl` | A URL da instância de origem [!DNL Veeva CRM]. |
+| `username` | O nome de usuário da conta de usuário [!DNL Veeva CRM]. |
+| `password` | A senha da conta de usuário [!DNL Veeva CRM]. |
+| `securityToken` | O token de segurança para a conta de usuário [!DNL Veeva CRM]. |
 
-Para obter mais informações de introdução, consulte esta página [[!DNL Veeva CRM] documento](https://developer.veevacrm.com/doc/Content/rest-api.htm).
+Para obter mais informações sobre a introdução, consulte este [[!DNL Veeva CRM] documento](https://developer.veevacrm.com/doc/Content/rest-api.htm).
 
-## Conecte seu [!DNL Veeva CRM] account
+## Conectar sua conta do [!DNL Veeva CRM]
 
-Depois de obter as credenciais necessárias, siga as etapas abaixo para vincular [!DNL Veeva CRM] conta para [!DNL Platform].
+Depois de obter as credenciais necessárias, siga as etapas abaixo para vincular sua conta do [!DNL Veeva CRM] ao [!DNL Platform].
 
-Na interface do usuário da Platform, selecione **[!UICONTROL Origens]** na barra de navegação esquerda, para acessar a [!UICONTROL Origens] espaço de trabalho. A variável [!UICONTROL Catálogo] A tela exibe uma variedade de fontes com as quais você pode criar uma conta.
+Na interface da Platform, selecione **[!UICONTROL Fontes]** na barra de navegação esquerda para acessar o espaço de trabalho [!UICONTROL Fontes]. A tela [!UICONTROL Catálogo] exibe uma variedade de fontes com as quais você pode criar uma conta.
 
 Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar a fonte específica com a qual deseja trabalhar usando a opção de pesquisa.
 
-No [!UICONTROL CRM] categoria, selecione **[!UICONTROL Veeva CRM]** e selecione **[!UICONTROL Adicionar dados]**.
+Na categoria [!UICONTROL CRM], selecione **[!UICONTROL Veeva CRM]** e **[!UICONTROL Adicionar dados]**.
 
 ![catálogo](../../../../images/tutorials/create/veeva/catalog.png)
 
-A variável **[!UICONTROL Conectar a conta do Veeva CRM]** é exibida. Nesta página, você pode usar credenciais novas ou existentes.
+A página **[!UICONTROL Conectar a conta do Veeva CRM]** é exibida. Nesta página, você pode usar credenciais novas ou existentes.
 
 ### Conta existente
 
-Para usar uma conta existente, selecione a variável [!DNL Veeva CRM] conta com a qual deseja criar um novo fluxo de dados e selecione **[!UICONTROL Próxima]** para continuar.
+Para usar uma conta existente, selecione a conta [!DNL Veeva CRM] com a qual deseja criar um novo fluxo de dados e clique em **[!UICONTROL Avançar]** para continuar.
 
 ![existente](../../../../images/tutorials/create/veeva/existing.png)
 
 ### Nova conta
 
-Se estiver criando uma nova conta, selecione **[!UICONTROL Nova conta]** e forneça um nome, uma descrição opcional e suas [!DNL Veeva CRM] credenciais. Quando terminar, selecione **[!UICONTROL Conectar à origem]** e aguarde algum tempo para estabelecer a nova conexão.
+Se você estiver criando uma nova conta, selecione **[!UICONTROL Nova conta]** e forneça um nome, uma descrição opcional e suas credenciais do [!DNL Veeva CRM]. Quando terminar, selecione **[!UICONTROL Conectar à origem]** e aguarde algum tempo para que a nova conexão seja estabelecida.
 
 ![novo](../../../../images/tutorials/create/veeva/new.png)
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você estabeleceu uma conexão com o seu [!DNL Veeva CRM] conta. Agora você pode seguir para o próximo tutorial e [configurar um fluxo de dados para trazer dados para a Platform](../../dataflow/crm.md).
+Seguindo este tutorial, você estabeleceu uma conexão com sua conta do [!DNL Veeva CRM]. Agora você pode seguir para o próximo tutorial e [configurar um fluxo de dados para trazer dados para a Platform](../../dataflow/crm.md).

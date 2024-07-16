@@ -4,7 +4,7 @@ title: Teste seu destino baseado em arquivo com perfis de amostra
 exl-id: 75f76aec-245b-4f07-8871-c64a710db9f6
 source-git-commit: 9ac6b075af3805da4dad0dd6442d026ae96ab5c7
 workflow-type: tm+mt
-source-wordcount: '827'
+source-wordcount: '829'
 ht-degree: 2%
 
 ---
@@ -13,26 +13,26 @@ ht-degree: 2%
 
 ## Visão geral {#overview}
 
-Esta página explica como usar a variável `/testing/destinationInstance` Endpoint da API para testar se o destino baseado em arquivo está configurado corretamente e verificar a integridade dos fluxos de dados para o destino configurado.
+Esta página explica como usar o endpoint da API `/testing/destinationInstance` para testar se o destino baseado em arquivo está configurado corretamente e verificar a integridade dos fluxos de dados para o destino configurado.
 
-Você pode fazer solicitações para o endpoint de teste com ou sem adicionar [perfis de amostra](file-based-sample-profile-generation-api.md) à chamada. Se você não enviar nenhum perfil na solicitação, a API gerará um perfil de amostra automaticamente e o adicionará à solicitação.
+Você pode fazer solicitações ao ponto de extremidade de teste com ou sem adicionar [perfis de amostra](file-based-sample-profile-generation-api.md) à chamada. Se você não enviar nenhum perfil na solicitação, a API gerará um perfil de amostra automaticamente e o adicionará à solicitação.
 
-Os perfis de amostra gerados automaticamente contêm dados genéricos. Se você quiser testar seu destino com dados de perfil personalizados e mais intuitivos, use o [exemplo de API de geração de perfil](file-based-sample-profile-generation-api.md) para gerar um perfil de amostra, personalize sua resposta e inclua-o na solicitação ao `/testing/destinationInstance` terminal.
+Os perfis de amostra gerados automaticamente contêm dados genéricos. Se você quiser testar seu destino com dados de perfil personalizados e mais intuitivos, use a [API de geração de perfil de exemplo](file-based-sample-profile-generation-api.md) para gerar um perfil de exemplo, personalize sua resposta e inclua-a na solicitação para o ponto de extremidade `/testing/destinationInstance`.
 
 ## Introdução {#getting-started}
 
-Antes de continuar, reveja o [guia de introdução](../../getting-started.md) para obter informações importantes que você precisa saber para fazer chamadas com êxito para a API, incluindo como obter a permissão de criação de destino e os cabeçalhos necessários.
+Antes de continuar, consulte o [guia de introdução](../../getting-started.md) para obter informações importantes que você precisa saber para fazer chamadas com êxito para a API, incluindo como obter a permissão de criação de destino e os cabeçalhos necessários.
 
 ## Pré-requisitos {#prerequisites}
 
-Antes de poder usar o `/testing/destinationInstance` verifique se você atende às seguintes condições:
+Antes de usar o ponto de extremidade `/testing/destinationInstance`, verifique se você atende às seguintes condições:
 
 * Você tem um destino baseado em arquivo existente criado por meio do Destination SDK e pode visualizá-lo em seu [catálogo de destinos](../../../ui/destinations-workspace.md).
 * Você criou pelo menos um fluxo de ativação para o destino na interface do usuário do Experience Platform.
 * Para fazer a solicitação de API com êxito, é necessário ter a ID da instância de destino correspondente à instância de destino que você testará. Obtenha a ID da instância de destino que você deve usar na chamada da API, no URL, ao navegar por uma conexão com seu destino na interface do Platform.
 
-  ![Imagem da interface mostrando como obter a ID da instância de destino do URL.](../../assets/testing-api/get-destination-instance-id.png)
-* *Opcional*: se você quiser testar a configuração de destino com uma amostra de perfil adicionada à chamada de API, use o [/sample-profiles](file-based-sample-profile-generation-api.md) endpoint para gerar um perfil de amostra com base no esquema de origem existente. Se você não fornecer um perfil de amostra, a API gerará um e o retornará na resposta.
+  ![Imagem da interface do usuário mostrando como obter a ID da instância de destino da URL.](../../assets/testing-api/get-destination-instance-id.png)
+* *Opcional*: se você deseja testar sua configuração de destino com um perfil de exemplo adicionado à chamada de API, use o ponto de extremidade [/sample-profiles](file-based-sample-profile-generation-api.md) para gerar um perfil de exemplo com base no esquema de origem existente. Se você não fornecer um perfil de amostra, a API gerará um e o retornará na resposta.
 
 ## Testar a configuração de destino sem adicionar perfis à chamada {#test-without-adding-profiles}
 
@@ -55,7 +55,7 @@ curl -X POST 'https://platform.adobe.io/data/core/activation/authoring/testing/d
 
 | Parâmetros de caminho | Descrição |
 | -------- | ----------- |
-| `{DESTINATION_INSTANCE_ID}` | A ID da instância de destino para a qual você está gerando perfis de amostra. Consulte a [pré-requisitos](#prerequisites) para obter detalhes sobre como obter essa ID. |
+| `{DESTINATION_INSTANCE_ID}` | A ID da instância de destino para a qual você está gerando perfis de amostra. Consulte a seção [pré-requisitos](#prerequisites) para obter detalhes sobre como obter essa ID. |
 
 **Resposta**
 
@@ -111,7 +111,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 junto com a carga de respost
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `activations` | Retorna a ID de público-alvo e a ID de execução de fluxo para cada público-alvo ativado. O número de entradas de ativação (e arquivos gerados associados) é igual ao número de públicos mapeados na instância de destino. <br><br> Exemplo: se você mapeou dois públicos-alvo para a instância de destino, a variável `activations` A matriz conterá duas entradas. Cada público ativado corresponderá a um arquivo exportado. |
+| `activations` | Retorna a ID de público-alvo e a ID de execução de fluxo para cada público-alvo ativado. O número de entradas de ativação (e arquivos gerados associados) é igual ao número de públicos mapeados na instância de destino. <br><br> Exemplo: se você mapeou dois públicos-alvo para a instância de destino, a matriz `activations` conterá duas entradas. Cada público ativado corresponderá a um arquivo exportado. |
 | `results` | Retorna a ID da instância de destino e as IDs de execução de fluxo que você pode usar para chamar a [API de resultados](file-based-destination-results-api.md), para testar ainda mais a integração. |
 | `inputProfiles` | Retorna os perfis de amostra gerados automaticamente pela API. |
 
@@ -119,7 +119,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 junto com a carga de respost
 
 ## Testar a configuração de destino com perfis adicionados à chamada {#test-with-added-profiles}
 
-Para testar seu destino com dados de perfil personalizados e mais intuitivos, você pode personalizar a resposta obtida no [/sample-profiles](file-based-sample-profile-generation-api.md) com valores de sua escolha e inclua o perfil personalizado na solicitação ao `/testing/destinationInstance` terminal.
+Para testar seu destino com dados de perfil personalizados e mais intuitivos, você pode personalizar a resposta obtida do ponto de extremidade [/sample-profiles](file-based-sample-profile-generation-api.md) com valores de sua escolha e incluir o perfil personalizado na solicitação para o ponto de extremidade `/testing/destinationInstance`.
 
 **Formato da API**
 
@@ -175,8 +175,8 @@ curl -X POST 'https://platform.adobe.io/data/core/activation/authoring/testing/d
 
 | Parâmetro | Descrição |
 | -------- | ----------- |
-| `{DESTINATION_INSTANCE_ID}` | A ID da instância de destino do destino que você está testando.  A ID da instância de destino para a qual você está gerando perfis de amostra. Consulte a [pré-requisitos](#prerequisites) para obter detalhes sobre como obter essa ID. |
-| `profiles` | Matriz que pode incluir um ou vários perfis. Use o [exemplo de endpoint da API de perfil](file-based-sample-profile-generation-api.md) para gerar perfis que serão usados nesta chamada de API. |
+| `{DESTINATION_INSTANCE_ID}` | A ID da instância de destino do destino que você está testando.  A ID da instância de destino para a qual você está gerando perfis de amostra. Consulte a seção [pré-requisitos](#prerequisites) para obter detalhes sobre como obter essa ID. |
+| `profiles` | Matriz que pode incluir um ou vários perfis. Use o [ponto de extremidade da API de perfil de amostra](file-based-sample-profile-generation-api.md) para gerar perfis a serem usados nesta chamada de API. |
 
 **Resposta**
 
@@ -232,18 +232,18 @@ Uma resposta bem-sucedida retorna o status HTTP 200 junto com a carga de respost
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `activations` | Retorna a ID de público-alvo e a ID de execução de fluxo para cada público-alvo ativado. O número de entradas de ativação (e arquivos gerados associados) é igual ao número de públicos mapeados na instância de destino. <br><br> Exemplo: se você mapeou dois públicos-alvo para a instância de destino, a variável `activations` A matriz conterá duas entradas. Cada público ativado corresponderá a um arquivo exportado. |
+| `activations` | Retorna a ID de público-alvo e a ID de execução de fluxo para cada público-alvo ativado. O número de entradas de ativação (e arquivos gerados associados) é igual ao número de públicos mapeados na instância de destino. <br><br> Exemplo: se você mapeou dois públicos-alvo para a instância de destino, a matriz `activations` conterá duas entradas. Cada público ativado corresponderá a um arquivo exportado. |
 | `results` | Retorna a ID da instância de destino e as IDs de execução de fluxo que você pode usar para chamar a [API de resultados](file-based-destination-results-api.md), para testar ainda mais a integração. |
 | `inputProfiles` | Retorna os perfis de amostra personalizados passados na solicitação de API. |
 
 ## Manipulação de erros de API {#api-error-handling}
 
-Os endpoints da API Destination SDK seguem os princípios gerais de mensagem de erro da API Experience Platform. Consulte [Códigos de status da API](../../../../landing/troubleshooting.md#api-status-codes) e [erros no cabeçalho da solicitação](../../../../landing/troubleshooting.md#request-header-errors) no guia de solução de problemas da Platform.
+Os endpoints da API Destination SDK seguem os princípios gerais de mensagem de erro da API Experience Platform. Consulte [códigos de status da API](../../../../landing/troubleshooting.md#api-status-codes) e [erros no cabeçalho da solicitação](../../../../landing/troubleshooting.md#request-header-errors) no guia de solução de problemas da Platform.
 
 ## Próximas etapas
 
 Depois de ler este documento, agora você sabe como testar a configuração de destino baseada em arquivo.
 
-Se você tiver recebido uma resposta de API válida, seu destino está funcionando corretamente. Se quiser ver informações mais detalhadas sobre o fluxo de ativação, use o `results` propriedade da resposta a [exibir resultados de ativação detalhados](file-based-destination-results-api.md).
+Se você tiver recebido uma resposta de API válida, seu destino está funcionando corretamente. Se quiser ver informações mais detalhadas sobre o fluxo de ativação, você poderá usar a propriedade `results` da resposta a [exibir resultados detalhados da ativação](file-based-destination-results-api.md).
 
-Se você estiver criando um destino público, poderá [enviar sua configuração de destino](../../guides/submit-destination.md) para Adobe para revisão.
+Se você estiver criando um destino público, agora pode [enviar a configuração de destino](../../guides/submit-destination.md) para o Adobe para revisão.

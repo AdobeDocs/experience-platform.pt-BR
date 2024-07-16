@@ -5,7 +5,7 @@ exl-id: f3792076-3e01-4e26-8788-32927202a2e5
 source-git-commit: 34eb9151cc6bb8551553b0a8427e58871acb4dbb
 workflow-type: tm+mt
 source-wordcount: '1661'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
@@ -15,9 +15,9 @@ Os insights derivados da análise do modelo de dados tornam os dados do Adobe Re
 
 Entenda seus insights de perfil acessando o SQL que os capacita e gere seus próprios insights para explorar ainda mais seus clientes e as experiências do consumidor que compõem seus perfis. Transforme seus dados brutos em novos insights acionáveis usando o SQL modelo de dados do Real-Time CDP existente como inspiração para criar consultas para suas necessidades comerciais exclusivas.
 
-Consulte a [Exibir documentação SQL](../view-sql.md) para obter mais informações sobre como adaptar o SQL dos seus insights diretamente pela interface do usuário da plataforma.
+Consulte a [Exibir documentação do SQL](../view-sql.md) para obter mais informações sobre como adaptar o SQL dos seus insights diretamente pela interface do usuário da Platform.
 
-Os seguintes insights estão disponíveis para você usar como parte da [Painel de perfis](../guides/profiles.md) ou um personalizado [painel definido pelo usuário](../user-defined-dashboards.md). Consulte a [visão geral da personalização](../customize/overview.md) para obter instruções sobre como personalizar seu painel ou [criar e editar novos widgets](../customize/custom-widgets.md) na biblioteca de widgets e [painel definido pelo usuário](../user-defined-dashboards.md#create-widget).
+Os seguintes insights estão todos disponíveis para você usar como parte do [Painel de perfis](../guides/profiles.md) ou de um [painel definido pelo usuário](../user-defined-dashboards.md) personalizado. Consulte a [visão geral da personalização](../customize/overview.md) para obter instruções sobre como personalizar seu painel ou [criar e editar novos widgets](../customize/custom-widgets.md) na biblioteca de widgets e no [painel definido pelo usuário](../user-defined-dashboards.md#create-widget).
 
 ## Sobreposição de público por política de mesclagem {#audience-overlap-by-merge-policy}
 
@@ -64,9 +64,9 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 +++
 
-Consulte a [Documentação do widget Sobreposição de público por política de mesclagem](../guides/profiles.md#audience-overlap-by-merge-policy) para obter informações sobre a aparência e a funcionalidade desse insight.
+Consulte a [documentação do widget Sobreposição de público por política de mesclagem](../guides/profiles.md#audience-overlap-by-merge-policy) para obter informações sobre a aparência e a funcionalidade desse insight.
 
-## Relatório de sobreposição de público {#audience-overlap-report}
+## Relatório de sobreposição de público-alvo {#audience-overlap-report}
 
 Perguntas respondidas por este insight:
 
@@ -131,7 +131,7 @@ SELECT source_segment_name,
 
 +++
 
-Consulte a [Documentação do widget Relatório de sobreposição de público](../guides/profiles.md#audience-overlap-report) para obter informações sobre a aparência e a funcionalidade desse insight.
+Consulte a [Documentação do widget Relatório de sobreposição de público](../guides/profiles.md#audience-overlap-report) para obter informações sobre a aparência e a funcionalidade deste insight.
 
 ## Públicos (contagem) {#audiences}
 
@@ -159,7 +159,7 @@ SELECT count(DISTINCT a.segment_id) count_of_segments
 
 +++
 
-Consulte a [Documentação do widget Públicos-alvo](../guides/profiles.md#audiences) para obter informações sobre a aparência e a funcionalidade desse insight.
+Consulte a [documentação do widget Públicos-alvo](../guides/profiles.md#audiences) para obter informações sobre a aparência e a funcionalidade desse insight.
 
 ## Públicos mapeados para o status de destino {#audiences-mapped-to-destination-status}
 
@@ -191,7 +191,7 @@ SELECT COUNT(DISTINCT (y.segment_id)) AS count_mapped_segments,
 
 +++
 
-Consulte a [Públicos mapeados para a documentação do widget de status de destino](../guides/profiles.md#audiences-mapped-to-destination-status) para obter informações sobre a aparência e a funcionalidade desse insight.
+Consulte a [Documentação do widget de status de públicos-alvo mapeados para o destino](../guides/profiles.md#audiences-mapped-to-destination-status) para obter informações sobre a aparência e a funcionalidade desse insight.
 
 ## Tamanho dos públicos {#audiences-size}
 
@@ -224,7 +224,7 @@ SELECT qsaccel.profile_agg.adwh_fact_profile_by_segment_trendlines.date_key,
 
 +++
 
-Consulte a [Documentação do widget de tamanho do público](../guides/profiles.md#audiences-size) para obter informações sobre a aparência e a funcionalidade desse insight.
+Consulte a [documentação do widget de tamanho de públicos-alvo](../guides/profiles.md#audiences-size) para obter informações sobre a aparência e a funcionalidade deste insight.
 
 ## Distribuição de pontuações da IA do cliente {#customer-ai-distribution-of-scores}
 
@@ -361,9 +361,9 @@ SELECT b.model_name,
 
 +++
 
-Consulte a [Distribuição de IA do cliente da documentação do widget de pontuações](../guides/profiles.md#customer-ai-distribution-of-scores) para obter informações sobre a aparência e a funcionalidade desse insight.
+Consulte a [documentação do widget de distribuição de pontuações da IA do cliente](../guides/profiles.md#customer-ai-distribution-of-scores) para obter informações sobre a aparência e a funcionalidade deste insight.
 
-## Resumo de pontuação do Customer AI {#customer-ai-scoring-summary}
+## Resumo de pontuação da IA do cliente {#customer-ai-scoring-summary}
 
 Perguntas respondidas por este insight:
 
@@ -402,7 +402,7 @@ SELECT model_name,
 
 +++
 
-Consulte a [Documentação do widget Resumo de pontuação da IA do cliente](../guides/profiles.md#customer-ai-scoring-summary) para obter informações sobre a aparência e a funcionalidade desse insight.
+Consulte a [documentação do widget Resumo de pontuação da IA do cliente](../guides/profiles.md#customer-ai-scoring-summary) para obter informações sobre a aparência e a funcionalidade deste insight.
 
 ## Sobreposição de identidade {#identity-overlap}
 
@@ -459,7 +459,7 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 +++
 
-Consulte a [Documentação do widget de sobreposição de identidade](../guides/profiles.md#identity-overlap) para obter informações sobre a aparência e a funcionalidade desse insight.
+Consulte a [documentação do widget Sobreposição de identidade](../guides/profiles.md#identity-overlap) para obter informações sobre a aparência e a funcionalidade deste insight.
 
 ## Contagem de perfis {#profile-count}
 
@@ -481,9 +481,9 @@ SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
   GROUP BY qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name;
 ```
 
-Informações completas sobre a aparência e a funcionalidade desse insight podem ser encontradas no [Guia do widget de contagem de perfis](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#profile-count).
+Informações completas sobre a aparência e a funcionalidade deste insight podem ser encontradas no [guia do widget Contagem de perfis](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#profile-count).
 
-Consulte a [Documentação do widget Contagem de perfis](../guides/profiles.md#profile-count) para obter informações sobre a aparência e a funcionalidade desse insight.
+Consulte a [documentação do widget Contagem de perfis](../guides/profiles.md#profile-count) para obter informações sobre a aparência e a funcionalidade deste insight.
 
 ## Alteração na contagem de perfis {#profile-count-change}
 
@@ -528,7 +528,7 @@ SELECT (sum(count_of_profiles) - sum(count_of_profiles_days_ago)) profiles_added
 
 +++
 
-Consulte a [Documentação do widget de alteração na contagem de perfis](../guides/profiles.md#profile-count-change) para obter informações sobre a aparência e a funcionalidade desse insight.
+Consulte a [documentação do widget de alteração de contagem de perfis](../guides/profiles.md#profile-count-change) para obter informações sobre a aparência e a funcionalidade deste insight.
 
 ## Tendência de alteração da contagem de perfis {#profile-count-change-trend}
 
@@ -562,7 +562,7 @@ SELECT date_key,
 
 +++
 
-Consulte a [Documentação do widget de tendência de alteração na contagem de perfis](../guides/profiles.md#profile-count-change-trend) para obter informações sobre a aparência e a funcionalidade desse insight.
+Consulte a [documentação do widget de tendência de alteração de contagem de perfis](../guides/profiles.md#profile-count-change-trend) para obter informações sobre a aparência e a funcionalidade desse insight.
 
 ## Tendência de contagem de perfis {#profile-count-trend}
 
@@ -593,7 +593,7 @@ SELECT date_key,
 
 +++
 
-Consulte a [Documentação do widget de tendência de contagem de perfis](../guides/profiles.md#profile-count-trend) para obter informações sobre a aparência e a funcionalidade desse insight.
+Consulte a [documentação do widget de tendência de contagem de perfis](../guides/profiles.md#profile-count-trend) para obter informações sobre a aparência e a funcionalidade desse insight.
 
 ## Perfis por identidade {#profiles-by-identity}
 
@@ -622,7 +622,7 @@ SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
 
 +++
 
-Consulte a [Documentação do widget Perfis por identidade](../guides/profiles.md#profiles-by-identity) para obter informações sobre a aparência e a funcionalidade desse insight.
+Consulte a [documentação do widget Perfis por identidade](../guides/profiles.md#profiles-by-identity) para obter informações sobre a aparência e a funcionalidade desse insight.
 
 ## Tendência da alteração da contagem de perfis {#profiles-count-change-trend}
 
@@ -656,7 +656,7 @@ SELECT date_key,
 
 +++
 
-Consulte a [Documentação do widget de tendência de alteração na contagem de perfis](../guides/profiles.md#profiles-count-change-trend) para obter informações sobre a aparência e a funcionalidade desse insight.
+Consulte a [Documentação do widget de tendência de alteração da contagem de perfis](../guides/profiles.md#profiles-count-change-trend) para obter informações sobre a aparência e a funcionalidade desse insight.
 
 ## Tendência de alteração na contagem de perfis por identidade {#profiles-count-change-trend-by-identity}
 
@@ -697,7 +697,7 @@ SELECT date_key,
 
 +++
 
-Consulte a [Documentação do widget Tendência de alteração na contagem de perfis por identidade](../guides/profiles.md#profiles-count-change-trend-by-identity) para obter informações sobre a aparência e a funcionalidade desse insight.
+Consulte a [Documentação do widget identidade da tendência de alteração da contagem de perfis](../guides/profiles.md#profiles-count-change-trend-by-identity) para obter informações sobre a aparência e a funcionalidade desse insight.
 
 ## Perfis de identidade única {#single-identity-profiles}
 
@@ -722,7 +722,7 @@ SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
 
 +++
 
-Consulte a [Documentação do widget Perfis de identidade únicos](../guides/profiles.md#single-identity-profiles) para obter informações sobre a aparência e a funcionalidade desse insight.
+Consulte a [documentação do widget Perfis de identidade única](../guides/profiles.md#single-identity-profiles) para obter informações sobre a aparência e a funcionalidade deste insight.
 
 ## Perfis de identidade únicos por identidade {#single-identity-profiles-by-identity}
 
@@ -749,7 +749,7 @@ SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
 
 +++
 
-Consulte a [Documentação do widget Perfis de identidade únicos por identidade](../guides/profiles.md#single-identity-profiles-by-identity) para obter informações sobre a aparência e a funcionalidade desse insight.
+Consulte a [Documentação de widget de identidade de perfis de identidade únicos por identidade](../guides/profiles.md#single-identity-profiles-by-identity) para obter informações sobre a aparência e a funcionalidade deste insight.
 
 ## Perfis não segmentados {#unsegmented-profiles}
 
@@ -773,12 +773,12 @@ SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
 
 +++
 
-Consulte a [Documentação do widget de perfis não segmentados](../guides/profiles.md#unsegmented-profiles) para obter informações sobre a aparência e a funcionalidade desse insight.
+Consulte a [documentação do widget de perfis não segmentados](../guides/profiles.md#unsegmented-profiles) para obter informações sobre a aparência e a funcionalidade deste insight.
 
 ## Próximas etapas
 
 Ao ler este documento, você agora entende o SQL que gera insights de painel e quais perguntas comuns essa análise resolve. Agora você pode editar e iterar no SQL para gerar seus próprios insights.
 
-Consulte a [Exibir documentação SQL](../view-sql.md) para obter mais informações sobre como adaptar o SQL dos seus insights diretamente pela interface do Platform.
+Consulte a [Exibir documentação do SQL](../view-sql.md) para obter mais informações sobre como adaptar o SQL dos seus insights diretamente pela interface do PLatform.
 
-Você também pode ler e entender o SQL que gera insights para o [Públicos-alvo](./audiences.md), [Perfis de conta](./account-profiles.md), e [Destinos](./destinations.md) painéis.
+Você também pode ler e entender o SQL que gera insights para os painéis [Públicos-alvo](./audiences.md), [Perfis de conta](./account-profiles.md) e [Destinos](./destinations.md).

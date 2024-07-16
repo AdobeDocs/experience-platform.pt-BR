@@ -5,7 +5,7 @@ exl-id: 0619d845-71c1-4699-82aa-c6436815d5b3
 source-git-commit: 576b17842ee1c5722332ba49e26b037537ec96ed
 workflow-type: tm+mt
 source-wordcount: '1199'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -21,23 +21,23 @@ Este documento fornece uma visão geral dos vários mecanismos que você pode us
 
 O documento abaixo faz referência aos seguintes recursos do Experience Platform:
 
-* [Serviço de identidade](../home.md): obtenha uma melhor visualização dos clientes individuais e do comportamento deles ao unir as identidades de vários dispositivos e sistemas.
-   * [Gráfico de identidade](./identity-graph-viewer.md): um gráfico de identidade é um mapa dos relacionamentos entre identidades diferentes para um cliente específico, fornecendo uma representação visual de como seu cliente interage com sua marca em diferentes canais.
-   * [Namespaces de identidade](./namespaces.md): os namespaces de identidade são um componente do Serviço de identidade que serve como indicadores do contexto ao qual uma identidade está relacionada. Por exemplo, eles distinguem um valor de &quot;name<span>@email.com&quot; como um endereço de email ou &quot;443522&quot; como uma ID de CRM numérica.
-* [Serviço de catálogo](../../catalog/home.md): explore a linhagem de dados, os metadados, as descrições dos arquivos, os diretórios e os conjuntos de dados no data lake.
-* [Higiene de dados](../../hygiene/home.md): gerencie os dados do consumidor armazenados agendando expirações automáticas do conjunto de dados ou excluindo registros individuais de um conjunto de dados ou de todos os conjuntos de dados.
+* [Serviço de identidade](../home.md): obtenha uma melhor visão dos clientes individuais e de seu comportamento unindo as identidades de vários dispositivos e sistemas.
+   * [Gráfico de identidade](./identity-graph-viewer.md): um gráfico de identidade é um mapa das relações entre diferentes identidades para um cliente específico, fornecendo uma representação visual de como o cliente interage com a sua marca em diferentes canais.
+   * [Namespaces de identidade](./namespaces.md): os namespaces de identidade são um componente do Serviço de Identidade que serve como indicadores do contexto ao qual uma identidade está relacionada. Por exemplo, eles distinguem um valor de &quot;name<span>@email.com&quot; como um endereço de email ou &quot;443522&quot; como uma ID de CRM numérica.
+* [Serviço de Catálogo](../../catalog/home.md): explore a linhagem de dados, os metadados, as descrições de arquivos, os diretórios e os conjuntos de dados no data lake.
+* [Higiene de dados](../../hygiene/home.md): gerencie seus dados armazenados do consumidor agendando expirações automatizadas do conjunto de dados ou excluindo registros individuais de um conjunto de dados ou de todos os conjuntos de dados.
 * [Adobe Experience Platform Privacy Service](../../privacy-service/home.md): gerencie solicitações de clientes para acessar, cancelar a venda ou excluir seus dados pessoais nos aplicativos da Adobe Experience Cloud.
 * [Perfil do cliente em tempo real](../../profile/home.md): fornece um perfil de cliente unificado em tempo real com base em dados agregados de várias fontes.
 
 ## Exclusões de identidade única
 
-As solicitações de exclusão de identidade únicas permitem excluir uma identidade em um gráfico, resultando na remoção de links vinculados a uma única identidade de usuário associada a um namespace de identidade. Você pode usar mecanismos fornecidos pelo [Privacy Service](../../privacy-service/home.md) para casos de uso como solicitações de exclusão de dados do cliente e conformidade com regulamentos de privacidade, como o Regulamento Geral sobre a Proteção de Dados (GDPR).
+As solicitações de exclusão de identidade únicas permitem excluir uma identidade em um gráfico, resultando na remoção de links vinculados a uma única identidade de usuário associada a um namespace de identidade. Você pode usar os mecanismos fornecidos por [Privacy Service](../../privacy-service/home.md) para casos de uso, como solicitações de clientes para exclusão de dados e conformidade com as regulamentações de privacidade, como o Regulamento Geral sobre a Proteção de Dados (GDPR).
 
 As seções abaixo descrevem os mecanismos que podem ser usados para solicitações de exclusão de identidade única no Experience Platform.
 
 ### Exclusão de identidade única no Privacy Service
 
-O Privacy Service processa solicitações de clientes para acessar, recusar a venda ou excluir seus dados pessoais, conforme definido pelas regulamentações de privacidade, como o Regulamento Geral sobre a Proteção de Dados (GDPR) e a Lei de Privacidade do Consumidor da Califórnia (CCPA). Com o Privacy Service, você pode enviar solicitações de trabalho usando a API ou a interface do usuário. Quando o Experience Platform recebe uma solicitação de exclusão do Privacy Service, a Platform envia uma confirmação para o Privacy Service de que a solicitação foi recebida e de que os dados afetados foram marcados para exclusão. A exclusão da identidade individual baseia-se no namespace e/ou valor de ID fornecido. Além disso, a exclusão ocorre para todas as sandboxes associadas a uma determinada organização. Para obter mais informações, leia o guia em [processamento de solicitação de privacidade no Serviço de identidade](../privacy.md).
+O Privacy Service processa solicitações de clientes para acessar, recusar a venda ou excluir seus dados pessoais, conforme definido pelas regulamentações de privacidade, como o Regulamento Geral sobre a Proteção de Dados (GDPR) e a Lei de Privacidade do Consumidor da Califórnia (CCPA). Com o Privacy Service, você pode enviar solicitações de trabalho usando a API ou a interface do usuário. Quando o Experience Platform recebe uma solicitação de exclusão do Privacy Service, a Platform envia uma confirmação para o Privacy Service de que a solicitação foi recebida e de que os dados afetados foram marcados para exclusão. A exclusão da identidade individual baseia-se no namespace e/ou valor de ID fornecido. Além disso, a exclusão ocorre para todas as sandboxes associadas a uma determinada organização. Para obter mais informações, leia o manual sobre [processamento de solicitação de privacidade no Serviço de Identidade](../privacy.md).
 
 A tabela abaixo fornece um detalhamento da exclusão de identidade única no Privacy Service:
 
@@ -56,11 +56,11 @@ As seções a seguir descrevem os mecanismos que podem ser usados para excluir c
 
 ### Exclusão de conjunto de dados no serviço de catálogo
 
-Você pode usar o Serviço de catálogo para enviar solicitações de exclusão do conjunto de dados. Para obter mais informações sobre como excluir conjuntos de dados com o Serviço de catálogo, leia o guia em [exclusão de objetos usando a API do Serviço de Catálogo](../../catalog/api/delete-object.md). Como alternativa, você pode usar a interface do usuário da Platform para enviar solicitações de exclusão do conjunto de dados. Para obter mais informações, leia a [guia do usuário de conjuntos de dados](../../catalog/datasets/user-guide.md#delete-a-dataset).
+Você pode usar o Serviço de catálogo para enviar solicitações de exclusão do conjunto de dados. Para obter mais informações sobre como excluir conjuntos de dados com o Serviço de Catálogo, leia o manual sobre [exclusão de objetos usando a API do Serviço de Catálogo](../../catalog/api/delete-object.md). Como alternativa, você pode usar a interface do usuário da Platform para enviar solicitações de exclusão do conjunto de dados. Para obter mais informações, leia o [guia do usuário dos conjuntos de dados](../../catalog/datasets/user-guide.md#delete-a-dataset).
 
 ### Expirações do conjunto de dados na higiene de dados
 
-A variável [[!UICONTROL Higiene de dados] espaço de trabalho](../../hygiene/ui/overview.md) na interface do Adobe Experience Platform, permite agendar expirações para conjuntos de dados. Quando um conjunto de dados atinge sua data de expiração, o data lake, o serviço de identidade e o perfil do cliente em tempo real iniciam processos separados para remover o conteúdo do conjunto de dados de seus respectivos serviços. Para obter mais informações, leia o guia em [gerenciar expirações de conjunto de dados usando o [!UICONTROL Higiene de dados] espaço de trabalho](../../hygiene/ui/dataset-expiration.md).
+O espaço de trabalho [[!UICONTROL Higiene de Dados]](../../hygiene/ui/overview.md) da interface do usuário do Adobe Experience Platform permite agendar expirações para conjuntos de dados. Quando um conjunto de dados atinge sua data de expiração, o data lake, o serviço de identidade e o perfil do cliente em tempo real iniciam processos separados para remover o conteúdo do conjunto de dados de seus respectivos serviços. Para obter mais informações, leia o manual sobre [gerenciamento de expirações de conjunto de dados usando o [!UICONTROL espaço de trabalho de Higiene de Dados]](../../hygiene/ui/dataset-expiration.md).
 
 A tabela abaixo fornece um detalhamento das diferenças entre a exclusão do conjunto de dados no Serviço de catálogo e na Higiene de dados:
 
@@ -89,7 +89,7 @@ Abaixo está um esboço dos possíveis impactos que as exclusões podem ter no e
 
 ## Próximas etapas
 
-Esse documento abordou os vários mecanismos que você pode usar para excluir identidades e conjuntos de dados no Experience Platform. Este documento também descreve como as exclusões de identidade e conjunto de dados podem afetar os gráficos de identidade. Para obter mais informações sobre o Serviço de identidade, leia a [Visão geral do serviço de identidade](../home.md).
+Esse documento abordou os vários mecanismos que você pode usar para excluir identidades e conjuntos de dados no Experience Platform. Este documento também descreve como as exclusões de identidade e conjunto de dados podem afetar os gráficos de identidade. Para obter mais informações sobre o Serviço de identidade, leia a [Visão geral do Serviço de identidade](../home.md).
 
 <!--
 

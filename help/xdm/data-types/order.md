@@ -11,20 +11,20 @@ ht-degree: 13%
 
 ---
 
-# [!UICONTROL Pedido] tipo de dados
+# Tipo de dados [!UICONTROL Ordem]
 
 [!UICONTROL Pedido] é um tipo de dados padrão do Experience Data Model (XDM) que descreve o pedido feito para uma lista de produtos.
 
-![Um diagrama do [!UICONTROL Pedido] tipo de dados.](../images/data-types/order.png)
+![Um diagrama do tipo de dados [!UICONTROL Ordem].](../images/data-types/order.png)
 
 | Nome de exibição | Propriedade | Tipo de dados | Descrição |
 |-------------------------|-------------------------|-----------|------------------------------------------------------------------------------------------------------------------|
 | ID de compra | `purchaseID` | String | Um identificador exclusivo atribuído pelo vendedor para esta compra ou contrato. Não há garantia de que a ID seja exclusiva porque a ID é definida pelo vendedor. |
 | Número do pedido de compra | `purchaseOrderNumber` | String | Um identificador exclusivo atribuído pelo comprador para esta compra ou contrato. |
-| Lista de pagamentos | `payments` | Matriz de [[!UICONTROL Itens de pagamento]](./payment-item.md) | A lista de pagamentos deste pedido. Os pagamentos são [!UICONTROL Itens de pagamento] especificação. |
-| Lista de Reembolsos | `refunds` | Matriz de [[!UICONTROL Itens de reembolso]](./refund-item.md) | A lista de reembolsos para este pedido. As restituições são [!UICONTROL Itens de reembolso] especificação. |
-| Informações de devolução | `returns` | [[!UICONTROL Informações de devolução]](./return.md) | A RMA (Autorização para devolução de mercadoria) emitida. As devoluções estão detalhadas na seção [!UICONTROL Informações de devolução] especificação. |
-| Currency | `currencyCode` | String | O código de moeda ISO 4217 usado para os totais do pedido. Os exemplos incluem `USD` e `EUR`. Todas as instâncias devem corresponder ao padrão `^[A-Z]{3}$`. |
+| Lista de pagamentos | `payments` | Matriz de [[!UICONTROL Itens de Pagamento]](./payment-item.md) | A lista de pagamentos deste pedido. Os pagamentos são detalhados na especificação [!UICONTROL Itens de Pagamento]. |
+| Lista de Reembolsos | `refunds` | Matriz de [[!UICONTROL Itens de Reembolso]](./refund-item.md) | A lista de reembolsos para este pedido. As restituições estão detalhadas na especificação [!UICONTROL Itens de reembolso]. |
+| Informações de devolução | `returns` | [[!UICONTROL Informações de Retorno]](./return.md) | A RMA (Autorização para devolução de mercadoria) emitida. As devoluções estão detalhadas na especificação [!UICONTROL Informações de devolução]. |
+| Currency | `currencyCode` | String | O código de moeda ISO 4217 usado para os totais do pedido. Exemplos incluem `USD` e `EUR`. Todas as instâncias devem corresponder ao padrão `^[A-Z]{3}$`. |
 | Valor do imposto | `taxAmount` | Número | O valor do imposto pago pelo comprador como parte do pagamento final. |
 | Valor do desconto | `discountAmount` | Número | A diferença entre o preço normal e o preço especial aplicado a todo o pedido, e não a produtos individuais. |
 | Preço total | `priceTotal` | Número | O preço total deste pedido após a aplicação de todos os descontos e impostos. |

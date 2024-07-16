@@ -4,7 +4,7 @@ description: Saiba como configurar um arquivo de manifesto JSON que informa ao A
 exl-id: 7cac020b-3cfd-4a0a-a2d1-edee1be125d0
 source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '2645'
+source-wordcount: '2591'
 ht-degree: 98%
 
 ---
@@ -23,7 +23,7 @@ Um manifesto de extensão deve consistir no seguinte:
 
 | Propriedade | Descrição |
 | --- | --- |
-| `name` | O nome da sua extensão. Ele deve ser exclusivo dentre todas as outras extensões e deve estar em conformidade com [regras de nomenclatura](#naming-rules). **É usado pelas tags como um identificador e não deve ser alterado após a publicação de sua extensão.** |
+| `name` | O nome da sua extensão. Ele deve ser exclusivo dentre todas as outras extensões e deve estar em conformidade com as [regras de nomenclatura](#naming-rules). **É usado pelas tags como um identificador e não deve ser alterado após a publicação de sua extensão.** |
 | `platform` | A plataforma para sua extensão. O único valor aceito neste momento é `web`. |
 | `version` | A versão da sua extensão. Deve seguir o formato de controle de versão [semver](https://semver.org/). É consistente com o campo de versão [npm](https://docs.npmjs.com/files/package.json#version). |
 | `displayName` | O nome legível da sua extensão. Isso será exibido para os usuários da Platform. Não é necessário mencionar &quot;tags&quot; ou &quot;extensão&quot;. Os usuários já saberão que estão observando uma extensão de tag. |
@@ -68,7 +68,7 @@ O objeto de configuração deve ser estruturado da seguinte maneira:
   <tbody>
     <tr>
       <td><code>viewPath</code></td>
-      <td>O URL relativo para a visualização de configuração da extensão. Deve ser relativo a <code>viewBasePath</code> e não deve começar com uma barra. Ele deve fazer referência a um arquivo HTML com uma extensão <code>.html</code>. Os sufixos de sequência de consulta e identificador de fragmento (hashes) são aceitáveis.</td>
+      <td>O URL relativo para a visualização de configuração da extensão. Deve ser relativo a <code>viewBasePath</code> e não deve começar com uma barra. Ele deve fazer referência a um arquivo HTML com uma extensão <code>.html</code>. Os sufixos de string de consulta e identificador de fragmento (hashes) são aceitáveis.</td>
     </tr>
     <tr>
       <td><code>schema</code></td>
@@ -89,7 +89,7 @@ O objeto de configuração deve ser estruturado da seguinte maneira:
   "additionalProperties": false
 }
 </pre>
-      Recomendamos usar uma ferramenta como <a href="https://www.jsonschemavalidator.net/">validador de Esquema JSON</a> para testar manualmente seu esquema.</td>
+      Recomendamos usar uma ferramenta como o <a href="https://www.jsonschemavalidator.net/">validador de Esquema JSON</a> para testar manualmente seu esquema.</td>
     </tr>
     <tr>
       <td><code>transforms</code> <em>(Opcional)</em></td>
@@ -120,7 +120,7 @@ Uma definição de tipo é um objeto usado para descrever um evento, uma condiç
     </tr>
     <tr>
       <td><code>categoryName</code> <em>(Opcional)</em></td>
-      <td>Quando fornecido, o <code>displayName</code> será listado em <code>categoryName</code> na interface do Todos os tipos com o mesmo <code>categoryName</code> serão listados na mesma categoria. Por exemplo, se sua extensão fornecesse um tipo de evento <code>keyUp</code> e um tipo de evento <code>keyDown</code> e ambos tivessem um <code>categoryName</code> de <code>Keyboard</code>, ambos os tipos de evento seriam listados na categoria Teclado enquanto o usuário selecionava na lista de tipos de evento disponíveis ao criar uma regra. O valor de <code>categoryName</code> deve ser legível.</td>
+      <td>Quando fornecido, o <code>displayName</code> será listado em <code>categoryName</code> na interface. Todos os tipos com o mesmo <code>categoryName</code> serão listados na mesma categoria. Por exemplo, se sua extensão fornecesse um tipo de evento <code>keyUp</code> e um tipo de evento <code>keyDown</code> e ambos tivessem um <code>categoryName</code> de <code>Keyboard</code>, ambos os tipos de evento seriam listados na categoria Teclado enquanto o usuário selecionava na lista de tipos de evento disponíveis ao criar uma regra. O valor de <code>categoryName</code> deve ser legível.</td>
     </tr>
     <tr>
       <td><code>libPath</code></td>
@@ -128,7 +128,7 @@ Uma definição de tipo é um objeto usado para descrever um evento, uma condiç
     </tr>
     <tr>
       <td><code>viewPath</code> <em>(Opcional)</em></td>
-      <td>O URL relativo da visualização do tipo. Deve ser relativo a <code>viewBasePath</code> e não deve começar com uma barra. Ele deve fazer referência a um arquivo HTML com uma extensão <code>.html</code>. Sequências de consulta e identificadores de fragmento (hashes) são aceitáveis. Se o módulo de biblioteca do seu tipo não usar nenhuma configuração de um usuário, você poderá excluir essa propriedade, e o Platform exibirá um espaço reservado informando que nenhuma configuração é necessária.</td>
+      <td>O URL relativo da visualização do tipo. Deve ser relativo a <code>viewBasePath</code> e não deve começar com uma barra. Ele deve fazer referência a um arquivo HTML com uma extensão <code>.html</code>. Strings de consulta e identificadores de fragmento (hashes) são aceitáveis. Se o módulo de biblioteca do seu tipo não usar nenhuma configuração de um usuário, você poderá excluir essa propriedade, e o Platform exibirá um espaço reservado informando que nenhuma configuração é necessária.</td>
     </tr>
     <tr>
       <td><code>schema</code></td>
@@ -149,7 +149,7 @@ Uma definição de tipo é um objeto usado para descrever um evento, uma condiç
   "additionalProperties": false
 }
 </pre>
-      Recomendamos usar uma ferramenta como <a href="https://www.jsonschemavalidator.net/">validador de Esquema JSON</a> para testar manualmente seu esquema.</td>
+      Recomendamos usar uma ferramenta como o <a href="https://www.jsonschemavalidator.net/">validador de Esquema JSON</a> para testar manualmente seu esquema.</td>
     </tr>
     <tr>
       <td><code>transforms</code> <em>(Opcional)</em></td>
@@ -209,7 +209,7 @@ Quando o usuário salva a regra, o objeto de configurações salvo pela visualiz
 
 Quando uma regra que usa nossa ação é acionada na biblioteca de tempo de execução da tag, queremos executar o código do usuário e passar um nome de usuário para ele.
 
-No ponto em que o objeto de configurações é salvo da visualização do tipo de ação, o código do usuário é simplesmente uma sequência. Isso é bom porque pode ser serializado corretamente de e para JSON. No entanto, também é ruim porque, normalmente, seria emitido na biblioteca de tempo de execução de tags como uma string, em vez de uma função executável. Embora você possa tentar executar o código no módulo de biblioteca do tipo de ação usando [`eval`](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/eval) ou um [construtor de função](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function), isso é altamente desencorajado devido a [políticas de segurança de conteúdo](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/CSP) que potencialmente bloqueiam a execução.
+No ponto em que o objeto de configurações é salvo da visualização do tipo de ação, o código do usuário é simplesmente uma string. Isso é bom porque pode ser serializado corretamente de e para JSON. No entanto, também é ruim porque, normalmente, seria emitido na biblioteca de tempo de execução de tags como uma string, em vez de uma função executável. Embora você possa tentar executar o código no módulo de biblioteca do tipo de ação usando [`eval`](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/eval) ou um [construtor de função](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function), isso é altamente desencorajado devido a [políticas de segurança de conteúdo](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/CSP) que potencialmente bloqueiam a execução.
 
 Como solução alternativa para essa situação, o uso da transformação de função instrui a Platform a envolver o código do usuário em uma função executável quando ele é emitido na biblioteca de tempo de execução de tags. Para resolver nosso problema de exemplo, definimos a transformação na definição de tipo em `extension.json` da seguinte forma:
 

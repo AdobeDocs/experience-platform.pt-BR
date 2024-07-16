@@ -100,11 +100,11 @@ curl -X POST \
 
 | Propriedade | Descrição |
 | --- | --- |
-| `{TASK}` | Especifica a tarefa da execução. Defina este valor como `train` para treinamento, `score` para pontuação, ou `featurePipeline` para o pipeline de recursos. |
+| `{TASK}` | Especifica a tarefa da execução. Defina este valor como `train` para treinamento, `score` para pontuação ou `featurePipeline` para pipeline de recursos. |
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna uma carga contendo os detalhes da execução recém-criada, incluindo o treinamento padrão herdado ou parâmetros de pontuação, e a ID exclusiva da execução (`{RUN_ID}`).
+Uma resposta bem-sucedida retorna uma carga contendo os detalhes da execução recém-criada, incluindo os parâmetros de pontuação ou treinamento padrão herdados e a ID exclusiva da execução (`{RUN_ID}`).
 
 ```json
 {
@@ -133,7 +133,7 @@ Uma resposta bem-sucedida retorna uma carga contendo os detalhes da execução r
 
 ## Recuperar uma lista de experimentos
 
-Você pode recuperar uma lista de Experimentos pertencentes a uma MLInstance específica executando uma única solicitação de GET e fornecendo uma ID de MLInstance válida como parâmetro de consulta. Para obter uma lista de consultas disponíveis, consulte a seção do apêndice em [parâmetros de consulta para recuperação de ativos](./appendix.md#query).
+Você pode recuperar uma lista de Experimentos pertencentes a uma MLInstance específica executando uma única solicitação de GET e fornecendo uma ID de MLInstance válida como parâmetro de consulta. Para obter uma lista de consultas disponíveis, consulte a seção do apêndice sobre [parâmetros de consulta para recuperação de ativos](./appendix.md#query).
 
 
 **Formato da API**
@@ -259,7 +259,7 @@ GET /experiments/{EXPERIMENT_ID}/runs?{QUERY_PARAMETER_1}={VALUE_1}&{QUERY_PARAM
 | Parâmetro | Descrição |
 | --- | --- |
 | `{EXPERIMENT_ID}` | Uma ID de experimento válida. |
-| `{QUERY_PARAMETER}` | Um dos [parâmetros de consulta disponíveis](./appendix.md#query) usado para filtrar resultados. |
+| `{QUERY_PARAMETER}` | Um dos [parâmetros de consulta disponíveis](./appendix.md#query) usados para filtrar resultados. |
 | `{VALUE}` | O valor do parâmetro de consulta anterior. |
 
 **Solicitação**
@@ -277,7 +277,7 @@ curl -X GET \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna uma carga contendo uma lista de execuções e cada um de seus detalhes, incluindo a ID de execução do experimento (`{RUN_ID}`).
+Uma resposta bem-sucedida retorna uma carga contendo uma lista de execuções e cada um de seus detalhes, incluindo a ID de execução de experimento (`{RUN_ID}`).
 
 ```json
 {
@@ -307,7 +307,7 @@ Você pode atualizar um experimento existente substituindo as propriedades por m
 
 >[!TIP]
 >
->Para garantir o sucesso dessa solicitação PUT, recomenda-se que primeiro você execute uma solicitação GET para [recuperar o experimento por ID](#retrieve-specific). Em seguida, modifique e atualize o objeto JSON retornado e aplique a totalidade do objeto JSON modificado como a carga da solicitação PUT.
+>Para garantir o sucesso dessa solicitação PUT, sugere-se que primeiro você execute uma solicitação GET para [recuperar o Experimento por ID](#retrieve-specific). Em seguida, modifique e atualize o objeto JSON retornado e aplique a totalidade do objeto JSON modificado como a carga da solicitação PUT.
 
 O exemplo de chamada de API a seguir atualiza o nome de um Experimento tendo inicialmente essas propriedades:
 

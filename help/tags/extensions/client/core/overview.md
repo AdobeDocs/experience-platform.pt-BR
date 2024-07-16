@@ -4,8 +4,8 @@ description: Saiba mais sobre a extensão de tag principal na Adobe Experience P
 exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '5482'
-ht-degree: 83%
+source-wordcount: '5445'
+ht-degree: 82%
 
 ---
 
@@ -132,9 +132,9 @@ O evento será acionado se um elemento de dados especificado for alterado. É pr
 
 Um evento de chamada direta ignora a detecção de eventos e os sistemas de pesquisa. As regras de chamada direta são perfeitas para situações em que se deseja informar ao sistema exatamente o que está acontecendo. Além disso, são adequadas quando o sistema não consegue detectar um evento no DOM.
 
-Ao definir um evento de chamada direta, você deve especificar uma string que atuará como o identificador desse evento. Se um [acionar ação de chamada direta](#direct-call-action) quando o mesmo identificador é acionado, qualquer regra de evento de chamada direta que escute esse identificador é executada.
+Ao definir um evento de chamada direta, você deve especificar uma string que atuará como o identificador desse evento. Se uma [ação de chamada direta de gatilho](#direct-call-action) contendo o mesmo identificador for acionada, qualquer regra de evento de chamada direta que escute esse identificador será executada.
 
-![Captura de tela de um evento de chamada direta na interface da coleção de dados](../../../images/extensions/client/core/direct-call-event.png)
+![Captura de tela de um evento de chamada direta na interface da Coleção de dados](../../../images/extensions/client/core/direct-call-event.png)
 
 #### Element Exists
 
@@ -460,7 +460,7 @@ Especifique um ou mais padrões de hash que devem existir no URL.
 1. (Opcional) Ative o Regex se esta for uma expressão regular.
 1. Adicione outros padrões de hash.
 
-#### Path And Query String
+#### Caminho E Sequência De Consulta
 
 Especifique um ou mais caminhos que devem existir no URL. Inclui o caminho e a string de consulta.
 
@@ -632,11 +632,11 @@ setTimeout(function() {
 
 ### Acionar chamada direta {#direct-call-action}
 
-Essa ação aciona todas as regras que usam um [evento de chamada direta](#direct-call-event). Ao configurar a ação, você deve fornecer a cadeia de caracteres do identificador para o evento de chamada direta que deseja acionar. Como opção, você também pode transmitir dados para o evento de chamada direta por meio de um `detail` que pode conter um conjunto personalizado de pares de valores chave.
+Esta ação aciona todas as regras que usam um [evento de chamada direta](#direct-call-event) específico. Ao configurar a ação, você deve fornecer a cadeia de caracteres do identificador para o evento de chamada direta que deseja acionar. Como opção, você também pode enviar dados para o evento de chamada direta por meio de um objeto `detail`, que pode conter um conjunto personalizado de pares de valores chave.
 
-![Captura de tela de uma ação de chamada direta de acionador na interface da coleção de dados](../../../images/extensions/client/core/direct-call-action.png)
+![Captura de tela de uma ação de Acionar Chamada Direta na Interface da Coleção de Dados](../../../images/extensions/client/core/direct-call-action.png)
 
-A ação é mapeada diretamente para o [`track` método](../../../ui/client-side/satellite-object.md#track) no `satellite` que pode ser acessado pelo código do lado do cliente.
+A ação mapeia diretamente para o método [`track` ](../../../ui/client-side/satellite-object.md#track) no objeto `satellite`, que pode ser acessado pelo código do lado do cliente.
 
 ## Tipos de elementos de dados da extensão principal
 
@@ -646,7 +646,7 @@ As seções a seguir descrevem os tipos de elementos de dados disponíveis na ex
 
 ### Cookie
 
-Todo cookie de domínio disponível pode ser referido no campo campo de nome do cookie.
+Qualquer cookie de domínio disponível pode ser referenciado no campo de nome do cookie.
 
 #### Exemplo:
 
@@ -721,7 +721,7 @@ No exemplo abaixo, a marcação contém uma variável JavaScript chamada `Page_N
 
 Ao criar o elemento de dados, forneça apenas o caminho para essa variável.
 
-Se você utilizar um objeto coletor de dados como parte da camada de dados, utilize a notação de pontos no caminho para fazer referência ao objeto e propriedade que você deseja capturar no elemento de dados, como `_myData.pageName`ou `digitalData.pageName`e assim por diante.
+Se você utilizar um objeto coletor de dados como parte da camada de dados, utilize a notação de pontos no caminho para fazer referência ao objeto e propriedade que você deseja capturar no elemento de dados, como `_myData.pageName` ou `digitalData.pageName` e assim por diante.
 
 #### Exemplo:
 
@@ -859,21 +859,21 @@ Alguns casos de uso comuns incluem:
 
 ### Valor condicional
 
-Um invólucro para o [Value Comparison](#value-comparison-value-comparison) condição. Com base no resultado da comparação, retornará um dos dois valores disponíveis no formulário. Pode lidar com &quot;Se... Então... Outros...&quot; sem a necessidade de regras adicionais.
+Um wrapper para a condição [Comparação de Valores](#value-comparison-value-comparison). Com base no resultado da comparação, retornará um dos dois valores disponíveis no formulário. Pode lidar com &quot;Se... Então... Outros...&quot; sem a necessidade de regras adicionais.
 
 ### Ambiente de tempo de execução
 
 Permite selecionar uma das seguintes variáveis:
 
-* Estágio de ambiente - Devoluções `_satellite.environment.stage` para diferenciar entre ambientes de desenvolvimento/preparo/produção.
-* Data de build da biblioteca - Devoluções `turbine.buildInfo.buildDate` que contém o mesmo valor como `_satellite.buildInfo.buildDate`.
-* Nome da propriedade - Devoluções `_satellite.property.name` para obter o nome da propriedade do Launch.
-* ID da propriedade - Devoluções `_satellite.property.id` para obter a ID da propriedade do Launch
-* Nome da regra - Devoluções `event.$rule.name` contendo o nome da regra executada.
-* ID da regra - Devoluções `event.$rule.id` contendo a ID da regra executada.
-* Tipo de evento - Retornos `event.$type` que contém o tipo de evento que acionou a regra.
-* Carga de detalhes do evento - Devoluções `event.detail` contendo a carga de um Evento personalizado ou Regra de chamada direta.
-* Identificador de chamada direta - Retornos `event.identifier` contendo o identificador de uma Regra de chamada direta.
+* Estágio de ambiente - Retorna `_satellite.environment.stage` para diferenciar entre ambientes de desenvolvimento/preparo/produção.
+* Data de compilação da biblioteca - Retorna `turbine.buildInfo.buildDate`, que contém o mesmo valor, como `_satellite.buildInfo.buildDate`.
+* Nome da propriedade - Retorna `_satellite.property.name` para obter o nome da propriedade do Launch.
+* ID da propriedade - Retorna `_satellite.property.id` para obter a ID da propriedade do Launch
+* Nome da regra - Retorna `event.$rule.name` contendo o nome da regra executada.
+* ID da Regra - Retorna `event.$rule.id` contendo a ID da regra executada.
+* Tipo de evento - Retorna `event.$type` contendo o tipo de evento que acionou a regra.
+* Carga de detalhes do evento - Retorna `event.detail` contendo a carga de uma Regra de Chamada Direta ou de Evento Personalizado.
+* Identificador de chamada direta - Retorna `event.identifier` contendo o identificador de uma Regra de Chamada Direta.
 
 ### Atributos do dispositivo
 
@@ -882,9 +882,9 @@ Retorna um dos seguintes atributos de dispositivo do visitante:
 * Tamanho da janela do navegador
 * Tamanho da tela
 
-### Ferramentas JavaScript
+### Ferramentas do JavaScript
 
-É um invólucro para operações comuns de JavaScript. Ele recebe um elemento de dados como uma entrada. Ele retorna o resultado de uma das seguintes transformações do valor do elemento de dados:
+É um invólucro para operações comuns do JavaScript. Ele recebe um elemento de dados como uma entrada. Ele retorna o resultado de uma das seguintes transformações do valor do elemento de dados:
 
 * Manipulação básica de string (substituir, substring, correspondência de regex, primeiro e último índice, divisão, fatia)
 * Operações básicas de array (slice, join, pop, shift)

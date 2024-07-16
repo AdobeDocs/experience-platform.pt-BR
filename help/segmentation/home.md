@@ -12,15 +12,15 @@ ht-degree: 12%
 
 # Visão geral do [!DNL Segmentation Service]
 
-Adobe Experience Platform [!DNL Segmentation Service] O fornece uma interface de usuário e uma API RESTful que permite criar públicos-alvo por meio de definições de segmento ou outras fontes da [!DNL Real-Time Customer Profile] dados. Esses públicos-alvo são configurados e mantidos de forma centralizada na [!DNL Platform] e podem ser acessados a qualquer momento usando as soluções da Adobe.
+O Adobe Experience Platform [!DNL Segmentation Service] fornece uma interface de usuário e uma API RESTful que permite criar públicos-alvo por meio de definições de segmento ou outras fontes a partir dos dados do [!DNL Real-Time Customer Profile]. Esses públicos-alvo são configurados e mantidos de forma centralizada na [!DNL Platform] e podem ser acessados a qualquer momento usando as soluções da Adobe.
 
-Este documento fornece uma visão geral de [!DNL Segmentation Service] e o papel que desempenha no Adobe Experience Platform.
+Este documento fornece uma visão geral do [!DNL Segmentation Service] e sua função no Adobe Experience Platform.
 
 ## Introdução ao [!DNL Segmentation Service]
 
 Você deve entender os seguintes termos principais usados neste documento:
 
-- **Público**: uma coleção de pessoas que compartilham comportamentos e/ou características semelhantes. Essa coleção de pessoas pode ser gerada pelo Adobe Experience Platform usando definições de segmento (público-alvo gerado pela Platform) ou de fontes externas (público-alvo gerado externamente).
+- **Público-alvo**: uma coleção de pessoas que compartilham comportamentos e/ou características semelhantes. Essa coleção de pessoas pode ser gerada pelo Adobe Experience Platform usando definições de segmento (público-alvo gerado pela Platform) ou de fontes externas (público-alvo gerado externamente).
 - **Definição de segmento**: o conjunto de regras que a Adobe Experience Platform usa para descrever as principais características ou o comportamento de um público-alvo.
 - **Segmento**: o ato de separar perfis em públicos.
 
@@ -28,7 +28,7 @@ Você deve entender os seguintes termos principais usados neste documento:
 
 A segmentação é o processo de definir atributos ou comportamentos específicos compartilhados por um subconjunto de perfis da sua loja de Perfis para distinguir um grupo comercializável de pessoas da sua base de clientes. Por exemplo, em uma campanha de email chamada &quot;Você se esqueceu de comprar seu tênis?&quot;, você pode querer um público de todos os usuários que procuraram tênis de corrida nos últimos 30 dias, mas que não concluíram uma compra.
 
-Depois que um público-alvo é definido conceitualmente, ele é incorporado [!DNL Experience Platform]. Normalmente, os públicos-alvo são criados pelo profissional de marketing ou especialista em público-alvo, embora algumas organizações prefiram que sejam criados pelo departamento de marketing em colaboração com os analistas de dados. Ao examinar os dados enviados para o [!DNL Platform], o analista de dados pode criar o público-alvo de duas maneiras: criando uma definição de segmento ao selecionar quais campos e valores serão usados para criar as regras ou condições do público-alvo ou compondo um público-alvo usando a Composição de público-alvo.
+Depois que um público-alvo é definido conceitualmente, ele é incorporado no [!DNL Experience Platform]. Normalmente, os públicos-alvo são criados pelo profissional de marketing ou especialista em público-alvo, embora algumas organizações prefiram que sejam criados pelo departamento de marketing em colaboração com os analistas de dados. Ao revisar os dados que estão sendo enviados para [!DNL Platform], o analista de dados pode criar o público-alvo de duas maneiras: criando uma definição de segmento e selecionando quais campos e valores serão usados para criar as regras ou condições do público-alvo, ou compondo um público-alvo usando a Composição de público-alvo.
 
 ## Criar públicos-alvo
 
@@ -36,19 +36,19 @@ Os públicos-alvo podem ser criados de duas maneiras diferentes no Adobe Experie
 
 ### Composição de público-alvo
 
-Ao compor diretamente um público-alvo na Platform, você pode usar a Composição de público-alvo. Para saber como usar a Composição de público-alvo para criar um público-alvo, leia o [Guia de composição de público-alvo](./ui/audience-composition.md) para obter mais informações.
+Ao compor diretamente um público-alvo na Platform, você pode usar a Composição de público-alvo. Para saber como usar a Composição de público-alvo para criar um público-alvo, leia o [Guia de Composição de Público-alvo](./ui/audience-composition.md) para obter mais informações.
 
 ### Definições de segmento
 
-Seja criado usando a API ou o [!DNL Segment Builder], as definições de segmento são definidas usando [!DNL Profile Query Language] (PQL) É aqui que a definição do segmento conceitual é descrita na linguagem criada para recuperar perfis que atendem aos critérios. Para obter mais informações, consulte [Visão geral do PQL](./pql/overview.md).
+Quer sejam criadas usando a API ou o [!DNL Segment Builder], as definições de segmento são finalmente definidas usando o [!DNL Profile Query Language] (PQL). É aqui que a definição do segmento conceitual é descrita na linguagem criada para recuperar perfis que atendem aos critérios. Para obter mais informações, consulte a [visão geral do PQL](./pql/overview.md).
 
-Para saber como criar e usar segmentos na [!DNL Segment Builder] (a implementação da interface do usuário do [!DNL Segmentation Service]), consulte a [Guia do Construtor de segmentos](./ui/segment-builder.md).
+Para saber como criar e usar segmentos no [!DNL Segment Builder] (a implementação da interface do usuário do [!DNL Segmentation Service]), consulte o [guia do Construtor de segmentos](./ui/segment-builder.md).
 
 Para obter informações sobre como criar definições de segmento usando a API, consulte o tutorial sobre [criação de definições de segmento usando a API](./tutorials/create-a-segment.md).
 
 >[!NOTE]
 >
->Caso um esquema seja estendido, todos os uploads futuros devem atualizar os campos recém-adicionados de acordo. Para obter mais informações sobre personalização [!DNL Experience Data Model] (XDM), visite o [Tutorial do Editor de esquemas](../xdm/tutorials/create-schema-ui.md).
+>Caso um esquema seja estendido, todos os uploads futuros devem atualizar os campos recém-adicionados de acordo. Para obter mais informações sobre a personalização do [!DNL Experience Data Model] (XDM), visite o [tutorial do Editor de esquemas](../xdm/tutorials/create-schema-ui.md).
 >
 >Além disso, se um valor de expiração de Evento de experiência estiver ativado no conjunto de dados, isso pode afetar a associação da definição de segmento criada. Leia o guia em [Expirações do evento de experiência](../profile/event-expirations.md) para obter mais informações sobre como esse recurso pode afetar a segmentação.
 
@@ -69,9 +69,9 @@ Atualmente, a Platform aceita três métodos de avaliação de públicos-alvo: s
 
 ### Segmentação de transmissão {#streaming}
 
-A segmentação por transmissão é um processo contínuo de seleção de dados que atualiza os públicos-alvo em resposta à atividade do usuário. Depois que um público-alvo é criado e salvo, a definição do segmento é aplicada aos dados recebidos para [!DNL Real-Time Customer Profile]. As adições e remoções para o público-alvo são processadas regularmente, garantindo que o público-alvo permaneça relevante.
+A segmentação por transmissão é um processo contínuo de seleção de dados que atualiza os públicos-alvo em resposta à atividade do usuário. Depois que um público-alvo é criado e salvo, a definição do segmento é aplicada contra os dados recebidos para [!DNL Real-Time Customer Profile]. As adições e remoções para o público-alvo são processadas regularmente, garantindo que o público-alvo permaneça relevante.
 
-Para saber mais sobre a segmentação por transmissão, leia o [documentação de segmentação por transmissão](./api/streaming-segmentation.md).
+Para saber mais sobre a segmentação por transmissão, leia a [documentação sobre segmentação por transmissão](./api/streaming-segmentation.md).
 
 ### Segmentação em lote {#batch}
 
@@ -82,7 +82,7 @@ Para saber mais sobre a segmentação por transmissão, leia o [documentação d
 
 Como alternativa a um processo de seleção de dados contínuo, a segmentação em lote move todos os dados do perfil de uma só vez por meio das definições de segmento para produzir públicos correspondentes. Depois de criado, o público-alvo resultante é salvo e armazenado para que você possa exportá-lo para uso.
 
-Os públicos-alvo em lote são avaliados automaticamente a cada 24 horas. Se quiser avaliar um público-alvo em lote sob demanda, você pode usar um trabalho de segmento. Para saber mais sobre tarefas do segmento, leia o [documentação de tarefas do segmento](./api/segment-jobs.md).
+Os públicos-alvo em lote são avaliados automaticamente a cada 24 horas. Se quiser avaliar um público-alvo em lote sob demanda, você pode usar um trabalho de segmento. Para saber mais sobre trabalhos de segmento, leia a [documentação de trabalhos de segmento](./api/segment-jobs.md).
 
 ### Segmentação de borda {#edge}
 
@@ -94,21 +94,21 @@ Os públicos-alvo em lote são avaliados automaticamente a cada 24 horas. Se qui
 
 A segmentação do Edge é a capacidade de avaliar segmentos na Platform instantaneamente [no Edge Network](../web-sdk/home.md), permitindo casos de uso de personalização de mesma página e próxima página.
 
-Para saber mais sobre a segmentação de borda, leia as seções [Documentação da API](./api/edge-segmentation.md) ou o [Documentação da interface](./ui/edge-segmentation.md).
+Para saber mais sobre a segmentação de borda, leia a [documentação da API](./api/edge-segmentation.md) ou a [documentação da interface](./ui/edge-segmentation.md).
 
 ## Acessar resultados de segmentação
 
-Para saber como acessar um público-alvo exportado, consulte a [tutorial de avaliação da definição de segmento](./tutorials/evaluate-a-segment.md).
+Para saber como acessar um público exportado, consulte o [tutorial de avaliação de definição de segmento](./tutorials/evaluate-a-segment.md).
 
 ## Metadados de definição de segmento
 
 Os metadados de definição de segmento facilitam a indexação caso qualquer um dos públicos-alvo seja reutilizado e/ou combinado.
 
-Compor uma definição de segmento (por meio da API ou [!DNL Segment Builder]) exige que você defina um nome e uma política de mesclagem.
+A composição de uma definição de segmento (por meio da API ou do [!DNL Segment Builder]) requer a definição de um nome e uma política de mesclagem.
 
 ### Nomes de definição de segmento
 
-Ao criar uma nova definição de segmento, você deve fornecer um nome. O nome da definição de segmento é usado para identificar uma definição de segmento específica entre a coleção criada pelo [!DNL Segmentation Service]. Portanto, os nomes de definição de segmento devem ser descritivos, concisos e exclusivos.
+Ao criar uma nova definição de segmento, você deve fornecer um nome. O nome da definição de segmento é usado para identificar uma definição de segmento específica entre a coleção criada por [!DNL Segmentation Service]. Portanto, os nomes de definição de segmento devem ser descritivos, concisos e exclusivos.
 
 >[!NOTE]
 >
@@ -116,9 +116,9 @@ Ao criar uma nova definição de segmento, você deve fornecer um nome. O nome d
 
 ### Políticas de mesclagem
 
-As políticas de mesclagem são regras usadas pelo [!DNL Profile] para determinar como os dados serão priorizados e combinados em uma visualização unificada em determinadas condições.
+As políticas de mesclagem são regras usadas por [!DNL Profile] para determinar como os dados serão priorizados e combinados em uma exibição unificada em determinadas condições.
 
-Se uma política de mesclagem não estiver definida, o padrão [!DNL Platform] a política de mesclagem é usada. Se você preferir usar uma política de mesclagem específica para sua organização, poderá criar a sua própria e marcá-la como o padrão da organização.
+Se uma política de mesclagem não estiver definida, a política de mesclagem padrão [!DNL Platform] será usada. Se você preferir usar uma política de mesclagem específica para sua organização, poderá criar a sua própria e marcá-la como o padrão da organização.
 
 Mais informações sobre políticas de mesclagem podem ser encontradas no [guia de políticas de mesclagem](../profile/api/merge-policies.md).
 
@@ -128,11 +128,11 @@ Mais informações sobre políticas de mesclagem podem ser encontradas no [guia 
 
 ### Outros metadados de definição de segmento
 
-Além da política de nome e mesclagem, [!DNL Segment Builder] O oferece um campo de metadados de descrição adicional, onde você pode resumir a finalidade da definição de segmento.
+Além da política de nome e mesclagem, o [!DNL Segment Builder] oferece um campo de metadados de descrição adicional, onde você pode resumir a finalidade da definição do segmento.
 
 ## Recursos avançados de segmentação
 
-As definições de segmento podem ser configuradas para gerar continuamente um público-alvo de forma contínua, combinando [assimilação de dados por transmissão](../ingestion/streaming-ingestion/overview.md) com qualquer um dos seguintes recursos avançados de segmentação:
+As definições de segmento podem ser configuradas para gerar continuamente um público-alvo de forma contínua, combinando a [assimilação de dados por transmissão](../ingestion/streaming-ingestion/overview.md) com qualquer um dos seguintes recursos avançados de segmentação:
 - [Segmentação sequencial](#sequential)
 - [Segmentação dinâmica](#dynamic)
 - [Segmentação de várias entidades](#multi-entity)
@@ -141,7 +141,7 @@ Esses recursos avançados são discutidos com mais detalhes nas seções a segui
 
 ### Segmentação sequencial {#sequential}
 
-Uma jornada de usuário padrão é de natureza sequencial. O Adobe Experience Platform permite definir uma série ordenada de públicos para refletir essa jornada, capturando assim as sequências de eventos que ocorrem. Organize os eventos na ordem desejada usando a linha do tempo do evento visual na [!DNL Segment Builder].
+Uma jornada de usuário padrão é de natureza sequencial. O Adobe Experience Platform permite definir uma série ordenada de públicos para refletir essa jornada, capturando assim as sequências de eventos que ocorrem. Você pode organizar os eventos na ordem desejada usando a linha do tempo do evento visual no [!DNL Segment Builder].
 
 Um exemplo de jornada de cliente que exigiria segmentação sequencial seria exibição do produto > adição do produto > check-out > Sem compra.
 
@@ -161,16 +161,16 @@ Ao atribuir uma variável ao atributo de estado de compra, a definição de segm
 
 ### Segmentação de várias entidades {#multi-entity}
 
-Com o recurso avançado de segmentação de várias entidades, você pode estender [!DNL Real-Time Customer Profile] dados com dados adicionais com base em produtos, lojas ou outras entidades não pessoais, também conhecidas como entidades de &quot;dimensão&quot;. Como resultado, [!DNL Segmentation Service] podem acessar campos adicionais durante a definição do segmento como se fossem nativos da variável [!DNL Profile] armazenamento de dados. A segmentação de várias entidades oferece flexibilidade ao identificar públicos com base em dados relevantes para suas necessidades comerciais exclusivas. Para obter mais informações, incluindo casos de uso e fluxos de trabalho, consulte [guia de segmentação de várias entidades](multi-entity-segmentation.md).
+Com o recurso avançado de segmentação de várias entidades, você pode estender dados do [!DNL Real-Time Customer Profile] com dados adicionais com base em produtos, lojas ou outras entidades que não sejam de pessoas, também conhecidas como entidades de &quot;dimensão&quot;. Como resultado, [!DNL Segmentation Service] pode acessar campos adicionais durante a definição do segmento como se fossem nativos do armazenamento de dados [!DNL Profile]. A segmentação de várias entidades oferece flexibilidade ao identificar públicos com base em dados relevantes para suas necessidades comerciais exclusivas. Para obter mais informações, incluindo casos de uso e fluxos de trabalho, consulte o [guia de segmentação de várias entidades](multi-entity-segmentation.md).
 
 ## [!DNL Segmentation Service] tipos de dados
 
-[!DNL Segmentation Service] O suporta uma variedade de tipos de dados primitivos e complexos. Informações detalhadas, incluindo uma lista dos tipos de dados compatíveis, podem ser encontradas no [guia de tipos de dados suportados](./data-types.md).
+[!DNL Segmentation Service] dá suporte a uma variedade de tipos de dados primitivos e complexos. Informações detalhadas, incluindo uma lista de tipos de dados com suporte, podem ser encontradas no [guia de tipos de dados com suporte](./data-types.md).
 
 ## Próximas etapas
 
-[!DNL Segmentation Service] O fornece um fluxo de trabalho consolidado para criar públicos-alvo a partir do [!DNL Real-Time Customer Profile] dados.
+[!DNL Segmentation Service] fornece um fluxo de trabalho consolidado para compilar audiências a partir de dados [!DNL Real-Time Customer Profile].
 
 Para obter mais informações sobre como usar a interface do usuário do Serviço de segmentação, leia a [Visão geral da interface do usuário do serviço de segmentação](./ui/overview.md).
 
-Para saber como compor públicos-alvo na interface do usuário, leia o [Guia de composição de público-alvo](./ui/audience-composition.md). Para saber como definir definições de segmentos na interface, consulte [Guia do Construtor de segmentos](./ui/overview.md). Para obter informações sobre como criar definições de segmento usando a API, consulte o tutorial sobre [criação de definições de segmento usando a API](./tutorials/create-a-segment.md).
+Para saber como compor públicos-alvo na interface do usuário, leia o [Guia de composição de público-alvo](./ui/audience-composition.md). Para saber como definir definições de segmentos na interface, consulte o [guia do Construtor de segmentos](./ui/overview.md). Para obter informações sobre como criar definições de segmento usando a API, consulte o tutorial sobre [criação de definições de segmento usando a API](./tutorials/create-a-segment.md).

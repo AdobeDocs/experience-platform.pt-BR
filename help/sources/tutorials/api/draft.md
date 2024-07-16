@@ -4,29 +4,29 @@ description: Saiba como criar rascunhos de sua conexão base, conexão de origem
 exl-id: aad6a302-1905-4a23-bc3d-39e76c9a22da
 source-git-commit: ebd650355a5a4c2a949739384bfd5c8df9577075
 workflow-type: tm+mt
-source-wordcount: '1192'
+source-wordcount: '1188'
 ht-degree: 5%
 
 ---
 
-# Criar rascunhos do seu [!DNL Flow Service] entidades que usam a API
+# Criar rascunhos de entidades [!DNL Flow Service] usando a API
 
-Você pode usar o `mode=draft` parâmetro de consulta no [[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>) para definir o [!DNL Flow Service] entidades como suas conexões básicas, conexões de origem, conexões de destino e fluxos de dados para um estado de rascunho.
+Você pode usar o parâmetro de consulta `mode=draft` na [[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>) para definir suas entidades [!DNL Flow Service], como conexões base, conexões de origem, conexões de destino e fluxos de dados, para um estado de rascunho.
 
-Os rascunhos podem ser atualizados posteriormente com novas informações e publicados quando estiverem prontos, usando o `op=publish` parâmetro de consulta.
+Os rascunhos podem ser atualizados posteriormente com novas informações e publicados quando prontos, usando o parâmetro de consulta `op=publish`.
 
-Este tutorial fornece etapas sobre como definir seus [!DNL Flow Service] entidades a um estado de rascunho e permitem pausar e salvar seus workflows para conclusão posteriormente.
+Este tutorial fornece etapas sobre como definir entidades do [!DNL Flow Service] para um estado de rascunho e permite pausar e salvar seus fluxos de trabalho para conclusão posterior.
 
 ## Introdução
 
 Este tutorial requer que você tenha uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
-* [Origens](../../home.md): o Experience Platform permite que os dados sejam assimilados de várias fontes e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma.
+* [Fontes](../../home.md): o Experience Platform permite que os dados sejam assimilados de várias fontes e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma.
 * [Sandboxes](../../../sandboxes/home.md): o Experience Platform fornece sandboxes virtuais que particionam uma única instância da Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
 ### Uso de APIs da plataforma
 
-Para obter informações sobre como fazer chamadas para APIs da Platform com êxito, consulte o manual em [introdução às APIs da Platform](../../../landing/api-guide.md).
+Para obter informações sobre como fazer chamadas para APIs da Platform com êxito, consulte o manual sobre [introdução às APIs da Platform](../../../landing/api-guide.md).
 
 ### Verificar suporte para modo de rascunho
 
@@ -36,7 +36,8 @@ Você também deve verificar se a ID de especificação da conexão e a ID de es
 
 >[!TAB Pesquisar detalhes de especificação da conexão]
 
-+++Solicitação A solicitação a seguir recupera as informações de especificação da conexão para [!DNL Azure File Storage]:
++++Solicitação
+A solicitação a seguir recupera as informações de especificação da conexão para [!DNL Azure File Storage]:
 
 ```shell
 curl -X GET \
@@ -52,7 +53,7 @@ curl -X GET \
 
 +++Resposta
 
-Uma resposta bem-sucedida retorna as informações de especificação da conexão para a sua origem. Para verificar se o modo de rascunho é compatível com sua origem, verifique se `items[0].attributes.isDraftModeSupported` tem um valor de `true`.
+Uma resposta bem-sucedida retorna as informações de especificação da conexão para a sua origem. Para verificar se há suporte para o modo de rascunho na sua origem, verifique se `items[0].attributes.isDraftModeSupported` tem um valor de `true`.
 
 ```json {line-numbers="true" start-line="1" highlight="252"}
 {
@@ -340,9 +341,10 @@ Uma resposta bem-sucedida retorna as informações de especificação da conexã
 
 +++
 
->[!TAB Pesquisar detalhes de especificação do fluxo]
+>[!TAB Pesquisar detalhes de especificação de fluxo]
 
-+++Solicitação A solicitação a seguir recupera os detalhes da especificação do fluxo para uma fonte de armazenamento na nuvem:
++++Solicitação
+A solicitação a seguir recupera os detalhes da especificação do fluxo para uma fonte de armazenamento na nuvem:
 
 ```shell
 curl -X GET \
@@ -358,7 +360,7 @@ curl -X GET \
 
 +++Resposta
 
-Uma resposta bem-sucedida retorna as informações de especificação de fluxo da origem. Para verificar se o modo de rascunho é compatível com sua origem, verifique se `items[0].attributes.isDraftModeSupported` tem um valor de `true`.
+Uma resposta bem-sucedida retorna as informações de especificação de fluxo da origem. Para verificar se há suporte para o modo de rascunho na sua origem, verifique se `items[0].attributes.isDraftModeSupported` tem um valor de `true`.
 
 ```json {line-numbers="true" start-line="1" highlight="167"}
 {
@@ -569,7 +571,7 @@ Uma resposta bem-sucedida retorna as informações de especificação de fluxo d
 
 ## Criar uma conexão de base de rascunho {#create-a-draft-base-connection}
 
-Para criar uma conexão base de rascunho, faça uma solicitação POST ao `/connections` endpoint do [!DNL Flow Service] API e fornecer `mode=draft` como parâmetro de consulta.
+Para criar uma conexão base de rascunho, faça uma solicitação POST para o ponto de extremidade `/connections` da API [!DNL Flow Service] e forneça `mode=draft` como um parâmetro de consulta.
 
 **Formato da API**
 
@@ -579,11 +581,11 @@ POST /connections?mode=draft
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `mode` | Um parâmetro de consulta fornecido pelo usuário que decide o estado da conexão base. Para definir uma conexão base como rascunho, defina `mode` para `draft`. |
+| `mode` | Um parâmetro de consulta fornecido pelo usuário que decide o estado da conexão base. Para definir uma conexão base como rascunho, defina `mode` como `draft`. |
 
 **Solicitação**
 
-A solicitação a seguir cria uma conexão básica de rascunho para o [!DNL Azure File Storage] origem:
+A solicitação a seguir cria uma conexão base de rascunho para a origem [!DNL Azure File Storage]:
 
 ```shell
 curl -X POST \
@@ -622,9 +624,9 @@ Uma resposta bem-sucedida retorna a ID de conexão básica e a tag correspondent
 }
 ```
 
-## Publicar sua conexão de base de rascunho {#publish-your-draft-base-connection}
+## Publish sua conexão de base de rascunho {#publish-your-draft-base-connection}
 
-Quando o rascunho estiver pronto para ser publicado, faça uma solicitação POST ao `/connections` e forneça a ID da conexão de base de rascunho que você deseja publicar, bem como uma operação de ação para publicação.
+Quando o rascunho estiver pronto para ser publicado, faça uma solicitação POST ao ponto de extremidade `/connections` e forneça a ID da conexão base de rascunho que você deseja publicar, bem como uma operação de ação para publicação.
 
 **Formato da API**
 
@@ -634,11 +636,11 @@ POST /connections/{BASE_CONNECTION_ID}/action?op=publish
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `op` | Uma operação de ação que atualiza o estado da conexão base consultada. Para publicar uma conexão de base de rascunho, defina `op` para `publish`. |
+| `op` | Uma operação de ação que atualiza o estado da conexão base consultada. Para publicar uma conexão de base de rascunho, defina `op` como `publish`. |
 
 **Solicitação**
 
-A solicitação a seguir publica o rascunho de conexão base para [!DNL Azure File Storage] criado em uma etapa anterior.
+A solicitação a seguir publica a conexão base de rascunho para [!DNL Azure File Storage] que foi criada em uma etapa anterior.
 
 ```shell
 curl -X POST \
@@ -663,7 +665,7 @@ Uma resposta bem-sucedida retorna a ID e a tag correspondente da conexão base p
 
 ## Criar uma conexão de origem de rascunho {#create-a-draft-source-connection}
 
-Para criar uma conexão de origem de rascunho, faça uma solicitação POST ao `/sourceConnections` endpoint do [!DNL Flow Service] API e fornecer `mode=draft` como parâmetro de consulta.
+Para criar uma conexão de origem de rascunho, faça uma solicitação POST para o ponto de extremidade `/sourceConnections` da API [!DNL Flow Service] e forneça `mode=draft` como um parâmetro de consulta.
 
 **Formato da API**
 
@@ -673,7 +675,7 @@ POST /sourceConnections?mode=draft
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `mode` | Um parâmetro de consulta fornecido pelo usuário que decide o estado da conexão de origem. Para definir uma conexão de origem como rascunho, defina `mode` para `draft`. |
+| `mode` | Um parâmetro de consulta fornecido pelo usuário que decide o estado da conexão de origem. Para definir uma conexão de origem como rascunho, defina `mode` como `draft`. |
 
 **Solicitação**
 
@@ -714,13 +716,13 @@ Uma resposta bem-sucedida retorna a ID da conexão de origem e a tag corresponde
 }
 ```
 
-## Publicar sua conexão de origem de rascunho {#publish-your-draft-source-connection}
+## Publish sua conexão de origem de rascunho {#publish-your-draft-source-connection}
 
 >[!NOTE]
 >
 >Não é possível publicar uma conexão de origem se a conexão base associada ainda estiver em estado de rascunho. Certifique-se de que a conexão base seja publicada primeiro, antes de publicar sua conexão de origem.
 
-Quando o rascunho estiver pronto para ser publicado, faça uma solicitação POST ao `/sourceConnections` e forneça a ID da conexão de origem de rascunho que você deseja publicar, bem como uma operação de ação para publicação.
+Quando o rascunho estiver pronto para ser publicado, faça uma solicitação POST ao ponto de extremidade `/sourceConnections` e forneça a ID da conexão de origem de rascunho que você deseja publicar, bem como uma operação de ação para publicação.
 
 **Formato da API**
 
@@ -730,11 +732,11 @@ POST /sourceConnections/{SOURCE_CONNECTION_ID}/action?op=publish
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `op` | Uma operação de ação que atualiza o estado da conexão de origem consultada. Para publicar uma conexão de origem de rascunho, defina `op` para `publish`. |
+| `op` | Uma operação de ação que atualiza o estado da conexão de origem consultada. Para publicar uma conexão de origem de rascunho, defina `op` como `publish`. |
 
 **Solicitação**
 
-A solicitação a seguir publica o rascunho de conexão de origem para [!DNL Azure File Storage] criado em uma etapa anterior.
+A solicitação a seguir publica a conexão de origem de rascunho para [!DNL Azure File Storage] que foi criada em uma etapa anterior.
 
 ```shell
 curl -X POST \
@@ -759,7 +761,7 @@ Uma resposta bem-sucedida retorna a ID e a tag correspondente da conexão de ori
 
 ## Criar uma conexão de destino de rascunho {#create-a-draft-target-connection}
 
-Para criar uma conexão de destino de rascunho, faça uma solicitação POST ao `/targetConnections` endpoint do [!DNL Flow Service] API e fornecer `mode=draft` como parâmetro de consulta.
+Para criar uma conexão de destino de rascunho, faça uma solicitação POST para o ponto de extremidade `/targetConnections` da API [!DNL Flow Service] e forneça `mode=draft` como um parâmetro de consulta.
 
 **Formato da API**
 
@@ -769,7 +771,7 @@ POST /targetConnections?mode=draft
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `mode` | Um parâmetro de consulta fornecido pelo usuário que decide o estado da conexão de destino. Para definir uma conexão de destino como rascunho, defina `mode` para `draft`. |
+| `mode` | Um parâmetro de consulta fornecido pelo usuário que decide o estado da conexão de destino. Para definir uma conexão como rascunho, defina `mode` como `draft`. |
 
 **Solicitação**
 
@@ -811,13 +813,13 @@ Uma resposta bem-sucedida retorna a ID de conexão do público-alvo e a tag corr
 }
 ```
 
-## Publicar sua conexão de rascunho de destino {#publish-your-draft-target-connection}
+## Publish sua conexão de destino de rascunho {#publish-your-draft-target-connection}
 
 >[!NOTE]
 >
 >Não é possível publicar uma conexão de destino se a conexão base associada ainda estiver em estado de rascunho. Certifique-se de que sua conexão base seja publicada primeiro, antes de publicar sua conexão de destino.
 
-Quando o rascunho estiver pronto para ser publicado, faça uma solicitação POST ao `/targetConnections` e forneça a ID da conexão de destino de rascunho que você deseja publicar, bem como uma operação de ação para publicação.
+Quando o rascunho estiver pronto para ser publicado, faça uma solicitação POST ao ponto de extremidade `/targetConnections` e forneça a ID da conexão de destino de rascunho que você deseja publicar, bem como uma operação de ação para publicação.
 
 **Formato da API**
 
@@ -827,11 +829,11 @@ POST /targetConnections/{TARGET_CONNECTION_ID}/action?op=publish
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `op` | Uma operação de ação que atualiza o estado da conexão de destino consultada. Para publicar uma conexão de destino de rascunho, defina `op` para `publish`. |
+| `op` | Uma operação de ação que atualiza o estado da conexão de destino consultada. Para publicar uma conexão de destino de rascunho, defina `op` como `publish`. |
 
 **Solicitação**
 
-A solicitação a seguir publica o rascunho de conexão de destino para [!DNL Azure File Storage] criado em uma etapa anterior.
+A solicitação a seguir publica a conexão de destino de rascunho para [!DNL Azure File Storage] que foi criada em uma etapa anterior.
 
 ```shell
 curl -X POST \
@@ -856,7 +858,7 @@ Uma resposta bem-sucedida retorna a ID e a tag correspondente da conexão de des
 
 ## Criar um fluxo de dados de rascunho {#create-a-draft-dataflow}
 
-Para definir um fluxo de dados como rascunho, faça uma solicitação POST à `/flows` ao adicionar o `mode=draft` como parâmetro de consulta. Isso permite criar um fluxo de dados e salvá-lo como rascunho.
+Para definir um fluxo de dados como rascunho, faça uma solicitação POST para o ponto de extremidade `/flows` ao adicionar `mode=draft` como parâmetro de consulta. Isso permite criar um fluxo de dados e salvá-lo como rascunho.
 
 **Formato da API**
 
@@ -866,7 +868,7 @@ POST /flows?mode=draft
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `mode` | Um parâmetro de consulta fornecido pelo usuário que decide o estado do fluxo de dados. Para definir um fluxo de dados como rascunho, defina `mode` para `draft`. |
+| `mode` | Um parâmetro de consulta fornecido pelo usuário que decide o estado do fluxo de dados. Para definir um fluxo de dados como rascunho, defina `mode` como `draft`. |
 
 **Solicitação**
 
@@ -906,13 +908,13 @@ Uma resposta bem-sucedida retorna a ID do fluxo e a tag correspondente para o fl
 }
 ```
 
-## Publicar seu fluxo de dados de rascunho {#publish-your-draft-dataflow}
+## Publish seu fluxo de dados de rascunho {#publish-your-draft-dataflow}
 
 >[!NOTE]
 >
 >Não é possível publicar um fluxo de dados se as conexões de origem e de destino associadas ainda estiverem em estado de rascunho. Verifique se suas conexões de origem e de destino foram publicadas primeiro, antes de publicar seu fluxo de dados.
 
-Quando o rascunho estiver pronto para ser publicado, faça uma solicitação POST ao `/flows` ao fornecer a ID do fluxo de dados de rascunho que você deseja publicar, bem como uma operação de ação para publicação.
+Quando o rascunho estiver pronto para ser publicado, faça uma solicitação POST para o ponto de extremidade `/flows` enquanto fornece a ID do fluxo de dados de rascunho que você deseja publicar, bem como uma operação de ação para publicação.
 
 **Formato da API**
 
@@ -922,7 +924,7 @@ POST /flows/{FLOW_ID}/action?op=publish
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `op` | Uma operação de ação que atualiza o estado do fluxo de dados consultado. Para publicar um fluxo de dados de rascunho, defina `op` para `publish`. |
+| `op` | Uma operação de ação que atualiza o estado do fluxo de dados consultado. Para publicar um fluxo de dados de rascunho, defina `op` como `publish`. |
 
 **Solicitação**
 
@@ -940,7 +942,7 @@ curl -X POST \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna a ID e a variável `etag` do seu fluxo de dados.
+Uma resposta bem-sucedida retorna a ID e o `etag` correspondente do fluxo de dados.
 
 ```json
 {
@@ -951,4 +953,4 @@ Uma resposta bem-sucedida retorna a ID e a variável `etag` do seu fluxo de dado
 
 ## Próximas etapas
 
-Seguindo este tutorial, você aprendeu a criar rascunhos de seus [!DNL Flow Service] entidades adjudicantes, bem como a publicação desses rascunhos. Para obter mais informações sobre origens, leia a [visão geral de origens](../../home.md).
+Seguindo este tutorial, você aprendeu a criar rascunhos das entidades [!DNL Flow Service], bem como a publicá-los. Para obter mais informações sobre origens, leia a [visão geral de origens](../../home.md).

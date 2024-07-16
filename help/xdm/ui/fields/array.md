@@ -7,7 +7,7 @@ exl-id: 9ac55554-c29b-40b2-9987-c8c17cc2c00c
 source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
 source-wordcount: '362'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -15,9 +15,9 @@ ht-degree: 1%
 
 Ao definir um campo Experience Data Model (XDM) na interface do usuário do Adobe Experience Platform, você pode designar esse campo como uma matriz.
 
-O conteúdo da matriz depende do [!UICONTROL Tipo] selecionado para esse campo. Por exemplo, se a propriedade do campo [!UICONTROL Tipo] está definido como &quot;[!UICONTROL String]&quot;, definir esse campo como uma matriz designará o campo como uma matriz de cadeias de caracteres. Se o campo for [!UICONTROL Tipo] está definido como um tipo de dados de vários campos, como &quot;[!UICONTROL Endereço postal]&quot;, então se tornaria uma matriz de objetos de endereço postal que estão em conformidade com o tipo de dados.
+O conteúdo da matriz depende do [!UICONTROL Tipo] selecionado para esse campo. Por exemplo, se o [!UICONTROL Type] de um campo estiver definido como &quot;[!UICONTROL String]&quot;, definir esse campo como uma matriz designará o campo como uma matriz de cadeias de caracteres. Se o [!UICONTROL Tipo] do campo estiver definido como um tipo de dados de vários campos, como &quot;[!UICONTROL Endereço postal]&quot;, ele se tornará uma matriz de objetos de endereço postal que estão em conformidade com o tipo de dados.
 
-Depois de ter [definiu um novo campo na interface](./overview.md#define), você pode defini-lo como um campo de matriz selecionando o **[!UICONTROL Matriz]** no painel direito.
+Depois que você tiver [definido um novo campo na interface](./overview.md#define), poderá defini-lo como um campo de matriz marcando a caixa de seleção **[!UICONTROL Matriz]** no painel direito.
 
 ![](../../images/ui/fields/special/array.png)
 
@@ -29,7 +29,7 @@ Os controles de configuração adicionais para arrays são os seguintes:
 | --- | --- |
 | [!UICONTROL Comprimento mínimo] | O número mínimo de itens que a matriz deve conter para que a assimilação seja bem-sucedida. |
 | [!UICONTROL Tamanho máximo] | O número máximo de itens que a matriz deve conter para que a assimilação seja bem-sucedida. |
-| [!UICONTROL Somente itens exclusivos] | Se definida como &quot;[!UICONTROL True]&quot;, cada item no array deve ser exclusivo para que a assimilação seja bem-sucedida. |
+| [!UICONTROL Somente itens exclusivos] | Se definido como &quot;[!UICONTROL True]&quot;, cada item na matriz deve ser exclusivo para que a assimilação seja bem-sucedida. |
 
 {style="table-layout:auto"}
 
@@ -43,4 +43,4 @@ A tela é atualizada para refletir as alterações feitas no campo. Observe que 
 
 ## Próximas etapas
 
-Este guia abordou como definir um campo de matriz na interface do usuário. Consulte a visão geral em [definição de campos na interface](./overview.md#special) para saber como definir outros tipos de campo XDM na variável [!DNL Schema Editor].
+Este guia abordou como definir um campo de matriz na interface do usuário. Consulte a visão geral em [definindo campos na interface](./overview.md#special) para saber como definir outros tipos de campos XDM no [!DNL Schema Editor].

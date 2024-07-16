@@ -7,24 +7,24 @@ description: Este documento descreve detalhes importantes a serem conhecidos ao 
 exl-id: a7076c31-8f7c-455e-9083-cbbb029c93bb
 source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
 workflow-type: tm+mt
-source-wordcount: '1067'
-ht-degree: 3%
+source-wordcount: '1088'
+ht-degree: 2%
 
 ---
 
-# Orientação geral para execução de consulta no [!DNL Query Service]
+# Orientação geral para execução de consulta em [!DNL Query Service]
 
-Este documento detalha detalhes importantes a serem conhecidos ao escrever consultas no Adobe Experience Platform [!DNL Query Service].
+Este documento detalha detalhes importantes a serem conhecidos ao gravar consultas no Adobe Experience Platform [!DNL Query Service].
 
-Para obter informações detalhadas sobre a sintaxe SQL usada em [!DNL Query Service], leia o [Documentação da sintaxe SQL](../sql/syntax.md).
+Para obter informações detalhadas sobre a sintaxe SQL usada em [!DNL Query Service], leia a [documentação sobre sintaxe SQL](../sql/syntax.md).
 
 ## Modelos de execução de consulta
 
-Adobe Experience Platform [!DNL Query Service] O tem dois modelos de execução de consulta: interativo e não interativo. A execução interativa é usada para desenvolvimento de consultas e geração de relatórios em ferramentas de business intelligence, enquanto a não interativa é usada para trabalhos maiores e consultas operacionais como parte de um fluxo de trabalho de processamento de dados.
+O Adobe Experience Platform [!DNL Query Service] tem dois modelos de execução de consulta: interativa e não interativa. A execução interativa é usada para desenvolvimento de consultas e geração de relatórios em ferramentas de business intelligence, enquanto a não interativa é usada para trabalhos maiores e consultas operacionais como parte de um fluxo de trabalho de processamento de dados.
 
 ### Execução de consulta interativa
 
-As consultas podem ser executadas interativamente enviando-as por meio do [!DNL Query Service] Interface do usuário ou [por meio de um cliente conectado](../clients/overview.md). Ao executar [!DNL Query Service] por meio de um cliente conectado, uma sessão ativa é executada entre o cliente e [!DNL Query Service] até que a consulta enviada retorne ou atinja o tempo limite.
+As consultas podem ser executadas interativamente enviando-as por meio da interface do usuário [!DNL Query Service] ou [ por meio de um cliente conectado](../clients/overview.md). Ao executar [!DNL Query Service] por meio de um cliente conectado, uma sessão ativa é executada entre o cliente e [!DNL Query Service] até que a consulta enviada retorne ou expire.
 
 A execução de consulta interativa tem as seguintes limitações:
 
@@ -36,17 +36,17 @@ A execução de consulta interativa tem as seguintes limitações:
 
 >[!NOTE]
 >
->Para substituir a limitação máxima de linhas, inclua `LIMIT 0` em sua query. O tempo limite de consulta de 10 minutos ainda se aplica.
+>Para substituir a limitação máxima de linhas, inclua `LIMIT 0` na consulta. O tempo limite de consulta de 10 minutos ainda se aplica.
 
-Por padrão, os resultados de consultas interativas são retornados ao cliente e **não** persistente. Para manter os resultados como um conjunto de dados no [!DNL Experience Platform], o query deve usar o `CREATE TABLE AS SELECT` sintaxe.
+Por padrão, os resultados de consultas interativas são retornados ao cliente e **não** são persistentes. Para manter os resultados como um conjunto de dados em [!DNL Experience Platform], a consulta deve usar a sintaxe `CREATE TABLE AS SELECT`.
 
 ### Execução de consulta não interativa
 
-Consultas enviadas por meio do [!DNL Query Service] As APIs são executadas de forma não interativa. A execução não interativa significa que [!DNL Query Service] recebe a chamada da API e executa a consulta na ordem em que é recebida. Consultas não interativas sempre resultam na geração de um novo conjunto de dados no [!DNL Experience Platform] para receber os resultados ou a inserção de novas linhas em um conjunto de dados existente.
+Consultas enviadas por meio da API [!DNL Query Service] são executadas de forma não interativa. A execução não interativa significa que [!DNL Query Service] recebe a chamada da API e executa a consulta na ordem em que é recebida. Consultas não interativas sempre resultam na geração de um novo conjunto de dados em [!DNL Experience Platform] para receber os resultados, ou na inserção de novas linhas em um conjunto de dados existente.
 
 ## Acesso a um campo específico em um objeto
 
-Para acessar um campo dentro de um objeto em sua query, você pode usar a notação de pontos (`.`) ou notação de colchetes (`[]`). A instrução SQL a seguir usa a notação de pontos para percorrer `endUserIds` objeto até o `mcid` objeto.
+Para acessar um campo dentro de um objeto em sua consulta, você pode usar a notação de pontos (`.`) ou a notação de colchetes (`[]`). A instrução SQL a seguir usa a notação de pontos para percorrer o objeto `endUserIds` até o objeto `mcid`.
 
 >[!NOTE]
 >
@@ -64,7 +64,7 @@ LIMIT 1
 | -------- | ----------- |
 | `{ANALYTICS_TABLE_NAME}` | O nome da tabela de análise. |
 
-A instrução SQL a seguir usa a notação de colchetes para percorrer `endUserIds` objeto até o `mcid` objeto.
+A instrução SQL a seguir usa a notação de colchetes para percorrer o objeto `endUserIds` até o objeto `mcid`.
 
 ```sql
 SELECT endUserIds['_experience']['mcid']
@@ -91,7 +91,7 @@ Ambos os exemplos de consultas acima retornam um objeto nivelado, em vez de um �
 (1 row)
 ```
 
-O resultado `endUserIds._experience.mcid` contém os valores correspondentes para os seguintes parâmetros:
+O objeto `endUserIds._experience.mcid` retornado contém os valores correspondentes para os seguintes parâmetros:
 
 - `id`
 - `namespace`
@@ -120,7 +120,7 @@ Aspas simples, aspas duplas e aspas posteriores têm usos diferentes nas consult
 
 ### Aspas simples
 
-Aspas simples (`'`) é usado para criar cadeias de texto. Por exemplo, ela pode ser usada na variável `SELECT` para retornar um valor de texto estático no resultado, e na variável `WHERE` para avaliar o conteúdo de uma coluna.
+A aspa simples (`'`) é usada para criar cadeias de texto. Por exemplo, ele pode ser usado na instrução `SELECT` para retornar um valor de texto estático no resultado, e na cláusula `WHERE` para avaliar o conteúdo de uma coluna.
 
 A consulta a seguir declara um valor de texto estático (`'datasetA'`) para uma coluna:
 
@@ -134,7 +134,7 @@ WHERE TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}')
 LIMIT 10
 ```
 
-A consulta a seguir usa uma sequência de caracteres entre aspas (`'homepage'`) na sua cláusula WHERE para retornar eventos de uma página específica.
+A consulta a seguir usa uma cadeia de caracteres entre aspas simples (`'homepage'`) em sua cláusula WHERE para retornar eventos de uma página específica.
 
 ```sql
 SELECT 
@@ -148,7 +148,7 @@ LIMIT 10
 
 ### aspas duplas
 
-As aspas duplas (`"`) é usado para declarar um identificador com espaços.
+As aspas duplas (`"`) são usadas para declarar um identificador com espaços.
 
 A consulta a seguir usa aspas duplas para retornar valores de colunas especificadas quando uma coluna contém um espaço em seu identificador:
 
@@ -165,11 +165,11 @@ FROM
 
 >[!NOTE]
 >
->aspas duplas **não é possível** ser usado com acesso de campo de notação de pontos.
+>Aspas duplas **não podem** ser usadas com acesso ao campo de notação de pontos.
 
 ### Aspas posteriores
 
-A aspa invertida `` ` `` é usado para evitar nomes de colunas reservadas **somente** ao usar a sintaxe da notação de pontos. Por exemplo, desde `order` é uma palavra reservada no SQL, você deve usar aspas invertidas para acessar o campo `commerce.order`:
+A aspa invertida `` ` `` é usada para escapar nomes de coluna reservados **only** ao usar a sintaxe de notação de pontos. Por exemplo, como `order` é uma palavra reservada no SQL, você deve usar aspas invertidas para acessar o campo `commerce.order`:
 
 ```sql
 SELECT 
@@ -179,7 +179,7 @@ WHERE TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}')
 LIMIT 10
 ```
 
-Aspas invertidas também são usadas para acessar um campo que começa com um número. Por exemplo, para acessar o campo `30_day_value`, seria necessário usar a notação de aspas invertidas.
+Aspas invertidas também são usadas para acessar um campo que começa com um número. Por exemplo, para acessar o campo `30_day_value`, você precisaria usar a notação de aspas invertidas.
 
 ```SQL
 SELECT
@@ -189,7 +189,7 @@ WHERE TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}')
 LIMIT 10
 ```
 
-As aspas traseiras são **não** necessário se estiver usando a notação de colchetes.
+As aspas traseiras **não** são necessárias se você estiver usando a notação de colchetes.
 
 ```sql
  SELECT
@@ -201,11 +201,11 @@ As aspas traseiras são **não** necessário se estiver usando a notação de co
 
 ## Exibição de informações de tabela
 
-Depois de se conectar ao Serviço de consulta, você pode ver todas as tabelas disponíveis na Platform usando o `\d` ou `SHOW TABLES` comandos.
+Após se conectar ao Serviço de consulta, você pode ver todas as tabelas disponíveis na plataforma usando os comandos `\d` ou `SHOW TABLES`.
 
 ### Exibição de tabela padrão
 
-A variável `\d` mostra o padrão [!DNL PostgreSQL] exibição para tabelas de listagem. Um exemplo da saída desse comando pode ser visto abaixo:
+O comando `\d` mostra a exibição padrão [!DNL PostgreSQL] para tabelas de listagem. Um exemplo da saída desse comando pode ser visto abaixo:
 
 ```sql
              List of relations
@@ -218,7 +218,7 @@ A variável `\d` mostra o padrão [!DNL PostgreSQL] exibição para tabelas de l
 
 ### Exibição de tabela detalhada
 
-`SHOW TABLES` é um comando personalizado que fornece informações mais detalhadas sobre as tabelas. Um exemplo da saída desse comando pode ser visto abaixo:
+O comando `SHOW TABLES` é um comando personalizado que fornece informações mais detalhadas sobre as tabelas. Um exemplo da saída desse comando pode ser visto abaixo:
 
 ```sql
        name      |        dataSetId         |     dataSet    | description | resolved 
@@ -230,9 +230,9 @@ A variável `\d` mostra o padrão [!DNL PostgreSQL] exibição para tabelas de l
 
 ### Informações do esquema
 
-Para exibir informações mais detalhadas sobre os schemas na tabela, você pode usar o `\d {TABLE_NAME}` , onde `{TABLE_NAME}` é o nome da tabela cujas informações de esquema você deseja exibir.
+Para exibir informações mais detalhadas sobre os esquemas na tabela, você pode usar o comando `\d {TABLE_NAME}`, onde `{TABLE_NAME}` é o nome da tabela cujas informações de esquema deseja exibir.
 
-O exemplo a seguir mostra as informações do esquema para a variável `luma_midvalues` tabela, que seria vista usando `\d luma_midvalues`:
+O exemplo a seguir mostra as informações de esquema para a tabela `luma_midvalues`, que seriam vistas usando `\d luma_midvalues`:
 
 ```sql
                          Table "public.luma_midvalues"
@@ -257,7 +257,7 @@ O exemplo a seguir mostra as informações do esquema para a variável `luma_mid
 
 Além disso, você pode obter mais informações sobre uma coluna específica ao anexar o nome da coluna ao nome da tabela. Isso seria gravado no formato `\d {TABLE_NAME}_{COLUMN}`.
 
-O exemplo a seguir mostra informações adicionais para o `web` e seria chamado usando o seguinte comando: `\d luma_midvalues_web`:
+O exemplo a seguir mostra informações adicionais para a coluna `web`, e seria chamado usando o seguinte comando: `\d luma_midvalues_web`:
 
 ```sql
                  Composite type "public.luma_midvalues_web"
@@ -271,9 +271,9 @@ O exemplo a seguir mostra informações adicionais para o `web` e seria chamado 
 
 É possível unir vários conjuntos de dados para incluir dados de outros conjuntos de dados em sua consulta.
 
-O exemplo a seguir associaria os dois conjuntos de dados a seguir (`your_analytics_table` e `custom_operating_system_lookup`) e cria um `SELECT` instrução para os 50 principais sistemas operacionais por número de exibições de página.
+O exemplo a seguir associaria os dois conjuntos de dados a seguir (`your_analytics_table` e `custom_operating_system_lookup`) e criaria uma instrução `SELECT` para os 50 principais sistemas operacionais por número de exibições de página.
 
-**Consulta**
+**Query**
 
 ```sql
 SELECT 
@@ -292,34 +292,34 @@ LIMIT 50;
 
 | OperatingSystem | PageViews |
 | --------------- | --------- |
-| Windows 7 | 2781979.0 |
-| Windows XP | 1669824.0 |
-| Windows 8 | 420024.0 |
-| Adobe AIR | 315032.0 |
-| Windows Vista | 173566.0 |
-| Mobile iOS 6.1.3 | 119069.0 |
-| Linux | 56516.0 |
-| OSX 10.6.8 | 53652.0 |
-| Android 4.0.4 | 46167.0 |
-| Android 4.0.3 | 31852.0 |
-| Windows Server 2003 e XP edição x64 | 28883.0 |
-| Android 4.1.1 | 24336.0 |
-| Android 2.3.6 | 15735.0 |
-| OSX 10.6 | 13357.0 |
-| Windows Phone 7.5 | 11054.0 |
-| Android 4.3 | 9221.0 |
+| Windows 7 | 2781979,0 |
+| Windows XP | 1669824,0 |
+| Windows 8 | 420024,0 |
+| Adobe AIR | 315032,0 |
+| Windows Vista | 173566,0 |
+| Mobile iOS 6.1.3 | 119069,0 |
+| Linux | 56516,0 |
+| OSX 10.6.8 | 53652,0 |
+| Android 4.0.4 | 46167,0 |
+| Android 4.0.3 | 31852,0 |
+| Windows Server 2003 e XP edição x64 | 28883,0 |
+| Android 4.1.1 | 24336,0 |
+| Android 2.3.6 | 15735,0 |
+| OSX 10.6 | 13357,0 |
+| Windows Phone 7.5 | 11054,0 |
+| Android 4.3 | 9221,0 |
 
 ## Desduplicação
 
-O Serviço de Consulta oferece suporte à desduplicação de dados ou à remoção de linhas duplicadas dos dados. Para obter mais informações sobre desduplicação, leia a [Guia de desduplicação do Serviço de consulta](../key-concepts/deduplication.md).
+O Serviço de Consulta oferece suporte à desduplicação de dados ou à remoção de linhas duplicadas dos dados. Para obter mais informações sobre desduplicação, leia o [Guia de desduplicação do Serviço de Consulta](../key-concepts/deduplication.md).
 
 ## Cálculos de fuso horário no Serviço de consulta
 
-O Serviço de consulta padroniza os dados persistentes no Adobe Experience Platform usando o formato de carimbo de data e hora UTC. Para obter mais informações sobre como traduzir o requisito de fuso horário de e para um carimbo de data e hora UTC, consulte o [Seção de perguntas frequentes sobre como alterar o fuso horário de e para um carimbo de data e hora UTC](../troubleshooting-guide.md#How-do-I-change-the-time-zone-to-and-from-a-UTC-Timestamp?).
+O Serviço de consulta padroniza os dados persistentes no Adobe Experience Platform usando o formato de carimbo de data e hora UTC. Para obter mais informações sobre como traduzir o requisito de fuso horário de e para um carimbo de data e hora UTC, consulte a seção [Perguntas frequentes sobre como alterar o fuso horário de e para um carimbo de data e hora UTC](../troubleshooting-guide.md#How-do-I-change-the-time-zone-to-and-from-a-UTC-Timestamp?).
 
 ## Próximas etapas
 
-Ao ler este documento, você recebeu algumas considerações importantes ao gravar consultas usando [!DNL Query Service]. Para obter mais informações sobre como usar a sintaxe SQL para gravar suas próprias consultas, leia o [Documentação da sintaxe SQL](../sql/syntax.md).
+Ao ler este documento, você recebeu algumas considerações importantes ao gravar consultas usando o [!DNL Query Service]. Para obter mais informações sobre como usar a sintaxe SQL para gravar suas próprias consultas, leia a [documentação sobre sintaxe SQL](../sql/syntax.md).
 
 Para obter mais exemplos de consultas que podem ser usadas no Serviço de consulta, leia a documentação do caso de uso a seguir:
 

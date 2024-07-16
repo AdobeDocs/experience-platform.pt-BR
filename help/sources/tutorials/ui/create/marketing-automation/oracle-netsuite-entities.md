@@ -1,48 +1,49 @@
 ---
-title: Criar um [!DNL Oracle NetSuite Entities] conexão de origem na interface
+title: Criar uma conexão de origem  [!DNL Oracle NetSuite Entities]  na interface
 description: Saiba como criar uma conexão de origem de Entidades do Oracle NetSuite usando a interface do usuário do Adobe Experience Platform.
 hide: true
 hidefromtoc: true
 badge: Beta
-source-git-commit: 053cf0af327b39830f025686e0f8f67c27f1c45c
+exl-id: ce0ea37f-16e0-4aef-9809-72c0b11e0440
+source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
 source-wordcount: '698'
 ht-degree: 2%
 
 ---
 
-# Criar um [!DNL Oracle NetSuite Entities] conexão de origem na interface
+# Criar uma conexão de origem [!DNL Oracle NetSuite Entities] na interface
 
 >[!NOTE]
 >
->A variável [!DNL Oracle NetSuite Entities] a fonte está na versão beta. Consulte a [visão geral das origens](../../../../home.md#terms-and-conditions) para obter mais informações sobre o uso de fontes rotuladas como beta.
+>A origem [!DNL Oracle NetSuite Entities] está na versão beta. Consulte a [visão geral das fontes](../../../../home.md#terms-and-conditions) para obter mais informações sobre o uso de fontes com rótulo beta.
 
-Leia o tutorial a seguir para saber como trazer dados de contatos e clientes de sua [!DNL Oracle NetSuite Entities] para o Adobe Experience Platform na interface do usuário.
+Leia o tutorial a seguir para saber como trazer dados de contatos e clientes da sua conta do [!DNL Oracle NetSuite Entities] para a Adobe Experience Platform na interface do usuário.
 
 ## Introdução {#getting-started}
 
 Este tutorial requer um entendimento prático dos seguintes componentes do Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): o quadro normalizado pelo qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
-   * [Noções básicas da composição do esquema](../../../../../xdm/schema/composition.md): saiba mais sobre os componentes básicos dos esquemas XDM, incluindo princípios fundamentais e práticas recomendadas na composição do esquema.
+* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): a estrutura padronizada pela qual o [!DNL Experience Platform] organiza os dados de experiência do cliente.
+   * [Noções básicas sobre a composição de esquema](../../../../../xdm/schema/composition.md): saiba mais sobre os blocos de construção básicos de esquemas XDM, incluindo princípios-chave e práticas recomendadas na composição de esquema.
    * [Tutorial do Editor de esquemas](../../../../../xdm/tutorials/create-schema-ui.md): saiba como criar esquemas personalizados usando a interface do Editor de esquemas.
-* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): fornece um perfil de consumidor unificado em tempo real com base em dados agregados de várias fontes.
+* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Fornece um perfil de consumidor unificado em tempo real com base em dados agregados de várias fontes.
 
-Se você já tiver um [!DNL Oracle NetSuite] conta, você pode ignorar o restante deste documento e prosseguir para o tutorial em [configuração de um fluxo de dados](../../dataflow/marketing-automation.md).
+Se você já tiver uma conta válida do [!DNL Oracle NetSuite], ignore o restante deste documento e prossiga para o tutorial em [configurando um fluxo de dados](../../dataflow/marketing-automation.md).
 
 >[!TIP]
 >
->Leia o [[!DNL Oracle NetSuite] visão geral](../../../../connectors/marketing-automation/oracle-netsuite.md) para obter informações sobre como recuperar suas credenciais de autenticação.
+>Leia a [[!DNL Oracle NetSuite] visão geral](../../../../connectors/marketing-automation/oracle-netsuite.md) para obter informações sobre como recuperar suas credenciais de autenticação.
 
-## Conecte seu [!DNL Oracle NetSuite Activities] account {#connect-account}
+## Conectar sua conta do [!DNL Oracle NetSuite Activities] {#connect-account}
 
-Na interface do usuário da Platform, selecione **[!UICONTROL Origens]** na navegação à esquerda, para acessar a [!UICONTROL Origens] espaço de trabalho. Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar a fonte específica com a qual deseja trabalhar usando a opção de pesquisa.
+Na interface da Platform, selecione **[!UICONTROL Fontes]** na navegação à esquerda para acessar o espaço de trabalho [!UICONTROL Fontes]. Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar a fonte específica com a qual deseja trabalhar usando a opção de pesquisa.
 
-No *Automação de marketing* categoria, selecione **[!DNL Oracle NetSuite Entities]** e selecione **[!UICONTROL Adicionar dados]**.
+Na categoria *Automação de Marketing*, selecione **[!DNL Oracle NetSuite Entities]** e **[!UICONTROL Adicionar dados]**.
 
-![Captura de tela da interface do usuário da plataforma para catálogo com o cartão Entidades do NetSuite do Oracle](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-entities/catalog-card.png)
+![Captura de tela da interface do usuário da plataforma para catálogo com o cartão de Entidades NetSuite do Oracle](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-entities/catalog-card.png)
 
-A variável **[!UICONTROL Conta Conectar Entidades NetSuite do Oracle]** é exibida. Nesta página, você pode usar credenciais novas ou existentes.
+A página **[!UICONTROL Conectar Conta de Entidades NetSuite do Oracle]** é exibida. Nesta página, você pode usar credenciais novas ou existentes.
 
 >[!IMPORTANT]
 >
@@ -50,15 +51,15 @@ A variável **[!UICONTROL Conta Conectar Entidades NetSuite do Oracle]** é exib
 
 ### Conta existente {#existing-account}
 
-Para usar uma conta existente, selecione a variável [!DNL Oracle NetSuite Entities] conta com a qual deseja criar um novo fluxo de dados e selecione **[!UICONTROL Próxima]** para continuar.
+Para usar uma conta existente, selecione a conta [!DNL Oracle NetSuite Entities] com a qual deseja criar um novo fluxo de dados e clique em **[!UICONTROL Avançar]** para continuar.
 
-![Captura de tela da interface do usuário da plataforma para conectar a conta de entidades NetSuite do Oracle a uma conta existente](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-entities/existing.png)
+![Captura de tela da interface do usuário da plataforma para conectar a conta de Entidades NetSuite do Oracle a uma conta existente](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-entities/existing.png)
 
 ### Nova conta {#new-account}
 
-Se estiver criando uma nova conta, selecione **[!UICONTROL Nova conta]** e forneça um nome, uma descrição opcional e suas credenciais. Quando terminar, selecione **[!UICONTROL Conectar à origem]** e aguarde algum tempo para estabelecer a nova conexão.
+Se você estiver criando uma nova conta, selecione **[!UICONTROL Nova conta]** e forneça um nome, uma descrição opcional e suas credenciais. Quando terminar, selecione **[!UICONTROL Conectar à origem]** e aguarde algum tempo para que a nova conexão seja estabelecida.
 
-![Captura de tela da interface do usuário da plataforma para conectar a conta de entidades NetSuite do Oracle com uma nova conta](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-entities/new.png)
+![Captura de tela da interface do usuário da plataforma para conectar a conta de Entidades do NetSuite do Oracle com uma nova conta](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-entities/new.png)
 
 ### Selecionar dados
 
@@ -73,40 +74,40 @@ Em seguida, selecione o tipo de objeto que deseja assimilar no Experience Platfo
 
 >[!TAB Contato]
 
-![Captura de tela da interface do usuário da plataforma para entidades do Netsuite do Oracle mostrando a configuração com a opção Contato selecionada](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-entities/select-data-contact.png)
+![Captura de tela da interface do usuário da plataforma para Entidades do Netsuite Oracle mostrando a configuração com a opção Contato selecionada](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-entities/select-data-contact.png)
 
 >[!TAB Cliente]
 
-![Captura de tela da interface do usuário da plataforma para entidades do Oracle Netsuite mostrando a configuração com a opção Cliente selecionada](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-entities/select-data-customer.png)
+![Captura de tela da interface do usuário da plataforma para Entidades do Oracle Netsuite mostrando a configuração com a opção Cliente selecionada](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-entities/select-data-customer.png)
 
 >[!ENDTABS]
 
 ## Próximas etapas {#next-steps}
 
-Ao seguir este tutorial, você estabeleceu uma conexão com o seu [!DNL Oracle NetSuite Entities] conta. Agora você pode seguir para o próximo tutorial e [configurar um fluxo de dados para trazer dados de automação de marketing para a Platform](../../dataflow/marketing-automation.md).
+Seguindo este tutorial, você estabeleceu uma conexão com sua conta do [!DNL Oracle NetSuite Entities]. Agora você pode continuar com o próximo tutorial e [configurar um fluxo de dados para trazer dados de automação de marketing para a Platform](../../dataflow/marketing-automation.md).
 
 ## Recursos adicionais {#additional-resources}
 
-As seções abaixo fornecem recursos adicionais que você pode consultar ao usar o [!DNL Oracle NetSuite Entities] origem.
+As seções abaixo fornecem recursos adicionais que você pode consultar ao usar a origem [!DNL Oracle NetSuite Entities].
 
 ### Mapeamento {#mapping}
 
-A Platform fornece recomendações inteligentes para campos mapeados automaticamente com base no esquema ou conjunto de dados de destino selecionado. Você pode ajustar manualmente as regras de mapeamento para atender aos seus casos de uso. Com base nas suas necessidades, você pode optar por mapear campos diretamente ou usar funções de preparação de dados para transformar dados de origem para derivar valores calculados ou calculados. Para obter etapas abrangentes sobre o uso da interface do mapeador e campos calculados, consulte o [Guia da interface de preparação de dados](../../../../../data-prep/ui/mapping.md).
+A Platform fornece recomendações inteligentes para campos mapeados automaticamente com base no esquema ou conjunto de dados de destino selecionado. Você pode ajustar manualmente as regras de mapeamento para atender aos seus casos de uso. Com base nas suas necessidades, você pode optar por mapear campos diretamente ou usar funções de preparação de dados para transformar dados de origem para derivar valores calculados ou calculados. Para obter etapas abrangentes sobre como usar a interface do mapeador e campos calculados, consulte o [Guia da Interface do Preparo de Dados](../../../../../data-prep/ui/mapping.md).
 
 >[!NOTE]
 >
->Os campos exibidos dependem das assinaturas que o seu [!DNL Oracle NetSuite] conta tem acesso a. Por exemplo, se você não tiver acesso a faturamento, não verá os campos relacionados a faturamento.
+>Os campos exibidos dependem das assinaturas às quais a conta do [!DNL Oracle NetSuite] tem acesso. Por exemplo, se você não tiver acesso a faturamento, não verá os campos relacionados a faturamento.
 
-### Agendamento {#scheduling}
+### Agendando {#scheduling}
 
-Ao agendar sua [!DNL Oracle NetSuite Entities] fluxo de dados para assimilação, você deve selecionar a seguinte configuração de frequência e intervalo:
+Ao agendar o fluxo de dados do [!DNL Oracle NetSuite Entities] para assimilação, você deve selecionar a seguinte configuração de frequência e intervalo:
 
-| Frequência | Interval |
+| Frequência | Intervalo |
 | --- | --- |
 | `Once` | 1 |
 
-Ao recuperar dados, a variável [!DNL Oracle NetSuite] responde com a última data modificada ou criada como um formato de data em vez de um carimbo de data e hora. Assim, o cronograma é limitado a um dia.
+Ao recuperar os dados, o [!DNL Oracle NetSuite] responde com a última data modificada ou criada como um formato de data em vez de um carimbo de data e hora. Assim, o cronograma é limitado a um dia.
 
-Depois de fornecer os valores para o cronograma, selecione **[!UICONTROL Próxima]**.
+Depois de fornecer os valores para o seu agendamento, selecione **[!UICONTROL Avançar]**.
 
-![A etapa de agendamento do fluxo de trabalho de origens.](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-entities/scheduling.png)
+![A etapa de agendamento do fluxo de trabalho de fontes.](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-entities/scheduling.png)

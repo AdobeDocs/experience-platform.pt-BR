@@ -11,13 +11,13 @@ ht-degree: 1%
 
 ---
 
-# [!UICONTROL Consentimento IAB TCF 2.0] grupo de campos para esquemas de perfil
+# [!UICONTROL Grupo de campos Consentimento] do TCF do IAB 2.0 para esquemas de perfil
 
 >[!NOTE]
 >
->Este documento abrange o [!UICONTROL Consentimento IAB TCF 2.0] grupo de campos de esquema para a classe Perfil individual XDM. Para o grupo de campos destinado à classe XDM ExperienceEvent, consulte o seguinte [documento](../event/iab.md) em vez disso.
+>Este documento abrange o grupo de campos de esquema [!UICONTROL Consentimento] da TCF do IAB para a classe de Perfil Individual XDM. Para o grupo de campos destinado à classe XDM ExperienceEvent, consulte o seguinte [documento](../event/iab.md).
 
-[!UICONTROL Consentimento IAB TCF 2.0] é um grupo de campos de esquema padrão para o [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md) usado para capturar sequências de consentimento do IAB com carimbo de data e hora para rastrear padrões de alteração de consentimento ao longo do tempo.
+[!UICONTROL O Consentimento IAB TCF 2.0] é um grupo de campos de esquema padrão para a [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md) usada para capturar cadeias de consentimento IAB de série com carimbo de data e hora, a fim de rastrear padrões de alteração de consentimento ao longo do tempo.
 
 ![](../../images/field-groups/iab-profile.png)
 
@@ -27,7 +27,7 @@ ht-degree: 1%
 
 {style="table-layout:auto"}
 
-O JSON a seguir demonstra a estrutura do `identityPrivacyInfo` mapa.
+O JSON a seguir demonstra a estrutura do mapa `identityPrivacyInfo`.
 
 ```json
 {
@@ -50,15 +50,15 @@ O JSON a seguir demonstra a estrutura do `identityPrivacyInfo` mapa.
 }
 ```
 
-Como mostra o exemplo, cada chave de nível raiz de `xdm:identityPrivacyInfo` corresponde a um namespace de identidade reconhecido pelo Serviço de identidade. Por sua vez, cada propriedade de namespace deve ter pelo menos uma subpropriedade cuja chave corresponda ao valor de identidade correspondente do cliente para esse namespace. Neste exemplo, o cliente é identificado com uma ID de Experience Cloud (`ECID`) valor de `13782522493631189`.
+Como mostra o exemplo, cada chave de nível raiz de `xdm:identityPrivacyInfo` corresponde a um namespace de identidade reconhecido pelo Serviço de Identidade. Por sua vez, cada propriedade de namespace deve ter pelo menos uma subpropriedade cuja chave corresponda ao valor de identidade correspondente do cliente para esse namespace. Neste exemplo, o cliente é identificado com um valor de ID de Experience Cloud (`ECID`) de `13782522493631189`.
 
 >[!NOTE]
 >
 >Embora o exemplo acima use um único par de namespace/valor para representar a identidade do cliente, você pode adicionar outras chaves para outros namespaces, e cada namespace pode ter vários valores de identidade, cada um com seu próprio conjunto de preferências de consentimento de TCF.
 
-Para cada valor de identidade, um `identityIABConsent` A propriedade deve ser fornecida, o que fornece o valor de consentimento TCF para a identidade. O valor dessa propriedade deve estar em conformidade com [[!UICONTROL String de consentimento] tipo de dados](../../data-types/consent-string.md).
+Para cada valor de identidade, uma propriedade `identityIABConsent` deve ser fornecida, que fornece o valor de consentimento TCF para a identidade. O valor desta propriedade deve estar em conformidade com o tipo de dados [[!UICONTROL Cadeia de caracteres de consentimento]](../../data-types/consent-string.md).
 
-Consulte o guia sobre [Suporte IAB TCF 2.0 na plataforma](../../../landing/governance-privacy-security/consent/iab/overview.md) para obter mais informações sobre o caso de uso deste grupo de campos. Para obter mais detalhes sobre o próprio grupo de campos, consulte o repositório XDM público:
+Consulte o manual sobre o [Suporte ao IAB TCF 2.0 na Platform](../../../landing/governance-privacy-security/consent/iab/overview.md) para obter mais informações sobre o caso de uso deste grupo de campos. Para obter mais detalhes sobre o próprio grupo de campos, consulte o repositório XDM público:
 
 * [Exemplo preenchido](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-privacy.example.1.json)
 * [Esquema completo](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-privacy.schema.json)

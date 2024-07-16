@@ -11,9 +11,9 @@ ht-degree: 3%
 
 # [!UICONTROL Detalhes de venda adicional] grupo de campos de esquema
 
-[!UICONTROL Detalhes de venda adicional] é um grupo de campos de esquema padrão para o [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md) usado para registrar informações sobre um evento de marketing de venda adicional, incluindo detalhes sobre a transação e as diferentes maneiras como a oferta foi exibida para um cliente.
+[!UICONTROL Detalhes de Venda Adicional] é um grupo de campos de esquema padrão para a [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md) usada para capturar informações sobre um evento de marketing de venda adicional, incluindo detalhes sobre a transação e as diferentes maneiras das quais a oferta foi exibida para um cliente.
 
-O grupo de campos fornece um único campo do tipo objeto, `upsells`. As propriedades contidas nesse objeto são explicadas abaixo.
+O grupo de campos fornece um único campo de tipo de objeto, `upsells`. As propriedades contidas nesse objeto são explicadas abaixo.
 
 ![Estrutura de detalhes de venda adicional](../../images/field-groups/upsell-details.png)
 

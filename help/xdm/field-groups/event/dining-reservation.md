@@ -6,29 +6,29 @@ exl-id: 672b7a77-c433-4502-a1ad-a17c811b253e
 source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
 source-wordcount: '435'
-ht-degree: 5%
+ht-degree: 13%
 
 ---
 
-# [!UICONTROL Reserva para o jantar] grupo de campos de esquema
+# Grupo de campos de esquema [!UICONTROL Reserva de jantar]
 
-[!UICONTROL Reserva para o jantar] é um grupo de campos de esquema padrão para o [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md) usado para registrar informações sobre uma reserva de jantar.
+A [!UICONTROL Reserva para o Jantar] é um grupo de campos de esquema padrão para a [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md) usada para capturar informações sobre uma reserva de jantar.
 
-O grupo de campos é uma extensão do [!UICONTROL Detalhes da reserva] grupo de campos, e contém todos os mesmos campos sob um único campo de tipo de objeto, `reservations`. Além desses campos genéricos, [!UICONTROL Reserva para o jantar] também inclui `diningReservations` matriz. Esta matriz de objetos é usada para descrever uma ou mais reservas com propriedades específicas do restaurante.
+O grupo de campos é uma extensão do grupo de campos [!UICONTROL Detalhes da Reserva] e contém todos os mesmos campos em um único campo de tipo de objeto, `reservations`. Além desses campos genéricos, a [!UICONTROL Reserva de Jantar] também inclui a matriz `diningReservations`. Esta matriz de objetos é usada para descrever uma ou mais reservas com propriedades específicas do restaurante.
 
 >[!NOTE]
 >
->Este documento abrange os detalhes da `diningReservations` matriz. Para obter informações sobre os outros campos fornecidos no `reservations` objeto, consulte o [[!UICONTROL Detalhes da reserva] referência do grupo de campos](./reservation-details.md).
+>Este documento aborda os detalhes da matriz `diningReservations`. Para obter informações sobre os outros campos fornecidos sob o objeto `reservations`, consulte a [[!UICONTROL Referência do grupo de campos Detalhes da reserva]](./reservation-details.md).
 
-![Estrutura de reserva para o jantar](../../images/field-groups/dining-reservation/structure.png)
+![Estrutura de Reserva de Jantar](../../images/field-groups/dining-reservation/structure.png)
 
 ## `diningReservations`
 
-`diningReservations` é uma matriz de objetos que representa uma lista de reservas de jantar. Se um evento de reserva envolver reservas em vários restaurantes diferentes em diferentes horários do dia, por exemplo, essas reservas podem ser listadas como objetos individuais em `diningReservations` por um único evento.
+`diningReservations` é uma matriz de objetos que representa uma lista de reservas de jantar. Se um evento de reserva envolve reservas em vários restaurantes diferentes em diferentes horários do dia, por exemplo, essas reservas podem ser listadas como objetos individuais em `diningReservations` para um único evento.
 
-A estrutura de cada objeto fornecido em `diningReservations` é fornecido abaixo.
+A estrutura de cada objeto fornecido em `diningReservations` é fornecida abaixo.
 
-![estrutura jantarreservas](../../images/field-groups/dining-reservation/diningReservations.png)
+![Estrutura de reservas de jantar](../../images/field-groups/dining-reservation/diningReservations.png)
 
 | Propriedade | Tipo de dados | Descrição |
 | --- | --- | --- |

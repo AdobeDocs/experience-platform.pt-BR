@@ -13,11 +13,11 @@ ht-degree: 3%
 
 # Substituir um objeto de catálogo
 
-É possível substituir o conteúdo de um [!DNL Catalog] objeto usando uma solicitação PUT, em que todo o recurso é substituído pela carga da solicitação.
+Você pode substituir o conteúdo de um objeto [!DNL Catalog] usando uma solicitação PUT, em que o recurso inteiro é substituído pela carga da solicitação.
 
 >[!NOTE]
 >
->Se você precisar apenas atualizar alguns campos específicos em um [!DNL Catalog] objeto, o uso de uma solicitação PATCH pode ser mais eficiente.
+>Se você precisar apenas atualizar alguns campos específicos em um objeto [!DNL Catalog], usar uma solicitação PATCH pode ser mais eficiente.
 
 **Formato da API**
 
@@ -27,7 +27,7 @@ PUT /{OBJECT_TYPE}/{OBJECT_ID}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{OBJECT_TYPE}` | O tipo de [!DNL Catalog] objeto a ser substituído. Os objetos válidos são: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
+| `{OBJECT_TYPE}` | O tipo de objeto [!DNL Catalog] a ser substituído. Os objetos válidos são: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{OBJECT_ID}` | O identificador do objeto específico que você deseja atualizar. |
 
 **Solicitação**

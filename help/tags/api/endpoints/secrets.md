@@ -4,16 +4,16 @@ description: Saiba como fazer chamadas para o endpoint /segredos na API do Reato
 exl-id: 76875a28-5d13-402d-8543-24db7e2bee8e
 source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1246'
+source-wordcount: '1239'
 ht-degree: 12%
 
 ---
 
 # Ponto de extremidade secreto
 
-Um segredo é um recurso que existe somente nas propriedades do encaminhamento de eventos (propriedades com um `platform` atributo definido como `edge`). Eles permitem que o encaminhamento de eventos seja autenticado em outro sistema para troca segura de dados.
+Um segredo é um recurso que existe apenas nas propriedades do encaminhamento de eventos (propriedades com um atributo `platform` definido como `edge`). Eles permitem que o encaminhamento de eventos seja autenticado em outro sistema para troca segura de dados.
 
-Este guia mostra como fazer chamadas para a variável `/secrets` ponto de extremidade na API do Reator. Para obter uma explicação detalhada dos diferentes tipos secretos e como usá-los, consulte a visão geral de alto nível em [segredos](../guides/secrets.md) antes de retornar a este guia.
+Este guia mostra como fazer chamadas para o ponto de extremidade `/secrets` na API do Reator. Para obter uma explicação detalhada dos diferentes tipos secretos e como usá-los, consulte a visão geral de alto nível em [segredos](../guides/secrets.md) antes de retornar a este guia.
 
 ## Introdução
 
@@ -302,7 +302,7 @@ Você pode criar um segredo fazendo uma solicitação POST.
 
 >[!NOTE]
 >
->Ao criar um novo segredo, a API retorna uma resposta imediata que contém informações desse recurso. Ao mesmo tempo, uma tarefa de troca de segredos é acionada para testar se a troca de credenciais está funcionando. Esta tarefa é processada de forma assíncrona e atualiza o atributo de status do segredo para `succeeded` ou `failed` dependendo do resultado.
+>Ao criar um novo segredo, a API retorna uma resposta imediata que contém informações desse recurso. Ao mesmo tempo, uma tarefa de troca de segredos é acionada para testar se a troca de credenciais está funcionando. Esta tarefa é processada de forma assíncrona e atualiza o atributo de status do segredo para `succeeded` ou `failed`, dependendo da saída.
 
 **Formato da API**
 
@@ -352,16 +352,16 @@ curl -X POST \
 | Propriedade | Descrição |
 | --- | --- |
 | `name` | Um nome descritivo exclusivo para o segredo. |
-| `type_of` | O tipo de credencial de autenticação que o segredo representa. Tem três valores aceitos:<ul><li>`token`: uma cadeia de caracteres de token.</li><li>`simple-http`: Um nome de usuário e senha.</li><li>`oauth2`: credenciais em conformidade com o padrão OAuth.</li></ul> |
-| `credentials` | Um objeto que contém os valores de credencial do segredo. Dependendo do `type_of` atributo, propriedades diferentes devem ser fornecidas. Consulte a seção sobre [credenciais](../guides/secrets.md#credentials) no guia de segredos para obter detalhes sobre os requisitos para cada tipo. |
-| `relationships.environment` | Cada segredo deve ser associado a um ambiente ao ser criado pela primeira vez. A variável `data` o objeto nessa propriedade deve conter a variável `id` do ambiente ao qual o segredo está sendo atribuído, juntamente com uma `type` valor de `environments`. |
+| `type_of` | O tipo de credencial de autenticação que o segredo representa. Tem três valores aceitos:<ul><li>`token`: Uma cadeia de caracteres de token.</li><li>`simple-http`: um nome de usuário e senha.</li><li>`oauth2`: credenciais em conformidade com o padrão OAuth.</li></ul> |
+| `credentials` | Um objeto que contém os valores de credencial do segredo. Dependendo do atributo `type_of`, propriedades diferentes devem ser fornecidas. Consulte a seção sobre [credenciais](../guides/secrets.md#credentials) no guia de segredos para obter detalhes sobre os requisitos de cada tipo. |
+| `relationships.environment` | Cada segredo deve ser associado a um ambiente ao ser criado pela primeira vez. O objeto `data` nessa propriedade deve conter o `id` do ambiente ao qual o segredo está sendo atribuído, juntamente com um valor `type` de `environments`. |
 | `type` | O tipo de recurso que está sendo criado. Para esta chamada, o valor deve ser `secrets`. |
 
 {style="table-layout:auto"}
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna os detalhes do segredo. Observe que, dependendo do tipo de segredo, algumas propriedades em `credentials` pode estar oculto.
+Uma resposta bem-sucedida retorna os detalhes do segredo. Observe que, dependendo do tipo de segredo, algumas propriedades em `credentials` podem estar ocultas.
 
 ```json
 {
@@ -417,13 +417,13 @@ Uma resposta bem-sucedida retorna os detalhes do segredo. Observe que, dependend
 }
 ```
 
-## Testar um `oauth2` segredo {#test}
+## Testar um segredo de `oauth2` {#test}
 
 >[!NOTE]
 >
->Esta operação só pode ser executada em segredos com um `type_of` valor de `oauth2`.
+>Esta operação só pode ser executada em segredos com um valor `type_of` de `oauth2`.
 
-Você pode testar um `oauth2` secreta incluindo a ID no caminho de uma solicitação PATCH. A operação de teste executa uma troca e inclui a resposta do serviço de autorização no `test_exchange` atributo no do segredo `meta` objeto. Essa operação não atualiza o segredo em si.
+Você pode testar um segredo `oauth2` incluindo a respectiva ID no caminho de uma solicitação PATCH. A operação de teste executa uma troca e inclui a resposta do serviço de autorização no atributo `test_exchange` no objeto `meta` do segredo. Essa operação não atualiza o segredo em si.
 
 **Formato da API**
 
@@ -433,7 +433,7 @@ PATCH /secrets/{SECRET_ID}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{SECRET_ID}` | A ID do `oauth2` segredo que você deseja testar. |
+| `{SECRET_ID}` | A ID do segredo `oauth2` que você deseja testar. |
 
 {style="table-layout:auto"}
 
@@ -463,8 +463,8 @@ curl -X PATCH \
 
 | Propriedade | Descrição |
 | --- | --- |
-| `attributes` | Deve conter um `type_of` propriedade com um valor de `oauth2`. |
-| `meta` | Deve conter um `action` propriedade com um valor de `test`. |
+| `attributes` | Deve conter uma propriedade `type_of` com valor `oauth2`. |
+| `meta` | Deve conter uma propriedade `action` com valor `test`. |
 | `id` | A ID do segredo que você está testando. Deve corresponder à ID fornecida no caminho da solicitação. |
 | `type` | O tipo de recurso em operação. Deve ser definido como `secrets`. |
 
@@ -580,8 +580,8 @@ curl -X PATCH \
 
 | Propriedade | Descrição |
 | --- | --- |
-| `attributes` | Deve conter um `type_of` propriedade correspondente ao segredo que está sendo atualizado (`token`, `simple-http`ou `oauth2`). |
-| `meta` | Deve conter um `action` propriedade com um valor de `retry`. |
+| `attributes` | Deve conter uma propriedade `type_of` correspondente à do segredo que está sendo atualizado (`token`, `simple-http` ou `oauth2`). |
+| `meta` | Deve conter uma propriedade `action` com valor `retry`. |
 | `id` | A ID do segredo que você está tentando novamente. Deve corresponder à ID fornecida no caminho da solicitação. |
 | `type` | O tipo de recurso em operação. Deve ser definido como `secrets`. |
 
@@ -589,7 +589,7 @@ curl -X PATCH \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna os detalhes do segredo, com o status redefinido como `pending`. Após a troca ser concluída, o status do segredo será atualizado para `succeeded` ou `failed` dependendo do resultado.
+Uma resposta bem-sucedida retorna os detalhes do segredo, com seu status redefinido como `pending`. Depois que a troca for concluída, o status do segredo será atualizado para `succeeded` ou `failed`, dependendo do resultado.
 
 ```json
 {
@@ -644,11 +644,11 @@ Uma resposta bem-sucedida retorna os detalhes do segredo, com o status redefinid
 }
 ```
 
-## Reautorizar um `oauth2-google` segredo {#reauthorize}
+## Reautorizar um segredo de `oauth2-google` {#reauthorize}
 
-Each `oauth2-google` o segredo contém um `meta.authorization_url_expires_at` propriedade que indica quando o URL de autorização irá expirar. Após esse período, o segredo deverá ser reautorizado para que possa renovar o processo de autenticação.
+Cada segredo `oauth2-google` contém uma propriedade `meta.authorization_url_expires_at` que indica quando a URL de autorização irá expirar. Após esse período, o segredo deverá ser reautorizado para que possa renovar o processo de autenticação.
 
-Para reautorizar uma `oauth2-google` secret, faça uma solicitação PATCH para o segredo em questão.
+Para reautorizar um segredo `oauth2-google`, faça uma solicitação PATCH para o segredo em questão.
 
 **Formato da API**
 
@@ -658,11 +658,11 @@ PATCH /secrets/{SECRET_ID}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{SECRET_ID}` | A variável `id` do segredo que você deseja reautorizar. |
+| `{SECRET_ID}` | O `id` do segredo que você deseja reautorizar. |
 
 **Solicitação**
 
-A variável `data` o objeto na carga da solicitação deve conter um `meta.action` propriedade definida como `reauthorize`.
+O objeto `data` na carga da solicitação deve conter uma propriedade `meta.action` definida como `reauthorize`.
 
 ```shell
 curl -X PATCH \
@@ -795,7 +795,7 @@ A API do Reator permite adicionar observações a determinados recursos, incluin
 
 >[!NOTE]
 >
->Consulte a [manual de endpoint de notas](./notes.md) para obter detalhes sobre como criar e editar notas para os recursos da API do Reator.
+>Consulte o [manual de endpoint de notas](./notes.md) para obter detalhes sobre como criar e editar notas para recursos da API do Reator.
 
 Você pode recuperar todas as notas relacionadas a um segredo fazendo uma solicitação GET.
 
@@ -870,13 +870,13 @@ Uma resposta bem-sucedida retorna uma lista de notas pertencentes ao segredo.
 
 ## Recuperar recursos relacionados de um segredo {#related}
 
-As chamadas a seguir demonstram como recuperar os recursos relacionados de um segredo. Quando [procurar um segredo](#lookup), essas relações são listadas na seção `relationships` propriedade.
+As chamadas a seguir demonstram como recuperar os recursos relacionados de um segredo. Quando [procurar um segredo](#lookup), essas relações são listadas na propriedade `relationships`.
 
 Consulte o [manual de relacionamentos](../guides/relationships.md) para obter mais informações sobre relacionamentos na API do Reactor.
 
 ### Pesquisar um segredo no ambiente relacionado {#environment}
 
-Você pode pesquisar o ambiente que utiliza um segredo anexando `/environment` ao caminho de uma solicitação GET.
+Você pode pesquisar o ambiente que usa um segredo anexando `/environment` ao caminho de uma solicitação GET.
 
 **Formato da API**
 

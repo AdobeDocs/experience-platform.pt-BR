@@ -10,20 +10,20 @@ ht-degree: 1%
 
 ---
 
-# Medidas de proteção para [!DNL Identity Service] dados
+# Medidas de proteção para dados do [!DNL Identity Service]
 
-Este documento fornece informações sobre limites de uso e taxa para [!DNL Identity Service] dados para ajudá-lo a otimizar o uso do gráfico de identidade. Ao revisar as medidas de proteção a seguir, presume-se que você tenha modelado os dados corretamente. Em caso de dúvidas sobre como modelar os dados, entre em contato com o representante do Atendimento ao cliente.
+Este documento fornece informações sobre limites de uso e taxa para dados do [!DNL Identity Service] para ajudar você a otimizar o uso do gráfico de identidade. Ao revisar as medidas de proteção a seguir, presume-se que você tenha modelado os dados corretamente. Em caso de dúvidas sobre como modelar os dados, entre em contato com o representante do Atendimento ao cliente.
 
 >[!IMPORTANT]
 >
->Verifique os direitos de licença em sua Ordem de venda e a correspondência [Descrição do produto](https://helpx.adobe.com/legal/product-descriptions.html?lang=pt-BR) sobre os limites de uso reais, além desta página de medidas de proteção.
+>Verifique os direitos de licença em seu Pedido de Venda e a [Descrição do Produto](https://helpx.adobe.com/legal/product-descriptions.html?lang=pt-BR) correspondente sobre os limites de uso reais, além desta página de medidas de proteção.
 
 ## Introdução
 
 Os seguintes serviços Experience Platform estão envolvidos na modelagem de dados de identidade:
 
-* [Identidades](home.md): identidades de ponte de fontes de dados diferentes, à medida que são assimiladas na Platform.
-* [[!DNL Real-Time Customer Profile]](../profile/home.md): crie perfis de consumidores unificados usando dados de várias fontes.
+* [Identidades](home.md): identidades da Bridge de fontes de dados diferentes conforme são assimiladas na Platform.
+* [[!DNL Real-Time Customer Profile]](../profile/home.md): Criar perfis de consumidor unificados usando dados de várias fontes.
 
 ## Limites do modelo de dados
 
@@ -35,7 +35,7 @@ A tabela a seguir descreve os limites estáticos aplicados aos dados de identida
 
 | Grade de Proteção | Limite | Notas |
 | --- | --- | --- |
-| Número de identidades em um gráfico | 50 | Quando um gráfico com 50 identidades vinculadas é atualizado, o Serviço de identidade aplica um mecanismo &quot;primeiro a entrar, primeiro a sair&quot; e exclui a identidade mais antiga para abrir espaço para a identidade mais recente desse gráfico (**Nota**: o Perfil do cliente em tempo real não é afetado). A exclusão se baseia no tipo de identidade e no carimbo de data e hora. O limite é aplicado no nível da sandbox. Para obter mais informações, leia a seção sobre [noções básicas sobre a lógica de exclusão](#deletion-logic). |
+| Número de identidades em um gráfico | 50 | Quando um gráfico com 50 identidades vinculadas é atualizado, o Serviço de Identidade aplica um mecanismo de &quot;primeiro a entrar, primeiro a sair&quot; e exclui a identidade mais antiga para abrir espaço para a identidade mais recente desse gráfico (**Observação**: o Perfil do cliente em tempo real não é afetado). A exclusão se baseia no tipo de identidade e no carimbo de data e hora. O limite é aplicado no nível da sandbox. Para obter mais informações, leia a seção sobre [noções básicas sobre a lógica de exclusão](#deletion-logic). |
 | Número de links para uma identidade para uma única assimilação em lote | 50 | Um único lote pode conter identidades anômalas que causam mesclagens de gráficos indesejadas. Para evitar que isso aconteça, o Serviço de identidade não assimilará identidades que já estejam vinculadas a 50 ou mais identidades. |
 | Número de identidades em um registro XDM | 20 | O número mínimo de registros XDM necessários é dois. |
 | Número de namespaces personalizados | None | Não há limites para o número de namespaces personalizados que você pode criar. |
@@ -56,7 +56,7 @@ A tabela a seguir descreve as regras existentes que devem ser seguidas para gara
 
 ### Assimilação do namespace de identidade
 
-A partir de 31 de março de 2023, o Serviço de identidade bloqueará a assimilação da Adobe Analytics ID (AAID) para novos clientes. Normalmente, essa identidade é assimilada por meio do [Origem do Adobe Analytics](../sources/connectors/adobe-applications/analytics.md) e a variável [Origem do Adobe Audience Manager](../sources//connectors/adobe-applications/audience-manager.md) e é redundante porque a ECID representa o mesmo navegador da Web. Se quiser alterar essa configuração padrão, entre em contato com a equipe de conta do Adobe.
+A partir de 31 de março de 2023, o Serviço de identidade bloqueará a assimilação da Adobe Analytics ID (AAID) para novos clientes. Normalmente, esta identidade é assimilada por meio da [origem do Adobe Analytics](../sources/connectors/adobe-applications/analytics.md) e da [origem do Adobe Audience Manager](../sources//connectors/adobe-applications/audience-manager.md) e é redundante porque a ECID representa o mesmo navegador da Web. Se quiser alterar essa configuração padrão, entre em contato com a equipe de conta do Adobe.
 
 ## Noções básicas sobre a lógica de exclusão quando um gráfico de identidade na capacidade é atualizado {#deletion-logic}
 
@@ -98,27 +98,27 @@ Quando esse recurso estiver disponível, os gráficos que excederem o limite de 
 A exclusão acontece somente com os dados no Serviço de identidade, não com o Perfil do cliente em tempo real.
 
 * Esse comportamento poderia, consequentemente, criar mais perfis com uma única ECID, pois a ECID não faz mais parte do gráfico de identidade.
-* Para ficar dentro dos números de direito do público-alvo endereçável, é recomendável ativar [expiração de dados de perfil pseudônimo](../profile/pseudonymous-profiles.md) para excluir os perfis antigos.
+* Para que você fique dentro de seus números de direito de público endereçável, é recomendável habilitar a [expiração de dados de perfil pseudônimo](../profile/pseudonymous-profiles.md) para excluir seus perfis antigos.
 
 #### Perfil do cliente em tempo real e WebSDK: exclusão de identidade principal
 
 Se você quiser preservar seus eventos autenticados em relação à ID do CRM, é recomendável alterar as IDs primárias de ECID para CRM ID. Leia os seguintes documentos para obter as etapas sobre como implementar essa alteração:
 
-* [Configurar mapa de identidade para tags Experience Platform](../tags/extensions/client/web-sdk/data-element-types.md#identity-map).
+* [Configurar mapa de identidade para marcas Experience Platform](../tags/extensions/client/web-sdk/data-element-types.md#identity-map).
 * [Dados de identidade no SDK da Web do Experience Platform](../web-sdk/identity/overview.md#using-identitymap)
 
 ### Exemplos de cenários
 
 #### Exemplo um: gráfico grande típico
 
-*Notas do diagrama:*
+*Anotações do diagrama:*
 
-* `t` = carimbo de data e hora.
+* `t` = carimbo de data/hora.
 * O valor de um carimbo de data e hora corresponde à recenticidade de uma determinada identidade. Por exemplo, `t1` representa a primeira identidade vinculada (mais antiga) e `t51` representaria a identidade vinculada mais recente.
 
-Neste exemplo, antes que o gráfico à esquerda possa ser atualizado com uma nova identidade, o Serviço de identidade primeiro exclui a identidade existente com o carimbo de data e hora mais antigo. No entanto, como a identidade mais antiga é uma ID de dispositivo, o Serviço de identidade ignora essa identidade até que chegue ao namespace com um tipo que esteja mais alto na lista de prioridade de exclusão, que nesse caso é `ecid-3`. Depois que a identidade mais antiga com um tipo de prioridade de exclusão mais alta é removida, o gráfico é atualizado com um novo link, `ecid-51`.
+Neste exemplo, antes que o gráfico à esquerda possa ser atualizado com uma nova identidade, o Serviço de identidade primeiro exclui a identidade existente com o carimbo de data e hora mais antigo. No entanto, como a identidade mais antiga é uma ID de dispositivo, o Serviço de identidade ignora essa identidade até que chegue ao namespace com um tipo que esteja mais alto na lista de prioridade de exclusão, que neste caso é `ecid-3`. Depois que a identidade mais antiga com um tipo de prioridade de exclusão mais alta é removida, o gráfico é atualizado com um novo link, `ecid-51`.
 
-* No raro caso de haver duas identidades com o mesmo carimbo de data e hora e tipo de identidade, o Serviço de identidade classificará as IDs com base em [XID](./api/list-native-id.md) e realizar a exclusão.
+* No raro caso de haver duas identidades com o mesmo carimbo de data e hora e tipo de identidade, o Serviço de Identidade classificará as IDs com base em [XID](./api/list-native-id.md) e fará a exclusão.
 
 ![Um exemplo da identidade mais antiga sendo excluída para acomodar a identidade mais recente](./images/graph-limits-v3.png)
 
@@ -128,10 +128,10 @@ Neste exemplo, antes que o gráfico à esquerda possa ser atualizado com uma nov
 
 >[!TAB Evento de entrada]
 
-*Notas do diagrama:*
+*Anotações do diagrama:*
 
 * O diagrama a seguir presume que em `timestamp=50`, existem 50 identidades no gráfico de identidade.
-* `(...)` significa as outras identidades que já estão vinculadas no gráfico.
+* `(...)` significa as outras identidades que já estão vinculadas dentro do gráfico.
 
 Neste exemplo, ECID:32110 é assimilado e vinculado a um gráfico grande em `timestamp=51`, excedendo assim o limite de 50 identidades.
 
@@ -143,7 +143,7 @@ Como resultado, o Serviço de identidade exclui a identidade mais antiga com bas
 
 ![](./images/guardrails/during-split.png)
 
->[!TAB Saída do gráfico]
+>[!TAB Saída de gráfico]
 
 Como resultado da exclusão de ECID:35577, as bordas que vincularam CRM ID:60013 e CRM ID:25212 com o agora excluído ECID:35577 também são excluídas. Esse processo de exclusão faz com que o gráfico seja dividido em dois gráficos menores.
 
@@ -157,10 +157,10 @@ Como resultado da exclusão de ECID:35577, as bordas que vincularam CRM ID:60013
 
 >[!TAB Evento de entrada]
 
-*Notas do diagrama:*
+*Anotações do diagrama:*
 
 * O diagrama a seguir presume que em `timestamp=50`, existem 50 identidades no gráfico de identidade.
-* `(...)` significa as outras identidades que já estão vinculadas no gráfico.
+* `(...)` significa as outras identidades que já estão vinculadas dentro do gráfico.
 
 Devido à lógica de exclusão, algumas identidades de &quot;hub&quot; também podem ser excluídas. Essas identidades de hub se referem a nós vinculados a várias identidades individuais que, de outra forma, seriam desvinculadas.
 
@@ -173,11 +173,11 @@ No exemplo abaixo, ECID:21011 é assimilado e vinculado ao gráfico em `timestam
 Como resultado, o Serviço de identidade exclui a identidade mais antiga somente do gráfico de identidade, que neste caso é ECID:35577. A supressão da referência ECID:35577 também resulta na supressão do seguinte:
 
 * O link entre a ID de CRM: 60013 e a ECID:35577 excluída agora, resultando em um cenário de divisão de gráfico.
-* IDFA: 32110, IDFA: 02383, e as identidades restantes representadas por `(...)`. Essas identidades são excluídas porque, individualmente, não estão vinculadas a outras identidades e, portanto, não podem ser representadas em um gráfico.
+* IDFA: 32110, IDFA: 02383 e as identidades restantes representadas por `(...)`. Essas identidades são excluídas porque, individualmente, não estão vinculadas a outras identidades e, portanto, não podem ser representadas em um gráfico.
 
 ![](./images/guardrails/hub-and-spoke-process.png)
 
->[!TAB Saída do gráfico]
+>[!TAB Saída de gráfico]
 
 Finalmente, o processo de exclusão produz dois gráficos menores.
 

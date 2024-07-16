@@ -1,5 +1,5 @@
 ---
-title: Instale o SDK da Web usando a biblioteca JavaScript do
+title: Instale o SDK da Web usando a biblioteca do JavaScript
 description: Faça referência à biblioteca do SDK da Web usando um arquivo CDN independente.
 exl-id: bacfe938-4326-48f6-a321-bd16970e77eb
 source-git-commit: 9876390f7ba34c312f2ce4c00fe39e3ea1ef1ace
@@ -9,20 +9,20 @@ ht-degree: 0%
 
 ---
 
-# Instale o SDK da Web usando a biblioteca JavaScript do
+# Instale o SDK da Web usando a biblioteca do JavaScript
 
-Uma alternativa à instalação do SDK da Web sem [uso da extensão de tag](extension.md) é para fazer referência à biblioteca JavaScript hospedada em um CDN. Você pode fazer referência à biblioteca diretamente ou baixá-la e hospedá-la em sua própria infraestrutura. Ele está disponível em formatos minificados e completos.
+Uma alternativa para instalar o SDK da Web sem [usar a extensão de tag](extension.md) é fazer referência à biblioteca de JavaScript hospedada em um CDN. Você pode fazer referência à biblioteca diretamente ou baixá-la e hospedá-la em sua própria infraestrutura. Ele está disponível em formatos minificados e completos.
 
 A biblioteca do SDK da Web está disponível usando a seguinte estrutura de URL:
 
 * **Minificado**: `https://cdn1.adoberesources.net/alloy/[VERSION]/alloy.min.js`
-* **Completo**: `https://cdn1.adoberesources.net/alloy/[VERSION]/alloy.js`
+* **Cheio**: `https://cdn1.adoberesources.net/alloy/[VERSION]/alloy.js`
 
-Consulte a [notas de versão](../release-notes.md) para obter a versão mais recente a ser incluída no URL. Por exemplo, o URL para a versão completa da versão 2.19.1 é `https://cdn1.adoberesources.net/alloy/2.19.1/alloy.js`.
+Consulte as [notas de versão](../release-notes.md) para obter a versão mais recente a ser incluída na URL. Por exemplo, a URL para a versão completa da versão 2.19.1 é `https://cdn1.adoberesources.net/alloy/2.19.1/alloy.js`.
 
 ## Adição do código
 
-Adicione o bloco de código a seguir o mais alto possível na variável `<head>` tag do seu HTML:
+Adicione o seguinte bloco de código o mais alto possível na tag `<head>` do seu HTML:
 
 ```html
 <script>
@@ -34,4 +34,4 @@ Adicione o bloco de código a seguir o mais alto possível na variável `<head>`
 <script src="https://cdn1.adoberesources.net/alloy/2.19.1/alloy.min.js" async></script>
 ```
 
-Esse código cria de forma assíncrona uma `alloy` objeto que permite chamar qualquer comando do SDK da Web. Se quiser carregar o SDK da Web de forma síncrona, remova a variável `async` atributo na última linha do bloco de código. Remover o `async` O atributo bloqueia o restante do documento de HTML a ser analisado e renderizado pelo navegador até que a biblioteca seja carregada e executada. Normalmente, esse atraso adicional antes de exibir o conteúdo principal aos usuários não é recomendado, mas pode fazer sentido, dependendo das necessidades da empresa.
+Esse código cria de forma assíncrona um objeto `alloy` que permite chamar qualquer comando do SDK da Web. Se quiser carregar o SDK da Web de forma síncrona, você pode remover o atributo `async` na última linha do bloco de código. A remoção do atributo `async` impede que o restante do documento HTML seja analisado e renderizado pelo navegador até que a biblioteca seja carregada e executada. Normalmente, esse atraso adicional antes de exibir o conteúdo principal aos usuários não é recomendado, mas pode fazer sentido, dependendo das necessidades da empresa.

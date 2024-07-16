@@ -18,9 +18,9 @@ ht-degree: 2%
 >
 >Se um token de usuário for transmitido, o usuário do token deverá ter uma função de &quot;org admin&quot; para a organização solicitada.
 
-Você pode listar os nomes de todas as permissões e tipos de recursos fazendo uma solicitação GET para o `/acl/reference` terminal. Esses nomes podem ser usados em chamadas de API para [exibir políticas de controle de acesso efetivo](./effective-policies.md) para o usuário atual.
+Você pode listar os nomes de todas as permissões e tipos de recursos fazendo uma solicitação GET para o ponto de extremidade `/acl/reference`. Esses nomes podem ser usados em chamadas de API para [exibir as políticas de controle de acesso efetivo](./effective-policies.md) para o usuário atual.
 
-Uma permissão é uma política gerenciada por meio da Adobe Admin Console e mapeada para zero ou mais políticas do tipo recurso. Um tipo de recurso é uma política que habilita recursos de leitura, gravação e/ou exclusão para um tipo específico de [!DNL Platform] (como conjuntos de dados ou esquemas).
+Uma permissão é uma política gerenciada por meio da Adobe Admin Console e mapeada para zero ou mais políticas do tipo recurso. Um tipo de recurso é uma política que habilita recursos de leitura, gravação e/ou exclusão para um tipo específico de recurso [!DNL Platform] (como conjuntos de dados ou esquemas).
 
 **Formato da API**
 
@@ -40,7 +40,7 @@ curl -X GET \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna uma `permissions` objeto e um `resource-types` objeto, cada um contendo uma lista completa de nomes para permissões de acesso ou tipos de recursos, respectivamente.
+Uma resposta bem-sucedida retorna um objeto `permissions` e um objeto `resource-types`, cada um contendo uma lista completa de nomes para permissões de acesso ou tipos de recursos, respectivamente.
 
 ```json
 {

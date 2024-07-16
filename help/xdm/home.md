@@ -7,7 +7,7 @@ exl-id: 294d5f02-850f-47ea-9333-8b94a0bb291e
 source-git-commit: 48caa318f0e951979db4fd2c94624a73311422d6
 workflow-type: tm+mt
 source-wordcount: '2101'
-ht-degree: 0%
+ht-degree: 4%
 
 ---
 
@@ -27,7 +27,7 @@ O Experience Platform usa esquemas para descrever a estrutura dos dados de forma
 
 Antes que os dados possam ser assimilados na Platform, um esquema deve ser composto para descrever a estrutura dos dados e fornecer restrições ao tipo de dados que podem estar contidos em cada campo. Os esquemas consistem em uma classe base e zero ou mais grupos de campos de esquema.
 
-Para obter mais informações sobre o modelo de composição do schema, incluindo princípios de design e práticas recomendadas, consulte o [noções básicas da composição do esquema](schema/composition.md).
+Para obter mais informações sobre o modelo de composição de esquema, incluindo princípios de design e práticas recomendadas, consulte as [noções básicas da composição de esquema](schema/composition.md).
 
 ### Componentes XDM padrão {#Standard-xdm-components}
 
@@ -35,13 +35,13 @@ O XDM fornece uma coleção eficiente de grupos de campos e tipos de dados padr�
 
 Ao construir esquemas na interface do Experience Platform, os grupos de campos listados são mostrados com uma métrica de popularidade. Essa métrica é determinada pela frequência com que outros usuários da Platform empregam o grupo de campos em seus esquemas. Quanto maior o número, mais popular será o grupo de campos. Por padrão, os resultados são exibidos de mais popular a menos popular, mantendo você informado sobre as tendências de modelagem de dados do seu setor.
 
-![A coluna de popularidade do [!UICONTROL Adicionar grupo de campos] diálogo.](./images/overview/popularity.png)
+![A coluna de popularidade da caixa de diálogo [!UICONTROL Adicionar grupo de campos].](./images/overview/popularity.png)
 
 ### [!DNL Schema Library] {#schema-library}
 
-O Experience Platform fornece uma interface de usuário e API RESTful a partir das quais você pode visualizar e gerenciar todos os recursos relacionados ao esquema no Experience Platform **[!DNL Schema Library]**. A variável [!DNL Schema Library] O contém componentes XDM padrão disponibilizados para você pelo Adobe, bem como recursos de parceiros de Experience Platform e fornecedores cujos aplicativos você usa.
+O Experience Platform fornece uma interface de usuário e a API RESTful a partir da qual você pode exibir e gerenciar todos os recursos relacionados ao esquema no Experience Platform **[!DNL Schema Library]**. O [!DNL Schema Library] contém componentes XDM padrão disponibilizados a você pelo Adobe, bem como recursos de parceiros Experience Platform e fornecedores cujos aplicativos você usa.
 
-Você também pode criar e gerenciar novos esquemas e recursos exclusivos para sua organização usando o [!DNL Schema Registry API]ou a variável [!UICONTROL Esquemas] espaço de trabalho na interface do usuário da Platform.
+Você também pode criar e gerenciar novos esquemas e recursos que sejam exclusivos para sua organização usando o espaço de trabalho [!DNL Schema Registry API] ou [!UICONTROL Esquemas] na interface de usuário da plataforma.
 
 Para obter mais informações sobre como gerenciar e interagir com schemas na Platform, consulte a seguinte documentação:
 
@@ -53,31 +53,31 @@ Para obter mais informações sobre como gerenciar e interagir com schemas na Pl
 >[!CONTEXTUALHELP]
 >id="platform_schemas_behavior"
 >title="Comportamentos de dados"
->abstract="Os dados destinados ao uso no Experience Platform são agrupados em três tipos de comportamento: registro, série temporal e ad hoc. Os esquemas de registro fornecem informações sobre os atributos de um assunto, enquanto os esquemas de série temporal capturam um instantâneo do sistema no momento em que uma ação foi tomada. Esquemas ad hoc capturam campos com namespace para uso somente por um único conjunto de dados. Consulte a documentação para obter mais informações sobre comportamentos de dados na Platform."
+>abstract="Os dados destinados ao uso na Experience Platform são agrupados em três tipos de comportamento: registro, série de tempo e ad hoc. Os esquemas de registro fornecem informações sobre os atributos de um assunto, enquanto os esquemas de séries de tempo capturam um instantâneo do sistema no momento em que uma ação foi tomada. Os esquemas ad hoc capturam campos que são namespaces usados somente por um único conjunto de dados. Consulte a documentação para obter mais informações sobre comportamentos de dados na Platform."
 
 Os dados destinados ao uso no Experience Platform são agrupados em três tipos de comportamento:
 
-* **Gravar**: fornece informações sobre os atributos de um assunto. Um assunto pode ser uma organização ou um indivíduo.
-* **Séries cronológicas**: fornece um instantâneo do sistema no momento em que uma ação foi tomada direta ou indiretamente por um titular de registro.
+* **Registro**: fornece informações sobre os atributos de um assunto. Um assunto pode ser uma organização ou um indivíduo.
+* **Série temporal**: fornece um instantâneo do sistema no momento em que uma ação foi tomada direta ou indiretamente por um assunto de registro.
 * **Ad-hoc**: captura campos com namespace para uso somente por um único conjunto de dados. Esquemas ad-hoc são usados em vários workflows de assimilação de dados para o Experience Platform, incluindo a assimilação de arquivos CSV e a criação de determinados tipos de conexões de origem.
 
 Todos os esquemas XDM descrevem dados que podem ser categorizados como registro ou série de tempo. O comportamento dos dados de um schema é definido pela classe do schema, que é atribuída a um schema quando ele é criado pela primeira vez. As classes XDM descrevem o menor número de propriedades que um esquema deve conter para representar um comportamento de dados específico.
 
-Embora seja possível definir suas próprias classes na variável [!DNL Schema Registry], é recomendável usar as classes padrão **[!UICONTROL Perfil individual XDM]** e **[!UICONTROL XDM ExperienceEvent]** para dados de registro e de séries cronológicas, respectivamente. Essas classes são descritas mais detalhadamente abaixo.
+Embora você possa definir suas próprias classes no [!DNL Schema Registry], é recomendável usar as classes padrão **[!UICONTROL Perfil Individual XDM]** e **[!UICONTROL XDM ExperienceEvent]** para dados de registro e série temporal, respectivamente. Essas classes são descritas mais detalhadamente abaixo.
 
 >[!NOTE]
 >
->Não há classes padrão baseadas no comportamento ad-hoc. Esquemas ad-hoc são gerados automaticamente pelos processos da Platform que os usam, mas também podem ser [criado manualmente usando a API do registro de esquema](./tutorials/ad-hoc.md).
+>Não há classes padrão baseadas no comportamento ad-hoc. Esquemas ad-hoc são gerados automaticamente pelos processos da Platform que os utilizam, mas também podem ser [criados manualmente usando a API do Registro de Esquemas](./tutorials/ad-hoc.md).
 
 ### [!UICONTROL Perfil individual XDM] {#xdm-individual-profile}
 
-[!UICONTROL Perfil individual XDM] é uma classe baseada em registros que forma uma representação singular dos atributos de indivíduos identificados e parcialmente identificados. Os perfis altamente identificados podem ser usados para comunicações pessoais ou engajamentos direcionados. Perfis altamente identificados podem conter informações pessoais detalhadas, como nome, sexo, data de nascimento, local e informações de contato, incluindo números de telefone e endereços de email.
+[!UICONTROL O Perfil Individual XDM] é uma classe baseada em registros que forma uma representação singular dos atributos de assuntos identificados e parcialmente identificados. Os perfis altamente identificados podem ser usados para comunicações pessoais ou engajamentos direcionados. Perfis altamente identificados podem conter informações pessoais detalhadas, como nome, sexo, data de nascimento, local e informações de contato, incluindo números de telefone e endereços de email.
 
 Perfis menos identificados podem consistir apenas em sinais comportamentais anônimos, como cookies do navegador. Nesse caso, os dados esparsos do perfil são usados para criar uma base de informações na qual os interesses e as preferências do perfil anônimo são agrupados e armazenados. Esses identificadores podem se tornar mais detalhados ao longo do tempo, à medida que o assunto se inscreve para notificações, assinaturas, compras e assim por diante. Esse aumento nos atributos do perfil pode eventualmente resultar em um assunto identificado e permitir um grau mais alto de envolvimento direcionado.
 
 À medida que o perfil continua a crescer, ele se torna um repositório robusto de informações pessoais, informações de identificação, detalhes de contato e preferências de comunicação de um indivíduo.
 
-Consulte a [[!UICONTROL Perfil individual XDM] guia de referência](./classes/individual-profile.md) para obter mais informações sobre a estrutura e caso de uso dos campos fornecidos pela classe.
+Consulte o [[!UICONTROL Guia de referência do Perfil Individual XDM]](./classes/individual-profile.md) para obter mais informações sobre a estrutura e o caso de uso dos campos fornecidos pela classe.
 
 ### [!UICONTROL XDM ExperienceEvent] {#xdm-experience-event}
 
@@ -89,7 +89,7 @@ Embora nem todos os eventos sejam facilmente categorizados em todas as fontes de
 
 ![Um infográfico da Jornada do cliente visualizado com eventos de experiência ao longo do tempo.](images/overview/experience-event-journey.png)
 
-Consulte a [[!UICONTROL XDM ExperienceEvent] guia de referência](./classes/experienceevent.md) para obter mais informações sobre a estrutura e caso de uso dos campos fornecidos pela classe.
+Consulte o [[!UICONTROL guia de referência do XDM ExperienceEvent]](./classes/experienceevent.md) para obter mais informações sobre a estrutura e o caso de uso dos campos fornecidos pela classe.
 
 ## Esquemas XDM e serviços de Experience Platform {#schemas-and-platform-services}
 
@@ -103,7 +103,7 @@ Os dados do catálogo são armazenados no data lake, um armazenamento de dados a
 
 Para começar a assimilar dados no Experience Platform, você pode usar o Serviço de catálogo para criar um conjunto de dados. O conjunto de dados faz referência a um esquema XDM que descreve a estrutura dos dados que serão assimilados. Se um conjunto de dados for criado sem um esquema, o Experience Platform derivará um &quot;esquema observado&quot; ao inspecionar o tipo e o conteúdo dos campos de dados assimilados. Os conjuntos de dados são rastreados no Serviço de catálogo e armazenados no lago de dados ao lado dos esquemas e esquemas observados nos quais se baseiam.
 
-Consulte a [Visão geral do Serviço de catálogo](../catalog/home.md) para obter mais informações. Consulte a [Visão geral da assimilação de dados](../ingestion/home.md) para obter mais informações sobre a assimilação de dados da Adobe Experience Platform.
+Consulte a [Visão geral do Serviço de Catálogo](../catalog/home.md) para obter mais informações. Consulte a [Visão geral da assimilação de dados](../ingestion/home.md) para obter mais informações sobre a assimilação de dados do Adobe Experience Platform.
 
 ### Query Service {#query-service}
 
@@ -117,30 +117,30 @@ Consulte a [Visão geral do Serviço de consulta](../query-service/home.md) para
 
 O Perfil do cliente em tempo real fornece um perfil do cliente centralizado para gerenciamento de experiência direcionado e personalizado. Cada perfil contém dados agregados em todos os sistemas e inclui contas acionáveis com carimbo de data e hora de eventos que envolvem o assunto do perfil. Esses eventos podem ter ocorrido em qualquer um dos sistemas utilizados com o Experience Platform.
 
-O Perfil do cliente em tempo real consome dados formatados por esquema com base na [!UICONTROL Perfil individual XDM] e [!UICONTROL XDM ExperienceEvent] classes e responde a consultas com base nesses dados.
+O Perfil de cliente em tempo real consome dados formatados por esquema com base nas classes [!UICONTROL Perfil individual XDM] e [!UICONTROL XDM ExperienceEvent] e responde a consultas com base nesses dados.
 
 O sistema mantém uma instância de cada perfil de cliente, mesclando dados para formar uma &quot;única fonte da verdade&quot; para o indivíduo. Esses dados unificados são representados usando o que é conhecido como &quot;esquema de união&quot; (às vezes chamado de &quot;visualização de união&quot;). Um esquema de união agrega os campos de todos os esquemas que implementam a mesma classe em um único esquema. Ao compor um esquema usando a interface ou a API do, você pode ativar o esquema para uso com o Perfil do cliente em tempo real e marcá-lo para inclusão na união. O esquema marcado participará da definição do esquema que está sendo alimentado para o Perfil.
 
-Como [!UICONTROL Perfil individual XDM] e [!UICONTROL XDM ExperienceEvent] Quando os dados forem assimilados no data lake, o Perfil do cliente em tempo real assimilará todos os dados que foram ativados para seu uso. Quanto mais interações e detalhes forem assimilados, mais robustos os perfis individuais se tornarão.
+Como os dados do [!UICONTROL Perfil Individual XDM] e do [!UICONTROL XDM ExperienceEvent] são assimilados no data lake, o Perfil do Cliente em Tempo Real assimila todos os dados que foram habilitados para uso. Quanto mais interações e detalhes forem assimilados, mais robustos os perfis individuais se tornarão.
 
-[!UICONTROL Perfil individual XDM] Os dados do ajudam a informar e capacitar ações em qualquer integração de canal ou Adobe. Quando combinados com um histórico avançado de dados comportamentais e de interação, esses dados podem ser usados para potencializar o aprendizado de máquina. A API do Perfil do cliente em tempo real também pode ser usada para enriquecer a funcionalidade de soluções de terceiros, CRMs e soluções proprietárias.
+Os dados do [!UICONTROL Perfil individual XDM] ajudam a informar e potencializar ações em qualquer integração de canal ou Adobe. Quando combinados com um histórico avançado de dados comportamentais e de interação, esses dados podem ser usados para potencializar o aprendizado de máquina. A API do Perfil do cliente em tempo real também pode ser usada para enriquecer a funcionalidade de soluções de terceiros, CRMs e soluções proprietárias.
 
 Consulte a [Visão geral do Perfil do cliente em tempo real](../profile/home.md) para obter mais informações.
 
 ### Espaço de trabalho do Data Science {#data-science-workspace}
 
-O Espaço de trabalho de ciência de dados da Adobe Experience Platform usa aprendizado de máquina e inteligência artificial para obter insights dos dados armazenados no Experience Platform. O Espaço de trabalho de ciência de dados permite que cientistas de dados criem receitas com base em [!UICONTROL Perfil individual XDM] e [!UICONTROL XDM ExperienceEvent] dados sobre clientes e suas atividades. Essas receitas facilitam previsões, como propensão de compra e ofertas recomendadas que o indivíduo provavelmente apreciará e usará.
+O Adobe Experience Platform Data Science Workspace usa aprendizagem de máquina e inteligência artificial para obter insights de dados armazenados no Experience Platform. O Data Science Workspace permite que cientistas de dados criem receitas com base nos dados do [!UICONTROL Perfil individual XDM] e do [!UICONTROL XDM ExperienceEvent] sobre clientes e suas atividades. Essas receitas facilitam previsões, como propensão de compra e ofertas recomendadas que o indivíduo provavelmente apreciará e usará.
 
 Com o Data Science Workspace, os cientistas de dados podem criar facilmente APIs de serviço inteligentes alimentadas pelo aprendizado de máquina. Esses serviços trabalham com outras soluções da Adobe, como Adobe Target e Adobe Analytics Cloud, para ajudá-lo a automatizar experiências digitais personalizadas e direcionadas.
 
-Para obter mais informações sobre como usar dados do Experience Platform para potencializar insights, consulte o [Visão geral do Espaço de trabalho de ciência de dados](../data-science-workspace/home.md).
+Para obter mais informações sobre como usar dados do Experience Platform para potencializar insights, consulte a [visão geral do Data Science Workspace](../data-science-workspace/home.md).
 
 ## Próximas etapas e recursos adicionais
 
 Agora que você entende melhor o papel dos esquemas em todo o Experience Platform, você está pronto para começar a compor o seu próprio.
 
-Para conhecer os princípios de design e as práticas recomendadas para compor schemas a serem usados com o Experience Platform, comece lendo o [noções básicas da composição do esquema](schema/composition.md). Para obter instruções passo a passo sobre como criar um esquema, consulte os tutoriais sobre criação de um esquema [uso da API](tutorials/create-schema-api.md) ou [uso da interface do usuário](tutorials/create-schema-ui.md).
+Para saber mais sobre os princípios de design e as práticas recomendadas para compor esquemas a serem usados com o Experience Platform, comece lendo as [noções básicas da composição de esquema](schema/composition.md). Para obter instruções passo a passo sobre como criar um esquema, consulte os tutoriais em criação de um esquema [usando a API](tutorials/create-schema-api.md) ou [usando a interface do usuário](tutorials/create-schema-ui.md).
 
-Para reforçar sua compreensão de [!DNL XDM System] no Experience Platform, assista ao seguinte vídeo:
+Para reforçar sua compreensão do [!DNL XDM System] no Experience Platform, assista ao seguinte vídeo:
 
 >[!VIDEO](https://video.tv.adobe.com/v/27105?quality=12&learn=on)

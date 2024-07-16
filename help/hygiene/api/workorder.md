@@ -14,25 +14,25 @@ ht-degree: 2%
 
 # Ponto de extremidade da ordem de trabalho {#work-order-endpoint}
 
-A variável `/workorder` O endpoint na API da higiene de dados permite gerenciar de forma programática as solicitações de exclusão de registros no Adobe Experience Platform.
+O ponto de extremidade `/workorder` na API da higiene de dados permite gerenciar programaticamente solicitações de exclusão de registros no Adobe Experience Platform.
 
 >[!IMPORTANT]
 > 
->O recurso de Exclusão de registro está atualmente na versão beta e só está disponível em um **versão limitada**. Não está disponível para todos os clientes. As solicitações de exclusão de registro só estão disponíveis para organizações na versão limitada.
+>O recurso de Exclusão de Registro está atualmente no Beta e só está disponível em uma **versão limitada**. Não está disponível para todos os clientes. As solicitações de exclusão de registro só estão disponíveis para organizações na versão limitada.
 >
->As exclusões de registros devem ser usadas para limpeza de dados, remoção de dados anônimos ou minimização de dados. Eles são **não** a ser usado para solicitações de direitos do titular dos dados (conformidade) como relacionadas a regulamentos de privacidade, como o Regulamento Geral sobre a Proteção de Dados (GDPR). Para todos os casos de uso de conformidade, use [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) em vez disso.
+>As exclusões de registros devem ser usadas para limpeza de dados, remoção de dados anônimos ou minimização de dados. Eles **não** devem ser usados para solicitações de direitos do titular dos dados (conformidade) relacionadas a regulamentos de privacidade, como o Regulamento Geral sobre a Proteção de Dados (GDPR). Para todos os casos de uso de conformidade, use o [Adobe Experience Platform Privacy Service](../../privacy-service/home.md).
 
 ## Introdução
 
-O endpoint usado neste guia faz parte da API de higiene de dados. Antes de continuar, reveja o [visão geral](./overview.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre os cabeçalhos necessários para fazer chamadas com êxito para qualquer API de Experience Platform.
+O endpoint usado neste guia faz parte da API de higiene de dados. Antes de continuar, revise a [visão geral](./overview.md) para obter os links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre os cabeçalhos necessários para fazer chamadas para qualquer API de Experience Platform com êxito.
 
 ## Criar uma solicitação de exclusão de registro {#create}
 
-Você pode excluir uma ou mais identidades de um único conjunto de dados ou de todos os conjuntos de dados fazendo uma solicitação POST para o `/workorder` terminal.
+Você pode excluir uma ou mais identidades de um único conjunto de dados ou de todos os conjuntos de dados fazendo uma solicitação POST para o ponto de extremidade `/workorder`.
 
 >[!IMPORTANT]
 > 
->Há diferentes limites para o número total de exclusões de registros de identidade únicos que podem ser enviadas a cada mês. Esses limites são baseados no seu contrato de licença. As organizações que compraram todas as edições do Adobe Real-time Customer Data Platform e do Adobe Journey Optimizer podem enviar até 100.000 exclusões de registro de identidade a cada mês. Organizações que compraram **Adobe Healthcare Shield** ou **Proteção de segurança e privacidade do Adobe** O pode enviar até 600.000 exclusões de registros de identidade a cada mês.<br>Um único [solicitação de exclusão de registro por meio da interface](../ui/record-delete.md) O permite enviar 10.000 IDs de uma vez. O método da API para excluir registros permite o envio de 100.000 IDs de uma vez.<br>É uma prática recomendada enviar o máximo possível de IDs por solicitação, até o limite de ID. Quando você pretende excluir um grande volume de IDs, deve evitar o envio de um pequeno volume ou de uma única ID por solicitação de exclusão de registro.
+>Há diferentes limites para o número total de exclusões de registros de identidade únicos que podem ser enviadas a cada mês. Esses limites são baseados no seu contrato de licença. As organizações que compraram todas as edições do Adobe Real-time Customer Data Platform e do Adobe Journey Optimizer podem enviar até 100.000 exclusões de registro de identidade a cada mês. As organizações que compraram o **Adobe Healthcare Shield** ou o **Adobe Privacy &amp; Security Shield** podem enviar até 600.000 exclusões de registros de identidade a cada mês.<br>Uma única solicitação de exclusão de [registro por meio da interface](../ui/record-delete.md) permite enviar 10.000 IDs de uma vez. O método da API para excluir registros permite o envio de 100.000 IDs de uma vez.<br>É prática recomendada enviar o máximo possível de IDs por solicitação, até o limite de ID. Quando você pretende excluir um grande volume de IDs, deve evitar o envio de um pequeno volume ou de uma única ID por solicitação de exclusão de registro.
 
 **Formato da API**
 
@@ -46,7 +46,7 @@ POST /workorder
 
 **Solicitação**
 
-Dependendo do valor da variável `datasetId` fornecido na carga da solicitação, a chamada à API excluirá identidades de todos os conjuntos de dados ou de um único conjunto de dados especificado. A solicitação a seguir exclui três identidades de um conjunto de dados específico.
+Dependendo do valor de `datasetId` fornecido na carga da solicitação, a chamada de API excluirá identidades de todos os conjuntos de dados ou de um único conjunto de dados especificado. A solicitação a seguir exclui três identidades de um conjunto de dados específico.
 
 ```shell
 curl -X POST \
@@ -87,10 +87,10 @@ curl -X POST \
 | Propriedade | Descrição |
 | --- | --- |
 | `action` | A ação a ser executada. O valor deve ser definido como `delete_identity` para exclusões de registro. |
-| `datasetId` | Se você estiver excluindo de um único conjunto de dados, esse valor deverá ser a ID do conjunto de dados em questão. Se estiver excluindo de todos os conjuntos de dados, defina o valor como `ALL`.<br><br>Se você estiver especificando um único conjunto de dados, o esquema do Experience Data Model (XDM) associado ao conjunto de dados deve ter uma identidade primária definida. Se o conjunto de dados não tiver uma identidade primária, ele deverá ter um mapa de identidade para ser modificado por uma solicitação do ciclo de vida dos dados.<br>Se um mapa de identidade existir, ele estará presente como um campo de nível superior chamado `identityMap`.<br>Observe que uma linha de conjunto de dados pode ter muitas identidades em seu mapa de identidade, mas apenas uma pode ser marcada como primária. `"primary": true` deve ser incluído para forçar a `id` para corresponder a uma identidade principal. |
+| `datasetId` | Se você estiver excluindo de um único conjunto de dados, esse valor deverá ser a ID do conjunto de dados em questão. Se você estiver excluindo de todos os conjuntos de dados, defina o valor como `ALL`.<br><br>Se você estiver especificando um único conjunto de dados, o esquema do Experience Data Model (XDM) associado ao conjunto de dados deve ter uma identidade primária definida. Se o conjunto de dados não tiver uma identidade primária, ele deverá ter um mapa de identidade para ser modificado por uma solicitação do ciclo de vida dos dados.<br>Se existir um mapa de identidade, ele estará presente como um campo de nível superior chamado `identityMap`.<br>Observe que uma linha de conjunto de dados pode ter muitas identidades em seu mapa de identidade, mas apenas uma pode ser marcada como primária. `"primary": true` deve ser incluído para forçar `id` a corresponder a uma identidade principal. |
 | `displayName` | O nome de exibição da solicitação de exclusão de registro. |
 | `description` | Uma descrição para a solicitação de exclusão de registro. |
-| `identities` | Uma matriz que contém as identidades de pelo menos um usuário cujas informações você deseja excluir. Cada identidade é composta de um [namespace de identidade](../../identity-service/features/namespaces.md) e um valor:<ul><li>`namespace`: contém uma única propriedade de sequência de caracteres, `code`, que representa o namespace de identidade. </li><li>`id`: o valor da identidade.</ul>Se `datasetId` especifica um único conjunto de dados, cada entidade em `identities` deve usar o mesmo namespace de identidade que a identidade primária do esquema.<br><br>Se `datasetId` está definida como `ALL`, o `identities` a matriz não está restrita a um único namespace, pois cada conjunto de dados pode ser diferente. No entanto, suas solicitações ainda restringem os namespaces disponíveis para sua organização, conforme relatado por [Serviço de identidade](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces). |
+| `identities` | Uma matriz que contém as identidades de pelo menos um usuário cujas informações você deseja excluir. Cada identidade é composta de um [namespace de identidade](../../identity-service/features/namespaces.md) e um valor:<ul><li>`namespace`: Contém uma única propriedade de cadeia de caracteres, `code`, que representa o namespace de identidade. </li><li>`id`: o valor de identidade.</ul>Se `datasetId` especificar um único conjunto de dados, cada entidade em `identities` deverá usar o mesmo namespace de identidade que a identidade principal do esquema.<br><br>Se `datasetId` estiver definido como `ALL`, a matriz `identities` não estará restrita a nenhum namespace único, pois cada conjunto de dados pode ser diferente. No entanto, suas solicitações ainda restringem os namespaces disponíveis para sua organização, conforme relatado pelo [Serviço de Identidade](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces). |
 
 {style="table-layout:auto"}
 
@@ -130,7 +130,7 @@ Uma resposta bem-sucedida retorna os detalhes da exclusão do registro.
 
 ## Recuperar o status de uma exclusão de registro {#lookup}
 
-Depois que você [criar uma solicitação de exclusão de registro](#create), é possível verificar o status usando uma solicitação do GET.
+Depois de [criar uma solicitação de exclusão de registro](#create), você poderá verificar seu status usando uma solicitação GET.
 
 **Formato da API**
 
@@ -140,7 +140,7 @@ GET /workorder/{WORK_ORDER_ID}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{WORK_ORDER_ID}` | A variável `workorderId` da exclusão de registro que você está pesquisando. |
+| `{WORK_ORDER_ID}` | O `workorderId` da exclusão de registro que você está procurando. |
 
 {style="table-layout:auto"}
 
@@ -203,11 +203,11 @@ Uma resposta bem-sucedida retorna os detalhes da operação de exclusão, inclui
 | `status` | O status atual da ordem de exclusão. |
 | `createdBy` | O usuário que criou a ordem de exclusão. |
 | `datasetId` | A ID do conjunto de dados sujeito à solicitação. Se a solicitação for para todos os conjuntos de dados, o valor será definido como `ALL`. |
-| `productStatusDetails` | Uma matriz que lista o status atual dos processos downstream relacionados à solicitação. Cada objeto de matriz contém as seguintes propriedades:<ul><li>`productName`: o nome do serviço downstream.</li><li>`productStatus`: o status de processamento atual da solicitação do serviço downstream.</li><li>`createdAt`: um carimbo de data e hora de quando o status mais recente foi postado pelo serviço.</li></ul> |
+| `productStatusDetails` | Uma matriz que lista o status atual dos processos downstream relacionados à solicitação. Cada objeto de matriz contém as seguintes propriedades:<ul><li>`productName`: O nome do serviço downstream.</li><li>`productStatus`: o status de processamento atual da solicitação do serviço downstream.</li><li>`createdAt`: Um carimbo de data e hora de quando o status mais recente foi postado pelo serviço.</li></ul> |
 
 ## Atualizar uma solicitação de exclusão de registro
 
-Você pode atualizar o `displayName` e `description` para uma exclusão de registro fazendo uma solicitação PUT.
+Você pode atualizar o `displayName` e o `description` para uma exclusão de registro fazendo uma solicitação PUT.
 
 **Formato da API**
 
@@ -217,7 +217,7 @@ PUT /workorder{WORK_ORDER_ID}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{WORK_ORDER_ID}` | A variável `workorderId` da exclusão de registro que você está pesquisando. |
+| `{WORK_ORDER_ID}` | O `workorderId` da exclusão de registro que você está procurando. |
 
 {style="table-layout:auto"}
 
@@ -298,6 +298,6 @@ Uma resposta bem-sucedida retorna os detalhes da exclusão do registro.
 | `status` | O status atual da ordem de exclusão. |
 | `createdBy` | O usuário que criou a ordem de exclusão. |
 | `datasetId` | A ID do conjunto de dados sujeito à solicitação. Se a solicitação for para todos os conjuntos de dados, o valor será definido como `ALL`. |
-| `productStatusDetails` | Uma matriz que lista o status atual dos processos downstream relacionados à solicitação. Cada objeto de matriz contém as seguintes propriedades:<ul><li>`productName`: o nome do serviço downstream.</li><li>`productStatus`: o status de processamento atual da solicitação do serviço downstream.</li><li>`createdAt`: um carimbo de data e hora de quando o status mais recente foi postado pelo serviço.</li></ul> |
+| `productStatusDetails` | Uma matriz que lista o status atual dos processos downstream relacionados à solicitação. Cada objeto de matriz contém as seguintes propriedades:<ul><li>`productName`: O nome do serviço downstream.</li><li>`productStatus`: o status de processamento atual da solicitação do serviço downstream.</li><li>`createdAt`: Um carimbo de data e hora de quando o status mais recente foi postado pelo serviço.</li></ul> |
 
 {style="table-layout:auto"}

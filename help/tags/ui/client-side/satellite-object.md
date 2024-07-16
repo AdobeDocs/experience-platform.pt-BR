@@ -51,9 +51,9 @@ No exemplo fornecido, se um elemento de dados existir com um nome correspondente
 
 >[!NOTE]
 >
->É possível usar a porcentagem (`%`) para fazer referência a variáveis para muitos campos de formulário na implementação de tags, reduzindo a necessidade de chamar `_satellite.getVar()`. Por exemplo, usando `%product%` acessará o valor do elemento de dados do produto ou a variável personalizada.
+>Você pode usar a sintaxe de porcentagem (`%`) para fazer referência a variáveis para muitos campos de formulário na implementação de tags, reduzindo a necessidade de chamar `_satellite.getVar()`. Por exemplo, usar `%product%` acessará o valor do elemento de dados do produto ou a variável personalizada.
 
-Quando um evento aciona uma regra, você pode transmitir as informações correspondentes da regra `event` objeto em `_satellite.getVar()` assim:
+Quando um evento aciona uma regra, você pode passar o objeto `event` correspondente da regra para `_satellite.getVar()` da seguinte maneira:
 
 ```javascript
 // event refers to the calling rule's event
@@ -64,7 +64,7 @@ var rule = _satellite.getVar('return event rule', event);
 
 >[!NOTE]
 >
->A variável `setVar` O código é totalmente separado de um elemento de dados especificado em Tags.
+>O código `setVar` é totalmente separado de um elemento de dados especificado nas Marcas.
 
 **Código**
 
@@ -146,7 +146,7 @@ Isso registra um aviso no console do navegador. A mensagem é exibida independen
 
 ## `cookie` {#cookie}
 
-`_satellite.cookie` contém funções para ler e gravar cookies. Essa é uma cópia exposta do js-cookie de biblioteca de terceiros. Para obter detalhes sobre o uso mais avançado desta biblioteca, consulte a [Documentação do js-cookie](https://www.npmjs.com/package/js-cookie#basic-usage).
+`_satellite.cookie` contém funções para ler e gravar cookies. Essa é uma cópia exposta do js-cookie de biblioteca de terceiros. Para obter detalhes sobre o uso mais avançado desta biblioteca, consulte a [documentação do cookie js](https://www.npmjs.com/package/js-cookie#basic-usage).
 
 ### Definir um cookie {#cookie-set}
 
@@ -160,7 +160,7 @@ _satellite.cookie.set(name: string, value: string[, attributes: Object])
 
 >[!NOTE]
 >
->No antigo [`setCookie`](#setCookie) método de configuração de cookies, o terceiro argumento (opcional) para essa chamada de função era um número inteiro que indicava o tempo de expiração do cookie em dias. Neste novo método, um objeto &quot;atributos&quot; é aceito como um terceiro argumento. Para definir uma expiração para um cookie usando o novo método, você deve fornecer um `expires` no objeto attributes e defina-o com o valor desejado. Isso é demonstrado no exemplo abaixo.
+>No antigo método [`setCookie`](#setCookie) de definição de cookies, o terceiro argumento (opcional) para essa chamada de função era um número inteiro que indicava o tempo de expiração do cookie em dias. Neste novo método, um objeto &quot;atributos&quot; é aceito como um terceiro argumento. Para definir uma expiração para um cookie usando o novo método, você deve fornecer uma propriedade `expires` no objeto de atributos e defini-la com o valor desejado. Isso é demonstrado no exemplo abaixo.
 
 **Exemplo**
 
@@ -260,7 +260,7 @@ O objeto contém as seguintes propriedades:
 | Propriedade | Descrição |
 | --- | --- |
 | `id` | A ID do ambiente. |
-| `stage` | O ambiente para o qual essa biblioteca foi criada. Os valores possíveis são `development`, `staging`, e `production`. |
+| `stage` | O ambiente para o qual essa biblioteca foi criada. Os valores possíveis são `development`, `staging` e `production`. |
 
 ## `notify`
 

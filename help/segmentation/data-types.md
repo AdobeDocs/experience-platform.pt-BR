@@ -5,8 +5,8 @@ description: Todos os tipos de dados do Experience Data Model (XDM) são compat�
 exl-id: 73f932a7-f864-4566-ade7-c148a12dc83c
 source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '490'
-ht-degree: 4%
+source-wordcount: '478'
+ht-degree: 3%
 
 ---
 
@@ -28,7 +28,7 @@ Os dados de string são incluídos nas definições de segmento usando instruç�
 
 ## Dados de data
 
-Dados de data permitem atribuir contexto baseado em tempo às definições de segmento, usando datas de início/término específicas ou usando instruções relevantes à data, conforme mostrado na tabela abaixo. Uma implementação pode criar um público-alvo de clientes que interagiram com sua marca a qualquer momento *este ano* e também esteve ativo *no prazo de* nos últimos dias.
+Dados de data permitem atribuir contexto baseado em tempo às definições de segmento, usando datas de início/término específicas ou usando instruções relevantes à data, conforme mostrado na tabela abaixo. Uma implementação pode estar criando um público-alvo de clientes que interagiram com sua marca a qualquer momento *este ano* e que também estiveram ativos *nos* últimos dias.
 
 | Exemplo de campo | Demonstrativos relevantes à data | Linha do tempo |
 | ------------- | ------------------------ | --------- |
@@ -37,11 +37,11 @@ Dados de data permitem atribuir contexto baseado em tempo às definições de se
 
 ## Eventos de experiência
 
-Como um esquema do Adobe Experience Platform, [!DNL XDM ExperienceEvents] registrar interações explícitas e implícitas do cliente com o [!DNL Platform]- aplicativos integrados, incluindo um instantâneo do sistema no momento em que a interação ocorreu. [!DNL ExperienceEvents] são registros de fatos. Dessa forma, elas são uma fonte de dados disponível durante a definição do segmento.
+Como um esquema do Adobe Experience Platform, [!DNL XDM ExperienceEvents] registra interações explícitas e implícitas do cliente com aplicativos integrados ao [!DNL Platform], incluindo um instantâneo do sistema no momento em que a interação ocorreu. [!DNL ExperienceEvents] são registros de fatos. Dessa forma, elas são uma fonte de dados disponível durante a definição do segmento.
 
 Como visto na tabela abaixo, os dados do evento são renderizados usando palavras-chave que ajudam a refinar o comportamento do evento e especificar atributos do evento.
 
-| Palavra-chave | Use  |
+| Palavra-chave | Uso |
 | ------- | --- |
 | Incluir/excluir | Descreve o comportamento do evento por meio da inclusão ou omissão de dados. |
 | Qualquer/todos | Ajuda a determinar o número de definições de segmento qualificado. |
@@ -52,22 +52,22 @@ Como visto na tabela abaixo, os dados do evento são renderizados usando palavra
 
 Públicos-alvo externos também podem ser usados como componentes de uma nova definição de segmento, adicionando suas regras de atributo às novas definições de segmento.
 
-Atualmente, somente o Adobe Audience Manager é compatível como público-alvo externo, com fontes adicionais sendo ativadas no futuro. Mais informações sobre o uso dos públicos-alvo da Adobe Audience Manager com a Platform podem ser encontradas na [guia de compartilhamento de público-alvo na documentação do Adobe Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html).
+Atualmente, somente o Adobe Audience Manager é compatível como público-alvo externo, com fontes adicionais sendo ativadas no futuro. Mais informações sobre como usar os públicos da Adobe Audience Manager com a Platform podem ser encontradas no [guia de compartilhamento de público-alvo na documentação da Adobe Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html).
 
 ### Compartilhamento de definição de segmento
 
-As definições de segmento criadas na Platform podem ser usadas em outros [Serviços principais da Adobe Experience Cloud](https://experienceleague.adobe.com/docs/core-services/interface/experience-cloud.html?lang=pt-BR). Para ativar esse recurso, entre em contato com seu arquiteto de soluções ou consultor.
+As definições de segmento criadas na Platform podem ser usadas em outros [Adobe Experience Cloud Core Services](https://experienceleague.adobe.com/docs/core-services/interface/experience-cloud.html?lang=pt-BR). Para ativar esse recurso, entre em contato com seu arquiteto de soluções ou consultor.
 
 ## Outros tipos de dados
 
 Além dos tipos de dados mencionados acima, a lista de tipos de dados compatíveis também inclui:
 
 - URI (Uniform Resource Identifier)
-- Enum
+- Enumeração
 - Número
 - Longo
 - Número inteiro
-- Short
+- Curto
 - Byte
 - Booleano
 - Matriz

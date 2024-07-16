@@ -4,27 +4,27 @@ description: Saiba como transformar dados no Adobe Experience Platform em recurs
 exl-id: 7fe017c9-ec46-42af-ac8f-734c4c6e24b5
 source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
 workflow-type: tm+mt
-source-wordcount: '1161'
-ht-degree: 14%
+source-wordcount: '1140'
+ht-degree: 12%
 
 ---
 
 # Recursos do engenheiro para aprendizado de máquina
 
-Este documento demonstra como transformar dados no Adobe Experience Platform em **recursos**, ou variáveis, que podem ser consumidas por um modelo de aprendizado de máquina. Esse processo é conhecido como **engenharia de recursos**. Use o Data Distiller para calcular recursos de aprendizado de máquina em escala e compartilhar esses recursos no seu ambiente de aprendizado de máquina. Isso envolve o seguinte:
+Este documento demonstra como você pode transformar dados no Adobe Experience Platform em **recursos**, ou variáveis, que podem ser consumidos por um modelo de aprendizado de máquina. Esse processo é conhecido como **engenharia de recursos**. Use o Data Distiller para calcular recursos de aprendizado de máquina em escala e compartilhar esses recursos no seu ambiente de aprendizado de máquina. Isso envolve o seguinte:
 
 1. Crie um modelo de consulta para definir os rótulos de destino e os recursos que deseja calcular para o seu modelo
 2. Executar a consulta e armazenar os resultados em um conjunto de dados de treinamento
 
 ## Definir os dados de treinamento {#define-training-data}
 
-O exemplo a seguir ilustra uma consulta para derivar dados de treinamento de um conjunto de dados de Eventos de experiência para um modelo prever a propensão de um usuário para assinar um boletim informativo. Os eventos de subscrição são representados pelo tipo de evento `web.formFilledOut`, e outros eventos comportamentais no conjunto de dados são usados para derivar recursos de nível de perfil para prever assinaturas.
+O exemplo a seguir ilustra uma consulta para derivar dados de treinamento de um conjunto de dados de Eventos de experiência para um modelo prever a propensão de um usuário para assinar um boletim informativo. Os eventos de assinatura são representados pelo tipo de evento `web.formFilledOut`, e outros eventos comportamentais no conjunto de dados são usados para derivar recursos de nível de perfil para prever assinaturas.
 
 ### Consultar rótulos positivos e negativos {#query-positive-and-negative-labels}
 
 Um conjunto de dados completo para treinar um modelo de aprendizado de máquina (supervisionado) inclui uma variável de público-alvo ou rótulo que representa o resultado a ser previsto, e um conjunto de recursos ou variáveis explicativas usadas para descrever os perfis de exemplo usados para treinar o modelo.
 
-Nesse caso, o rótulo é uma variável chamada `subscriptionOccurred` que é igual a 1 se o perfil do usuário tiver um evento com tipo `web.formFilledOut` , e 0 caso contrário. A consulta a seguir retorna um conjunto de 50.000 usuários do conjunto de dados de eventos, incluindo todos os usuários com rótulos positivos (`subscriptionOccurred = 1`), além de um usuário selecionado aleatoriamente com rótulos negativos para preencher o tamanho da amostra de 50.000 usuários. Isso garante que os dados de treinamento incluam exemplos positivos e negativos para o modelo aprender.
+Nesse caso, o rótulo é uma variável chamada `subscriptionOccurred` que é igual a 1 se o perfil do usuário tiver um evento com tipo `web.formFilledOut`, caso contrário é 0. A consulta a seguir retorna um conjunto de 50.000 usuários do conjunto de dados de eventos, incluindo todos os usuários com rótulos positivos (`subscriptionOccurred = 1`), além de um conjunto de usuários selecionados aleatoriamente com rótulos negativos para concluir o tamanho da amostra de 50.000 usuários. Isso garante que os dados de treinamento incluam exemplos positivos e negativos para o modelo aprender.
 
 ```python
 from aepp import queryservice
@@ -52,7 +52,7 @@ print(f"Number of classes: {len(df_labels)}")
 df_labels.head()
 ```
 
-**Saída de exemplo**
+**Exemplo de saída**
 
 Número de classes: 50000
 
@@ -70,12 +70,12 @@ Número de classes: 50000
 
 Com uma consulta apropriada, você pode coletar os eventos no conjunto de dados em recursos numéricos significativos que podem ser usados para treinar um modelo de propensão. Exemplos de eventos são vistos abaixo:
 
-- **Número de emails** que foram enviados para fins de marketing e recebidos pelo usuário.
-- Parte desses emails que foram **aberto**.
-- Parte desses emails em que o usuário **selecionado** o link.
-- **Número de produtos** que foram visualizadas.
-- Número de **propostas que interagiram com**.
-- Número de **propostas que foram rejeitadas**.
+- **Número de emails** enviados para fins de marketing e recebidos pelo usuário.
+- Parte destes emails foi **aberta**.
+- Parte desses emails em que o usuário **selecionou** o link.
+- **Número de produtos** que foram exibidos.
+- Número de **propostas que tiveram interação**.
+- Número de **propostas rejeitadas**.
 - Número de **links selecionados**.
 - Número de minutos entre dois emails consecutivos recebidos.
 - Número de minutos entre dois emails consecutivos abertos.
@@ -144,15 +144,15 @@ df_features.head()
 
 +++
 
-**Saída de exemplo**
+**Exemplo de saída**
 
 |   | userId | emailsReceived | emailsOpened | emailsClicked | productsViewed | propositionInteracts | propositionDismiss | webLinkClicks | minutes_since_emailSent | minutes_since_emailOpened | minutes_since_emailClick | minutes_since_productView | minutes_since_propositionInteract | minutes_since_propositionDismiss | minutes_since_linkClick |
 | --- |    --- |    ---   |  ---  |   ---  |   ---  |  ---  |  ---  |   ---  |   ---  |   ---  |   ---  |   ---  |   ---  |   ---  |   --- | 
-| 0 | 01102546977582484968046916668339306826 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | NaN | NaN | NaN | NaN | None | NaN |
-| 1 | 01102546977582484968046916668339306826 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | NaN | NaN | NaN | NaN | None | NaN |
-| 2 | 01102546977582484968046916668339306826 | 3 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | NaN | NaN | NaN | NaN | None | NaN |
-| 3 | 01102546977582484968046916668339306826 | 3 | 1 | 0 | 0 | 0 | 0 | 0 | 540.0 | 0.0 | NaN | NaN | NaN | None | NaN |
-| 4 | 01102546977582484968046916668339306826 | 3 | 2 | 0 | 0 | 0 | 0 | 0 | 588.0 | 0.0 | NaN | NaN | NaN | None | NaN |
+| 0 | 01102546977582484968046916668339306826 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | None | NaN |
+| 1 | 01102546977582484968046916668339306826 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | None | NaN |
+| 2 | 01102546977582484968046916668339306826 | 3 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | None | NaN |
+| 3 | 01102546977582484968046916668339306826 | 3 | 1 | 0 | 0 | 0 | 0 | 0 | 540,0 | 0,0 | NaN | NaN | NaN | None | NaN |
+| 4 | 01102546977582484968046916668339306826 | 3 | 2 | 0 | 0 | 0 | 0 | 0 | 588,0 | 0,0 | NaN | NaN | NaN | None | NaN |
 
 {style="table-layout:auto"}
 
@@ -227,15 +227,15 @@ df_training_set.head()
 
 +++
 
-**Saída de exemplo**
+**Exemplo de saída**
 
 |  | userId | eventType | carimbo de data e hora | subscriptionOccurred | emailsReceived | emailsOpened | emailsClicked | productsViewed | propositionInteracts | propositionDismiss | webLinkClicks | minutes_since_emailSent | minutes_since_emailOpened | minutes_since_emailClick | minutes_since_productView | minutes_since_propositionInteract | minutes_since_propositionDismiss | minutes_since_linkClick | random_row_number_for_user |
 | ---  |  --- |   ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---   | ---  |  ---  |  ---  |  --- |    
-| 0 | 02554909162592418347780983091131567290 | directMarketing.emailSent | 2023-06-17 13:44:59.086 | 0 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | NaN | NaN | NaN | NaN | None | NaN | 1 |
-| 1 | 01130334080340815140184601481559659945 | directMarketing.emailOpened | 2023-06-19 06:01:55.366 | 0 | 1 | 3 | 0 | 1 | 0 | 0 | 0 | 1921.0 | 0.0 | NaN | 1703.0 | NaN | None | NaN | 1 |
-| 2 | 01708961660028351393477273586554010192 | web.formFilledOut | 2023-06-19 18:36:49.083 | 1 | 1 | 2 | 2 | 0 | 0 | 0 | 0 | 2365.0 | 26.0 | 1.0 | NaN | NaN | None | NaN | 7 |
-| 3 | 01809182902320674899156240602124740853 | directMarketing.emailSent | 2023-06-21 19:17:12.535 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | NaN | NaN | NaN | NaN | None | NaN | 1 |
-| 4 | 03441761949943678951106193028739001197 | directMarketing.emailSent | 2023-06-21 21:58:29.482 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | NaN | NaN | NaN | NaN | None | NaN | 1 |
+| 0 | 02554909162592418347780983091131567290 | directMarketing.emailSent | 2023-06-17 13:44:59.086 | 0 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | None | NaN | 1 |
+| 1 | 01130334080340815140184601481559659945 | directMarketing.emailOpened | 2023-06-19 06:01:55.366 | 0 | 1 | 3 | 0 | 1 | 0 | 0 | 0 | 1921,0 | 0,0 | NaN | 1703,0 | NaN | None | NaN | 1 |
+| 2 | 01708961660028351393477273586554010192 | web.formFilledOut | 2023-06-19 18:36:49.083 | 1 | 1 | 2 | 2 | 0 | 0 | 0 | 0 | 2365,0 | 26,0 | 1,0 | NaN | NaN | None | NaN | 7 |
+| 3 | 01809182902320674899156240602124740853 | directMarketing.emailSent | 21/06/2023 19:17:12.535 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | None | NaN | 1 |
+| 4 | 03441761949943678951106193028739001197 | directMarketing.emailSent | 21/06/2023 21:58:29.482 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | None | NaN | 1 |
 
 {style="table-layout:auto"}
 
@@ -246,9 +246,9 @@ df_training_set.head()
 Isso requer algumas modificações no query do conjunto de treinamento:
 
 - Adicione lógica para criar um novo conjunto de dados de treinamento se ele não existir e insira os novos rótulos e recursos no conjunto de dados de treinamento existente caso contrário. Isso requer uma série de duas versões do query de conjunto de treinamento:
-   - Primeiro, usando o `CREATE TABLE IF NOT EXISTS {table_name} AS` instrução
-   - Em seguida, usando o `INSERT INTO {table_name}` declaração para o caso em que o conjunto de dados de treinamento já existe
-- Adicionar um `SNAPSHOT BETWEEN $from_snapshot_id AND $to_snapshot_id` instrução para limitar a consulta aos dados do evento que foram adicionados dentro de um intervalo especificado. A variável `$` O prefixo nas IDs de instantâneo indica que elas são variáveis que serão transmitidas quando o modelo de consulta for executado.
+   - Primeiro, usando a instrução `CREATE TABLE IF NOT EXISTS {table_name} AS`
+   - Em seguida, usando a instrução `INSERT INTO {table_name}` para o caso em que o conjunto de dados de treinamento já existe
+- Adicione uma instrução `SNAPSHOT BETWEEN $from_snapshot_id AND $to_snapshot_id` para limitar a consulta a dados de evento que foram adicionados dentro de um intervalo especificado. O prefixo `$` nas IDs de instantâneo indica que elas são variáveis que serão passadas quando o modelo de consulta for executado.
 
 A aplicação dessas alterações resulta na seguinte consulta:
 
@@ -403,7 +403,7 @@ template_id = template_res["id"]
 print(f"Template for propensity training data created as ID {template_id}")
 ```
 
-**Saída de exemplo**
+**Exemplo de saída**
 
 `Template for propensity training data created as ID f3d1ec6b-40c2-4d13-93b6-734c1b3c7235`
 
@@ -441,7 +441,7 @@ query_final_id = query_final_res["id"]
 print(f"Query started successfully and got assigned ID {query_final_id} - it will take some time to execute")
 ```
 
-**Saída de exemplo**
+**Exemplo de saída**
 
 `Query started successfully and got assigned ID c6ea5009-1315-4839-b072-089ae01e74fd - it will take some time to execute`
 
@@ -468,7 +468,7 @@ def wait_for_query_completion(query_id):
 wait_for_query_completion(query_final_id)
 ```
 
-**Saída de exemplo**
+**Exemplo de saída**
 
 ```console
 Query is still in progress, sleeping…
@@ -484,4 +484,4 @@ Query completed successfully in 473.8 seconds
 
 ## Próximas etapas:
 
-Ao ler este documento, você aprendeu a transformar dados no Adobe Experience Platform em recursos, ou variáveis, que podem ser consumidos por um modelo de aprendizado de máquina. A próxima etapa na criação de pipelines de recursos, do Experience Platform para alimentar modelos personalizados no ambiente de aprendizado de máquina, é criar pipelines de recursos [exportar conjuntos de dados de recursos](./export-data.md).
+Ao ler este documento, você aprendeu a transformar dados no Adobe Experience Platform em recursos, ou variáveis, que podem ser consumidos por um modelo de aprendizado de máquina. A próxima etapa na criação de pipelines de recursos do Experience Platform para alimentar modelos personalizados em seu ambiente de aprendizado de máquina é [exportar conjuntos de dados de recursos](./export-data.md).

@@ -10,19 +10,19 @@ ht-degree: 1%
 
 ---
 
-# Crie uma nova especificação de conexão usando o [!DNL Flow Service] API
+# Criar uma nova especificação de conexão usando a API [!DNL Flow Service]
 
 >[!NOTE]
 >
->O SDK de transmissão de fontes de autoatendimento está na versão beta. Leia as [visão geral das origens](../../home.md#terms-and-conditions) para obter mais informações sobre o uso de fontes rotuladas como beta.
+>O SDK de transmissão de fontes de autoatendimento está na versão beta. Leia a [visão geral das fontes](../../home.md#terms-and-conditions) para obter mais informações sobre o uso de fontes com rótulo beta.
 
-Uma especificação de conexão representa a estrutura de uma origem. Ele contém informações sobre os requisitos de autenticação de uma origem, define como os dados de origem podem ser explorados e inspecionados e fornece informações sobre os atributos de uma determinada origem. A variável `/connectionSpecs` endpoint na variável [!DNL Flow Service] A API permite gerenciar programaticamente as especificações de conexão em sua organização.
+Uma especificação de conexão representa a estrutura de uma origem. Ele contém informações sobre os requisitos de autenticação de uma origem, define como os dados de origem podem ser explorados e inspecionados e fornece informações sobre os atributos de uma determinada origem. O ponto de extremidade `/connectionSpecs` na API [!DNL Flow Service] permite gerenciar programaticamente as especificações de conexão em sua organização.
 
-O documento a seguir fornece etapas sobre como criar uma especificação de conexão usando o [!DNL Flow Service] e integre uma nova fonte por meio de Fontes de autoatendimento (SDK de transmissão).
+O documento a seguir fornece etapas sobre como criar uma especificação de conexão usando a API [!DNL Flow Service] e integrar uma nova fonte por meio de Fontes de Autoatendimento (SDK de Streaming).
 
 ## Introdução
 
-Antes de continuar, reveja o [guia de introdução](./getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre os cabeçalhos necessários para fazer chamadas com êxito para qualquer API de Experience Platform.
+Antes de continuar, consulte o [guia de introdução](./getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre os cabeçalhos necessários para fazer chamadas para qualquer API Experience Platform com êxito.
 
 ## Coletar artefatos
 
@@ -34,29 +34,29 @@ Depois de fornecido, você deve estruturar seu repositório Git privado da segui
    * {your_source}
       * Artefatos
          * {your_source}-category.txt
-         * {your_source}-description.txt
+         * {your_source}-descrição.txt
          * {your_source}-icon.svg
-         * {your_source}-label.txt
+         * {your_source}-rótulo.txt
          * {your_source}-connectionSpec.json
 
 | Artefatos (nomes de arquivo) | Descrição | Exemplo |
 | --- | --- | --- |
 | {your_source} | O nome da fonte. Esta pasta deve conter todos os artefatos relacionados à sua origem, dentro do seu repositório Git privado. | `medallia` |
-| {your_source}-category.txt | A categoria à qual a origem pertence, formatada como um arquivo de texto. **Nota**: Se você acredita que sua fonte não se encaixa em nenhuma das categorias acima, entre em contato com o representante da Adobe para discutir. | `medallia-category.txt` Dentro do arquivo, especifique a categoria da sua origem, como: `streaming`. |
-| {your_source}-description.txt | Uma breve descrição da sua origem. | [!DNL Medallia] é uma fonte de automação de marketing que você pode usar para trazer [!DNL Medallia] dados para Experience Platform. |
+| {your_source}-category.txt | A categoria à qual a origem pertence, formatada como um arquivo de texto. **Observação**: se você acredita que a sua fonte não se encaixa em nenhuma das categorias acima, contate o representante da Adobe para discutir. | `medallia-category.txt` Dentro do arquivo, especifique a categoria de sua origem, como: `streaming`. |
+| {your_source}-descrição.txt | Uma breve descrição da sua origem. | [!DNL Medallia] é a fonte de automação de marketing que você pode usar para trazer [!DNL Medallia] dados para o Experience Platform. |
 | {your_source}-icon.svg | A imagem a ser usada para representar sua fonte no catálogo de fontes de Experience Platform. Esse ícone deve ser um arquivo SVG. |
-| {your_source}-label.txt | O nome da fonte como deve aparecer no catálogo de fontes Experience Platform. | Medália |
+| {your_source}-rótulo.txt | O nome da fonte como deve aparecer no catálogo de fontes Experience Platform. | Medália |
 | {your_source}-connectionSpec.json | Um arquivo JSON que contém a especificação de conexão da origem. Inicialmente, esse arquivo não é necessário, pois você preencherá a especificação de conexão ao concluir este guia. | `medallia-connectionSpec.json` |
 
 {style="table-layout:auto"}
 
 >[!TIP]
 >
->Durante o período de teste de sua especificação de conexão, em vez de valores-chave, você pode usar `text` na especificação da conexão.
+>Durante o período de teste de sua especificação de conexão, no lugar dos valores de chave, você pode usar `text` na especificação de conexão.
 
 Depois de adicionar os arquivos necessários ao repositório Git privado, você deve criar uma solicitação de pull (PR) para o Adobe revisar. Quando sua PR for aprovada e mesclada, você receberá uma ID que poderá ser usada para a especificação da conexão para consultar o rótulo, a descrição e o ícone da fonte.
 
-Em seguida, siga as etapas descritas abaixo para configurar sua especificação de conexão. Para obter orientação adicional sobre as diferentes funcionalidades que podem ser adicionadas à sua origem, como agendamento avançado, esquema personalizado ou diferentes tipos de paginação, revise o guia em [configurando especificações de origem](../config/sourcespec.md).
+Em seguida, siga as etapas descritas abaixo para configurar sua especificação de conexão. Para obter orientação adicional sobre as diferentes funcionalidades que podem ser adicionadas à sua origem, como o agendamento avançado, o esquema personalizado ou diferentes tipos de paginação, consulte o manual em [configurando especificações da origem](../config/sourcespec.md).
 
 ## Copiar modelo de especificação de conexão
 
@@ -144,7 +144,7 @@ Consulte os seguintes documentos para obter mais informações sobre as seções
 * [Configurar a especificação de origem](../config/sourcespec.md)
 * [Configurar a especificação de exploração](../config/explorespec.md)
 
-Com as informações de especificação atualizadas, você pode submeter a nova especificação de conexão fazendo uma solicitação POST para o `/connectionSpecs` endpoint do [!DNL Flow Service] API.
+Com suas informações de especificação atualizadas, você pode enviar a nova especificação de conexão fazendo uma solicitação POST para o ponto de extremidade `/connectionSpecs` da API [!DNL Flow Service].
 
 **Formato da API**
 
@@ -236,7 +236,7 @@ curl -X POST \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna a especificação de conexão recém-criada, incluindo sua `id`.
+Uma resposta bem-sucedida retorna a especificação de conexão recém-criada, incluindo sua `id` exclusiva.
 
 ```json
 {
@@ -321,6 +321,6 @@ Uma resposta bem-sucedida retorna a especificação de conexão recém-criada, i
 
 ## Próximas etapas
 
-Agora que você criou uma nova especificação de conexão, deverá adicionar seu ID de especificação de conexão correspondente a uma especificação de fluxo existente. Veja o tutorial sobre [atualização das especificações de fluxo](./update-flow-specs.md) para obter mais informações.
+Agora que você criou uma nova especificação de conexão, deverá adicionar seu ID de especificação de conexão correspondente a uma especificação de fluxo existente. Consulte o tutorial sobre [atualização das especificações do fluxo](./update-flow-specs.md) para obter mais informações.
 
 Para fazer modificações na especificação de conexão criada, consulte o tutorial em [atualizando especificações de conexão](./update-connection-specs.md).

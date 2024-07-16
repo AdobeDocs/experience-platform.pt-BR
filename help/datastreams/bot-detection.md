@@ -13,7 +13,7 @@ ht-degree: 0%
 
 O tráfego proveniente de entidades não humanas, como programas automatizados, web scrapers, spiders e scanners com script, pode dificultar a identificação de eventos que ocorrem de visitantes humanos. Esse tipo de tráfego pode afetar negativamente métricas comerciais importantes, resultando em relatórios de tráfego incorretos.
 
-A detecção de bot permite identificar eventos gerados pelo [SDK da Web](../web-sdk/home.md), [SDK móvel](https://developer.adobe.com/client-sdks/home/) e [[!DNL Server API]](../server-api/overview.md) como sendo gerado por aranhas e bots conhecidos.
+A detecção de bot permite identificar eventos gerados pelo [SDK da Web](../web-sdk/home.md), [SDK Móvel](https://developer.adobe.com/client-sdks/home/) e [[!DNL Server API]](../server-api/overview.md) como sendo gerados pelos spiders e bots conhecidos.
 
 Ao configurar a detecção de bot para seus fluxos de dados, você pode identificar endereços IP, intervalos de IP e cabeçalhos de solicitação específicos que gostaria de classificar como eventos de bot.
 
@@ -33,50 +33,50 @@ Essa pontuação de bot ajuda as soluções que recebem a solicitação a identi
 
 >[!IMPORTANT]
 >
->A detecção de bot não elimina nenhuma solicitação de bot. Ele atualiza somente o esquema XDM com a pontuação de bot e encaminha o evento para o [serviço de sequência de dados](configure.md) que você configurou.
+>A detecção de bot não elimina nenhuma solicitação de bot. Ela atualiza somente o esquema XDM com a pontuação de bot e encaminha o evento para o [serviço de sequência de dados](configure.md) que você configurou.
 >
->As soluções de Adobe podem lidar com a pontuação de bot de maneiras diferentes. Por exemplo, o Adobe Analytics usa seu próprio [serviço de filtragem de bot](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/bot-removal/bot-rules.html) e não usa a pontuação definida pelo Edge Network. Os dois serviços usam o mesmo [Lista de bot IAB](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/), portanto, a pontuação de bot é idêntica.
+>As soluções de Adobe podem lidar com a pontuação de bot de maneiras diferentes. Por exemplo, o Adobe Analytics usa seu próprio [serviço de filtragem de bot](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/bot-removal/bot-rules.html) e não usa a pontuação definida pelo Edge Network. Os dois serviços usam a mesma [lista de bot IAB](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/), portanto, a pontuação do bot é idêntica.
 
 As regras de detecção de bot podem levar até 15 minutos para se propagarem pelo Edge Network após serem criadas.
 
 ## Pré-requisitos {#prerequisites}
 
-Para que a detecção de bot funcione no seu fluxo de dados, é necessário adicionar o **[!UICONTROL Informações de detecção de bot]** grupo de campos ao seu esquema. Consulte a [Esquema XDM](../xdm/ui/resources/schemas.md#add-field-groups) documentação para saber como adicionar grupos de campos a um esquema.
+Para que a detecção de bot funcione na sequência de dados, é necessário adicionar o grupo de campos **[!UICONTROL Informações de Detecção de Bot]** ao esquema. Consulte a documentação do [esquema XDM](../xdm/ui/resources/schemas.md#add-field-groups) para saber como adicionar grupos de campos a um esquema.
 
 ## Configurar a detecção de bot para sequências de dados {#configure}
 
-Você pode configurar a detecção de bot após criar uma configuração de sequência de dados. Consulte a documentação sobre como [criar e configurar um fluxo de dados](configure.md), siga as instruções abaixo para adicionar recursos de detecção de bot ao seu fluxo de dados.
+Você pode configurar a detecção de bot após criar uma configuração de sequência de dados. Consulte a documentação sobre como [criar e configurar uma sequência de dados](configure.md) e, em seguida, siga as instruções abaixo para adicionar recursos de detecção de bot à sua sequência de dados.
 
 Vá para a lista de sequências de dados e selecione a sequência de dados à qual deseja adicionar a detecção de bot.
 
-![Interface do usuário de fluxos de dados mostrando a lista de fluxos de dados.](assets/bot-detection/datastream-list.png)
+![Interface do usuário de sequências de dados mostrando a lista de sequências de dados.](assets/bot-detection/datastream-list.png)
 
-Na página de detalhes do fluxo de dados, selecione a variável **[!UICONTROL Detecção de bot]** no painel direito.
+Na página de detalhes da sequência de dados, selecione a opção **[!UICONTROL Detecção de bot]** no painel direito.
 
 ![Opção de detecção de bot realçada na interface de usuário de fluxos de dados.](assets/bot-detection/bot-detection.png)
 
-A variável **[!UICONTROL Regras de detecção de bot]** é exibida.
+A página **[!UICONTROL Regras de detecção de bot]** é exibida.
 
-![Configurações de detecção de bot na página de configurações de sequência de dados.](assets/bot-detection/bot-detection-page.png)
+![Configurações de detecção de bot na página de configurações da sequência de dados.](assets/bot-detection/bot-detection-page.png)
 
 Na página Regras de detecção de bot, você pode configurar a detecção de bot usando as seguintes funcionalidades:
 
-* Usar o [!DNL [IAB/ABC International Spiders and Bots List]](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/).
+* Usando o [!DNL [IAB/ABC International Spiders and Bots List]](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/).
 * Criar suas próprias regras de detecção de bot.
 
 ### Usar a Lista Internacional de spiders e bots da IAB/ABC {#iab-list}
 
-A variável [Lista internacional de spiders e bots da IAB/ABC](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/) é uma lista de terceiros padrão do setor de spiders e bots da internet, que ajuda a identificar tráfego automatizado, como rastreadores de mecanismo de pesquisa, ferramentas de monitoramento e outro tráfego não humano que talvez você não queira mostrar em suas contagens de análise.
+A [Lista Internacional de Aranhas e Bots do IAB/ABC](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/) é uma lista de spiders e bots da Internet padrão do setor de terceiros, que ajuda a identificar tráfego automatizado, como rastreadores de mecanismo de pesquisa, ferramentas de monitoramento e outro tráfego não humano que talvez você não queira exibir em suas contagens de análise.
 
-Para configurar seu fluxo de dados para usar o [!DNL IAB/ABC International Spiders and Bots List], alterne a **[!UICONTROL Use a Lista internacional de spiders e bots da IAB/ABC para detecção de bot nesta sequência de dados]** e selecione Salvar para aplicar as configurações de detecção de bot ao fluxo de dados.
+Para configurar sua sequência de dados para usar o [!DNL IAB/ABC International Spiders and Bots List], alterne a opção **[!UICONTROL Usar Lista Internacional de spiders e bots IAB/ABC para detecção de bot nesta sequência de dados]** e selecione Salvar para aplicar as configurações de detecção de bot à sua sequência de dados.
 
-![Aranhas IAB e lista de bot ativadas.](assets/bot-detection/bot-detection-list.png)
+![Aranhas IAB e lista de bot habilitadas.](assets/bot-detection/bot-detection-list.png)
 
 ### Criar regras de detecção de bot {#rules}
 
-Além de usar a variável [Lista internacional de spiders e bots da IAB/ABC](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/), você pode definir suas próprias regras de detecção de bot para cada fluxo de dados.
+Além de usar a [Lista Internacional de spiders e bots do IAB/ABC](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/), você pode definir suas próprias regras de detecção de bot para cada sequência de dados.
 
-Você pode criar regras de detecção de bot com base em **Endereços IP** e **Intervalos de endereços IP**.
+Você pode criar regras de detecção de bot com base em **endereços IP** e **intervalos de endereço IP**.
 
 Se você precisar de regras de detecção de bot mais granulares, poderá combinar as condições de IP com as condições do cabeçalho da solicitação. As regras de detecção de bot podem usar os seguintes cabeçalhos:
 
@@ -96,25 +96,25 @@ Se você precisar de regras de detecção de bot mais granulares, poderá combin
 
 Para criar uma regra de detecção de bot, siga as etapas abaixo:
 
-1. Selecionar **[!UICONTROL Adicionar nova regra]**.
+1. Selecione **[!UICONTROL Adicionar Nova Regra]**.
 
    ![Tela de configurações de detecção de bot com o botão Adicionar nova regra realçado.](assets/bot-detection/bot-detection-new-rule.png)
 
-2. Digite um nome para a regra no campo **[!UICONTROL Nome da regra]** campo.
+2. Digite um nome para a regra no campo **[!UICONTROL Nome da Regra]**.
 
-   ![Tela de regra de detecção de bot com o nome da regra realçado.](assets/bot-detection/rule-name.png)
+   ![Tela de regra de detecção de bot com o nome de regra realçado.](assets/bot-detection/rule-name.png)
 
-3. Selecionar **[!UICONTROL Adicionar nova condição de IP]** para adicionar uma nova regra baseada em IP. Você pode definir a regra por endereço IP ou por intervalo de endereços IP.
+3. Selecione **[!UICONTROL Adicionar nova condição de IP]** para adicionar uma nova regra baseada em IP. Você pode definir a regra por endereço IP ou por intervalo de endereços IP.
 
-   ![Tela de regra de detecção de bot com o campo Endereço IP realçado.](assets/bot-detection/ip-address-rule.png)
+   ![Tela de regra de detecção de bot com o campo de endereço IP realçado.](assets/bot-detection/ip-address-rule.png)
 
-   ![Tela de regra de detecção de bot com o campo Intervalo IP realçado.](assets/bot-detection/ip-range-rule.png)
+   ![Tela de regra de detecção de bot com o campo de intervalo IP realçado.](assets/bot-detection/ip-range-rule.png)
 
    >[!TIP]
    >
-   >As condições de IP baseiam-se em um `OR` operação. Uma solicitação é marcada como originária de um bot se corresponder a qualquer uma das condições de IP definidas.
+   >As condições de IP são baseadas em uma operação `OR` lógica. Uma solicitação é marcada como originária de um bot se corresponder a qualquer uma das condições de IP definidas.
 
-4. Se quiser adicionar condições de cabeçalho à regra, selecione **[!UICONTROL Adicionar grupo de condições do cabeçalho]** e, em seguida, selecione os cabeçalhos que deseja que a regra use.
+4. Se quiser adicionar condições de cabeçalho à regra, selecione **[!UICONTROL Adicionar grupo de condições de cabeçalho]** e selecione os cabeçalhos que deseja que a regra use.
 
    ![Tela de regra de detecção de bot com as condições de cabeçalho realçadas.](assets/bot-detection/header-conditions.png)
 
@@ -122,7 +122,7 @@ Para criar uma regra de detecção de bot, siga as etapas abaixo:
 
    ![Tela de regra de detecção de bot com as condições de cabeçalho realçadas.](assets/bot-detection/header-condition-rule.png)
 
-5. Após configurar as regras de detecção de bot desejadas, selecione **[!UICONTROL Salvar]** para que as regras sejam aplicadas ao seu fluxo de dados.
+5. Depois de configurar as regras de detecção de bot desejadas, selecione **[!UICONTROL Salvar]** para aplicar as regras à sua sequência de dados.
 
    ![Tela de regra de detecção de bot com as condições de cabeçalho realçadas.](assets/bot-detection/bot-detection-save.png)
 
@@ -147,25 +147,25 @@ Para marcar todas as solicitações originadas de um dos dois endereços IP espe
 
 Para marcar todas as solicitações originadas de qualquer endereço IP em um intervalo específico como tráfego de bot, crie uma nova regra de detecção de bot que avalia um intervalo de endereços IP inteiro, como mostrado na imagem abaixo.
 
-![Regra de detecção de bot com base no intervalo IP.](assets/bot-detection/bot-detection-range.png)
+![Regra de detecção de bot baseada no intervalo de IPs.](assets/bot-detection/bot-detection-range.png)
 
 ### Detecção de bot com base em um endereço IP e um cabeçalho de solicitação {#ip-header}
 
 Para marcar todas as solicitações originadas de um endereço IP específico e que contenham um cabeçalho de solicitação específico como tráfego de bot, crie uma nova regra de detecção de bot, conforme mostrado na imagem abaixo.
 
-Essa regra verifica se a solicitação é originada de um endereço IP específico e se o `referer` o cabeçalho da solicitação começa com `www.adobe.com`.
+Esta regra verifica se a solicitação se origina de um endereço IP específico e se o cabeçalho da solicitação `referer` começa com `www.adobe.com`.
 
-![Regra de detecção de bot com base no endereço IP e no cabeçalho da solicitação.](assets/bot-detection/bot-detection-header-ip.png)
+![Regra de detecção de bot baseada no endereço IP e no cabeçalho da solicitação.](assets/bot-detection/bot-detection-header-ip.png)
 
 ### Detecção de bot com base em várias condições {#multiple-conditions}
 
 Você pode criar regras de detecção de bot com base em:
 
-* **Várias condições diferentes**: condições diferentes são avaliadas como uma variável `AND` operação, o que significa que as condições precisam ser atendidas simultaneamente para que o pedido seja identificado como originário de um bot.
-* **Várias condições do mesmo tipo**: condições do mesmo tipo são avaliadas como uma variável `OR` operação, o que significa que, se qualquer uma das condições for atendida, a solicitação será identificada como originária de um bot.
+* **Várias condições diferentes**: condições diferentes são avaliadas como uma operação `AND` lógica, o que significa que as condições precisam ser atendidas simultaneamente para que a solicitação seja identificada como originária de um bot.
+* **Várias condições do mesmo tipo**: condições do mesmo tipo são avaliadas como uma operação `OR` lógica, o que significa que, se qualquer uma das condições for atendida, a solicitação será identificada como originária de um bot.
 
 A regra mostrada na imagem abaixo identifica uma solicitação de origem de bot se as seguintes condições forem atendidas:
 
-A solicitação é originada de um dos dois endereços IP, o `referer` o cabeçalho começa com `www.adobe.com`, e o `sec-ch-ua-mobile` o cabeçalho identifica a solicitação como proveniente de um navegador de desktop.
+A solicitação se origina de um dos dois endereços IP, o cabeçalho `referer` começa com `www.adobe.com` e o cabeçalho `sec-ch-ua-mobile` identifica a solicitação como originada de um navegador de desktop.
 
 ![Regra de detecção de bot baseada em várias condições.](assets/bot-detection/bot-detection-multiple.png)

@@ -1,11 +1,11 @@
 ---
-title: Extensão do Marketo Munchkin Visão geral
+title: Visão geral da extensão do Marketo Munchkin
 description: Saiba mais sobre a extensão de tag Marketo Munchkin na Adobe Experience Platform.
 exl-id: 8efc5203-91fc-4e89-be8f-74bf1aeeee5f
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
-source-wordcount: '214'
-ht-degree: 91%
+source-wordcount: '210'
+ht-degree: 89%
 
 ---
 
@@ -41,7 +41,7 @@ Esta seção descreve os tipos de ação disponíveis na extensão [!DNL Marketo
 
 **url: (obrigatório)** o caminho de arquivo do URL usado para registrar uma visita de página.
 
-**params:** uma sequência de consulta dos parâmetros desejados a serem registrados.
+**params:** uma string de consulta dos parâmetros desejados a serem registrados.
 
 **name:** o nome personalizado do ativo da página da Web.
 

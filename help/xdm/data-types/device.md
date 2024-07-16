@@ -7,11 +7,11 @@ exl-id: 049a2ca1-6bc3-4b9c-832a-77102e8a0ed2
 source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
 source-wordcount: '305'
-ht-degree: 5%
+ht-degree: 18%
 
 ---
 
-# [!UICONTROL Dispositivo] tipo de dados
+# Tipo de dados [!UICONTROL Dispositivo]
 
 [!UICONTROL Dispositivo] é um tipo de dados XDM padrão que descreve um dispositivo identificado. Um dispositivo é um aplicativo ou instância do navegador que pode ser rastreado entre as sessões, normalmente por cookies.
 
@@ -19,7 +19,7 @@ ht-degree: 5%
 
 | Propriedade | Tipo de dados | Descrição |
 | --- | --- | --- |
-| `colorDepth` | Número inteiro | O número de cores que a exibição pode representar. |
+| `colorDepth` | Número inteiro | O número de cores que a tela pode representar. |
 | `manufacturer` | String | O nome da organização que possui o design e a criação do dispositivo. |
 | `model` | String | O nome do modelo do dispositivo. Esse é o nome comum, legível ou de marketing do dispositivo. Por exemplo, o &quot;iPhone 6S&quot; é um modelo específico de celular. |
 | `modelNumber` | String | A designação do número do modelo único atribuída pelo fabricante para este dispositivo. Os números de modelo não são versões, mas identificadores exclusivos que identificam uma configuração de modelo específica. |
@@ -28,7 +28,7 @@ ht-degree: 5%
 | `screenWidth` | String | O número de pixels horizontais da tela ativa do dispositivo na orientação padrão. |
 | `type` | String | O tipo de dispositivo sendo rastreado. Os valores aceitos incluem: <ul><li>`mobile`</li><li>`tablet`</li><li>`desktop`</li><li>`ereader`</li><li>`gaming`</li><li>`television`</li><li>`settop`</li><li>`mediaplayer`</li><li>`computers`</li><li>`tv screens`</li></ul> |
 | `typeID` | String | Um identificador do dispositivo. Pode ser um identificador do DeviceAtlas ou de outro serviço que identifica o hardware que está sendo usado. |
-| `typeIDService` | String | O namespace do serviço usado para identificar o tipo de dispositivo. Consulte a [apêndice](#typeIDService) para obter detalhes sobre os valores aceitos. |
+| `typeIDService` | String | O namespace do serviço usado para identificar o tipo de dispositivo. Consulte o [apêndice](#typeIDService) para obter detalhes sobre valores aceitos. |
 
 {style="table-layout:auto"}
 
@@ -39,11 +39,11 @@ Para obter mais detalhes sobre o grupo de campos, consulte o repositório XDM p�
 
 ## Apêndice
 
-A seção a seguir contém informações adicionais sobre o [!UICONTROL Dispositivo] tipo de dados.
+A seção a seguir contém informações adicionais sobre o tipo de dados [!UICONTROL Dispositivo].
 
 ## Valores aceitos para typeIDService {#typeIDService}
 
-A tabela a seguir descreve os valores aceitos para `typeIDService` e significados associados:
+A tabela a seguir descreve os valores aceitos para `typeIDService` e seus significados associados:
 
 | Valor | Descrição |
 | --- | --- |

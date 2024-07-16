@@ -8,7 +8,7 @@ role: Developer
 source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
 workflow-type: tm+mt
 source-wordcount: '145'
-ht-degree: 20%
+ht-degree: 18%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 20%
 # Assimilação de dados Adobe Experience Platform {#ingestion}
 
 - [Visão geral da assimilação de dados](home.md)
-- Assimilação por transmissão {#streaming}
+- Assimilação de transmissão {#streaming}
    - [Visão geral](streaming-ingestion/overview.md)
    - [Conector Kafka](streaming-ingestion/kafka.md)
    - [Solução de problemas](streaming-ingestion/troubleshooting.md)
@@ -38,7 +38,7 @@ ht-degree: 20%
    - [Transmissão de dados de registro](tutorials/streaming-record-data.md)
    - [Transmissão de dados de série temporal](tutorials/streaming-time-series-data.md)
    - [Transmissão de várias mensagens](tutorials/streaming-multiple-messages.md)
-- Qualidade e monitoramento dos dados{#quality}
+- Qualidade de dados e monitoramento{#quality}
    - [Visão geral](quality/overview.md)
    - [Monitorar assimilação de dados](quality/monitor-data-ingestion.md)
    - [Recuperar diagnóstico de erro](quality/error-diagnostics.md)
@@ -46,7 +46,7 @@ ht-degree: 20%
    - [Validação de assimilação de streaming](quality/streaming-validation.md)
    - [Notificações de assimilação de dados](quality/subscribe-events.md)
 - [Medidas de proteção para assimilação de dados](guardrails.md)
-- [Conectores de origem](source-connectors.md)
+- [Conectores do Source](source-connectors.md)
 - [Referência da API de assimilação em lote](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/)
 - [Referência da API de assimilação de fluxo](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/)
-- [Notas de versão da Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+- [Notas de versão da Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest?lang=pt-BR)

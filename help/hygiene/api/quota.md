@@ -12,7 +12,7 @@ ht-degree: 2%
 
 # Endpoint da cota
 
-A variável `/quota` O endpoint na API da Higiene de dados permite monitorar o uso do Gerenciamento avançado do ciclo de vida dos dados em relação aos limites de cota de sua organização para cada tipo de processo.
+O ponto de extremidade `/quota` na API da higiene de dados permite monitorar o uso do Gerenciamento avançado do ciclo de vida de dados em relação aos limites de cota da organização para cada tipo de trabalho.
 
 As cotas são aplicadas para cada tipo de trabalho do ciclo de vida dos dados das seguintes maneiras:
 
@@ -21,7 +21,7 @@ As cotas são aplicadas para cada tipo de trabalho do ciclo de vida dos dados da
 
 ## Introdução
 
-O endpoint usado neste guia faz parte da API de higiene de dados. Antes de continuar, reveja o [visão geral](./overview.md) para obter as seguintes informações:
+O endpoint usado neste guia faz parte da API de higiene de dados. Antes de continuar, consulte a [visão geral](./overview.md) para obter as seguintes informações:
 
 * Links para a documentação relacionada
 * Um guia para ler as chamadas de API de amostra neste documento
@@ -29,7 +29,7 @@ O endpoint usado neste guia faz parte da API de higiene de dados. Antes de conti
 
 ## Listar cotas {#list}
 
-É possível exibir as informações de cota de sua organização fazendo uma solicitação GET ao `/quota` terminal.
+Você pode exibir as informações de cota de sua organização fazendo uma solicitação GET para o ponto de extremidade `/quota`.
 
 **Formato da API**
 
@@ -40,7 +40,7 @@ GET /quota?quotaType={QUOTA_TYPE}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{QUOTA_TYPE}` | Um parâmetro de consulta opcional que especifica o tipo de cota a ser recuperada. Se não `quotaType` for fornecido, todos os valores de cota serão retornados na resposta da API. Os valores de tipo aceitos incluem:<ul><li>`datasetExpirationQuota`: esse objeto mostra o número de expirações de conjunto de dados ativas simultaneamente para sua organização e a quantidade total de expirações permitida. </li><li>`dailyConsumerDeleteIdentitiesQuota`: este objeto mostra o número total de solicitações de exclusão de registro feitas hoje pela sua organização e o total de ajudas de custo diárias.<br>Observação: somente as solicitações aceitas são contadas. Se uma ordem de serviço for rejeitada por falhar na validação, essas exclusões de identidade não serão consideradas na sua cota.</li><li>`monthlyConsumerDeleteIdentitiesQuota`: este objeto mostra o número total de solicitações de exclusão de registro feitas pela organização este mês e a permissão mensal total.</li><li>`monthlyUpdatedFieldIdentitiesQuota`: este objeto mostra o número total de solicitações de atualizações de registros feitas por sua organização este mês e sua permissão mensal total.</li></ul> |
+| `{QUOTA_TYPE}` | Um parâmetro de consulta opcional que especifica o tipo de cota a ser recuperada. Se nenhum parâmetro `quotaType` for fornecido, todos os valores de cota serão retornados na resposta da API. Os valores de tipo aceitos incluem:<ul><li>`datasetExpirationQuota`: esse objeto mostra o número de expirações de conjunto de dados ativas simultaneamente para sua organização, e sua permissão total de expirações. </li><li>`dailyConsumerDeleteIdentitiesQuota`: este objeto mostra o número total de solicitações de exclusão de registro feitas hoje pela sua organização e o total de ajudas de custo diárias.<br>Observação: somente as solicitações aceitas são contadas. Se uma ordem de serviço for rejeitada por falhar na validação, essas exclusões de identidade não serão consideradas na sua cota.</li><li>`monthlyConsumerDeleteIdentitiesQuota`: este objeto mostra o número total de solicitações de exclusão de registro feitas por sua organização este mês e sua permissão mensal total.</li><li>`monthlyUpdatedFieldIdentitiesQuota`: este objeto mostra o número total de solicitações de atualizações de registro feitas por sua organização este mês e sua mesada mensal total.</li></ul> |
 
 **Solicitação**
 
@@ -90,6 +90,6 @@ Uma resposta bem-sucedida retorna os detalhes das cotas de ciclo de vida dos dad
 
 | Propriedade | Descrição |
 | --- | --- |
-| `quotas` | Lista as informações de cota para cada tipo de trabalho do ciclo de vida dos dados. Cada objeto de cota contém as seguintes propriedades:<ul><li>`name`: O tipo de trabalho do ciclo de vida dos dados:<ul><li>`expirationDatasetQuota`: expirações do conjunto de dados</li><li>`deleteIdentityWorkOrderDatasetQuota`: exclusões de registro</li></ul></li><li>`description`: uma descrição do tipo de trabalho do ciclo de vida dos dados.</li><li>`consumed`: O número de trabalhos desse tipo executados no período atual. O nome do objeto indica o período de cota.</li><li>`quota`: a alocação desse tipo de trabalho para sua organização. Para exclusões e atualizações de registros, a cota representa o número de trabalhos que podem ser executados para cada período mensal. Para expirações de conjunto de dados, a cota representa o número de trabalhos que podem estar ativos simultaneamente em um determinado momento.</li></ul> |
+| `quotas` | Lista as informações de cota para cada tipo de trabalho do ciclo de vida dos dados. Cada objeto de cota contém as seguintes propriedades:<ul><li>`name`: O tipo de trabalho do ciclo de vida dos dados:<ul><li>`expirationDatasetQuota`: Expirações do conjunto de dados</li><li>`deleteIdentityWorkOrderDatasetQuota`: exclusões de registro</li></ul></li><li>`description`: uma descrição do tipo de trabalho do ciclo de vida dos dados.</li><li>`consumed`: O número de trabalhos desse tipo executados no período atual. O nome do objeto indica o período de cota.</li><li>`quota`: A atribuição para este tipo de trabalho para sua organização. Para exclusões e atualizações de registros, a cota representa o número de trabalhos que podem ser executados para cada período mensal. Para expirações de conjunto de dados, a cota representa o número de trabalhos que podem estar ativos simultaneamente em um determinado momento.</li></ul> |
 
 {style="table-layout:auto"}

@@ -7,8 +7,8 @@ description: A assimilação de streaming permite fazer upload de dados no Adobe
 exl-id: 6e9ac943-6d73-44de-a13b-bef6041d3834
 source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
-source-wordcount: '917'
-ht-degree: 4%
+source-wordcount: '906'
+ht-degree: 11%
 
 ---
 
@@ -18,41 +18,41 @@ A assimilação de streaming permite fazer upload de dados no Adobe Experience P
 
 ## Introdução
 
-Este guia requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
+Este manual necessita de uma compreensão funcional dos seguintes componentes da Adobe Experience Platform:
 
-- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): o quadro normalizado pelo qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
-- [[!DNL Streaming Ingestion]](../streaming-ingestion/overview.md): um dos métodos pelos quais os dados podem ser enviados para o [!DNL Experience Platform].
+- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): a estrutura padronizada pela qual o [!DNL Experience Platform] organiza os dados de experiência do cliente.
+- [[!DNL Streaming Ingestion]](../streaming-ingestion/overview.md): Um dos métodos pelos quais os dados podem ser enviados para [!DNL Experience Platform].
 
 ### Leitura de chamadas de API de amostra
 
-Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O exemplo de JSON retornado nas respostas da API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de exemplo, consulte a seção sobre [como ler chamadas de API de exemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) no [!DNL Experience Platform] guia de solução de problemas.
+Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e conteúdos de solicitação formatados corretamente. Também fornece exemplos de JSON retornado nas respostas da API. Para obter informações sobre as convenções usadas na documentação para chamadas de API de exemplo, consulte a seção sobre [como ler chamadas de API de exemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) no guia de solução de problemas [!DNL Experience Platform].
 
-### Coletar valores para cabeçalhos obrigatórios
+### Coletar valores para cabeçalhos necessários
 
-Para fazer chamadas para [!DNL Platform] APIs, primeiro conclua o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). Concluir o tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todos os [!DNL Experience Platform] Chamadas de API, conforme mostrado abaixo:
+Para fazer chamadas para APIs do [!DNL Platform], primeiro complete o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). Concluir o tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API da [!DNL Experience Platform], conforme mostrado abaixo:
 
 - Autorização: Portador `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{ORG_ID}`
+- x-gw-ims-org-id `{ORG_ID}`
 
-Todos os recursos em [!DNL Experience Platform], incluindo as que pertencem à [!DNL Schema Registry], são isolados em sandboxes virtuais específicas. Todas as solicitações para [!DNL Platform] As APIs exigem um cabeçalho que especifique o nome da sandbox em que a operação ocorrerá:
+Todos os recursos em [!DNL Experience Platform], incluindo aqueles pertencentes a [!DNL Schema Registry], estão isolados em sandboxes virtuais específicas. Todas as solicitações para [!DNL Platform] APIs exigem um cabeçalho que especifique o nome da sandbox em que a operação ocorrerá:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Para obter mais informações sobre sandboxes no [!DNL Platform], consulte o [documentação de visão geral da sandbox](../../sandboxes/home.md).
+>Para obter mais informações sobre sandboxes em [!DNL Platform], consulte a [documentação de visão geral da sandbox](../../sandboxes/home.md).
 
-Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabeçalho adicional:
+Todas as solicitações que contêm um conteúdo (POST, PUT, PATCH) exigem um cabeçalho adicional:
 
 - Tipo de conteúdo: `application/json`
 
 ### Cobertura de validação
 
-[!DNL Streaming Validation Service] abrange a validação nas seguintes áreas:
+[!DNL Streaming Validation Service] abrange validação nas seguintes áreas:
 - Intervalo
 - Presença
-- Enum
+- Enumeração
 - Padrão
 - Tipo
 - Formato
@@ -65,7 +65,7 @@ Por padrão, a validação síncrona não está ativada. Para habilitá-lo, voc�
 
 >[!NOTE]
 >
->A variável `syncValidation` o parâmetro de consulta só está disponível para o endpoint de mensagem única e não pode ser usado para o endpoint do lote.
+>O parâmetro de consulta `syncValidation` está disponível apenas para o único ponto de extremidade de mensagem e não pode ser usado para o ponto de extremidade de lote.
 
 Se uma mensagem falhar durante a validação síncrona, ela não será gravada na fila de saída, o que fornece feedback imediato para os usuários.
 
@@ -81,7 +81,7 @@ POST /collection/{CONNECTION_ID}?syncValidation=true
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | A variável `id` valor da conexão de streaming criada anteriormente. |
+| `{CONNECTION_ID}` | O valor `id` da conexão de streaming criada anteriormente. |
 
 **Solicitação**
 
@@ -144,11 +144,11 @@ Com a validação síncrona ativada, uma resposta bem-sucedida inclui todos os e
 }
 ```
 
-A resposta acima lista quantas violações de esquema foram encontradas e quais foram as violações. Por exemplo, essa resposta indica que as chaves `workEmail` e `person` não foram definidas no esquema e, portanto, não são permitidas. Também sinaliza o valor para `_id` como incorreto, já que o esquema esperava um `string`, mas uma `long` foi inserido. Observe que, quando cinco erros forem encontrados, o serviço de validação **stop** processando essa mensagem. No entanto, outras mensagens continuarão sendo analisadas.
+A resposta acima lista quantas violações de esquema foram encontradas e quais foram as violações. Por exemplo, esta resposta indica que as chaves `workEmail` e `person` não foram definidas no esquema e, portanto, não são permitidas. Também sinaliza o valor de `_id` como incorreto, já que o esquema esperava um `string`, mas foi inserido um `long`. Observe que depois que cinco erros forem encontrados, o serviço de validação **parará** o processamento dessa mensagem. No entanto, outras mensagens continuarão sendo analisadas.
 
 ## Validação assíncrona
 
-A validação assíncrona é um método de validação que não fornece feedback imediato. Em vez disso, os dados são enviados para um lote com falha no [!DNL Data Lake] para evitar a perda de dados. Esses dados com falha podem ser recuperados posteriormente para análise adicional e repetição. Esse método deve ser usado na produção. A menos que solicitado de outra forma, a assimilação por transmissão opera no modo de validação assíncrono.
+A validação assíncrona é um método de validação que não fornece feedback imediato. Em vez disso, os dados são enviados para um lote com falha no [!DNL Data Lake] para evitar perda de dados. Esses dados com falha podem ser recuperados posteriormente para análise adicional e repetição. Esse método deve ser usado na produção. A menos que solicitado de outra forma, a assimilação por transmissão opera no modo de validação assíncrono.
 
 **Formato da API**
 
@@ -158,7 +158,7 @@ POST /collection/{CONNECTION_ID}
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | A variável `id` valor da conexão de streaming criada anteriormente. |
+| `{CONNECTION_ID}` | O valor `id` da conexão de streaming criada anteriormente. |
 
 **Solicitação**
 
@@ -207,5 +207,5 @@ Esta seção contém informações sobre o que os vários códigos de status sig
 | 400 | Erro. Há algo errado com a sua solicitação. Uma mensagem de erro com mais detalhes é recebida dos Serviços de validação de transmissão. |
 | 401 | Erro. Sua solicitação não é autorizada - será necessário solicitar com um token de portador. Para obter mais informações sobre como solicitar acesso, confira este [tutorial](https://www.adobe.com/go/platform-api-authentication-en) ou esta [publicação do blog](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f). |
 | 500 | Erro. Erro interno do sistema. |
-| 501 | Erro. Isso significa que a validação síncrona é **não** compatível com este local. |
+| 501 | Erro. Isto significa que a validação síncrona **não** tem suporte para este local. |
 | 503 | Erro. Serviço indisponível no momento. Os clientes devem tentar novamente pelo menos três vezes usando uma estratégia de retirada exponencial. |

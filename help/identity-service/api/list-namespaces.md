@@ -33,7 +33,7 @@ curl -X GET \
 
 **Resposta**
 
-A resposta inclui uma matriz de objetos, com cada objeto representando um namespace disponível. Namespaces com um &quot;[!UICONTROL personalizado]&quot; valor de &quot;[!UICONTROL false]&quot; são namespaces padrão, enquanto aqueles com um &quot;[!UICONTROL personalizado]&quot; valor de &quot;[!UICONTROL true]&quot; são namespaces criados por sua organização.
+A resposta inclui uma matriz de objetos, com cada objeto representando um namespace disponível. Namespaces com um valor &quot;[!UICONTROL personalizado]&quot; de &quot;[!UICONTROL falso]&quot; são namespaces padrão, enquanto aqueles com um valor &quot;[!UICONTROL personalizado]&quot; de &quot;[!UICONTROL verdadeiro]&quot; são namespaces criados por sua organização.
 
 >[!NOTE]
 >
@@ -79,4 +79,4 @@ A resposta inclui uma matriz de objetos, com cada objeto representando um namesp
 
 ## Próximas etapas
 
-Prosseguir para o próximo tutorial para [criar um namespace personalizado](./create-custom-namespace.md)
+Prossiga para o próximo tutorial para [criar um namespace personalizado](./create-custom-namespace.md)

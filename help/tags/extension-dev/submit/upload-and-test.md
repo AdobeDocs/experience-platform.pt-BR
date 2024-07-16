@@ -4,7 +4,7 @@ description: Saiba como validar, carregar e testar a extensão na Adobe Experien
 exl-id: 6176a9e1-fa06-447e-a080-42a67826ed9e
 source-git-commit: 9b99ec5e526fcbe34a41d3ce397b34a9b4105819
 workflow-type: tm+mt
-source-wordcount: '2382'
+source-wordcount: '2362'
 ht-degree: 91%
 
 ---
@@ -39,7 +39,7 @@ Um exemplo específico é o arquivo de logotipo: Adicione uma linha `"iconPath":
 
 Para usar a API ou as ferramentas de linha de comando, é necessário ter uma conta técnica do Adobe I/O. Você deve criar a conta técnica no console do I/O e usar a ferramenta Uploader para fazer upload do pacote de extensão.
 
-Para obter informações sobre como criar uma conta técnica para usar com tags na Adobe Experience Platform, consulte o [Introdução à API do Reator](../../api/getting-started.md) guia.
+Para obter informações sobre como criar uma conta técnica para usar com tags na Adobe Experience Platform, consulte o guia de [Introdução à API do Reator](../../api/getting-started.md).
 
 >[!IMPORTANT]
 >
@@ -74,7 +74,7 @@ Seu pacote de extensão será carregado e o carregador fornecerá a ID do extens
 
 >[!NOTE]
 >
->Observação: ao fazer upload ou aplicar patches, os pacotes de extensão são colocados em um estado pendente enquanto o sistema extrai o pacote de forma assíncrona e faz a implantação. Enquanto esse processo está em andamento, você pode pesquisar o `extension_package` ID do seu status usando a API e na interface do usuário. Você verá um cartão de extensão no catálogo marcado como Pendente.
+>Observação: ao fazer upload ou aplicar patches, os pacotes de extensão são colocados em um estado pendente enquanto o sistema extrai o pacote de forma assíncrona e faz a implantação. Enquanto esse processo está em andamento, você pode pesquisar o status da ID do `extension_package` usando a API e na interface do usuário. Você verá um cartão de extensão no catálogo marcado como Pendente.
 
 >[!NOTE]
 >
@@ -82,7 +82,7 @@ Seu pacote de extensão será carregado e o carregador fornecerá a ID do extens
 
 ## Criar uma propriedade de desenvolvimento {#property}
 
-Depois de fazer logon na interface do usuário e selecionar **[!UICONTROL Tags]** na navegação à esquerda, a variável [!UICONTROL Propriedades] é exibida. Uma propriedade é um container para as tags que você deseja implantar e pode ser usada em um ou vários sites.
+Depois de entrar na interface e selecionar **[!UICONTROL Tags]** na navegação à esquerda, a tela [!UICONTROL Propriedades] é exibida. Uma propriedade é um container para as tags que você deseja implantar e pode ser usada em um ou vários sites.
 
 ![](../images/getting-started/properties-screen.png)
 
@@ -200,7 +200,7 @@ As instruções de instalação estão disponíveis na guia Ambientes. Essa pág
 
 ![](../images/getting-started/launch-installation-instructions.png)
 
-A variável **Instruções de instalação da Web** para o ambiente de desenvolvimento será exibida. Marque o ícone de cópia para copiar toda a tag `<script>`.
+A caixa de diálogo **Instruções de instalação da Web** do ambiente de desenvolvimento é exibida. Marque o ícone de cópia para copiar toda a tag `<script>`.
 
 ![](../images/getting-started/launch-installation-instructions-dialogue.png)
 

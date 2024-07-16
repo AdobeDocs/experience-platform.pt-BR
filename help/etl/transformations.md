@@ -6,7 +6,7 @@ description: Este artigo demonstra o exemplo de transformações a seguir que um
 exl-id: 8084f5fd-b621-4515-a329-5a06c137d11c
 source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
-source-wordcount: '493'
+source-wordcount: '474'
 ht-degree: 1%
 
 ---
@@ -19,12 +19,12 @@ Este artigo demonstra o exemplo de transformações a seguir que um desenvolvedo
 
 ### Arquivos de exemplo
 
-Arquivos CSV e JSON de amostra estão disponíveis na Referência de ETL pública [!DNL GitHub] acordo de recompra mantido pelo Adobe:
+Arquivos CSV e JSON de exemplo estão disponíveis no repositório ETL público de Referência [!DNL GitHub] mantido pelo Adobe:
 
 - [CRM_profiles.csv](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.csv)
 - [CRM_profiles.json](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.json)
 
-### CSV de exemplo
+### Exemplo de CSV
 
 Os dados do CRM a seguir foram exportados como `CRM_profiles.csv`:
 
@@ -52,7 +52,7 @@ Os requisitos de mapeamento para os dados do CRM são descritos na tabela a segu
 | F_NAME | person.name.firstName | Copiar como sequência de caracteres |
 | L_NAME | person.name.lastName | Copiar como sequência de caracteres |
 | GÊNERO | person.gender | Transformar gênero como valor de enumeração person.gender correspondente |
-| DOB | person.birthDayAndMonth: &quot;MM-DD&quot;<br/>person.birthDate: &quot;AAAA-MM-DD&quot;<br/>person.birthYear: YYYY | Transformar birthDayAndMonth como cadeia de caracteres<br/>Transformar birthDate em cadeia de caracteres<br/>Transformar birthYear como int curto |
+| DOB | person.birthDayAndMonth: &quot;MM-DD&quot;<br/>person.birthDate: &quot;AAAA-MM-DD&quot;<br/>person.birthYear: AAAA | Transformar birthDayAndMonth como cadeia de caracteres<br/>Transformar birthDate como cadeia de caracteres<br/>Transformar birthYear como abreviação |
 | EMAIL | personalEmail.address | Copiar como sequência de caracteres |
 | CRMID | identityMap.CRMID[{&quot;id&quot;:x, primary:false}] | Copiar como cadeia de caracteres para a matriz CRMID no identityMap e definir Principal como falso |
 | ECID | identityMap.ECID[{&quot;id&quot;:x, primary: false}] | Copiar como string para a primeira entrada na matriz ECID no identityMap e definir Principal como falso |
@@ -62,7 +62,7 @@ Os requisitos de mapeamento para os dados do CRM são descritos na tabela a segu
 | RUA | homeAddress.street1 | Copiar como sequência de caracteres |
 | CIDADE | homeAddress.city | Copiar como sequência de caracteres |
 | ESTADO | homeAddress.stateProvince | Copiar como sequência de caracteres |
-| PAÍS | homeAddress.country | Copiar como sequência de caracteres |
+| País | homeAddress.country | Copiar como sequência de caracteres |
 | ZIP | homeAddress.postalCode | Copiar como sequência de caracteres |
 | LAT | homeAddress.latitude | Converter para duplo |
 | LONGO | homeAddress.longitude | Converter para duplo |
@@ -70,7 +70,7 @@ Os requisitos de mapeamento para os dados do CRM são descritos na tabela a segu
 
 ### XDM de saída
 
-O exemplo a seguir mostra as duas primeiras linhas do CSV transformadas no XDM, conforme mostrado na `CRM_profiles.json`:
+O exemplo a seguir mostra as duas primeiras linhas do CSV transformadas no XDM, como mostrado em `CRM_profiles.json`:
 
 ```json
 {
@@ -176,7 +176,7 @@ A hierarquia de um quadro de dados (como um arquivo Parquet) deve corresponder �
 
 ### Exemplo de dataframe
 
-A estrutura do seguinte exemplo de banco de dados foi mapeada para um esquema que implementa a [!DNL XDM Individual Profile] e contém os campos mais comuns associados a esquemas desse tipo.
+A estrutura do seguinte dataframe de exemplo foi mapeada para um esquema que implementa a classe [!DNL XDM Individual Profile] e contém os campos mais comuns associados a esquemas desse tipo.
 
 ```python
 [
@@ -284,9 +284,9 @@ Os requisitos de mapeamento para a matriz de identidades são descritos na tabel
 
 | Campo de identidade | Campo identityMap | Tipo de dados |
 | -------------- | ----------------- | --------- |
-| identidades[0].id | identityMap[E-mail][{"id"}] | copiar como string |
+| identidades[0].id | identityMap[Email][{"id"}] | copiar como string |
 | identidades[1].id | identityMap[CRMID][{"id"}] | copiar como string |
-| identidades[2].id | identityMap[LOYALYID][{"id"}] | copiar como string |
+| identidades[2].id | identityMap[LOYALTYID][{"id"}] | copiar como string |
 
 ### XDM de saída
 

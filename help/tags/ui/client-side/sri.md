@@ -4,8 +4,8 @@ description: Saiba como a integridade de sub-recursos (SRI) é compatível com o
 exl-id: bd8bc3f7-9a85-44e2-ae07-f0664179b51c
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
-source-wordcount: '601'
-ht-degree: 97%
+source-wordcount: '594'
+ht-degree: 96%
 
 ---
 
@@ -46,7 +46,7 @@ Se você ainda quiser usar a SRI para seus builds de biblioteca, é necessário 
 
 A automatização do processo de atualização do código integrado varia em complexidade, dependendo da estrutura do site, mas as etapas gerais podem ser resumidas da seguinte maneira:
 
-1. Recupere a build da biblioteca de produção, por meio do delivery SFTP ou baixe o arquivo da interface do usuário.
+1. Recupere a build da biblioteca de produção, por meio da entrega SFTP ou baixe o arquivo da interface do usuário.
 1. Gere o hash criptográfico da build principal.
 1. Verifique se o atributo `integrity` do código integrado foi atualizado para o novo hash e se a build referenciada foi atualizada como parte da mesma implantação.
 

@@ -11,12 +11,12 @@ ht-degree: 0%
 
 ---
 
-# [!UICONTROL Perfis] painel {#profile-dashboard}
+# Painel [!UICONTROL Perfis] {#profile-dashboard}
 
-A interface (UI) do Adobe Experience Platform fornece um painel por meio do qual você pode visualizar informações importantes sobre o [!DNL Real-Time Customer Profile] dados, conforme capturados durante um instantâneo diário.
+A interface do usuário (UI) do Adobe Experience Platform fornece um painel por meio do qual você pode exibir informações importantes sobre os dados do [!DNL Real-Time Customer Profile], conforme capturados durante um instantâneo diário.
 
-Para obter instruções detalhadas sobre como acessar e interagir com o [!UICONTROL Perfis] painel na interface do usuário, bem como para saber mais sobre as métricas disponíveis exibidas no painel, visite o [[!UICONTROL Perfis] guia do painel](../../dashboards/guides/profiles.md).
+Para obter instruções detalhadas sobre como acessar e interagir com o painel [!UICONTROL Perfis] na interface do usuário, bem como para saber mais sobre as métricas disponíveis exibidas no painel, visite o [[!UICONTROL guia do painel]](../../dashboards/guides/profiles.md).
 
-Para obter uma visão geral de todos os recursos do painel na interface do usuário do Experience Platform, comece lendo o [visão geral dos painéis](../../dashboards/home.md).
+Para obter uma visão geral de todos os recursos do painel na interface do usuário do Experience Platform, comece lendo a [visão geral dos painéis](../../dashboards/home.md).
 
 ![O painel Perfil é exibido.](../images/profile-dashboard/dashboard-overview.png)

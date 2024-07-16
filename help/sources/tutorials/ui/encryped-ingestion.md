@@ -1,5 +1,5 @@
 ---
-title: Assimilar dados criptografados no espaço de trabalho da interface de origens
+title: Assimilar dados criptografados na interface do usuário de origens do Workspace
 description: Saiba como assimilar dados criptografados no espaço de trabalho da interface do usuário de origens.
 hide: true
 hidefromtoc: true

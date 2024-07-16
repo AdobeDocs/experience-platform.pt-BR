@@ -4,8 +4,8 @@ description: Saiba como fazer chamadas para o endpoint /extension_packages na AP
 exl-id: a91c6f32-6c72-4118-a43f-2bd8ef50709f
 source-git-commit: 4f75bbfee6b550552d2c9947bac8540a982297eb
 workflow-type: tm+mt
-source-wordcount: '939'
-ht-degree: 70%
+source-wordcount: '930'
+ht-degree: 68%
 
 ---
 
@@ -25,31 +25,31 @@ Um pacote de extensão pertence à [empresa](./companies.md) do desenvolvedor qu
 
 O endpoint usado neste manual faz parte da [API do Reactor](https://www.adobe.io/experience-platform-apis/references/reactor/). Antes de continuar, consulte o [Guia de introdução](../getting-started.md) para obter informações importantes sobre como realizar a autenticação na API.
 
-Além de entender como fazer chamadas para a API do Reator, também é importante entender como funciona um pacote de extensão do `status` e `availability` Os atributos do afetam quais ações você pode executar nele. Eles são explicados nas seções abaixo.
+Além de entender como fazer chamadas para a API do Reator, também é importante entender como os atributos `status` e `availability` de um pacote de extensão afetam quais ações você pode executar nele. Eles são explicados nas seções abaixo.
 
 ### Status
 
-Os pacotes de extensão têm três status possíveis: `pending`, `succeeded`, e `failed`.
+Os pacotes de extensão têm três status possíveis: `pending`, `succeeded` e `failed`.
 
 | Status | Descrição |
 | --- | --- |
-| `pending` | Quando um pacote de extensão é criado, suas `status` está definida como `pending`. Isso indica que o sistema recebeu as informações do pacote de extensão e iniciará o processamento. Pacotes de extensão com status de `pending` não estão disponíveis para uso. |
-| `succeeded` | O status de um pacote de extensão é atualizado para `succeeded` se o processamento for concluído com êxito. |
-| `failed` | O status de um pacote de extensão é atualizado para `failed` se o processamento não for concluído com êxito. Um pacote de extensão com status de `failed` pode ser atualizado até o processamento ser bem-sucedido. Pacotes de extensão com status de `failed` não estão disponíveis para uso. |
+| `pending` | Quando um pacote de extensão é criado, seu `status` é definido como `pending`. Isso indica que o sistema recebeu as informações do pacote de extensão e iniciará o processamento. Pacotes de extensão com status `pending` não estão disponíveis para uso. |
+| `succeeded` | O status de um pacote de extensão será atualizado para `succeeded` se ele concluir com êxito o processamento. |
+| `failed` | O status de um pacote de extensão será atualizado para `failed` se ele não concluir o processamento com êxito. Um pacote de extensão com status `failed` pode ser atualizado até o processamento ser bem-sucedido. Pacotes de extensão com status `failed` não estão disponíveis para uso. |
 
 ### Disponibilidade
 
-Há níveis de disponibilidade para um pacote de extensão: `development`, `private`, e `public`.
+Há níveis de disponibilidade para um pacote de extensão: `development`, `private` e `public`.
 
 | Disponibilidade | Descrição |
 | --- | --- |
-| `development` | Um pacote de extensão no `development` O só pode ser visualizado e estar disponível na empresa proprietária. Além disso, ele só pode ser usado em propriedades configuradas para desenvolvimento de extensão. |
-| `private` | A `private` o pacote de extensão só é visível para a empresa que o possui e só pode ser instalado nas propriedades que a empresa possui. |
-| `public` | A `public` o pacote de extensão está visível e disponível para todas as empresas e propriedades. |
+| `development` | Um pacote de extensão em `development` só está visível e disponível na empresa que o possui. Além disso, ele só pode ser usado em propriedades configuradas para desenvolvimento de extensão. |
+| `private` | Um pacote de extensão `private` só é visível para a empresa que o possui e só pode ser instalado em propriedades que a empresa possua. |
+| `public` | Um pacote de extensão `public` está visível e disponível para todas as empresas e propriedades. |
 
 >[!NOTE]
 >
->Quando um pacote de extensão é criado, `availability` está definida como `development`. Após a conclusão do teste, é possível fazer a transição do pacote de extensão para `private` ou `public`.
+>Quando um pacote de extensão é criado, `availability` é definido como `development`. Após a conclusão do teste, você pode fazer a transição do pacote de extensão para `private` ou `public`.
 
 ## Recuperar uma lista de pacotes de extensão {#list}
 
@@ -474,7 +474,7 @@ Uma resposta bem-sucedida retorna os detalhes do pacote de extensão, incluindo 
 
 Os pacotes de extensão são criados usando uma ferramenta de andaime Node.js e salvos em seu computador local antes de serem enviados à API do Reactor. Para obter mais informações sobre como configurar um pacote de extensão, consulte o manual sobre [introdução ao desenvolvimento de extensões](../../extension-dev/getting-started.md).
 
-Depois de criar o arquivo de pacote de extensão, você pode enviá-lo para a API do Reactor por meio de uma solicitação POST.
+Depois de criar o arquivo de pacote de extensão, você pode enviá-lo para a API do Reator por meio de uma solicitação POST.
 
 **Formato da API**
 

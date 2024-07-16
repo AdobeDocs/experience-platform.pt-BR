@@ -7,8 +7,8 @@ description: A Adobe Experience Platform fornece vários serviços e ferramentas
 exl-id: 70b04061-0cb0-4b3e-9dfa-d49cc0ef1be0
 source-git-commit: f28558d5939607cabf449cbc03b7e0f5406f6326
 workflow-type: tm+mt
-source-wordcount: '224'
-ht-degree: 12%
+source-wordcount: '206'
+ht-degree: 1%
 
 ---
 
@@ -22,10 +22,10 @@ A integração entre o Attribution AI e o Adobe Experience Platform Data Governa
 
 Os rótulos e políticas de uso de dados criados em conjuntos de dados consumidos pela Platform podem ser exibidos no fluxo de trabalho de configuração do Attribution AI. Esses rótulos interrompem ou avisam os usuários que usam campos rotulados.
 
-Essa integração permite gerenciar a conformidade com mais eficiência. Os administradores de dados da sua organização podem definir políticas de restrição de uso. Como resultado, você pode usar dados que estejam em conformidade com as políticas definidas pelos administradores de dados. Leia a documentação em [Rótulos e políticas](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-dataviews/data-governance.html?lang=pt-BR) para saber mais.
+Essa integração permite gerenciar a conformidade com mais eficiência. Os administradores de dados da sua organização podem definir políticas de restrição de uso. Como resultado, você pode usar dados que estejam em conformidade com as políticas definidas pelos administradores de dados. Leia a documentação em [Rótulos e políticas](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-dataviews/data-governance.html) para saber mais.
 
 Saiba mais sobre esse recurso aqui:
 
-[Introdução ao Attribution AI](../../attribution-ai/getting-started.md)
+[Introdução em Attribution AI](../../attribution-ai/getting-started.md)
 [Adobe Experience Platform e aplicativos](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/platform-applications.html)
-[Diagramas da arquitetura Adobe Experience Cloud](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/experience-cloud.html?lang=pt-BR)
+[Diagramas de arquitetura do Adobe Experience Cloud](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/experience-cloud.html?lang=pt-BR)

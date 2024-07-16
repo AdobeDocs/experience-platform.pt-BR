@@ -1,6 +1,6 @@
 ---
 audience: user
-user-guide-title: Ajuda dos Conectores de origem do Adobe Experience Platform
+user-guide-title: Ajuda dos Conectores de origem da Adobe Experience Platform
 breadcrumb-title: Guia dos conectores de origem
 user-guide-description: Assimilar dados de várias fontes. Saiba como estruturar, rotular e aprimorar os dados já assimilados.
 feature: Sources
@@ -8,7 +8,7 @@ role: Developer
 source-git-commit: 485881d4cbba09ae89d26b3613907174c0f24cc3
 workflow-type: tm+mt
 source-wordcount: '1046'
-ht-degree: 23%
+ht-degree: 30%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 23%
       - [Origem do Adobe Commerce](connectors/adobe-applications/commerce.md)
       - [Origem de atributos do cliente](connectors/adobe-applications/customer-attributes.md)
       - [Fonte da coleção de dados](connectors/adobe-applications/data-collection.md)
-      - Mapeamentos de campo {#mapping}
+      - Mapeamentos de campos {#mapping}
          - [Mapeamentos de campo do Analytics](connectors/adobe-applications/mapping/analytics.md)
          - [mapeamentos de campo Audience Manager](connectors/adobe-applications/mapping/audience-manager.md)
          - [Mapeamentos de campo de público alvo](connectors/adobe-applications/mapping/target.md)
@@ -37,14 +37,14 @@ ht-degree: 23%
          - [guia de autenticação do Marketo Engage](connectors/adobe-applications/marketo/marketo-auth.md)
          - [Namespaces e esquemas B2B](connectors/adobe-applications/marketo/marketo-namespaces.md)
          - [Guia de migração de mapeamento ECID](connectors/adobe-applications/marketo/migration.md)
-   - Publicidade {#advertising}
+   - Advertising {#advertising}
       - [Conector do Google Ads](connectors/advertising/ads.md)
       - [Anúncios do pinterest](connectors/advertising/pinterest-ads.md)
    - Analytics {#analytics}
       - [Conector Mixpanel](connectors/analytics/mixpanel.md)
       - [Pendo](connectors/analytics/pendo-webhook.md)
       - [RainFocus](connectors/analytics/rainfocus.md)
-   - armazenamento na nuvem {#cloud-storage}
+   - Armazenamento na nuvem {#cloud-storage}
       - [Conector do Amazon Kinesis](connectors/cloud-storage/kinesis.md)
       - [Conector Amazon S3](connectors/cloud-storage/s3.md)
       - [Conector Apache HDFS](connectors/cloud-storage/hdfs.md)
@@ -97,12 +97,12 @@ ht-degree: 23%
       - [Assimilação de dados da Acxiom](connectors/data-partners/acxiom-data-ingestion.md)
       - [Importação de dados de prospecção da Acxiom](connectors/data-partners/acxiom-prospecting-data-import.md)
       - [Resolução de identidade empresarial Merkury](connectors/data-partners/merkury.md)
-   - comércio eletrônico {#ecommerce}
+   - Comércio eletrônico {#ecommerce}
       - [SAP COMMERCE](connectors/ecommerce/sap-commerce.md)
       - [Shopify](connectors/ecommerce/shopify.md)
       - [Shopify Transmissão](connectors/ecommerce/shopify-streaming.md)
    - Sistema local {#local-system}
-      - [Conector de upload de arquivo local](connectors/local-system/local-file-upload.md)
+      - [Conector de carregamento de arquivo local](connectors/local-system/local-file-upload.md)
    - Automação de marketing {#marketing-automation}
       - [Braze Currents](connectors/marketing-automation/braze.md)
       - [Chatlio](connectors/marketing-automation/chatlio-webhook.md)
@@ -121,17 +121,17 @@ ht-degree: 23%
    - Protocolos {#protocols}
       - [Conector OData genérico](connectors/protocols/odata.md)
       - [Conector de API REST genérico](connectors/protocols/generic-rest.md)
-   - Streaming {#streaming}
+   - Transmitindo {#streaming}
       - [Conector da API HTTP](connectors/streaming/http.md)
 - Tutoriais da API {#api-tutorials}
-   - Criar uma conexão básica {#create}
-      - Publicidade {#advertising}
+   - Criar uma conexão base {#create}
+      - Advertising {#advertising}
          - [Google Ads](tutorials/api/create/advertising/ads.md)
          - [Anúncios do pinterest](tutorials/api/create/advertising/pinterest-ads.md)
       - Analytics {#analytics}
          - [Mixpanel](tutorials/api/create/analytics/mixpanel.md)
          - [Pendo](tutorials/api/create/analytics/pendo-webhook.md)
-      - armazenamento na nuvem {#cloud-storage}
+      - Armazenamento na nuvem {#cloud-storage}
          - [Amazon Kinesis](tutorials/api/create/cloud-storage/kinesis.md)
          - [Amazon S3](tutorials/api/create/cloud-storage/s3.md)
          - [Apache HDFS](tutorials/api/create/cloud-storage/hdfs.md)
@@ -180,7 +180,7 @@ ht-degree: 23%
          - [Snowflake](tutorials/api/create/databases/snowflake.md)
          - [Teradata Vantage](tutorials/api/create/databases/teradata-vantage.md)
          - [SQL Server](tutorials/api/create/databases/sql-server.md)
-      - comércio eletrônico {#ecommerce}
+      - Comércio eletrônico {#ecommerce}
          - [SAP COMMERCE](tutorials/api/create/ecommerce/sap-commerce.md)
          - [Shopify](tutorials/api/create/ecommerce/shopify.md)
          - [Shopify Transmissão](tutorials/api/create/ecommerce/shopify-streaming.md)
@@ -203,7 +203,7 @@ ht-degree: 23%
       - Protocolos {#protocols}
          - [OData genérico](tutorials/api/create/protocols/odata.md)
          - [API REST genérica](tutorials/api/create/protocols/generic-rest.md)
-      - Streaming {#streaming}
+      - Transmitindo {#streaming}
          - [API HTTP](tutorials/api/create/streaming/http.md)
    - Explorar dados {#explore}
       - [Explorar dados de publicidade](tutorials/api/explore/advertising.md)
@@ -247,14 +247,14 @@ ht-degree: 23%
          - [Atributos do cliente](tutorials/ui/create/adobe-applications/customer-attributes.md)
          - [Marketo Engage](tutorials/ui/create/adobe-applications/marketo.md)
          - [Atividades personalizadas do Marketo](tutorials/ui/create/adobe-applications/marketo-custom-activities.md)
-      - Publicidade {#advertising}
+      - Advertising {#advertising}
          - [Google Ads](tutorials/ui/create/advertising/ads.md)
          - [Anúncios do pinterest](tutorials/ui/create/advertising/pinterest-ads.md)
       - Analytics {#analytics}
          - [Mixpanel](tutorials/ui/create/analytics/mixpanel.md)
          - [Pendo](tutorials/ui/create/analytics/pendo-webhook.md)
          - [RainFocus](tutorials/ui/create/analytics/rainfocus.md)
-      - armazenamento na nuvem {#cloud-storage}
+      - Armazenamento na nuvem {#cloud-storage}
          - [Amazon Kinesis](tutorials/ui/create/cloud-storage/kinesis.md)
          - [Amazon S3](tutorials/ui/create/cloud-storage/s3.md)
          - [Apache HDFS](tutorials/ui/create/cloud-storage/hdfs.md)
@@ -308,12 +308,12 @@ ht-degree: 23%
          - [Assimilação de dados da Acxiom](tutorials/ui/create/data-partners/acxiom-data-ingestion.md)
          - [Importação de dados de prospecção da Acxiom](tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md)
          - [Resolução de identidade empresarial Merkury](tutorials/ui/create/data-partners/merkury.md)
-      - comércio eletrônico {#ecommerce}
+      - Comércio eletrônico {#ecommerce}
          - [SAP COMMERCE](tutorials/ui/create/ecommerce/sap-commerce.md)
          - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
          - [Shopify Transmissão](tutorials/ui/create/ecommerce/shopify-streaming.md)
       - Sistema local {#local-system}
-         - [Upload de arquivo local](tutorials/ui/create/local-system/local-file-upload.md)
+         - [Carregamento de arquivo local](tutorials/ui/create/local-system/local-file-upload.md)
       - Automação de marketing {#marketing-automation}
          - [Braze Currents](tutorials/ui/create/marketing-automation/braze.md)
          - [Chatlio](tutorials/ui/create/marketing-automation/chatlio-webhook.md)
@@ -333,10 +333,10 @@ ht-degree: 23%
          - [Stripe](tutorials/ui/create/payments/stripe.md)
       - Protocolos {#protocols}
          - [OData genérico](tutorials/ui/create/protocols/odata.md)
-      - Streaming {#streaming}
+      - Transmitindo {#streaming}
          - [API HTTP](tutorials/ui/create/streaming/http.md)
    - Configurar um fluxo de dados {#dataflow}
-      - [Fluxo de dados de conexão de publicidade](tutorials/ui/dataflow/advertising.md)
+      - [Fluxo de dados de conexão do Advertising](tutorials/ui/dataflow/advertising.md)
       - [Fluxo de dados de conexão do Analytics](tutorials/ui/dataflow/analytics.md)
       - [Fluxo de dados de conexão de armazenamento em nuvem em lote](tutorials/ui/dataflow/batch/cloud-storage.md)
       - [Fluxo de dados de conexão de armazenamento em nuvem de transmissão](tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
@@ -348,7 +348,7 @@ ht-degree: 23%
       - [Fluxo de dados de conexão da automação de marketing](tutorials/ui/dataflow/marketing-automation.md)
       - [Fluxo de dados da conexão de pagamento](tutorials/ui/dataflow/payments.md)
       - [Fluxo de dados de conexão de protocolo](tutorials/ui/dataflow/protocols.md)
-   - [Criar um fluxo de dados de fontes usando modelos na interface](tutorials/ui/templates.md)
+   - [Criar um fluxo de dados de origem usando modelos na interface](tutorials/ui/templates.md)
    - [Filtrar objetos de fontes](tutorials/ui/filter.md)
    - [Assimilar dados criptografados](tutorials/ui/encryped-ingestion.md)
    - [Assimilação sob demanda](tutorials/ui/on-demand-ingestion.md)
@@ -358,16 +358,16 @@ ht-degree: 23%
    - [Atualizar fluxos de dados](tutorials/ui/update-dataflows.md)
    - [Excluir contas](tutorials/ui/delete-accounts.md)
    - [Excluir fluxos de dados](tutorials/ui/delete.md)
-   - [Assinar alertas de fontes](tutorials/ui/alerts.md)
+   - [Assinar alertas de origens](tutorials/ui/alerts.md)
    - [Salvar um fluxo de dados como rascunho](tutorials/ui/draft.md)
-- Fontes de autoatendimento (SDK em lote) {#sdk}
+- Fontes de Autoatendimento (SDK em Lote) {#sdk}
    - [Visão geral](sources-sdk/overview.md)
    - Configurar a especificação de conexão {#config}
       - [Opções de configuração](sources-sdk/config/config.md)
       - [Configurar especificação de autenticação](sources-sdk/config/authspec.md)
       - [Configurar especificação de origem](sources-sdk/config/sourcespec.md)
       - [Configurar especificação de exploração](sources-sdk/config/explorespec.md)
-   - Guia da API de fontes de autoatendimento (SDK em lote) {#self-serve-api}
+   - Guia da API de Fontes de Autoatendimento (SDK em Lote) {#self-serve-api}
       - [Visão geral da API de Fontes de autoatendimento (SDK em lote)](sources-sdk/api/api-overview.md)
       - [Introdução](sources-sdk/api/getting-started.md)
       - [Criar uma especificação de conexão](sources-sdk/api/create.md)

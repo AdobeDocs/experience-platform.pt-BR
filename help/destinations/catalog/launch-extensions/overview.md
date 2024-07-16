@@ -6,7 +6,7 @@ exl-id: 54fca635-0e37-460e-abb3-5da294d4e0cf
 source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '486'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -21,15 +21,15 @@ Para obter uma introdução às tags, consulte os recursos abaixo:
 
 ## Como encontrar extensões de tag na interface da Platform {#how-to-find-extensions-in-interface}
 
-Para encontrar as extensões na interface da Platform, navegue até **[!UICONTROL Destinos]** > **[!UICONTROL Catálogo]** e selecione **[!UICONTROL Extensões]** no **[!UICONTROL Tipos]** filtro.
+Para localizar as extensões na interface da Platform, navegue até **[!UICONTROL Destinos]** > **[!UICONTROL Catálogo]** e selecione **[!UICONTROL Extensões]** no filtro **[!UICONTROL Tipos]**.
 
 ![Filtro de extensões na interface](../../assets/catalog/launch-extensions/filter.png)
 
 ## Como funcionam as extensões de tag {#how-extensions-work}
 
-A [extensão de tag](../../../tags/home.md#extensions) O é um pacote de códigos que melhora a funcionalidade de um site ou aplicativo móvel. Isso pode incluir o envio de dados brutos do evento para um destino como [Google Analytics](/help/destinations/catalog/analytics/google-universal-analytics.md) mas elas também podem desempenhar outras funções.
+Uma [extensão de tag](../../../tags/home.md#extensions) é um pacote de código que aprimora a funcionalidade de um site ou aplicativo móvel. Isso pode incluir o envio de dados brutos do evento para um destino como [Google Analytics](/help/destinations/catalog/analytics/google-universal-analytics.md), mas eles também podem atender a outras funções.
 
-É importante diferenciar entre extensões de encaminhamento de tags e eventos. As extensões exibidas na interface do usuário de destinos da Platform são *extensões de tag*. Consulte a visão geral do encaminhamento de eventos para obter mais informações sobre o [diferenças entre tags e encaminhamento de eventos](/help/tags/ui/event-forwarding/overview.md#differences-between-event-forwarding-and-tags).
+É importante diferenciar entre extensões de encaminhamento de tags e eventos. As extensões exibidas na interface do usuário de destinos da Platform são *extensões de tag*. Consulte a visão geral do encaminhamento de eventos para obter mais informações sobre as [diferenças entre as marcas e o encaminhamento de eventos](/help/tags/ui/event-forwarding/overview.md#differences-between-event-forwarding-and-tags).
 
 
 
@@ -47,7 +47,7 @@ Extensions forward raw event data to several types of destinations. Think of ext
 
 Os recursos de tag da Platform são gratuitos para clientes do Experience Cloud existentes. O sistema simplifica a implantação de tags no site por meio de extensões fáceis de usar que você pode instalar, configurar, atualizar e excluir. As tags ocupam pouco espaço no site e permitem que você mantenha suas páginas carregando rapidamente.
 
-Embora não seja possível ativar públicos para extensões de tag, você pode configurar regras para encaminhar apenas dados do evento em determinadas situações. Essa poderosa funcionalidade permite encaminhar os dados do evento somente em determinadas situações, em vez de enviar dados do evento em cada interação. Para obter mais informações, leia sobre as regras na seção [documentação das tags](../../../tags/ui/managing-resources/rules.md).
+Embora não seja possível ativar públicos para extensões de tag, você pode configurar regras para encaminhar apenas dados do evento em determinadas situações. Essa poderosa funcionalidade permite encaminhar os dados do evento somente em determinadas situações, em vez de enviar dados do evento em cada interação. Para obter mais informações, leia sobre as regras na [documentação de tags](../../../tags/ui/managing-resources/rules.md).
 
 ## Exemplo de casos de uso para extensões {#extensions-use-cases}
 

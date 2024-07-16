@@ -15,11 +15,11 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->O editor herdado foi descontinuado em 24 de maio de 2024. Ele não está mais acessível para uso. Agora você pode usar o [Editor de consultas aprimorado](#enhanced-editor-toggle) para gravar, validar e executar suas consultas
+>O editor herdado foi descontinuado em 24 de maio de 2024. Ele não está mais acessível para uso. Agora você pode usar o [Enhanced Query Editor](#enhanced-editor-toggle) para gravar, validar e executar suas consultas
 
-O Editor de consultas é uma ferramenta interativa fornecida pelo Serviço de consultas Adobe Experience Platform, que permite gravar, validar e executar consultas para dados de experiência do cliente no [!DNL Experience Platform] interface do usuário. O Editor de consultas é compatível com o desenvolvimento de consultas para análise e exploração de dados e permite executar consultas interativas para fins de desenvolvimento, bem como consultas não interativas para preencher conjuntos de dados no [!DNL Experience Platform].
+O Editor de Consultas é uma ferramenta interativa fornecida pelo Serviço de Consulta da Adobe Experience Platform, que permite gravar, validar e executar consultas para dados de experiência do cliente na interface do usuário do [!DNL Experience Platform]. O Editor de Consultas oferece suporte ao desenvolvimento de consultas para análise e exploração de dados, e permite executar consultas interativas para fins de desenvolvimento, bem como consultas não interativas para popular conjuntos de dados no [!DNL Experience Platform].
 
-Para obter mais informações sobre os conceitos e recursos do Serviço de consulta, consulte [Visão geral do Serviço de consulta](../home.md). Para saber mais sobre como navegar na interface do usuário do Serviço de consulta em [!DNL Platform], consulte o [Visão geral da interface do usuário do serviço de consulta](./overview.md).
+Para obter mais informações sobre os conceitos e recursos do Serviço de consulta, consulte a [visão geral do Serviço de consulta](../home.md). Para saber mais sobre como navegar na interface do usuário do Serviço de Consulta em [!DNL Platform], consulte a [visão geral da interface do usuário do Serviço de Consulta](./overview.md).
 
 ## Introdução {#getting-started}
 
@@ -27,15 +27,15 @@ O Editor de consultas fornece execução flexível de consultas conectando-se ao
 
 ## Acesso ao Editor de consultas {#accessing-query-editor}
 
-No [!DNL Experience Platform] Interface, selecione **[!UICONTROL Consultas]** no menu de navegação esquerdo, para abrir o espaço de trabalho do Serviço de consulta. Em seguida, para começar a gravar consultas, selecione **[!UICONTROL Criar consulta]** na parte superior direita da tela. Esse link está disponível em qualquer uma das páginas no espaço de trabalho do Serviço de consulta.
+Na interface do usuário do [!DNL Experience Platform], selecione **[!UICONTROL Consultas]** no menu de navegação esquerdo para abrir o espaço de trabalho Serviço de Consulta. Em seguida, para começar a gravar consultas, selecione **[!UICONTROL Criar consulta]** na parte superior direita da tela. Esse link está disponível em qualquer uma das páginas no espaço de trabalho do Serviço de consulta.
 
-![A guia de visão geral do espaço de trabalho Consultas com Create query realçado.](../images/ui/query-editor/create-query.png)
+![A guia de visão geral do espaço de trabalho Consultas com Criar consulta foi destacada.](../images/ui/query-editor/create-query.png)
 
 ### Conexão com o Serviço de consulta {#connecting-to-query-service}
 
 O Editor de consultas demora alguns segundos para inicializar e se conectar ao Serviço de consulta quando ele é aberto. O console informa quando está conectado, conforme mostrado abaixo. Se você tentar executar uma consulta antes que o editor se conecte, a execução será atrasada até que a conexão seja concluída.
 
-![A saída do console do Editor de consultas na conexão inicial.](../images/ui/query-editor/connect.png)
+![A saída do console do Editor de Consultas na conexão inicial.](../images/ui/query-editor/connect.png)
 
 ### Como as consultas são executadas no Editor de consultas {#run-a-query}
 
@@ -55,11 +55,11 @@ Um ícone de configurações acima do campo de entrada do Editor de consultas in
 
 >[!TIP]
 >
->Você pode [!UICONTROL Desativar preenchimento automático de sintaxe] ao criar uma consulta sem perder seu progresso.
+>Você pode [!UICONTROL Desabilitar o preenchimento automático da sintaxe] ao criar uma consulta sem perder seu progresso.
 
-Para ativar temas escuros ou claros, selecione o ícone de configurações (![Um ícone de configurações.](../images/ui/query-editor/settings-icon.png)) seguido pela opção no menu suspenso que é exibida.
+Para habilitar temas escuros ou claros, selecione o ícone de configurações (![Ícone de configurações.](../images/ui/query-editor/settings-icon.png)) seguido pela opção no menu suspenso que aparece.
 
-![O Editor de consultas com o ícone de configurações e a opção de menu suspenso Ativar tema escuro estão realçados.](../images/ui/query-editor/query-editor-settings.png)
+![O Editor de Consultas com o ícone de configurações e a opção de menu suspenso Habilitar tema escuro está realçado.](../images/ui/query-editor/query-editor-settings.png)
 
 #### Preenchimento automático {#auto-complete}
 
@@ -82,57 +82,57 @@ Use o Editor de consultas aprimorado para gravar mais de uma consulta e executar
 ### Executar consulta selecionada {#execute-selected-query}
 
 Se tiver escrito várias consultas, mas precisar executar apenas uma, destaque a consulta escolhida e selecione a variável
-[!UICONTROL Executar consulta selecionada] ícone. Esse ícone é desativado por padrão até que você selecione a sintaxe de consulta no editor.
+Ícone [!UICONTROL Executar consulta selecionada]. Esse ícone é desativado por padrão até que você selecione a sintaxe de consulta no editor.
 
-![O Editor de consultas com o [!UICONTROL Executar consulta selecionada] ícone realçado.](../images/ui/query-editor/run-selected-query.png)
+![O Editor de Consultas com o ícone [!UICONTROL Executar consulta selecionada] realçado.](../images/ui/query-editor/run-selected-query.png)
 
 ### Cancelar sessão do Editor de consultas {#cancel-query}
 
 Assuma o controle da execução de consultas e melhore sua produtividade cancelando consultas de longa execução. Essa ação limpa o Editor de consultas durante uma execução de consulta. Esteja ciente de que a consulta continua a ser executada em segundo plano. Se for uma consulta CTAS, ela ainda gerará um conjunto de dados de saída. Para cancelar a execução no editor e continuar compondo uma instrução SQL, selecione **[!UICONTROL Cancelar consulta]** após executar uma consulta.
 
-![O Editor de consultas com [!UICONTROL Cancelar consulta] destacado.](../images/ui/query-editor/cancel-query-run.png)
+![O Editor de Consultas com [!UICONTROL Cancelar consulta] foi realçado.](../images/ui/query-editor/cancel-query-run.png)
 
-Uma caixa de diálogo de confirmação é exibida. Selecionar **[!UICONTROL Confirmar o]** para cancelar a execução da consulta.
+Uma caixa de diálogo de confirmação é exibida. Selecione **[!UICONTROL Confirmar]** para cancelar a execução da consulta.
 
-![A caixa de diálogo de confirmação Cancelar consulta com Confirmar foi realçada.](../images/ui/query-editor/cancel-query-confirmation-dialog.png)
+![Caixa de diálogo de confirmação Cancelar consulta com Confirmação realçada.](../images/ui/query-editor/cancel-query-confirmation-dialog.png)
 
 ### Contagem de resultados {#result-count}
 
-O Editor de consultas tem uma saída máxima de 50.000 linhas. Você pode escolher o número de linhas que são exibidas ao mesmo tempo no console do Editor de consultas. Para alterar o número de linhas exibidas no console, selecione a variável **[!UICONTROL Contagem de resultados]** e selecione entre as opções 50, 100, 150, 300 e 500.
+O Editor de consultas tem uma saída máxima de 50.000 linhas. Você pode escolher o número de linhas que são exibidas ao mesmo tempo no console do Editor de consultas. Para alterar o número de linhas exibidas no console, selecione a lista suspensa **[!UICONTROL Contagem de resultados]** e selecione nas opções 50, 100, 150, 300 e 500.
 
-![O Editor de consultas com a lista suspensa de contagem de resultados realçada.](../images/ui/query-editor/result-count.png)
+![O Editor de Consultas com a lista suspensa de Contagem de resultados realçada.](../images/ui/query-editor/result-count.png)
 
 ## Gravação de consultas {#writing-queries}
 
-[!UICONTROL Editor de consultas] O é organizado para facilitar ao máximo a criação de consultas. A captura de tela abaixo mostra como o editor aparece na interface do usuário, com o campo de entrada SQL e **Reproduzir** destacado.
+O [!UICONTROL Editor de Consultas] está organizado para facilitar ao máximo a criação de consultas. A captura de tela abaixo mostra como o editor aparece na interface do usuário, com o campo de entrada SQL e **Reproduzir** destacados.
 
-![O Editor de consultas com o campo de entrada SQL e Reproduzir realçados.](../images/ui/query-editor/editor.png)
+![O Editor de Consultas com o campo de entrada SQL e Reproduzir realçados.](../images/ui/query-editor/editor.png)
 
 Para minimizar o tempo de desenvolvimento, é recomendável desenvolver consultas com limites no número de linhas retornadas. Por exemplo, `SELECT fields FROM table WHERE conditions LIMIT number_of_rows`. Após verificar que sua consulta produz a saída esperada, remova os limites e execute a consulta com `CREATE TABLE tablename AS SELECT` para gerar um conjunto de dados com a saída.
 
 ## Ferramentas de escrita no Editor de consultas {#writing-tools}
 
-- **Realce automático da sintaxe:** Facilita a leitura e a organização do SQL.
+- **Realce automático da sintaxe:** facilita a leitura e a organização do SQL.
 
-![Uma instrução SQL no Editor de consultas demonstrando o realce da cor da sintaxe.](../images/ui/query-editor/syntax-highlight.png)
+![Uma instrução SQL no Editor de Consultas demonstrando o realce de cores da sintaxe.](../images/ui/query-editor/syntax-highlight.png)
 
-- **Preenchimento automático de palavra-chave SQL:** Comece a digitar o query, use as teclas de seta para navegar até o termo desejado e pressione **Enter**.
+- **Preenchimento automático de palavra-chave SQL:** Comece a digitar sua consulta, em seguida, use as teclas de seta para navegar até o termo desejado e pressione **Enter**.
 
-![Alguns caracteres de SQL com o menu suspenso de preenchimento automático fornecendo opções do Editor de consultas.](../images/ui/query-editor/syntax-auto.png)
+![Alguns caracteres de SQL com o menu suspenso de preenchimento automático fornecendo opções do Editor de Consultas.](../images/ui/query-editor/syntax-auto.png)
 
-- **Preenchimento automático de tabela e campo:** Comece a digitar o nome da tabela que deseja `SELECT` do, em seguida, use as teclas de seta para navegar até a tabela que você está procurando e pressione **Enter**. Depois que uma tabela é selecionada, o preenchimento automático reconhece os campos nessa tabela.
+- **Preenchimento automático de tabela e campo:** Comece digitando o nome da tabela da qual deseja `SELECT`. Em seguida, use as teclas de seta para navegar até a tabela que você está procurando e pressione **Enter**. Depois que uma tabela é selecionada, o preenchimento automático reconhece os campos nessa tabela.
 
-![A entrada do Editor de consultas exibindo sugestões de nome de tabela suspensa.](../images/ui/query-editor/tables-auto.png)
+![A entrada do Editor de Consulta exibindo sugestões de nome de tabela suspensa.](../images/ui/query-editor/tables-auto.png)
 
 ### Formatar texto {#format-text}
 
-A variável [!UICONTROL Formatar texto] Esse recurso torna a consulta mais legível adicionando um estilo de sintaxe padronizado. Selecionar **[!UICONTROL Formatar texto]** para padronizar todo o texto no Editor de consultas.
+O recurso [!UICONTROL Formatar texto] torna sua consulta mais legível ao adicionar um estilo de sintaxe padronizado. Selecione **[!UICONTROL Formatar texto]** para padronizar todo o texto no Editor de Consultas.
 
 >[!NOTE]
 >
->A variável [!UICONTROL Formatar texto] O recurso não funciona com blocos anônimos. Para saber como encadear uma ou mais instruções SQL sequencialmente, consulte [documentação de bloqueio anônimo](../key-concepts/anonymous-block.md).
+>O recurso [!UICONTROL Formatar texto] não funciona com blocos anônimos. Para saber como encadear uma ou mais instruções SQL sequencialmente, consulte a [documentação de bloqueio anônimo](../key-concepts/anonymous-block.md).
 
-![O Editor de consultas com [!UICONTROL Formatar texto] e as instruções SQL destacadas.](../images/ui/query-editor/format-text.png)
+![O Editor de Consultas com [!UICONTROL Formatar texto] e as instruções SQL realçadas.](../images/ui/query-editor/format-text.png)
 
 <!-- ### Undo text {#undo-text}
 
@@ -144,37 +144,37 @@ If you format your SQL in the Query Editor, you can undo the formatting applied 
 
 Selecione o ícone de cópia para copiar o SQL do Editor de consultas para a área de transferência. Esse recurso de cópia está disponível para modelos de consulta e consultas recém-criadas no Editor de consultas.
 
-![O espaço de trabalho Consultas com um modelo de consulta de exemplo com o ícone de cópia destacado.](../images/ui/query-editor/copy-sql.png)
+![O espaço de trabalho Consultas com um modelo de consulta de exemplo com o ícone de cópia realçado.](../images/ui/query-editor/copy-sql.png)
 
 ### Detalhes da consulta {#query-details}
 
-Para exibir uma consulta no Editor de consultas, selecione qualquer modelo salvo na [!UICONTROL Modelos] guia. O painel de detalhes da consulta fornece mais informações e ferramentas para gerenciar a consulta selecionada. Ela também mostra metadados úteis, como a última vez que a consulta foi modificada e quem a modificou, se aplicável.
+Para exibir uma consulta no Editor de Consultas, selecione qualquer modelo salvo na guia [!UICONTROL Modelos]. O painel de detalhes da consulta fornece mais informações e ferramentas para gerenciar a consulta selecionada. Ela também mostra metadados úteis, como a última vez que a consulta foi modificada e quem a modificou, se aplicável.
 
 >[!NOTE]
 >
->A variável [!UICONTROL Exibir programação], [!UICONTROL Adicionar programação] e [!UICONTROL Excluir consulta] As opções só estarão disponíveis depois que a consulta for salva como template. A variável [!UICONTROL Adicionar programação] leva você diretamente para o construtor de agendamentos a partir do Editor de consultas. A variável [!UICONTROL Exibir programação] a opção leva você diretamente ao inventário de programação para essa consulta. Consulte a documentação dos cronogramas de consulta para saber como [criar agendamentos de consulta na interface](./query-schedules.md#create-schedule).
+>As opções [!UICONTROL Exibir agendamento], [!UICONTROL Adicionar agendamento] e [!UICONTROL Excluir consulta] só estarão disponíveis depois que a consulta for salva como modelo. A opção [!UICONTROL Adicionar agendamento] direciona você ao construtor de agendamentos a partir do Editor de Consultas. A opção [!UICONTROL Exibir agendamento] leva você diretamente para o inventário de agendamento para essa consulta. Consulte a documentação de agendamentos de consulta para saber como [criar agendamentos de consulta na interface do usuário](./query-schedules.md#create-schedule).
 
-![O Editor de consultas com o painel de detalhes da consulta realçado.](../images/ui/query-editor/query-details.png)
+![O Editor de Consultas com o painel de detalhes da consulta realçado.](../images/ui/query-editor/query-details.png)
 
 No painel de detalhes, é possível gerar um conjunto de dados de saída diretamente da interface do usuário, excluir ou nomear a consulta exibida, exibir o agendamento de execução da consulta e adicionar a consulta a um agendamento.
 
-Para gerar um conjunto de dados de saída, selecione **[!UICONTROL Executar como CTAS]**. A variável **[!UICONTROL Inserir detalhes do conjunto de dados de saída]** será exibida. Insira um nome e uma descrição, depois selecione **[!UICONTROL Executar como CTAS]**. O novo conjunto de dados é exibido na **[!UICONTROL Conjuntos de dados]** Guia Procurar. Consulte [a documentação exibir conjuntos de dados](../../catalog/datasets/user-guide.md#view-datasets) para saber mais sobre conjuntos de dados disponíveis para sua organização.
+Para gerar um conjunto de dados de saída, selecione **[!UICONTROL Executar como CTAS]**. A caixa de diálogo **[!UICONTROL Inserir detalhes do conjunto de dados de saída]** é exibida. Digite um nome e uma descrição e selecione **[!UICONTROL Executar como CTAS]**. O novo conjunto de dados é exibido na guia Procurar **[!UICONTROL Conjuntos de Dados]**. Consulte [a documentação Exibir conjuntos de dados](../../catalog/datasets/user-guide.md#view-datasets) para saber mais sobre os conjuntos de dados disponíveis para sua organização.
 
 >[!NOTE]
 >
->A variável [!UICONTROL Executar como CTAS] A opção só estará disponível se a consulta tiver **não** foi programado.
+>A opção [!UICONTROL Executar como CTAS] só estará disponível se a consulta **não** tiver sido agendada.
 
-![A variável [!UICONTROL Inserir detalhes do conjunto de dados de saída] diálogo.](../images/ui/query-editor/output-dataset-details.png)
+![A caixa de diálogo [!UICONTROL Inserir detalhes do conjunto de dados de saída].](../images/ui/query-editor/output-dataset-details.png)
 
-Depois de executar o **[!UICONTROL Executar como CTAS]** ação, uma mensagem de confirmação será exibida para notificá-lo sobre a ação bem-sucedida. Esta mensagem pop-up contém um link que fornece uma maneira conveniente de navegar até o espaço de trabalho de logs de consulta. Consulte a [documentação dos logs de consulta](./query-logs.md) para obter mais informações sobre logs de consulta.
+Após executar a ação **[!UICONTROL Executar como CTAS]**, uma mensagem de confirmação será exibida para notificá-lo sobre a ação bem-sucedida. Esta mensagem pop-up contém um link que fornece uma maneira conveniente de navegar até o espaço de trabalho de logs de consulta. Consulte a [documentação dos logs de consulta](./query-logs.md) para obter mais informações sobre logs de consulta.
 
 ### Salvamento de consultas {#saving-queries}
 
-O Editor de consultas fornece uma função salvar que permite salvar uma consulta e trabalhar nela posteriormente. Para salvar uma consulta, selecione **[!UICONTROL Salvar]** no canto superior direito do Editor de consultas. Para que uma consulta possa ser salva, um nome deve ser fornecido para ela usando o **[!UICONTROL Detalhes da consulta]** painel.
+O Editor de consultas fornece uma função salvar que permite salvar uma consulta e trabalhar nela posteriormente. Para salvar uma consulta, selecione **[!UICONTROL Salvar]** no canto superior direito do Editor de Consultas. Antes de salvar uma consulta, é necessário fornecer um nome para ela usando o painel **[!UICONTROL Detalhes da Consulta]**.
 
 >[!NOTE]
 >
->Consultas nomeadas e salvas no usando o Editor de consultas estão disponíveis como modelos no painel Consulta [!UICONTROL Modelos] guia. Consulte a [documentação de modelos](./query-templates.md) para obter mais informações.
+>Consultas nomeadas e salvas no usando o Editor de consultas estão disponíveis como modelos na guia [!UICONTROL Modelos] do painel de consulta. Consulte a [documentação de modelos](./query-templates.md) para obter mais informações.
 
 Quando você salva uma consulta no Editor de consultas, uma mensagem de confirmação aparece para notificá-lo sobre a ação bem-sucedida. Esta mensagem pop-up contém um link que fornece uma maneira conveniente de navegar até o espaço de trabalho de agendamento de consultas. Consulte a [documentação de consultas de agendamento](./query-schedules.md) para saber como executar consultas em uma cadência personalizada.
 
@@ -186,18 +186,18 @@ Os cronogramas são definidos no Editor de consultas. Ao usar o Editor de consul
 
 >[!NOTE]
 >
->Consultas programadas que falharem em dez execuções consecutivas são colocadas automaticamente em um [!UICONTROL Em quarentena] status. Uma consulta com esse status requer sua intervenção antes que qualquer outra execução possa ocorrer. Consulte a [consultas em quarentena](./monitor-queries.md#quarantined-queries) para obter mais detalhes.
+>Consultas agendadas com falha em dez execuções consecutivas são colocadas automaticamente em um status [!UICONTROL Em quarentena]. Uma consulta com esse status requer sua intervenção antes que qualquer outra execução possa ocorrer. Consulte a documentação das [consultas em quarentena](./monitor-queries.md#quarantined-queries) para obter mais detalhes.
 
-Consulte a documentação dos cronogramas de consulta para saber como [criar agendamentos de consulta na interface](./query-schedules.md). Como alternativa, para saber como adicionar agendas usando a API, leia o [guia de endpoint de consultas programadas](../api/scheduled-queries.md).
+Consulte a documentação de agendamentos de consulta para saber como [criar agendamentos de consulta na interface do usuário](./query-schedules.md). Como alternativa, para saber como adicionar agendamentos usando a API, leia o [manual de ponto de extremidade de consultas agendadas](../api/scheduled-queries.md).
 
-Quaisquer consultas programadas são adicionadas à lista no [!UICONTROL Consultas programadas] guia. Nesse espaço de trabalho, é possível monitorar o status de todos os trabalhos de consulta agendados por meio da interface do usuário. No [!UICONTROL Consultas programadas] você pode encontrar informações importantes sobre as execuções de consulta e assinar alertas. As informações disponíveis incluem status, detalhes da programação e mensagens/códigos de erro se uma execução falhar. Consulte a [Monitorar documento de consultas programadas](./monitor-queries.md) para obter mais informações.
+Quaisquer consultas agendadas são adicionadas à lista na guia [!UICONTROL Consultas agendadas]. Nesse espaço de trabalho, é possível monitorar o status de todos os trabalhos de consulta agendados por meio da interface do usuário. Na guia [!UICONTROL Consultas agendadas], você pode encontrar informações importantes sobre a execução de consultas e assinar alertas. As informações disponíveis incluem status, detalhes da programação e mensagens/códigos de erro se uma execução falhar. Consulte o [Documento de monitoramento de consultas agendadas](./monitor-queries.md) para obter mais informações.
 
 
 ### Como encontrar consultas anteriores {#previous-queries}
 
-Todas as consultas executadas no Editor de consultas são capturadas na tabela Log. Você pode usar a funcionalidade de pesquisa no **[!UICONTROL Log]** para localizar execuções de consulta. As consultas salvas estão listadas no **[!UICONTROL Modelos]** guia.
+Todas as consultas executadas no Editor de consultas são capturadas na tabela Log. Você pode usar a funcionalidade de pesquisa na guia **[!UICONTROL Log]** para localizar execuções de consulta. As consultas salvas estão listadas na guia **[!UICONTROL Modelos]**.
 
-Se um query foi agendado, a variável [!UICONTROL Consultas programadas] fornece visibilidade aprimorada por meio da interface para esses trabalhos de consulta. Consulte a [documentação de monitoramento de consultas](./monitor-queries.md) para obter mais informações.
+Se uma consulta foi agendada, a guia [!UICONTROL Consultas agendadas] oferece maior visibilidade por meio da interface do usuário para esses trabalhos de consulta. Consulte a [documentação de monitoramento da consulta](./monitor-queries.md) para obter mais informações.
 
 >[!NOTE]
 >
@@ -205,13 +205,13 @@ Se um query foi agendado, a variável [!UICONTROL Consultas programadas] fornece
 
 ## Execução de consultas usando o Editor de consultas {#executing-queries}
 
-Para executar uma consulta no Editor de consultas, você pode inserir SQL no editor ou carregar uma consulta anterior do **[!UICONTROL Log]** ou **[!UICONTROL Modelos]** e selecione **Reproduzir**. O status da execução da consulta é exibido no **[!UICONTROL Console]** e os dados de saída serão mostrados na guia **[!UICONTROL Resultados]** guia.
+Para executar uma consulta no Editor de Consultas, você pode inserir SQL no editor ou carregar uma consulta anterior da guia **[!UICONTROL Log]** ou **[!UICONTROL Modelos]** e selecionar **Reproduzir**. O status da execução da consulta é exibido na guia **[!UICONTROL Console]** abaixo, e os dados de saída são mostrados na guia **[!UICONTROL Resultados]**.
 
 ### Console {#console}
 
 O console fornece informações sobre o status e a operação do Serviço de consulta. O console exibe o status da conexão com o Serviço de consulta, as operações de consulta que estão sendo executadas e as mensagens de erro resultantes dessas consultas.
 
-![A guia Console do console do Editor de consultas.](../images/ui/query-editor/console.png)
+![A guia Console do console do Editor de Consultas.](../images/ui/query-editor/console.png)
 
 >[!NOTE]
 >
@@ -219,13 +219,13 @@ O console fornece informações sobre o status e a operação do Serviço de con
 
 ### Resultados da consulta {#query-results}
 
-Após a conclusão de um query, os resultados são exibidos no **[!UICONTROL Resultados]** , ao lado da guia **[!UICONTROL Console]** guia. Essa exibição mostra a saída tabular do query, exibindo entre 50 e 500 linhas de resultados, dependendo da opção escolhida [contagem de resultados](#result-count). Essa visualização permite verificar se sua consulta produz a saída esperada. Para gerar um conjunto de dados com sua consulta, remova os limites nas linhas retornadas e execute a consulta com `CREATE TABLE tablename AS SELECT` para gerar um conjunto de dados com a saída. Consulte a [tutorial sobre geração de conjuntos de dados](./create-datasets.md) para obter instruções sobre como gerar um conjunto de dados a partir dos resultados da consulta no Editor de consultas.
+Após a conclusão de uma consulta, os resultados serão exibidos na guia **[!UICONTROL Resultados]**, ao lado da guia **[!UICONTROL Console]**. Este modo de exibição mostra a saída tabular da sua consulta, exibindo entre 50 e 500 linhas de resultados, dependendo da sua [contagem de resultados](#result-count) escolhida. Essa visualização permite verificar se sua consulta produz a saída esperada. Para gerar um conjunto de dados com sua consulta, remova os limites nas linhas retornadas e execute a consulta com `CREATE TABLE tablename AS SELECT` para gerar um conjunto de dados com a saída. Consulte o [tutorial de geração de conjuntos de dados](./create-datasets.md) para obter instruções sobre como gerar um conjunto de dados a partir dos resultados da consulta no Editor de consultas.
 
-![A guia Resultados do console do Editor de consultas exibindo os resultados de uma execução de consulta.](../images/ui/query-editor/query-results.png)
+![A guia Resultados do console do Editor de Consultas exibindo os resultados de uma execução de consulta.](../images/ui/query-editor/query-results.png)
 
 ## Casos de uso {#use-cases}
 
-O Serviço de consulta fornece soluções para uma variedade de casos de uso em todos os setores e cenários de negócios. Esses exemplos práticos demonstram a flexibilidade e o impacto do serviço em atender a diversas necessidades. Para [descubra como o Serviço de consulta pode agregar valor às suas necessidades de negócios específicas](../use-cases/overview.md), explore a coleção abrangente de documentos de casos de uso. Saiba como usar o Serviço de consulta para fornecer insights e soluções para melhorar a eficiência operacional e o sucesso dos negócios.
+O Serviço de consulta fornece soluções para uma variedade de casos de uso em todos os setores e cenários de negócios. Esses exemplos práticos demonstram a flexibilidade e o impacto do serviço em atender a diversas necessidades. Para [descobrir como o Serviço de consulta pode agregar valor às suas necessidades comerciais específicas](../use-cases/overview.md), explore a coleção abrangente de documentos de casos de uso. Saiba como usar o Serviço de consulta para fornecer insights e soluções para melhorar a eficiência operacional e o sucesso dos negócios.
 
 <!-- This video is from 2019. The logic is sounds but the workflow is too outdated. -->
 
@@ -241,4 +241,4 @@ O vídeo a seguir mostra como executar queries na interface do Adobe Experience 
 
 ## Próximas etapas
 
-Agora que você sabe quais recursos estão disponíveis no Editor de consultas e como navegar pelo aplicativo, pode começar a criar suas próprias consultas diretamente no [!DNL Platform]. Para obter mais informações sobre a execução de consultas SQL em conjuntos de dados na [!DNL Data Lake], consulte o guia sobre [execução de consultas](../best-practices/writing-queries.md).
+Agora que você sabe quais recursos estão disponíveis no Editor de Consultas e como navegar pelo aplicativo, pode começar a criar suas próprias consultas diretamente no [!DNL Platform]. Para obter mais informações sobre como executar consultas SQL em conjuntos de dados no [!DNL Data Lake], consulte o manual em [executando consultas](../best-practices/writing-queries.md).

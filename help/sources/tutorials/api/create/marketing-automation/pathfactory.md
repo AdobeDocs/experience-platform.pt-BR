@@ -10,24 +10,24 @@ ht-degree: 2%
 
 ---
 
-# Criar um [!DNL PathFactory] conexão básica usando o [!DNL Flow Service] API
+# Criar uma conexão de base [!DNL PathFactory] usando a API [!DNL Flow Service]
 
 Uma conexão base representa a conexão autenticada entre uma origem e o Adobe Experience Platform.
 
-Leia este documento para saber como criar uma conexão básica para [!DNL PathFactory] usando o [[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>).
+Leia este documento para saber como criar uma conexão base para [!DNL PathFactory] usando a [[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>).
 
 ## Introdução
 
 Este guia requer entendimento prático dos seguintes componentes do Experience Platform:
 
-* [Origens](../../../../home.md): o Experience Platform permite que os dados sejam assimilados de várias fontes e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma.
+* [Fontes](../../../../home.md): o Experience Platform permite que os dados sejam assimilados de várias fontes e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma.
 * [Sandboxes](../../../../../sandboxes/home.md): o Experience Platform fornece sandboxes virtuais que particionam uma única instância da Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
 ### Uso de APIs da plataforma
 
-Para obter informações sobre como fazer chamadas para APIs da Platform com êxito, consulte o manual em [introdução às APIs da Platform](../../../../../landing/api-guide.md).
+Para obter informações sobre como fazer chamadas para APIs da Platform com êxito, consulte o manual sobre [introdução às APIs da Platform](../../../../../landing/api-guide.md).
 
-A seção a seguir fornece informações adicionais que você precisará saber para se conectar com êxito ao [!DNL PathFactory] usando o [!DNL Flow Service] API.
+A seção a seguir fornece informações adicionais que você precisará saber para se conectar com êxito ao [!DNL PathFactory] usando a API [!DNL Flow Service].
 
 ### Colete as credenciais necessárias {#gather-credentials}
 
@@ -35,19 +35,19 @@ Para acessar a conta PathFactory na Platform, você deve fornecer os seguintes v
 
 | Credencial | Descrição |
 | ---------- | ----------- |
-| Nome de usuário | Seu [!DNL PathFactory] usuário da conta. Isso é essencial para identificar sua conta no sistema. |
-| Senha | A senha associada ao seu [!DNL PathFactory] conta. Verifique se isso está protegido para impedir o acesso não autorizado. |
-| Domínio | O domínio associado à [!DNL PathFactory] conta. Normalmente, se refere ao identificador exclusivo em seu [!DNL PathFactory] URL. |
-| Token de acesso | Um token exclusivo usado para autenticação de API para garantir a comunicação segura entre seus sistemas e [!DNL PathFactory]. |
-| Endpoints de API | Endpoints de API específicos para acessar dados: Visitantes, Sessões e Exibições de página. Cada endpoint corresponde a diferentes conjuntos de dados que você pode recuperar. **Nota:** Eles são predefinidos por [!DNL PathFactory] e são específicos aos dados que você pretende acessar: <ul><li>**Endpoint de visitantes**: `/api/public/v3/data_lake_apis/visitors.json`</li><li>**Endpoint de sessões**: `/api/public/v3/data_lake_apis/sessions.json`</li><li>**Ponto de extremidade de exibições de página**: `/api/public/v3/data_lake_apis/page_views.json`</li></ul> |
+| Nome de usuário | Seu nome de usuário da conta [!DNL PathFactory]. Isso é essencial para identificar sua conta no sistema. |
+| Senha | A senha associada à sua conta [!DNL PathFactory]. Verifique se isso está protegido para impedir o acesso não autorizado. |
+| Domínio | O domínio associado à sua conta [!DNL PathFactory]. Normalmente, refere-se ao identificador exclusivo na URL [!DNL PathFactory]. |
+| Token de acesso | Um token exclusivo usado para autenticação de API para garantir a comunicação segura entre seus sistemas e o [!DNL PathFactory]. |
+| Endpoints de API | Endpoints de API específicos para acessar dados: Visitantes, Sessões e Exibições de página. Cada endpoint corresponde a diferentes conjuntos de dados que você pode recuperar. **Observação:** são predefinidos por [!DNL PathFactory] e são específicos para os dados que você pretende acessar: <ul><li>**Ponto de Extremidade dos Visitantes**: `/api/public/v3/data_lake_apis/visitors.json`</li><li>**Ponto de Extremidade de Sessões**: `/api/public/v3/data_lake_apis/sessions.json`</li><li>**Ponto de Extremidade de Exibições de Página**: `/api/public/v3/data_lake_apis/page_views.json`</li></ul> |
 
-Para obter mais informações sobre como proteger e usar suas credenciais e como obter e atualizar seu token de acesso, visite o [[!DNL PathFactory] Centro de suporte](https://support.pathfactory.com/categories/adobe/). Esse recurso oferece guias abrangentes sobre como gerenciar suas credenciais e garantir uma integração de API eficaz e segura.
+Para obter mais informações sobre como proteger e usar suas credenciais e como obter e atualizar seu token de acesso, visite o [[!DNL PathFactory] Centro de Suporte](https://support.pathfactory.com/categories/adobe/). Esse recurso oferece guias abrangentes sobre como gerenciar suas credenciais e garantir uma integração de API eficaz e segura.
 
 ## Criar uma conexão básica
 
 Uma conexão base retém informações entre sua origem e a Platform, incluindo as credenciais de autenticação da origem, o estado atual da conexão e sua ID de conexão base exclusiva. A ID de conexão básica permite explorar e navegar pelos arquivos de dentro da origem e identificar os itens específicos que deseja assimilar, incluindo informações sobre os tipos de dados e formatos.
 
-Para criar um ID de conexão base, faça uma solicitação POST ao `/connections` ao fornecer sua [!DNL PathFactory] credenciais de autenticação como parte do corpo da solicitação.
+Para criar uma ID de conexão base, faça uma solicitação POST para o ponto de extremidade `/connections` enquanto fornece suas credenciais de autenticação [!DNL PathFactory] como parte do corpo da solicitação.
 
 **Formato da API**
 
@@ -57,7 +57,7 @@ POST /connections
 
 **Solicitação**
 
-A solicitação a seguir cria uma conexão básica para [!DNL PathFactory]:
+A solicitação a seguir cria uma conexão base para [!DNL PathFactory]:
 
 ```shell
 curl -X POST \
@@ -87,9 +87,9 @@ curl -X POST \
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `auth.params.clientId` | A ID do cliente associada à [!DNL PathFactory] aplicação. |
-| `auth.params.clientSecret` | O segredo do cliente associado à [!DNL PathFactory] aplicação. |
-| `connectionSpec.id` | A variável [!DNL PathFactory] ID da especificação de conexão: `ea1c2a08-b722-11eb-8529-0242ac130003`. |
+| `auth.params.clientId` | A ID do cliente associada ao aplicativo [!DNL PathFactory]. |
+| `auth.params.clientSecret` | O segredo do cliente associado ao aplicativo [!DNL PathFactory]. |
+| `connectionSpec.id` | A ID da especificação de conexão [!DNL PathFactory]: `ea1c2a08-b722-11eb-8529-0242ac130003`. |
 
 **Resposta**
 
@@ -104,7 +104,7 @@ Uma resposta bem-sucedida retorna a conexão recém-criada, incluindo seu identi
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você criou um [!DNL PathFactory] conexão básica usando o [!DNL Flow Service] API. Você pode usar essa ID de conexão básica nos seguintes tutoriais:
+Seguindo este tutorial, você criou uma conexão de base [!DNL PathFactory] usando a API [!DNL Flow Service]. Você pode usar essa ID de conexão básica nos seguintes tutoriais:
 
-* [Explore a estrutura e o conteúdo das tabelas de dados usando o [!DNL Flow Service] API](../../explore/tabular.md)
-* [Crie um fluxo de dados para trazer dados de automação de marketing para a Platform usando o [!DNL Flow Service] API](../../collect/marketing-automation.md)
+* [Explore a estrutura e o conteúdo das tabelas de dados usando a API  [!DNL Flow Service] ](../../explore/tabular.md)
+* [Crie um fluxo de dados para trazer dados de automação de marketing para a Platform usando a API  [!DNL Flow Service] ](../../collect/marketing-automation.md)

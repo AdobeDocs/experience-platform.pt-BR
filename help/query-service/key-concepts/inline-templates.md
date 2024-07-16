@@ -4,7 +4,7 @@ description: Saiba como reutilizar várias condições em várias consultas com 
 exl-id: 78959070-f9e5-4736-b72a-a8ef518bfa4f
 source-git-commit: 37aeff5131b9f67dbc99f6199918403e699478c8
 workflow-type: tm+mt
-source-wordcount: '485'
+source-wordcount: '486'
 ht-degree: 1%
 
 ---
@@ -17,7 +17,7 @@ Este documento aborda o uso e as limitações de modelos em linha no Editor de c
 
 ## Pré-requisitos
 
-Os modelos em linha são compatíveis com a interface do usuário e a API do serviço de consulta. Antes de continuar com este guia, leia a documentação sobre como [criar um template de query por meio da API](../api/query-templates.md#create-a-query-template) ou com o [Editor de consultas](../ui/user-guide.md#query-authoring).
+Os modelos em linha são compatíveis com a interface do usuário e a API do serviço de consulta. Antes de continuar com este guia, leia a documentação sobre como [criar um modelo de consulta por meio da API](../api/query-templates.md#create-a-query-template) ou com o [Editor de Consultas](../ui/user-guide.md#query-authoring).
 
 ## Sintaxe de modelo embutido {#syntax}
 
@@ -40,7 +40,7 @@ Ao executar a consulta, o Serviço de consulta substitui o nome do modelo começ
 >
 >Os templates de query podem chamar qualquer número de outros templates embutidos. Não há restrição no número de templates embutidos que podem ser chamados a partir de uma única query. Os modelos também podem ser aninhados em outros modelos em linha.
 
-Você pode usar modelos para armazenar uma ou várias condições. Eles não precisam ser uma consulta completa por si só. Se o modelo contiver uma consulta válida, você poderá executar a consulta simplesmente chamando o nome do modelo precedido por um símbolo de hash. Por exemplo, se você armazenou `SELECT * FROM JUNE_2023_LOYALTY_MEMBERS;` como um modelo chamado `JUNE_2023_LOYALTY_MEMBERS`, o comando  `#JUNE_2023_LOYALTY_MEMBERS;` executaria a consulta válida contida no modelo.
+Você pode usar modelos para armazenar uma ou várias condições. Eles não precisam ser uma consulta completa por si só. Se o modelo contiver uma consulta válida, você poderá executar a consulta simplesmente chamando o nome do modelo precedido por um símbolo de hash. Por exemplo, se você armazenasse `SELECT * FROM JUNE_2023_LOYALTY_MEMBERS;` como um modelo chamado `JUNE_2023_LOYALTY_MEMBERS`, o comando `#JUNE_2023_LOYALTY_MEMBERS;` executaria a consulta válida contida no modelo.
 
 >
 >
@@ -50,4 +50,4 @@ Você pode usar modelos para armazenar uma ou várias condições. Eles não pre
 
 Depois de ler este documento, agora você sabe como fazer referência a outros modelos no SQL, no Editor de consultas ou por meio da API do Serviço de consulta.
 
-Além disso, você deve ler a [guia de bloqueio anônimo](./anonymous-block.md), que explica como minimizar os overheads de desenvolvimento, encadeando uma ou mais instruções SQL executadas em sequência.
+Além disso, você deve ler o [guia de bloco anônimo](./anonymous-block.md), que explica como minimizar as despesas gerais de desenvolvimento, encadeando uma ou mais instruções SQL que são executadas em sequência.

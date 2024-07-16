@@ -12,27 +12,27 @@ ht-degree: 0%
 
 # Integrar o suporte ao IAB TCF 2.0 com o SDK da Web da plataforma
 
-Este guia mostra como integrar a Estrutura de transparência e consentimento do Interative Advertising Bureau, versão 2.0 (IAB TCF 2.0) com o SDK da Web da Adobe Experience Platform sem usar tags. Para obter uma visão geral da integração com a TCF 2.0 do IAB, leia o [visão geral](./overview.md). Para obter um guia sobre como integrar o com tags, leia o [Guia do IAB TCF 2.0 para tags](./with-tags.md).
+Este guia mostra como integrar a Estrutura de transparência e consentimento interativa do Advertising Bureau, versão 2.0 (IAB TCF 2.0) com o SDK da Web da Adobe Experience Platform sem usar tags. Para obter uma visão geral da integração com a TCF do IAB 2.0, leia a [visão geral](./overview.md). Para obter um guia sobre como integrar com tags, leia o [guia da TCF do IAB 2.0 para tags](./with-tags.md).
 
 ## Introdução
 
-Este guia usa o `__tcfapi` para acessar as informações de consentimento. Pode ser mais fácil integrar diretamente com seu provedor de gerenciamento de nuvem (CMP). No entanto, as informações neste guia ainda podem ser úteis, pois os CMPs geralmente fornecem funcionalidade semelhante à API TCF.
+Este guia usa a interface `__tcfapi` para acessar as informações de consentimento. Pode ser mais fácil integrar diretamente com seu provedor de gerenciamento de nuvem (CMP). No entanto, as informações neste guia ainda podem ser úteis, pois os CMPs geralmente fornecem funcionalidade semelhante à API TCF.
 
 >[!NOTE]
 >
->Esses exemplos presumem que, quando o código for executado, `window.__tcfapi` é definido na página. Os CMPs podem fornecer um gancho em que você pode executar essas funções quando a variável `__tcfapi` objeto está pronto.
+>Esses exemplos presumem que, no momento em que o código for executado, `window.__tcfapi` estará definido na página. Os CMPs podem fornecer um gancho no qual você pode executar essas funções quando o objeto `__tcfapi` estiver pronto.
 
 Para usar o IAB TCF 2.0 com tags e a extensão SDK da Web da Adobe Experience Platform, é necessário ter um esquema XDM disponível. Se você não tiver configurado nenhum deles, comece visualizando esta página antes de continuar.
 
-Além disso, este guia requer que você tenha uma compreensão funcional do SDK da Web da Adobe Experience Platform. Para uma atualização rápida, leia o [Visão geral do SDK da Web do Adobe Experience Platform](../../home.md) e a variável [Perguntas frequentes](../../faq.md) documentação.
+Além disso, este guia requer que você tenha uma compreensão funcional do SDK da Web da Adobe Experience Platform. Para obter uma atualização rápida, leia a [visão geral do SDK da Web da Adobe Experience Platform](../../home.md) e a documentação de [Perguntas frequentes](../../faq.md).
 
 ## Ativação do consentimento padrão
 
-Se quiser tratar todos os usuários desconhecidos da mesma forma, defina [`defaultConsent`](/help/web-sdk/commands/configure/defaultconsent.md) para `pending` ou `out`. Isso enfileira ou descarta os Eventos de experiência até que as preferências de consentimento sejam recebidas.
+Se quiser tratar todos os usuários desconhecidos da mesma forma, defina [`defaultConsent`](/help/web-sdk/commands/configure/defaultconsent.md) como `pending` ou `out`. Isso enfileira ou descarta os Eventos de experiência até que as preferências de consentimento sejam recebidas.
 
-### Definir o consentimento padrão com base em `gdprApplies`
+### Definindo o consentimento padrão com base em `gdprApplies`
 
-Algumas CMPs fornecem a capacidade de determinar se o Regulamento Geral sobre a Proteção de Dados (GDPR) se aplica ao cliente. Se você quiser assumir o consentimento para clientes aos quais o GDPR não se aplica, poderá usar o `gdprApplies` na chamada à API TCF.
+Algumas CMPs fornecem a capacidade de determinar se o Regulamento Geral sobre a Proteção de Dados (GDPR) se aplica ao cliente. Se você quiser assumir o consentimento para clientes aos quais o GDPR não se aplica, poderá usar o sinalizador `gdprApplies` na chamada de API TCF.
 
 O exemplo a seguir mostra uma maneira de fazer isso:
 
@@ -46,11 +46,11 @@ window.__tcfapi('getTCData', 2, function (tcData, success) {
 });
 ```
 
-Neste exemplo, a variável `configure` é chamado depois que a variável `tcData` é obtido da API TCF. Se `gdprApplies` é true, o consentimento padrão está definido como `pending`. Se `gdprApplies` é falso, o consentimento padrão está definido como `in`. Certifique-se de preencher o `alloyConfiguration` com sua configuração.
+Neste exemplo, o comando `configure` é chamado depois que `tcData` é obtido da API TCF. Se `gdprApplies` for verdadeiro, o consentimento padrão será definido como `pending`. Se `gdprApplies` for falso, o consentimento padrão será definido como `in`. Preencha a variável `alloyConfiguration` com sua configuração.
 
 >[!NOTE]
 >
->Quando o consentimento padrão é definido como `in`, o `setConsent` O comando ainda pode ser usado para registrar as preferências de consentimento dos clientes.
+>Quando o consentimento padrão estiver definido como `in`, o comando `setConsent` ainda poderá ser usado para registrar as preferências de consentimento dos clientes.
 
 ## Uso do evento setConsent
 
@@ -77,13 +77,13 @@ window.__tcfapi('addEventListener', 2, function (tcData, success) {
 });
 ```
 
-Este bloco de código escuta a `useractioncomplete` evento e, em seguida, define o consentimento, transmitindo a cadeia de consentimento e a variável `gdprApplies` sinalizador. Se você tiver identidades personalizadas para seus clientes, preencha o `identityMap` variável. Consulte o guia em [setConsent](../../../web-sdk/commands/setconsent.md) para obter mais informações.
+Este bloco de código escuta o evento `useractioncomplete` e define o consentimento, transmitindo a cadeia de consentimento e o sinalizador `gdprApplies`. Se você tiver identidades personalizadas para seus clientes, preencha a variável `identityMap`. Consulte o guia em [setConsent](../../../web-sdk/commands/setconsent.md) para obter mais informações.
 
 ## Inclusão de informações de consentimento em sendEvent
 
 Nos esquemas XDM, você pode armazenar informações de preferência de consentimento de Eventos de experiência. Há duas maneiras de adicionar essas informações a cada evento.
 
-Primeiro, você pode fornecer o esquema XDM relevante em cada `sendEvent` chame. O exemplo a seguir mostra uma maneira de fazer isso:
+Primeiro, você pode fornecer o esquema XDM relevante em cada chamada do `sendEvent`. O exemplo a seguir mostra uma maneira de fazer isso:
 
 ```javascript
 var sendEventOptions = { ... };
@@ -102,7 +102,7 @@ window.__tcfapi('getTCData', 2, function (tcData, success) {
 
 Esse exemplo obtém as informações de consentimento da API TCF e envia um evento com as informações de consentimento adicionadas ao esquema XDM.
 
-A outra maneira de adicionar as informações de consentimento a cada solicitação é com o [`onBeforeEventSend`](/help/web-sdk/commands/configure/onbeforeeventsend.md) retorno de chamada.
+A outra maneira de adicionar as informações de consentimento a cada solicitação é com o retorno de chamada [`onBeforeEventSend`](/help/web-sdk/commands/configure/onbeforeeventsend.md).
 
 ## Próximas etapas
 

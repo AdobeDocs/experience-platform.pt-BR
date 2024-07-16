@@ -1,7 +1,8 @@
 ---
 title: Acessar o assistente de IA no Experience Platform
 description: Saiba como acessar o Assistente de IA na interface do usuário do Experience Cloud.
-source-git-commit: b51291e6c3663c6d6e6d416f0d2c37563c852155
+exl-id: c4cdff25-512c-4b4c-be91-ad9360067a0a
+source-git-commit: 706a20e70aa20adb0f4a554d0ec35518811ea9a1
 workflow-type: tm+mt
 source-wordcount: '341'
 ht-degree: 0%
@@ -18,20 +19,20 @@ Você pode acessar o Assistente de IA em vários aplicativos na Adobe Experience
 
 O acesso ao AI Assistant é regido pelos seguintes parâmetros:
 
-* **Acesse o aplicativo:** Você pode acessar o Assistente de IA no Adobe Experience Platform, Adobe Real-Time CDP, Adobe Journey Optimizer e [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/ai-assistant).
+* **Acessar o aplicativo:** Você pode acessar o Assistente de IA no Adobe Experience Platform, Adobe Real-Time CDP, Adobe Journey Optimizer e [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/ai-assistant).
 <!-- * **Contractual access:** Your company must agree to certain [!DNL GenAI]-related legal terms before your organization can use AI Assistant. Contact your organization's administrator or your Adobe Account Team if you are not able to access AI Assistant.  -->
-* **Permissões:** Use o [Interface de permissões](../access-control/abac/ui/permissions.md) para conceder ou revogar o acesso ao Assistente de IA na sua organização. Para usar o Assistente de IA, um determinado usuário deve pertencer a uma função provisionada com o **Habilitar o assistente de IA** e **Exibir Insights Operacionais** permissões.
-   * Como administrador, você pode adicionar a variável **Habilitar o assistente de IA** a uma determinada função e adicionar um usuário a essa função, para permitir que eles acessem o Assistente de IA na organização.
-   * Como administrador, você pode adicionar a variável **Exibir Insights Operacionais** a uma determinada função e adicionar um usuário a essa função, para permitir que eles usem os recursos de insights operacionais do Assistente de IA. Os insights operacionais estão atualmente na versão beta.
+* **Permissões:** Use a [Interface do usuário de permissões](../access-control/abac/ui/permissions.md) para conceder ou revogar acesso ao Assistente de IA em sua organização. Para usar o Assistente de IA, um determinado usuário deve pertencer a uma função provisionada com as permissões **Habilitar Assistente de IA** e **Exibir Insights Operacionais**.
+   * Como administrador, você pode adicionar o **Habilitar o Assistente de IA** a uma determinada função e adicionar um usuário a essa função, para permitir que ele acesse o Assistente de IA em sua organização.
+   * Como administrador, você pode adicionar o **Exibir Insights Operacionais** a uma determinada função e adicionar um usuário a essa função, para permitir que ele use os recursos de insights operacionais do Assistente de IA. Os insights operacionais estão atualmente na versão beta.
 
-![A página da interface de permissões com as permissões Ativar assistente de IA e Exibir insights operacionais incluídas em uma determinada função.](./images/permissions.png)
+![A página da interface do usuário de permissões com o Assistente de IA habilitado e as permissões de Insights Operacionais de Exibição incluídas em uma determinada função.](./images/permissions.png)
 
 Use a interface de permissões para conceder permissões para usar o Assistente de IA no Experience Platform e no Journey Optimizer. Para obter informações sobre como acessar o Assistente de IA no Customer Journey Analytics. Leia a documentação em [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/ai-assistant).
 
 Depois de ter as permissões necessárias, você pode acessar o Assistente do AI selecionando o ícone do Assistente do AI no cabeçalho superior do aplicativo que está usando.
 
-![Assistente de IA com experiência de usuário inicial.](./images/ai-assistant.png)
+![Assistente de IA com experiência de usuário pela primeira vez.](./images/ai-assistant.png)
 
 ## Próximas etapas
 
-Depois de concluir o acesso ao Assistente de IA, você pode continuar usando o recurso durante os workflows, leia a [Guia da interface do assistente de IA](./ui-guide.md) para obter mais informações.
+Após concluir o acesso ao Assistente de IA, você pode continuar usando o recurso durante seus fluxos de trabalho. Leia o [guia da interface do usuário do Assistente de IA](./ui-guide.md) para obter mais informações.

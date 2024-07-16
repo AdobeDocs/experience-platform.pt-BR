@@ -29,7 +29,7 @@ Este documento aborda como definir tipos de condição para uma extensão da Web
 
 Os tipos de condição geralmente consistem no seguinte:
 
-1. A [exibir](./views.md) mostrado na interface do Experience Platform e na interface da Coleção de dados, permitindo que os usuários modifiquem as configurações para a condição.
+1. Uma [visualização](./views.md) mostrada na interface do usuário do Experience Platform e na interface da Coleção de dados que permite aos usuários modificar as configurações para a condição.
 2. Um módulo de biblioteca emitido na biblioteca de tempo de execução de tag para interpretar as configurações e avaliar uma condição.
 
 Um módulo de biblioteca do tipo condição tem uma meta: avaliar se algo é verdadeiro ou falso. O que ele avalia depende de você.

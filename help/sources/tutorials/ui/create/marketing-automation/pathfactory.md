@@ -6,24 +6,24 @@ exl-id: 859dd0c1-8c4b-43e3-a87b-84c879460bc0
 source-git-commit: ca17854830edabaf2bd74265258d6f0096f2888e
 workflow-type: tm+mt
 source-wordcount: '570'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
-# Conecte seu [!DNL PathFactory] conta para o Experience Platform por meio da interface
+# Conecte sua conta do [!DNL PathFactory] ao Experience Platform por meio da interface
 
-Este tutorial fornece etapas sobre como conectar seus [!DNL PathFactory] Dados de Visitantes, Sessões e Exibições de página do Adobe Experience Platform por meio da interface do.
+Este tutorial fornece etapas sobre como conectar os dados de Visitantes, Sessões e Exibições de Página do [!DNL PathFactory] à Adobe Experience Platform por meio da interface do usuário.
 
 ## Introdução
 
 Este tutorial requer um entendimento prático dos seguintes componentes do Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): o quadro normalizado pelo qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
-   * [Noções básicas da composição do esquema](../../../../../xdm/schema/composition.md): saiba mais sobre os componentes básicos dos esquemas XDM, incluindo princípios fundamentais e práticas recomendadas na composição do esquema.
+* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): a estrutura padronizada pela qual o [!DNL Experience Platform] organiza os dados de experiência do cliente.
+   * [Noções básicas sobre a composição de esquema](../../../../../xdm/schema/composition.md): saiba mais sobre os blocos de construção básicos de esquemas XDM, incluindo princípios-chave e práticas recomendadas na composição de esquema.
    * [Tutorial do Editor de esquemas](../../../../../xdm/tutorials/create-schema-ui.md): saiba como criar esquemas personalizados usando a interface do Editor de esquemas.
-* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): fornece um perfil de consumidor unificado em tempo real com base em dados agregados de várias fontes.
+* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Fornece um perfil de consumidor unificado em tempo real com base em dados agregados de várias fontes.
 
-Se você já tiver uma [!DNL PathFactory] conta, você pode ignorar o restante deste documento e prosseguir para o tutorial em [como trazer dados de automação de marketing para o Experience Platform usando a interface do](../../dataflow/marketing-automation.md).
+Se você já tiver uma conta [!DNL PathFactory], ignore o restante deste documento e prossiga para o tutorial em [trazendo dados de automação de marketing para o Experience Platform usando a interface](../../dataflow/marketing-automation.md).
 
 ### Colete as credenciais necessárias {#gather-credentials}
 
@@ -35,37 +35,37 @@ Para acessar a conta PathFactory na Platform, você deve fornecer os seguintes v
 | Senha | A senha associada à sua conta PathFactory. Verifique se isso está protegido para impedir o acesso não autorizado. |
 | Domínio | O domínio associado à sua conta PathFactory. Normalmente, refere-se ao identificador exclusivo no URL do PathFactory. |
 | Token de acesso | Um token exclusivo usado para autenticação de API para garantir a comunicação segura entre seus sistemas e o PathFactory. |
-| Endpoints de API | Endpoints de API específicos para acessar dados: Visitantes, Sessões e Exibições de página. Cada endpoint corresponde a diferentes conjuntos de dados que você pode recuperar. **Nota:** Eles são predefinidos por [!DNL PathFactory] e são específicos aos dados que você pretende acessar: <ul><li>**Endpoint de visitantes**: `/api/public/v3/data_lake_apis/visitors.json`</li><li>**Endpoint de sessões**: `/api/public/v3/data_lake_apis/sessions.json`</li><li>**Ponto de extremidade de exibições de página**: `/api/public/v3/data_lake_apis/page_views.json`</li></ul> |
+| Endpoints de API | Endpoints de API específicos para acessar dados: Visitantes, Sessões e Exibições de página. Cada endpoint corresponde a diferentes conjuntos de dados que você pode recuperar. **Observação:** são predefinidos por [!DNL PathFactory] e são específicos para os dados que você pretende acessar: <ul><li>**Ponto de Extremidade dos Visitantes**: `/api/public/v3/data_lake_apis/visitors.json`</li><li>**Ponto de Extremidade de Sessões**: `/api/public/v3/data_lake_apis/sessions.json`</li><li>**Ponto de Extremidade de Exibições de Página**: `/api/public/v3/data_lake_apis/page_views.json`</li></ul> |
 
-Para obter orientação detalhada sobre como proteger e usar suas credenciais, e para obter informações sobre como obter e atualizar seu token de acesso, visite o [Centro de suporte PathFactory](https://support.pathfactory.com/categories/adobe/). Esse recurso oferece guias abrangentes sobre como gerenciar suas credenciais e garantir uma integração de API eficaz e segura.
+Para obter orientação detalhada sobre como proteger e usar suas credenciais, e para obter informações sobre como obter e atualizar seu token de acesso, visite o [Centro de Suporte PathFactory](https://support.pathfactory.com/categories/adobe/). Esse recurso oferece guias abrangentes sobre como gerenciar suas credenciais e garantir uma integração de API eficaz e segura.
 
 
-## Conecte seu [!DNL PathFactory] account
+## Conectar sua conta do [!DNL PathFactory]
 
-Na interface do usuário da Platform, selecione **[!UICONTROL Origens]** na navegação à esquerda, para acessar a [!UICONTROL Origens] espaço de trabalho. A variável [!UICONTROL Catálogo] exibe uma variedade de fontes suportadas pelo Experience Platform.
+Na interface da Platform, selecione **[!UICONTROL Fontes]** na navegação à esquerda para acessar o espaço de trabalho [!UICONTROL Fontes]. O [!UICONTROL Catálogo] exibe uma variedade de fontes suportadas pelo Experience Platform.
 
 Você pode selecionar a categoria apropriada na lista de categorias. Você também pode usar a barra de pesquisa para filtrar por uma fonte específica.
 
-No [!UICONTROL Automação de marketing] categoria, selecione **[!UICONTROL PathFactory]** e selecione **[!UICONTROL Configurar]**.
+Na categoria [!UICONTROL Automação de marketing], selecione **[!UICONTROL PathFactory]** e selecione **[!UICONTROL Configurar]**.
 
 ![O catálogo de origens com a origem PathFactory selecionada.](../../../../images/tutorials/create/pathfactory/catalog.png)
 
-A variável **[!UICONTROL Conectar ao PathFactory]** é exibida. Nesta página, você pode criar uma nova conta ou usar uma conta existente.
+A página **[!UICONTROL Conectar-se ao PathFactory]** é exibida. Nesta página, você pode criar uma nova conta ou usar uma conta existente.
 
 ### Nova conta
 
-Para criar uma nova conta, selecione **[!UICONTROL Nova conta]** e forneça um nome para sua conta, uma descrição opcional e as credenciais de autenticação que correspondem à [!DNL PathFactory] conta.
+Para criar uma nova conta, selecione **[!UICONTROL Nova conta]** e forneça um nome para a sua conta, uma descrição opcional e as credenciais de autenticação que correspondem à sua conta do [!DNL PathFactory].
 
-Quando terminar, selecione **[!UICONTROL Conectar à origem]** e aguarde algum tempo para estabelecer a nova conexão.
+Quando terminar, selecione **[!UICONTROL Conectar à origem]** e aguarde algum tempo para que a nova conexão seja estabelecida.
 
-![A nova interface de conta onde você pode autenticar uma nova conta para PathFactory.](../../../../images/tutorials/create/pathfactory/new.png)
+![A nova interface de conta na qual você pode autenticar uma nova conta para PathFactory.](../../../../images/tutorials/create/pathfactory/new.png)
 
 ### Conta existente
 
 Se você já tiver uma conta existente, selecione **[!UICONTROL Conta existente]** e, em seguida, selecione a conta que deseja usar na lista exibida.
 
-![A interface de conta existente onde você pode selecionar em uma lista de contas PathFactory existentes.](../../../../images/tutorials/create/pathfactory/existing.png)
+![A interface de conta existente na qual você pode selecionar de uma lista de contas PathFactory existentes.](../../../../images/tutorials/create/pathfactory/existing.png)
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você estabeleceu uma conexão entre suas [!DNL PathFactory] conta e Experience Platform. Agora você pode seguir para o próximo tutorial e [crie um fluxo de dados para trazer seus dados de automação de marketing para o Experience Platform](../../dataflow/marketing-automation.md).
+Seguindo este tutorial, você estabeleceu uma conexão entre sua conta do [!DNL PathFactory] e o Experience Platform. Agora você pode seguir para o próximo tutorial e [criar um fluxo de dados para trazer seus dados de automação de marketing para o Experience Platform](../../dataflow/marketing-automation.md).

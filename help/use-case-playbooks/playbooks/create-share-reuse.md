@@ -22,7 +22,7 @@ Para usar um manual de estratégia, navegue até **[!UICONTROL Manuais de estrat
 >title="Criar instância"
 >abstract="Gere uma lista de ativos como jornadas, públicos-alvo, esquemas ou destinos para usar em cenários de jornada ou ativação."
 
-Antes de criar uma instância de manual, explore os manuais disponíveis para [escolha o manual correto](/help/use-case-playbooks/playbooks/choose.md). Quando estiver pronto para criar uma instância, selecione **[!UICONTROL Criar instância]** para continuar com o manual de estratégia e gerar ativos técnicos.
+Antes de criar uma instância de manual, explore os manuais disponíveis para [escolher o manual correto](/help/use-case-playbooks/playbooks/choose.md). Quando estiver pronto para criar uma instância, selecione **[!UICONTROL Criar instância]** para continuar com o manual de estratégia e gerar ativos técnicos.
 
 ![Criar uma instância de um manual de estratégia.](/help/use-case-playbooks/assets/playbooks/ui-guide/create-playbook-instance.png)
 
@@ -63,7 +63,7 @@ O comportamento descrito acima se aplica para todos os ativos criados, exceto pa
 >
 >Teste na sandbox de desenvolvimento e vá para a produção quando estiver pronto.
 >
->Depois que os objetos forem gerados, será possível continuar os testes nas sandboxes de desenvolvimento adicionando dados. Você pode testar os ativos conforme desejar na sandbox de desenvolvimento e pode replicar a lógica do ativo (definições de público-alvo, jornadas, esquemas e assim por diante) na sandbox de produção quando estiver pronto. Você pode mover para a sandbox de desenvolvimento e, em seguida, para a sandbox de produção usando o [funcionalidade de reconhecimento de dados](/help/use-case-playbooks/playbooks/data-awareness.md).
+>Depois que os objetos forem gerados, será possível continuar os testes nas sandboxes de desenvolvimento adicionando dados. Você pode testar os ativos conforme desejar na sandbox de desenvolvimento e pode replicar a lógica do ativo (definições de público-alvo, jornadas, esquemas e assim por diante) na sandbox de produção quando estiver pronto. Você pode mover para a sandbox de desenvolvimento e, em seguida, para a sandbox de produção usando a [funcionalidade de reconhecimento de dados](/help/use-case-playbooks/playbooks/data-awareness.md).
 
 ## Reutilizar manuais de estratégia {#reuse-playbooks}
 

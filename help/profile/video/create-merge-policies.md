@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # Criar uma política de mesclagem na interface do usuário do Experience Platform
 
-Este vídeo fornece uma compreensão básica das políticas de mesclagem no Adobe Experience Platform e descreve como definir políticas de mesclagem usando a interface do usuário da Platform. Para saber mais sobre as políticas de mesclagem, comece lendo o [visão geral das políticas de mesclagem](../merge-policies/overview.md).
+Este vídeo fornece uma compreensão básica das políticas de mesclagem no Adobe Experience Platform e descreve como definir políticas de mesclagem usando a interface do usuário da Platform. Para saber mais sobre as políticas de mesclagem, comece lendo a [visão geral das políticas de mesclagem](../merge-policies/overview.md).
 
 >[!NOTE]
 >

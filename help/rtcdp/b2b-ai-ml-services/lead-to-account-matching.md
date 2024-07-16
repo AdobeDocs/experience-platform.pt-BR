@@ -7,7 +7,7 @@ badgeB2B: label="Edição B2B" type="Informative" url="https://helpx.adobe.com/l
 exl-id: 2f853599-6bca-4ba6-bbba-131a49d8854e
 source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
-source-wordcount: '626'
+source-wordcount: '605'
 ht-degree: 3%
 
 ---
@@ -36,19 +36,19 @@ O marketing baseado em conta oferece a capacidade de vincular pessoas conhecidas
 
 A correspondência entre lead e conta permite que você associe perfis de pessoas conhecidos a perfis de conta. Em seguida, você pode segmentar e direcionar dados em um contexto B2B, como contas, oportunidades e assim por diante. Os perfis de pessoa podem ser classificados nas três categorias a seguir:
 
-- **Perfil da conta pessoal:** O perfil de pessoa já está associado a pelo menos um perfil de conta por meio do relacionamento de uma fonte de dados. Isso implica que há pelo menos um fragmento de contato.
+- **Perfil de pessoa de conta:** O perfil de pessoa já está associado a pelo menos um perfil de conta através da relação de uma fonte de dados. Isso implica que há pelo menos um fragmento de contato.
 
 >[!NOTE]
 >
 > Os perfis de conta pessoal não são correspondidos ao executar trabalhos de correspondência de leads em contas.
 
-- **Perfil de pessoa conhecida:** O perfil de pessoa NÃO está associado a nenhum perfil de conta e pelo menos um dos seguintes atributos de perfil de pessoa tem um valor:
+- **Perfil de pessoa conhecido:** o perfil de pessoa NÃO está associado a nenhum perfil de conta, e pelo menos um dos seguintes atributos de perfil de pessoa tem um valor:
 
    - Endereço de email
    - Nome da empresa
    - Site da empresa
 
-- **Perfil de pessoa anônimo:** O perfil de pessoa NÃO está associado a nenhum perfil de conta e nenhum dos seguintes atributos de perfil de pessoa tem um valor:
+- **Perfil de pessoa anônimo:** o perfil de pessoa NÃO está associado a nenhum perfil de conta, e nenhum dos seguintes atributos de perfil de pessoa tem um valor:
 
    - Endereço de email
    - Nome da empresa
@@ -80,17 +80,17 @@ O atributo workEmail pode ser encontrado como um grupo de campos de nível super
 
 Os perfis terão melhor correspondência somente se a pontuação de correspondência estiver acima de um limite de confiança interno. Os resultados são salvos em um novo conjunto de dados do sistema do XDM da relação pessoal da conta existente.
 
-O lead para o serviço de correspondência de contas é executado quando um novo instantâneo do perfil de pessoa é disponibilizado, uma vez a cada 24 horas. Consulte a documentação para obter mais informações sobre o [configuração de lead para correspondência de conta](/help/rtcdp/accounts/account-profile-ui-guide.md).
+O lead para o serviço de correspondência de contas é executado quando um novo instantâneo do perfil de pessoa é disponibilizado, uma vez a cada 24 horas. Consulte a documentação para obter mais informações sobre a [configuração de lead para correspondência de conta](/help/rtcdp/accounts/account-profile-ui-guide.md).
 
 ## Como visualizar o lead para a saída de correspondência de contas {#how-to-view}
 
 Após a execução do trabalho, os resultados são salvos em um novo conjunto de dados do XDM da relação pessoal da conta existente.
 
-Para visualizar o conjunto de dados, selecione **[!UICONTROL Visualizar conjunto de dados]** no canto superior direito.
+Para visualizar o conjunto de dados, selecione **[!UICONTROL Visualizar conjunto de dados]** na parte superior direita.
 
 ![Novo conjunto de dados](/help/rtcdp/accounts/images/b2b-dataset-output.png)
 
-O conjunto de dados inclui as informações de conta correspondentes, bem como a pontuação de correspondência do conjunto de dados escolhido. A variável **[!UICONTROL Origem do relacionamento]** indica se veio do processo de conciliação de lead com conta.
+O conjunto de dados inclui as informações de conta correspondentes, bem como a pontuação de correspondência do conjunto de dados escolhido. O campo **[!UICONTROL Relationship Source]** indica se ele veio do processo de correspondência entre lead e conta.
 
 ![Visualizar pontuações e saída de confiança do conjunto de dados](/help/rtcdp/accounts/images/b2b-dataset-preview.png)
 
@@ -98,4 +98,4 @@ O conjunto de dados inclui as informações de conta correspondentes, bem como a
 
 Você pode monitorar o status do trabalho e as métricas associadas para qualquer lead em trabalhos de correspondência de contas por meio do painel.
 
-Consulte a documentação para obter mais informações sobre o [monitoramento de trabalhos de correspondência entre lead e conta](/help/dataflows/ui/b2b/monitor-profile-enrichment.md).
+Consulte a documentação para obter mais informações sobre os [trabalhos de monitoramento para lead para correspondência de contas](/help/dataflows/ui/b2b/monitor-profile-enrichment.md).

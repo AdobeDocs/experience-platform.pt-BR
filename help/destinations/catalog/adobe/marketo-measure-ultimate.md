@@ -41,7 +41,7 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 | Item | Tipo | Notas |
 ---------|----------|---------|
 | Tipo de exportação | **[!UICONTROL Exportação do conjunto de dados]** | Você está exportando conjuntos de dados brutos, que não são agrupados ou estruturados por interesses ou qualificações de público-alvo. Leia mais sobre [exportações do conjunto de dados](/help/destinations/destination-types.md#dataset-export-destinations). |
-| Frequência de exportação | **[!UICONTROL Lote]** | Esse destino do lote exporta arquivos para a plataforma do Marketo Measure a cada duas horas. Leia mais sobre [agendamento de exportações de conjunto de dados](/help/destinations/ui/export-datasets.md#scheduling). |
+| Frequência de exportação | **[!UICONTROL Lote]** | Esse destino do lote exporta arquivos para a plataforma do Marketo Measure a cada duas horas. Leia mais sobre [agendando exportações do conjunto de dados](/help/destinations/ui/export-datasets.md#scheduling). |
 
 {style="table-layout:auto"}
 
@@ -49,37 +49,37 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 
 >[!IMPORTANT]
 > 
->Para se conectar ao destino, você precisa da variável **[!UICONTROL Exibir destinos]** e **[!UICONTROL Gerenciar e ativar destinos do conjunto de dados]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
+>Para se conectar ao destino, você precisa de **[!UICONTROL Exibir Destinos]** e **[!UICONTROL Gerenciar e Ativar Destinos de Conjuntos de Dados]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 
-Para se conectar a esse destino, siga as etapas descritas no [tutorial de configuração de destino](../../ui/connect-destination.md). No workflow de configuração de destino, preencha os campos listados na seção abaixo.
+Para se conectar a este destino, siga as etapas descritas no [tutorial de configuração de destino](../../ui/connect-destination.md). No workflow de configuração de destino, preencha os campos listados na seção abaixo.
 
 ### Preencher detalhes do destino {#destination-details}
 
 Para configurar detalhes para o destino, preencha os campos obrigatórios e opcionais abaixo. Um asterisco ao lado de um campo na interface do usuário indica que o campo é obrigatório.
 
-* **[!UICONTROL Nome]**: um nome pelo qual você reconhecerá esse destino no futuro.
-* **[!UICONTROL Descrição]**: uma descrição que ajudará você a identificar esse destino no futuro.
+* **[!UICONTROL Nome]**: um nome pelo qual você reconhecerá este destino no futuro.
+* **[!UICONTROL Descrição]**: uma descrição que ajudará você a identificar este destino no futuro.
 
-![O workflow Conectar ao destino para o destino do Marketo Measure.](/help/destinations/assets/catalog/adobe/marketo-measure-ultimate/marketo-measure-connect-to-destination.png)
+![O fluxo de trabalho Conectar ao destino do Marketo Measure.](/help/destinations/assets/catalog/adobe/marketo-measure-ultimate/marketo-measure-connect-to-destination.png)
 
 ### Ativar alertas {#enable-alerts}
 
-Você pode ativar os alertas para receber notificações sobre o status do fluxo de dados para o seu destino. Selecione um alerta na lista para assinar e receber notificações sobre o status do seu fluxo de dados. Para obter mais informações sobre alertas, consulte o manual sobre [assinatura de alertas de destinos usando a interface do](../../ui/alerts.md).
+Você pode ativar os alertas para receber notificações sobre o status do fluxo de dados para o seu destino. Selecione um alerta na lista para assinar e receber notificações sobre o status do seu fluxo de dados. Para obter mais informações sobre alertas, consulte o manual sobre [assinatura de alertas de destinos usando a interface](../../ui/alerts.md).
 
-Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICONTROL Próxima]**.
+Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICONTROL Avançar]**.
 
 ## Exportar conjuntos de dados para este destino {#export-datasets}
 
 >[!IMPORTANT]
 > 
->Para ativar os dados, é necessário **[!UICONTROL Exibir destinos]** e **[!UICONTROL Gerenciar e ativar destinos do conjunto de dados]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
+>Para ativar dados, você precisa de **[!UICONTROL Exibir Destinos]** e **[!UICONTROL Gerenciar e Ativar Destinos de Conjuntos de Dados]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 
-Leia o [Exportar conjuntos de dados](/help/destinations/ui/export-datasets.md) tutorial para obter instruções abrangentes sobre como exportar conjuntos de dados para este destino.
+Leia o [Tutorial de exportação de conjuntos de dados](/help/destinations/ui/export-datasets.md) para obter instruções detalhadas sobre como exportar conjuntos de dados para este destino.
 
 ## Validar exportação de dados {#exported-data}
 
-Para validar uma exportação bem-sucedida do conjunto de dados, você pode verificar se o conjunto de dados foi enviado com êxito para a [data warehouse do Snowflake](https://experienceleague.adobe.com/docs/marketo-measure/using/marketo-measure-data-warehouse/data-warehouse-access-reader-account.html).
+Para validar uma exportação bem-sucedida do conjunto de dados, você pode verificar se o conjunto de dados foi enviado com êxito para o seu [data warehouse de Snowflake](https://experienceleague.adobe.com/docs/marketo-measure/using/marketo-measure-data-warehouse/data-warehouse-access-reader-account.html).
 
 ## Uso e governança de dados {#data-usage-governance}
 
-Todos [!DNL Adobe Experience Platform] os destinos estão em conformidade com as políticas de uso de dados ao manipular seus dados. Para obter informações detalhadas sobre como [!DNL Adobe Experience Platform] fiscaliza a governança de dados, leia o [Visão geral da governança de dados](/help/data-governance/home.md).
+Todos os destinos do [!DNL Adobe Experience Platform] são compatíveis com as políticas de uso de dados ao manipular seus dados. Para obter informações detalhadas sobre como o [!DNL Adobe Experience Platform] fiscaliza a governança de dados, leia a [Visão geral da Governança de Dados](/help/data-governance/home.md).

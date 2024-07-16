@@ -14,9 +14,9 @@ ht-degree: 0%
 
 # Configurar uma CSP
 
-A [Política de segurança de conteúdo](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) O (CSP) é usado para restringir os recursos que um navegador pode usar. A CSP também pode limitar a funcionalidade de recursos de script e estilo. O Adobe Experience Platform Web SDK não requer um CSP, mas adicionar um pode reduzir a superfície de ataque para impedir ataques mal-intencionados.
+Uma [Política de Segurança de Conteúdo](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) (CSP) é usada para restringir os recursos que um navegador pode usar. A CSP também pode limitar a funcionalidade de recursos de script e estilo. O Adobe Experience Platform Web SDK não requer um CSP, mas adicionar um pode reduzir a superfície de ataque para impedir ataques mal-intencionados.
 
-O documento de estratégia por país deve [!DNL Platform Web SDK] é implantado e configurado. A CSP a seguir mostra quais alterações podem ser necessárias para que o SDK funcione corretamente. Configurações adicionais da CSP provavelmente serão necessárias, dependendo do seu ambiente específico.
+A CSP precisa refletir como [!DNL Platform Web SDK] é implantado e configurado. A CSP a seguir mostra quais alterações podem ser necessárias para que o SDK funcione corretamente. Configurações adicionais da CSP provavelmente serão necessárias, dependendo do seu ambiente específico.
 
 ## Exemplo de política de segurança de conteúdo
 
@@ -29,17 +29,17 @@ default-src 'self';
 connect-src 'self' EDGE-DOMAIN
 ```
 
-No exemplo acima, `EDGE-DOMAIN` deve ser substituído pelo domínio próprio. O domínio próprio é configurado para o [edgeDomain](../commands/configure/edgedomain.md) configuração. Se nenhum domínio próprio tiver sido configurado, `EDGE-DOMAIN` deve ser substituída por `*.adobedc.net`. Se a migração do visitante estiver ativada usando [idMigrationEnabled](../commands/configure/idmigrationenabled.md), o `connect-src` a diretiva também deve incluir `*.demdex.net`.
+No exemplo acima, `EDGE-DOMAIN` deve ser substituído pelo domínio próprio. O domínio próprio está configurado para a configuração [edgeDomain](../commands/configure/edgedomain.md). Se nenhum domínio próprio foi configurado, `EDGE-DOMAIN` deve ser substituído por `*.adobedc.net`. Se a migração do visitante estiver ativada usando [idMigrationEnabled](../commands/configure/idmigrationenabled.md), a diretiva `connect-src` também precisará incluir `*.demdex.net`.
 
 ### Usar NONCE para permitir script incorporado e elementos de estilo
 
-[!DNL Platform Web SDK] O pode modificar o conteúdo da página e deve ser aprovado para criar tags de script e estilo em linha. Para fazer isso, o Adobe recomenda o uso de um nonce para o [default-src](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/default-src) Diretiva CSP. Um nonce é um token aleatório criptograficamente forte gerado pelo servidor gerado uma vez para cada exibição de página exclusiva.
+[!DNL Platform Web SDK] pode modificar o conteúdo da página e deve ser aprovado para criar marcas de script e estilo embutidas. Para fazer isso, a Adobe recomenda o uso de um nonce para a diretiva CSP [default-src](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/default-src). Um nonce é um token aleatório criptograficamente forte gerado pelo servidor gerado uma vez para cada exibição de página exclusiva.
 
 ```
 default-src 'nonce-SERVER-GENERATED-NONCE'
 ```
 
-Além disso, o nonce CSP precisa ser adicionado como um atributo à variável [!DNL Platform Web SDK] [código base](../install/library.md) tag de script. [!DNL Platform Web SDK] O usará esse nonce ao adicionar scripts incorporados ou tags de estilo à página:
+Além disso, o nonce CSP precisa ser adicionado como um atributo à marca de script [!DNL Platform Web SDK] [código base](../install/library.md). [!DNL Platform Web SDK] usará esse nonce ao adicionar marcas de estilo ou script embutido à página:
 
 ```
 <script nonce="SERVER-GENERATED-NONCE">
@@ -50,7 +50,7 @@ Além disso, o nonce CSP precisa ser adicionado como um atributo à variável [!
 </script>
 ```
 
-Se um nonce não for usado, a outra opção será adicionar `unsafe-inline` para o `script-src` e `style-src` Diretivas da CSP:
+Se um nonce não for usado, a outra opção será adicionar `unsafe-inline` às diretivas CSP `script-src` e `style-src`:
 
 ```
 script-src 'unsafe-inline'
@@ -59,7 +59,7 @@ style-src 'unsafe-inline'
 
 >[!NOTE]
 >
->O Adobe faz **não** recomendar especificação `unsafe-inline` porque permite que qualquer script seja executado na página, o que limita os benefícios da CSP.
+>O Adobe **não** recomenda especificar `unsafe-inline` porque ele permite que qualquer script seja executado na página, o que limita os benefícios da CSP.
 
 ## Configurar uma CSP para mensagens no aplicativo {#in-app-messaging}
 

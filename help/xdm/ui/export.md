@@ -7,44 +7,44 @@ exl-id: c467666d-55bc-4134-b8f4-7758d49c4786
 source-git-commit: 0f0842c1d14ce42453b09bf97e1f3690448f6e9a
 workflow-type: tm+mt
 source-wordcount: '655'
-ht-degree: 0%
+ht-degree: 11%
 
 ---
 
-# Exportar esquemas XDM na interface do {#export-xdm-schemas-in-the-UI}
+# Exportar esquemas XDM na interface {#export-xdm-schemas-in-the-UI}
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_copyjsonstructure"
 >title="Copiar estrutura JSON"
->abstract="Gere uma carga de exportação para o esquema escolhido copiando a estrutura JSON para a área de transferência. Use este recurso para exportar os detalhes de qualquer esquema na Biblioteca de Esquemas. Esse JSON exportado pode ser usado para importar o esquema e quaisquer recursos relacionados para uma sandbox ou organização diferente. Isso torna simples e eficiente o compartilhamento e a reutilização de esquemas entre diferentes ambientes."
+>abstract="Gere um conteúdo de exportação para o esquema escolhido copiando a estrutura JSON para a área de transferência. Use este recurso para exportar os detalhes de qualquer esquema na Biblioteca de esquemas. Esse JSON exportado pode ser usado para importar o esquema e recursos relacionados para uma sandbox ou organização diferente. Isso torna simples e eficiente o compartilhamento e a reutilização de esquemas entre diferentes ambientes."
 
 Todos os recursos na Biblioteca de esquemas estão contidos em uma sandbox específica em uma organização. Em alguns casos, é possível compartilhar recursos do Experience Data Model (XDM) entre sandboxes e organizações.
 
-Para atender a essa necessidade, a [!UICONTROL Esquemas] O espaço de trabalho na interface do Adobe Experience Platform permite gerar uma carga de exportação para qualquer esquema na Biblioteca de esquemas. Essa carga pode ser usada em uma chamada à API do Registro de esquema para importar o esquema (e todos os recursos dependentes) para uma sandbox e organização de destino.
+Para atender a essa necessidade, o espaço de trabalho [!UICONTROL Esquemas] da interface do usuário do Adobe Experience Platform permite gerar uma carga de exportação para qualquer esquema da na Biblioteca de Esquemas. Essa carga pode ser usada em uma chamada à API do Registro de esquema para importar o esquema (e todos os recursos dependentes) para uma sandbox e organização de destino.
 
 >[!NOTE]
 >
->Você também pode usar a API do Registro de esquema para exportar outros recursos além de esquemas, incluindo classes, grupos de campos de esquema e tipos de dados. Consulte a [exportar guia de endpoint](../api/export.md) para obter mais informações.
+>Você também pode usar a API do Registro de esquema para exportar outros recursos além de esquemas, incluindo classes, grupos de campos de esquema e tipos de dados. Consulte o [manual do ponto de extremidade de exportação](../api/export.md) para obter mais informações.
 
 ## Pré-requisitos
 
-Embora a interface da Platform permita exportar recursos XDM, você deve usar a API do Registro de esquema para importar esses recursos para outras sandboxes ou organizações para concluir o fluxo de trabalho. Consulte o guia sobre [introdução à API do Registro de esquema](../api/getting-started.md) para obter informações importantes sobre os cabeçalhos de autenticação necessários, antes de seguir este guia.
+Embora a interface da Platform permita exportar recursos XDM, você deve usar a API do Registro de esquema para importar esses recursos para outras sandboxes ou organizações para concluir o fluxo de trabalho. Consulte o manual sobre [introdução à API do Registro de Esquema](../api/getting-started.md) para obter informações importantes sobre cabeçalhos de autenticação necessários antes de seguir este guia.
 
 ## Gerar uma carga de exportação {#generate-export-payload}
 
-As cargas úteis de exportação podem ser geradas na interface do usuário da Platform no painel de detalhes na [!UICONTROL Procurar] ou diretamente da tela do schema no Editor de esquemas.
+As cargas de exportação podem ser geradas na interface do usuário da Platform a partir do painel de detalhes na guia [!UICONTROL Procurar] ou diretamente da tela do esquema no Editor de esquemas.
 
-Para gerar uma carga de exportação, selecione **[!UICONTROL Esquemas]** no painel de navegação esquerdo. No prazo de [!UICONTROL Esquemas] selecione a linha do esquema que deseja exportar para exibir os detalhes do esquema na barra lateral direita.
+Para gerar uma carga de exportação, selecione **[!UICONTROL Esquemas]** na navegação à esquerda. No espaço de trabalho [!UICONTROL Esquemas], selecione a linha do esquema que deseja exportar para exibir os detalhes do esquema na barra lateral direita.
 
 >[!TIP]
 >
->Consulte o guia sobre [exploração de recursos XDM](./explore.md) para obter detalhes sobre como encontrar o recurso XDM que você está procurando.
+>Consulte o guia em [explorando recursos XDM](./explore.md) para obter detalhes sobre como encontrar o recurso XDM que você está procurando.
 
-Em seguida, selecione o **[!UICONTROL Copiar JSON]** ícone (![Ícone Copiar](../images/ui/export/icon.png)) nas opções disponíveis.
+Em seguida, selecione o ícone **[!UICONTROL Copiar JSON]** (![Copiar Ícone](../images/ui/export/icon.png)) das opções disponíveis.
 
-![O espaço de trabalho Esquemas com uma linha de esquema e [!UICONTROL Copiar para JSON] destacado.](../images/ui/export/copy-json.png)
+![O espaço de trabalho Esquemas com uma linha de esquema e [!UICONTROL Copiar para JSON] realçado.](../images/ui/export/copy-json.png)
 
-Isso copia uma carga JSON para a área de transferência, gerada com base na estrutura do esquema. Para o &quot;[!DNL Loyalty Members]&quot; mostrado acima, o seguinte JSON é gerado:
+Isso copia uma carga JSON para a área de transferência, gerada com base na estrutura do esquema. Para o esquema &quot;[!DNL Loyalty Members]&quot; mostrado acima, o seguinte JSON é gerado:
 
 +++Selecione para expandir uma carga JSON de exemplo
 
@@ -218,16 +218,16 @@ A carga também pode ser copiada selecionando [!UICONTROL Mais] na parte superio
 >
 >Um esquema não pode ser excluído quando está habilitado para o Perfil ou tem conjuntos de dados associados.
 
-![O Editor de esquemas com [!UICONTROL Mais] e [!UICONTROL Copiar para JSON] destacado.](../images/ui/export/schema-editor-copy-json.png)
+![O Editor de Esquemas com [!UICONTROL Mais] e [!UICONTROL Copiar para JSON] foi realçado.](../images/ui/export/schema-editor-copy-json.png)
 
-A carga assume a forma de uma matriz, com cada item de matriz sendo um objeto que representa um recurso XDM personalizado a ser exportado. No exemplo acima, o &quot;[!DNL Loyalty details]&quot;grupo de campos personalizados&quot; e a &quot;[!DNL Loyalty Members]&quot; esquema estão incluídos. Quaisquer recursos principais empregados pelo esquema não são incluídos na exportação, pois esses recursos estão disponíveis em todas as sandboxes e organizações.
+A carga assume a forma de uma matriz, com cada item de matriz sendo um objeto que representa um recurso XDM personalizado a ser exportado. No exemplo acima, o grupo de campos personalizados &quot;[!DNL Loyalty details]&quot; e o esquema &quot;[!DNL Loyalty Members]&quot; foram incluídos. Quaisquer recursos principais empregados pelo esquema não são incluídos na exportação, pois esses recursos estão disponíveis em todas as sandboxes e organizações.
 
-Observe que cada instância da ID de locatário da organização aparece como `<XDM_TENANTID_PLACEHOLDER>` na carga útil. Esses espaços reservados serão substituídos automaticamente pelo valor de ID do locatário apropriado, dependendo de onde você importa o esquema na próxima etapa.
+Observe que cada instância da ID de locatário da sua organização aparece como `<XDM_TENANTID_PLACEHOLDER>` na carga. Esses espaços reservados serão substituídos automaticamente pelo valor de ID do locatário apropriado, dependendo de onde você importa o esquema na próxima etapa.
 
 ## Importar o recurso usando a API {#import-resource-with-api}
 
-Depois de copiar o JSON de exportação para o esquema, você pode usá-lo como carga para uma solicitação POST para o `/rpc/import` ponto de extremidade na API do Registro de esquema. Consulte a [guia de endpoint de importação](../api/import.md) para obter detalhes sobre como configurar a chamada para enviar o esquema para a organização e a sandbox desejadas.
+Depois de copiar o JSON de exportação para o esquema, você pode usá-lo como carga para uma solicitação POST para o ponto de extremidade `/rpc/import` na API do Registro de Esquema. Consulte o [manual de ponto de extremidade de importação](../api/import.md) para obter detalhes sobre como configurar a chamada para enviar o esquema para a organização e a sandbox desejadas.
 
 ## Próximas etapas
 
-Ao seguir este guia, você exportou com êxito um esquema XDM para uma organização ou sandbox diferente. Para obter mais informações sobre os recursos do [!UICONTROL Esquemas] consulte a [[!UICONTROL Esquemas] Visão geral da interface](./overview.md).
+Ao seguir este guia, você exportou com êxito um esquema XDM para uma organização ou sandbox diferente. Para obter mais informações sobre os recursos da interface do usuário de [!UICONTROL Esquemas], consulte a [[!UICONTROL visão geral da interface do usuário de ]](./overview.md).

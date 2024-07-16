@@ -17,83 +17,83 @@ A interface do usuário do Adobe Experience Platform permite visualizar um hist�
 
 >[!NOTE]
 >
->Para obter uma introdução aos alertas no Experience Platform, consulte [visão geral dos alertas](./overview.md).
+>Para obter uma introdução aos alertas no Experience Platform, consulte a [visão geral dos alertas](./overview.md).
 
-Para começar, selecione **[!UICONTROL Alertas]** no painel de navegação esquerdo.
+Para começar, selecione **[!UICONTROL Alertas]** na navegação à esquerda.
 
-![Realce da página de alertas [!UICONTROL Alertas] no painel de navegação esquerdo.](../images/alerts/ui/workspace.png)
+![Página de Alertas destacando [!UICONTROL Alertas] na navegação à esquerda.](../images/alerts/ui/workspace.png)
 
 ## Gerenciar regras de alerta
 
-A variável **[!UICONTROL Procurar]** A guia lista as regras disponíveis que podem acionar um alerta.
+A guia **[!UICONTROL Procurar]** lista as regras disponíveis que podem disparar um alerta.
 
-![Uma lista de alertas disponíveis é exibida no [!UICONTROL Procurar] guia.](../images/alerts/ui/rules.png)
+![Uma lista de alertas disponíveis é exibida na guia [!UICONTROL Procurar].](../images/alerts/ui/rules.png)
 
 Selecione uma regra na lista para exibir sua descrição e seus parâmetros de configuração no painel direito, incluindo limite e severidade.
 
-![Uma regra de alerta é destacada mostrando detalhes no painel direito.](../images/alerts/ui/rule-details.png)
+![Uma regra de alerta foi destacada mostrando detalhes no painel direito.](../images/alerts/ui/rule-details.png)
 
-Selecione as reticências (**..**) ao lado do nome de uma regra, e uma lista suspensa exibe controles para ativar ou desativar o alerta (dependendo de seu status atual) e para assinar ou cancelar a assinatura de notificações por email para o alerta.
+Selecione as reticências (**...**) ao lado do nome de uma regra e uma lista suspensa exibe controles para habilitar ou desabilitar o alerta (dependendo de seu status atual) e para assinar ou cancelar a assinatura de notificações por email para o alerta.
 
 ![As reticências selecionadas revelam o menu suspenso.](../images/alerts/ui/disable-subscribe.png)
 
-## Gerenciar assinantes de alertas
+## Gerenciar inscrições nos alertas
 
 >[!NOTE]
 >
 > Para atribuir um alerta a uma ID de usuário Adobe, um endereço de email externo ou uma lista de grupo de email, você deve ser um administrador.
 
-A variável **[!UICONTROL Procurar]** A guia lista as regras disponíveis que podem acionar um alerta.
+A guia **[!UICONTROL Procurar]** lista as regras disponíveis que podem disparar um alerta.
 
-![Uma lista de regras de alerta disponíveis mostradas no [!UICONTROL Procurar] guia.](../images/alerts/ui/rules.png)
+![Uma lista de regras de alerta disponíveis mostrada na guia [!UICONTROL Procurar].](../images/alerts/ui/rules.png)
 
-Selecione as reticências (**..**) ao lado do nome de uma regra, uma lista suspensa exibe controles. Selecionar **[!UICONTROL Gerenciar assinantes de alertas]**.
+Selecione as reticências (**...**) ao lado do nome de uma regra, uma lista suspensa exibe controles. Selecione **[!UICONTROL Gerenciar assinantes de alertas]**.
 
-![Selecione as reticências para exibir o menu suspenso. A variável [!UICONTROL Gerenciar assinantes de alertas] for realçada.](../images/alerts/ui/manage-alert-subscribers.png)
+![Selecione as reticências para exibir o menu suspenso. A opção [!UICONTROL Gerenciar assinantes de alerta] está realçada.](../images/alerts/ui/manage-alert-subscribers.png)
 
-A variável [!UICONTROL Gerenciar assinantes de alertas] é exibida. Para atribuir notificações a usuários específicos, insira a ID de usuário Adobe, o endereço de email externo ou uma lista de grupo de email e pressione enter.
+A página [!UICONTROL Gerenciar assinantes de alerta] é exibida. Para atribuir notificações a usuários específicos, insira a ID de usuário Adobe, o endereço de email externo ou uma lista de grupo de email e pressione enter.
 
 >[!NOTE]
 >
 >Para enviar este aviso a vários usuários de uma só vez, forneça uma lista de IDs de usuário ou endereços de email separados por vírgulas.
 
-![A página gerenciar assinantes de alertas mostra os endereços de email inseridos.](../images/alerts/ui/manage-alert-add-email.png)
+![A página Gerenciar assinantes de alertas mostra os endereços de email inseridos.](../images/alerts/ui/manage-alert-add-email.png)
 
-Os endereços de email são exibidos na lista de assinantes atuais listados. Selecionar **[!UICONTROL Atualizar]**.
+Os endereços de email são exibidos na lista de assinantes atuais listados. Selecione **[!UICONTROL Atualizar]**.
 
-![A página Gerenciar assinantes de alertas, destacando assinantes e [!UICONTROL Atualizar].](../images/alerts/ui/manage-alert-subscribers-added-email.png)
+![A página Gerenciar assinantes de alerta que destaca os assinantes e [!UICONTROL Atualização].](../images/alerts/ui/manage-alert-subscribers-added-email.png)
 
 Você adicionou usuários com sucesso à sua lista de notificações de alerta. Os usuários enviados agora receberão notificações por email sobre esse alerta, como pode ser visto na imagem abaixo.
 
-![Um exemplo por email da notificação de alerta recebida.](../images/alerts/ui/manage-alert-subscribers-email.png)
+![Um exemplo de email da notificação de alerta recebida.](../images/alerts/ui/manage-alert-subscribers-email.png)
 
 ## Ativar alertas de email
 
 As notificações de alerta podem ser enviadas diretamente ao seu email.
 
-Selecione o ícone de sino (![ícone de sino](../images/alerts/ui/bell-icon.png)) localizado na faixa superior à direita para exibir notificações e anúncios. Na lista suspensa exibida, selecione o ícone de engrenagem (![ícone cog](../images/alerts/ui/cog-icon.png)) para acessar a página de preferências de Experience Cloud.
+Selecione o ícone de sino (![ícone de sino](../images/alerts/ui/bell-icon.png)) localizado na faixa superior à direita para exibir notificações e anúncios. Na lista suspensa exibida, selecione o ícone de engrenagem (![ícone de engrenagem](../images/alerts/ui/cog-icon.png)) para acessar a página de preferências de Experience Cloud.
 
-![Uma lista de alertas mostrados, destacando o ícone de sino e o ícone de engrenagem.](../images/alerts/ui/edit-preferences.png)
+![Uma lista de alertas mostrados destacando o ícone de sino e o ícone de engrenagem.](../images/alerts/ui/edit-preferences.png)
 
-A variável **Perfil** é exibida. Selecione o **[!UICONTROL Notificação]** na navegação à esquerda para acessar as preferências de alertas de email.
+A página **Perfil** é exibida. Selecione as **[!UICONTROL Notificações]** na navegação à esquerda para acessar as preferências de alertas de email.
 
-![O destaque da página de perfil [!UICONTROL Notificação] no painel de navegação esquerdo.](../images/alerts/ui/profile.png)
+![A página Perfil destacando [!UICONTROL Notificações] na navegação à esquerda.](../images/alerts/ui/profile.png)
 
-Role para a **Emails** na parte inferior da página e selecione **[!UICONTROL Notificações instantâneas]**
+Role até a seção **Emails** na parte inferior da página e selecione **[!UICONTROL Notificações instantâneas]**
 
-![A seção Emails é realçada na página Perfil.](../images/alerts/ui/notifications.png)
+![A seção Emails realçada na página Perfil.](../images/alerts/ui/notifications.png)
 
 Todos os alertas que você assina agora serão entregues no endereço de email que está conectado à sua conta da Adobe ID.
 
 ## Exibir histórico de alertas
 
-A variável **[!UICONTROL Histórico]** A guia mostra o histórico de alertas recebidos para sua organização, incluindo a regra que acionou o alerta, a data de acionamento e a data de resolução (se aplicável).
+A guia **[!UICONTROL Histórico]** mostra o histórico de alertas recebidos para sua organização, incluindo a regra que acionou o alerta, a data de disparo e a data de resolução (se aplicável).
 
-![Uma lista de alertas recebidos é exibida no [!UICONTROL Histórico] guia.](../images/alerts/ui/history.png)
+![Uma lista de alertas recebidos é exibida na guia [!UICONTROL Histórico].](../images/alerts/ui/history.png)
 
 Selecione um alerta listado e mais detalhes serão exibidos no painel direito, incluindo um breve resumo do evento que acionou o alerta.
 
-![Um alerta destacado que mostra detalhes no painel direito.](../images/alerts/ui/history-details.png)
+![Um alerta realçado mostrando detalhes no painel direito.](../images/alerts/ui/history-details.png)
 
 ## Próximas etapas
 

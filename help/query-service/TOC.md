@@ -29,10 +29,10 @@ ht-degree: 19%
       - [Criar conjuntos de dados derivados baseados em decil](data-distiller/derived-datasets/decile-based-derived-attributes.md)
    - Insights personalizáveis para relatórios estendidos do aplicativo {#customizable-insights}
       - [Visão geral](data-distiller/customizable-insights/overview.md)
-      - [Modo pro da consulta](data-distiller/customizable-insights/query-pro-mode.md)
+      - [Modo de consulta profissional](data-distiller/customizable-insights/query-pro-mode.md)
       - [Enviar consultas aceleradas](data-distiller/customizable-insights/send-accelerated-queries.md)
       - [Guia do modelo de dados de insights de relatórios](data-distiller/customizable-insights/reporting-insights-data-model.md)
-   - Pipelines de recursos de IA/ML {#ml-feature-pipelines}
+   - Pipelines de recursos de AI/ML {#ml-feature-pipelines}
       - [Visão geral](data-distiller/ml-feature-pipelines/overview.md)
       - [Conectar-se aos Jupyter Notebooks](data-distiller/ml-feature-pipelines/establish-connection.md)
       - [Análise exploratória de dados](data-distiller/ml-feature-pipelines/exploratory-analysis.md)
@@ -43,7 +43,7 @@ ht-degree: 19%
    - [Visão geral](use-cases/overview.md)
    - [Navegação abandonada](use-cases/abandoned-browse.md)
    - [Análise de atribuição](use-cases/attribution-analysis.md)
-   - [Filtragem de bots](use-cases/bot-filtering.md)
+   - [Filtragem de bot](use-cases/bot-filtering.md)
    - [Criar um relatório de tendências de eventos](use-cases/trended-report-of-events.md)
    - [Análise de consentimento](use-cases/consent-analysis.md)
    - [Valor vitalício do cliente](use-cases/customer-lifetime-value.md)
@@ -66,7 +66,7 @@ ht-degree: 19%
    - [Desduplicação de dados](key-concepts/deduplication.md)
    - [Amostras de conjunto de dados](key-concepts/dataset-samples.md)
    - [Cálculo das estatísticas do conjunto de dados](key-concepts/dataset-statistics.md)
-- Conectar clientes ao Serviço de consulta {#clients}
+- Conectar clientes ao Serviço de Consulta {#clients}
    - [Visão geral de conexões de clientes](clients/overview.md)
    - [Modos SSL](./clients/ssl-modes.md)
    - [Aqua Data Studio](clients/aqua-data-studio.md)
@@ -78,7 +78,7 @@ ht-degree: 19%
    - [PSQL](clients/psql.md)
    - [RStudio](clients/rstudio.md)
    - [Tableau](clients/tableau.md)
-- Interface do usuário do serviço de consulta {#ui}
+- Interface do Usuário do Serviço de Consulta {#ui}
    - [Visão geral da interface](ui/overview.md)
    - [Guia do usuário do Editor de consultas](ui/user-guide.md)
    - [Modelos de consulta](ui/query-templates.md)
@@ -88,11 +88,11 @@ ht-degree: 19%
    - [Monitorar consultas programadas](ui/monitor-queries.md)
    - [Guia de credenciais](ui/credentials.md)
    - [Gerar conjuntos de dados de saída a partir dos resultados da consulta](ui/create-datasets.md)
-- Endpoints da API do Serviço de consulta {#api}
+- Pontos de extremidade da API do Serviço de Consulta {#api}
    - [Introdução](api/getting-started.md)
    - [Consultas](api/queries.md)
    - [Parâmetros de conexão](api/connection-parameters.md)
-   - [Agendamentos](api/scheduled-queries.md)
+   - [Programações](api/scheduled-queries.md)
    - [Execução para consultas programadas](api/runs-scheduled-queries.md)
    - [Modelos de consulta](api/query-templates.md)
    - [Consultas aceleradas](api/accelerated-queries.md)

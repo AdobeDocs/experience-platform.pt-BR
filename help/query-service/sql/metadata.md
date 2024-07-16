@@ -6,14 +6,14 @@ description: Uma lista de comandos PostgreSQL atualmente compatíveis com a cons
 exl-id: bfcbad55-3086-44c9-9938-6ba0504e747b
 source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
-source-wordcount: '335'
+source-wordcount: '332'
 ht-degree: 0%
 
 ---
 
-# Metadados [!DNL PostgreSQL] comandos no Serviço de consulta
+# Comandos de metadados [!DNL PostgreSQL] no Serviço de consulta
 
-Para metadados em seu conjunto de dados, as seguintes [!DNL PostgreSQL] os comandos são atualmente suportados para consulta:
+Para metadados em seu conjunto de dados, os seguintes comandos [!DNL PostgreSQL] têm suporte para consulta no momento:
 
 >[!NOTE]
 >
@@ -37,9 +37,9 @@ Para metadados em seu conjunto de dados, as seguintes [!DNL PostgreSQL] os coman
 | `\errverbose` | Repete a mensagem de erro de servidor mais recente com o máximo de verbosidade. |
 | `\l or \list` | Exibe uma lista de bancos de dados no servidor. |
 | `\set` | Exibe os nomes e os valores de todas as variáveis psql atuais. |
-| `\showtables` | Mostra as seguintes informações: <br>name: o nome pelo qual a tabela será referenciada.<br>datasetId: a ID do conjunto de dados que está armazenado.<br>conjunto de dados: o nome do conjunto de dados que está armazenado.<br>descrição: uma descrição do conjunto de dados.<br>resolved: um valor booleano que declara se o conjunto de dados é ou não resolvido na sessão atual. |
+| `\showtables` | Mostra as seguintes informações: <br>name: O nome pelo qual a tabela será referenciada.<br>datasetId: a ID do conjunto de dados que está armazenado.<br>conjunto de dados: o nome do conjunto de dados que está armazenado.<br>descrição: uma descrição do conjunto de dados.<br>resolved: um valor booleano que declara se o conjunto de dados é ou não resolvido na sessão atual. |
 | `\timing` | Alterna a exibição entre ligada e desligada. A exibição é em milissegundos. Intervalos maiores que um segundo são mostrados no formato minutos:segundos, com campos de horas e dias adicionados quando necessário. |
 
-Todos os comandos que começam com `\d` podem ser combinados. Por exemplo, você pode emitir `\dtsn` para exibir uma lista de todas as tabelas, sequências e esquemas. `\d` por si só mostra todas as tabelas, views, views materializadas e sequências visíveis.
+Todos os comandos que começam com `\d` podem ser combinados. Por exemplo, você pode emitir `\dtsn` para exibir uma lista de todas as tabelas, sequências e esquemas. `\d` por si só mostra todas as tabelas, visualizações, visualizações materializadas e sequências visíveis.
 
-Para obter informações adicionais sobre os comandos listados acima, consulte a documentação em [postgresql.org](https://www.postgresql.org/docs/10/app-psql.html). No entanto, esteja ciente de que nem todas as opções mostradas no [!DNL PostgreSQL] A documentação do é compatível com o [!DNL Experience Platform].
+Para obter informações adicionais sobre os comandos listados acima, consulte a documentação em [postgresql.org](https://www.postgresql.org/docs/10/app-psql.html). No entanto, esteja ciente de que nem todas as opções mostradas na documentação do [!DNL PostgreSQL] são suportadas pelo [!DNL Experience Platform].

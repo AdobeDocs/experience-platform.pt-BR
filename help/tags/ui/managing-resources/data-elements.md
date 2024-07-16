@@ -95,7 +95,7 @@ Ao criar ou editar elementos, você pode salvar e construir sua [biblioteca ativ
 >
 >Os tipos de elementos de dados são determinados pela extensão. Não há limite para os tipos que podem ser criados.
 
-As seções a seguir descrevem os tipos de elementos de dados disponíveis no **Extensão principal**. Outras extensões usam outros tipos de elementos de dados.
+As seções a seguir descrevem os tipos de elementos de dados disponíveis na **Extensão principal**. Outras extensões usam outros tipos de elementos de dados.
 
 ### Cookie
 
@@ -139,7 +139,7 @@ Você pode usá-los nos scripts personalizados usando a `_satellite` sintaxe do 
 var rule = _satellite.getVar('return event rule', event);
 ```
 
-Ao usar porcentagem (`%`), você só precisa especificar o nome do elemento de dados. Você não precisa especificar `event`.
+Ao usar a sintaxe de porcentagem (`%`), você só precisa especificar o nome do elemento de dados. Você não precisa especificar `event`.
 
 ```text
 %data element name%
@@ -176,7 +176,7 @@ Por exemplo, considere que a marcação contém uma variável de JavaScript cham
 
 Você deve fornecer o caminho dessa variável ao criar o elemento de dados.
 
-Se você utilizar um objeto coletor de dados como parte da camada de dados, utilize a notação de pontos no caminho para fazer referência ao objeto e propriedade que você deseja capturar no elemento de dados, como `_myData.pageName`ou `digitalData.pageName`, etc.
+Se você utilizar um objeto coletor de dados como parte da camada de dados, utilize a notação de pontos no caminho para fazer referência ao objeto e propriedade que você deseja capturar no elemento de dados, como `_myData.pageName` ou `digitalData.pageName` etc.
 
 #### Exemplo:
 

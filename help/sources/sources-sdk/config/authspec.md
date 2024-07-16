@@ -5,7 +5,7 @@ description: Este documento fornece uma visão geral das configurações que voc
 exl-id: 68ed22fe-1f22-46d2-9d58-72ad8a9e6b98
 source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '518'
+source-wordcount: '522'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 As especificações de autenticação definem como os usuários do Adobe Experience Platform podem se conectar à origem.
 
-A variável `authSpec` matriz contém informações sobre os parâmetros de autenticação necessários para conectar uma origem à Platform. Qualquer origem fornecida pode suportar vários tipos diferentes de autenticação.
+A matriz `authSpec` contém informações sobre os parâmetros de autenticação necessários para conectar uma origem à Platform. Qualquer origem fornecida pode suportar vários tipos diferentes de autenticação.
 
 ## Especificações de autenticação
 
@@ -181,7 +181,7 @@ A autenticação básica é um tipo de autenticação que permite acessar seu ap
 
 ## Exemplo de especificação de autenticação
 
-Veja a seguir um exemplo de uma especificação de autenticação concluída usando um [[!DNL MailChimp Members]](../../tutorials/api/create/marketing-automation/mailchimp-members.md) origem.
+Este é um exemplo de uma especificação de autenticação concluída usando uma origem [[!DNL MailChimp Members]](../../tutorials/api/create/marketing-automation/mailchimp-members.md).
 
 ```json
   "authSpec": [
@@ -237,4 +237,4 @@ Veja a seguir um exemplo de uma especificação de autenticação concluída usa
 
 ## Próximas etapas
 
-Com suas especificações de autenticação preenchidas, você pode continuar a configurar as especificações de origem para a origem que deseja integrar à Platform. Consulte o documento sobre [configurando especificações de origem](./sourcespec.md) para obter mais informações.
+Com suas especificações de autenticação preenchidas, você pode continuar a configurar as especificações de origem para a origem que deseja integrar à Platform. Consulte o documento sobre [configuração de especificações de origem](./sourcespec.md) para obter mais informações.

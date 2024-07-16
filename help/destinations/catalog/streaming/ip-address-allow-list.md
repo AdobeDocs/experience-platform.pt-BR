@@ -16,7 +16,7 @@ ht-degree: 0%
 >[!IMPORTANT]
 >
 > * A Adobe recomenda que você marque essa página como favorito e a revisite a cada três meses para verificar os endereços IP mais recentes. O Adobe não fornece notificação de novos intervalos IP.
-> * A lista de IPs documentada aqui *não* se aplicam a todos os destinos que você criar usando o [[!DNL Destination SDK]](/help/destinations/destination-sdk/overview.md).
+> * A lista de IPs documentada aqui *não* se aplica a nenhum destino que você tenha compilado usando o [[!DNL Destination SDK]](/help/destinations/destination-sdk/overview.md).
 
 ## Visão geral {#overview}
 
@@ -28,7 +28,7 @@ Os intervalos IP documentados aqui se aplicam aos seguintes destinos:
 
 O tráfego de saída do Experience Platform para esses destinos sempre passa pelos IPs listados nesta página.
 
-Essa página fornece intervalos IP que podem ser adicionados à inclui na lista de permissões para exportar dados com segurança do Experience Platform para o terminal HTTP, [!DNL Amazon Kinesis]ou [!DNL Azure Event Hubs] instância. Incluir na lista de permissões Essa funcionalidade é especialmente útil se o seu ponto de extremidade HTTP estiver localizado atrás de um firewall corporativo ou se os padrões de segurança e conformidade da sua empresa exigirem uma lista de intervalos IP a serem.
+Incluir na lista de permissões Esta página fornece intervalos IP que você pode adicionar ao arquivo para exportar com segurança dados do Experience Platform para o seu ponto de extremidade HTTP, instância [!DNL Amazon Kinesis] ou [!DNL Azure Event Hubs]. Incluir na lista de permissões Essa funcionalidade é especialmente útil se o seu ponto de extremidade HTTP estiver localizado atrás de um firewall corporativo ou se os padrões de segurança e conformidade da sua empresa exigirem uma lista de intervalos IP a serem.
 
 Você pode definir controles de acesso à rede por meio do firewall de rede. Ao especificar o intervalo IP apropriado, você pode permitir o tráfego para o serviço de transferência de dados.
 

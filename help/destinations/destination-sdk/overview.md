@@ -30,7 +30,7 @@ Revise a documentação nos links abaixo para começar rapidamente a configurar 
             <p><b>Páginas de configuração</b></p>
             <ul>
                 <li><a href="/help/destinations/destination-sdk/functionality/configuration-options.md">Todas as opções de configuração explicadas</a></li>
-                <li> Configuração do servidor de destino - <a href="/help/destinations/destination-sdk/functionality/destination-server/server-specs.md">especificações do servidor</a> e <a href="/help/destinations/destination-sdk/functionality/destination-server/templating-specs.md">especificações de modelos</a></li>
+                <li> Configuração do servidor de destino - <a href="/help/destinations/destination-sdk/functionality/destination-server/server-specs.md">especificações do servidor</a> e <a href="/help/destinations/destination-sdk/functionality/destination-server/templating-specs.md">especificações do modelo</a></li>
                 <li><a href="/help/destinations/destination-sdk/functionality/destination-configuration/customer-data-fields.md">Campos de dados do cliente e outros componentes de configuração de destino</a></li>
                 <li><a href="https://experienceleague.adobe.com/en/docs/experience-platform/destinations/destination-sdk/functionality/destination-server/message-format">Modelos e macros</a></li>
             </ul>
@@ -66,7 +66,7 @@ Revise a documentação nos links abaixo para começar rapidamente a configurar 
             <p><b>Configurar um destino de transmissão - folha de características</b></p>
             <ul>
                 <li><a href="/help/destinations/destination-sdk/guides/configure-destination-instructions.md">Configurar um guia completo do destino de transmissão</a></li>
-                <li><a href="/help/destinations/destination-sdk/functionality/destination-server/message-format.md">Entender a transformação de dados por meio de modelos do Pebble</a> e <a href="/help/destinations/destination-sdk/functionality/destination-server/supported-functions.md">exibir funções de modelo compatíveis</a></li>
+                <li><a href="/help/destinations/destination-sdk/functionality/destination-server/message-format.md">Entender a transformação de dados por meio de modelos Pebble</a> e <a href="/help/destinations/destination-sdk/functionality/destination-server/supported-functions.md">exibir funções de modelo com suporte</a></li>
                 <li><a href="/help/destinations/destination-sdk/functionality/destination-configuration/aggregation-policy.md">Entender as políticas de agregação de dados</a></li>
                 <li><a href="https://experienceleague.adobe.com/en/docs/experience-platform/destinations/destination-sdk/functionality/destination-server/message-format">Exemplo de configuração em tempo real</a></li>
                 <li><a href="/help/destinations/destination-sdk/testing-api/streaming-destinations/streaming-destination-testing-overview.md">Testar o destino de streaming</a></li>
@@ -78,7 +78,7 @@ Revise a documentação nos links abaixo para começar rapidamente a configurar 
                 <li><a href="/help/destinations/destination-sdk/guides/configure-file-based-destination-instructions.md">Configurar um guia completo do destino baseado em arquivos</a></li>
                 <li><a href="/help/destinations/destination-sdk/guides/batch/configure-file-formatting-options.md">Configurar formatos de arquivo para os arquivos exportados</a></li>
                 <li><a href="/help/destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-predefined-file-formatting.md">Exemplo de configuração em tempo real para um destino do Amazon S3</a></li>
-                <li><a href="/help/destinations/destination-sdk/functionality/destination-configuration/batch-configuration.md">Configuração em lote</a> para programação e nomeação de arquivos de exportação</li>
+                <li><a href="/help/destinations/destination-sdk/functionality/destination-configuration/batch-configuration.md">Configuração em lote</a> para agendamento de exportação de arquivo e nomenclatura de arquivo</li>
                 <li><a href="/help/destinations/destination-sdk/testing-api/batch-destinations/file-based-destination-testing-overview.md">Testar seu destino baseado em arquivo</a></li>
             </ul>
         </td>
@@ -103,9 +103,9 @@ Revise a documentação nos links abaixo para começar rapidamente a configurar 
 
 >[!IMPORTANT]
 >
-> Essa funcionalidade para criar destinos personalizados privados está disponível somente para [Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html?lang=pt-BR) clientes.
+> Esta funcionalidade para criar destinos personalizados privados está disponível somente para clientes do [Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html?lang=pt-BR).
 
-Como parceiro de Destination SDK, você pode se beneficiar adicionando seu destino de produção à [catálogo de Experience Platform](../catalog/overview.md):
+Como parceiro de Destination SDK, você pode se beneficiar ao adicionar seu destino produtizado ao [catálogo de Experience Platform](../catalog/overview.md):
 
 1. Padronize as configurações de integração entre clientes com parâmetros pré-configurados e simplifique a experiência de configuração para os clientes.
 2. Introduza uma placa de destino de marca no catálogo de destinos do Experience Platform para simplificar a configuração e o reconhecimento para o cliente.
@@ -134,7 +134,7 @@ Por meio do Destination SDK, também é possível configurar integrações para 
 * Exportação de arquivos em vários formatos compatíveis (CSV, Parquet, JSON)
 * Opções configuráveis de formatação de arquivo, que permitem estruturar o formato dos arquivos exportados para atender aos requisitos de downstream.
 
-Leia sobre os requisitos técnicos do lado dos destinos no [pré-requisitos de integração](integration-prerequisites.md) e leia sobre todas as configurações compatíveis no [opções de configuração](functionality/configuration-options.md) artigo
+Leia sobre os requisitos técnicos no lado dos destinos no artigo [pré-requisitos de integração](integration-prerequisites.md) e leia sobre todas as configurações compatíveis no artigo [opções de configuração](functionality/configuration-options.md)
 
 ## Obter acesso ao Destination SDK {#get-access}
 
@@ -142,9 +142,9 @@ O acesso ao Destination SDK varia de acordo com seu status como parceiro ou Expe
 
 | Tipo de parceiro ou cliente | Como acessar o Destination SDK |
 ---------|----------|
-| ISV (Independent Software Vendor, fornecedor independente de software) | Associe-se ao [Programa de parceiro de tecnologia Adobe](https://partners.adobe.com/technologyprogram/experiencecloud.html) e solicite a obtenção de uma sandbox Experience Platform provisionada para acessar o Destination SDK. |
-| Integrador de sistema (SI) | Você precisa estar no nível Gold ou Platinum no [Programa de parceiro de soluções Adobe](https://solutionpartners.adobe.com/home.html) para obter uma sandbox de Experience Platform provisionada e acesso ao Destination SDK. |
-| cliente do Experience Platform no [Pacote Real-Time CDP Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html?lang=pt-BR) | Por padrão, você tem acesso às sandboxes e ao Destination SDK do Experience Platform, o que permite criar destinos privados para sua organização. |
+| ISV (Independent Software Vendor, fornecedor independente de software) | Participe do [Programa de Parceiro de Tecnologia do Adobe](https://partners.adobe.com/technologyprogram/experiencecloud.html) e solicite a obtenção de uma sandbox de Experience Platform provisionada para acessar o Destination SDK. |
+| Integrador de sistema (SI) | Adobe Você precisa estar no nível Gold ou Platinum no [Programa de parceiro de soluções](https://solutionpartners.adobe.com/home.html) para obter um Experience Platform sandbox provisionado e acesso ao Destination SDK. |
+| Cliente Experience Platform no [pacote do Real-Time CDP Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html?lang=pt-BR) | Por padrão, você tem acesso às sandboxes e ao Destination SDK do Experience Platform, o que permite criar destinos privados para sua organização. |
 
 {style="table-layout:auto"}
 
@@ -152,11 +152,11 @@ O acesso ao Destination SDK varia de acordo com seu status como parceiro ou Expe
 
 O processo para configurar seu destino no Experience Platform é descrito abaixo:
 
-1. Se você for um ISV ou SI, consulte a [obter acesso](#get-access) informações na seção acima. [Pacote Real-Time CDP Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html?lang=pt-BR) os clientes do podem ignorar esta etapa.
-2. [Solicitação para provisionar uma sandbox de Experience Platform](https://adobeexchangeec.zendesk.com/hc/en-us/articles/360037457812-Adobe-Experience-Platform-Sandbox-Accounts-Access-Adding-Users-and-Support) e ativar a permissão de criação de destino.
-3. Crie sua integração. Siga as instruções na documentação do produto para configurar o [destinos de transmissão](guides/configure-destination-instructions.md) ou [destinos baseados em arquivo](guides/configure-file-based-destination-instructions.md).
-4. Teste sua integração. Siga as instruções na documentação do produto para testar [destinos de transmissão](testing-api/streaming-destinations/streaming-destination-testing-overview.md) ou [destinos baseados em arquivo](testing-api/batch-destinations/file-based-destination-testing-overview.md).
-5. Se você for um ISV ou SI que cria um [integração produtiva](./overview.md#productized-custom-integrations), [enviar sua integração](guides/submit-destination.md) para revisão de Adobe (o tempo de resposta padrão é de cinco dias úteis).
+1. Se você for um ISV ou SI, consulte as informações de [obtenção de acesso](#get-access) na seção acima. [pacote do Real-Time CDP Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html?lang=pt-BR), os clientes podem ignorar esta etapa.
+2. [Solicitação para provisionar uma sandbox de Experience Platform](https://adobeexchangeec.zendesk.com/hc/en-us/articles/360037457812-Adobe-Experience-Platform-Sandbox-Accounts-Access-Adding-Users-and-Support) e habilitar a permissão de criação de destino.
+3. Crie sua integração. Siga as instruções na documentação do produto para configurar [destinos de streaming](guides/configure-destination-instructions.md) ou [destinos baseados em arquivo](guides/configure-file-based-destination-instructions.md).
+4. Teste sua integração. Siga as instruções na documentação do produto para testar [destinos de streaming](testing-api/streaming-destinations/streaming-destination-testing-overview.md) ou [destinos baseados em arquivo](testing-api/batch-destinations/file-based-destination-testing-overview.md).
+5. Se você for um ISV ou um SI que está criando uma [integração produtizada](./overview.md#productized-custom-integrations), [envie sua integração](guides/submit-destination.md) para revisão do Adobe (o tempo de resposta padrão é de cinco dias úteis).
 6. Se você for um ISV ou SI criando uma integração produzida, use o [processo de documentação de autoatendimento](docs-framework/documentation-instructions.md) para criar uma página de documentação do produto no Experience League para o seu destino.
 7. Para integrações produzidas, uma vez aprovada pelo Adobe, sua integração será exibida no [catálogo de Experience Platform](../catalog/overview.md).
 8. Se quiser atualizar a integração, siga o mesmo processo.
@@ -165,6 +165,6 @@ O processo para configurar seu destino no Experience Platform é descrito abaixo
 
 O Adobe recomenda que você leia e entenda a seguinte documentação do Experience Platform:
 
-* [Visão geral dos destinos do Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/destinations/home.html?lang=pt-BR)
+* [visão geral dos destinos do Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/destinations/home.html?lang=pt-BR)
 * [Base da composição do esquema XDM](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=pt-BR)
 * [Visão geral do namespace de identidade](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=pt-BR)

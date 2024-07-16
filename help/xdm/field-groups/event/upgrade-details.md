@@ -11,11 +11,11 @@ ht-degree: 3%
 
 # [!UICONTROL Detalhes da atualização] grupo de campos de esquema
 
-[!UICONTROL Detalhes da atualização] é um grupo de campos de esquema padrão para o [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md) usado para registrar informações sobre um evento de marketing de atualização, incluindo detalhes sobre a transação e as diferentes maneiras como a oferta foi exibida para um cliente.
+[!UICONTROL Detalhes de Atualização] é um grupo de campos de esquema padrão para a [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md) usada para capturar informações sobre um evento de marketing de atualização, incluindo detalhes sobre a transação e as diferentes maneiras das quais a oferta foi exibida para um cliente.
 
-O grupo de campos fornece um único campo do tipo objeto, `upgrades`. As propriedades contidas nesse objeto são explicadas abaixo.
+O grupo de campos fornece um único campo de tipo de objeto, `upgrades`. As propriedades contidas nesse objeto são explicadas abaixo.
 
-![Atualizar estrutura de detalhes](../../images/field-groups/upgrade-details.png)
+![Estrutura de Detalhes da Atualização](../../images/field-groups/upgrade-details.png)
 
 | Propriedade | Tipo de dados | Descrição |
 | --- | --- | --- |

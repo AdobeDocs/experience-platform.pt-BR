@@ -48,10 +48,10 @@ A Platform permite definir seus próprios grupos de campos personalizados e tipo
 
 >[!IMPORTANT]
 >
->SPI e PII só devem ser salvas na variável [Perfil individual XDM](../classes/individual-profile.md) e [XDM ExperienceEvent](../classes/experienceevent.md) classes. Como prática recomendada para fins de exclusão de dados e privacidade e governança, não salve a SPI e a PII em nenhuma outra classe XDM personalizada ou padrão.
+>SPI e PII só devem ser salvas nas classes [Perfil Individual XDM](../classes/individual-profile.md) e [XDM ExperienceEvent](../classes/experienceevent.md). Como prática recomendada para fins de exclusão de dados e privacidade e governança, não salve a SPI e a PII em nenhuma outra classe XDM personalizada ou padrão.
 
 ## Próximas etapas
 
-Esse documento abordou as principais considerações relacionadas a dados confidenciais e pessoais no XDM. Para obter mais informações sobre como modelar seus esquemas para melhor atender aos casos de uso da empresa, consulte o guia em [práticas recomendadas para modelagem de dados](./best-practices.md).
+Esse documento abordou as principais considerações relacionadas a dados confidenciais e pessoais no XDM. Para obter mais informações sobre como modelar seus esquemas para melhor atender aos casos de uso da empresa, consulte o manual em [práticas recomendadas para modelagem de dados](./best-practices.md).
 
-Para obter mais informações sobre os recursos de governança de dados e privacidade no Experience Platform, consulte a visão geral no [governança, privacidade e segurança](../../landing/governance-privacy-security/overview.md).
+Para obter mais informações sobre os recursos de privacidade e governança de dados do Experience Platform, consulte a visão geral sobre [governança, privacidade e segurança](../../landing/governance-privacy-security/overview.md).

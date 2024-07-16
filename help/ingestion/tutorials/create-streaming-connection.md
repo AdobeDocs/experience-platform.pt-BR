@@ -18,4 +18,4 @@ O registro da conexão de transmissão é necessário para iniciar a transmissã
 
 Depois de registrar uma conexão de transmissão, você, como produtor de dados, terá um URL exclusivo que pode ser usado para transmitir dados para a Platform.
 
-Para saber como criar uma conexão de transmissão autenticada, leia o [Guia da API de origem da API HTTP](../../sources/tutorials/api/create/streaming/http.md).
+Para saber como criar uma conexão de streaming autenticada, leia o [Guia da API de origem de HTTP](../../sources/tutorials/api/create/streaming/http.md).

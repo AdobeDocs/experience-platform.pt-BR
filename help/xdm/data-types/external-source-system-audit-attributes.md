@@ -1,23 +1,23 @@
 ---
-title: Tipo de dados de atributos de auditoria do sistema de origem externa
-description: Saiba mais sobre o tipo de dados Atributos de auditoria do sistema de origem externa Experience Data Model (XDM).
+title: Tipo de Dados de Atributos de Auditoria do Sistema Source Externo
+description: Saiba mais sobre o tipo de dados External Source System Audit Attributes Experience Data Model (XDM).
 exl-id: ebdd8707-9675-4232-a5b7-4e4a481d706a
 source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
 source-wordcount: '168'
-ht-degree: 4%
+ht-degree: 7%
 
 ---
 
-# [!UICONTROL Atributos de auditoria do sistema de origem externa] tipo de dados
+# [!UICONTROL Tipo de dados de Atributos de Auditoria do Sistema Source Externo]
 
-[!UICONTROL Atributos de auditoria do sistema de origem externa] é um tipo de dados padrão do Experience Data Model (XDM) que captura os detalhes de auditoria sobre um sistema de origem externa.
+[!UICONTROL Atributos de Auditoria de Sistema Externos do Source] é um tipo de dados padrão do Experience Data Model (XDM) que captura detalhes de auditoria sobre um sistema de origem externo.
 
 ![](../images/data-types/external-source-system-audit-attributes.png)
 
 | Propriedade | Tipo de dados | Descrição |
 | --- | --- | --- |
-| `externalKey` | [[!UICONTROL Origem B2B]](./b2b-source.md) | Um identificador composto para a origem usada para auditoria. |
+| `externalKey` | [[!UICONTROL Source B2B]](./b2b-source.md) | Um identificador composto para a origem usada para auditoria. |
 | `createdBy` | String | O nome do usuário que criou este registro. |
 | `createdDate` | DateTime | A data em que este registro foi criado. |
 | `externalID` | String | Identificador exclusivo externo da origem. Esse valor é usado para ajudar a identificar e desduplicar, se necessário. |

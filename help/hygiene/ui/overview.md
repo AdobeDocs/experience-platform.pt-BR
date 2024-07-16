@@ -21,13 +21,13 @@ ht-degree: 36%
 >title="Ordens de trabalho recentes do ciclo de vida dos dados"
 >abstract="Esse dispositivo mostra as cinco ordens de trabalho do ciclo de vida dos dados criadas ou atualizadas mais recentemente, dependendo da opção selecionada na parte superior direita. Para obter mais informações sobre os processos de ciclo de vida dos dados, selecione **Ciclo de vida dos dados** na navegação à esquerda."
 
-A variável **[!UICONTROL Ciclo de vida dos dados]** O espaço de trabalho na interface do usuário do Adobe Experience Platform permite criar e monitorar várias tarefas de gerenciamento do ciclo de vida dos dados, incluindo a exclusão de registros e o agendamento de expirações de conjuntos de dados.
+O espaço de trabalho **[!UICONTROL Ciclo de Vida de Dados]** na interface do usuário do Adobe Experience Platform permite criar e monitorar várias tarefas de gerenciamento do ciclo de vida de dados, incluindo a exclusão de registros e o agendamento de expirações de conjuntos de dados.
 
-Este guia aborda como gerenciar tarefas do ciclo de vida de dados na interface do usuário da plataforma. Para obter informações sobre como executar essas tarefas usando chamadas de API, consulte a [Guia da API de higiene de dados](../api/overview.md).
+Este guia aborda como gerenciar tarefas do ciclo de vida de dados na interface do usuário da plataforma. Para obter informações sobre como executar essas tarefas usando chamadas de API, consulte o [Guia da API de higiene de dados](../api/overview.md).
 
-Para acessar o espaço de trabalho, selecione **Ciclo de vida dos dados** no painel de navegação esquerdo.
+Para acessar o espaço de trabalho, selecione **Ciclo de Vida dos Dados** na navegação à esquerda.
 
-![A variável [!UICONTROL Ciclo de vida dos dados] espaço de trabalho na interface do usuário da Platform, com [!UICONTROL Ciclo de vida dos dados] realçado na navegação à esquerda.](../images/ui/overview/home.png)
+![O espaço de trabalho [!UICONTROL Ciclo de Vida de Dados] na interface do usuário da plataforma, com [!UICONTROL Ciclo de Vida de Dados] realçado na navegação à esquerda.](../images/ui/overview/home.png)
 
 Aqui, você pode procurar ordens de serviço existentes e configurar novas operações de ciclo de vida de dados. Para saber mais, consulte as seguintes seções deste guia:
 

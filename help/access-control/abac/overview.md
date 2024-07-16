@@ -55,11 +55,11 @@ O controle de acesso baseado em atributos envolve os seguintes componentes:
 
 Permissões é a área do Experience Cloud em que os administradores podem definir funções de usuário e políticas de acesso para gerenciar permissões de acesso para recursos e objetos em um aplicativo de produto.
 
-Através das Permissões, é possível criar e gerenciar funções, bem como atribuir as permissões de recurso desejadas para essas funções. As permissões também permitem gerenciar rótulos, sandboxes e usuários associados a uma função específica. Para obter mais informações, consulte [Guia de permissões](ui/browse.md).
+Através das Permissões, é possível criar e gerenciar funções, bem como atribuir as permissões de recurso desejadas para essas funções. As permissões também permitem gerenciar rótulos, sandboxes e usuários associados a uma função específica. Para obter mais informações, consulte o [Guia de permissões](ui/browse.md).
 
 ## API de controle de acesso baseado em atributo
 
-A API de controle de acesso baseada em atributos permite gerenciar programaticamente funções, políticas e produtos na Platform usando APIs. Para obter mais informações, consulte o guia no [usar a API para gerenciar configurações de controle de acesso baseadas em atributos](api/overview.md).
+A API de controle de acesso baseada em atributos permite gerenciar programaticamente funções, políticas e produtos na Platform usando APIs. Para obter mais informações, consulte o manual sobre [como usar a API para gerenciar configurações de controle de acesso baseadas em atributos](api/overview.md).
 
 ## Controle de acesso baseado em atributos no Adobe Experience Platform
 
@@ -67,19 +67,19 @@ As seções a seguir fornecem informações sobre como o controle de acesso base
 
 ### Controle de acesso
 
-A Platform utiliza [Adobe Admin Console](https://adminconsole.adobe.com) funções para vincular usuários com permissões e sandboxes. As permissões controlam o acesso a uma variedade de recursos da Platform, incluindo modelagem de dados, gerenciamento de perfis e administração de sandbox. Quando sua organização estiver habilitada para o controle de acesso baseado em atributos, você poderá começar a usar Permissões no Adobe Experience Cloud, em vez de Funções no Adobe Admin Console, para gerenciar permissões para usuários, funcionalidades, rótulos e outros recursos em sua organização.
+A Platform aproveita as funções do [Adobe Admin Console](https://adminconsole.adobe.com) para vincular usuários com permissões e sandboxes. As permissões controlam o acesso a uma variedade de recursos da Platform, incluindo modelagem de dados, gerenciamento de perfis e administração de sandbox. Quando sua organização estiver habilitada para o controle de acesso baseado em atributos, você poderá começar a usar Permissões no Adobe Experience Cloud, em vez de Funções no Adobe Admin Console, para gerenciar permissões para usuários, funcionalidades, rótulos e outros recursos em sua organização.
 
 Há disponibilidade limitada de controle de acesso baseado em atributos para clientes que compram os Healthcare and/ou Privacy Shields. Os recursos dessa funcionalidade incluem:
 
 * Interface de permissões: fornece uma interface para que você defina funções de usuário, permissões e políticas para o controle de acesso baseado em atributos.
 
-* Rotulagem: adicione, edite e remova rótulos de funções de usuário, campos de esquema, segmentos e outros objetos compatíveis para aproveitar as políticas de controle de acesso. **Nota:** Qualquer segmento que utilize um atributo rotulado também deve ser rotulado se você quiser que as mesmas restrições de acesso se apliquem a ele.
+* Rotulagem: adicione, edite e remova rótulos de funções de usuário, campos de esquema, segmentos e outros objetos compatíveis para aproveitar as políticas de controle de acesso. **Observação:** qualquer segmento que utilize um atributo rotulado também deverá ser rotulado se você quiser que as mesmas restrições de acesso se apliquem a ele.
 
 Os workflows de administração de todos os aplicativos alimentados por Experience Platform do Admin Console para a nova interface de Permissões estão sendo trocados.
 
 >[!IMPORTANT]
 >
->Suas funções são migradas automaticamente para a interface de Permissões quando a organização é habilitada. As funções no Admin Console permanecerão como estão por enquanto. Por favor **não** modifique suas funções depois que sua organização for habilitada.
+>Suas funções são migradas automaticamente para a interface de Permissões quando a organização é habilitada. As funções no Admin Console permanecerão como estão por enquanto. **Não** modifique suas funções depois que sua organização tiver sido habilitada.
 
 Para obter mais informações sobre controle de acesso, consulte a [visão geral do controle de acesso](../home.md).
 
@@ -98,19 +98,19 @@ Como administrador, você pode usar as funcionalidades de controle de acesso bas
 >
 >Em resumo, lembre-se das seguintes implicações ao trabalhar com destinos e controle de acesso baseado em atributos:
 >
->* Você só pode ativar públicos-alvo aos quais tenha permissão para acessar e exibir no [Portal de público](/help/segmentation/ui/audience-portal.md#browse) e [selecionar etapa do segmento](/help/destinations/ui/activate-batch-profile-destinations.md#select-segments) do workflow de ativação.
->* No [etapa de mapeamento do fluxo de trabalho de ativação](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping), você só poderá exibir e selecionar para ativação os campos aos quais tem permissão de acesso.
+>* Você só pode ativar públicos-alvo aos quais tenha permissão para acessar e exibir no [Portal de Público-Alvo](/help/segmentation/ui/audience-portal.md#browse) e [selecionar etapa de segmento](/help/destinations/ui/activate-batch-profile-destinations.md#select-segments) do fluxo de trabalho de ativação.
+>* Na [etapa de mapeamento do fluxo de trabalho de ativação](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping), você só poderá exibir e selecionar para ativação os campos aos quais tem permissão de acesso.
 >* Quando estiver procurando ativar segmentos adicionais para um destino existente no qual você não tem acesso a todos os campos mapeados para exportação, o fluxo de trabalho de ativação será bloqueado para você.
 
-Para obter mais informações sobre [!DNL Destinations], consulte o [[!DNL Destinations] visão geral](../../destinations/home.md).
+Para obter mais informações sobre [!DNL Destinations], consulte a [[!DNL Destinations] visão geral](../../destinations/home.md).
 
 ### Serviço de identidade
 
-Adobe Experience Platform [!DNL Identity Service] O ajuda você a obter uma melhor visualização do cliente e do comportamento dele, unindo identidades em dispositivos e sistemas, permitindo que você forneça experiências digitais pessoais e impactantes em tempo real.
+O Adobe Experience Platform [!DNL Identity Service] ajuda você a ter uma melhor visão do seu cliente e do comportamento dele ao unir as identidades de vários dispositivos e sistemas, permitindo que você forneça experiências digitais pessoais e impactantes em tempo real.
 
-Como parte do controle de acesso baseado em atributos, a variável `view-identity-graph` A permissão de permite determinar quais usuários em sua organização podem acessar o gráfico de identidade por meio da interface ou das APIs. Para obter mais informações, consulte o manual sobre [uso do visualizador de gráficos de identidade](../../identity-service/features/identity-graph-viewer.md).
+Como parte do controle de acesso baseado em atributos, a permissão `view-identity-graph` permite determinar quais usuários em sua organização podem acessar o gráfico de identidade por meio da interface ou das APIs do usuário. Para obter mais informações, consulte o guia em [usando o visualizador de gráficos de identidade](../../identity-service/features/identity-graph-viewer.md).
 
-Para obter mais informações sobre [!DNL Identity Service], consulte o [[!DNL Identity Service] visão geral](../../identity-service/home.md).
+Para obter mais informações sobre [!DNL Identity Service], consulte a [[!DNL Identity Service] visão geral](../../identity-service/home.md).
 
 ### Perfil do cliente em tempo real
 
@@ -123,7 +123,7 @@ Como administrador, você pode usar as funcionalidades de controle de acesso bas
    * Como administrador, você pode provisionar usuários em sua organização para ver apenas os atributos de perfil rotulados com rótulos aos quais os usuários têm acesso ao criar segmentos;
 * Configure o acesso do usuário à visualização de dados, rotulando campos de dados específicos usados no esquema XDM do modelo de dados.
 
-Para obter mais informações sobre Perfil, consulte [Visão geral do perfil](../../profile/home.md).
+Para obter mais informações sobre Perfil, consulte a [Visão geral do Perfil](../../profile/home.md).
 
 ### Serviço de segmentação
 
@@ -134,7 +134,7 @@ Como administrador, você pode usar as funcionalidades de controle de acesso bas
 * Configure o acesso do usuário para visualizar e gerenciar segmentos específicos com base em funções, permissões e rótulos;
    * Como administrador, você pode provisionar usuários em sua organização para ver apenas os segmentos rotulados com rótulos aos quais os usuários têm acesso e os segmentos que não contêm rótulos, ao usar a interface de segmentação.
 
-Para obter mais informações sobre [!DNL Segmentation Service], consulte o [[!DNL Segmentation Service] visão geral](../../segmentation/home.md).
+Para obter mais informações sobre [!DNL Segmentation Service], consulte a [[!DNL Segmentation Service] visão geral](../../segmentation/home.md).
 
 ### XDM
 
@@ -142,7 +142,7 @@ O Experience Data Model (XDM) é uma especificação de código aberto projetada
 
 Com o controle de acesso baseado em atributos, você pode:
 
-* [Aplicar rótulos de uso de dados a grupos de campos e classes](../../xdm/tutorials/labels.md). Isso permite que vários esquemas com os mesmos grupos de campos ou classes tenham campos marcados com os mesmos atributos, dependendo das configurações no nível do grupo de campos ou da classe;
+* [Aplicar rótulos de uso de dados a grupos e classes de campos](../../xdm/tutorials/labels.md). Isso permite que vários esquemas com os mesmos grupos de campos ou classes tenham campos marcados com os mesmos atributos, dependendo das configurações no nível do grupo de campos ou da classe;
 * Configure o acesso do usuário a campos de esquema XDM específicos, dependendo dos conjuntos de permissões aplicados às funções atribuídas aos usuários.
 
-Para obter mais informações sobre o XDM, consulte o [Visão geral do XDM](../../xdm/home.md).
+Para obter mais informações sobre o XDM, consulte a [visão geral do XDM](../../xdm/home.md).

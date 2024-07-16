@@ -4,8 +4,8 @@ description: As notas da versão de março de 2023 da Adobe Experience Platform.
 exl-id: 3f4d764a-77cd-4e4a-ae11-e97a23006a53
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '2204'
-ht-degree: 98%
+source-wordcount: '2079'
+ht-degree: 99%
 
 ---
 

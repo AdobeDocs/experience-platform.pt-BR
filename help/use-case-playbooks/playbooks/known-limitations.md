@@ -22,7 +22,7 @@ Algumas limitações conhecidas são exibidas ao criar uma instância de um manu
 
 * Para esquemas gerados, se um esquema for gerado em uma instância de um manual e você editá-lo, outro esquema *não* será gerado se você habilitar outra instância do manual. Em vez disso, continue a usar o schema editado na instância também.
 
-* Ao usar o [funcionalidade de reconhecimento de dados](/help/use-case-playbooks/playbooks/data-awareness.md) para promover o esquema da sandbox inspiradora para a sandbox de desenvolvimento, você pode ver alguns erros semelhantes aos abaixo:
+* Ao usar a [funcionalidade de reconhecimento de dados](/help/use-case-playbooks/playbooks/data-awareness.md) para promover o esquema da sandbox inspiradora para a sandbox de desenvolvimento, você poderá ver alguns erros semelhantes aos abaixo:
 
 ![Erros exibidos no fluxo de trabalho de mapeamento de esquema.](/help/use-case-playbooks/assets/playbooks/troubleshooting/schema-errors.png){width="1000" zoomable="yes"}
 

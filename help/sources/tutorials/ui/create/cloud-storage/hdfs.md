@@ -1,35 +1,35 @@
 ---
 keywords: Experience Platform;página inicial;tópicos populares;Apache HDFS;HDFS;hdfs
 solution: Experience Platform
-title: Criar uma conexão de origem Apache HDFS na interface
+title: Criar uma conexão Apache HDFS Source na interface
 type: Tutorial
 description: Saiba como criar uma conexão de origem do Apache Hadoop Distributed File System usando a interface do usuário do Adobe Experience Platform.
 exl-id: 3b8bf210-13b6-44e6-9090-152998f67452
 source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
-source-wordcount: '492'
+source-wordcount: '487'
 ht-degree: 1%
 
 ---
 
-# Criar um [!DNL Apache] Conexão de origem HDFS na interface
+# Criar uma conexão de origem HDFS [!DNL Apache] na interface
 
 >[!NOTE]
 >
->A variável [!DNL Apache] O conector HDFS está na versão beta. Consulte a [Visão geral das fontes](../../../../home.md#terms-and-conditions) para obter mais informações sobre o uso de conectores rotulados com beta.
+>O conector HDFS [!DNL Apache] está na versão beta. Consulte a [Visão geral das fontes](../../../../home.md#terms-and-conditions) para obter mais informações sobre o uso de conectores rotulados com beta.
 
-Conectores de origem em [!DNL Adobe Experience Platform] fornecer a capacidade de assimilar dados obtidos externamente de forma programada. Este tutorial fornece etapas para autenticar um [!DNL Apache Hadoop Distributed File System] (a seguir denominado &quot;HDFS&quot;) utilizando o conector de origem [!DNL Platform] interface do usuário.
+Os conectores do Source em [!DNL Adobe Experience Platform] fornecem a capacidade de assimilar dados obtidos externamente de forma programada. Este tutorial fornece etapas para autenticar um conector de origem do [!DNL Apache Hadoop Distributed File System] (doravante denominado &quot;HDFS&quot;) usando a interface do usuário [!DNL Platform].
 
 ## Introdução
 
-Este tutorial requer um entendimento prático dos seguintes componentes do [!DNL Platform]:
+Este tutorial requer entendimento prático dos seguintes componentes do [!DNL Platform]:
 
-- [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): o quadro normalizado pelo qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
-   - [Noções básicas da composição do esquema](../../../../../xdm/schema/composition.md): saiba mais sobre os componentes básicos dos esquemas XDM, incluindo princípios fundamentais e práticas recomendadas na composição do esquema.
+- [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): a estrutura padronizada pela qual o [!DNL Experience Platform] organiza os dados de experiência do cliente.
+   - [Noções básicas sobre a composição de esquema](../../../../../xdm/schema/composition.md): saiba mais sobre os blocos de construção básicos de esquemas XDM, incluindo princípios-chave e práticas recomendadas na composição de esquema.
    - [Tutorial do Editor de esquemas](../../../../../xdm/tutorials/create-schema-ui.md): saiba como criar esquemas personalizados usando a interface do Editor de esquemas.
-- [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): fornece um perfil de consumidor unificado em tempo real com base em dados agregados de várias fontes.
+- [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Fornece um perfil de consumidor unificado em tempo real com base em dados agregados de várias fontes.
 
-Se você já tiver uma conexão HDFS válida, ignore o restante deste documento e prossiga para o tutorial em [configuração de um fluxo de dados](../../dataflow/batch/cloud-storage.md).
+Se você já tiver uma conexão HDFS válida, ignore o restante deste documento e prossiga para o tutorial em [configurando um fluxo de dados](../../dataflow/batch/cloud-storage.md).
 
 ### Coletar credenciais necessárias
 
@@ -43,28 +43,28 @@ Para autenticar o conector de origem HDFS, você deve fornecer valores para a se
 
 Depois de obter as credenciais necessárias, siga as etapas abaixo para vincular sua conta HDFS a [!DNL Platform].
 
-Efetue logon no [Adobe Experience Platform](https://platform.adobe.com) e selecione **[!UICONTROL Origens]** na barra de navegação esquerda, para acessar a **[!UICONTROL Origens]** espaço de trabalho. A variável **[!UICONTROL Catálogo]** A tela exibe uma variedade de fontes com as quais você pode criar uma conta.
+Faça logon em [Adobe Experience Platform](https://platform.adobe.com) e selecione **[!UICONTROL Fontes]** na barra de navegação esquerda para acessar o espaço de trabalho **[!UICONTROL Fontes]**. A tela **[!UICONTROL Catálogo]** exibe uma variedade de fontes com as quais você pode criar uma conta.
 
 Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar a fonte específica com a qual deseja trabalhar usando a opção de pesquisa.
 
-No **[!UICONTROL armazenamento na nuvem]** categoria, selecione **[!UICONTROL Apache HDFS]**. Se esta for a primeira vez que você usa este conector, selecione **[!UICONTROL Configurar]**. Caso contrário, selecione **[!UICONTROL Adicionar dados]** para criar um novo conector HDFS.
+Na categoria **[!UICONTROL Armazenamento na nuvem]**, selecione **[!UICONTROL Apache HDFS]**. Se esta for a primeira vez que você usa este conector, selecione **[!UICONTROL Configurar]**. Caso contrário, selecione **[!UICONTROL Adicionar dados]** para criar um novo conector HDFS.
 
 ![catálogo](../../../../images/tutorials/create/hdfs/catalog.png)
 
-A variável **[!UICONTROL Conectar-se ao HDFS]** é exibida. Nesta página, você pode usar credenciais novas ou existentes.
+A página **[!UICONTROL Conectar-se ao HDFS]** é exibida. Nesta página, você pode usar credenciais novas ou existentes.
 
 ### Nova conta
 
-Se estiver usando novas credenciais, selecione **[!UICONTROL Nova conta]**. No formulário de entrada exibido, forneça um nome, uma descrição opcional e suas credenciais do HDFS. Quando terminar, selecione **[!UICONTROL Conectar à origem]** e aguarde algum tempo para estabelecer a nova conexão.
+Se você estiver usando novas credenciais, selecione **[!UICONTROL Nova conta]**. No formulário de entrada exibido, forneça um nome, uma descrição opcional e suas credenciais do HDFS. Quando terminar, selecione **[!UICONTROL Conectar à origem]** e aguarde algum tempo para que a nova conexão seja estabelecida.
 
 ![conectar](../../../../images/tutorials/create/hdfs/new.png)
 
 ### Conta existente
 
-Para conectar uma conta existente, selecione a conta do HDFS à qual deseja se conectar e selecione **[!UICONTROL Próxima]** para continuar.
+Para conectar uma conta existente, selecione a conta do HDFS com a qual deseja se conectar e selecione **[!UICONTROL Avançar]** para continuar.
 
 ![existente](../../../../images/tutorials/create/hdfs/existing.png)
 
 ## Próximas etapas
 
-Seguindo este tutorial, você estabeleceu uma conexão com sua conta HDFS. Agora você pode seguir para o próximo tutorial e [configure um fluxo de dados para trazer dados do armazenamento em nuvem para [!DNL Platform]](../../dataflow/batch/cloud-storage.md).
+Seguindo este tutorial, você estabeleceu uma conexão com sua conta HDFS. Agora você pode seguir para o próximo tutorial e [configurar um fluxo de dados para trazer dados do seu armazenamento na nuvem para o  [!DNL Platform]](../../dataflow/batch/cloud-storage.md).

@@ -9,11 +9,11 @@ ht-degree: 5%
 
 ---
 
-# [!UICONTROL Par de valores da chave] tipo de dados
+# Tipo de dados [!UICONTROL Par de Valores de Chave]
 
-[!UICONTROL Par de valores da chave] é um tipo de dados padrão do Experience Data Model (XDM) que captura os detalhes de um par de valores chave genérico. Esse tipo de dados é usado no [[!UICONTROL Extensão completa do Adobe Analytics ExperienceEvent] grupo de campos](../field-groups/event/analytics-full-extension.md) para descrever os itens de matriz de uma variável de lista.
+[!UICONTROL Par de Valores-Chave] é um tipo de dados padrão do Experience Data Model (XDM) que captura os detalhes de um par de valores-chave genérico. Este tipo de dados é usado no [[!UICONTROL grupo de campos ](../field-groups/event/analytics-full-extension.md) da {Extensão Completa de ExperienceEvent do Adobe Analytics] para descrever os itens de matriz de uma variável de lista.
 
-![Estrutura do par de valores da chave](../images/data-types/key-value-pair.png)
+![Estrutura do par de valores de chave](../images/data-types/key-value-pair.png)
 
 | Propriedade | Tipo de dados | Descrição |
 | --- | --- | --- |
@@ -22,4 +22,4 @@ ht-degree: 5%
 
 {style="table-layout:auto"}
 
-Para obter mais informações sobre o tipo de dados, consulte [o repositório XDM público](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/keyvalue.schema.json).
+Para obter mais detalhes sobre o tipo de dados, consulte [o repositório XDM público](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/keyvalue.schema.json).

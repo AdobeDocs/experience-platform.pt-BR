@@ -20,11 +20,11 @@ O Serviço de consulta suporta o uso de consultas parametrizadas no Editor de co
 
 ## Pré-requisitos
 
-Antes de continuar com este guia, leia o [Guia da interface do Editor de consultas](./user-guide.md). O guia do Editor de consultas fornece informações detalhadas sobre como gravar, validar e executar consultas para dados de experiência do cliente na interface do usuário do Experience Platform.
+Antes de continuar com este guia, leia o [Guia da Interface do Usuário do Editor de Consulta](./user-guide.md). O guia do Editor de consultas fornece informações detalhadas sobre como gravar, validar e executar consultas para dados de experiência do cliente na interface do usuário do Experience Platform.
 
 >[!NOTE]
 >
->Na interface do usuário do Adobe Experience Platform, as consultas parametrizadas só são suportadas no nível principal dos modelos em linha. Isso significa que as consultas parametrizadas só funcionam quando usadas no template original. Os modelos filho devem ser um modelo estático e não podem ter parâmetros dinâmicos. Consulte a [documentação de modelos em linha](../key-concepts/inline-templates.md) para saber mais.
+>Na interface do usuário do Adobe Experience Platform, as consultas parametrizadas só são suportadas no nível principal dos modelos em linha. Isso significa que as consultas parametrizadas só funcionam quando usadas no template original. Os modelos filho devem ser um modelo estático e não podem ter parâmetros dinâmicos. Consulte a [documentação de modelos integrados](../key-concepts/inline-templates.md) para saber mais.
 
 ## Sintaxe de consulta com parâmetros {#syntax}
 
@@ -45,38 +45,38 @@ SELECT
 
 ## Criar uma consulta com parâmetros {#create}
 
-Para criar sua consulta parametrizada na interface do usuário do, navegue até o Editor de consultas. Consulte a seção sobre [acesso ao Editor de consultas](./user-guide.md#accessing-query-editor) para obter mais instruções.
+Para criar sua consulta parametrizada na interface do usuário do, navegue até o Editor de consultas. Consulte a seção sobre [acesso ao Editor de Consultas](./user-guide.md#accessing-query-editor) para obter mais instruções.
 
-Use o prefácio `'$'` para inserir um parâmetro na sua consulta no editor de texto. Em seguida, selecione o **[!UICONTROL Parâmetros de consulta]** ao lado da guia [!UICONTROL Console] adicione o valor missing para a chave. A consulta não pode ser executada se você não adicionar um valor a qualquer uma das chaves necessárias. Um ícone de alerta (![Um ícone de alerta.](../images/ui/parameterized-queries/alert-icon.png)) aparece na seção Parâmetros de consulta ao lado de qualquer [!UICONTROL Valor] campos de entrada.
+Use o prefácio `'$'` para inserir um parâmetro na sua consulta no editor de texto. Em seguida, selecione a guia **[!UICONTROL Parâmetros de consulta]** ao lado do [!UICONTROL Console] e adicione o valor ausente para a chave. A consulta não pode ser executada se você não adicionar um valor a qualquer uma das chaves necessárias. Um ícone de alerta (![Um ícone de alerta.](../images/ui/parameterized-queries/alert-icon.png)) aparece na seção Parâmetros de Consulta ao lado de qualquer campo de entrada [!UICONTROL Valor] vazio.
 
 >[!NOTE]
 >
 >Se a consulta não usar parâmetros, você ainda poderá inserir parâmetros desnecessários no Editor de consultas. O Editor de consultas ignora todos os pares de valores chave desnecessários e não têm efeito na execução ou nos resultados da consulta.
 
-![O Editor de consultas com uma consulta parametrizada e a seção Parâmetros de consulta destacados.](../images/ui/parameterized-queries/parameterized-query.png)
+![O Editor de Consultas com uma consulta parametrizada e a seção Parâmetros de consulta realçada.](../images/ui/parameterized-queries/parameterized-query.png)
 
 >[!TIP]
 >
->Alterar guias de [!UICONTROL Parâmetros de consulta] para [!UICONTROL Console] para exibir a saída do console do query.
+>Altere as guias de [!UICONTROL Parâmetros de consulta] para [!UICONTROL Console] para exibir a saída do console da consulta.
 
 ## Usar detalhes de logs de consulta para verificar valores de parâmetros {#check-parameter-values}
 
-Não é possível salvar parâmetros nos modelos, pois os valores usados não são persistentes. No entanto, você pode verificar o [!UICONTROL Detalhes do log de consulta] página para localizar os valores de parâmetro usados em uma execução de consulta. Nesse caso, os logs não indicam que a consulta era uma consulta com parâmetros. Consulte a [documentação dos logs de consulta](./query-logs.md) para obter instruções sobre como encontrar os valores usados.
+Não é possível salvar parâmetros nos modelos, pois os valores usados não são persistentes. No entanto, você pode verificar a página [!UICONTROL Detalhes do log de consulta] para localizar os valores de parâmetro usados em uma execução de consulta. Nesse caso, os logs não indicam que a consulta era uma consulta com parâmetros. Consulte a [documentação dos logs de consulta](./query-logs.md) para obter instruções sobre como localizar os valores usados.
 
-![A visualização dos logs de consulta com o SQL de uma consulta com parâmetros destacada na seção de detalhes.](../images/ui/parameterized-queries/parameterized-query-logs.png)
+![A exibição dos logs de consulta com o SQL de uma consulta com parâmetros realçada na seção de detalhes.](../images/ui/parameterized-queries/parameterized-query-logs.png)
 
 <!-- improve screenshot above ^ I am waiting for a scheduled run to complete -->
 
 ## Agendar uma consulta com parâmetros {#schedule}
 
-Os valores de parâmetro são salvos quando você agenda uma consulta com parâmetros. Para programar uma consulta parametrizada, siga o processo normal para criar uma consulta programada, conforme descrito no guia para [criar um agendamento de consulta](./query-schedules.md#create-schedule), em seguida, insira os valores de parâmetro a serem usados na execução da consulta. Esta seção da interface só é exibida para consultas parametrizadas. Consulte a seção sobre [definindo parâmetros para uma consulta parametrizada programada](./query-schedules.md#set-parameters) para obter instruções específicas.
+Os valores de parâmetro são salvos quando você agenda uma consulta com parâmetros. Para agendar uma consulta parametrizada, siga o processo típico para criar uma consulta agendada, conforme descrito no guia para [criar um agendamento de consulta](./query-schedules.md#create-schedule) e, em seguida, insira os valores de parâmetro a serem usados na execução da consulta. Esta seção da interface só é exibida para consultas parametrizadas. Consulte a seção sobre [definição de parâmetros para uma consulta parametrizada agendada](./query-schedules.md#set-parameters) para obter instruções específicas.
 
 >[!TIP]
 >
->O Serviço de consulta oferece suporte a instruções preparadas por meio do uso de consultas parametrizadas. Consulte a [guia de sintaxe de instruções preparadas](../sql/prepared-statements.md) para obter mais informações sobre a sintaxe SQL envolvida.
+>O Serviço de consulta oferece suporte a instruções preparadas por meio do uso de consultas parametrizadas. Consulte o [guia de sintaxe de instruções preparadas](../sql/prepared-statements.md) para obter mais informações sobre a sintaxe SQL envolvida.
 
 ## Próximas etapas
 
 Ao ler este documento, você aprendeu a parametrizar consultas na interface do usuário do Adobe Experience Platform e usá-las em execuções de consultas programadas. O documento também destacou como verificar os logs para os valores de parâmetro usados nas execuções de consulta.
 
-Em seguida, é recomendável ler o guia em [monitoramento de consultas programadas](./monitor-queries.md) para obter uma melhor compreensão do status de todos os trabalhos de consulta por meio da interface do usuário da Platform.
+Em seguida, é recomendável ler o guia em [monitorando consultas agendadas](./monitor-queries.md) para entender melhor o status de todos os trabalhos de consulta por meio da interface do usuário da Platform.

@@ -13,13 +13,13 @@ ht-degree: 1%
 
 # Visão geral do [!DNL Observability Insights]
 
-Adobe Experience Platform [!DNL Observability Insights] O permite monitorar as atividades da Platform por meio do uso de métricas estatísticas e notificações de eventos. Este documento fornece uma visão geral dos vários recursos fornecidos pelo serviço, juntamente com links para documentação adicional de detalhes.
+O Adobe Experience Platform [!DNL Observability Insights] permite monitorar as atividades da Platform por meio do uso de métricas estatísticas e notificações de eventos. Este documento fornece uma visão geral dos vários recursos fornecidos pelo serviço, juntamente com links para documentação adicional de detalhes.
 
-## [!DNL Observability Insights] API
+## API [!DNL Observability Insights]
 
-A variável [!DNL Observability Insights] API é uma API RESTful que permite expor as principais métricas de observabilidade no Adobe Experience Platform. Essas métricas fornecem insights sobre [!DNL Platform] estatísticas de uso, verificações de integridade para [!DNL Platform] históricos e indicadores de desempenho para vários tipos de serviços de [!DNL Platform] funcionalidades.
+A API [!DNL Observability Insights] é uma API RESTful que permite expor as principais métricas de observabilidade no Adobe Experience Platform. Essas métricas fornecem informações sobre estatísticas de uso de [!DNL Platform], verificações de integridade de serviços [!DNL Platform], tendências históricas e indicadores de desempenho para várias funcionalidades do [!DNL Platform].
 
-Para obter mais informações sobre como trabalhar com a API, consulte a [[!DNL Observability Insights] Guia do desenvolvedor de API](./api/overview.md).
+Para obter mais informações sobre como trabalhar com a API, consulte o [[!DNL Observability Insights] guia do desenvolvedor da API](./api/overview.md).
 
 ## Alertas
 

@@ -4,7 +4,7 @@ description: Saiba mais sobre a extensão de tag para o Adobe Target na Adobe Ex
 exl-id: b1c5e25b-42ea-4835-b2d4-913fa2536e77
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
-source-wordcount: '1192'
+source-wordcount: '1179'
 ht-degree: 93%
 
 ---
@@ -61,7 +61,7 @@ O domínio para onde as solicitações do Target são enviadas. Isso deve ser qu
 
 Determina onde o Target define cookies nos navegadores.
 
-* **Desativado:** define os cookies somente no domínio próprio. Essa é a configuração usual.
+* **Desabilitado:** define os cookies somente no domínio próprio. Essa é a configuração usual.
 * **Ativado:** define cookies tanto no domínio primário como no domínio do Target de terceiros (o &quot;Domínio de servidor&quot;).
 
 #### Tempo limite (ms)
@@ -112,7 +112,7 @@ Especifique se deseja ativar a ocultação de corpo para evitar oscilação e o 
 
 As opções disponíveis são as seguintes:
 
-* **Ocultação de corpo:** você pode ativar ou desativar essa configuração. O valor padrão é Ativado, o que significa que o HTML BODY está oculto.
+* **Ocultação de corpo:** você pode habilitar ou desabilitar essa configuração. O valor padrão é Ativado, o que significa que o HTML BODY está oculto.
 * **Estilo oculto de corpo:** o valor padrão é `body{opacity:0}`. Esse valor pode ser alterado para algo diferente, como `body{display:none}`.
 
 Para obter mais informações, consulte a [documentação de ajuda online do Target](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/mbox-implement/advanced-mboxjs-settings.html?lang=pt_BR).

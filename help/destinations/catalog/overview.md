@@ -27,15 +27,15 @@ Navegue pelo catálogo para determinar quais plataformas de destino são melhore
 
 Você pode ativar seus dados para diferentes categorias de destino no Adobe Experience Platform. Os links abaixo fornecem mais informações sobre cada categoria de destino:
 
-- [Adobe [!UICONTROL destinos] visão geral](adobe/overview.md)
-- [[!UICONTROL Publicidade] [!UICONTROL destinos] visão geral](advertising/overview.md)
-- [[!UICONTROL Analytics] [!UICONTROL destinos] visão geral](analytics/overview.md)
-- [[!UICONTROL armazenamento na nuvem] [!UICONTROL destinos] visão geral](cloud-storage/overview.md)
-- [[!UICONTROL Plataforma de gerenciamento de dados] (DMP) [!UICONTROL destinos] visão geral](data-management/overview.md)
+- [Visão geral de [!UICONTROL destinos] do Adobe](adobe/overview.md)
+- [Visão geral de [!UICONTROL Advertising] [!UICONTROL destinos]](advertising/overview.md)
+- [Visão geral do [!UICONTROL Analytics] [!UICONTROL destinos]](analytics/overview.md)
+- [[!UICONTROL Visão geral do [!UICONTROL Destinos] do armazenamento na nuvem]](cloud-storage/overview.md)
+- [Visão geral de [!UICONTROL Plataforma de gerenciamento de dados] (DMP) [!UICONTROL destinos]](data-management/overview.md)
 - [[!UICONTROL Marketing por email] [!UICONTROL destinos] visão geral](email-marketing/overview.md)
 - [[!UICONTROL Engajamento móvel] [!UICONTROL destinos] visão geral](mobile-engagement/overview.md)
-- [[!UICONTROL Personalização] [!UICONTROL destinos] visão geral](personalization/overview.md)
-- [[!UICONTROL Social] [!UICONTROL destinos] visão geral](social/overview.md)
+- [Visão geral de [!UICONTROL Personalization] [!UICONTROL destinos]](personalization/overview.md)
+- [Visão geral de [!UICONTROL Social] [!UICONTROL destinos]](social/overview.md)
 - [[!UICONTROL Streaming] [!UICONTROL destinos] (links para destino HTTP)](streaming/http-destination.md)
 - [[!UICONTROL Pesquisa] [!UICONTROL destinos] visão geral](survey/overview.md)
-- [[!UICONTROL Voz do cliente] [!UICONTROL destinos] visão geral](voice/overview.md)
+- [Visão geral da [!UICONTROL Voz do cliente] [!UICONTROL destinos]](voice/overview.md)

@@ -4,8 +4,8 @@ description: As notas de versão mais recentes da extensão de tag do Adobe Targ
 exl-id: ba29f614-c3cd-4e0b-b043-2b1c17567def
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
-source-wordcount: '520'
-ht-degree: 94%
+source-wordcount: '578'
+ht-degree: 95%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 94%
 ### Extensão do Adobe Target 0.11.4
 
 * Atualização para at.js v1.8.3
-* Adicionado `SameSite=None` e `Secure` atributos ao definir cookies
+* Adição dos atributos `SameSite=None` e `Secure` ao definir cookies
 
 ## 24 de julho de 2020
 
@@ -144,7 +144,7 @@ ht-degree: 94%
 #### **Recursos**
 
 * Adição da listagem do Adobe Exchange ao extension.json.
-* Adicionamos verificações para ver se o Target está desativado e se a Autoria está ativada.
+* Adicionamos verificações para ver se o Target está desabilitado e se a Autoria está habilitada.
 
 #### **Correções de erros**
 

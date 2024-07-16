@@ -3,7 +3,8 @@ solution: Experience Platform
 title: Introdução à API de tags unificadas
 description: A documentação a seguir fornece informações adicionais que você precisa saber para trabalhar com êxito com a API de tags unificadas.
 role: Developer
-source-git-commit: 8280281fa8b676b13c0601e2c9a50515ce8979c3
+exl-id: 8f33707f-b46d-4054-802c-9e42ecabd9ba
+source-git-commit: 717a4ea0568200c940cf9b8f26f4dd2aa9c00a3e
 workflow-type: tm+mt
 source-wordcount: '261'
 ht-degree: 9%
@@ -22,20 +23,20 @@ A documentação da API de tags unificadas fornece exemplos de chamadas de API p
 
 ## Cabeçalhos obrigatórios
 
-A documentação da API também exige que você tenha concluído a [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en) para fazer chamadas com êxito para endpoints da Platform. Concluir o tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários nas chamadas de API de Experience Platform, conforme mostrado abaixo:
+A documentação da API também requer que você tenha concluído o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en) para fazer chamadas com êxito para pontos de extremidade da Platform. Concluir o tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários nas chamadas de API de Experience Platform, conforme mostrado abaixo:
 
 - Autorização: `Bearer {ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{ORG_ID}`
+- x-gw-ims-org-id `{ORG_ID}`
 
-Todos os recursos em [!DNL Experience Platform] são isolados em sandboxes virtuais específicas. Todas as solicitações para [!DNL Platform] As APIs exigem um cabeçalho que especifique o nome da sandbox em que a operação ocorrerá:
+Todos os recursos em [!DNL Experience Platform] estão isolados em sandboxes virtuais específicas. Todas as solicitações para [!DNL Platform] APIs exigem um cabeçalho que especifique o nome da sandbox em que a operação ocorrerá:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Para obter mais informações sobre como trabalhar com sandboxes no [!DNL Experience Platform], consulte o [documentação de visão geral das sandboxes](../../sandboxes/home.md).
+>Para obter mais informações sobre como trabalhar com sandboxes em [!DNL Experience Platform], consulte a [documentação de visão geral das sandboxes](../../sandboxes/home.md).
 
 ## Próximas etapas
 
-Para fazer chamadas usando a API de tags unificadas, selecione um dos manuais de endpoint disponíveis usando a navegação à esquerda ou no [visão geral do guia do desenvolvedor](./overview.md)
+Para fazer chamadas usando a API de Marcas Unificadas, selecione um dos manuais de endpoint disponíveis usando a navegação à esquerda ou na [visão geral do guia do desenvolvedor](./overview.md)

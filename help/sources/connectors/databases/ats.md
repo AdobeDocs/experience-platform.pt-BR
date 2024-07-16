@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;página inicial;tópicos populares;Armazenamento de tabelas do Azure;armazenamento de tabelas do Azure;ATS;ats
 solution: Experience Platform
-title: Visão geral do Conector de origem de armazenamento da tabela do Azure
+title: Visão geral do Azure Table Storage Source Connector
 description: Saiba como conectar o Armazenamento de tabelas do Azure ao Adobe Experience Platform usando APIs ou a interface do usuário.
 exl-id: 096e01b1-7e95-4e30-87de-d0976f8b438a
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
@@ -19,17 +19,17 @@ O Experience Platform fornece suporte para assimilação de dados de um banco de
 
 ## LISTA DE PERMISSÕES de endereço IP
 
-Uma lista de endereços IP deve ser adicionada a uma lista de permissões antes de trabalhar com conectores de origem. Falha ao adicionar endereços IP específicos da região à lista de permissões pode levar a erros ou ao não desempenho ao usar origens. Consulte a [LISTA DE PERMISSÕES de endereço IP](../../ip-address-allow-list.md) para obter mais informações.
+Uma lista de endereços IP deve ser adicionada a uma lista de permissões antes de trabalhar com conectores de origem. Falha ao adicionar endereços IP específicos da região à lista de permissões pode levar a erros ou ao não desempenho ao usar origens. Consulte a página [lista de permissões de endereço IP](../../ip-address-allow-list.md) para obter mais informações.
 
-A documentação abaixo fornece informações sobre como se conectar [!DNL Azure Table Storage] para a Platform usando APIs ou a interface do usuário:
+A documentação abaixo fornece informações sobre como conectar o [!DNL Azure Table Storage] à Plataforma usando APIs ou a interface do usuário:
 
-## Conectar [!DNL Azure Table Storage] para a Platform usando APIs
+## Conectar [!DNL Azure Table Storage] à plataforma usando APIs
 
 - [Criar uma conexão básica do Armazenamento de tabela do Azure usando a API do Serviço de fluxo](../../tutorials/api/create/databases/ats.md)
 - [Explorar tabelas de dados usando a API de Serviço de Fluxo](../../tutorials/api/explore/tabular.md)
 - [Criar um fluxo de dados para uma fonte de banco de dados usando a API do Serviço de fluxo](../../tutorials/api/collect/database-nosql.md)
 
-## Conectar [!DNL Azure Table Storage] para a Platform usando a interface
+## Conectar [!DNL Azure Table Storage] à Plataforma usando a interface
 
 - [Criar uma conexão de origem do Armazenamento de tabelas do Azure na interface](../../tutorials/ui/create/databases/ats.md)
 - [Criar um fluxo de dados para uma conexão de origem de banco de dados na interface](../../tutorials/ui/dataflow/databases.md)

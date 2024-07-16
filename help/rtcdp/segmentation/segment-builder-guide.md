@@ -14,6 +14,6 @@ ht-degree: 0%
 
 # Construtor de segmentos no Real-time Customer Data Platform
 
-Criado com base na Adobe Experience Platform, [!DNL Adobe Real-Time Customer Data Platform] A pode usar todos os recursos do Construtor de segmentos que fazem parte da [!DNL Experience Platform]. Na interface do usuário do Construtor de segmentos, é possível criar novos públicos, acessar públicos existentes e modificar públicos existentes.
+Criado com base no Adobe Experience Platform, o [!DNL Adobe Real-Time Customer Data Platform] pode usar todos os recursos do Construtor de segmentos que fazem parte do [!DNL Experience Platform]. Na interface do usuário do Construtor de segmentos, é possível criar novos públicos, acessar públicos existentes e modificar públicos existentes.
 
-Para obter um guia mais detalhado sobre o Construtor de segmentos, leia o [Guia do usuário do Construtor de segmentos](../../segmentation/ui/segment-builder.md).
+Para obter um guia mais detalhado sobre o Construtor de segmentos, leia o [guia do usuário do Construtor de segmentos](../../segmentation/ui/segment-builder.md).

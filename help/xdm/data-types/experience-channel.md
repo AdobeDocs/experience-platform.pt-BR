@@ -7,11 +7,11 @@ exl-id: 209654f7-0bde-439a-989c-ce2e41599105
 source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
 source-wordcount: '244'
-ht-degree: 4%
+ht-degree: 24%
 
 ---
 
-# [!UICONTROL Canal de experiência] tipo de dados
+# Tipo de dados [!UICONTROL Canal de experiência]
 
 [!UICONTROL Canal de experiência] é um tipo de dados padrão do Experience Data Model (XDM) que descreve um canal de experiência. Um canal de experiência representa um método ou caminho para o consumo de experiências digitais.
 

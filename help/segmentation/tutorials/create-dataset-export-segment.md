@@ -13,25 +13,25 @@ ht-degree: 1%
 
 # Criar um conjunto de dados para exportar um público
 
-[!DNL Adobe Experience Platform] O permite segmentar perfis de clientes em públicos com base em atributos específicos. Depois que uma definição de segmento é criada, você pode exportar o público-alvo resultante para um conjunto de dados em que ele possa ser acessado e reagido. Para que a exportação seja bem-sucedida, o conjunto de dados deve ser configurado corretamente.
+O [!DNL Adobe Experience Platform] permite segmentar perfis de clientes em públicos com base em atributos específicos. Depois que uma definição de segmento é criada, você pode exportar o público-alvo resultante para um conjunto de dados em que ele possa ser acessado e reagido. Para que a exportação seja bem-sucedida, o conjunto de dados deve ser configurado corretamente.
 
-Este tutorial percorre as etapas necessárias para criar um conjunto de dados que pode ser usado para exportar um público usando o [!DNL Experience Platform] IU.
+Este tutorial aborda as etapas necessárias para criar um conjunto de dados que pode ser usado para exportar um público usando a interface do usuário do [!DNL Experience Platform].
 
-Este tutorial está diretamente relacionado às etapas descritas no tutorial em [avaliação e acesso aos resultados de segmentação](./evaluate-a-segment.md). O tutorial de avaliação da definição de segmento fornece etapas para criar um conjunto de dados usando o [!DNL Catalog Service] , enquanto este tutorial descreve as etapas para criar um conjunto de dados usando o [!DNL Experience Platform] IU.
+Este tutorial está diretamente relacionado às etapas descritas no tutorial sobre [avaliação e acesso aos resultados da segmentação](./evaluate-a-segment.md). O tutorial de avaliação da definição de segmento fornece etapas para a criação de um conjunto de dados usando a API [!DNL Catalog Service], enquanto este tutorial descreve etapas para a criação de um conjunto de dados usando a interface do usuário [!DNL Experience Platform].
 
 ## Introdução
 
-Para exportar um público-alvo, o conjunto de dados deve ser baseado na variável [!DNL XDM Individual Profile Union Schema]. Um esquema de união é um esquema somente leitura gerado pelo sistema que agrega os campos de todos os esquemas que compartilham a mesma classe. Para obter mais informações sobre schemas de união, consulte o guia em [as noções básicas da composição do esquema](../../xdm/schema/composition.md#union).
+Para exportar um público-alvo, o conjunto de dados deve ser baseado no [!DNL XDM Individual Profile Union Schema]. Um esquema de união é um esquema somente leitura gerado pelo sistema que agrega os campos de todos os esquemas que compartilham a mesma classe. Para obter mais informações sobre esquemas de união, consulte o manual sobre [as noções básicas da composição de esquema](../../xdm/schema/composition.md#union).
 
-Para exibir esquemas de união na interface do usuário, selecione **[!UICONTROL Perfis]** no painel de navegação esquerdo, selecione **[!UICONTROL Esquema de união]** conforme mostrado abaixo.
+Para exibir esquemas de união na interface do usuário, selecione **[!UICONTROL Perfis]** na navegação à esquerda e selecione **[!UICONTROL Esquema de união]** conforme mostrado abaixo.
 
-![A guia Esquema de união é realçada.](../images/tutorials/segment-export-dataset/union.png)
+![A guia de esquema de união está realçada.](../images/tutorials/segment-export-dataset/union.png)
 
 ## Espaço de trabalho de conjuntos de dados
 
-A variável [!UICONTROL Conjuntos de dados] o espaço de trabalho permite exibir e gerenciar todos os conjuntos de dados da sua organização.
+O espaço de trabalho [!UICONTROL Conjuntos de Dados] permite exibir e gerenciar todos os conjuntos de dados da sua organização.
 
-Selecionar **[!UICONTROL Conjuntos de dados]** na navegação à esquerda para acessar o espaço de trabalho, selecione **[!UICONTROL Procurar]**. Essa guia exibe uma lista de conjuntos de dados e seus detalhes. Dependendo da largura de cada coluna, talvez seja necessário rolar a tela para a esquerda ou para a direita para ver todas as colunas.
+Selecione **[!UICONTROL Conjuntos de Dados]** na navegação à esquerda para acessar o espaço de trabalho e selecione **[!UICONTROL Procurar]**. Essa guia exibe uma lista de conjuntos de dados e seus detalhes. Dependendo da largura de cada coluna, talvez seja necessário rolar a tela para a esquerda ou para a direita para ver todas as colunas.
 
 >[!NOTE]
 >
@@ -41,31 +41,31 @@ Selecionar **[!UICONTROL Conjuntos de dados]** na navegação à esquerda para a
 
 ## Criar um conjunto de dados
 
-Para criar um conjunto de dados, selecione **[!UICONTROL Criar conjunto de dados]**.
+Para criar um conjunto de dados, selecione **[!UICONTROL Criar Conjunto de Dados]**.
 
-![O botão Criar conjunto de dados é realçado.](../images/tutorials/segment-export-dataset/create-dataset.png)
+![O botão Criar conjunto de dados está realçado.](../images/tutorials/segment-export-dataset/create-dataset.png)
 
-Na tela seguinte, selecione **[!UICONTROL Criar conjunto de dados a partir do esquema]**.
+Na próxima tela, selecione **[!UICONTROL Criar Conjunto de Dados do Esquema]**.
 
-![A opção Criar conjunto de dados a partir do esquema é realçada.](../images/tutorials/segment-export-dataset/create-from-schema.png)
+![A opção Criar conjunto de dados a partir do esquema está realçada.](../images/tutorials/segment-export-dataset/create-from-schema.png)
 
 ## Selecionar esquema de união do perfil individual XDM
 
-Para selecionar o [!DNL XDM Individual Profile Union Schema] para uso no conjunto de dados, localize o &quot;[!UICONTROL Perfil individual XDM]&quot;esquema&quot; no **[!UICONTROL Selecionar esquema]** tela. Depois de selecionar o esquema, você pode confirmar se é o esquema de união em **[!UICONTROL Uso da API]** no painel direito. Se a variável [!UICONTROL Esquema] o caminho termina com `_union`, é um esquema de união.
+Para selecionar o [!DNL XDM Individual Profile Union Schema] para uso em seu conjunto de dados, localize o esquema &quot;[!UICONTROL Perfil Individual XDM]&quot; na tela **[!UICONTROL Selecionar Esquema]**. Após selecionar o esquema, você pode confirmar se ele é o esquema de união em **[!UICONTROL Uso da API]** no painel direito. Se o caminho [!UICONTROL Esquema] termina com `_union`, ele é um esquema de união.
 
 >[!NOTE]
 >
 >Embora os esquemas de união participem do Perfil de cliente em tempo real por definição, eles são listados como &quot;Não ativado&quot; devido ao fato de que não estão ativados para Perfil da mesma forma que os esquemas tradicionais.
 
-Selecione o botão de opção ao lado de **[!UICONTROL Perfil individual XDM]** e selecione **[!UICONTROL Próxima]**.
+Selecione o botão de opção ao lado de **[!UICONTROL Perfil Individual XDM]** e selecione **[!UICONTROL Avançar]**.
 
-![O esquema do Perfil individual XDM é realçado.](../images/tutorials/segment-export-dataset/select-schema.png)
+![O esquema do Perfil Individual XDM está realçado.](../images/tutorials/segment-export-dataset/select-schema.png)
 
 ## Configurar conjunto de dados
 
 Na próxima tela, você deve dar um nome ao conjunto de dados. Você também pode adicionar uma descrição opcional.
 
-**Observações sobre os nomes dos conjuntos de dados:**
+**Observações sobre nomes de conjunto de dados:**
 
 * Os nomes dos conjuntos de dados devem ser curtos e descritivos para que possam ser facilmente encontrados na biblioteca posteriormente.
 * Os nomes dos conjuntos de dados devem ser exclusivos, o que significa que eles também devem ser específicos o suficiente para não serem reutilizados no futuro.
@@ -73,7 +73,7 @@ Na próxima tela, você deve dar um nome ao conjunto de dados. Você também pod
 
 Depois que o conjunto de dados tiver um nome e uma descrição, selecione **[!UICONTROL Concluir]**.
 
-![A página Configurar conjunto de dados é exibida. As opções de configuração são realçadas.](../images/tutorials/segment-export-dataset/configure-dataset.png)
+![A página Configurar conjunto de dados é exibida. As opções de configuração estão realçadas.](../images/tutorials/segment-export-dataset/configure-dataset.png)
 
 ## Atividade do conjunto de dados
 
@@ -85,6 +85,6 @@ O painel direito contém informações relacionadas ao novo conjunto de dados, c
 
 ## Próximas etapas
 
-Agora que você criou um conjunto de dados com base na variável [!DNL XDM Individual Profile Union Schema], você pode usar a ID do conjunto de dados para continuar a [avaliação e acesso aos resultados de definição de segmento](./evaluate-a-segment.md) tutorial.
+Agora que você criou um conjunto de dados com base no [!DNL XDM Individual Profile Union Schema], é possível usar a ID do conjunto de dados para continuar o tutorial [avaliando e acessando resultados de definição de segmento](./evaluate-a-segment.md).
 
-Nesse momento, retorne ao tutorial de avaliação dos resultados de definição de segmento e selecione no [geração de perfis para membros do público](./evaluate-a-segment.md#generate-profiles) etapa do fluxo de trabalho exportação de um público-alvo.
+Neste momento, retorne ao tutorial de avaliação dos resultados da definição de segmento e selecione na [etapa de geração de perfis para membros do público-alvo](./evaluate-a-segment.md#generate-profiles) da exportação de um fluxo de trabalho de público-alvo.

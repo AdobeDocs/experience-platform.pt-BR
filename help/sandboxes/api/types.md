@@ -14,15 +14,15 @@ ht-degree: 3%
 
 # Ponto de extremidade de Tipos de sandbox
 
-Você pode recuperar uma lista de tipos de sandbox compatíveis para sua organização fazendo uma solicitação GET para a `/sandboxTypes` terminal.
+Você pode recuperar uma lista de tipos de sandbox compatíveis para sua organização fazendo uma solicitação GET para o ponto de extremidade `/sandboxTypes`.
 
 ## Introdução
 
-O endpoint da API usado neste guia faz parte da [[!DNL Sandbox] API](https://www.adobe.io/experience-platform-apis/references/sandbox). Antes de continuar, reveja o [guia de introdução](./getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre os cabeçalhos necessários para fazer chamadas com êxito para qualquer API de Experience Platform.
+O ponto de extremidade de API usado neste guia faz parte da [[!DNL Sandbox] API](https://www.adobe.io/experience-platform-apis/references/sandbox). Antes de continuar, consulte o [guia de introdução](./getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre os cabeçalhos necessários para fazer chamadas para qualquer API Experience Platform com êxito.
 
 ## Recuperar uma lista de tipos de sandbox compatíveis
 
-Você pode recuperar uma lista de tipos de sandbox compatíveis para sua organização fazendo uma solicitação GET para a `/sandboxTypes` terminal.
+Você pode recuperar uma lista de tipos de sandbox compatíveis para sua organização fazendo uma solicitação GET para o ponto de extremidade `/sandboxTypes`.
 
 **Formato da API**
 

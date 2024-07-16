@@ -1,7 +1,8 @@
 ---
 title: Gerenciar tipos de dados de matriz e mapa com funções de ordem superior
 description: Saiba como gerenciar tipos de dados de matriz e mapa com funções de ordem superior no Serviço de consulta. Exemplos práticos são fornecidos com casos de uso comuns.
-source-git-commit: 27eab04e409099450453a2a218659e576b8f6ab4
+exl-id: dec4e4f6-ad6b-4482-ae8c-f10cc939a634
+source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
 source-wordcount: '1471'
 ht-degree: 0%
@@ -18,7 +19,7 @@ A lista de casos de uso a seguir contém exemplos de funções de matriz e de ma
 
 `transform(array<T>, function<T, U>): array<U>`
 
-O trecho acima aplica uma função a cada elemento da matriz e retorna uma nova matriz de elementos transformados. Especificamente, o `transform` A função pega uma matriz do tipo T e converte cada elemento do tipo T para o tipo U. Em seguida, retorna uma matriz de tipo U. Os tipos reais T e U dependem do uso específico da função de transformação.
+O trecho acima aplica uma função a cada elemento da matriz e retorna uma nova matriz de elementos transformados. Especificamente, a função `transform` pega uma matriz do tipo T e converte cada elemento do tipo T para o tipo U. Em seguida, retorna uma matriz de tipo U. Os tipos reais T e U dependem do uso específico da função de transformação.
 
 `transform(array<T>, function<T, Int, U>): array<U>`
 
@@ -26,7 +27,7 @@ Esta função de transformação de matriz é semelhante ao exemplo anterior, ma
 
 **Exemplo**
 
-O exemplo de SQL abaixo demonstra esse caso de uso. A consulta recupera um conjunto limitado de linhas da tabela especificada, transformando o `productListItems` multiplicando o `priceTotal` atributo de cada item por 73. O resultado inclui a `_id`, `productListItems`e a transformação `price_in_inr` colunas. A seleção é baseada em um intervalo específico de carimbo de data e hora.
+O exemplo de SQL abaixo demonstra esse caso de uso. A consulta recupera um conjunto limitado de linhas da tabela especificada, transformando a matriz `productListItems` multiplicando o atributo `priceTotal` de cada item por 73. O resultado inclui as colunas `_id`, `productListItems` e as colunas `price_in_inr` transformadas. A seleção é baseada em um intervalo específico de carimbo de data e hora.
 
 ```sql
 SELECT _id,
@@ -59,11 +60,11 @@ Os resultados para esse SQL seriam semelhantes aos vistos abaixo.
 
 `exists(array<T>, function<T, boolean>): boolean`
 
-No trecho acima, a variável `exists` é aplicada a cada elemento da matriz e retorna um valor booleano. O booleano indica se há um ou mais elementos na matriz que satisfazem uma condição especificada. Nesse caso, confirma se um produto com uma SKU específica existe.
+No trecho acima, a função `exists` é aplicada a cada elemento da matriz e retorna um valor booleano. O booleano indica se há um ou mais elementos na matriz que satisfazem uma condição especificada. Nesse caso, confirma se um produto com uma SKU específica existe.
 
 **Exemplo**
 
-No exemplo SQL abaixo, a consulta busca `productListItems` do `geometrixxx_999_xdm_pqs_1batch_10k_rows` tabela e avalia se um elemento com um SKU é igual a `123679` no `productListItems` matriz existe. Em seguida, ele filtra os resultados com base em um intervalo específico de carimbos de data e hora e limita os resultados finais a dez linhas.
+No exemplo SQL abaixo, a consulta busca `productListItems` da tabela `geometrixxx_999_xdm_pqs_1batch_10k_rows` e avalia se existe um elemento com uma SKU igual a `123679` na matriz `productListItems`. Em seguida, ele filtra os resultados com base em um intervalo específico de carimbos de data e hora e limita os resultados finais a dez linhas.
 
 ```sql
 SELECT productListItems
@@ -102,7 +103,7 @@ Essa função filtra uma matriz de elementos com base em uma determinada condiç
 
 **Exemplo**
 
-A consulta abaixo seleciona a variável `productListItems` , aplica um filtro para incluir apenas elementos com SKU maior que 100000 e restringe o conjunto de resultados a linhas em um intervalo de carimbo de data e hora específico. Em seguida, o storage filtrado recebe o alias como `_filter` na saída.
+A consulta abaixo seleciona a coluna `productListItems`, aplica um filtro para incluir apenas elementos com SKU maior que 100000 e restringe o conjunto de resultados a linhas em um intervalo de carimbo de data/hora específico. A matriz filtrada recebe o alias como `_filter` na saída.
 
 ```sql
 SELECT productListItems,
@@ -136,7 +137,7 @@ Essa operação de agregação aplica um operador binário a um estado inicial e
 
 **Exemplo**
 
-Este exemplo de consulta calcula o valor máximo de SKU do `productListItems` dentro do intervalo de carimbo de data e hora fornecido e dobra o resultado. A saída inclui o original `productListItems` matriz e o calculado `max_value`.
+Este exemplo de consulta calcula o valor máximo de SKU da matriz `productListItems` dentro do intervalo de carimbo de data/hora especificado e dobra o resultado. A saída inclui a matriz `productListItems` original e o `max_value` calculado.
 
 ```sql
 SELECT productListItems,
@@ -175,7 +176,7 @@ Este fragmento combina os elementos de dois arrays em um único array novo. A op
 
 **Exemplo**
 
-A consulta a seguir usa o `zip_with` para criar pares de valores de duas matrizes. Ele faz isso adicionando os valores de SKU do `productListItems` matriz para uma sequência inteira, que foi gerada usando o `Sequence` função. O resultado é selecionado junto com o original `productListItems` e é limitada com base em um intervalo de carimbo de data e hora.
+A consulta a seguir usa a função `zip_with` para criar pares de valores de duas matrizes. Ele faz isso adicionando os valores de SKU da matriz `productListItems` a uma sequência inteira, que foi gerada usando a função `Sequence`. O resultado é selecionado junto com a coluna original `productListItems` e é limitado com base em um intervalo de carimbo de data/hora.
 
 ```sql
 SELECT productListItems,
@@ -250,7 +251,7 @@ productListItems     | map_from_entries
 
 `map_form_arrays(array<K>, array<V>): map<K, V>`
 
-A variável `map_form_arrays` A função cria um mapa usando valores emparelhados de duas matrizes.
+A função `map_form_arrays` cria um mapa usando valores emparelhados de duas matrizes.
 
 >[!IMPORTANT]
 >
@@ -258,7 +259,7 @@ A variável `map_form_arrays` A função cria um mapa usando valores emparelhado
 
 **Exemplo**
 
-O SQL abaixo cria um mapa em que as chaves são números sequenciados gerados usando o `Sequence` e os valores são elementos da variável `productListItems` matriz. A consulta seleciona a variável `productListItems` e usa o `Map_from_arrays` função para criar o mapa com base na sequência gerada de números e os elementos da matriz. O resultado é limitado a dez linhas e filtrado com base em um intervalo de carimbo de data e hora.
+O SQL abaixo cria um mapa em que as chaves são números sequenciados gerados usando a função `Sequence`, e os valores são elementos da matriz `productListItems`. A consulta seleciona a coluna `productListItems` e usa a função `Map_from_arrays` para criar o mapa com base na sequência gerada de números e os elementos da matriz. O resultado é limitado a dez linhas e filtrado com base em um intervalo de carimbo de data e hora.
 
 ```sql
 SELECT productListItems,
@@ -296,11 +297,11 @@ productListItems     | map_from_entries
 
 `map_concat(map<K, V>, ...): map<K, V>`
 
-A variável `map_concat` A função no trecho acima pega vários mapas como argumentos e retorna um novo mapa que combina todos os pares de valores chave dos mapas de entrada. A função concatena vários mapas em um único mapa, e o mapa resultante inclui todos os pares de valores-chave dos mapas de entrada.
+A função `map_concat` no trecho acima pega vários mapas como argumentos e retorna um novo mapa que combina todos os pares de valores chave dos mapas de entrada. A função concatena vários mapas em um único mapa, e o mapa resultante inclui todos os pares de valores-chave dos mapas de entrada.
 
 **Exemplo**
 
-O SQL abaixo cria um mapa em que cada item em `productListItems` está associado a um número de sequência, que é então concatenado com outro mapa onde as chaves são geradas em um intervalo de sequência específico.
+O SQL abaixo cria um mapa em que cada item em `productListItems` é associado a um número de sequência, que é então concatenado com outro mapa em que as chaves são geradas em um intervalo de sequência específico.
 
 ```sql
 SELECT productListItems,
@@ -345,7 +346,7 @@ Para mapas, ele retorna um valor para a chave fornecida ou nulo se a chave não 
 
 **Exemplo**
 
-A consulta seleciona a variável `identitymap` coluna da tabela `geometrixxx_999_xdm_pqs_1batch_10k_rows` e extrai o valor associado à chave `AAID` para cada linha. Os resultados são restritos a linhas que estão dentro do intervalo de carimbo de data e hora especificado, e a consulta limita a saída a dez linhas.
+A consulta seleciona a coluna `identitymap` da tabela `geometrixxx_999_xdm_pqs_1batch_10k_rows` e extrai o valor associado à chave `AAID` para cada linha. Os resultados são restritos a linhas que estão dentro do intervalo de carimbo de data e hora especificado, e a consulta limita a saída a dez linhas.
 
 ```sql
 SELECT identitymap,
@@ -383,7 +384,7 @@ Este trecho retorna o tamanho de uma determinada matriz ou mapa e fornece um ali
 
 **Exemplo**
 
-A consulta abaixo recupera o `identitymap` e a variável `Cardinality` calcula o número de elementos em cada mapa dentro do `identitymap`. Os resultados são limitados a dez linhas e filtrados com base em um intervalo de carimbo de data e hora especificado.
+A consulta abaixo recupera a coluna `identitymap`, e a função `Cardinality` calcula o número de elementos em cada mapa dentro de `identitymap`. Os resultados são limitados a dez linhas e filtrados com base em um intervalo de carimbo de data e hora especificado.
 
 ```sql
 SELECT identitymap,
@@ -421,7 +422,7 @@ O trecho acima remove valores duplicados da matriz especificada.
 
 **Exemplo**
 
-A consulta abaixo seleciona a variável `productListItems` , remove todos os itens duplicados das matrizes e limita a saída a dez linhas com base em um intervalo de carimbo de data e hora especificado.
+A consulta abaixo seleciona a coluna `productListItems`, remove os itens duplicados das matrizes e limita a saída a dez linhas com base em um intervalo de carimbo de data/hora especificado.
 
 ```sql
 SELECT productListItems,
@@ -457,8 +458,8 @@ productListItems     | array_distinct(productListItems)
 
 Os seguintes exemplos de funções de ordem superior são explicados como parte do caso de uso recuperar registros semelhantes. Um exemplo e uma explicação do uso de cada função são fornecidos na respectiva seção desse documento.
 
-A variável [`transform` exemplo de função](../use-cases/retrieve-similar-records.md#length-adjustment) O aborda a geração de tokens de uma lista de produtos.
+O exemplo de função [`transform` ](../use-cases/retrieve-similar-records.md#length-adjustment) abrange a geração de tokens de uma lista de produtos.
 
-A variável [`filter` exemplo de função](../use-cases/retrieve-similar-records.md#filter-results) demonstra uma extração mais refinada e precisa de informações relevantes de dados de texto.
+O exemplo de função [`filter` ](../use-cases/retrieve-similar-records.md#filter-results) demonstra uma extração mais refinada e precisa de informações relevantes de dados de texto.
 
-A variável [`reduce` função](../use-cases/retrieve-similar-records.md#higher-order-function-solutions) O fornece uma maneira de derivar valores cumulativos ou agregados, que podem ser fundamentais em vários processos analíticos e de planejamento.
+A função [`reduce` ](../use-cases/retrieve-similar-records.md#higher-order-function-solutions) fornece uma maneira de derivar valores cumulativos ou agregações, que podem ser fundamentais em vários processos analíticos e de planejamento.

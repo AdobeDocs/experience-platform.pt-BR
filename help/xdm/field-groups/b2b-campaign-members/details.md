@@ -5,24 +5,24 @@ exl-id: 597629c8-7f41-4c1c-95b6-aed5e16cee72
 source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
 source-wordcount: '335'
-ht-degree: 4%
+ht-degree: 3%
 
 ---
 
 # [!UICONTROL Detalhes do membro da campanha de negócios XDM] grupo de campos de esquema
 
-[!UICONTROL Detalhes do membro da campanha de negócios XDM] é um grupo de campos de esquema padrão para o [[!UICONTROL Membros da campanha de negócios XDM] classe](../../classes/b2b/business-campaign-members.md), que captura informações detalhadas sobre uma campanha comercial.
+[!UICONTROL Detalhes de Membros da Campanha Comercial XDM] é um grupo de campos de esquema padrão para a [[!UICONTROL classe Membros da Campanha Comercial XDM]](../../classes/b2b/business-campaign-members.md), que captura informações detalhadas sobre uma campanha comercial.
 
-![A estrutura do grupo de campos Detalhes do membro da campanha de negócios XDM como aparece na interface](../../images/field-groups/b2b/business-campaign-member-details.png)
+![A estrutura do grupo de campos Detalhes do Membro da Campanha Comercial XDM como aparece na interface do usuário](../../images/field-groups/b2b/business-campaign-member-details.png)
 
 | Propriedade | Tipo de dados | Descrição |
 | --- | --- | --- |
-| `acquiredByCampaignKey` | [[!UICONTROL Origem B2B]](../../data-types/b2b-source.md) | A ID composta da campanha que adquiriu este membro da campanha. |
+| `acquiredByCampaignKey` | [[!UICONTROL Source B2B]](../../data-types/b2b-source.md) | A ID composta da campanha que adquiriu este membro da campanha. |
 | `acquiredByCampaignID` | [!UICONTROL String] | Um identificador de sequência para a campanha que adquiriu esse membro da campanha. |
 | `firstRespondedDate` | [!UICONTROL DateTime] | Um carimbo de data e hora ISO 8601 de quando a pessoa respondeu pela primeira vez à campanha. |
 | `hasReachedSuccess` | [!UICONTROL Booleano] | Indica se este membro da campanha resultou em uma conversão bem-sucedida. |
 | `hasResponded` | [!UICONTROL Booleano] | Indica se este membro da campanha respondeu à campanha. |
-| `isDeleted` | [!UICONTROL Booleano] | Indica se este membro da campanha foi excluído no Marketo Engage.<br><br>Ao usar o [Conector de origem do Marketo](../../../sources/connectors/adobe-applications/marketo/marketo.md), todos os registros excluídos no Marketo são refletidos automaticamente no Perfil do cliente em tempo real. No entanto, os registros relacionados a esses perfis ainda podem persistir no Data Lake. Ao configurar `isDeleted` para `true`, você pode usar o campo para filtrar quais registros foram excluídos de suas fontes ao consultar o Data Lake. |
+| `isDeleted` | [!UICONTROL Booleano] | Indica se este membro da campanha foi excluído no Marketo Engage.<br><br>Ao usar o [conector de origem do Marketo](../../../sources/connectors/adobe-applications/marketo/marketo.md), todos os registros excluídos no Marketo serão refletidos automaticamente no Perfil do Cliente em Tempo Real. No entanto, os registros relacionados a esses perfis ainda podem persistir no Data Lake. Ao configurar `isDeleted` como `true`, você pode usar o campo para filtrar quais registros foram excluídos de suas fontes ao consultar o Data Lake. |
 | `isExhausted` | [!UICONTROL Booleano] | Indica se este membro da campanha esgotou todas as interações da campanha. |
 | `lastStatus` | [!UICONTROL String] | O último status do membro da campanha. |
 | `memberStatus` | [!UICONTROL String] | O status atual do membro da campanha. |

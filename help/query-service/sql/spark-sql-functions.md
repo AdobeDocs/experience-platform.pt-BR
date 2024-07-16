@@ -11,11 +11,11 @@ ht-degree: 1%
 
 ---
 
-# [!DNL Spark] Funções SQL
+# [!DNL Spark] funções SQL
 
 Você pode usar várias funções Spark SQL incorporadas para estender a funcionalidade SQL com o Serviço de consulta da Adobe Experience Platform. Este documento lista as funções do Spark SQL compatíveis com o Serviço de consulta.
 
-Para obter informações mais detalhadas sobre as funções, incluindo sintaxe, utilização e exemplos, leia a [Documentação da função Spark SQL](https://spark.apache.org/docs/latest/api/sql/index.html).
+Para obter informações mais detalhadas sobre as funções, incluindo sintaxe, uso e exemplos, leia a [documentação da função Spark SQL](https://spark.apache.org/docs/latest/api/sql/index.html).
 
 >[!NOTE]
 >
@@ -139,8 +139,8 @@ Para obter informações mais detalhadas sobre as funções, incluindo sintaxe, 
 | [`next_day`](https://spark.apache.org/docs/latest/api/sql/index.html#next_day) | Retorna o primeiro dia após a entrada |
 | [`quarter`](https://spark.apache.org/docs/latest/api/sql/index.html#quarter) | Retorna o trimestre da entrada |
 | [`second`](https://spark.apache.org/docs/latest/api/sql/index.html#second) | Retorna o segundo da cadeira de caracteres |
-| [`to_date`](https://spark.apache.org/docs/latest/api/sql/index.html#to_date) | Converte a cadeia de caracteres em uma data. **Nota:** A string **deve** estar no formato `yyyy-mm-ddTHH24:MM:SS`. |
-| [`to_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#to_timestamp) | Converte a cadeia de caracteres em um carimbo de data e hora. **Nota:** A string **deve** estar no formato `yyyy-mm-ddTHH24:MM:SS`. |
+| [`to_date`](https://spark.apache.org/docs/latest/api/sql/index.html#to_date) | Converte a cadeia de caracteres em uma data. **Observação:** a cadeia de caracteres **deve** estar no formato `yyyy-mm-ddTHH24:MM:SS`. |
+| [`to_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#to_timestamp) | Converte a cadeia de caracteres em um carimbo de data e hora. **Observação:** a cadeia de caracteres **deve** estar no formato `yyyy-mm-ddTHH24:MM:SS`. |
 | [`to_unix_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#to_unix_timestamp) | Converte a string em um carimbo de data e hora UNIX® |
 | [`to_utc_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#to_utc_timestamp) | Converte a cadeia de caracteres em um carimbo de data e hora UTC |
 | [`trunc`](https://spark.apache.org/docs/latest/api/sql/index.html#trunc) | Trunca a data |
@@ -250,7 +250,7 @@ Para obter informações mais detalhadas sobre as funções, incluindo sintaxe, 
 | [`concat_ws`](https://spark.apache.org/docs/latest/api/sql/index.html#concat_ws) | Concatenação com separador |
 | [`count`](https://spark.apache.org/docs/latest/api/sql/index.html#count) | Retorna a contagem total de linhas |
 | [`decode`](https://spark.apache.org/docs/latest/api/sql/index.html#decode) | Decodificar usando um conjunto de caracteres |
-| [`elt`](https://spark.apache.org/docs/latest/api/sql/index.html#elt) | Retorne o [`n`](https://spark.apache.org/docs/latest/api/sql/index.html#n)a entrada |
+| [`elt`](https://spark.apache.org/docs/latest/api/sql/index.html#elt) | Retornar a [`n`](https://spark.apache.org/docs/latest/api/sql/index.html#n)ª entrada |
 | [`encode`](https://spark.apache.org/docs/latest/api/sql/index.html#encode) | Codificar usando um conjunto de caracteres |
 | [`first`](https://spark.apache.org/docs/latest/api/sql/index.html#first), [`first_value`](https://spark.apache.org/docs/latest/api/sql/index.html#first_value) | Retorna o primeiro valor |
 | [`grouping`](https://spark.apache.org/docs/latest/api/sql/index.html#grouping) | Indica se uma coluna está agrupada |
@@ -259,7 +259,7 @@ Para obter informações mais detalhadas sobre as funções, incluindo sintaxe, 
 | [`json_tuple`](https://spark.apache.org/docs/latest/api/sql/index.html#json_tuple) | Retorna uma tupla de uma entrada JSON |
 | [`lag`](https://spark.apache.org/docs/latest/api/sql/index.html#lag), [`lead`](https://spark.apache.org/docs/latest/api/sql/index.html#lead) | Retorna o valor antes do deslocamento |
 | [`last`](https://spark.apache.org/docs/latest/api/sql/index.html#last), [`last_value`](https://spark.apache.org/docs/latest/api/sql/index.html#last_value) | Retorna o último valor |
-| [`left`](https://spark.apache.org/docs/latest/api/sql/index.html#left) | Retorna o primeiro [`n`](https://spark.apache.org/docs/latest/api/sql/index.html#n) caracteres |
+| [`left`](https://spark.apache.org/docs/latest/api/sql/index.html#left) | Retorna os primeiros [`n`](https://spark.apache.org/docs/latest/api/sql/index.html#n) caracteres |
 | [`length`](https://spark.apache.org/docs/latest/api/sql/index.html#length) | Retorna o comprimento da cadeira de caracteres |
 | [`levenshtein`](https://spark.apache.org/docs/latest/api/sql/index.html#levenshtein) | Retorna a distância de Levenshtein entre as cadeias de caracteres |
 | [`locate`](https://spark.apache.org/docs/latest/api/sql/index.html#locate), [`position`](https://spark.apache.org/docs/latest/api/sql/index.html#position) | Retorna a posição da primeira ocorrência de uma substring |
@@ -285,7 +285,7 @@ Para obter informações mais detalhadas sobre as funções, incluindo sintaxe, 
 | [`shiftright`](https://spark.apache.org/docs/latest/api/sql/index.html#shiftright) | Deslocamento bit a bit assinado para a direita |
 | [`shiftrightunsigned`](https://spark.apache.org/docs/latest/api/sql/index.html#shiftrightunsigned) | Deslocamento bit a bit sem sinal para a direita |
 | [`size`](https://spark.apache.org/docs/latest/api/sql/index.html#size) | Retorna o tamanho da matriz |
-| [`space`](https://spark.apache.org/docs/latest/api/sql/index.html#space) | Retornar uma string com [`n`](https://spark.apache.org/docs/latest/api/sql/index.html#n) espaços |
+| [`space`](https://spark.apache.org/docs/latest/api/sql/index.html#space) | Retornar uma cadeia de caracteres com [`n`](https://spark.apache.org/docs/latest/api/sql/index.html#n) espaços |
 | [`split`](https://spark.apache.org/docs/latest/api/sql/index.html#split) | Dividir string |
 | [`substring_index`](https://spark.apache.org/docs/latest/api/sql/index.html#substring_index) | Índice de retorno da substring |
 | [`window`](https://spark.apache.org/docs/latest/api/sql/index.html#window) | Janela |

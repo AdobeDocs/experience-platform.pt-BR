@@ -5,18 +5,18 @@ description: Você pode usar o endpoint "/functions" na API de preparação de d
 exl-id: dc24bfb4-2d96-4757-a610-0c2ee960d41d
 source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
 workflow-type: tm+mt
-source-wordcount: '209'
+source-wordcount: '213'
 ht-degree: 5%
 
 ---
 
 # Endpoints de funções
 
-As funções do conjunto de mapeamento permitem transformar seus dados entre esquemas de origem e de destino. Você pode usar o `/languages/el` para validar suas expressões, bem como obter uma lista de todas as funções do conjunto de mapeamento disponíveis.
+As funções do conjunto de mapeamento permitem transformar seus dados entre esquemas de origem e de destino. Você pode usar o ponto de extremidade `/languages/el` para validar suas expressões, bem como obter uma lista de todas as funções do conjunto de mapeamento disponíveis.
 
 ## Validar expressões
 
-Você pode validar se sua expressão atual é válida fazendo uma solicitação POST para o `/languages/el/validate` terminal.
+Você pode validar se sua expressão atual é válida fazendo uma solicitação POST para o ponto de extremidade `/languages/el/validate`.
 
 **Formato da API**
 
@@ -52,7 +52,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com o status de validação 
 
 ## Listar funções de conjunto de mapeamento
 
-Você pode recuperar uma lista de todas as funções do conjunto de mapeamento disponíveis fazendo uma solicitação GET para o `/languages/el/functions` terminal.
+Você pode recuperar uma lista de todas as funções do conjunto de mapeamento disponíveis fazendo uma solicitação GET para o ponto de extremidade `/languages/el/functions`.
 
 **Formato da API**
 
@@ -117,7 +117,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com uma lista de todas as fu
 
 ## Operadores de conjunto de mapeamento de lista
 
-Você pode recuperar uma lista de todos os operadores de conjunto de mapeamento disponíveis fazendo uma solicitação GET para o `/languages/el/operators` terminal.
+Você pode recuperar uma lista de todos os operadores de conjunto de mapeamento disponíveis fazendo uma solicitação GET para o ponto de extremidade `/languages/el/operators`.
 
 **Formato da API**
 

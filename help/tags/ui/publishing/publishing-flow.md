@@ -42,7 +42,7 @@ Quando se trata do fluxo de publicação, uma biblioteca pode estar em quatro es
 * [[!UICONTROL Aprovada]](#approved)
 * [[!UICONTROL Publicada]](#published)
 
-Esses quatro estados são representados como colunas na variável **[!UICONTROL Fluxo de publicação]** guia.
+Esses quatro estados são representados como colunas na guia **[!UICONTROL Fluxo de publicação]**.
 
 ![](./images/approval-workflow/flow-ui.png)
 
@@ -112,7 +112,7 @@ O que está incluído no upstream depende do estágio atual da biblioteca. Por e
 
 ![](./images/approval-workflow/upstream.png)
 
-Ao editar uma biblioteca na interface do usuário, todos os recursos herdados do upstream são representados na variável **[!UICONTROL Recursos upstream]** seção. Para visualizar esses recursos, selecione a guia de expansão abaixo do cabeçalho da seção.
+Ao editar uma biblioteca na interface, todos os recursos herdados do upstream são representados na seção **[!UICONTROL Recursos upstream]**. Para visualizar esses recursos, selecione a guia de expansão abaixo do cabeçalho da seção.
 
 ![](./images/approval-workflow/upstream-collapse.png)
 

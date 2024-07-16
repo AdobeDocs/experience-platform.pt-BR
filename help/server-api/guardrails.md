@@ -20,16 +20,16 @@ O Adobe não é responsável pela degradação do desempenho causada por limites
 
 >[!IMPORTANT]
 >
->Verifique os direitos de licença em sua Ordem de venda e a correspondência [Descrição do produto](https://helpx.adobe.com/legal/product-descriptions.html?lang=pt-BR) sobre os limites de uso reais, além desta página de medidas de proteção.
+>Verifique os direitos de licença em seu Pedido de Venda e a [Descrição do Produto](https://helpx.adobe.com/legal/product-descriptions.html?lang=pt-BR) correspondente sobre os limites de uso reais, além desta página de medidas de proteção.
 
 ## Definições
 
-* **Disponibilidade** é calculado para cada intervalo de cinco minutos como a porcentagem de solicitações processadas pelo Edge Network Experience Platform que não falham com erros e se relacionam apenas às APIs de Edge Network provisionadas. Se um locatário não fizer solicitações em um determinado intervalo de cinco minutos, esse intervalo será considerado 100% disponível.
-* **Porcentagem mensal de tempo de atividade** para uma determinada região é calculada como a média da disponibilidade para todos os intervalos de cinco minutos em um mês.
-* Um **upstream** é um serviço por trás do Edge Network, habilitado para um fluxo de dados específico, como o encaminhamento pelo lado do servidor do Adobe, a segmentação do Adobe Edge ou o Adobe Target.
-* A **unidade de solicitação** corresponde a um fragmento de 8 KB de uma solicitação e um upstream configurado para um fluxo de dados.
-* A **solicitação** é uma única mensagem enviada por um aplicativo de propriedade do cliente para o [!DNL Server API]. Uma solicitação pode conter uma ou mais unidades de solicitação.
-* Um **erro** é qualquer solicitação que falha devido a um Edge Network [erro de serviço interno](error-handling.md).
+* **Disponibilidade** é calculada para cada intervalo de cinco minutos como a porcentagem de solicitações processadas pelo Edge Network Experience Platform que não falham com erros e se relacionam exclusivamente às APIs Edge Network provisionadas. Se um locatário não fizer solicitações em um determinado intervalo de cinco minutos, esse intervalo será considerado 100% disponível.
+* A **porcentagem de tempo de atividade mensal** para uma determinada região é calculada como a média da disponibilidade para todos os intervalos de cinco minutos em um mês.
+* Um **upstream** é um serviço por trás do Edge Network, habilitado para uma sequência de dados específica, como encaminhamento pelo lado do servidor do Adobe, segmentação do Adobe Edge ou Adobe Target.
+* Uma **unidade de solicitação** corresponde a um fragmento de 8 KB de uma solicitação e um upstream configurado para uma sequência de dados.
+* Uma **solicitação** é uma única mensagem enviada por um aplicativo de propriedade do cliente para a [!DNL Server API]. Uma solicitação pode conter uma ou mais unidades de solicitação.
+* Um **erro** é qualquer solicitação que falhe devido a um Edge Network [erro de serviço interno](error-handling.md).
 
 ## Limites de serviço
 
@@ -37,7 +37,7 @@ Todos os fluxos de dados impõem determinados limites de uso, que controlam prin
 
 ### Unidades de solicitação
 
-Todos os limites são aplicados e normalizados durante um período **unidade de solicitação (RU)**, definido como um **Fragmento de 8 KB** de uma solicitação indo para um serviço upstream configurado em um fluxo de dados.
+Todos os limites são aplicados e normalizados em uma **unidade de solicitação (RU)**, definida como um **fragmento de 8 KB** de uma solicitação indo para um serviço upstream configurado em uma sequência de dados.
 
 #### Exemplos
 

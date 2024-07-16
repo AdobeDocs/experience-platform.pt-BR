@@ -5,13 +5,13 @@ exl-id: 3423d067-fe8c-44e5-a6f9-ce0458d26ebc
 source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
 source-wordcount: '197'
-ht-degree: 6%
+ht-degree: 7%
 
 ---
 
-# [!UICONTROL Medicação para tratamento de saúde] grupo de campos de esquema
+# [!UICONTROL Medicamento para a área de saúde] grupo de campos de esquema
 
-[!UICONTROL Medicação para tratamento de saúde] é um grupo de campos de esquema padrão para o [[!UICONTROL Medicação] classe](../../classes/medication.md). Ele fornece um único campo do tipo objeto `medication` que captura detalhes como nome da marca, número de lote e quantidade.
+[!UICONTROL Medicamento da área de saúde] é um grupo de campos de esquema padrão para a [[!UICONTROL classe Medicação]](../../classes/medication.md). Ele fornece um único campo de tipo de objeto `medication` que captura detalhes como nome da marca, número de lote e quantidade.
 
 ![](../../images/field-groups/healthcare-medication.png)
 
@@ -32,4 +32,4 @@ ht-degree: 6%
 
 {style="table-layout:auto"}
 
-Para obter mais informações sobre o grupo de campos, consulte o [repositório XDM público](https://github.com/adobe/xdm/blob/master/components/fieldgroups/medication/healthcare-medication.schema.json).
+Para obter mais detalhes sobre o grupo de campos, consulte o [repositório XDM público](https://github.com/adobe/xdm/blob/master/components/fieldgroups/medication/healthcare-medication.schema.json).

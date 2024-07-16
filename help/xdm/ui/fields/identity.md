@@ -19,8 +19,8 @@ No Experience Data Model (XDM), um campo de identidade representa um campo que p
 
 Os campos de identidade são um componente essencial em como os gráficos de identidade do cliente são construídos na Platform, o que afeta como o Perfil do cliente em tempo real mescla fragmentos de dados diferentes para obter uma visão completa do cliente. Antes de definir campos de identidade em seus esquemas, consulte a seguinte documentação para saber mais sobre os serviços principais e conceitos relacionados aos campos de identidade:
 
-* [Serviço de identidade da Adobe Experience Platform](../../../identity-service/home.md): une as identidades em dispositivos e sistemas, vinculando conjuntos de dados com base nos campos de identidade definidos pelos esquemas XDM aos quais estão em conformidade.
-   * [Namespaces de identidade](../../../identity-service/features/namespaces.md): os namespaces de identidade definem os diferentes tipos de informações de identidade que podem se relacionar a uma única pessoa e são um componente obrigatório para cada campo de identidade.
+* [Adobe Experience Platform Identity Service](../../../identity-service/home.md): une identidades em dispositivos e sistemas, vinculando conjuntos de dados com base nos campos de identidade definidos pelos esquemas XDM aos quais estão em conformidade.
+   * [Namespaces de identidade](../../../identity-service/features/namespaces.md): os namespaces de identidade definem os diferentes tipos de informações de identidade que podem se relacionar a uma única pessoa e são um componente necessário para cada campo de identidade.
 * [Perfil do cliente em tempo real](../../../profile/home.md): aproveita os gráficos de identidade do cliente para fornecer um perfil de consumidor unificado com base em dados agregados de várias fontes, atualizados em tempo quase real.
 
 ## Definir um campo de identidade {#define-a-identity-field}
@@ -30,11 +30,11 @@ Os campos de identidade são um componente essencial em como os gráficos de ide
 >title="Restrições à identidade principal"
 >abstract="Esse esquema usa um grupo de campos destinado ao uso em uma conexão de origem específica. A conexão requer que o identityMap seja usado como identidade principal e o define automaticamente."
 
-Quando [definição de um novo campo](./overview.md#define) na interface, é possível defini-lo como um campo de identidade selecionando o **[!UICONTROL Identidade]** no painel direito.
+Ao [definir um novo campo](./overview.md#define) na interface, você pode defini-lo como um campo de identidade marcando a caixa de seleção **[!UICONTROL Identidade]** no painel direito.
 
 ![](../../images/ui/fields/special/identity.png)
 
-Controles adicionais são exibidos após marcar a caixa de seleção. Se quiser que esse campo seja a identidade principal do esquema, selecione a variável **[!UICONTROL Identidade principal]** caixa de seleção
+Controles adicionais são exibidos após marcar a caixa de seleção. Se você quiser que esse campo seja a identidade principal do esquema, marque a caixa de seleção **[!UICONTROL Identidade principal]**.
 
 >[!NOTE]
 >
@@ -46,16 +46,16 @@ Quando terminar, selecione **[!UICONTROL Aplicar]** para aplicar a alteração a
 
 ![](../../images/ui/fields/special/identity-config.png)
 
-A tela é atualizada para refletir as alterações, com o campo selecionado ganhando um símbolo de impressão digital (![](../../images/ui/fields/special/identity-symbol.png)) para designá-la como uma identidade. No painel à esquerda, o campo de identidade agora está listado sob o nome da classe ou do grupo de campos de esquema que fornece o campo ao esquema.
+A tela é atualizada para refletir as alterações, com o campo selecionado ganhando um símbolo de impressão digital (![](../../images/ui/fields/special/identity-symbol.png)) para designá-lo como uma identidade. No painel à esquerda, o campo de identidade agora está listado sob o nome da classe ou do grupo de campos de esquema que fornece o campo ao esquema.
 
-Se o campo também tiver sido definido como a identidade primária, ele também será listado em **[!UICONTROL Campos obrigatórios]** no painel esquerdo. Se o campo de identidade estiver aninhado na estrutura do esquema, todos os campos principais também serão listados conforme necessário.
+Se o campo também foi definido como a identidade primária, ele também será listado em **[!UICONTROL Campos obrigatórios]** no painel esquerdo. Se o campo de identidade estiver aninhado na estrutura do esquema, todos os campos principais também serão listados conforme necessário.
 
 ![](../../images/ui/fields/special/identity-applied.png)
 
-Se você definiu uma identidade primária para o esquema, agora é possível prosseguir para [ativar o esquema para uso no Perfil de cliente em tempo real](../resources/schemas.md#profile).
+Se você definiu uma identidade primária para o esquema, agora é possível prosseguir para [habilitar o esquema para uso no Perfil de Cliente em Tempo Real](../resources/schemas.md#profile).
 
 ## Próximas etapas
 
 Este guia abordou como definir um campo de identidade na interface do usuário do. À medida que os dados são assimilados usando esse esquema, seus gráficos de identidade do cliente serão atualizados para refletir os campos de identidade do esquema. Consulte o guia no [visualizador de gráficos de identidade](../../../identity-service/features/identity-graph-viewer.md) para saber como explorar o gráfico privado de sua organização na interface do usuário.
 
-Consulte a visão geral em [definição de campos na interface](./overview.md#special) para saber como definir outros tipos de campo XDM na variável [!DNL Schema Editor].
+Consulte a visão geral em [definindo campos na interface](./overview.md#special) para saber como definir outros tipos de campos XDM no [!DNL Schema Editor].

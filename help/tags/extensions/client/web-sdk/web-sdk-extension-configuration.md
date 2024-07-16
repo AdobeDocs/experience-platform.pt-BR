@@ -11,7 +11,7 @@ ht-degree: 5%
 
 # Configurar a extensão de tag do SDK da Web
 
-A variável [!DNL Web SDK] a extensão de tag envia dados para a Adobe Experience Cloud a partir das propriedades da web por meio do Edge Network Experience Platform.
+A extensão de tag [!DNL Web SDK] envia dados para a Adobe Experience Cloud das propriedades da Web por meio do Edge Network Experience Platform.
 
 A extensão permite transmitir dados para a Platform, sincronizar identidades, processar sinais de consentimento do cliente e coletar automaticamente dados de contexto.
 
@@ -19,13 +19,13 @@ Este documento explica como configurar a extensão de tag na interface do usuár
 
 ## Instalar a extensão de tag do SDK da Web {#install}
 
-A extensão de tag do SDK da Web precisa de uma propriedade para ser instalada. Se ainda não tiver feito isso, consulte a documentação em [criação de uma propriedade de tag](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/create-a-property.html?lang=pt-BR).
+A extensão de tag do SDK da Web precisa de uma propriedade para ser instalada. Se ainda não tiver feito isso, consulte a documentação sobre [criação de uma propriedade de marca](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/create-a-property.html?lang=pt-BR).
 
-Após criar uma propriedade, abra a propriedade e selecione a variável **[!UICONTROL Extensões]** na barra lateral esquerda.
+Após criar uma propriedade, abra-a e selecione a guia **[!UICONTROL Extensões]** na barra lateral esquerda.
 
-Selecione o **[!UICONTROL Catálogo]** guia. Na lista de extensões disponíveis, localize o [!DNL Web SDK] e selecione **[!UICONTROL Instalar]**.
+Selecione a guia **[!UICONTROL Catálogo]**. Na lista de extensões disponíveis, localize a extensão [!DNL Web SDK] e selecione **[!UICONTROL Instalar]**.
 
-![Imagem mostrando a interface do usuário de tags com a extensão SDK da Web selecionada](assets/web-sdk-install.png)
+![Imagem mostrando a interface do usuário de Marcas com a extensão SDK da Web selecionada](assets/web-sdk-install.png)
 
 Depois de selecionar **[!UICONTROL Instalar]**, você deve configurar a extensão de tag do SDK da Web e salvar a configuração.
 
@@ -37,10 +37,10 @@ Depois de selecionar **[!UICONTROL Instalar]**, você deve configurar a extensã
 
 As opções de configuração na parte superior da página informam à Adobe Experience Platform para onde rotear os dados e quais configurações usar no servidor.
 
-![Imagem que mostra as configurações gerais da extensão de tag do SDK da Web na interface do usuário de tags](assets/web-sdk-ext-general.png)
+![Imagem mostrando as configurações gerais da extensão de marca do SDK da Web na interface do usuário de Marcas](assets/web-sdk-ext-general.png)
 
-* **[!UICONTROL Nome]**: a extensão SDK da Web do Adobe Experience Platform oferece suporte a várias instâncias na página. O nome é usado para enviar dados para várias organizações com uma configuração de tag. O nome da instância é padronizado como `alloy`. No entanto, é possível alterar o nome da instância para qualquer nome de objeto JavaScript válido.
-* **[!UICONTROL IMS organization ID]**: a ID da organização para a qual você deseja que os dados sejam enviados no Adobe. Na maioria das vezes, use o valor padrão preenchido automaticamente. Quando houver várias instâncias na página, preencha esse campo com o valor da segunda organização para a qual deseja enviar dados.
+* **[!UICONTROL Nome]**: a extensão SDK da Web do Adobe Experience Platform oferece suporte a várias instâncias na página. O nome é usado para enviar dados para várias organizações com uma configuração de tag. O nome padrão da instância é `alloy`. No entanto, é possível alterar o nome da instância para qualquer nome de objeto JavaScript válido.
+* **[!UICONTROL ID de organização IMS]**: a ID da organização para a qual você deseja que os dados sejam enviados no Adobe. Na maioria das vezes, use o valor padrão preenchido automaticamente. Quando houver várias instâncias na página, preencha esse campo com o valor da segunda organização para a qual deseja enviar dados.
 * **[!UICONTROL Domínio do Edge]**: o domínio do qual a extensão envia e recebe dados. O Adobe recomenda usar um domínio próprio (CNAME) para essa extensão. O domínio padrão de terceiros funciona em ambientes de desenvolvimento, mas não é adequado para ambientes de produção. As instruções sobre como configurar um CNAME primário estão listadas [aqui](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html?lang=pt-BR).
 
 ## Definir configurações de sequência de dados {#datastreams}
@@ -49,11 +49,11 @@ Essa seção permite selecionar os fluxos de dados que devem ser usados para cad
 
 Quando uma solicitação é enviada para o Edge Network, uma ID de sequência de dados é usada para fazer referência à configuração do lado do servidor. Você pode atualizar a configuração sem precisar fazer alterações de código no site.
 
-Consulte o guia sobre [sequências de dados](../../../../datastreams/overview.md) para saber como configurar um fluxo de dados.
+Consulte o guia em [datastreams](../../../../datastreams/overview.md) para saber como configurar um datastream.
 
-Você pode escolher um fluxo de dados nos menus suspensos disponíveis ou selecionar **[!UICONTROL Inserir valores]** e insira uma ID de fluxo de dados personalizada para cada ambiente.
+Você pode escolher uma sequência de dados nos menus suspensos disponíveis ou selecionar **[!UICONTROL Inserir valores]** e inserir uma ID de sequência de dados personalizada para cada ambiente.
 
-![Imagem que mostra as configurações de sequência de dados da extensão de tag do SDK da Web na interface do usuário de tags](assets/web-sdk-ext-datastreams.png)
+![Imagem mostrando as configurações de sequência de dados da extensão de marca do SDK da Web na interface do usuário de Marcas](assets/web-sdk-ext-datastreams.png)
 
 ## Definir configurações de privacidade {#privacy}
 
@@ -61,39 +61,39 @@ Esta seção permite configurar como o SDK da Web lida com sinais de consentimen
 
 O nível de consentimento padrão não é salvo no perfil do usuário.
 
-![Imagem mostrando as configurações de privacidade da extensão de tag do SDK da Web na interface do usuário de tags](assets/web-sdk-ext-privacy.png)
+![Imagem mostrando as configurações de privacidade da extensão de marca do SDK da Web na interface do usuário de Marcas](assets/web-sdk-ext-privacy.png)
 
 | [!UICONTROL Nível de consentimento padrão] | Descrição |
 | --- | --- |
 | [!UICONTROL Entrada] | Colete eventos que ocorrem antes de o usuário fornecer preferências de consentimento. |
 | [!UICONTROL Saída] | Descartar eventos que ocorrem antes de o usuário fornecer preferências de consentimento. |
-| [!UICONTROL Pending] | Enfileirar eventos que ocorrem antes de o usuário fornecer preferências de consentimento. Quando as preferências de consentimento são fornecidas, os eventos são coletados ou descartados, dependendo das preferências fornecidas. |
+| [!UICONTROL Pendente] | Enfileirar eventos que ocorrem antes de o usuário fornecer preferências de consentimento. Quando as preferências de consentimento são fornecidas, os eventos são coletados ou descartados, dependendo das preferências fornecidas. |
 | [!UICONTROL Fornecido pelo elemento de dados] | O nível de consentimento padrão é determinado por um elemento de dados separado que você define. Ao usar essa opção, você deve especificar o elemento de dados usando o menu suspenso fornecido. |
 
 >[!TIP]
 >
->Uso **[!UICONTROL Saída]** ou **[!UICONTROL Pending]** se você precisar de consentimento explícito do usuário para suas operações comerciais.
+>Use **[!UICONTROL Desativado]** ou **[!UICONTROL Pendente]** se você precisar de consentimento explícito do usuário para suas operações comerciais.
 
 ## Definir configurações de identidade {#identity}
 
 Esta seção permite definir o comportamento do SDK da Web quando se trata de lidar com a identificação do usuário.
 
-![Imagem que mostra as configurações de identidade da extensão de tag do SDK da Web na interface do usuário de tags](assets/web-sdk-ext-identity.png)
+![Imagem mostrando as configurações de identidade da extensão de marca do SDK da Web na interface do usuário de Marcas](assets/web-sdk-ext-identity.png)
 
-* **[!UICONTROL Migrar ECID da VisitorAPI]**: essa opção é ativada por padrão. Quando esse recurso está ativado, o SDK pode ler a variável `AMCV` e `s_ecid` cookies e defina o `AMCV` cookie usado por [!DNL Visitor.js]. Esse recurso é importante ao migrar para o SDK da Web, pois algumas páginas ainda podem estar usando [!DNL Visitor.js]. Essa opção permite que o SDK continue usando a mesma [!DNL ECID] para que os usuários não sejam identificados como dois usuários separados.
-* **[!UICONTROL Usar cookies de terceiros]**: quando esta opção é ativada, o SDK da Web tenta armazenar um identificador do usuário em um cookie de terceiros. Se for bem-sucedido, o usuário será identificado como um único usuário durante a navegação em vários domínios, em vez de ser identificado como um usuário separado em cada domínio. Se essa opção estiver ativada, o SDK ainda poderá não ser capaz de armazenar o identificador do usuário em um cookie de terceiros se o navegador não for compatível com cookies de terceiros ou tiver sido configurado pelo usuário para não permitir cookies de terceiros. Nesse caso, o SDK armazena apenas o identificador no domínio próprio.
+* **[!UICONTROL Migrar ECID da VisitorAPI]**: esta opção é habilitada por padrão. Quando este recurso está habilitado, o SDK pode ler os cookies `AMCV` e `s_ecid` e definir o cookie `AMCV` usado pelo [!DNL Visitor.js]. Esse recurso é importante ao migrar para o SDK da Web, pois algumas páginas ainda podem estar usando o [!DNL Visitor.js]. Essa opção permite que o SDK continue usando o mesmo [!DNL ECID] para que os usuários não sejam identificados como dois usuários separados.
+* **[!UICONTROL Usar cookies de terceiros]**: quando esta opção é habilitada, o SDK da Web tenta armazenar um identificador do usuário em um cookie de terceiros. Se for bem-sucedido, o usuário será identificado como um único usuário durante a navegação em vários domínios, em vez de ser identificado como um usuário separado em cada domínio. Se essa opção estiver ativada, o SDK ainda poderá não ser capaz de armazenar o identificador do usuário em um cookie de terceiros se o navegador não for compatível com cookies de terceiros ou tiver sido configurado pelo usuário para não permitir cookies de terceiros. Nesse caso, o SDK armazena apenas o identificador no domínio próprio.
 
   >[!IMPORTANT]
-  >>Cookies de terceiros não são compatíveis com o [ID do dispositivo primário](../../../../web-sdk/identity/first-party-device-ids.md) no SDK da Web.
+  >>Cookies de terceiros não são compatíveis com a funcionalidade de [ID de dispositivo próprio](../../../../web-sdk/identity/first-party-device-ids.md) no SDK da Web.
 Você pode usar IDs de dispositivo primário ou cookies de terceiros, mas não pode usar ambos os recursos simultaneamente.
   >
 ## Definir configurações de personalização {#personalization}
 
 Esta seção permite configurar como você deseja ocultar determinadas partes de uma página enquanto o conteúdo personalizado é carregado. Isso garante que seus visitantes vejam apenas a página personalizada.
 
-![Imagem que mostra as configurações de personalização da extensão de tag do SDK da Web na interface do usuário de tags](assets/web-sdk-ext-personalization.png)
+![Imagem mostrando as configurações de personalização da extensão de marca do SDK da Web na interface do usuário de Marcas](assets/web-sdk-ext-personalization.png)
 
-* **[!UICONTROL Migração do Target da at.js para o SDK da Web]**: use esta opção para ativar [!DNL Web SDK] para ler e gravar o legado `mbox` e `mboxEdgeCluster` cookies usados pela at.js `1.x` ou `2.x` bibliotecas. Isso ajuda a manter o perfil do visitante ao mover de uma página que usa o SDK da Web para uma página que usa at.js `1.x` ou `2.x` bibliotecas e vice-versa.
+* **[!UICONTROL Migrar o Target da at.js para o SDK da Web]**: use esta opção para permitir que o [!DNL Web SDK] leia e grave os cookies herdados `mbox` e `mboxEdgeCluster` usados pelas bibliotecas da at.js `1.x` ou `2.x`. Isso ajuda a manter o perfil do visitante ao mover de uma página que usa o SDK da Web para uma página que usa bibliotecas do at.js `1.x` ou `2.x` e vice-versa.
 
 ### Estilo pré-ocultação {#prehiding-style}
 
@@ -103,37 +103,37 @@ O editor de estilo pré-ocultação permite definir regras CSS personalizadas pa
 
 O trecho pré-ocultação é útil quando a biblioteca do SDK da Web é carregada de forma assíncrona. Nessa situação, para evitar oscilação, recomendamos ocultar o conteúdo antes que a biblioteca do SDK da Web seja carregada.
 
-Para usar o trecho pré-ocultação, copie-o e cole-o dentro do `<head>` elemento da sua página.
+Para usar o trecho pré-ocultação, copie-o e cole-o dentro do elemento `<head>` da sua página.
 
 >[!IMPORTANT]
 >
-Ao usar o trecho pré-ocultação, o Adobe recomenda usar o mesmo [!DNL CSS] regra como a usada pelo [estilo pré-ocultação](#prehiding-style).
+Ao usar o trecho pré-ocultação, o Adobe recomenda usar a mesma regra [!DNL CSS] usada pelo [estilo pré-ocultação](#prehiding-style).
 
 ## Definir configurações da coleção de dados {#data-collection}
 
-Gerenciar definições de configuração da coleta de dados. Configurações semelhantes na biblioteca do JavaScript estão disponíveis usando o [`configure`](/help/web-sdk/commands/configure/overview.md) comando.
+Gerenciar definições de configuração da coleta de dados. Configurações semelhantes na biblioteca JavaScript estão disponíveis usando o comando [`configure`](/help/web-sdk/commands/configure/overview.md).
 
-![Imagem que mostra as configurações da coleção de dados da extensão de tag do SDK da Web na interface do usuário de tags.](assets/web-sdk-ext-collection.png)
+![Imagem mostrando as configurações de coleta de dados da extensão de marca do SDK da Web na interface do usuário de Marcas.](assets/web-sdk-ext-collection.png)
 
-* **[!UICONTROL Ativado antes do retorno de chamada do envio do evento]**: uma função de retorno de chamada para avaliar e modificar o payload enviado para o Adobe. Use o `content` na função de retorno de chamada para modificar a carga. Este retorno de chamada é a tag equivalente a [`onBeforeEventSend`](/help/web-sdk/commands/configure/onbeforeeventsend.md) na biblioteca do JavaScript.
-* **[!UICONTROL Coletar cliques internos em links]**: uma caixa de seleção que permite a coleta de dados de rastreamento de links internos no site ou na propriedade. Quando você ativa essa caixa de seleção, as opções de agrupamento de eventos são exibidas:
+* **[!UICONTROL Ativado antes de o evento enviar o retorno de chamada]**: uma função de retorno de chamada para avaliar e modificar a carga enviada para o Adobe. Use a variável `content` na função de retorno de chamada para modificar a carga. Este retorno de chamada é a marca equivalente a [`onBeforeEventSend`](/help/web-sdk/commands/configure/onbeforeeventsend.md) na biblioteca JavaScript.
+* **[!UICONTROL Coletar cliques internos em links]**: uma caixa de seleção que permite a coleta de dados de rastreamento de links internos no seu site ou propriedade. Quando você ativa essa caixa de seleção, as opções de agrupamento de eventos são exibidas:
    * **[!UICONTROL Nenhum agrupamento de eventos]**: os dados de rastreamento de link são enviados para o Adobe em eventos separados. Os cliques em links enviados em eventos separados podem aumentar o uso contratual dos dados enviados para o Adobe Experience Platform.
-   * **[!UICONTROL Agrupamento de eventos usando armazenamento de sessão]**: armazene os dados de rastreamento de link no armazenamento da sessão até o evento da próxima página. Na página a seguir, os dados de rastreamento de link armazenados e os dados de exibição de página são enviados para o Adobe ao mesmo tempo. A Adobe recomenda ativar essa configuração ao rastrear links internos.
-   * **[!UICONTROL Agrupamento de eventos usando objeto local]**: armazene os dados de rastreamento de link em um objeto local até o evento da próxima página. Se um visitante navega para uma nova página, os dados de rastreamento de link são perdidos. Essa configuração é mais benéfica no contexto de aplicativos de página única.
-* **[!UICONTROL Coletar cliques em links externos]**: uma caixa de seleção que permite a coleta de links externos.
-* **[!UICONTROL Coletar cliques em links de download]**: uma caixa de seleção que permite a coleta de links de download.
-* **[!UICONTROL Qualificador de link de download]**: uma expressão regular que qualifica um URL de link como um link de download.
-* **[!UICONTROL Propriedades de clique de filtro]**: uma função de retorno de chamada para avaliar e modificar propriedades relacionadas a cliques antes da coleção. Essa função é executada antes da variável [!UICONTROL Ativado antes do retorno de chamada do envio do evento].
-* **Configurações de contexto**: colete automaticamente as informações do visitante, que preenchem campos XDM específicos para você. Você pode escolher **[!UICONTROL Todas as informações de contexto padrão]** ou **[!UICONTROL Informações de contexto específicas]**. É a tag equivalente a [`context`](/help/web-sdk/commands/configure/context.md) na biblioteca do JavaScript.
+   * **[!UICONTROL Agrupamento de eventos usando o armazenamento de sessão]**: armazena dados de rastreamento de link no armazenamento de sessão até o próximo evento de página. Na página a seguir, os dados de rastreamento de link armazenados e os dados de exibição de página são enviados para o Adobe ao mesmo tempo. A Adobe recomenda ativar essa configuração ao rastrear links internos.
+   * **[!UICONTROL Agrupamento de eventos usando objeto local]**: armazena dados de rastreamento de link em um objeto local até o próximo evento de página. Se um visitante navega para uma nova página, os dados de rastreamento de link são perdidos. Essa configuração é mais benéfica no contexto de aplicativos de página única.
+* **[!UICONTROL Coletar cliques em links externos]**: uma caixa de seleção que habilita a coleta de links externos.
+* **[!UICONTROL Coletar cliques no link de download]**: uma caixa de seleção que habilita a coleção de links de download.
+* **[!UICONTROL Qualificador de link de download]**: uma expressão regular que qualifica uma URL de link como um link de download.
+* **[!UICONTROL Filtrar propriedades de cliques]**: uma função de retorno de chamada para avaliar e modificar propriedades relacionadas a cliques antes da coleção. Esta função é executada antes do [!UICONTROL Ativado antes do retorno de chamada do envio de evento].
+* **Configurações de contexto**: colete automaticamente informações do visitante, que preenchem campos XDM específicos para você. Você pode escolher **[!UICONTROL Todas as informações de contexto padrão]** ou **[!UICONTROL Informações de contexto específicas]**. É a marca equivalente a [`context`](/help/web-sdk/commands/configure/context.md) na biblioteca JavaScript.
    * **[!UICONTROL Web]**: coleta informações sobre a página atual.
    * **[!UICONTROL Dispositivo]**: coleta informações sobre o dispositivo do usuário.
    * **[!UICONTROL Ambiente]**: coleta informações sobre o navegador do usuário.
-   * **[!UICONTROL Contexto do local]**: coleta informações sobre a localização do usuário.
-   * **[!UICONTROL Dicas de agente do usuário de alta entropia]**: coleta informações mais detalhadas sobre o dispositivo do usuário.
+   * **[!UICONTROL Inserir contexto]**: coleta informações sobre a localização do usuário.
+   * **[!UICONTROL Dicas de agente-usuário de alta entropia]**: coleta informações mais detalhadas sobre o dispositivo do usuário.
 
 >[!TIP]
 >
-A variável **[!UICONTROL Ativado antes do envio de clique em links]** é um retorno de chamada obsoleto que só é visível para propriedades que já o têm configurado. É a tag equivalente a [`onBeforeLinkClickSend`](/help/web-sdk/commands/configure/onbeforelinkclicksend.md) na biblioteca do JavaScript. Use o **[!UICONTROL Propriedades de clique de filtro]** retorno de chamada para filtrar ou ajustar dados de cliques, ou use o **[!UICONTROL Ativado antes do retorno de chamada do envio do evento]** para filtrar ou ajustar o conteúdo geral enviado para o Adobe. Se ambas as opções **[!UICONTROL Propriedades de clique de filtro]** retorno de chamada e o **[!UICONTROL Ativado antes do envio de clique em links]** retorno de chamada estiverem definidos, somente a variável **[!UICONTROL Propriedades de clique de filtro]** o retorno de chamada é executado.
+O campo **[!UICONTROL Ativado antes do link clicar em enviar]** é um retorno de chamada obsoleto visível apenas para propriedades que já o têm configurado. É a marca equivalente a [`onBeforeLinkClickSend`](/help/web-sdk/commands/configure/onbeforelinkclicksend.md) na biblioteca JavaScript. Use o retorno de chamada **[!UICONTROL Filtrar propriedades de clique]** para filtrar ou ajustar dados de clique, ou use a **[!UICONTROL Ativar antes de enviar o retorno de chamada]** para filtrar ou ajustar a carga geral enviada para o Adobe. Se o retorno de chamada **[!UICONTROL Propriedades de clique de Filtro]** e o retorno de chamada **[!UICONTROL Ativado antes do envio de cliques em links]** estiverem definidos, somente o retorno de chamada **[!UICONTROL Propriedades de clique de Filtro]** será executado.
 
 ## Definir configurações de coleção de mídia {#media-collection}
 
@@ -141,14 +141,14 @@ O recurso de coleção de mídia ajuda a coletar dados relacionados a sessões d
 
 Os dados coletados podem incluir informações sobre reprodução de mídia, pausas, conclusões e outros eventos relacionados. Depois de coletados, é possível enviar esses dados para a Adobe Experience Platform e/ou Adobe Analytics para gerar relatórios. Esse recurso fornece uma solução abrangente para rastrear e entender o comportamento de consumo de mídia no site.
 
-![Imagem que mostra as configurações da coleção de mídia da extensão de tag do SDK da Web na interface do usuário de tags](assets/media-collection.png)
+![Imagem mostrando as configurações de coleção de mídia da extensão de marca do SDK da Web na Interface do Usuário de Marcas](assets/media-collection.png)
 
 
-* **[!UICONTROL Canal]**: o nome do canal em que a coleção de mídia ocorre. Exemplo: `Video channel`.
+* **[!UICONTROL Canal]**: o nome do canal onde ocorre a coleção de mídia. Exemplo: `Video channel`.
 * **[!UICONTROL Nome do player]**: o nome do reprodutor de mídia.
-* **[!UICONTROL Versão do aplicativo]**: a versão do aplicativo do reprodutor de mídia.
-* **[!UICONTROL Intervalo de ping principal]**: Frequência de pings para o conteúdo principal, em segundos. O valor padrão é `10`. Os valores podem variar de `10` para `50` segundos.  Se nenhum valor for especificado, o valor padrão será usado ao usar [sessões rastreadas automaticamente](../../../../web-sdk/commands/createmediasession.md#automatic).
-* **[!UICONTROL Intervalo de ping do anúncio]**: Frequência de pings para conteúdo de anúncio, em segundos. O valor padrão é `10`. Os valores podem variar de `1` para `10` segundos. Se nenhum valor for especificado, o valor padrão será usado ao usar [sessões rastreadas automaticamente](../../../../web-sdk/commands/createmediasession.md#automatic)
+* **[!UICONTROL Versão do Aplicativo]**: a versão do aplicativo do reprodutor de mídia.
+* **[!UICONTROL Intervalo de ping principal]**: Frequência de pings para o conteúdo principal, em segundos. O valor padrão é `10`. Os valores podem variar de `10` a `50` segundos.  Se nenhum valor for especificado, o valor padrão será usado ao usar [sessões rastreadas automaticamente](../../../../web-sdk/commands/createmediasession.md#automatic).
+* **[!UICONTROL Intervalo de ping do anúncio]**: Frequência de pings para o conteúdo do anúncio, em segundos. O valor padrão é `10`. Os valores podem variar de `1` a `10` segundos. Se nenhum valor for especificado, o valor padrão será usado ao usar [sessões rastreadas automaticamente](../../../../web-sdk/commands/createmediasession.md#automatic)
 
 ## Configurar substituições de sequência de dados {#datastream-overrides}
 
@@ -161,7 +161,7 @@ Criar uma substituição de configuração da sequência de dados é um processo
 1. Primeiro, você deve definir as substituições de configuração da sequência na [página de configuração da sequência de dados](/help/datastreams/configure.md).
 2. Em seguida, você deve enviar as substituições para o Edge Network por meio de um comando do SDK da Web ou usando a extensão de tag do SDK da Web.
 
-Ver a sequência de dados [documentação de substituições de configuração](/help/datastreams/overrides.md) para obter instruções detalhadas sobre como substituir configurações de sequência de dados.
+Consulte a [documentação de substituições de configuração](/help/datastreams/overrides.md) da sequência de dados para obter instruções detalhadas sobre como substituir configurações da sequência de dados.
 
 Como alternativa à transmissão de sobreposições por meio de um comando do SDK da Web, você pode configurar as sobreposições na tela de extensão de tag mostrada abaixo.
 
@@ -169,10 +169,10 @@ Como alternativa à transmissão de sobreposições por meio de um comando do SD
 >
 As substituições de fluxo de dados devem ser configuradas com base no ambiente. Os ambientes de desenvolvimento, armazenamento temporário e produção têm substituições separadas. Você pode copiar as configurações entre elas usando as opções dedicadas mostradas na tela abaixo.
 
-![Imagem que mostra as sobreposições de configuração da sequência de dados usando a página de extensão de tag do SDK da Web.](assets/datastream-overrides.png)
+![Imagem mostrando as substituições da configuração da sequência de dados usando a página de extensão de marca do SDK da Web.](assets/datastream-overrides.png)
 
 ## Definir configurações avançadas
 
-Use o **[!UICONTROL Caminho base do Edge]** se precisar alterar o caminho base usado para interagir com o Edge Network. Isso não deve exigir atualização, mas no caso de você participar de um beta ou alfa, o Adobe pode solicitar que você altere esse campo.
+Use o campo **[!UICONTROL caminho base do Edge]** se precisar alterar o caminho base usado para interagir com o Edge Network. Isso não deve exigir atualização, mas no caso de você participar de um beta ou alfa, o Adobe pode solicitar que você altere esse campo.
 
-![Imagem mostrando as configurações avançadas usando a página de extensão de tag do SDK da Web.](assets/advanced-settings.png)
+![Imagem mostrando as configurações avançadas usando a página de extensão de marca do SDK da Web.](assets/advanced-settings.png)

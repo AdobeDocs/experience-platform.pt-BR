@@ -4,7 +4,7 @@ description: Saiba mais sobre a opção de hospedagem padrão para implantar bui
 exl-id: 9042c313-b0d3-4f6e-963d-0051d760fd16
 source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
 workflow-type: tm+mt
-source-wordcount: '1173'
+source-wordcount: '1177'
 ht-degree: 88%
 
 ---
@@ -76,7 +76,7 @@ Essas invalidações de cache escalonadas dão aos grupos de servidores de orige
 
 As builds de biblioteca também são armazenadas em cache no navegador por meio do uso do cabeçalho HTTP `cache-control`. Ao usar hosts gerenciados pela Adobe, você não tem controle sobre os cabeçalhos retornados nas respostas da API, portanto, o padrão da Adobe para cache é usado. Em outras palavras, não é possível utilizar cabeçalhos personalizados para hosts gerenciados pela Adobe. Se precisar de um cabeçalho `cache-control` personalizado, talvez você queira considerar a hospedagem [automática](self-hosting-libraries.md).
 
-A hora de expiração da build da biblioteca em cache do navegador (determinada pela variável `cache-control` ) varia de acordo com o ambiente de tag que você está usando:
+O tempo de expiração da build de biblioteca em cache do navegador (determinado pelo cabeçalho `cache-control`) varia de acordo com o ambiente de tag que você está usando:
 
 | Ambiente | Valor de `cache-control` |
 | --- | --- |
@@ -88,7 +88,7 @@ Como a tabela acima indica, o armazenamento em cache do navegador não é compat
 
 Os cabeçalhos de controle de cache são aplicados apenas ao build da biblioteca principal. Todos os sub-recursos abaixo da biblioteca principal são sempre considerados novos e, portanto, não há necessidade de armazená-los em cache no navegador.
 
-## Usar a hospedagem gerenciada pela Adobe na interface do usuário do 
+## Uso da hospedagem gerenciada por Adobe na interface
 
 Quando você cria pela primeira vez uma propriedade na interface da Platform ou na interface da Coleção de dados, um host gerenciado por Adobe é automaticamente criado para você. Todos os ambientes disponíveis que têm propriedades imediatamente utilizáveis também são atribuídos ao host gerenciado pela Adobe por padrão.
 
@@ -98,7 +98,6 @@ Quando você cria pela primeira vez uma propriedade na interface da Platform ou 
 >
 >1. Selecione a guia **[!UICONTROL Hosts]** na propriedade e selecione **[!UICONTROL Adicionar host]**.
 >1. Forneça um nome para o host, selecione **[!UICONTROL Gerenciado pela Adobe]** como tipo de host e selecione **[!UICONTROL Salvar]**.
-
 >
 >Em seguida, é possível atribuir novamente seus ambientes ao host gerenciado pela Adobe, conforme desejado.
 

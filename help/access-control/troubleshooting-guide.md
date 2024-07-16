@@ -6,30 +6,30 @@ description: Este documento fornece respostas a perguntas frequentes sobre o con
 exl-id: c299c0c4-dbee-4e6d-8af4-2446444bed69
 source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '407'
+source-wordcount: '406'
 ht-degree: 0%
 
 ---
 
 # Guia de solução de problemas de controle de acesso
 
-Este documento fornece respostas a perguntas frequentes sobre o controle de acesso no Adobe Experience Platform. Para perguntas e solução de problemas relacionados a outros [!DNL Platform] serviços, consulte o [guia de solução de problemas do Experience Platform](../landing/troubleshooting.md).
+Este documento fornece respostas a perguntas frequentes sobre o controle de acesso no Adobe Experience Platform. Para perguntas e soluções de problemas relacionadas a outros serviços do [!DNL Platform], consulte o [guia de solução de problemas do Experience Platform](../landing/troubleshooting.md).
 
-[!DNL Experience Platform] utiliza perfis de produto no [Adobe Admin Console](https://adminconsole.adobe.com) para fornecer controle de acesso com base em funções, vinculando usuários com permissões e sandboxes.  Consulte a [visão geral do controle de acesso](home.md) para obter mais informações.
+O [!DNL Experience Platform] aproveita perfis de produto no [Adobe Admin Console](https://adminconsole.adobe.com) para fornecer controle de acesso baseado em função, vinculando usuários com permissões e sandboxes.  Consulte a [visão geral do controle de acesso](home.md) para obter mais informações.
 
 ## Onde posso encontrar minhas permissões de acesso atuais?
 
-Se você for um administrador de sistema, administrador de produto ou administrador de perfil de produto da organização, poderá exibir o perfil de produto atribuído e as permissões fornecidas na Adobe Admin Console. Consulte a [guia do usuário de controle de acesso](./ui/overview.md) para obter instruções sobre como navegar no [!DNL Admin Console] para exibir as permissões de um perfil de produto.
+Se você for um administrador de sistema, administrador de produto ou administrador de perfil de produto da organização, poderá exibir o perfil de produto atribuído e as permissões fornecidas na Adobe Admin Console. Consulte o [guia do usuário de controle de acesso](./ui/overview.md) para obter instruções sobre como navegar no [!DNL Admin Console] para exibir as permissões de um perfil de produto.
 
-Se você não for um administrador, ainda poderá visualizar suas permissões de acesso atuais enviando uma solicitação para o `/acl/effective-policies` ponto de extremidade na API de controle de acesso. Consulte a seção &quot;Exibir políticas efetivas&quot; em [guia do desenvolvedor de controle de acesso](./api/effective-policies.md) para obter mais informações.
+Se você não for um administrador, ainda poderá exibir suas permissões de acesso atuais enviando uma solicitação para o ponto de extremidade `/acl/effective-policies` na API de Controle de Acesso. Consulte a seção &quot;Exibir políticas efetivas&quot; no [guia do desenvolvedor de controle de acesso](./api/effective-policies.md) para obter mais informações.
 
-## Alguns recursos na [!DNL Platform] A interface do usuário não está disponível. Como o acesso a esses recursos é controlado por permissões?
+## Alguns recursos na interface do usuário do [!DNL Platform] não estão disponíveis. Como o acesso a esses recursos é controlado por permissões?
 
-Se você não tiver permissões de acesso para um [!DNL Platform] recurso, esse recurso ficará oculto ou esmaecido na [!DNL Experience Platform] IU. Por exemplo, para visualizar o &quot;[!UICONTROL Perfis]&quot;, você deve ter a tag &quot;[!UICONTROL Exibir perfis]&quot; ou &quot;[!UICONTROL Gerenciar perfis]&quot;. Entre em contato com o administrador se precisar de permissões adicionais para [!DNL Experience Platform] recursos.
+Se você não tiver permissões de acesso para um recurso [!DNL Platform] específico, esse recurso ficará oculto ou esmaecido na interface do usuário [!DNL Experience Platform]. Por exemplo, para exibir a guia &quot;[!UICONTROL Perfis]&quot;, você deve ter as permissões &quot;[!UICONTROL Exibir Perfis]&quot; ou &quot;[!UICONTROL Gerenciar Perfis]&quot;. Contate o administrador se precisar de permissões adicionais para os recursos do [!DNL Experience Platform].
 
 ## Como as permissões são agrupadas e qual grupo contém a permissão que desejo usar?
 
-As permissões são agrupadas e categorizadas pelo [!DNL Platform] recursos aos quais se aplicam (como [!DNL Data Management] e [!DNL Profile Management]). Para obter uma lista completa das permissões disponíveis e os grupos aos quais elas pertencem, consulte a [seção de permissões](home.md#permissions) na visão geral do controle de acesso.
+As permissões são agrupadas e categorizadas pelos recursos [!DNL Platform] aos quais se aplicam (como [!DNL Data Management] e [!DNL Profile Management]). Para obter uma lista completa das permissões disponíveis e dos grupos aos quais elas pertencem, consulte a [seção de permissões](home.md#permissions) na visão geral do controle de acesso.
 
 Consulte a [visão geral do controle de acesso](home.md) para obter mais informações sobre como fornecer controle de acesso baseado em função.
 

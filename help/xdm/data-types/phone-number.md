@@ -7,11 +7,11 @@ exl-id: b84e48f9-bbb4-4b8b-9476-4bc1c455ecfd
 source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
 source-wordcount: '187'
-ht-degree: 1%
+ht-degree: 16%
 
 ---
 
-# [!UICONTROL Número de telefone] tipo de dados
+# Tipo de dados [!UICONTROL Número de telefone]
 
 [!UICONTROL Número de telefone] é um tipo de dados XDM padrão que descreve os detalhes de um número de telefone.
 
@@ -20,8 +20,8 @@ ht-degree: 1%
 | Propriedade | Descrição |
 | --- | --- |
 | `extension` | O número de discagem interna usado para ligar de uma central privada, operadora ou mesa telefônica. |
-| `number` | O telefone. Observe que o número de telefone é uma string e pode incluir caracteres significativos, como colchetes `()`, hífens `-`ou caracteres para indicar identificadores de submarcação como extensões `x` por exemplo, `1-353(0)18391111` ou `+613 9403600x1234`. |
-| `primary` | Um valor booleano que indica se este é o número de telefone principal do indivíduo. Ao contrário do endereço ou endereço de email, pode haver vários números de telefone principais, um por canal de comunicação. O canal de comunicação é definido pelo tipo (indicado pelo nome da propriedade principal): `textMessaging`, `mobile`, `phone`, `home`, `work`, `unknown`, e `fax`. |
+| `number` | O telefone. Observe que o número de telefone é uma cadeia de caracteres e pode incluir caracteres significativos, como colchetes `()`, hifens `-` ou caracteres para indicar identificadores de submarcação como extensões `x`, por exemplo, `1-353(0)18391111` ou `+613 9403600x1234`. |
+| `primary` | Um valor booleano que indica se este é o número de telefone principal do indivíduo. Ao contrário do endereço ou endereço de email, pode haver vários números de telefone principais, um por canal de comunicação. O canal de comunicação é definido pelo tipo (indicado pelo nome da propriedade pai): `textMessaging`, `mobile`, `phone`, `home`, `work`, `unknown` e `fax`. |
 | `status` | Indica se o número de telefone pode ser usado atualmente. |
 | `statusReason` | Uma descrição do status atual. |
 | `validity` | Um nível de correção técnica do número de telefone. |

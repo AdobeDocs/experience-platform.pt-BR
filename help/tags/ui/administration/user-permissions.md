@@ -4,8 +4,8 @@ description: Saiba mais sobre os diferentes tipos de permissões disponíveis pa
 exl-id: 9b48847a-6133-4dbd-b17d-e7b88152ad7d
 source-git-commit: fa4fc154f57243250dec9bdf9557db13ef7768e8
 workflow-type: tm+mt
-source-wordcount: '1299'
-ht-degree: 22%
+source-wordcount: '1305'
+ht-degree: 18%
 
 ---
 
@@ -54,7 +54,7 @@ A tabela a seguir descreve os direitos de propriedade disponíveis e as funciona
 | --- | --- |
 | **Desenvolver** | Isso permite executar as seguintes ações:<ul><li>Criar regras e elementos de dados</li><li>Criar bibliotecas e criá-las em ambientes de desenvolvimento existentes</li><li>Enviar uma biblioteca para aprovação</li></ul>A maioria das tarefas diárias na interface do usuário exige esse direito. |
 | **Aprovar** | Isso permite que você leve um build e uma biblioteca enviada para o ambiente de preparo. Você também pode aprovar uma biblioteca para publicação depois que o teste for concluído. |
-| **Publicar** | Isso permite publicar bibliotecas aprovadas no ambiente de produção. |
+| **Publish** | Isso permite publicar bibliotecas aprovadas no ambiente de produção. |
 | **Gerenciar extensões** | Isso permite executar as seguintes ações: <ul><li>Instalar novas extensões em uma propriedade</li><li>Modificar a configuração de uma extensão já instalada</li><li>Excluir uma extensão</li></ul>Consulte a documentação de visão geral das extensões para obter [mais informações sobre extensões](../managing-resources/extensions/overview.md). Normalmente, essa função pertence aos setores de TI ou de Marketing, dependendo de como funciona a sua organização. |
 | **Gerenciar ambientes** | Isso permite criar e modificar ambientes. Consulte a [documentação de ambientes](../publishing/environments.md) para obter mais informações. Normalmente, essa função pertence ao grupo de TI. |
 
@@ -66,7 +66,7 @@ Os direitos da empresa se aplicam às permissões que abrangem várias proprieda
 
 | Direito da empresa | Descrição |
 | --- | --- |
-| **Gerenciar propriedades** | Isso permite executar as seguintes ações:<ul><li>Criar novas propriedades</li><li>Modificar metadados e configurações no nível de propriedade</li><li>Excluir propriedades</li></ul>São administradores que normalmente executam essa função. Consulte a [documentação de propriedades](companies-and-properties.md) para obter mais informações. |
+| **Gerenciar propriedades** | Isso permite executar as seguintes ações:<ul><li>Criar novas propriedades</li><li>Modificar metadados e configurações no nível de propriedade</li><li>Excluir propriedades</li></ul>Os administradores normalmente executam essa função. Consulte a [documentação de propriedades](companies-and-properties.md) para obter mais informações. |
 | **Desenvolver extensões** | Concede a capacidade de criar e modificar pacotes de extensão da empresa, incluindo versões privadas e solicitações de lançamento de versão pública. |
 | **Gerenciar configurações do aplicativo** | Isso só estará disponível para o se você tiver uma licença do Adobe Journey Optimizer ou outra solução que conceda acesso a mensagens móveis no aplicativo e por push.  Permite gerenciar os aplicativos que a Experience Cloud conhece, juntamente com as credenciais de push necessárias para se comunicar com o serviço Firebase Cloud Messaging e o Apple Push Notification Service. |
 
@@ -76,7 +76,7 @@ Os direitos da empresa se aplicam às permissões que abrangem várias proprieda
 
 O total de permissões de um usuário individual é determinado pelo total de associações a diferentes perfis de produto. Se um usuário pertencer a vários perfis de produto, as permissões de cada perfil serão adicionadas juntas, em vez de serem multiplicadas.
 
-Por exemplo, o Perfil de produto A concede a você o direito de desenvolvimento para a Propriedade 1. O Perfil do produto B concede a você o direito de Publicar para a Propriedade 2. Nesse caso, você pode Desenvolver na Propriedade 1 e Publicar na Propriedade 2, mas não pode publicar na Propriedade 1 nem Desenvolver na Propriedade 2, pois não recebeu direitos explícitos para isso.
+Por exemplo, o Perfil de produto A concede a você o direito de desenvolvimento para a Propriedade 1. O Perfil do produto B concede a você o direito do Publish para a Propriedade 2. Nesse caso, você pode Desenvolver na Propriedade 1 e Publish na Propriedade 2, mas não pode publicar na Propriedade 1 nem Desenvolver na Propriedade 2, pois não recebeu direitos explícitos para isso.
 
 ## Cenários de concedimento de direitos
 
@@ -102,7 +102,7 @@ Para fazer isso:
 
 Uma empresa com assinatura Empresarial pode ter vários sites divididos geograficamente, com equipes diferentes responsáveis por cada local. Nessas equipes, indivíduos diferentes desenvolvem e publicam.
 
-Isso é semelhante à &quot;Separação de tarefas&quot; mencionada acima, mas é organizado por áreas geográficas. Por exemplo, você pode criar um perfil &quot;Desenvolver&quot; e um perfil &quot;Publicar&quot; para a América do Norte, além de criar grupos &quot;Desenvolver&quot; e &quot;Publicar&quot; separados para a Europa.
+Isso é semelhante à &quot;Separação de tarefas&quot; acima, mas organizado por áreas geográficas. Por exemplo, você pode criar um perfil &quot;Desenvolver&quot; e um perfil &quot;Publish&quot; para a América do Norte, além de criar grupos &quot;Desenvolver&quot; e &quot;Publish&quot; separados para a Europa.
 
 ## Exemplo de funções
 
@@ -110,10 +110,10 @@ A tabela a seguir fornece alguns exemplos dos tipos de funções que você pode 
 
 | Função | Descrição | Propriedades | Direitos de propriedade | Direitos da empresa |
 | --- | --- | --- | --- | --- |
-| O gerente | Quer ver o que está acontecendo no sistema, mas não deve poder fazer alterações. | Incluir automaticamente | (None) | (None) |
+| O gerente | Quer ver o que está acontecendo no sistema, mas não deve poder fazer alterações. | Incluir automaticamente | (Nenhum) | (Nenhum) |
 | O profissional de marketing | Pode instalar extensões e configurar novas tags para propriedades existentes, mas não pode publicar nos ambientes de preparo ou produção. | Incluir automaticamente | <ul><li>Desenvolver</li><li>Gerenciar extensões</li></ul> | <ul><li>Gerenciar propriedades</li></ul> |
 | O desenvolvedor de aplicativos móveis | É responsável pela implementação do Adobe e de soluções de terceiros dentro de um aplicativo móvel nativo. | Incluir automaticamente | <ul><li>Desenvolver</li><li>Gerenciar extensões</li></ul> | <li>Gerenciar propriedades</li><li>Gerenciar configurações do aplicativo</li> |
-| A equipe de TI | Na verdade, o não modifica tags, mas tem controle total sobre os ambientes de preparo e produção e o que está neles. | Incluir automaticamente | (None) | <ul><li>Aprovar</li><li>Publicar</li><li>Gerenciar ambientes</li></ul> |
+| A equipe de TI | Na verdade, o não modifica tags, mas elas têm controle total sobre os ambientes de preparo e produção e o que está neles. | Incluir automaticamente | (Nenhum) | <ul><li>Aprovar</li><li>Publicar</li><li>Gerenciar ambientes</li></ul> |
 | O desenvolvedor de extensões | Desenvolve extensões e pode enviar para aprovação, mas não pode publicá-las ou adicioná-las a propriedades existentes. | Incluir automaticamente | <ul><li>Desenvolver</li></ul> | <ul><li>Gerenciar propriedades</li><li>Desenvolver extensões</li></ul> |
 | O superusuário | Faz tudo. | Incluir automaticamente | <ul><li>Desenvolver</li><li>Aprovar</li><li>Publicar</li><li>Gerenciar extensões</li><li>Gerenciar ambientes</li></ul> | <ul><li>Gerenciar propriedades</li></ul> |
 
@@ -121,4 +121,4 @@ A tabela a seguir fornece alguns exemplos dos tipos de funções que você pode 
 
 ## Próximas etapas
 
-Este documento forneceu uma visão geral das permissões disponíveis para tags no Experience Platform. Para obter etapas sobre como configurar perfis de produto para tags na Adobe Admin Console, consulte o guia em [gerenciamento de permissões de usuário para coleta de dados](../../../collection/permissions.md).
+Este documento forneceu uma visão geral das permissões disponíveis para tags no Experience Platform. Para obter etapas sobre como configurar perfis de produtos para tags na Adobe Admin Console, consulte o manual sobre [gerenciamento de permissões de usuário para coleta de dados](../../../collection/permissions.md).

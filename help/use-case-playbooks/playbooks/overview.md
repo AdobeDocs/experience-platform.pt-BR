@@ -29,7 +29,7 @@ O que há neste guia de documentação:
 
 ## Visão geral {#overview}
 
-[!UICONTROL Playbooks de caso de uso] O pode ajudar você a superar o problema ao começar a usar o Real-Time CDP ou o Adobe Journey Optimizer, quando talvez você não saiba exatamente com o que começar ou como criar os ativos certos para atingir os casos de uso desejados. Os manuais de casos de uso podem ajudar você aqui ao:
+Os [!UICONTROL manuais de casos de uso] podem ajudar a resolver o problema ao começar a usar o Real-Time CDP ou o Adobe Journey Optimizer, quando talvez você não saiba exatamente com o que começar ou como criar os ativos certos para atender aos casos de uso desejados. Os manuais de casos de uso podem ajudar você aqui ao:
 
 * Mostrando casos de uso para inspiração
 * Criar ativos diferentes para que você use, teste e promova para produção quando estiver pronto.
@@ -50,11 +50,11 @@ Assista a este vídeo para saber como descobrir, criar, publicar e solucionar pr
 
 ## Disponibilidade {#availability}
 
-Alguns [!UICONTROL Playbooks de caso de uso] são adaptados aos casos de uso do Real-Time CDP, enquanto outros são mais adequados para clientes que usam o Journey Optimizer. Navegue pelo catálogo para encontrar os manuais mais adequados para seu produto e caso de uso. Saiba mais sobre o Real-Time CDP e o Journey Optimizer no [descrições de produto do Adobe](https://helpx.adobe.com/legal/product-descriptions.html?lang=pt-BR).
+Alguns [!UICONTROL manuais de casos de uso] foram adaptados aos casos de uso do Real-Time CDP, enquanto outros são mais adequados para clientes que usam o Journey Optimizer. Navegue pelo catálogo para encontrar os manuais mais adequados para seu produto e caso de uso. Saiba mais sobre o Real-Time CDP e o Journey Optimizer na [descrição dos produtos Adobe](https://helpx.adobe.com/legal/product-descriptions.html?lang=pt-BR).
 
 ## Guias de interface {#ui-guides}
 
-Depois de decidir sobre o manual de estratégia que deseja usar, selecione-o na interface e comece a usá-lo. Leia os guias de interface do usuário no [como escolher o manual correto a partir de uma seleção](/help/use-case-playbooks/playbooks/choose.md) para você e [como criar, compartilhar e reutilizar instâncias do manual](/help/use-case-playbooks/playbooks/create-share-reuse.md) para obter informações completas sobre como criar instâncias e aproveitar ao máximo um manual. Para saber como promover vários ativos da sandbox inspiradora para outras sandboxes de desenvolvimento e, em seguida, para produção, leia a documentação em [percepção de dados](/help/use-case-playbooks/playbooks/data-awareness.md).
+Depois de decidir sobre o manual de estratégia que deseja usar, selecione-o na interface e comece a usá-lo. Leia os guias da interface do usuário em [como escolher o manual correto a partir de uma seleção](/help/use-case-playbooks/playbooks/choose.md) para você e [como criar, compartilhar e reutilizar instâncias do manual](/help/use-case-playbooks/playbooks/create-share-reuse.md) para obter informações completas sobre como criar instâncias e aproveitar ao máximo um manual. Para saber como promover vários ativos da sandbox inspiradora para outras sandboxes de desenvolvimento e, em seguida, para produção, leia a documentação em [reconhecimento de dados](/help/use-case-playbooks/playbooks/data-awareness.md).
 
 ## Solução de problemas e limitações conhecidas {#trouble-shooting-known-limitations}
 

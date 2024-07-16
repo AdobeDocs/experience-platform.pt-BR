@@ -16,13 +16,13 @@ Este documento fornece uma visão geral das configurações que você precisa pr
 
 ## Especificação de conexão
 
-As especificações de conexão retornam as propriedades do conector de uma origem. Eles incluem especificações de autenticação relacionadas à criação de conexões de base e de origem e uma ID de especificação de conexão fixa que é atribuída a uma origem específica. As especificações de conexão são independentes de locatário e de organização. Uma especificação de conexão típica contém informações básicas sobre uma determinada fonte, bem como três seções distintas: `authSpec`, `sourceSpec`, e `exploreSpec`.
+As especificações de conexão retornam as propriedades do conector de uma origem. Eles incluem especificações de autenticação relacionadas à criação de conexões de base e de origem e uma ID de especificação de conexão fixa que é atribuída a uma origem específica. As especificações de conexão são independentes de locatário e de organização. Uma especificação de conexão típica contém informações básicas sobre uma determinada origem, bem como três seções distintas: `authSpec`, `sourceSpec` e `exploreSpec`.
 
 | Especificações | Descrição |
 | --- | --- |
-| `authSpec` | A variável `authSpec` matriz contém informações sobre os parâmetros de autenticação necessários para conectar uma origem à Platform. Qualquer origem fornecida pode suportar vários tipos diferentes de autenticação. |
-| `sourceSpec` | A variável `sourceSpec` O array contém informações gerais relacionadas a uma origem, incluindo informações sobre atributos necessários para apresentar a origem na interface, link de documentação e parâmetros relacionados a paginação, cabeçalho, corpo e agendamento. Além disso, `sourceSpec` descreve o esquema dos parâmetros necessários para criar uma conexão de origem a partir de uma conexão de base e é necessário para criar uma conexão de origem. |
-| `exploreSpec` | A variável `exploreSpec` A matriz define os parâmetros necessários para explorar e inspecionar os objetos contidos na origem. A variável `exploreSpec` também define o formato de resposta retornado quando objetos são explorados e inspecionados. |
+| `authSpec` | A matriz `authSpec` contém informações sobre os parâmetros de autenticação necessários para conectar uma origem à Platform. Qualquer origem fornecida pode suportar vários tipos diferentes de autenticação. |
+| `sourceSpec` | A matriz `sourceSpec` contém informações gerais relacionadas a uma origem, incluindo informações sobre atributos necessários para apresentar a origem na interface, link de documentação e parâmetros relacionados à paginação, cabeçalho, corpo e agendamento. Além disso, `sourceSpec` descreve o esquema dos parâmetros necessários para criar uma conexão de origem a partir de uma conexão de base e é necessário para criar uma conexão de origem. |
+| `exploreSpec` | A matriz `exploreSpec` define os parâmetros necessários para explorar e inspecionar objetos contidos na sua origem. O `exploreSpec` também define o formato de resposta retornado quando objetos são explorados e inspecionados. |
 
 {style="table-layout:auto"}
 

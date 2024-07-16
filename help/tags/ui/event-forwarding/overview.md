@@ -24,13 +24,13 @@ O encaminhamento de eventos no Adobe Experience Platform permite enviar dados de
 
 Este documento fornece uma visão geral de alto nível do encaminhamento de eventos na Platform.
 
-![Encaminhamento de eventos no ecossistema de coleta de dados.](../../../collection/images/home/event-forwarding.png)
+![Encaminhamento de eventos no ecossistema da coleção de dados.](../../../collection/images/home/event-forwarding.png)
 
 >[!NOTE]
 >
->Para obter informações sobre como o encaminhamento de eventos se encaixa no ecossistema de coleta de dados da Platform, consulte o [visão geral da coleção de dados](../../../collection/home.md).
+>Para obter informações sobre como o encaminhamento de eventos se encaixa no ecossistema de coleta de dados da Platform, consulte a [visão geral da coleta de dados](../../../collection/home.md).
 
-Encaminhamento de eventos combinado com o Adobe Experience Platform [SDK da Web](/help/web-sdk/home.md) e [SDK móvel](https://experienceleague.adobe.com/docs/platform-learn/data-collection/mobile-sdk/overview.html) oferece os seguintes benefícios:
+O encaminhamento de eventos, combinado com o [SDK da Web](/help/web-sdk/home.md) e o [SDK móvel](https://experienceleague.adobe.com/docs/platform-learn/data-collection/mobile-sdk/overview.html) da Adobe Experience Platform, oferece os seguintes benefícios:
 
 **Desempenho**:
 
@@ -44,74 +44,74 @@ Encaminhamento de eventos combinado com o Adobe Experience Platform [SDK da Web]
 
 ## Diferenças entre o encaminhamento de eventos e as tags {#differences-from-tags}
 
-Em termos de configuração, o encaminhamento de eventos usa muitos dos mesmos conceitos que as tags, como [regras](../managing-resources/rules.md), [elementos de dados](../managing-resources/data-elements.md), e [extensões](../managing-resources/extensions/overview.md). A principal diferença entre os dois pode ser resumida da seguinte forma:
+Em termos de configuração, o encaminhamento de eventos usa muitos dos mesmos conceitos que as marcas, como [regras](../managing-resources/rules.md), [elementos de dados](../managing-resources/data-elements.md) e [extensões](../managing-resources/extensions/overview.md). A principal diferença entre os dois pode ser resumida da seguinte forma:
 
-* Tags **coleta** dados do evento de um site ou aplicativo móvel nativo e os envia para o Platform Edge Network.
-* Encaminhamento de eventos **envia** dados de evento de entrada do Platform Edge Network para um endpoint que representa um destino final ou um endpoint que fornece dados com os quais você deseja enriquecer a carga original.
+* As marcas **coletam** dados do evento de um site ou aplicativo móvel nativo e os enviam para o Platform Edge Network.
+* O encaminhamento de eventos **envia** dados de eventos de entrada do Edge Network da Platform para um ponto de extremidade que representa um destino final ou um ponto de extremidade que fornece dados com os quais você deseja enriquecer a carga original.
 
 Embora as tags coletem dados do evento diretamente do seu site ou aplicativo móvel nativo usando a plataforma Web e SDKs móveis, o encaminhamento de eventos exige que os dados do evento já sejam enviados pelo Platform Edge Network para encaminhá-los aos destinos. Em outras palavras, você deve implementar o SDK da Web ou móvel da Platform na sua propriedade digital (por meio de tags ou usando código bruto) para usar o encaminhamento de eventos.
 
 ### Propriedades {#properties}
 
-O encaminhamento de eventos mantém seu próprio armazenamento de propriedades separadas das tags, que podem ser visualizadas na interface do usuário do Experience Platform ou na interface da Coleção de dados ao selecionar **[!UICONTROL Encaminhamento de evento]** no painel de navegação esquerdo.
+O encaminhamento de eventos mantém seu próprio armazenamento de propriedades separado das marcas, que podem ser visualizadas na interface do usuário do Experience Platform ou na interface da Coleção de dados selecionando **[!UICONTROL Encaminhamento de eventos]** na navegação à esquerda.
 
 >[!TIP]
 >
 >Use a na ajuda do produto, no painel direito, para saber mais sobre o encaminhamento de eventos e visualizar os recursos adicionais disponíveis.
 
-![Propriedades de encaminhamento de eventos na interface da Coleção de dados.](../../images/ui/event-forwarding/overview/properties.png)
+![Propriedades de encaminhamento de eventos na Interface da Coleção de Dados.](../../images/ui/event-forwarding/overview/properties.png)
 
-Lista de propriedades de todo o encaminhamento de eventos **[!UICONTROL Edge]** como sua plataforma. Eles não fazem distinção entre Web ou dispositivos móveis porque processam apenas dados recebidos do Edge Network da plataforma, que pode receber dados de evento de plataformas da Web e móveis.
+Todas as propriedades do encaminhamento de eventos listam **[!UICONTROL Edge]** como sua plataforma. Eles não fazem distinção entre Web ou dispositivos móveis porque processam apenas dados recebidos do Edge Network da plataforma, que pode receber dados de evento de plataformas da Web e móveis.
 
 ### Extensões {#extensions}
 
-O encaminhamento de eventos tem seu próprio catálogo de extensões compatíveis, como o [Núcleo](../../extensions/server/core/overview.md) extensão e [Adobe Cloud Connector](../../extensions/server/cloud-connector/overview.md) extensão. É possível visualizar as extensões disponíveis para as propriedades do encaminhamento de eventos na interface do usuário selecionando **[!UICONTROL Extensões]** na navegação à esquerda, seguido por **[!UICONTROL Catálogo]**.
+O encaminhamento de eventos tem seu próprio catálogo de extensões compatíveis, como a extensão [Core](../../extensions/server/core/overview.md) e a extensão [Adobe Cloud Connector](../../extensions/server/cloud-connector/overview.md). Você pode exibir as extensões disponíveis para propriedades de encaminhamento de eventos na interface selecionando **[!UICONTROL Extensões]** na navegação à esquerda, seguido por **[!UICONTROL Catálogo]**.
 
-Você pode exibir recursos adicionais disponíveis para saber mais sobre este recurso selecionando ![sobre](../../images/ui/event-forwarding/overview/about.png) no painel direito.
+Você pode ver recursos adicionais disponíveis para saber mais sobre este recurso selecionando ![sobre](../../images/ui/event-forwarding/overview/about.png) no painel direito.
 
-![Extensões de encaminhamento de eventos na interface da Coleção de dados.](../../images/ui/event-forwarding/overview/extensions.png)
+![Extensões de encaminhamento de eventos na interface da Coleção de Dados.](../../images/ui/event-forwarding/overview/extensions.png)
 
 ### Elementos de dados {#data-elements}
 
-Os tipos de elementos de dados disponíveis no encaminhamento de eventos estão limitados ao catálogo de [extensões](#extensions) que os fornecem.
+Os tipos de elementos de dados disponíveis no encaminhamento de eventos estão limitados ao catálogo de [extensões](#extensions) compatíveis que os fornecem.
 
 Embora os elementos de dados em si sejam criados e configurados da mesma forma no encaminhamento de eventos que para tags, há algumas diferenças de sintaxe importantes quando se trata de como eles fazem referência aos dados do Edge Network da plataforma.
 
 #### Fazendo referência a dados do Platform Edge Network {#data-element-path}
 
-Para referenciar dados do Platform Edge Network, você deve criar um elemento de dados que forneça um caminho válido para esses dados. Ao criar o elemento de dados na interface do usuário, selecione **[!UICONTROL Núcleo]** para a extensão e **[!UICONTROL Caminho]** para o tipo.
+Para referenciar dados do Platform Edge Network, você deve criar um elemento de dados que forneça um caminho válido para esses dados. Ao criar o elemento de dados na interface do usuário, selecione **[!UICONTROL Core]** para a extensão e **[!UICONTROL Path]** para o tipo.
 
-A variável **[!UICONTROL Caminho]** O valor do elemento de dados deve seguir o padrão `arc.event.{ELEMENT}` (por exemplo: `arc.event.xdm.web.webPageDetails.URL`). Esse caminho deve ser especificado corretamente para que os dados sejam enviados.
+O valor **[!UICONTROL Path]** do elemento de dados deve seguir o padrão `arc.event.{ELEMENT}` (por exemplo: `arc.event.xdm.web.webPageDetails.URL`). Esse caminho deve ser especificado corretamente para que os dados sejam enviados.
 
-Você pode exibir recursos adicionais disponíveis para saber mais sobre este recurso selecionando ![sobre](../../images/ui/event-forwarding/overview/about.png) no painel direito.
+Você pode ver recursos adicionais disponíveis para saber mais sobre este recurso selecionando ![sobre](../../images/ui/event-forwarding/overview/about.png) no painel direito.
 
 ![Exemplo de um elemento de dados de tipo de caminho para encaminhamento de eventos.](../../images/ui/event-forwarding/overview/data-reference.png)
 
 ### Regras {#rules}
 
-A criação de regras nas propriedades do encaminhamento de eventos funciona de maneira semelhante às tags, com a principal diferença sendo que não é possível selecionar eventos como componentes de regra. Em vez disso, uma regra de encaminhamento de eventos processa todos os eventos que recebe da [sequência de dados](../../../datastreams/overview.md) e encaminhará esses eventos para destinos se determinadas condições forem atendidas.
+A criação de regras nas propriedades do encaminhamento de eventos funciona de maneira semelhante às tags, com a principal diferença sendo que não é possível selecionar eventos como componentes de regra. Em vez disso, uma regra de encaminhamento de eventos processa todos os eventos que recebe da [sequência de dados](../../../datastreams/overview.md) e encaminha esses eventos para destinos se determinadas condições forem atendidas.
 
 Além disso, há um tempo limite de 30 segundos que se aplica a um único evento, pois ele é processado em todas as regras (e, portanto, todas as ações) em uma propriedade de encaminhamento de eventos. Isso significa que todas as regras e ações para um único evento devem ser concluídas nesse período.
 
-Você pode exibir recursos adicionais disponíveis para saber mais sobre este recurso selecionando ![sobre](../../images/ui/event-forwarding/overview/about.png) no painel direito.
+Você pode ver recursos adicionais disponíveis para saber mais sobre este recurso selecionando ![sobre](../../images/ui/event-forwarding/overview/about.png) no painel direito.
 
-![Regras de encaminhamento de eventos na interface da Coleção de dados.](../../images/ui/event-forwarding/overview/rules.png)
+![Regras de encaminhamento de eventos na Interface da Coleção de Dados.](../../images/ui/event-forwarding/overview/rules.png)
 
 #### Tokenização do elemento de dados {#tokenization}
 
-Nas regras de tags, os elementos de dados são tokenizados com um `%` no início e no fim do nome do elemento de dados (por exemplo: `%viewportHeight%`). Nas regras de encaminhamento de eventos, os elementos de dados são tokenizados com `{{` no início e `}}` no final do nome do elemento de dados (por exemplo: `{{viewportHeight}}`).
+Nas regras de marcas, os elementos de dados são tokenizados com um `%` no início e no fim do nome do elemento de dados (por exemplo: `%viewportHeight%`). Nas regras de encaminhamento de eventos, os elementos de dados são tokenizados com `{{` no início e `}}` no fim do nome do elemento de dados (por exemplo: `{{viewportHeight}}`).
 
-Você pode exibir recursos adicionais disponíveis para saber mais sobre este recurso selecionando ![sobre](../../images/ui/event-forwarding/overview/about.png) no painel direito.
+Você pode ver recursos adicionais disponíveis para saber mais sobre este recurso selecionando ![sobre](../../images/ui/event-forwarding/overview/about.png) no painel direito.
 
 ![Exemplo de um elemento de dados de tipo de caminho para encaminhamento de eventos.](../../images/ui/event-forwarding/overview/tokenization.png)
 
 #### Sequência de ações de regras {#action-sequencing}
 
-A variável [!UICONTROL Ações] de uma regra de encaminhamento de eventos é sempre executada sequencialmente. Por exemplo, se uma regra tiver duas ações, a segunda ação não iniciará a execução até que a ação anterior seja concluída (e nos casos em que uma resposta é esperada de um endpoint, esse endpoint respondeu). Certifique-se de que a ordem das ações esteja correta ao salvar uma regra. Essa sequência de execução não pode ser executada de forma assíncrona como com as regras de tag.
+A seção [!UICONTROL Actions] de uma regra de encaminhamento de eventos é sempre executada sequencialmente. Por exemplo, se uma regra tiver duas ações, a segunda ação não iniciará a execução até que a ação anterior seja concluída (e nos casos em que uma resposta é esperada de um endpoint, esse endpoint respondeu). Certifique-se de que a ordem das ações esteja correta ao salvar uma regra. Essa sequência de execução não pode ser executada de forma assíncrona como com as regras de tag.
 
 ## Segredos {#secrets}
 
-O encaminhamento de eventos permite criar, gerenciar e armazenar segredos que podem ser usados para autenticação nos servidores para os quais você está enviando dados. Consulte o guia sobre [segredos](./secrets.md) sobre os diferentes tipos de tipos de segredos disponíveis e como eles são implementados na interface do usuário do.
+O encaminhamento de eventos permite criar, gerenciar e armazenar segredos que podem ser usados para autenticação nos servidores para os quais você está enviando dados. Consulte o guia em [segredos](./secrets.md) sobre os diferentes tipos de segredos disponíveis e como eles são implementados na interface do usuário.
 
 ## Visão geral do vídeo {#video}
 
@@ -121,4 +121,4 @@ O vídeo a seguir tem como objetivo ajudá-lo a entender melhor o Encaminhamento
 
 ## Próximas etapas
 
-Este documento forneceu uma introdução de alto nível ao encaminhamento de eventos. Para obter mais informações sobre como configurar esse recurso para sua organização, consulte [guia de introdução](./getting-started.md).
+Este documento forneceu uma introdução de alto nível ao encaminhamento de eventos. Para obter mais informações sobre como configurar este recurso para sua organização, consulte o [guia de introdução](./getting-started.md).

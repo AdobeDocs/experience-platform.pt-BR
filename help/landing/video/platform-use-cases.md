@@ -9,12 +9,12 @@ thumbnail: 32806.jpg
 exl-id: 400280bd-3366-4982-b5a6-9f68c85de5e0
 source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '74'
-ht-degree: 0%
+source-wordcount: '73'
+ht-degree: 8%
 
 ---
 
-# Principais casos de uso do Experience Platform
+# Principais casos de uso da Experience Platform
 
 Este vídeo fornece uma visão geral de quatro casos de uso principais do Experience Platform:
 

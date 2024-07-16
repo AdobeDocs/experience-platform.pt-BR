@@ -5,7 +5,7 @@ exl-id: 99624234-c4e1-44bb-9567-505bc0c4723e
 source-git-commit: 34eb9151cc6bb8551553b0a8427e58871acb4dbb
 workflow-type: tm+mt
 source-wordcount: '1124'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
@@ -15,13 +15,13 @@ Os insights derivados da análise do modelo de dados tornam os dados do Adobe Re
 
 Entenda seus insights de público acessando o SQL que os capacita e gere seus próprios insights para explorar ainda mais as identidades e os perfis que compõem seus públicos. Transforme seus dados brutos em novos insights acionáveis usando o SQL modelo de dados do Real-Time CDP existente como inspiração para criar consultas para suas necessidades comerciais exclusivas.
 
-Consulte a [Exibir documentação SQL](../view-sql.md) para obter mais informações sobre como adaptar o SQL dos seus insights diretamente pela interface do Platform.
+Consulte a [Exibir documentação do SQL](../view-sql.md) para obter mais informações sobre como adaptar o SQL dos seus insights diretamente pela interface do PLatform.
 
-Os seguintes insights estão disponíveis para você usar como parte da [Painel de públicos-alvo](../guides/audiences.md) ou um personalizado [painel definido pelo usuário](../user-defined-dashboards.md). Consulte a [visão geral da personalização](../customize/overview.md) para obter instruções sobre como personalizar seu painel ou [criar e editar novos widgets](../customize/custom-widgets.md) na biblioteca de widgets e [painel definido pelo usuário](../user-defined-dashboards.md#create-widget).
+Os seguintes insights estão todos disponíveis para você usar como parte do [Painel de públicos-alvo](../guides/audiences.md) ou de um [painel definido pelo usuário](../user-defined-dashboards.md) personalizado. Consulte a [visão geral da personalização](../customize/overview.md) para obter instruções sobre como personalizar seu painel ou [criar e editar novos widgets](../customize/custom-widgets.md) na biblioteca de widgets e no [painel definido pelo usuário](../user-defined-dashboards.md#create-widget).
 
-Os seguintes insights estão disponíveis para você usar como parte da [Painel de públicos-alvo](../guides/audiences.md) ou um painel personalizado.
+Os seguintes insights estão todos disponíveis para você usar como parte do [Painel de públicos-alvo](../guides/audiences.md) ou de um painel personalizado.
 
-## Relatório de sobreposição de público {#audience-overlap-report}
+## Relatório de sobreposição de público-alvo {#audience-overlap-report}
 
 Perguntas respondidas por este insight:
 
@@ -86,7 +86,7 @@ SELECT source_segment_name,
 
 +++
 
-Consulte a [Documentação do widget Relatório de sobreposição de público](../guides/audiences.md#audience-overlap-report) para obter informações sobre a aparência e a funcionalidade desse insight.
+Consulte a [Documentação do widget Relatório de sobreposição de público](../guides/audiences.md#audience-overlap-report) para obter informações sobre a aparência e a funcionalidade deste insight.
 
 ## Sobreposição de público {#audience-overlap}
 
@@ -133,9 +133,9 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 +++
 
-Consulte a [Documentação do widget de sobreposição de público](../guides/audiences.md#audience-overlap) para obter informações sobre a aparência e a funcionalidade desse insight.
+Consulte a [Documentação do widget de sobreposição de público-alvo](../guides/audiences.md#audience-overlap) para obter informações sobre a aparência e a funcionalidade deste insight.
 
-## Tendência de alteração de tamanho do público {#audience-size-change-trend}
+## Tendência de tamanho do público-alvo {#audience-size-change-trend}
 
 Perguntas respondidas por este insight:
 
@@ -174,7 +174,7 @@ SELECT date_key,
 
 +++
 
-Consulte a [Documentação do widget de tendência de alteração de tamanho do público](../guides/audiences.md#audience-size-change-trend) para obter informações sobre a aparência e a funcionalidade desse insight.
+Consulte a [Documentação do widget de tendência de alteração de tamanho de público](../guides/audiences.md#audience-size-change-trend) para obter informações sobre a aparência e a funcionalidade desse insight.
 
 ## Tendência de tamanho do público por identidade {#audience-size-trend-by-identity}
 
@@ -207,7 +207,7 @@ SELECT sum(count_of_profiles) AS identities,
 
 +++
 
-Consulte a [Documentação do widget Tendência de tamanho do público por identidade](../guides/audiences.md#audience-size-trend-by-identity) para obter informações sobre a aparência e a funcionalidade desse insight.
+Consulte a [Documentação de widget Tendência de tamanho de público por identidade](../guides/audiences.md#audience-size-trend-by-identity) para obter informações sobre a aparência e a funcionalidade deste insight.
 
 ## Tendência de tamanho do público-alvo {#audience-size-trend}
 
@@ -238,7 +238,7 @@ SELECT date_key,
 
 +++
 
-Consulte a [Documentação do widget de tendência de tamanho do público](../guides/audiences.md#audience-size-trend) para obter informações sobre a aparência e a funcionalidade desse insight.
+Consulte a [Documentação do widget Tendência de tamanho de público](../guides/audiences.md#audience-size-trend) para obter informações sobre a aparência e a funcionalidade desse insight.
 
 ## Tamanho do público-alvo {#audience-size}
 
@@ -266,7 +266,7 @@ WHERE
 
 +++
 
-Consulte a [Documentação do widget de tamanho do público](../guides/audiences.md#audience-size) para obter informações sobre a aparência e a funcionalidade desse insight.
+Consulte a [documentação do widget de tamanho de público](../guides/audiences.md#audience-size) para obter informações sobre a aparência e a funcionalidade deste insight.
 
 ## Distribuição de pontuações da IA do cliente {#customer-ai-distribution-of-scores}
 
@@ -409,9 +409,9 @@ SELECT b.model_name,
 
 +++
 
-Consulte a [Distribuição de IA do cliente da documentação do widget de pontuações](../guides/audiences.md#customer-ai-distribution-of-scores) para obter informações sobre a aparência e a funcionalidade desse insight.
+Consulte a [documentação do widget de distribuição de pontuações da IA do cliente](../guides/audiences.md#customer-ai-distribution-of-scores) para obter informações sobre a aparência e a funcionalidade deste insight.
 
-## Resumo de pontuação do Customer AI {#customer-ai-scoring-summary}
+## Resumo de pontuação da IA do cliente {#customer-ai-scoring-summary}
 
 Perguntas respondidas por este insight:
 
@@ -454,13 +454,13 @@ SELECT model_name,
 
 +++
 
-Consulte a [Documentação do widget Resumo de pontuação da IA do cliente](../guides/audiences.md#customer-ai-scoring-summary) para obter informações sobre a aparência e a funcionalidade desse insight.
+Consulte a [documentação do widget Resumo de pontuação da IA do cliente](../guides/audiences.md#customer-ai-scoring-summary) para obter informações sobre a aparência e a funcionalidade deste insight.
 
 ## Sobreposição de identidade {#identity-overlap}
 
 Perguntas respondidas por este insight:
 
-- Qual é a interseção comum entre [!UICONTROL Tipo de identidade A] e [!UICONTROL Tipo de identidade B] para um público-alvo filtrado?
+- Qual é a interseção comum entre [!UICONTROL Tipo de identidade A] e [!UICONTROL Tipo de identidade B] para um público filtrado?
 - Como refino os públicos-alvo do cliente com base na sobreposição de tipos de identidade específicos para aprimorar as estratégias de marketing direcionadas?
 - Quais insights podem ser obtidos a partir da avaliação do desempenho da campanha nas áreas de interseção?
 - Com base nesses insights, como os futuros esforços de marketing podem ser otimizados?
@@ -514,7 +514,7 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 +++
 
-Consulte a [Documentação do widget de sobreposição de identidade](../guides/audiences.md#identity-overlap) para obter informações sobre a aparência e a funcionalidade desse insight.
+Consulte a [documentação do widget Sobreposição de identidade](../guides/audiences.md#identity-overlap) para obter informações sobre a aparência e a funcionalidade deste insight.
 
 ## Perfis por identidade {#profiles-by-identity}
 
@@ -542,7 +542,7 @@ SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
 
 +++
 
-Consulte a [Documentação do widget Perfis por identidade](../guides/audiences.md#profiles-by-identity) para obter informações sobre a aparência e a funcionalidade desse insight.
+Consulte a [documentação do widget Perfis por identidade](../guides/audiences.md#profiles-by-identity) para obter informações sobre a aparência e a funcionalidade desse insight.
 
 ## Ativações programadas {#scheduled-activations}
 
@@ -577,12 +577,12 @@ SELECT p.destination_platform ,
 
 +++
 
-Consulte a [Documentação do widget de ativações programadas](../guides/audiences.md#scheduled-activations) para obter informações sobre a aparência e a funcionalidade desse insight.
+Consulte a [Documentação do widget de ativações agendadas](../guides/audiences.md#scheduled-activations) para obter informações sobre a aparência e a funcionalidade deste insight.
 
 ## Próximas etapas
 
 Ao ler este documento, você agora entende o SQL que gera insights de painel e quais perguntas comuns essa análise resolve. Agora você pode editar e iterar no SQL para gerar seus próprios insights.
 
-Consulte a [Exibir documentação SQL](../view-sql.md) para obter mais informações sobre como adaptar o SQL dos seus insights diretamente pela interface do Platform.
+Consulte a [Exibir documentação do SQL](../view-sql.md) para obter mais informações sobre como adaptar o SQL dos seus insights diretamente pela interface do PLatform.
 
-Você também pode ler e entender o SQL que gera insights para o [Perfis](./profiles.md), [Perfis de conta](./account-profiles.md) e [Destinos](./destinations.md) painéis.
+Você também pode ler e entender o SQL que gera insights para os painéis [Perfis](./profiles.md), [Perfis de Conta](./account-profiles.md) e [Destinos](./destinations.md).

@@ -5,23 +5,23 @@ title: Endpoint da API de dados de amostra
 description: Você pode usar o endpoint "/samples" na API do Adobe Experience Platform para recuperar, criar, atualizar e validar programaticamente os dados de amostra do mapeamento.
 source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '399'
-ht-degree: 7%
+source-wordcount: '405'
+ht-degree: 6%
 
 ---
 
 
 # Endpoint de dados de exemplo
 
-Os dados de amostra podem ser usados ao criar um esquema para seu conjunto de mapeamento. Você pode usar o `/samples` ponto de extremidade na API de Preparo de dados para recuperar, criar e atualizar programaticamente dados de amostra.
+Os dados de amostra podem ser usados ao criar um esquema para seu conjunto de mapeamento. Você pode usar o ponto de extremidade `/samples` na API de Preparo de Dados para recuperar, criar e atualizar programaticamente dados de amostra.
 
 ## Listar dados de amostra
 
-Você pode recuperar uma lista de todos os dados de amostra de mapeamento de sua organização fazendo uma solicitação ao GET `/samples` terminal.
+Você pode recuperar uma lista de todos os dados de amostra de mapeamento para sua organização fazendo uma solicitação GET para o ponto de extremidade `/samples`.
 
 **Formato da API**
 
-A variável `/samples` O endpoint oferece suporte a vários parâmetros de consulta para ajudar a filtrar os resultados. Atualmente, você deve incluir os `start` e `limit` parâmetros como parte da solicitação.
+O ponto de extremidade `/samples` dá suporte a vários parâmetros de consulta para ajudar a filtrar os resultados. Atualmente, você deve incluir os parâmetros `start` e `limit` como parte de sua solicitação.
 
 ```http
 GET /samples?limit={LIMIT}&start={START}
@@ -81,12 +81,12 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com informações sobre os d
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `sampleData` |  |
-| `sampleType` |  |
+| `sampleData` | |
+| `sampleType` | |
 
 ## Criar dados de amostra
 
-Você pode criar dados de amostra fazendo uma solicitação POST para o `/samples` terminal.
+Você pode criar dados de exemplo fazendo uma solicitação POST para o ponto de extremidade `/samples`.
 
 ```http
 POST /samples
@@ -127,7 +127,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com informações sobre os d
 
 ## Criar dados de amostra fazendo upload de um arquivo
 
-Você pode criar dados de amostra usando um arquivo fazendo uma solicitação POST para o `/samples/upload` terminal.
+Você pode criar dados de exemplo usando um arquivo fazendo uma solicitação POST para o ponto de extremidade `/samples/upload`.
 
 **Formato da API**
 
@@ -166,7 +166,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com informações sobre os d
 
 ## Pesquisar um objeto de dados de amostra específico
 
-Você pode pesquisar um objeto específico de dados de amostra fornecendo a respectiva ID no caminho de uma solicitação GET para o `/samples` terminal.
+Você pode pesquisar um objeto específico de dados de amostra fornecendo a respectiva ID no caminho de uma solicitação GET para o ponto de extremidade `/samples`.
 
 **Formato da API**
 
@@ -207,7 +207,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com informações do objeto 
 
 ## Atualizar dados de amostra
 
-Você pode atualizar um objeto de dados de amostra específico fornecendo a respectiva ID no caminho de uma solicitação PUT para o `/samples` terminal.
+Você pode atualizar um objeto de dados de amostra específico fornecendo a respectiva ID no caminho de uma solicitação PUT para o ponto de extremidade `/samples`.
 
 **Formato da API**
 

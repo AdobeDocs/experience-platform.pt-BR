@@ -4,8 +4,8 @@ description: Saiba como definir módulos de biblioteca compartilhados para exten
 exl-id: ec013a39-966c-43f3-bc36-31198990a17e
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
-source-wordcount: '272'
-ht-degree: 81%
+source-wordcount: '263'
+ht-degree: 71%
 
 ---
 
@@ -23,14 +23,14 @@ Os módulos compartilhados são incluídos nas bibliotecas de tags mesmo quando 
 
 Os módulos compartilhados não têm um componente de visualização.
 
-Ao desenvolver sua própria extensão de tag, é possível definir os módulos compartilhados que você deseja que ela forneça. Por exemplo, você pode criar um módulo que carregue uma ID de usuário de maneira assíncrona e, em seguida, compartilhe a ID de usuário com qualquer outra extensão por meio de uma promessa:
+Ao desenvolver sua própria extensão de tag, é possível definir os módulos compartilhados que você deseja que ela forneça. Por exemplo, você pode criar um módulo que carregue uma ID de usuário de forma assíncrona e, em seguida, compartilhe a ID de usuário com qualquer outra extensão por meio de uma promessa:
 
 ```javascript
 var userIdPromise = new Promise(/* load user ID, then resolve promise */);
 module.exports = userIdPromise;
 ```
 
-No [manifesto de extensão](../manifest.md), é necessário fornecer um nome para esse módulo compartilhado. Se você a nomear como `user-id-promise`, uma extensão diferente poderá acessar esse módulo compartilhado da seguinte maneira:
+No [manifesto de extensão](../manifest.md), é necessário fornecer um nome para este módulo compartilhado. Se você a nomear como `user-id-promise`, uma extensão diferente poderá acessar esse módulo compartilhado da seguinte maneira:
 
 ```javascript
 var userIdPromise = turbine.getSharedModule('user-extension', 'user-id-promise');

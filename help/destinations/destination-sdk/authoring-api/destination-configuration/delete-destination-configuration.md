@@ -4,32 +4,32 @@ title: Excluir uma configuração de destino
 exl-id: c7309ab7-1b8d-46d4-8017-fd4aa5918cdd
 source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
-source-wordcount: '278'
-ht-degree: 3%
+source-wordcount: '279'
+ht-degree: 2%
 
 ---
 
 # Excluir uma configuração de destino
 
-Esta página exemplifica a solicitação de API e a carga que você pode usar para excluir uma configuração de destino existente, usando o `/authoring/destinations` Endpoint da API.
+Esta página exemplifica a solicitação de API e a carga que você pode usar para excluir uma configuração de destino existente, usando o ponto de extremidade de API `/authoring/destinations`.
 
 >[!IMPORTANT]
 >
->Todos os nomes e valores de parâmetros compatíveis com o Destination SDK são **diferencia maiúsculas de minúsculas**. Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
+>Todos os nomes e valores de parâmetros suportados pelo Destination SDK fazem **distinção entre maiúsculas e minúsculas**. Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
 
 ## Introdução às operações de API de configuração de destino {#get-started}
 
-Antes de continuar, reveja o [guia de introdução](../../getting-started.md) para obter informações importantes que você precisa saber para fazer chamadas com êxito para a API, incluindo como obter a permissão de criação de destino e os cabeçalhos necessários.
+Antes de continuar, consulte o [guia de introdução](../../getting-started.md) para obter informações importantes que você precisa saber para fazer chamadas com êxito para a API, incluindo como obter a permissão de criação de destino e os cabeçalhos necessários.
 
 ## Excluir uma configuração de destino {#delete}
 
-É possível excluir um [existente](create-destination-configuration.md) configuração do servidor de destino fazendo uma `DELETE` solicitação à `/authoring/destinations` terminal com o `{INSTANCE_ID}`da configuração de destino que você deseja excluir.
+Você pode excluir uma configuração de servidor de destino [existente](create-destination-configuration.md) fazendo uma solicitação `DELETE` para o ponto de extremidade `/authoring/destinations` com o `{INSTANCE_ID}`da configuração de destino que deseja excluir.
 
 >[!TIP]
 >
->**Ponto de acesso da API**: `platform.adobe.io/data/core/activation/authoring/destinations`
+>**Ponto de extremidade de API**: `platform.adobe.io/data/core/activation/authoring/destinations`
 
-Para obter uma configuração de destino existente e suas configurações `{INSTANCE_ID}`, consulte o artigo sobre [recuperação de uma configuração de destino](retrieve-destination-configuration.md).
+Para obter uma configuração de destino existente e sua `{INSTANCE_ID}` correspondente, consulte o artigo sobre [recuperação de uma configuração de destino](retrieve-destination-configuration.md).
 
 **Formato da API**
 
@@ -39,7 +39,7 @@ DELETE /authoring/destinations/{INSTANCE_ID}
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `{INSTANCE_ID}` | A variável `ID` da configuração de destino que você deseja excluir. |
+| `{INSTANCE_ID}` | O `ID` da configuração de destino que você deseja excluir. |
 
 +++Solicitação
 
@@ -58,11 +58,11 @@ Uma resposta bem-sucedida retorna o status HTTP 200 juntamente com uma resposta 
 
 ## Manipulação de erros de API {#error-handling}
 
-Os endpoints da API Destination SDK seguem os princípios gerais de mensagem de erro da API Experience Platform. Consulte [Códigos de status da API](../../../../landing/troubleshooting.md#api-status-codes) e [erros no cabeçalho da solicitação](../../../../landing/troubleshooting.md#request-header-errors) no guia de solução de problemas da Platform.
+Os endpoints da API Destination SDK seguem os princípios gerais de mensagem de erro da API Experience Platform. Consulte [códigos de status da API](../../../../landing/troubleshooting.md#api-status-codes) e [erros no cabeçalho da solicitação](../../../../landing/troubleshooting.md#request-header-errors) no guia de solução de problemas da Platform.
 
 ## Próximas etapas
 
-Depois de ler este documento, agora você sabe como excluir uma configuração de destino existente por meio do Destination SDK `/authoring/destinations` Endpoint da API.
+Depois de ler este documento, agora você sabe como excluir uma configuração de destino existente por meio do ponto de extremidade da API do Destination SDK `/authoring/destinations`.
 
 Para saber mais sobre o que você pode fazer com esse endpoint, consulte os seguintes artigos:
 

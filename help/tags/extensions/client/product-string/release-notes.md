@@ -1,10 +1,10 @@
 ---
-title: Notas de versão da Extensão da sequência de caracteres do produto Adobe Analytics
+title: Notas de versão da Extensão da string do produto Adobe Analytics
 description: As notas de versão mais recentes da extensão de tag de string de produto do Adobe Analytics na Adobe Experience Platform.
 exl-id: 3ddc3e6f-412c-42d5-8cbf-25273c1794d5
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
-source-wordcount: '131'
+source-wordcount: '135'
 ht-degree: 86%
 
 ---

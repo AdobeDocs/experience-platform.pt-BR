@@ -7,7 +7,7 @@ description: Este tutorial percorre as etapas necessárias para criar uma fórmu
 exl-id: d3f300ce-c9e8-4500-81d2-ea338454bfde
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
-source-wordcount: '2119'
+source-wordcount: '2083'
 ht-degree: 0%
 
 ---
@@ -18,34 +18,34 @@ Este tutorial percorre as etapas necessárias para criar um modelo usando o mode
 
 ## Conceitos introduzidos:
 
-- **Receitas:** Uma fórmula é um termo de Adobe para uma especificação de modelo e é um contêiner de nível superior que representa um aprendizado de máquina específico, algoritmo de IA ou conjunto de algoritmos, lógica de processamento e configuração necessários para criar e executar um modelo treinado.
-- **Modelo:** Um modelo é uma instância de uma fórmula de aprendizado de máquina treinada com dados históricos e configurações para resolver em um caso de uso comercial.
+- **Receitas:** uma fórmula é um termo de Adobe para uma especificação de modelo e é um contêiner de nível superior que representa um aprendizado de máquina, um algoritmo de IA ou um conjunto de algoritmos específico, uma lógica de processamento e a configuração necessária para compilar e executar um modelo treinado.
+- **Modelo:** um modelo é uma instância de uma fórmula de aprendizado de máquina treinada com dados históricos e configurações para resolver em um caso de uso comercial.
 - **Treinamento:** Treinamento é o processo de padrões de aprendizado e insights de dados rotulados.
-- **Pontuação:** A pontuação é o processo de gerar insights dos dados usando um modelo treinado.
+- **Pontuação:** Pontuação é o processo de gerar insights dos dados usando um modelo treinado.
 
 ## Baixar os ativos necessários {#assets}
 
 Antes de prosseguir com este tutorial, você deve criar os esquemas e conjuntos de dados necessários. Visite o tutorial para [criação de esquemas e conjuntos de dados do modelo de propensão Luma](../models-recipes/create-luma-data.md) para baixar os ativos necessários e configurar os pré-requisitos.
 
-## Introdução ao [!DNL JupyterLab] ambiente de notebook
+## Introdução ao ambiente de bloco de anotações [!DNL JupyterLab]
 
-A criação de uma fórmula do zero pode ser feita dentro de [!DNL Data Science Workspace]. Para iniciar, navegue até [Adobe Experience Platform](https://platform.adobe.com) e selecione o **[!UICONTROL Notebooks]** à esquerda. Para criar um novo bloco de anotações, selecione o modelo de Construtor de fórmula na [!DNL JupyterLab Launcher].
+A criação de uma fórmula do zero pode ser feita em [!DNL Data Science Workspace]. Para iniciar, navegue até [Adobe Experience Platform](https://platform.adobe.com) e selecione a guia **[!UICONTROL Blocos de Anotações]** à esquerda. Para criar um novo bloco de anotações, selecione o modelo de Construtor de Fórmulas no [!DNL JupyterLab Launcher].
 
-A variável [!UICONTROL Construtor de fórmula] permite que você execute treinamentos e execuções de pontuação dentro do notebook. Isso proporciona flexibilidade para fazer alterações em seus `train()` e `score()` métodos entre a execução de experimentos nos dados de treinamento e pontuação. Quando estiver satisfeito com os resultados do treinamento e a pontuação, você poderá criar uma fórmula e, além disso, publicá-la como um modelo usando a funcionalidade receita para modelo.
+O bloco de anotações [!UICONTROL Construtor de Fórmulas] permite executar treinamentos e execuções de pontuação dentro do bloco de anotações. Isso dá a você a flexibilidade de fazer alterações nos métodos `train()` e `score()` entre a execução de experimentos nos dados de treinamento e pontuação. Quando estiver satisfeito com os resultados do treinamento e a pontuação, você poderá criar uma fórmula e, além disso, publicá-la como um modelo usando a funcionalidade receita para modelo.
 
 >[!NOTE]
 >
->A variável [!UICONTROL Construtor de fórmula] o notebook suporta o trabalho com todos os formatos de arquivo, mas atualmente a funcionalidade criar fórmula só suporta [!DNL Python].
+>O bloco de anotações [!UICONTROL Construtor de fórmula] oferece suporte ao trabalho com todos os formatos de arquivo, mas atualmente a funcionalidade de criação de fórmula oferece suporte apenas a [!DNL Python].
 
 ![](../images/jupyterlab/create-recipe/recipe_builder-new.png)
 
-Ao selecionar a variável [!UICONTROL Construtor de fórmula] no inicializador, o bloco de anotações é aberto em uma nova guia.
+Quando você seleciona o bloco de anotações [!UICONTROL Construtor de Fórmulas] no iniciador, o bloco de anotações é aberto em uma nova guia.
 
-Na nova guia do bloco de notas na parte superior, é carregada uma barra de ferramentas contendo três ações adicionais - **[!UICONTROL Treinamento]**, **[!UICONTROL Pontuação]**, e **[!UICONTROL Criar fórmula]**. Esses ícones só aparecem no [!UICONTROL Construtor de fórmula] notebook. Mais informações sobre essas ações são fornecidas [na seção treinamento e pontuação](#training-and-scoring) depois de criar a fórmula no bloco de anotações.
+Na nova guia do bloco de anotações na parte superior, é carregada uma barra de ferramentas contendo três ações adicionais: **[!UICONTROL Treinar]**, **[!UICONTROL Pontuação]** e **[!UICONTROL Criar fórmula]**. Estes ícones só aparecem no bloco de anotações [!UICONTROL Construtor de Fórmulas]. Mais informações sobre essas ações são fornecidas [na seção de treinamento e pontuação](#training-and-scoring) após criar sua fórmula no bloco de anotações.
 
 ![](../images/jupyterlab/create-recipe/toolbar_actions.png)
 
-## Introdução ao [!UICONTROL Construtor de fórmula] notebook
+## Introdução ao bloco de anotações [!UICONTROL Construtor de fórmula]
 
 Na pasta de ativos fornecida, há um modelo de propensão Luma `propensity_model.ipynb`. Usando a opção de carregar notebook no JupyterLab, carregue o modelo fornecido e abra o notebook.
 
@@ -79,7 +79,7 @@ data_access_sdk_python
 
 >[!NOTE]
 >
->As bibliotecas ou versões específicas adicionadas podem ser incompatíveis com as bibliotecas acima. Além disso, se você optar por criar um arquivo de ambiente manualmente, a variável `name` O campo não pode ser substituído.
+>As bibliotecas ou versões específicas adicionadas podem ser incompatíveis com as bibliotecas acima. Além disso, se você optar por criar um arquivo de ambiente manualmente, o campo `name` não poderá ser substituído.
 
 Para o notebook modelo de propensão Luma, os requisitos não precisam ser atualizados.
 
@@ -87,13 +87,13 @@ Para o notebook modelo de propensão Luma, os requisitos não precisam ser atual
 
 Os arquivos de configuração, `training.conf` e `scoring.conf`, são usados para especificar os conjuntos de dados que você deseja usar para treinamento e pontuação, bem como para adicionar hiperparâmetros. Há configurações separadas para treinamento e pontuação.
 
-Para que um modelo execute o treinamento, você deve fornecer a `trainingDataSetId`, `ACP_DSW_TRAINING_XDM_SCHEMA`, e `tenantId`. Além disso, para a pontuação, você deve fornecer a `scoringDataSetId`, `tenantId`, e `scoringResultsDataSetId `.
+Para que um modelo execute o treinamento, você deve fornecer os `trainingDataSetId`, `ACP_DSW_TRAINING_XDM_SCHEMA` e `tenantId`. Além disso, para a pontuação, você deve fornecer o `scoringDataSetId`, `tenantId` e `scoringResultsDataSetId `.
 
-Para localizar o conjunto de dados e as IDs do esquema, acesse a guia de dados ![Guia Dados](../images/jupyterlab/create-recipe/dataset-tab.png) nos blocos de anotações na barra de navegação à esquerda (sob o ícone de pasta). Três IDs diferentes do conjunto de dados precisam ser fornecidas. A variável `scoringResultsDataSetId` é usado para armazenar os resultados da pontuação do modelo e deve ser um conjunto de dados vazio. Esses conjuntos de dados foram criados anteriormente na [Ativos necessários](#assets) etapa.
+Para localizar o conjunto de dados e as IDs do esquema, vá para a guia de dados ![guia de dados](../images/jupyterlab/create-recipe/dataset-tab.png) nos blocos de anotações da barra de navegação esquerda (sob o ícone de pasta). Três IDs diferentes do conjunto de dados precisam ser fornecidas. O `scoringResultsDataSetId` é usado para armazenar os resultados da pontuação do modelo e deve ser um conjunto de dados vazio. Esses conjuntos de dados foram criados anteriormente na etapa [Ativos obrigatórios](#assets).
 
 ![](../images/jupyterlab/create-recipe/dataset_tab.png)
 
-As mesmas informações podem ser encontradas em [Adobe Experience Platform](https://platform.adobe.com/) no **[Esquema](https://platform.adobe.com/schema)** e **[Conjuntos de dados](https://platform.adobe.com/dataset/overview)** guias.
+As mesmas informações podem ser encontradas no [Adobe Experience Platform](https://platform.adobe.com/) nas guias **[Esquema](https://platform.adobe.com/schema)** e **[Conjuntos de Dados](https://platform.adobe.com/dataset/overview)**.
 
 Depois de concluído, sua configuração de treinamento e pontuação deve ser semelhante à seguinte captura de tela:
 
@@ -117,18 +117,18 @@ As duas seções a seguir abordarão o carregamento de dados e a preparação de
 
 ### Carregando dados {#loading-data}
 
-Esta etapa utiliza o [quadro de dados pandas](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html). Os dados podem ser carregados de arquivos no [!DNL Adobe Experience Platform] usando [!DNL Platform] SDK (`platform_sdk`), ou de fontes externas usando pandas&#39; `read_csv()` ou `read_json()` funções.
+Esta etapa usa o [dataframe pandas](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html). Os dados podem ser carregados de arquivos no [!DNL Adobe Experience Platform] usando o SDK [!DNL Platform] (`platform_sdk`) ou de fontes externas usando as funções `read_csv()` ou `read_json()` dos pandas.
 
 - [[!DNL Platform SDK]](#platform-sdk)
 - [Fontes externas](#external-sources)
 
 >[!NOTE]
 >
->No bloco de anotações do Construtor de fórmula, os dados são carregados por meio da `platform_sdk` carregador de dados.
+>No bloco de anotações do Construtor de fórmula, os dados são carregados por meio do carregador de dados `platform_sdk`.
 
 ### SDK do [!DNL Platform] {#platform-sdk}
 
-Para obter um tutorial detalhado sobre o uso da `platform_sdk` carregador de dados, visite o [Guia do SDK do Platform](../authoring/platform-sdk.md). Este tutorial fornece informações sobre autenticação de build, leitura básica de dados e gravação básica de dados.
+Para obter um tutorial detalhado sobre como usar o carregador de dados do `platform_sdk`, visite o [Guia do SDK da Platform](../authoring/platform-sdk.md). Este tutorial fornece informações sobre autenticação de build, leitura básica de dados e gravação básica de dados.
 
 ### Fontes externas {#external-sources}
 
@@ -136,19 +136,19 @@ Esta seção mostra como importar um arquivo JSON ou CSV para um objeto pandas. 
 - [read_csv](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html)
 - [read_json](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_json.html)
 
-Primeiro, veja um exemplo da importação de um arquivo CSV. A variável `data` argumento é o caminho para o arquivo CSV. Essa variável foi importada do `configProperties` no [seção anterior](#configuration-files).
+Primeiro, veja um exemplo da importação de um arquivo CSV. O argumento `data` é o caminho para o arquivo CSV. Esta variável foi importada de `configProperties` na [seção anterior](#configuration-files).
 
 ```PYTHON
 df = pd.read_csv(data)
 ```
 
-Você também pode importar de um arquivo JSON. A variável `data` argumento é o caminho para o arquivo CSV. Essa variável foi importada do `configProperties` no [seção anterior](#configuration-files).
+Você também pode importar de um arquivo JSON. O argumento `data` é o caminho para o arquivo CSV. Esta variável foi importada de `configProperties` na [seção anterior](#configuration-files).
 
 ```PYTHON
 df = pd.read_json(data)
 ```
 
-Agora, seus dados estão no objeto de quadro de dados e podem ser analisados e manipulados no [próxima seção](#data-preparation-and-feature-engineering).
+Agora seus dados estão no objeto de quadro de dados e podem ser analisados e manipulados na [próxima seção](#data-preparation-and-feature-engineering).
 
 ## Arquivo do carregador de dados de treinamento
 
@@ -156,7 +156,7 @@ Neste exemplo, os dados são carregados usando o SDK da Platform. A biblioteca p
 
 `from platform_sdk.dataset_reader import DatasetReader`
 
-Em seguida, você pode usar o `load()` para coletar o conjunto de dados de treinamento do `trainingDataSetId` conforme definido na configuração (`recipe.conf`) arquivo.
+Você pode usar o método `load()` para coletar o conjunto de dados de treinamento de `trainingDataSetId` conforme definido no arquivo de configuração (`recipe.conf`).
 
 ```PYTHON
 def load(config_properties):
@@ -171,24 +171,23 @@ def load(config_properties):
 
 >[!NOTE]
 >
->Tal como mencionado no [Seção Arquivo de Configuração](#configuration-files), os seguintes parâmetros de configuração são definidos para você quando acessar dados do Experience Platform usando `client_context = get_client_context(config_properties)`:
+>Conforme mencionado na [seção Arquivo de Configuração](#configuration-files), os seguintes parâmetros de configuração são definidos para você ao acessar dados do Experience Platform usando `client_context = get_client_context(config_properties)`:
 > - `ML_FRAMEWORK_IMS_USER_CLIENT_ID`
 > - `ML_FRAMEWORK_IMS_TOKEN`
 > - `ML_FRAMEWORK_IMS_ML_TOKEN`
 > - `ML_FRAMEWORK_IMS_TENANT_ID`
 
-
 Agora que você tem seus dados, pode começar com a preparação de dados e a engenharia de recursos.
 
 ### Preparação de dados e engenharia de recursos {#data-preparation-and-feature-engineering}
 
-Após os dados serem carregados, eles precisam ser limpos e submetidos à preparação. Neste exemplo, o objetivo do modelo é prever se um cliente solicitará um produto ou não. Como o modelo não está observando produtos específicos, você não precisa `productListItems` e, portanto, a coluna é solta. Em seguida, são soltas colunas adicionais que contêm apenas um único valor ou dois valores em uma única coluna. Ao treinar um modelo, é importante manter apenas dados úteis que ajudarão a prever sua meta.
+Após os dados serem carregados, eles precisam ser limpos e submetidos à preparação. Neste exemplo, o objetivo do modelo é prever se um cliente solicitará um produto ou não. Como o modelo não está observando produtos específicos, você não precisa de `productListItems` e, portanto, a coluna é descartada. Em seguida, são soltas colunas adicionais que contêm apenas um único valor ou dois valores em uma única coluna. Ao treinar um modelo, é importante manter apenas dados úteis que ajudarão a prever sua meta.
 
 ![exemplo de preparação de dados](../images/jupyterlab/create-recipe/data_prep.png)
 
 Depois de descartar os dados desnecessários, você pode iniciar a engenharia de recursos. Os dados de demonstração usados para este exemplo não contêm informações sobre a sessão. Normalmente, você gostaria de ter dados sobre as sessões atuais e anteriores de um cliente específico. Devido à falta de informações da sessão, este exemplo imita sessões atuais e passadas por meio da demarcação da jornada.
 
-![Demarcação de jornada](../images/jupyterlab/create-recipe/journey_demarcation.png)
+![Demarcação de Jornada](../images/jupyterlab/create-recipe/journey_demarcation.png)
 
 Após a conclusão da demarcação, os dados são rotulados e uma jornada é criada.
 
@@ -206,7 +205,7 @@ Caso deseje usar arquivos de dados diferentes para treinamento e pontuação, o 
 
 ## Arquivo de pipeline {#pipeline-file}
 
-A variável `pipeline.py` O arquivo inclui lógica para treinamento e pontuação.
+O arquivo `pipeline.py` inclui lógica para treinamento e pontuação.
 
 O objetivo do treinamento é criar um modelo usando recursos e rótulos em seu conjunto de dados de treinamento. Depois de escolher o modelo de treinamento, você deve ajustar o conjunto de dados de treinamento x e y ao modelo e a função retorna o modelo treinado.
 
@@ -216,71 +215,70 @@ O objetivo do treinamento é criar um modelo usando recursos e rótulos em seu c
 
 ![def train](../images/jupyterlab/create-recipe/def_train.png)
 
-A variável `score()` A função deve conter o algoritmo de pontuação e retornar uma medição para indicar o desempenho do modelo. A variável `score()` A função usa os rótulos do conjunto de dados de pontuação e o modelo treinado para gerar um conjunto de recursos previstos. Esses valores previstos são comparados com os recursos reais no conjunto de dados de pontuação. Neste exemplo, a variável `score()` A função usa o modelo treinado para prever recursos usando os rótulos do conjunto de dados de pontuação. Os recursos previstos são retornados.
+A função `score()` deve conter o algoritmo de pontuação e retornar uma medição para indicar o desempenho bem-sucedido do modelo. A função `score()` usa os rótulos do conjunto de dados de pontuação e o modelo treinado para gerar um conjunto de recursos previstos. Esses valores previstos são comparados com os recursos reais no conjunto de dados de pontuação. Neste exemplo, a função `score()` usa o modelo treinado para prever recursos usando os rótulos do conjunto de dados de pontuação. Os recursos previstos são retornados.
 
 ![pontuação def](../images/jupyterlab/create-recipe/def_score.png)
 
 ## Arquivo avaliador {#evaluator-file}
 
-A variável `evaluator.py` O arquivo contém uma lógica de como você deseja avaliar sua fórmula treinada, bem como de como seus dados de treinamento devem ser divididos.
+O arquivo `evaluator.py` contém lógica de como você deseja avaliar sua fórmula treinada, bem como a forma como seus dados de treinamento devem ser divididos.
 
 ### Dividir o conjunto de dados {#split-the-dataset}
 
-A fase de preparação dos dados de treinamento exige a divisão do conjunto de dados a ser usado para treinamento e teste. Este `val` Os dados do são usados implicitamente para avaliar o modelo após o treinamento. Esse processo é separado da pontuação.
+A fase de preparação dos dados de treinamento exige a divisão do conjunto de dados a ser usado para treinamento e teste. Esses dados `val` são usados implicitamente para avaliar o modelo depois de treinado. Esse processo é separado da pontuação.
 
-Esta seção mostra a `split()` função que carrega dados no bloco de anotações e, em seguida, limpa os dados removendo colunas não relacionadas no conjunto de dados. A partir daí, você pode executar a engenharia de recursos, que é o processo para criar recursos relevantes adicionais a partir de recursos brutos existentes nos dados.
+Esta seção mostra a função `split()` que carrega dados no bloco de anotações e depois limpa os dados removendo colunas não relacionadas no conjunto de dados. A partir daí, você pode executar a engenharia de recursos, que é o processo para criar recursos relevantes adicionais a partir de recursos brutos existentes nos dados.
 
-![Função Split](../images/jupyterlab/create-recipe/split.png)
+![Função de divisão](../images/jupyterlab/create-recipe/split.png)
 
 ### Avaliar o modelo treinado {#evaluate-the-trained-model}
 
-A variável `evaluate()` A função é executada depois que o modelo é treinado e retorna uma métrica para indicar o desempenho do modelo. A variável `evaluate()` A função usa os rótulos do conjunto de dados de teste e o modelo treinado para prever um conjunto de recursos. Esses valores previstos são comparados com os recursos reais no conjunto de dados de teste. Neste exemplo, as métricas usadas são `precision`, `recall`, `f1`, e `accuracy`. Observe que a função retorna um valor `metric` objeto que contém uma matriz de métricas de avaliação. Essas métricas são usadas para avaliar o desempenho do modelo treinado.
+A função `evaluate()` é executada depois que o modelo é treinado e retorna uma métrica para indicar o desempenho do modelo. A função `evaluate()` usa os rótulos do conjunto de dados de teste e o modelo treinado para prever um conjunto de recursos. Esses valores previstos são comparados com os recursos reais no conjunto de dados de teste. Neste exemplo, as métricas usadas são `precision`, `recall`, `f1` e `accuracy`. Observe que a função retorna um objeto `metric` contendo uma matriz de métricas de avaliação. Essas métricas são usadas para avaliar o desempenho do modelo treinado.
 
 ![avaliar](../images/jupyterlab/create-recipe/evaluate.png)
 
-Adicionando `print(metric)` permite exibir os resultados da métrica.
+Adicionar `print(metric)` permite que você visualize os resultados da métrica.
 
-![resultados da métrica](../images/jupyterlab/create-recipe/evaluate_metric.png)
+![resultados de métrica](../images/jupyterlab/create-recipe/evaluate_metric.png)
 
 ## Arquivo do salvador de dados {#data-saver-file}
 
-A variável `datasaver.py` o arquivo contém o `save()` e é usada para salvar sua previsão enquanto testa a pontuação. A variável `save()` A função faz a previsão e usa [!DNL Experience Platform Catalog] , grava os dados na `scoringResultsDataSetId` você especificou em seu `scoring.conf` arquivo. Você pode
+O arquivo `datasaver.py` contém a função `save()` e é usado para salvar sua previsão ao testar a pontuação. A função `save()` faz sua previsão e, usando APIs [!DNL Experience Platform Catalog], grava os dados no `scoringResultsDataSetId` que você especificou em seu arquivo `scoring.conf`. Você pode
 
 ![Economizador de dados](../images/jupyterlab/create-recipe/data_saver.png)
 
 ## Treinamento e pontuação {#training-and-scoring}
 
-Quando terminar de fazer alterações no seu bloco de anotações e quiser treinar sua fórmula, você poderá selecionar os botões associados na parte superior da barra para criar um treinamento executado na célula. Ao selecionar o botão, um registro de comandos e saídas do script de treinamento é exibido no bloco de notas (sob a `evaluator.py` célula). Primeiro, o Conda instala todas as dependências e, em seguida, o treinamento é iniciado.
+Quando terminar de fazer alterações no seu bloco de anotações e quiser treinar sua fórmula, você poderá selecionar os botões associados na parte superior da barra para criar um treinamento executado na célula. Ao selecionar o botão, um log de comandos e saídas do script de treinamento aparece no bloco de anotações (na célula `evaluator.py`). Primeiro, o Conda instala todas as dependências e, em seguida, o treinamento é iniciado.
 
-Observe que você deve executar o treinamento pelo menos uma vez antes de poder executar a pontuação. Selecionar o **[!UICONTROL Executar pontuação]** O botão pontuará no modelo treinado que foi gerado durante o treinamento. O script de pontuação aparece em `datasaver.py`.
+Observe que você deve executar o treinamento pelo menos uma vez antes de poder executar a pontuação. Selecionar o botão **[!UICONTROL Executar Pontuação]** pontuará no modelo treinado que foi gerado durante o treinamento. O script de pontuação aparece em `datasaver.py`.
 
-Para fins de depuração, se quiser ver a saída oculta, adicione `debug` para o final da célula de saída e execute-a novamente.
+Para fins de depuração, se desejar ver a saída oculta, adicione `debug` ao final da célula de saída e execute-a novamente.
 
 ![treinar e pontuar](../images/jupyterlab/create-recipe/toolbar_actions.png)
 
 ## Criar uma fórmula {#create-recipe}
 
-Quando terminar de editar a fórmula e estiver satisfeito com a saída do treinamento/pontuação, você poderá criar uma fórmula no bloco de anotações selecionando **[!UICONTROL Criar fórmula]** no canto superior direito.
+Quando terminar de editar a fórmula e estiver satisfeito com o resultado do treinamento/pontuação, você poderá criar uma fórmula no bloco de anotações selecionando **[!UICONTROL Criar fórmula]** no canto superior direito.
 
 ![](../images/jupyterlab/create-recipe/create-recipe.png)
 
-Depois de selecionar **[!UICONTROL Criar fórmula]**, será solicitado que você insira um nome de fórmula. Esse nome representa a fórmula real criada em [!DNL Platform].
+Depois de selecionar **[!UICONTROL Criar fórmula]**, você será solicitado a inserir um nome de fórmula. Este nome representa a fórmula real criada em [!DNL Platform].
 
 ![](../images/jupyterlab/create-recipe/enter_recipe_name.png)
 
-Depois de selecionar **[!UICONTROL Ok]**, o processo de criação da fórmula será iniciado. Isso pode levar algum tempo e uma barra de progresso é exibida no lugar do botão Criar fórmula. Após a conclusão, é possível selecionar o **[!UICONTROL Exibir Receitas]** botão para levá-lo ao **[!UICONTROL Receitas]** em **[!UICONTROL Modelos ML]**
+Após selecionar **[!UICONTROL Ok]**, o processo de criação de fórmula será iniciado. Isso pode levar algum tempo e uma barra de progresso é exibida no lugar do botão Criar fórmula. Depois de concluído, você pode selecionar o botão **[!UICONTROL Exibir receitas]** para ir até a guia **[!UICONTROL Receitas]** em **[!UICONTROL Modelos ML]**
 
 ![](../images/jupyterlab/create-recipe/recipe_creation_started.png)
 
 >[!CAUTION]
 >
 > - Não excluir nenhuma das células do arquivo
-> - Não edite o `%%writefile` linha na parte superior das células do arquivo
+> - Não editar a linha `%%writefile` na parte superior das células do arquivo
 > - Não criar receitas em blocos de anotações diferentes ao mesmo tempo
-
 
 ## Próximas etapas {#next-steps}
 
-Ao concluir este tutorial, você aprendeu a criar um modelo de aprendizado de máquina na [!UICONTROL Construtor de fórmula] notebook. Você também aprendeu a exercitar o fluxo de trabalho de notebook para receita.
+Ao concluir este tutorial, você aprendeu a criar um modelo de aprendizado de máquina no bloco de anotações [!UICONTROL Construtor de fórmula]. Você também aprendeu a exercitar o fluxo de trabalho de notebook para receita.
 
-Para continuar aprendendo como trabalhar com recursos dentro do [!DNL Data Science Workspace], visite o [!DNL Data Science Workspace] lista suspensa receitas e modelos.
+Para continuar aprendendo como trabalhar com recursos no [!DNL Data Science Workspace], visite a lista suspensa de [!DNL Data Science Workspace] receitas e modelos.

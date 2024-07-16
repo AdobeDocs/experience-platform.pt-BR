@@ -4,8 +4,8 @@ description: Saiba mais sobre a extensão comum de tags do Analytics na Adobe Ex
 exl-id: 9eeb4589-df90-4356-b927-b2c29c32370b
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
-source-wordcount: '406'
-ht-degree: 86%
+source-wordcount: '399'
+ht-degree: 82%
 
 ---
 
@@ -71,4 +71,4 @@ Os seguintes elementos de dados estão disponíveis na extensão de plug-ins com
 
 >[!NOTE]
 >
->Para obter mais informações sobre os plug-ins acima, consulte o [Documentação do Analytics](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/impl-plugins.html?lang=pt-BR).
+>Para obter mais informações sobre os plug-ins acima, consulte a [documentação do Analytics](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/impl-plugins.html?lang=pt-BR).

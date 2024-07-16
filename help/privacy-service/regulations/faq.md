@@ -6,7 +6,7 @@ description: Este documento fornece respostas a perguntas frequentes sobre as re
 exl-id: ec553e53-664b-4e18-abb1-4e4063fdd2c9
 source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1618'
+source-wordcount: '1631'
 ht-degree: 1%
 
 ---
@@ -17,7 +17,7 @@ Este documento fornece respostas a perguntas frequentes sobre as regulamentaçõ
 
 >[!NOTE]
 >
->As definições para os vários termos utilizados neste documento podem ser [terminologia do regulamento de privacidade](terminology.md) guia.
+>As definições para os vários termos usados neste documento podem ser encontradas no guia [terminologia de regulamento de privacidade](terminology.md).
 
 ## Perguntas gerais
 
@@ -25,7 +25,7 @@ As perguntas a seguir estão relacionadas a todos os regulamentos de privacidade
 
 ### Quem são afetados pelas regulamentações de privacidade aceitas?
 
-A variável [regulamentos de privacidade compatíveis com o Experience Cloud](./overview.md) aplicam-se a todas as organizações que armazenam e processam dados pessoais de cidadãos nas respectivas jurisdições dos regulamentos, independentemente da localização geográfica da organização.
+As [regras de privacidade aceitas pelo Experience Cloud](./overview.md) aplicam-se a todas as organizações que armazenam e processam dados pessoais de cidadãos nas respectivas jurisdições, independentemente da localização geográfica da organização.
 
 ### O que constituem dados pessoais?
 
@@ -51,15 +51,15 @@ Embora as regulamentações de privacidade cubram um amplo conjunto de informaç
 
 ### Qual é a diferença entre um controlador de dados e um processador de dados?
 
-A **controlador de dados** é a entidade que determina as finalidades, as condições e os meios de tratamento dos dados pessoais, ao passo que **processador de dados** é uma entidade que processa dados pessoais em nome do controlador de dados.
+O **controlador de dados** é a entidade que determina as finalidades, as condições e os meios de processamento de dados pessoais, enquanto o **processador de dados** é uma entidade que processa dados pessoais em nome do controlador de dados.
 
-A **controlador de dados** é a pessoa ou organização que tem o poder e a responsabilidade de tomar decisões relacionadas à coleta, ao uso ou à divulgação de dados pessoais. A **processador de dados** é a pessoa ou organização que opera em relação à coleta, utilização ou divulgação dos dados pessoais e à direção do controlador de dados.
+Um **controlador de dados** é a pessoa ou organização que tem o poder e a responsabilidade de tomar decisões com relação à coleta, ao uso ou à divulgação de dados pessoais. Um **processador de dados** é a pessoa ou organização que opera em relação à coleta, uso ou divulgação dos dados pessoais e à direção do controlador de dados.
 
 ### Qual é a diferença entre consentimento explícito e inequívoco do titular dos dados?
 
-**Consentimento explícito** refere-se a um padrão de consentimento que envolve uma indicação específica, informada e inequívoca dos desejos do titular dos dados, oralmente ou por escrito. Em termos simples, o titular dos dados deve dizer literalmente e explicitamente &quot;Eu concordo&quot; ou &quot;Eu concordo&quot; para que o consentimento seja considerado explícito. Além disso, deve ser tão fácil retirar o consentimento como o dar.
+**Consentimento explícito** refere-se a um padrão de consentimento que envolve uma indicação específica, informada e inequívoca dos desejos do titular dos dados em forma oral ou escrita. Em termos simples, o titular dos dados deve dizer literalmente e explicitamente &quot;Eu concordo&quot; ou &quot;Eu concordo&quot; para que o consentimento seja considerado explícito. Além disso, deve ser tão fácil retirar o consentimento como o dar.
 
-**Consentimento inequívoco (implícito)** refere-se ao consentimento que não foi explicitamente dado pelo titular dos dados, mas é, no entanto, de natureza inequívoca. Por exemplo, durante o processo de inscrição em um site de empresa, é dado um aviso de que, ao fornecer um endereço de email, o titular dos dados consente em receber emails sobre ofertas especiais. Se o titular dos dados ler o aviso, a ação afirmativa de inserir seu email é suficiente para ser considerada consentimento inequívoco.
+**Consentimento inequívoco (implícito)** refere-se ao consentimento que não foi explicitamente dado pelo titular dos dados, mas ainda assim tem natureza inequívoca. Por exemplo, durante o processo de inscrição em um site de empresa, é dado um aviso de que, ao fornecer um endereço de email, o titular dos dados consente em receber emails sobre ofertas especiais. Se o titular dos dados ler o aviso, a ação afirmativa de inserir seu email é suficiente para ser considerada consentimento inequívoco.
 
 Para muitos regulamentos como o GDPR, o consentimento explícito é necessário para processar dados pessoais confidenciais, onde nada menos que &quot;aceitar&quot; será suficiente. No entanto, para dados não confidenciais, o consentimento inequívoco (implícito) é aceitável.
 
@@ -107,7 +107,7 @@ Se as operações de dados da sua organização estiverem sob as jurisdições l
 
 ### Como posso aceitar solicitações de privacidade do consumidor se mantenho dados cobertos por regulamentos de privacidade?
 
-Depois de tomar as medidas necessárias para autenticar consumidores que se enquadram nas jurisdições legais apropriadas, a Adobe Experience Platform Privacy Service permite enviar solicitações de privacidade do consumidor para aplicativos compatíveis com o Experience Cloud. Consulte a [[!DNL Privacy Service] visão geral das ](../home.md) para obter mais informações. Para obter informações sobre como seus aplicativos Experience Cloud específicos podem atender às solicitações de privacidade, consulte o manual no [aplicativos Privacy Service e Experience Cloud](../experience-cloud-apps.md).
+Depois de tomar as medidas necessárias para autenticar consumidores que se enquadram nas jurisdições legais apropriadas, a Adobe Experience Platform Privacy Service permite enviar solicitações de privacidade do consumidor para aplicativos compatíveis com o Experience Cloud. Consulte a [[!DNL Privacy Service] visão geral](../home.md) para obter mais informações. Para obter informações sobre como seus aplicativos Experience Cloud específicos podem atender às solicitações de privacidade, consulte o manual em [Privacy Service e aplicativos Experience Cloud](../experience-cloud-apps.md).
 
 >[!NOTE]
 >
@@ -121,8 +121,8 @@ As questões seguintes dizem especificamente respeito à CCPA.
 
 Conforme definido pela CCPA, as seguintes funções se aplicam ao Adobe e seus clientes:
 
-* Adobe clientes (a parte que solicita a coleta e o uso de informações pessoais de residentes da Califórnia) seriam considerados uma **Empresas**.
-* Adobe, no seu papel de prestação do serviço, seria considerada uma **Provedor de serviços**.
+* Os clientes do Adobe (a parte que solicita a coleta e o uso de informações pessoais de residentes da Califórnia) seriam considerados um **Negócio**.
+* Adobe, em sua função de prestação do serviço, seria considerado um **Provedor de Serviços**.
 
 Como Provedor de Serviços, a Adobe coleta e processa informações pessoais em nome da Empresa e está contratualmente obrigada a usar essas informações apenas para os fins específicos estabelecidos no contrato.
 
@@ -142,7 +142,7 @@ As perguntas a seguir estão relacionadas especificamente ao GDPR.
 
 ### Qual é a diferença entre um regulamento e uma diretiva?
 
-A **regulamento** é um ato legislativo vinculativo e deve ser aplicado na sua totalidade em toda a UE. A **diretiva** é um ato legislativo que estabelece um objetivo que todos os países da UE devem alcançar, mas cabe a cada país decidir como.
+Um **regulamento** é um ato legislativo vinculativo e deve ser aplicado na sua totalidade em toda a UE. Uma **diretiva** é um ato legislativo que estabelece um objetivo que todos os países da UE devem alcançar, mas cabe a cada país decidir como.
 
 É importante observar que o GDPR é um regulamento, em contraste com a legislação anterior (a Diretiva de Proteção de Dados), que é uma diretiva.
 

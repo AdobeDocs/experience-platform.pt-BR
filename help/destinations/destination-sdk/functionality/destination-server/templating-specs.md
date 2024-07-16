@@ -4,8 +4,8 @@ title: Especificações de modelos para destinos criados com o Destination SDK
 exl-id: 066781c8-0af0-4958-b62f-194c6ba13f3a
 source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
-source-wordcount: '523'
-ht-degree: 4%
+source-wordcount: '511'
+ht-degree: 2%
 
 ---
 
@@ -17,16 +17,16 @@ Em uma especificação de modelo, é possível definir como transformar campos d
 
 As especificações do modelo fazem parte da configuração do servidor de destino para destinos em tempo real (transmissão).
 
-Para entender onde esse componente se encaixa em uma integração criada com o Destination SDK, consulte o diagrama no [opções de configuração](../configuration-options.md) ou consulte o guia sobre como [usar o Destination SDK para configurar um destino de transmissão](../../guides/configure-destination-instructions.md#create-server-template-configuration).
+Para entender onde esse componente se encaixa em uma integração criada com o Destination SDK, consulte o diagrama na documentação de [opções de configuração](../configuration-options.md) ou consulte o guia sobre como [usar o Destination SDK para configurar um destino de streaming](../../guides/configure-destination-instructions.md#create-server-template-configuration).
 
-Você pode configurar as especificações do modelo para seu destino por meio da `/authoring/destination-servers` terminal. Consulte as seguintes páginas de referência de API para obter exemplos detalhados de chamadas de API, onde é possível configurar os componentes mostrados nesta página.
+Você pode configurar as especificações do modelo para o seu destino por meio do ponto de extremidade `/authoring/destination-servers`. Consulte as seguintes páginas de referência de API para obter exemplos detalhados de chamadas de API, onde é possível configurar os componentes mostrados nesta página.
 
 * [Criar uma configuração do servidor de destino](../../authoring-api/destination-server/create-destination-server.md)
 * [Atualizar uma configuração do servidor de destino](../../authoring-api/destination-server/update-destination-server.md)
 
 >[!IMPORTANT]
 >
->Todos os nomes e valores de parâmetros compatíveis com o Destination SDK são **diferencia maiúsculas de minúsculas**. Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
+>Todos os nomes e valores de parâmetros suportados pelo Destination SDK fazem **distinção entre maiúsculas e minúsculas**. Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
 
 ## Tipos de integração compatíveis {#supported-integration-types}
 
@@ -39,18 +39,18 @@ Consulte a tabela abaixo para obter detalhes sobre quais tipos de integrações 
 
 ## Configurar uma especificação de modelo {#configure-template-spec}
 
-Adobe usa uma linguagem de modelo semelhante a [Jinja](https://jinja.palletsprojects.com/en/2.11.x/) para transformar os campos do esquema XDM em um formato compatível com seu destino.
+O Adobe usa uma linguagem de modelo semelhante a [Jinja](https://jinja.palletsprojects.com/en/2.11.x/) para transformar os campos do esquema XDM em um formato compatível com seu destino.
 
-![Configuração de modelo realçada](../../assets/functionality/destination-server/template-configuration.png)
+![Configuração do modelo realçada](../../assets/functionality/destination-server/template-configuration.png)
 
 Para obter mais informações sobre a transformação, visite os links abaixo:
 
-* [Formato de mensagem](message-format.md)
+* [Formato da mensagem](message-format.md)
 * [Uso de uma linguagem de modelo para as transformações de identidade, atributos e associação de público](message-format.md#using-templating)
 
 >[!TIP]
 >
->Adobe oferece um [ferramenta de desenvolvedor](../../testing-api/streaming-destinations/create-template.md) que ajudam a criar e testar um template de transformação de mensagem.
+>O Adobe oferece uma [ferramenta de desenvolvedor](../../testing-api/streaming-destinations/create-template.md) que ajuda você a criar e testar um modelo de transformação de mensagem.
 
 Veja abaixo um exemplo de um modelo de solicitação HTTP, juntamente com descrições de cada parâmetro individual.
 
@@ -69,10 +69,10 @@ Veja abaixo um exemplo de um modelo de solicitação HTTP, juntamente com descri
 
 | Parâmetro | Tipo | Descrição |
 |---|---|---|
-| `httpMethod` | String | *Obrigatório.* O método que o Adobe usará nas chamadas para o servidor. Métodos compatíveis: `GET`, `PUT`, `POST`, `DELETE`, `PATCH`. |
+| `httpMethod` | String | *Obrigatório.* O método que o Adobe usará nas chamadas para o servidor. Métodos com suporte: `GET`, `PUT`, `POST`, `DELETE`, `PATCH`. |
 | `templatingStrategy` | String | *Obrigatório.* Use `PEBBLE_V1`. |
-| `value` | String | *Obrigatório.* Essa string é a versão sem caracteres do modelo que formata as solicitações HTTP enviadas pela Platform no formato esperado pelo seu destino. <br> Para obter informações sobre como gravar o modelo, leia a seção sobre [uso de modelos](message-format.md#using-templating). <br> Para obter mais informações sobre o escape de caracteres, consulte o [RFC JSON padrão, seção sete](https://tools.ietf.org/html/rfc8259#section-7). <br> Para obter um exemplo de uma transformação simples, consulte [atributos de perfil](message-format.md#attributes) transformação. |
-| `contentType` | String | *Obrigatório.* O tipo de conteúdo que seu servidor aceita. Dependendo do tipo de saída produzido pelo seu modelo de transformação, essa variável pode ser qualquer uma das [Tipos de conteúdo do aplicativo HTTP](https://www.iana.org/assignments/media-types/media-types.xhtml#application). Na maioria dos casos, esse valor deve ser definido como `application/json`. |
+| `value` | String | *Obrigatório.* Esta cadeia de caracteres é a versão sem caracteres do modelo que formata as solicitações HTTP enviadas pela Platform no formato esperado pelo seu destino. <br> Para obter informações sobre como gravar o modelo, leia a seção sobre [usando o modelo](message-format.md#using-templating). <br> Para obter mais informações sobre o escape de caracteres, consulte o [padrão RFC JSON, seção sete](https://tools.ietf.org/html/rfc8259#section-7). <br> Para obter um exemplo de uma transformação simples, consulte a transformação [atributos de perfil](message-format.md#attributes). |
+| `contentType` | String | *Obrigatório.* O tipo de conteúdo que seu servidor aceita. Dependendo do tipo de saída produzido pelo seu modelo de transformação, pode ser qualquer um dos [tipos de conteúdo de aplicativo HTTP](https://www.iana.org/assignments/media-types/media-types.xhtml#application) com suporte. Na maioria dos casos, esse valor deve ser definido como `application/json`. |
 
 {style="table-layout:auto"}
 
@@ -83,5 +83,5 @@ Depois de ler este artigo, você terá que entender melhor o que é uma especifi
 Para saber mais sobre os outros componentes do servidor de destino, consulte os seguintes artigos:
 
 * [Especificações do servidor para destinos criados com o Destination SDK](server-specs.md)
-* [Formato de mensagem](message-format.md)
+* [Formato da mensagem](message-format.md)
 * [Configuração da formatação de arquivo](file-formatting.md)

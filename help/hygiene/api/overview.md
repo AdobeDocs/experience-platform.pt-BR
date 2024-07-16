@@ -16,13 +16,13 @@ A API de higiene de dados permite corrigir ou excluir programaticamente os dados
 
 ## Introdução
 
-Você pode acessar a API de higiene de dados por meio do seguinte caminho raiz: `https://platform.adobe.io/data/core/hygiene/`
+Você pode acessar a API de Limpeza de Dados pelo seguinte caminho raiz: `https://platform.adobe.io/data/core/hygiene/`
 
 Essas seções abaixo descrevem os conceitos principais que você precisa saber antes de tentar fazer chamadas para a API.
 
 ### Coletar valores para cabeçalhos necessários
 
-Para fazer chamadas para a API de higiene de dados, primeiro colete suas credenciais de autenticação. Siga as [Guia de autenticação de API](../../landing/api-authentication.md) para gerar valores para cada um dos cabeçalhos necessários para a API de higiene de dados, conforme mostrado abaixo:
+Para fazer chamadas para a API de higiene de dados, primeiro colete suas credenciais de autenticação. Siga o [guia de autenticação de API](../../landing/api-authentication.md) para gerar valores para cada um dos cabeçalhos necessários para a API de Limpeza de Dados, conforme mostrado abaixo:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -34,27 +34,27 @@ Todas as solicitações que contêm um conteúdo (POST, PUT, PATCH) exigem um ca
 
 ### Leitura de chamadas de API de amostra
 
-Este documento fornece um exemplo de chamada de API para demonstrar como formatar suas solicitações. Para obter informações sobre as convenções usadas na documentação para chamadas de API de exemplo, consulte a seção sobre [como ler chamadas de API de exemplo](../../landing/api-guide.md#sample-api) no guia de introdução às APIs Experience Platform.
+Este documento fornece um exemplo de chamada de API para demonstrar como formatar suas solicitações. Para obter informações sobre as convenções usadas na documentação para chamadas de API de exemplo, consulte a seção sobre [como ler chamadas de API de exemplo](../../landing/api-guide.md#sample-api) no guia de introdução para APIs Experience Platform.
 
 ## Expirações de conjuntos de dados
 
-A expiração de um conjunto de dados é uma ação de &quot;exclusão de um conjunto de dados&quot; atrasada. Ao criar uma expiração de conjunto de dados, você está especificando um momento futuro em que esse conjunto de dados deve ser excluído. Consulte a [guia de ponto de extremidade de expiração do conjunto de dados](./dataset-expiration.md) para obter detalhes sobre como agendar as expirações do conjunto de dados na API.
+A expiração de um conjunto de dados é uma ação de &quot;exclusão de um conjunto de dados&quot; atrasada. Ao criar uma expiração de conjunto de dados, você está especificando um momento futuro em que esse conjunto de dados deve ser excluído. Consulte o [guia de ponto de extremidade de expiração do conjunto de dados](./dataset-expiration.md) para obter detalhes sobre o agendamento de expirações do conjunto de dados na API.
 
 ## Exclusões de registro
 
 >[!IMPORTANT]
 >
->As solicitações de exclusão de registro só estão disponíveis para organizações que compraram **Adobe Healthcare Shield**.
+>As solicitações de exclusão de registros só estão disponíveis para organizações que compraram o **Adobe Healthcare Shield**.
 >
 >
->As exclusões de registros devem ser usadas para limpeza de dados, remoção de dados anônimos ou minimização de dados. Eles são **não** a ser usado para solicitações de direitos do titular dos dados (conformidade) como relacionadas a regulamentos de privacidade, como o Regulamento Geral sobre a Proteção de Dados (GDPR). Para todos os casos de uso de conformidade, use [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) em vez disso.
+>As exclusões de registros devem ser usadas para limpeza de dados, remoção de dados anônimos ou minimização de dados. Eles **não** devem ser usados para solicitações de direitos do titular dos dados (conformidade) relacionadas a regulamentos de privacidade, como o Regulamento Geral sobre a Proteção de Dados (GDPR). Para todos os casos de uso de conformidade, use o [Adobe Experience Platform Privacy Service](../../privacy-service/home.md).
 
-A API de higiene de dados permite excluir todos os registros associados a uma identidade em um ou todos os conjuntos de dados. Todas as tarefas do ciclo de vida de dados que excluem identidades são representadas por uma construção chamada ordem de serviço. Consulte a [guia de ponto de extremidade de ordem de trabalho](./workorder.md) para obter detalhes sobre como trabalhar com exclusões de registros na API.
+A API de higiene de dados permite excluir todos os registros associados a uma identidade em um ou todos os conjuntos de dados. Todas as tarefas do ciclo de vida de dados que excluem identidades são representadas por uma construção chamada ordem de serviço. Consulte o [manual de ponto de extremidade de ordem de trabalho](./workorder.md) para obter detalhes sobre como trabalhar com exclusões de registros na API.
 
 ## Cota
 
-Sua organização está limitada a uma cota de trabalho mensal predeterminada para cada tipo de operação do ciclo de vida dos dados, que pode variar dependendo do licenciamento. Consulte a [guia de endpoint de cota](./quota.md) para obter detalhes sobre como visualizar o status atual da cota dos processos do ciclo de vida dos dados.
+Sua organização está limitada a uma cota de trabalho mensal predeterminada para cada tipo de operação do ciclo de vida dos dados, que pode variar dependendo do licenciamento. Consulte o [manual de ponto de extremidade de cota](./quota.md) para obter detalhes sobre como visualizar o status atual da cota de seus processos do ciclo de vida dos dados.
 
 ## Próximas etapas
 
-Este guia abordou como gerenciar solicitações de ciclo de vida de dados usando chamadas de API. Para obter informações sobre como executar essas ações na interface do usuário da Platform, consulte a [guia da interface do usuário do ciclo de vida dos dados](../ui/overview.md).
+Este guia abordou como gerenciar solicitações de ciclo de vida de dados usando chamadas de API. Para obter informações sobre como executar essas ações na interface da Platform, consulte o [guia da interface do ciclo de vida dos dados](../ui/overview.md).

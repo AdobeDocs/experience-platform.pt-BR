@@ -5,18 +5,18 @@ description: Este documento fornece respostas a perguntas frequentes sobre o Pre
 exl-id: 810cfb2f-f80a-4aa7-ab3c-beb5de78708e
 source-git-commit: d39ae3a31405b907f330f5d54c91b95c0f999eee
 workflow-type: tm+mt
-source-wordcount: '342'
+source-wordcount: '343'
 ht-degree: 0%
 
 ---
 
-# [!DNL Data Prep] guia de solução de problemas
+# Guia de solução de problemas do [!DNL Data Prep]
 
-Este documento fornece respostas a perguntas frequentes sobre o Adobe Experience Platform [!DNL Data Prep], bem como um guia de solução de problemas para erros comuns. Para obter perguntas e informações de solução de problemas relacionadas às APIs da plataforma em geral, consulte o [Guia de solução de problemas da API do Adobe Experience Platform](../landing/troubleshooting.md).
+Este documento fornece respostas a perguntas frequentes sobre o Adobe Experience Platform [!DNL Data Prep], bem como um guia de solução de problemas para erros comuns. Para obter perguntas e informações sobre a solução de problemas das APIs da Platform em geral, consulte o [guia de solução de problemas da API do Adobe Experience Platform](../landing/troubleshooting.md).
 
 ## Perguntas frequentes
 
-Veja a seguir uma lista das perguntas frequentes sobre [!DNL Data Prep] e suas respostas.
+Veja a seguir uma lista de perguntas frequentes sobre [!DNL Data Prep] e suas respostas.
 
 ### Como os erros de transformação são resolvidos?
 
@@ -28,7 +28,7 @@ Quaisquer linhas inválidas, mesmo sem erros de transformação, também serão 
 
 ### Como posso escapar caracteres especiais em um campo?
 
-É possível escapar caracteres especiais em um campo usando `${...}`. No entanto, os arquivos JSON que contêm campos com um ponto (`.`) não são compatíveis com esse mecanismo. Ao interagir com hierarquias, se um atributo filho tiver um ponto (`.`), você deve usar uma barra invertida (`\`) para evitar caracteres especiais. Por exemplo, `address` é um objeto que contém o atributo `street.name`, pode ser referido como `address.street\.name` em vez de `address.street.name`.
+Você pode escapar caracteres especiais em um campo usando `${...}`. No entanto, arquivos JSON que contêm campos com um ponto (`.`) não são suportados por esse mecanismo. Ao interagir com hierarquias, se um atributo filho tiver um ponto (`.`), você deverá usar uma barra invertida (`\`) para usar escape em caracteres especiais. Por exemplo, `address` é um objeto que contém o atributo `street.name`, ele pode ser chamado de `address.street\.name` em vez de `address.street.name`.
 
 ### Qual é o comprimento máximo dos campos calculados?
 

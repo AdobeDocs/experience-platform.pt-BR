@@ -26,14 +26,14 @@ ht-degree: 66%
       * [Exemplo de caso de uso](./b2b-use-case.md)
       * [Tutorial completo](./b2b-tutorial.md)
       * [Medidas de proteção da Real-Time CDP B2B Edition](b2b-guardrails.md)
-* AUDIENCE MANAGER e REAL-TIME CDP {#evolution}
+* Audience Manager e Real-Time CDP {#evolution}
    * [Evolução do Audience Manager](aam-to-rtcdp.md)
 * Perfis de conta {#account}
    * [Visão geral do perfil da conta](accounts/account-profile-overview.md)
    * [Guia da interface do perfil da conta](accounts/account-profile-ui-guide.md)
 * Administração {#admin}
    * [Visão geral da administração](administration/admin-overview.md)
-* Públicos-alvo e segmentação {#segmentation}
+* Públicos e segmentação {#segmentation}
    * [Visão geral da segmentação](segmentation/segmentation-overview.md)
    * [Guia do Construtor de segmentos](segmentation/segment-builder-guide.md)
    * [Segmentação na Real-Time CDP B2B Edition](segmentation/b2b.md)
@@ -76,8 +76,8 @@ ht-degree: 66%
    * [Fontes na Real-Time CDP B2B Edition](sources/b2b.md)
 * Casos de uso {#use-cases}
    * [Visão geral de casos de uso de exemplo](/help/rtcdp/use-case-guides/overview.md)
-   * Aquisição de clientes {#customer-acquisition}
-      * [Interagir e adquirir novos clientes sem depender de cookies de terceiros](/help/rtcdp/partner-data/prospecting.md)
+   * Aquisição de cliente {#customer-acquisition}
+      * [Envolva e adquira novos clientes sem dependência de cookies de terceiros](/help/rtcdp/partner-data/prospecting.md)
       * [Personalizar experiências no site para visitantes desconhecidos usando o reconhecimento de visitantes auxiliados por parceiros](/help/rtcdp/partner-data/onsite-personalization.md)
       * [Redirecionamento externo de usuários não autenticados](./partner-data/offsite-retargeting.md)
    * Enriquecimento de perfil {#profile-enrichment}

@@ -10,17 +10,17 @@ ht-degree: 0%
 
 ---
 
-# [!UICONTROL IdentityMap] grupo de campos de esquema
+# Grupo de campos de esquema [!UICONTROL IdentityMap]
 
 >[!NOTE]
 >
->Os nomes de vários grupos de campos de esquema foram alterados. Consulte o documento sobre [atualizações do nome do grupo de campos](../name-updates.md) para obter mais informações.
+>Os nomes de vários grupos de campos de esquema foram alterados. Consulte o documento em [atualizações de nome de grupo de campos](../name-updates.md) para obter mais informações.
 
-[!UICONTROL IdentityMap] é um grupo de campos de esquema padrão para o [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md). O grupo de campos fornece um único campo de mapa, que contém um conjunto de identidades de usuário digitadas por namespace.
+[!UICONTROL IdentityMap] é um grupo de campos de esquema padrão para a [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md). O grupo de campos fornece um único campo de mapa, que contém um conjunto de identidades de usuário digitadas por namespace.
 
 ![Um diagrama do [!UICONTROL IdentityMap] grupo de campos de esquema](../../images/field-groups/identitymap.png)
 
-Consulte a seção sobre mapas de identidade na [noções básicas da composição do esquema](../../schema/composition.md#identityMap) para obter mais informações sobre o caso de uso, incluindo benefícios e desvantagens.
+Consulte a seção sobre mapas de identidade nas [noções básicas da composição de esquema](../../schema/composition.md#identityMap) para obter mais informações sobre o caso de uso, incluindo seus benefícios e desvantagens.
 
 **exemplo**
 
@@ -38,4 +38,4 @@ Consulte a seção sobre mapas de identidade na [noções básicas da composiç�
 }
 ```
 
-Para obter mais informações sobre o grupo de campos, consulte o [esquema completo](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/identitymap.schema.json) no repositório XDM público.
+Para obter mais detalhes sobre o grupo de campos, consulte o [esquema completo](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/identitymap.schema.json) no repositório XDM público.

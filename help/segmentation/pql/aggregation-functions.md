@@ -1,22 +1,22 @@
 ---
 solution: Experience Platform
-title: Funções de Agregação PQL
-description: As funções de agregação são usadas para agrupar vários valores em matrizes de Idioma de consulta de perfil (PQL) para formar um único valor de resumo.
+title: Funções de agregação do PQL
+description: As funções de agregação são usadas para agrupar vários valores em arrays Profile Query Language (PQL) para formar um único valor de resumo.
 exl-id: 6c0c0f6d-98c5-4b5d-b440-3e5e18c0f34b
 source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
 source-wordcount: '227'
-ht-degree: 8%
+ht-degree: 6%
 
 ---
 
 # Funções de agregação
 
-As funções de agregação são usadas para agrupar vários valores em [!DNL Profile Query Language] arrays (PQL) para formar um único valor de resumo. Mais informações sobre outras funções PQL podem ser encontradas no [[!DNL Profile Query Language] visão geral](./overview.md).
+As funções de agregação são usadas para agrupar vários valores em matrizes [!DNL Profile Query Language] (PQL) para formar um único valor de resumo. Mais informações sobre outras funções do PQL podem ser encontradas na [[!DNL Profile Query Language] visão geral](./overview.md).
 
 ## Contagem
 
-A variável `count` A função retorna o número de elementos dentro da matriz especificada.
+A função `count` retorna o número de elementos dentro da matriz especificada.
 
 **Formato**
 
@@ -26,15 +26,15 @@ A variável `count` A função retorna o número de elementos dentro da matriz e
 
 **Exemplo**
 
-A consulta PQL a seguir retorna o número de pedidos na matriz.
+A consulta do PQL a seguir retorna o número de pedidos na matriz.
 
 ```sql
 orders.count()
 ```
 
-## Sum
+## Somar
 
-A variável `sum` Esta função retorna a soma de todos os valores selecionados na matriz.
+A função `sum` retorna a soma de todos os valores selecionados na matriz.
 
 **Formato**
 
@@ -44,7 +44,7 @@ A variável `sum` Esta função retorna a soma de todos os valores selecionados 
 
 **Exemplo**
 
-A consulta PQL a seguir retorna a soma de todos os preços das ordens.
+A consulta do PQL a seguir retorna a soma de todos os preços dos pedidos.
 
 ```sql
 orders.sum(order.price)
@@ -52,7 +52,7 @@ orders.sum(order.price)
 
 ## Média
 
-A variável `average` Esta função retorna a média aritmética de todos os valores selecionados dentro da matriz.
+A função `average` retorna a média aritmética de todos os valores selecionados na matriz.
 
 **Formato**
 
@@ -62,7 +62,7 @@ A variável `average` Esta função retorna a média aritmética de todos os val
 
 **Exemplo**
 
-A consulta PQL a seguir retorna o preço médio de todas as ordens.
+A consulta PQL a seguir retorna o preço médio de todos os pedidos.
 
 ```sql
 orders.average(order.price)
@@ -70,7 +70,7 @@ orders.average(order.price)
 
 ## Mínimo
 
-A variável `min` Esta função retorna o menor valor dentro da matriz.
+A função `min` retorna o menor valor dentro da matriz.
 
 **Formato**
 
@@ -80,7 +80,7 @@ A variável `min` Esta função retorna o menor valor dentro da matriz.
 
 **Exemplo**
 
-A consulta PQL a seguir retorna o preço mais baixo de todas as ordens.
+A consulta do PQL a seguir retorna o preço mais baixo de todas as ordens.
 
 ```sql
 orders.min(order.price)
@@ -88,7 +88,7 @@ orders.min(order.price)
 
 ## Máximo
 
-A variável `max` Esta função retorna o maior valor dentro da matriz.
+A função `max` retorna o maior valor dentro da matriz.
 
 **Formato**
 
@@ -98,7 +98,7 @@ A variável `max` Esta função retorna o maior valor dentro da matriz.
 
 **Exemplo**
 
-A consulta PQL a seguir retorna o preço mais alto de todas as ordens.
+A consulta do PQL a seguir retorna o preço mais alto de todas as ordens.
 
 ```sql
 orders.max(order.price)
@@ -106,4 +106,4 @@ orders.max(order.price)
 
 ## Próximas etapas
 
-Agora que você aprendeu sobre funções de agregação, é possível usá-las em consultas PQL. Para obter mais informações sobre outras funções PQL, leia o [Visão geral do idioma de consulta do perfil](./overview.md).
+Agora que você aprendeu sobre funções de agregação, pode usá-las em queries do PQL. Para obter mais informações sobre outras funções do PQL, leia a [visão geral do Profile Query Language](./overview.md).

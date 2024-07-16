@@ -6,15 +6,15 @@ exl-id: 06f9ee37-9879-4db2-af68-9336366f7521
 source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
 source-wordcount: '310'
-ht-degree: 5%
+ht-degree: 6%
 
 ---
 
 # [!UICONTROL Detalhes da reserva] grupo de campos de esquema
 
-[!UICONTROL Detalhes da reserva] é um grupo de campos de esquema padrão para o [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md) usado para registrar informações sobre uma reserva, incluindo duração, modificação, status reembolsável e número de quartos.
+[!UICONTROL Detalhes da reserva] é um grupo de campos de esquema padrão para a [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md) usada para capturar informações sobre uma reserva, incluindo duração, modificação, status reembolsável e número de quartos.
 
-O grupo de campos fornece um único campo do tipo objeto, `reservations`. As propriedades contidas nesse objeto são explicadas abaixo.
+O grupo de campos fornece um único campo de tipo de objeto, `reservations`. As propriedades contidas nesse objeto são explicadas abaixo.
 
 ![Estrutura de detalhes da reserva](../../images/field-groups/reservation-details.png)
 
@@ -46,8 +46,8 @@ Para obter mais detalhes sobre o grupo de campos, consulte o repositório XDM p�
 
 ## Grupos de campos de reserva específicos do setor
 
-Há vários outros grupos de campos padrão que estendem a variável [!UICONTROL Detalhes da reserva] esquema para casos de uso específicos do setor. Consulte a seguinte documentação para obter mais detalhes:
+Há vários outros grupos de campos padrão que estendem o esquema [!UICONTROL Detalhes da reserva] para casos de uso específicos do setor. Consulte a seguinte documentação para obter mais detalhes:
 
 * [[!UICONTROL Reserva para o jantar]](./dining-reservation.md)
 * [[!UICONTROL Reserva de voo]](./flight-reservation.md)
-* [[!UICONTROL Reserva de acomodação]](./lodging-reservation.md)
+* [[!UICONTROL Reserva de hospedagem]](./lodging-reservation.md)

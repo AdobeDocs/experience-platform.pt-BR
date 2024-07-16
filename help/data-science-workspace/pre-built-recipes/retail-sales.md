@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;receita de vendas de varejo;Espaço de trabalho de ciência de dados;tópicos populares;receitas;pré-criar fórmula
+keywords: Experience Platform;receita de vendas de varejo;Data Science Workspace;tópicos populares;receitas;receita de pré-compilação
 solution: Experience Platform
 title: Receita de vendas de varejo
 description: A fórmula de Vendas de Varejo permite prever a previsão de vendas para todas as lojas pré-implantadas por um determinado período de tempo. Com um modelo de previsão preciso, o varejista seria capaz de encontrar a relação entre as políticas de demanda e de preços e tomar decisões de preços otimizadas para maximizar as vendas e a receita.
 exl-id: ff01fcd1-fca6-4957-8470-a974fd1520aa
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
-source-wordcount: '585'
+source-wordcount: '580'
 ht-degree: 2%
 
 ---
@@ -36,7 +36,7 @@ Este tutorial abordará a criação da fórmula de vendas de varejo em um Jupyte
 
 ## Esquema de dados
 
-Esta fórmula usa [Esquemas XDM](../../xdm/schema/field-dictionary.md) para modelar os dados. O esquema usado para esta fórmula é mostrado abaixo:
+Esta fórmula usa [esquemas XDM](../../xdm/schema/field-dictionary.md) para modelar os dados. O esquema usado para esta fórmula é mostrado abaixo:
 
 | Nome do campo | Tipo |
 | --- | --- |
@@ -55,7 +55,7 @@ Esta fórmula usa [Esquemas XDM](../../xdm/schema/field-dictionary.md) para mode
 
 ## Algoritmo
 
-Primeiro, o conjunto de dados de treinamento na *DSWRetailSales* o esquema é carregado. A partir daqui, o modelo é treinado usando um [algoritmo regressor de reforço de gradiente](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html). O incentivo de gradiente usa a ideia de que alunos fracos (um que é pelo menos um pouco melhor do que o acaso aleatório) podem formar uma sucessão de alunos focados em melhorar as fraquezas do aluno anterior. Juntos, eles podem ser usados para criar um modelo preditivo poderoso.
+Primeiro, o conjunto de dados de treinamento no esquema *DSWRetailSales* é carregado. Daqui, o modelo é treinado usando um [algoritmo de regressor de reforço de gradiente](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html). O incentivo de gradiente usa a ideia de que alunos fracos (um que é pelo menos um pouco melhor do que o acaso aleatório) podem formar uma sucessão de alunos focados em melhorar as fraquezas do aluno anterior. Juntos, eles podem ser usados para criar um modelo preditivo poderoso.
 
 O processo envolve três elementos: uma função de perda, um aluno fraco e um modelo aditivo.
 

@@ -28,7 +28,7 @@ GET /{QUERY_PARAMS}
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `{QUERY_PARAMS}` | Parâmetros de consulta opcionais para filtrar os resultados. Consulte a [documento do apêndice](./appendix.md#query) para obter uma lista de parâmetros disponíveis. |
+| `{QUERY_PARAMS}` | Parâmetros de consulta opcionais para filtrar os resultados. Consulte o [documento do apêndice](./appendix.md#query) para obter uma lista de parâmetros disponíveis. |
 
 **Solicitação**
 
@@ -42,7 +42,7 @@ curl -X GET \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna uma lista de sandboxes disponíveis para o usuário atual, incluindo detalhes como `name`, `title`, `state`, e `type`.
+Uma resposta bem-sucedida retorna uma lista de sandboxes disponíveis para o usuário atual, incluindo detalhes como `name`, `title`, `state` e `type`.
 
 ```json
 {
@@ -104,7 +104,7 @@ Uma resposta bem-sucedida retorna uma lista de sandboxes disponíveis para o usu
 | --- | --- |
 | `name` | O nome da sandbox. Usado para fins de pesquisa em chamadas de API. |
 | `title` | O nome de exibição da sandbox. |
-| `state` | O estado de processamento atual da sandbox. O estado de uma sandbox pode ser qualquer um dos seguintes: <ul><li>`creating`: a sandbox foi criada, mas ainda está sendo provisionada pelo sistema.</li><li>`active`: a sandbox é criada e está ativa.</li><li>`failed`: devido a um erro, a sandbox não pôde ser provisionada pelo sistema e está desabilitada.</li><li>`deleted`: a sandbox foi desativada manualmente.</li></ul> |
+| `state` | O estado de processamento atual da sandbox. O estado de uma sandbox pode ser qualquer um dos seguintes: <ul><li>`creating`: a sandbox foi criada, mas ainda está sendo provisionada pelo sistema.</li><li>`active`: a sandbox foi criada e está ativa.</li><li>`failed`: devido a um erro, a sandbox não pôde ser provisionada pelo sistema e está desabilitada.</li><li>`deleted`: a sandbox foi desabilitada manualmente.</li></ul> |
 | `type` | O tipo de sandbox, &quot;desenvolvimento&quot; ou &quot;produção&quot;. |
 | `isDefault` | Uma propriedade booleana que indica se essa sandbox é a sandbox de produção padrão da organização. |
 | `eTag` | Um identificador para uma versão específica da sandbox. Usado para controlar a versão e a eficiência do armazenamento em cache, esse valor é atualizado sempre que uma alteração é feita na sandbox. |

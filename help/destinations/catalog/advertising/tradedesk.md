@@ -14,19 +14,19 @@ ht-degree: 3%
 
 ## Visão geral {#overview}
 
-[!DNL The Trade Desk] O destino ajuda a enviar dados de perfil para o [!DNL The Trade Desk].
+O destino [!DNL The Trade Desk] ajuda a enviar dados de perfil para [!DNL The Trade Desk].
 
-[!DNL The Trade Desk] O é uma plataforma de autoatendimento para compradores de anúncios para executar campanhas digitais direcionadas por público e redirecionamento em fontes de inventário para exibição, vídeo e dispositivos móveis.
+[!DNL The Trade Desk] é uma plataforma de autoatendimento para compradores de anúncios para executar campanhas digitais com direcionamento de público e redirecionamento em fontes de inventário para dispositivos móveis, vídeo e exibição.
 
-Para enviar dados de perfil para [!DNL Trade Desk], você deve primeiro se conectar ao destino.
+Para enviar dados de perfil para [!DNL Trade Desk], primeiro você deve se conectar ao destino.
 
 ## Casos de uso {#use-cases}
 
-Como profissional de marketing, quero poder usar públicos-alvo criados com o [!DNL Trade Desk IDs] ou IDs de dispositivo para criar campanhas digitais direcionadas por redirecionamento ou público-alvo.
+Como profissional de marketing, quero poder usar públicos-alvo criados a partir do [!DNL Trade Desk IDs] ou de IDs de dispositivo para criar campanhas digitais com redirecionamento ou direcionadas por público-alvo.
 
 ## Identidades suportadas {#supported-identities}
 
-[!DNL The Trade Desk] O oferece suporte à ativação de públicos com base nas identidades mostradas na tabela abaixo. Saiba mais sobre [identidades](/help/identity-service/features/namespaces.md).
+O [!DNL The Trade Desk] dá suporte à ativação de públicos com base nas identidades mostradas na tabela abaixo. Saiba mais sobre [identidades](/help/identity-service/features/namespaces.md).
 
 | Identidade | Descrição |
 |---|---|
@@ -42,8 +42,8 @@ Esta seção descreve quais tipos de públicos-alvo você pode exportar para ess
 
 | Origem do público | Suportado | Descrição |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Públicos-alvo gerados pelo Experience Platform [Serviço de segmentação](../../../segmentation/home.md). |
-| Uploads personalizados | ✓ | Públicos-alvo [importado](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV. |
+| [!DNL Segmentation Service] | ✓ | Públicos gerados por meio do [Serviço de segmentação](../../../segmentation/home.md) do Experience Platform. |
+| Uploads personalizados | ✓ | Públicos [importados](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV. |
 
 {style="table-layout:auto"}
 
@@ -53,8 +53,8 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 
 | Item | Tipo | Notas |
 ---------|----------|---------|
-| Tipo de exportação | **[!UICONTROL Exportação de público]** | Você está exportando todos os membros de um público-alvo para o destino. |
-| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil é atualizado em Experience Platform com base na avaliação do público-alvo, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de transmissão](/help/destinations/destination-types.md#streaming-destinations). |
+| Tipo de exportação | **[!UICONTROL Exportação de público-alvo]** | Você está exportando todos os membros de um público-alvo para o destino. |
+| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil é atualizado em Experience Platform com base na avaliação do público-alvo, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -62,26 +62,26 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 
 >[!IMPORTANT]
 >
->Se você deseja criar seu primeiro destino com o [!DNL The Trade Desk] e não ativaram o [Funcionalidade de sincronização de ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) no Serviço de ID de Experience Cloud anterior (com o Adobe Audience Manager ou outros aplicativos), entre em contato com a Adobe Consulting ou com o Atendimento ao cliente para ativar as sincronizações de ID. Se você já configurou o [!DNL The Trade Desk] integrações no Audience Manager, as sincronizações de ID configuradas para serem transferidas para a Platform.
+>Se você deseja criar seu primeiro destino com o [!DNL The Trade Desk] e não habilitou a [funcionalidade de sincronização de ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) no Serviço de ID do Experience Cloud no passado (com o Adobe Audience Manager ou outros aplicativos), entre em contato com a Adobe Consulting ou com o Atendimento ao cliente para habilitar as sincronizações de ID. Se você tiver configurado anteriormente as integrações do [!DNL The Trade Desk] no Audience Manager, as sincronizações de ID configuradas serão transferidas para a Platform.
 
 ## Conectar ao destino {#connect}
 
 >[!IMPORTANT]
 > 
->Para se conectar ao destino, você precisa da variável **[!UICONTROL Exibir destinos]** e **[!UICONTROL Gerenciar destinos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
+>Para se conectar ao destino, você precisa de **[!UICONTROL Exibir Destinos]** e **[!UICONTROL Gerenciar Destinos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 
-Para se conectar a esse destino, siga as etapas descritas no [tutorial de configuração de destino](../../ui/connect-destination.md).
+Para se conectar a este destino, siga as etapas descritas no [tutorial de configuração de destino](../../ui/connect-destination.md).
 
 ### Parâmetros de conexão {#parameters}
 
-Enquanto [configuração](../../ui/connect-destination.md) Para esse destino, você deve fornecer as seguintes informações:
+Ao [configurar](../../ui/connect-destination.md) este destino, você deve fornecer as seguintes informações:
 
-* **[!UICONTROL Nome]**: um nome pelo qual você reconhecerá esse destino no futuro.
-* **[!UICONTROL Descrição]**: uma descrição que ajudará você a identificar esse destino no futuro.
-* **[!UICONTROL ID da conta]**: Seu [!DNL Trade Desk] [!UICONTROL ID da conta].
-* **[!UICONTROL Local do servidor]**: Pergunte ao seu [!DNL Trade Desk] representante que servidor regional você deve usar. Estes são os servidores regionais disponíveis que você pode escolher:
+* **[!UICONTROL Nome]**: um nome pelo qual você reconhecerá este destino no futuro.
+* **[!UICONTROL Descrição]**: uma descrição que ajudará você a identificar este destino no futuro.
+* **[!UICONTROL ID da Conta]**: Sua [!DNL Trade Desk] [!UICONTROL ID da Conta].
+* **[!UICONTROL Local do Servidor]**: pergunte ao representante do [!DNL Trade Desk] qual servidor regional você deve usar. Estes são os servidores regionais disponíveis que você pode escolher:
    * **[!UICONTROL Europa]**
-   * **[!UICONTROL Singapura]**
+   * **[!UICONTROL Cingapura]**
    * **[!UICONTROL Tóquio]**
    * **[!UICONTROL Leste da América do Norte]**
    * **[!UICONTROL Oeste da América do Norte]**
@@ -89,27 +89,27 @@ Enquanto [configuração](../../ui/connect-destination.md) Para esse destino, vo
 
 ### Ativar alertas {#enable-alerts}
 
-Você pode ativar os alertas para receber notificações sobre o status do fluxo de dados para o seu destino. Selecione um alerta na lista para assinar e receber notificações sobre o status do seu fluxo de dados. Para obter mais informações sobre alertas, consulte o manual sobre [assinatura de alertas de destinos usando a interface do](../../ui/alerts.md).
+Você pode ativar os alertas para receber notificações sobre o status do fluxo de dados para o seu destino. Selecione um alerta na lista para assinar e receber notificações sobre o status do seu fluxo de dados. Para obter mais informações sobre alertas, consulte o manual sobre [assinatura de alertas de destinos usando a interface](../../ui/alerts.md).
 
-Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICONTROL Próxima]**.
+Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICONTROL Avançar]**.
 
 ## Ativar públicos-alvo para esse destino {#activate}
 
 >[!IMPORTANT]
 > 
->* Para ativar os dados, é necessário **[!UICONTROL Exibir destinos]**, **[!UICONTROL Ativar destinos]**, **[!UICONTROL Exibir perfis]**, e **[!UICONTROL Exibir segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
->* Para exportar *identidades*, você precisará do **[!UICONTROL Exibir gráfico de identidade]** [permissão de controle de acesso](/help/access-control/home.md#permissions). <br> ![Selecione o namespace de identidade destacado no fluxo de trabalho para ativar públicos para destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecione o namespace de identidade destacado no fluxo de trabalho para ativar públicos para destinos."){width="100" zoomable="yes"}
+>* Para ativar dados, você precisa de **[!UICONTROL Exibir Destinos]**, **[!UICONTROL Ativar Destinos]**, **[!UICONTROL Exibir Perfis]** e **[!UICONTROL Exibir Segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
+>* Para exportar *identidades*, você precisa da **[!UICONTROL permissão Exibir Gráfico de Identidade]** [controle de acesso](/help/access-control/home.md#permissions). <br> ![Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos."){width="100" zoomable="yes"}
 
-Consulte [Ativar dados do público-alvo para streaming de destinos de exportação de público](../../ui/activate-segment-streaming-destinations.md) para obter instruções sobre como ativar públicos-alvo para esse destino.
+Consulte [Ativar dados de público-alvo para streaming de destinos de exportação de público](../../ui/activate-segment-streaming-destinations.md) para obter instruções sobre como ativar públicos-alvo para este destino.
 
-No [Programação de público](../../ui/activate-segment-streaming-destinations.md#scheduling) etapa, mapeie manualmente os públicos-alvo à ID correspondente ou ao nome amigável na plataforma de destino.
+Na etapa [Agenda de público-alvo](../../ui/activate-segment-streaming-destinations.md#scheduling), mapeie manualmente os públicos-alvo para a ID correspondente ou nome amigável na plataforma de destino.
 
 Ao mapear segmentos, recomendamos usar o nome de público-alvo da Platform ou uma forma mais curta, para facilitar o uso. No entanto, a ID ou o nome do público-alvo no seu destino não precisa corresponder ao da sua conta da Platform. Qualquer valor inserido no campo de mapeamento será refletido pelo destino.
 
-Se estiver usando vários mapeamentos de dispositivo (IDs de cookie, [!DNL IDFA], [!DNL GAID]), use o mesmo valor de mapeamento para todos os três mapeamentos. [!DNL The Trade Desk] A agregará todos eles em um único segmento, com um detalhamento no nível do dispositivo.
+Se estiver usando vários mapeamentos de dispositivo (IDs de cookie, [!DNL IDFA], [!DNL GAID]), certifique-se de usar o mesmo valor de mapeamento para todos os três mapeamentos. [!DNL The Trade Desk] agregará todos eles em um único segmento, com um detalhamento em nível de dispositivo.
 
-![ID do mapeamento de segmentos](../../assets/common/segment-mapping-id.png)
+![ID de Mapeamento de Segmentos](../../assets/common/segment-mapping-id.png)
 
 ## Dados exportados {#exported-data}
 
-Para verificar se os dados foram exportados com sucesso para o [!DNL The Trade Desk] destino, verifique seu [!DNL Trade Desk] conta. Se a ativação for bem-sucedida, os públicos-alvo serão preenchidos na conta.
+Para verificar se os dados foram exportados com êxito para o destino [!DNL The Trade Desk], verifique sua conta [!DNL Trade Desk]. Se a ativação for bem-sucedida, os públicos-alvo serão preenchidos na conta.

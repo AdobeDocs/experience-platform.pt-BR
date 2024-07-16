@@ -76,7 +76,7 @@ Configuração do algoritmo:
 | ---| --- | --- | --- | --- |
 | 1 | ID do CRM | ID do CRM | CROSS_DEVICE | Sim |
 | 2 | Emails (SHA256, em letras minúsculas) | Email_LC_SHA256 | Email | NÃO |
-| 3 | Telefone (SHA256) | Phone_SHA256 | Telefone  | NÃO |
+| 3 | Telefone (SHA256) | Phone_SHA256 | Telefone | NÃO |
 | 4 | ID de anúncio do Google (GAID) | GAID | DISPOSITIVO | NÃO |
 | 5 | Apple IDFA (ID para Apple) | IDFA | DISPOSITIVO | NÃO |
 | 6 | ECID | ECID | COOKIE | NÃO |

@@ -15,9 +15,9 @@ Ao exportar dados do Experience Platform para o seu destino, talvez seja necess�
 
 O Destination SDK oferece ferramentas que você pode usar para criar, atualizar ou excluir públicos-alvo de forma programática na plataforma de destino.
 
-Para entender onde esse componente se encaixa em uma integração criada com o Destination SDK, consulte o diagrama no [opções de configuração](../configuration-options.md) ou consulte o guia sobre como [usar o Destination SDK para configurar um destino de transmissão](../../guides/configure-destination-instructions.md#create-destination-configuration).
+Para entender onde esse componente se encaixa em uma integração criada com o Destination SDK, consulte o diagrama na documentação de [opções de configuração](../configuration-options.md) ou consulte o guia sobre como [usar o Destination SDK para configurar um destino de streaming](../../guides/configure-destination-instructions.md#create-destination-configuration).
 
-É possível configurar o modelo de metadados de público-alvo por meio da `/authoring/audience-templates` terminal. Depois de criar a configuração de metadados do público, você pode usar o `/authoring/destinations` endpoint para configurar o `audienceMetadataConfig` seção. Esta seção informa ao destino quais metadados de público-alvo ele deve mapear para o modelo de público-alvo.
+Você pode configurar o modelo de metadados de público por meio do ponto de extremidade `/authoring/audience-templates`. Depois de criar a configuração de metadados de público, você pode usar o terminal `/authoring/destinations` para configurar a seção `audienceMetadataConfig`. Esta seção informa ao destino quais metadados de público-alvo ele deve mapear para o modelo de público-alvo.
 
 Consulte as seguintes páginas de referência de API para obter exemplos detalhados de chamadas de API, onde é possível configurar os componentes mostrados nesta página.
 
@@ -28,7 +28,7 @@ Consulte as seguintes páginas de referência de API para obter exemplos detalha
 
 >[!IMPORTANT]
 >
->Todos os nomes e valores de parâmetros compatíveis com o Destination SDK são **diferencia maiúsculas de minúsculas**. Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
+>Todos os nomes e valores de parâmetros suportados pelo Destination SDK fazem **distinção entre maiúsculas e minúsculas**. Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
 
 ## Tipos de integração compatíveis {#supported-integration-types}
 
@@ -54,10 +54,10 @@ Ao criar a configuração de metadados de público-alvo, você pode usar os par�
 
 | Parâmetro | Tipo | Descrição |
 |---------|----------|------|
-| `mapExperiencePlatformSegmentName` | Booleano | Indica se a variável [[!UICONTROL ID do mapeamento]](../../../ui/activate-segment-streaming-destinations.md#scheduling) no workflow de ativação de destino deve ser o nome do público-alvo Experience Platform. |
-| `mapExperiencePlatformSegmentId` | Booleano | Indica se a variável [[!UICONTROL ID do mapeamento]](../../../ui/activate-segment-streaming-destinations.md#scheduling) no workflow de ativação de destino deve ser a ID de público-alvo do Experience Platform. |
-| `mapUserInput` | Booleano | Ativa ou desativa a entrada do usuário para o [[!UICONTROL ID do mapeamento]](../../../ui/activate-segment-streaming-destinations.md#scheduling) no workflow de ativação de destino. Se definida como `true`, `audienceTemplateId` não pode estar presente. |
-| `audienceTemplateId` | String | A variável `instanceId` do [modelo de metadados de público](../../metadata-api/create-audience-template.md) usado para o seu destino. |
+| `mapExperiencePlatformSegmentName` | Booleano | Indica se o valor [[!UICONTROL ID de Mapeamento]](../../../ui/activate-segment-streaming-destinations.md#scheduling) no fluxo de trabalho de ativação de destino deve ser o nome de público-alvo Experience Platform. |
+| `mapExperiencePlatformSegmentId` | Booleano | Indica se o valor [[!UICONTROL ID de Mapeamento]](../../../ui/activate-segment-streaming-destinations.md#scheduling) no fluxo de trabalho de ativação de destino deve ser a ID de público-alvo Experience Platform. |
+| `mapUserInput` | Booleano | Habilita ou desabilita a entrada do usuário para o valor [[!UICONTROL ID de Mapeamento]](../../../ui/activate-segment-streaming-destinations.md#scheduling) no fluxo de trabalho de ativação de destino. Se definido como `true`, `audienceTemplateId` não pode estar presente. |
+| `audienceTemplateId` | String | O `instanceId` do [modelo de metadados de público-alvo](../../metadata-api/create-audience-template.md) usado para o seu destino. |
 
 {style="table-layout:auto"}
 

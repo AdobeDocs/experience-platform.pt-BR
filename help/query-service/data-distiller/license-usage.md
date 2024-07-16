@@ -4,7 +4,7 @@ description: A interface do usuário do Adobe Experience Platform fornece um pai
 exl-id: a1e365a0-cc65-4fd6-b36f-8d79b7d9ec7c
 source-git-commit: f33629d73e9bc7273e6ee5170294618f3e9731a8
 workflow-type: tm+mt
-source-wordcount: '277'
+source-wordcount: '279'
 ht-degree: 0%
 
 ---
@@ -17,16 +17,16 @@ O painel fornece métricas de uso para cada produto comprado, o uso consolidado 
 
 >[!NOTE]
 >
->O painel de uso de licença não está habilitado por padrão. Os usuários devem receber a permissão &quot;Exibir painel de uso da licença&quot; para poderem exibir o painel. Para obter etapas sobre como conceder permissões de acesso para exibir o painel de uso da licença, consulte o [guia de permissões do painel](../../dashboards/permissions.md).
+>O painel de uso de licença não está habilitado por padrão. Os usuários devem receber a permissão &quot;Exibir painel de uso da licença&quot; para poderem exibir o painel. Para obter etapas sobre como conceder permissões de acesso para exibir o painel de uso de licença, consulte o [guia de permissões do painel](../../dashboards/permissions.md).
 
-## Computar horas {#compute-hours}
+## Calcular horas {#compute-hours}
 
-A variável [!UICONTROL Computar horas] A métrica só é aplicável a clientes com a licença do Data Distiller para consultas em lote. [!UICONTROL Computar horas] são a medida do tempo gasto pelos mecanismos do Serviço de consulta para ler, processar e gravar dados de volta no data lake quando uma consulta em lote é executada.
+A métrica [!UICONTROL Calcular horas] só se aplica a clientes com a licença do Data Distiller para consultas em lote. [!UICONTROL Horas de computação] são a medida de tempo que os mecanismos de Serviço de Consulta levam para ler, processar e gravar dados de volta no data lake quando uma consulta em lote é executada.
 
 >[!NOTE]
 >
->**A variável [!UICONTROL Computar horas] Os dados do estão disponíveis com limitações**: os dados começam em 1º de outubro de 2023 sem tendências.<br>A variável **preenchimento retroativo** de dados a partir da data de início do contrato é um trabalho em andamento. Espera-se que esteja disponível até o final do ano civil.
+>**Os dados de [!UICONTROL Horas de computação] estão disponíveis com limitações**: os dados começam em 1º de outubro de 2023, sem tendências.<br>O **preenchimento retroativo** de dados da data de início do contrato está em andamento. Espera-se que esteja disponível até o final do ano civil.
 
-![O painel de uso da licença com a métrica horas de computação realçada.](../images/data-distiller/compute-hours.png)
+![O painel de uso de licença com a métrica de horas de computação realçada.](../images/data-distiller/compute-hours.png)
 
-Para encontrar mais informações sobre as métricas disponíveis para sua organização com base na licença adquirida da organização, consulte a [guia do painel de uso da licença](../../dashboards/guides/license-usage.md).
+Para obter mais informações sobre as métricas disponíveis para sua organização com base na licença adquirida de sua organização, consulte o [guia do painel de uso da licença](../../dashboards/guides/license-usage.md).

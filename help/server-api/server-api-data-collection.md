@@ -1,6 +1,6 @@
 ---
-title: Coleta de dados
-description: Saiba como a API do servidor de rede de borda da Adobe Experience Platform estrutura os dados coletados.
+title: Coleção de dados
+description: Saiba como a API do Adobe Experience Platform Edge Network Server estrutura os dados coletados.
 source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
 workflow-type: tm+mt
 source-wordcount: '131'
@@ -9,16 +9,16 @@ ht-degree: 6%
 ---
 
 
-# Coleta de dados
+# Coleção de dados
 
-A variável [!DNL Server API] O oferece dois tipos de endpoints de coleta de dados:
+O [!DNL Server API] oferece dois tipos de pontos de extremidade de coleta de dados:
 
-* [Pontos de extremidade de coleta de dados interativos](interactive-data-collection.md), usado quando o cliente espera que uma resposta seja retornada pelo servidor. Esses endpoints também podem retornar conteúdo de outros serviços da rede de borda ao realizar a coleta de dados.
-* [Coleta de dados de evento não interativa](non-interactive-data-collection.md), usado quando nenhuma resposta é esperada do servidor. Esses endpoints são usados somente para a coleta de dados do.
+* [Pontos de extremidade de coleção de dados interativos](interactive-data-collection.md), usados quando o cliente espera que uma resposta seja retornada pelo servidor. Esses endpoints também podem retornar conteúdo de outros serviços Edge Network enquanto executam a coleta de dados.
+* [Coleção de dados de evento não interativa](non-interactive-data-collection.md), usada quando nenhuma resposta é esperada do servidor. Esses endpoints são usados somente para a coleta de dados do.
 
-## `Event` objeto {#event-object}
+## objeto `Event` {#event-object}
 
-Dados coletados pelo [!DNL Server API] está estruturado no `Event` objeto. A estrutura desse objeto é descrita abaixo.
+Os dados coletados por [!DNL Server API] são estruturados no objeto `Event`. A estrutura desse objeto é descrita abaixo.
 
 ```json
 {
@@ -57,5 +57,5 @@ Dados coletados pelo [!DNL Server API] está estruturado no `Event` objeto. A es
 | Atributo | Tipo | Descrição |
 | --- | --- | --- |
 | `xdm` | Objeto | *Obrigatório*. Objeto JSON que contém dados no formato XDM, correspondentes ao esquema do conjunto de dados. |
-| `data` | Objeto | *Opcional*. Objeto JSON que contém dados de forma livre, que podem ser mapeados para XDM pela Rede de borda. |
+| `data` | Objeto | *Opcional*. Objeto JSON que contém dados de forma livre, que podem ser mapeados para o XDM pelo Edge Network. |
 

@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;página inicial;tópicos populares;mapeamento de Audience Manager;mapeamento do audience manager
 solution: Experience Platform
-title: Mapeamento de campos para o Conector de origem do Adobe Audience Manager
+title: Mapeamento de campos para o Adobe Audience Manager Source Connector
 description: Saiba como mapear dados do Adobe Audience Manager (dados em tempo real, integrados e de perfil) para campos correspondentes do Experience Data Model (XDM) para o conector de origem do Audience Manager.
 exl-id: b800ba43-c308-4334-adce-3d554d50cefb
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '169'
+source-wordcount: '156'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 As tabelas abaixo contêm os mapeamentos entre os campos nos dados do Adobe Audience Manager (dados em tempo real, integrados e de perfil) e seus campos XDM correspondentes.
 
-Consulte a [Dicionário de campo XDM](../../../../xdm/schema/field-dictionary.md) para obter mais informações sobre cada campo XDM.
+Consulte o [dicionário de campo XDM](../../../../xdm/schema/field-dictionary.md) para obter mais informações sobre cada campo XDM.
 
 ## Dados em tempo real
 

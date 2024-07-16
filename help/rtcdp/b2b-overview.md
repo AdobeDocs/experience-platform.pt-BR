@@ -16,7 +16,7 @@ ht-degree: 4%
 
 Criado no Adobe Real-time Customer Data Platform (Real-Time CDP), o Real-Time CDP B2B Edition foi desenvolvido especificamente para profissionais de marketing que operam em um modelo de serviço business-to-business. A plataforma reúne dados de várias origens e os combina numa única exibição de perfis de pessoas e contas. Esses dados unificados permitem que profissionais de marketing direcionem públicos-alvo específicos com precisão e gerem engajamento em todos os canais disponíveis.
 
-Há melhorias em uma variedade de recursos do Adobe Experience Platform que distinguem o Real-Time CDP B2B Edition de seu equivalente B2C. Eles incluem melhorias no Experience Data Model (XDM) para casos de uso de B2B, atualizações na resolução de identidade e segmentação de perfil, bem como um conector e destino personalizados para [!DNL Marketo Engage]. A variável [!DNL Marketo] O conector do permite que as marcas B2B conectem seus dados de envolvimento B2B líderes do setor com informações comportamentais, a fim de nutrir clientes potenciais e aprimorar as operações de marketing baseadas em conta.
+Há melhorias em uma variedade de recursos do Adobe Experience Platform que distinguem o Real-Time CDP B2B Edition de seu equivalente B2C. Eles incluem melhorias no Experience Data Model (XDM) para casos de uso B2B, atualizações na resolução de identidade e segmentação de perfil, bem como um conector e destino personalizados para [!DNL Marketo Engage]. O conector [!DNL Marketo] permite que as marcas B2B conectem seus dados de envolvimento B2B líderes do setor com informações comportamentais para fomentar clientes potenciais e aprimorar as operações de marketing baseadas em conta.
 
 Com o Real-Time CDP B2B Edition, você pode:
 
@@ -28,9 +28,9 @@ Detalhes mais abrangentes sobre as melhorias feitas no Real-Time CDP B2B Edition
 
 ## XDM
 
-O Real-Time CDP B2B Edition fornece várias novas classes de esquema XDM, grupos de campos e tipos de relacionamento para capturar e estruturar seus dados especificamente para fins B2B. Consulte a visão geral em [XDM na edição B2B do Real-Time CDP](./schemas/b2b.md) para obter uma análise de cada um desses aprimoramentos.
+O Real-Time CDP B2B Edition fornece várias novas classes de esquema XDM, grupos de campos e tipos de relacionamento para capturar e estruturar seus dados especificamente para fins B2B. Consulte a visão geral no [XDM na edição B2B do Real-Time CDP](./schemas/b2b.md) para obter um detalhamento de cada um desses aprimoramentos.
 
-Ao usar esquemas B2B pré-configurados, você pode trazer dados em uma estrutura padronizada e acionável. Muitas das novas classes de esquema mapeiam quase diretamente para aquelas encontradas nos principais CRMs, como [!DNL Salesforce], [!DNL Microsoft Dynamics], [!DNL Marketo]e outras fontes de dados B2B. Com o Real-Time CDP B2B Edition, você pode trazer dados de fontes B2B para a Platform de uma maneira simples e com resultados fáceis de auditar.
+Ao usar esquemas B2B pré-configurados, você pode trazer dados em uma estrutura padronizada e acionável. Muitas das novas classes de esquema mapeiam quase diretamente para aquelas encontradas nos principais CRMs, como [!DNL Salesforce], [!DNL Microsoft Dynamics], [!DNL Marketo] e outras fontes de dados B2B. Com o Real-Time CDP B2B Edition, você pode trazer dados de fontes B2B para a Platform de uma maneira simples e com resultados fáceis de auditar.
 
 Esses aprimoramentos do XDM permitem assimilar e ativar melhor os dados por meio de fontes e destinos centrados em B2B, melhorando a unificação e a apresentação dos dados para casos de uso mais variados e flexíveis.
 
@@ -59,13 +59,13 @@ Quando implementado corretamente, o sistema rastreia as pessoas usando identific
 
 ## Fontes B2B
 
-A Platform permite que os dados sejam assimilados de fontes externas e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da Platform. A variável [!DNL Marketo] A fonte de dados permite transmitir dados B2B para a Platform e manter esses dados atualizados usando aplicativos conectados à Platform. Ele oferece suporte a várias instâncias de [!DNL Marketo] (o que é benéfico para grandes empresas com várias instâncias) e obtém uma única organização onde os dados são mesclados.
+A Platform permite que os dados sejam assimilados de fontes externas e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da Platform. A origem [!DNL Marketo] permite transmitir dados B2B para a Platform e manter esses dados atualizados usando aplicativos conectados à Platform. Ele oferece suporte a qualquer número de instâncias de [!DNL Marketo] (o que é benéfico para grandes empresas com várias instâncias) e é extraído para uma única organização onde os dados são mesclados.
 
 >[!NOTE]
 >
->A variável [!DNL Marketo] a origem é **não** necessário para usar o Real-Time CDP B2B Edition.
+>A origem [!DNL Marketo] é **não** necessária para usar o Real-Time CDP B2B Edition.
 
-Consulte a [origens na Real-Time CDP B2B Edition](./sources/b2b.md) documentação para obter mais informações sobre o Marketo e trazer dados B2B para a Platform.
+Consulte as [fontes na documentação do Real-Time CDP B2B Edition](./sources/b2b.md) para obter mais informações sobre o Marketo e trazer dados B2B para a Platform.
 
 ## Destinos B2B
 

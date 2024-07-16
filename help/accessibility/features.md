@@ -6,8 +6,8 @@ description: Saiba mais sobre os recursos gerais de acessibilidade compatíveis 
 exl-id: 4b7e2f2b-af51-4376-8a63-16c921cc7135
 source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
 workflow-type: tm+mt
-source-wordcount: '484'
-ht-degree: 3%
+source-wordcount: '481'
+ht-degree: 0%
 
 ---
 
@@ -35,7 +35,7 @@ Os seguintes elementos de navegação facilitam a acessibilidade:
 
 ## Paletas de cores e contraste
 
-O Experience Platform se esforça para [WCAG 2.1 AA](https://www.w3.org/TR/WCAG/) conformidade, incluindo requisitos para contraste de cores. A interface do usuário do Experience Platform fornece contraste suficiente no aplicativo para garantir uma experiência de exibição acessível para usuários com limitações visuais ou de percepção de cor.
+O Experience Platform se esforça para obter a conformidade [WCAG 2.1 AA](https://www.w3.org/TR/WCAG/), incluindo os requisitos para contraste de cores. A interface do usuário do Experience Platform fornece contraste suficiente no aplicativo para garantir uma experiência de exibição acessível para usuários com limitações visuais ou de percepção de cor.
 
 ![A paleta de cores e o contraste presentes na página inicial da interface do usuário do Experience Platform.](images/homepage.png)
 

@@ -14,21 +14,21 @@ ht-degree: 2%
 
 # Ponto de acesso de políticas de mesclagem
 
-O Adobe Experience Platform permite reunir fragmentos de dados de várias fontes e combiná-los para obter uma visualização completa de cada cliente individual. Ao reunir esses dados, as políticas de mesclagem são as regras que [!DNL Platform] O usa o para determinar como os dados serão priorizados e quais dados serão combinados para criar uma visualização unificada.
+O Adobe Experience Platform permite reunir fragmentos de dados de várias fontes e combiná-los para obter uma visualização completa de cada cliente individual. Ao reunir esses dados, as políticas de mesclagem são as regras que [!DNL Platform] usa para determinar como os dados serão priorizados e quais dados serão combinados para criar uma exibição unificada.
 
 Por exemplo, se um cliente interagir com sua marca em vários canais, sua organização terá vários fragmentos de perfil relacionados a esse único cliente que aparecem em vários conjuntos de dados. Quando esses fragmentos são assimilados na Platform, eles são mesclados para criar um único perfil para esse cliente. Quando os dados de várias origens entram em conflito (por exemplo, um fragmento lista o cliente como &quot;único&quot; enquanto o outro lista o cliente como &quot;casado&quot;), a política de mesclagem determina quais informações incluir no perfil do indivíduo.
 
 Usando APIs RESTful ou a interface do usuário, você pode criar novas políticas de mesclagem, gerenciar políticas existentes e definir uma política de mesclagem padrão para sua organização. Este guia fornece etapas para trabalhar com políticas de mesclagem usando a API.
 
-Para trabalhar com políticas de mesclagem usando a interface do, consulte o [guia da interface do usuário de políticas de mesclagem](../merge-policies/ui-guide.md). Para saber mais sobre as políticas de mesclagem em geral e sua função no Experience Platform, comece lendo o [visão geral das políticas de mesclagem](../merge-policies/overview.md).
+Para trabalhar com políticas de mesclagem usando a interface, consulte o [guia da interface de políticas de mesclagem](../merge-policies/ui-guide.md). Para saber mais sobre as políticas de mesclagem em geral e sua função no Experience Platform, comece lendo a [visão geral das políticas de mesclagem](../merge-policies/overview.md).
 
 ## Introdução
 
-O endpoint da API usado neste guia faz parte da [[!DNL Real-Time Customer Profile API]](https://www.adobe.com/go/profile-apis-en). Antes de continuar, reveja o [guia de introdução](getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre os cabeçalhos necessários para fazer chamadas com êxito para qualquer [!DNL Experience Platform] API.
+O ponto de extremidade de API usado neste guia faz parte de [[!DNL Real-Time Customer Profile API]](https://www.adobe.com/go/profile-apis-en). Antes de continuar, consulte o [guia de introdução](getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre os cabeçalhos necessários para fazer chamadas com êxito para qualquer API do [!DNL Experience Platform].
 
 ## Componentes das políticas de mesclagem {#components-of-merge-policies}
 
-As políticas de mesclagem são privadas para sua organização, permitindo criar políticas diferentes para mesclar esquemas das maneiras específicas necessárias. Qualquer API que acesse [!DNL Profile] os dados exigem uma política de mesclagem, embora um padrão seja usado se um não for fornecido explicitamente. [!DNL Platform] O fornece às organizações uma política de mesclagem padrão, ou você pode criar uma política de mesclagem para uma classe de esquema específica do Experience Data Model (XDM) e marcá-la como o padrão para sua organização.
+As políticas de mesclagem são privadas para sua organização, permitindo criar políticas diferentes para mesclar esquemas das maneiras específicas necessárias. Qualquer API que acesse os dados [!DNL Profile] requer uma política de mesclagem, embora um padrão seja usado se um não for fornecido explicitamente. [!DNL Platform] fornece às organizações uma política de mesclagem padrão, ou você pode criar uma política de mesclagem para uma classe de esquema específica do Experience Data Model (XDM) e marcá-la como o padrão para sua organização.
 
 Embora cada organização possa ter várias políticas de mesclagem por classe de esquema, cada classe pode ter apenas uma política de mesclagem padrão. Qualquer política de mesclagem definida como padrão será usada nos casos em que o nome da classe de esquema for fornecido e uma política de mesclagem for necessária, mas não fornecida.
 
@@ -36,9 +36,9 @@ Embora cada organização possa ter várias políticas de mesclagem por classe d
 >
 >Ao definir uma nova política de mesclagem como padrão, qualquer política de mesclagem existente definida anteriormente como padrão será atualizada automaticamente para não ser mais usada como padrão.
 
-Para garantir que todos os consumidores de perfil estejam trabalhando com a mesma exibição nas bordas, as políticas de mesclagem podem ser marcadas como ativas na borda. Para que um público-alvo seja ativado na borda (marcado como um público-alvo de borda), ele deve estar vinculado a uma política de mesclagem marcada como ativo na borda. Se um público-alvo for **não** vinculado a uma política de mesclagem marcada como ativa na borda, o público-alvo não será marcado como ativo na borda e será marcado como um público de transmissão.
+Para garantir que todos os consumidores de perfil estejam trabalhando com a mesma exibição nas bordas, as políticas de mesclagem podem ser marcadas como ativas na borda. Para que um público-alvo seja ativado na borda (marcado como um público-alvo de borda), ele deve estar vinculado a uma política de mesclagem marcada como ativo na borda. Se um público-alvo estiver **não** vinculado a uma política de mesclagem marcada como ativo na borda, o público-alvo não será marcado como ativo na borda e será marcado como um público de streaming.
 
-Além disso, cada organização só pode ter **um** política de mesclagem ativa no edge. Se uma política de mesclagem estiver ativa na borda, ela poderá ser usada para outros sistemas na borda, como Perfil da borda, Segmentação da borda e Destinos na borda.
+Além disso, cada organização só pode ter **uma** política de mesclagem ativa na borda. Se uma política de mesclagem estiver ativa na borda, ela poderá ser usada para outros sistemas na borda, como Perfil do Edge, Segmentação do Edge e Destinos no Edge.
 
 ### Concluir objeto de política de mesclagem
 
@@ -72,11 +72,11 @@ O objeto de política de mesclagem completo representa um conjunto de preferênc
 | `id` | O identificador exclusivo gerado pelo sistema atribuído no momento da criação |
 | `name` | Nome amigável pelo qual a política de mesclagem pode ser identificada nas exibições de lista. |
 | `imsOrgId` | ID da organização à qual essa política de mesclagem pertence |
-| `schema.name` | Parte do [`schema`](#schema) objeto, a variável `name` O campo contém a classe de esquema XDM à qual a política de mesclagem está relacionada. Para obter mais informações sobre esquemas e classes, leia a [Documentação XDM](../../xdm/home.md). |
+| `schema.name` | Parte do objeto [`schema`](#schema), o campo `name` contém a classe de esquema XDM à qual a política de mesclagem está relacionada. Para obter mais informações sobre esquemas e classes, leia a [documentação sobre XDM](../../xdm/home.md). |
 | `version` | [!DNL Platform] versão mantida da política de mesclagem. Esse valor somente leitura é incrementado sempre que uma política de mesclagem é atualizada. |
-| `identityGraph` | [Gráfico de identidade](#identity-graph) objeto que indica o gráfico de identidade a partir do qual as identidades relacionadas serão obtidas. Os fragmentos de perfil encontrados para todas as identidades relacionadas serão mesclados. |
-| `attributeMerge` | [Mesclagem de atributos](#attribute-merge) objeto que indica a maneira pela qual a política de mesclagem priorizará os atributos de perfil em caso de conflitos de dados. |
-| `isActiveOnEdge` | Valor booliano que indica se essa política de mesclagem pode ser usada na borda. Por padrão, esse valor é `false`. |
+| `identityGraph` | Objeto [Gráfico de identidade](#identity-graph) indicando o gráfico de identidade a partir do qual as identidades relacionadas serão obtidas. Os fragmentos de perfil encontrados para todas as identidades relacionadas serão mesclados. |
+| `attributeMerge` | Objeto [Mesclagem de atributos](#attribute-merge) indicando a maneira pela qual a política de mesclagem priorizará os atributos de perfil em caso de conflitos de dados. |
+| `isActiveOnEdge` | Valor booliano que indica se essa política de mesclagem pode ser usada na borda. Por padrão, este valor é `false`. |
 | `default` | Valor booliano que indica se essa política de mesclagem é o padrão do esquema especificado. |
 | `updateEpoch` | Data da última atualização da política de mesclagem. |
 
@@ -105,7 +105,7 @@ O objeto de política de mesclagem completo representa um conjunto de preferênc
 
 ### Gráfico de identidade {#identity-graph}
 
-[Serviço de identidade da Adobe Experience Platform](../../identity-service/home.md) gerencia os gráficos de identidade usados globalmente e para cada organização em [!DNL Experience Platform]. A variável `identityGraph` o atributo da política de mesclagem define como determinar as identidades relacionadas de um usuário.
+O [Adobe Experience Platform Identity Service](../../identity-service/home.md) gerencia os gráficos de identidade usados globalmente e para cada organização em [!DNL Experience Platform]. O atributo `identityGraph` da política de mesclagem define como determinar as identidades relacionadas de um usuário.
 
 **objeto identityGraph**
 
@@ -115,10 +115,10 @@ O objeto de política de mesclagem completo representa um conjunto de preferênc
     }
 ```
 
-Onde `{IDENTITY_GRAPH_TYPE}` O é um dos seguintes:
+Onde `{IDENTITY_GRAPH_TYPE}` é um dos seguintes:
 
-* **&quot;none&quot;:** Não executar a compilação de identidades.
-* **pdg:** Execute a compilação de identidade com base no seu gráfico de identidade privado.
+* **&quot;nenhum&quot;:** Não executar compilação de identidade.
+* **&quot;pdg&quot;:** Execute a compilação de identidade com base em seu gráfico de identidade privado.
 
 **Exemplo`identityGraph`**
 
@@ -128,9 +128,9 @@ Onde `{IDENTITY_GRAPH_TYPE}` O é um dos seguintes:
     }
 ```
 
-### Mesclagem de atributos {#attribute-merge}
+### Mesclagem de atributo {#attribute-merge}
 
-Um fragmento de perfil são as informações de perfil de apenas uma identidade da lista de identidades existentes para um usuário específico. Quando o tipo de gráfico de identidade usado resulta em mais de uma identidade, há uma possibilidade de atributos de perfil conflitantes e a prioridade deve ser especificada. Usar `attributeMerge`, você pode especificar quais atributos de perfil priorizar no caso de um conflito de mesclagem entre conjuntos de dados do tipo Valor principal (dados de registro).
+Um fragmento de perfil são as informações de perfil de apenas uma identidade da lista de identidades existentes para um usuário específico. Quando o tipo de gráfico de identidade usado resulta em mais de uma identidade, há uma possibilidade de atributos de perfil conflitantes e a prioridade deve ser especificada. Usando o `attributeMerge`, você pode especificar quais atributos de perfil priorizar no caso de um conflito de mesclagem entre conjuntos de dados do tipo Valor principal (dados de registro).
 
 **objeto attributeMerge**
 
@@ -140,13 +140,13 @@ Um fragmento de perfil são as informações de perfil de apenas uma identidade 
     }
 ```
 
-Onde `{ATTRIBUTE_MERGE_TYPE}` O é um dos seguintes:
+Onde `{ATTRIBUTE_MERGE_TYPE}` é um dos seguintes:
 
-* **`timestampOrdered`**: (padrão) dá prioridade ao perfil que foi atualizado por último. Usando esse tipo de mesclagem, a variável `data` atributo não é necessário.
-* **`dataSetPrecedence`**: dê prioridade aos fragmentos de perfil com base no conjunto de dados de onde eles vieram. Isso pode ser usado quando as informações presentes em um conjunto de dados são preferenciais ou confiáveis em relação aos dados em outro conjunto de dados. Ao usar esse tipo de mesclagem, a variável `order` O atributo é necessário, pois lista os conjuntos de dados na ordem de prioridade.
-   * **`order`**: quando &quot;dataSetPrecedence&quot; é usado, uma variável `order` A matriz deve ser fornecida com uma lista de conjuntos de dados. Quaisquer conjuntos de dados não incluídos na lista não serão mesclados. Em outras palavras, os conjuntos de dados devem ser listados explicitamente para serem mesclados em um perfil. A variável `order` A matriz lista as IDs dos conjuntos de dados em ordem de prioridade.
+* **`timestampOrdered`**: (padrão) dê prioridade ao perfil que foi atualizado por último. Usando este tipo de mesclagem, o atributo `data` não é necessário.
+* **`dataSetPrecedence`**: dê prioridade aos fragmentos de perfil com base no conjunto de dados de onde eles vieram. Isso pode ser usado quando as informações presentes em um conjunto de dados são preferenciais ou confiáveis em relação aos dados em outro conjunto de dados. Ao usar esse tipo de mesclagem, o atributo `order` é necessário, pois lista os conjuntos de dados na ordem de prioridade.
+   * **`order`**: Quando &quot;dataSetPrecedence&quot; é usado, uma matriz `order` deve ser fornecida com uma lista de conjuntos de dados. Quaisquer conjuntos de dados não incluídos na lista não serão mesclados. Em outras palavras, os conjuntos de dados devem ser listados explicitamente para serem mesclados em um perfil. A matriz `order` lista as IDs dos conjuntos de dados em ordem de prioridade.
 
-#### Exemplo `attributeMerge` objeto usando `dataSetPrecedence` type
+#### Exemplo de objeto `attributeMerge` usando tipo `dataSetPrecedence`
 
 ```json
     "attributeMerge": {
@@ -160,7 +160,7 @@ Onde `{ATTRIBUTE_MERGE_TYPE}` O é um dos seguintes:
     }
 ```
 
-#### Exemplo `attributeMerge` objeto usando `timestampOrdered` type
+#### Exemplo de objeto `attributeMerge` usando tipo `timestampOrdered`
 
 ```json
     "attributeMerge": {
@@ -180,7 +180,7 @@ O objeto de esquema especifica a classe de esquema do Experience Data Model (XDM
     }
 ```
 
-Sempre que o valor de `name` é o nome da classe XDM na qual se baseia o esquema associado à política de mesclagem.
+Onde o valor de `name` é o nome da classe XDM na qual se baseia o esquema associado à política de mesclagem.
 
 **Exemplo`schema`**
 
@@ -190,15 +190,15 @@ Sempre que o valor de `name` é o nome da classe XDM na qual se baseia o esquema
     }
 ```
 
-Para saber mais sobre o XDM e trabalhar com esquemas no Experience Platform, comece lendo o [Visão geral do sistema XDM](../../xdm/home.md).
+Para saber mais sobre o XDM e trabalhar com esquemas no Experience Platform, comece lendo a [Visão geral do sistema XDM](../../xdm/home.md).
 
 ## Acessar políticas de mesclagem {#access-merge-policies}
 
-Usar o [!DNL Real-Time Customer Profile] API, a variável `/config/mergePolicies` O endpoint permite executar uma solicitação de pesquisa para exibir uma política de mesclagem específica por sua ID ou acessar todas as políticas de mesclagem na organização, filtradas por critérios específicos. Você também pode usar a variável `/config/mergePolicies/bulk-get` endpoint para recuperar várias políticas de mesclagem por suas IDs. As etapas para executar cada uma dessas chamadas são descritas nas seções a seguir.
+Usando a API [!DNL Real-Time Customer Profile], o ponto de extremidade `/config/mergePolicies` permite executar uma solicitação de pesquisa para exibir uma política de mesclagem específica por sua ID ou acessar todas as políticas de mesclagem em sua organização, filtradas por critérios específicos. Você também pode usar o ponto de extremidade `/config/mergePolicies/bulk-get` para recuperar várias políticas de mesclagem por meio de suas IDs. As etapas para executar cada uma dessas chamadas são descritas nas seções a seguir.
 
 ### Acessar uma única política de mesclagem por ID
 
-Você pode acessar uma única política de mesclagem por sua ID fazendo uma solicitação GET para o `/config/mergePolicies` e incluindo o `mergePolicyId` no caminho da solicitação.
+Você pode acessar uma única política de mesclagem por sua ID fazendo uma solicitação GET para o ponto de extremidade `/config/mergePolicies` e incluindo `mergePolicyId` no caminho da solicitação.
 
 **Formato da API**
 
@@ -245,11 +245,11 @@ Uma resposta bem-sucedida retorna os detalhes da política de mesclagem.
 }
 ```
 
-Consulte a [componentes de políticas de mesclagem](#components-of-merge-policies) no início deste documento para obter detalhes sobre cada um dos elementos individuais que compõem uma política de mesclagem.
+Consulte a seção [componentes das políticas de mesclagem](#components-of-merge-policies) no início deste documento para obter detalhes sobre cada um dos elementos individuais que compõem uma política de mesclagem.
 
 ### Recuperar várias políticas de mesclagem por suas IDs
 
-Você pode recuperar várias políticas de mesclagem fazendo uma solicitação POST para o `/config/mergePolicies/bulk-get` e incluindo as IDs das políticas de mesclagem que você deseja recuperar no corpo da solicitação.
+Você pode recuperar várias políticas de mesclagem fazendo uma solicitação POST para o ponto de extremidade `/config/mergePolicies/bulk-get` e incluindo as IDs das políticas de mesclagem que deseja recuperar no corpo da solicitação.
 
 **Formato da API**
 
@@ -344,11 +344,11 @@ Uma resposta bem-sucedida retorna o Status HTTP 207 (Vários status) e os detalh
 }
 ```
 
-Consulte a [componentes de políticas de mesclagem](#components-of-merge-policies) no início deste documento para obter detalhes sobre cada um dos elementos individuais que compõem uma política de mesclagem.
+Consulte a seção [componentes das políticas de mesclagem](#components-of-merge-policies) no início deste documento para obter detalhes sobre cada um dos elementos individuais que compõem uma política de mesclagem.
 
 ### Listar várias políticas de mesclagem por critérios
 
-Você pode listar várias políticas de mesclagem em sua organização emitindo uma solicitação GET para o `/config/mergePolicies` e usando parâmetros de consulta opcionais para filtrar, ordenar e paginar a resposta. Vários parâmetros podem ser incluídos, separados por &quot;E&quot; comercial (&amp;). Fazer uma chamada para esse endpoint sem parâmetros recuperará todas as políticas de mesclagem disponíveis para sua organização.
+Você pode listar várias políticas de mesclagem em sua organização emitindo uma solicitação GET para o ponto de extremidade `/config/mergePolicies` e usando parâmetros de consulta opcionais para filtrar, ordenar e paginar a resposta. Vários parâmetros podem ser incluídos, separados por &quot;E&quot; comercial (&amp;). Fazer uma chamada para esse endpoint sem parâmetros recuperará todas as políticas de mesclagem disponíveis para sua organização.
 
 **Formato da API**
 
@@ -360,7 +360,7 @@ GET /config/mergePolicies?{QUERY_PARAMS}
 |---|---|
 | `default` | Um valor booliano que filtra os resultados determinando se as políticas de mesclagem são ou não o padrão de uma classe de esquema. |
 | `limit` | Especifica o limite de tamanho de página para controlar o número de resultados incluídos em uma página. Valor padrão: 20 |
-| `orderBy` | Especifica o campo pelo qual ordenar resultados como em `orderBy=name` ou `orderBy=+name` para classificar por nome em ordem crescente ou `orderBy=-name`, para classificar em ordem decrescente. A omissão desse valor resulta na classificação padrão de `name` em ordem crescente. |
+| `orderBy` | Especifica o campo pelo qual ordenar resultados como em `orderBy=name` ou `orderBy=+name` para classificar por nome em ordem crescente, ou `orderBy=-name` para classificar em ordem decrescente. A omissão desse valor resulta na classificação padrão de `name` em ordem crescente. |
 | `isActiveOnEdge` | Um valor booliano que filtra os resultados determinando se as políticas de mesclagem estão ou não ativas na borda. |
 | `schema.name` | Nome do esquema para o qual recuperar as políticas de mesclagem disponíveis. |
 | `identityGraph.type` | Filtra os resultados pelo tipo de gráfico de identidade. Os valores possíveis incluem &quot;none&quot; e &quot;pdg&quot; (Gráfico privado). |
@@ -368,7 +368,7 @@ GET /config/mergePolicies?{QUERY_PARAMS}
 | `start` | Deslocamento de página - especifique a ID inicial dos dados a serem recuperados. Valor padrão: 0 |
 | `version` | Especifique se quiser usar uma versão específica da política de mesclagem. Por padrão, a versão mais recente será usada. |
 
-Para obter mais informações sobre `schema.name`, `identityGraph.type`, e `attributeMerge.type`, consulte o [componentes de políticas de mesclagem](#components-of-merge-policies) seção fornecida anteriormente neste guia.
+Para obter mais informações sobre `schema.name`, `identityGraph.type` e `attributeMerge.type`, consulte a seção [componentes das políticas de mesclagem](#components-of-merge-policies) fornecida anteriormente neste guia.
 
 
 **Solicitação**
@@ -462,7 +462,7 @@ Uma resposta bem-sucedida retorna uma lista paginada de políticas de mesclagem 
 
 ## Criar uma política de mesclagem
 
-Você pode criar uma nova política de mesclagem para sua organização fazendo uma solicitação POST para o `/config/mergePolicies` terminal.
+Você pode criar uma nova política de mesclagem para sua organização fazendo uma solicitação POST para o ponto de extremidade `/config/mergePolicies`.
 
 **Formato da API**
 
@@ -510,7 +510,7 @@ curl -X POST \
 | `isActiveOnEdge` | Especifica se esta política de mesclagem está ativa na borda. |
 | `default` | Especifica se essa política de mesclagem é o padrão para o esquema. |
 
-Consulte a [componentes de políticas de mesclagem](#components-of-merge-policies) para obter mais informações.
+Consulte a seção [componentes das políticas de mesclagem](#components-of-merge-policies) para obter mais informações.
 
 **Resposta**
 
@@ -547,7 +547,7 @@ Uma resposta bem-sucedida retorna os detalhes da política de mesclagem recém-c
 }
 ```
 
-Consulte a [componentes de políticas de mesclagem](#components-of-merge-policies) no início deste documento para obter detalhes sobre cada um dos elementos individuais que compõem uma política de mesclagem.
+Consulte a seção [componentes das políticas de mesclagem](#components-of-merge-policies) no início deste documento para obter detalhes sobre cada um dos elementos individuais que compõem uma política de mesclagem.
 
 ## Atualizar uma política de mesclagem {#update}
 
@@ -555,7 +555,7 @@ Você pode modificar uma política de mesclagem existente editando atributos ind
 
 ### Editar campos de política de mesclagem individuais
 
-É possível editar campos individuais para uma política de mesclagem fazendo uma solicitação PATCH para a `/config/mergePolicies/{mergePolicyId}` endpoint:
+Você pode editar campos individuais para uma política de mesclagem fazendo uma solicitação PATCH para o ponto de extremidade `/config/mergePolicies/{mergePolicyId}`:
 
 **Formato da API**
 
@@ -569,7 +569,7 @@ PATCH /config/mergePolicies/{mergePolicyId}
 
 **Solicitação**
 
-A solicitação a seguir atualiza uma política de mesclagem especificada alterando o valor de sua `default` propriedade para `true`:
+A solicitação a seguir atualiza uma política de mesclagem especificada alterando o valor de sua propriedade `default` para `true`:
 
 ```shell
 curl -X PATCH \
@@ -588,11 +588,11 @@ curl -X PATCH \
 
 | Propriedade | Descrição |
 |---|---|
-| `op` | Especifica a operação a ser executada. Exemplos de outras operações de PATCH podem ser encontrados no [Documentação de patch de JSON](https://datatracker.ietf.org/doc/html/rfc6902) |
+| `op` | Especifica a operação a ser executada. Exemplos de outras operações PATCH podem ser encontrados na [documentação de patch de JSON](https://datatracker.ietf.org/doc/html/rfc6902) |
 | `path` | O caminho do campo a ser atualizado. Os valores aceitos são: &quot;/name&quot;, &quot;/identityGraph.type&quot;, &quot;/attributeMerge.type&quot;, &quot;/schema.name&quot;, &quot;/version&quot;, &quot;/default&quot;, &quot;/isActiveOnEdge&quot; |
 | `value` | O valor para o qual definir o campo especificado. |
 
-Consulte a [componentes de políticas de mesclagem](#components-of-merge-policies) para obter mais informações.
+Consulte a seção [componentes das políticas de mesclagem](#components-of-merge-policies) para obter mais informações.
 
 
 **Resposta**
@@ -688,7 +688,7 @@ curl -X PUT \
 | `isActiveOnEdge` | Especifica se esta política de mesclagem está ativa na borda. |
 | `default` | Especifica se essa política de mesclagem é o padrão para o esquema. |
 
-Consulte a [componentes de políticas de mesclagem](#components-of-merge-policies) para obter mais informações.
+Consulte a seção [componentes das políticas de mesclagem](#components-of-merge-policies) para obter mais informações.
 
 **Resposta**
 
@@ -727,11 +727,11 @@ Uma resposta bem-sucedida retorna os detalhes da política de mesclagem atualiza
 
 ## Excluir uma política de mesclagem
 
-Uma política de mesclagem pode ser excluída fazendo uma solicitação DELETE para o `/config/mergePolicies` e incluindo a ID da política de mesclagem que você deseja excluir no caminho da solicitação.
+Uma política de mesclagem pode ser excluída fazendo uma solicitação DELETE para o ponto de extremidade `/config/mergePolicies` e incluindo a ID da política de mesclagem que você deseja excluir no caminho da solicitação.
 
 >[!NOTE]
 >
->Se a política de mesclagem tiver `isActiveOnEdge` definida como true, a política de mesclagem **não é possível** ser excluídos. Use o [PATCH](#edit-individual-merge-policy-fields) ou [PUT](#overwrite-a-merge-policy) pontos de extremidade para atualizar a política de mesclagem antes de excluí-la.
+>Se a política de mesclagem tiver `isActiveOnEdge` definido como true, a política de mesclagem **não poderá** ser excluída. Use os pontos de extremidade [PATCH](#edit-individual-merge-policy-fields) ou [PUT](#overwrite-a-merge-policy) para atualizar a política de mesclagem antes de excluí-la.
 
 **Formato da API**
 
@@ -762,6 +762,6 @@ Uma solicitação de exclusão bem-sucedida retorna o Status HTTP 200 (OK) e um 
 
 ## Próximas etapas
 
-Agora que você sabe como criar e configurar políticas de mesclagem para sua organização, é possível usá-las para ajustar a visualização de perfis de clientes na Platform e criar públicos-alvo a partir de seus [!DNL Real-Time Customer Profile] dados.
+Agora que você sabe como criar e configurar políticas de mesclagem para sua organização, é possível usá-las para ajustar a exibição de perfis de clientes na Platform e criar públicos a partir dos dados do [!DNL Real-Time Customer Profile].
 
-Consulte a [Documentação do Serviço de segmentação da Adobe Experience Platform](../../segmentation/home.md) para começar a definir e trabalhar com públicos.
+Consulte a [documentação do Serviço de segmentação do Adobe Experience Platform](../../segmentation/home.md) para começar a definir e trabalhar com públicos.

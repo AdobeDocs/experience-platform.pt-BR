@@ -1,54 +1,54 @@
 ---
-title: Criar uma conexão de origem do Amazon Kinesis usando a API do serviço de fluxo
+title: Criar uma conexão do Amazon Kinesis Source usando a API do serviço de fluxo
 description: Saiba como conectar o Adobe Experience Platform a uma origem do Amazon Kinesis usando a API do Serviço de fluxo.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 64da8894-12ac-45a0-b03e-fe9b6aa435d3
 source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
 workflow-type: tm+mt
-source-wordcount: '737'
+source-wordcount: '726'
 ht-degree: 4%
 
 ---
 
-# Criar um [!DNL Amazon Kinesis] conexão de origem usando a API do Serviço de fluxo
+# Criar uma conexão de origem [!DNL Amazon Kinesis] usando a API de Serviço de Fluxo
 
 >[!IMPORTANT]
 >
->A variável [!DNL Amazon Kinesis] origem está disponível no catálogo de origens para usuários que compraram o Real-time Customer Data Platform Ultimate.
+>A origem [!DNL Amazon Kinesis] está disponível no catálogo de origens para usuários que compraram o Real-time Customer Data Platform Ultimate.
 
-Este tutorial guiará você pelas etapas para se conectar [!DNL Amazon Kinesis] (a seguir designado por &quot;[!DNL Kinesis]&quot;) para Experience Platform, usando o [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Este tutorial guiará você pelas etapas para conectar [!DNL Amazon Kinesis] (a seguir denominado &quot;[!DNL Kinesis]&quot;) ao Experience Platform, usando a [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Introdução
 
 Este manual necessita de uma compreensão funcional dos seguintes componentes da Adobe Experience Platform:
 
-* [Origens](../../../../home.md): o Experience Platform permite que os dados sejam assimilados de várias fontes e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando [!DNL Platform] serviços.
-* [Sandboxes](../../../../../sandboxes/home.md): o Experience Platform fornece sandboxes virtuais que particionam um único [!DNL Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
+* [Fontes](../../../../home.md): o Experience Platform permite que os dados sejam assimilados de várias fontes, fornecendo a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços do [!DNL Platform].
+* [Sandboxes](../../../../../sandboxes/home.md): o Experience Platform fornece sandboxes virtuais que particionam uma única instância do [!DNL Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
-As seções a seguir fornecem informações adicionais que você precisará saber para se conectar com êxito [!DNL Kinesis] para a Platform usando o [!DNL Flow Service] API.
+As seções a seguir fornecem informações adicionais que você precisará saber para se conectar com êxito ao [!DNL Kinesis] à Platform usando a API [!DNL Flow Service].
 
 ### Coletar credenciais necessárias
 
-A fim de [!DNL Flow Service] para se conectar com o seu [!DNL Amazon Kinesis] você deve fornecer valores para as seguintes propriedades de conexão:
+Para que [!DNL Flow Service] se conecte à sua conta [!DNL Amazon Kinesis], você deve fornecer valores para as seguintes propriedades de conexão:
 
 | Credencial | Descrição |
 | ---------- | ----------- |
-| `accessKeyId` | A ID da chave de acesso é metade do par de chaves de acesso usado para autenticar seu [!DNL Kinesis] para a Platform. |
-| `secretKey` | A chave de acesso secreta é a outra metade do par de chaves de acesso usado para autenticar sua [!DNL Kinesis] para a Platform. |
-| `region` | A região de seu [!DNL Kinesis] conta. Consulte o guia sobre [adicionar endereços IP à lista de permissões](../../../../ip-address-allow-list.md) para obter mais informações sobre regiões. |
-| `connectionSpec.id` | A especificação de conexão retorna as propriedades do conector de uma origem, incluindo especificações de autenticação relacionadas à criação das conexões de base e de origem. A variável [!DNL Kinesis] A ID da especificação de conexão é: `86043421-563b-46ec-8e6c-e23184711bf6`. |
+| `accessKeyId` | A ID da chave de acesso é metade do par de chaves de acesso usado para autenticar sua conta do [!DNL Kinesis] na Platform. |
+| `secretKey` | A chave de acesso secreta é a outra metade do par de chaves de acesso usado para autenticar sua conta do [!DNL Kinesis] na Platform. |
+| `region` | A região da sua conta [!DNL Kinesis]. Consulte o manual sobre [adição de endereços IP à lista de permissões](../../../../ip-address-allow-list.md) para obter mais informações sobre regiões. |
+| `connectionSpec.id` | A especificação de conexão retorna as propriedades do conector de uma origem, incluindo especificações de autenticação relacionadas à criação das conexões de base e de origem. A ID da especificação de conexão [!DNL Kinesis] é: `86043421-563b-46ec-8e6c-e23184711bf6`. |
 
-Para obter mais informações sobre [!DNL Kinesis] e como gerá-las, consulte esta seção [[!DNL AWS] guia sobre gerenciamento de chaves de acesso para usuários do IAM](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
+Para obter mais informações sobre [!DNL Kinesis] chaves de acesso e como gerá-las, consulte este [[!DNL AWS] guia sobre como gerenciar chaves de acesso para usuários do IAM](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
 
 ### Uso de APIs da plataforma
 
-Para obter informações sobre como fazer chamadas para APIs da Platform com êxito, consulte o manual em [introdução às APIs da Platform](../../../../../landing/api-guide.md).
+Para obter informações sobre como fazer chamadas para APIs da Platform com êxito, consulte o manual sobre [introdução às APIs da Platform](../../../../../landing/api-guide.md).
 
-## Crie uma conexão básica
+## Criar uma conexão básica
 
-A primeira etapa na criação de uma conexão de origem é autenticar seu [!DNL Kinesis] origem e gere uma ID de conexão básica. Uma ID de conexão básica permite explorar e navegar pelos arquivos de dentro da origem e identificar itens específicos que você deseja assimilar, incluindo informações sobre os tipos de dados e formatos.
+A primeira etapa na criação de uma conexão de origem é autenticar sua origem [!DNL Kinesis] e gerar uma ID de conexão base. Uma ID de conexão básica permite explorar e navegar pelos arquivos de dentro da origem e identificar itens específicos que você deseja assimilar, incluindo informações sobre os tipos de dados e formatos.
 
-Para criar um ID de conexão base, faça uma solicitação POST ao `/connections` ao fornecer sua [!DNL Kinesis] credenciais de autenticação como parte dos parâmetros de solicitação.
+Para criar uma ID de conexão base, faça uma solicitação POST para o ponto de extremidade `/connections` enquanto fornece suas credenciais de autenticação [!DNL Kinesis] como parte dos parâmetros de solicitação.
 
 **Formato da API**
 
@@ -87,10 +87,10 @@ curl -X POST \
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `auth.params.accessKeyId` | A ID da chave de acesso do [!DNL Kinesis] conta. |
-| `auth.params.secretKey` | A chave de acesso secreta para seu [!DNL Kinesis] conta. |
-| `auth.params.region` | A região de seu [!DNL Kinesis] conta. |
-| `connectionSpec.id` | A variável [!DNL Kinesis] ID da especificação de conexão: `86043421-563b-46ec-8e6c-e23184711bf6` |
+| `auth.params.accessKeyId` | A ID da chave de acesso da sua conta [!DNL Kinesis]. |
+| `auth.params.secretKey` | A chave de acesso secreta da sua conta [!DNL Kinesis]. |
+| `auth.params.region` | A região da sua conta [!DNL Kinesis]. |
+| `connectionSpec.id` | A ID da especificação de conexão [!DNL Kinesis]: `86043421-563b-46ec-8e6c-e23184711bf6` |
 
 **Resposta**
 
@@ -107,7 +107,7 @@ Uma resposta bem-sucedida retorna detalhes da conexão base recém-criada, inclu
 
 Uma conexão de origem cria e gerencia a conexão com a origem externa de onde os dados são assimilados. Uma conexão de origem consiste em informações como fonte de dados, formato de dados e a ID da conexão de origem necessária para criar um fluxo de dados. Uma instância de conexão de origem é específica para um locatário e uma organização.
 
-Para criar uma conexão de origem, faça uma solicitação POST ao `/sourceConnections` endpoint do [!DNL Flow Service] API.
+Para criar uma conexão de origem, faça uma solicitação POST para o ponto de extremidade `/sourceConnections` da API [!DNL Flow Service].
 
 **Formato da API**
 
@@ -148,12 +148,12 @@ curl -X POST \
 | --- | --- |
 | `name` | O nome da sua conexão de origem. Certifique-se de que o nome da conexão de origem seja descritivo, pois você pode usá-lo para pesquisar informações sobre a conexão de origem. |
 | `description` | Um valor opcional que pode ser fornecido para incluir mais informações sobre a conexão de origem. |
-| `baseConnectionId` | A ID de conexão básica de seu [!DNL Kinesis] que foi gerado na etapa anterior. |
-| `connectionSpec.id` | A ID de especificação de conexão fixa para [!DNL Kinesis]. Essa ID é: `86043421-563b-46ec-8e6c-e23184711bf6` |
-| `data.format` | O formato do [!DNL Kinesis] dados que você deseja assimilar. No momento, o único formato de dados compatível é `json`. |
+| `baseConnectionId` | A ID da conexão base da sua origem [!DNL Kinesis] que foi gerada na etapa anterior. |
+| `connectionSpec.id` | A ID de especificação de conexão fixa para [!DNL Kinesis]. Esta ID é: `86043421-563b-46ec-8e6c-e23184711bf6` |
+| `data.format` | O formato dos dados [!DNL Kinesis] que você deseja assimilar. Atualmente, o único formato de dados com suporte é `json`. |
 | `params.stream` | O nome do fluxo de dados do qual extrair registros. |
-| `params.dataType` | Esse parâmetro define o tipo de dados que está sendo assimilado. Os tipos de dados compatíveis incluem: `raw` e `xdm`. |
-| `params.reset` | Esse parâmetro define como os dados serão lidos. Uso `latest` para começar a ler os dados mais recentes e use `earliest` para começar a ler os primeiros dados disponíveis no fluxo. |
+| `params.dataType` | Esse parâmetro define o tipo de dados que está sendo assimilado. Os tipos de dados suportados incluem: `raw` e `xdm`. |
+| `params.reset` | Esse parâmetro define como os dados serão lidos. Use `latest` para começar a ler os dados mais recentes e use `earliest` para começar a ler os primeiros dados disponíveis no fluxo. |
 
 **Resposta**
 
@@ -168,4 +168,4 @@ Uma resposta bem-sucedida retorna o identificador exclusivo (`id`) da conexão d
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você criou um [!DNL Kinesis] conexão de origem usando o [!DNL Flow Service] API. Você pode usar essa ID de conexão de origem no próximo tutorial para [crie um fluxo de dados de transmissão usando o [!DNL Flow Service] API](../../collect/streaming.md).
+Seguindo este tutorial, você criou uma conexão de origem [!DNL Kinesis] usando a API [!DNL Flow Service]. Você pode usar esta ID de conexão de origem no próximo tutorial para [criar um fluxo de dados de streaming usando a [!DNL Flow Service] API](../../collect/streaming.md).

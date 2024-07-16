@@ -4,7 +4,7 @@ title: Teste seu destino de streaming com perfis de amostra
 exl-id: 2b54250d-ec30-4ad7-a8be-b86b14e4f074
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '624'
+source-wordcount: '607'
 ht-degree: 2%
 
 ---
@@ -14,29 +14,29 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->**Ponto de acesso da API**: `https://platform.adobe.io/data/core/activation/authoring/testing/destinationInstance/`
+>**Ponto de extremidade de API**: `https://platform.adobe.io/data/core/activation/authoring/testing/destinationInstance/`
 
-Esta página lista e descreve todas as operações de API que você pode executar usando o `/authoring/testing/destinationInstance/` Endpoint da API, para testar se o destino está configurado corretamente e verificar a integridade dos fluxos de dados para o destino configurado. Para obter uma descrição da funcionalidade compatível com esse endpoint, leia [Testar a configuração de destino](streaming-destination-testing-overview.md).
+Esta página lista e descreve todas as operações de API que você pode executar usando o ponto de extremidade de API `/authoring/testing/destinationInstance/` para testar se o destino está configurado corretamente e verificar a integridade dos fluxos de dados para o destino configurado. Para obter uma descrição da funcionalidade com suporte neste ponto de extremidade, leia [Testar a configuração de destino](streaming-destination-testing-overview.md).
 
 Você faz solicitações ao endpoint de teste com ou sem adicionar perfis à chamada. Se você não enviar nenhum perfil na solicitação, o Adobe os gerará internamente e os adicionará à solicitação.
 
-Você pode usar o [Amostra da API de geração de perfil](sample-profile-generation-api.md) para criar perfis para usar em solicitações para a API de teste de destino.
+Você pode usar a [Amostra da API de geração de perfil](sample-profile-generation-api.md) para criar perfis a serem usados em solicitações para a API de teste de destino.
 
 ## Como obter a ID da instância de destino {#get-destination-instance-id}
 
 >[!IMPORTANT]
 >
->* Para usar essa API, é necessário ter uma conexão existente com o destino na interface do usuário do Experience Platform. Ler [conectar ao destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) e [ativar perfis e públicos para um destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html) para obter mais informações.
-> * Depois de estabelecer a conexão com seu destino, obtenha a ID da instância de destino que você deve usar nas chamadas de API para esse endpoint quando [procurar uma conexão com seu destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html).
->![Imagem da interface do usuário sobre como obter a ID da instância de destino](../../assets/testing-api/get-destination-instance-id.png)
+>* Para usar essa API, é necessário ter uma conexão existente com o destino na interface do usuário do Experience Platform. Leia [conectar ao destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) e [ativar perfis e públicos a um destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html) para obter mais informações.
+> * Depois de estabelecer a conexão com seu destino, obtenha a ID da instância de destino que você deve usar em chamadas de API para este ponto de extremidade ao [navegar em uma conexão com seu destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html).
+>![Imagem da interface do usuário para obter a ID da instância de destino](../../assets/testing-api/get-destination-instance-id.png)
 
 ## Introdução às operações de API de teste de destino {#get-started}
 
-Antes de continuar, reveja o [guia de introdução](../../getting-started.md) para obter informações importantes que você precisa saber para fazer chamadas com êxito para a API, incluindo como obter a permissão de criação de destino e os cabeçalhos necessários.
+Antes de continuar, consulte o [guia de introdução](../../getting-started.md) para obter informações importantes que você precisa saber para fazer chamadas com êxito para a API, incluindo como obter a permissão de criação de destino e os cabeçalhos necessários.
 
 ## Testar a configuração de destino sem adicionar perfis à chamada {#test-without-adding-profiles}
 
-Você pode testar a configuração de destino fazendo uma solicitação POST para o `authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}` e fornecendo a ID da instância de destino do destino que você está testando.
+Você pode testar a configuração de destino fazendo uma solicitação POST para o ponto de extremidade `authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}` e fornecendo a ID da instância de destino do destino que você está testando.
 
 **Formato da API**
 
@@ -51,7 +51,7 @@ POST authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}
 
 **Solicitação**
 
-A solicitação a seguir chama o ponto de extremidade da API REST do destino. A solicitação é configurada pelo `{DESTINATION_INSTANCE_ID}` parâmetro de consulta.
+A solicitação a seguir chama o ponto de extremidade da API REST do destino. A solicitação é configurada pelo parâmetro de consulta `{DESTINATION_INSTANCE_ID}`.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/core/activation/authoring/testing/destinationInstance/49966037-32cd-4457-a105-2cbf9c01826a' \
@@ -156,7 +156,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 junto com a resposta da API 
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `aggregationKey` | Inclui informações sobre a política de agregação configurada para o destino. Para obter mais informações, leia a [Política de agregação](../../functionality/destination-configuration/aggregation-policy.md) documentação. |
+| `aggregationKey` | Inclui informações sobre a política de agregação configurada para o destino. Para obter mais informações, leia a documentação da [Política de agregação](../../functionality/destination-configuration/aggregation-policy.md). |
 | `traceId` | Um identificador exclusivo para a operação. Ao encontrar erros, é possível compartilhar essa ID com a equipe do Adobe para fins de solução de problemas. |
 | `results.httpCalls.request` | Inclui a solicitação que foi enviada pelo Adobe para o seu destino. |
 | `results.httpCalls.response` | Inclui a resposta recebida pelo Adobe do seu destino. |
@@ -166,7 +166,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 junto com a resposta da API 
 
 ## Testar a configuração de destino com perfis adicionados à chamada {#test-with-added-profiles}
 
-Você pode testar a configuração de destino fazendo uma solicitação POST para o `authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}` e fornecendo a ID da instância de destino do destino que você está testando.
+Você pode testar a configuração de destino fazendo uma solicitação POST para o ponto de extremidade `authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}` e fornecendo a ID da instância de destino do destino que você está testando.
 
 **Formato da API**
 
@@ -180,7 +180,7 @@ POST authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}
 
 **Solicitação**
 
-A solicitação a seguir chama o ponto de extremidade da API REST do destino. A solicitação é configurada pelos parâmetros fornecidos na carga e no `{DESTINATION_INSTANCE_ID}` parâmetro de consulta.
+A solicitação a seguir chama o ponto de extremidade da API REST do destino. A solicitação é configurada pelos parâmetros fornecidos na carga e no parâmetro de consulta `{DESTINATION_INSTANCE_ID}`.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/core/activation/authoring/testing/destinationInstance/49966037-32cd-4457-a105-2cbf9c01826a' \
@@ -322,7 +322,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 junto com a resposta da API 
 
 ## Manipulação de erros de API {#api-error-handling}
 
-Os endpoints da API Destination SDK seguem os princípios gerais de mensagem de erro da API Experience Platform. Consulte [Códigos de status da API](../../../../landing/troubleshooting.md#api-status-codes) e [erros no cabeçalho da solicitação](../../../../landing/troubleshooting.md#request-header-errors) no guia de solução de problemas da Platform.
+Os endpoints da API Destination SDK seguem os princípios gerais de mensagem de erro da API Experience Platform. Consulte [códigos de status da API](../../../../landing/troubleshooting.md#api-status-codes) e [erros no cabeçalho da solicitação](../../../../landing/troubleshooting.md#request-header-errors) no guia de solução de problemas da Platform.
 
 ## Próximas etapas
 

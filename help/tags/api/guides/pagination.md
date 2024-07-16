@@ -4,7 +4,7 @@ description: Saiba como paginar resultados ao listar recursos na API do Reactor.
 exl-id: bccb6e78-4ac8-4786-b398-6e55109d99dd
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
-source-wordcount: '101'
+source-wordcount: '102'
 ht-degree: 100%
 
 ---

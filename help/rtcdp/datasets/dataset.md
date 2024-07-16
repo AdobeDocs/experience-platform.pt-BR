@@ -13,6 +13,6 @@ ht-degree: 0%
 
 # Conjuntos de dados na Real-time Customer Data Platform
 
-Na interface do usuário do Real-time Customer Data Platform, você pode visualizar e gerenciar todos os conjuntos de dados criados pela sua organização, bem como criar novos conjuntos. Para procurar conjuntos de dados na interface do usuário, selecione **[!UICONTROL Conjuntos de dados]** no painel de navegação esquerdo. A variável **[!UICONTROL Procurar]** A guia contém uma lista de conjuntos de dados, incluindo colunas mostrando o nome, a data e a hora de criação, a origem, o esquema e o status do último lote, bem como a data e a hora em que o conjunto de dados foi atualizado pela última vez.
+Na interface do usuário do Real-time Customer Data Platform, você pode visualizar e gerenciar todos os conjuntos de dados criados pela sua organização, bem como criar novos conjuntos. Para procurar Conjuntos de Dados na Interface do Usuário, selecione **[!UICONTROL Conjuntos de Dados]** na navegação à esquerda. A guia **[!UICONTROL Procurar]** contém uma lista de conjuntos de dados, incluindo colunas mostrando nome, criado (data e hora), origem, esquema e status do último lote, bem como data e hora em que o conjunto de dados foi Atualizado pela Última Vez.
 
-Para obter informações sobre conjuntos de dados no [!DNL Experience Platform], comece lendo o [Visão geral dos conjuntos de dados](../../catalog/datasets/overview.md).
+Para obter informações sobre Conjuntos de Dados em [!DNL Experience Platform], comece lendo a [visão geral sobre Conjuntos de Dados](../../catalog/datasets/overview.md).

@@ -16,7 +16,7 @@ ht-degree: 64%
 # Gerenciamento avançado do ciclo de vida dos dados {#data-lifecycle}
 
 * [Visão geral do gerenciamento avançado do ciclo de vida dos dados](./home.md)
-* Interface do usuário do ciclo de vida dos dados {#ui}
+* Interface do usuário do ciclo de vida de dados {#ui}
    * [Visão geral](./ui/overview.md)
    * [Expirações automatizadas de conjuntos de dados](./ui/dataset-expiration.md)
    * [(Beta) Excluir registros](./ui/record-delete.md)

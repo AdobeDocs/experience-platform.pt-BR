@@ -13,33 +13,33 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->O conector de destino e a página de documentação são criados e mantidos pelo [!DNL Merkury] equipe. Para qualquer consulta ou solicitação de atualização, entre em contato com o [!DNL Merkury] representante de conta.
+>O conector de destino e a página de documentação são criados e mantidos pela equipe [!DNL Merkury]. Para obter consultas ou atualizar solicitações, entre em contato com o representante de conta do [!DNL Merkury].
 
 ## Visão geral
 
-Use o [!DNL Merkury Enterprise Connections] destino para fornecer públicos-alvo com segurança [!DNL Merkury]. [!DNL Merkury] O fornece aos profissionais de marketing correspondência e entrega fáceis de públicos-alvo com base em pessoas para [!DNL Merkury]O tem mais de 80 conexões premium endereçáveis de TV/CTV, editoras e de tecnologia de anúncios. [!DNL Merkury] O é alimentado por um gráfico abrangente de identidade do consumidor adulto dos EUA de 268 milhões de pessoas.
+Use o destino [!DNL Merkury Enterprise Connections] para entregar com segurança os públicos-alvo para [!DNL Merkury]. O [!DNL Merkury] fornece aos profissionais de marketing correspondência fácil e entrega de públicos-alvo com base em pessoas para mais de 80 conexões premium endereçáveis de TV/CTV, editor e tecnologia comercial do [!DNL Merkury]. [!DNL Merkury] é alimentado por um gráfico abrangente de identidade de consumidor adulto nos EUA de 268+ milhões de pessoas.
 
 ![Um diagrama mostrando a interconexão entre Merkury e Experience Platform, incluindo assimilação e ativação](../../assets/catalog/data-partners/merkury-connections/media/image1.png)
 
-Siga as etapas desta página de documentação para criar uma [!DNL Merkury Connections] conexão de destino e ativar públicos-alvo usando a interface do Adobe Experience Platform.
+Siga as etapas desta página de documentação para criar uma conexão de destino [!DNL Merkury Connections] e ativar públicos-alvo usando a interface do usuário do Adobe Experience Platform.
 
 >[!NOTE]
 >
->Se estiver procurando ativar públicos para destinos de mídia com sua [!DNL Merkury Connect] conta, use o [!DNL Merkury Connections] destino em vez disso.
+>Se você deseja ativar públicos para destinos de mídia com a conta do [!DNL Merkury Connect], use o destino [!DNL Merkury Connections].
 
-![O cartão de destino Merkury Enterprise Connections é destacado no catálogo de destinos do Experience Platform.](../../assets/catalog/data-partners/merkury-connections/media/image2.png)
+![O cartão de destino do Merkury Enterprise Connections está destacado no catálogo de destinos do Experience Platform.](../../assets/catalog/data-partners/merkury-connections/media/image2.png)
 
 ## Casos de uso
 
-* **Ativação de mídia digital**: fácil correspondência e entrega dos perfis de público-alvo para [!DNL Merkury]Os mais de 50 editores endereçáveis premium do e conexões ad-tech.
-* **Aumente a eficiência**: melhore o alcance de mídia endereçável e sem cookies, melhore a eficiência da definição de metas e o ROAS (Return on Advertising Spend, retorno sobre o investimento no).
+* **Ativação de Mídia Digital**: fácil correspondência e entrega de seus perfis de público-alvo para mais de 50 publicadores endereçáveis premium e conexões ad-tech do [!DNL Merkury].
+* **Aumente a eficiência**: melhore o alcance de mídia endereçável e sem cookies, melhore a eficiência do direcionamento e o ROAS (Return on Advertising Spend, retorno sobre o investimento no).
 
 ## Pré-requisitos
 
 >[!IMPORTANT]
 >
->* Para se conectar ao destino, você precisa da variável **Exibir destinos** e **Gerenciar destinos**, **Ativar destinos**, **Exibir perfis**, e **Exibir segmentos** [[permissões de controle de acesso]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions). Leia o [[visão geral do controle de acesso]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/ui/overview) ou entre em contato com o administrador do produto para obter as permissões necessárias.
->* Para exportar *identidades*, você precisará do **Exibir gráfico de identidade** [[permissão de controle de acesso]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions).\![Selecione o namespace de identidade destacado no fluxo de trabalho para ativar públicos para destinos.](../../assets/catalog/data-partners/merkury-connections/media/image3.png)
+>* Para se conectar ao destino, você precisa de **Exibir Destinos** e **Gerenciar Destinos**, **Ativar Destinos**, **Exibir Perfis** e **Exibir Segmentos** [[permissões de controle de acesso]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions). Leia a [[visão geral do controle de acesso]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/ui/overview) ou contate o administrador do produto para obter as permissões necessárias.
+>* Para exportar *identidades*, você precisa do **Exibir Gráfico de Identidade** [[permissão de controle de acesso]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions).\![Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos.](../../assets/catalog/data-partners/merkury-connections/media/image3.png)
 
 ## Identidades suportadas {#supported-identities}
 
@@ -47,9 +47,9 @@ Siga as etapas desta página de documentação para criar uma [!DNL Merkury Conn
 |---|---|---|
 | GAID | GOOGLE ADVERTISING ID | Selecione a identidade de destino GAID quando a identidade de origem for um namespace GAID. |
 | IDFA | Apple ID para anunciantes | Selecione a identidade de destino do IDFA quando a identidade de origem for um namespace do IDFA. |
-| ECID | Experience Cloud ID | Um namespace que representa a ECID. Esse namespace também pode ser referenciado pelos seguintes aliases: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Consulte o seguinte documento em [ECID](/help/identity-service/features/ecid.md) para obter mais informações. |
-| phone_sha256 | Números de telefone com hash com o algoritmo SHA256 | Os números de telefone com hash SHA256 e texto sem formatação são compatíveis com o Adobe Experience Platform. Quando o campo de origem contiver atributos sem hash, verifique a **[!UICONTROL Aplicar transformação]** opção, para ter [!DNL Platform] coloque automaticamente os dados em hash na ativação. |
-| email_lc_sha256 | Endereços de email com hash com o algoritmo SHA256 | O Adobe Experience Platform oferece suporte tanto para texto simples quanto para endereços de email com hash SHA256. Quando o campo de origem contiver atributos sem hash, verifique a **[!UICONTROL Aplicar transformação]** opção, para ter [!DNL Platform] coloque automaticamente os dados em hash na ativação. |
+| ECID | Experience Cloud ID | Um namespace que representa a ECID. Esse namespace também pode ser referenciado pelos seguintes aliases: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Consulte o seguinte documento no [ECID](/help/identity-service/features/ecid.md) para obter mais informações. |
+| phone_sha256 | Números de telefone com hash com o algoritmo SHA256 | Os números de telefone com hash SHA256 e texto sem formatação são compatíveis com o Adobe Experience Platform. Quando o campo de origem contiver atributos sem hash, marque a opção **[!UICONTROL Aplicar transformação]** para que [!DNL Platform] coloque os dados em hash automaticamente durante a ativação. |
+| email_lc_sha256 | Endereços de email com hash com o algoritmo SHA256 | O Adobe Experience Platform oferece suporte tanto para texto simples quanto para endereços de email com hash SHA256. Quando o campo de origem contiver atributos sem hash, marque a opção **[!UICONTROL Aplicar transformação]** para que [!DNL Platform] coloque os dados em hash automaticamente durante a ativação. |
 | extern_id | IDs de usuário personalizadas | Selecione esta identidade de destino quando sua identidade de origem for um namespace personalizado. |
 
 {style="table-layout:auto"}
@@ -58,10 +58,10 @@ Siga as etapas desta página de documentação para criar uma [!DNL Merkury Conn
 
 Esta seção descreve que tipo de público-alvo você pode exportar para esse destino.
 
-| **Público-alvo** | **Compatível** | **Origem da descrição** |
+| **Público-alvo** | **Com suporte** | **Origem da descrição** |
 |---|---|---|      
-| Serviço de segmentação | ✓ | Públicos-alvo gerados pelo Experience Platform [[Serviço de segmentação]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/home). |
-| Uploads personalizados | X | Públicos-alvo [[importado]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience) para o Experience Platform de arquivos CSV. |
+| Serviço de segmentação | ✓ | Públicos gerados por meio do Experience Platform [[Serviço de segmentação]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/home). |
+| Uploads personalizados | X | Públicos-alvo [[importados]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience) para Experience Platform de arquivos CSV. |
 
 {style="table-layout:auto"}
 
@@ -71,8 +71,8 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 
 | **Item** | **Tipo** | **Notas** |
 |---|---|---|  
-| Tipo de exportação | **Baseado em perfil** | Você está exportando todos os membros de um segmento, juntamente com os campos de esquema desejados (por exemplo: endereço de email, número de telefone, sobrenome), conforme escolhido na tela selecionar atributos de perfil da [[fluxo de trabalho de ativação de destino]](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations#select-attributes). |
-| Frequência | **Lote** | Os destinos em lote exportam arquivos para plataformas downstream em incrementos de três, seis, oito, doze ou vinte e quatro horas. Leia mais sobre [[destinos de frequência baseados em arquivo em lote]](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/destination-types#file-based). |
+| Tipo de exportação | **Baseado em perfil** | Você está exportando todos os membros de um segmento, juntamente com os campos de esquema desejados (por exemplo: endereço de email, número de telefone, sobrenome), conforme escolhido na tela selecionar atributos de perfil do [[fluxo de trabalho de ativação de destino]](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations#select-attributes). |
+| Frequência | **Lote** | Os destinos em lote exportam arquivos para plataformas downstream em incrementos de três, seis, oito, doze ou vinte e quatro horas. Leia mais sobre [[destinos de frequência baseados em arquivo de lote]](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/destination-types#file-based). |
 
 {style="table-layout:auto"}
 
@@ -80,13 +80,13 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 
 >[!IMPORTANT]
 >
->Para se conectar ao destino, você precisa da variável **Exibir destinos** e **Gerenciar e ativar destinos do conjunto de dados** [[permissões de controle de acesso]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions). Leia o [[visão geral do controle de acesso]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/ui/overview) ou entre em contato com o administrador do produto para obter as permissões necessárias.
+>Para se conectar ao destino, você precisa do **Exibir Destinos** e do **Gerenciar e Ativar Destinos de Conjuntos de Dados** [[permissões de controle de acesso]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions). Leia a [[visão geral do controle de acesso]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/ui/overview) ou contate o administrador do produto para obter as permissões necessárias.
 
-Para se conectar a esse destino, siga as etapas descritas no [[tutorial de configuração de destino]](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/connect-destination). No workflow da configuração de destino, preencha os campos listados nas duas seções abaixo.
+Para se conectar a este destino, siga as etapas descritas no [[tutorial de configuração de destino]](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/connect-destination). No workflow da configuração de destino, preencha os campos listados nas duas seções abaixo.
 
 ### Autenticar para o destino
 
-Para autenticar no destino, preencha os campos obrigatórios e selecione **Conectar ao destino**.
+Para autenticar no destino, preencha os campos obrigatórios e selecione **Conectar ao destino**.
 
 Para acessar seu bucket no Experience Platform, você precisa fornecer valores válidos para as seguintes credenciais:
 
@@ -105,58 +105,58 @@ Para acessar seu bucket no Experience Platform, você precisa fornecer valores v
 
 Para configurar detalhes para o destino, preencha os campos obrigatórios e opcionais abaixo. Um asterisco ao lado de um campo na interface do usuário indica que o campo é obrigatório.
 
-![Uma captura de tela dos detalhes do destino](../../assets/catalog/data-partners/merkury-connections/media/image6.png)
+![Uma captura de tela dos detalhes de destino](../../assets/catalog/data-partners/merkury-connections/media/image6.png)
 
-* **Nome (obrigatório)** - O nome em que o destino será salvo
-* **Descrição** - Breve explicação da finalidade do destino
-* **Nome do Período (Obrigatório)** - Nome do bucket do Amazon S3 configurado no S3
-* **Caminho da pasta (obrigatório)** - Se os subdiretórios em um bucket forem usados, um caminho deverá ser definido, ou &#39;/&#39; para fazer referência ao caminho raiz.
-* **Tipo de arquivo** - Selecione o formato que o Experience Platform deve usar para os arquivos exportados. Consulte sua equipe do Merkury para obter o tipo de arquivo esperado para sua conta.
+* **Nome (Obrigatório)** - O nome com o qual o destino será salvo
+* **Descrição** - Breve explicação da finalidade do destino
+* **Nome do bucket (obrigatório)** - Nome do bucket do Amazon S3 configurado no S3
+* **Caminho da Pasta (Obrigatório)** - Se os subdiretórios em um compartimento forem usados, um caminho deverá ser definido ou &#39;/&#39; para fazer referência ao caminho raiz.
+* **Tipo de arquivo** - Selecione o formato que o Experience Platform deve usar para os arquivos exportados. Consulte sua equipe do Merkury para obter o tipo de arquivo esperado para sua conta.
 
 >[!NOTE]
 >
 >Ao selecionar a opção CSV, as opções Delimitador, Citação, Caractere de escape, Valor vazio, Valor nulo, Formato de compactação e Incluir arquivo de manifesto serão apresentadas. Consulte sua equipe do Merkury para obter as configurações apropriadas para sua conta.
 
-![imagem das opções do csv](../../assets/catalog/data-partners/merkury-connections/media/image8.png)
+![imagem de opções csv](../../assets/catalog/data-partners/merkury-connections/media/image8.png)
 
 ### Conta existente
 
-As contas já definidas usando o destino Merkury Enterprise Connections aparecem em um pop-up de lista. Quando selecionada, você poderá ver os detalhes da conta no painel direito. Veja o exemplo da interface do usuário ao navegar para **Destinos** > **Contas**:
+As contas já definidas usando o destino Merkury Enterprise Connections aparecem em um pop-up de lista. Quando selecionada, você poderá ver os detalhes da conta no painel direito. Veja o exemplo na interface do usuário ao navegar até **Destinos** > **Contas**:
 
 ![Uma captura de tela da conta de destino na página de contas de destino.](../../assets/catalog/data-partners/merkury-connections/media/image5.png)
 
 ## Ativar alertas
 
-Você pode ativar os alertas para receber notificações sobre o status do fluxo de dados para o seu destino. Selecione um alerta na lista para assinar e receber notificações sobre o status do seu fluxo de dados. Para obter mais informações sobre alertas, consulte o manual sobre [assinatura de alertas de destinos usando a interface do](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/alerts).
+Você pode ativar os alertas para receber notificações sobre o status do fluxo de dados para o seu destino. Selecione um alerta na lista para assinar e receber notificações sobre o status do seu fluxo de dados. Para obter mais informações sobre alertas, consulte o manual sobre [assinatura de alertas de destinos usando a interface](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/alerts).
 
-Quando terminar de fornecer detalhes da conexão de destino, selecione **Próxima**.
+Quando terminar de fornecer detalhes da conexão de destino, selecione **Avançar**.
 
 ## Ativar públicos-alvo para esse destino
 
 >[!IMPORTANT]
 >
->* Para ativar os dados, é necessário **Exibir destinos**, **Ativar destinos**, **Exibir perfis**, e **Exibir segmentos** permissões de controle de acesso. Leia a visão geral do controle de acesso ou entre em contato com o administrador do produto para obter as permissões necessárias.
->* Para exportar identidades, é necessário **Exibir gráfico de identidade** permissão de controle de acesso.
+>* Para ativar dados, você precisa de **Exibir Destinos**, **Ativar Destinos**, **Exibir Perfis** e **Exibir Segmentos** permissões de controle de acesso. Leia a visão geral do controle de acesso ou entre em contato com o administrador do produto para obter as permissões necessárias.
+>* Para exportar identidades, você precisa da permissão de controle de acesso **Exibir Gráfico de Identidade**.
 
 
-Ler [Ativar dados do público-alvo para destinos de exportação de perfil em lote](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations) para obter instruções sobre como ativar públicos-alvo para esse destino.
+Leia [Ativar dados de público-alvo para destinos de exportação de perfil em lote](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations) para obter instruções sobre como ativar públicos-alvo para esse destino.
 
 ## Sugestões de mapeamento
 
-O processamento correto dos arquivos no [!DNL Merkury] O lado requer elementos de nome e endereço. Embora nem todos os elementos sejam necessários, fornecer o máximo possível ajudará na correspondência bem-sucedida.
+O processamento correto de arquivos no lado [!DNL Merkury] requer elementos de nome e endereço. Embora nem todos os elementos sejam necessários, fornecer o máximo possível ajudará na correspondência bem-sucedida.
 
-As sugestões de mapeamento são fornecidas na tabela abaixo, listando os atributos no seu lado de destino que são usados pelo [!DNL Merkury] processamento ao qual os clientes podem mapear atributos de perfil. Trate esses elementos como sugestões, pois nem todos os elementos são obrigatórios. Os valores de origem dependerão das necessidades da conta.
+São fornecidas sugestões de mapeamento na tabela abaixo, listando os atributos no seu lado de destino que são usados pelo processamento do [!DNL Merkury] para os quais os clientes podem mapear atributos de perfil. Trate esses elementos como sugestões, pois nem todos os elementos são obrigatórios. Os valores de origem dependerão das necessidades da conta.
 
 | Campo de público alvo | Descrição do Source |
 |---|---|
-| ID | Campo de identidade a ser usado para mapear [!DNL Merkury] dados para o Experience Platform por meio do [!DNL Merkury Enterprise Identity] Conector do Source |
-| Input_First_Name | A variável `person.name.firstName` valor em Experience Platform. |
-| Input_Last_Name | A variável `person.name.lastName` valor em Experience Platform. |
-| Input_Address_Line_1 | A variável `mailingAddress.street` valor em Experience Platform. |
-| Cidade_Entrada | A variável `mailingAddress.city` valor em Experience Platform. |
-| Input_State_Province_Code | A variável `mailingAddress.state` valor em Experience Platform. Use se o estado estiver no formato de código de dois caracteres. |
-| Input_State_Province_Name | A variável `mailingAddress.state` valor em Experience Platform. Usar se o estado for o nome completo do estado |
-| Input_Postal_Code | A variável `mailingAddress.postalCode` valor em Experience Platform. |
+| ID | Campo de identidade a ser usado para mapear dados do [!DNL Merkury] para o Experience Platform por meio do conector do Source [!DNL Merkury Enterprise Identity] |
+| Input_First_Name | O valor `person.name.firstName` em Experience Platform. |
+| Input_Last_Name | O valor `person.name.lastName` em Experience Platform. |
+| Input_Address_Line_1 | O valor `mailingAddress.street` em Experience Platform. |
+| Cidade_Entrada | O valor `mailingAddress.city` em Experience Platform. |
+| Input_State_Province_Code | O valor `mailingAddress.state` em Experience Platform. Use se o estado estiver no formato de código de dois caracteres. |
+| Input_State_Province_Name | O valor `mailingAddress.state` em Experience Platform. Usar se o estado for o nome completo do estado |
+| Input_Postal_Code | O valor `mailingAddress.postalCode` em Experience Platform. |
 | Input_Email_Address | O valor que você deseja mapear como o endereço de email dos perfis. |
 | Input_Phone | O valor que você deseja mapear como o número de telefone dos perfis. |
 
@@ -168,8 +168,8 @@ Para verificar se os dados foram exportados com êxito, verifique o bucket do Am
 
 ## Uso e governança de dados
 
-Todos os destinos do Adobe Experience Platform estão em conformidade com as políticas de uso de dados ao manipular seus dados. Para obter informações detalhadas sobre como o Adobe Experience Platform fiscaliza a governança de dados, leia o [Visão geral da governança de dados](https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/home).
+Todos os destinos do Adobe Experience Platform estão em conformidade com as políticas de uso de dados ao manipular seus dados. Para obter informações detalhadas sobre como a Adobe Experience Platform fiscaliza a governança de dados, leia a [visão geral da Governança de dados](https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/home).
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você criou com sucesso um fluxo de dados para exportar dados do perfil do Experience Platform para sua [!DNL Merkury] local do S3 gerenciado. Em seguida, entre em contato com o [!DNL Merkury] representante com o nome da conta, nomes de arquivo e o caminho do bucket para que o processamento possa ser configurado.
+Seguindo este tutorial, você criou com êxito um fluxo de dados para exportar dados do perfil do Experience Platform para sua localização do S3 gerenciado pelo [!DNL Merkury]. Em seguida, contate o representante do [!DNL Merkury] com o nome da conta, os nomes de arquivo e o caminho do bucket para que o processamento possa ser configurado.

@@ -6,8 +6,8 @@ description: Este documento fornece um tutorial para gerenciar a assimilação p
 exl-id: 25a34da6-5b7c-4747-8ebd-52ba516b9dc3
 source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
-source-wordcount: '945'
-ht-degree: 0%
+source-wordcount: '946'
+ht-degree: 7%
 
 ---
 
@@ -21,40 +21,40 @@ Este documento fornece um tutorial para gerenciar a assimilação parcial de lot
 
 Este tutorial requer um conhecimento prático dos vários serviços da Adobe Experience Platform envolvidos com a assimilação parcial de lotes. Antes de iniciar este tutorial, revise a documentação dos seguintes serviços:
 
-- [Assimilação em lote](./overview.md): o método que [!DNL Platform] A assimila e armazena dados de arquivos de dados, como CSV e Parquet.
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): o quadro normalizado pelo qual [!DNL Platform] organiza os dados de experiência do cliente.
+- [Assimilação em lote](./overview.md): o método que [!DNL Platform] assimila e armazena dados de arquivos de dados, como CSV e Parquet.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): a estrutura padronizada pela qual o [!DNL Platform] organiza os dados de experiência do cliente.
 
-As seções a seguir fornecem informações adicionais que você precisará saber para fazer chamadas com êxito para o [!DNL Platform] APIs.
+As seções a seguir fornecem informações adicionais que você precisará saber para fazer chamadas com êxito para as APIs do [!DNL Platform].
 
 ### Leitura de chamadas de API de amostra
 
-Este guia fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O exemplo de JSON retornado nas respostas da API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de exemplo, consulte a seção sobre [como ler chamadas de API de exemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) no [!DNL Experience Platform] guia de solução de problemas.
+Este manual fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e conteúdos de solicitação formatados corretamente. Também fornece exemplos de JSON retornado nas respostas da API. Para obter informações sobre as convenções usadas na documentação para chamadas de API de exemplo, consulte a seção sobre [como ler chamadas de API de exemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) no guia de solução de problemas [!DNL Experience Platform].
 
-### Coletar valores para cabeçalhos obrigatórios
+### Coletar valores para cabeçalhos necessários
 
-Para fazer chamadas para [!DNL Platform] APIs, primeiro conclua o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). Concluir o tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todos os [!DNL Experience Platform] Chamadas de API, conforme mostrado abaixo:
+Para fazer chamadas para APIs do [!DNL Platform], primeiro complete o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). Concluir o tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API da [!DNL Experience Platform], conforme mostrado abaixo:
 
 - Autorização: Portador `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{ORG_ID}`
+- x-gw-ims-org-id `{ORG_ID}`
 
-Todos os recursos em [!DNL Experience Platform] são isolados em sandboxes virtuais específicas. Todas as solicitações para [!DNL Platform] As APIs exigem um cabeçalho que especifique o nome da sandbox em que a operação ocorrerá:
+Todos os recursos em [!DNL Experience Platform] estão isolados em sandboxes virtuais específicas. Todas as solicitações para [!DNL Platform] APIs exigem um cabeçalho que especifique o nome da sandbox em que a operação ocorrerá:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Para obter mais informações sobre sandboxes no [!DNL Platform], consulte o [documentação de visão geral da sandbox](../../sandboxes/home.md).
+>Para obter mais informações sobre sandboxes em [!DNL Platform], consulte a [documentação de visão geral da sandbox](../../sandboxes/home.md).
 
 ## Ativar um lote para assimilação parcial de lotes na API {#enable-api}
 
 >[!NOTE]
 >
->Esta seção descreve como ativar um lote para assimilação parcial de lotes usando a API. Para obter instruções sobre como usar a interface do usuário, leia o [habilitar um lote para assimilação parcial de lotes na interface do usuário](#enable-ui) etapa.
+>Esta seção descreve como ativar um lote para assimilação parcial de lotes usando a API. Para obter instruções sobre como usar a interface, leia o [habilitar um lote para assimilação parcial de lotes na etapa da interface](#enable-ui).
 
 Você pode criar um novo lote com a assimilação parcial ativada.
 
-Para criar um novo lote, siga as etapas da seção [guia do desenvolvedor de assimilação em lote](./api-overview.md). Depois de alcançar o **[!UICONTROL Criar lote]** adicione o seguinte campo no corpo da solicitação:
+Para criar um novo lote, siga as etapas no [guia do desenvolvedor de assimilação em lote](./api-overview.md). Depois de atingir a etapa **[!UICONTROL Criar lote]**, adicione o seguinte campo no corpo da solicitação:
 
 ```json
 {
@@ -65,7 +65,7 @@ Para criar um novo lote, siga as etapas da seção [guia do desenvolvedor de ass
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `enableErrorDiagnostics` | Um sinalizador que permite [!DNL Platform] para gerar mensagens de erro detalhadas sobre o lote. |
+| `enableErrorDiagnostics` | Um sinalizador que permite que o [!DNL Platform] gere mensagens de erro detalhadas sobre o lote. |
 | `partialIngestionPercent` | A porcentagem de erros aceitáveis antes que todo o lote falhe. Portanto, neste exemplo, no máximo 5% do lote podem ser erros, antes que falhe. |
 
 
@@ -75,21 +75,21 @@ Para criar um novo lote, siga as etapas da seção [guia do desenvolvedor de ass
 >
 >Esta seção descreve como ativar um lote para assimilação parcial de lotes usando a interface do. Se você já tiver ativado um lote para assimilação parcial de lotes usando a API do, poderá pular para a próxima seção.
 
-Para ativar um lote para assimilação parcial por meio da [!DNL Platform] Na interface do usuário, você pode criar um novo lote por meio de conexões de origem, criar um novo lote em um conjunto de dados existente ou criar um novo lote por meio da &quot;[!UICONTROL Mapear CSV para fluxo XDM]&quot;.
+Para habilitar um lote para assimilação parcial por meio da interface do usuário do [!DNL Platform], você pode criar um novo lote por meio de conexões de origem, criar um novo lote em um conjunto de dados existente ou criar um novo lote por meio do &quot;[!UICONTROL Mapear CSV para fluxo XDM]&quot;.
 
 ### Criar uma nova conexão de origem {#new-source}
 
-Para criar uma nova conexão de origem, siga as etapas listadas no [Visão geral das fontes](../../sources/home.md). Depois de alcançar o **[!UICONTROL Detalhes do fluxo de dados]** etapa, tome nota da **[!UICONTROL Assimilação parcial]** e **[!UICONTROL Diagnóstico de erro]** campos.
+Para criar uma nova conexão de origem, siga as etapas listadas na [Visão geral das fontes](../../sources/home.md). Depois de atingir a etapa **[!UICONTROL detalhes do fluxo de dados]**, anote os campos **[!UICONTROL Assimilação parcial]** e **[!UICONTROL Diagnóstico de erros]**.
 
 ![](../images/batch-ingestion/partial-ingestion/configure-batch.png)
 
-A variável **[!UICONTROL Assimilação parcial]** ativar/desativar permite ativar ou desativar o uso de assimilação parcial de lotes.
+O botão de alternância **[!UICONTROL Assimilação parcial]** permite habilitar ou desabilitar o uso de assimilação parcial em lote.
 
-A variável **[!UICONTROL Diagnóstico de erro]** alternar só aparece quando a variável **[!UICONTROL Assimilação parcial]** está desativado. Esse recurso permite [!DNL Platform] para gerar mensagens de erro detalhadas sobre os lotes assimilados. Se a variável **[!UICONTROL Assimilação parcial]** for ativada, os diagnósticos de erro aprimorados serão aplicados automaticamente.
+A opção **[!UICONTROL Diagnóstico de erro]** só aparece quando a opção **[!UICONTROL Assimilação parcial]** está desativada. Este recurso permite que o [!DNL Platform] gere mensagens de erro detalhadas sobre os lotes assimilados. Se a opção de **[!UICONTROL Assimilação parcial]** estiver ativada, os diagnósticos de erro aprimorados serão aplicados automaticamente.
 
 ![](../images/batch-ingestion/partial-ingestion/configure-batch-partial-ingestion-focus.png)
 
-A variável **[!UICONTROL Limite de erro]** permite que você defina a porcentagem de erros aceitáveis antes que todo o lote falhe. Por padrão, esse valor é definido como 5%.
+O **[!UICONTROL Limite de erros]** permite que você defina a porcentagem de erros aceitáveis antes que todo o lote falhe. Por padrão, esse valor é definido como 5%.
 
 ### Usar um conjunto de dados existente {#existing-dataset}
 
@@ -97,32 +97,32 @@ Para usar um conjunto de dados existente, comece selecionando um conjunto de dad
 
 ![](../images/batch-ingestion/partial-ingestion/monitor-dataset.png)
 
-A variável **[!UICONTROL Assimilação parcial]** ativar/desativar permite ativar ou desativar o uso de assimilação parcial de lotes.
+O botão de alternância **[!UICONTROL Assimilação parcial]** permite habilitar ou desabilitar o uso de assimilação parcial em lote.
 
-A variável **[!UICONTROL Diagnóstico de erro]** alternar só aparece quando a variável **[!UICONTROL Assimilação parcial]** está desativado. Esse recurso permite [!DNL Platform] para gerar mensagens de erro detalhadas sobre os lotes assimilados. Se a variável **[!UICONTROL Assimilação parcial]** for ativada, os diagnósticos de erro aprimorados serão aplicados automaticamente.
+A opção **[!UICONTROL Diagnóstico de erro]** só aparece quando a opção **[!UICONTROL Assimilação parcial]** está desativada. Este recurso permite que o [!DNL Platform] gere mensagens de erro detalhadas sobre os lotes assimilados. Se a opção de **[!UICONTROL Assimilação parcial]** estiver ativada, os diagnósticos de erro aprimorados serão aplicados automaticamente.
 
 ![](../images/batch-ingestion/partial-ingestion/monitor-dataset-partial-ingestion-focus.png)
 
-A variável **[!UICONTROL Limite de erro]** permite que você defina a porcentagem de erros aceitáveis antes que todo o lote falhe. Por padrão, esse valor é definido como 5%.
+O **[!UICONTROL Limite de erros]** permite que você defina a porcentagem de erros aceitáveis antes que todo o lote falhe. Por padrão, esse valor é definido como 5%.
 
-Agora, é possível fazer upload de dados usando o **Adicionar dados** e será assimilado usando a assimilação parcial.
+Agora é possível carregar dados usando o botão **Adicionar dados**, que será assimilado usando a assimilação parcial.
 
-### Use o &quot;[!UICONTROL Mapear CSV para esquema XDM]Fluxo &quot; {#map-flow}
+### Usar o fluxo &quot;[!UICONTROL Mapear CSV para esquema XDM]&quot; {#map-flow}
 
-Para usar o &quot;[!UICONTROL Mapear CSV para esquema XDM]&quot;, siga as etapas listadas no [Mapear um tutorial de arquivo CSV](../tutorials/map-csv/overview.md). Depois de alcançar o **[!UICONTROL Adicionar dados]** etapa, tome nota da **[!UICONTROL Assimilação parcial]** e **[!UICONTROL Diagnóstico de erro]** campos.
+Para usar o fluxo &quot;[!UICONTROL Mapear CSV para esquema XDM]&quot;, siga as etapas listadas no [Tutorial Mapear um arquivo CSV](../tutorials/map-csv/overview.md). Ao atingir a etapa **[!UICONTROL Adicionar dados]**, anote os campos **[!UICONTROL Assimilação parcial]** e **[!UICONTROL Diagnóstico de erros]**.
 
 ![](../images/batch-ingestion/partial-ingestion/xdm-csv-workflow.png)
 
-A variável **[!UICONTROL Assimilação parcial]** ativar/desativar permite ativar ou desativar o uso de assimilação parcial de lotes.
+O botão de alternância **[!UICONTROL Assimilação parcial]** permite habilitar ou desabilitar o uso de assimilação parcial em lote.
 
-A variável **[!UICONTROL Diagnóstico de erro]** alternar só aparece quando a variável **[!UICONTROL Assimilação parcial]** está desativado. Esse recurso permite [!DNL Platform] para gerar mensagens de erro detalhadas sobre os lotes assimilados. Se a variável **[!UICONTROL Assimilação parcial]** for ativada, os diagnósticos de erro aprimorados serão aplicados automaticamente.
+A opção **[!UICONTROL Diagnóstico de erro]** só aparece quando a opção **[!UICONTROL Assimilação parcial]** está desativada. Este recurso permite que o [!DNL Platform] gere mensagens de erro detalhadas sobre os lotes assimilados. Se a opção de **[!UICONTROL Assimilação parcial]** estiver ativada, os diagnósticos de erro aprimorados serão aplicados automaticamente.
 
 ![](../images/batch-ingestion/partial-ingestion/xdm-csv-workflow-partial-ingestion-focus.png)
 
-**[!UICONTROL Limite de erro]** permite que você defina a porcentagem de erros aceitáveis antes que todo o lote falhe. Por padrão, esse valor é definido como 5%.
+**[!UICONTROL Limite de erros]** permite que você defina a porcentagem de erros aceitáveis antes que todo o lote falhe. Por padrão, esse valor é definido como 5%.
 
 ## Próximas etapas {#next-steps}
 
-Este tutorial abordou como criar ou modificar um conjunto de dados para permitir a assimilação parcial de lotes. Para obter mais informações sobre assimilação em lote, leia a [guia do desenvolvedor de assimilação em lote](./api-overview.md).
+Este tutorial abordou como criar ou modificar um conjunto de dados para permitir a assimilação parcial de lotes. Para obter mais informações sobre a assimilação em lote, leia o [guia do desenvolvedor de assimilação em lote](./api-overview.md).
 
-Para obter informações sobre o monitoramento de erros de assimilação parcial, leia o [guia de diagnóstico de erro de assimilação em lote](../quality/error-diagnostics.md).
+Para obter informações sobre o monitoramento de erros de assimilação parcial, leia o [guia de diagnóstico de erros de assimilação em lote](../quality/error-diagnostics.md).

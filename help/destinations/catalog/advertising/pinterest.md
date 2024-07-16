@@ -5,7 +5,7 @@ exl-id: e601f75f-0d40-4cd0-93ca-54d7439f1db7
 source-git-commit: 8a48ce4185f8044b8563d0435dcec17030b90830
 workflow-type: tm+mt
 source-wordcount: '722'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -21,20 +21,20 @@ Crie públicos-alvo com base em suas listas de clientes, pessoas que visitaram s
 
 ## Pré-requisitos {#prerequisites}
 
-* O usuário precisaria se autenticar em uma conta do Pinterest que tem acesso à conta do anunciante à qual deseja adicionar um público-alvo. É possível encontrar detalhes sobre o compartilhamento de contas de anunciante [aqui](https://help.pinterest.com/en/business/article/share-and-manage-access-to-your-ad-accounts). Especificamente, o usuário precisaria dos níveis de acesso de &quot;público-alvo&quot;.
-* É possível encontrar detalhes sobre os formatos de identidade da lista de clientes [aqui](https://help.pinterest.com/en/business/article/audience-targeting).
+* O usuário precisaria se autenticar em uma conta do Pinterest que tem acesso à conta do anunciante à qual deseja adicionar um público-alvo. Detalhes sobre o compartilhamento de contas de anunciante podem ser encontrados [aqui](https://help.pinterest.com/en/business/article/share-and-manage-access-to-your-ad-accounts). Especificamente, o usuário precisaria dos níveis de acesso de &quot;público-alvo&quot;.
+* Detalhes sobre os formatos de identidade da lista de clientes podem ser encontrados [aqui](https://help.pinterest.com/en/business/article/audience-targeting).
 
 ## Identidades suportadas {#supported-identities}
 
-A variável [!DNL Pinterest Customer List] o destino oferece suporte à ativação das identidades descritas na tabela abaixo. Saiba mais sobre [identidades](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started).
+O destino [!DNL Pinterest Customer List] dá suporte à ativação das identidades descritas na tabela abaixo. Saiba mais sobre [identidades](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started).
 
-No [etapa de mapeamento](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) do workflow de ativação de destino, mapeie as identidades desejadas para o campo de destino *pinterest_audience*. As identidades são diferenciadas e resolvidas após a assimilação de dados na Pinterest.
+Na [etapa de mapeamento](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) do fluxo de trabalho de ativação de destino, mapeie as identidades desejadas para o campo de destino *pinterest_audience*. As identidades são diferenciadas e resolvidas após a assimilação de dados na Pinterest.
 
 | Identidade de destino | Descrição | Considerações |
 |---|---|---|
-| GAID | [!DNL Google Advertising ID] | Mapeie o *GAID* namespace de identidade de origem para o campo de identidade de destino *pinterest_audience*. As identidades são diferenciadas e resolvidas após a assimilação de dados na Pinterest. |
-| IDFA | [!DNL Apple ID for Advertisers] | Mapeie o *IDFA* namespace de identidade de origem para o campo de identidade de destino *pinterest_audience*. As identidades são diferenciadas e resolvidas após a assimilação de dados na Pinterest. |
-| EMAIL | Endereços de email (texto limpo ou hash com o algoritmo SHA256) | O Adobe Experience Platform oferece suporte tanto para texto simples quanto para endereços de email com hash SHA256. <br> Mapeie o *E-mail* ou *Email_LC_SHA256* namespace de identidade de origem para o campo de identidade de destino *pinterest_audience*. |
+| GAID | [!DNL Google Advertising ID] | Mapeie o namespace de identidade de origem *GAID* para o campo de identidade de destino *pinterest_audience*. As identidades são diferenciadas e resolvidas após a assimilação de dados na Pinterest. |
+| IDFA | [!DNL Apple ID for Advertisers] | Mapeie o namespace de identidade de origem *IDFA* para o campo de identidade de destino *pinterest_audience*. As identidades são diferenciadas e resolvidas após a assimilação de dados na Pinterest. |
+| EMAIL | Endereços de email (texto limpo ou hash com o algoritmo SHA256) | O Adobe Experience Platform oferece suporte tanto para texto simples quanto para endereços de email com hash SHA256. <br> Mapeie o namespace de identidade de origem *Email* ou *Email_LC_SHA256* para o campo de identidade de destino *pinterest_audience*. |
 
 {style="table-layout:auto"}
 
@@ -44,14 +44,14 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 
 | Item | Tipo | Notas |
 ---------|----------|---------|
-| Tipo de exportação | **[!UICONTROL Exportação de público]** | Você está exportando todos os membros de um público-alvo com os identificadores (nome, número de telefone ou outros) usados no destino da Lista de clientes do Pinterest. |
-| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil é atualizado em Experience Platform com base na avaliação do público-alvo, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de transmissão](/help/destinations/destination-types.md#streaming-destinations). |
+| Tipo de exportação | **[!UICONTROL Exportação de público-alvo]** | Você está exportando todos os membros de um público-alvo com os identificadores (nome, número de telefone ou outros) usados no destino da Lista de clientes do Pinterest. |
+| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil é atualizado em Experience Platform com base na avaliação do público-alvo, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
 ## Casos de uso {#use-cases}
 
-Para ajudá-lo a entender melhor como e quando você deve usar o [!DNL Pinterest Customer List] destino, aqui estão exemplos de casos de uso que os clientes do Adobe Experience Platform podem resolver usando esse destino.
+Para ajudá-lo a entender melhor como e quando você deve usar o destino [!DNL Pinterest Customer List], veja a seguir exemplos de casos de uso que os clientes da Adobe Experience Platform podem resolver usando esse destino.
 
 ### Caso de uso #1
 
@@ -61,40 +61,40 @@ Crie públicos-alvo com base em suas listas de clientes, pessoas que visitaram s
 
 >[!IMPORTANT]
 > 
->Para se conectar ao destino, você precisa da variável **[!UICONTROL Exibir destinos]** e **[!UICONTROL Gerenciar destinos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
+>Para se conectar ao destino, você precisa de **[!UICONTROL Exibir Destinos]** e **[!UICONTROL Gerenciar Destinos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 
-Para se conectar a esse destino, siga as etapas descritas no [tutorial de configuração de destino](../../ui/connect-destination.md).
+Para se conectar a este destino, siga as etapas descritas no [tutorial de configuração de destino](../../ui/connect-destination.md).
 
 ### Parâmetros de conexão {#parameters}
 
-Enquanto [configuração](../../ui/connect-destination.md) Para esse destino, você deve fornecer as seguintes informações:
+Ao [configurar](../../ui/connect-destination.md) este destino, você deve fornecer as seguintes informações:
 
-* **[!UICONTROL Nome]**: um nome pelo qual você reconhecerá esse destino no futuro.
-* **[!UICONTROL Descrição]**: uma descrição que ajudará você a identificar esse destino no futuro.
-* **[!UICONTROL ID da conta de anúncio]**: a ID do anunciante do Pinterest.
+* **[!UICONTROL Nome]**: um nome pelo qual você reconhecerá este destino no futuro.
+* **[!UICONTROL Descrição]**: uma descrição que ajudará você a identificar este destino no futuro.
+* **[!UICONTROL ID da conta do anúncio]**: sua ID de anunciante do Pinterest.
 
 ### Ativar alertas {#enable-alerts}
 
-Você pode ativar os alertas para receber notificações sobre o status do fluxo de dados para o seu destino. Selecione um alerta na lista para assinar e receber notificações sobre o status do seu fluxo de dados. Para obter mais informações sobre alertas, consulte o manual sobre [assinatura de alertas de destinos usando a interface do](../../ui/alerts.md).
+Você pode ativar os alertas para receber notificações sobre o status do fluxo de dados para o seu destino. Selecione um alerta na lista para assinar e receber notificações sobre o status do seu fluxo de dados. Para obter mais informações sobre alertas, consulte o manual sobre [assinatura de alertas de destinos usando a interface](../../ui/alerts.md).
 
-Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICONTROL Próxima]**.
+Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICONTROL Avançar]**.
 
 ## Ativar públicos-alvo para esse destino {#activate}
 
 >[!IMPORTANT]
 > 
->* Para ativar os dados, é necessário **[!UICONTROL Exibir destinos]**, **[!UICONTROL Ativar destinos]**, **[!UICONTROL Exibir perfis]**, e **[!UICONTROL Exibir segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
->* Para exportar *identidades*, você precisará do **[!UICONTROL Exibir gráfico de identidade]** [permissão de controle de acesso](/help/access-control/home.md#permissions). <br> ![Selecione o namespace de identidade destacado no fluxo de trabalho para ativar públicos para destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecione o namespace de identidade destacado no fluxo de trabalho para ativar públicos para destinos."){width="100" zoomable="yes"}
+>* Para ativar dados, você precisa de **[!UICONTROL Exibir Destinos]**, **[!UICONTROL Ativar Destinos]**, **[!UICONTROL Exibir Perfis]** e **[!UICONTROL Exibir Segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
+>* Para exportar *identidades*, você precisa da **[!UICONTROL permissão Exibir Gráfico de Identidade]** [controle de acesso](/help/access-control/home.md#permissions). <br> ![Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos."){width="100" zoomable="yes"}
 
-Ler [Ativar perfis e públicos para destinos de exportação de público de transmissão](/help/destinations/ui/activate-segment-streaming-destinations.md) para obter instruções sobre como ativar públicos-alvo para esse destino.
+Leia [Ativar perfis e públicos-alvo para destinos de exportação de público-alvo de streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) para obter instruções sobre como ativar públicos-alvo para este destino.
 
 ## Uso e governança de dados {#data-usage-governance}
 
-Todos [!DNL Adobe Experience Platform] os destinos estão em conformidade com as políticas de uso de dados ao manipular seus dados. Para obter informações detalhadas sobre como [!DNL Adobe Experience Platform] fiscaliza a governança de dados, consulte o [Visão geral da governança de dados](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=pt-BR).
+Todos os destinos do [!DNL Adobe Experience Platform] são compatíveis com as políticas de uso de dados ao manipular seus dados. Para obter informações detalhadas sobre como o [!DNL Adobe Experience Platform] impõe a governança de dados, consulte a [visão geral da Governança de Dados](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=pt-BR).
 
 ## Recursos adicionais {#additional-resources}
 
-Consulte a [Página Central de ajuda do pinterest](https://help.pinterest.com/en/business/article/audience-targeting) para obter informações adicionais.
+Consulte a [página da Central de ajuda da Pinterest](https://help.pinterest.com/en/business/article/audience-targeting) para obter informações adicionais.
 
 +++ Exibir changelog
 

@@ -32,7 +32,7 @@ Este guia requer que você tenha concluído o [tutorial de autenticação](https
 
 * Autorização: Portador `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{ORG_ID}`
+* x-gw-ims-org-id `{ORG_ID}`
 
 Além dos cabeçalhos de autenticação, todas as solicitações exigem um cabeçalho que especifique o nome da sandbox em que a operação ocorrerá:
 

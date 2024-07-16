@@ -18,7 +18,7 @@ ht-degree: 1%
 
 Saiba como criar um público-alvo de visitantes não autenticados e redirecioná-los usando IDs duráveis fornecidas pelo parceiro.
 
-![Um infográfico que mostra o fluxo de dados de parceiros da assimilação no Adobe Experience Platform para a saída por meio de públicos-alvo para um destino downstream.](../assets/offsite-retargeting/header.png)
+![Um infográfico que mostra o fluxo de dados do parceiro da assimilação na Adobe Experience Platform para saída via públicos-alvo para um destino downstream.](../assets/offsite-retargeting/header.png)
 
 ## Por que considerar este caso de uso {#why-use-case}
 
@@ -45,51 +45,51 @@ Além disso, para implementar o caso de uso, você usará a seguinte funcionalid
 
 Para criar um público-alvo de visitantes não autenticados, primeiro será necessário obter os dados do parceiro no Real-Time CDP.
 
-Para saber como importar dados para o Real-Time CDP da melhor maneira usando o SDK da Web, leia o [seções de gerenciamento de dados e coleta de dados do evento](./onsite-personalization.md#data-management) do caso de uso de personalização no local.
+Para saber como importar dados para o Real-Time CDP usando o SDK da Web, leia as [seções de gerenciamento de dados e coleta de dados do evento](./onsite-personalization.md#data-management) do caso de uso de personalização no site.
 
 ## Antecipando IDs fornecidas pelo parceiro {#bring-partner-ids-forward}
 
 Depois de importar as IDs fornecidas pelo parceiro para um conjunto de dados de evento, será necessário obter esses dados nos registros de perfil. Você pode fazer isso utilizando atributos computados.
 
-Os atributos computados permitem converter rapidamente os dados comportamentais do perfil em valores agregados no nível do perfil. Como resultado, você pode usar essas expressões, como &quot;total de compras vitalícias&quot; no perfil, permitindo usar facilmente o atributo calculado em seus públicos-alvo. Mais informações sobre atributos computados podem ser encontradas na [visão geral dos atributos computados](../../profile/computed-attributes/overview.md).
+Os atributos computados permitem converter rapidamente os dados comportamentais do perfil em valores agregados no nível do perfil. Como resultado, você pode usar essas expressões, como &quot;total de compras vitalícias&quot; no perfil, permitindo usar facilmente o atributo calculado em seus públicos-alvo. Mais informações sobre atributos computados podem ser encontradas na [visão geral sobre atributos computados](../../profile/computed-attributes/overview.md).
 
-Para acessar atributos calculados, selecione **[!UICONTROL Perfis]** seguido por **[!UICONTROL Atributos computados]** e **[!UICONTROL Criar atributo calculado]**.
+Para acessar atributos computados, selecione **[!UICONTROL Perfis]** seguidos por **[!UICONTROL Atributos computados]** e **[!UICONTROL Criar atributo computado]**.
 
-![A variável [!UICONTROL Criar atributos computados] é realçado além do botão [!UICONTROL Atributos computados] na guia [!UICONTROL Perfis] espaço de trabalho.](../assets/offsite-retargeting/create-ca.png)
+![O botão [!UICONTROL Criar atributos computados] é realçado além da guia [!UICONTROL Atributos computados] no espaço de trabalho [!UICONTROL Perfis].](../assets/offsite-retargeting/create-ca.png)
 
-A variável **[!UICONTROL Criar atributo calculado]** é exibida. Nesta página, você pode usar os componentes para criar seu atributo calculado.
+A página **[!UICONTROL Criar atributo computado]** é exibida. Nesta página, você pode usar os componentes para criar seu atributo calculado.
 
-![A área de trabalho criar atributos calculados é exibida.](../assets/offsite-retargeting/ca-page.png)
+![O espaço de trabalho criar atributos computados é exibido.](../assets/offsite-retargeting/ca-page.png)
 
 >[!NOTE]
 >
->Para obter informações mais detalhadas sobre como criar atributos computados, leia a [guia da interface de atributos computados](../../profile/computed-attributes/ui.md).
+>Para obter informações mais detalhadas sobre como criar atributos computados, leia o [guia da interface do usuário de atributos computados](../../profile/computed-attributes/ui.md).
 
 Para este caso de uso, você pode criar um atributo calculado que, se a ID do parceiro existir, obterá o valor mais recente da ID do parceiro nas últimas 24 horas.
 
-Usando a barra de pesquisa, você pode localizar e adicionar o evento &quot;ID do parceiro&quot; que [você criou durante o caso de uso de personalização no local](#get-data-in) para a tela de atributo calculado.
+Usando a barra de pesquisa, você pode localizar e adicionar o evento &quot;ID do parceiro&quot; que [você criou durante o caso de uso de personalização no site](#get-data-in) para a tela de atributos computada.
 
-![A variável [!UICONTROL Eventos] e a barra de pesquisa são realçadas.](../assets/offsite-retargeting/ca-add-partner-id.png)
+![A guia [!UICONTROL Eventos] e a barra de pesquisa estão realçadas.](../assets/offsite-retargeting/ca-add-partner-id.png)
 
-Depois de adicionar o evento &quot;ID do parceiro&quot; à definição, defina a condição de filtragem do evento como **[!UICONTROL Existe]**, defina a condição de filtragem de eventos como a **[!UICONTROL Mais recente]** valor da ID de parceiro adicionada e com um período de pesquisa de 24 horas.
+Depois de adicionar o evento &quot;ID do Parceiro&quot; à definição, defina a condição de filtragem do evento como **[!UICONTROL Existe]**, defina a condição de filtragem do evento como o valor **[!UICONTROL Mais Recente]** da ID do parceiro adicionada e com um período de pesquisa de 24 horas.
 
-![A definição do atributo calculado que você deseja criar é destacada.](../assets/offsite-retargeting/ca-add-definition.png)
+![A definição do atributo computado que você deseja criar está realçada.](../assets/offsite-retargeting/ca-add-definition.png)
 
-Dê ao atributo calculado um nome apropriado (como &quot;ID do parceiro&quot;) e uma descrição, em seguida, selecione **[!UICONTROL Publish]** para concluir o processo de criação de atributo calculado.
+Dê ao atributo computado um nome apropriado (como &quot;ID de Parceiro&quot;) e uma descrição, em seguida, selecione **[!UICONTROL Publish]** para concluir o processo de criação do atributo computado.
 
-![As informações básicas do atributo calculado que você deseja criar são destacadas.](../assets/offsite-retargeting/ca-publish.png)
+![As informações básicas do atributo computado que você deseja criar estão destacadas.](../assets/offsite-retargeting/ca-publish.png)
 
 ## Criar um público-alvo usando o atributo calculado {#create-audience}
 
 Agora que você criou o atributo calculado, pode usar este atributo calculado para criar um público-alvo. Neste exemplo, você criará um público-alvo composto por visitantes que visitaram seu site mais de 5 vezes este mês, mas ainda não se inscreveram.
 
-Para criar um público, selecione **[!UICONTROL Públicos-alvo]**, seguido por **[!UICONTROL Criar público]**.
+Para criar um público, selecione **[!UICONTROL Públicos-alvo]**, seguido de **[!UICONTROL Criar público-alvo]**.
 
-![A variável [!UICONTROL Criar público] é realçado.](../assets/offsite-retargeting/create-audience.png)
+![O botão [!UICONTROL Criar público-alvo] está realçado.](../assets/offsite-retargeting/create-audience.png)
 
-Uma caixa de diálogo é exibida, solicitando que você escolha entre [!UICONTROL Compor público] e [!UICONTROL Criar regra]. Selecionar **[!UICONTROL Criar regra]** seguido por **[!UICONTROL Criar]**.
+Uma caixa de diálogo é exibida, solicitando que você escolha entre [!UICONTROL Compor público-alvo] e [!UICONTROL Criar regra]. Selecione a **[!UICONTROL Regra de compilação]** seguida de **[!UICONTROL Criar]**.
 
-![A variável [!UICONTROL Criar regra] é realçado.](../assets/offsite-retargeting/select-build-rule.png)
+![O botão [!UICONTROL Regra de compilação] está realçado.](../assets/offsite-retargeting/select-build-rule.png)
 
 A página Construtor de segmentos é exibida. Nesta página, você pode usar os componentes para criar seu público-alvo.
 
@@ -97,69 +97,69 @@ A página Construtor de segmentos é exibida. Nesta página, você pode usar os 
 
 >[!NOTE]
 >
->Para obter informações mais detalhadas sobre como usar o Construtor de segmentos, leia o [Guia da interface do usuário do Construtor de segmentos](../../segmentation/ui/segment-builder.md).
+>Para obter informações mais detalhadas sobre como usar o Construtor de segmentos, leia o [Guia da interface do Construtor de segmentos](../../segmentation/ui/segment-builder.md).
 
-Para atingir o objetivo de encontrar esses visitantes, primeiro será necessário adicionar um **[!UICONTROL Exibição da página]** para o seu público-alvo. Selecione o **[!UICONTROL Eventos]** em **[!UICONTROL Campos]**, em seguida, arraste e solte a **[!UICONTROL Exibição da página]** evento e adicione-o à tela da seção eventos.
+Para atingir o objetivo de encontrar esses visitantes, primeiro você precisará adicionar um evento de **[!UICONTROL Exibição de página]** ao seu público-alvo. Selecione a guia **[!UICONTROL Eventos]** em **[!UICONTROL Campos]**, arraste e solte o evento **[!UICONTROL Exibição de página]** e adicione-o à tela da seção de eventos.
 
-![A variável [!UICONTROL Eventos] na guia [!UICONTROL Campos] é realçada, durante a exibição da variável [!UICONTROL Exibição da página]evento.](../assets/offsite-retargeting/add-page-view.png)
+![A guia [!UICONTROL Eventos] da seção [!UICONTROL Campos] é realçada ao exibir o evento [!UICONTROL Exibição de Página].](../assets/offsite-retargeting/add-page-view.png)
 
-Selecione o novo adicionado **[!UICONTROL Exibição da página]** evento. Alterar o período de pesquisa de **[!UICONTROL A qualquer momento]** para **[!UICONTROL Este mês]** e altere a regra de evento para incluir **No mínimo 5**.
+Selecione o evento **[!UICONTROL Exibição de página]** recém-adicionado. Altere o período de pesquisa de **[!UICONTROL A qualquer momento]** para **[!UICONTROL Este mês]** e altere a regra de evento para incluir **Pelo menos 5**.
 
-![Detalhes do adicionado [!UICONTROL Exibição da página] evento são exibidos.](../assets/offsite-retargeting/edit-event.png)
+![Detalhes do evento [!UICONTROL Exibição de página] adicionado são exibidos.](../assets/offsite-retargeting/edit-event.png)
 
 Depois de adicionar o evento, será necessário adicionar um atributo. Como você está trabalhando com visitantes não autenticados, é possível adicionar o atributo calculado que acabou de criar. Este atributo calculado recém-criado permite vincular IDs de parceiros a um público-alvo.
 
-Para adicionar o atributo calculado, em **[!UICONTROL Atributos]**, selecione **[!UICONTROL Perfil individual XDM]**, seguido por **[ID do locatário da sua organização](../../xdm/api/getting-started.md#know-your-tenant-id).**, **[!UICONTROL AtributosComputadosdoSistema]**, e **[!UICONTROL PartnerID]**. Agora, adicione o **[!UICONTROL Valor]** do atributo calculado para a seção atributos da tela.
+Para adicionar o atributo calculado, em **[!UICONTROL Atributos]**, selecione **[!UICONTROL Perfil Individual XDM]**, seguido da **[ID de locatário de sua organização](../../xdm/api/getting-started.md#know-your-tenant-id).**, **[!UICONTROL SystemComputedAttributes]** e **[!UICONTROL PartnerID]**. Agora, adicione o **[!UICONTROL Valor]** do atributo computado à seção de atributos da tela.
 
-![O caminho da pasta para acessar o atributo calculado é exibido.](../assets/offsite-retargeting/access-computed-attribute.png)
+![O caminho da pasta para acessar o atributo computado é exibido.](../assets/offsite-retargeting/access-computed-attribute.png)
 
-Além disso, procure por **[!UICONTROL Email pessoal]** e adicione o **[!UICONTROL Endereço]** atributo abaixo **[!UICONTROL PartnerID]** à seção atributos da tela.
+Além disso, pesquise por **[!UICONTROL Email Pessoal]** e adicione o atributo **[!UICONTROL Endereço]** abaixo de **[!UICONTROL PartnerID]** à seção de atributos da tela.
 
-![A variável [!UICONTROL PartnerID] atributo calculado e a variável [!UICONTROL Endereço de email pessoal] atributos são destacados na tela Construtor de segmentos.](../assets/offsite-retargeting/added-attributes.png)
+![O atributo computado [!UICONTROL PartnerID] e o atributo [!UICONTROL Endereço de Email Pessoal] estão destacados na tela do Construtor de Segmentos.](../assets/offsite-retargeting/added-attributes.png)
 
-Agora que seus atributos foram adicionados, será necessário definir seus critérios de avaliação. Para **[!UICONTROL PartnerID]**, defina o critério como **[!UICONTROL existe]** e para **[!UICONTROL Endereço]**, defina o critério como **[!UICONTROL não existe]**.
+Agora que seus atributos foram adicionados, será necessário definir seus critérios de avaliação. Para **[!UICONTROL PartnerID]**, defina o critério como **[!UICONTROL existe]** e, para **[!UICONTROL Address]**, defina o critério como **[!UICONTROL não existe]**.
 
-![Os valores adequados dos atributos são destacados.](../assets/offsite-retargeting/set-attribute-values.png)
+![Os valores adequados dos atributos são realçados.](../assets/offsite-retargeting/set-attribute-values.png)
 
-Você criou com sucesso um público-alvo que procura visitantes de alta intensidade com uma ID fornecida pelo parceiro, mas que ainda não se inscreveram no site. Nomeie seu público-alvo como &quot;Redirecionamento de usuários não autenticados&quot; e selecione **[!UICONTROL Salvar]** para concluir a criação do público-alvo.
+Você criou com sucesso um público-alvo que procura visitantes de alta intensidade com uma ID fornecida pelo parceiro, mas que ainda não se inscreveram no site. Nomeie seu público-alvo como &quot;Redirecionando usuários não autenticados&quot; e selecione **[!UICONTROL Salvar]** para concluir a criação do seu público-alvo.
 
 ![As propriedades do público-alvo são destacadas.](../assets/offsite-retargeting/save-audience-properties.png)
 
 ## Ativar seu público {#activate-audience}
 
-Depois de criar seu público-alvo com êxito, você pode ativá-lo para destinos downstream. Selecionar **[!UICONTROL Públicos-alvo]** no painel de navegação esquerdo, procure pelo público-alvo recém-criado, selecione o ícone de reticências e selecione **[!UICONTROL Ativar para destino]**.
+Depois de criar seu público-alvo com êxito, você pode ativá-lo para destinos downstream. Selecione **[!UICONTROL Públicos-alvo]** no painel de navegação esquerdo, procure o público-alvo recém-criado, selecione o ícone de reticências e selecione **[!UICONTROL Ativar para destino]**.
 
-![A variável [!UICONTROL Ativar para destino] é realçado.](../assets/offsite-retargeting/activate-to-destination.png)
+![O botão [!UICONTROL Ativar para destino] está realçado.](../assets/offsite-retargeting/activate-to-destination.png)
 
 >[!NOTE]
 >
 >Todos os tipos de destino, incluindo destinos baseados em arquivos, oferecem suporte à ativação de público-alvo com IDs de parceiros.
 >
->Para obter mais informações sobre como ativar públicos-alvo para um destino, leia o [visão geral da ativação](../../destinations/ui/activation-overview.md).
+>Para obter mais informações sobre como ativar públicos para um destino, leia a [visão geral da ativação](../../destinations/ui/activation-overview.md).
 
-A variável **[!UICONTROL Ativar destino]** é exibida. Nesta página, você pode selecionar para qual destino deseja ativar seu destino. Após selecionar o destino escolhido, selecione **[!UICONTROL Próxima]**.
+A página **[!UICONTROL Ativar destino]** é exibida. Nesta página, você pode selecionar para qual destino deseja ativar seu destino. Depois de selecionar o destino escolhido, selecione **[!UICONTROL Próximo]**.
 
-![O destino em que você deseja ativar o público-alvo é realçado.](../assets/offsite-retargeting/select-destination.png)
+![O destino para o qual você deseja ativar o público-alvo está realçado.](../assets/offsite-retargeting/select-destination.png)
 
-A variável **[!UICONTROL Agendamento]** é exibida. Nesta página, você pode criar um agendamento que determina a frequência com que deseja ativar o público-alvo. Selecionar **[!UICONTROL Criar programação]** para criar um agendamento para a ativação de público-alvo.
+A página **[!UICONTROL Agendando]** é exibida. Nesta página, você pode criar um agendamento que determina a frequência com que deseja ativar o público-alvo. Selecione **[!UICONTROL Criar agendamento]** para criar um agendamento para a ativação de público-alvo.
 
-![A variável [!UICONTROL Criar programação] é realçado.](../assets/offsite-retargeting/select-create-schedule.png)
+![O botão [!UICONTROL Criar agendamento] está realçado.](../assets/offsite-retargeting/select-create-schedule.png)
 
-A variável [!UICONTROL Agendamento] popover é exibido. Nesta página, você pode criar a programação para a ativação do público-alvo. Após configurar o agendamento, selecione **[!UICONTROL Criar]** para continuar.
+O popover [!UICONTROL Agendando] é exibido. Nesta página, você pode criar a programação para a ativação do público-alvo. Depois de configurar o agendamento, selecione **[!UICONTROL Criar]** para continuar.
 
 ![O popover de configuração de agendamento é exibido.](../assets/offsite-retargeting/configure-schedule.png)
 
-Depois de confirmar os detalhes do agendamento, selecione **[!UICONTROL Próxima]**.
+Depois de confirmar os detalhes do agendamento, selecione **[!UICONTROL Avançar]**.
 
 ![Os detalhes do agendamento são exibidos.](../assets/offsite-retargeting/created-schedule.png)
 
-A variável **[!UICONTROL Selecionar atributos]** é exibida. Nesta página, você pode selecionar quais atributos deseja exportar junto com o público-alvo ativado. No mínimo, inclua a ID do parceiro, pois isso permitirá identificar os visitantes que você planeja redirecionar. Selecionar **[!UICONTROL Adicionar novo mapeamento]** e procure o atributo calculado. Depois de adicionar os atributos necessários, selecione **[!UICONTROL Próxima]**.
+A página **[!UICONTROL Selecionar atributos]** é exibida. Nesta página, você pode selecionar quais atributos deseja exportar junto com o público-alvo ativado. No mínimo, inclua a ID do parceiro, pois isso permitirá identificar os visitantes que você planeja redirecionar. Selecione **[!UICONTROL Adicionar novo mapeamento]** e procure o atributo computado. Depois de adicionar os atributos necessários, selecione **[!UICONTROL Próximo]**.
 
-![Ambos os [!UICONTROL Adicionar novo mapeamento] e o atributo calculado são destacados.](../assets/offsite-retargeting/add-new-mapping.png)
+![O botão [!UICONTROL Adicionar novo mapeamento] e o atributo computado estão realçados.](../assets/offsite-retargeting/add-new-mapping.png)
 
-A variável **[!UICONTROL Revisão]** é exibida. Nesta página, você pode revisar os detalhes da ativação do público-alvo. Se estiver satisfeito com os detalhes fornecidos, selecione **[!UICONTROL Concluir]**.
+A página **[!UICONTROL Revisão]** é exibida. Nesta página, você pode revisar os detalhes da ativação do público-alvo. Se você estiver satisfeito com os detalhes fornecidos, selecione **[!UICONTROL Concluir]**.
 
-![A variável [!UICONTROL Revisão] será exibida, mostrando os detalhes da ativação do público-alvo.](../assets/offsite-retargeting/review-destination-activation.png)
+![A página [!UICONTROL Revisão] é exibida, mostrando detalhes da ativação do público-alvo.](../assets/offsite-retargeting/review-destination-activation.png)
 
 Agora você ativou um público-alvo de usuários não autenticados para um destino downstream para redirecionamento adicional.
 
@@ -167,6 +167,6 @@ Agora você ativou um público-alvo de usuários não autenticados para um desti
 
 Você pode explorar mais casos de uso ativados por meio do suporte a dados de parceiros no Real-Time CDP:
 
-- [Envolver e adquirir novos clientes](./prospecting.md) usando dados do parceiro.
-- [Personalizar experiências no site](./offsite-retargeting.md) com reconhecimento de visitante auxiliado por parceiro.
-- [Completar perfis próprios](./supplement-first-party-profiles.md) com atributos fornecidos pelo parceiro.
+- [Envolva e adquira novos clientes](./prospecting.md) usando dados de parceiros.
+- [Personalize experiências no site](./offsite-retargeting.md) com reconhecimento de visitante auxiliado por parceiro.
+- [Complemente perfis próprios](./supplement-first-party-profiles.md) com atributos fornecidos pelo parceiro.

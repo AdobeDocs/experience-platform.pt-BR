@@ -137,5 +137,5 @@ Observe as seguintes limitações ao explorar o caso de uso descrito nesta pági
 Conheça outros casos de uso habilitados por meio da compatibilidade com dados de parceiros na Real-Time CDP:
 
 * Use o suporte a dados de terceiros da Real-Time CDP para [expandir sua base de perfis com prospectos de parceiros de dados e interaja com eles para adquirir ou alcançar novos clientes](/help/rtcdp/partner-data/prospecting.md).
-* [Personalizar experiências no site para visitantes desconhecidos usando o reconhecimento de visitantes auxiliados por parceiros](/help/rtcdp/partner-data/onsite-personalization.md) durante a visita sem que o usuário autentique ou tenha um histórico anterior com sua marca.
-* [Ativação ampliada de perfis de clientes potenciais e públicos-alvo de clientes potenciais](/help/destinations/ui/activate-prospect-audiences.md) para selecionar destinos.
+* [Personalize experiências no site para visitantes desconhecidos usando o reconhecimento de visitante auxiliado por parceiro](/help/rtcdp/partner-data/onsite-personalization.md) durante a visita sem que o usuário se autentique ou tenha um histórico anterior com sua marca.
+* [Ativação ampliada de perfis de prospecto e públicos-alvo de prospecto](/help/destinations/ui/activate-prospect-audiences.md) para selecionar destinos.

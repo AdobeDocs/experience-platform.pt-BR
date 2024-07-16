@@ -7,21 +7,21 @@ exl-id: 00c20081-09d0-425c-9894-0f957558bd43
 source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
 source-wordcount: '692'
-ht-degree: 6%
+ht-degree: 5%
 
 ---
 
-# [!UICONTROL Assinatura de serviço de telecomunicação] grupo de campos de esquema
+# Grupo de campos de esquema [!UICONTROL Assinatura de Telecom]
 
 >[!NOTE]
 >
->Os nomes de vários grupos de campos de esquema foram alterados. Consulte o documento sobre [atualizações do nome do grupo de campos](../name-updates.md) para obter mais informações.
+>Os nomes de vários grupos de campos de esquema foram alterados. Consulte o documento em [atualizações de nome de grupo de campos](../name-updates.md) para obter mais informações.
 
-[!UICONTROL Assinatura de serviço de telecomunicação] é um grupo de campos de esquema padrão para o [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md) que descreve o plano de assinatura de telecomunicações de um cliente, incluindo preços, pacotes e assinaturas de produtos individuais.
+[!UICONTROL Assinatura de Telecom] é um grupo de campos de esquema padrão para [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md) que descreve o plano de assinatura de telecomunicações de um cliente, incluindo preços, pacotes e assinaturas de produtos individuais.
 
-O grupo de campos fornece um único campo do tipo objeto, `telecomSubscription`, cujas propriedades estão descritas abaixo.
+O grupo de campos fornece um único campo de tipo de objeto, `telecomSubscription`, cujas propriedades estão descritas abaixo.
 
-![Estrutura de assinatura de telecomunicação](../../images/field-groups/telecom-subscription/structure.png)
+![Estrutura de Assinatura de Telecom](../../images/field-groups/telecom-subscription/structure.png)
 
 | Propriedade | Tipo de dados | Descrição |
 | --- | --- | --- |
@@ -44,7 +44,7 @@ Para obter mais detalhes sobre o grupo de campos, consulte o repositório XDM p�
 
 `internetSubscription` é fornecido como uma matriz de objetos. A estrutura de cada objeto é descrita abaixo.
 
-![internetSubscription](../../images/field-groups/telecom-subscription/internetSubscription.png)
+![AssinaturaDaInternet](../../images/field-groups/telecom-subscription/internetSubscription.png)
 
 | Propriedade | Tipo de dados | Descrição |
 | --- | --- | --- |
@@ -65,7 +65,7 @@ Para obter mais detalhes sobre o grupo de campos, consulte o repositório XDM p�
 
 | Propriedade | Tipo de dados | Descrição |
 | --- | --- | --- |
-| `phoneNumber` | [[!UICONTROL Número de telefone]](../../data-types/telecom-subscription.md) | O número de telefone atribuído a esta assinatura. |
+| `phoneNumber` | [[!UICONTROL Telefone]](../../data-types/telecom-subscription.md) | O número de telefone atribuído a esta assinatura. |
 | `subscriptionDetails` | [[!UICONTROL Assinatura de serviço de telecomunicação]](../../data-types/telecom-subscription.md) | Descreve os detalhes gerais sobre a assinatura, incluindo duração da assinatura, taxas, status e muito mais. |
 | `callBlocking` | Booleano | Indica se os recursos de assinatura de telefone fixo incluem bloqueio de chamadas. |
 | `callForwarding` | Booleano | Indica se os recursos de assinatura de telefone fixo incluem encaminhamento de chamadas. |
@@ -88,7 +88,7 @@ Para obter mais detalhes sobre o grupo de campos, consulte o repositório XDM p�
 
 | Propriedade | Tipo de dados | Descrição |
 | --- | --- | --- |
-| `streamingServices` | Matriz de objetos | Uma lista de todos os serviços de streaming incluídos na assinatura. Cada item da matriz inclui as seguintes propriedades: <ul><li>`promotionLength`: a duração da promoção, em meses, se o serviço de streaming foi adicionado como parte de uma promoção.</li><li>`promotionalAddition`: indica se o serviço de streaming foi adicionado como parte de uma promoção.</li><li>`serviceName`: o nome do serviço de streaming.</li></ul> |
+| `streamingServices` | Matriz de objetos | Uma lista de todos os serviços de streaming incluídos na assinatura. Cada item da matriz inclui as seguintes propriedades: <ul><li>`promotionLength`: A duração da promoção, em meses, se o serviço de streaming tiver sido adicionado como parte de uma promoção.</li><li>`promotionalAddition`: indica se o serviço de streaming foi adicionado como parte de uma promoção.</li><li>`serviceName`: o nome do serviço de streaming.</li></ul> |
 | `subscriptionDetails` | [[!UICONTROL Assinatura de serviço de telecomunicação]](../../data-types/telecom-subscription.md) | Descreve os detalhes gerais sobre a assinatura, incluindo duração da assinatura, taxas, status e muito mais. |
 | `channels` | Número inteiro | O número de canais incluídos na assinatura de mídia. |
 
@@ -102,7 +102,7 @@ Para obter mais detalhes sobre o grupo de campos, consulte o repositório XDM p�
 
 | Propriedade | Tipo de dados | Descrição |
 | --- | --- | --- |
-| `phoneNumber` | [[!UICONTROL Número de telefone]](../../data-types/telecom-subscription.md) | O número de telefone atribuído a esta assinatura. |
+| `phoneNumber` | [[!UICONTROL Telefone]](../../data-types/telecom-subscription.md) | O número de telefone atribuído a esta assinatura. |
 | `subscriptionDetails` | [[!UICONTROL Assinatura de serviço de telecomunicação]](../../data-types/telecom-subscription.md) | Descreve os detalhes gerais sobre a assinatura, incluindo duração da assinatura, taxas, status e muito mais. |
 | `earlyUpgradeEnrollment` | Booleano | Indica se o cliente opta por atualizações antecipadas. |
 | `planLevel` | String | O nome do plano móvel atribuído a esta assinatura. |

@@ -4,7 +4,7 @@ description: Saiba como adicionar anotações textuais a determinados recursos d
 exl-id: 14d6b6a1-3bd0-4181-8181-e6b35c197a44
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
-source-wordcount: '309'
+source-wordcount: '310'
 ht-degree: 94%
 
 ---
@@ -39,7 +39,7 @@ Observações são comentários que não têm impacto no comportamento dos recur
 
 Os recursos notáveis exibem um trilho estreito no lado direito da tela. O painel inclui um ícone para notas. Este ícone exibe o número atual de notas anexadas ao recurso.
 
-Selecione **[!UICONTROL Notas]** para expandir o painel direito e exibir as notas, com as mais recentes no topo. Para adicionar uma nova nota, digite o texto da nota na caixa na parte superior e selecione **[!UICONTROL Adicionar nota]**.
+Selecione **[!UICONTROL Notas]** para expandir o painel direito e exibir as notas, com as mais recentes na parte superior. Para adicionar uma nova nota, digite o texto da nota na caixa na parte superior e selecione **[!UICONTROL Adicionar nota]**.
 
 ## Outras
 

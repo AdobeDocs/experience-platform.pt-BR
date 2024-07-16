@@ -5,27 +5,27 @@ exl-id: 1096d28a-5796-49cc-bd45-b3f5188f699e
 source-git-commit: b81afb8f6c4eaedb19a58b6fe3896286f1486804
 workflow-type: tm+mt
 source-wordcount: '233'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
 # [!UICONTROL Detalhes de interação do MediaAnalytics] grupo de campos de esquema
 
-[!UICONTROL Detalhes de interação do MediaAnalytics] é um grupo de campos de esquema padrão para o [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md). Use este grupo de campos para capturar campos de dados enriquecidos que monitoram e analisam interações com conteúdo de mídia de forma abrangente em várias plataformas ou canais.
+[!UICONTROL Detalhes de Interação do MediaAnalytics] é um grupo de campos de esquema padrão para a [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md). Use este grupo de campos para capturar campos de dados enriquecidos que monitoram e analisam interações com conteúdo de mídia de forma abrangente em várias plataformas ou canais.
 
 ![Um diagrama de esquema do [!UICONTROL Detalhes de interação do MediaAnalytics] grupo de campos de esquema.](../../images/field-groups/mediaanalytics-interaction.png)
 
 | Nome de exibição | Propriedade | Tipo de dados | Descrição |
 |---| --- | --- | --- |
 | [!UICONTROL Detalhes da coleção de mídia] | `mediaCollection` | [[!UICONTROL Detalhes da coleção de mídia]](../../data-types/media-collection-details.md) | Atributos relacionados a uma coleção de itens de mídia. Use os campos da Coleção de mídia para capturar dados e enviá-los para outros serviços da Adobe para processamento adicional. |
-| [!UICONTROL Detalhes de relatórios de mídia] | `mediaReporting` | [[!UICONTROL Detalhes de relatórios de mídia]](../../data-types/media-reporting-details.md) | Relatar detalhes e métricas associados ao conteúdo de mídia. * Os campos Relatórios de mídia são usados pelos serviços da Adobe para analisar os campos Coleção de mídia enviados pelos usuários. Esses dados, juntamente com outras métricas específicas do usuário, são calculados e relatados. |
-| [!UICONTROL Lista De Eventos De Conteúdo Baixados Da Coleção De Mídia] | `mediaDownloadedEvents` | [!UICONTROL Matriz] de [[!UICONTROL mediaEvent]](../../data-types/media-event-information.md) | Eventos que rastreiam o download de conteúdo na coleção de mídia. |
+| [!UICONTROL Detalhes de Relatórios de Mídia] | `mediaReporting` | [[!UICONTROL Detalhes de Relatórios de Mídia]](../../data-types/media-reporting-details.md) | Relatar detalhes e métricas associados ao conteúdo de mídia. * Os campos Relatórios de mídia são usados pelos serviços da Adobe para analisar os campos Coleção de mídia enviados pelos usuários. Esses dados, juntamente com outras métricas específicas do usuário, são calculados e relatados. |
+| [!UICONTROL Lista De Eventos De Conteúdo Baixados Pela Coleção De Mídia] | `mediaDownloadedEvents` | [!UICONTROL Matriz] de [[!UICONTROL mediaEvent]](../../data-types/media-event-information.md) | Eventos que rastreiam o download de conteúdo na coleção de mídia. |
 
 {style="table-layout:auto"}
 
 >[!TIP]
 >
->Você pode ocultar campos que não são usados pela API Media Edge. Ocultar esses campos facilita a leitura e a compreensão do schema, mas não é obrigatório. Esses campos se referem apenas àqueles no [!UICONTROL Detalhes de interação do MediaAnalytics] fieldgroup. Para melhorar a legibilidade na interface do usuário da Platform, siga as instruções na [Documentação do Media Analytics sobre como ocultar campos não utilizados](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/edge-recommended/media-edge-sdk/implementation-edge.html#set-up-the-schema-in-adobe-experience-platform).
+>Você pode ocultar campos que não são usados pela API do Media Edge. Ocultar esses campos facilita a leitura e a compreensão do schema, mas não é obrigatório. Esses campos se referem apenas àqueles no grupo de campos [!UICONTROL Detalhes de interação do MediaAnalytics]. Para melhorar a legibilidade na interface do usuário da Platform, siga as instruções na [documentação do Media Analytics sobre como ocultar campos não utilizados](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/edge-recommended/media-edge-sdk/implementation-edge.html#set-up-the-schema-in-adobe-experience-platform).
 
 <!-- 
 >[!NOTE]

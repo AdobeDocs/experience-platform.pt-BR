@@ -16,9 +16,9 @@ Quando a depuração está ativada, o SDK da Web envia mensagens para o console 
 
 A depuração está desativada por padrão, mas pode ser ativada de quatro maneiras diferentes. Você pode usar qualquer combinação desses métodos para ativar ou desativar a depuração mais conveniente para o fluxo de trabalho de desenvolvimento.
 
-## Uso `debugEnabled` no `configure` comando
+## Usar `debugEnabled` no comando `configure`
 
-Defina o `debugEnabled` booleano como verdadeiro ao configurar a extensão. Normalmente, essa opção é usada para ambientes de desenvolvimento, pois permite a depuração para todos que visitam qualquer página do site:
+Defina o booleano `debugEnabled` como verdadeiro ao configurar a extensão. Normalmente, essa opção é usada para ambientes de desenvolvimento, pois permite a depuração para todos que visitam qualquer página do site:
 
 ```js
 alloy("configure", {
@@ -30,7 +30,7 @@ alloy("configure", {
 
 Consulte [`debugEnabled`](../commands/configure/debugenabled.md) para obter mais informações.
 
-## Use o `setDebug` comando
+## Usar o comando `setDebug`
 
 De modo semelhante ao booleano acima, esse comando permite a depuração em todos os visitantes da página.
 
@@ -38,11 +38,11 @@ De modo semelhante ao booleano acima, esse comando permite a depuração em todo
 alloy("setDebug", {"enabled": true});
 ```
 
-Consulte a [`setDebug`](../commands/setdebug.md) para obter mais informações.
+Consulte o comando [`setDebug`](../commands/setdebug.md) para obter mais informações.
 
 ## Definir um parâmetro da cadeia de caracteres de consulta
 
-Você pode ativar a depuração adicionando a sequência de consulta `?alloy_debug=true` ao final de qualquer URL. Por exemplo:
+Você pode habilitar a depuração adicionando a cadeia de consulta `?alloy_debug=true` ao final de qualquer URL. Por exemplo:
 
 `http://example.com/?alloy_debug=true`
 
@@ -52,6 +52,6 @@ Esse método se aplica somente ao computador local, permitindo depurar sites de 
 
 O Adobe Experience Platform Debugger é uma ferramenta poderosa que examina as páginas da Web e ajuda a depurar a implementação dos produtos Experience Cloud. Você pode ativar a depuração na guia de configuração da seção AEP Web SDK.
 
-![Ativar depurador](../assets/enable-debugging.png)
+![Habilitar depurador](../assets/enable-debugging.png)
 
 Consulte [visão geral do Adobe Experience Platform Debugger](/help/debugger/home.md) para obter mais informações.

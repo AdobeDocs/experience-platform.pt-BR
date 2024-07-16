@@ -11,7 +11,7 @@ ht-degree: 0%
 
 ---
 
-# [!UICONTROL Endereço de email] tipo de dados
+# Tipo de dados de [!UICONTROL Endereço de email]
 
 [!UICONTROL Endereço de email] é um tipo de dados padrão do Experience Data Model (XDM) que descreve os detalhes de um endereço de email.
 
@@ -19,11 +19,11 @@ ht-degree: 0%
 
 | Propriedade | Descrição |
 | --- | --- |
-| `address` | O endereço técnico do email conforme geralmente definido no RFC2822 e padrões subsequentes (por exemplo, `name@domain.com`).<br><br>No XDM, os endereços de email devem conter um domínio de nível superior válido para passar na validação. Consulte o seguinte [documento](https://data.iana.org/TLD/tlds-alpha-by-domain.txt) para obter uma lista completa de domínios de nível superior válidos, conforme definido pela IANA (Internet Assigned Numbers Authority). |
+| `address` | O endereço técnico do email conforme geralmente definido em RFC2822 e padrões subsequentes (por exemplo, `name@domain.com`).<br><br>No XDM, os endereços de email devem conter um domínio de nível superior válido para passarem na validação. Consulte o seguinte [documento](https://data.iana.org/TLD/tlds-alpha-by-domain.txt) para obter uma lista completa de domínios de nível superior válidos, conforme definido pela IANA (Autoridade para Atribuição de Números da Internet). |
 | `label` | Informações adicionais de exibição que podem estar disponíveis. Por exemplo, se um email tiver uma exibição de endereço avançado do Microsoft Outlook de `John Smith smithjr@company.uk`, `John Smith` será colocado nesse campo. |
-| `primary` | Indica se é o endereço de email principal do indivíduo. Um perfil pode ter apenas um `primary` endereço de email em um determinado momento. |
+| `primary` | Indica se é o endereço de email principal do indivíduo. Um perfil pode ter apenas um endereço de email `primary` em um determinado momento. |
 | `status` | Indica se o endereço de email pode ser usado atualmente |
-| `statusReason` | Uma descrição do atual `status`. |
+| `statusReason` | Uma descrição do `status` atual. |
 | `type` | A forma como a conta se relaciona com a pessoa (como `work` ou `personal`). |
 
 {style="table-layout:auto"}

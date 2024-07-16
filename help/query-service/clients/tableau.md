@@ -11,39 +11,39 @@ ht-degree: 0%
 
 ---
 
-# Conectar [!DNL Tableau] para o Serviço de consulta
+# Conectar [!DNL Tableau] ao Serviço de consulta
 
-Este documento fornece informações para conexão [!DNL Tableau] com o Adobe Experience Platform [!DNL Query Service].
+Este documento fornece informações para conectar [!DNL Tableau] ao Adobe Experience Platform [!DNL Query Service].
 
 >[!NOTE]
 >
-> Este guia supõe que você já tenha acesso ao [!DNL Tableau] e estão familiarizados com como navegar em sua interface. Mais informações sobre [!DNL Tableau] pode ser encontrado no [oficial [!DNL Tableau] documentação](https://help.tableau.com/current/pro/desktop/en-us/default.htm).
+> Este guia supõe que você já tenha acesso ao [!DNL Tableau] e esteja familiarizado com como navegar em sua interface. Mais informações sobre [!DNL Tableau] podem ser encontradas na [documentação [!DNL Tableau] oficial](https://help.tableau.com/current/pro/desktop/en-us/default.htm).
 
-Instruções sobre como [conectar-se a um servidor PostgreSQL com Tableau](https://help.tableau.com/current/pro/desktop/en-us/examples_postgresql.htm) estão disponíveis no site oficial do Tableau. Quando a caixa de diálogo para configurações de conexão for exibida, insira suas credenciais da Platform nos campos de parâmetro para se conectar com o Adobe Experience Platform. Uma lista dos parâmetros de conexão necessários está listada abaixo.
+As instruções sobre como [conectar-se a um servidor PostgreSQL com Tableau](https://help.tableau.com/current/pro/desktop/en-us/examples_postgresql.htm) estão disponíveis no site oficial do Tableau. Quando a caixa de diálogo para configurações de conexão for exibida, insira suas credenciais da Platform nos campos de parâmetro para se conectar com o Adobe Experience Platform. Uma lista dos parâmetros de conexão necessários está listada abaixo.
 
 | Parâmetro de conexão | Descrição |
 |---|---|
-| **[!DNL Server]** | O endereço do local de armazenamento SFTP. Use o valor do seu Experience Platform **[!UICONTROL Host]** credencial. |
+| **[!DNL Server]** | O endereço do local de armazenamento SFTP. Use o valor da sua credencial de Experience Platform **[!UICONTROL Host]**. |
 | **[!DNL Port]:** | A porta para [!DNL Query Service]. Você deve usar a porta **80** ou **5432** para se conectar com [!DNL Query Service]. |
-| **[!DNL Database]** | Os bancos de dados que você deseja acessar. Use o valor do seu Experience Platform **[!UICONTROL Banco de dados]** credencial: `prod:all`. |
+| **[!DNL Database]** | Os bancos de dados que você deseja acessar. Use o valor da credencial do Experience Platform **[!UICONTROL Banco de Dados]**: `prod:all`. |
 | **[!DNL Authentication]:** | O método escolhido para comprovar a identidade do usuário. É recomendável selecionar [!DNL Username and Password] nas opções disponíveis do menu suspenso. |
-| **[!DNL Username]** | Esta é a sua ID da organização da Platform. Use o valor do seu Experience Platform **[!UICONTROL Nome de usuário]** credencial. A ID estará no formato de `ORG_ID@AdobeOrg`. |
-| **[!DNL Password]** | Esta sequência alfanumérica é o seu Experience Platform **[!UICONTROL Senha]** credencial. Se você quiser usar credenciais sem expiração, esse valor será os argumentos concatenados do `technicalAccountID` e a variável `credential` baixado no arquivo JSON de configuração. O valor da senha tem o formato: {technicalAccountId}:{credential}. O arquivo JSON de configuração para credenciais sem expiração é um download único durante a inicialização do qual o Adobe não mantém uma cópia. |
+| **[!DNL Username]** | Esta é a sua ID da organização da Platform. Use o valor da sua credencial de Experience Platform **[!UICONTROL Nome de usuário]**. A ID estará no formato de `ORG_ID@AdobeOrg`. |
+| **[!DNL Password]** | Esta sequência alfanumérica é a credencial Experience Platform **[!UICONTROL Password]**. Se você quiser usar credenciais sem expiração, esse valor serão os argumentos concatenados de `technicalAccountID` e `credential` baixados no arquivo JSON de configuração. O valor da senha tem o formato: {technicalAccountId}:{credential}. O arquivo JSON de configuração para credenciais sem expiração é um download único durante a inicialização do qual o Adobe não mantém uma cópia. |
 
-Para obter mais informações sobre como localizar seu nome de usuário, senha e credenciais de login, leia a [guia de credenciais](../ui/credentials.md). Para encontrar suas credenciais, faça logon no [!DNL Platform]e selecione **[!UICONTROL Consultas]**, seguido por **[!UICONTROL Credenciais]**.
+Para obter mais informações sobre como encontrar seu nome de usuário, senha e credenciais de logon, leia o [guia de credenciais](../ui/credentials.md). Para encontrar suas credenciais, faça logon em [!DNL Platform] e selecione **[!UICONTROL Consultas]**, seguido de **[!UICONTROL Credenciais]**.
 
 >[!IMPORTANT]
 >
 >Como usuário do Tableau ou do Power BI, você pode conectar o Customer Journey Analytics às ferramentas de BI na guia de credenciais do Serviço de consulta. Consulte a documentação de credenciais para obter instruções sobre como [conectar suas ferramentas de BI ao Customer Journey Analytics](../ui/credentials.md#connect-to-customer-journey-analytics).
 
-Verifique se você marcou a opção **[!UICONTROL Exigir SSL]** antes de tentar se conectar. Consulte a [Documentação de modos SSL](./ssl-modes.md) para saber mais sobre o suporte SSL para conexões de terceiros ao Adobe Experience Platform Query Service.
+Verifique se você marcou a caixa **[!UICONTROL Exigir SSL]** antes de tentar se conectar. Consulte a [documentação sobre modos SSL](./ssl-modes.md) para saber mais sobre o suporte SSL para conexões de terceiros ao Adobe Experience Platform Query Service.
 
 >[!IMPORTANT]
 >
->As estruturas de dados aninhadas em ferramentas de BI de terceiros podem ser niveladas para melhorar sua usabilidade e reduzir a carga de trabalho necessária para recuperar, analisar, transformar e relatar dados. Consulte a documentação no[`FLATTEN` recurso](../key-concepts/flatten-nested-data.md) para obter instruções sobre como ativar essa configuração ao conectar-se a um banco de dados.
+>As estruturas de dados aninhadas em ferramentas de BI de terceiros podem ser niveladas para melhorar sua usabilidade e reduzir a carga de trabalho necessária para recuperar, analisar, transformar e relatar dados. Consulte a documentação sobre o recurso [`FLATTEN`](../key-concepts/flatten-nested-data.md) para obter instruções sobre como ativar essa configuração ao conectar-se a um banco de dados.
 
 Depois de preencher todas as credenciais, confirme as configurações para continuar. Agora você se conectou ao Adobe Experience Platform.
 
 ## Próximas etapas
 
-Agora que você se conectou com [!DNL Query Service], você pode usar [!DNL Tableau] para gravar consultas. Para obter mais informações sobre como gravar e executar consultas, leia o manual no [execução de consultas](../best-practices/writing-queries.md).
+Agora que você se conectou com [!DNL Query Service], pode usar [!DNL Tableau] para gravar consultas. Para obter mais informações sobre como gravar e executar consultas, leia o manual em [executando consultas](../best-practices/writing-queries.md).

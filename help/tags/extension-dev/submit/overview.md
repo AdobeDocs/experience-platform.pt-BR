@@ -4,8 +4,8 @@ description: Saiba mais sobre as etapas para enviar sua extensão na Adobe Exper
 exl-id: 7a30ae5c-f9c7-45f9-b648-3fb31006b1ce
 source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
 workflow-type: tm+mt
-source-wordcount: '238'
-ht-degree: 84%
+source-wordcount: '230'
+ht-degree: 87%
 
 ---
 

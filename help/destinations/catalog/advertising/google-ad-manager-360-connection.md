@@ -13,37 +13,37 @@ ht-degree: 4%
 
 >[!IMPORTANT]
 >
-> A Google está lançando alterações no [API do Google Ads](https://developers.google.com/google-ads/api/docs/start), [Correspondência de Cliente](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html), e o [API de vídeo e exibição 360](https://developers.google.com/display-video/api/guides/getting-started/overview) a fim de apoiar os requisitos de conformidade e consentimento definidos no [Lei dos Mercados Digitais](https://digital-markets-act.ec.europa.eu/index_en) (DMA) na União Europeia ([Política de consentimento do usuário da UE](https://www.google.com/about/company/user-consent-policy/)). A aplicação dessas alterações aos requisitos de consentimento estará em vigor a partir de 6 de março de 2024.
+> A Google está lançando alterações na [API do Google Ads](https://developers.google.com/google-ads/api/docs/start), na [Correspondência do Cliente](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html) e na [API de Exibição e Vídeo 360](https://developers.google.com/display-video/api/guides/getting-started/overview) para oferecer suporte aos requisitos de conformidade e consentimento definidos na [Digital Markets Act](https://digital-markets-act.ec.europa.eu/index_en) (DMA) da União Europeia ([Política de Consentimento do Usuário](https://www.google.com/about/company/user-consent-policy/) da UE). A aplicação dessas alterações aos requisitos de consentimento estará em vigor a partir de 6 de março de 2024.
 ><br/>
 >Para aderir à política de consentimento do usuário da UE e continuar criando listas de públicos-alvo para usuários no Espaço Econômico Europeu (EEE), anunciantes e parceiros devem garantir que eles transmitem o consentimento do usuário final ao fazer upload dos dados de público-alvo. Como Parceiro da Google, o Adobe fornece as ferramentas necessárias para cumprir esses requisitos de consentimento de acordo com a DMA na União Europeia.
 ><br/>
->Clientes que compraram o Adobe Privacy &amp; Security Shield e configuraram um [política de consentimento](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) para filtrar perfis não consentidos, não é necessário tomar nenhuma ação.
+>Os clientes que compraram o Adobe Privacy &amp; Security Shield e configuraram uma [política de consentimento](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) para filtrar perfis não consentidos não precisam tomar nenhuma ação.
 ><br/>
->Os clientes que não compraram o Adobe Privacy &amp; Security Shield devem usar o [definição de segmento](../../../segmentation/home.md#segment-definitions) recursos no [Construtor de segmentos](../../../segmentation/ui/segment-builder.md) para filtrar perfis não consentidos, a fim de continuar usando os Destinos existentes do Real-Time CDP Google sem interrupção.
+>Os clientes que não compraram o Adobe Privacy &amp; Security Shield devem usar os recursos de [definição de segmento](../../../segmentation/home.md#segment-definitions) no [Construtor de segmentos](../../../segmentation/ui/segment-builder.md) para filtrar perfis não consentidos, a fim de continuar usando os Destinos Real-Time CDP Google existentes sem interrupção.
 
-A variável [!DNL Google Ad Manager 360] conexão permite o upload em lote para [!DNL publisher provided identifiers] (PPID) em [!DNL Google Ad Manager 360], via [!DNL Google Cloud Storage].
+A conexão [!DNL Google Ad Manager 360] habilita o carregamento em lote de [!DNL publisher provided identifiers] (PPID) em [!DNL Google Ad Manager 360], via [!DNL Google Cloud Storage].
 
-Para obter mais detalhes sobre como os identificadores fornecidos pelo editor funcionam no Google Ad Manager 360, consulte [documentação oficial do Google](https://support.google.com/admanager/answer/2880055?hl=en).
+Para obter mais detalhes sobre como os identificadores fornecidos pelo editor funcionam no Google Ad Manager 360, consulte a [documentação oficial do Google](https://support.google.com/admanager/answer/2880055?hl=en).
 
 >[!IMPORTANT]
 >
->Atualmente, esse destino está no Beta e só está disponível para um número limitado de clientes. Para solicitar acesso à [!DNL Google Ad Manager 360] conexão, entre em contato com o representante da Adobe e forneça [!DNL organization ID].
+>Atualmente, esse destino está no Beta e só está disponível para um número limitado de clientes. Para solicitar acesso à conexão [!DNL Google Ad Manager 360], contate o representante da Adobe e forneça seu [!DNL organization ID].
 
-A variável [!DNL Google Ad Manager 360] exportações de destino [!DNL CSV] arquivos para seu [!DNL Google Cloud Storage] balde. Depois de exportar o [!DNL CSV] arquivos, você deve importá-los para o [!DNL Google Ad Manager 360] conta.
+O destino [!DNL Google Ad Manager 360] exporta arquivos [!DNL CSV] para o bucket [!DNL Google Cloud Storage]. Após exportar os arquivos do [!DNL CSV], você deve importá-los para sua conta do [!DNL Google Ad Manager 360].
 
 ## Especificações do destino {#specifics}
 
-Observe os seguintes detalhes, específicos do [!DNL Google Ad Manager 360] destinos.
+Observe os detalhes a seguir que são específicos para destinos [!DNL Google Ad Manager 360].
 
 * Os públicos ativados são criados programaticamente na plataforma do Google e preenchidos no arquivo CSV.
 
 ## Identidades suportadas {#supported-identities}
 
-[!DNL This integration] O oferece suporte à ativação das identidades descritas na tabela abaixo.
+[!DNL This integration] dá suporte à ativação das identidades descritas na tabela abaixo.
 
 | Identidade de destino | Descrição | Considerações |
 |---|---|---|
-| PPID | [!DNL Publisher provided ID] | Selecione esta identidade de público alvo para a qual enviar públicos [!DNL Google Ad Manager 360] |
+| PPID | [!DNL Publisher provided ID] | Selecione esta identidade de destino para enviar audiências para [!DNL Google Ad Manager 360] |
 
 {style="table-layout:auto"}
 
@@ -53,8 +53,8 @@ Esta seção descreve quais tipos de públicos-alvo você pode exportar para ess
 
 | Origem do público | Suportado | Descrição |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Públicos-alvo gerados pelo Experience Platform [Serviço de segmentação](../../../segmentation/home.md). |
-| Uploads personalizados | ✓ | Públicos-alvo [importado](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV. |
+| [!DNL Segmentation Service] | ✓ | Públicos gerados por meio do [Serviço de segmentação](../../../segmentation/home.md) do Experience Platform. |
+| Uploads personalizados | ✓ | Públicos [importados](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV. |
 
 {style="table-layout:auto"}
 
@@ -64,8 +64,8 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 
 | Item | Tipo | Notas |
 ---------|----------|---------|
-| Tipo de exportação | **[!UICONTROL Baseado em perfil]** | Você está exportando todos os membros de um segmento, juntamente com os campos de esquema aplicáveis (por exemplo, o PPID), conforme escolhido na tela Selecionar atributos de perfil da [workflow de ativação de destino](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
-| Frequência de exportação | **[!UICONTROL Lote]** | Os destinos em lote exportam arquivos para plataformas downstream em incrementos de três, seis, oito, doze ou vinte e quatro horas. Leia mais sobre [destinos baseados em arquivo em lote](/help/destinations/destination-types.md#file-based). |
+| Tipo de exportação | **[!UICONTROL Baseado em perfil]** | Você está exportando todos os membros de um segmento, juntamente com os campos de esquema aplicáveis (por exemplo, seu PPID), conforme escolhido na tela selecionar atributos de perfil do [fluxo de trabalho de ativação de destino](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
+| Frequência de exportação | **[!UICONTROL Lote]** | Os destinos em lote exportam arquivos para plataformas downstream em incrementos de três, seis, oito, doze ou vinte e quatro horas. Leia mais sobre [destinos com base em arquivo de lote](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
 
@@ -73,32 +73,32 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 
 ### Incluir na lista de permissões {#allow-listing}
 
-A inclusão na lista de permissões é obrigatória antes de configurar o primeiro [!DNL Google Ad Manager 360] destino na Platform. Conclua o processo de inclusão na lista de permissões descrito abaixo antes de criar seu destino.
+A inclusão na lista de permissões é obrigatória antes de configurar seu primeiro destino do [!DNL Google Ad Manager 360] na Platform. Conclua o processo de inclusão na lista de permissões descrito abaixo antes de criar seu destino.
 
 >[!NOTE]
 >
->A exceção a esta regra é para [Audience Manager](https://docs.adobe.com/content/help/pt-BR/experience-cloud/user-guides/home.translate.html) clientes. Se você já tiver criado uma conexão com esse destino Google no Audience Manager, não será necessário passar pelo processo de inclusão na lista de permissões novamente e você poderá prosseguir para as próximas etapas.
+>A exceção a esta regra é para clientes [Audience Manager](https://docs.adobe.com/content/help/pt-BR/experience-cloud/user-guides/home.translate.html) existentes. Se você já tiver criado uma conexão com esse destino Google no Audience Manager, não será necessário passar pelo processo de inclusão na lista de permissões novamente e você poderá prosseguir para as próximas etapas.
 
-1. Siga as etapas descritas na seção [Documentação do Google Ad Manager](https://support.google.com/admanager/answer/3289669?hl=en) para adicionar o Adobe como uma Plataforma de gerenciamento de dados (DMP) vinculada.
-2. No [!DNL Google Ad Manager] , vá para **[!UICONTROL Admin]** > **[!UICONTROL Configurações globais]** > **[!UICONTROL Configurações de rede]** e habilite o **[!UICONTROL Acesso à API]** controle deslizante.
+1. Siga as etapas descritas na [documentação do Google Ad Manager](https://support.google.com/admanager/answer/3289669?hl=en) para adicionar o Adobe como uma Plataforma de Gerenciamento de Dados (DMP) vinculada.
+2. Na interface [!DNL Google Ad Manager], vá para **[!UICONTROL Admin]** > **[!UICONTROL Configurações Globais]** > **[!UICONTROL Configurações de Rede]** e habilite o controle deslizante **[!UICONTROL Acesso à API]**.
 
 
 ## Conectar ao destino {#connect}
 
 >[!IMPORTANT]
 > 
->Para se conectar ao destino, você precisa da variável **[!UICONTROL Exibir destinos]** e **[!UICONTROL Gerenciar destinos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
+>Para se conectar ao destino, você precisa de **[!UICONTROL Exibir Destinos]** e **[!UICONTROL Gerenciar Destinos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 
-Para se conectar a esse destino, siga as etapas descritas no [tutorial de configuração de destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html). No workflow da configuração de destino, preencha os campos listados nas duas seções abaixo.
+Para se conectar a este destino, siga as etapas descritas no [tutorial de configuração de destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html). No workflow da configuração de destino, preencha os campos listados nas duas seções abaixo.
 
 ### Autenticar para o destino {#authenticate}
 
 Para autenticar no destino, preencha os campos obrigatórios e selecione **[!UICONTROL Conectar ao destino]**.
 
-* **[!UICONTROL ID da chave de acesso]**: uma sequência de 61 caracteres alfanuméricos usada para autenticar seu [!DNL Google Cloud Storage] para a Platform.
-* **[!UICONTROL Chave de acesso secreta]**: uma sequência de 40 caracteres codificada em base64 usada para autenticar seu [!DNL Google Cloud Storage] para a Platform.
+* **[!UICONTROL ID da chave de acesso]**: uma sequência de 61 caracteres alfanuméricos usada para autenticar sua conta do [!DNL Google Cloud Storage] na Platform.
+* **[!UICONTROL Chave de acesso secreta]**: uma cadeia de 40 caracteres codificada em base64 usada para autenticar sua conta do [!DNL Google Cloud Storage] na Platform.
 
-Para obter mais informações sobre esses valores, consulte [Chaves HMAC do Google Cloud Storage](https://cloud.google.com/storage/docs/authentication/hmackeys#overview) guia. Para obter etapas sobre como gerar sua própria ID da chave de acesso e chave de acesso secreta, consulte o [[!DNL Google Cloud Storage] visão geral da origem](/help/sources/connectors/cloud-storage/google-cloud-storage.md).
+Para obter mais informações sobre esses valores, consulte o guia [Chaves HMAC do Google Cloud Storage](https://cloud.google.com/storage/docs/authentication/hmackeys#overview). Para obter etapas sobre como gerar sua própria ID da chave de acesso e chave de acesso secreta, consulte a [[!DNL Google Cloud Storage] visão geral da origem](/help/sources/connectors/cloud-storage/google-cloud-storage.md).
 
 ### Preencher detalhes do destino {#destination-details}
 
@@ -109,28 +109,28 @@ Para obter mais informações sobre esses valores, consulte [Chaves HMAC do Goog
 
 Para configurar detalhes para o destino, preencha os campos obrigatórios e opcionais abaixo. Um asterisco ao lado de um campo na interface do usuário indica que o campo é obrigatório.
 
-* **[!UICONTROL Nome]**: Preencha o nome preferencial para este destino.
+* **[!UICONTROL Nome]**: preencha o nome preferencial para este destino.
 * **[!UICONTROL Descrição]**: Opcional. Por exemplo, você pode mencionar para qual campanha está usando esse destino.
 * **[!UICONTROL Caminho da pasta]**: insira o caminho para a pasta de destino que hospedará os arquivos exportados.
-* **[!UICONTROL Nome do bloco]**: Insira o nome do [!DNL Google Cloud Storage] bucket a ser usado por esse destino.
-* **[!UICONTROL ID da conta]**: Insira seu [!DNL Audience Link ID] do seu [!DNL Google] conta. Esse é um identificador específico associado à [!DNL Google Ad Manager] rede (não a sua [!DNL Network code]). Você pode encontrar isso em **[!UICONTROL Administração > Configurações globais]** no [!DNL Google Ad Manager] interface.
-* **[!UICONTROL Tipo de conta]**: selecione uma opção, dependendo da sua [!DNL Google] conta:
-   * Uso `AdX buyer` para [!DNL Google AdX]
-   * Uso `DFP by Google` para [!DNL DoubleClick] para editores
-* **[!UICONTROL Anexar ID de público-alvo ao nome do público-alvo]**: selecione esta opção para ter o nome do público-alvo no Google Ad Manager 360 incluindo a ID do público-alvo do Experience Platform, desta forma: `Audience Name (Audience ID)`.
+* **[!UICONTROL Nome do bucket]**: insira o nome do bucket [!DNL Google Cloud Storage] a ser usado por este destino.
+* **[!UICONTROL ID da conta]**: digite o [!DNL Audience Link ID] da conta [!DNL Google]. Este é um identificador específico associado à rede do [!DNL Google Ad Manager] (não ao [!DNL Network code]). Você pode encontrar isso em **[!UICONTROL Admin > Configurações globais]** na interface [!DNL Google Ad Manager].
+* **[!UICONTROL Tipo de Conta]**: Selecione uma opção, dependendo da sua conta [!DNL Google]:
+   * Usar `AdX buyer` para [!DNL Google AdX]
+   * Usar `DFP by Google` para [!DNL DoubleClick] para editores
+* **[!UICONTROL Anexar a ID de público-alvo ao nome de público-alvo]**: selecione esta opção para que o nome de público-alvo no Google Ad Manager 360 inclua a ID de público-alvo do Experience Platform, desta forma: `Audience Name (Audience ID)`.
 
 ### Ativar alertas {#enable-alerts}
 
-Você pode ativar os alertas para receber notificações sobre o status do fluxo de dados para o seu destino. Selecione um alerta na lista para assinar e receber notificações sobre o status do seu fluxo de dados. Para obter mais informações sobre alertas, consulte o manual sobre [assinatura de alertas de destinos usando a interface do](../../ui/alerts.md).
+Você pode ativar os alertas para receber notificações sobre o status do fluxo de dados para o seu destino. Selecione um alerta na lista para assinar e receber notificações sobre o status do seu fluxo de dados. Para obter mais informações sobre alertas, consulte o manual sobre [assinatura de alertas de destinos usando a interface](../../ui/alerts.md).
 
-Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICONTROL Próxima]**.
+Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICONTROL Avançar]**.
 
 ## Ativar públicos-alvo para esse destino {#activate}
 
 >[!IMPORTANT]
 > 
->* Para ativar os dados, é necessário **[!UICONTROL Exibir destinos]**, **[!UICONTROL Ativar destinos]**, **[!UICONTROL Exibir perfis]**, e **[!UICONTROL Exibir segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
->* Para exportar *identidades*, você precisará do **[!UICONTROL Exibir gráfico de identidade]** [permissão de controle de acesso](/help/access-control/home.md#permissions). <br> ![Selecione o namespace de identidade destacado no fluxo de trabalho para ativar públicos para destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecione o namespace de identidade destacado no fluxo de trabalho para ativar públicos para destinos."){width="100" zoomable="yes"}
+>* Para ativar dados, você precisa de **[!UICONTROL Exibir Destinos]**, **[!UICONTROL Ativar Destinos]**, **[!UICONTROL Exibir Perfis]** e **[!UICONTROL Exibir Segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
+>* Para exportar *identidades*, você precisa da **[!UICONTROL permissão Exibir Gráfico de Identidade]** [controle de acesso](/help/access-control/home.md#permissions). <br> ![Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos."){width="100" zoomable="yes"}
 
 Consulte [Ativar dados do público-alvo para destinos de exportação de perfil em lote](../../ui/activate-batch-profile-destinations.md) para obter instruções sobre como ativar públicos-alvo para esse destino.
 
@@ -138,17 +138,17 @@ Na etapa Mapeamento de identidade, você pode ver os seguintes mapeamentos pré-
 
 | Mapeamento preenchido | Descrição |
 |---------|----------|
-| `ECID` -> `ppid` | Este é o único mapeamento pré-preenchido editável pelo usuário. Você pode selecionar qualquer um dos atributos ou namespaces de identidade da Platform e mapeá-los para `ppid`. |
+| `ECID` -> `ppid` | Este é o único mapeamento pré-preenchido editável pelo usuário. Você pode selecionar qualquer um dos seus atributos ou namespaces de identidade da Platform e mapeá-los para `ppid`. |
 | `metadata.segment.alias` -> `list_id` | Mapeia nomes de público-alvo do Experience Platform para IDs de público-alvo na plataforma do Google. |
 | `iif(${segmentMembership.ups.seg_id.status}=="exited", "1","0")` -> `delete` | Informa à plataforma Google quando remover usuários desqualificados de segmentos. |
 
-Esses mapeamentos são exigidos pelo [!DNL Google Ad Manager 360] e são criados automaticamente pela Adobe Experience Platform para todos [!DNL Google Ad Manager 360] conexões.
+Esses mapeamentos são exigidos pelo [!DNL Google Ad Manager 360] e são criados automaticamente pela Adobe Experience Platform para todas as conexões [!DNL Google Ad Manager 360].
 
-![Imagem da interface mostrando a etapa de mapeamento do Google Ad Manager 360.](../../assets/catalog/advertising/google-ad-manager-360/ad-manager-360-mapping.png)
+![Imagem da interface do usuário mostrando a etapa de mapeamento do Google Ad Manager 360.](../../assets/catalog/advertising/google-ad-manager-360/ad-manager-360-mapping.png)
 
 ## Dados exportados {#exported-data}
 
-Para verificar se os dados foram exportados com êxito, verifique [!DNL Google Cloud Storage] e verifique se os arquivos exportados contêm as populações de perfis esperadas.
+Para verificar se os dados foram exportados com êxito, verifique o bucket [!DNL Google Cloud Storage] e se os arquivos exportados contêm as populações de perfis esperadas.
 
 ## Solução de problemas {#troubleshooting}
 

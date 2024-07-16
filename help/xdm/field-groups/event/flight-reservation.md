@@ -6,34 +6,34 @@ exl-id: df4bb525-c2d3-4e1d-921f-903142a570ac
 source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
 source-wordcount: '625'
-ht-degree: 4%
+ht-degree: 10%
 
 ---
 
-# [!UICONTROL Reserva de voo] grupo de campos de esquema
+# Grupo de campos de esquema [!UICONTROL Reserva de voo]
 
-[!UICONTROL Reserva de voo] é um grupo de campos de esquema padrão para o [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md) utilizado para registrar informações relativas a uma reserva de voo.
+A [!UICONTROL Reserva de Voo] é um grupo de campos de esquema padrão para a [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md) usada para registrar informações sobre uma reserva de voo.
 
-O grupo de campos é uma extensão do [!UICONTROL Detalhes da reserva] grupo de campos, e contém todos os mesmos campos sob um único campo de tipo de objeto, `reservations`. Além desses campos genéricos, [!UICONTROL Reserva de voo] também inclui `flightReservations` matriz. Esta matriz de objetos é usada para descrever uma ou mais reservas com propriedades exclusivas da viagem aérea.
+O grupo de campos é uma extensão do grupo de campos [!UICONTROL Detalhes da Reserva] e contém todos os mesmos campos em um único campo de tipo de objeto, `reservations`. Além desses campos genéricos, a [!UICONTROL Reserva de Voo] também inclui a matriz `flightReservations`. Esta matriz de objetos é usada para descrever uma ou mais reservas com propriedades exclusivas da viagem aérea.
 
 >[!NOTE]
 >
->Este documento abrange os detalhes da `flightReservations` matriz. Para obter informações sobre os outros campos fornecidos no `reservations` objeto, consulte o [[!UICONTROL Detalhes da reserva] referência do grupo de campos](./reservation-details.md).
+>Este documento aborda os detalhes da matriz `flightReservations`. Para obter informações sobre os outros campos fornecidos sob o objeto `reservations`, consulte a [[!UICONTROL Referência do grupo de campos Detalhes da reserva]](./reservation-details.md).
 
-![Estrutura de reserva de voo](../../images/field-groups/flight-reservation/structure.png)
+![Estrutura de Reserva de Voo](../../images/field-groups/flight-reservation/structure.png)
 
 ## `flightReservations`
 
-`flightReservations` é uma matriz de objetos que representa uma lista de reservas de voo. Se um evento de reserva envolver reservas para vários voos de conexão em uma viagem, por exemplo, essas reservas podem ser listadas como objetos individuais em `flightReservations` por um único evento.
+`flightReservations` é uma matriz de objetos que representa uma lista de reservas de voo. Se um evento de reserva envolve reservas para vários voos de conexão em uma viagem, por exemplo, essas reservas podem ser listadas como objetos individuais em `flightReservations` para um único evento.
 
-A estrutura de cada objeto fornecido em `flightReservations` é fornecido abaixo.
+A estrutura de cada objeto fornecido em `flightReservations` é fornecida abaixo.
 
 ![estrutura flightReservations](../../images/field-groups/flight-reservation/flightReservations.png)
 
 | Propriedade | Tipo de dados | Descrição |
 | --- | --- | --- |
-| `flightCheckIn` | Objeto | Registra detalhes sobre o check-in do voo. O objeto inclui as seguintes propriedades:<ul><li>`arrivalAirportCode`: (String) O código do aeroporto da cidade de chegada.</li><li>`boardingGroup`: (String) O indicador específico da linha aérea do pedido de embarque.</li><li>`checkInMethod`: (String) O método usado no check-in, como contador, online, quiosque ou autoatendimento.</li><li>`checkedBags`: (número inteiro) o número de malas despachadas para o voo.</li><li>`checkedPassengers`: (Número inteiro) o número de passageiros registrados para o voo, se houver vários passageiros para o mesmo número de reserva.</li><li>`confirmationNumber`: (String) O número ou identificador de confirmação da reserva.</li><li>`departureAirportCode`: (String) O código do aeroporto da cidade de partida.</li><li>`flightNumber`: (String) O número do voo que está sendo reservado.</li></ul> |
-| `flightStatusSearch` | Objeto | Registra os detalhes retornados quando o status do voo é pesquisado. O objeto inclui as seguintes propriedades:<ul><li>`arrivalAirportCode`: (String) O código do aeroporto da cidade de chegada.</li><li>`boardingGroup`: (String) O indicador específico da linha aérea do pedido de embarque.</li><li>`departureAirportCode`: (String) O código do aeroporto da cidade de partida.</li><li>`departureDate`: (DateTime) A data de partida do voo que está sendo reservado.</li><li>`flightNumber`: (String) O número do voo que está sendo reservado.</li><li>`searchCount`: (Número inteiro) o número de vezes que o status do voo reservado foi pesquisado.</li></ul> |
+| `flightCheckIn` | Objeto | Registra detalhes sobre o check-in do voo. O objeto inclui as seguintes propriedades:<ul><li>`arrivalAirportCode`: (String) O código do aeroporto da cidade de chegada.</li><li>`boardingGroup`: (String) O indicador específico da linha aérea do pedido de embarque.</li><li>`checkInMethod`: (Cadeia de caracteres) O método usado para fazer check-in, como contador, online, quiosque ou autoatendimento.</li><li>`checkedBags`: (Número inteiro) o número de malas despachadas para o voo.</li><li>`checkedPassengers`: (Integer) O número de passageiros registrados para o voo, se houver vários passageiros para o mesmo número de reserva.</li><li>`confirmationNumber`: (Cadeia de caracteres) O número ou identificador de confirmação de reserva.</li><li>`departureAirportCode`: (String) O código do aeroporto da cidade de partida.</li><li>`flightNumber`: (Cadeia de caracteres) O número do voo que está sendo reservado.</li></ul> |
+| `flightStatusSearch` | Objeto | Registra os detalhes retornados quando o status do voo é pesquisado. O objeto inclui as seguintes propriedades:<ul><li>`arrivalAirportCode`: (String) O código do aeroporto da cidade de chegada.</li><li>`boardingGroup`: (String) O indicador específico da linha aérea do pedido de embarque.</li><li>`departureAirportCode`: (String) O código do aeroporto da cidade de partida.</li><li>`departureDate`: (DateTime) A data de partida do voo que está sendo reservado.</li><li>`flightNumber`: (Cadeia de caracteres) O número do voo que está sendo reservado.</li><li>`searchCount`: (Número inteiro) O número de vezes que o status do voo reservado foi pesquisado.</li></ul> |
 | `agentID` | String | O agente ou a agência responsável pela realização da reserva, se aplicável. |
 | `aircraftID` | String | Um identificador da aeronave. |
 | `aircraftType` | String | O tipo de aeronave. |

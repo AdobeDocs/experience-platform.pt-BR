@@ -2,7 +2,8 @@
 title: Casos de uso de exemplo no Real-Time CDP
 description: Visualize exemplos de casos de uso entre serviços para aproveitar ao máximo a implementação do Real-Time CDP.
 feature: Use Cases
-source-git-commit: a58476e0a52cce763a114b2b4f4314fdb2e3f4c9
+exl-id: 2d92a9d3-7648-4241-904e-48f5b2e16023
+source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
 source-wordcount: '351'
 ht-degree: 6%
@@ -35,11 +36,11 @@ Os casos de uso de amostra podem ser agrupados em casos de aquisição de client
     </a>
     <div>
       <a href="../partner-data/prospecting.md">
-    <strong>Aquisição de novos clientes</strong>
+    <strong>Nova aquisição de cliente</strong>
     </a>
     </div>
     <p>
-    <em>Interagir e adquirir novos clientes sem depender de cookies de terceiros</em>
+    <em>Envolva e adquira novos clientes sem dependência de cookies de terceiros</em>
     <p>
   </td>
   <td>
@@ -48,7 +49,7 @@ Os casos de uso de amostra podem ser agrupados em casos de aquisição de client
     </a>
     <div>
       <a href="../partner-data/onsite-personalization.md">
-    <strong>Personalização no local</strong>
+    <strong>Personalização no site</strong>
     </a>
     </div>
     <p>
@@ -81,17 +82,17 @@ Os casos de uso de amostra podem ser agrupados em casos de aquisição de client
     </a>
     <div>
       <a href="../partner-data/supplement-first-party-profiles.md">
-    <strong>Suplemente perfis primários com atributos fornecidos pelo parceiro</strong>
+    <strong>Suplemente perfis próprios com atributos fornecidos pelo parceiro</strong>
     </a>
     </div>
     <p>
-    <em>Complemente perfis primários com atributos de parceiros de dados confiáveis para melhorar sua base de dados, obter novos insights sobre sua base de clientes e melhorar a otimização do público-alvo.</em>
+    <em>Complemente perfis primários com atributos de parceiros de dados confiáveis para melhorar sua base de dados, obter novos insights sobre sua base de clientes e melhorar a otimização de públicos-alvo.</em>
     <p>
   </td>
   </tr>
   </table>
 
-## Personalização, insights, envolvimento {#personalization-insights-engagement}
+## Personalization, insights, envolvimento {#personalization-insights-engagement}
 
 <table style="margin-top: 0 !important">
 <tr>

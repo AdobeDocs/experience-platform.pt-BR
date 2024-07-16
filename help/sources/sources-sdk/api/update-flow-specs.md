@@ -10,21 +10,21 @@ ht-degree: 2%
 
 ---
 
-# Atualizar especificações de fluxo usando o [!DNL Flow Service] API
+# Atualizar especificações de fluxo usando a API [!DNL Flow Service]
 
 Depois de gerar uma nova ID de especificação de conexão, você deve adicionar essa ID a uma especificação de fluxo para criar um fluxo de dados.
 
-As especificações de fluxo contêm informações que definem um fluxo, incluindo as IDs de conexão de origem e de destino que ele suporta, as especificações de transformação que precisam ser aplicadas aos dados e os parâmetros de programação necessários para gerar um fluxo. É possível editar as especificações de fluxo usando a `/flowSpecs` terminal.
+As especificações de fluxo contêm informações que definem um fluxo, incluindo as IDs de conexão de origem e de destino que ele suporta, as especificações de transformação que precisam ser aplicadas aos dados e os parâmetros de programação necessários para gerar um fluxo. Você pode editar as especificações do fluxo usando o ponto de extremidade `/flowSpecs`.
 
-O documento a seguir fornece etapas sobre como recuperar e atualizar especificações de fluxo usando o [!DNL Flow Service] API para fontes de autoatendimento (SDK em lote).
+O documento a seguir fornece etapas sobre como recuperar e atualizar especificações de fluxo usando a API [!DNL Flow Service] para fontes de autoatendimento (SDK em lote).
 
 ## Introdução
 
-Antes de continuar, reveja o [guia de introdução](./getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre os cabeçalhos necessários para fazer chamadas com êxito para qualquer API de Experience Platform.
+Antes de continuar, consulte o [guia de introdução](./getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre os cabeçalhos necessários para fazer chamadas para qualquer API Experience Platform com êxito.
 
 ## Pesquisar uma especificação de fluxo {#lookup}
 
-Fontes criadas com o `generic-rest-extension` todos os modelos usam o `RestStorageToAEP` especificação de fluxo. Essa especificação de fluxo pode ser recuperada fazendo uma solicitação GET ao `/flowSpecs/` terminal, e fornecendo a `flowSpec.id` de `6499120c-0b15-42dc-936e-847ea3c24d72`.
+Fontes criadas com o modelo `generic-rest-extension` usam a especificação de fluxo `RestStorageToAEP`. Esta especificação de fluxo pode ser recuperada fazendo uma solicitação GET para o ponto de extremidade `/flowSpecs/` e fornecendo o `flowSpec.id` de `6499120c-0b15-42dc-936e-847ea3c24d72`.
 
 **Formato da API**
 
@@ -34,7 +34,7 @@ GET /flowSpecs/6499120c-0b15-42dc-936e-847ea3c24d72
 
 **Solicitação**
 
-A solicitação a seguir recupera o `6499120c-0b15-42dc-936e-847ea3c24d72` especificação de conexão.
+A solicitação a seguir recupera a especificação de conexão `6499120c-0b15-42dc-936e-847ea3c24d72`.
 
 ```shell
 curl -X GET \
@@ -610,4 +610,4 @@ Uma resposta bem-sucedida retorna os detalhes da especificação de fluxo consul
 
 ## Próximas etapas
 
-Com a nova especificação de conexão adicionada à especificação de fluxo apropriada, você pode prosseguir com o teste e o envio da nova origem. Consulte o guia sobre [teste e envio de uma nova fonte](./submit.md) para obter mais informações.
+Com a nova especificação de conexão adicionada à especificação de fluxo apropriada, você pode prosseguir com o teste e o envio da nova origem. Consulte o manual sobre [teste e envio de uma nova fonte](./submit.md) para obter mais informações.

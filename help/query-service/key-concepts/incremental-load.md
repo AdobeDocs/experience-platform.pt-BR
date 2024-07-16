@@ -19,15 +19,15 @@ Este documento fornece uma série de instruções para criar um padrão de desig
 
 ## Introdução
 
-Os exemplos de SQL neste documento exigem que você tenha uma compreensão dos recursos de bloco e instantâneo anônimos. É recomendável que você leia a [exemplo de consultas de bloco anônimo](./anonymous-block.md) e também a [cláusula de instantâneo](../sql/syntax.md#snapshot-clause) documentação.
+Os exemplos de SQL neste documento exigem que você tenha uma compreensão dos recursos de bloco e instantâneo anônimos. É recomendável que você leia a documentação das [consultas de exemplo de bloco anônimo](./anonymous-block.md) e também a documentação da [cláusula de instantâneo](../sql/syntax.md#snapshot-clause).
 
-Para obter orientação sobre qualquer terminologia usada neste guia, consulte o [Guia de sintaxe SQL](../sql/syntax.md).
+Para orientação sobre qualquer terminologia usada neste guia, consulte o [guia de sintaxe SQL](../sql/syntax.md).
 
 ## Carregar dados incrementalmente
 
 As etapas abaixo demonstram como criar e carregar dados de forma incremental usando instantâneos e o recurso de bloqueio anônimo. O padrão de design pode ser usado como um modelo para sua própria sequência de consultas.
 
-1. Criar um `checkpoint_log` tabela para rastrear o instantâneo mais recente usado para processar dados com êxito. A tabela de rastreamento (`checkpoint_log` neste exemplo) deve primeiro ser inicializado para `null` para processar um conjunto de dados de forma incremental.
+1. Crie uma tabela `checkpoint_log` para rastrear o instantâneo mais recente usado para processar dados com êxito. A tabela de rastreamento (`checkpoint_log` neste exemplo) deve primeiro ser inicializada em `null` para processar de forma incremental um conjunto de dados.
 
    ```SQL
    DROP TABLE IF EXISTS checkpoint_log;
@@ -40,7 +40,7 @@ As etapas abaixo demonstram como criar e carregar dados de forma incremental usa
       WHERE false;
    ```
 
-1. Preencha o `checkpoint_log` tabela com um registro vazio para o conjunto de dados que precisa de processamento incremental. `DIM_TABLE_ABC` é o conjunto de dados a ser processado no exemplo abaixo. Na primeira ocasião de tratamento `DIM_TABLE_ABC`, o `last_snapshot_id` é inicializado como `null`. Isso permite processar todo o conjunto de dados na primeira vez e de forma incremental posteriormente.
+1. Preencha a tabela `checkpoint_log` com um registro vazio para o conjunto de dados que precisa de processamento incremental. `DIM_TABLE_ABC` é o conjunto de dados a ser processado no exemplo abaixo. Na primeira ocasião do processamento de `DIM_TABLE_ABC`, `last_snapshot_id` é inicializado como `null`. Isso permite processar todo o conjunto de dados na primeira vez e de forma incremental posteriormente.
 
    ```SQL
    INSERT INTO
@@ -52,17 +52,17 @@ As etapas abaixo demonstram como criar e carregar dados de forma incremental usa
          CURRENT_TIMESTAMP process_timestamp;
    ```
 
-1. Em seguida, inicializar `DIM_TABLE_ABC_Incremental` para conter saída processada de `DIM_TABLE_ABC`. O bloqueio anônimo no **obrigatório** a seção de execução do exemplo SQL abaixo, conforme descrito nas etapas de um a quatro, é executada sequencialmente para processar dados de forma incremental.
+1. Em seguida, inicialize `DIM_TABLE_ABC_Incremental` para conter saída processada de `DIM_TABLE_ABC`. O bloco anônimo na seção de execução **required** do exemplo SQL abaixo, conforme descrito nas etapas de um a quatro, é executado sequencialmente para processar dados de forma incremental.
 
-   1. Defina o `from_snapshot_id` que indica de onde o processamento começa. A variável `from_snapshot_id` no exemplo é consultado a partir de `checkpoint_log` tabela para uso com `DIM_TABLE_ABC`. Na execução inicial, a ID do instantâneo será `null` o que significa que todo o conjunto de dados será processado.
-   1. Defina o `to_snapshot_id` como a ID de instantâneo atual da tabela de origem (`DIM_TABLE_ABC`). No exemplo, isso é consultado a partir da tabela de metadados da tabela de origem.
-   1. Use o `CREATE` palavra-chave para criar `DIM_TABLE_ABC_Incremenal` como a tabela de destino. A tabela de destino mantém os dados processados do conjunto de dados de origem (`DIM_TABLE_ABC`). Isso permite que os dados processados da tabela de origem entre `from_snapshot_id` e `to_snapshot_id`, para ser anexado de forma incremental à tabela de destino.
-   1. Atualize o `checkpoint_log` tabela com o `to_snapshot_id` para os dados de origem que `DIM_TABLE_ABC` processado com sucesso.
-   1. Se qualquer uma das consultas executadas sequencialmente do bloco anônimo falhar, a variável **opcional** seção de exceção é executada. Isso retorna um erro e encerra o processo.
+   1. Defina o `from_snapshot_id` que indica de onde o processamento começa. O `from_snapshot_id` no exemplo é consultado a partir da tabela `checkpoint_log` para uso com `DIM_TABLE_ABC`. Na execução inicial, a ID do instantâneo será `null`, o que significa que todo o conjunto de dados será processado.
+   1. Defina `to_snapshot_id` como a ID de instantâneo atual da tabela de origem (`DIM_TABLE_ABC`). No exemplo, isso é consultado a partir da tabela de metadados da tabela de origem.
+   1. Use a palavra-chave `CREATE` para criar `DIM_TABLE_ABC_Incremenal` como a tabela de destino. A tabela de destino mantém os dados processados do conjunto de dados de origem (`DIM_TABLE_ABC`). Isso permite que os dados processados da tabela de origem entre `from_snapshot_id` e `to_snapshot_id` sejam acrescentados de forma incremental à tabela de destino.
+   1. Atualize a tabela `checkpoint_log` com `to_snapshot_id` para os dados de origem que `DIM_TABLE_ABC` processou com êxito.
+   1. Se qualquer uma das consultas executadas sequencialmente do bloco anônimo falhar, a seção de exceção **opcional** será executada. Isso retorna um erro e encerra o processo.
 
    >[!NOTE]
    >
-   >A variável `history_meta('source table name')` é um método conveniente usado para obter acesso ao instantâneo disponível em um conjunto de dados.
+   >O `history_meta('source table name')` é um método conveniente usado para obter acesso ao instantâneo disponível em um conjunto de dados.
 
    ```SQL
    $$ BEGIN
@@ -90,11 +90,11 @@ As etapas abaixo demonstram como criar e carregar dados de forma incremental usa
    $$;
    ```
 
-1. Use a lógica de carregamento de dados incrementais no exemplo de bloco anônimo abaixo para permitir que quaisquer novos dados do conjunto de dados de origem (desde o carimbo de data e hora mais recente) sejam processados e anexados à tabela de destino em uma cadência regular. No exemplo, os dados são alterados para `DIM_TABLE_ABC` será processado e anexado a `DIM_TABLE_ABC_incremental`.
+1. Use a lógica de carregamento de dados incrementais no exemplo de bloco anônimo abaixo para permitir que quaisquer novos dados do conjunto de dados de origem (desde o carimbo de data e hora mais recente) sejam processados e anexados à tabela de destino em uma cadência regular. No exemplo, as alterações de dados em `DIM_TABLE_ABC` serão processadas e anexadas a `DIM_TABLE_ABC_incremental`.
 
    >[!NOTE]
    >
-   > `_ID` é a chave primária em ambos `DIM_TABLE_ABC_Incremental` e `SELECT history_meta('DIM_TABLE_ABC')`.
+   > `_ID` é a Chave Primária em `DIM_TABLE_ABC_Incremental` e `SELECT history_meta('DIM_TABLE_ABC')`.
 
    ```SQL
    $$ BEGIN
@@ -128,9 +128,9 @@ Essa lógica pode ser aplicada a qualquer tabela para executar cargas incrementa
 
 >[!IMPORTANT]
 >
->Os metadados de snapshot expiram após **dois** dias. Um instantâneo expirado invalida a lógica do script fornecido acima.
+>Os metadados de instantâneo expiram após **dois** dias. Um instantâneo expirado invalida a lógica do script fornecido acima.
 
-Para resolver o problema de uma ID de snapshot expirada, insira o seguinte comando no início do bloco anônimo. A linha de código a seguir substitui a `@from_snapshot_id` com os mais antigos disponíveis `snapshot_id` dos metadados.
+Para resolver o problema de uma ID de snapshot expirada, insira o seguinte comando no início do bloco anônimo. A linha de código a seguir substitui o `@from_snapshot_id` pelo `snapshot_id` mais antigo disponível nos metadados.
 
 ```SQL
 SET resolve_fallback_snapshot_on_failure=true;
@@ -166,4 +166,4 @@ $$;
 
 ## Próximas etapas
 
-Ao ler este documento, você deve entender melhor como usar os recursos de instantâneos e blocos anônimos para executar cargas incrementais e pode aplicar essa lógica às suas próprias consultas específicas. Para obter orientação geral sobre a execução da consulta, leia o [guia sobre a execução da consulta no Serviço de consulta](../best-practices/writing-queries.md).
+Ao ler este documento, você deve entender melhor como usar os recursos de instantâneos e blocos anônimos para executar cargas incrementais e pode aplicar essa lógica às suas próprias consultas específicas. Para orientação geral sobre execução de consulta, leia o [guia sobre execução de consulta no Serviço de Consulta](../best-practices/writing-queries.md).

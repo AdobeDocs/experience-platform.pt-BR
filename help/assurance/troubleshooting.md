@@ -3,8 +3,8 @@ title: Manual de solução de problemas do Adobe Experience Platform Assurance
 description: Este documento descreve soluções para problemas comuns ao usar o Adobe Experience Platform Assurance.
 exl-id: 8078e6f6-ca18-4939-a417-40ebf5a52e24
 source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
-workflow-type: ht
-source-wordcount: '526'
+workflow-type: tm+mt
+source-wordcount: '453'
 ht-degree: 100%
 
 ---

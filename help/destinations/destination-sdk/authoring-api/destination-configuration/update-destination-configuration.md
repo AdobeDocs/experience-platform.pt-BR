@@ -4,18 +4,18 @@ title: Atualizar uma configuração de destino
 exl-id: d7f18689-9806-4f73-a63a-fa112569819c
 source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
 workflow-type: tm+mt
-source-wordcount: '369'
-ht-degree: 3%
+source-wordcount: '370'
+ht-degree: 2%
 
 ---
 
 # Atualizar uma configuração de destino
 
-Esta página exemplifica a solicitação de API e a carga que você pode usar para atualizar uma configuração de destino existente, usando o `/authoring/destinations` Endpoint da API.
+Esta página exemplifica a solicitação de API e a carga que você pode usar para atualizar uma configuração de destino existente, usando o ponto de extremidade de API `/authoring/destinations`.
 
 >[!TIP]
 >
->Qualquer operação de atualização em destinos de produção/públicos estará visível somente após o uso do [API de publicação](../../publishing-api/create-publishing-request.md) e envie a atualização para revisão do Adobe.
+>Qualquer operação de atualização em destinos de produção/públicos estará visível somente após o uso da [API de publicação](../../publishing-api/create-publishing-request.md) e o envio da atualização para revisão do Adobe.
 
 Para obter uma descrição detalhada dos recursos de uma configuração de destino, leia os seguintes artigos:
 
@@ -34,21 +34,21 @@ Para obter uma descrição detalhada dos recursos de uma configuração de desti
 
 >[!IMPORTANT]
 >
->Todos os nomes e valores de parâmetros compatíveis com o Destination SDK são **diferencia maiúsculas de minúsculas**. Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
+>Todos os nomes e valores de parâmetros suportados pelo Destination SDK fazem **distinção entre maiúsculas e minúsculas**. Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
 
 ## Introdução às operações de API de configuração de destino {#get-started}
 
-Antes de continuar, reveja o [guia de introdução](../../getting-started.md) para obter informações importantes que você precisa saber para fazer chamadas com êxito para a API, incluindo como obter a permissão de criação de destino e os cabeçalhos necessários.
+Antes de continuar, consulte o [guia de introdução](../../getting-started.md) para obter informações importantes que você precisa saber para fazer chamadas com êxito para a API, incluindo como obter a permissão de criação de destino e os cabeçalhos necessários.
 
 ## Atualizar uma configuração de destino {#update}
 
-Você pode atualizar um [existente](create-destination-configuration.md) configuração de destino fazendo uma `PUT` solicitação à `/authoring/destinations` terminal com a carga atualizada.
+Você pode atualizar uma configuração de destino [existente](create-destination-configuration.md) fazendo uma solicitação `PUT` para o ponto de extremidade `/authoring/destinations` com a carga atualizada.
 
 >[!TIP]
 >
->Ponto de acesso da API: `platform.adobe.io/data/core/activation/authoring/destinations`
+>Ponto de extremidade de API: `platform.adobe.io/data/core/activation/authoring/destinations`
 
-Para obter uma configuração de destino existente e suas configurações `{INSTANCE_ID}`, consulte o artigo sobre [recuperação de uma configuração de destino](retrieve-destination-configuration.md).
+Para obter uma configuração de destino existente e sua `{INSTANCE_ID}` correspondente, consulte o artigo sobre [recuperação de uma configuração de destino](retrieve-destination-configuration.md).
 
 **Formato da API**
 
@@ -58,11 +58,11 @@ PUT /authoring/destinations/{INSTANCE_ID}
 
 | Parâmetro | Descrição |
 | -------- | ----------- |
-| `{INSTANCE_ID}` | A ID da configuração de destino que você deseja atualizar. Para obter uma configuração de destino existente e suas configurações `{INSTANCE_ID}`, consulte [Recuperar uma configuração de destino](retrieve-destination-configuration.md). |
+| `{INSTANCE_ID}` | A ID da configuração de destino que você deseja atualizar. Para obter uma configuração de destino existente e seu `{INSTANCE_ID}` correspondente, consulte [Recuperar uma configuração de destino](retrieve-destination-configuration.md). |
 
 +++Solicitação
 
-A solicitação a seguir atualiza o destino que criamos em [este exemplo](create-destination-configuration.md#create) com diferentes `filenameConfig` opções.
+A solicitação a seguir atualiza o destino que criamos em [este exemplo](create-destination-configuration.md#create) com opções `filenameConfig` diferentes.
 
 ```shell {line-numbers="true" highlight="115-128"}
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinations/{INSTANCE_ID} \
@@ -207,11 +207,11 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com os detalhes da configura
 
 ## Manipulação de erros de API {#error-handling}
 
-Os endpoints da API Destination SDK seguem os princípios gerais de mensagem de erro da API Experience Platform. Consulte [Códigos de status da API](../../../../landing/troubleshooting.md#api-status-codes) e [erros no cabeçalho da solicitação](../../../../landing/troubleshooting.md#request-header-errors) no guia de solução de problemas da Platform.
+Os endpoints da API Destination SDK seguem os princípios gerais de mensagem de erro da API Experience Platform. Consulte [códigos de status da API](../../../../landing/troubleshooting.md#api-status-codes) e [erros no cabeçalho da solicitação](../../../../landing/troubleshooting.md#request-header-errors) no guia de solução de problemas da Platform.
 
 ## Próximas etapas
 
-Depois de ler este documento, agora você sabe como atualizar uma configuração de destino por meio do Destination SDK `/authoring/destinations` Endpoint da API.
+Depois de ler este documento, agora você sabe como atualizar uma configuração de destino por meio do ponto de extremidade da API do Destination SDK `/authoring/destinations`.
 
 Para saber mais sobre o que você pode fazer com esse endpoint, consulte os seguintes artigos:
 

@@ -7,7 +7,7 @@ exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
 source-git-commit: ba4ff2715d4e3eb71377542ab2361b967cd3ac11
 workflow-type: tm+mt
 source-wordcount: '1807'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -17,7 +17,7 @@ O Adobe Experience Platform Query Service permite conectar-se com clientes exter
 
 >[!NOTE]
 >
->O painel de credenciais não está disponível automaticamente para todos os usuários. Entre em contato com a equipe de conta do Adobe para solicitar o [!UICONTROL Credenciais] para ser incluída no espaço de trabalho do Serviço de consulta, se necessário. Se solicitado, essa alteração abrange toda a organização e é realizada pela equipe de engenharia do Adobe. Não é uma configuração controlada por usuários.
+>O painel de credenciais não está disponível automaticamente para todos os(as) usuários(as). Entre em contato com a equipe de conta do Adobe para solicitar que a guia [!UICONTROL Credenciais] seja incluída no espaço de trabalho do Serviço de consulta, se necessário. Se solicitado, essa alteração abrange toda a organização e é realizada pela equipe de engenharia do Adobe. Não é uma configuração controlada por usuários.
 
 ## Credenciais expiradas {#expiring-credentials}
 
@@ -28,47 +28,47 @@ O Adobe Experience Platform Query Service permite conectar-se com clientes exter
 
 Você pode usar credenciais com expiração para configurar rapidamente uma conexão com um cliente externo.
 
-![A guia Credenciais do painel de consultas com a seção Credenciais que expiram destacada.](../images/ui/credentials/expiring-credentials.png)
+![A guia Credenciais do painel Consultas com a seção Credenciais em Expiração realçada.](../images/ui/credentials/expiring-credentials.png)
 
-A variável **[!UICONTROL Credenciais que expiram]** fornece as seguintes informações:
+A seção **[!UICONTROL Credenciais que estão expirando]** fornece as seguintes informações:
 
-- **[!UICONTROL Host]**: O nome do host ao qual conectar o cliente. Ele incorpora o nome da sua organização, como visto na faixa superior da interface do usuário da Platform.
+- **[!UICONTROL Host]**: o nome do host ao qual conectar seu cliente. Ele incorpora o nome da sua organização, como visto na faixa superior da interface do usuário da Platform.
 - **[!UICONTROL Porta]**: o número da porta do host ao qual se conectar.
-- **[!UICONTROL Banco de dados]**: O nome do banco de dados ao qual conectar um cliente.
-- **[!UICONTROL Nome de usuário]**: o nome de usuário usado para se conectar ao Serviço de consulta.
-- **[!UICONTROL Senha]**: a senha usada para se conectar ao Serviço de consulta. As senhas na interface do usuário receberam hash por questões de segurança. Selecione o ícone de cópia (![O ícone de cópia.](../images/ui/credentials/copy-icon.png)) para copiar suas credenciais completas e sem hash para a área de transferência.
-- **[!UICONTROL comando PSQL]**: um comando que inseriu automaticamente todas as informações relevantes para você se conectar ao Serviço de consulta usando PSQL na linha de comando.
-- **[!UICONTROL Expira]**: a data e a hora de expiração das credenciais que estão expirando. A duração padrão da validade do token é de 24 horas, mas pode ser alterada nas configurações avançadas do Admin Console.
+- **[!UICONTROL Banco de dados]**: o nome do banco de dados ao qual conectar um cliente.
+- **[!UICONTROL Nome de usuário]**: o nome de usuário usado para se conectar ao Serviço de Consulta.
+- **[!UICONTROL Senha]**: a senha usada para se conectar ao Serviço de Consulta. As senhas na interface do usuário receberam hash por questões de segurança. Selecione o ícone de cópia (![O ícone de cópia.](../images/ui/credentials/copy-icon.png)) para copiar suas credenciais completas com hash para a área de transferência.
+- **[!UICONTROL Comando PSQL]**: um comando que inseriu automaticamente todas as informações relevantes para você se conectar ao Serviço de Consulta usando PSQL na linha de comando.
+- **[!UICONTROL Expira]**: a data e a hora de expiração das credenciais. A duração padrão da validade do token é de 24 horas, mas pode ser alterada nas configurações avançadas do Admin Console.
 
 >[!TIP]
 >
->Para alterar a vida útil da sessão para sua conexão de credenciais com o Serviço de consulta expirando, navegue até a [Admin Console](https://adminconsole.adobe.com/) e selecione as seguintes opções na tela: **Configurações** > **Privacidade e segurança** > **Configurações de autenticação** > **Configurações avançadas** > **Duração máxima da sessão**.
+>Para alterar a vida útil da sessão da conexão de credenciais com o Serviço de Consulta que está expirando, navegue até [Admin Console](https://adminconsole.adobe.com/) e selecione as seguintes opções na tela: **Configurações** > **Privacidade e Segurança** > **Configurações de Autenticação** > **Configurações avançadas** > **Vida útil máxima da sessão**.
 >
->![A guia Admin Console settings com Privacy and Security, Authentication settings e Max session life está realçada.](../images/ui/credentials/max-session-life.png)
+>![A guia Configurações de Admin Console com Privacidade e Segurança, Configurações de autenticação e Vida máxima da sessão foi realçada.](../images/ui/credentials/max-session-life.png)
 >
->Consulte a documentação de ajuda do Adobe para obter mais informações sobre o [Configurações avançadas](https://helpx.adobe.com/enterprise/using/authentication-settings.html#advanced-settings) oferecido pelo Admin Console.
+>Consulte a documentação de Ajuda do Adobe para obter mais informações sobre as [Configurações avançadas](https://helpx.adobe.com/enterprise/using/authentication-settings.html#advanced-settings) oferecidas pelo Admin Console.
 
 ### Conectar-se aos dados do Customer Journey Analytics nas sessões de consulta {#connect-to-customer-journey-analytics}
 
-Use a extensão Customer Journey Analytics BI com Power BI Tableau para acessar o Customer Journey Analytics [visualizações de dados](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-dataviews/data-views) com SQL. Ao integrar o Serviço de consulta à extensão BI, você pode acessar suas visualizações de dados diretamente nas sessões do Serviço de consulta. Essa integração simplifica a funcionalidade das ferramentas de BI que usam o Serviço de consulta como interface PostgreSQL. Essa funcionalidade elimina a necessidade de duplicar visualizações de dados em ferramentas de BI, garante a geração de relatórios consistentes entre plataformas e simplifica a integração de dados de Customer Journey Analytics com outras origens em plataformas de BI.
+Use a extensão Customer Journey Analytics BI com Power BI Tableau para acessar suas [visualizações de dados](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-dataviews/data-views) do Customer Journey Analytics com SQL. Ao integrar o Serviço de consulta à extensão BI, você pode acessar suas visualizações de dados diretamente nas sessões do Serviço de consulta. Essa integração simplifica a funcionalidade das ferramentas de BI que usam o Serviço de consulta como interface PostgreSQL. Essa funcionalidade elimina a necessidade de duplicar visualizações de dados em ferramentas de BI, garante a geração de relatórios consistentes entre plataformas e simplifica a integração de dados de Customer Journey Analytics com outras origens em plataformas de BI.
 
-Consulte a documentação para saber como [conecte o Serviço de consulta a uma variedade de aplicativos de cliente de desktop](../clients/overview.md) como [Power BI](../clients/power-bi.md) ou [Tableau](../clients/tableau.md)
+Consulte a documentação para saber como [conectar o Serviço de consulta a uma variedade de aplicativos de cliente de desktop](../clients/overview.md), como [Power BI](../clients/power-bi.md) ou [Tableau](../clients/tableau.md)
 
 >[!IMPORTANT]
 >
 >Um projeto do espaço de trabalho do Customer Journey Analytics e uma visualização de dados são necessários para usar essa funcionalidade.
 
-Para acessar os dados de Customer Journey Analytics no Power BI ou Tableau, selecione a [!UICONTROL Banco de dados] menu suspenso e selecione `prod:cja` nas opções disponíveis. Em seguida, copie o [!DNL Postgres] Parâmetros de credenciais (Host, Porta, Banco de Dados, Nome de Usuário e outros) para uso na configuração do Power BI ou Tableau.
+Para acessar seus dados de Customer Journey Analytics no Power BI ou Tableau, selecione o menu suspenso [!UICONTROL Banco de Dados] e, em seguida, `prod:cja` nas opções disponíveis. Em seguida, copie os parâmetros de credenciais do [!DNL Postgres] (Host, Porta, Banco de Dados, Nome de Usuário e outros) para uso na sua configuração do Power BI ou Tableau.
 
-![A guia de credenciais do Serviço de consulta com a lista suspensa de banco de dados realçada.](../images/ui/credentials/database-dropdown.png)
+![A guia de credenciais do Serviço de Consulta com a lista suspensa de banco de dados foi realçada.](../images/ui/credentials/database-dropdown.png)
 
 >[!NOTE]
 >
 >Quando você conecta o Power BI Tableau ao Customer Journey Analytics, o direito de &quot;sessões simultâneas&quot; do Serviço de consulta é consumido. Se sessões e consultas adicionais forem necessárias, um complemento de pacote de usuários de consulta ad hoc adicional poderá ser adquirido para obter cinco sessões simultâneas adicionais e uma consulta simultânea adicional.
 
-Você também pode acessar seus dados de Customer Journey Analytics diretamente do Editor de consultas ou da CLI do Postgres. Para fazer isso, consulte o `cja` banco de dados ao gravar sua consulta. Consulte o Editor de consultas [guia de criação de consultas](./user-guide.md#query-authoring) para obter mais informações sobre como gravar, executar e salvar consultas.
+Você também pode acessar seus dados de Customer Journey Analytics diretamente do Editor de consultas ou da CLI do Postgres. Para fazer isso, faça referência ao banco de dados `cja` ao gravar sua consulta. Consulte o [guia de criação de consultas](./user-guide.md#query-authoring) do Editor de consultas para obter mais informações sobre como gravar, executar e salvar consultas.
 
-Consulte a [Guia de extensão do BI](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-dataviews/bi-extension) para obter instruções completas sobre como acessar suas visualizações de dados de Customer Journey Analytics com o SQL.
+Consulte o [guia de extensão de BI](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-dataviews/bi-extension) para obter instruções completas sobre como acessar suas visualizações de dados de Customer Journey Analytics com o SQL.
 
 ## Credenciais sem expiração {#non-expiring-credentials}
 
@@ -76,43 +76,43 @@ Você pode usar credenciais sem expiração para configurar uma conexão mais pe
 
 >[!NOTE]
 >
->As credenciais sem expiração têm as seguintes limitações:<br><ul><li>Os usuários devem fazer logon com seu nome de usuário e senha compostos por `{technicalAccountId}:{credential}`. Mais informações podem ser encontradas no [Gerar credenciais](#generate-credentials) seção.</li><li>Após a criação de credenciais que estão expirando, uma nova função com um conjunto de permissões básicas é criada e permite que os usuários visualizem esquemas e conjuntos de dados. A permissão &quot;gerenciar consultas&quot; também é atribuída a essa função para uso com o Serviço de consulta.</li><li>Os clientes de terceiros podem ter um desempenho diferente do esperado ao listar objetos de consulta. Por exemplo, alguns clientes de terceiros, como [!DNL DB Visualizer] não exibirá o nome da visualização no painel esquerdo. No entanto, o nome da exibição pode ser acessado se for chamado em uma consulta SELECT. Da mesma forma, [!DNL PowerUI] não pode listar as exibições temporárias criadas por meio do SQL a serem selecionadas para criação do painel.</li></ul>
+>As credenciais sem expiração têm as seguintes limitações:<br><ul><li>Os usuários devem fazer logon com seu nome de usuário e senha compostos por `{technicalAccountId}:{credential}`. Encontre mais informações na seção [Gerar credenciais](#generate-credentials).</li><li>Após a criação de credenciais que estão expirando, uma nova função com um conjunto de permissões básicas é criada e permite que os usuários visualizem esquemas e conjuntos de dados. A permissão &quot;gerenciar consultas&quot; também é atribuída a essa função para uso com o Serviço de consulta.</li><li>Os clientes de terceiros podem ter um desempenho diferente do esperado ao listar objetos de consulta. Por exemplo, alguns clientes de terceiros, como [!DNL DB Visualizer], não exibirão o nome da exibição no painel esquerdo. No entanto, o nome da exibição pode ser acessado se for chamado em uma consulta SELECT. Da mesma forma, [!DNL PowerUI] pode não listar as exibições temporárias criadas através do SQL a serem selecionadas para a criação do painel.</li></ul>
 
 ### Pré-requisitos
 
 Antes de gerar credenciais sem expiração, você deve concluir as seguintes etapas no Adobe Admin Console:
 
-1. Efetue logon no [Adobe Admin Console](https://adminconsole.adobe.com/) e selecione a Organização relevante na barra de navegação superior.
+1. Faça logon no [Adobe Admin Console](https://adminconsole.adobe.com/) e selecione a Organização relevante na barra de navegação superior.
 2. [Selecione um perfil de produto.](../../access-control/ui/browse.md)
-3. [Configure os dois **Sandboxes** e **Gerenciar Integração do Serviço de Consulta** permissões](../../access-control/ui/permissions.md) para o perfil do produto.
-4. [Adicionar um novo usuário a um perfil de produto](../../access-control/ui/users.md) para que tenham suas permissões configuradas.
-5. [Adicionar o usuário como administrador de perfil de produto](https://helpx.adobe.com/br/enterprise/using/manage-product-profiles.html) para permitir a criação de uma conta para qualquer perfil de produto ativo.
-6. [Adicionar o usuário como desenvolvedor de perfil de produto](https://helpx.adobe.com/br/enterprise/using/manage-developers.html) para criar uma integração.
+3. [Configure as permissões **Sandboxes** e **Gerenciar Integração do Serviço de Consulta**](../../access-control/ui/permissions.md) para o perfil do produto.
+4. [Adicione um novo usuário a um perfil de produto](../../access-control/ui/users.md) para que ele tenha suas permissões configuradas.
+5. [Adicione o usuário como um administrador de perfil de produto](https://helpx.adobe.com/br/enterprise/using/manage-product-profiles.html) para permitir a criação de uma conta para qualquer perfil de produto ativo.
+6. [Adicione o usuário como desenvolvedor de perfil de produto](https://helpx.adobe.com/br/enterprise/using/manage-developers.html) para criar uma integração.
 
 Para saber mais sobre como atribuir permissões, leia a documentação em [controle de acesso](../../access-control/home.md).
 
-Todas as permissões necessárias agora estão configuradas no Console do Adobe Developer para que o usuário use o recurso de credenciais que estão expirando.
+Todas as permissões necessárias agora estão configuradas no Adobe Developer Console para que o usuário use o recurso de credenciais com vencimento.
 
 ### Gerar credenciais {#generate-credentials}
 
-Para criar um conjunto de credenciais sem expiração, retorne à interface do usuário da Platform e selecione **[!UICONTROL Consultas]** na navegação à esquerda, para acessar a [!UICONTROL Consultas] espaço de trabalho. Em seguida, selecione o **[!UICONTROL Credenciais]** guia seguida por **[!UICONTROL Gerar credenciais]**.
+Para criar um conjunto de credenciais sem expiração, volte para a interface do usuário da Platform e selecione **[!UICONTROL Consultas]** na navegação à esquerda para acessar o espaço de trabalho [!UICONTROL Consultas]. Em seguida, selecione a guia **[!UICONTROL Credenciais]** seguida por **[!UICONTROL Gerar credenciais]**.
 
-![O painel Queries com a guia Credenciais e Generate credentials será destacado.](../images/ui/credentials/generate-credentials.png)
+![O painel Consultas com a guia Credenciais e as credenciais Gerar realçadas.](../images/ui/credentials/generate-credentials.png)
 
 Uma caixa de diálogo é exibida com a permissão para gerar credenciais. Para criar credenciais sem expiração, você deve fornecer os seguintes detalhes:
 
-- **[!UICONTROL Nome]**: O nome das credenciais que você está gerando.
-- **[!UICONTROL Descrição]**: (opcional) uma descrição das credenciais geradas.
+- **[!UICONTROL Nome]**: o nome das credenciais sendo geradas.
+- **[!UICONTROL Descrição]**: (opcional) uma descrição para as credenciais que você está gerando.
 - **[!UICONTROL Atribuído a]**: o usuário ao qual as credenciais serão atribuídas. Esse valor deve ser o endereço de email do usuário que está criando as credenciais.
 - **[!UICONTROL Senha]** (Opcional) Uma senha opcional para suas credenciais. Se a senha não for definida, o Adobe gerará automaticamente uma senha para você.
 
 Depois de fornecer todos os detalhes necessários, selecione **[!UICONTROL Gerar credenciais]** para gerar suas credenciais.
 
-![A caixa de diálogo Gerar credenciais é realçada.](../images/ui/credentials/create-account.png)
+![A caixa de diálogo Gerar credenciais está realçada.](../images/ui/credentials/create-account.png)
 
 >[!IMPORTANT]
 >
->Quando **[!UICONTROL Gerar credenciais]** for selecionada, um arquivo JSON de configuração será baixado na máquina local. Como o Adobe faz **não** Para registrar as credenciais geradas, você deve armazenar com segurança o arquivo baixado e manter um registro da credencial.
+>Quando **[!UICONTROL Gerar credenciais]** é selecionado, um arquivo JSON de configuração é baixado para o computador local. Como o Adobe **não** registra as credenciais geradas, você deve armazenar com segurança o arquivo baixado e manter um registro da credencial.
 >
 >Além disso, se as credenciais não forem usadas por 90 dias, elas serão eliminadas.
 
@@ -124,45 +124,45 @@ O arquivo JSON de configuração contém informações como nome da conta técni
 
 Depois de salvar as credenciais geradas, selecione **[!UICONTROL Fechar]**. Agora você pode ver uma lista de todas as suas credenciais sem expiração.
 
-![A guia Credenciais do painel Consultas com a seção Credenciais sem expiração destacada.](../images/ui/credentials/list-credentials.png)
+![A guia Credenciais do painel Consultas com a seção Credenciais sem expiração realçada.](../images/ui/credentials/list-credentials.png)
 
-Você pode editar ou excluir suas credenciais sem expiração. Para editar uma credencial sem expiração, selecione o ícone de lápis (![Um lápis.](../images/ui/credentials/edit-icon.png)). Para excluir uma credencial sem expiração, selecione o ícone excluir (![Um ícone de lixeira.](../images/ui/credentials/delete-icon.png)).
+Você pode editar ou excluir suas credenciais sem expiração. Para editar uma credencial sem expiração, selecione o ícone de lápis (![Um ícone de lápis.](../images/ui/credentials/edit-icon.png)). Para excluir uma credencial sem expiração, selecione o ícone Excluir (![Ícone de lixeira.](../images/ui/credentials/delete-icon.png)).
 
 Ao editar uma credencial sem expiração, um modal é exibido. Você pode fornecer os seguintes detalhes para atualizar:
 
-- **[!UICONTROL Nome]**: O nome das credenciais que você está gerando.
-- **[!UICONTROL Descrição]**: (opcional) uma descrição das credenciais geradas.
+- **[!UICONTROL Nome]**: o nome das credenciais sendo geradas.
+- **[!UICONTROL Descrição]**: (opcional) uma descrição para as credenciais que você está gerando.
 - **[!UICONTROL Atribuído a]**: o usuário ao qual as credenciais serão atribuídas. Esse valor deve ser o endereço de email do usuário que está criando as credenciais.
 
-![A janela para Atualizar a conta.](../images/ui/credentials/update-credentials.png)
+![A caixa de diálogo Atualizar conta.](../images/ui/credentials/update-credentials.png)
 
-Depois de fornecer todos os detalhes necessários, selecione **[!UICONTROL Atualizar conta]** para concluir a atualização das suas credenciais.
+Depois de fornecer todos os detalhes necessários, selecione **[!UICONTROL Atualizar conta]** para concluir a atualização de suas credenciais.
 
 ## Usar credenciais para se conectar a clientes externos {#use-credential-to-connect}
 
 Você pode usar as credenciais com ou sem expiração para se conectar com clientes externos, como Aqua Data Studio, Looker ou Power BI. O método de entrada dessas credenciais varia de acordo com o cliente externo. Consulte a documentação do cliente externo para obter instruções específicas sobre o uso dessas credenciais.
 
-A imagem indica o local de cada parâmetro encontrado na interface, exceto a senha das credenciais sem expiração. Embora as credenciais sem expiração sejam fornecidas pelos arquivos de configuração JSON, você pode visualizar as credenciais que estão expirando no **Credenciais** na interface do usuário.
+A imagem indica o local de cada parâmetro encontrado na interface, exceto a senha das credenciais sem expiração. Embora as credenciais sem expiração sejam fornecidas pelos arquivos de configuração JSON, você pode exibir suas credenciais que estão expirando na guia **Credenciais** da interface.
 
-![A guia Credenciais do espaço de trabalho de Consultas com a seção Credenciais de Expiração destacada.](../images/ui/credentials/expiring-credentials.png)
+![A guia Credenciais do espaço de trabalho Consultas com a seção Credenciais que estão Expirando está realçada.](../images/ui/credentials/expiring-credentials.png)
 
 A tabela abaixo descreve os parâmetros normalmente necessários para se conectar a clientes externos.
 
 >[!NOTE]
 >
->Ao conectar-se a um host usando credenciais sem expiração, ainda é necessário usar todos os parâmetros listados no [!UICONTROL CREDENCIAIS QUE EXPIRAM] exceto a senha e o nome de usuário.
->O formato para inserir seu nome de usuário e senha usa valores separados por dois pontos, como visto neste exemplo `username:{your_username}` e `password:{password_string}`.
+>Ao conectar-se a um host usando credenciais sem expiração, ainda é necessário usar todos os parâmetros listados na seção [!UICONTROL CREDENCIAIS EM EXPIRAÇÃO], exceto a senha e o nome de usuário.
+>O formato para inserir seu nome de usuário e senha usa valores separados por dois pontos, como neste exemplo `username:{your_username}` e `password:{password_string}`.
 
 | Parâmetro | Descrição | Exemplo |
 |---|---|---|
-| **Servidor/Host** | O nome do servidor/host ao qual você está se conectando. <ul><li>Esse valor é usado para credenciais que estão ou não expirando e assume a forma de `server.adobe.io`. O valor é encontrado em **[!UICONTROL Host]** no [!UICONTROL CREDENCIAIS QUE EXPIRAM] seção.</ul></li> | `acme.platform.adobe.io` |
-| **Port** | A porta do servidor/host ao qual você está se conectando. <ul><li>Esse valor é usado para credenciais que estão ou não expirando e é encontrado em **[!UICONTROL Porta]** no [!UICONTROL CREDENCIAIS QUE EXPIRAM] seção.</ul></li> | `80` |
-| **Banco de dados** | O banco de dados ao qual você está se conectando. <ul><li>Esse valor é usado para credenciais que estão ou não expirando e é encontrado em **[!UICONTROL Banco de dados]** no [!UICONTROL CREDENCIAIS QUE EXPIRAM] seção. </ul></li> | `prod:all` |
-| **Nome de usuário** | O nome de usuário do usuário que está se conectando ao cliente externo. <ul><li>Esse valor é usado para credenciais com e sem expiração. Assume a forma de uma sequência alfanumérica antes de `@AdobeOrg`. Esse valor é encontrado em **[!UICONTROL Nome de usuário]**.</li></ul> | `ECBB80245ECFC73E8A095EC9@AdobeOrg` |
-| **Senha** | A senha do usuário que está se conectando ao cliente externo. <ul><li>Se você estiver usando credenciais com expiração, isso poderá ser encontrado em **[!UICONTROL Senha]** no prazo de [!UICONTROL CREDENCIAIS QUE EXPIRAM] seção.</li><li>Se você estiver usando credenciais sem expiração, esse valor serão os argumentos concatenados de technicalAccountID e a credencial retirada do arquivo JSON de configuração. O valor da senha tem o formato: `{technicalAccountId}:{credential}`.</li></ul> | <ul><li>Uma senha de credencial que expira tem mais de mil caracteres alfanuméricos. Nenhum exemplo será dado.</li><li>Uma senha de credencial sem expiração é a seguinte:<br>`4F2611B8613DK3670V495N55:3d182fa9e0b54f33a7881305c06203ee`</li></ul> |
+| **Servidor/Host** | O nome do servidor/host ao qual você está se conectando. <ul><li>Este valor é usado para credenciais com e sem expiração e assume a forma de `server.adobe.io`. O valor está em **[!UICONTROL Host]** na seção [!UICONTROL CREDENCIAIS QUE EXPIRAM].</ul></li> | `acme.platform.adobe.io` |
+| **Port** | A porta do servidor/host ao qual você está se conectando. <ul><li>Este valor é usado para credenciais com e sem expiração e é encontrado na **[!UICONTROL Porta]** da seção [!UICONTROL CREDENCIAIS DE EXPIRAÇÃO].</ul></li> | `80` |
+| **Banco de dados** | O banco de dados ao qual você está se conectando. <ul><li>Este valor é usado para credenciais que estão ou não expirando e foi encontrado no **[!UICONTROL Banco de Dados]** na seção [!UICONTROL CREDENCIAIS QUE ESTÃO EXPIRANDO]. </ul></li> | `prod:all` |
+| **Nome de usuário** | O nome de usuário do usuário que está se conectando ao cliente externo. <ul><li>Esse valor é usado para credenciais com e sem expiração. Assume a forma de uma sequência alfanumérica antes de `@AdobeOrg`. Este valor está em **[!UICONTROL Username]**.</li></ul> | `ECBB80245ECFC73E8A095EC9@AdobeOrg` |
+| **Password** | A senha do usuário que está se conectando ao cliente externo. <ul><li>Se você estiver usando credenciais com vencimento, elas poderão ser encontradas em **[!UICONTROL Senha]** na seção [!UICONTROL CREDENCIAIS QUE EXPIRAM].</li><li>Se você estiver usando credenciais sem expiração, esse valor serão os argumentos concatenados de technicalAccountID e a credencial retirada do arquivo JSON de configuração. O valor da senha tem o formato: `{technicalAccountId}:{credential}`.</li></ul> | <ul><li>Uma senha de credencial que expira tem mais de mil caracteres alfanuméricos. Nenhum exemplo será dado.</li><li>Uma senha de credencial sem expiração é a seguinte:<br>`4F2611B8613DK3670V495N55:3d182fa9e0b54f33a7881305c06203ee`</li></ul> |
 
 {style="table-layout:auto"}
 
 ## Próximas etapas
 
-Agora que você entende como as credenciais com e sem expiração funcionam, é possível usá-las para se conectar a clientes externos. Para obter mais informações detalhadas sobre clientes externos, leia o [guia conectar clientes ao Serviço de consulta](../clients/overview.md).
+Agora que você entende como as credenciais com e sem expiração funcionam, é possível usá-las para se conectar a clientes externos. Para obter mais informações detalhadas sobre clientes externos, leia o [guia Conectar clientes ao Serviço de Consulta](../clients/overview.md).

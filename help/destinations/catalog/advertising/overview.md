@@ -1,16 +1,16 @@
 ---
 keywords: destinos de publicidade;destinos;destinos de plataformas;advertising destinations;destinations;platform destinations
-title: Visão geral de destinos de publicidade
+title: Visão geral dos destinos do Advertising
 description: Conecte o Adobe Experience Platform a uma plataforma de publicidade de terceiros (por exemplo, DSP, rede de publicidade, SSP) e compartilhe públicos com pseudônimos nessas plataformas.
 exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
 source-git-commit: 2e8aac316f5e5edf169181b9e371dcd91e81c40d
 workflow-type: tm+mt
 source-wordcount: '263'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
-# Visão geral de destinos de publicidade {#advertising-destinations}
+# Visão geral dos destinos do Advertising {#advertising-destinations}
 
 ## Visão geral {#overview}
 
@@ -22,7 +22,7 @@ Ao se conectar a um destino de publicidade, os públicos-alvo são enviados como
 
 Atualmente, o Experience Platform é compatível com os destinos de anúncios listados abaixo.
 
-Para entender a diferença entre conexões e extensões, consulte [Conexões](../../destination-types.md#connections) na página Tipos e categorias de destino.
+Para entender a diferença entre conexões e extensões, consulte [Conexões](../../destination-types.md#connections) na página Tipos e Categorias de Destino.
 
 ### Conexões
 
@@ -39,13 +39,13 @@ Para entender a diferença entre conexões e extensões, consulte [Conexões](..
 * [Destino do PubMatic Connect](pubmatic.md)
 * [(Beta) Conexão com o Snapchat Ads](snap-inc.md)
 * [A conexão com a Trade Desk](tradedesk.md)
-* [(Beta) A conexão CRM da Trade Desk](tradedesk-emails.md)
+* [(Beta) A conexão do CRM da Trade Desk](tradedesk-emails.md)
 * [DadosX do Yahoo/Verizon](datax.md)
 
 ### Extensões
 
 * [Extensão do Adobe Advertising Cloud](adobe-advertising-cloud.md)
-* [Extensão de tag de conversão de publicidade do Awin](awin-conversiontag.md)
+* [Extensão de tag de conversão do Awin Advertising](awin-conversiontag.md)
 * [Extensão Awin Advertising Mastertag](awin-mastertag.md)
 * [Extensão de rastreamento de evento universal do Bing Ads](bing-ads.md)
 * [Extensão de ramificação](branch.md)
@@ -60,4 +60,4 @@ Para entender a diferença entre conexões e extensões, consulte [Conexões](..
 
 ## Conectar-se a um novo destino de publicidade {#connect-destination}
 
-Para enviar públicos-alvo para destinos de anúncios para suas campanhas, a Platform deve primeiro se conectar ao destino. Consulte a [tutorial de criação do destino](../../ui/connect-destination.md) para obter informações detalhadas sobre como configurar um novo destino.
+Para enviar públicos-alvo para destinos de anúncios para suas campanhas, a Platform deve primeiro se conectar ao destino. Consulte o [tutorial de criação de destino](../../ui/connect-destination.md) para obter informações detalhadas sobre a configuração de um novo destino.

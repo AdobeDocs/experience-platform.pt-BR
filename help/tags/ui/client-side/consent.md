@@ -4,7 +4,7 @@ description: Saiba como gerenciar sinais de aceitação e recusa do cliente para
 exl-id: 7762c42f-71c8-4f29-a96b-c6c04b838a91
 source-git-commit: 3bb0fc7b2807889d0a759e81c8ff728de3c0cbde
 workflow-type: tm+mt
-source-wordcount: '637'
+source-wordcount: '609'
 ht-degree: 93%
 
 ---
@@ -31,7 +31,7 @@ Integrações com gerentes de consentimento (como o OneTrust) podem definir e ra
 
 ## Analytics
 
-Na seção Rastreamento de link das definições das configurações do [!DNL Analytics], verifique se o seguinte *não* está selecionado:
+Na seção Rastreamento de link das definições das configurações da extensão do [!DNL Analytics], verifique se o seguinte *não* está selecionado:
 
 * Rastrear os links de download
 * Rastrear links externos

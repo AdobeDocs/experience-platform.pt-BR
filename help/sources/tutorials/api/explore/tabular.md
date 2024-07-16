@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform;página inicial;tópicos populares;fontes;API;explorar;serviço de fluxo
-title: Explorar uma fonte tabular usando a API do serviço de fluxo
+title: Explorar um Source tabular usando a API de serviço de fluxo
 description: Este tutorial usa a API de serviço de fluxo para explorar o conteúdo e a estrutura de uma fonte baseada em tabela.
 exl-id: 0c7a5b8a-2071-4ac2-b2d1-c5534e7c7d9c
 source-git-commit: 3bdeec8284873b8d9368f833b24e9922ed489019
 workflow-type: tm+mt
-source-wordcount: '469'
-ht-degree: 3%
+source-wordcount: '465'
+ht-degree: 6%
 
 ---
 
-# Explorar tabelas de dados usando o [!DNL Flow Service] API
+# Explorar tabelas de dados usando a API [!DNL Flow Service]
 
-Este tutorial fornece etapas sobre como explorar e visualizar a estrutura e o conteúdo das tabelas de dados usando o [[!DNL Flow Service]](https://www.adobe.io/experience-platform-apis/references/flow-service/) API.
+Este tutorial fornece etapas sobre como explorar e visualizar a estrutura e o conteúdo de suas tabelas de dados usando a API [[!DNL Flow Service]](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 >[!NOTE]
 >
@@ -20,18 +20,18 @@ Este tutorial fornece etapas sobre como explorar e visualizar a estrutura e o co
 
 ## Introdução
 
-Este guia requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
+Este manual necessita de uma compreensão funcional dos seguintes componentes da Adobe Experience Platform:
 
-* [Origens](../../../home.md): [!DNL Experience Platform] O permite que os dados sejam assimilados de várias fontes e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando o [!DNL Platform] serviços.
-* [Sandboxes](../../../../sandboxes/home.md): [!DNL Experience Platform] O fornece sandboxes virtuais que particionam uma única [!DNL Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
+* [Fontes](../../../home.md): [!DNL Experience Platform] permite que os dados sejam assimilados de várias fontes e fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços do [!DNL Platform].
+* [Sandboxes](../../../../sandboxes/home.md): [!DNL Experience Platform] fornece sandboxes virtuais que particionam uma única instância do [!DNL Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
 ### Uso de APIs da plataforma
 
-Para obter informações sobre como fazer chamadas para APIs da Platform com êxito, consulte o manual em [introdução às APIs da Platform](../../../../landing/api-guide.md).
+Para obter informações sobre como fazer chamadas para APIs da Platform com êxito, consulte o manual sobre [introdução às APIs da Platform](../../../../landing/api-guide.md).
 
 ## Explore suas tabelas de dados
 
-Você pode recuperar informações sobre a estrutura das tabelas de dados fazendo uma solicitação GET ao [!DNL Flow Service] ao fornecer a ID de conexão básica da sua origem.
+Você pode recuperar informações sobre a estrutura das tabelas de dados fazendo uma solicitação GET para a API [!DNL Flow Service] enquanto fornece a ID de conexão básica da sua origem.
 
 **Formato da API**
 
@@ -56,7 +56,7 @@ curl -X GET \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna uma matriz de tabelas da origem. Encontre a tabela que deseja trazer para a Platform e anote sua `path` propriedade, conforme necessário fornecê-la na próxima etapa para inspecionar sua estrutura.
+Uma resposta bem-sucedida retorna uma matriz de tabelas da origem. Encontre a tabela que deseja trazer para a Platform e anote sua propriedade `path`, pois é necessário fornecê-la na próxima etapa para inspecionar sua estrutura.
 
 ```json
 [
@@ -79,7 +79,7 @@ Uma resposta bem-sucedida retorna uma matriz de tabelas da origem. Encontre a ta
 
 ## Inspect a estrutura de uma tabela
 
-Para inspecionar o conteúdo das tabelas de dados, execute uma solicitação GET para o [!DNL Flow Service] ao especificar o caminho de uma tabela como parâmetro de consulta.
+Para inspecionar o conteúdo das tabelas de dados, execute uma solicitação GET para a API [!DNL Flow Service] ao especificar o caminho de uma tabela como um parâmetro de consulta.
 
 **Formato da API**
 
@@ -105,7 +105,7 @@ curl -X GET \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna informações sobre o conteúdo e a estrutura da tabela especificada. Detalhes sobre cada coluna da tabela estão localizados em elementos do `columns` matriz.
+Uma resposta bem-sucedida retorna informações sobre o conteúdo e a estrutura da tabela especificada. Detalhes sobre cada coluna da tabela estão localizados em elementos da matriz `columns`.
 
 ```json
 {
@@ -188,9 +188,9 @@ Uma resposta bem-sucedida retorna informações sobre o conteúdo e a estrutura 
 
 ## Próximas etapas
 
-Seguindo este tutorial, você coletou informações sobre a estrutura e o conteúdo das tabelas de dados. Além disso, você recuperou o caminho para a tabela que deseja assimilar na Platform. Você pode usar essas informações para criar uma conexão de origem e um fluxo de dados para trazer seus dados para a Platform. Consulte os tutoriais a seguir para obter etapas específicas sobre como criar uma conexão de origem e um fluxo de dados usando o [!DNL Flow Service] API:
+Seguindo este tutorial, você coletou informações sobre a estrutura e o conteúdo das tabelas de dados. Além disso, você recuperou o caminho para a tabela que deseja assimilar na Platform. Você pode usar essas informações para criar uma conexão de origem e um fluxo de dados para trazer seus dados para a Platform. Consulte os seguintes tutoriais para obter etapas específicas sobre como criar uma conexão de origem e um fluxo de dados usando a API [!DNL Flow Service]:
 
-* [Fontes de publicidade](../collect/advertising.md)
+* [Fontes do Advertising](../collect/advertising.md)
 * [Origens de CRM](../collect/crm.md)
 * [Fontes de sucesso do cliente](../collect/customer-success.md)
 * [Origens de Banco de Dados](../collect/database-nosql.md)

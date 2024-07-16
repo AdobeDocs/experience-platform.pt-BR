@@ -2,19 +2,19 @@
 title: Ponto de Extremidade de Tags Unificadas
 description: Saiba como criar, atualizar, gerenciar e excluir categorias de tags e tags usando as APIs do Adobe Experience Platform.
 role: Developer
-source-git-commit: ede314d0cbe50514090915fccf7ef3c2a5254b7a
+exl-id: 6687d1da-a5e4-435a-9f99-1b0f9ac98088
+source-git-commit: 717a4ea0568200c940cf9b8f26f4dd2aa9c00a3e
 workflow-type: tm+mt
 source-wordcount: '1860'
 ht-degree: 4%
 
 ---
 
-
 # Endpoint de tags unificadas
 
 >[!IMPORTANT]
 >
->O URL desse conjunto de endpoints é `https://experience.adobe.io`.
+>A URL do ponto de extremidade para este conjunto de pontos de extremidade é `https://experience.adobe.io`.
 
 Tags são um recurso que permite gerenciar taxonomias de metadados para classificar objetos de negócios para facilitar a descoberta e a categorização. Posteriormente, é possível organizar essas tags em outros grupos, adicionando-as a categorias de tags.
 
@@ -22,19 +22,19 @@ Este guia fornece informações para ajudar você a entender melhor as tags e ca
 
 ## Introdução
 
-Os endpoints usados neste guia fazem parte das APIs do Adobe Experience Platform. Antes de continuar, reveja o [guia de introdução](./getting-started.md) para obter informações importantes que você precisa saber para fazer chamadas com êxito para a API, incluindo cabeçalhos obrigatórios e como ler chamadas de API de exemplo
+Os endpoints usados neste guia fazem parte das APIs do Adobe Experience Platform. Antes de continuar, consulte o [guia de introdução](./getting-started.md) para obter informações importantes que você precisa saber para fazer chamadas com êxito para a API, incluindo os cabeçalhos necessários e como ler as chamadas de exemplo de API
 
 ### Glossário
 
-O glossário a seguir destaca a diferença entre uma **tag** e uma **categoria da tag**.
+O glossário a seguir destaca a diferença entre uma **tag** e uma **categoria de tag**.
 
-- **Tag**: uma tag permite gerenciar a taxonomia de metadados para objetos de negócios, permitindo classificar esses objetos para facilitar a descoberta e a categorização.
-   - **Tag sem categoria**: uma tag não categorizada é uma tag que não pertence a uma categoria de tag. Por padrão, as tags criadas serão descategorizadas.
-- **Categoria da tag**: uma categoria de tag permite agrupar as tags em conjuntos significativos, fornecendo mais contexto à finalidade da tag.
+- **Marca**: uma marca permite gerenciar a taxonomia de metadados de objetos comerciais, permitindo que você classifique esses objetos para facilitar a descoberta e a categorização.
+   - **Marca não categorizada**: uma marca não categorizada é uma marca que não pertence a uma categoria de marca. Por padrão, as tags criadas serão descategorizadas.
+- **Categoria de marca**: uma categoria de marca permite agrupar suas marcas em conjuntos significativos, permitindo que você forneça mais contexto para a finalidade da marca.
 
 ## Recuperar uma lista de categorias de tags {#get-tag-categories}
 
-Você pode recuperar uma lista de categorias de tags que pertencem à sua organização fazendo uma solicitação GET para a `/tagCategory` terminal.
+Você pode recuperar uma lista de categorias de marcas que pertencem à sua organização fazendo uma solicitação GET para o ponto de extremidade `/tagCategory`.
 
 **Formato da API**
 
@@ -49,9 +49,9 @@ Os parâmetros de consulta opcionais a seguir podem ser usados ao recuperar cate
 | --------------- | ----------- | ------- |
 | `start` | O local de onde a lista de resultados começa. Você pode usar isso para indicar o índice inicial para paginação de resultados. | `start=a` |
 | `limit` | O número máximo de categorias de tag que você deseja recuperar por página. | `limit=20` |
-| `property` | O atributo pelo qual você deseja filtrar ao recuperar categorias de tag. Os valores compatíveis incluem: &lt;ul><li>`name`: o nome da categoria da tag.</li></ul> | `property=name==category` |
-| `sortBy` | A ordem pela qual as categorias de tag são classificadas. Os valores compatíveis incluem `name`, `createdAt`, e `modifiedAt`. | `sortBy=name` |
-| `sortOrder` | A direção pela qual as categorias de tag são classificadas. Os valores compatíveis incluem `asc` e `desc`. | `sortOrder=asc` |
+| `property` | O atributo pelo qual você deseja filtrar ao recuperar categorias de tag. Os valores suportados incluem: &lt;ul≥<li>`name`: O nome da categoria da marca.</li></ul> | `property=name==category` |
+| `sortBy` | A ordem pela qual as categorias de tag são classificadas. Os valores suportados incluem `name`, `createdAt` e `modifiedAt`. | `sortBy=name` |
+| `sortOrder` | A direção pela qual as categorias de tag são classificadas. Os valores suportados incluem `asc` e `desc`. | `sortOrder=asc` |
 
 **Solicitação**
 
@@ -104,7 +104,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com uma lista de todas as ca
 >
 >Somente o administrador do sistema e o administrador do produto podem usar essa chamada de API.
 
-Você pode criar uma nova categoria de tag fazendo uma solicitação POST para a `/tagCategory` terminal.
+Você pode criar uma nova categoria de tag fazendo uma solicitação POST para o ponto de extremidade `/tagCategory`.
 
 **Formato da API**
 
@@ -159,7 +159,7 @@ Uma resposta de amostra retorna o status HTTP 200 com detalhes da categoria de t
 
 ## Recuperar uma categoria de tag específica {#get-tag-category}
 
-É possível recuperar uma categoria de tag específica que pertença à sua organização fazendo uma solicitação GET para `/tagCategory` e especificando a ID da categoria da tag.
+Você pode recuperar uma categoria de marca específica que pertença à sua organização fazendo uma solicitação GET para o ponto de extremidade `/tagCategory` e especificando a ID da categoria da marca.
 
 **Formato da API**
 
@@ -224,7 +224,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes da categoria de
 >
 >Somente o administrador do sistema e o administrador do produto podem usar essa chamada de API.
 
-Você pode atualizar os detalhes de uma categoria de tag específica que pertence à sua organização fazendo uma solicitação PATCH para o `/tagCategory` e especificando a ID da categoria da tag.
+Você pode atualizar os detalhes de uma categoria de tag específica que pertence à sua organização fazendo uma solicitação PATCH para o ponto de extremidade `/tagCategory` e especificando a ID da categoria de tag.
 
 **Formato da API**
 
@@ -256,8 +256,8 @@ curl -X PATCH https://experience.adobe.io/unifiedtags/tagCategory/e2b7c656-067b-
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `op` | A operação que foi concluída. Para atualizar uma categoria de tag específica, defina esse valor como `replace`. |
-| `path` | O caminho do campo que será atualizado. Os valores compatíveis incluem `name` e `description`. |
+| `op` | A operação que foi concluída. Para atualizar uma categoria de marca específica, defina esse valor como `replace`. |
+| `path` | O caminho do campo que será atualizado. Os valores suportados incluem `name` e `description`. |
 | `value` | O valor atualizado do campo que você deseja atualizar. |
 | `from` | O valor original do campo que você deseja atualizar. |
 
@@ -291,7 +291,7 @@ Uma resposta HTTP status 200 bem-sucedida com informações sobre a categoria de
 >
 >Somente o administrador do sistema e o administrador do produto podem usar essa chamada de API.
 
-É possível excluir uma categoria de tag específica que pertence à sua organização fazendo uma solicitação DELETE para a `/tagCategory` e especificando a ID da categoria da tag.
+Você pode excluir uma categoria de tag específica que pertence à sua organização fazendo uma solicitação DELETE para o ponto de extremidade `/tagCategory` e especificando a ID da categoria de tag.
 
 **Formato da API**
 
@@ -323,7 +323,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 juntamente com uma resposta 
 
 ## Recuperar uma lista de tags {#get-tags}
 
-Você pode recuperar uma lista de tags que pertencem à sua organização fazendo uma solicitação GET para a `/tags` e a ID da categoria de tag.
+Você pode recuperar uma lista de marcas que pertencem à sua organização fazendo uma solicitação GET para o ponto de extremidade `/tags` e a ID da categoria da marca.
 
 **Formato da API**
 
@@ -338,9 +338,9 @@ Os parâmetros de consulta opcionais a seguir podem ser usados ao recuperar tags
 | --------------- | ----------- | ------- |
 | `start` | O local de onde a lista de resultados começa. Você pode usar isso para indicar o índice inicial para paginação de resultados. | `start=a` |
 | `limit` | O número máximo de tags que você deseja recuperar por página. | `limit=20` |
-| `property` | O atributo pelo qual você deseja filtrar ao recuperar tags. Os valores compatíveis incluem:<ul><li>`name`: o nome da tag.</li><li>`archived`: se as tags são arquivadas ou desarquivadas. Você pode definir esse valor como `true` ou `false`.</li><li>`tagCategoryId`: a ID da categoria de tag à qual a tag pertence.</li></ul> | <ul><li>`property=name==TestTag`</li><li>`property=archived==false`</li><li>`property=tagCategoryId==e2b7c656-067b-4413-a366-adde0401df50`</li> |
-| `sortBy` | A ordem pela qual as tags são classificadas. Os valores compatíveis incluem `name`, `createdAt`, e `modifiedAt`. | `sortBy=name` |
-| `sortOrder` | A direção pela qual as categorias de tag são classificadas. Os valores compatíveis incluem `asc` e `desc`. | `sortOrder=asc` |
+| `property` | O atributo pelo qual você deseja filtrar ao recuperar tags. Os valores compatíveis incluem:<ul><li>`name`: O nome da marca.</li><li>`archived`: Se as marcas estão ou não arquivadas. Você pode definir este valor como `true` ou `false`.</li><li>`tagCategoryId`: A identificação da categoria de marcas à qual a marca pertence.</li></ul> | <ul><li>`property=name==TestTag`</li><li>`property=archived==false`</li><li>`property=tagCategoryId==e2b7c656-067b-4413-a366-adde0401df50`</li> |
+| `sortBy` | A ordem pela qual as tags são classificadas. Os valores suportados incluem `name`, `createdAt` e `modifiedAt`. | `sortBy=name` |
+| `sortOrder` | A direção pela qual as categorias de tag são classificadas. Os valores suportados incluem `asc` e `desc`. | `sortOrder=asc` |
 
 
 **Solicitação**
@@ -506,9 +506,9 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes das tags perten
 >
 >Somente o administrador do sistema e o administrador do produto podem usar essa chamada de API para criar uma nova tag em uma categoria de tag especificada.
 >
->Ao criar uma tag sem categoria, você **não** precisa de permissões de administrador.
+>Se você estiver criando uma marca sem categoria, **não** precisará de permissões de administrador.
 
-Você pode criar uma nova tag fazendo uma solicitação POST para o `/tags` terminal.
+Você pode criar uma nova tag fazendo uma solicitação POST para o ponto de extremidade `/tags`.
 
 **Formato da API**
 
@@ -575,7 +575,7 @@ Uma resposta bem-sucedida retorna o status HTTP 201 com detalhes da tag recém-c
 
 ## Recuperar uma tag específica {#get-tag}
 
-Você pode recuperar uma tag específica que pertence à sua organização fazendo uma solicitação GET para `/tags` e especificando a ID da tag que você deseja recuperar.
+Você pode recuperar uma marca específica que pertença à sua organização fazendo uma solicitação GET para o ponto de extremidade `/tags` e especificando a ID da marca que deseja recuperar.
 
 **Formato da API**
 
@@ -633,13 +633,13 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes da tag especifi
 | `modifiedBy` | A ID do último usuário que atualizou a tag. |
 | `tagCategoryId` | A ID da categoria da tag à qual a tag pertence. |
 | `tagCategoryName` | O nome da categoria da tag à qual a tag pertence. |
-| `archived` | O status de arquivamento da tag. Se definida como `true`, significa que a tag do está arquivada. |
+| `archived` | O status de arquivamento da tag. Se definido como `true`, significa que a tag está arquivada. |
 
 +++
 
 ## Validar tags {#validate-tags}
 
-Você pode validar se as tags existem fazendo uma solicitação POST para a `/tags/validate` terminal.
+Você pode validar se as marcas existem fazendo uma solicitação POST para o ponto de extremidade `/tags/validate`.
 
 **Formato da API**
 
@@ -668,7 +668,7 @@ curl -X POST https://experience.adobe.io/unifiedtags/tags/validate
 | Propriedade | Descrição |
 | -------- | ----------- |
 | `ids` | Uma matriz que contém uma lista de IDs de tag que você deseja validar. |
-| `entity` | A entidade que solicita a validação. Você pode usar o `{API_KEY}` para este parâmetro. |
+| `entity` | A entidade que solicita a validação. Você pode usar o valor `{API_KEY}` para este parâmetro. |
 
 +++
 
@@ -705,7 +705,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com informações sobre quai
 
 ## Atualizar uma tag específica {#update-tag}
 
-Você pode atualizar uma tag especificada fazendo uma solicitação PATCH para a `/tags` e fornecendo a ID da tag que você deseja atualizar.
+Você pode atualizar uma tag especificada fazendo uma solicitação PATCH para o ponto de extremidade `/tags` e fornecendo a ID da tag que deseja atualizar.
 
 **Formato da API**
 
@@ -737,8 +737,8 @@ curl -X GET https://experience.adobe.io/unifiedtags/tags/2bd5ddd9-7284-4767-81d9
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `op` | A operação que precisa ser feita. Nesse caso de uso, sempre será definido como `replace`. |
-| `path` | O caminho do campo que será atualizado. Os valores compatíveis incluem `name`, `archived`, e `tagCategoryId`. |
+| `op` | A operação que precisa ser feita. Neste caso de uso, sempre será definido como `replace`. |
+| `path` | O caminho do campo que será atualizado. Os valores suportados incluem `name`, `archived` e `tagCategoryId`. |
 | `value` | O valor atualizado do campo que você deseja atualizar. |
 | `from` | O valor original do campo que você deseja atualizar. |
 
@@ -773,9 +773,9 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes da tag recém-a
 >
 >Somente o administrador do sistema e o administrador do produto podem usar essa chamada de API.
 >
->Além disso, a tag **não é possível** estar associado a quaisquer objetos de negócios e **deve** ser arquivado antes de excluir a tag. Você pode arquivar a tag usando o [atualizar ponto de extremidade da tag](#update-tag).
+>Além disso, a marca **não pode** ser associada a qualquer objeto comercial e **deve** ser arquivada antes que você possa excluir a marca. Você pode arquivar a marca usando o [ponto de extremidade da marca de atualização](#update-tag).
 
-É possível excluir uma tag específica criando uma tag DELETE para a `/tags` e especificando a ID da tag que deseja excluir.
+Você pode excluir uma tag específica criando uma tag DELETE para o ponto de extremidade `/tags` e especificando a ID da tag que você deseja excluir.
 
 **Formato da API**
 
@@ -807,4 +807,4 @@ Uma resposta bem-sucedida retorna o status HTTP 200 juntamente com uma resposta 
 
 ## Próximas etapas
 
-Depois de ler este guia, você compreenderá melhor como criar, gerenciar e excluir tags e categorias de tags usando as APIs do Adobe Experience Platform. Para obter mais informações sobre como gerenciar tags usando a interface do usuário, leia a [guia de gerenciamento de tags](../ui/managing-tags.md). Para obter mais informações sobre como gerenciar categorias de tags usando a interface do, leia a [guia de categorias de tag](../ui/tags-categories.md).
+Depois de ler este guia, você compreenderá melhor como criar, gerenciar e excluir tags e categorias de tags usando as APIs do Adobe Experience Platform. Para obter mais informações sobre como gerenciar tags usando a interface do usuário, leia o [guia de gerenciamento de tags](../ui/managing-tags.md). Para obter mais informações sobre como gerenciar categorias de marcas usando a interface do usuário, leia o [guia de categorias de marcas](../ui/tags-categories.md).

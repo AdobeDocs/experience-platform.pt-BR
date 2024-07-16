@@ -23,7 +23,7 @@ Este documento aborda como definir tipos de elementos de dados para uma extensã
 
 >[!IMPORTANT]
 >
->Se você estiver desenvolvendo uma extensão da Web, consulte o guia em [tipos de elementos de dados para extensões da web](../web/data-element-types.md) em vez disso.
+>Se você estiver desenvolvendo uma extensão da Web, consulte o guia em [tipos de elementos de dados para extensões da Web](../web/data-element-types.md).
 >
 >Este documento pressupõe que você esteja familiarizado com os módulos de biblioteca e como eles são integrados nas extensões de borda. Se você precisar de uma introdução, consulte a visão geral sobre [formatação do módulo de biblioteca](./format.md) antes de retornar a este guia.
 

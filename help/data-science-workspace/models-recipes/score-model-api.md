@@ -7,7 +7,7 @@ description: Este tutorial mostrará como aproveitar as APIs do Sensei Machine L
 exl-id: 202c63b0-86d8-4a82-8ec8-d144a8911d08
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '550'
+source-wordcount: '547'
 ht-degree: 1%
 
 ---
@@ -18,9 +18,9 @@ Este tutorial mostrará como aproveitar as APIs para criar um experimento e uma 
 
 ## Criar um experimento agendado para pontuação
 
-Semelhante aos Experimentos programados para treinamento, a criação de um Experimento programado para pontuação também é feita incluindo uma `template` para o parâmetro body. Além disso, a `name` campo em `tasks` no corpo é definido como `score`.
+Semelhante aos Experimentos agendados para treinamento, a criação de um Experimento agendado para pontuação também é feita incluindo uma seção `template` no parâmetro do corpo. Além disso, o campo `name` em `tasks` no corpo é definido como `score`.
 
-Este é um exemplo de criação de um experimento que será executado a cada 20 minutos a partir de `startTime` e serão executados até `endTime`.
+Este é um exemplo de criação de um Experimento que será executado a cada 20 minutos a partir de `startTime` e será executado até `endTime`.
 
 **Solicitação**
 
@@ -34,10 +34,10 @@ curl -X POST \
   -d '{JSON_PAYLOAD}'
 ```
 
-`{ORG_ID}`: as credenciais da organização foram encontradas na integração exclusiva do Adobe Experience Platform.\
-`{ACCESS_TOKEN}`: Seu valor de token do portador específico fornecido após a autenticação.\
-`{API_KEY}`: o valor da chave de API específica encontrado na integração exclusiva do Adobe Experience Platform.\
-`{JSON_PAYLOAD}`: objeto de Execução de experimento a ser enviado. O exemplo que usamos em nosso tutorial é mostrado aqui:
+`{ORG_ID}`: as credenciais da sua organização foram encontradas em sua integração exclusiva com o Adobe Experience Platform.\
+`{ACCESS_TOKEN}`: Seu valor de token de portador específico fornecido após a autenticação.\
+`{API_KEY}`: O valor da sua chave de API específica foi encontrado na sua integração exclusiva do Adobe Experience Platform.\
+`{JSON_PAYLOAD}`: objeto de Execução de Experimento a ser enviado. O exemplo que usamos em nosso tutorial é mostrado aqui:
 
 ```JSON
 {
@@ -68,7 +68,7 @@ curl -X POST \
 ```
 
 `{INSTANCE_ID}`: a ID que representa a MLInstance.\
-`{MODEL_ID}`: a ID que representa o modelo treinado.
+`{MODEL_ID}`: a ID que representa o Modelo treinado.
 
 Veja a seguir a resposta após criar o experimento agendado.
 
@@ -102,13 +102,13 @@ Veja a seguir a resposta após criar o experimento agendado.
 }
 ```
 
-`{EXPERIMENT_ID}`: a ID que representa o experimento.\
+`{EXPERIMENT_ID}`: a ID que representa o Experimento.\
 `{INSTANCE_ID}`: a ID que representa a MLInstance.
 
 
 ### Criar uma execução de experimento para pontuação
 
-Agora, com o modelo treinado, podemos criar uma Execução de experimento para pontuação. O valor de `modelId` é o parâmetro `id` parâmetro retornado na solicitação Modelo do GET acima.
+Agora, com o modelo treinado, podemos criar uma Execução de experimento para pontuação. O valor do parâmetro `modelId` é o parâmetro `id` retornado na solicitação do Modelo GET acima.
 
 **Solicitação**
 
@@ -122,11 +122,11 @@ curl -X POST \
   -d '{JSON_PAYLOAD}'
 ```
 
-`{ORG_ID}`: as credenciais da organização foram encontradas na integração exclusiva do Adobe Experience Platform.\
-`{ACCESS_TOKEN}`: Seu valor de token do portador específico fornecido após a autenticação.\
-`{API_KEY}`: o valor da chave de API específica encontrado na integração exclusiva do Adobe Experience Platform.\
+`{ORG_ID}`: as credenciais da sua organização foram encontradas em sua integração exclusiva com o Adobe Experience Platform.\
+`{ACCESS_TOKEN}`: Seu valor de token de portador específico fornecido após a autenticação.\
+`{API_KEY}`: O valor da sua chave de API específica foi encontrado na sua integração exclusiva do Adobe Experience Platform.\
 `{EXPERIMENT_ID}`: a ID correspondente ao Experimento que você deseja direcionar. Isso pode ser encontrado na resposta ao criar o experimento.\
-`{JSON_PAYLOAD}`: Dados a serem publicados. O exemplo que usamos em nosso tutorial está aqui:
+`{JSON_PAYLOAD}`: Dados a serem postados. O exemplo que usamos em nosso tutorial está aqui:
 
 ```JSON
 {
@@ -169,7 +169,7 @@ A resposta da criação da execução do experimento é mostrada abaixo:
 ```
 
 `{EXPERIMENT_ID}`: a ID correspondente ao experimento em que a execução está.\
-`{EXPERIMENT_RUN_ID}`: a ID correspondente à execução do experimento que você acabou de criar.
+`{EXPERIMENT_RUN_ID}`: a identificação correspondente à execução do experimento que você acabou de criar.
 
 
 ### Recuperar um status de Execução de experimento para a Execução de experimento programada
@@ -186,8 +186,8 @@ curl -X GET \
 ```
 
 `{EXPERIMENT_ID}`: a ID correspondente ao experimento em que a execução está.\
-`{ACCESS_TOKEN}`: Seu valor de token do portador específico fornecido após a autenticação.\
-`{ORG_ID}`: as credenciais da organização foram encontradas na integração exclusiva do Adobe Experience Platform.
+`{ACCESS_TOKEN}`: Seu valor de token de portador específico fornecido após a autenticação.\
+`{ORG_ID}`: as credenciais da sua organização foram encontradas em sua integração exclusiva com o Adobe Experience Platform.
 
 Como há várias execuções de experimento para um experimento específico, a resposta retornada terá uma matriz de IDs de execução.
 
@@ -212,12 +212,12 @@ Como há várias execuções de experimento para um experimento específico, a r
 }
 ```
 
-`{EXPERIMENT_RUN_ID}`: a ID correspondente à execução do experimento.\
+`{EXPERIMENT_RUN_ID}`: a identificação correspondente à execução do experimento.\
 `{EXPERIMENT_ID}`: a ID correspondente ao experimento em que a execução está.
 
 ### Parar e excluir um experimento agendado
 
-Se você deseja interromper a execução de um experimento agendado antes que seu `endTime`, isso pode ser feito consultando uma solicitação DELETE para o `{EXPERIMENT_ID}`
+Se você quiser parar a execução de um Experimento agendado antes de seu `endTime`, isso pode ser feito consultando uma solicitação DELETE para o `{EXPERIMENT_ID}`
 
 **Solicitação**
 
@@ -229,8 +229,8 @@ curl -X DELETE \
 ```
 
 `{EXPERIMENT_ID}`: a ID correspondente ao experimento.\
-`{ACCESS_TOKEN}`: Seu valor de token do portador específico fornecido após a autenticação.\
-`{ORG_ID}`: as credenciais da organização foram encontradas na integração exclusiva do Adobe Experience Platform.
+`{ACCESS_TOKEN}`: Seu valor de token de portador específico fornecido após a autenticação.\
+`{ORG_ID}`: as credenciais da sua organização foram encontradas em sua integração exclusiva com o Adobe Experience Platform.
 
 >[!NOTE]
 >

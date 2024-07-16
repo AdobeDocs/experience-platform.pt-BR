@@ -17,15 +17,15 @@ Este documento fornece as informações necessárias para criar modelos de consu
 
 ## Pré-requisitos
 
-Você deve ter o [!UICONTROL Gerenciar consultas] permissão ativada para acessar o Editor de consultas e visualizar o painel de consultas na interface do usuário da Platform. A permissão é ativada por meio do Adobe [Admin Console](https://adminconsole.adobe.com/). Entre em contato com o administrador da organização se você não tiver privilégios de administrador para habilitar essa permissão. Consulte a documentação de controle de acesso para [instruções completas sobre como adicionar permissões por meio do Admin Console](../../access-control/home.md).
+Você deve ter a permissão [!UICONTROL Gerenciar consultas] habilitada para acessar o Editor de consultas e exibir o painel de consultas na interface do usuário da Platform. A permissão é habilitada por meio do Adobe [Admin Console](https://adminconsole.adobe.com/). Entre em contato com o administrador da organização se você não tiver privilégios de administrador para habilitar essa permissão. Consulte a documentação de controle de acesso para obter [instruções completas sobre como adicionar permissões por meio do Admin Console](../../access-control/home.md).
 
 ## Criar um modelo de consulta
 
-Você pode criar modelos de consulta por meio de dois métodos, fazendo uma solicitação POST para a API do Serviço de consulta `query-templates` endpoint ou gravando, nomeando e salvando uma consulta por meio do Editor de consultas.
+Você pode criar modelos de consulta por meio de dois métodos, fazendo uma solicitação POST para o ponto de extremidade da API de Serviço de Consulta `query-templates` ou gravando, nomeando e salvando uma consulta por meio do Editor de Consultas.
 
 ### Use o Editor de consultas para criar e salvar uma consulta como modelo
 
-Consulte a documentação para obter instruções sobre como usar o Editor de consultas para [gravação](./user-guide.md#query-authoring) e [salvar consultas](./user-guide.md#saving-queries). Depois de nomear e salvar sua consulta, ela estará disponível para ser reutilizada como um template de consulta no [!UICONTROL Modelos] guia.
+Consulte a documentação para obter instruções sobre como usar o Editor de consultas para [gravar](./user-guide.md#query-authoring) e [salvar consultas](./user-guide.md#saving-queries). Depois de nomear e salvar sua consulta, ela estará disponível para ser reutilizada como um modelo de consulta na guia [!UICONTROL Modelos].
 
 >[!TIP]
 >
@@ -33,25 +33,25 @@ Consulte a documentação para obter instruções sobre como usar o Editor de co
 
 ## Procurar modelos de consulta {#browse}
 
-No espaço de trabalho Queries da interface do Platform, selecione **[!UICONTROL Modelos]** para exibir a lista de consultas salvas disponíveis.
+No espaço de trabalho Consultas da interface da Platform, selecione **[!UICONTROL Modelos]** para exibir a lista de consultas salvas disponíveis.
 
 ![O espaço de trabalho de consultas com a guia Modelos realçada.](../images/ui/query-templates/query-templates.png)
 
 Para encontrar informações relevantes sobre o modelo, selecione qualquer modelo de consulta na lista disponível para abrir o painel de detalhes.
 
-![O painel de detalhes no espaço de trabalho de consultas com a ID de consulta destacada.](../images/ui/query-templates/details-panel.png)
+![O painel de detalhes no espaço de trabalho de consultas com a ID de consulta realçada.](../images/ui/query-templates/details-panel.png)
 
 No painel de detalhes, é possível executar as seguintes ações:
 
-* Selecionar **[!UICONTROL Executar como CTAS]** para criar uma nova tabela selecionando dados de uma tabela ou tabelas existentes. Essa opção só estará disponível se você tiver uma consulta SELECT.
-* Selecionar **[!UICONTROL Adicionar programação]** para começar a editar o agendamento do seu modelo de query.
-* Selecionar **[!UICONTROL Exibir programação]** para navegar até o [!UICONTROL Agendamentos] do Editor de consultas. Essa exibição contém todas as informações de agendamento associadas à consulta.
-* Selecionar **[!UICONTROL Excluir consulta]** para excluir o modelo.
+* Selecione **[!UICONTROL Executar como CTAS]** para criar uma nova tabela selecionando dados de uma ou mais tabelas existentes. Essa opção só estará disponível se você tiver uma consulta SELECT.
+* Selecione **[!UICONTROL Adicionar agendamento]** para começar a editar seu agendamento para seu modelo de consulta.
+* Selecione **[!UICONTROL Exibir agendamento]** para navegar até a guia [!UICONTROL Agendamentos] do Editor de Consulta. Essa exibição contém todas as informações de agendamento associadas à consulta.
+* Selecione **[!UICONTROL Excluir consulta]** para excluir o modelo.
 * Selecione o nome do modelo para navegar até o Editor de consultas onde o SQL está pré-preenchido para edição.
 
 ### Usar a API do Serviço de consulta para criar um modelo
 
-Consulte a documentação para obter instruções sobre [como criar um modelo de consulta](../api/query-templates.md#create-a-query-template) usando a API do Serviço de consulta. Os detalhes de um template de consulta recém-criado estão contidos no corpo da resposta.
+Consulte a documentação para obter instruções sobre [como criar um modelo de consulta](../api/query-templates.md#create-a-query-template) usando a API do Serviço de Consulta. Os detalhes de um template de consulta recém-criado estão contidos no corpo da resposta.
 
 >[!NOTE]
 >
@@ -59,6 +59,6 @@ Consulte a documentação para obter instruções sobre [como criar um modelo de
 
 ## Próximas etapas
 
-Ao ler este documento, agora você tem uma melhor compreensão de como criar modelos de consulta no Serviço de consulta. Consulte a [Visão geral da interface](./overview.md)ou a variável [Guia da API do Serviço de consulta](../api/getting-started.md) para saber mais sobre os recursos do Serviço de consulta.
+Ao ler este documento, agora você tem uma melhor compreensão de como criar modelos de consulta no Serviço de consulta. Consulte a [visão geral da interface](./overview.md) ou o [Guia da API do Serviço de Consulta](../api/getting-started.md) para saber mais sobre os recursos do Serviço de Consulta.
 
-Consulte a [guia de endpoint de consultas programadas](../api/scheduled-queries.md) para saber como agendar consultas usando a API ou o [Guia do Editor de consultas](./user-guide.md#scheduled-queries) para a interface do usuário.
+Consulte o [manual de endpoint de consultas agendadas](../api/scheduled-queries.md) para saber como agendar consultas usando a API ou o [guia do Editor de Consultas](./user-guide.md#scheduled-queries) para a interface do usuário.

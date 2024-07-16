@@ -6,8 +6,8 @@ description: O endpoint /sampledata na API do registro de esquema permite gerar 
 exl-id: 424d33ca-0624-4891-bf83-044ac2861579
 source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
-source-wordcount: '315'
-ht-degree: 6%
+source-wordcount: '311'
+ht-degree: 2%
 
 ---
 
@@ -15,13 +15,13 @@ ht-degree: 6%
 
 Para assimilar dados na Adobe Experience Platform, o formato e a estrutura dos dados devem estar em conformidade com um esquema existente do Experience Data Model (XDM). Dependendo da complexidade do esquema para um conjunto de dados específico, pode ser difícil determinar a forma exata dos dados que o conjunto de dados espera após a assimilação.
 
-Usar o `/sampledata` endpoint na variável [!DNL Schema Registry] , você pode gerar um objeto de assimilação de exemplo para qualquer esquema criado anteriormente.
+Usando o ponto de extremidade `/sampledata` na API [!DNL Schema Registry], você pode gerar um objeto de assimilação de exemplo para qualquer esquema criado anteriormente.
 
 ## Introdução
 
-O endpoint usado neste manual faz parte da [[!DNL Schema Registry] API do ](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Antes de continuar, reveja o [guia de introdução](./getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre os cabeçalhos necessários para fazer chamadas com êxito para qualquer API de Experience Platform.
+O ponto de extremidade usado neste guia faz parte da [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Antes de continuar, consulte o [guia de introdução](./getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre os cabeçalhos necessários para fazer chamadas para qualquer API Experience Platform com êxito.
 
-O endpoint de dados de exemplo faz parte das chamadas de procedimento remoto (RPCs) suportadas pelo [!DNL Schema Registry]. Ao contrário de outros endpoints no [!DNL Schema Registry] API, os pontos de extremidade RPC não exigem cabeçalhos adicionais como `Accept` ou `Content-Type`, e não use um `CONTAINER_ID`. Em vez disso, eles devem usar o `/rpc` conforme demonstrado na chamada de API abaixo.
+O ponto de extremidade de dados de exemplo faz parte das chamadas de procedimento remoto (RPCs) para as quais o [!DNL Schema Registry] oferece suporte. Ao contrário de outros pontos de extremidade na API [!DNL Schema Registry], os pontos de extremidade RPC não exigem cabeçalhos adicionais como `Accept` ou `Content-Type` e não usam `CONTAINER_ID`. Em vez disso, eles devem usar o namespace `/rpc`, conforme demonstrado na chamada de API abaixo.
 
 ## Recuperar dados de amostra de um esquema
 
@@ -35,7 +35,7 @@ GET /rpc/sampledata/{SCHEMA_ID}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{SCHEMA_ID}` | A variável `meta:altId` ou codificado em URL `$id` do esquema para o qual você deseja gerar dados de amostra. |
+| `{SCHEMA_ID}` | O `meta:altId` ou o `$id` codificado em URL do esquema para o qual você deseja gerar dados de exemplo. |
 
 {style="table-layout:auto"}
 

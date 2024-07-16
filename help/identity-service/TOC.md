@@ -33,7 +33,7 @@ ht-degree: 29%
    - [Visão geral da ECID](./features/ecid.md)
 - [Guia de implementação](implementation.md)
 - [Medidas de proteção de dados de identidade](guardrails.md)
-- API do serviço de identidade {#api}
+- API do Serviço de Identidade {#api}
    - [Introdução](api/getting-started.md)
    - [Rotular um campo como identidade](api/label-identities.md)
    - [Listar identidades de cluster](api/list-cluster-identites.md)

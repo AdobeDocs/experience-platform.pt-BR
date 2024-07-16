@@ -4,7 +4,7 @@ description: Saiba mais sobre a extensão de tag do AEM Asset Insights no Adobe 
 exl-id: 7d3edd42-09fe-4e40-93dc-1edd2fdbb121
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
-source-wordcount: '1118'
+source-wordcount: '1062'
 ht-degree: 98%
 
 ---
@@ -24,7 +24,7 @@ Esta extensão deve ser usada juntamente com o [AEM Asset Insights](https://expe
 Os relatórios do AEM Asset no Analytics contêm três dimensões do AEM:
 
 * ID do ativo
-* Origem do ativo
+* Source de ativos
 * Ativo clicado
 
 Há também duas métricas:
@@ -39,13 +39,13 @@ A extensão de tag do &quot;*Adobe Analytics*&quot; para o Adobe Experience Plat
 
 1. Ative o [AEM Asset Insights](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/configure-asset-insights.html?lang=pt-BR). No AEM, selecione **[!UICONTROL Ferramentas > Ativos]** e abra o painel **[!UICONTROL Configuração do Insights]**.
 
-1. Desative o rastreamento de UUID.
+1. Desabilitar rastreamento de UUID.
 
    >[!IMPORTANT]
    >
-   >Essa extensão *não* funcionará se a configuração do AEM Assets **[!UICONTROL Desativar rastreamento de UUID]** estiver marcada. Ela está desmarcada por padrão.
+   >Essa extensão *não* funcionará se a configuração do AEM Assets **[!UICONTROL Desabilitar rastreamento de UUID]** estiver marcada. Ela está desmarcada por padrão.
 
-   ![Desativar o rastreamento de UUID](images/disableassets.jpg)
+   ![Desabilitar o rastreamento de UUID](images/disableassets.jpg)
 
 ## Configurar o Adobe Experience Manager (AEM)
 

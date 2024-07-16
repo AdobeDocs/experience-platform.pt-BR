@@ -7,7 +7,7 @@ description: Este tutorial ajudará você a começar a usar as APIs de assimila�
 exl-id: 097dfd5a-4e74-430d-8a12-cac11b1603aa
 source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '1024'
+source-wordcount: '1032'
 ht-degree: 3%
 
 ---
@@ -15,23 +15,23 @@ ht-degree: 3%
 
 # Transmitir dados de registro usando APIs de assimilação de fluxo
 
-Este tutorial ajudará você a começar a usar as APIs de assimilação de streaming, parte da Adobe Experience Platform [!DNL Data Ingestion Service] APIs.
+Este tutorial ajudará você a começar a usar as APIs de assimilação de streaming, parte das APIs do Adobe Experience Platform [!DNL Data Ingestion Service].
 
 ## Introdução
 
 Este tutorial requer um conhecimento prático de vários serviços da Adobe Experience Platform. Antes de iniciar este tutorial, revise a documentação dos seguintes serviços:
 
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): o quadro normalizado pelo qual [!DNL Platform] organiza os dados de experiência.
-   - [Guia do desenvolvedor do Registro de esquema](../../xdm/api/getting-started.md): um guia abrangente que cobre cada um dos endpoints disponíveis do [!DNL Schema Registry] API e como fazer chamadas para eles. Isso inclui conhecer o seu `{TENANT_ID}`, que aparece em chamadas neste tutorial, além de saber como criar esquemas, que é usado na criação de um conjunto de dados para assimilação.
-- [[!DNL Real-Time Customer Profile]](../../profile/home.md): fornece um perfil de consumidor unificado em tempo real com base em dados agregados de várias fontes.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): A estrutura padronizada pela qual o [!DNL Platform] organiza os dados de experiência.
+   - [Guia do desenvolvedor do Registro de Esquema](../../xdm/api/getting-started.md): um guia abrangente que cobre cada um dos pontos de extremidade disponíveis da API [!DNL Schema Registry] e como fazer chamadas para eles. Isso inclui conhecer seu `{TENANT_ID}`, que aparece em chamadas neste tutorial, bem como saber como criar esquemas, que é usado na criação de um conjunto de dados para assimilação.
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md): Fornece um perfil de consumidor unificado em tempo real com base em dados agregados de múltiplas fontes.
 
 ### Uso de APIs da plataforma
 
-Para obter informações sobre como fazer chamadas para APIs da Platform com êxito, consulte o manual em [introdução às APIs da Platform](../../landing/api-guide.md).
+Para obter informações sobre como fazer chamadas para APIs da Platform com êxito, consulte o manual sobre [introdução às APIs da Platform](../../landing/api-guide.md).
 
-## Compor um esquema com base no [!DNL XDM Individual Profile] classe
+## Compor um esquema com base na classe [!DNL XDM Individual Profile]
 
-Para criar um conjunto de dados, primeiro será necessário criar um novo esquema que implemente a variável [!DNL XDM Individual Profile] classe. Para obter mais informações sobre como criar schemas, leia a [Guia do desenvolvedor da API do registro de esquema](../../xdm/api/getting-started.md).
+Para criar um conjunto de dados, primeiro será necessário criar um novo esquema que implemente a classe [!DNL XDM Individual Profile]. Para obter mais informações sobre como criar esquemas, leia o [guia do desenvolvedor da API do Registro de Esquemas](../../xdm/api/getting-started.md).
 
 **Formato da API**
 
@@ -73,7 +73,7 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/sch
 | -------- | ----------- |
 | `title` | O nome que você deseja usar para o esquema. Esse nome deve ser exclusivo. |
 | `description` | Uma descrição significativa do esquema que você está criando. |
-| `meta:immutableTags` | Neste exemplo, a variável `union` é usada para manter seus dados em [[!DNL Real-Time Customer Profile]](../../profile/home.md). |
+| `meta:immutableTags` | Neste exemplo, a tag `union` é usada para manter seus dados em [[!DNL Real-Time Customer Profile]](../../profile/home.md). |
 
 **Resposta**
 
@@ -128,17 +128,17 @@ Uma resposta bem-sucedida retorna o status HTTP 201 com detalhes do esquema rec�
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `{TENANT_ID}` | Essa ID é usada para garantir que os recursos criados tenham o namespace adequado e estejam contidos na organização. Para obter mais informações sobre a ID do locatário, leia a [guia de registro de esquema](../../xdm/api/getting-started.md#know-your-tenant-id). |
+| `{TENANT_ID}` | Essa ID é usada para garantir que os recursos criados tenham o namespace adequado e estejam contidos na organização. Para obter mais informações sobre a ID do Locatário, leia o [guia de registro de esquema](../../xdm/api/getting-started.md#know-your-tenant-id). |
 
-Por favor, tome nota do `$id` bem como a `version` atributos, pois ambos serão usados ao criar o conjunto de dados.
+Anote os atributos `$id` e `version`, pois ambos serão usados ao criar seu conjunto de dados.
 
 ## Definir um descritor de identidade primário para o esquema
 
-Em seguida, adicione um [descritor de identidade](../../xdm/api/descriptors.md) para o schema criado acima, usando o atributo de endereço de email de trabalho como o identificador principal. Isso resultará em duas alterações:
+Em seguida, adicione um [descritor de identidade](../../xdm/api/descriptors.md) ao esquema criado acima, usando o atributo de endereço de email de trabalho como o identificador principal. Isso resultará em duas alterações:
 
 1. O endereço de email comercial se tornará um campo obrigatório. Isso significa que as mensagens enviadas sem esse campo terão falha na validação e não serão assimiladas.
 
-2. [!DNL Real-Time Customer Profile] O usará o endereço de email comercial como um identificador para ajudar a compilar mais informações sobre esse indivíduo.
+2. [!DNL Real-Time Customer Profile] usará o endereço de email comercial como um identificador para ajudar a compilar mais informações sobre esse indivíduo.
 
 ### Solicitação
 
@@ -162,15 +162,15 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/des
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `{SCHEMA_REF_ID}` | A variável `$id` que você recebeu anteriormente ao compor o esquema. Deve ser semelhante a: `"https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}"` |
+| `{SCHEMA_REF_ID}` | O `$id` que você recebeu anteriormente quando compôs o esquema. Deve ser mais ou menos assim: `"https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}"` |
 
 >[!NOTE]
 >
->&#x200B; &#x200B;**Códigos do namespace de identidade**
+>&#x200B; &#x200B;**Códigos de Namespace de Identidade**
 >
-> Verifique se os códigos são válidos - o exemplo acima usa &quot;email&quot;, que é um namespace de identidade padrão. Outros namespaces de identidade padrão comumente usados podem ser encontrados no [Perguntas frequentes do serviço de identidade](../../identity-service/troubleshooting-guide.md#what-are-the-standard-identity-namespaces-provided-by-experience-platform).
+> Verifique se os códigos são válidos - o exemplo acima usa &quot;email&quot;, que é um namespace de identidade padrão. Outros namespaces de identidade padrão comumente usados podem ser encontrados nas [Perguntas frequentes sobre o Serviço de Identidade](../../identity-service/troubleshooting-guide.md#what-are-the-standard-identity-namespaces-provided-by-experience-platform).
 >
-> Se quiser criar um namespace personalizado, siga as etapas descritas no [visão geral do namespace de identidade](../../identity-service/home.md).
+> Se quiser criar um namespace personalizado, siga as etapas descritas em [visão geral sobre namespace de identidade](../../identity-service/home.md).
 
 **Resposta**
 
@@ -231,7 +231,7 @@ curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o status HTTP 201 e uma matriz que contém a ID do conjunto de dados recém-criado no formato `@/dataSets/{DATASET_ID}`.
+Uma resposta bem-sucedida retorna o status HTTP 201 e uma matriz contendo a ID do conjunto de dados recém-criado no formato `@/dataSets/{DATASET_ID}`.
 
 ```json
 [
@@ -243,11 +243,11 @@ Uma resposta bem-sucedida retorna o status HTTP 201 e uma matriz que contém a I
 
 Depois de criar o esquema e o conjunto de dados, você pode criar uma conexão de transmissão
 
-Para obter mais informações sobre como criar uma conexão de transmissão, leia o [criar um tutorial de conexão de transmissão](./create-streaming-connection.md).
+Para obter mais informações sobre como criar uma conexão de streaming, leia o [tutorial Criar uma conexão de streaming](./create-streaming-connection.md).
 
 ## Assimilar dados de registro na conexão de transmissão {#ingest-data}
 
-Com o conjunto de dados e a conexão de transmissão em vigor, é possível assimilar registros JSON formatados em XDM para assimilar dados de registro em [!DNL Platform].
+Com o conjunto de dados e a conexão de transmissão em vigor, você pode assimilar registros JSON formatados em XDM para assimilar dados de registro em [!DNL Platform].
 
 **Formato da API**
 
@@ -257,8 +257,8 @@ POST /collection/{CONNECTION_ID}?syncValidation=true
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | A variável `inletId` valor da conexão de streaming criada anteriormente. |
-| `syncValidation` | Um parâmetro de consulta opcional destinado a fins de desenvolvimento. Se definida como `true`, ele pode ser usado para feedback imediato para determinar se a solicitação foi enviada com êxito. Por padrão, esse valor é definido como `false`. Observe que, se você definir esse parâmetro de consulta como `true` que a solicitação será limitada a 60 vezes por minuto por `CONNECTION_ID`. |
+| `{CONNECTION_ID}` | O valor `inletId` da conexão de streaming criada anteriormente. |
+| `syncValidation` | Um parâmetro de consulta opcional destinado a fins de desenvolvimento. Se definido como `true`, ele pode ser usado para feedback imediato para determinar se a solicitação foi enviada com êxito. Por padrão, esse valor está definido como `false`. Observe que se você definir este parâmetro de consulta como `true`, a solicitação será limitada a 60 vezes por minuto por `CONNECTION_ID`. |
 
 **Solicitação**
 
@@ -268,7 +268,7 @@ A solicitação de exemplo abaixo assimila um registro com um nome de origem aus
 
 >[!NOTE]
 >
->A chamada de API a seguir faz **não** exigir cabeçalhos de autenticação.
+>A chamada de API a seguir **não** requer cabeçalhos de autenticação.
 
 ```shell
 curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?syncValidation=true \
@@ -330,7 +330,7 @@ Se você quiser incluir um nome de origem, o exemplo a seguir mostra como inclu�
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes do fluxo recém-transmitido [!DNL Profile].
+Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes do [!DNL Profile] recém-transmitido.
 
 ```json
 {
@@ -348,15 +348,15 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes do fluxo recém
 | `{CONNECTION_ID}` | A ID da conexão de streaming criada anteriormente. |
 | `xactionId` | Um identificador exclusivo gerado no lado do servidor para o registro que você acabou de enviar. Essa ID ajuda o Adobe a rastrear o ciclo de vida desse registro por vários sistemas e com depuração. |
 | `receivedTimeMs` | Um carimbo de data e hora (época em milissegundos) que mostra a hora em que a solicitação foi recebida. |
-| `syncValidation.status` | Como o parâmetro de consulta `syncValidation=true` foi adicionado, esse valor aparecerá. Se a validação tiver êxito, o status será `pass`. |
+| `syncValidation.status` | Como o parâmetro de consulta `syncValidation=true` foi adicionado, este valor aparecerá. Se a validação tiver êxito, o status será `pass`. |
 
 ## Recuperar os dados de registro recém-assimilados
 
-Para validar os registros assimilados anteriormente, é possível usar o [[!DNL Profile Access API]](../../profile/api/entities.md) para recuperar os dados do registro.
+Para validar os registros assimilados anteriormente, você pode usar o [[!DNL Profile Access API]](../../profile/api/entities.md) para recuperar os dados do registro.
 
 >[!NOTE]
 >
->Se a ID da política de mesclagem não estiver definida e a variável `schema.name` ou `relatedSchema.name` é `_xdm.context.profile`, [!DNL Profile Access] buscará **all** identidades relacionadas.
+>Se a ID da política de mesclagem não estiver definida e o `schema.name` ou `relatedSchema.name` for `_xdm.context.profile`, [!DNL Profile Access] buscará **todas** identidades relacionadas.
 
 **Formato da API**
 
@@ -435,6 +435,6 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes das entidades s
 
 ## Próximas etapas
 
-Ao ler este documento, agora você entende como assimilar dados de registro em [!DNL Platform] usando conexões de transmissão. Você pode tentar fazer mais chamadas com valores diferentes e recuperar os valores atualizados. Além disso, você pode começar a monitorar os dados assimilados por meio de [!DNL Platform] IU. Para obter mais informações, leia a [monitoramento da assimilação de dados](../quality/monitor-data-ingestion.md) guia.
+Após a leitura deste documento, você entende como assimilar dados de registro no [!DNL Platform] usando conexões de streaming. Você pode tentar fazer mais chamadas com valores diferentes e recuperar os valores atualizados. Além disso, você pode começar a monitorar os dados assimilados por meio da interface do usuário do [!DNL Platform]. Para obter mais informações, leia o [guia de assimilação de dados de monitoramento](../quality/monitor-data-ingestion.md).
 
-Para obter mais informações sobre a assimilação por transmissão em geral, leia o [visão geral da assimilação por transmissão](../streaming-ingestion/overview.md).
+Para obter mais informações sobre a assimilação por transmissão em geral, leia a [visão geral da assimilação por transmissão](../streaming-ingestion/overview.md).

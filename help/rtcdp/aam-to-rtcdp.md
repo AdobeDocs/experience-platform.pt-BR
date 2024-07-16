@@ -23,7 +23,7 @@ Além disso, pense nas fontes de dados que você usa atualmente no Audience Mana
 
 A Adobe recomenda categorizar os segmentos da seguinte maneira:
 
-* Segmentos que podem ser enviados para o Experience Platform por meio de [[!UICONTROL Conector de origem do Audience Manager]](/help/sources/connectors/adobe-applications/audience-manager.md), como não têm dependências de dados, nenhum desafio de destino ou ativação, e suas regras de segmentação podem ser criadas por meio do Real-Time CDP [construtor de segmentos](/help/segmentation/ui/segment-builder.md) posteriormente.
+* Segmentos que podem ser enviados para o Experience Platform por meio do [[!UICONTROL Conector de Source do Audience Manager]](/help/sources/connectors/adobe-applications/audience-manager.md), pois não têm dependências de dados, destino ou desafios de ativação e suas regras de segmentação podem ser criadas por meio do [construtor de segmentos](/help/segmentation/ui/segment-builder.md) da Real-Time CDP mais tarde.
 * Segmentos que contêm regras potencialmente compatíveis, mas que podem conter dados que não estarão disponíveis na Real-Time CDP.
 * Segmentos que não podem ser criados no Real-Time CDP e não têm funcionalidade.
 

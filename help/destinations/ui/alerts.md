@@ -5,14 +5,14 @@ title: Assinar alertas de destino em contexto
 exl-id: 134144a0-cdfe-49a8-bd8b-e36a4f053de5
 source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
 workflow-type: tm+mt
-source-wordcount: '950'
+source-wordcount: '948'
 ht-degree: 8%
 
 ---
 
 # Assinar alertas de destino em contexto
 
-O Adobe Experience Platform permite assinar alertas baseados em eventos relacionados a atividades do Adobe Experience Platform. Os alertas reduzem ou eliminam a necessidade de sondar os [[!DNL Observability Insights] API](../../observability/api/overview.md) para verificar se um trabalho foi concluído, se uma determinada etapa em um fluxo de trabalho foi atingida ou se ocorreram erros.
+O Adobe Experience Platform permite assinar alertas baseados em eventos relacionados a atividades do Adobe Experience Platform. Os alertas reduzem ou eliminam a necessidade de sondar a [[!DNL Observability Insights] API](../../observability/api/overview.md) para verificar se um trabalho foi concluído, se um determinado marco em um fluxo de trabalho foi atingido ou se ocorreram erros.
 
 Você pode assinar alertas ao criar um fluxo de dados para receber mensagens de alerta sobre o status, o sucesso ou a falha da execução do fluxo.
 
@@ -23,8 +23,8 @@ Este documento fornece etapas sobre como assinar mensagens de alertas de recebim
 Este documento requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
 * [Destinos](../home.md): integrações pré-criadas com plataformas de destino que permitem a ativação contínua de dados do Adobe Experience Platform. É possível usar destinos para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas de email, publicidade direcionada e muitos outros casos de uso.
-* [Observabilidade](../../observability/home.md): [!DNL Observability Insights] O permite monitorar as atividades da Platform por meio do uso de métricas estatísticas e notificações de eventos.
-   * [Alertas](../../observability/alerts/overview.md): quando um determinado conjunto de condições em suas operações do Platform é atingido (como um problema em potencial quando o sistema viola um limite), o Platform pode enviar mensagens de alerta a qualquer usuário em sua organização que se inscreveu neles.
+* [Observabilidade](../../observability/home.md): [!DNL Observability Insights] permite monitorar as atividades da Platform por meio do uso de métricas estatísticas e notificações de eventos.
+   * [Alertas](../../observability/alerts/overview.md): quando um determinado conjunto de condições em suas operações da Platform é atingido (como um problema em potencial quando o sistema ultrapassa um limite), a Platform pode enviar mensagens de alerta para qualquer usuário em sua organização que tenha feito a assinatura.
 
 ## Assinar os alertas da interface {#subscribe-destination-alerts}
 
@@ -38,15 +38,15 @@ Este documento requer uma compreensão funcional dos seguintes componentes do Ad
 >
 >Você deve ativar notificações instantâneas de emails para sua conta da Platform a fim de receber notificações de alerta baseadas em email para seus fluxos de dados.
 
-Você pode ativar alertas para seus fluxos de dados durante o [!UICONTROL Configurar novo destino] etapa do [conexão de destino](connect-destination.md) fluxo de trabalho.
+Você pode habilitar alertas para seus fluxos de dados durante a etapa [!UICONTROL Configurar novo destino] do fluxo de trabalho [conexão de destino](connect-destination.md).
 
 ![Imagem da interface do usuário mostrando a seção de alertas de destino.](../assets/ui/alerts/destination-alerts.png)
 
-Selecione os alertas que deseja assinar e selecione **[!UICONTROL Próxima]** para revisar e concluir o fluxo de dados.
+Selecione os alertas que você deseja assinar e selecione **[!UICONTROL Avançar]** para revisar e concluir seu fluxo de dados.
 
 Os alertas disponíveis para fluxos de dados de destino são descritos na tabela abaixo.
 
-* Para destinos de transmissão, somente o [!DNL Activation Skipped Rate Exceeded] alerta está disponível.
+* Para destinos de streaming, somente o alerta [!DNL Activation Skipped Rate Exceeded] está disponível.
 * Para destinos baseados em arquivo, todos os alertas estão disponíveis.
 
 | Alertas | Descrição |
@@ -65,11 +65,11 @@ Depois que o fluxo de dados de destino for executado, você poderá receber aler
 
 Os alertas são representados na interface do usuário por um ícone de notificação no cabeçalho superior da interface do usuário da plataforma. Selecione o ícone de notificação para ver mensagens de alerta específicas relacionadas aos fluxos de dados.
 
-![Imagem da interface do usuário mostrando o ícone de notificação no Experience Platform](../assets/ui/alerts/notification.png)
+![Imagem da interface mostrando o ícone de notificação no Experience Platform](../assets/ui/alerts/notification.png)
 
 O painel de notificações é exibido, exibindo uma lista de atualizações de status no fluxo de dados criado.
 
-![Imagem da interface do usuário mostrando o painel de notificação](../assets/ui/alerts/alert-window.png)
+![Imagem da interface mostrando o painel de notificação](../assets/ui/alerts/alert-window.png)
 
 Você pode passar o mouse em uma mensagem de alerta para marcá-las como lidas ou selecionar o ícone do relógio para definir lembretes futuros sobre o status do fluxo de dados.
 
@@ -79,15 +79,15 @@ Selecione a mensagem de alerta para ver informações específicas sobre o fluxo
 
 ![Imagem da interface mostrando como selecionar uma notificação](../assets/ui/alerts/select-alert-message.png)
 
-A variável [!UICONTROL Detalhes da execução do fluxo de dados] é exibida. A metade superior da tela exibe uma visão geral do fluxo de dados, incluindo informações sobre seus atributos, a ID de execução do fluxo de dados correspondente e um resumo de erros de alto nível.
+A página [!UICONTROL Detalhes da execução do fluxo de dados] é exibida. A metade superior da tela exibe uma visão geral do fluxo de dados, incluindo informações sobre seus atributos, a ID de execução do fluxo de dados correspondente e um resumo de erros de alto nível.
 
-![Imagem da interface mostrando a página de detalhes da execução do fluxo de dados.](../assets/ui/alerts/dataflow-overview.png)
+![Imagem da interface do usuário mostrando a página de detalhes da execução do fluxo de dados.](../assets/ui/alerts/dataflow-overview.png)
 
-A metade inferior da página exibe qualquer [!UICONTROL Erros de execução de fluxo de dados] que ocorreu durante o estágio de execução do fluxo de dados. Aqui, você pode visualizar diagnósticos de erro ou usar o [[!DNL Data Access] API](https://www.adobe.io/experience-platform-apis/references/data-access/) para baixar o diagnóstico de erro ou o manifesto de arquivo que corresponde ao seu fluxo de dados.
+A metade inferior da página exibe [!UICONTROL erros de execução do fluxo de dados] ocorridos durante o estágio de execução do fluxo de dados. Aqui, você pode visualizar o diagnóstico de erros ou usar a [[!DNL Data Access] API](https://www.adobe.io/experience-platform-apis/references/data-access/) para baixar o diagnóstico de erros ou o manifesto de arquivo que corresponde ao seu fluxo de dados.
 
-![Imagem da interface mostrando a página de detalhes da execução do fluxo de dados, com destaque na seção de erros.](../assets/ui/alerts/dataflow-run-error.png)
+![Imagem da interface do usuário mostrando a página de detalhes da execução do fluxo de dados, com destaque na seção de erros.](../assets/ui/alerts/dataflow-run-error.png)
 
-Para obter mais informações sobre como manipular erros de fluxo de dados, consulte o manual no [monitoramento de fluxos de dados de destinos na interface do](../../dataflows/ui/monitor-destinations.md).
+Para obter mais informações sobre como manipular erros de fluxo de dados, consulte o manual sobre [fluxos de dados de destinos de monitoramento na interface](../../dataflows/ui/monitor-destinations.md).
 
 ### Receber alertas por email {#receiving-alerts-by-email}
 
@@ -95,15 +95,15 @@ Os alertas para seus fluxos de dados também são entregues a você por email. S
 
 ![Captura de tela de um email de alerta](../assets/ui/alerts/email.png)
 
-Semelhante ao alerta da interface do usuário, o [!UICONTROL Visão geral da execução do fluxo de dados] é exibida, fornecendo uma interface para investigar quaisquer erros associados ao fluxo de dados.
+Semelhante ao alerta da interface do usuário, a página [!UICONTROL Visão geral da execução do fluxo de dados] é exibida, fornecendo uma interface para investigar quaisquer erros associados ao seu fluxo de dados.
 
-![fluxo de dados-visão geral](../assets/ui/alerts/dataflow-overview.png)
+![visão geral do fluxo de dados](../assets/ui/alerts/dataflow-overview.png)
 
 ## Assinar e cancelar inscrição em alertas {#subscribe-and-unsubscribe}
 
-Você pode assinar mais alertas ou cancelar a assinatura de alertas estabelecidos para um fluxo de dados de destino existente nos destinos [!UICONTROL Procurar] página.
+Você pode assinar mais alertas ou cancelar a assinatura de alertas estabelecidos para um fluxo de dados de destino existente na página [!UICONTROL Procurar] de destinos.
 
-![Imagem da interface do usuário mostrando a página Navegação de destinos](../assets/ui/alerts/destination-list.png)
+![Imagem da interface do usuário mostrando a página Navegação de Destinos](../assets/ui/alerts/destination-list.png)
 
 Localize a conexão de destino para a qual você deseja receber alertas e selecione as reticências (`...`) para ver um menu suspenso de opções. Em seguida, selecione **[!UICONTROL Assinar alertas]** para modificar as configurações de alerta do fluxo de dados de destino.
 
@@ -115,4 +115,4 @@ Uma janela pop-up é exibida, fornecendo uma lista de alertas de destino. Seleci
 
 ## Próximas etapas {#next-steps}
 
-Este documento forneceu um guia passo a passo sobre como assinar alertas em contexto para seus fluxos de dados de destino. Para obter mais informações, consulte [guia da interface de alertas](../../observability/alerts/ui.md).
+Este documento forneceu um guia passo a passo sobre como assinar alertas em contexto para seus fluxos de dados de destino. Para obter mais informações, consulte o [guia da interface de alertas](../../observability/alerts/ui.md).

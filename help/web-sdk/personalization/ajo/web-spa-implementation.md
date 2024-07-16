@@ -5,7 +5,7 @@ exl-id: 1883251b-2d59-46d3-ac74-b8657edd0325
 source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
 source-wordcount: '866'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -17,7 +17,7 @@ Os sites tradicionais funcionam em modelos de navegação de &quot;página para 
 
 Aplicativos da Web modernos, como aplicativos de página única (SPA), adotaram um modelo que impulsiona o uso rápido da renderização da interface do usuário do navegador, que geralmente é independente dos recarregamentos de página. Essas experiências podem ser acionadas por interações do cliente, como rolagens, cliques e movimentos de cursor. Conforme os paradigmas da Web moderna evoluíam, a relevância dos eventos genéricos tradicionais, como um carregamento de página, para implantar a personalização e a experimentação não funciona mais.
 
-![Diagrama do ciclo de vida da página.](assets/web-spa-vs-traditional-lifecycle.png)
+![Diagrama de ciclo de vida da página.](assets/web-spa-vs-traditional-lifecycle.png)
 
 ## Benefícios do uso do SDK da Web para SPA {#web-spa-benefits}
 
@@ -37,21 +37,21 @@ Para explicar melhor quais são as exibições, o exemplo a seguir usa um site d
 
 * Depois de navegar para o site inicial, uma imagem principal promove coleções sazonais, bem como os diferentes catálogos de produtos disponíveis no site. Nesse caso, uma visualização pode ser definida para toda a tela inicial. Essa visão pode simplesmente ser chamada de &quot;inicial&quot;.
 
-  ![Imagem de exemplo do site mostrando uma página inicial.](assets/web-spa-home.png)
+  ![Imagem de site de exemplo mostrando uma home page.](assets/web-spa-home.png)
 
-* À medida que o cliente se torna mais interessado nos produtos que a empresa está vendendo, ele decide clicar no botão **Homens** link. Assim como a página inicial, a totalidade da variável **Homens** pode ser definida como uma visualização. Essa exibição pode se chamar &quot;homens&quot;.
+* À medida que o cliente se torna mais interessado nos produtos que a empresa está vendendo, ele decide clicar no link **Homens**. Assim como a página inicial, a página **Homens** inteira pode ser definida como uma exibição. Essa exibição pode se chamar &quot;homens&quot;.
 
-  ![Imagem do site de amostra mostrando uma exibição específica.](assets/web-spa-men.png)
+  ![Imagem de site de exemplo mostrando um modo de exibição específico.](assets/web-spa-men.png)
 
 * Como uma exibição pode ser definida como um site inteiro ou um grupo de elementos visuais em um site, os quatro produtos mostrados no site de produtos podem ser agrupados e considerados como uma exibição. Essa exibição pode se chamar &quot;produtos&quot;.
 
-  ![Imagem do site de amostra mostrando uma exibição específica.](assets/web-spa-men-products.png)
+  ![Imagem de site de exemplo mostrando um modo de exibição específico.](assets/web-spa-men-products.png)
 
-* Quando o cliente decidir clicar no link **TODOS OS PRODUTOS MASCULINOS** botão para explorar mais produtos no site, o URL do site não muda nesse caso, mas uma exibição pode ser criada aqui para representar apenas a segunda linha de produtos mostrados. O nome da exibição pode ser &quot;products-page-2&quot;.
+* Quando o cliente decide clicar no botão **TODOS OS PRODUTOS MASCULINOS** para explorar mais produtos no site, a URL do site não muda nesse caso, mas uma exibição pode ser criada aqui para representar apenas a segunda linha de produtos mostrados. O nome da exibição pode ser &quot;products-page-2&quot;.
 
 * O cliente decide comprar alguns produtos do site e prossegue para a tela de finalização. A própria tela do carrinho pode ser associada a uma visualização chamada &quot;carrinho&quot;. Ou você pode ter uma visualização diferente na tela de check-out para lidar com os produtos recomendados abaixo.
 
-  ![Imagem do site de amostra mostrando uma exibição específica.](assets/web-spa-cart.png)
+  ![Imagem de site de exemplo mostrando um modo de exibição específico.](assets/web-spa-cart.png)
 
 O conceito de visões pode ser estendido muito além disso. Estes são apenas alguns exemplos de exibições que podem ser definidas em um site.
 
@@ -61,11 +61,11 @@ As visualizações XDM podem ser aproveitadas no Adobe Journey Optimizer para ca
 
 Isso requer a execução das seguintes etapas para concluir uma configuração de desenvolvedor única:
 
-1. Instalar [Adobe Experience Platform Web SDK](/help/web-sdk/install/overview.md) e verifique a [pré-requisitos do canal web](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/configure-web-channel/web-prerequisites.html) página.
+1. Instale o [Adobe Experience Platform Web SDK](/help/web-sdk/install/overview.md) e verifique a página [pré-requisitos do canal da Web](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/configure-web-channel/web-prerequisites.html).
 
 2. Determine todas as exibições XDM no aplicativo de página única que deseja personalizar.
 
-3. Após definir as exibições XDM, para fornecer conteúdo a elas, é necessário implementar o `sendEvent()` função com `renderDecisions` definir como `true` e a visualização XDM correspondente no aplicativo de página única. A visualização XDM deve ser passada no `xdm.web.webPageDetails.viewName`. Essa etapa permite que os profissionais de marketing descubram essas exibições no editor da Web do Journey Optimizer e apliquem modificações de conteúdo a elas:
+3. Após definir os modos de exibição XDM, para fornecer conteúdo a esses modos de exibição, você precisa implementar a função `sendEvent()` com `renderDecisions` definida como `true` e o modo de exibição XDM correspondente em seu aplicativo de página única. A exibição XDM deve ser passada em `xdm.web.webPageDetails.viewName`. Essa etapa permite que os profissionais de marketing descubram essas exibições no editor da Web do Journey Optimizer e apliquem modificações de conteúdo a elas:
 
 ```js
  alloy("sendEvent", {
@@ -82,11 +82,11 @@ Isso requer a execução das seguintes etapas para concluir uma configuração d
 
 >[!NOTE]
 >
->No primeiro `sendEvent()` chamada, todas as exibições XDM que devem ser renderizadas para o usuário final serão buscadas e armazenadas em cache. Subsequente `sendEvent()` As chamadas com exibições XDM transmitidas serão lidas do cache e renderizadas sem uma chamada de servidor.
+>Na primeira chamada `sendEvent()`, todas as exibições XDM que devem ser renderizadas para o usuário final serão buscadas e armazenadas em cache. As chamadas `sendEvent()` subsequentes com exibições XDM passadas serão lidas do cache e renderizadas sem uma chamada de servidor.
 
-## `sendEvent()` exemplos de função
+## Exemplos de função `sendEvent()`
 
-Esta seção descreve dois exemplos mostrando como chamar a variável `sendEvent()` função no React para um SPA hipotético de comércio eletrônico.
+Esta seção descreve dois exemplos mostrando como invocar a função `sendEvent()` no React para um SPA hipotético de comércio eletrônico.
 
 ### Exemplo 1: página inicial de teste A/B {#web-spa-sample-1}
 
@@ -94,7 +94,7 @@ A equipe de marketing deseja executar testes A/B em toda a página inicial.
 
 ![Página de exemplo do aplicativo de página única.](assets/web-spa-home.png)
 
-Para executar testes A/B em todo o site inicial, `sendEvent()` deve ser chamado com o XDM `viewName` definir como `home`:
+Para executar testes A/B em todo o site inicial, `sendEvent()` deve ser chamado com o XDM `viewName` definido como `home`:
 
 ```js
 function onViewChange() {

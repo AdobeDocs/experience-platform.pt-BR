@@ -17,7 +17,7 @@ O modelo de dados do Real-time Customer Data Platform Insights para o B2B Editio
 
 >[!AVAILABILITY]
 >
->Essa funcionalidade está disponível para clientes que compraram o pacote Real-Time CDP Prime e Ultimate. Consulte a documentação sobre [Edições do Real-Time CDP](../../rtcdp/overview.md#rtcdp-editions) para obter mais informações ou entre em contato com o representante da Adobe.
+>Essa funcionalidade está disponível para clientes que compraram o pacote Real-Time CDP Prime e Ultimate. Consulte a documentação das [edições do Real-Time CDP](../../rtcdp/overview.md#rtcdp-editions) disponíveis para obter mais informações ou contate o representante da Adobe.
 
 <!-- 
 See the query accelerated store reporting insights documentation to learn [how to build a reporting insights data model through Query Service for use with accelerated store data and user-defined dashboards](../../query-service/data-distiller/customizable-insights/reporting-insights-data-model.md).
@@ -25,7 +25,7 @@ See the query accelerated store reporting insights documentation to learn [how t
 
 ## Pré-requisitos
 
-Este guia requer entendimento prático de painéis personalizados. Leia a documentação em [como criar um painel personalizado](../user-defined-dashboards.md) antes de continuar com este guia.
+Este guia requer entendimento prático de painéis personalizados. Leia a documentação sobre [como criar um painel personalizado](../user-defined-dashboards.md) antes de continuar com este guia.
 
 ## Relatórios de insight B2B do Real-Time CDP e casos de uso {#B2B-insight-reports-and-use-cases}
 
@@ -52,13 +52,13 @@ O diagrama abaixo exibe os campos de dados relevantes em cada conjunto de dados,
 
 #### As novas contas por caso de uso de setor {#accounts-by-industry}
 
-A lógica usada para o [!UICONTROL Novas contas por setor] o insight retorna os cinco principais setores de acordo com o número de perfis de conta e o tamanho relativo entre si. Consulte a [[!UICONTROL Novas contas por setor] documentação do widget](../guides/account-profiles.md#accounts-by-industry) para obter mais informações.
+A lógica usada para o insight [!UICONTROL Novas contas por setor] retorna os cinco principais setores de acordo com o número de perfis de conta e o tamanho relativo de cada um. Consulte a documentação do widget [[!UICONTROL Novas contas por setor]](../guides/account-profiles.md#accounts-by-industry) para obter mais informações.
 
 >[!TIP]
 >
 >Você pode personalizar essa consulta SQL para retornar mais ou menos do que os cinco principais setores.
 
-O SQL que gera a variável [!UICONTROL Novas contas por setor] o insight é visto na seção recolhível abaixo.
+O SQL que gera o insight [!UICONTROL Novas contas por setor] é visto na seção que pode ser recolhida abaixo.
 
 Consulta +++SQL
 
@@ -97,9 +97,9 @@ LIMIT 5000;
 
 #### O caso de uso Novas contas por tipo {#accounts-by-type}
 
-A lógica usada para o [!UICONTROL Novas contas por tipo] insight retorna o detalhamento numérico das contas por seu tipo. Este insight pode ajudar a orientar a estratégia e as operações de negócios, incluindo a alocação de recursos ou as estratégias de marketing. Consulte a [[!UICONTROL Novas contas por tipo] documentação do widget](../guides/account-profiles.md#accounts-by-type) para obter mais informações.
+A lógica usada para o insight [!UICONTROL Novas contas por tipo] retorna a divisão numérica das contas por tipo. Este insight pode ajudar a orientar a estratégia e as operações de negócios, incluindo a alocação de recursos ou as estratégias de marketing. Consulte a documentação do widget [[!UICONTROL Novas contas por tipo]](../guides/account-profiles.md#accounts-by-type) para obter mais informações.
 
-O SQL que gera a variável [!UICONTROL Novas contas por tipo] o insight é visto na seção recolhível abaixo.
+O SQL que gera o insight [!UICONTROL Novas contas por tipo] é visto na seção recolhível abaixo.
 
 Consulta +++SQL
 
@@ -132,4 +132,4 @@ O modelo de oportunidade é composto de sete conjuntos de dados:
 
 O diagrama abaixo exibe os campos de dados relevantes em cada conjunto de dados.
 
-![O diagrama relacional da entidade para o Modelo de oportunidade.](../images/data-models/opportunity-model.png)
+![O diagrama relacional de entidade para o Modelo de oportunidade.](../images/data-models/opportunity-model.png)

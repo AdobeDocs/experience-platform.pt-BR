@@ -1,5 +1,5 @@
 ---
-title: 'Em segundo plano: uma experiência do cliente viabilizada pelo Adobe Experience Platform'
+title: Nos bastidores&#58; Uma experiência do cliente viabilizada pelo Adobe Experience Platform
 description: No vídeo anterior, vimos como uma marca de exemplo, a Luma, conseguiu criar uma experiência do cliente avançada, recompensadora e relevante. Este vídeo mostra como o Adobe Experience Platform é usado para fazer essa jornada.
 kt: 4340
 audience: all
@@ -16,6 +16,6 @@ ht-degree: 0%
 
 # Nos bastidores de uma experiência do cliente viabilizada pelo Experience Platform
 
-Depois de assistir ao vídeo mostrando [uma experiência do cliente viabilizada pela Platform](customer-experience.md), assista aos bastidores para ver como o Adobe Experience Platform foi usado para potencializar essa experiência.
+Depois de assistir ao vídeo mostrando [uma experiência do cliente viabilizada pela Platform](customer-experience.md), vá para os bastidores para ver como o Adobe Experience Platform foi usado para potencializar esta experiência.
 
 >[!VIDEO](https://video.tv.adobe.com/v/28144?quality=12&learn=on)

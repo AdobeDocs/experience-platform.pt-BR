@@ -4,8 +4,8 @@ description: Saiba mais sobre os componentes principais de diferentes tipos de e
 exl-id: b72df3df-f206-488d-a690-0f086973c5b6
 source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '950'
-ht-degree: 25%
+source-wordcount: '935'
+ht-degree: 23%
 
 ---
 
@@ -23,31 +23,31 @@ Este documento descreve os componentes principais de uma extensão e fornece lin
 
 Uma extensão consiste em um diretório de arquivos. Especificamente, uma extensão consiste em um arquivo de manifesto, módulos de biblioteca e exibições.
 
-### Arquivo manifest
+### Arquivo de manifesto
 
-Um arquivo de manifesto ([`extension.json`](./manifest.md)) deve existir na raiz do diretório. Esse arquivo descreve a composição da extensão e onde determinados arquivos estão localizados no diretório. O manifesto funciona de forma semelhante a um [`package.json`](https://docs.npmjs.com/files/package.json) arquivo em um [npm](https://www.npmjs.com/) projeto.
+Um arquivo de manifesto ([`extension.json`](./manifest.md)) deve existir na raiz do diretório. Esse arquivo descreve a composição da extensão e onde determinados arquivos estão localizados no diretório. O manifesto funciona de forma semelhante a um arquivo [`package.json`](https://docs.npmjs.com/files/package.json) em um projeto [npm](https://www.npmjs.com/).
 
 ### Módulos da biblioteca
 
-Os módulos da biblioteca são os arquivos que descrevem as diferentes [componentes](#components) que uma extensão fornece (em outras palavras, a lógica a ser emitida na biblioteca de tempo de execução de tag). O conteúdo de cada arquivo do módulo de biblioteca deve seguir o [Padrão do módulo CommonJS](https://nodejs.org/api/modules.html#modules-commonjs-modules).
+Os módulos da biblioteca são os arquivos que descrevem os diferentes [componentes](#components) fornecidos por uma extensão (em outras palavras, a lógica a ser emitida na biblioteca de tempo de execução de tag). O conteúdo de cada arquivo de módulo de biblioteca deve seguir o [padrão de módulo CommonJS](https://nodejs.org/api/modules.html#modules-commonjs-modules).
 
-Por exemplo, se você estiver criando um tipo de ação chamado &quot;enviar beacon&quot;, deverá ter um arquivo que contenha a lógica de envio do beacon. Se estiver usando JavaScript, o arquivo pode ser chamado de `sendBeacon.js`. O conteúdo desse arquivo será emitido na biblioteca de tempo de execução de tag.
+Por exemplo, se você estiver criando um tipo de ação chamado &quot;enviar beacon&quot;, deverá ter um arquivo que contenha a lógica de envio do beacon. Se estiver usando o JavaScript, o arquivo pode ser chamado de `sendBeacon.js`. O conteúdo desse arquivo será emitido na biblioteca de tempo de execução de tag.
 
 Você pode colocar os arquivos de módulo de biblioteca em qualquer lugar que desejar no diretório de extensão, desde que descreva seus locais em `extension.json`.
 
 ### Exibições
 
-Uma visualização é um arquivo HTML capaz de ser carregado em um [`iframe` element](https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/iframe) no aplicativo de tags, especificamente por meio da interface da Platform e da interface da Coleção de dados. A visualização deve incluir um script fornecido pela extensão e estar em conformidade com uma pequena API para se comunicar com o aplicativo.
+Uma exibição é um arquivo HTML capaz de ser carregado em um [`iframe` elemento](https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/iframe) dentro do aplicativo de marcas, especificamente por meio da interface da Platform e da interface da Coleção de Dados. A visualização deve incluir um script fornecido pela extensão e estar em conformidade com uma pequena API para se comunicar com o aplicativo.
 
 O arquivo de visualização mais importante para qualquer extensão é sua configuração. Consulte a seção sobre [configurações de extensão](#configuration) para obter mais informações.
 
 Não há restrições quanto às bibliotecas usadas nas visualizações. Em outras palavras, você pode usar jQuery, Underscore, React, Angular, Bootstrap ou outros. No entanto, ainda é recomendável fazer com que sua extensão tenha uma aparência semelhante à interface do usuário.
 
-É recomendado colocar todos os arquivos relacionados à visualização (HTML, CSS, JavaScript) em um único subdiretório que esteja isolado dos arquivos do módulo da biblioteca. Entrada `extension.json`, você pode descrever onde está localizado esse subdiretório de visualização. O Platform fornecerá esse subdiretório (e somente ele) por meio de seus servidores da Web.
+É recomendado colocar todos os arquivos relacionados à visualização (HTML, CSS, JavaScript) em um único subdiretório que esteja isolado dos arquivos do módulo da biblioteca. Em `extension.json`, você pode descrever onde está localizado esse subdiretório de exibição. O Platform fornecerá esse subdiretório (e somente ele) por meio de seus servidores da Web.
 
 ## Componentes da biblioteca {#components}
 
-Cada extensão define um conjunto de funcionalidades. Essas funcionalidades são implementadas sendo incluídas em um [biblioteca](../ui/publishing/libraries.md) que é implantado em seu site ou aplicativo. As bibliotecas são uma coleção de componentes individuais, incluindo condições, ações, elementos de dados e muito mais. Cada componente da biblioteca é um código reutilizável (fornecido por uma extensão) emitido no tempo de execução da tag.
+Cada extensão define um conjunto de funcionalidades. Essas funcionalidades são implementadas sendo incluídas em uma [biblioteca](../ui/publishing/libraries.md) implantada em seu site ou aplicativo. As bibliotecas são uma coleção de componentes individuais, incluindo condições, ações, elementos de dados e muito mais. Cada componente da biblioteca é um código reutilizável (fornecido por uma extensão) emitido no tempo de execução da tag.
 
 Dependendo de você estar desenvolvendo uma extensão da Web ou uma extensão de borda, os tipos disponíveis de componentes e seus casos de uso serão diferentes. Consulte as subseções abaixo para obter uma visão geral de quais componentes estão disponíveis para cada tipo de extensão.
 
@@ -55,7 +55,7 @@ Dependendo de você estar desenvolvendo uma extensão da Web ou uma extensão de
 
 Em extensões da Web, as regras são acionadas por meio de eventos, que poderão executar ações específicas se um determinado conjunto de condições for atendido. Consulte a visão geral do [fluxo do módulo em extensões da Web](./web/flow.md) para obter mais informações.
 
-Além do [módulos principais](./web/core.md) fornecido pelo Adobe, você pode definir os seguintes componentes de biblioteca nas extensões da web:
+Além dos [módulos principais](./web/core.md) fornecidos pelo Adobe, você pode definir os seguintes componentes de biblioteca em suas extensões da Web:
 
 * [Eventos](./web/event-types.md)
 * [Condições](./web/condition-types.md)
@@ -65,7 +65,7 @@ Além do [módulos principais](./web/core.md) fornecido pelo Adobe, você pode d
 
 >[!NOTE]
 >
->Para obter mais detalhes sobre o formato necessário para implementar componentes de biblioteca na sua extensão, consulte a [visão geral do formato do módulo](./web/format.md).
+>Para obter mais detalhes sobre o formato necessário para implementar componentes de biblioteca na sua extensão, consulte a [visão geral de formato do módulo](./web/format.md).
 
 ### Componentes para extensões de borda {#edge}
 
@@ -89,7 +89,7 @@ Por exemplo, considere uma extensão que permita ao usuário enviar um beacon us
 
 Quando os usuários instalam uma extensão de uma propriedade na interface do usuário, eles exibem a visualização de configuração de extensão, que deve ser concluída para concluir a instalação.
 
-Para saber mais, consulte o manual sobre [configurações de extensão](./configuration.md).
+Para saber mais, consulte o guia em [configurações de extensão](./configuration.md).
 
 ## Envio de extensões
 

@@ -7,13 +7,13 @@ exl-id: a3767c8d-a009-49b4-81a4-b084b6e5101a
 source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
 source-wordcount: '233'
-ht-degree: 4%
+ht-degree: 17%
 
 ---
 
-# [!UICONTROL Sinal] tipo de dados
+# Tipo de dados [!UICONTROL Sinal]
 
-[!UICONTROL Sinal] é um tipo de dados XDM padrão que descreve o dispositivo sem fio que comunica informações de identidade para aplicativos móveis à medida que os dispositivos móveis ficam ao alcance.
+[!UICONTROL Beacon] é um tipo de dados XDM padrão que descreve o dispositivo sem fio que comunica informações de identidade para aplicativos móveis à medida que os dispositivos móveis ficam ao alcance.
 
 <img src="../images/data-types/beacon.png" width="450" /><br />
 
@@ -21,7 +21,7 @@ ht-degree: 4%
 | --- | --- | --- |
 | `beaconMajor` | Duplo | Os valores maiores identificam e distinguem um grupo e valores inteiros sem sinal entre 1 e 65.535. |
 | `beaconMinor` | Duplo | Os valores menores identificam e distinguem valores inteiros individuais e sem sinal entre 1 e 65.535. |
-| `proximity` | String | Distância estimada do sinal. Consulte a [apêndice](#proximity) para obter valores e definições aceitos. |
+| `proximity` | String | Distância estimada do sinal. Consulte o [apêndice](#proximity) para obter os valores e as definições aceitos. |
 | `proximityUUID` | String | Um UUID (Identificador universal exclusivo) de proximidade é um tipo especial de identificador usado para distinguir beacons em sua rede de todos os outros beacons em redes fora do seu controle. A UUID de proximidade é configurada em um beacon, a ser transmitido para dispositivos móveis ao alcance para identificar os beacons de uma organização. |
 
 {style="table-layout:auto"}
@@ -33,11 +33,11 @@ Para obter mais detalhes sobre o tipo de dados, consulte o repositório XDM púb
 
 ## Apêndice
 
-A seção a seguir contém informações adicionais sobre o [!UICONTROL Sinal] tipo de dados.
+A seção a seguir contém informações adicionais sobre o tipo de dados [!UICONTROL Beacon].
 
 ## Valores aceitos para proximidade {#proximity}
 
-A tabela a seguir descreve os valores aceitos para `proximity` e significados associados:
+A tabela a seguir descreve os valores aceitos para `proximity` e seus significados associados:
 
 | Valor | Descrição |
 | --- | --- |

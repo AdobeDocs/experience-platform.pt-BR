@@ -6,27 +6,27 @@ description: Este documento aborda as etapas necessárias para navegar pelo espa
 exl-id: 1d3c894e-b412-43ba-ba91-ddfa35303d73
 source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '311'
-ht-degree: 4%
+source-wordcount: '302'
+ht-degree: 1%
 
 ---
 
 # Selecione um perfil de produto para gerenciar suas permissões de controle de acesso
 
-Para configurar o controle de acesso para [!DNL Experience Platform] por meio da Adobe Admin Console, você deve ser um administrador de uma organização que tenha uma assinatura do [!DNL Experience Platform]. Embora o Adobe ofereça suporte a hierarquias flexíveis de administradores para organizações, você deve ter privilégios de administrador de sistema, administrador de produto ou administrador de perfil de produto para configurar o controle de acesso. Consulte o artigo da Adobe Help Center sobre [funções administrativas](https://helpx.adobe.com/enterprise/using/admin-roles.html) para obter mais informações.
+Para configurar o controle de acesso para [!DNL Experience Platform] por meio da Adobe Admin Console, você deve ser um administrador de uma organização que tenha uma assinatura do [!DNL Experience Platform]. Embora o Adobe ofereça suporte a hierarquias flexíveis de administradores para organizações, você deve ter privilégios de administrador de sistema, administrador de produto ou administrador de perfil de produto para configurar o controle de acesso. Consulte o artigo da Adobe Help Center sobre [funções administrativas](https://helpx.adobe.com/br/enterprise/using/admin-roles.html) para obter mais informações.
 
 Se você não tiver privilégios de administrador, entre em contato com o administrador do sistema para obter acesso.
 
-Quando tiver privilégios de administrador, acesse [Adobe Admin Console](https://adminconsole.adobe.com) e faça logon usando suas credenciais de Adobe. Depois de conectado, a variável **[!UICONTROL Visão geral]** é exibida para a organização para a qual você tem privilégios de administrador. Esta página mostra os produtos nos quais sua organização está inscrita, juntamente com outros controles para adicionar usuários e administradores à organização como um todo. Selecionar **[!UICONTROL Adobe Experience Platform]** para abrir o espaço de trabalho de controle de acesso para sua integração com a Platform.
+Depois de ter privilégios de administrador, vá para [Adobe Admin Console](https://adminconsole.adobe.com) e entre usando suas credenciais de Adobe. Depois de conectado, a página **[!UICONTROL Visão geral]** é exibida para a organização para a qual você tem privilégios de administrador. Esta página mostra os produtos nos quais sua organização está inscrita, juntamente com outros controles para adicionar usuários e administradores à organização como um todo. Selecione **[!UICONTROL Adobe Experience Platform]** para abrir o espaço de trabalho de controle de acesso para a integração com a Platform.
 
-![select-product](../images/select-product.png)
+![selecionar produto](../images/select-product.png)
 
-A área de trabalho de controle de acesso do Adobe Experience Platform é exibida, abrindo no **[!UICONTROL Perfis de produto]** guia. Essa guia permite visualizar todos os perfis de produtos e gerenciar várias configurações, conforme descrito neste documento.
+O espaço de trabalho de controle de acesso do Adobe Experience Platform é exibido, abrindo na guia **[!UICONTROL Perfis de produto]**. Essa guia permite visualizar todos os perfis de produtos e gerenciar várias configurações, conforme descrito neste documento.
 
-![select-product-profile](../images/select-product-profile.png)
+![selecionar perfil de produto](../images/select-product-profile.png)
 
 Este guia do usuário se concentra em como usar o [!DNL Admin Console] para atribuir permissões de acesso à Platform. Para obter informações mais gerais sobre como navegar no [!DNL Admin Console], consulte o [guia do usuário do Admin Console](https://helpx.adobe.com/br/enterprise/using/admin-console.html).
 
 ## Próximas etapas
 
-Depois de navegar na área de trabalho do controle de acesso, vá para a próxima etapa para [criar um novo perfil de produto](create-profile.md)
+Depois de navegar no espaço de trabalho de controle de acesso, vá para a próxima etapa para [criar um novo perfil de produto](create-profile.md)

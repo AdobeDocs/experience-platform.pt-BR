@@ -1,21 +1,22 @@
 ---
 title: Tipo de dados da coleção de início da lista de estados
 description: Saiba mais sobre o tipo de dados List of States Start Data Model (XDM).
-source-git-commit: e9107092b60361216744e154752f48546b5bad73
+exl-id: adeb3e91-7266-41ce-b406-f7fd5dbb2236
+source-git-commit: 799a384556b43bc844782d8b67416c7eea77fbf0
 workflow-type: tm+mt
 source-wordcount: '126'
-ht-degree: 5%
+ht-degree: 7%
 
 ---
 
-# [!UICONTROL Lista de Início de Estados] tipo de dados
+# [!UICONTROL Tipo de dados Início da Lista de Estados]
 
-A variável [!UICONTROL Lista de Início de Estados] O tipo de dados é um tipo de dados do Experience Data Model (XDM) criado para representar informações relacionadas ao estado inicial de vários atributos do player. Inclui a [!UICONTROL Nome do estado do player] propriedades que indicam o estado específico do atributo (por exemplo, &quot;fullscreen&quot;, &quot;mute&quot;, &quot;closedCaptioning&quot;). Esse tipo de dados é usado para capturar e descrever as condições iniciais de diferentes estados do player.
+O tipo de dados [!UICONTROL Lista de Estados Início] é um tipo de dados Experience Data Model (XDM) criado para representar informações relacionadas ao estado inicial de vários atributos do player. Inclui as propriedades [!UICONTROL Nome do Estado do Player], que indicam o estado do atributo específico (por exemplo, &quot;tela cheia&quot;, &quot;mudo&quot;, &quot;closedCaptioning&quot;). Esse tipo de dados é usado para capturar e descrever as condições iniciais de diferentes estados do player.
 
-![Um diagrama de [!UICONTROL Lista de Início de Estados] tipo de dados.](../images/data-types/list-of-states-start-collection.png)
+![Um diagrama do tipo de dados [!UICONTROL List of States Start].](../images/data-types/list-of-states-start-collection.png)
 
 | Nome de exibição | Propriedade | Tipo de dados | Obrigatório | Descrição |
 |--------------------------------|--------------|-----------|-----------|-------------------------------------------------|
-| [!UICONTROL Nome do estado do player] | `name` | string | Não | O nome do estado do player. Enumerado: &quot;fullscreen&quot;, &quot;mute&quot;, &quot;closedCaptioning&quot;, &quot;picture in picture&quot;, &quot;in focus&quot; com os respectivos significados. |
+| [!UICONTROL Nome do estado do player] | `name` | sequência de caracteres | Não | O nome do estado do player. Enumerado: &quot;fullscreen&quot;, &quot;mute&quot;, &quot;closedCaptioning&quot;, &quot;picture in picture&quot;, &quot;in focus&quot; com os respectivos significados. |
 
 {style="table-layout:auto"}

@@ -19,7 +19,7 @@ ht-degree: 8%
 
 >[!IMPORTANT]
 >
->Você só pode usar a restrição de tempo &quot;ignorar ano&quot; em uma definição de segmento avaliada usando **segmentação em lote**. Adicionar a restrição de tempo &quot;ignorar ano&quot; à definição do segmento fará com que o público-alvo resultante **inelegível** para segmentação de streaming ou borda.
+>Você só pode usar a restrição de tempo &quot;ignorar ano&quot; em uma definição de segmento avaliada usando a **segmentação em lote**. Adicionar a restrição de tempo &quot;ignorar ano&quot; à definição do seu segmento tornará o público resultante **inelegível** para transmissão ou segmentação de borda.
 
 A versão de fevereiro de 2024 do Adobe Experience Platform introduziu alterações no Serviço de segmentação do Adobe Experience Platform que soluciona um problema com a opção &quot;ignorar ano&quot; na criação e avaliação de públicos-alvo.
 

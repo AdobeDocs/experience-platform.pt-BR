@@ -16,15 +16,15 @@ As garantias são limites que fornecem orientação para o uso de dados e do sis
 
 >[!IMPORTANT]
 >
->Verifique os direitos de licença em sua Ordem de venda e a correspondência [Descrição do produto](https://helpx.adobe.com/legal/product-descriptions.html?lang=pt-BR) sobre os limites de uso reais, além desta página de medidas de proteção.
+>Verifique os direitos de licença em seu Pedido de Venda e a [Descrição do Produto](https://helpx.adobe.com/legal/product-descriptions.html?lang=pt-BR) correspondente sobre os limites de uso reais, além desta página de medidas de proteção.
 
 Comece aqui e siga os links abaixo para entender todas as medidas de proteção nos vários serviços e áreas do Real-Time CDP:
 
 * [Medidas de proteção para assimilação de dados](/help/ingestion/guardrails.md)
-* [Medidas de proteção para [!DNL Edge Network Server API]](/help/server-api/guardrails.md)
-* [Medidas de proteção para [!DNL Real-Time Customer Profile] dados e segmentação](/help/profile/guardrails.md)
-* [Medidas de proteção para [!DNL Identity Service] dados](/help/identity-service/guardrails.md)
-* [Medidas de proteção para [!DNL Query Service]](/help/query-service/guardrails.md)
+* [Medidas de proteção para o(a) [!DNL Edge Network Server API]](/help/server-api/guardrails.md)
+* [Medidas de proteção para  [!DNL Real-Time Customer Profile]  dados e segmentação](/help/profile/guardrails.md)
+* [Medidas de proteção para dados [!DNL Identity Service] ](/help/identity-service/guardrails.md)
+* [Medidas de proteção para  [!DNL Query Service]](/help/query-service/guardrails.md)
 * [Medidas de proteção para ativação de dados por meio de destinos](/help/destinations/guardrails.md)
 * [Medidas de proteção para o Real-Time CDP B2B](/help/rtcdp/b2b-guardrails.md)
 
@@ -39,7 +39,7 @@ Observe que os dois tipos de proteção em todas as áreas e serviços da Real-T
 | Tipo de grade de proteção | Descrição |
 |----------|---------|
 | **Proteção de desempenho (limite flexível)** | As medidas de proteção de desempenho são limites de uso relacionados ao escopo dos seus casos de uso. Ao exceder as medidas de proteção de desempenho, você pode enfrentar degradação e latência do desempenho. O Adobe não é responsável por essa degradação de desempenho. Os clientes que excederem consistentemente uma garantia de desempenho podem optar por licenciar capacidade adicional para evitar a degradação do desempenho. |
-| **Medidas de proteção aplicadas pelo sistema (limite rígido)** | As medidas de proteção aplicadas pelo sistema são aplicadas pela interface do usuário ou API do Real-Time CDP. Esses são limites que você não pode exceder, pois a interface do usuário e a API o bloquearão de fazer isso ou retornarão um erro. |
+| **Medidas de proteção aplicadas pelo sistema (Limite rígido)** | As medidas de proteção aplicadas pelo sistema são aplicadas pela interface do usuário ou API do Real-Time CDP. Esses são limites que você não pode exceder, pois a interface do usuário e a API o bloquearão de fazer isso ou retornarão um erro. |
 
 {style="table-layout:auto"}
 
@@ -56,9 +56,9 @@ Além disso, consulte os links de descrição do produto abaixo para obter infor
 
 Existem medidas de proteção semelhantes para outras aplicações de Experience Platform. Acesse os links abaixo para obter mais informações:
 
-* [Medidas de proteção do Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/guardrails.html?lang=en)
-* [Grades de proteção de Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/guardrails.html)
+* [medidas de proteção do Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/guardrails.html?lang=en)
+* [medidas de proteção do Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/guardrails.html)
 
 ## Próximas etapas
 
-Depois de entender as medidas de proteção que se aplicam a várias áreas e serviços do Real-Time CDP, você pode seguir com uma [exemplo de uso de uma implementação do Real-Time CDP](/help/rtcdp/get-started.md).
+Depois de entender as medidas de proteção que se aplicam a várias áreas e serviços do Real-Time CDP, você pode acompanhar um [caso de uso de exemplo de uma implementação do Real-Time CDP](/help/rtcdp/get-started.md).

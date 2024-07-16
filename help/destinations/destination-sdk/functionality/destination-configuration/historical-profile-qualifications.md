@@ -13,11 +13,11 @@ ht-degree: 2%
 
 Todos os destinos criados por Destination SDK oferecem suporte a qualificações de perfil históricas por padrão. Isso significa que quando os usuários configuram um fluxo de dados de ativação para seus destinos pela primeira vez, a primeira exportação contém todos os membros do público-alvo que já se qualificaram para esse segmento.
 
-Esse comportamento é definido pela variável `"backfillHistoricalProfileData":true` parâmetro na configuração de destino.
+Esse comportamento é definido pelo parâmetro `"backfillHistoricalProfileData":true` na configuração de destino.
 
 >[!IMPORTANT]
 >
->As qualificações de perfil histórico são habilitadas para todos os destinos criados por meio do Destination SDK e do `backfillHistoricalProfileData` parâmetro não configurável pelo usuário.
+>As qualificações de perfil histórico são habilitadas para todos os destinos criados por meio do Destination SDK e o parâmetro `backfillHistoricalProfileData` não é configurável pelo usuário.
 
 ## Tipos de integração compatíveis {#supported-integration-types}
 

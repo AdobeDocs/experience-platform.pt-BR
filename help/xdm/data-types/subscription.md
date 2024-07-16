@@ -7,13 +7,13 @@ exl-id: 6fd1e073-441b-45f0-bb4f-54f51ab18694
 source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
 source-wordcount: '388'
-ht-degree: 6%
+ht-degree: 28%
 
 ---
 
-# [!UICONTROL Inscrição] tipo de dados
+# Tipo de dados de [!UICONTROL Assinatura]
 
-[!UICONTROL Inscrição] é um tipo de dados padrão do Experience Data Model (XDM) que descreve os direitos licenciados para software, serviços ou bens utilizados com base no tempo ou no uso.
+[!UICONTROL Assinatura] é um tipo de dados padrão do Experience Data Model (XDM) que descreve direitos licenciados para software, serviços ou bens que são utilizados com base no tempo ou no uso.
 
 <img src="../images/data-types/subscription-data-type.png" width="500" /><br />
 
@@ -24,19 +24,19 @@ ht-degree: 6%
 | `subscriber` | [[!UICONTROL Pessoa]](./person.md) | Descreve uma pessoa individual. Também pode representar uma pessoa que atua em várias funções, como cliente, contato ou proprietário. |
 | `SKU` | String | A unidade de manutenção de estoque (SKU), um identificador exclusivo de um produto. |
 | `billingPeriod` | String | A duração entre os faturamentos. |
-| `billingStartDate` | Data | A data de vencimento da primeira fatura. O formato de data (sem hora) deve seguir o [RFC 3339, seção 5.6](https://tools.ietf.org/html/rfc3339#section-5.6) padrão. |
+| `billingStartDate` | Data | A data de vencimento da primeira fatura. O formato de data (sem hora) deve seguir o padrão [RFC 3339, seção 5.6](https://tools.ietf.org/html/rfc3339#section-5.6). |
 | `category` | String | A categorização de nível superior principal desse tipo de assinatura. |
 | `chargeMethod` | String | A forma como o faturamento é configurado para cobrar do cliente. |
 | `contractID` | String | O identificador exclusivo do contrato que rege esta assinatura. |
 | `country` | String | O país em que os termos do contrato e do acordo de assinatura estão enraizados. |
-| `endDate` | Data | A data em que termina o período de assinatura atual. O formato de data (sem hora) deve seguir o [RFC 3339, seção 5.6](https://tools.ietf.org/html/rfc3339#section-5.6) padrão. |
+| `endDate` | Data | A data em que termina o período de assinatura atual. O formato de data (sem hora) deve seguir o padrão [RFC 3339, seção 5.6](https://tools.ietf.org/html/rfc3339#section-5.6). |
 | `paymentMethod` | String | O método de pagamento para pagamentos recorrentes. |
 | `paymentStatus` | String | A posição de pagamento da conta. |
 | `planName` | String | O nome legível da assinatura. |
 | `reason` | String | A intenção geral que o membro tem para o uso da assinatura. |
 | `renew` | String | A forma acordada para que a assinatura continue após a data de término. |
 | `revision` | String | A identificação entre assinaturas de mesmo nome e hierarquia de categoria. |
-| `startDate` | Data | A data em que a assinatura começa. O formato de data (sem hora) deve seguir o [RFC 3339, seção 5.6](https://tools.ietf.org/html/rfc3339#section-5.6) padrão. |
+| `startDate` | Data | A data em que a assinatura começa. O formato de data (sem hora) deve seguir o padrão [RFC 3339, seção 5.6](https://tools.ietf.org/html/rfc3339#section-5.6). |
 | `status` | String | O status atual da assinatura. |
 | `subCategory` | String | A subcategorização específica da assinatura. |
 | `term` | Número inteiro | O valor numérico do termo de assinatura. |

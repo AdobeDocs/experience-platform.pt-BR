@@ -7,49 +7,49 @@ description: Saiba como conectar o Adobe Experience Platform ao Azure Data Lake 
 exl-id: cad5e2a0-e27c-4130-9ad8-888352c92f04
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '511'
-ht-degree: 2%
+source-wordcount: '502'
+ht-degree: 4%
 
 ---
 
-# Criar um [!DNL Azure Data Lake Storage Gen2] conexão básica usando o [!DNL Flow Service] API
+# Criar uma conexão de base [!DNL Azure Data Lake Storage Gen2] usando a API [!DNL Flow Service]
 
 Uma conexão base representa a conexão autenticada entre uma origem e o Adobe Experience Platform.
 
-Este tutorial guiará você pelas etapas para criar uma conexão básica para [!DNL Azure Data Lake Storage Gen2] (a seguir designada &quot;ADLS Gen2&quot;) utilizando o [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Este tutorial guiará você pelas etapas para criar uma conexão básica para [!DNL Azure Data Lake Storage Gen2] (doravante chamada de &quot;ADLS Gen2&quot;) usando a [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Introdução
 
-Este guia requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
+Este manual necessita de uma compreensão funcional dos seguintes componentes da Adobe Experience Platform:
 
-* [Origens](../../../../home.md): [!DNL Experience Platform] O permite que os dados sejam assimilados de várias fontes e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando o [!DNL Platform] serviços.
-* [Sandboxes](../../../../../sandboxes/home.md): [!DNL Experience Platform] O fornece sandboxes virtuais que particionam uma única instância da Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
+* [Fontes](../../../../home.md): [!DNL Experience Platform] permite que os dados sejam assimilados de várias fontes e fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços do [!DNL Platform].
+* [Sandboxes](../../../../../sandboxes/home.md): [!DNL Experience Platform] fornece sandboxes virtuais que particionam uma única instância da Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
-As seções a seguir fornecem informações adicionais que você precisará saber para criar com êxito uma conexão de origem ADLS Gen2 usando o [!DNL Flow Service] API.
+As seções a seguir fornecem informações adicionais que você precisará saber para criar com êxito uma conexão de origem ADLS Gen2 usando a API [!DNL Flow Service].
 
 ### Coletar credenciais necessárias
 
-A fim de [!DNL Flow Service] para se conectar ao ADLS Gen2, você deve fornecer valores para as seguintes propriedades de conexão:
+Para que [!DNL Flow Service] se conecte ao ADLS Gen2, você deve fornecer valores para as seguintes propriedades de conexão:
 
 | Credencial | Descrição |
 | ---------- | ----------- |
-| `url` | O endpoint para ADLS Gen2. O padrão do endpoint é: `https://<accountname>.dfs.core.windows.net`. |
+| `url` | O endpoint para ADLS Gen2. O padrão do ponto de extremidade é: `https://<accountname>.dfs.core.windows.net`. |
 | `servicePrincipalId` | A ID do cliente do aplicativo. |
 | `servicePrincipalKey` | A chave do aplicativo. |
 | `tenant` | As informações de locatário que contêm seu aplicativo. |
-| `connectionSpec.id` | A especificação de conexão retorna as propriedades do conector de uma origem, incluindo especificações de autenticação relacionadas à criação das conexões de base e de origem. A ID de especificação de conexão para o ADLS Gen2 é: `b3ba5556-48be-44b7-8b85-ff2b69b46dc4`. |
+| `connectionSpec.id` | A especificação de conexão retorna as propriedades do conector de uma origem, incluindo especificações de autenticação relacionadas à criação das conexões de base e de origem. A ID de especificação de conexão para ADLS Gen2 é: `b3ba5556-48be-44b7-8b85-ff2b69b46dc4`. |
 
 Para obter mais informações sobre esses valores, consulte [este documento do ADLS Gen2](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-data-lake-storage).
 
 ### Uso de APIs da plataforma
 
-Para obter informações sobre como fazer chamadas para APIs da Platform com êxito, consulte o manual em [introdução às APIs da Platform](../../../../../landing/api-guide.md).
+Para obter informações sobre como fazer chamadas para APIs da Platform com êxito, consulte o manual sobre [introdução às APIs da Platform](../../../../../landing/api-guide.md).
 
 ## Criar uma conexão básica
 
 Uma conexão base retém informações entre sua origem e a Platform, incluindo as credenciais de autenticação da origem, o estado atual da conexão e sua ID de conexão base exclusiva. A ID de conexão básica permite explorar e navegar pelos arquivos de dentro da origem e identificar os itens específicos que deseja assimilar, incluindo informações sobre os tipos de dados e formatos.
 
-Para criar um ID de conexão base, faça uma solicitação POST ao `/connections` ao fornecer suas credenciais de autenticação do ADLS Gen2 como parte dos parâmetros de solicitação.
+Para criar uma ID de conexão base, faça uma solicitação POST para o ponto de extremidade `/connections` enquanto fornece suas credenciais de autenticação ADLS Gen2 como parte dos parâmetros de solicitação.
 
 **Formato da API**
 
@@ -94,7 +94,7 @@ curl -X POST \
 | `auth.params.servicePrincipalId` | A ID da entidade de serviço da sua conta ADLS Gen2. |
 | `auth.params.servicePrincipalKey` | A chave da entidade de serviço da sua conta ADLS Gen2. |
 | `auth.params.tenant` | As informações de locatário da sua conta ADLS Gen2. |
-| `connectionSpec.id` | A ID da especificação da conexão ADLS Gen2: `b3ba5556-48be-44b7-8b85-ff2b69b46dc41`. |
+| `connectionSpec.id` | A ID de especificação da conexão ADLS Gen2: `b3ba5556-48be-44b7-8b85-ff2b69b46dc41`. |
 
 **Resposta**
 
@@ -109,4 +109,4 @@ Uma resposta bem-sucedida retorna detalhes da conexão base recém-criada, inclu
 
 ## Próximas etapas
 
-Seguindo este tutorial, você criou uma conexão ADLS Gen2 usando APIs e uma ID exclusiva foi obtida como parte do corpo da resposta. Você pode usar essa ID de conexão para [explorar armazenamentos em nuvem usando a API do Serviço de fluxo](../../explore/cloud-storage.md).
+Seguindo este tutorial, você criou uma conexão ADLS Gen2 usando APIs e uma ID exclusiva foi obtida como parte do corpo da resposta. Você pode usar esta ID de conexão para [explorar armazenamentos em nuvem usando a API de Serviço de Fluxo](../../explore/cloud-storage.md).

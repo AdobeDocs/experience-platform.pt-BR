@@ -8,8 +8,8 @@ description: Saiba mais sobre os eventos, entradas e saídas necessários utiliz
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
 source-git-commit: 07a110f6d293abff38804b939014e28f308e3b30
 workflow-type: tm+mt
-source-wordcount: '2484'
-ht-degree: 3%
+source-wordcount: '2505'
+ht-degree: 1%
 
 ---
 
@@ -26,9 +26,9 @@ Estas são as etapas para criar modelos de propensão e identificar públicos-al
 
 2. Priorizar casos de uso: quais são as maiores prioridades para a empresa?
 
-3. Criar modelos na IA do cliente: assista a isso [tutorial rápido](https://experienceleague.adobe.com/docs/platform-learn/tutorials/intelligent-services/configure-customer-ai.html?lang=pt-BR) e consulte nossa [Guia da interface do usuário](../customer-ai/user-guide/configure.md) para obter um processo passo a passo para criar um modelo.
+3. Criar modelos na IA do cliente: assista a este [tutorial rápido](https://experienceleague.adobe.com/docs/platform-learn/tutorials/intelligent-services/configure-customer-ai.html?lang=pt-BR) e consulte nosso [guia da interface do usuário](../customer-ai/user-guide/configure.md) para obter um processo passo a passo para criar um modelo.
 
-4. [Construir segmentos](../customer-ai/user-guide/create-segment.md) usando resultados do modelo.
+4. [Criar segmentos](../customer-ai/user-guide/create-segment.md) usando resultados de modelo.
 
 5. Realizar ações comerciais direcionadas com base nesses segmentos. Monitore os resultados e repita as ações para melhorar.
 
@@ -36,10 +36,10 @@ Estes são exemplos de configurações para seu primeiro modelo.  O modelo de ex
 
 | Etapa | Definição | Exemplo |
 | ---- | ------ | ------- |
-| Configurar | Especifique informações básicas sobre o modelo. | **Nome**: modelo de propensão para compra de lápis <br> **Tipo de modelo**: Conversão |
-| Selecionar dados | Especifique os conjuntos de dados usados para criar o modelo. | **Conjunto de dados**: conjunto de dados do Adobe Analytics <br> **Identidade**: verifique se a coluna de identidade de cada conjunto de dados está definida como uma identidade comum. |
-| Definir objetivo | Defina a meta, o público elegível, os eventos personalizados e os atributos do perfil. | **Meta de previsão**: Selecionar `commerce.purchases.value` igual a lápis <br> **Janela de resultados**: 30 dias. |
-| Definir opções | Configurar a programação para atualização do modelo e ativar pontuações para o Perfil | **Agendar**: Semanalmente <br> **Ativar para perfil**: isso deve ser ativado para que a saída do modelo seja usada na segmentação. |
+| Configurar | Especifique informações básicas sobre o modelo. | **Nome**: modelo de propensão de compra de lápis <br> **Tipo de Modelo**: Conversão |
+| Selecionar dados | Especifique os conjuntos de dados usados para criar o modelo. | **Conjunto de dados**: conjunto de dados Adobe Analytics <br> **Identidade**: verifique se a coluna de identidade de cada conjunto de dados está definida como uma identidade comum. |
+| Definir objetivo | Defina a meta, o público elegível, os eventos personalizados e os atributos do perfil. | **Meta de Previsão**: Selecionar `commerce.purchases.value` igual ao lápis <br> **Janela de resultado**: 30 dias. |
+| Definir opções | Configurar a programação para atualização do modelo e ativar pontuações para o Perfil | **Agenda**: Semanalmente <br> **Habilitar para o perfil**: isso deve ser habilitado para que a saída do modelo seja usada na segmentação. |
 
 ## Visão geral dos dados {#data-overview}
 
@@ -47,33 +47,33 @@ As seções a seguir descrevem os diferentes eventos, entradas e saídas necess�
 
 A IA do cliente funciona analisando os seguintes conjuntos de dados para prever as pontuações de propensão de churn (quando é provável que um cliente pare de usar o produto) ou conversão (quando é provável que um cliente faça uma compra):
 
-- Dados do Adobe Analytics usando o [Conector de origem do Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md)
+- Dados do Adobe Analytics usando o [conector de origem do Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md)
 - Dados do Adobe Audience Manager usando o [conector de origem do Audience Manager](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md)
-- [Conjunto de dados Evento de experiência](https://experienceleague.adobe.com/docs/experience-platform/xdm/classes/experienceevent.html)
-- [Conjunto de dados Evento de experiência do consumidor](https://experienceleague.adobe.com/docs/experience-platform/intelligent-services/data-preparation.html#cee-schema)
+- [Conjunto de dados de Evento de Experiência](https://experienceleague.adobe.com/docs/experience-platform/xdm/classes/experienceevent.html)
+- [Conjunto de dados do Evento de experiência do consumidor](https://experienceleague.adobe.com/docs/experience-platform/intelligent-services/data-preparation.html#cee-schema)
 
-Você pode adicionar vários conjuntos de dados de diferentes fontes se cada um dos conjuntos de dados compartilhar o mesmo tipo de identidade (namespace), como uma ECID. Para obter mais informações sobre como adicionar vários conjuntos de dados, visite a [Guia do usuário da IA do cliente](../customer-ai/user-guide/configure.md).
+Você pode adicionar vários conjuntos de dados de diferentes fontes se cada um dos conjuntos de dados compartilhar o mesmo tipo de identidade (namespace), como uma ECID. Para obter mais informações sobre como adicionar vários conjuntos de dados, visite o [Guia do usuário da IA do cliente](../customer-ai/user-guide/configure.md).
 
 >[!IMPORTANT]
 >
->Os conectores de origem levam até quatro semanas para preencher os dados retroativamente. Se você configurou um conector recentemente, deve verificar se o conjunto de dados tem o comprimento mínimo de dados necessário para a IA do cliente. Revise o [dados históricos](#data-requirements) seção para verificar se você tem dados suficientes para sua meta de previsão.
+>Os conectores do Source levam até quatro semanas para preencher os dados retroativamente. Se você configurou um conector recentemente, deve verificar se o conjunto de dados tem o comprimento mínimo de dados necessário para a IA do cliente. Revise a seção [dados históricos](#data-requirements) para verificar se você tem dados suficientes para a meta de previsão.
 
 A tabela a seguir descreve algumas terminologias comuns usadas neste documento:
 
 | Termo | Definição |
 | --- | --- |
 | [Experience Data Model (XDM)](../../xdm/home.md) | O XDM é a estrutura fundamental que permite ao Adobe Experience Cloud, viabilizado pelo Adobe Experience Platform, enviar a mensagem certa à pessoa certa, no canal certo, no momento exato. A Platform usa o Sistema XDM para organizar os dados de uma determinada maneira que facilita o uso dos serviços da Platform. |
-| [Esquema do XDM](../../xdm/schema/composition.md) | A Experience Platform utiliza esquemas para descrever a estrutura dos dados de forma consistente e reutilizável. Ao definir os dados de forma consistente em todos os sistemas, fica mais fácil manter o significado e, portanto, obter valor dos dados. Antes que os dados possam ser assimilados na Platform, um esquema deve ser composto para descrever a estrutura dos dados e fornecer restrições ao tipo de dados que podem estar contidos em cada campo. Os esquemas consistem em uma classe base XDM e zero ou mais grupos de campos de esquema. |
+| [Esquema XDM](../../xdm/schema/composition.md) | O Experience Platform usa esquemas para descrever a estrutura dos dados de forma consistente e reutilizável. Ao definir os dados de forma consistente em todos os sistemas, fica mais fácil manter o significado e, portanto, obter valor dos dados. Antes que os dados possam ser assimilados na Platform, um esquema deve ser composto para descrever a estrutura dos dados e fornecer restrições ao tipo de dados que podem estar contidos em cada campo. Os esquemas consistem em uma classe base XDM e zero ou mais grupos de campos de esquema. |
 | [Classe XDM](../../xdm/schema/field-constraints.md) | Todos os esquemas XDM descrevem dados que podem ser categorizados como `Experience Event`. O comportamento dos dados de um schema é definido pela classe do schema, que é atribuída a um schema quando ele é criado pela primeira vez. As classes XDM descrevem o menor número de propriedades que um esquema deve conter para representar um comportamento de dados específico. |
-| [Grupos de campos](../../xdm/schema/composition.md) | Um componente que define um ou mais campos em um esquema. Os grupos de campos impõem como seus campos aparecem na hierarquia do esquema e, portanto, exibem a mesma estrutura em cada esquema em que estão incluídos. Os grupos de campos são compatíveis apenas com classes específicas, conforme identificado por seus `meta:intendedToExtend` atributo. |
+| [Grupos de campos](../../xdm/schema/composition.md) | Um componente que define um ou mais campos em um esquema. Os grupos de campos impõem como seus campos aparecem na hierarquia do esquema e, portanto, exibem a mesma estrutura em cada esquema em que estão incluídos. Os grupos de campos são compatíveis apenas com classes específicas, conforme identificado pelo seu atributo `meta:intendedToExtend`. |
 | [Tipo de dados](../../xdm/schema/composition.md) | Um componente que também pode fornecer um ou mais campos para um esquema. No entanto, diferentemente dos grupos de campos, os tipos de dados não estão restritos a uma classe específica. Isso torna os tipos de dados uma opção mais flexível para descrever estruturas de dados comuns que são reutilizáveis em vários esquemas com classes potencialmente diferentes. Os tipos de dados descritos neste documento são compatíveis com os esquemas CEE e Adobe Analytics. |
 | [Perfil do cliente em tempo real](../../profile/home.md) | O Perfil do cliente em tempo real fornece um perfil do cliente centralizado para gerenciamento de experiência direcionado e personalizado. Cada perfil contém dados agregados em todos os sistemas, bem como contas acionáveis com carimbo de data e hora de eventos envolvendo o indivíduo que ocorreram em qualquer um dos sistemas usados com o Experience Platform. |
 
 ## Dados de entrada da IA do cliente {#customer-ai-input-data}
 
-Para conjuntos de dados de entrada, como Adobe Analytics e Adobe Audience Manager, os respectivos conectores de origem mapeiam diretamente os eventos nesses grupos de campos padrão (Comércio, Web, Aplicativo e Pesquisa) por padrão durante o processo de conexão. A tabela abaixo mostra os campos de evento nos grupos de campos padrão para a IA do cliente.
+Para conjuntos de dados de entrada, como Adobe Analytics e Adobe Audience Manager, os respectivos conectores de origem mapeiam diretamente os eventos nesses grupos de campos padrão (Commerce, Web, Aplicativo e Pesquisa) por padrão durante o processo de conexão. A tabela abaixo mostra os campos de evento nos grupos de campos padrão para a IA do cliente.
 
-Para obter mais informações sobre o mapeamento de dados Adobe Analytics ou dados Audience Manager, visite os mapeamentos de campo do Analytics ou o Audience Manager [guia de mapeamentos de campo](../../sources/connectors/adobe-applications/mapping/audience-manager.md).
+Para obter mais informações sobre o mapeamento de dados Adobe Analytics ou dados Audience Manager, visite o Guia de mapeamentos de campo do Analytics ou o Audience Manager [guia de mapeamentos de campo](../../sources/connectors/adobe-applications/mapping/audience-manager.md).
 
 Você pode usar esquemas XDM de Evento de experiência ou Evento de experiência do consumidor para conjuntos de dados de entrada que não são preenchidos por meio de um dos conectores acima. Grupos de campos XDM adicionais podem ser adicionados durante o processo de criação do esquema. Os grupos de campos podem ser fornecidos por Adobe, como os grupos de campos padrão ou um grupo de campos personalizado, que corresponde à representação de dados na plataforma.
 
@@ -89,13 +89,13 @@ Eventos de experiência são usados para determinar vários comportamentos do cl
 >
 >Se estiver usando dados do Adobe Analytics ou Adobe Audience Manager, o esquema será criado automaticamente com os eventos padrão necessários para capturar seus dados. Se você estiver criando seu próprio esquema EE personalizado para capturar dados, será necessário considerar quais grupos de campos são necessários para capturar seus dados.
 
-A IA do cliente usa os eventos nesses quatro grupos de campos padrão por padrão: Comércio, Web, Aplicativo e Pesquisa. Não é necessário ter dados para cada evento nos grupos de campos padrão listados abaixo, mas determinados eventos são necessários para determinados cenários. Se você tiver eventos nos grupos de campos padrão disponíveis, é recomendável incluí-los no esquema. Por exemplo, se você deseja criar um modelo de IA do cliente para prever eventos de compra, é útil ter dados dos grupos de campos Commerce e Detalhes da página da Web.
+A IA do cliente usa os eventos nesses quatro grupos de campos padrão por padrão: Commerce, Web, Aplicativo e Pesquisa. Não é necessário ter dados para cada evento nos grupos de campos padrão listados abaixo, mas determinados eventos são necessários para determinados cenários. Se você tiver eventos nos grupos de campos padrão disponíveis, é recomendável incluí-los no esquema. Por exemplo, se você deseja criar um modelo de IA do cliente para prever eventos de compra, é útil ter dados do Commerce e grupos de campos de detalhes da página da Web.
 
-Para exibir um grupo de campos na interface do Platform, selecione a variável **[!UICONTROL Esquemas]** no painel esquerdo, seguido pela seleção da guia **[!UICONTROL Grupos de campos]** guia.
+Para exibir um grupo de campos na interface do usuário da Platform, selecione a guia **[!UICONTROL Esquemas]** no painel esquerdo, seguido pela seleção da guia **[!UICONTROL Grupos de campos]**.
 
 | Grupo de campos | Tipo de evento | Caminho do campo XDM |
 | --- | --- | --- |
-| [!UICONTROL Detalhes do comércio] | pedido | <li> `commerce.order.purchaseID` </li> <li> `productListItems.SKU` </li> |
+| [!UICONTROL Detalhes do Commerce] | pedido | <li> `commerce.order.purchaseID` </li> <li> `productListItems.SKU` </li> |
 |  | productListViews | <li> `commerce.productListViews.value` </li> <li> `productListItems.SKU` </li> |
 |  | check-outs | <li> `commerce.checkouts.value` </li> <li> `productListItems.SKU` </li> |
 |  | compras | <li> `commerce.purchases.value` </li> <li> `productListItems.SKU` </li> |
@@ -111,17 +111,17 @@ Para exibir um grupo de campos na interface do Platform, selecione a variável *
 |  | applicationInstalls | <li> application.installs.value </li> <li> `application.name` </li> |
 |  | applicationLaunches | <li> application.launches.value </li> <li> `application.name` </li> |
 |  | applicationUpgrades | <li> application.upgrades.value </li> <li> `application.name` </li> |
-| [!UICONTROL Detalhes da pesquisa] | pesquisa | `search.keywords` |
+| [!UICONTROL Detalhes da Pesquisa] | pesquisar | `search.keywords` |
 
-Além disso, a IA do cliente pode usar dados de assinatura para criar modelos de churn melhores. Os dados de subscrição são necessários para cada perfil que usa o [[!UICONTROL Inscrição]](../../xdm/data-types/subscription.md) formato do tipo de dados. A maioria dos campos é opcional. No entanto, para um modelo de churn ideal, é altamente recomendável fornecer dados para o maior número de campos possível, como `startDate`, `endDate`e quaisquer outros detalhes relevantes. Entre em contato com a equipe de conta para obter suporte adicional sobre este recurso.
+Além disso, a IA do cliente pode usar dados de assinatura para criar modelos de churn melhores. Os dados de assinatura são necessários para cada perfil que usa o formato de tipo de dados [[!UICONTROL Assinatura]](../../xdm/data-types/subscription.md). A maioria dos campos é opcional. No entanto, para um modelo de churn ideal, é altamente recomendável fornecer dados para o máximo de campos possível, como `startDate`, `endDate` e quaisquer outros detalhes relevantes. Entre em contato com a equipe de conta para obter suporte adicional sobre este recurso.
 
 ### Adicionar eventos personalizados e atributos de perfil {#add-custom-events}
 
-Se você tiver informações que deseja incluir além do padrão [campos de evento padrão](#standard-events) usada pela IA do cliente, você pode usar a variável [configuração de evento personalizado](./user-guide/configure.md#custom-events) para aumentar os dados usados pelo modelo.
+Se você tiver informações que deseja incluir, além dos [campos de evento padrão](#standard-events) usados pela IA do cliente, poderá usar a [configuração de evento personalizado](./user-guide/configure.md#custom-events) para aumentar os dados usados pelo modelo.
 
 #### Quando usar eventos personalizados
 
-Os eventos personalizados são necessários quando os conjuntos de dados escolhidos na etapa de seleção de conjunto de dados contêm *nenhum* dos campos de evento padrão usados pela IA do cliente. A IA do cliente precisa de informações sobre pelo menos um evento de comportamento do usuário diferente do resultado.
+Os eventos personalizados são necessários quando os conjuntos de dados escolhidos na etapa de seleção do conjunto de dados contêm *nenhum* dos campos de evento padrão usados pela IA do cliente. A IA do cliente precisa de informações sobre pelo menos um evento de comportamento do usuário diferente do resultado.
 
 Eventos personalizados são úteis para:
 
@@ -143,8 +143,8 @@ Veja a seguir uma seleção de exemplos de eventos personalizados específicos d
 
 | Setor | Eventos personalizados |
 | --- | --- |
-| Varejo | Transação na loja<br>Inscrever-se para o cartão do clube<br>Clip do cupom móvel. |
-| Entretenimento | Associação de temporada de compra <br> Transmita vídeo. |
+| Varejo | Transação na loja<br>Inscreva-se no cartão do clube<br>Cupons de clipe para dispositivos móveis. |
+| Entretenimento | Participação na temporada de compras <br>. Faça streaming do vídeo. |
 | Hospitalidade | Fazer reserva no restaurante <br> Comprar pontos de fidelidade. |
 | Viagens | Adicionar informações conhecidas do viajante Comprar milhas. |
 | Comunicações | Atualizar/fazer downgrade/cancelar plano. |
@@ -185,7 +185,7 @@ Para decidir a duração mínima necessária dos dados existentes no sistema:
 
    - Dados necessários = 60 dias + 30 dias = 90 dias
 
-- Você deseja prever se o usuário provavelmente comprará um relógio nos próximos 7 dias **sem** Fornecer uma população elegível explícita. Nesse caso, a população elegível assume como padrão &quot;aqueles que tiveram atividade nos últimos 45 dias&quot; e a janela de resultado é de 7 dias.
+- Você deseja prever se o usuário provavelmente comprará um relógio nos próximos 7 dias **sem** fornecendo uma população qualificada explícita. Nesse caso, a população elegível assume como padrão &quot;aqueles que tiveram atividade nos últimos 45 dias&quot; e a janela de resultado é de 7 dias.
 
    - Janela de pesquisa de elegibilidade = 45 dias
 
@@ -207,9 +207,9 @@ Embora a IA do cliente exija um período mínimo para que os dados existam no si
 
 ## Dados de saída da IA do cliente {#customer-ai-output-data}
 
-A IA do cliente gera vários atributos para perfis individuais que são considerados qualificados. Há duas maneiras de consumir a pontuação (saída) com base no que você provisionou. Se você tiver um conjunto de dados habilitado para o Perfil do cliente em tempo real, poderá consumir insights do Perfil do cliente em tempo real na [Construtor de segmentos](../../segmentation/ui/segment-builder.md). Se você não tiver um conjunto de dados habilitado para perfis, poderá [baixar a saída do Customer AI](./user-guide/download-scores.md) conjunto de dados disponível no data lake.
+A IA do cliente gera vários atributos para perfis individuais que são considerados qualificados. Há duas maneiras de consumir a pontuação (saída) com base no que você provisionou. Se você tiver um conjunto de dados habilitado para o Perfil do cliente em tempo real, poderá consumir insights do Perfil do cliente em tempo real no [Construtor de segmentos](../../segmentation/ui/segment-builder.md). Se você não tiver um conjunto de dados habilitado para perfil, poderá [baixar o conjunto de dados de saída da IA do cliente](./user-guide/download-scores.md) disponível no data lake.
 
-Você pode encontrar o conjunto de dados de saída na Plataforma **Conjuntos de dados** espaço de trabalho. Todos os conjuntos de dados de saída da IA do cliente começam com o nome **Pontuações da IA do cliente - NAME_OF_APP**. Da mesma forma, todos os esquemas de saída da IA do cliente começam com o nome **Esquema da IA do cliente - Nome_do_aplicativo**.
+Você pode encontrar o conjunto de dados de saída no espaço de trabalho Plataforma **Conjuntos de dados**. Todos os conjuntos de dados de saída do Customer AI começam com o nome **Pontuações do Customer AI - NAME_OF_APP**. Da mesma forma, todos os esquemas de saída do Customer AI começam com o nome **Esquema do Customer AI - Nome_do_aplicativo**.
 
 ![Nome dos conjuntos de dados de saída na IA do cliente](./images/user-guide/cai-schema-name-of-app.png)
 
@@ -226,4 +226,4 @@ A tabela abaixo descreve os vários atributos encontrados na saída da IA do cli
 
 ## Próximas etapas {#next-steps}
 
-Depois de preparar seus dados e garantir que todas as credenciais e esquemas estejam em vigor, consulte o [Configurar uma instância da IA do cliente](./user-guide/configure.md) guia, que o orienta por um tutorial passo a passo para criar uma instância da IA do cliente.
+Depois de preparar seus dados e garantir que todas as credenciais e esquemas estejam em vigor, consulte o guia [Configurar uma instância da IA do cliente](./user-guide/configure.md), que orienta você por um tutorial passo a passo para criar uma instância da IA do cliente.

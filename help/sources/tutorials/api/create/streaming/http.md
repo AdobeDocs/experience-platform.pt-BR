@@ -11,24 +11,24 @@ ht-degree: 4%
 ---
 
 
-# Crie uma conexão de transmissão da API HTTP usando o [!DNL Flow Service] API
+# Criar uma conexão de transmissão da API HTTP usando a API [!DNL Flow Service]
 
 O Serviço de fluxo é usado para coletar e centralizar dados do cliente de diferentes fontes na Adobe Experience Platform. O serviço fornece uma interface de usuário e a API RESTful a partir da qual todas as fontes compatíveis são conectáveis.
 
-Este tutorial usa o [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) para orientá-lo pelas etapas de criação de uma conexão de transmissão usando o [!DNL Flow Service] API.
+Este tutorial usa a [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) para orientá-lo nas etapas de criação de uma conexão de streaming usando a API [!DNL Flow Service].
 
 ## Introdução
 
 Este manual necessita de uma compreensão funcional dos seguintes componentes da Adobe Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)]](../../../../../xdm/home.md): o quadro normalizado pelo qual [!DNL Platform] organiza os dados de experiência.
-* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): fornece um perfil de consumidor unificado em tempo real com base em dados agregados de várias fontes.
+* [[!DNL Experience Data Model (XDM)]](../../../../../xdm/home.md): A estrutura padronizada pela qual o [!DNL Platform] organiza os dados de experiência.
+* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Fornece um perfil de consumidor unificado em tempo real com base em dados agregados de múltiplas fontes.
 
-Além disso, a criação de uma conexão de transmissão exige que você tenha um esquema XDM de destino e um conjunto de dados. Para aprender a criar esses itens, leia o tutorial em [dados de registro de transmissão](../../../../../ingestion/tutorials/streaming-record-data.md) ou o tutorial em [transmissão de dados de série temporal](../../../../../ingestion/tutorials/streaming-time-series-data.md).
+Além disso, a criação de uma conexão de transmissão exige que você tenha um esquema XDM de destino e um conjunto de dados. Para aprender a criar essas séries, leia o tutorial em [streaming de dados de registro](../../../../../ingestion/tutorials/streaming-record-data.md) ou o tutorial em [streaming de dados de série temporal](../../../../../ingestion/tutorials/streaming-time-series-data.md).
 
 ### Uso de APIs da plataforma
 
-Para obter informações sobre como fazer chamadas para APIs da Platform com êxito, consulte o manual em [introdução às APIs da Platform](../../../../../landing/api-guide.md).
+Para obter informações sobre como fazer chamadas para APIs da Platform com êxito, consulte o manual sobre [introdução às APIs da Platform](../../../../../landing/api-guide.md).
 
 ## Criar uma conexão básica
 
@@ -38,7 +38,7 @@ Uma conexão base especifica a origem e contém as informações necessárias pa
 
 Conexões não autenticadas são a conexão de transmissão padrão que você pode criar quando quiser transmitir dados para a Platform.
 
-Para criar uma conexão base não autenticada, faça uma solicitação POST ao `/connections` ao fornecer um nome para sua conexão, o tipo de dados e a ID de especificação da conexão da API HTTP. Essa ID é `bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb`.
+Para criar uma conexão base não autenticada, faça uma solicitação POST para o ponto de extremidade `/connections` enquanto fornece um nome para a conexão, o tipo de dados e a ID de especificação da conexão da API HTTP. Esta ID é `bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb`.
 
 **Formato da API**
 
@@ -108,8 +108,8 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
 | --- | --- |
 | `name` | O nome da sua conexão básica. Certifique-se de que o nome seja descritivo, pois você pode usá-lo para pesquisar informações sobre sua conexão básica. |
 | `description` | (Opcional) Uma propriedade que você pode incluir para fornecer mais informações sobre sua conexão básica. |
-| `connectionSpec.id` | A ID da especificação de conexão que corresponde à API HTTP. Essa ID é `bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb`. |
-| `auth.params.dataType` | O tipo de dados da conexão de streaming. Os valores compatíveis incluem: `xdm` e `raw`. |
+| `connectionSpec.id` | A ID da especificação de conexão que corresponde à API HTTP. Esta ID é `bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb`. |
+| `auth.params.dataType` | O tipo de dados da conexão de streaming. Os valores suportados incluem: `xdm` e `raw`. |
 | `auth.params.name` | O nome da conexão de streaming que você deseja criar. |
 
 **Resposta**
@@ -125,14 +125,14 @@ Uma resposta bem-sucedida retorna o status HTTP 201 com detalhes da conexão rec
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `id` | A variável `id` da sua conexão básica recém-criada. |
+| `id` | O `id` da sua conexão base recém-criada. |
 | `etag` | Um identificador atribuído à conexão, especificando a versão da conexão base. |
 
 ### Conexão autenticada
 
 As conexões autenticadas devem ser usadas quando for necessário diferenciar entre registros provenientes de fontes confiáveis e não confiáveis. Os usuários que desejam enviar informações com Informações de identificação pessoal (PII) devem criar uma conexão autenticada ao transmitir informações para a Platform.
 
-Para criar uma conexão de base autenticada, você deve incluir o `authenticationRequired` na solicitação e especifique o valor como `true`. Durante essa etapa, também é possível fornecer uma ID de origem para a conexão de base autenticada. Esse parâmetro é opcional e usará o mesmo valor que o parâmetro `name` atributo, se não for fornecido.
+Para criar uma conexão de base autenticada, você deve incluir o parâmetro `authenticationRequired` em sua solicitação e especificar seu valor como `true`. Durante essa etapa, também é possível fornecer uma ID de origem para a conexão de base autenticada. Este parâmetro é opcional e usará o mesmo valor que o atributo `name`, se ele não for fornecido.
 
 
 **Formato da API**
@@ -207,8 +207,8 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `auth.params.sourceId` | Um identificador adicional que pode ser usado ao criar uma conexão de base autenticada. Esse parâmetro é opcional e usará o mesmo valor que o parâmetro `name` atributo, se não for fornecido. |
-| `auth.params.authenticationRequired` | Esse parâmetro especifica se a conexão de streaming requer ou não autenticação. Se `authenticationRequired` está definida como `true` então, a autenticação deve ser fornecida para a conexão de streaming. Se `authenticationRequired` está definida como `false` então, a autenticação não é necessária. |
+| `auth.params.sourceId` | Um identificador adicional que pode ser usado ao criar uma conexão de base autenticada. Este parâmetro é opcional e usará o mesmo valor que o atributo `name`, se ele não for fornecido. |
+| `auth.params.authenticationRequired` | Esse parâmetro especifica se a conexão de streaming requer ou não autenticação. Se `authenticationRequired` estiver definido como `true`, a autenticação deverá ser fornecida para a conexão de streaming. Se `authenticationRequired` estiver definido como `false`, a autenticação não será necessária. |
 
 **Resposta**
 
@@ -233,7 +233,7 @@ GET /flowservice/connections/{BASE_CONNECTION_ID}
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `{BASE_CONNECTION_ID}` | A variável `id` valor da conexão criada anteriormente. |
+| `{BASE_CONNECTION_ID}` | O valor `id` da conexão criada anteriormente. |
 
 **Solicitação**
 
@@ -247,7 +247,7 @@ curl -X GET https://platform.adobe.io/data/foundation/flowservice/connections/{B
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o status HTTP 200 com informações detalhadas sobre a conexão solicitada. O URL da extremidade de transmissão é criado automaticamente com a conexão e pode ser recuperado usando o `inletUrl` valor.
+Uma resposta bem-sucedida retorna o status HTTP 200 com informações detalhadas sobre a conexão solicitada. A URL da extremidade de streaming é criada automaticamente com a conexão e pode ser recuperada usando o valor `inletUrl`.
 
 ```json
 {
@@ -290,7 +290,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com informações detalhadas
 
 ## Criar uma conexão de origem {#source}
 
-Para criar uma conexão de origem, faça uma solicitação POST ao `/sourceConnections` ao fornecer a ID de conexão básica.
+Para criar uma conexão de origem, faça uma solicitação POST para o ponto de extremidade `/sourceConnections` enquanto fornece a ID da conexão base.
 
 **Formato da API**
 
@@ -334,19 +334,19 @@ Uma resposta bem-sucedida retorna o status HTTP 201 com detalhes da conexão de 
 
 Para que os dados de origem sejam usados na Platform, um esquema de destino deve ser criado para estruturar os dados de origem de acordo com suas necessidades. O esquema de destino é usado para criar um conjunto de dados da Platform no qual os dados de origem estão contidos.
 
-Um schema XDM de destino pode ser criado executando uma solicitação POST para o [API do registro de esquema](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
+Um esquema XDM de destino pode ser criado executando uma solicitação POST para a [API do Registro de Esquema](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
-Para obter etapas detalhadas sobre como criar um esquema XDM de destino, consulte o tutorial sobre [criação de um schema usando a API](../../../../../xdm/api/schemas.md).
+Para obter etapas detalhadas sobre como criar um esquema XDM de destino, consulte o tutorial sobre [criação de um esquema usando a API](../../../../../xdm/api/schemas.md).
 
 ### Criar um conjunto de dados de destino {#target-dataset}
 
-Um conjunto de dados de destino pode ser criado executando uma solicitação POST para o [API do serviço de catálogo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), fornecendo a ID do schema de destino na carga útil.
+Um conjunto de dados de destino pode ser criado por meio de uma solicitação POST para a [API de Serviço de Catálogo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), fornecendo a ID do esquema de destino na carga.
 
 Para obter etapas detalhadas sobre como criar um conjunto de dados de destino, consulte o tutorial sobre [criação de um conjunto de dados usando a API](../../../../../catalog/api/create-dataset.md).
 
 ## Criar uma conexão de destino {#target}
 
-Uma conexão de destino representa a conexão com o destino onde os dados assimilados chegam. Para criar uma conexão de target, faça uma solicitação POST para `/targetConnections` ao fornecer IDs para o conjunto de dados e o esquema XDM do público-alvo. Durante essa etapa, você também deve fornecer a ID de especificação da conexão do data lake. Essa ID é `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+Uma conexão de destino representa a conexão com o destino onde os dados assimilados chegam. Para criar uma conexão de destino, faça uma solicitação POST para `/targetConnections` enquanto fornece IDs para o conjunto de dados de destino e o esquema XDM de destino. Durante essa etapa, você também deve fornecer a ID de especificação da conexão do data lake. Esta ID é `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
 **Formato da API**
 
@@ -398,7 +398,7 @@ Uma resposta bem-sucedida retorna o status HTTP 201 com detalhes da conexão de 
 
 Para que os dados de origem sejam assimilados em um conjunto de dados de destino, eles devem primeiro ser mapeados para o esquema de destino ao qual o conjunto de dados de destino adere.
 
-Para criar um conjunto de mapeamento, faça uma solicitação POST ao `mappingSets` endpoint do [[!DNL Data Prep] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-prep.yaml) ao fornecer o esquema XDM do público-alvo `$id` e os detalhes dos conjuntos de mapeamento que deseja criar.
+Para criar um conjunto de mapeamento, faça uma solicitação POST para o ponto de extremidade `mappingSets` da [[!DNL Data Prep] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-prep.yaml) enquanto fornece o esquema XDM de destino `$id` e os detalhes dos conjuntos de mapeamento que deseja criar.
 
 **Formato da API**
 
@@ -439,7 +439,7 @@ curl -X POST \
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `xdmSchema` | A variável `$id` do esquema XDM do público-alvo. |
+| `xdmSchema` | O `$id` do esquema XDM de destino. |
 
 **Resposta**
 
@@ -458,7 +458,7 @@ Uma resposta bem-sucedida retorna detalhes do mapeamento recém-criado, incluind
 
 ## Criar um fluxo de dados
 
-Com as conexões de origem e de destino criadas, agora é possível criar um fluxo de dados. O fluxo de dados é responsável por agendar e coletar dados de uma origem. Você pode criar um fluxo de dados executando uma solicitação POST para o `/flows` terminal.
+Com as conexões de origem e de destino criadas, agora é possível criar um fluxo de dados. O fluxo de dados é responsável por agendar e coletar dados de uma origem. Você pode criar um fluxo de dados executando uma solicitação POST para o ponto de extremidade `/flows`.
 
 **Formato da API**
 
@@ -502,7 +502,7 @@ curl -X POST \
 
 As solicitações a seguir criam um fluxo de dados de transmissão para a API HTTP com transformações de mapeamento aplicadas aos seus dados.
 
-Ao criar um fluxo de dados com transformações, a variável `name` não é possível alterar o parâmetro. Esse valor deve ser sempre definido como `Mapping`.
+Ao criar um fluxo de dados com transformações, o parâmetro `name` não pode ser alterado. Este valor deve ser sempre configurado para `Mapping`.
 
 ```shell
 curl -X POST \
@@ -543,10 +543,10 @@ curl -X POST \
 | --- | --- |
 | `name` | O nome do fluxo de dados. Verifique se o nome do fluxo de dados é descritivo, pois você pode usá-lo para pesquisar informações sobre o fluxo de dados. |
 | `description` | (Opcional) Uma propriedade que você pode incluir para fornecer mais informações sobre o fluxo de dados. |
-| `flowSpec.id` | A ID da especificação de fluxo para [!DNL HTTP API]. Para criar um fluxo de dados com transformações, você deve usar  `c1a19761-d2c7-4702-b9fa-fe91f0613e81`. Para criar um fluxo de dados sem transformações, use `d8a6f005-7eaf-4153-983e-e8574508b877`. |
-| `sourceConnectionIds` | A variável [ID da conexão de origem](#source) recuperado em uma etapa anterior. |
-| `targetConnectionIds` | A variável [ID da conexão de destino](#target) recuperado em uma etapa anterior. |
-| `transformations.params.mappingId` | A variável [ID do mapeamento](#mapping) recuperado em uma etapa anterior. |
+| `flowSpec.id` | A ID da especificação de fluxo para [!DNL HTTP API]. Para criar um fluxo de dados com transformações, você deve usar `c1a19761-d2c7-4702-b9fa-fe91f0613e81`. Para criar um fluxo de dados sem transformações, use `d8a6f005-7eaf-4153-983e-e8574508b877`. |
+| `sourceConnectionIds` | A [ID da conexão de origem](#source) recuperou em uma etapa anterior. |
+| `targetConnectionIds` | A [ID da conexão de destino](#target) recuperou em uma etapa anterior. |
+| `transformations.params.mappingId` | A [ID de mapeamento](#mapping) recuperou em uma etapa anterior. |
 
 **Resposta**
 
@@ -559,7 +559,7 @@ Uma resposta bem-sucedida retorna o status HTTP 201 com detalhes do fluxo de dad
 }
 ```
 
-## Dados da publicação a serem assimilados na plataforma {#ingest-data}
+## Dados do Post a serem assimilados na plataforma {#ingest-data}
 
 >[!NOTE]
 >
@@ -575,7 +575,7 @@ POST /collection/{INLET_URL}
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `{INLET_URL}` | O URL do ponto de extremidade de streaming. Você pode recuperar esse URL fazendo uma solicitação GET para o `/connections` ao fornecer a ID de conexão básica. |
+| `{INLET_URL}` | O URL do ponto de extremidade de streaming. Você pode recuperar esta URL fazendo uma solicitação GET para o ponto de extremidade `/connections` enquanto fornece sua ID de conexão base. |
 | `{FLOW_ID}` | A ID do fluxo de dados de transmissão da API HTTP. Essa ID é necessária para dados XDM e RAW. |
 
 **Solicitação**
@@ -622,7 +622,7 @@ curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20
       }'
 ```
 
->[!TAB Enviar dados brutos com ID de fluxo como um cabeçalho HTTP]
+>[!TAB Enviar dados brutos com identificação de fluxo como um cabeçalho HTTP]
 
 Ao enviar dados brutos, você pode especificar sua ID de fluxo como um parâmetro de consulta ou como parte de seu cabeçalho HTTP. O exemplo a seguir especifica a ID do fluxo como um cabeçalho HTTP.
 
@@ -692,9 +692,9 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes das informaçõ
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você criou uma conexão HTTP de transmissão, permitindo usar o endpoint de transmissão para assimilar dados na Platform. Para obter instruções sobre como criar uma conexão de transmissão na interface do usuário, leia o [tutorial de criação de uma conexão de transmissão](../../../ui/create/streaming/http.md).
+Ao seguir este tutorial, você criou uma conexão HTTP de transmissão, permitindo usar o endpoint de transmissão para assimilar dados na Platform. Para obter instruções sobre como criar uma conexão de streaming na interface, leia o [tutorial sobre criação de uma conexão de streaming](../../../ui/create/streaming/http.md).
 
-Para saber como transmitir dados para a Platform, leia o tutorial sobre [transmissão de dados de série temporal](../../../../../ingestion/tutorials/streaming-time-series-data.md) ou o tutorial em [dados de registro de transmissão](../../../../../ingestion/tutorials/streaming-record-data.md).
+Para saber como transmitir dados para a Platform, leia o tutorial sobre [dados de série temporal de transmissão](../../../../../ingestion/tutorials/streaming-time-series-data.md) ou o tutorial sobre [dados de registro de transmissão](../../../../../ingestion/tutorials/streaming-record-data.md).
 
 ## Apêndice
 
@@ -702,9 +702,9 @@ Esta seção fornece informações adicionais sobre como criar conexões de tran
 
 ### Envio de mensagens a uma conexão de streaming autenticada
 
-Se uma conexão de streaming tiver a autenticação habilitada, o cliente precisará adicionar a `Authorization` cabeçalho à solicitação deles.
+Se uma conexão de streaming tiver autenticação habilitada, o cliente precisará adicionar o cabeçalho `Authorization` à solicitação.
 
-Se a variável `Authorization` não houver cabeçalho ou um token de acesso inválido/expirado for enviado, uma resposta HTTP 401 Não autorizado será retornada, com uma resposta semelhante à abaixo:
+Se o cabeçalho `Authorization` não estiver presente ou um token de acesso inválido/expirado for enviado, uma resposta HTTP 401 Não autorizado será retornada, com uma resposta semelhante à abaixo:
 
 **Resposta**
 

@@ -4,7 +4,7 @@ description: Saiba como gerenciar as permissões de usuário para o Adobe Experi
 exl-id: 6aa81850-48d7-4fff-95d1-53b769090649
 source-git-commit: 20a737cf36bf08415a15db78599f36659207ace1
 workflow-type: tm+mt
-source-wordcount: '1504'
+source-wordcount: '1481'
 ht-degree: 95%
 
 ---
@@ -47,7 +47,7 @@ A tabela a seguir descreve as permissões disponíveis para o Privacy Service, c
 
 Para gerenciar permissões do Privacy Service, faça logon no [Admin Console](https://adminconsole.adobe.com/) e selecione **[!UICONTROL Produtos]** no painel de navegação superior. Então selecione **[!UICONTROL Adobe Experience Platform Privacy Service]**.
 
-![O Admin Console com a placa de produto Privacy Service realçada.](./images/permissions/privacy-service-card.png)
+![O Admin Console com o cartão de produto Privacy Service realçado.](./images/permissions/privacy-service-card.png)
 
 ### Selecionar ou criar um perfil de produto
 
@@ -69,21 +69,21 @@ Ao editar as permissões de um perfil, as permissões disponíveis são listadas
 
 As permissões são organizadas em categorias. Para alternar entre categorias, selecione a categoria desejada na painel de navegação à esquerda.
 
-![A variável [!UICONTROL Recusar a venda] seção em permissões.](./images/permissions/switch-category.png)
+![A seção [!UICONTROL Recusar Venda] em permissões.](./images/permissions/switch-category.png)
 
 Clique em **[!UICONTROL Salvar]** quando terminar de configurar as permissões.
 
-![A configuração de permissão para o perfil de produto com a opção Salvar realçada.](./images/permissions/save-permissions.png)
+![A configuração de permissão para o perfil de produto com Salvar realçado.](./images/permissions/save-permissions.png)
 
 A visualização do perfil de produto será exibida novamente com as permissões adicionadas.
 
-![As permissões adicionadas para o perfil do produto.](./images/permissions/permissions-added.png)
+![As permissões adicionadas para o perfil de produto.](./images/permissions/permissions-added.png)
 
 ### Atribuir usuários ao perfil {#assign-users}
 
 Para atribuir usuários ao perfil de produto (e conceder a eles as permissões configuradas nele), selecione a guia **[!UICONTROL Usuários]** e, em seguida, **[!UICONTROL Adicionar usuário]**.
 
-![A guia Usuários para um perfil de produto no Admin Console.](./images/permissions/manage-users.png)
+![A guia Usuários de um perfil de produto no Admin Console.](./images/permissions/manage-users.png)
 
 Para obter mais informações sobre como gerenciar usuários em um perfil de produto, consulte a [Documentação do Admin Console](https://helpx.adobe.com/br/enterprise/using/manage-product-profiles.html).
 

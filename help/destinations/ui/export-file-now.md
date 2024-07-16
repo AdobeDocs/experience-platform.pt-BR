@@ -14,12 +14,12 @@ ht-degree: 8%
 
 >[!IMPORTANT]
 >
->A variável **[!UICONTROL Exportar arquivo agora]** no Adobe Experience Platform está atualmente na versão beta. A documentação e a funcionalidade estão sujeitas a alterações.
+>A opção **[!UICONTROL Exportar arquivo agora]** no Adobe Experience Platform está atualmente no Beta. A documentação e a funcionalidade estão sujeitas a alterações.
 >Entre em contato com o representante da Adobe para obter acesso a essa funcionalidade.
 
 >[!IMPORTANT]
 > 
->Para ativar os dados, é necessário **[!UICONTROL Exibir destinos]**, **[!UICONTROL Ativar destinos]**, **[!UICONTROL Exibir perfis]**, e **[!UICONTROL Exibir segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
+>Para ativar dados, você precisa de **[!UICONTROL Exibir Destinos]**, **[!UICONTROL Ativar Destinos]**, **[!UICONTROL Exibir Perfis]** e **[!UICONTROL Exibir Segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 
 ## Visão geral do recurso **[!UICONTROL Exportar arquivo agora]**  {#overview}
 
@@ -28,31 +28,31 @@ ht-degree: 8%
 >title="Exportar arquivo agora"
 >abstract="Selecione esse controle para fornecer uma exportação de arquivo completa, além de qualquer exportação agendada anteriormente. A exportação de arquivos é acionada imediatamente e obtém os resultados mais recentes das execuções de segmentação da Experience Platform."
 
-Este artigo explica como usar a interface do Experience Platform para exportar arquivos sob demanda para destinos em lote, como [armazenamento na nuvem](/help/destinations/catalog/cloud-storage/overview.md) e [marketing por email](/help/destinations/catalog/email-marketing/overview.md) destinos.
+Este artigo explica como usar a interface do usuário do Experience Platform para exportar arquivos sob demanda para destinos em lote, como destinos de [armazenamento na nuvem](/help/destinations/catalog/cloud-storage/overview.md) e [marketing por email](/help/destinations/catalog/email-marketing/overview.md).
 
-A variável **[!UICONTROL Exportar arquivo agora]** o controle permite exportar um arquivo completo sem interromper o agendamento de exportação atual de um público-alvo agendado anteriormente. Essa exportação ocorre além das exportações previamente agendadas e não altera a frequência de exportação do público-alvo. A exportação de arquivos é acionada imediatamente e obtém os resultados mais recentes das execuções de segmentação da Experience Platform.
+O controle **[!UICONTROL Exportar arquivo agora]** permite exportar um arquivo completo sem interromper o agendamento de exportação atual de um público agendado anteriormente. Essa exportação ocorre além das exportações previamente agendadas e não altera a frequência de exportação do público-alvo. A exportação de arquivos é acionada imediatamente e obtém os resultados mais recentes das execuções de segmentação da Experience Platform.
 
-Também é possível usar as APIs de Experience Platform para essa finalidade. Ler como [ativar públicos-alvo sob demanda para destinos em lote por meio da API de ativação ad-hoc](/help/destinations/api/ad-hoc-activation-api.md).
+Também é possível usar as APIs de Experience Platform para essa finalidade. Leia como [ativar públicos-alvo sob demanda para destinos em lote por meio da API de ativação ad-hoc](/help/destinations/api/ad-hoc-activation-api.md).
 
 ## Pré-requisitos {#prerequisites}
 
-Para exportar arquivos sob demanda para destinos em lote, você deve ter o [conectado a um destino](./connect-destination.md). Se ainda não tiver feito isso, acesse o [catálogo de destinos](../catalog/overview.md), navegue pelos destinos compatíveis e configure o destino que deseja usar.
+Para exportar arquivos por demanda para destinos em lote, você deve ter [se conectado com êxito a um destino](./connect-destination.md). Se ainda não tiver feito isso, vá para o [catálogo de destinos](../catalog/overview.md), navegue pelos destinos compatíveis e configure o destino que deseja usar.
 
 ## Como exportar arquivos por demanda {#how-to-export-files-on-demand}
 
-1. Ir para **[!UICONTROL Conexões > Destinos]**, selecione o **[!UICONTROL Procurar]** e o símbolo de filtro para mostrar as conexões existentes aos destinos em lote desejados.
+1. Vá para **[!UICONTROL Conexões > Destinos]**, selecione a guia **[!UICONTROL Procurar]** e o símbolo de filtro para mostrar as conexões existentes aos destinos em lote desejados.
 
-   ![Imagem que destaca como acessar a guia de navegação e filtrar fluxos de dados existentes.](../assets/ui/activate-on-demand/browse-tab.png)
+   ![Imagem destacando como chegar à guia de navegação e filtrar fluxos de dados existentes.](../assets/ui/activate-on-demand/browse-tab.png)
 
 2. Selecione a conexão de destino desejada para inspecionar o fluxo de dados existente para o destino.
 
    ![Imagem destacando um fluxo de dados filtrado.](../assets/ui/activate-on-demand/filtered-dataflow.png)
 
-3. Selecione o **[!UICONTROL Dados de ativação]** e selecione os públicos para os quais deseja exportar arquivos por demanda e selecione o **[!UICONTROL Exportar arquivo agora]** controle para acionar uma exportação única que fornecerá um arquivo para cada público-alvo selecionado para o destino do lote.
+3. Selecione a guia **[!UICONTROL Dados de ativação]**, selecione os públicos para os quais deseja exportar arquivos por demanda e selecione o controle **[!UICONTROL Exportar arquivo agora]** para acionar uma exportação única que fornecerá um arquivo para cada público selecionado para o destino do seu lote.
 
    ![Imagem destacando o botão Exportar arquivo agora.](../assets/ui/activate-on-demand/bulk-export-file-now.png)
 
-4. Selecionar **[!UICONTROL Sim]** para confirmar e acionar a exportação do arquivo.
+4. Selecione **[!UICONTROL Sim]** para confirmar e acionar a exportação de arquivos.
 
    ![Imagem mostrando a caixa de diálogo de confirmação Exportar arquivo agora.](../assets/ui/activate-on-demand/confirm-activation.png)
 
@@ -60,24 +60,24 @@ Para exportar arquivos sob demanda para destinos em lote, você deve ter o [cone
 
    ![Imagem mostrando a confirmação de ativação ad-hoc bem-sucedida.](../assets/ui/activate-on-demand/ad-hoc-success.png)
 
-6. Você também pode alternar para a variável **[!UICONTROL O fluxo de dados é executado]** para confirmar se a exportação do arquivo foi iniciada.
+6. Você também pode alternar para a guia **[!UICONTROL Execuções do fluxo de dados]** para confirmar se a exportação de arquivos foi iniciada.
 
 ## Considerações {#considerations}
 
-Lembre-se das seguintes considerações ao usar o **[!UICONTROL Exportar arquivo agora]** controle:
+Lembre-se das seguintes considerações ao usar o controle **[!UICONTROL Exportar arquivo agora]**:
 
-* **[!UICONTROL Exportar arquivo agora]** funciona somente para públicos-alvo cujo agendamento no fluxo de dados de ativação em lote se sobrepõe à data atual. Isso inclui públicos com agendamentos sem data de término (frequência de exportação de **[!UICONTROL Uma vez]**), ou quando a data final ainda não tiver passado.
-* Ao adicionar um público-alvo a um fluxo de dados existente, aguarde pelo menos 15 minutos até usar o **[!UICONTROL Exportar arquivo agora]** controle.
-* Se você alterar a política de mesclagem de um público-alvo ou se criar um público-alvo que use uma nova política de mesclagem, aguarde 24 horas até usar o **[!UICONTROL Exportar arquivo agora]** controle.
+* **[!UICONTROL Exportar arquivo agora]** funciona somente para públicos cujo agendamento no fluxo de dados de ativação em lote se sobrepõe à data atual. Isso inclui públicos com agendamentos sem data de término (frequência de exportação de **[!UICONTROL Uma vez]**) ou em que a data de término ainda não tenha passado.
+* Ao adicionar um público a um fluxo de dados existente, aguarde pelo menos 15 minutos até usar o controle **[!UICONTROL Exportar arquivo agora]**.
+* Se você alterar a política de mesclagem de um público ou se criar um público que use uma nova política de mesclagem, aguarde 24 horas até usar o controle **[!UICONTROL Exportar arquivo agora]**.
 
 ## Mensagens de erro da interface do usuário {#ui-error-messages}
 
-Ao usar o **[!UICONTROL Exportar arquivo agora]** controle, você poderá encontrar qualquer uma das mensagens de erro listadas abaixo. Revise a tabela para entender como abordá-los quando eles forem exibidos.
+Ao usar o controle **[!UICONTROL Exportar arquivo agora]**, você poderá encontrar qualquer uma das mensagens de erro listadas abaixo. Revise a tabela para entender como abordá-los quando eles forem exibidos.
 
 | Mensagem de erro | Resolução |
 |---------|----------|
-| Execução já em andamento para o público-alvo `segment ID` para pedido `dataflow ID` com id de execução `flow run ID` | Essa mensagem de erro indica que um fluxo de ativação ad-hoc está em andamento para um público-alvo. Aguarde a conclusão do trabalho antes de acionar o trabalho de ativação novamente. |
-| Públicos-alvo `<segment name>` não fazem parte desse fluxo de dados ou estão fora do intervalo programado! | Essa mensagem de erro indica que os públicos selecionados para ativação não estão mapeados para o fluxo de dados ou que o agendamento de ativação configurado para os públicos expirou ou ainda não foi iniciado. Verifique se o público-alvo está realmente mapeado para o fluxo de dados e se o agendamento de ativação de público-alvo se sobrepõe à data atual. |
+| Execução já em andamento para a audiência `segment ID` para a ordem `dataflow ID` com a ID de execução `flow run ID` | Essa mensagem de erro indica que um fluxo de ativação ad-hoc está em andamento para um público-alvo. Aguarde a conclusão do trabalho antes de acionar o trabalho de ativação novamente. |
+| Os públicos-alvo `<segment name>` não fazem parte desse fluxo de dados ou estão fora do intervalo programado! | Essa mensagem de erro indica que os públicos selecionados para ativação não estão mapeados para o fluxo de dados ou que o agendamento de ativação configurado para os públicos expirou ou ainda não foi iniciado. Verifique se o público-alvo está realmente mapeado para o fluxo de dados e se o agendamento de ativação de público-alvo se sobrepõe à data atual. |
 
 ## Informações relacionadas {#related-information}
 

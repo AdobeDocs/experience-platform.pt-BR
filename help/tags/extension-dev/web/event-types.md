@@ -5,7 +5,7 @@ exl-id: dbdd1c88-5c54-46be-9824-2f15cce3d160
 source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
 source-wordcount: '1052'
-ht-degree: 71%
+ht-degree: 70%
 
 ---
 
@@ -27,7 +27,7 @@ Este documento aborda como definir tipos de evento para uma extensão da Web no 
 
 Os tipos de evento são definidos por extensões e geralmente consistem no seguinte:
 
-1. A [exibir](./views.md) mostrado na interface do Experience Platform e na interface da Coleção de dados, permitindo que os usuários modifiquem as configurações para o evento.
+1. Uma [visualização](./views.md) mostrada na interface do usuário do Experience Platform e na interface da Coleção de dados que permite aos usuários modificar as configurações do evento.
 2. Um módulo de biblioteca emitido na biblioteca de tempo de execução de tag para interpretar as configurações e observar a ocorrência de determinada atividade.
 
 `module.exports` aceite tanto o `settings` quanto os parâmetros `trigger`. Isso permite a personalização do tipo de evento.
@@ -105,9 +105,9 @@ trigger({
 
 ## Respeitar a ordem das regras
 
-As tags oferecem aos usuários a capacidade de solicitar regras. Por exemplo, um usuário pode criar duas regras que usam o tipo de evento de alteração de orientação e personalizar a ordem em que as regras são acionadas. Supondo que o usuário do Adobe Experience Platform especifique um valor de pedido de `2` para o evento de alteração de orientação na Regra A e um valor de ordem de `1` para o evento de alteração de orientação na Regra B. Isso indica que, quando a orientação mudar em um dispositivo móvel, a Regra B deverá ser acionada antes da Regra A (regras com valores de ordem mais baixa são acionadas primeiro).
+As tags oferecem aos usuários a capacidade de solicitar regras. Por exemplo, um usuário pode criar duas regras que usam o tipo de evento de alteração de orientação e personalizar a ordem em que as regras são acionadas. Vamos supor que o usuário do Adobe Experience Platform especifique um valor de ordem de `2` para o evento de alteração de orientação na Regra A e um valor de ordem de `1` para o evento de alteração de orientação na Regra B. Isso indica que, quando a orientação mudar em um dispositivo móvel, a Regra B deverá ser acionada antes da Regra A (regras com valores de ordem mais baixa são acionadas primeiro).
 
-Como mencionado anteriormente, a função exportada em nosso módulo de evento será chamada uma vez para cada regra configurada para usar nosso tipo de evento. Cada vez que a função exportada é chamada, ela recebe uma função exclusiva `trigger` vinculada a uma regra específica. No cenário descrito, nossa função exportada será chamada uma vez com um `trigger` Função vinculada à Regra B e novamente com um `trigger` Função vinculada à Regra A. A Regra B aparece primeiro porque o usuário lhe deu um valor de ordem menor que a Regra A. Quando nosso módulo de biblioteca detecta uma alteração de orientação, é importante chamar a variável `trigger` funções na mesma ordem em que foram fornecidas ao módulo da biblioteca.
+Como mencionado anteriormente, a função exportada em nosso módulo de evento será chamada uma vez para cada regra configurada para usar nosso tipo de evento. Cada vez que a função exportada é chamada, ela recebe uma função exclusiva `trigger` vinculada a uma regra específica. No cenário descrito, nossa função exportada será chamada uma vez com uma função `trigger` vinculada à Regra B e, em seguida, novamente com uma função `trigger` vinculada à Regra A. A Regra B aparece primeiro porque o usuário lhe deu um valor de ordem menor que a Regra A. Quando nosso módulo de biblioteca detecta uma alteração de orientação, é importante chamar as funções `trigger` na mesma ordem em que foram fornecidas ao módulo da biblioteca.
 
 No código de exemplo abaixo, observe que quando uma alteração de orientação é detectada, as funções de acionamento são chamadas na mesma ordem em que foram fornecidas à função exportada:
 

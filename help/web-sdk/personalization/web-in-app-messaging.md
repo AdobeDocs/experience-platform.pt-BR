@@ -1,13 +1,13 @@
 ---
 title: Configurar o suporte a mensagens no aplicativo da Web no SDK da Web
 description: Saiba como configurar a extensão de tag do SDK da Web para oferecer suporte a mensagens no aplicativo da Web.
-source-git-commit: bc3ae849bd7fd8a9f50ba98528adc43d7282df90
+exl-id: 90a19ef4-e94c-4f16-a26a-8919ad2dbd6f
+source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
 source-wordcount: '967'
 ht-degree: 0%
 
 ---
-
 
 # Configurar o suporte a mensagens no aplicativo da Web no SDK da Web
 
@@ -19,9 +19,9 @@ Ao usar mensagens no aplicativo, você pode se envolver efetivamente com seu pú
 
 >[!IMPORTANT]
 >
->As mensagens no aplicativo da Web são um [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=pt-BR) que usa o SDK da Web para fornecer o conteúdo personalizado.
+>As Mensagens no Aplicativo Web são um recurso do [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=pt-BR), que usa o SDK da Web para fornecer conteúdo personalizado.
 >
->Para obter instruções detalhadas sobre como configurar a campanha de mensagens no aplicativo da Web, consulte [Documentação do Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/create-in-app-web.html).
+>Para obter instruções detalhadas sobre como configurar a campanha de Mensagens no Aplicativo da Web, consulte a [documentação do Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/create-in-app-web.html).
 
 
 ## Pré-requisitos {#prerequisites}
@@ -38,17 +38,17 @@ Ao configurar [Mensagens no aplicativo da Web](../personalization/web-in-app-mes
 default-src  blob:;
 ```
 
-Para obter mais informações sobre como configurar uma CSP, consulte [documentação dedicada](../use-cases/configuring-a-csp.md).
+Para obter mais informações sobre como configurar uma CSP, consulte a [documentação dedicada](../use-cases/configuring-a-csp.md).
 
 ## Configurar mensagens no aplicativo da Web usando a extensão de tag SDK da Web {#tag-extension}
 
-Consulte a [Página de configuração da extensão de tag do SDK da Web](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) para saber onde encontrar as configurações descritas abaixo.
+Consulte a [página de configuração da extensão de tag do SDK da Web](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) para entender onde você pode encontrar as configurações descritas abaixo.
 
-Depois de ter [instalado](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md#install-the-web-sdk-tag-extension) Na extensão de tag do SDK da Web, siga as etapas abaixo para configurar a extensão para Mensagens no aplicativo da Web.
+Depois de [instalar](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md#install-the-web-sdk-tag-extension) a extensão de tag do SDK da Web, siga as etapas abaixo para configurar a extensão para Mensagens no aplicativo da Web.
 
-No **[!UICONTROL Personalização]** , verifique a **[!UICONTROL Habilitar armazenamento de personalização]** opção. Essa opção permite que o SDK da Web acompanhe quais experiências foram vistas pelo usuário em carregamentos de página.
+Na seção **[!UICONTROL Personalization]**, marque a opção **[!UICONTROL Habilitar armazenamento de personalização]**. Essa opção permite que o SDK da Web acompanhe quais experiências foram vistas pelo usuário em carregamentos de página.
 
-![Imagem mostrando a opção de armazenamento de personalização na página de configuração da extensão de tag.](assets/web-in-app-messaging/enable-personalization-storage.png)
+![Imagem mostrando a opção de armazenamento de personalização na página de configuração de extensão de marca.](assets/web-in-app-messaging/enable-personalization-storage.png)
 
 
 As mensagens no aplicativo da Web são compatíveis com dois tipos de acionadores:
@@ -58,42 +58,42 @@ As mensagens no aplicativo da Web são compatíveis com dois tipos de acionadore
 
 Consulte as seguintes seções para configurar a extensão de tag do SDK da Web de acordo com os acionadores que deseja usar.
 
-### Etapas de configuração para o **[!UICONTROL Enviar dados para a Platform]** acionador {#send-data-platform}
+### Etapas de configuração para o gatilho **[!UICONTROL Enviar dados para a Plataforma]** {#send-data-platform}
 
-Selecione a propriedade da tag que contém a extensão SDK da Web e [criar uma nova regra](../../tags/ui/managing-resources/rules.md##create-a-rule) com as seguintes configurações:
+Selecione a propriedade da marca que contém sua extensão SDK da Web e [crie uma nova regra](../../tags/ui/managing-resources/rules.md##create-a-rule) com as seguintes configurações:
 
 1. **[!UICONTROL Extensão]**: [!UICONTROL Núcleo]
-2. **[!UICONTROL Tipo de evento]**: [!UICONTROL Biblioteca carregada (início da página)]
+2. **[!UICONTROL Tipo de Evento]**: [!UICONTROL Biblioteca Carregada (Início da Página)]
 
    ![Imagem mostrando a tela de configuração do evento.](assets/web-in-app-messaging/rule-configuration.png)
 
-3. Selecionar **[!UICONTROL Manter alterações]** para salvar a configuração do evento.
+3. Selecione **[!UICONTROL Manter alterações]** para salvar a configuração do evento.
 
 Em seguida, você deve adicionar uma ação à regra criada.
 
-1. No [!DNL Actions] , selecione **[!UICONTROL Adicionar]**.
-   ![Imagem mostrando a tela de edição de regra.](assets/web-in-app-messaging/add-action.png)
+1. Na seção [!DNL Actions], selecione **[!UICONTROL Adicionar]**.
+   ![Imagem mostrando a tela editar regra.](assets/web-in-app-messaging/add-action.png)
 
-2. Use o seguinte **[!UICONTROL Ação]** configurações:
+2. Usar as seguintes configurações de **[!UICONTROL Ação]**:
    * **[!UICONTROL Extensão]**: [!UICONTROL Adobe Experience Platform Web SDK]
    * **[!UICONTROL Tipo de ação]**: [!UICONTROL Enviar evento]
 
-     ![Imagem mostrando a tela de configuração de ação.](assets/web-in-app-messaging/action-configuration.png)
+     ![Imagem mostrando a tela de configuração da ação.](assets/web-in-app-messaging/action-configuration.png)
 
-3. No lado direito da tela, na guia **[!UICONTROL Personalização]** habilite a opção **[!UICONTROL Renderizar decisões de personalização visual]** opção.
+3. No lado direito da tela, na seção **[!UICONTROL Personalization]**, habilite a opção **[!UICONTROL Renderizar decisões de personalização visual]**.
    ![Imagem mostrando a tela de configuração de personalização.](assets/web-in-app-messaging/render-visual-personalization.png)
 
-4. No lado direito da tela, na guia **[!UICONTROL Contexto de decisão]** defina o **[!UICONTROL Chave]**/**[!UICONTROL Valor]** pares que você usou na configuração do campaign para se qualificar para a mensagem no aplicativo.
+4. No lado direito da tela, na seção **[!UICONTROL Contexto de decisão]**, defina os pares de **[!UICONTROL Chave]**/**[!UICONTROL Valor]** que você usou na configuração da campanha para se qualificar para a mensagem no aplicativo.
    ![Imagem mostrando a tela de configuração de personalização.](assets/web-in-app-messaging/decision-context.png)
 
-5. Selecionar **[!UICONTROL Manter alterações]** para salvar sua configuração.
+5. Selecione **[!UICONTROL Manter alterações]** para salvar sua configuração.
 
 
-Em seguida, você deve adicionar a regra recém-criada à biblioteca de propriedades da tag. Para fazer isso, acesse **[!UICONTROL Fluxo de publicação]** e selecione a regra criada anteriormente.
+Em seguida, você deve adicionar a regra recém-criada à biblioteca de propriedades da tag. Para fazer isso, vá para **[!UICONTROL Fluxo de publicação]** e selecione a regra criada anteriormente.
 
 ![Imagem mostrando a tela da biblioteca.](assets/web-in-app-messaging/add-rule-to-library.png)
 
-Após adicionar a regra à biblioteca, selecione **[!UICONTROL Salvar e criar no desenvolvimento]**.
+Depois de adicionar a regra à biblioteca, selecione **[!UICONTROL Salvar e criar no desenvolvimento]**.
 
 ![Imagem mostrando a tela de configuração de personalização.](assets/web-in-app-messaging/publish-flow.png)
 
@@ -101,10 +101,10 @@ O processo de configuração agora está concluído e sua mensagem está pronta 
 
 ### Etapas de configuração para usar acionadores manuais {#manual-trigger}
 
-Selecione a propriedade da tag que contém a extensão SDK da Web e [criar uma nova regra](../../tags/ui/managing-resources/rules.md##create-a-rule) com as seguintes configurações:
+Selecione a propriedade da marca que contém sua extensão SDK da Web e [crie uma nova regra](../../tags/ui/managing-resources/rules.md##create-a-rule) com as seguintes configurações:
 
 1. **[!UICONTROL Extensão]**: [!UICONTROL Núcleo]
-2. **[!UICONTROL Tipo de evento]**: [!UICONTROL Clique em]
+2. **[!UICONTROL Tipo de Evento]**: [!UICONTROL Clique]
 3. Defina o acionador de um elemento específico na página, identificador por um seletor de CSS de sua escolha.
 
    ![Imagem mostrando a tela de configuração do evento.](assets/web-in-app-messaging/event-configuration-manual.png)
@@ -112,29 +112,29 @@ Selecione a propriedade da tag que contém a extensão SDK da Web e [criar uma n
 
 Em seguida, você deve adicionar uma ação à regra criada.
 
-1. No [!DNL Actions] , selecione **[!UICONTROL Adicionar]**.
-   ![Imagem mostrando a tela de edição de regra.](assets/web-in-app-messaging/add-action.png)
+1. Na seção [!DNL Actions], selecione **[!UICONTROL Adicionar]**.
+   ![Imagem mostrando a tela editar regra.](assets/web-in-app-messaging/add-action.png)
 
-2. Use o seguinte **[!UICONTROL Ação]** configurações:
+2. Usar as seguintes configurações de **[!UICONTROL Ação]**:
    * **[!UICONTROL Extensão]**: [!UICONTROL Adobe Experience Platform Web SDK]
    * **[!UICONTROL Tipo de ação]**: [!UICONTROL Avaliar conjuntos de regras]
 
-     ![Imagem mostrando a tela de configuração de ação.](assets/web-in-app-messaging/manual-trigger-action.png)
+     ![Imagem mostrando a tela de configuração da ação.](assets/web-in-app-messaging/manual-trigger-action.png)
 
-3. No lado direito da tela, ative a opção **[!UICONTROL Renderizar decisões de personalização visual]** opção.
+3. No lado direito da tela, habilite a opção **[!UICONTROL Renderizar decisões de personalização visual]**.
    ![Imagem mostrando a tela de configuração de personalização.](assets/web-in-app-messaging/manual-trigger-render.png)
 
 
-4. No lado direito da tela, na guia **[!UICONTROL Contexto de decisão]** defina o **[!UICONTROL Chave]**/**[!UICONTROL Valor]** pares que você usou na configuração do campaign para se qualificar para a mensagem no aplicativo.
+4. No lado direito da tela, na seção **[!UICONTROL Contexto de decisão]**, defina os pares de **[!UICONTROL Chave]**/**[!UICONTROL Valor]** que você usou na configuração da campanha para se qualificar para a mensagem no aplicativo.
    ![Imagem mostrando a tela de configuração de personalização.](assets/web-in-app-messaging/manual-trigger-decision-context.png)
 
-5. Selecionar **[!UICONTROL Manter alterações]** para salvar sua configuração.
+5. Selecione **[!UICONTROL Manter alterações]** para salvar sua configuração.
 
-Em seguida, você deve adicionar a regra recém-criada à biblioteca de propriedades da tag. Para fazer isso, acesse **[!UICONTROL Fluxo de publicação]** e selecione a regra criada anteriormente.
+Em seguida, você deve adicionar a regra recém-criada à biblioteca de propriedades da tag. Para fazer isso, vá para **[!UICONTROL Fluxo de publicação]** e selecione a regra criada anteriormente.
 
 ![Imagem mostrando a tela da biblioteca.](assets/web-in-app-messaging/add-rule-to-library.png)
 
-Após adicionar a regra à biblioteca, selecione **[!UICONTROL Salvar e criar no desenvolvimento]**.
+Depois de adicionar a regra à biblioteca, selecione **[!UICONTROL Salvar e criar no desenvolvimento]**.
 
 ![Imagem mostrando a tela de configuração de personalização.](assets/web-in-app-messaging/publish-flow.png)
 
@@ -150,7 +150,7 @@ Você pode exibir mensagens no aplicativo da Web do Adobe Journey Optimizer de d
 
 ### Método 1: buscar automaticamente o conteúdo de personalização {#automatic}
 
-Para que o SDK da Web busque automaticamente o conteúdo de personalização no carregamento da página, use o `sendEvent` conforme mostrado no exemplo abaixo.
+Para que o SDK da Web busque automaticamente o conteúdo de personalização no carregamento da página, use o comando `sendEvent`, como mostrado no exemplo abaixo.
 
 ```js
   alloy("sendEvent", {
@@ -163,9 +163,9 @@ Para que o SDK da Web busque automaticamente o conteúdo de personalização no 
 
 ### Método 2: buscar manualmente o conteúdo de personalização com base na ação do usuário {#manual}
 
-Para mostrar o conteúdo de personalização somente depois que o usuário executar uma ação específica, use o `evaluateRulesets` conforme mostrado no exemplo abaixo.
+Para mostrar o conteúdo de personalização somente depois que o usuário executar uma ação específica, use o comando `evaluateRulesets` como mostrado no exemplo abaixo.
 
-Neste exemplo, o conteúdo de personalização é exibido quando um usuário clica em **[!UICONTROL Comprar agora]** no seu site.
+Neste exemplo, o conteúdo de personalização é exibido quando um usuário clica no botão **[!UICONTROL Comprar agora]** no seu site.
 
 ```js
  alloy("evaluateRulesets", {
@@ -180,9 +180,9 @@ Neste exemplo, o conteúdo de personalização é exibido quando um usuário cli
 
 ### Configurar armazenamento de personalização {#personalization-storage}
 
-Você pode optar por mostrar mensagens no aplicativo aos usuários por um número definido de vezes, ou sempre que eles visitarem uma página, por meio do `personalizationStorageEnabled` opção de configuração.
+Você pode optar por mostrar mensagens no aplicativo aos usuários por um número definido de vezes, ou sempre que eles visitarem uma página, por meio da opção de configuração `personalizationStorageEnabled`.
 
-No [Configuração do SDK da Web](../commands/configure/overview.md) defina o `personalizationStorageEnabled` de acordo com suas necessidades:
+Na [configuração do SDK da Web](../commands/configure/overview.md), defina a opção `personalizationStorageEnabled` de acordo com suas necessidades:
 
-* `personalizationStorageEnabled: true` aciona a mensagem no aplicativo com a frequência definida na variável [Campanha do Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/create-in-app-web.html#configure-inapp).
+* `personalizationStorageEnabled: true` aciona a mensagem no aplicativo com a frequência que você definiu na [campanha do Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/create-in-app-web.html#configure-inapp).
 * `personalizationStorageEnabled: false` aciona a mensagem no aplicativo em cada carregamento de página.

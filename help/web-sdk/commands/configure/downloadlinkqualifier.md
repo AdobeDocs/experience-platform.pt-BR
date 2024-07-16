@@ -1,7 +1,8 @@
 ---
 title: downloadLinkQualifier
 description: Ajuda a determinar como o rastreamento automático de links qualifica os links de download.
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+exl-id: ef4f0ed4-83fc-485f-866d-f9ca15447ac8
+source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
 source-wordcount: '228'
 ht-degree: 0%
@@ -10,25 +11,25 @@ ht-degree: 0%
 
 # `downloadLinkQualifier`
 
-Se você ativar o rastreamento automático de links usando [`clickCollectionEnabled`](clickcollectionenabled.md), o `downloadLinkQualifier` ajuda a determinar os critérios para que um URL seja considerado um link de download.
+Se você habilitar o rastreamento automático de links usando o [`clickCollectionEnabled`](clickcollectionenabled.md), a propriedade `downloadLinkQualifier` ajudará a determinar os critérios para uma URL ser considerada um link de download.
 
-Essa propriedade é uma sequência de caracteres regex. Se o URL clicado corresponder a este regex, `xdm.web.webInteraction.type` está definida como `"download"`. Os links também são classificados imediatamente como um link de download se incluírem uma `download` atributo HTML. Se `clickCollectionEnabled` não estiver ativada, essa propriedade não fará nada.
+Essa propriedade é uma sequência de caracteres regex. Se a URL clicada corresponder a este regex, `xdm.web.webInteraction.type` será definido como `"download"`. Os links também são classificados imediatamente como um link de download se incluírem um atributo de HTML `download`. Se `clickCollectionEnabled` não estiver habilitado, esta propriedade não fará nada.
 
 ## Baixar qualificador de link usando a extensão de tag do SDK da Web
 
-Ativar o **[!UICONTROL Ativar a coleta de dados de cliques]** e insira o texto desejado em **[!UICONTROL Qualificador de link de download]** quando [configuração da extensão de tag](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
+Habilite a caixa de seleção **[!UICONTROL Habilitar coleta de dados de cliques]** e insira o texto desejado em **[!UICONTROL Qualificador de link de download]** ao [configurar a extensão de marca](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
 
-1. Efetue logon no [experience.adobe.com](https://experience.adobe.com) usando suas credenciais do Adobe ID.
-1. Navegue até **[!UICONTROL Coleta de dados]** > **[!UICONTROL Tags]**.
+1. Faça logon em [experience.adobe.com](https://experience.adobe.com) usando suas credenciais da Adobe ID.
+1. Navegue até **[!UICONTROL Coleção de dados]** > **[!UICONTROL Marcas]**.
 1. Selecione a propriedade de tag desejada.
-1. Navegue até **[!UICONTROL Extensões]** e, em seguida, clique em **[!UICONTROL Configurar]** no [!UICONTROL Adobe Experience Platform Web SDK] cartão.
-1. Role para baixo até [!UICONTROL Coleta de dados] e marque a caixa de seleção **[!UICONTROL Ativar a coleta de dados de cliques]**.
-1. Uma vez habilitado, o **[!UICONTROL Qualificador de link de download]** é exibida. Insira o valor desejado. Também há botões disponíveis para testar o regex e restaurar o valor padrão.
-1. Clique em **[!UICONTROL Salvar]** e, em seguida, publique as alterações.
+1. Navegue até **[!UICONTROL Extensões]** e clique em **[!UICONTROL Configurar]** no cartão [!UICONTROL Adobe Experience Platform Web SDK].
+1. Role para baixo até a seção [!UICONTROL Coleção de dados] e marque a caixa de seleção **[!UICONTROL Habilitar coleta de dados de cliques]**.
+1. Depois de habilitada, a caixa de texto **[!UICONTROL Qualificador de link de download]** é exibida. Insira o valor desejado. Também há botões disponíveis para testar o regex e restaurar o valor padrão.
+1. Clique em **[!UICONTROL Salvar]** e publique suas alterações.
 
 ## Baixar qualificador de link usando a biblioteca JavaScript do SDK da Web
 
-Defina o `downloadLinkQualifier` string ao executar o `configure` comando. Se você omitir essa propriedade, ela assumirá como padrão o seguinte valor:
+Defina a cadeia de caracteres `downloadLinkQualifier` ao executar o comando `configure`. Se você omitir essa propriedade, ela assumirá como padrão o seguinte valor:
 
 `\.(exe|zip|wav|mp3|mov|mpg|avi|wmv|pdf|doc|docx|xls|xlsx|ppt|pptx)$`
 

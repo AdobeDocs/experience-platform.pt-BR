@@ -4,7 +4,7 @@ description: Saiba mais sobre a extensão de tag de rastreamento de vídeo Brigh
 exl-id: d27eff21-2abf-4495-8382-08cab32742e0
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
-source-wordcount: '908'
+source-wordcount: '898'
 ht-degree: 95%
 
 ---
@@ -94,9 +94,9 @@ Os seguintes objetos de extensão de vídeo devem ser incluídos:
       * Uma prop/eVar para o **Nome do vídeo** elemento de dados (exemplo: eVar10)
       * Uma prop/eVar para o **Duração do vídeo** elemento de dados (exemplo: eVar11)
       * Uma prop/eVar para o **Posição atual do vídeo** elemento de dados (exemplo: eVar12)
+
    1. A ação &quot;Send Beacon&quot; do Analytics (`s.tl`)
    1. A ação &quot;Clear Variables&quot; do Analytics
-
 
 >[!TIP]
 >

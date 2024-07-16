@@ -5,7 +5,7 @@ exl-id: ccd5f8d8-595b-4636-9191-553214e426bd
 source-git-commit: 3fe94be9f50d64fc893b16555ab9373604b62e59
 workflow-type: tm+mt
 source-wordcount: '1402'
-ht-degree: 5%
+ht-degree: 6%
 
 ---
 
@@ -27,28 +27,28 @@ O vídeo a seguir é destinado a fornecer suporte à sua compreensão do visuali
 
 Trabalhar com o visualizador de gráficos de identidade requer uma compreensão dos vários serviços da Adobe Experience Platform envolvidos. Antes de começar a trabalhar com o visualizador de gráficos de identidade, revise a documentação dos seguintes serviços:
 
-- [[!DNL Identity Service]](../home.md): obtenha uma melhor visualização dos clientes individuais e do comportamento deles ao unir as identidades de vários dispositivos e sistemas.
-- [Perfil do cliente em tempo real](../../profile/home.md): os gráficos de identidade são aproveitados pelo Perfil do cliente em tempo real para criar uma visualização abrangente e singular dos atributos e comportamento do cliente.
+- [[!DNL Identity Service]](../home.md): obtenha uma melhor visão de clientes individuais e de seu comportamento ao unir as identidades de vários dispositivos e sistemas.
+- [Perfil do cliente em tempo real](../../profile/home.md): os gráficos de identidade são aproveitados pelo Perfil do cliente em tempo real para criar uma visão abrangente e singular dos atributos e comportamento do cliente.
 
 ### Terminologia
 
-- **Identidade (nó):** Uma identidade ou um nó são dados exclusivos de uma entidade, normalmente uma pessoa. Uma identidade é composta de um namespace de identidade e um valor de identidade. Por exemplo, uma identidade totalmente qualificada pode consistir em um namespace de identidade para **E-mail**, combinado com um valor de identidade de **robin<span>@email.com**.
-- **Link (borda):** Um link ou uma borda representa a conexão entre identidades. Os links de identidade incluem propriedades como carimbos de data e hora estabelecidos pela primeira vez e atualizados pela última vez. O primeiro carimbo de data e hora estabelecido define a data e a hora em que uma nova identidade é vinculada a uma identidade existente. O carimbo de data e hora da última atualização define a data e a hora em que um link de identidade existente foi atualizado pela última vez.
+- **Identidade (nó):** Uma identidade ou um nó são dados exclusivos de uma entidade, geralmente uma pessoa. Uma identidade é composta de um namespace de identidade e um valor de identidade. Por exemplo, uma identidade totalmente qualificada pode consistir em um namespace de identidade para **Email**, combinado com um valor de identidade de **robin<span>@email.com**.
+- **Link (borda):** um link ou uma borda representa a conexão entre as identidades. Os links de identidade incluem propriedades como carimbos de data e hora estabelecidos pela primeira vez e atualizados pela última vez. O primeiro carimbo de data e hora estabelecido define a data e a hora em que uma nova identidade é vinculada a uma identidade existente. O carimbo de data e hora da última atualização define a data e a hora em que um link de identidade existente foi atualizado pela última vez.
 - **Gráfico (cluster):** Um gráfico ou cluster é um grupo de identidades e links que representam uma pessoa.
 
 ## Acessar o visualizador de gráficos de identidade {#access-identity-graph-viewer}
 
-Na interface do usuário da Platform, selecione **[!UICONTROL Identidades]** na navegação à esquerda e selecione **[!UICONTROL Gráfico de identidade]** na lista de guias no cabeçalho.
+Na interface da Platform, selecione **[!UICONTROL Identidades]** na navegação à esquerda e selecione **[!UICONTROL Gráfico de identidade]** na lista de guias do cabeçalho.
 
-![O espaço de trabalho Identidades na interface do Experience Platform, com a guia Gráfico de identidade selecionada.](../images/graph-viewer/identity-graph.png)
+![O espaço de trabalho Identidades na interface do Experience Platform, com a guia Gráfico de Identidade selecionada.](../images/graph-viewer/identity-graph.png)
 
 Para exibir um gráfico de identidade, forneça um namespace de identidade e seu valor correspondente e selecione **[!UICONTROL Exibir]**.
 
 >[!TIP]
 >
->Selecione o ícone de tabela ![ícone de tabela](../images/identity-graph-viewer/table-icon.png) para ver um painel com uma lista de todos os namespaces de identidade disponíveis em sua organização. Você pode usar qualquer um dos namespaces de identidade, desde que tenha um valor de identidade válido conectado a eles. Para obter mais informações, leia a [guia de namespace de identidade](./namespaces.md).
+>Selecione o ícone de tabela ![ícone de tabela](../images/identity-graph-viewer/table-icon.png) para ver um painel com uma lista de todos os namespaces de identidade disponíveis em sua organização. Você pode usar qualquer um dos namespaces de identidade, desde que tenha um valor de identidade válido conectado a eles. Para obter mais informações, leia o [guia de namespace de identidade](./namespaces.md).
 
-![Um namespace de identidade e seu valor correspondente, fornecido na tela de pesquisa do Gráfico de identidade.](../images/graph-viewer/namespace-and-value.png)
+![Um namespace de identidade e seu valor correspondente, fornecidos na tela de pesquisa do Gráfico de identidade.](../images/graph-viewer/namespace-and-value.png)
 
 ## Noções básicas sobre a interface do visualizador de gráficos de identidade
 
@@ -56,25 +56,25 @@ A interface do visualizador de gráficos de identidade é composta por vários e
 
 ![A interface do visualizador de gráficos de identidade.](../images/graph-viewer/identity-graph-viewer-main.png)
 
-O gráfico de identidade exibe todas as identidades vinculadas à combinação de namespace e valor de identidade inserida. Cada nó consiste em um namespace de identidade e seu valor correspondente. Você pode selecionar, manter pressionado e arrastar qualquer nó para interagir com o gráfico. Como alternativa, você pode passar o mouse sobre um nó para ver informações sobre seu valor de identidade correspondente. Selecionar **[!UICONTROL Exibir gráfico]** para ocultar ou exibir o gráfico.
+O gráfico de identidade exibe todas as identidades vinculadas à combinação de namespace e valor de identidade inserida. Cada nó consiste em um namespace de identidade e seu valor correspondente. Você pode selecionar, manter pressionado e arrastar qualquer nó para interagir com o gráfico. Como alternativa, você pode passar o mouse sobre um nó para ver informações sobre seu valor de identidade correspondente. Selecione **[!UICONTROL Exibir gráfico]** para ocultar ou exibir o gráfico.
 
 >[!IMPORTANT]
 >
->Um gráfico de identidade exige que pelo menos duas identidades vinculadas sejam geradas e uma combinação válida de namespace e valor de identidade. O número máximo de identidades que o visualizador de gráficos pode exibir é 50. Consulte a [apêndice](#appendix) abaixo para obter mais informações.
+>Um gráfico de identidade exige que pelo menos duas identidades vinculadas sejam geradas e uma combinação válida de namespace e valor de identidade. O número máximo de identidades que o visualizador de gráficos pode exibir é 50. Consulte a seção [apêndice](#appendix) abaixo para obter mais informações.
 
 ![O visualizador de gráficos de identidade com cinco identidades vinculadas.](../images/graph-viewer/graph.png)
 
 Selecione um link no gráfico para ver o conjunto de dados e a ID do lote que contribuem para esse link. Selecionar um link também atualiza o painel direito para fornecer mais informações sobre detalhes da fonte de dados, bem como propriedades como os carimbos de data e hora estabelecidos pela primeira vez e atualizados pela última vez.
 
-![O link de identidade entre o email e os nós GAID selecionados.](../images/graph-viewer/identity-link.png)
+![O link de identidade entre os nós de email e GAID selecionados.](../images/graph-viewer/identity-link.png)
 
-A variável [!UICONTROL Identidades] A tabela fornece uma visualização diferente dos dados de identidade, listando o namespace de identidade e a combinação do valor de identidade em um formato tabular. Selecionar um nó no gráfico atualizará o item de linha realçado no [!UICONTROL Identidades] tabela.
+A tabela [!UICONTROL Identidades] fornece uma exibição diferente dos dados de identidade, listando o namespace de identidade e a combinação do valor de identidade em formato tabular. Selecionar um nó no gráfico atualizará o item de linha realçado na tabela [!UICONTROL Identidades].
 
 ![A tabela Identidades com a lista de identidades vinculadas no gráfico.](../images/graph-viewer/identities-table.png)
 
-Use o menu suspenso para classificar os dados do gráfico e destacar informações sobre um namespace de identidade específico. Por exemplo, selecione **[!UICONTROL E-mail]** no menu para exibir dados específicos do namespace de identidade do email.
+Use o menu suspenso para classificar os dados do gráfico e destacar informações sobre um namespace de identidade específico. Por exemplo, selecione **[!UICONTROL Email]** no menu para exibir dados específicos do namespace de identidade do email.
 
-![A tabela Identidades foi classificada para exibir apenas os dados de email.](../images/graph-viewer/sort-email.png)
+![A tabela Identidades foi classificada para exibir somente dados de email.](../images/graph-viewer/sort-email.png)
 
 O painel direito exibe informações sobre uma identidade selecionada, incluindo seu último carimbo de data e hora atualizado. O painel direito também exibe informações sobre a fonte de dados que corresponde à identidade selecionada, incluindo a ID do lote, o nome do conjunto de dados, a ID do conjunto de dados e o nome do esquema.
 
@@ -89,21 +89,21 @@ A tabela a seguir fornece informações adicionais sobre as propriedades da font
 
 ![O painel direito, que exibe dados de identidade, bem como a fonte de dados de informações.](../images/graph-viewer/right-rail.png)
 
-Você também pode usar a variável *[!UICONTROL Fonte de dados]* para ver uma lista de fontes de dados que contribuem para suas identidades. Selecionar [!UICONTROL Fonte de dados] para obter uma exibição em tabelas dos seus conjuntos de dados e IDs em lote.
+Você também pode usar a *[!UICONTROL Fonte de dados]* para ver uma lista de fontes de dados que contribuem para suas identidades. Selecione [!UICONTROL Fonte de dados] para obter uma exibição em tabelas dos seus conjuntos de dados e IDs de lote.
 
 ![A guia de fonte de dados selecionada.](../images/graph-viewer/data-source-table.png)
 
-Use o controle deslizante para filtrar os dados do gráfico pela hora em que as identidades foram estabelecidas pela primeira vez. Por padrão, o visualizador de gráficos de identidade exibe todas as identidades vinculadas no gráfico. Segure e arraste o controle deslizante para ajustar a hora até o último carimbo de data e hora em que uma nova identidade foi vinculada ao gráfico. No exemplo abaixo, o gráfico mostra que o link de identidade mais recente (GAID) foi estabelecido em **[!UICONTROL 19/08/2020, 4:29:29 PM]**.
+Use o controle deslizante para filtrar os dados do gráfico pela hora em que as identidades foram estabelecidas pela primeira vez. Por padrão, o visualizador de gráficos de identidade exibe todas as identidades vinculadas no gráfico. Segure e arraste o controle deslizante para ajustar a hora até o último carimbo de data e hora em que uma nova identidade foi vinculada ao gráfico. No exemplo abaixo, o gráfico exibe que o link de identidade mais recente (GAID) foi estabelecido em **[!UICONTROL 08/19/2020, 16:29:29 PM]**.
 
-![O controle deslizante do carimbo de data e hora do visualizador de gráficos foi selecionado.](../images/graph-viewer/slider-one.png)
+![O controle deslizante de carimbo de data/hora do visualizador de gráficos selecionado.](../images/graph-viewer/slider-one.png)
 
-Ajuste o controle deslizante para ver se outro link de identidade (Email) foi estabelecido em **[!UICONTROL 19/08/2020, 4:25:22h]**.
+Ajuste o controle deslizante para ver se outro link de identidade (Email) foi estabelecido em **[!UICONTROL 08/19/2020, 16h30]**.:25:
 
-![O controle deslizante do carimbo de data e hora do visualizador de gráfico ajustado para o último novo link estabelecido.](../images/graph-viewer/slider-two.png)
+![O controle deslizante do carimbo de data/hora do visualizador de gráficos ajustado ao último novo link estabelecido.](../images/graph-viewer/slider-two.png)
 
-Também é possível ajustar o controle deslizante para ver a iteração mais antiga do gráfico. No exemplo abaixo, o visualizador de gráficos de identidade exibe em que o gráfico foi criado pela primeira vez **[!UICONTROL 19/08/2020, 4:11:16H]**, cujos primeiros links são ECID, Email e Telefone.
+Também é possível ajustar o controle deslizante para ver a iteração mais antiga do gráfico. No exemplo abaixo, o visualizador de gráficos de identidade exibe que o gráfico foi criado pela primeira vez em **[!UICONTROL 08/19/2020, às 16h49]**, com seus primeiros links sendo ECID, Email e Telefone.:11:
 
-![O controle deslizante do carimbo de data e hora do visualizador de gráfico ajustado para o primeiro novo link estabelecido.](../images/graph-viewer/slider-three.png)
+![O controle deslizante do carimbo de data/hora do visualizador de gráficos ajustado ao primeiro novo link estabelecido.](../images/graph-viewer/slider-three.png)
 
 ## Apêndice
 
@@ -114,16 +114,16 @@ A seção a seguir fornece informações adicionais para trabalhar com o visuali
 Podem ocorrer erros ao acessar o visualizador de gráficos de identidade. Esta é uma lista de pré-requisitos e limitações que devem ser observados ao trabalhar com o visualizador de gráficos de identidade.
 
 - Um valor de identidade deve existir no namespace selecionado.
-- O visualizador de gráficos de identidade exige um mínimo de duas identidades vinculadas para ser gerado. É possível que haja apenas um valor de identidade e nenhuma identidade vinculada e, nesse caso, o valor só existiria em [!DNL Profile] visualizador.
+- O visualizador de gráficos de identidade exige um mínimo de duas identidades vinculadas para ser gerado. É possível que haja apenas um valor de identidade e nenhuma identidade vinculada e, nesse caso, o valor só existiria no visualizador [!DNL Profile].
 - O visualizador de gráficos de identidade não pode exceder o máximo de 50 identidades.
 
-![error-screen](../images/graph-viewer/error-screen.png)
+![tela de erro](../images/graph-viewer/error-screen.png)
 
 ### Acessar o visualizador de gráficos de identidade a partir de conjuntos de dados
 
-Também é possível acessar o visualizador de gráficos de identidade usando a interface de conjuntos de dados. Dos conjuntos de dados [!UICONTROL Procurar] selecione o conjunto de dados com o qual deseja interagir e selecione **[!UICONTROL Visualizar conjunto de dados]**
+Também é possível acessar o visualizador de gráficos de identidade usando a interface de conjuntos de dados. Na página [!UICONTROL Procurar] dos conjuntos de dados, selecione o conjunto de dados com o qual deseja interagir e selecione **[!UICONTROL Visualizar conjunto de dados]**
 
-![preview-dataset](../images/identity-graph-viewer/preview-dataset.png)
+![conjunto de dados de visualização](../images/identity-graph-viewer/preview-dataset.png)
 
 Na janela de visualização, selecione um ícone de impressão digital para ver as identidades representadas por meio do visualizador de gráficos de identidade.
 
@@ -135,7 +135,7 @@ Na janela de visualização, selecione um ícone de impressão digital para ver 
 
 ## Próximas etapas
 
-Ao ler este documento, você aprendeu a explorar os gráficos de identidade de seus clientes na interface do usuário da Platform. Para obter mais informações sobre identidades na Platform, consulte a [Visão geral do serviço de identidade](../home.md)
+Ao ler este documento, você aprendeu a explorar os gráficos de identidade de seus clientes na interface do usuário da Platform. Para obter mais informações sobre identidades na Platform, consulte a [visão geral do Serviço de identidade](../home.md)
 
 ## Changelog
 

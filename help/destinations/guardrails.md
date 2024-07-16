@@ -17,15 +17,15 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->Verifique os direitos de licença em sua Ordem de venda e a correspondência [Descrição do produto](https://helpx.adobe.com/legal/product-descriptions.html?lang=pt-BR) sobre os limites de uso reais, além desta página de medidas de proteção.
+>Verifique os direitos de licença em seu Pedido de Venda e a [Descrição do Produto](https://helpx.adobe.com/legal/product-descriptions.html?lang=pt-BR) correspondente sobre os limites de uso reais, além desta página de medidas de proteção.
 
-Esta página fornece limites de uso e taxa padrão em relação ao comportamento de ativação. Ao revisar as medidas de proteção a seguir, presume-se que você tenha [conectado aos destinos](/help/destinations/ui/connect-destination.md).
+Esta página fornece limites de uso e taxa padrão em relação ao comportamento de ativação. Ao revisar as medidas de proteção a seguir, presume-se que você [esteja conectado corretamente aos destinos](/help/destinations/ui/connect-destination.md).
 
 >[!NOTE]
 >
 >* A maioria dos clientes não excede esses limites padrão. Se quiser saber mais sobre limites personalizados, entre em contato com o representante do Atendimento ao cliente.
 >* Os limites descritos neste documento estão sendo constantemente melhorados. Verifique regularmente se há atualizações.
->* Dependendo das limitações individuais de downstream, alguns destinos podem ter medidas de proteção mais rigorosas do que as documentadas nesta página. Verifique também o [catálogo](/help/destinations/catalog/overview.md) página do destino ao qual você está conectando e ativando dados.
+>* Dependendo das limitações individuais de downstream, alguns destinos podem ter medidas de proteção mais rigorosas do que as documentadas nesta página. Verifique também a página do [catálogo](/help/destinations/catalog/overview.md) do destino ao qual você está conectando e ativando dados.
 
 ## Tipos de grade de proteção {#limit-types}
 
@@ -34,7 +34,7 @@ Há dois tipos de limites padrão neste documento:
 | Tipo de grade de proteção | Descrição |
 |----------|---------|
 | **Proteção de desempenho (limite flexível)** | As medidas de proteção de desempenho são limites de uso relacionados ao escopo dos seus casos de uso. Ao exceder as medidas de proteção de desempenho, você pode enfrentar degradação e latência do desempenho. O Adobe não é responsável por essa degradação de desempenho. Os clientes que excederem consistentemente uma garantia de desempenho podem optar por licenciar capacidade adicional para evitar a degradação do desempenho. |
-| **Medidas de proteção aplicadas pelo sistema (limite rígido)** | As medidas de proteção aplicadas pelo sistema são aplicadas pela interface do usuário ou API do Real-Time CDP. Esses são limites que você não pode exceder, pois a interface do usuário e a API o bloquearão de fazer isso ou retornarão um erro. |
+| **Medidas de proteção aplicadas pelo sistema (Limite rígido)** | As medidas de proteção aplicadas pelo sistema são aplicadas pela interface do usuário ou API do Real-Time CDP. Esses são limites que você não pode exceder, pois a interface do usuário e a API o bloquearão de fazer isso ou retornarão um erro. |
 
 {style="table-layout:auto"}
 
@@ -49,21 +49,21 @@ As medidas de proteção abaixo geralmente se aplicam à ativação por meio de 
 
 | Grade de Proteção | Limite | Tipo de limite | Descrição |
 | --- | --- | --- | --- |
-| Número máximo de públicos-alvo para um único destino | 250 | Proteção de desempenho | A recomendação é mapear um máximo de 250 públicos-alvo para um único destino em um fluxo de dados. <br><br> Se você precisar ativar mais de 250 públicos-alvo para um destino, é possível: <ul><li> Desmapeie os públicos-alvo que você não deseja mais ativar ou</li><li>Crie um novo fluxo de dados para o destino desejado e mapeie os públicos para esse novo fluxo de dados.</li></ul> <br> Observe que, no caso de alguns destinos, você pode estar limitado a menos de 250 públicos-alvo mapeados para o destino. Esses destinos são chamados mais abaixo na página, em suas respectivas seções. |
+| Número máximo de públicos-alvo para um único destino | 250 | Proteção de desempenho | A recomendação é mapear um máximo de 250 públicos-alvo para um único destino em um fluxo de dados. <br><br> Se precisar ativar mais de 250 públicos-alvo para um destino, você pode: <ul><li> Desmapeie os públicos-alvo que você não deseja mais ativar ou</li><li>Crie um novo fluxo de dados para o destino desejado e mapeie os públicos para esse novo fluxo de dados.</li></ul> <br> Observe que, no caso de alguns destinos, você pode estar limitado a menos de 250 públicos-alvo mapeados para o destino. Esses destinos são chamados mais abaixo na página, em suas respectivas seções. |
 | Número máximo de atributos mapeados para um destino | 50 | Proteção de desempenho | No caso de vários destinos e tipos de destino, é possível selecionar atributos de perfil e identidades para mapear para exportação. Para um desempenho ideal, no máximo 50 atributos devem ser mapeados em um fluxo de dados para um destino. |
-| Número máximo de destinos | 100 | Proteção imposta pelo sistema | É possível criar um máximo de 100 destinos para os quais você pode conectar e ativar dados, *por sandbox*. [Destinos de personalização da borda (Personalização personalizada)](#edge-destinations-activation) O pode representar, no máximo, 10 dos 100 destinos recomendados. |
+| Número máximo de destinos | 100 | Proteção imposta pelo sistema | É possível criar um máximo de 100 destinos aos quais você pode conectar e ativar dados, *por sandbox*. [Os destinos de personalização do Edge (Personalização personalizada)](#edge-destinations-activation) podem representar, no máximo, 10 dos 100 destinos recomendados. |
 | Tipo de dados ativados para destinos | Dados de perfil, incluindo identidades e mapa de identidade | Proteção imposta pelo sistema | Atualmente, só é possível exportar *atributos de registro de perfil* para destinos. No momento, não há suporte para atributos XDM que descrevem dados de evento para exportação. |
-| Tipo de dados ativados para destinos — suporte a atributos de array e mapa | Não disponível | Proteção imposta pelo sistema | Neste momento, é **não** possível exportar *atributos de matriz ou mapa* para destinos. A exceção a esta regra é a [mapa de identidade](/help/xdm/field-groups/profile/identitymap.md), que é exportado em ativações de streaming e baseadas em arquivo. |
+| Tipo de dados ativados para destinos — suporte a atributos de array e mapa | Não disponível | Proteção imposta pelo sistema | No momento, **não** é possível exportar *matriz ou mapear atributos* para destinos. A exceção a esta regra é o [mapa de identidade](/help/xdm/field-groups/profile/identitymap.md), que é exportado em ativações de streaming e baseadas em arquivo. |
 
 {style="table-layout:auto"}
 
 ### Ativação de transmissão {#streaming-activation}
 
-As medidas de proteção abaixo se aplicam à ativação por meio de [destinos de transmissão](/help/destinations/ui/activate-segment-streaming-destinations.md).
+As medidas de proteção abaixo se aplicam à ativação por meio de [destinos de streaming](/help/destinations/ui/activate-segment-streaming-destinations.md).
 
 | Grade de Proteção | Limite | Tipo de limite | Descrição |
 | --- | --- | --- | --- |
-| Número de ativações (mensagens HTTP com exportações de perfil) por segundo | N/D | - | No momento, não há limite para o número de mensagens por segundo enviadas do Experience Platform para os endpoints da API dos destinos do parceiro. <br> Quaisquer limites ou latências são determinados pelo endpoint para o qual o Experience Platform está enviando dados. Verifique também o [catálogo](/help/destinations/catalog/overview.md) página do destino ao qual você está conectando e ativando dados. |
+| Número de ativações (mensagens HTTP com exportações de perfil) por segundo | N/D | - | No momento, não há limite para o número de mensagens por segundo enviadas do Experience Platform para os endpoints da API dos destinos do parceiro. <br> Quaisquer limites ou latências são ditados pelo ponto de extremidade onde o Experience Platform está enviando dados. Verifique também a página do [catálogo](/help/destinations/catalog/overview.md) do destino ao qual você está conectando e ativando dados. |
 
 {style="table-layout:auto"}
 
@@ -73,7 +73,7 @@ As medidas de proteção abaixo se aplicam à ativação por meio de [destinos e
 
 | Grade de Proteção | Limite | Tipo de limite | Descrição |
 | --- | --- | --- | --- |
-| Frequência de ativação | Uma exportação completa diária ou exportações incrementais mais frequentes a cada 3, 6, 8 ou 12 horas. | Proteção imposta pelo sistema | Leia o [exportar arquivos completos](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) e [exportar arquivos incrementais](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) seções de documentação para obter mais informações sobre os incrementos de frequência para exportações em lote. |
+| Frequência de ativação | Uma exportação completa diária ou exportações incrementais mais frequentes a cada 3, 6, 8 ou 12 horas. | Proteção imposta pelo sistema | Leia as seções de documentação de [exportar arquivos completos](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) e [exportar arquivos incrementais](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) para obter mais informações sobre os incrementos de frequência para exportações em lote. |
 | Número máximo de públicos que podem ser exportados em uma determinada hora | 100 | Proteção de desempenho | A recomendação é adicionar no máximo 100 públicos-alvo aos fluxos de dados de destino em lote. |
 | Número máximo de linhas (registros) por arquivo a serem ativados | 5 milhões | Proteção imposta pelo sistema | O Adobe Experience Platform divide automaticamente os arquivos exportados em 5 milhões de registros (linhas) por arquivo. Cada linha representa um perfil. Nomes de arquivos divididos são anexados com um número que indica que o arquivo é parte de uma exportação maior, como: `filename.csv`, `filename_2.csv`, `filename_3.csv`. Para obter mais informações, leia a [seção de agendamento](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) do tutorial ativar destinos em lote. |
 
@@ -81,7 +81,7 @@ As medidas de proteção abaixo se aplicam à ativação por meio de [destinos e
 
 ### Ativação ad hoc {#ad-hoc-activation}
 
-As medidas de proteção a seguir [ativação ad-hoc](/help/destinations/api/ad-hoc-activation-api.md) método.
+As medidas de proteção abaixo se aplicam ao método [ativação ad hoc](/help/destinations/api/ad-hoc-activation-api.md).
 
 | Grade de Proteção | Limite | Tipo de limite | Descrição |
 | --- | --- | --- | --- |
@@ -90,21 +90,21 @@ As medidas de proteção a seguir [ativação ad-hoc](/help/destinations/api/ad-
 
 {style="table-layout:auto"}
 
-### Ativação de destinos de personalização de borda {#edge-destinations-activation}
+### Ativação de destinos de personalização do Edge {#edge-destinations-activation}
 
 As medidas de proteção abaixo se aplicam à ativação por meio de [destinos de personalização de borda](/help/destinations/destination-types.md#streaming-profile-export).
 
 | Grade de Proteção | Limite | Tipo de limite | Descrição |
 | --- | --- | --- | --- |
-| Número máximo de [Personalização personalizada](/help/destinations/catalog/personalization/custom-personalization.md) destinos | 10 | Proteção de desempenho | Você pode configurar fluxos de dados para 10 destinos de personalização personalizados por sandbox. |
+| Número máximo de [Destinos de personalização personalizada](/help/destinations/catalog/personalization/custom-personalization.md) | 10 | Proteção de desempenho | Você pode configurar fluxos de dados para 10 destinos de personalização personalizados por sandbox. |
 | Número máximo de atributos mapeados para um destino de personalização por sandbox | 30 | Proteção imposta pelo sistema | No máximo 30 atributos podem ser mapeados em um fluxo de dados para um destino de personalização, por sandbox. |
-| Número máximo de públicos mapeados para um único [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) destino | 50 | Proteção de desempenho | É possível ativar no máximo 50 públicos-alvo em um fluxo de ativação para um único destino do Adobe Target. |
+| Número máximo de públicos mapeados para um único destino do [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) | 50 | Proteção de desempenho | É possível ativar no máximo 50 públicos-alvo em um fluxo de ativação para um único destino do Adobe Target. |
 
 {style="table-layout:auto"}
 
 ### Exportações de conjunto de dados {#dataset-exports}
 
-Atualmente, as exportações de conjuntos de dados são compatíveis com um **[!UICONTROL Primeiro Completa e, em seguida, Incremental]** [padrão](/help/destinations/ui/export-datasets.md#scheduling). As medidas de proteção descritas nesta seção *aplicar à primeira exportação completa* que ocorre após a configuração de um fluxo de trabalho de exportação do conjunto de dados.
+Atualmente, há suporte para exportações de conjunto de dados em um **[!UICONTROL Primeiro Padrão Completo e depois Incremental]** [padrão](/help/destinations/ui/export-datasets.md#scheduling). As medidas de proteção descritas nesta seção *se aplicam à primeira exportação completa* que ocorre após a configuração de um fluxo de trabalho de exportação do conjunto de dados.
 
 <!--
 
@@ -120,17 +120,17 @@ Atualmente, as exportações de conjuntos de dados são compatíveis com um **[!
 
 As medidas de proteção de exportação do conjunto de dados se aplicam a dois tipos de conjuntos de dados exportados do Experience Platform, conforme descrito abaixo:
 
-**Conjuntos de dados com base no esquema de Eventos de experiência XDM**
-No caso de conjuntos de dados baseados no esquema XDM Experience Events, o esquema do conjunto de dados inclui um nível superior *carimbo de data e hora* coluna. Os dados são assimilados somente de forma anexada.
+**Conjuntos de dados com base no esquema de Eventos de Experiência XDM**
+No caso de conjuntos de dados baseados no esquema XDM Experience Events, o esquema do conjunto de dados inclui uma coluna *timestamp* de nível superior. Os dados são assimilados somente de forma anexada.
 
-**Conjuntos de dados com base no esquema do Perfil individual XDM**
-No caso de conjuntos de dados baseados no esquema do Perfil individual XDM, o esquema do conjunto de dados não inclui um nível superior *carimbo de data e hora* coluna. Os dados são assimilados de forma ascendente.
+**Conjuntos de dados com base no esquema do Perfil Individual XDM**
+No caso de conjuntos de dados baseados no esquema do Perfil individual XDM, o esquema do conjunto de dados não inclui uma coluna *carimbo de data/hora* de nível superior. Os dados são assimilados de forma ascendente.
 
 A proteção flexível abaixo se aplica a todos os conjuntos de dados exportados do Experience Platform. Revise também as medidas de proteção rígidas mais abaixo, específicas para diferentes conjuntos de dados e tipos de compactação.
 
 | Grade de Proteção | Limite | Tipo de limite | Descrição |
 | --- | --- | --- | --- |
-| Tamanho dos conjuntos de dados exportados | 5 bilhões de registros | Proteção de desempenho | O limite descrito aqui para exportações de conjunto de dados é um *grade de proteção flexível*. Por exemplo, embora a interface do usuário não impeça a exportação de conjuntos de dados maiores que 5 bilhões de registros, o comportamento é imprevisível e as exportações podem falhar ou ter uma latência de exportação muito longa. |
+| Tamanho dos conjuntos de dados exportados | 5 bilhões de registros | Proteção de desempenho | O limite descrito aqui para exportações de conjunto de dados é uma *proteção flexível*. Por exemplo, embora a interface do usuário não impeça a exportação de conjuntos de dados maiores que 5 bilhões de registros, o comportamento é imprevisível e as exportações podem falhar ou ter uma latência de exportação muito longa. |
 
 {style="table-layout:auto"}
 
@@ -144,8 +144,8 @@ Para exportações agendadas ou recorrentes de conjunto de dados, as medidas de 
 
 | Tipo de conjunto de dados | Grade de Proteção | Tipo de grade de proteção | Descrição |
 ---------|----------|---------|-------|
-| Conjuntos de dados com base no **Esquema de eventos de experiência XDM** | Últimos 365 dias de dados | Proteção imposta pelo sistema | Os dados do último ano civil são exportados. |
-| Conjuntos de dados com base no **Esquema de perfil individual XDM** | Dez bilhões de registros em todos os arquivos exportados em um fluxo de dados | Proteção imposta pelo sistema | A contagem de registros do conjunto de dados deve ser inferior a dez bilhões para arquivos JSON ou parquet compactados e um milhão para arquivos parquet não compactados, caso contrário, a exportação falhará. Reduza o tamanho do conjunto de dados que você está tentando exportar se ele for maior que o limite permitido. |
+| Conjuntos de dados com base no **esquema de Eventos de experiência XDM** | Últimos 365 dias de dados | Proteção imposta pelo sistema | Os dados do último ano civil são exportados. |
+| Conjuntos de dados com base no **esquema do Perfil Individual XDM** | Dez bilhões de registros em todos os arquivos exportados em um fluxo de dados | Proteção imposta pelo sistema | A contagem de registros do conjunto de dados deve ser inferior a dez bilhões para arquivos JSON ou parquet compactados e um milhão para arquivos parquet não compactados, caso contrário, a exportação falhará. Reduza o tamanho do conjunto de dados que você está tentando exportar se ele for maior que o limite permitido. |
 
 {style="table-layout:auto"}
 
@@ -173,12 +173,12 @@ Leia mais sobre [exportação de conjuntos de dados](/help/destinations/ui/expor
 
 ### Grades de proteção de Destination SDK {#destination-sdk-guardrails}
 
-[Destination SDK](/help/destinations/destination-sdk/overview.md) O é um conjunto de APIs de configuração que permitem configurar padrões de integração de destino para que o Experience Platform forneça dados de público-alvo e perfil para o seu endpoint, com base nos formatos de dados e autenticação de sua escolha. As medidas de proteção abaixo se aplicam aos destinos configurados por meio do Destination SDK.
+[Destination SDK](/help/destinations/destination-sdk/overview.md) é um conjunto de APIs de configuração que permitem configurar padrões de integração de destino para que o Experience Platform forneça dados de público-alvo e perfil para o seu ponto de extremidade, com base nos formatos de dados e autenticação de sua escolha. As medidas de proteção abaixo se aplicam aos destinos configurados por meio do Destination SDK.
 
 | Grade de Proteção | Limite | Tipo de limite | Descrição |
 | --- | --- | --- | --- |
 | Número máximo de [destinos personalizados privados](/help/destinations/destination-sdk/overview.md#productized-custom-integrations) | 5 | Proteção de desempenho | Você pode criar no máximo 5 destinos personalizados de streaming ou lote privados usando o Destination SDK. Entre em contato com um representante de atendimento personalizado se precisar criar mais de 5 desses destinos. |
-| Política de exportação de perfil para Destination SDK | <ul><li>`maxBatchAgeInSecs` (mínimo 1.800 e máximo 3.600)</li><li>`maxNumEventsInBatch` (mínimo 1.000, máximo 10.000)</li></ul> | Proteção imposta pelo sistema | Ao usar o [agregação configurável](destination-sdk/functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) para o seu destino, lembre-se dos valores mínimo e máximo que determinam a frequência com que as mensagens HTTP são enviadas para o seu destino baseado em API e quantos perfis as mensagens devem incluir. |
+| Política de exportação de perfil para Destination SDK | <ul><li>`maxBatchAgeInSecs` (mínimo 1.800 e máximo 3.600)</li><li>`maxNumEventsInBatch` (mínimo 1.000, máximo 10.000)</li></ul> | Proteção imposta pelo sistema | Ao usar a opção [agregação configurável](destination-sdk/functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) para seu destino, lembre-se dos valores mínimo e máximo que determinam a frequência com que as mensagens HTTP são enviadas para seu destino baseado em API e quantos perfis as mensagens devem incluir. |
 
 {style="table-layout:auto"}
 
@@ -188,7 +188,7 @@ Detalhes sobre limites ou limitações de limitação para determinados destinos
 
 | Tipo de destino | Descrição |
 | --- | --- |
-| Destinos empresariais (API HTTP, Amazon Kinesis, EventHubs do Azure) | Em 95% das vezes, o Experience Platform tenta oferecer uma latência de throughput de menos de 10 minutos para mensagens enviadas com êxito, com uma taxa de menos de 10 mil solicitações por segundo para cada fluxo de dados a um destino corporativo. <br> Em caso de falha nas solicitações para o destino da empresa, o Experience Platform armazena as solicitações com falha e tenta enviar as solicitações duas vezes para o endpoint. |
+| Destinos empresariais (API HTTP, Amazon Kinesis, EventHubs do Azure) | Em 95% das vezes, o Experience Platform tenta oferecer uma latência de throughput de menos de 10 minutos para mensagens enviadas com êxito, com uma taxa de menos de 10 mil solicitações por segundo para cada fluxo de dados a um destino corporativo. <br> Em caso de falha nas solicitações para o destino da sua empresa, o Experience Platform armazena as solicitações com falha e tenta novamente enviar as solicitações duas vezes para o seu ponto de extremidade. |
 
 {style="table-layout:auto"}
 

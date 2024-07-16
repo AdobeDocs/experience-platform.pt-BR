@@ -5,7 +5,7 @@ exl-id: 83a7a154-4f55-4bf0-bfef-594d5d50f460
 source-git-commit: adb48b898c85561efb2d96b714ed98a0e3e4ea9b
 workflow-type: tm+mt
 source-wordcount: '1736'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -15,10 +15,10 @@ Você pode assimilar arquivos de dados criptografados na Adobe Experience Platfo
 
 O processo de assimilação de dados criptografados é o seguinte:
 
-1. [Criar um par de chaves de criptografia usando APIs Experience Platform](#create-encryption-key-pair). O par de chaves de criptografia consiste em uma chave privada e uma chave pública. Depois de criada, você pode copiar ou baixar a chave pública, juntamente com a ID da chave pública e o Tempo de expiração correspondentes. Durante esse processo, a chave privada será armazenada pelo Experience Platform em um cofre seguro. **NOTA:** A chave pública na resposta é codificada na Base64 e deve ser descriptografada antes do uso.
+1. [Criar um par de chaves de criptografia usando APIs Experience Platform](#create-encryption-key-pair). O par de chaves de criptografia consiste em uma chave privada e uma chave pública. Depois de criada, você pode copiar ou baixar a chave pública, juntamente com a ID da chave pública e o Tempo de expiração correspondentes. Durante esse processo, a chave privada será armazenada pelo Experience Platform em um cofre seguro. **OBSERVAÇÃO:** a chave pública na resposta é codificada em Base64 e deve ser descriptografada antes do uso.
 2. Use a chave pública para criptografar o arquivo de dados que você deseja assimilar.
 3. Coloque o arquivo criptografado no armazenamento na nuvem.
-4. Quando o arquivo criptografado estiver pronto, [crie uma conexão de origem e um fluxo de dados para sua fonte de armazenamento em nuvem](#create-a-dataflow-for-encrypted-data). Durante a etapa de criação do fluxo, você deve fornecer uma `encryption` e inclua a ID da chave pública.
+4. Quando o arquivo criptografado estiver pronto, [crie uma conexão de origem e um fluxo de dados para sua fonte de armazenamento na nuvem](#create-a-dataflow-for-encrypted-data). Durante a etapa de criação do fluxo, você deve fornecer um parâmetro `encryption` e incluir sua ID de chave pública.
 5. Experience Platform recupera a chave privada do cofre seguro para descriptografar os dados no momento da assimilação.
 
 >[!IMPORTANT]
@@ -31,13 +31,13 @@ Este documento fornece etapas sobre como gerar um par de chaves de criptografia 
 
 Este tutorial requer que você tenha uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
-* [Origens](../../home.md): o Experience Platform permite que os dados sejam assimilados de várias fontes e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma.
-   * [Fontes de armazenamento na nuvem](../api/collect/cloud-storage.md): crie um fluxo de dados para trazer dados em lote da fonte de armazenamento na nuvem para o Experience Platform.
+* [Fontes](../../home.md): o Experience Platform permite que os dados sejam assimilados de várias fontes e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma.
+   * [Fontes de armazenamento na nuvem](../api/collect/cloud-storage.md): crie um fluxo de dados para trazer dados em lote da sua fonte de armazenamento na nuvem para o Experience Platform.
 * [Sandboxes](../../../sandboxes/home.md): o Experience Platform fornece sandboxes virtuais que particionam uma única instância da Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
 ### Uso de APIs da plataforma
 
-Para obter informações sobre como fazer chamadas para APIs da Platform com êxito, consulte o manual em [introdução às APIs da Platform](../../../landing/api-guide.md).
+Para obter informações sobre como fazer chamadas para APIs da Platform com êxito, consulte o manual sobre [introdução às APIs da Platform](../../../landing/api-guide.md).
 
 ### Extensões de arquivo compatíveis com arquivos criptografados {#supported-file-extensions-for-encrypted-files}
 
@@ -64,7 +64,7 @@ A lista de extensões de arquivo compatíveis com arquivos criptografados é:
 
 ## Criar par de chaves de criptografia {#create-encryption-key-pair}
 
-A primeira etapa na assimilação de dados criptografados no Experience Platform é criar seu par de chaves de criptografia fazendo uma solicitação POST para o `/encryption/keys` endpoint do [!DNL Connectors] API.
+A primeira etapa na assimilação de dados criptografados no Experience Platform é criar seu par de chaves de criptografia fazendo uma solicitação POST para o ponto de extremidade `/encryption/keys` da API [!DNL Connectors].
 
 **Formato da API**
 
@@ -96,7 +96,7 @@ curl -X POST \
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `encryptionAlgorithm` | O tipo de algoritmo de criptografia que você está usando. Os tipos de criptografia compatíveis são `PGP` e `GPG`. |
+| `encryptionAlgorithm` | O tipo de algoritmo de criptografia que você está usando. Os tipos de criptografia com suporte são `PGP` e `GPG`. |
 | `params.passPhrase` | A senha fornece uma camada adicional de proteção para suas chaves de criptografia. Após a criação, o Experience Platform armazena a senha em um cofre seguro diferente da chave pública. Você deve fornecer uma sequência de caracteres não vazia como senha. |
 
 +++
@@ -125,7 +125,7 @@ Uma resposta bem-sucedida retorna a chave pública codificada na Base64, a ID da
 
 ### Recuperar chaves de criptografia {#retrieve-encryption-keys}
 
-Para recuperar todas as chaves de criptografia em sua organização, faça uma solicitação GET ao `/encryption/keys` endpoint=nt.
+Para recuperar todas as chaves de criptografia em sua organização, faça uma Solicitação GET para o endpoint `/encryption/keys`=nt.
 
 **Formato da API**
 
@@ -168,7 +168,7 @@ Uma resposta bem-sucedida retorna o algoritmo de criptografia, a chave pública,
 
 ### Recuperar chaves de criptografia por ID {#retrieve-encryption-keys-by-id}
 
-Para recuperar um conjunto específico de chaves de criptografia, faça uma solicitação GET ao `/encryption/keys` e forneça sua ID de chave pública como um parâmetro de cabeçalho.
+Para recuperar um conjunto específico de chaves de criptografia, faça uma solicitação GET ao ponto de extremidade `/encryption/keys` e forneça sua ID de chave pública como um parâmetro de cabeçalho.
 
 **Formato da API**
 
@@ -215,7 +215,7 @@ Durante esse estágio, você deve gerar sua própria combinação de chave priva
 
 ### Compartilhar sua chave pública no Experience Platform
 
-Para compartilhar sua chave pública, faça uma solicitação POST para o `/customer-keys` ao fornecer seu algoritmo de criptografia e sua chave pública codificada na Base64.
+Para compartilhar sua chave pública, faça uma solicitação POST para o ponto de extremidade `/customer-keys` enquanto fornece seu algoritmo de criptografia e sua chave pública codificada em Base64.
 
 **Formato da API**
 
@@ -243,7 +243,7 @@ curl -X POST \
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `encryptionAlgorithm` | O tipo de algoritmo de criptografia que você está usando. Os tipos de criptografia compatíveis são `PGP` e `GPG`. |
+| `encryptionAlgorithm` | O tipo de algoritmo de criptografia que você está usando. Os tipos de criptografia com suporte são `PGP` e `GPG`. |
 | `publicKey` | A chave pública que corresponde às chaves gerenciadas pelo cliente usadas para assinar o criptografado. Essa chave deve ser codificada na Base64. |
 
 +++
@@ -264,7 +264,7 @@ curl -X POST \
 
 +++
 
-## Conecte sua fonte de armazenamento em nuvem ao Experience Platform usando o [!DNL Flow Service] API
+## Conecte sua fonte de armazenamento na nuvem ao Experience Platform usando a API [!DNL Flow Service]
 
 Depois de recuperar o par de chaves de criptografia, você pode continuar e criar uma conexão de origem para sua fonte de armazenamento na nuvem e trazer seus dados criptografados para a Platform.
 
@@ -273,15 +273,15 @@ Primeiro, você deve criar uma conexão base para autenticar sua origem na Platf
 * [Amazon S3](../api/create/cloud-storage/s3.md)
 * [[!DNL Apache HDFS]](../api/create/cloud-storage/hdfs.md)
 * [Azure Blob](../api/create/cloud-storage/blob.md)
-* [Armazenamento Azure Data Lake Gen2](../api/create/cloud-storage/adls-gen2.md)
+* [Azure Data Lake Storage Gen2](../api/create/cloud-storage/adls-gen2.md)
 * [Armazenamento de arquivos do Azure](../api/create/cloud-storage/azure-file-storage.md)
 * [Data Landing Zone](../api/create/cloud-storage/data-landing-zone.md)
 * [FTP](../api/create/cloud-storage/ftp.md)
-* [Armazenamento em nuvem Google](../api/create/cloud-storage/google.md)
-* [Armazenamento de objetos de oracle](../api/create/cloud-storage/oracle-object-storage.md)
+* [Google Cloud Storage](../api/create/cloud-storage/google.md)
+* [Armazenamento de objetos da Oracle](../api/create/cloud-storage/oracle-object-storage.md)
 * [SFTP](../api/create/cloud-storage/sftp.md)
 
-Depois de criar uma conexão básica, siga as etapas descritas no tutorial para [criando uma conexão de origem para uma origem de armazenamento na nuvem](../api/collect/cloud-storage.md) para criar uma conexão de origem, de destino e de mapeamento.
+Depois de criar uma conexão base, siga as etapas descritas no tutorial para [criar uma conexão de origem para uma origem de armazenamento na nuvem](../api/collect/cloud-storage.md) para criar uma conexão de origem, uma conexão de destino e um mapeamento.
 
 ## Criar um fluxo de dados para dados criptografados {#create-a-dataflow-for-encrypted-data}
 
@@ -290,11 +290,11 @@ Depois de criar uma conexão básica, siga as etapas descritas no tutorial para 
 >Você deve ter o seguinte para criar um fluxo de dados para assimilação de dados criptografados:
 >
 >* [ID da chave pública](#create-encryption-key-pair)
->* [ID da conexão de origem](../api/collect/cloud-storage.md#source)
+>* [ID de conexão do Source](../api/collect/cloud-storage.md#source)
 >* [ID da conexão de destino](../api/collect/cloud-storage.md#target)
->* [ID do mapeamento](../api/collect/cloud-storage.md#mapping)
+>* [ID de Mapeamento](../api/collect/cloud-storage.md#mapping)
 
-Para criar um fluxo de dados, faça uma solicitação POST ao `/flows` endpoint do [!DNL Flow Service] API. Para assimilar dados criptografados, é necessário adicionar um `encryption` para a `transformations` propriedade e incluir a `publicKeyId` criado em uma etapa anterior.
+Para criar um fluxo de dados, faça uma solicitação POST para o ponto de extremidade `/flows` da API [!DNL Flow Service]. Para assimilar dados criptografados, você deve adicionar uma seção `encryption` à propriedade `transformations` e incluir o `publicKeyId` que foi criado em uma etapa anterior.
 
 **Formato da API**
 
@@ -360,10 +360,10 @@ curl -X POST \
 | `sourceConnectionIds` | A ID da conexão de origem. Essa ID representa a transferência de dados da origem para a Platform. |
 | `targetConnectionIds` | A ID da conexão de destino. Essa ID representa onde os dados são colocados depois de trazidos para a Platform. |
 | `transformations[x].params.mappingId` | A ID do mapeamento. |
-| `transformations.name` | Ao assimilar arquivos criptografados, você deve fornecer `Encryption` como parâmetro de transformações adicional para o fluxo de dados. |
+| `transformations.name` | Ao assimilar arquivos criptografados, você deve fornecer `Encryption` como um parâmetro de transformações adicional para o fluxo de dados. |
 | `transformations[x].params.publicKeyId` | A ID da chave pública que você criou. Essa ID é metade do par de chaves de criptografia usado para criptografar os dados de armazenamento na nuvem. |
 | `scheduleParams.startTime` | A hora de início do fluxo de dados em época. |
-| `scheduleParams.frequency` | A frequência com que o fluxo de dados coletará dados. Os valores aceitáveis incluem: `once`, `minute`, `hour`, `day`ou `week`. |
+| `scheduleParams.frequency` | A frequência com que o fluxo de dados coletará dados. Os valores aceitáveis incluem: `once`, `minute`, `hour`, `day` ou `week`. |
 | `scheduleParams.interval` | O intervalo designa o período entre duas execuções de fluxo consecutivas. O valor do intervalo deve ser um inteiro diferente de zero. O intervalo não é necessário quando a frequência está definida como `once` e deve ser maior ou igual a `15` para outros valores de frequência. |
 
 +++
@@ -457,7 +457,7 @@ Uma resposta bem-sucedida retorna a ID (`id`) do fluxo de dados recém-criado pa
 
 ### Excluir chaves de criptografia {#delete-encryption-keys}
 
-Para excluir suas chaves de criptografia, faça uma solicitação DELETE ao `/encryption/keys` e forneça sua ID de chave pública como um parâmetro de cabeçalho.
+Para excluir suas chaves de criptografia, faça uma solicitação DELETE para o ponto de extremidade `/encryption/keys` e forneça sua ID de chave pública como um parâmetro de cabeçalho.
 
 **Formato da API**
 
@@ -485,7 +485,7 @@ Uma resposta bem-sucedida retorna o status HTTP 204 (Sem conteúdo) e um corpo e
 
 ### Validar chaves de criptografia {#validate-encryption-keys}
 
-Para validar suas chaves de criptografia, faça uma solicitação GET ao `/encryption/keys/validate/` e forneça a ID de chave pública que você deseja validar como um parâmetro de cabeçalho.
+Para validar suas chaves de criptografia, faça uma solicitação GET ao ponto de extremidade `/encryption/keys/validate/` e forneça a ID da chave pública que você deseja validar como um parâmetro de cabeçalho.
 
 ```http
 GET /data/foundation/connectors/encryption/keys/validate/{PUBLIC_KEY_ID}
@@ -513,7 +513,7 @@ Uma resposta bem-sucedida retorna uma confirmação de que suas IDs são válida
 
 >[!TAB Válido]
 
-Uma ID de chave pública válida retorna um status de `Active` junto com a ID de chave pública.
+Uma ID de chave pública válida retorna um status de `Active` junto com sua ID de chave pública.
 
 ```json
 {
@@ -524,7 +524,7 @@ Uma ID de chave pública válida retorna um status de `Active` junto com a ID de
 
 >[!TAB Inválido]
 
-Uma ID de chave pública inválida retorna um status de `Expired` junto com a ID de chave pública.
+Uma ID de chave pública inválida retorna um status de `Expired` junto com sua ID de chave pública.
 
 ```json
 {
@@ -540,7 +540,7 @@ Uma ID de chave pública inválida retorna um status de `Expired` junto com a ID
 
 A assimilação de dados criptografados não oferece suporte à assimilação de pastas recorrentes ou de vários níveis nas fontes. Todos os arquivos criptografados devem estar contidos em uma única pasta. Também não há suporte para curingas com várias pastas em um único caminho de origem.
 
-Veja a seguir um exemplo de estrutura de pastas com suporte, em que o caminho de origem é `/ACME-customers/*.csv.gpg`.
+Veja a seguir um exemplo de uma estrutura de pastas com suporte, em que o caminho de origem é `/ACME-customers/*.csv.gpg`.
 
 Nesse cenário, os arquivos em negrito são assimilados no Experience Platform.
 
@@ -551,7 +551,7 @@ Nesse cenário, os arquivos em negrito são assimilados no Experience Platform.
    * File4.json
    * **Arquivo5.csv.gpg**
 
-Veja a seguir um exemplo de uma estrutura de pastas não compatível, na qual o caminho de origem é `/ACME-customers/*`.
+Este é um exemplo de uma estrutura de pasta sem suporte em que o caminho de origem é `/ACME-customers/*`.
 
 Nesse cenário, a execução do fluxo falhará e retornará uma mensagem de erro indicando que os dados não podem ser copiados da origem.
 
@@ -568,4 +568,4 @@ Nesse cenário, a execução do fluxo falhará e retornará uma mensagem de erro
 
 ## Próximas etapas
 
-Seguindo este tutorial, você criou um par de chaves de criptografia para seus dados de armazenamento na nuvem e um fluxo de dados para assimilar seus dados criptografados usando o [!DNL Flow Service API]. Para obter atualizações de status sobre a integridade, os erros e as métricas do fluxo de dados, leia o guia na [monitoramento do fluxo de dados usando o [!DNL Flow Service] API](./monitor.md).
+Seguindo este tutorial, você criou um par de chaves de criptografia para seus dados de armazenamento na nuvem e um fluxo de dados para assimilar seus dados criptografados usando o [!DNL Flow Service API]. Para obter atualizações de status sobre a integridade, os erros e as métricas do fluxo de dados, leia o manual sobre [monitoramento do fluxo de dados usando a [!DNL Flow Service] API](./monitor.md).

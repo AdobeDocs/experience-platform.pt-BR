@@ -11,7 +11,7 @@ ht-degree: 77%
 
 # Visão geral das sequências de dados
 
-Uma sequência de dados representa a configuração do lado do servidor ao implementar os SDKs móveis e da Web da Adobe Experience Platform. Embora a [`configure`](/help/web-sdk/commands/configure/overview.md) comando no SDK controla itens que devem ser manipulados no cliente (como o `edgeDomain`), os fluxos de dados lidam com todas as outras configurações para o SDK. Quando uma solicitação é enviada para a rede de borda da Adobe Experience Platform, o `edgeConfigId` é usado para fazer referência à sequência de dados. Isso permite atualizar a configuração do lado do servidor sem precisar fazer alterações de código no site.
+Uma sequência de dados representa a configuração do lado do servidor ao implementar os SDKs móveis e da Web da Adobe Experience Platform. Embora o comando [`configure`](/help/web-sdk/commands/configure/overview.md) no SDK controle itens que devem ser tratados no cliente (como `edgeDomain`), os fluxos de dados tratam de todas as outras configurações do SDK. Quando uma solicitação é enviada para a rede de borda da Adobe Experience Platform, o `edgeConfigId` é usado para fazer referência à sequência de dados. Isso permite atualizar a configuração do lado do servidor sem precisar fazer alterações de código no site.
 
 Você pode criar e gerenciar sequências de dados selecionando **[!UICONTROL Sequências de dados]** na navegação à esquerda da interface da Adobe Experience Platform ou da Coleção de dados.
 
@@ -57,7 +57,7 @@ Se um esquema estiver sendo usado em uma sequência de dados existente com servi
 
 ### Logs de auditoria
 
-Na Experience Platform, as atividades da sequência de dados podem ser monitoradas na forma de logs de auditoria. Os logs de auditoria indicam **quem** realizada **o que** ação e **quando**, juntamente com outros dados contextuais que podem ajudá-lo a solucionar problemas relacionados a fluxos de dados para ajudar sua empresa a cumprir as políticas corporativas de gerenciamento de dados e os requisitos normativos.
+Na Experience Platform, as atividades da sequência de dados podem ser monitoradas na forma de logs de auditoria. Os logs de auditoria indicam **quem** executou a ação **o que** e **quando**, juntamente com outros dados contextuais que podem ajudá-lo a solucionar problemas relacionados às sequências de dados para ajudar sua empresa a cumprir as políticas corporativas de gerenciamento de dados e os requisitos regulatórios.
 
 Sempre que um usuário cria, atualiza ou exclui uma sequência de dados, um log de auditoria é criado para registrar a ação. O mesmo ocorre sempre que um usuário cria, atualiza ou exclui um mapeamento por meio do [preparo de dados para a coleção de dados](./data-prep.md). Independentemente do recurso atualizado ter sido uma sequência de dados ou um mapeamento, o log de auditoria resultante é categorizado no tipo de recurso [!UICONTROL Sequências de dados].
 

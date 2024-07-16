@@ -31,7 +31,7 @@ As tags são oferecidas aos [!DNL Adobe Experience Cloud] clientes como um recur
 
 Use a na ajuda do produto, no painel direito, para saber mais sobre tags e visualizar recursos adicionais disponíveis.
 
-![Propriedades de tags na interface da Coleção de dados.](./images/ui/tags-overview/tags-properties.png)
+![Propriedades de marcas na Interface da Coleção de Dados.](./images/ui/tags-overview/tags-properties.png)
 
 ### Extensões {#extensions}
 

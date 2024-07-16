@@ -4,7 +4,7 @@ description: Saiba como exibir o histórico de revisões de um recurso de tag na
 exl-id: 95b22641-9f6f-4aac-a727-d99098f040a4
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
-source-wordcount: '910'
+source-wordcount: '912'
 ht-degree: 98%
 
 ---

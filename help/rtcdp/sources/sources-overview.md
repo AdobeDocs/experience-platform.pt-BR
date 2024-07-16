@@ -13,6 +13,6 @@ ht-degree: 0%
 
 # Fontes no Real-time Customer Data Platform
 
-[!DNL Adobe Real-Time Customer Data Platform] O permite assimilar dados de fontes externas e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando o [!DNL Platform] serviços. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, software de terceiros, seu sistema de CRM e muito mais.
+O [!DNL Adobe Real-Time Customer Data Platform] permite assimilar dados de fontes externas e fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços do [!DNL Platform]. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, software de terceiros, seu sistema de CRM e muito mais.
 
-Para obter uma visão geral mais detalhada das fontes, incluindo uma lista de fontes disponíveis e links para tutoriais, leia a [documentação de origens](../../sources/home.md).
+Para obter uma visão geral mais detalhada das fontes, incluindo uma lista das fontes disponíveis e links para tutoriais, leia a [documentação das fontes](../../sources/home.md).

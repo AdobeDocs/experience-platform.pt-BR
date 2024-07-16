@@ -4,8 +4,8 @@ description: Saiba como fazer chamadas para o endpoint /callbacks na API do Reac
 exl-id: dd980f91-89e3-4ba0-a6fc-64d66b288a22
 source-git-commit: 7f3b9ef9270b7748bc3366c8c39f503e1aee2100
 workflow-type: tm+mt
-source-wordcount: '600'
-ht-degree: 96%
+source-wordcount: '606'
+ht-degree: 97%
 
 ---
 
@@ -15,7 +15,7 @@ Um retorno de chamada é uma mensagem que a API do Reactor envia a uma URL espec
 
 Os retornos de chamada devem ser usados juntamente com [eventos de auditoria](./audit-events.md) para rastrear atividades na API do Reactor. Sempre que um evento de auditoria de determinado tipo é gerado, um retorno de chamada pode enviar uma mensagem correspondente à URL especificada.
 
-O serviço por trás da URL especificada no retorno de chamada deve responder com o código de status HTTP 200 (OK) ou 201 (Criado). Se o serviço não responder com nenhum desses códigos de status, o envio da mensagem será repetido nos seguintes intervalos:
+O serviço por trás da URL especificada no retorno de chamada deve responder com o código de status HTTP 200 (OK) ou 201 (Criado). Se o serviço não responder com nenhum desses códigos de status, a entrega da mensagem será repetida nos seguintes intervalos:
 
 * 1 minuto
 * 5 minutos
@@ -29,7 +29,7 @@ O serviço por trás da URL especificada no retorno de chamada deve responder co
 >
 >Os intervalos de repetição são relativos ao intervalo anterior. Por exemplo, se a repetição em um minuto falhar, a próxima tentativa será agendada para cinco minutos após a tentativa de um minuto que falhou (seis minutos após a mensagem ter sido gerada).
 
-Se todas as tentativas de envio falharem, a mensagem será descartada.
+Se todas as tentativas de entrega falharem, a mensagem será descartada.
 
 Um retorno de chamada pertence a apenas uma [propriedade](./properties.md). Uma propriedade pode ter muitos retornos de chamada.
 

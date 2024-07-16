@@ -1,6 +1,6 @@
 ---
-title: Visão geral da personalização
-description: Saiba como usar a API do servidor de rede de borda da Adobe Experience Platform para recuperar conteúdo personalizado de soluções de personalização Adobe.
+title: Visão geral do Personalization
+description: Saiba como usar a API do servidor Edge Network do Adobe Experience Platform para recuperar conteúdo personalizado de soluções de personalização de Adobe.
 exl-id: 11be9178-54fe-49d0-b578-69e6a8e6ab90
 source-git-commit: ae6c6d21b1eea900d01be3287827296071429d30
 workflow-type: tm+mt
@@ -9,26 +9,26 @@ ht-degree: 10%
 
 ---
 
-# Visão geral da personalização
+# Visão geral do Personalization
 
-Com o [!DNL Server API], você poderá recuperar o conteúdo personalizado nas soluções de personalização do Adobe, incluindo [Adobe Target](https://business.adobe.com/br/products/target/adobe-target.html), [Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/ajo-home), e [Offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=pt-BR).
+Com o [!DNL Server API], você pode recuperar conteúdo personalizado das soluções de personalização do Adobe, incluindo o [Adobe Target](https://business.adobe.com/br/products/target/adobe-target.html), o [Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/ajo-home?lang=pt-BR) e o [Offer Decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=pt-BR).
 
-Além disso, a [!DNL Server API] O capacita recursos de personalização de mesma página e próxima página por meio de destinos de personalização do Adobe Experience Platform, como [Adobe Target](../destinations/catalog/personalization/adobe-target-connection.md) e a variável [conexão de personalização personalizada](../destinations/catalog/personalization/custom-personalization.md). Para saber como configurar o Experience Platform para personalização de mesma página e próxima página, consulte o [guia dedicado](../destinations/ui/activate-edge-personalization-destinations.md).
+Além disso, o [!DNL Server API] habilita recursos de personalização de mesma página e próxima página por meio de destinos de personalização do Adobe Experience Platform, como o [Adobe Target](../destinations/catalog/personalization/adobe-target-connection.md) e a [conexão de personalização personalizada](../destinations/catalog/personalization/custom-personalization.md). Para saber como configurar o Experience Platform para personalização de mesma página e próxima página, consulte o [guia dedicado](../destinations/ui/activate-edge-personalization-destinations.md).
 
-Ao usar a API do servidor, você deve integrar a resposta fornecida pelo mecanismo de personalização com a lógica usada para renderizar o conteúdo em seu site. Ao contrário do [SDK da Web](../web-sdk/home.md), o [!DNL Server API] A não tem um mecanismo para aplicar automaticamente o conteúdo retornado pelas soluções de personalização de Adobe.
+Ao usar a API do servidor, você deve integrar a resposta fornecida pelo mecanismo de personalização com a lógica usada para renderizar o conteúdo em seu site. Ao contrário do [SDK da Web](../web-sdk/home.md), o [!DNL Server API] não tem um mecanismo para aplicar automaticamente o conteúdo retornado pelas soluções de personalização do Adobe.
 
 ## Terminologia {#terminology}
 
 Antes de trabalhar com as soluções de personalização de Adobe, compreenda os seguintes conceitos:
 
-* **Oferta**: uma oferta é uma mensagem de marketing que pode ter regras associadas que especificam quem está qualificado para ver a oferta.
+* **Oferta**: uma oferta é uma mensagem de marketing e pode ter regras associadas que especificam quem é elegível para vê-la.
 * **Decisão**: uma decisão (anteriormente conhecida como atividade de oferta) informa a seleção de uma oferta.
-* **Esquema**: o schema de uma decisão informa o tipo de oferta retornada.
-* **Escopo**: O escopo da decisão.
-   * No Adobe Target, essa é a variável [!DNL mbox]. A variável [!DNL global mbox] é o `__view__` escopo
-   * Para [!DNL Offer Decisioning], essas são as sequências de caracteres codificadas na Base64 do JSON que contêm as IDs de atividade e posicionamento que você deseja que o serviço do offer decisioning use para propor ofertas.
+* **Esquema**: o esquema de uma decisão informa o tipo de oferta retornada.
+* **Escopo**: o escopo da decisão.
+   * No Adobe Target, este é o [!DNL mbox]. O [!DNL global mbox] é o escopo `__view__`
+   * Para [!DNL Offer Decisioning], essas são as cadeias de caracteres codificadas em Base64 do JSON que contêm as IDs de atividade e posicionamento que você deseja que o serviço do offer decisioning use para propor ofertas.
 
-## A variável `query` objeto {#query-object}
+## O objeto `query` {#query-object}
 
 A recuperação de conteúdo personalizado requer um objeto de consulta de solicitação explícita para um exemplo de solicitação. O objeto de consulta tem o seguinte formato:
 
@@ -66,7 +66,7 @@ A recuperação de conteúdo personalizado requer um objeto de consulta de solic
 
 ## O objeto handle {#handle}
 
-O conteúdo personalizado recuperado das soluções de personalização é apresentado em uma `personalization:decisions` que tem o seguinte formato para sua carga:
+O conteúdo personalizado recuperado das soluções de personalização é apresentado em um identificador `personalization:decisions`, que tem o seguinte formato para sua carga:
 
 ```json
 {
@@ -192,11 +192,11 @@ curl -X POST "https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM
 | Parâmetro | Tipo | Obrigatório | Descrição |
 | --- | --- | --- | --- |
 | `configId` | String | Sim | A ID do fluxo de dados. |
-| `requestId` | String | Não | Forneça uma ID de rastreamento de solicitação externa. Se nenhum for fornecido, a rede de borda gerará um para você e o retornará no corpo/cabeçalhos de resposta. |
+| `requestId` | String | Não | Forneça uma ID de rastreamento de solicitação externa. Se nenhum for fornecido, o Edge Network gerará um para você e o retornará de volta no corpo/cabeçalhos de resposta. |
 
 ### Resposta {#response}
 
-Retorna um `200 OK` e um ou mais `Handle` objetos, dependendo dos serviços de borda ativados na configuração da sequência de dados.
+Retorna um status `200 OK` e um ou mais objetos `Handle`, dependendo dos serviços de borda habilitados na configuração da sequência de dados.
 
 ```json
 {
@@ -254,9 +254,9 @@ Retorna um `200 OK` e um ou mais `Handle` objetos, dependendo dos serviços de b
 
 ## Notificações {#notifications}
 
-As notificações devem ser disparadas quando um conteúdo ou uma exibição previamente buscada for visitada ou renderizada para o usuário final. Para que as notificações sejam desativadas para o escopo correto, certifique-se de rastrear os respectivos `id` para cada escopo.
+As notificações devem ser disparadas quando um conteúdo ou uma exibição previamente buscada for visitada ou renderizada para o usuário final. Para que as notificações sejam desativadas para o escopo correto, certifique-se de rastrear o `id` correspondente para cada escopo.
 
-Notificações com a direita `id` para que os escopos correspondentes sejam refletidos corretamente, é necessário acionar.
+As notificações com o `id` correto para os escopos correspondentes precisam ser disparadas para que os relatórios sejam refletidos corretamente.
 
 **Formato da API**
 
@@ -316,15 +316,15 @@ curl -X POST "https://server.adobedc.net/ee/v2/collect?dataStreamId={DATASTREAM_
 | Parâmetro | Tipo | Obrigatório | Descrição |
 | --- | --- | --- | --- |
 | `dataStreamId` | `String` | Sim | A ID da sequência de dados usada pelo ponto de extremidade de coleta de dados. |
-| `requestId` | `String` | Não | ID de rastreamento de solicitação externa externa. Se nenhum for fornecido, a rede de borda gerará um para você e o retornará no corpo/cabeçalhos de resposta. |
-| `silent` | `Boolean` | Não | Parâmetro booliano opcional que indica se a Rede de borda deve retornar um `204 No Content` resposta com uma carga vazia. Erros críticos são relatados usando o código de status HTTP e a carga correspondentes. |
+| `requestId` | `String` | Não | ID de rastreamento de solicitação externa externa. Se nenhum for fornecido, o Edge Network gerará um para você e o retornará de volta no corpo/cabeçalhos de resposta. |
+| `silent` | `Boolean` | Não | Parâmetro booleano opcional que indica se o Edge Network deve retornar uma resposta `204 No Content` com uma carga vazia. Erros críticos são relatados usando o código de status HTTP e a carga correspondentes. |
 
 ### Resposta {#notifications-response}
 
-Uma resposta bem-sucedida retorna um dos seguintes status, e uma `requestID` se nenhum foi fornecido na solicitação.
+Uma resposta bem-sucedida retorna um dos seguintes status, e um `requestID` se nenhum tiver sido fornecido na solicitação.
 
-* `202 Accepted` quando o pedido foi processado com êxito;
-* `204 No Content` quando a solicitação foi processada com êxito e a variável `silent` O parâmetro foi definido como `true`;
+* `202 Accepted` quando a solicitação foi processada com êxito;
+* `204 No Content` quando a solicitação foi processada com êxito e o parâmetro `silent` foi definido como `true`;
 * `400 Bad Request` quando a solicitação não foi formada corretamente (por exemplo, a identidade primária obrigatória não foi encontrada).
 
 ```json

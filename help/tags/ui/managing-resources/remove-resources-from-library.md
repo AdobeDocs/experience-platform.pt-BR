@@ -43,13 +43,13 @@ Os recursos que estão nas bibliotecas enviadas ou aprovadas não podem ser mani
 
 Remover recursos de uma biblioteca de produção é o caso mais complexo. Não é possível manipular os recursos da biblioteca nesse estado e você também não pode mover essas bibliotecas de volta para o estado de desenvolvimento.
 
-Em vez disso, você deve desativar o recurso. Essa desativação é uma alteração que você então adiciona a uma biblioteca de desenvolvimento como qualquer outra alteração. Quando essa alteração é colocada em produção, o recurso é movido da biblioteca de produção.
+Em vez disso, você deve desabilitar o recurso. Desabilitar é uma alteração que você depois adiciona a uma biblioteca de desenvolvimento como qualquer outra alteração. Quando essa alteração é colocada em produção, o recurso é movido da biblioteca de produção.
 
-1. Desative o recurso.
+1. Desabilite o recurso.
    1. Selecione o recurso na exibição em lista.
-   1. Selecione **[!UICONTROL Desativar]**.
+   1. Selecione **[!UICONTROL Desabilitar]**.
 1. Crie uma nova biblioteca de desenvolvimento.
-1. Adicione `latest` a versão do recurso desativado.
+1. Adicione `latest` a versão do recurso desabilitado.
 1. Salve e crie.
 1. Siga o processo normal para a promoção de bibliotecas para produção.
 1. Publique para produção para remover o recurso.

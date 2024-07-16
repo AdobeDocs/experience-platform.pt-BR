@@ -4,14 +4,14 @@ description: As notas de versão mais recentes da extensão de tag de plug-ins c
 exl-id: 5ea4b709-4e21-4f5d-be99-e72e4889ed99
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
-source-wordcount: '329'
-ht-degree: 93%
+source-wordcount: '352'
+ht-degree: 94%
 
 ---
 
 # Notas de versão da extensão de plug-ins comuns do Analytics
 
-## 03 de junho de 2022
+## 3 de junho de 2022
 
 ### Extensão de plug-ins comuns do Analytics 3.0.7
 
@@ -42,7 +42,7 @@ ht-degree: 93%
 #### Correções de erros
 
 * Correção de um problema em que getPageLoadTime estava definindo variáveis incorretamente no objeto da janela
-* Correção de um problema em que getQueryParam retornava indefinido em vez de &quot;&quot; se o queryParam não estivesse presente na sequência de consulta
+* Correção de um problema em que getQueryParam retornava indefinido em vez de &quot;&quot; se o queryParam não estivesse presente na string de consulta
 * Correção de um problema em que os números de versão incorretos eram exibidos na ação de inicialização
 
 ## 19 de março de 2021

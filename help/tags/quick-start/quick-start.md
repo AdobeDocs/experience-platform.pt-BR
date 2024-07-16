@@ -4,8 +4,8 @@ description: Saiba como começar a usar as tags na Adobe Experience Platform.
 exl-id: 490ee344-3b18-4189-9293-2378f86fb10d
 source-git-commit: 60d88be5d710314cdc6900f4b63643c740b91fa6
 workflow-type: tm+mt
-source-wordcount: '1525'
-ht-degree: 90%
+source-wordcount: '1521'
+ht-degree: 88%
 
 ---
 
@@ -33,11 +33,11 @@ As tags são totalmente integradas a seu Adobe ID. As permissões do usuário s�
 
 As tags têm um sistema de gerenciamento de usuários baseado em direitos. Isso significa que os direitos individuais devem ser explicitamente concedidos. Esses direitos são atribuídos a grupos, depois os usuários são adicionados aos grupos apropriados para obterem acesso. Mesmo que sua organização tenha acesso à Coleção de dados, os usuários individuais não poderão fazer nada até que um administrador conceda a eles alguns direitos explicitamente.
 
-Para obter instruções detalhadas sobre como criar grupos e adicionar usuários para tags, consulte o [guia de permissões da coleção de dados](../../collection/permissions.md).
+Para obter instruções detalhadas sobre como criar grupos e adicionar usuários para tags, consulte o [guia de permissões de coleta de dados](../../collection/permissions.md).
 
 ## 2. Fazer logon
 
-Após adicionar os direitos de tag à Adobe ID, é necessário fazer logon na interface do usuário do Experience Platform ou na interface da Coleção de dados. Você pode fazer isso navegando diretamente para a página [tela de login do Experience Cloud](https://experience.adobe.com/)e selecionando **[!UICONTROL Coleta de dados]** ou **[!UICONTROL Experience Platform]**.
+Após adicionar os direitos de tag à Adobe ID, é necessário fazer logon na interface do usuário do Experience Platform ou na interface da Coleção de dados. Você pode fazer isso navegando diretamente para a [tela de logon de Experience Cloud](https://experience.adobe.com/) e selecionando **[!UICONTROL Coleção de dados]** ou **[!UICONTROL Experience Platform]**.
 
 >[!NOTE]
 >
@@ -55,7 +55,7 @@ Uma extensão é uma integração criada pela Adobe ou por um parceiro da Adobe 
 
 Todas as novas propriedades são fornecidas com a [Extensão principal](../extensions/client/core/overview.md) instalada. As propriedades móveis são fornecidas com extensões adicionais. A extensão principal é criada pela equipe da Adobe a fim de fornecer um conjunto padrão robusto de tipos de elemento de dados para sua camada de dados e tipos de evento para suas regras. A maioria das ações que você desejará executar (obter uma ECID, enviar beacons do [!DNL Adobe Analytics], carregar a mbox global do [!DNL Target], etc.) será proveniente de extensões instaladas no catálogo.
 
-O que torna as tags na Platform realmente únicas é que essas extensões podem ser criadas por qualquer pessoa. Você precisa soltar um pixel de remarketing do Facebook em seu site? Confira a extensão que o Facebook criou. Deseja o mesmo para Twitter ou Linked In? Use essas extensões. Você precisa executar uma pesquisa? Veja o Question Pro ou Foresee. Você precisa gerenciar a privacidade e o consentimento dos usuários finais para ajudar no [!DNL GDPR]? Dê uma boa olhada no Evidon e no Trust Arc. Deseja obter uma visão detalhada do comportamento de usuários individuais no site? Talvez você deva dar uma olhada no Clicktale. Para obter mais informações, consulte a seção sobre [adicionar uma nova extensão](../ui/managing-resources/extensions/overview.md#add-a-new-extension).
+O que torna as tags na Platform realmente únicas é que essas extensões podem ser criadas por qualquer pessoa. Você precisa soltar um pixel de remarketing do Facebook em seu site? Confira a extensão que o Facebook criou. Deseja o mesmo para Twitter ou Linked In? Use essas extensões. Você precisa executar uma pesquisa? Veja o Question Pro ou Foresee. Você precisa gerenciar a privacidade e o consentimento dos usuários finais para ajudar no [!DNL GDPR]? Dê uma boa olhada no Evidon e no Trust Arc. Deseja obter uma visão detalhada do comportamento de usuários individuais no site? Talvez você deva dar uma olhada no Clicktale. Para obter mais informações, consulte a seção sobre [adição de uma nova extensão](../ui/managing-resources/extensions/overview.md#add-a-new-extension).
 
 ## 5. Criar elementos de dados e regras
 
@@ -135,5 +135,5 @@ Para obter mais informações sobre os diferentes estados e opções disponívei
 Para saber mais sobre tags, consulte estes recursos:
 
 * **[Comunidade da Coleção de dados](https://forums.adobe.com/community/experience-cloud/platform/launch)**: faça e responda perguntas, envie ideias e vote nas ideias de outras pessoas. Faça logon com seu Adobe ID.
-* **[Developer Docs](../api/overview.md)**: participe da comunidade para desenvolvedores de tags para criar extensões ou usar as APIs das tags.
+* **[Documentos do desenvolvedor](../api/overview.md)**: envolva-se com a comunidade do desenvolvedor de tags para criar extensões ou usar as APIs de tags
 * **[Visão geral dos tutoriais](https://experienceleague.adobe.com/docs/launch-learn/tutorials/overview.html?lang=pt-BR)**: esses documentos apresentam conceitos de tags, incluindo encaminhamento de eventos e SDK móvel em aplicativos Android.

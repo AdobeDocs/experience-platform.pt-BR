@@ -22,7 +22,7 @@ Os seguintes critérios devem ser atendidos para que um campo seja rotulado como
 * As identidades só são reconhecidas nos dados de registro e de séries cronológicas
 * Somente campos PII devem ser marcados como identidade. Escolher um campo que represente dados mais genéricos resultaria em relacionamentos menos precisos e potencialmente erros ao acessar identidades relacionadas no gráfico de identidade
 
-Para obter instruções sobre como rotular campos de identidade na interface, consulte o guia em [definição de campos de identidade na interface](../xdm/ui/fields/identity.md).
+Para obter instruções sobre como rotular campos de identidade na interface, consulte o manual em [definindo campos de identidade na interface](../xdm/ui/fields/identity.md).
 
 ## Próximas etapas
 

@@ -5,7 +5,7 @@ exl-id: 09961b8e-f736-4fcc-ac53-88b55cca7d55
 source-git-commit: 2b6700b2c19b591cf4e60006e64ebd63b87bdb2a
 workflow-type: tm+mt
 source-wordcount: '631'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->Esta página supõe que a política de mesclagem está usando o gráfico de identidade. Para obter mais informações sobre políticas de mesclagem no Perfil do cliente em tempo real, leia a documentação em [políticas de mesclagem e compilação de identidade](../profile/merge-policies/overview.md#identity-stitching).
+>Esta página supõe que a política de mesclagem está usando o gráfico de identidade. Para obter mais informações sobre políticas de mesclagem no Perfil de cliente em tempo real, leia a documentação em [políticas de mesclagem e compilação de identidade](../profile/merge-policies/overview.md#identity-stitching).
 
 Embora você possa usar o Serviço de identidade e o Perfil do cliente em tempo real em conjunto, os dois recursos do Adobe Experience Platform não são inerentemente os mesmos.
 
@@ -26,7 +26,7 @@ Este documento descreve as semelhanças, diferenças e relacionamentos entre o S
 
 As principais diferenças entre o Serviço de identidade e o Perfil do cliente em tempo real são as seguintes:
 
-| | Identity Service | Perfil do cliente em tempo real |
+| | Serviço de identidade | Perfil do cliente em tempo real |
 | --- | --- |--- |
 | **Propósito** | <ul><li>Você pode usar o Serviço de identidade para criar e gerenciar gráficos de identidade.</li></ul> | Você pode usar o Perfil de cliente em tempo real para: <ul><li>Crie uma exibição de 360 graus de um perfil de cliente.</li><li>Exibir e gerenciar perfis.</li></ul> |
 | **Entrada** | <ul><li>Para usar o Serviço de identidade, você deve assimilar dados de registro ou eventos de série temporal que tenham pelo menos dois campos marcados como identidade. Os campos marcados como identidade são assimilados no Serviço de identidade.</li></ul> | <ul><li>Fragmentos de perfil: representam uma identidade principal exclusiva e os dados de registro ou evento correspondentes dessa ID em um determinado conjunto de dados.</li><li>Gráficos de identidade: o perfil faz referência ao gráfico de identidade de um determinado perfil do cliente, para identificar todos os fragmentos de perfil com as mesmas identidades principais.</li></ul> |
@@ -44,7 +44,7 @@ Leia as etapas abaixo para entender melhor o processo de criação de um perfil 
 * Depois de bem-sucedido, o Perfil mescla todos os eventos e atributos existentes.
    * Se houver informações de atributo conflitantes, os atributos serão escolhidos com base no método de mesclagem. Para obter mais informações, leia a [visão geral das políticas de mesclagem](../profile/merge-policies/overview.md).
 
-![Um fluxograma detalhando como o Serviço de identidade e a Mesclagem de perfis funcionam.](./images/merge-profile-process.png)
+![Um fluxograma detalhando como funciona o Serviço de Identidade e a Mesclagem de Perfis.](./images/merge-profile-process.png)
 
 ## Designar um campo como uma identidade
 

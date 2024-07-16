@@ -6,8 +6,8 @@ description: A Adobe Experience Platform fornece vários serviços e ferramentas
 exl-id: 1ab5a436-c5dd-4e7a-aba1-549f0613f224
 source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
 workflow-type: tm+mt
-source-wordcount: '855'
-ht-degree: 8%
+source-wordcount: '857'
+ht-degree: 7%
 
 ---
 
@@ -31,7 +31,7 @@ A governança de dados é um conceito essencial que está interligado a todos os
 
 Como um serviço de plataforma, o Adobe Experience Platform Data Governance permite gerenciar dados de clientes e garantir a conformidade com regulamentos, restrições e políticas aplicáveis ao uso de dados. Ele desempenha um papel fundamental no Experience Platform em vários níveis, incluindo rotulagem de uso de dados, políticas de uso de dados, aplicação de políticas e linhagem de dados.
 
-Consulte a [Visão geral da governança de dados](../../data-governance/home.md) para obter mais informações.
+Consulte a [visão geral da Governança de dados](../../data-governance/home.md) para obter mais informações.
 
 ### Catálogo e conjuntos de dados {#catalog}
 
@@ -39,7 +39,7 @@ O Serviço de catálogo é o sistema de registro para localização e linhagem d
 
 O catálogo organiza dados assimilados em conjuntos de dados, com cada conjunto de dados contendo metadados que podem ser usados para rotular e categorizar os dados que ele contém.
 
-Consulte a [Visão geral do Serviço de catálogo](../../catalog/home.md) para obter mais informações sobre o serviço. Para saber como gerenciar conjuntos de dados no Experience Platform, consulte a [visão geral dos conjuntos de dados](../../catalog/datasets/overview.md).
+Consulte a [Visão geral do Serviço de Catálogo](../../catalog/home.md) para obter mais informações sobre o serviço. Para saber como gerenciar conjuntos de dados no Experience Platform, consulte a [visão geral sobre conjuntos de dados](../../catalog/datasets/overview.md).
 
 ## Privacidade {#privacy}
 
@@ -59,7 +59,7 @@ Muitas regulamentações legais de privacidade introduziram requisitos para cons
 
 Para saber como processar os dados de consentimento e preferência do cliente usando o padrão Adobe, consulte a visão geral em [processamento de consentimento no Experience Platform](./consent/adobe/overview.md).
 
-Para obter informações sobre como processar dados de consentimento do cliente em conformidade com a Estrutura de transparência e consentimento (TCF) do IAB 2.0, consulte a visão geral sobre [Suporte IAB TCF 2.0 na plataforma](./consent/iab/overview.md).
+Para obter informações sobre como processar dados de consentimento do cliente de acordo com a Estrutura de Transparência e Consentimento (TCF) do IAB 2.0, consulte a visão geral sobre o [suporte à TCF 2.0 do IAB na Plataforma](./consent/iab/overview.md).
 
 ## Segurança {#security}
 

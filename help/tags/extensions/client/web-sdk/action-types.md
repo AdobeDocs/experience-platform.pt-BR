@@ -13,14 +13,14 @@ ht-degree: 1%
 
 # Tipos de ação
 
-Após configurar o [Extensão de tag do SDK da Web da Adobe Experience Platform](web-sdk-extension-configuration.md), você deve configurar seus tipos de ação.
+Após configurar a [extensão de tag do SDK da Web da Adobe Experience Platform](web-sdk-extension-configuration.md), você deve configurar seus tipos de ação.
 
-Esta página descreve os tipos de ação compatíveis com o [Extensão de tag do SDK da Web da Adobe Experience Platform](web-sdk-extension-configuration.md).
+Esta página descreve os tipos de ação compatíveis com a [extensão de tag do SDK da Web da Adobe Experience Platform](web-sdk-extension-configuration.md).
 
 
 ## Aplicar resposta {#apply-response}
 
-Use o **[!UICONTROL Aplicar resposta]** tipo de ação quando quiser executar várias ações com base em uma resposta do Edge Network. Normalmente, esse tipo de ação é usado em implantações híbridas em que o servidor faz uma chamada inicial para o Edge Network, em seguida, esse tipo de ação recebe a resposta dessa chamada e inicializa o SDK da Web no navegador.
+Use o tipo de ação **[!UICONTROL Aplicar resposta]** quando desejar executar várias ações com base em uma resposta do Edge Network. Normalmente, esse tipo de ação é usado em implantações híbridas em que o servidor faz uma chamada inicial para o Edge Network, em seguida, esse tipo de ação recebe a resposta dessa chamada e inicializa o SDK da Web no navegador.
 
 O uso desse tipo de ação pode reduzir os tempos de carregamento do cliente para casos de uso de personalização híbrida.
 
@@ -31,19 +31,19 @@ Esse tipo de ação oferece suporte às seguintes opções de configuração:
 * **[!UICONTROL Instância]**: selecione a instância do SDK da Web que você está usando.
 * **[!UICONTROL Cabeçalhos de resposta]**: selecione o elemento de dados que retorna um objeto contendo as chaves do cabeçalho e os valores retornados da chamada do servidor Edge Network.
 * **[!UICONTROL Corpo da resposta]**: selecione o elemento de dados que retorna o objeto que contém a carga JSON fornecida pela resposta Edge Network.
-* **[!UICONTROL Renderizar decisões de personalização visual]**: habilite essa opção para renderizar automaticamente o conteúdo de personalização fornecido pelo Edge Network e pré-ocultar o conteúdo para evitar cintilação.
+* **[!UICONTROL Renderizar decisões de personalização visual]**: habilite esta opção para renderizar automaticamente o conteúdo de personalização fornecido pelo Edge Network e pré-ocultar o conteúdo para evitar cintilação.
 
 ## Enviar evento {#send-event}
 
-Envia um evento para o Adobe [!DNL Experience Platform] para que a Adobe Experience Platform possa coletar os dados enviados e agir de acordo com essas informações. Selecione uma instância (se você tiver mais de uma). Todos os dados que deseja enviar podem ser enviados no **[!UICONTROL Dados XDM]** campo. Use um objeto JSON que esteja em conformidade com a estrutura do esquema XDM. Esse objeto pode ser criado na sua página ou por meio de uma **[!UICONTROL Custom Code]** **[!UICONTROL Elemento de dados]**.
+Envia um evento para o Adobe [!DNL Experience Platform] para que o Adobe Experience Platform possa coletar os dados enviados e agir de acordo com essas informações. Selecione uma instância (se você tiver mais de uma). Todos os dados que deseja enviar podem ser enviados no campo **[!UICONTROL Dados XDM]**. Use um objeto JSON que esteja em conformidade com a estrutura do esquema XDM. Este objeto pode ser criado na sua página ou através de um **[!UICONTROL Código personalizado]** **[!UICONTROL Elemento de dados]**.
 
 Há alguns outros campos no tipo de ação Enviar evento que também podem ser úteis, dependendo da implementação. Observe que todos esses campos são opcionais.
 
-* **Tipo:** Esse campo permite especificar um tipo de evento que será gravado no esquema XDM. Consulte [`type`](/help/web-sdk/commands/sendevent/type.md) no `sendEvent` para obter mais informações.
-* **Dados:** Os dados que não correspondem a um esquema XDM podem ser enviados usando esse campo. Este campo é útil se você estiver tentando atualizar um perfil do Adobe Target ou enviar atributos do Target Recommendations. Consulte [`data`](/help/web-sdk/commands/sendevent/data.md) no `sendEvent` para obter mais informações.<!--- **Merge ID:** If you would like to specify a merge ID for your event, you can do so in this field. Please note that the solutions downstream are not able to merge your event data at this time. -->
-* **ID do conjunto de dados:** Se precisar enviar dados para um conjunto de dados diferente daquele especificado no fluxo de dados, você pode especificar essa ID de conjunto de dados aqui.
-* **O documento será descarregado:** Se quiser garantir que os eventos cheguem ao servidor mesmo se o usuário sair da página, verifique a **[!UICONTROL O documento será descarregado]** caixa de seleção Isso permite que os eventos alcancem o servidor, mas as respostas são ignoradas.
-* **Renderizar decisões de personalização visual:** Se quiser renderizar um conteúdo personalizado na sua página, marque a opção **[!UICONTROL Renderizar decisões de personalização visual]** caixa de seleção Você também pode especificar escopos de decisão e/ou superfícies, se necessário. Consulte a [documentação de personalização](/help/web-sdk/personalization/rendering-personalization-content.md#automatically-rendering-content) para obter mais informações sobre renderização de conteúdo personalizado.
+* **Tipo:** esse campo permite especificar um tipo de evento que será gravado no esquema XDM. Consulte [`type`](/help/web-sdk/commands/sendevent/type.md) no comando `sendEvent` para obter mais informações.
+* **Dados:** dados que não correspondem a um esquema XDM podem ser enviados usando este campo. Este campo é útil se você estiver tentando atualizar um perfil do Adobe Target ou enviar atributos do Target Recommendations. Consulte [`data`](/help/web-sdk/commands/sendevent/data.md) no comando `sendEvent` para obter mais informações.<!--- **Merge ID:** If you would like to specify a merge ID for your event, you can do so in this field. Please note that the solutions downstream are not able to merge your event data at this time. -->
+* **ID do conjunto de dados:** Se você precisar enviar dados para um conjunto de dados diferente daquele especificado na sua sequência de dados, poderá especificar essa ID do conjunto de dados aqui.
+* **Documento será descarregado:** Se você quiser garantir que os eventos cheguem ao servidor mesmo que o usuário saia da página, marque a caixa de seleção **[!UICONTROL Documento será descarregado]**. Isso permite que os eventos alcancem o servidor, mas as respostas são ignoradas.
+* **Renderizar decisões de personalização visual**: se você quiser renderizar conteúdo personalizado em sua página, marque a caixa de seleção **[!UICONTROL Renderizar decisões de personalização visual]**. Você também pode especificar escopos de decisão e/ou superfícies, se necessário. Consulte a [documentação de personalização](/help/web-sdk/personalization/rendering-personalization-content.md#automatically-rendering-content) para obter mais informações sobre renderização de conteúdo personalizado.
 
 ## Definir consentimento {#set-consent}
 
@@ -53,13 +53,13 @@ Nesta ação, você também recebe um campo opcional para incluir um Mapa de ide
 
 ## Atualizar variável {#update-variable}
 
-Use esta ação para modificar um objeto XDM como resultado de um evento. Esta ação destina-se a criar um objeto que pode ser referenciado posteriormente de uma **[!UICONTROL Enviar evento]** para registrar o objeto XDM do evento.
+Use esta ação para modificar um objeto XDM como resultado de um evento. Esta ação destina-se a criar um objeto que pode ser referenciado posteriormente de uma ação **[!UICONTROL Enviar evento]**, para registrar o objeto XDM do evento.
 
-Para usar esse tipo de ação, você deve ter definido um [variável](data-element-types.md#variable) elemento de dados. Depois que você escolhe um elemento de dados variável para modificar, é exibido um editor, semelhante ao editor da variável [Objeto XDM](data-element-types.md#xdm-object) elemento de dados.
+Para usar este tipo de ação, você deve ter definido um elemento de dados [variável](data-element-types.md#variable). Depois que você escolher um elemento de dados variável para modificar, será exibido um editor semelhante ao editor do elemento de dados [objeto XDM](data-element-types.md#xdm-object).
 
 ![](assets/update-variable.png)
 
-O esquema XDM usado para o editor é o esquema selecionado na variável [!UICONTROL variável] elemento de dados. Você pode definir uma ou mais propriedades do objeto clicando em uma das propriedades na árvore à esquerda e modificando o valor à direita. Por exemplo, na captura de tela abaixo, a propriedade productionBy está sendo definida como o elemento de dados &quot;Produced by data element&quot;.
+O esquema XDM usado para o editor é o esquema selecionado no elemento de dados [!UICONTROL variável]. Você pode definir uma ou mais propriedades do objeto clicando em uma das propriedades na árvore à esquerda e modificando o valor à direita. Por exemplo, na captura de tela abaixo, a propriedade productionBy está sendo definida como o elemento de dados &quot;Produced by data element&quot;.
 
 ![](assets/update-variable-set-property.png)
 
@@ -67,35 +67,35 @@ Há algumas diferenças entre o editor na ação de atualização de variáveis 
 
 ## Enviar evento de mídia {#send-media-event}
 
-Envia um evento de mídia para o Adobe Experience Platform e/ou Adobe Analytics. Essa ação é útil ao rastrear eventos de mídia no site. Selecione uma instância (se você tiver mais de uma). A ação requer um `playerId` que representa um identificador exclusivo de uma sessão de mídia rastreada. Exige também uma **[!UICONTROL Qualidade da experiência]** e uma `playhead` elemento de dados ao iniciar uma sessão de mídia.
+Envia um evento de mídia para o Adobe Experience Platform e/ou Adobe Analytics. Essa ação é útil ao rastrear eventos de mídia no site. Selecione uma instância (se você tiver mais de uma). A ação requer um `playerId` que representa um identificador exclusivo para uma sessão de mídia rastreada. Também requer uma **[!UICONTROL Qualidade de experiência]** e um elemento de dados `playhead` ao iniciar uma sessão de mídia.
 
-![Imagem da interface do usuário da Platform mostrando a tela de evento enviar mídia.](assets/send-media-event.png)
+![Imagem da interface do usuário da plataforma mostrando a tela de evento de envio de mídia.](assets/send-media-event.png)
 
-A variável **[!UICONTROL Enviar evento de mídia]** o tipo de ação é compatível com as seguintes propriedades:
+O tipo de ação **[!UICONTROL Enviar evento de mídia]** dá suporte às seguintes propriedades:
 
 * **[!UICONTROL Instância]**: a instância do SDK da Web que está sendo usada.
 * **[!UICONTROL Tipo de evento de mídia]**: o tipo de evento de mídia que está sendo rastreado.
-* **[!UICONTROL ID do player]**: O identificador exclusivo da sessão de mídia.
+* **[!UICONTROL ID do player]**: o identificador exclusivo da sessão de mídia.
 * **[!UICONTROL Indicador de reprodução]**: a posição atual da reprodução de mídia, em segundos.
-* **[!UICONTROL Detalhes da sessão de mídia]**: ao enviar um evento de início de mídia, os detalhes da sessão de mídia necessários devem ser especificados.
+* **[!UICONTROL Detalhes da sessão de mídia]**: Ao enviar um evento de início de mídia, os detalhes da sessão de mídia necessários devem ser especificados.
 * **[!UICONTROL Detalhes do capítulo]**: nesta seção, você pode especificar os detalhes do capítulo ao enviar um evento de mídia de início de capítulo.
-* **[!UICONTROL Detalhes de publicidade]**: ao enviar um `AdBreakStart` evento, você deve especificar os detalhes de publicidade necessários.
-* **[!UICONTROL Detalhes do pod de publicidade]**: detalhes sobre o pod de publicidade ao enviar um `AdStart` evento.
+* **[!UICONTROL Detalhes do Advertising]**: ao enviar um evento `AdBreakStart`, você deve especificar os detalhes de publicidade necessários.
+* **[!UICONTROL Detalhes do pod do Advertising]**: detalhes sobre o pod de publicidade ao enviar um evento `AdStart`.
 * **[!UICONTROL Detalhes do erro]**: detalhes sobre o erro de reprodução que está sendo rastreado.
 * **[!UICONTROL Detalhes da atualização de estado]**: o estado do player que está sendo atualizado.
 * **[!UICONTROL Metadados personalizados]**: os metadados personalizados sobre o evento de mídia que está sendo rastreado.
-* **[!UICONTROL Qualidade da experiência]**: a qualidade da mídia dos dados de experiência que estão sendo rastreados.
+* **[!UICONTROL Qualidade de experiência]**: a qualidade de mídia dos dados de experiência que estão sendo rastreados.
 
 ## Obter o Media Analytics Tracker {#get-media-analytics-tracker}
 
 Essa ação é usada para obter a API herdada do Media Analytics. Ao configurar a ação e um nome de objeto é fornecido, a API herdada do Media Analytics será exportada para esse objeto de janela. Se nenhum for fornecido, ele será exportado para `window.Media` como a biblioteca Media JS atual faz.
 
-![Imagem da interface do usuário da plataforma mostrando o tipo de ação Obter rastreador do Media Analytics.](assets/get-media-analytics-tracker.png)
+![Imagem da interface do usuário da plataforma mostrando o tipo de ação Obter Media Analytics Tracker.](assets/get-media-analytics-tracker.png)
 
 ## Redirecionar com identidade {#redirect-with-identity}
 
-Use esse tipo de ação para compartilhar identidades da página atual com outros domínios. Esta ação foi projetada para ser usada com um **[!UICONTROL click]** tipo de evento e uma condição de comparação de valor. Consulte [anexar identidade ao URL usando a extensão SDK da Web](../../../../web-sdk/commands/appendidentitytourl.md#extension) para obter mais informações sobre como usar este tipo de ação.
+Use esse tipo de ação para compartilhar identidades da página atual com outros domínios. Esta ação foi projetada para ser usada com um tipo de evento **[!UICONTROL click]** e uma condição de comparação de valor. Consulte [anexar identidade à URL usando a extensão SDK da Web](../../../../web-sdk/commands/appendidentitytourl.md#extension) para obter mais informações sobre como usar este tipo de ação.
 
 ## Próximas etapas {#next-steps}
 
-Depois de ler este artigo, você terá que entender melhor como configurar suas ações. Em seguida, leia sobre como [configurar os tipos de elementos de dados](data-element-types.md).
+Depois de ler este artigo, você terá que entender melhor como configurar suas ações. Em seguida, leia sobre como [configurar seus tipos de elementos de dados](data-element-types.md).

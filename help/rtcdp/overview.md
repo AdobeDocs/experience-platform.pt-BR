@@ -17,7 +17,7 @@ ht-degree: 0%
 
 Criada na Adobe Experience Platform, a Adobe Real-time Customer Data Platform (Real-Time CDP) ajuda empresas a reunir dados conhecidos e anônimos de várias fontes corporativas para criar perfis de clientes que podem ser usados para fornecer experiências personalizadas em todos os canais e dispositivos em tempo real.
 
-![Visão geral de vários aplicativos Experience Platform, com o Real-Time CDP em destaque.](/help/rtcdp/assets/platform-apps-overview.png)
+![Visão geral de vários aplicativos Experience Platform, com o Real-Time CDP realçado.](/help/rtcdp/assets/platform-apps-overview.png)
 
 O Real-Time CDP inclui ferramentas para governança de dados, gerenciamento de identidade, segmentação avançada e ciência de dados, para que você possa criar perfis e definir públicos, bem como obter insights avançados e aplicar políticas rigorosas de governança de dados.
 
@@ -51,25 +51,25 @@ Obtenha informações completas sobre a funcionalidade incluída nos níveis Pri
 
 ### Adobe Real-time Customer Data Platform - Edição B2C (Business-to-Consumer, empresa para consumidor) {#rtcdp-b2c}
 
-O B2C (Business-to-Consumer, negócio para consumidor) da Real-Time CDP foi desenvolvido especificamente para os profissionais de marketing B2C unificarem, controlarem e ativarem todas *dados do consumidor* em sistemas e canais para proporcionar experiências do cliente mais personalizadas e tranquilidade completa para os dados.
+O B2C (Business-to-Consumer, negócio para consumidor) da Real-Time CDP foi desenvolvido especificamente para profissionais de marketing B2C unificarem, controlarem e ativarem todos os *dados do consumidor* em sistemas e canais para proporcionar experiências do cliente mais personalizadas e total tranquilidade para os dados.
 
 ### Adobe Real-time Customer Data Platform - Edição B2B (Business-to-Business) {#rtcdp-b2b}
 
-O Real-Time CDP Business-to-Business (B2B) foi desenvolvido especificamente para profissionais de marketing B2B unificarem, controlarem e ativarem todas *dados de clientes potenciais e de conta* em sistemas e canais para proporcionar experiências do cliente mais personalizadas e tranquilidade completa para os dados
+O B2B (Business-to-Business) da Real-Time CDP foi desenvolvido especificamente para profissionais de marketing B2B unificarem, controlarem e ativarem todos os *dados de clientes potenciais e de contas* em sistemas e canais para proporcionar experiências de cliente mais personalizadas e total tranquilidade com os dados
 
 O Real-Time CDP B2B Edition permite que os profissionais de marketing criem perfis completos para pessoas e contas. Especificamente, você pode enriquecer, segmentar e exportar todos os seus dados entre origens de um armazenamento centralizado de perfis de conta unificados. Esses dados podem ser gerenciados usando ferramentas de governança de dados disponíveis em cada etapa do processo de centralização.
 
-Consulte [a visão geral sobre o Real-Time CDP B2B Edition](./b2b-overview.md) para obter informações mais abrangentes.
+Consulte [a visão geral do Real-Time CDP B2B Edition](./b2b-overview.md) para obter informações mais abrangentes.
 
 ### Adobe Real-time Customer Data Platform - Edição B2P (Business-to-Person) {#rtcdp-b2p}
 
-Com a edição Business-to-Person (B2P) do Real-Time CDP, você pode unificar, controlar e ativar seus *Dados de clientes B2C e B2B* usar uma única CDP para direcionar a mesma pessoa em todas as linhas de negócios, com uma experiência perfeita e total tranquilidade com os dados.
+Com a edição Business-to-Person (B2P) do Real-Time CDP, você pode unificar, administrar e ativar seus *dados de clientes B2C e B2B* usando uma única CDP para direcionar a mesma pessoa em todas as linhas de negócios, com uma experiência contínua e total tranquilidade para os dados.
 
-Com esta edição, você obtém uma plataforma completa de dados do cliente para *B2C e B2B* empresas para personalizar experiências para a mesma pessoa em todas as linhas de negócios.
+Com esta edição, você obtém uma plataforma completa de dados do cliente para empresas *B2C e B2B* para personalizar experiências para a mesma pessoa em todas as linhas de negócios.
 
 ## Informações adicionais
 
-Para saber mais sobre o Adobe Experience Platform, comece lendo o [visão geral do Experience Platform](../landing/home.md).
+Para saber mais sobre o Adobe Experience Platform, comece lendo a [visão geral do Experience Platform](../landing/home.md).
 
 A documentação a seguir é recomendada para ajudar você a começar a usar o Real-time Customer Data Platform:
 
@@ -82,4 +82,4 @@ A documentação a seguir é recomendada para ajudar você a começar a usar o R
 
 ## Glossário
 
-Use o [**Glossário**](/help/landing/glossary.md) página para analisar a terminologia do Real-Time CDP e do Adobe Experience Platform.
+Use a página [**Glossário**](/help/landing/glossary.md) para revisar a terminologia do Real-Time CDP e do Adobe Experience Platform.

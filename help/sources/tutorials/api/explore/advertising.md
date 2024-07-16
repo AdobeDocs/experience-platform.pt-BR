@@ -1,42 +1,42 @@
 ---
-keywords: Experience Platform;página inicial;tópicos populares;sistema de publicidade;Sistema de publicidade
+keywords: Experience Platform;página inicial;tópicos populares;sistema de publicidade;sistema Advertising
 solution: Experience Platform
-title: Explore um sistema de publicidade usando a API do serviço de fluxo
+title: Explorar um sistema da Advertising usando a API do serviço de fluxo
 description: O Serviço de fluxo é usado para coletar e centralizar dados de clientes de várias fontes diferentes no Adobe Experience Platform. O serviço fornece uma interface de usuário e a API RESTful a partir da qual todas as fontes compatíveis são conectáveis. Este tutorial usa a API de serviço de fluxo para explorar sistemas de publicidade.
 exl-id: 3016ce1e-12e6-47ce-a4c5-52f8d440f515
 source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
-source-wordcount: '502'
-ht-degree: 3%
+source-wordcount: '498'
+ht-degree: 6%
 
 ---
 
-# Explore um sistema de publicidade usando o [!DNL Flow Service] API
+# Explorar um sistema de publicidade usando a API [!DNL Flow Service]
 
 Com uma conexão básica criada, agora é possível usar a ID de conexão básica exclusiva para navegar e explorar a estrutura de dados e o conteúdo da fonte. Isso permite identificar os itens específicos e seus respectivos tipos de dados e formatos antes de criar um fluxo de dados e trazê-los para o Adobe Experience Platform.
 
-Este tutorial usa o [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) explorar sistemas de publicidade.
+Este tutorial usa a [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) para explorar sistemas de publicidade.
 
 ## Introdução
 
 >[!IMPORTANT]
 >
->Este tutorial requer que você tenha a ID de conexão básica exclusiva para sua fonte de publicidade. Se você não tiver essa ID, consulte o tutorial em [conectar uma fonte de publicidade à Platform](../../api/create/advertising/ads.md) tutorial.
+>Este tutorial requer que você tenha a ID de conexão básica exclusiva para sua fonte de publicidade. Se você não tiver essa ID, consulte o tutorial sobre [conectar uma fonte de publicidade ao Platform](../../api/create/advertising/ads.md).
 
-Este guia requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
+Este manual necessita de uma compreensão funcional dos seguintes componentes da Adobe Experience Platform:
 
-* [Origens](../../../home.md): [!DNL Experience Platform] O permite que os dados sejam assimilados de várias fontes e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando o [!DNL Platform] serviços.
-* [Sandboxes](../../../../sandboxes/home.md): [!DNL Experience Platform] O fornece sandboxes virtuais que particionam uma única [!DNL Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
+* [Fontes](../../../home.md): [!DNL Experience Platform] permite que os dados sejam assimilados de várias fontes e fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços do [!DNL Platform].
+* [Sandboxes](../../../../sandboxes/home.md): [!DNL Experience Platform] fornece sandboxes virtuais que particionam uma única instância do [!DNL Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
-As seções a seguir fornecem informações adicionais que você precisará saber para se conectar com êxito a um sistema de publicidade usando o [!DNL Flow Service] API.
+As seções a seguir fornecem informações adicionais que você precisará saber para se conectar com êxito a um sistema de publicidade usando a API [!DNL Flow Service].
 
 ### Uso de APIs da plataforma
 
-Para obter informações sobre como fazer chamadas para APIs da Platform com êxito, consulte o manual em [introdução às APIs da Platform](../../../../landing/api-guide.md).
+Para obter informações sobre como fazer chamadas para APIs da Platform com êxito, consulte o manual sobre [introdução às APIs da Platform](../../../../landing/api-guide.md).
 
 ## Explore suas tabelas de dados
 
-Usando a conexão básica para seu sistema de publicidade, você pode explorar suas tabelas de dados executando solicitações GET. Use a chamada a seguir para encontrar o caminho da tabela que você deseja inspecionar ou assimilar [!DNL Platform].
+Usando a conexão básica para seu sistema de publicidade, você pode explorar suas tabelas de dados executando solicitações GET. Use a chamada a seguir para localizar o caminho da tabela que você deseja inspecionar ou assimilar em [!DNL Platform].
 
 **Formato da API**
 
@@ -61,7 +61,7 @@ curl -X GET \
 
 **Resposta**
 
-Uma resposta bem-sucedida é uma matriz de tabelas do para o seu sistema de publicidade. Encontre a tabela que deseja trazer para [!DNL Platform] e toma nota da sua `path` propriedade, conforme necessário fornecê-la na próxima etapa para inspecionar sua estrutura.
+Uma resposta bem-sucedida é uma matriz de tabelas do para o seu sistema de publicidade. Encontre a tabela que você deseja trazer para [!DNL Platform] e anote sua propriedade `path`, pois você deverá fornecê-la na próxima etapa para inspecionar sua estrutura.
 
 ```json
 [
@@ -124,7 +124,7 @@ curl -X GET \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna a estrutura de uma tabela. Detalhes sobre cada coluna da tabela estão localizados em elementos do `columns` matriz.
+Uma resposta bem-sucedida retorna a estrutura de uma tabela. Detalhes sobre cada coluna da tabela estão localizados em elementos da matriz `columns`.
 
 ```json
 {
@@ -170,4 +170,4 @@ Uma resposta bem-sucedida retorna a estrutura de uma tabela. Detalhes sobre cada
 
 ## Próximas etapas
 
-Seguindo este tutorial, você explorou seu sistema de publicidade, encontrou o caminho da tabela que deseja trazer [!DNL Platform]e obteve informações sobre a sua estrutura. Você pode usar essas informações no próximo tutorial para [colete dados do seu sistema de publicidade e traga-os para a Platform](../collect/advertising.md).
+Seguindo este tutorial, você explorou seu sistema de publicidade, encontrou o caminho da tabela que deseja trazer para [!DNL Platform] e obteve informações sobre sua estrutura. Você pode usar essas informações no próximo tutorial para [coletar dados do seu sistema de publicidade e trazê-los para a Platform](../collect/advertising.md).

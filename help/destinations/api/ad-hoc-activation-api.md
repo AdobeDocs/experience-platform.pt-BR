@@ -16,7 +16,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Após a conclusão da fase Beta, a variável [!DNL ad-hoc activation API] O agora está disponível para todos os clientes do Experience Platform. Na versão do GA, a API foi atualizada para a versão 2. Etapa 4 ([Obter a ID de trabalho de exportação de público mais recente](#segment-export-id)) não é mais necessário, pois a API não exige mais a ID de exportação.
+>Depois de concluir a fase Beta, o [!DNL ad-hoc activation API] está agora disponível para todos os clientes do Experience Platform. Na versão do GA, a API foi atualizada para a versão 2. A etapa 4 ([Obter a ID de trabalho de exportação de público-alvo mais recente](#segment-export-id)) não é mais necessária, pois a API não exige mais a ID de exportação.
 >
 >Consulte [Executar o trabalho de ativação ad-hoc](#activation-job) mais abaixo neste tutorial para obter mais informações.
 
@@ -24,11 +24,11 @@ ht-degree: 0%
 
 A API de ativação ad-hoc permite que os profissionais de marketing ativem programaticamente os públicos-alvo para destinos, de forma rápida e eficiente, para situações em que a ativação imediata é necessária.
 
-Use a API de ativação ad-hoc para exportar arquivos completos para o sistema de recepção de arquivos desejado. A ativação de público-alvo ad-hoc é suportada somente pelo [destinos baseados em arquivo em lote](../destination-types.md#file-based).
+Use a API de ativação ad-hoc para exportar arquivos completos para o sistema de recepção de arquivos desejado. A ativação de público-alvo ad-hoc só tem suporte dos [destinos baseados em arquivo em lote](../destination-types.md#file-based).
 
 O diagrama abaixo ilustra o fluxo de trabalho completo para ativar públicos-alvo por meio da API de ativação ad-hoc, incluindo os trabalhos de segmentação que ocorrem na Platform a cada 24 horas.
 
-![ad-hoc-activation](../assets/api/ad-hoc-activation/ad-hoc-activation-overview.png)
+![ad-hoc-ativation](../assets/api/ad-hoc-activation/ad-hoc-activation-overview.png)
 
 
 
@@ -51,7 +51,7 @@ Os gerentes de TI podem usar a API de ativação ad-hoc do Experience Platform p
 Lembre-se das seguintes medidas de proteção ao usar a API de ativação ad-hoc.
 
 * Atualmente, cada trabalho de ativação ad-hoc pode ativar até 80 públicos-alvo. Tentar ativar mais de 80 públicos-alvo por trabalho causará falha no trabalho. Esse comportamento está sujeito a alterações em versões futuras.
-* Os trabalhos de ativação ad-hoc não podem ser executados em paralelo ao agendado [públicos-alvo exportar trabalhos](../../segmentation/api/export-jobs.md). Antes de executar um trabalho de ativação ad-hoc, verifique se o trabalho de exportação de público-alvo agendado foi concluído. Consulte [monitoramento do fluxo de dados de destino](../../dataflows/ui/monitor-destinations.md) para obter informações sobre como monitorar o status dos fluxos de ativação. Por exemplo, se o fluxo de dados de ativação mostrar uma variável **[!UICONTROL Processando]** aguarde a conclusão antes de executar o trabalho de ativação ad-hoc.
+* Os trabalhos de ativação ad-hoc não podem ser executados em paralelo com os [trabalhos de exportação de públicos-alvo](../../segmentation/api/export-jobs.md) agendados. Antes de executar um trabalho de ativação ad-hoc, verifique se o trabalho de exportação de público-alvo agendado foi concluído. Consulte [monitoramento do fluxo de dados de destino](../../dataflows/ui/monitor-destinations.md) para obter informações sobre como monitorar o status dos fluxos de ativação. Por exemplo, se o fluxo de dados de ativação mostrar um status de **[!UICONTROL Processando]**, aguarde a conclusão antes de executar o trabalho de ativação ad-hoc.
 * Não execute mais de um trabalho de ativação ad-hoc simultâneo por público-alvo.
 
 ## Considerações de segmentação {#segmentation-considerations}
@@ -63,8 +63,8 @@ O Adobe Experience Platform executa tarefas de segmentação programadas uma vez
 Antes de fazer chamadas para as APIs do Adobe Experience Platform, verifique se os seguintes pré-requisitos são atendidos:
 
 * Você tem uma conta de organização com acesso ao Adobe Experience Platform.
-* Sua conta Experience Platform tem o `developer` e `user` funções habilitadas para o perfil de produto API do Adobe Experience Platform. Entre em contato com [Admin Console](../../access-control/home.md) administrador para habilitar essas funções para sua conta.
-* Você tem uma Adobe ID. Se você não tiver uma Adobe ID, acesse o [Console do Adobe Developer](https://developer.adobe.com/console) e criar uma nova conta.
+* Sua conta Experience Platform tem as funções `developer` e `user` habilitadas para o perfil de produto API do Adobe Experience Platform. Contate o administrador do [Admin Console](../../access-control/home.md) para habilitar essas funções para sua conta.
+* Você tem uma Adobe ID. Se você não tiver uma Adobe ID, vá para a [Adobe Developer Console](https://developer.adobe.com/console) e crie uma nova conta.
 
 ## Etapa 2: Coletar credenciais {#credentials}
 
@@ -72,7 +72,7 @@ Para fazer chamadas para APIs da Platform, primeiro conclua o [tutorial de auten
 
 * Autorização: Portador `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{ORG_ID}`
+* x-gw-ims-org-id `{ORG_ID}`
 
 Os recursos no Experience Platform podem ser isolados em sandboxes virtuais específicas. Em solicitações para APIs da Platform, é possível especificar o nome e a ID da sandbox em que a operação ocorrerá. Esses parâmetros são opcionais.
 
@@ -115,9 +115,9 @@ Na resposta, procure o primeiro registro que inclui a propriedade de schema abai
 }
 ```
 
-A ID do trabalho de exportação de público está na variável `id` como mostrado abaixo.
+A ID do trabalho de exportação de público-alvo está na propriedade `id`, conforme mostrado abaixo.
 
-![ID do trabalho de exportação de público](../assets/api/ad-hoc-activation/segment-export-job-id.png)
+![ID do trabalho de exportação de público-alvo](../assets/api/ad-hoc-activation/segment-export-job-id.png)
 
 
 ## Etapa 5: Executar o trabalho de ativação ad-hoc {#activation-job}
@@ -126,9 +126,9 @@ O Adobe Experience Platform executa tarefas de segmentação programadas uma vez
 
 >[!IMPORTANT]
 >
->Observe a seguinte restrição única: Antes de executar um trabalho de ativação ad-hoc, verifique se passaram pelo menos 20 minutos desde o momento em que o público-alvo foi ativado pela primeira vez, de acordo com o agendamento definido em [Etapa 3 - Criar fluxo de ativação na interface do usuário da Platform](#activation-flow).
+>Observe a seguinte restrição única: Antes de executar um trabalho de ativação ad hoc, verifique se pelo menos 20 minutos se passaram desde o momento em que o público-alvo foi ativado pela primeira vez, de acordo com o agendamento definido em [Etapa 3 - Criar fluxo de ativação na interface do usuário da Platform](#activation-flow).
 
-Antes de executar um trabalho de ativação ad-hoc, verifique se o trabalho de exportação de público-alvo agendado para seus públicos-alvo foi concluído. Consulte [monitoramento do fluxo de dados de destino](../../dataflows/ui/monitor-destinations.md) para obter informações sobre como monitorar o status dos fluxos de ativação. Por exemplo, se o fluxo de dados de ativação mostrar uma variável **[!UICONTROL Processando]** aguarde a conclusão antes de executar o trabalho de ativação ad-hoc para exportar um arquivo completo.
+Antes de executar um trabalho de ativação ad-hoc, verifique se o trabalho de exportação de público-alvo agendado para seus públicos-alvo foi concluído. Consulte [monitoramento do fluxo de dados de destino](../../dataflows/ui/monitor-destinations.md) para obter informações sobre como monitorar o status dos fluxos de ativação. Por exemplo, se o fluxo de dados de ativação mostrar um status de **[!UICONTROL Processando]**, aguarde a conclusão antes de executar o trabalho de ativação ad-hoc para exportar um arquivo completo.
 
 Depois que o trabalho de exportação de público-alvo for concluído, você poderá acionar a ativação.
 
@@ -140,7 +140,7 @@ Depois que o trabalho de exportação de público-alvo for concluído, você pod
 
 >[!IMPORTANT]
 >
->É obrigatório incluir a `Accept: application/vnd.adobe.adhoc.activation+json; version=2` em sua solicitação para usar a v2 da API de ativação ad-hoc.
+>É obrigatório incluir o cabeçalho `Accept: application/vnd.adobe.adhoc.activation+json; version=2` em sua solicitação para usar a v2 da API de ativação ad-hoc.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/core/activation/disflowprovider/adhocrun' \
@@ -166,8 +166,8 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/d
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | As IDs das instâncias de destino para as quais você deseja ativar públicos. Você pode obter essas IDs na interface do usuário da Platform navegando até **[!UICONTROL Destinos]** > **[!UICONTROL Procurar]** e clicando na linha de destino desejada para exibir a ID de destino no painel direito. Para obter mais informações, leia a [documentação do espaço de trabalho de destinos](/help/destinations/ui/destinations-workspace.md#browse). |
-| <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul> | As IDs dos públicos-alvo que você deseja ativar para o destino selecionado. Você pode usar a API ad-hoc para exportar públicos gerados pela Platform, bem como públicos externos (upload personalizado). Ao ativar públicos externos, use a ID gerada pelo sistema em vez da ID de público-alvo. Você pode encontrar a ID gerada pelo sistema na exibição de resumo de público-alvo na interface do usuário para públicos-alvo. <br> ![Exibição da ID de público-alvo que não deve ser selecionada.](/help/destinations/assets/api/ad-hoc-activation/audience-id-do-not-use.png "Exibição da ID de público-alvo que não deve ser selecionada."){width="100" zoomable="yes"} <br> ![Exibição da ID de público-alvo gerada pelo sistema que deve ser usada.](/help/destinations/assets/api/ad-hoc-activation/system-generated-id-to-use.png "Exibição da ID de público-alvo gerada pelo sistema que deve ser usada."){width="100" zoomable="yes"} |
+| <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | As IDs das instâncias de destino para as quais você deseja ativar públicos. É possível obter essas IDs na interface do usuário da Platform navegando até **[!UICONTROL Destinos]** > **[!UICONTROL Procurar]** e clicando na linha de destino desejada para exibir a ID de destino no painel direito. Para obter mais informações, leia a [documentação do espaço de trabalho de destinos](/help/destinations/ui/destinations-workspace.md#browse). |
+| <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul> | As IDs dos públicos-alvo que você deseja ativar para o destino selecionado. Você pode usar a API ad-hoc para exportar públicos gerados pela Platform, bem como públicos externos (upload personalizado). Ao ativar públicos externos, use a ID gerada pelo sistema em vez da ID de público-alvo. Você pode encontrar a ID gerada pelo sistema na exibição de resumo de público na interface do usuário de públicos-alvo. <br> ![Exibição da ID de público-alvo que não deve ser selecionada.](/help/destinations/assets/api/ad-hoc-activation/audience-id-do-not-use.png "Exibição da ID de público-alvo que não deve ser selecionada."){width="100" zoomable="yes"} <br> ![Exibição da ID de público-alvo gerada pelo sistema que deve ser usada.](/help/destinations/assets/api/ad-hoc-activation/system-generated-id-to-use.png "Exibição da ID de público-alvo gerada pelo sistema que deve ser usada."){width="100" zoomable="yes"} |
 
 {style="table-layout:auto"}
 
@@ -207,9 +207,9 @@ curl -X POST https://platform.adobe.io/data/core/activation/disflowprovider/adho
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | As IDs das instâncias de destino para as quais você deseja ativar públicos. Você pode obter essas IDs na interface do usuário da Platform navegando até **[!UICONTROL Destinos]** > **[!UICONTROL Procurar]** e clicando na linha de destino desejada para exibir a ID de destino no painel direito. Para obter mais informações, leia a [documentação do espaço de trabalho de destinos](/help/destinations/ui/destinations-workspace.md#browse). |
+| <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | As IDs das instâncias de destino para as quais você deseja ativar públicos. É possível obter essas IDs na interface do usuário da Platform navegando até **[!UICONTROL Destinos]** > **[!UICONTROL Procurar]** e clicando na linha de destino desejada para exibir a ID de destino no painel direito. Para obter mais informações, leia a [documentação do espaço de trabalho de destinos](/help/destinations/ui/destinations-workspace.md#browse). |
 | <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul> | As IDs dos públicos-alvo que você deseja ativar para o destino selecionado. |
-| <ul><li>`exportId1`</li></ul> | A ID retornada na resposta do [exportação de público](../../segmentation/api/export-jobs.md#retrieve-list) tarefa. Consulte [Etapa 4: obter a ID de trabalho de exportação de público mais recente](#segment-export-id) para obter instruções sobre como encontrar essa ID. |
+| <ul><li>`exportId1`</li></ul> | A ID retornou na resposta do trabalho [exportação de público-alvo](../../segmentation/api/export-jobs.md#retrieve-list). Consulte [Etapa 4: Obter a ID de trabalho de exportação de público-alvo mais recente](#segment-export-id) para obter instruções sobre como encontrar essa ID. |
 
 {style="table-layout:auto"}
 
@@ -233,13 +233,13 @@ Uma resposta bem-sucedida retorna o status HTTP 200.
 | -------- | ----------- |
 | `segment` | A ID do público-alvo ativado. |
 | `order` | A ID do destino para o qual o público-alvo foi ativado. |
-| `statusURL` | A URL de status do fluxo de ativação. É possível rastrear o progresso do fluxo usando a variável [API do serviço de fluxo](../../sources/tutorials/api/monitor.md). |
+| `statusURL` | A URL de status do fluxo de ativação. Você pode acompanhar o progresso do fluxo usando a [API do Serviço de Fluxo](../../sources/tutorials/api/monitor.md). |
 
 {style="table-layout:auto"}
 
 ## Manipulação de erros de API {#api-error-handling}
 
-Os endpoints da API Destination SDK seguem os princípios gerais de mensagem de erro da API Experience Platform. Consulte [Códigos de status da API](../../landing/troubleshooting.md#api-status-codes) e [erros no cabeçalho da solicitação](../../landing/troubleshooting.md#request-header-errors) no guia de solução de problemas da Platform.
+Os endpoints da API Destination SDK seguem os princípios gerais de mensagem de erro da API Experience Platform. Consulte [códigos de status da API](../../landing/troubleshooting.md#api-status-codes) e [erros no cabeçalho da solicitação](../../landing/troubleshooting.md#request-header-errors) no guia de solução de problemas da Platform.
 
 ### Códigos de erro de API e mensagens específicas para a API de ativação ad-hoc {#specific-error-messages}
 
@@ -247,8 +247,8 @@ Ao usar a API de ativação ad-hoc, você pode encontrar mensagens de erro espec
 
 | Mensagem de erro | Resolução |
 |---------|----------|
-| Execução já em andamento para o público-alvo `segment ID` para pedido `dataflow ID` com id de execução `flow run ID` | Essa mensagem de erro indica que um fluxo de ativação ad-hoc está em andamento para um público-alvo. Aguarde a conclusão do trabalho antes de acionar o trabalho de ativação novamente. |
-| Segmentos `<segment name>` não fazem parte desse fluxo de dados ou estão fora do intervalo programado! | Essa mensagem de erro indica que os públicos selecionados para ativação não estão mapeados para o fluxo de dados ou que o agendamento de ativação configurado para os públicos expirou ou ainda não foi iniciado. Verifique se o público-alvo está realmente mapeado para o fluxo de dados e se o agendamento de ativação de público-alvo se sobrepõe à data atual. |
+| Execução já em andamento para a audiência `segment ID` para a ordem `dataflow ID` com a ID de execução `flow run ID` | Essa mensagem de erro indica que um fluxo de ativação ad-hoc está em andamento para um público-alvo. Aguarde a conclusão do trabalho antes de acionar o trabalho de ativação novamente. |
+| Os segmentos `<segment name>` não fazem parte desse fluxo de dados ou estão fora do intervalo programado! | Essa mensagem de erro indica que os públicos selecionados para ativação não estão mapeados para o fluxo de dados ou que o agendamento de ativação configurado para os públicos expirou ou ainda não foi iniciado. Verifique se o público-alvo está realmente mapeado para o fluxo de dados e se o agendamento de ativação de público-alvo se sobrepõe à data atual. |
 
 ## Informações relacionadas {#related-information}
 

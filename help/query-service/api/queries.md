@@ -16,11 +16,11 @@ ht-degree: 3%
 
 ## Exemplos de chamadas de API
 
-As seções a seguir abordam as chamadas que podem ser feitas usando o `/queries` endpoint na variável [!DNL Query Service] API. Cada chamada inclui o formato da API geral, uma solicitação de amostra mostrando os cabeçalhos necessários e uma resposta de amostra.
+As seções a seguir abordam chamadas que você pode fazer usando o ponto de extremidade `/queries` na API [!DNL Query Service]. Cada chamada inclui o formato da API geral, uma solicitação de amostra mostrando os cabeçalhos necessários e uma resposta de amostra.
 
 ### Recuperar uma lista de consultas
 
-Você pode recuperar uma lista de todas as consultas para sua organização fazendo uma solicitação GET para `/queries` terminal.
+Você pode recuperar uma lista de todas as consultas para sua organização fazendo uma solicitação GET para o ponto de extremidade `/queries`.
 
 **Formato da API**
 
@@ -37,13 +37,13 @@ Veja a seguir uma lista de parâmetros de consulta disponíveis para consultas d
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `orderby` | Especifica o campo pelo qual ordenar resultados. Os campos compatíveis são `created` e `updated`. Por exemplo, `orderby=created` Os resultados serão classificados por criados em ordem crescente. Adicionar um `-` antes de criar (`orderby=-created`) classificará os itens por criados em ordem decrescente. |
+| `orderby` | Especifica o campo pelo qual ordenar resultados. Os campos com suporte são `created` e `updated`. Por exemplo, `orderby=created` classificará os resultados por ordem crescente criada. Adicionar um `-` antes de criar (`orderby=-created`) classificará os itens por ordem decrescente. |
 | `limit` | Especifica o limite de tamanho de página para controlar o número de resultados incluídos em uma página. (*Valor padrão: 20*) |
-| `start` | Especifique um carimbo de data e hora no formato ISO para ordenar os resultados. Se nenhuma data de início for especificada, a chamada à API retornará primeiro a consulta criada mais antiga e, em seguida, continuará a listar os resultados mais recentes.<br> Os carimbos de data e hora ISO permitem diferentes níveis de granularidade na data e hora. Os carimbos de data e hora ISO básicos têm o formato de: `2020-09-07` para expressar a data em 7 de setembro de 2020. Um exemplo mais complexo seria escrito como `2022-11-05T08:15:30-05:00` e corresponde a 5 de novembro de 2022, 8:15:30 da manhã, Hora Padrão do Leste dos EUA. Um fuso horário pode ser fornecido com um deslocamento UTC e é indicado pelo sufixo &quot;Z&quot; (`2020-01-01T01:01:01Z`). Se nenhum fuso horário for fornecido, o padrão será zero. |
-| `property` | Filtrar resultados com base em campos. Os filtros **deve** ser escapado por HTML. As vírgulas são usadas para combinar vários conjuntos de filtros. Os campos compatíveis são `created`, `updated`, `state`, e `id`. A lista de operadores compatíveis é `>` (maior que), `<` (menor que), `>=` (maior que ou igual a), `<=` (menor que ou igual a), `==` (igual a), `!=` (diferente de) e `~` (contém). Por exemplo, `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` retornará todas as consultas com a ID especificada. |
-| `excludeSoftDeleted` | Indica se uma consulta que foi excluída por software deve ser incluída. Por exemplo, `excludeSoftDeleted=false` irá **include** consultas excluídas por software. (*Booleano, valor padrão: verdadeiro*) |
-| `excludeHidden` | Indica se as consultas não orientadas por usuário devem ser exibidas. Se este valor for definido como falso, **include** consultas não orientadas por usuários, como definições de CURSOR, FETCH ou consultas de metadados. (*Booleano, valor padrão: verdadeiro*) |
-| `isPrevLink` | A variável `isPrevLink` O parâmetro de consulta é usado para paginação. Os resultados da chamada de API são classificados usando seus `created` carimbo de data e hora e o `orderby` propriedade. Ao navegar pelas páginas de resultados, `isPrevLink` está definido como verdadeiro ao retroceder a paginação. Inverte a ordem da consulta. Consulte os links &quot;próximo&quot; e &quot;anterior&quot; como exemplos. |
+| `start` | Especifique um carimbo de data e hora no formato ISO para ordenar os resultados. Se nenhuma data de início for especificada, a chamada à API retornará primeiro a consulta criada mais antiga e, em seguida, continuará a listar os resultados mais recentes.Os carimbos de data e hora ISO <br> permitem diferentes níveis de granularidade na data e hora. Os carimbos de data e hora ISO básicos assumem o formato de: `2020-09-07` para expressar a data em 7 de setembro de 2020. Um exemplo mais complexo seria escrito como `2022-11-05T08:15:30-05:00` e corresponde a 5 de novembro de 2022, às 8:15:30 am, Hora Padrão do Leste dos EUA. Um fuso horário pode ser fornecido com um deslocamento UTC e é indicado pelo sufixo &quot;Z&quot; (`2020-01-01T01:01:01Z`). Se nenhum fuso horário for fornecido, o padrão será zero. |
+| `property` | Filtrar resultados com base em campos. Os filtros **devem** ter HTML de escape. As vírgulas são usadas para combinar vários conjuntos de filtros. Os campos com suporte são `created`, `updated`, `state` e `id`. A lista de operadores com suporte é `>` (maior que), `<` (menor que), `>=` (maior ou igual a), `<=` (menor ou igual a), `==` (igual a), `!=` (diferente de) e `~` (contém). Por exemplo, `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` retornará todas as consultas com a ID especificada. |
+| `excludeSoftDeleted` | Indica se uma consulta que foi excluída por software deve ser incluída. Por exemplo, `excludeSoftDeleted=false` irá **incluir** consultas excluídas por software. (*Booleano, valor padrão: true*) |
+| `excludeHidden` | Indica se as consultas não orientadas por usuário devem ser exibidas. Se este valor for definido como falso **incluirá** consultas não orientadas por usuário, como definições de CURSOR, BUSCAR ou consultas de metadados. (*Booleano, valor padrão: true*) |
+| `isPrevLink` | O parâmetro de consulta `isPrevLink` é usado para paginação. Os resultados da chamada de API são classificados usando o carimbo de data/hora `created` e a propriedade `orderby`. Ao navegar pelas páginas de resultados, `isPrevLink` é definido como verdadeiro quando a página é retroativa. Inverte a ordem da consulta. Consulte os links &quot;próximo&quot; e &quot;anterior&quot; como exemplos. |
 
 **Solicitação**
 
@@ -120,7 +120,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com uma lista de consultas p
 
 ### Criar uma consulta
 
-Você pode criar uma nova consulta fazendo uma solicitação POST para o `/queries` terminal.
+Você pode criar uma nova consulta fazendo uma solicitação POST para o ponto de extremidade `/queries`.
 
 **Formato da API**
 
@@ -173,14 +173,14 @@ curl -X POST https://platform.adobe.io/data/foundation/query/queries \
 | `sql` | A consulta SQL que você deseja criar. |
 | `name` | O nome da sua consulta SQL. |
 | `description` | A descrição da sua consulta SQL. |
-| `queryParameters` | Um par de valores chave para substituir quaisquer valores parametrizados na instrução SQL. É apenas obrigatório **se** você está usando substituições de parâmetros no SQL fornecido. Nenhuma verificação de tipo de valor será feita nesses pares de valores principais. |
+| `queryParameters` | Um par de valores chave para substituir quaisquer valores parametrizados na instrução SQL. Somente é necessário **se** você estiver usando substituições de parâmetros no SQL fornecido. Nenhuma verificação de tipo de valor será feita nesses pares de valores principais. |
 | `templateId` | O identificador exclusivo de uma consulta pré-existente. Você pode fornecer isso em vez de uma instrução SQL. |
 | `insertIntoParameters` | (Opcional) Se essa propriedade for definida, essa consulta será convertida em uma consulta INSERT INTO. |
 | `ctasParameters` | (Opcional) Se esta propriedade for definida, esta consulta será convertida em uma consulta CTAS. |
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o status HTTP 202 (Aceito) com detalhes da consulta recém-criada. Quando a ativação da consulta for concluída e ela for executada com êxito, a variável `state` mudará de `SUBMITTED` para `SUCCESS`.
+Uma resposta bem-sucedida retorna o status HTTP 202 (Aceito) com detalhes da consulta recém-criada. Quando a ativação da consulta for concluída e executada com êxito, `state` será alterado de `SUBMITTED` para `SUCCESS`.
 
 ```json
 {
@@ -227,7 +227,7 @@ Uma resposta bem-sucedida retorna o status HTTP 202 (Aceito) com detalhes da con
 
 ### Recuperar uma consulta por ID
 
-Você pode recuperar informações detalhadas sobre uma consulta específica fazendo uma solicitação GET ao `/queries` endpoint e fornecimento do query `id` no caminho da solicitação.
+Você pode recuperar informações detalhadas sobre uma consulta específica fazendo uma solicitação GET para o ponto de extremidade `/queries` e fornecendo o valor `id` da consulta no caminho da solicitação.
 
 **Formato da API**
 
@@ -237,7 +237,7 @@ GET /queries/{QUERY_ID}
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `{QUERY_ID}` | A variável `id` valor da consulta que você deseja recuperar. |
+| `{QUERY_ID}` | O valor `id` da consulta que você deseja recuperar. |
 
 **Solicitação**
 
@@ -298,7 +298,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com informações detalhadas
 
 ### Cancelar ou excluir uma consulta por software
 
-Você pode solicitar o cancelamento ou a exclusão reversível de uma consulta especificada fazendo uma solicitação PATCH para o `/queries` endpoint e fornecimento do query `id` no caminho da solicitação.
+Você pode solicitar o cancelamento ou a exclusão reversível de uma consulta especificada fazendo uma solicitação PATCH para o ponto de extremidade `/queries` e fornecendo o valor `id` da consulta no caminho da solicitação.
 
 **Formato da API**
 
@@ -308,7 +308,7 @@ PATCH /queries/{QUERY_ID}
 
 | Parâmetro | Descrição |
 | -------- | ----------- |
-| `{QUERY_ID}` | A variável `id` valor da consulta na qual você deseja executar a operação. |
+| `{QUERY_ID}` | O valor `id` da consulta na qual você deseja executar a operação. |
 
 
 **Solicitação**

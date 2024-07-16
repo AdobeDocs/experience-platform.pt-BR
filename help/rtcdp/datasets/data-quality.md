@@ -17,4 +17,4 @@ O Adobe Real-time Customer Data Platform (Real-Time CDP) permite reunir dados de
 
 O Real-Time CDP é construído sobre o Adobe Experience Platform e utiliza muitos dos serviços e funcionalidades do Experience Platform. Dessa forma, você pode ter certeza de que seus dados serão verificados e validados à medida que forem assimilados.
 
-Para obter informações mais detalhadas sobre verificações e práticas recomendadas ao assimilar dados, leia o [documentação de qualidade dos dados](../../ingestion/quality/overview.md).
+Para obter informações mais detalhadas sobre verificações e práticas recomendadas ao assimilar dados, leia a [documentação sobre qualidade dos dados](../../ingestion/quality/overview.md).

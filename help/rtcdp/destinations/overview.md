@@ -15,4 +15,4 @@ ht-degree: 24%
 
 Os destinos são integrações pré-criadas com plataformas de destino que permitem a ativação contínua de dados do Adobe Experience Platform. É possível usar destinos para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas de email, publicidade direcionada e muitos outros casos de uso.
 
-Para obter uma visão geral mais detalhada dos destinos, incluindo uma lista de destinos disponíveis e links para tutoriais, leia o [documentação de destinos](../../destinations/home.md).
+Para obter uma visão geral mais detalhada dos destinos, incluindo uma lista de destinos disponíveis e links para tutoriais, leia a [documentação sobre destinos](../../destinations/home.md).

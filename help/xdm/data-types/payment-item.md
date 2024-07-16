@@ -7,19 +7,19 @@ exl-id: d25a358b-73c1-468b-a9c5-808385689932
 source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
 source-wordcount: '139'
-ht-degree: 7%
+ht-degree: 15%
 
 ---
 
-# [!UICONTROL Item de pagamento] tipo de dados
+# Tipo de dados [!UICONTROL Item de pagamento]
 
-[!UICONTROL Item de pagamento] é um tipo de dados padrão do Experience Data Model (XDM) que descreve um pagamento associado a um pedido que define o tipo de pagamento, o valor e a moeda associada.
+[!UICONTROL Item de Pagamento] é um tipo de dados padrão do Experience Data Model (XDM) que descreve um pagamento associado a um pedido que define o tipo de pagamento, o valor e a moeda associada.
 
 <img src="../images/data-types/payment-item.PNG" width="400" /><br />
 
 | Propriedade | Tipo de dados | Descrição |
 | --- | --- | --- |
-| `currencyCode` | String | O código de moeda ISO 4217 usado para os totais do pedido. Todas as instâncias devem estar em conformidade com a expressão regular `^[A-Z]{3}$`. Os exemplos incluem `USD` e `EUR`. |
+| `currencyCode` | String | O código de moeda ISO 4217 usado para os totais do pedido. Todas as instâncias devem estar em conformidade com a expressão regular `^[A-Z]{3}$`. Exemplos incluem `USD` e `EUR`. |
 | `paymentAmount` | Duplo | O valor do pagamento. |
 | `paymentType` | String | O método de pagamento deste pedido. Os valores de enumeração aceitos incluem: <li> `cash` </li> <li> `credit_card` </li> <li> `debit_card` </li> <li> `gift_card` </li> <li> `check` </li> <li> `paypal` </li> <li> `wire_transfer` </li> <li> `credit_card_reference` </li> <li> `other` </li> |
 | `transactionID` | String | O identificador de transação exclusivo para este item de pagamento. |

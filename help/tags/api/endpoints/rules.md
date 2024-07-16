@@ -4,7 +4,7 @@ description: Saiba como fazer chamadas para o ponto de extremidade /rules na API
 exl-id: 79ef4389-e4b7-461e-8579-16a1a78cdd43
 source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '896'
+source-wordcount: '893'
 ht-degree: 95%
 
 ---
@@ -15,7 +15,7 @@ No contexto de tags de coleção de dados, as regras controlam o comportamento d
 
 >[!NOTE]
 >
->Este documento aborda como gerenciar regras na API do reator. Para obter informações sobre como interagir com as regras na interface do usuário, consulte o [Guia da interface do usuário](../../ui/managing-resources/rules.md).
+>Este documento aborda como gerenciar regras na API do reator. Para obter informações sobre como interagir com as regras na interface, consulte o [guia da interface](../../ui/managing-resources/rules.md).
 
 Uma regra pertence a exatamente uma [propriedade](./properties.md). Uma propriedade pode ter muitas regras.
 

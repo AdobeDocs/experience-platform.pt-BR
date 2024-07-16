@@ -5,7 +5,7 @@ exl-id: dbf1e7a3-8599-4991-8932-f57d3b1c640d
 source-git-commit: 3069bdb3592ac1cd3fd7fe4f7f9234d5be56547d
 workflow-type: tm+mt
 source-wordcount: '1999'
-ht-degree: 27%
+ht-degree: 26%
 
 ---
 
@@ -36,13 +36,13 @@ O Attribution AI é usado para atribuir créditos a pontos de contato que levam 
 
 | Recurso | Descrição |
 | ------- | ----------- |
-| Suporte para privacidade | <ul><li> O Attribution AI agora permite definir funções de usuário e políticas de acesso para gerenciar [permissões](../../../help/access-control/abac/ui/permissions.md) para recursos e objetos em um aplicativo do produto. </li><li>Os recursos de log de auditoria são registrados automaticamente conforme a atividade ocorre.</li><li> Até [controle de acesso baseado em atributos](../../access-control/abac/overview.md), os administradores podem controlar o acesso a objetos e/ou recursos específicos com base em determinados atributos, que podem ser metadados adicionados a um objeto, como rótulos. Os administradores também podem definir funções de usuário que tenham acesso somente a campos e dados específicos que correspondam a esses campos.</li><li>O Attribution AI aproveita conjuntos de dados da plataforma. Para dar suporte às solicitações de direitos do consumidor que uma marca pode receber, as marcas devem usar o Platform Privacy Service para enviar solicitações do consumidor de acesso e exclusão para remover seus dados no data lake, no Serviço de identidade e no Perfil do cliente em tempo real.  </li><li>Todos os conjuntos de dados usados para entrada/saída de modelos seguirão as diretrizes da plataforma. A Criptografia de dados da plataforma se aplica a dados inativos e em trânsito. Consulte a documentação para saber mais sobre [criptografia de dados](../../../help/landing/governance-privacy-security/encryption.md).</li></ul> |
+| Suporte para privacidade | <ul><li> O Attribution AI agora oferece suporte à definição de funções de usuário e políticas de acesso para gerenciar [permissões](../../../help/access-control/abac/ui/permissions.md) para recursos e objetos em um aplicativo de produto. </li><li>Os recursos de log de auditoria são registrados automaticamente conforme a atividade ocorre.</li><li> Por meio do [controle de acesso baseado em atributos](../../access-control/abac/overview.md), os administradores podem controlar o acesso a objetos e/ou recursos específicos com base em determinados atributos, que podem ser metadados adicionados a um objeto, como rótulos. Os administradores também podem definir funções de usuário que tenham acesso somente a campos e dados específicos que correspondam a esses campos.</li><li>O Attribution AI aproveita conjuntos de dados da plataforma. Para dar suporte às solicitações de direitos do consumidor que uma marca pode receber, as marcas devem usar o Platform Privacy Service para enviar solicitações do consumidor de acesso e exclusão para remover seus dados no data lake, no Serviço de identidade e no Perfil do cliente em tempo real.  </li><li>Todos os conjuntos de dados usados para entrada/saída de modelos seguirão as diretrizes da plataforma. A Criptografia de dados da plataforma se aplica a dados inativos e em trânsito. Consulte a documentação para saber mais sobre [criptografia de dados](../../../help/landing/governance-privacy-security/encryption.md).</li></ul> |
 
 {style="table-layout:auto"}
 
-**Nota**: o Attribution AI não estará disponível para os clientes existentes do Healthcare Shield até notificação posterior.
+**Observação**: o Attribution AI não estará disponível para os clientes existentes do Healthcare Shield até que seja especificado.
 
-Para obter mais informações sobre o Attribution AI, consulte [Attribution AI](../../intelligent-services/attribution-ai/overview.md) visão geral.
+Para obter mais informações sobre o Attribution AI, consulte a visão geral de [Attribution AI](../../intelligent-services/attribution-ai/overview.md).
 
 ### IA do cliente
 
@@ -52,39 +52,39 @@ A IA do cliente, disponível no Real-time Customer Data Platform, é usada para 
 
 | Recurso | Descrição |
 | ------- | ----------- |
-| Suporte para privacidade | <ul><li> A IA do cliente agora permite definir funções de usuário e políticas de acesso para gerenciar o [permissões](../../../help/access-control/abac/ui/permissions.md) para recursos e objetos em um aplicativo do produto. </li><li>Os recursos de log de auditoria são registrados automaticamente conforme a atividade ocorre.</li><li> Até [controle de acesso baseado em atributos](../../access-control/abac/overview.md), os administradores podem controlar o acesso a objetos e/ou recursos específicos com base em determinados atributos. Esses atributos podem ser metadados adicionados a um objeto, como rótulos. Os administradores também podem definir funções de usuário que tenham acesso somente a campos e dados específicos que correspondam a esses campos.</li><li>A IA do cliente aproveita os conjuntos de dados da plataforma. Para dar suporte às solicitações de direitos do consumidor que uma marca pode receber, as marcas devem usar o Platform Privacy Service para enviar solicitações do consumidor de acesso e exclusão para remover seus dados no data lake, no Serviço de identidade e no Perfil do cliente em tempo real. </li><li>Todos os conjuntos de dados usados para entrada/saída de modelos seguirão as diretrizes da plataforma. A Criptografia de dados da plataforma se aplica a dados inativos e em trânsito. Consulte a documentação para saber mais sobre [criptografia de dados](../../../help/landing/governance-privacy-security/encryption.md).</li></ul> |
+| Suporte para privacidade | <ul><li> A IA do cliente agora oferece suporte à definição de funções de usuário e políticas de acesso para gerenciar [permissões](../../../help/access-control/abac/ui/permissions.md) para recursos e objetos em um aplicativo de produto. </li><li>Os recursos de log de auditoria são registrados automaticamente conforme a atividade ocorre.</li><li> Por meio do [controle de acesso baseado em atributos](../../access-control/abac/overview.md), os administradores podem controlar o acesso a objetos e/ou recursos específicos com base em determinados atributos. Esses atributos podem ser metadados adicionados a um objeto, como rótulos. Os administradores também podem definir funções de usuário que tenham acesso somente a campos e dados específicos que correspondam a esses campos.</li><li>A IA do cliente aproveita os conjuntos de dados da plataforma. Para dar suporte às solicitações de direitos do consumidor que uma marca pode receber, as marcas devem usar o Platform Privacy Service para enviar solicitações do consumidor de acesso e exclusão para remover seus dados no data lake, no Serviço de identidade e no Perfil do cliente em tempo real. </li><li>Todos os conjuntos de dados usados para entrada/saída de modelos seguirão as diretrizes da plataforma. A Criptografia de dados da plataforma se aplica a dados inativos e em trânsito. Consulte a documentação para saber mais sobre [criptografia de dados](../../../help/landing/governance-privacy-security/encryption.md).</li></ul> |
 
 {style="table-layout:auto"}
 
-**Nota**: a IA do cliente não estará disponível para clientes existentes do Healthcare Shield até aviso em contrário.
+**Observação**: a IA do cliente não estará disponível para os clientes existentes do Healthcare Shield até que seja especificado.
 
-Para obter mais informações sobre a IA do cliente, consulte [IA do cliente](../../intelligent-services/customer-ai/overview.md) visão geral.
+Para obter mais informações sobre a IA do cliente, consulte a visão geral da [IA do cliente](../../intelligent-services/customer-ai/overview.md).
 
 ## [!DNL Dashboards] {#dashboards}
 
-O Adobe Experience Platform fornece vários [!DNL dashboards] por meio do qual você pode visualizar insights importantes sobre os dados de sua organização, conforme capturados durante instantâneos diários.
+O Adobe Experience Platform fornece vários [!DNL dashboards] através dos quais você pode visualizar insights importantes sobre os dados da sua organização, conforme capturados durante os instantâneos diários.
 
 **Recursos atualizados**
 
 | Recurso | Descrição |
 | --- | --- |
-| Widget de ativações programadas | A variável [!UICONTROL Ativações programadas] O widget fornece uma exibição tabulada dos destinos ativados mais recentemente. Para cada segmento, inclui o nome, a plataforma de destino e as datas de início e término da ativação. Esse widget permite descobrir onde e quando o público-alvo está sendo ativado e torna mais transparentes as ativações duplicadas ou desnecessárias. Essas informações acumuladas também destacam onde as ativações foram deixadas de fora. |
+| Widget de ativações programadas | O widget [!UICONTROL Ativações agendadas] fornece um modo de exibição tabulado dos destinos ativados mais recentemente. Para cada segmento, inclui o nome, a plataforma de destino e as datas de início e término da ativação. Esse widget permite descobrir onde e quando o público-alvo está sendo ativado e torna mais transparentes as ativações duplicadas ou desnecessárias. Essas informações acumuladas também destacam onde as ativações foram deixadas de fora. |
 
-Para obter mais informações sobre [!DNL Dashboards], consulte o [[!DNL Dashboards] visão geral](../../dashboards/home.md).
+Para obter mais informações sobre [!DNL Dashboards], consulte a [[!DNL Dashboards] visão geral](../../dashboards/home.md).
 
 ## [!DNL Data Prep] {#data-prep}
 
-[!DNL Data Prep] O permite que os engenheiros de dados mapeiem, transformem e validem dados de e para o Experience Data Model (XDM).
+O [!DNL Data Prep] permite que os engenheiros de dados mapeiem, transformem e validem dados de e para o Experience Data Model (XDM).
 
 **Recursos atualizados**
 
 | Recurso | Descrição |
 | --- | --- |
-| Suporte para assimilação de registros com avisos | O Preparo de dados agora localizará avisos (erros não críticos) nos campos e permitirá que o restante da linha seja assimilado. Todos os erros de transformação do mapeador agora são relatados como avisos, e as linhas que são parcialmente assimiladas são consideradas bem-sucedidas, com um aviso.  O monitoramento também é suportado em registros com avisos e detalhes de diagnóstico. Atualmente, a assimilação parcial de registros com avisos está disponível apenas para dados de transmissão. Revise a documentação em [assimilando registros com avisos](../../sources/tutorials/ui/monitor-streaming.md) para obter mais informações. |
+| Suporte para assimilação de registros com avisos | O Preparo de dados agora localizará avisos (erros não críticos) nos campos e permitirá que o restante da linha seja assimilado. Todos os erros de transformação do mapeador agora são relatados como avisos, e as linhas que são parcialmente assimiladas são consideradas bem-sucedidas, com um aviso.  O monitoramento também é suportado em registros com avisos e detalhes de diagnóstico. Atualmente, a assimilação parcial de registros com avisos está disponível apenas para dados de transmissão. Revise a documentação sobre [assimilando registros com avisos](../../sources/tutorials/ui/monitor-streaming.md) para obter mais informações. |
 
 {style="table-layout:auto"}
 
-Para saber mais sobre [!DNL Data Prep], consulte o [[!DNL Data Prep] visão geral](../../data-prep/home.md).
+Para saber mais sobre [!DNL Data Prep], consulte a [[!DNL Data Prep] visão geral](../../data-prep/home.md).
 
 ## [!DNL Destinations] {#destinations}
 
@@ -94,7 +94,7 @@ Para saber mais sobre [!DNL Data Prep], consulte o [[!DNL Data Prep] visão gera
 
 | Recurso | Descrição |
 | ----------- | ----------- |
-| (Beta) Suporte à personalização com base em atributos para destinos de personalização | Com a versão beta da personalização baseada em atributos, você verá dois novos cartões na [catálogo de destino](../../destinations/catalog/overview.md): <ul><li>**[!UICONTROL Adobe Target V2]**: no momento, esse conector está na versão beta e só está disponível para um número selecionado de clientes. Além da funcionalidade fornecida pela placa Adobe Target V1, o conector Target V2 adiciona uma [etapa de mapeamento](/help/destinations/ui/activate-edge-personalization-destinations.md#map-attributes) ao fluxo de trabalho de ativação, que permite mapear atributos de perfil para o Adobe Target, permitindo a personalização de mesma página e próxima página baseada em atributos.</li><li>**[!UICONTROL Personalização personalizada com atributos]**: no momento, esse conector está na versão beta e só está disponível para um número selecionado de clientes. Além da funcionalidade fornecida pelo **[!UICONTROL Personalização personalizada]**, o **[!UICONTROL Personalização personalizada com atributos]** O conector adiciona um [etapa de mapeamento](../../destinations/ui/activate-edge-personalization-destinations.md#map-attributes) ao fluxo de trabalho de ativação, que permite mapear atributos de perfil para o destino de personalização personalizado, permitindo a personalização baseada em atributos de mesma página e próxima página.</li></ul> <br> Os atributos do perfil podem conter dados confidenciais. Para proteger esses dados, a variável **[!UICONTROL Personalização personalizada com atributos]** o destino exige que você use o [API do servidor de rede de borda](../../server-api/overview.md) para coleta de dados. Além disso, todas as chamadas à API do servidor devem ser feitas em um [contexto autenticado](../../server-api/authentication.md). |
+| (Beta) Suporte à personalização baseada em atributos para destinos de personalização | Com a versão beta da personalização baseada em atributos, você verá dois novos cartões no [catálogo de destino](../../destinations/catalog/overview.md): <ul><li>**[!UICONTROL Adobe Target V2]**: este conector está atualmente na versão beta e só está disponível para um número selecionado de clientes. Além da funcionalidade fornecida pela placa Adobe Target V1, o conector Target V2 adiciona uma [etapa de mapeamento](/help/destinations/ui/activate-edge-personalization-destinations.md#map-attributes) ao fluxo de trabalho de ativação, que permite mapear atributos de perfil para o Adobe Target, permitindo a personalização de mesma página e próxima página baseada em atributos.</li><li>**[!UICONTROL Personalization Personalizado com Atributos]**: este conector está atualmente na versão beta e só está disponível para um número selecionado de clientes. Além da funcionalidade fornecida pelo **[!UICONTROL Personalization Personalizado]**, o conector do **[!UICONTROL Personalization Personalizado com Atributos]** adiciona uma [etapa de mapeamento](../../destinations/ui/activate-edge-personalization-destinations.md#map-attributes) opcional ao fluxo de trabalho de ativação, que permite mapear atributos de perfil para o destino de personalização personalizado, habilitando a personalização de mesma página e próxima página baseada em atributos.</li></ul> <br> Os atributos de perfil podem conter dados confidenciais. Para proteger esses dados, o destino **[!UICONTROL Personalization Personalizado com Atributos]** requer que você use a [API do Servidor Edge Network](../../server-api/overview.md) para coleta de dados. Além disso, todas as chamadas da API do Servidor devem ser feitas em um [contexto autenticado](../../server-api/authentication.md). |
 
 {style="table-layout:auto"}
 
@@ -102,7 +102,7 @@ Para saber mais sobre [!DNL Data Prep], consulte o [[!DNL Data Prep] visão gera
 
 | Destino | Descrição |
 | ----------- | ----------- |
-| [[!DNL Outreach]](../..//destinations/catalog/crm/outreach.md) | [[!DNL Outreach]](https://www.outreach.io/) O é uma Plataforma de execução de vendas com a maioria dos dados de interação comprador-vendedor B2B no mundo e investimentos significativos em tecnologias de IA proprietárias para traduzir dados de vendas em inteligência. [!DNL Outreach] O ajuda as organizações a automatizar o envolvimento de vendas e agir com base na inteligência de receita para melhorar a eficiência, a previsibilidade e o crescimento. |
+| [[!DNL Outreach]](../..//destinations/catalog/crm/outreach.md) | [[!DNL Outreach]](https://www.outreach.io/) é uma Plataforma de Execução de Vendas com a maioria dos dados de interação comprador-vendedor B2B do mundo e investimentos significativos em tecnologias de IA proprietárias para traduzir dados de vendas em inteligência. O [!DNL Outreach] ajuda as organizações a automatizar o envolvimento de vendas e agir com base na inteligência de receita para melhorar sua eficiência, previsibilidade e crescimento. |
 
 {style="table-layout:auto"}
 
@@ -116,8 +116,8 @@ O XDM é uma especificação de código aberto que fornece estruturas e definiç
 
 | Tipo de componente | Nome | Descrição |
 | --- | --- | --- |
-| Classe | [[!UICONTROL Classe de entidade do AJO]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/ajo-entity-class.schema.json) | Uma classe baseada em registros para criar esquemas de pesquisa para o Adobe Journey Optimizer. |
-| Grupo de campos | [[!UICONTROL Objetos de trabalho do Workfront]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/workobjects-all.schema.json) | Um grupo de campos do invólucro que faz referência a todos os grupos de campos específicos de objetos de nível inferior do Adobe Workfront. |
+| Classe | [[!UICONTROL Classe de Entidade AJO]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/ajo-entity-class.schema.json) | Uma classe baseada em registros para criar esquemas de pesquisa para o Adobe Journey Optimizer. |
+| Grupo de campos | [[!UICONTROL Objetos de Trabalho do Workfront]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/workobjects-all.schema.json) | Um grupo de campos do invólucro que faz referência a todos os grupos de campos específicos de objetos de nível inferior do Adobe Workfront. |
 
 {style="table-layout:auto"}
 
@@ -125,15 +125,15 @@ O XDM é uma especificação de código aberto que fornece estruturas e definiç
 
 | Tipo de componente | Nome | Descrição |
 | --- | --- | --- |
-| Grupo de campos | [[!UICONTROL Campos Comuns de Evento de Etapa do Journey Orchestration]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/journeyOrchestration/stepEvents/journeyStepEventCommonFieldsMixin.schema.json) | Duas novas propriedades foram adicionadas: `origTimeStamp` e `experienceID`. |
-| Grupo de campos | [[!UICONTROL Detalhes da associação de segmento]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/segmentation.schema.json) | Além de [!UICONTROL Perfil individual XDM], esse grupo de campos agora também pode ser usado em esquemas baseados na classe Conta de negócios XDM. |
-| Grupo de campos | (Vários) | Vários grupos de campos relacionados às atividades B2B do Marketo foram atualizados para o status estável. Consulte o seguinte [pull request](https://github.com/adobe/xdm/pull/1593/files) para obter detalhes. |
-| Grupo de campos | (Vários) | Vários grupos de campos relacionados ao clima foram atualizados para corrigir erros que estavam ocorrendo para `uvIndex` e `sunsetTime`. Consulte o seguinte [pull request](https://github.com/adobe/xdm/pull/1602/files) para obter detalhes. |
-| Tipo de dados | [[!UICONTROL Item da lista de produtos]](https://github.com/adobe/xdm/blob/master/components/datatypes/productlistitem.schema.json) | Uma nova propriedade `productImageUrl` foi adicionado. |
-| Tipo de dados | [[!UICONTROL Informações detalhadas de dados de QoE]](https://github.com/adobe/xdm/blob/master/components/datatypes/qoedatadetails.schema.json) | Uma nova propriedade `framesPerSecond` foi adicionado. |
-| Tipo de dados | [[!UICONTROL Informações de detalhes da sessão]](https://github.com/adobe/xdm/blob/master/components/datatypes/sessiondetails.schema.json) | A `sdkVersion` foi renomeada como `appVersion`. `meta:enum` e `description` Os campos do também foram atualizados. |
-| Tipos de dados e grupos de campos | (Vários) | Vários tipos de dados de mídia e grupos de campos têm novos campos e descrições atualizadas. Consulte o seguinte [pull request](https://github.com/adobe/xdm/pull/1582/files) para obter detalhes. |
-| (Todos) | (Vários) | Todos os objetos de esquema que contêm um `enum` O campo agora também contém um campo correspondente `meta:enum` para indicar os valores de exibição para cada restrição. Consulte o seguinte [pull request](https://github.com/adobe/xdm/pull/1601/files) para obter detalhes. |
+| Grupo de campos | [[!UICONTROL Campos Comuns de Eventos de Etapa do Journey Orchestration]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/journeyOrchestration/stepEvents/journeyStepEventCommonFieldsMixin.schema.json) | Duas novas propriedades foram adicionadas: `origTimeStamp` e `experienceID`. |
+| Grupo de campos | [[!UICONTROL Detalhes da associação de segmento]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/segmentation.schema.json) | Além do [!UICONTROL Perfil Individual XDM], este grupo de campos agora também pode ser usado em esquemas baseados na classe Conta Comercial XDM. |
+| Grupo de campos | (Vários) | Vários grupos de campos relacionados às atividades B2B do Marketo foram atualizados para o status estável. Consulte a seguinte [solicitação de pull](https://github.com/adobe/xdm/pull/1593/files) para obter detalhes. |
+| Grupo de campos | (Vários) | Vários grupos de campos relacionados à meteorologia foram atualizados para corrigir erros que estavam ocorrendo para `uvIndex` e `sunsetTime`. Consulte a seguinte [solicitação de pull](https://github.com/adobe/xdm/pull/1602/files) para obter detalhes. |
+| Tipo de dados | [[!UICONTROL Item da lista de produtos]](https://github.com/adobe/xdm/blob/master/components/datatypes/productlistitem.schema.json) | Uma nova propriedade `productImageUrl` foi adicionada. |
+| Tipo de dados | [[!UICONTROL Informações detalhadas de dados de QoE]](https://github.com/adobe/xdm/blob/master/components/datatypes/qoedatadetails.schema.json) | Uma nova propriedade `framesPerSecond` foi adicionada. |
+| Tipo de dados | [[!UICONTROL Informações de detalhes da sessão]](https://github.com/adobe/xdm/blob/master/components/datatypes/sessiondetails.schema.json) | A `sdkVersion` foi renomeada como `appVersion`. Os campos `meta:enum` e `description` também foram atualizados. |
+| Tipos de dados e grupos de campos | (Vários) | Vários tipos de dados de mídia e grupos de campos têm novos campos e descrições atualizadas. Consulte a seguinte [solicitação de pull](https://github.com/adobe/xdm/pull/1582/files) para obter detalhes. |
+| (Todos) | (Vários) | Todos os objetos de esquema que contêm um campo `enum` agora também contêm um campo `meta:enum` correspondente para indicar valores de exibição para cada restrição. Consulte a seguinte [solicitação de pull](https://github.com/adobe/xdm/pull/1601/files) para obter detalhes. |
 
 {style="table-layout:auto"}
 
@@ -145,7 +145,7 @@ A Adobe Experience Platform permite gerar experiências coordenadas, consistente
 
 | Recurso | Descrição |
 | ------- | ----------- |
-| Limite rígido das políticas de mesclagem | A Platform agora aplicará um limite rígido de **cinco** políticas de mesclagem por sandbox. Se sua sandbox tiver mais de cinco políticas de mesclagem, você **não** ser capaz de criar novas políticas de mesclagem até que a sandbox tenha menos de cinco políticas de mesclagem. |
+| Limite rígido das políticas de mesclagem | A Platform agora aplicará um limite rígido de **cinco** políticas de mesclagem por sandbox. Se sua sandbox tiver mais de cinco políticas de mesclagem, você **não** poderá criar novas políticas de mesclagem até que a sandbox tenha menos de cinco políticas de mesclagem. |
 | Limpeza de atributo de borda de perfil órfão | Para todas as organizações, o Serviço de perfil agora remove os atributos de borda restantes da região de atividade do usuário diariamente, fornecendo uma representação mais precisa dos perfis no sistema. Essa limpeza ocorre depois que todos os fragmentos de perfil de um determinado perfil são excluídos e deve afetar os perfis que estão sendo mesclados de conjuntos de dados em que `com_adobe_aep_profile_region_dataset` está marcado como `true`. Isso pode mostrar uma queda na métrica &quot;Público-alvo endereçável&quot; no painel de uso da licença e uma queda na métrica &quot;Contagem de perfis&quot; no painel Perfil, já que essas métricas incluíam fragmentos de atributos de borda restantes antes desta versão. |
 
 {style="table-layout:auto"}
@@ -160,7 +160,7 @@ O [!DNL Segmentation Service] define um subconjunto específico de perfis descre
 
 | Recurso | Descrição |
 | ------- | ----------- |
-| Suporte para 4.000 segmentos | Todas as organizações com a Platform agora podem oferecer suporte a até 4.000 definições de segmento. Para obter mais informações sobre como essa alteração afeta as APIs de trabalho do segmento, leia a [manual de endpoint do trabalho de segmento](../../segmentation/api/segment-jobs.md) |
+| Suporte para 4.000 segmentos | Todas as organizações com a Platform agora podem oferecer suporte a até 4.000 definições de segmento. Para obter mais informações sobre como essa alteração afeta as APIs de trabalho do segmento, leia o [manual do ponto de extremidade de trabalho do segmento](../../segmentation/api/segment-jobs.md) |
 
 Para obter mais informações sobre o [!DNL Segmentation Service], consulte a [Visão geral de segmentação](../../segmentation/home.md).
 
@@ -174,11 +174,11 @@ A Experience Platform fornece uma API RESTful e uma interface interativa que per
 
 | Recurso | Descrição |
 | --- | --- |
-| Disponibilidade geral de Fontes de autoatendimento (SDK em lote) | Desenvolva, teste e integre sua fonte de dados baseada em API REST para assimilar dados em lote no Experience Platform usando especificações de fonte fáceis de configurar. Com o SDK de origens, você pode: <ul><li>Configure uma nova fonte para o catálogo de Experience Platform.</li><li>Defina especificações para sua origem, incluindo informações relacionadas aos tipos de autenticação compatíveis, programação e como os dados de recursos são obtidos.</li><li>Crie documentação voltada para o usuário para sua nova fonte.</li></ul> Para obter mais informações, leia a documentação em [Fontes de autoatendimento (SDK em lote)](../../sources/sources-sdk/overview.md). |
-| Disponibilidade geral de [!DNL Google BigQuery] origem | Use o [!DNL Google BigQuery] fonte para assimilar dados de seu [!DNL Google BigQuery] data warehouse para Experience Platform. Para obter mais informações, leia a documentação no [[!DNL Google BigQuery] origem](../../sources/connectors/databases/bigquery.md). |
-| [!DNL Teradata Vantage] origem (Beta) | Use o [!DNL Teradata Vantage] fonte para assimilar dados de ambientes híbridos de várias nuvens para o Experience Platform. Para obter mais informações, leia a documentação no [[!DNL Teradata Vantage] origem](../../sources/connectors/databases/teradata-vantage.md). |
-| Suporte entre regiões para origem no Adobe Analytics | Agora é possível assimilar conjuntos de relatórios de qualquer região (Estados Unidos, Reino Unido ou Cingapura). Os conjuntos de relatórios devem ser mapeados para a mesma organização da instância de sandbox de Experience Platform em que a conexão de origem está sendo criada. Para obter mais informações, leia o guia em [criação de uma conexão de origem do Adobe Analytics na interface](../../sources/tutorials/ui/create/adobe-applications/analytics.md). |
+| Disponibilidade geral de Fontes de autoatendimento (SDK em lote) | Desenvolva, teste e integre sua fonte de dados baseada em API REST para assimilar dados em lote no Experience Platform usando especificações de fonte fáceis de configurar. Com o SDK de origens, você pode: <ul><li>Configure uma nova fonte para o catálogo de Experience Platform.</li><li>Defina especificações para sua origem, incluindo informações relacionadas aos tipos de autenticação compatíveis, programação e como os dados de recursos são obtidos.</li><li>Crie documentação voltada para o usuário para sua nova fonte.</li></ul> Para obter mais informações, leia a documentação sobre [Fontes de Autoatendimento (SDK em Lote)](../../sources/sources-sdk/overview.md). |
+| Disponibilidade geral da origem [!DNL Google BigQuery] | Use a fonte [!DNL Google BigQuery] para assimilar dados do data warehouse [!DNL Google BigQuery] no Experience Platform. Para obter mais informações, leia a documentação na [[!DNL Google BigQuery] origem](../../sources/connectors/databases/bigquery.md). |
+| [!DNL Teradata Vantage] origem (Beta) | Use a fonte [!DNL Teradata Vantage] para assimilar dados de ambientes híbridos de várias nuvens para o Experience Platform. Para obter mais informações, leia a documentação na [[!DNL Teradata Vantage] origem](../../sources/connectors/databases/teradata-vantage.md). |
+| Suporte entre regiões para origem no Adobe Analytics | Agora é possível assimilar conjuntos de relatórios de qualquer região (Estados Unidos, Reino Unido ou Cingapura). Os conjuntos de relatórios devem ser mapeados para a mesma organização da instância de sandbox de Experience Platform em que a conexão de origem está sendo criada. Para obter mais informações, leia o manual sobre [criação de uma conexão de origem do Adobe Analytics na interface](../../sources/tutorials/ui/create/adobe-applications/analytics.md). |
 
 {style="table-layout:auto"}
 
-Para saber mais sobre fontes, consulte a [visão geral das origens](../../sources/home.md).
+Para saber mais sobre fontes, consulte a [visão geral das fontes](../../sources/home.md).

@@ -14,7 +14,7 @@ ht-degree: 0%
 
 Ao tentar renderizar o conteúdo de personalização, o SDK precisa garantir que não haja cintilação. A cintilação, também chamada de FOOC (Flash do conteúdo original), ocorre quando um conteúdo original é exibido brevemente antes de a alternativa aparecer durante o teste/personalização. O SDK tenta aplicar estilos CSS a elementos da página, a fim de garantir que esses elementos estejam ocultos até que o conteúdo de personalização seja renderizado com êxito.
 
-A maneira como você gerencia a cintilação depende de você implantar o SDK da Web de forma síncrona ou assíncrona. Verifique a `<head>` tag onde você implanta `alloy.js` ou o carregador de tags. A presença da `async` atributo no `<script>` determina se o SDK da Web é carregado de forma assíncrona.
+A maneira como você gerencia a cintilação depende de você implantar o SDK da Web de forma síncrona ou assíncrona. Verifique a marca `<head>` onde você implantou o `alloy.js` ou o carregador de marcas. A presença do atributo `async` na marca `<script>` determina se o SDK da Web é carregado de forma assíncrona.
 
 ```html
 <!-- This tag loads synchronously -->
@@ -38,9 +38,9 @@ O gerenciamento de cintilação síncrona é dividido em três fases:
 1. Pré-processando
 1. Renderização
 
-Durante a **fase de pré-ocultação**, o SDK usa o [`prehidingStyle`](../commands/configure/prehidingstyle.md) propriedade de configuração para criar uma tag de estilo HTML e anexá-la ao DOM para garantir que as seções desejadas da página estejam ocultas. Se não tiver certeza de quais partes da página serão personalizadas, é recomendável definir `prehidingStyle` para `body { opacity: 0 !important }`. Isso garante que a página inteira fique oculta. No entanto, isso tem o lado negativo de levar ao pior desempenho de renderização da página relatado por ferramentas como Lighthouse, Testes de página da Web etc. Para ter o melhor desempenho de renderização da página, é recomendável definir `prehidingStyle` para obter uma lista de elementos de contêiner que contêm as partes da página que serão personalizadas.
+Durante a **fase de pré-ocultação**, o SDK usa a propriedade de configuração [`prehidingStyle`](../commands/configure/prehidingstyle.md) para criar uma marca de estilo HTML e anexá-la ao DOM para garantir que as seções desejadas da página estejam ocultas. Se não tiver certeza de quais partes da página serão personalizadas, é recomendável definir `prehidingStyle` como `body { opacity: 0 !important }`. Isso garante que a página inteira fique oculta. No entanto, isso tem o lado negativo de levar ao pior desempenho de renderização da página relatado por ferramentas como Lighthouse, Testes de página da Web etc. Para ter o melhor desempenho de renderização da página, é recomendável definir `prehidingStyle` como uma lista de elementos de contêiner que contenham as partes da página que serão personalizadas.
 
-Supondo que você tenha uma página de HTML como a abaixo e saiba que somente `bar` e `bazz` os elementos do contêiner serão sempre personalizados:
+Supondo que você tenha uma página de HTML como a abaixo e saiba que somente os elementos de contêiner `bar` e `bazz` serão personalizados:
 
 ```html
 <html>
@@ -64,9 +64,9 @@ Supondo que você tenha uma página de HTML como a abaixo e saiba que somente `b
 
 Em seguida, o `prehidingStyle` deve ser definido como algo como `#bar, #bazz { opacity: 0 !important }`.
 
-Depois que o SDK receber conteúdo personalizado do servidor, a variável **fase de pré-processamento** O é iniciado. Durante essa fase, a resposta é pré-processada, garantindo que os elementos que precisam conter conteúdo personalizado estejam ocultos. Depois que esses elementos estiverem ocultos, a tag de estilo HTML que foi criada com base no `prehidingStyle` a opção de configuração é removida e o corpo da HTML ou os elementos de contêiner ocultos são mostrados.
+Depois que o SDK receber o conteúdo personalizado do servidor, a **fase de pré-processamento** será iniciada. Durante essa fase, a resposta é pré-processada, garantindo que os elementos que precisam conter conteúdo personalizado estejam ocultos. Depois que esses elementos estiverem ocultos, a tag de estilo HTML que foi criada com base na opção de configuração `prehidingStyle` será removida e o corpo do HTML ou os elementos de contêiner ocultos serão exibidos.
 
-Depois que todo o conteúdo de personalização for renderizado com sucesso ou se houver algum erro, a variável **fase de processamento** O é iniciado. Todos os elementos ocultos anteriormente são mostrados para garantir que não haja elementos ocultos na página ocultos pelo SDK.
+Depois que todo o conteúdo de personalização for renderizado com êxito, ou se houver algum erro, a **fase de renderização** será iniciada. Todos os elementos ocultos anteriormente são mostrados para garantir que não haja elementos ocultos na página ocultos pelo SDK.
 
 ## Gerenciar cintilação para implantações assíncronas
 
@@ -84,4 +84,4 @@ A recomendação é sempre carregar o SDK de forma assíncrona para obter o melh
 </script>
 ```
 
-Para garantir que o corpo da HTML ou os elementos do contêiner não fiquem ocultos por um longo período, o trecho pré-ocultação usa um cronômetro que, por padrão, remove o trecho após `3000` milissegundos. A variável `3000` milissegundos é o tempo máximo de espera. Se a resposta do servidor tiver sido recebida e processada antes, a tag de estilo HTML pré-ocultação será removida o mais rápido possível.
+Para garantir que o corpo da HTML ou os elementos do contêiner não fiquem ocultos por um longo período de tempo, o trecho pré-ocultação usa um temporizador que, por padrão, remove o trecho após `3000` milissegundos. O tempo máximo de espera de `3000` milissegundos. Se a resposta do servidor tiver sido recebida e processada antes, a tag de estilo HTML pré-ocultação será removida o mais rápido possível.

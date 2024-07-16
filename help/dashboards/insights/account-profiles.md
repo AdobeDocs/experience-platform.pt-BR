@@ -7,7 +7,7 @@ exl-id: a953dd56-7dd8-4cd0-baa0-85f92d192789
 source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
 workflow-type: tm+mt
 source-wordcount: '549'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -19,7 +19,7 @@ Com acesso ao SQL que capacita seus insights, é possível entender melhor seus 
 
 <!-- Add link to new generate insights with SQL workflow doc after April release.-->
 
-Os seguintes insights estão disponíveis para você usar como parte da [Painel de perfis de conta](../guides/account-profiles.md) ou um [painel personalizado](../user-defined-dashboards.md). Consulte a [visão geral da personalização](../customize/overview.md) para obter instruções sobre como personalizar seu painel ou [criar e editar novos widgets](../customize/custom-widgets.md) na biblioteca de widgets e [painel definido pelo usuário](../user-defined-dashboards.md#create-widget).
+Os seguintes insights estão todos disponíveis para você usar como parte do [painel de Perfis de Conta](../guides/account-profiles.md) ou de um [painel personalizado](../user-defined-dashboards.md). Consulte a [visão geral da personalização](../customize/overview.md) para obter instruções sobre como personalizar seu painel ou [criar e editar novos widgets](../customize/custom-widgets.md) na biblioteca de widgets e no [painel definido pelo usuário](../user-defined-dashboards.md#create-widget).
 
 ## Perfis de conta adicionados {#account-profiles-added}
 
@@ -287,4 +287,4 @@ Ao ler este documento, você agora entende o SQL que gera insights do painel de 
 
 <!-- Add link above Learn how to [generate insights with SQL](). after April release -->
 
-Você também pode ler e entender o SQL que gera insights para o [Perfis](./profiles.md), [Públicos-alvo](./audiences.md), e [Destinos](./destinations.md) painéis.
+Você também pode ler e entender o SQL que gera insights para os painéis [Perfis](./profiles.md), [Públicos-alvo](./audiences.md) e [Destinos](./destinations.md).

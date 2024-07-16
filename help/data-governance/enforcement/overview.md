@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Visão geral da aplicação de políticas
 
-Uma vez [rótulos de uso de dados](../labels/overview.md) foram aplicadas e [políticas de uso de dados](../policies/overview.md) tiver sido definida, você poderá aplicar essas políticas para impedir operações de dados que constituam violações de política.
+Depois que [rótulos de uso de dados](../labels/overview.md) forem aplicados e [políticas de uso de dados](../policies/overview.md) forem definidas, você poderá aplicar essas políticas para impedir operações de dados que constituam violações de política.
 
 >[!NOTE]
 >
@@ -23,10 +23,10 @@ Há dois métodos de aplicação de políticas no Adobe Experience Platform: apl
 
 ## Aplicação automática
 
-O Experience Platform aproveita a linhagem de dados, a classificação de dados e os recursos de gerenciamento de políticas para avaliar e detectar automaticamente violações de políticas. Consulte a visão geral em [aplicação automática de política](./auto-enforcement.md) para obter mais informações.
+O Experience Platform aproveita a linhagem de dados, a classificação de dados e os recursos de gerenciamento de políticas para avaliar e detectar automaticamente violações de políticas. Consulte a visão geral sobre [aplicação automática de política](./auto-enforcement.md) para obter mais informações.
 
 ## Imposição com base em API
 
-A variável [!DNL Policy Service] A API fornece endpoints que permitem testar ações de marketing em relação a conjuntos de dados ou combinações arbitrárias de rótulos de uso de dados para verificar se ocorrem violações de política. Com base na resposta da API, você pode configurar protocolos no aplicativo de experiência para aplicar adequadamente a conformidade com a política de governança de dados.
+A API [!DNL Policy Service] fornece endpoints que permitem testar ações de marketing em relação a conjuntos de dados ou combinações arbitrárias de rótulos de uso de dados para verificar se ocorrem violações de política. Com base na resposta da API, você pode configurar protocolos no aplicativo de experiência para aplicar adequadamente a conformidade com a política de governança de dados.
 
-Veja o tutorial sobre [Imposição com base em API](./api-enforcement.md) para obter etapas sobre como avaliar políticas usando a API.
+Consulte o tutorial em [Imposição baseada em API](./api-enforcement.md) para obter etapas sobre como avaliar políticas usando a API.

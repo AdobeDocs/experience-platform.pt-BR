@@ -5,13 +5,13 @@ exl-id: a40d17b3-cb76-4b63-9328-735fc7c55672
 source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
 source-wordcount: '94'
-ht-degree: 5%
+ht-degree: 4%
 
 ---
 
 # [!UICONTROL Detalhes do depósito] grupo de campos de esquema
 
-[!UICONTROL Detalhes do depósito] é um grupo de campos de esquema padrão para o [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md). O grupo de campos fornece um único `personalFinances.deposits` para um esquema, que captura detalhes sobre um depósito financeiro.
+[!UICONTROL Detalhes do Depósito] é um grupo de campos de esquema padrão para a [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md). O grupo de campos fornece um único campo `personalFinances.deposits` para um esquema, que captura detalhes sobre um depósito financeiro.
 
 ![](../../images/field-groups/deposit-details.png)
 
@@ -23,4 +23,4 @@ ht-degree: 5%
 
 {style="table-layout:auto"}
 
-Para obter mais informações sobre o grupo de campos, consulte o [repositório XDM público](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/industry-verticals/experienceevent-deposit-details.schema.json).
+Para obter mais detalhes sobre o grupo de campos, consulte o [repositório XDM público](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/industry-verticals/experienceevent-deposit-details.schema.json).

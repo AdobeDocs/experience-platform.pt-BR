@@ -5,7 +5,7 @@ description: Saiba como mapear campos de evento do Adobe Target para um esquema 
 exl-id: dab08ab6-6c1c-460a-bb52-8dcdb5709a34
 source-git-commit: 81412493b096264ce7a89e3ca2348edb2dcd1798
 workflow-type: tm+mt
-source-wordcount: '430'
+source-wordcount: '431'
 ht-degree: 0%
 
 ---
@@ -41,7 +41,7 @@ A tabela a seguir descreve os campos de um esquema de Evento de experiência do 
 | `environment.colorDepth` | `mboxRequest.colorDepth` |
 | `environment.carrier` | O nome da operadora de celular foi resolvido com base no endereço IP da solicitação. |
 | `environment.ipV4` | `mboxRequest.ipAddress` (se estiver no formato V4) |
-| `environment.ipV6` | `mboxRequest.ipAddress` (se no formato V6) |
+| `environment.ipV6` | `mboxRequest.ipAddress` (se estiver no formato V6) |
 | **`experience`** |
 | `experience.target.clientCode` | `mboxRequest.client` |
 | `experience.target.mboxName` | `mboxRequest.mboxName` |

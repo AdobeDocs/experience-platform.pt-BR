@@ -12,13 +12,13 @@ ht-degree: 2%
 ---
 
 
-# [!UICONTROL Detalhes de contato comercial] grupo de campos de esquema
+# [!UICONTROL Detalhes do Contato Comercial] grupo de campos de esquema
 
 >[!NOTE]
 >
->Os nomes de vários grupos de campos de esquema foram alterados. Consulte o documento sobre [atualizações do nome do grupo de campos](../name-updates.md) para obter mais informações.
+>Os nomes de vários grupos de campos de esquema foram alterados. Consulte o documento em [atualizações de nome de grupo de campos](../name-updates.md) para obter mais informações.
 
-[!UICONTROL Detalhes de contato comercial] é um grupo de campos de esquema padrão para o [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md). O grupo de campos fornece vários campos que capturam informações profissionais sobre uma pessoa individual, como endereço comercial, email comercial, número de telefone comercial e organizações às quais a pessoa pertence.
+[!UICONTROL Detalhes do Contato Comercial] é um grupo de campos de esquema padrão para a [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md). O grupo de campos fornece vários campos que capturam informações profissionais sobre uma pessoa individual, como endereço comercial, email comercial, número de telefone comercial e organizações às quais a pessoa pertence.
 
 ![](../../images/field-groups/work-contact-details.png)
 

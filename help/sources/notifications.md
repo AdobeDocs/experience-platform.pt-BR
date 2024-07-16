@@ -6,16 +6,16 @@ title: Notificações de Execução de Fluxo
 exl-id: 0f1cde97-3030-4b8e-be08-21f64e78b794
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '786'
+source-wordcount: '770'
 ht-degree: 1%
 
 ---
 
 # Notificações de execução de fluxo
 
-O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando o [!DNL Platform] serviços. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
+O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços do [!DNL Platform]. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
 
-[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) O é usado para coletar e centralizar dados do cliente de várias fontes diferentes no [!DNL Platform]. O serviço fornece uma interface de usuário e a API RESTful a partir da qual todas as fontes compatíveis são conectáveis.
+A [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) é usada para coletar e centralizar dados do cliente de várias fontes diferentes em [!DNL Platform]. O serviço fornece uma interface de usuário e a API RESTful a partir da qual todas as fontes compatíveis são conectáveis.
 
 Com o Adobe I/O Events, você pode assinar eventos e usar webhooks para receber notificações sobre o status das execuções de fluxo. Essas notificações contêm informações sobre o sucesso da execução do fluxo ou erros que contribuíram para a falha de uma execução.
 
@@ -23,29 +23,28 @@ Este documento fornece etapas sobre como assinar eventos, registrar webhooks e r
 
 ## Introdução
 
-Este tutorial pressupõe que você já tenha criado pelo menos uma conexão de origem cujo fluxo é executado que deseja monitorar. Se você ainda não tiver configurado uma conexão de origem, comece visitando o [visão geral das origens](./home.md) para configurar a fonte de sua escolha antes de retornar a este guia.
+Este tutorial pressupõe que você já tenha criado pelo menos uma conexão de origem cujo fluxo é executado que deseja monitorar. Se você ainda não tiver configurado uma conexão de origem, comece visitando a [visão geral das origens](./home.md) para configurar a origem de sua escolha antes de retornar a este guia.
 
 Este documento também requer uma compreensão funcional de webhooks e como conectar um webhook de um aplicativo a outro. Consulte a [[!DNL I/O Events] documentação](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/intro/webhook_docs_intro.md) para obter uma introdução aos webhooks.
 
 ## Registrar um webhook para notificações de execução de fluxo
 
-Para receber notificações de execução de fluxo, você deve usar o Console do Adobe Developer para registrar um webhook no [!DNL Experience Platform] integração.
+Para receber notificações de execução de fluxo, você deve usar o Adobe Developer Console para registrar um webhook na integração do [!DNL Experience Platform].
 
 Siga o tutorial em [assinatura de notificações do [!DNL I/O Event]](../observability/alerts/subscribe.md) para obter etapas detalhadas sobre como fazer isso.
 
 >[!IMPORTANT]
 >
->Durante o processo de assinatura, selecione **[!UICONTROL Notificações da plataforma]** como provedor de eventos e selecione as seguintes assinaturas de evento:
+>Durante o processo de assinatura, selecione **[!UICONTROL Notificações de plataforma]** como provedor de eventos e selecione as seguintes assinaturas de evento:
 >
->* **[!UICONTROL Execução bem-sucedida do fluxo da origem do Experience Platform]**
->* **[!UICONTROL Falha na execução do fluxo da origem do Experience Platform]**
-
+>* **[!UICONTROL Execução bem-sucedida do Fluxo do Experience Platform Source]**
+>* **[!UICONTROL Falha na execução do fluxo do Experience Platform Source]**
 
 ## Receber notificações de execução de fluxo
 
 Com o webhook conectado e a assinatura do evento concluída, você pode começar a receber notificações de execução de fluxo por meio do painel do webhook.
 
-Uma notificação retorna informações como o número de trabalhos de assimilação executados, o tamanho do arquivo e erros. Uma notificação também retorna uma carga associada à execução do fluxo no formato JSON. A carga de resposta pode ser classificada como `sources_flow_run_success` ou `sources_flow_run_failure`.
+Uma notificação retorna informações como o número de trabalhos de assimilação executados, o tamanho do arquivo e erros. Uma notificação também retorna uma carga associada à execução do fluxo no formato JSON. A carga da resposta pode ser classificada como `sources_flow_run_success` ou `sources_flow_run_failure`.
 
 >[!IMPORTANT]
 >
@@ -53,7 +52,7 @@ Uma notificação retorna informações como o número de trabalhos de assimila�
 
 ### Sucesso
 
-Uma resposta bem-sucedida retorna um conjunto de `metrics` que definem as características de um fluxo específico e `activities` que descrevem como os dados são transformados.
+Uma resposta bem-sucedida retorna um conjunto de `metrics` que definem as características de uma execução de fluxo específica e `activities` que descrevem como os dados são transformados.
 
 ```json
 {
@@ -312,11 +311,11 @@ A resposta a seguir é um exemplo de falha na execução do fluxo, com um erro o
 
 >[!NOTE]
 >
->Consulte a [apêndice](#errors) para obter mais informações sobre mensagens de erro.
+>Consulte o [apêndice](#errors) para obter mais informações sobre mensagens de erro.
 
 ## Próximas etapas
 
-Agora é possível assinar eventos que permitem receber notificações em tempo real sobre os status de execução do fluxo. Para obter mais informações sobre execuções de fluxo e origens, consulte [visão geral das origens](./home.md).
+Agora é possível assinar eventos que permitem receber notificações em tempo real sobre os status de execução do fluxo. Para obter mais informações sobre execuções de fluxo e origens, consulte a [visão geral das origens](./home.md).
 
 ## Apêndice
 

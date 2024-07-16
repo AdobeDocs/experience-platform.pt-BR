@@ -11,12 +11,12 @@ ht-degree: 0%
 
 ---
 
-# [!UICONTROL Uso da licença] painel {#license-usage-dashboard}
+# Painel de [!UICONTROL uso da licença] {#license-usage-dashboard}
 
 A interface do usuário (UI) do Adobe Experience Platform fornece um painel por meio do qual você pode visualizar informações importantes sobre o uso de licença da organização, conforme capturadas durante um instantâneo diário.
 
-Para obter instruções detalhadas sobre como acessar e interagir com o painel de uso de licença na interface do usuário, bem como para saber mais sobre as métricas disponíveis exibidas no painel, visite o [guia do painel de uso da licença](../../dashboards/guides/license-usage.md).
+Para obter instruções detalhadas sobre como acessar e interagir com o painel de uso de licença na interface do usuário, bem como para saber mais sobre as métricas disponíveis exibidas no painel, visite o [guia do painel de uso de licença](../../dashboards/guides/license-usage.md).
 
-Para obter uma visão geral de todos os recursos do painel dentro do Experience Platform, comece lendo o [visão geral dos painéis](../../dashboards/home.md).
+Para obter uma visão geral de todos os recursos do painel no Experience Platform, comece lendo a [visão geral dos painéis](../../dashboards/home.md).
 
 ![](../../dashboards/images/license-usage/dashboard-overview.png)

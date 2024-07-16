@@ -31,7 +31,7 @@ Atualmente, o Adobe Experience Platform é compatível com os destinos de análi
 * [Conexão Gainsight PX](gainsight-px.md)
 * [Extensão do Google Global Site Tag Analytics](gtag-analytics.md)
 * [Extensão do Google Universal Analytics](google-universal-analytics.md)
-* [Extensão JW Player Analytics (Beta)](jw-player-analytics.md)
+* [Extensão do JW Player Analytics (Beta)](jw-player-analytics.md)
 * [Extensão BSDK Nielsen](nielsen-bsdk.md)
 * [Extensão do Manipulador de IMA Nielsen](nielsen-ima.md)
 * [Extensão de Manipulador Nielsen VideoJS Player](nielsen-videojs.md)

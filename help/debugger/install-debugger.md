@@ -17,6 +17,6 @@ ht-degree: 1%
 
 O Adobe Experience Platform Debugger pode ser instalado no navegador Google Chrome. Siga o link abaixo para instalar a extensão no navegador:
 
-* [Cromo](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
+* [Chrome](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
 
 Depois de instalar a extensão do Chrome, um ícone (![](images/start-icon.jpg)) é adicionado à barra de extensão. Selecione esse ícone para abrir a extensão.

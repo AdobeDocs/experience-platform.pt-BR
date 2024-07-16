@@ -24,9 +24,9 @@ Use o Data Distiller para enriquecer seus pipelines de aprendizado de máquina c
 
 Este documento fornece uma série de blocos de anotações do ambiente de aprendizado de máquina baseados em nuvem que demonstram um fluxo de trabalho completo. O fluxo de trabalho usa suas ferramentas preferidas de aprendizado de máquina para criar modelos de dados personalizados que oferecem suporte aos casos de uso de marketing com dados de Experience Platform.
 
-Este workflow requer o uso de [!DNL Python] blocos de anotações em seus ambientes de aprendizado de máquina. Instruções para começar a usar esses [!DNL Python] os blocos de anotações são incluídos nos respectivos arquivos readme.
+Este fluxo de trabalho requer o uso de [!DNL Python] blocos de anotações em seus ambientes de aprendizado de máquina. As instruções para começar a usar esses blocos de anotações do [!DNL Python] estão incluídas nos respectivos arquivos readme.
 
-Antes de continuar com este guia, siga as etapas descritas no [Visão geral dos pipelines de recursos de IA/ML](./overview.md) para habilitar o uso dos notebooks Python de amostra usados neste caso de uso do pipeline de recurso de IA/ML.
+Antes de continuar com este guia, siga as etapas descritas na [visão geral dos pipelines de recursos de IA/ML](./overview.md) para habilitar o uso dos blocos de anotações Python de amostra usados neste caso de uso do pipeline de recursos de IA/ML.
 
 ## Blocos de ambiente de aprendizado de máquina na nuvem {#cmle-notebooks}
 

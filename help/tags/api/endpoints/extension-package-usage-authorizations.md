@@ -11,9 +11,9 @@ ht-degree: 16%
 
 # Ponto de acesso de autorizações de uso do pacote de extensão
 
-Um pacote de extensão representa uma [extensão](./extensions.md) criada por um desenvolvedor de extensões. As funcionalidades adicionais que podem ser disponibilizadas para usuários de tags são definidas por um pacote de extensão. Esses recursos podem incluir módulos principais e compartilhados, embora sejam fornecidos com mais frequência como [componentes da regra](./rule-components.md) (eventos, condições e ações) e [elementos de dados](./data-elements.md).
+Um pacote de extensão representa uma [extensão](./extensions.md) criada por um desenvolvedor de extensões. As funcionalidades adicionais que podem ser disponibilizadas para usuários de tags são definidas por um pacote de extensão. Esses recursos podem incluir módulos principais e compartilhados, embora sejam fornecidos com mais frequência como [componentes de regra](./rule-components.md) (eventos, condições e ações) e [elementos de dados](./data-elements.md).
 
-Um pacote de extensão pertence ao desenvolvedor do [empresa](./companies.md). Os proprietários de pacotes de extensão podem autorizar outras empresas a usar suas versões privadas dos pacotes. Cada empresa autorizada recebe uma autorização de uso para um único pacote de extensão, que é válido para todas as versões privadas futuras e atuais do pacote.
+Um pacote de extensão pertence à [empresa](./companies.md) do desenvolvedor. Os proprietários de pacotes de extensão podem autorizar outras empresas a usar suas versões privadas dos pacotes. Cada empresa autorizada recebe uma autorização de uso para um único pacote de extensão, que é válido para todas as versões privadas futuras e atuais do pacote.
 
 ## Introdução
 
@@ -31,7 +31,7 @@ GET /extension_packages/{EXTENSION_PACKAGE_ID}/extension_package_usage_authoriza
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{PROPERTY_ID}` | A variável `ID` da propriedade cuja autorização de uso do pacote de extensão você deseja listar. |
+| `{PROPERTY_ID}` | O `ID` da propriedade cuja autorização de uso de pacote de extensão você deseja listar. |
 
 {style="table-layout:auto"}
 
@@ -102,7 +102,7 @@ Uma resposta bem-sucedida retorna uma lista de pacotes de extensão.
 
 ## Criar uma autorização de uso de pacote de extensão {#create}
 
-Criar um pacote de autorização de uso de extensão para cada [pacote de extensão](./extension-packages.md) e `{ORG_ID}` da organização que você deseja autorizar. Para criar uma nova autorização de uso de pacote de extensão, faça uma solicitação POST para o endpoint abaixo.
+Crie uma autorização de uso de pacote de extensão para cada [pacote de extensão](./extension-packages.md) e `{ORG_ID}` da organização que você deseja autorizar. Para criar uma nova autorização de uso de pacote de extensão, faça uma solicitação POST para o endpoint abaixo.
 
 **Formato da API**
 
@@ -112,7 +112,7 @@ POST /extension_packages/{EXTENSION_PACKAGE_ID}/extension_package_usage_authoriz
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `EXTENSION_PACKAGE_ID` | A variável `ID` do pacote de extensão para o qual você deseja criar uma autorização.&quot; |
+| `EXTENSION_PACKAGE_ID` | O `ID` do pacote de extensão para o qual você deseja criar uma autorização.&quot; |
 
 {style="table-layout:auto"}
 
@@ -137,7 +137,7 @@ curl -X POST \
 
 | Propriedade | Descrição |
 | --- | --- |
-| `attributes.authorized_org_id` | A variável `ID` da organização que você deseja autorizar. |
+| `attributes.authorized_org_id` | O `ID` da organização que você deseja autorizar. |
 
 **Resposta**
 
@@ -183,7 +183,7 @@ Uma resposta bem-sucedida retorna os detalhes da autorização de uso do pacote 
 
 >[!NOTE]
 >
->No exemplo de resposta acima, a autorização está atualmente no estado `pending_approval` estágio. Antes de usar o pacote de extensão, a organização deve aprovar a autorização. Os usuários da organização podem navegar pelo pacote de extensão privado enquanto a autorização estiver pendente de aprovação, mas não podem instalá-lo e não podem encontrá-lo no catálogo de extensões.
+>No exemplo de resposta acima, a autorização está atualmente no estágio `pending_approval`. Antes de usar o pacote de extensão, a organização deve aprovar a autorização. Os usuários da organização podem navegar pelo pacote de extensão privado enquanto a autorização estiver pendente de aprovação, mas não podem instalá-lo e não podem encontrá-lo no catálogo de extensões.
 
 ## Recuperar uma lista de autorizações de uso do pacote de extensão {#list_authorizations}
 
@@ -264,7 +264,7 @@ Uma resposta bem-sucedida retorna uma lista de pacotes de extensão.
 
 ## Excluir uma autorização de uso de pacote de extensão {#delete}
 
-Para excluir uma autorização de uso de pacote de extensão, inclua sua `ID` no caminho de uma solicitação DELETE. Isso impede que a organização autorizada exiba as versões privadas do pacote de extensão no catálogo e o instale em suas propriedades.
+Para excluir uma autorização de uso de pacote de extensão, inclua seu `ID` no caminho de uma solicitação DELETE. Isso impede que a organização autorizada exiba as versões privadas do pacote de extensão no catálogo e o instale em suas propriedades.
 
 >[!NOTE]
 >
@@ -278,7 +278,7 @@ DELETE /extension_package_usage_authorizations/{ID}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `ID` | A variável `ID` da autorização de uso do pacote de extensão que você deseja excluir. |
+| `ID` | O `ID` da autorização de uso do pacote de extensão que você deseja excluir. |
 
 {style="table-layout:auto"}
 
@@ -298,7 +298,7 @@ Uma resposta bem-sucedida retorna o status HTTP 204 (Sem conteúdo) sem corpo de
 
 ## Atualizar uma autorização de uso de pacote de extensão {#update}
 
-Para aprovar ou rejeitar uma autorização de uso de pacote de extensão, inclua sua `ID` no caminho de uma solicitação PATCH.
+Para aprovar ou rejeitar uma autorização de uso de pacote de extensão, inclua seu `ID` no caminho de uma solicitação PATCH.
 
 >[!NOTE]
 >
@@ -312,7 +312,7 @@ PATCH /extension_package_usage_authorizations/{ID}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `ID` | A variável `ID` da autorização de uso do pacote de extensão que você deseja excluir. |
+| `ID` | O `ID` da autorização de uso do pacote de extensão que você deseja excluir. |
 
 {style="table-layout:auto"}
 
@@ -338,7 +338,7 @@ curl -X PATCH \
 
 | Propriedade | Descrição |
 | --- | --- |
-| `attributes` | Os atributos que você deseja revisar. Para obter autorizações de uso de pacotes de extensão, você pode revisar suas `state`. |
+| `attributes` | Os atributos que você deseja revisar. Para obter autorizações de uso do pacote de extensão, você pode revisar o `state`. |
 
 **Resposta**
 
@@ -398,7 +398,7 @@ GET /extension_package_usage_authorizations/{ID}/extension_package
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `ID` | A variável `ID` da autorização de uso do pacote de extensão que você deseja recuperar. |
+| `ID` | O `ID` da autorização de uso do pacote de extensão que você deseja recuperar. |
 
 {style="table-layout:auto"}
 

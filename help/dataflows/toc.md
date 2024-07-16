@@ -15,7 +15,7 @@ ht-degree: 23%
 # Fluxos de dados {#dataflows}
 
 - [Visão geral dos fluxos de dados](./home.md)
-- Guias da API {#api}
+- Guias de API {#api}
    - [Monitorar fluxos de dados](./api/monitor.md)
    - [Classificar e filtrar respostas da API](./api/sort-and-filter.md)
 - Guias de interface do usuário {#ui}
@@ -27,4 +27,4 @@ ht-degree: 23%
    - [Monitorar fluxos de dados em destinos](./ui/monitor-destinations.md)
    - Monitoramento B2B {#b2b}
       - [Monitorar trabalhos de enriquecimento de perfil](./ui/b2b/monitor-profile-enrichment.md)
-- [API do serviço de fluxo](https://www.adobe.io/experience-platform-apis/references/flow-service/)
+- [API de Serviço de Fluxo](https://www.adobe.io/experience-platform-apis/references/flow-service/)

@@ -4,8 +4,8 @@ description: O ponto de extremidade /tools na API de ferramentas de sandbox perm
 exl-id: 529cb7d6-6b3f-459c-be03-35fc28b891cf
 source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
 workflow-type: tm+mt
-source-wordcount: '152'
-ht-degree: 20%
+source-wordcount: '150'
+ht-degree: 22%
 
 ---
 
@@ -13,11 +13,11 @@ ht-degree: 20%
 
 As ferramentas de sandbox permitem selecionar diferentes artefatos e exportá-los em um pacote. Um pacote pode consistir em um único objeto ou em vários objetos. Todos os objetos incluídos em um pacote precisam ser da mesma sandbox.
 
-A variável `/tools` O endpoint na API de ferramentas da sandbox permite listar e recuperar dados JSON do trabalho.
+O ponto de extremidade `/tools` na API de ferramenta de sandbox permite listar e recuperar dados JSON do trabalho.
 
-## Detalhes do trabalho {#details}
+## Detalhes da tarefa {#details}
 
-Para buscar de forma independente os dados JSON do trabalho, faça uma solicitação GET ao `/tools` e forneça a ID do trabalho.
+Para buscar de forma independente os dados JSON do trabalho, faça uma solicitação GET para o ponto de extremidade `/tools` e forneça a ID do trabalho.
 
 **Formato da API**
 
@@ -31,7 +31,7 @@ GET /tools/job/{JOB_ID}
 
 **Solicitação**
 
-A solicitação a seguir recupera informações para {JOB_ID}.
+A solicitação a seguir recupera informações de {JOB_ID}.
 
 ```shell
 curl -X GET \
@@ -43,7 +43,7 @@ curl -X GET \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna os detalhes da ID de trabalho consultada, fornecendo atualizações de status em tempo real conforme `completedTasks` e `failedTasks` são atualizados conforme o trabalho avança.
+Uma resposta bem-sucedida retorna detalhes para a ID de trabalho consultada, fornecendo atualizações de status em tempo real, à medida que `completedTasks` e `failedTasks` são atualizados à medida que o trabalho avança.
 
 ```json
 {

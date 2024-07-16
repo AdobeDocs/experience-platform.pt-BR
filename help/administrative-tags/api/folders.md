@@ -2,19 +2,19 @@
 title: Ponto de Extremidade de Pastas
 description: Saiba como criar, atualizar, gerenciar e excluir pastas usando as APIs do Adobe Experience Platform.
 role: Developer
-source-git-commit: 8f9a2b5a2063b76518302eb9de38b628c87416e1
+exl-id: ee43d699-725d-4ffd-a71b-049eeb3b4d7c
+source-git-commit: 717a4ea0568200c940cf9b8f26f4dd2aa9c00a3e
 workflow-type: tm+mt
 source-wordcount: '818'
 ht-degree: 5%
 
 ---
 
-
 # Ponto de extremidade de pastas
 
 >[!IMPORTANT]
 >
->O URL desse conjunto de endpoints é `https://experience.adobe.io`.
+>A URL do ponto de extremidade para este conjunto de pontos de extremidade é `https://experience.adobe.io`.
 
 As pastas são um recurso que permite organizar melhor os objetos de negócios para facilitar a navegação e a categorização.
 
@@ -22,11 +22,11 @@ Este guia fornece informações para ajudar você a entender melhor as pastas e 
 
 ## Introdução
 
-Antes de continuar, reveja o [guia de introdução](./getting-started.md) para obter informações importantes que você precisa saber para fazer chamadas com êxito para a API, incluindo cabeçalhos necessários e como ler chamadas de API de exemplo.
+Antes de continuar, consulte o [guia de introdução](./getting-started.md) para obter informações importantes que você precisa saber para fazer chamadas com êxito para a API, incluindo os cabeçalhos necessários e como ler as chamadas de exemplo da API.
 
 ## Recuperar uma lista de pastas {#list}
 
-Você pode recuperar uma lista de pastas que pertencem à sua organização fazendo uma solicitação GET para a `/folder` e especificando o tipo de pasta e a ID da pasta pai.
+Você pode recuperar uma lista de pastas que pertencem à sua organização fazendo uma solicitação GET para o ponto de extremidade `/folder` e especificando o tipo de pasta e a ID da pasta pai.
 
 **Formato da API**
 
@@ -36,8 +36,8 @@ GET /folder/{FOLDER_TYPE}/{PARENT_FOLDER_ID}/subfolders
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `{FOLDER_TYPE}` | O tipo de objetos contidos na pasta. Os valores compatíveis incluem `segment` e `dataset`. |
-| `{PARENT_FOLDER_ID}` | A ID da pasta pai da qual você está recuperando a lista de pastas. Para exibir uma lista de todas as pastas principais, use a ID da pasta `root`. |
+| `{FOLDER_TYPE}` | O tipo de objetos contidos na pasta. Os valores suportados incluem `segment` e `dataset`. |
+| `{PARENT_FOLDER_ID}` | A ID da pasta pai da qual você está recuperando a lista de pastas. Para exibir uma lista de todas as pastas pai, use a ID de pasta `root`. |
 
 **Solicitação**
 
@@ -113,7 +113,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com uma lista de todas as pa
 
 ## Criar uma nova pasta {#create}
 
-Você pode criar uma nova pasta fazendo uma solicitação POST para o `/folder` e especificando o tipo de pasta.
+Você pode criar uma nova pasta fazendo uma solicitação POST para o ponto de extremidade `/folder` e especificando o tipo de pasta.
 
 **Formato da API**
 
@@ -123,7 +123,7 @@ POST /folder/{FOLDER_TYPE}
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `{FOLDER_TYPE}` | O tipo de objetos contidos na pasta. Os valores compatíveis incluem `segment` e `dataset`. |
+| `{FOLDER_TYPE}` | O tipo de objetos contidos na pasta. Os valores suportados incluem `segment` e `dataset`. |
 
 **Solicitação**
 
@@ -185,7 +185,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes da pasta recém
 
 ## Recuperar uma pasta específica {#get}
 
-Você pode recuperar uma pasta específica que pertence à sua organização fazendo uma solicitação GET para `/folder` e especificando o tipo e a ID da pasta.
+Você pode recuperar uma pasta específica que pertença à sua organização fazendo uma solicitação GET para o ponto de extremidade `/folder` e especificando o tipo de pasta e a ID da pasta.
 
 **Formato da API**
 
@@ -195,7 +195,7 @@ GET /folder/{FOLDER_TYPE}/{FOLDER_ID}
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `{FOLDER_TYPE}` | O tipo de objetos contidos na pasta. Os valores compatíveis incluem `segment` e `dataset`. |
+| `{FOLDER_TYPE}` | O tipo de objetos contidos na pasta. Os valores suportados incluem `segment` e `dataset`. |
 | `{FOLDER_ID}` | A ID da pasta que você está recuperando. |
 
 **Solicitação**
@@ -250,13 +250,13 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes da pasta solici
 | `createdAt` | O carimbo de data e hora de quando a pasta foi criada. |
 | `modifiedBy` | A ID do usuário que atualizou a pasta pela última vez. |
 | `modifiedAt` | O carimbo de data e hora de quando a pasta foi atualizada pela última vez. |
-| `status` | O status da pasta solicitada. Os valores compatíveis incluem `IN_USE` e `ARCHIVED`. |
+| `status` | O status da pasta solicitada. Os valores suportados incluem `IN_USE` e `ARCHIVED`. |
 
 +++
 
 ## Validar uma pasta especificada {#validate}
 
-GET É possível validar se uma pasta está qualificada para ter objetos fazendo uma solicitação ao `/folder/{FOLDER_TYPE}/{FOLDER_ID}/validate` e forneça o tipo e a ID da pasta.
+Você pode validar se uma pasta está qualificada para ter objetos fazendo uma solicitação GET para o ponto de extremidade `/folder/{FOLDER_TYPE}/{FOLDER_ID}/validate` e fornecer o tipo e a ID da pasta.
 
 **Formato da API**
 
@@ -266,7 +266,7 @@ GET /folder/{FOLDER_TYPE}/{FOLDER_ID}/validate
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `{FOLDER_TYPE}` | O tipo de objetos contidos na pasta. Os valores compatíveis incluem `segment` e `dataset`. |
+| `{FOLDER_TYPE}` | O tipo de objetos contidos na pasta. Os valores suportados incluem `segment` e `dataset`. |
 | `{FOLDER_ID}` | A ID da pasta que você está validando. |
 
 **Solicitação**
@@ -316,7 +316,7 @@ Um status bem-sucedido retorna o status HTTP 200 com detalhes da pasta que você
 
 ## Atualizar uma pasta específica {#update}
 
-Você pode atualizar os detalhes de uma pasta específica que pertence à sua organização fazendo uma solicitação PATCH para o `/folder` e especificando o tipo e a ID da pasta.
+Você pode atualizar os detalhes de uma pasta específica que pertence à sua organização fazendo uma solicitação PATCH para o ponto de extremidade `/folder` e especificando o tipo de pasta e a ID da pasta.
 
 **Formato da API**
 
@@ -326,7 +326,7 @@ PATCH /folder/{FOLDER_TYPE}/{FOLDER_ID}
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `{FOLDER_TYPE}` | O tipo de objetos contidos na pasta. Os valores compatíveis incluem `segment` e `dataset`. |
+| `{FOLDER_TYPE}` | O tipo de objetos contidos na pasta. Os valores suportados incluem `segment` e `dataset`. |
 | `{FOLDER_ID}` | A ID da pasta que você está atualizando. |
 
 **Solicitação**
@@ -378,9 +378,9 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com informações sobre a pa
 
 ## Excluir uma pasta específica {#delete}
 
-Você pode excluir uma pasta específica que pertence à sua organização fazendo uma solicitação DELETE para o `/folder` e especificando o tipo e a ID da pasta.
+Você pode excluir uma pasta específica que pertence à sua organização fazendo uma solicitação DELETE para o `/folder` e especificando o tipo de pasta e a ID da pasta.
 
-***Formato da API**
+***Formato de API**
 
 ```http
 DELETE /folder/{FOLDER_TYPE}/{FOLDER_ID}
@@ -388,7 +388,7 @@ DELETE /folder/{FOLDER_TYPE}/{FOLDER_ID}
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `{FOLDER_TYPE}` | O tipo de objetos contidos na pasta. Os valores compatíveis incluem `segment` e `dataset`. |
+| `{FOLDER_TYPE}` | O tipo de objetos contidos na pasta. Os valores suportados incluem `segment` e `dataset`. |
 | `{FOLDER_ID}` | A ID da pasta que você está excluindo. |
 
 **Solicitação**

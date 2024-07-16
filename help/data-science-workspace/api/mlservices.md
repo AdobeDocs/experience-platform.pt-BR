@@ -16,7 +16,7 @@ ht-degree: 2%
 
 Um MLService é um modelo treinado publicado que fornece à sua organização a capacidade de acessar e reutilizar modelos desenvolvidos anteriormente. Um recurso importante dos MLServices é a capacidade de automatizar o treinamento e a pontuação de maneira programada. As execuções de treinamento programadas podem ajudar a manter a eficiência e a precisão de um modelo, enquanto as execuções de pontuação programadas podem garantir que novos insights sejam gerados de forma consistente.
 
-Os cronogramas de treinamento e pontuação automatizados são definidos com um carimbo de data e hora inicial, carimbo de data e hora final e uma frequência representada como um [expressão CRON](https://en.wikipedia.org/wiki/Cron). Os cronogramas podem ser definidos quando [criando um MLService](#create-an-mlservice) ou aplicado por [atualização de um MLService existente](#update-an-mlservice).
+Os cronogramas automatizados de treinamento e pontuação são definidos com um carimbo de data e hora inicial, carimbo de data e hora final e uma frequência representada como uma [expressão cron](https://en.wikipedia.org/wiki/Cron). As agendas podem ser definidas ao [criar um MLService](#create-an-mlservice) ou aplicadas por [atualizar um MLService existente](#update-an-mlservice).
 
 ## Criar um MLService {#create-an-mlservice}
 
@@ -77,7 +77,7 @@ curl -X POST \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna uma carga contendo os detalhes do MLService recém-criado, incluindo seu identificador exclusivo (`id`), ID de experimento para treinamento (`trainingExperimentId`), ID de experimento para pontuação (`scoringExperimentId`) e a ID do conjunto de dados de treinamento de entrada (`trainingDataSetId`).
+Uma resposta bem-sucedida retorna uma carga contendo os detalhes do MLService recém-criado, incluindo seu identificador exclusivo (`id`), ID de Experimento para treinamento (`trainingExperimentId`), ID de Experimento para pontuação (`scoringExperimentId`) e ID do conjunto de dados de treinamento de entrada (`trainingDataSetId`).
 
 ```json
 {
@@ -108,7 +108,7 @@ Uma resposta bem-sucedida retorna uma carga contendo os detalhes do MLService re
 
 ## Recuperar uma lista de MLServices {#retrieve-a-list-of-mlservices}
 
-Você pode recuperar uma lista de MLServices executando uma única solicitação GET. Para ajudar a filtrar os resultados, você pode especificar parâmetros de consulta no caminho da solicitação. Para obter uma lista de consultas disponíveis, consulte a seção do apêndice em [parâmetros de consulta para recuperação de ativos](./appendix.md#query).
+Você pode recuperar uma lista de MLServices executando uma única solicitação GET. Para ajudar a filtrar os resultados, você pode especificar parâmetros de consulta no caminho da solicitação. Para obter uma lista de consultas disponíveis, consulte a seção do apêndice sobre [parâmetros de consulta para recuperação de ativos](./appendix.md#query).
 
 **Formato da API**
 
@@ -120,7 +120,7 @@ GET /mlServices?{QUERY_PARAMETER_1}={VALUE_1}&{QUERY_PARAMETER_2}={VALUE_2}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{QUERY_PARAMETER}` | Um dos [parâmetros de consulta disponíveis](./appendix.md#query) usado para filtrar resultados. |
+| `{QUERY_PARAMETER}` | Um dos [parâmetros de consulta disponíveis](./appendix.md#query) usados para filtrar resultados. |
 | `{VALUE}` | O valor do parâmetro de consulta anterior. |
 
 **Solicitação**
@@ -138,7 +138,7 @@ curl -X GET \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna uma lista de MLServices e seus detalhes, incluindo a ID de MLService (`{MLSERVICE_ID}`), ID de experimento para treinamento (`{TRAINING_ID}`), ID de experimento para pontuação (`{SCORING_ID}`) e a ID do conjunto de dados de treinamento de entrada (`{DATASET_ID}`).
+Uma resposta bem-sucedida retorna uma lista de MLServices e seus detalhes, incluindo a ID de MLService (`{MLSERVICE_ID}`), a ID de Experimento para treinamento (`{TRAINING_ID}`), a ID de Experimento para pontuação (`{SCORING_ID}`) e a ID de conjunto de dados de treinamento de entrada (`{DATASET_ID}`).
 
 ```json
 {
@@ -215,7 +215,7 @@ Você pode atualizar um MLService existente substituindo suas propriedades por m
 
 >[!TIP]
 >
->Para garantir o sucesso dessa solicitação PUT, recomenda-se que primeiro você execute uma solicitação GET para [recuperar o MLService por ID](#retrieve-a-specific-mlservice). Em seguida, modifique e atualize o objeto JSON retornado e aplique a totalidade do objeto JSON modificado como a carga da solicitação PUT.
+>Para garantir o sucesso dessa solicitação PUT, sugere-se que primeiro você execute uma solicitação GET para [recuperar o MLService pela ID](#retrieve-a-specific-mlservice). Em seguida, modifique e atualize o objeto JSON retornado e aplique a totalidade do objeto JSON modificado como a carga da solicitação PUT.
 
 **Formato da API**
 

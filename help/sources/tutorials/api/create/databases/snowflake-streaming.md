@@ -6,38 +6,38 @@ badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 3fc225a4-746c-4a91-aa77-bbeb091ec364
 source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
-source-wordcount: '867'
-ht-degree: 6%
+source-wordcount: '864'
+ht-degree: 5%
 
 ---
 
-# Fluxo [!DNL Snowflake] dados para Experience Platform usando o [!DNL Flow Service] API
+# Transmitir dados de [!DNL Snowflake] para o Experience Platform usando a API [!DNL Flow Service]
 
 >[!IMPORTANT]
 >
->* A variável [!DNL Snowflake] a fonte da transmissão está na versão beta. Leia as [Visão geral das fontes](../../../../home.md#terms-and-conditions) para obter mais informações sobre o uso de fontes rotuladas como beta.
->* A variável [!DNL Snowflake] a fonte de transmissão está disponível na API para usuários que compraram o Real-time Customer Data Platform Ultimate.
+>* A fonte de streaming [!DNL Snowflake] está na versão beta. Leia a [Visão geral das fontes](../../../../home.md#terms-and-conditions) para obter mais informações sobre o uso de fontes com rótulo beta.
+>* A fonte de transmissão [!DNL Snowflake] está disponível na API para usuários que compraram o Real-time Customer Data Platform Ultimate.
 
-Este tutorial fornece etapas sobre como conectar e transmitir dados de seu [!DNL Snowflake] para a Adobe Experience Platform usando a variável [[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>).
+Este tutorial fornece etapas sobre como conectar e transmitir dados da sua conta do [!DNL Snowflake] para a Adobe Experience Platform usando a [[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>).
 
 ## Introdução
 
 Este manual necessita de uma compreensão funcional dos seguintes componentes da Adobe Experience Platform:
 
-* [Origens](../../../../home.md): [!DNL Experience Platform] O permite que os dados sejam assimilados de várias fontes e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando o [!DNL Platform] serviços.
-* [Sandboxes](../../../../../sandboxes/home.md): [!DNL Experience Platform] O fornece sandboxes virtuais que particionam uma única [!DNL Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
+* [Fontes](../../../../home.md): [!DNL Experience Platform] permite que os dados sejam assimilados de várias fontes e fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços do [!DNL Platform].
+* [Sandboxes](../../../../../sandboxes/home.md): [!DNL Experience Platform] fornece sandboxes virtuais que particionam uma única instância do [!DNL Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
-Para obter a configuração de pré-requisitos e informações sobre o [!DNL Snowflake] origem da transmissão. Leia as [[!DNL Snowflake] visão geral da fonte de transmissão](../../../../connectors/databases/snowflake-streaming.md).
+Para obter a configuração de pré-requisitos e informações sobre a fonte de streaming [!DNL Snowflake]. Leia a [[!DNL Snowflake] visão geral da fonte de streaming](../../../../connectors/databases/snowflake-streaming.md).
 
 ### Uso de APIs da plataforma
 
-Para obter informações sobre como fazer chamadas para APIs da Platform com êxito, consulte o manual em [introdução às APIs da Platform](../../../../../landing/api-guide.md).
+Para obter informações sobre como fazer chamadas para APIs da Platform com êxito, consulte o manual sobre [introdução às APIs da Platform](../../../../../landing/api-guide.md).
 
-## Crie uma conexão básica {#create-a-base-connection}
+## Criar uma conexão básica {#create-a-base-connection}
 
 Uma conexão base retém informações entre sua origem e a Platform, incluindo as credenciais de autenticação da origem, o estado atual da conexão e sua ID de conexão base exclusiva. A ID de conexão básica permite explorar e navegar pelos arquivos de dentro da origem e identificar os itens específicos que deseja assimilar, incluindo informações sobre os tipos de dados e formatos.
 
-Para criar um ID de conexão base, faça uma solicitação POST ao `/connections` ao fornecer sua [!DNL Snowflake] credenciais de autenticação como parte do corpo da solicitação.
+Para criar uma ID de conexão base, faça uma solicitação POST para o ponto de extremidade `/connections` enquanto fornece suas credenciais de autenticação [!DNL Snowflake] como parte do corpo da solicitação.
 
 **Formato da API**
 
@@ -47,11 +47,11 @@ POST /connections
 
 **Solicitação**
 
-A solicitação a seguir cria uma conexão básica para [!DNL Snowflake]:
+A solicitação a seguir cria uma conexão base para [!DNL Snowflake]:
 
 >[!TIP]
 >
->A variável `auth.specName` deve ser inserido exatamente como no exemplo abaixo, incluindo os espaços em branco.
+>O valor `auth.specName` deve ser inserido exatamente como o exemplo abaixo, incluindo os espaços em branco.
 
 ```shell
 curl -X POST \
@@ -85,14 +85,14 @@ curl -X POST \
 
 | Propriedade | Descrição |
 | --- | --- |
-| `auth.params.account` | O nome do seu [!DNL Snowflake] conta de transmissão. |
-| `auth.params.database` | O nome do seu [!DNL Snowflake] banco de dados de onde os dados serão extraídos. |
-| `auth.params.warehouse` | O nome do seu [!DNL Snowflake] depósito. A variável [!DNL Snowflake] O warehouse gerencia o processo de execução da consulta para o aplicativo. Cada warehouse é independente um do outro e deve ser acessado individualmente ao trazer os dados para a plataforma. |
-| `auth.params.username` | O nome de usuário do seu [!DNL Snowflake] conta de transmissão. |
-| `auth.params.schema` | (Opcional) O esquema de banco de dados associado à [!DNL Snowflake] conta de transmissão. |
-| `auth.params.password` | A senha do [!DNL Snowflake] conta de transmissão. |
-| `auth.params.role` | (Opcional) A função do usuário para este [!DNL Snowflake] conexão. Se não for fornecido, esse valor assumirá como padrão `public`. |
-| `connectionSpec.id` | A variável [!DNL Snowflake] ID da especificação de conexão: `51ae16c2-bdad-42fd-9fce-8d5dfddaf140`. |
+| `auth.params.account` | O nome da sua conta de streaming [!DNL Snowflake]. |
+| `auth.params.database` | O nome do banco de dados [!DNL Snowflake] do qual os dados serão extraídos. |
+| `auth.params.warehouse` | O nome do warehouse [!DNL Snowflake]. O warehouse [!DNL Snowflake] gerencia o processo de execução da consulta para o aplicativo. Cada warehouse é independente um do outro e deve ser acessado individualmente ao trazer os dados para a plataforma. |
+| `auth.params.username` | O nome de usuário da sua conta de streaming [!DNL Snowflake]. |
+| `auth.params.schema` | (Opcional) O esquema de banco de dados associado à sua conta de streaming [!DNL Snowflake]. |
+| `auth.params.password` | A senha da sua conta de streaming [!DNL Snowflake]. |
+| `auth.params.role` | (Opcional) A função do usuário para esta conexão [!DNL Snowflake]. Se não for fornecido, o padrão será `public`. |
+| `connectionSpec.id` | A ID da especificação de conexão [!DNL Snowflake]: `51ae16c2-bdad-42fd-9fce-8d5dfddaf140`. |
 
 **Resposta**
 
@@ -107,7 +107,7 @@ Uma resposta bem-sucedida retorna a conexão base recém-criada e sua tag corres
 
 ## Explore suas tabelas de dados {#explore-your-data-tables}
 
-Em seguida, use a ID de conexão básica para explorar e navegar pelas tabelas de dados da sua origem fazendo uma solicitação GET para o `/connections/{BASE_CONNECTION_ID}/explore?objectType=root` ao fornecer a ID de conexão básica como parâmetro.
+Em seguida, use a ID de conexão básica para explorar e navegar pelas tabelas de dados da sua origem, fazendo uma solicitação GET para o ponto de extremidade `/connections/{BASE_CONNECTION_ID}/explore?objectType=root` e fornecendo a ID de conexão básica como um parâmetro.
 
 **Formato da API**
 
@@ -117,12 +117,12 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=root
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{BASE_CONNECTION_ID}` | A ID de conexão básica de seu [!DNL Snowflake] origem da transmissão. |
+| `{BASE_CONNECTION_ID}` | A ID da conexão base da sua fonte de streaming [!DNL Snowflake]. |
 
 
 **Solicitação**
 
-A solicitação a seguir recupera a estrutura e o conteúdo do [!DNL Snowflake] conta de transmissão.
+A solicitação a seguir recupera a estrutura e o conteúdo da sua conta de streaming [!DNL Snowflake].
 
 ```shell
 curl -X GET \
@@ -157,7 +157,7 @@ Uma resposta bem-sucedida retorna a estrutura e o conteúdo dos dados da origem 
 
 Uma conexão de origem cria e gerencia a conexão com a origem externa de onde os dados são assimilados.
 
-Para criar uma conexão de origem, faça uma solicitação POST ao `/sourceConnections` endpoint do [!DNL Flow Service] API.
+Para criar uma conexão de origem, faça uma solicitação POST para o ponto de extremidade `/sourceConnections` da API [!DNL Flow Service].
 
 **Formato da API**
 
@@ -194,12 +194,12 @@ curl -X POST \
 
 | Propriedade | Descrição |
 | --- | --- |
-| `baseConnectionId` | A ID de conexão básica autenticada do seu [!DNL Snowflake] origem da transmissão. Essa ID foi gerada em uma etapa anterior. |
-| `connectionSpec.id` | A ID de especificação da conexão para o [!DNL Snowflake] origem da transmissão. |
-| `params.tableName` | O nome da tabela no [!DNL Snowflake] banco de dados que você deseja trazer para a Platform. |
+| `baseConnectionId` | A ID da conexão base autenticada para sua fonte de streaming [!DNL Snowflake]. Essa ID foi gerada em uma etapa anterior. |
+| `connectionSpec.id` | A ID de especificação da conexão para a fonte de streaming [!DNL Snowflake]. |
+| `params.tableName` | O nome da tabela no banco de dados [!DNL Snowflake] que você deseja trazer para a Platform. |
 | `params.timestampColumn` | O nome da coluna de carimbo de data e hora que será usada para buscar valores incrementais. |
-| `params.backfill` | Um sinalizador booleano que determina se os dados são obtidos do início (época 0) ou do momento em que a origem é iniciada. Para obter mais informações sobre esse valor, leia a [[!DNL Snowflake] visão geral da fonte de transmissão](../../../../connectors/databases/snowflake-streaming.md). |
-| `params.timezoneValue` | O valor de fuso horário indica qual hora atual do fuso horário deve ser buscada ao consultar o [!DNL Snowflake] banco de dados. Esse parâmetro deve ser fornecido se a coluna de carimbo de data e hora na configuração estiver definida como `TIMESTAMP_NTZ`. Se não fornecido, `timezoneValue` O padrão é UTC. |
+| `params.backfill` | Um sinalizador booleano que determina se os dados são obtidos do início (época 0) ou do momento em que a origem é iniciada. Para obter mais informações sobre esse valor, leia a [[!DNL Snowflake] visão geral da fonte de streaming](../../../../connectors/databases/snowflake-streaming.md). |
+| `params.timezoneValue` | O valor do fuso horário indica qual hora atual do fuso horário deve ser buscada ao consultar o banco de dados [!DNL Snowflake]. Esse parâmetro deve ser fornecido se a coluna de carimbo de data/hora na configuração estiver definida como `TIMESTAMP_NTZ`. Se não for fornecido, `timezoneValue` assumirá como padrão UTC. |
 
 **Resposta**
 
@@ -212,15 +212,15 @@ Uma resposta bem-sucedida retorna a ID de conexão de origem e a tag corresponde
 }
 ```
 
-## Crie um fluxo de dados
+## Criar um fluxo de dados
 
-Para criar um fluxo de dados para transmitir dados de um tour [!DNL Snowflake] para a Platform, você deve fazer uma solicitação POST para a `/flows` ao fornecer os seguintes valores:
+Para criar um fluxo de dados para transmitir dados da conta do tour [!DNL Snowflake] para a Platform, você deve fazer uma solicitação POST para o ponto de extremidade `/flows` e fornecer os seguintes valores:
 
 >[!TIP]
 >
 >Siga os links abaixo para obter guias passo a passo sobre como recuperar as seguintes IDs.
 
-* [ID da conexão de origem](#create-a-source-connection)
+* [ID de conexão do Source](#create-a-source-connection)
 * [ID da conexão de destino](../../collect/database-nosql.md#create-a-target-connection)
 * [ID de especificação de fluxo](../../collect/database-nosql.md#retrieve-dataflow-specifications)
 * [ID de mapeamento](../../collect/database-nosql.md#create-a-mapping)
@@ -233,7 +233,7 @@ POST /flows
 
 **Solicitação**
 
-A solicitação a seguir cria um fluxo de dados de transmissão para o [!DNL Snowflake] conta.
+A solicitação a seguir cria um fluxo de dados de streaming para sua conta [!DNL Snowflake].
 
 ```shell
 curl -X POST \
@@ -269,9 +269,9 @@ curl -X POST \
 
 | Propriedade | Descrição |
 | --- | --- |
-| `sourceConnectionIds` | A ID da conexão de origem para o [!DNL Snowflake] origem da transmissão. |
-| `targetConnectionIds` | A ID de conexão de destino para o [!DNL Snowflake] origem da transmissão. |
-| `flowSpec.id` | A ID de especificação de fluxo para criar um fluxo de dados para um [!DNL Snowflake] origem da transmissão. Essa ID de especificação de fluxo permite criar um fluxo de dados de transmissão com transformações de mapeamento. Essa ID é fixa e é: `c1a19761-d2c7-4702-b9fa-fe91f0613e81`. |
+| `sourceConnectionIds` | A ID da conexão de origem da sua fonte de streaming [!DNL Snowflake]. |
+| `targetConnectionIds` | A ID da conexão de destino para sua fonte de streaming [!DNL Snowflake]. |
+| `flowSpec.id` | A ID de especificação do fluxo para criar um fluxo de dados para uma fonte de streaming [!DNL Snowflake]. Essa ID de especificação de fluxo permite criar um fluxo de dados de transmissão com transformações de mapeamento. Essa ID é fixa e é: `c1a19761-d2c7-4702-b9fa-fe91f0613e81`. |
 | `transformations.params.mappingId` | A ID de mapeamento do seu fluxo de dados. |
 
 **Resposta**
@@ -287,7 +287,7 @@ Uma resposta bem-sucedida retorna a ID de fluxo e a tag correspondente.
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você criou um fluxo de dados de transmissão para seu [!DNL Snowflake] dados usando o [!DNL Flow Service] API. Consulte a documentação a seguir para obter informações adicionais sobre origens na Adobe Experience Platform:
+Seguindo este tutorial, você criou um fluxo de dados de transmissão para seus dados do [!DNL Snowflake] usando a API [!DNL Flow Service]. Consulte a documentação a seguir para obter informações adicionais sobre origens na Adobe Experience Platform:
 
 * [Visão geral das fontes](../../../../home.md)
 * [Monitorar seu fluxo de dados usando APIs](../../monitor.md)

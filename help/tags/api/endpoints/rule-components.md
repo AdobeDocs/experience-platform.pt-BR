@@ -4,7 +4,7 @@ description: Saiba como fazer chamadas para o endpoint /rule_components na API d
 exl-id: 8a878a89-7f41-45fc-88f3-17f0f743e29c
 source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1155'
+source-wordcount: '1151'
 ht-degree: 92%
 
 ---
@@ -15,7 +15,7 @@ Nas tags de coleção de dados, as [regras](./rules.md) controlam o comportament
 
 >[!NOTE]
 >
->Este documento aborda como gerenciar componentes de regra na API do Reactor. Para obter detalhes sobre como interagir com regras e componentes de regras na interface do usuário, consulte o [Guia da interface do usuário](../../ui/managing-resources/rules.md).
+>Este documento aborda como gerenciar componentes de regra na API do Reactor. Para obter detalhes sobre como interagir com regras e componentes de regras na interface, consulte o [guia da interface](../../ui/managing-resources/rules.md).
 
 Há três tipos básicos de componentes de regra:
 
@@ -310,13 +310,13 @@ POST /properties/{PROPERTY_ID}/rule_components
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `PROPERTY_ID` | A variável `id` da propriedade em que você está definindo o componente de regra. |
+| `PROPERTY_ID` | O `id` da propriedade em que você está definindo o componente de regra. |
 
 {style="table-layout:auto"}
 
 **Solicitação**
 
-A solicitação a seguir cria um novo componente de regra. Na carga útil, a variável `relationships` A propriedade associa o componente a regras específicas e uma extensão existente. Consulte o manual sobre [relacionamentos](../guides/relationships.md) para obter mais informações.
+A solicitação a seguir cria um novo componente de regra. Na carga, a propriedade `relationships` associa o componente a regras específicas e uma extensão existente. Consulte o manual sobre [relacionamentos](../guides/relationships.md) para obter mais informações.
 
 ```shell
 curl -X POST \

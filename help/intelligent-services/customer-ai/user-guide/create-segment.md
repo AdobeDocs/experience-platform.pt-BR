@@ -14,27 +14,27 @@ ht-degree: 0%
 
 # Criar segmentos de clientes com pontuações previstas
 
-Quando uma execução de previsão é concluída, as pontuações de propensão previstas são consumidas automaticamente pelos Perfis. O enriquecimento dos perfis com pontuações da IA do cliente permite a criação de segmentos de clientes para encontrar públicos com base em suas pontuações de propensão. Esta seção fornece etapas para criar segmentos usando o Construtor de segmentos. Para obter um tutorial mais robusto sobre a criação de segmentos, consulte [Guia do usuário do Construtor de segmentos](../../../segmentation/ui/segment-builder.md).
+Quando uma execução de previsão é concluída, as pontuações de propensão previstas são consumidas automaticamente pelos Perfis. O enriquecimento dos perfis com pontuações da IA do cliente permite a criação de segmentos de clientes para encontrar públicos com base em suas pontuações de propensão. Esta seção fornece etapas para criar segmentos usando o Construtor de segmentos. Para obter um tutorial mais robusto sobre como criar segmentos, consulte o [guia do usuário do Construtor de segmentos](../../../segmentation/ui/segment-builder.md).
 
 >[!IMPORTANT]
 >
 >Para utilizar esse método, o Perfil do cliente em tempo real precisa ser ativado para o conjunto de dados.
 
-Na interface da Platform, clique em **[!UICONTROL Segmentos]** no painel de navegação esquerdo e, em seguida, clique em **[!UICONTROL Criar segmento]**.
+Na interface da Platform, clique em **[!UICONTROL Segmentos]** na navegação à esquerda e em **[!UICONTROL Criar segmento]**.
 
 ![](../images/user-guide/segments_new.png)
 
-A variável **Construtor de segmentos** é exibida. Da esquerda **[!UICONTROL Campos]** e abaixo de **[!UICONTROL Atributos]** clique na pasta chamada **[!UICONTROL Perfil individual XDM]** e, em seguida, clique na pasta com o namespace de sua organização. A pasta chamada **[!UICONTROL IA do cliente]** contém os resultados de execuções de previsão e são nomeados com base na instância à qual as pontuações pertencem. Clique em uma pasta de instâncias para acessar os resultados da instância desejada.
+O **Construtor de segmentos** é exibido. Na coluna **[!UICONTROL Campos]** esquerda e na guia **[!UICONTROL Atributos]**, clique na pasta denominada **[!UICONTROL Perfil Individual XDM]** e, em seguida, clique na pasta com o namespace da sua organização. A pasta denominada **[!UICONTROL IA do cliente]** contém os resultados de execuções de previsão e é nomeada após a instância à qual as pontuações pertencem. Clique em uma pasta de instâncias para acessar os resultados da instância desejada.
 
 ![](../images/user-guide/results_new.png)
 
-Localizado no centro do Construtor de segmentos, arraste e solte a **[!UICONTROL Pontuação]** atributo na *tela do construtor de regras* para definir uma regra.
+Localizado no centro do Construtor de segmentos, arraste e solte o atributo **[!UICONTROL Pontuação]** na *tela do construtor de regras* para definir uma regra.
 
-Sob a mão direita *Propriedades do segmento* , forneça um nome para o segmento.
+Na coluna à direita *Propriedades do segmento*, forneça um nome para o segmento.
 
 ![](../images/user-guide/properties_new.png)
 
-Acima da mão esquerda *Campos* clique no link **engrenagem** e selecione um *Política de mesclagem* no menu suspenso. Clique em **[!UICONTROL Salvar]** para criar o segmento.
+Acima da coluna à esquerda *Campos*, clique no ícone **engrenagem** e selecione uma *Política de mesclagem* no menu suspenso. Clique em **[!UICONTROL Salvar]** para criar o segmento.
 
 ![](../images/user-guide/merge_policy_new.png)
 

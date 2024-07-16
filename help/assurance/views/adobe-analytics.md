@@ -3,8 +3,8 @@ title: Visualização do Adobe Analytics no Assurance
 description: Este manual explica como usar o Adobe Analytics com o Adobe Experience Platform Assurance.
 exl-id: e5cc72b0-d6d6-430b-9321-4835c1f77581
 source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
-workflow-type: ht
-source-wordcount: '359'
+workflow-type: tm+mt
+source-wordcount: '352'
 ht-degree: 100%
 
 ---

@@ -5,18 +5,18 @@ description: Saiba como criar uma execução de fluxo para assimilação sob dem
 exl-id: a7b20cd1-bb52-4b0a-aad0-796929555e4a
 source-git-commit: cea12160656ba0724789db03e62213022bacd645
 workflow-type: tm+mt
-source-wordcount: '801'
+source-wordcount: '797'
 ht-degree: 2%
 
 ---
 
-# Crie uma execução de fluxo para assimilação sob demanda usando o [!DNL Flow Service] API
+# Crie uma execução de fluxo para assimilação sob demanda usando a API [!DNL Flow Service]
 
 As execuções de fluxo representam uma instância da execução de fluxo. Por exemplo, se um fluxo estiver programado para ser executado por hora às 9h, 10h e 11h, você terá três instâncias de um fluxo em execução. As execuções de fluxo são específicas para sua organização específica.
 
 A assimilação sob demanda oferece a capacidade de criar uma execução de fluxo em relação a um determinado fluxo de dados. Isso permite que seus usuários criem uma execução de fluxo, com base em determinados parâmetros, e criem um ciclo de assimilação, sem tokens de serviço. O suporte para assimilação sob demanda está disponível somente para origens em lote.
 
-Este tutorial aborda as etapas sobre como usar a assimilação sob demanda e criar uma execução de fluxo usando o [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Este tutorial aborda as etapas sobre como usar a assimilação sob demanda e criar uma execução de fluxo usando a [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Introdução
 
@@ -26,16 +26,16 @@ Este tutorial aborda as etapas sobre como usar a assimilação sob demanda e cri
 
 Este tutorial requer que você tenha uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
-* [Origens](../../home.md): [!DNL Experience Platform] O permite que os dados sejam assimilados de várias fontes e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando o [!DNL Platform] serviços.
-* [Sandboxes](../../../sandboxes/home.md): [!DNL Experience Platform] O fornece sandboxes virtuais que particionam uma única [!DNL Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
+* [Fontes](../../home.md): [!DNL Experience Platform] permite que os dados sejam assimilados de várias fontes e fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços do [!DNL Platform].
+* [Sandboxes](../../../sandboxes/home.md): [!DNL Experience Platform] fornece sandboxes virtuais que particionam uma única instância do [!DNL Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
 ### Uso de APIs da plataforma
 
-Para obter informações sobre como fazer chamadas para APIs da Platform com êxito, consulte o manual em [introdução às APIs da Platform](../../../landing/api-guide.md).
+Para obter informações sobre como fazer chamadas para APIs da Platform com êxito, consulte o manual sobre [introdução às APIs da Platform](../../../landing/api-guide.md).
 
 ## Criar uma execução de fluxo para uma origem baseada em tabela
 
-Para criar um fluxo para uma origem baseada em tabela, faça uma solicitação POST para o [!DNL Flow Service] API enquanto fornece a ID do fluxo em que você deseja criar a execução, bem como valores para hora de início, hora de término e coluna delta.
+Para criar um fluxo para uma origem baseada em tabela, faça uma solicitação POST para a API [!DNL Flow Service] enquanto fornece a ID do fluxo para o qual deseja criar a execução, bem como valores para a coluna de hora de início, hora de término e delta.
 
 >[!TIP]
 >
@@ -49,11 +49,11 @@ POST /runs/
 
 **Solicitação**
 
-A solicitação a seguir cria uma execução de fluxo para a ID do fluxo `3abea21c-7e36-4be1-bec1-d3bad0e3e0de`.
+A solicitação a seguir cria uma execução de fluxo para a ID de fluxo `3abea21c-7e36-4be1-bec1-d3bad0e3e0de`.
 
 >[!NOTE]
 >
->Você só precisa fornecer a `deltaColumn` ao criar sua primeira execução de fluxo. Depois disso, `deltaColumn` será corrigido como parte de `copy` transformação no fluxo e serão tratados como a fonte da verdade. Qualquer tentativa de alterar a `deltaColumn` por meio dos parâmetros de execução de fluxo resultará em um erro.
+>Você só precisa fornecer o `deltaColumn` ao criar sua primeira execução de fluxo. Depois disso, `deltaColumn` será corrigido como parte da transformação de `copy` no fluxo e será tratado como a fonte da verdade. Qualquer tentativa de alterar o valor `deltaColumn` por meio dos parâmetros de execução de fluxo resultará em um erro.
 
 ```shell
 curl -X POST \
@@ -82,7 +82,7 @@ curl -X POST \
 | `params.startTime` | O horário agendado para o início da execução do fluxo por demanda. Esse valor é representado no horário unix. |
 | `params.windowStartTime` | A data e a hora a partir das quais os dados serão recuperados. Esse valor é representado no horário unix. |
 | `params.windowEndTime` | A data e a hora em que os dados serão recuperados. Esse valor é representado no horário unix. |
-| `params.deltaColumn` | A coluna delta é necessária para particionar os dados e separar os dados recém-assimilados dos dados históricos. **Nota**: A variável `deltaColumn` é necessário somente ao criar a primeira execução de fluxo. |
+| `params.deltaColumn` | A coluna delta é necessária para particionar os dados e separar os dados recém-assimilados dos dados históricos. **Observação**: `deltaColumn` é necessário somente ao criar sua primeira execução de fluxo. |
 | `params.deltaColumn.name` | O nome da coluna delta. |
 
 **Resposta**
@@ -102,7 +102,7 @@ Uma resposta bem-sucedida retorna os detalhes da execução de fluxo recém-cria
 
 | Propriedade | Descrição |
 | --- | --- |
-| `id` | A ID da execução do fluxo recém-criado. Consulte o guia sobre [recuperação de especificações de fluxo](../api/collect/database-nosql.md#specs) para obter mais informações sobre especificações de execução baseadas em tabela. |
+| `id` | A ID da execução do fluxo recém-criado. Consulte o guia em [recuperando especificações de fluxo](../api/collect/database-nosql.md#specs) para obter mais informações sobre especificações de execução baseadas em tabela. |
 | `etag` | A versão do recurso da execução do fluxo. |
 <!-- 
 | `createdAt` | The unix timestamp that designates when the flow run was created. |
@@ -124,7 +124,7 @@ Uma resposta bem-sucedida retorna os detalhes da execução de fluxo recém-cria
 
 ## Criar uma execução de fluxo para uma origem baseada em arquivo
 
-Para criar um fluxo para uma origem baseada em arquivo, faça uma solicitação POST para a [!DNL Flow Service] Ao fornecer a ID do fluxo em que você deseja criar a execução e os valores para a hora de início e de término.
+Para criar um fluxo para uma origem baseada em arquivo, faça uma solicitação POST para a API [!DNL Flow Service] enquanto fornece a ID do fluxo com a qual você deseja criar a execução e os valores para a hora de início e de término.
 
 >[!TIP]
 >
@@ -138,7 +138,7 @@ POST /runs/
 
 **Solicitação**
 
-A solicitação a seguir cria uma execução de fluxo para a ID do fluxo `3abea21c-7e36-4be1-bec1-d3bad0e3e0de`.
+A solicitação a seguir cria uma execução de fluxo para a ID de fluxo `3abea21c-7e36-4be1-bec1-d3bad0e3e0de`.
 
 ```shell
 curl -X POST \
@@ -183,9 +183,9 @@ Uma resposta bem-sucedida retorna os detalhes da execução de fluxo recém-cria
 
 | Propriedade | Descrição |
 | --- | --- |
-| `id` | A ID da execução do fluxo recém-criado. Consulte o guia sobre [recuperação de especificações de fluxo](../api/collect/database-nosql.md#specs) para obter mais informações sobre especificações de execução baseadas em tabela. |
+| `id` | A ID da execução do fluxo recém-criado. Consulte o guia em [recuperando especificações de fluxo](../api/collect/database-nosql.md#specs) para obter mais informações sobre especificações de execução baseadas em tabela. |
 | `etag` | A versão do recurso da execução do fluxo. |
 
 ## Monitore as execuções de fluxo
 
-Após a criação da execução do fluxo, é possível monitorar os dados que estão sendo assimilados por meio dela para ver informações sobre execuções de fluxo, status de conclusão e erros. Para monitorar as execuções de fluxo usando a API, consulte o tutorial em [monitoramento de fluxos de dados na API](./monitor.md). Para monitorar suas execuções de fluxo usando a interface do usuário da Platform, consulte o manual em [monitoramento de fluxos de dados de origens usando o painel de monitoramento](../../../dataflows/ui/monitor-sources.md).
+Após a criação da execução do fluxo, é possível monitorar os dados que estão sendo assimilados por meio dela para ver informações sobre execuções de fluxo, status de conclusão e erros. Para monitorar suas execuções de fluxo usando a API, consulte o tutorial sobre [monitoramento de fluxos de dados na API](./monitor.md). Para monitorar suas execuções de fluxo usando a interface do usuário da Platform, consulte o manual sobre [fluxos de dados de fontes de monitoramento usando o painel de monitoramento](../../../dataflows/ui/monitor-sources.md).

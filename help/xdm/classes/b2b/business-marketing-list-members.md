@@ -9,28 +9,28 @@ ht-degree: 2%
 
 ---
 
-# [!UICONTROL Membros da lista de marketing de negócios XDM] classe
+# Classe [!UICONTROL Membros da Lista de Marketing Comercial XDM]
 
 >[!IMPORTANT]
 >
->Esta classe deve ser usada por organizações com acesso a [Adobe Real-time Customer Data Platform B2B Edition](../../../rtcdp/b2b-overview.md). Você deve ter acesso ao Real-Time CDP B2B Edition para que esta classe participe [Perfil do cliente em tempo real](../../../profile/home.md).
+>Esta classe deve ser usada por organizações com acesso ao [Adobe Real-time Customer Data Platform B2B Edition](../../../rtcdp/b2b-overview.md). Você deve ter acesso ao Real-Time CDP B2B Edition para que esta classe participe do [Perfil de Cliente em Tempo Real](../../../profile/home.md).
 
-[!UICONTROL Membros da lista de marketing de negócios XDM] é uma classe padrão do Experience Data Model (XDM) que descreve membros, pessoas ou contatos associados a uma lista de marketing.
+[!UICONTROL Membros da Lista de Marketing Comercial XDM] é uma classe padrão do Experience Data Model (XDM) que descreve membros, pessoas ou contatos associados a uma lista de marketing.
 
-![A estrutura da classe de Membros da Lista de marketing empresarial XDM como aparece na interface](../../images/classes/b2b/business-marketing-list-members.png)
+![A estrutura da classe de Membros da Lista de Marketing Comercial XDM como aparece na interface do usuário](../../images/classes/b2b/business-marketing-list-members.png)
 
 | Propriedade | Tipo de dados | Descrição |
 | --- | --- | --- |
-| `extSourceSystemAudit` | [[!UICONTROL Atributos de auditoria do sistema de origem externa]](../../data-types/external-source-system-audit-attributes.md) | Se a associação à lista de marketing for proveniente de um sistema de origem externa, esse objeto capturará os atributos de auditoria desse sistema. |
-| `marketingListKey` | [[!UICONTROL Origem B2B]](../../data-types/b2b-source.md) | Um identificador composto da lista de marketing da qual a pessoa é membro. |
-| `marketingListMemberKey` | [[!UICONTROL Origem B2B]](../../data-types/b2b-source.md) | Um identificador composto para a entidade de associação da lista de marketing. |
-| `personKey` | [[!UICONTROL Origem B2B]](../../data-types/b2b-source.md) | Um identificador composto da pessoa que é membro da lista de marketing. |
-| `_id` | String | Um identificador exclusivo do registro. É um valor gerado pelo sistema separado da variável `marketingListMemberID`. |
-| `isDeleted` | Booleano | Indica se esta entidade de membro da lista de marketing foi excluída no Marketo Engage.<br><br>Ao usar o [Conector de origem do Marketo](../../../sources/connectors/adobe-applications/marketo/marketo.md), todos os registros excluídos no Marketo são refletidos automaticamente no Perfil do cliente em tempo real. No entanto, os registros relacionados a esses perfis ainda podem persistir no Data Lake. Ao configurar `isDeleted` para `true`, você pode usar o campo para filtrar quais registros foram excluídos de suas fontes ao consultar o Data Lake. |
+| `extSourceSystemAudit` | [[!UICONTROL Atributos de Auditoria de Sistema Source Externos]](../../data-types/external-source-system-audit-attributes.md) | Se a associação à lista de marketing for proveniente de um sistema de origem externa, esse objeto capturará os atributos de auditoria desse sistema. |
+| `marketingListKey` | [[!UICONTROL Source B2B]](../../data-types/b2b-source.md) | Um identificador composto da lista de marketing da qual a pessoa é membro. |
+| `marketingListMemberKey` | [[!UICONTROL Source B2B]](../../data-types/b2b-source.md) | Um identificador composto para a entidade de associação da lista de marketing. |
+| `personKey` | [[!UICONTROL Source B2B]](../../data-types/b2b-source.md) | Um identificador composto da pessoa que é membro da lista de marketing. |
+| `_id` | String | Um identificador exclusivo do registro. Este é um valor gerado pelo sistema separado de `marketingListMemberID`. |
+| `isDeleted` | Booleano | Indica se esta entidade de membro da lista de marketing foi excluída no Marketo Engage.<br><br>Ao usar o [conector de origem do Marketo](../../../sources/connectors/adobe-applications/marketo/marketo.md), todos os registros excluídos no Marketo serão refletidos automaticamente no Perfil do Cliente em Tempo Real. No entanto, os registros relacionados a esses perfis ainda podem persistir no Data Lake. Ao configurar `isDeleted` como `true`, você pode usar o campo para filtrar quais registros foram excluídos de suas fontes ao consultar o Data Lake. |
 | `marketingListID` | String | Uma ID exclusiva para a lista de marketing. |
 | `marketingListMemberID` | String | Uma ID exclusiva para a entidade de associação da lista de marketing. |
 | `personId` | String | Um identificador exclusivo para a pessoa. |
 
 {style="table-layout:auto"}
 
-Consulte o guia sobre [relacionamentos de esquema no Real-Time CDP B2B Edition](../../tutorials/relationship-b2b.md) para saber como essa classe se relaciona conceitualmente com as outras classes B2B e como você pode estabelecer esses relacionamentos na interface do usuário do Adobe Experience Platform.
+Consulte o manual sobre [relações de esquema no Real-Time CDP B2B Edition](../../tutorials/relationship-b2b.md) para saber como essa classe se relaciona conceitualmente com as outras classes B2B e como você pode estabelecer essas relações na interface do usuário do Adobe Experience Platform.

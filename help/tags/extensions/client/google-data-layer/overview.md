@@ -11,13 +11,13 @@ ht-degree: 12%
 
 # Extensão da camada de dados do Google
 
-A extensão Camada de dados do Google permite usar uma camada de dados do Google na implementação de tags. A extensão pode ser usada de forma independente ou simultânea com as soluções da Google e com o código aberto da Google [Biblioteca de ajuda da camada de dados](https://github.com/google/data-layer-helper).
+A extensão Camada de dados do Google permite usar uma camada de dados do Google na implementação de tags. A extensão pode ser usada de forma independente ou simultânea com as soluções da Google e com a [Biblioteca de Auxiliar de Camada de Dados](https://github.com/google/data-layer-helper) de código aberto da Google.
 
-A Biblioteca de ajuda fornece funcionalidade semelhante orientada por eventos para a Camada de dados de clientes Adobe (ACDL). Os elementos de dados, as regras e as ações da extensão da Camada de dados do Google fornecem funcionalidade semelhante àqueles na [Extensão ACDL](../client-data-layer/overview.md).
+A Biblioteca de ajuda fornece funcionalidade semelhante orientada por eventos para a Camada de dados de clientes Adobe (ACDL). Os elementos de dados, as regras e as ações da extensão da Camada de Dados do Google fornecem funcionalidade semelhante àqueles na [extensão ACDL](../client-data-layer/overview.md).
 
 ## Instalação
 
-Para instalar a extensão, navegue até o catálogo de extensões na interface da Coleção de dados e selecione **[!UICONTROL Camada de dados Google]**.
+Para instalar a extensão, navegue até o catálogo de extensões na interface da Coleção de Dados e selecione **[!UICONTROL Camada de Dados da Google]**.
 
 Depois de instalada, a extensão cria ou acessa uma camada de dados em cada carregamento da biblioteca de tags do Adobe Experience Platform.
 
@@ -35,27 +35,27 @@ O nome padrão da camada de dados é o nome padrão do Google `dataLayer`.
 
 >[!NOTE]
 >
->A palavra _evento_ é sobrecarregado quando uma camada de dados orientada por eventos é usada em Tags do Adobe Experience Platform. _Eventos_ pode ser:
+>A palavra _evento_ é sobrecarregada quando uma camada de dados orientada por eventos é usada em marcas Adobe Experience Platform. _Eventos_ podem ser:
 > - Eventos de tags do Adobe Experience Platform (biblioteca carregada e assim por diante).
-> - Eventos JavaScript.
-> - Os dados enviados para a camada de dados com o _evento_ palavra-chave.
+> - Eventos do JavaScript.
+> - Dados enviados para a camada de dados com a palavra-chave _event_.
 
 A extensão oferece a possibilidade de acompanhar as alterações na camada de dados.
 
 >[!NOTE]
 >
->É importante compreender a utilização do _evento_ palavra-chave quando os dados são enviados para uma camada de dados do Google, de forma semelhante à Camada de dados do cliente Adobe. A variável _evento_ Essa palavra-chave altera o comportamento da camada de dados do Google e, portanto, dessa extensão.\
+>É importante entender o uso da palavra-chave _event_ quando os dados são enviados para uma camada de dados do Google, de forma semelhante à Camada de Dados de Clientes Adobe. A palavra-chave _event_ altera o comportamento da camada de dados do Google e, portanto, dessa extensão.\
 > Leia a documentação do Google ou faça uma pesquisa se não tiver certeza sobre esse ponto.
 
 ### Tipos de evento do Google
 
-O Google oferece suporte a dois meios de enviar eventos: o Google Tag Manager, usando o `push()` e Google Analytics 4, utilizando o método `gtag()` método.
+O Google oferece suporte a dois meios de enviar eventos: o Gerenciador de Tags do Google, usando o método `push()`, e o Google Analytics 4, usando o método `gtag()`.
 
-As versões de extensão da Camada de dados do Google anteriores à 1.2.1 eram compatíveis apenas com eventos criados pela `push()`, conforme mostrado nos exemplos de código desta página.
+As versões de extensão da Camada de Dados do Google anteriores à 1.2.1 só tinham suporte para eventos criados pelo `push()`, conforme mostrado nos exemplos de código desta página.
 
-As versões 1.2.1 e posteriores são compatíveis com eventos criados com o `gtag()`.  Isso é opcional e pode ser ativado na caixa de diálogo Configuração de extensão.
+As versões 1.2.1 e posteriores dão suporte a eventos criados com o `gtag()`.  Isso é opcional e pode ser ativado na caixa de diálogo Configuração de extensão.
 
-Para obter mais informações sobre `push()` e `gtag()` eventos, consulte a [Documentação do Google](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtag).  As informações também são fornecidas nas caixas de diálogo de configuração e regra da extensão.
+Para obter mais informações sobre os eventos `push()` e `gtag()`, consulte a [documentação do Google](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtag).  As informações também são fornecidas nas caixas de diálogo de configuração e regra da extensão.
 
 ### Analise todos os envios para a camada de dados
 
@@ -157,4 +157,4 @@ O elemento de dados pode, portanto, retornar:
 
 O elemento de dados da extensão e as caixas de diálogo do evento contêm informações de uso detalhadas e exemplos.
 
-Informações gerais adicionais estão na [LEIAME do projeto](https://github.com/adobe/reactor-extension-googledatalayer/blob/main/README.md)
+Informações gerais adicionais estão no [LEIAME do projeto](https://github.com/adobe/reactor-extension-googledatalayer/blob/main/README.md)

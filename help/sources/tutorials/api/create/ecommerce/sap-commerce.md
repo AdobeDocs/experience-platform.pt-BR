@@ -5,50 +5,50 @@ badge: Beta
 exl-id: 580731b9-0c04-4f83-a475-c1890ac5b7cd
 source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
-source-wordcount: '2358'
-ht-degree: 3%
+source-wordcount: '2314'
+ht-degree: 1%
 
 ---
 
-# Criar uma conexão de origem e um fluxo de dados para [!DNL SAP Commerce] uso da API do Serviço de fluxo
+# Crie uma conexão de origem e um fluxo de dados para [!DNL SAP Commerce] usando a API de Serviço de Fluxo
 
 >[!NOTE]
 >
->A variável [!DNL SAP Commerce] a fonte está na versão beta. Consulte a [visão geral das origens](../../../../home.md#terms-and-conditions) para obter mais informações sobre o uso de fontes rotuladas como beta.
+>A origem [!DNL SAP Commerce] está na versão beta. Consulte a [visão geral das fontes](../../../../home.md#terms-and-conditions) para obter mais informações sobre o uso de fontes com rótulo beta.
 
-O tutorial a seguir guiará você pelas etapas para criar um [!DNL SAP Commerce] conexão de origem e um fluxo de dados para trazer [[!DNL SAP] Cobrança da assinatura](https://www.sap.com/products/financial-management/subscription-billing.html) contatos e dados do cliente para a Adobe Experience Platform usando o [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+O tutorial a seguir orienta você pelas etapas para criar uma conexão de origem [!DNL SAP Commerce] e um fluxo de dados para trazer contatos de [[!DNL SAP] Cobrança de assinatura](https://www.sap.com/products/financial-management/subscription-billing.html) e dados do cliente para a Adobe Experience Platform usando a [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Introdução
 
-Este manual necessita de uma compreensão funcional dos seguintes componentes da Experience Platform:
+Este guia requer entendimento prático dos seguintes componentes do Experience Platform:
 
-* [Origens](../../../../home.md): o Experience Platform permite que os dados sejam assimilados de várias fontes e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma.
+* [Fontes](../../../../home.md): o Experience Platform permite que os dados sejam assimilados de várias fontes e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma.
 * [Sandboxes](../../../../../sandboxes/home.md): o Experience Platform fornece sandboxes virtuais que particionam uma única instância da Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
-As seções a seguir fornecem informações adicionais que você precisará saber para se conectar com êxito ao [!DNL SAP Commerce] usando o [!DNL Flow Service] API.
+As seções a seguir fornecem informações adicionais que você precisará saber para se conectar com êxito ao [!DNL SAP Commerce] usando a API [!DNL Flow Service].
 
 ### Coletar credenciais necessárias
 
-Para se conectar [!DNL SAP Commerce] para Experience Platform, você deve fornecer valores para as seguintes propriedades de conexão:
+Para conectar [!DNL SAP Commerce] ao Experience Platform, você deve fornecer valores para as seguintes propriedades de conexão:
 
 | Credencial | Descrição |
 | --- | --- |
 | `clientId` | O valor de `clientId` da chave de serviço. |
 | `clientSecret` | O valor de `clientSecret` da chave de serviço. |
-| `tokenEndpoint` | O valor de `url` na chave de serviço, será semelhante a `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`. |
-| `region` | O local do data center. A região está presente no `url` e tem um valor semelhante a `eu10` ou `us10`. Por exemplo, se a variável `url` é `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`, será necessário `eu10`. |
+| `tokenEndpoint` | O valor de `url` da chave de serviço será semelhante a `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`. |
+| `region` | O local do data center. A região está presente no `url` e tem um valor semelhante a `eu10` ou `us10`. Por exemplo, se o `url` for `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`, então você precisará de `eu10`. |
 
-Para obter mais informações sobre essas credenciais, consulte o [[!DNL SAP Commerce] documentação](https://help.sap.com/docs/CLOUD_TO_CASH_OD/987aec876092428f88162e438acf80d6/c5fcaf96daff4c7a8520188e4d8a1843.html).
+Para obter mais informações sobre essas credenciais, consulte a [[!DNL SAP Commerce] documentação](https://help.sap.com/docs/CLOUD_TO_CASH_OD/987aec876092428f88162e438acf80d6/c5fcaf96daff4c7a8520188e4d8a1843.html).
 
-## Conectar [!DNL SAP Commerce] para a Platform usando o [!DNL Flow Service] API
+## Conectar [!DNL SAP Commerce] à Plataforma usando a API [!DNL Flow Service]
 
-A seguir estão descritas as etapas que devem ser realizadas para autenticar o [!DNL SAP Commerce] , crie uma conexão de origem e um fluxo de dados para trazer seus dados de contas e contatos para o Experience Platform.
+A seguir estão descritas as etapas que você precisa realizar para autenticar sua origem do [!DNL SAP Commerce], criar uma conexão de origem e criar um fluxo de dados para trazer seus dados de contas e contatos para o Experience Platform.
 
-### Crie uma conexão básica {#base-connection}
+### Criar uma conexão básica {#base-connection}
 
 Uma conexão base retém informações entre sua origem e a Platform, incluindo as credenciais de autenticação da origem, o estado atual da conexão e sua ID de conexão base exclusiva. A ID de conexão básica permite explorar e navegar pelos arquivos de dentro da origem e identificar os itens específicos que deseja assimilar, incluindo informações sobre os tipos de dados e formatos.
 
-Para criar um ID de conexão base, faça uma solicitação POST ao `/connections` ao fornecer sua [!DNL SAP Commerce] credenciais de autenticação como parte do corpo da solicitação.
+Para criar uma ID de conexão base, faça uma solicitação POST para o ponto de extremidade `/connections` enquanto fornece suas credenciais de autenticação [!DNL SAP Commerce] como parte do corpo da solicitação.
 
 **Formato da API**
 
@@ -58,7 +58,7 @@ POST /connections
 
 **Solicitação**
 
-A solicitação a seguir cria uma conexão básica para [!DNL SAP Commerce]:
+A solicitação a seguir cria uma conexão base para [!DNL SAP Commerce]:
 
 ```shell
 curl -X POST \
@@ -91,12 +91,12 @@ curl -X POST \
 | --- | --- |
 | `name` | O nome da sua conexão básica. Certifique-se de que o nome da sua conexão básica seja descritivo, pois você pode usá-lo para pesquisar informações sobre a sua conexão básica. |
 | `description` | Um valor opcional que pode ser incluído para fornecer mais informações sobre sua conexão básica. |
-| `connectionSpec.id` | A ID de especificação de conexão da sua origem. Essa ID pode ser recuperada depois que a origem é registrada e aprovada por meio do [!DNL Flow Service] API. |
+| `connectionSpec.id` | A ID de especificação de conexão da sua origem. Essa ID pode ser recuperada depois que a origem é registrada e aprovada por meio da API [!DNL Flow Service]. |
 | `auth.specName` | O tipo de autenticação que você está usando para autenticar sua origem na Platform. |
-| `auth.params.region` | O local do data center. A região está presente no `url` e tem um valor semelhante a `eu10` ou `us10`. Por exemplo, se a variável `url` é `https://subscriptionbilling.authentication.eu10.hana.ondemand.com` você precisará `eu10`. |
+| `auth.params.region` | O local do data center. A região está presente no `url` e tem um valor semelhante a `eu10` ou `us10`. Por exemplo, se o `url` for `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`, você precisará de `eu10`. |
 | `auth.params.clientId` | O valor de `clientId` da chave de serviço. |
 | `auth.params.clientSecret` | O valor de `clientSecret` da chave de serviço. |
-| `auth.params.tokenEndpoint` | O valor de `url` na chave de serviço, será semelhante a `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`. |
+| `auth.params.tokenEndpoint` | O valor de `url` da chave de serviço será semelhante a `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`. |
 
 **Resposta**
 
@@ -111,7 +111,7 @@ Uma resposta bem-sucedida retorna a conexão base recém-criada, incluindo seu i
 
 ### Explorar sua fonte {#explore}
 
-Depois de ter a ID de conexão básica, agora é possível explorar o conteúdo e a estrutura dos dados de origem executando uma solicitação GET para a `/connections` ao fornecer a ID de conexão básica como parâmetro de consulta.
+Depois de ter a ID de conexão básica, você pode explorar o conteúdo e a estrutura dos dados de origem executando uma solicitação GET para o ponto de extremidade `/connections` enquanto fornece a ID de conexão básica como um parâmetro de consulta.
 
 **Formato da API**
 
@@ -124,13 +124,13 @@ Ao executar solicitações do GET para explorar a estrutura e o conteúdo do arq
 | Parâmetro | Descrição |
 | --------- | ----------- |
 | `{BASE_CONNECTION_ID}` | A ID de conexão básica gerada na etapa anterior. |
-| `objectType=rest` | O tipo de objeto que você deseja explorar. No momento, esse valor está sempre definido como `rest`. |
-| `{OBJECT}` | Esse parâmetro é necessário somente ao visualizar um diretório específico. Seu valor representa o caminho do diretório que você deseja explorar. Para essa fonte, o valor seria `json`. |
-| `fileType=json` | O tipo do arquivo que você deseja trazer para a Platform. Atualmente, `json` é o único tipo de arquivo compatível. |
+| `objectType=rest` | O tipo de objeto que você deseja explorar. Atualmente, este valor está sempre configurado para `rest`. |
+| `{OBJECT}` | Esse parâmetro é necessário somente ao visualizar um diretório específico. Seu valor representa o caminho do diretório que você deseja explorar. Para esta fonte, o valor seria `json`. |
+| `fileType=json` | O tipo do arquivo que você deseja trazer para a Platform. Atualmente, `json` é o único tipo de arquivo com suporte. |
 | `{PREVIEW}` | Um valor booliano que define se o conteúdo da conexão oferece suporte à visualização. |
-| `{SOURCE_PARAMS}` | Define parâmetros para o arquivo de origem que você deseja trazer para a Platform. Para recuperar o tipo de formato aceito para `{SOURCE_PARAMS}`, você deve codificar toda a cadeia de caracteres em base64. <br> [!DNL SAP Commerce] O é compatível com várias APIs. Dependendo do tipo de objeto que você estiver utilizando, passe uma das opções abaixo: <ul><li>`customers`</li><li>`contacts`</li></ul> |
+| `{SOURCE_PARAMS}` | Define parâmetros para o arquivo de origem que você deseja trazer para a Platform. Para recuperar o tipo de formato aceito para `{SOURCE_PARAMS}`, você deve codificar a cadeia inteira em base64. <br> [!DNL SAP Commerce] dá suporte a várias APIs. Dependendo do tipo de objeto que você estiver utilizando, passe uma das opções abaixo: <ul><li>`customers`</li><li>`contacts`</li></ul> |
 
-A variável [!DNL SAP Commerce] A origem aceita várias APIs. Dependendo do tipo de objeto que você está usando, a solicitação a ser enviada é como a seguir:
+A origem [!DNL SAP Commerce] dá suporte a várias APIs. Dependendo do tipo de objeto que você está usando, a solicitação a ser enviada é como a seguir:
 
 >[!NOTE]
 >
@@ -142,7 +142,7 @@ A variável [!DNL SAP Commerce] A origem aceita várias APIs. Dependendo do tipo
 
 +++Solicitação
 
-Para [!DNL SAP Commerce] A API de clientes define o valor de `{SOURCE_PARAMS}` é passado como `{"object_type":"customers"}`. Quando codificado em base64, ele equivale a `eyJvYmplY3RfdHlwZSI6ImN1c3RvbWVycyJ9` conforme mostrado abaixo.
+Para a API de clientes [!DNL SAP Commerce], o valor de `{SOURCE_PARAMS}` é passado como `{"object_type":"customers"}`. Quando codificado em base64, ele equivale a `eyJvYmplY3RfdHlwZSI6ImN1c3RvbWVycyJ9`, como mostrado abaixo.
 
 ```shell
 curl -X GET \
@@ -465,7 +465,7 @@ Uma resposta bem-sucedida retorna uma estrutura JSON como a seguinte:
 
 +++Solicitação
 
-Para [!DNL SAP Commerce] API de Contatos exibe o valor de `{SOURCE_PARAMS}` é passado como `{"object_type":"contacts"}`. Quando codificado em base64, ele equivale a `eyJvYmplY3RfdHlwZSI6ImNvbnRhY3RzIn0=` conforme mostrado abaixo.
+Para a API de Contatos [!DNL SAP Commerce], o valor de `{SOURCE_PARAMS}` é passado como `{"object_type":"contacts"}`. Quando codificado em base64, ele equivale a `eyJvYmplY3RfdHlwZSI6ImNvbnRhY3RzIn0=`, como mostrado abaixo.
 
 ```shell
 curl -X GET \
@@ -556,7 +556,7 @@ Uma resposta bem-sucedida retorna uma estrutura JSON como a seguinte:
 
 ### Criar uma conexão de origem {#source-connection}
 
-Você pode criar uma conexão de origem fazendo uma solicitação POST para o `/sourceConnections` endpoint do [!DNL Flow Service] API. Uma conexão de origem consiste em uma ID de conexão, um caminho para o arquivo de dados de origem e uma ID de especificação de conexão.
+Você pode criar uma conexão de origem fazendo uma solicitação POST para o ponto de extremidade `/sourceConnections` da API [!DNL Flow Service]. Uma conexão de origem consiste em uma ID de conexão, um caminho para o arquivo de dados de origem e uma ID de especificação de conexão.
 
 **Formato da API**
 
@@ -572,7 +572,7 @@ Dependendo do tipo de objeto que você estiver utilizando, selecione uma das gui
 
 +++Solicitação
 
-A solicitação a seguir cria uma conexão de origem para [!DNL SAP Commerce] dados dos clientes:
+A solicitação a seguir cria uma conexão de origem para dados de clientes [!DNL SAP Commerce]:
 
 ```shell
 curl -X POST \
@@ -605,9 +605,9 @@ curl -X POST \
 | `description` | Um valor opcional que pode ser incluído para fornecer mais informações sobre a conexão de origem. |
 | `baseConnectionId` | A ID de conexão base de [!DNL SAP Commerce]. Essa ID foi gerada em uma etapa anterior. |
 | `connectionSpec.id` | A ID de especificação de conexão que corresponde à sua origem. |
-| `data.format` | O formato do [!DNL SAP Commerce] dados que você deseja assimilar. No momento, o único formato de dados compatível é `json`. |
-| `object_type` | [!DNL SAP Commerce] O é compatível com várias APIs. Para a API dos clientes, a variável `object_type` O parâmetro deve ser definido como `customers`. |
-| `path` | Ele terá o mesmo valor selecionado para `object_type`. |
+| `data.format` | O formato dos dados [!DNL SAP Commerce] que você deseja assimilar. Atualmente, o único formato de dados com suporte é `json`. |
+| `object_type` | [!DNL SAP Commerce] dá suporte a várias APIs. Para API de clientes, o parâmetro `object_type` deve ser definido como `customers`. |
+| `path` | Isso terá o mesmo valor que você selecionar para `object_type`. |
 
 +++
 
@@ -628,7 +628,7 @@ Uma resposta bem-sucedida retorna o identificador exclusivo (`id`) da conexão d
 
 +++Solicitação
 
-A solicitação a seguir cria uma conexão de origem para [!DNL SAP Commerce] dados de contatos:
+A solicitação a seguir cria uma conexão de origem para dados de contatos de [!DNL SAP Commerce]:
 
 ```shell
 curl -X POST \
@@ -661,9 +661,9 @@ curl -X POST \
 | `description` | Um valor opcional que pode ser incluído para fornecer mais informações sobre a conexão de origem. |
 | `baseConnectionId` | A ID de conexão base de [!DNL SAP Commerce]. Essa ID foi gerada em uma etapa anterior. |
 | `connectionSpec.id` | A ID de especificação de conexão que corresponde à sua origem. |
-| `data.format` | O formato do [!DNL SAP Commerce] dados que você deseja assimilar. No momento, o único formato de dados compatível é `json`. |
-| `object_type` | [!DNL SAP Commerce] O é compatível com várias APIs. Para a API de contatos, a variável `object_type` O parâmetro deve ser definido como `contacts`. |
-| `path` | Ele terá o mesmo valor selecionado para *`object_type`*. |
+| `data.format` | O formato dos dados [!DNL SAP Commerce] que você deseja assimilar. Atualmente, o único formato de dados com suporte é `json`. |
+| `object_type` | [!DNL SAP Commerce] dá suporte a várias APIs. Para a API de contatos, o parâmetro `object_type` deve ser definido como `contacts`. |
+| `path` | Isso terá o mesmo valor que você selecionar para *`object_type`*. |
 
 +++
 
@@ -686,21 +686,21 @@ Uma resposta bem-sucedida retorna o identificador exclusivo (`id`) da conexão d
 
 Para que os dados de origem sejam usados na Platform, um esquema de destino deve ser criado para estruturar os dados de origem de acordo com suas necessidades. O esquema de destino é usado para criar um conjunto de dados da Platform no qual os dados de origem estão contidos.
 
-Um schema XDM de destino pode ser criado executando uma solicitação POST para o [API do registro de esquema](https://developer.adobe.com/experience-platform-apis/references/schema-registry/).
+Um esquema XDM de destino pode ser criado executando uma solicitação POST para a [API do Registro de Esquema](https://developer.adobe.com/experience-platform-apis/references/schema-registry/).
 
-Para obter etapas detalhadas sobre como criar um esquema XDM de destino, consulte o tutorial sobre [criação de um schema usando a API](../../../../../xdm/api/schemas.md#create-a-schema).
+Para obter etapas detalhadas sobre como criar um esquema XDM de destino, consulte o tutorial sobre [criação de um esquema usando a API](../../../../../xdm/api/schemas.md#create-a-schema).
 
 ### Criar um conjunto de dados de destino {#target-dataset}
 
-Um conjunto de dados de destino pode ser criado executando uma solicitação POST para o [API do serviço de catálogo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), fornecendo a ID do schema de destino na carga útil.
+Um conjunto de dados de destino pode ser criado por meio de uma solicitação POST para a [API de Serviço de Catálogo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), fornecendo a ID do esquema de destino na carga.
 
 Para obter etapas detalhadas sobre como criar um conjunto de dados de destino, consulte o tutorial sobre [criação de um conjunto de dados usando a API](../../../../../catalog/api/create-dataset.md).
 
 ### Criar uma conexão de destino {#target-connection}
 
-Uma conexão de destino representa a conexão com o destino em que os dados assimilados devem ser armazenados. Para criar uma conexão de destino, você deve fornecer a ID de especificação da conexão fixa que corresponde ao data lake. Essa ID é: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+Uma conexão de destino representa a conexão com o destino em que os dados assimilados devem ser armazenados. Para criar uma conexão de destino, você deve fornecer a ID de especificação da conexão fixa que corresponde ao data lake. Esta ID é: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
-Agora você tem os identificadores exclusivos, um esquema de destino, um conjunto de dados de destino e a ID de especificação da conexão para o data lake. Usando esses identificadores, você pode criar uma conexão de destino usando o [!DNL Flow Service] API para especificar o conjunto de dados que conterá os dados de origem de entrada.
+Agora você tem os identificadores exclusivos, um esquema de destino, um conjunto de dados de destino e a ID de especificação da conexão para o data lake. Usando esses identificadores, você pode criar uma conexão de destino usando a API [!DNL Flow Service] para especificar o conjunto de dados que conterá os dados de origem de entrada.
 
 **Formato da API**
 
@@ -744,13 +744,13 @@ curl -X POST \
 | -------- | ----------- |
 | `name` | O nome da sua conexão de destino. Certifique-se de que o nome da conexão de destino seja descritivo, pois você pode usá-lo para pesquisar informações sobre a conexão de destino. |
 | `description` | Um valor opcional que pode ser incluído para fornecer mais informações sobre a conexão de destino. |
-| `connectionSpec.id` | A ID da especificação da conexão que corresponde ao data lake. Essa ID fixa é: `6b137bf6-d2a0-48c8-914b-d50f4942eb85`. |
-| `data.format` | O formato do [!DNL SAP Commerce] dados que você deseja assimilar. |
+| `connectionSpec.id` | A ID da especificação da conexão que corresponde ao data lake. Esta ID fixa é: `6b137bf6-d2a0-48c8-914b-d50f4942eb85`. |
+| `data.format` | O formato dos dados [!DNL SAP Commerce] que você deseja assimilar. |
 | `params.dataSetId` | A ID do conjunto de dados de destino recuperada em uma etapa anterior. |
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o identificador exclusivo da nova conexão de destino (`id`). Essa ID é necessária nas etapas posteriores.
+Uma resposta bem-sucedida retorna o identificador exclusivo (`id`) da nova conexão de destino. Essa ID é necessária nas etapas posteriores.
 
 ```json
 {
@@ -775,7 +775,7 @@ POST /conversion/mappingSets
 
 +++Solicitação
 
-A solicitação a seguir cria um mapeamento para [!DNL SAP Commerce] Dados da API dos clientes
+A solicitação a seguir cria um mapeamento para os dados da API do cliente [!DNL SAP Commerce]
 
 ```shell
 curl -X POST \
@@ -860,7 +860,7 @@ curl -X POST \
 
 | Propriedade | Descrição |
 | --- | --- |
-| `outputSchema.schemaRef.id` | A ID do [esquema XDM do público-alvo](#target-schema) gerada em uma etapa anterior. |
+| `outputSchema.schemaRef.id` | A ID do [esquema XDM de destino](#target-schema) gerada em uma etapa anterior. |
 | `mappings.sourceType` | O tipo de atributo de origem que está sendo mapeado. |
 | `mappings.source` | O atributo de origem que precisa ser mapeado para um caminho XDM de destino. |
 | `mappings.destination` | O caminho XDM de destino para o qual o atributo de origem está sendo mapeado. |
@@ -888,7 +888,7 @@ Uma resposta bem-sucedida retorna detalhes do mapeamento recém-criado, incluind
 
 +++Solicitação
 
-A solicitação a seguir cria um mapeamento para [!DNL SAP Commerce] Dados da API de contatos
+A solicitação a seguir cria um mapeamento para os dados da API de Contatos [!DNL SAP Commerce]
 
 ```shell
 curl -X POST \
@@ -958,7 +958,7 @@ curl -X POST \
 
 | Propriedade | Descrição |
 | --- | --- |
-| `outputSchema.schemaRef.id` | A ID do [esquema XDM do público-alvo](#target-schema) gerada em uma etapa anterior. |
+| `outputSchema.schemaRef.id` | A ID do [esquema XDM de destino](#target-schema) gerada em uma etapa anterior. |
 | `mappings.sourceType` | O tipo de atributo de origem que está sendo mapeado. |
 | `mappings.source` | O atributo de origem que precisa ser mapeado para um caminho XDM de destino. |
 | `mappings.destination` | O caminho XDM de destino para o qual o atributo de origem está sendo mapeado. |
@@ -986,9 +986,9 @@ Uma resposta bem-sucedida retorna detalhes do mapeamento recém-criado, incluind
 
 ### Criar um fluxo {#flow}
 
-O último passo para trazer dados de [!DNL SAP Commerce] para a Platform é criar um fluxo de dados. Até agora, você tem os seguintes valores necessários preparados:
+A última etapa para trazer dados de [!DNL SAP Commerce] para a Platform é criar um fluxo de dados. Até agora, você tem os seguintes valores necessários preparados:
 
-* [ID da conexão de origem](#source-connection)
+* [ID de conexão do Source](#source-connection)
 * [ID da conexão de destino](#target-connection)
 * [ID de mapeamento](#mapping)
 
@@ -1042,14 +1042,14 @@ curl -X POST \
 | --- | --- |
 | `name` | O nome do fluxo de dados. Verifique se o nome do fluxo de dados é descritivo, pois você pode usá-lo para pesquisar informações sobre o fluxo de dados. |
 | `description` | Um valor opcional que pode ser incluído para fornecer mais informações sobre o fluxo de dados. |
-| `flowSpec.id` | A ID de especificação de fluxo necessária para criar um fluxo de dados. Essa ID fixa é: `6499120c-0b15-42dc-936e-847ea3c24d72`. |
-| `flowSpec.version` | A versão correspondente da ID de especificação de fluxo. Esse valor é padronizado como `1.0`. |
-| `sourceConnectionIds` | A variável [ID da conexão de origem](#source-connection) gerada em uma etapa anterior. |
-| `targetConnectionIds` | A variável [ID da conexão de destino](#target-connection) gerada em uma etapa anterior. |
+| `flowSpec.id` | A ID de especificação de fluxo necessária para criar um fluxo de dados. Esta ID fixa é: `6499120c-0b15-42dc-936e-847ea3c24d72`. |
+| `flowSpec.version` | A versão correspondente da ID de especificação de fluxo. O padrão deste valor é `1.0`. |
+| `sourceConnectionIds` | A [ID da conexão de origem](#source-connection) gerada em uma etapa anterior. |
+| `targetConnectionIds` | A [ID da conexão de destino](#target-connection) gerada em uma etapa anterior. |
 | `transformations` | Essa propriedade contém as várias transformações necessárias para serem aplicadas aos seus dados. Essa propriedade é necessária ao trazer dados não compatíveis com XDM para a Platform. |
 | `transformations.name` | O nome atribuído à transformação. |
-| `transformations.params.mappingId` | A variável [ID do mapeamento](#mapping) gerada em uma etapa anterior. |
-| `transformations.params.mappingVersion` | A versão correspondente da ID de mapeamento. Esse valor é padronizado como `0`. |
+| `transformations.params.mappingId` | A [ID de mapeamento](#mapping) gerou em uma etapa anterior. |
+| `transformations.params.mappingVersion` | A versão correspondente da ID de mapeamento. O padrão deste valor é `0`. |
 | `scheduleParams.startTime` | Essa propriedade contém informações sobre o agendamento de assimilação do fluxo de dados. |
 | `scheduleParams.frequency` | A frequência com que o fluxo de dados coletará dados. |
 | `scheduleParams.interval` | O intervalo designa o período entre duas execuções de fluxo consecutivas. O valor do intervalo deve ser um inteiro diferente de zero. |
@@ -1071,20 +1071,20 @@ A seção a seguir fornece informações sobre as etapas que podem ser seguidas 
 
 ### Monitorar seu fluxo de dados
 
-Depois que o fluxo de dados for criado, você poderá monitorar os dados que estão sendo assimilados por meio dele para ver informações sobre execuções de fluxo, status de conclusão e erros. Para obter exemplos completos de API, leia o guia em [monitoramento de fluxos de dados de origens usando a API](../../monitor.md).
+Depois que o fluxo de dados for criado, você poderá monitorar os dados que estão sendo assimilados por meio dele para ver informações sobre execuções de fluxo, status de conclusão e erros. Para obter exemplos completos de API, leia o guia em [monitorando seus fluxos de dados de fontes usando a API](../../monitor.md).
 
 ### Atualizar seu fluxo de dados
 
-Atualize os detalhes do seu fluxo de dados, como nome e descrição, bem como o agendamento de execução e os conjuntos de mapeamento associados fazendo uma solicitação PATCH para o `/flows` endpoint de [!DNL Flow Service] ao fornecer a ID do fluxo de dados. Ao fazer uma solicitação PATCH, você deve fornecer os atributos exclusivos de seu fluxo de dados `etag` no `If-Match` cabeçalho. Para obter exemplos completos de API, leia o guia em [atualização de fluxos de dados de origens usando a API](../../update-dataflows.md).
+Atualize os detalhes do seu fluxo de dados, como seu nome e descrição, bem como seu agendamento de execução e conjuntos de mapeamento associados fazendo uma solicitação PATCH para o ponto de extremidade `/flows` da API [!DNL Flow Service], ao mesmo tempo em que fornece a ID do seu fluxo de dados. Ao fazer uma solicitação PATCH, você deve fornecer o `etag` exclusivo do fluxo de dados no cabeçalho `If-Match`. Para obter exemplos completos de API, leia o guia em [atualizando fluxos de dados de fontes usando a API](../../update-dataflows.md).
 
 ### Atualizar sua conta
 
-Atualize o nome, a descrição e as credenciais da sua conta de origem executando uma solicitação PATCH para a [!DNL Flow Service] ao fornecer a ID de conexão básica como um parâmetro de consulta. Ao fazer uma solicitação PATCH, você deve fornecer as informações exclusivas de sua conta de origem `etag` no `If-Match` cabeçalho. Para obter exemplos completos de API, leia o guia em [atualização da conta de origem usando a API](../../update.md).
+Atualize o nome, a descrição e as credenciais da conta de origem executando uma solicitação PATCH para a API [!DNL Flow Service] e fornecendo a ID da conexão base como um parâmetro de consulta. Ao fazer uma solicitação PATCH, você deve fornecer o `etag` exclusivo da sua conta de origem no cabeçalho `If-Match`. Para obter exemplos completos de API, leia o guia em [atualizando a conta de origem usando a API](../../update.md).
 
 ### Excluir seu fluxo de dados
 
-Exclua seu fluxo de dados executando uma solicitação DELETE para o [!DNL Flow Service] ao fornecer a ID do fluxo de dados que você deseja excluir como parte do parâmetro de consulta. Para obter exemplos completos de API, leia o guia em [exclusão de fluxos de dados usando a API](../../delete-dataflows.md).
+Exclua seu fluxo de dados executando uma solicitação DELETE para a API [!DNL Flow Service] enquanto fornece a ID do fluxo de dados que você deseja excluir como parte do parâmetro de consulta. Para obter exemplos completos de API, leia o guia em [excluindo seus fluxos de dados usando a API](../../delete-dataflows.md).
 
 ### Excluir sua conta
 
-Exclua sua conta executando uma solicitação DELETE para o [!DNL Flow Service] ao fornecer a ID de conexão básica da conta que você deseja excluir. Para obter exemplos completos de API, leia o guia em [exclusão da conta de origem usando a API](../../delete.md).
+Exclua sua conta executando uma solicitação DELETE para a API [!DNL Flow Service] enquanto fornece a ID de conexão básica da conta que você deseja excluir. Para obter exemplos completos de API, leia o guia em [excluindo sua conta de origem usando a API](../../delete.md).

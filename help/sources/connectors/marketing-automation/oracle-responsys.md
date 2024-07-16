@@ -1,6 +1,6 @@
 ---
 keywords: Experience Platform;página inicial;tópicos populares;oracle;oracle responsys;responsys
-title: (Beta) Visão geral da origem do Oracle Responsys
+title: Beta Visão geral do Oracle Responsys Source
 description: Saiba como conectar o Oracle Responsys ao Adobe Experience Platform usando APIs ou a interface do usuário.
 hide: true
 hidefromtoc: true
@@ -16,27 +16,27 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->A variável [!DNL Oracle Responsys] a fonte está na versão beta. Consulte a [Visão geral das fontes](../../home.md#terms-and-conditions) para obter mais informações sobre o uso de fontes rotuladas como beta.
+>A origem [!DNL Oracle Responsys] está na versão beta. Consulte a [Visão geral das fontes](../../home.md#terms-and-conditions) para obter mais informações sobre o uso de fontes com rótulo beta.
 
-O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando o [!DNL Platform] serviços. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
+O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços do [!DNL Platform]. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
 
-[!DNL Oracle Responsys] O é uma plataforma de gerenciamento de campanhas em vários canais que permite fornecer inteligência avançada em escala e criar mensagens personalizadas que se ajustam aos interesses e preferências específicos dos clientes.
+O [!DNL Oracle Responsys] é uma plataforma de gerenciamento de campanhas em vários canais que permite fornecer inteligência avançada em escala e criar mensagens personalizadas que se ajustem aos interesses e preferências específicos dos clientes.
 
 O Experience Platform fornece suporte para assimilação de dados de um sistema de automação de marketing de terceiros. O suporte para provedores de automação de marketing inclui [!DNL Oracle Responsys].
 
 ## LISTA DE PERMISSÕES de endereço IP
 
-Uma lista de endereços IP deve ser adicionada a uma lista de permissões antes de trabalhar com conectores de origem. Falha ao adicionar endereços IP específicos da região à lista de permissões pode levar a erros ou ao não desempenho ao usar origens. Consulte a [LISTA DE PERMISSÕES de endereço IP](../../ip-address-allow-list.md) para obter mais informações.
+Uma lista de endereços IP deve ser adicionada a uma lista de permissões antes de trabalhar com conectores de origem. Falha ao adicionar endereços IP específicos da região à lista de permissões pode levar a erros ou ao não desempenho ao usar origens. Consulte a página [lista de permissões de endereço IP](../../ip-address-allow-list.md) para obter mais informações.
 
-A documentação abaixo fornece informações sobre como se conectar [!DNL Oracle Responsys] para a Platform usando APIs ou a interface do usuário:
+A documentação abaixo fornece informações sobre como conectar o [!DNL Oracle Responsys] à Plataforma usando APIs ou a interface do usuário:
 
-## Conectar [!DNL Oracle Responsys] para a Platform usando APIs
+## Conectar [!DNL Oracle Responsys] à plataforma usando APIs
 
 * [Criar uma conexão básica do Oracle Responsys usando a API do serviço de fluxo](../../tutorials/api/create/marketing-automation/oracle-responsys.md)
 * [Explorar tabelas de dados usando a API de Serviço de Fluxo](../../tutorials/api/explore/tabular.md)
 * [Criar um fluxo de dados para uma fonte de automação de marketing usando a API do Serviço de fluxo](../../tutorials/api/collect/marketing-automation.md)
 
-## Conectar [!DNL Oracle Responsys] para a Platform usando a interface
+## Conectar [!DNL Oracle Responsys] à Plataforma usando a interface
 
 * [Criar uma conexão de origem do Oracle Responsys na interface](../../tutorials/ui/create/marketing-automation/oracle-responsys.md)
 * [Criar um fluxo de dados para uma conexão de origem de automação de marketing na interface](../../tutorials/ui/dataflow/marketing-automation.md)

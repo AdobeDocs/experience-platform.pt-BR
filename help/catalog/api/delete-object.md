@@ -13,11 +13,11 @@ ht-degree: 2%
 
 # Excluir um objeto na API
 
-É possível excluir um [!DNL Catalog] fornecendo a respectiva ID no caminho de uma solicitação DELETE.
+Você pode excluir um objeto [!DNL Catalog] fornecendo a respectiva ID no caminho de uma solicitação DELETE.
 
 >[!WARNING]
 >
->Tenha cuidado extra ao excluir objetos, pois essa ação não pode ser desfeita e pode produzir alterações de quebra em outro local no [!DNL Experience Platform].
+>Tenha cuidado extra ao excluir objetos, pois essa ação não pode ser desfeita e pode produzir alterações de quebra em outro lugar no [!DNL Experience Platform].
 
 **Formato da API**
 
@@ -27,11 +27,11 @@ DELETE /{OBJECT_TYPE}/{OBJECT_ID}
 
 >[!IMPORTANT]
 >
->A variável `DELETE /batches/{ID}` O ponto de extremidade foi descontinuado. Para excluir um lote, você deve usar o [API de assimilação em lote](../../ingestion/batch-ingestion/api-overview.md#delete-a-batch).
+>O ponto de extremidade `DELETE /batches/{ID}` foi substituído. Para excluir um lote, você deve usar a [API de assimilação de lote](../../ingestion/batch-ingestion/api-overview.md#delete-a-batch).
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{OBJECT_TYPE}` | O tipo de [!DNL Catalog] objeto a ser excluído. Os objetos válidos são: <ul><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
+| `{OBJECT_TYPE}` | O tipo de objeto [!DNL Catalog] a ser excluído. Os objetos válidos são: <ul><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{OBJECT_ID}` | O identificador do objeto específico que você deseja atualizar. |
 
 **Solicitação**
@@ -59,4 +59,4 @@ Uma resposta bem-sucedida retorna o status HTTP 200 (OK) e uma matriz contendo a
 
 >[!NOTE]
 >
->Se não [!DNL Catalog] Os objetos do correspondem à ID fornecida na solicitação. Você ainda poderá receber um Código de status HTTP 200, mas a matriz de resposta estará vazia.
+>Se nenhum objeto [!DNL Catalog] corresponder à ID fornecida em sua solicitação, você ainda poderá receber um Código de status HTTP 200, mas a matriz de resposta estará vazia.

@@ -4,8 +4,8 @@ description: Saiba mais sobre o conceito de ambientes de tag e como eles funcion
 exl-id: 0bf641c9-412e-4737-9b76-232d980385b2
 source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '1464'
-ht-degree: 97%
+source-wordcount: '1462'
+ht-degree: 96%
 
 ---
 
@@ -91,7 +91,7 @@ Selecione **[!UICONTROL Host]** para escolher um host pré-configurado para o am
 
 ![](./images/environments/select-host.png)
 
-Quando um build é concluído, é enviado ao local especificado para o host atribuído. Para obter informações sobre como criar e configurar hosts de tags, consulte o [visão geral de hosts](./hosts/hosts-overview.md).
+Quando um build é concluído, é enviado ao local especificado para o host atribuído. Para obter informações sobre como criar e configurar hosts de marcas, consulte a [visão geral dos hosts](./hosts/hosts-overview.md).
 
 ### Configuração de arquivamento {#archive}
 
@@ -129,7 +129,7 @@ Para obter mais informações sobre essa configuração, consulte o guia sobre [
 
 #### Implantação síncrona
 
-Quando o navegador lê um código integrado usando a implantação síncrona, ele recupera a biblioteca de tags e a executa antes de continuar carregando a página.
+Quando o navegador lê um código de integração usando implantação síncrona, ele recupera a biblioteca de tags e a executa antes de continuar carregando a página.
 
 Os códigos integrados síncronos consistem em duas tags `<script>` que devem ser colocadas dentro do HTML do seu site. Uma tag `<script>` deve ser colocada no documento `<head>`, enquanto a outra deve ser colocada antes da tag `</body>` de fechamento.
 

@@ -1,6 +1,6 @@
 ---
 keywords: Experience Platform;página inicial;tópicos populares;Nuvem do serviço de Oracle;nuvem do serviço de oracle
-title: Visão geral do Conector de origem do Oracle Service Cloud
+title: Visão geral do Oracle Service Cloud Source Connector
 description: Saiba como conectar a Oracle Service Cloud ao Adobe Experience Platform usando APIs ou a interface do usuário.
 last-substantial-update: 2023-04-26T00:00:00Z
 exl-id: 5c914e8a-d8ed-469f-b17a-26a85705e9ef
@@ -19,7 +19,7 @@ O Experience Platform fornece suporte para assimilação de dados de um sistema 
 
 ## LISTA DE PERMISSÕES de endereço IP
 
-Uma lista de endereços IP deve ser adicionada a uma lista de permissões antes de trabalhar com conectores de origem. Falha ao adicionar endereços IP específicos da região à lista de permissões pode levar a erros ou ao não desempenho ao usar origens. Consulte a [LISTA DE PERMISSÕES de endereço IP](../../ip-address-allow-list.md) para obter mais informações.
+Uma lista de endereços IP deve ser adicionada a uma lista de permissões antes de trabalhar com conectores de origem. Falha ao adicionar endereços IP específicos da região à lista de permissões pode levar a erros ou ao não desempenho ao usar origens. Consulte a página [lista de permissões de endereço IP](../../ip-address-allow-list.md) para obter mais informações.
 
 A documentação abaixo fornece informações sobre como conectar a Oracle Service Cloud à Platform usando APIs ou a interface do usuário:
 

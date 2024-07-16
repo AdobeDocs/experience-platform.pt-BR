@@ -1,79 +1,79 @@
 ---
 keywords: Experience Platform;treinar e avaliar;Data Science Workspace;tópicos populares;criar um modelo;criar uma execução de treinamento
 solution: Experience Platform
-title: Treinar e avaliar um modelo na interface do usuário do Espaço de trabalho de ciência de dados
+title: Treinar e avaliar um modelo na interface do usuário do Data Science Workspace
 type: Tutorial
-description: No Espaço de trabalho de ciência de dados do Adobe Experience Platform, um modelo de aprendizado de máquina é criado ao incorporar uma fórmula existente que é apropriada para a intenção do modelo. O modelo é então treinado e avaliado para otimizar sua eficiência operacional e eficácia ajustando seus Hiperparâmetros associados. As receitas são reutilizáveis, o que significa que vários Modelos podem ser criados e personalizados para fins específicos com uma única Fórmula.
+description: No Adobe Experience Platform Data Science Workspace, um modelo de aprendizado de máquina é criado ao incorporar uma fórmula existente que é apropriada à intenção do modelo. O modelo é então treinado e avaliado para otimizar sua eficiência operacional e eficácia ajustando seus Hiperparâmetros associados. As receitas são reutilizáveis, o que significa que vários Modelos podem ser criados e personalizados para fins específicos com uma única Fórmula.
 exl-id: 6f674cfa-c123-46a3-80e2-9342fe687976
 source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '1090'
-ht-degree: 2%
+source-wordcount: '1084'
+ht-degree: 1%
 
 ---
 
-# Treinar e avaliar um modelo na interface do usuário do Espaço de trabalho de ciência de dados
+# Treinar e avaliar um modelo na interface do usuário do Data Science Workspace
 
-No Espaço de trabalho de ciência de dados do Adobe Experience Platform, um modelo de aprendizado de máquina é criado ao incorporar uma fórmula existente que é apropriada para a intenção do modelo. O modelo é então treinado e avaliado para otimizar sua eficiência operacional e eficácia ajustando seus Hiperparâmetros associados. As receitas são reutilizáveis, o que significa que vários Modelos podem ser criados e personalizados para fins específicos com uma única Fórmula.
+No Adobe Experience Platform Data Science Workspace, um modelo de aprendizado de máquina é criado ao incorporar uma fórmula existente que é apropriada à intenção do modelo. O modelo é então treinado e avaliado para otimizar sua eficiência operacional e eficácia ajustando seus Hiperparâmetros associados. As receitas são reutilizáveis, o que significa que vários Modelos podem ser criados e personalizados para fins específicos com uma única Fórmula.
 
 Este tutorial percorre as etapas para criar, treinar e avaliar um Modelo.
 
 ## Introdução
 
-Para concluir este tutorial, você deve ter acesso a [!DNL Experience Platform]. Se você não tiver acesso a uma organização no [!DNL Experience Platform], entre em contato com o administrador do sistema antes de continuar.
+Para concluir este tutorial, você deve ter acesso a [!DNL Experience Platform]. Se você não tiver acesso a uma organização no [!DNL Experience Platform], fale com o administrador do sistema antes de continuar.
 
-Este tutorial requer uma fórmula existente. Se você não tiver uma fórmula, siga as instruções [Importar uma fórmula empacotada na interface do usuário](./import-packaged-recipe-ui.md) tutorial antes de continuar.
+Este tutorial requer uma fórmula existente. Se você não tiver uma fórmula, siga o tutorial [Importar uma fórmula empacotada na interface do usuário](./import-packaged-recipe-ui.md) antes de continuar.
 
 ## Criar um modelo
 
-No Experience Platform, selecione a variável **[!UICONTROL Modelos]** localizada na navegação à esquerda e, em seguida, selecione a guia procurar para visualizar seus Modelos existentes. Selecionar **[!UICONTROL Criar modelo]** Próximo à parte superior direita da página para iniciar um processo de criação de Modelo.
+No Experience Platform, selecione a guia **[!UICONTROL Modelos]**, localizada na navegação à esquerda, e selecione a guia Procurar para exibir seus Modelos existentes. Selecione **[!UICONTROL Criar modelo]** próximo à parte superior direita da página para iniciar um processo de criação de modelo.
 
 ![](../images/models-recipes/train-evaluate-ui/models_browse.png)
 
-Navegue pela lista de receitas existentes, localize e selecione a fórmula a ser usada para criar o modelo e selecione **[!UICONTROL Próxima]**.
+Navegue pela lista de Receitas existentes, localize e selecione a Receita a ser usada para criar o Modelo e selecione **[!UICONTROL Próximo]**.
 ![](../images/models-recipes/train-evaluate-ui/select_recipe.png)
 
-Selecione um conjunto de dados de entrada apropriado e selecione **[!UICONTROL Próxima]**. Isso definirá o conjunto de dados de treinamento de entrada padrão para o Modelo.
+Selecione um conjunto de dados de entrada apropriado e selecione **[!UICONTROL Próximo]**. Isso definirá o conjunto de dados de treinamento de entrada padrão para o Modelo.
 ![](../images/models-recipes/train-evaluate-ui/select_dataset.png)
 
 Forneça um nome para o Modelo e revise as configurações padrão do Modelo. As configurações padrão foram aplicadas durante a criação da fórmula, revise e modifique os valores de configuração clicando duas vezes nos valores.
 
-Para fornecer um novo conjunto de configurações, selecione **[!UICONTROL Carregar nova configuração]** e arraste um arquivo JSON contendo configurações de modelo para a janela do navegador. Selecionar **[!UICONTROL Concluir]** para criar o Modelo.
+Para fornecer um novo conjunto de configurações, selecione **[!UICONTROL Carregar nova configuração]** e arraste um arquivo JSON contendo configurações de modelo para a janela do navegador. Selecione **[!UICONTROL Concluir]** para criar o Modelo.
 
 >[!NOTE]
 >
->As configurações são exclusivas e específicas para a fórmula desejada. Isso significa que as configurações para a fórmula de vendas de varejo não funcionarão para a fórmula do Recommendations do produto. Consulte a [referência](#reference) seção para obter uma lista de configurações de Receita de Vendas de Varejo.
+>As configurações são exclusivas e específicas para a fórmula desejada. Isso significa que as configurações para a fórmula de vendas de varejo não funcionarão para a fórmula do Recommendations do produto. Consulte a seção [reference](#reference) para obter uma lista de configurações de receitas de vendas de varejo.
 
 ![](../images/models-recipes/train-evaluate-ui/name_and_configure.png)
 
 ## Criar uma execução de treinamento
 
-No Experience Platform, selecione a variável **[!UICONTROL Modelos]** localizada na navegação à esquerda e, em seguida, selecione a guia procurar para visualizar seus Modelos existentes. Localize e selecione o hiperlink anexado ao nome do Modelo que deseja treinar.
+No Experience Platform, selecione a guia **[!UICONTROL Modelos]**, localizada na navegação à esquerda, e selecione a guia Procurar para exibir seus Modelos existentes. Localize e selecione o hiperlink anexado ao nome do Modelo que deseja treinar.
 
 ![](../images/models-recipes/train-evaluate-ui/model-hyperlink.png)
 
-Todas as execuções de treinamento existentes com seus status de treinamento atuais são listadas. Para modelos criados usando o [!DNL Data Science Workspace] uma execução de treinamento é gerada e executada automaticamente usando as configurações padrão e o conjunto de dados de treinamento de entrada.
+Todas as execuções de treinamento existentes com seus status de treinamento atuais são listadas. Para Modelos criados usando a interface do usuário [!DNL Data Science Workspace], uma execução de treinamento é gerada e executada automaticamente usando as configurações padrão e o conjunto de dados de treinamento de entrada.
 
-Crie uma nova execução de treinamento selecionando **[!UICONTROL Treinamento]** próximo à parte superior direita da página Visão geral do modelo.
+Crie uma nova execução de treinamento selecionando **[!UICONTROL Treinar]** próximo ao canto superior direito da página Visão geral do modelo.
 
 ![](../images/models-recipes/train-evaluate-ui/model_overview.png)
 
-Selecione o conjunto de dados de entrada de treinamento para a execução de treinamento e selecione **[!UICONTROL Próxima]**.
+Selecione o conjunto de dados de entrada de treinamento para a execução de treinamento e selecione **[!UICONTROL Próximo]**.
 
 ![](../images/models-recipes/train-evaluate-ui/training_input.png)
 
-As configurações padrão fornecidas durante a criação do Modelo são mostradas, alteradas e modificadas de acordo clicando duas vezes nos valores. Selecionar **[!UICONTROL Concluir]** para criar e executar o treinamento.
+As configurações padrão fornecidas durante a criação do Modelo são mostradas, alteradas e modificadas de acordo clicando duas vezes nos valores. Selecione **[!UICONTROL Concluir]** para criar e executar a execução do treinamento.
 
 >[!NOTE]
 >
->As configurações são exclusivas e específicas para a fórmula desejada. Isso significa que as configurações para a fórmula de vendas de varejo não funcionarão para a fórmula do Recommendations do produto. Consulte a [referência](#reference) seção para obter uma lista de configurações de Receita de Vendas de Varejo.
+>As configurações são exclusivas e específicas para a fórmula desejada. Isso significa que as configurações para a fórmula de vendas de varejo não funcionarão para a fórmula do Recommendations do produto. Consulte a seção [reference](#reference) para obter uma lista de configurações de receitas de vendas de varejo.
 
 ![](../images/models-recipes/train-evaluate-ui/training_configuration.png)
 
 
 ## Avaliar o modelo
 
-No Experience Platform, selecione a variável **[!UICONTROL Modelos]** localizada na navegação à esquerda e, em seguida, selecione a guia procurar para visualizar seus Modelos existentes. Localize e selecione o hiperlink anexado ao nome do Modelo que deseja avaliar.
+No Experience Platform, selecione a guia **[!UICONTROL Modelos]**, localizada na navegação à esquerda, e selecione a guia Procurar para exibir seus Modelos existentes. Localize e selecione o hiperlink anexado ao nome do Modelo que deseja avaliar.
 
 ![selecionar modelo](../images/models-recipes/train-evaluate-ui/model-hyperlink.png)
 
@@ -83,9 +83,9 @@ A métrica Erro Percentual Absoluto Médio (MAPE) expressa a precisão como uma 
 
 ![visão geral das execuções de treinamento](../images/models-recipes/train-evaluate-ui/complete_training_run.png)
 
-A métrica &quot;Precisão&quot; descreve a porcentagem de Instâncias relevantes em comparação com o total *recuperado* Instâncias. A precisão pode ser vista como a probabilidade de um resultado selecionado aleatoriamente estar correto.
+A métrica &quot;Precisão&quot; descreve a porcentagem de Instâncias relevantes em comparação com o total de *Instâncias* recuperadas. A precisão pode ser vista como a probabilidade de um resultado selecionado aleatoriamente estar correto.
 
-![execução de várias execuções](../images/models-recipes/train-evaluate-ui/multiple_training_runs.png)
+![executando várias execuções](../images/models-recipes/train-evaluate-ui/multiple_training_runs.png)
 
 Selecionar uma execução de treinamento específica fornece os detalhes dessa execução abrindo a página de avaliação. Isso pode ser feito antes mesmo da execução ser concluída. Na página de avaliação, é possível ver outras métricas de avaliação, parâmetros de configuração e visualizações específicas para a execução do treinamento.
 
@@ -99,7 +99,7 @@ Hiperparâmetros não podem ser treinados e um modelo deve ser otimizado testand
 
 ## Próximas etapas
 
-Este tutorial guiou você pela criação, treinamento e avaliação de um Modelo no [!DNL Data Science Workspace]. Depois de chegar a um modelo otimizado, você pode usar o modelo treinado para gerar insights seguindo o [Pontuação de um modelo na interface do](./score-model-ui.md) tutorial.
+Este tutorial orientou você na criação, treinamento e avaliação de um Modelo no [!DNL Data Science Workspace]. Depois de chegar a um Modelo otimizado, você pode usar o Modelo treinado para gerar insights seguindo o tutorial [Pontuar um modelo na interface](./score-model-ui.md).
 
 ## Referência {#reference}
 
@@ -109,7 +109,7 @@ Os hiperparâmetros determinam o comportamento de treinamento do modelo. Modific
 
 | Hiperparâmetro | Descrição | Intervalo recomendado |
 | --- | --- | --- |
-| learning_rate | A taxa de aprendizado reduz a contribuição de cada árvore por learning_rate. Há uma compensação entre learning_rate e n_estimators. | 0.1 |
+| learning_rate | A taxa de aprendizado reduz a contribuição de cada árvore por learning_rate. Há uma compensação entre learning_rate e n_estimators. | 0,1 |
 | n_estimadores | O número de estágios de reforço a serem executados. O aumento de gradiente é bastante robusto para ajuste excessivo, de modo que um número grande geralmente resulta em melhor desempenho. | 100 |
 | max_depth | Profundidade máxima dos estimadores de regressão individuais. A profundidade máxima limita o número de nós na árvore. Ajuste esse parâmetro para obter o melhor desempenho; o melhor valor depende da interação das variáveis de entrada. | 3 |
 

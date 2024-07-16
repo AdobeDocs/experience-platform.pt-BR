@@ -7,7 +7,7 @@ exl-id: e07f8c5a-0424-4de5-810f-3d5711ef4606
 source-git-commit: 4566d5241f287801569e0cfa5b86ea6210fd1638
 workflow-type: tm+mt
 source-wordcount: '376'
-ht-degree: 3%
+ht-degree: 5%
 
 ---
 
@@ -35,17 +35,17 @@ O Adobe Experience Platform é compatível com os seguintes destinos de marketin
 
 ## Conectar-se a um novo destino de marketing por email {#connect-destination}
 
-Para enviar públicos-alvo para destinos de marketing por email de suas campanhas, a Platform deve primeiro se conectar ao destino. Consulte a [tutorial de criação do destino](../../ui/connect-destination.md) para obter informações detalhadas sobre como configurar um novo destino.
+Para enviar públicos-alvo para destinos de marketing por email de suas campanhas, a Platform deve primeiro se conectar ao destino. Consulte o [tutorial de criação de destino](../../ui/connect-destination.md) para obter informações detalhadas sobre a configuração de um novo destino.
 
 ## Práticas recomendadas ao ativar públicos para destinos de marketing por email {#best-practices}
 
 ### Seleção de identidade {#identity}
 
-O Adobe recomenda que você selecione um identificador exclusivo de sua [esquema de união](../../../profile/home.md#profile-fragments-and-union-schemas). Este é o campo do qual suas identidades de usuário são destacadas. Normalmente, esse campo é o endereço de email, mas também pode ser uma ID de programa de fidelidade ou um número de telefone. Consulte a tabela abaixo para obter os identificadores exclusivos mais comuns e seu campo XDM no esquema.
+A Adobe recomenda que você selecione um identificador exclusivo do seu [esquema de união](../../../profile/home.md#profile-fragments-and-union-schemas). Este é o campo do qual suas identidades de usuário são destacadas. Normalmente, esse campo é o endereço de email, mas também pode ser uma ID de programa de fidelidade ou um número de telefone. Consulte a tabela abaixo para obter os identificadores exclusivos mais comuns e seu campo XDM no esquema.
 
 | Identificador exclusivo | Campo XDM no esquema unificado |
 |----------------- | ---------------------------|
-| Endereço de email | `personalEmail.address` |
+| Endereço de e-mail | `personalEmail.address` |
 | Telefone | `mobilePhone.number` |
 | ID do programa de fidelidade | `Customer-defined XDM field` |
 
@@ -57,7 +57,7 @@ No seletor de campo Esquema, escolha quais outros campos você deseja exportar p
 
 | Esquema | Campo XDM |
 |------ | ---------|
-| Primeiro nome | `person.name.firstName` |
+| Nome | `person.name.firstName` |
 | Sobrenome | `person.name.lastName` |
 | Telefone | `mobilePhone.number` |
 | Cidade do Endereço | `homeAddress.city` |
@@ -74,7 +74,7 @@ Alguns destinos de marketing por email no catálogo exportam perfis de maneira c
 
 Outros destinos exportam arquivos para um local de armazenamento na nuvem. Após concluir a exportação, é necessário importar os dados do local de armazenamento na nuvem para o destino de marketing por email.
 
-Siga os links no [destinos de marketing por email compatíveis](#supported-destinations) para saber como ativar públicos-alvo para cada destino de marketing por email.
+Siga os links na seção [destinos de marketing por email compatíveis](#supported-destinations) para saber como ativar públicos para cada destino de marketing por email.
 
 ## Recursos adicionais {#additional-resources}
 

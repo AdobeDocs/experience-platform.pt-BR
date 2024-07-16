@@ -13,12 +13,12 @@ ht-degree: 0%
 
 # Sincronização de identidades entre Audience Manager e Experience Platform
 
-O SDK da Web da Adobe Experience Platform é compatível com a capacidade de declarar IDs do cliente e seus estados de autenticação por meio do [sendEvent](./overview.md#syncing-identities) comando.
+O Adobe Experience Platform Web SDK oferece suporte à capacidade de declarar IDs do cliente e seus estados de autenticação por meio do comando [sendEvent](./overview.md#syncing-identities).
 
-Escolha seus namespaces na [Namespaces do serviço de identidade](../../identity/../identity-service/features/namespaces.md) para indicar o contexto ao qual uma identidade está relacionada, usando os valores da coluna Símbolo de Identidade:
+Escolha seus namespaces nos [Namespaces do Serviço de Identidade](../../identity/../identity-service/features/namespaces.md) para indicar o contexto ao qual uma identidade está relacionada, usando os valores na coluna Símbolo de Identidade:
 
 ![Exibição da interface do Namespaces](../assets/identity/edge_namespaceUI_identity-symbol.png)
 
-Como cliente do Audience Manager, todas as Fontes de dados existentes que usam o Tipo de ID: entre dispositivos têm automaticamente um Namespace de identidade correspondente. Para localizar o Namespace de identidade correspondente à sua Fonte de dados do Audience Manager, faça logon no Adobe Experience Platform e navegue até a seção Identidades.
+Como cliente do Audience Manager, todas as Fontes de dados existentes que usam o Tipo de ID: entre dispositivos têm automaticamente um Namespace de identidade correspondente. Para localizar o Namespace de identidade correspondente ao seu Audience Manager Data Source, faça logon no Adobe Experience Platform e navegue até a seção Identidades.
 
-Qualquer novo [!DNL Audience Manager] Fonte de dados que usa o tipo de ID: o entre dispositivos gerará um namespace de identidade correspondente. No momento, não há suporte para os tipos de ID de fonte de dados Cookie e ID de anúncio de dispositivo. Além disso, qualquer namespace de identidade criado no Adobe Experience Platform gerará um [!DNL Audience Manager] Fonte de dados, mas observe que o método syncIdentity é compatível apenas com Símbolos de identidade de namespace.
+Qualquer novo Source de Dados [!DNL Audience Manager] que use o Tipo de ID: Entre Dispositivos gerará um Namespace de Identidade correspondente. Os tipos de dados Source ID Cookie e Device Advertising ID não são suportados no momento. Além disso, qualquer Namespace de identidade criado no Adobe Experience Platform gerará um Source de dados [!DNL Audience Manager] correspondente, mas observe que o método syncIdentity suporta apenas Símbolos de identidade de namespace.

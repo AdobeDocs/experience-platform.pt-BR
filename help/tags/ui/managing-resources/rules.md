@@ -53,7 +53,7 @@ Crie uma regra especificando quais ações ocorrem se uma condição for atendid
 
 >[!TIP]
 >
->Você pode exibir recursos adicionais disponíveis para saber mais sobre este recurso selecionando ![sobre](../../images/ui/event-forwarding/overview/about.png) no painel direito.
+>Você pode ver recursos adicionais disponíveis para saber mais sobre este recurso selecionando ![sobre](../../images/ui/event-forwarding/overview/about.png) no painel direito.
 
 1. Abra a guia [!UICONTROL Regras] e selecione **[!UICONTROL Criar nova regra]**.
 
@@ -91,7 +91,7 @@ Crie uma regra especificando quais ações ocorrem se uma condição for atendid
 
      Se quiser que um componente seja executado depois, dê a ele um número maior que 50. Para obter mais informações sobre a ordenação, consulte [Ordenação de regra](rules.md#rule-ordering).
 
-1. Selecione as condições **[!UICONTROL Adicionar]** e selecione um tipo lógico, uma extensão, um tipo de condição e defina as configurações da sua condição. Em seguida, selecione **[!UICONTROL Manter alterações]**.
+1. Selecione o ícone Condições **[!UICONTROL Adicionar]**, selecione um tipo lógico, uma extensão, um tipo de condição e defina as configurações para a sua condição. Em seguida, selecione **[!UICONTROL Manter alterações]**.
 
    ![Página de configuração da condição de regras.](../../images/condition-settings.png)
 
@@ -106,7 +106,7 @@ Crie uma regra especificando quais ações ocorrem se uma condição for atendid
 
    Você pode adicionar quantas condições desejar. Várias condições dentro da mesma regra são unidas por AND.
 
-1. Selecionar as ações **[!UICONTROL Adicionar]** e selecione sua extensão e um dos tipos de ação disponíveis para essa extensão, defina as configurações para a ação e selecione **[!UICONTROL Manter alterações]**.
+1. Selecione o ícone Ações **[!UICONTROL Adicionar]**, selecione sua extensão e um dos tipos de ação disponíveis para essa extensão, defina as configurações para a ação e selecione **[!UICONTROL Manter alterações]**.
 
    ![Página de configuração da ação de regras.](../../images/action-settings.png)
 
@@ -167,13 +167,13 @@ A Adobe não pode garantir que qualquer outra regra será acionada e que o códi
 
 ## Sequência de componentes da regra {#sequencing}
 
-O comportamento do ambiente de tempo de execução depende se **[!UICONTROL Executar componentes da regra em sequência]** está ativado ou desativado para sua propriedade. Essa configuração determina se os componentes de uma regra podem ser avaliados em paralelo (de forma assíncrona) ou se devem ser avaliados em sequência.
+O comportamento do ambiente de tempo de execução depende de a opção **[!UICONTROL Executar os componentes da regra na sequência]** estar ativada ou desativada na propriedade. Essa configuração determina se os componentes de uma regra podem ser avaliados em paralelo (de forma assíncrona) ou se devem ser avaliados em sequência.
 
 >[!IMPORTANT]
 >
->Essa configuração determina apenas como as condições e ações são avaliadas em cada regra e não afeta a sequência na qual as próprias regras são executadas na propriedade. Consulte a seção anterior sobre [ordenação de regra](#rule-ordering) para obter mais informações sobre como determinar a ordem de execução de várias regras.
+>Essa configuração determina apenas como as condições e ações são avaliadas em cada regra e não afeta a sequência na qual as próprias regras são executadas na propriedade. Consulte a seção anterior em [ordenação de regras](#rule-ordering) para obter mais informações sobre como determinar a ordem de execução de várias regras.
 >
->Entrada [encaminhamento de eventos](../event-forwarding/overview.md) As propriedades e as ações de regra são sempre executadas sequencialmente e essa configuração não está disponível. Verifique se a ordem está correta ao criar a regra.
+>Nas propriedades de [encaminhamento de eventos](../event-forwarding/overview.md), as ações de regra são sempre executadas sequencialmente e essa configuração não está disponível. Verifique se a ordem está correta ao criar a regra.
 
 ### Ativado
 

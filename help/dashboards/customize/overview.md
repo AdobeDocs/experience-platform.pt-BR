@@ -6,7 +6,7 @@ exl-id: efabdb61-4148-4b0e-b7a1-6e788b5e43a8
 source-git-commit: 32dd90018c990e7013d826b29608a61022ba808b
 workflow-type: tm+mt
 source-wordcount: '468'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -20,15 +20,15 @@ Os perfis, segmentos e painéis de destinos disponíveis no Adobe Experience Pla
 
 ## Modificar painel
 
-Selecionar **[!UICONTROL Modificar painel]** nos painéis perfis, segmentos ou destinos, é possível ajustar o tamanho, a ordem e o local dos widgets que estão visíveis no painel. Para obter informações sobre como modificar a aparência dos widgets nos painéis, consulte o [guia de modificação de painéis](modify.md).
+Selecionar **[!UICONTROL Modificar painel]** nos painéis de perfis, segmentos ou destinos permite que você ajuste o tamanho, a ordem e o local dos widgets que estão visíveis no seu painel. Para obter informações sobre como modificar a aparência dos widgets nos painéis, consulte o [guia de modificação de painéis](modify.md).
 
 ## A biblioteca de widgets
 
-A biblioteca de widgets no Experience Platform é onde você pode exibir todos os [padrão](#standard-widgets) e [personalizado](#custom-widgets) widgets disponíveis para sua organização. Nos painéis (por exemplo, o painel de perfis), é possível selecionar **[!UICONTROL Modificar painel]** para exibir a variável **[!UICONTROL Biblioteca de widgets]** botão.
+A biblioteca de widgets no Experience Platform é onde você pode exibir todos os widgets [padrão](#standard-widgets) e [personalizados](#custom-widgets) disponíveis na sua organização. Nos seus painéis (por exemplo, o painel de perfis), você pode selecionar **[!UICONTROL Modificar painel]** para exibir o botão **[!UICONTROL Biblioteca de widgets]**.
 
 ![O painel Perfis com o painel Modificar realçado.](../images/customization/modify-dashboard.png)
 
-Selecionar **[!UICONTROL Biblioteca de widgets]** para abrir a biblioteca de widgets e exibir todas as métricas padrão disponíveis ou começar a criar widgets personalizados.
+Selecione **[!UICONTROL Biblioteca de widgets]** para abrir a biblioteca de widgets e exibir todas as métricas padrão disponíveis ou começar a criar widgets personalizados.
 
 ![O painel Perfis com a biblioteca Widget realçada.](../images/customization/widget-library-button.png)
 
@@ -36,21 +36,21 @@ Selecionar **[!UICONTROL Biblioteca de widgets]** para abrir a biblioteca de wid
 
 Os widgets padrão se referem aos widgets fornecidos pelo Adobe para uso em seus painéis. Esses widgets são somente leitura e não podem ser editados por sua organização.
 
-Na biblioteca de widgets, a variável **[!UICONTROL Padrão]** A guia contém todos os widgets padrão disponíveis fornecidos pelo Adobe. Você pode atualizar seus painéis usando qualquer uma dessas métricas padrão. Para saber mais sobre como adicionar widgets padrão ao painel, consulte o guia para [uso de widgets padrão em painéis](standard-widgets.md).
+Na biblioteca de widgets, a guia **[!UICONTROL Padrão]** contém todos os widgets padrão disponíveis fornecidos pelo Adobe. Você pode atualizar seus painéis usando qualquer uma dessas métricas padrão. Para saber mais sobre como adicionar widgets padrão ao seu painel, consulte o guia para [usar widgets padrão em painéis](standard-widgets.md).
 
 ### Widgets personalizados {#custom-widgets}
 
-Widgets personalizados se referem a widgets criados e compartilhados por membros de sua organização. Esses widgets são criados por meio do **[!UICONTROL Personalizado]** da biblioteca de widgets e solicitar que sua organização especifique as métricas disponíveis usando um [schema](#edit-schema)
+Widgets personalizados se referem a widgets criados e compartilhados por membros de sua organização. Esses widgets são criados por meio da guia **[!UICONTROL Personalizado]** da biblioteca de widgets e exigem que sua organização especifique as métricas disponíveis usando um [esquema](#edit-schema)
 
-Para obter as etapas completas para criar seus próprios widgets, consulte [guia de widgets personalizados para painéis](custom-widgets.md).
+Para obter as etapas completas para criar seus próprios widgets, consulte o [guia de widgets personalizados para painéis](custom-widgets.md).
 
-![A área de trabalho da biblioteca de widgets com as opções Padrão e Personalizada realçadas.](../images/customization/widget-library.png)
+![O espaço de trabalho da biblioteca de dispositivos com realce Padrão e Personalizado.](../images/customization/widget-library.png)
 
 #### Editar esquema {#edit-schema}
 
-Para criar um [widget personalizado](#custom-widgets) para seus painéis, você deve primeiro identificar o atributo Perfil de cliente em tempo real no qual o widget será baseado.
+Para criar um [widget personalizado](#custom-widgets) para seus painéis, primeiro você deve identificar o atributo Perfil do cliente em tempo real no qual o widget será baseado.
 
-Para obter instruções passo a passo para editar o esquema da sua organização para criar widgets de painel personalizados, visite o guia para [editar o esquema de painel](edit-schema.md).
+Para obter instruções passo a passo sobre como editar o esquema da sua organização para criar widgets de painel personalizados, visite o manual para [editar seu esquema de painel](edit-schema.md).
 
 ## Próximas etapas
 

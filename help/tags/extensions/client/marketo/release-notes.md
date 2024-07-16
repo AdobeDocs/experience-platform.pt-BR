@@ -4,7 +4,7 @@ description: As notas de versão mais recentes da extensão de tag Marketo Munch
 exl-id: 709265fc-f227-4995-8976-6170da60c89e
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
-source-wordcount: '140'
+source-wordcount: '146'
 ht-degree: 87%
 
 ---

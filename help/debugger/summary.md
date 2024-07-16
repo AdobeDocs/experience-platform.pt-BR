@@ -15,7 +15,7 @@ ht-degree: 82%
 
 # Guia Resumo
 
-Para executar o Adobe Experience Platform Debugger, abra a página que deseja examinar no navegador e selecione o ícone (![](images/start-icon.jpg)) na barra do navegador. A extensão é aberta no **Resumo** guia.
+Para executar o Adobe Experience Platform Debugger, abra a página que deseja examinar no navegador e selecione o ícone (![](images/start-icon.jpg)) na barra do navegador. A extensão é aberta na guia **Resumo**.
 
 ![](images/summary.jpg)
 
@@ -71,25 +71,25 @@ O Experience Platform Debugger mostra as seguintes informações para cada solu�
  </tbody> 
 </table>
 
-**Tags do Adobe Experience Platform**
+**Marcas do Adobe Experience Platform**
 
 <table id="table_E9574975444A407887E26514D1BB1601"> 
  <tbody> 
   <tr> 
    <td colname="col1"> <p>Nome </p> </td> 
-   <td colname="col2"> <p>O nome da tag <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/admin/companies-and-properties.html" format="https" scope="external"> propriedade</a> </p> </td> 
+   <td colname="col2"> <p>O nome da marca <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/admin/companies-and-properties.html" format="https" scope="external"> propriedade</a> </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>Versão </p> </td> 
-   <td colname="col2"> <p>A versão da Turbina</a> </p> </td> 
+   <td colname="col2"> <p>A versão da Turbine</a> </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>Data de build </p> </td> 
-   <td colname="col2"> <p>A tag <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/libraries.html" format="https" scope="external"> biblioteca</a> data da compilação </p> </td> 
+   <td colname="col2"> <p>A data de compilação da biblioteca <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/libraries.html" format="https" scope="external"> de marcas </a> </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>Ambiente </p> </td> 
-   <td colname="col2"> <p>A variável <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html" format="https" scope="external"> ambiente</a> usado pela biblioteca de tags </p> </td> 
+   <td colname="col2"> <p>O <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html?lang=pt-BR" format="https" scope="external"> ambiente</a> usado pela biblioteca de marcas </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>Extensões </p> </td> 
@@ -162,7 +162,7 @@ O Experience Platform Debugger mostra as seguintes informações para cada solu�
   </tr> 
   <tr> 
    <td colname="col1"> <p>Evento de carregamento de página </p> </td> 
-   <td colname="col2"> <p>O tipo de <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/target/overview.html?lang=pt-BR" format="html" scope="external">evento</a> acionado quando a página é carregada. </p> </td> 
+   <td colname="col2"> <p>O tipo de <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/target/overview.html" format="html" scope="external">evento</a> acionado quando a página é carregada. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>Nome da solicitação </p> </td> 

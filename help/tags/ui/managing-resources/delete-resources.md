@@ -15,7 +15,7 @@ ht-degree: 90%
 >
 >O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
-A exclusão de um recurso é uma remoção permanente desse recurso da Adobe Experience Platform. Se você quiser remover um recurso de uma biblioteca de tags específica, mas ainda quiser que esse recurso esteja disponível para uso em outras bibliotecas, consulte o manual no [remoção de recursos de uma biblioteca](remove-resources-from-library.md).
+A exclusão de um recurso é uma remoção permanente desse recurso da Adobe Experience Platform. Se você quiser remover um recurso de uma biblioteca de marcas específica, mas ainda quiser que esse recurso esteja disponível para uso em outras bibliotecas, consulte o manual em [removendo recursos de uma biblioteca](remove-resources-from-library.md).
 
 É possível excluir elementos de dados, regras, extensões, hosts, ambientes e propriedades. Depois da exclusão, esses recursos não poderão ser recuperados.
 
@@ -72,8 +72,8 @@ Antes de excluir um recurso, você deve removê-lo de qualquer biblioteca que o 
 
 #### Produção
 
-1. Desative o recurso.
-1. Publique o recurso desativado para produção.
+1. Desabilite o recurso.
+1. Publique o recurso desabilitado para produção.
 1. Exclua o recurso.
 
 ## Excluir um recurso

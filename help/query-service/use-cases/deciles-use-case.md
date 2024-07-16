@@ -25,12 +25,12 @@ Os principais conceitos são ilustrados a seguir:
 
 ## Introdução
 
-Este guia requer uma compreensão funcional de [execução da consulta no Serviço de consulta](../best-practices/writing-queries.md) e os seguintes componentes do Adobe Experience Platform:
+Este guia requer uma compreensão funcional de [execução da consulta no Serviço de Consulta](../best-practices/writing-queries.md) e dos seguintes componentes do Adobe Experience Platform:
 
-* [Visão geral do Perfil do cliente em tempo real](../../profile/home.md): fornece um perfil de consumidor unificado em tempo real com base em dados agregados de várias fontes.
-* [Noções básicas da composição do esquema](../../xdm/schema/composition.md): uma introdução aos esquemas do Experience Data Model (XDM) e aos componentes, princípios e práticas recomendadas para a composição de esquemas.
-* [Como ativar um esquema para o Perfil do cliente em tempo real](../../profile/tutorials/add-profile-data.md): este tutorial descreve as etapas necessárias para adicionar dados ao Perfil do cliente em tempo real.
-* [Como definir um tipo de dados personalizado](../../xdm/api/data-types.md): os tipos de dados são usados como campos do tipo referência em classes ou grupos de campos de esquema e permitem o uso consistente de uma estrutura de vários campos que pode ser incluída em qualquer lugar do esquema.
+* [Visão geral do Perfil do cliente em tempo real](../../profile/home.md): fornece um perfil do cliente unificado em tempo real com base em dados agregados de várias fontes.
+* [Noções básicas da composição de esquema](../../xdm/schema/composition.md): uma introdução aos esquemas do Experience Data Model (XDM) e aos blocos de construção, princípios e práticas recomendadas para a composição de esquemas.
+* [Como habilitar um esquema para o Perfil de Cliente em Tempo Real](../../profile/tutorials/add-profile-data.md): este tutorial descreve as etapas necessárias para adicionar dados ao Perfil de Cliente em Tempo Real.
+* [Como definir um tipo de dados personalizado](../../xdm/api/data-types.md): os tipos de dados são usados como campos de tipo de referência em classes ou grupos de campos de esquema e permitem o uso consistente de uma estrutura de vários campos que pode ser incluída em qualquer lugar do esquema.
 
 ## Objetivos
 
@@ -46,21 +46,21 @@ Este guia usa um conjunto de dados de fidelidade de linha aérea para demonstrar
 
 Usando o Serviço de consulta, você pode criar um conjunto de dados que contenha decis categóricos, que podem ser segmentados para criar públicos-alvo com base na classificação de atributos. Os conceitos exibidos nos exemplos a seguir podem ser aplicados para criar outros conjuntos de dados de bucket de decil, desde que uma categoria esteja definida e uma métrica esteja disponível.
 
-O exemplo de dados de fidelidade aérea usa um [Classe XDM ExperienceEvents](../../xdm/classes/experienceevent.md). Cada evento é um registro de uma transação comercial por quilometragem, creditada ou debitada, e o status de fidelidade do membro de &quot;Flyer&quot;, &quot;Frequent&quot;, &quot;Silver&quot; ou &quot;Gold&quot;. O campo de identidade principal é `membershipNumber`.
+O exemplo de dados de fidelidade aérea usa uma [classe XDM ExperienceEvents](../../xdm/classes/experienceevent.md). Cada evento é um registro de uma transação comercial por quilometragem, creditada ou debitada, e o status de fidelidade do membro de &quot;Flyer&quot;, &quot;Frequent&quot;, &quot;Silver&quot; ou &quot;Gold&quot;. O campo de identidade principal é `membershipNumber`.
 
 ### Conjuntos de dados de exemplo
 
 O conjunto de dados inicial de fidelidade da companhia aérea para este exemplo é &quot;Dados de fidelidade da companhia aérea&quot; e tem o seguinte esquema. Observe que a identidade principal do esquema é `_profilefoundationreportingstg.membershipNumber`.
 
-![Um diagrama do schema de dados de fidelidade da linha aérea.](../images/use-cases/airline-loyalty-data.png)
+![Um diagrama do esquema de Dados de Fidelidade de Linhas Aéreas.](../images/use-cases/airline-loyalty-data.png)
 
 **Dados de exemplo**
 
-A tabela a seguir exibe os dados de exemplo contidos na variável `_profilefoundationreportingstg` objeto usado para este exemplo. Ele fornece contexto para o uso de buckets decis para criar conjuntos de dados derivados complexos.
+A tabela a seguir exibe os dados de exemplo contidos no objeto `_profilefoundationreportingstg` usado para este exemplo. Ele fornece contexto para o uso de buckets decis para criar conjuntos de dados derivados complexos.
 
 >[!NOTE]
 >
->Por uma questão de brevidade, a ID do locatário `_profilefoundationreportingstg` foi omitido do início do namespace nos títulos das colunas e nas menções subsequentes em todo o documento.
+>Para abreviar, a ID do locatário `_profilefoundationreportingstg` foi omitida do início do namespace nos títulos das colunas e menções subsequentes em todo o documento.
 
 | `.membershipNumber` | `.emailAddress.address` | `.transactionDate` | `.transactionType` | `.transactionDetails` | `.mileage` | `.loyaltyStatus` |
 |---|---|---|---|---|---|---|
@@ -74,31 +74,31 @@ A tabela a seguir exibe os dados de exemplo contidos na variável `_profilefound
 
 ## Gerar conjuntos de dados decis
 
-Nos dados de fidelidade da companhia aérea `.mileage` contém o número de milhas voadas por um membro para cada voo individual realizado. Esses dados são usados para criar decis para o número de milhas percorridas em retrospectivas de vida útil e uma variedade de períodos de retrospectiva. Para essa finalidade, é criado um conjunto de dados que contém decis em um tipo de dados de mapa para cada período de pesquisa e um decil apropriado para cada período de pesquisa atribuído em `membershipNumber`.
+Nos dados de fidelidade da linha aérea vistos acima, o valor `.mileage` contém o número de milhas voadas por um membro para cada voo individual realizado. Esses dados são usados para criar decis para o número de milhas percorridas em retrospectivas de vida útil e uma variedade de períodos de retrospectiva. Para essa finalidade, é criado um conjunto de dados que contém decis em um tipo de dados de mapa para cada período de pesquisa e um decil apropriado para cada período de pesquisa atribuído em `membershipNumber`.
 
 Crie um &quot;Esquema de decil de fidelidade de linha aérea&quot; para criar um conjunto de dados decil usando o Serviço de consulta.
 
-![Um diagrama do &quot;Esquema do decil de fidelidade da companhia aérea&quot;.](../images/use-cases/airline-loyalty-decile-schema.png)
+![Um diagrama do &quot;Esquema do Decil de Fidelidade da Companhia Aérea&quot;.](../images/use-cases/airline-loyalty-decile-schema.png)
 
 ### Ativar o esquema para o Perfil de cliente em tempo real
 
-Os dados assimilados no Experience Platform para uso pelo Perfil do cliente em tempo real devem estar em conformidade com [um esquema do Experience Data Model (XDM) que está ativado para o Perfil](../../xdm/ui/resources/schemas.md). Para que um esquema seja ativado para Perfil, ele deve implementar o Perfil individual XDM ou a classe XDM ExperienceEvent.
+Os dados assimilados no Experience Platform para uso pelo Perfil do cliente em tempo real devem estar em conformidade com [um esquema do Experience Data Model (XDM) habilitado para o Perfil](../../xdm/ui/resources/schemas.md). Para que um esquema seja ativado para Perfil, ele deve implementar o Perfil individual XDM ou a classe XDM ExperienceEvent.
 
-[Ative seu esquema para uso no Perfil de cliente em tempo real usando a API do registro de esquema](../../xdm/tutorials/create-schema-api.md) ou o [Interface do usuário do Editor de esquemas](../../xdm/tutorials/create-schema-ui.md).  Instruções detalhadas sobre como ativar um esquema para o Perfil estão disponíveis na respectiva documentação.
+[Habilite seu esquema para uso no Perfil do Cliente em Tempo Real usando a API do Registro de Esquema](../../xdm/tutorials/create-schema-api.md) ou a [interface do usuário do Editor de Esquemas](../../xdm/tutorials/create-schema-ui.md).  Instruções detalhadas sobre como ativar um esquema para o Perfil estão disponíveis na respectiva documentação.
 
 Em seguida, crie um tipo de dados que será reutilizado para todos os grupos de campos relacionados a decis. A criação do grupo de campos decis é uma etapa única por sandbox. Ele também pode ser reutilizado para todos os schemas relacionados a decis.
 
 ### Criar um namespace de identidade e marcá-lo como o identificador principal {#identity-namespace}
 
-Qualquer esquema criado para uso com decis deve ter uma identidade primária atribuída. Você pode [definir um campo de identidade na interface do usuário de esquemas do Adobe Experience Platform](../../xdm/ui/fields/identity.md#define-an-identity-field)ou por meio da [API do registro de esquema](../../xdm/api/descriptors.md#create).
+Qualquer esquema criado para uso com decis deve ter uma identidade primária atribuída. Você pode [definir um campo de identidade na interface do usuário de Esquemas do Adobe Experience Platform](../../xdm/ui/fields/identity.md#define-an-identity-field) ou por meio da [API do Registro de Esquemas](../../xdm/api/descriptors.md#create).
 
-O Serviço de consulta também permite definir uma identidade ou uma identidade primária para campos de conjunto de dados de esquema ad hoc diretamente pelo SQL. Consulte a documentação em [definição de uma identidade secundária e uma identidade primária em identidades de esquema ad hoc](../data-governance/ad-hoc-schema-identities.md) para obter mais informações.
+O Serviço de consulta também permite definir uma identidade ou uma identidade primária para campos de conjunto de dados de esquema ad hoc diretamente pelo SQL. Consulte a documentação sobre [configuração de uma identidade secundária e identidade primária em identidades de esquema ad hoc](../data-governance/ad-hoc-schema-identities.md) para obter mais informações.
 
 ### Criar uma consulta para calcular decis em um período de pesquisa {#create-a-query}
 
 O exemplo a seguir demonstra a consulta SQL para calcular um decil em um período de lookback.
 
-Um modelo pode ser feito usando o Editor de consultas na interface ou por meio do [API do serviço de consulta](../api/query-templates.md#create-a-query-template).
+Um modelo pode ser criado usando o Editor de Consultas na interface ou por meio da [API de Serviço de Consulta](../api/query-templates.md#create-a-query-template).
 
 ```sql
 CREATE TABLE AS airline_loyality_decile 
@@ -193,7 +193,7 @@ O tipo de dados decile contém um intervalo para lookbacks 1, 3, 6, 9, 12 e temp
 
 >[!NOTE]
 >
->Se os dados de origem não tiverem uma coluna que possa ser usada para determinar um período de lookback, todas as classificações de classe de decis serão executadas em `decileMonthAll`.
+>Se os dados de origem não tiverem uma coluna que possa ser usada para determinar um período de pesquisa, todas as classificações de classe decil serão executadas em `decileMonthAll`.
 
 #### Agregação
 
@@ -210,13 +210,13 @@ summed_miles_1 AS (
 )
 ```
 
-O bloco é repetido duas vezes no modelo (`summed_miles_3` e `summed_miles_6`) com uma alteração no cálculo de data para gerar os dados para os outros períodos de lookback.
+O bloco é repetido duas vezes no modelo (`summed_miles_3` e `summed_miles_6`) com uma alteração no cálculo de data para gerar os dados para os outros períodos de pesquisa.
 
 É importante observar as colunas de identidade, dimensão e métrica da consulta (`membershipNumber`, `loyaltyStatus` e `totalMiles` respectivamente).
 
 #### Classificação
 
-Deciles permitem executar classificação categórica. Para criar o número de classificação, a variável `NTILE` é usada com um parâmetro de `10` em uma JANELA agrupada pelo `loyaltyStatus` campo. Isso resulta em uma classificação de 1 a 10. Defina o `ORDER BY` da cláusula `WINDOW` para `DESC` para garantir que um valor de classificação de `1` é dada à **maior** dentro da dimensão.
+Deciles permitem executar classificação categórica. Para criar o número de classificação, a função `NTILE` é usada com um parâmetro de `10` em uma JANELA agrupada pelo campo `loyaltyStatus`. Isso resulta em uma classificação de 1 a 10. Defina a cláusula `ORDER BY` de `WINDOW` como `DESC` para garantir que um valor de classificação de `1` seja fornecido para a métrica **greater** dentro da dimensão.
 
 ```sql
 rankings_1 AS (
@@ -230,7 +230,7 @@ rankings_1 AS (
 
 #### Agregação de mapa
 
-Com vários períodos de pesquisa, é necessário criar os mapas de categorias de decis antecipadamente usando a variável `MAP_FROM_ARRAYS` e `COLLECT_LIST` funções. No trecho de exemplo, `MAP_FROM_ARRAYS` cria um mapa com um par de chaves (`loyaltyStatus`) e valores (`decileBucket`) storages. `COLLECT_LIST` retorna uma matriz com todos os valores na coluna especificada.
+Com vários períodos de pesquisa, é necessário criar os mapas de bloco de decis com antecedência usando as funções `MAP_FROM_ARRAYS` e `COLLECT_LIST`. No trecho de exemplo, `MAP_FROM_ARRAYS` cria um mapa com um par de matrizes de chaves (`loyaltyStatus`) e valores (`decileBucket`). `COLLECT_LIST` retorna uma matriz com todos os valores na coluna especificada.
 
 ```sql
 map_1 AS (
@@ -257,7 +257,7 @@ all_memberships AS (
 
 >[!NOTE]
 >
->Se a classificação de decis for necessária somente para um período de tempo de vida, essa etapa poderá ser omitida e agregada por `membershipNumber` pode ser feito na etapa final.
+>Se a classificação decil for necessária apenas para um período de tempo de vida, essa etapa poderá ser omitida e a agregação por `membershipNumber` poderá ser feita na etapa final.
 
 #### Unir todos os dados temporários
 
@@ -295,7 +295,7 @@ Uma correlação entre o número de classificação e o percentil é garantida n
 
 ### Executar o modelo de consulta
 
-Execute a consulta para preencher o conjunto de dados decile. Você também pode salvar a consulta como um template e agendá-la para ser executada em uma cadência. Quando salva como modelo, a consulta também pode ser atualizada para usar o padrão criar e inserir que faz referência ao `table_exists` comando. Mais informações sobre como usar o `table_exists`comando pode ser encontrado no campo [Guia de sintaxe SQL](../sql/syntax.md#table-exists).
+Execute a consulta para preencher o conjunto de dados decile. Você também pode salvar a consulta como um template e agendá-la para ser executada em uma cadência. Quando salva como modelo, a consulta também pode ser atualizada para usar o padrão de criação e inserção que faz referência ao comando `table_exists`. Mais informações sobre como usar o `table_exists`comando podem ser encontradas no [guia de sintaxe do SQL](../sql/syntax.md#table-exists).
 
 ## Próximas etapas
 

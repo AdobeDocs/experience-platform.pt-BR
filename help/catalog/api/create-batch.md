@@ -6,14 +6,14 @@ description: Você pode criar um lote fazendo uma solicitação POST para o endp
 exl-id: 1d2cbca9-1cd6-4b89-9b77-3687268bd849
 source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
-source-wordcount: '117'
+source-wordcount: '118'
 ht-degree: 5%
 
 ---
 
 # Criar um lote
 
-Para que um conjunto de dados assimile dados, ele deve ter um lote associado a ele. Usar o `id` de um conjunto de dados existente, é possível criar um lote fazendo uma solicitação POST para o `/batches` endpoint na variável [!DNL Catalog] API.
+Para que um conjunto de dados assimile dados, ele deve ter um lote associado a ele. Usando o valor `id` de um conjunto de dados existente, você pode criar um lote fazendo uma solicitação POST para o ponto de extremidade `/batches` na API [!DNL Catalog].
 
 **Formato da API**
 
@@ -38,11 +38,11 @@ curl -X POST 'https://platform.adobe.io/data/foundation/import/batches' \
 
 | Propriedade | Descrição |
 | --- | --- |
-| `datasetId` | A variável `id` do conjunto de dados ao qual o lote será associado. |
+| `datasetId` | O `id` do conjunto de dados ao qual o lote será associado. |
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o Status HTTP 201 (Criado) e um objeto de resposta contendo detalhes do lote recém-criado, incluindo seu `id`, uma sequência de caracteres gerada pelo sistema somente leitura.
+Uma resposta bem-sucedida retorna o Status HTTP 201 (Criado) e um objeto de resposta contendo detalhes do lote recém-criado, incluindo seu `id`, uma cadeia de caracteres gerada pelo sistema somente leitura.
 
 ```JSON
 {

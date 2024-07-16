@@ -1,22 +1,22 @@
 ---
 solution: Experience Platform
-title: Funções de String PQL
-description: A Linguagem de consulta de perfil (PQL) oferece funções para simplificar a interação com strings.
+title: Funções de string do PQL
+description: O Profile Query Language (PQL) oferece funções para tornar a interação com strings mais simples.
 exl-id: 9fd79d86-0802-4312-abce-f6ef5ba5bb34
 source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '823'
-ht-degree: 7%
+source-wordcount: '815'
+ht-degree: 5%
 
 ---
 
 # Funções de string
 
-[!DNL Profile Query Language] O (PQL) oferece funções para simplificar a interação com strings. Mais informações sobre outras funções PQL podem ser encontradas no [[!DNL Profile Query Language] visão geral](./overview.md).
+O [!DNL Profile Query Language] (PQL) oferece funções para simplificar a interação com cadeias de caracteres. Mais informações sobre outras funções do PQL podem ser encontradas na [[!DNL Profile Query Language] visão geral](./overview.md).
 
 ## Curtir
 
-A variável `like` é usada para determinar se uma sequência de caracteres corresponde a um padrão especificado.
+A função `like` é usada para determinar se uma cadeia de caracteres corresponde a um padrão especificado.
 
 **Formato**
 
@@ -27,7 +27,7 @@ A variável `like` é usada para determinar se uma sequência de caracteres corr
 | Argumento | Descrição |
 | --------- | ----------- |
 | `{STRING_1}` | A sequência de caracteres a ser verificada. |
-| `{STRING_2}` | A expressão que deve corresponder à primeira sequência. Há dois caracteres especiais suportados para criar uma expressão: `%` e `_`. <ul><li>`%` é usado para representar zero ou mais caracteres.</li><li>`_` é usado para representar exatamente um caractere.</li></ul> |
+| `{STRING_2}` | A expressão que deve corresponder à primeira sequência. Há dois caracteres especiais suportados para a criação de uma expressão: `%` e `_`. <ul><li>`%` é usado para representar zero ou mais caracteres.</li><li>`_` é usado para representar exatamente um caractere.</li></ul> |
 
 **Exemplo**
 
@@ -37,9 +37,9 @@ A consulta PQL a seguir recupera todas as cidades que contêm o padrão &quot;es
 city like "%es%"
 ```
 
-## Começa com
+## Inicia com
 
-A variável `startsWith` é usada para determinar se uma sequência de caracteres inicia com uma subsequência especificada.
+A função `startsWith` é usada para determinar se uma sequência de caracteres inicia com uma subsequência especificada.
 
 **Formato**
 
@@ -61,9 +61,9 @@ A consulta PQL a seguir determina, com distinção entre maiúsculas e minúscul
 person.name.startsWith("Joe")
 ```
 
-## Does not start with
+## Não inicia com
 
-A variável `doesNotStartWith` é usada para determinar se uma sequência de caracteres não inicia com uma subsequência especificada.
+A função `doesNotStartWith` é usada para determinar se uma cadeia de caracteres não inicia com uma subcadeia especificada.
 
 **Formato**
 
@@ -87,7 +87,7 @@ person.name.doesNotStartWith("Joe")
 
 ## Termina com
 
-A variável `endsWith` é usada para determinar se uma sequência de caracteres termina com uma subsequência especificada.
+A função `endsWith` é usada para determinar se uma sequência de caracteres termina com uma subsequência especificada.
 
 **Formato**
 
@@ -103,7 +103,7 @@ A variável `endsWith` é usada para determinar se uma sequência de caracteres 
 
 **Exemplo**
 
-A consulta PQL a seguir determina, com distinção entre maiúsculas e minúsculas, se o endereço de email da pessoa termina com &quot;.com&quot;.
+A consulta do PQL a seguir determina, com distinção entre maiúsculas e minúsculas, se o endereço de email da pessoa termina com &quot;.com&quot;.
 
 ```sql
 person.emailAddress.endsWith(".com")
@@ -111,7 +111,7 @@ person.emailAddress.endsWith(".com")
 
 ## Não termina com
 
-A variável `doesNotEndWith` é usada para determinar se uma sequência de caracteres não termina com uma subsequência especificada.
+A função `doesNotEndWith` é usada para determinar se uma cadeia de caracteres não termina com uma subsequência especificada.
 
 **Formato**
 
@@ -127,7 +127,7 @@ A variável `doesNotEndWith` é usada para determinar se uma sequência de carac
 
 **Exemplo**
 
-A consulta PQL a seguir determina, com distinção entre maiúsculas e minúsculas, se o endereço de email da pessoa não termina com &quot;.com&quot;.
+A consulta do PQL a seguir determina, com distinção entre maiúsculas e minúsculas, se o endereço de email da pessoa não termina com &quot;.com&quot;.
 
 ```sql
 person.emailAddress.doesNotEndWith(".com")
@@ -135,7 +135,7 @@ person.emailAddress.doesNotEndWith(".com")
 
 ## Contains
 
-A variável `contains` é usada para determinar se uma sequência de caracteres contém uma subsequência especificada.
+A função `contains` é usada para determinar se uma cadeia de caracteres contém uma subsequência especificada.
 
 **Formato**
 
@@ -151,7 +151,7 @@ A variável `contains` é usada para determinar se uma sequência de caracteres 
 
 **Exemplo**
 
-A consulta PQL a seguir determina, com distinção entre maiúsculas e minúsculas, se o endereço de email da pessoa contém a cadeia de caracteres &quot;2010@gm&quot;.
+A consulta do PQL a seguir determina, com distinção entre maiúsculas e minúsculas, se o endereço de email da pessoa contém a cadeia de caracteres &quot;2010@gm&quot;.
 
 ```sql
 person.emailAddress.contains("2010@gm")
@@ -159,7 +159,7 @@ person.emailAddress.contains("2010@gm")
 
 ## Não contém
 
-A variável `doesNotContain` é usada para determinar se uma sequência de caracteres não contém uma subsequência especificada.
+A função `doesNotContain` é usada para determinar se uma cadeia de caracteres não contém uma subsequência especificada.
 
 **Formato**
 
@@ -175,7 +175,7 @@ A variável `doesNotContain` é usada para determinar se uma sequência de carac
 
 **Exemplo**
 
-A consulta PQL a seguir determina, com distinção entre maiúsculas e minúsculas, se o endereço de email da pessoa não contém a cadeia de caracteres &quot;2010@gm&quot;.
+A consulta do PQL a seguir determina, com distinção entre maiúsculas e minúsculas, se o endereço de email da pessoa não contém a cadeia de caracteres &quot;2010@gm&quot;.
 
 ```sql
 person.emailAddress.doesNotContain("2010@gm")
@@ -183,7 +183,7 @@ person.emailAddress.doesNotContain("2010@gm")
 
 ## Igual a
 
-A variável `equals` é usada para determinar se uma sequência de caracteres é igual à sequência especificada.
+A função `equals` é usada para determinar se uma cadeia de caracteres é igual à cadeia de caracteres especificada.
 
 **Formato**
 
@@ -204,9 +204,9 @@ A consulta PQL a seguir determina, com distinção entre maiúsculas e minúscul
 person.name.equals("John")
 ```
 
-## Not equal to
+## Não é igual a
 
-A variável `notEqualTo` é usada para determinar se uma sequência de caracteres não é igual à sequência especificada.
+A função `notEqualTo` é usada para determinar se uma cadeia de caracteres não é igual à cadeia especificada.
 
 **Formato**
 
@@ -227,9 +227,9 @@ A consulta PQL a seguir determina, com distinção entre maiúsculas e minúscul
 person.name.notEqualTo("John")
 ```
 
-## Corresponde 
+## Corresponde
 
-A variável `matches` é usada para determinar se uma sequência de caracteres corresponde a uma expressão regular específica. Consulte [este documento](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html) para obter mais informações sobre padrões correspondentes em expressões regulares.
+A função `matches` é usada para determinar se uma sequência de caracteres corresponde a uma expressão regular específica. Consulte [este documento](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html) para obter mais informações sobre padrões correspondentes em expressões regulares.
 
 **Formato**
 
@@ -239,7 +239,7 @@ A variável `matches` é usada para determinar se uma sequência de caracteres c
 
 **Exemplo**
 
-A consulta PQL a seguir determina, sem diferenciar maiúsculas de minúsculas, se o nome da pessoa começa com &quot;John&quot;.
+A consulta do PQL a seguir determina, sem diferenciar maiúsculas de minúsculas, se o nome da pessoa começa com &quot;John&quot;.
 
 ```sql
 person.name.matches("(?i)^John")
@@ -247,11 +247,11 @@ person.name.matches("(?i)^John")
 
 >[!NOTE]
 >
->Se você estiver usando funções de expressão regular, como `\w`, você **deve** escape do caractere de barra invertida. Então, em vez de escrever apenas `\w`, você deve incluir uma barra invertida e uma gravação extras `\\w`.
+>Se você estiver usando funções de expressão regular, como `\w`, **deverá** escapar do caractere de barra invertida. Então, em vez de escrever apenas `\w`, você deve incluir uma barra invertida extra e escrever `\\w`.
 
 ## Grupo de expressão regular
 
-A variável `regexGroup` é usada para extrair informações específicas, com base na expressão regular fornecida.
+A função `regexGroup` é usada para extrair informações específicas, com base na expressão regular fornecida.
 
 **Formato**
 
@@ -261,7 +261,7 @@ A variável `regexGroup` é usada para extrair informações específicas, com b
 
 **Exemplo**
 
-A consulta PQL a seguir é usada para extrair o nome de domínio de um endereço de email.
+A consulta do PQL a seguir é usada para extrair o nome de domínio de um endereço de email.
 
 ```sql
 emailAddress.regexGroup("@(\\w+)", 1)
@@ -269,8 +269,8 @@ emailAddress.regexGroup("@(\\w+)", 1)
 
 >[!NOTE]
 >
->Se você estiver usando funções de expressão regular, como `\w`, você **deve** escape do caractere de barra invertida. Então, em vez de escrever apenas `\w`, você deve incluir uma barra invertida e uma gravação extras `\\w`.
+>Se você estiver usando funções de expressão regular, como `\w`, **deverá** escapar do caractere de barra invertida. Então, em vez de escrever apenas `\w`, você deve incluir uma barra invertida extra e escrever `\\w`.
 
 ## Próximas etapas
 
-Agora que você aprendeu sobre funções de string, é possível usá-las em consultas PQL. Para obter mais informações sobre outras funções PQL, leia o [Visão geral do idioma de consulta do perfil](./overview.md).
+Agora que você aprendeu sobre funções de string, é possível usá-las em queries do PQL. Para obter mais informações sobre outras funções do PQL, leia a [visão geral do Profile Query Language](./overview.md).

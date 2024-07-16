@@ -5,8 +5,8 @@ feature: Event Forwarding
 exl-id: f82bfac9-dc2d-44de-a308-651300f107df
 source-git-commit: 05170986263b6eed2d19a65e34f70dc28eb8ba2f
 workflow-type: tm+mt
-source-wordcount: '870'
-ht-degree: 77%
+source-wordcount: '864'
+ht-degree: 76%
 
 ---
 
@@ -31,7 +31,7 @@ Depois de enviar dados para a rede de borda, você pode alternar entre as soluç
 
 * Adobe Real-Time CDP Connections, Prime ou Ultimate (Entre em contato com a equipe de conta do Adobe para obter preços)
 * Encaminhamento de eventos na Adobe Experience Platform
-* Adobe Experience Platform Web SDK, Mobile SDK ou API de servidor de rede de borda configurada para enviar dados para a rede de borda
+* SDK da Web da Adobe Experience Platform, SDK móvel ou API do servidor Edge Network configurada para enviar dados para o Edge Network
 * Mapear dados para o Experience Data Model (XDM) (esse mapeamento pode ser feito usando tags)
 
 ## Criar um esquema do XDM
@@ -42,7 +42,7 @@ Na Adobe Experience Platform, crie seu esquema.
 
 1. Dê um nome e uma breve descrição ao esquema.
 
-1. Você pode adicionar o campo &quot;Detalhes da Web do ExperienceEvent&quot; selecionando **[!UICONTROL Adicionar]** ao lado de **[!UICONTROL Grupos de campos]**.
+1. Você pode adicionar o campo &quot;Detalhes da Web do ExperienceEvent&quot; selecionando **[!UICONTROL Adicionar]** ao lado de **[!UICONTROL Grupos do Campo]**.
 
    >[!NOTE]
    >
@@ -54,24 +54,24 @@ Para obter mais informações sobre esquemas, consulte [Ajuda do sistema do Expe
 
 ## Criar uma propriedade de encaminhamento de evento
 
-No **[!UICONTROL Tags]** espaço de trabalho, crie uma propriedade do tipo **[!UICONTROL Edge]**.
+No espaço de trabalho **[!UICONTROL Marcas]**, crie uma propriedade do tipo **[!UICONTROL Edge]**.
 
 1. Selecione **[!UICONTROL Nova propriedade]**.
 
 1. Nomeie a propriedade.
 
-1. Escolha o tipo de plataforma &quot;Borda&quot;.
+1. Escolha o tipo de plataforma &quot;Edge&quot;.
 
 1. Selecione **[!UICONTROL Salvar]**.
 
 Depois de criar a propriedade, vá para a guia **[!UICONTROL Ambientes]** da nova propriedade e
-anote as IDs de ambiente. Se a Organização de Adobe usada no fluxo de dados for diferente da Organização de Adobe usada no encaminhamento de eventos, será possível copiar a ID do ambiente da **[!UICONTROL Ambientes]** e cole-a ao criar um fluxo de dados. Caso contrário, você pode selecionar o ambiente em um menu suspenso.
+anote as IDs de ambiente. Se a Organização de Adobe usada no fluxo de dados for diferente da Organização de Adobe usada no encaminhamento de eventos, será possível copiar a ID do Ambiente da guia **[!UICONTROL Ambientes]** e colá-la ao criar um fluxo de dados. Caso contrário, você pode selecionar o ambiente em um menu suspenso.
 
 ## Criar um fluxo de dados
 
 Para criar o fluxo de dados na Adobe Experience Platform, use a ID de ambiente gerada ao criar a propriedade de encaminhamento de eventos.
 
-1. Selecionar **[!UICONTROL Datastreams]** no painel de navegação esquerdo.
+1. Selecione **[!UICONTROL Datastreams]** na navegação à esquerda.
 
 1. Nomeie a configuração e forneça uma descrição opcional.
 A descrição ajuda a identificar configurações em uma lista de várias configurações.
@@ -82,7 +82,7 @@ A descrição ajuda a identificar configurações em uma lista de várias config
 
 Em seguida, configure o Edge Network para enviar dados ao encaminhamento de eventos e a outros produtos da Adobe.
 
-1. No **[!UICONTROL Datastreams]** selecione a propriedade que você criou.
+1. No espaço de trabalho **[!UICONTROL Datastreams]**, selecione a propriedade que você criou.
 
 1. Selecione Desenvolvimento, Produção ou Ambiente de preparo.
 
@@ -98,9 +98,9 @@ Depois de configurar, anote as IDs de ambiente para a nova propriedade.
 
 ## Configure a extensão SDK da Web da Platform para enviar dados ao fluxo de dados criado anteriormente
 
-Crie sua propriedade no **[!UICONTROL Tags]** espaço de trabalho e navegue até **[!UICONTROL Extensões]** e selecione a extensão SDK da Web do Experience Platform no catálogo para configurá-la e instalá-la.
+Crie a propriedade no espaço de trabalho **[!UICONTROL Tags]**, navegue até **[!UICONTROL Extensões]** e selecione a extensão SDK da Web do Experience Platform no catálogo para configurá-la e instalá-la.
 
-Consulte a [Documentação da extensão SDK da Web](../../extensions/client/web-sdk/overview.md) para obter detalhes sobre as opções de configuração.
+Consulte a [documentação de extensão do SDK da Web](../../extensions/client/web-sdk/overview.md) para obter detalhes sobre as opções de configuração.
 
 ## Criar uma regra de tag para enviar dados ao SDK da Web da Platform
 

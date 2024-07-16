@@ -5,13 +5,13 @@ exl-id: 49851544-9118-4b73-b1d1-4cf49b3f1dee
 source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
 source-wordcount: '176'
-ht-degree: 8%
+ht-degree: 24%
 
 ---
 
 # [!UICONTROL Ações do cartão] grupo de campos de esquema
 
-[!UICONTROL Ações do cartão] é um grupo de campos de esquema padrão para o [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md). O grupo de campos fornece um único `personalFinances.cardActions` para um esquema, que captura detalhes sobre a ação de um cartão, como tipo de cartão, status de ativação e status de bloqueio.
+[!UICONTROL Ações de Cartão] é um grupo de campos de esquema padrão para a [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md). O grupo de campos fornece um único campo `personalFinances.cardActions` para um esquema, que captura detalhes sobre uma ação do cartão, como tipo de cartão, status de ativação e status de bloqueio.
 
 ![](../../images/field-groups/card-actions.png)
 
@@ -27,8 +27,8 @@ ht-degree: 8%
 | `cardOrderNew` | Número inteiro | Rastreia quando um cartão é solicitado. |
 | `cardOrderType` | String | O tipo de ordem de cartão associado a um evento de ordem de cartão. |
 | `cardType` | String | O tipo de cartão. |
-| `cardUnlocked` | Número inteiro | Rastreia quando um cartão é desbloqueado. |
+| `cardUnlocked` | Número inteiro | Rastreia quando um cartão foi desbloqueado. |
 
 {style="table-layout:auto"}
 
-Para obter mais informações sobre o grupo de campos, consulte o [repositório XDM público](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/experienceevent-card-actions.schema.json).
+Para obter mais detalhes sobre o grupo de campos, consulte o [repositório XDM público](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/experienceevent-card-actions.schema.json).

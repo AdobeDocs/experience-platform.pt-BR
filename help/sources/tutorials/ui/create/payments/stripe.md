@@ -2,47 +2,48 @@
 title: Assimilar dados de pagamentos de sua conta Stripe para o Experience Platform usando a interface do usuário.
 description: Saiba como assimilar dados de pagamentos de sua conta do Stripe para o Experience Platform usando a interface do usuário.
 badge: Beta
-source-git-commit: f8df3ddb96ad0810a7a46b0a55125336c427aebd
+exl-id: f20c5935-a7c0-4387-b29e-73e78cab4972
+source-git-commit: 62bcaa532cdec68a2f4f62e5784c35b91b7d5743
 workflow-type: tm+mt
 source-wordcount: '1636'
 ht-degree: 3%
 
 ---
 
-# Assimilar dados de pagamentos de seu [!DNL Stripe] conta para Experience Platform usando a interface do usuário
+# Assimilar dados de pagamentos de sua conta [!DNL Stripe] para o Experience Platform usando a interface do usuário
 
 >[!NOTE]
 >
->A variável [!DNL Stripe] a fonte está na versão beta. Leia o [termos e condições](../../../../home.md#terms-and-conditions) na visão geral de fontes para obter mais informações sobre o uso de fontes com rótulo beta.
+>A origem [!DNL Stripe] está na versão beta. Leia os [termos e condições](../../../../home.md#terms-and-conditions) na visão geral das fontes para obter mais informações sobre como usar fontes com rótulo beta.
 
-Leia o tutorial a seguir para saber como assimilar dados de pagamentos de seu [!DNL Stripe] para a Adobe Experience Platform usando a interface do usuário.
+Leia o tutorial a seguir para saber como assimilar dados de pagamentos de sua conta do [!DNL Stripe] para a Adobe Experience Platform usando a interface do usuário.
 
 ## Introdução
 
 Este tutorial requer um entendimento prático dos seguintes componentes do Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): o quadro normalizado pelo qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
-   * [Noções básicas da composição do esquema](../../../../../xdm/schema/composition.md): saiba mais sobre os componentes básicos dos esquemas XDM, incluindo princípios fundamentais e práticas recomendadas na composição do esquema.
+* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): a estrutura padronizada pela qual o [!DNL Experience Platform] organiza os dados de experiência do cliente.
+   * [Noções básicas sobre a composição de esquema](../../../../../xdm/schema/composition.md): saiba mais sobre os blocos de construção básicos de esquemas XDM, incluindo princípios-chave e práticas recomendadas na composição de esquema.
    * [Tutorial do Editor de esquemas](../../../../../xdm/tutorials/create-schema-ui.md): saiba como criar esquemas personalizados usando a interface do Editor de esquemas.
-* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): fornece um perfil de consumidor unificado em tempo real com base em dados agregados de várias fontes.
+* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Fornece um perfil de consumidor unificado em tempo real com base em dados agregados de várias fontes.
 
 ### Autenticação
 
-Leia o [[!DNL Stripe] visão geral](../../../../connectors/payments/stripe.md) para obter informações sobre como recuperar suas credenciais de autenticação.
+Leia a [[!DNL Stripe] visão geral](../../../../connectors/payments/stripe.md) para obter informações sobre como recuperar suas credenciais de autenticação.
 
-## Conecte seu [!DNL Stripe] account {#connect}
+## Conectar sua conta do [!DNL Stripe] {#connect}
 
-Na interface do usuário da Platform, selecione **[!UICONTROL Origens]** na navegação à esquerda, para acessar a [!UICONTROL Origens] espaço de trabalho. Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar a fonte específica com a qual deseja trabalhar usando a opção de pesquisa.
+Na interface da Platform, selecione **[!UICONTROL Fontes]** na navegação à esquerda para acessar o espaço de trabalho [!UICONTROL Fontes]. Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar a fonte específica com a qual deseja trabalhar usando a opção de pesquisa.
 
-No *Pagamentos* categoria, selecione **[!DNL Stripe]** e selecione **[!UICONTROL Configurar]**.
+Na categoria *Pagamentos*, selecione **[!DNL Stripe]** e **[!UICONTROL Configurar]**.
 
 >[!TIP]
 >
->As origens no catálogo de origens exibem a variável **[!UICONTROL Configurar]** opção quando uma determinada fonte ainda não tiver uma conta autenticada. Quando uma conta autenticada existir, essa opção será alterada para **[!UICONTROL Adicionar dados]**.
+>As origens no catálogo de origens exibem a opção **[!UICONTROL Configurar]** quando uma determinada origem ainda não tem uma conta autenticada. Quando uma conta autenticada existir, esta opção será alterada para **[!UICONTROL Adicionar dados]**.
 
 ![O catálogo de origens na interface do usuário do Experience Platform, com o cartão de origem Stripe selecionado.](../../../../images/tutorials/create/stripe/catalog.png)
 
-A variável **[!UICONTROL Conectar conta Stripe]** é exibida. Nesta página, você pode usar credenciais novas ou existentes.
+A página **[!UICONTROL Conectar conta Stripe]** é exibida. Nesta página, você pode usar credenciais novas ou existentes.
 
 >[!BEGINTABS]
 
@@ -50,27 +51,27 @@ A variável **[!UICONTROL Conectar conta Stripe]** é exibida. Nesta página, vo
 
 Para criar uma nova conta, selecione **[!UICONTROL Nova conta]** e forneça um nome, uma descrição opcional e suas credenciais.
 
-Quando terminar, selecione **[!UICONTROL Conectar à origem]** e aguarde algum tempo para estabelecer a nova conexão.
+Quando terminar, selecione **[!UICONTROL Conectar à origem]** e aguarde algum tempo para que a nova conexão seja estabelecida.
 
-![A interface de criação de nova conta do workflow de origens.](../../../../images/tutorials/create/stripe/new.png)
+![A interface de criação de nova conta do fluxo de trabalho de origens.](../../../../images/tutorials/create/stripe/new.png)
 
 | Credencial | Descrição |
 | --- | --- |
-| Token de acesso | Seu [!DNL Stripe] token de acesso. Para obter informações sobre como recuperar o token de acesso, leia a [[!DNL Stripe] guia de autenticação](../../../../connectors/payments/stripe.md). |
+| Token de acesso | Seu token de acesso [!DNL Stripe]. Para obter informações sobre como recuperar o token de acesso, leia o [[!DNL Stripe] guia de autenticação](../../../../connectors/payments/stripe.md). |
 
 >[!TAB Usar uma conta existente]
 
-Para usar uma conta existente, selecione **[!UICONTROL Conta existente]** e selecione a conta que deseja usar no catálogo de contas existente.
+Para usar uma conta existente, selecione **[!UICONTROL Conta existente]** e a conta que deseja usar no catálogo de contas existente.
 
-Selecione **[!UICONTROL Próximo]** para continuar.
+Selecione **[!UICONTROL Avançar]** para continuar.
 
-![A página de seleção de conta existente do catálogo de códigos-fonte.](../../../../images/tutorials/create/stripe/existing.png)
+![A página de seleção de conta existente do catálogo de fontes.](../../../../images/tutorials/create/stripe/existing.png)
 
 >[!ENDTABS]
 
 ## Selecionar dados {#select-data}
 
-Agora que você tem acesso à sua conta, é necessário identificar o caminho apropriado para a [!DNL Stripe] dados que você deseja assimilar. Selecionar **[!UICONTROL Caminho do recurso]** e selecione o endpoint do qual deseja assimilar dados. As opções disponíveis [!DNL Stripe] Os endpoints do são:
+Agora que você tem acesso à sua conta, deve identificar o caminho apropriado para os dados do [!DNL Stripe] que deseja assimilar. Selecione **[!UICONTROL Caminho do recurso]** e selecione o ponto de extremidade de onde deseja assimilar dados. Os pontos de extremidade [!DNL Stripe] disponíveis são:
 
 * Encargos
 * Assinaturas
@@ -81,9 +82,9 @@ Agora que você tem acesso à sua conta, é necessário identificar o caminho ap
 
 ![A janela suspensa de caminho de recurso.](../../../../images/tutorials/create/stripe/select-resource-path.png)
 
-Depois que o endpoint é selecionado, a interface é atualizada em uma tela de pré-visualização, exibindo a estrutura de dados do [!DNL Stripe] ponto de extremidade selecionado. Selecione **[!UICONTROL Próximo]** para continuar.
+Depois que o ponto de extremidade é selecionado, a interface é atualizada em uma tela de visualização, exibindo a estrutura de dados do ponto de extremidade [!DNL Stripe] selecionado. Selecione **[!UICONTROL Avançar]** para continuar.
 
-![A janela de pré-visualização dos dados de Stripe.](../../../../images/tutorials/create/stripe/preview.png)
+![A janela de visualização dos seus dados de Stripe.](../../../../images/tutorials/create/stripe/preview.png)
 
 ## Fornecer detalhes do conjunto de dados e do fluxo de dados {#provide-dataset-and-dataflow-details}
 
@@ -105,11 +106,11 @@ Para usar um novo conjunto de dados, selecione **[!UICONTROL Novo conjunto de da
 | --- | --- |
 | Nome do conjunto de dados de saída | O nome do novo conjunto de dados. |
 | Descrição | (Opcional) Uma breve explicação do novo conjunto de dados. |
-| Esquema | Uma lista suspensa de esquemas que existem em sua organização. Você também pode criar seu próprio esquema antes do processo de configuração de origem. Para obter mais informações, leia o guia em [criação de um esquema XDM na interface do usuário](../../../../../xdm/tutorials/create-schema-ui.md). |
+| Esquema | Uma lista suspensa de esquemas que existem em sua organização. Você também pode criar seu próprio esquema antes do processo de configuração de origem. Para obter mais informações, leia o manual sobre [criação de um esquema XDM na interface](../../../../../xdm/tutorials/create-schema-ui.md). |
 
 >[!TAB Usar um conjunto de dados existente]
 
-Se você já tiver um conjunto de dados, selecione **[!UICONTROL Conjunto de dados existente]** e, em seguida, use o **[!UICONTROL Pesquisa avançada]** opção para exibir uma janela de todos os conjuntos de dados em sua organização, incluindo seus respectivos detalhes, como se eles estão habilitados para assimilação no Perfil do cliente em tempo real ou não.
+Se você já tiver um conjunto de dados existente, selecione **[!UICONTROL Conjunto de dados existente]** e use a opção **[!UICONTROL Pesquisa avançada]** para exibir uma janela de todos os conjuntos de dados na sua organização, incluindo seus respectivos detalhes, como se eles estão habilitados para assimilação no Perfil do cliente em tempo real ou não.
 
 ![A interface de seleção do conjunto de dados existente.](../../../../images/tutorials/create/stripe/existing-dataset.png)
 
@@ -117,9 +118,9 @@ Se você já tiver um conjunto de dados, selecione **[!UICONTROL Conjunto de dad
 
 +++Selecione para obter as etapas para habilitar a Assimilação de perfil, o diagnóstico de erros e a assimilação parcial.
 
-Se o conjunto de dados estiver ativado para o Perfil de cliente em tempo real, durante essa etapa é possível alternar **[!UICONTROL Conjunto de dados Perfil]** para ativar seus dados para assimilação de perfis. Você também pode usar esta etapa para habilitar **[!UICONTROL Diagnóstico de erro]** e **[!UICONTROL Assimilação parcial]**.
+Se o seu conjunto de dados estiver habilitado para o Perfil de cliente em tempo real, durante essa etapa você poderá alternar para **[!UICONTROL o conjunto de dados do perfil]** para habilitar seus dados para assimilação de perfil. Você também pode usar esta etapa para habilitar o **[!UICONTROL Diagnóstico de erro]** e a **[!UICONTROL Assimilação parcial]**.
 
-* **[!UICONTROL Diagnóstico de erro]**: Selecionar **[!UICONTROL Diagnóstico de erro]** para instruir a origem a produzir diagnósticos de erro que você poderá consultar posteriormente ao monitorar a atividade do conjunto de dados e o status do fluxo de dados.
+* **[!UICONTROL Diagnóstico de erro]**: selecione **[!UICONTROL Diagnóstico de erro]** para instruir a origem a produzir o diagnóstico de erro que você poderá consultar posteriormente ao monitorar a atividade do conjunto de dados e o status do fluxo de dados.
 * **[!UICONTROL Assimilação parcial]**: a assimilação parcial de lotes é a capacidade de assimilar dados que contêm erros, até um determinado limite configurável. Esse recurso permite assimilar com sucesso todos os seus dados precisos no Experience Platform, enquanto todos os seus dados incorretos são armazenados em lote separadamente com informações sobre por que são inválidos.
 
 +++
@@ -134,15 +135,15 @@ Depois que o conjunto de dados é configurado, você deve fornecer detalhes sobr
 | --- | --- |
 | Nome do fluxo de dados | O nome do fluxo de dados.  Por padrão, esse campo usará o nome do arquivo que está sendo importado. |
 | Descrição | (Opcional) Uma breve descrição do fluxo de dados. |
-| Alertas | O Experience Platform pode produzir alertas baseados em eventos que os usuários podem assinar. Todas essas opções exigem um fluxo de dados em execução para serem acionadas.  Para obter mais informações, leia a [visão geral dos alertas](../../alerts.md) <ul><li>**Início da execução do fluxo de dados de fontes**: selecione esse alerta para receber uma notificação quando a execução do fluxo de dados começar.</li><li>**Êxito na execução do fluxo de dados de fontes**: selecione esse alerta para receber uma notificação se o fluxo de dados terminar sem erros.</li><li>**Falha na execução do fluxo de dados de fontes**: selecione esse alerta para receber uma notificação se a execução do fluxo de dados terminar com erros.</li></ul> |
+| Alertas | O Experience Platform pode produzir alertas baseados em eventos que os usuários podem assinar. Todas essas opções exigem um fluxo de dados em execução para serem acionadas.  Para obter mais informações, leia a [visão geral dos alertas](../../alerts.md) <ul><li>**Início da Execução do Fluxo de Dados de Fontes**: selecione este alerta para receber uma notificação quando a execução do fluxo de dados começar.</li><li>**Êxito na Execução do Fluxo de Dados de Fontes**: selecione este alerta para receber uma notificação se o fluxo de dados terminar sem erros.</li><li>**Falha na execução do fluxo de dados de fontes**: selecione este alerta para receber uma notificação se a execução do fluxo de dados terminar com erros.</li></ul> |
 
-Quando terminar, selecione **[!UICONTROL Próxima]** para continuar.
+Quando terminar, selecione **[!UICONTROL Avançar]** para continuar.
 
 ## Mapear campos para um esquema XDM {#mapping}
 
-A variável **[!UICONTROL Mapeamento]** é exibida. Use a interface de mapeamento para mapear os dados de origem para os campos de esquema apropriados antes de assimilar esses dados no Experience Platform. Para obter um guia extenso sobre como usar a interface de mapeamento, leia o [Guia da interface de preparação de dados](../../../../../data-prep/ui/mapping.md) para obter mais informações.
+A etapa **[!UICONTROL Mapping]** é exibida. Use a interface de mapeamento para mapear os dados de origem para os campos de esquema apropriados antes de assimilar esses dados no Experience Platform. Para obter um guia abrangente sobre como usar a interface de mapeamento, leia o [guia da interface do usuário do Preparo de Dados](../../../../../data-prep/ui/mapping.md) para obter mais informações.
 
-![A interface de mapeamento do workflow de origens.](../../../../images/tutorials/create/stripe/mapping.png)
+![A interface de mapeamento do fluxo de trabalho de origens.](../../../../images/tutorials/create/stripe/mapping.png)
 
 ## Configurar programação de assimilação {#scheduling}
 
@@ -158,40 +159,40 @@ Você também pode selecionar o ícone de calendário e usar um calendário pop-
 
 | Configuração de agendamento | Descrição |
 | --- | --- |
-| Frequência | Configure a frequência para indicar a frequência de execução do fluxo de dados. Você pode definir a frequência como: <ul><li>**Uma vez**: Defina a frequência como `once` para criar uma assimilação única. As configurações para intervalo e preenchimento retroativo não estão disponíveis ao criar um fluxo de dados de assimilação única. Por padrão, a frequência de agendamento é definida como uma vez.</li><li>**Minuto**: Defina a frequência como `minute` para agendar seu fluxo de dados para assimilar dados por minuto.</li><li>**Hora**:Defina sua frequência como `hour` para agendar seu fluxo de dados para assimilar dados por hora.</li><li>**Dia**: Defina a frequência como `day` para agendar seu fluxo de dados para assimilar dados diariamente.</li><li>**Semana**: Defina a frequência como `week` para agendar seu fluxo de dados para assimilar dados por semana.</li></ul> |
-| Interval | Depois de selecionar uma frequência, você pode definir o intervalo para estabelecer o intervalo de tempo entre cada assimilação. Por exemplo, se você definir a frequência como dia e configurar o intervalo como 15, o fluxo de dados será executado a cada 15 dias. **Nota**: não é possível definir o intervalo como zero. |
+| Frequência | Configure a frequência para indicar a frequência de execução do fluxo de dados. Você pode definir a frequência como: <ul><li>**Uma vez**: defina sua frequência como `once` para criar uma assimilação única. As configurações para intervalo e preenchimento retroativo não estão disponíveis ao criar um fluxo de dados de assimilação única. Por padrão, a frequência de agendamento é definida como uma vez.</li><li>**Minuto**: Defina sua frequência como `minute` para agendar seu fluxo de dados para assimilar dados por minuto.</li><li>**Hora**:Defina sua frequência como `hour` para agendar seu fluxo de dados para assimilar dados por hora.</li><li>**Dia**: Defina sua frequência como `day` para agendar seu fluxo de dados para assimilar dados por dia.</li><li>**Semana**: Defina sua frequência como `week` para agendar seu fluxo de dados para assimilar dados por semana.</li></ul> |
+| Intervalo | Depois de selecionar uma frequência, você pode definir o intervalo para estabelecer o intervalo de tempo entre cada assimilação. Por exemplo, se você definir a frequência como dia e configurar o intervalo como 15, o fluxo de dados será executado a cada 15 dias. **Observação**: não é possível definir o intervalo como zero. |
 | Hora de início | O carimbo de data e hora da execução projetada, apresentado no fuso horário UTC. |
 | Preenchimento retroativo | O preenchimento retroativo determina quais dados são assimilados inicialmente. Se o preenchimento retroativo estiver ativado, todos os arquivos atuais no caminho especificado serão assimilados durante a primeira assimilação agendada. Se o preenchimento retroativo estiver desativado, somente os arquivos carregados entre a primeira execução da assimilação e a hora de início serão assimilados. Os arquivos carregados antes da hora de início não serão assimilados. |
 
-Depois de configurar a programação de assimilação do fluxo de dados, selecione **[!UICONTROL Próxima]**.
+Depois de configurar o agendamento de assimilação do fluxo de dados, selecione **[!UICONTROL Avançar]**.
 
 ![A interface de agendamento do fluxo de trabalho de origens.](../../../../images/tutorials/create/stripe/scheduling.png)
 
 
 ## Revisar seu fluxo de dados
 
-A etapa final no processo de criação do fluxo de dados é revisar o fluxo de dados antes de executá-lo. Use o **[!UICONTROL Revisão]** etapa para revisar os detalhes do novo fluxo de dados antes de ele ser executado. Os detalhes estão agrupados nas seguintes categorias:
+A etapa final no processo de criação do fluxo de dados é revisar o fluxo de dados antes de executá-lo. Use a etapa **[!UICONTROL Revisão]** para revisar os detalhes do novo fluxo de dados antes de ele ser executado. Os detalhes estão agrupados nas seguintes categorias:
 
 * **Conexão**: mostra o tipo de origem, o caminho relevante do arquivo de origem escolhido e o número de colunas nesse arquivo de origem.
-* **Atribuir conjunto de dados e mapear campos**: mostra em qual conjunto de dados os dados de origem estão sendo assimilados, incluindo o esquema ao qual o conjunto de dados adere.
-* **Agendamento**: mostra o período, a frequência e o intervalo ativos da programação de assimilação.
+* **Atribuir campos de conjunto de dados e mapa**: mostra em qual conjunto de dados os dados de origem estão sendo assimilados, incluindo o esquema ao qual o conjunto de dados pertence.
+* **Agendamento**: mostra o período, a frequência e o intervalo ativos do agendamento de assimilação.
 
-Depois de revisar o fluxo de dados, selecione **[!UICONTROL Concluir]** e aguarde algum tempo para criar o fluxo de dados.
+Depois de revisar o fluxo de dados, selecione **[!UICONTROL Concluir]** e aguarde algum tempo para que o fluxo de dados seja criado.
 
-![A etapa Revisar do fluxo de trabalho de origens.](../../../../images/tutorials/create/stripe/review.png)
+![A etapa Revisão do fluxo de trabalho de origens.](../../../../images/tutorials/create/stripe/review.png)
 
 ## Próximas etapas
 
-Seguindo este tutorial, você criou com êxito um fluxo de dados para trazer dados de pagamentos de seu [!DNL Stripe] origem para Experience Platform. Para obter recursos adicionais, consulte a documentação descrita abaixo.
+Seguindo este tutorial, você criou com êxito um fluxo de dados para trazer dados de pagamentos da sua origem [!DNL Stripe] para o Experience Platform. Para obter recursos adicionais, consulte a documentação descrita abaixo.
 
 ### Monitorar seu fluxo de dados
 
-Depois que o fluxo de dados for criado, você poderá monitorar os dados que estão sendo assimilados por meio dele para exibir informações sobre taxas de assimilação, sucesso e erros. Para obter mais informações sobre como monitorar o fluxo de dados, consulte o tutorial em [monitoramento de contas e fluxos de dados na interface do](../../../../../dataflows/ui/monitor-sources.md).
+Depois que o fluxo de dados for criado, você poderá monitorar os dados que estão sendo assimilados por meio dele para exibir informações sobre taxas de assimilação, sucesso e erros. Para obter mais informações sobre como monitorar o fluxo de dados, visite o tutorial em [monitoramento de contas e fluxos de dados na interface](../../../../../dataflows/ui/monitor-sources.md).
 
 ### Atualizar seu fluxo de dados
 
-Para atualizar as configurações para o agendamento de fluxos de dados, mapeamento e informações gerais, visite o tutorial em [atualização de fluxos de dados de fontes na interface do usuário](../../update-dataflows.md).
+Para atualizar as configurações do agendamento de fluxos de dados, mapeamento e informações gerais, visite o tutorial em [atualizando fluxos de dados de fontes na interface](../../update-dataflows.md).
 
 ### Excluir seu fluxo de dados
 
-É possível excluir fluxos de dados que não são mais necessários ou que foram criados incorretamente usando o **[!UICONTROL Excluir]** disponível na **[!UICONTROL Fluxos de dados]** espaço de trabalho. Para obter mais informações sobre como excluir fluxos de dados, consulte o tutorial em [exclusão de fluxos de dados na interface](../../delete.md).
+Você pode excluir fluxos de dados que não são mais necessários ou que foram criados incorretamente usando a função **[!UICONTROL Excluir]** disponível no espaço de trabalho **[!UICONTROL Fluxos de Dados]**. Para obter mais informações sobre como excluir fluxos de dados, visite o tutorial em [excluindo fluxos de dados na interface](../../delete.md).

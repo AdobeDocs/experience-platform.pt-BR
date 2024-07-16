@@ -4,8 +4,8 @@ description: Saiba mais sobre a extensão de tag do Adobe Target v2 na Adobe Exp
 exl-id: 8f491d67-86da-4e27-92bf-909cd6854be1
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
-source-wordcount: '1356'
-ht-degree: 92%
+source-wordcount: '1318'
+ht-degree: 91%
 
 ---
 
@@ -95,7 +95,7 @@ Esse tipo de ação permite que o Target acione uma solicitação quando a pági
 
 Especifique se deseja ativar a ocultação de corpo para evitar oscilação e qual estilo deve ser usado ao ocultar o elemento de corpo. As opções disponíveis são as seguintes:
 
-* **Ocultação de corpo:** você pode ativar ou desativar essa configuração. O valor padrão é Ativado, o que significa que o HTML BODY está oculto.
+* **Ocultação de corpo:** você pode habilitar ou desabilitar essa configuração. O valor padrão é Ativado, o que significa que o HTML BODY está oculto.
 * **Estilo com corpo oculto:** o valor padrão é body{opacity: 0}. Esse valor pode ser alterado para algo diferente, como body{display:none}.
 
 Para obter mais informações, consulte a [documentação de ajuda online do Target](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/mbox-implement/advanced-mboxjs-settings.html?lang=pt_BR).

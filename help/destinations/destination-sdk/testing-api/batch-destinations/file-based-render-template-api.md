@@ -14,22 +14,22 @@ ht-degree: 3%
 
 ## Visão geral {#overview}
 
-A variável `/authoring/testing/template/render` O endpoint ajuda a visualizar como o modelo foi [campos de dados do cliente](../../functionality/destination-configuration/customer-data-fields.md) definido na configuração de destino seria semelhante a.
+O ponto de extremidade `/authoring/testing/template/render` ajuda a visualizar como seriam os [campos de dados do cliente](../../functionality/destination-configuration/customer-data-fields.md) modelados definidos na configuração de destino.
 
 O endpoint gera valores aleatórios para os campos de dados do cliente e os retorna na resposta. Isso ajuda a validar a estrutura semântica dos campos de dados do cliente, como nomes de buckets ou caminhos de pastas.
 
 ## Introdução {#getting-started}
 
-Antes de continuar, reveja o [guia de introdução](../../getting-started.md) para obter informações importantes que você precisa saber para fazer chamadas com êxito para a API, incluindo como obter a permissão de criação de destino e os cabeçalhos necessários.
+Antes de continuar, consulte o [guia de introdução](../../getting-started.md) para obter informações importantes que você precisa saber para fazer chamadas com êxito para a API, incluindo como obter a permissão de criação de destino e os cabeçalhos necessários.
 
 ## Pré-requisitos {#prerequisites}
 
-Antes de poder usar o `/template/render` verifique se você atende às seguintes condições:
+Antes de usar o ponto de extremidade `/template/render`, verifique se você atende às seguintes condições:
 
 * Você tem um destino baseado em arquivo existente criado por meio do Destination SDK e pode visualizá-lo em seu [catálogo de destinos](../../../ui/destinations-workspace.md).
 * Para fazer a solicitação de API com êxito, é necessário ter a ID da instância de destino correspondente à instância de destino que você testará. Obtenha a ID da instância de destino que você deve usar na chamada da API, no URL, ao navegar por uma conexão com seu destino na interface do Platform.
 
-   ![Imagem da interface mostrando como obter a ID da instância de destino do URL.](../../assets/testing-api/get-destination-instance-id.png)
+  ![Imagem da interface do usuário mostrando como obter a ID da instância de destino da URL.](../../assets/testing-api/get-destination-instance-id.png)
 
 ## Renderizar campos de cliente modelados {#render-customer-fields}
 
@@ -56,7 +56,7 @@ Para ilustrar o comportamento desse endpoint de API, vamos considerar um destino
 
 **Solicitação**
 
-A solicitação abaixo chama a `/authoring/testing/template/render` endpoint, que retorna uma resposta com valores gerados aleatoriamente para os dois campos de dados do cliente mencionados acima.
+A solicitação abaixo chama o ponto de extremidade `/authoring/testing/template/render`, que retorna uma resposta com valores gerados aleatoriamente para os dois campos de dados do cliente mencionados acima.
 
 ```shell
 curl -X POST 'https://platform.adobe.io/data/core/activation/authoring/testing/template/render/destination' \
@@ -77,12 +77,12 @@ curl -X POST 'https://platform.adobe.io/data/core/activation/authoring/testing/t
 
 | Parâmetros | Descrição |
 | -------- | ----------- |
-| `destinationId` | A ID do [configuração de destino](../../authoring-api/destination-configuration/retrieve-destination-configuration.md) que você está testando. |
-| `templates` | Os nomes de campos com modelos definidos no [configuração do servidor de destino](../../authoring-api/destination-server/create-destination-server.md). |
+| `destinationId` | A ID da [configuração de destino](../../authoring-api/destination-configuration/retrieve-destination-configuration.md) que você está testando. |
+| `templates` | Os nomes de campos com modelos definidos na sua [configuração do servidor de destino](../../authoring-api/destination-server/create-destination-server.md). |
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna uma `HTTP 200 OK` e o corpo inclui valores gerados aleatoriamente para seus campos de modelo.
+Uma resposta bem-sucedida retorna um status `HTTP 200 OK`, e o corpo inclui valores gerados aleatoriamente para seus campos de modelo.
 
 Essa resposta pode ajudar a validar a estrutura correta dos campos de dados do cliente, como nomes de buckets ou caminhos de pastas.
 
@@ -98,7 +98,7 @@ Essa resposta pode ajudar a validar a estrutura correta dos campos de dados do c
 
 ## Manipulação de erros de API {#api-error-handling}
 
-Os endpoints da API Destination SDK seguem os princípios gerais de mensagem de erro da API Experience Platform. Consulte [Códigos de status da API](../../../../landing/troubleshooting.md#api-status-codes) e [erros no cabeçalho da solicitação](../../../../landing/troubleshooting.md#request-header-errors) no guia de solução de problemas da Platform.
+Os endpoints da API Destination SDK seguem os princípios gerais de mensagem de erro da API Experience Platform. Consulte [códigos de status da API](../../../../landing/troubleshooting.md#api-status-codes) e [erros no cabeçalho da solicitação](../../../../landing/troubleshooting.md#request-header-errors) no guia de solução de problemas da Platform.
 
 ## Próximas etapas {#next-steps}
 

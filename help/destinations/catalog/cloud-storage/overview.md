@@ -5,8 +5,8 @@ description: A Adobe Experience Platform pode fornecer seus públicos-alvo como 
 exl-id: d29f0a6e-b323-4f78-bbd0-dee2f1e0fedb
 source-git-commit: 8b8abea65ee0448594113ca77f75b84293646146
 workflow-type: tm+mt
-source-wordcount: '384'
-ht-degree: 4%
+source-wordcount: '387'
+ht-degree: 6%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 4%
 
 ## Visão geral {#overview}
 
-A Adobe Experience Platform pode fornecer seus públicos-alvo como arquivos de dados para seus locais de armazenamento na nuvem. Isso permite enviar públicos-alvo e seus atributos de perfil para seus sistemas internos, por meio de arquivos CSV para [!DNL Amazon S3], [!DNL Azure Blob], [!DNL Azure Data Lake Storage Gen2], [!DNL Data Landing Zone], [!DNL Google Cloud Storage]e SFTP. Para [!DNL Amazon Kinesis] e [!DNL Azure Event Hubs] destinos, os dados são transmitidos do Experience Platform em [!DNL JSON] formato.
+A Adobe Experience Platform pode fornecer seus públicos-alvo como arquivos de dados para seus locais de armazenamento na nuvem. Isso permite que você envie públicos-alvo e seus atributos de perfil para seus sistemas internos, por meio de arquivos CSV para [!DNL Amazon S3], [!DNL Azure Blob], [!DNL Azure Data Lake Storage Gen2], [!DNL Data Landing Zone], [!DNL Google Cloud Storage] e SFTP. Para destinos [!DNL Amazon Kinesis] e [!DNL Azure Event Hubs], os dados são transmitidos do Experience Platform no formato [!DNL JSON].
 
 ![Destinos de armazenamento na nuvem do Adobe](../../assets/catalog/cloud-storage/cloud-storage-destinations.png)
 
@@ -25,28 +25,28 @@ O Adobe Experience Platform oferece suporte a exportações de dados para os seg
 * [Conexão com o Amazon Kinesis](amazon-kinesis.md)
 * [Conexão com o Amazon S3](amazon-s3.md)
 * [Conexão do Blob do Azure](azure-blob.md)
-* [Armazenamento Azure Data Lake Gen2](adls-gen2.md)
+* [Azure Data Lake Storage Gen2](adls-gen2.md)
 * [Conexão do Azure Event Hubs](azure-event-hubs.md)
-* [Zona de aterrissagem de dados](data-landing-zone.md)
-* [Armazenamento em nuvem Google](google-cloud-storage.md)
+* [Data Landing Zone](data-landing-zone.md)
+* [Google Cloud Storage](google-cloud-storage.md)
 * [Conexão SFTP](sftp.md)
 
 ## Conectar-se a um novo destino de armazenamento na nuvem {#connect-destination}
 
-Para enviar públicos-alvo para destinos de armazenamento na nuvem de suas campanhas, a Platform deve primeiro se conectar ao destino. Consulte a [tutorial de criação do destino](../../ui/connect-destination.md) para obter informações detalhadas sobre como configurar um novo destino.
+Para enviar públicos-alvo para destinos de armazenamento na nuvem de suas campanhas, a Platform deve primeiro se conectar ao destino. Consulte o [tutorial de criação de destino](../../ui/connect-destination.md) para obter informações detalhadas sobre a configuração de um novo destino.
 
 
 ## Use macros para criar uma pasta no seu local de armazenamento {#use-macros}
 
 >[!NOTE]
 >
-> A funcionalidade descrita nesta seção está disponível para [Amazon S3](amazon-s3.md) somente destinos.
+> A funcionalidade descrita nesta seção está disponível no momento apenas para destinos do [Amazon S3](amazon-s3.md).
 
 Para criar uma pasta personalizada por arquivo de público-alvo no local de armazenamento, você pode usar macros no campo de entrada do caminho da pasta. Insira as macros no final do campo de entrada, como mostrado abaixo.
 
 ![Como usar macros para criar uma pasta em seu armazenamento](../../assets/catalog/cloud-storage/workflow/macros-folder-path.png)
 
-Os exemplos abaixo fazem referência a um público-alvo de amostra `Luxury Audience` com ID `25768be6-ebd5-45cc-8913-12fb3f348615`.
+Os exemplos abaixo fazem referência a um público-alvo de exemplo `Luxury Audience` com ID `25768be6-ebd5-45cc-8913-12fb3f348615`.
 
 **Macro 1:`%SEGMENT_NAME%`**
 
@@ -71,4 +71,4 @@ Os destinos de armazenamento na nuvem são compatíveis com os seguintes tipos d
 
 ## Próximas etapas {#next-steps}
 
-Depois de selecionar qual dos [destinos na nuvem compatíveis](#supported-destinations) que você deseja usar, leia as [tutorial conectar-se a destinos](/help/destinations/ui/connect-destination.md) para saber como estabelecer uma conexão com o destino. Em seguida, leia o tutorial de ativação nos destinos baseados em arquivo para saber como iniciar [exportação](/help/destinations/ui/activate-batch-profile-destinations.md) para seu destino de armazenamento na nuvem.
+Depois de selecionar qual dos [destinos na nuvem com suporte](#supported-destinations) você deseja usar, leia o [tutorial sobre conexão com destinos](/help/destinations/ui/connect-destination.md) para saber como estabelecer uma conexão com o destino. Em seguida, leia o tutorial de ativação para destinos baseados em arquivo para saber como iniciar a [exportação](/help/destinations/ui/activate-batch-profile-destinations.md) de dados para o seu destino de armazenamento na nuvem.

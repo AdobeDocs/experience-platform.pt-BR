@@ -33,11 +33,11 @@ Ao usar os eventos de parte superior e inferior da página no SDK da Web, a equi
 
 ## Exemplo de evento do início da página {#top-of-page}
 
-A amostra de código abaixo exemplifica uma configuração de evento de parte superior da página que solicita personalização, mas não [enviar eventos de exibição](../personalization/display-events.md#send-sendEvent-calls) para apresentações renderizadas automaticamente. A variável [exibir eventos](../personalization/display-events.md#send-sendEvent-calls) serão enviados como parte do evento de fim de página.
+A amostra de código abaixo exemplifica uma configuração de evento de topo de página que solicita personalização, mas não [envia eventos de exibição](../personalization/display-events.md#send-sendEvent-calls) para apresentações renderizadas automaticamente. Os [eventos de exibição](../personalization/display-events.md#send-sendEvent-calls) serão enviados como parte do evento de fim de página.
 
 >[!BEGINTABS]
 
->[!TAB Evento do início da página]
+>[!TAB Evento de início de página]
 
 ```js
 alloy("sendEvent", {
@@ -51,9 +51,9 @@ alloy("sendEvent", {
 
 | Parâmetro | Obrigatório/Opcional | Descrição |
 |---|---|---|
-| `type` | Obrigatório | Defina esse parâmetro como `decisioning.propositionFetch`. Esse tipo de evento especial instrui o Adobe Analytics a eliminar esse evento. Ao usar o Customer Journey Analytics, também é possível configurar um filtro para eliminar esses eventos. |
-| `renderDecisions` | Obrigatório | Defina esse parâmetro como `true`. Esse parâmetro informa ao SDK da Web para renderizar as decisões retornadas pela Rede de borda. |
-| `personalization.sendDisplayEvent` | Obrigatório | Defina esse parâmetro como `false`. Isso interrompe o envio de eventos de exibição. |
+| `type` | Obrigatório | Defina este parâmetro como `decisioning.propositionFetch`. Esse tipo de evento especial instrui o Adobe Analytics a eliminar esse evento. Ao usar o Customer Journey Analytics, também é possível configurar um filtro para eliminar esses eventos. |
+| `renderDecisions` | Obrigatório | Defina este parâmetro como `true`. Esse parâmetro informa ao SDK da Web para renderizar as decisões retornadas pelo Edge Network. |
+| `personalization.sendDisplayEvent` | Obrigatório | Defina este parâmetro como `false`. Isso interrompe o envio de eventos de exibição. |
 
 >[!ENDTABS]
 
@@ -63,11 +63,11 @@ alloy("sendEvent", {
 
 >[!TAB Proposições renderizadas automaticamente]
 
-A amostra de código abaixo exemplifica uma configuração de evento da parte inferior da página, que envia eventos de exibição para propostas que foram renderizadas automaticamente na página, mas para as quais os eventos de exibição foram suprimidos no [parte superior da página](#top-of-page) evento.
+A amostra de código abaixo exemplifica uma configuração de evento na parte inferior da página, que envia eventos de exibição para propostas que foram renderizadas automaticamente na página, mas para as quais os eventos de exibição foram suprimidos no evento [parte superior da página](#top-of-page).
 
 >[!NOTE]
 >
->Nesse cenário, é necessário chamar o evento de fim de página _após_ na parte superior da página um. No entanto, o evento de parte inferior da página não precisa aguardar até que a parte superior da página um seja concluída.
+>Neste cenário, você deve chamar a parte inferior do evento da página _após_ a parte superior da página um. No entanto, o evento de parte inferior da página não precisa aguardar até que a parte superior da página um seja concluída.
 
 ```js
 alloy("sendEvent", {
@@ -80,7 +80,7 @@ alloy("sendEvent", {
 
 | Parâmetro | Obrigatório/Opcional | Descrição |
 |---|---|---|
-| `personalization.includeRenderedPropositions` | Obrigatório | Defina esse parâmetro como `true`. Isso permite o envio de eventos de exibição que foram suprimidos no início da página. |
+| `personalization.includeRenderedPropositions` | Obrigatório | Defina este parâmetro como `true`. Isso permite o envio de eventos de exibição que foram suprimidos no início da página. |
 | `xdm` | Opcional | Use esta seção para incluir todos os dados necessários para o evento de fim de página. |
 
 >[!TAB Proposições renderizadas manualmente]
@@ -117,8 +117,8 @@ alloy("sendEvent", {
 
 | Parâmetro | Obrigatório/Opcional | Descrição |
 |---|---|---|
-| `xdm._experience.decisioning.propositions` | Obrigatório | Esta seção define as apresentações renderizadas manualmente. Você deve incluir a proposta `ID`, `scope`, e `scopeDetails`. Consulte a documentação sobre como [renderizar personalização manualmente](../personalization/rendering-personalization-content.md#manually) para obter mais informações sobre como registrar eventos de exibição para conteúdo renderizado manualmente. A personalização renderizada manualmente deve ser incluída na parte inferior da ocorrência da página. |
-| `xdm._experience.decisioning.propositionEventType` | Obrigatório | Defina esse parâmetro como `display: 1`. |
+| `xdm._experience.decisioning.propositions` | Obrigatório | Esta seção define as apresentações renderizadas manualmente. Você deve incluir a proposta `ID`, `scope` e `scopeDetails`. Consulte a documentação sobre como [renderizar manualmente a personalização](../personalization/rendering-personalization-content.md#manually) para obter mais informações sobre como registrar eventos de exibição para conteúdo renderizado manualmente. A personalização renderizada manualmente deve ser incluída na parte inferior da ocorrência da página. |
+| `xdm._experience.decisioning.propositionEventType` | Obrigatório | Defina este parâmetro como `display: 1`. |
 | `xdm` | Opcional | Use esta seção para incluir todos os dados necessários para o evento de fim de página. |
 
 >[!ENDTABS]
@@ -131,7 +131,7 @@ alloy("sendEvent", {
 
 >[!TAB Primeira exibição de página]
 
-O exemplo abaixo inclui a adição do obrigatório `xdm.web.webPageDetails.viewName` parâmetro. É isso que o torna um aplicativo de página única. A variável `viewName` neste exemplo, é a exibição carregada no carregamento da página.
+O exemplo abaixo inclui a adição do parâmetro `xdm.web.webPageDetails.viewName` necessário. É isso que o torna um aplicativo de página única. O `viewName` neste exemplo é o modo de exibição que é carregado no carregamento da página.
 
 ```js
 // Top of page, render decisions for the "home" view.
@@ -191,7 +191,7 @@ alloy("sendEvent", {
 
 >[!TAB Segunda exibição de página (Opção 2)]
 
-Se ainda precisar atrasar a parte inferior da ocorrência da página, você pode usar `applyPropositions` para a parte superior da ocorrência da página. Como nenhuma personalização precisa ser buscada e nenhum dado do Analytics precisa ser gravado, não há necessidade de fazer uma solicitação à Rede de borda.
+Se você ainda precisar atrasar a parte inferior da ocorrência da página, poderá usar `applyPropositions` para a parte superior da ocorrência da página. Como nenhuma personalização precisa ser buscada e nenhum dado do Analytics precisa ser gravado, não há necessidade de fazer uma solicitação para o Edge Network.
 
 ```js
 // top of page, render the decisions already fetched for the "cart" view.

@@ -13,7 +13,7 @@ ht-degree: 6%
 
 >[!NOTE]
 >
->Para obter acesso a atributos computados, você precisará ter as permissões apropriadas (**Exibir atributos computados** e **Gerenciar atributos computados**). Para obter mais informações sobre as permissões necessárias, leia a [documentação de controle de acesso](../../access-control/home.md). Para saber como aplicar essas permissões, leia o [guia de gerenciamento de permissões](../../access-control/ui/permissions.md).
+>Para obter acesso a atributos computados, você precisará ter as permissões apropriadas (**Exibir atributos computados** e **Gerenciar atributos computados**). Para obter mais informações sobre as permissões necessárias, leia a [documentação sobre controle de acesso](../../access-control/home.md). Para saber como aplicar essas permissões, leia o [guia de gerenciamento de permissões](../../access-control/ui/permissions.md).
 
 No Adobe Experience Platform, os atributos computados são funções usadas para agregar dados no nível do evento em atributos no nível do perfil. Essas funções são computadas automaticamente para que possam ser usadas na segmentação, ativação e personalização.
 
@@ -21,49 +21,49 @@ Este documento fornece um guia sobre como criar e atualizar atributos calculados
 
 ## Introdução
 
-Este guia de interface do usuário requer uma compreensão dos vários [!DNL Experience Platform] serviços envolvidos no gerenciamento [!DNL Real-Time Customer Profiles]. Antes de ler este guia ou trabalhar na interface do usuário, consulte a documentação dos seguintes serviços:
+Este guia de interface do usuário requer uma compreensão dos vários serviços do [!DNL Experience Platform] envolvidos no gerenciamento do [!DNL Real-Time Customer Profiles]. Antes de ler este guia ou trabalhar na interface do usuário, consulte a documentação dos seguintes serviços:
 
-- [[!DNL Real-Time Customer Profile]](../home.md): fornece um perfil de consumidor unificado em tempo real com base em dados agregados de várias fontes.
-- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): o quadro normalizado pelo qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
+- [[!DNL Real-Time Customer Profile]](../home.md): Fornece um perfil de consumidor unificado em tempo real com base em dados agregados de várias fontes.
+- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): a estrutura padronizada pela qual o [!DNL Experience Platform] organiza os dados de experiência do cliente.
 
 ## Exibir atributos calculados {#view}
 
-Na interface do Experience Platform, selecione **[!UICONTROL Perfis]** na navegação à esquerda, seguido por **[!UICONTROL Atributos computados]** para ver uma lista dos atributos calculados disponíveis para sua organização. Isso inclui informações sobre o nome do atributo calculado, a descrição, a data da última avaliação e o status da última avaliação.
+Na interface do usuário do Experience Platform, selecione **[!UICONTROL Perfis]** na navegação à esquerda, seguido por **[!UICONTROL Atributos computados]** para ver uma lista dos atributos computados disponíveis para sua organização. Isso inclui informações sobre o nome do atributo calculado, a descrição, a data da última avaliação e o status da última avaliação.
 
-![A variável [!UICONTROL Perfil] seção e o [!UICONTROL Atributos computados] as guias são destacadas, mostrando aos usuários como acessar a página de navegação de atributos calculados.](./images/ui/browse.png)
+![A seção [!UICONTROL Perfil] e as guias [!UICONTROL Atributos computados] estão destacadas, mostrando aos usuários como acessar a página de navegação de atributos computados.](./images/ui/browse.png)
 
-Para selecionar quais campos estarão visíveis, você pode selecionar ![o ícone configurar colunas](./images/ui/configure-icon.png) para adicionar ou remover os campos que devem ser exibidos.
+Para selecionar quais campos estão visíveis, você pode selecionar ![o ícone de configuração de colunas](./images/ui/configure-icon.png) para adicionar ou remover os campos que deseja exibir.
 
 | Campo | Descrição |
 | ----- | ----------- |
 | [!UICONTROL Nome] | O nome de exibição do atributo calculado. |
 | [!UICONTROL Descrição] | A descrição do atributo calculado. |
-| [!UICONTROL Método de avaliação] | O método de avaliação do atributo calculado. Neste momento, apenas **lote** é compatível. |
-| [!UICONTROL Última avaliação] | Esse carimbo de data e hora representa a última execução de avaliação bem-sucedida. Somente eventos que ocorreram **antes** esse carimbo de data e hora é considerado na última avaliação bem-sucedida. |
-| [!UICONTROL Status da última avaliação] | O status que indica se o atributo calculado foi ou não calculado com êxito na última execução de avaliação. Os valores possíveis incluem **[!UICONTROL Sucesso]** ou **[!UICONTROL Failed]**. |
+| [!UICONTROL Método de avaliação] | O método de avaliação do atributo calculado. No momento, há suporte apenas para **lote**. |
+| [!UICONTROL Última avaliação] | Esse carimbo de data e hora representa a última execução de avaliação bem-sucedida. Somente eventos que ocorreram **antes** deste carimbo de data/hora são considerados na última avaliação bem-sucedida. |
+| [!UICONTROL Status da última avaliação] | O status que indica se o atributo calculado foi ou não calculado com êxito na última execução de avaliação. Os valores possíveis incluem **[!UICONTROL Sucesso]** ou **[!UICONTROL Falha]**. |
 | [!UICONTROL Frequência de atualização] | Uma indicação da frequência com que o atributo calculado deve ser atualizado. Os valores possíveis incluem por hora, dia, semana ou mês. |
 | [!UICONTROL Atualização rápida] | Um valor que mostra se a atualização rápida está ou não ativada para este atributo de computação. Se a atualização rápida estiver ativada, o atributo calculado poderá ser atualizado diariamente, em vez de semanalmente, quinzenalmente ou mensalmente. Esse valor só é aplicável para atributos calculados com um período de retrospectiva maior que uma semana. |
-| [!UICONTROL Status do ciclo de vida] | O status atual do atributo calculado. Há três status possíveis: <ul><li>**[!UICONTROL Rascunho]:** O atributo calculado não **não** já tem um campo criado no esquema. Nesse estado, o atributo calculado pode ser editado. </li><li>**[!UICONTROL Publicado]:** O atributo computado tem um campo criado no esquema e está pronto para ser usado. Nesse estado, o atributo calculado **não é possível** ser editado.</li><li>**[!UICONTROL Inativo]:** O atributo computado está desabilitado. Para obter mais informações sobre o status inativo, leia a [Página de perguntas frequentes](./faq.md#inactive-status). </li> |
+| [!UICONTROL Status do ciclo de vida] | O status atual do atributo calculado. Há três status possíveis: <ul><li>**[!UICONTROL Rascunho]:** O atributo computado **não** tem um campo criado no esquema ainda. Nesse estado, o atributo calculado pode ser editado. </li><li>**[!UICONTROL Publicado]:** O atributo computado tem um campo criado no esquema e está pronto para ser usado. Neste estado, o atributo computado **não pode** ser editado.</li><li>**[!UICONTROL Inativo]:** O atributo computado está desabilitado. Para obter mais informações sobre o status inativo, leia a [página de Perguntas frequentes](./faq.md#inactive-status). </li> |
 | [!UICONTROL Criado] | Um carimbo de data e hora que mostra a data e a hora em que o atributo calculado foi criado. |
 | [!UICONTROL Última modificação] | Um carimbo de data e hora que mostra a data e a hora em que o atributo calculado foi modificado pela última vez. |
 
-Você também pode filtrar os atributos calculados exibidos com base no status do ciclo de vida. Selecione o ![funil](./images/ui/filter-icon.png) ícone.
+Você também pode filtrar os atributos calculados exibidos com base no status do ciclo de vida. Selecione o ícone de ![funil](./images/ui/filter-icon.png).
 
-![O ícone de filtro é realçado.](./images/ui/select-filter.png)
+![O ícone de filtro está realçado.](./images/ui/select-filter.png)
 
-Agora é possível optar por filtrar os atributos calculados por status ([!UICONTROL Rascunho], [!UICONTROL Publicado], e [!UICONTROL Inativo]).
+Agora você pode optar por filtrar os atributos computados por status ([!UICONTROL Rascunho], [!UICONTROL Publicado] e [!UICONTROL Inativo]).
 
-![As opções pelas quais você pode filtrar os atributos calculados são destacadas. Essas opções incluem [!UICONTROL Rascunho], [!UICONTROL Publicado], e [!UICONTROL Inativo].](./images/ui/view-filters.png)
+![As opções pelas quais você pode filtrar os atributos computados são realçadas. Estas opções incluem [!UICONTROL Rascunho], [!UICONTROL Publicado] e [!UICONTROL Inativo].](./images/ui/view-filters.png)
 
-Além disso, você pode selecionar um atributo calculado para ver informações mais detalhadas sobre ele. Para obter mais informações sobre a página de detalhes dos atributos calculados, leia a [exibir a seção detalhes de um atributo calculado](#view-details).
+Além disso, você pode selecionar um atributo calculado para ver informações mais detalhadas sobre ele. Para obter mais informações sobre a página de detalhes dos atributos computados, leia a [seção de detalhes dos atributos computados](#view-details).
 
 ## Criar um atributo calculado {#create}
 
 Para criar um novo atributo calculado, selecione **[!UICONTROL Criar atributo calculado]** para inserir o novo fluxo de trabalho de atributo calculado.
 
-![A variável [!UICONTROL Criar atributos computados] é realçado, mostrando aos usuários como acessar a página criar um atributo calculado.](./images/ui/create.png)
+![O botão [!UICONTROL Criar atributos computados] está realçado, mostrando aos usuários como acessar a página criar um atributo computado.](./images/ui/create.png)
 
-A variável **[!UICONTROL Criar atributo calculado]** é exibida. Nesta página, você pode adicionar as informações básicas para o atributo calculado que deseja criar.
+A página **[!UICONTROL Criar atributo computado]** é exibida. Nesta página, você pode adicionar as informações básicas para o atributo calculado que deseja criar.
 
 | Campo | Descrição |
 | ----- | ----------- |
@@ -71,15 +71,15 @@ A variável **[!UICONTROL Criar atributo calculado]** é exibida. Nesta página,
 | [!UICONTROL Nome do campo] | Um nome usado para fazer referência ao atributo calculado em outros serviços downstream. Esse nome é automaticamente derivado do nome de exibição e é gravado em camelCase. |
 | [!UICONTROL Descrição] | Uma descrição do atributo calculado que você está tentando criar. |
 
-![A variável [!UICONTROL Informações básicas] seção do [!UICONTROL Criar atributo calculado] é realçada.](./images/ui/basic-information.png)
+![A seção [!UICONTROL Informações básicas] da página [!UICONTROL Criar atributo computado] está realçada.](./images/ui/basic-information.png)
 
 Depois de adicionar os detalhes do atributo calculado, você pode começar a definir suas regras.
 
 ### Especificar condições de filtragem de eventos
 
-Para criar uma regra, selecione primeiro os atributos na **[!UICONTROL Eventos]** para filtrar os eventos nos quais deseja agregar. No momento, somente atributos de evento do tipo não array são compatíveis.
+Para criar uma regra, selecione primeiro os atributos da seção **[!UICONTROL Eventos]** para filtrar os eventos nos quais deseja agregar. No momento, somente atributos de evento do tipo não array são compatíveis.
 
-![A variável [!UICONTROL Eventos] é realçada.](./images/ui/events.png)
+![A seção [!UICONTROL Eventos] está realçada.](./images/ui/events.png)
 
 Após selecionar o atributo a ser usado na definição de atributo calculado, você pode escolher a que esse valor será comparado.
 
@@ -87,19 +87,19 @@ Após selecionar o atributo a ser usado na definição de atributo calculado, vo
 
 ### Aplicar função de agregação
 
-Agora, você pode aplicar uma função ao campo da saída condicional. Primeiro, selecione o tipo de função de agregação. As opções disponíveis incluem [!UICONTROL Sum], [!UICONTROL Min], [!UICONTROL Máx], [!UICONTROL Contagem], e [!UICONTROL Mais recente]. Mais informações sobre essas funções podem ser encontradas na seção [seção funções](./overview.md#functions) da visão geral dos atributos calculados.
+Agora, você pode aplicar uma função ao campo da saída condicional. Primeiro, selecione o tipo de função de agregação. As opções disponíveis incluem [!UICONTROL Soma], [!UICONTROL Min], [!UICONTROL Max], [!UICONTROL Contagem] e [!UICONTROL Mais Recente]. Mais informações sobre essas funções podem ser encontradas na [seção de funções](./overview.md#functions) da visão geral de atributos computados.
 
 ![As funções de atributo computadas são exibidas.](./images/ui/select-function.png)
 
 Após escolher uma função, você pode escolher o campo no qual agregar. Os campos elegíveis a serem escolhidos dependem da função selecionada.
 
-![O campo destacado mostra o atributo no qual você está escolhendo agregar a função.](./images/ui/select-eligible-field.png)
+![O campo realçado mostra o atributo no qual você está optando por agregar a função.](./images/ui/select-eligible-field.png)
 
 ### Duração da pesquisa
 
 Depois de aplicar a função de agregação, será necessário definir o período de lookback do atributo calculado. Esse período de pesquisa especifica o período no qual você deseja agregar eventos. Essa duração da pesquisa pode ser especificada em termos de horas, dias, semanas ou meses.
 
-![A duração da pesquisa é realçada.](./images/ui/select-lookback-duration.png)
+![A duração da pesquisa está realçada.](./images/ui/select-lookback-duration.png)
 
 ### Atualização rápida {#fast-refresh}
 
@@ -110,29 +110,29 @@ Depois de aplicar a função de agregação, será necessário definir o períod
 
 Ao aplicar a função de agregação, você poderá ativar a atualização rápida se o período de lookback for maior que uma semana.
 
-![A variável [!UICONTROL Atualização rápida] é realçada.](./images/ui/enable-fast-refresh.png)
+![A caixa de seleção [!UICONTROL Atualização Rápida] está realçada.](./images/ui/enable-fast-refresh.png)
 
 A atualização rápida permite manter seus atributos atualizados. Ativar essa opção permite atualizar os atributos calculados diariamente, mesmo por períodos de lookback mais longos, permitindo que você reaja rapidamente às atividades do usuário.
 
-Para obter mais informações sobre atualização rápida, leia a [seção atualização rápida](./overview.md#fast-refresh) da visão geral dos atributos calculados.
+Para obter mais informações sobre atualização rápida, leia a [seção atualização rápida](./overview.md#fast-refresh) da visão geral dos atributos computados.
 
 Com essas etapas concluídas, agora é possível optar por salvar esse atributo calculado como rascunho ou publicá-lo imediatamente.
 
-![A variável [!UICONTROL Salvar como rascunho] e [!UICONTROL Publish] Os botões são realçados.](./images/ui/draft-or-publish.png)
+![Os botões [!UICONTROL Salvar como rascunho] e [!UICONTROL Publish] estão realçados.](./images/ui/draft-or-publish.png)
 
 ## Exibir detalhes de um atributo calculado {#view-details}
 
-Para exibir os detalhes de um atributo calculado, selecione o atributo calculado sobre o qual deseja ver detalhes na [!UICONTROL **Procurar**] página.
+Para exibir os detalhes de um atributo computado, selecione o atributo computado sobre o qual você deseja ver detalhes na página [!UICONTROL **Procurar**].
 
-![Um atributo calculado é realçado.](./images/ui/select.png)
+![Um atributo computado está realçado.](./images/ui/select.png)
 
-O conteúdo da página é diferente, dependendo se o atributo calculado é **[!UICONTROL Publicado]** ou em **[!UICONTROL Rascunho]**.
+O conteúdo da página é diferente, dependendo se o atributo computado é **[!UICONTROL Publicado]** ou em **[!UICONTROL Rascunho]**.
 
 ### Atributo calculado publicado {#published}
 
 Ao selecionar um atributo calculado publicado, a página de detalhes dos atributos calculados é exibida.
 
-![A página de detalhes do atributo calculado é exibida.](./images/ui/details.png)
+![A página de detalhes do atributo computado é exibida.](./images/ui/details.png)
 
 Esta página exibe um resumo dos detalhes do atributo calculado, bem como um gráfico mostrando a distribuição do valor e perfis de amostra que se qualificam para o atributo calculado.
 
@@ -142,26 +142,26 @@ Esta página exibe um resumo dos detalhes do atributo calculado, bem como um gr�
 
 ### Rascunho do atributo calculado {#draft}
 
-Ao selecionar um rascunho de atributo calculado, a variável **[!UICONTROL Editar atributos computados]** é exibida. Esta página, de forma semelhante à [!UICONTROL Criar atributos computados] permite editar as informações básicas do atributo calculado, bem como sua definição, antes de permitir a atualização do rascunho ou a publicação.
+Ao selecionar um atributo computado de rascunho, a página **[!UICONTROL Editar atributos computados]** é exibida. Esta página, semelhante à página [!UICONTROL Criar atributos computados], permite editar as informações básicas do atributo computado, bem como sua definição, antes de permitir a atualização do rascunho ou a publicação.
 
-![A variável [!UICONTROL Editar atributos computados] é exibida.](./images/ui/edit.png)
+![A página [!UICONTROL Editar atributos computados] é exibida.](./images/ui/edit.png)
 
 ## Uso de atributos computados {#usage}
 
 >[!IMPORTANT]
 >
->Se você estiver usando um atributo calculado com a variável **Mais recente** em uma definição de segmento, você **deve** include **ambos** o valor e o valor do carimbo de data e hora no objeto de atributo calculado.
+>Se você estiver usando um atributo computado com a função **Mais recente** em uma definição de segmento, você **deve** incluir **ambos** o valor e o valor do carimbo de data/hora no objeto de atributo computado.
 >
->Por exemplo, se estiver criando uma definição de segmento que esteja procurando &quot;Todos os perfis que têm um endereço de email válido&quot;, onde o campo endereço de email é preenchido por um atributo calculado com a função mais recente, você **deve** incluir o valor do endereço de email existe **e** o carimbo de data/hora do endereço de email existe.
+>Por exemplo, se estiver criando uma definição de segmento que esteja procurando &quot;Todos os perfis que têm um endereço de email válido&quot;, onde o campo de endereço de email é preenchido por um atributo computado com a função mais recente, você **deve** incluir o valor do endereço de email existe **e** o carimbo de data/hora do endereço de email existe.
 
-Depois de criar um atributo calculado, você pode usar **publicado** atributos computados em outros serviços downstream. Como os atributos calculados são campos de atributo de perfil criados no esquema de união de perfis, você pode pesquisar valores de atributo calculados para um Perfil de cliente em tempo real, usá-los em um público-alvo, ativá-los para um destino ou usá-los para personalização no jornada na Adobe Journey Optimizer.
+Depois de criar um atributo computado, você pode usar atributos computados **publicados** em outros serviços downstream. Como os atributos calculados são campos de atributo de perfil criados no esquema de união de perfis, você pode pesquisar valores de atributo calculados para um Perfil de cliente em tempo real, usá-los em um público-alvo, ativá-los para um destino ou usá-los para personalização no jornada na Adobe Journey Optimizer.
 
 >[!NOTE]
 >
->Atributos computados **não é possível** ser usado no público-alvo **composições**.
+>Os atributos computados **não podem** ser usados em **composições** de público-alvo.
 
-![O Construtor de segmentos é exibido, mostrando um atributo calculado como parte da composição de definição de segmentos.](./images/ui/use-ca.png)
+![O Construtor de segmentos é exibido, mostrando um atributo calculado como parte da composição de definição de segmento.](./images/ui/use-ca.png)
 
 ## Próximas etapas
 
-Para saber mais sobre atributos computados, leia a [visão geral dos atributos computados](./overview.md). Para obter informações sobre como criar e configurar atributos computados usando a API, leia os [guia do desenvolvedor de atributos computados](./api.md).
+Para saber mais sobre atributos computados, leia a [visão geral sobre atributos computados](./overview.md). Para obter informações sobre como criar e configurar atributos computados usando a API, leia o [guia do desenvolvedor de atributos computados](./api.md).

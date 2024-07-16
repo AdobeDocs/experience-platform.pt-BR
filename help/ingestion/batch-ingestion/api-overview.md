@@ -13,15 +13,15 @@ ht-degree: 6%
 
 # Guia do desenvolvedor de assimilação em lote
 
-Este documento fornece um guia abrangente sobre como usar o [endpoints da API de assimilação em lote](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) no Adobe Experience Platform. Para obter uma visão geral das APIs de assimilação em lote, incluindo pré-requisitos e práticas recomendadas, comece lendo o [visão geral da API de assimilação em lote](overview.md).
+Este documento fornece um guia abrangente sobre o uso de [pontos de extremidade da API de assimilação em lote](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) no Adobe Experience Platform. Para obter uma visão geral das APIs de assimilação em lote, incluindo pré-requisitos e práticas recomendadas, comece lendo a [visão geral da API de assimilação em lote](overview.md).
 
-O apêndice deste documento fornece informações para [formatação dos dados a serem usados para assimilação](#data-transformation-for-batch-ingestion), incluindo arquivos de dados CSV e JSON de amostra.
+O apêndice deste documento fornece informações sobre [dados de formatação a serem usados para assimilação](#data-transformation-for-batch-ingestion), incluindo arquivos de dados CSV e JSON de exemplo.
 
 ## Introdução
 
-Os endpoints de API usados neste guia fazem parte do [API de assimilação em lote](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/). A assimilação em lote é fornecida por meio de uma API RESTful, na qual você pode executar operações CRUD básicas em relação aos tipos de objeto compatíveis.
+Os pontos de extremidade de API usados neste guia fazem parte da [API de assimilação em lote](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/). A assimilação em lote é fornecida por meio de uma API RESTful, na qual você pode executar operações CRUD básicas em relação aos tipos de objeto compatíveis.
 
-Antes de continuar, reveja o [visão geral da API de assimilação em lote](overview.md) e a variável [guia de introdução](getting-started.md).
+Antes de continuar, revise a [visão geral da API de assimilação em lote](overview.md) e o [guia de introdução](getting-started.md).
 
 ## Assimilar arquivos JSON
 
@@ -35,7 +35,7 @@ Primeiro, será necessário criar um lote, com JSON como formato de entrada. Ao 
 
 >[!NOTE]
 >
->Os exemplos abaixo são para JSON de linha única. Para assimilar JSON de várias linhas, a variável `isMultiLineJson` sinalizador precisará ser definido. Para obter mais informações, leia a [guia de solução de problemas de assimilação em lote](./troubleshooting.md).
+>Os exemplos abaixo são para JSON de linha única. Para assimilar JSON multilinha, o sinalizador `isMultiLineJson` precisará ser definido. Para obter mais informações, leia o [guia de solução de problemas de assimilação em lote](./troubleshooting.md).
 
 **Formato da API**
 
@@ -97,7 +97,7 @@ Agora que você criou um lote, pode usar a ID do lote da resposta de criação d
 
 >[!NOTE]
 >
->Consulte a seção do apêndice para obter uma [exemplo de um arquivo de dados JSON formatado corretamente](#data-transformation-for-batch-ingestion).
+>Consulte a seção do apêndice para obter um [exemplo de um arquivo de dados JSON formatado corretamente](#data-transformation-for-batch-ingestion).
 
 **Formato da API**
 
@@ -129,7 +129,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | O caminho completo e o nome do arquivo que você está tentando carregar. Esse é o caminho do arquivo local, como `acme/customers/campaigns/summer.json`. |
+| `{FILE_PATH_AND_NAME}` | O caminho completo e o nome do arquivo que você está tentando carregar. Este caminho de arquivo é o caminho de arquivo local, como `acme/customers/campaigns/summer.json`. |
 
 **Resposta**
 
@@ -232,7 +232,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
 
 ### Fazer upload de arquivos
 
-Agora que você criou um lote, poderá usar o `batchId` de antes para carregar arquivos no lote. É possível fazer upload de vários arquivos para o lote.
+Agora que você criou um lote, pode usar o `batchId` de antes para carregar arquivos no lote. É possível fazer upload de vários arquivos para o lote.
 
 **Formato da API**
 
@@ -264,7 +264,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | O caminho completo e o nome do arquivo que você está tentando carregar. Esse é o caminho do arquivo local, como `acme/customers/campaigns/summer.parquet`. |
+| `{FILE_PATH_AND_NAME}` | O caminho completo e o nome do arquivo que você está tentando carregar. Este caminho de arquivo é o caminho de arquivo local, como `acme/customers/campaigns/summer.parquet`. |
 
 **Resposta**
 
@@ -439,7 +439,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 | Parâmetro | Descrição |
 | --------- | ----------- |
 | `{CONTENT_RANGE}` | Em números inteiros, o início e o fim do intervalo solicitado. |
-| `{FILE_PATH_AND_NAME}` | O caminho completo e o nome do arquivo que você está tentando carregar. Esse é o caminho do arquivo local, como `acme/customers/campaigns/summer.json`. |
+| `{FILE_PATH_AND_NAME}` | O caminho completo e o nome do arquivo que você está tentando carregar. Este caminho de arquivo é o caminho de arquivo local, como `acme/customers/campaigns/summer.json`. |
 
 
 **Resposta**
@@ -450,7 +450,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 
 ### Arquivo grande completo
 
-Agora que você criou um lote, poderá usar o `batchId` de antes para carregar arquivos no lote. É possível fazer upload de vários arquivos para o lote.
+Agora que você criou um lote, pode usar o `batchId` de antes para carregar arquivos no lote. É possível fazer upload de vários arquivos para o lote.
 
 **Formato da API**
 
@@ -513,7 +513,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ## Assimilar arquivos CSV
 
-Para assimilar arquivos CSV, você precisará criar uma classe, esquema e um conjunto de dados que seja compatível com CSV. Para obter informações detalhadas sobre como criar a classe e o esquema necessários, siga as instruções fornecidas na [tutorial de criação de esquema ad-hoc](../../xdm/api/ad-hoc.md).
+Para assimilar arquivos CSV, você precisará criar uma classe, esquema e um conjunto de dados que seja compatível com CSV. Para obter informações detalhadas sobre como criar a classe e o esquema necessários, siga as instruções fornecidas no [tutorial de criação de esquema ad-hoc](../../xdm/api/ad-hoc.md).
 
 >[!NOTE]
 >
@@ -617,11 +617,11 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 
 ### Fazer upload de arquivos
 
-Agora que você criou um lote, poderá usar o `batchId` de antes para carregar arquivos no lote. É possível fazer upload de vários arquivos para o lote.
+Agora que você criou um lote, pode usar o `batchId` de antes para carregar arquivos no lote. É possível fazer upload de vários arquivos para o lote.
 
 >[!NOTE]
 >
->Consulte a seção do apêndice para obter uma [exemplo de um arquivo de dados CSV formatado corretamente](#data-transformation-for-batch-ingestion).
+>Consulte a seção do apêndice para obter um [exemplo de um arquivo de dados CSV corretamente formatado](#data-transformation-for-batch-ingestion).
 
 **Formato da API**
 
@@ -653,7 +653,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | O caminho completo e o nome do arquivo que você está tentando carregar. Esse é o caminho do arquivo local, como `acme/customers/campaigns/summer.csv`. |
+| `{FILE_PATH_AND_NAME}` | O caminho completo e o nome do arquivo que você está tentando carregar. Este caminho de arquivo é o caminho de arquivo local, como `acme/customers/campaigns/summer.csv`. |
 
 
 **Resposta**
@@ -720,7 +720,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ## Excluir um lote {#delete-a-batch}
 
-Um lote pode ser excluído executando a seguinte solicitação POST com o `action=REVERT` parâmetro de consulta para a ID do lote que você deseja excluir. O lote é marcado como &quot;inativo&quot;, tornando-o qualificado para a coleta de lixo. O lote será coletado de forma assíncrona e nesse momento será marcado como &quot;excluído&quot;.
+Um lote pode ser excluído executando a seguinte solicitação POST com o parâmetro de consulta `action=REVERT` para a ID do lote que você deseja excluir. O lote é marcado como &quot;inativo&quot;, tornando-o qualificado para a coleta de lixo. O lote será coletado de forma assíncrona e nesse momento será marcado como &quot;excluído&quot;.
 
 **Formato da API**
 
@@ -758,10 +758,10 @@ Ocasionalmente, pode ser necessário atualizar os dados no armazenamento de perf
 
 Para corrigir um lote, é necessário o seguinte:
 
-- **Um conjunto de dados ativado para Atualizações de perfil e atributo.** Isso é feito por meio de tags de conjunto de dados e requer uma `isUpsert:true` tag a ser adicionada à `unifiedProfile` matriz. Para obter detalhes sobre as etapas que mostram como criar um conjunto de dados ou configurar um conjunto de dados existente para substituição, siga o tutorial para [ativar um conjunto de dados para atualizações de Perfil](../../catalog/datasets/enable-upsert.md).
-- **Um arquivo Parquet contendo os campos a serem corrigidos e campos de identidade para o Perfil.** O formato de dados para corrigir um lote é semelhante ao processo normal de assimilação de lote. A entrada necessária é um arquivo Parquet e, além dos campos que serão atualizados, os dados carregados devem conter os campos de identidade para corresponder aos dados no armazenamento de Perfil.
+- **Um conjunto de dados habilitado para atualizações de Perfil e atributo.** Isso é feito por meio de marcas de conjunto de dados e requer que uma marca `isUpsert:true` específica seja adicionada à matriz `unifiedProfile`. Para obter detalhes sobre as etapas que mostram como criar um conjunto de dados ou configurar um conjunto de dados existente para substituição, siga o tutorial para [habilitar um conjunto de dados para atualizações de Perfil](../../catalog/datasets/enable-upsert.md).
+- **Um arquivo Parquet contendo os campos a serem corrigidos e os campos de identidade para o Perfil.** O formato dos dados para corrigir um lote é semelhante ao processo normal de assimilação de lotes. A entrada necessária é um arquivo Parquet e, além dos campos que serão atualizados, os dados carregados devem conter os campos de identidade para corresponder aos dados no armazenamento de Perfil.
 
-Depois de ativar um conjunto de dados para Perfil e substituição e um arquivo do Parquet contendo os campos que você deseja corrigir, bem como os campos de identidade necessários, você pode seguir as etapas para [Assimilar arquivos do Parquet](#ingest-parquet-files) para concluir o patch por meio da assimilação em lote.
+Depois de habilitar um conjunto de dados para Perfil e substituição e um arquivo Parquet contendo os campos que você deseja corrigir, bem como os campos de identidade necessários, você pode seguir as etapas para [assimilar arquivos Parquet](#ingest-parquet-files) para concluir o patch por meio da assimilação em lote.
 
 ## Reproduzir um lote novamente
 
@@ -843,7 +843,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 
 ### Fazer upload de arquivos
 
-Agora que você criou um lote, poderá usar o `batchId` de antes para carregar arquivos no lote. É possível fazer upload de vários arquivos para o lote.
+Agora que você criou um lote, pode usar o `batchId` de antes para carregar arquivos no lote. É possível fazer upload de vários arquivos para o lote.
 
 **Formato da API**
 
@@ -875,7 +875,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | O caminho completo e o nome do arquivo que você está tentando carregar. Esse é o caminho do arquivo local, como `acme/customers/campaigns/summer.json`. |
+| `{FILE_PATH_AND_NAME}` | O caminho completo e o nome do arquivo que você está tentando carregar. Este caminho de arquivo é o caminho de arquivo local, como `acme/customers/campaigns/summer.json`. |
 
 **Resposta**
 
@@ -919,9 +919,9 @@ A seção a seguir contém informações adicionais para assimilação de dados 
 
 ### Transformação de dados para assimilação em lote
 
-Para assimilar um arquivo de dados em [!DNL Experience Platform], a estrutura hierárquica do arquivo deve estar em conformidade com as [Experience Data Model (XDM)](../../xdm/home.md) esquema associado ao conjunto de dados que está sendo carregado.
+Para assimilar um arquivo de dados em [!DNL Experience Platform], a estrutura hierárquica do arquivo deve estar em conformidade com o esquema [Experience Data Model (XDM)](../../xdm/home.md) associado ao conjunto de dados no qual está sendo carregado.
 
-Informações sobre como mapear um arquivo CSV para estar em conformidade com um esquema XDM podem ser encontradas no [exemplos de transformações](../../etl/transformations.md) juntamente com um exemplo de um arquivo de dados JSON formatado corretamente. Os arquivos de exemplo fornecidos no documento podem ser encontrados aqui:
+Informações sobre como mapear um arquivo CSV para estar em conformidade com um esquema XDM podem ser encontradas no documento [transformações de amostra](../../etl/transformations.md), juntamente com um exemplo de um arquivo de dados JSON formatado corretamente. Os arquivos de exemplo fornecidos no documento podem ser encontrados aqui:
 
 - [CRM_profiles.csv](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.csv)
 - [CRM_profiles.json](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.json)

@@ -11,9 +11,9 @@ ht-degree: 2%
 
 ---
 
-# [!UICONTROL Informações da Web] tipo de dados
+# [!UICONTROL Tipo de dados de informações da Web]
 
-[!UICONTROL Informações da Web] é um tipo de dados padrão do Experience Data Model (XDM) que descreve as informações registradas por meio de um Evento de experiência específico do canal da World Wide Web, incluindo a página da Web, o referenciador e/ou o link relacionado à interação na página.
+[!UICONTROL Informações da Web] é um tipo de dados padrão do Experience Data Model (XDM) que descreve informações registradas por meio de um Evento de Experiência específico do canal da World Wide Web, incluindo a página da Web, o referenciador e/ou o link relacionado à interação na página.
 
 ![](../images/data-types/web-information.png)
 
@@ -21,7 +21,7 @@ ht-degree: 2%
 | --- | --- | --- |
 | `webInteraction` | [[!UICONTROL Interação na Web]](./web-interaction.md) | Descreve os detalhes sobre o link da Web ou o URL que corresponde à interação. |
 | `webPageDetails` | [[!UICONTROL Detalhes da página da Web]](./webpage-details.md) | Descreve os detalhes sobre a página da Web em que ocorreu a interação da Web. |
-| `webReferrer` | [!UICONTROL Objeto] | Descreve o referenciador de uma interação da web, que é o URL de onde um visitante veio imediatamente antes de a interação da web atual ser registrada. Contém as seguintes subpropriedades: <ul><li>`URL`: o URL do referenciador.</li><li>`type`: o tipo de referenciador.</li></ul> |
+| `webReferrer` | [!UICONTROL Objeto] | Descreve o referenciador de uma interação da web, que é o URL de onde um visitante veio imediatamente antes de a interação da web atual ser registrada. Contém as seguintes subpropriedades: <ul><li>`URL`: A URL do referenciador.</li><li>`type`: o tipo de referenciador.</li></ul> |
 
 {style="table-layout:auto"}
 

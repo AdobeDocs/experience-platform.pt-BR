@@ -35,7 +35,7 @@ Scoping parameters are usage limits that relate to the scoping of your required 
 
 ## Medidas de proteção
 
-Consulte a [Proteções do serviço de consulta](../guardrails.md) documento sobre limites de uso padrão para dados do Serviço de consulta em relação ao seu direito de licenciamento.
+Consulte o documento [Medidas de proteção do Serviço de consulta](../guardrails.md) sobre os limites de uso padrão para dados do Serviço de consulta em relação ao seu direito de licenciamento.
 
 <!-- Update these descriptions post 23.3 release
 ## Static limits

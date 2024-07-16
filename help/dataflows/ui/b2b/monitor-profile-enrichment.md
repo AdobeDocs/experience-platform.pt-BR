@@ -1,29 +1,29 @@
 ---
-description: Use o [!UICONTROL Enriquecimento de perfil] painel para entender se os trabalhos de enriquecimento de perfil foram executados e concluídos com êxito, e para visualizar as métricas básicas para medir a eficácia dos enriquecimentos.
+description: Use o painel [!UICONTROL Enriquecimento de Perfil] para entender se os trabalhos de enriquecimento de perfil foram executados e concluídos com êxito, e para exibir as métricas básicas para medir a eficácia dos enriquecimentos.
 solution: Experience Platform
 title: Monitorar trabalhos de enriquecimento de perfil
 type: Tutorial
 exl-id: 096a2212-ed7f-4419-8ead-fa1ca01c2804
 source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '768'
+source-wordcount: '764'
 ht-degree: 2%
 
 ---
 
 # Monitorar trabalhos de enriquecimento de perfil na interface {#monitor-profile-enrichment}
 
-Use o [!UICONTROL Enriquecimento de perfil] painel para entender se os trabalhos de enriquecimento de perfil foram executados e concluídos com êxito, e para visualizar as métricas básicas para medir a eficácia dos enriquecimentos.
+Use o painel [!UICONTROL Enriquecimento de Perfil] para entender se os trabalhos de enriquecimento de perfil foram executados e concluídos com êxito, e para exibir as métricas básicas para medir a eficácia dos enriquecimentos.
 
-No [Interface do Platform](https://platform.adobe.com), selecione **[!UICONTROL Monitoramento]** na navegação à esquerda, para acessar a [!UICONTROL Monitoramento] painel. No seletor de exibições, selecione **Fluxo B2B** para ver os elementos específicos do painel do [Real-Time CDP B2B](/help/rtcdp/b2b-overview.md).  A variável [!UICONTROL Monitoramento] O painel inclui as métricas básicas da execução bem-sucedida mais recente e o status diário do job até 90 dias retroativamente.
+Na [Interface do usuário da plataforma](https://platform.adobe.com), selecione **[!UICONTROL Monitoramento]** na navegação à esquerda para acessar o painel [!UICONTROL Monitoramento]. No seletor de exibição, selecione **Fluxo B2B** para ver os elementos do painel específicos do [Real-Time CDP B2B](/help/rtcdp/b2b-overview.md).  O painel [!UICONTROL Monitoramento] inclui as métricas básicas da execução bem-sucedida mais recente e o status diário do trabalho até 90 dias retroativos.
 
 ## Enriquecimento de perfil de contas relacionadas {#related-accounts}
 
-A variável [!UICONTROL Contas relacionadas] mostra as métricas básicas e o status do job diário específico para o [Contas relacionadas](/help/rtcdp/b2b-ai-ml-services/related-accounts.md) enriquecimento do perfil.
+O painel [!UICONTROL Contas relacionadas] mostra as métricas básicas e o status do trabalho diário específico para o enriquecimento do perfil de [Contas relacionadas](/help/rtcdp/b2b-ai-ml-services/related-accounts.md).
 
 ![Indicação visual de como acessar a tela de monitoramento de trabalhos de enriquecimento de perfil na interface do usuário do Experience Platform.](/help/dataflows/assets/ui/b2b/monitoring-profile-enrichment-jobs.png)
 
-Os dados na variável **[!UICONTROL Métricas]** inclui as métricas básicas da execução bem-sucedida mais recente do job Contas Relacionadas.
+Os dados no cartão **[!UICONTROL Métricas]** incluem as métricas básicas da última execução bem-sucedida do trabalho Contas Relacionadas.
 
 As seguintes métricas estão disponíveis para trabalhos de enriquecimento de perfil de contas relacionadas:
 
@@ -40,9 +40,9 @@ As seguintes métricas estão disponíveis para trabalhos de enriquecimento de p
 
 ## Enriquecimento de perfil de correspondência de contas de cliente potencial {#lead-to-account-matching}
 
-A variável [!UICONTROL Cliente potencial para correspondência de conta] mostra as métricas básicas e o status diário de execução de job específicos para o [Cliente potencial para correspondência de conta](/help/rtcdp/b2b-ai-ml-services/lead-to-account-matching.md) enriquecimento do perfil.
+O painel [!UICONTROL Correspondência entre contas] mostra as métricas básicas e o status diário de execução de trabalho específicos para o enriquecimento do perfil [Correspondência entre contas](/help/rtcdp/b2b-ai-ml-services/lead-to-account-matching.md).
 
-![Enriquecimento de perfil de correspondência de contas de cliente potencial](/help/dataflows/assets/ui/b2b/mpc-lead-to-account-matching.png)
+![Enriquecimento do perfil de correspondência de contas](/help/dataflows/assets/ui/b2b/mpc-lead-to-account-matching.png)
 
 As seguintes métricas estão disponíveis para trabalhos de enriquecimento do perfil de correspondência de clientes potenciais com contas:
 
@@ -58,7 +58,7 @@ As seguintes métricas estão disponíveis para trabalhos de enriquecimento do p
 
 ## Enriquecimento preditivo de perfil de pontuação de leads e contas {#predictive-lead-to-account-scoring}
 
-A variável [!UICONTROL Pontuação preditiva de leads e contas] mostra as métricas básicas e o status diário de execução de job específicos para o [Pontuação preditiva de leads e contas](/help/rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md) enriquecimento do perfil.
+O painel [!UICONTROL Pontuação preditiva de leads e contas] mostra as métricas básicas e o status diário de execução de trabalhos específicos para o enriquecimento do perfil [Pontuação preditiva de leads e contas](/help/rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md).
 
 ![Enriquecimento preditivo de perfil de pontuação de leads e contas](/help/dataflows/assets/ui/b2b/predictive-lead-and-account-scoring.png)
 
@@ -77,15 +77,15 @@ As seguintes métricas estão disponíveis para trabalhos de enriquecimento de p
 
 Esta seção descreve várias opções da interface do usuário na interface de monitoramento, que permitem filtrar as métricas exibidas na página.
 
-Use o ícone de seta (![ícone de seta](/help/dataflows/assets/ui/monitor-destinations/chevron-up.png)) para expandir ou descartar a placa na parte superior da tela, que mostra informações sobre os trabalhos de enriquecimento de perfil.
+Use o ícone de seta (![ícone de seta](/help/dataflows/assets/ui/monitor-destinations/chevron-up.png)) para expandir ou descartar o cartão na parte superior da tela, que mostra informações sobre os trabalhos de enriquecimento de perfil.
 
-![Gravação de tela que mostra o controle da interface do usuário do ícone de seta.](/help/dataflows/assets/ui/b2b/use-arrow-control.gif)
+![Gravação de tela que mostra o controle da interface do ícone de seta.](/help/dataflows/assets/ui/b2b/use-arrow-control.gif)
 
-Use o **[!UICONTROL Métricas e gráficos]** ativar para ignorar a exibição que exibe as métricas mais recentes.
+Use a opção **[!UICONTROL Métricas e gráficos]** para descartar a exibição que mostra as métricas mais recentes.
 
 ![Gravação de tela que mostra a alternância de métricas e gráficos.](/help/dataflows/assets/ui/b2b/metrics-and-graphs-toggle.gif)
 
-Use o **[!UICONTROL Mostrar somente falhas]** alternar para exibir somente os trabalhos de enriquecimento de perfil com falha.
+Use a opção **[!UICONTROL Mostrar somente falhas]** para exibir somente os trabalhos de enriquecimento de perfil com falha.
 
 ![Gravação de tela que mostra a opção Mostrar somente falhas.](/help/dataflows/assets/ui/b2b/show-failures-only.gif)
 

@@ -13,11 +13,11 @@ ht-degree: 3%
 
 # Pesquisar um objeto de Catálogo
 
-Se você souber o identificador exclusivo de um [!DNL Catalog] objeto, você pode executar uma solicitação GET para exibir os detalhes desse objeto.
+Se você souber o identificador exclusivo de um objeto [!DNL Catalog] específico, poderá executar uma solicitação GET para exibir os detalhes desse objeto.
 
 >[!NOTE]
 >
->Ao visualizar objetos específicos, ainda é prática recomendada [filtrar por propriedades](filter-data.md) e retornam somente as propriedades em que você está interessado.
+>Ao exibir objetos específicos, ainda é prática recomendada [filtrar por propriedades](filter-data.md) e retornar somente as propriedades em que está interessado.
 
 **Formato da API**
 
@@ -28,12 +28,12 @@ GET /{OBJECT_TYPE}/{OBJECT_ID}?properties={PROPERTY_1},{PROPERTY_2},{PROPERTY_3}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{OBJECT_TYPE}` | O tipo de [!DNL Catalog] objeto a ser recuperado. Os objetos válidos são: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
+| `{OBJECT_TYPE}` | O tipo de objeto [!DNL Catalog] a ser recuperado. Os objetos válidos são: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{OBJECT_ID}` | O identificador do objeto específico que você deseja recuperar. |
 
 **Solicitação**
 
-A solicitação a seguir recupera um conjunto de dados por sua ID, retornando seu `name`, `description`, `tags`, e `files` propriedades.
+A solicitação a seguir recupera um conjunto de dados por sua ID, retornando suas propriedades `name`, `description`, `tags` e `files`.
 
 ```shell
 curl -X GET \
@@ -46,7 +46,7 @@ curl -X GET \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o conjunto de dados especificado somente com o `properties` no corpo.
+Uma resposta bem-sucedida retorna o conjunto de dados especificado com apenas o `properties` solicitado no corpo.
 
 ```json
 {
@@ -65,4 +65,4 @@ Uma resposta bem-sucedida retorna o conjunto de dados especificado somente com o
 
 >[!NOTE]
 >
->Propriedades cujos valores recebem o prefixo `@` representam objetos inter-relacionados. Consulte a seção do apêndice sobre [exibição de objetos inter-relacionados](appendix.md#view-interrelated-objects) para obter etapas sobre como visualizar os detalhes desses objetos.
+>Propriedades cujos valores têm o prefixo `@` representam objetos inter-relacionados. Consulte a seção do apêndice em [exibindo objetos inter-relacionados](appendix.md#view-interrelated-objects) para obter etapas sobre como exibir os detalhes desses objetos.

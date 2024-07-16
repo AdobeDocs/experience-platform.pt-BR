@@ -20,7 +20,7 @@ O SDK da Web da Adobe Experience Platform oferece suporte a recursos de comparti
 
 ### Forneça personalização consistente entre aplicativos para dispositivos móveis e sites para dispositivos móveis
 
-Uma empresa de roupas quer personalizar a experiência de seus clientes com base em seus interesses e manter a personalização precisa em um aplicativo móvel que também carrega WebViews. Ao usar o recurso de compartilhamento de ID de dispositivo móvel para Web, eles podem garantir que as ofertas mais precisas sejam apresentadas aos clientes, usando o mesmo identificador de visitante no aplicativo e o conteúdo da Web móvel ao passar o [!DNL ECID] ao URL da internet móvel.
+Uma empresa de roupas quer personalizar a experiência de seus clientes com base em seus interesses e manter a personalização precisa em um aplicativo móvel que também carrega WebViews. Com o recurso de compartilhamento de ID de dispositivo móvel para Web, eles podem garantir que as ofertas mais precisas sejam apresentadas aos clientes, usando o mesmo identificador de visitante no aplicativo e o conteúdo da Web móvel ao passar o [!DNL ECID] para a URL da Web móvel.
 
 ### Oferecer personalização consistente entre domínios
 
@@ -32,29 +32,29 @@ Um varejista de tecnologia deseja melhorar o relatório de atividades do visitan
 
 ## Pré-requisitos {#prerequisites}
 
-Para usar o compartilhamento de ID móvel para Web e entre domínios, você deve usar [!DNL Web SDK] versão 2.11.0 ou posterior.
+Para usar o compartilhamento de ID móvel para Web e entre domínios, você deve usar o [!DNL Web SDK] versão 2.11.0 ou posterior.
 
-Para implementações móveis da Rede de borda, esse recurso é compatível com o [Identidade da rede de borda](https://developer.adobe.com/client-sdks/documentation/identity-for-edge-network/) extensão a partir da versão 1.1.0 (iOS e Android).
+Para implementações do Edge Network Mobile, este recurso é suportado na [Identidade para a extensão do Edge Network](https://developer.adobe.com/client-sdks/documentation/identity-for-edge-network/), a partir da versão 1.1.0 (iOS e Android).
 
-Esse recurso também é compatível com o [!DNL VisitorAPI.js] versão 1.7.0 ou posterior.
+Este recurso também é compatível com o [!DNL VisitorAPI.js] versão 1.7.0 ou posterior.
 
 ## Compartilhamento de ID de dispositivo móvel para Web {#mobile-to-web}
 
-Use o `getUrlVariables` API do [Identidade da rede de borda](https://developer.adobe.com/client-sdks/documentation/identity-for-edge-network/api-reference/#geturlvariables) extensão para recuperar os identificadores como parâmetros de consulta e anexá-los ao seu URL ao abrir [!DNL webViews].
+Use a API `getUrlVariables` da extensão [Identity for Edge Network](https://developer.adobe.com/client-sdks/documentation/identity-for-edge-network/api-reference/#geturlvariables) para recuperar os identificadores como parâmetros de consulta e anexá-los à sua URL ao abrir [!DNL webViews].
 
-Nenhuma configuração adicional é necessária para que o SDK da Web aceite `ECID` valores na sequência de consulta.
+Nenhuma configuração adicional é necessária para que o SDK da Web aceite `ECID` valores na cadeia de caracteres de consulta.
 
 O parâmetro da cadeia de caracteres de consulta inclui:
 
 * `MCID`: A ID do Experience Cloud (`ECID`)
-* `MCORGID`: O EXPERIENCE CLOUD `orgID` que deve corresponder ao `orgID` configurado no [!DNL Web SDK].
-* `TS`: um parâmetro de carimbo de data e hora que não pode ter mais de cinco minutos.
+* `MCORGID`: O Experience Cloud `orgID` que deve corresponder ao `orgID` configurado no [!DNL Web SDK].
+* `TS`: Um parâmetro de carimbo de data/hora que não pode ter mais de cinco minutos.
 
 
-O compartilhamento do Mobile para a Web ID usa o `adobe_mc` parâmetro. Quando a variável `adobe_mc` estiver presente e for válido, a variável `ECID` da sequência de consulta é automaticamente adicionado ao mapa de identidade na primeira solicitação feita à Rede de borda. Todas as interações subsequentes da Rede de borda usarão essa `ECID`.
+O compartilhamento da ID móvel para Web usa o parâmetro `adobe_mc`. Quando o parâmetro `adobe_mc` está presente e é válido, o `ECID` da cadeia de caracteres de consulta é automaticamente adicionado ao mapa de identidade na primeira solicitação feita ao Edge Network. Todas as interações de Edge Network subsequentes usarão esse `ECID`.
 
-Para obter mais informações sobre como transmitir IDs de visitante de um aplicativo móvel para um WebView, consulte a documentação em [manipulação de WebViews](https://experienceleague.adobe.com/docs/platform-learn/implement-mobile-sdk/app-implementation/web-views.html#implementation).
+Para obter mais informações sobre como transmitir IDs de visitante de um aplicativo móvel para um WebView, consulte a documentação sobre [manipulação de WebViews](https://experienceleague.adobe.com/docs/platform-learn/implement-mobile-sdk/app-implementation/web-views.html#implementation).
 
 ## Implementar compartilhamento de ID entre domínios {#cross-domain-sharing}
 
-Consulte a [`appendIdentityToUrl`](../commands/appendidentitytourl.md) para obter instruções de implementação usando a extensão de tag do SDK da Web e a biblioteca JavaScript do SDK da Web.
+Consulte o comando [`appendIdentityToUrl`](../commands/appendidentitytourl.md) para obter instruções de implementação usando a extensão de tag do SDK da Web e a biblioteca JavaScript do SDK da Web.

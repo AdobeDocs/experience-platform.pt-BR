@@ -1,6 +1,6 @@
 ---
 title: Interação com o Adobe Analytics
-description: Saiba como usar a API do servidor de rede de borda para interagir com o Adobe Analytics.
+description: Saiba como usar a API do servidor Edge Network para interagir com o Adobe Analytics.
 exl-id: b5e7a4d0-9aea-4e70-a7d6-b9aad09aaddf
 source-git-commit: 5de1ec17b78c97be21c0d2afd6f0b119a6074b6f
 workflow-type: tm+mt
@@ -13,9 +13,9 @@ ht-degree: 1%
 
 ## Visão geral {#overview}
 
-A coleção de dados do Adobe Analytics funciona traduzindo dados XDM em um formato que o Adobe Analytics pode entender. Vários campos XDM são [mapeado automaticamente](https://experienceleague.adobe.com/docs/analytics/implementation/aep-edge/variable-mapping.html?lang=pt-BR) para variáveis do Analytics. Você também pode mapear manualmente valores XDM para variáveis herdadas do Analytics.
+A coleção de dados do Adobe Analytics funciona traduzindo dados XDM em um formato que o Adobe Analytics pode entender. Vários campos XDM são [mapeados automaticamente](https://experienceleague.adobe.com/docs/analytics/implementation/aep-edge/variable-mapping.html) para variáveis do Analytics. Você também pode mapear manualmente valores XDM para variáveis herdadas do Analytics.
 
-Para permitir que o Adobe Analytics receba dados da API do servidor, é necessário [configurar seu fluxo de dados](../datastreams/overview.md#adobe-analytics-settings) para encaminhar eventos ao Adobe Analytics, ao inserir a ID do conjunto de relatórios na página de configuração do fluxo de dados.
+Para permitir que o Adobe Analytics receba dados da API do Servidor, você precisa [configurar sua sequência de dados](../datastreams/overview.md#adobe-analytics-settings) para encaminhar eventos para o Adobe Analytics, inserindo a ID do conjunto de relatórios na página de configuração da sequência de dados.
 
 ![Configuração da sequência de dados do Adobe Analytics](assets/analytics-datastream.png)
 
@@ -29,7 +29,7 @@ POST /ee/v2/interact?dataStreamId={DATASTREAM_ID}
 
 ### Solicitação {#request}
 
-A amostra abaixo inclui vários valores mapeados automaticamente do `_experience.analytics` grupo de campos. Também inclui camadas de dados baseadas em JSON. Embora essas camadas de dados não possam ser mapeadas automaticamente, é possível usar [Preparação de dados para coleção de dados](../datastreams/data-prep.md) para mapear esses valores para um esquema que contenha grupos de campos referenciados acima.
+A amostra abaixo inclui vários valores mapeados automaticamente do grupo de campos `_experience.analytics`. Também inclui camadas de dados baseadas em JSON. Embora essas camadas de dados não possam ser mapeadas automaticamente, é possível usar o [Preparo de Dados para a Coleção de Dados](../datastreams/data-prep.md) para mapear esses valores para um esquema que contenha os grupos de campos mencionados acima.
 
 Todos os valores que os usuários mapeiam para esses campos serão mapeados automaticamente para os valores apropriados do Analytics, como se tivessem sido incluídos na solicitação da API.
 

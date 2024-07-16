@@ -7,33 +7,33 @@ description: Este tutorial aborda as etapas para atualizar os detalhes e as cred
 exl-id: a93385fd-ed36-457f-8882-41e37f6f209d
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '523'
+source-wordcount: '519'
 ht-degree: 3%
 
 ---
 
 # Atualizar contas usando a API de Serviço de Fluxo
 
-Em algumas circunstâncias, pode ser necessário atualizar os detalhes de uma conexão de origem existente. [!DNL Flow Service] O fornece a capacidade de adicionar, editar e excluir detalhes de um lote existente ou conexão de streaming, incluindo nome, descrição e credenciais.
+Em algumas circunstâncias, pode ser necessário atualizar os detalhes de uma conexão de origem existente. O [!DNL Flow Service] fornece a capacidade de adicionar, editar e excluir detalhes de uma conexão de lote ou streaming existente, incluindo nome, descrição e credenciais.
 
-Este tutorial aborda as etapas para atualizar os detalhes e as credenciais de uma conexão usando o [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Este tutorial aborda as etapas para atualizar os detalhes e as credenciais de uma conexão usando a [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Introdução
 
-Este tutorial requer que você tenha uma conexão existente e uma ID de conexão válida. Se você não tiver uma conexão existente, selecione a origem de sua escolha na [visão geral das origens](../../home.md) e siga as etapas descritas antes de tentar este tutorial.
+Este tutorial requer que você tenha uma conexão existente e uma ID de conexão válida. Se você não tiver uma conexão existente, selecione sua fonte de escolha na [visão geral das fontes](../../home.md) e siga as etapas descritas antes de tentar este tutorial.
 
 Este tutorial também requer que você tenha uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
-* [Origens](../../home.md): o Experience Platform permite que os dados sejam assimilados de várias fontes e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma.
+* [Fontes](../../home.md): o Experience Platform permite que os dados sejam assimilados de várias fontes e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma.
 * [Sandboxes](../../../sandboxes/home.md): o Experience Platform fornece sandboxes virtuais que particionam uma única instância da Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
 ### Uso de APIs da plataforma
 
-Para obter informações sobre como fazer chamadas para APIs da Platform com êxito, consulte o manual em [introdução às APIs da Platform](../../../landing/api-guide.md).
+Para obter informações sobre como fazer chamadas para APIs da Platform com êxito, consulte o manual sobre [introdução às APIs da Platform](../../../landing/api-guide.md).
 
 ## Pesquisar detalhes da conexão
 
-A primeira etapa na atualização da conexão é recuperar os detalhes usando a ID da conexão. Para recuperar os detalhes atuais da sua conexão, faça uma solicitação GET ao [!DNL Flow Service] ao fornecer a ID de conexão da conexão que você deseja atualizar.
+A primeira etapa na atualização da conexão é recuperar os detalhes usando a ID da conexão. Para recuperar os detalhes atuais da sua conexão, faça uma solicitação GET à API [!DNL Flow Service] enquanto fornece a ID da conexão que você deseja atualizar.
 
 **Formato da API**
 
@@ -43,7 +43,7 @@ GET /connections/{CONNECTION_ID}
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | O único `id` valor da conexão que você deseja recuperar. |
+| `{CONNECTION_ID}` | O valor `id` exclusivo da conexão que você deseja recuperar. |
 
 **Solicitação**
 
@@ -60,7 +60,7 @@ curl -X GET \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna os detalhes atuais da conexão, incluindo credenciais, identificador exclusivo (`id`) e versão. O valor da versão é necessário para atualizar sua conexão.
+Uma resposta bem-sucedida retorna os detalhes atuais da conexão, incluindo suas credenciais, o identificador exclusivo (`id`) e a versão. O valor da versão é necessário para atualizar sua conexão.
 
 ```json
 {
@@ -98,11 +98,11 @@ Uma resposta bem-sucedida retorna os detalhes atuais da conexão, incluindo cred
 
 ## Atualizar conexão
 
-Para atualizar o nome, a descrição e as credenciais da sua conexão, execute uma solicitação PATCH para o [!DNL Flow Service] ao fornecer a ID da conexão, a versão e as novas informações que deseja usar.
+Para atualizar o nome, a descrição e as credenciais da sua conexão, execute uma solicitação PATCH para a API [!DNL Flow Service] enquanto fornece a ID da conexão, a versão e as novas informações que deseja usar.
 
 >[!IMPORTANT]
 >
->A variável `If-Match` o cabeçalho é necessário ao fazer uma solicitação PATCH. O valor desse cabeçalho é a versão exclusiva da conexão que você deseja atualizar.
+>O cabeçalho `If-Match` é necessário ao fazer uma solicitação PATCH. O valor desse cabeçalho é a versão exclusiva da conexão que você deseja atualizar.
 
 **Formato da API**
 
@@ -112,7 +112,7 @@ PATCH /connections/{CONNECTION_ID}
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | O único `id` valor da conexão que você deseja atualizar. |
+| `{CONNECTION_ID}` | O valor `id` exclusivo da conexão que você deseja atualizar. |
 
 **Solicitação**
 
@@ -151,13 +151,13 @@ curl -X PATCH \
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `op` | A chamada de operação usada para definir a ação necessária para atualizar a conexão. As operações incluem: `add`, `replace`, e `remove`. |
+| `op` | A chamada de operação usada para definir a ação necessária para atualizar a conexão. As operações incluem: `add`, `replace` e `remove`. |
 | `path` | O caminho do parâmetro a ser atualizado. |
 | `value` | O novo valor com o qual você deseja atualizar seu parâmetro. |
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna a ID de conexão e uma tag atualizada. Você pode verificar a atualização fazendo uma solicitação GET para o [!DNL Flow Service] ao fornecer a ID da conexão.
+Uma resposta bem-sucedida retorna a ID de conexão e uma tag atualizada. Você pode verificar a atualização fazendo uma solicitação GET para a API [!DNL Flow Service] e, ao mesmo tempo, fornecendo a ID da conexão.
 
 ```json
 {
@@ -168,4 +168,4 @@ Uma resposta bem-sucedida retorna a ID de conexão e uma tag atualizada. Você p
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você atualizou as credenciais e informações associadas à sua conexão usando o [!DNL Flow Service] API. Para obter mais informações sobre o uso de conectores de origem, consulte a [visão geral das origens](../../home.md).
+Ao seguir este tutorial, você atualizou as credenciais e informações associadas à sua conexão usando a API [!DNL Flow Service]. Para obter mais informações sobre o uso de conectores de origem, consulte a [visão geral das origens](../../home.md).

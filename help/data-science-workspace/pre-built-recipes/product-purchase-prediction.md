@@ -6,8 +6,8 @@ description: 'A fórmula Previsão de compra do produto permite prever a probabi
 exl-id: 66a45629-33a3-4081-8dbd-b864983b8f57
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
-source-wordcount: '397'
-ht-degree: 7%
+source-wordcount: '392'
+ht-degree: 5%
 
 ---
 
@@ -31,7 +31,7 @@ A fórmula de Previsão de compra do produto usa o aprendizado de máquina para 
 
 ## Esquema de dados
 
-Esta fórmula usa [Esquemas XDM](../../xdm/home.md) para modelar os dados. O esquema usado para esta fórmula é mostrado abaixo:
+Esta fórmula usa [esquemas XDM](../../xdm/home.md) para modelar os dados. O esquema usado para esta fórmula é mostrado abaixo:
 
 | Nome do campo | Tipo |
 | --- | --- |
@@ -48,7 +48,7 @@ Esta fórmula usa [Esquemas XDM](../../xdm/home.md) para modelar os dados. O esq
 | orderDate1 | Número |
 | shippingDate1 | Número |
 | totalPrice1 | Número |
-| tax1 | Número |
+| imposto1 | Número |
 | orderDate2 | Número |
 | shippingDate2 | Número |
 | totalPrice2 | Número |
@@ -56,6 +56,6 @@ Esta fórmula usa [Esquemas XDM](../../xdm/home.md) para modelar os dados. O esq
 
 ## Algoritmo
 
-Primeiro, o conjunto de dados de treinamento na *ProductPrediction* o esquema é carregado. A partir daqui, o modelo é treinado usando um [classificador random forest](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html). Classificador de floresta aleatória é um tipo de algoritmo conjunto que se refere a um algoritmo que combina vários algoritmos para obter melhor desempenho preditivo. A ideia por trás do algoritmo é que o classificador de floresta aleatória constrói várias árvores de decisão e as mescla para criar uma previsão mais precisa e estável.
+Primeiro, o conjunto de dados de treinamento no esquema *ProductPrediction* é carregado. Aqui, o modelo é treinado usando um [classificador aleatório de floresta](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html). Classificador de floresta aleatória é um tipo de algoritmo conjunto que se refere a um algoritmo que combina vários algoritmos para obter melhor desempenho preditivo. A ideia por trás do algoritmo é que o classificador de floresta aleatória constrói várias árvores de decisão e as mescla para criar uma previsão mais precisa e estável.
 
 Esse processo começa com a criação de um conjunto de árvores de decisão que seleciona aleatoriamente subconjuntos de dados de treinamento. Depois, é feita a média dos resultados de cada árvore decisória.

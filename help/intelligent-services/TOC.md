@@ -8,14 +8,14 @@ role: User
 source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
 workflow-type: tm+mt
 source-wordcount: '136'
-ht-degree: 31%
+ht-degree: 34%
 
 ---
 
 
 # Serviços inteligentes da Adobe {#intelligent-services}
 
-- [Visão geral dos Serviços inteligentes](home.md)
+- [Visão geral dos serviços inteligentes](home.md)
 - [Preparar dados para uso nos Serviços inteligentes](data-preparation.md)
 - Attribution AI {#attribution-ai}
    - [Visão geral](attribution-ai/overview.md)
@@ -35,7 +35,7 @@ ht-degree: 31%
 - Marcação de conteúdo {#content-commerce-ai}
    - [Visão geral](content-commerce-ai/overview.md)
    - [Introdução](content-commerce-ai/getting-started.md)
-   - API de marcação de conteúdo{#api}
+   - API de Marcação de Conteúdo{#api}
       - [Marcação de cores](content-commerce-ai/api/color-tagging.md)
       - [Marcação de palavra-chave](content-commerce-ai/api/keyword-tagging.md)
       - [Presença de texto e reconhecimento óptico de caracteres](content-commerce-ai/api/optical-character-recognition.md)
@@ -48,11 +48,11 @@ ht-degree: 31%
       - [Descubra insights](customer-ai/user-guide/discover-insights.md)
       - [Criar segmentos usando pontuações da IA do cliente](customer-ai/user-guide/create-segment.md)
       - [Baixar pontuações](customer-ai/user-guide/download-scores.md)
-   - [Solução de problemas de erro](customer-ai/troubleshooting.md)
+   - [Solução de problemas de erros](customer-ai/troubleshooting.md)
    - Governança de dados {#cai-data-governance}
       - [Controles de acesso](customer-ai/cai-data-governance/access-controls.md)
       - [Logs de auditoria](customer-ai/cai-data-governance/audit-logs.md)
       - [Chaves gerenciadas pelo cliente](customer-ai/cai-data-governance/customer-managed-keys.md)
       - [Governança de dados](customer-ai/cai-data-governance/data-governance.md)
       - [Políticas de governança](customer-ai/cai-data-governance/governance-policies.md)
-- [Notas de versão da Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+- [Notas de versão da Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest?lang=pt-BR)

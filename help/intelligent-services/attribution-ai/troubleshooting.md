@@ -19,12 +19,12 @@ Este documento fornece respostas a perguntas frequentes sobre o Attribution AI.
 
 ## Não é possível acessar o Attribution AI no Chrome incógnito
 
-Erros de carregamento no modo incógnito do Google Chrome estão presentes devido a atualizações nas configurações de segurança do modo incógnito do Google Chrome. O problema está sendo ativamente trabalhada com o Chrome para tornar o experience.adobe.com um domínio confiável.
+Erros de carregamento no modo incógnito do Google Chrome estão presentes devido a atualizações nas configurações de segurança do modo incógnito do Google Chrome. O problema está sendo ativamente trabalhada com a Chrome para tornar experience.adobe.com um domínio confiável.
 
 <img src="./images/faq/error.PNG" width="500" /><br />
 
 ### Correção recomendada
 
-Para contornar esse problema, é necessário adicionar experience.adobe.com como um site que sempre pode usar cookies. Comece navegando até **chrome://settings/cookies**. Em seguida, role para baixo até o **Comportamentos personalizados** seção seguida pela seleção do **Adicionar** botão ao lado de &quot;sites que sempre podem usar cookies&quot;. No popover exibido, copie e cole `[*.]experience.adobe.com` em seguida, selecione o **Inclusão de cookies de terceiros** nesta caixa de seleção do site. Após a conclusão, selecione **Adicionar** e recarregar o Attribution AI incógnito.
+Para contornar esse problema, é necessário adicionar experience.adobe.com como um site que sempre pode usar cookies. Comece navegando até **chrome://settings/cookies**. Em seguida, role para baixo até a seção **Comportamentos personalizados**, seguida pelo botão **Adicionar** ao lado de &quot;sites que sempre podem usar cookies&quot;. Na janela pop-up exibida, copie e cole `[*.]experience.adobe.com` e marque a caixa de seleção **Incluir cookies de terceiros** neste site. Depois de concluído, selecione **Adicionar** e recarregar o Attribution AI incógnito.
 
 ![correção recomendada](./images/faq/cookies2.gif)

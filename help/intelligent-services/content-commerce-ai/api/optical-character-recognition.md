@@ -6,7 +6,7 @@ description: Na API de marcação de conteúdo, o serviço de Presença de texto
 exl-id: 85b976a7-0229-43e9-b166-cdbd213b867f
 source-git-commit: 82722ddf7ff543361177b555fffea730a7879886
 workflow-type: tm+mt
-source-wordcount: '688'
+source-wordcount: '693'
 ht-degree: 4%
 
 ---
@@ -74,9 +74,9 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o texto que foi detectado na variável `tags` para cada imagem transmitida na solicitação. Se não houver texto em uma determinada imagem, `is_text_present` é 0 e `tags` é uma lista vazia.
+Uma resposta bem-sucedida retorna o texto detectado na lista `tags` para cada imagem transmitida na solicitação. Se não houver texto em uma determinada imagem, `is_text_present` é 0 e `tags` é uma lista vazia.
 
-[resultado0, resultado1, ...]: lista de respostas para cada documento de entrada. Cada resultado é um diretório com chaves:
+[result0, result1, ...]: lista de respostas para cada documento de entrada. Cada resultado é um diretório com chaves:
 
 1. request_element_id: índice correspondente ao arquivo de entrada para essa resposta, 0 para a primeira imagem na lista de documentos da solicitação, 1 para a próxima e assim por diante.
 2. tags: lista de dicionários, cada dicionário tem duas chaves: texto, que é uma palavra reconhecida da imagem, e relevância, que é calculada como a fração da área da caixa delimitadora do texto extraído em comparação com a imagem completa. 0,01 seria traduzido como um texto que ocupa pelo menos 1% da imagem.
@@ -209,7 +209,7 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 
 | Nome | Tipo de dados | Obrigatório | Padrão | Valores | Descrição |
 | -----| --------- | -------- | ------- | ------ | ----------- |
-| `repo:path` | string | - | - | - | URL pré-assinado da imagem da qual o texto precisa ser extraído. |
-| `sensei:repoType` | string | - | - | HTTPS | Tipo de repositório onde a imagem está sendo armazenada. |
-| `sensei:multipart_field_name` | string | - | - | - | Use isso ao passar a imagem como um argumento de várias partes em vez de usar urls pré-assinados. |
-| `dc:format` | string | Sim | - | &quot;image/jpg&quot;, <br>&quot;image/jpeg&quot;, <br>&quot;image/png&quot;, <br>&quot;image/tiff&quot; | A codificação de imagem é verificada em relação aos tipos de codificação de entrada permitidos antes de ser processada. |
+| `repo:path` | sequência de caracteres | - | - | - | URL pré-assinado da imagem da qual o texto precisa ser extraído. |
+| `sensei:repoType` | sequência de caracteres | - | - | HTTPS | Tipo de repositório onde a imagem está sendo armazenada. |
+| `sensei:multipart_field_name` | sequência de caracteres | - | - | - | Use isso ao passar a imagem como um argumento de várias partes em vez de usar urls pré-assinados. |
+| `dc:format` | sequência de caracteres | Sim | - | &quot;image/jpg&quot;, <br>&quot;image/jpeg&quot;, <br>&quot;image/png&quot;, <br>&quot;image/tiff&quot; | A codificação de imagem é verificada em relação aos tipos de codificação de entrada permitidos antes de ser processada. |

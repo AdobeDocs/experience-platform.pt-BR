@@ -49,7 +49,7 @@ Se a coleção de dados for exclusiva a cada site ou aplicativo, talvez faça se
 
 ### Variáveis
 
-Assim como no caso dos dados, as variáveis que você definirá no seu [!DNL Analytics] e em outras ferramentas são muito semelhantes, mais ou menos semelhantes ou exclusivas?
+Assim como no caso dos dados, as variáveis que você definirá no seu [!DNL Analytics] e em outras extensões são muito semelhantes, mais ou menos semelhantes ou exclusivas?
 
 Por exemplo, se eVar27 é utilizada para o mesmo valor de origem entre os sites, pode ser interessante agrupar os sites ou aplicativos para poder definir as variáveis comuns usando apenas uma propriedade.
 
@@ -125,9 +125,9 @@ Siga as instruções para criar uma propriedade móvel.
    * **Nome:** o nome da sua propriedade.
    * **Privacidade:** por padrão, a configuração de privacidade está definida como Aceitar, o que significa que você gostaria que o SDK coletasse e enviasse dados para soluções. Se você selecionar Recusar, o SDK, por padrão, NÃO enviará dados para soluções. Se você escolher Desconhecido como configuração, o SDK exigirá que o aplicativo primeiro ofereça ao usuário a permissão para compartilhamento e coleção de dados.
 
-      >[!NOTE]
-      >
-      >Essas configurações podem ser controladas melhor por meio da API no aplicativo móvel.
+     >[!NOTE]
+     >
+     >Essas configurações podem ser controladas melhor por meio da API no aplicativo móvel.
 
    * **Usar HTTPS:** escolha essa opção se todas as comunicações de dados devem ser enviadas via HTTP ou HTTPS.
 

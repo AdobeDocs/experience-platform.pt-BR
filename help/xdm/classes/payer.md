@@ -9,15 +9,15 @@ ht-degree: 5%
 
 ---
 
-# [!UICONTROL Pagador] classe
+# Classe [!UICONTROL Payer]
 
-No Experience Data Model (XDM), a variável [!UICONTROL Pagador] a classe captura o conjunto mínimo de propriedades que definem uma entidade comercial do pagador que coleta dados relativos às companhias de seguros (como seguro de saúde).
+No Experience Data Model (XDM), a classe [!UICONTROL Payer] captura o conjunto mínimo de propriedades que definem uma entidade de negócios do pagador que coleta dados relativos às empresas de seguros (como seguro de saúde).
 
 ![Estrutura de classe](../images/classes/payer.png)
 
 | Propriedade | Tipo de dados | Descrição |
 | --- | --- | --- |
-| `_id` | [!UICONTROL String] | Um identificador de sequência de caracteres exclusivo gerado pelo sistema para o registro. Este campo é usado para rastrear a exclusividade de um registro individual, impedir a duplicação de dados e pesquisar esse registro nos serviços downstream.<br><br>Como esse campo é gerado pelo sistema, ele não recebe um valor explícito durante a assimilação de dados. No entanto, você ainda pode optar por fornecer seus próprios valores de ID exclusivos, se desejar. |
+| `_id` | [!UICONTROL String] | Um identificador de sequência de caracteres exclusivo gerado pelo sistema para o registro. Este campo é usado para rastrear a exclusividade de um registro individual, impedir a duplicação de dados e pesquisar esse registro nos serviços downstream.<br><br>Como este campo é gerado pelo sistema, ele não receberá um valor explícito durante a assimilação de dados. No entanto, você ainda pode optar por fornecer seus próprios valores de ID exclusivos, se desejar. |
 | `payerId` | [!UICONTROL String] | Um identificador exclusivo do pagador. |
 | `payerName` | [!UICONTROL String] | O nome do pagador. |
 

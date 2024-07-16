@@ -12,19 +12,19 @@ ht-degree: 1%
 
 # Acessar a ECID
 
-A variável [!DNL Experience Cloud Identity (ECID)] é um identificador persistente atribuído a um usuário quando ele visita seu site. Em determinadas circunstâncias, você pode preferir acessar a variável [!DNL ECID] (para enviá-lo a terceiros, por exemplo). Outro caso de uso é definir o [!DNL ECID] em um campo XDM personalizado, além de tê-lo no mapa de identidade.
+O [!DNL Experience Cloud Identity (ECID)] é um identificador persistente atribuído a um usuário quando ele visita seu site. Em determinadas circunstâncias, você pode preferir acessar o [!DNL ECID] (para enviá-lo a terceiros, por exemplo). Outro caso de uso é configurar o [!DNL ECID] em um campo XDM personalizado, além de tê-lo no mapa de identidade.
 
-Você pode acessar a ECID por meio de [Preparação de dados para coleção de dados](../../../../datastreams/data-prep.md) (recomendado) ou por meio de tags.
+Você pode acessar a ECID por meio do [Preparo de dados para a coleção de dados](../../../../datastreams/data-prep.md) (recomendado) ou por meio de tags.
 
 ## Acessar a ECID por meio do Preparo de dados (método preferencial) {#accessing-ecid-data-prep}
 
-Se você deseja definir a ECID em um campo XDM personalizado, além de tê-la no mapa de identidade, é possível fazer isso definindo o campo `source` ao seguinte caminho:
+Se você deseja definir a ECID em um campo XDM personalizado, além de tê-la no mapa de identidade, faça isso definindo o `source` para o seguinte caminho:
 
 ```js
 xdm.identityMap.ECID[0].id
 ```
 
-Em seguida, defina o destino como um caminho XDM, no qual o campo seja do tipo `string`.
+Em seguida, defina o destino como um caminho XDM, onde o campo é do tipo `string`.
 
 ![](./assets/access-ecid-data-prep.png)
 
@@ -32,10 +32,10 @@ Em seguida, defina o destino como um caminho XDM, no qual o campo seja do tipo `
 
 Se você precisar acessar o [!DNL ECID] no lado do cliente, use a abordagem de tags conforme descrito abaixo.
 
-1. Verifique se a propriedade está configurada com [sequência de componentes da regra](../../../ui/managing-resources/rules.md#sequencing) ativado.
-1. Crie uma nova regra. Essa regra deve ser usada exclusivamente para capturar a variável [!DNL ECID] sem quaisquer outras ações importantes.
-1. Adicionar um [!UICONTROL Biblioteca carregada] para a regra.
-1. Adicionar um [!UICONTROL Custom Code] à regra com o seguinte código (supondo que o nome configurado para a instância do SDK seja `alloy` e ainda não houver um elemento de dados com o mesmo nome):
+1. Verifique se a propriedade está configurada com a habilitação da [sequência de componentes da regra](../../../ui/managing-resources/rules.md#sequencing).
+1. Crie uma nova regra. Esta regra deve ser usada exclusivamente para capturar o [!DNL ECID] sem nenhuma outra ação importante.
+1. Adicionar um evento [!UICONTROL Biblioteca carregada] à regra.
+1. Adicione uma ação [!UICONTROL Código personalizado] à regra com o seguinte código (supondo que o nome configurado para a instância do SDK seja `alloy` e já não exista um elemento de dados com o mesmo nome):
 
    ```js
     return alloy("getIdentity")
@@ -46,4 +46,4 @@ Se você precisar acessar o [!DNL ECID] no lado do cliente, use a abordagem de t
 
 1. Salve a regra.
 
-Você deverá poder acessar a variável [!DNL ECID] em regras subsequentes usando `%ECID%` ou `_satellite.getVar("ECID")`, como você acessaria qualquer outro elemento de dados.
+Você poderá acessar [!DNL ECID] nas regras subsequentes usando `%ECID%` ou `_satellite.getVar("ECID")`, como acessaria qualquer outro elemento de dados.

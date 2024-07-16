@@ -14,7 +14,7 @@ ht-degree: 42%
 
 # Guia Eventos
 
-A variável **Eventos** fornece uma exibição gráfica dos eventos que ocorrem, exibidos em uma linha do tempo.
+A guia **Eventos** fornece uma exibição gráfica dos eventos que ocorrem, exibidos em uma linha do tempo.
 
 ![](images/events.jpg)
 
@@ -37,8 +37,8 @@ Para ativar na linha do tempo o rastreamento de alterações na camada de dados:
 
 1. Selecione **[!UICONTROL Salvar]**.
 
-Os detalhes de alterações da camada de dados mostram qualquer coisa que foi excluída ou adicionada. É possível selecionar **{}** para enxergar mais fundo na camada de dados.
+Os detalhes de alterações da camada de dados mostram qualquer coisa que foi excluída ou adicionada. Você pode selecionar **{}** para enxergar mais fundo na camada de dados.
 
 ## Baixar informações do evento
 
-Selecionar **[!UICONTROL Baixar]** para baixar um arquivo de Excel que mostra informações sobre suas chamadas de página.
+Selecione **[!UICONTROL Baixar]** para baixar um arquivo do Excel que mostra informações sobre suas chamadas de página.

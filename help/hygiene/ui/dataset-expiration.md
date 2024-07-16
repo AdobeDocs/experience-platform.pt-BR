@@ -16,7 +16,7 @@ ht-degree: 18%
 >title="Excluir registros e conjuntos de dados de clientes indesejados ou expirados"
 >abstract="<h2>Descrição</h2><p>Para gerenciar o ciclo de vida dos dados da Experience Platform não relacionados à conformidade regulatória, você pode excluir registros do consumidor e programar datas de expiração para os conjuntos de dados. Para criar ou gerenciar solicitações de titulares de dados, consulte o bloco de casos de uso “Respeitar solicitações de privacidade de titulares de dados”.</p>"
 
-A variável [[!UICONTROL Ciclo de vida dos dados] espaço de trabalho](./overview.md) na interface do Adobe Experience Platform, permite agendar expirações para conjuntos de dados. Quando um conjunto de dados atinge sua data de expiração, o data lake, o serviço de identidade e o perfil do cliente em tempo real iniciam processos separados para remover o conteúdo do conjunto de dados de seus respectivos serviços. Depois que os dados forem excluídos dos três serviços, a expiração será marcada como completa.
+O espaço de trabalho [[!UICONTROL Ciclo de vida dos dados]](./overview.md) na interface do usuário do Adobe Experience Platform permite agendar expirações para conjuntos de dados. Quando um conjunto de dados atinge sua data de expiração, o data lake, o serviço de identidade e o perfil do cliente em tempo real iniciam processos separados para remover o conteúdo do conjunto de dados de seus respectivos serviços. Depois que os dados forem excluídos dos três serviços, a expiração será marcada como completa.
 
 >[!WARNING]
 >
@@ -28,7 +28,7 @@ Este documento aborda como agendar e automatizar as expirações do conjunto de 
 >
 >No momento, a expiração do conjunto de dados não exclui dados do Edge Network Adobe Experience Platform. No entanto, não há possibilidade de os dados permanecerem no Edge Network após o conjunto de dados estar definido para expirar. Isso ocorre porque o contrato de licença de serviço de 15 dias para a expiração do conjunto de dados se sobrepõe ao período de 14 dias em que os dados existem dentro do Edge Network antes de serem descartados.
 
-O Gerenciamento avançado do ciclo de vida dos dados permite exclusões de conjuntos de dados por meio da [ponto de extremidade de expiração do conjunto de dados](../api/dataset-expiration.md) e exclusões de ID (dados em nível de linha) usando identidades primárias por meio da [ponto de extremidade da ordem de trabalho](../api/workorder.md). Também é possível gerenciar as expirações do conjunto de dados e [exclusões de registro](./record-delete.md) por meio da interface do usuário da Platform. Consulte a documentação vinculada para obter mais informações.
+O Gerenciamento Avançado do Ciclo de Vida dos Dados suporta exclusões de conjuntos de dados por meio do [ponto de extremidade de expiração do conjunto de dados](../api/dataset-expiration.md) e exclusões de ID (dados em nível de linha) usando identidades primárias por meio do [ponto de extremidade da ordem de trabalho](../api/workorder.md). Também é possível gerenciar as expirações do conjunto de dados e as [exclusões de registros](./record-delete.md) por meio da interface do usuário da plataforma. Consulte a documentação vinculada para obter mais informações.
 
 >[!NOTE]
 >
@@ -45,23 +45,23 @@ Para criar uma solicitação, selecione **[!UICONTROL Criar solicitação]** na 
 
 >[!IMPORTANT]
 >
->Os usuários do Real-Time CDP, Adobe Journey Optimizer e Customer Journey Analytics têm 20 ordens de serviço de expiração do conjunto de dados programadas e pendentes. Os usuários do Healthcare Shield e do Privacy and Security Shield têm 50 ordens de trabalho de expiração programadas do conjunto de dados. Isso significa que você pode ter 20 ou 50 conjuntos de dados programados para serem excluídos a qualquer momento.<br>Por exemplo, se você tiver 20 expirações programadas para o conjunto de dados e um conjunto de dados precisar ser excluído amanhã, não será possível definir mais expirações até que esse conjunto de dados seja excluído.
+>Os usuários do Real-Time CDP, Adobe Journey Optimizer e Customer Journey Analytics têm 20 ordens de serviço de expiração do conjunto de dados programadas e pendentes. Os usuários do Healthcare Shield e do Privacy and Security Shield têm 50 ordens de trabalho de expiração programadas do conjunto de dados. Isso significa que você pode ter 20 ou 50 conjuntos de dados programados para serem excluídos a qualquer momento.<br>Por exemplo, se você tiver 20 expirações de conjunto de dados agendadas e um conjunto de dados precisar ser excluído amanhã, você não poderá definir mais expirações até que esse conjunto de dados tenha sido excluído.
 
-![A variável [!UICONTROL Ciclo de vida dos dados] espaço de trabalho com [!UICONTROL Criar solicitação] destacado.](../images/ui/ttl/create-request-button.png)
+![O espaço de trabalho [!UICONTROL Ciclo de Vida de Dados] com [!UICONTROL Criar solicitação] foi realçado.](../images/ui/ttl/create-request-button.png)
 
-O workflow de criação da solicitação é exibido. No [!UICONTROL Ação solicitada] , selecione **[!UICONTROL Excluir conjunto de dados]** para atualizar os controles do agendamento de expiração do conjunto de dados.
+O workflow de criação da solicitação é exibido. Na seção [!UICONTROL Ação solicitada], selecione **[!UICONTROL Excluir conjunto de dados]** para atualizar os controles do agendamento de expiração do conjunto de dados.
 
-![O fluxo de trabalho de criação da solicitação com o [!UICONTROL Excluir conjunto de dados] opção realçada.](../images/ui/ttl/dataset-selected.png)
+![O fluxo de trabalho de criação da solicitação com a opção [!UICONTROL Excluir conjunto de dados] foi realçado.](../images/ui/ttl/dataset-selected.png)
 
 ### Selecionar uma data e um conjunto de dados {#select-date-and-dataset}
 
-No **[!UICONTROL Ação solicitada]** selecione uma data em que deseja que o conjunto de dados seja excluído. É possível inserir a data manualmente (no formato `mm/dd/yyyy`) ou selecione o ícone de calendário (![Um ícone de calendário.](../images/ui/ttl/calendar-icon.png)) para selecionar a data em uma caixa de diálogo.
+Na seção **[!UICONTROL Ação solicitada]**, selecione uma data pela qual deseja que o conjunto de dados seja excluído. Você pode inserir a data manualmente (no formato `mm/dd/yyyy`) ou selecionar o ícone de calendário (![Um ícone de calendário.](../images/ui/ttl/calendar-icon.png)) para selecionar a data em uma caixa de diálogo.
 
-![Uma caixa de diálogo do calendário com uma data de expiração selecionada e realçada para o conjunto de dados.](../images/ui/ttl/select-date.png)
+![Uma caixa de diálogo de calendário com uma data de expiração selecionada e realçada para o conjunto de dados.](../images/ui/ttl/select-date.png)
 
 Em seguida, em **[!UICONTROL Detalhes do conjunto de dados]**, selecione o ícone do banco de dados (![O ícone do banco de dados.](../images/ui/ttl/database-icon.png)) para abrir uma caixa de diálogo de seleção de conjunto de dados. Escolha um conjunto de dados na lista ao qual aplicar a expiração e selecione **[!UICONTROL Concluído]**.
 
-![A variável [!UICONTROL Selecionar conjunto de dados] com um conjunto de dados selecionado e [!UICONTROL Concluído] destacado.](../images/ui/ttl/select-dataset.png)
+![A caixa de diálogo [!UICONTROL Selecionar conjunto de dados] com um conjunto de dados selecionado e [!UICONTROL Concluído] realçado.](../images/ui/ttl/select-dataset.png)
 
 >[!NOTE]
 >
@@ -69,13 +69,13 @@ Em seguida, em **[!UICONTROL Detalhes do conjunto de dados]**, selecione o ícon
 
 ### Enviar a solicitação {#submit-request}
 
-A variável [!UICONTROL Detalhes do conjunto de dados] A seção é preenchida para incluir a identidade e o esquema principais para o conjunto de dados selecionado. Em **[!UICONTROL Configurações de solicitação]**, insira um nome e uma descrição opcional para a solicitação, seguida por **[!UICONTROL Enviar]**.
+A seção [!UICONTROL Detalhes do conjunto de dados] é preenchida para incluir a identidade e o esquema principal do conjunto de dados selecionado. Em **[!UICONTROL Configurações de solicitação]**, insira um nome e uma descrição opcional para a solicitação, seguido por **[!UICONTROL Enviar]**.
 
-![Uma solicitação de expiração do conjunto de dados concluída com o [!UICONTROL Configurações de solicitação] e [!UICONTROL Enviar] botão realçado.](../images/ui/ttl/submit.png)
+![Uma solicitação de expiração de conjunto de dados concluída com o botão [!UICONTROL Configurações de solicitação] e [!UICONTROL Enviar] realçado.](../images/ui/ttl/submit.png)
 
-A [!UICONTROL Confirmar solicitação] será exibida. Você será solicitado a confirmar o nome do conjunto de dados e a data em que ele será excluído. Selecionar **[!UICONTROL Enviar]** para continuar.
+Uma caixa de diálogo [!UICONTROL Confirmar solicitação] é exibida. Você será solicitado a confirmar o nome do conjunto de dados e a data em que ele será excluído. Selecione **[!UICONTROL Enviar]** para continuar.
 
-Depois que a solicitação é enviada, uma ordem de serviço é criada e é exibida na guia principal do [!UICONTROL Ciclo de vida dos dados] espaço de trabalho. Aqui, você pode monitorar o status da ordem de serviço à medida que ela processa a solicitação.
+Depois que a solicitação é enviada, uma ordem de serviço é criada e aparece na guia principal do espaço de trabalho [!UICONTROL Ciclo de vida dos dados]. Aqui, você pode monitorar o status da ordem de serviço à medida que ela processa a solicitação.
 
 >[!NOTE]
 >
@@ -83,12 +83,12 @@ Depois que a solicitação é enviada, uma ordem de serviço é criada e é exib
 
 ## Editar ou cancelar a expiração de um conjunto de dados {#edit-or-cancel}
 
-Para editar ou cancelar a expiração de um conjunto de dados, selecione **[!UICONTROL Conjunto de dados]** na página principal do espaço de trabalho e selecione na lista a expiração do conjunto de dados.
+Para editar ou cancelar a expiração de um conjunto de dados, selecione **[!UICONTROL Conjunto de dados]** na página principal do espaço de trabalho e selecione a expiração do conjunto de dados na lista.
 
 Na página de detalhes da expiração do conjunto de dados, o painel direito mostra controles para editar ou cancelar a exclusão programada.
 
 ## Próximas etapas
 
-Esse documento abordou como programar as expirações do conjunto de dados na interface do usuário do Experience Platform. Para obter informações sobre como executar outras tarefas de minimização de dados na interface, consulte [visão geral da interface do usuário do ciclo de vida dos dados](./overview.md).
+Esse documento abordou como programar as expirações do conjunto de dados na interface do usuário do Experience Platform. Para obter informações sobre como executar outras tarefas de minimização de dados na interface, consulte a [visão geral sobre a interface do ciclo de vida dos dados](./overview.md).
 
-Para saber como agendar expirações de conjunto de dados usando a API de higiene de dados, consulte o [guia de ponto de extremidade de expiração do conjunto de dados](../api/dataset-expiration.md).
+Para saber como agendar expirações de conjunto de dados usando a API de higiene de dados, consulte o [manual de ponto de extremidade de expiração do conjunto de dados](../api/dataset-expiration.md).

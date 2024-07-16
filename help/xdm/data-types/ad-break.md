@@ -5,15 +5,15 @@ exl-id: dfe0c386-8459-440d-95b5-b2139fac0fc3
 source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
 source-wordcount: '102'
-ht-degree: 6%
+ht-degree: 21%
 
 ---
 
-# [!UICONTROL Intervalo comercial] tipo de dados
+# Tipo de dados [!UICONTROL Ad break]
 
-[!UICONTROL Intervalo comercial] é um tipo de dados padrão do Experience Data Model (XDM) que descreve como um anúncio cronometrado é inserido em uma mídia cronometrada.
+[!UICONTROL Ad break] é um tipo de dados padrão do Experience Data Model (XDM) que descreve como um anúncio cronometrado é inserido em uma mídia cronometrada.
 
-![Estrutura do tipo de dados](../images/data-types/ad-break.png)
+![Estrutura de tipo de dados](../images/data-types/ad-break.png)
 
 | Propriedade | Tipo de dados | Descrição |
 | --- | --- | --- |

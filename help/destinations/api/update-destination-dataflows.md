@@ -14,11 +14,11 @@ ht-degree: 4%
 
 # Atualizar fluxos de dados de destino usando a API de serviço de fluxo
 
-Este tutorial aborda as etapas para atualizar um fluxo de dados de destino. Saiba como ativar ou desativar o fluxo de dados, atualizar suas informações básicas ou adicionar e remover públicos-alvo e atributos usando o [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/). Para obter informações sobre como editar fluxos de dados de destino usando a interface do usuário do Experience Platform, leia [Editar fluxos de ativação](/help/destinations/ui/edit-activation.md).
+Este tutorial aborda as etapas para atualizar um fluxo de dados de destino. Saiba como habilitar ou desabilitar o fluxo de dados, atualizar suas informações básicas ou adicionar e remover públicos e atributos usando a [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/). Para obter informações sobre como editar fluxos de dados de destino usando a interface do Experience Platform, leia [Editar fluxos de ativação](/help/destinations/ui/edit-activation.md).
 
 ## Introdução {#get-started}
 
-Este tutorial requer que você tenha uma ID de fluxo válida. Se você não tiver um ID de fluxo válido, selecione seu destino de escolha no [catálogo de destinos](../catalog/overview.md) e siga as etapas descritas em [conectar ao destino](../ui/connect-destination.md) e [ativar dados](../ui/activation-overview.md) antes de tentar este tutorial.
+Este tutorial requer que você tenha uma ID de fluxo válida. Se você não tiver uma ID de fluxo válida, selecione seu destino escolhido no [catálogo de destinos](../catalog/overview.md) e siga as etapas descritas para [conectar-se ao destino](../ui/connect-destination.md) e [ativar dados](../ui/activation-overview.md) antes de tentar este tutorial.
 
 >[!NOTE]
 >
@@ -29,7 +29,7 @@ Este tutorial também requer que você tenha uma compreensão funcional dos segu
 * [Destinos](../home.md): [!DNL Destinations] são integrações pré-criadas com plataformas de destino que permitem a ativação contínua de dados do Adobe Experience Platform. É possível usar destinos para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas de email, publicidade direcionada e muitos outros casos de uso.
 * [Sandboxes](../../sandboxes/home.md): o Experience Platform fornece sandboxes virtuais que particionam uma única instância da Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
-As seções a seguir fornecem as informações adicionais que você precisará saber para atualizar seu fluxo de dados com êxito usando o [!DNL Flow Service] API.
+As seções a seguir fornecem informações adicionais que você precisará saber para atualizar seu fluxo de dados com êxito usando a API [!DNL Flow Service].
 
 ### Leitura de chamadas de API de amostra {#reading-sample-api-calls}
 
@@ -43,13 +43,13 @@ Para fazer chamadas para APIs da Platform, primeiro conclua o [tutorial de auten
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {ORG_ID}`
 
-Todos os recursos no Experience Platform, incluindo os que pertencem a [!DNL Flow Service], são isolados em sandboxes virtuais específicas. Todas as solicitações para APIs da Platform exigem um cabeçalho que especifique o nome da sandbox em que a operação ocorrerá:
+Todos os recursos no Experience Platform, incluindo aqueles pertencentes a [!DNL Flow Service], são isolados em sandboxes virtuais específicas. Todas as solicitações para APIs da Platform exigem um cabeçalho que especifique o nome da sandbox em que a operação ocorrerá:
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Se a variável `x-sandbox-name` cabeçalho não for especificado, as solicitações serão resolvidas no `prod` sandbox.
+>Se o cabeçalho `x-sandbox-name` não for especificado, as solicitações serão resolvidas na sandbox `prod`.
 
 Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabeçalho de tipo de mídia adicional:
 
@@ -57,7 +57,7 @@ Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabe�
 
 ## Pesquisar detalhes do fluxo de dados {#look-up-dataflow-details}
 
-A primeira etapa na atualização do fluxo de dados de destino é recuperar os detalhes do fluxo de dados usando a ID do fluxo. Você pode exibir os detalhes atuais de um fluxo de dados existente fazendo uma solicitação GET ao `/flows` terminal.
+A primeira etapa na atualização do fluxo de dados de destino é recuperar os detalhes do fluxo de dados usando a ID do fluxo. Você pode exibir os detalhes atuais de um fluxo de dados existente fazendo uma solicitação GET para o ponto de extremidade `/flows`.
 
 **Formato da API**
 
@@ -67,7 +67,7 @@ GET /flows/{FLOW_ID}
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `{FLOW_ID}` | O único `id` para o fluxo de dados de destino que deseja recuperar. |
+| `{FLOW_ID}` | O valor `id` exclusivo para o fluxo de dados de destino que você deseja recuperar. |
 
 **Solicitação**
 
@@ -84,7 +84,7 @@ curl -X GET \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna os detalhes atuais do fluxo de dados, incluindo a versão, o identificador exclusivo (`id`e outras informações relevantes.
+Uma resposta bem-sucedida retorna os detalhes atuais do fluxo de dados, incluindo a versão, o identificador exclusivo (`id`) e outras informações relevantes.
 
 ```json
 {
@@ -345,11 +345,11 @@ Uma resposta bem-sucedida retorna os detalhes atuais do fluxo de dados, incluind
 
 ## Atualizar nome e descrição do fluxo de dados {#update-dataflow}
 
-Para atualizar o nome e a descrição do fluxo de dados, execute uma solicitação PATCH para o [!DNL Flow Service] ao fornecer a ID do fluxo, a versão e os novos valores que deseja usar.
+Para atualizar o nome e a descrição do fluxo de dados, execute uma solicitação PATCH para a API [!DNL Flow Service] enquanto fornece a ID do fluxo, a versão e os novos valores que deseja usar.
 
 >[!IMPORTANT]
 >
->A variável `If-Match` o cabeçalho é necessário ao fazer uma solicitação PATCH. O valor desse cabeçalho é a versão exclusiva do fluxo de dados que você deseja atualizar. O valor da tag é atualizado com cada atualização bem-sucedida de um fluxo de dados.
+>O cabeçalho `If-Match` é necessário ao fazer uma solicitação PATCH. O valor desse cabeçalho é a versão exclusiva do fluxo de dados que você deseja atualizar. O valor da tag é atualizado com cada atualização bem-sucedida de um fluxo de dados.
 
 **Formato da API**
 
@@ -385,13 +385,13 @@ curl -X PATCH \
 
 | Propriedade | Descrição |
 | --------- | ----------- |
-| `op` | A chamada de operação usada para definir a ação necessária para atualizar o fluxo de dados. As operações incluem: `add`, `replace`, e `remove`. |
+| `op` | A chamada de operação usada para definir a ação necessária para atualizar o fluxo de dados. As operações incluem: `add`, `replace` e `remove`. |
 | `path` | Define a parte do fluxo que deve ser atualizada. |
 | `value` | O novo valor com o qual você deseja atualizar seu parâmetro. |
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna a ID de fluxo e uma tag atualizada. Você pode verificar a atualização fazendo uma solicitação GET para o [!DNL Flow Service] ao fornecer a ID do fluxo.
+Uma resposta bem-sucedida retorna a ID de fluxo e uma tag atualizada. Você pode verificar a atualização fazendo uma solicitação GET para a API [!DNL Flow Service] e, ao mesmo tempo, fornecendo a ID do fluxo.
 
 ```json
 {
@@ -404,7 +404,7 @@ Uma resposta bem-sucedida retorna a ID de fluxo e uma tag atualizada. Você pode
 
 Quando ativado, um fluxo de dados exporta perfis para o destino. Os fluxos de dados são ativados por padrão, mas podem ser desativados para pausar as exportações de perfil.
 
-Você pode ativar ou desativar um fluxo de dados de destino existente fazendo uma solicitação POST para o [!DNL Flow Service] API e forneça o estado para o qual deseja atualizar o fluxo.
+Você pode habilitar ou desabilitar um fluxo de dados de destino existente fazendo uma solicitação POST para a API [!DNL Flow Service] e fornecendo o estado para o qual deseja atualizar o fluxo.
 
 **Formato da API**
 
@@ -438,7 +438,7 @@ curl -X POST \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna a ID de fluxo e uma tag atualizada. Você pode verificar a atualização fazendo uma solicitação GET para o [!DNL Flow Service] ao fornecer a ID do fluxo.
+Uma resposta bem-sucedida retorna a ID de fluxo e uma tag atualizada. Você pode verificar a atualização fazendo uma solicitação GET para a API [!DNL Flow Service] e, ao mesmo tempo, fornecendo a ID do fluxo.
 
 ```json
 {
@@ -449,7 +449,7 @@ Uma resposta bem-sucedida retorna a ID de fluxo e uma tag atualizada. Você pode
 
 ## Adicionar um público a um fluxo de dados {#add-segment}
 
-Para adicionar um público-alvo ao fluxo de dados de destino, execute uma solicitação PATCH para o [!DNL Flow Service] ao fornecer a ID de fluxo, a versão e o público-alvo que deseja adicionar.
+Para adicionar um público-alvo ao fluxo de dados de destino, execute uma solicitação PATCH para a API [!DNL Flow Service] enquanto fornece a ID de fluxo, a versão e o público-alvo que deseja adicionar.
 
 **Formato da API**
 
@@ -494,22 +494,22 @@ curl -X PATCH \
 
 | Propriedade | Descrição |
 | --------- | ----------- |
-| `op` | A chamada de operação usada para definir a ação necessária para atualizar o fluxo de dados. As operações incluem: `add`, `replace`, e `remove`. Para adicionar um público-alvo a um fluxo de dados, use o `add` operação. |
+| `op` | A chamada de operação usada para definir a ação necessária para atualizar o fluxo de dados. As operações incluem: `add`, `replace` e `remove`. Para adicionar uma audiência a um fluxo de dados, use a operação `add`. |
 | `path` | Define a parte do fluxo que deve ser atualizada. Ao adicionar um público-alvo a um fluxo de dados, use o caminho especificado no exemplo. |
 | `value` | O novo valor com o qual você deseja atualizar seu parâmetro. |
 | `id` | Especifique a ID do público-alvo que você está adicionando ao fluxo de dados de destino. |
 | `name` | **(Opcional)**. Especifique o nome do público-alvo que você está adicionando ao fluxo de dados de destino. Observe que esse campo não é obrigatório e que você pode adicionar um público-alvo ao fluxo de dados de destino com êxito sem fornecer seu nome. |
-| `filenameTemplate` | Para *destinos em lote* somente. Esse campo é necessário somente ao adicionar um público-alvo a um fluxo de dados em destinos de exportação de arquivos em lote, como Amazon S3, SFTP ou Azure Blob. <br> Esse campo determina o formato do nome do arquivo dos arquivos exportados para o seu destino. <br> As seguintes opções estão disponíveis: <br> <ul><li>`%DESTINATION_NAME%`: Obrigatório. Os arquivos exportados contêm o nome de destino.</li><li>`%SEGMENT_ID%`: Obrigatório. Os arquivos exportados contêm a ID do público-alvo exportado.</li><li>`%SEGMENT_NAME%`: **(Opcional)**. Os arquivos exportados contêm o nome do público exportado.</li><li>`DATETIME(YYYYMMdd_HHmmss)` ou `%TIMESTAMP%`: **(Opcional)**. Selecione uma dessas duas opções para que seus arquivos incluam a hora em que são gerados pelo Experience Platform.</li><li>`custom-text`: **(Opcional)**. Substitua esse espaço reservado por qualquer texto personalizado que queira anexar ao final dos nomes de arquivo.</li></ul> <br> Para obter mais informações sobre a configuração de nomes de arquivo, consulte a [configurar nomes de arquivo](/help/destinations/ui/activate-batch-profile-destinations.md#file-names) no tutorial de ativação de destinos em lote. |
-| `exportMode` | Para *destinos em lote* somente. Esse campo é necessário somente ao adicionar um público-alvo a um fluxo de dados em destinos de exportação de arquivos em lote, como Amazon S3, SFTP ou Azure Blob. <br> Obrigatório. Selecionar `"DAILY_FULL_EXPORT"` ou `"FIRST_FULL_THEN_INCREMENTAL"`. Para obter mais informações sobre as duas opções, consulte [exportar arquivos completos](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) e [exportar arquivos incrementais](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) no tutorial de ativação de destinos em lote. |
+| `filenameTemplate` | Somente para *destinos em lote*. Esse campo é necessário somente ao adicionar um público-alvo a um fluxo de dados em destinos de exportação de arquivos em lote, como Amazon S3, SFTP ou Azure Blob. <br> Este campo determina o formato do nome de arquivo dos arquivos exportados para o seu destino. <br> As seguintes opções estão disponíveis: <br> <ul><li>`%DESTINATION_NAME%`: Obrigatório. Os arquivos exportados contêm o nome de destino.</li><li>`%SEGMENT_ID%`: Obrigatório. Os arquivos exportados contêm a ID do público-alvo exportado.</li><li>`%SEGMENT_NAME%`: **(Opcional)**. Os arquivos exportados contêm o nome do público exportado.</li><li>`DATETIME(YYYYMMdd_HHmmss)` ou `%TIMESTAMP%`: **(Opcional)**. Selecione uma dessas duas opções para que seus arquivos incluam a hora em que são gerados pelo Experience Platform.</li><li>`custom-text`: **(Opcional)**. Substitua esse espaço reservado por qualquer texto personalizado que queira anexar ao final dos nomes de arquivo.</li></ul> <br> Para obter mais informações sobre como configurar nomes de arquivos, consulte a seção [configurar nomes de arquivos](/help/destinations/ui/activate-batch-profile-destinations.md#file-names) no tutorial de ativação de destinos em lote. |
+| `exportMode` | Somente para *destinos em lote*. Esse campo é necessário somente ao adicionar um público-alvo a um fluxo de dados em destinos de exportação de arquivos em lote, como Amazon S3, SFTP ou Azure Blob. <br> Obrigatório. Selecione `"DAILY_FULL_EXPORT"` ou `"FIRST_FULL_THEN_INCREMENTAL"`. Para obter mais informações sobre as duas opções, consulte [exportar arquivos completos](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) e [exportar arquivos incrementais](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) no tutorial de ativação de destinos em lote. |
 | `startDate` | Selecione a data em que o público-alvo deve começar a exportar perfis para o seu destino. |
-| `frequency` | Para *destinos em lote* somente. Esse campo é necessário somente ao adicionar um público-alvo a um fluxo de dados em destinos de exportação de arquivos em lote, como Amazon S3, SFTP ou Azure Blob. <br> Obrigatório. <br> <ul><li>Para o `"DAILY_FULL_EXPORT"` modo de exportação, é possível selecionar `ONCE` ou `DAILY`.</li><li>Para o `"FIRST_FULL_THEN_INCREMENTAL"` modo de exportação, é possível selecionar `"DAILY"`, `"EVERY_3_HOURS"`, `"EVERY_6_HOURS"`, `"EVERY_8_HOURS"`, `"EVERY_12_HOURS"`.</li></ul> |
-| `triggerType` | Para *destinos em lote* somente. Este campo é necessário somente ao selecionar o `"DAILY_FULL_EXPORT"` no modo `frequency` seletor. <br> Obrigatório. <br> <ul><li>Selecionar `"AFTER_SEGMENT_EVAL"` para que o trabalho de ativação seja executado imediatamente após a conclusão diária do trabalho de segmentação em lote do Platform. Isso garante que, quando o trabalho de ativação for executado, os perfis mais atualizados sejam exportados para o seu destino.</li><li>Selecionar `"SCHEDULED"` para que o trabalho de ativação seja executado em um horário fixado. Isso garante que os dados do perfil de Experience Platform sejam exportados todos os dias à mesma hora, mas os perfis exportados podem não ser os mais atualizados, dependendo se o trabalho de segmentação em lote foi concluído antes do início do trabalho de ativação. Ao selecionar essa opção, você também deve adicionar um `startTime` indicar em que momento, em UTC, as exportações diárias devem ocorrer.</li></ul> |
-| `endDate` | Para *destinos em lote* somente. Esse campo é necessário somente ao adicionar um público-alvo a um fluxo de dados em destinos de exportação de arquivos em lote, como Amazon S3, SFTP ou Azure Blob. <br> Não aplicável ao selecionar `"exportMode":"DAILY_FULL_EXPORT"` e `"frequency":"ONCE"`. <br> Define a data em que os membros do público-alvo param de ser exportados para o destino. |
-| `startTime` | Para *destinos em lote* somente. Esse campo é necessário somente ao adicionar um público-alvo a um fluxo de dados em destinos de exportação de arquivos em lote, como Amazon S3, SFTP ou Azure Blob. <br> Obrigatório. Selecione a hora em que os arquivos que contêm membros do público-alvo devem ser gerados e exportados para o seu destino. |
+| `frequency` | Somente para *destinos em lote*. Esse campo é necessário somente ao adicionar um público-alvo a um fluxo de dados em destinos de exportação de arquivos em lote, como Amazon S3, SFTP ou Azure Blob. <br> Obrigatório. <br> <ul><li>Para o modo de exportação `"DAILY_FULL_EXPORT"`, você pode selecionar `ONCE` ou `DAILY`.</li><li>Para o modo de exportação `"FIRST_FULL_THEN_INCREMENTAL"`, você pode selecionar `"DAILY"`, `"EVERY_3_HOURS"`, `"EVERY_6_HOURS"`, `"EVERY_8_HOURS"`, `"EVERY_12_HOURS"`.</li></ul> |
+| `triggerType` | Somente para *destinos em lote*. Este campo é necessário somente ao selecionar o modo `"DAILY_FULL_EXPORT"` no seletor `frequency`. <br> Obrigatório. <br> <ul><li>Selecione `"AFTER_SEGMENT_EVAL"` para que o trabalho de ativação seja executado imediatamente após a conclusão diária do trabalho de segmentação em lote da Platform. Isso garante que, quando o trabalho de ativação for executado, os perfis mais atualizados sejam exportados para o seu destino.</li><li>Selecione `"SCHEDULED"` para que o trabalho de ativação seja executado em um horário fixado. Isso garante que os dados do perfil de Experience Platform sejam exportados todos os dias à mesma hora, mas os perfis exportados podem não ser os mais atualizados, dependendo se o trabalho de segmentação em lote foi concluído antes do início do trabalho de ativação. Ao selecionar essa opção, você também deve adicionar um `startTime` para indicar em que horário em UTC as exportações diárias devem ocorrer.</li></ul> |
+| `endDate` | Somente para *destinos em lote*. Esse campo é necessário somente ao adicionar um público-alvo a um fluxo de dados em destinos de exportação de arquivos em lote, como Amazon S3, SFTP ou Azure Blob. <br> Não aplicável ao selecionar `"exportMode":"DAILY_FULL_EXPORT"` e `"frequency":"ONCE"`. <br> Define a data em que os membros do público-alvo param de ser exportados para o destino. |
+| `startTime` | Somente para *destinos em lote*. Esse campo é necessário somente ao adicionar um público-alvo a um fluxo de dados em destinos de exportação de arquivos em lote, como Amazon S3, SFTP ou Azure Blob. <br> Obrigatório. Selecione a hora em que os arquivos que contêm membros do público-alvo devem ser gerados e exportados para o seu destino. |
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna a ID de fluxo e uma tag atualizada. Você pode verificar a atualização fazendo uma solicitação GET para o [!DNL Flow Service] ao fornecer a ID do fluxo.
+Uma resposta bem-sucedida retorna a ID de fluxo e uma tag atualizada. Você pode verificar a atualização fazendo uma solicitação GET para a API [!DNL Flow Service] e, ao mesmo tempo, fornecendo a ID do fluxo.
 
 ```json
 {
@@ -520,7 +520,7 @@ Uma resposta bem-sucedida retorna a ID de fluxo e uma tag atualizada. Você pode
 
 ## Remover um público-alvo de um fluxo de dados {#remove-segment}
 
-Para remover um público-alvo de um fluxo de dados de destino existente, execute uma solicitação PATCH para o [!DNL Flow Service] ao fornecer a ID de fluxo, a versão e o seletor de índice do público-alvo que você deseja remover. A indexação começa em `0`. Por exemplo, a solicitação de amostra mais abaixo remove o primeiro e o segundo públicos-alvo do fluxo de dados.
+Para remover um público-alvo de um fluxo de dados de destino existente, execute uma solicitação PATCH para a API [!DNL Flow Service] enquanto fornece a ID de fluxo, a versão e o seletor de índice do público-alvo que você deseja remover. A indexação começa às `0`. Por exemplo, a solicitação de amostra mais abaixo remove o primeiro e o segundo públicos-alvo do fluxo de dados.
 
 **Formato da API**
 
@@ -564,13 +564,13 @@ curl -X PATCH \
 
 | Propriedade | Descrição |
 | --------- | ----------- |
-| `op` | A chamada de operação usada para definir a ação necessária para atualizar o fluxo de dados. As operações incluem: `add`, `replace`, e `remove`. Para remover um público-alvo de um fluxo de dados, use o `remove` operação. |
-| `path` | Especifica qual público-alvo existente deve ser removido do fluxo de dados de destino, com base no índice do seletor de público-alvo. GET Para recuperar a ordem dos públicos-alvo em um fluxo de dados, execute uma chamada para o `/flows` e inspecione o `transformations.segmentSelectors` propriedade. Para excluir o primeiro público-alvo no fluxo de dados, use `"path":"/transformations/0/params/segmentSelectors/selectors/0"`. |
+| `op` | A chamada de operação usada para definir a ação necessária para atualizar o fluxo de dados. As operações incluem: `add`, `replace` e `remove`. Para remover um público de um fluxo de dados, use a operação `remove`. |
+| `path` | Especifica qual público-alvo existente deve ser removido do fluxo de dados de destino, com base no índice do seletor de público-alvo. Para recuperar a ordem dos públicos em um fluxo de dados, execute uma chamada GET para o ponto de extremidade `/flows` e inspecione a propriedade `transformations.segmentSelectors`. Para excluir o primeiro público no fluxo de dados, use `"path":"/transformations/0/params/segmentSelectors/selectors/0"`. |
 
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna a ID de fluxo e uma tag atualizada. Você pode verificar a atualização fazendo uma solicitação GET para o [!DNL Flow Service] ao fornecer a ID do fluxo.
+Uma resposta bem-sucedida retorna a ID de fluxo e uma tag atualizada. Você pode verificar a atualização fazendo uma solicitação GET para a API [!DNL Flow Service] e, ao mesmo tempo, fornecendo a ID do fluxo.
 
 ```json
 {
@@ -581,7 +581,7 @@ Uma resposta bem-sucedida retorna a ID de fluxo e uma tag atualizada. Você pode
 
 ## Atualizar componentes de um público em um fluxo de dados {#update-segment}
 
-Você pode atualizar componentes de um público-alvo em um fluxo de dados de destino existente. Por exemplo, você pode alterar a frequência de exportação ou editar o modelo de nome de arquivo. Para fazer isso, execute uma solicitação PATCH para o [!DNL Flow Service] ao fornecer a ID de fluxo, a versão e o seletor de índice do público-alvo que você deseja atualizar. A indexação começa em `0`. Por exemplo, a solicitação abaixo atualiza o nono público-alvo em um fluxo de dados.
+Você pode atualizar componentes de um público-alvo em um fluxo de dados de destino existente. Por exemplo, você pode alterar a frequência de exportação ou editar o modelo de nome de arquivo. Para fazer isso, execute uma solicitação PATCH para a API [!DNL Flow Service] enquanto fornece a ID do fluxo, a versão e o seletor de índice do público-alvo que você deseja atualizar. A indexação começa às `0`. Por exemplo, a solicitação abaixo atualiza o nono público-alvo em um fluxo de dados.
 
 **Formato da API**
 
@@ -626,12 +626,12 @@ curl -X PATCH \
 ]'
 ```
 
-Para obter descrições das propriedades na carga, consulte a seção [Adicionar um público a um fluxo de dados](#add-segment).
+Para obter descrições das propriedades na carga, consulte a seção [Adicionar uma audiência a um fluxo de dados](#add-segment).
 
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna a ID de fluxo e uma tag atualizada. Você pode verificar a atualização fazendo uma solicitação GET para o [!DNL Flow Service] ao fornecer a ID do fluxo.
+Uma resposta bem-sucedida retorna a ID de fluxo e uma tag atualizada. Você pode verificar a atualização fazendo uma solicitação GET para a API [!DNL Flow Service] e, ao mesmo tempo, fornecendo a ID do fluxo.
 
 ```json
 {
@@ -748,7 +748,7 @@ Os arquivos exportados contêm o nome do destino, a ID do público-alvo do Exper
 
 ## Adicionar um atributo de perfil a um fluxo de dados {#add-profile-attribute}
 
-Para adicionar um atributo de perfil ao fluxo de dados de destino, execute uma solicitação PATCH para o [!DNL Flow Service] ao fornecer a ID de fluxo, a versão e o atributo de perfil que deseja adicionar.
+Para adicionar um atributo de perfil ao fluxo de dados de destino, execute uma solicitação PATCH para a API [!DNL Flow Service] enquanto fornece a ID de fluxo, a versão e o atributo de perfil que deseja adicionar.
 
 **Formato da API**
 
@@ -784,13 +784,13 @@ curl -X PATCH \
 
 | Propriedade | Descrição |
 | --------- | ----------- |
-| `op` | A chamada de operação usada para definir a ação necessária para atualizar o fluxo de dados. As operações incluem: `add`, `replace`, e `remove`. Para adicionar um atributo de perfil a um fluxo de dados, use o `add` operação. |
+| `op` | A chamada de operação usada para definir a ação necessária para atualizar o fluxo de dados. As operações incluem: `add`, `replace` e `remove`. Para adicionar um atributo de perfil a um fluxo de dados, use a operação `add`. |
 | `path` | Define a parte do fluxo que deve ser atualizada. Ao adicionar um atributo de perfil a um fluxo de dados, use o caminho especificado no exemplo. |
 | `value.path` | O valor do atributo de perfil que você está adicionando ao fluxo de dados. |
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna a ID de fluxo e uma tag atualizada. Você pode verificar a atualização fazendo uma solicitação GET para o [!DNL Flow Service] ao fornecer a ID do fluxo.
+Uma resposta bem-sucedida retorna a ID de fluxo e uma tag atualizada. Você pode verificar a atualização fazendo uma solicitação GET para a API [!DNL Flow Service] e, ao mesmo tempo, fornecendo a ID do fluxo.
 
 ```json
 {
@@ -801,7 +801,7 @@ Uma resposta bem-sucedida retorna a ID de fluxo e uma tag atualizada. Você pode
 
 ## Remover um atributo de perfil de um fluxo de dados {#remove-profile-attribute}
 
-Para remover um atributo de perfil de um fluxo de dados de destino existente, execute uma solicitação PATCH para o [!DNL Flow Service] ao fornecer a ID de fluxo, a versão e o seletor de índice do atributo de perfil que você deseja remover. A indexação começa em `0`. Por exemplo, a solicitação de amostra mais abaixo remove o quinto atributo de perfil do fluxo de dados.
+Para remover um atributo de perfil de um fluxo de dados de destino existente, execute uma solicitação PATCH para a API [!DNL Flow Service] enquanto fornece a ID de fluxo, a versão e o seletor de índice do atributo de perfil que você deseja remover. A indexação começa às `0`. Por exemplo, a solicitação de amostra mais abaixo remove o quinto atributo de perfil do fluxo de dados.
 
 
 **Formato da API**
@@ -838,13 +838,13 @@ curl -X PATCH \
 
 | Propriedade | Descrição |
 | --------- | ----------- |
-| `op` | A chamada de operação usada para definir a ação necessária para atualizar o fluxo de dados. As operações incluem: `add`, `replace`, e `remove`. Para remover um público-alvo de um fluxo de dados, use o `remove` operação. |
-| `path` | Especifica qual atributo de perfil existente deve ser removido do fluxo de dados de destino, com base no índice do seletor de público-alvo. GET Para recuperar a ordem dos atributos de perfil em um fluxo de dados, execute uma chamada para o `/flows` e inspecione o `transformations.profileSelectors` propriedade. Para excluir o primeiro público-alvo no fluxo de dados, use `"path":"transformations/0/params/segmentSelectors/selectors/0/"`. |
+| `op` | A chamada de operação usada para definir a ação necessária para atualizar o fluxo de dados. As operações incluem: `add`, `replace` e `remove`. Para remover um público de um fluxo de dados, use a operação `remove`. |
+| `path` | Especifica qual atributo de perfil existente deve ser removido do fluxo de dados de destino, com base no índice do seletor de público-alvo. Para recuperar a ordem dos atributos de perfil em um fluxo de dados, execute uma chamada GET para o ponto de extremidade `/flows` e inspecione a propriedade `transformations.profileSelectors`. Para excluir o primeiro público no fluxo de dados, use `"path":"transformations/0/params/segmentSelectors/selectors/0/"`. |
 
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna a ID de fluxo e uma tag atualizada. Você pode verificar a atualização fazendo uma solicitação GET para o [!DNL Flow Service] ao fornecer a ID do fluxo.
+Uma resposta bem-sucedida retorna a ID de fluxo e uma tag atualizada. Você pode verificar a atualização fazendo uma solicitação GET para a API [!DNL Flow Service] e, ao mesmo tempo, fornecendo a ID do fluxo.
 
 ```json
 {
@@ -855,8 +855,8 @@ Uma resposta bem-sucedida retorna a ID de fluxo e uma tag atualizada. Você pode
 
 ## Manipulação de erros de API {#api-error-handling}
 
-Os endpoints de API neste tutorial seguem os princípios gerais de mensagem de erro da API Experience Platform. Consulte [Códigos de status da API](/help/landing/troubleshooting.md#api-status-codes) e [erros no cabeçalho da solicitação](/help/landing/troubleshooting.md#request-header-errors) no guia de solução de problemas da Platform para obter mais informações sobre como interpretar respostas de erro.
+Os endpoints de API neste tutorial seguem os princípios gerais de mensagem de erro da API Experience Platform. Consulte [códigos de status da API](/help/landing/troubleshooting.md#api-status-codes) e [erros no cabeçalho da solicitação](/help/landing/troubleshooting.md#request-header-errors) no guia de solução de problemas da Platform para obter mais informações sobre como interpretar respostas de erro.
 
 ## Próximas etapas {#next-steps}
 
-Seguindo este tutorial, você aprendeu a atualizar vários componentes de um fluxo de dados de destino, como adicionar ou remover públicos ou atributos de perfil usando [!DNL Flow Service] API. Para obter mais informações sobre destinos, consulte a [visão geral dos destinos](../home.md).
+Seguindo este tutorial, você aprendeu a atualizar vários componentes de um fluxo de dados de destino, como adicionar ou remover públicos ou atributos de perfil usando a API [!DNL Flow Service]. Para obter mais informações sobre destinos, consulte a [visão geral sobre destinos](../home.md).

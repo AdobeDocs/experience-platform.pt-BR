@@ -15,9 +15,9 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->Os nomes de vários grupos de campos de esquema foram alterados. Consulte o documento sobre [atualizações do nome do grupo de campos](../name-updates.md) para obter mais informações.
+>Os nomes de vários grupos de campos de esquema foram alterados. Consulte o documento em [atualizações de nome de grupo de campos](../name-updates.md) para obter mais informações.
 
-[!UICONTROL Detalhes do canal] é um grupo de campos de esquema padrão para o [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md), usado para descrever informações de canal, como ID, tipo de canal, tipo de mídia e tipo de local.
+[!UICONTROL Detalhes do Canal] é um grupo de campos de esquema padrão para a [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md), usado para descrever informações de canal, como ID, tipo de canal, tipo de mídia e tipo de local.
 
 ![](../../images/field-groups/channel-details.png)
 

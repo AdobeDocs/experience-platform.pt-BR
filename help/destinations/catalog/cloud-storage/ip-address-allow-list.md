@@ -15,19 +15,19 @@ ht-degree: 1%
 >[!IMPORTANT]
 >
 > * A Adobe recomenda que você marque essa página como favorito e a revisite a cada três meses para verificar os endereços IP mais recentes. O Adobe não fornece notificação de novos intervalos IP.
-> * Embora o Adobe seja compatível com exportações de dados para servidores SFTP, os locais de armazenamento em nuvem recomendados para a exportação de dados são [!DNL Amazon S3] e [!DNL Azure Blob].
+> * Embora o Adobe ofereça suporte a exportações de dados para servidores SFTP, os locais de armazenamento na nuvem recomendados para exportar dados são [!DNL Amazon S3] e [!DNL Azure Blob].
 
 ## Aplicabilidade {#applicability}
 
 As informações de intervalo IP nesta página se aplicam aos seguintes conectores de armazenamento na nuvem baseados em arquivo no catálogo de destinos:
 
 * [[!UICONTROL Amazon S3]](./amazon-s3.md)
-* [[!UICONTROL Armazenamento em nuvem Google]](google-cloud-storage.md)
+* [[!UICONTROL Armazenamento na nuvem do Google]](google-cloud-storage.md)
 * [SFTP](./sftp.md)
 
 >[!IMPORTANT]
 >
->Os intervalos IP documentados nesta página são *não* compatível com os seguintes destinos de armazenamento na nuvem baseados em arquivo: [!UICONTROL Azure Blob], [!UICONTROL Armazenamento Azure Data Lake Gen2] e [!UICONTROL Data Landing Zone].
+>Os intervalos IP documentados nesta página *não* têm suporte para os seguintes destinos de armazenamento na nuvem baseados em arquivo: [!UICONTROL Azure Blob], [!UICONTROL Azure Data Lake Storage Gen2] e [!UICONTROL Data Landing Zone].
 
 ## Visão geral {#overview}
 

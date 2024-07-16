@@ -5,7 +5,7 @@ exl-id: 426cfd08-aead-4b35-824c-45494bca2fc8
 source-git-commit: d23f1cc9dd0155aceae78bf938d35463e9c38181
 workflow-type: tm+mt
 source-wordcount: '949'
-ht-degree: 97%
+ht-degree: 96%
 
 ---
 
@@ -48,9 +48,9 @@ Depois de incluir todas as três extensões mencionadas acima no projeto de tag,
 | Nome do reprodutor | Nome do reprodutor de vídeo em uso (por exemplo, &quot;AVPlayer&quot;, &quot;HTML5 Player&quot;, &quot;My Custom VideoPlayer&quot;) |
 | Canal | Propriedade do nome do canal |
 | Online Video Provider | Nome da plataforma de vídeo online pela qual o conteúdo é distribuído |
-| Debug Logging | Ativar ou desativar registro |
+| Debug Logging | Habilitar ou desabilitar registro |
 | Enable SSL | Ativar ou desativar o envio de pings em HTTPS |
-| Export APIs to Window Object | Ativar ou desativar a exportação de APIs do Media Analytics para o escopo global |
+| Export APIs to Window Object | Habilitar ou desabilitar a exportação de APIs do Media Analytics para o escopo global |
 | Variable Name | Uma variável usada para exportar as APIs do Media Analytics sob o objeto `window` |
 
 **Lembrete**: a extensão do MA exige as extensões do [Analytics](../analytics/overview.md) e da [Experience Cloud ID](../id-service/overview.md). Você também deve adicionar essas extensões à propriedade da sua extensão e configurá-las.

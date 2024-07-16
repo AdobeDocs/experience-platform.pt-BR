@@ -13,11 +13,11 @@ ht-degree: 0%
 
 Se sua organização tiver vários painéis disponíveis no Adobe Experience Platform, você poderá revisar o inventário do painel na interface do usuário (UI).
 
-Para exibir os painéis configurados por sua organização, selecione **[!UICONTROL Painéis]** na navegação à esquerda e selecione o **[!UICONTROL Procurar]** guia.
+Para exibir os painéis configurados por sua organização, selecione **[!UICONTROL Painéis]** na navegação à esquerda e selecione a guia **[!UICONTROL Procurar]**.
 
-Uma lista de todos os painéis disponíveis na sua instância do Platform é exibida sob o [!UICONTROL Procurar] guia. Isso inclui painéis integrados criados por sua organização que foram configurados por meio de aplicativos de terceiros.
+Uma lista de todos os painéis disponíveis na sua instância da Platform é exibida na guia [!UICONTROL Procurar]. Isso inclui painéis integrados criados por sua organização que foram configurados por meio de aplicativos de terceiros.
 
-![A guia Procurar na seção de painéis da interface do usuário do.](./images/inventory/browse-tab.png)
+![A guia Procurar na seção de painéis da interface do usuário.](./images/inventory/browse-tab.png)
 
 Você pode exibir um painel individual selecionando o nome do painel na lista.
 
@@ -27,4 +27,4 @@ Quando selecionado, o painel é aberto na interface do usuário da Platform ou e
 
 ## Criar painéis personalizados
 
-Os Painéis do Adobe Experience Platform permitem criar e gerenciar painéis personalizados onde você pode criar, adicionar e editar widgets de bespoke para visualizar as métricas principais relevantes para sua organização. Consulte a [guia de painéis definido pelo usuário](./user-defined-dashboards.md) para obter instruções completas sobre como criar e configurar painéis personalizados.
+Os Painéis do Adobe Experience Platform permitem criar e gerenciar painéis personalizados onde você pode criar, adicionar e editar widgets de bespoke para visualizar as métricas principais relevantes para sua organização. Consulte o [guia de painéis definido pelo usuário](./user-defined-dashboards.md) para obter instruções completas sobre como criar e configurar painéis personalizados.

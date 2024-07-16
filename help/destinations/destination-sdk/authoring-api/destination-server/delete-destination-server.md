@@ -4,39 +4,39 @@ title: Excluir uma configuração do servidor de destino
 exl-id: 2322a2ce-220e-4590-a553-b15152412752
 source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
-source-wordcount: '329'
-ht-degree: 3%
+source-wordcount: '330'
+ht-degree: 1%
 
 ---
 
 # Excluir uma configuração do servidor de destino
 
-Esta página exemplifica a solicitação de API e a carga que você pode usar para excluir uma configuração existente do servidor de destino usando o `/authoring/destination-servers` Endpoint da API.
+Esta página exemplifica a solicitação de API e a carga que você pode usar para excluir uma configuração existente do servidor de destino, usando o ponto de extremidade da API `/authoring/destination-servers`.
 
 Para obter uma descrição detalhada dos recursos que você pode excluir por meio desse endpoint, leia os seguintes artigos:
 
 * [Especificações do servidor para destinos criados com o Destination SDK](../../../destination-sdk/functionality/destination-server/server-specs.md)
 * [Especificações de modelos para destinos criados com o Destination SDK](../../../destination-sdk/functionality/destination-server/templating-specs.md)
-* [Formato de mensagem](../../../destination-sdk/functionality/destination-server/message-format.md)
+* [Formato da mensagem](../../../destination-sdk/functionality/destination-server/message-format.md)
 * [Configuração da formatação de arquivo](../../../destination-sdk/functionality/destination-server/file-formatting.md)
 
 >[!IMPORTANT]
 >
->Todos os nomes e valores de parâmetros compatíveis com o Destination SDK são **diferencia maiúsculas de minúsculas**. Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
+>Todos os nomes e valores de parâmetros suportados pelo Destination SDK fazem **distinção entre maiúsculas e minúsculas**. Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
 
 ## Introdução às operações de API do servidor de destino {#get-started}
 
-Antes de continuar, reveja o [guia de introdução](../../getting-started.md) para obter informações importantes que você precisa saber para fazer chamadas com êxito para a API, incluindo como obter a permissão de criação de destino e os cabeçalhos necessários.
+Antes de continuar, consulte o [guia de introdução](../../getting-started.md) para obter informações importantes que você precisa saber para fazer chamadas com êxito para a API, incluindo como obter a permissão de criação de destino e os cabeçalhos necessários.
 
 ## Excluir uma configuração do servidor de destino {#delete}
 
-É possível excluir um [existente](create-destination-server.md) configuração do servidor de destino fazendo uma `DELETE` solicitação à `/authoring/destination-servers` terminal com o `{INSTANCE_ID}`da configuração do servidor de destino que você deseja excluir.
+Você pode excluir uma configuração de servidor de destino [existente](create-destination-server.md) fazendo uma solicitação `DELETE` para o ponto de extremidade `/authoring/destination-servers` com o `{INSTANCE_ID}`da configuração de servidor de destino que deseja excluir.
 
 >[!TIP]
 >
->**Ponto de acesso da API**: `platform.adobe.io/data/core/activation/authoring/destination-servers`
+>**Ponto de extremidade de API**: `platform.adobe.io/data/core/activation/authoring/destination-servers`
 
-Para obter uma configuração existente do servidor de destino e suas `{INSTANCE_ID}`, consulte o artigo sobre [recuperando uma configuração do servidor de destino](retrieve-destination-server.md).
+Para obter uma configuração existente do servidor de destino e seu `{INSTANCE_ID}` correspondente, consulte o artigo sobre [recuperação de uma configuração do servidor de destino](retrieve-destination-server.md).
 
 **Formato da API**
 
@@ -46,7 +46,7 @@ DELETE /authoring/destination-servers/{INSTANCE_ID}
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `{INSTANCE_ID}` | A variável `ID` da configuração do servidor de destino que você deseja excluir. |
+| `{INSTANCE_ID}` | O `ID` da configuração do servidor de destino que você deseja excluir. |
 
 +++Solicitação
 
@@ -64,11 +64,11 @@ Uma resposta bem-sucedida retorna o status HTTP 200 juntamente com uma resposta 
 
 ## Manipulação de erros de API {#error-handling}
 
-Os endpoints da API Destination SDK seguem os princípios gerais de mensagem de erro da API Experience Platform. Consulte [Códigos de status da API](../../../../landing/troubleshooting.md#api-status-codes) e [erros no cabeçalho da solicitação](../../../../landing/troubleshooting.md#request-header-errors) no guia de solução de problemas da Platform.
+Os endpoints da API Destination SDK seguem os princípios gerais de mensagem de erro da API Experience Platform. Consulte [códigos de status da API](../../../../landing/troubleshooting.md#api-status-codes) e [erros no cabeçalho da solicitação](../../../../landing/troubleshooting.md#request-header-errors) no guia de solução de problemas da Platform.
 
 ## Próximas etapas {#next-steps}
 
-Depois de ler este documento, você sabe como excluir um servidor de destino existente por meio do Destination SDK `/authoring/destination-servers` Endpoint da API.
+Depois de ler este documento, agora você sabe como excluir um servidor de destino existente por meio do ponto de extremidade da API do Destination SDK `/authoring/destination-servers`.
 
 Para saber mais sobre o que você pode fazer com esse endpoint, consulte os seguintes artigos:
 

@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Políticas de governança na IA do cliente
 
-Após concluir o fluxo de trabalho para criar um modelo e enviar a configuração dele, a variável [aplicação de políticas](/help/data-governance/enforcement/auto-enforcement.md) verifica se há violações. Se ocorrer uma violação de política, será exibido um popover indicando que uma ou mais políticas foram violadas. Isso garante que suas operações de dados e ações de marketing na Platform estejam em conformidade com as políticas de uso de dados.
+Após concluir o fluxo de trabalho para criar um modelo e enviar a configuração do modelo, a [imposição de política](/help/data-governance/enforcement/auto-enforcement.md) verifica se há violações. Se ocorrer uma violação de política, será exibido um popover indicando que uma ou mais políticas foram violadas. Isso garante que suas operações de dados e ações de marketing na Platform estejam em conformidade com as políticas de uso de dados.
 
 ![Um popover exibindo informações sobre a violação de política](../images/user-guide/policy-violation-popover-cai.png).
 

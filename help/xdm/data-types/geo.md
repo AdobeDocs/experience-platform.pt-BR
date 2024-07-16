@@ -7,11 +7,11 @@ exl-id: d0eef943-ef86-4abd-8a51-dc45f2ed782d
 source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
 source-wordcount: '174'
-ht-degree: 6%
+ht-degree: 35%
 
 ---
 
-# [!UICONTROL Geo] tipo de dados
+# Tipo de dados [!UICONTROL Geo]
 
 [!UICONTROL Geo] é um tipo de dados XDM padrão que descreve a área geográfica em que um evento foi observado.
 
@@ -22,11 +22,11 @@ ht-degree: 6%
 | `_schema` | [[!UICONTROL Coordenadas geográficas]](./geo-coordinates.md) | Descreve as coordenadas geográficas de um local. |
 | `_id` | String | Uma ID exclusiva gerada pelo sistema para as coordenadas. |
 | `city` | String | O nome da cidade. |
-| `countryCode` | String | Os dois caracteres <a href="https://datahub.io/core/country-list">ISO 3166-1 alfa-2</a> código do país. |
+| `countryCode` | String | O código <a href="https://datahub.io/core/country-list">ISO 3166-1 alpha-2</a> de dois caracteres para o país. |
 | `dmaID` | Número inteiro | A área de mercado designada de pesquisa de mídia da Nielsen. |
 | `msaID` | Número inteiro | A área estatística metropolitana dos Estados Unidos onde ocorreu a observação. |
-| `postalCode` | String | O código postal da localização. Os códigos postais não estão disponíveis para todos os países. Em alguns países, conterá apenas parte do código postal. |
-| `stateProvince` | String | A parte do estado ou província da observação. O formato segue o [ISO 3166-2 (país e subdivisão)](https://www.unece.org/cefact/locode/subdivisions.html) padrão. |
+| `postalCode` | String | O código postal do local. Os códigos postais não estão disponíveis para todos os países. Em alguns países, conterá apenas parte do código postal. |
+| `stateProvince` | String | A parte do estado ou província da observação. O formato segue o padrão [ISO 3166-2 (país e subdivisão)](https://www.unece.org/cefact/locode/subdivisions.html). |
 
 {style="table-layout:auto"}
 

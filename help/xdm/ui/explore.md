@@ -14,25 +14,25 @@ ht-degree: 0%
 
 # Explorar recursos de esquema na interface do
 
-No Adobe Experience Platform, todos os recursos do esquema do Experience Data Model (XDM) são armazenados no [!DNL Schema Library], incluindo recursos padrão fornecidos pelo Adobe e recursos personalizados definidos pela sua organização. Na interface do usuário do Experience Platform, é possível visualizar a estrutura e os campos de qualquer esquema, classe, grupo de campos ou tipo de dados existente no [!DNL Schema Library]. Isso é especialmente útil ao planejar e se preparar para a assimilação de dados, pois a interface do usuário fornece informações sobre os tipos de dados e casos de uso esperados de cada campo fornecido por esses recursos XDM.
+No Adobe Experience Platform, todos os recursos de esquema do Experience Data Model (XDM) são armazenados no [!DNL Schema Library], incluindo os recursos padrão fornecidos pelo Adobe e os recursos personalizados definidos pela sua organização. Na interface do usuário do Experience Platform, é possível exibir a estrutura e os campos de qualquer esquema, classe, grupo de campos ou tipo de dados existente no [!DNL Schema Library]. Isso é especialmente útil ao planejar e se preparar para a assimilação de dados, pois a interface do usuário fornece informações sobre os tipos de dados e casos de uso esperados de cada campo fornecido por esses recursos XDM.
 
 Este tutorial aborda as etapas para explorar esquemas, classes, grupos de campos e tipos de dados existentes na interface do usuário do Experience Platform.
 
 ## Pesquisar um recurso de esquema {#lookup}
 
-Na interface do usuário da Platform, selecione **[!UICONTROL Esquemas]** no painel de navegação esquerdo. A variável [!UICONTROL Esquemas] o espaço de trabalho fornece uma **[!UICONTROL Procurar]** para explorar todos os esquemas em sua organização, juntamente com guias dedicadas adicionais para exploração **[!UICONTROL Classes]**, **[!UICONTROL Grupos de campos]**, e **[!UICONTROL Tipos de dados]** respectivamente.
+Na interface da Platform, selecione **[!UICONTROL Esquemas]** na navegação à esquerda. O espaço de trabalho [!UICONTROL Esquemas] fornece uma guia **[!UICONTROL Procurar]** para explorar todos os esquemas em sua organização, juntamente com guias dedicadas adicionais para explorar **[!UICONTROL Classes]**, **[!UICONTROL Grupos de campos]** e **[!UICONTROL Tipos de dados]**, respectivamente.
 
 ![](../images/ui/explore/tabs.png)
 
-O ícone de filtro (![Filtrar imagem do ícone](../images/ui/explore/icon.png)) revela controles no painel esquerdo para restringir os resultados listados. Os controles exibidos diferem dependendo do tipo de recurso que está sendo listado.
+O ícone de filtro (![Imagem do ícone de filtro](../images/ui/explore/icon.png)) revela controles no painel esquerdo para restringir os resultados listados. Os controles exibidos diferem dependendo do tipo de recurso que está sendo listado.
 
-Por exemplo, para filtrar a lista de forma a mostrar apenas os tipos de dados padrão fornecidos pelo Adobe, selecione **[!UICONTROL Tipo de dados]** e **[!UICONTROL Adobe]** no **[!UICONTROL Tipo]** e **[!UICONTROL Proprietário]** seções, respectivamente.
+Por exemplo, para filtrar a lista para mostrar apenas os tipos de dados padrão fornecidos pelo Adobe, selecione **[!UICONTROL Datatype]** e **[!UICONTROL Adobe]** nas seções **[!UICONTROL Type]** e **[!UICONTROL Owner]**, respectivamente.
 
-A variável **[!UICONTROL Incluído no perfil]** permite filtrar os resultados para mostrar apenas os recursos usados em esquemas que foram habilitados para uso em [Perfil do cliente em tempo real](../../profile/home.md). A variável **[!UICONTROL Mostrar esquemas adhoc]** ativar/desativar filtra a lista de esquemas criados com campos com namespace para uso somente por um único conjunto de dados.
+A opção **[!UICONTROL Incluído no Perfil]** permite que você filtre os resultados para mostrar apenas os recursos usados em esquemas que foram habilitados para uso no [Perfil de Cliente em Tempo Real](../../profile/home.md). A opção **[!UICONTROL Mostrar esquemas adhoc]** filtra a lista de esquemas criados com campos com namespace para serem usados apenas por um único conjunto de dados.
 
-![A variável [!UICONTROL Esquemas] espaço de trabalho [!UICONTROL Procurar] com o painel filtros realçado.](../images/ui/explore/filter.png)
+![A guia [!UICONTROL Procurar] do espaço de trabalho [!UICONTROL Esquemas] com o painel de filtros realçado.](../images/ui/explore/filter.png)
 
-Ao listar recursos no **[!UICONTROL Classes]**, **[!UICONTROL Grupos de campos]** ou **[!UICONTROL Tipos de dados]** , é possível selecionar **[!UICONTROL Adobe]** para mostrar apenas os recursos padrão ou **[!UICONTROL Cliente]** para mostrar apenas os recursos criados por sua organização.
+Ao listar recursos nas guias **[!UICONTROL Classes]**, **[!UICONTROL Grupos de campos]** ou **[!UICONTROL Tipos de dados]**, você pode selecionar **[!UICONTROL Adobe]** para mostrar apenas os recursos padrão ou **[!UICONTROL Cliente]** para mostrar apenas os recursos criados pela sua organização.
 
 ![](../images/ui/explore/filter-data-type.png)
 
@@ -58,15 +58,15 @@ Todos os campos do tipo de objeto que contêm subpropriedades são recolhidos po
 
 No Editor de esquemas, classes e grupos de campos padrão (gerados por Adobe) são indicados com o ícone de cadeado (![Um ícone de cadeado.](../images/ui/explore/padlock-icon.png). O cadeado é exibido no painel à esquerda, ao lado do nome da classe ou do grupo de campos, e também ao lado de qualquer campo no diagrama de esquema que faça parte de um recurso gerado pelo sistema.
 
-![O Editor de esquemas com o ícone de cadeado realçado](../images/ui/explore/schema-editor-padlock-icon.png)
+![O Editor de Esquemas com o ícone de cadeado realçado](../images/ui/explore/schema-editor-padlock-icon.png)
 
-Consulte a [Adicionar campos personalizados a grupos de campos padrão](./resources/schemas.md) para obter orientação. Não é possível editar uma classe padrão.
+Consulte a documentação [Adicionar campos personalizados a grupos de campos padrão](./resources/schemas.md) para obter orientação. Não é possível editar uma classe padrão.
 
 ### Campos gerados pelo sistema {#system-fields}
 
-Alguns nomes de campo recebem um sublinhado como `_repo` e `_id`. Eles representam espaços reservados para campos que o sistema gerará e atribuirá automaticamente à medida que os dados forem assimilados.
+Alguns nomes de campos recebem um sublinhado como prefixo, por exemplo, `_repo` e `_id`. Eles representam espaços reservados para campos que o sistema gerará e atribuirá automaticamente à medida que os dados forem assimilados.
 
-Dessa forma, a maioria desses campos deve ser excluída da estrutura dos dados ao assimilar na Platform. A principal exceção a esta regra é a [`_{TENANT_ID}` campo](../api/getting-started.md#know-your-tenant_id), em que todos os campos XDM criados em sua organização devem ter o namespace.
+Dessa forma, a maioria desses campos deve ser excluída da estrutura dos dados ao assimilar na Platform. A principal exceção para essa regra é o campo [`_{TENANT_ID}` ](../api/getting-started.md#know-your-tenant_id), no qual todos os campos XDM criados em sua organização devem ter o namespace.
 
 ### Tipos de dados {#data-types}
 
@@ -74,7 +74,7 @@ Para cada campo mostrado na tela, seu tipo de dados correspondente é mostrado a
 
 ![](../images/ui/explore/data-types.png)
 
-Qualquer tipo de dados anexado com colchetes (`[]`) representa uma matriz desse tipo de dados específico. Por exemplo, um tipo de dados de **[!UICONTROL String]\[]** indica que o campo espera uma matriz de valores de sequência. Um tipo de dados de **[!UICONTROL Item de pagamento]\[]** indica uma matriz de objetos que estão em conformidade com [!UICONTROL Item de pagamento] tipo de dados.
+Qualquer tipo de dados com colchetes (`[]`) anexados representa uma matriz desse tipo de dados específico. Por exemplo, um tipo de dados de **[!UICONTROL Cadeia de caracteres]\[]** indica que o campo espera uma matriz de valores de cadeia de caracteres. Um tipo de dados de **[!UICONTROL Item de Pagamento]\[]** indica uma matriz de objetos que estão em conformidade com o tipo de dados [!UICONTROL Item de Pagamento].
 
 Se um campo de matriz é baseado em um tipo de objeto, você pode selecionar seu ícone na tela para mostrar os atributos esperados para cada item de matriz.
 
@@ -94,17 +94,17 @@ Se o campo que você está inspecionando for um campo de enumeração, o painel 
 
 Ao inspecionar esquemas que contêm campos de identidade, esses campos são listados no painel à esquerda na classe ou no grupo de campos que os fornece ao esquema. Selecione o nome do campo de identidade no painel à esquerda para revelar o campo na tela, independentemente da profundidade em que ele está aninhado.
 
-Os campos de identidade são realçados na tela com um ícone de impressão digital (![Imagem do ícone de impressão digital](../images/ui/explore/identity-symbol.png)). Se você selecionar o nome do campo de identidade, poderá exibir informações adicionais, como a variável [namespace de identidade](../../identity-service/features/namespaces.md) e se o campo é ou não a identidade principal do esquema.
+Os campos de identidade são realçados na tela com um ícone de impressão digital (![Imagem do ícone de impressão digital](../images/ui/explore/identity-symbol.png)). Se você selecionar o nome do campo de identidade, poderá exibir informações adicionais, como o [namespace de identidade](../../identity-service/features/namespaces.md) e se o campo é ou não a identidade principal do esquema.
 
 ![](../images/ui/explore/identity-field.png)
 
 >[!NOTE]
 >
->Consulte o guia sobre [definição de campos de identidade](./fields/identity.md) para obter mais informações sobre campos de identidade e seu relacionamento com os serviços downstream da Platform.
+>Consulte o manual sobre [definição de campos de identidade](./fields/identity.md) para obter mais informações sobre campos de identidade e suas relações com os serviços downstream da Platform.
 
 ### Campos de relacionamento {#relationship}
 
-Se você estiver inspecionando um esquema que contém um campo de relação, o campo será listado no painel à esquerda em **[!UICONTROL Relações]**. Selecione o nome do campo de relacionamento no painel à esquerda para revelar o campo na tela, independentemente da profundidade em que ele está aninhado.
+Se você estiver inspecionando um esquema que contém um campo de relação, o campo será listado no painel esquerdo em **[!UICONTROL Relações]**. Selecione o nome do campo de relacionamento no painel à esquerda para revelar o campo na tela, independentemente da profundidade em que ele está aninhado.
 
 Os campos de relacionamento também são destacados exclusivamente na tela, mostrando o nome do esquema de referência ao qual o campo é vinculado. Se você selecionar o nome do campo de relacionamento, poderá exibir o namespace de identidade da identidade principal do esquema de referência no painel direito.
 
@@ -112,8 +112,8 @@ Os campos de relacionamento também são destacados exclusivamente na tela, most
 
 >[!NOTE]
 >
->Veja o tutorial sobre [criação de um relacionamento na interface](../tutorials/relationship-ui.md) para obter mais informações sobre o uso de relacionamentos em esquemas XDM.
+>Consulte o tutorial sobre [criação de uma relação na interface](../tutorials/relationship-ui.md) para obter mais informações sobre o uso de relações em esquemas XDM.
 
 ## Próximas etapas
 
-Este documento abordou como explorar os recursos XDM existentes na interface do usuário do Experience Platform. Para obter mais informações sobre os diferentes recursos do [!UICONTROL Esquemas] Workspace e [!DNL Schema Editor], consulte o [[!UICONTROL Esquemas] visão geral do espaço de trabalho](./overview.md).
+Este documento abordou como explorar os recursos XDM existentes na interface do usuário do Experience Platform. Para obter mais informações sobre os diferentes recursos do espaço de trabalho [!UICONTROL Esquemas] e [!DNL Schema Editor], consulte a [[!UICONTROL visão geral dos esquemas] do espaço de trabalho](./overview.md).

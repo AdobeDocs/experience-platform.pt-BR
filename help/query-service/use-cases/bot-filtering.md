@@ -4,14 +4,14 @@ description: Este documento fornece uma visão geral de como usar o Serviço de 
 exl-id: fc9dbc5c-874a-41a9-9b60-c926f3fd6e76
 source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
 workflow-type: tm+mt
-source-wordcount: '899'
+source-wordcount: '909'
 ht-degree: 5%
 
 ---
 
-# Filtragem de bot em [!DNL Query Service] com aprendizado de máquina
+# Filtragem de bot no [!DNL Query Service] com aprendizado de máquina
 
-A atividade de bot pode afetar as métricas de análise e prejudicar a integridade dos dados. Adobe Experience Platform [!DNL Query Service] O pode ser usado para manter a qualidade dos dados por meio do processo de filtragem de bot.
+A atividade de bot pode afetar as métricas de análise e prejudicar a integridade dos dados. O Adobe Experience Platform [!DNL Query Service] pode ser usado para manter a qualidade dos dados por meio do processo de filtragem de bot.
 
 A filtragem de bot permite que você mantenha a qualidade dos seus dados, removendo amplamente a contaminação de dados resultante de interações não humanas com o seu site. Esse processo é obtido por meio da combinação de queries SQL e aprendizado de máquina.
 
@@ -23,9 +23,9 @@ Este documento fornece uma visão geral e exemplos detalhados das consultas de f
 
 Como parte desse processo requer que você treine um modelo de aprendizado de máquina, este documento presume um conhecimento prático de um ou mais ambientes de aprendizado de máquina.
 
-Este exemplo usa [!DNL Jupyter Notebook] como um ambiente de desenvolvimento. Embora existam muitas opções disponíveis, [!DNL Jupyter Notebook] O é recomendado porque é um aplicativo web de código aberto que tem poucos requisitos computacionais. Pode ser [baixado do site oficial](https://jupyter.org/).
+Este exemplo usa [!DNL Jupyter Notebook] como um ambiente de desenvolvimento. Embora existam muitas opções disponíveis, [!DNL Jupyter Notebook] é recomendado porque é um aplicativo web de código aberto que tem poucos requisitos computacionais. Ele pode ser [baixado do site oficial](https://jupyter.org/).
 
-## Uso [!DNL Query Service] para definir um limite para a atividade de bot
+## Usar [!DNL Query Service] para definir um limite para a atividade de bot
 
 Os dois atributos usados para extrair dados para detecção de bot são:
 
@@ -34,7 +34,7 @@ Os dois atributos usados para extrair dados para detecção de bot são:
 
 >[!NOTE]
 >
->A utilização de `mcid` ainda é encontrado nas referências de namespace à ID de visitante do Experience Cloud, como visto no exemplo abaixo.
+>O uso de `mcid` ainda é encontrado nas referências de namespace à ID de visitante do Experience Cloud, como visto no exemplo abaixo.
 
 A instrução SQL a seguir fornece um exemplo inicial para identificar a atividade de bot. A instrução pressupõe que, se um visitante realizar 50 cliques em um minuto, o usuário será um bot.
 
@@ -49,7 +49,7 @@ WHERE  enduserids._experience.mcid NOT IN (SELECT enduserids._experi
                                            HAVING Count(*) > 50);  
 ```
 
-A expressão filtra as ECIDs (`mcid`) de todos os visitantes que atingem o limite, mas não aborda picos no tráfego de outros intervalos.
+A expressão filtra os ECIDs (`mcid`) de todos os visitantes que atingem o limite, mas não aborda picos no tráfego de outros intervalos.
 
 ## Melhore a detecção de bot com o aprendizado de máquina
 
@@ -57,7 +57,7 @@ A instrução SQL inicial pode ser refinada para se tornar uma consulta de extra
 
 A instrução de exemplo é expandida de um minuto com até 60 cliques para incluir períodos de cinco minutos e 30 minutos com contagens de cliques de 300 e 1800, respectivamente.
 
-A instrução de exemplo coleta o número máximo de cliques para cada ECID (`mcid`) durante as várias durações. A instrução inicial foi expandida para incluir períodos de um minuto (60 segundos), 5 minutos (300 segundos) e uma hora (ou seja, 1800 segundos).
+A instrução de exemplo coleta o número máximo de cliques para cada ECID (`mcid`) nas várias durações. A instrução inicial foi expandida para incluir períodos de um minuto (60 segundos), 5 minutos (300 segundos) e uma hora (ou seja, 1800 segundos).
 
 ```sql
 SELECT table_count_1_min.mcid AS id, 
@@ -116,11 +116,11 @@ O resultado dessa expressão pode ser semelhante à tabela fornecida abaixo.
 
 ## Identificar novos limites de pico usando aprendizado de máquina
 
-Em seguida, exporte o conjunto de dados de consulta resultante para o formato CSV e importe-o para o [!DNL Jupyter Notebook]. A partir desse ambiente, você pode treinar um modelo de aprendizado de máquina usando as bibliotecas de aprendizado de máquina atuais. Consulte o guia de solução de problemas para obter mais detalhes sobre [como exportar dados do [!DNL Query Service] no formato CSV](../troubleshooting-guide.md#export-csv)
+Em seguida, exporte o conjunto de dados da consulta resultante para o formato CSV e, em seguida, importe-o para [!DNL Jupyter Notebook]. A partir desse ambiente, você pode treinar um modelo de aprendizado de máquina usando as bibliotecas de aprendizado de máquina atuais. Consulte o guia de solução de problemas para obter mais detalhes sobre [como exportar dados de [!DNL Query Service] em formato CSV](../troubleshooting-guide.md#export-csv)
 
-Os limites de pico ad hoc inicialmente estabelecidos não são orientados por dados e, portanto, carecem de precisão. Os modelos de aprendizado de máquina podem ser usados para treinar parâmetros como limites. Como resultado, você pode aumentar a eficiência da consulta reduzindo o número de `GROUP BY` removendo recursos desnecessários.
+Os limites de pico ad hoc inicialmente estabelecidos não são orientados por dados e, portanto, carecem de precisão. Os modelos de aprendizado de máquina podem ser usados para treinar parâmetros como limites. Como resultado, você pode aumentar a eficiência da consulta reduzindo o número de `GROUP BY` palavras-chave, removendo recursos desnecessários.
 
-Este exemplo usa a biblioteca de aprendizado de máquina Scikit-Learn, que é instalada por padrão com o [!DNL Jupyter Notebook]. A biblioteca &quot;pandas&quot; Python também é importada para uso aqui. Os seguintes comandos são inseridos em [!DNL Jupyter Notebook].
+Este exemplo usa a biblioteca de aprendizado de máquina Scikit-Learn, que é instalada por padrão com o [!DNL Jupyter Notebook]. A biblioteca &quot;pandas&quot; Python também é importada para uso aqui. Os seguintes comandos estão sendo inseridos em [!DNL Jupyter Notebook].
 
 ```shell
 import pandas as ps
@@ -153,22 +153,22 @@ tree.plot_tree(clf,feature_names=X.columns)
 plt.show()
 ```
 
-Os valores retornados de [!DNL Jupyter Notebook] para este exemplo, são mostradas a seguir.
+Os valores retornados de [!DNL Jupyter Notebook] para este exemplo são os seguintes.
 
 ```text
 Model Accuracy: 0.99935
 ```
 
-![Saída estatística de [!DNL Jupyter Notebook] modelo de aprendizado de máquina.](../images/use-cases/jupiter-notebook-output.png)
+![Saída estatística do modelo de aprendizado de máquina [!DNL Jupyter Notebook].](../images/use-cases/jupiter-notebook-output.png)
 
 Os resultados do modelo mostrado no exemplo acima têm mais de 99% de precisão.
 
-Como o classificador da árvore de decisão pode ser treinado usando dados de [!DNL Query Service] regularmente usando consultas programadas, você pode garantir a integridade dos dados filtrando a atividade do bot com um alto grau de precisão. Usando os parâmetros derivados do modelo de aprendizado de máquina, as consultas originais podem ser atualizadas com os parâmetros altamente precisos criados pelo modelo.
+Como o classificador da árvore de decisão pode ser treinado usando dados de [!DNL Query Service] regularmente com consultas agendadas, você pode garantir a integridade dos dados filtrando a atividade do bot com um alto grau de precisão. Usando os parâmetros derivados do modelo de aprendizado de máquina, as consultas originais podem ser atualizadas com os parâmetros altamente precisos criados pelo modelo.
 
 O modelo de exemplo determinou com alto grau de precisão que todos os visitantes com mais de 130 interações em cinco minutos são bots. Essas informações agora podem ser usadas para refinar suas consultas SQL de filtragem de bot.
 
 ## Próximas etapas
 
-Ao ler este documento, você compreenderá melhor como usar o [!DNL Query Service] e aprendizado de máquina para determinar e filtrar a atividade de bot.
+Ao ler este documento, você terá uma melhor compreensão de como usar o [!DNL Query Service] e o aprendizado de máquina para determinar e filtrar a atividade de bot.
 
-Outros documentos que demonstram os benefícios da [!DNL Query Service] para os insights de negócios estratégicos de sua organização são os [caso de uso de navegação abandonada](./abandoned-browse.md) exemplo.
+Outros documentos que demonstram os benefícios do [!DNL Query Service] para os insights estratégicos de negócios da sua organização são o [exemplo de uso de navegação abandonada](./abandoned-browse.md).

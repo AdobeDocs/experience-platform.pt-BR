@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Use modelos de metadados de público-alvo para criar, atualizar ou excluir públicos-alvo no destino de forma programática. O Adobe fornece um modelo extensível de metadados de público-alvo, que pode ser configurado com base nas especificações da API de marketing. Depois de definir, testar e enviar a configuração, ela será usada pelo Adobe para estruturar as chamadas de API para o seu destino.
 
-Você pode configurar a funcionalidade descrita neste documento usando o `/authoring/audience-templates` Endpoint da API. Ler [criar um modelo de metadados](../metadata-api/create-audience-template.md) para obter uma lista completa de operações que podem ser executadas no endpoint.
+Você pode configurar a funcionalidade descrita neste documento usando o ponto de extremidade de API `/authoring/audience-templates`. Leia [criar um modelo de metadados](../metadata-api/create-audience-template.md) para obter uma lista completa de operações que você pode executar no ponto de extremidade.
 
 ## Quando usar o endpoint de gerenciamento de metadados de público-alvo {#when-to-use}
 
@@ -23,7 +23,7 @@ Dependendo da configuração da API, pode ser ou não necessário usar o endpoin
 
 ## Casos de uso compatíveis com o gerenciamento de metadados de público-alvo {#use-cases}
 
-Com o suporte aos metadados de público no Destination SDK, ao configurar o destino do Experience Platform, você pode fornecer aos usuários da Platform uma das várias opções quando eles mapeiam e ativam públicos para o seu destino. É possível controlar as opções disponíveis para o usuário por meio dos parâmetros em [Configuração de metadados de público](../functionality/destination-configuration/audience-metadata-configuration.md) seção da configuração de destino.
+Com o suporte aos metadados de público no Destination SDK, ao configurar o destino do Experience Platform, você pode fornecer aos usuários da Platform uma das várias opções quando eles mapeiam e ativam públicos para o seu destino. Você pode controlar as opções disponíveis para o usuário por meio dos parâmetros na seção [Configuração de metadados de público-alvo](../functionality/destination-configuration/audience-metadata-configuration.md) da configuração de destino.
 
 ### Caso de uso 1 - Você tem uma API de terceiros e os usuários não precisam inserir IDs de mapeamento
 
@@ -45,7 +45,7 @@ Se o sistema de destino aceitar a ID de público-alvo do Experience Platform, vo
 
 Para dar suporte aos casos de uso listados acima, o Adobe fornece um modelo genérico que pode ser personalizado para ajustar-se às especificações da API.
 
-É possível usar o modelo genérico para [criar um novo modelo de público](../metadata-api/create-audience-template.md) se sua API suportar:
+Você pode usar o modelo genérico para [criar um novo modelo de público-alvo](../metadata-api/create-audience-template.md) se sua API permitir:
 
 * Os métodos HTTP: POST, GET, PUT, DELETE, PATCH
 * Os tipos de autenticação: OAuth 1, OAuth 2 com token de atualização, OAuth 2 com token de portador
@@ -57,7 +57,7 @@ A equipe de engenharia do Adobe pode trabalhar com você para expandir o modelo 
 
 Esta seção inclui três exemplos de configurações genéricas de metadados de público-alvo, para sua referência, juntamente com descrições das seções principais da configuração. Observe como o url, os cabeçalhos, a solicitação e o corpo da resposta diferem entre as três configurações de exemplo. Isso se deve às diferentes especificações da API de marketing das três plataformas de amostra.
 
-Observe que em alguns exemplos, campos de macro como `{{authData.accessToken}}` ou `{{segment.name}}` são usados no URL e em outros exemplos são usados nos cabeçalhos ou no corpo da solicitação. Isso realmente depende das especificações da sua API de marketing.
+Observe que em alguns exemplos, campos de macro como `{{authData.accessToken}}` ou `{{segment.name}}` são usados na URL e em outros exemplos eles são usados nos cabeçalhos ou no corpo da solicitação. Isso realmente depende das especificações da sua API de marketing.
 
 | Seção Modelo | Descrição |
 |--- |--- |
@@ -521,7 +521,7 @@ Observe que em alguns exemplos, campos de macro como `{{authData.accessToken}}` 
 }
 ```
 
-Encontre descrições de todos os parâmetros no modelo na [Criar um modelo de público-alvo](../metadata-api/create-audience-template.md) Referência da API.
+Encontre descrições de todos os parâmetros no modelo na referência da API [Criar um modelo de público-alvo](../metadata-api/create-audience-template.md).
 
 ## Macros usadas em modelos de metadados de público {#macros}
 
@@ -534,8 +534,8 @@ Para transmitir informações como IDs de público-alvo, tokens de acesso, mensa
 | `{{segment.id}}` | Permite acessar a ID de público-alvo no Experience Platform. |
 | `{{customerData.accountId}}` | Permite acessar o campo de ID da conta que você configurou na configuração de destino. |
 | `{{oauth2ServiceAccessToken}}` | Permite gerar dinamicamente um token de acesso com base na configuração do OAuth 2. |
-| `{{authData.accessToken}}` | Permite passar o token de acesso para o endpoint da API. Uso `{{authData.accessToken}}` se o Experience Platform deve usar tokens sem expiração para se conectar ao seu destino, caso contrário, use `{{oauth2ServiceAccessToken}}` para gerar um token de acesso. |
-| `{{body.segments[0].segment.id}}` | Retorna o identificador exclusivo do público-alvo criado, como o valor da chave `externalAudienceId`. |
+| `{{authData.accessToken}}` | Permite passar o token de acesso para o endpoint da API. Use `{{authData.accessToken}}` se o Experience Platform precisar usar tokens sem expiração para se conectar ao seu destino, caso contrário, use `{{oauth2ServiceAccessToken}}` para gerar um token de acesso. |
+| `{{body.segments[0].segment.id}}` | Retorna o identificador exclusivo do público criado, como o valor da chave `externalAudienceId`. |
 | `{{error.message}}` | Retorna uma mensagem de erro que será exibida aos usuários na interface do usuário do Experience Platform. |
 
 {style="table-layout:auto"}

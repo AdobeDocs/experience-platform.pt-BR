@@ -15,11 +15,11 @@ Veja a seguir uma lista das notas de versão da extensão de tag do Adobe Analyt
 
 >[!NOTE]
 >
->A extensão de tag do Analytics é atualizada com frequência em resposta a atualizações na [Biblioteca JavaScript do AppMeasurement](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=pt-BR). Consulte a [Notas de versão do AppMeasurement](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=pt-BR) para obter detalhes sobre as versões específicas mencionadas abaixo.
+>A extensão de tag do Analytics é atualizada com frequência em resposta a atualizações na [biblioteca JavaScript do AppMeasurement](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=pt-BR). Consulte as [notas de versão do AppMeasurement](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=pt-BR) para obter detalhes sobre as versões específicas mencionadas abaixo.
 
 ## 4 de março de 2024
 
-**Extensão do Adobe Analytics versão 1.9.4**
+**Extensão do Adobe Analytics 1.9.4**
 
 **Recursos**:
 
@@ -27,7 +27,7 @@ Veja a seguir uma lista das notas de versão da extensão de tag do Adobe Analyt
 
 ## 15 de setembro de 2023
 
-**Adobe Analytics Extension 1.9.3**
+**Extensão do Adobe Analytics 1.9.3**
 
 **Recursos**:
 
@@ -36,7 +36,7 @@ Veja a seguir uma lista das notas de versão da extensão de tag do Adobe Analyt
 
 ## 19 de julho de 2023
 
-**Adobe Analytics Extension 1.9.2**
+**Extensão do Adobe Analytics 1.9.2**
 
 **Recursos**:
 
@@ -45,21 +45,21 @@ Veja a seguir uma lista das notas de versão da extensão de tag do Adobe Analyt
 
 **Correções de erros**:
 
-* Adição de manipulação de erros para navegadores com alta entropia incorreta [Dicas do cliente de usuário-agente](https://experienceleague.adobe.com/docs/analytics/technotes/client-hints.html) APIs.
-* Alterado [POST](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Methods/POST) Cabeçalho Content-Type a ser usado `x-www-form-urlencoded` por padrão.
+* Adição de tratamento de erros para navegadores com [dicas do cliente de usuário-agente](https://experienceleague.adobe.com/docs/analytics/technotes/client-hints.html) de alta entropia com falha.
+* O cabeçalho [POST](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Methods/POST) Content-Type foi alterado para usar `x-www-form-urlencoded` por padrão.
 
 ## 23 de setembro de 2022
 
-**Adobe Analytics Extension 1.9.1**
+**Extensão do Adobe Analytics 1.9.1**
 
 **Recursos**:
 
 * Atualizado para o AppMeasurement v2.23.0.
-* A extensão agora pode coletar dados de alta entropia [user-agent client hints (dicas do cliente do user-agent)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) conforme suportado pela versão mais recente do AppMeasurement.
+* A extensão agora pode coletar [dicas do cliente de usuário-agente](https://developer.mozilla.org/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) de alta entropia, conforme o suporte da versão mais recente do AppMeasurement.
 
 ## 28 de fevereiro de 2022
 
-**Adobe Analytics Extension 1.9.0**
+**Extensão do Adobe Analytics 1.9.0**
 
 **Correções de erros**:
 
@@ -67,7 +67,7 @@ Veja a seguir uma lista das notas de versão da extensão de tag do Adobe Analyt
 
 ## terça-feira, 29 de novembro de 2021
 
-**Extensão do Adobe Analytics versão 1.8.8**
+**Extensão do Adobe Analytics 1.8.8**
 
 **Correções de erros**:
 
@@ -75,7 +75,7 @@ Veja a seguir uma lista das notas de versão da extensão de tag do Adobe Analyt
 
 ## 16 de setembro de 2021
 
-**Extensão do Adobe Analytics versão 1.8.7**
+**Extensão do Adobe Analytics 1.8.7**
 
 **Correções de erros**:
 
@@ -84,16 +84,16 @@ Veja a seguir uma lista das notas de versão da extensão de tag do Adobe Analyt
 
 ## 24 de agosto de 2021
 
-**Extensão do Adobe Analytics versão 1.8.6**
+**Extensão do Adobe Analytics 1.8.6**
 
 **Correções de erros**:
 
-* Atualizado [AppMeasurement para v2.22.1](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=pt-BR).
+* Atualização do [AppMeasurement para v2.22.1](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=pt-BR).
 * Atualização de fallback linkName para espelhar a lógica de Activity Map em vez de usar innerHTML.
 
 ## 6 de agosto de 2020
 
-**Extensão do Adobe Analytics versão 1.8.5**
+**Extensão do Adobe Analytics 1.8.5**
 
 **Correções de erros**:
 
@@ -106,7 +106,7 @@ Veja a seguir uma lista das notas de versão da extensão de tag do Adobe Analyt
 
 ## 2 de junho de 2020
 
-**Extensão do Adobe Analytics versão 1.8.4**
+**Extensão do Adobe Analytics 1.8.4**
 
 **Correções de erros**:
 
@@ -120,7 +120,7 @@ Veja a seguir uma lista das notas de versão da extensão de tag do Adobe Analyt
 
 ## 10 de março de 2020
 
-**Adobe Analytics Extension 1.8.3**
+**Extensão do Adobe Analytics 1.8.3**
 
 **Correções de erros**:
 
@@ -133,7 +133,7 @@ Veja a seguir uma lista das notas de versão da extensão de tag do Adobe Analyt
 
 ## 2 de março de 2020
 
-**Adobe Analytics Extension 1.8.2**
+**Extensão do Adobe Analytics 1.8.2**
 
 **Correções de erros**:
 
@@ -150,7 +150,7 @@ Veja a seguir uma lista das notas de versão da extensão de tag do Adobe Analyt
 
 ## 13 de novembro de 2019
 
-**Adobe Analytics Extension 1.8.1**
+**Extensão do Adobe Analytics 1.8.1**
 
 **Correções de erros**:
 
@@ -158,7 +158,7 @@ Veja a seguir uma lista das notas de versão da extensão de tag do Adobe Analyt
 
 ## 1 de novembro de 2019
 
-**Extensão do Adobe Analytics versão 1.8.0**
+**Extensão do Adobe Analytics 1.8.0**
 
 **Correções de erros**:
 
@@ -172,7 +172,7 @@ Veja a seguir uma lista das notas de versão da extensão de tag do Adobe Analyt
 
 ## 6 de setembro de 2019
 
-**Extensão do Adobe Analytics versão 1.7.8**
+**Extensão do Adobe Analytics 1.7.8**
 
 **Correções de erros**:
 
@@ -181,7 +181,7 @@ Veja a seguir uma lista das notas de versão da extensão de tag do Adobe Analyt
 
 ## 5 de setembro de 2019
 
-**Extensão do Adobe Analytics versão 1.7.7**
+**Extensão do Adobe Analytics 1.7.7**
 
 **Recursos**:
 
@@ -196,7 +196,7 @@ Veja a seguir uma lista das notas de versão da extensão de tag do Adobe Analyt
 
 ## 18 de julho de 2019
 
-**Adobe Analytics Extension 1.7.6**
+**Extensão do Adobe Analytics 1.7.6**
 
 **Recursos**:
 
@@ -207,7 +207,7 @@ Veja a seguir uma lista das notas de versão da extensão de tag do Adobe Analyt
 
 ## 4 de junho de 2019
 
-**Extensão do Adobe Analytics versão 1.7.5**
+**Extensão do Adobe Analytics 1.7.5**
 
 **Recursos**:
 
@@ -221,7 +221,7 @@ Veja a seguir uma lista das notas de versão da extensão de tag do Adobe Analyt
 
 ## 15 de abril de 2019
 
-**Adobe Analytics Extension 1.7.4**
+**Extensão do Adobe Analytics 1.7.4**
 
 **Correções de erros**:
 
@@ -229,7 +229,7 @@ Veja a seguir uma lista das notas de versão da extensão de tag do Adobe Analyt
 
 ## 12 de abril de 2019
 
-**Adobe Analytics Extension 1.7.3**
+**Extensão do Adobe Analytics 1.7.3**
 
 **Correções de erros**:
 
@@ -237,7 +237,7 @@ Veja a seguir uma lista das notas de versão da extensão de tag do Adobe Analyt
 
 ## 21 de março de 2019
 
-**Adobe Analytics Extension 1.7.2**
+**Extensão do Adobe Analytics 1.7.2**
 
 **Recursos**:
 
@@ -248,7 +248,7 @@ Veja a seguir uma lista das notas de versão da extensão de tag do Adobe Analyt
 
 ## 7 de março de 2019
 
-**Adobe Analytics Extension 1.7.1**
+**Extensão do Adobe Analytics 1.7.1**
 
 **Correções de erros**:
 
@@ -256,7 +256,7 @@ Veja a seguir uma lista das notas de versão da extensão de tag do Adobe Analyt
 
 ## 11 de fevereiro de 2019
 
-**Adobe Analytics Extension 1.6**
+**Extensão do Adobe Analytics 1.6**
 
 **Recursos**:
 
@@ -269,7 +269,7 @@ Veja a seguir uma lista das notas de versão da extensão de tag do Adobe Analyt
 
 ## 9 de novembro de 2018
 
-**Adobe Analytics Extension 1.5.1**
+**Extensão do Adobe Analytics 1.5.1**
 
 **Correções de erros**:
 
@@ -277,7 +277,7 @@ Veja a seguir uma lista das notas de versão da extensão de tag do Adobe Analyt
 
 ## 5 de novembro de 2018
 
-**Adobe Analytics Extension 1.5**
+**Extensão do Adobe Analytics 1.5**
 
 **Recursos**:
 
@@ -291,7 +291,7 @@ Veja a seguir uma lista das notas de versão da extensão de tag do Adobe Analyt
 
 ## 11 de outubro de 2018
 
-**Adobe Analytics Extension 1.4**
+**Extensão do Adobe Analytics 1.4**
 
 **Recursos**:
 
@@ -303,7 +303,7 @@ Veja a seguir uma lista das notas de versão da extensão de tag do Adobe Analyt
 
 ## 5 de junho de 2018
 
-**Adobe Analytics Extension 1.3**
+**Extensão do Adobe Analytics 1.3**
 
 **Recursos**:
 
@@ -318,7 +318,7 @@ Veja a seguir uma lista das notas de versão da extensão de tag do Adobe Analyt
 
 ## 20 de março de 2018
 
-**Adobe Analytics Extension 1.2**
+**Extensão do Adobe Analytics 1.2**
 
 **Recursos**:
 
@@ -327,7 +327,7 @@ Veja a seguir uma lista das notas de versão da extensão de tag do Adobe Analyt
 
 ## 8 de fevereiro de 2018
 
-**Adobe Analytics Extension 1.1**
+**Extensão do Adobe Analytics 1.1**
 
 **Recursos**:
 

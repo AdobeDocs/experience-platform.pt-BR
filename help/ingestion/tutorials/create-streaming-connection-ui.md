@@ -16,6 +16,6 @@ ht-degree: 0%
 
 Para iniciar a transmissão de dados para [!DNL Experience Platform], primeiro você deve criar uma conexão HTTP de transmissão. Ao criar uma conexão de transmissão, você precisa fornecer os principais detalhes, como a fonte de dados de transmissão e se pretende ou não enviar dados de uma fonte confiável (autenticada) ou não confiável (não autenticada).
 
-Depois de registrar uma conexão de streaming, você terá um URL exclusivo que pode ser usado para transmitir dados para o [!DNL Platform].
+Depois de registrar uma conexão de transmissão, você terá uma URL exclusiva que pode ser usada para transmitir dados para [!DNL Platform].
 
-Para saber como criar uma conexão de transmissão, leia o [Guia da interface do usuário de origem da API HTTP](../../sources/tutorials/ui/create/streaming/http.md).
+Para saber como criar uma conexão de streaming, leia o [guia da interface do usuário de origem da API HTTP](../../sources/tutorials/ui/create/streaming/http.md).

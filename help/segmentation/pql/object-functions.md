@@ -1,22 +1,22 @@
 ---
 solution: Experience Platform
-title: Funções do objeto PQL
-description: A Linguagem de consulta de perfil (PQL) oferece funções para simplificar a interação com objetos.
+title: Funções de objeto do PQL
+description: O Profile Query Language (PQL) oferece funções para simplificar a interação com objetos.
 exl-id: e65257d8-5bc8-46c8-8487-33bc7ce4059b
 source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
 source-wordcount: '121'
-ht-degree: 6%
+ht-degree: 9%
 
 ---
 
 # Funções do objeto
 
-[!DNL Profile Query Language] O (PQL) oferece funções para simplificar a interação com objetos. Mais informações sobre outras funções PQL podem ser encontradas no [[!DNL Profile Query Language] visão geral](./overview.md).
+O [!DNL Profile Query Language] (PQL) oferece funções para simplificar a interação com objetos. Mais informações sobre outras funções do PQL podem ser encontradas na [[!DNL Profile Query Language] visão geral](./overview.md).
 
 ## É nulo
 
-A variável `isNull` determina se uma referência de objeto não existe.
+A função `isNull` determina se uma referência de objeto não existe.
 
 **Formato**
 
@@ -26,7 +26,7 @@ A variável `isNull` determina se uma referência de objeto não existe.
 
 **Exemplo**
 
-A consulta PQL a seguir verifica se o endereço residencial da pessoa não existe.
+A consulta do PQL a seguir verifica se o endereço residencial da pessoa não existe.
 
 ```sql
 person.homeAddress.isNull()
@@ -34,7 +34,7 @@ person.homeAddress.isNull()
 
 ## Não é nulo
 
-A variável `isNotNull` determina se existe uma referência de objeto.
+A função `isNotNull` determina se existe uma referência de objeto.
 
 **Formato**
 
@@ -44,7 +44,7 @@ A variável `isNotNull` determina se existe uma referência de objeto.
 
 **Exemplo**
 
-A consulta PQL a seguir verifica se o endereço residencial da pessoa existe.
+A consulta do PQL a seguir verifica se o endereço residencial da pessoa existe.
 
 ```sql
 person.homeAddress.isNotNull()
@@ -52,4 +52,4 @@ person.homeAddress.isNotNull()
 
 ## Próximas etapas
 
-Agora que você aprendeu sobre funções de objeto, é possível usá-las em consultas PQL. Para obter mais informações sobre outras funções PQL, leia o [Visão geral do idioma de consulta do perfil](./overview.md).
+Agora que você aprendeu sobre funções de objeto, é possível usá-las em consultas do PQL. Para obter mais informações sobre outras funções do PQL, leia a [visão geral do Profile Query Language](./overview.md).

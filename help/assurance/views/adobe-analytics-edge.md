@@ -1,8 +1,9 @@
 ---
 title: Analytics Events 2.0 no Assurance
-description: Este guia explica como usar o Adobe Analytics e o Analytics Edge View com o Adobe Experience Platform Assurance.
+description: Este guia explica como usar a visualização do Edge do Adobe Analytics e do Analytics com o Adobe Experience Platform Assurance.
 badgeBeta: label="Beta" type="Informative"
-source-git-commit: f707554ea89731fbd3f013d6065fde27ba7fa811
+exl-id: faaa2c1d-3471-4d86-9a25-03265b996e31
+source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
 source-wordcount: '742'
 ht-degree: 19%
@@ -11,7 +12,7 @@ ht-degree: 19%
 
 # Analytics Events 2.0 no Assurance
 
-O Analytics Events 2.0 fornece uma visualização mais avançada dos eventos do SDK para os usuários que depuram e validam a implementação do Adobe Analytics. A exibição mostra eventos enviados para o Adobe Analytics do [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/solution/adobe-analytics/) bem como a [SDK da rede de borda da Adobe Experience Platform](https://developer.adobe.com/client-sdks/edge/edge-network/). A visualização também apresenta um painel de detalhes, que fornece contexto sobre como o evento foi processado pelo SDK do cliente, bem como pelos serviços upstream depois que ele deixou o dispositivo.
+O Analytics Events 2.0 fornece uma visualização mais avançada dos eventos do SDK para os usuários que depuram e validam a implementação do Adobe Analytics. O modo de exibição mostra eventos enviados para o Adobe Analytics a partir do [SDK do Adobe Experience Platform Mobile](https://developer.adobe.com/client-sdks/solution/adobe-analytics/), bem como do [SDK do Adobe Experience Platform Edge Network](https://developer.adobe.com/client-sdks/edge/edge-network/). A visualização também apresenta um painel de detalhes, que fornece contexto sobre como o evento foi processado pelo SDK do cliente, bem como pelos serviços upstream depois que ele deixou o dispositivo.
 
 ## Introdução
 
@@ -19,13 +20,13 @@ Para usar essa visualização, conclua as seguintes etapas:
 
 1. [Configurar o Adobe Experience Platform Assurance](../tutorials/implement-assurance.md).
 2. [Criar e conectar-se a uma sessão do Assurance](../tutorials/using-assurance.md).
-3. Na interface do usuário do Assurance, no painel de navegação esquerdo **Início** menu exibir, selecione **Analytics Events 2.0 (Beta)**. Se você não vir essa opção, selecione **Configurar** na parte inferior esquerda da janela, adicione o **Analytics Events 2.0 (Beta)** e selecione **Salvar**.
+3. Na interface do usuário do Assurance, no menu de exibição de navegação à esquerda **Página inicial**, selecione **Analytics Events 2.0 (Beta)**. Se você não vir essa opção, selecione **Configurar** na parte inferior esquerda da janela, adicione o **Analytics Events 2.0 (Beta)** e selecione **Salvar**.
 
 ## Exibição de eventos do Analytics
 
-Use a Exibição de evento do Analytics se estiver usando a **Adobe Analytics** extensão móvel. Essa visualização permite que você visualize facilmente os Eventos do Analytics enviados de seu cliente conectado, incluindo Rastrear ação, Rastrear estado e Eventos do ciclo de vida. Ao selecionar um dos eventos do Analytics na tabela, os detalhes de como o evento foi processado podem ser exibidos no painel direito.
+Use a Exibição de Eventos do Analytics se estiver usando a extensão móvel **Adobe Analytics**. Essa visualização permite que você visualize facilmente os Eventos do Analytics enviados de seu cliente conectado, incluindo Rastrear ação, Rastrear estado e Eventos do ciclo de vida. Ao selecionar um dos eventos do Analytics na tabela, os detalhes de como o evento foi processado podem ser exibidos no painel direito.
 
-![Uma imagem que demonstra diferentes componentes na visualização de eventos do Analytics.](./images/adobe-analytics-edge/analytics-events.png)
+![Uma imagem que demonstra diferentes componentes na Exibição de Eventos do Analytics.](./images/adobe-analytics-edge/analytics-events.png)
 
 ### Status pós-processado
 
@@ -50,26 +51,26 @@ Para um evento de rastreamento do Analytics, a exibição detalhada contém as s
 
 - Um evento de solicitação do Analytics do SDK de origem.
 - Metadados e dados de contexto da solicitação, como ID do conjunto de relatórios, versões de extensão do SDK e dados de contexto.
-- Informações pós-processadas sobre o evento do Analytics que contêm o mapeamento de revars, evars e props.
+- Informações processadas pela Post sobre o evento do Analytics que contém o mapeamento de revars, evars e props.
 
 ### Validação da visualização do Analytics
 
 A visualização de validação permite visualizar facilmente os resultados nos scripts de validação relacionados ao Analytics. Os erros exibidos pelos validadores podem conter links para onde devem ser corrigidos ou exibir eventos que estão em um estado de erro.
 
-![Uma imagem que mostra a guia validadores na exibição do Analytics.](./images/adobe-analytics-edge/analytics-validation-view.png)
+![Uma imagem que mostra a guia de validadores no modo de exibição do Analytics.](./images/adobe-analytics-edge/analytics-validation-view.png)
 
-## Exibição de borda do Analytics
+## Exibição do Analytics Edge
 
-Use a exibição de Borda do Analytics se estiver usando **Rede de borda** ou **Edge Bridge** extensões móveis. Para habilitar essa exibição, selecione o botão &quot;Borda do Analytics (Beta)&quot; na parte superior direita para exibir os eventos do Analytics enviados pela rede de borda na sessão atual. Isso inclui todos os eventos que foram acionados pela extensão do ciclo de vida, solicitações do Edge e/ou eventos do Edge Bridge com base em Rastrear ação e Rastrear estado.
+Use a exibição do Analytics Edge se estiver usando o **Edge Network** ou o **Edge Bridge** extensões móveis. Para habilitar essa exibição, selecione o botão &quot;Analytics Edge (Beta)&quot; na parte superior direita para exibir os eventos do Analytics enviados pela rede Edge na sessão atual. Isso inclui todos os eventos que foram acionados pela extensão do Lifecycle, solicitações do Edge e/ou eventos do Edge Bridge com base em Rastrear ação e Rastrear estado.
 
-![Uma imagem que mostra a alternância usada para alternar entre a Exibição do Analytics e a Exibição de borda do Analytics.](./images/adobe-analytics-edge/analytics-view-toggle.png)
+![Uma imagem que mostra a opção que é usada para alternar entre o Modo de Exibição do Analytics e o do Analytics Edge.](./images/adobe-analytics-edge/analytics-view-toggle.png)
 
-A visualização Analytics Edge contém informações sobre solicitações de Edge relacionadas ao Analytics e métodos de ciclo de vida despachados pelo cliente. Ao escolher um evento na lista, o painel direito exibe os eventos que foram processados pelo SDK do cliente, bem como pelo serviço upstream depois que eles saíram do dispositivo, para que você possa visualizar facilmente a cadeia de eventos que resultou de uma chamada.
+A visualização Edge do Analytics contém informações sobre solicitações do Edge relacionadas ao Analytics e métodos de ciclo de vida despachados pelo cliente. Ao escolher um evento na lista, o painel direito exibe os eventos que foram processados pelo SDK do cliente, bem como pelo serviço upstream depois que eles saíram do dispositivo, para que você possa visualizar facilmente a cadeia de eventos que resultou de uma chamada.
 
-![Uma imagem que demonstra diferentes componentes na Exibição de borda do Analytics.](./images/adobe-analytics-edge/edge-analytics-events.png)
+![Uma imagem que demonstra diferentes componentes na Exibição do Analytics Edge.](./images/adobe-analytics-edge/edge-analytics-events.png)
 
-### Validação de borda do Analytics
+### Validação do Analytics Edge
 
-A exibição de validação do Analytics Edge permite visualizar facilmente os resultados nos scripts de validação relacionados ao Analytics Edge. Os erros exibidos pelos validadores podem conter links para onde devem ser corrigidos ou exibir eventos que estão em um estado de erro.
+A visualização de validação do Analytics Edge permite visualizar facilmente os resultados nos scripts de validação relacionados ao Analytics Edge. Os erros exibidos pelos validadores podem conter links para onde devem ser corrigidos ou exibir eventos que estão em um estado de erro.
 
-![Uma imagem que mostra a guia validadores na exibição de Borda do Analytics.](./images/adobe-analytics-edge/edge-analytics-validation-view.png)
+![Uma imagem que mostra a guia de validadores no modo de exibição do Analytics Edge.](./images/adobe-analytics-edge/edge-analytics-validation-view.png)

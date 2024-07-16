@@ -13,22 +13,22 @@ ht-degree: 0%
 
 # [!DNL Mailchimp] conector
 
-O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando o [!DNL Platform] serviços. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
+O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços do [!DNL Platform]. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
 
 O Experience Platform fornece suporte para assimilação de dados de um sistema de automação de marketing de terceiros. O suporte para provedores de automação de marketing inclui [!DNL Mailchimp].
 
 ## LISTA DE PERMISSÕES de endereço IP
 
-Uma lista de endereços IP deve ser adicionada a uma lista de permissões antes de trabalhar com conectores de origem. Falha ao adicionar endereços IP específicos da região à lista de permissões pode levar a erros ou ao não desempenho ao usar origens. Consulte a [LISTA DE PERMISSÕES de endereço IP](../../ip-address-allow-list.md) para obter mais informações.
+Uma lista de endereços IP deve ser adicionada a uma lista de permissões antes de trabalhar com conectores de origem. Falha ao adicionar endereços IP específicos da região à lista de permissões pode levar a erros ou ao não desempenho ao usar origens. Consulte a página [lista de permissões de endereço IP](../../ip-address-allow-list.md) para obter mais informações.
 
-A documentação abaixo fornece informações sobre como se conectar [!DNL Mailchimp] para a Platform e trazer [!DNL Mailchimp Campaigns] ou [!DNL Mailchimp Members] dados usando APIs ou a interface do usuário do:
+A documentação abaixo fornece informações sobre como conectar o [!DNL Mailchimp] à Platform e trazer dados do [!DNL Mailchimp Campaigns] ou [!DNL Mailchimp Members] usando APIs ou a interface do usuário:
 
-## Conectar [!DNL Mailchimp Campaigns] para a Platform
+## Conectar [!DNL Mailchimp Campaigns] à plataforma
 
-* [Crie uma conexão de origem para trazer [!DNL Mailchimp Campaigns] dados para a Platform usando APIs](../../tutorials/api/create/marketing-automation/mailchimp-campaign.md).
-* [Crie uma conexão de origem para trazer [!DNL Mailchimp Campaigns] dados para a Platform usando a interface do usuário](../../tutorials/ui/create/marketing-automation/mailchimp-campaigns.md).
+* [Crie uma conexão de origem para trazer [!DNL Mailchimp Campaigns] dados para a Plataforma usando APIs](../../tutorials/api/create/marketing-automation/mailchimp-campaign.md).
+* [Crie uma conexão de origem para trazer [!DNL Mailchimp Campaigns] dados para a Platform usando a interface de usuário](../../tutorials/ui/create/marketing-automation/mailchimp-campaigns.md).
 
-## Conectar [!DNL Mailchimp Members] para a Platform
+## Conectar [!DNL Mailchimp Members] à plataforma
 
-* [Crie uma conexão de origem para trazer [!DNL Mailchimp Members] dados para a Platform usando APIs](../../tutorials/api/create/marketing-automation/mailchimp-members.md).
-* [Crie uma conexão de origem para trazer [!DNL Mailchimp Members] dados para a Platform usando a interface do usuário](../../tutorials/ui/create/marketing-automation/mailchimp-members.md).
+* [Crie uma conexão de origem para trazer [!DNL Mailchimp Members] dados para a Plataforma usando APIs](../../tutorials/api/create/marketing-automation/mailchimp-members.md).
+* [Crie uma conexão de origem para trazer [!DNL Mailchimp Members] dados para a Platform usando a interface de usuário](../../tutorials/ui/create/marketing-automation/mailchimp-members.md).

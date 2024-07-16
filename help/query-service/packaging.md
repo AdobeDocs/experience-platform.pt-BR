@@ -15,13 +15,13 @@ Este documento descreve os diferentes tipos de recursos de empacotamento e execu
 
 O Serviço de consulta do Adobe Experience Platform pode ser dividido em dois recursos com base nos padrões de consulta que podem ser executados:
 
-- **Consultas ad hoc** são consultas SQL usadas para explorar conjuntos de dados assimilados para verificação, validação, experimentação e assim por diante. Essas consultas não gravam dados de volta no data lake da Platform.
+- **Consultas ad hoc** são consultas SQL usadas para explorar conjuntos de dados assimilados para verificação, validação, experimentação, etc. Essas consultas não gravam dados de volta no data lake da Platform.
 - **Consultas em lote** são consultas SQL usadas para executar o processamento de pós-assimilação de conjuntos de dados assimilados. Essas consultas limpam, moldam, manipulam e enriquecem dados, cujos resultados são gravados no data lake da Platform. Essas consultas podem ser agendadas, gerenciadas e monitoradas como trabalhos em lote.
 
 Os recursos do Serviço de consulta são fornecidos com os seguintes produtos e complementos:
 
-- **Aplicativos baseados em plataforma** (Adobe Real-time Customer Data Platform, Adobe Customer Journey Analytics e Adobe Journey Optimizer): o acesso ao Serviço de consulta para executar consultas ad hoc é fornecido desde o início com cada variação e camada de aplicativos baseados na plataforma.
-- **[!DNL Data Distiller]** (pacote complementar que pode ser adquirido com o Adobe Real-Time CDP, Customer Journey Analytics e Adobe Journey Optimizer): o acesso ao Serviço de consulta para executar consultas em lote é fornecido com o [!DNL Data Distiller].
+- **Aplicativos baseados em plataforma** (Adobe Real-time Customer Data Platform, Adobe Customer Journey Analytics e Adobe Journey Optimizer): o acesso ao Serviço de consulta para executar consultas ad hoc é fornecido desde o início com cada variação e camada de aplicativos baseados em plataforma.
+- **[!DNL Data Distiller]** (pacote complementar que pode ser comprado com o Adobe Real-Time CDP, Customer Journey Analytics e Adobe Journey Optimizer): o acesso ao Serviço de Consulta para executar consultas em lote é fornecido com [!DNL Data Distiller].
 
 ## Direitos {#entitlements}
 
@@ -33,13 +33,13 @@ A tabela a seguir descreve os principais direitos do Serviço de consulta com ba
 | Caso de uso suportado | <ul><li>Exploração&#x200B;</li><li>Descoberta de dados&#x200B;</li><li>Validação de dados</li><li>Experimentação</li></ul> | <ul><li>Limpando</li><li>Modelagem</li><li>Manipular</li><li>Enriquecimento</li></ul> |
 | Semântica Compatível | <ul><li>Consultas SELECT</li></ul> | <ul><li>Queries CTAS e ITAS</li></ul> |
 | Tempo Máximo de Execução | 10 minutos | 24 horas |
-| Licenciar métrica | **Consultar Simultaneidade de Usuário**: <ul><li>1 usuário simultâneo (Real-Time CDP, Adobe Journey Optimizer)&#x200B;</li><li>5 usuários simultâneos (Customer Journey Analytics)&#x200B;</li></ul> **Simultaneidade da consulta**: <ul><li>1 consulta em execução simultânea (todas as aplicações)&#x200B;</li></ul> **Um complemento adicional do pacote de usuários de consulta ad hoc** pode ser adquirido para aumentar seu direito autorizado à consulta ad hoc. <ul><li>+5 usuários simultâneos adicionais por pacote</li><li>+1 consulta de execução simultânea adicional por pacote</li></ul> | **Computar horas**: <ul><li>Variável (escopo com base nos direitos do aplicativo)</li></ul> **Computar horas** é uma medida do tempo gasto pelo mecanismo do Serviço de consulta para ler, processar e gravar dados de volta no data lake quando uma consulta em lote é executada. <br>Com o Data Distiller SKU, você também obtém um usuário adicional e simultaneidade de consulta, que podem ser usados para a execução de consultas ad hoc.  O SKU do Data Distiller inclui:<br><ul><li>+5 usuários simultâneos adicionais</li><li>+1 consulta em execução simultânea adicional</li></ul> |
+| Licenciar métrica | **Simultaneidade de Usuário da Consulta**: <ul><li>1 usuário simultâneo (Real-Time CDP, Adobe Journey Optimizer)&#x200B;</li><li>5 usuários simultâneos (Customer Journey Analytics)&#x200B;</li></ul> **Simultaneidade da Consulta**: <ul><li>1 consulta em execução simultânea (todas as aplicações)&#x200B;</li></ul> **Um complemento de pacote de usuários da consulta ad hoc adicional** pode ser adquirido para aumentar seu direito à consulta ad hoc autorizada. <ul><li>+5 usuários simultâneos adicionais por pacote</li><li>+1 consulta de execução simultânea adicional por pacote</li></ul> | **Horas de Computação**: <ul><li>Variável (escopo com base nos direitos do aplicativo)</li></ul> **Horas de Computação** é uma medida do tempo gasto pelo mecanismo do Serviço de Consulta para ler, processar e gravar dados de volta no data lake quando uma consulta em lote é executada. <br>Com o Data Distiller SKU, você também obtém um usuário adicional e simultaneidade de consulta, que podem ser usados para a execução de consultas ad hoc.  A SKU do Data Distiller inclui:<br><ul><li>+5 usuários simultâneos adicionais</li><li>+1 consulta em execução simultânea adicional</li></ul> |
 | Uso acelerado de consultas e relatórios | Não | Sim - Consultas aceleradas simultâneas permitem ler dados do armazenamento acelerado e exibi-los em seus painéis. Também é fornecido um direito dedicado para armazenar modelos de relatórios e conjuntos de dados no armazenamento acelerado. |
 | Capacidade de armazenamento do data lake | Seu direito total de armazenamento depende das licenças dos aplicativos baseados em plataforma. Por exemplo, Real-Time CDP, AJO, CJA e assim por diante. | Sim — um direito de armazenamento adicional é fornecido para manter seus conjuntos de dados brutos e derivados para casos de uso do Data Distiller além de uma data de expiração de dados de sete dias.<br>A capacidade de armazenamento do data lake é medida em terabytes (TB) e depende da quantidade de horas de Computação que você comprou. Consulte a descrição do produto para obter mais detalhes. |
-| Bonificação de exportação de dados | Seu direito total de exportação depende das licenças dos aplicativos baseados na plataforma. Por exemplo, Real-Time CDP, AJO, CJA e assim por diante. | Sim - um direito de exportação adicional é fornecido para permitir a exportação de conjuntos de dados derivados criados usando o Data Distiller.<br>Sua permissão anual de exportação de dados é medida em terabytes (TB) e depende da quantidade de horas de Computação que você adquiriu. Verifique a descrição do produto para obter mais detalhes. |
-| Interface de execução de consulta | <ul><li>Interface do usuário do serviço de consulta</li><li>Interface do usuário do cliente de terceiros</li><li>[!DNL PostgresSQL] interface do cliente</li></ul> | <ul><li>Interface do usuário do serviço de consulta </li><li>Interface do usuário do cliente de terceiros</li><li>[!DNL PostgresSQL] interface do cliente</li><li>REST APIs</li></ul> |
+| Bonificação de exportação de dados | Seu direito total de exportação depende das licenças dos aplicativos baseados na plataforma. Por exemplo, Real-Time CDP, AJO, CJA e assim por diante. | Sim - um direito de exportação adicional é fornecido para permitir a exportação de conjuntos de dados derivados criados usando o Data Distiller.<br>A sua permissão anual para exportação de dados é medida em terabytes (TB) e depende da quantidade de horas de Computação que você adquiriu. Verifique a descrição do produto para obter mais detalhes. |
+| Interface de execução de consulta | <ul><li>Interface do usuário do serviço de consulta</li><li>Interface do usuário do cliente de terceiros</li><li>Interface do usuário do cliente [!DNL PostgresSQL]</li></ul> | <ul><li>Interface do usuário do serviço de consulta </li><li>Interface do usuário do cliente de terceiros</li><li>Interface do usuário do cliente [!DNL PostgresSQL]</li><li>REST APIs</li></ul> |
 | Resultados da Consulta Retornados via | Interface do cliente | Conjunto de dados derivado armazenado no data lake |
-| Limite do resultado | <ul><li>Interface do usuário do serviço de consulta - O número de linhas de saída pode ser [configurado com uma configuração de interface](./ui/user-guide.md#result-count) entre 50 e 500 linhas.</li><li>Clientes de terceiros - 50.000</li><li>[!DNL PostgresSQL] cliente - 50.000</li></ul> | Consultas CTAS e ITAS geram mensagens de sucesso apenas quando a saída da consulta é armazenada em conjuntos de dados derivados. |
+| Limite do resultado | <ul><li>Interface do Serviço de Consulta - O número de linhas de saída pode ser [configurado com uma configuração de interface](./ui/user-guide.md#result-count) entre 50-500 linhas.</li><li>Clientes de terceiros - 50.000</li><li>[!DNL PostgresSQL] cliente - 50.000</li></ul> | Consultas CTAS e ITAS geram mensagens de sucesso apenas quando a saída da consulta é armazenada em conjuntos de dados derivados. |
 | Capacidade do conjunto de dados de leitura | Sim | Sim |
 | Capacidade do conjunto de dados de gravação | Não | Sim |
 | Capacidade de programação | Não | Sim |
@@ -50,15 +50,15 @@ A tabela a seguir descreve os principais direitos do Serviço de consulta com ba
 
 ## Controle de acesso {#access-control}
 
-O controle de acesso para o Experience Platform é administrado através do [Adobe Admin Console](https://adminconsole.adobe.com/) em que os perfis de produto vinculam usuários com permissões e sandboxes. Consulte a [visão geral do controle de acesso](../access-control/home.md) para obter mais informações.
+O controle de acesso para o Experience Platform é administrado por meio da [Adobe Admin Console](https://adminconsole.adobe.com/), onde os perfis de produtos vinculam usuários com permissões e sandboxes. Consulte a [visão geral do controle de acesso](../access-control/home.md) para obter mais informações.
 
-Consulte a [Gerenciar permissões de um perfil de produto](../access-control/ui/permissions.md) e [Gerenciar usuários para um perfil de produto](../access-control/ui/users.md) documentos para obter instruções detalhadas sobre como solicitar acesso às permissões de perfil do produto
+Consulte os documentos [Gerenciar permissões de um perfil de produto](../access-control/ui/permissions.md) e [Gerenciar usuários de um perfil de produto](../access-control/ui/users.md) para obter instruções detalhadas sobre como solicitar acesso às permissões do perfil de produto
 
 ### Permissões relevantes do serviço de consulta {#query-service-permissions}
 
-Para usar o Serviço de consulta, a variável **[!DNL Manage Queries]** a permissão deve ser ativada no Admin Console. Essa permissão permite que os usuários executem consultas ad hoc e em lote.
+Para usar o Serviço de Consulta, a permissão **[!DNL Manage Queries]** deve ser habilitada no Admin Console. Essa permissão permite que os usuários executem consultas ad hoc e em lote.
 
-O quadro seguinte descreve os efeitos da [!DNL Manage Queries] permissão:
+A tabela a seguir descreve os efeitos da permissão [!DNL Manage Queries]:
 
 | Permissão | Função |
 |---|---|
@@ -69,7 +69,7 @@ O quadro seguinte descreve os efeitos da [!DNL Manage Queries] permissão:
 
 ### Permissões relevantes de Insights personalizáveis {#customizable-insights-permissions}
 
-Para criar Distiller de dados [Insights personalizáveis](./data-distiller/customizable-insights/overview.md) nos painéis, as seguintes permissões **deve** estar habilitado no Admin Console.
+Para criar Data Distiller [Insights Personalizáveis](./data-distiller/customizable-insights/overview.md) nos painéis, as seguintes permissões **devem** estar habilitadas no Admin Console.
 
 | Permissão | Função |
 |---|---|
@@ -84,5 +84,5 @@ As sandboxes são partições virtuais dentro de uma única instância do Experi
 
 ## Próximas etapas
 
-Ao ler este documento, você deve ter uma melhor compreensão dos diferentes tipos de empacotamento e recursos de execução de consulta disponíveis no Serviço de consulta. Para saber mais sobre o Serviço de consulta, como casos de uso conhecidos do setor, leia o [documentação do caso de uso](./use-cases/abandoned-browse.md). Para obter informações mais gerais, visite o [Visão geral do Serviço de consulta](./home.md).
+Ao ler este documento, você deve ter uma melhor compreensão dos diferentes tipos de empacotamento e recursos de execução de consulta disponíveis no Serviço de consulta. Para saber mais sobre o Serviço de consulta, como casos de uso conhecidos do setor, leia a [documentação do caso de uso](./use-cases/abandoned-browse.md). Para obter informações mais gerais, visite a [Visão geral do Serviço de consulta](./home.md).
 

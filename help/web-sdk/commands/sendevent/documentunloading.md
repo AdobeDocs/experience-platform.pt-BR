@@ -11,30 +11,30 @@ ht-degree: 0%
 
 # `documentUnloading`
 
-A variável `documentUnloading` permite usar a propriedade do JavaScript [`sendBeacon`](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon) método para enviar dados para o Adobe. Se uma solicitação típica demorar muito, o navegador poderá cancelar a solicitação. Você pode instruir o SDK da Web a usar o `sendBeacon` para que a solicitação seja executada em segundo plano depois que você sair da página. Habilite essa propriedade para ajudar a impedir que solicitações de dados sejam canceladas pelo navegador durante o descarregamento.
+A propriedade `documentUnloading` permite usar o método [`sendBeacon`](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon) da JavaScript para enviar dados para o Adobe. Se uma solicitação típica demorar muito, o navegador poderá cancelar a solicitação. Você pode instruir o SDK da Web a usar `sendBeacon` para que a solicitação seja executada em segundo plano depois que você sair da página. Habilite essa propriedade para ajudar a impedir que solicitações de dados sejam canceladas pelo navegador durante o descarregamento.
 
-Vários navegadores impõem um limite de 64 KB à quantidade de dados que podem ser enviados com `sendBeacon` de uma só vez. Se o navegador rejeitar o evento porque a carga é muito grande, o SDK da Web voltará a usar seu método de transporte normal.
+Vários navegadores impõem um limite de 64 KB à quantidade de dados que podem ser enviados com `sendBeacon` de uma vez. Se o navegador rejeitar o evento porque a carga é muito grande, o SDK da Web voltará a usar seu método de transporte normal.
 
 ## Configurar o descarregamento de documentos usando a extensão de tag do SDK da Web
 
-Ativar o **[!UICONTROL O documento será descarregado]** nas ações de uma regra de tag.
+Habilitar o **[!UICONTROL Documento descarregará a caixa de seleção]** nas ações de uma regra de marca.
 
-1. Efetue logon no [experience.adobe.com](https://experience.adobe.com) usando suas credenciais do Adobe ID.
-1. Navegue até **[!UICONTROL Coleta de dados]** > **[!UICONTROL Tags]**.
+1. Faça logon em [experience.adobe.com](https://experience.adobe.com) usando suas credenciais da Adobe ID.
+1. Navegue até **[!UICONTROL Coleção de dados]** > **[!UICONTROL Marcas]**.
 1. Selecione a propriedade de tag desejada.
 1. Navegue até **[!UICONTROL Regras]** e selecione a regra desejada.
 1. Em [!UICONTROL Ações], selecione uma ação existente ou crie uma ação.
-1. Defina o [!UICONTROL Extensão] campo suspenso até **[!UICONTROL Adobe Experience Platform Web SDK]** e defina o [!UICONTROL Tipo de ação] para **[!UICONTROL Enviar evento]**.
-1. Ativar o **[!UICONTROL O documento será descarregado]** caixa de seleção na caixa [!UICONTROL Dados] seção.
-1. Clique em **[!UICONTROL Manter alterações]**, em seguida, execute o fluxo de trabalho de publicação.
+1. Defina o campo suspenso [!UICONTROL Extensão] como **[!UICONTROL Adobe Experience Platform Web SDK]** e defina o [!UICONTROL Tipo de Ação] como **[!UICONTROL Enviar evento]**.
+1. Habilitar o **[!UICONTROL Documento descarregará a caixa de seleção]** na seção [!UICONTROL Dados].
+1. Clique em **[!UICONTROL Manter alterações]** e execute o fluxo de trabalho de publicação.
 
-## Configure o descarregamento de documentos usando a biblioteca JavaScript do SDK da Web
+## Configurar o descarregamento de documentos usando a biblioteca JavaScript do SDK da Web
 
-Defina o `documentUnloading` booleano ao executar o `sendEvent` comando. Seu valor padrão é `false`. Defina esta propriedade como `true` se quiser usar o `sendBeacon` método para enviar dados para o Adobe.
+Defina o booleano `documentUnloading` ao executar o comando `sendEvent`. Seu valor padrão é `false`. Defina essa propriedade como `true` se desejar usar o método `sendBeacon` para enviar dados ao Adobe.
 
 >[!IMPORTANT]
 >
->A variável `documentUnloading` propriedade é incompatível com o [`renderDecisions`](renderdecisions.md) propriedade. Você não deve definir as duas propriedades como `true` simultaneamente.
+>Propriedade `documentUnloading` incompatível com propriedade [`renderDecisions`](renderdecisions.md). Você não deve definir ambas as propriedades como `true` simultaneamente.
 
 ```js
 alloy("sendEvent", {

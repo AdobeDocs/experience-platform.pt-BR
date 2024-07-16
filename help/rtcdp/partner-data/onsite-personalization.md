@@ -209,7 +209,7 @@ Nomeie o elemento de dados como `partnerData`, deixe o valor da [!UICONTROL exte
 
 Para configurar o segundo elemento de dados, nomeie a nova variável como `pageVisit`, defina a **[!UICONTROL extensão]** como **[!UICONTROL Adobe Experience Platform]** e escolha **[!UICONTROL Objeto XDM]** como o tipo de dados.
 
-![Seleções destacadas para configurar corretamente o elemento de dados pageVisit.](/help/rtcdp/assets/partner-data/onsite-personalization/page-visit-data-element.png)
+![Seleções realçadas para configurar corretamente o elemento de dados pageVisit.](/help/rtcdp/assets/partner-data/onsite-personalization/page-visit-data-element.png)
 
 No esquema, selecione os atributos de terceiros que correspondem aos valores que você espera do parceiro de dados. Em seguida, selecione o botão de opção intitulado **[!UICONTROL Fornecer o objeto inteiro]**. Selecione o ícone semelhante a um banco de dados e escolha o elemento de dados `partnerData` criado anteriormente.
 
@@ -261,9 +261,9 @@ Agora você está pronto para criar e ativar públicos-alvo para personalizaçã
 
 Na interface da Platform, navegue até **[!UICONTROL Cliente]** > **[!UICONTROL Públicos-alvo]** e crie um público-alvo para capturar os visitantes do site.
 
-![Exibição de como navegar até públicos.](/help/rtcdp/assets/partner-data/onsite-personalization/navigate-to-audiences.png)
+![Exibir como navegar até públicos-alvo.](/help/rtcdp/assets/partner-data/onsite-personalization/navigate-to-audiences.png)
 
-Você deve configurar seu público com [segmentação de borda](/help/segmentation/ui/edge-segmentation.md) portanto, a associação de público-alvo de seus visitantes é avaliada em tempo real, à medida que eles visitam sua propriedade da web.
+Você deve configurar seu público-alvo com [segmentação de borda](/help/segmentation/ui/edge-segmentation.md) para que a associação de público-alvo de seus visitantes seja avaliada em tempo real à medida que eles visitam sua propriedade da Web.
 
 Configure também uma [política de mesclagem ativa na borda](/help/destinations/ui/activate-edge-personalization-destinations.md#create-merge-policy) para os públicos-alvo de borda.
 
@@ -287,4 +287,4 @@ Conheça outros casos de uso habilitados por meio da compatibilidade com dados d
 
 * [Suplemente perfis próprios com atributos de parceiros de dados confiáveis para melhorar sua base de dados, obter novos insights sobre sua base de clientes e aprimorar a otimização do público-alvo.](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
 * Use o suporte a dados de terceiros da Real-Time CDP para [expandir sua base de perfis com prospectos de parceiros de dados e interaja com eles para adquirir ou alcançar novos clientes](/help/rtcdp/partner-data/prospecting.md).
-* [Ativação ampliada de perfis de clientes potenciais e públicos-alvo de clientes potenciais](/help/destinations/ui/activate-prospect-audiences.md) para selecionar destinos.
+* [Ativação ampliada de perfis de prospecto e públicos-alvo de prospecto](/help/destinations/ui/activate-prospect-audiences.md) para selecionar destinos.

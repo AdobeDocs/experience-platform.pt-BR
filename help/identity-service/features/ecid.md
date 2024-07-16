@@ -31,8 +31,8 @@ A identificação de usuários online exige a instrumentação do site ou aplica
 
 A documentação a seguir fornece mais recursos para entender a ECID em diferentes aplicativos de plataforma e Experience Cloud:
 
-* Para usar a ECID com implementação do site, consulte a documentação para [Serviço de identidade Experience Cloud](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=pt-BR).
-* Para ver como a ECID é usada com aplicativos e conteúdo para dispositivos móveis da Web, consulte a documentação de [rastreamento de visitantes entre um aplicativo e a internet móvel](https://experienceleague.adobe.com/docs/mobile-services/ios/sdk-reference-ios/hybrid-app.html#sdk-reference-ios).
+* Para usar a ECID com implementação de site, consulte a documentação do [Experience Cloud Identity Service](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=pt-BR).
+* Para ver como a ECID é usada com aplicativos e conteúdo para dispositivos móveis da Web, consulte a documentação do [rastreamento de visitantes entre um aplicativo e a internet móvel](https://experienceleague.adobe.com/docs/mobile-services/ios/sdk-reference-ios/hybrid-app.html#sdk-reference-ios).
 * A implantação dessas ferramentas pode ser simples e fácil de gerenciar se você usar [tags](../../tags/home.md).
-* Consulte a [Documentação do Privacy Service](../../privacy-service/identity-data.md) para obter informações sobre como usar o ECID para facilitar a conformidade com as regras de privacidade, como o GDPR.
-* Para obter mais informações sobre a ECID com o contexto da Platform, consulte o [Visão geral do serviço de identidade](../home.md) e a variável [visão geral dos namespaces de identidade](./namespaces.md).
+* Consulte a [documentação de Privacy Service](../../privacy-service/identity-data.md) para obter informações sobre como usar a ECID para facilitar a conformidade com as regras de privacidade, como o GDPR.
+* Para obter mais informações sobre a ECID com o contexto da Platform, consulte a [visão geral do Serviço de identidade](../home.md) e a [visão geral dos namespaces de identidade](./namespaces.md).

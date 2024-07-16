@@ -13,4 +13,4 @@ ht-degree: 0%
 
 # Esquemas ad-hoc
 
-Em circunstâncias específicas, pode ser necessário criar um [!DNL Experience Data Model] Esquema de (XDM) com campos com namespace para uso somente por um único conjunto de dados. Isso é chamado de esquema ad-hoc. Esquemas ad-hoc são usados em vários workflows de assimilação de dados, incluindo a assimilação de arquivos CSV e a criação de determinados tipos de conectores de origem. Para obter mais informações sobre schemas ad-hoc, incluindo etapas sobre como criar um no [!DNL Schema Registry] API, consulte a [tutorial de esquema ad-hoc](../tutorials/ad-hoc.md).
+Em circunstâncias específicas, pode ser necessário criar um esquema do [!DNL Experience Data Model] (XDM) com campos com namespace para uso apenas por um único conjunto de dados. Isso é chamado de esquema ad-hoc. Esquemas ad-hoc são usados em vários workflows de assimilação de dados, incluindo a assimilação de arquivos CSV e a criação de determinados tipos de conectores de origem. Para obter mais informações sobre esquemas ad-hoc, incluindo etapas sobre como criar um na API [!DNL Schema Registry], consulte o [tutorial sobre esquemas ad-hoc](../tutorials/ad-hoc.md).

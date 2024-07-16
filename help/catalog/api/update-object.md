@@ -13,7 +13,7 @@ ht-degree: 3%
 
 # Atualizar um objeto de Catálogo
 
-Você pode atualizar parte de um [!DNL Catalog] incluindo a respectiva ID no caminho de uma solicitação PATCH. Este documento aborda os dois métodos para executar operações de PATCH em objetos de Catálogo:
+Você pode atualizar parte de um objeto [!DNL Catalog] incluindo a respectiva ID no caminho de uma solicitação PATCH. Este documento aborda os dois métodos para executar operações de PATCH em objetos de Catálogo:
 
 * Uso de campos
 * Uso da notação de patch de JSON
@@ -34,12 +34,12 @@ PATCH /{OBJECT_TYPE}/{OBJECT_ID}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{OBJECT_TYPE}` | O tipo de [!DNL Catalog] objeto a ser atualizado. Os objetos válidos são: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
+| `{OBJECT_TYPE}` | O tipo de objeto [!DNL Catalog] a ser atualizado. Os objetos válidos são: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{OBJECT_ID}` | O identificador do objeto específico que você deseja atualizar. |
 
 **Solicitação**
 
-A solicitação a seguir atualiza o `name` e `description` de um conjunto de dados aos valores fornecidos na carga. Os campos de objeto que não devem ser atualizados podem ser excluídos da carga.
+A solicitação a seguir atualiza os campos `name` e `description` de um conjunto de dados para os valores fornecidos na carga. Os campos de objeto que não devem ser atualizados podem ser excluídos da carga.
 
 ```shell
 curl -X PATCH \
@@ -57,7 +57,7 @@ curl -X PATCH \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna uma matriz que contém a ID do conjunto de dados atualizado. Essa ID deve corresponder à enviada na solicitação PATCH. A execução de uma solicitação GET para esse conjunto de dados agora mostra que somente o `name` e `description` foram atualizadas, enquanto todos os outros valores permanecem inalterados.
+Uma resposta bem-sucedida retorna uma matriz que contém a ID do conjunto de dados atualizado. Essa ID deve corresponder à enviada na solicitação PATCH. A execução de uma solicitação GET para esse conjunto de dados agora mostra que apenas `name` e `description` foram atualizados, enquanto todos os outros valores permanecem inalterados.
 
 ```json
 [
@@ -69,7 +69,7 @@ Uma resposta bem-sucedida retorna uma matriz que contém a ID do conjunto de dad
 
 O exemplo de chamada a seguir demonstra como atualizar um objeto usando o JSON Patch, conforme descrito em [RFC-6902](https://tools.ietf.org/html/rfc6902).
 
-Para obter mais informações sobre a sintaxe do patch de JSON, consulte [Guia de fundamentos de API](../../landing/api-fundamentals.md#json-patch).
+Para obter mais informações sobre a sintaxe do patch de JSON, consulte o [guia de fundamentos de API](../../landing/api-fundamentals.md#json-patch).
 
 **Formato da API**
 
@@ -79,12 +79,12 @@ PATCH /{OBJECT_TYPE}/{OBJECT_ID}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{OBJECT_TYPE}` | O tipo de [!DNL Catalog] objeto a ser atualizado. Os objetos válidos são: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
+| `{OBJECT_TYPE}` | O tipo de objeto [!DNL Catalog] a ser atualizado. Os objetos válidos são: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{OBJECT_ID}` | O identificador do objeto específico que você deseja atualizar. |
 
 **Solicitação**
 
-A solicitação a seguir atualiza o `name` e `description` de um conjunto de dados aos valores fornecidos em cada objeto JSON Patch. Ao usar o patch de JSON, você também deve definir o cabeçalho Content-Type como `application/json-patch+json`.
+A solicitação a seguir atualiza os campos `name` e `description` de um conjunto de dados para os valores fornecidos em cada objeto de patch JSON. Ao usar o patch de JSON, você também deve definir o cabeçalho Content-Type como `application/json-patch+json`.
 
 ```shell
 curl -X PATCH \
@@ -102,7 +102,7 @@ curl -X PATCH \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna uma matriz que contém a ID do objeto atualizado. Essa ID deve corresponder à enviada na solicitação PATCH. A execução de uma solicitação GET para esse objeto agora mostra que somente o `name` e `description` foram atualizadas, enquanto todos os outros valores permanecem inalterados.
+Uma resposta bem-sucedida retorna uma matriz que contém a ID do objeto atualizado. Essa ID deve corresponder à enviada na solicitação PATCH. A execução de uma solicitação GET para este objeto agora mostra que apenas `name` e `description` foram atualizados, enquanto todos os outros valores permanecem inalterados.
 
 ```json
 [

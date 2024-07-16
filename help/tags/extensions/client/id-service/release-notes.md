@@ -1,27 +1,27 @@
 ---
-title: Notas de versão da Extensão do Adobe Experience Cloud Identity Service
-description: As notas de versão mais recentes da extensão de tag do Adobe Experience Cloud Identity Service na Adobe Experience Platform.
+title: Notas de versão da Extensão do Serviço de identidade da Adobe Experience Cloud
+description: As notas de versão mais recentes da extensão de tag do Serviço de identidade da Adobe Experience Cloud na Adobe Experience Platform.
 exl-id: f9bfbed7-1eec-4916-9235-a75b5e2efcf8
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
-source-wordcount: '634'
+source-wordcount: '688'
 ht-degree: 75%
 
 ---
 
-# Notas de versão da extensão do Adobe Experience Cloud Identity Service
+# Notas de versão da extensão do Serviço de identidade da Adobe Experience Cloud
 
 >[!NOTE]
 >
 >O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
-Este documento aborda as notas de versão da extensão de tag do Adobe Experience Cloud Identity Service. Para obter as notas de versão do Experience Cloud Identity Service em si, consulte [Documentação do Serviço de identidade](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html?lang=pt-BR).
+Este documento aborda as notas de versão da extensão de tag do Adobe Experience Cloud Identity Service. Para obter as notas de versão do Experience Cloud Identity Service, consulte a [documentação do Identity Service](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html?lang=pt-BR).
 
 ## 17 de outubro de 2022
 
 ### Extensão da Experience Cloud ID 5.5.0
 
-* A extensão agora é compatível com a versão 5.5.0 do [Cliente JS do visitante](https://github.com/Adobe-Marketing-Cloud/id-service). Consulte a [Notas de versão do visitante](https://github.com/Adobe-Marketing-Cloud/id-service/releases/tag/5.5.0) para obter atualizações específicas.
+* A extensão agora dá suporte à versão 5.5.0 do [Cliente JS do Visitante](https://github.com/Adobe-Marketing-Cloud/id-service). Consulte as [notas de versão do visitante](https://github.com/Adobe-Marketing-Cloud/id-service/releases/tag/5.5.0) para obter atualizações específicas.
 
 ## 9 de março de 2022
 
@@ -29,7 +29,7 @@ Este documento aborda as notas de versão da extensão de tag do Adobe Experienc
 
 * Esta versão contém o Visitante 5.4.0 mais recente, com as seguintes atualizações:
 
-   * Capacidade de configurar o tempo de vida da `s_ecid` cookie usando a configuração cookieLifetime
+   * Capacidade de configurar a duração do cookie `s_ecid` usando a configuração cookieLifetime
    * Atualização para um problema do navegador Firefox que ocorre quando uma página é carregada em um iFrame secundário
 
 ## 10 de outubro de 2021
@@ -38,8 +38,8 @@ Este documento aborda as notas de versão da extensão de tag do Adobe Experienc
 
 * Esta versão contém o Visitante 5.3.0 mais recente, com as seguintes novas atualizações:
 
-   * Algoritmo atualizado para gerar ECID local
-   * Última aceitação com `Secure` e `SameSite` sinalizadores para o cookie de privacidade
+   * Algoritmo atualizado para gerar o ECID local
+   * Última aceitação com os sinalizadores `Secure` e `SameSite` para o cookie de privacidade
    * Correção para um problema do navegador Firefox quando uma página é carregada em um iFrame secundário
 
 ## 12 de janeiro de 2021
@@ -111,7 +111,7 @@ Detalhes desses valores de atributo estão em [web.dev](https://web.dev/samesite
 * Correção de um erro para obter a Entrada de pré-aprovações de inclusão
 * VIDEO_ANALYTICS renomeado para MEDIA_ANALYTICS em preOptInApprovals
 
-   ![](../../../images/ecid-media-analytics.png)
+  ![](../../../images/ecid-media-analytics.png)
 
 ## 17 de julho de 2019
 
@@ -120,7 +120,7 @@ Detalhes desses valores de atributo estão em [web.dev](https://web.dev/samesite
 * Atualização do visitor.js para 4.4.0
 * Suporte para hashing SHA256 adicionado para setCustomerIDs
 
-   ![](../../../images/ecid-setCustomerIDs-hash.png)
+  ![](../../../images/ecid-setCustomerIDs-hash.png)
 
 ## 13 de maio de 2019
 
@@ -129,7 +129,7 @@ Detalhes desses valores de atributo estão em [web.dev](https://web.dev/samesite
 * Atualização do visitor.js para 4.3
 * Adição do tipo de elemento de dados para ECID como parte da extensão de tag
 
-   ![](../../../images/ecid-data-element.png)
+  ![](../../../images/ecid-data-element.png)
 
 ## 9 de abril de 2019
 
@@ -150,7 +150,7 @@ Detalhes desses valores de atributo estão em [web.dev](https://web.dev/samesite
 * Atualização do visitor.js para 4.0
 * Adicionadas opções de configuração para o novo objeto Aceitar incorporado. Configurações do aceitação podem ser usadas para suprimir chamadas de cookie e de sinais feitas pelas soluções da Adobe para melhor suportar regulamentos, como o GDPR
 
-   ![](../../../images/ext-mcid-opt-in.png)
+  ![](../../../images/ext-mcid-opt-in.png)
 
 ## 20 de março de 2018
 

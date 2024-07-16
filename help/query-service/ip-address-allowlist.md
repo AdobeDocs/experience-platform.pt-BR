@@ -15,11 +15,11 @@ ht-degree: 0%
 >[!IMPORTANT]
 >
 > * A Adobe recomenda que você marque essa página como favorito e a revisite a cada três meses para verificar os endereços IP mais recentes. O Adobe não fornece notificação de novos intervalos IP.
-> * Embora o Adobe seja compatível com exportações de dados para servidores SFTP, os locais de armazenamento em nuvem recomendados para a exportação de dados são [!DNL Amazon S3] e [!DNL Azure Blob].
+> * Embora o Adobe ofereça suporte a exportações de dados para servidores SFTP, os locais de armazenamento na nuvem recomendados para exportar dados são [!DNL Amazon S3] e [!DNL Azure Blob].
 
 ## Visão geral {#overview}
 
-Incluir na lista de permissões Essa página fornece endereços IP que você pode adicionar ao arquivo para exportar dados com segurança do Experience Platform para o seu [Servidor SFTP](../destinations/catalog/cloud-storage/sftp.md).
+Incluir na lista de permissões Esta página fornece endereços IP que você pode adicionar ao arquivo para exportar com segurança dados do Experience Platform para o seu [servidor SFTP](../destinations/catalog/cloud-storage/sftp.md).
 
 Você pode definir controles de acesso à rede por meio do firewall de rede. Ao especificar o intervalo IP apropriado, você pode permitir o tráfego para o serviço de transferência de dados.
 

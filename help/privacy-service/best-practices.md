@@ -1,7 +1,8 @@
 ---
 title: Práticas recomendadas para o Privacy Service
 description: Saiba como reduzir o tempo de processamento e os custos incorridos com sua organização ao concluir solicitações de privacidade seguindo estas diretrizes de uso ideal.
-source-git-commit: c6507a39ba5ae5ca6aa2bf02cf8844a4592152ac
+exl-id: 1333d6c6-5ca0-41c1-9f9e-aa2a5a8b8a9c
+source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
 source-wordcount: '1234'
 ht-degree: 0%
@@ -16,22 +17,22 @@ Este guia descreve as práticas recomendadas para processar com eficiência as s
 
 ## Introdução {#getting-started}
 
-Este guia requer uma compreensão funcional de [Privacy Service](./home.md) e como ele permite gerenciar o acesso e excluir solicitações de titulares de dados (clientes) nos aplicativos da Adobe Experience Cloud. Também é recomendável que você leia o guia em [criação de uma solicitação de acesso a dados pessoais na interface](./ui/user-guide.md#create-a-new-privacy-job-request) ou [a API](./api/overview.md)e saiba como executar essas operações de forma programática.
+Este guia requer entendimento prático do [Privacy Service](./home.md) e como ele permite gerenciar o acesso e excluir solicitações de titulares de dados (clientes) nos aplicativos da Adobe Experience Cloud. Também é recomendável que você leia o guia sobre [criação de uma solicitação de trabalho de privacidade na interface](./ui/user-guide.md#create-a-new-privacy-job-request) ou [na API](./api/overview.md) e entenda como executar essas operações de forma programática.
 
 ## Pré-requisitos {#prerequisites}
 
 O acesso ao Adobe Experience Platform Privacy Service é controlado por meio de permissões granulares baseadas em funções no Adobe Admin Console. Você precisa das permissões relevantes em um perfil de produto para usar recursos específicos na interface e API do Privacy Service. Entre em contato com o administrador do sistema se precisar de permissões adicionais.
 
-Os administradores podem consultar o guia em [gerenciamento de permissões para o Privacy Service](./permissions.md) para obter mais informações.
+Os administradores podem consultar o manual sobre [gerenciamento de permissões para Privacy Service](./permissions.md) para obter mais informações.
 
 ## Diretrizes de criação de trabalho de privacidade {#creation-guidelines}
 
 Para simplificar o processamento de solicitações e melhorar os tempos de resposta, considere as seguintes diretrizes ao criar processos de privacidade. Isso se aplica aos métodos da API e da interface do usuário.
 
 1. **Maximizar titulares de dados por solicitação:** Inclua o máximo possível de titulares de dados, até 1000, por solicitação.
-2. **IDs de grupo para eficiência:** Agrupar várias IDs para um único titular de dados (até nove) em cada solicitação. A variável **As IDs podem vir de diferentes serviços da Adobe na mesma solicitação**.
-3. **Combinar trabalhos de acesso e exclusão:** Inclua os tipos de trabalho &quot;acesso&quot; e &quot;exclusão&quot; em uma única solicitação, se solicitado pelo titular dos dados.
-4. **Incluir somente os produtos necessários:** Inclua somente os produtos necessários ou licenciados. Outros produtos podem prolongar o tempo de processamento e aumentar os custos.
+2. **IDs de grupo para eficiência:** Agrupe várias IDs para um único titular de dados (até nove) em cada solicitação. As **IDs podem vir de diferentes serviços da Adobe na mesma solicitação**.
+3. **Combinar trabalhos de acesso e exclusão:** Inclua os tipos de trabalho &quot;acesso&quot; e &quot;exclusão&quot; em uma única solicitação, se exigido pelo titular dos dados.
+4. **Incluir somente os produtos necessários:** incluir somente os produtos necessários ou licenciados. Outros produtos podem prolongar o tempo de processamento e aumentar os custos.
 
 ## Monitorar status de trabalhos de privacidade {#monitor-status}
 
@@ -39,44 +40,44 @@ Para monitorar com eficácia os processos de privacidade e verificar seu status,
 
 ### Receber notificações em tempo real {#real-time-notifications}
 
-**Eventos de E/S** A oferece monitoramento de status quase em tempo real por meio de eventos de status. Esse é o método mais eficiente, pois evita a necessidade de implementar mecanismos de polling e gera tráfego de API adicional.
+**Eventos de E/S** oferecem monitoramento de status quase em tempo real por meio de eventos de status. Esse é o método mais eficiente, pois evita a necessidade de implementar mecanismos de polling e gera tráfego de API adicional.
 
 **Recommendations:**
 
-- **Configuração do Webhook:** Configure webhooks para receber notificações por push quando ocorrerem alterações de status para trabalhos enviados. Isso auxilia na monitoração em tempo real.
-- **Notificações:** Use notificações no nível do trabalho e do produto para ajudar a monitorar o progresso das solicitações.
+- **Configuração do Webhook:** configure webhooks para receber notificações por push quando ocorrerem alterações de status para trabalhos enviados. Isso auxilia na monitoração em tempo real.
+- **Notificações:** use notificações no nível do trabalho e do produto para ajudar a monitorar o progresso das solicitações.
 
-Consulte a documentação em [inscrição em eventos Privacy Service](./privacy-events.md) para obter instruções sobre como configurar um registro de evento para notificações Privacy Service e como interpretar payloads de notificação.
+Consulte a documentação sobre [assinatura de eventos Privacy Service](./privacy-events.md) para obter instruções sobre como configurar um registro de evento para notificações Privacy Service e como interpretar cargas de notificação.
 
 ### Recuperar todos os trabalhos com base em filtros {#retrieve-filtered-responses-for-all-jobs}
 
-Para recuperar todos os dados do seu trabalho de privacidade com base em qualquer filtro especificado, **execute uma solicitação do GET para o `/jobs` endpoint**. Essa chamada de API é útil para fornecer uma exibição de alto nível do status do trabalho atual para grandes conjuntos de IDs de trabalho com apenas uma única solicitação. Não há respostas detalhadas do produto, mas elas podem ser encontradas usando o [`/jobs/{jobID}` endpoint](#retrieve-detailed-responses-for-specific-jobs).
+Para recuperar todos os seus dados de trabalho de privacidade com base em qualquer filtro especificado, **execute uma solicitação GET para o ponto de extremidade `/jobs`**. Essa chamada de API é útil para fornecer uma exibição de alto nível do status do trabalho atual para grandes conjuntos de IDs de trabalho com apenas uma única solicitação. Não há respostas detalhadas do produto, mas elas podem ser encontradas usando o ponto de extremidade [`/jobs/{jobID}`](#retrieve-detailed-responses-for-specific-jobs).
 
-Uma solicitação GET para o `/jobs` O endpoint é melhor usado para coletar ou comparar os dados de status de um grande conjunto de IDs de trabalho, mas é **não** destinado a atividades do tipo sondagem regular.
+Uma solicitação GET para o ponto de extremidade `/jobs` é melhor usada para coletar ou comparar os dados de status de um grande conjunto de IDs de trabalho, mas **não** destina-se a atividades de tipo de sondagem regulares.
 
 **Recommendations:**
 
-- **Parâmetros de consulta:** Use filtros específicos para restringir seus resultados, por exemplo: intervalos de dados, tipos de regulamentos e status (processamento, concluído etc.).
+- **Parâmetros de consulta:** Use filtros específicos para restringir seus resultados, por exemplo: intervalos de dados, tipos de regulamentos e status (processamento, conclusão etc.).
 
-Você pode ver uma lista de todos os processos de privacidade atuais em sua organização por meio da interface do Privacy Service. Consulte a [gerenciamento de processos de privacidade na documentação da interface do usuário](./ui/user-guide.md#job-requests) para obter informações sobre como filtrar a lista de solicitações de trabalho. Como alternativa, consulte a documentação no [uso do endpoint /job na API Privacy Service](./api/privacy-jobs.md).
+Você pode ver uma lista de todos os processos de privacidade atuais em sua organização por meio da interface do Privacy Service. Consulte a [documentação de gerenciamento de trabalhos de privacidade na interface](./ui/user-guide.md#job-requests) para obter informações sobre como filtrar a lista de solicitações de trabalhos. Como alternativa, consulte a documentação sobre o [uso do ponto de extremidade /job na API de Privacy Service](./api/privacy-jobs.md).
 
-A documentação da API do Privacy Service contém detalhes sobre [os filtros de parâmetro de consulta disponíveis](https://developer.adobe.com/experience-platform-apis/references/privacy-service/#tag/Privacy-jobs/operation/listPrivacyJobs).
+A documentação da API Privacy Service contém detalhes sobre [os filtros de parâmetro de consulta disponíveis](https://developer.adobe.com/experience-platform-apis/references/privacy-service/#tag/Privacy-jobs/operation/listPrivacyJobs).
 
 ### Recuperar respostas detalhadas para um único trabalho {#retrieve-detailed-responses-for-specific-jobs}
 
-Para recuperar respostas detalhadas para um único job, **execute uma solicitação GET para o /jobs/{jobID} endpoint**. Esse método tem como objetivo obter informações mais detalhadas, como respostas específicas a produtos e mensagens de sucesso. Uma chamada para esse endpoint é a melhor maneira de ver quais produtos responderam e quais ainda estão pendentes, embora seja **não** destinado à atividade de pesquisa regular.
+Para recuperar respostas detalhadas para um único trabalho, **execute uma solicitação GET para o ponto de extremidade /jobs/{jobID}**. Esse método tem como objetivo obter informações mais detalhadas, como respostas específicas a produtos e mensagens de sucesso. Uma chamada para este ponto de extremidade é a melhor maneira de ver quais produtos responderam e quais ainda estão pendentes, embora **não** seja destinado à atividade de sondagem regular.
 
-Consulte a `/jobs/{JOB_ID}` documentação do endpoint para obter detalhes sobre [como verificar o status de um trabalho específico](./api/privacy-jobs.md#check-status).
+Consulte a documentação do ponto de extremidade `/jobs/{JOB_ID}` para obter detalhes sobre [como verificar o status de um trabalho específico](./api/privacy-jobs.md#check-status).
 
 ### Exemplo de cenário ideal {#ideal-scenario}
 
-Use um webhook para que o sistema possa atualizar automaticamente os registros e fornecer relatórios ou alertas quando os grupos das IDs de uma solicitação forem concluídos. Se os trabalhos ainda estiverem pendentes, o sistema recuperará esses status de trabalho com uma solicitação GET para a API Privacy Service `/jobs` e fornece uma atualização de alto nível da lista.
+Use um webhook para que o sistema possa atualizar automaticamente os registros e fornecer relatórios ou alertas quando os grupos das IDs de uma solicitação forem concluídos. Se os trabalhos ainda estiverem pendentes, o sistema recuperará esses status de trabalho com uma solicitação GET para o ponto de extremidade da API de Privacy Service `/jobs` e fornecerá uma atualização de alto nível da lista.
 
-Se um job específico ainda estiver pendente ou tiver retornado um erro, você poderá recuperar a resposta detalhada com uma solicitação GET para o `/job/{jobId}` terminal.
+Se um trabalho específico ainda estiver pendente ou tiver retornado um erro, você poderá recuperar a resposta detalhada com uma solicitação GET para o ponto de extremidade `/job/{jobId}`.
 
 ## Acessar dados de solicitação {#access-request-data}
 
-Quando as informações do titular dos dados são solicitadas, cada serviço retorna dados em um formato consistente com a maneira como eles armazenam e usam esses dados. Depois que todos os serviços concluírem a solicitação, um URL de arquivo .ZIP será fornecido nos detalhes do trabalho para permitir que esses dados sejam baixados. Consulte o guia de solução de problemas para obter informações sobre [como baixar resultados do trabalho de privacidade](https://experienceleague.adobe.com/docs/experience-platform/privacy/troubleshooting-guide.html?lang=en#how-do-i-download-the-results-of-my-completed-privacy-jobs%3F).
+Quando as informações do titular dos dados são solicitadas, cada serviço retorna dados em um formato consistente com a maneira como eles armazenam e usam esses dados. Depois que todos os serviços concluírem a solicitação, um URL de arquivo .ZIP será fornecido nos detalhes do trabalho para permitir que esses dados sejam baixados. Consulte o guia de solução de problemas para obter informações sobre [como baixar os resultados do trabalho de privacidade](https://experienceleague.adobe.com/docs/experience-platform/privacy/troubleshooting-guide.html?lang=en#how-do-i-download-the-results-of-my-completed-privacy-jobs%3F).
 
 A seguir, os principais itens de observação relacionados à gestão do arquivo de dados:
 
@@ -86,16 +87,16 @@ A seguir, os principais itens de observação relacionados à gestão do arquivo
 
 **Recommendations:**
 
-- **Arquivos de dados do Protect:** O URL e o arquivo .ZIP devem ser protegidos, pois podem conter informações de identificação pessoal (PII) do titular dos dados.
+- **Arquivos de Dados do Protect:** O URL e o arquivo .ZIP devem ser protegidos, pois eles podem conter informações de identificação pessoal (PII) do titular dos dados.
 
 ## Considerações técnicas {#technical-considerations}
 
 Há algumas considerações técnicas que devem ser levadas em conta ao concluir solicitações Privacy Service:
 
-- **Período de retenção de dados:** O período máximo de pesquisa é de 60 dias para qualquer grupo de jobs e o período máximo de uma consulta é de 30 dias (as datas de/até).
-- **Tempo limite do gateway:** Lembre-se de que sua solicitação pode ser descartada do gateway se exceder 60 segundos.
-- **Tratamento de erros:** Revise as mensagens de erro detalhadamente e reenvie solicitações quando apropriado. O Privacy Service não reprocessa trabalhos automaticamente após um erro.
-- **Entendendo os erros HTTP 429:** Familiarize-se com mensagens de erro HTTP 429 e as etapas necessárias para atenuar problemas. Os erros HTTP 429 são o resultado de &quot;Muitas solicitações&quot;. Consulte a [Mensagens de erro comuns](./troubleshooting-guide.md#common-error-messages) seção do guia de solução de problemas para obter mais informações sobre como resolver o problema.
+- **Período de Retenção de Dados:** O período máximo de pesquisa é de 60 dias para qualquer grupo de trabalhos e o período máximo de uma consulta é de 30 dias (as datas de/até).
+- **Tempo limite do gateway:** esteja ciente de que sua solicitação pode ser descartada do gateway se exceder 60 segundos.
+- **Tratamento de Erros:** Revise detalhadamente as mensagens de erro e reenvie as solicitações quando apropriado. O Privacy Service não reprocessa trabalhos automaticamente após um erro.
+- **Entendendo os Erros HTTP 429:** Familiarize-se com as mensagens de erro HTTP 429 e as etapas necessárias para atenuar os problemas. Os erros HTTP 429 são o resultado de &quot;Muitas solicitações&quot;. Consulte a seção [Mensagens de erro comuns](./troubleshooting-guide.md#common-error-messages) do guia de solução de problemas para obter mais informações sobre como resolver o problema.
 
 ## Próximas etapas
 

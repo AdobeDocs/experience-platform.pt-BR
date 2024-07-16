@@ -7,11 +7,11 @@ exl-id: 5cf55fb1-b6b0-4d1c-93c3-7e2b7766599e
 source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
 source-wordcount: '230'
-ht-degree: 0%
+ht-degree: 6%
 
 ---
 
-# [!UICONTROL Nome da pessoa] tipo de dados
+# Tipo de dados [!UICONTROL Nome da pessoa]
 
 [!UICONTROL Nome da pessoa] é um tipo de dados XDM padrão que descreve o nome completo de uma pessoa. Como as convenções para estruturas de nome diferem amplamente entre idiomas e culturas, os nomes devem sempre ser modelados usando esse tipo de dados.
 
@@ -21,12 +21,12 @@ Além disso, o tipo de dados fornece várias propriedades opcionais que podem se
 
 | Propriedade | Descrição |
 | --- | --- |
-| `courtesyTitle` | Uma abreviação do título, honorífico ou saudação de uma pessoa (como `Mr.`, `Miss.`ou `Dr.`). |
+| `courtesyTitle` | Uma abreviação do título, honorífico ou saudação de uma pessoa (como `Mr.`, `Miss.` ou `Dr.`). |
 | `firstName` | O primeiro segmento do nome na ordem de escrita aceito com mais frequência no idioma do nome. |
 | `fullName` | O nome completo da pessoa, na ordem de escrita aceita com mais frequência no idioma do nome. |
 | `lastName` | O último segmento do nome na ordem de escrita aceito com mais frequência no idioma do nome. |
 | `middleName` | Nomes do meio, alternativos ou adicionais fornecidos entre o nome e o sobrenome. |
-| `suffix` | Um grupo de letras fornecidas após o nome de uma pessoa para fornecer informações adicionais (como `Jr.`, `Sr.`, `M.D.`, `PhD`, `I`, `II`, `III`e assim por diante). |
+| `suffix` | Um grupo de letras fornecido após o nome de uma pessoa para fornecer informações adicionais (como `Jr.`, `Sr.`, `M.D.`, `PhD`, `I`, `II`, `III` e assim por diante). |
 
 {style="table-layout:auto"}
 

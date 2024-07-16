@@ -4,8 +4,8 @@ description: Saiba mais sobre a extensão de tags do Adobe Analytics na Adobe Ex
 exl-id: 33ebdcb6-9bf0-44e6-b016-e93fe78af578
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
-source-wordcount: '2275'
-ht-degree: 95%
+source-wordcount: '2105'
+ht-degree: 91%
 
 ---
 
@@ -109,14 +109,14 @@ Selecione uma opção na seção Geral da página de configuração. As opções
 
 ### Ativar a conformidade UE para o Adobe Analytics
 
-Ativa ou desativa o rastreamento com base no cookie de privacidade UE.
+Habilita ou desabilita o rastreamento com base no cookie de privacidade UE.
 
 Quando você marca a caixa de seleção Conformidade com a UE, o campo [!UICONTROL Nome do cookie de rastreamento] é exibido. O cookie de rastreamento substitui o nome do cookie de rastreamento padrão. Você pode personalizar o nome que as tags usam a fim de rastrear o status de recusa para o recebimento de outros cookies.
 
 Quando uma página é carregada, o sistema verifica se um cookie chamado sat\_track está definido (ou o nome do cookie personalizado especificado na página Editar propriedade). Considere as seguintes informações:
 
-* Se o cookie não existe, ou existe mas está configurado para qualquer item exceto true, o carregamento da ferramenta é ignorado quando esta configuração é habilitada. Ou seja, toda parte de uma regra que usa a ferramenta não será aplicada. Se uma regra tiver o Analytics com conformidade UE ativada e o código de terceiros, e o cookie estiver definido como false, o código de terceiros ainda será executado. Contudo, as variáveis de análise não serão definidas.
-* Se o cookie existe, mas está configurado como true, a ferramenta será carregada normalmente.
+* Se o cookie não existe ou existe e está definido como qualquer item exceto true, o carregamento da ferramenta é ignorado quando esta configuração é habilitada. Ou seja, toda parte de uma regra que usa a ferramenta não será aplicada. Se uma regra tiver o Analytics com conformidade UE ativada e o código de terceiros, e o cookie estiver definido como false, o código de terceiros ainda será executado. Contudo, as variáveis de análise não serão definidas.
+* Se o cookie existir, mas estiver definido como true, a ferramenta será carregada normalmente.
 
 Você é responsável por definir o cookie sat\_track (ou com nome personalizado) como false se um visitante rejeitar. Você pode fazer isso usando o código personalizado:
 
@@ -124,7 +124,7 @@ Você é responsável por definir o cookie sat\_track (ou com nome personalizado
 _satellite.cookie.set("sat_track", "false");
 ```
 
-Você também deve ter um mecanismo para configurar esse cookie como true se quiser que o visitante cancele a recusa posteriormente:
+Você também deve ter um mecanismo para definir esse cookie como true, se quiser que um visitante possa aceitar a participação posteriormente:
 
 ```javascript
 _satellite.cookie.set("sat_track", "true");
@@ -330,13 +330,13 @@ Se desejar, configure hierarquias adicionais.
 
 #### Nome da página
 
-Esse valor se refere ao nome de uma determinada página e corresponde ao [`pageName` variável](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/pagename.html) no Analytics.
+Este valor se refere ao nome de uma determinada página e corresponde à [`pageName` variável](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/pagename.html) no Analytics.
 
 >[!IMPORTANT]
 >
 >Em implementações do Adobe Experience Manager, essa variável informa ao AEM onde armazenar o relatório do Analytics buscado. Para garantir que os relatórios sejam mantidos corretamente, a cadeia de caracteres do nome da página deve ser formatada como um caminho para o site separado por dois pontos.
 >
->Por exemplo, uma página da Web em `content/we-retail/language-masters/en/men.html` deve ter um valor de nome de página de `content:we-retail:language-masters:en:men`.
+>Por exemplo, uma página da Web em `content/we-retail/language-masters/en/men.html` deve ter o valor de nome de página de `content:we-retail:language-masters:en:men`.
 
 #### Outras informações
 
@@ -351,7 +351,7 @@ Essas configurações incluem:
 * Campaign
 * ID de compra
 
-   Especifique um valor ou um parâmetro de consulta
+  Especifique um valor ou um parâmetro de consulta
 
 * Estado
 * CEP

@@ -23,7 +23,7 @@ ht-degree: 6%
    * [Comportamento de exportação de perfil para diferentes tipos de destino](./how-destinations-work/profile-export-behavior.md)
    * [Manuseio de identidade no workflow de ativação de destinos](./how-destinations-work/identity-handling.md)
 * Tutoriais da API {#api}
-   * [Ativar dados para destinos baseados em arquivo usando a API do Serviço de fluxo](/help/destinations/api/activate-segments-file-based-destinations.md)
+   * [Ative dados para destinos baseados em arquivo usando a API de Serviço de Fluxo](/help/destinations/api/activate-segments-file-based-destinations.md)
    * [Conectar-se a destinos de streaming e ativar dados usando a API de Serviço de Fluxo](./api/streaming-destinations.md)
    * [Conecte-se aos destinos de marketing por email baseado em arquivo e ative os dados usando a API do Serviço de fluxo](./api/connect-activate-batch-destinations.md)
    * [Ativar públicos para destinos em lote por meio da API de ativação ad-hoc](./api/ad-hoc-activation-api.md)
@@ -59,12 +59,12 @@ ht-degree: 6%
    * [Assinar alertas de destino em contexto](ui/alerts.md)
 * Catálogo de destinos {#catalog}
    * [Visão geral do catálogo de destinos](./catalog/overview.md)
-   * Destinos do Adobe{#adobe}
+   * Destinos de Adobe{#adobe}
       * [Visão geral dos destinos de Adobe](./catalog/adobe/overview.md)
       * [Públicos-alvo da Experience Cloud](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
       * [conexão Marketo Engage](./catalog/adobe/marketo-engage.md)
       * [Conexão com o Marketo Measure Ultimate](./catalog/adobe/marketo-measure-ultimate.md)
-      * [compartilhamento de público do Experience Platform](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
+      * [compartilhamento de público-alvo de Experience Platform](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
    * Destinos do Advertising{#advertising}
       * [Visão geral dos destinos do Advertising](./catalog/advertising/overview.md)
       * [Conexão com o Adobe Advertising Cloud](./catalog/advertising/adobe-advertising-cloud-connection.md)
@@ -140,11 +140,11 @@ ht-degree: 6%
       * [Conexão com o Microsoft Dynamics 365](./catalog/crm/microsoft-dynamics-365.md)
       * [Conexão de alcance](catalog/crm/outreach.md)
       * [Conexão do Zendesk](catalog/crm/zendesk.md)
-   * Destinos da Plataforma de gerenciamento de dados {#data-management}
+   * Destinos da Plataforma de Gerenciamento de Dados {#data-management}
       * [Visão geral dos destinos da Plataforma de gerenciamento de dados (DMP)](./catalog/data-management/overview.md)
       * [extensão Audience Manager DIL](./catalog/data-management/aam-dil-extension.md)
       * [Plataforma de marketing Zeta](/help/destinations/catalog/data-management/zeta-marketing-platform.md)
-   * Parceiro de dados e identidade {#data-partner}
+   * Parceiro de Dados e Identidade {#data-partner}
       * [Supressão de prospecto da Acxiom](./catalog/data-partner/acxiom-prospect-suppression.md)
       * [Aprimoramento de dados da Acxiom](./catalog/data-partner/acxiom-data-enhancement.md)
       * [Conexões Merkury Enterprise](/help/destinations/catalog/data-partners/merkury-enterprise-connections.md)
@@ -169,8 +169,8 @@ ht-degree: 6%
       * [(Arquivos) Conexão do Marketing Cloud do Salesforce](./catalog/email-marketing/salesforce-marketing-cloud.md)
       * [[!DNL Salesforce Marketing Cloud Account Engagement]](./catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md)
       * [Conexão SendGrid](./catalog/email-marketing/sendgrid.md)
-   * Extensões de tag {#launch-extensions}
-      * [Visão geral da extensão de tag](./catalog/launch-extensions/overview.md)
+   * Marcar extensões {#launch-extensions}
+      * [Visão geral da extensão de marca](./catalog/launch-extensions/overview.md)
    * Destinos do engajamento móvel {#mobile-engagement}
       * [Visão geral dos destinos do Engajamento móvel](./catalog/mobile-engagement/overview.md)
       * [Conexão com os atributos do dirigível](./catalog/mobile-engagement/airship-attributes.md)
@@ -259,7 +259,7 @@ ht-degree: 6%
          * [Configure um destino SFTP com opções predefinidas de formatação de arquivo e configuração de nome de arquivo personalizado](../destinations/destination-sdk/guides/batch/configure-sftp-destination-with-predefined-file-formatting.md)
          * [Configurar um destino baseado em arquivo para exportar públicos-alvo potenciais](/help/destinations/destination-sdk/guides/batch/configure-prospect-audience-destination.md)
    * Referência da API de criação de destino {#authoring-api}
-      * [Referência da API do Destination SDK (criação de destino)](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)
+      * [Referência de API de Destination SDK (Autoria de Destino)](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)
       * Operações do servidor de destino {#server-operations}
          * [Criar uma configuração do servidor de destino](./destination-sdk/authoring-api/destination-server/create-destination-server.md)
          * [Recuperar uma configuração do servidor de destino](./destination-sdk/authoring-api/destination-server/retrieve-destination-server.md)
@@ -281,7 +281,7 @@ ht-degree: 6%
       * [Atualizar uma configuração de credencial](./destination-sdk/credentials-api/update-credential-configuration.md)
       * [Excluir uma configuração de credencial](./destination-sdk/credentials-api/delete-credential-configuration.md)
    * Referência da API de teste de destino {#testing-api}
-      * API de teste de destino de transmissão {#streaming-destinations}
+      * API de teste de destino de streaming {#streaming-destinations}
          * [Visão geral da API de teste de destino de streaming](./destination-sdk/testing-api/streaming-destinations/streaming-destination-testing-overview.md)
          * [Gerar perfis de amostra com base em um esquema de origem](./destination-sdk/testing-api/streaming-destinations/sample-profile-generation-api.md)
          * [Gerar um modelo de transformação de mensagem de amostra](./destination-sdk/testing-api/streaming-destinations/sample-template-api.md)
@@ -297,7 +297,7 @@ ht-degree: 6%
    * Referência da API de publicação de destino {#publishing-api}
       * [Criar uma solicitação de publicação de destino](./destination-sdk/publishing-api/create-publishing-request.md)
       * [Recuperar uma solicitação de publicação de destino](./destination-sdk/publishing-api/retrieve-publishing-request.md)
-   * Documentar o destino {#document-destination}
+   * Documentar seu destino {#document-destination}
       * [Documentar seu destino no Adobe Experience Platform](./destination-sdk/docs-framework/documentation-instructions.md)
       * [Usar a interface da Web do GitHub para criar uma página de documentação de destino](./destination-sdk/docs-framework/use-github-interface-to-create-documentation.md)
       * [Use um editor de texto em seu ambiente local para criar uma página de documentação de destino](./destination-sdk/docs-framework/work-in-local-environment.md)

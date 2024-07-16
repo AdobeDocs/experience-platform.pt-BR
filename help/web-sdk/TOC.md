@@ -80,7 +80,7 @@ ht-degree: 23%
       * [Acesso aos tokens de resposta](personalization/adobe-target/accessing-response-tokens.md)
       * [Uso da ID de terceiros da mbox](personalization/adobe-target/using-mbox-3rdpartyid.md)
       * [Comparação da biblioteca at.js com o SDK da Web](personalization/adobe-target/web-sdk-atjs-comparison.md)
-      * Registro do Analytics for Target (A4T) {#a4t}
+      * Log do Analytics for Target (A4T) {#a4t}
          * [Visão geral](personalization/adobe-target/analytics-logging/overview.md)
          * [Registro no lado do cliente](personalization/adobe-target/analytics-logging/client-side.md)
          * [Registro do lado do servidor](personalization/adobe-target/analytics-logging/server-side.md)

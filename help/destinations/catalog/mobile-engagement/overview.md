@@ -14,7 +14,7 @@ ht-degree: 0%
 
 ## Destinos de engajamento móvel compatíveis {#supported-destinations}
 
-[!DNL Adobe Experience Platform] atualmente, o oferece suporte aos seguintes destinos do mobile engagement:
+Atualmente, o [!DNL Adobe Experience Platform] oferece suporte aos seguintes destinos do engajamento móvel:
 
 * [Conexão com os atributos do dirigível](airship-attributes.md)
 * [Conexão com as Tags do Aeróstato](airship-tags.md)

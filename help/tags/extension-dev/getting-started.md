@@ -4,7 +4,7 @@ description: Comece a desenvolver suas próprias extensões de tag na Adobe Expe
 exl-id: 3925b928-0180-4a4f-aaa6-42f342089560
 source-git-commit: 0a4883cff4f8e04dd0dd62a9e01435fa302a9e54
 workflow-type: tm+mt
-source-wordcount: '451'
+source-wordcount: '448'
 ht-degree: 91%
 
 ---
@@ -61,7 +61,6 @@ Por exemplo, isso pode retornar se o navegador do usuário é o Chrome, se ele e
 >* É possível adicionar mais de um de cada evento, condição e ação.
 >* Apenas uma visualização de configuração pode existir.
 
-
 ## Próximas etapas
 
-* Siga as [Visão Geral do Processo de Envio](./submit/overview.md) e preparar para [validar](./submit/upload-and-test.md#validate) e [upload](./submit/upload-and-test.md#integration) sua extensão para testes no ecossistema de tags.
+* Siga a [Visão geral do processo de envio](./submit/overview.md) e prepare [validar](./submit/upload-and-test.md#validate) e [carregar](./submit/upload-and-test.md#integration) sua extensão para testar no ecossistema de marcas.

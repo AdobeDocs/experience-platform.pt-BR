@@ -11,9 +11,9 @@ ht-degree: 6%
 
 ---
 
-# [!UICONTROL Marketing] tipo de dados
+# Tipo de dados de [!UICONTROL Marketing]
 
-[!UICONTROL Marketing] é um tipo de dados XDM padrão que descreve atividades de marketing ativas com um ponto de contato específico.
+[!UICONTROL Marketing] é um tipo de dados XDM padrão que descreve atividades de marketing ativas com um determinado ponto de contato.
 
 ![](../images/data-types/marketing.png)
 

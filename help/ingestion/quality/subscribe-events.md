@@ -6,32 +6,32 @@ description: Para auxiliar no monitoramento do processo de assimilação, o Adob
 exl-id: fd34e1ab-f6f6-44f0-88ee-7020e9322c39
 source-git-commit: 76ef5638316a89aee1c6fb33370af943228b75e1
 workflow-type: tm+mt
-source-wordcount: '677'
-ht-degree: 2%
+source-wordcount: '650'
+ht-degree: 1%
 
 ---
 
 # Notificações de assimilação de dados
 
-O processo de assimilação de dados na Adobe Experience Platform é composto por várias etapas. Depois de identificar os arquivos de dados que precisam ser assimilados na [!DNL Platform], o processo de assimilação é iniciado e cada etapa ocorre consecutivamente até que os dados sejam assimilados com êxito ou falhem. O processo de assimilação pode ser iniciado usando o [API de assimilação em lote do Adobe Experience Platform](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) ou usando o [!DNL Experience Platform] interface do usuário.
+O processo de assimilação de dados na Adobe Experience Platform é composto por várias etapas. Depois de identificar os arquivos de dados que precisam ser assimilados no [!DNL Platform], o processo de assimilação começa e cada etapa ocorre consecutivamente até que os dados sejam assimilados com êxito ou falhem. O processo de assimilação pode ser iniciado usando a [API de assimilação em lote do Adobe Experience Platform](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) ou a interface de usuário [!DNL Experience Platform].
 
-Dados carregados em [!DNL Platform] deve passar por várias etapas para alcançar seu destino, a variável [!DNL Data Lake] ou o [!DNL Real-Time Customer Profile] armazenamento de dados. Cada etapa envolve processar os dados, validá-los e armazená-los antes de passá-los para a próxima etapa. Dependendo da quantidade de dados que está sendo assimilada, esse processo pode se tornar demorado e há sempre uma chance de falha do processo devido a erros de validação, semântica ou processamento. No caso de uma falha, os problemas de dados precisam ser corrigidos e, em seguida, todo o processo de assimilação deve ser reiniciado usando os arquivos de dados corrigidos.
+Os dados carregados em [!DNL Platform] devem passar por várias etapas para atingir seu destino, o [!DNL Data Lake] ou o armazenamento de dados [!DNL Real-Time Customer Profile]. Cada etapa envolve processar os dados, validá-los e armazená-los antes de passá-los para a próxima etapa. Dependendo da quantidade de dados que está sendo assimilada, esse processo pode se tornar demorado e há sempre uma chance de falha do processo devido a erros de validação, semântica ou processamento. No caso de uma falha, os problemas de dados precisam ser corrigidos e, em seguida, todo o processo de assimilação deve ser reiniciado usando os arquivos de dados corrigidos.
 
-Para auxiliar no monitoramento do processo de assimilação, [!DNL Experience Platform] O permite assinar um conjunto de eventos publicados por cada etapa do processo, notificando você sobre o status dos dados assimilados e possíveis falhas.
+Para auxiliar no monitoramento do processo de assimilação, o [!DNL Experience Platform] permite assinar um conjunto de eventos publicados por cada etapa do processo, notificando você sobre o status dos dados assimilados e sobre possíveis falhas.
 
 ## Registrar um webhook para notificações de assimilação de dados
 
-Para receber notificações de assimilação de dados, é necessário usar [Console do Adobe Developer](https://www.adobe.com/go/devs_console_ui) para registrar um webhook na integração Experience Platform.
+Para receber notificações de assimilação de dados, você deve usar o [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) para registrar um webhook na integração de Experience Platform.
 
 Siga o tutorial em [assinatura de [!DNL Adobe I/O Event] notificações](../../observability/alerts/subscribe.md) para obter etapas detalhadas sobre como fazer isso.
 
 >[!IMPORTANT]
 >
->Durante o processo de assinatura, selecione **[!UICONTROL Notificações da plataforma]** como provedor de eventos e selecione a variável **[!UICONTROL Notificação de assimilação de dados]** assinatura do evento quando solicitado.
+>Durante o processo de assinatura, selecione **[!UICONTROL Notificações da plataforma]** como provedor de eventos e selecione a assinatura de eventos **[!UICONTROL Notificação de assimilação de dados]** quando solicitado.
 
 ## Receber notificações de assimilação de dados
 
-Depois de registrar seu webhook com êxito e os novos dados tiverem sido assimilados, você poderá começar a receber notificações de evento. Esses eventos podem ser exibidos usando o próprio webhook ou selecionando o **[!UICONTROL Rastreamento de depuração]** na visão geral do registro de eventos do seu projeto no Console do Adobe Developer.
+Depois de registrar seu webhook com êxito e os novos dados tiverem sido assimilados, você poderá começar a receber notificações de evento. Esses eventos podem ser exibidos usando o próprio webhook ou selecionando a guia **[!UICONTROL Rastreamento de depuração]** na visão geral de registro de eventos do seu projeto no Adobe Developer Console.
 
 O JSON a seguir é um exemplo de uma carga de notificação que seria enviada para o seu webhook no caso de falha de um evento de assimilação em lote:
 
@@ -65,13 +65,13 @@ O JSON a seguir é um exemplo de uma carga de notificação que seria enviada pa
 | `event_id` | Uma ID exclusiva gerada pelo sistema para a notificação. |
 | `event` | Um objeto que contém os detalhes do evento que acionou a notificação. |
 | `event.xdm:datasetId` | A ID do conjunto de dados ao qual o evento de assimilação se aplica. |
-| `event.xdm:eventCode` | Um código de status indicando o tipo de evento que foi acionado para o conjunto de dados. Consulte a [apêndice](#event-codes) para valores específicos e suas definições. |
+| `event.xdm:eventCode` | Um código de status indicando o tipo de evento que foi acionado para o conjunto de dados. Consulte o [apêndice](#event-codes) para obter valores específicos e suas definições. |
 
-Para visualizar o schema completo para notificações de eventos, consulte o [repositório público do GitHub](https://github.com/adobe/xdm/blob/master/schemas/notifications/ingestion.schema.json).
+Para exibir o esquema completo para notificações de eventos, consulte o [repositório público do GitHub](https://github.com/adobe/xdm/blob/master/schemas/notifications/ingestion.schema.json).
 
 ## Próximas etapas
 
-Depois de se registrar [!DNL Platform] notificações ao seu projeto, é possível visualizar os eventos recebidos do [!UICONTROL Visão geral do projeto]. Consulte o guia em [rastreamento de eventos Adobe I/O](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md) para obter instruções detalhadas sobre como rastrear os eventos.
+Depois de registrar [!DNL Platform] notificações ao seu projeto, você poderá exibir os eventos recebidos na [!UICONTROL Visão geral do projeto]. Consulte o manual sobre [rastreamento de eventos de Adobe I/O](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md) para obter instruções detalhadas sobre como rastrear seus eventos.
 
 ## Apêndice
 
@@ -83,10 +83,10 @@ A tabela a seguir lista as notificações de status de assimilação de dados di
 
 | Código do evento | Serviço de plataforma | Status | Descrição do evento |
 | --- | ---------------- | ------ | ----------------- |
-| `ing_load_success` | [!DNL Data Ingestion] | success | Um lote foi assimilado com sucesso em um conjunto de dados na [!DNL Data Lake]. |
-| `ing_load_failure` | [!DNL Data Ingestion] | falha | Um lote não foi assimilado em um conjunto de dados na [!DNL Data Lake]. |
-| `ps_load_success` | [!DNL Real-Time Customer Profile] | success | Um lote foi assimilado com sucesso na [!DNL Profile] armazenamento de dados. |
-| `ps_load_failure` | [!DNL Real-Time Customer Profile] | falha | Um lote não foi assimilado na [!DNL Profile] armazenamento de dados. |
+| `ing_load_success` | [!DNL Data Ingestion] | success | Um lote foi assimilado com êxito em um conjunto de dados no [!DNL Data Lake]. |
+| `ing_load_failure` | [!DNL Data Ingestion] | falha | Falha ao assimilar um lote em um conjunto de dados no [!DNL Data Lake]. |
+| `ps_load_success` | [!DNL Real-Time Customer Profile] | success | Um lote foi assimilado com êxito no repositório de dados [!DNL Profile]. |
+| `ps_load_failure` | [!DNL Real-Time Customer Profile] | falha | Falha ao assimilar um lote no repositório de dados [!DNL Profile]. |
 | `ig_load_success` | [!DNL Identity Service] | success | Os dados foram carregados com sucesso no gráfico de identidade. |
 | `ig_load_failure` | [!DNL Identity Service] | falha | Falha ao carregar dados no gráfico de identidade. |
 

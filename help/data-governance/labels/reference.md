@@ -7,7 +7,7 @@ exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
 source-git-commit: 6f3f08203242843ce703de5e4546a537dff82270
 workflow-type: tm+mt
 source-wordcount: '2254'
-ht-degree: 1%
+ht-degree: 7%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 1%
 >abstract="Há várias categorias de rótulos de uso de dados. Os rótulos definidos pela Adobe incluem rótulos de contrato, rótulos de identidade e rótulos sensíveis. Rótulos definidos pela sua organização são categorizados como rótulos personalizados."
 >text="See the data usage labels glossary for more information on these label types."
 
-Os rótulos de uso de dados permitem categorizar conjuntos de dados e campos de acordo com [políticas de governança](../policies/overview.md) e [políticas de controle de acesso](../../access-control/abac/overview.md) aplicáveis a esses dados. O Adobe Experience Platform fornece vários rótulos de uso de dados principais prontos para uso que você pode usar para começar a categorizar seus dados.
+Os rótulos de uso de dados permitem categorizar conjuntos de dados e campos de acordo com as [políticas de governança](../policies/overview.md) e as [políticas de controle de acesso](../../access-control/abac/overview.md) que se aplicam a esses dados. O Adobe Experience Platform fornece vários rótulos de uso de dados principais prontos para uso que você pode usar para começar a categorizar seus dados.
 
 Este documento descreve os rótulos de uso de dados principais fornecidos atualmente pelo Experience Platform.
 
@@ -29,7 +29,7 @@ Os rótulos de contrato (C) são usados para categorizar dados que contêm obrig
 
 | Rótulo | Definição |
 | --- | --- |
-| [C1](#c1) | Os dados só podem ser exportados do Adobe Experience Cloud de forma agregada sem incluir identificadores individuais ou de dispositivo. |
+| [C1](#c1) | Os dados só podem ser exportados da Adobe Experience Cloud de forma agregada sem incluir identificadores individuais ou de dispositivo. |
 | [C2](#c2) | Os dados não podem ser exportados para terceiros. |
 | [C3](#c3) | Os dados não podem ser combinados nem utilizados de outra forma com informações diretamente identificáveis. |
 | [C4](#c4) | Os dados não podem ser usados para direcionar anúncios ou conteúdo, no local ou entre locais. |
@@ -39,19 +39,19 @@ Os rótulos de contrato (C) são usados para categorizar dados que contêm obrig
 | [C8](#c8) | Os dados não podem ser usados para medir os sites ou aplicativos de sua organização. |
 | [C9](#c9) | Os dados não podem ser usados em fluxos de trabalho de ciência de dados. |
 | [C10](#c10) | Os dados não podem ser usados para ativação de identidade compilada. |
-| [C11](#c11) | Os dados não podem ser compartilhados com parceiros de correspondência de segmentos. |
+| [C11](#c11) | Os dados não podem ser compartilhados com parceiros de Correspondência de Segmentos. |
 | [C12](#c12) | Os dados não podem ser exportados de forma alguma. |
 
 ## Rótulos de identidade {#identity}
 
-Os rótulos de identidade (I) são usados para categorizar dados que podem identificar ou entrar em contato com uma pessoa específica.
+Os rótulos “I” de identidade são usados para categorizar dados que podem identificar ou entrar em contato com uma pessoa específica.
 
 | Rótulo | Definição |
 | --- | --- |
 | **I1** | Dados diretamente identificáveis que podem identificar ou entrar em contato com uma pessoa específica, em vez de com um dispositivo. |
-| **I2** | Dados indiretamente identificáveis que podem ser utilizados em combinação com quaisquer outros dados para identificar ou contactar uma pessoa específica. |
+| **I2** | Dados indiretamente identificáveis que podem ser utilizados em ção com quaisquer outros dados para identificar ou contactar uma pessoa específica. |
 
-## Rótulos sensíveis {#sensitive}
+## Rótulos de dados sensíveis {#sensitive}
 
 Os rótulos de sensibilidade (S) são usados para categorizar dados que você e sua organização consideram sensíveis.
 
@@ -60,7 +60,7 @@ Um tipo de dados que você pode considerar confidenciais pode ser o de diferente
 | Rótulo | Definição |
 | --- | --- |
 | **S1** | Dados que especificam a latitude e a longitude que podem ser utilizados para determinar a localização precisa de um dispositivo. |
-| **S2** | Dados que podem ser usados para determinar uma área de cerca geográfica amplamente definida. |
+| **S2** | Dados que podem ser utilizados para determinar uma área de cerca geográfica amplamente definida. |
 | **PSPD** | Dados pessoais confidenciais permitidos (PSPD) refere-se aos dados que você tem permissão contratual do Adobe para carregar e que são considerados &quot;confidenciais&quot;, &quot;categoria especial de dados&quot; ou um termo semelhante usado pelas leis aplicáveis. Isso exclui especificamente as Informações de Saúde Protegidas (PHI) e outros dados de saúde regulamentados. |
 | **RHD** | Dados que se referem a PHI (Protected Health Information, informações protegidas de saúde) ou informações sobre um paciente que você tem permissão contratual para carregar por Adobe. |
 
@@ -73,8 +73,8 @@ Este rótulo é usado para controlar o uso de dados de prospecto.
 | Rótulo | Definição |
 | --- | --- |
 | **Terceiros** | Dados de terceiros são dados fornecidos a você por um fornecedor de dados de terceiros. Um fornecedor de dados de terceiros é uma entidade que celebrou um contrato com sua organização autorizando você a acessar, usar, exibir e transmitir os dados de terceiros em conjunto com a Platform. |
-| **Enriquecimento de terceiros** | Dados coletados por uma organização de terceiros que não esteja diretamente relacionada ao titular dos dados. O rótulo deve ser aplicado aos dados de terceiros usados para enriquecer perfis primários. |
-| **Prospecção de terceiros** | Dados coletados por uma organização de terceiros que não esteja diretamente relacionada ao titular dos dados. A etiqueta deve ser aplicada aos dados de terceiros usados para parte superior da prospecção em funil para novos clientes líquidos. |
+| **Enriquecimento de Terceiros** | Dados coletados por uma organização de terceiros que não esteja diretamente relacionada ao titular dos dados. O rótulo deve ser aplicado aos dados de terceiros usados para enriquecer perfis primários. |
+| **Prospecção de Terceiros** | Dados coletados por uma organização de terceiros que não esteja diretamente relacionada ao titular dos dados. A etiqueta deve ser aplicada aos dados de terceiros usados para parte superior da prospecção em funil para novos clientes líquidos. |
 
 ## Apêndice
 
@@ -90,7 +90,7 @@ Alguns dados só podem ser exportados do Adobe Experience Cloud de forma agregad
 
 #### C2 {#c2}
 
-Alguns provedores de dados têm termos em seus contratos que proíbem a exportação de dados de onde foram originalmente coletados. Por exemplo, os contratos de redes sociais geralmente restringem a transferência de dados recebidos deles. O rótulo C2 é mais restritivo do que [C1](#c1), que requer apenas agregação e dados anônimos, mas é menos restritivo do que [C12](#c12), que impede exportações de dados completamente, independentemente do destino.
+Alguns provedores de dados têm termos em seus contratos que proíbem a exportação de dados de onde foram originalmente coletados. Por exemplo, os contratos de redes sociais geralmente restringem a transferência de dados recebidos deles. O rótulo C2 é mais restritivo que [C1](#c1), que requer apenas agregação e dados anônimos, mas é menos restritivo que [C12](#c12), o que impede exportações de dados completamente, independentemente do destino.
 
 #### C3 {#c3}
 
@@ -98,7 +98,7 @@ Alguns provedores de dados têm termos em seus contratos que proíbem a combina�
 
 #### C4 {#c4}
 
-C4 abrange rótulos [C5](#c5), [C6](#c6), e [C7](#c7). É um dos rótulos mais restritivos, segundo apenas para [C12](#c12).
+C4 abrange os rótulos [C5](#c5), [C6](#c6) e [C7](#c7). É um dos rótulos mais restritivos, perdendo apenas para [C12](#c12).
 
 #### C5 {#c5}
 
@@ -112,27 +112,27 @@ No entanto, o direcionamento de conteúdo ou anúncios que usam apenas dados no 
 
 Em última análise, a interpretação do rótulo e como o uso de dados com esse rótulo é aplicado depende de você. Para referência, as estruturas IAB e DAA são fornecidas a seguir:
 
-IAB: Personalização. A coleta e o processamento de informações sobre o uso desse serviço para personalizar subsequentemente a publicidade e/ou o conteúdo para você em outros contextos, como em outros sites ou aplicativos, ao longo do tempo. Normalmente, o conteúdo do site ou aplicativo é usado para fazer conclusões sobre seus interesses que informam a seleção futura de publicidade e/ou conteúdo.
+IAB: Personalization A coleta e o processamento de informações sobre o uso desse serviço para personalizar subsequentemente a publicidade e/ou o conteúdo para você em outros contextos, como em outros sites ou aplicativos, ao longo do tempo. Normalmente, o conteúdo do site ou aplicativo é usado para fazer conclusões sobre seus interesses que informam a seleção futura de publicidade e/ou conteúdo.
 
 DAA: Propaganda comportamental online. Coleta de dados de um computador ou dispositivo específico sobre os comportamentos de visualização da Web ao longo do tempo e em sites não afiliados com o objetivo de usar esses dados para prever as preferências ou os interesses do usuário para fornecer publicidade a esse computador ou dispositivo com base nas preferências ou nos interesses inferidos desses comportamentos de visualização da Web.
 
 #### C6 {#c6}
 
-Anúncios são mensagens ou notificações, incluindo texto e imagens, que aparecem em um site ou aplicativo destinado principalmente a promover a venda de bens ou serviços. Cabe a você determinar a finalidade dessas mensagens ou notificações. Os anúncios são separados do conteúdo no site, cobertos pelo rótulo [C7](#c7). Os dados com um rótulo C6 não podem ser usados para direcionamento de anúncios no site, incluindo a seleção e a entrega de anúncios nos sites ou aplicativos de sua organização, ou para medir a entrega e a eficácia desses anúncios. Isso inclui o uso de dados coletados anteriormente no site sobre os interesses dos usuários para selecionar anúncios, dados de processo sobre quais anúncios foram mostrados, quando e onde foram mostrados e se os usuários tomaram alguma ação relacionada ao anúncio, como selecionar um anúncio ou fazer uma compra. Normalmente, inferir sobre as preferências de um usuário com base nas atividades dele no site e, em seguida, usar essas preferências no direcionamento de anúncios no site não se qualificaria como direcionamento com base em interesses (também chamado de personalização), já que não atenderia a todos os três requisitos necessários para o direcionamento com base em interesses. *[Consulte a etiqueta C5 para ver estes requisitos.](#c5)*
+Anúncios são mensagens ou notificações, incluindo texto e imagens, que aparecem em um site ou aplicativo destinado principalmente a promover a venda de bens ou serviços. Cabe a você determinar a finalidade dessas mensagens ou notificações. Os anúncios são separados do conteúdo no site, coberto pelo rótulo [C7](#c7). Os dados com um rótulo C6 não podem ser usados para direcionamento de anúncios no site, incluindo a seleção e a entrega de anúncios nos sites ou aplicativos de sua organização, ou para medir a entrega e a eficácia desses anúncios. Isso inclui o uso de dados coletados anteriormente no site sobre os interesses dos usuários para selecionar anúncios, dados de processo sobre quais anúncios foram mostrados, quando e onde foram mostrados e se os usuários tomaram alguma ação relacionada ao anúncio, como selecionar um anúncio ou fazer uma compra. Normalmente, inferir sobre as preferências de um usuário com base nas atividades dele no site e, em seguida, usar essas preferências no direcionamento de anúncios no site não se qualificaria como direcionamento com base em interesses (também chamado de personalização), já que não atenderia a todos os três requisitos necessários para o direcionamento com base em interesses. *[Consulte o rótulo C5 para estes requisitos.](#c5)*
 
 Em última análise, a interpretação do rótulo e como o uso de dados com esse rótulo é aplicado depende de você. Para referência, as estruturas IAB e DAA são fornecidas a seguir:
 
-IAB: 3. Seleção de anúncios, delivery, relatórios: a coleção de informações e a combinação com informações coletadas anteriormente, para selecionar e entregar anúncios para você e para medir o delivery e a eficácia desses anúncios. Isso inclui o uso de informações coletadas anteriormente sobre seus interesses para selecionar anúncios, processar dados sobre quais anúncios foram exibidos, com que frequência foram exibidos, quando e onde foram exibidos e se você tomou alguma ação relacionada ao anúncio, incluindo, por exemplo, selecionar um anúncio ou fazer uma compra. Isso não inclui a Personalização, que é a coleta e o processamento de informações sobre o uso desse serviço para personalizar subsequentemente a publicidade e/ou o conteúdo para você em outros contextos, como sites ou aplicativos, ao longo do tempo.
+IAB: 3. Seleção de anúncios, delivery, relatórios: a coleção de informações e a combinação com informações coletadas anteriormente, para selecionar e entregar anúncios para você e para medir o delivery e a eficácia desses anúncios. Isso inclui o uso de informações coletadas anteriormente sobre seus interesses para selecionar anúncios, processar dados sobre quais anúncios foram exibidos, com que frequência foram exibidos, quando e onde foram exibidos e se você tomou alguma ação relacionada ao anúncio, incluindo, por exemplo, selecionar um anúncio ou fazer uma compra. Isso não inclui o Personalization, que é a coleta e o processamento de informações sobre o uso desse serviço para personalizar subsequentemente a publicidade e/ou o conteúdo para você em outros contextos, como sites ou aplicativos, ao longo do tempo.
 
 DAA: a publicidade comportamental online não inclui as atividades de terceiros, entrega de anúncios ou relatórios de anúncios, ou publicidade contextual (ou seja, publicidade baseada no conteúdo da página da Web que está sendo visitada, visita atual do consumidor a uma página da Web ou uma consulta de pesquisa).
 
 #### C7 {#c7}
 
-O conteúdo no site é um texto e imagens criados para informar, educar ou divertir-se, e não são criados para promover a venda de bens ou serviços. Cabe a você determinar a finalidade do conteúdo, incluindo se o conteúdo se qualificaria como publicidade nativa. O rótulo C7 não se destina a cobrir anúncios no local, que são cobertos pelo rótulo [C6](#c6). Os dados com um rótulo C7 não podem ser usados para direcionamento de conteúdo no site, incluindo a seleção e a entrega de conteúdo nos sites ou aplicativos da organização, ou para medir a entrega e a eficácia desse conteúdo. Isso inclui informações coletadas anteriormente sobre os interesses dos usuários em um conteúdo selecionado, o processamento de dados sobre qual conteúdo foi mostrado, com que frequência ou por quanto tempo ele foi exibido, quando e onde foi exibido e se os usuários realizaram alguma ação relacionada ao conteúdo, incluindo, por exemplo, a seleção de conteúdo. Normalmente, inferir sobre as preferências de um usuário com base nas atividades dele no site e, em seguida, usar essas preferências no direcionamento de conteúdo no site não se qualificaria como direcionamento com base em interesses (também chamado de personalização), já que não atenderia a todos os três requisitos necessários para o direcionamento com base em interesses. *[Consulte a etiqueta C5 para ver estes requisitos.](#c5)*
+O conteúdo no site é um texto e imagens criados para informar, educar ou divertir-se, e não são criados para promover a venda de bens ou serviços. Cabe a você determinar a finalidade do conteúdo, incluindo se o conteúdo se qualificaria como publicidade nativa. O rótulo C7 não pretende abranger anúncios no site, que são cobertos pelo rótulo [C6](#c6). Os dados com um rótulo C7 não podem ser usados para direcionamento de conteúdo no site, incluindo a seleção e a entrega de conteúdo nos sites ou aplicativos da organização, ou para medir a entrega e a eficácia desse conteúdo. Isso inclui informações coletadas anteriormente sobre os interesses dos usuários em um conteúdo selecionado, o processamento de dados sobre qual conteúdo foi mostrado, com que frequência ou por quanto tempo ele foi exibido, quando e onde foi exibido e se os usuários realizaram alguma ação relacionada ao conteúdo, incluindo, por exemplo, a seleção de conteúdo. Normalmente, inferir sobre as preferências de um usuário com base nas atividades dele no site e, em seguida, usar essas preferências no direcionamento de conteúdo no site não se qualificaria como direcionamento com base em interesses (também chamado de personalização), já que não atenderia a todos os três requisitos necessários para o direcionamento com base em interesses. *[Consulte o rótulo C5 para estes requisitos.](#c5)*
 
 Em última análise, a interpretação do rótulo e como o uso de dados com esse rótulo é aplicado depende de você. Para referência, as estruturas IAB e DAA são fornecidas a seguir:
 
-IAB: 4. Seleção de conteúdo, delivery, relatórios: a coleta de informações e a combinação com informações coletadas anteriormente, para selecionar e fornecer conteúdo para você e para medir o delivery e a eficácia desse conteúdo. Isso inclui o uso de informações coletadas anteriormente sobre seus interesses para selecionar o conteúdo, processar dados sobre qual conteúdo foi mostrado, com que frequência ou por quanto tempo ele foi exibido, quando e onde foi exibido e se você executou alguma ação relacionada ao conteúdo, incluindo, por exemplo, a seleção de conteúdo. Isso não inclui a Personalização, que é a coleta e o processamento de informações sobre o uso desse serviço para personalizar subsequentemente o conteúdo e/ou a publicidade para você em outros contextos, como sites ou aplicativos, ao longo do tempo.
+IAB: 4. Seleção de conteúdo, delivery, relatórios: a coleta de informações e a combinação com informações coletadas anteriormente, para selecionar e fornecer conteúdo para você e para medir o delivery e a eficácia desse conteúdo. Isso inclui o uso de informações coletadas anteriormente sobre seus interesses para selecionar o conteúdo, processar dados sobre qual conteúdo foi mostrado, com que frequência ou por quanto tempo ele foi exibido, quando e onde foi exibido e se você executou alguma ação relacionada ao conteúdo, incluindo, por exemplo, a seleção de conteúdo. Isso não inclui o Personalization, que é a coleta e o processamento de informações sobre o uso desse serviço para personalizar subsequentemente o conteúdo e/ou a publicidade para você em outros contextos, como sites ou aplicativos, ao longo do tempo.
 
 DAA: a publicidade comportamental online não inclui as atividades de terceiros, entrega de anúncios ou relatórios de anúncios, ou publicidade contextual (ou seja, publicidade baseada no conteúdo da página da Web que está sendo visitada, visita atual do consumidor a uma página da Web ou uma consulta de pesquisa).
 

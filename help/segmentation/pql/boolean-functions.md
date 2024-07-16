@@ -1,22 +1,22 @@
 ---
 solution: Experience Platform
-title: Funções booleanas PQL
-description: As funções booleanas são usadas para executar lógica booleana em diferentes elementos na Linguagem de consulta de perfil (PQL).
+title: Funções booleanas do PQL
+description: Funções booleanas são usadas para executar lógica booleana em diferentes elementos no Profile Query Language (PQL).
 exl-id: 68a4a8cc-88ad-41b1-b9fc-c2b4ab7d0122
 source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '237'
-ht-degree: 6%
+source-wordcount: '239'
+ht-degree: 4%
 
 ---
 
 # Funções booleanas
 
-Funções booleanas são usadas para executar lógica booleana em diferentes elementos em [!DNL Profile Query Language] (PQL).  Mais informações sobre outras funções PQL podem ser encontradas no [[!DNL Profile Query Language] visão geral](./overview.md).
+Funções booleanas são usadas para executar lógica booleana em diferentes elementos em [!DNL Profile Query Language] (PQL).  Mais informações sobre outras funções do PQL podem ser encontradas na [[!DNL Profile Query Language] visão geral](./overview.md).
 
 ## E
 
-A variável `and` é usada para criar uma conjunção lógica.
+A função `and` é usada para criar uma conjunção lógica.
 
 **Formato**
 
@@ -26,7 +26,7 @@ A variável `and` é usada para criar uma conjunção lógica.
 
 **Exemplo**
 
-A consulta PQL a seguir retornará todas as pessoas com o país de origem como Canadá e o ano de nascimento de 1985.
+A consulta do PQL a seguir retornará todas as pessoas com o país de origem como Canadá e o ano de nascimento de 1985.
 
 ```sql
 homeAddress.countryISO = "CA" and person.birthYear = 1985
@@ -34,7 +34,7 @@ homeAddress.countryISO = "CA" and person.birthYear = 1985
 
 ## Ou
 
-A variável `or` é usada para criar uma disjunção lógica.
+A função `or` é usada para criar uma disjunção lógica.
 
 **Formato**
 
@@ -44,7 +44,7 @@ A variável `or` é usada para criar uma disjunção lógica.
 
 **Exemplo**
 
-A consulta PQL a seguir retornará todas as pessoas com o país de origem como Canadá ou ano de nascimento de 1985.
+A consulta do PQL a seguir retornará todas as pessoas com o país de origem como Canadá ou ano de nascimento de 1985.
 
 ```sql
 homeAddress.countryISO = "CA" or person.birthYear = 1985
@@ -52,7 +52,7 @@ homeAddress.countryISO = "CA" or person.birthYear = 1985
 
 ## Não
 
-A variável `not` (ou `!`) é usada para criar uma negação lógica.
+A função `not` (ou `!`) é usada para criar uma negação lógica.
 
 **Formato**
 
@@ -63,7 +63,7 @@ not ({QUERY})
 
 **Exemplo**
 
-A consulta PQL a seguir retornará todas as pessoas que não têm seu país de origem como Canadá.
+A seguinte query do PQL retornará todas as pessoas que não têm seu país de origem como Canadá.
 
 ```sql
 not (homeAddress.countryISO = "CA")
@@ -71,7 +71,7 @@ not (homeAddress.countryISO = "CA")
 
 ## Se
 
-A variável `if` é usada para resolver uma expressão dependendo se uma condição especificada é verdadeira.
+A função `if` é usada para resolver uma expressão dependendo se uma condição especificada é verdadeira.
 
 **Formato**
 
@@ -82,12 +82,12 @@ if ({TEST_EXPRESSION}, {TRUE_EXPRESSION}, {FALSE_EXPRESSION})
 | Argumento | Descrição |
 | --------- | ----------- |
 | `{TEST_EXPRESSION}` | A expressão booleana que está sendo testada. |
-| `{TRUE_EXPRESSION}` | A expressão cujo valor será usado se `{TEST_EXPRESSION}` é verdadeiro. |
-| `{FALSE_EXPRESSION}` | A expressão cujo valor será usado se `{TEST_EXPRESSION}` é falso. |
+| `{TRUE_EXPRESSION}` | A expressão cujo valor será usado se `{TEST_EXPRESSION}` for verdadeiro. |
+| `{FALSE_EXPRESSION}` | A expressão cujo valor será usado se `{TEST_EXPRESSION}` for falso. |
 
 **Exemplo**
 
-A seguinte consulta PQL definirá o valor como `1` se o país de origem for o Canadá e `2` se o país de origem não for o Canadá.
+A consulta PQL a seguir definirá o valor como `1` se o país de origem for o Canadá e `2` se o país de origem não for o Canadá.
 
 ```sql
 if (homeAddress.countryISO = "CA", 1, 2)
@@ -95,4 +95,4 @@ if (homeAddress.countryISO = "CA", 1, 2)
 
 ## Próximas etapas
 
-Agora que você aprendeu sobre funções booleanas, é possível usá-las em consultas PQL. Para obter mais informações sobre outras funções PQL, leia o [Visão geral do idioma de consulta do perfil](./overview.md).
+Agora que você aprendeu sobre funções booleanas, é possível usá-las em consultas do PQL. Para obter mais informações sobre outras funções do PQL, leia a [visão geral do Profile Query Language](./overview.md).

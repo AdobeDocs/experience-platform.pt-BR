@@ -5,8 +5,8 @@ description: Este guia fornece instruções passo a passo para selecionar atribu
 exl-id: a744eb24-5ba7-4971-9183-3f891e807863
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
-source-wordcount: '498'
-ht-degree: 0%
+source-wordcount: '499'
+ht-degree: 1%
 
 ---
 
@@ -16,19 +16,19 @@ Para criar widgets personalizados para painéis do Adobe Experience Platform, vo
 
 Este guia fornece instruções passo a passo para editar o esquema da sua organização selecionando atributos para criar widgets de painel personalizados.
 
-Depois que os atributos forem selecionados e o esquema for configurado, você poderá continuar com as etapas para [criação de widgets personalizados para seus painéis](custom-widgets.md).
+Depois que os atributos forem selecionados e o esquema for configurado, você poderá prosseguir com as etapas para [criar widgets personalizados para seus painéis](custom-widgets.md).
 
 >[!NOTE]
 >
 >Os usuários devem receber a permissão &quot;Gerenciar painéis padrão&quot; para poderem editar o esquema. Para obter etapas sobre como conceder permissões de acesso para painéis, consulte o [guia de permissões do painel](../permissions.md).
 
-## Biblioteca de widgets {#widget-library}
+## Biblioteca de dispositivos {#widget-library}
 
-Este guia requer acesso à [!UICONTROL Biblioteca de widgets] no Experience Platform. Para saber mais sobre a biblioteca de widgets e como acessá-la na interface do usuário, comece lendo o [visão geral da biblioteca de widgets](widget-library.md).
+Este guia requer acesso à [!UICONTROL Biblioteca de widgets] no Experience Platform. Para saber mais sobre a biblioteca de widgets e como acessá-la na interface do usuário, comece lendo a [visão geral da biblioteca de widgets](widget-library.md).
 
 ## Editar esquema
 
-Na biblioteca de widgets, a variável **[!UICONTROL Personalizado]** A guia permite criar widgets e compartilhá-los com outros usuários em sua organização para personalizar a aparência dos painéis.
+Na biblioteca de widgets, a guia **[!UICONTROL Personalizado]** permite criar widgets e compartilhá-los com outros usuários em sua organização para personalizar a aparência de seus painéis.
 
 Antes de criar widgets personalizados, os atributos do Perfil do cliente em tempo real devem ser selecionados para garantir que os dados sejam incluídos como parte do instantâneo diário.
 
@@ -36,23 +36,23 @@ Antes de criar widgets personalizados, os atributos do Perfil do cliente em temp
 >
 >Sua organização pode selecionar no máximo 20 atributos.
 
-Se sua organização não tiver selecionado atributos de perfil, comece selecionando **[!UICONTROL Configurar]** no centro da tela.
+Se sua organização não tiver selecionado atributos de Perfil, comece selecionando **[!UICONTROL Configurar]** no centro da tela.
 
-![A guia Personalizado da área de trabalho da biblioteca de widgets com Configurar realçado.](../images/customization/configure-schema.png)
+![A guia Personalizado do espaço de trabalho da biblioteca de widgets com Configurar realçado.](../images/customization/configure-schema.png)
 
-Quando pelo menos um atributo personalizado for criado, selecione **[!UICONTROL Editar esquema]** para visualizar os atributos selecionados e adicionar mais.
+Quando pelo menos um atributo personalizado for criado, selecione **[!UICONTROL Editar esquema]** para exibir os atributos selecionados e adicionar mais.
 
-![A guia Personalizado do espaço de trabalho da biblioteca de widgets com Editar schema realçado.](../images/customization/edit-schema.png)
+![A guia Personalizado do espaço de trabalho da biblioteca de widgets com Editar esquema realçado.](../images/customization/edit-schema.png)
 
 ## Selecionar um atributo
 
-Para selecionar um atributo na variável **[!UICONTROL Selecionar campo de esquema de união]** , navegue até o atributo no esquema de união (ou use pesquisar) e marque a caixa de seleção ao lado do atributo. Marcar a caixa de seleção também adiciona o atributo à variável **[!UICONTROL Atributos Selecionados]** no lado direito da caixa de diálogo.
+Para selecionar um atributo na caixa de diálogo **[!UICONTROL Selecionar campo de esquema de união]**, navegue até o atributo no esquema de união (ou use pesquisar) e marque a caixa de seleção ao lado do atributo. Marcar a caixa de seleção também adiciona o atributo à lista **[!UICONTROL Atributos selecionados]** no lado direito da caixa de diálogo.
 
 >[!NOTE]
 >
 >Para que um atributo seja visível para seleção, ele deve ser um dos seguintes: String, Date, Date-Time, Boolean, Short, Long, Integer ou Byte. Os tipos de dados Map e Double não são compatíveis e estão esmaecidos para que não possam ser selecionados.
 
-Após escolher os atributos que deseja adicionar, selecione **[!UICONTROL Salvar]** para salvar seus atributos e retornar à guia widgets personalizados.
+Depois de escolher os atributos que deseja adicionar, selecione **[!UICONTROL Salvar]** para salvar seus atributos e retornar à guia widgets personalizados.
 
 >[!WARNING]
 >Os atributos recém-selecionados ficam disponíveis após o próximo snapshot diário quando os dados são atualizados.
@@ -61,4 +61,4 @@ Após escolher os atributos que deseja adicionar, selecione **[!UICONTROL Salvar
 
 ## Próximas etapas
 
-Depois de ler este guia, você pode navegar até a biblioteca de widgets e selecionar atributos do Perfil do cliente em tempo real para configurar seu esquema. Com os atributos de perfil selecionados, você pode começar [criação de widgets personalizados para seus painéis](custom-widgets.md).
+Depois de ler este guia, você pode navegar até a biblioteca de widgets e selecionar atributos do Perfil do cliente em tempo real para configurar seu esquema. Com os atributos de Perfil selecionados, você pode começar a [criar widgets personalizados para seus painéis](custom-widgets.md).

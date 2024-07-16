@@ -19,13 +19,13 @@ Para criar um campo calculado, selecione **[!UICONTROL Adicionar campo calculado
 
 ![](./images/calculated-fields/add-calculated-field.png)
 
-A variável **[!UICONTROL Criar campo calculado]** é exibido. A caixa de diálogo à esquerda contém os campos, funções e operadores compatíveis com os campos calculados. Selecione uma das guias para começar a adicionar funções, campos ou operadores ao editor de expressão.
+O painel **[!UICONTROL Criar campo calculado]** é exibido. A caixa de diálogo à esquerda contém os campos, funções e operadores compatíveis com os campos calculados. Selecione uma das guias para começar a adicionar funções, campos ou operadores ao editor de expressão.
 
 ![](./images/calculated-fields/create-calculated-field.png)
 
 | Tabulação | Descrição |
 | --- | ----------- |
-| Função | A guia functions lista as funções disponíveis para transformar os dados. Para saber mais sobre as funções que você pode usar em campos calculados, leia o guia em [uso das funções de Preparo de dados (Mapeador)](./functions.md). |
+| Função | A guia functions lista as funções disponíveis para transformar os dados. Para saber mais sobre as funções que você pode usar em campos calculados, leia o guia em [usando funções de Preparo de Dados (Mapeador)](./functions.md). |
 | Campo | A guia fields lista campos e atributos disponíveis no schema de origem. |
 | Operador | A guia operators lista os operadores disponíveis para transformar os dados. |
 
@@ -33,7 +33,7 @@ Você pode adicionar campos, funções e operadores manualmente usando o editor 
 
 ![](./images/calculated-fields/write-calculated-field.png)
 
-Selecionar **[!UICONTROL Salvar]** para continuar.
+Selecione **[!UICONTROL Salvar]** para continuar.
 
 A tela de mapeamento é exibida novamente com o campo de origem recém-criado. Aplique o campo de destino correspondente apropriado e selecione **[!UICONTROL Concluir]** para concluir o mapeamento.
 

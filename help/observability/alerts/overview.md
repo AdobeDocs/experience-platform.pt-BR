@@ -6,7 +6,7 @@ feature: Alerts
 exl-id: c38a93c6-1618-4ef9-8f94-41c7ab4af43c
 source-git-commit: cb889a169aa42b761b0eeff5aa7fb771ad6ed4be
 workflow-type: tm+mt
-source-wordcount: '796'
+source-wordcount: '797'
 ht-degree: 3%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 3%
 >
 >Alertas não são aceitos em sandboxes de não produção. Para assinar alertas, você deve garantir que esteja usando uma sandbox de produção. Todos os alertas de assinatura serão redefinidos quando a sandbox for redefinida. Todos os alertas de assinatura também serão apagados quando uma sandbox for excluída.
 
-O Adobe Experience Platform permite assinar alertas baseados em eventos relacionados a atividades do Adobe Experience Platform. Os alertas reduzem ou eliminam a necessidade de sondar os [[!DNL Observability Insights] API](../api/overview.md) para verificar se um trabalho foi concluído, se uma determinada etapa em um fluxo de trabalho foi atingida ou se ocorreram erros.
+O Adobe Experience Platform permite assinar alertas baseados em eventos relacionados a atividades do Adobe Experience Platform. Os alertas reduzem ou eliminam a necessidade de sondar a [[!DNL Observability Insights] API](../api/overview.md) para verificar se um trabalho foi concluído, se um determinado marco em um fluxo de trabalho foi atingido ou se ocorreram erros.
 
 Quando um determinado conjunto de condições em suas operações do Platform é atingido (como um problema em potencial quando o sistema ultrapassa um limite), o Platform pode enviar mensagens de alerta a qualquer usuário em sua organização que se inscreveu neles. Essas mensagens podem se repetir em um intervalo predefinido até que o alerta seja resolvido.
 
@@ -41,7 +41,7 @@ Um alerta pode ser dividido nos seguintes componentes:
 
 | Componente | Descrição |
 | --- | --- |
-| **Métrica** | Uma capacidade de observação [métrica](../api/metrics.md#available-metrics) cujo valor aciona o alerta, como o número de eventos de assimilação de lote com falha (`timeseries.ingestion.dataset.batchfailed.count`). |
+| **Métrica** | Uma [métrica](../api/metrics.md#available-metrics) de Observability cujo valor aciona o alerta, como o número de eventos de assimilação em lote com falha (`timeseries.ingestion.dataset.batchfailed.count`). |
 | **Condição** | Uma condição relacionada à métrica que aciona o alerta se for resolvido como verdadeiro, como uma métrica de contagem que excede um determinado número. Essa condição pode ser associada a uma janela de tempo predefinida. |
 | **Janela** | (Opcional) A condição de um alerta pode ser restrita a uma janela de tempo predefinida. Por exemplo, um alerta pode ser disparado dependendo do número de lotes com falha nos últimos cinco minutos. |
 | **Ação** | Quando um alerta é acionado, uma ação é executada. Especificamente, as mensagens são enviadas aos recipients aplicáveis por meio de um canal de delivery, como um webhook pré-configurado ou a interface do usuário do Experience Platform. |
@@ -58,7 +58,7 @@ Os alertas podem ser recebidos e gerenciados por meio de dois canais:
 
 ### Eventos de E/S {#events}
 
-Os alertas podem ser enviados para um webhook configurado para facilitar a automação eficiente do monitoramento de atividades. Para receber alertas via webhook, você deve registrar o webhook para alertas da Platform no Console do Adobe Developer. Consulte o guia sobre [assinatura de notificações de Adobe I/O Event](./subscribe.md) para obter etapas específicas.
+Os alertas podem ser enviados para um webhook configurado para facilitar a automação eficiente do monitoramento de atividades. Para receber alertas via webhook, você deve registrar seu webhook para alertas da Platform no Adobe Developer Console. Consulte o manual sobre [assinatura de notificações de Adobe I/O](./subscribe.md) para obter etapas específicas.
 
 ### Interface do Platform {#ui}
 
@@ -71,19 +71,19 @@ Para trabalhar com alertas na interface do Platform, você deve ter as seguintes
 | Permissão | Descrição |
 | --- | --- |
 | Exibir alertas | Permite exibir as mensagens de alerta recebidas. |
-| Exibir histórico de alertas* | Permite visualizar um histórico de alertas recebidos por meio da [!UICONTROL Alertas] guia. |
-| Gerenciar alertas* | Permite ativar e desativar as regras de alerta por meio da [!UICONTROL Alertas] guia. |
-| Resolver alertas* | Permite resolver alertas acionados por meio da [!UICONTROL Alertas] guia. |
+| Exibir histórico de alertas* | Permite exibir um histórico de alertas recebidos através da guia [!UICONTROL Alertas]. |
+| Gerenciar alertas* | Permite habilitar e desabilitar regras de alerta através da guia [!UICONTROL Alertas]. |
+| Resolver alertas* | Permite resolver alertas acionados por meio da guia [!UICONTROL Alertas]. |
 
 {style="table-layout:auto"}
 
-**Para acessar o [!UICONTROL Alertas] , você também deve receber a permissão Exibir alertas em combinação com uma das outras permissões.*
+**Para acessar a guia [!UICONTROL Alertas], você também deve receber a permissão Exibir Alertas em combinação com uma das outras permissões.*
 
 >[!NOTE]
 >
 >Para obter mais informações sobre como gerenciar permissões na Platform, consulte a [documentação de controle de acesso](../../access-control/ui/overview.md).
 
-Com a permissão Exibir alertas, é possível exibir os alertas recebidos selecionando o ícone de sino (![Ícone de Campainha](../images/alerts/overview/icon.png)) no canto superior direito.
+Com a permissão Exibir Alertas, você pode exibir alertas recebidos selecionando o ícone de sino (![Ícone de sino](../images/alerts/overview/icon.png)) no canto superior direito.
 
 ![](../images/alerts/overview/ui.png)
 
@@ -91,7 +91,7 @@ Com a permissão Exibir alertas, é possível exibir os alertas recebidos seleci
 >
 > Selecione um alerta para navegar para um painel relacionado e obter informações mais detalhadas sobre por que o alerta foi acionado.
 
-Além disso, a [!UICONTROL Alertas] A guia na interface do permite que usuários individuais assinem tipos de alertas específicos e que os administradores ativem ou desativem as regras de alerta completamente. Consulte a [Guia da interface do usuário](./ui.md) para obter mais informações sobre o gerenciamento de alertas.
+Além disso, a guia [!UICONTROL Alertas] na interface do usuário permite que usuários individuais assinem tipos de alertas específicos e que os administradores habilitem ou desabilitem regras de alertas completamente. Consulte o [guia da interface](./ui.md) para obter mais informações sobre como gerenciar alertas.
 
 ## Próximas etapas
 

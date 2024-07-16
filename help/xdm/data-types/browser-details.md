@@ -7,11 +7,11 @@ exl-id: c67ff8bc-0614-4422-9bb7-689b98d7086d
 source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
 source-wordcount: '240'
-ht-degree: 7%
+ht-degree: 27%
 
 ---
 
-# [!UICONTROL Detalhes do navegador] tipo de dados
+# [!UICONTROL Tipo de dados de detalhes do navegador]
 
 [!UICONTROL Detalhes do navegador] é um tipo de dados XDM padrão que descreve detalhes relacionados a um navegador ou aplicativo.
 
@@ -19,10 +19,10 @@ ht-degree: 7%
 
 | Propriedade | Tipo de dados | Descrição |
 | --- | --- | --- |
-| `acceptLanguage` | String | Uma tag de idioma IETF ([RFC 5646](https://tools.ietf.org/html/rfc5646)). |
+| `acceptLanguage` | String | Uma marca de idioma IETF ([RFC 5646](https://tools.ietf.org/html/rfc5646)). |
 | `cookiesEnabled` | Booleano | Indica se as configurações do usuário permitem a gravação de cookies. |
 | `javaEnabled` | Booleano | Indica se o Java foi habilitado no dispositivo em que a observação foi feita. |
-| `javaScriptEnabled` | Booleano | Indica se o JavaScript foi habilitado no dispositivo em que a observação foi feita. |
+| `javaScriptEnabled` | Booleano | Indica se o JavaScript foi habilitado no dispositivo do qual a observação foi feita. |
 | `javaScriptVersion` | String | A versão do JavaScript compatível durante a observação. |
 | `javaVersion` | String | A versão do Java compatível com a observação. |
 | `name` | String | O nome do aplicativo ou navegador. |

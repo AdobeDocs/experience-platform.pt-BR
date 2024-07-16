@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # `onBeforeEventSend`
 
-A variável `onBeforeEventSend` O retorno de chamada permite registrar uma função JavaScript que pode alterar os dados enviados antes que esses dados sejam enviados para o Adobe. Esse retorno de chamada permite manipular a variável `xdm` ou `data` incluindo a capacidade de adicionar, editar ou remover elementos. Você também pode cancelar condicionalmente o envio de dados, como com o tráfego de bot do lado do cliente detectado.
+O retorno de chamada `onBeforeEventSend` permite registrar uma função JavaScript que pode alterar os dados enviados antes que esses dados sejam enviados ao Adobe. Este retorno de chamada permite manipular o objeto `xdm` ou `data`, incluindo a capacidade de adicionar, editar ou remover elementos. Você também pode cancelar condicionalmente o envio de dados, como com o tráfego de bot do lado do cliente detectado.
 
 >[!WARNING]
 >
@@ -19,24 +19,24 @@ A variável `onBeforeEventSend` O retorno de chamada permite registrar uma funç
 
 ## Configure em antes do retorno de chamada do envio do evento usando a extensão de tag do SDK da Web {#tag-extension}
 
-Selecione o **[!UICONTROL Fornecer código de retorno de chamada antes do envio do evento]** botão quando [configuração da extensão de tag](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md). Esse botão abre uma janela modal onde você pode inserir o código desejado.
+Selecione o botão **[!UICONTROL Fornecer antes do envio do evento do código de retorno de chamada]** ao [configurar a extensão de marca](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md). Esse botão abre uma janela modal onde você pode inserir o código desejado.
 
-1. Efetue logon no [experience.adobe.com](https://experience.adobe.com) usando suas credenciais do Adobe ID.
-1. Navegue até **[!UICONTROL Coleta de dados]** > **[!UICONTROL Tags]**.
+1. Faça logon em [experience.adobe.com](https://experience.adobe.com) usando suas credenciais da Adobe ID.
+1. Navegue até **[!UICONTROL Coleção de dados]** > **[!UICONTROL Marcas]**.
 1. Selecione a propriedade de tag desejada.
-1. Navegue até **[!UICONTROL Extensões]** e, em seguida, clique em **[!UICONTROL Configurar]** no [!UICONTROL Adobe Experience Platform Web SDK] cartão.
-1. Role para baixo até [!UICONTROL Coleta de dados] e selecione o botão **[!UICONTROL Fornecer código de retorno de chamada antes do envio do evento]**.
+1. Navegue até **[!UICONTROL Extensões]** e clique em **[!UICONTROL Configurar]** no cartão [!UICONTROL Adobe Experience Platform Web SDK].
+1. Role para baixo até a seção [!UICONTROL Coleção de dados] e selecione o botão **[!UICONTROL Fornecer antes do código de retorno de chamada de envio do evento]**.
 1. Esse botão abre uma janela modal com um editor de código. Insira o código desejado e clique em **[!UICONTROL Salvar]** para fechar a janela modal.
-1. Clique em **[!UICONTROL Salvar]** em configurações de extensão, publique as alterações.
+1. Clique em **[!UICONTROL Salvar]** nas configurações de extensão e publique suas alterações.
 
 No editor de código, você tem acesso às seguintes variáveis:
 
-* **`content.xdm`**: A variável [XDM](../sendevent/xdm.md) carga útil do evento.
-* **`content.data`**: A variável [dados](../sendevent/data.md) carga útil do objeto para o evento.
-* **`return true`**: saia imediatamente do retorno de chamada e envie dados para o Adobe com os valores atuais na `content` objeto.
-* **`return false`**: saia imediatamente do retorno de chamada e interrompa o envio de dados para o Adobe.
+* **`content.xdm`**: a carga [XDM](../sendevent/xdm.md) para o evento.
+* **`content.data`**: a carga do objeto [data](../sendevent/data.md) para o evento.
+* **`return true`**: Saia imediatamente do retorno de chamada e envie dados para o Adobe com os valores atuais no objeto `content`.
+* **`return false`**: Saia imediatamente do retorno de chamada e interrompa o envio de dados para o Adobe.
 
-Quaisquer variáveis definidas fora do `content` podem ser usados, mas não estão incluídos na carga útil enviada para o Adobe.
+Qualquer variável definida fora de `content` pode ser usada, mas não está incluída na carga enviada para o Adobe.
 
 ```js
 // Use nullish coalescing assignments to add objects if they don't yet exist
@@ -64,11 +64,11 @@ if (myBotDetector.isABot()) {
 ```
 
 >[!TIP]
->Evite retornar `false` no primeiro evento em uma página. Retornando `false` no primeiro evento pode afetar negativamente a personalização.
+>Evite retornar `false` no primeiro evento da página. Retornar `false` no primeiro evento pode afetar negativamente a personalização.
 
 ## Configure em antes do evento enviar retorno de chamada usando a biblioteca JavaScript do SDK da Web {#library}
 
-Registre o `onBeforeEventSend` retorno de chamada ao executar o `configure` comando. Você pode alterar a `content` Variable name para qualquer valor desejado alterando a variável de parâmetro dentro da função inline.
+Registre o retorno de chamada `onBeforeEventSend` ao executar o comando `configure`. Você pode alterar o nome da variável `content` para qualquer valor desejado alterando a variável de parâmetro dentro da função embutida.
 
 ```js
 alloy("configure", {

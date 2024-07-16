@@ -6,8 +6,8 @@ description: Este documento fornece etapas sobre como usar seu ambiente local pa
 exl-id: 4cc89d1d-bc42-473d-ba54-ab3d1a2cd0d6
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '640'
-ht-degree: 3%
+source-wordcount: '600'
+ht-degree: 0%
 
 ---
 
@@ -17,83 +17,83 @@ Este documento fornece etapas sobre como usar seu ambiente local para criar docu
 
 >[!TIP]
 >
->Os seguintes documentos do guia de contribuição do Adobe podem ser usados para apoiar ainda mais o processo de documentação: <ul><li>[Instale as ferramentas de criação do Git e do Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html)</li><li>[Configurar o repositório Git localmente para a documentação](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html)</li><li>[Fluxo de trabalho de contribuição do GitHub para grandes alterações](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html)</li></ul>
+>Os seguintes documentos do guia de contribuição do Adobe podem ser usados para apoiar ainda mais o processo de documentação: <ul><li>[Instalar as ferramentas de criação do Git e do Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html)</li><li>[Configurar o repositório Git localmente para a documentação](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html)</li><li>[Fluxo de trabalho de contribuição do GitHub para grandes alterações](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html)</li></ul>
 
 ## Pré-requisitos
 
-O tutorial a seguir requer que o GitHub Desktop esteja instalado em sua máquina local. Se você não tiver o GitHub Desktop, é possível baixar o aplicativo [aqui](https://desktop.github.com/).
+O tutorial a seguir requer que o GitHub Desktop esteja instalado em sua máquina local. Se você não tiver o GitHub Desktop, poderá baixar o aplicativo [aqui](https://desktop.github.com/).
 
 ## Conectar-se ao GitHub e configurar o ambiente de criação local
 
-A primeira etapa na configuração do ambiente de criação local é navegar até o [Repositório GitHub do Adobe Experience Platform](https://github.com/AdobeDocs/experience-platform.en).
+A primeira etapa na configuração do seu ambiente de criação local é navegar até o [repositório do GitHub da Adobe Experience Platform](https://github.com/AdobeDocs/experience-platform.en).
 
-![platform-repo](../assets/platform-repo.png)
+![repositório-plataforma](../assets/platform-repo.png)
 
-Na página principal do repositório GitHub da Platform, selecione **Bifurcar**.
+Na página principal do repositório GitHub da Platform, selecione **Fork**.
 
 ![bifurcação](../assets/fork.png)
 
-Para clonar o repositório no computador local, selecione **Código**. No menu suspenso exibido, selecione **HTTPS** e selecione **Abrir com o GitHub Desktop**.
+Para clonar o repositório no computador local, selecione **Código**. No menu suspenso exibido, selecione **HTTPS** e, em seguida, **Abrir com o GitHub Desktop**.
 
 >[!TIP]
 >
->Para obter mais informações, consulte o tutorial em [configuração do repositório Git localmente para a documentação](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html#create-a-local-clone-of-the-repository).
+>Para obter mais informações, consulte o tutorial sobre [configuração do repositório Git localmente para a documentação](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html#create-a-local-clone-of-the-repository).
 
 ![open-git-desktop](../assets/open-git-desktop.png)
 
-Em seguida, aguarde alguns instantes para que o GitHub Desktop clone o `experience-platform.en` repositório.
+Em seguida, aguarde alguns instantes para que o GitHub Desktop clone o repositório `experience-platform.en`.
 
 ![clonagem](../assets/cloning.png)
 
-Quando o processo de clonagem for concluído, vá para o GitHub Desktop para criar uma nova ramificação. Selecionar **Principal** no início da navegação e selecione **Nova ramificação**
+Quando o processo de clonagem for concluído, vá para o GitHub Desktop para criar uma nova ramificação. Selecione **Mestre** na navegação superior e selecione **Nova ramificação**
 
-![nova ramificação](../assets/new-branch.png)
+![nova-ramificação](../assets/new-branch.png)
 
 No painel pop-over exibido, digite um nome descritivo para a ramificação e selecione **Criar ramificação**.
 
-![create-branch-vs](../assets/create-branch-vs.png)
+![criar-ramificação-vs](../assets/create-branch-vs.png)
 
-Em seguida, selecione **Publicar ramificação**.
+Em seguida, selecione **Publish branch**.
 
 ![publicar-ramificação](../assets/publish-branch.png)
 
 ## Crie a página de documentação da sua fonte
 
-Com o repositório clonado no computador local e uma nova ramificação criada, agora é possível começar a criar a página de documentação para sua nova fonte por meio da [editor de texto de sua escolha](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html#understand-markdown-editors).
+Com o repositório clonado em sua máquina local e uma nova ramificação criada, agora é possível começar a criar a página de documentação para sua nova fonte por meio do [editor de texto de sua escolha](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html#understand-markdown-editors).
 
-O Adobe recomenda usar [Código do Visual Studio](https://code.visualstudio.com/) e que você instale a extensão Adobe Markdown Authoring. Para instalar a extensão, inicie o Visual Studio Code e selecione o **Extensões** do menu de navegação esquerdo.
+A Adobe recomenda o uso do [Visual Studio Code](https://code.visualstudio.com/) e a instalação da extensão Adobe Markdown Authoring. Para instalar a extensão, inicie o Visual Studio Code e selecione a guia **Extensões** no menu de navegação esquerdo.
 
 ![ extensão](../assets/extension.png)
 
-Em seguida, insira `Adobe Markdown Authoring` na barra de pesquisa e selecione **Instalar** na página exibida.
+Em seguida, digite `Adobe Markdown Authoring` na barra de pesquisa e selecione **Instalar** na página exibida.
 
 ![instalar](../assets/install.png)
 
-Com o computador local pronto, baixe o [modelo de documentação de origens](../assets/api-template.zip) e extrair o arquivo para `experience-platform.en/help/sources/tutorials/api/create/...` com [`...`] representando a categoria de sua escolha. Por exemplo, se você estiver criando uma origem de banco de dados, selecione a pasta do banco de dados.
+Com o computador local pronto, baixe o [modelo de documentação de origem](../assets/api-template.zip) e extraia o arquivo para `experience-platform.en/help/sources/tutorials/api/create/...`, com [`...`] representando a categoria de sua escolha. Por exemplo, se você estiver criando uma origem de banco de dados, selecione a pasta do banco de dados.
 
 Por fim, siga as instruções descritas no modelo e edite-o com as informações relevantes relacionadas à sua fonte.
 
-![edit-template](../assets/edit-template.png)
+![editar-modelo](../assets/edit-template.png)
 
 ## Envie sua documentação para revisão
 
-Para criar uma solicitação de pull (PR) e enviar sua documentação para revisão, primeiro salve seu trabalho no [!DNL Visual Studio Code] (ou o editor de texto escolhido). Em seguida, usando o GitHub Desktop, insira uma mensagem de confirmação e selecione **Confirmar criação-origem-documentação**.
+Para criar uma solicitação de pull (PR) e enviar sua documentação para revisão, primeiro salve seu trabalho em [!DNL Visual Studio Code] (ou no editor de texto escolhido). Em seguida, usando o GitHub Desktop, insira uma mensagem de confirmação e selecione **Confirmar para criar-origem-documentação**.
 
-![commit-vs](../assets/commit-vs.png)
+![confirmação-vs](../assets/commit-vs.png)
 
 Em seguida, selecione **Origem de push** para carregar seu trabalho na ramificação remota.
 
-![push-origin](../assets/push-origin.png)
+![origem de push](../assets/push-origin.png)
 
 Para criar uma solicitação de pull, selecione **Criar solicitação de pull**.
 
 ![create-pr-vs](../assets/create-pr-vs.png)
 
-Certifique-se de que as ramificações base e de comparação estejam corretas. Adicione uma observação à PR, descrevendo a atualização e selecione **Criar pull request**. Isso abre uma PR para mesclar a ramificação de trabalho do seu trabalho na ramificação mestre do repositório Adobe.
+Certifique-se de que as ramificações base e de comparação estejam corretas. Adicione uma observação à PR, descrevendo sua atualização e selecione **Criar solicitação de pull**. Isso abre uma PR para mesclar a ramificação de trabalho do seu trabalho na ramificação mestre do repositório Adobe.
 
 >[!TIP]
 >
->Deixe a **Permitir edições pelos mantenedores** caixa de seleção marcada para garantir que a equipe de documentação do Adobe possa fazer edições na PR.
+>Deixe marcada a caixa de seleção **Permitir edições pelos mantenedores** para garantir que a equipe de documentação do Adobe possa fazer edições na PR.
 
 ![create-pr](../assets/create-pr.png)
 

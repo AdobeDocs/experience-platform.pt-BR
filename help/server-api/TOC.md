@@ -19,15 +19,15 @@ ht-degree: 63%
 * [Visão geral](overview.md)
 * [Medidas de proteção de desempenho](guardrails.md)
 * [Autenticação](authentication.md)
-* Coleta de dados {#data-collection}
+* Coleção de dados {#data-collection}
    * [Coleta de dados de evento único](interactive-data-collection.md)
    * [Coleta de dados do evento em lote](non-interactive-data-collection.md)
-* Interação com outras soluções de Adobe {#interacting-other-adobe-solutions}
+* Interagindo com outras soluções de Adobe {#interacting-other-adobe-solutions}
    * [Interação com o Adobe Analytics](interacting-adobe-analytics.md)
 * Personalização {#personalization}
-   * [Visão geral da personalização](personalization-overview.md)
-   * [Personalização via Adobe Target](personalization-target.md)
-   * [Personalização via Offer Decisioning](personalization-offer-decisioning.md)
+   * [Visão geral do Personalization](personalization-overview.md)
+   * [Personalization via Adobe Target](personalization-target.md)
+   * [Personalization via Offer Decisioning](personalization-offer-decisioning.md)
 * [Dicas de localização](location-hints.md)
 * [Tratamento de erros](error-handling.md)
 * [Solução de problemas](troubleshooting.md)

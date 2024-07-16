@@ -1,48 +1,49 @@
 ---
-title: Criar um [!DNL Oracle NetSuite Activities] conexão de origem na interface
+title: Criar uma conexão de origem  [!DNL Oracle NetSuite Activities]  na interface
 description: Saiba como criar uma conexão de origem de atividades do Oracle NetSuite usando a interface do usuário do Adobe Experience Platform.
 hide: true
 hidefromtoc: true
 badge: Beta
-source-git-commit: 053cf0af327b39830f025686e0f8f67c27f1c45c
+exl-id: 99ef0b50-c8d6-48d6-895f-46b7ade47520
+source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
 source-wordcount: '618'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
-# Criar um [!DNL Oracle NetSuite Activities] conexão de origem na interface
+# Criar uma conexão de origem [!DNL Oracle NetSuite Activities] na interface
 
 >[!NOTE]
 >
->A variável [!DNL Oracle NetSuite Activities] a fonte está na versão beta. Consulte a [visão geral das origens](../../../../home.md#terms-and-conditions) para obter mais informações sobre o uso de fontes rotuladas como beta.
+>A origem [!DNL Oracle NetSuite Activities] está na versão beta. Consulte a [visão geral das fontes](../../../../home.md#terms-and-conditions) para obter mais informações sobre o uso de fontes com rótulo beta.
 
-Leia o tutorial a seguir para saber como trazer dados de eventos de sua [!DNL Oracle NetSuite Activities] para o Adobe Experience Platform na interface do usuário.
+Leia o tutorial a seguir para saber como trazer dados de eventos da sua conta do [!DNL Oracle NetSuite Activities] para a Adobe Experience Platform na interface do usuário.
 
 ## Introdução {#getting-started}
 
 Este tutorial requer um entendimento prático dos seguintes componentes do Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): o quadro normalizado pelo qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
-   * [Noções básicas da composição do esquema](../../../../../xdm/schema/composition.md): saiba mais sobre os componentes básicos dos esquemas XDM, incluindo princípios fundamentais e práticas recomendadas na composição do esquema.
+* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): a estrutura padronizada pela qual o [!DNL Experience Platform] organiza os dados de experiência do cliente.
+   * [Noções básicas sobre a composição de esquema](../../../../../xdm/schema/composition.md): saiba mais sobre os blocos de construção básicos de esquemas XDM, incluindo princípios-chave e práticas recomendadas na composição de esquema.
    * [Tutorial do Editor de esquemas](../../../../../xdm/tutorials/create-schema-ui.md): saiba como criar esquemas personalizados usando a interface do Editor de esquemas.
-* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): fornece um perfil de consumidor unificado em tempo real com base em dados agregados de várias fontes.
+* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Fornece um perfil de consumidor unificado em tempo real com base em dados agregados de várias fontes.
 
-Se você já tiver um [!DNL Oracle NetSuite] conta, você pode ignorar o restante deste documento e prosseguir para o tutorial em [configuração de um fluxo de dados](../../dataflow/marketing-automation.md).
+Se você já tiver uma conta válida do [!DNL Oracle NetSuite], ignore o restante deste documento e prossiga para o tutorial em [configurando um fluxo de dados](../../dataflow/marketing-automation.md).
 
 >[!TIP]
 >
->Leia o [[!DNL Oracle NetSuite] visão geral](../../../../connectors/marketing-automation/oracle-netsuite.md) para obter informações sobre como recuperar suas credenciais de autenticação.
+>Leia a [[!DNL Oracle NetSuite] visão geral](../../../../connectors/marketing-automation/oracle-netsuite.md) para obter informações sobre como recuperar suas credenciais de autenticação.
 
-## Conecte seu [!DNL Oracle NetSuite] account {#connect-account}
+## Conectar sua conta do [!DNL Oracle NetSuite] {#connect-account}
 
-Na interface do usuário da Platform, selecione **[!UICONTROL Origens]** na navegação à esquerda, para acessar a [!UICONTROL Origens] espaço de trabalho. Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar a fonte específica com a qual deseja trabalhar usando a opção de pesquisa.
+Na interface da Platform, selecione **[!UICONTROL Fontes]** na navegação à esquerda para acessar o espaço de trabalho [!UICONTROL Fontes]. Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar a fonte específica com a qual deseja trabalhar usando a opção de pesquisa.
 
-No *Automação de marketing* categoria, selecione **[!DNL Oracle NetSuite Activities]** e selecione **[!UICONTROL Adicionar dados]**.
+Na categoria *Automação de Marketing*, selecione **[!DNL Oracle NetSuite Activities]** e **[!UICONTROL Adicionar dados]**.
 
 ![Captura de tela da interface do usuário da plataforma para catálogo com o cartão de Atividades do Oracle NetSuite](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-activities/catalog-card.png)
 
-A variável **[!UICONTROL Conectar a conta de atividades do Oracle NetSuite]** é exibida. Nesta página, você pode usar credenciais novas ou existentes.
+A página **[!UICONTROL Conectar conta de Atividades NetSuite do Oracle]** é exibida. Nesta página, você pode usar credenciais novas ou existentes.
 
 >[!IMPORTANT]
 >
@@ -50,42 +51,42 @@ A variável **[!UICONTROL Conectar a conta de atividades do Oracle NetSuite]** �
 
 ### Conta existente {#existing-account}
 
-Para usar uma conta existente, selecione a variável [!DNL Oracle NetSuite Activities] conta com a qual deseja criar um novo fluxo de dados e selecione **[!UICONTROL Próxima]** para continuar.
+Para usar uma conta existente, selecione a conta [!DNL Oracle NetSuite Activities] com a qual deseja criar um novo fluxo de dados e clique em **[!UICONTROL Avançar]** para continuar.
 
-![Captura de tela da interface do usuário da plataforma para conectar a conta de atividades do Oracle NetSuite a uma conta existente](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-activities/existing.png)
+![Captura de tela da interface do usuário da plataforma para conectar a conta de Atividades do Oracle NetSuite a uma conta existente](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-activities/existing.png)
 
 ### Nova conta {#new-account}
 
-Se estiver criando uma nova conta, selecione **[!UICONTROL Nova conta]** e forneça um nome, uma descrição opcional e suas credenciais. Quando terminar, selecione **[!UICONTROL Conectar à origem]** e aguarde algum tempo para estabelecer a nova conexão.
+Se você estiver criando uma nova conta, selecione **[!UICONTROL Nova conta]** e forneça um nome, uma descrição opcional e suas credenciais. Quando terminar, selecione **[!UICONTROL Conectar à origem]** e aguarde algum tempo para que a nova conexão seja estabelecida.
 
-![Captura de tela da interface do usuário da plataforma para conectar a conta de atividades do Oracle NetSuite a uma nova conta](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-activities/new.png)
+![Captura de tela da interface do usuário da plataforma para conectar a conta de Atividades do Oracle NetSuite a uma nova conta](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-activities/new.png)
 
 ## Próximas etapas {#next-steps}
 
-Ao seguir este tutorial, você estabeleceu uma conexão com o seu [!DNL Oracle NetSuite Activities] conta. Agora você pode seguir para o próximo tutorial e [configurar um fluxo de dados para trazer dados para a Platform](../../dataflow/marketing-automation.md).
+Seguindo este tutorial, você estabeleceu uma conexão com sua conta do [!DNL Oracle NetSuite Activities]. Agora você pode seguir para o próximo tutorial e [configurar um fluxo de dados para trazer dados para a Platform](../../dataflow/marketing-automation.md).
 
 ## Recursos adicionais {#additional-resources}
 
-As seções abaixo fornecem recursos adicionais que você pode consultar ao usar o [!DNL Oracle NetSuite Activities] origem.
+As seções abaixo fornecem recursos adicionais que você pode consultar ao usar a origem [!DNL Oracle NetSuite Activities].
 
 ### Mapeamento {#mapping}
 
-A Platform fornece recomendações inteligentes para campos mapeados automaticamente com base no esquema ou conjunto de dados de destino selecionado. Você pode ajustar manualmente as regras de mapeamento para atender aos seus casos de uso. Com base nas suas necessidades, você pode optar por mapear campos diretamente ou usar funções de preparação de dados para transformar dados de origem para derivar valores calculados ou calculados. Para obter etapas abrangentes sobre o uso da interface do mapeador e campos calculados, consulte o [Guia da interface de preparação de dados](../../../../../data-prep/ui/mapping.md).
+A Platform fornece recomendações inteligentes para campos mapeados automaticamente com base no esquema ou conjunto de dados de destino selecionado. Você pode ajustar manualmente as regras de mapeamento para atender aos seus casos de uso. Com base nas suas necessidades, você pode optar por mapear campos diretamente ou usar funções de preparação de dados para transformar dados de origem para derivar valores calculados ou calculados. Para obter etapas abrangentes sobre como usar a interface do mapeador e campos calculados, consulte o [Guia da Interface do Preparo de Dados](../../../../../data-prep/ui/mapping.md).
 
 >[!NOTE]
 >
->Os campos exibidos dependem das assinaturas que o seu [!DNL Oracle NetSuite] conta tem acesso a. Por exemplo, se você não tiver acesso a faturamento, não verá os campos relacionados a faturamento.
+>Os campos exibidos dependem das assinaturas às quais a conta do [!DNL Oracle NetSuite] tem acesso. Por exemplo, se você não tiver acesso a faturamento, não verá os campos relacionados a faturamento.
 
-### Agendamento {#scheduling}
+### Agendando {#scheduling}
 
-Ao agendar sua [!DNL Oracle NetSuite Activities] fluxo de dados para assimilação, você deve selecionar a seguinte configuração de frequência e intervalo:
+Ao agendar o fluxo de dados do [!DNL Oracle NetSuite Activities] para assimilação, você deve selecionar a seguinte configuração de frequência e intervalo:
 
-| Frequência | Interval |
+| Frequência | Intervalo |
 | --- | --- |
 | `Once` | 1 |
 
-Ao recuperar dados, a variável [!DNL Oracle NetSuite] responde com a última data modificada ou criada como um formato de data em vez de um carimbo de data e hora. Assim, o cronograma é limitado a um dia.
+Ao recuperar os dados, o [!DNL Oracle NetSuite] responde com a última data modificada ou criada como um formato de data em vez de um carimbo de data e hora. Assim, o cronograma é limitado a um dia.
 
-Depois de fornecer os valores para o cronograma, selecione **[!UICONTROL Próxima]**.
+Depois de fornecer os valores para o seu agendamento, selecione **[!UICONTROL Avançar]**.
 
-![A etapa de agendamento do fluxo de trabalho de origens.](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-activities/scheduling.png)
+![A etapa de agendamento do fluxo de trabalho de fontes.](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-activities/scheduling.png)

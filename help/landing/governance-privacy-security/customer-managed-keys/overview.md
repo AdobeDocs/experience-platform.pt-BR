@@ -21,19 +21,19 @@ Este documento fornece uma visão geral de alto nível do processo de ativação
 
 >[!NOTE]
 >
->Para clientes do Customer Journey Analytics, siga as instruções no [Documentação do Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-privacy/cmk.html?lang=pt-BR).
+>Para clientes do Customer Journey Analytics, siga as instruções na [documentação do Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-privacy/cmk.html?lang=pt-BR).
 
 ## Pré-requisitos
 
-Para visualizar e visitar o [!UICONTROL Criptografia] no Adobe Experience Platform, você deve ter criado uma função e atribuído a [!UICONTROL Gerenciar Chave Gerenciada Pelo Cliente] permissão para essa função. Qualquer usuário que tenha o [!UICONTROL Gerenciar Chave Gerenciada Pelo Cliente] permissão pode habilitar o CMK para sua organização.
+Para exibir e visitar a seção [!UICONTROL Criptografia] no Adobe Experience Platform, você deve ter criado uma função e atribuído a permissão [!UICONTROL Gerenciar chave gerenciada pelo cliente] a essa função. Qualquer usuário com a permissão [!UICONTROL Gerenciar Chave gerenciada pelo cliente] pode habilitar o CMK para sua organização.
 
-Para obter mais informações sobre atribuição de funções e permissões no Experience Platform, consulte o [configurar documentação de permissões](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html).
+Para obter mais informações sobre atribuição de funções e permissões no Experience Platform, consulte a [documentação sobre configuração de permissões](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html).
 
-Para habilitar o CMK, seu [!DNL Azure] O Cofre da Chave deve ser configurado com as seguintes configurações:
+Para habilitar o CMK, o Cofre de Chaves do [!DNL Azure] deve ser configurado com as seguintes configurações:
 
-* [Habilitar proteção contra limpeza](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview#purge-protection)
+* [Habilitar proteção para limpeza](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview#purge-protection)
 * [Habilitar exclusão reversível](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview)
-* [Configure o acesso usando [!DNL Azure] controle de acesso baseado em função](https://learn.microsoft.com/en-us/azure/role-based-access-control/)
+* [Configurar acesso usando [!DNL Azure] controle de acesso baseado em função](https://learn.microsoft.com/en-us/azure/role-based-access-control/)
 
 Leia a documentação vinculada para entender melhor o processo.
 
@@ -43,31 +43,31 @@ A CMK está incluída nas ofertas Healthcare Shield e Privacy and Security Shiel
 
 >[!WARNING]
 >
->Após configurar o CMK, não é possível reverter para chaves gerenciadas pelo sistema. Você é responsável por gerenciar com segurança suas chaves e fornecer acesso ao Cofre da chave, Chave e aplicativo CMK no [!DNL Azure] para evitar a perda de acesso aos seus dados.
+>Após configurar o CMK, não é possível reverter para chaves gerenciadas pelo sistema. Você é responsável por gerenciar com segurança suas chaves e fornecer acesso ao Cofre da Chave, Chave e aplicativo CMK no [!DNL Azure] para evitar a perda de acesso aos seus dados.
 
 O processo é o seguinte:
 
-1. [Configurar um [!DNL Azure] Cofre da Chave](./azure-key-vault-config.md) com base nas políticas de sua organização, em seguida [gerar uma chave de criptografia](./azure-key-vault-config.md#generate-a-key) que será compartilhado com o Adobe.
-1. Configure o aplicativo CMK com seu [!DNL Azure] inquilino por meio de [Chamadas de API](./api-set-up.md#register-app) ou o [IU](./ui-set-up.md#register-app).
-1. Envie sua ID de chave de criptografia para o Adobe e inicie o processo de ativação do recurso [na interface](./ui-set-up.md#send-to-adobe) ou com um [Chamada de API](./api-set-up.md#send-to-adobe).
-1. Verifique o status da configuração para verificar se o CMK foi ativado [na interface](./ui-set-up.md#check-status) ou com um [Chamada de API](./api-set-up.md#check-status).
+1. [Configure um [!DNL Azure] Cofre de Chaves](./azure-key-vault-config.md) com base nas políticas da sua organização e [gere uma chave de criptografia](./azure-key-vault-config.md#generate-a-key) que será compartilhada com o Adobe.
+1. Configure o aplicativo CMK com seu locatário [!DNL Azure] por meio de [chamadas de API](./api-set-up.md#register-app) ou da [interface](./ui-set-up.md#register-app).
+1. Envie sua ID de chave de criptografia para o Adobe e inicie o processo de habilitação do recurso [na interface](./ui-set-up.md#send-to-adobe) ou com uma [chamada de API](./api-set-up.md#send-to-adobe).
+1. Verifique o status da configuração para verificar se o CMK foi habilitado [na interface](./ui-set-up.md#check-status) ou com uma [chamada de API](./api-set-up.md#check-status).
 
-Quando o processo de configuração estiver concluído, todos os dados integrados na Platform em todas as sandboxes serão criptografados usando o [!DNL Azure] configuração de chave. Para usar CMK, você aproveitará [!DNL Microsoft Azure] funcionalidade que pode fazer parte do seu [programa de visualização pública](https://azure.microsoft.com/en-ca/support/legal/preview-supplemental-terms/).
+Quando o processo de configuração estiver concluído, todos os dados integrados na Platform em todas as sandboxes serão criptografados usando a configuração de chave do [!DNL Azure]. Para usar o CMK, você aproveitará a funcionalidade [!DNL Microsoft Azure] que pode fazer parte do [programa de visualização pública](https://azure.microsoft.com/en-ca/support/legal/preview-supplemental-terms/).
 
 ## Revogar acesso {#revoke-access}
 
-Se quiser revogar o acesso do Platform aos seus dados, você poderá remover a função de usuário associada à aplicação do cofre de chaves no [!DNL Azure].
+Se quiser revogar o acesso da Platform aos seus dados, você poderá remover a função de usuário associada ao aplicativo do cofre de chaves no [!DNL Azure].
 
 >[!WARNING]
 >
 >Desabilitar o cofre de chaves, a Chave ou o aplicativo CMK pode resultar em uma mudança radical. Quando o cofre de chaves, a chave ou o aplicativo CMK estiverem desativados e os dados não estiverem mais acessíveis na Platform, nenhuma operação downstream relacionada a esses dados será mais possível. Certifique-se de entender os impactos de downstream da revogação do acesso da Platform à sua chave antes de fazer alterações na configuração.
 
-Após remover o acesso à chave ou desabilitar/excluir a chave do [!DNL Azure] cofre de chaves, pode levar de alguns minutos a 24 horas para que essa configuração se propague para os armazenamentos de dados principais. Os fluxos de trabalho da plataforma também incluem armazenamentos de dados em cache e transitórios, necessários para o desempenho e a funcionalidade principal do aplicativo. A propagação da revogação de CMK por meio desses armazenamentos em cache e transitórios pode levar até sete dias, conforme determinado por seus workflows de processamento de dados. Por exemplo, isso significa que o painel Perfil manteria e exibiria dados de seu armazenamento de dados em cache e levaria sete dias para expirar os dados mantidos nos armazenamentos de dados em cache como parte do ciclo de atualização. O mesmo atraso se aplica para que os dados fiquem disponíveis novamente ao reativar o acesso ao aplicativo.
+Após remover o acesso à chave ou desabilitar/excluir a chave do cofre de chaves do [!DNL Azure], pode levar de alguns minutos a 24 horas para que essa configuração se propague para os armazenamentos de dados principais. Os fluxos de trabalho da plataforma também incluem armazenamentos de dados em cache e transitórios, necessários para o desempenho e a funcionalidade principal do aplicativo. A propagação da revogação de CMK por meio desses armazenamentos em cache e transitórios pode levar até sete dias, conforme determinado por seus workflows de processamento de dados. Por exemplo, isso significa que o painel Perfil manteria e exibiria dados de seu armazenamento de dados em cache e levaria sete dias para expirar os dados mantidos nos armazenamentos de dados em cache como parte do ciclo de atualização. O mesmo atraso se aplica para que os dados fiquem disponíveis novamente ao reativar o acesso ao aplicativo.
 
 >[!NOTE]
 >
->Há duas exceções específicas de caso de uso para a expiração do conjunto de dados de sete dias em dados não primários (em cache/transitórios). Consulte a respectiva documentação para obter mais informações sobre esses recursos.<ul><li>[Encurtador de URL do Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/sms/sms-configuration.html#message-preset-sms)</li><li>[Projeções de borda](https://experienceleague.adobe.com/docs/experience-platform/profile/home.html#edge-projections)</li></ul>
+>Há duas exceções específicas de caso de uso para a expiração do conjunto de dados de sete dias em dados não primários (em cache/transitórios). Consulte a respectiva documentação para obter mais informações sobre esses recursos.<ul><li>[Encurtador de URL do Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/sms/sms-configuration.html?lang=pt-BR#message-preset-sms)</li><li>[Projeções do Edge](https://experienceleague.adobe.com/docs/experience-platform/profile/home.html#edge-projections)</li></ul>
 
 ## Próximas etapas
 
-Para iniciar o processo, comece em [configurar um [!DNL Azure] Cofre da Chave](./azure-key-vault-config.md) e [gerar uma chave de criptografia](./azure-key-vault-config.md#generate-a-key) para compartilhar com o Adobe.
+Para iniciar o processo, comece [configurando um [!DNL Azure] Cofre de Chaves](./azure-key-vault-config.md) e [gerando uma chave de criptografia](./azure-key-vault-config.md#generate-a-key) para compartilhar com o Adobe.

@@ -2,7 +2,7 @@
 title: Endpoint da API de conteúdo
 description: Saiba como recuperar seus dados de acesso usando a API do Privacy Service.
 role: Developer
-badgePrivateBeta: label="Beta privado" type="Informative"
+badgePrivateBeta: label="Private Beta" type="Informative"
 exl-id: b3b7ea0f-957d-4e51-bf92-121e9ae795f5
 source-git-commit: e3a453ad166fe244b82bd1f90e669579fcf09d17
 workflow-type: tm+mt
@@ -15,19 +15,19 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->A variável `/content` o endpoint está atualmente na versão beta e sua organização pode ainda não ter acesso a ele. A funcionalidade e a documentação estão sujeitas a alterações.
+>O ponto de extremidade `/content` está atualmente na versão beta e sua organização pode ainda não ter acesso a ele. A funcionalidade e a documentação estão sujeitas a alterações.
 
-Use o `/content` endpoint para recuperar com segurança *informações de acesso* (as informações que um titular de privacidade pode solicitar legitimamente para acessar) para seus clientes. O URL de download fornecido na resposta a uma `/jobs/{JOB_ID}` A solicitação do GET aponta para um ponto de acesso de serviço da Adobe. Em seguida, você pode fazer uma solicitação GET para `/jobs/:JOB_ID/content` para retornar os dados do cliente no formato JSON. Esse método de acesso implementa várias camadas de autenticação e controle de acesso para melhorar a segurança.
+Use o ponto de extremidade `/content` para recuperar com segurança as *informações de acesso* (as informações que um titular de privacidade pode solicitar para acessar com direito) de seus clientes. A URL de download fornecida na resposta a uma solicitação do GET `/jobs/{JOB_ID}` aponta para um ponto de extremidade de serviço da Adobe. Você pode fazer uma solicitação GET a `/jobs/:JOB_ID/content` para retornar os dados do cliente no formato JSON. Esse método de acesso implementa várias camadas de autenticação e controle de acesso para melhorar a segurança.
 
-Antes de usar este guia, consulte o [guia de introdução](./getting-started.md) para obter informações sobre os cabeçalhos de autenticação necessários, apresentados na chamada de API de exemplo abaixo.
+Antes de usar este guia, consulte o [guia de introdução](./getting-started.md) para obter informações sobre os cabeçalhos de autenticação necessários apresentados na chamada de API de exemplo abaixo.
 
 >[!TIP]
 >
->Se, atualmente, você não souber a ID do trabalho para as informações de acesso necessárias, faça uma chamada para o `/jobs` e use parâmetros de consulta adicionais para filtrar os resultados. Uma lista completa dos parâmetros de consulta disponíveis pode ser encontrada no [manual de endpoint de processos de privacidade](./privacy-jobs.md).
+>Se você não souber a ID do trabalho para as informações de acesso necessárias, faça uma chamada para o ponto de extremidade `/jobs` e use parâmetros de consulta adicionais para filtrar os resultados. Uma lista completa dos parâmetros de consulta disponíveis pode ser encontrada no [manual de ponto de extremidade de trabalhos de privacidade](./privacy-jobs.md).
 
 ## Recuperar informações do trabalho de privacidade
 
-Para recuperar informações sobre uma ordem de produção específica, como seu status de processamento atual, inclua o `jobId` no caminho de uma solicitação GET para o `/jobs` terminal.
+Para recuperar informações sobre um trabalho específico, como seu status de processamento atual, inclua o `jobId` desse trabalho no caminho de uma solicitação GET para o ponto de extremidade `/jobs`.
 
 **Formato da API**
 
@@ -37,7 +37,7 @@ GET /jobs/{JOB_ID}
 
 **Solicitação**
 
-A solicitação a seguir recupera os detalhes do job cujo `jobId` é fornecido no caminho da solicitação.
+A solicitação a seguir recupera os detalhes do trabalho cujo `jobId` é fornecido no caminho da solicitação.
 
 ```shell
 curl -X GET \
@@ -53,7 +53,7 @@ Uma resposta bem-sucedida retorna os detalhes do trabalho especificado.
 
 >[!NOTE]
 >
->Os processos de privacidade devem ter o `complete` status para conter a variável `downloadUrl`.
+>Os trabalhos de privacidade devem ter o status `complete` para conter `downloadUrl`.
 
 ```json
 {
@@ -87,7 +87,7 @@ Uma resposta bem-sucedida retorna os detalhes do trabalho especificado.
 |----------------------|---------------------------------------------------------------------------------------------------------------|
 | `jobId` | Um identificador exclusivo para o trabalho de privacidade. |
 | `requestId` | Um identificador exclusivo para a solicitação específica feita ao Privacy Service. |
-| `userKey` | `userKey` é o `key` que você forneceu quando enviou a solicitação de acesso a dados pessoais. A variável `key` value é a sua oportunidade de fornecer um identificador para o titular dos dados que faz sentido para você. Normalmente, é um identificador exclusivo que seu sistema criou para rastrear esse titular de dados. DICA: Você pode listar todos os processos de privacidade ativos e comparar suas `key` para cada tarefa. |
+| `userKey` | `userKey` é o valor `key` fornecido ao enviar a solicitação de privacidade. O valor `key` é a sua oportunidade de fornecer um identificador para o titular dos dados que faz sentido para você. Normalmente, é um identificador exclusivo que seu sistema criou para rastrear esse titular de dados. DICA: Você pode listar todos os trabalhos de privacidade ativos e comparar seu `key` com cada trabalho. |
 | `action` | O tipo de ação solicitada. Os valores aceitos são `access` e `delete`. |
 | `status` | O status atual do trabalho de privacidade. |
 | `submittedBy` | O endereço de email da pessoa que enviou o trabalho de privacidade. |
@@ -96,7 +96,7 @@ Uma resposta bem-sucedida retorna os detalhes do trabalho especificado.
 | `userIds` | Uma matriz que contém identificadores de usuário e informações relacionadas. |
 | `userIds.namespace` | O namespace usado para o identificador do usuário. |
 | `userIds.value` | O valor real do identificador do usuário. |
-| `userIds.type` | O tipo de identificador (por exemplo `standard` ou `custom`). |
+| `userIds.type` | O tipo de identificador (por exemplo, `standard` ou `custom`). |
 | `userIds.namespaceId` | Um identificador para o namespace usado para categorizar e gerenciar identidades de usuário. |
 | `userIds.isDeletedClientSide` | Um booliano que indica se o identificador foi excluído no lado do cliente. |
 | `productResponses` | Uma matriz que contém respostas de diferentes produtos ou serviços relacionados ao trabalho de privacidade. |
@@ -105,18 +105,18 @@ Uma resposta bem-sucedida retorna os detalhes do trabalho especificado.
 | `productResponses.processedDate` | A data e a hora em que a resposta do produto foi processada. |
 | `productResponses.productStatusResponse` | Um objeto que contém o status da resposta do produto. |
 | `productResponses.productStatusResponse.status` | O status da resposta do produto. |
-| `downloadURL` | Esse atributo fornece um endpoint, que está disponível para chamada por 60 dias após a conclusão da tarefa. O status do trabalho deve ser `complete` e a variável `action` deve ser `access`. Caso contrário, esse campo estará ausente. |
-| `regulation` | O quadro regulamentar em que a solicitação de privacidade está sendo processada, como `gdpr`, `ccpa`, `lgpd_bra`, `pdpa_tha`e assim por diante. |
+| `downloadURL` | Esse atributo fornece um endpoint, que está disponível para chamada por 60 dias após a conclusão da tarefa. O status do trabalho deve ser `complete` e o `action` deve ser `access`. Caso contrário, esse campo estará ausente. |
+| `regulation` | A estrutura regulatória sob a qual a solicitação de privacidade está sendo processada, como `gdpr`, `ccpa`, `lgpd_bra`, `pdpa_tha` e assim por diante. |
 
 {style="table-layout:auto"}
 
 ## Recuperar informações de acesso do cliente {#retrieve-access-data}
 
-Para obter as &quot;informações de acesso&quot; produzidas em resposta à consulta do titular dos dados, faça uma solicitação GET ao `/jobs/{JOB_ID}/content` terminal. A resposta é um arquivo zip (*.zip) que contém uma pasta com subpastas para cada produto que contém dados sobre o titular dos dados.
+Para obter as &quot;informações de acesso&quot; produzidas em resposta à consulta do titular dos dados, faça uma solicitação GET ao ponto de extremidade `/jobs/{JOB_ID}/content`. A resposta é um arquivo zip (*.zip) que contém uma pasta com subpastas para cada produto que contém dados sobre o titular dos dados.
 
 >[!TIP]
 >
->Você precisa de uma ID de tarefa específica para fazer esta solicitação. Se precisar recuperar a ID de trabalho específica, primeiro faça uma solicitação GET à `/jobs` e use parâmetros de consulta adicionais para filtrar os resultados. Informações detalhadas, incluindo os parâmetros de consulta permitidos, podem ser encontradas na [manual de endpoint de processos de privacidade](./privacy-jobs.md).
+>Você precisa de uma ID de tarefa específica para fazer esta solicitação. Se você precisar recuperar a ID de trabalho específica, primeiro faça uma solicitação GET para o ponto de extremidade `/jobs` e use parâmetros de consulta adicionais para filtrar os resultados. Informações detalhadas incluindo os parâmetros de consulta permitidos podem ser encontradas no [manual de ponto de extremidade de trabalhos de privacidade](./privacy-jobs.md).
 
 **Formato da API**
 

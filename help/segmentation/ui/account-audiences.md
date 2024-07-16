@@ -15,57 +15,57 @@ ht-degree: 27%
 
 >[!AVAILABILITY]
 >
->Os públicos-alvo da conta só estão disponíveis no [Edição B2B do Real-time Customer Data Platform](../../rtcdp/overview.md#rtcdp-b2b) e a variável [Edição B2P do Real-time Customer Data Platform](../../rtcdp/overview.md#rtcdp-b2p).
+>Os públicos da conta só estão disponíveis na [Edição B2B do Real-time Customer Data Platform](../../rtcdp/overview.md#rtcdp-b2b) e na [Edição B2P do Real-time Customer Data Platform](../../rtcdp/overview.md#rtcdp-b2p).
 
 Com a segmentação de conta, o Adobe Experience Platform permite que você ofereça a total facilidade e sofisticação da experiência de segmentação de marketing de públicos com base em pessoas para públicos com base em conta.
 
-Os públicos da conta podem ser usados como uma entrada para destinos baseados em conta, permitindo direcionar as pessoas nessas contas nos serviços downstream. Por exemplo, você pode usar públicos-alvo baseados em conta para recuperar registros de todas as contas que **não** ter informações de contato de qualquer pessoa com o título Diretor de Operações (COO) ou Diretor de Marketing (CMO).
+Os públicos da conta podem ser usados como uma entrada para destinos baseados em conta, permitindo direcionar as pessoas nessas contas nos serviços downstream. Por exemplo, você pode usar públicos baseados em conta para recuperar registros de todas as contas que **não** têm informações de contato de qualquer pessoa com o título Diretor de Operações (COO) ou Diretor de Marketing (CMO).
 
 ## Terminologia {#terminology}
 
 Antes de começar a usar públicos-alvo de conta, analise as diferenças entre os diferentes tipos de público-alvo:
 
-- **Públicos da conta**: um público-alvo da conta é um público-alvo criado com o **account** dados do perfil. Os dados do perfil da conta podem ser usados para criar públicos-alvo que segmentem as pessoas nas contas downstream. Para obter mais informações sobre perfis de conta, leia a [visão geral do perfil da conta](../../rtcdp/accounts/account-profile-overview.md).
-- **Públicos-alvo de pessoas**: um público-alvo de pessoas é um público-alvo criado com o **cliente** dados do perfil. Os dados do perfil do cliente podem ser usados para criar públicos-alvo que direcionem a clientela da sua empresa. Para obter mais informações sobre perfis de clientes, leia a [Visão geral do Perfil do cliente em tempo real](../../profile/home.md).
-- **Públicos-alvo potenciais**: um público-alvo potencial é um público-alvo criado com o uso de **potencial** dados do perfil. Os dados de perfil de cliente potencial podem ser usados para criar públicos-alvo de usuários não autenticados. Para obter mais informações sobre perfis de clientes potenciais, leia a [visão geral do perfil do cliente potencial](../../profile/ui/prospect-profile.md).
+- **Públicos-alvo da conta**: um público-alvo da conta é um público-alvo criado por meio dos dados de perfil da **conta**. Os dados do perfil da conta podem ser usados para criar públicos-alvo que segmentem as pessoas nas contas downstream. Para obter mais informações sobre perfis de conta, leia a [visão geral do perfil da conta](../../rtcdp/accounts/account-profile-overview.md).
+- **Públicos-alvo de pessoas**: um público-alvo de pessoas é um público-alvo criado pelos dados de perfil do **cliente**. Os dados do perfil do cliente podem ser usados para criar públicos-alvo que direcionem a clientela da sua empresa. Para obter mais informações sobre perfis de clientes, leia a [Visão geral do Perfil do cliente em tempo real](../../profile/home.md).
+- **Públicos-alvo de prospecto**: um público-alvo de prospecto é um público-alvo criado com os dados de perfil do **prospecto**. Os dados de perfil de cliente potencial podem ser usados para criar públicos-alvo de usuários não autenticados. Para obter mais informações sobre perfis de clientes potenciais, leia a [visão geral do perfil de clientes potenciais](../../profile/ui/prospect-profile.md).
 
 ## Acesso {#access}
 
-Para acessar os públicos-alvo da conta, selecione **[!UICONTROL Públicos-alvo]** no **[!UICONTROL Contas]** seção.
+Para acessar os públicos da conta, selecione **[!UICONTROL Públicos]** na seção **[!UICONTROL Contas]**.
 
-![O botão Audiences é realçado na seção Accounts (Contas).](../images/ui/account-audiences/select.png)
+![O botão Públicos-alvo é realçado na seção Contas.](../images/ui/account-audiences/select.png)
 
-A variável [!UICONTROL Procurar] será exibida, mostrando uma lista de todos os públicos-alvo da conta da organização.
+A página [!UICONTROL Procurar] é exibida, mostrando uma lista de todos os públicos-alvo da conta da organização.
 
 ![Os públicos-alvo da conta pertencentes à organização são exibidos.](../images/ui/account-audiences/browse.png)
 
 Essa exibição lista informações sobre o público-alvo, incluindo nome, contagem de perfis, origem, status do ciclo de vida, data de criação e data da última atualização.
 
-Você também pode usar a funcionalidade de pesquisa e filtragem para pesquisar e classificar rapidamente por públicos-alvo específicos da conta. Mais informações sobre esse recurso podem ser encontradas no [Visão geral do portal de público](./audience-portal.md#manage-audiences).
+Você também pode usar a funcionalidade de pesquisa e filtragem para pesquisar e classificar rapidamente por públicos-alvo específicos da conta. Mais informações sobre este recurso podem ser encontradas na [Visão geral do Portal de Público](./audience-portal.md#manage-audiences).
 
 ## Criar público {#create}
 
 >[!NOTE]
 >
->Os públicos-alvo da conta são avaliados usando **lote** segmentação e serão avaliados a cada 24 horas.
+>Os públicos-alvo da conta são avaliados usando a segmentação **batch** e serão avaliados a cada 24 horas.
 
-Para criar um público-alvo para a conta, selecione **[!UICONTROL Criar público]** no [!UICONTROL Procurar] página.
+Para criar um público-alvo para uma conta, selecione **[!UICONTROL Criar público-alvo]** na página [!UICONTROL Procurar].
 
-![A variável [!UICONTROL Criar público] O botão é realçado na página de navegação do público-alvo da conta.](../images/ui/account-audiences/select-create-audience.png)
+![O botão [!UICONTROL Criar público-alvo] está realçado na página de navegação do público-alvo da conta.](../images/ui/account-audiences/select-create-audience.png)
 
-O Construtor de segmentos é exibido. Os atributos e os públicos-alvo da conta são exibidos na barra de navegação esquerda. No [!UICONTROL Atributos] , é possível adicionar atributos personalizados e criados pela Platform.
+O Construtor de segmentos é exibido. Os atributos e os públicos-alvo da conta são exibidos na barra de navegação esquerda. Na guia [!UICONTROL Atributos], é possível adicionar atributos personalizados e criados pela plataforma.
 
 ![O Construtor de segmentos é exibido. Observe que somente os atributos e os públicos-alvo são exibidos.](../images/ui/account-audiences/segment-builder.png)
 
-Ao criar públicos-alvo de conta, observe que os eventos estão listados em **[!UICONTROL Pessoas]**, em vez de serem sua própria guia, já que esses atributos estão associados a pessoas.
+Ao criar públicos da conta, observe que os eventos estão listados em **[!UICONTROL Pessoas]**, em vez de serem sua própria guia, já que esses atributos estão associados a pessoas.
 
-![O local para localizar eventos, que está dentro da variável [!UICONTROL Pessoas] , está realçada.](../images/ui/account-audiences/attributes.png)
+![O local para localizar eventos, que está dentro da pasta [!UICONTROL Pessoas], está realçado.](../images/ui/account-audiences/attributes.png)
 
-No [!UICONTROL Públicos-alvo] você pode adicionar públicos-alvo com base em pessoas criados anteriormente para criar novos públicos-alvo ao criar seu próprio público-alvo de conta.
+Na guia [!UICONTROL Públicos-alvo], você pode adicionar públicos-alvo com base em pessoas criados anteriormente para criar novos públicos-alvo ao criar seu próprio público-alvo da conta.
 
-![A guia Públicos-alvo no Construtor de segmentos é realçada.](../images/ui/account-audiences/audiences.png)
+![A guia Públicos-alvo no Construtor de segmentos está realçada.](../images/ui/account-audiences/audiences.png)
 
-Para obter mais informações sobre como usar o Construtor de segmentos, leia as [Guia da interface do usuário do Construtor de segmentos](./segment-builder.md).
+Para obter mais informações sobre como usar o Construtor de segmentos, leia o [Guia da interface do Construtor de segmentos](./segment-builder.md).
 
 ## Ativar público-alvo {#activate}
 
@@ -75,15 +75,15 @@ Para obter mais informações sobre como usar o Construtor de segmentos, leia as
 
 Depois de criar o público-alvo da sua conta, você pode ativá-lo para outros serviços downstream.
 
-Selecione o público que deseja ativar, seguido por **[!UICONTROL Ativar para destino]**.
+Selecione o público que você deseja ativar, seguido por **[!UICONTROL Ativar para destino]**.
 
-![A variável [!UICONTROL Ativar para destino] O botão é realçado no menu de ações rápidas para o público-alvo selecionado.](../images/ui/account-audiences/activate.png)
+![O botão [!UICONTROL Ativar para destino] está realçado no menu de ações rápidas para o público-alvo selecionado.](../images/ui/account-audiences/activate.png)
 
-A variável [!UICONTROL Ativar destino] é exibida. Para obter mais informações sobre o processo de ativação, incluindo destinos compatíveis e detalhes sobre mapeamentos de campo, leia a [ativar públicos-alvo da conta](/help/destinations/ui/activate-account-audiences.md) tutorial.
+A página [!UICONTROL Ativar destino] é exibida. Para obter mais informações sobre o processo de ativação, incluindo destinos com suporte e detalhes sobre mapeamentos de campos, leia o tutorial [ativar públicos-alvo da conta](/help/destinations/ui/activate-account-audiences.md).
 
 ## Próximas etapas {#next-steps}
 
-Depois de ler este guia, você compreenderá melhor como criar e usar os públicos-alvo da sua conta no Adobe Experience Platform. Para saber como usar outros tipos de público-alvo na Platform, leia o [Guia da interface do usuário do serviço de segmentação](./overview.md).
+Depois de ler este guia, você compreenderá melhor como criar e usar os públicos-alvo da sua conta no Adobe Experience Platform. Para saber como usar outros tipos de público-alvo na Platform, leia o [Guia da interface do usuário do Serviço de segmentação](./overview.md).
 
 ## Apêndice {#appendix}
 
@@ -161,24 +161,24 @@ A seção a seguir fornece informações adicionais sobre os públicos-alvo da c
 >title="Violação de restrição"
 >abstract="O público-alvo viola uma restrição. Leia o documento vinculado para obter mais detalhes."
 
-Ao usar públicos-alvo da conta, o público-alvo **deve** estar em conformidade com as seguintes restrições:
+Ao usar públicos da conta, o público-alvo **deve** estar em conformidade com as seguintes restrições:
 
 >[!NOTE]
 >
->A lista a seguir mostra os **padrão** restrições para públicos da conta. Esses valores **maio** mude, dependendo das configurações implementadas pelo administrador da sua organização.
+>A lista a seguir mostra as restrições **padrão** para públicos-alvo da conta. Esses valores **podem** mudar, dependendo das configurações implementadas pelo administrador da sua organização.
 
-- A janela de pesquisa máxima para Eventos de experiência é **30 dias**.
+- A janela de pesquisa máxima para Eventos de Experiência é de **30 dias**.
 - A profundidade máxima de contêineres aninhados é **5**.
    - Isso significa que você **não pode** ter mais de cinco containers aninhados ao criar seu público-alvo.
-- O número máximo de regras em um único container é **5**.
-   - Isso significa que seu público-alvo **não é possível** ter mais de cinco regras que compõem seu público-alvo.
+- O número máximo de regras em um único contêiner é **5**.
+   - Isso significa que seu público-alvo **não pode** ter mais de cinco regras que compõem seu público-alvo.
 - O número máximo de entidades cruzadas que podem ser usadas é **5**.
    - Uma entidade cruzada é quando você altera entre entidades diferentes no seu público-alvo. Por exemplo, ir de uma Conta para uma Pessoa e de lá para uma Lista de marketing.
-- Entidades personalizadas **não é possível** ser utilizado.
+- Entidades personalizadas **não podem** ser usadas.
 - O número máximo de valores que podem ser verificados para um único campo é **50**.
    - Por exemplo, se você tiver um campo de &quot;Nome da cidade&quot;, será possível verificar esse valor em relação a 50 nomes de cidade.
-- Públicos da conta **não é possível** use `inSegment` eventos.
-- Públicos da conta **não é possível** usar eventos sequenciais.
-- Públicos da conta **não é possível** usar mapas.
+- Públicos-alvo da conta **não podem** usar `inSegment` eventos.
+- Públicos-alvo da conta **não podem** usar eventos sequenciais.
+- Públicos-alvo da conta **não podem** usar mapas.
 - A profundidade máxima de matrizes aninhadas é **5**.
 - O número máximo de objetos aninhados é **10**.

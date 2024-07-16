@@ -15,12 +15,12 @@ ht-degree: 5%
 
 # visão geral do Adobe Experience Platform Debugger
 
-A extensão do Adobe Experience Platform Debugger para [Cromo](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) O examina as páginas da Web e ajuda a encontrar problemas na implementação das soluções da Adobe Experience Cloud.
+A extensão Adobe Experience Platform Debugger para o [Chrome](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) avalia as páginas da Web e ajuda a encontrar problemas na implementação das soluções da Adobe Experience Cloud.
 
 Você pode usar o Platform Debugger com outras soluções de ativação de Adobe para executar o seguinte:
 
-1. Uso [tags](../tags/home.md) para inserir o código que ativa o [Adobe Experience Cloud](https://experienceleague.adobe.com/docs/core-services/interface/experience-cloud.html?lang=pt-BR) em suas páginas.
-1. Use o [**[!UICONTROL Auditor ]**guia](./auditor/overview.md) no Platform Debugger para testar as implementações.
+1. Use as [marcas](../tags/home.md) para inserir o código que ativa os produtos do [Adobe Experience Cloud](https://experienceleague.adobe.com/docs/core-services/interface/experience-cloud.html?lang=pt-BR) nas suas páginas.
+1. Use a [**[!UICONTROL guia Auditor ]**](./auditor/overview.md) do Platform Debugger para testar as implementações.
 1. Use ferramentas baseadas em eventos e específicas da solução no Platform Debugger para depurar os problemas encontrados pelo Auditor ou para examinar outras informações sobre as implementações.
 
 >[!NOTE]
@@ -33,7 +33,7 @@ Você pode executar o Platform Debugger em qualquer página da Web e a extensão
 
 Você pode usar as informações coletadas pelo Platform Debugger para entender melhor como as soluções de Experience Cloud são implementadas. Por exemplo:
 
-* **Tags**: veja qual propriedade, ambiente e build estão implementados em uma página.
+* **Marcas**: veja qual propriedade, ambiente e compilação estão implantados em uma página.
 * **Adobe Target**: veja para quais atividades você está qualificado ou não e por quê.
 * **Adobe Analytics**: veja quais conjuntos de relatórios estão ativos na página atual.
 

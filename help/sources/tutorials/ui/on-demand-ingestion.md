@@ -31,40 +31,40 @@ As execuções de fluxo representam uma instância da execução do fluxo de dad
 
 Este documento requer uma compreensão funcional dos seguintes componentes do Experience Platform:
 
-* [Origens](../../home.md): o Experience Platform permite que os dados sejam assimilados de várias fontes e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma.
+* [Fontes](../../home.md): o Experience Platform permite que os dados sejam assimilados de várias fontes e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma.
 * [Fluxos de dados](../../../dataflows/home.md): um fluxo de dados é uma representação de trabalhos de dados que movem dados pela Plataforma. Os fluxos de dados são configurados em diferentes serviços, ajudando a mover dados dos conectores de origem para conjuntos de dados de destino, para o Serviço de identidade, o Perfil do cliente em tempo real e para Destinos.
 * [Sandboxes](../../../sandboxes/home.md): o Experience Platform fornece sandboxes virtuais que particionam uma única instância da Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
 ## Criar um fluxo de dados sob demanda {#create-a-dataflow-on-demand}
 
-Navegue até a *[!UICONTROL Fluxos de dados]* do espaço de trabalho de origens. Aqui, localize o fluxo de dados que você deseja executar sob demanda e selecione as reticências (**`...`**) ao lado do nome do fluxo de dados.
+Navegue até a guia *[!UICONTROL Fluxos de Dados]* do espaço de trabalho de fontes. Aqui, localize o fluxo de dados que você deseja executar sob demanda e selecione as reticências (**`...`**) ao lado do nome do fluxo de dados.
 
-![Uma lista de fluxos de dados no espaço de trabalho de origens.](../../images/tutorials/on-demand/select-dataflow.png)
+![Uma lista de fluxos de dados no espaço de trabalho de fontes.](../../images/tutorials/on-demand/select-dataflow.png)
 
 Em seguida, selecione **[!UICONTROL Executar sob demanda]** no menu suspenso exibido.
 
 ![Um menu suspenso com a opção Executar sob demanda selecionada.](../../images/tutorials/on-demand/run-on-demand.png)
 
-Configure a programação da sua assimilação sob demanda. Selecione o **[!UICONTROL Hora de início da assimilação]**, o **[!UICONTROL Hora inicial do intervalo de datas]**, e o **[!UICONTROL Hora final do intervalo de datas]**.
+Configure a programação da sua assimilação sob demanda. Selecione a **[!UICONTROL Hora de início da assimilação]**, a **[!UICONTROL Hora de início do intervalo de datas]** e a **[!UICONTROL Hora de término do intervalo de datas]**.
 
 | Configuração de agendamento | Descrição |
 | --- | --- |
 | [!UICONTROL Hora de início da assimilação] | O horário agendado para o início da execução do fluxo por demanda. |
-| [!UICONTROL Hora inicial do intervalo de datas] | A data e a hora a partir das quais os dados serão recuperados. |
-| [!UICONTROL Hora final do intervalo de datas] | A data e a hora em que os dados serão recuperados. |
+| [!UICONTROL Hora de início do intervalo de datas] | A data e a hora a partir das quais os dados serão recuperados. |
+| [!UICONTROL Hora de término do intervalo de datas] | A data e a hora em que os dados serão recuperados. |
 
-Selecionar **[!UICONTROL Agendar]** e aguarde alguns instantes para que seu fluxo de dados sob demanda seja acionado.
+Selecione **[!UICONTROL Agendar]** e aguarde alguns momentos para o fluxo de dados sob demanda ser acionado.
 
-![A janela de configuração de programação para assimilação sob demanda.](../../images/tutorials/on-demand/configure-schedule.png)
+![A janela de configuração de agendamento para assimilação sob demanda.](../../images/tutorials/on-demand/configure-schedule.png)
 
-Selecione o nome do fluxo de dados para exibir a atividade do fluxo de dados. Aqui você verá uma lista de execuções de fluxo de dados que foram processadas. Selecione uma execução de fluxo de dados e **[!UICONTROL Tentar novamente]** no painel direito para repetir a assimilação de uma iteração de execução de fluxo de dados selecionada.
+Selecione o nome do fluxo de dados para exibir a atividade do fluxo de dados. Aqui você verá uma lista de execuções de fluxo de dados que foram processadas. Selecione uma execução de fluxo de dados e selecione **[!UICONTROL Repetir]** no painel direito para repetir a assimilação de uma iteração de execução de fluxo de dados selecionada.
 
 ![Uma lista de execuções de fluxo processadas para um fluxo de dados selecionado.](../../images/tutorials/on-demand/processed.png)
 
-Selecionar **[!UICONTROL Agendado]** para ver uma lista de execuções de fluxo de dados programadas para assimilação futura.
+Selecione **[!UICONTROL Agendado]** para ver uma lista de execuções de fluxo de dados agendadas para assimilação futura.
 
 ![Uma lista de execuções de fluxo agendadas para um fluxo de dados selecionado.](../../images/tutorials/on-demand/scheduled.png)
 
 ## Próximas etapas
 
-Ao ler este documento, você aprendeu a criar execuções de fluxo sob demanda para fluxos de dados de fontes existentes. Para obter mais informações sobre fontes, leia a [visão geral das origens](../../home.md)
+Ao ler este documento, você aprendeu a criar execuções de fluxo sob demanda para fluxos de dados de fontes existentes. Para obter mais informações sobre fontes, leia a [visão geral das fontes](../../home.md)

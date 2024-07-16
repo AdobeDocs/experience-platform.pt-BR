@@ -6,7 +6,7 @@ exl-id: a909b1d1-be9d-43ba-bb4b-d28b0c609f65
 source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
 source-wordcount: '1152'
-ht-degree: 5%
+ht-degree: 3%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 5%
 
 Toda vez que um navegador faz uma solicitação a um servidor Web, o cabeçalho da solicitação inclui informações sobre o navegador e o ambiente no qual o navegador está em execução. Todos esses dados são agregados em uma sequência, chamada de sequência de agente do usuário.
 
-Este é um exemplo da aparência de uma sequência de agente do usuário em uma solicitação proveniente de um navegador Chrome em execução em uma [!DNL Mac OS] dispositivo.
+Este é um exemplo da aparência de uma sequência de agente do usuário em uma solicitação proveniente de um navegador Chrome em execução em um dispositivo [!DNL Mac OS].
 
 >[!NOTE]
 >
@@ -32,8 +32,8 @@ Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like 
 | Versão do software | 105 |
 | Versão completa do software | 105.0.0.0 |
 | Nome do mecanismo de layout | AppleWebKit |
-| Versão do mecanismo de layout | 537.36 |
-| Sistema operacional | Mac OS X |
+| Versão do mecanismo de layout | 537,36 |
+| Sistema operacional | MAC OS X |
 | Versão do sistema operacional | 10.15.7 |
 | Dispositivo | SO Mac X 10_15_7 |
 
@@ -56,7 +56,7 @@ Nos últimos anos, os proprietários de sites e fornecedores de marketing têm u
 
 Apesar do importante propósito das cadeias de caracteres do agente do usuário para os proprietários do site, os desenvolvedores de navegador decidiram alterar como as cadeias de caracteres do agente do usuário operam, a fim de limitar possíveis problemas de privacidade para os usuários finais.
 
-A solução que eles desenvolveram é chamada de [dicas do cliente do agente do usuário](https://developer.chrome.com/docs/privacy-sandbox/user-agent/). As dicas do cliente ainda permitem que os sites coletem as informações necessárias do navegador, do sistema operacional e do dispositivo, além de fornecer maior proteção contra métodos de rastreamento ocultos, como impressão digital.
+A solução que eles desenvolveram é chamada de [user agent client hints](https://developer.chrome.com/docs/privacy-sandbox/user-agent/). As dicas do cliente ainda permitem que os sites coletem as informações necessárias do navegador, do sistema operacional e do dispositivo, além de fornecer maior proteção contra métodos de rastreamento ocultos, como impressão digital.
 
 As dicas do cliente permitem que os proprietários de sites acessem muitas das mesmas informações disponíveis na sequência de agente do usuário, mas com mais privacidade.
 
@@ -64,7 +64,7 @@ Quando navegadores modernos enviam um usuário para um servidor Web, a sequênci
 
 ## Suporte ao navegador {#browser-support}
 
-[Dicas do cliente do agente do usuário](https://developer.chrome.com/docs/privacy-sandbox/user-agent/) foram introduzidos com [!DNL Google Chrome]versão 89.
+[As dicas do cliente do agente do usuário](https://developer.chrome.com/docs/privacy-sandbox/user-agent/) foram introduzidas com a [!DNL Google Chrome]versão 89.
 
 Outros navegadores baseados em Chromium são compatíveis com a API Client Hints, como:
 
@@ -116,17 +116,17 @@ Se você não ativar dicas de cliente de alta entropia em seu ambiente, os relat
 
 ### Relatórios do Adobe Analytics que dependem de dicas de cliente de alta entropia {#analytics}
 
-A variável [Sistema operacional](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-systems.html?lang=pt-BR) dimensão inclui a versão do sistema operacional que é armazenada como uma dica de cliente de alta entropia. Se as dicas de clientes de alta entropia não estiverem ativadas, a versão do sistema operacional pode ser imprecisa para ocorrências coletadas dos navegadores Chromium.
+A dimensão [Sistema operacional](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-systems.html) inclui a versão do sistema operacional que é armazenada como uma dica de cliente de alta entropia. Se as dicas de clientes de alta entropia não estiverem ativadas, a versão do sistema operacional pode ser imprecisa para ocorrências coletadas dos navegadores Chromium.
 
 ### Características de Audience Manager que dependem de dicas de cliente de alta entropia {#aam}
 
-[!DNL Google] atualizou o [!DNL Chrome] funcionalidade do navegador para minimizar as informações coletadas por meio do `User-Agent` cabeçalho. Como resultado, os clientes do Audience Manager que usam o [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=pt-BR) não receberão mais informações confiáveis para características com base em [chaves de nível de plataforma](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-device-targeting.html).
+[!DNL Google] atualizou a funcionalidade do navegador [!DNL Chrome] para minimizar as informações coletadas pelo cabeçalho `User-Agent`. Como resultado, os clientes do Audience Manager que usam o [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=pt-BR) não receberão mais informações confiáveis sobre características com base nas [chaves de nível de plataforma](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-device-targeting.html).
 
-Os clientes do Audience Manager que usam chaves de nível de plataforma para direcionamento devem mudar para [Experience Platform Web SDK](/help/web-sdk/home.md) em vez de [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=pt-BR)e habilitar [Client Hints de alta entropia](#enabling-high-entropy-client-hints) para continuar recebendo dados de características confiáveis.
+Os clientes do Audience Manager que usam chaves de nível de plataforma para direcionamento devem alternar para o [SDK da Web](/help/web-sdk/home.md) do Experience Platform em vez do [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=pt-BR) e habilitar as [Client Hints de alta entropia](#enabling-high-entropy-client-hints) para continuar recebendo dados de características confiáveis.
 
 ## Ativação de dicas de cliente de alta entropia {#enabling-high-entropy-client-hints}
 
-Para habilitar dicas de cliente de alta entropia na implantação do SDK da Web, você deve incluir as dicas adicionais `highEntropyUserAgentHints` opção de contexto no [`context`](/help/web-sdk/commands/configure/context.md) campo.
+Para habilitar dicas de cliente de alta entropia na implantação do SDK da Web, você deve incluir a opção de contexto `highEntropyUserAgentHints` adicional no campo [`context`](/help/web-sdk/commands/configure/context.md).
 
 Por exemplo, para recuperar dicas de cliente de alta entropia de propriedades da Web, sua configuração seria semelhante a:
 
@@ -144,7 +144,7 @@ Sec-CH-UA-Mobile: ?0
 Sec-CH-UA-Platform: "macOS
 ```
 
-O equivalente [!DNL User-Agent] para o mesmo navegador seria semelhante a:
+O cabeçalho [!DNL User-Agent] equivalente para o mesmo navegador seria semelhante a:
 
 ```shell
 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36
@@ -152,9 +152,9 @@ Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like 
 
 Embora as informações sejam semelhantes, a primeira solicitação para o servidor contém dicas do cliente. Eles incluem apenas um subconjunto do que está disponível na sequência de agente do usuário. Faltam na solicitação a arquitetura do sistema operacional, a versão completa do sistema operacional, o nome do mecanismo de layout, a versão do mecanismo de layout e a versão completa do navegador.
 
-No entanto, em pedidos subsequentes, a [!DNL Client Hints API] permite que os servidores da web solicitem detalhes adicionais sobre o dispositivo. Quando esses valores são solicitados, dependendo da política do navegador ou das configurações do usuário, a resposta do navegador pode incluir essas informações.
+No entanto, em solicitações subsequentes, o [!DNL Client Hints API] permite que os servidores da Web solicitem detalhes adicionais sobre o dispositivo. Quando esses valores são solicitados, dependendo da política do navegador ou das configurações do usuário, a resposta do navegador pode incluir essas informações.
 
-Veja abaixo um exemplo do objeto JSON retornado pelo [!DNL Client Hints API] quando valores de alta entropia são solicitados:
+Veja abaixo um exemplo do objeto JSON retornado por [!DNL Client Hints API] quando valores de alta entropia são solicitados:
 
 
 ```json

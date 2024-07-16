@@ -13,7 +13,7 @@ ht-degree: 1%
 
 # Visão geral do controle de acesso
 
-O controle de acesso do Adobe Experience Platform é fornecido por meio da **[!UICONTROL Permissões]** in [Adobe Experience Cloud](https://experience.adobe.com/). Essa funcionalidade aproveita funções e políticas, que vinculam usuários com permissões e sandboxes.
+O controle de acesso do Adobe Experience Platform é fornecido através das **[!UICONTROL Permissões]** no [Adobe Experience Cloud](https://experience.adobe.com/). Essa funcionalidade aproveita funções e políticas, que vinculam usuários com permissões e sandboxes.
 
 ## Hierarquia e fluxo de trabalho do controle de acesso
 
@@ -26,23 +26,23 @@ Para configurar o controle de acesso para o Experience Platform, você deve ter 
 Um workflow de alto nível para obter e atribuir permissões de acesso pode ser resumido da seguinte maneira:
 
 - Após licenciar o Adobe Experience Platform ou um Serviço de aplicativo/aplicativo que use o Experience Platform, um email é enviado ao administrador especificado durante o licenciamento.
-- O administrador faz logon no [Adobe Admin Console](#adobe-admin-console) e seleciona **Adobe Experience Platform** na lista de produtos na página visão geral.
+- O administrador faz logon no [Adobe Admin Console](#adobe-admin-console) e seleciona **Adobe Experience Platform** da lista de produtos na página de visão geral.
 - Para conceder acesso ao Experience Platform, é recomendável que o administrador adicione usuários ao perfil de produto padrão: `AEP-Default-All-Users`.
 - Nas Permissões do Experience Platform, o administrador pode criar novas funções ou editar as permissões e os usuários de qualquer função existente.
-- Ao criar ou editar uma função, o administrador adiciona usuários à função usando o **[!UICONTROL usuários]** e concede permissões a esses usuários (como &quot;[!UICONTROL Ler conjuntos de dados]&quot; ou &quot;[!UICONTROL Gerenciar esquemas]&quot;) editando as permissões da função. Da mesma forma, o administrador pode atribuir acesso a sandboxes usando a mesma opção de edição.
-- Quando os usuários fazem logon na interface do usuário do Experience Platform, o acesso aos recursos do Experience Platform é orientado pelas permissões concedidas a eles na etapa anterior. Por exemplo, se um usuário não tiver o [!UICONTROL Exibir conjuntos de dados] permissão, a variável **[!UICONTROL Conjuntos de dados]** no menu lateral não estará visível para esse usuário.
+- Ao criar ou editar uma função, o administrador adiciona usuários à função usando a guia **[!UICONTROL usuários]** e concede permissões a esses usuários (como &quot;[!UICONTROL Ler Conjuntos de Dados]&quot; ou &quot;[!UICONTROL Gerenciar Esquemas]&quot;) ao editar as permissões da função. Da mesma forma, o administrador pode atribuir acesso a sandboxes usando a mesma opção de edição.
+- Quando os usuários fazem logon na interface do usuário do Experience Platform, o acesso aos recursos do Experience Platform é orientado pelas permissões concedidas a eles na etapa anterior. Por exemplo, se um usuário não tiver a permissão [!UICONTROL Exibir conjuntos de dados], a guia **[!UICONTROL Conjuntos de dados]** no menu lateral não estará visível para esse usuário.
 
-Para obter etapas mais detalhadas sobre como gerenciar o controle de acesso no Experience Platform, consulte [guia do usuário de controle de acesso](./ui/overview.md).
+Para obter etapas mais detalhadas sobre como gerenciar o controle de acesso no Experience Platform, consulte o [guia do usuário de controle de acesso](./ui/overview.md).
 
 Todas as chamadas para APIs Experience Platform são validadas em relação a permissões e retornarão erros se as permissões apropriadas não forem encontradas no contexto do usuário atual. Na interface do usuário, os elementos serão ocultos ou alterados dependendo das permissões concedidas ao usuário atual.
 
 ## Permissões {#platform-permissions}
 
-[!UICONTROL Permissões] O fornece um local central para gerenciar o acesso ao Experience Platform para sua organização. Até [!UICONTROL Permissões], você pode conceder a grupos de usuários permissões de acesso para vários recursos do Experience Platform, como [!UICONTROL Gerenciar conjuntos de dados], [!UICONTROL Exibir conjuntos de dados]ou [!UICONTROL Gerenciar perfis].
+[!UICONTROL Permissões] fornecem um local central para gerenciar o acesso ao Experience Platform para sua organização. Através das [!UICONTROL Permissões], você pode conceder a grupos de usuários permissões de acesso para vários recursos de Experience Platform, como [!UICONTROL Gerenciar conjuntos de dados], [!UICONTROL Exibir conjuntos de dados] ou [!UICONTROL Gerenciar perfis].
 
 ### Funções
 
-No [!UICONTROL Funções] , as permissões são atribuídas aos usuários por meio do uso de funções. As funções permitem conceder permissões a um ou vários usuários e também contêm acesso ao escopo das sandboxes atribuídas a eles por meio de funções. Os usuários podem ser atribuídos a uma ou várias funções pertencentes à sua organização.
+Na seção [!UICONTROL Funções], permissões são atribuídas a usuários por meio do uso de funções. As funções permitem conceder permissões a um ou vários usuários e também contêm acesso ao escopo das sandboxes atribuídas a eles por meio de funções. Os usuários podem ser atribuídos a uma ou várias funções pertencentes à sua organização.
 
 ### Funções padrão
 
@@ -57,7 +57,7 @@ O Experience Platform vem com duas funções padrão pré-configuradas. A tabela
 
 As sandboxes de não produção são uma forma de virtualização de dados que permitem isolar dados de outras sandboxes e são normalmente usadas para experimentos de desenvolvimento, testes ou avaliações. As permissões de uma função concedem aos usuários da função acesso aos recursos de Experience Platform nos ambientes de sandbox aos quais eles receberam acesso. Uma licença de Experience Platform padrão concede cinco sandboxes (uma de produção e quatro de não produção). Você pode adicionar pacotes de dez sandboxes de não produção até um máximo de 75 sandboxes no total. Entre em contato com o administrador da organização ou com o representante de vendas da Adobe para obter mais detalhes.
 
-Para obter mais informações sobre sandboxes no Experience Platform, consulte o [visão geral das sandboxes](../sandboxes/home.md).
+Para obter mais informações sobre sandboxes no Experience Platform, consulte a [visão geral das sandboxes](../sandboxes/home.md).
 
 ### Acesso a sandboxes
 
@@ -69,7 +69,7 @@ A permissão &quot;Gerenciamento de sandbox&quot; permite que os usuários geren
 
 ### Permissões de recurso {#permissions}
 
-O recurso [!UICONTROL Permissões] em uma função exibe as sandboxes e permissões que estão ativas para essa função:
+A guia [!UICONTROL Permissões] do recurso em uma função exibe as sandboxes e permissões que estão ativas para essa função:
 
 ![permissões-visão geral](./images/permissions.png)
 
@@ -79,62 +79,62 @@ A tabela a seguir descreve as permissões disponíveis para Experience Platform 
 
 | Categoria | Permissão | Descrição |
 | --- | --- | --- |
-| [!DNL AI Assistant] | [!UICONTROL Habilitar o assistente de IA] | Capacidade de perguntar ao [Assistente de IA](../ai-assistant/access.md) perguntas. |
-| [!DNL AI Assistant] | [!UICONTROL Exibir Insights Operacionais] | Acesso para obter respostas para [insights operacionais](../ai-assistant/home.md##operational-insights) consultas. |
-| [!DNL Alerts] | [!UICONTROL Exibir histórico de alertas] | Acesso somente leitura para o histórico de alertas. |
+| [!DNL AI Assistant] | [!UICONTROL Habilitar o Assistente de IA] | Capacidade de fazer perguntas ao [assistente de IA](../ai-assistant/access.md). |
+| [!DNL AI Assistant] | [!UICONTROL Exibir Insights Operacionais] | Acesso para obter respostas a consultas de [insights operacionais](../ai-assistant/home.md##operational-insights). |
+| [!DNL Alerts] | [!UICONTROL Exibir Histórico de Alertas] | Acesso somente leitura para o histórico de alertas. |
 | [!DNL Alerts] | [!UICONTROL Resolver alertas] | Acesso para ler, editar e excluir alertas. |
-| [!DNL Alerts] | [!UICONTROL Exibir alertas] | Acesso somente leitura para alertas. |
+| [!DNL Alerts] | [!UICONTROL Exibir Alertas] | Acesso somente leitura para alertas. |
 | [!DNL Alerts] | [!UICONTROL Gerenciar alertas] | Acesso para ler, criar, editar e excluir o histórico de alertas. |
 | [!DNL Computed Attributes] | [!UICONTROL Exibir atributos computados] | Acesso somente leitura para a guia de atributos calculados, inventário e detalhes. |
 | [!DNL Computed Attributes] | [!UICONTROL Gerenciar atributos computados] | Acesso para ler, criar, excluir rascunhos e desativar atributos calculados. |
-| [!DNL Dashboards] | [!UICONTROL Exibir Painel de Uso da Licença] | Acesso somente leitura para exibir o painel de uso de licença. |
-| [!DNL Dashboards] | [!UICONTROL Gerenciar painéis padrão] | Adicione atributos personalizados que ainda não estão no data warehouse. |
+| [!DNL Dashboards] | [!UICONTROL Exibir Painel de Uso de Licenças] | Acesso somente leitura para exibir o painel de uso de licença. |
+| [!DNL Dashboards] | [!UICONTROL Gerenciar Painéis Padrão] | Adicione atributos personalizados que ainda não estão no data warehouse. |
 | [!DNL Data Governance] | [!UICONTROL Gerenciar rótulos de uso] | Acesso para ler, criar e excluir rótulos de uso. |
-| [!DNL Data Governance] | [!UICONTROL Gerenciar políticas de uso de dados] | Acesso para ler, criar, editar e excluir políticas de uso de dados. |
-| [!DNL Data Governance] | [!UICONTROL Exibir políticas de uso de dados] | Acesso somente leitura para políticas de uso de dados pertencentes à sua organização. |
-| [!DNL Data Governance] | [!UICONTROL Exibir log de atividades do usuário] | Acesso somente leitura para visualização registrada [logs de auditoria](../landing/governance-privacy-security/audit-logs/overview.md) das atividades da Platform. |
+| [!DNL Data Governance] | [!UICONTROL Gerenciar Políticas de Uso de Dados] | Acesso para ler, criar, editar e excluir políticas de uso de dados. |
+| [!DNL Data Governance] | [!UICONTROL Exibir Políticas de Uso de Dados] | Acesso somente leitura para políticas de uso de dados pertencentes à sua organização. |
+| [!DNL Data Governance] | [!UICONTROL Exibir Log de Atividades do Usuário] | Acesso somente leitura para exibir [logs de auditoria](../landing/governance-privacy-security/audit-logs/overview.md) registrados das atividades da Platform. |
 | [!DNL Data Ingestion] | [!UICONTROL Gerenciar fontes] | Acesso para ler, criar, editar e desativar fontes. |
-| [!DNL Data Ingestion] | [!UICONTROL Exibir fontes] | Acesso somente leitura a fontes disponíveis na **[!UICONTROL Catálogo]** e fontes autenticadas na **[!UICONTROL Procurar]** guia. |
-| [!DNL Data Ingestion] | [!DNL Manage Audience Share Connections] | Acesso para criar, aceitar e recusar handshakes de parceiros para conectar duas organizações e habilitar [!DNL Segment Match] fluxos. |
-| [!DNL Data Ingestion] | [!DNL Manage Audience Share] | Acesso para ler, criar, editar e publicar [!DNL Segment Match] Feeds com parceiros ativos. |
-| [!DNL Data Lifecycle] | [!UICONTROL Exibir ciclo de vida dos dados] | Acesso somente leitura para o ciclo de vida dos dados. |
-| [!DNL Data Lifecycle] | [!UICONTROL Gerenciar o ciclo de vida dos dados] | Acesso para ler, criar, editar e excluir o ciclo de vida dos dados. |
+| [!DNL Data Ingestion] | [!UICONTROL Exibir fontes] | Acesso somente leitura a fontes disponíveis na guia **[!UICONTROL Catálogo]** e fontes autenticadas na guia **[!UICONTROL Procurar]**. |
+| [!DNL Data Ingestion] | [!DNL Manage Audience Share Connections] | Acesso para criar, aceitar e recusar handshakes de parceiros para conectar duas organizações e habilitar fluxos do [!DNL Segment Match]. |
+| [!DNL Data Ingestion] | [!DNL Manage Audience Share] | Acesso para ler, criar, editar e publicar feeds do [!DNL Segment Match] com parceiros ativos. |
+| [!DNL Data Lifecycle] | [!UICONTROL Exibir Ciclo de Vida dos Dados] | Acesso somente leitura para o ciclo de vida dos dados. |
+| [!DNL Data Lifecycle] | [!UICONTROL Gerenciar Ciclo de Vida dos Dados] | Acesso para ler, criar, editar e excluir o ciclo de vida dos dados. |
 | [!DNL Data Modeling] | [!UICONTROL Gerenciar esquemas] | Acesso para ler, criar, editar e excluir esquemas e recursos relacionados. |
-| [!DNL Data Modeling] | [!UICONTROL Exibir esquemas] | Acesso somente leitura a esquemas e recursos relacionados. |
-| [!DNL Data Modeling] | [!UICONTROL Gerenciar relacionamentos] | Acesso para ler, criar, editar e excluir relacionamentos de esquema. |
+| [!DNL Data Modeling] | [!UICONTROL Exibir Esquemas] | Acesso somente leitura a esquemas e recursos relacionados. |
+| [!DNL Data Modeling] | [!UICONTROL Gerenciar Relações] | Acesso para ler, criar, editar e excluir relacionamentos de esquema. |
 | [!DNL Data Modeling] | [!UICONTROL Gerenciar metadados de identidade] | Acesso para ler, criar, editar e excluir metadados de identidade de esquemas. |
 | [!DNL Data Management] | [!UICONTROL Gerenciar conjuntos de dados] | Acesso para ler, criar, editar e excluir conjuntos de dados. Acesso somente leitura para esquemas. |
-| [!DNL Data Management] | [!UICONTROL Exibir conjuntos de dados] | Acesso somente leitura para conjuntos de dados e esquemas. |
+| [!DNL Data Management] | [!UICONTROL Exibir Conjuntos de Dados] | Acesso somente leitura para conjuntos de dados e esquemas. |
 | [!DNL Data Management] | [!UICONTROL Monitoramento de dados] | Acesso somente leitura a conjuntos de dados e fluxos de monitoramento. |
-| [!DNL Data Science Workspace] | [!UICONTROL Gerenciar o Espaço de trabalho de ciência de dados] | Acesso para ler, criar, editar e excluir no [!DNL Data Science Workspace]. |
-| [!DNL Destinations] | [!UICONTROL Exibir destinos] | Acesso somente leitura para visualizar os destinos disponíveis na **[!UICONTROL Catálogo]** e destinos autenticados na **[!UICONTROL Procurar]** guia. |
+| [!DNL Data Science Workspace] | [!UICONTROL Gerenciar o Data Science Workspace] | Acesso para ler, criar, editar e excluir em [!DNL Data Science Workspace]. |
+| [!DNL Destinations] | [!UICONTROL Exibir Destinos] | Acesso somente leitura para exibir os destinos disponíveis na guia **[!UICONTROL Catálogo]** e destinos autenticados na guia **[!UICONTROL Procurar]**. |
 | [!DNL Destinations] | [!UICONTROL Gerenciar destinos] | Acesso para ler, criar e excluir conexões e contas de destino. |
-| [!DNL Destinations] | [!UICONTROL Ativar destinos] | Oferece aos usuários a capacidade de ativar segmentos para destinos existentes. Ativa a etapa de mapeamento no fluxo de trabalho de ativação. Essa permissão também exige que o [!UICONTROL Exibir destinos] permissão a ser concedida ao usuário que ativará os dados para destinos. |
-| [!DNL Destinations] | [!UICONTROL Ativar segmento sem mapeamento] | Oferece aos usuários a capacidade de ativar segmentos para destinos existentes, sem exibir a [etapa de mapeamento](../destinations/ui/activate-batch-profile-destinations.md#mapping). Os usuários podem adicionar e remover segmentos em workflows de ativação, mas não podem adicionar ou remover atributos ou identidades mapeadas. Essa permissão também exige que o [!UICONTROL Exibir destinos] permissão a ser concedida ao usuário que ativará os dados para destinos. |
-| [!DNL Destinations] | [!UICONTROL Gerenciar e ativar destinos do conjunto de dados] | Capacidade de ler, criar, editar e desativar fluxos de exportação do conjunto de dados. Capacidade de também ativar dados para conjuntos de dados ativos que foram criados. Essa permissão também exige que o [!UICONTROL Exibir destinos] permissão a ser concedida ao usuário que ativará os dados para destinos. |
-| [!DNL Destinations] | [!UICONTROL Criação de destino] | Capacidade de criar destinos usando [Adobe Experience Platform Destination SDK](../destinations/destination-sdk/overview.md). |
-| [!DNL Identity Management] | [!UICONTROL Gerenciar namespaces de identidade] | Acesso para ler, criar, editar e excluir namespaces de identidade. |
-| [!DNL Identity Management] | [!UICONTROL Exibir namespaces de identidade] | Acesso somente leitura para namespaces de identidade. |
-| [!DNL Identity Management] | [!UICONTROL Exibir gráfico de identidade] | Acesso somente leitura para gráficos de identidade. |
+| [!DNL Destinations] | [!UICONTROL Ativar Destinos] | Oferece aos usuários a capacidade de ativar segmentos para destinos existentes. Ativa a etapa de mapeamento no fluxo de trabalho de ativação. Esta permissão também requer que a permissão [!UICONTROL Exibir Destinos] seja concedida ao usuário que ativará os dados para destinos. |
+| [!DNL Destinations] | [!UICONTROL Ativar segmento sem mapeamento] | Oferece aos usuários a capacidade de ativar segmentos para destinos existentes, sem exibir a [etapa de mapeamento](../destinations/ui/activate-batch-profile-destinations.md#mapping). Os usuários podem adicionar e remover segmentos em workflows de ativação, mas não podem adicionar ou remover atributos ou identidades mapeadas. Esta permissão também requer que a permissão [!UICONTROL Exibir Destinos] seja concedida ao usuário que ativará os dados para destinos. |
+| [!DNL Destinations] | [!UICONTROL Gerenciar e ativar destinos do conjunto de dados] | Capacidade de ler, criar, editar e desativar fluxos de exportação do conjunto de dados. Capacidade de também ativar dados para conjuntos de dados ativos que foram criados. Esta permissão também requer que a permissão [!UICONTROL Exibir Destinos] seja concedida ao usuário que ativará os dados para destinos. |
+| [!DNL Destinations] | [!UICONTROL Criação de Destino] | Capacidade de criar destinos usando [Adobe Experience Platform Destination SDK](../destinations/destination-sdk/overview.md). |
+| [!DNL Identity Management] | [!UICONTROL Gerenciar Namespaces de Identidade] | Acesso para ler, criar, editar e excluir namespaces de identidade. |
+| [!DNL Identity Management] | [!UICONTROL Exibir Namespaces De Identidade] | Acesso somente leitura para namespaces de identidade. |
+| [!DNL Identity Management] | [!UICONTROL Exibir Gráfico De Identidade] | Acesso somente leitura para gráficos de identidade. |
 | [!DNL Profile Management] | [!UICONTROL Gerenciar perfis] | Acesso para ler, criar, editar e excluir conjuntos de dados usados para perfis de clientes. Acesso somente leitura aos perfis disponíveis. |
-| [!DNL Profile Management] | [!UICONTROL Exibir perfis] | Acesso somente leitura aos perfis disponíveis. |
+| [!DNL Profile Management] | [!UICONTROL Exibir Perfis] | Acesso somente leitura aos perfis disponíveis. |
 | [!DNL Profile Management] | [!UICONTROL Gerenciar segmentos] | Acesso para ler, criar, editar e excluir segmentos. |
-| [!DNL Profile Management] | [!UICONTROL Exibir segmentos] | Acesso somente leitura aos segmentos disponíveis. |
-| [!DNL Profile Management] | [!UICONTROL Gerenciar políticas de mesclagem] | Acesso para ler, criar, editar e excluir políticas de mesclagem. |
+| [!DNL Profile Management] | [!UICONTROL Exibir Segmentos] | Acesso somente leitura aos segmentos disponíveis. |
+| [!DNL Profile Management] | [!UICONTROL Gerenciar Políticas de Mesclagem] | Acesso para ler, criar, editar e excluir políticas de mesclagem. |
 | [!DNL Profile Management] | [!UICONTROL Exibir Políticas de Mesclagem] | Acesso somente leitura às políticas de mesclagem disponíveis. |
-| [!DNL Profile Management] | [!UICONTROL Importar públicos] | Acesso para ler, criar, editar e excluir públicos importados. |
+| [!DNL Profile Management] | [!UICONTROL Importar públicos-alvo] | Acesso para ler, criar, editar e excluir públicos importados. |
 | [!DNL Profile Management] | [!UICONTROL Exportar público-alvo para segmento] | Capacidade de exportar um segmento de público avaliado para um conjunto de dados. |
 | [!DNL Profile Management] | [!UICONTROL Avaliar um segmento para um público-alvo] | Capacidade de gerar perfis para um público-alvo avaliando uma definição de segmento. |
 | [!DNL Profile Management] | [!UICONTROL Exibir IA B2B] | Acesso somente leitura às definições e configurações para todos os serviços de IA/ML B2B. |
 | [!DNL Profile Management] | [!UICONTROL Gerenciar IA B2B] | Acesso para ler, criar, editar e excluir configurações e configurações para todos os serviços de IA/ML B2B. |
-| [!DNL Profile Management] | [!UICONTROL Exibir perfil B2B] | Acesso somente leitura a perfis de entidade B2B (como Conta, Oportunidade e assim por diante), configurações e configurações para todos os serviços de IA/ML B2B e widgets do painel B2B. |
-| [!DNL Profile Management] | [!UICONTROL Gerenciar perfil B2B] | Acesso para ler, criar, editar e excluir perfis de entidade B2B (como Conta, Oportunidade e assim por diante). Acesso somente leitura para definições e configurações para todos os serviços de IA/ML B2B e widgets do painel B2B. |
+| [!DNL Profile Management] | [!UICONTROL Exibir Perfil B2B] | Acesso somente leitura a perfis de entidade B2B (como Conta, Oportunidade e assim por diante), configurações e configurações para todos os serviços de IA/ML B2B e widgets do painel B2B. |
+| [!DNL Profile Management] | [!UICONTROL Gerenciar Perfil B2B] | Acesso para ler, criar, editar e excluir perfis de entidade B2B (como Conta, Oportunidade e assim por diante). Acesso somente leitura para definições e configurações para todos os serviços de IA/ML B2B e widgets do painel B2B. |
 | [!DNL Query Service] | [!UICONTROL Gerenciar consultas] | Acesso para ler, criar, editar e excluir consultas SQL estruturadas para dados da Platform. |
 | [!DNL Query Service] | [!UICONTROL Gerenciar Integração do Serviço de Consulta] | Acesso para criar, atualizar e excluir credenciais sem expiração para acesso ao Serviço de consulta. |
-| [!DNL Sandbox Administration] | [!UICONTROL Gerenciar sandboxes] | Acesso para ler, criar, editar e excluir sandboxes. |
-| [!DNL Sandbox Administration] | [!UICONTROL Exibir sandboxes] | Acesso somente leitura para sandboxes que pertencem à sua organização. |
-| [!DNL Sandbox Administration] | [!UICONTROL Redefinir uma sandbox] | Capacidade de redefinir uma sandbox. |
+| [!DNL Sandbox Administration] | [!UICONTROL Gerenciar Sandboxes] | Acesso para ler, criar, editar e excluir sandboxes. |
+| [!DNL Sandbox Administration] | [!UICONTROL Exibir Sandboxes] | Acesso somente leitura para sandboxes que pertencem à sua organização. |
+| [!DNL Sandbox Administration] | [!UICONTROL Redefinir uma Sandbox] | Capacidade de redefinir uma sandbox. |
 
 ## Próximas etapas
 
-Ao ler este guia, você foi apresentado aos principais princípios de controle de acesso no Experience Platform. Agora você pode continuar com a [guia do usuário de controle de acesso baseado em atributo](./abac/overview.md) para obter etapas detalhadas sobre como usar o Experience Cloud para criar funções e atribuir permissões para o Experience Platform.
+Ao ler este guia, você foi apresentado aos principais princípios de controle de acesso no Experience Platform. Agora você pode continuar com o [guia do usuário de controle de acesso baseado em atributos](./abac/overview.md) para obter etapas detalhadas sobre como usar o Experience Cloud para criar funções e atribuir permissões para o Experience Platform.

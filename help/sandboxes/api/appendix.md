@@ -14,15 +14,15 @@ ht-degree: 1%
 
 # Apêndice do guia de API de sandbox
 
-Este documento fornece informações adicionais relacionadas ao trabalho com o [!DNL Sandbox] API.
+Este documento fornece informações adicionais relacionadas ao trabalho com a API [!DNL Sandbox].
 
 ## Uso de parâmetros de consulta {#query}
 
-A variável [[!DNL Sandbox] API](https://www.adobe.io/experience-platform-apis/references/sandbox) O é compatível com o uso de parâmetros de consulta para página e filtrar resultados ao listar sandboxes.
+A [[!DNL Sandbox] API](https://www.adobe.io/experience-platform-apis/references/sandbox) oferece suporte ao uso de parâmetros de consulta para página e filtrar resultados ao listar sandboxes.
 
 >[!NOTE]
 >
->A variável `limit` e `offset` os parâmetros de consulta devem ser especificados juntos. Se você especificar apenas um, a API retornará um erro. Se você especificar nenhum, o limite padrão é 50 e o deslocamento é 0.
+>Os parâmetros de consulta `limit` e `offset` devem ser especificados juntos. Se você especificar apenas um, a API retornará um erro. Se você especificar nenhum, o limite padrão é 50 e o deslocamento é 0.
 
 | Parâmetro | Descrição |
 | --- | --- |

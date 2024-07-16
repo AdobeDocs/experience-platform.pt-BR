@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Use uma correspondência &quot;difusa&quot; nos dados do Adobe Experience Platform para retornar as correspondências aproximadas mais prováveis, sem a necessidade de pesquisar cadeias de caracteres com caracteres idênticos. Isso permite uma pesquisa muito mais flexível de seus dados e torna seus dados mais acessíveis, economizando tempo e esforço.
 
-Em vez de tentar reformatar as cadeias de caracteres de pesquisa para correspondê-las, a correspondência difusa analisa a proporção de similaridade entre duas sequências e retorna a porcentagem de similaridade. [[!DNL FuzzyWuzzy]](https://pypi.org/project/fuzzywuzzy/) é recomendado para esse processo, pois suas funções são mais adequadas para ajudar a corresponder strings em situações mais complexas em comparação com [!DNL regex] ou [!DNL difflib].
+Em vez de tentar reformatar as cadeias de caracteres de pesquisa para correspondê-las, a correspondência difusa analisa a proporção de similaridade entre duas sequências e retorna a porcentagem de similaridade. [[!DNL FuzzyWuzzy]](https://pypi.org/project/fuzzywuzzy/) é recomendado para este processo, pois suas funções são mais adequadas para ajudar a corresponder cadeias de caracteres em situações mais complexas em comparação com [!DNL regex] ou [!DNL difflib].
 
 O exemplo fornecido neste caso de uso se concentra em corresponder atributos semelhantes de uma pesquisa de quarto de hotel em dois conjuntos de dados de agências de viagens diferentes. O documento demonstra como fazer a correspondência de strings por seu grau de similaridade a partir de grandes fontes de dados separadas. Neste exemplo, a correspondência difusa compara os resultados da pesquisa para os recursos de um quarto das agências de viagens Luma e Acme.
 
@@ -21,14 +21,14 @@ O exemplo fornecido neste caso de uso se concentra em corresponder atributos sem
 
 Como parte desse processo requer que você treine um modelo de aprendizado de máquina, este documento presume um conhecimento prático de um ou mais ambientes de aprendizado de máquina.
 
-Este exemplo usa [!DNL Python] e a variável [!DNL Jupyter Notebook] ambiente de desenvolvimento. Embora existam muitas opções disponíveis, [!DNL Jupyter Notebook] O é recomendado porque é um aplicativo web de código aberto que tem poucos requisitos computacionais. Ele pode ser baixado em [o sítio oficial de Jupyter](https://jupyter.org/).
+Este exemplo usa [!DNL Python] e o ambiente de desenvolvimento [!DNL Jupyter Notebook]. Embora existam muitas opções disponíveis, [!DNL Jupyter Notebook] é recomendado porque é um aplicativo web de código aberto que tem poucos requisitos computacionais. Ele pode ser baixado de [o site oficial do Jupyter](https://jupyter.org/).
 
-Antes de começar, você deve importar as bibliotecas necessárias. [!DNL FuzzyWuzzy] O é um software de código aberto [!DNL Python] biblioteca criada sobre a [!DNL difflib] e usado para corresponder strings. Usa [!DNL Levenshtein Distance] para calcular as diferenças entre sequências e padrões. [!DNL FuzzyWuzzy] O tem os seguintes requisitos:
+Antes de começar, você deve importar as bibliotecas necessárias. [!DNL FuzzyWuzzy] é uma biblioteca [!DNL Python] de código aberto criada sobre a biblioteca [!DNL difflib] e usada para corresponder a cadeias de caracteres. Ele usa [!DNL Levenshtein Distance] para calcular as diferenças entre sequências e padrões. [!DNL FuzzyWuzzy] tem os seguintes requisitos:
 
-- [!DNL Python] 2.4 (ou superior)
+- [!DNL Python] 2.4 (ou posterior)
 - [!DNL Python-Levenshtein]
 
-Na linha de comando, use o seguinte comando para instalar [!DNL FuzzyWuzzy]:
+Na linha de comando, use o seguinte comando para instalar o [!DNL FuzzyWuzzy]:
 
 ```console
 pip install fuzzywuzzy
@@ -40,19 +40,19 @@ Ou use o seguinte comando para instalar [!DNL Python-Levenshtein] também:
 pip install fuzzywuzzy[speedup]
 ```
 
-Mais informações técnicas sobre [!DNL Fuzzywuzzy] podem ser encontrados em seus [documentação oficial](https://pypi.org/project/fuzzywuzzy/).
+Mais informações técnicas sobre [!DNL Fuzzywuzzy] podem ser encontradas na [documentação oficial](https://pypi.org/project/fuzzywuzzy/).
 
 ### Conectar-se ao Serviço de consulta
 
-Você deve conectar seu modelo de aprendizado de máquina ao Serviço de consulta fornecendo suas credenciais de conexão. As credenciais com e sem expiração podem ser fornecidas. Consulte a [guia de credenciais](../ui/credentials.md) para obter mais informações sobre como adquirir as credenciais necessárias. Se você estiver usando [!DNL Jupyter Notebook], leia o guia completo sobre [como se conectar ao Serviço de consulta](../clients/jupyter-notebook.md).
+Você deve conectar seu modelo de aprendizado de máquina ao Serviço de consulta fornecendo suas credenciais de conexão. As credenciais com e sem expiração podem ser fornecidas. Consulte o [guia de credenciais](../ui/credentials.md) para obter mais informações sobre como adquirir as credenciais necessárias. Se você estiver usando o [!DNL Jupyter Notebook], leia o guia completo sobre [como se conectar ao Serviço de Consulta](../clients/jupyter-notebook.md).
 
-Além disso, certifique-se de importar o [!DNL numpy] pacote em seu [!DNL Python] para habilitar a álgebra linear.
+Além disso, certifique-se de importar o pacote [!DNL numpy] para o ambiente [!DNL Python] para habilitar a álgebra linear.
 
 ```python
 import numpy as np
 ```
 
-Os comandos abaixo são necessários para se conectar ao Serviço de consulta de [!DNL Jupyter Notebook]:
+Os comandos abaixo são necessários para se conectar ao Serviço de Consulta de [!DNL Jupyter Notebook]:
 
 ```python
 import psycopg2
@@ -67,9 +67,9 @@ password=<YOUR_QUERY_SERVICE_PASSWORD>
 cur = conn.cursor()
 ```
 
-Seu [!DNL Jupyter Notebook] A instância do agora está conectada ao Serviço de consulta. Se a conexão for bem-sucedida, nenhuma mensagem será exibida. Se a conexão falhar, um erro será exibido.
+Sua instância [!DNL Jupyter Notebook] agora está conectada ao Serviço de consulta. Se a conexão for bem-sucedida, nenhuma mensagem será exibida. Se a conexão falhar, um erro será exibido.
 
-### Desenhar dados do conjunto de dados Luma {#luma-dataset}
+### Dados do Draw do conjunto de dados Luma {#luma-dataset}
 
 Os dados para análise são retirados do primeiro conjunto de dados com os seguintes comandos. Por motivos de brevidade, os exemplos foram limitados aos primeiros 10 resultados da coluna.
 
@@ -81,7 +81,7 @@ luma = np.array([r[0] for r in cur])
 luma[:10]
 ```
 
-Selecionar **Output** para exibir a matriz retornada.
+Selecione **Saída** para exibir a matriz retornada.
 
 +++Saída
 
@@ -96,7 +96,7 @@ array(['Deluxe King Or Queen Room', 'Kona Tower City / Mountain View',
 
 +++
 
-### Desenhar dados do conjunto de dados Acme {#acme-dataset}
+### Dados do Draw do conjunto de dados Acme {#acme-dataset}
 
 Os dados para análise agora são retirados do segundo conjunto de dados com os seguintes comandos. Novamente, por questões de brevidade, os exemplos foram limitados aos primeiros 10 resultados da coluna.
 
@@ -108,7 +108,7 @@ acme = np.array([r[0] for r in cur])
 acme[:10]
 ```
 
-Selecionar **Output** para exibir a matriz retornada.
+Selecione **Saída** para exibir a matriz retornada.
 
 +++Saída
 
@@ -125,7 +125,7 @@ array(['Deluxe King Or Queen Room', 'Kona Tower City / Mountain View',
 
 ### Criar uma função de pontuação difusa {#fuzzy-scoring}
 
-Em seguida, você deve importar `fuzz` da biblioteca FuzzyWuzzy e execute uma comparação de proporção parcial das cadeias de caracteres. A função de proporção parcial permite executar a correspondência de substring. Isto pega a string mais curta e combina com todas as sub- strings que tenham o mesmo comprimento. A função retorna uma taxa de similaridade percentual de até 100%. Por exemplo, a função de proporção parcial compararia as seguintes strings &quot;Quarto Deluxe&quot;, &quot;1 Cama King&quot; e &quot;Quarto King Deluxe&quot; e retornaria uma pontuação de similaridade de 69%.
+Em seguida, você deve importar `fuzz` da biblioteca FuzzyWuzzy e executar uma comparação de proporção parcial das cadeias de caracteres. A função de proporção parcial permite executar a correspondência de substring. Isto pega a string mais curta e combina com todas as sub- strings que tenham o mesmo comprimento. A função retorna uma taxa de similaridade percentual de até 100%. Por exemplo, a função de proporção parcial compararia as seguintes strings &quot;Quarto Deluxe&quot;, &quot;1 Cama King&quot; e &quot;Quarto King Deluxe&quot; e retornaria uma pontuação de similaridade de 69%.
 
 No caso de uso de correspondência de quarto de hotel, isso é feito usando os seguintes comandos:
 
@@ -135,7 +135,7 @@ def compute_match_score(x,y):
     return fuzz.partial_ratio(x,y)
 ```
 
-Em seguida, importe `cdist` do [!DNL SciPy] para calcular a distância entre cada par nas duas coleções de entradas. Este cálculo calcula as pontuações entre todos os pares de quartos de hotel fornecidos por cada uma das agências de viagens.
+Em seguida, importe `cdist` da biblioteca [!DNL SciPy] para calcular a distância entre cada par nas duas coleções de entradas. Este cálculo calcula as pontuações entre todos os pares de quartos de hotel fornecidos por cada uma das agências de viagens.
 
 ```python
 from scipy.spatial.distance import cdist
@@ -160,7 +160,7 @@ Os resultados podem ser exibidos com o comando a seguir. Por motivos de brevidad
 matched_pairs[:10]
 ```
 
-Selecionar **Output** para ver os resultados.
+Selecione **Saída** para ver os resultados.
 
 +++Saída
 
@@ -202,7 +202,7 @@ WHERE
 [r for r in cur]
 ```
 
-Selecionar **Output** para ver os resultados desta associação.
+Selecione **Saída** para ver os resultados desta junção.
 
 +++Saída
 

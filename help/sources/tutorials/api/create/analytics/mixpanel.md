@@ -1,45 +1,45 @@
 ---
-title: Criar uma conexão de origem e um fluxo de dados para Mixpanel usando a API do serviço de fluxo
+title: Criar uma conexão e um fluxo de dados do Source para Mixpanel usando a API do serviço de fluxo
 description: Saiba como conectar o Adobe Experience Platform ao Mixpanel usando a API do serviço de fluxo.
 exl-id: 804b876d-6fd5-4a28-b33c-4ecab1ba3333
 source-git-commit: 6f8abca8f0db8a559fe62e6c143f2d0506d3b886
 workflow-type: tm+mt
-source-wordcount: '2019'
+source-wordcount: '1980'
 ht-degree: 2%
 
 ---
 
-# Criar uma conexão de origem e um fluxo de dados para [!DNL Mixpanel] usando o [!DNL Flow Service] API
+# Crie uma conexão de origem e um fluxo de dados para [!DNL Mixpanel] usando a API [!DNL Flow Service]
 
-O tutorial a seguir orienta você pelas etapas para criar uma conexão de origem e um fluxo de dados para trazer [!DNL Mixpanel] dados para o Adobe Experience Platform usando o [API do serviço de fluxo](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
+O tutorial a seguir orienta você pelas etapas para criar uma conexão de origem e um fluxo de dados para trazer dados do [!DNL Mixpanel] para a Adobe Experience Platform usando a [API de Serviço de Fluxo](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 
 ## Introdução
 
-Este manual necessita de uma compreensão funcional dos seguintes componentes da Experience Platform:
+Este guia requer entendimento prático dos seguintes componentes do Experience Platform:
 
-* [Origens](../../../../home.md): o Experience Platform permite que os dados sejam assimilados de várias fontes e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma.
+* [Fontes](../../../../home.md): o Experience Platform permite que os dados sejam assimilados de várias fontes e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma.
 * [Sandboxes](../../../../../sandboxes/home.md): o Experience Platform fornece sandboxes virtuais que particionam uma única instância da Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
-As seções a seguir fornecem informações adicionais que você precisará saber para se conectar com êxito ao [!DNL Mixpanel] usando o [!DNL Flow Service] API.
+As seções a seguir fornecem informações adicionais que você precisará saber para se conectar com êxito ao [!DNL Mixpanel] usando a API [!DNL Flow Service].
 
 ### Coletar credenciais necessárias
 
-Para se conectar [!DNL Mixpanel] Para o Platform, você deve fornecer valores para as seguintes propriedades de conexão:
+Para conectar [!DNL Mixpanel] à Platform, você deve fornecer valores para as seguintes propriedades de conexão:
 
 | Credencial | Descrição | Exemplo |
 | --- | --- | --- |
-| `username` | O nome de usuário da conta de serviço que corresponde ao seu [!DNL Mixpanel] conta. Consulte a [[!DNL Mixpanel] documentação de contas de serviço](https://developer.mixpanel.com/reference/service-accounts#authenticating-with-a-service-account) para obter mais informações. | `Test8.6d4ee7.mp-service-account` |
-| `password` | A senha da conta de serviço que corresponde ao seu [!DNL Mixpanel] conta. | `dLlidiKHpCZtJhQDyN2RECKudMeTItX1` |
-| `projectId` | Seu [!DNL Mixpanel] ID do projeto. Essa ID é necessária para criar uma conexão de origem. Consulte a [[!DNL Mixpanel] documentação das configurações do projeto](https://help.mixpanel.com/hc/en-us/articles/115004490503-Project-Settings) e a variável [[!DNL Mixpanel] guia sobre criação e gerenciamento de projetos](https://help.mixpanel.com/hc/en-us/articles/115004505106-Create-and-Manage-Projects) para obter mais informações. | `2384945` |
-| `timezone` | O fuso horário que corresponde ao seu [!DNL Mixpanel] projeto. O fuso horário é necessário para criar uma conexão de origem. Consulte a [Documentação de configurações de projeto do Mixpanel](https://help.mixpanel.com/hc/en-us/articles/115004490503-Project-Settings) para obter mais informações. | `Pacific Standard Time` |
+| `username` | O nome de usuário da conta de serviço que corresponde à sua conta do [!DNL Mixpanel]. Consulte a [[!DNL Mixpanel] documentação de contas de serviço](https://developer.mixpanel.com/reference/service-accounts#authenticating-with-a-service-account) para obter mais informações. | `Test8.6d4ee7.mp-service-account` |
+| `password` | A senha da conta de serviço que corresponde à sua conta do [!DNL Mixpanel]. | `dLlidiKHpCZtJhQDyN2RECKudMeTItX1` |
+| `projectId` | A ID do projeto [!DNL Mixpanel]. Essa ID é necessária para criar uma conexão de origem. Consulte a [[!DNL Mixpanel] documentação de configurações do projeto](https://help.mixpanel.com/hc/en-us/articles/115004490503-Project-Settings) e o [[!DNL Mixpanel] manual sobre como criar e gerenciar projetos](https://help.mixpanel.com/hc/en-us/articles/115004505106-Create-and-Manage-Projects) para obter mais informações. | `2384945` |
+| `timezone` | O fuso horário que corresponde ao seu projeto [!DNL Mixpanel]. O fuso horário é necessário para criar uma conexão de origem. Consulte a [documentação de configurações do projeto do Mixpanel](https://help.mixpanel.com/hc/en-us/articles/115004490503-Project-Settings) para obter mais informações. | `Pacific Standard Time` |
 
-Para obter mais informações sobre a autenticação do [!DNL Mixpanel] fonte, consulte o [[!DNL Mixpanel] visão geral da origem](../../../../connectors/analytics/mixpanel.md).
+Para obter mais informações sobre como autenticar sua origem [!DNL Mixpanel], consulte a [[!DNL Mixpanel] visão geral da origem](../../../../connectors/analytics/mixpanel.md).
 
-## Crie uma conexão básica {#base-connection}
+## Criar uma conexão básica {#base-connection}
 
 Uma conexão base retém informações entre sua origem e a Platform, incluindo as credenciais de autenticação da origem, o estado atual da conexão e sua ID de conexão base exclusiva. A ID de conexão básica permite explorar e navegar pelos arquivos de dentro da origem e identificar os itens específicos que deseja assimilar, incluindo informações sobre os tipos de dados e formatos.
 
-Para criar um ID de conexão base, faça uma solicitação POST ao `/connections` ao fornecer sua [!DNL Mixpanel] credenciais de autenticação como parte do corpo da solicitação.
+Para criar uma ID de conexão base, faça uma solicitação POST para o ponto de extremidade `/connections` enquanto fornece suas credenciais de autenticação [!DNL Mixpanel] como parte do corpo da solicitação.
 
 **Formato da API**
 
@@ -49,7 +49,7 @@ POST /connections
 
 **Solicitação**
 
-A solicitação a seguir cria uma conexão básica para [!DNL Mixpanel]:
+A solicitação a seguir cria uma conexão base para [!DNL Mixpanel]:
 
 ```shell
 curl -X POST \
@@ -80,11 +80,11 @@ curl -X POST \
 | --- | --- |
 | `name` | O nome da sua conexão básica. Certifique-se de que o nome da sua conexão básica seja descritivo, pois você pode usá-lo para pesquisar informações sobre a sua conexão básica. |
 | `description` | Um valor opcional que pode ser incluído para fornecer mais informações sobre sua conexão básica. |
-| `connectionSpec.id` | A ID de especificação de conexão da sua origem. Essa ID pode ser recuperada depois que a origem é registrada e aprovada por meio do [!DNL Flow Service] API. |
+| `connectionSpec.id` | A ID de especificação de conexão da sua origem. Essa ID pode ser recuperada depois que a origem é registrada e aprovada por meio da API [!DNL Flow Service]. |
 | `auth.specName` | O tipo de autenticação que você está usando para autenticar sua origem na Platform. |
 | `auth.params.` | Contém as credenciais necessárias para autenticar sua origem. |
-| `auth.params.username` | O nome de usuário que corresponde ao seu [!DNL Mixpanel] conta. |
-| `auth.params.password` | A senha que corresponde ao seu [!DNL Mixpanel] conta. |
+| `auth.params.username` | O nome de usuário que corresponde à sua conta do [!DNL Mixpanel]. |
+| `auth.params.password` | A senha que corresponde à sua conta do [!DNL Mixpanel]. |
 
 **Resposta**
 
@@ -114,11 +114,11 @@ Ao executar solicitações do GET para explorar a estrutura e o conteúdo do arq
 | Parâmetro | Descrição |
 | --------- | ----------- |
 | `{BASE_CONNECTION_ID}` | A ID de conexão básica gerada na etapa anterior. |
-| `objectType=rest` | O tipo de objeto que você deseja explorar. No momento, esse valor está sempre definido como `rest`. |
-| `{OBJECT}` | Esse parâmetro é necessário somente ao visualizar um diretório específico. Seu valor representa o caminho do diretório que você deseja explorar. Para essa fonte, o valor seria `json`. |
-| `fileType=json` | O tipo do arquivo que você deseja trazer para a Platform. Atualmente, `json` é o único tipo de arquivo compatível. |
+| `objectType=rest` | O tipo de objeto que você deseja explorar. Atualmente, este valor está sempre configurado para `rest`. |
+| `{OBJECT}` | Esse parâmetro é necessário somente ao visualizar um diretório específico. Seu valor representa o caminho do diretório que você deseja explorar. Para esta fonte, o valor seria `json`. |
+| `fileType=json` | O tipo do arquivo que você deseja trazer para a Platform. Atualmente, `json` é o único tipo de arquivo com suporte. |
 | `{PREVIEW}` | Um valor booliano que define se o conteúdo da conexão oferece suporte à visualização. |
-| `{SOURCE_PARAMS}` | Define parâmetros para o arquivo de origem que você deseja trazer para a Platform. Para recuperar o tipo de formato aceito para `{SOURCE_PARAMS}`, você deve codificar o inteiro `{"projectId":"2671127","timezone":"Pacific Standard Time"}` sequência de caracteres em base64. **Nota**: no exemplo abaixo, `"{"projectId":"2671127","timezone":"Pacific Standard Time"}"` codificado em base64 equivale a `eyJwcm9qZWN0SWQiOiIyNjcxMTI3IiwidGltZXpvbmUiOiJQYWNpZmljIFN0YW5kYXJkIFRpbWUifQ==`. |
+| `{SOURCE_PARAMS}` | Define parâmetros para o arquivo de origem que você deseja trazer para a Platform. Para recuperar o tipo de formato aceito para `{SOURCE_PARAMS}`, você deve codificar toda a cadeia de caracteres `{"projectId":"2671127","timezone":"Pacific Standard Time"}` em base64. **Observação**: no exemplo abaixo, `"{"projectId":"2671127","timezone":"Pacific Standard Time"}"` codificado em base64 equivale a `eyJwcm9qZWN0SWQiOiIyNjcxMTI3IiwidGltZXpvbmUiOiJQYWNpZmljIFN0YW5kYXJkIFRpbWUifQ==`. |
 
 
 **Solicitação**
@@ -337,7 +337,7 @@ Uma resposta bem-sucedida retorna a estrutura do arquivo consultado.
 
 ## Criar uma conexão de origem {#source-connection}
 
-Você pode criar uma conexão de origem fazendo uma solicitação POST para o [!DNL Flow Service] API. Uma conexão de origem consiste em uma ID de conexão, um caminho para o arquivo de dados de origem e uma ID de especificação de conexão.
+Você pode criar uma conexão de origem fazendo uma solicitação POST para a API [!DNL Flow Service]. Uma conexão de origem consiste em uma ID de conexão, um caminho para o arquivo de dados de origem e uma ID de especificação de conexão.
 
 **Formato da API**
 
@@ -381,9 +381,9 @@ curl -X POST \
 | `description` | Um valor opcional que pode ser incluído para fornecer mais informações sobre a conexão de origem. |
 | `baseConnectionId` | A ID de conexão base de [!DNL Mixpanel]. Essa ID foi gerada em uma etapa anterior. |
 | `connectionSpec.id` | A ID de especificação de conexão que corresponde à sua origem. |
-| `data.format` | O formato do [!DNL Mixpanel] dados que você deseja assimilar. No momento, o único formato de dados compatível é `json`. |
-| `params.projectId` | Seu [!DNL Mixpanel] ID do projeto. |
-| `params.timezone` | O fuso horário de seu [!DNL Mixpanel] projeto. |
+| `data.format` | O formato dos dados [!DNL Mixpanel] que você deseja assimilar. Atualmente, o único formato de dados com suporte é `json`. |
+| `params.projectId` | A ID do projeto [!DNL Mixpanel]. |
+| `params.timezone` | O fuso horário do seu projeto [!DNL Mixpanel]. |
 
 **Resposta**
 
@@ -400,21 +400,21 @@ Uma resposta bem-sucedida retorna o identificador exclusivo (`id`) da conexão d
 
 Para que os dados de origem sejam usados na Platform, um esquema de destino deve ser criado para estruturar os dados de origem de acordo com suas necessidades. O esquema de destino é usado para criar um conjunto de dados da Platform no qual os dados de origem estão contidos.
 
-Um schema XDM de destino pode ser criado executando uma solicitação POST para o [API do registro de esquema](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
+Um esquema XDM de destino pode ser criado executando uma solicitação POST para a [API do Registro de Esquema](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
-Para obter etapas detalhadas sobre como criar um esquema XDM de destino, consulte o tutorial sobre [criação de um schema usando a API](../../../../../xdm/api/schemas.md).
+Para obter etapas detalhadas sobre como criar um esquema XDM de destino, consulte o tutorial sobre [criação de um esquema usando a API](../../../../../xdm/api/schemas.md).
 
 ## Criar um conjunto de dados de destino {#target-dataset}
 
-Um conjunto de dados de destino pode ser criado executando uma solicitação POST para o [API do serviço de catálogo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), fornecendo a ID do schema de destino na carga útil.
+Um conjunto de dados de destino pode ser criado por meio de uma solicitação POST para a [API de Serviço de Catálogo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), fornecendo a ID do esquema de destino na carga.
 
 Para obter etapas detalhadas sobre como criar um conjunto de dados de destino, consulte o tutorial sobre [criação de um conjunto de dados usando a API](../../../../../catalog/api/create-dataset.md).
 
 ## Criar uma conexão de destino {#target-connection}
 
-Uma conexão de destino representa a conexão com o destino em que os dados assimilados devem ser armazenados. Para criar uma conexão de destino, você deve fornecer a ID de especificação de conexão fixa que corresponde ao data lake. Essa ID é: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+Uma conexão de destino representa a conexão com o destino em que os dados assimilados devem ser armazenados. Para criar uma conexão de destino, você deve fornecer a ID de especificação de conexão fixa que corresponde ao data lake. Esta ID é: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
-Agora você tem os identificadores exclusivos, um esquema de destino, um conjunto de dados de destino e a ID de especificação da conexão para o data lake. Usando esses identificadores, você pode criar uma conexão de destino usando o [!DNL Flow Service] API para especificar o conjunto de dados que conterá os dados de origem de entrada.
+Agora você tem os identificadores exclusivos, um esquema de destino, um conjunto de dados de destino e a ID de especificação da conexão para o data lake. Usando esses identificadores, você pode criar uma conexão de destino usando a API [!DNL Flow Service] para especificar o conjunto de dados que conterá os dados de origem de entrada.
 
 **Formato da API**
 
@@ -454,14 +454,14 @@ curl -X POST \
 | -------- | ----------- |
 | `name` | O nome da sua conexão de destino. Certifique-se de que o nome da conexão de destino seja descritivo, pois você pode usá-lo para pesquisar informações sobre a conexão de destino. |
 | `description` | Um valor opcional que pode ser incluído para fornecer mais informações sobre a conexão de destino. |
-| `connectionSpec.id` | A ID da especificação da conexão que corresponde ao data lake. Essa ID fixa é: `fd2c8ff3-1de0-4f6b-8fa8-4264784870eb`. |
-| `data.format` | O formato do [!DNL Mixpanel] que você deseja trazer para a Platform. |
+| `connectionSpec.id` | A ID da especificação da conexão que corresponde ao data lake. Esta ID fixa é: `fd2c8ff3-1de0-4f6b-8fa8-4264784870eb`. |
+| `data.format` | O formato dos dados [!DNL Mixpanel] que você deseja trazer para a Platform. |
 | `params.dataSetId` | A ID do conjunto de dados de destino recuperada em uma etapa anterior. |
 
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o identificador exclusivo da nova conexão de destino (`id`). Essa ID é necessária nas etapas posteriores.
+Uma resposta bem-sucedida retorna o identificador exclusivo (`id`) da nova conexão de destino. Essa ID é necessária nas etapas posteriores.
 
 ```json
 {
@@ -559,10 +559,10 @@ curl -X POST \
 
 | Propriedade | Descrição |
 | --- | --- |
-| `xdmSchema` | A ID do [esquema XDM do público-alvo](#target-schema) gerada em uma etapa anterior. |
+| `xdmSchema` | A ID do [esquema XDM de destino](#target-schema) gerada em uma etapa anterior. |
 | `mappings.destinationXdmPath` | O caminho XDM de destino para o qual o atributo de origem está sendo mapeado. |
 | `mappings.sourceAttribute` | O atributo de origem que precisa ser mapeado para um caminho XDM de destino. |
-| `mappings.identity` | Um valor booleano que designa se o conjunto de mapeamento será marcado para [!DNL Identity Service]. |
+| `mappings.identity` | Um valor booliano que designa se o conjunto de mapeamento será marcado para [!DNL Identity Service]. |
 
 **Resposta**
 
@@ -581,15 +581,15 @@ Uma resposta bem-sucedida retorna detalhes do mapeamento recém-criado, incluind
 
 ## Criar um fluxo {#flow}
 
-O último passo para trazer dados de [!DNL Mixpanel] para a Platform é criar um fluxo de dados. Até agora, você tem os seguintes valores necessários preparados:
+A última etapa para trazer dados de [!DNL Mixpanel] para a Platform é criar um fluxo de dados. Até agora, você tem os seguintes valores necessários preparados:
 
-* [ID da conexão de origem](#source-connection)
+* [ID de conexão do Source](#source-connection)
 * [ID da conexão de destino](#target-connection)
 * [ID de mapeamento](#mapping)
 
 Um fluxo de dados é responsável por agendar e coletar dados de uma origem. Você pode criar um fluxo de dados executando uma solicitação POST enquanto fornece os valores mencionados anteriormente na carga.
 
-Para agendar uma assimilação, primeiro defina o valor da hora inicial como a época em segundos. Em seguida, defina o valor de frequência como uma das cinco opções: `once`, `minute`, `hour`, `day`ou `week`. O valor do intervalo designa o período entre duas assimilações consecutivas. No entanto, criar uma assimilação única não requer que um intervalo seja definido. Para todas as outras frequências, o valor do intervalo deve ser definido como igual ou maior que `15`.
+Para agendar uma assimilação, primeiro defina o valor da hora inicial como a época em segundos. Em seguida, defina o valor de frequência para uma das cinco opções: `once`, `minute`, `hour`, `day` ou `week`. O valor do intervalo designa o período entre duas assimilações consecutivas. No entanto, criar uma assimilação única não requer que um intervalo seja definido. Para todas as outras frequências, o valor do intervalo deve ser definido como igual ou maior que `15`.
 
 
 **Formato da API**
@@ -641,16 +641,16 @@ curl -X POST \
 | --- | --- |
 | `name` | O nome do fluxo de dados. Verifique se o nome do fluxo de dados é descritivo, pois você pode usá-lo para pesquisar informações sobre o fluxo de dados. |
 | `description` | Um valor opcional que pode ser incluído para fornecer mais informações sobre o fluxo de dados. |
-| `flowSpec.id` | A ID de especificação de fluxo necessária para criar um fluxo de dados. Essa ID fixa é: `6499120c-0b15-42dc-936e-847ea3c24d72`. |
-| `flowSpec.version` | A versão correspondente da ID de especificação de fluxo. Esse valor é padronizado como `1.0`. |
-| `sourceConnectionIds` | A variável [ID da conexão de origem](#source-connection) gerada em uma etapa anterior. |
-| `targetConnectionIds` | A variável [ID da conexão de destino](#target-connection) gerada em uma etapa anterior. |
+| `flowSpec.id` | A ID de especificação de fluxo necessária para criar um fluxo de dados. Esta ID fixa é: `6499120c-0b15-42dc-936e-847ea3c24d72`. |
+| `flowSpec.version` | A versão correspondente da ID de especificação de fluxo. O padrão deste valor é `1.0`. |
+| `sourceConnectionIds` | A [ID da conexão de origem](#source-connection) gerada em uma etapa anterior. |
+| `targetConnectionIds` | A [ID da conexão de destino](#target-connection) gerada em uma etapa anterior. |
 | `transformations` | Essa propriedade contém as várias transformações necessárias para serem aplicadas aos seus dados. Essa propriedade é necessária ao trazer dados não compatíveis com XDM para a Platform. |
 | `transformations.name` | O nome atribuído à transformação. |
-| `transformations.params.mappingId` | A variável [ID do mapeamento](#mapping) gerada em uma etapa anterior. |
-| `transformations.params.mappingVersion` | A versão correspondente da ID de mapeamento. Esse valor é padronizado como `0`. |
+| `transformations.params.mappingId` | A [ID de mapeamento](#mapping) gerou em uma etapa anterior. |
+| `transformations.params.mappingVersion` | A versão correspondente da ID de mapeamento. O padrão deste valor é `0`. |
 | `scheduleParams.startTime` | Essa propriedade contém informações sobre o agendamento de assimilação do fluxo de dados. |
-| `scheduleParams.frequency` | A frequência com que o fluxo de dados coletará dados. Os valores aceitáveis incluem: `once`, `minute`, `hour`, `day`ou `week`. |
+| `scheduleParams.frequency` | A frequência com que o fluxo de dados coletará dados. Os valores aceitáveis incluem: `once`, `minute`, `hour`, `day` ou `week`. |
 | `scheduleParams.interval` | O intervalo designa o período entre duas execuções de fluxo consecutivas. O valor do intervalo deve ser um inteiro diferente de zero. O intervalo não é necessário quando a frequência está definida como `once` e deve ser maior ou igual a `15` para outros valores de frequência. |
 
 **Resposta**
@@ -670,20 +670,20 @@ A seção a seguir fornece informações sobre as etapas que podem ser seguidas 
 
 ### Monitorar seu fluxo de dados
 
-Depois que o fluxo de dados for criado, você poderá monitorar os dados que estão sendo assimilados por meio dele para ver informações sobre execuções de fluxo, status de conclusão e erros. Para obter exemplos completos de API, leia o guia em [monitoramento de fluxos de dados de origens usando a API](../../monitor.md).
+Depois que o fluxo de dados for criado, você poderá monitorar os dados que estão sendo assimilados por meio dele para ver informações sobre execuções de fluxo, status de conclusão e erros. Para obter exemplos completos de API, leia o guia em [monitorando seus fluxos de dados de fontes usando a API](../../monitor.md).
 
 ### Atualizar seu fluxo de dados
 
-Atualize os detalhes do seu fluxo de dados, como nome e descrição, bem como o agendamento de execução e os conjuntos de mapeamento associados fazendo uma solicitação PATCH para o `/flows` endpoint de [!DNL Flow Service] ao fornecer a ID do fluxo de dados. Ao fazer uma solicitação PATCH, você deve fornecer os atributos exclusivos de seu fluxo de dados `etag` no `If-Match` cabeçalho. Para obter exemplos completos de API, leia o guia em [atualização de fluxos de dados de origens usando a API](../../update-dataflows.md).
+Atualize os detalhes do seu fluxo de dados, como seu nome e descrição, bem como seu agendamento de execução e conjuntos de mapeamento associados fazendo uma solicitação PATCH para o ponto de extremidade `/flows` da API [!DNL Flow Service], ao mesmo tempo em que fornece a ID do seu fluxo de dados. Ao fazer uma solicitação PATCH, você deve fornecer o `etag` exclusivo do fluxo de dados no cabeçalho `If-Match`. Para obter exemplos completos de API, leia o guia em [atualizando fluxos de dados de fontes usando a API](../../update-dataflows.md).
 
 ### Atualizar sua conta
 
-Atualize o nome, a descrição e as credenciais da sua conta de origem executando uma solicitação PATCH para a [!DNL Flow Service] ao fornecer a ID de conexão básica como um parâmetro de consulta. Ao fazer uma solicitação PATCH, você deve fornecer as informações exclusivas de sua conta de origem `etag` no `If-Match` cabeçalho. Para obter exemplos completos de API, leia o guia em [atualização da conta de origem usando a API](../../update.md).
+Atualize o nome, a descrição e as credenciais da conta de origem executando uma solicitação PATCH para a API [!DNL Flow Service] e fornecendo a ID da conexão base como um parâmetro de consulta. Ao fazer uma solicitação PATCH, você deve fornecer o `etag` exclusivo da sua conta de origem no cabeçalho `If-Match`. Para obter exemplos completos de API, leia o guia em [atualizando a conta de origem usando a API](../../update.md).
 
 ### Excluir seu fluxo de dados
 
-Exclua seu fluxo de dados executando uma solicitação DELETE para o [!DNL Flow Service] ao fornecer a ID do fluxo de dados que você deseja excluir como parte do parâmetro de consulta. Para obter exemplos completos de API, leia o guia em [exclusão de fluxos de dados usando a API](../../delete-dataflows.md).
+Exclua seu fluxo de dados executando uma solicitação DELETE para a API [!DNL Flow Service] enquanto fornece a ID do fluxo de dados que você deseja excluir como parte do parâmetro de consulta. Para obter exemplos completos de API, leia o guia em [excluindo seus fluxos de dados usando a API](../../delete-dataflows.md).
 
 ### Excluir sua conta
 
-Exclua sua conta executando uma solicitação DELETE para o [!DNL Flow Service] ao fornecer a ID de conexão básica da conta que você deseja excluir. Para obter exemplos completos de API, leia o guia em [exclusão da conta de origem usando a API](../../delete.md).
+Exclua sua conta executando uma solicitação DELETE para a API [!DNL Flow Service] enquanto fornece a ID de conexão básica da conta que você deseja excluir. Para obter exemplos completos de API, leia o guia em [excluindo sua conta de origem usando a API](../../delete.md).

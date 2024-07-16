@@ -20,24 +20,24 @@ As garantias são limites que fornecem orientação para o uso de dados e do sis
 
 >[!IMPORTANT]
 >
->Verifique os direitos de licença em sua Ordem de venda e a correspondência [Descrição do produto](https://helpx.adobe.com/legal/product-descriptions.html?lang=pt-BR) sobre os limites de uso reais, além desta página de medidas de proteção.
+>Verifique os direitos de licença em seu Pedido de Venda e a [Descrição do Produto](https://helpx.adobe.com/legal/product-descriptions.html?lang=pt-BR) correspondente sobre os limites de uso reais, além desta página de medidas de proteção.
 
 Este documento fornece orientação sobre medidas de proteção para a assimilação de dados no Adobe Experience Platform.
 
 ## Medidas de proteção para a assimilação em lote
 
-A tabela a seguir descreve as medidas de proteção que devem ser consideradas ao usar o [API de assimilação em lote](./batch-ingestion/overview.md) ou fontes:
+A tabela a seguir descreve as medidas de proteção a serem consideradas ao usar a [API de assimilação em lote](./batch-ingestion/overview.md) ou fontes:
 
 | Tipo de assimilação | Diretrizes | Notas |
 | --- | --- | --- |
 | Assimilação do data lake usando a API de assimilação em lote | <ul><li>Você pode assimilar até 20 GB de dados por hora no data lake usando a API de assimilação em lote.</li><li>O número máximo de arquivos por lote é 1500.</li><li>O tamanho máximo do lote é de 100 GB.</li><li>O número máximo de propriedades ou campos por linha é 10000.</li><li>O número máximo de lotes por minuto por usuário é 2000.</li></ul> | |
-| Assimilação do data lake usando fontes de lote | <ul><li>Você pode assimilar até 200 GB de dados por hora no data lake usando fontes de assimilação em lote, como [!DNL Azure Blob], [!DNL Amazon S3], e [!DNL SFTP].</li><li>O tamanho do lote deve estar entre 256 MB e 100 GB. Isso se aplica a dados descompactados e compactados. Quando dados compactados são descompactados no data lake, essas limitações se aplicam.</li><li>O número máximo de arquivos por lote é 1500.</li><li>O tamanho mínimo de um arquivo ou pasta é de 1 byte. Não é possível assimilar arquivos ou pastas de tamanho 0 byte.</li></ul> | Leia o [visão geral das origens](../sources/home.md) para um catálogo de fontes que você pode usar para assimilação de dados. |
+| Assimilação do data lake usando fontes de lote | <ul><li>Você pode assimilar até 200 GB de dados por hora no data lake usando fontes de assimilação em lote como [!DNL Azure Blob], [!DNL Amazon S3] e [!DNL SFTP].</li><li>O tamanho do lote deve estar entre 256 MB e 100 GB. Isso se aplica a dados descompactados e compactados. Quando dados compactados são descompactados no data lake, essas limitações se aplicam.</li><li>O número máximo de arquivos por lote é 1500.</li><li>O tamanho mínimo de um arquivo ou pasta é de 1 byte. Não é possível assimilar arquivos ou pastas de tamanho 0 byte.</li></ul> | Leia a [visão geral das fontes](../sources/home.md) para obter um catálogo de fontes que você pode usar para assimilação de dados. |
 | Assimilação em lote para Perfil | <ul><li>O tamanho máximo de uma classe de registro é 100 KB (rígido).</li><li>O tamanho máximo de uma classe ExperienceEvent é 10 KB (rígido).</li></ul> | |
-| Número de lotes Profile ou ExperienceEvent assimilados por dia | **O número máximo de lotes Profile ou ExperienceEvent assimilados por dia é 90.** Isso significa que o total combinado de lotes Profile e ExperienceEvent assimilados a cada dia não pode exceder 90. A ingestão de lotes adicionais afetará o desempenho do sistema. | Este é um limite flexível. É possível ir além de um limite flexível, no entanto, os limites flexíveis fornecem uma diretriz recomendada para o desempenho do sistema. |
+| Número de lotes Profile ou ExperienceEvent assimilados por dia | **O número máximo de lotes de Profile ou ExperienceEvent assimilados por dia é 90.** Isso significa que o total combinado de lotes Profile e ExperienceEvent assimilados a cada dia não pode exceder 90. A ingestão de lotes adicionais afetará o desempenho do sistema. | Este é um limite flexível. É possível ir além de um limite flexível, no entanto, os limites flexíveis fornecem uma diretriz recomendada para o desempenho do sistema. |
 
 ## Medidas de proteção para assimilação por transmissão
 
-Leia o [visão geral da assimilação por transmissão](./streaming-ingestion/overview.md) para obter informações sobre as medidas de proteção para a assimilação por transmissão.
+Leia a [visão geral da assimilação de streaming](./streaming-ingestion/overview.md) para obter informações sobre as medidas de proteção para a assimilação de streaming.
 
 ## Medidas de proteção para fontes de transmissão
 
@@ -45,7 +45,7 @@ A tabela a seguir descreve as medidas de proteção a serem consideradas ao usar
 
 | Tipo de assimilação | Diretrizes | Notas |
 | --- | --- | --- |
-| Fontes de transmissão | <ul><li>O tamanho máximo do registro é de 1 MB, com o tamanho recomendado de 10 KB.</li><li>As fontes de transmissão oferecem suporte a entre 4.000 e 5.000 solicitações por segundo ao assimilar no data lake. Isso se aplica a conexões de origem recém-criadas além de conexões de origem existentes. **Nota**: pode levar até 30 minutos para que a transmissão de dados seja completamente processada para o data lake.</li><li>As fontes de transmissão oferecem suporte a no máximo 1500 solicitações por segundo ao assimilar dados para o perfil ou a segmentação por transmissão.</li></ul> | Fontes de transmissão, como [!DNL Kafka], [!DNL Azure Event Hubs], e [!DNL Amazon Kinesis] não use o [!DNL Data Collection Core Service] (DCCS) e podem ter limites de rendimento diferentes. Consulte a [visão geral das origens](../sources/home.md) para um catálogo de fontes que você pode usar para assimilação de dados. |
+| Fontes de transmissão | <ul><li>O tamanho máximo do registro é de 1 MB, com o tamanho recomendado de 10 KB.</li><li>As fontes de transmissão oferecem suporte a entre 4.000 e 5.000 solicitações por segundo ao assimilar no data lake. Isso se aplica a conexões de origem recém-criadas além de conexões de origem existentes. **Observação**: pode levar até 30 minutos para que a transmissão de dados seja completamente processada para o data lake.</li><li>As fontes de transmissão oferecem suporte a no máximo 1500 solicitações por segundo ao assimilar dados para o perfil ou a segmentação por transmissão.</li></ul> | Fontes de transmissão como [!DNL Kafka], [!DNL Azure Event Hubs] e [!DNL Amazon Kinesis] não usam a rota [!DNL Data Collection Core Service] (DCCS) e podem ter limites de taxa de transferência diferentes. Consulte a [visão geral das fontes](../sources/home.md) para obter um catálogo de fontes que podem ser usadas para assimilação de dados. |
 
 ## Próximas etapas
 

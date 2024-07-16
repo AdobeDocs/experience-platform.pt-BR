@@ -7,13 +7,13 @@ exl-id: 056fdb5b-6782-4e29-9d62-90b270c05795
 source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
 source-wordcount: '342'
-ht-degree: 3%
+ht-degree: 18%
 
 ---
 
-# [!UICONTROL Item da lista de produtos] tipo de dados
+# Tipo de dados [!UICONTROL Item de lista de produtos]
 
-[!UICONTROL Item da lista de produtos] é um tipo de dados XDM padrão que descreve um produto selecionado por um cliente com opções, preços e contexto de uso específicos para um ponto específico do tempo.
+[!UICONTROL O item da lista de produtos] é um tipo de dados XDM padrão que descreve um produto selecionado por um cliente com opções, preços e contexto de uso específicos para um determinado momento.
 
 Os valores capturados nesse tipo de dados podem diferir do registro do produto. Por exemplo, o registro do produto contém detalhes do sistema de informações do produto que são consistentes para todos os clientes, onde o item da lista de produtos tem o preço real oferecido ao cliente no momento da compra, que pode variar devido a campanhas de vendas ou preços sazonais.
 
@@ -23,16 +23,16 @@ Os valores capturados nesse tipo de dados podem diferir do registro do produto. 
 | --- | --- | --- |
 | `selectedOptions` | Matriz de objetos | Contém opções personalizadas escolhidas para um produto configurável. Cada item da lista é um objeto com as seguintes propriedades:<ul><li>`attribute`: Um nome para o atributo configurável.</li><li>`value`: O valor do atributo.</li></ul> |
 | `SKU` | [!UICONTROL String] | Unidade de manutenção de estoque (SKU), o identificador exclusivo de um produto definido pelo fornecedor. |
-| `_id` | [!UICONTROL String] | O identificador de item de linha para esta entrada de produto. O produto em si é identificado por meio de `product`. |
-| `currencyCode` | [!UICONTROL String] | A variável [ISO 4217](https://www.iso.org/iso-4217-currency-codes.html) código alfabético de moeda usado para definir o preço do produto. |
+| `_id` | [!UICONTROL String] | O identificador de item de linha para esta entrada de produto. O produto em si é identificado através de `product`. |
+| `currencyCode` | [!UICONTROL String] | O código alfabético de moeda [ISO 4217](https://www.iso.org/iso-4217-currency-codes.html) usado para definir o preço do produto. |
 | `discountAmount` | [!UICONTROL Duplo] | Se o produto for descontado, isso representa a diferença entre o preço normal e o preço especial do produto. |
 | `name` | [!UICONTROL String] | O nome de exibição do produto conforme apresentado ao usuário para esta visualização do produto. |
 | `priceTotal` | [!UICONTROL Duplo] | O preço total do item de linha do produto. |
-| `product` | [!UICONTROL String] (URI) | O URI `$id` do esquema XDM que captura o próprio produto. |
+| `product` | [!UICONTROL Cadeia de caracteres] (URI) | O URI `$id` do esquema XDM que captura o próprio produto. |
 | `productAddMethod` | [!UICONTROL String] | O método usado para adicionar um item de produto à lista pelo visitante. |
 | `productImageUrl` | [!UICONTROL String] | Um URL para a imagem principal do produto. |
-| `quantity` | [!UICONTROL Integer] | O número de unidades que o cliente indicou que precisa do produto. |
-| `unitOfMeasureCode` | [!UICONTROL String] | O padrão [código de unidade de medida](https://ucum.org/ucum) para o produto, conforme relacionado ao `quantity` propriedade. |
+| `quantity` | [!UICONTROL Inteiro] | O número de unidades que o cliente indicou que precisa do produto. |
+| `unitOfMeasureCode` | [!UICONTROL String] | O [código de unidade de medida](https://ucum.org/ucum) padrão do produto relacionado à propriedade `quantity`. |
 
 {style="table-layout:auto"}
 

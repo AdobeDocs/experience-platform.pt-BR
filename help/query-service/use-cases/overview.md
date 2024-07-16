@@ -2,10 +2,11 @@
 title: Casos de uso compatíveis com o serviço de consulta da Adobe Experience Platform
 description: Saiba quais casos de uso são compatíveis com o Serviço de consulta da Adobe Experience Platform.
 keywords: Serviço de consulta;casos de uso
-source-git-commit: 454f485a327233ca1a5b37ea58f16b7b53255ba6
+exl-id: eba8050d-be3a-41b6-8175-4f6b2b2ef7b0
+source-git-commit: 62bcaa532cdec68a2f4f62e5784c35b91b7d5743
 workflow-type: tm+mt
 source-wordcount: '137'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -16,8 +17,7 @@ O Serviço de consulta fornece soluções para uma variedade de casos de uso em 
 Cada documento nesta seção contém informações sobre como implementar seu respectivo caso de uso. Os artigos sugeridos a seguir demonstram a versatilidade fornecida pelo Serviço de consulta:
 
 - [Navegação abandonada](./abandoned-browse.md)
-- [Filtragem de bots](./bot-filtering.md)
+- [Filtragem de bot](./bot-filtering.md)
 - [Valor vitalício do cliente](./customer-lifetime-value.md)
 - [Determinar uma pontuação de propensão](./propensity-score.md)
 - [Correspondência Difusa](./fuzzy-match.md)
-

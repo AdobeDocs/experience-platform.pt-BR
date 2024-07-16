@@ -14,13 +14,13 @@ ht-degree: 2%
 
 # Endpoint de consentimento
 
-Certos regulamentos exigem o consentimento explícito do cliente antes que seus dados pessoais possam ser coletados. A variável `/consent` endpoint na variável [!DNL Privacy Service] A API permite processar solicitações de consentimento do cliente e integrá-las ao seu fluxo de trabalho de privacidade.
+Certos regulamentos exigem o consentimento explícito do cliente antes que seus dados pessoais possam ser coletados. O ponto de extremidade `/consent` na API [!DNL Privacy Service] permite processar solicitações de consentimento do cliente e integrá-las ao seu fluxo de trabalho de privacidade.
 
-Antes de usar este guia, consulte o [introdução](./getting-started.md) guia para obter informações sobre os cabeçalhos de autenticação necessários apresentados na chamada de API de exemplo abaixo.
+Antes de usar este guia, consulte o guia de [introdução](./getting-started.md) para obter informações sobre os cabeçalhos de autenticação necessários apresentados na chamada de API de exemplo abaixo.
 
 ## Processar uma solicitação de consentimento do cliente
 
-As solicitações de consentimento são processadas fazendo uma solicitação POST ao `/consent` terminal.
+As solicitações de consentimento são processadas fazendo uma solicitação POST para o ponto de extremidade `/consent`.
 
 **Formato da API**
 
@@ -30,7 +30,7 @@ POST /consent
 
 **Solicitação**
 
-A solicitação a seguir cria um novo trabalho de consentimento para as IDs de usuário fornecidas no `entities` matriz.
+A solicitação a seguir cria um novo trabalho de consentimento para as IDs de usuário fornecidas na matriz `entities`.
 
 ```shell
 curl -X POST \
@@ -61,16 +61,16 @@ curl -X POST \
 
 | Propriedade | Descrição |
 | --- | --- |
-| `optOutOfSale` | Quando definido como verdadeiro, indica que os usuários fornecidos em `entities` recusar a venda ou a partilha dos seus dados pessoais. |
-| `entities` | Uma matriz de objetos que indica os usuários aos quais a solicitação de consentimento se aplica. Cada objeto contém um `namespace` e uma série de `values` para corresponder usuários individuais a esse namespace. |
-| `nameSpace` | Cada objeto no `entities` a matriz deve conter um dos [namespaces de identidade padrão](./appendix.md#standard-namespaces) reconhecido pela API Privacy Service. |
-| `values` | Uma matriz de valores para cada usuário, correspondente à variável fornecida `nameSpace`. |
+| `optOutOfSale` | Quando definido como verdadeiro, indica que os usuários fornecidos em `entities` desejam recusar a venda ou o compartilhamento de seus dados pessoais. |
+| `entities` | Uma matriz de objetos que indica os usuários aos quais a solicitação de consentimento se aplica. Cada objeto contém um `namespace` e uma matriz de `values` para corresponder usuários individuais a esse namespace. |
+| `nameSpace` | Cada objeto na matriz `entities` deve conter um dos [namespaces de identidade padrão](./appendix.md#standard-namespaces) reconhecidos pela API Privacy Service. |
+| `values` | Uma matriz de valores para cada usuário, correspondente ao `nameSpace` fornecido. |
 
 {style="table-layout:auto"}
 
 >[!NOTE]
 >
->Para obter mais informações sobre como determinar para quais valores de identidade do cliente enviar [!DNL Privacy Service], consulte o guia sobre [fornecimento de dados de identidade](../identity-data.md).
+>Para obter mais informações sobre como determinar quais valores de identidade do cliente enviar para [!DNL Privacy Service], consulte o manual em [fornecendo dados de identidade](../identity-data.md).
 
 **Resposta**
 

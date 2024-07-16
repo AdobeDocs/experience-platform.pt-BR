@@ -59,7 +59,7 @@ console.log(turbine.environment.stage);
 | Propriedade | Descrição |
 | --- | --- |
 | `id` | A ID do ambiente. |
-| `stage` | O ambiente para o qual essa biblioteca foi criada. Os valores possíveis são `development`, `staging`, e `production`. |
+| `stage` | O ambiente para o qual essa biblioteca foi criada. Os valores possíveis são `development`, `staging` e `production`. |
 
 {style="table-layout:auto"}
 
@@ -119,11 +119,11 @@ O utilitário de registro é usado para registrar mensagens no console. As mensa
 * `logger.warn(message: string)`: registra uma mensagem de aviso no console.
 * `logger.error(message: string)`: registra uma mensagem de erro no console.
 * `logger.debug(message: string)`: registra uma mensagem de depuração no console. (Visível somente quando o registro `verbose` estiver ativado no console do navegador.)
-* `logger.deprecation(message: string)`: registra uma mensagem de aviso no console, independentemente de a depuração de tag ser ou não ativada pelo usuário.
+* `logger.deprecation(message: string)`: registra uma mensagem de aviso no console, independentemente de a depuração de tag estar ou não habilitada pelo usuário.
 
 ## `onDebugChanged`
 
-Se for passada uma função de retorno de chamada para `turbine.onDebugChanged`, as tags chamarão seu retorno de chamada sempre que a depuração for alternada. As tags passarão um valor booliano para a função de retorno de chamada, que será verdadeira se a depuração estiver ativada ou falsa se a depuração estiver desativada.
+Se for passada uma função de retorno de chamada para `turbine.onDebugChanged`, as tags chamarão seu retorno de chamada sempre que a depuração for alternada. As tags passarão um valor booliano para a função de retorno de chamada, que será verdadeira se a depuração estiver habilitada ou falsa se a depuração estiver desabilitada.
 
 Se você está apenas tentando registrar mensagens, é improvável que precise usar isso. Em vez disso, sempre registre mensagens usando `turbine.logger`, e as tags garantirão que suas mensagens só sejam impressas no console quando a depuração de tag estiver habilitada.
 

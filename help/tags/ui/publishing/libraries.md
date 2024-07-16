@@ -88,11 +88,11 @@ As alterações na biblioteca são mostradas no log de alterações do Conteúdo
 
 Para remover um item de uma biblioteca, você deve desativá-lo e publicar o estado desativado.
 
-1. Desative as extensões que deseja remover, juntamente com os elementos de dados e as regras que dependem dessas extensões.
-1. Desative os elementos de dados e as regras que deseja remover.
+1. Desabilite as extensões que deseja remover, juntamente com os elementos de dados e as regras que dependem dessas extensões.
+1. Desabilite os elementos de dados e as regras que deseja remover.
 1. Abra a guia **[!UICONTROL Publicação]**.
 1. Selecione a biblioteca que deseja alterar.
-1. Use as regras, os elementos de dados e os botões de extensões para selecionar os itens desativados que deseja remover da biblioteca.
+1. Use as regras, os elementos de dados e os botões de extensões para selecionar os itens desabilitados que deseja remover da biblioteca.
 1. Salve as alterações.
 
 ## Gerenciar alterações na biblioteca

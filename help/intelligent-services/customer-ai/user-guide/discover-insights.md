@@ -7,7 +7,7 @@ description: Este documento serve como um guia para interagir com insights da in
 exl-id: 8aaae963-4029-471e-be9b-814147a5f160
 source-git-commit: 07a110f6d293abff38804b939014e28f308e3b30
 workflow-type: tm+mt
-source-wordcount: '2079'
+source-wordcount: '2098'
 ht-degree: 1%
 
 ---
@@ -20,13 +20,13 @@ Este documento serve como um guia para interagir com insights da instância do s
 
 ## Introdução
 
-Para utilizar insights para a IA do cliente, é necessário ter uma instância de serviço com um status de execução bem-sucedida disponível. Para criar uma nova visita de instância de serviço [Configurar uma instância da IA do cliente](./configure.md). Se você criou recentemente uma instância de serviço e ela ainda está sendo treinada e pontuada, aguarde 24 horas para que ela seja concluída.
+Para utilizar insights para a IA do cliente, é necessário ter uma instância de serviço com um status de execução bem-sucedida disponível. Para criar uma nova instância de serviço, visite [Configurando uma instância da IA do cliente](./configure.md). Se você criou recentemente uma instância de serviço e ela ainda está sendo treinada e pontuada, aguarde 24 horas para que ela seja concluída.
 
 ## Visão geral da instância de serviço
 
-No [!DNL Adobe Experience Platform] Interface, selecione **[!UICONTROL Serviços]** no painel de navegação esquerdo. A variável *Serviços* e exibe os Serviços inteligentes disponíveis. No contêiner da IA do cliente, selecione **[!UICONTROL Abertura]**.
+Na interface do usuário do [!DNL Adobe Experience Platform], selecione **[!UICONTROL Serviços]** na navegação à esquerda. O navegador *Serviços* é exibido e exibe os Serviços Inteligentes disponíveis. No contêiner da IA do cliente, selecione **[!UICONTROL Abrir]**.
 
-![Acesso à sua instância](../images/insights/navigate-to-service.png)
+![Acessando sua instância](../images/insights/navigate-to-service.png)
 
 A página Serviço de IA do cliente é exibida. Esta página lista instâncias de serviço da IA do cliente e exibe informações sobre elas, incluindo o nome da instância, o tipo de propensão, a frequência com que a instância é executada e o status da última atualização.
 
@@ -40,9 +40,9 @@ Selecione um nome de instância de serviço para começar.
 
 ![Criar instância](../images/insights/click-the-name.png)
 
-Em seguida, a página de insights para essa instância de serviço é exibida com a opção de selecionar **[!UICONTROL Pontuações mais recentes]** ou **[!UICONTROL Resumo de desempenho]**. A guia padrão **[!UICONTROL Pontuações mais recentes]** O fornece visualizações dos dados. As visualizações e o que você pode fazer com os dados são explicados com mais detalhes neste guia.
+Em seguida, a página de insights para essa instância de serviço é exibida com a opção de selecionar **[!UICONTROL Últimas pontuações]** ou **[!UICONTROL Resumo do desempenho]**. A guia padrão **[!UICONTROL Últimas pontuações]** fornece visualizações dos dados. As visualizações e o que você pode fazer com os dados são explicados com mais detalhes neste guia.
 
-A variável **[!UICONTROL Resumo de desempenho]** A guia mostra as taxas de churn ou conversão reais para cada intervalo de propensão. Para saber mais, consulte a seção sobre [métricas de resumo de desempenho](#performance-metrics).
+A guia **[!UICONTROL Resumo de desempenho]** mostra as taxas de conversão ou churn real para cada classe de propensão. Para saber mais, consulte a seção sobre [métricas de resumo de desempenho](#performance-metrics).
 
 ![página de configuração](../images/insights/landing_page_insights.png)
 
@@ -54,12 +54,12 @@ Há duas maneiras de exibir detalhes da instância do serviço: no painel ou na 
 
 Para exibir uma visão geral dos detalhes da instância de serviço no painel, selecione um container de instância de serviço, evitando o hiperlink anexado ao nome. Isso abre um painel direito que fornece detalhes adicionais. Os controles contêm o seguinte:
 
-- **[!UICONTROL Editar]**: Seleção **[!UICONTROL Editar]** permite modificar uma instância de serviço existente. É possível editar o nome, a descrição e a frequência de pontuação da instância.
-- **[!UICONTROL Clonar]**: Seleção **[!UICONTROL Clonar]** copia a configuração da instância de serviço selecionada no momento. Em seguida, você pode modificar o fluxo de trabalho para fazer pequenos ajustes e renomeá-lo como uma nova instância.
-- **[!UICONTROL Excluir]**: é possível excluir uma instância de serviço, incluindo quaisquer execuções históricas.
-- **[!UICONTROL Fonte de dados]**: um link para o conjunto de dados usado por essa instância.
-- **[!UICONTROL Frequência de execução]**: com que frequência uma execução de pontuação ocorre e quando.
-- **[!UICONTROL Definição de pontuação]**: uma visão geral rápida da meta configurada para essa instância.
+- **[!UICONTROL Editar]**: selecionar **[!UICONTROL Editar]** permite modificar uma instância de serviço existente. É possível editar o nome, a descrição e a frequência de pontuação da instância.
+- **[!UICONTROL Clonar]**: selecionar **[!UICONTROL Clonar]** copia a configuração da instância de serviço selecionada no momento. Em seguida, você pode modificar o fluxo de trabalho para fazer pequenos ajustes e renomeá-lo como uma nova instância.
+- **[!UICONTROL Excluir]**: é possível excluir uma instância de serviço, incluindo todas as execuções históricas.
+- **[!UICONTROL Fonte de dados]**: um link para o conjunto de dados usado por esta instância.
+- **[!UICONTROL Frequência de Execução]**: com que frequência uma execução de pontuação ocorre e quando.
+- **[!UICONTROL Definição de pontuação]**: uma visão geral rápida da meta que você configurou para esta instância.
 
 ![](../images/user-guide/service-instance-panel.png)
 
@@ -71,17 +71,17 @@ Para exibir uma visão geral dos detalhes da instância de serviço no painel, s
 
 ### Mostrar lista suspensa de mais insights
 
-A segunda maneira de exibir detalhes adicionais de uma instância de serviço está localizada na página de insights. Selecionar **[!UICONTROL Mostrar mais]** no canto superior direito para preencher uma lista suspensa. Os detalhes são listados, como a definição da pontuação, quando ela foi criada, o tipo de propensão e os conjuntos de dados usados. Para obter mais informações sobre qualquer uma das propriedades listadas, visite [Configurar uma instância da IA do cliente](./configure.md).
+A segunda maneira de exibir detalhes adicionais de uma instância de serviço está localizada na página de insights. Selecione **[!UICONTROL Mostrar mais]** no canto superior direito para preencher uma lista suspensa. Os detalhes são listados, como a definição da pontuação, quando ela foi criada, o tipo de propensão e os conjuntos de dados usados. Para obter mais informações sobre as propriedades listadas, visite [Configurando uma instância da IA do cliente](./configure.md).
 
 ![mostrar mais](../images/insights/landing-show-more.png)
 
 ### Popover de visualização do conjunto de dados da IA do cliente
 
-Se mais de um conjunto de dados for usado pela IA do cliente, um hiperlink rotulado como **[!UICONTROL Múltiplo]** seguido pelo número de conjuntos de dados entre parênteses `()` é fornecido.
+Se mais de um conjunto de dados for usado pela IA do cliente, será fornecido um hiperlink rotulado como **[!UICONTROL Vários]** seguido do número de conjuntos de dados entre colchetes `()`.
 
 ![vários conjuntos de dados](../images/insights/insights-multi-datasets.png)
 
-Selecionar o link de vários conjuntos de dados abre o popover Visualização do conjunto de dados da IA do cliente. Cada cor na visualização representa um conjunto de dados, conforme mostrado pela chave de cor à esquerda das colunas do conjunto de dados. Neste exemplo, você pode ver somente **Conjunto de dados 1** contém o `PROP1` coluna.
+Selecionar o link de vários conjuntos de dados abre o popover Visualização do conjunto de dados da IA do cliente. Cada cor na visualização representa um conjunto de dados, conforme mostrado pela chave de cor à esquerda das colunas do conjunto de dados. Neste exemplo, você pode ver que apenas **Conjunto de Dados 1** contém a coluna `PROP1`.
 
 ![mostrar mais](../images/insights/dataset-preview.png)
 
@@ -97,11 +97,11 @@ A caixa de diálogo de edição é exibida, permitindo editar o nome, a descriç
 
 ### Mais ações
 
-A variável **[!UICONTROL Mais ações]** está localizado na navegação superior direita ao lado de **[!UICONTROL Editar]**. Selecionar **[!UICONTROL Mais ações]** abre uma lista suspensa que permite selecionar uma das seguintes operações:
+O botão **[!UICONTROL Mais ações]** está localizado na navegação superior direita, ao lado de **[!UICONTROL Editar]**. Selecionar **[!UICONTROL Mais ações]** abre uma lista suspensa que permite selecionar uma das seguintes operações:
 
-- **[!UICONTROL Clonar]**: Seleção **[!UICONTROL Clonar]** copia a configuração da instância do serviço. Em seguida, você pode modificar o fluxo de trabalho para fazer pequenos ajustes e renomeá-lo como uma nova instância.
+- **[!UICONTROL Clone]**: selecionar **[!UICONTROL Clone]** copia a configuração da instância do serviço. Em seguida, você pode modificar o fluxo de trabalho para fazer pequenos ajustes e renomeá-lo como uma nova instância.
 - **[!UICONTROL Excluir]**: exclui a instância.
-- **[!UICONTROL Pontuações de acesso]**: Seleção **[!UICONTROL Pontuações de acesso]** abre uma caixa de diálogo fornecendo um link para a [pontuações de download para a IA do cliente](./download-scores.md) tutorial, a caixa de diálogo também fornece a ID do conjunto de dados necessária para fazer chamadas de API.
+- **[!UICONTROL Pontuações de acesso]**: selecionar **[!UICONTROL Pontuações de acesso]** abre uma caixa de diálogo fornecendo um link para o tutorial [pontuações de download da IA do cliente](./download-scores.md). A caixa de diálogo também fornece a ID do conjunto de dados necessária para fazer chamadas de API.
 - **[!UICONTROL Exibir histórico de execuções]**: uma caixa de diálogo contendo uma lista de todas as execuções de pontuação associadas à instância do serviço é exibida.
 
 ![mais ações](../images/insights/more-actions.png)
@@ -114,7 +114,7 @@ O resumo de pontuação exibe o número total de perfis pontuados e os categoriz
 >
 >Se for uma pontuação de propensão de conversão, as pontuações mais altas serão exibidas em verde e as pontuações mais baixas em vermelho. Se você estiver prevendo a propensão de churn, ela será invertida, as pontuações mais altas estarão em vermelho e as pontuações mais baixas em verde. O intervalo médio permanece amarelo, independentemente do tipo de propensão escolhido.
 
-![resumo de pontuação](../images/insights/scoring-summary.png)
+![resumo da pontuação](../images/insights/scoring-summary.png)
 
 Você pode passar o mouse sobre qualquer cor no anel para ver informações adicionais, como uma porcentagem e o número total de perfis que pertencem a um bloco.
 
@@ -122,7 +122,7 @@ Você pode passar o mouse sobre qualquer cor no anel para ver informações adic
 
 ## Distribuição de pontuações
 
-A variável **[!UICONTROL Distribuição de pontuações]** fornece um resumo visual da população com base na pontuação. As cores que você vê no [!UICONTROL Distribuição de pontuações] representa o tipo de pontuação de propensão gerada. Passar o mouse sobre qualquer uma das distribuições de pontuação fornece a contagem exata que pertence a essa distribuição.
+O cartão **[!UICONTROL Distribution of Scores]** fornece um resumo visual da população com base na pontuação. As cores que você vê no cartão [!UICONTROL Distribuição de pontuações] representam o tipo de pontuação de propensão gerada. Passar o mouse sobre qualquer uma das distribuições de pontuação fornece a contagem exata que pertence a essa distribuição.
 
 ![distribuição de pontuações](../images/insights/distribution-of-scores.png)
 
@@ -136,7 +136,7 @@ Para cada intervalo de pontuação, é gerado um cartão que mostra os 10 princi
 
 Passar o mouse sobre qualquer um dos principais fatores influentes detalha ainda mais os dados. Você recebe uma visão geral de por que determinados perfis pertencem a um intervalo de propensão. Dependendo do fator, você pode receber valores numéricos, categóricos ou booleanos. O exemplo abaixo exibe valores categóricos por região.
 
-![captura de tela de detalhamento](../images/insights/drilldown.png)
+![captura de tela detalhada](../images/insights/drilldown.png)
 
 Além disso, usando detalhamentos, você pode comparar um fator de distribuição se ele ocorrer em dois ou mais buckets de propensão e criar segmentos mais específicos com esses valores. O exemplo a seguir ilustra o primeiro caso de uso:
 
@@ -146,33 +146,33 @@ Você pode ver que os perfis com baixa propensão à conversão têm menos proba
 
 ### Criar um segmento
 
-Selecionar o **[!UICONTROL Criar segmento]** em qualquer um dos intervalos para baixa, média e alta propensão redireciona você para o construtor de segmentos.
+Selecionar o botão **[!UICONTROL Criar segmento]** em qualquer um dos grupos para baixa, média e alta propensão redireciona você para o construtor de segmentos.
 
 >[!NOTE]
 >
->A variável **[!UICONTROL Criar segmento]** O botão só estará disponível se o Perfil de cliente em tempo real estiver ativado para o conjunto de dados. Para obter mais informações sobre como ativar o Perfil do cliente em tempo real, visite o [Visão geral do Perfil do cliente em tempo real](../../../rtcdp/overview.md).
+>O botão **[!UICONTROL Criar segmento]** só estará disponível se o Perfil de cliente em tempo real estiver habilitado para o conjunto de dados. Para obter mais informações sobre como habilitar o Perfil do cliente em tempo real, visite a [Visão geral do Perfil do cliente em tempo real](../../../rtcdp/overview.md).
 
 ![Clique em criar segmento](../images/insights/influential-factors-create-segment.png)
 
 ![Criar um segmento](../images/insights/create-segment.png)
 
-O construtor de segmentos é usado para definir um segmento. Ao selecionar **[!UICONTROL Criar segmento]** na página Insights, a IA do cliente adiciona automaticamente as informações dos intervalos selecionados ao segmento. Para concluir a criação do segmento, basta preencher a **Nome** e **Descrição** contêineres localizados no painel direito da interface do usuário do construtor de segmentos. Depois de dar um nome e uma descrição ao segmento, selecione **[!UICONTROL Salvar]** no canto superior direito.
+O construtor de segmentos é usado para definir um segmento. Ao selecionar **[!UICONTROL Criar segmento]** na página de Insights, a IA do cliente adiciona automaticamente as informações dos grupos selecionados ao segmento. Para concluir a criação do segmento, basta preencher os contêineres **Nome** e **Descrição**, localizados no painel direito da interface do usuário do construtor de segmentos. Depois de dar um nome e uma descrição ao segmento, selecione **[!UICONTROL Salvar]** no canto superior direito.
 
 >[!NOTE]
 >
 >Como as pontuações de propensão são gravadas no perfil individual, elas ficam disponíveis no Construtor de segmentos como qualquer outro atributo de perfil. Ao navegar até o construtor de segmentos para criar novos segmentos, você pode ver todas as várias pontuações de propensão em seu namespace Customer AI.
 
-![Preenchimento do segmento](../images/insights/segment-saving.png)
+![Preenchimento de segmento](../images/insights/segment-saving.png)
 
-Para exibir seu novo segmento na interface do Platform, selecione **[!UICONTROL Segmentos]** no painel de navegação esquerdo. A variável **[!UICONTROL Procurar]** é exibida e mostra todos os segmentos disponíveis.
+Para exibir seu novo segmento na interface do Platform, selecione **[!UICONTROL Segmentos]** na navegação à esquerda. A página **[!UICONTROL Procurar]** é exibida e mostra todos os segmentos disponíveis.
 
-![Todos os segmentos](../images/insights/Segments-dashboard.png)
+![Todos os seus segmentos](../images/insights/Segments-dashboard.png)
 
 ## Desempenho histórico {#historical-performance}
 
-A variável **[!UICONTROL Resumo de desempenho]** A guia mostra as taxas de churn ou conversão reais, separadas em cada um dos intervalos de propensão pontuados pela IA do cliente.
+A guia **[!UICONTROL Resumo de desempenho]** mostra as taxas de conversão ou churn real, separadas em cada um dos intervalos de propensão pontuados pela IA do cliente.
 
-![Guia Performance summary](../images/insights/summary_tab.png)
+![Guia de resumo de desempenho](../images/insights/summary_tab.png)
 
 Inicialmente, apenas as taxas esperadas (linhas pontilhadas) são exibidas. As taxas esperadas são exibidas quando uma execução de pontuação não ocorreu e os dados ainda não estão disponíveis. No entanto, depois que uma janela de resultado passar, a taxa esperada é substituída por uma taxa real (linha sólida).
 
@@ -180,15 +180,15 @@ Passar o mouse sobre as linhas exibe a data e a taxa real/esperada desse dia nes
 
 ![Exemplo de bucket](../images/insights/churn_tab.png)
 
-Você pode filtrar o período para as taxas esperadas e reais que estão sendo exibidas. Selecione o **ícone de calendário** ![ícone](../images/insights/calendar_icon.png)em seguida, selecione um novo intervalo de datas. Os resultados em cada um dos intervalos são atualizados para exibir dentro do novo intervalo de datas.
+Você pode filtrar o período para as taxas esperadas e reais que estão sendo exibidas. Selecione o **ícone de calendário** ![ícone](../images/insights/calendar_icon.png)e selecione um novo intervalo de datas. Os resultados em cada um dos intervalos são atualizados para exibir dentro do novo intervalo de datas.
 
-![Seletor de data](../images/insights/date_selector.png)
+![Seletor de datas](../images/insights/date_selector.png)
 
 ### Taxas de execução de pontuação individual
 
-A metade inferior do **[!UICONTROL Resumo de desempenho]** exibe os resultados de cada execução de pontuação individual. Selecione a data suspensa no canto superior direito para exibir resultados para uma execução de pontuação diferente.
+A metade inferior da guia **[!UICONTROL Resumo do desempenho]** exibe os resultados de cada execução de pontuação individual. Selecione a data suspensa no canto superior direito para exibir resultados para uma execução de pontuação diferente.
 
-Dependendo se você estiver prevendo churn ou conversão, a variável [!UICONTROL Distribuição de pontuações] o gráfico exibe a distribuição de perfis com churn/convertidos e sem churn/não convertidos em cada incremento.
+Dependendo de se você estiver prevendo churn ou conversão, o gráfico [!UICONTROL Distribuição de pontuações] exibe a distribuição de perfis churn/convertidos e sem churn/não convertidos em cada incremento.
 
 ![pontuação individual](../images/insights/scoring_tab.png)
 
@@ -198,7 +198,7 @@ Além de rastrear os resultados previstos e reais ao longo do tempo na guia Dese
 
 ### Levantar gráfico
 
-![elevar gráfico](../images/user-guide/lift-chart.png)
+![gráfico de elevação](../images/user-guide/lift-chart.png)
 
 O gráfico de elevação mede a melhoria do uso de um modelo preditivo em vez de direcionamento aleatório.
 
@@ -209,7 +209,7 @@ Os indicadores do modelo de alta qualidade incluem:
 
 ### Gráfico de ganhos
 
-![gráfico de ganhos](../images/user-guide/gains-chart.png)
+![ganha gráfico](../images/user-guide/gains-chart.png)
 
 O gráfico de ganhos cumulativos mede a porcentagem de resultados positivos capturados ao direcionar pontuações acima de um determinado limite. Depois de classificar os clientes por pontuação de propensão de alta para baixa, a população é dividida em decis: 10 grupos de tamanho igual. Um modelo perfeito capturaria todos os resultados positivos nos decis de maior pontuação. Um método de direcionamento aleatório de linha de base captura resultados positivos proporcionalmente ao tamanho do grupo. Direcionar 30% dos usuários capturaria 30% dos resultados.
 
@@ -221,11 +221,11 @@ Os indicadores do modelo de alta qualidade incluem:
 
 ### AUC (Área abaixo da curva)
 
-A AUC reflete a força da relação entre a classificação por pontuação e a ocorrência do objetivo previsto. Um **AUC** 0,5 significa que o modelo não é melhor do que uma estimativa aleatória. Um **AUC** de 1 significa que o modelo pode prever perfeitamente quem tomará a ação relevante.
+A AUC reflete a força da relação entre a classificação por pontuação e a ocorrência do objetivo previsto. Uma **AUC** de 0,5 significa que o modelo não é melhor do que uma estimativa aleatória. Uma **AUC** de 1 significa que o modelo pode prever perfeitamente quem executará a ação relevante.
 
 ## Próximas etapas
 
-Este documento descreveu os insights fornecidos por uma instância do serviço de IA do cliente. Agora você pode seguir para o tutorial em [baixar pontuações na IA do cliente](./download-scores.md) ou navegue pela outra [Serviços inteligentes Adobe](../../home.md) guias que são oferecidos.
+Este documento descreveu os insights fornecidos por uma instância do serviço de IA do cliente. Agora você pode seguir para o tutorial em [baixando pontuações na IA do cliente](./download-scores.md) ou navegar pelos outros guias do [Adobe Intelligent Services](../../home.md) oferecidos.
 
 ## Recursos adicionais
 

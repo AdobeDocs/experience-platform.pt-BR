@@ -26,4 +26,4 @@ Para obter informações detalhadas sobre cada tipo de host, use os links acima.
 
 O mesmo host pode ser usado para vários ambientes de uma propriedade.
 
-Para obter mais informações para ajudá-lo a decidir entre a auto hospedagem e o gerenciamento de Adobe para você, leia o [guia de auto-hospedagem](./self-hosting-libraries.md).
+Para obter mais informações para ajudá-lo a decidir entre a auto hospedagem e o gerenciamento de Adobe para você, leia o [guia de auto hospedagem](./self-hosting-libraries.md).

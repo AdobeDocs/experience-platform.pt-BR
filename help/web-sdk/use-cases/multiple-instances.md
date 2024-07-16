@@ -30,9 +30,9 @@ O SDK permite criar uma instância separada para cada propriedade adicionando ou
 <script src="alloy.js" async></script>
 ```
 
-Como resultado, o script cria duas instâncias do SDK. A função global para interagir com a primeira instância é chamada de `titanium` e a função global para interagir com a segunda instância é nomeada `copper`.
+Como resultado, o script cria duas instâncias do SDK. A função global para interagir com a primeira instância é nomeada `titanium` e a função global para interagir com a segunda instância é nomeada `copper`.
 
-Ao criar duas instâncias separadas, cada uma pode ser configurada para uma propriedade diferente. Qualquer comunicação ou persistência de dados que ocorra devido à interação com o `titanium` é mantido isolado de `copper`.
+Ao criar duas instâncias separadas, cada uma pode ser configurada para uma propriedade diferente. Qualquer comunicação ou persistência de dados que ocorra devido à interação com `titanium` é mantida isolada de `copper`.
 
 Seguindo o exemplo acima, você pode executar comandos usando cada instância:
 
@@ -60,8 +60,8 @@ copper("sendEvent", {
 });
 ```
 
-Certifique-se de executar o `configure` para cada instância antes de executar outros comandos na mesma instância.
+Certifique-se de executar o comando `configure` para cada instância antes de executar outros comandos na mesma instância.
 
 >[!IMPORTANT]
 >
->Para evitar conflitos com cookies, cada instância do SDK da Web deve ter sua própria `edgeConfigId` e seu próprio e exclusivo `orgId`.
+>Para evitar conflitos com cookies, cada instância do SDK da Web deve ter sua própria `edgeConfigId` exclusiva e sua própria `orgId` exclusiva.

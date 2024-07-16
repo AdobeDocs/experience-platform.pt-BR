@@ -18,15 +18,15 @@ ht-degree: 4%
 >
 >Se um token de usuário for transmitido, o usuário do token deverá ter uma função de &quot;org admin&quot; para a organização solicitada.
 
-A variável `/products` O endpoint na API de controle de acesso baseada em atributos permite gerenciar de forma programática os produtos, bem como as categorias de permissões e os conjuntos de permissões associados aos produtos em sua organização.
+O ponto de extremidade `/products` na API de controle de acesso baseado em atributos permite gerenciar programaticamente os produtos, bem como as categorias de permissões e os conjuntos de permissões associados aos produtos em sua organização.
 
 ## Introdução
 
-O endpoint da API usado neste guia faz parte da API de controle de acesso baseada em atributos. Antes de continuar, reveja o [guia de introdução](./getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre os cabeçalhos necessários para fazer chamadas com êxito para qualquer API de Experience Platform.
+O endpoint da API usado neste guia faz parte da API de controle de acesso baseada em atributos. Antes de continuar, consulte o [guia de introdução](./getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre os cabeçalhos necessários para fazer chamadas para qualquer API Experience Platform com êxito.
 
 ## Recuperar uma lista de produtos autorizados {#list}
 
-Você pode recuperar uma lista de produtos autorizados fazendo uma solicitação GET para o `/products` terminal.
+Você pode recuperar uma lista de produtos autorizados fazendo uma solicitação GET para o ponto de extremidade `/products`.
 
 **Formato da API**
 
@@ -70,7 +70,7 @@ Uma resposta bem-sucedida retorna uma lista de produtos qualificados pertencente
 
 ## Pesquisar categorias de permissão por ID de produto
 
-É possível pesquisar categorias de permissão para um determinado produto fazendo uma solicitação GET ao `/products/{PRODUCT_ID}/categories` ao especificar a ID do produto.
+Você pode pesquisar categorias de permissão para um determinado produto fazendo uma solicitação GET para o ponto de extremidade `/products/{PRODUCT_ID}/categories` ao especificar a ID do produto.
 
 **Formato da API**
 
@@ -145,7 +145,7 @@ Uma resposta bem-sucedida retorna as categorias de permissão associadas à ID d
 
 ## Pesquisar conjuntos de permissões por ID de produto
 
-Você pode pesquisar conjuntos de permissões para um determinado produto fazendo uma solicitação GET ao `/products/{PRODUCT_ID}/permission-sets` ao especificar a ID do produto.
+Você pode pesquisar conjuntos de permissões para um determinado produto fazendo uma solicitação GET para o ponto de extremidade `/products/{PRODUCT_ID}/permission-sets` ao especificar a ID do produto.
 
 **Formato da API**
 
@@ -242,4 +242,4 @@ Uma resposta bem-sucedida retorna os conjuntos de permissões associados à ID d
 | `category` | A categoria de permissão disponível. |
 | `permissions` | As permissões incluem a capacidade de visualizar e/ou usar recursos da Platform, como criar sandboxes, definir esquemas e gerenciar conjuntos de dados. |
 | `permissions.resource` | O ativo ou objeto que um assunto pode ou não acessar. Os recursos podem ser arquivos, aplicativos, servidores ou até mesmo APIs. |
-| `permissions.actions` | A ação que um assunto tem permissão para realizar em um recurso consultado. Os valores possíveis incluem: `view`, `read`, `create`, `edit`, e `delete` |
+| `permissions.actions` | A ação que um assunto tem permissão para realizar em um recurso consultado. Os valores possíveis incluem: `view`, `read`, `create`, `edit` e `delete` |

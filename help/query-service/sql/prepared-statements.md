@@ -6,14 +6,14 @@ description: No SQL, as instruções preparadas são usadas para modelar consult
 exl-id: 7ee4a10e-2bfe-487f-a8c5-f03b5b1d77e3
 source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
-source-wordcount: '374'
-ht-degree: 11%
+source-wordcount: '364'
+ht-degree: 5%
 
 ---
 
 # Demonstrativos preparados
 
-No SQL, as instruções preparadas são usadas para modelar consultas ou atualizações semelhantes. Adobe Experience Platform [!DNL Query Service] O oferece suporte a instruções preparadas usando uma consulta com parâmetros. Isso pode otimizar o desempenho, já que não é mais necessário reanalisar repetidamente uma consulta.
+No SQL, as instruções preparadas são usadas para modelar consultas ou atualizações semelhantes. O Adobe Experience Platform [!DNL Query Service] dá suporte a instruções preparadas usando uma consulta parametrizada. Isso pode otimizar o desempenho, já que não é mais necessário reanalisar repetidamente uma consulta.
 
 ## Uso de instruções preparadas
 
@@ -25,7 +25,7 @@ Ao usar instruções preparadas, as seguintes sintaxes são suportadas:
 
 ### Preparar uma instrução preparada {#prepare}
 
-Esta consulta SQL salva a consulta SELECT gravada com o nome fornecido como `PLAN_NAME`. É possível usar variáveis, como `$1` em vez de valores reais. Esta instrução preparada será salva durante a sessão atual. Observe que os nomes dos planos são **não** distinção entre maiúsculas e minúsculas.
+Esta consulta SQL salva a consulta SELECT gravada com o nome especificado como `PLAN_NAME`. Você pode usar variáveis, como `$1` no lugar dos valores reais. Esta instrução preparada será salva durante a sessão atual. Observe que os nomes do plano **não** diferenciam maiúsculas de minúsculas.
 
 #### Formato SQL
 
@@ -81,14 +81,14 @@ SELECT * FROM table WHERE id >= 10000 AND id <= 10005;
 
 A consulta SQL acima retornará a seguinte resposta:
 
-| id | firstname | sobrenome | data de nascimento | email | city | país |
+| ID | firstname | sobrenome | data de nascimento | email | city | país |
 |--- | --------- | -------- | --------- | ----- | ------- | ---- |
-| 10000 | alexandre | davis | 1993-09-15 | example@example.com | Vancouver | Canadá |
-| 10001 | antoína | dubois | 1967-03-14 | example2@example.com | Paris | França |
-| 10002 | kyoko | sakura | 1999-11-26 | example3@example.com | Tóquio | Japão |
-| 10003 | linus | pettersson | 1982-06-03 | example4@example.com | Estocolmo | Suécia |
-| 10004 | aasir | waithaka | 1976-12-17 | example5@example.com | Nairóbi | Quênia |
-| 10005 | fernando | rios | 2002-07-30 | example6@example.com | Santiago | Chile |
+| 10000 | alexandre | davis | 15/09/1993 | example@example.com | Vancouver | Canadá |
+| 10001 | antoína | dubois | 14-03-1967 | example2@example.com | Paris | França |
+| 10002 | kyoko | sakura | 11-1999-26 | example3@example.com | Tóquio | Japão |
+| 10003 | linus | pettersson | 06-1982-03 | example4@example.com | Estocolmo | Suécia |
+| 10004 | aasir | waithaka | 12-1976-17 | example5@example.com | Nairóbi | Quênia |
+| 10005 | fernando | rios | 30/07/2002 | example6@example.com | Santiago | Chile |
 
 Esta consulta SQL pode ser parametrizada usando a seguinte instrução preparada:
 
@@ -104,14 +104,14 @@ EXECUTE getIdRange(10000, 10005);
 
 Quando isso for chamado, você verá os mesmos resultados de antes:
 
-| id | firstname | sobrenome | data de nascimento | email | city | país |
+| ID | firstname | sobrenome | data de nascimento | email | city | país |
 |--- | --------- | -------- | --------- | ----- | ------- | ---- |
-| 10000 | alexandre | davis | 1993-09-15 | example@example.com | Vancouver | Canadá |
-| 10001 | antoína | dubois | 1967-03-14 | example2@example.com | Paris | França |
-| 10002 | kyoko | sakura | 1999-11-26 | example3@example.com | Tóquio | Japão |
-| 10003 | linus | pettersson | 1982-06-03 | example4@example.com | Estocolmo | Suécia |
-| 10004 | aasir | waithaka | 1976-12-17 | example5@example.com | Nairóbi | Quênia |
-| 10005 | fernando | rios | 2002-07-30 | example6@example.com | Santiago | Chile |
+| 10000 | alexandre | davis | 15/09/1993 | example@example.com | Vancouver | Canadá |
+| 10001 | antoína | dubois | 14-03-1967 | example2@example.com | Paris | França |
+| 10002 | kyoko | sakura | 11-1999-26 | example3@example.com | Tóquio | Japão |
+| 10003 | linus | pettersson | 06-1982-03 | example4@example.com | Estocolmo | Suécia |
+| 10004 | aasir | waithaka | 12-1976-17 | example5@example.com | Nairóbi | Quênia |
+| 10005 | fernando | rios | 30/07/2002 | example6@example.com | Santiago | Chile |
 
 Depois de concluir o uso da instrução preparada, você pode desalocá-la usando a seguinte chamada:
 

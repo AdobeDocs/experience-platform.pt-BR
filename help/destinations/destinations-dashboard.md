@@ -11,12 +11,12 @@ ht-degree: 0%
 ---
 
 
-# [!UICONTROL Destinos] painel {#destinations-dashboard}
+# Painel [!UICONTROL Destinos] {#destinations-dashboard}
 
 A interface do usuário (UI) do Adobe Experience Platform fornece um painel por meio do qual você pode exibir informações importantes sobre os destinos ativos da sua organização, conforme capturados durante um instantâneo diário.
 
 Para obter instruções detalhadas sobre como acessar e interagir com o painel de destinos na interface do usuário, bem como para saber mais sobre as métricas disponíveis exibidas no painel, visite o [guia do painel de destinos](../dashboards/guides/destinations.md).
 
-Para obter uma visão geral de todos os recursos do painel dentro do Experience Platform, comece lendo o [visão geral dos painéis](../../dashboards/home.md).
+Para obter uma visão geral de todos os recursos do painel no Experience Platform, comece lendo a [visão geral dos painéis](../../dashboards/home.md).
 
 ![](images/destinations-dashboard/dashboard-overview.png)

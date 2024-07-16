@@ -8,7 +8,7 @@ role: Admin
 source-git-commit: e27695a96d7b61e2552387611c4eb63ebc6daf47
 workflow-type: tm+mt
 source-wordcount: '127'
-ht-degree: 44%
+ht-degree: 45%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 44%
 # Controle de acesso {#access-control}
 
 * [Visão geral do controle de acesso](home.md)
-* Controle de acesso baseado em atributos {#abac}
+* Controle de acesso baseado em atributo {#abac}
    * [Visão geral](abac/overview.md)
    * [Guia completo](abac/end-to-end-guide.md)
    * [Usar rótulos de acesso para gerenciar o acesso do usuário aos fluxos de dados de destino](/help/access-control/abac/apply-access-labels-destinations.md)
@@ -34,7 +34,7 @@ ht-degree: 44%
       * [Funções](abac/api/roles.md)
       * [Políticas](abac/api/policies.md)
       * [Produtos](abac/api/products.md)
-* Interface de controle de acesso {#ui}
+* Interface do usuário de controle de acesso {#ui}
    * [Visão geral](ui/overview.md)
    * [Selecione um perfil de produto](ui/browse.md)
    * [Gerenciar permissões de um perfil de produto](ui/permissions.md)
@@ -47,4 +47,4 @@ ht-degree: 44%
    * [Exibir políticas eficazes](api/effective-policies.md)
 * [Manual de solução de problemas](troubleshooting-guide.md)
 * [Referência da API](https://www.adobe.io/experience-platform-apis/references/access-control/)
-* [Notas de versão da Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [Notas de versão da Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest?lang=pt-BR)

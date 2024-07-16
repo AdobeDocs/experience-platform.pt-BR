@@ -7,33 +7,33 @@ description: Este tutorial aborda as etapas para monitorar a integridade, os err
 exl-id: 5b7d1aa4-5e6d-48f4-82bd-5348dc0e890d
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '412'
+source-wordcount: '408'
 ht-degree: 2%
 
 ---
 
 # Monitorar fluxos de dados de origens usando a API de serviço de fluxo
 
-Este tutorial aborda as etapas para monitorar dados de execução do fluxo para integridade, erros e métricas usando o [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Este tutorial aborda as etapas para monitorar dados de execução do fluxo para integridade, erros e métricas usando a [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 >[!NOTE]
 >
->Este tutorial requer que você tenha o valor de ID de um fluxo de dados válido. Se você não tiver uma ID de fluxo de dados válida, selecione o conector de escolha na [visão geral das origens](../../home.md) e siga as etapas descritas para criar um fluxo de dados antes de tentar este tutorial.
+>Este tutorial requer que você tenha o valor de ID de um fluxo de dados válido. Se você não tiver uma ID de fluxo de dados válida, selecione seu conector escolhido na [visão geral das fontes](../../home.md) e siga as etapas descritas para criar um fluxo de dados antes de tentar este tutorial.
 
 ## Introdução
 
 Este tutorial também requer que você tenha uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
-* [Origens](../../home.md): [!DNL Experience Platform] O permite que os dados sejam assimilados de várias fontes e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando o [!DNL Platform] serviços.
-* [Sandboxes](../../../sandboxes/home.md): [!DNL Experience Platform] O fornece sandboxes virtuais que particionam uma única [!DNL Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
+* [Fontes](../../home.md): [!DNL Experience Platform] permite que os dados sejam assimilados de várias fontes e fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços do [!DNL Platform].
+* [Sandboxes](../../../sandboxes/home.md): [!DNL Experience Platform] fornece sandboxes virtuais que particionam uma única instância do [!DNL Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
 ### Uso de APIs da plataforma
 
-Para obter informações sobre como fazer chamadas para APIs da Platform com êxito, consulte o manual em [introdução às APIs da Platform](../../../landing/api-guide.md).
+Para obter informações sobre como fazer chamadas para APIs da Platform com êxito, consulte o manual sobre [introdução às APIs da Platform](../../../landing/api-guide.md).
 
 ## Monitorar fluxos de dados
 
-Para ver o status do fluxo de dados, faça uma solicitação GET ao [!DNL Flow Service] ao fornecer a ID de fluxo correspondente do fluxo de dados.
+Para ver o status do fluxo de dados, faça uma solicitação GET para a API [!DNL Flow Service] enquanto fornece a ID de fluxo correspondente do fluxo de dados.
 
 **Formato da API**
 
@@ -43,7 +43,7 @@ GET /runs?property=flowId=={FLOW_ID}
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `{FLOW_ID}` | O único `id` para o fluxo de dados que deseja monitorar. |
+| `{FLOW_ID}` | O valor `id` exclusivo para o fluxo de dados que você deseja monitorar. |
 
 **Solicitação**
 
@@ -235,4 +235,4 @@ Uma resposta bem-sucedida retorna detalhes sobre a execução do fluxo, incluind
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você recuperou métricas e informações de erro no fluxo de dados usando o [!DNL Flow Service] API. Agora é possível continuar a monitorar o fluxo de dados, dependendo da programação de assimilação, para rastrear o status e as taxas de assimilação. Para obter informações sobre como executar as mesmas tarefas usando a interface do usuário, consulte o tutorial em [monitoramento de fluxos de dados usando a interface do usuário](../ui/monitor.md)
+Seguindo este tutorial, você recuperou métricas e informações de erro no fluxo de dados usando a API [!DNL Flow Service]. Agora é possível continuar a monitorar o fluxo de dados, dependendo da programação de assimilação, para rastrear o status e as taxas de assimilação. Para obter informações sobre como executar as mesmas tarefas usando a interface do usuário, consulte o tutorial sobre [monitoramento de fluxos de dados usando a interface do usuário](../ui/monitor.md)

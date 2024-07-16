@@ -6,22 +6,22 @@ description: O ponto de extremidade /schemas na API do registro de esquema permi
 exl-id: d0bda683-9cd3-412b-a8d1-4af700297abf
 source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
-source-wordcount: '1441'
+source-wordcount: '1443'
 ht-degree: 3%
 
 ---
 
 # Endpoint de esquemas
 
-Um esquema pode ser visto como o blueprint dos dados que você deseja assimilar na Adobe Experience Platform. Cada esquema é composto por uma classe e zero ou mais grupos de campos de esquema. A variável `/schemas` endpoint na variável [!DNL Schema Registry] A API permite gerenciar esquemas de forma programática no aplicativo de experiência.
+Um esquema pode ser visto como o blueprint dos dados que você deseja assimilar na Adobe Experience Platform. Cada esquema é composto por uma classe e zero ou mais grupos de campos de esquema. O ponto de extremidade `/schemas` na API [!DNL Schema Registry] permite gerenciar esquemas de forma programática no aplicativo de experiência.
 
 ## Introdução
 
-O endpoint da API usado neste guia faz parte da [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Antes de continuar, reveja o [guia de introdução](./getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre os cabeçalhos necessários para fazer chamadas com êxito para qualquer API de Experience Platform.
+O ponto de extremidade de API usado neste guia faz parte da [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Antes de continuar, consulte o [guia de introdução](./getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre os cabeçalhos necessários para fazer chamadas para qualquer API Experience Platform com êxito.
 
 ## Recuperar uma lista de esquemas {#list}
 
-Você pode listar todos os esquemas na variável `global` ou `tenant` GET contêiner fazendo uma solicitação para `/global/schemas` ou `/tenant/schemas`, respectivamente.
+Você pode listar todos os esquemas no contêiner `global` ou `tenant` fazendo uma solicitação GET para `/global/schemas` ou `/tenant/schemas`, respectivamente.
 
 >[!NOTE]
 >
@@ -35,14 +35,14 @@ GET /{CONTAINER_ID}/schemas?{QUERY_PARAMS}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{CONTAINER_ID}` | O container que abriga os esquemas que você deseja recuperar: `global` para esquemas criados por Adobe ou `tenant` para esquemas de propriedade de sua organização. |
-| `{QUERY_PARAMS}` | Parâmetros de consulta opcionais para filtrar os resultados. Consulte a [documento do apêndice](./appendix.md#query) para obter uma lista de parâmetros disponíveis. |
+| `{CONTAINER_ID}` | O contêiner que abriga os esquemas que você deseja recuperar: `global` para esquemas criados por Adobe ou `tenant` para esquemas de propriedade de sua organização. |
+| `{QUERY_PARAMS}` | Parâmetros de consulta opcionais para filtrar os resultados. Consulte o [documento do apêndice](./appendix.md#query) para obter uma lista de parâmetros disponíveis. |
 
 {style="table-layout:auto"}
 
 **Solicitação**
 
-A solicitação a seguir recupera uma lista de esquemas do `tenant` contêiner, usando um `orderby` parâmetro de consulta para classificar os resultados por seus `title` atributo.
+A solicitação a seguir recupera uma lista de esquemas do contêiner `tenant`, usando um parâmetro de consulta `orderby` para classificar os resultados por seu atributo `title`.
 
 ```shell
 curl -X GET \
@@ -54,18 +54,18 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-O formato de resposta depende do `Accept` cabeçalho enviado na solicitação. As seguintes `Accept` os cabeçalhos estão disponíveis para listar schemas:
+O formato da resposta depende do cabeçalho `Accept` enviado na solicitação. Os `Accept` cabeçalhos a seguir estão disponíveis para listar esquemas:
 
-| `Accept` cabeçalho | Descrição |
+| Cabeçalho `Accept` | Descrição |
 | --- | --- |
 | `application/vnd.adobe.xed-id+json` | Retorna um breve resumo de cada recurso. Este é o cabeçalho recomendado para listar recursos. (Limite: 300) |
-| `application/vnd.adobe.xed+json` | Retorna o esquema JSON completo para cada recurso, com o original `$ref` e `allOf` incluído. (Limite: 300) |
+| `application/vnd.adobe.xed+json` | Retorna o esquema JSON completo para cada recurso, com os `$ref` e `allOf` originais incluídos. (Limite: 300) |
 
 {style="table-layout:auto"}
 
 **Resposta**
 
-A solicitação acima usou o `application/vnd.adobe.xed-id+json` `Accept` cabeçalho, portanto, a resposta inclui apenas o `title`, `$id`, `meta:altId`, e `version` atributos para cada esquema. Usar o outro `Accept` cabeçalho (`application/vnd.adobe.xed+json`) retorna todos os atributos de cada esquema. Selecione o apropriado `Accept` dependendo das informações que você precisa na sua resposta.
+A solicitação acima usou o cabeçalho `application/vnd.adobe.xed-id+json` `Accept`, portanto, a resposta inclui apenas os atributos `title`, `$id`, `meta:altId` e `version` para cada esquema. O uso do outro cabeçalho `Accept` (`application/vnd.adobe.xed+json`) retorna todos os atributos de cada esquema. Selecione o cabeçalho `Accept` apropriado, dependendo das informações que você precisa na sua resposta.
 
 ```json
 {
@@ -109,14 +109,14 @@ GET /{CONTAINER_ID}/schemas/{SCHEMA_ID}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{CONTAINER_ID}` | O contêiner que abriga o esquema que você deseja recuperar: `global` para um esquema criado por Adobe ou `tenant` para um esquema de propriedade de sua organização. |
-| `{SCHEMA_ID}` | A variável `meta:altId` ou codificado em URL `$id` do esquema que você deseja pesquisar. |
+| `{CONTAINER_ID}` | O contêiner que abriga o esquema que você deseja recuperar: `global` para um esquema criado por Adobe ou `tenant` para um esquema pertencente à sua organização. |
+| `{SCHEMA_ID}` | O `meta:altId` ou o `$id` codificado na URL do esquema que você deseja pesquisar. |
 
 {style="table-layout:auto"}
 
 **Solicitação**
 
-A solicitação a seguir recupera um esquema especificado por seus `meta:altId` no caminho.
+A solicitação a seguir recupera um esquema especificado por seu valor `meta:altId` no caminho.
 
 ```shell
 curl -X GET \
@@ -128,22 +128,22 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-O formato de resposta depende do `Accept` cabeçalho enviado na solicitação. Todas as solicitações de pesquisa exigem uma `version` ser incluído na lista `Accept` cabeçalho. As seguintes `Accept` os cabeçalhos estão disponíveis:
+O formato da resposta depende do cabeçalho `Accept` enviado na solicitação. Todas as solicitações de pesquisa exigem que um `version` seja incluído no cabeçalho `Accept`. Os seguintes `Accept` cabeçalhos estão disponíveis:
 
-| `Accept` cabeçalho | Descrição |
+| Cabeçalho `Accept` | Descrição |
 | ------- | ------------ |
 | `application/vnd.adobe.xed+json; version=1` | Simples com `$ref` e `allOf`, tem títulos e descrições. |
-| `application/vnd.adobe.xed-full+json; version=1` | `$ref` e `allOf` resolvida, tem títulos e descrições. |
+| `application/vnd.adobe.xed-full+json; version=1` | `$ref` e `allOf` resolvidos, têm títulos e descrições. |
 | `application/vnd.adobe.xed-notext+json; version=1` | Simples com `$ref` e `allOf`, sem títulos ou descrições. |
-| `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` e `allOf` resolvida, nenhum título ou descrição. |
-| `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` e `allOf` resolvido, descritores incluídos. |
-| `application/vnd.adobe.xed-deprecatefield+json; version=1` | `$ref` e `allOf` resolvida, tem títulos e descrições. Os campos obsoletos são indicados com uma `meta:status` atributo de `deprecated`. |
+| `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` e `allOf` resolvidos, sem títulos ou descrições. |
+| `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` e `allOf` resolvidos, descritores incluídos. |
+| `application/vnd.adobe.xed-deprecatefield+json; version=1` | `$ref` e `allOf` resolvidos, têm títulos e descrições. Campos obsoletos são indicados com um atributo `meta:status` de `deprecated`. |
 
 {style="table-layout:auto"}
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna os detalhes do esquema. Os campos retornados dependem do tipo `Accept` cabeçalho enviado na solicitação. Experimento com diferentes `Accept` cabeçalhos para comparar as respostas e determinar qual cabeçalho é melhor para o caso de uso.
+Uma resposta bem-sucedida retorna os detalhes do esquema. Os campos retornados dependem do cabeçalho `Accept` enviado na solicitação. Experimente com diferentes cabeçalhos `Accept` para comparar as respostas e determinar qual cabeçalho é melhor para o seu caso de uso.
 
 ```json
 {
@@ -200,7 +200,7 @@ O processo de composição do esquema começa atribuindo uma classe. A classe de
 
 >[!NOTE]
 >
->O exemplo de chamada abaixo é apenas um exemplo de linha de base de como criar um esquema na API, com os requisitos mínimos de composição de uma classe e nenhum grupo de campos. Para obter etapas completas sobre como criar um esquema na API, incluindo como atribuir campos usando grupos de campos e tipos de dados, consulte a [tutorial de criação de esquema](../tutorials/create-schema-api.md).
+>O exemplo de chamada abaixo é apenas um exemplo de linha de base de como criar um esquema na API, com os requisitos mínimos de composição de uma classe e nenhum grupo de campos. Para obter as etapas completas sobre como criar um esquema na API, incluindo como atribuir campos usando grupos de campos e tipos de dados, consulte o [tutorial de criação de esquema](../tutorials/create-schema-api.md).
 
 **Formato da API**
 
@@ -210,7 +210,7 @@ POST /tenant/schemas
 
 **Solicitação**
 
-O pedido deve incluir uma `allOf` atributo que faz referência ao `$id` de uma classe. Esse atributo define a &quot;classe base&quot; que o esquema implementará. Neste exemplo, a classe base é uma classe &quot;Informações de propriedade&quot; criada anteriormente.
+A solicitação deve incluir um atributo `allOf` que faça referência a `$id` de uma classe. Esse atributo define a &quot;classe base&quot; que o esquema implementará. Neste exemplo, a classe base é uma classe &quot;Informações de propriedade&quot; criada anteriormente.
 
 ```SHELL
 curl -X POST \
@@ -234,13 +234,13 @@ curl -X POST \
 
 | Propriedade | Descrição |
 | --- | --- |
-| `allOf` | Uma matriz de objetos, com cada objeto referindo-se a uma classe ou grupo de campos cujos campos o esquema implementa. Cada objeto contém uma única propriedade (`$ref`) cujo valor representa o `$id` da classe ou grupo de campos que o novo esquema implementará. Uma classe deve ser fornecida, com zero ou mais grupos de campos adicionais. No exemplo acima, o único objeto na variável `allOf` matriz é a classe do esquema. |
+| `allOf` | Uma matriz de objetos, com cada objeto referindo-se a uma classe ou grupo de campos cujos campos o esquema implementa. Cada objeto contém uma única propriedade (`$ref`) cujo valor representa o `$id` da classe ou do grupo de campos que o novo esquema implementará. Uma classe deve ser fornecida, com zero ou mais grupos de campos adicionais. No exemplo acima, o único objeto na matriz `allOf` é a classe do esquema. |
 
 {style="table-layout:auto"}
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o status HTTP 201 (Criado) e uma carga contendo os detalhes do esquema recém-criado, incluindo o `$id`, `meta:altId`, e `version`. Esses valores são somente leitura e são atribuídos pelo [!DNL Schema Registry].
+Uma resposta bem-sucedida retorna o status HTTP 201 (Criado) e uma carga contendo os detalhes do esquema recém-criado, incluindo `$id`, `meta:altId` e `version`. Esses valores são somente leitura e são atribuídos por [!DNL Schema Registry].
 
 ```JSON
 {
@@ -275,17 +275,17 @@ Uma resposta bem-sucedida retorna o status HTTP 201 (Criado) e uma carga contend
 }
 ```
 
-Execução de uma solicitação do GET para [listar todos os esquemas](#list) no contêiner de locatário agora incluiria o novo esquema. Você pode executar um [solicitação de pesquisa (GET)](#lookup) usar o URL codificado `$id` URI para visualizar o novo esquema diretamente.
+Executar uma solicitação GET para [listar todos os esquemas](#list) no contêiner de locatário agora incluiria o novo esquema. Você pode executar uma [solicitação de pesquisa (GET)](#lookup) usando o URI `$id` codificado em URL para exibir o novo esquema diretamente.
 
-Para adicionar campos extras a um esquema, é possível executar uma [operação PATCH](#patch) para adicionar grupos de campos ao esquema `allOf` e `meta:extends` matrizes.
+Para adicionar campos extras a um esquema, você pode executar uma [operação PATCH](#patch) para adicionar grupos de campos às matrizes `allOf` e `meta:extends` do esquema.
 
 ## Atualizar um esquema {#put}
 
-Você pode substituir um esquema inteiro por meio de uma operação PUT, essencialmente reescrevendo o recurso. Ao atualizar um esquema por meio de uma solicitação PUT, o corpo deve incluir todos os campos que seriam necessários ao [criação de um novo schema](#create) em uma solicitação POST.
+Você pode substituir um esquema inteiro por meio de uma operação PUT, essencialmente reescrevendo o recurso. Ao atualizar um esquema por meio de uma solicitação PUT, o corpo deve incluir todos os campos que seriam necessários ao [criar um novo esquema](#create) em uma solicitação POST.
 
 >[!NOTE]
 >
->Se quiser atualizar apenas parte de um esquema, em vez de substituí-lo totalmente, consulte a seção sobre [atualização de uma parte de um esquema](#patch).
+>Se você quiser atualizar apenas parte de um esquema, em vez de substituí-lo totalmente, consulte a seção sobre [atualização de uma parte de um esquema](#patch).
 
 **Formato da API**
 
@@ -295,13 +295,13 @@ PUT /tenant/schemas/{SCHEMA_ID}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{SCHEMA_ID}` | A variável `meta:altId` ou codificado em URL `$id` do esquema que você deseja regravar. |
+| `{SCHEMA_ID}` | O `meta:altId` ou o `$id` codificado na URL do esquema que você deseja regravar. |
 
 {style="table-layout:auto"}
 
 **Solicitação**
 
-A solicitação a seguir substitui um esquema existente, alterando seu `title`, `description`, e `allOf` atributos.
+A solicitação a seguir substitui um esquema existente, alterando seus atributos `title`, `description` e `allOf`.
 
 ```SHELL
 curl -X PUT \
@@ -362,7 +362,7 @@ Uma resposta bem-sucedida retorna os detalhes do esquema atualizado.
 
 ## Atualizar uma parte de um esquema {#patch}
 
-Você pode atualizar uma parte de um esquema usando uma solicitação PATCH. A variável [!DNL Schema Registry] suporta todas as operações de patch JSON padrão, incluindo `add`, `remove`, e `replace`. Para obter mais informações sobre o Patch JSON, consulte o [Guia de fundamentos de API](../../landing/api-fundamentals.md#json-patch).
+Você pode atualizar uma parte de um esquema usando uma solicitação PATCH. O [!DNL Schema Registry] dá suporte a todas as operações de patch de JSON padrão, incluindo `add`, `remove` e `replace`. Para obter mais informações sobre o Patch JSON, consulte o [guia de fundamentos de API](../../landing/api-fundamentals.md#json-patch).
 
 >[!NOTE]
 >
@@ -378,15 +378,15 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{SCHEMA_ID}` | O formato codificado por URL `$id` URI ou `meta:altId` do esquema que deseja atualizar. |
+| `{SCHEMA_ID}` | O URI `$id` codificado na URL ou `meta:altId` do esquema que você deseja atualizar. |
 
 {style="table-layout:auto"}
 
 **Solicitação**
 
-A solicitação de exemplo abaixo adiciona um novo grupo de campos a um esquema adicionando o do grupo de campos `$id` para a variável `meta:extends` e `allOf` matrizes.
+A solicitação de exemplo abaixo adiciona um novo grupo de campos a um esquema adicionando o valor `$id` desse grupo de campos às matrizes `meta:extends` e `allOf`.
 
-O corpo da solicitação assume a forma de uma matriz, com cada objeto listado representando uma alteração específica em um campo individual. Cada objeto inclui a operação a ser executada (`op`), em qual campo a operação deve ser executada (`path`), e que informações devem ser incluídas nessa operação (`value`).
+O corpo da solicitação assume a forma de uma matriz, com cada objeto listado representando uma alteração específica em um campo individual. Cada objeto inclui a operação a ser executada (`op`), em qual campo a operação deve ser executada (`path`) e quais informações devem ser incluídas nessa operação (`value`).
 
 ```SHELL
 curl -X PATCH\
@@ -414,7 +414,7 @@ curl -X PATCH\
 
 **Resposta**
 
-A resposta mostra que ambas as operações foram executadas com êxito. O grupo de campos `$id` foi adicionado ao `meta:extends` matriz e uma referência (`$ref`) ao grupo de campos `$id` agora aparece no `allOf` matriz.
+A resposta mostra que ambas as operações foram executadas com êxito. O grupo de campos `$id` foi adicionado à matriz `meta:extends` e uma referência (`$ref`) ao grupo de campos `$id` agora aparece na matriz `allOf`.
 
 ```JSON
 {
@@ -455,7 +455,7 @@ A resposta mostra que ambas as operações foram executadas com êxito. O grupo 
 
 ## Ativar um esquema para uso no Perfil do cliente em tempo real {#union}
 
-Para que um esquema participe de [Perfil do cliente em tempo real](../../profile/home.md), é necessário adicionar um `union` para o do esquema `meta:immutableTags` matriz. Você pode fazer isso fazendo uma solicitação PATCH para o esquema em questão.
+Para que um esquema participe do [Perfil de Cliente em Tempo Real](../../profile/home.md), é necessário adicionar uma marca `union` à matriz `meta:immutableTags` do esquema. Você pode fazer isso fazendo uma solicitação PATCH para o esquema em questão.
 
 >[!IMPORTANT]
 >
@@ -469,13 +469,13 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{SCHEMA_ID}` | O formato codificado por URL `$id` URI ou `meta:altId` do esquema que deseja ativar. |
+| `{SCHEMA_ID}` | O URI `$id` codificado na URL ou `meta:altId` do esquema que você deseja habilitar. |
 
 {style="table-layout:auto"}
 
 **Solicitação**
 
-O exemplo de solicitação abaixo adiciona um `meta:immutableTags` para um esquema existente, dando à matriz um único valor de string de `union` para habilitá-lo para uso no Perfil.
+A solicitação de exemplo abaixo adiciona uma matriz `meta:immutableTags` a um esquema existente, dando à matriz um único valor de cadeia de caracteres de `union` para habilitá-la para uso no Perfil.
 
 ```SHELL
 curl -X PATCH\
@@ -496,7 +496,7 @@ curl -X PATCH\
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna os detalhes do esquema atualizado, mostrando que `meta:immutableTags` matriz foi adicionada.
+Uma resposta bem-sucedida retorna os detalhes do esquema atualizado, mostrando que a matriz `meta:immutableTags` foi adicionada.
 
 ```JSON
 {
@@ -538,7 +538,7 @@ Uma resposta bem-sucedida retorna os detalhes do esquema atualizado, mostrando q
 }
 ```
 
-Agora você pode visualizar a união da classe deste esquema para confirmar que os campos do esquema são representados. Consulte a [manual de endpoint de uniões](./unions.md) para obter mais informações.
+Agora você pode visualizar a união da classe deste esquema para confirmar que os campos do esquema são representados. Consulte o [manual de ponto de extremidade de uniões](./unions.md) para obter mais informações.
 
 ## Excluir um esquema {#delete}
 
@@ -552,7 +552,7 @@ DELETE /tenant/schemas/{SCHEMA_ID}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{SCHEMA_ID}` | O formato codificado por URL `$id` URI ou `meta:altId` do esquema que deseja excluir. |
+| `{SCHEMA_ID}` | O URI `$id` codificado na URL ou `meta:altId` do esquema que você deseja excluir. |
 
 {style="table-layout:auto"}
 
@@ -571,4 +571,4 @@ curl -X DELETE \
 
 Uma resposta bem-sucedida retorna o status HTTP 204 (Sem conteúdo) e um corpo em branco.
 
-Você pode confirmar a exclusão tentando uma solicitação de pesquisa (GET) para o esquema. Será necessário incluir um `Accept` cabeçalho na solicitação, mas deve receber um status HTTP 404 (Não encontrado) porque o esquema foi removido do Registro de esquemas.
+Você pode confirmar a exclusão tentando uma solicitação de pesquisa (GET) para o esquema. Você precisará incluir um cabeçalho `Accept` na solicitação, mas deverá receber um status HTTP 404 (Não encontrado) porque o esquema foi removido do Registro de esquemas.

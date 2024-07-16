@@ -22,13 +22,13 @@ O Adobe Experience Platform oferece suporte à capacidade de importar público e
 
 ## Introdução
 
-Este tutorial requer um entendimento prático dos vários [!DNL Adobe Experience Platform] serviços envolvidos na criação de públicos. Antes de iniciar este tutorial, revise a documentação dos seguintes serviços:
+Este tutorial requer uma compreensão funcional dos vários serviços do [!DNL Adobe Experience Platform] envolvidos na criação de públicos-alvo. Antes de iniciar este tutorial, revise a documentação dos seguintes serviços:
 
-- [Serviço de segmentação](../home.md): permite criar públicos-alvo a partir dos dados do Perfil do cliente em tempo real.
-- [Perfil do cliente em tempo real](../../profile/home.md): fornece um perfil de consumidor unificado em tempo real com base em dados agregados de várias fontes.
-- [Experience Data Model (XDM)](../../xdm/home.md): a estrutura padronizada pela qual a Platform organiza os dados de experiência do cliente. Para melhor usar a segmentação, verifique se seus dados são assimilados como perfis e eventos de acordo com a [práticas recomendadas para modelagem de dados](../../xdm/schema/best-practices.md).
+- [Serviço de segmentação](../home.md): permite que você crie públicos-alvo a partir dos dados do Perfil do cliente em tempo real.
+- [Perfil de cliente em tempo real](../../profile/home.md): fornece um perfil de cliente unificado em tempo real com base em dados agregados de várias fontes.
+- [Experience Data Model (XDM)](../../xdm/home.md): a estrutura padronizada pela qual a Platform organiza os dados de experiência do cliente. Para melhor usar a Segmentação, verifique se seus dados são assimilados como perfis e eventos de acordo com as [práticas recomendadas para modelagem de dados](../../xdm/schema/best-practices.md).
 - [Conjuntos de dados](../../catalog/datasets/overview.md): a construção de armazenamento e gerenciamento para a persistência de dados no Experience Platform.
-- [Assimilação por transmissão](../../ingestion/streaming-ingestion/overview.md): como o Experience Platform assimila e armazena dados de dispositivos do lado do cliente e do lado do servidor em tempo real.
+- [Assimilação por streaming](../../ingestion/streaming-ingestion/overview.md): como o Experience Platform assimila e armazena dados de dispositivos no lado do cliente e do servidor em tempo real.
 
 ### Definições de públicos versus segmentos
 
@@ -46,29 +46,29 @@ As definições de segmento incluem informações como nome, descrição, expres
 
 A primeira etapa para usar públicos-alvo externos é criar um namespace de identidade. Os namespaces de identidade permitem que a Platform associe de onde um público-alvo se origina.
 
-Para criar um namespace de identidade, siga as instruções na [guia de namespace de identidade](../../identity-service/features/namespaces.md#manage-namespaces). Ao criar o namespace de identidade, adicione os detalhes de origem ao namespace de identidade e marque sua [!UICONTROL Tipo] as a **[!UICONTROL Identificador não pessoal]**.
+Para criar um namespace de identidade, siga as instruções no [guia de namespace de identidade](../../identity-service/features/namespaces.md#manage-namespaces). Ao criar seu namespace de identidade, adicione os detalhes de origem ao namespace de identidade e marque seu [!UICONTROL Type] como um **[!UICONTROL Identificador não pessoal]**.
 
-![O identificador não pessoal é realçado no modal Criar namespace de identidade.](../images/tutorials/external-audiences/identity-namespace-info.png)
+![O identificador que não é de pessoa está realçado no modal Criar namespace de identidade.](../images/tutorials/external-audiences/identity-namespace-info.png)
 
 ## Criar um esquema para os metadados do segmento
 
 Depois de criar um namespace de identidade, é necessário criar um novo esquema para o segmento que você criará.
 
-Para começar a compor um esquema, primeiro selecione **[!UICONTROL Esquemas]** na barra de navegação à esquerda, seguido pelo botão **[!UICONTROL Criar esquema]** no canto superior direito do espaço de trabalho Esquemas. Aqui, selecione **[!UICONTROL Procurar]** para ver uma seleção completa dos Tipos de esquema disponíveis.
+Para começar a compor um esquema, selecione primeiro **[!UICONTROL Esquemas]** na barra de navegação à esquerda, seguido por **[!UICONTROL Criar esquema]** no canto superior direito do espaço de trabalho Esquemas. Aqui, selecione **[!UICONTROL Procurar]** para ver uma seleção completa dos Tipos de esquema disponíveis.
 
-![Criar esquema e Procurar são realçados.](../images/tutorials/external-audiences/create-schema-browse.png)
+![Criar esquema e Procurar estão realçados.](../images/tutorials/external-audiences/create-schema-browse.png)
 
-Como você está criando uma definição de segmento, que é uma classe predefinida, selecione **[!UICONTROL Usar classe existente]**. Agora, selecione a variável **[!UICONTROL Definição de segmento]** classe, seguida por **[!UICONTROL Atribuir classe]**.
+Como você está criando uma definição de segmento, que é uma classe predefinida, selecione **[!UICONTROL Usar classe existente]**. Agora, selecione a classe **[!UICONTROL Definição de segmento]**, seguida pela **[!UICONTROL Atribuir classe]**.
 
-![A classe de definição de segmento é destacada.](../images/tutorials/external-audiences/assign-class.png)
+![A classe de definição de segmento está realçada.](../images/tutorials/external-audiences/assign-class.png)
 
 Agora que o esquema foi criado, será necessário especificar qual campo conterá a ID do segmento. Este campo deve ser marcado como a identidade primária e atribuído aos namespaces criados anteriormente.
 
-![As caixas de seleção para marcar o campo selecionado como a identidade principal são realçadas no Editor de esquemas.](../images/tutorials/external-audiences/mark-primary-identifier.png)
+![As caixas de seleção para marcar o campo selecionado como a identidade primária são realçadas no Editor de Esquemas.](../images/tutorials/external-audiences/mark-primary-identifier.png)
 
-Depois de marcar o `_id` como a identidade primária, selecione o título do esquema, seguido da alternância rotulada como **[!UICONTROL Perfil]**. Selecionar **[!UICONTROL Ativar]** para ativar o esquema para [!DNL Real-Time Customer Profile].
+Depois de marcar o campo `_id` como a identidade principal, selecione o título do esquema, seguido da alternância rotulada **[!UICONTROL Perfil]**. Selecione **[!UICONTROL Habilitar]** para habilitar o esquema para [!DNL Real-Time Customer Profile].
 
-![A opção para ativar o esquema para Perfil é realçada no Editor de esquemas.](../images/tutorials/external-audiences/schema-profile.png)
+![A opção para habilitar o esquema para Perfil está realçada no Editor de Esquemas.](../images/tutorials/external-audiences/schema-profile.png)
 
 Agora, esse esquema é ativado para Perfil, com a identificação principal atribuída ao namespace de identidade que não é de pessoa que você criou. Como resultado, isso significa que os metadados de segmento importados para a Platform usando esse esquema serão assimilados no Perfil sem serem mesclados com outros dados de perfil relacionados às pessoas.
 
@@ -76,13 +76,13 @@ Agora, esse esquema é ativado para Perfil, com a identificação principal atri
 
 Depois de configurar o esquema, será necessário criar um conjunto de dados para os metadados do segmento.
 
-Para criar um conjunto de dados, siga as instruções na [guia do usuário do conjunto de dados](../../catalog/datasets/user-guide.md#create). Você deve seguir o **[!UICONTROL Criar conjunto de dados a partir do esquema]** opção, usando o schema criado anteriormente.
+Para criar um conjunto de dados, siga as instruções no [guia do usuário do conjunto de dados](../../catalog/datasets/user-guide.md#create). Você deve seguir a opção **[!UICONTROL Criar conjunto de dados a partir do esquema]**, usando o esquema criado anteriormente.
 
-![O esquema no qual você deseja basear seu conjunto de dados é realçado.](../images/tutorials/external-audiences/select-schema.png)
+![O esquema no qual você deseja basear seu conjunto de dados está realçado.](../images/tutorials/external-audiences/select-schema.png)
 
-Depois de criar o conjunto de dados, continue seguindo as instruções na [guia do usuário do conjunto de dados](../../catalog/datasets/user-guide.md#enable-profile) para ativar esse conjunto de dados para o Perfil de cliente em tempo real.
+Depois de criar o conjunto de dados, continue seguindo as instruções no [guia do usuário do conjunto de dados](../../catalog/datasets/user-guide.md#enable-profile) para habilitar esse conjunto de dados para o Perfil de cliente em tempo real.
 
-![A opção para ativar o esquema para Perfil é realçada na página de atividade do conjunto de dados.](../images/tutorials/external-audiences/dataset-profile.png)
+![A opção para habilitar o esquema para o Perfil está realçada na página de atividade do Conjunto de Dados.](../images/tutorials/external-audiences/dataset-profile.png)
 
 ## Configurar e importar dados de público
 
@@ -90,15 +90,15 @@ Com o conjunto de dados ativado, os dados agora podem ser enviados para a Platfo
 
 ### Assimilar dados usando uma conexão em lote
 
-Para criar uma conexão em lote, siga as instruções na guia genérica [guia da interface do usuário de upload de arquivo local](../../sources/tutorials/ui/create/local-system/local-file-upload.md). Para obter uma lista completa de fontes disponíveis com as quais você pode usar a assimilação de dados, leia a [visão geral das origens](../../sources/home.md).
+Para criar uma conexão em lote, siga as instruções no [guia da interface do usuário de carregamento de arquivo local](../../sources/tutorials/ui/create/local-system/local-file-upload.md) genérico. Para obter uma lista completa das fontes disponíveis com as quais você pode usar a assimilação de dados, leia a [visão geral das fontes](../../sources/home.md).
 
 ### Assimilar dados usando uma conexão de transmissão
 
-Para criar uma conexão de transmissão, siga as instruções em [Tutorial de API](../../sources/tutorials/api/create/streaming/http.md) ou o [Tutorial de interface do usuário](../../sources/tutorials/ui/create/streaming/http.md).
+Para criar uma conexão de streaming, siga as instruções no [tutorial da API](../../sources/tutorials/api/create/streaming/http.md) ou no [tutorial da interface do usuário](../../sources/tutorials/ui/create/streaming/http.md).
 
-Depois de criar a conexão de streaming, você terá acesso ao terminal de streaming exclusivo para o qual poderá enviar seus dados. Para saber como enviar dados para esses endpoints, leia o [tutorial sobre transmissão de dados de registro](../../ingestion/tutorials/streaming-record-data.md#ingest-data).
+Depois de criar a conexão de streaming, você terá acesso ao terminal de streaming exclusivo para o qual poderá enviar seus dados. Para saber como enviar dados para esses pontos de extremidade, leia o [tutorial sobre transmissão de dados de registro](../../ingestion/tutorials/streaming-record-data.md#ingest-data).
 
-![O ponto final de transmissão da conexão de transmissão é realçado na página de detalhes da origem.](../images/tutorials/external-audiences/get-streaming-endpoint.png)
+![O ponto de extremidade de streaming da conexão de streaming está realçado na página de detalhes da origem.](../images/tutorials/external-audiences/get-streaming-endpoint.png)
 
 ## Estrutura de metadados de público
 
@@ -144,18 +144,18 @@ Uma amostra dos metadados da carga do público-alvo externo pode ser vista abaix
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `schemaRef` | O schema **deve** consulte o schema criado anteriormente para obter os metadados do segmento. |
-| `datasetId` | A ID do conjunto de dados **deve** consulte o conjunto de dados criado anteriormente para o esquema que você acabou de criar. |
-| `xdmEntity._id` | A ID **deve** consulte a mesma ID de segmento que você está usando como público-alvo externo. |
-| `xdmEntity.identityMap` | Esta seção **deve** contém o rótulo de identidade usado ao criar o namespace criado anteriormente. |
+| `schemaRef` | O esquema **deve** fazer referência ao esquema criado anteriormente para os metadados do segmento. |
+| `datasetId` | A ID do conjunto de dados **deve** fazer referência ao conjunto de dados criado anteriormente para o esquema que você acabou de criar. |
+| `xdmEntity._id` | A ID **deve** fazer referência à mesma ID de segmento que você está usando como público-alvo externo. |
+| `xdmEntity.identityMap` | Esta seção **deve** conter o rótulo de identidade usado ao criar o namespace criado anteriormente. |
 | `{IDENTITY_NAMESPACE}` | Este é o rótulo do namespace de identidade criado anteriormente. Assim, por exemplo, se você chamasse o namespace de identidade de &quot;externalAudience&quot;, usaria isso como a chave da matriz. |
 | `segmentName` | O nome do segmento pelo qual você deseja segmentar o público externo. |
 
 ## Criação de segmentos usando públicos importados
 
-Após configurar os públicos-alvo importados, eles podem ser usados como parte do processo de segmentação. Para encontrar públicos externos, acesse o Construtor de segmentos e selecione **[!UICONTROL Públicos-alvo]** na guia **[!UICONTROL Campos]** seção.
+Após configurar os públicos-alvo importados, eles podem ser usados como parte do processo de segmentação. Para encontrar públicos externos, vá para o Construtor de segmentos e selecione a guia **[!UICONTROL Públicos-alvo]** na seção **[!UICONTROL Campos]**.
 
-![O seletor de públicos-alvo externos no Construtor de segmentos é realçado.](../images/tutorials/external-audiences/external-audiences.png)
+![O seletor de públicos-alvo externos no Construtor de segmentos está realçado.](../images/tutorials/external-audiences/external-audiences.png)
 
 ## Próximas etapas
 
@@ -167,29 +167,29 @@ Além de usar metadados de público-alvo externo importados e usá-los para cria
 
 ### Configurar um esquema de destino de associação de segmento externo
 
-Para começar a compor um esquema, primeiro selecione **[!UICONTROL Esquemas]** na barra de navegação à esquerda, seguido pelo botão **[!UICONTROL Criar esquema]** no canto superior direito do espaço de trabalho Esquemas. Aqui, selecione **[!UICONTROL Perfil individual XDM]**.
+Para começar a compor um esquema, selecione primeiro **[!UICONTROL Esquemas]** na barra de navegação à esquerda, seguido por **[!UICONTROL Criar esquema]** no canto superior direito do espaço de trabalho Esquemas. Aqui, selecione **[!UICONTROL Perfil Individual XDM]**.
 
-![A área Perfil individual XDM é realçada.](../images/tutorials/external-audiences/create-schema-profile.png)
+![A área Perfil Individual XDM está realçada.](../images/tutorials/external-audiences/create-schema-profile.png)
 
-Agora que o esquema foi criado, será necessário adicionar o grupo de campos de associação de segmento como parte do esquema. Para fazer isso, selecione [!UICONTROL Detalhes da associação do segmento], seguido por [!UICONTROL Adicionar grupos de campos].
+Agora que o esquema foi criado, será necessário adicionar o grupo de campos de associação de segmento como parte do esquema. Para fazer isso, selecione [!UICONTROL Detalhes da Associação do Segmento], seguido de [!UICONTROL Adicionar grupos de campos].
 
-![O grupo de campos Detalhes da associação do segmento é destacado.](../images/tutorials/external-audiences/segment-membership-details.png)
+![O grupo de campos Detalhes da Associação do Segmento está realçado.](../images/tutorials/external-audiences/segment-membership-details.png)
 
 Além disso, verifique se o esquema está marcado para **[!UICONTROL Perfil]**. Para fazer isso, será necessário marcar um campo como a identidade principal.
 
-![A opção para ativar o esquema para Perfil é realçada no Editor de esquemas.](../images/tutorials/external-audiences/external-segment-profile.png)
+![A opção para habilitar o esquema para Perfil está realçada no Editor de Esquemas.](../images/tutorials/external-audiences/external-segment-profile.png)
 
 ### Configurar o conjunto de dados
 
 Depois de criar seu esquema, será necessário criar um conjunto de dados.
 
-Para criar um conjunto de dados, siga as instruções na [guia do usuário do conjunto de dados](../../catalog/datasets/user-guide.md#create). Você deve seguir o **[!UICONTROL Criar conjunto de dados a partir do esquema]** opção, usando o schema criado anteriormente.
+Para criar um conjunto de dados, siga as instruções no [guia do usuário do conjunto de dados](../../catalog/datasets/user-guide.md#create). Você deve seguir a opção **[!UICONTROL Criar conjunto de dados a partir do esquema]**, usando o esquema criado anteriormente.
 
-![O schema que você está usando para criar o banco de dados é realçado.](../images/tutorials/external-audiences/select-schema.png)
+![O esquema que você está usando para criar o banco de dados está realçado.](../images/tutorials/external-audiences/select-schema.png)
 
-Depois de criar o conjunto de dados, continue seguindo as instruções na [guia do usuário do conjunto de dados](../../catalog/datasets/user-guide.md#enable-profile) para ativar esse conjunto de dados para o Perfil de cliente em tempo real.
+Depois de criar o conjunto de dados, continue seguindo as instruções no [guia do usuário do conjunto de dados](../../catalog/datasets/user-guide.md#enable-profile) para habilitar esse conjunto de dados para o Perfil de cliente em tempo real.
 
-![A opção para ativar o esquema para Perfil é realçada no fluxo de trabalho Criar conjuntos de dados.](../images/tutorials/external-audiences/dataset-profile.png)
+![A opção para habilitar o esquema para o Perfil está realçada no fluxo de trabalho criar conjuntos de dados.](../images/tutorials/external-audiences/dataset-profile.png)
 
 ## Configurar e importar dados de associação de público externo
 
@@ -197,15 +197,15 @@ Com o conjunto de dados ativado, os dados agora podem ser enviados para a Platfo
 
 ### Assimilar dados usando uma conexão em lote
 
-Para criar uma conexão em lote, siga as instruções na guia genérica [guia da interface do usuário de upload de arquivo local](../../sources/tutorials/ui/create/local-system/local-file-upload.md). Para obter uma lista completa de fontes disponíveis com as quais você pode usar a assimilação de dados, leia a [visão geral das origens](../../sources/home.md).
+Para criar uma conexão em lote, siga as instruções no [guia da interface do usuário de carregamento de arquivo local](../../sources/tutorials/ui/create/local-system/local-file-upload.md) genérico. Para obter uma lista completa das fontes disponíveis com as quais você pode usar a assimilação de dados, leia a [visão geral das fontes](../../sources/home.md).
 
 ### Assimilar dados usando uma conexão de transmissão
 
-Para criar uma conexão de transmissão, siga as instruções em [Tutorial de API](../../sources/tutorials/api/create/streaming/http.md) ou o [Tutorial de interface do usuário](../../sources/tutorials/ui/create/streaming/http.md).
+Para criar uma conexão de streaming, siga as instruções no [tutorial da API](../../sources/tutorials/api/create/streaming/http.md) ou no [tutorial da interface do usuário](../../sources/tutorials/ui/create/streaming/http.md).
 
-Depois de criar a conexão de streaming, você terá acesso ao terminal de streaming exclusivo para o qual poderá enviar seus dados. Para saber como enviar dados para esses endpoints, leia o [tutorial sobre transmissão de dados de registro](../../ingestion/tutorials/streaming-record-data.md#ingest-data).
+Depois de criar a conexão de streaming, você terá acesso ao terminal de streaming exclusivo para o qual poderá enviar seus dados. Para saber como enviar dados para esses pontos de extremidade, leia o [tutorial sobre transmissão de dados de registro](../../ingestion/tutorials/streaming-record-data.md#ingest-data).
 
-![O ponto final de transmissão da conexão de transmissão é realçado na página de detalhes da origem.](../images/tutorials/external-audiences/get-streaming-endpoint.png)
+![O ponto de extremidade de streaming da conexão de streaming está realçado na página de detalhes da origem.](../images/tutorials/external-audiences/get-streaming-endpoint.png)
 
 ## Estrutura de associação de segmento
 
@@ -257,12 +257,12 @@ Um exemplo da carga de associação do público-alvo externo pode ser visto abai
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `schemaRef` | O schema **deve** consulte o schema criado anteriormente para obter os dados de associação do segmento. |
-| `datasetId` | A ID do conjunto de dados **deve** consulte o conjunto de dados criado anteriormente para o schema de associação que você acabou de criar. |
+| `schemaRef` | O esquema **deve** fazer referência ao esquema criado anteriormente para os dados de associação do segmento. |
+| `datasetId` | A ID do conjunto de dados **deve** fazer referência ao conjunto de dados criado anteriormente para o esquema de associação que você acabou de criar. |
 | `xdmEntity._id` | Uma ID adequada usada para identificar exclusivamente o registro no conjunto de dados. |
 | `{TENANT_NAME}.identities` | Esta seção é usada para conectar o grupo de campos das identidades personalizadas com os usuários importados anteriormente. |
 | `segmentMembership.{IDENTITY_NAMESPACE}` | Este é o rótulo do namespace de identidade personalizado criado anteriormente. Assim, por exemplo, se você chamasse o namespace de identidade de &quot;externalAudience&quot;, usaria isso como a chave da matriz. |
 
 >[!NOTE]
 >
->Por padrão, as associações de público-alvo externo são excluídas após 30 dias. Para evitar a exclusão e mantê-las por mais de 30 dias, use o `validUntil` ao assimilar os dados do público-alvo. Para obter mais informações sobre esse campo, leia o guia em [Grupos de campos de esquema Detalhes da associação do segmento](../../xdm/field-groups/profile/segmentation.md).
+>Por padrão, as associações de público-alvo externo são excluídas após 30 dias. Para evitar a exclusão e mantê-los por mais de 30 dias, use o campo `validUntil` enquanto assimila os dados do público-alvo. Para obter mais informações sobre este campo, leia o guia em [Grupos de campos de esquema de Detalhes da Associação do Segmento](../../xdm/field-groups/profile/segmentation.md).

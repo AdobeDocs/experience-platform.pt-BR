@@ -1,19 +1,19 @@
 ---
-keywords: Experience Platform;guia do desenvolvedor;SDK;Data Access SDK;Data Science Workspace;popular topics
+keywords: Experience Platform;guia do desenvolvedor;SDK;Data Access SDK;Data Science Workspace;tópicos populares;;developer guide;SDK;Data Access SDK;Data Science;popular topics
 solution: Experience Platform
 title: Criação de modelo usando o SDK da plataforma Adobe Experience Platform
 description: Este tutorial fornece informações sobre a conversão de data_access_sdk_python para o novo Python platform_sdk no Python e no R.
 exl-id: 20909cae-5cd2-422b-8dbb-35bc63e69b2a
 source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '489'
-ht-degree: 5%
+source-wordcount: '486'
+ht-degree: 3%
 
 ---
 
 # Criação de modelo usando o Adobe Experience Platform [!DNL Platform] SDK
 
-Este tutorial fornece informações sobre a conversão `data_access_sdk_python` para o novo Python `platform_sdk` tanto em Python quanto em R. Este tutorial fornece informações sobre as seguintes operações:
+Este tutorial fornece informações sobre como converter `data_access_sdk_python` para o novo Python `platform_sdk` em Python e R. Este tutorial fornece informações sobre as seguintes operações:
 
 - [Compilar autenticação](#build-authentication)
 - [Leitura básica de dados](#basic-reading-of-data)
@@ -21,7 +21,7 @@ Este tutorial fornece informações sobre a conversão `data_access_sdk_python` 
 
 ## Compilar autenticação {#build-authentication}
 
-A autenticação é necessária para fazer chamadas para [!DNL Adobe Experience Platform], e é composto pela Chave de API, ID da organização, um token de usuário e um token de serviço.
+A autenticação é necessária para fazer chamadas para [!DNL Adobe Experience Platform] e é composta pela Chave de API, ID da organização, um token de usuário e um token de serviço.
 
 ### Python
 
@@ -68,7 +68,7 @@ client_context <- psdk$client_context$ClientContext(api_key={API_KEY},
 
 ## Leitura básica de dados {#basic-reading-of-data}
 
-Com o novo [!DNL Platform] do SDK, o tamanho máximo de leitura é de 32 GB, com um tempo máximo de leitura de 10 minutos.
+Com o novo SDK [!DNL Platform], o tamanho máximo de leitura é de 32 GB, com um tempo máximo de leitura de 10 minutos.
 
 Se o tempo de leitura estiver demorando muito, tente usar uma das seguintes opções de filtro:
 
@@ -105,7 +105,7 @@ df
 
 ## Filtrar por deslocamento e limite {#filter-by-offset-and-limit}
 
-Como a filtragem por ID de lote não é mais suportada, para determinar o escopo da leitura de dados, é necessário usar `offset` e `limit`.
+Como não há mais suporte para filtragem por ID de lote, para determinar a leitura de dados, é necessário usar `offset` e `limit`.
 
 ### Python
 
@@ -145,15 +145,15 @@ df2 <- dataset_reader$where(
 df2
 ```
 
-O novo [!DNL Platform] O SDK é compatível com as seguintes operações:
+O novo SDK [!DNL Platform] é compatível com as seguintes operações:
 
 | Operação | Função |
 | --------- | -------- |
 | Igual a (`=`) | `eq()` |
-| Greater than (`>`) | `gt()` |
-| Maior que ou igual a (`>=`) | `ge()` |
-| Menos que (`<`) | `lt()` |
-| Less than or equal to (`<=`) | `le()` |
+| Maior que (`>`) | `gt()` |
+| Maior ou igual a (`>=`) | `ge()` |
+| Menor que (`<`) | `lt()` |
+| Menor que ou igual a (`<=`) | `le()` |
 | E (`&`) | `And()` |
 | Ou (`|`) | `Or()` |
 
@@ -220,4 +220,4 @@ write_tracker <- dataset_writer$write({PANDA_DATAFRAME}, file_format='json')
 
 ## Próximas etapas
 
-Depois de configurar o `platform_sdk` carregador de dados, os dados são preparados e depois divididos no `train` e `val` conjuntos de dados. Para saber mais sobre a preparação de dados e a engenharia de recursos, visite a seção sobre [preparação de dados e engenharia de recursos](../jupyterlab/create-a-model.md#data-preparation-and-feature-engineering) no tutorial para criar uma fórmula usando [!DNL JupyterLab] notebooks.
+Depois de configurar o carregador de dados `platform_sdk`, os dados serão preparados e divididos nos conjuntos de dados `train` e `val`. Para saber mais sobre preparação de dados e engenharia de recursos, visite a seção sobre [preparação de dados e engenharia de recursos](../jupyterlab/create-a-model.md#data-preparation-and-feature-engineering) no tutorial para a criação de uma fórmula usando blocos de anotações [!DNL JupyterLab].

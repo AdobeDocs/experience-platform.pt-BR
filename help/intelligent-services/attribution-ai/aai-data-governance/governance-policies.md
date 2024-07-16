@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Políticas de governança no Attribution AI
 
-Depois de passar pelo fluxo de trabalho para criar um modelo e enviar a configuração dele, a variável [aplicação de políticas](../../../data-governance/enforcement/auto-enforcement.md) verifica se há violações. Se ocorrer uma violação de política, será exibido um popover indicando que uma ou mais políticas foram violadas. Isso garante que suas operações de dados e ações de marketing na Platform estejam em conformidade com as políticas de uso de dados.
+Depois de passar pelo fluxo de trabalho para criar um modelo e enviar a configuração do modelo, a [imposição de política](../../../data-governance/enforcement/auto-enforcement.md) verifica se há violações. Se ocorrer uma violação de política, será exibido um popover indicando que uma ou mais políticas foram violadas. Isso garante que suas operações de dados e ações de marketing na Platform estejam em conformidade com as políticas de uso de dados.
 
 ## Popover de violação de política
 

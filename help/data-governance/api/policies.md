@@ -14,19 +14,19 @@ ht-degree: 3%
 
 # Ponto de extremidade de políticas de governança de dados
 
-As políticas de governança de dados são regras que descrevem os tipos de ações de marketing que você tem permissão ou restrição para realizar em dados dentro do [!DNL Experience Platform]. A variável `/policies` endpoint na variável [!DNL Policy Service API] O permite gerenciar programaticamente as políticas de governança de dados da sua organização.
+As políticas de governança de dados são regras que descrevem os tipos de ações de marketing que você tem permissão ou restrição para executar em dados no [!DNL Experience Platform]. O ponto de extremidade `/policies` no [!DNL Policy Service API] permite gerenciar programaticamente as políticas de governança de dados da sua organização.
 
 >[!IMPORTANT]
 >
->As políticas de governança não devem ser confundidas com as políticas de controle de acesso, que determinam os atributos de dados específicos que podem ser acessados por determinados usuários da Platform em sua organização. Consulte a `/policies` manual de endpoint para o [API de controle de acesso](../../access-control/abac/api/policies.md) para obter detalhes sobre como gerenciar programaticamente as políticas de controle de acesso.
+>As políticas de governança não devem ser confundidas com as políticas de controle de acesso, que determinam os atributos de dados específicos que podem ser acessados por determinados usuários da Platform em sua organização. Consulte o manual de ponto de extremidade `/policies` da [API de Controle de Acesso](../../access-control/abac/api/policies.md) para obter detalhes sobre como gerenciar programaticamente as políticas de controle de acesso.
 
 ## Introdução
 
-O endpoint da API usado neste guia faz parte da [[!DNL Policy Service] API](https://www.adobe.io/experience-platform-apis/references/policy-service/). Antes de continuar, reveja o [guia de introdução](getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre os cabeçalhos necessários para fazer chamadas com êxito para qualquer [!DNL Experience Platform] API.
+O ponto de extremidade de API usado neste guia faz parte da [[!DNL Policy Service] API](https://www.adobe.io/experience-platform-apis/references/policy-service/). Antes de continuar, consulte o [guia de introdução](getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre os cabeçalhos necessários para fazer chamadas com êxito para qualquer API do [!DNL Experience Platform].
 
 ## Recuperar uma lista de políticas {#list}
 
-Você pode listar todos `core` ou `custom` fazendo uma solicitação para GET `/policies/core` ou `/policies/custom`, respectivamente.
+Você pode listar todas as políticas de `core` ou `custom` fazendo uma solicitação GET para `/policies/core` ou `/policies/custom`, respectivamente.
 
 **Formato da API**
 
@@ -50,7 +50,7 @@ curl -X GET \
 
 **Resposta**
 
-Uma resposta bem-sucedida inclui uma `children` que lista os detalhes de cada política recuperada, incluindo suas `id` valores. Você pode usar o `id` de uma política específica a ser executada [pesquisa](#lookup), [atualizar](#update), e [excluir](#delete) para essa política.
+Uma resposta bem-sucedida inclui uma matriz `children` que lista os detalhes de cada política recuperada, incluindo seus valores `id`. Você pode usar o campo `id` de uma política específica para executar solicitações de [pesquisa](#lookup), [atualização](#update) e [exclusão](#delete) para essa política.
 
 ```JSON
 {
@@ -145,14 +145,14 @@ Uma resposta bem-sucedida inclui uma `children` que lista os detalhes de cada po
 | --- | --- |
 | `_page.count` | O número total de políticas recuperadas. |
 | `name` | O nome de exibição de uma política. |
-| `status` | O status atual de uma política. Há três status possíveis: `DRAFT`, `ENABLED`ou `DISABLED`. Por padrão, somente `ENABLED` políticas participam da avaliação. Consulte a visão geral em [avaliação de política](../enforcement/overview.md) para obter mais informações. |
+| `status` | O status atual de uma política. Há três status possíveis: `DRAFT`, `ENABLED` ou `DISABLED`. Por padrão, apenas `ENABLED` políticas participam da avaliação. Consulte a visão geral na [avaliação de política](../enforcement/overview.md) para obter mais informações. |
 | `marketingActionRefs` | Uma matriz que lista os URIs de todas as ações de marketing aplicáveis a uma política. |
 | `description` | Uma descrição opcional que fornece mais contexto para o caso de uso da política. |
 | `deny` | Um objeto que descreve os rótulos de uso de dados específicos nos quais a ação de marketing associada a uma política está restrita de ser executada. Consulte a seção sobre [criação de uma política](#create-policy) para obter mais informações sobre essa propriedade. |
 
 ## Pesquisar uma política {#look-up}
 
-É possível pesquisar uma política específica incluindo as `id` propriedade no caminho de uma solicitação GET.
+Você pode pesquisar uma política específica incluindo a propriedade `id` dessa política no caminho de uma solicitação GET.
 
 **Formato da API**
 
@@ -163,7 +163,7 @@ GET /policies/custom/{POLICY_ID}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{POLICY_ID}` | A variável `id` da política que você deseja pesquisar. |
+| `{POLICY_ID}` | O `id` da política que você deseja pesquisar. |
 
 **Solicitação**
 
@@ -226,21 +226,21 @@ Uma resposta bem-sucedida retorna os detalhes da política.
 | Propriedade | Descrição |
 | --- | --- |
 | `name` | O nome de exibição da política. |
-| `status` | O status atual da política. Há três status possíveis: `DRAFT`, `ENABLED`ou `DISABLED`. Por padrão, somente `ENABLED` políticas participam da avaliação. Consulte a visão geral em [avaliação de política](../enforcement/overview.md) para obter mais informações. |
+| `status` | O status atual da política. Há três status possíveis: `DRAFT`, `ENABLED` ou `DISABLED`. Por padrão, apenas `ENABLED` políticas participam da avaliação. Consulte a visão geral na [avaliação de política](../enforcement/overview.md) para obter mais informações. |
 | `marketingActionRefs` | Uma matriz que lista os URIs de todas as ações de marketing aplicáveis à política. |
 | `description` | Uma descrição opcional que fornece mais contexto para o caso de uso da política. |
 | `deny` | Um objeto que descreve os rótulos de uso de dados específicos nos quais a ação de marketing associada à política está restrita de ser executada. Consulte a seção sobre [criação de uma política](#create-policy) para obter mais informações sobre essa propriedade. |
 
 ## Criar uma política personalizada {#create-policy}
 
-No [!DNL Policy Service] , uma política é definida pelo seguinte:
+Na API [!DNL Policy Service], uma política é definida pelo seguinte:
 
 * Uma referência a uma ação de marketing específica
 * Uma expressão que descreve os rótulos de uso de dados nos quais a ação de marketing está restrita de ser executada
 
 Para atender a esse último requisito, as definições de política devem incluir uma expressão booleana em relação à presença de rótulos de uso de dados. Essa expressão é chamada de expressão de política.
 
-As expressões de política são fornecidas no formato de um `deny` em cada definição de política. Um exemplo de uma `deny` O objeto que verifica apenas a presença de um único rótulo seria semelhante ao seguinte:
+As expressões de política são fornecidas na forma de uma propriedade `deny` em cada definição de política. Um exemplo de um objeto `deny` simples que verifica apenas a presença de um único rótulo seria semelhante ao seguinte:
 
 ```json
 "deny": {
@@ -250,7 +250,7 @@ As expressões de política são fornecidas no formato de um `deny` em cada defi
 
 No entanto, muitas políticas especificam condições mais complexas em relação à presença de rótulos de uso de dados. Para dar suporte a esses casos de uso, também é possível incluir operações booleanas para descrever suas expressões de política. O objeto de expressão de política deve conter um rótulo ou um operador e operandos, mas não ambos. Por sua vez, cada operando também é um objeto de expressão de política.
 
-Por exemplo, para definir uma política que proíba uma ação de marketing de ser executada em dados em que `C1 OR (C3 AND C7)` rótulos estiverem presentes, a política de `deny` A propriedade seria especificada como:
+Por exemplo, para definir uma política que proíba uma ação de marketing de ser executada em dados nos quais os rótulos `C1 OR (C3 AND C7)` estão presentes, a propriedade `deny` da política seria especificada como:
 
 ```JSON
 "deny": {
@@ -270,11 +270,11 @@ Por exemplo, para definir uma política que proíba uma ação de marketing de s
 
 | Propriedade | Descrição |
 | --- | --- |
-| `operator` | Indica a relação condicional entre os rótulos fornecidos no irmão `operands` matriz. Os valores aceitos são: <ul><li>`OR`: a expressão declara verdadeiro se qualquer um dos rótulos na `operands` estão presentes.</li><li>`AND`: a expressão somente resolverá como true se todos os rótulos na `operands` estão presentes.</li></ul> |
-| `operands` | Uma matriz de objetos, com cada objeto representando um único rótulo ou um par adicional de `operator` e `operands` propriedades. A presença dos rótulos e/ou operações num `operands` A matriz resolve para verdadeiro ou falso com base no valor de seu irmão `operator` propriedade. |
+| `operator` | Indica a relação condicional entre os rótulos fornecidos na matriz irmã `operands`. Os valores aceitos são: <ul><li>`OR`: a expressão é resolvida como verdadeira se qualquer um dos rótulos na matriz `operands` estiver presente.</li><li>`AND`: a expressão somente será resolvida como verdadeira se todos os rótulos na matriz `operands` estiverem presentes.</li></ul> |
+| `operands` | Uma matriz de objetos, com cada objeto representando um único rótulo ou um par adicional de propriedades `operator` e `operands`. A presença dos rótulos e/ou operações em uma matriz `operands` é resolvida como verdadeira ou falsa com base no valor de sua propriedade irmã `operator`. |
 | `label` | O nome de um único rótulo de uso de dados que se aplica à política. |
 
-Você pode criar uma nova política personalizada fazendo uma solicitação POST para a `/policies/custom` terminal.
+Você pode criar uma nova política personalizada fazendo uma solicitação POST para o ponto de extremidade `/policies/custom`.
 
 **Formato da API**
 
@@ -284,7 +284,7 @@ POST /policies/custom
 
 **Solicitação**
 
-A solicitação a seguir cria uma nova política que restringe a ação de marketing `exportToThirdParty` de ser executado em dados que contêm rótulos `C1 OR (C3 AND C7)`.
+A solicitação a seguir cria uma nova política que impede a ação de marketing `exportToThirdParty` de ser executada em dados que contêm rótulos `C1 OR (C3 AND C7)`.
 
 ```shell
 curl -X POST \
@@ -320,8 +320,8 @@ curl -X POST \
 | Propriedade | Descrição |
 | --- | --- |
 | `name` | O nome de exibição da política. |
-| `status` | O status atual da política. Há três status possíveis: `DRAFT`, `ENABLED`ou `DISABLED`. Por padrão, somente `ENABLED` políticas participam da avaliação. Consulte a visão geral em [avaliação de política](../enforcement/overview.md) para obter mais informações. |
-| `marketingActionRefs` | Uma matriz que lista os URIs de todas as ações de marketing aplicáveis à política. O URI para uma ação de marketing é fornecido em `_links.self.href` na resposta a [pesquisar uma ação de marketing](./marketing-actions.md#look-up). |
+| `status` | O status atual da política. Há três status possíveis: `DRAFT`, `ENABLED` ou `DISABLED`. Por padrão, apenas `ENABLED` políticas participam da avaliação. Consulte a visão geral na [avaliação de política](../enforcement/overview.md) para obter mais informações. |
+| `marketingActionRefs` | Uma matriz que lista os URIs de todas as ações de marketing aplicáveis à política. O URI de uma ação de marketing é fornecido em `_links.self.href` na resposta para [procurar uma ação de marketing](./marketing-actions.md#look-up). |
 | `description` | Uma descrição opcional que fornece mais contexto para o caso de uso da política. |
 | `deny` | A expressão de política que descreve os rótulos de uso de dados específicos nos quais a ação de marketing associada à política está restrita de ser executada. |
 
@@ -376,13 +376,13 @@ Uma resposta bem-sucedida retorna os detalhes da política recém-criada, inclui
 
 >[!IMPORTANT]
 >
->Você só pode atualizar políticas personalizadas. Se quiser ativar ou desativar as políticas principais, consulte a seção sobre [atualização da lista de políticas principais ativadas](#update-enabled-core).
+>Você só pode atualizar políticas personalizadas. Se quiser habilitar ou desabilitar as políticas principais, consulte a seção sobre [atualização da lista de políticas principais habilitadas](#update-enabled-core).
 
 Você pode atualizar uma política personalizada existente fornecendo a respectiva ID no caminho de uma solicitação PUT com uma carga que inclui a forma atualizada da política em sua totalidade. Em outras palavras, o pedido PUT reescreve essencialmente a política.
 
 >[!NOTE]
 >
->Consulte a seção sobre [atualização de uma parte de uma política personalizada](#patch) se você quiser atualizar apenas um ou mais campos de uma política, em vez de substituí-la.
+>Consulte a seção sobre [atualização de uma parte de uma política personalizada](#patch) se desejar atualizar apenas um ou mais campos de uma política, em vez de substituí-la.
 
 **Formato da API**
 
@@ -392,11 +392,11 @@ PUT /policies/custom/{POLICY_ID}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{POLICY_ID}` | A variável `id` da política que você deseja atualizar. |
+| `{POLICY_ID}` | O `id` da política que você deseja atualizar. |
 
 **Solicitação**
 
-Neste exemplo, as condições para exportar dados para terceiros foram alteradas e agora é necessário ter a política criada para negar essa ação de marketing se `C1 AND C5` os rótulos de dados estão presentes.
+Neste exemplo, as condições para exportar dados para terceiros foram alteradas e agora você precisa da política criada para negar essa ação de marketing se `C1 AND C5` rótulos de dados estiverem presentes.
 
 A solicitação a seguir atualiza a política existente para incluir a nova expressão de política. Como essa solicitação reescreve essencialmente a política, todos os campos devem ser incluídos na carga, mesmo se alguns de seus valores não estiverem sendo atualizados.
 
@@ -428,8 +428,8 @@ curl -X PUT \
 | Propriedade | Descrição |
 | --- | --- |
 | `name` | O nome de exibição da política. |
-| `status` | O status atual da política. Há três status possíveis: `DRAFT`, `ENABLED`ou `DISABLED`. Por padrão, somente `ENABLED` políticas participam da avaliação. Consulte a visão geral em [avaliação de política](../enforcement/overview.md) para obter mais informações. |
-| `marketingActionRefs` | Uma matriz que lista os URIs de todas as ações de marketing aplicáveis à política. O URI para uma ação de marketing é fornecido em `_links.self.href` na resposta a [pesquisar uma ação de marketing](./marketing-actions.md#look-up). |
+| `status` | O status atual da política. Há três status possíveis: `DRAFT`, `ENABLED` ou `DISABLED`. Por padrão, apenas `ENABLED` políticas participam da avaliação. Consulte a visão geral na [avaliação de política](../enforcement/overview.md) para obter mais informações. |
+| `marketingActionRefs` | Uma matriz que lista os URIs de todas as ações de marketing aplicáveis à política. O URI de uma ação de marketing é fornecido em `_links.self.href` na resposta para [procurar uma ação de marketing](./marketing-actions.md#look-up). |
 | `description` | Uma descrição opcional que fornece mais contexto para o caso de uso da política. |
 | `deny` | A expressão de política que descreve os rótulos de uso de dados específicos nos quais a ação de marketing associada à política está restrita de ser executada. Consulte a seção sobre [criação de uma política](#create-policy) para obter mais informações sobre essa propriedade. |
 
@@ -476,15 +476,15 @@ Uma resposta bem-sucedida retorna os detalhes da política atualizada.
 
 >[!IMPORTANT]
 >
->Você só pode atualizar políticas personalizadas. Se quiser ativar ou desativar as políticas principais, consulte a seção sobre [atualização da lista de políticas principais ativadas](#update-enabled-core).
+>Você só pode atualizar políticas personalizadas. Se quiser habilitar ou desabilitar as políticas principais, consulte a seção sobre [atualização da lista de políticas principais habilitadas](#update-enabled-core).
 
-Uma parte específica de uma política pode ser atualizada usando uma solicitação PATCH. Diferentemente das solicitações PUT que reescrevem a política, as solicitações PATCH atualizam somente as propriedades especificadas no corpo da solicitação. Isso é especialmente útil quando você deseja ativar ou desativar uma política, pois só é necessário fornecer o caminho para a propriedade apropriada (`/status`) e seu valor (`ENABLED` ou `DISABLED`).
+Uma parte específica de uma política pode ser atualizada usando uma solicitação PATCH. Diferentemente das solicitações PUT que reescrevem a política, as solicitações PATCH atualizam somente as propriedades especificadas no corpo da solicitação. Isso é especialmente útil quando você deseja habilitar ou desabilitar uma política, pois você só precisa fornecer o caminho para a propriedade apropriada (`/status`) e seu valor (`ENABLED` ou `DISABLED`).
 
 >[!NOTE]
 >
->As cargas das solicitações PATCH seguem a formatação de patch JSON. Consulte a [Guia de fundamentos de API](../../landing/api-fundamentals.md) para obter mais informações sobre a sintaxe aceita.
+>As cargas das solicitações PATCH seguem a formatação de patch JSON. Consulte o [guia de fundamentos de API](../../landing/api-fundamentals.md) para obter mais informações sobre a sintaxe aceita.
 
-A variável [!DNL Policy Service] A API oferece suporte às operações de patch de JSON `add`, `remove`, e `replace`, e permite combinar várias atualizações em uma única chamada, como mostrado no exemplo abaixo.
+A API [!DNL Policy Service] é compatível com as operações de patch de JSON `add`, `remove` e `replace` e permite combinar várias atualizações em uma única chamada, como mostrado no exemplo abaixo.
 
 **Formato da API**
 
@@ -494,11 +494,11 @@ PATCH /policies/custom/{POLICY_ID}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{POLICY_ID}` | A variável `id` da política cujas propriedades você deseja atualizar. |
+| `{POLICY_ID}` | O `id` da política cujas propriedades você deseja atualizar. |
 
 **Solicitação**
 
-A solicitação a seguir usa dois `replace` operações para alterar o status da política de `DRAFT` para `ENABLED`e para atualizar a `description` com uma nova descrição.
+A solicitação a seguir usa duas operações `replace` para alterar o status da política de `DRAFT` para `ENABLED` e atualizar o campo `description` com uma nova descrição.
 
 >[!IMPORTANT]
 >
@@ -576,11 +576,11 @@ Uma resposta bem-sucedida retorna os detalhes da política atualizada.
 
 ## Excluir uma política personalizada {#delete}
 
-É possível excluir uma política personalizada incluindo suas `id` no caminho de uma solicitação DELETE.
+Você pode excluir uma política personalizada incluindo seu `id` no caminho de uma solicitação DELETE.
 
 >[!WARNING]
 >
->Após a exclusão, as políticas não poderão ser recuperadas. A prática recomendada é [executar uma solicitação de pesquisa (GET)](#lookup) primeiro, visualize a política e confirme se ela é a política correta que deseja remover.
+>Após a exclusão, as políticas não poderão ser recuperadas. É prática recomendada [executar uma solicitação de pesquisa (GET)](#lookup) primeiro para exibir a política e confirmar se ela é a política correta que você deseja remover.
 
 **Formato da API**
 
@@ -611,7 +611,7 @@ Você pode confirmar a exclusão tentando pesquisar (GET) a política novamente.
 
 ## Recuperar uma lista de políticas principais habilitadas {#list-enabled-core}
 
-Por padrão, somente as políticas de governança de dados habilitadas participam da avaliação. Você pode recuperar uma lista de políticas principais que estão atualmente habilitadas por sua organização fazendo uma solicitação GET para a `/enabledCorePolicies` terminal.
+Por padrão, somente as políticas de governança de dados habilitadas participam da avaliação. Você pode recuperar uma lista de políticas principais que estão habilitadas por sua organização fazendo uma solicitação GET para o ponto de extremidade `/enabledCorePolicies`.
 
 **Formato da API**
 
@@ -632,7 +632,7 @@ curl -X GET \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna a lista de políticas principais habilitadas em um `policyIds` matriz.
+Uma resposta bem-sucedida retorna a lista de políticas principais habilitadas em uma matriz `policyIds`.
 
 ```json
 {
@@ -663,11 +663,11 @@ Uma resposta bem-sucedida retorna a lista de políticas principais habilitadas e
 
 ## Atualizar a lista de políticas principais habilitadas {#update-enabled-core}
 
-Por padrão, somente as políticas de governança de dados habilitadas participam da avaliação. Ao fazer uma solicitação PUT para o `/enabledCorePolicies` você pode atualizar a lista de políticas principais habilitadas para sua organização usando uma única chamada.
+Por padrão, somente as políticas de governança de dados habilitadas participam da avaliação. Ao fazer uma solicitação PUT para o ponto de extremidade `/enabledCorePolicies`, você pode atualizar a lista de políticas principais habilitadas para sua organização usando uma única chamada.
 
 >[!NOTE]
 >
->Somente as políticas principais podem ser habilitadas ou desabilitadas por este ponto de extremidade. Para ativar ou desativar políticas personalizadas, consulte a seção sobre [atualização de uma parte de uma política](#patch).
+>Somente as políticas principais podem ser habilitadas ou desabilitadas por este ponto de extremidade. Para habilitar ou desabilitar políticas personalizadas, consulte a seção sobre [atualização de uma parte de uma política](#patch).
 
 **Formato da API**
 
@@ -698,11 +698,11 @@ curl -X GET \
 
 | Propriedade | Descrição |
 | --- | --- |
-| `policyIds` | Uma lista de IDs de política principais que devem ser habilitadas. Todas as políticas principais que não forem incluídas serão definidas como `DISABLED` status e não participarão da avaliação. |
+| `policyIds` | Uma lista de IDs de política principais que devem ser habilitadas. As políticas principais que não forem incluídas serão definidas com o status `DISABLED` e não participarão da avaliação. |
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna a lista atualizada de políticas principais habilitadas em um `policyIds` matriz.
+Uma resposta bem-sucedida retorna a lista atualizada de políticas principais habilitadas em uma matriz `policyIds`.
 
 ```json
 {
@@ -729,4 +729,4 @@ Uma resposta bem-sucedida retorna a lista atualizada de políticas principais ha
 
 ## Próximas etapas
 
-Depois de definir novas políticas ou atualizar as existentes, você poderá usar o [!DNL Policy Service] API para testar ações de marketing em relação a rótulos ou conjuntos de dados específicos e ver se suas políticas estão gerando violações conforme esperado. Consulte o guia no [endpoints de avaliação de política](./evaluation.md) para obter mais informações.
+Depois de definir novas políticas ou atualizar as existentes, você pode usar a API [!DNL Policy Service] para testar ações de marketing em rótulos ou conjuntos de dados específicos e ver se as políticas estão gerando violações conforme esperado. Consulte o manual nos [pontos de extremidade de avaliação de política](./evaluation.md) para obter mais informações.

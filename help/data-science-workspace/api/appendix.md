@@ -8,23 +8,23 @@ exl-id: 2c8d3ae8-7ad7-4ff6-8d6b-3a42d3eccdff
 source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '330'
-ht-degree: 2%
+ht-degree: 1%
 
 ---
 
-# [!DNL Sensei Machine Learning] Apêndice do guia de API
+# Apêndice do guia de API [!DNL Sensei Machine Learning]
 
-As seções a seguir fornecem informações de referência para vários recursos do [!DNL Sensei Machine Learning] API.
+As seções a seguir fornecem informações de referência para vários recursos da API [!DNL Sensei Machine Learning].
 
 ## Parâmetros de consulta para recuperação de ativos {#query}
 
-A variável [!DNL Sensei Machine Learning] A API oferece suporte a parâmetros de consulta com a recuperação de ativos. Os parâmetros de query disponíveis e seus usos são descritos na tabela a seguir:
+A API [!DNL Sensei Machine Learning] fornece suporte para parâmetros de consulta com a recuperação de ativos. Os parâmetros de query disponíveis e seus usos são descritos na tabela a seguir:
 
 | Parâmetro de consulta | Descrição | Valor padrão |
 | --------------- | ----------- | ------- |
 | `start` | Indica o índice inicial para paginação. | `start=0` |
 | `limit` | Indica o número máximo de resultados a serem retornados. | `limit=25` |
-| `orderby` | Indica as propriedades a serem usadas para classificar em ordem de prioridade. Incluir um traço (**-**) antes do nome de uma propriedade para classificar em ordem decrescente, caso contrário, os resultados serão classificados em ordem crescente. | `orderby=created` |
+| `orderby` | Indica as propriedades a serem usadas para classificar em ordem de prioridade. Inclua um traço (**-**) antes do nome de uma propriedade para classificar em ordem decrescente, caso contrário, os resultados serão classificados em ordem crescente. | `orderby=created` |
 | `property` | Indica a expressão de comparação que um objeto deve satisfazer para ser retornado. | `property=deleted==false` |
 
 >[!NOTE]
@@ -33,7 +33,7 @@ A variável [!DNL Sensei Machine Learning] A API oferece suporte a parâmetros d
 
 ## Configurações de CPU e GPU Python {#cpu-gpu-config}
 
-Os Mecanismos Python têm a capacidade de escolher entre uma CPU ou uma GPU para fins de treinamento ou pontuação e são definidos em um [MLInstance](./mlinstances.md) como especificação de tarefa (`tasks.specification`).
+Os Mecanismos Python podem escolher entre uma CPU ou uma GPU para fins de treinamento ou pontuação e são definidos em uma [MLInstance](./mlinstances.md) como uma especificação de tarefa (`tasks.specification`).
 
 Este é um exemplo de configuração que especifica o uso de uma CPU para treinamento e de uma GPU para pontuação:
 
@@ -70,7 +70,7 @@ Este é um exemplo de configuração que especifica o uso de uma CPU para treina
 
 >[!NOTE]
 >
->Os valores de `cpus` e `gpus` não significa o número de CPUs ou GPUs, mas o número de máquinas físicas. Esses valores são permitidos `"1"` e lançará uma exceção caso contrário.
+>Os valores de `cpus` e `gpus` não significam o número de CPUs ou GPUs, mas sim o número de máquinas físicas. Esses valores são permitidos `"1"` e lançarão uma exceção caso contrário.
 
 ## Configurações de recursos do PySpark e do Spark {#resource-config}
 
@@ -84,7 +84,7 @@ Os Spark Engines têm a capacidade de modificar recursos computacionais para fin
 | executorCores | Número de núcleos usados pelo executor | int |
 | numExecutors | Número de executores | int |
 
-Os recursos podem ser especificados em um [MLInstance](./mlinstances.md) como (A) treinamento individual ou parâmetros de pontuação, ou (B) dentro de um objeto de especificações adicionais (`specification`). Por exemplo, as configurações de recursos a seguir são as mesmas para treinamento e pontuação:
+Os recursos podem ser especificados em uma [MLInstance](./mlinstances.md) como (A) treinamento individual ou parâmetros de pontuação, ou (B) dentro de um objeto de especificações adicionais (`specification`). Por exemplo, as configurações de recursos a seguir são as mesmas para treinamento e pontuação:
 
 ```json
 [

@@ -5,16 +5,16 @@ description: Saiba como gravar consultas que usam Eventos de experiência para c
 exl-id: d831910d-d3a4-4a5a-b897-b09f0546dab0
 source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
-source-wordcount: '266'
+source-wordcount: '268'
 ht-degree: 1%
 
 ---
 
 # Listar as exibições de página de um usuário
 
-Este documento fornece um exemplo do SQL necessário para listar as exibições de página de um usuário especificado. Com o Serviço de consulta da Adobe Experience Platform, é possível gravar consultas que usam [!DNL Experience Events] para capturar uma variedade de casos de uso. Eventos de experiência são representados pela classe Experience Data Model (XDM) ExperienceEvent, que captura um instantâneo imutável e não agregado do sistema quando um usuário interage com um site ou serviço. Eventos de experiência podem até ser usados para análise de domínio de tempo. Consulte a [seção próximas etapas](#next-steps) para obter mais casos de uso que envolvem [!DNL Experience Events] para gerar relatórios de visitantes.
+Este documento fornece um exemplo do SQL necessário para listar as exibições de página de um usuário especificado. Com o Serviço de Consulta da Adobe Experience Platform, você pode gravar consultas que usam o [!DNL Experience Events] para capturar uma variedade de casos de uso. Eventos de experiência são representados pela classe Experience Data Model (XDM) ExperienceEvent, que captura um instantâneo imutável e não agregado do sistema quando um usuário interage com um site ou serviço. Eventos de experiência podem até ser usados para análise de domínio de tempo. Consulte a [seção das próximas etapas](#next-steps) para obter mais casos de uso que envolvem [!DNL Experience Events] para gerar relatórios de visitantes.
 
-Mais informações sobre XDM e [!DNL Experience Events] pode ser encontrado no [[!DNL XDM System] visão geral](../../xdm/home.md). Combinando o Serviço de consulta com [!DNL Experience Events], você pode rastrear com eficiência as tendências comportamentais entre os usuários. O documento a seguir fornece exemplos de consultas envolvendo [!DNL Experience Events].
+Mais informações sobre o XDM e o [!DNL Experience Events] podem ser encontradas na [[!DNL XDM System] visão geral](../../xdm/home.md). Ao combinar o Serviço de consulta com o [!DNL Experience Events], é possível rastrear com eficiência as tendências comportamentais entre os usuários. Este documento fornece exemplos de consultas envolvendo [!DNL Experience Events].
 
 ## Objetivo
 
@@ -65,7 +65,7 @@ Os resultados dessa query podem ser vistos abaixo.
 
 ## Próximas etapas {#next-steps}
 
-Ao ler este documento, você terá uma melhor compreensão de como usar o Serviço de consulta com [!DNL Experience Events] para listar as exibições de página como um usuário especificado.
+Ao ler este documento, você entende melhor como usar o Serviço de Consulta com [!DNL Experience Events] para listar as exibições de página como um usuário especificado.
 
 Consulte os seguintes casos de uso para saber mais sobre outros casos de uso com base em visitantes:
 

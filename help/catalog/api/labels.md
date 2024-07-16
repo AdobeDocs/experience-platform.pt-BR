@@ -13,4 +13,4 @@ ht-degree: 0%
 
 # Rótulos de uso de dados na API do serviço de conjunto de dados
 
-Separado da API do Serviço de catálogo, a variável [!DNL Dataset Service] A API fornece endpoints para gerenciar rótulos de uso de dados para conjuntos de dados. Para obter etapas sobre como fazer chamadas para esses endpoints, consulte o manual em [gerenciamento de rótulos de uso de dados usando a API](../../data-governance/labels/dataset-api.md) na documentação de Governança de dados do Adobe Experience Platform.
+Separada da API do Serviço de Catálogo, a API [!DNL Dataset Service] fornece pontos de extremidade para gerenciar rótulos de uso de dados para conjuntos de dados. Para obter etapas sobre como fazer chamadas para esses pontos de extremidade, consulte o manual sobre [gerenciamento de rótulos de uso de dados usando a API](../../data-governance/labels/dataset-api.md) na documentação de Governança de dados do Adobe Experience Platform.

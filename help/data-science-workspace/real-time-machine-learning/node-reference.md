@@ -6,8 +6,8 @@ description: Um nó é a unidade fundamental da qual os gráficos são formados.
 exl-id: 67fe26b5-ce03-4a9a-ad45-783b2acf8d92
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
-source-wordcount: '678'
-ht-degree: 1%
+source-wordcount: '652'
+ht-degree: 0%
 
 ---
 
@@ -23,7 +23,7 @@ O guia a seguir descreve as bibliotecas de nós compatíveis com o Aprendizado d
 
 ## Descobrir nós para uso no pipeline de ML
 
-Copie o código a seguir em um [!DNL Python] bloco de anotações para exibir todos os nós disponíveis para uso.
+Copie o código a seguir em um bloco de anotações [!DNL Python] para exibir todos os nós disponíveis para uso.
 
 ```python
 from pprint import pprint
@@ -81,9 +81,9 @@ node_model_score = ONNXNode(params={"features": ['browser', 'device', 'login_pag
 
 ### Pandas {#pandas}
 
-O nó Pandas a seguir permite importar qualquer `pd.DataFrame` ou qualquer função geral de nível superior do pandas. Para saber mais sobre os métodos Pandas, visite o [Documentação dos métodos Pandas](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html). Para obter mais informações sobre funções de nível superior, visite o [Guia de referência da API Pandas para funções gerais](https://pandas.pydata.org/pandas-docs/stable/reference/general_functions.html).
+O nó Pandas a seguir permite importar qualquer método `pd.DataFrame` ou qualquer função geral de nível superior de pandas. Para saber mais sobre os métodos Pandas, visite a [documentação sobre métodos Pandas](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html). Para obter mais informações sobre funções de nível superior, visite o [guia de referência da API Pandas para funções gerais](https://pandas.pydata.org/pandas-docs/stable/reference/general_functions.html).
 
-O nó abaixo usa `"import": "map"` para importar o nome do método como uma string nos parâmetros, seguido pela inserção dos parâmetros como uma função de mapa. O exemplo abaixo faz isso usando `{"arg": {"Desktop": 1, "Mobile": 0}, "na_action": 0}`. Depois de colocar o mapa no lugar, você tem a opção de configurar `inplace` as `True` ou `False`. Definir `inplace` as `True` ou `False` se você deseja ou não aplicar a transformação no local. Por padrão `"inplace": False` cria uma nova coluna. O suporte para fornecer um novo nome de coluna está definido para ser adicionado em uma versão subsequente. A última linha `cols` pode ser um único nome de coluna ou uma lista de colunas. Especifique as colunas nas quais deseja aplicar a transformação. Neste exemplo `device` é especificado.
+O nó abaixo usa `"import": "map"` para importar o nome do método como uma cadeia de caracteres nos parâmetros, seguido pela inserção dos parâmetros como uma função de mapa. O exemplo abaixo faz isso usando `{"arg": {"Desktop": 1, "Mobile": 0}, "na_action": 0}`. Depois de colocar o mapa no lugar, você tem a opção de definir `inplace` como `True` ou `False`. Defina `inplace` como `True` ou `False` com base no fato de você querer aplicar ou não a transformação local. Por padrão, `"inplace": False` cria uma nova coluna. O suporte para fornecer um novo nome de coluna está definido para ser adicionado em uma versão subsequente. A última linha `cols` pode ser um único nome de coluna ou uma lista de colunas. Especifique as colunas nas quais deseja aplicar a transformação. Neste exemplo, `device` está especificado.
 
 ```python
 #  df["device"] = df["device"].map({"Desktop":1, "Mobile":0}, na_action=0)
@@ -122,16 +122,16 @@ msg6 = model_train.process(msg5)
 | Valor | Descrição |
 | --- | --- |
 | recursos | Recursos de entrada para o modelo (lista de cadeias de caracteres). <br> Por exemplo: `browser`, `device`, `login_page`, `product_page`, `search_page` |
-| label | Nome da coluna de destino (sequência de caracteres). |
+| rótulo | Nome da coluna de destino (sequência de caracteres). |
 | modo | Treinar/testar (sequência de caracteres). |
 | model_path | Caminho para o modelo salvo localmente no formato onnx. |
 | params.model | Caminho de importação absoluto para o modelo (cadeia de caracteres), por exemplo: `sklearn.linear_model.LogisticRegression`. |
-| params.model_params | Hiperparâmetros do modelo, consulte a seção [API do sklearn (map/dict)](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html) para obter mais informações. |
+| params.model_params | Hiperparâmetros de modelo, consulte a documentação da [API do sklearn (map/dict)](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html) para obter mais informações. |
 | node_instance.process(data_message_from_previous_node) | O método `process()` pega DataMsg do nó anterior e aplica a transformação. Isso depende do nó atual que está sendo usado. |
 
-### Dividir
+### Divisão
 
-Use o nó a seguir para dividir o quadro de dados em train e testar passando `train_size` ou `test_size`. Isso retorna um quadro de dados com um índice múltiplo. Você pode acessar treinos e dataframes de teste usando o exemplo a seguir, `msg5.data.xs("train")`.
+Use o nó a seguir para dividir o quadro de dados em train e testar passando `train_size` ou `test_size`. Isso retorna um quadro de dados com um índice múltiplo. Você pode acessar treinos e quadros de dados de teste usando o exemplo a seguir, `msg5.data.xs("train")`.
 
 ```python
 splitter = Split(params={"train_size": 0.7})
@@ -140,4 +140,4 @@ msg5 = splitter.process(msg4)
 
 ## Próximas etapas
 
-A próxima etapa é criar nós para usar na pontuação de um modelo de Aprendizado de máquina em tempo real. Para obter mais informações, visite o [Guia do usuário do notebook Real-time Machine Learning](./rtml-authoring-notebook.md).
+A próxima etapa é criar nós para usar na pontuação de um modelo de Aprendizado de máquina em tempo real. Para obter mais informações, visite o [Guia do usuário do bloco de anotações de Aprendizado de Máquina em Tempo Real](./rtml-authoring-notebook.md).

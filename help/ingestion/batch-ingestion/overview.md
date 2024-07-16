@@ -7,15 +7,15 @@ exl-id: ffd1dc2d-eff8-4ef7-a26b-f78988f050ef
 source-git-commit: 583eb70235174825dd542b95463784638bdef235
 workflow-type: tm+mt
 source-wordcount: '1388'
-ht-degree: 4%
+ht-degree: 7%
 
 ---
 
 # Visão geral da API de assimilação em lote
 
-A API de assimilação em lote do Adobe Experience Platform permite assimilar dados na Platform como arquivos em lote. Os dados assimilados podem ser dados de perfil de um arquivo simples (como um arquivo Parquet) ou dados que estejam em conformidade com um esquema conhecido no [!DNL Experience Data Model] Registro do (XDM).
+A API de assimilação em lote do Adobe Experience Platform permite assimilar dados na Platform como arquivos em lote. Os dados assimilados podem ser dados de perfil de um arquivo simples (como um arquivo Parquet) ou dados que estejam em conformidade com um esquema conhecido no registro [!DNL Experience Data Model] (XDM).
 
-A variável [Referência da API de assimilação em lote](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) O fornece informações adicionais sobre essas chamadas de API.
+A [Referência da API de assimilação em lote](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) fornece informações adicionais sobre essas chamadas de API.
 
 O diagrama a seguir descreve o processo de assimilação em lote:
 
@@ -23,12 +23,12 @@ O diagrama a seguir descreve o processo de assimilação em lote:
 
 ## Introdução
 
-Os endpoints de API usados neste guia fazem parte do [API de assimilação em lote](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/). Antes de continuar, reveja o [guia de introdução](getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre os cabeçalhos necessários para fazer chamadas com êxito para qualquer API de Experience Platform.
+Os pontos de extremidade de API usados neste guia fazem parte da [API de assimilação em lote](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/). Antes de continuar, consulte o [guia de introdução](getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre os cabeçalhos necessários para fazer chamadas para qualquer API Experience Platform com êxito.
 
 ### [!DNL Data Ingestion] pré-requisitos
 
 - Os dados para upload devem estar nos formatos Parquet ou JSON.
-- Um conjunto de dados criado na variável [[!DNL Catalog services]](../../catalog/home.md).
+- Um conjunto de dados criado no [[!DNL Catalog services]](../../catalog/home.md).
 - O conteúdo do arquivo Parquet deve corresponder a um subconjunto do esquema do conjunto de dados que está sendo carregado no.
 - Tenha seu token de acesso exclusivo após a autenticação.
 
@@ -48,15 +48,15 @@ A assimilação de dados em lote tem algumas restrições:
 
 >[!NOTE]
 >
->Para carregar um arquivo com mais de 512 MB, ele precisará ser dividido em partes menores. As instruções para carregar um arquivo grande podem ser encontradas no [seção de upload de arquivo grande deste documento](#large-file-upload---create-file).
+>Para carregar um arquivo com mais de 512 MB, ele precisará ser dividido em partes menores. As instruções para carregar um arquivo grande podem ser encontradas na [seção de carregamento de arquivo grande deste documento](#large-file-upload---create-file).
 
 ### Tipos
 
-Ao assimilar dados, é importante entender como [!DNL Experience Data Model] Os esquemas de (XDM) funcionam. Para obter mais informações sobre como os tipos de campo XDM são mapeados para formatos diferentes, leia a [Guia do desenvolvedor do Registro de esquema](../../xdm/api/getting-started.md).
+Ao assimilar dados, é importante entender como os esquemas do [!DNL Experience Data Model] (XDM) funcionam. Para obter mais informações sobre como os tipos de campo XDM são mapeados para formatos diferentes, leia o [guia do desenvolvedor do Registro de Esquemas](../../xdm/api/getting-started.md).
 
-Há alguma flexibilidade ao assimilar dados - se um tipo não corresponder ao que está no esquema do público-alvo, os dados serão convertidos no tipo de público-alvo expresso. Se não puder, ocorrerá falha no lote com uma `TypeCompatibilityException`.
+Há alguma flexibilidade ao assimilar dados - se um tipo não corresponder ao que está no esquema do público-alvo, os dados serão convertidos no tipo de público-alvo expresso. Se não puder, haverá falha no lote com um `TypeCompatibilityException`.
 
-Por exemplo, nem o JSON nem o CSV têm um `date` ou `date-time` tipo. Como resultado, esses valores são expressos usando [Strings formatadas em ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) (&quot;2018-07-10T15:05:59.000-08:00&quot;) ou Horário Unix formatado em milissegundos (1531263959000) e convertido no momento da assimilação para o tipo XDM de destino.
+Por exemplo, nem JSON nem CSV têm um tipo `date` ou `date-time`. Como resultado, esses valores são expressos usando [cadeias de caracteres formatadas em ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) (&quot;2018-07-10T15:05:59.000-08:00&quot;) ou Tempo Unix formatados em milissegundos (1531263959000) e são convertidos no momento da assimilação para o tipo XDM de destino.
 
 A tabela abaixo mostra as conversões compatíveis ao assimilar dados.
 
@@ -79,7 +79,7 @@ A tabela abaixo mostra as conversões compatíveis ao assimilar dados.
 
 ## Uso da API
 
-A variável [!DNL Data Ingestion] A API permite assimilar dados como lotes (uma unidade de dados que consiste em um ou mais arquivos que serão assimilados como uma única unidade) no [!DNL Experience Platform] em três etapas básicas:
+A API [!DNL Data Ingestion] permite assimilar dados como lotes (uma unidade de dados que consiste em um ou mais arquivos a serem assimilados como uma única unidade) no [!DNL Experience Platform] em três etapas básicas:
 
 1. Crie um novo lote.
 2. Faça upload de arquivos para um conjunto de dados especificado que corresponda ao esquema XDM dos dados.
@@ -150,7 +150,7 @@ Depois de criar um novo lote para upload com sucesso, os arquivos podem ser carr
 
 >[!INFO]
 >
->Os exemplos abaixo usam o [Apache Parquet](https://parquet.apache.org/docs/) formato de arquivo. Um exemplo que usa o formato de arquivo JSON pode ser encontrado no [guia do desenvolvedor de assimilação em lote](api-overview.md).
+>Os exemplos abaixo usam o formato de arquivo [Apache Parquet](https://parquet.apache.org/docs/). Um exemplo que usa o formato de arquivo JSON pode ser encontrado no [guia do desenvolvedor de assimilação em lote](api-overview.md).
 
 ### Upload de arquivo pequeno
 
@@ -257,7 +257,7 @@ curl -X PATCH "https://platform.adobe.io/data/foundation/import/batches/{BATCH_I
 
 ## Sinal de conclusão de lote
 
-Depois que todos os arquivos tiverem sido carregados no lote, o lote poderá ser marcado para conclusão. Ao fazer isso, o [!DNL Catalog] As entradas DataSetFile são criadas para os arquivos concluídos e associadas ao lote gerado acima. A variável [!DNL Catalog] Em seguida, o lote é marcado como bem-sucedido, o que aciona fluxos downstream para assimilar os dados disponíveis.
+Depois que todos os arquivos tiverem sido carregados no lote, o lote poderá ser marcado para conclusão. Ao fazer isso, as [!DNL Catalog] entradas de DataSetFile são criadas para os arquivos concluídos e associadas ao lote gerado acima. O lote [!DNL Catalog] é marcado como bem-sucedido, o que aciona fluxos downstream para assimilar os dados disponíveis.
 
 **Solicitação**
 
@@ -401,20 +401,20 @@ curl GET "https://platform.adobe.io/data/foundation/catalog/batch/{BATCH_ID}" \
 | -------- | ----------- |
 | `{USER_ID}` | A ID do usuário que criou ou atualizou o lote. |
 
-A variável `"status"` é o que mostra o status atual do lote solicitado. Os lotes podem ter um dos seguintes estados:
+O campo `"status"` é o que mostra o status atual do lote solicitado. Os lotes podem ter um dos seguintes estados:
 
 ## Status de assimilação em lote
 
 | Status | Descrição |
 | ------ | ----------- |
 | Abandonado | O lote não foi concluído no prazo esperado. |
-| Anulado | Uma operação de anulação foi **explicitamente** (por meio da API de assimilação em lote) do lote especificado. Quando o lote estiver no estado &quot;Carregado&quot;, ele não poderá ser abortado. |
+| Anulado | Uma operação de anulação foi **explicitamente** chamada (por meio da API de assimilação em lote) para o lote especificado. Quando o lote estiver no estado &quot;Carregado&quot;, ele não poderá ser abortado. |
 | Ativo | O lote foi promovido com sucesso e está disponível para consumo downstream. Esse status pode ser usado alternadamente com &quot;Sucesso&quot;. |
 | Excluído | Os dados do lote foram completamente removidos. |
-| Falha | Um estado terminal que resulta de uma configuração incorreta e/ou de dados incorretos. Os dados de um lote com falha **não** apareça. Esse status pode ser usado alternadamente com &quot;Falha&quot;. |
+| Com falha | Um estado terminal que resulta de uma configuração incorreta e/ou de dados incorretos. Os dados de um lote com falha **não** serão exibidos. Esse status pode ser usado alternadamente com &quot;Falha&quot;. |
 | Inativo | O lote foi promovido com sucesso, mas foi revertido ou expirou. O lote não está mais disponível para consumo downstream. |
 | Carregado | Os dados do lote estão concluídos e o lote está pronto para promoção. |
-| Carregando | Os dados deste lote estão sendo carregados e o lote está no momento **não** pronto para ser promovido. |
+| Carregando | Os dados deste lote estão sendo carregados e o lote atualmente **não** está pronto para ser promovido. |
 | Repetindo | Os dados desse lote estão sendo processados. No entanto, devido a um erro de sistema ou transitório, o lote falhou; como resultado, esse lote está sendo repetido. |
 | Preparado | A fase de preparo do processo de promoção de um lote está concluída e o trabalho de assimilação foi executado. |
 | Armazenamento temporário | Os dados do lote estão sendo processados. |

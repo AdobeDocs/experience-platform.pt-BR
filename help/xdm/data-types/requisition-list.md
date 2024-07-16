@@ -1,24 +1,25 @@
 ---
 title: Tipo de Dados da Lista de Requisições
 description: Saiba mais sobre o tipo de dados Modelo de Dados de Experiência da Lista de Requisições (XDM).
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+exl-id: cbea6b08-9d4d-4cbe-b0c5-506bccc6df67
+source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
 source-wordcount: '125'
-ht-degree: 5%
+ht-degree: 7%
 
 ---
 
-# [!UICONTROL Lista de Requisições] tipo de dados
+# Tipo de dados [!UICONTROL Lista de Requisições]
 
-[!UICONTROL Lista de Requisições] é um tipo de dados padrão do Experience Data Model (XDM) que descreve uma coleção com curadoria de itens para compras. Use o [!UICONTROL Lista de Requisições] tipo de dados para identificar e descrever listas de requisições.
+[!UICONTROL Lista de Requisições] é um tipo de dados padrão do Experience Data Model (XDM) que descreve uma coleção de itens com curadoria para compras. Use o tipo de dados [!UICONTROL Lista de Requisições] para identificar e descrever listas de requisições.
 
-![Um diagrama do [!UICONTROL Lista de Requisições] tipo de dados.](../images/data-types/requisition-list.png)
+![Um diagrama do tipo de dados [!UICONTROL Lista de Requisições].](../images/data-types/requisition-list.png)
 
 | Nome de exibição | Propriedade | Tipo de dados | Descrição |
 |---------------------------|-------------------|-----------|--------------------------------------------------|
-| [!UICONTROL ID da Lista de Requisições] | `ID` | string | O identificador exclusivo da lista de requisições. |
-| [!UICONTROL Nome da Lista de Requisições] | `name` | string | O nome da lista de requisições especificada pelo cliente. |
-| [!UICONTROL Descrição da Lista de Requisições] | `description` | string | Uma descrição da lista de requisições especificada pelo cliente. |
+| [!UICONTROL ID da Lista de Requisições] | `ID` | sequência de caracteres | O identificador exclusivo da lista de requisições. |
+| [!UICONTROL Nome da Lista de Requisições] | `name` | sequência de caracteres | O nome da lista de requisições especificada pelo cliente. |
+| [!UICONTROL Descrição da Lista de Requisições] | `description` | sequência de caracteres | Uma descrição da lista de requisições especificada pelo cliente. |
 
 {style="table-layout:auto"}
 

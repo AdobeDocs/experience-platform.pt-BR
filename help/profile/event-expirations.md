@@ -13,13 +13,13 @@ ht-degree: 0%
 
 # Expirações do evento de experiência
 
-No Adobe Experience Platform, você pode configurar os tempos de expiração para todos os Eventos de experiência que são assimilados em um conjunto de dados habilitado para [Perfil do cliente em tempo real](./home.md). Isso permite remover automaticamente dados do armazenamento de Perfil que não são mais válidos ou úteis para seus casos de uso.
+No Adobe Experience Platform, você pode configurar as horas de expiração para todos os Eventos de experiência que são assimilados em um conjunto de dados habilitado para o [Perfil de cliente em tempo real](./home.md). Isso permite remover automaticamente dados do armazenamento de Perfil que não são mais válidos ou úteis para seus casos de uso.
 
 As expirações de evento de experiência não podem ser configuradas por meio da interface do usuário da plataforma ou das APIs. Em vez disso, você deve entrar em contato com o suporte para ativar as expirações do evento de experiência nos conjuntos de dados necessários.
 
 >[!IMPORTANT]
 >
->As expirações de evento de experiência não devem ser confundidas com as expirações de conjunto de dados, que excluem o conjunto de dados inteiro após a data de expiração ser atingida. Eles são configurados manualmente por meio de [Higiene de dados do Adobe Experience Platform](../hygiene/home.md).
+>As expirações de evento de experiência não devem ser confundidas com as expirações de conjunto de dados, que excluem o conjunto de dados inteiro após a data de expiração ser atingida. Eles são configurados manualmente por meio da [Limpeza de Dados do Adobe Experience Platform](../hygiene/home.md).
 
 ## Processo de expiração automatizado
 
@@ -30,7 +30,7 @@ Depois que as expirações de evento de experiência são ativadas em um conjunt
 
 >[!WARNING]
 >
->Depois de aplicados, todos os dados anteriores ao número de dias alocados pelo valor de expiração serão **excluído permanentemente** e não podem ser restaurados.
+>Uma vez aplicados, todos os dados anteriores ao número de dias alocados pelo valor de expiração são **permanentemente excluídos** e não podem ser restaurados.
 
 Por exemplo, se você aplicasse um valor de expiração de 30 dias em 15 de maio, as seguintes etapas ocorreriam:
 
@@ -54,26 +54,26 @@ A expiração de dados do evento de experiência e a expiração de dados do per
 
 #### Granularidade
 
-A expiração de dados do evento de experiência funciona em um **conjunto de dados** nível. Como resultado, cada conjunto de dados pode ter uma configuração de expiração de dados diferente.
+A expiração de dados do Evento de experiência funciona em um nível de **conjunto de dados**. Como resultado, cada conjunto de dados pode ter uma configuração de expiração de dados diferente.
 
-A expiração de dados do perfil de pseudônimo funciona em um **sandbox** nível. Como resultado, a expiração dos dados afetará todos os perfis na sandbox.
+A expiração de dados do Perfil de pseudônimo funciona em um nível de **sandbox**. Como resultado, a expiração dos dados afetará todos os perfis na sandbox.
 
 #### Tipos de identidade
 
-A expiração dos dados do evento de experiência remove os eventos **somente** com base no carimbo de data e hora do registro do evento. Os namespaces de identidade incluídos são **ignorado** para fins de expiração.
+A expiração de dados do Evento de experiência remove os eventos **only** com base no carimbo de data/hora do registro do evento. Os namespaces de identidade incluídos são **ignorados** para fins de expiração.
 
-Expiração de dados do perfil pseudônimo **somente** O considera perfis que têm gráficos de identidade que contêm namespaces de identidade selecionados pelo cliente, como `ECID`, `AAID`ou outros tipos de cookies. Se o perfil contiver **qualquer** namespace de identidade adicional que foi **não** na lista selecionada pelo cliente, o perfil **não** ser excluídos.
+A expiração de dados de Perfil pseudônimo **only** considera perfis que têm gráficos de identidade que contêm namespaces de identidade selecionados pelo cliente, como `ECID`, `AAID` ou outros tipos de cookies. Se o perfil contiver **qualquer** namespace de identidade adicional que fosse **não** na lista selecionada pelo cliente, o perfil **não** será excluído.
 
 #### Itens Removidos
 
-Expiração de dados do evento de experiência **somente** remove eventos e faz **não** remover dados da classe de perfil. Os dados da classe de perfil só são removidos quando todos os dados são removidos **all** conjuntos de dados e há **não** registros de classe de perfil restantes para o perfil.
+A expiração de dados do Evento de Experiência **only** remove eventos e **not** remove dados da classe de perfil. Os dados da classe de perfil só são removidos quando todos os dados são removidos em **todos** conjuntos de dados e há **não** registros de classe de perfil restantes para o perfil.
 
-A expiração de dados do perfil de pseudônimo remove **ambos** registros de eventos e perfis. Como resultado, os dados da classe de perfil também serão removidos.
+A expiração de dados de Perfil pseudônimo remove **ambos** registros de evento e perfil. Como resultado, os dados da classe de perfil também serão removidos.
 
 ### Como a expiração de dados do Perfil de pseudônimo pode ser usada juntamente com a expiração de dados do Evento de experiência?
 
 A expiração de dados do perfil de pseudônimo e a expiração de dados do evento de experiência podem ser usadas para se complementar.
 
-Você deve **sempre** Configure a expiração de dados do Evento de experiência em seus conjuntos de dados com base nas necessidades de retenção de dados sobre clientes conhecidos. Depois que a expiração de dados do evento de experiência for configurada, você poderá usar a expiração de dados do perfil de pseudônimo para remover automaticamente os perfis de pseudônimo. Normalmente, o período de expiração dos dados para perfis pseudônimos é menor que o período de expiração dos dados para eventos de experiência.
+Você deve **sempre** configurar a expiração dos dados do Evento de experiência em seus conjuntos de dados, com base nas suas necessidades de retenção de dados sobre clientes conhecidos. Depois que a expiração de dados do evento de experiência for configurada, você poderá usar a expiração de dados do perfil de pseudônimo para remover automaticamente os perfis de pseudônimo. Normalmente, o período de expiração dos dados para perfis pseudônimos é menor que o período de expiração dos dados para eventos de experiência.
 
 Para um caso de uso típico, você pode definir a expiração de dados do evento de experiência com base nos valores dos dados do usuário conhecidos e definir a expiração de dados do perfil pseudônimo para uma duração muito mais curta para limitar o impacto dos perfis pseudônimos na conformidade de licença da plataforma.

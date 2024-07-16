@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;página inicial;tópicos populares;fontes;conectores;conectores de origem;fontes sdk;sdk;SDK
 solution: Experience Platform
-title: Documente sua fonte
+title: Documentar seu Source
 description: A etapa final antes que a nova fonte possa ser ativada no Adobe Experience Platform é documentar a nova fonte.
 exl-id: 80daadb1-127f-4f42-8bc9-fb89a7898462
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '407'
+source-wordcount: '392'
 ht-degree: 0%
 
 ---
@@ -26,8 +26,8 @@ Este guia de documentação inclui:
 
 Os seguintes itens são necessários antes de você começar a documentar sua nova origem:
 
-* **Uma conta de usuário GitHub válida**: se você não tiver uma conta GitHub existente, crie uma por meio do [Página de inscrição do GitHub](https://github.com/);
-* **Acesso ao GitHub Desktop**: Você deve usar o [Aplicativo GitHub Desktop](https://desktop.github.com/) para criar sua documentação de origem em seu ambiente local;
+* **Uma conta de usuário GitHub válida**: se você não tiver uma conta GitHub existente, crie uma por meio da [página de inscrição do GitHub](https://github.com/);
+* **Acesso ao GitHub Desktop**: você deve usar o [aplicativo GitHub Desktop](https://desktop.github.com/) para criar sua documentação de origem em seu ambiente local;
 * Sua integração com o Adobe deve estar em uma fase de teste com sua fonte implantada em um ambiente de preparo na plataforma.
 
 ## Instruções de alto nível para criar a documentação para sua origem na Platform
@@ -36,7 +36,7 @@ Em um alto nível, para criar a documentação para sua origem, você precisa cr
 
 ## Modelo de documentação
 
-Você pode usar um pré-preenchido [modelo de documentação](./template.md) para ajudar a criar a documentação da sua origem. Mais abaixo, você pode encontrar instruções sobre como editar o modelo e abrir uma solicitação de pull. A documentação enviada para sua nova fonte será revisada e publicada pela equipe de documentação do Adobe.
+Você pode usar um [modelo de documentação](./template.md) preenchido previamente para ajudar a criar a documentação para sua origem. Mais abaixo, você pode encontrar instruções sobre como editar o modelo e abrir uma solicitação de pull. A documentação enviada para sua nova fonte será revisada e publicada pela equipe de documentação do Adobe.
 
 Você também pode baixar os modelos de documentação abaixo:
 

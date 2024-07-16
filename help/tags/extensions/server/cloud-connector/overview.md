@@ -4,7 +4,7 @@ description: Saiba mais sobre a extensão de encaminhamento de eventos do Cloud 
 exl-id: f3713652-ac32-4171-8dda-127c8c235849
 source-git-commit: c7344d0ac5b65c6abae6a040304f27dc7cd77cbb
 workflow-type: tm+mt
-source-wordcount: '1616'
+source-wordcount: '1356'
 ht-degree: 98%
 
 ---
@@ -45,7 +45,7 @@ Use cada uma dessas guias (Parâmetros de consulta, Cabeçalhos e Elementos de d
 
 #### Parâmetros de consulta
 
-Defina uma chave e um valor para cada par de valor-chave que você deseja enviar como um parâmetro de sequência de consulta. Para inserir manualmente um elemento de dados, use a tokenização de elemento de dados com chave para o encaminhamento de eventos. Para referenciar o valor de um elemento de dados chamado &quot;siteSection&quot; como uma chave ou valor, digite `{{siteSection}}`. Ou selecione o elemento de dados criado anteriormente, selecionando-o no menu suspenso.
+Defina uma chave e um valor para cada par de valor-chave que você deseja enviar como um parâmetro de string de consulta. Para inserir manualmente um elemento de dados, use a tokenização de elemento de dados com chave para o encaminhamento de eventos. Para referenciar o valor de um elemento de dados chamado &quot;siteSection&quot; como uma chave ou valor, digite `{{siteSection}}`. Ou selecione o elemento de dados criado anteriormente, selecionando-o no menu suspenso.
 
 Para adicionar mais parâmetros de consulta, selecione **[!UICONTROL Adicionar outro]**.
 
@@ -63,11 +63,11 @@ A tabela a seguir lista os cabeçalhos predefinidos. Você não está limitado a
 
 | Header | Descrição |
 |---|---|
-| [A-IM](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Headers/Accept) |  |
-| [Accept](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Headers/Accept) |  |
-| [Accept-Charset](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Headers/Accept-Charset) |  |
-| [Accept-Encoding](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Headers/Accept-Encoding) |  |
-| [Accept-Language](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Headers/Accept-Language) |  |
+| [A-IM](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Headers/Accept) | |
+| [Accept](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Headers/Accept) | |
+| [Accept-Charset](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Headers/Accept-Charset) | |
+| [Accept-Encoding](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Headers/Accept-Encoding) | |
+| [Accept-Language](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Headers/Accept-Language) | |
 | [Accept-Datetime](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Headers/Accept) | Transmitido por um agente do usuário para indicar que deseja acessar um estado anterior de um recurso original. Para esse fim, o cabeçalho `Accept-Datetime` é transmitido em uma solicitação HTTP emitida em relação a um TimeGate para um recurso original, e seu valor indica a data e hora do estado anterior desejado do recurso original. |
 | Access-Control-Request-Headers | Usado pelos navegadores ao emitir uma [solicitação de comprovação](https://developer.mozilla.org/en-US/docs/Glossary/preflight_request), para informar ao servidor quais [cabeçalhos HTTP](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Headers) o cliente pode enviar quando a solicitação real é feita. |
 | Método de solicitação de controle de acesso | Usado pelos navegadores ao emitir uma [solicitação de comprovação](https://developer.mozilla.org/en-US/docs/Glossary/preflight_request), para informar ao servidor qual [método HTTP](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Methods) será usado quando a solicitação real for feita. Esse cabeçalho é necessário porque a solicitação de comprovação é sempre [OPÇÃO](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Methods/OPTIONS) e não usa o mesmo método que a solicitação real. |
@@ -83,24 +83,24 @@ A tabela a seguir lista os cabeçalhos predefinidos. Você não está limitado a
 | Encaminhado | Contém informações dos [servidores proxy reversos](https://developer.mozilla.org/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling) que são alteradas ou perdidas quando um proxy está envolvido no caminho da solicitação. |
 | De | Contém um endereço de email da Internet para um usuário humano que controla o agente do usuário solicitante. |
 | Host | Especifica o host e o número da porta do servidor para o qual a solicitação está sendo enviada. |
-| Se-Correspondência |  |
-| Se-Modificado-Desde |  |
-| [Se-Nenhuma-Correspondência](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Headers/If-None-Match) |  |
-| [Se-Intervalo](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Headers/If-Range) |  |
-| [Se-Inalterado-Desde](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Headers/If-Unmodified-Since) |  |
-| [Máx-Encaminhados](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Headers/If-Unmodified-Since) |  |
-| [Origem](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Headers/Origin) |  |
-| [Pragma](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Headers/Pragma) | Cabeçalho específico da implementação que pode ter vários efeitos em qualquer lugar na cadeia de solicitação-resposta. Usado para compatibilidade com versões anteriores com caches HTTP/1.0 nos quais o cabeçalho Cache-Control ainda não está presente. |  |
+| Se-Correspondência | |
+| Se-Modificado-Desde | |
+| [Se-Nenhuma-Correspondência](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Headers/If-None-Match) | |
+| [Se-Intervalo](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Headers/If-Range) | |
+| [Se-Inalterado-Desde](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Headers/If-Unmodified-Since) | |
+| [Máx-Encaminhados](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Headers/If-Unmodified-Since) | |
+| [Origem](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Headers/Origin) | |
+| [Pragma](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Headers/Pragma) | Cabeçalho específico da implementação que pode ter vários efeitos em qualquer lugar na cadeia de solicitação-resposta. Usado para compatibilidade com versões anteriores com caches HTTP/1.0 nos quais o cabeçalho Cache-Control ainda não está presente. | |
 | [Autorização de proxy](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Headers/Proxy-Authorization) |
-| [Intervalo](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Headers/Range) | Indica a parte de um documento que o servidor deve retornar. |  |
-| [Referer](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Headers/Referer) | O endereço da página da Web anterior na qual foi seguido um link para a página solicitada no momento. |  |
+| [Intervalo](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Headers/Range) | Indica a parte de um documento que o servidor deve retornar. | |
+| [Referer](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Headers/Referer) | O endereço da página da Web anterior na qual foi seguido um link para a página solicitada no momento. | |
 | TE | Especifica as codificações de transferência que o agente do usuário está disposto a aceitar. (Você pode chamá-lo informalmente de `Accept-Transfer-Encoding`, o que é mais intuitivo.) |
-| Atualização | O documento RFC relevante para o campo de cabeçalho [`Upgrade` é RFC 7230, seção 6.7](https://tools.ietf.org/html/rfc7230#section-6.7). O padrão estabelece regras para se atualizar ou alterar para um protocolo diferente na conexão atual de cliente, servidor e protocolo de transporte. Por exemplo, esse padrão de cabeçalho permite que um cliente mude de HTTP 1.1 para HTTP 2.0, pressupondo que o servidor decida reconhecer e implementar o campo de cabeçalho `Upgrade`. Nenhuma das partes é obrigada a aceitar os termos especificados no campo de cabeçalho `Upgrade`. Ele pode ser usado nos cabeçalhos do cliente e do servidor. Se o campo de cabeçalho `Upgrade` for especificado, o remetente também DEVERÁ enviar o campo de cabeçalho `Connection` com a opção `upgrade` especificada. |  |
-| [User-Agent](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Headers/User-Agent) | Contém uma sequência característica que permite que os pares de protocolo de rede identifiquem o tipo de aplicativo, o sistema operacional, o fornecedor ou a versão de software do agente de usuário do software solicitante. |
+| Atualização | O documento RFC relevante para o campo de cabeçalho [`Upgrade` é RFC 7230, seção 6.7](https://tools.ietf.org/html/rfc7230#section-6.7). O padrão estabelece regras para se atualizar ou alterar para um protocolo diferente na conexão atual de cliente, servidor e protocolo de transporte. Por exemplo, esse padrão de cabeçalho permite que um cliente mude de HTTP 1.1 para HTTP 2.0, pressupondo que o servidor decida reconhecer e implementar o campo de cabeçalho `Upgrade`. Nenhuma das partes é obrigada a aceitar os termos especificados no campo de cabeçalho `Upgrade`. Ele pode ser usado nos cabeçalhos do cliente e do servidor. Se o campo de cabeçalho `Upgrade` for especificado, o remetente também DEVERÁ enviar o campo de cabeçalho `Connection` com a opção `upgrade` especificada. | |
+| [User-Agent](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Headers/User-Agent) | Contém uma string característica que permite que os pares de protocolo de rede identifiquem o tipo de aplicativo, o sistema operacional, o fornecedor ou a versão de software do agente de usuário do software solicitante. |
 | [Via](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Headers/Via) | Adicionados por proxies, tanto encaminhados quanto reversos, e podem aparecer nos cabeçalhos de solicitação e nos cabeçalhos de resposta. |
 | [Aviso](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Headers/Warning) | Informações gerais de aviso sobre possíveis problemas. |
-| X-CSRF-Token |  |
-| X-Requested-With |  |
+| X-CSRF-Token | |
+| X-Requested-With | |
 
 #### Corpo como JSON
 

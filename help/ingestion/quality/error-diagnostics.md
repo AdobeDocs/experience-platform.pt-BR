@@ -6,47 +6,47 @@ description: Este documento fornece informações sobre monitoramento da assimil
 exl-id: b885fb00-b66d-453b-80b7-8821117c2041
 source-git-commit: edd285c3d0638b606876c015dffb18309887dfb5
 workflow-type: tm+mt
-source-wordcount: '981'
-ht-degree: 3%
+source-wordcount: '976'
+ht-degree: 9%
 
 ---
 
 # Recuperando diagnóstico de erro de assimilação de dados
 
-O Adobe Experience Platform fornece dois métodos para fazer upload e assimilar dados. Você pode usar a assimilação em lote, que permite inserir dados usando vários tipos de arquivos (como CSVs), ou a assimilação por streaming, que permite inserir os dados no [!DNL Platform] usar endpoints de transmissão em tempo real.
+O Adobe Experience Platform fornece dois métodos para fazer upload e assimilar dados. Você pode usar a assimilação em lote, que permite inserir dados usando vários tipos de arquivos (como CSVs), ou a assimilação por streaming, que permite inserir os dados no [!DNL Platform] usando pontos de extremidade de streaming em tempo real.
 
 Este documento fornece informações sobre monitoramento da assimilação em lote, gerenciamento de erros parciais de assimilação em lote, bem como uma referência para tipos parciais de assimilação em lote.
 
 ## Introdução
 
-Este guia requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
+Este manual necessita de uma compreensão funcional dos seguintes componentes da Adobe Experience Platform:
 
-- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): o quadro normalizado pelo qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
-- [[!DNL Adobe Experience Platform Data Ingestion]](../home.md): os métodos pelos quais os dados podem ser enviados para o [!DNL Experience Platform].
+- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): a estrutura padronizada pela qual o [!DNL Experience Platform] organiza os dados de experiência do cliente.
+- [[!DNL Adobe Experience Platform Data Ingestion]](../home.md): Os métodos pelos quais os dados podem ser enviados para [!DNL Experience Platform].
 
 ### Leitura de chamadas de API de amostra
 
-Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O exemplo de JSON retornado nas respostas da API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de exemplo, consulte a seção sobre [como ler chamadas de API de exemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) no [!DNL Experience Platform] guia de solução de problemas.
+Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e conteúdos de solicitação formatados corretamente. Também fornece exemplos de JSON retornado nas respostas da API. Para obter informações sobre as convenções usadas na documentação para chamadas de API de exemplo, consulte a seção sobre [como ler chamadas de API de exemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) no guia de solução de problemas [!DNL Experience Platform].
 
-### Coletar valores para cabeçalhos obrigatórios
+### Coletar valores para cabeçalhos necessários
 
-Para fazer chamadas para [!DNL Platform] APIs, primeiro conclua o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). Concluir o tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todos os [!DNL Experience Platform] Chamadas de API, conforme mostrado abaixo:
+Para fazer chamadas para APIs do [!DNL Platform], primeiro complete o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). Concluir o tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API da [!DNL Experience Platform], conforme mostrado abaixo:
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
 - `x-gw-ims-org-id: {ORG_ID}`
 
-Todos os recursos em [!DNL Experience Platform], incluindo as que pertencem à [!DNL Schema Registry], são isolados em sandboxes virtuais específicas. Todas as solicitações para [!DNL Platform] As APIs exigem um cabeçalho que especifique o nome da sandbox em que a operação ocorrerá:
+Todos os recursos em [!DNL Experience Platform], incluindo aqueles pertencentes a [!DNL Schema Registry], estão isolados em sandboxes virtuais específicas. Todas as solicitações para [!DNL Platform] APIs exigem um cabeçalho que especifique o nome da sandbox em que a operação ocorrerá:
 
 - `x-sandbox-name: {SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Para obter mais informações sobre sandboxes no [!DNL Platform], consulte o [documentação de visão geral da sandbox](../../sandboxes/home.md).
+>Para obter mais informações sobre sandboxes em [!DNL Platform], consulte a [documentação de visão geral da sandbox](../../sandboxes/home.md).
 
 ## Baixando diagnóstico de erro {#download-diagnostics}
 
-O Adobe Experience Platform permite que os usuários baixem os diagnósticos de erro dos arquivos de entrada. Os diagnósticos serão retidos em [!DNL Platform] por até 30 dias.
+O Adobe Experience Platform permite que os usuários baixem os diagnósticos de erro dos arquivos de entrada. O diagnóstico será retido em [!DNL Platform] por até 30 dias.
 
 ### Listar arquivos de entrada {#list-files}
 
@@ -132,7 +132,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/af838510-22
 
 **Resposta**
 
-Uma resposta bem-sucedida retornará objetos JSON que contêm `path` objetos detalhando onde os diagnósticos foram salvos. A resposta retornará a mensagem `path` objetos em [Linhas JSON](https://jsonlines.readthedocs.io/en/latest/) formato.
+Uma resposta bem-sucedida retornará objetos JSON contendo `path` objetos detalhando onde os diagnósticos foram salvos. A resposta retornará os objetos `path` no formato [Linhas JSON](https://jsonlines.readthedocs.io/en/latest/).
 
 ```json
 {"path": "F1.json"}
@@ -145,7 +145,7 @@ Se os lotes contiverem falhas, você deverá recuperar as informações de erro 
 
 ### Verificar status {#check-status}
 
-Para verificar o status do lote assimilado, você deve fornecer a ID do lote no caminho de uma solicitação GET. Para saber mais sobre como usar esta chamada de API, leia o [guia de endpoint de catálogo](../../catalog/api/list-objects.md).
+Para verificar o status do lote assimilado, você deve fornecer a ID do lote no caminho de uma solicitação GET. Para saber mais sobre como usar esta chamada de API, leia o [manual de ponto de extremidade de catálogo](../../catalog/api/list-objects.md).
 
 **Formato da API**
 
@@ -156,8 +156,8 @@ GET /catalog/batches/{BATCH_ID}?{FILTER}
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `{BATCH_ID}` | A variável `id` valor do lote do qual você deseja verificar o status. |
-| `{FILTER}` | Um parâmetro de consulta usado para filtrar os resultados retornados na resposta. Vários parâmetros são separados por &quot;E&quot; comercial (`&`). Para obter mais informações, leia o guia em [filtragem de dados do catálogo](../../catalog/api/filter-data.md). |
+| `{BATCH_ID}` | O valor `id` do lote do qual você deseja verificar o status. |
+| `{FILTER}` | Um parâmetro de consulta usado para filtrar os resultados retornados na resposta. Vários parâmetros são separados por &quot;E&quot; comercial (`&`). Para obter mais informações, leia o guia em [filtrando dados do catálogo](../../catalog/api/filter-data.md). |
 
 **Solicitação**
 
@@ -214,7 +214,7 @@ Uma resposta bem-sucedida é retornada com informações detalhadas sobre o stat
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `metrics.failedRecordCount` | O número de linhas que não puderam ser processadas devido a análise, conversão ou validação. Esse valor pode ser derivado subtraindo o `inputRecordCount` do `outputRecordCount`. Esse valor é gerado em todos os lotes, independentemente se `errorDiagnostics` está ativado. |
+| `metrics.failedRecordCount` | O número de linhas que não puderam ser processadas devido a análise, conversão ou validação. Este valor pode ser derivado subtraindo-se o `inputRecordCount` do `outputRecordCount`. Este valor é gerado em todos os lotes independentemente se `errorDiagnostics` estiver habilitado. |
 
 **Resposta com erros**
 
@@ -277,8 +277,8 @@ Se o lote tiver um ou mais erros e tiver o diagnóstico de erros ativado, a resp
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `metrics.failedRecordCount` | O número de linhas que não puderam ser processadas devido a análise, conversão ou validação. Esse valor pode ser derivado subtraindo o `inputRecordCount` do `outputRecordCount`. Esse valor é gerado em todos os lotes, independentemente se `errorDiagnostics` está ativado. |
-| `errors.recordCount` | O número de linhas que falharam para o código de erro especificado. Este valor é **somente** gerado se `errorDiagnostics` está ativado. |
+| `metrics.failedRecordCount` | O número de linhas que não puderam ser processadas devido a análise, conversão ou validação. Este valor pode ser derivado subtraindo-se o `inputRecordCount` do `outputRecordCount`. Este valor é gerado em todos os lotes independentemente se `errorDiagnostics` estiver habilitado. |
+| `errors.recordCount` | O número de linhas que falharam para o código de erro especificado. Este valor é **only** gerado se `errorDiagnostics` estiver habilitado. |
 
 >[!NOTE]
 >
@@ -295,7 +295,7 @@ Se o lote tiver um ou mais erros e tiver o diagnóstico de erros ativado, a resp
 
 ## Próximas etapas {#next-steps}
 
-Este tutorial abordou como monitorar erros de assimilação parcial de lotes. Para obter mais informações sobre assimilação em lote, leia a [guia do desenvolvedor de assimilação em lote](../batch-ingestion/api-overview.md).
+Este tutorial abordou como monitorar erros de assimilação parcial de lotes. Para obter mais informações sobre a assimilação em lote, leia o [guia do desenvolvedor de assimilação em lote](../batch-ingestion/api-overview.md).
 
 ## Apêndice {#appendix}
 
@@ -329,7 +329,7 @@ GET /export/batches/{BATCH_ID}/meta?path=row_errors
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `{BATCH_ID}` | A variável `id` valor do lote do qual você está recuperando informações de erro. |
+| `{BATCH_ID}` | O valor `id` do lote do qual você está recuperando informações de erro. |
 
 **Solicitação**
 
@@ -374,7 +374,7 @@ Uma resposta bem-sucedida retorna uma lista dos arquivos com erros.
 }
 ```
 
-Você pode recuperar informações detalhadas sobre os erros usando o [endpoint de recuperação de diagnóstico](#retrieve-diagnostics).
+Você pode recuperar informações detalhadas sobre os erros usando o [ponto de extremidade de recuperação de diagnóstico](#retrieve-diagnostics).
 
 Uma resposta de amostra da recuperação do arquivo de erro pode ser vista abaixo:
 

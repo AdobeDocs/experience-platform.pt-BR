@@ -7,24 +7,24 @@ exl-id: ec806ee5-ed65-4148-9dbe-e297d9e8cd73
 source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
 source-wordcount: '440'
-ht-degree: 5%
+ht-degree: 12%
 
 ---
 
-# [!UICONTROL Ambiente] tipo de dados
+# Tipo de dados de [!UICONTROL Ambiente]
 
 [!UICONTROL Ambiente] é um tipo de dados XDM padrão que descreve o ambiente ao redor de um evento observado, detalhando especificamente informações transitórias, como versões de rede e software.
 
 >[!IMPORTANT]
 >
->Todos os valores devem estar alinhados com o [DeviceAtlas](https://deviceatlas.com) banco de dados, licenciado pelo Adobe.
+>Todos os valores devem estar alinhados com o banco de dados do [DeviceAtlas](https://deviceatlas.com), licenciado pelo Adobe.
 
 <img src="../images/data-types/environment.png" width="400" /><br />
 
 | Propriedade | Tipo de dados | Descrição |
 | --- | --- | --- |
 | `_dc` | Objeto | Um objeto que contém um único campo, `language`, que indica o idioma do ambiente para representar as preferências linguísticas, geográficas ou culturais do usuário para a apresentação de dados. Os idiomas são especificados no código de idioma conforme definido em [IETF RFC 3066](https://www.ietf.org/rfc/rfc3066.txt). |
-| `browserDetails` | [Detalhes do navegador](./browser-details.md) | Descreve os detalhes específicos do navegador do ambiente, como nome do navegador, versão, versão do JavaScript, sequência de agente do usuário e linguagem de aceitação. |
+| `browserDetails` | [Detalhes do navegador](./browser-details.md) | Descreve os detalhes específicos do navegador do ambiente, como nome do navegador, versão, versão do JavaScript, sequência de agente do usuário e idioma. |
 | `ISP` | String | O nome do provedor de serviços de Internet do usuário. |
 | `carrier` | String | O nome da operadora de rede móvel ou MNO (também conhecido como provedor de serviços sem fio, operadora sem fio, empresa de celular ou operadora de rede móvel) que vende e fornece serviços de comunicação ao usuário. |
 | `colorDepth` | Número inteiro | O número de bits usados para cada componente de cor de um único pixel. |
@@ -32,10 +32,10 @@ ht-degree: 5%
 | `domain` | String | O domínio do ISP do usuário. |
 | `ipV4` | String | O rótulo numérico atribuído a um dispositivo que participa de uma rede de computadores que usa o Internet Protocol para comunicação (32 bits). |
 | `ipV6` | String | O rótulo numérico atribuído a um dispositivo que participa de uma rede de computadores que usa o protocolo da Internet para comunicação (128 bits). |
-| `operatingSystem` | String | O nome do sistema operacional usado quando a observação foi feita. O atributo não deve conter informações de versão, como `10.5.3`, mas contêm designações de &quot;edição&quot;, como `Ultimate` ou `Professional`. |
+| `operatingSystem` | String | O nome do sistema operacional usado quando a observação foi feita. O atributo não deve conter nenhuma informação de versão como `10.5.3`, mas sim designações de &quot;edição&quot; como `Ultimate` ou `Professional`. |
 | `operatingSystemVendor` | String | O nome do fornecedor do sistema operacional usado quando a observação foi feita. |
 | `operatingSystemVersion` | String | O identificador de versão completa do sistema operacional usado quando a observação foi feita. As versões geralmente são compostas numericamente, mas podem estar em um formato definido pelo fornecedor. |
-| `type` | String | O tipo de ambiente de aplicativo. Consulte a [apêndice](#type) para obter os valores aceitos. |
+| `type` | String | O tipo de ambiente de aplicativo. Consulte o [apêndice](#type) para ver os valores aceitos. |
 | `viewportHeight` | Número inteiro | O tamanho vertical em pixels da janela em que a experiência foi exibida. Para um evento de visualização da Web, essa é a altura da janela de visualização do navegador. |
 | `viewPortWidth` | Número inteiro | O tamanho horizontal em pixels da janela em que a experiência foi exibida. Para um evento de visualização da Web, essa é a largura da janela de visualização do navegador. |
 
@@ -48,11 +48,11 @@ Para obter mais detalhes sobre o tipo de dados, consulte o repositório XDM púb
 
 ## Apêndice
 
-A seção a seguir contém informações adicionais sobre o [!UICONTROL Dispositivo] tipo de dados.
+A seção a seguir contém informações adicionais sobre o tipo de dados [!UICONTROL Dispositivo].
 
 ## Valores aceitos para o tipo {#type}
 
-A tabela a seguir descreve os valores aceitos para `type` e significados associados:
+A tabela a seguir descreve os valores aceitos para `type` e seus significados associados:
 
 | Valor | Descrição |
 | --- | --- |

@@ -4,7 +4,7 @@ description: Saiba mais sobre o Adobe Media Analytics (3.x SDK) para a extensão
 exl-id: 7289d57d-7e7f-4832-9469-3b5a62183a32
 source-git-commit: e21ed1e9fd0c2678551cfc664b611076c198a157
 workflow-type: tm+mt
-source-wordcount: '752'
+source-wordcount: '707'
 ht-degree: 94%
 
 ---
@@ -47,9 +47,9 @@ Depois de incluir todas as três extensões mencionadas acima em seu projeto com
 | Application Version | A versão do aplicativo do reprodutor de vídeo/SDK |
 | Nome do reprodutor | Nome do reprodutor de vídeo em uso (por exemplo, &quot;AVPlayer&quot;, &quot;HTML5 Player&quot;, &quot;My Custom VideoPlayer&quot;) |
 | Canal | Propriedade do nome do canal |
-| Debug Logging | Ativar ou desativar registro |
+| Debug Logging | Habilitar ou desabilitar registro |
 | Enable SSL | Ativar ou desativar o envio de pings em HTTPS |
-| Export APIs to Window Object | Ativar ou desativar a exportação de APIs do Media Analytics para o escopo global |
+| Export APIs to Window Object | Habilitar ou desabilitar a exportação de APIs do Media Analytics para o escopo global |
 | Variable Name | Uma variável usada para exportar as APIs do Media Analytics sob o objeto `window` |
 
 **Lembrete**: a extensão do MA exige as extensões do [Analytics](../analytics/overview.md) e da [Experience Cloud ID](../id-service/overview.md). Você também deve adicionar essas extensões à propriedade da sua extensão e configurá-las.

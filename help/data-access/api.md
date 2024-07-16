@@ -13,9 +13,9 @@ ht-degree: 5%
 
 # Guia da API de acesso a dados
 
-A API de acesso a dados é compatível com o Adobe Experience Platform, fornecendo aos usuários uma interface RESTful com foco na descoberta e acessibilidade de conjuntos de dados assimilados no [!DNL Experience Platform].
+A API de Acesso a Dados dá suporte ao Adobe Experience Platform, fornecendo aos usuários uma interface RESTful com foco na descoberta e acessibilidade de conjuntos de dados assimilados no [!DNL Experience Platform].
 
-![Um diagrama de como o Acesso aos dados facilita a descoberta e a acessibilidade dos conjuntos de dados assimilados no Experience Platform.](images/Data_Access_Experience_Platform.png)
+![Um diagrama de como o Acesso a Dados facilita a descoberta e a acessibilidade dos conjuntos de dados assimilados no Experience Platform.](images/Data_Access_Experience_Platform.png)
 
 ## Referência da especificação da API
 
@@ -93,7 +93,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/
 }
 ```
 
-A variável `"data"` contém uma lista de todos os arquivos do lote especificado. Cada arquivo retornado tem seu próprio identificador exclusivo (`{FILE_ID}`) contido na `"dataSetFileId"` campo. Você pode usar esse identificador exclusivo para acessar ou baixar o arquivo.
+A matriz `"data"` contém uma lista de todos os arquivos dentro do lote especificado. Cada arquivo retornado tem sua própria ID exclusiva (`{FILE_ID}`) contida no campo `"dataSetFileId"`. Você pode usar esse identificador exclusivo para acessar ou baixar o arquivo.
 
 | Propriedade | Descrição |
 | -------- | ----------- |
@@ -102,7 +102,7 @@ A variável `"data"` contém uma lista de todos os arquivos do lote especificado
 
 ## Acessar e baixar arquivos em um lote
 
-Para acessar detalhes específicos de um arquivo, use um identificador de arquivo (`{FILE_ID}`) com a API de acesso a dados, incluindo o nome, tamanho em bytes e um link para baixar.
+Para acessar detalhes específicos de um arquivo, use um identificador de arquivo (`{FILE_ID}`) com a API de Acesso a Dados, incluindo seu nome, tamanho em bytes e um link para baixar.
 
 A resposta contém uma matriz de dados. Dependendo de o arquivo apontado pela ID ser um arquivo individual ou um diretório, a matriz de dados retornada pode conter uma única entrada ou uma lista de arquivos pertencentes a esse diretório. Cada elemento de arquivo inclui os detalhes do arquivo.
 
@@ -114,7 +114,7 @@ GET /files/{FILE_ID}
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `{FILE_ID}` | Equal to the `"dataSetFileId"`, a ID do arquivo a ser acessado. |
+| `{FILE_ID}` | Igual a `"dataSetFileId"`, a ID do arquivo a ser acessado. |
 
 **Solicitação**
 
@@ -154,7 +154,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID} \
 | `data.length` | O tamanho do arquivo (em bytes). |
 | `data._links.self.href` | O URL para baixar o arquivo. |
 
-**Resposta de diretório**
+**Resposta do diretório**
 
 ```JSON
 {
@@ -202,7 +202,7 @@ Quando um diretório é retornado, ele contém uma matriz de todos os arquivos d
 
 ## Acessar o conteúdo de um arquivo {#access-file-contents}
 
-Você também pode usar a variável [!DNL Data Access] API para acessar o conteúdo de um arquivo. Você pode baixar o conteúdo para uma fonte externa.
+Você também pode usar a API [!DNL Data Access] para acessar o conteúdo de um arquivo. Você pode baixar o conteúdo para uma fonte externa.
 
 **Formato da API**
 
@@ -239,4 +239,4 @@ Para obter amostras adicionais, consulte o [tutorial sobre acesso a dados](tutor
 
 ## Assinar eventos de assimilação de dados {#subscribe-to-data-ingestion-events}
 
-É possível assinar eventos específicos de alto valor por meio da [Console do Adobe Developer](https://developer.adobe.com/console/). Por exemplo, você pode assinar eventos de assimilação de dados para ser notificado de possíveis atrasos e falhas. Veja o tutorial sobre [assinatura de notificações de assimilação de dados](../ingestion/quality/subscribe-events.md) para obter mais informações.
+Você pode assinar eventos específicos de alto valor por meio da [Adobe Developer Console](https://developer.adobe.com/console/). Por exemplo, você pode assinar eventos de assimilação de dados para ser notificado de possíveis atrasos e falhas. Consulte o tutorial sobre [assinatura de notificações de assimilação de dados](../ingestion/quality/subscribe-events.md) para obter mais informações.

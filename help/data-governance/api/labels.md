@@ -14,19 +14,19 @@ ht-degree: 4%
 
 # Ponto de extremidade de rótulos
 
-Os rótulos de uso de dados permitem categorizar os dados de acordo com as políticas de uso que podem se aplicar a esses dados. A variável `/labels` endpoint na variável [!DNL Policy Service API] O permite gerenciar de forma programática os rótulos de uso de dados no aplicativo de experiência.
+Os rótulos de uso de dados permitem categorizar os dados de acordo com as políticas de uso que podem se aplicar a esses dados. O ponto de extremidade `/labels` no [!DNL Policy Service API] permite gerenciar de forma programática os rótulos de uso de dados no aplicativo de experiência.
 
 >[!NOTE]
 >
->A variável `/labels` O endpoint é usado apenas para recuperar, criar e atualizar rótulos de uso de dados. Para obter etapas sobre como adicionar rótulos a conjuntos de dados e campos usando chamadas de API, consulte o manual no [gerenciamento de rótulos de conjunto de dados](../labels/dataset-api.md).
+>O ponto de extremidade `/labels` é usado apenas para recuperar, criar e atualizar rótulos de uso de dados. Para obter etapas sobre como adicionar rótulos a conjuntos de dados e campos usando chamadas de API, consulte o manual em [gerenciando rótulos de conjuntos de dados](../labels/dataset-api.md).
 
 ## Introdução
 
-O endpoint da API usado neste guia faz parte da [[!DNL Policy Service API]](https://www.adobe.io/experience-platform-apis/references/policy-service/). Antes de continuar, reveja o [guia de introdução](getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre os cabeçalhos necessários para fazer chamadas com êxito para qualquer [!DNL Experience Platform] API.
+O ponto de extremidade de API usado neste guia faz parte de [[!DNL Policy Service API]](https://www.adobe.io/experience-platform-apis/references/policy-service/). Antes de continuar, consulte o [guia de introdução](getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre os cabeçalhos necessários para fazer chamadas com êxito para qualquer API do [!DNL Experience Platform].
 
 ## Recuperar uma lista de rótulos {#list}
 
-Você pode listar todos `core` ou `custom` GET rótulos fazendo uma solicitação para `/labels/core` ou `/labels/custom`, respectivamente.
+Você pode listar todos os rótulos de `core` ou `custom` fazendo uma solicitação GET para `/labels/core` ou `/labels/custom`, respectivamente.
 
 **Formato da API**
 
@@ -108,7 +108,7 @@ Uma resposta bem-sucedida retorna uma lista de rótulos personalizados recuperad
 
 ## Pesquisar um rótulo {#look-up}
 
-Você pode pesquisar um rótulo específico incluindo o respectivo `name` propriedade no caminho de uma solicitação GET para o [!DNL Policy Service] API.
+Você pode pesquisar um rótulo específico incluindo a propriedade `name` desse rótulo no caminho de uma solicitação GET para a API [!DNL Policy Service].
 
 **Formato da API**
 
@@ -119,7 +119,7 @@ GET /labels/custom/{LABEL_NAME}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{LABEL_NAME}` | A variável `name` propriedade do rótulo personalizado que você deseja pesquisar. |
+| `{LABEL_NAME}` | A propriedade `name` do rótulo personalizado que você deseja pesquisar. |
 
 **Solicitação**
 
@@ -162,7 +162,7 @@ Uma resposta bem-sucedida retorna os detalhes do rótulo personalizado.
 
 ## Criar ou atualizar um rótulo personalizado {#create-update}
 
-Para criar ou atualizar um rótulo personalizado, você deve fazer uma solicitação PUT para o [!DNL Policy Service] API.
+Para criar ou atualizar um rótulo personalizado, você deve fazer uma solicitação PUT para a API [!DNL Policy Service].
 
 **Formato da API**
 
@@ -172,11 +172,11 @@ PUT /labels/custom/{LABEL_NAME}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{LABEL_NAME}` | A variável `name` propriedade de um rótulo personalizado. Se não existir um rótulo personalizado com esse nome, um novo rótulo será criado. Se existir, esse rótulo será atualizado. |
+| `{LABEL_NAME}` | A propriedade `name` de um rótulo personalizado. Se não existir um rótulo personalizado com esse nome, um novo rótulo será criado. Se existir, esse rótulo será atualizado. |
 
 **Solicitação**
 
-A solicitação a seguir cria um novo rótulo, `L3`, que tem como objetivo descrever dados que contêm informações relacionadas aos planos de pagamento selecionados pelos clientes.
+A solicitação a seguir cria um novo rótulo, `L3`, com o objetivo de descrever dados que contêm informações relacionadas aos planos de pagamento selecionados dos clientes.
 
 ```shell
 curl -X PUT \
@@ -196,7 +196,7 @@ curl -X PUT \
 | Propriedade | Descrição |
 | --- | --- |
 | `name` | Um identificador de sequência de caracteres exclusivo para o rótulo. Esse valor é usado para fins de pesquisa e aplicação do rótulo a conjuntos de dados e campos, portanto, recomenda-se que seja curto e conciso. |
-| `category` | A categoria do rótulo. Embora seja possível criar suas próprias categorias para rótulos personalizados, é altamente recomendável usar `Custom` se desejar que o rótulo apareça na interface do usuário. |
+| `category` | A categoria do rótulo. Embora você possa criar suas próprias categorias para rótulos personalizados, é altamente recomendável usar `Custom` se quiser que o rótulo apareça na interface. |
 | `friendlyName` | Um nome amigável para o rótulo, usado para fins de exibição. |
 | `description` | (Opcional) Uma descrição do rótulo para fornecer mais contexto. |
 
@@ -228,4 +228,4 @@ Uma resposta bem-sucedida retorna os detalhes do rótulo personalizado, com o c�
 
 ## Próximas etapas
 
-Este guia abordou o uso do `/labels` ponto de extremidade na API do Serviço de política. Para obter etapas sobre como aplicar rótulos a conjuntos de dados e campos, consulte o [guia da API de rótulos de conjunto de dados](../labels/dataset-api.md).
+Este guia abordou o uso do ponto de extremidade `/labels` na API de Serviço de Política. Para obter etapas sobre como aplicar rótulos a conjuntos de dados e campos, consulte o [guia da API de rótulos de conjuntos de dados](../labels/dataset-api.md).

@@ -15,7 +15,7 @@ ht-degree: 58%
 
 # Guia Rede
 
-A variável **Rede** A guia agrega todas as chamadas da solução do Adobe Experience Cloud feitas na página e as exibe da esquerda para a direita. Os parâmetros padrão são identificados automaticamente com nomes familiares e organizados para agrupar parâmetros comuns na mesma função.
+A guia **Rede** agrega todas as chamadas de solução do Adobe Experience Cloud feitas na página e as exibe da esquerda para a direita. Os parâmetros padrão são identificados automaticamente com nomes familiares e organizados para agrupar parâmetros comuns na mesma função.
 
 ![](images/network.jpg)
 
@@ -39,6 +39,6 @@ Selecione em um item na exibição Rede para ter uma exibição expandida. Na ja
 
 ![](images/copy.jpg)-->
 
-Para limpar a lista, selecione **[!UICONTROL Remover eventos]**.
+Para limpar a lista, selecione **[!UICONTROL Remover Eventos]**.
 
 Para baixar um arquivo do Excel que contém as informações nesta tela, selecione **[!UICONTROL Baixar]**.

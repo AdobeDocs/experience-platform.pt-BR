@@ -27,7 +27,7 @@ As extensões determinam os elementos que estão disponíveis ao construir propr
 
 Use os links na parte superior da lista de extensões para exibir as extensões instaladas, o catálogo de extensões ou as atualizações.
 
-Selecione uma extensão e depois selecione [!UICONTROL Configurar] para ver e alterar as configurações da extensão. Para obter mais informações, consulte a seção sobre [adicionar uma nova extensão](#add-a-new-extension) para obter informações sobre opções de extensão.
+Selecione uma extensão e depois selecione [!UICONTROL Configurar] para ver e alterar as configurações da extensão. Para obter mais informações, consulte a seção em [adicionando uma nova extensão](#add-a-new-extension) para obter informações sobre opções de extensão.
 
 >[!IMPORTANT]
 >
@@ -66,7 +66,7 @@ As tags são altamente extensíveis. Extensões adicionam funcionalidade importa
 1. Na página de visão geral de uma propriedade, abra a guia **[!UICONTROL Extensões]**.
 1. Selecione uma extensão.
 
-   ![Guia Catálogo mostrando as extensões principais na guia Extensões.](../../../images/extensions.png)
+   ![Guia Catálogo mostrando as principais extensões na guia Extensões.](../../../images/extensions.png)
 
    * Se a extensão existir, selecione-a no catálogo de extensões.
    * Passe o mouse sobre uma extensão na lista para configurá-la ou desabilitá-la.

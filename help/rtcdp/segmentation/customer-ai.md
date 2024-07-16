@@ -6,7 +6,7 @@ exl-id: 40210196-3c02-4d82-8692-628f2a46b3b5
 source-git-commit: 2704184446f7945c744e7e2d2a8c3cda3fc12527
 workflow-type: tm+mt
 source-wordcount: '305'
-ht-degree: 6%
+ht-degree: 0%
 
 ---
 
@@ -23,14 +23,14 @@ Com a ajuda de fatores influentes, a IA do cliente pode informar o que um client
 * Aprimoramento dos perfis do cliente com fatores influentes para pontuações de propensão.
 * Criar públicos-alvo de clientes com base em fatores influentes e pontuações de propensão.
 
-A IA do cliente está localizada na **[!UICONTROL Serviços]** em **[!UICONTROL Serviços da Adobe]**.
+A IA do cliente está localizada na guia **[!UICONTROL Serviços]** em **[!UICONTROL Serviços da Adobe]**.
 
 ![Local da IA do cliente](../assets/overview/rtcdp-customer-ai.png)
 
 ## Introdução à IA do cliente
 
-Para começar a usar a IA do cliente, é necessário seguir o [tutorial de preparação de dados](../../intelligent-services/data-preparation.md) e configure o schema de entrada com base no seu caso de uso. Em seguida, será necessário [configurar uma instância da IA do cliente](../../intelligent-services/customer-ai/user-guide/configure.md). Após configurar uma instância, um modelo é gerado, onde você pode [exibir seus insights e pontuações](../../intelligent-services/customer-ai/user-guide/discover-insights.md). Usando os dados gerados a partir do seu modelo, você pode criar públicos-alvo para a ativação orientada por dados.
+Para começar a usar a IA do cliente, você precisa seguir o [tutorial de preparação de dados](../../intelligent-services/data-preparation.md) e configurar o esquema de entrada com base no seu caso de uso. Em seguida, será necessário [configurar uma instância da IA do cliente](../../intelligent-services/customer-ai/user-guide/configure.md). Após configurar uma instância, é gerado um modelo em que você pode [exibir seus insights e pontuações](../../intelligent-services/customer-ai/user-guide/discover-insights.md). Usando os dados gerados a partir do seu modelo, você pode criar públicos-alvo para a ativação orientada por dados.
 
-Para saber mais sobre a IA do cliente, comece visitando o [Visão geral do Customer AI](../../intelligent-services/customer-ai/overview.md). Além disso, o vídeo a seguir mostra como o Customer AI enriquece os perfis do cliente com propensões baseadas em IA e capacita os esforços de segmentação e direcionamento do cliente.
+Para saber mais sobre a IA do cliente, comece visitando a [Visão geral da IA do cliente](../../intelligent-services/customer-ai/overview.md). Além disso, o vídeo a seguir mostra como o Customer AI enriquece os perfis do cliente com propensões baseadas em IA e capacita os esforços de segmentação e direcionamento do cliente.
 
 >[!VIDEO](https://video.tv.adobe.com/v/40374/?quality=12&learn=on)

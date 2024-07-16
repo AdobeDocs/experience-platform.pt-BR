@@ -10,25 +10,25 @@ ht-degree: 3%
 
 ---
 
-# Atualizar especificações de fluxo usando o [!DNL Flow Service] API
+# Atualizar especificações de fluxo usando a API [!DNL Flow Service]
 
 >[!NOTE]
 >
->O SDK de transmissão de fontes de autoatendimento está na versão beta. Leia as [visão geral das origens](../../home.md#terms-and-conditions) para obter mais informações sobre o uso de fontes rotuladas como beta.
+>O SDK de transmissão de fontes de autoatendimento está na versão beta. Leia a [visão geral das fontes](../../home.md#terms-and-conditions) para obter mais informações sobre o uso de fontes com rótulo beta.
 
 Depois de gerar uma nova ID de especificação de conexão, você deve adicionar essa ID a uma especificação de fluxo para criar um fluxo de dados.
 
-As especificações de fluxo contêm informações que definem um fluxo, incluindo as IDs de conexão de origem e de destino que ele suporta, as especificações de transformação que precisam ser aplicadas aos dados e os parâmetros de programação necessários para gerar um fluxo. É possível editar as especificações de fluxo usando a `/flowSpecs` terminal.
+As especificações de fluxo contêm informações que definem um fluxo, incluindo as IDs de conexão de origem e de destino que ele suporta, as especificações de transformação que precisam ser aplicadas aos dados e os parâmetros de programação necessários para gerar um fluxo. Você pode editar as especificações do fluxo usando o ponto de extremidade `/flowSpecs`.
 
-O documento a seguir fornece etapas sobre como recuperar e atualizar especificações de fluxo usando o [!DNL Flow Service] API para fontes de autoatendimento (SDK de transmissão).
+O documento a seguir fornece etapas sobre como recuperar e atualizar especificações de fluxo usando a API [!DNL Flow Service] para Fontes de Autoatendimento (SDK de Streaming).
 
 ## Introdução
 
-Antes de continuar, reveja o [guia de introdução](./getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre os cabeçalhos necessários para fazer chamadas com êxito para qualquer API de Experience Platform.
+Antes de continuar, consulte o [guia de introdução](./getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre os cabeçalhos necessários para fazer chamadas para qualquer API Experience Platform com êxito.
 
 ## Pesquisar uma especificação de fluxo {#lookup}
 
-Fontes criadas com o `generic-streaming` todos os modelos usam o `GenericStreamingAEP` especificação de fluxo. Essa especificação de fluxo pode ser recuperada fazendo uma solicitação GET ao `/flowSpecs/` terminal, e fornecendo a `flowSpec.id` de `e77fde5a-22a8-11ed-861d-0242ac120002`.
+Fontes criadas com o modelo `generic-streaming` usam a especificação de fluxo `GenericStreamingAEP`. Esta especificação de fluxo pode ser recuperada fazendo uma solicitação GET para o ponto de extremidade `/flowSpecs/` e fornecendo o `flowSpec.id` de `e77fde5a-22a8-11ed-861d-0242ac120002`.
 
 **Formato da API**
 
@@ -38,7 +38,7 @@ GET /flowSpecs/e77fde5a-22a8-11ed-861d-0242ac120002
 
 **Solicitação**
 
-A solicitação a seguir recupera o `e77fde5a-22a8-11ed-861d-0242ac120002` especificação de fluxo.
+A solicitação a seguir recupera a especificação de fluxo `e77fde5a-22a8-11ed-861d-0242ac120002`.
 
 ```shell
 curl -X GET \
@@ -154,7 +154,7 @@ Você pode atualizar os campos de uma especificação de fluxo por meio de uma o
 
 >[!IMPORTANT]
 >
->Ao criar uma especificação de conexão para uma nova origem, você deve adicionar sua ID de especificação à `sourceConnectionSpecIds` matriz das especificações de fluxo que correspondem à sua origem. Isso garante que a nova origem seja suportada por uma especificação de fluxo existente, permitindo que você conclua o processo de criação do fluxo de dados com a nova origem.
+>Ao criar uma especificação de conexão para uma nova origem, você deve adicionar sua ID de especificação à matriz `sourceConnectionSpecIds` das especificações de fluxo que correspondem à origem. Isso garante que a nova origem seja suportada por uma especificação de fluxo existente, permitindo que você conclua o processo de criação do fluxo de dados com a nova origem.
 
 **Formato da API**
 
@@ -368,4 +368,4 @@ Uma resposta bem-sucedida retorna os detalhes da especificação de fluxo consul
 
 ## Próximas etapas
 
-Com a nova especificação de conexão adicionada à especificação de fluxo apropriada, você pode prosseguir com o teste e o envio da nova origem. Consulte o guia sobre [teste e envio de uma nova fonte](./submit.md) para obter mais informações.
+Com a nova especificação de conexão adicionada à especificação de fluxo apropriada, você pode prosseguir com o teste e o envio da nova origem. Consulte o manual sobre [teste e envio de uma nova fonte](./submit.md) para obter mais informações.

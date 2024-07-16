@@ -4,7 +4,7 @@ description: Saiba como descontinuar campos do Experience Data Model (XDM) usand
 exl-id: f4c5f58a-5190-47d7-8bfc-b33ed238bf25
 source-git-commit: 4fa98df9dcc296ba7cb141cb22df116524a0eb0c
 workflow-type: tm+mt
-source-wordcount: '699'
+source-wordcount: '695'
 ht-degree: 0%
 
 ---
@@ -17,21 +17,21 @@ Como os campos obsoletos estão ocultos da interface do usuário por padrão, is
 
 >[!NOTE]
 >
->Antes de os dados serem assimilados em um esquema, você pode remover grupos de campos desnecessários. Consulte a documentação em [como remover um grupo de campos de um esquema](../ui/resources/schemas.md#remove-fields) para obter mais informações.
+>Antes de os dados serem assimilados em um esquema, você pode remover grupos de campos desnecessários. Consulte a documentação sobre [como remover um grupo de campos de um esquema](../ui/resources/schemas.md#remove-fields) para obter mais informações.
 
-Depois que os dados tiverem sido assimilados em seu esquema, você não poderá mais remover campos do esquema sem fazer alterações irrelevantes. Nesse caso, é possível descontinuar um campo indesejado em um esquema ou recurso personalizado usando o [Editor de esquema](./create-schema-ui.md) ou o [API do registro de esquema](https://developer.adobe.com/experience-platform-apis/references/schema-registry/).
+Depois que os dados tiverem sido assimilados em seu esquema, você não poderá mais remover campos do esquema sem fazer alterações irrelevantes. Nesse caso, você pode descontinuar um campo indesejado em um esquema ou recurso personalizado usando o [Editor de esquemas](./create-schema-ui.md) ou a [API do Registro de esquemas](https://developer.adobe.com/experience-platform-apis/references/schema-registry/).
 
-Este documento aborda como descontinuar campos para diferentes recursos XDM usando o Editor de esquemas na interface do usuário do Experience Platform. Para obter etapas sobre como descontinuar um campo XDM usando a API, consulte o tutorial em [substituição de um campo XDM usando a API do registro de esquema](./field-deprecation-api.md).
+Este documento aborda como descontinuar campos para diferentes recursos XDM usando o Editor de esquemas na interface do usuário do Experience Platform. Para obter etapas sobre como descontinuar um campo XDM usando a API, consulte o tutorial em [como descontinuar um campo XDM usando a API do Registro de Esquema](./field-deprecation-api.md).
 
 ## Desativar um campo {#deprecate}
 
-Para descontinuar um campo personalizado, navegue até o Editor de esquemas do esquema que deseja editar. Selecione o campo que você deseja descontinuar do [!UICONTROL Estrutura] seção da tela, seguida por **[!UICONTROL Obsoleto]** do [!UICONTROL Propriedades do campo].
+Para descontinuar um campo personalizado, navegue até o Editor de esquemas do esquema que deseja editar. Selecione o campo que você deseja descontinuar da seção [!UICONTROL Estrutura] da tela, seguido por **[!UICONTROL Descontinuar]** das [!UICONTROL Propriedades do Campo].
 
-![O Editor de esquemas com um campo selecionado e Desativar realçado.](../images/tutorials/field-deprecation/deprecate-single-field.png)
+![O editor de esquemas com um campo selecionado e Desaprovado realçado.](../images/tutorials/field-deprecation/deprecate-single-field.png)
 
-Uma caixa de diálogo é exibida para confirmar suas escolhas e notificá-lo de que o campo será removido da visualização da interface do esquema de união e ocultado das interfaces downstream. Para concluir a ação, selecione **[!UICONTROL Confirmar o]**.
+Uma caixa de diálogo é exibida para confirmar suas escolhas e notificá-lo de que o campo será removido da visualização da interface do esquema de união e ocultado das interfaces downstream. Para concluir a ação, selecione **[!UICONTROL Confirmar]**.
 
-![A caixa de diálogo Desativar campo com a opção Confirmar realçada.](../images/tutorials/field-deprecation/deprecate-field-dialog.png)
+![A caixa de diálogo Desativar campo com Confirmar realçada.](../images/tutorials/field-deprecation/deprecate-field-dialog.png)
 
 O campo agora é removido da visualização da interface do usuário.
 
@@ -41,24 +41,24 @@ O campo agora é removido da visualização da interface do usuário.
 
 ## Mostrar campos obsoletos {#show-deprecated}
 
-Para exibir campos obsoletos anteriormente, navegue até o esquema relevante no Editor de esquemas. Selecione o **[!UICONTROL Mostrar campos obsoletos]** caixa de seleção na caixa [!UICONTROL Composição] seção da tela.
+Para exibir campos obsoletos anteriormente, navegue até o esquema relevante no Editor de esquemas. Marque a caixa de seleção **[!UICONTROL Mostrar campos obsoletos]** na seção [!UICONTROL Composição] da tela.
 
-O campo obsoleto agora aparece na visualização da interface do usuário. Selecionar **[!UICONTROL Salvar]** para confirmar as configurações.
+O campo obsoleto agora aparece na visualização da interface do usuário. Selecione **[!UICONTROL Salvar]** para confirmar suas configurações.
 
 ![O Editor de esquemas com um campo selecionado, Mostrar campos obsoletos e Salvar realçado.](../images/tutorials/field-deprecation/show-deprecated-fields.png)
 
 ## Reativar campos {#undeprecate-fields}
 
-Para desfazer um campo obsoleto, primeiro [exibir o campo obsoleto](#show-deprecated) conforme descrito acima, selecione o campo descontinuado no painel do editor [!UICONTROL Estrutura] seção. Em seguida, selecione **[!UICONTROL Reativar]** do [!UICONTROL Propriedades do campo] barra lateral seguida por **[!UICONTROL Salvar]**.
+Para desfazer um campo obsoleto, primeiro [exiba o campo obsoleto](#show-deprecated) conforme descrito acima, e depois selecione o campo obsoleto na seção [!UICONTROL Estrutura] do editor. Em seguida, selecione **[!UICONTROL Descontinuar]** na barra lateral [!UICONTROL Propriedades do campo], seguido de **[!UICONTROL Salvar]**.
 
-![O Editor de esquemas com o campo obsoleto, Reativar e Salvar realçado.](../images/tutorials/field-deprecation/undeprecate-single-field.png)
+![O Editor de Esquemas com o campo obsoleto, Reativar e Salvar está realçado.](../images/tutorials/field-deprecation/undeprecate-single-field.png)
 
-A variável [!UICONTROL Reativar campo] será exibida. Para confirmar as alterações, selecione **[!UICONTROL Confirmar o]**.
+A caixa de diálogo [!UICONTROL Reativar campo] é exibida. Para confirmar as alterações, selecione **[!UICONTROL Confirmar]**.
 
-![A variável [!UICONTROL Reativar campo] caixa de diálogo com a opção Confirmar realçada.](../images/tutorials/field-deprecation/undeprecate-field-dialog.png)
+![A caixa de diálogo [!UICONTROL Reativar campo] com Confirmação realçada.](../images/tutorials/field-deprecation/undeprecate-field-dialog.png)
 
 O campo agora é exibido como padrão na visualização da interface do usuário e também nas interfaces downstream. Novamente, agora há a opção de descontinuar o campo.
 
 ## Próximas etapas
 
-Este documento abordou como descontinuar campos XDM usando a interface do Editor de esquemas. Para obter mais informações sobre a configuração de campos para recursos personalizados, consulte o guia em [definição de campos XDM na API](./custom-fields-api.md). Para obter mais informações sobre o gerenciamento de descritores, consulte [guia de endpoint de descritores](../api/descriptors.md).
+Este documento abordou como descontinuar campos XDM usando a interface do Editor de esquemas. Para obter mais informações sobre como configurar campos para recursos personalizados, consulte o manual em [definindo campos XDM na API](./custom-fields-api.md). Para obter mais informações sobre o gerenciamento de descritores, consulte o [manual de ponto de extremidade de descritores](../api/descriptors.md).

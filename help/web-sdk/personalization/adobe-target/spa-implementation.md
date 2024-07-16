@@ -6,7 +6,7 @@ exl-id: cc48c375-36b9-433e-b45f-60e6c6ea4883
 source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
 source-wordcount: '1817'
-ht-degree: 7%
+ht-degree: 0%
 
 ---
 
@@ -19,7 +19,7 @@ Os sites tradicionais funcionavam em modelos de navegação &quot;página para p
 
 Aplicativos da Web modernos, como aplicativos de página única, adotaram um modelo que impulsiona o uso rápido da renderização da interface do usuário do navegador, que geralmente é independente dos recarregamentos de página. Essas experiências podem ser acionadas por interações do cliente, como rolagens, cliques e movimentos de cursor. À medida que os paradigmas da Web moderna evoluíram, a relevância dos eventos genéricos tradicionais, como um carregamento de página, para implantar a personalização e a experimentação não funciona mais.
 
-![Diagrama que mostra o ciclo de vida do SPA em comparação ao ciclo de vida tradicional da página.](assets/spa-vs-traditional-lifecycle.png)
+![Diagrama que mostra o ciclo de vida do SPA em comparação ao ciclo de vida da página tradicional.](assets/spa-vs-traditional-lifecycle.png)
 
 ## Benefícios do SDK da Web da plataforma para SPA
 
@@ -31,29 +31,29 @@ Estes são alguns benefícios de usar o SDK da Web da Adobe Experience Platform 
 
 ## Exibições XDM e aplicativos de página única
 
-O VEC do Adobe Target para SPA aproveita um conceito chamado Exibições: um grupo lógico de elementos visuais que juntos constituem uma experiência com o SPA. Um aplicativo de página única pode, portanto, ser considerado como uma transição entre Exibições, em vez de URLs, com base nas interações do usuário. Uma Exibição geralmente pode representar um site inteiro ou elementos visuais agrupados dentro de um site.
+O VEC do Adobe Target para SPA aproveita um conceito chamado Exibições: um grupo lógico de elementos visuais que juntos constituem uma experiência com o SPA. Um aplicativo de página única pode, portanto, ser considerado como uma transição entre Exibições, em vez de URLs, com base nas interações do usuário. Uma Exibição geralmente pode representar um site inteiro ou elementos visuais agrupados em um site.
 
 Para explicar melhor o que são Exibições, o exemplo a seguir usa um site de comércio eletrônico online hipotético implementado no React para explorar Exibições de exemplo.
 
 Depois de navegar para o site inicial, uma imagem principal promove uma venda de Páscoa e os produtos mais recentes disponíveis no site. Nesse caso, uma Exibição pode ser definida para toda a tela inicial. Essa Exibição pode simplesmente ser chamada de &quot;inicial&quot;.
 
-![Imagem de amostra de um aplicativo de página única em uma janela do navegador.](assets/example-views.png)
+![Imagem de exemplo de um aplicativo de página única em uma janela do navegador.](assets/example-views.png)
 
-À medida que o cliente se torna mais interessado nos produtos que a empresa está vendendo, ele decide clicar no botão **Produtos** link. Assim como o site inicial, a totalidade do site de produtos pode ser definida como uma Exibição. Essa Exibição pode se chamar &quot;products-all&quot;.
+À medida que o cliente se torna mais interessado nos produtos que a empresa está vendendo, ele decide clicar no link **Produtos**. Assim como o site inicial, a totalidade do site de produtos pode ser definida como uma Exibição. Essa Exibição pode se chamar &quot;products-all&quot;.
 
-![Imagem de amostra de um aplicativo de página única em uma janela do navegador, com todos os produtos exibidos.](assets/example-products-all.png)
+![Imagem de exemplo de um aplicativo de página única em uma janela de navegador, com todos os produtos exibidos.](assets/example-products-all.png)
 
 Como uma Exibição pode ser definida como um site inteiro ou um grupo de elementos visuais em um site, os quatro produtos mostrados no site de produtos podem ser agrupados e considerados como uma Exibição. Essa exibição pode se chamar &quot;produtos&quot;.
 
-![Imagem de amostra de um aplicativo de página única em uma janela do navegador, com exemplos de produtos exibidos.](assets/example-products.png)
+![Imagem de exemplo de um aplicativo de página única em uma janela de navegador, com produtos de exemplo exibidos.](assets/example-products.png)
 
-Quando o cliente decidir clicar no link **Carregar mais** botão para explorar mais produtos no site, o URL do site não muda nesse caso, mas uma Exibição pode ser criada aqui para representar apenas a segunda linha de produtos mostrados. O nome da exibição pode ser &quot;products-page-2&quot;.
+Quando o cliente decide clicar no botão **Carregar Mais** para explorar mais produtos no site, a URL do site não muda nesse caso, mas uma Exibição pode ser criada aqui para representar apenas a segunda linha de produtos mostrados. O nome da exibição pode ser &quot;products-page-2&quot;.
 
-![Imagem de amostra de um aplicativo de página única em uma janela do navegador, com exemplos de produtos exibidos em uma página adicional.](assets/example-load-more.png)
+![Imagem de exemplo de um aplicativo de página única em uma janela de navegador, com produtos de exemplo exibidos em uma página adicional.](assets/example-load-more.png)
 
 O cliente decide comprar alguns produtos do site e prossegue para a tela de finalização. No site de finalização da compra, o cliente recebe as opções de escolher a entrega normal ou a expressa. Uma Exibição pode ser qualquer grupo de elementos visuais em um site, portanto, uma Exibição pode ser criada para preferências de entrega e ser chamada de &quot;Preferências de Entrega&quot;.
 
-![Imagem de amostra de uma página de check-out de aplicativo de página única em uma janela do navegador.](assets/example-check-out.png)
+![Imagem de exemplo de uma página de check-out de aplicativo de página única em uma janela do navegador.](assets/example-check-out.png)
 
 O conceito de Exibições pode ser estendido muito além disso. Estes são apenas alguns exemplos de Exibições que podem ser definidas em um site.
 
@@ -61,9 +61,9 @@ O conceito de Exibições pode ser estendido muito além disso. Estes são apena
 
 As Exibições XDM podem ser aproveitadas no Adobe Target para capacitar os profissionais de marketing a executar testes A/B e XT no SPA por meio do Visual Experience Composer. Isso requer a execução das seguintes etapas para concluir uma configuração de desenvolvedor única:
 
-1. Instalar [Adobe Experience Platform Web SDK](/help/web-sdk/install/overview.md)
+1. Instalar o [Adobe Experience Platform Web SDK](/help/web-sdk/install/overview.md)
 2. Determine todas as Exibições XDM no aplicativo de página única que deseja personalizar.
-3. Após definir as Exibições XDM, para fornecer atividades AB ou XT do VEC, implemente a variável `sendEvent()` função com `renderDecisions` definir como `true` e a Exibição XDM correspondente no Aplicativo de página única. A Exibição do XDM deve ser passada `xdm.web.webPageDetails.viewName`. Essa etapa permite que os profissionais de marketing aproveitem o Visual Experience Composer para iniciar testes A/B e XT para esses XDMs.
+3. Após definir as Exibições XDM, para fornecer atividades AB ou XT do VEC, implemente a função `sendEvent()` com `renderDecisions` definida como `true` e a Exibição XDM correspondente no Aplicativo de página única. A Exibição XDM deve ser passada em `xdm.web.webPageDetails.viewName`. Essa etapa permite que os profissionais de marketing aproveitem o Visual Experience Composer para iniciar testes A/B e XT para esses XDMs.
 
    ```javascript
    alloy("sendEvent", { 
@@ -80,19 +80,19 @@ As Exibições XDM podem ser aproveitadas no Adobe Target para capacitar os prof
 
 >[!NOTE]
 >
->No primeiro `sendEvent()` chamada, todas as Exibições XDM que devem ser renderizadas para o usuário final serão buscadas e armazenadas em cache. Subsequente `sendEvent()` As chamadas com Exibições XDM transmitidas serão lidas do cache e renderizadas sem uma chamada de servidor.
+>Na primeira chamada `sendEvent()`, todas as Exibições XDM que devem ser renderizadas para o usuário final serão buscadas e armazenadas em cache. As chamadas `sendEvent()` subsequentes com Exibições XDM passadas serão lidas do cache e renderizadas sem uma chamada de servidor.
 
-## `sendEvent()` exemplos de função
+## Exemplos de função `sendEvent()`
 
-Esta seção descreve três exemplos mostrando como chamar a variável `sendEvent()` função no React para um SPA hipotético de comércio eletrônico.
+Esta seção descreve três exemplos mostrando como invocar a função `sendEvent()` no React para um SPA hipotético de comércio eletrônico.
 
 ### Exemplo 1: página inicial de teste A/B
 
 A equipe de marketing deseja executar testes A/B em toda a página inicial.
 
-![Imagem de amostra de um aplicativo de página única em uma janela do navegador.](assets/use-case-1.png)
+![Imagem de exemplo de um aplicativo de página única em uma janela do navegador.](assets/use-case-1.png)
 
-Para executar testes A/B em todo o site inicial, `sendEvent()` deve ser chamado com o XDM `viewName` definir como `home`:
+Para executar testes A/B em todo o site inicial, `sendEvent()` deve ser chamado com o XDM `viewName` definido como `home`:
 
 ```jsx
 function onViewChange() { 
@@ -132,9 +132,9 @@ history.listen(onViewChange);
 
 ### Exemplo 2: produtos personalizados
 
-A equipe de marketing deseja personalizar a segunda linha de produtos alterando a cor do rótulo de preço para vermelho depois que um usuário clicar **Carregar mais**.
+A equipe de marketing deseja personalizar a segunda linha de produtos alterando a cor do rótulo de preço para vermelho depois que um usuário clicar em **Carregar mais**.
 
-![Imagem de amostra de um aplicativo de página única em uma janela do navegador, mostrando ofertas personalizadas.](assets/use-case-2.png)
+![Imagem de exemplo de um aplicativo de página única em uma janela do navegador, mostrando ofertas personalizadas.](assets/use-case-2.png)
 
 ```jsx
 function onViewChange(viewName) { 
@@ -170,11 +170,11 @@ class Products extends Component {
 
 ### Exemplo 3: preferências de delivery do teste A/B
 
-A equipe de marketing deseja executar um teste A/B para ver se a cor do botão é alterada de azul para vermelho quando **Entrega expressa** for selecionado pode aumentar as conversões (em vez de manter a cor do botão azul para ambas as opções de delivery).
+A equipe de marketing deseja executar um teste A/B para ver se a alteração da cor do botão de azul para vermelho quando a **Entrega expressa** é selecionada pode aumentar as conversões (em vez de manter a cor do botão azul para ambas as opções de entrega).
 
-![Imagem de amostra de um aplicativo de página única em uma janela do navegador, com teste A/B.](assets/use-case-3.png)
+![Imagem de exemplo de um aplicativo de página única em uma janela de navegador, com teste A/B.](assets/use-case-3.png)
 
-Para personalizar o conteúdo no site, dependendo da preferência de entrega selecionada, uma Exibição pode ser criada para cada preferência de entrega. Quando **Entrega normal** for selecionada, a Exibição poderá ser chamada de &quot;checkout-normal&quot;. Se **Entrega expressa** for selecionada, a Exibição poderá ser chamada de &quot;checkout-express&quot;.
+Para personalizar o conteúdo no site, dependendo da preferência de entrega selecionada, uma Exibição pode ser criada para cada preferência de entrega. Quando **Entrega normal** é selecionada, a Exibição pode se chamar &quot;check-out-normal&quot;. Se a **Entrega expressa** estiver selecionada, a Exibição pode se chamar &quot;checkout-express&quot;.
 
 ```jsx
 function onViewChange(viewName) { 
@@ -217,21 +217,21 @@ class Checkout extends Component {
 
 ## Uso do Visual Experience Composer para SPA
 
-Quando terminar de definir suas Exibições XDM e implementar `sendEvent()` com essas Exibições XDM transmitidas, o VEC poderá detectar essas Exibições e permitir que os usuários criem ações e modificações para atividades A/B ou XT.
+Quando você terminar de definir suas Exibições XDM e implementar o `sendEvent()` com essas Exibições XDM transmitidas, o VEC poderá detectar essas Exibições e permitir que os usuários criem ações e modificações para atividades A/B ou XT.
 
 >[!NOTE]
 >
->Para usar o VEC para SPA, você deve instalar e ativar o [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) ou [Cromo](https://chrome.google.com/webstore/detail/adobe-target-vec-helper/ggjpideecfnbipkacplkhhaflkdjagak) Extensão do VEC Helper.
+>Para usar o VEC para SPA, você deve instalar e ativar o [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) ou a Extensão auxiliar do VEC do [Chrome](https://chrome.google.com/webstore/detail/adobe-target-vec-helper/ggjpideecfnbipkacplkhhaflkdjagak).
 
 ### Painel de modificações
 
 O painel Modificações captura as ações criadas para uma Exibição específica. Todas as ações para uma Exibição são agrupadas nessa Exibição.
 
-![O painel Modificações com opções de carregamento de página é exibido na barra lateral da janela do navegador.](assets/modifications-panel.png)
+![O painel Modificações com opções de carregamento de página mostradas na barra lateral da janela do navegador.](assets/modifications-panel.png)
 
 ### Ações
 
-Clique em uma ação para destacar o elemento no site onde esta ação será aplicada. Cada ação do VEC criada em uma Exibição tem os seguintes ícones: **Informações**, **Editar**, **Clonar**, **Mover**, e **Excluir**. Esses ícones são explicados com mais detalhes na tabela a seguir.
+Clicar em uma ação destaca o elemento no site onde esta ação será aplicada. Cada ação do VEC criada em uma Exibição tem os seguintes ícones: **Informações**, **Editar**, **Clonar**, **Mover** e **Excluir**. Esses ícones são explicados com mais detalhes na tabela a seguir.
 
 ![Ícones de ação](assets/action-icons.png)
 
@@ -239,8 +239,8 @@ Clique em uma ação para destacar o elemento no site onde esta ação será apl
 |---|---|
 | Informações | Exibe os detalhes da ação. |
 | Editar | Permite editar as propriedades da ação diretamente. |
-| Clonar | Clona a ação a uma ou mais Exibições que existem no painel Modificações ou a uma ou mais Exibições que você buscou e nas quais navegou no VEC. A ação não precisa existir necessariamente no painel Modificações.<br/><br/>**Nota:** Após a realização de uma operação de clonagem, é necessário navegar para a Exibição no VEC via Procurar para ver se a ação clonada foi uma operação válida. Se a ação não puder ser aplicada à Exibição, você verá um erro. |
-| Mover | Move a ação para um Evento de carregamento de página ou qualquer outra Exibição que já existe no painel de modificações.<br/><br/>**Evento de carregamento de página:** Qualquer ação correspondente ao evento de carregamento de página é aplicada no carregamento inicial da página no aplicativo da Web. <br/><br/>**Nota:** Depois que uma operação de movimentação é feita, você deve navegar para a Exibição no VEC via Procurar para ver se a movimentação foi uma operação válida. Se a ação não puder ser aplicada à Exibição, você verá um erro. |
+| Clonar | Clona a ação a uma ou mais Exibições que existem no painel Modificações ou a uma ou mais Exibições que você buscou e nas quais navegou no VEC. A ação não precisa existir necessariamente no painel Modificações.<br/><br/>**Observação:** após a realização de uma operação de clonagem, você deve navegar para o Modo de Exibição no VEC via Procurar para verificar se a ação clonada foi uma operação válida. Se a ação não puder ser aplicada à Exibição, você verá um erro. |
+| Mover | Move a ação para um Evento de carregamento de página ou qualquer outra Exibição que já existe no painel de modificações.<br/><br/>**Evento de carregamento de página:** qualquer ação correspondente ao evento de carregamento de página é aplicada no carregamento inicial da página no aplicativo da Web. <br/><br/>**Observação:** após a realização de uma operação de mover, você deve navegar para o Modo de Exibição no VEC via Procurar para ver se a movimentação foi uma operação válida. Se a ação não puder ser aplicada à Exibição, você verá um erro. |
 | Excluir | Exclui a ação. |
 
 ## Uso do VEC para exemplos de SPA
@@ -251,24 +251,24 @@ Esta seção descreve três exemplos para usar o Visual Experience Composer para
 
 Anteriormente neste documento, uma Exibição chamada &quot;página inicial&quot; foi definida para todo o site inicial. Agora, a equipe de marketing quer atualizar a visualização &quot;inicial&quot; das seguintes maneiras:
 
-* Altere o **Adicionar ao carrinho** e **Curtir** para uma parte mais clara de azul. Isso deve ocorrer durante o carregamento da página, pois envolve a alteração de componentes do cabeçalho.
-* Altere o **Produtos mais recentes de 2019** rótulo para **Produtos mais quentes para 2019** e altere a cor do texto para roxo.
+* Altere os botões **Adicionar ao carrinho** e **Curtir** para um compartilhamento mais claro de azul. Isso deve ocorrer durante o carregamento da página, pois envolve a alteração de componentes do cabeçalho.
+* Altere o rótulo **Produtos mais recentes de 2019** para **Produtos de teste simples para 2019** e altere a cor do texto para violeta.
 
 Para fazer essas atualizações no VEC, selecione **Compor** e aplique essas alterações à exibição &quot;inicial&quot;.
 
-![Página de exemplo do Visual Experience Composer.](assets/vec-home.png)
+![página de exemplo do Visual Experience Composer.](assets/vec-home.png)
 
 ### Exemplo 2: alterar rótulos de produto
 
-Para a visualização &quot;products-page-2&quot;, a equipe de marketing gostaria de alterar a **Preço** rótulo para **Preço de venda** e altere a cor do rótulo para vermelho.
+Para a Exibição &quot;products-page-2&quot;, a equipe de marketing gostaria de alterar o rótulo **Price** para **Sale Price** e alterar a cor do rótulo para vermelho.
 
 Para fazer essas atualizações no VEC, as seguintes etapas são necessárias:
 
-1. Selecionar **Procurar** no VEC.
-2. Selecionar **Produtos** na navegação superior do site.
-3. Selecionar **Carregar mais** uma vez para exibir a segunda linha de produtos.
-4. Selecionar **Compor** no VEC.
-5. Aplicar ações para alterar o rótulo de texto para **Preço de venda** e a cor para vermelho.
+1. Selecione **Procurar** no VEC.
+2. Selecione **Produtos** na navegação superior do site.
+3. Selecione **Carregar Mais** uma vez para exibir a segunda linha de produtos.
+4. Selecione **Compor** no VEC.
+5. Aplique ações para alterar o rótulo do texto para **Preço de Venda** e a cor para vermelho.
 
 ![Página de exemplo do Visual Experience Composer com rótulos de produto.](assets/vec-products-page-2.png)
 
@@ -278,16 +278,16 @@ As exibições podem ser definidas em nível granular, como um estado ou uma op�
 
 Para fazer essas atualizações no VEC, as seguintes etapas são necessárias:
 
-1. Selecionar **Procurar** no VEC.
+1. Selecione **Procurar** no VEC.
 2. Adicione produtos ao carrinho no site.
 3. Selecione o ícone do carrinho no canto superior direito do site.
-4. Selecionar **Confira o pedido**.
-5. Selecione o **Entrega expressa** botão de opção em **Preferências de entrega**.
-6. Selecionar **Compor** no VEC.
-7. Altere o **Pagamento** cor do botão para vermelho.
+4. Selecione **Checkout do pedido**.
+5. Selecione o botão de opção **Entrega expressa** em **Preferências de entrega**.
+6. Selecione **Compor** no VEC.
+7. Altere a cor do botão **Pagar** para vermelho.
 
 >[!NOTE]
 >
->A exibição &quot;checkout-express&quot; não aparece no painel Modificações até que a variável **Entrega expressa** botão de opção estiver selecionado. Isso ocorre porque a variável `sendEvent()` é executada quando a variável **Entrega expressa** O botão de opção está selecionado, portanto, o VEC não está ciente da Exibição &quot;checkout-express&quot; até que o botão de opção seja selecionado.
+>A Exibição &quot;checkout-express&quot; não aparece no painel Modificações até que o botão de opção **Entrega expressa** seja selecionado. Isso ocorre porque a função `sendEvent()` é executada quando o botão de opção **Entrega expressa** é selecionado. Portanto, o VEC não está ciente da Exibição &quot;checkout-express&quot; até que o botão de opção seja selecionado.
 
 ![Visual Experience Composer mostrando o seletor de preferências de entrega.](assets/vec-delivery-preference.png)

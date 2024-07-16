@@ -9,9 +9,9 @@ ht-degree: 9%
 
 ---
 
-# [!UICONTROL Categoria do produto] grupo de campos de esquema
+# Grupo de campos de esquema [!UICONTROL Categoria do produto]
 
-[!UICONTROL Categoria do produto] é um grupo de campos de esquema padrão para o [[!UICONTROL Produto] classe](../../classes/product.md) que captura propriedades relacionadas à categoria de um produto.
+A [!UICONTROL Categoria do Produto] é um grupo de campos de esquema padrão para a classe [[!UICONTROL Produto]](../../classes/product.md) que captura propriedades relacionadas à categoria de um produto.
 
 ![](../../images/field-groups/product/product-category.png)
 
@@ -24,4 +24,4 @@ ht-degree: 9%
 
 {style="table-layout:auto"}
 
-Para obter mais informações sobre o grupo de campos, consulte o [repositório XDM público](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/product/product-category.schema.json).
+Para obter mais detalhes sobre o grupo de campos, consulte o [repositório XDM público](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/product/product-category.schema.json).

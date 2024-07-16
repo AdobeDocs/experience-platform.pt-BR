@@ -1,24 +1,24 @@
 ---
 title: sendMediaEvent
 description: Saiba como usar o comando sendMediaEvent para rastrear sessões de mídia no SDK da Web.
-source-git-commit: 83d3de67e7680369dc890f58b16d9668058e221c
+exl-id: a38626fd-4810-40a0-8893-e98136634fac
+source-git-commit: 57d42d88ec9a93744450a2a352590ab57d9e5bb7
 workflow-type: tm+mt
 source-wordcount: '763'
 ht-degree: 0%
 
 ---
 
-
 # `sendMediaEvent`
 
-A variável `sendMediaEvent` faz parte do SDK da Web `streamingMedia` componente. Você pode usar esse componente para coletar dados relacionados a sessões de mídia no seu site. Consulte a `streamingMedia` [documentação](configure/streamingmedia.md) para saber como configurar esse componente.
+O comando `sendMediaEvent` faz parte do componente `streamingMedia` do SDK da Web. Você pode usar esse componente para coletar dados relacionados a sessões de mídia no seu site. Consulte a `streamingMedia` [documentação](configure/streamingmedia.md) para saber como configurar este componente.
 
-Use o `sendMediaEvent` comando para rastrear reproduções de mídia, pausas, conclusões, atualizações de estado do player e outros eventos relacionados.
+Use o comando `sendMediaEvent` para rastrear reprodução de mídia, pausas, conclusões, atualizações de estado do player e outros eventos relacionados.
 
 O SDK da Web pode lidar com eventos de mídia com base no tipo de rastreamento de sessão de mídia:
 
-* **Manipulação de eventos para sessões rastreadas automaticamente**. Nesse modo, não é necessário passar a variável `sessionID` ao evento de mídia ou ao valor do indicador de reprodução. O SDK da Web lidará com isso para você, com base na ID do player fornecida e na variável `getPlayerDetails` função de retorno de chamada fornecida ao iniciar a sessão de mídia.
-* **Manipulação de eventos para sessões rastreadas manualmente**. Nesse modo, você precisa passar a variável `sessionID` ao evento de mídia, juntamente com o valor do indicador de reprodução (valor inteiro). Você também pode transmitir os detalhes dos dados de Qualidade da experiência, se necessário.
+* **Manipulação de eventos para sessões rastreadas automaticamente**. Nesse modo, não é necessário passar o `sessionID` para o evento de mídia nem para o valor do indicador de reprodução. O SDK da Web lidará com isso para você, com base na ID do player fornecida e na função de retorno de chamada `getPlayerDetails` fornecida ao iniciar a sessão de mídia.
+* **Manipulação de eventos para sessões rastreadas manualmente**. Neste modo, você precisa passar o `sessionID` para o evento de mídia, juntamente com o valor do indicador de reprodução (valor inteiro). Você também pode transmitir os detalhes dos dados de Qualidade da experiência, se necessário.
 
 ## Lidar com eventos de mídia por tipo {#handle-by-type}
 
@@ -27,7 +27,7 @@ Selecione as guias abaixo para ver exemplos de manipulação de tipo de evento p
 
 ### Reproduzir {#play}
 
-A variável `media.play` o tipo de evento é usado para rastrear o início da reprodução de mídia. Esse evento deve ser enviado quando o reprodutor muda o estado para &quot;reproduzindo&quot; a partir de outro estado. Outros estados a partir dos quais o reprodutor passa para &quot;reproduzindo&quot; incluem &quot;buffering&quot;, a retomada do usuário de &quot;pausado&quot;, o reprodutor se recuperando de um erro ou reprodução automática.
+O tipo de evento `media.play` é usado para monitorar quando a reprodução de mídia começa. Esse evento deve ser enviado quando o reprodutor muda o estado para &quot;reproduzindo&quot; a partir de outro estado. Outros estados a partir dos quais o reprodutor passa para &quot;reproduzindo&quot; incluem &quot;buffering&quot;, a retomada do usuário de &quot;pausado&quot;, o reprodutor se recuperando de um erro ou reprodução automática.
 
 >[!BEGINTABS]
 
@@ -42,7 +42,7 @@ alloy("sendMediaEvent", {
 });
 ```
 
->[!TAB Rastreamento manual da sessão]
+>[!TAB Rastreamento manual de sessão]
 
 ```javascript
 sessionPromise.then(sessionID => {
@@ -61,9 +61,9 @@ sessionPromise.then(sessionID => {
 >[!ENDTABS]
 
 
-### Pausar {#pause}
+### Pause {#pause}
 
-A variável `media.pauseStart` O tipo de evento é usado para rastrear quando uma reprodução de mídia é pausada. Esse evento deve ser enviado quando o usuário pressionar **[!UICONTROL Pausar]**. Não há um tipo de evento de retomada. Um currículo é inferido quando você envia um `media.play` evento depois de um `media.pauseStart`.
+O tipo de evento `media.pauseStart` é usado para rastrear quando uma reprodução de mídia é pausada. Este evento deve ser enviado quando o usuário pressiona **[!UICONTROL Pause]**. Não há um tipo de evento de retomada. Uma retomada é inferida quando você envia um evento `media.play` após um `media.pauseStart`.
 
 >[!BEGINTABS]
 
@@ -78,7 +78,7 @@ alloy("sendMediaEvent", {
 });
 ```
 
->[!TAB Rastreamento manual da sessão]
+>[!TAB Rastreamento manual de sessão]
 
 ```javascript
 sessionPromise.then(sessionID => {
@@ -99,7 +99,7 @@ sessionPromise.then(sessionID => {
 
 ### Erro {#error}
 
-A variável `media.error` o tipo de evento é usado para rastrear quando ocorre um erro durante a reprodução da mídia. Esse evento deve ser enviado quando ocorrer um erro.
+O tipo de evento `media.error` é usado para monitorar quando ocorre um erro durante a reprodução de mídia. Esse evento deve ser enviado quando ocorrer um erro.
 
 >[!BEGINTABS]
 
@@ -120,7 +120,7 @@ alloy("sendMediaEvent", {
 });
 ```
 
->[!TAB Rastreamento manual da sessão]
+>[!TAB Rastreamento manual de sessão]
 
 ```javascript
 sessionPromise.then(sessionID => {
@@ -145,7 +145,7 @@ sessionPromise.then(sessionID => {
 
 ### Início de ad break {#ad-break-start}
 
-A variável `media.adBreakStart` o tipo de evento é usado para rastrear o início de um ad break. Esse evento deve ser enviado quando um ad break é iniciado.
+O tipo de evento `media.adBreakStart` é usado para rastrear o início de um ad break. Esse evento deve ser enviado quando um ad break é iniciado.
 
 >[!BEGINTABS]
 
@@ -167,7 +167,7 @@ alloy("sendMediaEvent", {
 });
 ```
 
->[!TAB Rastreamento manual da sessão]
+>[!TAB Rastreamento manual de sessão]
 
 ```javascript
 sessionPromise.then(sessionID => {
@@ -193,7 +193,7 @@ sessionPromise.then(sessionID => {
 
 ### Ad break concluído {#ad-break-complete}
 
-A variável `media.adBreakComplete` o tipo de evento é usado para rastrear quando um ad break é concluído. Esse evento deve ser enviado quando um ad break é concluído.
+O tipo de evento `media.adBreakComplete` é usado para monitorar quando um ad break é concluído. Esse evento deve ser enviado quando um ad break é concluído.
 
 >[!BEGINTABS]
 
@@ -208,7 +208,7 @@ alloy("sendMediaEvent", {
 });
 ```
 
->[!TAB Rastreamento manual da sessão]
+>[!TAB Rastreamento manual de sessão]
 
 ```javascript
 sessionPromise.then(sessionID => {
@@ -229,7 +229,7 @@ sessionPromise.then(sessionID => {
 
 ### Início do anúncio {#ad-start}
 
-A variável `media.adStart` O tipo de evento é usado para rastrear o início de um anúncio. Esse evento deve ser enviado quando um anúncio é iniciado.
+O tipo de evento `media.adStart` é usado para rastrear o início de um anúncio. Esse evento deve ser enviado quando um anúncio é iniciado.
 
 >[!BEGINTABS]
 
@@ -272,7 +272,7 @@ alloy("sendMediaEvent", {
 });
 ```
 
->[!TAB Rastreamento manual da sessão]
+>[!TAB Rastreamento manual de sessão]
 
 ```javascript
 sessionPromise.then(sessionID => {
@@ -319,7 +319,7 @@ sessionPromise.then(sessionID => {
 
 ### Anúncio concluído {#ad-complete}
 
-A variável `media.adComplete` tipo de evento é usado para rastrear quando um anúncio é concluído. Esse evento deve ser enviado quando um anúncio é concluído.
+O tipo de evento `media.adComplete` é usado para monitorar quando um anúncio é concluído. Esse evento deve ser enviado quando um anúncio é concluído.
 
 >[!BEGINTABS]
 
@@ -334,7 +334,7 @@ alloy("sendMediaEvent", {
 });
 ```
 
->[!TAB Rastreamento manual da sessão]
+>[!TAB Rastreamento manual de sessão]
 
 ```javascript
 sessionPromise.then(sessionID => {
@@ -355,7 +355,7 @@ sessionPromise.then(sessionID => {
 
 ### Ignorar anúncio {#ad-skip}
 
-A variável `media.adSkip` o tipo de evento é usado para rastrear quando um anúncio é ignorado. Esse evento deve ser enviado quando um anúncio é ignorado.
+O tipo de evento `media.adSkip` é usado para monitorar quando um anúncio é ignorado. Esse evento deve ser enviado quando um anúncio é ignorado.
 
 >[!BEGINTABS]
 
@@ -370,7 +370,7 @@ alloy("sendMediaEvent", {
 });
 ```
 
->[!TAB Rastreamento manual da sessão]
+>[!TAB Rastreamento manual de sessão]
 
 ```javascript
 sessionPromise.then(sessionID => {
@@ -391,7 +391,7 @@ sessionPromise.then(sessionID => {
 
 ### Início do capítulo {#chapter-start}
 
-A variável `media.chapterStart` o tipo de evento é usado para rastrear o início de um capítulo. Esse evento deve ser enviado quando um capítulo é iniciado.
+O tipo de evento `media.chapterStart` é usado para rastrear o início de um capítulo. Esse evento deve ser enviado quando um capítulo é iniciado.
 
 >[!BEGINTABS]
 
@@ -428,7 +428,7 @@ alloy("sendMediaEvent", {
 });
 ```
 
->[!TAB Rastreamento manual da sessão]
+>[!TAB Rastreamento manual de sessão]
 
 ```javascript
 sessionPromise.then(sessionID => {
@@ -469,7 +469,7 @@ sessionPromise.then(sessionID => {
 
 ### Capítulo concluído {#chapter-complete}
 
-A variável `media.chapterComplete` tipo de evento é usado para rastrear quando um capítulo é concluído. Esse evento deve ser enviado quando um capítulo é concluído.
+O tipo de evento `media.chapterComplete` é usado para rastrear quando um capítulo é concluído. Esse evento deve ser enviado quando um capítulo é concluído.
 
 >[!BEGINTABS]
 
@@ -484,7 +484,7 @@ alloy("sendMediaEvent", {
 });
 ```
 
->[!TAB Rastreamento manual da sessão]
+>[!TAB Rastreamento manual de sessão]
 
 ```javascript
 sessionPromise.then(sessionID => {
@@ -505,7 +505,7 @@ sessionPromise.then(sessionID => {
 
 ### Capítulo ignorado {#chapter-skip}
 
-A variável `media.chapterSkip` tipo de evento é usado para rastrear quando um capítulo é ignorado. Este evento deve ser enviado quando um capítulo é ignorado.
+O tipo de evento `media.chapterSkip` é usado para rastrear quando um capítulo é ignorado. Este evento deve ser enviado quando um capítulo é ignorado.
 
 >[!BEGINTABS]
 
@@ -520,7 +520,7 @@ alloy("sendMediaEvent", {
 });
 ```
 
->[!TAB Rastreamento manual da sessão]
+>[!TAB Rastreamento manual de sessão]
 
 ```javascript
 sessionPromise.then(sessionID => {
@@ -541,7 +541,7 @@ sessionPromise.then(sessionID => {
 
 ### Início do buffer {#buffer-start}
 
-A variável `media.bufferStart` o tipo de evento é usado para rastrear o início do buffering. Esse evento deve ser enviado quando o buffering é iniciado. Não há `bufferResume` tipo de evento. A `bufferResume` é inferido quando você envia um evento de reprodução após `bufferStart`.
+O tipo de evento `media.bufferStart` é usado para rastrear quando o buffering é iniciado. Esse evento deve ser enviado quando o buffering é iniciado. Não há um tipo de evento `bufferResume`. Um `bufferResume` é inferido quando você envia um evento de reprodução após `bufferStart`.
 
 >[!BEGINTABS]
 
@@ -556,7 +556,7 @@ alloy("sendMediaEvent", {
 });
 ```
 
->[!TAB Rastreamento manual da sessão]
+>[!TAB Rastreamento manual de sessão]
 
 ```javascript
 sessionPromise.then(sessionID => {
@@ -577,7 +577,7 @@ sessionPromise.then(sessionID => {
 
 ### Alteração da taxa de bits {#bitrate-change}
 
-A variável `media.bitrateChange` tipo de evento é usado para rastrear quando a taxa de bits muda. Esse evento deve ser enviado quando a taxa de bits for alterada.
+O tipo de evento `media.bitrateChange` é usado para monitorar quando a taxa de bits muda. Esse evento deve ser enviado quando a taxa de bits for alterada.
 
 >[!BEGINTABS]
 
@@ -600,7 +600,7 @@ alloy("sendMediaEvent", {
 });
 ```
 
->[!TAB Rastreamento manual da sessão]
+>[!TAB Rastreamento manual de sessão]
 
 ```javascript
 sessionPromise.then(sessionID => {
@@ -626,7 +626,7 @@ sessionPromise.then(sessionID => {
 
 ### Atualizações de estado {#state-updates}
 
-A variável `media.stateUpdate` o tipo de evento é usado para rastrear quando o estado do player é alterado. Esse evento deve ser enviado quando o estado do player for alterado.
+O tipo de evento `media.stateUpdate` é usado para rastrear quando o estado do player é alterado. Esse evento deve ser enviado quando o estado do player for alterado.
 
 >[!BEGINTABS]
 
@@ -653,7 +653,7 @@ alloy("sendMediaEvent", {
 });
 ```
 
->[!TAB Rastreamento manual da sessão]
+>[!TAB Rastreamento manual de sessão]
 
 ```javascript
 sessionPromise.then(sessionID => {
@@ -684,9 +684,9 @@ sessionPromise.then(sessionID => {
 
 ### Fim da sessão {#session-end}
 
-A variável `media.sessionEnd` O tipo de evento é usado para notificar o back-end do Media Analytics para fechar imediatamente a sessão quando o usuário abandona a visualização do conteúdo e é improvável que retorne.
+O tipo de evento `media.sessionEnd` é usado para notificar o back-end do Media Analytics para fechar imediatamente a sessão quando o usuário abandonar a visualização do conteúdo e for improvável que retorne.
 
-Se você não enviar um `sessionEnd` Uma sessão abandonada sofrerá tempo limite depois que nenhum evento for recebido por 10 minutos ou quando nenhum movimento do indicador de reprodução ocorrer por 30 minutos. A sessão é excluída automaticamente.
+Se você não enviar um evento `sessionEnd`, uma sessão abandonada sofrerá tempo limite depois que nenhum evento for recebido por 10 minutos ou quando nenhum movimento do indicador de reprodução ocorrer por 30 minutos. A sessão é excluída automaticamente.
 
 >[!BEGINTABS]
 
@@ -701,7 +701,7 @@ alloy("sendMediaEvent", {
 });
 ```
 
->[!TAB Rastreamento manual da sessão]
+>[!TAB Rastreamento manual de sessão]
 
 ```javascript
 sessionPromise.then(sessionID => {
@@ -722,7 +722,7 @@ sessionPromise.then(sessionID => {
 
 ### Sessão concluída {#session-complete}
 
-A variável `media.sessionComplete` O tipo de evento é usado para rastrear quando uma sessão de mídia é concluída. Esse evento deve ser enviado quando o fim do conteúdo principal é atingido.
+O tipo de evento `media.sessionComplete` é usado para monitorar quando uma sessão de mídia é concluída. Esse evento deve ser enviado quando o fim do conteúdo principal é atingido.
 
 >[!BEGINTABS]
 
@@ -737,7 +737,7 @@ alloy("sendMediaEvent", {
 });
 ```
 
->[!TAB Rastreamento manual da sessão]
+>[!TAB Rastreamento manual de sessão]
 
 ```javascript
 sessionPromise.then(sessionID => {
@@ -754,6 +754,3 @@ sessionPromise.then(sessionID => {
 ```
 
 >[!ENDTABS]
-
-
-

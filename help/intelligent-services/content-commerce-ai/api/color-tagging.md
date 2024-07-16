@@ -6,8 +6,8 @@ description: O serviço de Marcação de cores, quando recebe uma imagem, pode c
 exl-id: 6b3b6314-cb67-404f-888c-4832d041f5ed
 source-git-commit: fd8891bdc7d528e327d2a72c2427f7bbc6dc8a03
 workflow-type: tm+mt
-source-wordcount: '653'
-ht-degree: 6%
+source-wordcount: '662'
+ht-degree: 5%
 
 ---
 
@@ -23,7 +23,7 @@ Este método extrai um histograma de cores pela imagem inteira.
 
 Esse método usa um extrator de primeiro plano baseado em aprendizagem profunda para identificar objetos em primeiro plano. Depois que os objetos de primeiro plano são extraídos, um histograma é calculado sobre as cores dominantes para as regiões de primeiro plano e plano de fundo, juntamente com a imagem inteira.
 
-**Extração de tom**
+**Extração de tons**
 
 Além das variantes mencionadas acima, você pode configurar o serviço para recuperar um histograma de tons para:
 
@@ -83,7 +83,7 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 
 **Resposta - variante de imagem completa**
 
-Uma resposta bem-sucedida retorna os detalhes das cores extraídas. Cada cor é representada por um `feature_value` que contém as seguintes informações:
+Uma resposta bem-sucedida retorna os detalhes das cores extraídas. Cada cor é representada por uma chave `feature_value`, que contém as seguintes informações:
 
 - Um nome de cor
 - A porcentagem de exibição dessa cor em relação à imagem
@@ -161,7 +161,7 @@ Observe que o resultado aqui tem cores extraídas na região de imagem &quot;ger
 
 **Solicitação - variante de imagem mascarada**
 
-O exemplo de solicitação a seguir usa o método de mascaramento para a marcação de cores. Isso é ativado ao configurar o `enable_mask` parâmetro para `true` na solicitação.
+O exemplo de solicitação a seguir usa o método de mascaramento para a marcação de cores. Isso é habilitado ao configurar o parâmetro `enable_mask` como `true` na solicitação.
 
 ```SHELL
 curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
@@ -204,7 +204,7 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 
 >[!NOTE]
 >
->Além disso, a `retrieve_tone` também está definido como `true` no pedido acima. Isso nos permite recuperar um histograma de distribuição de tons quentes, neutros e frios nas regiões geral, de primeiro plano e plano de fundo da imagem.
+>Além disso, o parâmetro `retrieve_tone` também está definido como `true` na solicitação acima. Isso nos permite recuperar um histograma de distribuição de tons quentes, neutros e frios nas regiões geral, de primeiro plano e plano de fundo da imagem.
 
 **Resposta - variante de imagem mascarada**
 
@@ -360,18 +360,18 @@ Além das cores da imagem geral, agora também é possível ver as cores das reg
 
 | Nome | Tipo de dados | Obrigatório | Padrão | Valores | Descrição |
 | --- | --- | --- | --- | --- | --- |
-| `documents` | matriz (Document-Object) | Sim | - | Consulte abaixo | Lista de elementos JSON com cada item na lista representando um documento. |
-| `top_n` | number | Não | 0 | Inteiro não negativo | Número de resultados a serem retornados. 0, para retornar todos os resultados. Quando usado em conjunto com o limite, o número de resultados retornados será menor de ambos os limites. |
-| `min_coverage` | number | Não | 0.05 | Número real | Limite de cobertura acima do qual os resultados precisam ser retornados. Excluir parâmetro para retornar todos os resultados. |
-| `resize_image` | number | Não | Verdadeiro | Verdadeiro/falso | Se a imagem de entrada deve ser redimensionada ou não. Por padrão, as imagens são redimensionadas para 320*320 pixels antes da extração de cores. Para fins de depuração, também podemos permitir que o código seja executado na imagem completa, definindo isso como `False`. |
-| `enable_mask` | number | Não | Falso | Verdadeiro/falso | Ativa/desativa a extração de cores |
-| `retrieve_tone` | number | Não | Falso | Verdadeiro/falso | Ativa/desativa a extração de tons |
+| `documents` | matriz (Document-Object) | Sim | - | Veja abaixo | Lista de elementos JSON com cada item na lista representando um documento. |
+| `top_n` | número | Não | 0 | Inteiro não negativo | Número de resultados a serem retornados. 0, para retornar todos os resultados. Quando usado em conjunto com o limite, o número de resultados retornados será menor de ambos os limites. |
+| `min_coverage` | número | Não | 0,05 | Número real | Limite de cobertura acima do qual os resultados precisam ser retornados. Excluir parâmetro para retornar todos os resultados. |
+| `resize_image` | número | Não | Verdadeiro | Verdadeiro/falso | Se a imagem de entrada deve ser redimensionada ou não. Por padrão, as imagens são redimensionadas para 320*320 pixels antes da extração de cores. Para fins de depuração, também podemos permitir que o código seja executado na imagem completa, definindo isso como `False`. |
+| `enable_mask` | número | Não | Falso | Verdadeiro/falso | Ativa/desativa a extração de cores |
+| `retrieve_tone` | número | Não | Falso | Verdadeiro/falso | Ativa/desativa a extração de tons |
 
 **Objeto do documento**
 
 | Nome | Tipo de dados | Obrigatório | Padrão | Valores | Descrição |
 | -----| --------- | -------- | ------- | ------ | ----------- |
-| `repo:path` | string | - | - | - | URL pré-assinado do documento. |
-| `sensei:repoType` | string | - | - | HTTPS | Tipo de repositório onde a imagem está sendo armazenada. |
-| `sensei:multipart_field_name` | string | - | - | - | Use isso ao passar o arquivo de imagem como um argumento em várias partes, em vez de usar URLs pré-assinados. |
-| `dc:format` | string | Sim | - | &quot;image/jpg&quot;,<br>&quot;image/jpeg&quot;,<br>&quot;image/png&quot;,<br>&quot;image/tiff&quot; | A codificação de imagem é verificada em relação aos tipos de codificação de entrada permitidos antes de ser processada. |
+| `repo:path` | sequência de caracteres | - | - | - | URL pré-assinado do documento. |
+| `sensei:repoType` | sequência de caracteres | - | - | HTTPS | Tipo de repositório onde a imagem está sendo armazenada. |
+| `sensei:multipart_field_name` | sequência de caracteres | - | - | - | Use isso ao passar o arquivo de imagem como um argumento em várias partes, em vez de usar URLs pré-assinados. |
+| `dc:format` | sequência de caracteres | Sim | - | &quot;image/jpg&quot;,<br>&quot;image/jpeg&quot;,<br>&quot;image/png&quot;,<br>&quot;image/tiff&quot; | A codificação de imagem é verificada em relação aos tipos de codificação de entrada permitidos antes de ser processada. |

@@ -4,8 +4,8 @@ description: Saiba como registrar uma organização da Adobe Experience Cloud pa
 exl-id: ee36319d-5de8-462e-879b-311445cf334c
 source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '595'
-ht-degree: 92%
+source-wordcount: '573'
+ht-degree: 87%
 
 ---
 
@@ -41,9 +41,9 @@ Este programa é para empresas de consultoria que ajudam os clientes da Adobe a 
 >
 >Atualmente, seu email corporativo só pode ser usado em um programa de parceiro por vez. Portanto, será necessário usar um email corporativo diferente como contato registrado para cada um dos programas.
 
-Assim que sua empresa estiver no programa de parceiro do Exchange, você poderá solicitar acesso às soluções da Adobe fazendo logon no [site do parceiro do Exchange](https://partners.adobe.com/exchangeprogram/experiencecloud) e seguindo as etapas abaixo.
+Assim que sua empresa estiver no programa de parceiro do Exchange, você poderá solicitar acesso às Soluções Adobe fazendo logon no [Site do parceiro do Exchange](https://partners.adobe.com/exchangeprogram/experiencecloud) e seguindo as etapas abaixo.
 
-Se você tiver uma conta Experience Cloud que exija acesso à interface da Coleção de dados e à interface do Experience Platform, consulte a [guia de permissões da coleção de dados](../../../collection/permissions.md).
+Se você tiver uma conta Experience Cloud que exija acesso à interface da Coleção de dados e à interface do Experience Platform, consulte o [guia de permissões de coleta de dados](../../../collection/permissions.md).
 
 ## Para desenvolvedores independentes
 

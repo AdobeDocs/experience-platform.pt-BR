@@ -6,7 +6,7 @@ description: A fórmula Recommendations de produto permite que você forneça re
 exl-id: 508d55af-c33b-4f1d-b1b6-f00ed5d12bf9
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
-source-wordcount: '477'
+source-wordcount: '466'
 ht-degree: 3%
 
 ---
@@ -25,14 +25,14 @@ A fórmula Recommendations de produto usa aprendizagem de máquina para analisar
 
 ## Como começar?
 
-Você pode começar seguindo o tutorial do Adobe Experience Platform Lab (consulte o link Lab abaixo). Este tutorial mostrará como criar a fórmula do Recommendations do produto em um Jupyter Notebook seguindo as [bloco de anotações para receita](../jupyterlab/create-a-model.md) fluxo de trabalho e implementação da fórmula no [!DNL Experience Platform] [!DNL Data Science Workspace].
+Você pode começar seguindo o tutorial do Adobe Experience Platform Lab (consulte o link Lab abaixo). Este tutorial mostrará como criar a fórmula do Recommendations do Produto em um Bloco de Anotações do Jupyter seguindo o fluxo de trabalho [bloco de anotações para a fórmula](../jupyterlab/create-a-model.md) e implementando a fórmula em [!DNL Experience Platform] [!DNL Data Science Workspace].
 
-* [Laboratório: Preveja o futuro com o Espaço de trabalho de ciência de dados](https://expleague.azureedge.net/labs/L777/index.html)
+* [Laboratório: Preveja o futuro com o Data Science Workspace](https://expleague.azureedge.net/labs/L777/index.html)
 * [Recursos do laboratório](https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources)
 
 ## Esquema de dados
 
-Esta fórmula usa o modelo personalizado [Esquemas XDM](../../xdm/schema/field-dictionary.md) para modelar os dados de entrada e saída:
+Esta fórmula usa [esquemas XDM](../../xdm/schema/field-dictionary.md) personalizados para modelar os dados de entrada e saída:
 
 ### Esquema de dados de entrada
 

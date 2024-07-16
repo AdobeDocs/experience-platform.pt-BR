@@ -14,23 +14,23 @@ ht-degree: 1%
 
 # Ponto de extremidade de trabalhos de privacidade
 
-Este documento aborda como trabalhar com processos de privacidade usando chamadas de API. Mais especificamente, abrange a utilização dos `/job` endpoint na variável [!DNL Privacy Service] API. Antes de ler este guia, consulte o [guia de introdução](./getting-started.md) para obter informações importantes que você precisa saber para fazer chamadas com êxito para a API, incluindo cabeçalhos necessários e como ler chamadas de API de exemplo.
+Este documento aborda como trabalhar com processos de privacidade usando chamadas de API. Especificamente, ela abrange o uso do ponto de extremidade `/job` na API [!DNL Privacy Service]. Antes de ler este manual, consulte o [guia de introdução](./getting-started.md) para obter informações importantes que você precisa saber para fazer chamadas com êxito para a API, incluindo cabeçalhos necessários e como ler chamadas de exemplo de API.
 
 >[!NOTE]
 >
->Se estiver tentando gerenciar solicitações de consentimento ou recusa dos clientes, consulte o [manual de endpoint de consentimento](./consent.md).
+>Se você estiver tentando gerenciar solicitações de consentimento ou recusa de clientes, consulte o [manual de endpoint de consentimento](./consent.md).
 
 ## Listar todos os trabalhos {#list}
 
-Você pode exibir uma lista de todos os processos de privacidade disponíveis em sua organização fazendo uma solicitação de GET para a `/jobs` terminal.
+Você pode exibir uma lista de todos os trabalhos de privacidade disponíveis em sua organização fazendo uma solicitação GET para o ponto de extremidade `/jobs`.
 
 **Formato da API**
 
-Este formato de solicitação usa um `regulation` parâmetro de consulta no `/jobs` ponto de extremidade, portanto, começa com um ponto de interrogação (`?`) conforme mostrado abaixo. Ao listar recursos, a API de Privacy Service retorna até 1000 tarefas e pagina a resposta. Usar outros parâmetros de consulta (`page`, `size`e filtros de data) para filtrar a resposta. É possível separar vários parâmetros usando &quot;E&quot; comercial (`&`).
+Este formato de solicitação usa um parâmetro de consulta `regulation` no ponto de extremidade `/jobs`, portanto, começa com um ponto de interrogação (`?`), como mostrado abaixo. Ao listar recursos, a API de Privacy Service retorna até 1000 tarefas e pagina a resposta. Use outros parâmetros de consulta (`page`, `size` e filtros de data) para filtrar a resposta. Você pode separar vários parâmetros usando &quot;E&quot; comercial (`&`).
 
 >[!TIP]
 >
->Use parâmetros de consulta adicionais para filtrar ainda mais os resultados de consultas específicas. Por exemplo, você pode descobrir quantos trabalhos de privacidade foram enviados em um determinado período e qual status está usando o `status`, `fromDate`, e `toDate` parâmetros de consulta.
+>Use parâmetros de consulta adicionais para filtrar ainda mais os resultados de consultas específicas. Por exemplo, você pode descobrir quantos trabalhos de privacidade foram enviados em um determinado período e qual é o status usando os parâmetros de consulta `status`, `fromDate` e `toDate`.
 
 ```http
 GET /jobs?regulation={REGULATION}
@@ -42,12 +42,12 @@ GET /jobs?regulation={REGULATION}&fromDate={FROMDATE}&toDate={TODATE}&status={ST
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{REGULATION}` | O tipo de regulamento a ser consultado. Os valores aceitos incluem: <ul><li>`apa_aus`</li><li>`cpa_usa`</li><li>`cpra_usa`</li><li>`ctdpa_usa`</li><li>`gdpr` - Observação: isso também é usado para solicitações relacionadas a **ccpa** regulamentação.</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`mhmda_usa`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`ucpa_usa`</li><li>`vcdpa_usa`</li></ul><br>Consulte a visão geral em [regulamentos suportados](../regulations/overview.md) para obter mais informações sobre as regras de privacidade que os valores acima representam. |
+| `{REGULATION}` | O tipo de regulamento a ser consultado. Os valores aceitos incluem: <ul><li>`apa_aus`</li><li>`cpa_usa`</li><li>`cpra_usa`</li><li>`ctdpa_usa`</li><li>`gdpr` - Observação: isso também é usado para solicitações relacionadas a regulamentos **ccpa**.</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`mhmda_usa`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`ucpa_usa`</li><li>`vcdpa_usa`</li></ul><br>Consulte a visão geral em [regulamentos com suporte](../regulations/overview.md) para obter mais informações sobre os regulamentos de privacidade que os valores acima representam. |
 | `{PAGE}` | A página de dados a ser exibida, usando a numeração com base em 0. O padrão é `0`. |
 | `{SIZE}` | O número de resultados a serem exibidos em cada página. O padrão é `100` e o máximo é `1000`. Exceder o máximo faz com que a API retorne um erro de código 400. |
 | `{status}` | O comportamento padrão é incluir todos os status. Se você especificar um tipo de status, a solicitação retornará somente os processos de privacidade que correspondam a esse tipo de status. Os valores aceitos incluem: <ul><li>`processing`</li><li>`complete`</li><li>`error`</li></ul> |
-| `{toDate}` | Esse parâmetro limita os resultados aos processados antes de uma data especificada. A partir da data da solicitação, o sistema pode consultar 45 dias. No entanto, o intervalo não pode ser superior a 30 dias.<br>Ele aceita o formato AAAA-MM-DD. A data fornecida é interpretada como a data de encerramento expressa no Horário de Greenwich (GMT).<br>Se você não fornecer esse parâmetro (e uma variável `fromDate`), o comportamento padrão retorna tarefas cujos dados foram retornados nos últimos sete dias. Se você usar `toDate`, você também deve usar o `fromDate` parâmetro de consulta. Se você não usar ambos, a chamada retornará um erro 400. |
-| `{fromDate}` | Esse parâmetro limita os resultados aos processados após uma data especificada. A partir da data da solicitação, o sistema pode consultar 45 dias. No entanto, o intervalo não pode ser superior a 30 dias.<br>Ele aceita o formato AAAA-MM-DD. A data fornecida é interpretada como a data de origem da solicitação expressa na Hora Média de Greenwich (GMT).<br>Se você não fornecer esse parâmetro (e uma variável `toDate`), o comportamento padrão retorna tarefas cujos dados foram retornados nos últimos sete dias. Se você usar `fromDate`, você também deve usar o `toDate` parâmetro de consulta. Se você não usar ambos, a chamada retornará um erro 400. |
+| `{toDate}` | Esse parâmetro limita os resultados aos processados antes de uma data especificada. A partir da data da solicitação, o sistema pode consultar 45 dias. No entanto, o intervalo não pode ser superior a 30 dias.<br>Ele aceita o formato AAAA-MM-DD. A data fornecida é interpretada como a data de encerramento expressa no Horário de Greenwich (GMT).<br>Se você não fornecer esse parâmetro (e um `fromDate` correspondente), o comportamento padrão retornará trabalhos cujos dados foram retornados nos últimos sete dias. Se você usar `toDate`, também deverá usar o parâmetro de consulta `fromDate`. Se você não usar ambos, a chamada retornará um erro 400. |
+| `{fromDate}` | Esse parâmetro limita os resultados aos processados após uma data especificada. A partir da data da solicitação, o sistema pode consultar 45 dias. No entanto, o intervalo não pode ser superior a 30 dias.<br>Ele aceita o formato AAAA-MM-DD. A data fornecida é interpretada como a data de origem da solicitação expressa na Hora Média de Greenwich (GMT).<br>Se você não fornecer esse parâmetro (e um `toDate` correspondente), o comportamento padrão retornará trabalhos cujos dados foram retornados nos últimos sete dias. Se você usar `fromDate`, também deverá usar o parâmetro de consulta `toDate`. Se você não usar ambos, a chamada retornará um erro 400. |
 | `{filterDate}` | Esse parâmetro limita os resultados aos processados em uma data especificada. Ele aceita o formato AAAA-MM-DD. O sistema pode analisar os últimos 45 dias. |
 
 {style="table-layout:auto"}
@@ -70,11 +70,11 @@ curl -X GET \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna uma lista de tarefas, com cada tarefa contendo detalhes como `jobId`. Neste exemplo, a resposta conteria uma lista de 50 tarefas, começando na terceira página de resultados.
+Uma resposta bem-sucedida retorna uma lista de trabalhos, com cada trabalho contendo detalhes como `jobId`. Neste exemplo, a resposta conteria uma lista de 50 tarefas, começando na terceira página de resultados.
 
 ### Acesso às páginas subsequentes
 
-Para buscar o próximo conjunto de resultados em uma resposta paginada, você deve fazer outra chamada de API para o mesmo endpoint enquanto aumenta o `page` parâmetro de consulta por 1.
+Para buscar o próximo conjunto de resultados em uma resposta paginada, você deve fazer outra chamada de API para o mesmo endpoint enquanto aumenta o parâmetro de consulta `page` em 1.
 
 ## Criar um trabalho de privacidade {#create-job}
 
@@ -84,16 +84,16 @@ Para buscar o próximo conjunto de resultados em uma resposta paginada, você de
 >
 >Um limite rígido de upload diário está em vigor para ajudar a evitar o abuso do serviço. Os usuários que abusam do sistema terão o acesso ao serviço desativado. Uma reunião subsequente será realizada com eles para abordar suas ações e discutir o uso aceitável do Privacy Service.
 
-Antes de criar uma nova solicitação de emprego, primeiro você deve coletar informações de identificação sobre os titulares de dados cujos dados deseja acessar, excluir ou recusar a venda. Depois de obter os dados necessários, eles devem ser fornecidos na carga de uma solicitação POST para o `/jobs` terminal.
+Antes de criar uma nova solicitação de emprego, primeiro você deve coletar informações de identificação sobre os titulares de dados cujos dados deseja acessar, excluir ou recusar a venda. Depois que você tiver os dados necessários, eles deverão ser fornecidos na carga de uma solicitação POST para o ponto de extremidade `/jobs`.
 
 >[!NOTE]
 >
->Aplicativos compatíveis com o Adobe Experience Cloud usam valores diferentes para identificar titulares de dados. Consulte o guia sobre [aplicativos Privacy Service e Experience Cloud](../experience-cloud-apps.md) para obter mais informações sobre os identificadores necessários para seu(s) aplicativo(s). Para obter uma orientação mais geral sobre como determinar quais IDs enviar para o [!DNL Privacy Service], consulte o documento sobre [dados de identidade em solicitações de privacidade](../identity-data.md).
+>Aplicativos compatíveis com o Adobe Experience Cloud usam valores diferentes para identificar titulares de dados. Consulte o manual sobre [aplicativos de Privacy Service e Experience Cloud](../experience-cloud-apps.md) para obter mais informações sobre os identificadores necessários para seu(s) aplicativo(s). Para obter orientações mais gerais sobre como determinar quais IDs enviar para o [!DNL Privacy Service], consulte o documento sobre [dados de identidade em solicitações de privacidade](../identity-data.md).
 
-A variável [!DNL Privacy Service] A API oferece suporte a dois tipos de solicitações de trabalho para dados pessoais:
+A API [!DNL Privacy Service] oferece suporte a dois tipos de solicitações de trabalho para dados pessoais:
 
-* [Acessar e/ou excluir](#access-delete): Acesse (leia) ou exclua dados pessoais.
-* [Recusar venda](#opt-out): marque os dados pessoais como não serão vendidos.
+* [Acessar e/ou excluir](#access-delete): acessar (ler) ou excluir dados pessoais.
+* [Recusar venda](#opt-out): marque os dados pessoais como não vendidos.
 
 >[!IMPORTANT]
 >
@@ -172,13 +172,13 @@ curl -X POST \
 
 | Propriedade | Descrição |
 | --- | --- |
-| `companyContexts` **(Obrigatório)** | Uma matriz que contém informações de autenticação para sua organização. Cada identificador listado inclui os seguintes atributos: <ul><li>`namespace`: O namespace de um identificador.</li><li>`value`: O valor do identificador.</li></ul>É necessário **obrigatório** que um dos identificadores usa `imsOrgId` como seu `namespace`, com as suas `value` contendo o identificador exclusivo da organização. <br/><br/>Identificadores adicionais podem ser qualificadores de empresa específicos do produto (por exemplo, `Campaign`), que identificam uma integração com um aplicativo Adobe pertencente à sua organização. Os valores potenciais incluem nomes de conta, códigos de cliente, IDs de locatário ou outros identificadores de aplicativo. |
-| `users` **(Obrigatório)** | Uma matriz que contém uma coleção de pelo menos um usuário cujas informações você deseja acessar ou excluir. Um máximo de 1000 usuários pode ser fornecido em uma única solicitação. Cada objeto de usuário contém as seguintes informações: <ul><li>`key`: um identificador para um usuário que é usado para qualificar as IDs de trabalho separadas nos dados de resposta. É uma prática recomendada escolher uma string exclusiva e de fácil identificação para esse valor, para que ele possa ser facilmente referenciado ou pesquisado posteriormente.</li><li>`action`: uma matriz que lista as ações desejadas para tomar os dados do usuário. Dependendo das ações que você deseja realizar, esse array deve incluir `access`, `delete`, ou ambos.</li><li>`userIDs`: uma coleção de identidades para o usuário. O número de identidades que um único usuário pode ter é limitado a nove. Cada identidade consiste em um `namespace`, um `value`, e um qualificador de namespace (`type`). Consulte a [apêndice](appendix.md) para obter mais detalhes sobre essas propriedades obrigatórias.</li></ul> Para obter uma explicação mais detalhada sobre `users` e `userIDs`, consulte o [guia de solução de problemas](../troubleshooting-guide.md#user-ids). |
-| `include` **(Obrigatório)** | Uma matriz de produtos Adobe a serem incluídos no processamento. Se esse valor estiver ausente ou vazio, a solicitação será rejeitada. Inclua somente produtos com os quais sua organização tenha uma integração. Consulte a seção sobre [valores de produto aceitos](appendix.md) no apêndice para obter mais informações. |
-| `expandIDs` | Uma propriedade opcional que, quando definida como `true`, representa uma otimização para o processamento de IDs nos aplicativos (atualmente compatível apenas com o [!DNL Analytics]). Se omitido, esse valor assumirá como padrão `false`. |
+| `companyContexts` **(Obrigatório)** | Uma matriz que contém informações de autenticação para sua organização. Cada identificador listado inclui os seguintes atributos: <ul><li>`namespace`: O namespace de um identificador.</li><li>`value`: O valor do identificador.</li></ul>É **necessário** que um dos identificadores use `imsOrgId` como seu `namespace`, com seu `value` contendo a ID exclusiva para sua organização. <br/><br/>Os identificadores adicionais podem ser qualificadores de empresa específicos do produto (por exemplo, `Campaign`), que identificam uma integração com um aplicativo Adobe pertencente à sua organização. Os valores potenciais incluem nomes de conta, códigos de cliente, IDs de locatário ou outros identificadores de aplicativo. |
+| `users` **(Obrigatório)** | Uma matriz que contém uma coleção de pelo menos um usuário cujas informações você deseja acessar ou excluir. Um máximo de 1000 usuários pode ser fornecido em uma única solicitação. Cada objeto de usuário contém as seguintes informações: <ul><li>`key`: um identificador para um usuário que é usado para qualificar as IDs de trabalho separadas nos dados de resposta. É uma prática recomendada escolher uma string exclusiva e de fácil identificação para esse valor, para que ele possa ser facilmente referenciado ou pesquisado posteriormente.</li><li>`action`: uma matriz que lista as ações desejadas para realizar os dados do usuário. Dependendo das ações que você deseja realizar, esta matriz deve incluir `access`, `delete` ou ambos.</li><li>`userIDs`: uma coleção de identidades para o usuário. O número de identidades que um único usuário pode ter é limitado a nove. Cada identidade consiste em um `namespace`, um `value` e um qualificador de namespace (`type`). Consulte o [apêndice](appendix.md) para obter mais detalhes sobre essas propriedades necessárias.</li></ul> Para obter uma explicação mais detalhada de `users` e `userIDs`, consulte o [guia de solução de problemas](../troubleshooting-guide.md#user-ids). |
+| `include` **(Obrigatório)** | Uma matriz de produtos Adobe a serem incluídos no processamento. Se esse valor estiver ausente ou vazio, a solicitação será rejeitada. Inclua somente produtos com os quais sua organização tenha uma integração. Consulte a seção sobre [valores de produtos aceitos](appendix.md) no apêndice para obter mais informações. |
+| `expandIDs` | Uma propriedade opcional que, quando definida como `true`, representa uma otimização para o processamento de IDs nos aplicativos (atualmente apenas com suporte do [!DNL Analytics]). Se omitido, esse valor assumirá `false` como padrão. |
 | `priority` | Uma propriedade opcional usada pelo Adobe Analytics que define a prioridade para processar solicitações. Os valores aceitos são `normal` e `low`. Se `priority` for omitido, o comportamento padrão será `normal`. |
-| `mergePolicyId` | Ao fazer solicitações de privacidade para o Perfil do cliente em tempo real (`profileService`), você pode fornecer opcionalmente a ID do [política de mesclagem](../../profile/merge-policies/overview.md) que você deseja usar para a compilação de ID. Ao especificar uma política de mesclagem, as solicitações de privacidade podem incluir informações de público-alvo ao retornar dados sobre um cliente. Somente uma política de mesclagem pode ser especificada por solicitação. Se nenhuma política de mesclagem for fornecida, as informações de segmentação não serão incluídas na resposta. |
-| `regulation` **(Obrigatório)** | O regulamento para o trabalho de privacidade. Os seguintes valores são aceitos: <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpra_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`vcdpa_usa`</li></ul><br>Consulte a visão geral em [regulamentos suportados](../regulations/overview.md) para obter mais informações sobre as regras de privacidade que os valores acima representam. |
+| `mergePolicyId` | Ao fazer solicitações de privacidade para o Perfil de cliente em tempo real (`profileService`), você pode fornecer a ID da [política de mesclagem](../../profile/merge-policies/overview.md) específica que deseja usar para a compilação de ID. Ao especificar uma política de mesclagem, as solicitações de privacidade podem incluir informações de público-alvo ao retornar dados sobre um cliente. Somente uma política de mesclagem pode ser especificada por solicitação. Se nenhuma política de mesclagem for fornecida, as informações de segmentação não serão incluídas na resposta. |
+| `regulation` **(Obrigatório)** | O regulamento para o trabalho de privacidade. Os seguintes valores são aceitos: <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpra_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`vcdpa_usa`</li></ul><br>Consulte a visão geral em [regulamentos com suporte](../regulations/overview.md) para obter mais informações sobre os regulamentos de privacidade que os valores acima representam. |
 
 {style="table-layout:auto"}
 
@@ -234,11 +234,11 @@ Uma resposta bem-sucedida retorna os detalhes dos trabalhos recém-criados.
 
 {style="table-layout:auto"}
 
-Depois de submeter a solicitação de job com sucesso, você pode prosseguir para a próxima etapa do [verificação do status da tarefa](#check-status).
+Depois de enviar a solicitação de trabalho com êxito, você pode prosseguir para a próxima etapa de [verificação do status do trabalho](#check-status).
 
 ## Verificar o status de um trabalho {#check-status}
 
-É possível recuperar informações sobre um job específico, como seu status de processamento atual, incluindo o `jobId` no caminho de uma solicitação GET para o `/jobs` terminal.
+Você pode recuperar informações sobre um trabalho específico, como seu status de processamento atual, incluindo o `jobId` desse trabalho no caminho de uma solicitação GET para o ponto de extremidade `/jobs`.
 
 >[!IMPORTANT]
 >
@@ -252,13 +252,13 @@ GET /jobs/{JOB_ID}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{JOB_ID}` | A ID do trabalho que você deseja pesquisar. Essa ID é retornada em `jobId` em respostas bem-sucedidas da API para [criação de uma tarefa](#create-job) e [listando todos os trabalhos](#list). |
+| `{JOB_ID}` | A ID do trabalho que você deseja pesquisar. Esta ID é retornada em `jobId` em respostas de API bem-sucedidas para [criar um trabalho](#create-job) e [listar todos os trabalhos](#list). |
 
 {style="table-layout:auto"}
 
 **Solicitação**
 
-A solicitação a seguir recupera os detalhes do job cujo `jobId` é fornecido no caminho da solicitação.
+A solicitação a seguir recupera os detalhes do trabalho cujo `jobId` é fornecido no caminho da solicitação.
 
 ```shell
 curl -X GET \
@@ -344,13 +344,13 @@ Uma resposta bem-sucedida retorna os detalhes do trabalho especificado.
 
 | Propriedade | Descrição |
 | --- | --- |
-| `productStatusResponse` | Cada objeto dentro do `productResponses` contém informações sobre o status atual da tarefa em relação a um [!DNL Experience Cloud] aplicação. |
+| `productStatusResponse` | Cada objeto na matriz `productResponses` contém informações sobre o status atual do trabalho em relação a um aplicativo [!DNL Experience Cloud] específico. |
 | `productStatusResponse.status` | A categoria de status atual do trabalho. Consulte a tabela abaixo para obter uma lista de [categorias de status disponíveis](#status-categories) e seus significados correspondentes. |
 | `productStatusResponse.message` | O status específico do trabalho, correspondente à categoria de status. |
 | `productStatusResponse.responseMsgCode` | Um código padrão para mensagens de resposta do produto recebidas por [!DNL Privacy Service]. Os detalhes da mensagem são fornecidos em `responseMsgDetail`. |
 | `productStatusResponse.responseMsgDetail` | Uma explicação mais detalhada do status da tarefa. As mensagens para status semelhantes podem variar entre os produtos. |
-| `productStatusResponse.results` | Para certos status, alguns produtos podem retornar uma `results` objeto que fornece informações adicionais não abrangidas pelo `responseMsgDetail`. |
-| `downloadURL` | Se o status do job for `complete`, este atributo fornece um URL para baixar os resultados do processo como um arquivo ZIP. Esse arquivo está disponível para download por 60 dias após a conclusão do trabalho. |
+| `productStatusResponse.results` | Para certos status, alguns produtos podem retornar um objeto `results` que fornece informações adicionais não cobertas por `responseMsgDetail`. |
+| `downloadURL` | Se o status do trabalho for `complete`, esse atributo fornecerá uma URL para baixar os resultados do trabalho como um arquivo ZIP. Esse arquivo está disponível para download por 60 dias após a conclusão do trabalho. |
 
 {style="table-layout:auto"}
 
@@ -369,8 +369,8 @@ A tabela a seguir lista as diferentes categorias possíveis de status do cargo e
 
 >[!NOTE]
 >
->Uma tarefa enviada pode permanecer em um `processing` se tiver um trabalho filho dependente que ainda esteja em processamento.
+>Um trabalho enviado pode permanecer no estado `processing` se tiver um trabalho filho dependente que ainda esteja em processamento.
 
 ## Próximas etapas
 
-Agora você sabe como criar e monitorar processos de privacidade usando o [!DNL Privacy Service] API. Para obter informações sobre como executar as mesmas tarefas usando a interface, consulte [Visão geral da interface do Privacy Service](../ui/overview.md).
+Agora você sabe como criar e monitorar trabalhos de privacidade usando a API [!DNL Privacy Service]. Para obter informações sobre como executar as mesmas tarefas usando a interface do usuário, consulte a [visão geral da interface do usuário do Privacy Service](../ui/overview.md).

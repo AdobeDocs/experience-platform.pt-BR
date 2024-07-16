@@ -18,11 +18,11 @@ O envio de eventos de exibição melhora a precisão das métricas de personaliz
 O SDK da Web permite enviar eventos de exibição de duas maneiras:
 
 * [Automaticamente](#send-automatically), imediatamente após o conteúdo personalizado ser renderizado na página. Consulte a documentação sobre como [renderizar conteúdo personalizado](rendering-personalization-content.md) para obter mais informações.
-* [Manualmente](#send-sendEvent-calls), por meio de subsequentes `sendEvent` chamadas.
+* [Manualmente](#send-sendEvent-calls), por meio de `sendEvent` chamadas subsequentes.
 
 >[!NOTE]
 >
->Os eventos de exibição não são enviados automaticamente ao chamar o `applyPropositions` função.
+>Eventos de exibição não são enviados automaticamente ao chamar a função `applyPropositions`.
 
 ## Enviar eventos de exibição automaticamente {#send-automatically}
 
@@ -33,21 +33,21 @@ Para enviar eventos de exibição automaticamente depois que o conteúdo persona
 * `renderDecisions: true`
 * `personalization.sendDisplayNotifications: true` ou não especificado
 
-O SDK da Web envia os eventos de exibição imediatamente após qualquer personalização ser renderizada como resultado de um `sendEvent` chame.
+O SDK da Web envia os eventos de exibição imediatamente após qualquer personalização ser renderizada como resultado de uma chamada `sendEvent`.
 
 ## Enviar eventos de exibição em chamadas sendEvent subsequentes {#send-sendEvent-calls}
 
-Comparado a [automaticamente](#send-automatically) enviar eventos de exibição, ao incluí-los em eventos subsequentes `sendEvent` As chamadas do também têm a oportunidade de incluir mais informações sobre o carregamento de página na chamada do. Pode se tratar de informações adicionais, que não estavam disponíveis ao solicitar o conteúdo personalizado.
+Comparado ao envio [automático](#send-automatically) de eventos de exibição, ao incluí-los nas chamadas `sendEvent` subsequentes, você também terá a oportunidade de incluir mais informações sobre o carregamento da página na chamada. Pode se tratar de informações adicionais, que não estavam disponíveis ao solicitar o conteúdo personalizado.
 
-Além disso, o envio de eventos de exibição no `sendEvent` As chamadas do minimizam os erros de taxa de rejeição ao usar o Adobe Analytics.
+Além disso, o envio de eventos de exibição em chamadas `sendEvent` minimiza erros de taxa de devolução ao usar o Adobe Analytics.
 
 >[!IMPORTANT]
 >
->Ao usar apresentações renderizadas manualmente, os eventos de exibição só são compatíveis por meio de `sendEvent` chamadas. Nesse caso, não é possível enviar eventos de exibição automaticamente.
+>Ao usar apresentações renderizadas manualmente, os eventos de exibição só têm suporte por meio de chamadas `sendEvent`. Nesse caso, não é possível enviar eventos de exibição automaticamente.
 
 ### Enviar eventos de exibição para apresentações renderizadas automaticamente {#auto-rendered-propositions}
 
-Para enviar eventos de exibição para apresentações renderizadas automaticamente, você deve configurar os seguintes parâmetros no `sendEvent` ligue para:
+Para enviar eventos de exibição para apresentações renderizadas automaticamente, você deve configurar os seguintes parâmetros na chamada `sendEvent`:
 
 * `renderDecisions: true`
 * `personalization.sendDisplayNotifications: false` para o início da ocorrência da página
@@ -56,6 +56,6 @@ Para enviar os eventos de exibição, chame `sendEvent` com `personalization.inc
 
 ### Enviar eventos de exibição para apresentações renderizadas manualmente {#manually-rendered-propositions}
 
-Para enviar eventos de exibição para apresentações renderizadas manualmente, você deve incluí-los na `_experience.decisioning.propositions` Campo XDM, incluindo o `id`, `scope`, e `scopeDetails` nas apresentações.
+Para enviar eventos de exibição para propostas renderizadas manualmente, você deve incluí-los no campo XDM `_experience.decisioning.propositions`, incluindo os campos `id`, `scope` e `scopeDetails` das propostas.
 
-Além disso, defina o `include _experience.decisioning.propositionEventType.display` campo para `1`.
+Além disso, defina o campo `include _experience.decisioning.propositionEventType.display` como `1`.

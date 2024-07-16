@@ -6,7 +6,7 @@ description: O serviço de marcação de palavra-chave, quando recebe um documen
 exl-id: 56a2da96-5056-4702-9110-a1dfec56f0dc
 source-git-commit: 7c8c1d69f4c4e0a1374603d541b634ac7f64ab38
 workflow-type: tm+mt
-source-wordcount: '447'
+source-wordcount: '444'
 ht-degree: 6%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 6%
 
 Quando lhe é fornecido um documento de texto, o serviço de marcação de palavras-chave extrai automaticamente palavras-chave ou frases-chave que descrevem melhor o assunto do documento. Para extrair palavras-chave, uma combinação de algoritmos de reconhecimento de entidade nomeado (NER) e marcação de palavra-chave não supervisionada é usada.
 
-A tabela a seguir lista as entidades nomeadas que [!DNL Content Tagging] podem identificar:
+A tabela a seguir lista as entidades nomeadas que [!DNL Content Tagging] pode identificar:
 
 | Nome da entidade | Descrição |
 | --- | --- |
@@ -42,7 +42,7 @@ A solicitação a seguir extrai palavras-chave de um documento com base nos par�
 
 Consulte a tabela abaixo do exemplo de carga para obter mais informações sobre os parâmetros de entrada mostrados.
 
-Este [pdf de exemplo](../pdf-files/simple-text.pdf) arquivo foi usado no exemplo mostrado neste documento.
+Este arquivo pdf de [amostra](../pdf-files/simple-text.pdf) foi usado no exemplo mostrado neste documento.
 
 ```SHELL
 curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
@@ -101,14 +101,14 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 
 | Nome | Tipo de dados | Obrigatório | Padrão | Valores | Descrição |
 | -----| --------- | -------- | ------- | ------ | ----------- |
-| `repo:path` | string | - | - | - | URL pré-assinado do documento do qual as frases-chave serão extraídas. |
-| `sensei:repoType` | string | - | - | HTTPS | Tipo de repositório onde o documento está sendo armazenado. |
-| `sensei:multipart_field_name` | string | - | - | - | Use isso ao passar o documento como um argumento multiparte em vez de usar urls pré-assinados. |
-| `dc:format` | string | Sim | - | &quot;text/plain&quot;,<br>&quot;application/pdf&quot;,<br>&quot;text/pdf&quot;,<br>&quot;text/html&quot;,<br>&quot;text/rtf&quot;,<br>&quot;application/rtf&quot;,<br>&quot;application/msword&quot;,<br>&quot;application/vnd.openxmlformats-officedocument.wordprocessingml.document&quot;,<br>&quot;application/mspowerpoint&quot;,<br>&quot;application/vnd.ms-powerpoint&quot;,<br>&quot;application/vnd.openxmlformats-officedocument.presentationml.presentation&quot; | A codificação de documentos é verificada em relação aos tipos de codificação de entrada permitidos antes de ser processada. |
+| `repo:path` | sequência de caracteres | - | - | - | URL pré-assinado do documento do qual as frases-chave serão extraídas. |
+| `sensei:repoType` | sequência de caracteres | - | - | HTTPS | Tipo de repositório onde o documento está sendo armazenado. |
+| `sensei:multipart_field_name` | sequência de caracteres | - | - | - | Use isso ao passar o documento como um argumento multiparte em vez de usar urls pré-assinados. |
+| `dc:format` | sequência de caracteres | Sim | - | &quot;text/plain&quot;,<br>&quot;application/pdf&quot;,<br>&quot;text/pdf&quot;,<br>&quot;text/html&quot;,<br>&quot;text/rtf&quot;,<br>&quot;application/rtf&quot;,<br>&quot;application/msword&quot;,<br>&quot;application/vnd.openxmlformats-officedocument.wordprocessingml.document&quot;,<br>&quot;application/mspowerpoint&quot;,<br>&quot;application/vnd.ms-powerpoint&quot;,<br>&quot;application/vnd.openxmlformats-officedocument.presentationml.presentation&quot; | A codificação de documentos é verificada em relação aos tipos de codificação de entrada permitidos antes de ser processada. |
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna um objeto JSON que contém palavras-chave extraídas no `response` matriz.
+Uma resposta bem-sucedida retorna um objeto JSON contendo palavras-chave extraídas na matriz `response`.
 
 ```json
 {

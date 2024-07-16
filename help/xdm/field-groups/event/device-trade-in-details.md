@@ -15,11 +15,11 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->Os nomes de vários grupos de campos de esquema foram alterados. Consulte o documento sobre [atualizações do nome do grupo de campos](../name-updates.md) para obter mais informações.
+>Os nomes de vários grupos de campos de esquema foram alterados. Consulte o documento em [atualizações de nome de grupo de campos](../name-updates.md) para obter mais informações.
 
-[!UICONTROL Detalhes de troca do dispositivo] é um grupo de campos de esquema padrão para o [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md). Ele fornece um único campo (`deviceTradeInDetails`) que descreve uma transação de troca do dispositivo, incluindo valor de troca, ID do dispositivo original e ID do novo dispositivo.
+[!UICONTROL Detalhes de troca do dispositivo] é um grupo de campos de esquema padrão para a [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md). Ele fornece um único campo (`deviceTradeInDetails`) que descreve uma transação de troca do dispositivo, incluindo o valor de troca, a ID do dispositivo original e a ID do novo dispositivo.
 
-![Estrutura de detalhes de troca do dispositivo](../../images/field-groups/device-trade-in-details.png)
+![Estrutura de Detalhes de Troca de Dispositivo](../../images/field-groups/device-trade-in-details.png)
 
 | Propriedade | Tipo de dados | Descrição |
 | --- | --- | --- |

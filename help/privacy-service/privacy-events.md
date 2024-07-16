@@ -11,20 +11,20 @@ ht-degree: 2%
 
 ---
 
-# Assinar o [!DNL Privacy Service Events]
+# Assinar [!DNL Privacy Service Events]
 
-[!DNL Privacy Service Events] são mensagens fornecidas pelo Adobe Experience Platform [!DNL Privacy Service], que aproveitam os Adobe I/O Events enviados para um webhook configurado para facilitar a automação eficiente da solicitação de trabalho. Elas reduzem ou eliminam a necessidade de pesquisar o [!DNL Privacy Service] para verificar se um trabalho foi concluído ou se uma determinada etapa em um fluxo de trabalho foi atingida.
+[!DNL Privacy Service Events] são mensagens fornecidas pelo Adobe Experience Platform [!DNL Privacy Service], que aproveita os Adobe I/O Events enviados para um webhook configurado para facilitar a automação eficiente da solicitação de trabalho. Eles reduzem ou eliminam a necessidade de sondar a API [!DNL Privacy Service] para verificar se um trabalho foi concluído ou se uma determinada etapa em um fluxo de trabalho foi atingida.
 
 Atualmente, existem quatro tipos de notificações relacionadas ao ciclo de vida da solicitação de acesso a dados pessoais:
 
 | Tipo | Descrição |
 | --- | --- |
-| Trabalho concluído | Todos [!DNL Experience Cloud] os aplicativos foram relatados novamente e o status geral ou global do trabalho foi marcado como concluído. |
+| Trabalho concluído | Todos os aplicativos [!DNL Experience Cloud] foram reportados de volta e o status geral ou global do trabalho foi marcado como concluído. |
 | Erro de tarefa | Um ou mais aplicativos relataram um erro ao processar a solicitação. |
 | Produto completo | Um dos aplicativos associados a este trabalho concluiu seu trabalho. |
 | Erro de produto | Um dos aplicativos relatou um erro ao processar a solicitação. |
 
-Este documento fornece etapas para configurar um registro de evento para [!DNL Privacy Service] e como interpretar payloads de notificação.
+Este documento fornece etapas para configurar um registro de evento para [!DNL Privacy Service] notificações e como interpretar cargas de notificação.
 
 ## Introdução
 
@@ -33,19 +33,19 @@ Consulte a documentação do Privacy Service a seguir antes de iniciar este tuto
 * [Visão geral do Privacy Service](./home.md)
 * [Guia da API do Privacy Service](./api/overview.md)
 
-## Registrar um webhook no [!DNL Privacy Service Events]
+## Registrar um webhook em [!DNL Privacy Service Events]
 
-Para receber [!DNL Privacy Service Events], você deve usar o Console do Adobe Developer para registrar um webhook no [!DNL Privacy Service] integração.
+Para receber [!DNL Privacy Service Events], você deve usar o Adobe Developer Console para registrar um webhook na integração do [!DNL Privacy Service].
 
-Siga o tutorial em [assinatura de notificações do [!DNL I/O Event]](../observability/alerts/subscribe.md) para obter etapas detalhadas sobre como fazer isso. Certifique-se de escolher **[!UICONTROL Eventos Privacy Service]** como seu provedor de eventos para acessar os eventos listados acima.
+Siga o tutorial em [assinatura de notificações do [!DNL I/O Event]](../observability/alerts/subscribe.md) para obter etapas detalhadas sobre como fazer isso. Escolha **[!UICONTROL Privacy Service Events]** como seu provedor de eventos para acessar os eventos listados acima.
 
 ## Receber [!DNL Privacy Service Event] notificações
 
-Depois de registrar com êxito o webhook e os trabalhos de privacidade serem executados, você poderá começar a receber notificações de evento. Esses eventos podem ser exibidos usando o próprio webhook ou selecionando o **[!UICONTROL Rastreamento de depuração]** na visão geral do registro de eventos do seu projeto no Console do Adobe Developer.
+Depois de registrar com êxito o webhook e os trabalhos de privacidade serem executados, você poderá começar a receber notificações de evento. Esses eventos podem ser exibidos usando o próprio webhook ou selecionando a guia **[!UICONTROL Rastreamento de depuração]** na visão geral de registro de eventos do seu projeto no Adobe Developer Console.
 
 ![](images/privacy-events/debug-tracing.png)
 
-O seguinte JSON é um exemplo de um [!DNL Privacy Service Event] carga de notificação que será enviada para o seu webhook quando um dos aplicativos associados a um trabalho de privacidade tiver concluído o trabalho:
+O JSON a seguir é um exemplo de uma carga de notificação [!DNL Privacy Service Event] que será enviada para o seu webhook quando um dos aplicativos associados a um trabalho de privacidade tiver concluído o trabalho:
 
 ```json
 {
@@ -68,10 +68,10 @@ O seguinte JSON é um exemplo de um [!DNL Privacy Service Event] carga de notifi
 | Propriedade | Descrição |
 | --- | --- |
 | `id` | Uma ID exclusiva gerada pelo sistema para a notificação. |
-| `type` | O tipo de notificação que está sendo enviado, contextualizando as informações fornecidas em `data`. Os valores potenciais incluem: <ul><li>`com.adobe.platform.gdpr.jobcomplete`</li><li>`com.adobe.platform.gdpr.joberror`</li><li>`com.adobe.platform.gdpr.productcomplete`</li><li>`com.adobe.platform.gdpr.producterror`</li></ul> |
+| `type` | O tipo de notificação que está sendo enviada, fornecendo contexto às informações fornecidas em `data`. Os valores potenciais incluem: <ul><li>`com.adobe.platform.gdpr.jobcomplete`</li><li>`com.adobe.platform.gdpr.joberror`</li><li>`com.adobe.platform.gdpr.productcomplete`</li><li>`com.adobe.platform.gdpr.producterror`</li></ul> |
 | `time` | Um carimbo de data e hora de quando o evento ocorreu. |
-| `data.value` | Contém informações adicionais sobre o que acionou a notificação: <ul><li>`jobId`: a ID do trabalho de privacidade que acionou a notificação.</li><li>`message`: uma mensagem relacionada ao status específico do trabalho. Para `productcomplete` ou `producterror` notificações, esse campo indica o aplicativo Experience Cloud em questão.</li></ul> |
+| `data.value` | Contém informações adicionais sobre o que acionou a notificação: <ul><li>`jobId`: a ID do trabalho de privacidade que disparou a notificação.</li><li>`message`: uma mensagem relacionada ao status específico do trabalho. Para `productcomplete` ou `producterror` notificações, este campo indica o aplicativo Experience Cloud em questão.</li></ul> |
 
 ## Próximas etapas
 
-Este documento abordou como registrar eventos Privacy Service em um webhook configurado e como interpretar cargas de notificação. Para saber como rastrear processos de privacidade usando a interface, consulte [guia do usuário do Privacy Service](./ui/user-guide.md).
+Este documento abordou como registrar eventos Privacy Service em um webhook configurado e como interpretar cargas de notificação. Para saber como rastrear processos de privacidade usando a interface do usuário, consulte o [guia do usuário do Privacy Service](./ui/user-guide.md).

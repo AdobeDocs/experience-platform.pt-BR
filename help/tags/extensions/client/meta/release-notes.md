@@ -3,8 +3,8 @@ title: Notas de versão da extensão Meta Pixel
 description: As notas de versão mais recentes da extensão Meta Pixel no Adobe Experience Platform.
 source-git-commit: 8e447324e324c9770dcfa348df92c429454b06d6
 workflow-type: tm+mt
-source-wordcount: '131'
-ht-degree: 23%
+source-wordcount: '121'
+ht-degree: 22%
 
 ---
 

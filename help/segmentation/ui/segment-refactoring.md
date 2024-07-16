@@ -19,11 +19,11 @@ ht-degree: 9%
 
 A versão de janeiro de 2024 do Adobe Experience Platform introduziu alterações no Serviço de segmentação da Adobe Experience Platform que adicionam novas restrições, nas quais as restrições de tempo podem ser definidas. Essas alterações afetam os segmentos recém-criados ou editados que usam a interface do usuário do Construtor de segmentos. Este guia explica como atenuar essas alterações.
 
-Antes da versão de janeiro de 2024, todas as restrições de tempo no nível da regra, do grupo e da tela se referiam redundantemente ao mesmo carimbo de data e hora. Para esclarecer o uso da restrição de tempo, as restrições de tempo em nível de regra e de grupo foram removidas. Para acomodar essa alteração, todas as restrições de tempo **deve** ser regravada como **nível da tela** ou **nível de cartão** restrições de tempo.
+Antes da versão de janeiro de 2024, todas as restrições de tempo no nível da regra, do grupo e da tela se referiam redundantemente ao mesmo carimbo de data e hora. Para esclarecer o uso da restrição de tempo, as restrições de tempo em nível de regra e de grupo foram removidas. Para acomodar essa alteração, todas as restrições de tempo **devem** ser regravadas como **nível da tela** ou **nível do cartão** restrições de tempo.
 
-Anteriormente, um evento individual podia ter várias regras de restrição de tempo anexadas a ele. Com esta atualização recente, a tentativa de adicionar uma restrição de tempo a uma regra agora resultará em uma **erro**.
+Anteriormente, um evento individual podia ter várias regras de restrição de tempo anexadas a ele. Com esta atualização recente, tentar adicionar uma restrição de tempo a uma regra resultará em um **erro**.
 
-![A restrição de tempo em nível de regra é realçada. O erro que ocorrerá posteriormente também é destacado. ](../images/ui/segment-refactoring/rule-time-constraint.png)
+![A restrição de tempo em nível de regra está realçada. O erro que ocorrerá posteriormente também é destacado. ](../images/ui/segment-refactoring/rule-time-constraint.png)
 
 As restrições de tempo agora só podem ser aplicadas no nível da tela ou do cartão.
 
@@ -31,12 +31,12 @@ Ao aplicar uma restrição de tempo no nível da tela de desenho, ainda é poss�
 
 >[!NOTE]
 >
->Se só houver **um** na tela, a aplicação da restrição de tempo ao cartão é **equivalente** para aplicar a restrição de tempo no nível da tela.
+>Se houver apenas **um** cartão na tela, aplicar a restrição de tempo ao cartão será **equivalente** para aplicar a restrição de tempo no nível da tela.
 >
->Se houver **múltiplo** cartões na tela, a aplicação da restrição de tempo ao nível da tela aplicará essa restrição de tempo a **all** cartões na tela.
+>Se houver **vários** cartões na tela, aplicar a restrição de tempo ao nível da tela aplicará essa restrição de tempo a **todos** cartões na tela.
 
-![A restrição de tempo em nível de tela de desenho é realçada.](../images/ui/segment-refactoring/canvas-time-constraint.png)
+![A restrição de tempo em nível de tela está realçada.](../images/ui/segment-refactoring/canvas-time-constraint.png)
 
-Para aplicar uma restrição de tempo no nível do cartão, selecione o cartão específico ao qual deseja aplicar a restrição de tempo. A variável **[!UICONTROL Regras de evento]** container (contêiner) é exibido. Agora é possível selecionar a restrição de tempo que deseja aplicar ao cartão.
+Para aplicar uma restrição de tempo no nível do cartão, selecione o cartão específico ao qual deseja aplicar a restrição de tempo. O contêiner **[!UICONTROL Regras de evento]** aparece. Agora é possível selecionar a restrição de tempo que deseja aplicar ao cartão.
 
-![A restrição de tempo em nível de cartão é realçada.](../images/ui/segment-refactoring/card-time-constraint.png)
+![A restrição de tempo em nível de cartão está realçada.](../images/ui/segment-refactoring/card-time-constraint.png)

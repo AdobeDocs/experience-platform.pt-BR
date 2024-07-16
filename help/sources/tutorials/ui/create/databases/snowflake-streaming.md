@@ -3,43 +3,44 @@ title: Transmitir dados do banco de dados do Snowflake para o Experience Platfor
 type: Tutorial
 description: Saiba como transmitir dados do banco de dados do Snwoflake para o Experience Platform
 badgeUltimate: label="Ultimate" type="Positive"
-source-git-commit: c80535cbb5dda55f1cf145f9f40bbcd40c78e63e
+exl-id: 49d488f1-90d8-452a-9f3e-02afdcc79b09
+source-git-commit: 62bcaa532cdec68a2f4f62e5784c35b91b7d5743
 workflow-type: tm+mt
 source-wordcount: '1604'
 ht-degree: 3%
 
 ---
 
-# Transmita dados de seu [!DNL Snowflake] banco de dados para Experience Platform usando a interface
+# Transmitir dados do banco de dados [!DNL Snowflake] para o Experience Platform usando a interface
 
-Saiba como usar a interface do usuário do para transmitir dados de seu [!DNL Snowflake] banco de dados à Adobe Experience Platform seguindo este guia.
+Saiba como usar a interface de usuário para transmitir dados do banco de dados do [!DNL Snowflake] para o Adobe Experience Platform seguindo este guia.
 
 ## Introdução
 
 Este tutorial requer um entendimento prático dos seguintes componentes do Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): o quadro normalizado pelo qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
-   * [Noções básicas da composição do esquema](../../../../../xdm/schema/composition.md): saiba mais sobre os componentes básicos dos esquemas XDM, incluindo princípios fundamentais e práticas recomendadas na composição do esquema.
+* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): a estrutura padronizada pela qual o [!DNL Experience Platform] organiza os dados de experiência do cliente.
+   * [Noções básicas sobre a composição de esquema](../../../../../xdm/schema/composition.md): saiba mais sobre os blocos de construção básicos de esquemas XDM, incluindo princípios-chave e práticas recomendadas na composição de esquema.
    * [Tutorial do Editor de esquemas](../../../../../xdm/tutorials/create-schema-ui.md): saiba como criar esquemas personalizados usando a interface do Editor de esquemas.
-* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): fornece um perfil de consumidor unificado em tempo real com base em dados agregados de várias fontes.
+* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Fornece um perfil de consumidor unificado em tempo real com base em dados agregados de várias fontes.
 
 ### Autenticação
 
-Leia o guia em [pré-requisito de configuração para [!DNL Snowflake] transmissão de dados](../../../../connectors/databases/snowflake-streaming.md) para obter informações sobre as etapas que devem ser concluídas antes de assimilar dados de transmissão do [!DNL Snowflake] para Experience Platform.
+Leia o guia na [configuração de pré-requisito para [!DNL Snowflake] dados de streaming](../../../../connectors/databases/snowflake-streaming.md) para obter informações sobre as etapas que devem ser concluídas antes de assimilar dados de streaming de [!DNL Snowflake] para o Experience Platform.
 
-## Use o [!DNL Snowflake Streaming] origem para fluxo [!DNL Snowflake] dados para Experience Platform
+## Usar a origem [!DNL Snowflake Streaming] para transmitir dados [!DNL Snowflake] para Experience Platform
 
-Na interface do usuário da Platform, selecione **[!UICONTROL Origens]** na navegação à esquerda, para acessar a [!UICONTROL Origens] espaço de trabalho. Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar a fonte específica com a qual deseja trabalhar usando a opção de pesquisa.
+Na interface da Platform, selecione **[!UICONTROL Fontes]** na navegação à esquerda para acessar o espaço de trabalho [!UICONTROL Fontes]. Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar a fonte específica com a qual deseja trabalhar usando a opção de pesquisa.
 
-No *Bancos de dados* categoria, selecione **[!DNL Snowflake Streaming]** e selecione **[!UICONTROL Adicionar dados]**.
+Na categoria *Bancos de dados*, selecione **[!DNL Snowflake Streaming]** e **[!UICONTROL Adicionar dados]**.
 
 >[!TIP]
 >
->As origens que não têm uma conta autenticada no catálogo de origens exibem a **[!UICONTROL Configurar]** opção. Quando uma conta autenticada existir, essa opção será alterada para **[!UICONTROL Adicionar dados]**.
+>Fontes que não têm uma conta autenticada no catálogo de fontes exibem a opção **[!UICONTROL Configurar]**. Quando uma conta autenticada existir, esta opção será alterada para **[!UICONTROL Adicionar dados]**.
 
-![O catálogo de fontes na interface do usuário do Experience Platform, com o cartão de origem de transmissão Snowflake selecionado.](../../../../images/tutorials/create/snowflake-streaming/catalog.png)
+![O catálogo de fontes na interface do usuário do Experience Platform, com o cartão de origem de Streaming de Snowflake selecionado.](../../../../images/tutorials/create/snowflake-streaming/catalog.png)
 
-A variável **[!UICONTROL Conectar a conta de transmissão Snowflake]** é exibida. Nesta página, você pode usar credenciais novas ou existentes.
+A página **[!UICONTROL Connect Snowflake Streaming account]** é exibida. Nesta página, você pode usar credenciais novas ou existentes.
 
 >[!BEGINTABS]
 
@@ -47,29 +48,29 @@ A variável **[!UICONTROL Conectar a conta de transmissão Snowflake]** é exibi
 
 Para criar uma nova conta, selecione **[!UICONTROL Nova conta]** e forneça um nome, uma descrição opcional e suas credenciais.
 
-Quando terminar, selecione **[!UICONTROL Conectar à origem]** e aguarde algum tempo para estabelecer a nova conexão.
+Quando terminar, selecione **[!UICONTROL Conectar à origem]** e aguarde algum tempo para que a nova conexão seja estabelecida.
 
-![A interface de criação de nova conta do workflow de origens.](../../../../images/tutorials/create/snowflake-streaming/new.png)
+![A interface de criação de nova conta do fluxo de trabalho de origens.](../../../../images/tutorials/create/snowflake-streaming/new.png)
 
 | Credencial | Descrição |
 | --- | --- |
-| Conta | O nome do seu [!DNL Snowflake] conta. |
-| Warehouse | O nome do seu [!DNL Snowflake] depósito. Os depósitos gerenciam a execução de consultas no [!DNL Snowflake]. Each [!DNL Snowflake] o warehouse é independente um do outro e deve ser acessado individualmente para trazer os dados para o Experience Platform. |
-| Banco de dados | O nome do seu [!DNL Snowflake] banco de dados. O banco de dados contém os dados que você deseja trazer para o Experience Platform. |
-| Esquema | (Opcional) O esquema de banco de dados associado à [!DNL Snowflake] conta. |
-| Nome de usuário | O nome de usuário do seu [!DNL Snowflake] conta. |
-| Senha | A senha para o seu [!DNL Snowflake] conta. |
-| Função | (Opcional) Uma função definida personalizada que pode ser fornecida a um usuário para uma determinada conexão. Se não for fornecido, esse valor assumirá como padrão `public`. |
+| Conta | O nome da sua conta [!DNL Snowflake]. |
+| Warehouse | O nome do warehouse [!DNL Snowflake]. Os depósitos gerenciam a execução de consultas em [!DNL Snowflake]. Cada warehouse [!DNL Snowflake] é independente um do outro e deve ser acessado individualmente para trazer dados para o Experience Platform. |
+| Banco de dados | O nome do banco de dados [!DNL Snowflake]. O banco de dados contém os dados que você deseja trazer para o Experience Platform. |
+| Esquema | (Opcional) O esquema de banco de dados associado à sua conta do [!DNL Snowflake]. |
+| Nome de usuário | O nome de usuário da sua conta [!DNL Snowflake]. |
+| Senha | A senha da sua conta [!DNL Snowflake]. |
+| Função | (Opcional) Uma função definida personalizada que pode ser fornecida a um usuário para uma determinada conexão. Se não for fornecido, o padrão será `public`. |
 
-Para obter mais informações sobre a criação de contas, leia a seção sobre [definindo configurações de função](../../../../connectors/databases/snowflake-streaming.md#configure-role-settings) no [!DNL Snowflake Streaming] visão geral.
+Para obter mais informações sobre a criação de contas, leia a seção sobre [definição das configurações de função](../../../../connectors/databases/snowflake-streaming.md#configure-role-settings) na visão geral de [!DNL Snowflake Streaming].
 
 >[!TAB Usar uma conta existente]
 
-Para usar uma conta existente, selecione **[!UICONTROL Conta existente]** e selecione a conta desejada no catálogo de contas existente.
+Para usar uma conta existente, selecione **[!UICONTROL Conta existente]** e a conta desejada no catálogo de contas existente.
 
-Selecione **[!UICONTROL Próximo]** para continuar.
+Selecione **[!UICONTROL Avançar]** para continuar.
 
-![A página de seleção de conta existente do catálogo de códigos-fonte.](../../../../images/tutorials/create/snowflake-streaming/existing.png)
+![A página de seleção de conta existente do catálogo de fontes.](../../../../images/tutorials/create/snowflake-streaming/existing.png)
 
 >[!ENDTABS]
 
@@ -79,23 +80,23 @@ Selecione **[!UICONTROL Próximo]** para continuar.
 >
 >Uma coluna de carimbo de data e hora deve existir na tabela de origem para que um fluxo de dados de transmissão seja criado. O carimbo de data e hora é necessário para que o Experience Platform saiba quando os dados serão assimilados e quando os dados incrementais serão transmitidos. Você pode adicionar retroativamente uma coluna de carimbo de data e hora para uma conexão existente e criar um novo fluxo de dados.
 
-A variável [!UICONTROL Selecionar dados] é exibida. Nesta etapa, você deve selecionar os dados que deseja importar para o Experience Platform, configurar carimbos de data e hora e fusos horários e fornecer um arquivo de dados de origem de amostra para a assimilação de dados brutos.
+A etapa [!UICONTROL Selecionar dados] é exibida. Nesta etapa, você deve selecionar os dados que deseja importar para o Experience Platform, configurar carimbos de data e hora e fusos horários e fornecer um arquivo de dados de origem de amostra para a assimilação de dados brutos.
 
 Use o diretório do banco de dados à esquerda da tela e selecione a tabela que deseja importar para o Experience Platform.
 
 ![A interface de dados selecionada com uma tabela de banco de dados selecionada.](../../../../images/tutorials/create/snowflake-streaming/select-table.png)
 
-Em seguida, selecione o tipo de coluna de carimbo de data e hora da tabela. Você pode selecionar entre dois tipos de colunas de carimbo de data e hora: `TIMESTAMP_NTZ` ou  `TIMESTAMP_LTZ`. Se você selecionar um tipo de coluna de `TIMESTAMP_NTZ`, você também deve fornecer um fuso horário. Suas colunas devem ter uma restrição não nula. Para obter mais informações, leia a seção sobre [limitações e perguntas frequentes]
+Em seguida, selecione o tipo de coluna de carimbo de data e hora da tabela. Você pode selecionar entre dois tipos de colunas de carimbo de data/hora: `TIMESTAMP_NTZ` ou `TIMESTAMP_LTZ`. Se você selecionar um tipo de coluna de `TIMESTAMP_NTZ`, também deverá fornecer um fuso horário. Suas colunas devem ter uma restrição não nula. Para obter mais informações, leia a seção sobre [limitações e perguntas frequentes]
 
 Você também pode definir configurações de preenchimento retroativo durante essa etapa. O preenchimento retroativo determina quais dados são assimilados inicialmente. Se o preenchimento retroativo estiver ativado, todos os arquivos atuais no caminho especificado serão assimilados durante a primeira assimilação agendada. Caso contrário, então somente os arquivos carregados entre a primeira execução da assimilação e a hora de início serão assimilados. Os arquivos carregados antes da hora de início não serão assimilados.
 
-Selecione o **[!UICONTROL Preenchimento retroativo]** ativar o preenchimento retroativo.
+Selecione o botão **[!UICONTROL Preenchimento retroativo]** para habilitar o preenchimento retroativo.
 
-![As etapas de configuração de carimbo de data e hora, fuso horário e preenchimento retroativo.](../../../../images/tutorials/create/snowflake-streaming/timezone.png)
+![As etapas de configuração de carimbo de data/hora, fuso horário e preenchimento retroativo.](../../../../images/tutorials/create/snowflake-streaming/timezone.png)
 
-Finalmente, selecione **[!UICONTROL Escolher arquivo]** fazer upload de dados de origem de amostra para ajudar a criar o conjunto de mapeamento, que será usado em uma etapa posterior para mapear seus dados originais para o Experience Data Model (XDM).
+Finalmente, selecione **[!UICONTROL Escolher arquivo]** para carregar dados de origem de exemplo para ajudar a criar o conjunto de mapeamento, que será usado em uma etapa posterior para mapear seus dados originais para o Experience Data Model (XDM).
 
-Quando terminar, selecione **[!UICONTROL Próxima]** para continuar.
+Quando terminar, selecione **[!UICONTROL Avançar]** para continuar.
 
 ![A visualização dos dados de amostra de origem.](../../../../images/tutorials/create/snowflake-streaming/preview.png)
 
@@ -111,7 +112,7 @@ Um conjunto de dados é uma construção de armazenamento e gerenciamento para u
 
 >[!TAB Usar um novo conjunto de dados]
 
-Para usar um novo conjunto de dados, selecione **[!UICONTROL Novo conjunto de dados]**, em seguida, forneça um nome e uma descrição opcional para seu conjunto de dados. Você também deve selecionar um esquema do Experience Data Model (XDM) ao qual seu conjunto de dados adere.
+Para usar um novo conjunto de dados, selecione **[!UICONTROL Novo conjunto de dados]** e forneça um nome e uma descrição opcional para seu conjunto de dados. Você também deve selecionar um esquema do Experience Data Model (XDM) ao qual seu conjunto de dados adere.
 
 ![A nova interface de seleção do conjunto de dados.](../../../../images/tutorials/create/snowflake-streaming/new-dataset.png)
 
@@ -119,11 +120,11 @@ Para usar um novo conjunto de dados, selecione **[!UICONTROL Novo conjunto de da
 | --- | --- |
 | Nome do conjunto de dados de saída | O nome do novo conjunto de dados. |
 | Descrição | (Opcional) Uma breve visão geral do novo conjunto de dados. |
-| Esquema | Uma lista suspensa de esquemas que existem em sua organização. Você também pode criar seu próprio esquema antes do processo de configuração de origem. Para obter mais informações, leia o guia em [criação de um esquema XDM na interface do usuário](../../../../../xdm/tutorials/create-schema-ui.md). |
+| Esquema | Uma lista suspensa de esquemas que existem em sua organização. Você também pode criar seu próprio esquema antes do processo de configuração de origem. Para obter mais informações, leia o manual sobre [criação de um esquema XDM na interface](../../../../../xdm/tutorials/create-schema-ui.md). |
 
 >[!TAB Usar um conjunto de dados existente]
 
-Se você já tiver um conjunto de dados, selecione **[!UICONTROL Conjunto de dados existente]** e, em seguida, use o **[!UICONTROL Pesquisa avançada]** opção para exibir uma janela de todos os conjuntos de dados em sua organização, incluindo seus respectivos detalhes, como se eles estão habilitados para assimilação no Perfil do cliente em tempo real.
+Se você já tiver um conjunto de dados existente, selecione **[!UICONTROL Conjunto de dados existente]** e use a opção **[!UICONTROL Pesquisa avançada]** para exibir uma janela de todos os conjuntos de dados na sua organização, incluindo seus respectivos detalhes, como se eles estão habilitados para assimilação no Perfil do cliente em tempo real.
 
 ![A interface de seleção do conjunto de dados existente.](../../../../images/tutorials/create/snowflake-streaming/existing-dataset.png)
 
@@ -131,9 +132,9 @@ Se você já tiver um conjunto de dados, selecione **[!UICONTROL Conjunto de dad
 
 +++Selecione para obter as etapas para habilitar a Assimilação de perfil, o diagnóstico de erros e a assimilação parcial.
 
-Se o conjunto de dados estiver ativado para o Perfil de cliente em tempo real, durante essa etapa é possível alternar **[!UICONTROL Conjunto de dados Perfil]** para ativar seus dados para assimilação de perfis. Você também pode usar esta etapa para habilitar **[!UICONTROL Diagnóstico de erro]** e **[!UICONTROL Assimilação parcial]**.
+Se o seu conjunto de dados estiver habilitado para o Perfil de cliente em tempo real, durante essa etapa você poderá alternar para **[!UICONTROL o conjunto de dados do perfil]** para habilitar seus dados para assimilação de perfil. Você também pode usar esta etapa para habilitar o **[!UICONTROL Diagnóstico de erro]** e a **[!UICONTROL Assimilação parcial]**.
 
-* **[!UICONTROL Diagnóstico de erro]**: Selecionar **[!UICONTROL Diagnóstico de erro]** para instruir a origem a produzir diagnósticos de erro que você poderá consultar posteriormente ao monitorar a atividade do conjunto de dados e o status do fluxo de dados.
+* **[!UICONTROL Diagnóstico de erro]**: selecione **[!UICONTROL Diagnóstico de erro]** para instruir a origem a produzir o diagnóstico de erro que você poderá consultar posteriormente ao monitorar a atividade do conjunto de dados e o status do fluxo de dados.
 * **[!UICONTROL Assimilação parcial]**: a assimilação parcial de lotes é a capacidade de assimilar dados que contêm erros, até um determinado limite configurável. Esse recurso permite assimilar com sucesso todos os seus dados precisos no Experience Platform, enquanto todos os seus dados incorretos são armazenados em lote separadamente com informações sobre por que são inválidos.
 
 +++
@@ -148,39 +149,39 @@ Depois que o conjunto de dados é configurado, você deve fornecer detalhes sobr
 | --- | --- |
 | Nome do fluxo de dados | O nome do fluxo de dados.  Por padrão, esse campo usará o nome do arquivo que está sendo importado. |
 | Descrição | (Opcional) Uma breve descrição do fluxo de dados. |
-| Alertas | O Experience Platform pode produzir alertas baseados em eventos que os usuários podem assinar. Essas opções exigem um fluxo de dados em execução para serem acionadas. Para obter mais informações, leia a [visão geral dos alertas](../../alerts.md) <ul><li>**Início da execução do fluxo de dados de fontes**: selecione esse alerta para receber uma notificação quando a execução do fluxo de dados começar.</li><li>**Êxito na execução do fluxo de dados de fontes**: selecione esse alerta para receber uma notificação se o fluxo de dados terminar sem erros.</li><li>**Falha na execução do fluxo de dados de fontes**: selecione esse alerta para receber uma notificação se a execução do fluxo de dados terminar com erros.</li></ul> |
+| Alertas | O Experience Platform pode produzir alertas baseados em eventos que os usuários podem assinar. Essas opções exigem um fluxo de dados em execução para serem acionadas. Para obter mais informações, leia a [visão geral dos alertas](../../alerts.md) <ul><li>**Início da Execução do Fluxo de Dados de Fontes**: selecione este alerta para receber uma notificação quando a execução do fluxo de dados começar.</li><li>**Êxito na Execução do Fluxo de Dados de Fontes**: selecione este alerta para receber uma notificação se o fluxo de dados terminar sem erros.</li><li>**Falha na execução do fluxo de dados de fontes**: selecione este alerta para receber uma notificação se a execução do fluxo de dados terminar com erros.</li></ul> |
 
-Quando terminar, selecione **[!UICONTROL Próxima]** para continuar.
+Quando terminar, selecione **[!UICONTROL Avançar]** para continuar.
 
 ## Mapear campos para um esquema XDM {#mapping}
 
-A variável [!UICONTROL Mapeamento] é exibida. Use a interface de mapeamento para mapear os dados de origem para os campos de esquema apropriados antes de assimilar esses dados no Experience Platform e selecione **[!UICONTROL Próxima]**. Para obter um guia extenso sobre como usar a interface de mapeamento, leia o [Guia da interface de preparação de dados](../../../../../data-prep/ui/mapping.md) para obter mais informações.
+A etapa [!UICONTROL Mapping] é exibida. Use a interface de mapeamento para mapear os dados de origem para os campos de esquema apropriados antes de assimilar esses dados no Experience Platform e selecione **[!UICONTROL Avançar]**. Para obter um guia abrangente sobre como usar a interface de mapeamento, leia o [guia da interface do usuário do Preparo de Dados](../../../../../data-prep/ui/mapping.md) para obter mais informações.
 
-![A interface de mapeamento do workflow de origens.](../../../../images/tutorials/create/snowflake-streaming/mapping.png)
+![A interface de mapeamento do fluxo de trabalho de origens.](../../../../images/tutorials/create/snowflake-streaming/mapping.png)
 
 ## Revisar seu fluxo de dados {#review}
 
-A etapa final no processo de criação do fluxo de dados é revisar o fluxo de dados antes de executá-lo. Use o **[!UICONTROL Revisão]** etapa para revisar os detalhes do novo fluxo de dados antes de ele ser executado. Os detalhes estão agrupados nas seguintes categorias:
+A etapa final no processo de criação do fluxo de dados é revisar o fluxo de dados antes de executá-lo. Use a etapa **[!UICONTROL Revisão]** para revisar os detalhes do novo fluxo de dados antes de ele ser executado. Os detalhes estão agrupados nas seguintes categorias:
 
 * **Conexão**: mostra o tipo de origem, o caminho relevante do arquivo de origem escolhido e o número de colunas nesse arquivo de origem.
-* **Atribuir conjunto de dados e mapear campos**: mostra em qual conjunto de dados os dados de origem estão sendo assimilados, incluindo o esquema ao qual o conjunto de dados adere.
+* **Atribuir campos de conjunto de dados e mapa**: mostra em qual conjunto de dados os dados de origem estão sendo assimilados, incluindo o esquema ao qual o conjunto de dados pertence.
 
-Depois de revisar o fluxo de dados, selecione **[!UICONTROL Concluir]** e aguarde algum tempo para criar o fluxo de dados.
+Depois de revisar o fluxo de dados, selecione **[!UICONTROL Concluir]** e aguarde algum tempo para que o fluxo de dados seja criado.
 
-![A etapa Revisar do fluxo de trabalho de origens.](../../../../images/tutorials/create/snowflake-streaming/review.png)
+![A etapa Revisão do fluxo de trabalho de origens.](../../../../images/tutorials/create/snowflake-streaming/review.png)
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você criou com sucesso um fluxo de dados de transmissão para [!DNL Snowflake] dados. Para obter recursos adicionais, leia a documentação abaixo.
+Ao seguir este tutorial, você criou com êxito um fluxo de dados de transmissão para [!DNL Snowflake] dados. Para obter recursos adicionais, leia a documentação abaixo.
 
 ### Monitorar seu fluxo de dados
 
-Depois que o fluxo de dados for criado, você poderá monitorar os dados que estão sendo assimilados por meio dele para exibir informações sobre taxas de assimilação, sucesso e erros. Para obter mais informações sobre como monitorar a transmissão de dados, consulte o tutorial em [monitoramento de fluxos de dados de transmissão na interface do](../../monitor-streaming.md).
+Depois que o fluxo de dados for criado, você poderá monitorar os dados que estão sendo assimilados por meio dele para exibir informações sobre taxas de assimilação, sucesso e erros. Para obter mais informações sobre como monitorar fluxos de dados de transmissão, visite o tutorial em [monitoramento de fluxos de dados de transmissão na interface](../../monitor-streaming.md).
 
 ### Atualizar seu fluxo de dados
 
-Para atualizar as configurações para o agendamento de fluxos de dados, mapeamento e informações gerais, visite o tutorial em [atualização de fluxos de dados de fontes na interface do usuário](../../update-dataflows.md).
+Para atualizar as configurações do agendamento de fluxos de dados, mapeamento e informações gerais, visite o tutorial em [atualizando fluxos de dados de fontes na interface](../../update-dataflows.md).
 
 ### Excluir seu fluxo de dados
 
-É possível excluir fluxos de dados que não são mais necessários ou que foram criados incorretamente usando o **[!UICONTROL Excluir]** disponível na **[!UICONTROL Fluxos de dados]** espaço de trabalho. Para obter mais informações sobre como excluir fluxos de dados, consulte o tutorial em [exclusão de fluxos de dados na interface](../../delete.md).
+Você pode excluir fluxos de dados que não são mais necessários ou que foram criados incorretamente usando a função **[!UICONTROL Excluir]** disponível no espaço de trabalho **[!UICONTROL Fluxos de Dados]**. Para obter mais informações sobre como excluir fluxos de dados, visite o tutorial em [excluindo fluxos de dados na interface](../../delete.md).

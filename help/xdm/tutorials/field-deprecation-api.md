@@ -4,20 +4,20 @@ description: Saiba como descontinuar campos do Experience Data Model (XDM) na AP
 exl-id: e49517c4-608d-4e05-8466-75724ca984a8
 source-git-commit: f9f783b75bff66d1bf3e9c6d1ed1c543bd248302
 workflow-type: tm+mt
-source-wordcount: '588'
+source-wordcount: '584'
 ht-degree: 6%
 
 ---
 
 # Substituir um campo XDM na API
 
-No Experience Data Model (XDM), é possível descontinuar um campo em um esquema ou recurso personalizado usando o [API do registro de esquema](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). A desativação de um campo faz com que ele fique oculto nas interfaces downstream, como o [!UICONTROL Perfis] espaço de trabalho e Customer Journey Analytics, mas caso contrário, é uma alteração ininterrupta e não afeta negativamente os fluxos de dados existentes.
+No Experience Data Model (XDM), você pode descontinuar um campo em um esquema ou recurso personalizado usando a [API do Registro de esquema](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). A descontinuação de um campo faz com que ele fique oculto nas interfaces downstream, como o espaço de trabalho e o Customer Journey Analytics [!UICONTROL Perfis], mas caso contrário é uma alteração ininterrupta e não afeta negativamente os fluxos de dados existentes.
 
-Este documento aborda como descontinuar campos para diferentes recursos XDM. Para obter etapas sobre como descontinuar um campo XDM usando o Editor de esquemas na interface do usuário do Experience Platform, consulte o tutorial em [substituição de um campo XDM na interface do](./field-deprecation-ui.md).
+Este documento aborda como descontinuar campos para diferentes recursos XDM. Para obter etapas sobre como descontinuar um campo XDM usando o Editor de esquemas na interface do usuário do Experience Platform, consulte o tutorial sobre [como descontinuar um campo XDM na interface do usuário](./field-deprecation-ui.md).
 
 ## Introdução
 
-Este tutorial requer a realização de chamadas para a API do registro de esquema. Revise o [guia do desenvolvedor](../api/getting-started.md) para obter informações importantes que você precisa saber para fazer essas chamadas de API. Isso inclui o `{TENANT_ID}`, o conceito de &quot;contêineres&quot; e os cabeçalhos necessários para fazer solicitações (com especial atenção para os `Accept` e seus valores possíveis).
+Este tutorial requer a realização de chamadas para a API do registro de esquema. Consulte o [guia do desenvolvedor](../api/getting-started.md) para obter informações importantes que você precisa saber para fazer essas chamadas de API. Isso inclui o `{TENANT_ID}`, o conceito de &quot;contêineres&quot; e os cabeçalhos necessários para fazer solicitações (com atenção especial ao cabeçalho `Accept` e seus valores possíveis).
 
 ## Substituir um campo personalizado {#custom}
 
@@ -31,7 +31,6 @@ Para descontinuar um campo em uma classe personalizada, grupo de campos ou tipo 
 >* [Atualizar um grupo de campos](../api/field-groups.md#patch)
 >* [Atualizar um tipo de dados](../api/data-types.md#patch)
 
-
 A chamada de API de exemplo abaixo substitui um campo em um tipo de dados personalizado.
 
 **Formato da API**
@@ -42,7 +41,7 @@ PATCH /tenant/datatypes/{DATA_TYPE_ID}
 
 **Solicitação**
 
-A solicitação a seguir substitui a `expansionArea` para um tipo de dados que descreve uma propriedade imobiliária.
+A solicitação a seguir substitui o campo `expansionArea` para um tipo de dados que descreve uma propriedade imobiliária.
 
 ```shell
 curl -X PATCH \
@@ -63,7 +62,7 @@ curl -X PATCH \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna os detalhes de atualização do recurso personalizado, com o campo obsoleto contendo um `meta:status` valor de `deprecated`. O exemplo de resposta a seguir foi truncado por questões de espaço.
+Uma resposta bem-sucedida retorna os detalhes de atualização do recurso personalizado, com o campo obsoleto contendo um valor `meta:status` de `deprecated`. O exemplo de resposta a seguir foi truncado por questões de espaço.
 
 ```json
 {
@@ -169,7 +168,7 @@ Campos de classes padrão, grupos de campos e tipos de dados não podem ser desc
 
 ### Criar um descritor de descontinuação de campo {#create-descriptor}
 
-Para criar um descritor para os campos de esquema que deseja descontinuar, faça uma solicitação POST para o `/tenant/descriptors` terminal.
+Para criar um descritor para os campos de esquema que você deseja descontinuar, faça uma solicitação POST para o ponto de extremidade `/tenant/descriptors`.
 
 **Formato da API**
 
@@ -197,7 +196,7 @@ curl -X POST \
 
 | Propriedade | Descrição |
 | --- | --- |
-| `@type` | O tipo de descritor. Para um descritor de descontinuação de campo, esse valor deve ser definido como `xdm:descriptorDeprecated`. |
+| `@type` | O tipo de descritor. Para um descritor de substituição de campo, este valor deve ser definido como `xdm:descriptorDeprecated`. |
 | `xdm:sourceSchema` | O URI `$id` do esquema ao qual você está aplicando o descritor. |
 | `xdm:sourceVersion` | A versão do esquema ao qual você está aplicando o descritor. Deve ser definido como `1`. |
 | `xdm:sourceProperty` | O caminho para a propriedade no esquema ao qual você está aplicando o descritor. Se quiser aplicar o descritor a várias propriedades, você pode fornecer uma lista de caminhos na forma de uma matriz (por exemplo, `["/firstName", "/lastName"]`). |
@@ -221,7 +220,7 @@ curl -X POST \
 
 ### Verificar o campo obsoleto {#verify-deprecation}
 
-Após a aplicação do descritor, é possível verificar se o campo foi descontinuado, pesquisando o esquema em questão ao usar o método apropriado `Accept` cabeçalho.
+Após a aplicação do descritor, é possível verificar se o campo foi descontinuado pesquisando o esquema em questão ao usar o cabeçalho `Accept` apropriado.
 
 >[!NOTE]
 >
@@ -235,7 +234,7 @@ GET /tenant/schemas
 
 **Solicitação**
 
-Para incluir informações sobre campos obsoletos na resposta da API, é necessário definir o `Accept` cabeçalho para `application/vnd.adobe.xed-deprecatefield+json; version=1`.
+Para incluir informações sobre campos obsoletos na resposta da API, você deve definir o cabeçalho `Accept` como `application/vnd.adobe.xed-deprecatefield+json; version=1`.
 
 ```shell
 curl -X GET \
@@ -249,7 +248,7 @@ curl -X GET \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna os detalhes do esquema, com o campo obsoleto contendo um `meta:status` valor de `deprecated`. O exemplo de resposta a seguir foi truncado por questões de espaço.
+Uma resposta bem-sucedida retorna os detalhes do esquema, com o campo obsoleto contendo um valor `meta:status` de `deprecated`. O exemplo de resposta a seguir foi truncado por questões de espaço.
 
 ```json
 "faxPhone": {
@@ -266,4 +265,4 @@ Uma resposta bem-sucedida retorna os detalhes do esquema, com o campo obsoleto c
 
 ## Próximas etapas
 
-Este documento abordou como descontinuar campos XDM usando a API do registro de esquema. Para obter mais informações sobre a configuração de campos para recursos personalizados, consulte o guia em [definição de campos XDM na API](./custom-fields-api.md). Para obter mais informações sobre o gerenciamento de descritores, consulte [guia de endpoint de descritores](../api/descriptors.md).
+Este documento abordou como descontinuar campos XDM usando a API do registro de esquema. Para obter mais informações sobre como configurar campos para recursos personalizados, consulte o manual em [definindo campos XDM na API](./custom-fields-api.md). Para obter mais informações sobre o gerenciamento de descritores, consulte o [manual de ponto de extremidade de descritores](../api/descriptors.md).

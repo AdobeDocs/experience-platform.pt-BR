@@ -12,11 +12,11 @@ ht-degree: 1%
 
 # [!DNL Google Customer Match + Display & Video 360] conexão
 
-Use este destino para ativar seu PII primário com base em [[!DNL Google Customer Match]](https://support.google.com/google-ads/answer/6379332?hl=en) lista diretamente para [!DNL Google Display & Video 360] propriedades como [!DNL Search], [!DNL YouTube], [!DNL Gmail], e o [!DNL Google Display Network].
+Use este destino para ativar suas listas [[!DNL Google Customer Match]](https://support.google.com/google-ads/answer/6379332?hl=en) com base em PII próprias diretamente para [!DNL Google Display & Video 360] propriedades como [!DNL Search], [!DNL YouTube], [!DNL Gmail] e [!DNL Google Display Network].
 
-Certos terceiros integrados à Google, como o Adobe Real-Time CDP, podem usar o [!DNL Google Audience Partner API] para criar [!DNL Customer Match] públicos-alvo diretamente no [!DNL Display & Video 360] conta.
+Determinados terceiros integrados à Google, como o Adobe Real-Time CDP, podem usar o [!DNL Google Audience Partner API] para criar [!DNL Customer Match] públicos-alvo diretamente na conta [!DNL Display & Video 360] dos clientes.
 
-Com a capacidade recém-introduzida de utilizar [!DNL Customer Matched] públicos-alvo em [!DNL Display & Video 360], agora é possível direcionar públicos-alvo em uma lista expandida de fontes de inventário.
+Com a capacidade recém-introduzida de utilizar o [!DNL Customer Matched] público-alvo através do [!DNL Display & Video 360], você agora pode direcionar públicos-alvo através de uma lista expandida de fontes de inventário.
 
 >[!IMPORTANT]
 >
@@ -28,13 +28,13 @@ Com a capacidade recém-introduzida de utilizar [!DNL Customer Matched] público
 
 >[!IMPORTANT]
 >
-> A Google está lançando alterações no [API do Google Ads](https://developers.google.com/google-ads/api/docs/start), [Correspondência de Cliente](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html), e o [API de vídeo e exibição 360](https://developers.google.com/display-video/api/guides/getting-started/overview) a fim de apoiar os requisitos de conformidade e consentimento definidos no [Lei dos Mercados Digitais](https://digital-markets-act.ec.europa.eu/index_en) (DMA) na União Europeia ([Política de consentimento do usuário da UE](https://www.google.com/about/company/user-consent-policy/)). A aplicação dessas alterações aos requisitos de consentimento estará em vigor a partir de 6 de março de 2024.
+> A Google está lançando alterações na [API do Google Ads](https://developers.google.com/google-ads/api/docs/start), na [Correspondência do Cliente](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html) e na [API de Exibição e Vídeo 360](https://developers.google.com/display-video/api/guides/getting-started/overview) para oferecer suporte aos requisitos de conformidade e consentimento definidos na [Digital Markets Act](https://digital-markets-act.ec.europa.eu/index_en) (DMA) da União Europeia ([Política de Consentimento do Usuário](https://www.google.com/about/company/user-consent-policy/) da UE). A aplicação dessas alterações aos requisitos de consentimento estará em vigor a partir de 6 de março de 2024.
 ><br/>
 >Para aderir à política de consentimento do usuário da UE e continuar criando listas de públicos-alvo para usuários no Espaço Econômico Europeu (EEE), anunciantes e parceiros devem garantir que eles transmitem o consentimento do usuário final ao fazer upload dos dados de público-alvo. Como Parceiro da Google, o Adobe fornece as ferramentas necessárias para cumprir esses requisitos de consentimento de acordo com a DMA na União Europeia.
 ><br/>
->Clientes que compraram o Adobe Privacy &amp; Security Shield e configuraram um [política de consentimento](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) para filtrar perfis não consentidos, não é necessário tomar nenhuma ação.
+>Os clientes que compraram o Adobe Privacy &amp; Security Shield e configuraram uma [política de consentimento](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) para filtrar perfis não consentidos não precisam tomar nenhuma ação.
 ><br/>
->Os clientes que não compraram o Adobe Privacy &amp; Security Shield devem usar o [definição de segmento](../../../segmentation/home.md#segment-definitions) recursos no [Construtor de segmentos](../../../segmentation/ui/segment-builder.md) para filtrar perfis não consentidos, a fim de continuar usando os Destinos existentes do Real-Time CDP Google sem interrupção.
+>Os clientes que não compraram o Adobe Privacy &amp; Security Shield devem usar os recursos de [definição de segmento](../../../segmentation/home.md#segment-definitions) no [Construtor de segmentos](../../../segmentation/ui/segment-builder.md) para filtrar perfis não consentidos, a fim de continuar usando os Destinos Real-Time CDP Google existentes sem interrupção.
 
 ## Quando usar este destino
 
@@ -42,7 +42,7 @@ Várias integrações com o Google estão disponíveis no catálogo de destinos 
 
 | [Correspondência de cliente do Google](/help/destinations/catalog/advertising/google-customer-match.md) | [Vídeo e exibição do Google 360](/help/destinations/catalog/advertising/google-dv360.md) | [!DNL Google Customer Match] + [!DNL Display & Video 360] (este conector) |
 |---------|----------|---------|
-| Exporte seus públicos com base em PII e acesse-os no inventário disponível em [!DNL Google Customer Match]. | Alcance públicos-alvo com base em cookies no inventário disponível por meio do [!DNL Google Display & Video 360], em propriedades próprias e operadas pela Google, como Youtube e [!DNL Search]e além. | Criar públicos-alvo com base em PII no [!DNL Google Customer Match] e contate-os no inventário disponível em [!DNL Google Display & Video 360], somente em propriedades próprias e operadas da Google. |
+| Exporte seus públicos com base em PII e acesse-os no inventário disponível em [!DNL Google Customer Match]. | Alcance públicos-alvo com base em cookies no inventário disponível por meio do [!DNL Google Display & Video 360], em propriedades próprias e operadas do Google, como Youtube e [!DNL Search], e muito além. | Crie públicos com base em PII em [!DNL Google Customer Match] e alcance-os no inventário disponível em [!DNL Google Display & Video 360], somente em propriedades próprias e operadas da Google. |
 
 ## Casos de uso {#use-cases}
 
@@ -50,22 +50,22 @@ Para ajudá-lo a entender melhor como e quando usar esse destino, veja a seguir 
 
 ### Caso de uso #1
 
-Uma marca de vestuário esportivo deseja alcançar clientes existentes por meio de [!DNL Google Search] e [!DNL Google Shopping] para personalizar ofertas e itens com base em suas compras anteriores e histórico de navegação. A marca apparel pode assimilar endereços de email de seu próprio CRM para o Experience Platform e criar públicos-alvo a partir de seus próprios dados offline. Em seguida, eles podem enviar esses públicos-alvo para a [!DNL Google Customer Match + Display & Video 360] destino a ser usado em [!DNL Google Display & Video 360] propriedades como [!DNL Search], [!DNL YouTube], [!DNL Gmail], e o [!DNL Google Display Network].
+Uma marca de vestuário atlético deseja alcançar clientes existentes por meio de [!DNL Google Search] e [!DNL Google Shopping] para personalizar ofertas e itens com base em suas compras anteriores e histórico de navegação. A marca apparel pode assimilar endereços de email de seu próprio CRM para o Experience Platform e criar públicos-alvo a partir de seus próprios dados offline. Em seguida, eles podem enviar esses públicos-alvo para o destino [!DNL Google Customer Match + Display & Video 360] a ser usado nas propriedades [!DNL Google Display & Video 360], como [!DNL Search], [!DNL YouTube], [!DNL Gmail] e [!DNL Google Display Network].
 
 ### Caso de uso #2
 
 Uma proeminente empresa de tecnologia lançou um novo telefone. Para promover esse novo modelo de telefone, eles estão procurando conscientizar os clientes sobre os novos recursos e funcionalidades do telefone para os clientes que possuem modelos anteriores de seus telefones.
 
-Para promover a versão, eles carregam endereços de email do banco de dados do CRM no Experience Platform, usando os endereços de email como identificadores. Os públicos-alvo são criados com base nos clientes que possuem modelos de telefone mais antigos. Depois, os públicos-alvo são enviados para o [!DNL Google Customer Match], para que a empresa possa direcionar os clientes atuais, os clientes que possuem modelos de telefone mais antigos e clientes semelhantes no [!DNL Google Display & Video 360] propriedades como [!DNL Search], [!DNL YouTube], [!DNL Gmail], e o [!DNL Google Display Network].
+Para promover a versão, eles carregam endereços de email do banco de dados do CRM no Experience Platform, usando os endereços de email como identificadores. Os públicos-alvo são criados com base nos clientes que possuem modelos de telefone mais antigos. Os públicos-alvo são enviados para [!DNL Google Customer Match], para que a empresa possa direcionar os clientes atuais, os clientes que possuem modelos de telefone mais antigos e clientes semelhantes em propriedades do [!DNL Google Display & Video 360], como [!DNL Search], [!DNL YouTube], [!DNL Gmail] e [!DNL Google Display Network].
 
 ## Identidades suportadas {#supported-identities}
 
-[!DNL Google Customer Match] O oferece suporte à ativação das identidades descritas na tabela abaixo. Saiba mais sobre [identidades](/help/identity-service/features/namespaces.md).
+[!DNL Google Customer Match] dá suporte à ativação das identidades descritas na tabela abaixo. Saiba mais sobre [identidades](/help/identity-service/features/namespaces.md).
 
 | Identidade de destino | Descrição | Considerações |
 |---|---|---|
-| phone_sha256_e.164 | Números de telefone no formato E164, com hash com o algoritmo SHA256 | Os números de telefone com hash SHA256 e texto sem formatação são compatíveis com o Adobe Experience Platform. Siga as instruções em [Requisitos de correspondência de ID](#id-matching-requirements-id-matching-requirements) e use os namespaces apropriados para texto sem formatação e números de telefone com hash, respectivamente. Quando o campo de origem contiver atributos sem hash, verifique a **[!UICONTROL Aplicar transformação]** opção, para ter [!DNL Platform] coloque automaticamente os dados em hash na ativação. |
-| email_lc_sha256 | Endereços de email com hash com o algoritmo SHA256 | O Adobe Experience Platform oferece suporte tanto para texto simples quanto para endereços de email com hash SHA256. Siga as instruções em [Requisitos de correspondência de ID](#id-matching-requirements-id-matching-requirements) e use os namespaces apropriados para texto simples e endereços de email com hash, respectivamente. Quando o campo de origem contiver atributos sem hash, verifique a **[!UICONTROL Aplicar transformação]** opção, para ter [!DNL Platform] coloque automaticamente os dados em hash na ativação. |
+| phone_sha256_e.164 | Números de telefone no formato E164, com hash com o algoritmo SHA256 | Os números de telefone com hash SHA256 e texto sem formatação são compatíveis com o Adobe Experience Platform. Siga as instruções na seção [Requisitos de correspondência de ID](#id-matching-requirements-id-matching-requirements) e use os namespaces apropriados para texto sem formatação e números de telefone com hash, respectivamente. Quando o campo de origem contiver atributos sem hash, marque a opção **[!UICONTROL Aplicar transformação]** para que [!DNL Platform] coloque os dados em hash automaticamente durante a ativação. |
+| email_lc_sha256 | Endereços de email com hash com o algoritmo SHA256 | O Adobe Experience Platform oferece suporte tanto para texto simples quanto para endereços de email com hash SHA256. Siga as instruções na seção [Requisitos de correspondência de ID](#id-matching-requirements-id-matching-requirements) e use os namespaces apropriados para texto sem formatação e endereços de email com hash, respectivamente. Quando o campo de origem contiver atributos sem hash, marque a opção **[!UICONTROL Aplicar transformação]** para que [!DNL Platform] coloque os dados em hash automaticamente durante a ativação. |
 
 {style="table-layout:auto"}
 
@@ -83,8 +83,8 @@ Esta seção descreve quais tipos de públicos-alvo você pode exportar para ess
 
 | Origem do público | Suportado | Descrição |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Públicos-alvo gerados pelo Experience Platform [Serviço de segmentação](../../../segmentation/home.md). |
-| Uploads personalizados | ✓ | Públicos-alvo [importado](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV. |
+| [!DNL Segmentation Service] | ✓ | Públicos gerados por meio do [Serviço de segmentação](../../../segmentation/home.md) do Experience Platform. |
+| Uploads personalizados | ✓ | Públicos [importados](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV. |
 
 {style="table-layout:auto"}
 
@@ -94,43 +94,43 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 
 | Item | Tipo | Notas |
 ---------|----------|---------|
-| Tipo de exportação | **[!UICONTROL Exportação de público]** | Você está exportando todos os membros de um público-alvo com os identificadores (nome, número de telefone e outros) usados no [!DNL Google Customer Match] destino. |
-| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil é atualizado em Experience Platform com base na avaliação do público-alvo, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de transmissão](/help/destinations/destination-types.md#streaming-destinations). |
+| Tipo de exportação | **[!UICONTROL Exportação de público-alvo]** | Você está exportando todos os membros de um público com os identificadores (nome, número de telefone e outros) usados no destino [!DNL Google Customer Match]. |
+| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil é atualizado em Experience Platform com base na avaliação do público-alvo, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
-## [!DNL Google Customer Match] pré-requisitos da conta {#google-account-prerequisites}
+## Pré-requisitos da conta de [!DNL Google Customer Match] {#google-account-prerequisites}
 
-Antes de configurar um [!DNL Google Customer Match] destino no Experience Platform, leia e siga a política da Google para uso de [!DNL Customer Match], delineado no [Documentação de suporte do Google](https://support.google.com/google-ads/answer/6299717).
+Antes de configurar um destino [!DNL Google Customer Match] no Experience Platform, leia e siga a política da Google para o uso do [!DNL Customer Match], descrita na [documentação de suporte da Google](https://support.google.com/google-ads/answer/6299717).
 
-Em seguida, verifique se o [!DNL Google] a conta do está configurada para um [!DNL Standard] ou um nível de permissão superior. Consulte a [Documentação do Google Ads](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&amp;rd=1) para obter detalhes.
+Em seguida, verifique se a sua conta [!DNL Google] está configurada para um nível de permissão [!DNL Standard] ou superior. Consulte a [documentação do Google Ads](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&amp;rd=1) para obter detalhes.
 
 ### Lista de permissões {#allowlist}
 
-Antes de criar o [!DNL Google Customer Match] destino no Experience Platform, certifique-se de que seu [!DNL Google Ads] conta está em conformidade com o [[!DNL Google Customer Match] política](https://support.google.com/google-ads/answer/6299717/customer-match-policy).
+Antes de criar o destino [!DNL Google Customer Match] no Experience Platform, verifique se a sua conta [!DNL Google Ads] está em conformidade com a [[!DNL Google Customer Match] política](https://support.google.com/google-ads/answer/6299717/customer-match-policy).
 
 Incluir na lista de permissões Os clientes com contas em conformidade são automaticamente notificados pela Google.
 
 ## Requisitos de correspondência de ID {#id-matching-requirements}
 
-[!DNL Google] exige que nenhuma informação pessoal identificável (PII) seja enviada em claro. Portanto, os públicos-alvo foram ativados para [!DNL Google Customer Match] deve ser desativado *com hash* identificadores, como endereços de email com hash ou números de telefone.
+[!DNL Google] exige que nenhuma informação pessoal identificável (PII) seja enviada em branco. Portanto, os públicos ativados para [!DNL Google Customer Match] devem ser destacados por *identificadores com hash*, como endereços de email com hash ou números de telefone.
 
 Dependendo do tipo de IDs que você assimila no Adobe Experience Platform, é necessário seguir os requisitos correspondentes.
 
 ### Requisitos de hash de número de telefone {#phone-number-hashing-requirements}
 
-Há dois métodos para ativar números de telefone no [!DNL Google Customer Match]:
+Há dois métodos para ativar números de telefone em [!DNL Google Customer Match]:
 
-* **Inserir números de telefone brutos**: você pode assimilar números de telefone brutos na [!DNL E.164] formatar em [!DNL Platform], e eles recebem hash automaticamente na ativação. Se você escolher essa opção, sempre assimile seus números de telefone brutos na `Phone_E.164` namespace.
-* **Inserir números de telefone com hash**: você pode adicionar seus números de telefone a um hash antes da assimilação em [!DNL Platform]. Se você escolher essa opção, sempre assimile seus números de telefone com hash na `PHONE_SHA256_E.164` namespace.
+* **Ingestão de números de telefone brutos**: você pode assimilar números de telefone brutos no formato [!DNL E.164] no [!DNL Platform], que são automaticamente transformados em hash após a ativação. Se você escolher essa opção, sempre assimile seus números de telefone brutos no namespace `Phone_E.164`.
+* **Números de telefone com hash de assimilação**: você pode colocar seus números de telefone em hash antes de assimilar em [!DNL Platform]. Se você escolher essa opção, sempre assimile seus números de telefone com hash no namespace `PHONE_SHA256_E.164`.
 
 >[!NOTE]
 >
->Números de telefone assimilados na `Phone` o namespace não pode ser ativado para o [!DNL Google Customer Match + DV360] destino.
+>Os números de telefone assimilados no namespace `Phone` não podem ser ativados para o destino [!DNL Google Customer Match + DV360].
 
 ### Requisitos de hash de email {#hashing-requirements}
 
-Você pode aplicar hash a endereços de email antes de assimilá-los no Adobe Experience Platform ou usar endereços de email em limpar no Experience Platform e ter [!DNL Platform] coloque hash neles na ativação.
+Você pode aplicar hash a endereços de email antes de assimilá-los no Adobe Experience Platform, ou usar endereços de email em limpar no Experience Platform, e aplicar hash a [!DNL Platform] neles na ativação.
 
 Para obter mais informações sobre os requisitos de hash do Google e outras restrições na ativação, consulte as seguintes seções na documentação do Google:
 
@@ -140,7 +140,7 @@ Para obter mais informações sobre os requisitos de hash do Google e outras res
 * [[!DNL Customer Match] com IDs de dispositivo móvel](https://developers.google.com/google-ads/api/docs/remarketing/audience-types/customer-match#customer_match_with_mobile_device_ids)
 
 
-Para saber mais sobre a assimilação de endereços de email no Experience Platform, consulte o [visão geral da assimilação em lote](../../../ingestion/batch-ingestion/overview.md) e a variável [visão geral da assimilação por transmissão](../../../ingestion/streaming-ingestion/overview.md).
+Para saber mais sobre como assimilar endereços de email no Experience Platform, consulte a [visão geral de assimilação em lote](../../../ingestion/batch-ingestion/overview.md) e a [visão geral de assimilação de streaming](../../../ingestion/streaming-ingestion/overview.md).
 
 Se você optar por criar o hash dos endereços de email, certifique-se de cumprir os requisitos da Google, descritos nos links acima.
 
@@ -163,35 +163,35 @@ The video below demonstrates the steps to configure a [!DNL Google Customer Matc
 
 >[!IMPORTANT]
 > 
->Para se conectar ao destino, você precisa da variável **[!UICONTROL Exibir destinos]** e **[!UICONTROL Gerenciar destinos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
+>Para se conectar ao destino, você precisa de **[!UICONTROL Exibir Destinos]** e **[!UICONTROL Gerenciar Destinos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 
-Para se conectar a esse destino, siga as etapas descritas no [tutorial de configuração de destino](../../ui/connect-destination.md).
+Para se conectar a este destino, siga as etapas descritas no [tutorial de configuração de destino](../../ui/connect-destination.md).
 
 ### Parâmetros de conexão {#parameters}
 
-Enquanto [configuração](../../ui/connect-destination.md) Para esse destino, você deve fornecer as seguintes informações:
+Ao [configurar](../../ui/connect-destination.md) este destino, você deve fornecer as seguintes informações:
 
 * **[!UICONTROL Nome]**: forneça um nome para esta conexão de destino
 * **[!UICONTROL Descrição]**: forneça uma descrição para esta conexão de destino
-* **[!UICONTROL ID da conta]**: seu [ID de cliente do Google Ads](https://support.google.com/google-ads/answer/1704344?hl=en). O formato da ID é xxx-xxx-xxxx. Se você estiver usando a variável [!DNL Google Ads Manager Account (My Client Center)], não use sua ID de conta de gerente. Use o [ID de cliente do Google Ads](https://support.google.com/google-ads/answer/1704344?hl=en) em vez disso.
+* **[!UICONTROL ID da conta]**: sua [ID de cliente do Google Ads](https://support.google.com/google-ads/answer/1704344?hl=en). O formato da ID é xxx-xxx-xxxx. Se você estiver usando o [!DNL Google Ads Manager Account (My Client Center)], não use sua ID de Conta de Gerente. Em vez disso, use a [ID de cliente do Google Ads](https://support.google.com/google-ads/answer/1704344?hl=en).
 * **[!UICONTROL Tipo de conta]**: seu tipo de conta do Google. Selecione uma opção, dependendo do tipo de conta publicitária com o Google:
-   * **[!UICONTROL Exibir parceiro de vídeo]**
-   * **[!UICONTROL Exibir anunciante de vídeo]**
+   * **[!UICONTROL Exibir Parceiro de Vídeo]**
+   * **[!UICONTROL Exibir Anunciante de Vídeo]**
 
 ### Ativar alertas {#enable-alerts}
 
-Você pode ativar os alertas para receber notificações sobre o status do fluxo de dados para o seu destino. Selecione um alerta na lista para assinar e receber notificações sobre o status do seu fluxo de dados. Para obter mais informações sobre alertas, consulte o manual sobre [assinatura de alertas de destinos usando a interface do](../../ui/alerts.md).
+Você pode ativar os alertas para receber notificações sobre o status do fluxo de dados para o seu destino. Selecione um alerta na lista para assinar e receber notificações sobre o status do seu fluxo de dados. Para obter mais informações sobre alertas, consulte o manual sobre [assinatura de alertas de destinos usando a interface](../../ui/alerts.md).
 
-Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICONTROL Próxima]**.
+Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICONTROL Avançar]**.
 
 ## Ativar públicos-alvo para esse destino {#activate}
 
 >[!IMPORTANT]
 > 
->* Para ativar os dados, é necessário **[!UICONTROL Exibir destinos]**, **[!UICONTROL Ativar destinos]**, **[!UICONTROL Exibir perfis]**, e **[!UICONTROL Exibir segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia o [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou entre em contato com o administrador do produto para obter as permissões necessárias.
->* Para exportar *identidades* para destinos, você precisará da variável **[!UICONTROL Exibir gráfico de identidade]** [permissão de controle de acesso](/help/access-control/home.md#permissions). <br> ![Selecione o namespace de identidade destacado no fluxo de trabalho para ativar públicos para destinos.](../../assets/overview/export-identities-to-destination.png "Selecione o namespace de identidade destacado no fluxo de trabalho para ativar públicos para destinos."){width="100" zoomable="yes"}
+>* Para ativar dados, você precisa de **[!UICONTROL Exibir Destinos]**, **[!UICONTROL Ativar Destinos]**, **[!UICONTROL Exibir Perfis]** e **[!UICONTROL Exibir Segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
+>* Para exportar *identidades* para destinos, você precisa da **[!UICONTROL permissão Exibir Gráfico de Identidade]** [controle de acesso](/help/access-control/home.md#permissions). <br> ![Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos.](../../assets/overview/export-identities-to-destination.png "Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos."){width="100" zoomable="yes"}
 
-Consulte [Ativar dados do público-alvo para streaming de destinos de exportação de público](../../ui/activate-segment-streaming-destinations.md) para obter instruções sobre como ativar públicos-alvo para esse destino.
+Consulte [Ativar dados de público-alvo para streaming de destinos de exportação de público](../../ui/activate-segment-streaming-destinations.md) para obter instruções sobre como ativar públicos-alvo para este destino.
 
 <!-- In the **[!UICONTROL Segment schedule]** step, you must provide the [!UICONTROL App ID] when sending [!DNL IDFA] or [!DNL GAID] audiences to [!DNL Google Customer Match].
 
@@ -199,37 +199,37 @@ Consulte [Ativar dados do público-alvo para streaming de destinos de exportaç�
 
 For details on how to find the [!DNL App ID], refer to the [Google official documentation](https://developers.google.com/adwords/api/docs/reference/v201809/AdwordsUserListService.CrmBasedUserList#appid) or ask your Google representative. -->
 
-### Exemplo de mapeamento: ativação de dados de público-alvo no [!DNL Google Customer Match + Display & Video 360] {#example-gcm}
+### Exemplo de mapeamento: ativação de dados de público-alvo em [!DNL Google Customer Match + Display & Video 360] {#example-gcm}
 
-Este é um exemplo de mapeamento de identidade correto ao ativar dados de público-alvo no [!DNL Google Customer Match + Display & Video 360].
+Este é um exemplo de mapeamento de identidade correto ao ativar dados de público-alvo em [!DNL Google Customer Match + Display & Video 360].
 
 Selecionar campos de origem:
 
-* Selecione o `Email` namespace como identidade de origem se os endereços de email que você estiver usando não tiverem hash.
-* Selecione o `Email_LC_SHA256` namespace como identidade de origem se você tiver hash dos endereços de email do cliente na assimilação de dados no [!DNL Platform], segundo [!DNL Google Customer Match] [requisitos de hash de email](#hashing-requirements).
-* Selecione o `PHONE_E.164` namespace como identidade de origem se seus dados consistirem em números de telefone sem hash. [!DNL Platform] usará hash nos números de telefone para estar em conformidade com [!DNL Google Customer Match] requisitos.
-* Selecione o `Phone_SHA256_E.164` namespace como identidade de origem se você tiver hash de números de telefone na assimilação de dados no [!DNL Platform], segundo [!DNL Facebook] [requisitos de hash de número de telefone](#phone-number-hashing-requirements).
+* Selecione o namespace `Email` como identidade de origem se os endereços de email que você está usando não tiverem hash.
+* Selecione o namespace `Email_LC_SHA256` como identidade de origem se você tiver hash dos endereços de email do cliente na assimilação de dados no [!DNL Platform], de acordo com os [!DNL Google Customer Match] [requisitos de hash de email](#hashing-requirements).
+* Selecione o namespace `PHONE_E.164` como identidade de origem se seus dados consistirem em números de telefone sem hash. [!DNL Platform] aplicará hash aos números de telefone para atender aos requisitos de [!DNL Google Customer Match].
+* Selecione o namespace `Phone_SHA256_E.164` como identidade de origem se você tiver hash de números de telefone na assimilação de dados em [!DNL Platform], de acordo com [!DNL Facebook] [requisitos de hash de número de telefone](#phone-number-hashing-requirements).
 
 Selecionar campos de destino:
 
-* Selecione o `Email_LC_SHA256` namespace como identidade de destino quando os namespaces de origem `Email` ou `Email_LC_SHA256`.
-* Selecione o `Phone_SHA256_E.164` namespace como identidade de destino quando os namespaces de origem `PHONE_E.164` ou `Phone_SHA256_E.164`.
+* Selecione o namespace `Email_LC_SHA256` como identidade de destino quando os namespaces de origem forem `Email` ou `Email_LC_SHA256`.
+* Selecione o namespace `Phone_SHA256_E.164` como identidade de destino quando os namespaces de origem forem `PHONE_E.164` ou `Phone_SHA256_E.164`.
 
-![Mapeamento de identidade entre campos de origem e destino mostrado na etapa Mapping do fluxo de trabalho de ativação.](../../assets/catalog/advertising/google-customer-match-dv360/identity-mapping-gcm-dv360.png)
+![Mapeamento de identidade entre campos de origem e destino mostrado na etapa Mapeamento do fluxo de trabalho de ativação.](../../assets/catalog/advertising/google-customer-match-dv360/identity-mapping-gcm-dv360.png)
 
-O hash automático é aplicado aos dados de namespaces sem hash [!DNL Platform] na ativação.
+O hash automático de dados de namespaces sem hash é criado por [!DNL Platform] após a ativação.
 
-Os dados de origem do atributo não são automaticamente transformados em hash. Quando o campo de origem contiver atributos sem hash, verifique a **[!UICONTROL Aplicar transformação]** opção, para ter [!DNL Platform] coloque automaticamente os dados em hash na ativação.
+Os dados de origem do atributo não são automaticamente transformados em hash. Quando o campo de origem contiver atributos sem hash, marque a opção **[!UICONTROL Aplicar transformação]** para que [!DNL Platform] coloque os dados em hash automaticamente durante a ativação.
 
-![Aplique o controle de transformação destacado na etapa Mapping do fluxo de trabalho de ativação.](../../assets/catalog/advertising/google-customer-match-dv360/transformation.png)
+![Aplicar controle de transformação realçado na etapa Mapeamento do fluxo de trabalho de ativação.](../../assets/catalog/advertising/google-customer-match-dv360/transformation.png)
 
 ## Verificar se a ativação do público-alvo foi bem-sucedida {#verify-activation}
 
-Após concluir o fluxo de ativação, alterne para o **[!UICONTROL Anúncios do Google]** conta. Os públicos ativados são mostrados na sua conta do Google como listas de clientes. Dependendo do tamanho do público-alvo, alguns públicos-alvo não são preenchidos, a menos que haja mais de 1000 usuários ativos para atender. Encontre mais informações no [Documentação do Google Audience Partner](https://developers.google.com/audience-partner/api/docs/customer-match/get-started#verify-list). Observe que você precisa solicitar à Google acesso à documentação no link.
+Após concluir o fluxo de ativação, alterne para sua conta do **[!UICONTROL Google Ads]**. Os públicos ativados são mostrados na sua conta do Google como listas de clientes. Dependendo do tamanho do público-alvo, alguns públicos-alvo não são preenchidos, a menos que haja mais de 1000 usuários ativos para atender. Encontre mais informações na [documentação do Google Audience Partner](https://developers.google.com/audience-partner/api/docs/customer-match/get-started#verify-list). Observe que você precisa solicitar à Google acesso à documentação no link.
 
 ## Governança de dados
 
-Alguns destinos no Experience Platform têm determinadas regras e obrigações para dados enviados para a plataforma de destino ou recebidos dela. Você é responsável por entender as limitações e obrigações de seus dados e como usá-los no Adobe Experience Platform e na plataforma de destino. O Adobe Experience Platform fornece ferramentas de governança de dados para ajudar você a gerenciar algumas dessas obrigações de uso de dados. [Saiba mais](../../../data-governance/labels/overview.md) sobre as políticas e ferramentas de governança de dados.
+Alguns destinos no Experience Platform têm determinadas regras e obrigações para dados enviados para a plataforma de destino ou recebidos dela. Você é responsável por entender as limitações e obrigações de seus dados e como usá-los no Adobe Experience Platform e na plataforma de destino. O Adobe Experience Platform fornece ferramentas de governança de dados para ajudar você a gerenciar algumas dessas obrigações de uso de dados. [Saiba mais](../../../data-governance/labels/overview.md) sobre políticas e ferramentas de governança de dados.
 
 ## Solução de problemas {#troubleshooting}
 
@@ -239,4 +239,4 @@ Ao configurar esse destino, você pode receber o seguinte erro:
 
 `{"message":"Google Customer Match Error: OperationAccessDenied.ACTION_NOT_PERMITTED","code":"400 BAD_REQUEST"}`
 
-Esse erro ocorre quando as contas do cliente não estão em conformidade com os [pré-requisitos](#google-account-prerequisites). Para corrigir esse problema, entre em contato com a Google e verifique se sua conta está incluída na lista de permissões e configurada para um [!DNL Standard] ou um nível de permissão superior. Consulte a [Documentação do Google Ads](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&amp;rd=1) para obter detalhes.
+Este erro ocorre quando as contas de clientes não atendem aos [pré-requisitos](#google-account-prerequisites). Para corrigir esse problema, contate a Google e verifique se sua conta está incluída na lista de permissões e configurada para um nível de permissão [!DNL Standard] ou superior. Consulte a [documentação do Google Ads](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&amp;rd=1) para obter detalhes.

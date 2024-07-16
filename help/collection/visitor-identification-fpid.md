@@ -13,13 +13,13 @@ ht-degree: 0%
 
 # Identificação do visitante via FPID
 
-[!DNL First-party IDs] (`FPIDs`) são IDs de dispositivo geradas, gerenciadas e armazenadas pelos clientes. Isso dá aos clientes controle sobre a identificação de dispositivos de usuário. Enviando `FPIDs`, a Edge Network não gera uma rede totalmente nova `ECID` para uma solicitação que não contém um.
+[!DNL First-party IDs] (`FPIDs`) são IDs de dispositivo geradas, gerenciadas e armazenadas por clientes. Isso dá aos clientes controle sobre a identificação de dispositivos de usuário. Ao enviar `FPIDs`, o Edge Network não gera um `ECID` totalmente novo para uma solicitação que não contém um.
 
-A variável `FPID` pode ser incluído no corpo da solicitação de API como parte da variável `identityMap` ou ele pode ser enviado como um cookie.
+O `FPID` pode ser incluído no corpo da solicitação de API como parte do `identityMap` ou pode ser enviado como um cookie.
 
-Um `FPID` podem ser traduzidas deterministicamente em um `ECID` pela Rede de borda, portanto `FPID` as identidades são totalmente compatíveis com as soluções Experience Cloud. Obter uma `ECID` de um `FPID` O sempre produz o mesmo resultado, de modo que os usuários terão uma experiência consistente.
+Um `FPID` pode ser convertido deterministicamente em um `ECID` pelo Edge Network, de modo que as identidades `FPID` sejam totalmente compatíveis com as soluções de Experience Cloud. A obtenção de um `ECID` de um `FPID` específico sempre produz o mesmo resultado, portanto, os usuários terão uma experiência consistente.
 
-A variável `ECID` obtidos dessa forma podem ser recuperados por meio de um `identity.fetch` consulta:
+O `ECID` obtido dessa maneira pode ser recuperado por meio de uma consulta `identity.fetch`:
 
 ```json
 {
@@ -33,15 +33,15 @@ A variável `ECID` obtidos dessa forma podem ser recuperados por meio de um `ide
 }
 ```
 
-Para solicitações que contêm um `FPID` e uma `ECID`, o `ECID` presente no pedido terá precedência sobre a que poderia ser gerada a partir da data `FPID`. Em outras palavras, a rede de borda usa a variável `ECID` já fornecidos e a `FPID` é ignorado. Um novo `ECID` é gerado somente quando um `FPID` é fornecido por conta própria.
+Para solicitações que contêm tanto um `FPID` quanto um `ECID`, o `ECID` já presente na solicitação terá precedência sobre aquele que poderia ser gerado a partir de `FPID`. Em outras palavras, o Edge Network usa o `ECID` já fornecido e o `FPID` é ignorado. Um novo `ECID` só é gerado quando um `FPID` é fornecido sozinho.
 
-Em termos de IDs de dispositivo, a variável `server` as sequências de dados devem usar `FPID` como ID do dispositivo. Outras identidades (por exemplo, `EMAIL`) também podem ser fornecidos no corpo da solicitação, mas a Rede de borda exige que uma identidade primária seja fornecida explicitamente. A identidade principal é a identidade base na qual os dados do perfil serão armazenados.
+Em termos de IDs de dispositivo, as sequências de dados de `server` devem usar `FPID` como ID de dispositivo. Outras identidades (ou seja, `EMAIL`) também podem ser fornecidas dentro do corpo da solicitação, mas o Edge Network exige que uma identidade primária seja fornecida explicitamente. A identidade principal é a identidade base na qual os dados do perfil serão armazenados.
 
 >[!NOTE]
 >
 >As solicitações que não tiverem identidade, respectivamente, nenhuma identidade principal explicitamente definida no corpo da solicitação, falharão.
 
-As seguintes `identityMap` o grupo de campos está formado corretamente para um `server` solicitação de sequência de dados:
+O seguinte grupo de campos `identityMap` está formado corretamente para uma solicitação de sequência de dados `server`:
 
 ```json
 {
@@ -63,7 +63,7 @@ As seguintes `identityMap` o grupo de campos está formado corretamente para um 
 }
 ```
 
-As seguintes `identityMap` grupo de campos resultará em uma resposta de erro quando definido em um `server` solicitação de sequência de dados:
+O seguinte grupo de campos `identityMap` resultará em uma resposta de erro quando definido em uma solicitação de sequência de dados `server`:
 
 ```json
 {
@@ -84,7 +84,7 @@ As seguintes `identityMap` grupo de campos resultará em uma resposta de erro qu
 }
 ```
 
-A resposta de erro retornada pela Rede de borda nesse caso é semelhante ao seguinte:
+Nesse caso, a resposta de erro retornada pelo Edge Network é semelhante ao seguinte:
 
 ```json
 {
@@ -100,9 +100,9 @@ A resposta de erro retornada pela Rede de borda nesse caso é semelhante ao segu
 }
 ```
 
-## Identificação do visitante com `FPID`
+## Identificação de visitante com `FPID`
 
-Para identificar usuários via `FPID`, assegurar que a `FPID` cookie foi enviado antes de fazer qualquer solicitação à Rede de borda. A variável `FPID` pode ser transmitido em um cookie ou como parte da `identityMap` no corpo da solicitação.
+Para identificar usuários via `FPID`, verifique se o cookie `FPID` foi enviado antes de fazer qualquer solicitação para o Edge Network. O `FPID` pode ser transmitido em um cookie ou como parte de `identityMap` no corpo da solicitação.
 
 <!--
 
@@ -167,9 +167,9 @@ curl -X POST 'https://edge.adobedc.net/v2/interact?dataStreamId={Data Stream ID}
 ```
 -->
 
-## Solicitar com `FPID` passado como `identityMap` campo
+## Solicitação com `FPID` aprovada como campo `identityMap`
 
-O exemplo abaixo passa o [!DNL FPID] como um `identityMap` parâmetro.
+O exemplo abaixo passa o [!DNL FPID] como um parâmetro `identityMap`.
 
 ```shell
 curl -X POST "https://server.adobedc.net/v2/interact?dataStreamId={DATASTREAM_ID}"

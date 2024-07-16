@@ -20,47 +20,47 @@ Este documento detalha como criar um painel de consentimento para vários casos 
 Os casos de uso abordados neste guia são tendência de consentimento e sobreposição de consentimento.
 
 - **Tendência de consentimento** rastreia a tendência do consentimento do usuário ao longo do tempo. A análise das alterações de preferência de consentimento ajuda os profissionais de marketing a planejar e executar campanhas que se adaptam a essas alterações de preferência do usuário. Por exemplo, você pode querer executar campanhas educacionais direcionadas, campanhas de transparência e confiança ou campanhas de incentivo para impulsionar opções de consentimento. Você também pode correlacionar campanhas que podem ter um impacto negativo no consentimento para reduzir proativamente a frequência dessas campanhas.
-- **Sobreposição de consentimento** O usa a sobreposição entre canais de consentimento para fornecer mensagens personalizadas consistentes em vários canais para seus clientes que consentiram com vários canais. Os profissionais de marketing podem priorizar e alocar recursos para determinados canais em que um grau mais alto de consentimento e mensagens personalizadas podem repercutir nos clientes e gerar taxas de resposta mais altas.
+- **Sobreposição de consentimento** usa a sobreposição entre canais de consentimento para fornecer mensagens personalizadas consistentes em vários canais para seus clientes que consentiram com vários canais. Os profissionais de marketing podem priorizar e alocar recursos para determinados canais em que um grau mais alto de consentimento e mensagens personalizadas podem repercutir nos clientes e gerar taxas de resposta mais altas.
 
 ## Criar públicos-alvo com consentimento {#create-consent-audiences}
 
-Para criar um painel de consentimento, primeiro crie um público-alvo de todos os perfis que consentiram em entrar em contato com o. Para navegar até o Construtor de segmentos do Real-time Customer Data Platform, selecione **[!UICONTROL Públicos-alvo]** na navegação à esquerda da interface do usuário da Platform. No menu [!UICONTROL Cliente] guia do [!UICONTROL Públicos-alvo] painel, selecione **[!UICONTROL Criar público]** na parte superior direita da exibição, depois **[!UICONTROL Criar regras]**.
+Para criar um painel de consentimento, primeiro crie um público-alvo de todos os perfis que consentiram em entrar em contato com o. Para navegar até o Construtor de segmentos do Real-time Customer Data Platform, selecione **[!UICONTROL Públicos-alvo]** na navegação à esquerda da interface do usuário da plataforma. Na guia [!UICONTROL Cliente] do painel [!UICONTROL Públicos-alvo], selecione **[!UICONTROL Criar público-alvo]** na parte superior direita da exibição e **[!UICONTROL Regras de compilação]**.
 
-![A variável [!UICONTROL Públicos-alvo] painel com [!UICONTROL Cliente], [!UICONTROL Públicos-alvo], e [!UICONTROL Criar segmento] destacado.](../images/insights-use-cases/consent-analysis/create-audience.png)
+![O painel [!UICONTROL Públicos-alvo] com [!UICONTROL Cliente], [!UICONTROL Públicos-alvo] e [!UICONTROL Criar segmento] foi realçado.](../images/insights-use-cases/consent-analysis/create-audience.png)
 
-O Construtor de segmentos é exibido. Em seguida, selecione **[!UICONTROL Perfil individual XDM]** nas opções disponíveis. Consulte a documentação para obter mais informações sobre o [tela do construtor de regras](../../segmentation/ui/segment-builder.md#rule-builder-canvas).
+O Construtor de segmentos é exibido. Em seguida, selecione **[!UICONTROL Perfil individual XDM]** nas opções disponíveis. Consulte a documentação para obter mais informações sobre a [tela do construtor de regras](../../segmentation/ui/segment-builder.md#rule-builder-canvas).
 
-![O Construtor de segmentos com a [!UICONTROL Perfil individual XDM] Pasta de atributo realçada.](../images/insights-use-cases/consent-analysis/xdm-individual-profile.png)
+![O Construtor de segmentos com a [!UICONTROL pasta de atributo Perfil Individual XDM] foi realçada.](../images/insights-use-cases/consent-analysis/xdm-individual-profile.png)
 
-Localize seus atributos de consentimento nas opções disponíveis. Selecionar **[!UICONTROL Consentimentos e preferências]**.
+Localize seus atributos de consentimento nas opções disponíveis. Selecione **[!UICONTROL Consentimentos e Preferências]**.
 
 >[!NOTE]
 >
 >Se você tiver mantido o consentimento do usuário em um atributo diferente do grupo de campos recomendado Adobe, deverá selecionar esses atributos em vez dos mostrados abaixo.
 
-Mais informações podem ser encontradas no [tratamento do consentimento na segmentação](../../segmentation/consents.md#handling-consent-in-segmentation) documentação.
+Mais informações podem ser encontradas no [tratamento do consentimento na documentação de segmentação](../../segmentation/consents.md#handling-consent-in-segmentation).
 
-![O Construtor de segmentos com a [!UICONTROL Consentimento e preferências] Pasta de atributo realçada.](../images/insights-use-cases/consent-analysis/consent-and-preferences.png)
+![O Construtor de Segmentos com a pasta de atributos [!UICONTROL Consentimento e Preferências] está realçada.](../images/insights-use-cases/consent-analysis/consent-and-preferences.png)
 
-As várias opções de consentimento e preferência são exibidas. Como essa demonstração se concentra no consentimento para entrar em contato por vários canais de marketing, selecione **[!UICONTROL Preferências de marketing]**.
+As várias opções de consentimento e preferência são exibidas. Como esta demonstração foca no consentimento para contato em vários canais de marketing, selecione **[!UICONTROL Preferências de marketing]**.
 
-![O Construtor de segmentos com a [!UICONTROL Preferências de marketing] pasta realçada.](../images/insights-use-cases/consent-analysis/marketing-preferences.png)
+![O Construtor de Segmentos com a pasta [!UICONTROL Preferências de Marketing] está realçado.](../images/insights-use-cases/consent-analysis/marketing-preferences.png)
 
 A lista de preferências de marketing é exibida. Embora esse exemplo de caso de uso se concentre em email, SMS e chamadas, também é possível criar insights para qualquer outra combinação ou para a totalidade das opções. Para cada um dos canais, execute as etapas abaixo para criar um público-alvo.
 
-Para começar a configurar um público-alvo, selecione **[!UICONTROL Receber SMS]** / **[!UICONTROL Receber email]** / **[!UICONTROL Receber chamadas]**.
+Para começar a configurar um público, selecione **[!UICONTROL Receber SMS]** / **[!UICONTROL Receber email]** / **[!UICONTROL Receber chamadas]**.
 
-![Os canais de contato disponíveis para marketing são destacados no construtor de público-alvo.](../images/insights-use-cases/consent-analysis/channels.png)
+![Os canais de contato disponíveis para marketing estão destacados no construtor de público-alvo.](../images/insights-use-cases/consent-analysis/channels.png)
 
-A variável [!UICONTROL Assinaturas] é exibida. Nas opções disponíveis, selecione e arraste o botão **[!UICONTROL Valor de escolha]** para o painel central e selecione o valor desejado no menu suspenso. Nesse caso, selecione **Sim (aceitar)**. Em seguida, nomeie o público-alvo de acordo com suas necessidades comerciais e forneça uma descrição simples.
+A pasta [!UICONTROL Assinaturas] é exibida. Nas opções disponíveis, selecione e arraste o atributo **[!UICONTROL Valor da opção]** para o painel central e selecione o valor desejado no menu suspenso. Nesse caso, selecione **Sim (aceitar)**. Em seguida, nomeie o público-alvo de acordo com suas necessidades comerciais e forneça uma descrição simples.
 
 >[!NOTE]
 >
->Há um limite flexível no número de públicos que você é recomendado criar. Mais informações podem ser encontradas no [documentação das medidas de proteção de segmentação](../../profile/guardrails.md#segmentation-guardrails).
+>Há um limite flexível no número de públicos que você é recomendado criar. Mais informações podem ser encontradas na [documentação de medidas de proteção de segmentação](../../profile/guardrails.md#segmentation-guardrails).
 
-![A variável [!UICONTROL Valor de escolha] atributo com o [!UICONTROL Sim (aceitação)] valor destacado no construtor de segmentos. O nome e a descrição do público-alvo também são destacados.](../images/insights-use-cases/consent-analysis/choice-value.png)
+![O atributo [!UICONTROL Valor de Escolha] com o valor [!UICONTROL Sim (aceitação)] realçado no construtor de segmentos. O nome e a descrição do público-alvo também são destacados.](../images/insights-use-cases/consent-analysis/choice-value.png)
 
-Após criar os públicos-alvo necessários, eles são listados na [!UICONTROL Públicos-alvo] [!UICONTROL Procurar] guia.
+Após criar os públicos necessários, eles serão listados na guia [!UICONTROL Públicos-alvo] [!UICONTROL Procurar].
 
 >[!NOTE]
 >
@@ -68,43 +68,43 @@ Após criar os públicos-alvo necessários, eles são listados na [!UICONTROL P�
 
 ## Consumir insights {#consume-insights}
 
-O Adobe criou vários insights que estão automaticamente disponíveis para você nos painéis Perfis, Públicos-alvo e Destinos. Qualquer público-alvo criado é automaticamente utilizável com esses insights pré-configurados. Consulte a documentação do widget padrão para obter uma lista dos insights disponíveis no [Perfis](../guides/profiles.md#standard-widgets), [Públicos-alvo](../guides/audiences.md#standard-widgets), e [Destinos](../guides/destinations.md) painéis.
+O Adobe criou vários insights que estão automaticamente disponíveis para você nos painéis Perfis, Públicos-alvo e Destinos. Qualquer público-alvo criado é automaticamente utilizável com esses insights pré-configurados. Consulte a documentação do widget padrão para obter uma lista dos insights disponíveis nos painéis [Perfis](../guides/profiles.md#standard-widgets), [Públicos-alvo](../guides/audiences.md#standard-widgets) e [Destinos](../guides/destinations.md).
 
 ## Sobreposição de público {#audience-overlap}
 
-Para revisar a sobreposição entre dois públicos-alvo de consentimento, adicione o [!UICONTROL Sobreposição de público por política de mesclagem] ao painel Perfis e selecione os públicos-alvo desejados nos menus suspensos. Consulte a documentação para obter instruções sobre como adicionar um widget ao seu painel no [*Sobreposição de público por política de mesclagem*](../guides/profiles.md#audience-overlap-by-merge-policy) para obter mais informações sobre o insight.
+Para revisar a sobreposição entre dois públicos-alvo de consentimento, adicione a [!UICONTROL Política de sobreposição de público-alvo por mesclagem] ao painel Perfis e selecione os públicos-alvo desejados nos menus suspensos. Consulte a documentação para obter instruções sobre como adicionar um widget ao seu painel na [*Política de sobreposição de público-alvo por mesclagem*](../guides/profiles.md#audience-overlap-by-merge-policy) para obter mais informações sobre o insight.
 
 <!-- Image needs updating to night mode -->
 
-![O painel Perfis com o widget Sobreposição de público por política de mesclagem é realçado. O widget visualiza as sobreposições entre dois públicos-alvo de consentimento.](../images/insights-use-cases/consent-analysis/audience-overlap-by-merge-policy.png)
+![O painel Perfis com o widget Sobreposição de público por política de mesclagem está realçado. O widget visualiza sobreposições entre dois públicos-alvo de consentimento.](../images/insights-use-cases/consent-analysis/audience-overlap-by-merge-policy.png)
 
-É possível visualizar a sobreposição de todos os públicos-alvo nos quais os usuários consentiram em receber chamadas em todos os outros públicos-alvo, com o relatório de sobreposição de público-alvo no painel Públicos-alvo. Para exibir a sobreposição de públicos-alvo de consentimento, navegue primeiro para a [!UICONTROL Públicos-alvo] [!UICONTROL Visão geral] guia. A partir daí, você pode adicionar a variável [!UICONTROL Relatório de sobreposição de público] para o painel Públicos-alvo. Depois que o widget tiver sido criado, selecione o **[!UICONTROL Usuário consentiu com chamadas]** público-alvo no menu suspenso visão geral do público-alvo na parte superior da página. Em seguida, selecione **[!UICONTROL Exibir mais]** no widget Relatório de sobreposição de público-alvo para ver até 50 das sobreposições principais e até 50 das sobreposições mínimas em relação ao segmento selecionado.
+É possível visualizar a sobreposição de todos os públicos-alvo nos quais os usuários consentiram em receber chamadas em todos os outros públicos-alvo, com o relatório de sobreposição de público-alvo no painel Públicos-alvo. Para exibir a sobreposição de públicos-alvo de consentimento, navegue primeiro para a guia [!UICONTROL Públicos-alvo] [!UICONTROL Visão geral]. A partir daí, você pode adicionar o widget [!UICONTROL Relatório de sobreposição de público] ao painel Públicos. Após a criação do widget, selecione o público-alvo **[!UICONTROL Usuário consentiu com chamadas]** na visão geral do menu suspenso de público-alvo na parte superior da página. Em seguida, selecione **[!UICONTROL Exibir mais]** no widget de relatório de sobreposição de público-alvo para ver até 50 das sobreposições principais e até 50 das sobreposições mínimas relacionadas ao segmento selecionado.
 
 <!-- Image needs updating to night mode -->
 
-![O painel Públicos-alvo com o widget de relatório de sobreposição de público-alvo é exibido. O usuário consentiu em chamar o público-alvo como um público-alvo de comparação, e o link Exibir mais está destacado.](../images/insights-use-cases/consent-analysis/audience-overlap-report-user-consent-to-calls.png)
+![O painel de Públicos-alvo com o widget de relatório de sobreposição de Público-alvo exibido. O Usuário consentiu em chamar o público-alvo como um público-alvo de comparação, e o link Exibir mais estão destacados.](../images/insights-use-cases/consent-analysis/audience-overlap-report-user-consent-to-calls.png)
 
 A caixa de diálogo Relatório de sobreposição de público-alvo é expandida para mostrar dados adicionais de sobreposição de público-alvo.
 
 <!-- Image needs updating to night mode -->
 
-![O relatório Audience overlap, com os Usuários consentidos com o público-alvo de email destacado.](../images/insights-use-cases/consent-analysis/additional-audience-overlap-reports.png)
+![O relatório de sobreposição de Público-alvo, com os Usuários consentidos destacando o público-alvo por email.](../images/insights-use-cases/consent-analysis/additional-audience-overlap-reports.png)
 
 ## Tendências de tamanho do público {#audience-size-trends}
 
-Ao criar um público-alvo com base em consentimento, ele é direcionado automaticamente para até 12 meses a partir da data de criação do público-alvo. Para ter uma tendência totalmente funcional do consentimento do cliente, adicione os seguintes widgets à [!UICONTROL Segmentos] [!UICONTROL Visão geral] página. Esses insights oferecem um meio poderoso de rastrear como o seu consentimento está mudando com o tempo. Eles até se correlacionam com qualquer campanha que você execute em paralelo e que possa afetar o consentimento de forma positiva ou negativa. As descrições oferecidas para esses widgets se aplicam a um caso de uso de consentimento.
+Ao criar um público-alvo com base em consentimento, ele é direcionado automaticamente para até 12 meses a partir da data de criação do público-alvo. Para ter uma tendência totalmente funcional do consentimento do cliente, adicione os seguintes widgets à página [!UICONTROL Segmentos] [!UICONTROL Visão geral]. Esses insights oferecem um meio poderoso de rastrear como o seu consentimento está mudando com o tempo. Eles até se correlacionam com qualquer campanha que você execute em paralelo e que possa afetar o consentimento de forma positiva ou negativa. As descrições oferecidas para esses widgets se aplicam a um caso de uso de consentimento.
 
-- [Tendência de tamanho do público](../guides/audiences.md#audience-size-trend): este widget oferece uma maneira de rastrear como seu respectivo consentimento mudou com o tempo.
-- [Tendência de alteração de tamanho do público](../guides/audiences.md#audience-size-change-trend): este widget rastreia diariamente como o consentimento do cliente foi alterado. Por exemplo, se a contagem do consentimento do cliente cair em 100.000, você poderá ver como essa alteração ocorreu diariamente.
-- [Tendência de tamanho do público por identidade](../guides/audiences.md#audience-size-trend-by-identity): com esse widget, você pode rastrear como seu respectivo consentimento foi alterado ao longo do tempo, mas filtrado ainda mais por uma identidade específica, como um email.
+- [Tendência de tamanho do público-alvo](../guides/audiences.md#audience-size-trend): esse widget oferece uma maneira de acompanhar como seu respectivo consentimento foi alterado ao longo do tempo.
+- [Tendência de alteração no tamanho do público-alvo](../guides/audiences.md#audience-size-change-trend): esse widget acompanha o modo como o consentimento do cliente é alterado diariamente. Por exemplo, se a contagem do consentimento do cliente cair em 100.000, você poderá ver como essa alteração ocorreu diariamente.
+- [Tendência de tamanho do público por identidade](../guides/audiences.md#audience-size-trend-by-identity): com este widget, você pode acompanhar como seu respectivo consentimento mudou com o tempo, mas foi filtrado ainda mais por uma identidade específica, como um email.
 
 <!-- Image needs updating to night mode -->
 
-![O painel Públicos-alvo com o widget Tendência de tamanho do público-alvo, Tendência de tamanho do público-alvo por identidade e Tendência de alteração de tamanho do público-alvo exibido. A página Usuários consentidos com o público-alvo de email é destacada.](../images/insights-use-cases/consent-analysis/three-audience-trend-widgets.png)
+![O painel de Públicos-alvo com a tendência de tamanho do Público-alvo, tendência de tamanho do Público-alvo por identidade e widget de tendência de alteração de tamanho do Público-alvo exibido. O campo Usuários consentidos com o email do público é destacado.](../images/insights-use-cases/consent-analysis/three-audience-trend-widgets.png)
 
 ## Painel de visão geral do Audiences {#audiences-overview-dashboard}
 
-Depois de criar um público-alvo relacionado ao consentimento, como &quot;Usuários consentidos com SMS&quot;, você pode exibir as principais informações de consentimento personalizadas sobre o público-alvo adicionando os widgets apropriados ao painel Visão geral do público-alvo. Navegue até a [!UICONTROL Públicos-alvo] [!UICONTROL Visão geral] e adicione os widgets escolhidos da biblioteca de widgets. Qualquer widget adicionado à sua visualização do painel pode ser redimensionado e movido usando o [!UICONTROL Modificar painel] recurso. Sua visualização personalizada pode conter insights, como a tendência ao longo do tempo (até 12 meses), as sobreposições com outros públicos-alvo e a composição de identidade do público-alvo. Um exemplo de exibição é mostrado abaixo.
+Depois de criar um público-alvo relacionado ao consentimento, como &quot;Usuários consentidos com SMS&quot;, você pode exibir as principais informações de consentimento personalizadas sobre o público-alvo adicionando os widgets apropriados ao painel Visão geral do público-alvo. Navegue até [!UICONTROL Públicos-alvo] [!UICONTROL Visão geral] e adicione os widgets escolhidos da biblioteca de widgets. Qualquer widget adicionado à sua exibição do painel pode ser redimensionado e movido usando o recurso [!UICONTROL Modificar painel]. Sua visualização personalizada pode conter insights, como a tendência ao longo do tempo (até 12 meses), as sobreposições com outros públicos-alvo e a composição de identidade do público-alvo. Um exemplo de exibição é mostrado abaixo.
 
 ![O painel de públicos-alvo com os Usuários consentidos com o público-alvo do SMS destacado no menu suspenso de público-alvo global.](../images/insights-use-cases/consent-analysis/audience-dashboard-user-consent-to-sms.png)
 
@@ -112,11 +112,11 @@ Depois de criar um público-alvo relacionado ao consentimento, como &quot;Usuár
 
 Você também pode criar seus próprios widgets com painéis definidos pelo usuário. Criar seu próprio widget fornece controle total sobre o tipo de widget, além de flexibilidade para adicionar filtros e muito mais, diretamente no Adobe Real-Time CDP.
 
-Por exemplo, se você quiser direcionar vários públicos-alvo de consentimento no mesmo gráfico, para que possa ver ao longo do tempo como cada uma de suas preferências de consentimento foi alterada. Esse tipo de visualização é possível com painéis definidos pelo usuário em etapas mínimas e uma configuração única. Primeiro, selecione **[!UICONTROL Painéis]** no painel de navegação esquerdo. A variável [!UICONTROL Painéis] espaço de trabalho é exibido. Em seguida, selecione **[!UICONTROL Criar painel]**. Instruções completas sobre como [criar um painel e um widget personalizado](../user-defined-dashboards.md) podem ser encontradas no guia de painéis definido pelo usuário.
+Por exemplo, se você quiser direcionar vários públicos-alvo de consentimento no mesmo gráfico, para que possa ver ao longo do tempo como cada uma de suas preferências de consentimento foi alterada. Esse tipo de visualização é possível com painéis definidos pelo usuário em etapas mínimas e uma configuração única. Primeiro, selecione **[!UICONTROL Painéis]** na navegação à esquerda. O espaço de trabalho [!UICONTROL Painéis] é exibido. Em seguida, selecione **[!UICONTROL Criar painel]**. Instruções completas sobre como [criar um painel e um widget personalizado](../user-defined-dashboards.md) podem ser encontradas no guia de painéis definido pelo usuário.
 
-![A área de trabalho de painéis com Painéis e Criar painel realçados.](../images/user-defined-dashboards/create-dashboard.png)
+![O espaço de trabalho de painéis com Painéis e Criar painel realçados.](../images/user-defined-dashboards/create-dashboard.png)
 
-Quando você [selecionar seu modelo de dados](../user-defined-dashboards.md#select-data-model) no widget composer, selecione `CDPInsights` seguido por **[!UICONTROL Próxima]**. A variável [!UICONTROL Selecionar tabela] será exibida.
+Quando você [selecionar seu modelo de dados](../user-defined-dashboards.md#select-data-model) no widget composer, selecione `CDPInsights` seguido de **[!UICONTROL Próximo]**. A caixa de diálogo [!UICONTROL Selecionar tabela] é exibida.
 
 ![A caixa de diálogo Selecionar modelo de dados com o modelo CDPInsights está realçada.](../images/user-defined-dashboards/select-data-model-dialog.png)
 
@@ -126,36 +126,36 @@ A próxima exibição exibe uma lista das tabelas disponíveis no painel esquerd
 
 Depois que o widget composer for preenchido com dados da tabela escolhida, execute as etapas abaixo:
 
-- [Pesquisar [!UICONTROL Atributos]](../user-defined-dashboards.md#add-filter-attributes) para `[!UICONTROL date]`, use o ícone + para adicionar o `[!UICONTROL date]` para o eixo X no menu suspenso.
-  ![O compositor de widgets com o ícone de adição e o menu suspenso realçados.](../images/user-defined-dashboards/attributes-dropdown.png)
-- Pesquisar [!UICONTROL Atributos] para `[!UICONTROL count_of_profiles]`, use o ícone + para adicionar o `[!UICONTROL count_of_profiles]` para o eixo Y no menu suspenso.
-- Selecione o `...` (reticências) no campo [!UICONTROL Eixo Y] e selecione o [!UICONTROL SOMA] agregar função no menu suspenso.
-  ![O widget Composição de widget Tendências de consentimento com o modelo de dados, a tabela, o menu suspenso do eixo Y e o recurso SOMA destacados. ](../images/insights-use-cases/consent-analysis/y-axis-sum-function.png)
-- Selecione o [!UICONTROL Marcas] e altere o tipo de gráfico para [!UICONTROL Linha].
-- Pesquisar [!UICONTROL Atributos] para o `[!UICONTROL segment_name]`, use o ícone + para adicionar o `segment_name` as a [!UICONTROL Filtro] no menu suspenso. A variável [!UICONTROL Filtro: Segment_name] será exibida. Selecione os públicos-alvo criados anteriormente que estão relacionados ao consentimento. Para este exemplo, selecione **[!UICONTROL Usuários consentidos com chamadas]**, **[!UICONTROL Usuários consentidos com o SMS]**, e **[!UICONTROL Usuários consentidos com o email]**, seguido por **[!UICONTROL Aplicar]**.
-- Pesquisar [!UICONTROL Atributos] para `[!UICONTROL segment_name]`, em seguida, selecione o ícone + para adicionar `segment_name` as a [!UICONTROL Cor] no menu suspenso.
-- Abertura [o [!UICONTROL Propriedades] painel](../user-defined-dashboards.md#widget-properties) e fornecer uma [!UICONTROL Título do widget] e [!UICONTROL Rótulo do eixo].
-  ![O compositor de widgets com o ícone de propriedades e o Título do widget realçados.](../images/user-defined-dashboards/properties-panel.png)
-- Selecionar **[!UICONTROL Salvar e fechar]** para confirmar as configurações.
+- [Pesquise [!UICONTROL Atributos]](../user-defined-dashboards.md#add-filter-attributes) para `[!UICONTROL date]` e use o ícone + para adicionar o atributo `[!UICONTROL date]` ao eixo X do menu suspenso.
+  ![O widget composer com o ícone de adição e menu suspenso realçado.](../images/user-defined-dashboards/attributes-dropdown.png)
+- Pesquise [!UICONTROL Atributos] para `[!UICONTROL count_of_profiles]`, em seguida, use o ícone + para adicionar o atributo `[!UICONTROL count_of_profiles]` ao eixo Y do menu suspenso.
+- Selecione o ícone `...` (elipses) no campo [!UICONTROL Eixo Y] e selecione a função de agregação [!UICONTROL SUM] no menu suspenso.
+  ![Widget de Tendências de consentimento do widget com o modelo de dados, a tabela, o menu suspenso do eixo Y e o recurso SOMA destacados. ](../images/insights-use-cases/consent-analysis/y-axis-sum-function.png)
+- Selecione o menu suspenso [!UICONTROL Marcas] e altere o tipo de gráfico para [!UICONTROL Linha].
+- Pesquise [!UICONTROL Atributos] para `[!UICONTROL segment_name]`, em seguida, use o ícone + para adicionar o `segment_name` como um [!UICONTROL Filtro] no menu suspenso. A caixa de diálogo [!UICONTROL Filtro: Nome_do_Segmento] é exibida. Selecione os públicos-alvo criados anteriormente que estão relacionados ao consentimento. Para este exemplo, selecione **[!UICONTROL Usuários Consentidos em Chamadas]**, **[!UICONTROL Usuários Consentidos em SMS]** e **[!UICONTROL Usuários Consentidos em Email]**, seguido de **[!UICONTROL Aplicar]**.
+- Pesquise [!UICONTROL Atributos] para `[!UICONTROL segment_name]` e selecione o ícone + para adicionar `segment_name` como [!UICONTROL Cor] no menu suspenso.
+- Abra [o painel [!UICONTROL Propriedades]](../user-defined-dashboards.md#widget-properties) e forneça um [!UICONTROL Título do widget] e um [!UICONTROL Rótulo do eixo] apropriados.
+  ![O widget composer com o ícone de propriedades e o título do Widget destacados.](../images/user-defined-dashboards/properties-panel.png)
+- Selecione **[!UICONTROL Salvar e fechar]** para confirmar suas configurações.
 
 >[!TIP]
 >
 >Agora é possível redimensionar ou mover o widget para o tamanho e a posição desejados antes de salvar o painel.
 
 
-A imagem abaixo demonstra como o widget concluído é exibido e outros insights personalizados em potencial. Para obter mais detalhes sobre os tipos de widgets que podem ser criados, consulte o [documentação do modelo de dados](../data-models/cdp-insights-data-model-b2c.md).
+A imagem abaixo demonstra como o widget concluído é exibido e outros insights personalizados em potencial. Para obter mais detalhes sobre os tipos de widgets que podem ser criados, consulte a [documentação sobre modelo de dados](../data-models/cdp-insights-data-model-b2c.md).
 
 <!-- The diagram shows straight lines due to a lack of data, however in your environment the trends will reflect the actual changes over time. -->
 
-![O widget personalizado Tendências de consentimento concluído.](../images/insights-use-cases/consent-analysis/consent-trends-widget.png)
+![Widget de Tendências de consentimento personalizado concluído.](../images/insights-use-cases/consent-analysis/consent-trends-widget.png)
 
 ## Rastreamento de políticas de consentimento {#consent-policies}
 
-Os painéis de consentimento criados capturam o **somente distribuição de atributos de consentimento e preferência**.
+Os painéis de consentimento criados capturam apenas a **distribuição de atributos de consentimento e preferência**.
 
 >[!NOTE]
 >
->Para clientes do **Adobe Healthcare Shield** ou **Proteção de segurança e privacidade do Adobe**, estes painéis **não** refletir qualquer rastreamento de políticas de consentimento. O rastreamento disponível inclui o número de políticas criadas, ativadas e o impacto na associação do público-alvo.
+>Para clientes do **Adobe Healthcare Shield** ou do **Adobe Privacy &amp; Security Shield**, esses painéis **não** refletem qualquer rastreamento de políticas de consentimento. O rastreamento disponível inclui o número de políticas criadas, ativadas e o impacto na associação do público-alvo.
 
 ## Próximas etapas
 

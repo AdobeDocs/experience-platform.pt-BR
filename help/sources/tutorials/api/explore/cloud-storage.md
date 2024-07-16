@@ -5,33 +5,33 @@ description: Este tutorial usa a API de serviço de fluxo para explorar um siste
 exl-id: ba1a9bff-43a6-44fb-a4e7-e6a45b7eeebd
 source-git-commit: 9b9803b4d2aeb2a86ef980f34ee34909679ea3d9
 workflow-type: tm+mt
-source-wordcount: '699'
-ht-degree: 5%
+source-wordcount: '691'
+ht-degree: 4%
 
 ---
 
-# Explore suas pastas de armazenamento na nuvem usando o [!DNL Flow Service] API
+# Explore suas pastas de armazenamento na nuvem usando a API do [!DNL Flow Service]
 
-Este tutorial fornece etapas sobre como explorar e visualizar a estrutura e o conteúdo do seu armazenamento em nuvem usando o [[!DNL Flow Service]](https://www.adobe.io/experience-platform-apis/references/flow-service/) API.
+Este tutorial fornece etapas sobre como explorar e visualizar a estrutura e o conteúdo do seu armazenamento na nuvem usando a API do [[!DNL Flow Service]](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 >[!NOTE]
 >
->Para explorar seu armazenamento na nuvem, você já deve ter uma ID de conexão básica válida para uma fonte de armazenamento na nuvem. Se você não tiver essa ID, consulte a [visão geral das origens](../../../home.md#cloud-storage) para obter uma lista de fontes de armazenamento na nuvem com as quais você pode criar uma conexão básica.
+>Para explorar seu armazenamento na nuvem, você já deve ter uma ID de conexão básica válida para uma fonte de armazenamento na nuvem. Se você não tiver essa ID, consulte a [visão geral das fontes](../../../home.md#cloud-storage) para obter uma lista de fontes de armazenamento na nuvem com as quais você pode criar uma conexão base.
 
 ## Introdução
 
 Este manual necessita de uma compreensão funcional dos seguintes componentes da Adobe Experience Platform:
 
-* [Origens](../../../home.md): [!DNL Experience Platform] O permite que os dados sejam assimilados de várias fontes e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando o [!DNL Platform] serviços.
-* [Sandboxes](../../../../sandboxes/home.md): [!DNL Experience Platform] O fornece sandboxes virtuais que particionam uma única [!DNL Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
+* [Fontes](../../../home.md): [!DNL Experience Platform] permite que os dados sejam assimilados de várias fontes e fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços do [!DNL Platform].
+* [Sandboxes](../../../../sandboxes/home.md): [!DNL Experience Platform] fornece sandboxes virtuais que particionam uma única instância do [!DNL Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
 ### Uso de APIs da plataforma
 
-Para obter informações sobre como fazer chamadas para APIs da Platform com êxito, consulte o manual em [introdução às APIs da Platform](../../../../landing/api-guide.md).
+Para obter informações sobre como fazer chamadas para APIs da Platform com êxito, consulte o manual sobre [introdução às APIs da Platform](../../../../landing/api-guide.md).
 
 ## Explore suas pastas de armazenamento na nuvem
 
-Você pode recuperar informações sobre a estrutura das pastas de armazenamento na nuvem fazendo uma solicitação GET ao [!DNL Flow Service] ao fornecer a ID de conexão básica da sua origem.
+Você pode recuperar informações sobre a estrutura de suas pastas de armazenamento na nuvem fazendo uma solicitação GET para a API [!DNL Flow Service] enquanto fornece a ID de conexão básica de sua origem.
 
 Ao executar solicitações do GET para explorar seu armazenamento na nuvem, você deve incluir os parâmetros de consulta listados na tabela abaixo:
 
@@ -66,7 +66,7 @@ curl -X GET \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna uma matriz de arquivos e pastas encontrados no diretório consultado. Anote as `path` propriedade do arquivo que você deseja fazer upload, pois é necessário fornecê-lo na próxima etapa para inspecionar sua estrutura.
+Uma resposta bem-sucedida retorna uma matriz de arquivos e pastas encontrados no diretório consultado. Anote a propriedade `path` do arquivo que deseja carregar, pois você deverá fornecê-la na próxima etapa para inspecionar sua estrutura.
 
 ```json
 [
@@ -113,7 +113,7 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=FILE&object={FILE_PATH}
 | --------- | ----------- |
 | `{BASE_CONNECTION_ID}` | A ID de conexão do conector de origem de armazenamento na nuvem. |
 | `{FILE_PATH}` | O caminho para o arquivo que você deseja inspecionar. |
-| `{FILE_TYPE}` | O tipo do arquivo. Os tipos de arquivos compatíveis incluem:<ul><li><code>DELIMITADO</code>: valor separado por delimitadores. Os arquivos DSV devem ser separados por vírgulas.</li><li><code>JSON</code>: notação de objeto JavaScript. Os arquivos JSON devem ser compatíveis com XDM</li><li><code>PARQUET</code>: Apache Parquet. Os arquivos Parquet devem ser compatíveis com XDM.</li></ul> |
+| `{FILE_TYPE}` | O tipo do arquivo. Os tipos de arquivos compatíveis incluem:<ul><li><code>DELIMITADO</code>: valor separado por delimitadores. Os arquivos DSV devem ser separados por vírgulas.</li><li><code>JSON</code>: Notação de objeto do JavaScript. Os arquivos JSON devem ser compatíveis com XDM</li><li><code>PARQUET</code>: Apache Parquet. Os arquivos Parquet devem ser compatíveis com XDM.</li></ul> |
 | `{QUERY_PARAMS}` | Parâmetros de consulta opcionais que podem ser usados para filtrar resultados. Consulte a seção sobre [parâmetros de consulta](#query) para obter mais informações. |
 
 **Solicitação**
@@ -158,14 +158,14 @@ Uma resposta bem-sucedida retorna a estrutura do arquivo consultado, incluindo n
 
 ## Uso de parâmetros de consulta {#query}
 
-A variável [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) O é compatível com o uso de parâmetros de consulta para visualizar e inspecionar diferentes tipos de arquivos.
+A [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) oferece suporte ao uso de parâmetros de consulta para visualizar e inspecionar diferentes tipos de arquivos.
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `columnDelimiter` | O valor de caractere único especificado como delimitador de coluna para inspecionar arquivos CSV ou TSV. Se o parâmetro não for fornecido, o valor será padronizado como vírgula `(,)`. |
+| `columnDelimiter` | O valor de caractere único especificado como delimitador de coluna para inspecionar arquivos CSV ou TSV. Se o parâmetro não for fornecido, o valor padrão será uma vírgula `(,)`. |
 | `compressionType` | Um parâmetro de consulta necessário para visualizar um arquivo JSON ou delimitado compactado. Os arquivos compactados compatíveis são: <ul><li>`bzip2`</li><li>`gzip`</li><li>`deflate`</li><li>`zipDeflate`</li><li>`tarGzip`</li><li>`tar`</li></ul> |
-| `encoding` | Define qual tipo de codificação usar ao renderizar a visualização. Os tipos de codificação compatíveis são: `UTF-8` e `ISO-8859-1`. **Nota**: A variável `encoding` O parâmetro só está disponível ao assimilar arquivos CSV delimitados. Outros tipos de arquivo serão assimilados com a codificação padrão, `UTF-8`. |
+| `encoding` | Define qual tipo de codificação usar ao renderizar a visualização. Os tipos de codificação com suporte são: `UTF-8` e `ISO-8859-1`. **Observação**: o parâmetro `encoding` só está disponível ao assimilar arquivos CSV delimitados. Outros tipos de arquivos serão assimilados com a codificação padrão, `UTF-8`. |
 
 ## Próximas etapas
 
-Seguindo este tutorial, você explorou seu sistema de armazenamento em nuvem, encontrou o caminho do arquivo que deseja trazer para [!DNL Platform]e visualizou sua estrutura. Você pode usar essas informações no próximo tutorial para [coletar dados do seu armazenamento na nuvem e trazê-los para a Platform](../collect/cloud-storage.md).
+Seguindo este tutorial, você explorou seu sistema de armazenamento em nuvem, encontrou o caminho do arquivo que deseja trazer para [!DNL Platform] e visualizou sua estrutura. Você pode usar essas informações no próximo tutorial para [coletar dados do armazenamento na nuvem e trazê-los para a Platform](../collect/cloud-storage.md).

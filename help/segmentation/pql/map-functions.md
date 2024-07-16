@@ -1,22 +1,22 @@
 ---
 solution: Experience Platform
-title: Funções de Mapa PQL
-description: A Linguagem de consulta de perfil (PQL) oferece funções para facilitar a interação com mapas.
+title: Funções do PQL Map
+description: O Profile Query Language (PQL) oferece funções para facilitar a interação com mapas.
 exl-id: f23616f2-c0dd-40ce-8cfc-c757542fbd05
 source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
 source-wordcount: '156'
-ht-degree: 7%
+ht-degree: 6%
 
 ---
 
 # Funções do mapa
 
-[!DNL Profile Query Language] O (PQL) oferece funções para facilitar a interação com mapas. Mais informações sobre outras funções PQL podem ser encontradas no [[!DNL Profile Query Language] visão geral](./overview.md).
+O [!DNL Profile Query Language] (PQL) oferece funções para facilitar a interação com mapas. Mais informações sobre outras funções do PQL podem ser encontradas na [[!DNL Profile Query Language] visão geral](./overview.md).
 
-## Obtenha
+## Obter
 
-A variável `get` é usada para recuperar o valor de um mapa para uma determinada chave.
+A função `get` é usada para recuperar o valor de um mapa para uma determinada chave.
 
 **Formato**
 
@@ -26,7 +26,7 @@ A variável `get` é usada para recuperar o valor de um mapa para uma determinad
 
 **Exemplo**
 
-A consulta PQL a seguir obtém o valor do mapa de identidade da chave `example@example.com`.
+A consulta PQL a seguir obtém o valor do mapa de identidade para a chave `example@example.com`.
 
 ```sql
 identityMap.get("example@example.com")
@@ -34,7 +34,7 @@ identityMap.get("example@example.com")
 
 ## Chaves
 
-A variável `keys` é usada para recuperar todas as chaves de um determinado mapa.
+A função `keys` é usada para recuperar todas as chaves de um determinado mapa.
 
 **Formato**
 
@@ -52,7 +52,7 @@ identityMap.keys()
 
 ## Valores
 
-A variável `values` é usada para recuperar todos os valores de um determinado mapa.
+A função `values` é usada para recuperar todos os valores de um determinado mapa.
 
 **Formato**
 
@@ -70,4 +70,4 @@ identityMap.values()
 
 ## Próximas etapas
 
-Agora que você aprendeu sobre funções de mapa, é possível usá-las em consultas PQL. Para obter mais informações sobre outras funções PQL, leia o [Visão geral do idioma de consulta do perfil](./overview.md).
+Agora que você aprendeu sobre funções de mapa, é possível usá-las em consultas do PQL. Para obter mais informações sobre outras funções do PQL, leia a [visão geral do Profile Query Language](./overview.md).

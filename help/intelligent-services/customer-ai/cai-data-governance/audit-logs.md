@@ -6,7 +6,7 @@ exl-id: f5b2d0b0-b6ae-4ccc-b4c9-ac9cc6078d81
 source-git-commit: f28558d5939607cabf449cbc03b7e0f5406f6326
 workflow-type: tm+mt
 source-wordcount: '282'
-ht-degree: 35%
+ht-degree: 0%
 
 ---
 
@@ -20,6 +20,6 @@ Basicamente, um log de auditoria informa quem executou qual ação e quando. Cad
 
 ## Acesso a logs de auditoria
 
-Quando o recurso é ativado para sua organização, os logs de auditoria são coletados automaticamente conforme a atividade ocorre. Não é necessário ativar manualmente a coleção de log.
+Quando o recurso é ativado para sua organização, os logs de auditoria são coletados automaticamente conforme a atividade ocorre. Não é necessário ativar manualmente a coleção de logs.
 
-Para visualizar e exportar logs de auditoria, você deve ter recebido a permissão de controle Acesso aos logs de auditoria no console da Adobe. Para saber como gerenciar permissões individuais para recursos da IA do cliente, consulte a [documentação de controle de acesso](../cai-data-governance/access-controls.md).
+Para visualizar e exportar logs de auditoria, você deve ter recebido a permissão de controle Acesso aos logs de auditoria no console do Adobe. Para saber como gerenciar permissões individuais para recursos da IA do cliente, consulte a [documentação de controle de acesso](../cai-data-governance/access-controls.md).

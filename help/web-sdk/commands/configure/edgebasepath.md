@@ -1,7 +1,8 @@
 ---
 title: edgeBasePath
 description: O caminho base do endpoint usado para interagir com os serviços da Adobe.
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+exl-id: 3542575d-ad02-415c-8e47-97c877dfdd9d
+source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
 source-wordcount: '156'
 ht-degree: 0%
@@ -10,22 +11,22 @@ ht-degree: 0%
 
 # `edgeBasePath`
 
-A variável `edgeBasePath` altera o caminho de destino quando você interage com os serviços da Adobe. A maioria das organizações não precisa definir ou alterar essa propriedade.
+A propriedade `edgeBasePath` altera o caminho de destino quando você interage com os serviços da Adobe. A maioria das organizações não precisa definir ou alterar essa propriedade.
 
-## Caminho base de borda usando a extensão de tag do SDK da Web
+## Caminho básico do Edge usando a extensão de tag do SDK da Web
 
-Insira o texto desejado na caixa **[!UICONTROL Caminho base da borda]** campo de texto quando [configuração da extensão de tag](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
+Insira o texto desejado no campo de texto **[!UICONTROL caminho base do Edge]** ao [configurar a extensão de marca](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
 
-1. Efetue logon no [experience.adobe.com](https://experience.adobe.com) usando suas credenciais do Adobe ID.
-1. Navegue até **[!UICONTROL Coleta de dados]** > **[!UICONTROL Tags]**.
+1. Faça logon em [experience.adobe.com](https://experience.adobe.com) usando suas credenciais da Adobe ID.
+1. Navegue até **[!UICONTROL Coleção de dados]** > **[!UICONTROL Marcas]**.
 1. Selecione a propriedade de tag desejada.
-1. Navegue até **[!UICONTROL Extensões]** e, em seguida, clique em **[!UICONTROL Configurar]** no [!UICONTROL Adobe Experience Platform Web SDK] cartão.
-1. Role para baixo até [!UICONTROL Configurações avançadas] e insira o valor desejado na caixa de diálogo **[!UICONTROL Caminho base da borda]** campo de texto.
-1. Clique em **[!UICONTROL Salvar]** e, em seguida, publique as alterações.
+1. Navegue até **[!UICONTROL Extensões]** e clique em **[!UICONTROL Configurar]** no cartão [!UICONTROL Adobe Experience Platform Web SDK].
+1. Role para baixo até a seção [!UICONTROL Configurações avançadas] e insira o valor desejado no campo de texto **[!UICONTROL caminho base do Edge]**.
+1. Clique em **[!UICONTROL Salvar]** e publique suas alterações.
 
-## Caminho base de borda usando a biblioteca JavaScript do SDK da Web
+## Caminho básico do Edge usando a biblioteca JavaScript do SDK da Web
 
-Defina o `edgeBasePath` campo de texto ao executar o `configure` comando. Se você omitir essa propriedade, o padrão será o valor de `ee`. O Adobe recomenda omitir essa propriedade na maioria das configurações.
+Definir o campo de texto `edgeBasePath` ao executar o comando `configure`. Se você omitir essa propriedade, o padrão será o valor de `ee`. O Adobe recomenda omitir essa propriedade na maioria das configurações.
 
 ```js
 alloy("configure", {

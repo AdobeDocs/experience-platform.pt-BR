@@ -15,7 +15,7 @@ ht-degree: 33%
 # Catálogo e conjuntos de dados {#catalog}
 
 * [Visão geral do Serviço de catálogo](home.md)
-* API do serviço de catálogo {#api}
+* API de Serviço de Catálogo {#api}
    * [Introdução](api/getting-started.md)
    * [Filtrar dados do catálogo usando parâmetros de consulta](api/filter-data.md)
    * [Listar objetos](api/list-objects.md)
@@ -36,4 +36,4 @@ ht-degree: 33%
    * [Ativar um conjunto de dados para atualizações de Perfil (substituir)](datasets/enable-upsert.md)
 * [Processamento de solicitação de privacidade no Data Lake](privacy.md)
 * [Referência da API](https://www.adobe.io/experience-platform-apis/references/catalog/)
-* [Notas de versão da Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [Notas de versão da Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest?lang=pt-BR)

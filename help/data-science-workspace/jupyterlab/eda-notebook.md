@@ -7,7 +7,7 @@ description: Este guia foca em como usar o Notebook de análise exploratória de
 exl-id: 48209326-0a07-4b5c-8b49-a2082a78fa47
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
-source-wordcount: '2760'
+source-wordcount: '2766'
 ht-degree: 0%
 
 ---
@@ -22,11 +22,11 @@ A segunda parte começa com a análise descritiva de dados agregados usando bibl
 
 ## Introdução
 
-Antes de ler este guia, consulte o [[!DNL JupyterLab] guia do usuário](./overview.md) para obter uma introdução geral ao [!DNL JupyterLab] e sua função no Espaço de trabalho de ciência de dados. Além disso, se você estiver usando seus próprios dados, revise a documentação para [acesso a dados no [!DNL Jupyterlab] notebooks](./access-notebook-data.md). Este guia contém informações importantes sobre limites de dados de notebooks.
+Antes de ler este guia, consulte o [[!DNL JupyterLab] guia do usuário](./overview.md) para obter uma introdução geral sobre o [!DNL JupyterLab] e sua função no Data Science Workspace. Além disso, se você estiver usando seus próprios dados, revise a documentação do [acesso aos dados em [!DNL Jupyterlab] blocos de anotações](./access-notebook-data.md). Este guia contém informações importantes sobre limites de dados de notebooks.
 
-Este bloco de anotações usa um conjunto de dados de valores médios na forma de dados de Eventos de experiência do Adobe Analytics encontrados no Analysis Workspace do Analytics. Para usar o bloco de anotações EDA, é necessário definir a tabela de dados com os seguintes valores `target_table` e `target_table_id`. Qualquer conjunto de dados de valores médios pode ser usado.
+Este bloco de anotações usa um conjunto de dados de valores médios na forma de dados de Eventos de experiência do Adobe Analytics encontrados no Analysis Workspace do Analytics. Para usar o bloco de anotações EDA, você precisa definir sua tabela de dados com os seguintes valores `target_table` e `target_table_id`. Qualquer conjunto de dados de valores médios pode ser usado.
 
-Para localizar esses valores, siga as etapas descritas na [gravar em um conjunto de dados em python](./access-notebook-data.md#write-python) seção do guia de acesso a dados do JupyterLab. O nome do conjunto de dados (`target_table`) está localizado no diretório do conjunto de dados. Depois de clicar com o botão direito do mouse no conjunto de dados para explorar ou gravar dados em um notebook, uma ID do conjunto de dados (`target_table_id`) é fornecido na entrada do código executável.
+Para encontrar esses valores, siga as etapas descritas na seção [gravar em um conjunto de dados em Python](./access-notebook-data.md#write-python) do guia de acesso a dados do JupyterLab. O nome do conjunto de dados (`target_table`) está localizado no diretório do conjunto de dados. Depois de clicar com o botão direito do mouse no conjunto de dados para explorar ou gravar dados em um bloco de anotações, uma ID de conjunto de dados (`target_table_id`) é fornecida na entrada de código executável.
 
 ## Descoberta de dados
 
@@ -34,7 +34,7 @@ Esta seção contém etapas de configuração e exemplos de consulta usados para
 
 ### Configuração de bibliotecas
 
-O JupyterLab é compatível com várias bibliotecas. O código a seguir pode ser colado e executado em uma célula de código para coletar e instalar todos os pacotes necessários usados neste exemplo. Você pode usar pacotes adicionais ou alternativos fora deste exemplo para sua própria análise de dados. Para obter uma lista de pacotes compatíveis, copie e cole `!pip list --format=columns` em uma nova célula.
+O JupyterLab é compatível com várias bibliotecas. O código a seguir pode ser colado e executado em uma célula de código para coletar e instalar todos os pacotes necessários usados neste exemplo. Você pode usar pacotes adicionais ou alternativos fora deste exemplo para sua própria análise de dados. Para obter uma lista de pacotes com suporte, copie e cole `!pip list --format=columns` em uma nova célula.
 
 ```python
 !pip install colorama
@@ -62,11 +62,11 @@ pd.set_option('display.expand_frame_repr', False)
 pd.set_option('display.max_colwidth', -1)
 ```
 
-### Conectar-se ao Adobe Experience Platform [!DNL Query Service]
+### Conectar ao Adobe Experience Platform [!DNL Query Service]
 
-[!DNL JupyterLab] na plataforma permite usar o SQL em uma [!DNL Python] notebook para acessar os dados por meio de [Serviço de consulta](https://www.adobe.com/go/query-service-home-en). Acesso aos dados pelo [!DNL Query Service] pode ser útil para lidar com grandes conjuntos de dados devido aos seus tempos de execução superiores. Observe que consultar dados usando [!DNL Query Service] O tem um limite de tempo de processamento de dez minutos.
+[!DNL JupyterLab] na Plataforma permite usar o SQL em um bloco de anotações [!DNL Python] para acessar dados por meio do [Serviço de Consulta](https://www.adobe.com/go/query-service-home-en). O acesso aos dados por meio do [!DNL Query Service] pode ser útil para lidar com grandes conjuntos de dados devido aos seus tempos de execução superiores. Observe que a consulta de dados usando o [!DNL Query Service] tem um limite de tempo de processamento de dez minutos.
 
-Antes de usar [!DNL Query Service] in [!DNL JupyterLab], garanta um entendimento prático das [[!DNL Query Service] Sintaxe SQL](https://www.adobe.com/go/query-service-sql-syntax-en).
+Antes de usar [!DNL Query Service] em [!DNL JupyterLab], verifique se você tem uma compreensão funcional da [[!DNL Query Service] sintaxe SQL](https://www.adobe.com/go/query-service-sql-syntax-en).
 
 Para utilizar o Serviço de consulta no JupyterLab, primeiro você deve criar uma conexão entre seu bloco de anotações Python de trabalho e o Serviço de consulta. Isso pode ser feito executando a seguinte célula.
 
@@ -76,7 +76,7 @@ qs_connect()
 
 ### Definir o conjunto de dados de midvalues para exploração
 
-Para começar a consultar e explorar dados, uma tabela de conjunto de dados de midvalues deve ser fornecida. Copie e substitua o `table_name` e `table_id` valores com seus próprios valores da tabela de dados.
+Para começar a consultar e explorar dados, uma tabela de conjunto de dados de midvalues deve ser fornecida. Copie e substitua os valores `table_name` e `table_id` por seus próprios valores de tabela de dados.
 
 ```python
 target_table = "table_name"
@@ -104,7 +104,7 @@ order by Year, Month;
 
 A execução da célula produz a seguinte saída:
 
-![saída da data da consulta](../images/jupyterlab/eda/query-date-output.PNG)
+![saída da data de consulta](../images/jupyterlab/eda/query-date-output.PNG)
 
 ### Configurar datas para descoberta de conjunto de dados
 
@@ -118,7 +118,7 @@ target_day = "(01,02,03)" ## The target days
 
 ### Descoberta de conjunto de dados
 
-Após configurar todos os parâmetros, inicie [!DNL Query Service]e tiver um intervalo de datas, você estará pronto para começar a ler linhas de dados. Você deve limitar o número de linhas lidas.
+Depois de configurar todos os parâmetros, começou em [!DNL Query Service], e tem um intervalo de datas, você está pronto para começar a ler linhas de dados. Você deve limitar o número de linhas lidas.
 
 ```python
 from platform_sdk.dataset_reader import DatasetReader
@@ -140,7 +140,7 @@ Para exibir as linhas do conjunto de dados, use a seguinte célula. Neste exempl
 Table.head(5)
 ```
 
-![saída da linha de tabela](../images/jupyterlab/eda/data-table-overview.PNG)
+![saída da linha da tabela](../images/jupyterlab/eda/data-table-overview.PNG)
 
 Depois de ter uma ideia de quais dados estão contidos no conjunto de dados, pode ser valioso detalhar ainda mais o conjunto de dados. Neste exemplo, os nomes das colunas e os tipos de dados para cada uma das colunas são listados, enquanto a saída é usada para verificar se o tipo de dados está correto ou não.
 
@@ -151,13 +151,13 @@ ColumnNames_Types.columns = ["Column_Name", "Data_Type"]
 ColumnNames_Types
 ```
 
-![nome da coluna e lista de tipos de dados](../images/jupyterlab/eda/data-columns.PNG)
+![lista de nomes de colunas e tipos de dados](../images/jupyterlab/eda/data-columns.PNG)
 
 ### Exploração de tendências do conjunto de dados
 
 A seção a seguir contém quatro consultas de exemplo usadas para explorar tendências e padrões em dados. Os exemplos fornecidos abaixo não são exaustivos, mas abordam alguns dos recursos mais comumente vistos.
 
-**Contagem de atividades por hora em um determinado dia**
+**Contagem de atividades por hora para um determinado dia**
 
 Este query analisa o número de ações e cliques ao longo do dia. A saída é representada na forma de uma tabela contendo métricas sobre a contagem de atividades para cada hora do dia.
 
@@ -174,7 +174,7 @@ GROUP  BY Hour
 ORDER  BY Hour;
 ```
 
-![saída da consulta 1](../images/jupyterlab/eda/hour-count-raw.PNG)
+![consulta 1 saída](../images/jupyterlab/eda/hour-count-raw.PNG)
 
 Depois de confirmar que o query funciona, os dados podem ser apresentados em um histograma de gráfico univariado para maior clareza visual.
 
@@ -197,9 +197,9 @@ fig = go.Figure(data = [trace], layout = layout)
 iplot(fig)
 ```
 
-![saída do gráfico de barras para a consulta 1](../images/jupyterlab/eda/activity-count-by-hour-of-day.png)
+Saída de gráfico de ![barras para a consulta 1](../images/jupyterlab/eda/activity-count-by-hour-of-day.png)
 
-**As 10 páginas mais visualizadas em um determinado dia**
+**As 10 primeiras páginas visualizadas em um determinado dia**
 
 Esta consulta analisa quais páginas são as mais visualizadas em um determinado dia. A saída é representada no formato de uma tabela contendo métricas sobre o nome da página e a contagem de exibições da página.
 
@@ -238,9 +238,9 @@ fig = go.Figure(data = [trace], layout = layout)
 iplot(fig)
 ```
 
-![dez páginas visualizadas principais](../images/jupyterlab/eda/top-ten-viewed-pages-for-a-given-day.png)
+![as dez principais páginas visualizadas](../images/jupyterlab/eda/top-ten-viewed-pages-for-a-given-day.png)
 
-**As dez principais cidades agrupadas por atividade do usuário**
+**As dez principais cidades agrupadas por atividade de usuário**
 
 Este query analisa de quais cidades os dados estão se originando.
 
@@ -281,9 +281,9 @@ iplot(fig)
 
 ![dez principais cidades](../images/jupyterlab/eda/top-ten-cities-by-user-activity.png)
 
-**Dez principais produtos visualizados**
+**Os dez principais produtos visualizados**
 
-Esta consulta fornece uma lista dos dez principais produtos visualizados. No exemplo abaixo, a variável `Explode()` é usada para retornar cada produto na variável `productlistitems` objeto para sua própria linha. Isso permite fazer uma consulta aninhada para agregar exibições de produto para SKUs diferentes.
+Esta consulta fornece uma lista dos dez principais produtos visualizados. No exemplo abaixo, a função `Explode()` é usada para retornar cada produto no objeto `productlistitems` para sua própria linha. Isso permite fazer uma consulta aninhada para agregar exibições de produto para SKUs diferentes.
 
 ```sql
 %%read_sql query_7_df -c QS_CONNECTION
@@ -323,7 +323,7 @@ fig = go.Figure(data = [trace], layout = layout)
 iplot(fig)
 ```
 
-![dez principais visualizações de produto](../images/jupyterlab/eda/top-ten-viewed-products.png)
+![dez principais visualizações de produtos](../images/jupyterlab/eda/top-ten-viewed-products.png)
 
 Depois de explorar as tendências e os padrões dos dados, você deve ter uma boa ideia de quais recursos deseja criar para uma previsão de uma meta. Percorrer tabelas pode destacar rapidamente a forma de cada atributo de dados, deturpações óbvias e grandes outliers nos valores e começar a sugerir relações candidatas para explorar entre atributos.
 
@@ -337,17 +337,17 @@ Para entender isso, você precisa agregar dados em um nível de perfil/visitante
 
 Os seguintes recursos são criados e explorados nesta seção:
 
-- `COUNT_UNIQUE_PRODUCTS_PURCHASED`: a quantidade de produtos exclusivos comprados.
-- `COUNT_CHECK_OUTS`: o número de check-outs.
-- `COUNT_PURCHASES`: o número de compras.
+- `COUNT_UNIQUE_PRODUCTS_PURCHASED`: A quantidade de produtos exclusivos comprados.
+- `COUNT_CHECK_OUTS`: O número de check-outs.
+- `COUNT_PURCHASES`: a quantidade de compras.
 - `COUNT_INSTANCE_PRODUCTADDS`: o número de instâncias de adição de produtos.
-- `NUMBER_VISITS`: o número de visitas.
+- `NUMBER_VISITS`: O número de visitas.
 - `COUNT_PAID_SEARCHES`: o número de pesquisas pagas.
-- `DAYS_SINCE_VISIT`: o número de dias desde a última visita.
-- `TOTAL_ORDER_REVENUE`: A receita total do pedido.
+- `DAYS_SINCE_VISIT`: O número de dias desde a última visita.
+- `TOTAL_ORDER_REVENUE`: A receita total da ordem.
 - `DAYS_SINCE_PURCHASE`: o número de dias desde a compra anterior.
-- `AVG_GAP_BETWEEN_ORDERS_DAYS`: o intervalo médio entre compras em dias.
-- `STATE_CITY`: contém o estado e a cidade.
+- `AVG_GAP_BETWEEN_ORDERS_DAYS`: O intervalo médio entre compras em dias.
+- `STATE_CITY`: Contém o estado e a cidade.
 
 Antes de continuar com a agregação de dados, é necessário definir os parâmetros da variável de previsão usada na análise de dados exploratórios. Em outras palavras, o que você deseja de seu modelo de ciência de dados? Parâmetros comuns incluem meta, período de previsão e período de análise.
 
@@ -509,13 +509,13 @@ iplot(fig)
 
 ![Valores ausentes](../images/jupyterlab/eda/missing-values.png)
 
-Depois de detectar valores ausentes, é importante identificar valores atípicos. Estatísticas paramétricas como média, desvio padrão e correlação são altamente sensíveis a valores atípicos. Além disso, os pressupostos de procedimentos estatísticos comuns, como as regressões lineares, também se baseiam nestas estatísticas. Isso significa que outliers podem realmente bagunçar uma análise.
+Após detectar valores ausentes, é essencial identificar valores atípicos. Estatísticas paramétricas como média, desvio padrão e correlação são altamente sensíveis a valores atípicos. Além disso, os pressupostos de procedimentos estatísticos comuns, como as regressões lineares, também se baseiam nestas estatísticas. Isso significa que outliers podem realmente bagunçar uma análise.
 
 Para identificar outliers, este exemplo usa intervalo entre quartis. Intervalo inter-quartil (IQR) é o intervalo entre o primeiro e o terceiro quartis (percentis 25 e 75). Este exemplo reúne todos os pontos de dados que estão abaixo de 1,5 vez o IQR abaixo do percentil 25 ou 1,5 vez o IQR acima do percentil 75. Os valores que se enquadram em um desses são definidos como uma exceção na célula a seguir.
 
 >[!TIP]
 >
->A correção de outliers requer uma compreensão do negócio e setor em que você está trabalhando. Às vezes, você não pode soltar uma observação só porque é uma anomalia. Outliers podem ser observações legítimas e são muitas vezes os mais interessantes. Para saber mais sobre como eliminar outliers, visite o [etapa opcional de limpeza de dados](#optional-data-clean).
+>A correção de outliers requer uma compreensão do negócio e setor em que você está trabalhando. Às vezes, você não pode soltar uma observação só porque é uma anomalia. Outliers podem ser observações legítimas e são muitas vezes os mais interessantes. Para saber mais sobre como eliminar outliers, visite a [etapa opcional de limpeza de dados](#optional-data-clean).
 
 ```python
 TARGET = Data.TARGET
@@ -628,7 +628,7 @@ for col in Data.columns:
             Data.drop(col,inplace=True,axis=1)
 ```
 
-Depois de remover as colunas de valor único, verifique se há erros nas colunas restantes usando o `Data.columns` em uma nova célula.
+Depois de remover as colunas de valor único, verifique se há erros nas colunas restantes usando o comando `Data.columns` em uma nova célula.
 
 ### Corrigir valores ausentes
 
@@ -674,11 +674,11 @@ Uma vez concluídos, os dados limpos estarão prontos para análise bivariada.
 
 A análise bivariada é usada para ajudar a entender a relação entre dois conjuntos de valores, como seus recursos e uma variável de destino. Como diferentes gráficos atendem a tipos de dados categóricos e numéricos, essa análise deve ser feita separadamente para cada tipo de dados. Os gráficos a seguir são recomendados para análise bivariada:
 
-- **Correlação**: Um coeficiente de correlação é a medida da força de uma relação entre duas características. A correlação tem valores entre -1 e 1, onde: 1 indica uma relação positiva forte, -1 indica uma relação negativa forte e um resultado igual a zero indica nenhuma relação.
-- **Emparelhar gráfico**: plotagens de pares são uma maneira simples de visualizar relações entre cada variável. Ela produz uma matriz de relações entre cada variável nos dados.
-- **Heatmap**: Os mapas de calor são o coeficiente de correlação para todas as variáveis no conjunto de dados.
-- **Gráficos de caixa**: Os gráficos de caixa são uma maneira padronizada de exibir a distribuição de dados com base em um resumo de cinco números (mínimo, primeiro quartil (Q1), mediana, terceiro quartil (Q3) e máximo).
-- **Contar gráfico**: um gráfico de contagem é como um histograma ou um gráfico de barras para alguns recursos categóricos. Ela mostra o número de ocorrências de um item com base em um determinado tipo de categoria.
+- **Correlação**: um coeficiente de correlação é a medida da força de uma relação entre dois recursos. A correlação tem valores entre -1 e 1, onde: 1 indica uma relação positiva forte, -1 indica uma relação negativa forte e um resultado igual a zero indica nenhuma relação.
+- **Par plotagem**: as plotagens de pares são uma maneira simples de visualizar as relações entre cada variável. Ela produz uma matriz de relações entre cada variável nos dados.
+- **Heatmap**: os Heatmaps são o coeficiente de correlação de todas as variáveis no conjunto de dados.
+- **Gráficos de caixa**: os gráficos de caixa são uma maneira padronizada de exibir a distribuição de dados com base em um resumo de cinco números (mínimo, primeiro quartil (T1), mediano, terceiro quartil (T3) e máximo).
+- **Contar plotagem**: uma plotagem de contagem é como um histograma ou um gráfico de barras para alguns recursos categóricos. Ela mostra o número de ocorrências de um item com base em um determinado tipo de categoria.
 
 Para entender a relação entre a variável &quot;meta&quot; e os preditores/recursos, os gráficos são usados com base nos tipos de dados. Para recursos numéricos, você deve usar um gráfico de caixa se a variável &quot;goal&quot; for categórica, bem como um gráfico de pares e um mapa de calor se a variável &quot;goal&quot; for numérica.
 
@@ -721,9 +721,9 @@ else:
 
 A execução da célula produz as seguintes saídas:
 
-![gráficos](../images/jupyterlab/eda/bivariant-graphs.png)
+![plots](../images/jupyterlab/eda/bivariant-graphs.png)
 
-![heatmap](../images/jupyterlab/eda/bi-graph10.PNG)
+![mapa de calor](../images/jupyterlab/eda/bi-graph10.PNG)
 
 **Preditores categóricos**
 
@@ -806,9 +806,9 @@ else:
 
 A correção de outliers requer uma compreensão do negócio e setor em que você está trabalhando. Às vezes, você não pode soltar uma observação só porque é uma anomalia. Outliers podem ser observações legítimas e são muitas vezes os mais interessantes.
 
-Para obter mais informações sobre outliers e se eles devem ser removidos ou não, leia esta entrada do [fator de análise](https://www.theanalysisfactor.com/outliers-to-drop-or-not-to-drop/).
+Para obter mais informações sobre valores atípicos e se eles devem ser removidos ou não, leia esta entrada do [fator de análise](https://www.theanalysisfactor.com/outliers-to-drop-or-not-to-drop/).
 
-O exemplo a seguir mostra pontos de dados de limites e andares de células que são outliers usando [intervalo interquartil](https://www.thoughtco.com/what-is-the-interquartile-range-rule-3126244).
+O exemplo de pontos de dados de limites de células e andares a seguir que são outliers usando o [intervalo interquartil](https://www.thoughtco.com/what-is-the-interquartile-range-rule-3126244).
 
 ```python
 TARGET = Data.TARGET
@@ -830,4 +830,4 @@ Data = pd.concat([Data_categorical, Data_numerical, TARGET], axis = 1)
 
 Depois de concluir a análise de dados exploratórios, você estará pronto para começar a criar um modelo. Como alternativa, você pode usar os dados e insights derivados para criar um painel com ferramentas como o Power BI.
 
-O Adobe Experience Platform separa o processo de criação de modelo em dois estágios distintos, Receitas (uma instância de modelo) e Modelos. Para iniciar o processo de criação de fórmula, consulte a documentação de [criação de uma fórmula no JupyerLab Notebooks](./create-a-model.md). Este documento contém informações e exemplos para criar, treinar e pontuar uma fórmula no [!DNL JupyterLab] Notebooks.
+O Adobe Experience Platform separa o processo de criação de modelo em dois estágios distintos, Receitas (uma instância de modelo) e Modelos. Para iniciar o processo de criação de fórmula, visite a documentação de [criação de uma fórmula no JupyerLab Notebooks](./create-a-model.md). Este documento contém informações e exemplos para criar, treinar e pontuar uma fórmula nos Notebooks [!DNL JupyterLab].

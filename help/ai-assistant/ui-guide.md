@@ -19,15 +19,15 @@ O vídeo a seguir é destinado a fornecer suporte à sua compreensão do Assiste
 
 ## Acessar o assistente de IA na interface do usuário do Experience Platform
 
-Para iniciar o Assistente de IA, selecione o **[!UICONTROL Ícone do Assistente de IA]** no cabeçalho superior da interface do Experience Platform.
+Para iniciar o Assistente de IA, selecione o **[!UICONTROL ícone do Assistente de IA]** no cabeçalho superior da interface do Experience Platform.
 
 ![A página inicial do Experience Platform, com o ícone do Assistente do AI selecionado e a interface do Assistente do AI aberta.](./images/ai-assistant-full-icon.png)
 
-A interface do Assistente de IA é exibida, fornecendo imediatamente informações para começar. Você pode usar as opções fornecidas em [!UICONTROL Ideias para começar] para responder a perguntas e comandos como:
+A interface do Assistente de IA é exibida, fornecendo imediatamente informações para começar. Você pode usar as opções fornecidas em [!UICONTROL Ideias para começar] para responder perguntas e comandos como:
 
-* [!UICONTROL Quais dos meus públicos-alvo são ativados?]
+* [!UICONTROL Quais dos meus públicos-alvo estão ativados?]
 * [!UICONTROL O que é um esquema?]
-* [!UICONTROL Conte-me alguns casos de uso comuns do Real-Time CDP]
+* [!UICONTROL Conte-me alguns casos de uso comuns para o Real-Time CDP]
 
 ## Guia da interface do assistente de IA
 
@@ -35,11 +35,11 @@ A interface do Assistente de IA é exibida, fornecendo imediatamente informaçõ
 >
 >O fluxo de trabalho a seguir é um exemplo que usa o processo de criação de esquema do evento de experiência para ilustrar como você pode usar o Assistente de IA ao usar a interface do usuário do Experience Platform.
 
-Considere um caso de uso em que você esteja criando uma **Esquema de evento de troca de dispositivo**. Durante o processo de criação do schema de evento de experiência, você encontra o `eventType` campo. &quot;Nesse ponto, você tem a opção de sair do workflow e consultar a [noções básicas de uma composição de esquema](../xdm/schema/composition.md) ou você pode usar o AI Assistant para recuperar respostas para suas perguntas e encontrar recursos adicionais por meio dos links de documentação recomendados pelo AI Assistant.&quot;
+Considere um caso de uso em que você esteja criando um **Esquema de Evento de Comércio de Dispositivo**. Durante o processo de criação do esquema do evento de experiência, você encontra o campo `eventType`. &quot;Neste ponto, você tem a opção de sair do fluxo de trabalho e consultar a documentação de [noções básicas da composição de um esquema](../xdm/schema/composition.md) ou pode usar o Assistente de IA para recuperar respostas para suas perguntas e encontrar recursos adicionais por meio dos links de documentação recomendados pelo Assistente de IA.&quot;
 
-Para começar, digite sua pergunta na caixa de texto fornecida. No exemplo abaixo, o Assistente de IA recebe a pergunta: &quot;**O que é o campo eventType em um esquema ExperienceEvent?**&quot;
+Para começar, digite sua pergunta na caixa de texto fornecida. No exemplo abaixo, o Assistente de IA recebe a pergunta: &quot;**Qual é o campo eventType em um esquema ExperienceEvent?**&quot;
 
-![O Assistente de IA para o Experience Platform com a seguinte pergunta preparada para consulta: &quot;Qual é o campo eventType em um esquema ExperienceEvent?](./images/question.png)
+![Assistente de IA para Experience Platform com a seguinte pergunta preparada para consulta: &quot;Qual é o campo eventType em um esquema ExperienceEvent?](./images/question.png)
 
 O Assistente de IA consulta sua base de conhecimento e calcula uma resposta. Após alguns minutos, o Assistente de IA retorna uma resposta e sugestões relacionadas que você pode usar como prompts de acompanhamento.
 
@@ -53,7 +53,7 @@ Esta seção descreve os diferentes recursos do Assistente de IA que você pode 
 
 ### Exibir objetos de dados operacionais {#view-operational-data-objects}
 
-Dependendo da sua consulta, o Assistente de IA fornece informações adicionais relacionadas aos dados da sandbox. Para exibir como a resposta à sua consulta se aplica à sandbox específica, selecione **[!UICONTROL Em sua sandbox].**
+Dependendo da sua consulta, o Assistente de IA fornece informações adicionais relacionadas aos dados da sandbox. Para exibir como a resposta à sua consulta se aplica à sua sandbox específica, selecione **[!UICONTROL Na sua sandbox].**
 
 Ao visualizar dados pertencentes à sua sandbox, o Assistente de IA pode fornecer links diretos para páginas específicas da interface do usuário que exibem seus dados consultados.
 
@@ -61,7 +61,7 @@ Ao visualizar dados pertencentes à sua sandbox, o Assistente de IA pode fornece
 
 Neste exemplo, o Assistente de IA retorna informações adicionais sobre os esquemas XDM existentes na sandbox, incluindo a contagem total e os cinco campos mais usados.
 
-![A janela suspensa &quot;em sua sandbox&quot; é aberta, exibindo informações adicionais sobre os esquemas.](./images/in-your-sandbox.png)
+![A janela suspensa &quot;em sua sandbox&quot; é aberta, exibindo informações adicionais sobre seus esquemas.](./images/in-your-sandbox.png)
 
 +++
 
@@ -77,9 +77,9 @@ Para exibir citações e validar a resposta do Assistente de IA, selecione **[!U
 
 O Assistente de IA atualiza a interface e fornece links para a documentação que corroboram a resposta inicial. Além disso, quando as citações são ativadas, o Assistente de IA atualiza a resposta para incluir notas de rodapé a fim de indicar as partes específicas da resposta que fazem referência à documentação fornecida.
 
-![Um menu suspenso das citações que o Assistente de IA fornece para perguntas de conceito.](./images/citations.png)
+![Um menu suspenso das citações que o Assistente de IA fornece para perguntas conceituais.](./images/citations.png)
 
-Você também pode usar as sugestões que o Assistente de IA oferece em **[!UICONTROL Sugestões relacionadas]** para explorar mais tópicos relacionados à sua pergunta original.
+Você também pode usar as sugestões que o Assistente de IA fornece em **[!UICONTROL Sugestões relacionadas]** para explorar mais os tópicos relacionados à sua pergunta original.
 
 ![Uma lista de sugestões fornecidas pelo Assistente de IA.](./images/related-suggestions.png)
 
@@ -91,27 +91,27 @@ Você deve estar em uma sandbox ativa para que o Assistente de IA responda sufic
 
 +++Selecione para exibir um exemplo de uma pergunta de insights operacionais
 
-No exemplo abaixo, o Assistente de IA é solicitado a fazer a seguinte consulta: **&quot;Mostrar os fluxos de dados criados usando a origem do Amazon S3&quot;**.
+No exemplo abaixo, o Assistente de IA é solicitado com a seguinte consulta: **&quot;Mostrar fluxos de dados criados usando a origem S3 do Amazon&quot;**.
 
 ![Uma pergunta sobre insights operacionais.](./images/op-insights-question.png)
 
 O Assistente de IA responde com uma tabela listando seus fluxos de dados e as IDs correspondentes. Para exibir toda a tabela de dados, selecione o ícone de expansão na parte superior direita.
 
-![Uma resposta de insights operacionais](./images/op-insights-answer.png)
+![Uma resposta dos insights operacionais](./images/op-insights-answer.png)
 
 Uma exibição expandida da tabela é exibida, fornecendo uma lista mais abrangente de fluxos de dados com base nos parâmetros da sua consulta.
 
 ![Uma exibição da tabela expandida.](./images/table.png)
 
-Quando solicitado com uma pergunta sobre insights operacionais, o Assistente de IA fornece uma explicação de como ele calculou a resposta. No exemplo abaixo, o Assistente de IA descreve as etapas executadas para identificar os fluxos de dados criados usando o [!DNL Amazon S3] origem.
+Quando solicitado com uma pergunta sobre insights operacionais, o Assistente de IA fornece uma explicação de como ele calculou a resposta. No exemplo abaixo, o Assistente de IA descreve as etapas executadas para identificar os fluxos de dados criados usando a origem [!DNL Amazon S3].
 
-![O Assistente de IA fornece uma explicação sobre como calculou sua resposta.](./images/answer-explained.png)
+![O Assistente de IA fornece uma explicação sobre como ele calculou sua resposta.](./images/answer-explained.png)
 
 Você também pode fornecer filtros e modificações às suas perguntas e instruir o Assistente de IA a renderizar as descobertas com base nos filtros incluídos. Por exemplo, você pode solicitar que o Assistente de IA mostre uma tendência da contagem de definições de segmento na ordem de sua data de criação, remover definições de segmento com total de perfis zero e usar nomes de meses em vez de números inteiros ao exibir os dados.
 
-**Nota:** Atualmente, as respostas dos insights operacionais estão na versão beta. Selecione o ícone de dica de ferramenta na interface do assistente do AI para exibir o aviso Beta e para obter um link para a documentação.
+**Observação:** as respostas dos Insights operacionais estão atualmente na versão beta. Selecione o ícone de dica de ferramenta na interface do assistente do AI para exibir o aviso do Beta e para obter um link para a documentação.
 
-![Ícone de dica de ferramenta do AI Assistant selecionado.](./images/op-insights-beta-note.png)
+![Ícone de dica de ferramenta do Assistente de IA selecionado.](./images/op-insights-beta-note.png)
 
 +++
 
@@ -137,7 +137,7 @@ Você pode usar a função de preenchimento automático para receber uma lista d
 
 +++Selecione para exibir um exemplo de preenchimento automático
 
-Você pode usar o preenchimento automático incluindo o símbolo de mais (**`+`**) na sua query. Como alternativa, você também pode selecionar o sinal de mais (**`+`**) localizado na parte inferior da caixa de entrada de texto. Uma janela é exibida com uma lista de objetos de dados recomendados da sandbox.
+Você pode usar o preenchimento automático incluindo o símbolo de mais (**`+`**) na sua consulta. Como alternativa, você também pode selecionar o sinal de adição (**`+`**) localizado na parte inferior da caixa de entrada de texto. Uma janela é exibida com uma lista de objetos de dados recomendados da sandbox.
 
 ![Exemplo de preenchimento automático](./images/autocomplete.png)
 
@@ -151,7 +151,7 @@ Você pode usar os recursos de várias rodadas do Assistente de IA para ter uma 
 
 No exemplo abaixo, o Assistente de IA é solicitado primeiro a fornecer o número total de fluxos de dados e, em seguida, é solicitado a listar os 10 fluxos de dados mais recentes.
 
-![Exemplo de voltas múltiplas](./images/multiturn.png)
+![Exemplo de turno múltiplo](./images/multiturn.png)
 
 +++
 
@@ -199,13 +199,13 @@ Para fornecer feedback, selecione polegares para cima, polegares para baixo ou u
 
 Selecione o ícone de miniatura para fornecer feedback sobre o que aconteceu de bom com a sua experiência com o Assistente de IA.
 
-![A janela de feedback positivo.](./images/thumbs-up.png)
+![A janela de comentários positivos.](./images/thumbs-up.png)
 
 >[!TAB Polegar para baixo]
 
 Selecione o ícone com miniaturas para fornecer feedback sobre o que pode ser melhorado com base na sua experiência com o Assistente de IA. Durante essa etapa, você também pode fornecer comentários específicos sobre a sua experiência. O feedback fornecido nos comentários é revisado diariamente.
 
-![A janela de feedback negativo.](./images/thumbs-down.png)
+![A janela de comentários negativa.](./images/thumbs-down.png)
 
 >[!TAB Sinalizador]
 

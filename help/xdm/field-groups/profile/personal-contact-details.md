@@ -16,9 +16,9 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->Os nomes de vários grupos de campos de esquema foram alterados. Consulte o documento sobre [atualizações do nome do grupo de campos](../name-updates.md) para obter mais informações.
+>Os nomes de vários grupos de campos de esquema foram alterados. Consulte o documento em [atualizações de nome de grupo de campos](../name-updates.md) para obter mais informações.
 
-[!UICONTROL Detalhes de contato pessoal] é um grupo de campos de esquema padrão para o [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md) que descreve as informações de contato de uma pessoa individual.
+[!UICONTROL Detalhes de Contato Pessoal] é um grupo de campos de esquema padrão para a [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md) que descreve as informações de contato de uma pessoa individual.
 
 ![](../../images/field-groups/personal-contact-details.png)
 

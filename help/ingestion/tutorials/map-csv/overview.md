@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Mapear um arquivo CSV para um esquema XDM
 
-Para assimilar dados CSV em [!DNL Adobe Experience Platform], os dados devem ser mapeados para um [!DNL Experience Data Model] Esquema de (XDM). Os tutoriais a seguir abordam como mapear arquivos CSV para esquemas XDM usando o [!DNL Platform] interface do usuário:
+Para assimilar dados CSV em [!DNL Adobe Experience Platform], os dados devem ser mapeados para um esquema [!DNL Experience Data Model] (XDM). Os tutoriais a seguir abordam como mapear arquivos CSV para esquemas XDM usando a interface do usuário [!DNL Platform]:
 
 * [Mapear um arquivo CSV para um esquema XDM existente](./existing-schema.md)
 * [Mapear um arquivo CSV para um novo esquema XDM usando recomendações geradas por IA](./recommendations.md) (atualmente na versão beta)

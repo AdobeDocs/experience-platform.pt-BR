@@ -5,13 +5,13 @@ exl-id: 43ba025e-2acf-4cb7-8487-e6c7c7240867
 source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
 source-wordcount: '635'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
 # [!UICONTROL Detalhes do membro da área de saúde] grupo de campos de esquema
 
-[!UICONTROL Detalhes do membro da área de saúde] é um grupo de campos de esquema padrão para o [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md) que captura detalhes de uma pessoa que tem ou receberá serviço ou cuidados médicos, como informações de contato, médico de assistência médica e informações do plano.
+[!UICONTROL Detalhes do Membro de Assistência Médica] é um grupo de campos de esquema padrão para a [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md) que captura detalhes de uma pessoa que tem ou receberá atendimento médico, como informações de contato, médico de assistência médica e informações do plano.
 
 ![Estrutura do grupo de campos](../../images/field-groups/healthcare-member-details/structure.png)
 
@@ -32,18 +32,18 @@ ht-degree: 2%
 
 ## `memberDetails` {#memberDetails}
 
-`memberDetails` é um objeto que contém informações detalhadas sobre os atributos e relacionamentos da pessoa relacionados ao tratamento de saúde. A estrutura do `memberDetails` é descrita abaixo.
+`memberDetails` é um objeto que contém informações detalhadas sobre os atributos e relacionamentos da pessoa relacionados ao plano de saúde. A estrutura de `memberDetails` está descrita abaixo.
 
-![estrutura memberDetails](../../images/field-groups/healthcare-member-details/memberDetails.png)
+![estrutura de memberDetails](../../images/field-groups/healthcare-member-details/memberDetails.png)
 
 | Propriedade | Tipo de dados | Descrição |
 | --- | --- | --- |
-| `emergencyContact` | Objeto | Registra os seguintes detalhes de contato de emergência da pessoa: <ul><li>`fullName`: (String) O nome completo do contato de emergência.</li><li>`phone`: (String) O número de telefone do contato de emergência.</li><li>`relationshipToMember`: (String) A relação do contato de emergência com a pessoa.</li></ul> |
-| `medications` | Matriz de objetos | Lista os detalhes dos medicamentos atuais e anteriores associados à pessoa. Cada item da matriz é um objeto que captura os seguintes detalhes: <ul><li>`refillLocation`: ([[!UICONTROL Endereço postal]](../../data-types/postal-address.md)) O local de recarga para o medicamento.</li><li>`ID`: (String) ID da medicação.</li><li>`isCurrent`: (Booleano) Indica se o medicamento é atual ou passado.</li><li>`numberOfRefills`: (número inteiro) o número de recargas receitadas pelo fornecedor deste medicamento.</li><li>`startDate`: (DateTime) A data em que a pessoa começou a tomar o medicamento.</li></ul> |
-| `multipleBirth` | Objeto | Captura detalhes relacionados a múltiplos nascimentos: <ul><li>`isMultipleBirth`: (booleano) indica se a pessoa deu vários nascimentos.</li><li>`multipleBirthNumber`: (número inteiro) o número de bebês nascidos se `isMultipleBirth` é verdadeiro.</li></ul> |
-| `plans` | Matriz de objetos | Lista os detalhes dos planos médicos atuais e anteriores associados à pessoa. Cada item da matriz é um objeto que captura os seguintes detalhes: <ul><li>`coverageEndDate`: (DateTime) A data em que a cobertura do plano termina.</li><li>`coverageStartDate`: (DateTime) A data em que a cobertura do plano começa.</li><li>`isActive`: (Booleano) Indica se o plano está ativo.</li><li>`planId`: (String) a ID do plano.</li></ul> |
-| `primaryCarePhysicians` | Matriz de objetos | Lista os detalhes dos médicos de cuidados primários associados à pessoa. Cada item da matriz é um objeto que captura os seguintes detalhes: <ul><li>`endDate`: (DateTime) A data em que o médico de cuidados primários terminou o tratamento da pessoa.</li><li>`fullname`: (String) O nome completo do médico.</li><li>`providerId`: (String) Um identificador exclusivo do médico.</li><li>`startDate`: (DateTime) A data em que o médico de cuidados primários iniciou o cuidado da pessoa.</li></ul> |
-| `specialists` | Matriz de objetos | Lista os detalhes dos especialistas em saúde associados à pessoa. Cada item da matriz é um objeto que captura os seguintes detalhes: <ul><li>`fullname`: (String) O nome completo do especialista.</li><li>`providerId`: (String) Um identificador exclusivo do especialista.</li><li>`specialty`: (String) A especialidade do provedor (como anestesiologia, urologia, radiologia, dermatologia e assim por diante).</li></ul> |
+| `emergencyContact` | Objeto | Registra os seguintes detalhes de contato de emergência da pessoa: <ul><li>`fullName`: (Cadeia de caracteres) O nome completo do contato de emergência.</li><li>`phone`: (Cadeia de caracteres) O número de telefone do contato de emergência.</li><li>`relationshipToMember`: (Cadeia de caracteres) A relação do contato de emergência com a pessoa.</li></ul> |
+| `medications` | Matriz de objetos | Lista os detalhes dos medicamentos atuais e anteriores associados à pessoa. Cada item da matriz é um objeto que captura os seguintes detalhes: <ul><li>`refillLocation`: ([[!UICONTROL Endereço postal]](../../data-types/postal-address.md)) O local de reabastecimento para o medicamento.</li><li>`ID`: ID de medicação (cadeia de caracteres).</li><li>`isCurrent`: (Booleano) Indica se o medicamento é atual ou já passou.</li><li>`numberOfRefills`: (Inteiro) O número de refills prescritos pelo provedor deste medicamento.</li><li>`startDate`: (DateTime) A data em que a pessoa começou a tomar o medicamento.</li></ul> |
+| `multipleBirth` | Objeto | Captura detalhes relacionados a múltiplos nascimentos: <ul><li>`isMultipleBirth`: (Booleano) Indica se a pessoa deu vários nascimentos.</li><li>`multipleBirthNumber`: (Número inteiro) O número de bebês nascidos se `isMultipleBirth` for verdadeiro.</li></ul> |
+| `plans` | Matriz de objetos | Lista os detalhes dos planos médicos atuais e anteriores associados à pessoa. Cada item da matriz é um objeto que captura os seguintes detalhes: <ul><li>`coverageEndDate`: (DateTime) A data em que a cobertura do plano termina.</li><li>`coverageStartDate`: (DateTime) A data em que a cobertura do plano começa.</li><li>`isActive`: (Booleano) Indica se o plano está ativo.</li><li>`planId`: (Cadeia de caracteres) A ID do plano.</li></ul> |
+| `primaryCarePhysicians` | Matriz de objetos | Lista os detalhes dos médicos de cuidados primários associados à pessoa. Cada item da matriz é um objeto que captura os seguintes detalhes: <ul><li>`endDate`: (DateTime) A data em que o médico de cuidados primários terminou o tratamento da pessoa.</li><li>`fullname`: (Cadeia de caracteres) O nome completo do médico.</li><li>`providerId`: (Cadeia de caracteres) Um identificador exclusivo do médico.</li><li>`startDate`: (DateTime) A data em que o médico de cuidados primários iniciou o cuidado da pessoa.</li></ul> |
+| `specialists` | Matriz de objetos | Lista os detalhes dos especialistas em saúde associados à pessoa. Cada item da matriz é um objeto que captura os seguintes detalhes: <ul><li>`fullname`: (Cadeia de caracteres) O nome completo do especialista.</li><li>`providerId`: (Cadeia de caracteres) Um identificador exclusivo do especialista.</li><li>`specialty`: (String) A especialidade do provedor (como anestesiologia, urologia, radiologia, dermatologia etc.).</li></ul> |
 | `beneficiaryRelationship` | String | O relacionamento do beneficiário com o membro do plano de saúde se a pessoa for um dependente (exemplos incluem ele mesmo, cônjuge, filho etc.). |
 | `billingAccountID` | String | Um identificador exclusivo da conta de cobrança da pessoa. |
 | `dateAgeCollected` | DateTime | A data em que a idade da pessoa foi coletada. |
@@ -61,4 +61,4 @@ Para obter mais detalhes sobre o grupo de campos, consulte o repositório XDM p�
 * [Exemplo preenchido](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-healthcare-member.example.1.json)
 * [Esquema completo](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-healthcare-member.schema.json)
 
-Consulte a documentação do esquema do setor para obter mais informações sobre como esse grupo de campos pode ser usado para servir [casos de uso do setor de saúde](../../schema/industries/healthcare.md).
+Consulte a documentação do esquema do setor para obter mais informações sobre como este grupo de campos pode ser usado para atender a [casos de uso comuns do setor de saúde](../../schema/industries/healthcare.md).

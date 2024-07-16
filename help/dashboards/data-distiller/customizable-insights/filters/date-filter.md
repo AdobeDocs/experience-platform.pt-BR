@@ -1,7 +1,8 @@
 ---
 title: Criar um filtro de datas
 description: Saiba como filtrar seus insights personalizados por data.
-source-git-commit: 17ad52864bbca09844c0241b6451e6811bd8f413
+exl-id: fa05d651-ea43-41f0-9b7d-f19c4a9ac256
+source-git-commit: 5bb954da7c1e05922a4e0f8d0bc7d3ab5c8e0e58
 workflow-type: tm+mt
 source-wordcount: '662'
 ht-degree: 0%
@@ -10,15 +11,15 @@ ht-degree: 0%
 
 # Criar um filtro de datas {#create-date-filter}
 
-Para filtrar seus insights por data, você deve adicionar parâmetros às suas consultas SQL que podem aceitar restrições de data. Isso é feito como parte do fluxo de trabalho de criação de insight do modo pro de consulta. Consulte a [documentação do modo query pro](#query-pro-mode) para saber como inserir o SQL para seus insights.
+Para filtrar seus insights por data, você deve adicionar parâmetros às suas consultas SQL que podem aceitar restrições de data. Isso é feito como parte do fluxo de trabalho de criação de insight do modo pro de consulta. Consulte a [documentação do modo pro de consulta](#query-pro-mode) para saber como inserir SQL para seus insights.
 
 Parâmetros de consulta permitem trabalhar com dados dinâmicos como eles atuam como espaços reservados para os valores adicionados no tempo de execução. Esses valores de espaços reservados podem ser atualizados por meio da interface do usuário e permitem que usuários menos técnicos atualizem os insights com base em intervalos de datas.
 
-Se você não estiver familiarizado com os parâmetros de consulta, consulte a documentação para [orientação sobre como implementar consultas parametrizadas](../../../../query-service/ui/parameterized-queries.md).
+Se você não estiver familiarizado com parâmetros de consulta, consulte a documentação de [orientação sobre como implementar consultas parametrizadas](../../../../query-service/ui/parameterized-queries.md).
 
 ## Aplicar um filtro de datas ao painel {#apply-date-filter}
 
-Para aplicar um filtro de datas, selecione **[!UICONTROL Adicionar filtro]**, depois **[!UICONTROL Filtro de data]** no menu suspenso da visualização de painel.
+Para aplicar um filtro de datas, selecione **[!UICONTROL Adicionar filtro]** e **[!UICONTROL Filtro de Datas]** no menu suspenso do modo de exibição de painel.
 
 ![Um painel personalizado com Adicionar filtro e seu menu suspenso realçado.](../../../images/customizable-insights/add-filter.png)
 
@@ -28,7 +29,7 @@ Em seguida, verifique se o SQL inclui parâmetros de consulta para permitir um i
 
 >[!TIP]
 >
->É recomendável adicionar `$START_DATE` e `$END_DATE` parâmetros para a instrução SQL em cada um dos gráficos para os quais você deseja ativar filtros de data.
+>É recomendável adicionar `$START_DATE` e `$END_DATE` parâmetros à instrução SQL em cada um dos gráficos para os quais você deseja habilitar filtros de data.
 
 >[!NOTE]
 >
@@ -36,7 +37,7 @@ Em seguida, verifique se o SQL inclui parâmetros de consulta para permitir um i
 
 Se o modelo de dados ou as tabelas que você está analisando tiverem um componente de tempo, você poderá agrupar seus dados por data e aplicar esses filtros de data.
 
-A instrução SQL de exemplo abaixo demonstra como incorporar `$START_DATE` e `$END_DATE` parâmetros e usos `cast` para enquadrar o componente de tempo como uma data.
+A instrução SQL de exemplo abaixo demonstra como incorporar os parâmetros `$START_DATE` e `$END_DATE` e usa `cast` para enquadrar o componente de tempo como uma data.
 
 ```sql
 SELECT Sum(personalization_consent_count) AS Personalization,
@@ -59,21 +60,21 @@ A captura de tela abaixo destaca as restrições de data incorporadas na instru�
 >
 >Ao compor sua instrução no modo query pro, você deve fornecer valores de amostra para cada parâmetro para executar a instrução SQL e criar o gráfico. Os valores de amostra fornecidos ao compor a instrução são substituídos pelos valores reais selecionados para o filtro de data (ou global) no tempo de execução.
 
-![A variável [!UICONTROL Inserir SQL] com os parâmetros de data destacados no SQL.](../../../images/customizable-insights/sql-date-parameters.png)
+![A caixa de diálogo [!UICONTROL Inserir SQL] com os parâmetros de data realçados no SQL.](../../../images/customizable-insights/sql-date-parameters.png)
 
 ## Ativar parâmetros de data em cada insight {#enable-date-parameters}
 
-Depois de incorporar os parâmetros apropriados ao SQL dos seus insights, a variável `Start_date` e `End_date` as variáveis agora estão disponíveis como alternadores no widget composer. Consulte a [seção de população do widget do modo query pro](#populate-widget) para obter informações sobre como editar um insight.
+Depois de incorporar os parâmetros apropriados ao SQL dos seus insights, as variáveis `Start_date` e `End_date` agora estão disponíveis como alternadores no widget composer. Consulte a [seção de população do widget do modo pro de consulta](#populate-widget) para obter informações sobre como editar um insight.
 
-No widget composer, selecione alternar para ativar o `Start_date` e `End_date` parâmetros.
+No widget composer, selecione alternar para habilitar os parâmetros `Start_date` e `End_date`.
 
-![O compositor de widgets com as opções Start_ date e End_ date ativas.](../../../images/customizable-insights/widget-composer-date-filter-toggles.png)
+![O widget composer com as opções Start_date e End_date está realçado.](../../../images/customizable-insights/widget-composer-date-filter-toggles.png)
 
 Em seguida, selecione os parâmetros de consulta apropriados nos menus suspensos.
 
 ![O widget composer com o menu suspenso Start_date realçado.](../../../images/customizable-insights/widget-composer-date-filter-dropdown.png)
 
-Finalmente, selecione **[!UICONTROL Salvar e fechar]** para retornar ao painel. Agora, os filtros de data estão ativados para todos os insights que têm parâmetros de data de início e término.
+Finalmente, selecione **[!UICONTROL Salvar e fechar]** para retornar ao seu painel. Agora, os filtros de data estão ativados para todos os insights que têm parâmetros de data de início e término.
 
 ## Usar o filtro de datas
 
@@ -93,6 +94,6 @@ Depois de selecionar um intervalo de datas no painel, os insights que têm parâ
 
 ## Excluir um filtro de datas {#delete-date-filter}
 
-Para remover o filtro de datas, selecione o ícone excluir filtro (![O ícone de filtro Excluir.](../../../images/customizable-insights/delete-filter-icon.png)).
+Para remover o filtro de datas, selecione o ícone de exclusão de filtro (![O ícone de exclusão de filtro.](../../../images/customizable-insights/delete-filter-icon.png)).
 
-![Um painel personalizado com o ícone de filtro excluir realçado.](../../../images/customizable-insights/delete-date-filter.png)
+![Um painel personalizado com o ícone de exclusão de filtro realçado.](../../../images/customizable-insights/delete-date-filter.png)

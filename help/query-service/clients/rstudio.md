@@ -6,38 +6,38 @@ description: Este documento aborda as etapas para conectar o R Studio ao Adobe E
 exl-id: 8dd82bad-6ffb-4536-9c27-223f471a49c6
 source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
-source-wordcount: '449'
+source-wordcount: '439'
 ht-degree: 0%
 
 ---
 
-# Conectar [!DNL RStudio] para o Serviço de consulta
+# Conectar [!DNL RStudio] ao Serviço de consulta
 
-Este documento aborda as etapas de conexão [!DNL RStudio] com o Adobe Experience Platform [!DNL Query Service].
+Este documento aborda as etapas para conectar o [!DNL RStudio] ao Adobe Experience Platform [!DNL Query Service].
 
 >[!NOTE]
 >
-> [!DNL RStudio] agora foi reformulado como [!DNL Posit]. [!DNL RStudio] Os produtos do foram renomeados para [!DNL Posit Connect], [!DNL Posit Workbench], [!DNL Posit Package] Gerente, [!DNL Posit Cloud], e [!DNL Posit Academy].
+> [!DNL RStudio] foi reformulado como [!DNL Posit]. [!DNL RStudio] produtos foram renomeados para [!DNL Posit Connect], [!DNL Posit Workbench], [!DNL Posit Package] Gerente, [!DNL Posit Cloud] e [!DNL Posit Academy].
 >
-> Este guia supõe que você já tenha acesso ao [!DNL RStudio] e estão familiarizados com como usá-lo. Mais informações sobre [!DNL RStudio] pode ser encontrado no [oficial [!DNL RStudio] documentação](https://rstudio.com/products/rstudio/).
+> Este guia supõe que você já tenha acesso ao [!DNL RStudio] e esteja familiarizado com como usá-lo. Mais informações sobre [!DNL RStudio] podem ser encontradas na [documentação [!DNL RStudio] oficial](https://rstudio.com/products/rstudio/).
 > 
-> Além disso, para usar [!DNL RStudio] com o Serviço de consulta, é necessário instalar o [!DNL PostgreSQL] Driver JDBC 4.2. Você pode baixar o driver JDBC no [[!DNL PostgreSQL] site oficial](https://jdbc.postgresql.org/download/).
+> Além disso, para usar o [!DNL RStudio] com o Serviço de consulta, é necessário instalar o Driver JDBC 4.2 [!DNL PostgreSQL]. Você pode baixar o driver JDBC no [[!DNL PostgreSQL] site oficial](https://jdbc.postgresql.org/download/).
 
-## Criar um [!DNL Query Service] conexão no [!DNL RStudio] interface
+## Criar uma conexão [!DNL Query Service] na interface [!DNL RStudio]
 
-Após a instalação [!DNL RStudio], é necessário instalar o pacote RJDBC. Instruções sobre como [conectar um banco de dados por meio da linha de comando](https://solutions.posit.co/connections/db/best-practices/drivers/#connecting-to-a-database-in-r) podem ser encontradas na documentação oficial do Post.
+Após instalar o [!DNL RStudio], é necessário instalar o pacote RJDBC. As instruções sobre como [conectar um banco de dados por meio da linha de comando](https://solutions.posit.co/connections/db/best-practices/drivers/#connecting-to-a-database-in-r) podem ser encontradas na documentação oficial de Posts.
 
-Se estiver usando um sistema operacional Mac, você pode selecionar **[!UICONTROL Ferramentas]** na barra de menus, seguida por **[!UICONTROL Instalar pacotes]** no menu suspenso. Como alternativa, selecione o **[!DNL Packages]** na interface do usuário do RStudio e selecione **[!DNL Install]**.
+Se estiver usando um sistema operacional Mac, você pode selecionar **[!UICONTROL Ferramentas]** na barra de menus seguido por **[!UICONTROL Instalar Pacotes]** no menu suspenso. Como alternativa, selecione a guia **[!DNL Packages]** na interface do RStudio e selecione **[!DNL Install]**.
 
-Um pop-up é exibido, mostrando a **[!DNL Install Packages]** tela. Assegure que **[!DNL Repository (CRAN)]** está selecionado para o **[!DNL Install from]** seção. O valor de **[!DNL Packages]** deve ser `RJDBC`. Assegurar **[!DNL Install dependencies]** está selecionada. Após confirmar que todos os valores estão corretos, selecione **[!DNL Install]** para instalar os pacotes. Agora que o pacote RJDBC foi instalado, reinicie [!DNL RStudio] para concluir o processo de instalação.
+Um pop-up é exibido, mostrando a tela **[!DNL Install Packages]**. Verifique se **[!DNL Repository (CRAN)]** está selecionado para a seção **[!DNL Install from]**. O valor de **[!DNL Packages]** deve ser `RJDBC`. Verifique se **[!DNL Install dependencies]** está selecionado. Depois de confirmar que todos os valores estão corretos, selecione **[!DNL Install]** para instalar os pacotes. Agora que o pacote RJDBC foi instalado, reinicie [!DNL RStudio] para concluir o processo de instalação.
 
-Depois [!DNL RStudio] foi reiniciado, agora é possível conectar-se ao Serviço de consulta. Selecione o **[!DNL RJDBC]** pacote no **[!DNL Packages]** e digite o seguinte comando no console:
+Depois que [!DNL RStudio] for reiniciado, você pode se conectar ao Serviço de Consulta. Selecione o pacote **[!DNL RJDBC]** no painel **[!DNL Packages]** e digite o seguinte comando no console:
 
 ```console
 pgsql <- JDBC("org.postgresql.Driver", "{PATH TO THE POSTGRESQL JDBC JAR}", "`")
 ```
 
-Onde `{PATH TO THE POSTGRESQL JDBC JAR}` representa o caminho para o [!DNL PostgreSQL] JAR JDBC que foi instalado no computador.
+Onde `{PATH TO THE POSTGRESQL JDBC JAR}` representa o caminho para o JAR JDBC [!DNL PostgreSQL] que foi instalado em seu computador.
 
 Agora, você pode criar sua conexão com o Serviço de consulta. Digite o seguinte comando no console:
 
@@ -47,17 +47,17 @@ qsconnection <- dbConnect(pgsql, "jdbc:postgresql://{HOSTNAME}:{PORT}/{DATABASE_
 
 >[!IMPORTANT]
 >
->Consulte a [[!DNL Query Service] Documentação do SSL](./ssl-modes.md) para saber mais sobre o suporte SSL para conexões de terceiros ao Adobe Experience Platform Query Service e como se conectar usando `verify-full` Modo SSL.
+>Consulte a [[!DNL Query Service] documentação SSL](./ssl-modes.md) para saber mais sobre o suporte SSL para conexões de terceiros ao Serviço de Consulta da Adobe Experience Platform e como se conectar usando o modo SSL `verify-full`.
 
-Para obter mais informações sobre como localizar o nome do banco de dados, o host, a porta e as credenciais de logon, leia a [guia de credenciais](../ui/credentials.md). Para encontrar suas credenciais, faça logon no [!DNL Platform]e selecione **[!UICONTROL Consultas]**, seguido por **[!UICONTROL Credenciais]**.
+Para obter mais informações sobre como localizar o nome do banco de dados, o host, a porta e as credenciais de logon, leia o [guia de credenciais](../ui/credentials.md). Para encontrar suas credenciais, faça logon em [!DNL Platform] e selecione **[!UICONTROL Consultas]**, seguido de **[!UICONTROL Credenciais]**.
 
 Uma mensagem na saída do console confirma a conexão com o Serviço de consulta.
 
 ## Gravação de consultas
 
-Agora que você se conectou ao [!DNL Query Service], você pode gravar consultas para executar e editar instruções SQL. Por exemplo, você pode usar `dbGetQuery(con, sql)` para executar consultas, onde `sql` é a consulta SQL que você deseja executar.
+Agora que você se conectou a [!DNL Query Service], é possível gravar consultas para executar e editar instruções SQL. Por exemplo, você pode usar `dbGetQuery(con, sql)` para executar consultas, onde `sql` é a consulta SQL que você deseja executar.
 
-A consulta a seguir usa um conjunto de dados que contém [Eventos de experiência](../../xdm/classes/experienceevent.md) e cria um histograma de exibições de página de um site, dada a altura da tela do dispositivo.
+A consulta a seguir usa um conjunto de dados contendo [Eventos de Experiência](../../xdm/classes/experienceevent.md) e cria um histograma de exibições de página de um site, dada a altura da tela do dispositivo.
 
 ```sql
 df_pageviews <- dbGetQuery(con,
@@ -94,4 +94,4 @@ df_pageviews
 
 ## Próximas etapas
 
-Para obter mais informações sobre como gravar e executar consultas, leia o manual no [execução de consultas](../best-practices/writing-queries.md).
+Para obter mais informações sobre como gravar e executar consultas, leia o manual em [executando consultas](../best-practices/writing-queries.md).

@@ -4,14 +4,14 @@ description: Os conjuntos de dados de amostra do Serviço de consulta permitem r
 exl-id: 9e676d7c-c24f-4234-878f-3e57bf57af44
 source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
 workflow-type: tm+mt
-source-wordcount: '639'
+source-wordcount: '643'
 ht-degree: 0%
 
 ---
 
 # Amostras de conjunto de dados
 
-O Serviço de consulta da Adobe Experience Platform fornece conjuntos de dados de amostra como parte de seus recursos aproximados de processamento de consulta. Conjuntos de dados de amostra são criados com amostras aleatórias uniformes de [!DNL Azure Data Lake Storage] (ADLS) conjuntos de dados que usam apenas uma porcentagem dos registros do original. Essa porcentagem é conhecida como taxa de amostragem. Ajustar a taxa de amostragem para controlar o equilíbrio entre a precisão e o tempo de processamento permite realizar consultas exploratórias em grandes volumes de dados com tempo de processamento bastante reduzido, ao custo da precisão da consulta.
+O Serviço de consulta da Adobe Experience Platform fornece conjuntos de dados de amostra como parte de seus recursos aproximados de processamento de consulta. Os conjuntos de dados de exemplo são criados com amostras aleatórias uniformes de conjuntos de dados [!DNL Azure Data Lake Storage] (ADLS) existentes usando apenas uma porcentagem dos registros do original. Essa porcentagem é conhecida como taxa de amostragem. Ajustar a taxa de amostragem para controlar o equilíbrio entre a precisão e o tempo de processamento permite realizar consultas exploratórias em grandes volumes de dados com tempo de processamento bastante reduzido, ao custo da precisão da consulta.
 
 Como muitos usuários não precisam de uma resposta exata para uma operação agregada em um conjunto de dados, emitir uma consulta aproximada para retornar uma resposta aproximada é mais eficiente para consultas exploratórias em conjuntos de dados grandes. Como os conjuntos de dados de amostra contêm apenas uma porcentagem dos dados do conjunto de dados original, eles permitem que você comercialize a precisão da consulta para um melhor tempo de resposta. No tempo de leitura, o Serviço de consulta precisa verificar menos linhas, o que produz resultados mais rapidamente do que se você consultasse todo o conjunto de dados.
 
@@ -26,19 +26,19 @@ Para ajudar você a gerenciar suas amostras para o processamento aproximado de c
 
 ## Introdução {#get-started}
 
-Para usar os recursos aproximados de processamento de consultas criados e excluídos detalhados neste documento, você deve definir o sinalizador de sessão como `true`. Na linha de comando do Editor de consultas ou do cliente PSQL, digite o `SET aqp=true;` comando.
+Para usar os recursos aproximados de processamento de consultas detalhados neste documento, crie e exclua o sinalizador de sessão `true`. Na linha de comando do Editor de Consultas ou do cliente PSQL, digite o comando `SET aqp=true;`.
 
 >[!NOTE]
 >
 >Você deve ativar o sinalizador de sessão sempre que fizer logon na Platform.
 
-![O Editor de consultas com o comando &#39;SET aqp=true;&#39; foi realçado.](../images/essential-concepts/set-session-flag.png)
+![O Editor de Consultas com o comando &#39;SET aqp=true;&#39; foi realçado.](../images/essential-concepts/set-session-flag.png)
 
 ## Criar uma amostra uniforme de conjunto de dados aleatório {#create-a-sample}
 
-Use o `ANALYZE TABLE <table_name> TABLESAMPLE SAMPLERATE x` comando com um nome de conjunto de dados para criar uma amostra aleatória uniforme desse conjunto de dados.
+Use o comando `ANALYZE TABLE <table_name> TABLESAMPLE SAMPLERATE x` com um nome de conjunto de dados para criar uma amostra aleatória uniforme desse conjunto de dados.
 
-A taxa de amostra é a porcentagem de registros obtidos do conjunto de dados original. É possível controlar a taxa de amostra usando o `TABLESAMPLE SAMPLERATE` palavras-chave. Neste exemplo, o valor de 5,0 equivale a uma taxa de amostra de 50%. Um valor de 2,5 equivaleria a 25% e assim por diante.
+A taxa de amostra é a porcentagem de registros obtidos do conjunto de dados original. Você pode controlar a taxa de amostragem usando as palavras-chave `TABLESAMPLE SAMPLERATE`. Neste exemplo, o valor de 5,0 equivale a uma taxa de amostra de 50%. Um valor de 2,5 equivaleria a 25% e assim por diante.
 
 >[!IMPORTANT]
 >
@@ -68,11 +68,11 @@ ANALYZE TABLE large_table TABLESAMPLE FILTERCONTEXT (month(to_timestamp(timestam
 ANALYZE TABLE large_table TABLESAMPLE FILTERCONTEXT (month(to_timestamp(timestamp)) in ('8', '9') AND (product.name = "product1" OR product.name = "product2")) SAMPLERATE 10;
 ```
 
-Nos exemplos fornecidos, o nome da tabela é `large_table`, a condição do filtro na tabela original é `month(to_timestamp(timestamp)) in ('8', '9')`, e a taxa de amostragem é (X% dos dados filtrados), neste caso, `10`.
+Nos exemplos fornecidos, o nome da tabela é `large_table`, a condição de filtro na tabela original é `month(to_timestamp(timestamp)) in ('8', '9')` e a taxa de amostragem é (X% dos dados filtrados), neste caso, `10`.
 
 ## Exibir a lista de amostras {#view-list-of-samples}
 
-Use o `sample_meta()` Função para exibir a lista de amostras associadas a uma tabela ADLS.
+Use a função `sample_meta()` para exibir a lista de amostras associadas a uma tabela ADLS.
 
 ```sql
 SELECT sample_meta('example_dataset_name')
@@ -89,7 +89,7 @@ A lista de amostras de conjunto de dados é exibida no formato do exemplo abaixo
 
 ## Consulte o conjunto de dados de amostra {#query-sample-datasets}
 
-Use o `{EXAMPLE_DATASET_NAME}` para consultar tabelas de exemplo diretamente. Como alternativa, adicione a variável `WITHAPPROXIMATE` ao final de uma consulta e o Serviço de consulta usa automaticamente a amostra criada mais recentemente.
+Use o `{EXAMPLE_DATASET_NAME}` para consultar tabelas de exemplo diretamente. Como alternativa, adicione a palavra-chave `WITHAPPROXIMATE` ao final de uma consulta e o Serviço de consulta usará automaticamente a amostra criada mais recentemente.
 
 ```sql
 SELECT * FROM example_dataset_name WITHAPPROXIMATE;

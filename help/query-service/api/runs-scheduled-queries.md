@@ -16,11 +16,11 @@ ht-degree: 3%
 
 ## Exemplos de chamadas de API
 
-Agora que você entende quais cabeçalhos usar, você está pronto para começar a fazer chamadas para o [!DNL Query Service] API. As seções a seguir abordam as várias chamadas de API que podem ser feitas usando o [!DNL Query Service] API. Cada chamada inclui o formato da API geral, uma solicitação de amostra mostrando os cabeçalhos necessários e uma resposta de amostra.
+Agora que você entende quais cabeçalhos usar, você está pronto para começar a fazer chamadas para a API [!DNL Query Service]. As seções a seguir abordam as várias chamadas de API que podem ser feitas usando a API [!DNL Query Service]. Cada chamada inclui o formato da API geral, uma solicitação de amostra mostrando os cabeçalhos necessários e uma resposta de amostra.
 
 ### Recupera uma lista de todas as execuções de uma consulta agendada especificada
 
-Você pode recuperar uma lista de todas as execuções de uma consulta agendada específica, independentemente de estarem em execução no momento ou já concluídas. Isso é feito fazendo uma solicitação GET ao `/schedules/{SCHEDULE_ID}/runs` endpoint, onde `{SCHEDULE_ID}` é o `id` valor da consulta programada cujas execuções você deseja recuperar.
+Você pode recuperar uma lista de todas as execuções de uma consulta agendada específica, independentemente de estarem em execução no momento ou já concluídas. Isso é feito fazendo uma solicitação GET para o ponto de extremidade `/schedules/{SCHEDULE_ID}/runs`, onde `{SCHEDULE_ID}` é o valor `id` da consulta agendada cujas execuções você deseja recuperar.
 
 **Formato da API**
 
@@ -31,7 +31,7 @@ GET /schedules/{SCHEDULE_ID}/runs?{QUERY_PARAMETERS}
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | A variável `id` valor da consulta programada que deseja recuperar. |
+| `{SCHEDULE_ID}` | O valor `id` da consulta agendada que você deseja recuperar. |
 | `{QUERY_PARAMETERS}` | (*Opcional*) Parâmetros adicionados ao caminho da solicitação que configuram os resultados retornados na resposta. Vários parâmetros podem ser incluídos, separados por &quot;E&quot; comercial (`&`). Os parâmetros disponíveis estão listados abaixo. |
 
 **Parâmetros de consulta**
@@ -40,10 +40,10 @@ Veja a seguir uma lista de parâmetros de consulta disponíveis para execuções
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `orderby` | Especifica o campo pelo qual ordenar resultados. Os campos compatíveis são `created` e `updated`. Por exemplo, `orderby=created` Os resultados serão classificados por criados em ordem crescente. Adicionar um `-` antes de criar (`orderby=-created`) classificará os itens por criados em ordem decrescente. |
+| `orderby` | Especifica o campo pelo qual ordenar resultados. Os campos com suporte são `created` e `updated`. Por exemplo, `orderby=created` classificará os resultados por ordem crescente criada. Adicionar um `-` antes de criar (`orderby=-created`) classificará os itens por ordem decrescente. |
 | `limit` | Especifica o limite de tamanho de página para controlar o número de resultados incluídos em uma página. (*Valor padrão: 20*) |
-| `start` | Especifique um carimbo de data e hora no formato ISO para ordenar os resultados. Se nenhuma data de início for especificada, a chamada da API retornará as execuções mais antigas primeiro e, em seguida, continuará a listar os resultados mais recentes<br> Os carimbos de data e hora ISO permitem diferentes níveis de granularidade na data e hora. Os carimbos de data e hora ISO básicos têm o formato de: `2020-09-07` para expressar a data em 7 de setembro de 2020. Um exemplo mais complexo seria escrito como `2022-11-05T08:15:30-05:00` e corresponde a 5 de novembro de 2022, 8:15:30 da manhã, Hora Padrão do Leste dos EUA. Um fuso horário pode ser fornecido com um deslocamento UTC e é indicado pelo sufixo &quot;Z&quot; (`2020-01-01T01:01:01Z`). Se nenhum fuso horário for fornecido, o padrão será zero. |
-| `property` | Filtrar resultados com base em campos. Os filtros **deve** ser escapado por HTML. As vírgulas são usadas para combinar vários conjuntos de filtros. Os campos compatíveis são `created`, `state`, e `externalTrigger`. A lista de operadores compatíveis é `>` (maior que), `<` (menor que) e  `==` (igual a) e `!=` (diferente de). Por exemplo, `externalTrigger==true,state==SUCCESS,created>2019-04-20T13:37:00Z` retornará todas as execuções criadas manualmente, bem-sucedidas e criadas após 20 de abril de 2019. |
+| `start` | Especifique um carimbo de data e hora no formato ISO para ordenar os resultados. Se nenhuma data de início for especificada, a chamada de API retornará as execuções mais antigas primeiro e, em seguida, continuará a listar os resultados mais recentes<br> Os carimbos de data e hora ISO permitem diferentes níveis de granularidade na data e hora. Os carimbos de data e hora ISO básicos assumem o formato de: `2020-09-07` para expressar a data em 7 de setembro de 2020. Um exemplo mais complexo seria escrito como `2022-11-05T08:15:30-05:00` e corresponde a 5 de novembro de 2022, às 8:15:30 am, Hora Padrão do Leste dos EUA. Um fuso horário pode ser fornecido com um deslocamento UTC e é indicado pelo sufixo &quot;Z&quot; (`2020-01-01T01:01:01Z`). Se nenhum fuso horário for fornecido, o padrão será zero. |
+| `property` | Filtrar resultados com base em campos. Os filtros **devem** ter HTML de escape. As vírgulas são usadas para combinar vários conjuntos de filtros. Os campos com suporte são `created`, `state` e `externalTrigger`. A lista de operadores com suporte é `>` (maior que), `<` (menor que), `==` (igual a) e `!=` (diferente de). Por exemplo, `externalTrigger==true,state==SUCCESS,created>2019-04-20T13:37:00Z` retornará todas as execuções criadas, bem-sucedidas e criadas manualmente após 20 de abril de 2019. |
 
 **Solicitação**
 
@@ -149,11 +149,11 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com uma lista de execuções
 
 >[!NOTE]
 >
->Você pode usar o valor de `_links.cancel` para [interromper uma execução para uma consulta agendada especificada](#immediately-stop-a-run-for-a-specific-scheduled-query).
+>Você pode usar o valor de `_links.cancel` a [parar uma execução para uma consulta agendada especificada](#immediately-stop-a-run-for-a-specific-scheduled-query).
 
 ### Acionar imediatamente uma execução para uma consulta programada específica
 
-Você pode acionar imediatamente uma execução para uma consulta agendada especificada fazendo uma solicitação POST para o `/schedules/{SCHEDULE_ID}/runs` endpoint, onde `{SCHEDULE_ID}` é o `id` valor da consulta programada cuja execução você deseja acionar.
+Você pode acionar imediatamente uma execução para uma consulta agendada especificada fazendo uma solicitação POST para o ponto de extremidade `/schedules/{SCHEDULE_ID}/runs`, onde `{SCHEDULE_ID}` é o valor `id` da consulta agendada cuja execução você deseja acionar.
 
 **Formato da API**
 
@@ -184,7 +184,7 @@ Uma resposta bem-sucedida retorna o status HTTP 202 (Aceito) com a seguinte mens
 
 ### Recuperar detalhes de uma execução para uma consulta agendada específica
 
-Você pode recuperar detalhes sobre uma execução para uma consulta agendada específica fazendo uma solicitação GET para a `/schedules/{SCHEDULE_ID}/runs/{RUN_ID}` e fornecendo a ID da consulta agendada e a execução no caminho da solicitação.
+Você pode recuperar detalhes sobre a execução de uma consulta agendada específica fazendo uma solicitação GET para o ponto de extremidade `/schedules/{SCHEDULE_ID}/runs/{RUN_ID}` e fornecendo a ID da consulta agendada e a execução no caminho da solicitação.
 
 **Formato da API**
 
@@ -194,8 +194,8 @@ GET /schedules/{SCHEDULE_ID}/runs/{RUN_ID}
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | A variável `id` valor da consulta programada cuja execução você deseja recuperar detalhes. |
-| `{RUN_ID}` | A variável `id` valor da execução que você deseja recuperar. |
+| `{SCHEDULE_ID}` | O valor `id` da consulta agendada cuja execução você deseja recuperar detalhes. |
+| `{RUN_ID}` | O valor `id` da execução que você deseja recuperar. |
 
 **Solicitação**
 
@@ -245,7 +245,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes da execução e
 
 ### Interromper imediatamente uma execução para uma consulta programada específica
 
-Você pode interromper imediatamente uma execução para uma consulta agendada específica fazendo uma solicitação PATCH para o `/schedules/{SCHEDULE_ID}/runs/{RUN_ID}` e fornecendo a ID da consulta agendada e a execução no caminho da solicitação.
+Você pode interromper imediatamente uma execução de uma consulta agendada específica fazendo uma solicitação PATCH para o ponto de extremidade `/schedules/{SCHEDULE_ID}/runs/{RUN_ID}` e fornecendo a ID da consulta agendada e a execução no caminho da solicitação.
 
 **Formato da API**
 
@@ -255,8 +255,8 @@ PATCH /schedules/{SCHEDULE_ID}/runs/{RUN_ID}
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | A variável `id` valor da consulta programada cuja execução você deseja recuperar detalhes. |
-| `{RUN_ID}` | A variável `id` valor da execução que você deseja recuperar. |
+| `{SCHEDULE_ID}` | O valor `id` da consulta agendada cuja execução você deseja recuperar detalhes. |
+| `{RUN_ID}` | O valor `id` da execução que você deseja recuperar. |
 
 **Solicitação**
 

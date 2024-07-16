@@ -12,11 +12,11 @@ ht-degree: 0%
 
 # Gerenciar sandboxes
 
-As sandboxes são partições virtuais dentro de uma única instância do Experience Platform, o que permite uma integração perfeita com o processo de desenvolvimento de seus aplicativos de experiência digital. Todo o conteúdo e as ações realizadas em uma sandbox estão confinados somente a essa sandbox e não afetam outras sandboxes. Para obter mais informações sobre sandboxes, consulte a [Visão geral de sandboxes](../../../sandboxes/home.md).
+As sandboxes são partições virtuais dentro de uma única instância do Experience Platform, o que permite uma integração perfeita com o processo de desenvolvimento de seus aplicativos de experiência digital. Todo o conteúdo e as ações realizadas em uma sandbox estão confinados somente a essa sandbox e não afetam outras sandboxes. Para obter mais informações sobre sandboxes, consulte a [Visão geral das sandboxes](../../../sandboxes/home.md).
 
 ## Configurar sandboxes
 
-Para exibir detalhes e funções às quais uma sandbox está atribuída/com, selecione a **[!UICONTROL Sandboxes]** guia.
+Para exibir detalhes e funções às quais uma sandbox está atribuída/com, selecione a guia **[!UICONTROL Sandboxes]**.
 
 ![flac-sandboxes-tab](../../images/flac-ui/flac-sandboxes-tab.png)
 
@@ -26,10 +26,10 @@ A guia de detalhes fornece uma visão geral da sandbox. A visão geral exibe o n
 
 ![flac-sandboxes-details](../../images/flac-ui/flac-sandboxes-details.png)
 
-Selecione o **[!UICONTROL Funções]** para exibir as funções às quais a sandbox está atribuída.
+Selecione a guia **[!UICONTROL Funções]** para exibir as funções às quais a sandbox está atribuída.
 
-![flac-sandboxes-roles](../../images/flac-ui/flac-sandboxes-roles.png)
+![funções-sandboxes-flac](../../images/flac-ui/flac-sandboxes-roles.png)
 
 ## Próximas etapas
 
-Agora você aprendeu a visualizar os detalhes da sandbox e as funções às quais ela está atribuída no momento. Para obter uma visão geral de alto nível das sandboxes no Experience Platform, consulte o [documentação de visão geral da sandbox](../../sanboxes/../ui/overview.md).
+Agora você aprendeu a visualizar os detalhes da sandbox e as funções às quais ela está atribuída no momento. Para obter uma visão geral de alto nível das sandboxes no Experience Platform, consulte a [documentação de visão geral da sandbox](../../sanboxes/../ui/overview.md).

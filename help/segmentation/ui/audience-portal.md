@@ -29,7 +29,7 @@ No Audience Portal, você pode realizar as seguintes tarefas:
 
 Para abrir o Portal de público-alvo, selecione a guia **[!UICONTROL Procurar]** na seção Segmentação.
 
-## Lista de público-alvo {#list}
+## Lista de públicos-alvo {#list}
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_browse_churncolumnname"

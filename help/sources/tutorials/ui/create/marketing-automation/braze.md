@@ -4,10 +4,10 @@ description: Saiba como criar um fluxo de dados para sua conta do Brasil usando 
 last-substantial-update: 2024-01-30T00:00:00Z
 badge: Beta
 exl-id: 6e94414a-176c-4810-80ff-02cf9e797756
-source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
+source-git-commit: 59600165328181e41750b9b2a1f4fbf162dd1df5
 workflow-type: tm+mt
-source-wordcount: '689'
-ht-degree: 2%
+source-wordcount: '1001'
+ht-degree: 1%
 
 ---
 
@@ -41,7 +41,21 @@ Este tutorial também requer uma compreensão funcional de [[!DNL Braze] Atuais]
 
 Se você já tiver uma conexão [!DNL Braze], ignore o restante deste documento e prossiga para o tutorial em [configurando um fluxo de dados](../../dataflow/marketing-automation.md).
 
-## Conecte sua conta do [!DNL Braze] ao Experience Platform
+## Criar um esquema do XDM
+
+>[!TIP]
+>
+>Você deve criar um esquema do Experience Data Model (XDM) se esta for a primeira vez que você cria uma conexão [!DNL Braze Currents]. Se você já criou um esquema para [!DNL Braze Currents], ignore esta etapa e prossiga para [conectando sua conta ao Experience Platform](#connect).
+
+Na interface do usuário da Platform, use a navegação à esquerda e selecione **[!UICONTROL Esquemas]** para acessar o espaço de trabalho [!UICONTROL Esquemas]. Em seguida, selecione **[!UICONTROL Criar esquema]** e **[!UICONTROL Evento de experiência]**. Para continuar, selecione **[!UICONTROL Avançar]**.
+
+![Um esquema concluído.](../../../../images/tutorials/create/braze/schema.png)
+
+Forneça um nome e uma descrição para o esquema. Em seguida, use o painel [!UICONTROL Composição] para configurar os atributos do esquema. Em [!UICONTROL Grupos de campos], selecione **[!UICONTROL Adicionar]** e adicione o grupo de campos [!UICONTROL Braço Evento do Usuário Atual]. Quando terminar, selecione **[!UICONTROL Salvar]**.
+
+Para obter mais informações sobre esquemas, leia o guia para [criar esquemas na interface](../../../../../xdm/tutorials/create-schema-ui.md).
+
+## Conecte sua conta do [!DNL Braze] ao Experience Platform {#connect}
 
 Na interface da Platform, selecione **[!UICONTROL Fontes]** na navegação à esquerda para acessar o espaço de trabalho [!UICONTROL Fontes]. Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar a fonte específica com a qual deseja trabalhar usando a opção de pesquisa.
 
@@ -53,18 +67,30 @@ Em seguida, carregue o [arquivo de amostra Braze Currents](https://github.com/Ap
 
 ![A tela &quot;Adicionar Dados&quot;.](../../../../images/tutorials/create/braze/select-data.png)
 
-Depois que o arquivo for carregado, você deverá fornecer os detalhes do fluxo de dados, incluindo informações sobre o conjunto de dados e o esquema para o qual está mapeando.
+Depois que o arquivo for carregado, você deverá fornecer os detalhes do fluxo de dados, incluindo informações sobre o conjunto de dados e o esquema para o qual está mapeando.  Se esta for a primeira vez que você se conecta a uma origem Braze Currents, crie um novo conjunto de dados.  Caso contrário, você pode usar qualquer conjunto de dados existente que faça referência ao esquema do Brasil.  Se estiver criando um novo conjunto de dados, use o esquema criado na seção anterior.
 ![A tela &quot;Detalhes do Fluxo de Dados&quot; destacando &quot;Detalhes do Conjunto de Dados.&quot;](../../../../images/tutorials/create/braze/dataflow-detail.png)
 
 Em seguida, configure o mapeamento para os dados usando a interface de mapeamento.
 
-![A tela &quot;Mapeamento&quot;.](../../../../images/tutorials/create/braze/mapping.png)
+![A tela &quot;Mapeamento&quot;.](../../../../images/tutorials/create/braze/mapping_errors.png)
+
+O mapeamento terá os seguintes problemas que precisam ser resolvidos.
+
+Nos dados de origem, *id* será mapeada incorretamente para *_braze.appID*. Você deve alterar o campo de target mapping para *_id* no nível raiz do esquema. Em seguida, verifique se *properties.is_amp* está mapeado para *_braze.messaging.email.isAMP*.
+
+Em seguida, exclua o mapeamento de *hora* para *carimbo de data/hora*, selecione o ícone adicionar (`+`) e selecione **[!UICONTROL Adicionar campo calculado]**. Na caixa fornecida, insira *hora \* 1000* e selecione **[!UICONTROL Salvar]**.
+
+Depois que o novo campo calculado for adicionado, selecione **[!UICONTROL Mapear campo de destino]** ao lado do novo campo de origem e mapeie-o para *carimbo de data/hora* no nível raiz do esquema. Você deve selecionar **[!UICONTROL Validar]** para garantir que não haja mais erros.
 
 >[!IMPORTANT]
 >
 >Os carimbos de data e hora brasileiros não são expressos em milissegundos, mas em segundos. Para que os carimbos de data e hora no Experience Platform sejam refletidos com precisão, é necessário criar campos calculados em milissegundos. Um cálculo de &quot;time * 1000&quot; converterá corretamente em milissegundos, adequado para mapear para um campo de carimbo de data e hora dentro do Experience Platform.
 >
 >![Criando um campo calculado para o carimbo de data/hora ](../../../../images/tutorials/create/braze/create-calculated-field.png)
+
+![O mapeamento sem erros.](../../../../images/tutorials/create/braze/completed_mapping.png)
+
+Quando terminar, selecione **[!UICONTROL Próximo]**. Use a página de revisão para confirmar os detalhes do fluxo de dados e selecione **[!UICONTROL Concluir]**.
 
 ### Coletar credenciais necessárias
 

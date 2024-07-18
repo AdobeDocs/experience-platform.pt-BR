@@ -2,9 +2,9 @@
 title: Perguntas frequentes do Audiences
 description: Descubra respostas para perguntas frequentes sobre públicos-alvo e outros conceitos relacionados à segmentação.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: ca8f0c3df9581af7be37e242c9e300ef1b6ea814
 workflow-type: tm+mt
-source-wordcount: '4096'
+source-wordcount: '4092'
 ht-degree: 0%
 
 ---
@@ -317,7 +317,7 @@ Para obter mais detalhes sobre como usar a Composição de público-alvo, leia o
 
 Os públicos-alvo são salvos automaticamente ao criá-los na Composição de público-alvo. O horário de criação do público será a primeira vez que esse salvamento automático ocorrerá.
 
-Depois que o público-alvo é criado, pode levar até 24 horas para ser avaliado.
+Após a criação da composição de público-alvo, pode levar até 48 horas para que ela seja avaliada e ativada para uso em serviços downstream, como um destino do Real-Time CDP ou canal do Adobe Journey Optimizer.
 
 ### Quando posso usar o público-alvo que criei?
 
@@ -337,11 +337,7 @@ A divisão de público-alvo permite ainda subdefinir o público-alvo em grupos m
 
 Ao dividir por atributo, há exclusividade mútua entre os grupos. Isso significa que se um registro atender aos critérios de vários caminhos de divisão, ele será atribuído ao caminho **primeiro** à esquerda e **não** será atribuído a qualquer um dos outros caminhos.
 
-Ao dividir por porcentagem, as divisões são **aleatoriamente** concluídas. Isso significa que os perfis serão atribuídos aleatoriamente a cada caminho. A divisão **é** persistente, o que significa que o perfil estará no mesmo subpúblico-alvo em cada avaliação.
-
->[!NOTE]
->
->Anteriormente, as divisões em Composição de público eram **não** persistentes.
+Ao dividir por porcentagem, as divisões são **aleatoriamente** concluídas. Isso significa que os perfis serão atribuídos aleatoriamente a cada caminho.
 
 Para obter mais informações sobre o bloco Split, leia o [guia da interface do usuário da composição de público-alvo](./ui/audience-composition.md#split).
 

@@ -1,9 +1,9 @@
 ---
 title: Visão geral do Audience Portal
 description: Saiba como usar o Audience Portal para exibir, gerenciar e criar públicos no Adobe Experience Platform.
-source-git-commit: c724baba6972e1a033c18b63ab824149567d20fb
+source-git-commit: ca8f0c3df9581af7be37e242c9e300ef1b6ea814
 workflow-type: tm+mt
-source-wordcount: '3673'
+source-wordcount: '3693'
 ht-degree: 3%
 
 ---
@@ -258,6 +258,10 @@ Selecionar **[!UICONTROL Editar propriedades]** permitirá que você edite os de
 ### Total de público {#audience-total}
 
 A seção **[!UICONTROL Público total]** mostra o número total de perfis qualificados para o público.
+
+>[!NOTE]
+>
+>Pode levar até 30 minutos para que a contagem total do público-alvo seja atualizada após a conclusão do trabalho de exportação.
 
 As estimativas são geradas usando um tamanho de amostra dos dados de amostra desse dia. Se houver menos de 1 milhão de entidades no armazenamento do Perfil, o conjunto de dados completo será usado; para entre 1 e 20 milhões de entidades, será usado 1 milhão de entidades; e para mais de 20 milhões de entidades, será usado 5% do total de entidades. Mais informações sobre a geração de estimativas podem ser encontradas na [seção de geração de estimativas](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) do tutorial de criação de público-alvo.
 

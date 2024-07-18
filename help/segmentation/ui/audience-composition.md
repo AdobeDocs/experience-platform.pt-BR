@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guia da interface do usuário de públicos
 description: A Composição de público-alvo na interface do usuário do Adobe Experience Platform fornece um espaço de trabalho avançado que permite interagir com elementos de dados do perfil. O espaço de trabalho fornece controles intuitivos para criação e edição de públicos-alvo para sua organização.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: 3852fc4eca8ea4b6b3fdcfb6aaa54315d83038b4
+source-git-commit: ca8f0c3df9581af7be37e242c9e300ef1b6ea814
 workflow-type: tm+mt
-source-wordcount: '1913'
+source-wordcount: '1951'
 ht-degree: 0%
 
 ---
@@ -268,14 +268,18 @@ Além disso, você pode habilitar a opção **[!UICONTROL Outros perfis]** para 
 
 ## Publicar seu público
 
-Depois de compor o seu público, você pode salvá-lo e publicá-lo selecionando **[!UICONTROL Publish]**.
+>[!IMPORTANT]
+>
+>Ao publicar sua composição de público-alvo, observe que pode levar até 48 horas para que ela seja avaliada e ativada para uso em serviços downstream, como um destino do Real-Time CDP ou canal do Adobe Journey Optimizer.
 
-![O botão Publish está realçado, mostrando como salvar e publicar seu público-alvo.](../images/ui/audience-composition/publish.png)
+Depois de criar sua composição, você pode salvá-la e publicá-la selecionando **[!UICONTROL Publish]**.
+
+![O botão Publish está realçado, mostrando como salvar e publicar sua composição.](../images/ui/audience-composition/publish.png)
 
 Se houver erros ao criar o público-alvo, um alerta será exibido, informando como resolver o problema.
 
-![O botão Publish está realçado, mostrando como salvar e publicar seu público-alvo.](../images/ui/audience-composition/audience-alert.png)
+![O botão Publish está realçado, mostrando como salvar e publicar sua composição.](../images/ui/audience-composition/audience-alert.png)
 
 ## Próximas etapas
 
-A Composição do público-alvo fornece um fluxo de trabalho avançado que permite criar públicos-alvo a partir de diferentes tipos de blocos. Para saber mais sobre outras partes da interface do usuário do Serviço de segmentação, leia o [Guia do usuário do Serviço de segmentação](./overview.md).
+A Composição de público-alvo fornece um fluxo de trabalho avançado que permite criar composições a partir dos diferentes tipos de blocos. Para saber mais sobre outras partes da interface do usuário do Serviço de segmentação, leia o [Guia do usuário do Serviço de segmentação](./overview.md).

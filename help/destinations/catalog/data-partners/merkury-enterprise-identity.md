@@ -1,10 +1,10 @@
 ---
 title: Destino de identidade da Merkury Enterprise
 description: Saiba como criar uma conexão de destino de identidade corporativa do Merkury usando a interface do usuário do Adobe Experience Platform.
-source-git-commit: 01ce38d26cf61706de84ec143e3dd8af720d0591
+source-git-commit: 0a1d024b5642c08cd9349220a9686d8d4cbfd55a
 workflow-type: tm+mt
 source-wordcount: '1469'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -75,10 +75,11 @@ Esta seção descreve que tipo de público-alvo você pode exportar para esse de
 ## Tipo e frequência de exportação
 
 Consulte a tabela abaixo para obter informações sobre o tipo e a frequência da exportação de destino.
-|**Público**|**Com suporte**|**Origem da descrição**|\
-|—|—|—|\
-✓ |Serviço de Segmentação|µ|Públicos-alvo gerados pelo Experience Platform [[Serviço de segmentação]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/home).|
-Uploads personalizados|X|Públicos-alvo [[importados]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience) para Experience Platform de arquivos CSV.
+
+| **Público-alvo** | **Com suporte** | **Origem da descrição** |
+|---|---|---|      
+| Serviço de segmentação | ✓ | Públicos gerados por meio do Experience Platform [[Serviço de segmentação]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/home). |
+| Uploads personalizados | X | Públicos-alvo [[importados]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience) para Experience Platform de arquivos CSV. |
 
 {style="table-layout:auto"}
 

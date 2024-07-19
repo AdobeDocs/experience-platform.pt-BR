@@ -3,9 +3,9 @@ title: Ponto de extremidade da API de expiração do conjunto de dados
 description: O ponto de extremidade /ttl na API da higiene de dados permite agendar programaticamente as expirações do conjunto de dados no Adobe Experience Platform.
 role: Developer
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
-source-git-commit: 4fb8313f8209b68acef1484fc873b9bd014492be
+source-git-commit: 911089ec641d9fbb436807b04dd38e00fd47eecf
 workflow-type: tm+mt
-source-wordcount: '2217'
+source-wordcount: '1964'
 ht-degree: 2%
 
 ---
@@ -388,88 +388,6 @@ curl -X DELETE \
 
 Uma resposta bem-sucedida retorna o status HTTP 204 (Sem Conteúdo), e o atributo `status` da expiração está definido como `cancelled`.
 
-## Recuperar o histórico do status de expiração de um conjunto de dados {#retrieve-expiration-history}
-
-Para consultar o histórico de status de expiração de um conjunto de dados específico, use os parâmetros de consulta `{DATASET_ID}` e `include=history` em uma solicitação de pesquisa. O resultado inclui informações sobre a criação da expiração do conjunto de dados, quaisquer atualizações que tenham sido aplicadas e seu cancelamento ou execução (se aplicável). Você também pode usar o `{DATASET_EXPIRATION_ID}` para recuperar o histórico do status de expiração do conjunto de dados.
-
-**Formato da API**
-
-```http
-GET /ttl/{DATASET_ID}?include=history
-GET /ttl/{DATASET_EXPIRATION_ID}?include=history
-```
-
-| Parâmetro | Descrição |
-| --- | --- |
-| `{DATASET_ID}` | A ID do conjunto de dados cujo histórico de expiração você deseja pesquisar. |
-| `{DATASET_EXPIRATION_ID}` | A ID da expiração do conjunto de dados. Observação: isso é chamado de `ttlId` na resposta. |
-
-{style="table-layout:auto"}
-
-**Solicitação**
-
-```shell
-curl -X GET \
-  https://platform.adobe.io/data/core/hygiene/ttl/62759f2ede9e601b63a2ee14?include=history \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**Resposta**
-
-Uma resposta bem-sucedida retorna os detalhes da expiração do conjunto de dados, com uma matriz `history` fornecendo os detalhes de seus atributos `status`, `expiry`, `updatedAt` e `updatedBy` para cada uma de suas atualizações registradas.
-
-```json
-{
-  "ttlId": "SD-b16c8b48-a15a-45c8-9215-587ea89369bf",
-  "datasetId": "62759f2ede9e601b63a2ee14",
-  "datasetName": "Example Dataset",
-  "sandboxName": "prod",
-  "displayName": "Expiration Request 123",
-  "description": "Expiration Request 123 Description",
-  "imsOrg": "0FCC747E56F59C747F000101@AdobeOrg",
-  "status": "cancelled",
-  "expiry": "2022-05-09T23:47:30.071186Z",
-  "updatedAt": "2022-05-09T23:47:30.071186Z",
-  "updatedBy": "Jane Doe <jdoe@adobe.com> 77A51F696282E48C0A494 012@64d18d6361fae88d49412d.e",
-  "history": [
-    {
-      "status": "created",
-      "expiry": "2032-12-31T23:59:59Z",
-      "updatedAt": "2022-05-09T22:38:40.393115Z",
-      "updatedBy": "Jane Doe <jdoe@adobe.com> 77A51F696282E48C0A494 012@64d18d6361fae88d49412d.e"
-    },
-    {
-      "status": "updated",
-      "expiry": "2032-12-31T23:59:59Z",
-      "updatedAt": "2022-05-09T22:41:46.731002Z",
-      "updatedBy": "Jane Doe <jdoe@adobe.com> 77A51F696282E48C0A494 012@64d18d6361fae88d49412d.e"
-    },
-    {
-      "status": "cancelled",
-      "expiry": "2022-05-09T23:47:30.071186Z",
-      "updatedAt": "2022-05-09T23:47:30.071186Z",
-      "updatedBy": "Jane Doe <jdoe@adobe.com> 77A51F696282E48C0A494 012@64d18d6361fae88d49412d.e"
-    }
-  ]
-}
-```
-
-| Propriedade | Descrição |
-| --- | --- |
-| `ttlId` | A ID da expiração do conjunto de dados. |
-| `datasetId` | A ID do conjunto de dados ao qual essa expiração se aplica. |
-| `datasetName` | O nome de exibição do conjunto de dados ao qual esta expiração se aplica. |
-| `sandboxName` | O nome da sandbox em que o conjunto de dados de destino está localizado. |
-| `displayName` | O nome de exibição da solicitação de expiração. |
-| `description` | Uma descrição para a solicitação de expiração. |
-| `imsOrg` | A ID da sua organização. |
-| `history` | Lista o histórico de atualizações para a expiração como uma matriz de objetos, com cada objeto contendo os atributos `status`, `expiry`, `updatedAt` e `updatedBy` para a expiração no momento da atualização. |
-
-{style="table-layout:auto"}
-
 ## Apêndice
 
 ### Parâmetros de consulta aceitos {#query-params}
@@ -482,18 +400,14 @@ A tabela a seguir descreve os parâmetros de consulta disponíveis ao [listar ex
 
 | Parâmetro | Descrição | Exemplo |
 | --- | --- | --- |
-| `author` | Corresponde a expirações cujo `created_by` é uma correspondência para a cadeia de caracteres de pesquisa. Se a cadeia de caracteres de pesquisa começar com `LIKE` ou `NOT LIKE`, o restante será tratado como um padrão de pesquisa SQL. Caso contrário, a cadeia de caracteres de pesquisa inteira será tratada como uma cadeia literal que deve corresponder exatamente ao conteúdo inteiro de um campo `created_by`. | `author=LIKE %john%`, `author=John Q. Public` |
-| `cancelledDate` / `cancelledToDate` / `cancelledFromDate` | Corresponde às expirações que foram canceladas a qualquer momento no intervalo indicado. Isso se aplica mesmo que a expiração tenha sido reaberta posteriormente (definindo uma nova expiração para o mesmo conjunto de dados). | `updatedDate=2022-01-01` |
-| `completedDate` / `completedToDate` / `completedFromDate` | Corresponde às expirações concluídas durante o intervalo especificado. | `completedToDate=2021-11-11-06:00` |
-| `createdDate` | Corresponde às expirações que foram criadas na janela de 24 horas, começando no horário declarado.<br><br>Observe que datas sem uma hora (como `2021-12-07`) representam a data e hora no início desse dia. Assim, `createdDate=2021-12-07` refere-se a qualquer expiração criada em 7 de dezembro de 2021, de `00:00:00` a `23:59:59.999999999` (UTC). | `createdDate=2021-12-07` |
-| `createdFromDate` | Corresponde às expirações criadas no horário indicado ou depois dele. | `createdFromDate=2021-12-07T00:00:00Z` |
-| `createdToDate` | Corresponde às expirações criadas no horário indicado ou antes dele. | `createdToDate=2021-12-07T23:59:59.999999999Z` |
+| `author` | Use o parâmetro de consulta `author` para localizar a pessoa que atualizou mais recentemente a expiração do conjunto de dados. Se nenhuma atualização tiver sido feita desde a criação, isso corresponderá ao criador original da expiração. Esse parâmetro corresponde a expirações nas quais o campo `created_by` corresponde à cadeia de caracteres de pesquisa.<br>Se a cadeia de caracteres de pesquisa começar com `LIKE` ou `NOT LIKE`, o restante será tratado como um padrão de pesquisa SQL. Caso contrário, a cadeia de caracteres de pesquisa inteira será tratada como uma cadeia literal que deve corresponder exatamente ao conteúdo inteiro de um campo `created_by`. | `author=LIKE %john%`, `author=John Q. Public` |
 | `datasetId` | Corresponde às expirações que se aplicam a um conjunto de dados específico. | `datasetId=62b3925ff20f8e1b990a7434` |
 | `datasetName` | Corresponde a expirações cujo nome do conjunto de dados contém a cadeia de caracteres de pesquisa fornecida. A correspondência não diferencia maiúsculas de minúsculas. | `datasetName=Acme` |
 | `description` |   | `description=Handle expiration of Acme information through the end of 2024.` |
 | `displayName` | Corresponde a expirações cujo nome de exibição contém a cadeia de caracteres de pesquisa fornecida. A correspondência não diferencia maiúsculas de minúsculas. | `displayName=License Expiry` |
 | `executedDate` / `executedFromDate` / `executedToDate` | Filtra resultados com base em uma data de execução exata, uma data de término para execução ou uma data de início para execução. Eles são usados para recuperar dados ou registros associados à execução de uma operação em uma data específica, antes de uma data específica ou depois de uma data específica. | `executedDate=2023-02-05T19:34:40.383615Z` |
-| `expiryDate` / `expiryToDate` / `expiryFromDate` | Corresponde às expirações que devem ser executadas, ou já foram executadas, durante o intervalo especificado. | `expiryFromDate=2099-01-01&expiryToDate=2100-01-01` |
+| `expiryDate` | Corresponde às expirações que ocorreram na janela de 24 horas da data especificada. | `2024-01-01` |
+| `expiryToDate` / `expiryFromDate` | Corresponde às expirações que devem ser executadas, ou já foram executadas, durante o intervalo especificado. | `expiryFromDate=2099-01-01&expiryToDate=2100-01-01` |
 | `limit` | Um número inteiro entre 1 e 100 que indica o número máximo de expirações a serem retornadas. O padrão é 25. | `limit=50` |
 | `orderBy` | O parâmetro de consulta `orderBy` especifica a ordem de classificação dos resultados retornados pela API. Use-a para organizar os dados com base em um ou mais campos, em ordem crescente (ASC) ou decrescente (DESC). Use o prefixo + ou - para indicar ASC e DESC, respectivamente. Os seguintes valores são aceitos: `displayName`, `description`, `datasetName`, `id`, `updatedBy`, `updatedAt`, `expiry`, `status`. | `-datasetName` |
 | `orgId` | Corresponde às expirações de conjuntos de dados cuja ID da organização corresponde à do parâmetro. Esse valor é padronizado com o dos cabeçalhos `x-gw-ims-org-id` e é ignorado, a menos que a solicitação forneça um token de serviço. | `orgId=885737B25DC460C50A49411B@AdobeOrg` |
@@ -502,7 +416,8 @@ A tabela a seguir descreve os parâmetros de consulta disponíveis ao [listar ex
 | `search` | Corresponde a expirações nas quais a cadeia de caracteres especificada é uma correspondência exata para a ID de expiração, ou está **contida** em qualquer um destes campos:<br><ul><li>autor</li><li>nome de exibição</li><li>descrição</li><li>nome de exibição</li><li>nome do conjunto de dados</li></ul> | `search=TESTING` |
 | `status` | Uma lista de status separados por vírgulas. Quando incluída, a resposta corresponde às expirações do conjunto de dados cujo status atual está entre os listados. | `status=pending,cancelled` |
 | `ttlId` | Corresponde à solicitação de expiração com a ID fornecida. | `ttlID=SD-c8c75921-2416-4be7-9cfd-9ab01de66c5f` |
-| `updatedDate` / `updatedToDate` / `updatedFromDate` | Como `createdDate` / `createdFromDate` / `createdToDate`, mas corresponde à hora de atualização de uma expiração do conjunto de dados, em vez da hora de criação.<br><br>Uma expiração é considerada atualizada em cada edição, inclusive quando ela é criada, cancelada ou executada. | `updatedDate=2022-01-01` |
+| `updatedDate` | Corresponde às expirações que foram atualizadas na janela de 24 horas da data especificada. | `2024-01-01` |
+| `updatedToDate` / `updatedFromDate` | Corresponde às expirações que foram atualizadas na janela de 24 horas, a partir do horário declarado.<br><br>Uma expiração é considerada atualizada em cada edição, inclusive quando ela é criada, cancelada ou executada. | `updatedDate=2022-01-01` |
 
 {style="table-layout:auto"}
 

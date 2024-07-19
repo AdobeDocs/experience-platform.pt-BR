@@ -2,9 +2,9 @@
 title: Perguntas frequentes do Audiences
 description: Descubra respostas para perguntas frequentes sobre públicos-alvo e outros conceitos relacionados à segmentação.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: ca8f0c3df9581af7be37e242c9e300ef1b6ea814
+source-git-commit: 5e677e53677cd28787004043e9fcc9b94e631fc8
 workflow-type: tm+mt
-source-wordcount: '4092'
+source-wordcount: '4187'
 ht-degree: 0%
 
 ---
@@ -46,7 +46,7 @@ Ao fazer upload de um público-alvo gerado externamente, os seguintes itens são
 
 Durante o fluxo de trabalho de importação de público externo, você deve especificar qual coluna no arquivo CSV corresponde à **Identidade principal**. Um exemplo de identidade primária inclui endereço de email, ECID ou um namespace de identidade personalizado específico de uma organização.
 
-Os dados associados a esta coluna de identidade primária contêm os dados **only** anexados ao perfil. Se não houver perfis que correspondam aos dados na coluna de identidade principal, um novo perfil será criado. No entanto, este perfil é essencialmente um perfil órfão, pois **não** atributos ou eventos de experiência estão associados a este perfil.
+Os dados associados a esta coluna de identidade primária são os dados **only** anexados ao perfil. Se não houver perfis que correspondam aos dados na coluna de identidade principal, um novo perfil será criado. No entanto, este perfil é essencialmente um perfil órfão, pois **não** atributos ou eventos de experiência estão associados a este perfil.
 
 Todos os outros dados dentro do público gerado externamente são considerados **atributos de carga**. Estes atributos só podem **ser** usados para personalização e enriquecimento durante a ativação e estão **não** anexados a um perfil. No entanto, esses atributos são armazenados no data lake.
 
@@ -59,6 +59,10 @@ Sim, o público-alvo gerado externamente será mesclado com o perfil existente n
 ### Posso usar um público gerado externamente para criar outros públicos?
 
 Sim, qualquer público gerado externamente aparecerá no inventário de público e poderá ser usado ao construir públicos dentro do [Construtor de segmentos](./ui/segment-builder.md).
+
+### Com que frequência os públicos-alvo gerados externamente são avaliados?
+
+Públicos gerados externamente são **somente** avaliados durante o tempo de importação. Como os atributos associados a esses públicos de importação são não duráveis e **não** fazem parte do armazenamento Perfil, a única vez que um público gerado externamente será atualizado é se o público existente for atualizado manualmente.
 
 ### Posso usar atributos carregados externamente como parte da segmentação?
 
@@ -97,6 +101,10 @@ Se você tiver carregado acidentalmente um público-alvo gerado externamente e q
 A expiração de dados atuais para públicos gerados externamente é de **30 dias**. Essa expiração de dados foi escolhida para reduzir a quantidade de dados em excesso armazenados em sua organização.
 
 Depois que o período de expiração dos dados passar, o conjunto de dados associado ainda estará visível no inventário do conjunto de dados, mas você **não** poderá ativar o público-alvo e a contagem de perfis será exibida como zero.
+
+### Há um número máximo de públicos-alvo gerados externamente que eu possa importar?
+
+Não há limite para o número de públicos-alvo gerados externamente que você pode importar. No entanto, observe que os públicos-alvo importados **do** contam com o limite geral de públicos-alvo.
 
 ### Como o Audience Portal e a Composição de público-alvo interagem com o lançamento dos dados de parceiros da Real-Time CDP?
 

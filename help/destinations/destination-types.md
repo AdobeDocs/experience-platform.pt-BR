@@ -3,9 +3,9 @@ keywords: destinos;destino;destinos tipos;destinations;destination;destination t
 title: Tipos e categorias de destino
 description: Saiba mais sobre os diferentes tipos e categorias de destinos no Adobe Experience Platform.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: c6019737e93756f3f524d5a85ea57383baa1a31d
+source-git-commit: 8314aca706b47c4cbcb993418c287629f5563189
 workflow-type: tm+mt
-source-wordcount: '776'
+source-wordcount: '804'
 ht-degree: 1%
 
 ---
@@ -20,7 +20,7 @@ No Adobe Experience Platform, distinguimos entre diferentes tipos de destino - c
 
 Por fim, as conexões também podem ser diferenciadas entre destinos públicos disponíveis em todas as organizações no catálogo de destinos e destinos privados que os clientes do Real-Time CDP Ultimate podem criar para atender aos seus casos de uso de exportação específicos.
 
-![Diagrama de tipos de destinos.](./assets/destination-types/types-of-destinations-no-highlight.png)
+![Tipos de diagrama de destinos.](./assets/destination-types/types-of-destinations-no-highlight.png "Diagrama de tipos de destinos."){zoomable="yes"}
 
 ## Conexões {#connections}
 
@@ -33,17 +33,17 @@ Os destinos de exportação de perfil recebem dados brutos, geralmente com o end
 * [Destinos de exportação de perfil de streaming (destinos corporativos)](#streaming-profile-export)
 * [Destinos em lote (baseados em arquivo)](#file-based)
 
-### Destinos de exportação de perfil de streaming (destinos corporativos) {#streaming-profile-export}
+### Destinos empresariais avançados (destinos de exportação de perfil de transmissão) {#streaming-profile-export}
 
 >[!IMPORTANT]
 >
->Os destinos corporativos, ou os destinos de exportação de perfil de streaming, estão disponíveis somente para clientes do [Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html?lang=pt-BR).
+>Destinos corporativos avançados, ou destinos de exportação de perfil de streaming, estão disponíveis somente para clientes do [Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html?lang=pt-BR).
 
-Use os conectores de dados de destino corporativo para fornecer perfis do Adobe Real-time Customer Data Platform em tempo quase real a sistemas internos ou a outros sistemas de terceiros para sincronização de dados, análise e outros casos de uso de enriquecimento de perfil.
+Use os conectores avançados de dados de destino corporativo para fornecer perfis do Adobe Real-time Customer Data Platform em tempo quase real a sistemas internos ou a outros sistemas de terceiros para sincronização de dados, análise e outros casos de uso de enriquecimento de perfil.
 
 Esses destinos recebem dados de público-alvo e perfil como fluxos de dados de Experience Platform.
 
-Os destinos empresariais incluem:
+Os destinos corporativos avançados incluem:
 
 * [Destino da API HTTP](catalog/streaming/http-destination.md)
 * [Amazon Kinesis](catalog/cloud-storage/amazon-kinesis.md)
@@ -81,7 +81,7 @@ Saiba mais sobre os [vários tipos de público-alvo](/help/segmentation/ui/accou
 
 Um símbolo no cartão de destino mostra quais tipos de públicos-alvo você pode exportar para cada destino.
 
-![Exemplo de cartão de destino com símbolos mostrando quais tipos de público-alvo podem ser exportados.](/help/destinations/assets/destination-types/types-of-audiences.png)
+![Exemplo de cartão de destino com símbolos mostrando quais tipos de público-alvo podem ser exportados.](/help/destinations/assets/destination-types/types-of-audiences.png "Exemplo de cartão de destino com símbolos mostrando quais tipos de público-alvo podem ser exportados."){zoomable="yes"}
 
 
 ## Destinos de exportação do conjunto de dados {#dataset-export-destinations}
@@ -114,4 +114,4 @@ As extensões são úteis quando os dados do evento são usados para acionar uma
 
 As conexões e extensões no [catálogo de destinos](https://platform.adobe.com/destination/catalog) são agrupadas por categoria de destino (**Advertising**, **Armazenamento na nuvem**, **Plataformas de pesquisa**, **Marketing por email** etc.), dependendo da ação de marketing que elas ajudam a realizar. Para obter mais informações sobre cada categoria, bem como os destinos incluídos em cada categoria, consulte a [Documentação do catálogo de destinos](./catalog/overview.md).
 
-![Categorias de destino destacadas na página de catálogo.](./assets/destination-types/destination-categories-menu.png)
+![Categorias de destino destacadas na página do catálogo.](./assets/destination-types/destination-categories-menu.png "Categorias de destino destacadas na página de catálogo."){zoomable="yes"}

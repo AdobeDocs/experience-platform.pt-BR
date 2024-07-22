@@ -1,31 +1,31 @@
 ---
-title: Magnite Streaming Conexão de destino em tempo real
+title: Magnite Conexão de destino em tempo real
 description: Use esse destino para fornecer públicos-alvo da CDP do Adobe para a plataforma de transmissão Magnite em tempo real.
 badgeBeta: label="Beta" type="Informative"
 hide: true
 hidefromtoc: true
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 8314aca706b47c4cbcb993418c287629f5563189
 workflow-type: tm+mt
-source-wordcount: '1306'
+source-wordcount: '1297'
 ht-degree: 2%
 
 ---
 
 
-# (Beta) Magnite Streaming: conexão de destino em tempo real
+# (Beta) Magnite: conexão de destino em tempo real
 
 ## Visão geral {#overview}
 
-Os destinos [!DNL Magnite Streaming: Real-Time] e Magnite Streaming: Batch no Adobe Experience Platform ajudam a mapear e exportar públicos para direcionamento e ativação na plataforma Magnite Streaming.
+Os destinos [!DNL Magnite: Real-Time] e [Magnite: Batch](/help/destinations/catalog/advertising/magnite-batch.md) no Adobe Experience Platform ajudam a mapear e exportar públicos para direcionamento e ativação na plataforma Magnite Streaming.
 
-A ativação de públicos para a plataforma [!DNL Magnite Streaming] é um processo de duas etapas que requer o uso dos destinos Magnite Streaming: Tempo Real e Magnite Streaming: Lote.
+A ativação de públicos para a plataforma [!DNL Magnite Streaming] é um processo de duas etapas que requer o uso dos destinos Magnite: Tempo real e Magnite: Lote.
 
 Para ativar os públicos para [!DNL Magnite Streaming], você deve:
 
-* Ative os públicos no destino [!DNL Magnite Streaming: Real-Time], conforme mostrado nesta página.
-* Ative o mesmo público no destino Magnite Streaming: Batch. O destino [!DNL Magnite Streaming: Batch] é um componente obrigatório. Falha ao ativar o público no [!DNL Magnite Streaming] Destino do lote resultará em uma falha de integração e seus públicos-alvo não serão ativados.
+* Ative os públicos no destino [!DNL Magnite: Real-Time], conforme mostrado nesta página.
+* Ative o mesmo público no destino Magnite: Batch. O destino [!DNL Magnite: Batch] é um componente obrigatório. Falha ao ativar o público no [!DNL Magnite Streaming] Destino do lote resultará em uma falha de integração e seus públicos-alvo não serão ativados.
 
-Observação: ao usar o destino em Tempo real, o [!DNL Magnite: Streaming] receberá públicos em tempo real, mas só poderemos armazenar temporariamente públicos em tempo real em nossa plataforma, e eles serão removidos do nosso sistema em alguns dias. Por isso, se você quiser usar o destino Magnite: Streaming em Tempo Real, *também* precisará usar o destino Magnite Streaming: Batch - cada público-alvo ativado para o destino em Tempo Real, você também precisará ativar para o destino Batch.
+Observação: ao usar o destino em Tempo real, o [!DNL Magnite Streaming] receberá públicos em tempo real, mas o Magnite só poderá armazenar temporariamente públicos em tempo real em sua plataforma, e eles serão removidos do sistema em alguns dias. Por isso, se você quiser usar o destino Magnite: Tempo real, *também* precisará usar o destino Magnite: Batch - cada público ativado para o destino em Tempo real, você também precisará ativar para o destino Batch.
 
 >[!IMPORTANT]
 >
@@ -35,7 +35,7 @@ Observação: ao usar o destino em Tempo real, o [!DNL Magnite: Streaming] receb
 
 ## Casos de uso {#use-cases}
 
-Para ajudá-lo a entender melhor como e quando você deve usar o destino [!DNL Magnite Streaming: Real-Time], veja um exemplo de caso de uso que os clientes da Adobe Experience Platform podem resolver usando esse destino.
+Para ajudá-lo a entender melhor como e quando você deve usar o destino [!DNL Magnite: Real-Time], veja um exemplo de caso de uso que os clientes da Adobe Experience Platform podem resolver usando esse destino.
 
 ### Ativação e direcionamento {#activation-and-targeting}
 
@@ -48,11 +48,11 @@ Se você não tiver uma conta [!DNL Magnite Streaming], entre em contato com ado
 
 ## Identidades suportadas {#supported-identities}
 
-O destino [!DNL Magnite Streaming: Real-Time] dá suporte à ativação das identidades descritas na tabela abaixo. Saiba mais sobre [identidades](/help/identity-service/features/namespaces.md).
+O destino [!DNL Magnite: Real-Time] dá suporte à ativação das identidades descritas na tabela abaixo. Saiba mais sobre [identidades](/help/identity-service/features/namespaces.md).
 
 | Identidade de destino | Descrição | Considerações |
 |-------------------|--------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|
-| device_id | Um identificador exclusivo de um dispositivo ou identidade. Aceitamos qualquer ID de dispositivo e ID própria, independentemente do tipo. | Os tipos de identidade compatíveis incluem, entre outros, PPUID, GAID, IDFA e IDs de dispositivo de TV. |
+| device_id | Um identificador exclusivo de um dispositivo ou identidade. Aceitamos qualquer ID de dispositivo e ID própria, independentemente do tipo. | Os tipos de identidade compatíveis com o Magnite incluem, entre outros, PPUID, GAID, IDFA e IDs de dispositivo de TV. |
 
 {style="table-layout:auto"}
 
@@ -73,7 +73,7 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 
 | Item | Tipo | Notas |
 |------------------|---------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Tipo de exportação | **[!UICONTROL Exportação de segmentos]** | Você está exportando todos os membros de um segmento (público) com os identificadores (nome, número de telefone ou outros) usados no destino [!DNL Magnite Streaming: Real-Time]. |
+| Tipo de exportação | **[!UICONTROL Exportação de segmentos]** | Você está exportando todos os membros de um segmento (público) com os identificadores (nome, número de telefone ou outros) usados no destino [!DNL Magnite: Real-Time]. |
 | Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil é atualizado em Experience Platform com base na avaliação do segmento, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
@@ -162,13 +162,13 @@ Depois que os públicos-alvo forem carregados, você poderá validar se os públ
 
 -->
 
-* A assimilação de públicos pela Post deve aparecer em [!DNL Magnite Streaming] dentro de alguns minutos e pode ser aplicada a uma oferta. Você pode confirmar isso verificando a ID do segmento que foi compartilhada durante as etapas de ativação no Adobe Experience Platform.
+* Após a assimilação, espera-se que os públicos-alvo apareçam em [!DNL Magnite Streaming] dentro de alguns minutos e possam ser aplicados a uma oferta. Você pode confirmar isso verificando a ID do segmento que foi compartilhada durante as etapas de ativação no Adobe Experience Platform.
 
-## Ativar os mesmos públicos-alvo por meio do destino [!DNL Magnite Streaming: Batch]
+## Ativar os mesmos públicos-alvo por meio do destino [!DNL Magnite: Batch]
 
-Os públicos-alvo compartilhados com [!DNL Magnite Streaming] usando o destino em tempo real também precisarão ser compartilhados usando o destino Magnite Streaming: Batch. Quando configurados corretamente, os nomes de segmentos na interface do usuário do [!DNL Magnite Streaming] são atualizados para refletir aqueles usados na atualização pós-diária do Adobe Experience Platform.
+Os públicos-alvo compartilhados com [!DNL Magnite Streaming] usando o destino em Tempo real também precisarão ser compartilhados usando o destino Magnite: Batch. Quando configurados corretamente, os nomes de segmentos na interface do usuário do [!DNL Magnite Streaming] são atualizados para refletir aqueles usados na atualização pós-diária do Adobe Experience Platform.
 
-Por fim, se um destino Batch não tiver sido configurado para sua integração, configure-o agora por meio do documento Magnite Streaming: Batch destination.
+Por fim, se um destino de Lote não tiver sido configurado para a integração, configure-o agora por meio do documento Magnite: Batch destination.
 
 ## Uso e governança de dados {#data-usage-governance}
 

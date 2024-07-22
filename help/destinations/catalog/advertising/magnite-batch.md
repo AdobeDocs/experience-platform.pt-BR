@@ -1,34 +1,34 @@
 ---
-title: Destino em lote de transmissão Magnite
+title: Destino de lote Magnite
 description: Use esse destino para fornecer públicos-alvo da CDP do Adobe para a plataforma de transmissão Magnite em lote.
 badgeBeta: label="Beta" type="Informative"
 hide: true
 hidefromtoc: true
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: b8921e887b827fcc7b9115045a1954c41a37bce8
 workflow-type: tm+mt
-source-wordcount: '1685'
+source-wordcount: '1663'
 ht-degree: 1%
 
 ---
 
 
-# Magnite Streaming: conexão em lote {#magnite-streaming-batch}
+# Magnite: conexão em lote {#magnite-streaming-batch}
 
 ## Visão geral {#overview}
 
-Este documento descreve o destino Magnite Streaming: Batch e fornece exemplos de casos de uso para ajudá-lo a entender melhor como ativar e exportar públicos para ele.
+Este documento descreve o destino Magnite: Batch e fornece exemplos de casos de uso para ajudá-lo a entender melhor como ativar e exportar públicos para ele.
 
-Os públicos-alvo da Adobe Real-Time CDP podem ser fornecidos para a Magnite: plataforma de streaming de duas maneiras: uma por dia ou em tempo real:
+Os públicos-alvo da Adobe Real-Time CDP podem ser entregues à plataforma de transmissão Magnite de duas maneiras: uma vez por dia ou em tempo real:
 
-1. Se você quiser e/ou precisar fornecer públicos-alvo apenas uma vez por dia, poderá usar o destino Magnite: Lote de transmissão, que fornece públicos-alvo para Magnite: transmissão por meio de uma entrega diária de arquivo em lote S3. Esses públicos-alvo do Batch são armazenados indefinidamente em nossa plataforma, ao contrário dos públicos-alvo em tempo real, que são armazenados apenas por alguns dias.
+1. Se você quiser e/ou precisar fornecer públicos-alvo apenas uma vez por dia, poderá usar o destino Magnite: Batch, que fornece públicos-alvo para Magnite Streaming por meio de uma entrega diária de arquivo em lote S3. Esses públicos-alvo do Batch são armazenados indefinidamente na plataforma Magnite, ao contrário dos públicos-alvo em tempo real, que são armazenados apenas por alguns dias.
 
-2. No entanto, se você quiser e/ou precisar fornecer públicos-alvo em tempo real, será necessário usar o destino Magnite: Streaming em tempo real. Ao usar o destino em tempo real, o Magnite: streaming receberá públicos em tempo real, mas só poderemos armazenar públicos em tempo real temporariamente em nossa plataforma, e eles serão removidos do nosso sistema em alguns dias. Por isso, se você quiser usar o destino Magnite: Streaming em tempo real, também precisará usar o destino Magnite: Streaming Batch - cada público-alvo ativado para o destino em tempo real, também precisará ativar para o destino Batch.
+2. No entanto, se você quiser ou precisar fornecer públicos-alvo com mais frequência, será necessário usar o destino [Tempo real magnito](/help/destinations/catalog/advertising/magnite-streaming.md). Ao usar o destino em tempo real, a Magnite Streaming receberá públicos em tempo real, mas a Magnite só poderá armazenar temporariamente públicos em tempo real em sua plataforma e eles serão removidos do sistema em alguns dias. Por isso, se você quiser usar o destino Magnite em tempo real, *também* precisará usar o destino Magnite: Batch - cada público-alvo ativado para o destino em tempo real, você também precisará ativar para o destino Batch.
 
-Para recapitular: se você quiser fornecer públicos-alvo da Adobe Real-Time CDP apenas uma vez por dia, use o destino Magnite: lote de streaming e os públicos-alvo serão entregues uma vez por dia. Se quiser fornecer públicos-alvo da Adobe Real-Time CDP em tempo real, você usará AMBOS, Magnite: destino de lote de streaming e Magnite: destino de streaming em tempo real. Para obter mais informações, entre em contato com Magnite: Streaming.
+Para recapitular: se você quiser fornecer públicos-alvo da Adobe Real-Time CDP apenas uma vez por dia, use o destino Magnite: Batch e os públicos-alvo serão entregues uma vez por dia. Se você quiser entregar públicos do Adobe Real-Time CDP em tempo real, use *ambos* o destino Magnite: Batch e o destino Magnite em tempo real. Para obter mais informações, entre em contato com Magnite: Streaming.
 
 
-Continue lendo abaixo para obter mais informações sobre o destino Magnite: Lote de streaming, como se conectar a ele e como ativar públicos do Adobe Real-Time CDP para ele.
-Para obter mais informações sobre o destino em Tempo real, consulte [este documento](magnite-streaming.md).
+Continue lendo abaixo para obter mais informações sobre o destino Magnite: Batch, como se conectar a ele e como ativar os públicos do Adobe Real-Time CDP para ele.
+Para obter mais informações sobre o destino em Tempo real, consulte [esta página de documentação](magnite-streaming.md).
 
 >[!IMPORTANT]
 >
@@ -38,31 +38,31 @@ Para obter mais informações sobre o destino em Tempo real, consulte [este docu
 
 ## Casos de uso {#use-cases}
 
-Para ajudá-lo a entender melhor como e quando você deve usar o destino Magnite Streaming: Batch, aqui estão exemplos de casos de uso que os clientes do Adobe Experience Platform podem resolver usando esse destino.
+Para ajudá-lo a entender melhor como e quando você deve usar o destino Magnite: Batch, veja a seguir exemplos de casos de uso que os clientes do Adobe Experience Platform podem resolver usando esse destino.
 
 ### Caso de uso #1 {#use-case-1}
 
-Você ativou um público-alvo no destino Magnite Streaming: Tempo real.
+Você ativou um público-alvo no destino Magnite em tempo real.
 
-Qualquer público ativado por meio da transmissão Magnite: o destino em tempo real também deve usar a transmissão Magnite: destino Batch, pois os dados da entrega em lote devem substituir/persistir os dados da entrega em tempo real na plataforma de transmissão Magnite.
+Qualquer público ativado por meio do destino Magnite em tempo real também deve usar o destino Magnite: Batch, pois os dados do delivery em lote devem substituir/persistir os dados do delivery em tempo real na plataforma Magnite Streaming.
 
 ### Caso de uso #2 {#use-case-2}
 
 Você deseja ativar um público-alvo somente em um lote/cadência diária para a plataforma Magnite Streaming.
 
-Qualquer público ativado por meio da transmissão Magnite: o destino do lote será entregue em um lote/cadência diária e poderá ser direcionado na plataforma de transmissão Magnite.
+Qualquer público ativado por meio do Magnite: o destino do lote será entregue em um lote/cadência diária e estará disponível para direcionamento na plataforma Magnite Streaming.
 
 ## Pré-requisitos {#prerequisites}
 
-Para usar os destinos Magnite no Adobe Experience Platform, primeiro é necessário ter uma conta de transmissão Magnite. Se você tiver uma conta [!DNL Magnite Streaming], entre em contato com seu gerente de conta [!DNL Magnite] para receber as credenciais para acessar os destinos [!DNL Magnite's]. Se você não tiver uma conta [!DNL Magnite Streaming], entre em contato com adobe-tech@magnite.com
+Para usar os destinos [!DNL Magnite] no Adobe Experience Platform, primeiro você deve ter uma conta de transmissão Magnite. Se você tiver uma conta [!DNL Magnite Streaming], entre em contato com seu gerente de conta [!DNL Magnite] para receber as credenciais para acessar os destinos [!DNL Magnite's]. Se você não tiver uma conta [!DNL Magnite Streaming], entre em contato com adobe-tech@magnite.com
 
 ## Identidades suportadas {#supported-identities}
 
-A Magnite Streaming: o destino do lote pode receber *qualquer* fontes de identidade da CDP do Adobe. Atualmente, esse destino tem três campos de Identidade de destino para você mapear.
+O destino Magnite: Batch pode receber *qualquer* fontes de identidade da CDP do Adobe. Atualmente, esse destino tem três campos de Identidade de destino para você mapear.
 
 >[!NOTE]
 >
->*Qualquer* fonte de identidade pode mapear para qualquer uma das Identidades de Destino magnite_deviceId.
+>*Qualquer* fonte de identidade pode mapear para qualquer uma das `magnite_deviceId` identidades de destino.
 
 | Identidade de destino | Descrição | Considerações |
 |:--------------------------- |:------------------------------------------------------------------------------------------------ |:------------------------------------------------------------------------------------- |
@@ -85,7 +85,7 @@ A Magnite Streaming: o destino do lote pode receber *qualquer* fontes de identid
 
 | Item | Tipo | Notas |
 |-----------------------------|----------|----------|
-| Tipo de exportação | Exportação de público | Você está exportando todos os membros de um público-alvo com os identificadores (nome, número de telefone ou outros) usados no destino Magnite Streaming: Batch. |
+| Tipo de exportação | Exportação de público | Você está exportando todos os membros de um público-alvo com os identificadores (nome, número de telefone ou outros) usados no destino Magnite: Batch. |
 | Frequência de exportação | Lote | Os destinos em lote exportam arquivos para plataformas downstream em incrementos de três, seis, oito, doze ou vinte e quatro horas. Leia mais sobre [destinos baseados em arquivo](/help/destinations/destination-types.md) do lote. |
 
 {style="table-layout:auto"}
@@ -96,7 +96,7 @@ Depois que o uso do destino for aprovado e a Magnite Streaming tiver compartilha
 
 ### Autenticar para o destino {#authenticate}
 
-Localize o Magnite Streaming: destino do lote no catálogo Adobe Experience. Clique no botão de opções adicionais (\...) e configure a conexão/instância de destino.
+Localize o destino Magnite: Batch no catálogo Adobe Experience. Clique no botão de opções adicionais (\...) e configure a conexão/instância de destino.
 
 Se você já tiver uma conta existente, poderá localizá-la alterando a opção Account type para &quot;Existing account&quot;. Caso contrário, você criará uma conta abaixo:
 
@@ -126,7 +126,7 @@ conexão/instância de destino no futuro.
 
 Você pode continuar selecionando **[!UICONTROL Próximo]**
 
-Na próxima tela, intitulada &quot;Política de governança e ações de aplicação (opcional)&quot;, você pode selecionar qualquer política de governança de dados relevante. A opção &quot;Exportação de dados&quot; geralmente é selecionada para o destino Magnite Streaming Batch.
+Na próxima tela, intitulada &quot;Política de governança e ações de aplicação (opcional)&quot;, você pode selecionar qualquer política de governança de dados relevante. A opção &quot;Exportação de dados&quot; geralmente é selecionada para o destino Magnite: Batch.
 
 ![Política de governança opcional e ações de imposição](../../assets/catalog/advertising/magnite/destination-batch-config-grouping-policy.png)
 
@@ -175,11 +175,11 @@ Na tela &quot;Configurar um nome de arquivo e uma programação de exportação 
 
 Depois que os públicos forem carregados, você poderá validar se os públicos foram criados e carregados corretamente.
 
-* O destino Magnite Streaming Batch fornece arquivos S3 para Magnite Streaming diariamente. Após a entrega e a assimilação, espera-se que os públicos-alvo/segmentos apareçam na Magnite Streaming e possam ser aplicados a uma oferta. Você pode confirmar isso verificando a ID ou o nome do segmento que foi compartilhado durante as etapas de ativação no Adobe Experience Platform.
+* O destino Magnite: Batch entrega arquivos S3 para Magnite Streaming diariamente. Após a entrega e a assimilação, espera-se que os públicos-alvo/segmentos apareçam na Magnite Streaming e possam ser aplicados a uma oferta. Você pode confirmar isso verificando a ID ou o nome do segmento que foi compartilhado durante as etapas de ativação no Adobe Experience Platform.
 
 >[!NOTE]
 >
->Os públicos ativados/entregues no destino Magnite Streaming Batch *substituirão* os mesmos públicos que foram ativados/entregues por meio do destino Magnite Streaming Real-Time. Se estiver pesquisando um segmento usando o nome do segmento, talvez você não o encontre em tempo real, até que o lote tenha sido assimilado e processado pela plataforma de Streaming Magnite.
+>Públicos ativados/entregues no Magnite: o destino do lote *substituirá* os mesmos públicos que foram ativados/entregues por meio do destino Magnite Real-Time. Se estiver pesquisando um segmento usando o nome do segmento, talvez você não o encontre em tempo real, até que o lote tenha sido assimilado e processado pela plataforma de Streaming Magnite.
 
 ## Uso e governança de dados {#data-usage-governance}
 

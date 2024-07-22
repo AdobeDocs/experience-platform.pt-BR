@@ -2,9 +2,9 @@
 title: Agendamentos de consulta
 description: Saiba como automatizar execuções de consultas programadas, excluir ou desativar um agendamento de consultas e utilizar as opções de agendamento disponíveis por meio da interface do usuário do Adobe Experience Platform.
 exl-id: 984d5ddd-16e8-4a86-80e4-40f51f37a975
-source-git-commit: 41c069ef1c0a19f34631e77afd7a80b8967c5060
+source-git-commit: 0b056da8457010ce36efc48e3dd91f280a9b15c5
 workflow-type: tm+mt
-source-wordcount: '1822'
+source-wordcount: '1848'
 ht-degree: 0%
 
 ---
@@ -46,6 +46,10 @@ O espaço de trabalho de agendamentos é exibido. A interface do usuário exibe 
 ### Adicionar detalhes da programação {#schedule-details}
 
 A página de detalhes da programação é exibida. Nesta página, você pode editar diversos detalhes da consulta programada. Os detalhes incluem a [frequência e o dia da semana da execução da consulta agendada](#scheduled-query-frequency), as datas de início e término, o conjunto de dados para o qual exportar os resultados e [alertas de status da consulta](#alerts-for-query-status).
+
+>[!IMPORTANT]
+>
+>A interface do agendador de consultas não oferece suporte a agendamento indefinido ou permanente. Uma data de término deve ser especificada. Não há limite superior para a data final.
 
 ![O painel Detalhes do agendamento foi realçado.](../images/ui/query-schedules/schedule-details.png)
 

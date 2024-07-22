@@ -2,9 +2,9 @@
 title: Notas de versão da extensão SDK da Web da Adobe Experience Platform
 description: Extensão de tag do SDK da Web da Adobe Experience Platform
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 5086e6419c14356b47963b8445389a0048ad11d7
+source-git-commit: e874459cd3018e0cf2358e590c6ec5eb0f7b4c98
 workflow-type: tm+mt
-source-wordcount: '2158'
+source-wordcount: '2192'
 ht-degree: 30%
 
 ---
@@ -13,6 +13,15 @@ ht-degree: 30%
 # Notas de versão da extensão SDK da Web da Adobe Experience Platform
 
 Este documento aborda as notas de versão da extensão de tag do SDK da Web da Adobe Experience Platform. Para obter as notas de versão mais recentes do próprio SDK, consulte as [notas de versão do SDK da Web da plataforma](/help/web-sdk/release-notes.md).
+
+## Versão 2.25.0 - 18 de julho de 2024
+
+**Novos recursos**
+
+* Adição de suporte para personalização de rastreamento automático no Adobe Journey Optimizer.
+* Introdução de novas configurações para gerenciar a coleção de cliques aprimorada.
+
+Contém a versão 2.21.1 do SDK da Web da Adobe Experience Platform.
 
 ## Versão 2.24.0 - 5 de junho de 2024
 

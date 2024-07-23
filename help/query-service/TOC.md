@@ -5,10 +5,10 @@ breadcrumb-title: Guia do Serviço de consulta
 user-guide-description: Use o SQL padrão para consultar dados no data lake na Experience Platform.
 feature: Queries
 role: User,Developer
-source-git-commit: bb95e0aa8ee92aee5a2f126d85e78308e652a061
+source-git-commit: 3e4fe58deb48622129c919b8c4a93ba4e57c4338
 workflow-type: tm+mt
-source-wordcount: '321'
-ht-degree: 19%
+source-wordcount: '323'
+ht-degree: 18%
 
 ---
 
@@ -39,7 +39,7 @@ ht-degree: 19%
       - [Recursos do engenheiro para ML](data-distiller/ml-feature-pipelines/feature-engineering.md)
       - [Exportar dados para ambientes ML](data-distiller/ml-feature-pipelines/export-data.md)
       - [Fluxo de trabalho completo de enriquecimento do pipeline de dados de IA/ML](data-distiller/ml-feature-pipelines/end-to-end-notebook-workflow.md)
-- Casos de uso {#use-cases}
+- Exemplos práticos {#use-cases}
    - [Visão geral](use-cases/overview.md)
    - [Navegação abandonada](use-cases/abandoned-browse.md)
    - [Análise de atribuição](use-cases/attribution-analysis.md)
@@ -47,6 +47,7 @@ ht-degree: 19%
    - [Criar um relatório de tendências de eventos](use-cases/trended-report-of-events.md)
    - [Análise de consentimento](use-cases/consent-analysis.md)
    - [Valor vitalício do cliente](use-cases/customer-lifetime-value.md)
+   - [Exploração de dados](./use-cases/data-exploration.md)
    - [Conjuntos de dados derivados com base em decis](use-cases/deciles-use-case.md)
    - [Correspondência difusa](use-cases/fuzzy-match.md)
    - [Listar as exibições de página de um usuário](use-cases/list-visitor-sessions.md)

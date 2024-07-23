@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guia de solução de problemas de assimilação em lote
 description: Esta documentação ajudará a responder às perguntas frequentes sobre as APIs de assimilação de dados em lote do Adobe Experience Platform.
 exl-id: 0a750d7e-a4ee-4a79-a697-b4b732478b2b
-source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
+source-git-commit: 37b241f15f297263cc7aa20f382c115a2d131c7e
 workflow-type: tm+mt
-source-wordcount: '1418'
+source-wordcount: '1426'
 ht-degree: 1%
 
 ---
@@ -212,11 +212,11 @@ Quando um lote está em &quot;Carregando&quot;, significa que a API CompleteBatc
 
 ### Há alguma maneira de saber se um lote foi assimilado com êxito?
 
-Quando o status do lote for &quot;Ativo&quot;, ele será assimilado com êxito. Para saber o status do lote, siga as etapas detalhadas [anteriormente](#how-is-batch-ingestion-monitored).
+Sim, assim que o status do lote for &quot;Ativo&quot;, o lote foi assimilado com sucesso. Para saber o status do lote, siga as etapas detalhadas [anteriormente](#how-is-batch-ingestion-monitored).
 
-### O que acontece depois que um lote falha?
+### O que acontece depois que um lote falha? {#what-if-a-batch-fails}
 
-Quando um lote falha, o motivo pelo qual ele falha pode ser identificado na seção `errors` da carga. Exemplos de erros podem ser vistos abaixo:
+Quando um lote falha, o processo é interrompido e retorna um status `Failure`. O motivo da falha pode ser identificado na seção `errors` da carga. Exemplos de erros podem ser vistos abaixo:
 
 ```json
     "errors":[

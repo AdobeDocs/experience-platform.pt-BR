@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Terminologia dos regulamentos de privacidade
 description: Este documento fornece definições para termos-chave relacionados a regulamentos de privacidade compatíveis com o Adobe Experience Cloud.
 exl-id: 9c0a7d26-0571-41d4-8cf5-6356025d51ef
-source-git-commit: b16eae9698de6c20022fdf1a3ff659df35e440f6
+source-git-commit: be219530f33209cb4f3fe70425bb293edff4b309
 workflow-type: tm+mt
-source-wordcount: '1842'
+source-wordcount: '2020'
 ht-degree: 1%
 
 ---
@@ -71,6 +71,8 @@ Este documento fornece definições para termos-chave relacionados a regulamento
 
 **Sistema de arquivos**: qualquer conjunto específico de dados pessoais que seja acessível de acordo com critérios específicos ou que possa ser consultado.
 
+**FDBR**: o [!DNL Florida Digital Bill of Rights] (FDBR) é uma legislação que concede aos residentes da Flórida os direitos de acesso, correção, exclusão e cópia de seus dados pessoais. Ele exige transparência nas práticas de dados, permite opções de não participação na venda de dados ou em publicidade direcionada e proíbe a vigilância não autorizada. O Departamento de Assuntos Jurídicos da Flórida aplica esses direitos, exigindo que os controladores de dados respondam às solicitações em 45 dias.
+
 ## G
 
 **GDPR**: O [!DNL General Data Protection Regulation] (GDPR) é uma estrutura legal que define diretrizes para a coleta e o processamento de informações pessoais de pessoas físicas dentro do Espaço Econômico Europeu (EEA). O GDPR estabelece os princípios para a gestão de dados e os direitos do indivíduo, além de impor multas que podem ser baseadas em receita. O GDPR abrange todas as empresas que lidam com os dados de cidadãos do EEE, portanto, é uma regulamentação essencial para executivos de conformidade corporativa em bancos, seguradoras e outras empresas financeiras.
@@ -107,13 +109,11 @@ Este documento fornece definições para termos-chave relacionados a regulamento
 
 ## O
 
+**OCPA**: a legislação da Oregon Consumer Privacy Act (OCPA) concede aos residentes de Oregon direitos fundamentais sobre seus dados pessoais, incluindo o direito de saber, corrigir, excluir e obter uma cópia de seus dados. Ela impõe obrigações rígidas às empresas, exigindo que elas forneçam avisos detalhados sobre privacidade, obtenham consentimento para determinados usos de dados e implementem proteções mais rígidas para informações confidenciais. A legislação visa equilibrar a privacidade dos consumidores com os interesses das empresas.
+
 ## P
 
 **PDPA**: o [!DNL Personal Data Protection Act] da Tailândia (PDPA) foi introduzido para proteger os proprietários de dados tailandeses da coleta, uso ou divulgação ilegais de seus dados pessoais. Inspirado pelo GDPR da União Europeia, o regulamento concede aos cidadãos tailandeses o direito de solicitar acesso ou a exclusão de seus dados pessoais armazenados.
-
-<!-- Not yet released:
-**PDPD**: The [!DNL Personal Data Protection Decree] of Vietnam (PDPD) ...  
--->
 
 **Dados pessoais**: qualquer informação relacionada a uma pessoa física ou &quot;Titular dos dados&quot;, que possa ser usada para identificar direta ou indiretamente tal pessoa.
 
@@ -152,6 +152,8 @@ Este documento fornece definições para termos-chave relacionados a regulamento
 **Autoridade de supervisão**: uma autoridade pública estabelecida por um estado-membro em conformidade com o artigo 46. º.
 
 ## T
+
+**TDPSA**: a Lei de Privacidade e Segurança de Dados do Texas (TDPSA) é uma legislação abrangente que protege os direitos de dados pessoais dos residentes do Texas. Ele concede aos indivíduos o direito de acessar, corrigir, excluir e obter cópias de seus dados e recusar a venda de dados e a publicidade direcionada. As empresas que violarem essa legislação poderão enfrentar penalidades financeiras.
 
 **Trílogos**: trílogos são negociações informais entre a Comissão Europeia, o Parlamento Europeu e o Conselho da União Europeia. Estas negociações são geralmente realizadas após as primeiras leituras da legislação proposta, para chegar mais rapidamente a acordo sobre um texto de compromisso a adotar.
 chegar mais rapidamente a acordo sobre a adoção de um texto de compromisso.

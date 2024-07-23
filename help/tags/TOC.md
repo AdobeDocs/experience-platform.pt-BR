@@ -6,9 +6,9 @@ user-guide-description: Saiba como implantar e gerenciar tags de análise, marke
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: aca7597d524633e86d88cc3b40f292c8d1673839
+source-git-commit: 5cbc2f6809156bc1a554154527ff2c5e35d3a922
 workflow-type: tm+mt
-source-wordcount: '769'
+source-wordcount: '773'
 ht-degree: 44%
 
 ---
@@ -316,6 +316,7 @@ ht-degree: 44%
       * [Delegar IDs do descritor](./api/guides/delegate-descriptor-ids.md)
       * [Criptografar valores](./api/guides/encrypting-values.md)
       * [Tratamento de erros](./api/guides/error-handling.md)
+      * [Compartilhamento de pacotes de extensão privados](./api/guides/extension-packages.md)
       * [Filtragem de respostas](./api/guides/filtering.md)
       * [Paginação de respostas](./api/guides/pagination.md)
       * [Classificação de respostas](./api/guides/sorting.md)

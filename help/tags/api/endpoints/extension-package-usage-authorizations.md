@@ -1,13 +1,13 @@
 ---
 title: Ponto de Extremidade de Autorizações de Uso do Pacote de Extensão
 description: Saiba como fazer chamadas para o endpoint de autorizações /extension_package_usage na API do Reator.
-source-git-commit: fdf01451527e2fab8eb6e6f9d7b4901a85381450
+exl-id: ad3fb704-7d2f-45ec-b80b-ea4d327f2205
+source-git-commit: 9cdd349e0eccb4498d88f24a84b0f1c116b0adfe
 workflow-type: tm+mt
 source-wordcount: '653'
 ht-degree: 16%
 
 ---
-
 
 # Ponto de acesso de autorizações de uso do pacote de extensão
 
@@ -185,7 +185,7 @@ Uma resposta bem-sucedida retorna os detalhes da autorização de uso do pacote 
 >
 >No exemplo de resposta acima, a autorização está atualmente no estágio `pending_approval`. Antes de usar o pacote de extensão, a organização deve aprovar a autorização. Os usuários da organização podem navegar pelo pacote de extensão privado enquanto a autorização estiver pendente de aprovação, mas não podem instalá-lo e não podem encontrá-lo no catálogo de extensões.
 
-## Recuperar uma lista de autorizações de uso do pacote de extensão {#list_authorizations}
+## Recuperar uma lista de autorizações de uso do pacote de extensão {#list-authorizations}
 
 Você pode recuperar uma lista de autorizações de uso do pacote de extensão fazendo uma solicitação GET.
 
@@ -386,7 +386,7 @@ Uma resposta bem-sucedida retorna os detalhes da autorização de uso do pacote 
 >
 >Depois que a autorização for aprovada, sua organização poderá instalar o pacote de extensão em suas propriedades.
 
-## Recuperar dados do pacote de extensão para uma autorização de uso de pacote de extensão {#retrieve_data}
+## Recuperar dados do pacote de extensão para uma autorização de uso de pacote de extensão {#retrieve-data}
 
 Você pode recuperar dados do pacote de extensão para uma autorização de uso de pacote de extensão fazendo uma solicitação GET.
 

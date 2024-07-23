@@ -1,13 +1,13 @@
 ---
 title: clickCollectionEnabled
 description: Saiba como configurar o SDK da Web para determinar se os dados de cliques em links são coletados automaticamente.
-source-git-commit: 660d4e72bd93ca65001092520539a249eae23bfc
+exl-id: e91b5bc6-8880-4884-87f9-60ec8787027e
+source-git-commit: d3be2a9e75514023a7732a1c3460f8695ef02e68
 workflow-type: tm+mt
-source-wordcount: '371'
+source-wordcount: '356'
 ht-degree: 0%
 
 ---
-
 
 # `clickCollectionEnabled`
 
@@ -33,14 +33,13 @@ Em todos os casos, `xdm.web.webInteraction.name` está definido como o rótulo d
 
 ## Ativar o rastreamento automático de links usando a extensão de tag do SDK da Web {#tag-extension}
 
-Marque a caixa de seleção **[!UICONTROL Habilitar coleta de dados de cliques]** ao [configurar a extensão de marca](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
+Essa variável é gerenciada automaticamente pela extensão de tag; não é necessário defini-la explicitamente. Se qualquer um dos itens a seguir for selecionado ao [configurar a extensão de tag](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md), os dados de rastreamento de link aplicáveis serão coletados:
 
-1. Faça logon em [experience.adobe.com](https://experience.adobe.com) usando suas credenciais da Adobe ID.
-1. Navegue até **[!UICONTROL Coleção de dados]** > **[!UICONTROL Marcas]**.
-1. Selecione a propriedade de tag desejada.
-1. Navegue até **[!UICONTROL Extensões]** e clique em **[!UICONTROL Configurar]** no cartão [!UICONTROL Adobe Experience Platform Web SDK].
-1. Role para baixo até a seção [!UICONTROL Coleção de dados] e marque a caixa de seleção **[!UICONTROL Habilitar coleta de dados de cliques]**.
-1. Clique em **[!UICONTROL Salvar]** e publique suas alterações.
+* [!UICONTROL Coletar cliques internos em links]
+* [!UICONTROL Coletar cliques em links externos]
+* [!UICONTROL Coletar cliques no link de download]
+
+Consulte [`clickCollection`](clickcollection.md) para obter mais informações.
 
 ## Ativar o rastreamento automático de links usando a biblioteca JavaScript do SDK da Web {#library}
 
@@ -48,7 +47,7 @@ Defina o booleano `clickCollectionEnabled` ao executar o comando `configure`. Se
 
 ```js
 alloy(configure, {
-  edgeConfigId: "ebebf826-a01f-4458-8cec-ef61de241c93",
+  datastreamId: "ebebf826-a01f-4458-8cec-ef61de241c93",
   orgId: "ADB3LETTERSANDNUMBERS@AdobeOrg",
   clickCollectionEnabled: false
 });

@@ -2,7 +2,7 @@
 title: Visão geral das sequências de dados
 description: Saiba como os fluxos de dados ajudam a conectar sua integração do SDK do Experience Platform do lado do cliente com produtos Adobe e destinos de terceiros.
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: 8fc0fd96f13f0642f7671d0e0f4ecfae8ab6761f
 workflow-type: tm+mt
 source-wordcount: '727'
 ht-degree: 77%
@@ -11,7 +11,7 @@ ht-degree: 77%
 
 # Visão geral das sequências de dados
 
-Uma sequência de dados representa a configuração do lado do servidor ao implementar os SDKs móveis e da Web da Adobe Experience Platform. Embora o comando [`configure`](/help/web-sdk/commands/configure/overview.md) no SDK controle itens que devem ser tratados no cliente (como `edgeDomain`), os fluxos de dados tratam de todas as outras configurações do SDK. Quando uma solicitação é enviada para a rede de borda da Adobe Experience Platform, o `edgeConfigId` é usado para fazer referência à sequência de dados. Isso permite atualizar a configuração do lado do servidor sem precisar fazer alterações de código no site.
+Uma sequência de dados representa a configuração do lado do servidor ao implementar os SDKs móveis e da Web da Adobe Experience Platform. Embora o comando [`configure`](/help/web-sdk/commands/configure/overview.md) no SDK controle itens que devem ser tratados no cliente (como `edgeDomain`), os fluxos de dados tratam de todas as outras configurações do SDK. Quando uma solicitação é enviada para a rede de borda da Adobe Experience Platform, o `datastreamId` é usado para fazer referência à sequência de dados. Isso permite atualizar a configuração do lado do servidor sem precisar fazer alterações de código no site.
 
 Você pode criar e gerenciar sequências de dados selecionando **[!UICONTROL Sequências de dados]** na navegação à esquerda da interface da Adobe Experience Platform ou da Coleção de dados.
 

@@ -1,13 +1,13 @@
 ---
 title: clickCollection
 description: Ajuste as configurações da coleção de cliques.
-source-git-commit: 660d4e72bd93ca65001092520539a249eae23bfc
+exl-id: 5a128b4a-4727-4415-87b4-4ae87a7e1750
+source-git-commit: d3be2a9e75514023a7732a1c3460f8695ef02e68
 workflow-type: tm+mt
-source-wordcount: '566'
+source-wordcount: '567'
 ht-degree: 0%
 
 ---
-
 
 # `clickCollection`
 
@@ -25,26 +25,27 @@ As seguintes variáveis estão disponíveis no objeto `clickCollection`:
 * **`clickCollection.eventGroupingEnabled`**: um booliano que determina se a biblioteca aguarda até a próxima página para enviar dados de rastreamento de link. Quando a próxima página for carregada, combine os dados de rastreamento de link com o evento de carregamento de página. Ativar essa opção reduz o número de eventos enviados para o Adobe. Se `internalLinkEnabled` estiver desabilitado, essa variável não fará nada.
 * **`clickCollection.sessionStorageEnabled`**: um booliano que determina se os dados de rastreamento de link são armazenados no armazenamento da sessão em vez de em variáveis locais. Se `internalLinkEnabled` ou `eventGroupingEnabled` estiverem desabilitados, essa variável não fará nada.
 
-  A Adobe recomenda que essa variável seja habilitada ao usar `eventGroupingEnabled`. Se `eventGroupingEnabled` estiver habilitado enquanto `sessionStorageEnabled` estiver desabilitado, clicar em uma nova página resultará na perda de dados de rastreamento de link, pois não será preservado no armazenamento da sessão. Embora seja aceitável desabilitar o `sessionStorageEnabled` em aplicativos de página única, ele não é ideal para páginas que não sejam SPA.
+  A Adobe recomenda que essa variável seja ativada ao usar o `eventGroupingEnabled` fora dos aplicativos de página única. Se `eventGroupingEnabled` estiver habilitado enquanto `sessionStorageEnabled` estiver desabilitado, clicar em uma nova página resultará na perda de dados de rastreamento de link, pois não será preservado no armazenamento da sessão. Como os aplicativos de página única normalmente não navegam para uma nova página, o armazenamento de sessão não é necessário para páginas SPA.
 * **`filterClickDetails`**: uma função de retorno de chamada que fornece controles completos sobre os dados de rastreamento de link coletados. Você pode usar essa função de retorno de chamada para alterar, ofuscar ou abortar o envio de dados de rastreamento de link. Essa chamada de retorno é útil quando você deseja omitir informações específicas, como informações de identificação pessoal em links.
 
 ## Clique nas configurações da coleção usando a extensão de tag do SDK da Web
 
-Marque a caixa de seleção **[!UICONTROL Habilitar coleta de dados de cliques]** ao [configurar a extensão de marca](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md). Habilitar essa caixa de seleção revela as seguintes opções relacionadas à coleção de cliques:
+Selecione qualquer uma das seguintes opções ao [configurar a extensão de marca](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md):
 
-* [!UICONTROL Links internos]
-   * [!UICONTROL Habilitar agrupamento de eventos]
-   * [!UICONTROL Habilitar armazenamento de sessão]
-* [!UICONTROL Links externos]
-* [!UICONTROL Links de download]
+* [!UICONTROL Coletar links internos]
+   * [!UICONTROL Opções de agrupamento de eventos]:
+      * [!UICONTROL Nenhum agrupamento de eventos]
+      * [!UICONTROL Agrupamento de eventos usando o armazenamento de sessão]
+      * [!UICONTROL Agrupamento de eventos usando objeto local]
+* [!UICONTROL Coletar links externos]
+* [!UICONTROL Coletar links de download]
 * [!UICONTROL Propriedades de clique do filtro]
 
 1. Faça logon em [experience.adobe.com](https://experience.adobe.com) usando suas credenciais da Adobe ID.
 1. Navegue até **[!UICONTROL Coleção de dados]** > **[!UICONTROL Marcas]**.
 1. Selecione a propriedade de tag desejada.
 1. Navegue até **[!UICONTROL Extensões]** e clique em **[!UICONTROL Configurar]** no cartão [!UICONTROL Adobe Experience Platform Web SDK].
-1. Role para baixo até a seção [!UICONTROL Coleção de dados] e marque a caixa de seleção **[!UICONTROL Habilitar coleta de dados de cliques]**.
-1. Selecione as configurações da coleção de cliques desejadas.
+1. Role para baixo até a seção [!UICONTROL Coleção de dados] e selecione as configurações de coleção de cliques desejadas.
 1. Clique em **[!UICONTROL Salvar]** e publique suas alterações.
 
 O retorno de chamada [!UICONTROL Propriedades de clique de filtro] abre um editor de código personalizado que permite inserir o código desejado. No editor de código, você tem acesso às seguintes variáveis:
@@ -72,11 +73,11 @@ Defina as variáveis desejadas no objeto `clickCollection` ao executar o comando
 * `filterClickDetails`: Não contém uma função; deve ser explicitamente registrado
 
 >[!TIP]
->A Adobe recomenda habilitar `eventGroupingEnabled`, pois ajuda a reduzir o número de eventos que contam para o uso contratual.
+>A Adobe recomenda habilitar `eventGroupingEnabled` quando `internalLinkEnabled` estiver habilitado, pois reduz o número de eventos que contam para o uso contratual.
 
 ```js
 alloy("configure", {
-  edgeConfigId: "ebebf826-a01f-4458-8cec-ef61de241c93",
+  datastreamId: "ebebf826-a01f-4458-8cec-ef61de241c93",
   orgId: "ADB3LETTERSANDNUMBERS@AdobeOrg",
   clickCollectionEnabled: true,
   clickCollection: {

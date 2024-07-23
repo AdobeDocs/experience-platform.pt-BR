@@ -3,9 +3,9 @@ keywords: destinos;destino;destinos tipos;destinations;destination;destination t
 title: Tipos e categorias de destino
 description: Saiba mais sobre os diferentes tipos e categorias de destinos no Adobe Experience Platform.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: 8314aca706b47c4cbcb993418c287629f5563189
+source-git-commit: 13ceaa53b53f17457c8d2c914b3fd05f6af2441b
 workflow-type: tm+mt
-source-wordcount: '804'
+source-wordcount: '805'
 ht-degree: 1%
 
 ---
@@ -20,7 +20,11 @@ No Adobe Experience Platform, distinguimos entre diferentes tipos de destino - c
 
 Por fim, as conexões também podem ser diferenciadas entre destinos públicos disponíveis em todas as organizações no catálogo de destinos e destinos privados que os clientes do Real-Time CDP Ultimate podem criar para atender aos seus casos de uso de exportação específicos.
 
+>[!BEGINSHADEBOX]
+
 ![Tipos de diagrama de destinos.](./assets/destination-types/types-of-destinations-no-highlight.png "Diagrama de tipos de destinos."){zoomable="yes"}
+
+>[!ENDSHADEBOX]
 
 ## Conexões {#connections}
 
@@ -30,8 +34,8 @@ A **[!UICONTROL Exportação de Perfil]**, a **[!UICONTROL Exportação de Públ
 
 Os destinos de exportação de perfil recebem dados brutos, geralmente com o endereço de email como chave primária. Atualmente, o Experience Platform oferece suporte a dois tipos de destinos de exportação de perfis:
 
-* [Destinos de exportação de perfil de streaming (destinos corporativos)](#streaming-profile-export)
 * [Destinos em lote (baseados em arquivo)](#file-based)
+* [Destinos empresariais avançados (destinos de exportação de perfil de transmissão)](#streaming-profile-export)
 
 ### Destinos empresariais avançados (destinos de exportação de perfil de transmissão) {#streaming-profile-export}
 

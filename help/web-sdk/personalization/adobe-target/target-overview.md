@@ -2,9 +2,9 @@
 title: Usar o Adobe Target com SDK da Web para personalização
 description: Saiba como renderizar conteúdo personalizado com o Experience Platform Web SDK usando o Adobe Target
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-source-git-commit: 69406293dce5fdfc832adff801f1991626dafae0
+source-git-commit: b50ea35bf0e394298c0c8f0ffb13032aaa1ffafb
 workflow-type: tm+mt
-source-wordcount: '1345'
+source-wordcount: '1364'
 ht-degree: 3%
 
 ---
@@ -192,77 +192,31 @@ Para atrasar a gravação de atributos no perfil até que o conteúdo seja exibi
 
 Por exemplo, seu site contém três escopos de decisão correspondentes a três links de categoria no site (Homens, Mulheres e Crianças) e você deseja rastrear a categoria que o usuário eventualmente visitou. Envie essas solicitações com o sinalizador `__save` definido como `false` para evitar a persistência da categoria no momento em que o conteúdo é solicitado. Depois que o conteúdo for visualizado, envie a carga adequada (incluindo `eventToken` e `stateToken`) para os atributos correspondentes a serem registrados.
 
-<!--Save profile or entity attributes by default with:
-
-```js
-alloy ( "sendEvent" , {
-  renderDecisions : true,
-  data : {
-    __adobe : {
-      target : {
-        "__save" : true // Optional. __save=true is the default 
-        "profile.gender" : "female",
-        "profile.age" : 30,
-        "entity.name" : "T-shirt",
-        "entity.id" : "1234",
-      }
-    }
-  }
-} ) ; 
-```
--->
-
 O exemplo abaixo envia uma mensagem de estilo trackEvent, executa scripts de perfil, salva atributos e registra imediatamente o evento.
 
 ```js
-alloy ( "sendEvent" , {
-  renderDecisions : true,
-  data : {
-    __adobe : {
-      target : {
-        "profile.gender" : "female",
-        "profile.age" : 30,
-        "entity.name" : "T-shirt" ,
-        "entity.id" : "1234" ,
-        "track": {
-          "scopes": [ "mbox1", "mbox2"],
-          "type": "display|click|..."
+alloy("sendEvent", {
+    "renderDecisions": true,
+    "data": {
+        "xdm": { // Experience Event XDM data },
+            "__adobe": {
+                "target": {
+                    " __save": true|false,
+                    //defaults to true if omitted 
+                    "profile.gender": "female",
+                    "profile.age": 30,
+                    "entity.name": "T-shirt",
+                    "entity.id": "1234"
+                }
+            }
         }
-      }
     }
-  }
-} ) ;
+})
 ```
 
 >[!NOTE]
 >
->Se a diretiva `__save` for omitida, o salvamento dos atributos de perfil e entidade ocorrerá imediatamente, como se a solicitação tivesse sido executada, mesmo que o restante da solicitação seja uma pré-busca de personalização. A diretiva `__save` só é relevante para atributos de perfil e entidade. Se o objeto de faixa estiver presente, a diretiva `__save` será ignorada. Os dados são salvos imediatamente e a notificação é registrada.
-
-**`sendEvent`com dados de perfil**
-
-```js
-alloy("sendEvent", {
-   renderDecisions: true|false,
-   xdm: { // Experience Event XDM data },
-   data: { // Freeform data }
-});
-```
-
-**Como enviar atributos de perfil para o Adobe Target:**
-
-```js
-alloy("sendEvent", {
-  "renderDecisions": true,
-  "data": {
-    "__adobe": {
-      "target": {
-        "profile.gender": "female",
-        "profile.age": 30
-      }
-    }
-  }
-});
-```
+>Se a diretiva `__save` for omitida, o salvamento dos atributos de perfil e entidade ocorrerá imediatamente. A diretiva `__save` só é relevante para atributos de perfil e detalhes de entidade.
 
 ## Solicitar recomendações
 
@@ -302,6 +256,34 @@ alloy("sendEvent", {
   }
 });
 ```
+
+## Exibir métricas de conversão da mbox {#display-mbox-conversion-metrics}
+
+O exemplo abaixo mostra como rastrear as conversões da mbox de exibição e enviar parâmetros de perfil para o Adobe Target, sem precisar se qualificar para qualquer conteúdo ou atividade.
+
+```js
+alloy("sendEvent", {
+    "xdm": {
+        "_experience": {
+            "decisioning": {
+                "propositions": [{
+                    "scope": "conversion-step-1" //example scope name
+                }],
+                "propositionEventType": {
+                    "display": 1
+                }
+            }
+        },
+        "eventType": "decisioning.propositionDisplay"
+    }
+});
+```
+
+
+| Propriedade | Descrição |
+|---------|----------|
+| `xdm._experience.decisioning.propositions[x].scope` | O escopo para associar a métrica de sucesso ao (que a atribuirá a uma atividade específica no lado do Target). |
+| `xdm._experience.decisioning.propositions[x].eventType` | Uma string que descreve o tipo de evento desejado. Defina como `"decisioning.propositionDisplay"` para este caso de uso. |
 
 ## Depuração
 

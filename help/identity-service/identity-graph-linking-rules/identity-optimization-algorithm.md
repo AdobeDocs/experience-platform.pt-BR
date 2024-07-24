@@ -3,9 +3,9 @@ title: Algoritmo de otimização de identidade
 description: Saiba mais sobre o Algoritmo de otimização de identidade no Serviço de identidade.
 badge: Beta
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: 5d19a22dc8d1b7f0151008d14b2f5bf89c85c638
+source-git-commit: 7daa9191f2e095f01c7c09f02f87aa8724e2e325
 workflow-type: tm+mt
-source-wordcount: '1570'
+source-wordcount: '1565'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 >[!AVAILABILITY]
 >
->Esse recurso ainda não está disponível; o programa beta para regras de vinculação de gráficos de identidade deve começar em julho nas sandboxes de desenvolvimento. Entre em contato com a equipe de conta do Adobe para obter informações sobre os critérios de participação.
+>As regras de vinculação do gráfico de identidade estão na versão beta. Entre em contato com a equipe de conta do Adobe para obter informações sobre os critérios de participação. O recurso e a documentação estão sujeitos a alterações.
 
 O algoritmo de otimização de identidade é um algoritmo de gráfico no Serviço de identidade que ajuda a garantir que um gráfico de identidade seja representativo de uma única pessoa e, portanto, impede a mesclagem indesejada de identidades no Perfil do cliente em tempo real.
 
@@ -162,6 +162,7 @@ Exiba o diagrama abaixo para entender melhor como a associação de eventos anô
 Para obter mais informações sobre regras de vinculação de gráficos de identidade, leia a seguinte documentação:
 
 * [Visão geral das regras de vinculação do gráfico de identidade](./overview.md)
+* [Prioridade de namespace](./namespace-priority.md)
 * [Exemplos de cenários para configurar regras de vinculação de gráficos de identidade](./example-scenarios.md)
 * [Lógica de vinculação de identidade](../features/identity-linking-logic.md)
 * [Serviço de identidade e perfil do cliente em tempo real](../identity-and-profile.md)

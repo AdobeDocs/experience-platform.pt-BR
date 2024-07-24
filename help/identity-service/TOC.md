@@ -5,7 +5,7 @@ breadcrumb-title: Guia do Serviço de identidade do Platform
 user-guide-description: Une as identidades dos clientes em todos os dispositivos e sistemas para entregar experiências digitais personalizadas.
 feature: Identities
 role: Admin,Developer
-source-git-commit: 30e19f53bb29977cf4255cb2dba688d8bbbf6b2b
+source-git-commit: 536770d0c3e7e93921fe40887dafa5c76e851f5e
 workflow-type: tm+mt
 source-wordcount: '137'
 ht-degree: 29%
@@ -24,12 +24,13 @@ ht-degree: 29%
    - [Exclusões no serviço de identidade](./features/deletion.md)
    - Regras de vinculação do gráfico de identidade {#identity-graph-linking-rules}
       - [Visão geral do recurso](./identity-graph-linking-rules/overview.md)
+      - [Guia de configuração](./identity-graph-linking-rules/configuration.md)
       - [Algoritmo de otimização de identidade](./identity-graph-linking-rules/identity-optimization-algorithm.md)
       - [Prioridade de namespace](./identity-graph-linking-rules/namespace-priority.md)
-      - [Exemplos de cenários](./identity-graph-linking-rules/example-scenarios.md)
       - [Interface de simulação de gráfico](./identity-graph-linking-rules/graph-simulation.md)
-      - [Guia de configuração das regras de vinculação do gráfico de identidade](./identity-graph-linking-rules/configuration.md)
       - [Configurações de identidade](./identity-graph-linking-rules/identity-settings-ui.md)
+      - [Exemplo de cenários de cliente](./identity-graph-linking-rules/example-scenarios.md)
+      - [Exemplo de configurações de gráfico](./identity-graph-linking-rules/example-configurations.md)
    - [Visão geral da ECID](./features/ecid.md)
 - [Guia de implementação](implementation.md)
 - [Medidas de proteção de dados de identidade](guardrails.md)

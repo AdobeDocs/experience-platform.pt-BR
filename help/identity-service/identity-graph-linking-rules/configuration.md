@@ -2,14 +2,19 @@
 title: Guia de configuração das regras de vinculação do gráfico de identidade
 description: Saiba mais sobre as etapas recomendadas a serem seguidas ao implementar seus dados com configurações de regras de vinculação de gráfico de identidade.
 badge: Beta
-source-git-commit: 72773f9ba5de4387c631bd1aa0c4e76b74e5f1dc
+exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
+source-git-commit: 536770d0c3e7e93921fe40887dafa5c76e851f5e
 workflow-type: tm+mt
-source-wordcount: '807'
-ht-degree: 4%
+source-wordcount: '1312'
+ht-degree: 2%
 
 ---
 
 # Guia de configuração das regras de vinculação do gráfico de identidade
+
+>[!AVAILABILITY]
+>
+>As regras de vinculação do gráfico de identidade estão na versão beta. Entre em contato com a equipe de conta do Adobe para obter informações sobre os critérios de participação. O recurso e a documentação estão sujeitos a alterações.
 
 Leia este documento para obter um guia passo a passo que você pode seguir ao implementar seus dados com o Adobe Experience Platform Identity Service.
 
@@ -67,6 +72,11 @@ Para obter instruções sobre como criar um conjunto de dados, leia o [guia da i
 
 ## Assimilar seus dados {#ingest}
 
+>[!WARNING]
+>
+>* Durante o processo de pré-implementação, você deve garantir que os eventos autenticados que seu sistema enviará para o Experience Platform sempre contenham um identificador de pessoa, como CRMID.
+>* Durante a implementação, você deve garantir que o namespace exclusivo com a maior prioridade esteja sempre presente em cada perfil. Consulte o [apêndice](#appendix) para obter exemplos de cenários de gráficos que são resolvidos garantindo que cada perfil contenha o namespace exclusivo com a prioridade mais alta.
+
 Nesse ponto, você deve ter o seguinte:
 
 * As permissões necessárias para acessar os recursos do Serviço de identidade.
@@ -86,3 +96,55 @@ Depois de ter todos os itens listados acima, você pode começar a assimilar seu
 >Depois que os dados são assimilados, a carga de dados brutos do XDM não é alterada. Você ainda pode ver suas configurações de identidade principais na interface do usuário. No entanto, essas configurações serão substituídas pelas configurações de identidade.
 
 Para qualquer comentário, use a opção **[!UICONTROL comentários sobre o Beta]** no espaço de trabalho da interface do usuário do Serviço de Identidade.
+
+## Apêndice {#appendix}
+
+Leia esta seção para obter informações adicionais que você pode consultar ao implementar suas configurações de identidade e namespaces exclusivos.
+
+### Cenário do dispositivo compartilhado {#shared-device-scenario}
+
+Você deve garantir que um único namespace seja usado em todos os perfis que representam uma pessoa. Ao fazer isso, o Serviço de identidade pode detectar o identificador de pessoa apropriado em um determinado gráfico.
+
+>[!BEGINTABS]
+
+>[!TAB Sem um namespace de identificador de pessoa singular]
+
+Sem um namespace exclusivo para representar seus identificadores de pessoa, você pode acabar com um gráfico que se vincula a identificadores de pessoa diferentes para a mesma ECID. Neste exemplo, B2BCRM e B2CCRM estão vinculados à mesma ECID ao mesmo tempo. Este gráfico sugere que Tom, usando sua conta de login B2C, compartilhou um dispositivo com Summer, usando sua conta de login B2B. No entanto, o sistema reconhecerá que este é um perfil (colapso de gráfico).
+
+![Um cenário de gráfico em que dois identificadores de pessoa estão vinculados à mesma ECID.](../images/graph-examples/multi_namespaces.png)
+
+>[!TAB Com um namespace de identificador de pessoa singular]
+
+Dado um namespace exclusivo (neste caso, uma CRMID em vez de dois namespaces diferentes), o Serviço de identidade pode discernir o identificador de pessoa que foi associado pela última vez à ECID. Neste exemplo, como existe uma CRMID exclusiva, o Serviço de identidade pode reconhecer um cenário de &quot;dispositivo compartilhado&quot;, em que duas entidades estão compartilhando o mesmo dispositivo.
+
+![Um cenário de gráfico de dispositivo compartilhado, em que dois identificadores de pessoa são vinculados à mesma ECID, mas o link mais antigo é removido.](../images/graph-examples/crmid_only_multi.png)
+
+>[!ENDTABS]
+
+### Perdendo o cenário de ID de logon {#dangling-loginid-scenario}
+
+O gráfico a seguir simula um cenário de ID de logon &quot;pendente&quot;. Neste exemplo, duas IDs de logon diferentes são vinculadas à mesma ECID. No entanto, `{loginID: ID_C}` não está vinculado ao CRMID. Portanto, não há como o Serviço de identidade detectar que essas duas IDs de logon representam duas entidades diferentes.
+
+>[!BEGINTABS]
+
+>[!TAB LoginID ambíguo]
+
+Neste exemplo, `{loginID: ID_C}` é deixado pendente e desvinculado a um CRMID. Assim, a entidade de pessoa à qual essa ID de logon deve ser associada é deixada ambígua.
+
+![Um exemplo de gráfico com um cenário de loginID &quot;pendente&quot;.](../images/graph-examples/dangling_example.png)
+
+>[!TAB loginID está vinculado a um CRMID]
+
+Neste exemplo, `{loginID: ID_C}` está vinculado a `{CRMID: Tom}`. Portanto, o sistema pode discernir que essa ID de logon está associada ao Tom.
+
+![LoginID está vinculado a um CRMID.](../images/graph-examples/id_c_tom.png)
+
+>[!TAB loginID está vinculado a outro CRMID]
+
+Neste exemplo, `{loginID: ID_C}` está vinculado a `{CRMID: Summer}`. Portanto, o sistema pode discernir que essa ID de logon está associada a outra entidade de pessoa, neste caso, o Verão.
+
+Este exemplo também mostra que Tom e Summer são entidades de pessoas diferentes que estão compartilhando um dispositivo, representado por `{ECID: 111}`.
+
+![LoginID está vinculado a outro CRMID.](../images/graph-examples/id_c_summer.png)
+
+>[!ENDTABS]

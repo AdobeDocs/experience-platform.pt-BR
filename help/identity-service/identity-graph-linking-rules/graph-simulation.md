@@ -3,9 +3,9 @@ title: Guia da interface de simulação de gráfico
 description: Saiba como usar a Simulação de gráfico na interface do usuário do serviço de identidade.
 badge: Beta
 exl-id: 89f0cf6e-c43f-40ec-859a-f3b73a6da8c8
-source-git-commit: 4c49bec7974dafe18d18deded6ddc936ece47dc3
+source-git-commit: 7daa9191f2e095f01c7c09f02f87aa8724e2e325
 workflow-type: tm+mt
-source-wordcount: '1438'
+source-wordcount: '1436'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 >[!AVAILABILITY]
 >
->Esse recurso ainda não está disponível; o programa beta para regras de vinculação de gráficos de identidade deve começar em julho nas sandboxes de desenvolvimento. Entre em contato com a equipe de conta do Adobe para obter informações sobre os critérios de participação.
+>As regras de vinculação do gráfico de identidade estão na versão beta. Entre em contato com a equipe de conta do Adobe para obter informações sobre os critérios de participação. O recurso e a documentação estão sujeitos a alterações.
 
 [!DNL Graph Simulation] é uma ferramenta na interface do Serviço de Identidade que você pode usar para simular como um gráfico de identidade se comporta considerando uma combinação específica de identidades e como você configura o [algoritmo de otimização de identidade](./identity-optimization-algorithm.md).
 
@@ -172,6 +172,8 @@ No gráfico de exemplo abaixo, uma linha pontilhada existe entre `{Email: tom@ac
 
 Após a leitura deste documento, você sabe como usar a ferramenta [!DNL Graph Simulation] para entender melhor como seus dados de identidade são tratados com base em um conjunto específico de regras e configurações. Para obter mais informações, leia os seguintes documentos:
 
-* [Regras de vinculação do gráfico de identidade](overview.md)
-* [Algoritmo de otimização de identidade](identity-optimization-algorithm.md)
-* [Prioridade de namespace](namespace-priority.md)
+* [Regras de vinculação do gráfico de identidade](./overview.md)
+* [Guia de configuração](./configuration.md)
+* [Algoritmo de otimização de identidade](./identity-optimization-algorithm.md)
+* [Prioridade de namespace](./namespace-priority.md)
+* [Exemplo de configurações de gráfico](./example-configurations.md)

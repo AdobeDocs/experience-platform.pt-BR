@@ -3,9 +3,9 @@ title: Visão geral das regras de vinculação do gráfico de identidade
 description: Saiba mais sobre as regras de vinculação do gráfico de identidade no Serviço de identidade.
 badge: Beta
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: 72773f9ba5de4387c631bd1aa0c4e76b74e5f1dc
+source-git-commit: 7daa9191f2e095f01c7c09f02f87aa8724e2e325
 workflow-type: tm+mt
-source-wordcount: '1173'
+source-wordcount: '1177'
 ht-degree: 1%
 
 ---
@@ -14,12 +14,16 @@ ht-degree: 1%
 
 >[!AVAILABILITY]
 >
->Esse recurso ainda não está disponível; o programa beta para regras de vinculação de gráficos de identidade deve começar em julho nas sandboxes de desenvolvimento. Entre em contato com a equipe de conta do Adobe para obter informações sobre os critérios de participação.
+>As regras de vinculação do gráfico de identidade estão na versão beta. Entre em contato com a equipe de conta do Adobe para obter informações sobre os critérios de participação. O recurso e a documentação estão sujeitos a alterações.
 
 ## Índice 
 
 * [Visão geral](./overview.md)
 * [Algoritmo de otimização de identidade](./identity-optimization-algorithm.md)
+* [Prioridade de namespace](./namespace-priority.md)
+* [Interface de simulação de gráfico](./graph-simulation.md)
+* [Interface de configurações de identidade](./identity-settings-ui.md)
+* [Exemplo de configurações de gráfico](./configuration.md)
 * [Exemplos de cenários](./example-scenarios.md)
 
 Com o Serviço de identidade da Adobe Experience Platform e o Perfil do cliente em tempo real, é fácil supor que seus dados são assimilados perfeitamente e que todos os perfis mesclados representam uma única pessoa por meio de um identificador de pessoa, como uma ID de CRM. No entanto, há possíveis cenários em que determinados dados podem tentar mesclar vários perfis diferentes em um único perfil (&quot;colapso de gráfico&quot;). Para evitar essas mesclagens indesejadas, é possível usar as configurações fornecidas por meio das regras de vinculação do gráfico de identidade e permitir a personalização precisa para seus usuários.

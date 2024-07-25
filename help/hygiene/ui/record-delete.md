@@ -3,7 +3,7 @@ title: Excluir Registros
 description: Saiba como excluir registros na interface do Adobe Experience Platform.
 badgeBeta: label="Beta" type="Informative"
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-source-git-commit: 9981f35732b041a92c5a371e727a8facb6636cf5
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1567'
 ht-degree: 8%
@@ -51,7 +51,7 @@ O workflow de criação da solicitação é exibido. Por padrão, a opção **[!
 
 A próxima etapa é determinar se você deseja excluir registros de um único conjunto de dados ou de todos os conjuntos de dados. Se esta opção não estiver disponível para você, continue na seção [Fornecer identidades](#provide-identities) do guia.
 
-Na seção **[!UICONTROL Detalhes do registro]**, use o botão de opção para selecionar entre um conjunto de dados específico e todos os conjuntos de dados. Se você escolher **[!UICONTROL Selecionar conjunto de dados]**, prossiga para selecionar o ícone do banco de dados (![O ícone do banco de dados](../images/ui/record-delete/database-icon.png)) para abrir uma caixa de diálogo que fornece uma lista de conjuntos de dados disponíveis. Selecione o conjunto de dados desejado na lista, seguido por **[!UICONTROL Concluído]**.
+Na seção **[!UICONTROL Detalhes do registro]**, use o botão de opção para selecionar entre um conjunto de dados específico e todos os conjuntos de dados. Se você escolher **[!UICONTROL Selecionar conjunto de dados]**, prossiga para selecionar o ícone do banco de dados (![O ícone do banco de dados](/help/images/icons/database.png)) para abrir uma caixa de diálogo que fornece uma lista de conjuntos de dados disponíveis. Selecione o conjunto de dados desejado na lista, seguido por **[!UICONTROL Concluído]**.
 
 ![A caixa de diálogo [!UICONTROL Selecionar conjunto de dados] com um conjunto de dados selecionado e [!UICONTROL Concluído] realçado.](../images/ui/record-delete/select-dataset.png)
 
@@ -130,7 +130,7 @@ São exibidos controles que permitem inserir identidades, uma de cada vez. Em **
 
 ![O fluxo de trabalho de criação da solicitação com um campo de identidade adicionado manualmente.](../images/ui/record-delete/identity-added.png)
 
-Para adicionar mais identidades, selecione o ícone de adição (![A ícone de adição.](../images/ui/record-delete/plus-icon.png)) ao lado de uma das linhas ou selecione **[!UICONTROL Adicionar identidade]**.
+Para adicionar mais identidades, selecione o ícone de adição (![A ícone de adição.](/help/images/icons/tree-expand-all.png)) ao lado de uma das linhas ou selecione **[!UICONTROL Adicionar identidade]**.
 
 ![Fluxo de trabalho de criação de solicitação com o ícone de adição e o ícone de adição de identidade realçados.](../images/ui/record-delete/more-identities.png)
 

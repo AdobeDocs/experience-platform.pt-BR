@@ -2,7 +2,7 @@
 title: Procurar Ordens de Serviço do Ciclo de Vida dos Dados
 description: Saiba como visualizar e gerenciar ordens de trabalho do ciclo de vida dos dados existentes na interface do usuário do Adobe Experience Platform.
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
-source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '841'
 ht-degree: 27%
@@ -31,7 +31,7 @@ A lista mostra somente ordens de serviço para uma categoria de cada vez. Seleci
 
 ![Imagem mostrando a guia [!UICONTROL Conjunto de Dados]](../images/ui/browse/dataset-tab.png)
 
-Selecione o ícone de funil (![Imagem do ícone de funil](../images/ui/browse/funnel-icon.png)) para exibir uma lista de filtros para as ordens de trabalho exibidas.
+Selecione o ícone de funil (![Imagem do ícone de funil](/help/images/icons/filter.png)) para exibir uma lista de filtros para as ordens de trabalho exibidas.
 
 ![Imagem dos filtros de ordem de trabalho exibidos](../images/ui/browse/filters.png)
 

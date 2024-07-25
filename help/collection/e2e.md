@@ -2,7 +2,7 @@
 title: Visão geral de ponta a ponta da coleta de dados
 description: Uma visão geral de alto nível de como enviar dados do evento para soluções da Adobe Experience Cloud usando os recursos de coleta de dados da Adobe Experience Platform.
 exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '2616'
 ht-degree: 0%
@@ -228,7 +228,7 @@ A página de configuração da ação é exibida. Para fazer com que a regra env
 
 ![Tipo de ação](./images/e2e/action-type.png)
 
-A tela é atualizada para mostrar opções adicionais para configurar a ação enviar evento. Em **[!UICONTROL Tipo]**, você pode fornecer um valor de tipo personalizado para preencher o campo XDM `eventType`. Em **[!UICONTROL Dados XDM]**, forneça o nome do tipo de dados XDM criado anteriormente (cercado por sinais de porcentagem) ou selecione o ícone do banco de dados (![Ícone do banco de dados](./images/e2e/database-symbol.png)) para selecioná-lo em uma lista. Esses são os dados que serão enviados ao Edge Network.
+A tela é atualizada para mostrar opções adicionais para configurar a ação enviar evento. Em **[!UICONTROL Tipo]**, você pode fornecer um valor de tipo personalizado para preencher o campo XDM `eventType`. Em **[!UICONTROL Dados XDM]**, forneça o nome do tipo de dados XDM criado anteriormente (cercado por sinais de porcentagem) ou selecione o ícone do banco de dados (![Ícone do banco de dados](/help/images/icons/database.png)) para selecioná-lo em uma lista. Esses são os dados que serão enviados ao Edge Network.
 
 Selecione **[!UICONTROL Manter alterações]** quando terminar.
 

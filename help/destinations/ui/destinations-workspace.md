@@ -3,7 +3,7 @@ keywords: plataforma;destinos;destinos espaço de trabalho;espaço de trabalho;u
 title: Espaço de trabalho Destinos
 description: 'O espaço de trabalho Destinos consiste em cinco seções: Visão geral, Catálogo, Procurar, Contas e Exibição de sistema. Eles são descritos nas seções abaixo.'
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: dad07add8c5f9cc98a187c2e2222a51611dbd1a2
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1231'
 ht-degree: 0%
@@ -69,9 +69,9 @@ A guia **[!UICONTROL Contas]** mostra detalhes sobre as conexões estabelecidas 
 
 >[!TIP]
 >
-> * Selecione as reticências (`...`) na coluna [!UICONTROL Platform] e use o controle ![Ativate](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL Ativate ]**/**[!UICONTROL  Ativate audiences ]**/**[!UICONTROL  Export datasets ]**para exportar audiences ou conjuntos de dados para esse destino.
-> * Selecione as reticências (`...`) na coluna [!UICONTROL Plataforma] e use o controle ![Editar detalhes](../assets/ui/workspace/pencil-icon.png)**[!UICONTROL Editar detalhes ]**para [atualizar](update-accounts.md) os detalhes de uma conta de destino existente.
-> * Selecione as reticências (`...`) na coluna [!UICONTROL Plataforma] e use o controle ![Excluir](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL Excluir ]**para [excluir](delete-destination-account.md) uma conta de destino existente.
+> * Selecione as reticências (`...`) na coluna [!UICONTROL Platform] e use o controle ![Ativate](/help/images/icons/data-add.png)**[!UICONTROL Ativate ]**/**[!UICONTROL  Ativate audiences ]**/**[!UICONTROL  Export datasets ]**para exportar audiences ou conjuntos de dados para esse destino.
+> * Selecione as reticências (`...`) na coluna [!UICONTROL Plataforma] e use o controle ![Editar detalhes](/help/images/icons/edit.png)**[!UICONTROL Editar detalhes ]**para [atualizar](update-accounts.md) os detalhes de uma conta de destino existente.
+> * Selecione as reticências (`...`) na coluna [!UICONTROL Plataforma] e use o controle ![Excluir](/help/images/icons/delete.png)**[!UICONTROL Excluir ]**para [excluir](delete-destination-account.md) uma conta de destino existente.
 
 ![Guia Contas](../assets/ui/workspace/destination-account-options.png)
 
@@ -91,10 +91,10 @@ A guia **[!UICONTROL Procurar]** exibe os destinos com os quais você estabelece
 
 >[!TIP]
 >
-> * Selecione as reticências (`...`) na coluna [!UICONTROL Nome] e use o controle ![Ativar públicos-alvo](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL Ativar ]**para exportar públicos-alvo ou conjuntos de dados para esse destino.
-> * Selecione as reticências (`...`) na coluna [!UICONTROL Nome] e use o controle ![Excluir](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL Excluir ]**para [remover](delete-destinations.md) uma conexão existente com um destino.
-> * Selecione as reticências (`...`) na coluna [!UICONTROL Nome] e use a ![Exibição no controle de monitoramento](../assets/ui/workspace/monitoring-icon.png)**[!UICONTROL Exibição no monitoramento ]**para exibir informações de ativação para este destino no [painel de monitoramento](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard).
-> * Selecione as reticências (`...`) na coluna [!UICONTROL Nome] e use o controle ![Assinar alertas ](../assets/ui/workspace/alerts-icon.png)**[!UICONTROL Assinar alertas ]**para assinar alertas de fluxo de dados de destino. Você pode assinar alertas para receber mensagens sobre o status, o sucesso ou a falha da execução do fluxo. Consulte [Assinar alertas de destino em contexto](alerts.md) para obter informações detalhadas sobre alertas de fluxo de dados de destino.
+> * Selecione as reticências (`...`) na coluna [!UICONTROL Nome] e use o controle ![Ativar públicos-alvo](/help/images/icons/data-add.png)**[!UICONTROL Ativar ]**para exportar públicos-alvo ou conjuntos de dados para esse destino.
+> * Selecione as reticências (`...`) na coluna [!UICONTROL Nome] e use o controle ![Excluir](/help/images/icons/delete.png)**[!UICONTROL Excluir ]**para [remover](delete-destinations.md) uma conexão existente com um destino.
+> * Selecione as reticências (`...`) na coluna [!UICONTROL Nome] e use a ![Exibição no controle de monitoramento](/help/images/icons/monitoring.png)**[!UICONTROL Exibição no monitoramento ]**para exibir informações de ativação para este destino no [painel de monitoramento](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard).
+> * Selecione as reticências (`...`) na coluna [!UICONTROL Nome] e use o controle ![Assinar alertas ](/help/images/icons/alert-add.png)**[!UICONTROL Assinar alertas ]**para assinar alertas de fluxo de dados de destino. Você pode assinar alertas para receber mensagens sobre o status, o sucesso ou a falha da execução do fluxo. Consulte [Assinar alertas de destino em contexto](alerts.md) para obter informações detalhadas sobre alertas de fluxo de dados de destino.
 
 ![Guia Procurar](../assets/ui/workspace/browse-tab.png)
 

@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Monitorar trabalhos de enriquecimento de perfil
 type: Tutorial
 exl-id: 096a2212-ed7f-4419-8ead-fa1ca01c2804
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '764'
 ht-degree: 2%
@@ -77,7 +77,7 @@ As seguintes métricas estão disponíveis para trabalhos de enriquecimento de p
 
 Esta seção descreve várias opções da interface do usuário na interface de monitoramento, que permitem filtrar as métricas exibidas na página.
 
-Use o ícone de seta (![ícone de seta](/help/dataflows/assets/ui/monitor-destinations/chevron-up.png)) para expandir ou descartar o cartão na parte superior da tela, que mostra informações sobre os trabalhos de enriquecimento de perfil.
+Use o ícone de seta (![ícone de seta](/help/images/icons/chevron-up.png)) para expandir ou descartar o cartão na parte superior da tela, que mostra informações sobre os trabalhos de enriquecimento de perfil.
 
 ![Gravação de tela que mostra o controle da interface do ícone de seta.](/help/dataflows/assets/ui/b2b/use-arrow-control.gif)
 

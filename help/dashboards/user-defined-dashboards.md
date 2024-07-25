@@ -2,7 +2,7 @@
 title: Painéis personalizados
 description: Saiba como criar e gerenciar painéis personalizados onde você pode criar, adicionar e editar widgets personalizados para visualizar as métricas principais.
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
-source-git-commit: 17ad52864bbca09844c0241b6451e6811bd8f413
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1624'
 ht-degree: 3%
@@ -30,7 +30,7 @@ Antes de adicionar um painel personalizado, o inventário de painéis está vazi
 
 <!-- >[!NOTE]
 >
->To edit an existing dashboard, select the dashboard name from the inventory list followed by the pencil icon (![A pencil icon.](./images/user-defined-dashboards/edit-icon.png))
+>To edit an existing dashboard, select the dashboard name from the inventory list followed by the pencil icon (![A pencil icon.](/help/images/icons/edit.png))
 >![A custom inventory listed in the dashboard inventory.](./images/user-defined-dashboards/dashbaord-inventory.png "A custom inventory listed in the dashboard inventory."){width="100" zoomable="yes"} -->
 
 A caixa de diálogo [!UICONTROL Criar painel] é exibida. Insira um nome descritivo amigável para a coleção de widgets que você deseja criar e selecione **[!UICONTROL Salvar]**.
@@ -68,7 +68,7 @@ A caixa de diálogo [!UICONTROL Selecionar modelo de dados] é exibida. Selecion
 
 >[!TIP]
 >
->Selecione o ícone de informações (![Um ícone de informações.](./images/user-defined-dashboards/info-icon.png)) para ver o nome completo do modelo de dados se ele for muito longo para ser exibido no painel de dados.
+>Selecione o ícone de informações (![Um ícone de informações.](/help/images/icons/info.png)) para ver o nome completo do modelo de dados se ele for muito longo para ser exibido no painel de dados.
 
 ![A caixa de diálogo Selecionar dados.](./images/user-defined-dashboards/select-data-model-dialog.png)
 
@@ -94,17 +94,17 @@ Selecione uma tabela na lista disponível no painel à esquerda para fornecer da
 
 O widget composer agora é preenchido com dados da tabela escolhida.
 
-O modelo de dados e a tabela selecionada no momento são exibidos na parte superior do painel à esquerda, e os atributos disponíveis para criar seu widget são listados na coluna [!UICONTROL Atributos]. Você pode usar a barra de pesquisa para procurar atributos em vez de rolar a lista ou alterar o modelo de dados escolhido selecionando o ícone de lápis (![ícone de Lápis.](./images/user-defined-dashboards/edit-icon.png)) no painel esquerdo.
+O modelo de dados e a tabela selecionada no momento são exibidos na parte superior do painel à esquerda, e os atributos disponíveis para criar seu widget são listados na coluna [!UICONTROL Atributos]. Você pode usar a barra de pesquisa para procurar atributos em vez de rolar a lista ou alterar o modelo de dados escolhido selecionando o ícone de lápis (![ícone de Lápis.](/help/images/icons/edit.png)) no painel esquerdo.
 
 ![Um widget preenchido com dados dentro do compositor de widgets.](./images/user-defined-dashboards/populated-widget-composer.png)
 
 #### Adicionar e filtrar atributos {#add-and-filter-attributes}
 
-Selecione o ícone adicionar (![Um ícone adicionar.](./images/user-defined-dashboards/add-icon.png)) ao lado de um nome de atributo para adicionar um atributo ao seu widget. O menu suspenso exibido permite adicionar um atributo como eixo X, eixo Y, uma cor ou um filtro para o widget. O atributo [!UICONTROL Color] permite diferenciar os resultados das marcas dos eixos X e Y com base na cor. Ele faz isso dividindo os resultados em cores diferentes com base em sua composição de um terceiro atributo.
+Selecione o ícone adicionar (![Um ícone adicionar.](/help/images/icons/add-circle.png)) ao lado de um nome de atributo para adicionar um atributo ao seu widget. O menu suspenso exibido permite adicionar um atributo como eixo X, eixo Y, uma cor ou um filtro para o widget. O atributo [!UICONTROL Color] permite diferenciar os resultados das marcas dos eixos X e Y com base na cor. Ele faz isso dividindo os resultados em cores diferentes com base em sua composição de um terceiro atributo.
 
 >[!TIP]
 >
->Se quiser inverter a organização dos eixos X e Y, selecione o ícone de seta para cima e para baixo (![O ícone de seta para cima e para baixo.](./images/user-defined-dashboards/switch-axis-icon.png)) para trocar sua organização.
+>Se quiser inverter a organização dos eixos X e Y, selecione o ícone de seta para cima e para baixo (![O ícone de seta para cima e para baixo.](/help/images/icons/switch.png)) para trocar sua organização.
 
 ![O widget composer com o menu suspenso add-icon realçado.](./images/user-defined-dashboards/attributes-dropdown.png)
 
@@ -132,7 +132,7 @@ Como alternativa, você pode criar um período personalizado para filtrar seus d
 
 ### Propriedades do dispositivo
 
-Selecione o ícone de propriedades (![O ícone de propriedades.](./images/user-defined-dashboards/properties-icon.png)) no painel direito para abrir o painel de propriedades. No painel [!UICONTROL Propriedades], digite um nome para o widget no campo de texto [!UICONTROL Título do widget].
+Selecione o ícone de propriedades (![O ícone de propriedades.](/help/images/icons/properties.png)) no painel direito para abrir o painel de propriedades. No painel [!UICONTROL Propriedades], digite um nome para o widget no campo de texto [!UICONTROL Título do widget].
 
 ![O painel de propriedades com o ícone de propriedades e o campo Título do widget realçados.](./images/user-defined-dashboards/properties-panel.png)
 
@@ -146,7 +146,7 @@ Salvar no widget composer salva o widget localmente no painel. Para salvar seu t
 
 >[!TIP]
 >
->Selecione o ícone de propriedades (![O ícone de propriedades.](./images/user-defined-dashboards/properties-icon.png)) ao lado do nome do painel para ver detalhes sobre sua criação. Você pode alterar o nome do painel na caixa de diálogo exibida.
+>Selecione o ícone de propriedades (![O ícone de propriedades.](/help/images/icons/properties.png)) ao lado do nome do painel para ver detalhes sobre sua criação. Você pode alterar o nome do painel na caixa de diálogo exibida.
 
 Os widgets podem ser reorganizados e redimensionados enquanto estiverem neste espaço de trabalho. Selecione **[!UICONTROL Salvar]** para preservar o nome do painel e o layout configurado.
 
@@ -162,7 +162,7 @@ Depois de criar um widget, você pode editar, duplicar ou excluir widgets inteir
 >
 >Para alternar entre qualquer um dos painéis personalizados existentes, selecione Painéis na barra de navegação à esquerda e, em seguida, selecione o nome do painel na lista de inventário.
 
-Selecione o ícone de lápis (![Um ícone de lápis.](./images/user-defined-dashboards/edit-icon.png)) na parte superior direita do painel personalizado para entrar no modo de edição.
+Selecione o ícone de lápis (![Um ícone de lápis.](/help/images/icons/edit.png)) na parte superior direita do painel personalizado para entrar no modo de edição.
 
 ![Um painel personalizado com o ícone de lápis realçado.](./images/user-defined-dashboards/edit-mode.png)
 

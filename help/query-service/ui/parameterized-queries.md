@@ -2,7 +2,7 @@
 title: Consultas com parâmetros
 description: Saiba como usar consultas com parâmetros na interface do usuário do Adobe Experience Platform.
 exl-id: 5c5ac691-5e29-4262-ba53-84dcc56e744f
-source-git-commit: 9cf8dabfdf3f20f4032a79ba191bd2dc8123a369
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '690'
 ht-degree: 11%
@@ -47,7 +47,7 @@ SELECT
 
 Para criar sua consulta parametrizada na interface do usuário do, navegue até o Editor de consultas. Consulte a seção sobre [acesso ao Editor de Consultas](./user-guide.md#accessing-query-editor) para obter mais instruções.
 
-Use o prefácio `'$'` para inserir um parâmetro na sua consulta no editor de texto. Em seguida, selecione a guia **[!UICONTROL Parâmetros de consulta]** ao lado do [!UICONTROL Console] e adicione o valor ausente para a chave. A consulta não pode ser executada se você não adicionar um valor a qualquer uma das chaves necessárias. Um ícone de alerta (![Um ícone de alerta.](../images/ui/parameterized-queries/alert-icon.png)) aparece na seção Parâmetros de Consulta ao lado de qualquer campo de entrada [!UICONTROL Valor] vazio.
+Use o prefácio `'$'` para inserir um parâmetro na sua consulta no editor de texto. Em seguida, selecione a guia **[!UICONTROL Parâmetros de consulta]** ao lado do [!UICONTROL Console] e adicione o valor ausente para a chave. A consulta não pode ser executada se você não adicionar um valor a qualquer uma das chaves necessárias. Um ícone de alerta (![Um ícone de alerta.](/help/images/icons/alert.png)) aparece na seção Parâmetros de Consulta ao lado de qualquer campo de entrada [!UICONTROL Valor] vazio.
 
 >[!NOTE]
 >

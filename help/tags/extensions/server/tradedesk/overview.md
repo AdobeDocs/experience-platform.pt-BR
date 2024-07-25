@@ -4,7 +4,7 @@ description: Saiba mais sobre a extensão da API de conversões em tempo real do
 hide: true
 hidefromtoc: true
 exl-id: 1ff32e2b-9ff8-4395-ae44-cba75a2da515
-source-git-commit: 161cb8a587026012bb07acce9da67037feb5391c
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '930'
 ht-degree: 2%
@@ -90,7 +90,7 @@ Consulte a documentação do desenvolvedor [!DNL The Trade Desk] para obter mais
 
 **[!UICONTROL Parâmetros de Solicitação de Objetos]**
 
-Um objeto JSON que contém mais informações. Você tem a opção de usar um conjunto reduzido de entradas de valores-chave ou fornecer JSON bruto. Além disso, você pode recuperar dados dinâmicos de um elemento de dados selecionando os discos (![Ícone de Disco](../../../images/extensions/server/tradedesk/disk-icon.png)) à direita.
+Um objeto JSON que contém mais informações. Você tem a opção de usar um conjunto reduzido de entradas de valores-chave ou fornecer JSON bruto. Além disso, você pode recuperar dados dinâmicos de um elemento de dados selecionando os discos (![Ícone de Disco](/help/images/icons/database.png)) à direita.
 
 
 ![A seção [!DNL Object Request Parameters] mostrando os campos disponíveis.](../../../images/extensions/server/tradedesk/configure-object-request-params.png)

@@ -2,7 +2,7 @@
 title: Preparo de dados para a coleção de dados
 description: Saiba como mapear seus dados para um esquema de evento do Experience Data Model (XDM) ao configurar uma sequência de dados para os SDKs da web e móvel da Adobe Experience Platform.
 exl-id: 87a70d56-1093-445c-97a5-b8fa72a28ad0
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1183'
 ht-degree: 60%
@@ -173,11 +173,11 @@ Para criar uma regra de mapeamento, selecione **[!UICONTROL Adicionar novo mapea
 
 ![Adicionando um novo mapeamento.](assets/data-prep/add-new-mapping.png)
 
-Selecione o ícone de origem (![Ícone de origem](assets/data-prep/source-icon.png)) e, na caixa de diálogo exibida, selecione o campo de origem que deseja mapear na tela fornecida. Depois de escolher um campo, use o botão **[!UICONTROL Selecionar]** para continuar.
+Selecione o ícone de origem (![Ícone de origem](/help/images/icons/source.png)) e, na caixa de diálogo exibida, selecione o campo de origem que deseja mapear na tela fornecida. Depois de escolher um campo, use o botão **[!UICONTROL Selecionar]** para continuar.
 
 ![Selecionando o campo a ser mapeado no esquema de origem.](assets/data-prep/source-mapping.png)
 
-Em seguida, selecione o ícone de esquema (![Ícone de esquema](assets/data-prep/schema-icon.png)) para abrir uma caixa de diálogo semelhante para o esquema de evento de destino. Escolha o campo para o qual deseja mapear os dados antes de confirmar com **[!UICONTROL Selecionar]**.
+Em seguida, selecione o ícone de esquema (![Ícone de esquema](/help/images/icons/schema.png)) para abrir uma caixa de diálogo semelhante para o esquema de evento de destino. Escolha o campo para o qual deseja mapear os dados antes de confirmar com **[!UICONTROL Selecionar]**.
 
 ![Selecionando o campo a ser mapeado no esquema de destino.](assets/data-prep/target-mapping.png)
 

@@ -2,7 +2,7 @@
 title: Suporte de controle de acesso baseado em atributos para esquemas ad hoc
 description: Um guia para restringir o acesso a campos de dados em esquemas ad hoc gerados pelo Serviço de consulta da Adobe Experience Platform.
 exl-id: d675e3de-ab62-4beb-9360-1f6090397a17
-source-git-commit: 7cde32f841497edca7de0c995cc4c14501206b1a
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1013'
 ht-degree: 2%
@@ -42,7 +42,7 @@ Para adicionar um rótulo de dados, navegue até a guia [!UICONTROL Esquemas] do
 
 ## Descubra esquemas ad hoc no inventário de esquemas da interface do usuário da plataforma {#discover-ad-hoc-schemas}
 
-Para habilitar a exibição de esquemas ad hoc na interface do usuário da Platform, selecione o ícone de filtro (![Um ícone de filtro.](../images/data-governance/filter.png)) à esquerda do campo de pesquisa e selecione **[!UICONTROL Mostrar esquemas adhoc] no painel esquerdo exibido.
+Para habilitar a exibição de esquemas ad hoc na interface do usuário da Platform, selecione o ícone de filtro (![Um ícone de filtro.](/help/images/icons/filter.png)) à esquerda do campo de pesquisa e selecione **[!UICONTROL Mostrar esquemas adhoc] no painel esquerdo exibido.
 
 ![As opções de filtro do painel Esquema ficaram com a opção &#39;Mostrar esquema adhoc&#39; habilitada.](../images/data-governance/adhoc-schema-toggle.png)
 
@@ -56,7 +56,7 @@ Para editar rótulos de dados para o esquema ad hoc, selecione a guia [!UICONTRO
 
 ## Editar rótulos para o esquema ou campo
 
-Para editar os rótulos de todo o esquema, selecione o ícone de lápis (![Um ícone de lápis.](../images/data-governance/edit-icon.png)) ao lado do nome do esquema na guia [!UICONTROL Rótulos].
+Para editar os rótulos de todo o esquema, selecione o ícone de lápis (![Um ícone de lápis.](/help/images/icons/edit.png)) ao lado do nome do esquema na guia [!UICONTROL Rótulos].
 
 ![A exibição de rótulos no espaço de trabalho de esquemas com o ícone de lápis realçado.](../images/data-governance/edit-entire-schema-labels.png)
 

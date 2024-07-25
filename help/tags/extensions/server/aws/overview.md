@@ -3,7 +3,7 @@ title: Visão geral da extensão do AWS
 description: Saiba mais sobre a extensão do AWS para encaminhamento de eventos no Adobe Experience Platform.
 exl-id: 826a96aa-2d64-4a8b-88cf-34a0b6c26df5
 last-substantial-update: 2022-11-23T00:00:00Z
-source-git-commit: 1c417744518a7ac7cfb9c65d6af8219dcbc70d46
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '810'
 ht-degree: 4%
@@ -66,7 +66,7 @@ O painel direito atualiza para mostrar as opções de configuração de como os 
 
 | Entrada | Descrição |
 | --- | --- |
-| [!UICONTROL Carga] | Este campo contém os dados que serão encaminhados para o fluxo de dados [!DNL Kinesis], no formato JSON.<br><br>Na opção **[!UICONTROL Raw]**, você pode colar o objeto JSON diretamente no campo de texto fornecido ou selecionar o ícone de elemento de dados (![ícone de Conjunto de Dados](../../../images/extensions/server/aws/data-element-icon.png)) para selecionar de uma lista de elementos de dados existentes para representar a carga.<br><br>Você também pode usar a opção **[!UICONTROL Editor de pares de valores-chave JSON]** para adicionar manualmente cada par de valores-chave por meio de um editor de interface do usuário. Cada valor pode ser representado por uma entrada bruta, ou um elemento de dados pode ser selecionado. |
+| [!UICONTROL Carga] | Este campo contém os dados que serão encaminhados para o fluxo de dados [!DNL Kinesis], no formato JSON.<br><br>Na opção **[!UICONTROL Raw]**, você pode colar o objeto JSON diretamente no campo de texto fornecido ou selecionar o ícone de elemento de dados (![ícone de Conjunto de Dados](/help/images/icons/database.png)) para selecionar de uma lista de elementos de dados existentes para representar a carga.<br><br>Você também pode usar a opção **[!UICONTROL Editor de pares de valores-chave JSON]** para adicionar manualmente cada par de valores-chave por meio de um editor de interface do usuário. Cada valor pode ser representado por uma entrada bruta, ou um elemento de dados pode ser selecionado. |
 
 {style="table-layout:auto"}
 

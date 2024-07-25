@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Gerenciar rótulos de uso de dados na interface
 description: Este guia aborda etapas para trabalhar com rótulos de uso de dados na interface do usuário do Adobe Experience Platform.
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-source-git-commit: ea58ece75d2208ae96bd71c2f51e14279769640f
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1538'
 ht-degree: 17%
@@ -71,7 +71,7 @@ Os rótulos podem ser aplicados a todo o conjunto de dados da guia **[!UICONTROL
 
 ![A guia [!UICONTROL Governança de Dados] do espaço de trabalho [!UICONTROL Conjuntos de Dados] com Governança de Dados realçada.](../images/labels/dataset-governance.png)
 
-Para editar rótulos de uso de dados no nível do conjunto de dados, comece selecionando o ícone de lápis (![Um ícone de lápis.](../images/labels/edit-icon.png)) na linha do nome do conjunto de dados.
+Para editar rótulos de uso de dados no nível do conjunto de dados, comece selecionando o ícone de lápis (![Um ícone de lápis.](/help/images/icons/edit.png)) na linha do nome do conjunto de dados.
 
 ![A guia [!UICONTROL Governança de Dados] do espaço de trabalho [!UICONTROL Conjuntos de Dados] com o ícone de lápis de edição realçado.](../images/labels/dataset-level-edit.png)
 

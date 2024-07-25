@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Guia da interface do usuário de públicos
 description: A Composição de público-alvo na interface do usuário do Adobe Experience Platform fornece um espaço de trabalho avançado que permite interagir com elementos de dados do perfil. O espaço de trabalho fornece controles intuitivos para criação e edição de públicos-alvo para sua organização.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: ca8f0c3df9581af7be37e242c9e300ef1b6ea814
+source-git-commit: 8bc03889ff108630bd20fe47f2c2920ceba5069b
 workflow-type: tm+mt
 source-wordcount: '1951'
 ht-degree: 0%
@@ -20,7 +20,7 @@ A Composição de público-alvo fornece um espaço de trabalho para criar e edit
 
 ![A interface do usuário de composição de público-alvo.](../images/ui/audience-composition/audience-composition.png)
 
-Para alterar os detalhes da composição, incluindo o título e a descrição, selecione o botão ![controles deslizantes](../images/ui/audience-composition/sliders.png).
+Para alterar os detalhes da composição, incluindo o título e a descrição, selecione o botão ![controles deslizantes](/help/images/icons/properties.png).
 
 O popover **[!UICONTROL Propriedades de composição]** é exibido. Você pode inserir detalhes da sua composição, incluindo o título e a descrição aqui.
 
@@ -114,7 +114,7 @@ Uma lista de públicos-alvo é exibida. Selecione **[!UICONTROL Adicionar]** par
 
 ### Excluir por atributo {#exclude-attribute}
 
-Se você excluir por atributo, poderá selecionar quais atributos deseja excluir selecionando o ícone ![filtro](../images/ui/audience-composition/filter-attribute.png) na seção **[!UICONTROL Regra de exclusão]**.
+Se você excluir por atributo, poderá selecionar quais atributos deseja excluir selecionando o ícone ![filtro](/help/images/icons/project-edit.png) na seção **[!UICONTROL Regra de exclusão]**.
 
 ![A seção de atributo está realçada, mostrando onde escolher o atributo a ser excluído.](../images/ui/audience-composition/exclude-attribute.png)
 
@@ -140,7 +140,7 @@ Para adicionar um bloco **[!UICONTROL Enrich]**, selecione o ícone **+**, segui
 
 O bloco **[!UICONTROL Enrich]** foi adicionado. Quando esse bloco for selecionado, os detalhes sobre o enriquecimento aparecerão no painel direito. Isso inclui o rótulo do bloco e o conjunto de dados de enriquecimento.
 
-Para selecionar o conjunto de dados com o qual o público será enriquecido, selecione o ícone ![filtro](../images/ui/audience-composition/filter-attribute.png).
+Para selecionar o conjunto de dados com o qual o público será enriquecido, selecione o ícone ![filtro](/help/images/icons/project-edit.png).
 
 ![O botão de filtro está realçado. Selecionar isso leva ao popover [!UICONTROL Selecionar conjunto de dados].](../images/ui/audience-composition/enrich-select-dataset.png)
 
@@ -160,7 +160,7 @@ A seção **[!UICONTROL Critérios de enriquecimento]** agora aparece no painel 
 
 ![A área [!UICONTROL Critérios de enriquecimento] está realçada.](../images/ui/audience-composition/enrichment-criteria.png)
 
-Para selecionar a **[!UICONTROL chave de junção do Source]**, selecione o ícone ![filtro](../images/ui/audience-composition/filter-attribute.png).
+Para selecionar a **[!UICONTROL chave de junção do Source]**, selecione o ícone ![filtro](/help/images/icons/project-edit.png).
 
 ![O ícone de filtro da [!UICONTROL chave de junção do Source] está realçado.](../images/ui/audience-composition/enrich-select-source-join-key.png)
 
@@ -168,7 +168,7 @@ O popover **[!UICONTROL Selecionar um atributo de perfil]** é exibido. Selecion
 
 ![O atributo que você deseja usar como chave de junção de origem está realçado.](../images/ui/audience-composition/enrich-select-profile-attribute.png)
 
-Para selecionar a chave de junção do conjunto de dados de **[!UICONTROL Enriquecimento]**, selecione o ícone ![filtro](../images/ui/audience-composition/filter-attribute.png).
+Para selecionar a chave de junção do conjunto de dados de **[!UICONTROL Enriquecimento]**, selecione o ícone ![filtro](/help/images/icons/project-edit.png).
 
 ![O ícone de filtro da [!UICONTROL Chave de junção do conjunto de dados de Enriquecimento] está realçado.](../images/ui/audience-composition/enrich-select-enrichment-dataset-join-key.png)
 
@@ -216,7 +216,7 @@ Ao selecionar o bloco, os detalhes sobre a classificação são mostrados no pai
 
 ![O bloco de classificação está realçado, bem como os detalhes do bloco de classificação.](../images/ui/audience-composition/rank.png)
 
-Para selecionar por qual atributo classificar os públicos-alvo, selecione o ícone ![filtro](../images/ui/audience-composition/filter-attribute.png).
+Para selecionar por qual atributo classificar os públicos-alvo, selecione o ícone ![filtro](/help/images/icons/project-edit.png).
 
 ![O ícone de filtro está realçado, mostrando o que selecionar para acessar a tela de seleção de atributo de perfil.](../images/ui/audience-composition/select-rank-attribute.png)
 
@@ -250,7 +250,7 @@ Por exemplo, você pode ter três caminhos, cada um com uma porcentagem diferent
 
 ### Dividir por atributo {#split-attribute}
 
-Ao dividir por atributo, os públicos-alvo serão divididos com base nos atributos fornecidos. Para selecionar o atributo para divisão, selecione o bloco **[!UICONTROL Split]**, seguido pelo ícone ![filtro](../images/ui/audience-composition/filter-attribute.png).
+Ao dividir por atributo, os públicos-alvo serão divididos com base nos atributos fornecidos. Para selecionar o atributo para divisão, selecione o bloco **[!UICONTROL Split]**, seguido pelo ícone ![filtro](/help/images/icons/project-edit.png).
 
 ![O botão Filtrar está selecionado, mostrando como filtrar por atributo.](../images/ui/audience-composition/select-split-attribute.png)
 

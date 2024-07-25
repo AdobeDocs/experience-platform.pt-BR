@@ -2,9 +2,9 @@
 title: Modelos de relatório do Power BI para painéis da plataforma
 description: Use modelos de relatório para explorar dados do Experience Platform usando o Power BI.
 exl-id: fb98a79f-3d82-4e11-b08a-b7cb06414462
-source-git-commit: 729d218f72a8caecc90a98810b973d0754f7757b
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
-source-wordcount: '1465'
+source-wordcount: '1467'
 ht-degree: 0%
 
 ---
@@ -144,7 +144,7 @@ Depois que o painel tiver as métricas e os atributos apropriados contidos nos w
 
 ## Excluir a integração de aplicativos do Power BI
 
-Para excluir o painel, navegue até o inventário do painel e selecione o ícone excluir (![](../images/power-bi/delete-icon.png)) ao lado do nome do painel.
+Para excluir o painel, navegue até o inventário do painel e selecione o ícone excluir (![ícone excluir](/help/images/icons/delete.png)) ao lado do nome do painel.
 
 >[!NOTE]
 >

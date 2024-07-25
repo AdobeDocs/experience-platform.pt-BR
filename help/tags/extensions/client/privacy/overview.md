@@ -2,7 +2,7 @@
 title: Visão geral da extensão do Adobe Privacy
 description: Saiba mais sobre a extensão de tag do Adobe Privacy na Adobe Experience Platform.
 exl-id: 8401861e-93ad-48eb-8796-b26ed8963c32
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '900'
 ht-degree: 9%
@@ -95,7 +95,7 @@ Ao configurar a ação para a regra, selecione **[!UICONTROL Privacidade de Adob
 
 ![Selecionar tipo de ação](../../../images/extensions/client/privacy/action-type.png)
 
-O painel direito solicita selecionar um elemento de dados que servirá como retorno de chamada da ação. Selecione o ícone de banco de dados (![Ícone de Banco de Dados](../../../images/extensions/client/privacy/database.png)) e escolha na lista o elemento de dados criado anteriormente. Selecione **[!UICONTROL Manter alterações]** para continuar.
+O painel direito solicita selecionar um elemento de dados que servirá como retorno de chamada da ação. Selecione o ícone de banco de dados (![Ícone de Banco de Dados](/help/images/icons/database.png)) e escolha na lista o elemento de dados criado anteriormente. Selecione **[!UICONTROL Manter alterações]** para continuar.
 
 ![Selecionar elemento de dados](../../../images/extensions/client/privacy/add-data-element.png)
 

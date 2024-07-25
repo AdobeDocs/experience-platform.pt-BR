@@ -4,7 +4,7 @@ title: Excluir contas de destino
 type: Tutorial
 description: Este tutorial lista as etapas para excluir contas de destino na interface do usuário do Adobe Experience Platform
 exl-id: 9b39ba4b-19a4-48a8-a6f1-f860777cdb9e
-source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '305'
 ht-degree: 0%
@@ -33,11 +33,11 @@ Siga as etapas abaixo para excluir contas de destino existentes.
 
    ![Guia Contas](../assets/ui/delete-accounts/accounts-tab.png)
 
-2. Selecione o ícone de filtro ![Ícone de filtro](../assets/ui/update-accounts/filter.png) na parte superior esquerda para iniciar o painel de classificação. O painel de classificação fornece uma lista de todos os seus destinos. É possível selecionar mais de um destino na lista para ver uma seleção filtrada de contas associadas aos destinos selecionados.
+2. Selecione o ícone de filtro ![Ícone de filtro](/help/images/icons/filter.png) na parte superior esquerda para iniciar o painel de classificação. O painel de classificação fornece uma lista de todos os seus destinos. É possível selecionar mais de um destino na lista para ver uma seleção filtrada de contas associadas aos destinos selecionados.
 
    ![Filtrar destinos](../assets/ui/delete-accounts/filter-accounts.png)
 
-3. Selecione as reticências (`...`) ao lado do nome da conta que você deseja excluir. Um painel pop-up é exibido, fornecendo opções para **[!UICONTROL Ativar públicos-alvo]**, **[!UICONTROL Editar detalhes]** e **[!UICONTROL Excluir]** a conta. Selecione o botão ![Excluir](../assets/ui/workspace/pencil-icon.png) **[!UICONTROL Excluir]** para excluir a conta desejada.
+3. Selecione as reticências (`...`) ao lado do nome da conta que você deseja excluir. Um painel pop-up é exibido, fornecendo opções para **[!UICONTROL Ativar públicos-alvo]**, **[!UICONTROL Editar detalhes]** e **[!UICONTROL Excluir]** a conta. Selecione o botão ![Excluir](/help/images/icons/delete.png) **[!UICONTROL Excluir]** para excluir a conta desejada.
 
    ![Excluir conta de destino](../assets/ui/delete-accounts/delete-accounts.png)
 

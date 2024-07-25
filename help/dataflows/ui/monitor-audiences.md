@@ -3,7 +3,7 @@ description: Saiba como monitorar os fluxos de dados durante a segmentação usa
 title: Monitorar fluxos de dados para públicos na interface
 type: Tutorial
 exl-id: 32fd2ba1-0ff0-4ea7-8d55-80d53eebc02f
-source-git-commit: 716c14f29be24d084111864053e3e4ae884003f0
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1862'
 ht-degree: 4%
@@ -64,7 +64,7 @@ As seguintes métricas estão disponíveis para essa visualização de painel:
 | **[!UICONTROL Identidades da última ativação]** | O número de identidades que foram ativadas no último trabalho de ativação do público-alvo. |
 | **[!UICONTROL Destino da última ativação]** | O nome do destino em que o último trabalho de ativação do público-alvo foi ativado. |
 
-Você pode filtrar os resultados para um público-alvo específico e exibir seus trabalhos de segmentação selecionando o ícone de filtro (![O ícone de filtro.](../assets/ui/monitor-audiences/filter-icon.png)). Os trabalhos de segmentação são classificados em ordem cronológica, com os trabalhos de segmentação mais recentes aparecendo primeiro.
+Você pode filtrar os resultados para um público-alvo específico e exibir seus trabalhos de segmentação selecionando o ícone de filtro (![O ícone de filtro.](/help/images/icons/filter-add.png)). Os trabalhos de segmentação são classificados em ordem cronológica, com os trabalhos de segmentação mais recentes aparecendo primeiro.
 
 ![O ícone de filtro está realçado. Selecionar essa opção permite exibir os trabalhos de segmentação para o público-alvo especificado.](../assets/ui/monitor-audiences/filter-audience.png)
 
@@ -89,7 +89,7 @@ As seguintes métricas estão disponíveis para essa visualização de painel:
 | **[!UICONTROL Identidade ativada]** | O número de identidades que o trabalho de segmentação está ativando. Cada perfil pode ter várias identidades. Por exemplo, um perfil pode ter um email, um número de telefone e um número de fidelidade como identidades. |
 | **[!UICONTROL Nome do destino]** | O nome do destino em que o trabalho de segmentação está sendo ativado. |
 
-Você pode filtrar ainda mais para um trabalho de segmentação específico e ver seus detalhes selecionando o ícone de filtro (![O ícone de filtro.](../assets/ui/monitor-audiences/filter-icon.png)). Há dois tipos diferentes de trabalhos de segmentação que podem ser filtrados: trabalhos de ativação e trabalhos de avaliação.
+Você pode filtrar ainda mais para um trabalho de segmentação específico e ver seus detalhes selecionando o ícone de filtro (![O ícone de filtro.](/help/images/icons/filter.png)). Há dois tipos diferentes de trabalhos de segmentação que podem ser filtrados: trabalhos de ativação e trabalhos de avaliação.
 
 ### Detalhes do trabalho de ativação {#activation-job-details}
 

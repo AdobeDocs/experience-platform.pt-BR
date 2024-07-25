@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Criar e editar classes na interface
 description: Saiba como criar e editar classes na interface do usuário do Experience Platform.
 exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
-source-git-commit: c04e5a49f2a4e90345ca20ecd0547d02b5004fcf
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1458'
 ht-degree: 5%
@@ -74,7 +74,7 @@ Selecione um botão de opção para filtrar as classes com base no fato de serem
 
 ![O fluxo de trabalho [!UICONTROL Criar esquema] com a barra de pesquisa [!UICONTROL Personalizado] e [!UICONTROL Setores] foi realçado.](../../images/ui/resources/classes/filter-and-search.png)
 
-Para ajudá-lo a decidir a classe apropriada, há informações (![Um ícone de informações.](../../images/ui/resources/classes/info.png)) e visualização (![Um ícone de visualização.](../../images/ui/resources/classes/preview.png)) ícones para cada classe. O ícone de informações abre uma caixa de diálogo que fornece uma descrição da classe e do setor ao qual ela está associada. O ícone de visualização abre uma caixa de diálogo de visualização para a classe que contém um diagrama de esquema e suas propriedades.
+Para ajudá-lo a decidir a classe apropriada, há informações (![Um ícone de informações.](/help/images/icons/info.png)) e visualização (![Um ícone de visualização.](/help/images/icons/preview.png)) ícones para cada classe. O ícone de informações abre uma caixa de diálogo que fornece uma descrição da classe e do setor ao qual ela está associada. O ícone de visualização abre uma caixa de diálogo de visualização para a classe que contém um diagrama de esquema e suas propriedades.
 
 ![Uma visualização da classe selecionada com o diagrama de esquema e as propriedades de classe realçadas.](../../images/ui/resources/classes/class-preview.png)
 

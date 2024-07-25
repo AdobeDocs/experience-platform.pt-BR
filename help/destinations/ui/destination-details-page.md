@@ -3,7 +3,7 @@ keywords: destinos;destino;página detalhes de destinos;página detalhes de dest
 title: Exibir detalhes do destino
 description: A página de detalhes de um destino individual fornece uma visão geral dos detalhes do destino. Os detalhes do destino incluem o nome do destino, a ID, os públicos mapeados para o destino e os controles para editar a ativação e habilitar e desabilitar o fluxo de dados.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: de867c1747fcdb14d8eb72bd3432c177e680c4fa
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1189'
 ht-degree: 0%
@@ -28,19 +28,19 @@ Siga as etapas abaixo para exibir mais detalhes sobre um destino existente. Voc�
 
    ![Procurar destinos](../assets/ui/details-page/browse-destinations.png)
 
-1. Selecione o ícone de filtro ![Ícone de filtro](../assets/ui/details-page/filter.png) na parte superior esquerda para iniciar o painel de classificação. O painel de classificação fornece uma lista de todos os seus destinos. Você pode selecionar mais de um destino na lista para ver uma seleção filtrada de fluxos de dados associados ao destino selecionado.
+2. Selecione o ícone de filtro ![Ícone de filtro](/help/images/icons/filter.png) na parte superior esquerda para iniciar o painel de classificação. O painel de classificação fornece uma lista de todos os seus destinos. Você pode selecionar mais de um destino na lista para ver uma seleção filtrada de fluxos de dados associados ao destino selecionado.
 
    ![Filtrar destinos](../assets/ui/details-page/filter-destinations.png)
 
-1. Selecione a linha do destino para a qual você deseja exibir mais informações. Isso exibe um painel direito com informações sobre o destino, incluindo a ID de destino, o usuário que criou a conexão de destino e outras informações.
+3. Selecione a linha do destino para a qual você deseja exibir mais informações. Isso exibe um painel direito com informações sobre o destino, incluindo a ID de destino, o usuário que criou a conexão de destino e outras informações.
 
    ![ID de destino no painel direito](../assets/ui/details-page/right-rail-info-including-destination-id.png)
 
-1. Como alternativa, você pode exibir outras informações sobre o destino selecionando *o nome do destino* que deseja exibir.
+4. Como alternativa, você pode exibir outras informações sobre o destino selecionando *o nome do destino* que deseja exibir.
 
    ![Selecionar destino](../assets/ui/details-page/destination-select.png)
 
-1. A página de detalhes do destino é exibida no painel direito, mostrando os controles disponíveis.
+5. A página de detalhes do destino é exibida no painel direito, mostrando os controles disponíveis.
 
    ![Detalhes do destino](../assets/ui/details-page/destination-details.png)
 

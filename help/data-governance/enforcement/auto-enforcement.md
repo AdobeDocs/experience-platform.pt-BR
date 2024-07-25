@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Aplicação automática de política
 description: Este documento aborda como as políticas de uso de dados são aplicadas automaticamente ao ativar públicos para destinos no Experience Platform.
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: ea58ece75d2208ae96bd71c2f51e14279769640f
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '2109'
 ht-degree: 0%
@@ -104,7 +104,7 @@ Um gráfico de linhagem de dados é exibido abaixo do resumo da violação, perm
 
 ![Uma caixa de diálogo de violação de política com o gráfico de linhagem de dados destacado.](../images/enforcement/data-lineage.png)
 
-Você também pode usar o ícone **[!UICONTROL Filtro]** (![Um ícone de filtro.](../images/enforcement/filter.png)) para filtrar as entidades exibidas por categoria. Pelo menos duas categorias devem ser selecionadas para que os dados sejam exibidos.
+Você também pode usar o ícone **[!UICONTROL Filtro]** (![Um ícone de filtro.](/help/images/icons/filter.png)) para filtrar as entidades exibidas por categoria. Pelo menos duas categorias devem ser selecionadas para que os dados sejam exibidos.
 
 ![Uma caixa de diálogo de violação de política com o filtro de linhagem de dados e o menu suspenso destacados.](../images/enforcement/lineage-filter.png)
 

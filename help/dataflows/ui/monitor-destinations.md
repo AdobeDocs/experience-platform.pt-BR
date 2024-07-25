@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Monitorar fluxos de dados para destinos na interface do
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 93430a9ba5911bf8dc901ec3f82f06a6b25b8dc4
+source-git-commit: 19f1f64434d655d3b19260460519018fc9c8e174
 workflow-type: tm+mt
 source-wordcount: '3337'
 ht-degree: 10%
@@ -178,7 +178,7 @@ A página de detalhes também exibe uma lista de identidades que falharam e as q
 >title="Activation"
 >abstract="A visualização da ativação de destino contém informações sobre o status de ativação de um público-alvo e as métricas obtidas do Perfil do cliente em tempo real para gerar identidades exclusivas."
 
-Para acessar o painel de [!UICONTROL Monitoramento], selecione **[!UICONTROL Monitoramento]** (![ícone de monitoramento](../assets/ui/monitor-destinations/monitoring-icon.png)) na navegação à esquerda. Uma vez na página [!UICONTROL Monitoramento], selecione [!UICONTROL Destinos]. O painel [!UICONTROL Monitoramento] contém métricas e informações sobre os trabalhos de execução de destino.
+Para acessar o painel de [!UICONTROL Monitoramento], selecione **[!UICONTROL Monitoramento]** (![ícone de monitoramento](/help/images/icons/monitoring.png)) na navegação à esquerda. Uma vez na página [!UICONTROL Monitoramento], selecione [!UICONTROL Destinos]. O painel [!UICONTROL Monitoramento] contém métricas e informações sobre os trabalhos de execução de destino.
 
 Use o painel [!UICONTROL Destinos] para ter uma ideia geral da integridade dos fluxos de ativação. Comece obtendo insights em um nível agregado para todos os destinos de lote e transmissão e depois analise detalhadamente as exibições de fluxos de dados, execuções de fluxo de dados e públicos ativados para obter uma análise detalhada dos dados de ativação. As telas no painel [!UICONTROL Monitoramento] fornecem insights acionáveis por meio de métricas e descrições de erros para ajudá-lo a solucionar problemas que possam surgir em seus cenários de ativação.
 
@@ -199,7 +199,7 @@ Por padrão, os dados exibidos contêm as informações de ativação das últim
 
 ![Alterar controle de intervalo de datas de retrospectiva realçado para destinos ativados](../assets/ui/monitor-destinations/dashboard-graph-change-date-range.png)
 
-Use o ícone de seta (![ícone de seta](/help/dataflows/assets/ui/monitor-destinations/chevron-up.png)) para expandir ou descartar os cartões na parte superior da tela, que mostram rapidamente informações sobre os detalhes de ativação, com base no tipo de destino - streaming ou lote:
+Use o ícone de seta (![ícone de seta](/help/images/icons/chevron-up.png)) para expandir ou descartar os cartões na parte superior da tela, que mostram rapidamente informações sobre os detalhes de ativação, com base no tipo de destino - streaming ou lote:
 
 - **[!UICONTROL Taxa de ativação de streaming]**: representa a porcentagem de identidades recebidas que foram ativadas ou ignoradas com êxito. A fórmula usada para calcular essa porcentagem está descrita mais acima nesta página, na seção [Execuções de fluxo de dados para destinos de streaming](#dataflow-runs-for-streaming-destinations).
 - **[!UICONTROL Execuções de fluxo de dados com falha em lote]**: representa o número de execuções de fluxo de dados com falha no intervalo de tempo selecionado.
@@ -226,13 +226,13 @@ Também é possível filtrar a lista de destinos para exibir apenas a categoria 
 
 ![Filtrar destinos com o seletor suspenso](../assets/ui/monitor-destinations/dashboard-destinations-filter-dropdown.png)
 
-Além disso, você pode inserir um destino na barra de pesquisa para isolar em um único destino. Se quiser ver os fluxos de dados do destino, selecione o filtro ![filtro](../assets/ui/monitor-destinations/filter-add.png) ao lado dele para ver uma lista de seus fluxos de dados ativos.
+Além disso, você pode inserir um destino na barra de pesquisa para isolar em um único destino. Se quiser ver os fluxos de dados do destino, selecione o filtro ![filtro](/help/images/icons/filter-add.png) ao lado dele para ver uma lista de seus fluxos de dados ativos.
 
 ![Filtrar destinos usando a barra de pesquisa realçada na exibição de monitoramento.](../assets/ui/monitor-destinations/filtered-destinations.png)
 
 Para exibir todos os fluxos de dados existentes em todos os destinos, selecione **[!UICONTROL Fluxos de Dados]**.
 
-Uma lista de fluxos de dados é exibida, classificada pela última execução do fluxo de dados. Você pode ver detalhes adicionais para um fluxo de dados específico localizando o destino que deseja monitorar, selecionando o filtro ![filtro](../assets/ui/monitor-destinations/filter-add.png) ao lado dele e, em seguida, selecionando o filtro ![filtro](../assets/ui/monitor-destinations/filter-add.png) ao lado do fluxo de dados sobre o qual deseja obter mais informações.
+Uma lista de fluxos de dados é exibida, classificada pela última execução do fluxo de dados. Você pode ver detalhes adicionais para um fluxo de dados específico localizando o destino que deseja monitorar, selecionando o filtro ![filtro](/help/images/icons/filter-add.png) ao lado dele e, em seguida, selecionando o filtro ![filtro](/help/images/icons/filter-add.png) ao lado do fluxo de dados sobre o qual deseja obter mais informações.
 
 ![Todos os fluxos de dados destacados no painel de monitoramento.](../assets/ui/monitor-destinations/dashboard-dataflows.png)
 
@@ -269,7 +269,7 @@ Por exemplo, você está ativando um público-alvo chamado &quot;Membros de fide
 ![Públicos-alvo destacados no painel de fluxo de dados.](../assets/ui/monitor-destinations/dashboard-segments-view.png)
 
 Na visualização em nível de público-alvo, as métricas são agregadas em várias execuções de fluxo de dados dentro do intervalo selecionado. Se houver várias execuções de fluxo de dados, você poderá detalhar a partir do nível do público-alvo para ver o detalhamento de cada execução de fluxo de dados, filtrado pelo público selecionado.
-Use o botão de filtro ![filtro](../assets/ui/monitor-destinations/filter-add.png) para detalhar a exibição de execuções de fluxo de dados para cada público no fluxo de dados.
+Use o botão de filtro ![filtro](/help/images/icons/filter-add.png) para detalhar a exibição de execuções de fluxo de dados para cada público no fluxo de dados.
 
 ### Página Execuções de fluxo de dados {#dataflow-runs-page}
 
@@ -283,7 +283,7 @@ Ao detalhar a página de execuções do fluxo de dados na [exibição no nível 
 
 ![Botões de opção que mostram como filtrar execuções de fluxo de dados para públicos-alvo.](/help/dataflows/assets/ui/monitor-destinations/dataflow-runs-segment-filter.png)
 
-Para ver mais detalhes sobre uma execução de fluxo de dados específica, selecione o filtro ![filtro](../assets/ui/monitor-destinations/filter-add.png) ao lado da hora de início da execução do fluxo de dados para ver a página de detalhes da execução do fluxo de dados.
+Para ver mais detalhes sobre uma execução de fluxo de dados específica, selecione o filtro ![filtro](/help/images/icons/filter-add.png) ao lado da hora de início da execução do fluxo de dados para ver a página de detalhes da execução do fluxo de dados.
 
 ![O fluxo de dados executa o filtro no painel de monitoramento para detalhar mais informações para uma determinada execução de fluxo de dados.](../assets/ui/monitor-destinations/dataflow-runs-filter.png)
 

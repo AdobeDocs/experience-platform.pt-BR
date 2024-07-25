@@ -2,7 +2,7 @@
 title: Monitorar consultas programadas
 description: Saiba como monitorar consultas por meio da interface do usuário do Serviço de consulta.
 exl-id: 4640afdd-b012-4768-8586-32f1b8232879
-source-git-commit: 41c069ef1c0a19f34631e77afd7a80b8967c5060
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '2454'
 ht-degree: 0%
@@ -25,7 +25,7 @@ A tabela abaixo descreve cada coluna disponível.
 
 >[!NOTE]
 >
->O ícone de assinaturas de alerta (![Um ícone de assinaturas de alerta.](../images/ui/monitor-queries/alert-subscription-icon.png)) está contido em cada linha de uma coluna sem título. Consulte a seção [assinaturas de alerta](#alert-subscription) para obter mais informações.
+>O ícone de assinaturas de alerta (![Um ícone de assinaturas de alerta.](/help/images/icons/alert-add.png)) está contido em cada linha de uma coluna sem título. Consulte a seção [assinaturas de alerta](#alert-subscription) para obter mais informações.
 
 | Coluna | Descrição |
 |---|---|
@@ -45,7 +45,7 @@ A tabela abaixo descreve cada coluna disponível.
 
 ## Personalizar configurações de tabela para consultas programadas {#customize-table}
 
-Você pode ajustar as colunas na guia [!UICONTROL Consultas agendadas] de acordo com suas necessidades. Para abrir a caixa de diálogo de configurações [!UICONTROL Personalizar tabela] e editar as colunas disponíveis, selecione o ícone de configurações (![Ícone de configurações A.](../images/ui/monitor-queries/settings-icon.png)) na parte superior direita da tela.
+Você pode ajustar as colunas na guia [!UICONTROL Consultas agendadas] de acordo com suas necessidades. Para abrir a caixa de diálogo de configurações [!UICONTROL Personalizar tabela] e editar as colunas disponíveis, selecione o ícone de configurações (![Ícone de configurações A.](/help/images/icons/column-settings.png)) na parte superior direita da tela.
 
 >[!NOTE]
 >
@@ -89,7 +89,7 @@ Se você deseja agendar execuções para esse modelo de consulta, selecione o no
 
 ### Assinatura de alertas {#alert-subscription}
 
-Para assinar alertas para execuções de consultas agendadas, selecione o ícone de assinatura de alerta `...` (reticências) ou (![Um ícone de assinatura de alerta.](../images/ui/monitor-queries/alert-subscription-icon.png)) para a consulta agendada que você deseja gerenciar. O menu suspenso de ações em linha é exibido. Em seguida, selecione **[!UICONTROL Assinar]** dentre as opções disponíveis.
+Para assinar alertas para execuções de consultas agendadas, selecione o ícone de assinatura de alerta `...` (reticências) ou (![Um ícone de assinatura de alerta.](/help/images/icons/alert-add.png)) para a consulta agendada que você deseja gerenciar. O menu suspenso de ações em linha é exibido. Em seguida, selecione **[!UICONTROL Assinar]** dentre as opções disponíveis.
 
 ![O espaço de trabalho de consultas agendadas com reticências, ícone de assinatura de alerta e menu suspenso de ações embutidas está realçado.](../images/ui/monitor-queries/subscribe.png)
 
@@ -115,7 +115,7 @@ Consulte a [documentação da API de assinaturas de alerta](../api/alert-subscri
 
 ### Exibir os detalhes da consulta {#query-details}
 
-Selecione o ícone de informações (![Um ícone de informações.](../images/ui/monitor-queries/information-icon.png)) para ver o painel de detalhes da consulta. O painel de detalhes contém todas as informações relevantes sobre a consulta além dos fatos incluídos na tabela de consultas programadas. As informações adicionais incluem a ID da consulta, a data da última modificação, o SQL da consulta, a ID da programação e a programação definida atual.
+Selecione o ícone de informações (![Um ícone de informações.](/help/images/icons/info.png)) para ver o painel de detalhes da consulta. O painel de detalhes contém todas as informações relevantes sobre a consulta além dos fatos incluídos na tabela de consultas programadas. As informações adicionais incluem a ID da consulta, a data da última modificação, o SQL da consulta, a ID da programação e a programação definida atual.
 
 ![A guia Consultas Agendadas com o ícone de informações e o painel de detalhes realçado.](../images/ui/monitor-queries/details-panel.png)
 
@@ -151,7 +151,7 @@ Consulte a seção assinar alertas para saber como [assinar alertas de [!UICONTR
 
 ## Filtrar consultas {#filter}
 
-Você pode filtrar consultas com base na frequência de execução. Na guia [!UICONTROL Consultas agendadas], selecione o ícone de filtro (![Ícone de filtro](../images/ui/monitor-queries/filter-icon.png)) para abrir a barra lateral de filtros.
+Você pode filtrar consultas com base na frequência de execução. Na guia [!UICONTROL Consultas agendadas], selecione o ícone de filtro (![Ícone de filtro](/help/images/icons/filter.png)) para abrir a barra lateral de filtros.
 
 ![A guia de consultas agendadas com o ícone de filtro realçado.](../images/ui/monitor-queries/filter-queries.png)
 

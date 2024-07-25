@@ -4,7 +4,7 @@ title: Excluir destinos
 type: Tutorial
 description: Este tutorial lista as etapas para excluir um destino existente na interface do usuário do Adobe Experience Platform
 exl-id: 7b672859-e61a-4b3c-9db9-62048258f0aa
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '411'
 ht-degree: 0%
@@ -32,11 +32,11 @@ Siga as etapas abaixo para excluir um destino da guia [!UICONTROL Procurar].
 
    ![Procurar destinos](../assets/ui/delete-destinations/browse-destinations.png)
 
-2. Selecione o ícone de filtro ![Ícone de filtro](../assets/ui/delete-destinations/filter.png) na parte superior esquerda para iniciar o painel de classificação. O painel de classificação fornece uma lista de todos os seus destinos. Você pode selecionar mais de um destino na lista para ver uma seleção filtrada de fluxos de dados associados ao destino selecionado.
+2. Selecione o ícone de filtro ![Ícone de filtro](/help/images/icons/filter.png) na parte superior esquerda para iniciar o painel de classificação. O painel de classificação fornece uma lista de todos os seus destinos. Você pode selecionar mais de um destino na lista para ver uma seleção filtrada de fluxos de dados associados ao destino selecionado.
 
    ![Filtrar destinos](../assets/ui/delete-destinations/filter-destinations.png)
 
-3. Selecione o botão ![Mais botão](../assets/ui/delete-destinations/more-icon.png) na coluna Nome e selecione ![Excluir botão](../assets/ui/delete-destinations/delete-icon.png) **[!UICONTROL Excluir]** para remover uma conexão de destino existente.
+3. Selecione o botão ![Mais botão](/help/images/icons/more.png) na coluna Nome e selecione ![Excluir botão](/help/images/icons/delete.png) **[!UICONTROL Excluir]** para remover uma conexão de destino existente.
    ![Excluir destinos](../assets/ui/delete-destinations/delete-destinations.png)
 
 4. Selecione **[!UICONTROL Excluir]** para confirmar a remoção da conexão de destino.
@@ -51,7 +51,7 @@ Siga as etapas abaixo para excluir um destino da página de detalhes do destino.
 
    ![Procurar destinos](../assets/ui/delete-destinations/browse-destinations.png)
 
-2. Selecione o ícone de filtro ![Ícone de filtro](../assets/ui/delete-destinations/filter.png) na parte superior esquerda para iniciar o painel de classificação. O painel de classificação fornece uma lista de todos os seus destinos. Você pode selecionar mais de um destino na lista para ver uma seleção filtrada de fluxos de dados associados ao destino selecionado.
+2. Selecione o ícone de filtro ![Ícone de filtro](/help/images/icons/filter.png) na parte superior esquerda para iniciar o painel de classificação. O painel de classificação fornece uma lista de todos os seus destinos. Você pode selecionar mais de um destino na lista para ver uma seleção filtrada de fluxos de dados associados ao destino selecionado.
 
    ![Filtrar destinos](../assets/ui/delete-destinations/filter-destinations.png)
 

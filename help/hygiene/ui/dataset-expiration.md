@@ -2,7 +2,7 @@
 title: Expirações do conjunto de dados automatizado
 description: Saiba como programar a expiração de um conjunto de dados na interface do usuário do Adobe Experience Platform.
 exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
-source-git-commit: 2aba88ac657e73a12be14d2c3a67dd5714513c97
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '871'
 ht-degree: 18%
@@ -55,11 +55,11 @@ O workflow de criação da solicitação é exibido. Na seção [!UICONTROL Aç�
 
 ### Selecionar uma data e um conjunto de dados {#select-date-and-dataset}
 
-Na seção **[!UICONTROL Ação solicitada]**, selecione uma data pela qual deseja que o conjunto de dados seja excluído. Você pode inserir a data manualmente (no formato `mm/dd/yyyy`) ou selecionar o ícone de calendário (![Um ícone de calendário.](../images/ui/ttl/calendar-icon.png)) para selecionar a data em uma caixa de diálogo.
+Na seção **[!UICONTROL Ação solicitada]**, selecione uma data pela qual deseja que o conjunto de dados seja excluído. Você pode inserir a data manualmente (no formato `mm/dd/yyyy`) ou selecionar o ícone de calendário (![Um ícone de calendário.](/help/images/icons/calendar.png)) para selecionar a data em uma caixa de diálogo.
 
 ![Uma caixa de diálogo de calendário com uma data de expiração selecionada e realçada para o conjunto de dados.](../images/ui/ttl/select-date.png)
 
-Em seguida, em **[!UICONTROL Detalhes do conjunto de dados]**, selecione o ícone do banco de dados (![O ícone do banco de dados.](../images/ui/ttl/database-icon.png)) para abrir uma caixa de diálogo de seleção de conjunto de dados. Escolha um conjunto de dados na lista ao qual aplicar a expiração e selecione **[!UICONTROL Concluído]**.
+Em seguida, em **[!UICONTROL Detalhes do conjunto de dados]**, selecione o ícone do banco de dados (![O ícone do banco de dados.](/help/images/icons/database.png)) para abrir uma caixa de diálogo de seleção de conjunto de dados. Escolha um conjunto de dados na lista ao qual aplicar a expiração e selecione **[!UICONTROL Concluído]**.
 
 ![A caixa de diálogo [!UICONTROL Selecionar conjunto de dados] com um conjunto de dados selecionado e [!UICONTROL Concluído] realçado.](../images/ui/ttl/select-dataset.png)
 

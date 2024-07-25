@@ -2,7 +2,7 @@
 title: Logs de consulta
 description: Os logs de consulta são gerados automaticamente cada vez que uma consulta é executada e ficam disponíveis por meio da interface do usuário para ajudar na solução de problemas. Este documento descreve como usar e navegar na seção Logs do serviço de consulta da interface do usuário.
 exl-id: 929e9fba-a9ba-4bf9-a363-ca8657a84f75
-source-git-commit: 41c069ef1c0a19f34631e77afd7a80b8967c5060
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1012'
 ht-degree: 0%
@@ -31,7 +31,7 @@ Para verificar os logs de consulta, selecione [!UICONTROL Consultas] para navega
 
 ## Personalizar e pesquisar {#customize-and-search}
 
-Os logs do Serviço de consulta são apresentados em um formato de tabela personalizável. Para personalizar as colunas da tabela, selecione o ícone de configurações (![A ícone de configurações.](../images/ui/query-log/settings-icon.png)) à direita da tela. Uma caixa de diálogo [!UICONTROL Personalizar Tabela] é exibida, onde cada coluna pode ser desmarcada.
+Os logs do Serviço de consulta são apresentados em um formato de tabela personalizável. Para personalizar as colunas da tabela, selecione o ícone de configurações (![A ícone de configurações.](/help/images/icons/column-settings.png)) à direita da tela. Uma caixa de diálogo [!UICONTROL Personalizar Tabela] é exibida, onde cada coluna pode ser desmarcada.
 
 Você também pode pesquisar logs relacionados a modelos de consulta específicos digitando o nome do modelo no campo de pesquisa.
 
@@ -67,13 +67,13 @@ Você também pode selecionar um nome de modelo de consulta na coluna [!UICONTRO
 
 ## Editar logs {#edit-logs}
 
-Ao lado do nome do modelo de cada linha ou do trecho SQL há um ícone de lápis (![Um ícone de lápis.](../images/ui/query-log/edit-icon.png)) que você pode usar para navegar até o Editor de Consultas. A consulta é então preenchida previamente no editor para edição.
+Ao lado do nome do modelo de cada linha ou do trecho SQL há um ícone de lápis (![Um ícone de lápis.](/help/images/icons/edit.png)) que você pode usar para navegar até o Editor de Consultas. A consulta é então preenchida previamente no editor para edição.
 
 ![O espaço de trabalho do Log de Consultas com um ícone de lápis realçado.](../images/ui/query-log/edit-query.png)
 
 ## Filtrar logs {#filter-logs}
 
-Você pode filtrar a lista de logs de consulta com base em várias configurações. Selecione o ícone de filtro (![O ícone de filtro.](../images/ui/query-log/filter-icon.png)) na parte superior esquerda do espaço de trabalho para abrir um conjunto de opções de filtro no painel esquerdo.
+Você pode filtrar a lista de logs de consulta com base em várias configurações. Selecione o ícone de filtro (![O ícone de filtro.](/help/images/icons/filter.png)) na parte superior esquerda do espaço de trabalho para abrir um conjunto de opções de filtro no painel esquerdo.
 
 ![O espaço de trabalho do Log de Consultas com o ícone de filtro realçado.](../images/ui/query-log/log-filter.png)
 

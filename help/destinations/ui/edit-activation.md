@@ -4,7 +4,7 @@ title: Editar fluxos de dados de ativação
 type: Tutorial
 description: Siga as etapas deste artigo para editar um fluxo de dados de ativação existente no Adobe Experience Platform.
 exl-id: 0d79fbff-bfde-4109-8353-c7530e9719fb
-source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '327'
 ht-degree: 0%
@@ -23,7 +23,7 @@ Siga as etapas abaixo para editar os fluxos de dados de ativação existentes:
 
    ![Procurar destinos](../assets/ui/edit-activation/browse-destinations.png)
 
-2. Selecione o ícone de filtro ![Ícone de filtro](../assets/ui/edit-activation/filter.png) na parte superior esquerda para iniciar o painel de classificação. O painel de classificação fornece uma lista de todos os seus destinos. Você pode selecionar mais de um destino na lista para ver uma seleção filtrada de fluxos de dados associados ao destino selecionado.
+2. Selecione o ícone de filtro ![Ícone de filtro](/help/images/icons/filter.png) na parte superior esquerda para iniciar o painel de classificação. O painel de classificação fornece uma lista de todos os seus destinos. Você pode selecionar mais de um destino na lista para ver uma seleção filtrada de fluxos de dados associados ao destino selecionado.
 
    ![Filtrar destinos](../assets/ui/edit-activation/filter-destinations.png)
 

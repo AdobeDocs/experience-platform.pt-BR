@@ -5,7 +5,7 @@ solution: Experience Platform
 title: Excluir fluxos de dados na interface
 type: Tutorial
 exl-id: aa224467-7733-40de-aab7-0ff1c557abf2
-source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '367'
 ht-degree: 1%
@@ -33,7 +33,7 @@ Na [Interface do usuário do Experience Platform](https://platform.adobe.com), s
 
 A página **[!UICONTROL Fluxos de Dados]** é exibida. Nesta página, há uma lista de fluxos de dados visualizáveis, incluindo informações sobre seu conjunto de dados de destino, origem, nome da conta e data de criação.
 
-Selecione o ícone de filtro (![filter-icon](../../images/tutorials/delete/filter.png)) na parte superior esquerda para iniciar o painel de classificação.
+Selecione o ícone de filtro (![filter-icon](/help/images/icons/filter.png)) na parte superior esquerda para iniciar o painel de classificação.
 
 ![fluxos de dados](../../images/tutorials/delete/dataflows.png)
 

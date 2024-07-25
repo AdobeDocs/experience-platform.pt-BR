@@ -5,7 +5,7 @@ title: Explorar recursos do esquema na interface do
 description: Saiba como explorar esquemas, classes, grupos de campos de esquema e tipos de dados existentes na interface do usuário do Experience Platform.
 type: Tutorial
 exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
-source-git-commit: 0e1fb15cfa56fb4c2a4a645578327f0a4bd22e68
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1078'
 ht-degree: 0%
@@ -24,7 +24,7 @@ Na interface da Platform, selecione **[!UICONTROL Esquemas]** na navegação à 
 
 ![](../images/ui/explore/tabs.png)
 
-O ícone de filtro (![Imagem do ícone de filtro](../images/ui/explore/icon.png)) revela controles no painel esquerdo para restringir os resultados listados. Os controles exibidos diferem dependendo do tipo de recurso que está sendo listado.
+O ícone de filtro (![Imagem do ícone de filtro](/help/images/icons/filter.png)) revela controles no painel esquerdo para restringir os resultados listados. Os controles exibidos diferem dependendo do tipo de recurso que está sendo listado.
 
 Por exemplo, para filtrar a lista para mostrar apenas os tipos de dados padrão fornecidos pelo Adobe, selecione **[!UICONTROL Datatype]** e **[!UICONTROL Adobe]** nas seções **[!UICONTROL Type]** e **[!UICONTROL Owner]**, respectivamente.
 
@@ -56,7 +56,7 @@ Todos os campos do tipo de objeto que contêm subpropriedades são recolhidos po
 
 ### Indicador padrão de classe e grupo de campos {#standard-class-and-field-group-indicator}
 
-No Editor de esquemas, classes e grupos de campos padrão (gerados por Adobe) são indicados com o ícone de cadeado (![Um ícone de cadeado.](../images/ui/explore/padlock-icon.png). O cadeado é exibido no painel à esquerda, ao lado do nome da classe ou do grupo de campos, e também ao lado de qualquer campo no diagrama de esquema que faça parte de um recurso gerado pelo sistema.
+No Editor de esquemas, classes e grupos de campos padrão (gerados por Adobe) são indicados com o ícone de cadeado (![Um ícone de cadeado.](/help/images/icons/lock-closed.png). O cadeado é exibido no painel à esquerda, ao lado do nome da classe ou do grupo de campos, e também ao lado de qualquer campo no diagrama de esquema que faça parte de um recurso gerado pelo sistema.
 
 ![O Editor de Esquemas com o ícone de cadeado realçado](../images/ui/explore/schema-editor-padlock-icon.png)
 
@@ -94,7 +94,7 @@ Se o campo que você está inspecionando for um campo de enumeração, o painel 
 
 Ao inspecionar esquemas que contêm campos de identidade, esses campos são listados no painel à esquerda na classe ou no grupo de campos que os fornece ao esquema. Selecione o nome do campo de identidade no painel à esquerda para revelar o campo na tela, independentemente da profundidade em que ele está aninhado.
 
-Os campos de identidade são realçados na tela com um ícone de impressão digital (![Imagem do ícone de impressão digital](../images/ui/explore/identity-symbol.png)). Se você selecionar o nome do campo de identidade, poderá exibir informações adicionais, como o [namespace de identidade](../../identity-service/features/namespaces.md) e se o campo é ou não a identidade principal do esquema.
+Os campos de identidade são realçados na tela com um ícone de impressão digital (![Imagem do ícone de impressão digital](/help/images/icons/identity-service.png)). Se você selecionar o nome do campo de identidade, poderá exibir informações adicionais, como o [namespace de identidade](../../identity-service/features/namespaces.md) e se o campo é ou não a identidade principal do esquema.
 
 ![](../images/ui/explore/identity-field.png)
 

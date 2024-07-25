@@ -6,7 +6,7 @@ hide: true
 hidefromtoc: true
 role: Developer, Admin, User
 exl-id: 85944720-8551-491c-8991-dd9668beb0ca
-source-git-commit: 62bcaa532cdec68a2f4f62e5784c35b91b7d5743
+source-git-commit: 68781d27e374261108955b24dfb7b46141f5108b
 workflow-type: tm+mt
 source-wordcount: '955'
 ht-degree: 1%
@@ -59,7 +59,7 @@ Com o controle de acesso no nível do objeto para destinos, limite equipes espec
 Para aplicar rótulos de acesso a um fluxo de dados específico:
 
 1. Navegue até **[!UICONTROL Destinos]** > **[!UICONTROL Procurar]** e localize o fluxo de dados de destino ao qual você deseja limitar o acesso dos usuários.
-1. Selecione as reticências (`...`) na coluna [!UICONTROL Nome] e use o controle ![Editar detalhes](/help/access-control/images/olac/key-icon.svg) **[!UICONTROL Aplicar rótulos de acesso]** para adicionar novos rótulos e gerenciar os rótulos existentes para o fluxo de dados.
+1. Selecione as reticências (`...`) na coluna [!UICONTROL Nome] e use o controle ![Editar detalhes](/help/images/icons/key.png) **[!UICONTROL Aplicar rótulos de acesso]** para adicionar novos rótulos e gerenciar os rótulos existentes para o fluxo de dados.
    ![Selecione Aplicar rótulos de acesso na exibição Procurar do espaço de trabalho de destinos.](/help/access-control/images/olac/apply-access-labels.png)
 1. Selecione os rótulos que deseja adicionar ao fluxo de dados de destino e selecione **[!UICONTROL Salvar]**.
    ![Selecione os rótulos de acesso no que devem se aplicar ao fluxo de dados de destino.](/help/access-control/images/olac/view-access-labels.png)

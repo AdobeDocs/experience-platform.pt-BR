@@ -4,7 +4,7 @@ title: Explorar, verificar e processar conjuntos de dados do painel usando o ser
 type: Documentation
 description: Saiba como usar o Serviço de consulta para explorar e processar conjuntos de dados brutos que potencializam o perfil, o público-alvo e os painéis de destino no Experience Platform.
 exl-id: 0087dcab-d5fe-4a24-85f6-587e9ae74fb8
-source-git-commit: e0af1f0110ceb514a5b249c42a05bf780ea834c6
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '944'
 ht-degree: 1%
@@ -33,7 +33,7 @@ Você pode usar o [!DNL Query Service] para consultar conjuntos de dados brutos 
 >
 >Os conjuntos de dados gerados pelo sistema ficam ocultos por padrão. Por padrão, a guia [!UICONTROL Procurar] mostra apenas conjuntos de dados nos quais você assimilou dados.
 
-Para exibir conjuntos de dados gerados pelo sistema, selecione o ícone de filtro (![Um ícone de filtro.](./images/query/filter.png)) localizado à esquerda da barra de pesquisa.
+Para exibir conjuntos de dados gerados pelo sistema, selecione o ícone de filtro (![Um ícone de filtro.](/help/images/icons/filter.png)) localizado à esquerda da barra de pesquisa.
 
 ![A guia Procurar Conjuntos de Dados com o ícone de filtro realçado.](./images/query/filter-datasets.png)
 

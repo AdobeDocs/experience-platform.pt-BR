@@ -2,7 +2,7 @@
 title: Criar um filtro de datas
 description: Saiba como filtrar seus insights personalizados por data.
 exl-id: fa05d651-ea43-41f0-9b7d-f19c4a9ac256
-source-git-commit: 5bb954da7c1e05922a4e0f8d0bc7d3ab5c8e0e58
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '662'
 ht-degree: 0%
@@ -94,6 +94,6 @@ Depois de selecionar um intervalo de datas no painel, os insights que têm parâ
 
 ## Excluir um filtro de datas {#delete-date-filter}
 
-Para remover o filtro de datas, selecione o ícone de exclusão de filtro (![O ícone de exclusão de filtro.](../../../images/customizable-insights/delete-filter-icon.png)).
+Para remover o filtro de datas, selecione o ícone de exclusão de filtro (![O ícone de exclusão de filtro.](/help/images/icons/filter-delete.png)).
 
 ![Um painel personalizado com o ícone de exclusão de filtro realçado.](../../../images/customizable-insights/delete-date-filter.png)

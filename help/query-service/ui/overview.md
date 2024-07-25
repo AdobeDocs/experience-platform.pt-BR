@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guia da interface do usuário do Serviço de consulta
 description: O Serviço de consulta da Adobe Experience Platform fornece uma interface que pode ser usada para gravar e executar consultas, exibir consultas executadas anteriormente e acessar consultas salvas por usuários em sua organização.
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1132'
 ht-degree: 1%
@@ -81,7 +81,7 @@ A guia **[!UICONTROL Log]** fornece uma lista de consultas que foram executadas 
 
 >
 >
->Selecione o ícone de lápis (![Um ícone de lápis.](../images/ui/overview/edit-icon.png)) de qualquer linha do log de consultas para navegar até [!DNL Query Editor]. A consulta é pré-preenchida para edição conveniente.
+>Selecione o ícone de lápis (![Um ícone de lápis.](/help/images/icons/edit.png)) de qualquer linha do log de consultas para navegar até [!DNL Query Editor]. A consulta é pré-preenchida para edição conveniente.
 
 Consulte a [documentação dos logs de consulta](./query-logs.md) para obter mais informações sobre os arquivos de log gerados automaticamente por um evento de consulta.
 

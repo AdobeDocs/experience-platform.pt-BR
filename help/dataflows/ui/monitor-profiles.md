@@ -4,7 +4,7 @@ description: O Perfil do cliente em tempo real permite ter uma visão holística
 title: Monitorar fluxos de dados para perfis na interface
 type: Tutorial
 exl-id: 00b624b2-f6d1-4ef2-abf2-52cede89b684
-source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1076'
 ht-degree: 7%
@@ -63,7 +63,7 @@ As seguintes métricas estão disponíveis para essa visualização de painel:
 | **[!UICONTROL Total de fragmentos de perfil]** | O número total de registros gravados em [!DNL Profile], incluindo todos os fragmentos [!DNL Profile] existentes atualizados e os novos fragmentos [!DNL Profile] criados. |
 | **[!UICONTROL Total de fluxos de dados com falha]** | O número de execuções de fluxo de dados que falharam. |
 
-Você pode selecionar o ícone de filtro ![Ícone de filtro](../assets/ui/monitor-profiles/filter.png) ao lado do nome de origem para ver as informações de processamento do perfil para os fluxos de dados da origem selecionada.
+Você pode selecionar o ícone de filtro ![Ícone de filtro](/help/images/icons/filter.png) ao lado do nome de origem para ver as informações de processamento do perfil para os fluxos de dados da origem selecionada.
 
 ![O ícone de filtro está realçado. A seleção desse ícone permite exibir os fluxos de dados da origem selecionada.](../assets/ui/monitor-profiles/sources-filter.png)
 
@@ -86,7 +86,7 @@ As seguintes métricas estão disponíveis para essa visualização de painel:
 | **[!UICONTROL Total de execuções de fluxo com falha]** | O número de execuções de fluxo de dados que falharam. |
 | **[!UICONTROL Última atividade]** | O carimbo de data/hora no qual o fluxo de dados foi executado pela última vez. |
 
-Selecione o ícone de filtro ![filtro](../assets/ui/monitor-profiles/filter.png) ao lado da hora de início da execução do fluxo de dados para ver mais informações sobre sua execução do fluxo de dados [!DNL Profile].
+Selecione o ícone de filtro ![filtro](/help/images/icons/filter.png) ao lado da hora de início da execução do fluxo de dados para ver mais informações sobre sua execução do fluxo de dados [!DNL Profile].
 
 ![O ícone de filtro está realçado. Selecionar este ícone permite exibir detalhes sobre o fluxo de dados selecionado.](../assets/ui/monitor-profiles/dataflows-filter.png)
 

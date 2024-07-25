@@ -5,7 +5,7 @@ title: Serviço de consulta no Jupyter Notebook
 type: Tutorial
 description: O Adobe Experience Platform permite usar a Linguagem de consulta estruturada (SQL) no Data Science Workspace ao integrar o Serviço de consulta ao JupyterLab como um recurso padrão. Este tutorial demonstra exemplos de consultas SQL para casos de uso comuns para explorar, transformar e analisar dados do Adobe Analytics.
 exl-id: c5ac7d11-a3bd-4ef8-a650-9f496a8bbaa7
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: d1b571fe72208cf2f2ae339273f05cc38dda9845
 workflow-type: tm+mt
 source-wordcount: '822'
 ht-degree: 0%
@@ -98,7 +98,7 @@ Antes de iniciar este tutorial, você deve ter os seguintes pré-requisitos:
 
 Insira as seguintes consultas SQL em células individuais do bloco de anotações. Execute uma consulta selecionando em sua célula e, em seguida, o botão **[!UICONTROL reproduzir]**. Resultados de consulta bem-sucedidos ou logs de erro são exibidos abaixo da célula executada.
 
-Quando um bloco de anotações fica inativo por um longo período de tempo, a conexão entre o bloco de anotações e o [!DNL Query Service] pode ser interrompida. Nesses casos, reinicie o [!DNL JupyterLab] selecionando o **botão Reiniciar** ![botão Reiniciar](../images/jupyterlab/user-guide/restart_button.png), localizado no canto superior direito próximo ao botão liga/desliga.
+Quando um bloco de anotações fica inativo por um longo período de tempo, a conexão entre o bloco de anotações e o [!DNL Query Service] pode ser interrompida. Nesses casos, reinicie o [!DNL JupyterLab] selecionando o **botão Reiniciar** ![botão Reiniciar](/help/images/icons/restart.png), localizado no canto superior direito próximo ao botão liga/desliga.
 
 O kernel do notebook é redefinido, mas as células permanecerão, execute novamente todas as células para continuar de onde você parou.
 

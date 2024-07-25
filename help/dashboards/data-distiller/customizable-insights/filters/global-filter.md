@@ -2,7 +2,7 @@
 title: Criar um filtro global
 description: Saiba como filtrar seus insights de dados com um filtro aplicado globalmente e personalizado.
 exl-id: a0084039-8809-4883-9f68-c666dcac5881
-source-git-commit: 5bb954da7c1e05922a4e0f8d0bc7d3ab5c8e0e58
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '482'
 ht-degree: 0%
@@ -21,7 +21,7 @@ Para criar um filtro global, primeiro selecione **[!UICONTROL Adicionar filtro]*
 
 Você pode alterar rapidamente os insights fornecidos pelo SQL com filtros globais personalizados.
 
-A caixa de diálogo [!UICONTROL Criar um filtro global] é aberta. A criação de um filtro global segue o mesmo processo que a criação de um insight com SQL. Primeiro, selecione um banco de dados (modelo de dados de insights) para consultar, em seguida, insira seu SQL personalizado no Editor de Consultas e, finalmente, selecione o ícone de execução (![Um ícone de execução.](../../../images/customizable-insights/run-icon.png)).
+A caixa de diálogo [!UICONTROL Criar um filtro global] é aberta. A criação de um filtro global segue o mesmo processo que a criação de um insight com SQL. Primeiro, selecione um banco de dados (modelo de dados de insights) para consultar, em seguida, insira seu SQL personalizado no Editor de Consultas e, finalmente, selecione o ícone de execução (![Um ícone de execução.](/help/images/icons/play.png)).
 
 >[!IMPORTANT]
 >
@@ -57,6 +57,6 @@ Depois de criar o filtro global para o painel, o botão de alternância para ess
 
 ## Selecionar um filtro global {#select-global-filter}
 
-Para abrir a caixa de diálogo [!UICONTROL Filtros], que lista todos os filtros personalizados, selecione o ícone de filtro (![Um ícone de filtro.](../../../images/customizable-insights/filter.png)) à esquerda do seu painel. Em seguida, para aplicar os efeitos nos insights do painel, escolha uma opção no menu suspenso do filtro global e selecione **[!UICONTROL Aplicar]**.
+Para abrir a caixa de diálogo [!UICONTROL Filtros], que lista todos os filtros personalizados, selecione o ícone de filtro (![Um ícone de filtro.](/help/images/icons/filter.png)) à esquerda do seu painel. Em seguida, para aplicar os efeitos nos insights do painel, escolha uma opção no menu suspenso do filtro global e selecione **[!UICONTROL Aplicar]**.
 
 ![Um painel personalizado com a caixa de diálogo de filtro realçada.](../../../images/customizable-insights/custom-filters.png)

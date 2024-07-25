@@ -4,7 +4,7 @@ title: Atualizar contas de destino
 type: Tutorial
 description: Este tutorial lista as etapas para atualizar contas de destino na interface do usuário do Adobe Experience Platform
 exl-id: afb41878-4205-4c64-af4d-e2740f852785
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '504'
 ht-degree: 0%
@@ -33,11 +33,11 @@ Siga as etapas abaixo para atualizar os detalhes da conexão com os destinos exi
 
    ![Guia Contas](../assets/ui/update-accounts/accounts-tab.png)
 
-2. Selecione o ícone de filtro ![Ícone de filtro](../assets/ui/update-accounts/filter.png) na parte superior esquerda para iniciar o painel de classificação. O painel de classificação fornece uma lista de todos os seus destinos. É possível selecionar mais de um destino na lista para ver uma seleção filtrada de contas associadas aos destinos selecionados.
+2. Selecione o ícone de filtro ![Ícone de filtro](/help/images/icons/filter.png) na parte superior esquerda para iniciar o painel de classificação. O painel de classificação fornece uma lista de todos os seus destinos. É possível selecionar mais de um destino na lista para ver uma seleção filtrada de contas associadas aos destinos selecionados.
 
    ![Filtrar contas de destino](../assets/ui/update-accounts/filter-accounts.png)
 
-3. Selecione as reticências (`...`) ao lado do nome da conta que você deseja atualizar. Um painel pop-up é exibido, fornecendo opções para **[!UICONTROL Ativar públicos-alvo]**, **[!UICONTROL Editar detalhes]** e **[!UICONTROL Excluir]** a conta. Selecione o botão ![Editar detalhes](../assets/ui/workspace/pencil-icon.png) **[!UICONTROL Editar detalhes]** para editar as informações da conta.
+3. Selecione as reticências (`...`) ao lado do nome da conta que você deseja atualizar. Um painel pop-up é exibido, fornecendo opções para **[!UICONTROL Ativar públicos-alvo]**, **[!UICONTROL Editar detalhes]** e **[!UICONTROL Excluir]** a conta. Selecione o botão ![Editar detalhes](/help/images/icons/edit.png) **[!UICONTROL Editar detalhes]** para editar as informações da conta.
 
    ![Editar conta](../assets/ui/update-accounts/accounts-edit.png)
 

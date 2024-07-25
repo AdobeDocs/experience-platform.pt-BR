@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Criar e editar esquemas na interface
 description: Saiba mais sobre as noções básicas sobre como criar e editar esquemas na interface do usuário do Experience Platform.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 0f0842c1d14ce42453b09bf97e1f3690448f6e9a
+source-git-commit: 19f1f64434d655d3b19260460519018fc9c8e174
 workflow-type: tm+mt
-source-wordcount: '3732'
+source-wordcount: '3736'
 ht-degree: 2%
 
 ---
@@ -117,7 +117,7 @@ Marque a caixa de seleção ao lado do nome do grupo de campos que você deseja 
 
 >[!TIP]
 >
->Para qualquer grupo de campos listado, você pode passar o mouse ou focalizar o ícone de informações (![](../../images/ui/resources/schemas/info-icon.png)) para ver uma breve descrição do tipo de dados que o grupo de campos captura. Você também pode selecionar o ícone de visualização (![](../../images/ui/resources/schemas/preview-icon.png)) para exibir a estrutura dos campos que o grupo de campos fornece antes de decidir adicioná-lo ao esquema.
+>Para qualquer grupo de campos listado, você pode passar o mouse ou focalizar o ícone de informações (![ícone de informações](/help/images/icons/info.png)) para ver uma breve descrição do tipo de dados que o grupo de campos captura. Você também pode selecionar o ícone de visualização (![ícone de visualização](/help/images/icons/preview.png)) para exibir a estrutura dos campos fornecidos pelo grupo de campos antes de decidir adicioná-lo ao esquema.
 
 Depois de escolher os grupos de campos, selecione **[!UICONTROL Adicionar grupos de campos]** para adicioná-los ao esquema.
 
@@ -129,7 +129,7 @@ O [!DNL Schema Editor] reaparece com os campos fornecidos por grupos de campos r
 
 >[!NOTE]
 >
->No Editor de esquemas, classes e grupos de campos padrão (gerados por Adobe) são indicados com o ícone de cadeado (![Um ícone de cadeado.](../../images/ui/explore/padlock-icon.png). O cadeado é exibido no painel à esquerda, ao lado do nome da classe ou do grupo de campos, e também ao lado de qualquer campo no diagrama de esquema que faça parte de um recurso gerado pelo sistema.
+>No Editor de esquemas, classes e grupos de campos padrão (gerados por Adobe) são indicados com o ícone de cadeado (![Um ícone de cadeado.](/help/images/icons/lock-closed.png). O cadeado é exibido no painel à esquerda, ao lado do nome da classe ou do grupo de campos, e também ao lado de qualquer campo no diagrama de esquema que faça parte de um recurso gerado pelo sistema.
 >
 >![O Editor de Esquemas com o ícone de cadeado realçado](../../images/ui/explore/schema-editor-padlock-icon.png)
 
@@ -189,7 +189,7 @@ Em **[!UICONTROL Nome do campo]**, comece digitando o nome do campo que deseja a
 
 Embora alguns campos padrão compartilhem o mesmo nome, sua estrutura pode variar dependendo do grupo de campos de onde vêm. Se um campo padrão estiver aninhado em um objeto principal na estrutura do grupo de campos, o campo principal também será incluído no esquema se o campo secundário for adicionado.
 
-Selecione o ícone de visualização (![Ícone de visualização](../../images/ui/resources/schemas/preview-icon.png)) ao lado de um campo padrão para exibir a estrutura do grupo de campos e entender melhor como ele pode estar aninhado. Para adicionar o campo padrão ao esquema, selecione o ícone de adição (![ícone de adição](../../images/ui/resources/schemas/add-icon.png)).
+Selecione o ícone de visualização (![Ícone de visualização](/help/images/icons/preview.png)) ao lado de um campo padrão para exibir a estrutura do grupo de campos e entender melhor como ele pode estar aninhado. Para adicionar o campo padrão ao esquema, selecione o ícone de adição (![ícone de adição](/help/images/icons/add-circle.png)).
 
 ![Adicionar campo padrão](../../images/ui/resources/schemas/add-standard-field.png)
 

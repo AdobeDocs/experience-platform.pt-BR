@@ -5,7 +5,7 @@ solution: Experience Platform
 title: Atualizar detalhes da conta do Source Connection na interface do usuário
 type: Tutorial
 exl-id: de264bd4-fe3d-4622-9f24-f1612d8334c9
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '452'
 ht-degree: 1%
@@ -33,7 +33,7 @@ Faça logon na [Interface do usuário do Experience Platform](https://platform.a
 
 A página **[!UICONTROL Contas]** é exibida. Nesta página há uma lista de contas visualizáveis, incluindo informações sobre sua origem, nome de usuário, número de fluxos de dados e data de criação.
 
-Selecione o ícone de filtro ![filtro](../../images/tutorials/update/filter.png) na parte superior esquerda para iniciar o painel de classificação.
+Selecione o ícone de filtro ![filtro](/help/images/icons/filter.png) na parte superior esquerda para iniciar o painel de classificação.
 
 ![lista de contas](../../images/tutorials/update/accounts-list.png)
 

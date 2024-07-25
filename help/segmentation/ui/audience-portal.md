@@ -1,13 +1,13 @@
 ---
 title: Visão geral do Audience Portal
 description: Saiba como usar o Audience Portal para exibir, gerenciar e criar públicos no Adobe Experience Platform.
-source-git-commit: ca8f0c3df9581af7be37e242c9e300ef1b6ea814
+exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
+source-git-commit: d1fbfe5dd887059a6aab96566311cbd63c5b091f
 workflow-type: tm+mt
 source-wordcount: '3693'
 ht-degree: 3%
 
 ---
-
 
 # Visão geral do portal de público
 
@@ -90,7 +90,7 @@ O gráfico de pizza é exibido, mostrando um detalhamento dos públicos-alvo por
 
 ### Personalizar {#customize}
 
-Você pode adicionar outros campos ao Portal de público selecionando ![o ícone do atributo de filtro](../images/ui/audience-portal/filter-attribute.png). Esses campos adicionais incluem status do ciclo de vida, frequência de atualização, última atualização por, descrição, criado por e rótulos de acesso.
+Você pode adicionar outros campos ao Portal de público selecionando ![o ícone do atributo de filtro](/help/images/icons/column-settings.png). Esses campos adicionais incluem status do ciclo de vida, frequência de atualização, última atualização por, descrição, criado por e rótulos de acesso.
 
 | Campo | Descrição |
 | ----- | ----------- |
@@ -116,7 +116,7 @@ Se o detalhamento for selecionado, a exibição mostrará um gráfico de barras 
 | [!UICONTROL Existente] | A contagem de perfis que **permaneceram** no segmento nas últimas 24 horas desde a execução do último trabalho de segmento em lote. |
 | [!UICONTROL Saindo] | A contagem de perfis que **saiu** do segmento nas últimas 24 horas desde a execução do último trabalho de segmento em lote. |
 
-Após selecionar os campos que deseja exibir, você também pode redimensionar a largura das colunas exibidas. Você pode fazer isso arrastando a área entre as colunas ou selecionando o ![ícone de seta](../images/ui/audience-portal/arrow-icon.png) da coluna que deseja redimensionar, seguido de **[!UICONTROL Redimensionar coluna]**.
+Após selecionar os campos que deseja exibir, você também pode redimensionar a largura das colunas exibidas. Você pode fazer isso arrastando a área entre as colunas ou selecionando o ![ícone de seta](/help/images/icons/chevron-down.png) da coluna que deseja redimensionar, seguido de **[!UICONTROL Redimensionar coluna]**.
 
 ![O botão Redimensionar coluna está realçado.](../images/ui/audience-portal/browse-audience-resize-column.png)
 
@@ -177,7 +177,7 @@ Quando o público-alvo estiver em uma pasta, você poderá optar por exibir some
 
 Você também pode filtrar seus públicos com base em várias configurações.
 
-Para filtrar os públicos disponíveis, selecione o ![ícone de filtro](../images/ui/audience-portal/filter-icon.png).
+Para filtrar os públicos disponíveis, selecione o ![ícone de filtro](/help/images/icons/filter.png).
 
 ![A página Procurar públicos-alvo é exibida, com o ícone de filtro realçado.](../images/ui/audience-portal/browse-select-filter.png)
 

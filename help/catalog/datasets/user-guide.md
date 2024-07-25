@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guia da interface de conjuntos de dados
 description: Saiba como executar ações comuns ao trabalhar com conjuntos de dados na interface do usuário do Adobe Experience Platform.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '3080'
 ht-degree: 3%
@@ -161,11 +161,11 @@ A caixa de diálogo [!UICONTROL Mover] conjunto de dados para pasta é exibida. 
 
 >[!TIP]
 >
->Você também pode criar pastas diretamente na caixa de diálogo Mover conjunto de dados. Para criar uma pasta, selecione o ícone criar pasta (![O ícone criar pasta.](../images/datasets/user-guide/create-folder-icon.png)) na parte superior direita da caixa de diálogo.
+>Você também pode criar pastas diretamente na caixa de diálogo Mover conjunto de dados. Para criar uma pasta, selecione o ícone criar pasta (![O ícone criar pasta.](/help/images/icons/folder-add.png)) na parte superior direita da caixa de diálogo.
 >
 >![A caixa de diálogo [!UICONTROL Mover] do conjunto de dados com o ícone de criação de pasta realçado.](/help/catalog/images/datasets/user-guide/create-folder.png)
 
-Quando o conjunto de dados estiver em uma pasta, você poderá optar por exibir somente os conjuntos de dados que pertencem a uma pasta específica. Para abrir a estrutura de pastas, selecione o ícone mostrar pastas (![O ícone mostrar pastas](../images/datasets/user-guide/show-folders-icon.png)). Em seguida, selecione a pasta escolhida para ver todos os conjuntos de dados associados.
+Quando o conjunto de dados estiver em uma pasta, você poderá optar por exibir somente os conjuntos de dados que pertencem a uma pasta específica. Para abrir a estrutura de pastas, selecione o ícone mostrar pastas (![O ícone mostrar pastas](/help/images/icons/rail-left.png)). Em seguida, selecione a pasta escolhida para ver todos os conjuntos de dados associados.
 
 ![Os painéis [!UICONTROL Conjuntos de Dados] com a estrutura de pastas dos conjuntos de dados exibida, o ícone mostrar pastas e uma pasta selecionada realçada.](../images/datasets/user-guide/folder-structure.png)
 
@@ -197,7 +197,7 @@ Você pode excluir dados de perfil associados a um conjunto de dados do armazena
 
 ## Pesquisar e filtrar conjuntos de dados {#search-and-filter}
 
-Para pesquisar ou filtrar a lista de conjuntos de dados disponíveis, selecione o ícone de filtro (![O ícone de filtro.](../images/datasets/user-guide/icon.png)) na parte superior esquerda do espaço de trabalho. Um conjunto de opções de filtro no painel esquerdo é exibido. Há vários métodos para filtrar seus conjuntos de dados disponíveis. Estes incluem: [[!UICONTROL Mostrar Conjuntos de Dados do Sistema]](#show-system-datasets), [[!UICONTROL Incluídos no perfil]](#filter-profile-enabled-datasets), [[!UICONTROL Marcas]](#filter-by-tag), [[!UICONTROL Data de criação]](#filter-by-creation-date), [[!UICONTROL Data de modificação], [!UICONTROL Criado por]](#filter-by-creation-date) e [[!UICONTROL Esquema]](#filter-by-schema).
+Para pesquisar ou filtrar a lista de conjuntos de dados disponíveis, selecione o ícone de filtro (![O ícone de filtro.](/help/images/icons/filter.png)) na parte superior esquerda do espaço de trabalho. Um conjunto de opções de filtro no painel esquerdo é exibido. Há vários métodos para filtrar seus conjuntos de dados disponíveis. Estes incluem: [[!UICONTROL Mostrar Conjuntos de Dados do Sistema]](#show-system-datasets), [[!UICONTROL Incluídos no perfil]](#filter-profile-enabled-datasets), [[!UICONTROL Marcas]](#filter-by-tag), [[!UICONTROL Data de criação]](#filter-by-creation-date), [[!UICONTROL Data de modificação], [!UICONTROL Criado por]](#filter-by-creation-date) e [[!UICONTROL Esquema]](#filter-by-schema).
 
 A lista de filtros aplicados é exibida acima dos resultados filtrados.
 

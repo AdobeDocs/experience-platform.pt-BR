@@ -3,7 +3,7 @@ description: Saiba como usar modelos na interface do usuário do Adobe Experienc
 title: Criar um fluxo de dados de origem usando modelos na interface
 badge1: "Beta"
 exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
-source-git-commit: 4a9cae014a8eba20f93023913f3a73103b16d944
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '2241'
 ht-degree: 10%
@@ -174,7 +174,7 @@ A tabela a seguir descreve os modelos B2C disponíveis para a origem [!DNL Micro
 
 +++
 
-Dependendo do tipo de negócio selecionado, uma lista de modelos é exibida. Selecione o ícone de visualização ![ícone de visualização](../../images/tutorials/templates/preview-icon.png) ao lado do nome de um modelo para visualizar dados de amostra do modelo.
+Dependendo do tipo de negócio selecionado, uma lista de modelos é exibida. Selecione o ícone de visualização ![ícone de visualização](/help/images/icons/preview.png) ao lado do nome de um modelo para visualizar dados de amostra do modelo.
 
 ![Uma lista de modelos com o ícone de visualização realçado.](../../images/tutorials/templates/templates.png)
 

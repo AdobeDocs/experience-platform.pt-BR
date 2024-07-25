@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Definir campos de identidade na interface
 description: Saiba como definir um campo de identidade na interface do usuário do Experience Platform.
 exl-id: 11a53345-4c3f-4537-b3eb-ee7a5952df2a
-source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
+source-git-commit: d1b571fe72208cf2f2ae339273f05cc38dda9845
 workflow-type: tm+mt
 source-wordcount: '609'
 ht-degree: 6%
@@ -46,7 +46,7 @@ Quando terminar, selecione **[!UICONTROL Aplicar]** para aplicar a alteração a
 
 ![](../../images/ui/fields/special/identity-config.png)
 
-A tela é atualizada para refletir as alterações, com o campo selecionado ganhando um símbolo de impressão digital (![](../../images/ui/fields/special/identity-symbol.png)) para designá-lo como uma identidade. No painel à esquerda, o campo de identidade agora está listado sob o nome da classe ou do grupo de campos de esquema que fornece o campo ao esquema.
+A tela é atualizada para refletir as alterações, com o campo selecionado ganhando um símbolo de impressão digital (![](/help/images/icons/identity-service.png)) para designá-lo como uma identidade. No painel à esquerda, o campo de identidade agora está listado sob o nome da classe ou do grupo de campos de esquema que fornece o campo ao esquema.
 
 Se o campo também foi definido como a identidade primária, ele também será listado em **[!UICONTROL Campos obrigatórios]** no painel esquerdo. Se o campo de identidade estiver aninhado na estrutura do esquema, todos os campos principais também serão listados conforme necessário.
 

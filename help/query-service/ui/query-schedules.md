@@ -2,7 +2,7 @@
 title: Agendamentos de consulta
 description: Saiba como automatizar execuções de consultas programadas, excluir ou desativar um agendamento de consultas e utilizar as opções de agendamento disponíveis por meio da interface do usuário do Adobe Experience Platform.
 exl-id: 984d5ddd-16e8-4a86-80e4-40f51f37a975
-source-git-commit: 0b056da8457010ce36efc48e3dd91f280a9b15c5
+source-git-commit: 19f1f64434d655d3b19260460519018fc9c8e174
 workflow-type: tm+mt
 source-wordcount: '1848'
 ht-degree: 0%
@@ -75,7 +75,7 @@ Selecione **[!UICONTROL Criar e anexar ao novo conjunto de dados]** para criar u
 
 ![O painel Detalhes do agendamento com detalhes do conjunto de dados e as opções [!UICONTROL Criar e anexar em novo conjunto de dados] destacadas.](../images/ui/query-schedules/dataset-details-create-and-append.png)
 
-Como alternativa, selecione **[!UICONTROL Anexar ao conjunto de dados existente]** seguido pelo ícone do conjunto de dados (![O ícone do conjunto de dados.](../images/ui/query-schedules/dataset-icon.png)).
+Como alternativa, selecione **[!UICONTROL Anexar ao conjunto de dados existente]** seguido pelo ícone do conjunto de dados (![O ícone do conjunto de dados.](/help/images/icons/database.png)).
 
 ![O painel Detalhes do agendamento com detalhes do conjunto de dados e Anexar ao conjunto de dados existente foi realçado.](../images/ui/query-schedules/dataset-details-existing.png)
 

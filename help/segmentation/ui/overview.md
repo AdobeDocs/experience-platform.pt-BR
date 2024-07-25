@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Guia da interface do usuário do Serviço de segmentação
 description: Saiba como criar e gerenciar públicos e definições de segmento na interface do usuário do Adobe Experience Platform.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: acfe91144175e136955ffd9f0cdae2c351217c16
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '959'
 ht-degree: 1%
@@ -69,7 +69,7 @@ Ao lado de cada público há um ícone de reticências. Selecionar essa opção 
 | Gerenciar acesso | Gerencia os rótulos de acesso que pertencem ao público. Para obter mais informações sobre rótulos de acesso, leia a documentação em [gerenciando rótulos](../../access-control/abac/ui/labels.md). |
 | Excluir | Exclui o público selecionado. Públicos-alvo que são usados em destinos downstream ou que são dependentes de outros públicos-alvo **não podem** ser excluídos. Para obter mais informações sobre exclusão de público, leia as [perguntas frequentes sobre segmentação](../faq.md#lifecycle-states). |
 
-Você pode selecionar o ícone ![Personalizar tabela](../images/ui/overview/customize-table.png) para alterar os campos exibidos.
+Você pode selecionar o ícone ![Personalizar tabela](/help/images/icons/column-settings.png) para alterar os campos exibidos.
 
 ![O botão personalizar tabela está realçado. Selecionar esse botão permite personalizar os campos exibidos na página de composição de Públicos-alvo.](../images/ui/overview/compositions-select-customize-table.png)
 

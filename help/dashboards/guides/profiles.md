@@ -4,7 +4,7 @@ title: Painel de perfis
 description: A Adobe Experience Platform fornece um painel por meio do qual você pode visualizar informações importantes sobre os dados do Perfil do cliente em tempo real da sua organização.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '4997'
 ht-degree: 9%
@@ -470,7 +470,7 @@ Selecione **[!UICONTROL Exibir mais]** para abrir uma caixa de diálogo de tela 
 
 ![O widget Relatório de sobreposição de público-alvo com Exibição mais realçado.](../images/profiles/profiles-audience-overlap-report.png)
 
-A caixa de diálogo [!UICONTROL Relatório de sobreposição de público-alvo] é exibida. Essa caixa de diálogo pode conter até 50 linhas de análises de sobreposição de público-alvo divididas em seis colunas. Para remover ou adicionar colunas da tabela, selecione o ícone de configurações (![O ícone de configurações.](../images/profiles/settings-icon.png)).
+A caixa de diálogo [!UICONTROL Relatório de sobreposição de público-alvo] é exibida. Essa caixa de diálogo pode conter até 50 linhas de análises de sobreposição de público-alvo divididas em seis colunas. Para remover ou adicionar colunas da tabela, selecione o ícone de configurações (![O ícone de configurações.](/help/images/icons/settings.png)).
 
 ![A caixa de diálogo do relatório de sobreposição de público-alvo.](../images/profiles/profiles-audience-overlap-report-dialog.png)
 

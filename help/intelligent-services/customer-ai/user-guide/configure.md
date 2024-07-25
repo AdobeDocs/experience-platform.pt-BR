@@ -5,7 +5,7 @@ feature: Customer AI
 title: Configurar uma instância da IA do cliente
 description: Os Serviços de IA/ML fornecem IA do cliente como um serviço da Adobe Sensei simples de usar que pode ser configurado para casos de uso diferentes. As seções a seguir fornecem etapas para configurar uma instância da IA do cliente.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '2827'
 ht-degree: 0%
@@ -72,7 +72,7 @@ Depois de selecionar os conjuntos de dados que deseja usar, clique no botão **[
 
 ![Selecionar conjuntos de dados](../images/user-guide/select-datasets.png)
 
-Selecionar o ícone de informações ![ícone de informações](../images/user-guide/info-icon.png) ao lado do conjunto de dados abre o popover de visualização do conjunto de dados.
+Selecionar o ícone de informações ![ícone de informações](/help/images/icons/info.png) ao lado do conjunto de dados abre o popover de visualização do conjunto de dados.
 
 ![Selecionar e pesquisar pelo conjunto de dados](../images/user-guide/dataset-info.png)
 

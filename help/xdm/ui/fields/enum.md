@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Definir campos de enumeração e valores sugeridos na interface
 description: Saiba como definir enumerações e valores sugeridos para campos de sequência na interface do usuário do Experience Platform.
 exl-id: 67ec5382-31de-4f8d-9618-e8919bb5a472
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1256'
 ht-degree: 8%
@@ -40,7 +40,7 @@ Selecione **[!UICONTROL Enumerações e Valores Sugeridos]** e, em seguida, **[!
 
 Na coluna **[!UICONTROL Valor]**, você deve fornecer o valor exato ao qual deseja restringir o campo. Opcionalmente, você também pode fornecer um **[!UICONTROL Nome de Exibição]** amigável para a restrição, o que afeta como o valor será representado na segmentação.
 
-Continue a usar a **[!UICONTROL Linha de adição]** para adicionar as restrições desejadas e os rótulos opcionais à enumeração, ou selecione o ícone de exclusão (![Imagem do ícone de exclusão](../../images/ui/fields/enum/remove-icon.png)) ao lado de uma linha adicionada anteriormente para removê-lo. Quando terminar, selecione **[!UICONTROL Aplicar]** para aplicar as alterações ao esquema.
+Continue a usar a **[!UICONTROL Linha de adição]** para adicionar as restrições desejadas e os rótulos opcionais à enumeração, ou selecione o ícone de exclusão (![Imagem do ícone de exclusão](/help/images/icons/remove-circle.png)) ao lado de uma linha adicionada anteriormente para removê-lo. Quando terminar, selecione **[!UICONTROL Aplicar]** para aplicar as alterações ao esquema.
 
 ![Imagem mostrando os valores de enumeração e os nomes para exibição preenchidos para o campo de cadeia na interface do usuário](../../images/ui/fields/enum/enum-confirm.png)
 
@@ -52,7 +52,7 @@ Selecione **[!UICONTROL Enumerações e Valores Sugeridos]** e **[!UICONTROL Val
 
 ![Imagem mostrando a opção Valores Sugeridos selecionada na interface](../../images/ui/fields/enum/suggested-add-row.png)
 
-Na coluna **[!UICONTROL Nome para Exibição]**, forneça um nome amigável para o valor como você deseja que ele seja exibido na interface do usuário de Segmentação. Para adicionar mais valores sugeridos, selecione **[!UICONTROL Adicionar linha]** novamente e repita o processo conforme necessário. Para remover uma linha adicionada anteriormente, selecione ![o ícone excluir](../../images/ui/fields/enum/remove-icon.png) ao lado da linha em questão.
+Na coluna **[!UICONTROL Nome para Exibição]**, forneça um nome amigável para o valor como você deseja que ele seja exibido na interface do usuário de Segmentação. Para adicionar mais valores sugeridos, selecione **[!UICONTROL Adicionar linha]** novamente e repita o processo conforme necessário. Para remover uma linha adicionada anteriormente, selecione ![o ícone excluir](/help/images/icons/remove-circle.png) ao lado da linha em questão.
 
 Quando terminar, selecione **[!UICONTROL Aplicar]** para aplicar as alterações ao esquema.
 
@@ -68,7 +68,7 @@ Alguns campos de componentes XDM padrão contêm seus próprios valores sugerido
 
 ![Imagem mostrando os valores de enumeração e os nomes para exibição preenchidos para o campo de cadeia na interface do usuário](../../images/ui/fields/enum/suggested-standard.png)
 
-Para adicionar novos valores sugeridos para um campo padrão, selecione **[!UICONTROL Adicionar linha]**. Para remover um valor sugerido que foi adicionado anteriormente por sua organização, selecione ![o ícone excluir](../../images/ui/fields/enum/remove-icon.png) ao lado da linha em questão.
+Para adicionar novos valores sugeridos para um campo padrão, selecione **[!UICONTROL Adicionar linha]**. Para remover um valor sugerido que foi adicionado anteriormente por sua organização, selecione ![o ícone excluir](/help/images/icons/remove-circle.png) ao lado da linha em questão.
 
 ![Imagem mostrando os valores de enumeração e os nomes para exibição preenchidos para o campo de cadeia na interface do usuário](../../images/ui/fields/enum/suggested-standard-add.png)
 

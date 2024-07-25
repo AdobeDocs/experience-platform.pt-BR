@@ -4,7 +4,7 @@ title: Painel de Uso da Licença
 description: A Adobe Experience Platform fornece um painel por meio do qual você pode visualizar informações importantes sobre o uso de licença da sua organização.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: b6811d447f76a671adc98bddef6e760c8be8cd9b
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '2103'
 ht-degree: 7%
@@ -101,7 +101,7 @@ Para ver **uma métrica de uso específica de uma sandbox específica**, navegue
 
 ![A guia Detalhes do painel de uso da Licença.](../images/license-usage/details-tab.png)
 
-Nesta exibição, você pode selecionar ![O ícone Inspecionar.](../images/license-usage/inspect-icon.png) ao lado de um nome de sandbox para exibir a visualização dessa métrica. Uma caixa de diálogo é aberta com uma visualização para essa métrica.
+Nesta exibição, você pode selecionar ![O ícone Inspecionar.](/help/images/icons/inspect.png) ao lado de um nome de sandbox para exibir a visualização dessa métrica. Uma caixa de diálogo é aberta com uma visualização para essa métrica.
 
 ### Visualizações {#visualizations}
 

@@ -4,7 +4,7 @@ title: Painel de públicos
 description: A Adobe Experience Platform fornece um painel por meio do qual você pode exibir informações importantes sobre os públicos-alvo criados por sua organização.
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: a8b5ed09e8e28075a3a4f37ad30f01c1cc389b9c
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '3132'
 ht-degree: 9%
@@ -235,7 +235,7 @@ Selecione **[!UICONTROL Exibir mais]** para abrir uma caixa de diálogo de tela 
 
 ![O widget Relatório de sobreposição de público-alvo com Exibição mais realçado.](../images/audiences/audience-overlap-report.png)
 
-A caixa de diálogo [!UICONTROL Relatório de sobreposição de público-alvo] é exibida. Essa caixa de diálogo pode conter até 50 linhas de análises de sobreposição de público-alvo divididas em seis colunas. Selecione o ícone de configurações (![O ícone de configurações.](../images/audiences/settings-icon.png)) para remover ou adicionar colunas da tabela.
+A caixa de diálogo [!UICONTROL Relatório de sobreposição de público-alvo] é exibida. Essa caixa de diálogo pode conter até 50 linhas de análises de sobreposição de público-alvo divididas em seis colunas. Selecione o ícone de configurações (![O ícone de configurações.](/help/images/icons/settings.png)) para remover ou adicionar colunas da tabela.
 
 ![A caixa de diálogo do relatório de sobreposição de público-alvo.](../images/audiences/audience-overlap-report-dialog.png)
 

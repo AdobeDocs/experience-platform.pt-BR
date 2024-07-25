@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Visão geral da interface do Experience Platform
 description: Adobe Experience Platform
 exl-id: 47f9a3fb-731d-4ade-8069-faaa18f224dc
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1795'
 ht-degree: 1%
@@ -75,17 +75,17 @@ Selecionar o alternador abre um menu suspenso de organizações às quais você 
 
 ### Alternar aplicativos
 
-O próximo item no lado direito da navegação superior é o **alternador de aplicativos**, representado pelo ícone ![alternador de aplicativos](./images/user-guide/app-switcher-icon.png). Ao selecionar esse ícone, você pode alternar entre aplicativos Adobe aos quais sua organização tem acesso, como Experience Platform, Analytics, Assets e outros.
+O próximo item no lado direito da navegação superior é o **alternador de aplicativos**, representado pelo ícone ![alternador de aplicativos](/help/images/icons/apps.png). Ao selecionar esse ícone, você pode alternar entre aplicativos Adobe aos quais sua organização tem acesso, como Experience Platform, Analytics, Assets e outros.
 
 ### Ajuda
 
-À direita do alternador de aplicativos está o **menu Ajuda e Suporte**, representado pelo ícone ![ponto de interrogação/ajuda](./images/user-guide/help-icon.png). Ao selecionar esse ícone, um menu pop-over é exibido contendo vários recursos de ajuda e suporte. A guia **[!UICONTROL Ajuda]** mostra uma lista de documentações relevantes para a página em que você está no momento. A guia **[!UICONTROL Suporte]** permite criar um tíquete de suporte com a equipe de suporte do Adobe. A guia **[!UICONTROL Feedback]** permite enviar comentários sobre a Platform para o Adobe.
+À direita do alternador de aplicativos está o **menu Ajuda e Suporte**, representado pelo ícone ![ponto de interrogação/ajuda](/help/images/icons/help.png). Ao selecionar esse ícone, um menu pop-over é exibido contendo vários recursos de ajuda e suporte. A guia **[!UICONTROL Ajuda]** mostra uma lista de documentações relevantes para a página em que você está no momento. A guia **[!UICONTROL Suporte]** permite criar um tíquete de suporte com a equipe de suporte do Adobe. A guia **[!UICONTROL Feedback]** permite enviar comentários sobre a Platform para o Adobe.
 
 ![](images/user-guide/homepage-help-clicked.png)
 
 ### Notificações e anúncios
 
-Na **seção de notificações**, que é representada pelo ícone ![sino/Notificações e Anúncios](images/user-guide/notification-icon.png). A guia **[!UICONTROL Notificações]** mostra informações importantes sobre o produto e outras atualizações relevantes, enquanto a guia **[!UICONTROL Avisos]** mostra informações sobre a manutenção do serviço.
+Na **seção de notificações**, que é representada pelo ícone ![sino/Notificações e Anúncios](/help/images/icons/bell.png). A guia **[!UICONTROL Notificações]** mostra informações importantes sobre o produto e outras atualizações relevantes, enquanto a guia **[!UICONTROL Avisos]** mostra informações sobre a manutenção do serviço.
 
 ### Perfil de usuário
 

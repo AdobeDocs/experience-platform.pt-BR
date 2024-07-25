@@ -4,7 +4,7 @@ description: O serviço de identidade da Adobe Experience Platform fornece uma v
 title: Monitorar fluxos de dados para identidades na interface
 type: Tutorial
 exl-id: 735b0e52-74f6-47fe-98c6-e12a633b6f57
-source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1151'
 ht-degree: 9%
@@ -62,7 +62,7 @@ As seguintes métricas estão disponíveis para essa visualização de painel:
 | **[!UICONTROL Gráficos atualizados]** | O número de gráficos de identidade existentes atualizados com novas bordas. |
 | **[!UICONTROL Total de fluxos de dados com falha]** | O número de execuções de fluxo de dados que falharam. |
 
-Você pode selecionar o ícone de filtro ![Ícone de filtro](../assets/ui/monitor-identities/filter.png) ao lado do nome de origem para ver as informações de processamento de identidade dos fluxos de dados da origem selecionada.
+Você pode selecionar o ícone de filtro ![Ícone de filtro](/help/images/icons/filter.png) ao lado do nome de origem para ver as informações de processamento de identidade dos fluxos de dados da origem selecionada.
 
 ![O ícone de filtro está realçado. A seleção desse ícone permite exibir os fluxos de dados da origem selecionada.](../assets/ui/monitor-identities/sources-filter.png)
 
@@ -87,7 +87,7 @@ As seguintes métricas estão disponíveis para essa visualização de painel:
 | **[!UICONTROL Gráficos atualizados]** | O número de gráficos de identidade existentes atualizados com novas bordas. |
 | **[!UICONTROL Total de fluxos de dados com falha]** | O número de execuções de fluxo de dados que falharam. |
 
-Selecione o ícone de filtro ![filtro](../assets/ui/monitor-identities/filter.png) ao lado da hora de início da execução do fluxo de dados para ver mais informações sobre sua execução do fluxo de dados [!DNL Identity].
+Selecione o ícone de filtro ![filtro](/help/images/icons/filter.png) ao lado da hora de início da execução do fluxo de dados para ver mais informações sobre sua execução do fluxo de dados [!DNL Identity].
 
 ![O ícone de filtro está realçado. Selecionar este ícone permite exibir detalhes sobre o fluxo de dados selecionado.](../assets/ui/monitor-identities/dataflows-filter.png)
 

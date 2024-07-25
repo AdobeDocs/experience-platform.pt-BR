@@ -2,7 +2,7 @@
 title: Guia da interface de atributos computados
 description: Saiba como criar, exibir e atualizar atributos computados usando a interface do usuário do Adobe Experience Platform.
 exl-id: bc621167-6dba-473e-90e4-aac7ceb6579a
-source-git-commit: 762a7fc7dd00657e4e710eb763c5bb63b210593a
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1576'
 ht-degree: 6%
@@ -32,7 +32,7 @@ Na interface do usuário do Experience Platform, selecione **[!UICONTROL Perfis]
 
 ![A seção [!UICONTROL Perfil] e as guias [!UICONTROL Atributos computados] estão destacadas, mostrando aos usuários como acessar a página de navegação de atributos computados.](./images/ui/browse.png)
 
-Para selecionar quais campos estão visíveis, você pode selecionar ![o ícone de configuração de colunas](./images/ui/configure-icon.png) para adicionar ou remover os campos que deseja exibir.
+Para selecionar quais campos estão visíveis, você pode selecionar ![o ícone de configuração de colunas](/help/images/icons/column-settings.png) para adicionar ou remover os campos que deseja exibir.
 
 | Campo | Descrição |
 | ----- | ----------- |
@@ -47,7 +47,7 @@ Para selecionar quais campos estão visíveis, você pode selecionar ![o ícone 
 | [!UICONTROL Criado] | Um carimbo de data e hora que mostra a data e a hora em que o atributo calculado foi criado. |
 | [!UICONTROL Última modificação] | Um carimbo de data e hora que mostra a data e a hora em que o atributo calculado foi modificado pela última vez. |
 
-Você também pode filtrar os atributos calculados exibidos com base no status do ciclo de vida. Selecione o ícone de ![funil](./images/ui/filter-icon.png).
+Você também pode filtrar os atributos calculados exibidos com base no status do ciclo de vida. Selecione o ícone de ![funil](/help/images/icons/filter.png).
 
 ![O ícone de filtro está realçado.](./images/ui/select-filter.png)
 

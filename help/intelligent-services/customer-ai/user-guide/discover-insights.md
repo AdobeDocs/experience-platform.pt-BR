@@ -5,7 +5,7 @@ feature: Customer AI
 title: Descubra insights com a IA do cliente
 description: Este documento serve como um guia para interagir com insights da instância do serviço na interface do usuário da IA do cliente dos Serviços inteligentes.
 exl-id: 8aaae963-4029-471e-be9b-814147a5f160
-source-git-commit: 07a110f6d293abff38804b939014e28f308e3b30
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '2098'
 ht-degree: 1%
@@ -180,7 +180,7 @@ Passar o mouse sobre as linhas exibe a data e a taxa real/esperada desse dia nes
 
 ![Exemplo de bucket](../images/insights/churn_tab.png)
 
-Você pode filtrar o período para as taxas esperadas e reais que estão sendo exibidas. Selecione o **ícone de calendário** ![ícone](../images/insights/calendar_icon.png)e selecione um novo intervalo de datas. Os resultados em cada um dos intervalos são atualizados para exibir dentro do novo intervalo de datas.
+Você pode filtrar o período para as taxas esperadas e reais que estão sendo exibidas. Selecione o **ícone de calendário** ![ícone](/help/images/icons/calendar.png)e selecione um novo intervalo de datas. Os resultados em cada um dos intervalos são atualizados para exibir dentro do novo intervalo de datas.
 
 ![Seletor de datas](../images/insights/date_selector.png)
 

@@ -2,7 +2,7 @@
 title: Workflows baseados em campo no Editor de esquemas
 description: Saiba como adicionar campos individualmente de grupos de campos existentes aos esquemas do modelo de dados de experiência (XDM).
 exl-id: 0499ff30-a602-419b-b9d3-2defdd4354a7
-source-git-commit: 19e0a26958ec57ccbc614be53b5aaacce7ce9450
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1301'
 ht-degree: 0%
@@ -57,7 +57,7 @@ Em **[!UICONTROL Nome do campo]**, comece digitando o nome do campo que deseja a
 
 Embora alguns campos padrão compartilhem o mesmo nome, sua estrutura pode variar dependendo do grupo de campos de onde vêm. Se um campo padrão estiver aninhado em um objeto principal na estrutura do grupo de campos, o campo principal também será incluído no esquema se o campo secundário for adicionado.
 
-Selecione o ícone de visualização (![Ícone de visualização](../images/ui/field-based-workflows/preview-icon.png)) ao lado de um campo padrão para exibir a estrutura do grupo de campos e entender melhor como ele pode estar aninhado. Para adicionar o campo padrão ao esquema, selecione o ícone de adição (![ícone de adição](../images/ui/field-based-workflows/add-icon.png)).
+Selecione o ícone de visualização (![Ícone de visualização](/help/images/icons/preview.png)) ao lado de um campo padrão para exibir a estrutura do grupo de campos e entender melhor como ele pode estar aninhado. Para adicionar o campo padrão ao esquema, selecione o ícone de adição (![ícone de adição](/help/images/icons/add-circle.png)).
 
 ![O ícone de adição foi realçado em um item dos campos padrão sugeridos.](../images/ui/field-based-workflows/add-standard-field.png)
 

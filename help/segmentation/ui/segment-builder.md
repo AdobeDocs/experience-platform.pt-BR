@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Guia da interface do construtor de segmentos
 description: O Construtor de segmentos na interface do usuário do Adobe Experience Platform fornece um espaço de trabalho avançado que permite a interação com elementos de dados de perfil. O espaço de trabalho fornece controles intuitivos para criar e editar regras, como arrastar e soltar blocos usados para representar propriedades de dados.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 305aa7f44cd64d9a0ae704fe9aa01d2d1c536ade
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '3743'
 ht-degree: 6%
@@ -141,7 +141,7 @@ Se selecionar um valor desta lista de enumerações, o valor será contornado co
 
 ![Um aviso que é exibido se você estiver inserindo um valor que não faz parte da lista de enumerações.](../images/ui/segment-builder/enum-warning.png)
 
-Se estiver criando vários valores, é possível adicionar todos eles de uma só vez usando o upload em massa. Selecione o ![ícone de adição](../images/ui/segment-builder/plus-icon.png) para mostrar o popover **[!UICONTROL Adicionar valores em massa]**.
+Se estiver criando vários valores, é possível adicionar todos eles de uma só vez usando o upload em massa. Selecione o ![ícone de adição](/help/images/icons/add-circle.png) para mostrar o popover **[!UICONTROL Adicionar valores em massa]**.
 
 ![O ícone de adição é realçado, mostrando o botão que você pode selecionar para acessar o popover de carregamento em massa.](../images/ui/segment-builder/add-bulk-values.png)
 
@@ -287,7 +287,7 @@ A seção **[!UICONTROL Propriedades de público-alvo]** também é o local onde
 >
 >Mais informações sobre a geração de estimativas para definições de segmento podem ser encontradas na [seção de geração de estimativa](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) do tutorial de criação de definição de segmento.
 
-Você também pode selecionar seu método de avaliação. Se você souber qual método de avaliação deseja usar, poderá selecionar o método de avaliação desejado usando a lista suspensa. Se quiser saber para quais tipos de avaliação essa definição de segmento se qualifica, você pode selecionar o ícone de navegação ![ícone de pasta com uma lupa](../images/ui/segment-builder/segment-evaluation-select-icon.png) para ver uma lista dos métodos de avaliação de definição de segmento disponíveis.
+Você também pode selecionar seu método de avaliação. Se você souber qual método de avaliação deseja usar, poderá selecionar o método de avaliação desejado usando a lista suspensa. Se quiser saber para quais tipos de avaliação essa definição de segmento se qualifica, você pode selecionar o ícone de navegação ![ícone de pasta com uma lupa](/help/images/icons/folder-search.png) para ver uma lista dos métodos de avaliação de definição de segmento disponíveis.
 
 O popover [!UICONTROL Qualificação para o método de avaliação] é exibido. Esse popover exibe os métodos de avaliação disponíveis, que são batch, streaming e edge. O popover mostra quais métodos de avaliação são elegíveis e inelegíveis. Dependendo dos parâmetros usados na definição do segmento, ele pode não se qualificar para determinados métodos de avaliação. Para obter mais informações sobre os requisitos de cada método de avaliação, leia as visões gerais da [segmentação de transmissão](./streaming-segmentation.md#query-types) ou da [segmentação de borda](./edge-segmentation.md#query-types).
 

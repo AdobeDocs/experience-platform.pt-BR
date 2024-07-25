@@ -2,7 +2,7 @@
 title: Mapear um arquivo CSV para um esquema XDM usando o Recommendations gerado por IA
 description: Este tutorial aborda como mapear um arquivo CSV para um esquema XDM usando recomendações geradas por IA.
 exl-id: 1daedf0b-5a25-4ca5-ae5d-e9ee1eae9e4d
-source-git-commit: 6632086641004c2b788a28cbc47ac6d8bd4eace3
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1100'
 ht-degree: 1%
@@ -90,7 +90,7 @@ Os campos CSV são mapeados automaticamente para grupos de campos XDM existentes
 
 ![O botão [!UICONTROL Editar] que está sendo selecionado ao lado da árvore de esquemas.](../../images/tutorials/map-csv-recommendations/edit-schema-structure.png)
 
-Uma caixa de diálogo é exibida, permitindo editar o nome de exibição, o tipo de dados e o grupo de campos de qualquer campo no mapeamento. Selecione o ícone de edição (![Ícone de edição](../../images/tutorials/map-csv-recommendations/edit-icon.png)) ao lado de um campo de origem para editar seus detalhes na coluna direita antes de selecionar **[!UICONTROL Aplicar]**.
+Uma caixa de diálogo é exibida, permitindo editar o nome de exibição, o tipo de dados e o grupo de campos de qualquer campo no mapeamento. Selecione o ícone de edição (![Ícone de edição](/help/images/icons/edit.png)) ao lado de um campo de origem para editar seus detalhes na coluna direita antes de selecionar **[!UICONTROL Aplicar]**.
 
 ![O grupo de campos recomendado para um campo de origem que está sendo alterado.](../../images/tutorials/map-csv-recommendations/select-schema-field.png)
 

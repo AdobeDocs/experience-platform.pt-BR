@@ -2,7 +2,7 @@
 title: Visualizador de gráfico de identidade
 description: Um gráfico de identidade é um mapa dos relacionamentos entre identidades diferentes para um cliente específico, fornecendo uma representação visual de como o cliente interage com a sua marca em diferentes canais.
 exl-id: ccd5f8d8-595b-4636-9191-553214e426bd
-source-git-commit: 3fe94be9f50d64fc893b16555ab9373604b62e59
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1402'
 ht-degree: 6%
@@ -46,7 +46,7 @@ Para exibir um gráfico de identidade, forneça um namespace de identidade e seu
 
 >[!TIP]
 >
->Selecione o ícone de tabela ![ícone de tabela](../images/identity-graph-viewer/table-icon.png) para ver um painel com uma lista de todos os namespaces de identidade disponíveis em sua organização. Você pode usar qualquer um dos namespaces de identidade, desde que tenha um valor de identidade válido conectado a eles. Para obter mais informações, leia o [guia de namespace de identidade](./namespaces.md).
+>Selecione o ícone de tabela ![ícone de tabela](/help/images/icons/table.png) para ver um painel com uma lista de todos os namespaces de identidade disponíveis em sua organização. Você pode usar qualquer um dos namespaces de identidade, desde que tenha um valor de identidade válido conectado a eles. Para obter mais informações, leia o [guia de namespace de identidade](./namespaces.md).
 
 ![Um namespace de identidade e seu valor correspondente, fornecidos na tela de pesquisa do Gráfico de identidade.](../images/graph-viewer/namespace-and-value.png)
 

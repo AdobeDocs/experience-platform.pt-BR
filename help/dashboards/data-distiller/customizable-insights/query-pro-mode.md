@@ -2,7 +2,7 @@
 title: Modo Query Pro
 description: Saiba como usar consultas SQL na interface do usuário do Adobe Experience Platform para gerar gráficos para seus painéis personalizados.
 exl-id: 15c664c4-8546-4e04-b81d-c78bf83500d3
-source-git-commit: 5bb954da7c1e05922a4e0f8d0bc7d3ab5c8e0e58
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1060'
 ht-degree: 1%
@@ -35,7 +35,7 @@ Para incluir [filtros globais](./filters/global-filter.md) ou [filtros de data](
 >
 >Se quiser usar um filtro global, você deve colocar um parâmetro de consulta em seu SQL e, em seguida, vincular esse parâmetro de consulta ao filtro global no compositor de widgets. Na captura de tela abaixo, `CONSENT_VALUE_FILTER` é usado no SQL como um parâmetro de consulta para um filtro global. Consulte a [documentação do filtro global](./filters/global-filter.md#enable-global-filter) para obter mais informações sobre como fazer isso.
 
-Para executar a consulta, selecione o ícone executar (![O ícone executar.](../../images/customizable-insights/run-icon.png)). O Editor de consultas exibe a guia resultados. Em seguida, para confirmar sua configuração e abrir o widget composer, selecione **[!UICONTROL Selecionar]**.
+Para executar a consulta, selecione o ícone executar (![O ícone executar.](/help/images/icons/play.png)). O Editor de consultas exibe a guia resultados. Em seguida, para confirmar sua configuração e abrir o widget composer, selecione **[!UICONTROL Selecionar]**.
 
 >[!TIP]
 >
@@ -45,7 +45,7 @@ Para executar a consulta, selecione o ícone executar (![O ícone executar.](../
 
 ## Preencher widget {#populate-widget}
 
-O widget composer agora é preenchido com as colunas do SQL executado. O tipo de painel é indicado no canto superior esquerdo; neste caso, é [!UICONTROL Entrada de SQL Manual]. Selecione o ícone de lápis (![Um ícone de lápis.](../../images/customizable-insights/edit-icon.png)) para editar o SQL a qualquer momento.
+O widget composer agora é preenchido com as colunas do SQL executado. O tipo de painel é indicado no canto superior esquerdo; neste caso, é [!UICONTROL Entrada de SQL Manual]. Selecione o ícone de lápis (![Um ícone de lápis.](/help/images/icons/edit.png)) para editar o SQL a qualquer momento.
 
 >[!TIP]
 >
@@ -57,13 +57,13 @@ Para criar o widget, use os atributos listados na coluna [!UICONTROL Atributos].
 
 ### Adicionar atributos {#add-attributes}
 
-Para adicionar um atributo ao seu widget, selecione o ícone de adição (![Um ícone de adição.](../../images/customizable-insights/add-icon.png)) ao lado de um nome de atributo. O menu suspenso exibido permite adicionar um atributo ao gráfico a partir das opções determinadas pelo seu SQL. Tipos de gráficos diferentes têm opções diferentes, como uma lista suspensa dos eixos X e Y.
+Para adicionar um atributo ao seu widget, selecione o ícone de adição (![Um ícone de adição.](/help/images/icons/add-circle.png)) ao lado de um nome de atributo. O menu suspenso exibido permite adicionar um atributo ao gráfico a partir das opções determinadas pelo seu SQL. Tipos de gráficos diferentes têm opções diferentes, como uma lista suspensa dos eixos X e Y.
 
 Neste exemplo de gráfico de rosca, as opções são tamanho e cor. A cor detalha os resultados do gráfico de rosca e o tamanho é a métrica real usada. Adicione um atributo ao campo [!UICONTROL Cor] para dividir os resultados em cores diferentes com base em sua composição desse atributo.
 
 >[!TIP]
 >
->Selecione o ícone de seta para cima e para baixo (![O ícone de seta para cima e para baixo.](../../images/customizable-insights/switch-axis-icon.png)) para alternar a disposição dos eixos X e Y em gráficos de barras ou de linhas.
+>Selecione o ícone de seta para cima e para baixo (![O ícone de seta para cima e para baixo.](/help/images/icons/switch.png)) para alternar a disposição dos eixos X e Y em gráficos de barras ou de linhas.
 
 ![O widget composer com o ícone de adição suspenso e as setas de alternância realçadas.](../../images/customizable-insights/add-icon-and-switch-arrows.png)
 
@@ -73,7 +73,7 @@ Para alterar o tipo de gráfico do seu widget, selecione uma das opções dispon
 
 ## Propriedades do dispositivo {#properties}
 
-Selecione o ícone de propriedades (![O ícone de propriedades.](../../images/customizable-insights/properties-icon.png)) no painel direito para abrir o painel de propriedades. No painel [!UICONTROL Propriedades], digite um nome para o widget no campo de texto **[!UICONTROL Título do widget]**. Também é possível renomear vários aspectos do gráfico.
+Selecione o ícone de propriedades (![O ícone de propriedades.](/help/images/icons/properties.png)) no painel direito para abrir o painel de propriedades. No painel [!UICONTROL Propriedades], digite um nome para o widget no campo de texto **[!UICONTROL Título do widget]**. Também é possível renomear vários aspectos do gráfico.
 
 >[!NOTE]
 >
@@ -93,7 +93,7 @@ Selecione **[!UICONTROL Editar]** para editar todo o painel ou qualquer um dos s
 
 ![Um painel personalizado com a opção Editar realçada.](../../images/customizable-insights/edit-dashboard.png)
 
-Selecione **[!UICONTROL Adicionar filtro]** para criar um [[!UICONTROL filtro de datas]](#create-date-filter) ou um [[!UICONTROL filtro global]](#create-global-filter). Depois de criado, todos os filtros globais e de data estarão disponíveis no [ícone de filtro](#select-global-filter) (![ícone de filtro.](../../images/customizable-insights/filter.png)) do seu painel.
+Selecione **[!UICONTROL Adicionar filtro]** para criar um [[!UICONTROL filtro de datas]](#create-date-filter) ou um [[!UICONTROL filtro global]](#create-global-filter). Depois de criado, todos os filtros globais e de data estarão disponíveis no [ícone de filtro](#select-global-filter) (![ícone de filtro.](/help/images/icons/filter.png)) do seu painel.
 
 ![Um painel personalizado com o menu suspenso Adicionar filtro realçado.](../../images/customizable-insights/add-filter.png)
 

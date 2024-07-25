@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guia de credenciais do Serviço de consulta
 description: O Serviço de consulta da Adobe Experience Platform fornece uma interface que pode ser usada para gravar e executar consultas, exibir consultas executadas anteriormente e acessar consultas salvas por usuários em sua organização.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: ba4ff2715d4e3eb71377542ab2361b967cd3ac11
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1807'
 ht-degree: 2%
@@ -36,7 +36,7 @@ A seção **[!UICONTROL Credenciais que estão expirando]** fornece as seguintes
 - **[!UICONTROL Porta]**: o número da porta do host ao qual se conectar.
 - **[!UICONTROL Banco de dados]**: o nome do banco de dados ao qual conectar um cliente.
 - **[!UICONTROL Nome de usuário]**: o nome de usuário usado para se conectar ao Serviço de Consulta.
-- **[!UICONTROL Senha]**: a senha usada para se conectar ao Serviço de Consulta. As senhas na interface do usuário receberam hash por questões de segurança. Selecione o ícone de cópia (![O ícone de cópia.](../images/ui/credentials/copy-icon.png)) para copiar suas credenciais completas com hash para a área de transferência.
+- **[!UICONTROL Senha]**: a senha usada para se conectar ao Serviço de Consulta. As senhas na interface do usuário receberam hash por questões de segurança. Selecione o ícone de cópia (![O ícone de cópia.](/help/images/icons/copy.png)) para copiar suas credenciais completas com hash para a área de transferência.
 - **[!UICONTROL Comando PSQL]**: um comando que inseriu automaticamente todas as informações relevantes para você se conectar ao Serviço de Consulta usando PSQL na linha de comando.
 - **[!UICONTROL Expira]**: a data e a hora de expiração das credenciais. A duração padrão da validade do token é de 24 horas, mas pode ser alterada nas configurações avançadas do Admin Console.
 
@@ -126,7 +126,7 @@ Depois de salvar as credenciais geradas, selecione **[!UICONTROL Fechar]**. Agor
 
 ![A guia Credenciais do painel Consultas com a seção Credenciais sem expiração realçada.](../images/ui/credentials/list-credentials.png)
 
-Você pode editar ou excluir suas credenciais sem expiração. Para editar uma credencial sem expiração, selecione o ícone de lápis (![Um ícone de lápis.](../images/ui/credentials/edit-icon.png)). Para excluir uma credencial sem expiração, selecione o ícone Excluir (![Ícone de lixeira.](../images/ui/credentials/delete-icon.png)).
+Você pode editar ou excluir suas credenciais sem expiração. Para editar uma credencial sem expiração, selecione o ícone de lápis (![Um ícone de lápis.](/help/images/icons/edit.png)). Para excluir uma credencial sem expiração, selecione o ícone Excluir (![Ícone de lixeira.](/help/images/icons/delete.png)).
 
 Ao editar uma credencial sem expiração, um modal é exibido. Você pode fornecer os seguintes detalhes para atualizar:
 

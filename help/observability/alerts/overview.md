@@ -4,7 +4,7 @@ title: Visão geral de alertas
 description: Saiba mais sobre os alertas na Adobe Experience Platform, incluindo a estrutura de como as regras de alerta são definidas.
 feature: Alerts
 exl-id: c38a93c6-1618-4ef9-8f94-41c7ab4af43c
-source-git-commit: cb889a169aa42b761b0eeff5aa7fb771ad6ed4be
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '797'
 ht-degree: 3%
@@ -83,7 +83,7 @@ Para trabalhar com alertas na interface do Platform, você deve ter as seguintes
 >
 >Para obter mais informações sobre como gerenciar permissões na Platform, consulte a [documentação de controle de acesso](../../access-control/ui/overview.md).
 
-Com a permissão Exibir Alertas, você pode exibir alertas recebidos selecionando o ícone de sino (![Ícone de sino](../images/alerts/overview/icon.png)) no canto superior direito.
+Com a permissão Exibir Alertas, você pode exibir alertas recebidos selecionando o ícone de sino (![Ícone de sino](/help/images/icons/bell.png)) no canto superior direito.
 
 ![](../images/alerts/overview/ui.png)
 

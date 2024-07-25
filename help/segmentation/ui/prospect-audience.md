@@ -3,7 +3,7 @@ title: Públicos-alvo potenciais
 description: Saiba como criar e usar públicos-alvo potenciais para direcionar clientes desconhecidos usando informações de terceiros.
 type: Documentation
 exl-id: b48cc0cf-f1c4-46fe-bb1d-cad53a9439dc
-source-git-commit: c2f9bcd9aeb0073b8b26413ec29e2dff1ee5c80d
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '395'
 ht-degree: 2%
@@ -26,7 +26,7 @@ A página Procurar é exibida. Uma lista de todos os públicos-alvo potenciais d
 
 Essa exibição lista as informações sobre o público-alvo, incluindo nome, contagem de perfis, origem, status do ciclo de vida, data de criação, data da última atualização e detalhamento.
 
-Você pode adicionar outros campos a esta exibição selecionando ![o ícone do atributo de filtro](../images/ui/prospect-audience/filter-attribute.png). Esses campos adicionais incluem frequência de atualização e a última atualização realizada por.
+Você pode adicionar outros campos a esta exibição selecionando ![o ícone do atributo de filtro](/help/images/icons/column-settings.png). Esses campos adicionais incluem frequência de atualização e a última atualização realizada por.
 
 Mais informações sobre a página de navegação, incluindo informações detalhadas sobre os campos listados, podem ser encontradas na [Visão geral do Audience Portal](./audience-portal.md#list).
 

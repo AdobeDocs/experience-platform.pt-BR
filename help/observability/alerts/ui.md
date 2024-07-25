@@ -4,7 +4,7 @@ title: Guia da interface de alertas
 description: Saiba como gerenciar alertas na interface do usuário do Experience Platform.
 feature: Alerts
 exl-id: 4ba3ef2b-7394-405e-979d-0e5e1fe676f3
-source-git-commit: 8d63e9fa4c7eb09ffb90edca612a6e6d44dd18fa
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '626'
 ht-degree: 0%
@@ -71,7 +71,7 @@ Você adicionou usuários com sucesso à sua lista de notificações de alerta. 
 
 As notificações de alerta podem ser enviadas diretamente ao seu email.
 
-Selecione o ícone de sino (![ícone de sino](../images/alerts/ui/bell-icon.png)) localizado na faixa superior à direita para exibir notificações e anúncios. Na lista suspensa exibida, selecione o ícone de engrenagem (![ícone de engrenagem](../images/alerts/ui/cog-icon.png)) para acessar a página de preferências de Experience Cloud.
+Selecione o ícone de sino (![ícone de sino](/help/images/icons/bell.png)) localizado na faixa superior à direita para exibir notificações e anúncios. Na lista suspensa exibida, selecione o ícone de engrenagem (![ícone de engrenagem](/help/images/icons/settings.png)) para acessar a página de preferências de Experience Cloud.
 
 ![Uma lista de alertas mostrados destacando o ícone de sino e o ícone de engrenagem.](../images/alerts/ui/edit-preferences.png)
 

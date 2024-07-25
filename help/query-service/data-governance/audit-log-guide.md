@@ -2,7 +2,7 @@
 title: Integração do log de auditoria do serviço de consulta
 description: Os logs de auditoria do serviço de consulta mantêm registros de várias ações do usuário para formar uma trilha de auditoria para solucionar problemas ou seguir as políticas corporativas de gerenciamento de dados e os requisitos normativos. Este tutorial fornece uma visão geral dos recursos de log de auditoria específicos do Serviço de consulta.
 exl-id: 5fdc649f-3aa1-4337-965f-3f733beafe9d
-source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '930'
 ht-degree: 1%
@@ -31,7 +31,7 @@ As categorias de log de auditoria fornecidas por [!DNL Query Service] são as se
 
 ## Executar um log de auditoria [!DNL Query Service] {#perform-an-audit-log}
 
-Para fazer uma auditoria para atividades de [!DNL Query Service], selecione **[!UICONTROL Auditorias]** na navegação à esquerda, seguido pelo ícone de funil (![Um ícone de filtro.](../images/audit-log/filter.png)) para exibir uma lista de controles de filtro para ajudar a limitar os resultados.
+Para fazer uma auditoria para atividades de [!DNL Query Service], selecione **[!UICONTROL Auditorias]** na navegação à esquerda, seguido pelo ícone de funil (![Um ícone de filtro.](/help/images/icons/filter.png)) para exibir uma lista de controles de filtro para ajudar a limitar os resultados.
 
 ![O painel de log de auditoria da interface do usuário da plataforma com &quot;Auditorias&quot; na navegação à esquerda e nos controles de filtro realçados.](../images/audit-log/filter-controls.png)
 

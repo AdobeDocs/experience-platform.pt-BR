@@ -2,7 +2,7 @@
 title: Exibir Insight SQL
 description: Visualize o SQL por trás de seu perfil, público-alvo, destino e insights personalizados e execute a consulta sob demanda por meio do Editor de consultas.
 exl-id: fd728926-c113-4593-92b1-916a02d09d41
-source-git-commit: e0af1f0110ceb514a5b249c42a05bf780ea834c6
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '409'
 ht-degree: 0%
@@ -43,7 +43,7 @@ Uma caixa de diálogo é exibida contendo o título do insight e do SQL que o ge
 
 >[!TIP]
 >
->Você pode copiar toda a instrução SQL para a área de transferência selecionando o ícone copiar (![O ícone copiar.](./images/view-sql/copy-icon.png)) na parte superior direita da caixa de diálogo.
+>Você pode copiar toda a instrução SQL para a área de transferência selecionando o ícone copiar (![O ícone copiar.](/help/images/icons/copy.png)) na parte superior direita da caixa de diálogo.
 
 ![Uma caixa de diálogo de insight com a instrução SQL realçada.](./images/view-sql/sql-dialog.png)
 

@@ -3,7 +3,7 @@ title: Extensão de encaminhamento de eventos da Google Cloud Platform
 description: Essa extensão de encaminhamento de eventos do Adobe Experience Platform envia eventos Edge Network para a Google Cloud Platform.
 last-substantial-update: 2023-06-21T00:00:00Z
 exl-id: c5da1889-f917-42aa-b3a4-9557c31d6ee8
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '562'
 ht-degree: 2%
@@ -47,8 +47,8 @@ Depois que a extensão for instalada, crie uma nova [regra](../../../ui/managing
 | Entrada | Descrição |
 | --- | --- |
 | [!UICONTROL Tópico] | O tópico que receberá os eventos do encaminhamento de eventos. O valor deve ter o formato `projects/{projectName}/topics/{topicName}`. |
-| [!UICONTROL Dados] | Este campo contém os dados a serem encaminhados ao tópico [!DNL Cloud Pub/Sub] em formato JSON.<br><br>Na opção **[!UICONTROL Raw]**, você pode colar o objeto JSON diretamente no campo de texto fornecido ou selecionar o ícone de elemento de dados (![ícone de Conjunto de Dados](../../../images/extensions/server/aws/data-element-icon.png)) para selecionar de uma lista de elementos de dados existentes para representar os dados.<br><br>Você também pode usar a opção **[!UICONTROL Editor de pares de valores-chave JSON]** para adicionar manualmente cada par de valores-chave por meio de um editor de interface do usuário. Cada valor pode ser representado por uma entrada bruta, ou um elemento de dados pode ser selecionado. |
-| [!UICONTROL Atributos] | Esse campo contém o objeto JSON com atributos extras a serem enviados junto com a mensagem.<br><br>Na opção **[!UICONTROL Raw]**, você pode colar o objeto JSON diretamente no campo de texto fornecido ou selecionar o ícone de elemento de dados (![ícone de Conjunto de Dados](../../../images/extensions/server/aws/data-element-icon.png)) para selecionar de uma lista de elementos de dados existentes para representar os dados.<br><br>Você também pode usar a opção **[!UICONTROL Editor de pares de valores-chave JSON]** para adicionar manualmente cada par de valores-chave por meio de um editor de interface do usuário. Cada valor pode ser representado por uma entrada bruta, ou um elemento de dados pode ser selecionado. |
+| [!UICONTROL Dados] | Este campo contém os dados a serem encaminhados ao tópico [!DNL Cloud Pub/Sub] em formato JSON.<br><br>Na opção **[!UICONTROL Raw]**, você pode colar o objeto JSON diretamente no campo de texto fornecido ou selecionar o ícone de elemento de dados (![ícone de Conjunto de Dados](/help/images/icons/database.png)) para selecionar de uma lista de elementos de dados existentes para representar os dados.<br><br>Você também pode usar a opção **[!UICONTROL Editor de pares de valores-chave JSON]** para adicionar manualmente cada par de valores-chave por meio de um editor de interface do usuário. Cada valor pode ser representado por uma entrada bruta, ou um elemento de dados pode ser selecionado. |
+| [!UICONTROL Atributos] | Esse campo contém o objeto JSON com atributos extras a serem enviados junto com a mensagem.<br><br>Na opção **[!UICONTROL Raw]**, você pode colar o objeto JSON diretamente no campo de texto fornecido ou selecionar o ícone de elemento de dados (![ícone de Conjunto de Dados](/help/images/icons/database.png)) para selecionar de uma lista de elementos de dados existentes para representar os dados.<br><br>Você também pode usar a opção **[!UICONTROL Editor de pares de valores-chave JSON]** para adicionar manualmente cada par de valores-chave por meio de um editor de interface do usuário. Cada valor pode ser representado por uma entrada bruta, ou um elemento de dados pode ser selecionado. |
 
 {style="table-layout:auto"}
 

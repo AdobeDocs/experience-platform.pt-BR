@@ -2,7 +2,7 @@
 description: Saiba como usar o painel de monitoramento para monitorar dados assimilados de fontes.
 title: Monitorar fluxos de dados para fontes na interface do usuário
 exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
-source-git-commit: 51f8a8c77518a0b2e9e4b914c891f97433db1ef2
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1256'
 ht-degree: 11%
@@ -83,13 +83,13 @@ Você pode filtrar ainda mais seus dados usando as opções fornecidas acima da 
 
 {style="table-layout:auto"}
 
-Para monitorar os dados que estão sendo assimilados em um fluxo de dados específico, selecione o ícone de filtro ![filtro](../assets/ui/monitor-sources/filter.png) ao lado de uma origem.
+Para monitorar os dados que estão sendo assimilados em um fluxo de dados específico, selecione o ícone de filtro ![filtro](/help/images/icons/filter-add.png) ao lado de uma origem.
 
 ![Monitore um fluxo de dados específico selecionando o ícone de filtro ao lado de uma determinada fonte.](../assets/ui/monitor-sources/monitor-dataflow.png)
 
 A tabela de métricas é atualizada para uma tabela de fluxos de dados ativos que correspondem à origem selecionada. Durante essa etapa, você pode visualizar informações adicionais sobre os fluxos de dados, incluindo o conjunto de dados e o tipo de dados correspondentes, bem como um carimbo de data e hora para indicar quando eles estavam ativos pela última vez.
 
-Para inspecionar ainda mais um fluxo de dados, selecione o ícone de filtro ![filtro](../assets/ui/monitor-sources/filter.png) ao lado de um fluxo de dados.
+Para inspecionar ainda mais um fluxo de dados, selecione o ícone de filtro ![filtro](/help/images/icons/filter-add.png) ao lado de um fluxo de dados.
 
 ![A tabela de fluxos de dados no painel de monitoramento.](../assets/ui/monitor-sources/select-dataflow.png)
 
@@ -97,7 +97,7 @@ Em seguida, você é direcionado a uma interface que lista todas as iterações 
 
 As execuções de fluxo de dados representam uma instância da execução do fluxo de dados. Por exemplo, se um fluxo de dados estiver programado para ser executado por hora às 9h, 10h e 11h, você terá três instâncias de um fluxo em execução. As execuções de fluxo são específicas para sua organização específica.
 
-Para inspecionar métricas de uma iteração de execução de fluxo de dados específica, selecione o ícone de filtro ![filtro](../assets/ui/monitor-sources/filter.png) ao lado do fluxo de dados.
+Para inspecionar métricas de uma iteração de execução de fluxo de dados específica, selecione o ícone de filtro ![filtro](/help/images/icons/filter-add.png) ao lado do fluxo de dados.
 
 ![A página de métrica de execução do fluxo de dados.](../assets/ui/monitor-sources/dataflow-page.png)
 

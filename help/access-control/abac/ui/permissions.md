@@ -3,7 +3,7 @@ keywords: Experience Platform;página inicial;tópicos populares;controle de ace
 title: Permissões da Função Gerenciar Controle de Acesso Baseado em Atributo
 description: Este documento fornece informações sobre como configurar permissões para uma função por meio da interface de Permissões no Adobe Experience Cloud
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
-source-git-commit: c1c7a851315214e2362085d3283d144066d4dd8a
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '984'
 ht-degree: 2%
@@ -24,7 +24,7 @@ Imediatamente após [criar uma nova função](#create-a-new-role), você retorna
 
 ## Filtrar funções
 
-Selecione o ícone de funil (![Ícone de filtro](../../images/icon.png)) para exibir uma lista de controles de filtro para ajudar a limitar os resultados.
+Selecione o ícone de funil (![Ícone de filtro](/help/images/icons/filter.png)) para exibir uma lista de controles de filtro para ajudar a limitar os resultados.
 
 ![filtros flac](../../images/flac-ui/flac-filters.png)
 

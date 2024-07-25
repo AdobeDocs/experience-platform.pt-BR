@@ -3,7 +3,7 @@ title: Ativar públicos para destinos de exportação de perfil em lote
 type: Tutorial
 description: Saiba como ativar os públicos-alvo no Adobe Experience Platform enviando-os para destinos com base em perfil de lote.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 68781d27e374261108955b24dfb7b46141f5108b
 workflow-type: tm+mt
 source-wordcount: '3975'
 ht-degree: 11%
@@ -529,14 +529,14 @@ Os atributos de enriquecimento correspondem aos públicos-alvo carregados person
 
 Siga as etapas abaixo para selecionar atributos de enriquecimento para cada público externo:
 
-1. Na coluna **[!UICONTROL Enrichment attributes]**, selecione o botão ![Editar](../assets/ui/activate-batch-profile-destinations/edit-button.svg) (Editar).
-2. Selecione **[!UICONTROL Adicionar atributo de enriquecimento]**. Um novo campo de esquema vazio é mostrado.
+1. Na coluna **[!UICONTROL Enrichment attributes]**, selecione o botão ![Editar](/help/images/icons/edit.png) (Editar).
+1. Selecione **[!UICONTROL Adicionar atributo de enriquecimento]**. Um novo campo de esquema vazio é mostrado.
    ![Imagem da interface do usuário mostrando a tela modal de atributos de enriquecimento.](../assets/ui/activate-batch-profile-destinations/add-enrichment-attribute.png)
-3. Selecione o botão à direita do campo vazio para abrir a tela de seleção de campo.
-4. Selecione os atributos que deseja exportar para o público-alvo.
+1. Selecione o botão à direita do campo vazio para abrir a tela de seleção de campo.
+1. Selecione os atributos que deseja exportar para o público-alvo.
    ![Imagem da interface do usuário mostrando a lista de atributos de enriquecimento.](../assets/ui/activate-batch-profile-destinations/select-enrichment-attributes.png)
-5. Após adicionar todos os atributos que deseja exportar, selecione **[!UICONTROL Salvar e fechar]**.
-6. Repita essas etapas para cada público-alvo externo.
+1. Após adicionar todos os atributos que deseja exportar, selecione **[!UICONTROL Salvar e fechar]**.
+1. Repita essas etapas para cada público-alvo externo.
 
 Se quiser ativar públicos externos para seus destinos sem exportar nenhum atributo, habilite a opção **[!UICONTROL Excluir atributos de enriquecimento]**. Essa opção exporta os perfis dos públicos externos, mas nenhum dos atributos correspondentes é enviado para o seu destino.
 

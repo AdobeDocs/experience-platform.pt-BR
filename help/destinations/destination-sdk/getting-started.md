@@ -2,9 +2,9 @@
 description: Esta página descreve como se autenticar e começar a usar o Adobe Experience Platform Destination SDK. Ele inclui instruções sobre como obter credenciais de autenticação de Adobe I/O, um nome de sandbox e a permissão de controle de acesso de criação de destino.
 title: Introdução ao Destination SDK
 exl-id: f22c37a8-202d-49ac-9af0-545dfa9af8fd
-source-git-commit: 7c1d956e3b6a1314baa13fef823d73d42404516a
+source-git-commit: f652faac7d771b590b30f591616b53d0cd2ff1eb
 workflow-type: tm+mt
-source-wordcount: '583'
+source-wordcount: '593'
 ht-degree: 1%
 
 ---
@@ -17,7 +17,7 @@ Esta página descreve como se autenticar e começar a usar o Adobe Experience Pl
 
 ## Terminologia {#terminology}
 
-Este guia usa conceitos específicos da plataforma, como organização e sandboxes. Consulte o [glossário de Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/glossary.html) para obter as definições destes e de outros termos.
+Este guia usa conceitos específicos da plataforma, como organização e sandboxes. Consulte o [glossário de Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/glossary.html) para obter as definições desses termos. Consulte o [glossário de Destination SDK](/help/destinations/destination-sdk/glossary.md) para obter os termos relacionados diretamente a esta funcionalidade.
 
 ## Obter as credenciais de autenticação necessárias {#obtain-authentication-credentials}
 

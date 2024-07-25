@@ -1,9 +1,10 @@
 ---
 title: Explorar, solucionar problemas e verificar a assimilação em lote com o SQL
-description: Saiba como entender e gerenciar o processo de assimilação de dados no Adobe Experience Platform. Este documento inclui como verificar lotes, manipular erros e consultar dados assimilados.
-source-git-commit: 37b241f15f297263cc7aa20f382c115a2d131c7e
+description: Saiba como entender e gerenciar o processo de assimilação de dados no Adobe Experience Platform. Este documento inclui como verificar lotes e consultar dados assimilados.
+exl-id: 8f49680c-42ec-488e-8586-50182d50e900
+source-git-commit: 692a061e3b2facbfafc65f966832230187f5244d
 workflow-type: tm+mt
-source-wordcount: '1215'
+source-wordcount: '1160'
 ht-degree: 0%
 
 ---
@@ -12,7 +13,6 @@ ht-degree: 0%
 
 Este documento explica como verificar e validar registros em lotes assimilados com o SQL. Este documento ensina como:
 
-- Lidar com erros que podem surgir durante o processo de assimilação
 - Acessar metadados em lote do conjunto de dados
 - Solucionar problemas e garantir a integridade dos dados consultando lotes
 
@@ -26,7 +26,6 @@ Para ajudar na compreensão dos conceitos discutidos neste documento, você deve
 
 - **Assimilação de dados**: consulte a [visão geral da assimilação de dados](../../ingestion/home.md) para saber as noções básicas de como os dados são assimilados na plataforma, incluindo os diferentes métodos e processos envolvidos.
 - **Assimilação em lote**: consulte a [visão geral da API de assimilação em lote](../../ingestion/batch-ingestion/overview.md) para saber mais sobre os conceitos básicos de assimilação em lote. Especificamente, o que é um &quot;lote&quot; e como ele funciona no processo de assimilação de dados da plataforma.
-- **Tratamento de erros na assimilação de dados**: saiba mais sobre os [diferentes tipos de erros que podem ocorrer](../../ingestion/quality/error-diagnostics.md#retrieve-errors) durante a assimilação de dados e [como lidar com eles](../../ingestion/batch-ingestion/troubleshooting.md#what-if-a-batch-fails).
 - **Metadados do sistema em conjuntos de dados**: consulte a [visão geral do Serviço de Catálogo](../../catalog/home.md) para saber como os campos de metadados do sistema são usados para rastrear e consultar dados assimilados.
 - **Experience Data Model (XDM)**: consulte a [visão geral da interface do usuário de esquemas](../../xdm/ui/overview.md) e as [&#39;noções básicas da composição de esquema&#39;](../../xdm/schema/composition.md) para saber mais sobre esquemas XDM e como eles representam e validam a estrutura e o formato dos dados assimilados na Platform.
 
@@ -57,11 +56,7 @@ Os resultados desse query são mostrados na imagem abaixo.
 
 Esses resultados demonstram que o número de lotes de entrada não corresponde necessariamente ao número de lotes de saída, pois o sistema determina a maneira mais eficiente de colocar em lote e armazenar os dados no data lake.
 
-O exemplo a seguir usa um conjunto de dados diferente para ilustrar esse ponto.
-
->[!NOTE]
->
->Se quiser experimentar este exemplo, você pode assimilar o arquivo de amostra fornecido ([`drug_checkout_data`](../images/use-cases/drug_checkout_data.zip)) na Platform e configurar o mapeamento do esquema.
+Para o propósito deste exemplo, presume-se que você tenha assimilado um arquivo CSV na Platform e criado um conjunto de dados chamado `drug_checkout_data`.
 
 O arquivo `drug_checkout_data` é um conjunto profundamente aninhado de 35.000 registros. Use a instrução SQL `SELECT * FROM drug_orders;` para visualizar o primeiro conjunto de registros no conjunto de dados `drug_orders` baseado em JSON.
 
@@ -97,7 +92,7 @@ Em seguida, valide e verifique os registros que foram assimilados no conjunto de
 
 >[!TIP]
 >
->Para recuperar a ID do lote e os registros de consulta associados a essa ID do lote, primeiro você deve criar um lote na Platform. Se quiser testar o processo sozinho, você pode assimilar dados CSV na Platform. Leia o guia sobre como [mapear um arquivo CSV para um esquema XDM existente usando recomendações geradas por IA](../../ingestion/tutorials/map-csv/recommendations.md). Um [arquivo CSV de perfil de exemplo](../images/use-cases/sample-profiles.csv) está disponível aqui para sua conveniência.
+>Para recuperar a ID do lote e os registros de consulta associados a essa ID do lote, primeiro você deve criar um lote na Platform. Se quiser testar o processo sozinho, você pode assimilar dados CSV na Platform. Leia o guia sobre como [mapear um arquivo CSV para um esquema XDM existente usando recomendações geradas por IA](../../ingestion/tutorials/map-csv/recommendations.md).
 
 Depois de assimilar um lote, você deve navegar até a [!UICONTROL guia de atividade de conjuntos de dados] para o conjunto de dados no qual assimilou dados.
 

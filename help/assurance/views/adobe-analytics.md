@@ -2,14 +2,18 @@
 title: Visualização do Adobe Analytics no Assurance
 description: Este manual explica como usar o Adobe Analytics com o Adobe Experience Platform Assurance.
 exl-id: e5cc72b0-d6d6-430b-9321-4835c1f77581
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 515f58175a8ccba03581ce4d7faf23fdfed3571e
 workflow-type: tm+mt
-source-wordcount: '352'
-ht-degree: 100%
+source-wordcount: '394'
+ht-degree: 89%
 
 ---
 
 # Visualização do Adobe Analytics no Assurance
+
+>[!IMPORTANT]
+>
+>A Exibição de Eventos do Analytics está consolidada no **plug-in de Eventos do Analytics 2.0 (Beta)**.  Ele será removido da Garantia no futuro próximo. Recomendamos usar o **plug-in do Analytics Events 2.0 (Beta)** para a depuração do Analytics nas sessões do Assurance.
 
 A integração do Adobe Experience Platform Assurance com o Adobe Analytics fornece uma visualização mais avançada dos eventos do SDK para quem estiver depurando e validando a implementação do Adobe Analytics. A visualização mostra agora os eventos de ciclo de vida e de ação/estado enviados para o Adobe Analytics a partir do [SDK da Adobe Experience Platform](https://developer.adobe.com/client-sdks/documentation/adobe-analytics/). A visualização também apresenta detalhes de “resposta” que fornecem informações sobre como os eventos foram processados após a aplicação de cada regra de processamento do respectivo conjunto de relatórios.
 

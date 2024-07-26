@@ -4,14 +4,20 @@ description: As notas de versão mais recentes do Adobe Experience Platform Debu
 keywords: depurador;extensão do Experience Platform Debugger;chrome;extensão;notas de versão
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
-source-git-commit: c99234cf3f5af9abe590c90fbdefc7d50c1539da
+source-git-commit: 877e38154f6959d50bd0620290c2dce9decfc2b5
 workflow-type: tm+mt
-source-wordcount: '758'
+source-wordcount: '781'
 ht-degree: 4%
 
 ---
 
 # Notas de versão do Adobe Experience Platform Debugger
+
+## Versão 1.6.1 - 25 de julho de 2024
+
+### Correções e melhorias
+
+* Correção de um problema que impedia os usuários de adicionar novos códigos incorporados de Tags às páginas sem eles.
 
 ## Versão 1.6.0 - 11 de julho de 2024
 
@@ -31,7 +37,7 @@ ht-degree: 4%
 ### Correções e melhorias
 
 * Correção de um problema em que as configurações não eram mantidas.
-* Correção de um problema que causava a falha do Debugger ao visualizar ocorrências processadas pelo Post do Analytics.
+* Correção de um problema que causava a falha do Debugger ao visualizar ocorrências pós-processadas do Analytics.
 
 ## Versão 1.5.3 - 6 de dezembro de 2023
 

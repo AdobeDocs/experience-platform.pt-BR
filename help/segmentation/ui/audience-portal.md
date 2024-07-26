@@ -2,9 +2,9 @@
 title: Visão geral do Audience Portal
 description: Saiba como usar o Audience Portal para exibir, gerenciar e criar públicos no Adobe Experience Platform.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: d1fbfe5dd887059a6aab96566311cbd63c5b091f
+source-git-commit: 2d15ba41ff326034a6f9a32301f67f5d3b2a1c14
 workflow-type: tm+mt
-source-wordcount: '3693'
+source-wordcount: '3725'
 ht-degree: 3%
 
 ---
@@ -391,7 +391,9 @@ Depois de confirmar que os detalhes estão corretos, selecione **[!UICONTROL Con
 >
 >Por padrão, os públicos-alvo gerados externamente têm uma expiração de dados de 30 dias. A expiração dos dados é redefinida se o público-alvo for atualizado ou modificado de alguma forma.
 >
->Além disso, se o público-alvo gerado externamente contiver informações confidenciais e/ou relacionadas à saúde, você **deverá** aplicar os rótulos de uso de dados necessários antes de ativá-las para qualquer destino. Como as variáveis de públicos geradas externamente são armazenadas no data lake em vez de no Perfil do cliente em tempo real, você deve **não** incluir dados de consentimento no arquivo CSV. Para obter mais informações sobre como aplicar rótulos de uso de dados, leia a documentação em [gerenciando rótulos](../../access-control/abac/ui/labels.md).
+>Além disso, se o público-alvo gerado externamente contiver informações confidenciais e/ou relacionadas à saúde, você **deverá** aplicar os rótulos de uso de dados necessários antes de ativá-las para qualquer destino. Como as variáveis de públicos geradas externamente são armazenadas no data lake em vez de no Perfil do cliente em tempo real, você deve **não** incluir dados de consentimento no arquivo CSV.
+>
+>Para obter mais informações sobre como aplicar rótulos de uso de dados, leia a documentação em [gerenciando rótulos](../../access-control/abac/ui/labels.md). Para saber mais sobre os rótulos de uso de dados na Platform em geral, leia a [visão geral dos rótulos de uso de dados](../../data-governance/labels/overview.md). Para saber como o consentimento funciona em públicos gerados externamente, leia as [Perguntas frequentes sobre públicos-alvo](../faq.md#consent).
 
 ## Próximas etapas
 

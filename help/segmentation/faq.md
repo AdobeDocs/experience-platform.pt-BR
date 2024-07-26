@@ -2,9 +2,9 @@
 title: Perguntas frequentes do Audiences
 description: Descubra respostas para perguntas frequentes sobre públicos-alvo e outros conceitos relacionados à segmentação.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: 5e677e53677cd28787004043e9fcc9b94e631fc8
+source-git-commit: 2d15ba41ff326034a6f9a32301f67f5d3b2a1c14
 workflow-type: tm+mt
-source-wordcount: '4187'
+source-wordcount: '4362'
 ht-degree: 0%
 
 ---
@@ -56,6 +56,16 @@ Embora seja possível fazer referência ao público-alvo gerado externamente ao 
 
 Sim, o público-alvo gerado externamente será mesclado com o perfil existente na Platform se os identificadores principais corresponderem. Esses dados podem levar até 24 horas para serem reconciliados. Se os dados do perfil ainda não existirem, um novo perfil será criado à medida que os dados forem assimilados.
 
+### Como as preferências de consentimento do cliente são respeitadas para públicos-alvo gerados externamente que são importados para o Audience Portal?{#consent}
+
+Como os dados do cliente são capturados em vários canais, as políticas de compilação e mesclagem de identidades permitem que esses dados sejam consolidados em um único Perfil do cliente em tempo real. As informações sobre as preferências de consentimento dos clientes são armazenadas e avaliadas no nível do perfil.
+
+Os destinos downstream verificam cada perfil em busca de informações de consentimento antes da ativação. As informações de consentimento de cada perfil são comparadas com os requisitos de consentimento de um determinado destino. Se o perfil não atender aos requisitos, ele não será enviado para um destino.
+
+Quando um público externo é assimilado no Portal de público-alvo, ele é unido a perfis existentes usando uma ID primária, como email ou ECID. Como resultado, as políticas de consentimento existentes permanecerão em vigor durante a ativação.
+
+Observe que você deve **não** incluir informações de consentimento com públicos gerados externamente, pois as variáveis de carga são **não** armazenadas no repositório de perfis, mas no data lake. Em vez disso, você **deve** usar um canal de assimilação da Adobe Experience Platform no qual os dados de perfil são importados.
+
 ### Posso usar um público gerado externamente para criar outros públicos?
 
 Sim, qualquer público gerado externamente aparecerá no inventário de público e poderá ser usado ao construir públicos dentro do [Construtor de segmentos](./ui/segment-builder.md).
@@ -80,7 +90,7 @@ A política de mesclagem padrão específica da organização é aplicada automa
 
 ### Onde posso ativar públicos gerados externamente para o?
 
-Um público gerado externamente pode ser mapeado para qualquer destino RTCDP e pode ser usado em campanhas do Adobe Journey Optimizer.
+Um público gerado externamente pode ser mapeado para qualquer destino e usado em campanhas do Adobe Journey Optimizer.
 
 ### Quando os públicos-alvo gerados externamente estão prontos para ativação?
 

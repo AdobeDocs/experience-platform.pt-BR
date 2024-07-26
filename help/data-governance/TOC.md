@@ -5,10 +5,10 @@ breadcrumb-title: Guia do Data Governance
 user-guide-description: Imponha restrições de uso de dados por meio de rótulos, ações de marketing e políticas de governança.
 feature: Data Governance
 role: User,Developer,Admin
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+source-git-commit: 8837d719fbdf2864995c0d73a87a41c4b119cfb7
 workflow-type: tm+mt
-source-wordcount: '90'
-ht-degree: 44%
+source-wordcount: '99'
+ht-degree: 43%
 
 ---
 
@@ -30,6 +30,10 @@ ht-degree: 44%
    * [Visão geral](enforcement/overview.md)
    * [Aplicação automática](enforcement/auto-enforcement.md)
    * [Imposição com base em API](enforcement/api-enforcement.md)
+* API de Serviço MTLS {#mtls-api}
+   * [Visão geral](mtls-api/overview.md)
+   * [Introdução](mtls-api/getting-started.md)
+   * [Endpoint de certificado público](mtls-api/public-certificate-endpoint.md)
 * API de Serviço de Política {#api}
    * [Visão geral](api/overview.md)
    * [Introdução](api/getting-started.md)

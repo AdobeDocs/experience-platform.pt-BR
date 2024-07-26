@@ -4,9 +4,9 @@ title: Conexão da API HTTP
 description: Use o destino da API HTTP no Adobe Experience Platform para enviar dados de perfil para um endpoint HTTP de terceiros para executar sua própria análise ou executar outras operações necessárias nos dados de perfil exportados do Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: fffeb2221c4e25bae8386419de1646c89aa93a06
 workflow-type: tm+mt
-source-wordcount: '2639'
+source-wordcount: '2664'
 ht-degree: 8%
 
 ---
@@ -76,6 +76,8 @@ Se você quiser usar [!DNL mTLS] com [!DNL HTTP API] destinos, o endereço do se
 Se você quiser verificar o [!DNL Common Name] (CN) e o [!DNL Subject Alternative Names] (SAN) para fazer validação adicional de terceiros, poderá baixar o certificado abaixo:
 
 * [Certificado público mTLS para API HTTP](../../../landing/images/governance-privacy-security/encryption/destinations-public-certificate.zip)
+
+Você também pode recuperar certificados públicos com segurança fazendo uma solicitação GET para o ponto de extremidade MTLS. Consulte a [documentação do ponto de extremidade do certificado público](../../../data-governance/mtls-api/public-certificate-endpoint.md) para obter mais informações.
 
 ## INCLUIR NA LISTA DE PERMISSÕES endereço IP {#ip-address-allowlist}
 

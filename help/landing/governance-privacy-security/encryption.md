@@ -2,9 +2,9 @@
 title: Criptografia de dados no Adobe Experience Platform
 description: Saiba como os dados são criptografados em trânsito e em repouso no Adobe Experience Platform.
 exl-id: 184b2b2d-8cd7-4299-83f8-f992f585c336
-source-git-commit: 4f67df5d3667218c79504535534de57f871b0650
+source-git-commit: f0b9d414d7b08015478c132de6910629d86c9cf9
 workflow-type: tm+mt
-source-wordcount: '712'
+source-wordcount: '737'
 ht-degree: 0%
 
 ---
@@ -54,6 +54,8 @@ Se você quiser verificar a CN ou a SAN para fazer a validação adicional de te
 
 - [O certificado público do Adobe Journey Optimizer](../images/governance-privacy-security/encryption/AJO-public-certificate.pem)
 - [O certificado público do Serviço de Destinos](../images/governance-privacy-security/encryption/destinations-public-cert.pem).
+
+Você também pode recuperar certificados públicos com segurança fazendo uma solicitação GET para o ponto de extremidade MTLS. Consulte a [documentação do ponto de extremidade do certificado público](../../data-governance/mtls-api/public-certificate-endpoint.md) para obter mais informações.
 
 ## Dados em repouso {#at-rest}
 

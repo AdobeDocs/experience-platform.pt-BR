@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Introdução às APIs do Adobe Experience Platform
 description: O Adobe Experience Platform fornece serviços de API que estão intimamente vinculados entre si. Este guia contém informações sobre os serviços disponíveis, cabeçalhos necessários para operações CRUD, mensagens de erro, coleções do Postman e exemplos de chamadas de API.
 exl-id: a362bcb4-a908-43a8-abd3-0e1d21cb9117
-source-git-commit: c728d63c22593ca56999dd0bb6679dea7de0e00a
+source-git-commit: f0b9d414d7b08015478c132de6910629d86c9cf9
 workflow-type: tm+mt
-source-wordcount: '1405'
+source-wordcount: '1446'
 ht-degree: 0%
 
 ---
@@ -124,8 +124,10 @@ Para obter mais informações sobre endpoints específicos nas APIs da plataform
 | [[!DNL Catalog Service] Guia de API](.././catalog/api/getting-started.md) | A API [!DNL Catalog Service] permite que os desenvolvedores gerenciem metadados do conjunto de dados na Adobe Experience Platform. Isso inclui locais de dados, estágios de processamento, erros que ocorreram durante o processamento e relatórios de dados. |
 | [[!DNL Data Access] Guia de API](.././data-access/api.md) | A API [!DNL Data Access] permite que os desenvolvedores recuperem informações sobre conjuntos de dados assimilados no Experience Platform. Isso inclui acessar e baixar arquivos de conjunto de dados, recuperar informações de cabeçalho, listar lotes com falha e bem-sucedidos e baixar arquivos CSV/Parquet de visualização. |
 | [[!DNL Dataset Service] Guia de API](.././data-governance/labels/dataset-api.md) | A API de serviço do conjunto de dados permite aplicar e editar rótulos de uso para conjuntos de dados. Ela faz parte dos recursos de catálogo de dados da Adobe Experience Platform, mas é separada da API de serviço de catálogo que gerencia metadados do conjunto de dados. |
+| [[!DNL Data Hygiene API guide]](../hygiene/api/overview.md) | A API do [!DNL Data Hygiene] permite corrigir ou excluir programaticamente os dados pessoais armazenados dos clientes no Adobe Experience Platform, bem como programar datas de expiração para conjuntos de dados. |
 | [[!DNL Edge Network Server] Guia de API](../server-api/overview.md) | O [!DNL Edge Network Server API] pode ser usado para uma variedade de casos de uso de coleta de dados, personalização, publicidade e marketing. O [!DNL Server API] pode ser usado em servidores, [!DNL IoT] dispositivos, decodificadores de sinais e uma variedade de outros dispositivos. |
 | [[!DNL Identity Service] Guia de API](.././identity-service/api/getting-started.md) | A API do [!DNL Identity Service] permite que os desenvolvedores gerenciem a identificação entre dispositivos, canais e quase em tempo real dos clientes usando gráficos de identidade no Adobe Experience Platform. |
+| [[!DNL MTLS Service API guide]](../data-governance/mtls-api/overview.md) | A API [!DNL MTLS Service] permite recuperar com segurança certificados públicos emitidos pelo Adobe para sua organização. |
 | [[!DNL Observability Insights] Guia de API](.././observability/api/overview.md) | [!DNL Observability Insights] é uma API RESTful que permite aos desenvolvedores expor as principais métricas de observabilidade no Adobe Experience Platform. Essas métricas fornecem insights sobre estatísticas de uso da Platform, verificações de integridade de serviços da Platform, tendências históricas e indicadores de desempenho para várias funcionalidades da Platform. |
 | [[!DNL Policy Service] Guia de API](.././data-governance/api/overview.md) <br> (Governança de dados) | A API [!DNL Policy Service] permite criar e gerenciar rótulos e políticas de uso de dados para determinar quais ações de marketing podem ser executadas em relação aos dados que contêm determinados rótulos de uso de dados. Para aplicar rótulos a conjuntos de dados e campos, consulte o guia [[!DNL Dataset Service] API](.././data-governance/labels/dataset-api.md) |
 | [[!DNL Privacy Service] Guia de API](.././privacy-service/api/getting-started.md) | A API [!DNL Privacy Service] permite que os desenvolvedores criem e gerenciem solicitações de clientes para acessar ou excluir seus dados pessoais nos aplicativos Experience Cloud, em conformidade com as regulamentações legais de privacidade. |

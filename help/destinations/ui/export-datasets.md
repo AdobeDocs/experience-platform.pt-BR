@@ -215,7 +215,7 @@ Para remover conjuntos de dados de um fluxo de dados existente, siga as etapas a
 
    >[!NOTE]
    >
-Esse recurso está na versão beta e só está disponível para clientes selecionados. Para solicitar acesso a esse recurso, entre em contato com o representante da Adobe.
+   >Esse recurso está na versão beta e só está disponível para clientes selecionados. Para solicitar acesso a esse recurso, entre em contato com o representante da Adobe.
 
    ![Caixa de diálogo Remover conjunto de dados mostrando o controle Remover conjunto de dados no painel direito.](../assets/ui/export-datasets/bulk-remove-datasets.png)
 

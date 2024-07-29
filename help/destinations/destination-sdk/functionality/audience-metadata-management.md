@@ -2,9 +2,9 @@
 description: Use modelos de metadados de público-alvo para criar, atualizar ou excluir públicos-alvo no destino de forma programática. O Adobe fornece um modelo extensível de metadados de público-alvo, que pode ser configurado com base nas especificações da API de marketing. Depois de definir, testar e enviar o modelo, ele será usado pelo Adobe para estruturar as chamadas de API para o seu destino.
 title: Gerenciamento de metadados de público
 exl-id: 795e8adb-c595-4ac5-8d1a-7940608d01cd
-source-git-commit: 3660c3a342af07268d2ca2c907145df8237872a1
+source-git-commit: 6c4a2f9f6b338ec03b99ee1d7e91f7d9c0347b08
 workflow-type: tm+mt
-source-wordcount: '1047'
+source-wordcount: '1308'
 ht-degree: 0%
 
 ---
@@ -53,11 +53,10 @@ Você pode usar o modelo genérico para [criar um novo modelo de público-alvo](
 
 A equipe de engenharia do Adobe pode trabalhar com você para expandir o modelo genérico com campos personalizados, se os casos de uso exigirem.
 
-## Exemplos de configuração {#configuration-examples}
 
-Esta seção inclui três exemplos de configurações genéricas de metadados de público-alvo, para sua referência, juntamente com descrições das seções principais da configuração. Observe como o url, os cabeçalhos, a solicitação e o corpo da resposta diferem entre as três configurações de exemplo. Isso se deve às diferentes especificações da API de marketing das três plataformas de amostra.
+## Eventos de modelo compatíveis {#supported-events}
 
-Observe que em alguns exemplos, campos de macro como `{{authData.accessToken}}` ou `{{segment.name}}` são usados na URL e em outros exemplos eles são usados nos cabeçalhos ou no corpo da solicitação. Isso realmente depende das especificações da sua API de marketing.
+A tabela abaixo descreve os eventos compatíveis com modelos de metadados de público-alvo.
 
 | Seção Modelo | Descrição |
 |--- |--- |
@@ -66,10 +65,21 @@ Observe que em alguns exemplos, campos de macro como `{{authData.accessToken}}` 
 | `delete` | Inclui todos os componentes necessários (URL, método HTTP, cabeçalhos, corpo da solicitação e resposta) para fazer uma chamada HTTP na API e excluir segmentos/públicos de forma programática na plataforma. |
 | `validate` | Executa validações para qualquer campo na configuração do modelo antes de chamar a API do parceiro. Por exemplo, você pode validar se a ID da conta do usuário foi inserida corretamente. |
 | `notify` | Aplica-se somente a destinos baseados em arquivo. Inclui todos os componentes necessários (URL, método HTTP, cabeçalhos, corpo da solicitação e resposta) para fazer uma chamada HTTP para sua API e notificá-lo de exportações de arquivos bem-sucedidas. |
+| `createDestination` | Inclui todos os componentes necessários (URL, método HTTP, cabeçalhos, corpo da solicitação e resposta) para fazer uma chamada HTTP para sua API, criar programaticamente um fluxo de dados em sua plataforma e sincronizar as informações de volta para o Adobe Experience Platform. |
+| `updateDestination` | Inclui todos os componentes necessários (URL, método HTTP, cabeçalhos, corpo da solicitação e resposta) para fazer uma chamada HTTP para sua API, atualizar programaticamente um fluxo de dados em sua plataforma e sincronizar as informações de volta para o Adobe Experience Platform. |
+| `deleteDestination` | Inclui todos os componentes necessários (URL, método HTTP, cabeçalhos, corpo da solicitação e resposta) para fazer uma chamada HTTP para sua API e excluir programaticamente um fluxo de dados de sua plataforma. |
 
 {style="table-layout:auto"}
 
-### Exemplo 1 de streaming {#example-1}
+## Exemplos de configuração {#configuration-examples}
+
+Esta seção inclui exemplos de configurações de metadados de público-alvo genéricos, para sua referência.
+
+Observe como o URL, os cabeçalhos e os corpos de solicitação diferem entre as três configurações de exemplo. Isso se deve às diferentes especificações da API de marketing das três plataformas de amostra.
+
+Observe que em alguns exemplos, campos de macro como `{{authData.accessToken}}` ou `{{segment.name}}` são usados na URL e em outros exemplos eles são usados nos cabeçalhos ou no corpo da solicitação. O uso depende das especificações da API de marketing.
+
++++Exemplo de transmissão 1
 
 ```json
 {
@@ -178,7 +188,9 @@ Observe que em alguns exemplos, campos de macro como `{{authData.accessToken}}` 
 }
 ```
 
-### Exemplo 2 de streaming {#example-2}
++++
+
++++Exemplo de transmissão 2
 
 ```json
 {
@@ -272,7 +284,9 @@ Observe que em alguns exemplos, campos de macro como `{{authData.accessToken}}` 
 }
 ```
 
-### Exemplo 3 de streaming {#example-3}
++++
+
++++Exemplo de transmissão 3
 
 ```json
 {
@@ -374,8 +388,9 @@ Observe que em alguns exemplos, campos de macro como `{{authData.accessToken}}` 
 }
 ```
 
++++
 
-### Exemplo baseado em arquivo {#example-file-based}
++++Exemplo baseado em arquivo
 
 ```json
 {
@@ -521,6 +536,8 @@ Observe que em alguns exemplos, campos de macro como `{{authData.accessToken}}` 
 }
 ```
 
++++
+
 Encontre descrições de todos os parâmetros no modelo na referência da API [Criar um modelo de público-alvo](../metadata-api/create-audience-template.md).
 
 ## Macros usadas em modelos de metadados de público {#macros}
@@ -537,5 +554,12 @@ Para transmitir informações como IDs de público-alvo, tokens de acesso, mensa
 | `{{authData.accessToken}}` | Permite passar o token de acesso para o endpoint da API. Use `{{authData.accessToken}}` se o Experience Platform precisar usar tokens sem expiração para se conectar ao seu destino, caso contrário, use `{{oauth2ServiceAccessToken}}` para gerar um token de acesso. |
 | `{{body.segments[0].segment.id}}` | Retorna o identificador exclusivo do público criado, como o valor da chave `externalAudienceId`. |
 | `{{error.message}}` | Retorna uma mensagem de erro que será exibida aos usuários na interface do usuário do Experience Platform. |
+| `{{{segmentEnrichmentAttributes}}}` | Permite acessar todos os atributos de enriquecimento para um público-alvo específico.  Esta macro tem suporte nos eventos `create`, `update` e `delete`. Os atributos de enriquecimento estão disponíveis somente para [públicos-alvo de carregamento personalizado](destination-configuration/schema-configuration.md#external-audiences). Consulte o [guia de ativação de público-alvo em lote](../../ui/activate-batch-profile-destinations.md#select-enrichment-attributes) para ver como funciona a seleção do atributo de enriquecimento. |
+| `{{destination.name}}` | Retorna o nome do seu destino. |
+| `{{destination.sandboxName}}` | Retorna o nome da sandbox de Experience Platform em que o destino está configurado. |
+| `{{destination.id}}` | Retorna a ID da configuração de destino. |
+| `{{destination.imsOrgId}}` | Retorna a ID de organização IMS em que o destino está configurado. |
+| `{{destination.enrichmentAttributes}}` | Permite acessar todos os atributos de enriquecimento para todos os públicos mapeados para um destino. Esta macro tem suporte nos eventos `createDestination`, `updateDestination` e `deleteDestination`. Os atributos de enriquecimento estão disponíveis somente para [públicos-alvo de carregamento personalizado](destination-configuration/schema-configuration.md#external-audiences). Consulte o [guia de ativação de público-alvo em lote](../../ui/activate-batch-profile-destinations.md#select-enrichment-attributes) para ver como funciona a seleção do atributo de enriquecimento. |
+| `{{destination.enrichmentAttributes.<namespace>.<segmentId>}}` | Permite acessar atributos de enriquecimento para públicos externos específicos mapeados para um destino. Os atributos de enriquecimento estão disponíveis somente para [públicos-alvo de carregamento personalizado](destination-configuration/schema-configuration.md#external-audiences). Consulte o [guia de ativação de público-alvo em lote](../../ui/activate-batch-profile-destinations.md#select-enrichment-attributes) para ver como funciona a seleção do atributo de enriquecimento. |
 
 {style="table-layout:auto"}

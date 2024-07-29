@@ -4,10 +4,10 @@ type: Tutorial
 description: Saiba como criar uma conexão de origem de Snowflake usando a interface do usuário do Adobe Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: fb2038b9-7f27-4818-b5de-cc8072122127
-source-git-commit: 4de2193a45fc2925af310b5e2475eabe26d13adc
+source-git-commit: d89e0c81bd250e41a863b8b28d358cc6ddea1c37
 workflow-type: tm+mt
-source-wordcount: '786'
-ht-degree: 2%
+source-wordcount: '792'
+ht-degree: 4%
 
 ---
 
@@ -36,7 +36,7 @@ Você deve fornecer valores para as seguintes propriedades de credencial para au
 
 | Credencial | Descrição |
 | ---------- | ----------- |
-| Conta | Um nome de conta identifica exclusivamente uma conta na organização. Nesse caso, você deve identificar exclusivamente uma conta em diferentes organizações do [!DNL Snowflake]. Para fazer isso, você deve anexar o nome da organização ao nome da conta. Por exemplo: `orgname-account_name`. Para obter mais informações sobre nomes de conta, leia a documentação do [!DNL Snowflake] sobre [identificadores de conta](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization). |
+| Conta | Um nome de conta identifica exclusivamente uma conta na organização. Nesse caso, você deve identificar exclusivamente uma conta em diferentes organizações do [!DNL Snowflake]. Para fazer isso, você deve anexar o nome da organização ao nome da conta. Por exemplo: `orgname-account_name`. Leia o guia em [recuperando seu [!DNL Snowflake] identificador de conta](../../../../connectors/databases/snowflake.md#retrieve-your-account-identifier) para obter orientação adicional. Para obter mais informações, consulte a [[!DNL Snowflake] documentação](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization). |
 | Warehouse | O warehouse [!DNL Snowflake] gerencia o processo de execução da consulta para o aplicativo. Cada warehouse [!DNL Snowflake] é independente um do outro e deve ser acessado individualmente ao trazer dados para a plataforma. |
 | Banco de dados | O banco de dados [!DNL Snowflake] contém os dados que você deseja trazer para a Plataforma. |
 | Nome de usuário | O nome de usuário da conta [!DNL Snowflake]. |
@@ -50,9 +50,9 @@ Para usar a autenticação de par de chaves, você deve gerar um par de chaves R
 
 | Credencial | Descrição |
 | --- | --- |
-| Conta | Um nome de conta identifica exclusivamente uma conta na organização. Nesse caso, você deve identificar exclusivamente uma conta em diferentes organizações do [!DNL Snowflake]. Para fazer isso, você deve anexar o nome da organização ao nome da conta. Por exemplo: `orgname-account_name`. Para obter mais informações sobre nomes de conta, leia a documentação do [!DNL Snowflake] sobre [identificadores de conta](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization). |
+| Conta | Um nome de conta identifica exclusivamente uma conta na organização. Nesse caso, você deve identificar exclusivamente uma conta em diferentes organizações do [!DNL Snowflake]. Para fazer isso, você deve anexar o nome da organização ao nome da conta. Por exemplo: `orgname-account_name`. Leia o guia em [recuperando seu [!DNL Snowflake] identificador de conta](../../../../connectors/databases/snowflake.md#retrieve-your-account-identifier) para obter orientação adicional. Para obter mais informações, consulte a [[!DNL Snowflake] documentação](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization). |
 | Nome de usuário | O nome de usuário da sua conta [!DNL Snowflake]. |
-| Chave privada | A chave privada [!DNL Base64-]codificada da sua conta [!DNL Snowflake]. Você pode gerar chaves privadas criptografadas ou não. Se você estiver usando uma chave privada criptografada, também deverá fornecer uma senha de chave privada ao autenticar no Experience Platform. |
+| Chave privada | A chave privada [!DNL Base64-]codificada da sua conta [!DNL Snowflake]. Você pode gerar chaves privadas criptografadas ou não. Se você estiver usando uma chave privada criptografada, também deverá fornecer uma senha de chave privada ao autenticar no Experience Platform. Leia o guia em [recuperando sua [!DNL Snowflake] chave privada](../../../../connectors/databases/snowflake.md) para obter mais informações. |
 | Senha da chave privada | A senha da chave privada é uma camada adicional de segurança que deve ser usada ao autenticar com uma chave privada criptografada. Não é necessário fornecer a senha se você estiver usando uma chave privada não criptografada. |
 | Banco de dados | O banco de dados [!DNL Snowflake] que contém os dados que você deseja assimilar no Experience Platform. |
 | Warehouse | O warehouse [!DNL Snowflake] gerencia o processo de execução da consulta para o aplicativo. Cada warehouse [!DNL Snowflake] é independente um do outro e deve ser acessado individualmente ao trazer dados para a plataforma. |
@@ -60,8 +60,6 @@ Para usar a autenticação de par de chaves, você deve gerar um par de chaves R
 Para obter mais informações sobre esses valores, consulte [este documento Snowflake](https://docs.snowflake.com/en/user-guide/key-pair-auth.html).
 
 >[!ENDTABS]
-
-Para acessar sua conta Snowflake no Experience Platform, você deve fornecer o seguinte valor de autenticação:
 
 >[!NOTE]
 >

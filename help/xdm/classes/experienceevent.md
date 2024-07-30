@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Classe XDM ExperienceEvent
 description: Saiba mais sobre a classe XDM ExperienceEvent e as práticas recomendadas para modelagem de dados de evento.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: 5537485206c1625ca661d6b33f7bba08538a0fa3
 workflow-type: tm+mt
-source-wordcount: '2672'
+source-wordcount: '2761'
 ht-degree: 0%
 
 ---
@@ -105,6 +105,7 @@ A tabela a seguir descreve os valores aceitos para `eventType`, juntamente com s
 | `advertising.timePlayed` | Esse evento rastreia a quantidade de tempo gasto por um usuário em um ativo de mídia temporizado específico. |
 | `application.close` | Esse evento rastreia quando um aplicativo foi fechado ou enviado para o plano de fundo. |
 | `application.launch` | Esse evento rastreia quando um aplicativo foi iniciado ou trazido para o primeiro plano. |
+| `click` | **Obsoleto** Em vez disso, use `decisioning.propositionInteract`. |
 | `commerce.backofficeCreditMemoIssued` | Esse evento rastreia quando um aviso de crédito é emitido para um cliente. |
 | `commerce.backofficeOrderCancelled` | Este evento rastreia quando um processo de compra iniciado anteriormente foi encerrado antes da conclusão. |
 | `commerce.backofficeOrderItemsShipped` | Esse evento rastreia quando os itens comprados foram fisicamente entregues ao cliente. |
@@ -119,11 +120,12 @@ A tabela a seguir descreve os valores aceitos para `eventType`, juntamente com s
 | `commerce.productViews` | Esse evento rastreia quando um produto recebe uma ou mais visualizações. |
 | `commerce.purchases` | Esse evento rastreia quando um pedido é aceito. Essa é a única ação necessária em uma conversão de comércio. Um evento de compra deve ter uma lista de produtos referida. |
 | `commerce.saveForLaters` | Esse evento rastreia quando uma lista de produtos é salva para uso futuro, como uma lista de desejos de produtos. |
-| `decisioning.propositionDisplay` | Esse evento rastreia quando uma apresentação de decisão era exibida a uma pessoa. |
-| `decisioning.propositionDismiss` | Esse evento é rastreado quando é tomada a decisão de não se envolver com a oferta apresentada. |
-| `decisioning.propositionInteract` | Esse evento rastreia quando uma pessoa interagiu com uma apresentação de decisão. |
+| `decisioning.propositionDisplay` | Esse evento é usado quando o SDK da Web envia automaticamente informações sobre o que está sendo exibido em uma página. No entanto, você não precisará desse tipo de evento se já estiver incluindo informações de exibição de outras maneiras, como com ocorrências na parte superior e inferior da página. Na parte inferior das ocorrências da página, você pode escolher qualquer tipo de evento que desejar. |
+| `decisioning.propositionDismiss` | Esse tipo de evento é usado quando uma mensagem no aplicativo do Adobe Journey Optimizer ou um cartão de conteúdo é descartado. |
+| `decisioning.propositionFetch` | Usado para indicar que um evento é principalmente para buscar decisões. O Adobe Analytics descartará esse evento automaticamente. |
+| `decisioning.propositionInteract` | Esse tipo de evento é usado para rastrear interações, como cliques, em conteúdo personalizado. |
 | `decisioning.propositionSend` | Esse evento é rastreado quando é decidido enviar a um cliente potencial uma recomendação ou oferta para consideração. |
-| `decisioning.propositionTrigger` | Esse evento rastreia a ativação de um processo de apresentação. Ocorreu uma determinada condição ou ação para solicitar a apresentação de uma oferta. |
+| `decisioning.propositionTrigger` | Eventos desse tipo são armazenados no armazenamento local pelo [SDK da Web](../../web-sdk/home.md), mas não são enviados para a Experience Edge. Sempre que um conjunto de regras é satisfeito, um evento é gerado e armazenado no armazenamento local (se essa configuração estiver ativada). |
 | `delivery.feedback` | Esse evento rastreia eventos de feedback para um delivery, como um delivery de email. |
 | `directMarketing.emailBounced` | Esse evento rastreia quando um email para uma pessoa é rejeitado. |
 | `directMarketing.emailBouncedSoft` | Esse evento rastreia quando um email para uma pessoa é rejeitado temporariamente. |
@@ -132,6 +134,7 @@ A tabela a seguir descreve os valores aceitos para `eventType`, juntamente com s
 | `directMarketing.emailOpened` | Esse evento rastreia quando uma pessoa abriu um email de marketing. |
 | `directMarketing.emailSent` | Esse evento rastreia quando um email de marketing foi enviado a uma pessoa. |
 | `directMarketing.emailUnsubscribed` | Esse evento é rastreado quando uma pessoa cancela a assinatura de um email de marketing. |
+| `display` | **Obsoleto** Em vez disso, use `decisioning.propositionDisplay`. |
 | `inappmessageTracking.dismiss` | Esse evento rastreia quando uma mensagem no aplicativo é descartada. |
 | `inappmessageTracking.display` | Esse evento rastreia quando uma mensagem no aplicativo é exibida. |
 | `inappmessageTracking.interact` | Esse evento rastreia quando uma mensagem no aplicativo teve interação. |
@@ -146,33 +149,34 @@ A tabela a seguir descreve os valores aceitos para `eventType`, juntamente com s
 | `leadOperation.statusInCampaignProgressionChanged` | Este evento é rastreado quando o status de um lead em uma campanha é alterado. |
 | `listOperation.addToList` | Esse evento rastreia quando uma pessoa foi adicionada a uma lista de marketing. |
 | `listOperation.removeFromList` | Esse evento rastreia quando uma pessoa foi removida de uma lista de marketing. |
-| `media.adBreakComplete` | Este evento rastreia quando um evento `adBreakComplete` ocorreu. Esse evento é acionado no início de um ad break. |
-| `media.adBreakStart` | Este evento rastreia quando um evento `adBreakStart` ocorreu. Esse evento é acionado no final de um ad break. |
-| `media.adComplete` | Este evento rastreia quando um evento `adComplete` ocorreu. Esse evento é acionado quando um anúncio é concluído. |
-| `media.adSkip` | Este evento rastreia quando um evento `adSkip` ocorreu. Esse evento é disparado quando um anúncio é ignorado. |
-| `media.adStart` | Este evento rastreia quando um evento `adStart` ocorreu. Esse evento é acionado quando um anúncio é iniciado. |
-| `media.bitrateChange` | Este evento rastreia quando um evento `bitrateChange` ocorreu. Esse evento é acionado quando há uma alteração na taxa de bits. |
-| `media.bufferStart` | Este evento rastreia quando um evento `bufferStart` ocorreu. Esse evento é disparado quando a mídia começou a ser armazenada em buffer. |
-| `media.chapterComplete` | Este evento rastreia quando um evento `chapterComplete` ocorreu. Esse evento é acionado na conclusão de um capítulo na mídia. |
-| `media.chapterSkip` | Este evento rastreia quando um evento `chapterSkip` ocorreu. Esse evento é acionado quando um usuário pula para frente ou para trás para outra seção ou capítulo no conteúdo de mídia. |
-| `media.chapterStart` | Este evento rastreia quando um evento `chapterStart` ocorreu. Esse evento é acionado no início de uma seção ou capítulo específico no conteúdo de mídia. |
+| `media.adBreakComplete` | Esse evento sinaliza a conclusão de um ad break. |
+| `media.adBreakStart` | Esse evento sinaliza o início de um ad break. |
+| `media.adComplete` | Esse evento sinaliza a conclusão de um anúncio. |
+| `media.adSkip` | Esse evento sinaliza quando um anúncio é ignorado. |
+| `media.adStart` | Esse evento sinaliza o início de um anúncio. |
+| `media.bitrateChange` | Esse evento sinaliza quando há uma alteração na taxa de bits. |
+| `media.bufferStart` | O tipo de evento `media.bufferStart` é enviado quando o buffering começa. Não há um tipo de evento `bufferResume` específico; considera-se que o buffering foi retomado quando um evento `play` é enviado após um evento `bufferStart`. |
+| `media.chapterComplete` | Este evento sinaliza a conclusão de um capítulo. |
+| `media.chapterSkip` | Esse evento é acionado quando um usuário passa para frente ou para trás em outra seção ou capítulo. |
+| `media.chapterStart` | Esse evento sinaliza o início de um capítulo. |
 | `media.downloaded` | Esse evento rastreia quando o conteúdo de download de mídia ocorreu. |
-| `media.error` | Este evento rastreia quando um evento `error` ocorreu. Esse evento é disparado quando ocorre um erro ou problema durante a reprodução da mídia. |
-| `media.pauseStart` | Este evento rastreia quando um evento `pauseStart` ocorreu. Esse evento é acionado quando um usuário inicia uma pausa na reprodução de mídia. |
-| `media.ping` | Este evento rastreia quando um evento `ping` ocorreu. Isso verifica a disponibilidade de um recurso de mídia. |
-| `media.play` | Este evento rastreia quando um evento `play` ocorreu. Esse evento é acionado quando o conteúdo de mídia está sendo reproduzido, indicando o consumo ativo pelo usuário. |
-| `media.sessionComplete` | Este evento rastreia quando um evento `sessionComplete` ocorreu. Esse evento marca o fim de uma sessão de reprodução de mídia. |
-| `media.sessionEnd` | Este evento rastreia quando um evento `sessionEnd` ocorreu. Esse evento indica a conclusão de uma sessão de mídia. Essa conclusão pode envolver o fechamento do reprodutor de mídia ou a interrupção da reprodução. |
-| `media.sessionStart` | Este evento rastreia quando um evento `sessionStart` ocorreu. Esse evento marca o início de uma sessão de reprodução de mídia. É acionado quando um usuário começa a reproduzir um arquivo de mídia. |
-| `media.statesUpdate` | Este evento rastreia quando um evento `statesUpdate` ocorreu. Os recursos de rastreamento do estado do player podem ser anexados a um fluxo de áudio ou vídeo. Os estados padrão são: tela cheia, mudo, legendas ocultas, picture in picture e em foco. |
+| `media.error` | Esse evento sinaliza quando um erro ocorreu durante a reprodução da mídia. |
+| `media.pauseStart` | Este evento rastreia quando um evento `pauseStart` ocorreu. Esse evento é acionado quando um usuário inicia uma pausa na reprodução de mídia. Não há um tipo de evento de retomada. Um currículo é inferido quando você envia um evento de reprodução após um `pauseStart`. |
+| `media.ping` | O tipo de evento `media.ping` é usado para indicar o status de reprodução em andamento. Para o conteúdo principal, esse evento deve ser enviado a cada 10 segundos durante a reprodução, começando 10 segundos após o início da reprodução. Para conteúdo de anúncio, ele deve ser enviado a cada segundo durante o rastreamento do anúncio. Os eventos de ping não devem incluir o mapa de parâmetros no corpo da solicitação. |
+| `media.play` | O tipo de evento `media.play` é enviado quando o player faz a transição para o estado `playing` a partir de outro estado, como `buffering,` `paused` (quando retomado pelo usuário) ou `error` (quando recuperado), incluindo cenários como reprodução automática. Este evento é disparado pelo retorno de chamada `on('Playing')` do player. |
+| `media.sessionComplete` | Esse evento é enviado quando o fim do conteúdo principal é atingido. |
+| `media.sessionEnd` | O tipo de evento `media.sessionEnd` notifica o back-end do Media Analytics para fechar imediatamente uma sessão quando um usuário abandona a visualização e é improvável que retorne. Se esse evento não for enviado, a sessão expirará após 10 minutos de inatividade ou 30 minutos sem movimento do indicador de reprodução. Quaisquer chamadas de mídia subsequentes com essa ID de sessão serão ignoradas. |
+| `media.sessionStart` | O tipo de evento `media.sessionStart` é enviado com a chamada de iniciação de sessão. Ao receber uma resposta, a ID da sessão é extraída do cabeçalho Localização e usada para todas as chamadas de evento subsequentes para o servidor de coleta. |
+| `media.statesUpdate` | Este evento rastreia quando um evento `statesUpdate` ocorreu. Os recursos de rastreamento do estado do player podem ser anexados a um fluxo de áudio ou vídeo. Os estados padrão são: `fullscreen`, `mute`, `closedCaptioning`, `pictureInPicture` e `inFocus`. |
 | `opportunityEvent.addToOpportunity` | Esse evento rastreia quando uma pessoa foi adicionada a uma oportunidade. |
 | `opportunityEvent.opportunityUpdated` | Esse evento rastreia quando uma oportunidade é atualizada. |
 | `opportunityEvent.removeFromOpportunity` | Este evento rastreia quando uma pessoa foi removida de uma oportunidade. |
+| `personalization.request` | **Obsoleto** Em vez disso, use `decisioning.propositionFetch`. |
 | `pushTracking.applicationOpened` | Esse evento rastreia quando uma pessoa abriu um aplicativo a partir de uma notificação por push. |
 | `pushTracking.customAction` | Esse evento é rastreado quando uma pessoa seleciona uma ação personalizada em uma notificação por push. |
 | `web.formFilledOut` | Esse evento rastreia quando uma pessoa preenche um formulário em uma página da Web. |
-| `web.webinteraction.linkClicks` | Esse evento rastreia quando um link é selecionado uma ou mais vezes. |
-| `web.webpagedetails.pageViews` | Esse evento rastreia quando uma página da Web recebe uma ou mais exibições. |
+| `web.webinteraction.linkClicks` | O evento sinaliza que um clique em um link foi registrado automaticamente pelo SDK da Web. |
+| `web.webpagedetails.pageViews` | Esse tipo de evento é o método padrão para marcar a ocorrência como uma exibição de página. |
 | `location.entry` | Esse evento rastreia a entrada de uma pessoa ou dispositivo em um local específico. |
 | `location.exit` | Esse evento rastreia a saída de uma pessoa ou dispositivo de um local específico. |
 

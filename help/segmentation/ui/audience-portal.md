@@ -2,9 +2,9 @@
 title: Visão geral do Audience Portal
 description: Saiba como usar o Audience Portal para exibir, gerenciar e criar públicos no Adobe Experience Platform.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 2d15ba41ff326034a6f9a32301f67f5d3b2a1c14
+source-git-commit: 527c9bf7ff60ceb1e621ccac5a88b8e9eb32ebfb
 workflow-type: tm+mt
-source-wordcount: '3725'
+source-wordcount: '3826'
 ht-degree: 3%
 
 ---
@@ -25,6 +25,7 @@ No Audience Portal, você pode realizar as seguintes tarefas:
 - [Criar um público-alvo](#create-audience)
    - [Usar o Construtor de segmentos para criar um público-alvo](#segment-builder)
    - [Usar composição de público-alvo para criar um público-alvo](#audience-composition)
+   - [Use a Federated Audience Composition para criar um público-alvo usando dados de seu data warehouse existente](#fac) (Disponibilidade limitada)
 - [Importar públicos gerados externamente](#import-audience)
 
 Para abrir o Portal de público-alvo, selecione a guia **[!UICONTROL Procurar]** na seção Segmentação.
@@ -339,6 +340,12 @@ Selecionar **[!UICONTROL Compor públicos-alvo]** leva você à Composição de 
 Selecionar a **[!UICONTROL regra de compilação]** leva você ao Construtor de segmentos. Esse espaço de trabalho fornece controles intuitivos para criar e editar definições de segmento, como blocos de arrastar e soltar usados para representar propriedades de dados. Para saber mais sobre como criar definições de segmento, leia o [Guia do Construtor de segmentos](./segment-builder.md)
 
 ![O espaço de trabalho do Construtor de segmentos é exibido.](../images/ui/audience-portal/segment-builder.png)
+
+### Composição federada de público-alvo {#fac}
+
+Além das composições de público-alvo e definições de segmento, você pode usar a Composição de público-alvo federado do Adobe para criar novos públicos-alvo a partir de conjuntos de dados corporativos sem copiar os dados subjacentes e armazená-los no Portal de público-alvo da Adobe Experience Platform. Você também pode enriquecer os públicos-alvo existentes no Adobe Experience Platform utilizando dados de público-alvo compostos que foram federados a partir do data warehouse corporativo. Leia o guia em [Composição de Público-Alvo Federado](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home).
+
+![Uma lista de públicos-alvo criados na Composição de Público Federado para sua organização.](../images/ui/overview/federated-audience-composition.png)
 
 ## Importação de um público-alvo {#import-audience}
 

@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Visão geral da interface do Experience Platform
 description: Adobe Experience Platform
 exl-id: 47f9a3fb-731d-4ade-8069-faaa18f224dc
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 9844a7bf5e7198e7d5112ec924220aba71cdc14b
 workflow-type: tm+mt
-source-wordcount: '1795'
-ht-degree: 1%
+source-wordcount: '1947'
+ht-degree: 2%
 
 ---
 
@@ -29,13 +29,13 @@ O painel de métricas fornece cartões que fornecem informações sobre conjunto
 
 ![](images/user-guide/homepage-dashboard.png)
 
-A seção **[!UICONTROL Conjuntos de Dados]** mostra o número de conjuntos de dados na organização. Esse número é atualizado quando um novo conjunto de dados é criado. Mais informações sobre conjuntos de dados podem ser encontradas na [visão geral sobre conjuntos de dados](../catalog/datasets/overview.md).
+A seção **[!UICONTROL Conjuntos de Dados]** mostra o número de conjuntos de dados na organização. Esse número é atualizado quando um novo conjunto de dados é criado. Você pode encontrar mais informações sobre conjuntos de dados na [visão geral sobre conjuntos de dados](../catalog/datasets/overview.md).
 
-A seção **[!UICONTROL Perfis]** mostra o número total de pessoas com perfis em sua organização, excluindo fragmentos de perfil. Esse número total de pessoas representa o público-alvo endereçável total e é atualizado uma vez a cada 24 horas. Mais informações sobre perfis podem ser encontradas na [Visão geral do Perfil do cliente em tempo real](../profile/home.md).
+A seção **[!UICONTROL Perfis]** mostra o número total de pessoas com perfis em sua organização, excluindo fragmentos de perfil. Esse número total de pessoas representa o público-alvo endereçável total e é atualizado uma vez a cada 24 horas. Você pode encontrar mais informações sobre perfis na [Visão geral do Perfil do cliente em tempo real](../profile/home.md).
 
-A seção **[!UICONTROL Segmentos]** mostra o número total de segmentos criados em sua organização. Esse número é atualizado quando um novo segmento é criado. Mais informações sobre segmentos podem ser encontradas na [Visão geral do Serviço de segmentação](../segmentation/home.md).
+A seção **[!UICONTROL Segmentos]** mostra o número total de segmentos criados em sua organização. Esse número é atualizado quando um novo segmento é criado. Você pode encontrar mais informações sobre segmentos na [visão geral do Serviço de segmentação](../segmentation/home.md).
 
-A seção **[!UICONTROL Destinos]** mostra o número total de destinos criados para a organização. Esse número é atualizado quando um novo destino é criado. Mais informações sobre destinos podem ser encontradas na [visão geral sobre destinos](../destinations/home.md).
+A seção **[!UICONTROL Destinos]** mostra o número total de destinos criados para a organização. Esse número é atualizado quando um novo destino é criado. Você pode encontrar mais informações sobre destinos na [visão geral sobre destinos](../destinations/home.md).
 
 ### Dados recentes
 
@@ -43,13 +43,13 @@ O painel de dados recentes fornece informações sobre conjuntos de dados, fonte
 
 ![](images/user-guide/homepage-recent.png)
 
-A seção **[!UICONTROL Conjuntos de dados recentes]** lista os cinco conjuntos de dados criados mais recentemente na organização. Essa lista é atualizada sempre que um novo conjunto de dados é criado. Você pode selecionar um conjunto de dados na lista para exibir mais informações sobre o conjunto de dados especificado ou selecionar **[!UICONTROL Exibir todos]** para ver uma lista de todos os conjuntos de dados criados. Mais informações sobre conjuntos de dados podem ser encontradas na [visão geral sobre conjuntos de dados](../catalog/datasets/overview.md).
+A seção **[!UICONTROL Conjuntos de dados recentes]** lista os cinco conjuntos de dados criados mais recentemente na organização. Essa lista é atualizada sempre que um novo conjunto de dados é criado. Você pode selecionar um conjunto de dados na lista para exibir. Você pode encontrar mais informações sobre o conjunto de dados especificado ou selecionar **[!UICONTROL Exibir todos]** para ver uma lista de todos os conjuntos de dados criados. Você pode encontrar mais informações sobre conjuntos de dados na [visão geral sobre conjuntos de dados](../catalog/datasets/overview.md).
 
-A seção **[!UICONTROL Fontes recentes]** lista os cinco conectores de origem criados mais recentemente na organização. Essa lista é atualizada sempre que um novo conector de origem é criado. Você pode selecionar uma conexão de origem na lista para exibir mais informações sobre o conector especificado ou selecionar **[!UICONTROL Exibir tudo]** para ver uma lista de todas as conexões de origem criadas. Mais informações sobre origens podem ser encontradas na [visão geral das origens](../sources/home.md).
+A seção **[!UICONTROL Fontes recentes]** lista os cinco conectores de origem criados mais recentemente na organização. Essa lista é atualizada sempre que um novo conector de origem é criado. Você pode selecionar uma conexão de origem na lista para exibir. Você pode encontrar mais informações sobre o conector especificado ou selecionar **[!UICONTROL Exibir tudo]** para ver uma lista de todas as conexões de origem criadas. Você pode encontrar mais informações sobre fontes na [visão geral das fontes](../sources/home.md).
 
-A seção **[!UICONTROL Segmentos recentes]** lista as cinco definições de segmento criadas mais recentemente na organização. Essa lista é atualizada sempre que uma nova definição de segmento é criada. Você pode selecionar uma definição de segmento na lista para ver mais informações sobre a definição de segmento especificada ou selecionar **[!UICONTROL Exibir todos]** para ver uma lista de todas as definições de segmento criadas. Mais informações sobre segmentos podem ser encontradas na [Visão geral do Serviço de segmentação](../segmentation/home.md).
+A seção **[!UICONTROL Segmentos recentes]** lista as cinco definições de segmento criadas mais recentemente na organização. Essa lista é atualizada sempre que uma nova definição de segmento é criada. Você pode selecionar uma definição de segmento na lista para exibi-la. Você pode encontrar mais informações sobre a definição de segmento especificada ou selecionar **[!UICONTROL Exibir tudo]** para ver uma lista de todas as definições de segmento criadas. Você pode encontrar mais informações sobre segmentos na [visão geral do Serviço de segmentação](../segmentation/home.md).
 
-A seção **[!UICONTROL Destinos recentes]** lista os cinco destinos criados mais recentemente na organização. Essa lista é atualizada sempre que um novo destino é criado. Você pode selecionar um destino na lista para ver mais informações sobre o destino especificado ou selecionar **[!UICONTROL Exibir todos]** para ver uma lista de todos os destinos criados. Mais informações sobre destinos podem ser encontradas na [visão geral sobre destinos](../destinations/home.md).
+A seção **[!UICONTROL Destinos recentes]** lista os cinco destinos criados mais recentemente na organização. Essa lista é atualizada sempre que um novo destino é criado. Você pode selecionar um destino na lista para exibição. Você pode encontrar mais informações sobre o destino especificado ou selecionar **[!UICONTROL Exibir todos]** para ver uma lista de todos os destinos criados. Você pode encontrar mais informações sobre destinos na [visão geral sobre destinos](../destinations/home.md).
 
 ### Aprendizado recomendado
 
@@ -97,7 +97,7 @@ Você pode alternar entre o tema claro e escuro da interface da Platform com o s
 
 ### Sandboxes
 
-Imediatamente abaixo da barra de navegação superior está a barra de sandbox. Esta barra mostra qual sandbox você está usando atualmente para a Platform. Mais informações sobre sandboxes podem ser encontradas na [visão geral das sandboxes](../sandboxes/home.md).
+Imediatamente abaixo da barra de navegação superior está a barra de sandbox. Esta barra mostra qual sandbox você está usando atualmente para a Platform. Você pode encontrar mais informações sobre sandboxes na [visão geral das sandboxes](../sandboxes/home.md).
 
 ## Navegação à esquerda {#left-nav}
 
@@ -117,45 +117,58 @@ Você pode bloquear a navegação na posição aberta clicando novamente depois 
 
 A seção **[!UICONTROL Página inicial]** permite retornar à página inicial da interface do usuário da plataforma.
 
-A seção **[!UICONTROL Fluxos de trabalho]** mostra uma lista de fluxos de trabalho de várias etapas para executar operações na Plataforma. Mais informações sobre fluxos de trabalho podem ser encontradas na [visão geral sobre fluxos de trabalho](./workflows.md).
+A seção **[!UICONTROL Fluxos de trabalho]** mostra uma lista de fluxos de trabalho de várias etapas para executar operações na Plataforma. Você pode encontrar mais informações sobre fluxos de trabalho na [visão geral sobre fluxos de trabalho](./workflows.md).
 
 ### [!UICONTROL Conexões]
 
-A seção **[!UICONTROL Fontes]** permite criar, atualizar e excluir conexões de origem, permitindo assimilar dados de fontes externas na Platform. Mais informações sobre origens podem ser encontradas na [visão geral das origens](../sources/home.md).
+A seção **[!UICONTROL Fontes]** permite criar, atualizar e excluir conexões de origem, permitindo assimilar dados de fontes externas na Platform. Você pode encontrar mais informações sobre fontes na [visão geral das fontes](../sources/home.md).
 
-A seção **[!UICONTROL Destinos]** permite criar, atualizar e excluir destinos, permitindo exportar dados da Platform para vários destinos externos. Mais informações sobre destinos podem ser encontradas na [visão geral sobre destinos](../destinations/home.md).
+A seção **[!UICONTROL Destinos]** permite criar, atualizar e excluir destinos, permitindo exportar dados da Platform para vários destinos externos. Você pode encontrar mais informações sobre destinos na [visão geral sobre destinos](../destinations/home.md).
 
 ### [!UICONTROL Cliente]
 
-A seção **[!UICONTROL Perfis]** permite procurar perfis de clientes, exibir métricas de perfil, criar e gerenciar políticas de mesclagem e exibir esquemas de união. Para saber mais sobre como usar a seção [!UICONTROL Perfis], leia o [[!DNL Profile] guia do usuário](../profile/ui/user-guide.md). Mais informações sobre o Perfil do cliente em tempo real podem ser encontradas na [Visão geral do Perfil do cliente em tempo real](../profile/home.md).
+A seção **[!UICONTROL Perfis]** permite procurar perfis de clientes, exibir métricas de perfil, criar e gerenciar políticas de mesclagem e exibir esquemas de união. Para saber mais sobre como usar a seção [!UICONTROL Perfis], leia o [[!DNL Profile] guia do usuário](../profile/ui/user-guide.md). Você pode encontrar mais informações sobre o Perfil de cliente em tempo real na [Visão geral do Perfil de cliente em tempo real](../profile/home.md).
 
-A seção **[!UICONTROL Audiences]** permite criar e gerenciar definições de segmento. Para saber mais sobre como usar a seção [!UICONTROL Públicos-alvo], leia o [guia do usuário de segmentação](../segmentation/ui/overview.md). Mais informações sobre o Serviço de segmentação podem ser encontradas na [visão geral do Serviço de segmentação](../segmentation/home.md).
+A seção **[!UICONTROL Audiences]** permite criar e gerenciar definições de segmento. Para saber mais sobre como usar a seção [!UICONTROL Públicos-alvo], leia o [guia do usuário de segmentação](../segmentation/ui/overview.md). Você pode encontrar mais informações sobre o Serviço de segmentação na [visão geral do Serviço de segmentação](../segmentation/home.md).
 
 A seção **[!UICONTROL Identidades]** permite criar e gerenciar namespaces de identidade. Para obter mais informações sobre a seção [!UICONTROL Identidades], incluindo informações sobre namespaces de identidade e como usar identidades na interface da Platform, consulte a [visão geral sobre namespaces de identidade](../identity-service/features/namespaces.md).
 
 ### [!UICONTROL Privacidade]
 
-A seção **[!UICONTROL Políticas]** permite criar e gerenciar políticas de uso de dados. Para saber mais sobre como usar a seção Políticas, leia o [guia do usuário de políticas de uso de dados](../data-governance/policies/user-guide.md). Mais informações sobre políticas de uso de dados podem ser encontradas na [visão geral das políticas de uso de dados](../data-governance/policies/overview.md).
+A seção **[!UICONTROL Políticas]** permite criar e gerenciar políticas de uso de dados. Para saber mais sobre como usar a seção Políticas, leia o [guia do usuário de políticas de uso de dados](../data-governance/policies/user-guide.md). Você pode encontrar mais informações sobre políticas de uso de dados na [visão geral das políticas de uso de dados](../data-governance/policies/overview.md).
 
-A seção **[!UICONTROL Solicitações]** permite criar e gerenciar solicitações de privacidade. Incluir na lista de permissões Observe que você deve ser atualizado para ter acesso à interface do usuário do Privacy Service. Para saber mais sobre como usar a seção Solicitações, leia o [guia do usuário do Privacy Service](../privacy-service/ui/user-guide.md). Mais informações sobre o Privacy Service podem ser encontradas na [visão geral do Privacy Service](../privacy-service/home.md).
+A seção **[!UICONTROL Solicitações]** permite criar e gerenciar solicitações de privacidade. Incluir na lista de permissões Observe que você deve ser atualizado para ter acesso à interface do usuário do Privacy Service. Para saber mais sobre como usar a seção Solicitações, leia o [guia do usuário do Privacy Service](../privacy-service/ui/user-guide.md). Você pode encontrar mais informações sobre o Privacy Service na [visão geral do Privacy Service](../privacy-service/home.md).
 
 ### [!UICONTROL Ciência de dados]
 
-A seção **[!UICONTROL Notebooks]** fornece acesso ao JupyterLab, um ambiente de desenvolvimento interativo que permite explorar, analisar e modelar seus dados. Para saber mais sobre como usar a seção Notebooks, leia o [guia do usuário do JupyterLab](../data-science-workspace/jupyterlab/overview.md). Mais informações sobre o Data Science Workspace podem ser encontradas na [visão geral do Data Science Workspace](../data-science-workspace/home.md)
+A seção **[!UICONTROL Notebooks]** fornece acesso ao JupyterLab, um ambiente de desenvolvimento interativo que permite explorar, analisar e modelar seus dados. Para saber mais sobre como usar a seção Notebooks, leia o [guia do usuário do JupyterLab](../data-science-workspace/jupyterlab/overview.md). Você pode encontrar mais informações sobre o Data Science Workspace na [visão geral do Data Science Workspace](../data-science-workspace/home.md)
 
-A seção **[!UICONTROL Modelos]** permite usar o aprendizado de máquina e a inteligência artificial para criar, desenvolver, treinar e ajustar modelos e fazer previsões. Mais informações sobre a seção Modelos podem ser encontradas no tutorial sobre [treinamento e avaliação de um modelo](../data-science-workspace/models-recipes/train-evaluate-model-ui.md).
+A seção **[!UICONTROL Modelos]** permite usar o aprendizado de máquina e a inteligência artificial para criar, desenvolver, treinar e ajustar modelos e fazer previsões. Você pode encontrar mais informações sobre a seção Modelos no tutorial sobre [treinamento e avaliar um modelo](../data-science-workspace/models-recipes/train-evaluate-model-ui.md).
 
-A seção **[!UICONTROL Serviços]** permite gerenciar os modelos publicados para treinamento e pontuação agendados ou usar os Serviços inteligentes do Adobe, um conjunto de serviços de IA que fornecem experiências do cliente personalizadas e em tempo real. Mais informações sobre a seção Serviços podem ser encontradas no [tutorial Publicação de um Modelo como um Serviço](../data-science-workspace/models-recipes/publish-model-service-ui.md).
+A seção **[!UICONTROL Serviços]** permite gerenciar os modelos publicados para treinamento e pontuação agendados ou usar os Serviços inteligentes do Adobe, um conjunto de serviços de IA que fornecem experiências do cliente personalizadas e em tempo real. Você pode encontrar mais informações sobre a seção Serviços no [tutorial Publicação de um modelo como um serviço](../data-science-workspace/models-recipes/publish-model-service-ui.md).
 
 ### [!UICONTROL Gerenciamento de dados]
 
-A seção **[!UICONTROL Esquemas]** permite criar e gerenciar esquemas do Experience Data Model (XDM). Para saber mais sobre esquemas, leia o tutorial sobre [criação de um esquema](../xdm/tutorials/create-schema-ui.md). Mais informações sobre o XDM podem ser encontradas na [visão geral do Sistema XDM](../xdm/home.md).
+A seção **[!UICONTROL Esquemas]** permite criar e gerenciar esquemas do Experience Data Model (XDM). Para saber mais sobre esquemas, leia o tutorial sobre [criação de um esquema](../xdm/tutorials/create-schema-ui.md). Você pode encontrar mais informações sobre o XDM na [Visão geral do sistema XDM](../xdm/home.md).
 
-A seção **[!UICONTROL Datasets]** permite criar e gerenciar conjuntos de dados. Mais informações sobre conjuntos de dados podem ser encontradas no [guia do usuário dos conjuntos de dados](../catalog/datasets/user-guide.md).
+A seção **[!UICONTROL Datasets]** permite criar e gerenciar conjuntos de dados. Você pode encontrar mais informações sobre conjuntos de dados no [guia do usuário de conjuntos de dados](../catalog/datasets/user-guide.md).
 
-A seção **[!UICONTROL Consultas]** permite criar e gerenciar consultas, registrar consultas SQL feitas pelo Serviço de Consulta da Adobe Experience Platform e exibir suas credenciais do [!DNL PostgreSQL]. Mais informações sobre consultas podem ser encontradas no [guia do usuário do Serviço de Consulta](../query-service/ui/overview.md).
+A seção **[!UICONTROL Consultas]** permite criar e gerenciar consultas, registrar consultas SQL feitas pelo Serviço de Consulta da Adobe Experience Platform e exibir suas credenciais do [!DNL PostgreSQL]. Você pode encontrar mais informações sobre consultas no [guia do usuário do Serviço de consulta](../query-service/ui/overview.md).
 
-A seção **[!UICONTROL Monitoramento]** permite monitorar a assimilação de lote e streaming. Mais informações sobre monitoramento podem ser encontradas no [guia do usuário de assimilação de dados de monitoramento](../ingestion/quality/monitor-data-ingestion.md).
+A seção **[!UICONTROL Monitoramento]** permite monitorar a assimilação de lote e streaming. Você pode encontrar mais informações sobre monitoramento no [guia do usuário de assimilação de dados de monitoramento](../ingestion/quality/monitor-data-ingestion.md).
+
+### [!UICONTROL Dados federados] (disponibilidade limitada)
+
+A seção **[!UICONTROL Modelos]** permite projetar e criar modelos de dados e esquemas que definem a estrutura, as relações e as restrições de seus dados. Você pode encontrar mais informações sobre modelos de dados e esquemas no [guia do usuário da Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/config/datamodel/schemas).
+
+A seção **[!UICONTROL Trilha de auditoria]** fornece um registro detalhado e cronológico de todas as ações e eventos que foram feitos em seu ambiente em tempo real. Você pode encontrar mais informações sobre a trilha de auditoria no [Guia do usuário da Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/audit-trail/audit-trail).
+
+
+A seção **[!UICONTROL Federated databases]** permite conectar o Adobe Experience Platform ao data warehouse da sua empresa. Você pode encontrar mais informações sobre conexão com bancos de dados federados no [guia do usuário do Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/config/federated-db).
+
+>[!AVAILABILITY]
+>
+>No momento, a Composição federada de público-alvo está disponível apenas para um conjunto de organizações (Disponibilidade limitada). Para obter mais informações, entre em contato com o seu representante da Adobe.
 
 ### [!UICONTROL Decisão]
 

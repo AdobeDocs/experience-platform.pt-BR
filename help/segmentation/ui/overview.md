@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guia da interface do usuário do Serviço de segmentação
 description: Saiba como criar e gerenciar públicos e definições de segmento na interface do usuário do Adobe Experience Platform.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 9844a7bf5e7198e7d5112ec924220aba71cdc14b
 workflow-type: tm+mt
-source-wordcount: '959'
-ht-degree: 1%
+source-wordcount: '1043'
+ht-degree: 2%
 
 ---
 
@@ -89,6 +89,12 @@ Um popover é exibido, listando todos os campos que podem ser exibidos dentro da
 Para ver como o público-alvo é composto, selecione o nome de um público-alvo na guia [!UICONTROL Públicos-alvo].
 
 A página Composição de público-alvo é exibida com os blocos fundamentais que compõem seu público-alvo. Para obter mais detalhes sobre como usar a Composição de público-alvo, leia o [Guia da interface do usuário da Composição de público-alvo](./audience-composition.md).
+
+## Composição federada de público-alvo {#fac}
+
+Além das composições de público-alvo e definições de segmento, você pode usar a Composição de público-alvo federado do Adobe para criar novos públicos-alvo a partir de conjuntos de dados corporativos sem copiar os dados subjacentes e armazená-los no Portal de público-alvo da Adobe Experience Platform. Você também pode enriquecer os públicos-alvo existentes no Adobe Experience Platform utilizando dados de público-alvo compostos que foram federados a partir do data warehouse corporativo. Leia o guia em [Composição de Público-Alvo Federado](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home).
+
+![Uma lista de públicos-alvo criados na Composição de Público Federado para sua organização.](../images/ui/overview/federated-audience-composition.png)
 
 ## Segmentação de transmissão {#streaming-segmentation}
 

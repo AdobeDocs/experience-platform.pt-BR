@@ -4,10 +4,10 @@ title: Painel de Uso da Licença
 description: A Adobe Experience Platform fornece um painel por meio do qual você pode visualizar informações importantes sobre o uso de licença da sua organização.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 3e465803b6c8fe11cef1633c0f0624465086c2a3
 workflow-type: tm+mt
-source-wordcount: '2103'
-ht-degree: 7%
+source-wordcount: '2328'
+ht-degree: 6%
 
 ---
 
@@ -64,6 +64,7 @@ Esse painel exibe todos os produtos licenciados da Adobe Experience Platform, in
 | **[!UICONTROL Valor da Licença]** | O valor contratado para a quantidade máxima da Métrica primária, conforme acordado no contrato de licença do produto. |
 | **[!UICONTROL Uso]** | A quantidade de sua métrica primária usada. Esse valor fornece o uso total dessa métrica em todas as sandboxes, seja de produção ou de desenvolvimento. |
 | **[!UICONTROL Uso %]** | A porcentagem da métrica principal usada de acordo com o valor da licença. |
+| **[!UICONTROL Uso de previsão]** | (**Beta**) A porcentagem de uso prevista de sua métrica primária de acordo com o valor da sua licença. |
 
 >[!NOTE]
 >
@@ -71,29 +72,57 @@ Esse painel exibe todos os produtos licenciados da Adobe Experience Platform, in
 
 A tabela indica a métrica principal de cada produto, pois cada produto pode rastrear várias métricas.
 
+### [!BADGE Beta]{type=Informative} Uso previsto {#predicted-usage}
+
+>[!AVAILABILITY]
+>
+A funcionalidade para prever o uso futuro da licença está atualmente na versão beta. A documentação e a funcionalidade estão sujeitas a alterações.
+
+Gerencie e otimize proativamente seus recursos de licenciamento com base em previsões de uso relevantes. A coluna [!UICONTROL Uso previsto] prevê com precisão o uso futuro de licenças no nível da sandbox, em todas as sandboxes de produção e desenvolvimento, para todos os produtos adquiridos. Esse recurso de alerta fornece uma previsão do uso de licenças por seis semanas no futuro, com base no seu uso até o dia 15 deste mês. As previsões são fornecidas com um limite inferior e superior.
+
+>[!IMPORTANT]
+>
+As previsões são atualizadas mensalmente. A data de atualização está incluída em um ícone de informações (![Este ícone de informações.](../images/license-usage/info-icon.png)) acima do título da coluna.
+
+Para ver um resumo de uso de um direito de produtos, selecione um produto na lista [!UICONTROL Visão geral].
+
+![O [!UICONTROL Uso da licença] [!UICONTROL Visão geral] com um produto e a coluna de uso previsto realçada.](../images/license-usage/product-predicted-usage.png)
+
+A guia Summary (Resumo) é exibida. Você pode usar as previsões granulares disponíveis nas guias [!UICONTROL Resumo] e [!UICONTROL Detalhes] para garantir uma tomada de decisão informada para o uso eficiente da licença.
+
+![O modo de exibição de resumo de um Produto da Plataforma com a coluna de uso previsto está realçado.](../images/license-usage/summary-predicted-usage.png)
+
+O recurso de uso previsto é compatível com as seguintes métricas:
+
+- [!UICONTROL Público-alvo endereçável]
+- [!UICONTROL Riqueza média de perfil]
+- [!UICONTROL Horas de computação]
+- [!UICONTROL Número de linhas do Público-alvo de Jornada do cliente]
+- [!UICONTROL Armazenamento total]
+
 ## Guia [!UICONTROL Resumo] {#summary-tab}
 
 Para exibir mais métricas e insights detalhados sobre o uso da licença do seu produto, selecione um nome de produto na lista. A exibição [!UICONTROL Resumo] desse produto é exibida. Todas as métricas disponíveis são exibidas na guia [!UICONTROL Resumo]. As métricas disponíveis dependem do produto licenciado. Esta exibição fornece **uma exibição consolidada de todas as métricas em todas as sandboxes de produção ou desenvolvimento**. O mesmo nível de análise é fornecido para sandboxes de produção e desenvolvimento.
 
 ![O modo de exibição de resumo de um Produto da Plataforma que mostra todas as métricas disponíveis para esse produto.](../images/license-usage/summary-tab.png)
 
-Na guia de resumo, a tabela inclui a coluna [!UICONTROL Métrica]. Essas descrições em formato legível por humanos indicam todas as métricas usadas para esse tipo de sandbox.
+Na guia de resumo, a tabela inclui a coluna [!UICONTROL Métrica]. Essas descrições em formato legível por humanos indicam todas as métricas usadas para esse tipo of sandbox.
 
 ### Selecionar uma sandbox {#select-sandbox}
 
-Para alterar a exibição entre tipos de sandbox de produção e desenvolvimento, selecione [!UICONTROL sandboxes de produção] ou [!UICONTROL sandboxes de desenvolvimento]. O tipo de sandbox selecionado é indicado pelo botão de opção ao lado do nome da sandbox.
+Para alterar a exibição entre tipos de sandbox de produção e desenvolvimento, select [!UICONTROL Sandboxes de produção] ou [!UICONTROL Sandboxes de desenvolvimento]. O tipo de sandbox selecionado is indicado pelo botão de opção ao lado do nome da sandbox.
 
-O relatório de consumo de sandboxes é cumulativo para todas as sandboxes do mesmo tipo. Em outras palavras, selecionar [!UICONTROL Produção] ou [!UICONTROL Desenvolvimento] fornece relatórios de consumo para todas as sandboxes de produção ou desenvolvimento, respectivamente.
+O relatório de consumo de sandboxes é cumulativo para todas as sandboxes do mesmo tipo. In em outras palavras, selecionar [!UICONTROL Produção] ou [!UICONTROL Desenvolvimento] fornece relatórios de consumo para todas as sandboxes de produção ou desenvolvimento, respectivamente.
 
 ![A exibição de resumo de um Produto de plataforma com sandboxes de produção e sandboxes de desenvolvimento realçadas.](../images/license-usage/summary-tab-sandboxes.png)
 
 >[!WARNING]
 >
->A permissão para exibir o painel de uso de licença deve ser especificada em nível de sandbox. Adicione permissões a cada sandbox individual para visualizá-las no painel. Essa limitação será abordada em uma versão futura. Enquanto isso, a seguinte solução alternativa está disponível:
+A permissão para exibir o painel de uso de licença deve ser especificada em nível de sandbox. Adicione permissões a cada sandbox individual para visualizá-las no painel. Essa limitação será abordada em uma versão futura. Enquanto isso, a seguinte solução alternativa está disponível:
 >
->1. Crie um perfil de produto no Adobe Admin Console.
->2. Em Permissão na categoria Sandbox, adicione todas as sandboxes que deseja visualizar no painel de uso de licença.
->3. Na categoria de Permissão do painel do usuário, adicione a permissão &quot;Exibir painel de uso da licença&quot;.
+1. Crie um perfil de produto no Adobe Admin Console.
+2. Em Permissão na categoria Sandbox, adicione todas as sandboxes que deseja visualizar no painel de uso de licença.
+3. Na categoria de Permissão do painel do usuário, adicione a permissão &quot;Exibir painel de uso da licença&quot;.
 
 ## A guia [!UICONTROL Detalhes] {#details-tab}
 
@@ -154,7 +183,7 @@ O painel de uso da licença relata várias métricas exclusivas que são aplicá
 
 >[!TIP]
 >
->Você pode verificar seus direitos de licença em seu Pedido de vendas para calcular métricas como sua &quot;Permissão de armazenamento&quot;.<br>Por exemplo,<ul><li>Abatimento de armazenamento = o número de &quot;perfis autorizados&quot; em seu contrato X Perfil médio Riqueza</li></ul>
+Você pode verificar seus direitos de licença em seu Pedido de vendas para calcular métricas como sua &quot;Permissão de armazenamento&quot;.<br>Por exemplo,<ul><li>Abatimento de armazenamento = o número de &quot;perfis autorizados&quot; em seu contrato X Perfil médio Riqueza</li></ul>
 
 A disponibilidade dessas métricas e a definição específica de cada uma delas variam de acordo com o licenciamento adquirido pela sua organização. Para obter definições detalhadas de cada métrica, consulte a documentação apropriada Descrição do produto:
 
@@ -169,7 +198,7 @@ A disponibilidade dessas métricas e a definição específica de cada uma delas
 
 >[!WARNING]
 >
->O painel de uso de licença relata apenas a licença mais recente que foi provisionada para sua organização. Se a licença mais recente provisionada para sua organização não aparecer na tabela acima, o painel de uso da licença pode não ser exibido corretamente. O suporte para licenças adicionais e várias licenças em uma única organização está planejado para uma versão futura.
+O painel de uso de licença relata apenas a licença mais recente que foi provisionada para sua organização. Se a licença mais recente provisionada para sua organização não aparecer na tabela acima, o painel de uso da licença pode não ser exibido corretamente. O suporte para licenças adicionais e várias licenças em uma única organização está planejado para uma versão futura.
 
 ## Próximas etapas
 

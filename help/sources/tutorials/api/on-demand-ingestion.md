@@ -3,7 +3,7 @@ keywords: Experience Platform;página inicial;tópicos populares;serviço de flu
 title: Criar uma execução de fluxo para assimilação sob demanda usando a API do serviço de fluxo
 description: Saiba como criar uma execução de fluxo para assimilação sob demanda usando a API do serviço de fluxo
 exl-id: a7b20cd1-bb52-4b0a-aad0-796929555e4a
-source-git-commit: cea12160656ba0724789db03e62213022bacd645
+source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
 workflow-type: tm+mt
 source-wordcount: '797'
 ht-degree: 2%
@@ -104,6 +104,7 @@ Uma resposta bem-sucedida retorna os detalhes da execução de fluxo recém-cria
 | --- | --- |
 | `id` | A ID da execução do fluxo recém-criado. Consulte o guia em [recuperando especificações de fluxo](../api/collect/database-nosql.md#specs) para obter mais informações sobre especificações de execução baseadas em tabela. |
 | `etag` | A versão do recurso da execução do fluxo. |
+
 <!-- 
 | `createdAt` | The unix timestamp that designates when the flow run was created. |
 | `updatedAt` | The unix timestamp that designates when the flow run was last updated. |

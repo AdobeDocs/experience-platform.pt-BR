@@ -3,7 +3,7 @@ keywords: destino do crm;CRM;crm destinos;Outreach;Destino do Outreach crm
 title: Conexão de alcance
 description: O destino do Outreach permite exportar os dados da sua conta e ativá-los no Outreach para as suas necessidades comerciais.
 exl-id: 7433933d-7a4e-441d-8629-a09cb77d5220
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
 workflow-type: tm+mt
 source-wordcount: '1678'
 ht-degree: 2%
@@ -155,18 +155,20 @@ Para enviar corretamente seus dados de público-alvo do Adobe Experience Platfor
      ![Captura de tela da Interface do Usuário da Plataforma mostrando o mapeamento de Destino usando OutreachId.](../../assets/catalog/crm/outreach/target-mapping.png)
 
    * Adicione o mapeamento a seguir entre o esquema de perfil XDM e a instância [!DNL Outreach]:
-|Esquema de perfil XDM|[!DNL Outreach] Instância| Obrigatório|
-|—|—|—|
-`Oid`|`OutreachId`| Sim |
+
+     | Esquema de perfil XDM | [!DNL Outreach] Instância | Obrigatório |
+     |---|---|---|
+     | `Oid` | `OutreachId` | Sim |
 
    * **[!UICONTROL Selecionar atributos personalizados]**: selecione esta opção para mapear o campo de origem para um atributo personalizado definido no campo [!UICONTROL Nome do atributo]. Consulte a [[!DNL Outreach] documentação do cliente potencial](https://api.outreach.io/api/v2/docs#prospect) para obter uma lista abrangente dos atributos suportados.
      ![Captura de tela da interface do usuário da plataforma mostrando o mapeamento de público alvo usando LastName.](../../assets/catalog/crm/outreach/target-mapping-lastname.png)
 
    * Por exemplo, dependendo dos valores que você deseja atualizar, adicione o seguinte mapeamento entre o esquema de perfil XDM e a instância [!DNL Outreach]:
-|Esquema de perfil XDM|[!DNL Outreach] Instância|
-|—|—|
-`person.name.firstName`|`firstName`|
-`person.name.lastName`|`lastName`|
+
+     | Esquema de perfil XDM | [!DNL Outreach] Instância |
+     |---|---|
+     | `person.name.firstName` | `firstName` |
+     | `person.name.lastName` | `lastName` |
 
    * Um exemplo usando esses mapeamentos é mostrado abaixo:
      ![Exemplo de captura de tela da interface do usuário da plataforma mostrando os mapeamentos do Target.](../../assets/catalog/crm/outreach/mappings.png)

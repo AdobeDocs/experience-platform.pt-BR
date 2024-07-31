@@ -3,10 +3,10 @@ title: (API) Conexão Oracle Eloqua
 description: O destino (API) Oracle Eloqua permite exportar os dados da conta e ativá-los no Oracle Eloqua para as necessidades comerciais.
 last-substantial-update: 2023-03-14T00:00:00Z
 exl-id: 97ff41a2-2edd-4608-9557-6b28e74c4480
-source-git-commit: cf7ad18fa3d8f074371a0f03e09e218d37be5e01
+source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
 workflow-type: tm+mt
 source-wordcount: '2033'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -148,19 +148,21 @@ Para mapear seus campos XDM para os campos de destino [!DNL Oracle Eloqua], siga
 1. Na etapa **[!UICONTROL Mapeamento]**, selecione **[!UICONTROL Adicionar novo mapeamento]**. Você verá uma nova linha de mapeamento na tela.
 1. Na janela **[!UICONTROL Selecionar campo de origem]**, escolha a categoria **[!UICONTROL Selecionar atributos]** e selecione o atributo XDM ou escolha o **[!UICONTROL Selecionar namespace de identidade]** e selecione uma identidade.
 1. Na janela **[!UICONTROL Selecionar campo de destino]**, escolha **[!UICONTROL Selecionar namespace de identidade]** e selecione uma identidade ou escolha **[!UICONTROL Selecionar atributos personalizados]** e digite o nome do atributo desejado no campo **[!UICONTROL Nome do atributo]**. O nome do atributo fornecido deve corresponder a um atributo de contato existente em [!DNL Oracle Eloqua]. Consulte [[!DNL create a contact]](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-post.html) para obter os nomes de atributos exatos que você pode usar em [!DNL Oracle Eloqua].
+
    * Repita essas etapas para adicionar os mapeamentos de atributos necessários e desejados entre seu esquema de perfil XDM e [!DNL Oracle Eloqua]:
-| Campo do Source | Campo de destino | Obrigatório |
-|—|—|—|
-`IdentityMap: Eid`|`Identity: EloquaId`| Sim |
-`xdm: personalEmail.address`|`Attribute: emailAddress`| Sim |
-`xdm: personName.firstName`|`Attribute: firstName`| |
-|`xdm: personName.lastName`|`Attribute: lastName`| |
-|`xdm: workAddress.street1`|`Attribute: address1`| |
-`xdm: workAddress.street2`|`Attribute: address2`| |
-`xdm: workAddress.street3`|`Attribute: address3`| |
-`xdm: workAddress.postalCode`|`Attribute: postalCode`| |
-`xdm: workAddress.country`|`Attribute: country`| |
-`xdm: workAddress.city`|`Attribute: city`| |
+
+     | Campo de origem | Campo de público alvo | Obrigatório |
+     |---|---|---|
+     | `IdentityMap: Eid` | `Identity: EloquaId` | Sim |
+     | `xdm: personalEmail.address` | `Attribute: emailAddress` | Sim |
+     | `xdm: personName.firstName` | `Attribute: firstName` | |
+     | `xdm: personName.lastName` | `Attribute: lastName` | |
+     | `xdm: workAddress.street1` | `Attribute: address1` | |
+     | `xdm: workAddress.street2` | `Attribute: address2` | |
+     | `xdm: workAddress.street3` | `Attribute: address3` | |
+     | `xdm: workAddress.postalCode` | `Attribute: postalCode` | |
+     | `xdm: workAddress.country` | `Attribute: country` | |
+     | `xdm: workAddress.city` | `Attribute: city` | |
 
    * Um exemplo com os mapeamentos acima é mostrado abaixo:
      ![Exemplo de captura de tela da interface do usuário da plataforma com mapeamentos de atributos.](../../assets/catalog/email-marketing/oracle-eloqua-api/mappings.png)

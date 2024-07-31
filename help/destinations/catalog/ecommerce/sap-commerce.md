@@ -3,7 +3,7 @@ title: Conexão SAP Commerce
 description: Use o conector de destino do SAP Commerce para atualizar os registros do cliente em sua conta SAP.
 last-substantial-update: 2024-02-20T00:00:00Z
 exl-id: 3bd1a2a7-fb56-472d-b9bd-603b94a8937e
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
 workflow-type: tm+mt
 source-wordcount: '2246'
 ht-degree: 3%
@@ -194,6 +194,7 @@ Para enviar corretamente seus dados de público-alvo do Adobe Experience Platfor
 #### Mapear a identidade `customerNumberSAP`
 
 A identidade `customerNumberSAP` é um mapeamento obrigatório para este destino. Siga as etapas abaixo para mapeá-la:
+
 1. Na etapa **[!UICONTROL Mapeamento]**, selecione **[!UICONTROL Adicionar novo mapeamento]**. Agora você pode ver uma nova linha de mapeamento na tela.
    ![Captura de tela da Interface do Usuário da Plataforma com o botão Adicionar Novo Mapeamento realçado.](../../assets/catalog/ecommerce/sap-commerce/mapping-add-new-mapping.png)
 1. Na janela **[!UICONTROL Selecionar campo de origem]**, escolha o **[!UICONTROL Selecionar namespace de identidade]** e selecione `customerNumberSAP`.
@@ -211,6 +212,7 @@ Um exemplo com o mapeamento de identidade é mostrado abaixo:
 #### Mapeamento de atributos
 
 Para adicionar outros atributos que você deseja atualizar entre o esquema de perfil XDM e a conta [!DNL SAP Subscription Billing], repita as etapas abaixo:
+
 1. Na etapa **[!UICONTROL Mapeamento]**, selecione **[!UICONTROL Adicionar novo mapeamento]**. Agora você pode ver uma nova linha de mapeamento na tela.
    ![Captura de tela da Interface do Usuário da Plataforma com o botão Adicionar Novo Mapeamento realçado.](../../assets/catalog/ecommerce/sap-commerce/mapping-add-new-mapping.png)
 1. Na janela **[!UICONTROL Selecionar campo de origem]**, escolha a categoria **[!UICONTROL Selecionar atributos]** e selecione o atributo XDM.
@@ -302,8 +304,9 @@ Conforme mostrado, o valor no campo **[!UICONTROL ID de Mapeamento]** deve corre
 Repita esta seção para cada público-alvo ativado da Platform.
 
 Com base na imagem mostrada acima em que você selecionou dois públicos-alvo, o mapeamento seria o seguinte:
+
 | [!DNL SAP Commerce] nome do público-alvo | [!DNL SAP Subscription Billing] **[!UICONTROL Tipo de Referência]** | Valor de [!DNL SAP Commerce] **[!UICONTROL ID de Mapeamento]** |
-| — | — | — |
+| --- | --- | --- |
 | sap_audience1 | `SAP_1` | `SAP_1` |
 | Público-alvo SAP2 | `SAP_2` | `SAP_2` |
 

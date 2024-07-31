@@ -2,7 +2,7 @@
 title: (API) Conexão do Salesforce Marketing Cloud
 description: O destino do Marketing Cloud do Salesforce (anteriormente conhecido como ExactTarget) permite exportar os dados da sua conta e ativá-los no Marketing Cloud do Salesforce para as suas necessidades comerciais.
 exl-id: 0cf068e6-8a0a-4292-a7ec-c40508846e27
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
 workflow-type: tm+mt
 source-wordcount: '2895'
 ht-degree: 1%
@@ -242,6 +242,7 @@ Um exemplo de atributo de [!DNL Salesforce Marketing Cloud] é mostrado abaixo:
 ![Captura de tela da interface do usuário do Marketing Cloud do Salesforce mostrando um atributo.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/salesforce-custom-field.png)
 
 Um exemplo indicando o local da [!DNL (API) Salesforce Marketing Cloud] **[!UICONTROL ID de Mapeamento]** é mostrado abaixo:
+
 ![Exemplo de captura de tela da Interface do Usuário da Plataforma mostrando a opção Agendar exportação de público.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/schedule-segment-export.png)
 
 Como mostrado, a [!DNL (API) Salesforce Marketing Cloud] **[!UICONTROL ID do Mapeamento]** deve corresponder exatamente ao valor especificado em [!DNL Salesforce Marketing Cloud] **[!UICONTROL NOME DO CAMPO]**.
@@ -249,8 +250,9 @@ Como mostrado, a [!DNL (API) Salesforce Marketing Cloud] **[!UICONTROL ID do Map
 Repita esta seção para cada segmento da Platform ativado.
 
 Um exemplo típico com base na imagem mostrada acima pode ser.
+
 | Nome do segmento [!DNL (API) Salesforce Marketing Cloud] | [!DNL Salesforce Marketing Cloud] **[!UICONTROL NOME DO CAMPO]** | [!DNL (API) Salesforce Marketing Cloud] **[!UICONTROL ID de Mapeamento]** |
-| — | — | — |
+| --- | --- | --- |
 | público-alvo do salesforce mc 1 | `salesforce_mc_segment_1` | `salesforce_mc_segment_1` |
 | salesforce mc audience 2 | `salesforce_mc_segment_2` | `salesforce_mc_segment_2` |
 

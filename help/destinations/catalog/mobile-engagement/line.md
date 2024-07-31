@@ -4,7 +4,7 @@ title: Conexão LINE
 description: O destino LINE permite adicionar perfis ao público-alvo da Platform e fornecer experiências personalizadas aos usuários conectados.
 last-substantial-update: 2022-11-08T00:00:00Z
 exl-id: 9981798a-61f2-4a09-9a33-57e63eb36d43
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
 workflow-type: tm+mt
 source-wordcount: '1190'
 ht-degree: 2%
@@ -121,8 +121,9 @@ Leia [Ativar perfis e públicos-alvo para destinos de exportação de público-a
 Para enviar corretamente seus dados de público-alvo do Adobe Experience Platform para o destino [!DNL LINE], é necessário passar pela etapa de mapeamento de campos. O mapeamento consiste em criar um link entre os campos do esquema do Experience Data Model (XDM) na sua conta da Platform e seus equivalentes correspondentes no destino. Para mapear corretamente os campos XDM para os campos de destino [!DNL LINE], siga estas etapas:
 
 Dependendo da sua identidade de origem, os seguintes namespaces de identidade de destino devem ser mapeados:
-| Identidade de destino | Campo do Source | Campo de destino |
-| — | — | — |
+
+| Identidade de destino | Campo de origem | Campo de público alvo |
+| --- | --- | --- |
 | ID para anunciantes (IFAs) | `IDFA` ou `GAID` | `LineId` |
 | IDs de usuário LINE | `UserID` | `LineId` |
 

@@ -3,10 +3,10 @@ title: Conexão do Zendesk
 description: O destino do Zendesk permite exportar seus dados de conta e ativá-los no Zendesk para suas necessidades comerciais.
 last-substantial-update: 2023-03-14T00:00:00Z
 exl-id: e7fcbbf4-5d6c-4abb-96cb-ea5b67a88711
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
 workflow-type: tm+mt
 source-wordcount: '1469'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -121,12 +121,14 @@ Para mapear corretamente os campos XDM para os campos de destino [!DNL Zendesk],
 1. Na etapa **[!UICONTROL Mapeamento]**, selecione **[!UICONTROL Adicionar novo mapeamento]**. Você verá uma nova linha de mapeamento na tela.
 1. Na janela **[!UICONTROL Selecionar campo de origem]**, escolha a categoria **[!UICONTROL Selecionar atributos]** e selecione o atributo XDM ou escolha o **[!UICONTROL Selecionar namespace de identidade]** e selecione uma identidade.
 1. Na janela **[!UICONTROL Selecionar campo de destino]**, escolha a categoria **[!UICONTROL Selecionar namespace de identidade]** e selecione uma identidade de destino, ou escolha a categoria **[!UICONTROL Selecionar atributos]** e selecione um dos atributos de esquema compatíveis.
+
    * Repita essas etapas para adicionar os seguintes mapeamentos obrigatórios: você também pode adicionar outros atributos que deseja atualizar entre o esquema de perfil XDM e a instância [!DNL Zendesk]:
-|Campo do Source|Campo do Target| Obrigatório|
-|—|—|—|
-`xdm: person.name.lastName`|`xdm: last_name`| Sim |
-`IdentityMap: Email`|`Identity: email`| Sim |
-`xdm: person.name.firstName`|`xdm: first_name`| |
+
+     | Campo de origem | Campo de público alvo | Obrigatório |
+     |---|---|---|
+     | `xdm: person.name.lastName` | `xdm: last_name` | Sim |
+     | `IdentityMap: Email` | `Identity: email` | Sim |
+     | `xdm: person.name.firstName` | `xdm: first_name` | |
 
    * Um exemplo usando esses mapeamentos é mostrado abaixo:
      ![Exemplo de captura de tela da interface do usuário da plataforma com mapeamentos de atributos.](../../assets/catalog/crm/zendesk/mappings.png)

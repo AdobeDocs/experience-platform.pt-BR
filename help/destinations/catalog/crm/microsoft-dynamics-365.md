@@ -4,7 +4,7 @@ title: Conexão com o Microsoft Dynamics 365
 description: O destino do Microsoft Dynamics 365 permite exportar os dados da conta e ativá-los no Microsoft Dynamics 365 para atender às suas necessidades comerciais.
 last-substantial-update: 2022-11-08T00:00:00Z
 exl-id: 49bb5c95-f4b7-42e1-9aae-45143bbb1d73
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
 workflow-type: tm+mt
 source-wordcount: '2019'
 ht-degree: 1%
@@ -170,9 +170,10 @@ Para enviar corretamente seus dados de público-alvo do Adobe Experience Platfor
      ![Captura de tela da interface do usuário da plataforma mostrando o Target mapping para contactid.](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-contactid.png)
 
    * Adicione o mapeamento a seguir entre o esquema de perfil XDM e a instância [!DNL Dynamics 365]:
-|Esquema de perfil XDM|[!DNL Dynamics 365] Instância| Obrigatório|
-|—|—|—|
-`contactid`|`contactid`| Sim |
+
+     | Esquema de perfil XDM | [!DNL Dynamics 365] Instância | Obrigatório |
+     |---|---|---|
+     | `contactid` | `contactid` | Sim |
 
    * **[!UICONTROL Selecionar atributos personalizados]**: selecione esta opção para mapear o campo de origem para um atributo personalizado definido no campo **[!UICONTROL Nome do atributo]**. Consulte a [[!DNL Dynamics 365] documentação](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/contact?view=op-9-1#entity-properties) para obter uma lista abrangente dos atributos suportados.
      ![Captura de tela da interface do usuário da plataforma mostrando o Target mapping para email.](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-email.png)
@@ -183,14 +184,16 @@ Para enviar corretamente seus dados de público-alvo do Adobe Experience Platfor
      > * Além disso, se você tiver um campo de origem de data ou carimbo de data e hora mapeado para um campo de destino [!DNL Dynamics 365] [data ou carimbo de data e hora](https://docs.microsoft.com/en-us/power-apps/developer/data-platform/webapi/reference/timestampdatemapping?view=dataverse-latest), verifique se o valor mapeado não está vazio. Se o valor do campo exportado estiver vazio, você encontrará uma mensagem de erro *`Bad request reported while pushing events to the destination. Please contact the administrator and try again.`* e os dados não serão atualizados. Esta é uma limitação de [!DNL Dynamics 365].
 
    * Por exemplo, dependendo dos valores que você deseja atualizar, adicione o seguinte mapeamento entre o esquema de perfil XDM e a instância [!DNL Dynamics 365]:
-|Esquema de perfil XDM|[!DNL Dynamics 365] Instância|
-|—|—|
-`person.name.firstName`|`firstname`|
-`person.name.lastName`|`lastname`|
-|`personalEmail.address`|`emailaddress1`|
+
+     | Esquema de perfil XDM | [!DNL Dynamics 365] Instância |
+     |---|---|
+     | `person.name.firstName` | `firstname` |
+     | `person.name.lastName` | `lastname` |
+     | `personalEmail.address` | `emailaddress1` |
 
    * Um exemplo usando esses mapeamentos é mostrado abaixo:
-     ![Exemplo de captura de tela da interface do usuário da plataforma mostrando os mapeamentos do Target.](../../assets/catalog/crm/microsoft-dynamics-365/mappings.png)
+
+   ![Exemplo de captura de tela da interface do usuário da plataforma mostrando os mapeamentos do Target.](../../assets/catalog/crm/microsoft-dynamics-365/mappings.png)
 
 ### Agendar exportação de público e exemplo {#schedule-audience-export-example}
 

@@ -3,7 +3,7 @@ title: Tags do Mailchimp
 description: O destino de Tags do Mailchimp permite exportar os dados da sua conta e ativá-los no Mailchimp para interagir com os contatos.
 last-substantial-update: 2024-02-20T00:00:00Z
 exl-id: 0f278ca8-4fcf-4c47-b538-9cffa45a3d90
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
 workflow-type: tm+mt
 source-wordcount: '1646'
 ht-degree: 2%
@@ -175,9 +175,10 @@ Para mapear corretamente os campos XDM para os campos de destino [!DNL Mailchimp
    ![Captura de tela da interface do usuário da plataforma com o campo Direcionamento como Email do namespace de identidade.](../../assets/catalog/email-marketing/mailchimp-tags/target-field.png)
 
    Os mapeamentos entre seu esquema de perfil XDM e [!DNL Mailchimp Tags] serão como abaixo:
-| Campo do Source | Campo de destino | Obrigatório |
-| — | — | — |
-`IdentityMap: Email`|`Identity: Email`| Sim |
+
+   | Campo de origem | Campo de público alvo | Obrigatório |
+   | --- | --- | --- |
+   | `IdentityMap: Email` | `Identity: Email` | Sim |
 
    Um exemplo com os mapeamentos concluídos é mostrado abaixo:
    ![Exemplo de captura de tela da interface do usuário da plataforma mostrando mapeamentos de campo.](../../assets/catalog/email-marketing/mailchimp-tags/mappings.png)

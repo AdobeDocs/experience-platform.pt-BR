@@ -4,10 +4,10 @@ title: Playbooks de caso de uso disponíveis para Real-time Customer Data Platfo
 description: Uma lista de todos os manuais no Real-time Customer Data Platform e no Adobe Journey Optimizer.
 role: User
 exl-id: 00f16761-3759-4de0-882d-b77e18f7c1fe
-source-git-commit: 54b3d2ef22f7afb47fa8c9430c5c1645c94c837d
+source-git-commit: 5b1209ed96c78810b6bd7489825b19496d8b0b6a
 workflow-type: tm+mt
-source-wordcount: '776'
-ht-degree: 3%
+source-wordcount: '965'
+ht-degree: 2%
 
 ---
 
@@ -25,6 +25,8 @@ Leia esta página para obter uma visão geral de todos os manuais disponíveis q
 | Nome do manual | Descrição |
 | ------------- |  ----------- |
 | Navegação abandonada: merchandise | Solicite que os fãs se engajam novamente depois que deixarem seu site ou aplicativo após navegarem em um produto. |
+| Navegação abandonada: Produto | Solicite aos compradores que se envolvam novamente depois que deixarem seu site ou aplicativo após navegarem em um produto. |
+| Navegação abandonada: Reserva | Solicite que os convidados se engajam novamente depois que deixarem seu site ou aplicativo após navegarem em uma possível reserva. |
 | Carrinho abandonado: Mercadorias | Solicite que os fãs se engajam novamente depois que deixarem seu site ou aplicativo após adicionar mercadorias ao carrinho. |
 | Carrinho abandonado: Produto | Solicite aos compradores que voltem a se envolver depois que saírem do site ou aplicativo depois de adicionar produtos ao carrinho. |
 | Carrinho abandonado: Reserva | Solicite que os convidados se engajam novamente depois de saírem do site ou aplicativo após adicionar uma nova Reserva ao carrinho. |
@@ -38,12 +40,15 @@ Leia esta página para obter uma visão geral de todos os manuais disponíveis q
 | Aumentar a compra de produtos durante a visita à loja | Solicite aos compradores que comprem os produtos quando eles estiverem perto da loja. |
 | Aumentar a compra de produtos e serviços durante a permanência | Solicite aos hóspedes que comprem produtos e serviços enquanto estiverem na propriedade. |
 | Aumentar compras de jogos individuais | Direcione os fãs para aumentar as compras repetidas de jogos únicos. |
-| Pesquisa de evento da Post e promoção de incentivo | Solicite aos fãs que respondam a uma pesquisa pós-evento oferecendo uma promoção de incentivo. |
-| Pesquisa Post-Trip | Solicite aos convidados que respondam a uma pesquisa pós-viagem oferecendo uma promoção de incentivo. |
+| Pesquisa pós-evento e promoção de incentivo | Solicite aos fãs que respondam a uma pesquisa pós-evento oferecendo uma promoção de incentivo. |
+| Pesquisa pós-viagem | Solicite aos convidados que respondam a uma pesquisa pós-viagem oferecendo uma promoção de incentivo. |
 | Promoção do produto | Solicite aos compradores que comprem produtos durante uma campanha promocional contínua de produtos. |
 | Confirmação de compra: merchandise | Confirme uma nova compra de mercadoria Fan. |
 | Confirmação de compra: produto | Confirme um novo comprador de compra de produto. |
 | Confirmação de Compra: Reserva | Confirme um novo convidado de Reserva. |
+| Reengajamento dos ventiladores | Reengajamento inteligente e responsável de fãs que abandonaram uma conversão antes de concluí-la. Aja com inteligência e empatia para criar experiências para seus fãs, e não meros lembretes. |
+| Reengajar convidados | Reenvolva de forma inteligente e responsável os hóspedes que abandonaram uma reserva antes de concluí-la. Aja com inteligência e empatia para criar experiências para seus convidados, e não meras lembranças. |
+| Reconectar compradores | Reenvolva de forma inteligente e responsável os clientes que abandonaram uma compra antes de concluí-la. Aja com inteligência e empatia para criar experiências para seus clientes, e não meros lembretes. |
 | Enviar Uma Mensagem De Aniversário Para Os Fãs | Cumprimente os fãs em seu aniversário com uma oferta exclusiva. |
 | Enviar uma mensagem de aniversário aos convidados | Cumprimente os hóspedes em seu aniversário com uma oferta exclusiva. |
 | Enviar uma mensagem de aniversário aos compradores | Cumprimente os compradores em seu aniversário com uma oferta exclusiva. |
@@ -60,7 +65,10 @@ Leia esta página para obter uma visão geral de todos os manuais disponíveis q
 
 | Nome do manual | Descrição |
 | ------------- | ----------- |
-| Carrinho abandonado: Mercadorias — para ativação | Redirecione os fãs depois que eles deixarem seu site ou aplicativo após adicionar a mercadoria ao carrinho. |
+| Navegação Abandonada: Mercadorias — Para Ativação | Redirecione os fãs depois que eles deixarem seu site ou aplicativo após adicionar a mercadoria ao carrinho. |
+| Navegação Abandonada: Produto—Para Ativação | Redirecione os compradores depois que eles deixarem o site ou aplicativo após adicionar os produtos ao carrinho. |
+| Navegação Abandonada: Reserva — Para Ativação | Redirecione os convidados depois que eles deixarem seu site ou aplicativo após adicionar uma nova reserva ao carrinho. |
+| Carrinho abandonado: Mercadorias — para ativação | Redirecione os fãs depois que eles deixarem seu site ou aplicativo após adicionar a mercadoria esportiva ao carrinho. |
 | Carrinho Abandonado: Produto - Para Ativação | Redirecione os compradores depois que eles deixarem o site ou aplicativo após adicionar produtos ao carrinho. |
 | Carrinho Abandonado: Reserva — Para Ativação | Redirecione os convidados depois que eles deixarem seu site ou aplicativo após adicionar uma nova reserva ao carrinho. |
 | Promoção de Destino - Para Ativação | Convidados do Target para fazer uma Reserva durante uma promoção de destino de viagem em andamento. |

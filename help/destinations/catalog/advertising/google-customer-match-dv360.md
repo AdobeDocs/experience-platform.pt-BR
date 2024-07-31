@@ -3,7 +3,7 @@ title: Correspondência de cliente do Google + conexão de vídeo e exibição 3
 description: Com o conector de destino Google Customer Match + Display & Video 360, você pode usar seus dados online e offline do Experience Platform para acessar e reengajar com seus clientes nas propriedades próprias e operadas da Google, como Search, Shopping, Gmail e YouTube.
 badgeBeta: label="Beta" type="Informative"
 exl-id: f6da3eae-bf3f-401a-99a1-2cca9a9058d2
-source-git-commit: c3de72a0f90578803b969f32cc484047089099bd
+source-git-commit: 27802292a7a06f2edaea9efc39d4a63507e0e7e1
 workflow-type: tm+mt
 source-wordcount: '1999'
 ht-degree: 1%
@@ -223,11 +223,11 @@ Os dados de origem do atributo não são automaticamente transformados em hash. 
 
 ![Aplicar controle de transformação realçado na etapa Mapeamento do fluxo de trabalho de ativação.](../../assets/catalog/advertising/google-customer-match-dv360/transformation.png)
 
-## Monitorar destino
+## Monitorar destino {#monitor-destination}
 
 Depois de se conectar ao destino e estabelecer um fluxo de dados de destino, você pode usar a [funcionalidade de monitoramento](/help/dataflows/ui/monitor-destinations.md) do Real-Time CDP para obter informações abrangentes sobre os registros de perfil ativados para o destino em cada execução de fluxo de dados.
 
-As informações de monitoramento da conexão [!DNL Google Customer Match + Display & Video 360] incluem informações de nível de público relacionadas a identidades ativadas, excluídas e com falha em cada execução de fluxo de dados e fluxo de dados. Leia mais sobre a funcionalidade.
+As informações de monitoramento da conexão [!DNL Google Customer Match + Display & Video 360] incluem informações de nível de público relacionadas a identidades ativadas, excluídas e com falha em cada execução de fluxo de dados e fluxo de dados. [Leia mais](/help/dataflows/ui/monitor-destinations.md#segment-level-view) sobre a funcionalidade.
 
 ## Verificar se a ativação do público-alvo foi bem-sucedida {#verify-activation}
 

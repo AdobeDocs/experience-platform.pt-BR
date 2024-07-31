@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Monitorar fluxos de dados para destinos na interface do
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: ee63f5ee6cca98e0b5838dc2de656d1d615a0b3a
+source-git-commit: 27802292a7a06f2edaea9efc39d4a63507e0e7e1
 workflow-type: tm+mt
-source-wordcount: '3549'
+source-wordcount: '3542'
 ht-degree: 10%
 
 ---
@@ -110,13 +110,13 @@ A página de detalhes também exibe uma lista de identidades que falharam e as q
 
 #### (Beta) Monitoramento de execução de fluxo de dados no nível do público-alvo para destinos de transmissão {#audience-level-dataflow-runs-for-streaming-destinations}
 
-Você pode exibir informações sobre as identidades ativadas, excluídas ou com falha em um nível de público-alvo, para cada público que faz parte do fluxo de dados. Isso pode ajudá-lo a entender que o monitoramento no nível do público-alvo para destinos de streaming está disponível somente para o [[!DNL Google Customer Match + Display & Video 360] destino](/help/destinations/catalog/advertising/google-customer-match-dv360.md).
+Você pode exibir informações sobre as identidades ativadas, excluídas ou com falha em um nível de público-alvo, para cada público que faz parte do fluxo de dados. O monitoramento em nível de público-alvo para destinos de streaming está disponível somente para o [[!DNL Google Customer Match + Display & Video 360] destino](/help/destinations/catalog/advertising/google-customer-match-dv360.md).
 
 ![Monitoramento no nível do público-alvo para destinos de streaming.](/help/dataflows/assets/ui/monitor-destinations/audience-level-monitoring-streaming.png)
 
 >[!NOTE]
 >
->O número **[!UICONTROL Perfis recebidos]** na guia Públicos-alvo nem sempre corresponde ao número de perfis recebidos para a execução do fluxo de dados. Isso ocorre porque um determinado perfil pode fazer parte de mais de um público-alvo sendo ativado na execução do fluxo de dados.
+>O número **[!UICONTROL Perfis recebidos]** na guia **[!UICONTROL Públicos-alvo]** nem sempre corresponde ao número de perfis recebidos para a execução do fluxo de dados. Isso ocorre porque um determinado perfil pode fazer parte de mais de um público-alvo sendo ativado na execução do fluxo de dados.
 
 ### Execuções de fluxo de dados para destinos em lote {#dataflow-runs-for-batch-destinations}
 

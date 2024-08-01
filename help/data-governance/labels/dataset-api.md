@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Gerenciar rótulos de uso de dados para conjuntos de dados usando APIs
 description: A API de serviço do conjunto de dados permite aplicar e editar rótulos de uso para conjuntos de dados. Ela faz parte dos recursos de catálogo de dados da Adobe Experience Platform, mas é separada da API de serviço de catálogo que gerencia metadados do conjunto de dados.
 exl-id: 24a8d870-eb81-4255-8e47-09ae7ad7a721
-source-git-commit: 8db484e4a65516058d701ca972fcbcb6b73abb31
+source-git-commit: 9eda7068eb2a3fd5e59fbeff69c85abfad5ccf39
 workflow-type: tm+mt
-source-wordcount: '1314'
+source-wordcount: '1340'
 ht-degree: 2%
 
 ---
@@ -166,6 +166,10 @@ Uma resposta bem-sucedida retorna o conjunto atualizado de rótulos para o conju
 ## Remover rótulos de um conjunto de dados {#remove}
 
 Você pode remover qualquer rótulo de campo aplicado anteriormente atualizando o(s) valor(es) `optionalLabels` existente(s) com um subconjunto dos rótulos de campo existentes ou com uma lista vazia para removê-los totalmente. Faça uma solicitação PUT à API [!DNL Dataset Service] para atualizar ou remover rótulos aplicados anteriormente.
+
+>[!NOTE]
+>
+>Você pode remover totalmente os rótulos de um conjunto de dados fornecendo uma lista vazia para o parâmetro `labels`. Não é obrigatório que um conjunto de dados retenha rótulos.
 
 **Formato da API**
 

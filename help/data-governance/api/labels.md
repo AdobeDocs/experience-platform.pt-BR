@@ -5,9 +5,9 @@ title: Endpoint da API de rótulos
 description: Saiba como gerenciar rótulos de uso de dados no Experience Platform usando a API de serviço de política.
 role: Developer
 exl-id: 9a01f65c-01f1-4298-bdcf-b7e00ccfe9f2
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 77d68a42b16c78cdc2b55f7776ba1c8ec98d8acd
 workflow-type: tm+mt
-source-wordcount: '504'
+source-wordcount: '536'
 ht-degree: 4%
 
 ---
@@ -18,7 +18,7 @@ Os rótulos de uso de dados permitem categorizar os dados de acordo com as polí
 
 >[!NOTE]
 >
->O ponto de extremidade `/labels` é usado apenas para recuperar, criar e atualizar rótulos de uso de dados. Para obter etapas sobre como adicionar rótulos a conjuntos de dados e campos usando chamadas de API, consulte o manual em [gerenciando rótulos de conjuntos de dados](../labels/dataset-api.md).
+>O ponto de extremidade `/labels` é usado apenas para recuperar, criar e atualizar rótulos de uso de dados. Não é possível excluir rótulos. No entanto, é possível adicionar ou remover rótulos de conjuntos de dados e campos usando chamadas de API. Consulte o guia no documento [gerenciamento de rótulos do conjunto de dados](../labels/dataset-api.md) para obter instruções.
 
 ## Introdução
 
@@ -163,6 +163,10 @@ Uma resposta bem-sucedida retorna os detalhes do rótulo personalizado.
 ## Criar ou atualizar um rótulo personalizado {#create-update}
 
 Para criar ou atualizar um rótulo personalizado, você deve fazer uma solicitação PUT para a API [!DNL Policy Service].
+
+>[!NOTE]
+>
+>Se você quiser remover rótulos de um conjunto de dados, execute uma solicitação [PUT na API de Serviço de Conjunto de Dados](../labels/dataset-api.md#remove) ou usando a [Interface do usuário de conjuntos de dados](../labels/user-guide.md#remove-labels-from-a-dataset).
 
 **Formato da API**
 

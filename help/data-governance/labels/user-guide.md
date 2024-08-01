@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Gerenciar rótulos de uso de dados na interface
 description: Este guia aborda etapas para trabalhar com rótulos de uso de dados na interface do usuário do Adobe Experience Platform.
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 7a4de0491057747c7ce4d7bc4378da453f3b3a1c
 workflow-type: tm+mt
-source-wordcount: '1538'
+source-wordcount: '1550'
 ht-degree: 17%
 
 ---
@@ -22,7 +22,7 @@ Este guia do usuário aborda etapas para trabalhar com rótulos de uso de dados 
 
 ## Gerenciar rótulos {#manage-labels}
 
-Para aplicar rótulos aos seus dados, você precisa da permissão **[!UICONTROL Gerenciar rótulos de uso]** para usar na sandbox de produção padrão chamada &quot;prod&quot;. Para criar um rótulo personalizado, você também deve ter direitos administrativos no perfil do produto. Cada organização tem apenas uma lista de rótulos aplicáveis e, no momento, não há suporte para a exclusão de rótulos.
+Para aplicar rótulos aos seus dados, você precisa da permissão **[!UICONTROL Gerenciar rótulos de uso]** para usar na sandbox de produção padrão chamada &quot;prod&quot;. Para criar um rótulo personalizado, você também deve ter direitos administrativos no perfil do produto. Cada organização tem apenas uma lista de rótulos aplicáveis. Você **não pode** excluir rótulos. Em vez disso, você pode removê-los dos conjuntos de dados ou campos aos quais são aplicados.
 
 Consulte o manual sobre como [configurar permissões](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html) ou a [visão geral do controle de acesso](../../access-control/home.md) para obter mais informações sobre como atribuir uma permissão. Se você não tiver acesso ao Admin Console da sua organização, entre em contato com o administrador da organização.
 

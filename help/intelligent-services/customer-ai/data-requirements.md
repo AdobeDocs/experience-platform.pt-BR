@@ -6,9 +6,9 @@ title: Requisitos de dados na IA do cliente
 topic-legacy: Getting started
 description: Saiba mais sobre os eventos, entradas e saídas necessários utilizados pela IA do cliente.
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
-source-git-commit: 07a110f6d293abff38804b939014e28f308e3b30
+source-git-commit: 63bdb48936070d23d1801d8e6143db3aefad5f6e
 workflow-type: tm+mt
-source-wordcount: '2505'
+source-wordcount: '2545'
 ht-degree: 1%
 
 ---
@@ -65,7 +65,7 @@ A tabela a seguir descreve algumas terminologias comuns usadas neste documento:
 | [Experience Data Model (XDM)](../../xdm/home.md) | O XDM é a estrutura fundamental que permite ao Adobe Experience Cloud, viabilizado pelo Adobe Experience Platform, enviar a mensagem certa à pessoa certa, no canal certo, no momento exato. A Platform usa o Sistema XDM para organizar os dados de uma determinada maneira que facilita o uso dos serviços da Platform. |
 | [Esquema XDM](../../xdm/schema/composition.md) | O Experience Platform usa esquemas para descrever a estrutura dos dados de forma consistente e reutilizável. Ao definir os dados de forma consistente em todos os sistemas, fica mais fácil manter o significado e, portanto, obter valor dos dados. Antes que os dados possam ser assimilados na Platform, um esquema deve ser composto para descrever a estrutura dos dados e fornecer restrições ao tipo de dados que podem estar contidos em cada campo. Os esquemas consistem em uma classe base XDM e zero ou mais grupos de campos de esquema. |
 | [Classe XDM](../../xdm/schema/field-constraints.md) | Todos os esquemas XDM descrevem dados que podem ser categorizados como `Experience Event`. O comportamento dos dados de um schema é definido pela classe do schema, que é atribuída a um schema quando ele é criado pela primeira vez. As classes XDM descrevem o menor número de propriedades que um esquema deve conter para representar um comportamento de dados específico. |
-| [Grupos de campos](../../xdm/schema/composition.md) | Um componente que define um ou mais campos em um esquema. Os grupos de campos impõem como seus campos aparecem na hierarquia do esquema e, portanto, exibem a mesma estrutura em cada esquema em que estão incluídos. Os grupos de campos são compatíveis apenas com classes específicas, conforme identificado pelo seu atributo `meta:intendedToExtend`. |
+| [Grupos de campos](../../xdm/schema/composition.md) | Um componente que define um ou mais campos em um esquema. Os grupos de campos impõem como os campos aparecem na hierarquia do esquema e, portanto, exibem a mesma estrutura em cada esquema em que estão incluídos. Os grupos de campos são compatíveis apenas com classes específicas, conforme identificado pelo seu atributo `meta:intendedToExtend`. |
 | [Tipo de dados](../../xdm/schema/composition.md) | Um componente que também pode fornecer um ou mais campos para um esquema. No entanto, diferentemente dos grupos de campos, os tipos de dados não estão restritos a uma classe específica. Isso torna os tipos de dados uma opção mais flexível para descrever estruturas de dados comuns que são reutilizáveis em vários esquemas com classes potencialmente diferentes. Os tipos de dados descritos neste documento são compatíveis com os esquemas CEE e Adobe Analytics. |
 | [Perfil do cliente em tempo real](../../profile/home.md) | O Perfil do cliente em tempo real fornece um perfil do cliente centralizado para gerenciamento de experiência direcionado e personalizado. Cada perfil contém dados agregados em todos os sistemas, bem como contas acionáveis com carimbo de data e hora de eventos envolvendo o indivíduo que ocorreram em qualquer um dos sistemas usados com o Experience Platform. |
 
@@ -158,6 +158,8 @@ A IA do cliente exige dados históricos para o treinamento de modelo. A duraçã
 Por padrão, a IA do cliente procura um usuário que tenha tido atividade nos últimos 45 dias se nenhuma definição de população qualificada for fornecida durante a configuração do aplicativo. Além disso, a IA do cliente exige um mínimo de 500 eventos qualificados e 500 não qualificados (total de 1000) dos dados históricos com base em uma definição de meta prevista.
 
 Os exemplos a seguir demonstram o uso de uma fórmula simples que ajuda a determinar a quantidade mínima de dados necessária. Se você tiver mais dados do que o requisito mínimo, seu modelo provavelmente fornecerá resultados mais precisos. Se você tiver menos do que o valor mínimo necessário, o modelo falhará, pois não há dados suficientes para o treinamento do modelo.
+
+A IA do cliente emprega um modelo de sobrevivência para estimar a probabilidade de um evento ocorrer em um determinado momento e identificar fatores influenciadores, ao lado do aprendizado supervisionado que define populações positivas e negativas, e árvores baseadas em decisão como `lightgbm` para gerar uma pontuação de probabilidade.
 
 **Fórmula**:
 

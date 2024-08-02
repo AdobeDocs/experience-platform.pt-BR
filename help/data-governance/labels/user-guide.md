@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Gerenciar rótulos de uso de dados na interface
 description: Este guia aborda etapas para trabalhar com rótulos de uso de dados na interface do usuário do Adobe Experience Platform.
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-source-git-commit: c1722c59c437215ce578a1a44cf0cad3b03ceca9
+source-git-commit: a5efc45f0043cd6eb4a209737b9e430c85ea2f14
 workflow-type: tm+mt
-source-wordcount: '1549'
+source-wordcount: '1548'
 ht-degree: 17%
 
 ---
@@ -36,7 +36,7 @@ Você pode adicionar rótulos diretamente a um esquema ou campos dentro desse es
 >
 >![A violação da política de governança de dados detectou uma caixa de diálogo com o resumo da violação e o diagrama de linhagem de dados destacados.](../images/labels/policy-violation-dialog.png)
 >
->Consulte a [documentação de violação da política de uso de dados](../enforcement/auto-enforcement.md#data-usage-violation) para obter mais informações sobre violações parciais de política.
+>Consulte a [documentação de violação da política de uso de dados](../enforcement/auto-enforcement.md#data-usage-violation) para obter mais informações sobre violações de política.
 
 Para gerenciar rótulos de uso de dados no nível do esquema, você deve selecionar um esquema existente ou criar um novo. Depois de fazer logon no Adobe Experience Platform, selecione **[!UICONTROL Esquemas]** na navegação à esquerda para abrir o espaço de trabalho **[!UICONTROL Esquemas]**. Essa página lista todos os esquemas criados que pertencem à sua organização, juntamente com detalhes úteis relacionados a cada esquema.
 

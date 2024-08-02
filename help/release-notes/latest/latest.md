@@ -2,10 +2,10 @@
 title: Notas de versão da Adobe Experience Platform de julho de 2024
 description: As notas de versão de julho de 2024 da Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 8d25e396fc816546348268b8b4f2bb16175b4513
+source-git-commit: c38f6845a4819b648abacea2c36a576dac61f38f
 workflow-type: tm+mt
-source-wordcount: '1048'
-ht-degree: 20%
+source-wordcount: '1225'
+ht-degree: 22%
 
 ---
 
@@ -23,7 +23,9 @@ Atualizações dos recursos e da documentação existentes no Experience Platfor
 - [Coleção de dados](#data-collection)
 - [Governança de dados](#data-governance)
 - [Destinos](#destinations)
+- [Serviço de segmentação](#segmentation)
 - [Origens](#sources)
+- [Tags unificadas](#unified-tags)
 
 ## Composição federada de público-alvo {#federated-audience-composition}
 
@@ -105,6 +107,18 @@ Para obter mais informações, leia a [visão geral da governança de dados](../
 
 Para obter mais informações, leia a [visão geral dos destinos](../../destinations/home.md).
 
+## Serviço de segmentação {#segmentation}
+
+O [!DNL Segmentation Service] permite segmentar dados relacionados a indivíduos (como clientes, prospectos, usuários ou organizações) que estão armazenados na [!DNL Experience Platform] em públicos-alvo. Você pode criar públicos-alvo por meio de definições de segmento ou outras fontes a partir dos dados do [!DNL Real-Time Customer Profile]. Esses públicos-alvo são configurados e mantidos de forma centralizada na [!DNL Platform] e podem ser acessados a qualquer momento usando as soluções da Adobe.
+
+**Nova documentação**
+
+| Nova documentação | Descrição |
+| ----------------- | ----------- | 
+| [Portal de público-alvo](../../segmentation/ui/audience-portal.md) | Saiba como usar o Audience Portal, que permite visualizar, gerenciar e criar públicos-alvo no Adobe Experience Platform em um hub centralizado. |
+
+{style="table-layout:auto"}
+
 ## Origens
 
 A Experience Platform fornece uma API RESTful e uma interface interativa que permite configurar conexões de origem para vários provedores de dados com facilidade. Essas conexões de origem permitem autenticar e conectar a sistemas de armazenamento externos e serviços de CRM, definir períodos para execuções de assimilação e gerenciar a taxa de transferência de assimilação de dados.
@@ -113,10 +127,25 @@ Use fontes no Experience Platform para assimilar dados de um aplicativo Adobe ou
 
 **Documentação atualizada**
 
-| Atualização da documentação | descrição |
+| Atualização da documentação | Descrição |
 | --- | --- |
 | Guia de autenticação expandido para [[!DNL Snowflake]](../../sources/connectors/databases/snowflake.md) | Leia o guia de autenticação expandido para [!DNL Snowflake] para saber como recuperar o [identificador de conta](../../sources/connectors/databases/snowflake.md#retrieve-your-account-identifier) e a [chave privada](../../sources/connectors/databases/snowflake.md#retrieve-your-private-key) para autenticação. Além disso, use o guia de autenticação expandido para obter etapas sobre como [verificar as configurações de depósito e função](../../sources/connectors/databases/snowflake.md#verify-configurations). |
 
 {style="table-layout:auto"}
 
 Para obter mais informações, leia a [visão geral das fontes](../../sources/home.md).
+
+## Tags unificadas
+
+As Tags unificadas permitem categorizar e gerenciar os objetos de negócios na Adobe Experience Platform. Com a API de tags unificadas, é possível criar pastas e tags para organizar melhor objetos da Platform, como públicos ou conjuntos de dados.
+
+**Nova documentação**
+
+| Nova documentação | Descrição |
+| ----------------- | ----------- |
+| [Guia de API de Marcas Unificadas](../../administrative-tags/api/overview.md) | Leia o guia da API de tags unificadas para saber como criar pastas e tags para classificar objetos comerciais. |
+| [Referência da API de Marcas Unificadas](https://developer.adobe.com/experience-platform-apis/references/unified-tags/) | Use a referência da API de Tags unificadas para testar interativamente os endpoints de Tags unificadas. |
+
+{style="table-layout:auto"}
+
+Para obter mais informações, leia a [Visão geral de Marcas Unificadas](../../administrative-tags/overview.md).

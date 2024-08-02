@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Aplicação automática de política
 description: Este documento aborda como as políticas de uso de dados são aplicadas automaticamente ao ativar públicos para destinos no Experience Platform.
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: b0c4a26c2e8bb90a3494fcd6eb76c4d0d7421219
 workflow-type: tm+mt
-source-wordcount: '2109'
+source-wordcount: '2118'
 ht-degree: 0%
 
 ---
@@ -70,8 +70,8 @@ Cada etapa da linha do tempo acima representa uma entidade que pode contribuir p
 | --- | --- |
 | Conjunto de dados | Os conjuntos de dados contêm rótulos de uso de dados (aplicados no nível de campo do esquema ou no nível de conjunto de dados inteiro) que definem para quais casos de uso o conjunto de dados inteiro ou campos específicos podem ser usados. Violações de política ocorrerão se um conjunto de dados ou campo contendo determinados rótulos for usado para uma finalidade restrita por uma política.<br><br>Todos os atributos de consentimento coletados dos clientes também são armazenados em conjuntos de dados. Se você tiver acesso às políticas de consentimento, todos os perfis que não atenderem aos requisitos de atributo de consentimento de suas políticas serão excluídos dos públicos-alvo ativados para um destino. |
 | Política de mesclagem | As políticas de mesclagem são as regras que a Platform usa para determinar como os dados serão priorizados ao mesclar fragmentos de vários conjuntos de dados. Violações de política ocorrerão se suas políticas de mesclagem forem configuradas para que os conjuntos de dados com rótulos restritos sejam ativados para um destino. Consulte a [visão geral das políticas de mesclagem](../../profile/merge-policies/overview.md) para obter mais informações. |
-| Público-alvo | As regras de segmentação definem quais atributos devem ser incluídos nos perfis do cliente. Dependendo dos campos incluídos por uma definição de segmento, o público-alvo herdará os rótulos de uso aplicados para esses campos. Violações de política ocorrerão se você ativar um público-alvo cujos rótulos herdados são restritos pelas políticas aplicáveis do destino, com base no caso de uso de marketing. |
-| Destino | Ao configurar um destino, uma ação de marketing (às vezes chamada de caso de uso de marketing) pode ser definida. Esse caso de uso correlaciona-se a uma ação de marketing conforme definido em uma política. Em outras palavras, a ação de marketing que você define para um destino determina quais políticas de uso de dados e de consentimento são aplicáveis a esse destino.<br><br>As violações da política de uso de dados ocorrem se você ativar um público cujos rótulos de uso são restritos para a ação de marketing do destino.<br><br>(Beta) Quando um público é ativado, todos os perfis que não contêm os atributos de consentimento necessários para a ação de marketing (conforme definido pelas suas políticas de consentimento) são excluídos do público ativado. |
+| Público-alvo | As regras de segmentação definem quais atributos devem ser incluídos nos perfis do cliente. Dependendo dos campos incluídos por uma definição de segmento, o público-alvo herdará os rótulos de uso aplicados para esses campos. Violações de política ocorrerão se você tentar ativar um público-alvo cujos rótulos herdados são restritos pelas políticas aplicáveis do destino, com base no caso de uso de marketing. |
+| Destino | Ao configurar um destino, uma ação de marketing (às vezes chamada de caso de uso de marketing) pode ser definida. Esse caso de uso correlaciona-se a uma ação de marketing conforme definido em uma política. Em outras palavras, a ação de marketing que você define para um destino determina quais políticas de uso de dados e de consentimento são aplicáveis a esse destino.<br><br>As violações da política de uso de dados ocorrem se você tentar ativar um público cujos rótulos de uso são restritos para a ação de marketing do destino.<br><br>(Beta) Quando um público é ativado, todos os perfis que não contêm os atributos de consentimento necessários para a ação de marketing (conforme definido pelas suas políticas de consentimento) são excluídos do público ativado. |
 
 >[!IMPORTANT]
 >
@@ -122,7 +122,7 @@ Use o diagrama de linhagem de dados para entender quais outras alterações de c
 
 ### Avaliação da política de consentimento {#consent-policy-evaluation}
 
-Ao ativar um público-alvo para um destino, você pode ver como as [políticas de consentimento](../policies/user-guide.md#consent-policy) afetam diferentes porcentagens dos perfis incluídos na ativação.
+Ao ativar um público-alvo para um destino, você pode ver como as [políticas de consentimento](../policies/user-guide.md) afetam o alcance do público-alvo durante o [estágio de revisão do [!UICONTROL fluxo de trabalho Ativar Destinos]](#pre-activation-evaluation).
 
 >[!NOTE]
 >
@@ -138,13 +138,13 @@ Essas melhorias permitem maior confiança na sua estratégia de marketing, pois 
 >
 >Não há alterações na interface do usuário como resultado desse aprimoramento.
 
-#### Avaliação de pré-ativação
+#### Avaliação de pré-ativação {#pre-activation-evaluation}
 
-Ao atingir a etapa **[!UICONTROL Revisão]** ao [ativar um destino](../../destinations/ui/activation-overview.md), selecione **[!UICONTROL Exibir políticas aplicadas]**.
+Depois de atingir a etapa **[!UICONTROL Revisão]** ao [ativar um destino](../../destinations/ui/activation-overview.md), selecione **[!UICONTROL Exibir políticas aplicadas]**.
 
 ![Botão Exibir políticas aplicadas no fluxo de trabalho de destino ativado](../images/enforcement/view-applied-policies.png)
 
-Uma caixa de diálogo de verificação de política é exibida, mostrando uma visualização de como suas políticas de consentimento afetam o público-alvo consentido dos públicos ativados.
+Uma caixa de diálogo de verificação de política é exibida, mostrando uma visualização de como suas políticas de consentimento afetam o público-alvo consentido dos públicos a serem ativados.
 
 ![Caixa de diálogo de verificação de política de consentimento na interface do usuário da plataforma](../images/enforcement/consent-policy-check.png)
 

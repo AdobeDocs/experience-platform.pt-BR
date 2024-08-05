@@ -4,7 +4,7 @@ title: Impor a conformidade do uso de dados para um segmento de público-alvo us
 type: Tutorial
 description: Este tutorial aborda as etapas para aplicar definições de segmento de conformidade de uso de dados usando APIs.
 exl-id: 2299328c-d41a-4fdc-b7ed-72891569eaf2
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: 914174de797d7d5f6c47769d75380c0ce5685ee2
 workflow-type: tm+mt
 source-wordcount: '1348'
 ht-degree: 6%
@@ -91,7 +91,6 @@ Uma resposta bem-sucedida retorna os detalhes da definição de segmento.
     "schema": { 
         "name": "_xdm.context.profile"
     },
-    "ttlInDays": 90,
     "imsOrgId": "{ORG_ID}",
     "name": "Cart abandons in CA",
     "description": "",

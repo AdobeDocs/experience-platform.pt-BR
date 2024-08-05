@@ -4,7 +4,7 @@ title: Avaliar eventos em tempo quase real com a segmentação de transmissão
 description: Este documento contém exemplos sobre como usar a segmentação por transmissão com a API do Serviço de segmentação do Adobe Experience Platform.
 role: Developer
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: c14c6b8037993b3696b4a99633c80c6ee9679399
+source-git-commit: 914174de797d7d5f6c47769d75380c0ce5685ee2
 workflow-type: tm+mt
 source-wordcount: '2050'
 ht-degree: 4%
@@ -136,7 +136,6 @@ Uma resposta bem-sucedida retorna uma matriz de definições de segmento na orga
             "schema": {
                 "name": "_xdm.context.profile"
             },
-            "ttlInDays": 30,
             "imsOrgId": "{ORG_ID}",
             "sandbox": {
                 "sandboxId": "",
@@ -170,7 +169,6 @@ Uma resposta bem-sucedida retorna uma matriz de definições de segmento na orga
             "schema": {
                 "name": "_xdm.context.profile"
             },
-            "ttlInDays": 30,
             "imsOrgId": "{ORG_ID}",
             "sandbox": {
                 "sandboxId": "",
@@ -237,7 +235,6 @@ curl -X POST \
     "schema": {
         "name": "_xdm.context.profile"
     },
-    "ttlInDays": 30,
     "name": "Homepage_continuous",
     "description": "People who are on their homepage - continuous",
     "expression": {
@@ -273,7 +270,6 @@ Uma resposta bem-sucedida retorna os detalhes da definição de segmento habilit
     "schema": {
         "name": "_xdm.context.profile"
     },
-    "ttlInDays": 30,
     "imsOrgId": "{ORG_ID}",
     "sandbox": {
         "sandboxId": "{SANDBOX_ID}",

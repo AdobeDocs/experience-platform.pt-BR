@@ -2,7 +2,7 @@
 title: Manuseio de identidade no workflow de ativação de destinos
 description: Saiba como a exportação de identidade é tratada no fluxo de trabalho de ativação, dependendo do tipo de destino
 exl-id: f4894a08-c7a9-4d57-a6d3-660c49206d6a
-source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
+source-git-commit: 322510055bd8b8803292a2b4af9df9e1dbee7ffb
 workflow-type: tm+mt
 source-wordcount: '1163'
 ht-degree: 1%
@@ -92,7 +92,7 @@ Ao configurar uma sequência de dados conforme descrito na documentação vincul
 
 ## Destinos corporativos {#enterprise-destinations}
 
-[Destinos de empresa](/help/destinations/destination-types.md#streaming-profile-export) ([!DNL Amazon Kinesis], [!DNL Azure Event Hubs], API HTTP) não exigem IDs específicas na exportação de dados, pois eles foram projetados para casos de uso de integração de empresa. No entanto, você pode exportar identidades como atributos XDM ou do mapa de identidade, se desejar. Exiba um [exemplo de dados exportados para o destino HTTP](/help/destinations/catalog/streaming/http-destination.md#exported-data), que inclui o atributo XDM `personalEmail.address` e as identidades `ECID` e `email_lc_sha256` (endereço de email com hash) do mapa de identidade.
+[Destinos de empresa](/help/destinations/destination-types.md#advanced-enterprise-destinations) ([!DNL Amazon Kinesis], [!DNL Azure Event Hubs], API HTTP) não exigem IDs específicas na exportação de dados, pois eles foram projetados para casos de uso de integração de empresa. No entanto, você pode exportar identidades como atributos XDM ou do mapa de identidade, se desejar. Exiba um [exemplo de dados exportados para o destino HTTP](/help/destinations/catalog/streaming/http-destination.md#exported-data), que inclui o atributo XDM `personalEmail.address` e as identidades `ECID` e `email_lc_sha256` (endereço de email com hash) do mapa de identidade.
 
 ## Destinos do Personalization {#personalization-destinations}
 

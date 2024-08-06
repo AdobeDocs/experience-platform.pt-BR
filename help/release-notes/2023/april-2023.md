@@ -2,7 +2,7 @@
 title: Notas de versão de abril de 2023 da Adobe Experience Platform
 description: As notas de versão de abril de 2023 da Adobe Experience Platform.
 exl-id: 7b501467-99a7-4aee-ae86-66c851250ecf
-source-git-commit: 5de1ec17b78c97be21c0d2afd6f0b119a6074b6f
+source-git-commit: 322510055bd8b8803292a2b4af9df9e1dbee7ffb
 workflow-type: tm+mt
 source-wordcount: '2038'
 ht-degree: 98%
@@ -174,7 +174,7 @@ O [!DNL Segmentation Service] define um subconjunto específico de perfis descre
 
 | Recurso | Descrição |
 | ------- | ----------- |
-| Mapa da associação de segmento | Seguindo o anúncio anterior em fevereiro, em 15 de maio de 2023, o status `Existing` será descontinuado do mapa da associação de segmento para remover a redundância no ciclo de vida da associação de segmento. Após essa alteração, os perfis qualificados em um segmento serão representados como `Realized`, e os perfis desqualificados continuarão a ser representados como `Exited`.<br/><br/> Essa alteração pode impactar quem se estiver usando os [destinos corporativos](../../destinations/destination-types.md#streaming-profile-export) (Amazon Kinesis, Hubs de Eventos do Azure, API HTTP) e que tenha processos de downstream automatizados em vigor com base no status `Existing`. Se esse for o seu caso, revise suas integrações downstream. Caso se interesse em identificar perfis recém-qualificados além de um determinado período, considere usar uma combinação dos status `Realized` e `lastQualificationTime` no mapa de associação de segmento. Para obter mais informações, entre em contato com o representante da Adobe. |
+| Mapa da associação de segmento | Seguindo o anúncio anterior em fevereiro, em 15 de maio de 2023, o status `Existing` será descontinuado do mapa da associação de segmento para remover a redundância no ciclo de vida da associação de segmento. Após essa alteração, os perfis qualificados em um segmento serão representados como `Realized`, e os perfis desqualificados continuarão a ser representados como `Exited`.<br/><br/> Essa alteração pode impactar quem se estiver usando os [destinos corporativos](../../destinations/destination-types.md#advanced-enterprise-destinations) (Amazon Kinesis, Hubs de Eventos do Azure, API HTTP) e que tenha processos de downstream automatizados em vigor com base no status `Existing`. Se esse for o seu caso, revise suas integrações downstream. Caso se interesse em identificar perfis recém-qualificados além de um determinado período, considere usar uma combinação dos status `Realized` e `lastQualificationTime` no mapa de associação de segmento. Para obter mais informações, entre em contato com o representante da Adobe. |
 
 {style="table-layout:auto"}
 

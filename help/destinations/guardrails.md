@@ -6,7 +6,7 @@ product: experience platform
 type: Documentation
 description: Saiba mais sobre o uso padrão da ativação de dados e os limites de taxa.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
+source-git-commit: 322510055bd8b8803292a2b4af9df9e1dbee7ffb
 workflow-type: tm+mt
 source-wordcount: '1685'
 ht-degree: 2%
@@ -92,7 +92,7 @@ As medidas de proteção abaixo se aplicam ao método [ativação ad hoc](/help/
 
 ### Ativação de destinos de personalização do Edge {#edge-destinations-activation}
 
-As medidas de proteção abaixo se aplicam à ativação por meio de [destinos de personalização de borda](/help/destinations/destination-types.md#streaming-profile-export).
+As medidas de proteção abaixo se aplicam à ativação por meio de [destinos de personalização de borda](/help/destinations/destination-types.md#advanced-enterprise-destinations).
 
 | Grade de Proteção | Limite | Tipo de limite | Descrição |
 | --- | --- | --- | --- |

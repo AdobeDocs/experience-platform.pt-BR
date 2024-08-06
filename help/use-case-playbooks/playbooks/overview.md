@@ -4,9 +4,9 @@ title: Visão geral dos manuais de estratégia de caso de uso
 description: Saiba como usar o recurso de manuais de estratégia de caso de uso na Experience Platform para começar a usar vários casos de uso de marketing
 role: Developer, User, Admin, Leader
 exl-id: 9c5c4f61-ea99-4f54-9b77-d486be29813c
-source-git-commit: 54b3d2ef22f7afb47fa8c9430c5c1645c94c837d
+source-git-commit: 152d7d29494d586016260ed6ed3d3f60e6bf766b
 workflow-type: tm+mt
-source-wordcount: '533'
+source-wordcount: '529'
 ht-degree: 30%
 
 ---
@@ -29,10 +29,12 @@ O que há neste guia de documentação:
 
 ## Visão geral {#overview}
 
-Os [!UICONTROL manuais de casos de uso] podem ajudar a resolver o problema ao começar a usar o Real-Time CDP ou o Adobe Journey Optimizer, quando talvez você não saiba exatamente com o que começar ou como criar os ativos certos para atender aos casos de uso desejados. Os manuais de casos de uso podem ajudar você aqui ao:
+Os [!UICONTROL manuais de casos de uso] podem ajudar a resolver o problema ao começar a usar o Real-Time CDP ou o Adobe Journey Optimizer, quando talvez você não saiba exatamente com o que começar ou como criar os ativos certos para atender aos casos de uso desejados.
 
-* Mostrando casos de uso para inspiração
-* Criar ativos diferentes para que você use, teste e promova para produção quando estiver pronto.
+Os manuais de casos de uso podem ajudar você aqui ao:
+
+* [Introdução de um catálogo de manuais disponíveis para começar mais rápido nos casos de uso](../playbooks/playbooks-list.md)
+* [Criação de ativos diferentes](../playbooks/create-share-reuse.md)
 
 ![Exibição de todos os manuais de estratégia](/help/use-case-playbooks/assets/playbooks/overview/playbooks-landing-page.png)
 

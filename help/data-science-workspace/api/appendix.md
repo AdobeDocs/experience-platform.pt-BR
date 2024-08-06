@@ -5,14 +5,20 @@ title: Apêndice do Guia da API de Aprendizado de Máquina do Sensei
 description: As seções a seguir fornecem informações de referência para vários recursos da API do Sensei Machine Learning.
 role: Developer
 exl-id: 2c8d3ae8-7ad7-4ff6-8d6b-3a42d3eccdff
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '330'
+source-wordcount: '353'
 ht-degree: 1%
 
 ---
 
 # Apêndice do guia de API [!DNL Sensei Machine Learning]
+
+>[!NOTE]
+>
+>O Data Science Workspace não está mais disponível para compra.
+>
+>Esta documentação destina-se aos clientes existentes com direitos anteriores ao Data Science Workspace.
 
 As seções a seguir fornecem informações de referência para vários recursos da API [!DNL Sensei Machine Learning].
 

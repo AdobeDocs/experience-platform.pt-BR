@@ -4,22 +4,28 @@ solution: Experience Platform
 title: Visão geral da interface do usuário do JupyterLab
 description: O JupyterLab é uma interface de usuário baseada na Web para o Projeto Jupyter e está totalmente integrado ao Adobe Experience Platform. Ele fornece um ambiente de desenvolvimento interativo para cientistas de dados trabalharem com notebooks, códigos e dados Jupyter. Este documento fornece uma visão geral do JupyterLab e seus recursos, bem como instruções para executar ações comuns.
 exl-id: 13786fbd-ef16-49cd-8bcf-46320c33e902
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '1812'
+source-wordcount: '1835'
 ht-degree: 2%
 
 ---
 
 # Visão geral da interface do [!DNL JupyterLab]
 
+>[!NOTE]
+>
+>O Data Science Workspace não está mais disponível para compra.
+>
+>Esta documentação destina-se aos clientes existentes com direitos anteriores ao Data Science Workspace.
+
 [!DNL JupyterLab] é uma interface de usuário baseada na Web para o [Projeto Jupyter](https://jupyter.org/) e está totalmente integrada ao Adobe Experience Platform. Ele fornece um ambiente de desenvolvimento interativo para cientistas de dados trabalharem com notebooks, códigos e dados Jupyter.
 
-Este documento fornece uma visão geral do [!DNL JupyterLab] e seus recursos, bem como instruções para executar ações comuns.
+Esta documento fornece uma visão geral e [!DNL JupyterLab] seus recursos, bem como instruções para executar ações comuns.
 
 ## [!DNL JupyterLab] em [!DNL Experience Platform]
 
-A integração do Experience Platform JupyterLab é acompanhada de alterações de arquitetura, considerações de design, extensões personalizadas de notebooks, bibliotecas pré-instaladas e uma interface com tema Adobe.
+A integração do JupyterLab da Experience Platform é acompanhada de mudanças de arquitetura, considerações de projeto, extensões personalizadas de notebook, bibliotecas pré-instalados e interface com tema Adobe Systems.
 
 A lista a seguir descreve alguns dos recursos exclusivos do JupyterLab na plataforma:
 
@@ -90,9 +96,9 @@ A barra lateral esquerda contém guias clicáveis que fornecem acesso aos seguin
 * **Navegador de arquivos:** Uma lista de diretórios e documentos de bloco de anotações salvos
 * **Data Explorer:** Navegue, acesse e explore conjuntos de dados e esquemas
 * **Executando kernels e terminais:** Uma lista de sessões ativas de kernel e terminal com a capacidade de terminar
-* **Comandos:** Uma lista de comandos úteis
-* **Inspetor de células:** um editor de células que fornece acesso a ferramentas e metadados úteis para a configuração de um bloco de anotações para fins de apresentação
-* **guias:** Uma lista de guias abertas
+* **Comandos:** uma lista de comandos úteis
+* **Inspetor de células:** Um editor de célula que fornece acesso às ferramentas e metadados útil para a configuração de um notebook para fins de apresentação
+* **guias:** uma lista de guias abertas
 
 Selecione uma guia para expor seus recursos ou selecione em uma guia expandida para recolher a barra lateral esquerda, conforme demonstrado abaixo:
 
@@ -172,9 +178,9 @@ O *Iniciador* personalizado fornece modelos de bloco de anotações úteis para 
 | Início | Um notebook pré-preenchido demonstrando a exploração de dados usando amostras de dados. |
 | Vendas de varejo | Um bloco de anotações pré-preenchido com a [fórmula de vendas de varejo](../pre-built-recipes/retail-sales.md) usando dados de exemplo. |
 | Construtor de fórmula | Um modelo de bloco de anotações para criar uma fórmula em [!DNL JupyterLab]. Ele é pré-preenchido com código e comentários que demonstram e descrevem o processo de criação da fórmula. Consulte o [tutorial do bloco de anotações para a fórmula](https://www.adobe.com/go/data-science-create-recipe-notebook-tutorial-en) para obter uma apresentação detalhada. |
-| [!DNL Query Service] | Um bloco de anotações pré-preenchido demonstrando o uso de [!DNL Query Service] diretamente em [!DNL JupyterLab] com fluxos de trabalho de exemplo fornecidos que analisam dados em escala. |
-| Eventos XDM | Um bloco de anotações pré-preenchido que demonstra a exploração de dados em dados de Evento de experiência pós-valor, com foco nos recursos comuns na estrutura de dados. |
-| Consultas XDM | Um notebook preenchido previamente demonstrando exemplos de consultas comerciais sobre dados de evento de experiência. |
+| [!DNL Query Service] | Um notebook pré-preenchido demonstrando o uso diretamente com [!DNL Query Service] o fornecido workflows de amostra que analisa dados em [!DNL JupyterLab] escala. |
+| Eventos XDM | Um notebook pré-preenchido demonstrando a exploração de dados em dados de evento de experiência pós-valor, com foco em recursos comuns em toda a estrutura de dados. |
+| Consultas XDM | Um notebook pré-preenchido demonstrando amostras de consultas comerciais nos dados do Experience Event. |
 | Agregação | Um notebook pré-preenchido demonstrando fluxos de trabalho de amostra para agregar grandes quantidades de dados em blocos menores e gerenciáveis. |
 | Geração de cluster | Um notebook pré-preenchido demonstrando o processo completo de modelagem de aprendizado de máquina usando algoritmos de cluster. |
 
@@ -191,7 +197,7 @@ Alguns modelos de notebook estão limitados a determinados kernels. A disponibil
         <th><strong>Eventos XDM</strong></th>
         <th><strong>Consultas XDM</strong></th>
         <th><strong>Agregação</strong></th>
-        <th><strong>Geração de cluster</strong></th>
+        <th><strong>Clustering</strong></th>
     </tr>
     <tr>
         <th><strong>[!DNL Python]</strong></th>
@@ -249,11 +255,11 @@ Para abrir um novo *Iniciador*, clique em **Arquivo > Novo Iniciador**. Como alt
 
 ## Próximas etapas
 
-Para saber mais sobre cada um dos notebooks compatíveis e como usá-los, visite o [guia do desenvolvedor do acesso aos dados dos notebooks Jupyterlab](./access-notebook-data.md). Este guia tem como foco o uso de notebooks JupyterLab para acessar seus dados, incluindo leitura, gravação e consulta de dados. O guia de acesso a dados também contém informações sobre a quantidade máxima de dados que podem ser lidos por cada notebook suportado.
+Para saber mais sobre cada um dos notebooks compatíveis e como usá-los, visite o [guia do desenvolvedor do acesso aos dados dos notebooks Jupyterlab](./access-notebook-data.md). Este guia foca em como usar notebooks JupyterLab para acessar seus dados, incluindo leitura, escrita e consulta de dados. O guia de acesso a dados também contém informações sobre a quantidade máxima de dados que podem ser lidos por cada notebook suportado.
 
-## Bibliotecas compatíveis {#supported-libraries}
+## Bibliotecas suportado {#supported-libraries}
 
-Para obter uma lista de pacotes compatíveis com o Python, R e PySpark, copie e cole `!conda list` em uma nova célula e execute a célula. Uma lista de pacotes suportados é preenchida em ordem alfabética.
+Para uma lista de pacotes suportados em Python, R e PySpark, copie e cole `!conda list` em uma nova célula, em seguida, execute a célula. Uma lista de pacotes suportados é preenchida em solicitar alfabéticos.
 
 ![exemplo](../images/jupyterlab/user-guide/libraries.PNG)
 

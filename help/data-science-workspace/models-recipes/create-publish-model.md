@@ -5,15 +5,21 @@ title: Criar e Publish um modelo de aprendizado de máquina
 type: Tutorial
 description: O guia a seguir descreve as etapas necessárias para criar e publicar um modelo de aprendizado de máquina.
 exl-id: f71e5a17-9952-411e-8e6a-aab46bc4c006
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '1073'
+source-wordcount: '1096'
 ht-degree: 0%
 
 ---
 
 
 # Criar e publicar um modelo de aprendizado de máquina
+
+>[!NOTE]
+>
+>O Data Science Workspace não está mais disponível para compra.
+>
+>Esta documentação destina-se aos clientes existentes com direitos anteriores ao Data Science Workspace.
 
 O guia a seguir descreve as etapas necessárias para criar e publicar um modelo de aprendizado de máquina. Cada seção contém uma descrição do que será feito e um link para a interface do usuário e a documentação da API para executar a etapa descrita.
 

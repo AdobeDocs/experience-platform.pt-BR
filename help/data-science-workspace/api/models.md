@@ -5,14 +5,20 @@ title: Endpoint da API de modelos
 description: Um modelo é uma instância de uma fórmula de aprendizado de máquina treinada com dados históricos e configurações para resolver em um caso de uso comercial.
 role: Developer
 exl-id: e66119a9-9552-497c-9b3a-b64eb3b51fcf
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '864'
+source-wordcount: '887'
 ht-degree: 4%
 
 ---
 
 # Endpoint de modelos
+
+>[!NOTE]
+>
+>O Data Science Workspace não está mais disponível para compra.
+>
+>Esta documentação destina-se aos clientes existentes com direitos anteriores ao Data Science Workspace.
 
 Um modelo é uma instância de uma fórmula de aprendizado de máquina treinada com dados históricos e configurações para resolver em um caso de uso comercial.
 

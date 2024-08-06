@@ -2,22 +2,28 @@
 keywords: Experience Platform;Tutorial;pipeline de recursos;Data Science Workspace;tópicos populares
 title: Criar um pipeline de recurso usando o SDK de criação de modelo
 type: Tutorial
-description: O Adobe Experience Platform permite criar e criar pipelines de recursos personalizados para executar a engenharia de recursos em escala por meio do Sensei Machine Learning Framework Runtime. Este documento descreve as várias classes encontradas em um pipeline de recursos e fornece um tutorial passo a passo para a criação de um pipeline de recursos personalizados usando o SDK de criação de modelo no PySpark.
+description: O Adobe Experience Platform permite criar e criar pipelines de recursos personalizados para executar a engenharia de recursos em escala por meio do Sensei Machine Learning Framework Runtime. Esta documento descreve as várias classes encontradas em um pipeline de recursos, e fornece um tutorial passo a passo para criar um pipeline de recursos personalizados usando o SDK de criação de modelos no PySpark.
 exl-id: c2c821d5-7bfb-4667-ace9-9566e6754f98
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '1415'
+source-wordcount: '1438'
 ht-degree: 0%
 
 ---
 
 # Criar um pipeline de recursos usando o SDK de criação de modelo
 
+>[!NOTE]
+>
+>O Área de trabalho de ciência de dados não está mais disponível para compra.
+>
+>Esta documentação destina-se a clientes existentes com direitos anteriores à Data Science Área de trabalho.
+
 >[!IMPORTANT]
 >
-> Atualmente, os Pipelines de recursos só estão disponíveis por meio da API.
+> Atualmente, pipelines de recursos estão disponíveis somente via API.
 
-O Adobe Experience Platform permite criar e criar pipelines de recursos personalizados para executar engenharia de recursos em escala por meio do Tempo de execução da estrutura de aprendizado de máquina do Sensei (a seguir denominado &quot;Tempo de execução&quot;).
+Adobe Experience Platform permite build e criar pipelines de recursos personalizados para executar engenharia de recursos em escala através do Tempo de execução da Estrutura de Aprendizagem de Máquina do Sensei (aqui chamado de &quot;Tempo de execução&quot;).
 
 Este documento descreve as várias classes encontradas em um pipeline de recursos e fornece um tutorial passo a passo para a criação de um pipeline de recursos personalizados usando o [SDK de Criação de Modelo](./sdk.md) no PySpark.
 
@@ -48,8 +54,8 @@ A tabela a seguir descreve as principais classes abstratas que você deve estend
 | Classe abstrata | Descrição |
 | -------------- | ----------- |
 | DataLoader | Uma classe DataLoader fornece implementação para a recuperação de dados de entrada. |
-| DatasetTransformer | Uma classe DatasetTransformer fornece implementações para transformar o conjunto de dados de entrada. Você pode optar por não fornecer uma classe DatasetTransformer e implementar sua lógica de engenharia de recursos na classe FeaturePipelineFactory. |
-| FeaturePipelineFactory | Uma classe FeaturePipelineFactory cria um Spark Pipeline que consiste em uma série de Spark Transformers para executar a engenharia de recursos. Você pode optar por não fornecer uma classe FeaturePipelineFactory e implementar sua lógica de engenharia de recursos na classe DatasetTransformer. |
+| DatasetTransformer | Uma classe DatasetTransformer fornece implementações para transformar as conjunto de dados de entrada. É possível optar por não fornecer uma classe DatasetTransformer e implementar sua lógica de engenharia de recursos na classe FeaturePipelineFactory. |
+| FeaturePipelineFactory | Uma classe FeaturePipelineFactory cria um Spark Pipeline que consiste em uma série de Transformers Spark para executar a engenharia de recursos. É possível optar por não fornecer uma classe FeaturePipelineFactory e implementar sua lógica de engenharia de recursos na classe DatasetTransformer. |
 | DataSaver | Uma classe DataSaver fornece a lógica para o armazenamento de um conjunto de dados de recurso. |
 
 Quando um trabalho do Pipeline de recurso é iniciado, o Tempo de execução primeiro executa o DataLoader para carregar dados de entrada como um DataFrame e, em seguida, modifica o DataFrame executando o DatasetTransformer, o FeaturePipelineFactory ou ambos. Por fim, o conjunto de dados de recurso resultante é armazenado por meio do DataSaver.
@@ -61,7 +67,7 @@ O fluxograma a seguir mostra a ordem de execução do Tempo de execução:
 
 ## Implementar as classes do pipeline de recursos {#implement-your-feature-pipeline-classes}
 
-As seções a seguir fornecem detalhes e exemplos sobre a implementação das classes necessárias para um Pipeline de recurso.
+As seções a seguir fornecem detalhes e exemplos sobre como implementar as classes necessárias para um Pipeline de recursos.
 
 ### Definir variáveis no arquivo JSON de configuração {#define-variables-in-the-configuration-json-file}
 
@@ -222,7 +228,7 @@ Um FeaturePipelineFactory permite implementar sua lógica de engenharia de recur
 
 O exemplo a seguir estende a classe FeaturePipelineFactory:
 
-**Exemplo do PySpark**
+**Exemplo de PySpark**
 
 ```python
 # PySpark
@@ -281,13 +287,13 @@ class MyFeaturePipelineFactory(FeaturePipelineFactory):
         return None
 ```
 
-### Armazene seu conjunto de dados de recursos com o DataSaver {#store-your-feature-dataset-with-datasaver}
+### Armazene seu recurso conjunto de dados com o DataSaver {#store-your-feature-dataset-with-datasaver}
 
-O DataSaver é responsável por armazenar os conjuntos de dados de recursos resultantes em um local de armazenamento. Sua implementação do DataSaver deve estender a classe abstrata `DataSaver` e substituir o método abstrato `save`.
+O DataSaver é responsável por armazenar os conjuntos de dados de recursos resultantes em um local armazenamento. Sua implementação do DataSaver deve estender a classe `DataSaver` abstrata e substituir o método `save`abstrato.
 
-O exemplo a seguir estende a classe DataSaver, que armazena dados em um conjunto de dados [!DNL Platform] por ID, onde a ID do conjunto de dados (`featureDatasetId`) e a ID do locatário (`tenantId`) são propriedades definidas na configuração.
+O exemplo a seguir estende a classe DataSaver que armazena dados para um [!DNL Platform] conjunto de dados por ID, onde as IDs`featureDatasetId` de conjunto de dados e ID do locatário (`tenantId`) são propriedades definidas na configuração.
 
-**Exemplo do PySpark**
+**Exemplo de PySpark**
 
 ```python
 # PySpark
@@ -416,15 +422,15 @@ Depois de concluído, faça uma solicitação GET a `/experiments/{EXPERIMENT_ID
 
 ### Especificar a tarefa de treinamento de execução do experimento {#training}
 
-Em seguida, você precisa [especificar a tarefa de execução de treinamento](../api/experiments.md#experiment-training-scoring). Faça um POST para `experiments/{EXPERIMENT_ID}/runs` e no corpo defina o modo para `train` e envie uma série de tarefas que contenham seus parâmetros de treinamento. Uma resposta bem-sucedida retorna uma carga contendo os detalhes do experimento solicitado.
+Em seguida, você precisa [especificar a tarefa de execução de treinamento](../api/experiments.md#experiment-training-scoring). Faça um POST para `experiments/{EXPERIMENT_ID}/runs` e no corpo defina o modo para `train` e envie uma série de tarefas que contenham seus parâmetros de treinamento. Uma resposta bem-sucedida retorna uma carga contendo os detalhes da Experimento solicitada.
 
-Depois de concluído, faça uma solicitação GET a `/experiments/{EXPERIMENT_ID}` para [recuperar o status do experimento](../api/experiments.md#retrieve-specific) e aguarde até que o status do Experimento seja atualizado para concluído.
+Após a conclusão, faça uma solicitação GET para `/experiments/{EXPERIMENT_ID}` [recuperar o status](../api/experiments.md#retrieve-specific) do experimento e aguarde a atualização do status de Experimento.
 
-### Especificar a tarefa de pontuação de execução do experimento {#scoring}
+### Especifique a tarefa de pontuação de execução Experimento {#scoring}
 
 >[!NOTE]
 >
-> Para concluir esta etapa, você precisa ter pelo menos uma execução de treinamento bem-sucedida associada ao seu Experimento.
+> Para concluir essa etapa, você precisa ter pelo menos uma execução treinamento bem-sucedida associada à sua Experimento.
 
 Após uma execução de treinamento bem-sucedida, é necessário [especificar a tarefa de execução de pontuação](../api/experiments.md#experiment-training-scoring). Faça um POST para `experiments/{EXPERIMENT_ID}/runs` e no corpo defina o atributo `mode` como &quot;score&quot;. Isso inicia a execução do Experimento de pontuação.
 

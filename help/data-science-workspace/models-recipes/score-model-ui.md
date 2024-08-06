@@ -5,14 +5,20 @@ title: Pontuar um modelo na interface do usuário do Data Science Workspace
 type: Tutorial
 description: A pontuação no Adobe Experience Platform Data Science Workspace pode ser obtida ao alimentar dados de entrada em um modelo treinado existente. Os resultados da pontuação são armazenados e visualizados em um conjunto de dados de saída especificado como um novo lote.
 exl-id: 00d6a872-d71a-47f4-8625-92621d4eed56
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '647'
+source-wordcount: '670'
 ht-degree: 1%
 
 ---
 
 # Pontuar um modelo na interface do usuário do Data Science Workspace
+
+>[!NOTE]
+>
+>O Data Science Workspace não está mais disponível para compra.
+>
+>Esta documentação destina-se aos clientes existentes com direitos anteriores ao Data Science Workspace.
 
 A pontuação no Adobe Experience Platform [!DNL Data Science Workspace] pode ser obtida alimentando dados de entrada em um Modelo treinado existente. Os resultados da pontuação são armazenados e visualizados em um conjunto de dados de saída especificado como um novo lote.
 
@@ -26,7 +32,7 @@ Este tutorial requer um modelo treinado. Se você não tiver um Modelo treinado,
 
 ## Criar uma nova execução de pontuação
 
-Uma execução de pontuação é criada usando configurações otimizadas de uma execução de treinamento concluída e avaliada anteriormente. O conjunto de configurações ideais para um Modelo é normalmente determinado pela revisão das métricas de avaliação da execução de treinamento.
+Uma execução de pontuação é criada usando configurações otimizadas de uma execução treinamento previamente concluída e avaliada. O conjunto de configurações ideais para um Modelo é normalmente determinado pela revisão treinamento executar métricas de avaliação.
 
 Encontre o melhor treinamento executado para usar suas configurações para pontuação. Em seguida, abra a execução de treinamento desejada selecionando o hiperlink anexado ao seu nome.
 
@@ -61,11 +67,11 @@ Uma execução de pontuação pode ser exibida com um dos seguintes status:
 
 Os status são atualizados automaticamente. Vá para a próxima etapa se o status for **[!UICONTROL Concluído]** ou **[!UICONTROL Falha]**.
 
-## Exibir resultados de pontuação
+## resultados de pontuação Exibir
 
-Para exibir os resultados da pontuação, comece selecionando uma execução de treinamento.
+Para visualização pontuação de resultados, start selecionando uma treinamento corrida.
 
-![Selecionar execução de treinamento](../images/models-recipes/score/select-run.png)
+![Selecionar treinamento execução](../images/models-recipes/score/select-run.png)
 
 Você é redirecionado para a página de execuções de treinamento **[!UICONTROL Avaliação]**. Próximo à parte superior da página de avaliação da execução de treinamento, selecione a guia **[!UICONTROL Execuções de Pontuação]** para exibir uma lista de execuções de pontuação existentes.
 
@@ -95,4 +101,4 @@ Para o conjunto completo de resultados de pontuação, selecione o link **[!UICO
 
 ## Próximas etapas
 
-Este tutorial guiou você pelas etapas de pontuação de dados usando um Modelo treinado no [!DNL Data Science Workspace]. Siga o tutorial em [publicar um Modelo como um Serviço na interface](./publish-model-service-ui.md) para permitir que os usuários em sua organização pontuem os dados fornecendo acesso fácil a um Serviço de aprendizado de máquina.
+Isso tutorial o orientaram pelas etapas de pontuação de dados usando um modelo treinado em [!DNL Data Science Workspace]. Siga o tutorial na [publicação de um modelo como um serviço no interface](./publish-model-service-ui.md) para permitir que os usuários de sua organização marquem dados, fornecendo fácil acesso a um Serviço de aprendizado de máquina.

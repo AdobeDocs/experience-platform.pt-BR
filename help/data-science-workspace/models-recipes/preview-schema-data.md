@@ -5,14 +5,20 @@ title: Visualizar o Esquema de Vendas de Varejo e o Conjunto de Dados
 type: Tutorial
 description: O documento a seguir descreve a visualização de esquemas e conjuntos de dados no Adobe Experience Platform.
 exl-id: dca9835b-4f76-42cc-b262-b20323bf4356
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '236'
+source-wordcount: '259'
 ht-degree: 3%
 
 ---
 
 # Visualizar o esquema de vendas de varejo e o conjunto de dados
+
+>[!NOTE]
+>
+>O Data Science Workspace não está mais disponível para compra.
+>
+>Esta documentação destina-se aos clientes existentes com direitos anteriores ao Data Science Workspace.
 
 Após a conclusão bem-sucedida do script de inicialização do [esquema de vendas de varejo e tutorial de conjunto de dados](./create-retails-sales-dataset.md). Esquemas de saída e conjuntos de dados podem ser exibidos em [!DNL Experience Platform]. Para exibir os esquemas e conjuntos de dados, siga as etapas abaixo:
 

@@ -4,14 +4,20 @@ solution: Experience Platform
 title: SDK de criação de modelo
 description: O SDK de criação de modelo permite desenvolver receitas e pipelines de recursos de aprendizado de máquina personalizados que podem ser usados no Adobe Experience Platform Data Science Workspace, fornecendo modelos implementáveis no PySpark e no Spark (Scala).
 exl-id: c7577f93-a64f-49b7-a76d-71f21d619052
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '977'
+source-wordcount: '1000'
 ht-degree: 1%
 
 ---
 
 # SDK de criação de modelo
+
+>[!NOTE]
+>
+>O Data Science Workspace não está mais disponível para compra.
+>
+>Esta documentação destina-se aos clientes existentes com direitos anteriores ao Data Science Workspace.
 
 O SDK de Criação de Modelo permite desenvolver Fórmulas de aprendizado de máquina personalizadas e Pipelines de Recursos que podem ser usados no Data Science Workspace [!DNL Adobe Experience Platform], fornecendo modelos implementáveis em [!DNL PySpark] e [!DNL Spark (Scala)].
 
@@ -64,19 +70,19 @@ A tabela a seguir descreve os métodos abstratos de uma classe de Carregador de 
         <tr>
             <td>
                 <p><code>load(configProperties, sparkSession)</code></p>
-                <p>Carregar e retornar dados da Platform como um DataFrame</p>
+                <p>Carregar e retornar dados Platform como um DataFrame</p>
             </td>
             <td>
                 <ul>
-                    <li><code>configProperties</code>: mapa de propriedades de configuração</li>
-                    <li><code>sparkSession</code>: Sessão do Spark</li>
+                    <li><code>configProperties</code>: Mapa de propriedades da configuração</li>
+                    <li><code>sparkSession</code>: sessão Spark</li>
                 </ul>
             </td>
         </tr>
     </tbody>
 </table>
 
-### Carregar dados de um conjunto de dados [!DNL Platform] {#load-data-from-a-platform-dataset}
+### Carregar dados de um [!DNL Platform] conjunto de dados {#load-data-from-a-platform-dataset}
 
 O exemplo a seguir recupera dados de [!DNL Platform] por ID e retorna um DataFrame, no qual a ID do conjunto de dados (`datasetId`) é uma propriedade definida no arquivo de configuração.
 
@@ -214,8 +220,8 @@ A tabela a seguir descreve os métodos abstratos de uma classe de Economizador d
             </td>
             <td>
                 <ul>
-                    <li><code>self</code>: autorreferência</li>
-                    <li><code>configProperties</code>: mapa de propriedades de configuração</li>
+                    <li><code>self</code>: auto referenciação</li>
+                    <li><code>configProperties</code>: Mapa de propriedades da configuração</li>
                     <li><code>dataframe</code>: dados a serem armazenados no formato de um DataFrame</li>
                 </ul>
             </td>
@@ -482,12 +488,12 @@ A tabela a seguir descreve os métodos de classe de um FeaturePipelineFactory Py
         </tr>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code>get_param_map(self, configProperties, sparkSession)</code></p>
-                <p>Recuperar e retornar o mapa de parâmetros das propriedades de configuração</p>
+                <p><i>abstrair</i><br/><code>get_param_map(self, configProperties, sparkSession)</code></p>
+                <p>Recuperar e retornar o mapa do parâmetro a partir das propriedades de configuração</p>
             </td>
             <td>
                 <ul>
-                    <li><code>self</code>: autorreferência</li>
+                    <li><code>self</code>: auto referenciação</li>
                     <li><code>configProperties</code>: propriedades de configuração</li>
                     <li><code>sparkSession</code>: Sessão do Spark</li>
                 </ul>
@@ -536,11 +542,11 @@ A tabela a seguir descreve os métodos de classe de uma FeaturePipelineFactory [
 
 ## PipelineFactory {#pipelinefactory}
 
-A classe PipelineFactory encapsula métodos e definições para treinamento e pontuação de modelos, em que a lógica e os algoritmos de treinamento são definidos no formato de um Pipeline [!DNL Spark].
+A classe PipelineFactory encapsula métodos e definições para modelos de treinamento e pontuação, onde treinamento lógica e algoritmos são definidos na forma de um [!DNL Spark] Pipeline.
 
 **PySpark**
 
-A tabela a seguir descreve os métodos de classe de um PipelineFactory PySpark:
+A tabela a seguir descreve os métodos de classe de um PySpark PipelineFactory:
 
 <table>
     <thead>
@@ -571,7 +577,7 @@ A tabela a seguir descreve os métodos de classe de um PipelineFactory PySpark:
                 <ul>
                     <li><code>self</code>: autorreferência</li>
                     <li><code>configProperties</code>: propriedades de configuração</li>
-                    <li><code>dataframe</code>: conjunto de dados de recurso para entrada de treinamento</li>
+                    <li><code>dataframe</code>: conjunto de dados de recursos para entrada de treinamento</li>
                 </ul>
             </td>
         </tr>
@@ -666,7 +672,7 @@ A tabela a seguir descreve os métodos de classe de um MLEvaluator PySpark:
             </td>
             <td>
                 <ul>
-                    <li><code>self</code>: autorreferência</li>
+                    <li><code>self</code>: auto referenciação</li>
                     <li><code>configProperties</code>: propriedades de configuração</li>
                     <li><code>dataframe</code>: Conjunto de dados de entrada a ser dividido</li>
                 </ul>
@@ -709,13 +715,13 @@ A tabela a seguir descreve os métodos de classe de um MLEvaluator [!DNL Spark]:
             <td>
                 <ul>
                     <li><code>configProperties</code>: propriedades de configuração</li>
-                    <li><code>data</code>: Conjunto de dados de entrada a ser dividido</li>
+                    <li><code>data</code>: a entrada conjunto de dados ser dividida</li>
                 </ul>
             </td>
         </tr>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code>evaluate(configProperties, model, data)</code></p>
+                <p><i>abstrair</i><br/><code>evaluate(configProperties, model, data)</code></p>
                 <p>Avalia um modelo treinado e retorna os resultados da avaliação</p>
             </td>
             <td>

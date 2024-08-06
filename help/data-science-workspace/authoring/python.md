@@ -1,24 +1,30 @@
 ---
-keywords: Experience Platform;página inicial;tópicos populares;acesso a dados;python sdk;api de acesso a dados;read python;write python
+keywords: Experience Platform; Casa; tópicos populares; acesso a dados; python sdk; api de acesso a dados; ler python; escrever python
 solution: Experience Platform
-title: Acesso a dados usando o Python no Data Science Workspace
+title: Acessando dados usando Python em data science Área de trabalho
 type: Tutorial
-description: O documento a seguir contém exemplos de como acessar dados no Python para usar no Data Science Workspace.
+description: A documento a seguir contém exemplos sobre como acessar dados em Python para usar em Área de trabalho de ciência de dados.
 exl-id: 75aafd58-634a-4df3-a2f0-9311f93deae4
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '412'
+source-wordcount: '435'
 ht-degree: 0%
 
 ---
 
-# Acesso a dados usando o Python no Data Science Workspace
+# Acessando dados usando Python em data science Área de trabalho
 
-O documento a seguir contém exemplos de como acessar dados usando o Python para usar no Data Science Workspace. Para obter informações sobre como acessar dados usando notebooks JupyterLab, visite a documentação do [JupyterLab notebooks data access](../jupyterlab/access-notebook-data.md).
+>[!NOTE]
+>
+>O Área de trabalho de ciência de dados não está mais disponível para compra.
+>
+>Esta documentação destina-se a clientes existentes com direitos anteriores à Data Science Área de trabalho.
 
-## Ler um conjunto de dados
+A documento a seguir contém exemplos sobre como acessar dados usando Python para usar em Área de trabalho de ciência de dados. Para obter informações sobre como acessar dados usando notebooks JupyterLab, visita a documentação de acesso](../jupyterlab/access-notebook-data.md) a dados dos [notebooks JupyterLab.
 
-Depois de definir as variáveis de ambiente e concluir a instalação, seu conjunto de dados agora pode ser lido no quadro de dados pandas.
+## Leitura de uma conjunto de dados
+
+Depois de definir as variáveis ambiente e concluir a instalação, seus conjunto de dados agora podem ser lidos no dataframe dos pandas.
 
 ```python
 import pandas as pd
@@ -34,13 +40,13 @@ dataset_reader = DatasetReader(client_context, config_properties['DATASET_ID'])
 df = dataset_reader.read()
 ```
 
-### SELECIONAR colunas do conjunto de dados
+### SELECIONAR colunas no conjunto de dados
 
 ```python
 df = dataset_reader.select(['column-a','column-b']).read()
 ```
 
-### Obter informações de particionamento:
+### Obtenha informações de particionamento:
 
 ```python
 client_context = get_client_context(config_properties)
@@ -49,23 +55,23 @@ dataset = Dataset(client_context).get_by_id({DATASET_ID})
 partitions = dataset.get_partitions_info()
 ```
 
-### Cláusula DISTINCT
+### Cláusula DISTINTA
 
-A cláusula DISTINCT permite buscar todos os valores distintos em nível de linha/coluna, removendo todos os valores duplicados da resposta.
+A cláusula DISTINCT permite buscar todos os valores distintos em um nível de linha/coluna, removendo todos os valores duplicado da resposta.
 
-Um exemplo de uso da função `distinct()` pode ser visto abaixo:
+Um exemplo do uso da `distinct()` função pode ser visto abaixo:
 
 ```python
 df = dataset_reader.select(['column-a']).distinct().read()
 ```
 
-### Cláusula WHERE
+### CLÁUSULA ONDE
 
-Você pode usar determinados operadores no Python para ajudar a filtrar seu conjunto de dados.
+Você pode usar certos operadores em Python para ajudar a filtrar suas conjunto de dados.
 
 >[!NOTE]
 >
->As funções usadas para filtragem diferenciam maiúsculas de minúsculas.
+>As funções usadas para filtragem são diferencia maiúsculas de minúsculas.
 
 ```python
 eq() = '='
@@ -83,41 +89,41 @@ Um exemplo do uso dessas funções de filtragem pode ser visto abaixo:
 df = dataset_reader.where(experience_ds['timestamp'].gt(87879779797).And(experience_ds['timestamp'].lt(87879779797)).Or(experience_ds['a'].eq(123)))
 ```
 
-### Cláusula ORDER BY
+### ORDEM POR cláusula
 
-A cláusula ORDER BY permite que os resultados recebidos sejam classificados por uma coluna especificada em uma ordem específica (crescente ou decrescente). Isso é feito usando a função `sort()`.
+A cláusula ORDEM POR permite que os resultados recebidos sejam classificados por uma coluna especificada em uma solicitar específica (crescente ou decrescente). Isso é feito usando a `sort()` função.
 
-Um exemplo de uso da função `sort()` pode ser visto abaixo:
+Um exemplo do uso da `sort()` função pode ser visto abaixo:
 
 ```python
 df = dataset_reader.sort([('column_1', 'asc'), ('column_2', 'desc')])
 ```
 
-### Cláusula LIMIT
+### Cláusula de LIMITE
 
-A cláusula LIMIT permite limitar o número de registros recebidos do conjunto de dados.
+A cláusula limite permite limitar o número de registros recebidos do conjunto de dados.
 
-Um exemplo de uso da função `limit()` pode ser visto abaixo:
+Um exemplo do uso da `limit()` função pode ser visto abaixo:
 
 ```python
 df = dataset_reader.limit(100).read()
 ```
 
-### cláusula OFFSET
+### Cláusula de DESLOCAMENTO
 
-A cláusula OFFSET permite que você ignore linhas, desde o início, para começar a retornar linhas de um ponto posterior. Em combinação com LIMIT, pode ser usado para iterar linhas em blocos.
+A cláusula OFFSET permite que você pule linhas, desde o início, para start linhas recorrentes a partir de um ponto posterior. Em combinação com o LIMITE, isso pode ser usado para iterar linhas em blocos.
 
-Um exemplo de uso da função `offset()` pode ser visto abaixo:
+Um exemplo do uso da `offset()` função pode ser visto abaixo:
 
 ```python
 df = dataset_reader.offset(100).read()
 ```
 
-## Gravação de um conjunto de dados
+## Escrever uma conjunto de dados
 
-Para gravar em um conjunto de dados, você precisa fornecer o quadro de dados pandas ao seu conjunto de dados.
+Para escrever a um conjunto de dados, você precisa fornecer o período de dados dos pandas ao seu conjunto de dados.
 
-### Gravação do quadro de dados dos pandas
+### Escrevendo o dataframe dos pandas
 
 ```python
 client_context = get_client_context(config_properties)
@@ -130,13 +136,13 @@ dataset_writer = DatasetWriter(client_context, dataset)
 write_tracker = dataset_writer.write(<your_dataFrame>, file_format='json')
 ```
 
-## Diretório do espaço de usuário (Checkpoint)
+## Diretório do userspace (Ponto de verificação)
 
-Para jobs de execução mais longa, talvez seja necessário armazenar etapas intermediárias. Em instâncias como essa, você pode ler e gravar em um espaço de usuário.
+Para trabalhos mais longos, talvez seja necessário armazenamento etapas intermediárias. Em casos curtir isso, você pode ler e gravar em um espaço de usuário.
 
 >[!NOTE]
 >
->Os caminhos para os dados **não** estão armazenados. Você precisa armazenar o caminho correspondente para seus respectivos dados.
+>Os caminhos para os dados não **são** armazenados. É necessário armazenamento o caminho correspondente aos seus respectivos dados.
 
 ### Gravar no espaço de usuário
 
@@ -158,4 +164,4 @@ my_df = user_helper.read(path=<path_to_directory>, ref_dataset_id=<ref_dataset_i
 
 ## Próximas etapas
 
-O Adobe Experience Platform Data Science Workspace fornece uma amostra de fórmula que usa as amostras de código acima para ler e gravar dados. Se quiser saber mais sobre como usar o Python para acessar seus dados, reveja o [Repositório GitHub Python do Data Science Workspace](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail).
+Adobe Experience Platform Data Science Área de trabalho fornece uma amostra fórmula que usa as amostras de código acima para ler e gravar dados. Se você quiser saber mais sobre como usar Python para acessar seus dados, consulte o [repositório](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail) Python GitHub Área de trabalho Data Science.

@@ -4,20 +4,26 @@ solution: Experience Platform
 title: Gerenciar notebooks de aprendizado de máquina em tempo real
 description: O guia a seguir descreve as etapas necessárias para criar um aplicativo de aprendizado de máquina em tempo real no Adobe Experience Platform JupyterLab.
 exl-id: 604c4739-5a07-4b5a-b3b4-a46fd69e3aeb
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 923c6f2deb4d1199cfc5dc9dc4ca7b4da154aaaa
 workflow-type: tm+mt
-source-wordcount: '1663'
+source-wordcount: '1686'
 ht-degree: 0%
 
 ---
 
 # Gerenciar blocos de anotações do Aprendizado de Máquina em Tempo Real (Alpha)
 
+>[!NOTE]
+>
+>O Área de trabalho de ciência de dados não está mais disponível para compra.
+>
+>Esta documentação destina-se a clientes existentes com direitos anteriores à Data Science Área de trabalho.
+
 >[!IMPORTANT]
 >
->O Aprendizado de máquina em tempo real ainda não está disponível para todos os usuários. Esse recurso está em alfa e ainda está sendo testado. Este documento está sujeito a alterações.
+>O Machine Learning em tempo real ainda não está disponível para todos os usuários. Esse recurso está na alfa e ainda está sendo testado. Esta documento está sujeita a mudanças.
 
-O guia a seguir descreve as etapas necessárias para criar um aplicativo de aprendizado de máquina em tempo real. Adobe Usando o modelo de bloco de anotações em Python **[!UICONTROL ML]** em tempo real, este guia aborda o treinamento de um modelo, a criação de um DSL, a publicação de DSL no Edge e a pontuação da solicitação. Conforme você avança na implementação do seu modelo de Aprendizado de máquina em tempo real, espera-se modificar o modelo para atender às necessidades do seu conjunto de dados.
+O guia a seguir descreve as etapas necessárias para build um aplicativo de Aprendizagem de máquina em tempo real. Usando o Adobe Systems notebook ML ]**Python em tempo real fornecido**[!UICONTROL  modelo, este guia aborda treinamento um modelo, a criação de um DSL, a publicação de DSL para o Edge e a pontuação da solicitação. Conforme você avança na implementação do seu modelo de Aprendizado de máquina em tempo real, espera-se modificar o modelo para atender às necessidades do seu conjunto de dados.
 
 ## Criar um bloco de anotações do Aprendizado de Máquina em Tempo Real
 
@@ -25,7 +31,7 @@ Na interface do usuário do Adobe Experience Platform, selecione **[!UICONTROL B
 
 ![abrir JupyterLab](../images/rtml/open-jupyterlab.png)
 
-O inicializador [!DNL JupyterLab] aparece. Role para baixo até *Aprendizado de Máquina em Tempo Real* e selecione o bloco de anotações **[!UICONTROL Aprendizado de Máquina em Tempo Real]**. Um modelo é aberto contendo exemplos de células do bloco de anotações com um exemplo de conjunto de dados.
+A [!DNL JupyterLab] iniciador é exibida. Role para baixo até *Aprendizado de Máquina em Tempo Real* e selecione o bloco de anotações **[!UICONTROL Aprendizado de Máquina em Tempo Real]**. Um modelo é aberto contendo exemplos de células do bloco de anotações com um exemplo de conjunto de dados.
 
 ![Python em branco](../images/rtml/authoring-notebook.png)
 
@@ -90,7 +96,7 @@ Se quiser usar um conjunto de dados dentro do Adobe Experience Platform, remova 
 
 ![conjunto de dados rtml](../images/rtml/rtml-dataset.png)
 
-Para acessar um conjunto de dados no bloco de anotações [!DNL JupyterLab], selecione a guia **Dados** no menu de navegação esquerdo de [!DNL JupyterLab]. Os diretórios **[!UICONTROL Datasets]** e **[!UICONTROL Schemas]** são exibidos. Selecione **[!UICONTROL Conjuntos de Dados]**, clique com o botão direito do mouse e selecione a opção **[!UICONTROL Explorar Dados no Bloco de Anotações]** no menu suspenso do conjunto de dados que você deseja usar. Uma entrada de código executável é exibida na parte inferior do bloco de notas. Esta célula tem seu `dataset_id`.
+Para acessar um conjunto de dados no bloco de anotações [!DNL JupyterLab], selecione a guia **Dados** no menu de navegação esquerdo de [!DNL JupyterLab]. Os **[!UICONTROL diretórios Conjuntos]** de dados e **[!UICONTROL Schemas]** são exibidos. Selecione Conjuntos ]**de dados e clique com o botão direito do mouse e selecione**[!UICONTROL  a opção **[!UICONTROL Explorar dados em notebook]** no menu suspenso na conjunto de dados que deseja usar. Uma entrada de código executável aparece na parte inferior do notebook. Essa célula tem o seu `dataset_id`.
 
 ![acesso ao conjunto de dados](../images/rtml/access-dataset.png)
 
@@ -194,7 +200,7 @@ cat_cols = ['age_bucket', 'gender', 'city', 'dayofweek', 'country', 'carbrand', 
 df_final = pd.get_dummies(df_final, columns = cat_cols)
 ```
 
-Execute a célula fornecida para ver um exemplo de resultado. A tabela de saída retornada do conjunto de dados `carinsurancedataset.csv` retorna as modificações definidas.
+Execute a célula fornecida para ver um resultado de exemplo. A tabela de saída retornada do conjunto de dados `carinsurancedataset.csv` retorna as modificações definidas.
 
 ![Exemplo de transformações de dados](../images/rtml/table-return.png)
 
@@ -270,13 +276,13 @@ Usando o botão de carregamento localizado em blocos de anotações [!DNL Jupyte
 
 ![ícone de carregamento](../images/rtml/upload.png)
 
-Em seguida, altere o valor da cadeia de caracteres `model_path` no bloco de anotações *ML* em tempo real para corresponder ao nome do modelo ONNX. Depois de concluir, execute a célula *Definir caminho de modelo* e execute a célula *Carregar seu modelo para o Repositório de Modelos RTML*. O local e a ID do modelo são retornados na resposta quando bem-sucedidos.
+Próximo, altere o valor da `model_path` sequência de caracteres no notebook ML em *tempo real* para corresponder ao nome do seu modelo ONNX. Após a conclusão, execute a célula Definir caminho *do* modelo e execute o Upload do *modelo para a célula Armazenamento* de modelo RTML. A localização do modelo e a ID do modelo são retornadas na resposta quando bem-sucedidas.
 
-![carregando seu próprio modelo](../images/rtml/upload-own-model.png)
+![fazer upload do próprio modelo](../images/rtml/upload-own-model.png)
 
-## Criação de linguagem específica de domínio (DSL)
+## Criação de idioma específico de domínio (DSL)
 
-Esta seção descreve a criação de um DSL. Você criará os nós que incluem qualquer pré-processamento de dados junto com o nó ONNX. Em seguida, um gráfico DSL é criado usando nós e bordas. As bordas conectam nós usando o formato baseado em tupla (node_1, node_2). O gráfico não deve ter ciclos.
+Esta seção descreve a criação de um DSL. Você criará os nós que incluem qualquer pré-processamento de dados junto com o ONNX nó. Próximo, um gráfico DSL é criado usando nós e bordas. As bordas conectam nós usando o formato baseado em tupla (node_1, node_2). O gráfico não deve ter ciclos.
 
 >[!IMPORTANT]
 >
@@ -286,7 +292,7 @@ Esta seção descreve a criação de um DSL. Você criará os nós que incluem q
 
 >[!NOTE]
 >
-> É provável que você tenha vários nós com base no tipo de dados que está sendo usado. O exemplo a seguir descreve apenas um único nó no modelo *ML* em tempo real. Exiba a seção *Criação de Nó do ML* em tempo real *para a célula de código completa.*
+> É provável que você tenha vários nós com base no tipo de dados que está sendo usado. O exemplo a *seguir descreve apenas uma única nó na modelo ML* em tempo real. Visualização a *seção Criação de nós de modelos**ML* em tempo real para a célula de código completa.
 
 O nó Pandas abaixo usa `"import": "map"` para importar o nome do método como uma cadeia de caracteres nos parâmetros, seguido pela inserção dos parâmetros como uma função de mapa. O exemplo abaixo faz isso usando `{'arg': {'dataLayerNull': 'notgiven', 'no': 'no', 'yes': 'yes', 'notgiven': 'notgiven'}}`. Depois de colocar o mapa no lugar, você tem a opção de definir `inplace` como `True` ou `False`. Defina `inplace` como `True` ou `False` com base no fato de você querer aplicar ou não a transformação local. Por padrão, `"inplace": False` cria uma nova coluna. O suporte para fornecer um novo nome de coluna está definido para ser adicionado em uma versão subsequente. A última linha `cols` pode ser um único nome de coluna ou uma lista de colunas. Especifique as colunas nas quais deseja aplicar a transformação. Neste exemplo, `leasing` está especificado. Para obter mais informações sobre os nós disponíveis e como usá-los, consulte o [manual de referência do nó](./node-reference.md).
 
@@ -368,9 +374,9 @@ print(f'Edge Location: {edge_location}')
 print(f'Service ID: {service_id}')
 ```
 
-### Atualização do DSL e republicação no Edge (opcional)
+### Atualizando seu DSL e republicando para o Edge (opcional)
 
-Se você não precisa atualizar sua DSL, pode pular para [pontuação](#scoring).
+Se não precisar atualizar seu DSL, você pode pular para [pontuação](#scoring).
 
 >[!NOTE]
 >
@@ -470,4 +476,4 @@ else:
 
 ## Próximas etapas
 
-Ao seguir o tutorial acima, você treinou e carregou com sucesso um modelo ONX para a loja de modelos do Real-time Machine Learning. Além disso, você pontuou e implantou seu modelo de aprendizado de máquina em tempo real. Se quiser saber mais sobre os nós disponíveis para criação de modelo, visite o [manual de referência do nó](./node-reference.md).
+Ao seguir o tutorial acima, você treinou e carregou com sucesso um modelo ONX para a loja de modelos do Real-time Machine Learning. Além disso, você pontuou e implantou seu modelo de Aprendizagem de máquina em tempo real. Se quiser saber mais sobre os nós disponíveis para criação de modelos, visita o [guia](./node-reference.md) de referência nó.

@@ -5,14 +5,20 @@ title: Endpoint da API de Insights
 description: Os insights contêm métricas usadas para capacitar um cientista de dados a avaliar e escolher modelos de aprendizado de máquina ideais exibindo métricas de avaliação relevantes.
 role: Developer
 exl-id: 603546d6-5686-4b59-99a7-90ecc0db8de3
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '514'
+source-wordcount: '537'
 ht-degree: 3%
 
 ---
 
 # Endpoint do Insights
+
+>[!NOTE]
+>
+>O Data Science Workspace não está mais disponível para compra.
+>
+>Esta documentação destina-se aos clientes existentes com direitos anteriores ao Data Science Workspace.
 
 Os insights contêm métricas usadas para capacitar um cientista de dados a avaliar e escolher modelos de aprendizado de máquina ideais exibindo métricas de avaliação relevantes.
 

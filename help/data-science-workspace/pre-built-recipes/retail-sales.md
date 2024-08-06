@@ -4,14 +4,20 @@ solution: Experience Platform
 title: Receita de vendas de varejo
 description: A fórmula de Vendas de Varejo permite prever a previsão de vendas para todas as lojas pré-implantadas por um determinado período de tempo. Com um modelo de previsão preciso, o varejista seria capaz de encontrar a relação entre as políticas de demanda e de preços e tomar decisões de preços otimizadas para maximizar as vendas e a receita.
 exl-id: ff01fcd1-fca6-4957-8470-a974fd1520aa
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '580'
+source-wordcount: '603'
 ht-degree: 2%
 
 ---
 
 # Receita de venda de varejo
+
+>[!NOTE]
+>
+>O Data Science Workspace não está mais disponível para compra.
+>
+>Esta documentação destina-se aos clientes existentes com direitos anteriores ao Data Science Workspace.
 
 A fórmula de Vendas de Varejo permite prever a previsão de vendas para todas as lojas pré-implantadas por um determinado período de tempo. Com um modelo de previsão preciso, o varejista seria capaz de encontrar a relação entre as políticas de demanda e de preços e tomar decisões de preços otimizadas para maximizar as vendas e a receita.
 

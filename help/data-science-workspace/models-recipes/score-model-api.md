@@ -1,24 +1,30 @@
 ---
-keywords: Experience Platform;Pontuar um modelo;Data Science Workspace;tópicos populares;api de aprendizado de máquina do sensei
+keywords: Experience Platform; Marcar um modelo; Área de trabalho de ciência de dados; tópicos populares; api sensei de aprendizado de máquina
 solution: Experience Platform
-title: Pontuar um modelo usando a API de aprendizado de máquina do Sensei
+title: Marcar um modelo usando a API de aprendizado de máquina do Sensei
 type: Tutorial
-description: Este tutorial mostrará como aproveitar as APIs do Sensei Machine Learning para criar um experimento e uma execução de experimento.
+description: Esta tutorial mostrará como usar as APIs de aprendizagem de máquina do Sensei para criar um Experimento e uma Execução Experimento.
 exl-id: 202c63b0-86d8-4a82-8ec8-d144a8911d08
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '547'
+source-wordcount: '570'
 ht-degree: 1%
 
 ---
 
-# Pontuar um modelo usando o [!DNL Sensei Machine Learning API]
+# Pontuar um modelo usando a variável [!DNL Sensei Machine Learning API]
 
-Este tutorial mostrará como aproveitar as APIs para criar um experimento e uma execução de experimento. Para obter uma lista de todos os endpoints na API do Sensei Machine Learning, consulte [este documento](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/).
+>[!NOTE]
+>
+>O Área de trabalho de ciência de dados não está mais disponível para compra.
+>
+>Esta documentação destina-se a clientes existentes com direitos anteriores à Data Science Área de trabalho.
 
-## Criar um experimento agendado para pontuação
+Este tutorial mostrará como usar as APIs para criar um Experimento e uma Execução Experimento. Para obter uma lista de todos os endpoints da API de aprendizagem de máquina do Sensei, consulte [esta documento](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/).
 
-Semelhante aos Experimentos agendados para treinamento, a criação de um Experimento agendado para pontuação também é feita incluindo uma seção `template` no parâmetro do corpo. Além disso, o campo `name` em `tasks` no corpo é definido como `score`.
+## Criar um Experimento agendado para pontuação
+
+Semelhante aos Experimentos programados para treinamento, a criação de um Experimento programado para pontuação também é feita por meio da inclusão de uma `template` seção no parâmetro body. Além disso, o campo `name` em `tasks` no corpo é definido como `score`.
 
 Este é um exemplo de criação de um Experimento que será executado a cada 20 minutos a partir de `startTime` e será executado até `endTime`.
 
@@ -102,13 +108,13 @@ Veja a seguir a resposta após criar o experimento agendado.
 }
 ```
 
-`{EXPERIMENT_ID}`: a ID que representa o Experimento.\
-`{INSTANCE_ID}`: a ID que representa a MLInstance.
+`{EXPERIMENT_ID}`: a ID que representa a Experimento.\
+`{INSTANCE_ID}`: a ID que representa o MLInstance.
 
 
-### Criar uma execução de experimento para pontuação
+### Criar uma corrida Experimento para pontuação
 
-Agora, com o modelo treinado, podemos criar uma Execução de experimento para pontuação. O valor do parâmetro `modelId` é o parâmetro `id` retornado na solicitação do Modelo GET acima.
+Agora, com o modelo treinado, podemos criar uma Experimento Corrida para pontuação. O valor do `modelId` parâmetro é o `id` parâmetro retornado no GET Modelo solicitação acima.
 
 **Solicitação**
 
@@ -122,11 +128,11 @@ curl -X POST \
   -d '{JSON_PAYLOAD}'
 ```
 
-`{ORG_ID}`: as credenciais da sua organização foram encontradas em sua integração exclusiva com o Adobe Experience Platform.\
-`{ACCESS_TOKEN}`: Seu valor de token de portador específico fornecido após a autenticação.\
-`{API_KEY}`: O valor da sua chave de API específica foi encontrado na sua integração exclusiva do Adobe Experience Platform.\
-`{EXPERIMENT_ID}`: a ID correspondente ao Experimento que você deseja direcionar. Isso pode ser encontrado na resposta ao criar o experimento.\
-`{JSON_PAYLOAD}`: Dados a serem postados. O exemplo que usamos em nosso tutorial está aqui:
+`{ORG_ID}`: suas credenciais de organização encontradas na integração exclusiva do Adobe Experience Platform.\
+`{ACCESS_TOKEN}`: seu valor de token portador específico fornecido após a autenticação.\
+`{API_KEY}`: seu valor de chave de API específico encontrado na integração exclusiva do Adobe Experience Platform.\
+`{EXPERIMENT_ID}`: a ID correspondente ao Experimento que você deseja Direcionamento. Isso pode ser encontrado na resposta ao criar sua Experimento.\
+`{JSON_PAYLOAD}`: dados a serem publicados. O exemplo que usamos em nosso tutorial está aqui:
 
 ```JSON
 {
@@ -187,9 +193,9 @@ curl -X GET \
 
 `{EXPERIMENT_ID}`: a ID correspondente ao experimento em que a execução está.\
 `{ACCESS_TOKEN}`: Seu valor de token de portador específico fornecido após a autenticação.\
-`{ORG_ID}`: as credenciais da sua organização foram encontradas em sua integração exclusiva com o Adobe Experience Platform.
+`{ORG_ID}`: suas credenciais de organização encontradas na integração exclusiva do Adobe Experience Platform.
 
-Como há várias execuções de experimento para um experimento específico, a resposta retornada terá uma matriz de IDs de execução.
+Como há várias Experimento Execuções para um Experimento específico, a resposta retornada terá uma matriz de IDs de execução.
 
 **Resposta**
 
@@ -212,8 +218,8 @@ Como há várias execuções de experimento para um experimento específico, a r
 }
 ```
 
-`{EXPERIMENT_RUN_ID}`: a identificação correspondente à execução do experimento.\
-`{EXPERIMENT_ID}`: a ID correspondente ao experimento em que a execução está.
+`{EXPERIMENT_RUN_ID}`: a ID correspondente ao Experimento Run.\
+`{EXPERIMENT_ID}`: a ID correspondente à Experimento em que a Execução está.
 
 ### Parar e excluir um experimento agendado
 

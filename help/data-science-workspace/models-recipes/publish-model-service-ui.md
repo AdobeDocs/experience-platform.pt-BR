@@ -5,14 +5,20 @@ title: Publish um modelo como um serviço na interface do usuário do Data Scien
 type: Tutorial
 description: O Adobe Experience Platform Data Science Workspace permite publicar seu Modelo como um serviço treinado e avaliado, permitindo que os usuários em sua organização marquem dados sem a necessidade de criar seus próprios modelos.
 exl-id: ebbec1b1-20d3-43b5-82d3-89c79757625a
-source-git-commit: d6a4b149b911cd6e7dbbd6c1289fce64be76b506
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '505'
+source-wordcount: '528'
 ht-degree: 4%
 
 ---
 
 # Publicar um modelo como um serviço na interface do usuário do Espaço de trabalho de ciência de dados {#publish-a-model-as-a-service}
+
+>[!NOTE]
+>
+>O Data Science Workspace não está mais disponível para compra.
+>
+>Esta documentação destina-se aos clientes existentes com direitos anteriores ao Data Science Workspace.
 
 >[!CONTEXTUALHELP]
 >id="platform_intelligentservices_publishmodel"

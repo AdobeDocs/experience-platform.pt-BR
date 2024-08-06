@@ -5,15 +5,21 @@ title: Criar o esquema e o conjunto de dados de vendas de varejo
 type: Tutorial
 description: Este tutorial fornece os pré-requisitos e os ativos necessários para todos os outros tutoriais do Adobe Experience Platform Data Science Workspace. Após a conclusão, o esquema de Vendas de varejo e os conjuntos de dados estarão disponíveis para você e os membros de sua organização no Experience Platform.
 exl-id: 1b868c8c-7c92-4f99-8486-54fd7aa1af48
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '534'
+source-wordcount: '557'
 ht-degree: 2%
 
 ---
 
 
 # Criar o esquema de vendas de varejo e o conjunto de dados
+
+>[!NOTE]
+>
+>O Data Science Workspace não está mais disponível para compra.
+>
+>Esta documentação destina-se aos clientes existentes com direitos anteriores ao Data Science Workspace.
 
 Este tutorial fornece os pré-requisitos e os ativos necessários para todos os outros tutoriais do [!DNL Adobe Experience Platform] [!DNL Data Science Workspace]. Após a conclusão, o esquema de Vendas de Varejo e os conjuntos de dados estarão disponíveis para você e os membros de sua organização em [!DNL Experience Platform].
 

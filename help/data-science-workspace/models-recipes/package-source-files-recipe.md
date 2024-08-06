@@ -5,14 +5,20 @@ title: Compactar arquivos Source em uma fórmula
 type: Tutorial
 description: Este tutorial fornece instruções sobre como empacotar os arquivos de origem de amostra de Vendas de varejo em um arquivo, que pode ser usado para criar uma fórmula no Adobe Experience Platform Data Science Workspace seguindo o fluxo de trabalho de importação da fórmula na interface do usuário ou usando a API.
 exl-id: 199b8127-4f1b-43a4-82e6-58cb70fcdc08
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '1143'
+source-wordcount: '1166'
 ht-degree: 0%
 
 ---
 
 # Compactar arquivos de origem em uma fórmula
+
+>[!NOTE]
+>
+>O Data Science Workspace não está mais disponível para compra.
+>
+>Esta documentação destina-se aos clientes existentes com direitos anteriores ao Data Science Workspace.
 
 Este tutorial fornece instruções sobre como empacotar os arquivos de origem de amostra de Vendas de Varejo em um arquivo morto, que pode ser usado para criar uma fórmula no Adobe Experience Platform [!DNL Data Science Workspace] seguindo o fluxo de trabalho de importação da fórmula na interface ou usando a API.
 

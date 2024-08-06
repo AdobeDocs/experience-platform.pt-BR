@@ -2,16 +2,22 @@
 keywords: Experience Platform;guia do desenvolvedor;Data Science Workspace;tópicos populares;Aprendizado de máquina em tempo real;
 solution: Experience Platform
 title: Introdução ao Aprendizado de máquina em tempo real
-description: O documento a seguir descreve as etapas necessárias para criar um modelo de Aprendizado de máquina em tempo real no Adobe Experience Platform.
+description: A documento a seguir descreve as etapas necessárias para criar um modelo de Aprendizagem de máquina em tempo real em Adobe Experience Platform.
 exl-id: 90a1c580-f6e7-4517-aa1e-da5092fbc4a2
-source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '438'
+source-wordcount: '461'
 ht-degree: 0%
 
 ---
 
-# Introdução ao Real-time Machine Learning (Alpha)
+# Introdução ao aprendizado de máquina em tempo real (Alpha)
+
+>[!NOTE]
+>
+>O Área de trabalho de ciência de dados não está mais disponível para compra.
+>
+>Esta documentação destina-se aos clientes existentes com direitos anteriores ao Data Science Workspace.
 
 >[!IMPORTANT]
 >
@@ -26,7 +32,7 @@ Os guias para o Aprendizado de Máquina em Tempo Real exigem uma compreensão fu
 - **DSL:** Idioma Específico do Domínio.
 - **Edge:** o serviço de pontuação do Real-time Machine Learning pode ser executado em clusters Edge mais próximos das suas ativações e aplicativos.
 - **Hub:** o alfa atual está executando o serviço de pontuação do Aprendizado de Máquina em Tempo Real no Hub do Adobe Experience Platform enquanto o Edge Network está em desenvolvimento.
-- **Nó:** Um Nó é a unidade fundamental da qual os gráficos são formados. Cada nó executa uma tarefa específica e eles podem ser encadeados usando links para formar um gráfico que representa um pipeline de ML. A tarefa executada por um nó representa uma operação nos dados de entrada, como uma transformação de dados ou esquema, ou uma inferência de aprendizado de máquina. O nó gera o valor transformado ou inferido para o(s) próximo(s) nó(s).
+- **Nó:** um nó é a unidade fundamental da qual os gráficos são formados. Cada nó executa uma tarefa específica e podem ser encadeadas usando links para formar um gráfico que representa um pipeline ML. A tarefa executada por um nó representa uma operação nos dados de entrada, como uma transformação de dados ou esquema, ou uma inferência de aprendizado de máquina. O nó gera o valor transformado ou inferido para o(s) próximo(s) nó(s).
 
 ## Conjuntos de dados na Adobe Experience Platform
 
@@ -42,9 +48,9 @@ Para saber mais sobre como usar um conjunto de dados externo, como carregar dado
 
 ### Criar um novo conjunto de dados
 
-Para criar um novo conjunto de dados para usar no Aprendizado de máquina em tempo real, você precisa de um esquema de dados para seu conjunto de dados. Em seguida, é necessário assimilar dados usando o esquema criado. Use os seguintes tutoriais para criar e preencher um conjunto de dados para [!DNL Platform]:
+Para criar um novo conjunto de dados para usar no Aprendizado de máquina em tempo real, você precisa de um esquema de dados para seu conjunto de dados. Próximo, é necessário assimilar dados usando as schema criadas. Use os tutoriais a seguir para criar e preencher uma conjunto de dados para [!DNL Platform]:
 
-- [Criar e preencher um conjunto de dados na API](../../catalog/datasets/create.md)
+- [Criar e preencher uma conjunto de dados na API](../../catalog/datasets/create.md)
 - [Criar e preencher um conjunto de dados na interface do](../../ingestion/tutorials/ingest-batch-data.md)
 
 ## Próximas etapas {#next-steps}

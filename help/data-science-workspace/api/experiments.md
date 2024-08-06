@@ -1,28 +1,34 @@
 ---
-keywords: Experience Platform;guia do desenvolvedor;endpoint;Data Science Workspace;tópicos populares;experimentos;api de aprendizado de máquina do sensei
+keywords: Experience Platform; guia do desenvolvedor; Extremidade; Área de trabalho de ciência de dados; tópicos populares; Experiências; api sensei de aprendizado de máquina
 solution: Experience Platform
-title: Endpoint da API de experimentos
-description: O desenvolvimento e o treinamento de modelos ocorrem no nível do Experimento, em que um Experimento consiste em uma MLInstance, execuções de treinamento e execuções de pontuação.
+title: Terminal da API de experimentos
+description: O desenvolvimento e o treinamento do modelo ocorrem no nível Experimento, onde um Experimento consiste em uma MLInstance, treinamento corridas e pontuação de corridas.
 role: Developer
 exl-id: 6ca5106e-896d-4c03-aecc-344632d5307d
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '783'
+source-wordcount: '806'
 ht-degree: 4%
 
 ---
 
-# Endpoint de experimentos
-
-O desenvolvimento e o treinamento de modelos ocorrem no nível do Experimento, em que um Experimento consiste em uma MLInstance, execuções de treinamento e execuções de pontuação.
-
-## Criar um experimento {#create-an-experiment}
-
-Você pode criar um Experimento executando uma solicitação POST enquanto fornece um nome e uma ID de MLInstance válida na carga da solicitação.
+# Terminal de experimentos
 
 >[!NOTE]
 >
->Ao contrário do treinamento de modelo na interface do usuário, criar um Experimento por meio de uma chamada de API explícita não cria e executa automaticamente uma execução de treinamento.
+>O Data Science Workspace não está mais disponível para compra.
+>
+>Esta documentação destina-se a clientes existentes com direitos anteriores à Data Science Área de trabalho.
+
+O desenvolvimento e o treinamento do modelo ocorrem no nível Experimento, onde um Experimento consiste em uma MLInstance, treinamento corridas e pontuação de corridas.
+
+## Criar um Experimento {#create-an-experiment}
+
+É possível criar um Experimento executando uma solicitação POST ao fornecer um nome e uma ID de MLInstance válida na carga solicitação.
+
+>[!NOTE]
+>
+>Ao contrário do modelo treinamento no interface, criar uma Experimento por meio de uma chamada de API explícita não cria e executa automaticamente uma execução treinamento.
 
 **Formato da API**
 
@@ -71,9 +77,9 @@ Uma resposta bem-sucedida retorna uma carga contendo os detalhes do Experimento 
 
 ## Criar e executar um treinamento ou uma execução de pontuação {#experiment-training-scoring}
 
-Você pode criar execuções de treinamento ou de pontuação executando uma solicitação POST, fornecendo uma ID de experimento válida e especificando a tarefa de execução. As execuções de pontuação só poderão ser criadas se o Experimento tiver uma execução de treinamento existente e bem-sucedida. A criação bem-sucedida de uma execução de treinamento inicializará o procedimento de treinamento do modelo e sua conclusão bem-sucedida gerará um modelo treinado. Gerar modelos treinados substituirá todos os existentes anteriormente, de modo que um Experimento só possa utilizar um único modelo treinado em um determinado momento.
+Você pode criar execuções de treinamento ou de pontuação executando uma solicitação POST, fornecendo uma ID de experimento válida e especificando a tarefa de execução. As execuções de pontuação só poderão ser criadas se o Experimento tiver uma execução de treinamento existente e bem-sucedida. A criação bem-sucedida de uma execução de treinamento inicializará o procedimento de treinamento do modelo e sua conclusão bem-sucedida gerará um modelo treinado. A geração de modelos treinados substituirá quaisquer modelos existentes anteriormente, de modo que um Experimento possa utilizar apenas um único modelo treinado a qualquer momento.
 
-**Formato da API**
+**Formato de API**
 
 ```http
 POST /experiments/{EXPERIMENT_ID}/runs
@@ -100,11 +106,11 @@ curl -X POST \
 
 | Propriedade | Descrição |
 | --- | --- |
-| `{TASK}` | Especifica a tarefa da execução. Defina este valor como `train` para treinamento, `score` para pontuação ou `featurePipeline` para pipeline de recursos. |
+| `{TASK}` | Especifica o tarefa da execução. Defina esse valor como `train` para treinamento, `score` para pontuação ou `featurePipeline` para pipeline de recursos. |
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna uma carga contendo os detalhes da execução recém-criada, incluindo os parâmetros de pontuação ou treinamento padrão herdados e a ID exclusiva da execução (`{RUN_ID}`).
+Uma resposta bem-sucedida retorna uma carga contendo os detalhes da execução recém-criada, incluindo o padrão herdado treinamento ou parâmetros de pontuação, e a ID exclusiva (`{RUN_ID}`da execução).
 
 ```json
 {
@@ -199,7 +205,7 @@ Uma resposta bem-sucedida retorna uma lista de Experimentos que compartilham a m
 
 ## Recuperar um experimento específico {#retrieve-specific}
 
-Você pode recuperar os detalhes de um Experimento específico executando uma solicitação GET que inclui a ID do Experimento desejada no caminho da solicitação.
+Você pode recuperar os detalhes de uma Experimento específica executando uma solicitação GET que inclui a ID da Experimento desejada no caminho solicitação.
 
 **Formato da API**
 
@@ -260,11 +266,11 @@ GET /experiments/{EXPERIMENT_ID}/runs?{QUERY_PARAMETER_1}={VALUE_1}&{QUERY_PARAM
 | --- | --- |
 | `{EXPERIMENT_ID}` | Uma ID de experimento válida. |
 | `{QUERY_PARAMETER}` | Um dos [parâmetros de consulta disponíveis](./appendix.md#query) usados para filtrar resultados. |
-| `{VALUE}` | O valor do parâmetro de consulta anterior. |
+| `{VALUE}` | O valor do parâmetro de query anterior. |
 
 **Solicitação**
 
-A solicitação a seguir contém uma consulta e recupera uma lista de execuções de treinamento pertencentes a algum Experimento.
+A solicitação a seguir contém um query e recupera uma lista de treinamento correções pertencentes a algumas Experimento.
 
 ```shell
 curl -X GET \
@@ -301,15 +307,15 @@ Uma resposta bem-sucedida retorna uma carga contendo uma lista de execuções e 
 }
 ```
 
-## Atualizar um experimento
+## Atualizar um Experimento
 
-Você pode atualizar um experimento existente substituindo as propriedades por meio de uma solicitação PUT que inclui a ID do experimento de destino no caminho da solicitação e fornecendo uma carga JSON contendo propriedades atualizadas.
+Você pode atualizar uma Experimento existente sobrescrevendo suas propriedades por meio de uma solicitação PUT que inclui a ID do Direcionamento Experimento no caminho solicitação e fornecendo uma carga JSON contendo propriedades atualizadas.
 
 >[!TIP]
 >
->Para garantir o sucesso dessa solicitação PUT, sugere-se que primeiro você execute uma solicitação GET para [recuperar o Experimento por ID](#retrieve-specific). Em seguida, modifique e atualize o objeto JSON retornado e aplique a totalidade do objeto JSON modificado como a carga da solicitação PUT.
+>Em solicitar para garantir o sucesso desta solicitação PUT, sugere-se que primeiro você execute um solicitação GET para [recuperar o Experimento por ID](#retrieve-specific). Em seguida, modifique e atualize o objeto JSON retornado e aplique a totalidade do objeto JSON modificado como a carga para o solicitação PUT.
 
-O exemplo de chamada de API a seguir atualiza o nome de um Experimento tendo inicialmente essas propriedades:
+A chamada de API de amostra a seguir atualiza o nome de um Experimentos, enquanto estas propriedades são inicialmente:
 
 ```json
 {
@@ -323,7 +329,7 @@ O exemplo de chamada de API a seguir atualiza o nome de um Experimento tendo ini
 }
 ```
 
-**Formato da API**
+**Formato de API**
 
 ```http
 PUT /experiments/{EXPERIMENT_ID}
@@ -384,7 +390,7 @@ DELETE /experiments/{EXPERIMENT_ID}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{EXPERIMENT_ID}` | Uma ID de experimento válida. |
+| `{EXPERIMENT_ID}` | Uma ID de Experimento válida. |
 
 **Solicitação**
 
@@ -419,7 +425,7 @@ DELETE /experiments?mlInstanceId={MLINSTANCE_ID}
 
 | Parâmetro | Descrição |
 | --- | ---|
-| `{MLINSTANCE_ID}` | Uma ID de MLInstance válida. |
+| `{MLINSTANCE_ID}` | Uma ID MLInstance válida. |
 
 **Solicitação**
 

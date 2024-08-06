@@ -1,18 +1,24 @@
 ---
-keywords: Experience Platform;página inicial;tópicos populares;acesso a dados;spark sdk;api de acesso a dados;spark revenue;read spark;write spark
+keywords: Experience Platform; Casa; tópicos populares; acesso a dados; spark sdk; api de acesso a dados; fórmula de faísca; ler faísca; gravar faísca
 solution: Experience Platform
-title: Acesso a dados usando o Spark no Data Science Workspace
+title: Acesso a dados usando o Spark em Área de trabalho de ciência de dados
 type: Tutorial
-description: O documento a seguir contém exemplos de como acessar dados usando o Spark para uso no Data Science Workspace.
+description: A documento a seguir contém exemplos sobre como acessar dados usando o Spark para uso em Área de trabalho de ciência de dados.
 exl-id: 9bffb52d-1c16-4899-b455-ce570d76d3b4
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '444'
+source-wordcount: '467'
 ht-degree: 0%
 
 ---
 
-# Acesso a dados usando o Spark no Data Science Workspace
+# Acesso a dados usando o Spark no Data Science Área de trabalho
+
+>[!NOTE]
+>
+>O Data Science Workspace não está mais disponível para compra.
+>
+>Esta documentação destina-se aos clientes existentes com direitos anteriores ao Data Science Workspace.
 
 O documento a seguir contém exemplos de como acessar dados usando o Spark para uso no Data Science Workspace. Para obter informações sobre como acessar dados usando notebooks JupyterLab, visite a documentação do [JupyterLab notebooks data access](../jupyterlab/access-notebook-data.md).
 
@@ -49,7 +55,7 @@ Class Helper {
 
 Ao usar o Spark, você tem acesso a dois modos de leitura: interativo e em lote.
 
-O modo interativo cria uma conexão JDBC (Conectividade de Banco de Dados Java) com [!DNL Query Service] e obtém resultados por meio de um JDBC `ResultSet` comum que é traduzido automaticamente para um `DataFrame`. Este modo funciona de forma semelhante ao método `spark.read.jdbc()` [!DNL Spark] interno. Esse modo destina-se somente a conjuntos de dados pequenos. Se o conjunto de dados exceder 5 milhões de linhas, é recomendável alternar para o modo de lote.
+O modo interativo cria uma conexão [!DNL Query Service] de Conectividade de banco de dados Java (JDBC) e obtém resultados através de um JDBC `ResultSet` regular que é traduzido automaticamente para um `DataFrame`. Esse modo funciona de forma semelhante ao método `spark.read.jdbc()`integrado[!DNL Spark]. Esse modo destina-se somente a pequenos conjuntos de dados. Se sua conjunto de dados exceder 5 milhões de linhas, sugere-se que você troque para o modo em lote.
 
 O modo de lote usa o comando COPY de [!DNL Query Service] para gerar conjuntos de resultados do Parquet em um local compartilhado. Esses arquivos do Parquet podem ser processados posteriormente.
 
@@ -109,13 +115,13 @@ Um exemplo de uso da função `distinct()` pode ser visto abaixo:
 df = df.select("column-a", "column-b").distinct().show()
 ```
 
-### Cláusula WHERE
+### CLÁUSULA ONDE
 
-O SDK [!DNL Spark] permite dois métodos de filtragem: usando uma expressão SQL ou filtrando pelas condições.
+O [!DNL Spark] SDK permite dois métodos de filtragem: usar um expressão SQL ou filtrar por meio de condições.
 
 Um exemplo do uso dessas funções de filtragem pode ser visto abaixo:
 
-#### Expressão SQL
+#### expressão SQL
 
 ```scala
 df.where("age > 15")
@@ -147,9 +153,9 @@ Um exemplo de uso da função `limit()` pode ser visto abaixo:
 df = df.limit(100)
 ```
 
-## Gravação em um conjunto de dados
+## Escrever em um conjunto de dados
 
-Usando o mapeamento `configProperties`, você pode gravar em um conjunto de dados no Experience Platform usando `QSOption`.
+Usando o `configProperties` mapeamento, você pode escrever em um conjunto de dados em Experience Platform usando `QSOption`.
 
 ```scala
 val userToken: String = sparkSession.sparkContext.getConf.get("ML_FRAMEWORK_IMS_TOKEN", "").toString

@@ -2,22 +2,28 @@
 keywords: Experience Platform;receita de recomendação do produto;Data Science Workspace;tópicos populares;receitas;pré-criar fórmula
 solution: Experience Platform
 title: Receita de recomendação do produto
-description: A fórmula Recommendations de produto permite que você forneça recomendações de produto personalizadas, personalizadas para as necessidades e os interesses do seu cliente. Com um modelo de previsão preciso, o histórico de compras de um cliente pode fornecer informações sobre em quais produtos ele pode estar interessado.
+description: A fórmula Recommendations de produto permite que você forneça recomendações de produto personalizadas, personalizadas para as necessidades e os interesses do seu cliente. Com um modelo de previsão preciso, o histórico de compras de um cliente pode fornecer insight sobre quais produtos eles podem estar interessados.
 exl-id: 508d55af-c33b-4f1d-b1b6-f00ed5d12bf9
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 923c6f2deb4d1199cfc5dc9dc4ca7b4da154aaaa
 workflow-type: tm+mt
-source-wordcount: '466'
-ht-degree: 3%
+source-wordcount: '489'
+ht-degree: 2%
 
 ---
 
-# Receita de recomendação do produto
+# recomendação fórmula do produto
 
-A fórmula Recommendations de produto permite que você forneça recomendações de produto personalizadas, personalizadas para as necessidades e os interesses do seu cliente. Com um modelo de previsão preciso, o histórico de compras de um cliente pode fornecer informações sobre em quais produtos ele pode estar interessado.
+>[!NOTE]
+>
+>O Área de trabalho de ciência de dados não está mais disponível para compra.
+>
+>Esta documentação destina-se a clientes existentes com direitos anteriores à Data Science Área de trabalho.
 
-## Para quem esta receita foi criada?
+O recomendações fórmula do produto permite que você forneça recomendações personalizadas de produtos adaptadas às necessidades e interesses de seus clientes. Com um modelo de previsão preciso, o histórico de compras de um cliente pode fornecer insight sobre quais produtos eles podem estar interessados.
 
-Nos dias de hoje, um varejista pode oferecer uma variedade de produtos, dando aos seus clientes muitas opções que também podem atrapalhar a pesquisa de seus clientes. Devido a restrições de tempo e esforço, os clientes podem não encontrar o produto que desejam, resultando em compras com um alto nível de dissonância cognitiva ou nenhuma compra.
+## Para quem este fórmula construído?
+
+Nos dias modernos, um varejista pode oferta uma multidão de produtos, dando aos seus clientes muitas opções que também podem dificultar o pesquisa dos clientes. Devido a restrições de tempo e esforço, os clientes podem não encontrar o produto que desejam, resultando em compras com um alto nível de dissonância cognitiva ou nenhuma compra.
 
 ## O que esta receita faz?
 
@@ -25,35 +31,35 @@ A fórmula Recommendations de produto usa aprendizagem de máquina para analisar
 
 ## Como começar?
 
-Você pode começar seguindo o tutorial do Adobe Experience Platform Lab (consulte o link Lab abaixo). Este tutorial mostrará como criar a fórmula do Recommendations do Produto em um Bloco de Anotações do Jupyter seguindo o fluxo de trabalho [bloco de anotações para a fórmula](../jupyterlab/create-a-model.md) e implementando a fórmula em [!DNL Experience Platform] [!DNL Data Science Workspace].
+Você pode começar seguindo o Adobe Experience Platform Lab tutorial (consulte Lab link abaixo). Esta tutorial mostrará como criar o Recomendações fórmula de Produto em um Notebook Jupyter seguindo o [notebook para fórmula](../jupyterlab/create-a-model.md) fluxo de Trabalho e implementando o fórmula em [!DNL Experience Platform] [!DNL Data Science Workspace].
 
-* [Laboratório: Preveja o futuro com o Data Science Workspace](https://expleague.azureedge.net/labs/L777/index.html)
-* [Recursos do laboratório](https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources)
+* [Lab: prever o futuro com o Área de trabalho de ciência de dados](https://expleague.azureedge.net/labs/L777/index.html)
+* [Recursos do Lab](https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources)
 
-## Esquema de dados
+## schema de dados
 
-Esta fórmula usa [esquemas XDM](../../xdm/schema/field-dictionary.md) personalizados para modelar os dados de entrada e saída:
+Essa fórmula usa esquemas](../../xdm/schema/field-dictionary.md) XDM personalizados [para modelar os dados de entrada e saída:
 
-### Esquema de dados de entrada
+### schema de dados de entrada
 
 | Nome do campo | Tipo |
 | --- | --- |
 | itemId | String |
 | interactionType | String |
 | carimbo de data e hora | String |
-| userId | String |
+| id do usuário | String |
 
-### Esquema de dados de saída
+### schema de dados do Output
 
 | Nome do campo | Tipo |
 | --- | --- |
 | recommendations | String |
-| userId | Número inteiro |
+| id do usuário | Número inteiro |
 
 ## Algoritmo
 
-A fórmula Recommendations de produto utiliza filtragem colaborativa para gerar uma lista personalizada de recomendações de produto para seus clientes. A filtragem colaborativa, ao contrário de uma abordagem baseada em conteúdo, não requer informações sobre um produto específico, mas utiliza as preferências históricas de um cliente em um conjunto de produtos. Essa eficiente técnica de recomendação usa duas suposições simples:
-* Existem clientes com interesses semelhantes, que podem ser agrupados ao comparar seus comportamentos de compra e de navegação.
+O recomendações fórmula utiliza filtros colaborativos para gerar uma lista personalizada de recomendações de produtos para seus clientes. A filtragem colaborativa, ao contrário de uma abordagem baseada em conteúdo, não requer informações sobre um produto específico, mas sim usa as preferências históricas de um cliente em um conjunto de produtos. Esta poderosa técnica de recomendação usa duas suposições simples:
+* Há clientes com interesses semelhantes e podem ser agrupados por meio da comparação de seus comportamentos de compra e navegação.
 * É mais provável que um cliente esteja interessado em uma recomendação baseada em clientes semelhantes em termos de comportamento de compra e navegação.
 
 Esse processo é dividido em duas etapas principais. Primeiro, defina um subconjunto de clientes semelhantes. Em seguida, dentro desse conjunto, identifique recursos semelhantes entre esses clientes para retornar uma recomendação para o cliente-alvo.

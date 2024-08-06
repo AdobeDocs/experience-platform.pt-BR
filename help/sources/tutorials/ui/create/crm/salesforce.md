@@ -2,9 +2,9 @@
 title: Conecte sua conta do Salesforce usando a interface do Experience Platform
 description: Saiba como conectar sua conta do Salesforce e trazer seus dados de CRM para o Experience Platform usando a interface do usuário.
 exl-id: b67fa4c4-d8ff-4d2d-aa76-5d9d32aa22d6
-source-git-commit: 7930a869627130a5db34780e64b809cda0c1e5f4
+source-git-commit: 5951b0f549c2fd2723945f8f4089d12f73b92e6c
 workflow-type: tm+mt
-source-wordcount: '829'
+source-wordcount: '841'
 ht-degree: 3%
 
 ---
@@ -36,7 +36,7 @@ Você deve fornecer valores para as credenciais a seguir para conectar sua conta
 
 | Credencial | Descrição |
 | --- | --- |
-| URL do ambiente | A URL da instância de origem [!DNL Salesforce]. |
+| URL do ambiente | A URL da instância de origem [!DNL Salesforce]. O formato da URL do ambiente é `https://[domain].my.salesforce.com`. |
 | Nome de usuário | O nome de usuário da conta de usuário [!DNL Salesforce]. |
 | Senha | A senha da conta de usuário [!DNL Salesforce]. |
 | Token de segurança | O token de segurança para a conta de usuário [!DNL Salesforce]. |
@@ -50,7 +50,7 @@ Você deve fornecer valores para as credenciais a seguir para conectar sua conta
 
 | Credencial | Descrição |
 | --- | --- |
-| URL do ambiente | A URL da instância de origem [!DNL Salesforce]. |
+| URL do ambiente | A URL da instância de origem [!DNL Salesforce]. O formato da URL do ambiente é `https://[domain].my.salesforce.com`. |
 | ID de cliente | A ID do cliente é usada em conjunto com o segredo do cliente como parte da autenticação OAuth2. Juntos, a ID do cliente e o segredo do cliente permitem que o aplicativo opere em nome da sua conta, identificando o aplicativo no [!DNL Salesforce]. |
 | Segredo do cliente | O segredo do cliente é usado em conjunto com a ID do cliente como parte da autenticação OAuth2. Juntos, a ID do cliente e o segredo do cliente permitem que o aplicativo opere em nome da sua conta, identificando o aplicativo no [!DNL Salesforce]. |
 | Versão da API | A versão da API REST da instância [!DNL Salesforce] que você está usando. O valor da versão da API deve ser formatado com um decimal. Por exemplo, se você estiver usando a versão da API `52`, será necessário inserir o valor como `52.0`. Se esse campo ficar em branco, o Experience Platform usará automaticamente a versão mais recente disponível. |

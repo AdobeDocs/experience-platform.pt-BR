@@ -2,9 +2,9 @@
 title: Criar uma conexão básica do Salesforce usando a API do serviço de fluxo
 description: Saiba como conectar o Adobe Experience Platform a uma conta do Salesforce usando a API do Serviço de fluxo.
 exl-id: 43dd9ee5-4b87-4c8a-ac76-01b83c1226f6
-source-git-commit: 7d450ba3357389a2934f187e4838e534d698dd4a
+source-git-commit: 5951b0f549c2fd2723945f8f4089d12f73b92e6c
 workflow-type: tm+mt
-source-wordcount: '774'
+source-wordcount: '782'
 ht-degree: 3%
 
 ---
@@ -36,7 +36,7 @@ Para conectar sua conta do [!DNL Salesforce] ao [!DNL Flow Service] usando a aut
 
 | Credencial | Descrição |
 | --- | --- |
-| `environmentUrl` | A URL da instância de origem [!DNL Salesforce]. |
+| `environmentUrl` | A URL da instância de origem [!DNL Salesforce]. O formato de `environmentUrl` é `https://[domain].my.salesforce.com`. |
 | `username` | O nome de usuário da conta de usuário [!DNL Salesforce]. |
 | `password` | A senha da conta de usuário [!DNL Salesforce]. |
 | `securityToken` | O token de segurança para a conta de usuário [!DNL Salesforce]. |
@@ -51,7 +51,7 @@ Para conectar sua conta do [!DNL Salesforce] ao [!DNL Flow Service] usando a Cre
 
 | Credencial | Descrição |
 | --- | --- |
-| `environmentUrl` | A URL da instância de origem [!DNL Salesforce]. |
+| `environmentUrl` | A URL da instância de origem [!DNL Salesforce]. O formato de `environmentUrl` é `https://[domain].my.salesforce.com` |
 | `clientId` | A ID do cliente é usada em conjunto com o segredo do cliente como parte da autenticação OAuth2. Juntos, a ID do cliente e o segredo do cliente permitem que o aplicativo opere em nome da sua conta, identificando o aplicativo no [!DNL Salesforce]. |
 | `clientSecret` | O segredo do cliente é usado em conjunto com a ID do cliente como parte da autenticação OAuth2. Juntos, a ID do cliente e o segredo do cliente permitem que o aplicativo opere em nome da sua conta, identificando o aplicativo no [!DNL Salesforce]. |
 | `apiVersion` | A versão da API REST da instância [!DNL Salesforce] que você está usando. O valor da versão da API deve ser formatado com um decimal. Por exemplo, se você estiver usando a versão da API `52`, será necessário inserir o valor como `52.0`. Se esse campo ficar em branco, o Experience Platform usará automaticamente a versão mais recente disponível. Esse valor é obrigatório para autenticação de Credencial do cliente OAuth2. |

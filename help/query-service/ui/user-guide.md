@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guia da interface do Editor de consultas
 description: O Editor de consultas é uma ferramenta interativa fornecida pelo Serviço de consultas da Adobe Experience Platform, que permite gravar, validar e executar consultas para dados de experiência do cliente na interface do usuário do Experience Platform. O Editor de consultas é compatível com o desenvolvimento de consultas para análise e exploração de dados, e permite executar consultas interativas para fins de desenvolvimento, bem como consultas não interativas para preencher conjuntos de dados no Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: d2bc580ba1cacdfab45bdc6356c630a63e7d0f6e
 workflow-type: tm+mt
-source-wordcount: '2432'
+source-wordcount: '2430'
 ht-degree: 0%
 
 ---
@@ -223,9 +223,9 @@ Após a conclusão de uma consulta, os resultados serão exibidos na guia **[!UI
 
 ![A guia Resultados do console do Editor de Consultas exibindo os resultados de uma execução de consulta.](../images/ui/query-editor/query-results.png)
 
-## Casos de uso {#use-cases}
+## Exemplos {#examples}
 
-O Serviço de consulta fornece soluções para uma variedade de casos de uso em todos os setores e cenários de negócios. Esses exemplos práticos demonstram a flexibilidade e o impacto do serviço em atender a diversas necessidades. Para [descobrir como o Serviço de consulta pode agregar valor às suas necessidades comerciais específicas](../use-cases/overview.md), explore a coleção abrangente de documentos de casos de uso. Saiba como usar o Serviço de consulta para fornecer insights e soluções para melhorar a eficiência operacional e o sucesso dos negócios.
+O Serviço de consulta fornece soluções para uma variedade de casos de uso em todos os setores e cenários de negócios. Esses exemplos demonstram a flexibilidade e o impacto do serviço em atender a diversas necessidades. Para [descobrir como o Serviço de consulta pode agregar valor às suas necessidades comerciais específicas](../use-cases/overview.md), explore a coleção abrangente de documentos de casos de uso. Saiba como usar o Serviço de consulta para fornecer insights e soluções para melhorar a eficiência operacional e o sucesso dos negócios.
 
 <!-- This video is from 2019. The logic is sounds but the workflow is too outdated. -->
 

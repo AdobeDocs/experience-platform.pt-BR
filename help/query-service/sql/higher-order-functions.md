@@ -1,10 +1,10 @@
 ---
 title: Gerenciar tipos de dados de matriz e mapa com funções de ordem superior
-description: Saiba como gerenciar tipos de dados de matriz e mapa com funções de ordem superior no Serviço de consulta. Exemplos práticos são fornecidos com casos de uso comuns.
+description: Saiba como gerenciar tipos de dados de matriz e mapa com funções de ordem superior no Serviço de consulta. Os exemplos são fornecidos com casos de uso comuns.
 exl-id: dec4e4f6-ad6b-4482-ae8c-f10cc939a634
-source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
+source-git-commit: d2bc580ba1cacdfab45bdc6356c630a63e7d0f6e
 workflow-type: tm+mt
-source-wordcount: '1471'
+source-wordcount: '1470'
 ht-degree: 0%
 
 ---

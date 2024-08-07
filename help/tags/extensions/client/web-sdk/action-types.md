@@ -3,9 +3,9 @@ title: Tipos de ação na extensão SDK da Web do Adobe Experience Platform
 description: Saiba mais sobre os diferentes tipos de ação fornecidos pela extensão de tag do Adobe Experience Platform Web SDK.
 solution: Experience Platform
 exl-id: a4bf0bb9-59b4-4c43-97e6-387768176517
-source-git-commit: c3b05dfd57b3335230e9abb40de6f2e1ee5ee6fa
+source-git-commit: 760484bb7f95df97701f81f78783f0214aecaf5b
 workflow-type: tm+mt
-source-wordcount: '2114'
+source-wordcount: '2112'
 ht-degree: 1%
 
 ---
@@ -93,10 +93,6 @@ Use o seletor **[!UICONTROL Instância]** para escolher a instância do SDK da W
 
 * **[!UICONTROL Instância]**: selecione a instância do SDK da Web que você deseja configurar. Se você tiver apenas uma instância, ela será pré-selecionada.
 * **[!UICONTROL Usar eventos guiados]**: habilite esta opção para preencher ou ocultar automaticamente determinados campos para habilitar um caso de uso específico. Habilitar essa opção aciona a exibição das seguintes configurações.
-
-  >[!NOTE]
-  >
-  >Os eventos guiados mostrados abaixo estão relacionados aos [eventos da parte superior e inferior da página](../../../../web-sdk/use-cases/top-bottom-page-events.md).
    * **[!UICONTROL Solicitar personalização]**: este evento deve ser chamado na parte superior da página. Quando selecionado, esse evento define os seguintes campos:
       * **[!UICONTROL Tipo]**: **[!UICONTROL Busca de Apresentação de Decisão]**
       * **[!UICONTROL Enviar automaticamente um evento de exibição]**: **[!UICONTROL false]**
@@ -104,6 +100,10 @@ Use o seletor **[!UICONTROL Instância]** para escolher a instância do SDK da W
    * **[!UICONTROL Coletar análises]**: este evento deve ser chamado na parte inferior da página. Quando selecionado, esse evento define os seguintes campos:
       * **[!UICONTROL Incluir propostas renderizadas]**: **[!UICONTROL true]**
       * As configurações do **[!UICONTROL Personalization]** estão ocultas
+
+  >[!NOTE]
+  >
+  >Os eventos guiados estão relacionados a [eventos de início e fim de página](../../../../web-sdk/use-cases/top-bottom-page-events.md).
 
 
 ### Dados {#data}

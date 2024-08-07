@@ -4,7 +4,7 @@ title: Introdução aos manuais de caso de uso
 description: Saiba como começar a usar a funcionalidade dos manuais de estratégia de casos de uso.
 role: Admin
 exl-id: 1c39792e-49fe-4c5f-9796-fa29f60b7461
-source-git-commit: 152d7d29494d586016260ed6ed3d3f60e6bf766b
+source-git-commit: 1781aa552107b6ca1fed357c053a4f892960dc55
 workflow-type: tm+mt
 source-wordcount: '990'
 ht-degree: 14%
@@ -20,7 +20,7 @@ Saiba como configurar sua conta para manuais de casos de uso, projetados para Re
 * Configuração de permissões de usuários e usuárias
 * Configurar superfícies dos canais do Journey Optimizer para notificações por email, push e SMS (se você planeja usar os manuais do Journey Optimizer)
 
-Para acessar uma galeria avançada de manuais de casos de uso na interface do usuário do Experience Platform, selecione **[!UICONTROL Manuais]** na navegação à esquerda. Leia a documentação sobre como [navegar nos manuais de casos de uso](../playbooks/navigate.md)e começar a usar uma [sandbox inspiradora](../playbooks/navigate.md).
+Para acessar uma galeria avançada de manuais de casos de uso na interface do usuário do Experience Platform, selecione **[!UICONTROL Manuais]** na navegação à esquerda. Leia a documentação sobre como [navegar nos manuais de casos de uso](../playbooks/navigate.md) e começar a usar uma [sandbox inspiradora](../playbooks/navigate.md).
 
 ## Configurar manuais de casos de uso - Apresentação em vídeo {#video}
 

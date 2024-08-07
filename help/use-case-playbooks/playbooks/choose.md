@@ -4,16 +4,16 @@ title: Escolher de uma seleção de manuais
 description: Saiba como escolher o manual correto para seu caso de uso, habilitar manuais.
 role: User
 exl-id: 3dae6ad6-adb3-4606-ad63-c0d4ef6beeba
-source-git-commit: ea735c486ca88de05f2ee2a8e40c68e3ef29c4fd
+source-git-commit: 1781aa552107b6ca1fed357c053a4f892960dc55
 workflow-type: tm+mt
 source-wordcount: '757'
-ht-degree: 94%
+ht-degree: 92%
 
 ---
 
 # Escolher de uma seleção de manuais
 
-Para usar um manual de estratégia, navegue até **[!UICONTROL Manuais de estratégia de caso de uso] > [!UICONTROL Manuais de estratégia]**. Explore e use as várias opções de pesquisa e filtragem na página para selecionar e começar a usar um manual de estratégia específico.
+Para usar um manual, selecione **[!UICONTROL Manuais]** na navegação à esquerda. Explore e use as várias opções de pesquisa e filtragem na página para selecionar e começar a usar um manual de estratégia específico.
 
 ## Pesquisar e filtrar {#search-and-filter}
 

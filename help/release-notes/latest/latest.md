@@ -27,11 +27,11 @@ Atualizações dos recursos e da documentação existentes no Experience Platfor
 - [Origens](#sources)
 - [Tags unificadas](#unified-tags)
 
-## Composição federada de público-alvo {#federated-audience-composition}
+## Composição de público-alvo federado {#federated-audience-composition}
 
 A Federated Audience Composition permite que as empresas componham dados para obter uma melhor aplicação em vários casos de uso. Com essa nova abordagem, como usuário da Adobe Real-time Customer Data Platform e/ou Adobe Journey Optimizer, você pode federar conjuntos de dados diretamente do data warehouse existente para criar e enriquecer públicos-alvo e atributos da Adobe Experience Platform, tudo em um sistema.
 
-Para obter mais informações, leia a [documentação sobre a Composição de Público-Alvo Federado](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home).
+Para obter mais informações, leia a [documentação sobre a Composição de Público-Alvo Federado](https://experienceleague.adobe.com/pt-br/docs/federated-audience-composition/using/home).
 
 ## Gerenciamento avançado do ciclo de vida dos dados {#advanced-data-lifecycle-management}
 

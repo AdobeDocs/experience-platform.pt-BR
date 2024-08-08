@@ -3,9 +3,9 @@ title: Ativar públicos para destinos de exportação de perfil em lote
 type: Tutorial
 description: Saiba como ativar os públicos-alvo no Adobe Experience Platform enviando-os para destinos com base em perfil de lote.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 14c534abe51a43d45f8709657a6049a463f35045
+source-git-commit: b020f8e204e28ceb97b314d9368075064b3ebb94
 workflow-type: tm+mt
-source-wordcount: '4024'
+source-wordcount: '4069'
 ht-degree: 11%
 
 ---
@@ -32,8 +32,13 @@ Para ativar públicos para destinos, você deve ter [se conectado com êxito a u
 ## Formatos de arquivo compatíveis com a exportação {#supported-file-formats-export}
 
 >[!CONTEXTUALHELP]
->id="legacy_dataflow_needs_schedule_end_date"
+>id="dataset_dataflow_needs_schedule_end_date_header"
 >title="Atualizar a data final deste fluxo de dados"
+>abstract="Devido a atualizações recentes nesse destino, o fluxo de dados agora requer uma data de término. O Adobe definiu uma data de término padrão para 1º de março de 2025. Atualize para a data de término desejada, caso contrário, as exportações de dados serão interrompidas na data padrão."
+
+>[!CONTEXTUALHELP]
+>id="dataset_dataflow_needs_schedule_end_date_body"
+>title="Atualizar a data de término do corpo do fluxo de dados"
 >abstract="Devido a atualizações recentes nesse destino, o fluxo de dados agora requer uma data de término. O Adobe definiu uma data de término padrão para 1º de março de 2025. Atualize para a data de término desejada, caso contrário, as exportações de dados serão interrompidas na data padrão."
 
 Os seguintes formatos de arquivo são compatíveis ao exportar públicos:
@@ -522,7 +527,6 @@ As exportações de arquivos variam das seguintes maneiras, dependendo se `segme
 id="platform_destinations_activate_exclude_enrichment_attributes"
 title="Excluir atributos de enriquecimento"
 abstract="Habilite essa opção para exportar os perfis dos públicos-alvo personalizados enviados que foram selecionados para o seu destino, enquanto exclui todos os atributos deles."
-additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=pt-BR#select-enrichment-attributes" text="Saiba mais na documentação"
 
 >[!IMPORTANT]
 >

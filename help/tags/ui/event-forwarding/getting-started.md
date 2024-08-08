@@ -3,14 +3,18 @@ title: Introdução ao encaminhamento de eventos
 description: Siga este tutorial passo a passo para começar a usar o encaminhamento de eventos na Adobe Experience Platform.
 feature: Event Forwarding
 exl-id: f82bfac9-dc2d-44de-a308-651300f107df
-source-git-commit: 05170986263b6eed2d19a65e34f70dc28eb8ba2f
+source-git-commit: 0a95d09eb1ce59e45d52372c4b08725c009001c3
 workflow-type: tm+mt
-source-wordcount: '864'
-ht-degree: 76%
+source-wordcount: '887'
+ht-degree: 74%
 
 ---
 
 # Introdução ao encaminhamento de eventos
+
+>[!NOTE]
+>
+>O encaminhamento de eventos é um recurso pago incluído como parte das ofertas do Adobe Real-time Customer Data Platform Connections, Prime ou Ultimate.
 
 >[!NOTE]
 >

@@ -3,9 +3,9 @@ title: Assimilar dados de pagamentos de sua conta  [!DNL Stripe]  para o Experie
 description: Saiba como assimilar dados de pagamentos de sua conta do Stripe para o Experience Platform usando a API de serviço de fluxo
 badge: Beta
 exl-id: a9cb3ef6-aab0-4a5b-894e-ce90b82f35a8
-source-git-commit: 62bcaa532cdec68a2f4f62e5784c35b91b7d5743
+source-git-commit: 48aef63cffbdc52a6a96ef69e5db4f54274144b6
 workflow-type: tm+mt
-source-wordcount: '1998'
+source-wordcount: '2020'
 ht-degree: 2%
 
 ---
@@ -881,7 +881,7 @@ curl -X POST \
 | `transformations.params.mappingVersion` | A versão correspondente da ID de mapeamento. O padrão deste valor é `0`. |
 | `scheduleParams.startTime` | A hora em que seu fluxo de dados começará. Você deve fornecer o valor de hora de início no formato de um carimbo de data e hora Unix. |
 | `scheduleParams.frequency` | A frequência com que o fluxo de dados coletará dados. Você pode configurar a frequência de assimilação para:  <ul><li>**Uma vez**: defina sua frequência como `once` para criar uma assimilação única. As configurações para intervalo e preenchimento retroativo não estão disponíveis ao criar um fluxo de dados de assimilação única. Por padrão, a frequência de agendamento é definida como uma vez.</li><li>**Minuto**: Defina sua frequência como `minute` para agendar seu fluxo de dados para assimilar dados por minuto.</li><li>**Hora**:Defina sua frequência como `hour` para agendar seu fluxo de dados para assimilar dados por hora.</li><li>**Dia**: Defina sua frequência como `day` para agendar seu fluxo de dados para assimilar dados por dia.</li><li>**Semana**: Defina sua frequência como `week` para agendar seu fluxo de dados para assimilar dados por semana.</li></ul> |
-| `scheduleParams.interval` | O intervalo designa o período entre duas execuções de fluxo consecutivas. Por exemplo, se você definir a frequência como dia e configurar o intervalo como 15, o fluxo de dados será executado a cada 15 dias. O valor do intervalo deve ser um inteiro diferente de zero. |
+| `scheduleParams.interval` | O intervalo designa o período entre duas execuções de fluxo consecutivas. Por exemplo, se você definir a frequência como dia e configurar o intervalo como 15, o fluxo de dados será executado a cada 15 dias. O valor do intervalo deve ser um inteiro diferente de zero. O valor mínimo de intervalo aceito para cada frequência é o seguinte:<ul><li>**Uma vez**: n/d</li><li>**Minuto**: 15</li><li>**Hora**: 1</li><li>**Dia**: 1</li><li>**Semana**: 1</li></ul> |
 
 **Resposta**
 

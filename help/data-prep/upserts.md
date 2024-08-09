@@ -3,22 +3,28 @@ keywords: Experience Platform;início;tópicos populares;preparação de dados;P
 title: Enviar Atualizações Parciais De Linha Ao Perfil Do Cliente Em Tempo Real Usando O Preparo De Dados
 description: Saiba como enviar atualizações de linhas parciais para o Perfil do cliente em tempo real usando o Preparo de dados.
 exl-id: f9f9e855-0f72-4555-a4c5-598818fc01c2
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: d62a61f44b27c0be882b5f29bfad5e423af7a1ca
 workflow-type: tm+mt
-source-wordcount: '1241'
+source-wordcount: '1360'
 ht-degree: 0%
 
 ---
 
 # Enviar atualizações parciais de linha para [!DNL Real-Time Customer Profile] usando [!DNL Data Prep]
 
->[!WARNING]
+>[!IMPORTANT]
 >
->A assimilação de mensagens de atualização de entidade do Experience Data Model (XDM) (com operações PATCH JSON) para atualizações de perfil por meio da entrada do DCS foi descontinuada. Como alternativa, você pode [assimilar dados brutos na entrada do DCS](../sources/tutorials/api/create/streaming/http.md#sending-messages-to-an-authenticated-streaming-connection) e especificar os mapeamentos de dados necessários para transformar seus dados em mensagens compatíveis com XDM para atualizações de Perfil.
+>* A assimilação de mensagens de atualização de entidade do Experience Data Model (XDM) (com operações PATCH JSON) para atualizações de perfil por meio da entrada do DCS foi descontinuada. Siga as etapas descritas neste guia como uma alternativa.
+>
+>* Você também pode usar a fonte da API HTTP para [assimilar dados brutos na entrada do DCS](../sources/tutorials/api/create/streaming/http.md#sending-messages-to-an-authenticated-streaming-connection) e especificar os mapeamentos de dados necessários para transformar seus dados em mensagens compatíveis com XDM para atualizações de Perfil.
+>
+>* Ao usar matrizes em upserts de transmissão, você deve usar explicitamente `upsert_array_append` ou `upsert_array_replace` para definir a intenção clara da operação. Você poderá receber erros se essas funções estiverem ausentes.
 
-A transmissão de sobreposições em [!DNL Data Prep] permite enviar atualizações de linhas parciais para dados de [!DNL Real-Time Customer Profile], além de criar e estabelecer novos links de identidade com uma única solicitação de API.
+Use upserts de streaming em [!DNL Data Prep] para enviar atualizações parciais de linha aos dados de [!DNL Real-Time Customer Profile], ao mesmo tempo em que cria e estabelece novos links de identidade com uma única solicitação de API.
 
 Ao fazer a transmissão de upserts, você pode reter o formato dos dados enquanto traduz esses dados para [!DNL Real-Time Customer Profile] solicitações de PATCH durante a assimilação. Com base nas entradas que você fornece, o [!DNL Data Prep] permite enviar uma única carga de API e traduzir os dados para [!DNL Real-Time Customer Profile] PATCH e [!DNL Identity Service] solicitações CREATE.
+
+[!DNL Data Prep] usa parâmetros de cabeçalho para distinguir entre inserções e substituições. Todas as linhas que usam sobreposições devem ter um cabeçalho. É possível usar sobreposições com ou sem descritores de identidade. Se você estiver usando sobreposições com identidades, siga as etapas de configuração descritas na seção em [configurando o conjunto de dados de identidade](#configure-the-identity-dataset). Se estiver usando upserts sem identidades, não será necessário fornecer configurações de identidade na solicitação. Leia a seção sobre [upserts de streaming sem identidades](#payload-without-identity-configuration) para obter mais informações.
 
 >[!NOTE]
 >
@@ -52,7 +58,7 @@ Os upserts de streaming em [!DNL Data Prep] funcionam da seguinte forma:
    * A operação de dados que precisa ser executada com [!DNL Profile]: `create`, `merge` e `delete`.
    * A operação de identidade opcional a ser executada com [!DNL Identity Service]: `create`.
 
-### Configurar o conjunto de dados de identidade
+### Configurar o conjunto de dados de identidade {#configure-the-identity-dataset}
 
 Se novas identidades precisarem ser vinculadas, você deverá criar e transmitir um conjunto de dados adicional na carga recebida. Ao criar um conjunto de dados de identidade, você deve garantir que os seguintes requisitos sejam atendidos:
 
@@ -138,7 +144,7 @@ As seguintes operações são suportadas por [!DNL Identity Service]:
 | --- | --- |
 | `create` | A única operação permitida para este parâmetro. Se `create` for passado como valor para `operations.identity`, [!DNL Data Prep] gerará uma solicitação de criação de entidade XDM para [!DNL Identity Service]. Se a identidade já existir, ela será ignorada. **Observação:** se `operations.identity` estiver definido como `create`, então `identityDatasetId` também deve ser especificado. A mensagem de criação da entidade XDM gerada internamente pelo componente [!DNL Data Prep] será gerada para esta ID de conjunto de dados. |
 
-### Carga sem configuração de identidade
+### Carga sem configuração de identidade {#payload-without-identity-configuration}
 
 Se novas identidades não precisarem ser vinculadas, você poderá omitir os parâmetros `identity` e `identityDatasetId` nas operações. Isso envia dados somente para [!DNL Real-Time Customer Profile] e ignora o [!DNL Identity Service]. Consulte a carga abaixo para obter um exemplo:
 

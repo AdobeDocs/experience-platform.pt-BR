@@ -4,9 +4,9 @@ description: Comece a usar o Adobe Real-Time CDP, entenda a funcionalidade avan�
 solution: Real-Time Customer Data Platform
 product: Real Time CDP
 exl-id: 92179d9a-be79-4a39-b2ab-9a85a542f53c
-source-git-commit: c9a954d2a78abcea67e68e5ae9563e6db1ae706c
+source-git-commit: 7a909c362b9e367fa4b86a8525fe98f203e3c2d5
 workflow-type: tm+mt
-source-wordcount: '1114'
+source-wordcount: '1175'
 ht-degree: 3%
 
 ---
@@ -20,6 +20,12 @@ Use o Adobe Real-time Customer Data Platform (Real-Time CDP) para reunir dados c
 Dê uma olhada nos últimos aprimoramentos feitos no produto e na documentação do Real-Time CDP. Para obter uma lista de todos os recursos, melhorias e correções, confira as [Notas de versão](/help/release-notes/latest/latest.md) detalhadas. Mantenha-se atualizado com as últimas alterações em nossa documentação visitando a seção [atualizações de documentação das notas de versão mensais](/help/release-notes/latest/latest.md#documentation-updates).
 
 >[!BEGINTABS]
+
+>[!TAB Composição de Público-Alvo Federado]
+
+A Federated Audience Composition permite que as empresas componham dados para obter uma melhor aplicação em vários casos de uso. Com essa nova abordagem, como usuário da Adobe Real-time Customer Data Platform e/ou Adobe Journey Optimizer, você pode federar conjuntos de dados diretamente do data warehouse existente para criar e enriquecer públicos-alvo e atributos da Adobe Experience Platform, tudo em um sistema.
+
+[![imagem](assets/do-not-localize/learn-more-button.svg)](https://experienceleague.adobe.com/pt-br/docs/federated-audience-composition/using/home)
 
 >[!TAB Manuais de casos de uso]
 

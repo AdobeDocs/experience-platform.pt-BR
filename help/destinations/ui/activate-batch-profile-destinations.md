@@ -3,9 +3,9 @@ title: Ativar públicos para destinos de exportação de perfil em lote
 type: Tutorial
 description: Saiba como ativar os públicos-alvo no Adobe Experience Platform enviando-os para destinos com base em perfil de lote.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: b020f8e204e28ceb97b314d9368075064b3ebb94
+source-git-commit: 7a909c362b9e367fa4b86a8525fe98f203e3c2d5
 workflow-type: tm+mt
-source-wordcount: '4069'
+source-wordcount: '4112'
 ht-degree: 11%
 
 ---
@@ -40,6 +40,16 @@ Para ativar públicos para destinos, você deve ter [se conectado com êxito a u
 >id="dataset_dataflow_needs_schedule_end_date_body"
 >title="Atualizar a data de término do corpo do fluxo de dados"
 >abstract="Devido a atualizações recentes nesse destino, o fluxo de dados agora requer uma data de término. O Adobe definiu uma data de término padrão para 1º de março de 2025. Atualize para a data de término desejada, caso contrário, as exportações de dados serão interrompidas na data padrão."
+
+>[!CONTEXTUALHELP]
+>id="destinations_folder_name_template"
+>title="Editar caminho da pasta"
+>abstract="Use várias macros fornecidas para personalizar o caminho da pasta onde os conjuntos de dados são exportados."
+
+>[!CONTEXTUALHELP]
+>id="destinations_folder_name_template_preview"
+>title="Visualização do caminho da pasta do conjunto de dados"
+>abstract="Obtenha uma visualização da estrutura de pastas criada no local de armazenamento com base nas macros adicionadas nesta janela."
 
 Os seguintes formatos de arquivo são compatíveis ao exportar públicos:
 

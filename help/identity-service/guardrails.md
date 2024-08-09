@@ -3,9 +3,9 @@ keywords: Experience Platform;identidade;serviço de identidade;solução de pro
 title: Medidas de proteção do serviço de identidade
 description: Este documento fornece informações sobre limites de uso e taxa para dados do Serviço de identidade para ajudar você a otimizar o uso do gráfico de identidade.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
+source-git-commit: 6d36a6ff1243b15dcafc2f37d8bad982730f7a39
 workflow-type: tm+mt
-source-wordcount: '1549'
+source-wordcount: '1591'
 ht-degree: 1%
 
 ---
@@ -57,6 +57,10 @@ A tabela a seguir descreve as regras existentes que devem ser seguidas para gara
 ### Assimilação do namespace de identidade
 
 A partir de 31 de março de 2023, o Serviço de identidade bloqueará a assimilação da Adobe Analytics ID (AAID) para novos clientes. Normalmente, esta identidade é assimilada por meio da [origem do Adobe Analytics](../sources/connectors/adobe-applications/analytics.md) e da [origem do Adobe Audience Manager](../sources//connectors/adobe-applications/audience-manager.md) e é redundante porque a ECID representa o mesmo navegador da Web. Se quiser alterar essa configuração padrão, entre em contato com a equipe de conta do Adobe.
+
+## Medidas de proteção de desempenho {#performance-guardrails}
+
+O Serviço de identidade monitora continuamente os dados recebidos para garantir alto desempenho e confiabilidade em escala. No entanto, um fluxo de dados de eventos de experiência em um curto período pode levar à degradação do desempenho e à latência. O Adobe não é responsável por essa degradação de desempenho.
 
 ## Noções básicas sobre a lógica de exclusão quando um gráfico de identidade na capacidade é atualizado {#deletion-logic}
 

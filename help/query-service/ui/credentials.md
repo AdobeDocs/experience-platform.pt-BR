@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guia de credenciais do Serviço de consulta
 description: O Serviço de consulta da Adobe Experience Platform fornece uma interface que pode ser usada para gravar e executar consultas, exibir consultas executadas anteriormente e acessar consultas salvas por usuários em sua organização.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 569f8f96a1039e52ac374e2eb07fd96ad8138edd
 workflow-type: tm+mt
-source-wordcount: '1807'
+source-wordcount: '1828'
 ht-degree: 2%
 
 ---
@@ -76,7 +76,11 @@ Você pode usar credenciais sem expiração para configurar uma conexão mais pe
 
 >[!NOTE]
 >
->As credenciais sem expiração têm as seguintes limitações:<br><ul><li>Os usuários devem fazer logon com seu nome de usuário e senha compostos por `{technicalAccountId}:{credential}`. Encontre mais informações na seção [Gerar credenciais](#generate-credentials).</li><li>Após a criação de credenciais que estão expirando, uma nova função com um conjunto de permissões básicas é criada e permite que os usuários visualizem esquemas e conjuntos de dados. A permissão &quot;gerenciar consultas&quot; também é atribuída a essa função para uso com o Serviço de consulta.</li><li>Os clientes de terceiros podem ter um desempenho diferente do esperado ao listar objetos de consulta. Por exemplo, alguns clientes de terceiros, como [!DNL DB Visualizer], não exibirão o nome da exibição no painel esquerdo. No entanto, o nome da exibição pode ser acessado se for chamado em uma consulta SELECT. Da mesma forma, [!DNL PowerUI] pode não listar as exibições temporárias criadas através do SQL a serem selecionadas para a criação do painel.</li></ul>
+>As credenciais sem expiração têm as seguintes limitações:
+>
+>- Os usuários devem fazer logon com seu nome de usuário e senha no formato de `{technicalAccountId}:{credential}`. Encontre mais informações na seção [Gerar credenciais](#generate-credentials).
+>- Por padrão, as credenciais sem expiração recebem permissões para executar somente consultas `SELECT`. Para executar consultas `CTAS` ou `ITAS`, adicione manualmente as permissões &quot;Gerenciar conjunto de dados&quot; e &quot;Gerenciar esquemas&quot; à função associada à credencial sem expiração. A permissão &quot;Gerenciar Esquemas&quot; pode ser encontrada na seção &quot;Modelagem de Dados&quot;, e a permissão &quot;Gerenciar Conjuntos de Dados&quot; está localizada na seção &quot;Gerenciamento de Dados&quot; da [Adobe Developer Console](<https://developer.adobe.com/console/>).
+>- Os clientes de terceiros podem ter um desempenho diferente do esperado ao listar objetos de consulta. Por exemplo, alguns clientes de terceiros, como [!DNL DB Visualizer], não exibirão o nome da exibição no painel esquerdo. No entanto, o nome da exibição pode ser acessado se for chamado em uma consulta `SELECT`. Da mesma forma, [!DNL PowerUI] pode não listar as exibições temporárias criadas por meio do SQL para seleção na criação do painel.
 
 ### Pré-requisitos
 

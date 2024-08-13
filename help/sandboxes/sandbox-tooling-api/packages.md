@@ -2,10 +2,10 @@
 title: Endpoint da API de Pacotes de Ferramentas de Sandbox
 description: O ponto de extremidade /packages na API de ferramentas da sandbox permite gerenciar programaticamente pacotes no Adobe Experience Platform.
 exl-id: 46efee26-d897-4941-baf4-d5ca0b8311f0
-source-git-commit: 8ff9c50b4999a49413f8c45274815225ba58361c
+source-git-commit: f81e15ccfd89e2d0cb450f596743341264187f52
 workflow-type: tm+mt
-source-wordcount: '1531'
-ht-degree: 7%
+source-wordcount: '1621'
+ht-degree: 9%
 
 ---
 
@@ -138,8 +138,23 @@ curl -X PUT \
 | --- | --- | --- | --- |
 | `id` | A ID do pacote a ser atualizado. | String | Sim |
 | `action` | Para adicionar artefatos ao pacote, o valor da ação deve ser **ADICIONAR**. Esta ação só tem suporte para tipos de pacote **PARTIAL**. | String | Sim |
-| `artifacts` | Uma lista de artefatos a serem adicionados ao pacote. Não haveria alteração no pacote se a lista fosse **nula** ou **vazia**. Os artefatos são deduplicados antes de serem adicionados ao pacote. | Matriz | Não |
+| `artifacts` | Uma lista de artefatos a serem adicionados ao pacote. Não haveria alteração no pacote se a lista fosse **nula** ou **vazia**. Os artefatos são deduplicados antes de serem adicionados ao pacote. Consulte a tabela abaixo para obter uma lista completa de artefatos compatíveis. | Matriz | Não |
 | `expiry` | O carimbo de data e hora que define a data de expiração do pacote. O valor padrão é 90 dias a partir do momento em que a API de PUT é chamada, se a expiração não for especificada na carga. O campo de expiração da resposta será a hora UTC da época. | String (formato de carimbo de data e hora UTC) | Não |
+
+Os seguintes tipos de artefatos são suportados no momento.
+
+| Artefato | Plataforma | Objeto | Fluxo parcial | Sandbox completa |
+| --- | --- | --- | --- | --- |
+| `JOURNEY` | Adobe Journey Optimizer | Jornadas | Sim | Não |
+| `ID_NAMESPACE` | Plataforma de dados do cliente | Identidades | Sim | Sim |
+| `REGISTRY_DATATYPE` | Plataforma de dados do cliente | Tipo de dados | Sim | Sim |
+| `REGISTRY_CLASS` | Plataforma de dados do cliente | Classe | Sim | Sim |
+| `REGISTRY_MIXIN` | Plataforma de dados do cliente | Grupo de campos | Sim | Sim |
+| `REGISTRY_SCHEMA` | Plataforma de dados do cliente | Esquemas | Sim | Sim |
+| `CATALOG_DATASET` | Plataforma de dados do cliente | Conjuntos de dados | Sim | Sim |
+| `DULE_CONSENT_POLICY` | Plataforma de dados do cliente | Políticas de consentimento e governança | Sim | Sim |
+| `PROFILE_SEGMENT` | Plataforma de dados do cliente | Públicos-alvo | Sim | Sim |
+| `FLOW` | Plataforma de dados do cliente | Fluxo de dados de origens | Sim | Sim |
 
 **Resposta**
 

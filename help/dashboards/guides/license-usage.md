@@ -4,9 +4,9 @@ title: Painel de Uso da Licença
 description: A Adobe Experience Platform fornece um painel por meio do qual você pode visualizar informações importantes sobre o uso de licença da sua organização.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 3e465803b6c8fe11cef1633c0f0624465086c2a3
+source-git-commit: 090b870dcfb16e59831f1e03eb46b22da4f24f0f
 workflow-type: tm+mt
-source-wordcount: '2328'
+source-wordcount: '2429'
 ht-degree: 6%
 
 ---
@@ -91,6 +91,16 @@ Para ver um resumo de uso de um direito de produtos, selecione um produto na lis
 A guia Summary (Resumo) é exibida. Você pode usar as previsões granulares disponíveis nas guias [!UICONTROL Resumo] e [!UICONTROL Detalhes] para garantir uma tomada de decisão informada para o uso eficiente da licença.
 
 ![O modo de exibição de resumo de um Produto da Plataforma com a coluna de uso previsto está realçado.](../images/license-usage/summary-predicted-usage.png)
+
+A porcentagem de uso previsto é determinada da seguinte maneira:
+
+- Se os limites inferior e superior forem significativamente diferentes, eles serão exibidos como um intervalo (por exemplo, 32% - 35%).
+- Se os limites inferior e superior forem quase idênticos e não forem zero, serão exibidos como um valor aproximado (por exemplo, ~34%).
+- Se os limites inferior e superior forem quase idênticos e zero, serão exibidos como exatamente 0%.
+
+>[!NOTE]
+>
+&quot;Quase idêntico&quot; neste contexto significa que os valores são estatisticamente significativos para duas casas decimais (por exemplo, um limite inferior de 0,342 e um limite superior de 0,344 são arredondados para 34%).
 
 O recurso de uso previsto é compatível com as seguintes métricas:
 

@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guia da interface do usuário de públicos
 description: A Composição de público-alvo na interface do usuário do Adobe Experience Platform fornece um espaço de trabalho avançado que permite interagir com elementos de dados do perfil. O espaço de trabalho fornece controles intuitivos para criação e edição de públicos-alvo para sua organização.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: 44848a250cb6020744b51dc0d0247f5fa91ab2ef
+source-git-commit: e17403f0529c5b94869d3bd4e860c798db620d31
 workflow-type: tm+mt
-source-wordcount: '1952'
+source-wordcount: '1951'
 ht-degree: 0%
 
 ---
@@ -232,7 +232,7 @@ Além disso, é possível limitar o número de perfis retornados habilitando a o
 
 ## [!UICONTROL Split] {#split-block}
 
-O tipo de bloco **[!UICONTROL Split]** permite dividir o novo público em vários subpúblicos. Você pode dividir esse público com base na porcentagem ou por um atributo. Ao dividir o público em subpúblicos, essa divisão é **não** persistente. Isso significa que os perfis podem estar em diferentes subpúblicos-alvo em cada avaliação.
+O tipo de bloco **[!UICONTROL Split]** permite dividir o novo público em vários subpúblicos. Você pode dividir esse público com base na porcentagem ou por um atributo. Ao dividir o público em subpúblicos, essa divisão é **não** persistente. Isso significa que os perfis podem estar em subpúblicos diferentes para cada avaliação.
 
 Para adicionar um bloco **[!UICONTROL Split]**, selecione o ícone **+**, seguido por **[!UICONTROL Split]**.
 

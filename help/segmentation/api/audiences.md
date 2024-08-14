@@ -3,10 +3,10 @@ title: Endpoint da API de públicos-alvo
 description: Use o endpoint de públicos-alvo na API do serviço de segmentação do Adobe Experience Platform para criar, gerenciar e atualizar programaticamente os públicos-alvo da sua organização.
 role: Developer
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
-source-git-commit: 914174de797d7d5f6c47769d75380c0ce5685ee2
+source-git-commit: 5d5c1f903e6a54ea983b718c4c371ada2a937297
 workflow-type: tm+mt
-source-wordcount: '1869'
-ht-degree: 2%
+source-wordcount: '1406'
+ht-degree: 3%
 
 ---
 
@@ -207,10 +207,6 @@ POST /audiences
 
 **Solicitação**
 
->[!BEGINTABS]
-
->[!TAB Público-alvo gerado pela plataforma]
-
 +++ Um exemplo de solicitação para criar um público-alvo gerado pela Platform
 
 ```shell
@@ -222,7 +218,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/audiences
  -H 'x-sandbox-name: {SANDBOX_NAME}'
  -d '{
         "name": "People who ordered in the last 30 days",
-        "profileInstanceId": "ups",
+        "profileInstanceId": "AEPSegments",
         "description": "Last 30 days",
         "type": "SegmentDefinition",
         "expression": {
@@ -250,60 +246,9 @@ curl -X POST https://platform.adobe.io/data/core/ups/audiences
 
 +++
 
->[!TAB Público-alvo gerado externamente]
-
-+++ Um exemplo de solicitação para criar um público-alvo gerado externamente
-
-```shell
-curl -X POST https://platform.adobe.io/data/core/ups/audiences
- -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'Content-Type: application/json' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
- -H 'x-api-key: {API_KEY}' \
- -H 'x-sandbox-name: {SANDBOX_NAME}'
- -d '{
-        "audienceId":"test-external-audience-id",
-        "name":"externalAudience",
-        "namespace":"aam",
-        "description":"Last 30 days",
-        "type":"ExternalSegment",
-        "originName":"CUSTOM_UPLOAD",
-        "lifecycleState":"published",
-        "datasetId":"6254cf3c97f8e31b639fb14d",
-        "labels":[
-            "core/C1"
-        ],
-        "linkedAudienceRef":{
-            "flowId": "4685ea90-d2b6-11ec-9d64-0242ac120002"
-        }
-    }'
-```
-
-| Propriedade | Descrição |
-| -------- | ----------- | 
-| `audienceId` | Uma ID fornecida pelo usuário para o público-alvo. |
-| `name` | O nome do público. |
-| `namespace` | O namespace do público. |
-| `description` | Uma descrição do público. |
-| `type` | Um campo que mostra se o público-alvo é gerado pela Platform ou um público-alvo gerado externamente. Os valores possíveis incluem `SegmentDefinition` e `ExternalSegment`. Um `SegmentDefinition` refere-se a um público-alvo gerado na Platform, enquanto um `ExternalSegment` refere-se a um público-alvo que não foi gerado na Platform. |
-| `originName` | O nome da origem do público. Para públicos gerados externamente, o valor padrão é `CUSTOM_UPLOAD`. Outros valores suportados incluem `REAL_TIME_CUSTOMER_PROFILE`, `CUSTOM_UPLOAD`, `AUDIENCE_ORCHESTRATION` e `AUDIENCE_MATCH`. |
-| `lifecycleState` | Um campo opcional que determina o estado inicial do público-alvo que você está tentando criar. Os valores suportados incluem `draft`, `published` e `inactive`. |
-| `datasetId` | A ID do conjunto de dados em que os dados que compõem o público-alvo podem ser encontrados. |
-| `labels` | Uso de dados no nível do objeto e rótulos de controle de acesso baseados em atributos que são relevantes para o público-alvo. |
-| `audienceMeta` | Metadados que pertencem ao público gerado externamente. |
-| `linkedAudienceRef` | Um objeto que contém identificadores para outros sistemas relacionados ao público-alvo. Isso pode incluir o seguinte: <ul><li>`flowId`: Essa ID é usada para conectar o público ao fluxo de dados que foi usado para trazer os dados do público. Mais informações sobre as IDs necessárias podem ser encontradas no [guia de criação de fluxo de dados](../../sources/tutorials/api/collect/cloud-storage.md).</li><li>`aoWorkflowId`: esta ID é usada para conectar o público a uma composição relacionada do Audience Orchestration.&lt;/li/> <li>`payloadFieldGroupRef`: essa ID é usada para se referir ao esquema do Grupo de Campos XDM que descreve a estrutura do público-alvo. Mais informações sobre o valor deste campo podem ser encontradas no [guia de ponto de extremidade do Grupo de Campos XDM](../../xdm/api/field-groups.md).</li><li>`audienceFolderId`: essa ID é usada para fazer referência à ID da pasta no Adobe Audience Manager para o público-alvo. Mais informações sobre esta API podem ser encontradas no [Guia de API do Adobe Audience Manager](https://bank.demdex.com/portal/swagger/index.html#/Segment%20Folder%20API).</ul> |
-
-+++
-
->[!ENDTABS]
-
 **Resposta**
 
 Uma resposta bem-sucedida retorna o status HTTP 200 com informações sobre o público recém-criado.
-
->[!BEGINTABS]
-
->[!TAB Público-alvo gerado pela plataforma]
 
 +++Um exemplo de resposta ao criar um público-alvo gerado pela Platform.
 
@@ -373,46 +318,6 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com informações sobre o p�
 
 +++
 
->[!TAB Público-alvo gerado externamente]
-
-+++Uma resposta de amostra ao criar um público-alvo gerado externamente.
-
-```json
-{
-   "id": "322f9f62-cd27-11ec-9d64-0242ac120002",
-   "audienceId": "test-external-audience-id",
-   "name": "externalAudience",
-   "namespace": "aam",
-   "imsOrgId": "{ORG_ID}",
-   "sandbox":{
-      "sandboxId": "6ed34f6f-fe21-4a30-934f-6ffe21fa3075",
-      "sandboxName": "prod",
-      "type": "production",
-      "default": true
-   },
-   "isSystem": false,
-   "description": "Last 30 days",
-   "type": "ExternalSegment",
-   "originName": "CUSTOM_UPLOAD",
-   "lifecycleState": "published",
-   "createdBy": "{CREATED_BY_ID}",
-   "datasetId": "6254cf3c97f8e31b639fb14d",
-   "labels": [
-      "core/C1"
-   ],
-   "linkedAudienceRef": {
-      "flowId": "4685ea90-d2b6-11ec-9d64-0242ac120002"
-   },
-   "_etag": "\"f4102699-0000-0200-0000-625cd61a0000\"",
-   "creationTime": 1650251290000,
-   "updateEpoch": 1650251290,
-   "updateTime": 1650251290000,
-   "createEpoch": 1650251290
-}
-```
-
-+++
-
 ## Pesquisar um público-alvo especificado {#get}
 
 Você pode pesquisar informações detalhadas sobre um público-alvo específico fazendo uma solicitação GET para o ponto de extremidade `/audiences` e fornecendo a ID do público-alvo que você deseja recuperar no caminho da solicitação.
@@ -443,11 +348,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/audiences/60ccea95-1435-4180
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o status HTTP 200 com informações sobre o público-alvo especificado. A resposta será diferente dependendo se o público-alvo for gerado com o Adobe Experience Platform ou fontes externas.
-
->[!BEGINTABS]
-
->[!TAB Público-alvo gerado pela plataforma]
+Uma resposta bem-sucedida retorna o status HTTP 200 com informações sobre o público-alvo especificado.
 
 +++Uma resposta de amostra ao recuperar um público-alvo gerado pela Platform.
 
@@ -516,161 +417,6 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com informações sobre o p�
 
 +++
 
->[!TAB Público-alvo gerado externamente]
-
-+++Uma resposta de amostra ao recuperar um público-alvo gerado externamente.
-
-```json
-{
-    "id": "60ccea95-1435-4180-97a5-58af4aa285ab",
-    "audienceId": "test-external-audience-id",
-    "name": "externalAudience",
-    "namespace": "aam",
-    "imsOrgId": "{ORG_ID}",
-    "sandbox": {
-        "sandboxId": "6ed34f6f-fe21-4a30-934f-6ffe21fa3075",
-        "sandboxName": "prod",
-        "type": "production",
-        "default": true
-    },
-    "isSystem": false,
-    "description": "Last 30 days",
-    "type": "ExternalSegment",
-    "lifecycleState": "active",
-    "createdBy": "{CREATED_BY_ID}",
-    "datasetId": "6254cf3c97f8e31b639fb14d",
-    "labels": [
-        "core/C1"
-    ],
-    "_etag": "\"f4102699-0000-0200-0000-625cd61a0000\"",
-    "creationTime": 1650251290000,
-    "updateEpoch": 1650251290,
-    "updateTime": 1650251290000,
-    "createEpoch": 1650251290
-}
-```
-
-+++
-
->[!ENDTABS]
-
-## Atualizar um campo em um público {#update-field}
-
-Você pode atualizar os campos de público-alvo específico fazendo uma solicitação PATCH para o ponto de extremidade `/audiences` e fornecendo a ID do público-alvo que você deseja atualizar no caminho da solicitação.
-
-**Formato da API**
-
-```http
-PATCH /audiences/{AUDIENCE_ID}
-```
-
-| Parâmetro | Descrição |
-| --------- | ----------- |
-| `{AUDIENCE_ID}` | A ID do público que você deseja atualizar. Observe que este é o campo `id`, e é **não** o campo `audienceId`. |
-
-**Solicitação**
-
-+++Uma solicitação de amostra para atualizar um campo em um público-alvo.
-
-```shell
-curl -X PATCH https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513-8a1d-67ccaa54bc05 \
- -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'Content-Type: application/json' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
- -H 'x-api-key: {API_KEY}' \
- -H 'x-sandbox-name: {SANDBOX_NAME}' \
- -d '
-     [
-        {
-            "op": "add",
-            "path": "/expression",
-            "value": {
-                "type": "PQL",
-                "format": "pql/text",
-                "value": "workAddress.country = \"CA\""
-            }
-        }
-      ]'
-```
-
-| Propriedade | Descrição |
-| -------- | ----------- |
-| `op` | Para atualizar públicos, esse valor é sempre `add`. |
-| `path` | O caminho do campo que você deseja atualizar. |
-| `value` | O valor para o qual você deseja atualizar o campo. |
-
-+++
-
-**Resposta**
-
-Uma resposta bem-sucedida retorna o status HTTP 200 com informações sobre o público recém-atualizado.
-
-+++Um exemplo de resposta ao atualizar um campo em um público-alvo.
-
-```json
-{
-    "id": "60ccea95-1435-4180-97a5-58af4aa285ab",
-    "audienceId": "60ccea95-1435-4180-97a5-58af4aa285ab",
-    "schema": {
-        "name": "_xdm.context.profile"
-    },
-    "profileInstanceId": "ups",
-    "imsOrgId": "{ORG_ID}",
-    "sandbox": {
-        "sandboxId": "6ed34f6f-fe21-4a30-934f-6ffe21fa3075",
-        "sandboxName": "prod",
-        "type": "production",
-        "default": true
-    },
-    "name": "People who ordered in the last 30 days",
-    "description": "Last 30 days",
-    "expression": {
-        "type": "PQL",
-        "format": "pql/text",
-        "value": "workAddress.country = \"CA\""
-    },
-    "mergePolicyId": "ef006bbe-750e-4e81-85f0-0c6902192dcc",
-    "evaluationInfo": {
-        "batch": {
-          "enabled": false
-        },
-        "continuous": {
-          "enabled": true
-        },
-        "synchronous": {
-          "enabled": false
-        }
-    },
-    "dataGovernancePolicy": {
-      "excludeOptOut": true
-    },
-    "creationTime": 1650374572000,
-    "updateEpoch": 1650374573,
-    "updateTime": 1650374573000,
-    "createEpoch": 1650374572,
-    "_etag": "\"33120d7c-0000-0200-0000-625eb7ad0000\"",
-    "dependents": [],
-    "definedOn": [
-        {
-          "meta:resourceType": "unions",
-          "meta:containerId": "tenant",
-          "$ref": "https://ns.adobe.com/xdm/context/profile__union"
-        }
-    ],
-    "dependencies": [],
-    "type": "SegmentDefinition",
-    "overridePerformanceWarnings": false,
-    "createdBy": "{CREATED_BY_ID}",
-    "lifecycleState": "active",
-    "labels": [
-      "core/C1"
-    ],
-    "namespace": "AEPSegments"
-}
-```
-
-+++
-
 ## Atualizar um público {#put}
 
 Você pode atualizar (substituir) um público-alvo específico fazendo uma solicitação PUT para o ponto de extremidade `/audiences` e fornecendo a ID do público-alvo que você deseja atualizar no caminho da solicitação.
@@ -697,11 +443,11 @@ curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
  -d '{
-    "audienceId": "test-external-audience-id",
-    "name": "New external audience",
-    "namespace": "aam",
+    "audienceId": "test-platform-audience-id",
+    "name": "New Platform audience",
+    "namespace": "AEPSegments",
     "description": "Last 30 days",
-    "type": "ExternalSegment",
+    "type": "SegmentDefinition",
     "lifecycleState": "published",
     "datasetId": "6254cf3c97f8e31b639fb14d",
     "labels": [
@@ -732,9 +478,9 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes do público rec
 ```json
 {
     "id": "4afe34ae-8c98-4513-8a1d-67ccaa54bc05",
-    "audienceId": "test-external-audience-id",
-    "name": "New external audience",
-    "namespace": "aam",
+    "audienceId": "test-platform-audience-id",
+    "name": "New Platform audience",
+    "namespace": "AEPSegments",
     "imsOrgId": "{ORG_ID}",
     "sandbox": {
         "sandboxId": "6ed34f6f-fe21-4a30-934f-6ffe21fa3075",
@@ -743,7 +489,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes do público rec
         "default": true
     },
     "description": "Last 30 days",
-    "type": "ExternalSegment",
+    "type": "SegmentDefinition",
     "lifecycleState": "published",
     "createdBy": "{CREATED_BY_ID}",
     "datasetId": "6254cf3c97f8e31b639fb14d",

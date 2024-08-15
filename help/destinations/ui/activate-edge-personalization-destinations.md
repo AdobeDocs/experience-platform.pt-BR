@@ -3,7 +3,7 @@ title: Ativar públicos para destinos de personalização de borda
 description: Saiba como ativar públicos do Adobe Experience Platform para destinos de personalização de borda para casos de uso de personalização de mesma página e próxima página.
 type: Tutorial
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 14dccb993b38ca352c6de3ed851bafe7c44ca631
 workflow-type: tm+mt
 source-wordcount: '1957'
 ht-degree: 2%
@@ -47,7 +47,7 @@ Para obter uma breve visão geral de como compartilhar públicos-alvo e atributo
 
 ## Casos de uso {#use-cases}
 
-Use as soluções de personalização de Adobe, como o Adobe Target, ou suas próprias plataformas de parceiros de personalização (por exemplo, [!DNL Optimizely], [!DNL Pega]), e sistemas proprietários (por exemplo, CMS interno) para potencializar uma experiência mais profunda de personalização do cliente por meio do destino [Personalization Personalizada](../catalog/personalization/custom-personalization.md). Tudo isso enquanto também aproveita os recursos de coleta e segmentação de dados do Experience Platform Edge Network.
+Use as soluções de personalização de Adobe, como o Adobe Target, ou suas próprias plataformas de parceiros de personalização (por exemplo, [!DNL Optimizely], [!DNL Pega]), e sistemas proprietários (por exemplo, CMS interno) para potencializar uma experiência mais profunda de personalização do cliente por meio do destino [Personalization personalizada](../catalog/personalization/custom-personalization.md). Tudo isso enquanto também aproveita os recursos de coleta e segmentação de dados do Experience Platform Edge Network.
 
 Os casos de uso descritos abaixo incluem personalização do site e publicidade direcionada no site.
 
@@ -112,7 +112,7 @@ Siga o [tutorial de criação de conexão de destino](../ui/connect-destination.
 Dependendo do destino que você estiver configurando, consulte os seguintes artigos para obter os pré-requisitos específicos do destino e informações relacionadas:
 
 * [Conexão com o Adobe Target](../catalog/personalization/adobe-target-connection.md#parameters)
-* [Conexão de personalização personalizada](../catalog/personalization/custom-personalization.md##parameters)
+* [Conexão de personalização personalizada](../catalog/personalization/custom-personalization.md#parameters)
 
 ## Selecione seu destino {#select-destination}
 

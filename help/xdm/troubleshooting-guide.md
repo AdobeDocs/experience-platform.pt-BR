@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guia de solução de problemas do sistema XDM
 description: Encontre respostas para perguntas frequentes sobre o Experience Data Model (XDM), incluindo etapas para resolver erros comuns de API.
 exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 83d3d31b2d24fd01876ff7b0f1c03a5670ed3845
 workflow-type: tm+mt
-source-wordcount: '1947'
+source-wordcount: '2446'
 ht-degree: 0%
 
 ---
@@ -20,6 +20,10 @@ Este documento fornece respostas a perguntas frequentes sobre o [!DNL Experience
 ## Perguntas frequentes
 
 Veja a seguir uma lista de respostas para perguntas frequentes sobre o Sistema XDM e o uso da API [!DNL Schema Registry].
+
+## Noções básicas de esquema
+
+Nesta seção, você pode encontrar respostas para perguntas fundamentais sobre a estrutura do esquema, o uso de campo e a identificação no Sistema XDM.
 
 ### Como adicionar campos a um esquema?
 
@@ -39,15 +43,59 @@ Todos os recursos do [!DNL Schema Registry] (esquemas, grupos de campos, tipos d
 
 Para obter mais informações, consulte a seção [identificação de recursos](api/getting-started.md#resource-identification) no guia de API [!DNL Schema Registry].
 
-### Quando um esquema começa a impedir alterações?
-
-Alterações interruptivas podem ser feitas em um esquema desde que ele nunca tenha sido usado na criação de um conjunto de dados ou esteja habilitado para uso no [[!DNL Real-Time Customer Profile]](../profile/home.md). Depois que um esquema é usado na criação do conjunto de dados ou habilitado para uso com [!DNL Real-Time Customer Profile], as regras de [Evolução do Esquema](schema/composition.md#evolution) tornam-se estritamente aplicadas pelo sistema.
-
 ### Qual é o tamanho máximo de um tipo de campo longo?
 
 Um tipo de campo longo é um inteiro com um tamanho máximo de 53(+1) bits, dando a ele um intervalo potencial entre -9007199254740992 e 9007199254740992. Isso se deve a uma limitação de como as implementações do JavaScript de JSON representam números inteiros longos.
 
 Para obter mais informações sobre tipos de campos, consulte o documento sobre [Restrições de tipo de campo XDM](./schema/field-constraints.md).
+
+### O que é meta:AltId e como posso recuperá-lo?
+
+`meta:altId` é um identificador exclusivo para um esquema. O `meta:altId` fornece uma ID de referência fácil para uso em chamadas de API. Essa ID evita a necessidade de ser codificada/decodificada sempre que for usada como com o formato JSON URI.
+<!-- (Needs clarification - How do I retrieve it INCOMPLETE) ... -->
+
+<!-- ### How can I generate a sample payload for a schema? -->
+
+<!-- No Answer available.  -->
+<!-- INCOMPLETE ... -->
+
+### Posso obter uma representação JSON de amostra para criar um tipo de dados?
+
+Você pode usar a API do registro de esquema e a interface do usuário da plataforma para criar um tipo de dados. Consulte a documentação para obter instruções sobre como:
+
+- [Criar um tipo de dados usando a API](./api/data-types.md#create)
+- [Criar um tipo de dados usando a interface](./ui/resources/data-types.md#create)
+
+### Quais são as restrições de uso para um tipo de dados de mapa?
+
+O XDM impõe as seguintes restrições ao uso desse tipo de dados:
+
+- Os tipos de mapa DEVEM ser do tipo objeto.
+- Os tipos de mapa NÃO DEVEM ter propriedades definidas (em outras palavras, eles definem objetos &quot;vazios&quot;).
+- Os tipos de mapa DEVEM incluir um campo additionalProperties.type que descreve os valores que podem ser colocados no mapa, seja string ou inteiro.
+- A segmentação de várias entidades só pode ser definida com base nas chaves do mapa, e não nos valores.
+- Os mapas não são compatíveis com os públicos-alvo da conta.
+
+Consulte as [restrições de uso para mapear objetos](./ui/fields/map.md#restrictions) para obter mais detalhes.
+
+>[!NOTE]
+>
+>Não há suporte para mapas de vários níveis ou mapas de mapas.
+
+<!-- You cannot create a complex map object. However, you can define map fields in the Schema Editor. See the guide on [defining map fields in the UI](./ui/fields/map.md) for more information. -->
+
+<!-- ### How do I create a complex map object using APIs? -->
+
+<!-- You cannot create a complex map object. -->
+
+<!-- ### How can I manage schema inheritance in Adobe Experience Platform? -->
+
+<!-- No Answer available.  -->
+<!-- INCOMPLETE ... -->
+
+## Schema Identity Management
+
+Esta seção contém respostas a perguntas comuns sobre a definição e o gerenciamento de identidades em seus esquemas.
 
 ### Como definir identidades para meu esquema?
 
@@ -55,7 +103,7 @@ Em [!DNL Experience Platform], as identidades são usadas para identificar um as
 
 Os campos podem ser marcados como identidades usando a API ou a interface do usuário.
 
-#### Definição de identidades na API
+### Definição de identidades na API
 
 Na API, as identidades são estabelecidas por meio da criação de descritores de identidade. Os descritores de identidade sinalizam que uma propriedade específica de um esquema é um identificador exclusivo.
 
@@ -63,7 +111,7 @@ Os descritores de identidade são criados por uma solicitação POST para o endp
 
 Para obter mais detalhes sobre como criar descritores de identidade na API, consulte o documento na seção [descritores](api/descriptors.md) no guia do desenvolvedor [!DNL Schema Registry].
 
-#### Definição de identidades na interface
+### Definição de identidades na interface
 
 Com o esquema aberto no Editor de esquemas, selecione o campo na seção **[!UICONTROL Estrutura]** do editor que você deseja marcar como uma identidade. Em **[!UICONTROL Propriedades do campo]** no lado direito, marque a caixa de seleção **[!UICONTROL Identidade]**.
 
@@ -73,22 +121,49 @@ Para obter mais detalhes sobre como gerenciar identidades na interface, consulte
 
 As identidades primárias são opcionais, pois os esquemas podem ter zero ou uma delas. No entanto, um esquema deve ter uma identidade primária para que o esquema seja habilitado para uso em [!DNL Real-Time Customer Profile]. Consulte a seção [identity](./tutorials/create-schema-ui.md#identity-field) do tutorial do Editor de esquemas para obter mais informações.
 
+## Ativação do perfil de esquema
+
+Esta seção fornece orientação sobre como ativar esquemas para uso com o Perfil de cliente em tempo real.
+
 ### Como habilitar um esquema para uso no [!DNL Real-Time Customer Profile]?
 
 Os esquemas estão habilitados para uso em [[!DNL Real-Time Customer Profile]](../profile/home.md) por meio da adição de uma tag de &quot;união&quot; no atributo `meta:immutableTags` do esquema. A habilitação de um esquema para uso com [!DNL Profile] pode ser feita usando a API ou a interface do usuário.
 
-#### Habilitando um esquema existente para [!DNL Profile] usando a API
+### Habilitando um esquema existente para [!DNL Profile] usando a API
 
 Faça uma solicitação PATCH para atualizar o esquema e adicionar o atributo `meta:immutableTags` como uma matriz contendo o valor &quot;union&quot;. Se a atualização for bem-sucedida, a resposta mostrará o esquema atualizado que agora contém a tag de união.
 
 Para obter mais informações sobre como usar a API para habilitar um esquema para uso em [!DNL Real-Time Customer Profile], consulte o documento [unions](./api/unions.md) do guia do desenvolvedor [!DNL Schema Registry].
 
-#### Habilitando um esquema existente para [!DNL Profile] usando a interface
+### Habilitando um esquema existente para [!DNL Profile] usando a interface
 
 Em [!DNL Experience Platform], selecione **[!UICONTROL Esquemas]** no menu de navegação esquerdo e selecione o nome do esquema que deseja habilitar na lista de esquemas. Em seguida, no lado direito do editor, em **[!UICONTROL Propriedades do esquema]**, selecione **[!UICONTROL Perfil]** para ativá-lo.
 
-
 Para obter mais informações, consulte a seção sobre [usar em Perfil de cliente em tempo real](./tutorials/create-schema-ui.md#profile) no tutorial [!UICONTROL Editor de esquemas].
+
+### Quando os dados do Adobe Analytics são importados como uma origem, o esquema criado automaticamente é ativado para o Perfil?
+
+O esquema não é ativado automaticamente para o Perfil de cliente em tempo real. Você precisa ativar explicitamente o conjunto de dados para o Perfil com base no esquema que está ativado para o Perfil. Consulte a documentação para saber as [etapas e os requisitos necessários para habilitar um conjunto de dados para uso no Perfil do Cliente em Tempo Real](../catalog/datasets/user-guide.md#enable-profile).
+
+### Posso excluir esquemas habilitados para perfil?
+
+Não é possível excluir um esquema depois que ele é ativado para o Perfil de cliente em tempo real. Depois que um esquema é ativado para o Perfil, ele não pode ser desativado ou excluído e os campos não podem ser removidos do esquema. Portanto, é crucial planejar e verificar cuidadosamente a configuração do esquema antes de habilitá-lo para o Perfil. No entanto, você pode excluir um conjunto de dados habilitado para perfil. Informações encontradas aqui: <https://experienceleague.adobe.com/en/docs/experience-platform/catalog/datasets/user-guide#delete-a-profile-enabled-dataset>
+
+>[!IMPORTANT]
+>
+>Para remover um esquema habilitado para perfil, você precisaria da ajuda da Equipe de suporte à plataforma XDM e deve seguir estas etapas:
+>
+> 1. Exclua todos os conjuntos de dados associados ao esquema (que está ativado para o Perfil)
+> 2. Exclua o instantâneo Exportação de perfil da sandbox (isso requer a ajuda da Equipe de suporte da plataforma XDM)
+> 3. Forçar exclusão de esquema da sandbox (isso só pode ser feito pela Equipe de suporte à plataforma XDM)
+
+## Modificação e restrições do esquema
+
+Esta seção fornece esclarecimentos sobre as regras de modificação de schema e sobre a prevenção de alterações.
+
+### Quando um esquema começa a impedir alterações?
+
+Alterações interruptivas podem ser feitas em um esquema desde que ele nunca tenha sido usado na criação de um conjunto de dados ou esteja habilitado para uso no [[!DNL Real-Time Customer Profile]](../profile/home.md). Depois que um esquema é usado na criação do conjunto de dados ou habilitado para uso com [!DNL Real-Time Customer Profile], as regras de [Evolução do Esquema](schema/composition.md#evolution) tornam-se estritamente aplicadas pelo sistema.
 
 ### Posso editar um esquema de união diretamente?
 
@@ -99,6 +174,10 @@ Para obter mais informações sobre uniões no XDM, consulte a seção [uniões]
 ### Como devo formatar meu arquivo de dados para assimilar dados no meu esquema?
 
 [!DNL Experience Platform] aceita arquivos de dados no formato [!DNL Parquet] ou JSON. O conteúdo desses arquivos deve estar em conformidade com o esquema referenciado pelo conjunto de dados. Para obter detalhes sobre as práticas recomendadas para assimilação de arquivos de dados, consulte a [visão geral de assimilação em lote](../ingestion/home.md).
+
+### Como posso converter um esquema em um esquema somente leitura?
+
+No momento, não é possível converter um esquema em somente leitura.
 
 ## Erros e solução de problemas
 
@@ -127,14 +206,14 @@ Esse erro é exibido quando o sistema não consegue encontrar um recurso especí
 >
 >Dependendo do tipo de recurso que está sendo recuperado, esse erro pode usar qualquer um dos `type` URIs a seguir:
 >
->* `http://ns.adobe.com/aep/errors/XDM-1010-404`
->* `http://ns.adobe.com/aep/errors/XDM-1011-404`
->* `http://ns.adobe.com/aep/errors/XDM-1012-404`
->* `http://ns.adobe.com/aep/errors/XDM-1013-404`
->* `http://ns.adobe.com/aep/errors/XDM-1014-404`
->* `http://ns.adobe.com/aep/errors/XDM-1015-404`
->* `http://ns.adobe.com/aep/errors/XDM-1016-404`
->* `http://ns.adobe.com/aep/errors/XDM-1017-404`
+>- `http://ns.adobe.com/aep/errors/XDM-1010-404`
+>- `http://ns.adobe.com/aep/errors/XDM-1011-404`
+>- `http://ns.adobe.com/aep/errors/XDM-1012-404`
+>- `http://ns.adobe.com/aep/errors/XDM-1013-404`
+>- `http://ns.adobe.com/aep/errors/XDM-1014-404`
+>- `http://ns.adobe.com/aep/errors/XDM-1015-404`
+>- `http://ns.adobe.com/aep/errors/XDM-1016-404`
+>- `http://ns.adobe.com/aep/errors/XDM-1017-404`
 
 Para obter mais informações sobre como construir caminhos de pesquisa na API, consulte as seções [contêiner](./api/getting-started.md#container) e [identificação de recursos](api/getting-started.md#resource-identification) no guia do desenvolvedor [!DNL Schema Registry].
 
@@ -182,17 +261,17 @@ Os recursos definidos pela organização devem incluir os namespaces dos campos 
 >
 >Dependendo da natureza específica do erro de namespace, esse erro pode usar qualquer um dos `type` URIs a seguir, juntamente com diferentes detalhes da mensagem:
 >
->* `http://ns.adobe.com/aep/errors/XDM-1020-400`
->* `http://ns.adobe.com/aep/errors/XDM-1021-400`
->* `http://ns.adobe.com/aep/errors/XDM-1022-400`
->* `http://ns.adobe.com/aep/errors/XDM-1023-400`
->* `http://ns.adobe.com/aep/errors/XDM-1024-400`
+>- `http://ns.adobe.com/aep/errors/XDM-1020-400`
+>- `http://ns.adobe.com/aep/errors/XDM-1021-400`
+>- `http://ns.adobe.com/aep/errors/XDM-1022-400`
+>- `http://ns.adobe.com/aep/errors/XDM-1023-400`
+>- `http://ns.adobe.com/aep/errors/XDM-1024-400`
 
 Exemplos detalhados de estruturas de dados adequadas para recursos XDM podem ser encontrados no guia da API do registro de esquema:
 
-* [Criar uma classe personalizada](./api/classes.md#create)
-* [Criar um grupo de campos personalizado](./api/field-groups.md#create)
-* [Criar um tipo de dados personalizado](./api/data-types.md#create)
+- [Criar uma classe personalizada](./api/classes.md#create)
+- [Criar um grupo de campos personalizado](./api/field-groups.md#create)
+- [Criar um tipo de dados personalizado](./api/data-types.md#create)
 
 ### Cabeçalho Aceitar inválido
 
@@ -219,10 +298,10 @@ Dependendo do ponto de extremidade que você está usando, a propriedade `detail
 >
 >Dependendo do ponto de extremidade sendo usado, esse erro pode usar qualquer um dos `type` URIs a seguir:
 >
->* `http://ns.adobe.com/aep/errors/XDM-1006-400`
->* `http://ns.adobe.com/aep/errors/XDM-1007-400`
->* `http://ns.adobe.com/aep/errors/XDM-1008-400`
->* `http://ns.adobe.com/aep/errors/XDM-1009-400`
+>- `http://ns.adobe.com/aep/errors/XDM-1006-400`
+>- `http://ns.adobe.com/aep/errors/XDM-1007-400`
+>- `http://ns.adobe.com/aep/errors/XDM-1008-400`
+>- `http://ns.adobe.com/aep/errors/XDM-1009-400`
 
 Para obter listas de cabeçalhos Accept compatíveis para diferentes solicitações de API, consulte as seções correspondentes no [guia do desenvolvedor do Registro de Esquemas](./api/overview.md).
 

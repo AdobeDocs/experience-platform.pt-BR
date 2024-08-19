@@ -3,9 +3,9 @@ title: Dicas do cliente do agente do usuário
 description: Saiba como as dicas do cliente do agente do usuário funcionam no SDK da Web. As dicas do cliente permitem que os proprietários de sites acessem muitas das mesmas informações disponíveis na sequência de agente do usuário, mas com mais privacidade.
 keywords: user-agent;client hints; string; sequência user-agent; baixa entropia; alta entropia
 exl-id: a909b1d1-be9d-43ba-bb4b-d28b0c609f65
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: 89dfe037e28bae51e335dc67185afa42b2c418e3
 workflow-type: tm+mt
-source-wordcount: '1152'
+source-wordcount: '1245'
 ht-degree: 3%
 
 ---
@@ -98,13 +98,16 @@ As dicas de cliente de baixa entropia são ativadas por padrão no SDK da Web e 
 
 As dicas de alta entropia do cliente são informações mais detalhadas sobre o dispositivo cliente, como a versão da plataforma, arquitetura, modelo, bits (plataformas de 64 ou 32 bits) ou a versão completa do sistema operacional. Essas informações poderiam ser potencialmente usadas na impressão digital.
 
-| Cabeçalho HTTP | JavaScript | Incluído no agente do usuário por padrão | Incluído nas dicas do cliente por padrão |
-|---|---|---|---|
-| `Sec-CH-UA-Platform-Version` | `platformVersion` | Sim | Não |
-| `Sec-CH-UA-Arc` | `architecture` | Sim | Não |
-| `Sec-CH-UA-Model` | `model` | Sim | Não |
-| `Sec-CH-UA-Bitness` | `Bitness` | Sim | Não |
-| `Sec-CH-UA-Full-Version-List` | `fullVersionList` | Sim | Não |
+| Propriedade | Descrição | Cabeçalho HTTP | Caminho XDM | Exemplo | Incluído no agente do usuário por padrão | Incluído nas dicas do cliente por padrão |
+| --- | --- | --- | --- | --- |---|---|
+| Versão do sistema operacional | A versão do sistema operacional. | `Sec-CH-UA-Platform-Version` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.platformVersion` | `10.15.7` | Sim | Não |
+| Arquitetura | A arquitetura subjacente da CPU. | `Sec-CH-UA-Arch` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.architecture` | `x86` | Sim | Não |
+| Modelo do dispositivo | O nome do dispositivo usado. | `Sec-CH-UA-Model` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.model` | `Intel Mac OS X 10_15_7` | Sim | Não |
+| Bitness | O número de bits que a arquitetura subjacente da CPU suporta. | `Sec-CH-UA-Bitness` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.bitness` | `64` | Sim | Não |
+| Fornecedor do navegador | A empresa que criou o navegador. A dica de baixa entropia `Sec-CH-UA` também coleta esse elemento. | `Sec-CH-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.vendor` | `Google` | Sim | Não |
+| Nome do navegador | O navegador usado. A dica de baixa entropia `Sec-CH-UA` também coleta esse elemento. | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.brand` | `Chrome` | Sim | Não |
+| Versão do navegador | A versão significativa do navegador. A dica de baixa entropia `Sec-CH-UA` também coleta esse elemento. A versão exata do navegador não é coletada automaticamente. | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.version` | `105` | Sim | Não |
+
 
 As dicas de cliente de alta entropia são desativadas por padrão no SDK da Web. Para habilitá-los, você deve configurar manualmente o SDK da Web para solicitar dicas de cliente de alta entropia.
 

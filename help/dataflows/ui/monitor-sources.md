@@ -2,9 +2,9 @@
 description: Saiba como usar o painel de monitoramento para monitorar dados assimilados de fontes.
 title: Monitorar fluxos de dados para fontes na interface do usuário
 exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 9d9ae58997ec1c23af2a9124321fdfd9f03b7c4e
 workflow-type: tm+mt
-source-wordcount: '1256'
+source-wordcount: '1320'
 ht-degree: 11%
 
 ---
@@ -62,9 +62,9 @@ A parte inferior do painel exibe uma tabela que descreve o relatório de métric
 
 | Métricas | Descrição |
 | --- | --- |
-| Registros recebidos | O número total de registros recebidos da origem. |
+| Registros recebidos | O número total de registros recebidos de uma determinada fonte. |
 | Registros assimilados | O número total de registros assimilados no data lake. |
-| Registros ignorados | O número total de registros ignorados. |
+| Registros ignorados | O número total de registros ignorados. Um registro ignorado se refere a campos que foram ignorados porque não foram necessários para assimilação. Por exemplo, se você criar um fluxo de dados de origens com a assimilação parcial ativada, poderá configurar um limite de taxa de erro aceitável. Durante o processo de assimilação, a assimilação ignorará registros de campos que não são obrigatórios, como campos de identidade, desde que estejam dentro do limite de erro. |
 | Registros com falha | O número total de registros que não puderam ser assimilados devido a erros. |
 | Taxa de assimilação | A porcentagem de registros assimilados com base no número total de registros recebidos. |
 | Total de fluxos de dados com falha | O número total de fluxos de dados que falharam. |

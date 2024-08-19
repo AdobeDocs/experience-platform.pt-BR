@@ -2,9 +2,9 @@
 title: Acessar a ECID
 description: Saiba como acessar a ID de Experience Cloud de Preparo de dados ou Tags
 exl-id: 8e63a873-d7b5-4c6c-b14d-3c3fbc82b62f
-source-git-commit: e01dfcf3cccea589083a23171f4b8d9ecad58233
+source-git-commit: e53ae6053a4b00e7e75242b95496c6795953005a
 workflow-type: tm+mt
-source-wordcount: '253'
+source-wordcount: '283'
 ht-degree: 1%
 
 ---
@@ -17,6 +17,10 @@ O [!DNL Experience Cloud Identity (ECID)] é um identificador persistente atribu
 Você pode acessar a ECID por meio do [Preparo de dados para a coleção de dados](../../../../datastreams/data-prep.md) (recomendado) ou por meio de tags.
 
 ## Acessar a ECID por meio do Preparo de dados (método preferencial) {#accessing-ecid-data-prep}
+
+Este método usa o [Preparo de Dados para a Coleção de Dados](../../../../datastreams/data-prep.md) para configurar um mapeamento personalizado para o `ECID`.
+
+Consulte a documentação do [Preparo de Dados para a Coleção de Dados](../../../../datastreams/data-prep.md) para saber como usar este recurso.
 
 Se você deseja definir a ECID em um campo XDM personalizado, além de tê-la no mapa de identidade, faça isso definindo o `source` para o seguinte caminho:
 

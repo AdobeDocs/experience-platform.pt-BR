@@ -214,8 +214,7 @@ Para remover conjuntos de dados de um fluxo de dados existente, siga as etapas a
 3. [!BADGE Beta] A página **[!UICONTROL Dados de ativação]** do destino é exibida. Use as caixas de seleção no lado esquerdo da lista de conjuntos de dados para selecionar os conjuntos de dados que você deseja remover e selecione **[!UICONTROL Remover conjuntos de dados]** no painel direito para acionar a caixa de diálogo de confirmação de remoção do conjunto de dados.
 
    >[!NOTE]
-   >
-Esse recurso está na versão beta e só está disponível para clientes selecionados. Para solicitar acesso a esse recurso, entre em contato com o representante da Adobe.
+   >Esse recurso está na versão beta e só está disponível para clientes selecionados. Para solicitar acesso a esse recurso, entre em contato com o representante da Adobe.
 
    ![Caixa de diálogo Remover conjunto de dados mostrando o controle Remover conjunto de dados no painel direito.](../assets/ui/export-datasets/bulk-remove-datasets.png)
 

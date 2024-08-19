@@ -4,9 +4,9 @@ title: Painel de Uso da Licença
 description: A Adobe Experience Platform fornece um painel por meio do qual você pode visualizar informações importantes sobre o uso de licença da sua organização.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 090b870dcfb16e59831f1e03eb46b22da4f24f0f
+source-git-commit: 41c2d8e28536a140136c7eb20c2a4c3dc343f5fa
 workflow-type: tm+mt
-source-wordcount: '2429'
+source-wordcount: '2466'
 ht-degree: 6%
 
 ---
@@ -89,6 +89,10 @@ Para ver um resumo de uso de um direito de produtos, selecione um produto na lis
 ![O [!UICONTROL Uso da licença] [!UICONTROL Visão geral] com um produto e a coluna de uso previsto realçada.](../images/license-usage/product-predicted-usage.png)
 
 A guia Summary (Resumo) é exibida. Você pode usar as previsões granulares disponíveis nas guias [!UICONTROL Resumo] e [!UICONTROL Detalhes] para garantir uma tomada de decisão informada para o uso eficiente da licença.
+
+>[!NOTE]
+>
+Observe que as previsões de uso de licença são aproximações baseadas no uso anterior. Você é responsável por entender o uso real da sua organização e garantir que o uso não vá além do escopo da licença da sua organização com o Adobe.
 
 ![O modo de exibição de resumo de um Produto da Plataforma com a coluna de uso previsto está realçado.](../images/license-usage/summary-predicted-usage.png)
 

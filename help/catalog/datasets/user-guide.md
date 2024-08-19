@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guia da interface de conjuntos de dados
 description: Saiba como executar ações comuns ao trabalhar com conjuntos de dados na interface do usuário do Adobe Experience Platform.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 10140efe33b42f9099b28564c9824839d83521a3
+source-git-commit: a168f61fabddd06d586f7909fd92c0409fd2f51e
 workflow-type: tm+mt
-source-wordcount: '3111'
+source-wordcount: '3203'
 ht-degree: 3%
 
 ---
@@ -38,6 +38,22 @@ Este guia do usuário requer uma compreensão funcional dos seguintes componente
 >id="platform_datasets_browse_daysRemaining"
 >title="Expiração do conjunto de dados"
 >abstract="Esta coluna indica o número de dias que o conjunto de dados de destino tem antes de expirar automaticamente."
+
+>[!CONTEXTUALHELP]
+>id="platform_datasets_browse_datalakeretention"
+>title="Retenção de Datalake"
+>abstract="Mostra a política de retenção atual para cada conjunto de dados. Esse valor pode ser modificado nas configurações de retenção de cada conjunto de dados. Você só pode definir o tempo de retenção para o conjunto de dados ExperienceEvent."
+
+>[!CONTEXTUALHELP]
+>id="platform_datasets_browse_profileretention"
+>title="Retenção de perfil"
+>abstract="Mostra a política de retenção atual para cada conjunto de dados. Esse valor pode ser modificado nas configurações de retenção de cada conjunto de dados. Você só pode definir o tempo de retenção para um conjunto de dados ExperienceEvent."
+
+>[!CONTEXTUALHELP]
+>id="platform_datasets_datalakesettings_datasetretention"
+>title="Retenção do conjunto de dados"
+>abstract="A retenção do Datalake define regras para por quanto tempo os dados são armazenados e quando devem ser excluídos em diferentes serviços. Isso garante a conformidade com as normas, gerenciando os custos de armazenamento e mantendo a qualidade dos dados."
+
 
 Na interface do usuário do [!DNL Experience Platform], selecione **[!UICONTROL Conjuntos de dados]** no menu de navegação esquerdo para abrir o painel **[!UICONTROL Conjuntos de dados]**. O painel lista todos os conjuntos de dados disponíveis para sua organização. Os detalhes são exibidos para cada conjunto de dados listado, incluindo seu nome, o esquema ao qual o conjunto de dados adere e o status da execução de ingestão mais recente.
 

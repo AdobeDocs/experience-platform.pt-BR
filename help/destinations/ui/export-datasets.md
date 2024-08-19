@@ -3,9 +3,9 @@ title: Exportar conjuntos de dados para destinos de armazenamento na nuvem
 type: Tutorial
 description: Saiba como exportar conjuntos de dados do Adobe Experience Platform para o local de armazenamento em nuvem de sua preferência.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 938e4875318f07b296fc884487ca1c664be659ef
 workflow-type: tm+mt
-source-wordcount: '1891'
+source-wordcount: '1836'
 ht-degree: 4%
 
 ---
@@ -56,7 +56,7 @@ Entenda, na tabela abaixo, quais tipos de conjunto de dados você pode exportar 
   <tr>
     <td>Customer Journey Analytics</td>
     <td>Todas</td>
-    <td> Conjuntos de dados de Perfil e Evento de experiência criados na interface do Experience Platform após assimilar ou coletar dados por meio de Fontes, SDK da Web, SDK móvel, Conector de dados do Analytics e Audience Manager.  <br> <p> <b>Observação sobre disponibilidade:</b> a capacidade de exportar conjuntos de dados para a nuvem está na fase de Teste limitado da versão e pode não estar disponível ainda no seu ambiente. Essa nota será removida quando a funcionalidade estiver disponível no geral. Para obter informações sobre o processo de lançamento de Customer Journey Analytics, consulte <a href="https://experienceleague.adobe.com/docs/analytics-platform/using/releases/releases.html"> lançamentos de recursos de Customer Journey Analytics</a>. </p> </td>
+    <td> Conjuntos de dados de Perfil e Evento de experiência criados na interface do Experience Platform após assimilar ou coletar dados por meio de Fontes, SDK da Web, SDK móvel, Conector de dados do Analytics e Audience Manager.</td>
   </tr>
   <tr>
     <td>Data Distiller</td>
@@ -215,7 +215,7 @@ Para remover conjuntos de dados de um fluxo de dados existente, siga as etapas a
 
    >[!NOTE]
    >
-   >Esse recurso está na versão beta e só está disponível para clientes selecionados. Para solicitar acesso a esse recurso, entre em contato com o representante da Adobe.
+Esse recurso está na versão beta e só está disponível para clientes selecionados. Para solicitar acesso a esse recurso, entre em contato com o representante da Adobe.
 
    ![Caixa de diálogo Remover conjunto de dados mostrando o controle Remover conjunto de dados no painel direito.](../assets/ui/export-datasets/bulk-remove-datasets.png)
 

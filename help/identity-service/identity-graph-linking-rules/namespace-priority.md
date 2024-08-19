@@ -3,9 +3,9 @@ title: Prioridade de namespace
 description: Saiba mais sobre a prioridade de namespace no Serviço de identidade.
 badge: Beta
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: 536770d0c3e7e93921fe40887dafa5c76e851f5e
+source-git-commit: c9610f935a074adf82d96c1eb824c159b18f2837
 workflow-type: tm+mt
-source-wordcount: '1567'
+source-wordcount: '1639'
 ht-degree: 2%
 
 ---
@@ -78,13 +78,13 @@ Para estruturas de gráficos relativamente complexas, a prioridade de namespace 
 * Para eventos de experiência, depois de definir as Configurações de identidade para uma determinada sandbox, a identidade primária será determinada pela prioridade de namespace mais alta a partir de agora.
    * Isso ocorre porque os eventos de experiência são de natureza dinâmica. Um mapa de identidade pode conter três ou mais identidades, e a prioridade do namespace garante que o namespace mais importante esteja associado ao evento de experiência.
 * Como resultado, as seguintes configurações **não serão mais usadas pelo Perfil de Cliente em Tempo Real**:
-   * Caixa de seleção &quot;Primário&quot; no tipo de elemento de dados no WebSDK.
+   * A caixa de seleção &quot;Primário&quot; no tipo de elemento de dados no WebSDK (que se traduz em `primary=true` no identityMap). **Observação**: namespace de identidade e valor de identidade continuarão a ser usados no Perfil. Além disso, você ainda deve definir as configurações da caixa de seleção &quot;Principal&quot;, pois os serviços fora do Perfil do cliente em tempo real continuarão se referindo a essa configuração.
    * Quaisquer campos marcados como identidade primária em um esquema de Classe de evento de experiência XDM.
    * Configurações de identidade primária padrão no conector de origem do Adobe Analytics (ECID ou AAID).
 * Por outro lado, a **prioridade de namespace não determina a identidade principal dos registros de perfil**.
    * Para registros de perfil, você pode usar o espaço de trabalho de esquemas na interface do usuário do Experience Platform para definir os campos de identidade, incluindo a identidade principal. Leia o manual sobre [definição de campos de identidade na interface](../../xdm/ui/fields/identity.md) para obter mais informações.
 
->[!NOTE]
+>[!TIP]
 >
 >* A prioridade de namespace é **uma propriedade de um namespace**. É um valor numérico atribuído a um namespace para indicar sua importância relativa.
 >
@@ -183,3 +183,7 @@ Para obter mais informações sobre, leia os documentos em [Attribution AI](../.
 * Data lake: exclui qualquer registro com a identidade especificada como identidade primária ou secundária.
 
 Para obter mais informações, leia a [Visão geral do Privacy Service](../../privacy-service/home.md).
+
+### Adobe Target e personalização de borda
+
+A [personalização do Edge](../../server-api/personalization-target.md) continuará se referindo a como você configurou sua caixa de seleção &quot;Primário&quot; no tipo de elemento de dados do SDK da Web (o que significa `primary=true` no identityMap).

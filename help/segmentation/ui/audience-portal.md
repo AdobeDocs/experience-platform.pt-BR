@@ -2,9 +2,9 @@
 title: Visão geral do Audience Portal
 description: Saiba como usar o Audience Portal para exibir, gerenciar e criar públicos no Adobe Experience Platform.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 56939b18d532f3c12ed8fdd76513d953ae74b613
+source-git-commit: 34964bc5af0676872fb472a7309aa99c21efdbc5
 workflow-type: tm+mt
-source-wordcount: '4125'
+source-wordcount: '4162'
 ht-degree: 3%
 
 ---
@@ -386,6 +386,10 @@ O fluxo de trabalho **[!UICONTROL Importar CSV de público-alvo]** aparece. Voc�
 >[!NOTE]
 >
 >O público-alvo gerado externo **deve** estar no formato CSV, ter **no máximo** de 25 colunas e ter menos de 1 GB.
+>
+>Além disso, você **não pode** usar espaços ou traços na primeira linha ou nas colunas associadas do CSV.
+>
+>Por exemplo, o valor da primeira linha pode ser &quot;FirstName&quot; ou &quot;First_Name&quot;, mas não pode ser &quot;First Name&quot; ou &quot;First-Name&quot;.
 
 Depois de selecionar o arquivo CSV a ser importado, uma lista de dados de amostra é mostrada para esse público-alvo gerado externamente. Depois de confirmar que os dados de exemplo estão corretos, selecione **[!UICONTROL Próximo]**.
 

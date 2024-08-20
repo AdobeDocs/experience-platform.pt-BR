@@ -2,9 +2,9 @@
 title: Perguntas frequentes do Audiences
 description: Descubra respostas para perguntas frequentes sobre públicos-alvo e outros conceitos relacionados à segmentação.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: 2d15ba41ff326034a6f9a32301f67f5d3b2a1c14
+source-git-commit: 29d9445e6e71c60f4b596a5e645a56d2b70e133c
 workflow-type: tm+mt
-source-wordcount: '4362'
+source-wordcount: '4235'
 ht-degree: 0%
 
 ---
@@ -33,14 +33,7 @@ Para carregar públicos gerados externamente, você precisa ter as permissões &
 
 ### O que acontece quando carrego um público-alvo gerado externamente?
 
-Ao fazer upload de um público-alvo gerado externamente, os seguintes itens são criados:
-
-- Conjunto de dados
-   - O conjunto de dados estará visível no inventário do conjunto de dados, e o nome do conjunto de dados será o **mesmo** do nome do público-alvo gerado externamente que você carregou.
-- Trabalho em lotes
-   - Um trabalho em lotes será **automaticamente** executado quando você carregar um público gerado externamente. Isso significa que **não** precisa aguardar a execução do trabalho de segmentação diária para ativar o público-alvo gerado externamente.
-- Esquema ad hoc
-   - Um **novo** esquema XDM será criado para uso com o público-alvo gerado externamente. Os campos neste esquema XDM têm namespace para uso com o conjunto de dados que também foi criado.
+Ao fazer upload de um público gerado externamente, um conjunto de dados será criado e ficará visível no inventário do conjunto de dados. O nome do conjunto de dados será **o mesmo** do nome do público-alvo gerado externamente que você carregou.
 
 ### O que é composto por um público-alvo gerado externamente e o que acontece com esses dados quando são importados para a Platform?
 
@@ -91,12 +84,6 @@ A política de mesclagem padrão específica da organização é aplicada automa
 ### Onde posso ativar públicos gerados externamente para o?
 
 Um público gerado externamente pode ser mapeado para qualquer destino e usado em campanhas do Adobe Journey Optimizer.
-
-### Quando os públicos-alvo gerados externamente estão prontos para ativação?
-
-Se ativados para um destino de transmissão, os dados do público-alvo gerado externamente estarão disponíveis em duas horas.
-
-Se ativados para um destino em lote, os dados do público-alvo gerado externamente serão sincronizados com o próximo trabalho de segmentação de 24 horas.
 
 ### Posso excluir um público-alvo gerado externamente?
 

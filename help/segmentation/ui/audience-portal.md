@@ -2,9 +2,9 @@
 title: Visão geral do Audience Portal
 description: Saiba como usar o Audience Portal para exibir, gerenciar e criar públicos no Adobe Experience Platform.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 527c9bf7ff60ceb1e621ccac5a88b8e9eb32ebfb
+source-git-commit: 56939b18d532f3c12ed8fdd76513d953ae74b613
 workflow-type: tm+mt
-source-wordcount: '3826'
+source-wordcount: '4125'
 ht-degree: 3%
 
 ---
@@ -254,17 +254,39 @@ Selecionar **[!UICONTROL Editar público-alvo]** permite editar seu público-alv
 
 Selecionar **[!UICONTROL Editar propriedades]** permitirá que você edite os detalhes básicos do público-alvo, como o nome, a descrição e as tags.
 
-![](../images/ui/audience-portal/audience-details-edit-properties.png)
+![O botão Editar propriedades está realçado na página de detalhes do público-alvo.](../images/ui/audience-portal/audience-details-edit-properties.png)
 
 ### Total de público {#audience-total}
 
-A seção **[!UICONTROL Público total]** mostra o número total de perfis qualificados para o público.
+Para públicos-alvo e composições geradas pela Platform, a seção **[!UICONTROL Audience total]** mostra o número total de perfis qualificados para o público-alvo.
 
 >[!NOTE]
 >
 >Pode levar até 30 minutos para que a contagem total do público-alvo seja atualizada após a conclusão do trabalho de exportação.
 
 As estimativas são geradas usando um tamanho de amostra dos dados de amostra desse dia. Se houver menos de 1 milhão de entidades no armazenamento do Perfil, o conjunto de dados completo será usado; para entre 1 e 20 milhões de entidades, será usado 1 milhão de entidades; e para mais de 20 milhões de entidades, será usado 5% do total de entidades. Mais informações sobre a geração de estimativas podem ser encontradas na [seção de geração de estimativas](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) do tutorial de criação de público-alvo.
+
+### Detalhes de assimilação {#ingestion-details}
+
+Para públicos-alvo com uma origem de **[!UICONTROL Upload personalizado]**, a seção **[!UICONTROL Detalhes da assimilação]** mostra o total do perfil, bem como os detalhes do conjunto de dados em que o público-alvo gerado externamente foi assimilado.
+
+![A seção de detalhes da assimilação da página de detalhes do público-alvo é exibida.](../images/ui/audience-portal/audience-details-ingestion-details.png)
+
+| Propriedade | Descrição |
+| -------- | ----------- |
+| Contagem de perfis | O número total de perfis qualificados para o público-alvo. |
+| Nome do conjunto de dados | O nome do conjunto de dados em que o público-alvo foi assimilado. É possível selecionar o nome do conjunto de dados para obter mais informações sobre ele. Para saber mais sobre conjuntos de dados, leia o [manual da interface do conjunto de dados](../../catalog/datasets/user-guide.md). |
+| Lote do conjunto de dados | A ID do conjunto de dados em que o público-alvo foi assimilado. Você pode selecionar a ID do lote para obter mais informações sobre o lote. Para saber mais sobre lotes, leia o [guia de assimilação de dados de monitoramento](../../ingestion/quality/monitor-data-ingestion.md#viewing-batches). |
+| Lote de perfis | A ID do lote que criou os perfis na plataforma. Você pode selecionar a ID do lote para obter mais informações sobre o lote. Para saber mais sobre lotes, leia o [guia de assimilação de dados de monitoramento](../../ingestion/quality/monitor-data-ingestion.md#viewing-batches). |
+| Esquema | O nome do esquema ao qual o público-alvo pertence. Você pode selecionar o nome do schema para exibir informações sobre a estrutura do schema e aplicar rótulos de uso de dados. Para obter mais informações, leia o [guia de gerenciamento de uso de dados](../../xdm/tutorials/labels.md). |
+| Registros assimilados | O número de registros assimilados no conjunto de dados. |
+| Registros com falha | O número de registros que não puderam ser assimilados no conjunto de dados. |
+| Novos fragmentos de perfil | O número de novos perfis criados. |
+| Fragmentos de perfil existentes | O número de perfis existentes que foram atualizados. |
+
+>[!NOTE]
+>
+>Aplicar rótulos de uso de dados ao esquema é a prática recomendada. Você **não pode** aplicar um rótulo de uso de dados diretamente ao público-alvo.
 
 ### Destinos ativados {#activated-destinations}
 
@@ -341,9 +363,9 @@ Selecionar a **[!UICONTROL regra de compilação]** leva você ao Construtor de 
 
 ![O espaço de trabalho do Construtor de segmentos é exibido.](../images/ui/audience-portal/segment-builder.png)
 
-### Composição federada de público-alvo {#fac}
+### Composição de público-alvo federado {#fac}
 
-Além das composições de público-alvo e definições de segmento, você pode usar a Composição de público-alvo federado do Adobe para criar novos públicos-alvo a partir de conjuntos de dados corporativos sem copiar os dados subjacentes e armazená-los no Portal de público-alvo da Adobe Experience Platform. Você também pode enriquecer os públicos-alvo existentes no Adobe Experience Platform utilizando dados de público-alvo compostos que foram federados a partir do data warehouse corporativo. Leia o guia em [Composição de Público-Alvo Federado](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home).
+Além das composições de público-alvo e definições de segmento, você pode usar a Composição de público-alvo federado do Adobe para criar novos públicos-alvo a partir de conjuntos de dados corporativos sem copiar os dados subjacentes e armazená-los no Portal de público-alvo da Adobe Experience Platform. Você também pode enriquecer os públicos-alvo existentes no Adobe Experience Platform utilizando dados de público-alvo compostos que foram federados a partir do data warehouse corporativo. Leia o guia em [Composição de Público-Alvo Federado](https://experienceleague.adobe.com/pt-br/docs/federated-audience-composition/using/home).
 
 ![Uma lista de públicos-alvo criados na Composição de Público Federado para sua organização.](../images/ui/overview/federated-audience-composition.png)
 

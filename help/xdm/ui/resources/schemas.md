@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Criar e editar esquemas na interface
 description: Saiba mais sobre as noções básicas sobre como criar e editar esquemas na interface do usuário do Experience Platform.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 19f1f64434d655d3b19260460519018fc9c8e174
+source-git-commit: 15de9351203f6b43653042ab73ede17781486160
 workflow-type: tm+mt
-source-wordcount: '3736'
-ht-degree: 2%
+source-wordcount: '3861'
+ht-degree: 1%
 
 ---
 
@@ -29,13 +29,23 @@ Este guia requer uma compreensão funcional do Sistema XDM. Consulte a [visão g
 
 >[!NOTE]
 >
->Esta seção aborda como criar manualmente um novo esquema na interface do usuário do. Se você estiver assimilando dados CSV na Platform, poderá optar por [mapear esses dados para um esquema XDM criado por recomendações geradas por IA](../../../ingestion/tutorials/map-csv/recommendations.md) (atualmente na versão beta) sem precisar criar manualmente o esquema.
+>Esta seção aborda como criar manualmente um novo esquema na interface do usuário do. Se você estiver assimilando dados CSV na Platform, poderá usar algoritmos de Aprendizado de Máquina (ML) para **gerar um esquema a partir de dados CSV de amostra**. Esse workflow corresponde ao formato de dados e cria automaticamente um novo schema com base na estrutura e no conteúdo do arquivo CSV. Consulte o [Guia de criação de esquema com assistência de ML](../ml-assisted-schema-creation.md) para obter mais informações sobre este fluxo de trabalho.
 
 No espaço de trabalho [!UICONTROL Esquemas], selecione **[!UICONTROL Criar esquema]** no canto superior direito.
 
 ![O espaço de trabalho Esquemas com [!UICONTROL Criar Esquema] realçado.](../../images/ui/resources/schemas/create-schema.png)
 
-O fluxo de trabalho [!UICONTROL Criar esquema] é exibido. Você pode escolher uma classe base para o esquema selecionando **[!UICONTROL Perfil Individual]**, **[!UICONTROL Evento de Experiência]** ou **[!UICONTROL Outros]**, seguido de **[!UICONTROL Próximo]** para confirmar sua escolha. Consulte a documentação do [Perfil individual XDM](../../classes/individual-profile.md) e do [XDM ExperienceEvent](../../classes/experienceevent.md) para obter mais informações sobre essas classes.
+A caixa de diálogo [!UICONTROL Criar um esquema] é exibida. Nesta caixa de diálogo, você pode optar por criar manualmente um esquema adicionando campos e grupos de campos ou pode fazer upload de um arquivo CSV e usar algoritmos de ML para gerar um esquema. Selecione um workflow de criação de esquema na caixa de diálogo.
+
+![A caixa de diálogo Criar um esquema com as opções de fluxo de trabalho e selecione realçada.](../../images/tutorials/create-schema/create-a-schema-dialog.png)
+
+### Criação manual ou assistida por aprendizado de máquina {#manual-or-assisted}
+
+Para saber como usar um algoritmo de ML para recomendar uma estrutura de esquema com base em um arquivo csv, consulte o [guia de criação de esquema assistido por aprendizado de máquina](../ml-assisted-schema-creation.md). Este guia de interface do usuário se concentra no fluxo de trabalho de criação manual.
+
+### Criação manual de esquema {#manual-creation}
+
+O fluxo de trabalho [!UICONTROL Criar esquema] é exibido. Você pode escolher uma classe base para o esquema selecionando **[!UICONTROL Perfil Individual]**, **[!UICONTROL Evento de Experiência]** ou **[!UICONTROL Outros]**, seguido de **[!UICONTROL Próximo]** para confirmar sua escolha. Consulte a documentação do [[!UICONTROL Perfil individual XDM]](../../classes/individual-profile.md) e do [[!UICONTROL XDM ExperienceEvent]](../../classes/experienceevent.md) para obter mais informações sobre essas classes.
 
 ![O fluxo de trabalho [!UICONTROL Criar esquema] com as três opções de classe e [!UICONTROL Próximo] realçado.](../../images/ui/resources/schemas/schema-class-options.png)
 

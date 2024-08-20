@@ -5,9 +5,9 @@ title: Mapear um arquivo CSV para um esquema XDM existente
 type: Tutorial
 description: Este tutorial aborda como mapear um arquivo CSV para um esquema XDM existente usando a interface do usuário do Adobe Experience Platform.
 exl-id: 15f55562-269d-421d-ad3a-5c10fb8f109c
-source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
+source-git-commit: 15de9351203f6b43653042ab73ede17781486160
 workflow-type: tm+mt
-source-wordcount: '944'
+source-wordcount: '1018'
 ht-degree: 1%
 
 ---
@@ -121,3 +121,7 @@ Depois que o arquivo CSV for mapeado e criado, você poderá monitorar os dados 
 ## Próximas etapas
 
 Ao seguir este tutorial, você mapeou com êxito um arquivo CSV simples para um esquema XDM e o assimilou em [!DNL Platform]. Esses dados agora podem ser usados por serviços [!DNL Platform] downstream, como [!DNL Real-Time Customer Profile]. Consulte a visão geral de [[!DNL Real-Time Customer Profile]](../../../profile/home.md) para obter mais informações.
+
+>[!TIP]
+>
+>Você também pode usar algoritmos de aprendizado de máquina (ML) para **gerar um esquema a partir de dados de exemplo** do espaço de trabalho Esquema. Esse fluxo de trabalho cria automaticamente um novo esquema com base na estrutura e no conteúdo do arquivo, garantindo que o esquema corresponda ao formato dos dados. Isso economiza tempo e aumenta a precisão ao definir a estrutura, os campos e os tipos de dados para grandes conjuntos de dados complexos. Consulte o [Guia de criação de esquema com assistência de ML](../../../xdm/ui/ml-assisted-schema-creation.md) para obter mais informações sobre este fluxo de trabalho.

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Visão geral da assimilação de dados
 description: Este documento apresenta as três principais maneiras pelas quais os dados são assimilados na Platform, com links para a respectiva documentação de visão geral para informações mais detalhadas.
 exl-id: c189dd4a-5c59-4189-a18c-a3e45a9ff01d
-source-git-commit: cde8db1f75cf83451e240f32a877b9d6d26a0e18
+source-git-commit: 15de9351203f6b43653042ab73ede17781486160
 workflow-type: tm+mt
-source-wordcount: '521'
+source-wordcount: '578'
 ht-degree: 3%
 
 ---
@@ -42,6 +42,12 @@ Consulte a [visão geral da assimilação de streaming](./streaming-ingestion/ov
 As conexões do Source podem ser configuradas para coletar dados de outros aplicativos Adobe (como Adobe Analytics e Adobe Audience Manager), fontes de armazenamento na nuvem de terceiros (como [!DNL Azure Blob], [!DNL Amazon] S3, servidores FTP e servidores SFTP) e sistemas CRM de terceiros (como [!DNL Microsoft Dynamics] e [!DNL Salesforce]).
 
 Consulte a [Visão geral das fontes](../sources/home.md) para obter mais informações.
+
+### Criação de esquema com ML {#ml-assisted-schema-creation}
+
+Para integrar rapidamente novas fontes de dados, agora é possível usar algoritmos de aprendizado de máquina do para gerar um esquema a partir de dados de amostra. Essa automação simplifica a criação de esquemas precisos, reduz erros e acelera o processo, da coleta de dados à análise e aos insights.
+
+Consulte o [Guia de criação de esquema assistido por aprendizado de máquina](../xdm/ui/ml-assisted-schema-creation.md) para obter mais informações sobre este fluxo de trabalho.
 
 ## Próximas etapas e recursos adicionais
 

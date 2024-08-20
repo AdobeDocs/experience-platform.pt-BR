@@ -2,9 +2,9 @@
 title: Mapear um arquivo CSV para um esquema XDM usando o Recommendations gerado por IA
 description: Este tutorial aborda como mapear um arquivo CSV para um esquema XDM usando recomendações geradas por IA.
 exl-id: 1daedf0b-5a25-4ca5-ae5d-e9ee1eae9e4d
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: cbebee894d68f60f82e1154f41dcecc76c706a3b
 workflow-type: tm+mt
-source-wordcount: '1100'
+source-wordcount: '1172'
 ht-degree: 1%
 
 ---
@@ -101,3 +101,5 @@ Quando você terminar de ajustar as recomendações de esquema para seus campos 
 Este guia abordou como mapear um arquivo CSV para um esquema XDM usando recomendações geradas por IA, permitindo que você traga esses dados para a Platform por meio da assimilação em lote.
 
 Para obter etapas sobre como mapear um arquivo CSV para um esquema existente, consulte o [fluxo de trabalho de mapeamento de esquema existente](./existing-schema.md). Para obter informações sobre dados de transmissão para a Platform em tempo real por meio de conexões de origem pré-criadas, consulte a [visão geral das fontes](../../../sources/home.md).
+
+Você também pode usar algoritmos de aprendizado de máquina (ML) para **gerar um esquema a partir de dados CSV de amostra**. Esse fluxo de trabalho cria automaticamente um novo esquema com base na estrutura e no conteúdo do arquivo CSV. Esse esquema recém-criado corresponde ao formato dos seus dados para economizar tempo e aumentar a precisão ao definir a estrutura, os campos e os tipos de dados para conjuntos de dados grandes e complexos. Consulte o [Guia de criação de esquema com assistência de ML](../../../xdm/ui/ml-assisted-schema-creation.md) para obter mais informações sobre este fluxo de trabalho.

@@ -172,7 +172,7 @@ Consulte a seção de pré-requisitos para as [definições de termos usados](#p
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_audiencesizetrend"
->title="Tendência de tamanho do público-alvo"
+>title="Tendência de tamanho do público"
 >abstract="Esse dispositivo ilustra o número de perfis contidos no público-alvo que estão sendo enviados para a conta de destino diariamente. O primeiro menu suspenso ajusta o período da tendência do público-alvo. O segundo menu suspenso do dispositivo seleciona o público-alvo para análise. O destino é escolhido na lista suspensa de visão geral."
 
 O widget **[!UICONTROL Tendência de tamanho do público-alvo]** ilustra a relação da contagem de perfis durante um período para um público-alvo que foi mapeado para essa conta de destino. O widget usa um gráfico de linhas para ilustrar o número de perfis contidos no público-alvo, que estão sendo enviados para a conta de destino diariamente.
@@ -217,11 +217,11 @@ Esse dispositivo fornece uma lista dos cinco principais públicos-alvo **mapeado
 
 O widget **[!UICONTROL Públicos mapeados por identidade]** destaca rapidamente a probabilidade de direcionar com êxito as oportunidades de perfil para uma campanha no destino escolhido. Uma campanha direcionada eficiente não depende do número de perfis enviados para o destino, mas sim do número de IDs de origem que provavelmente serão correspondidas às IDs de destino para fornecer dados úteis e acionáveis.
 
-### Públicos-alvo comuns {#common-audiences}
+### Públicos comuns {#common-audiences}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_commonaudiences"
->title="Públicos-alvo comuns"
+>title="Públicos comuns"
 >abstract="Esse dispositivo fornece uma lista dos cinco principais públicos-alvo ativados na conta de destino escolhida na parte superior da página e o destino selecionado na lista suspensa do dispositivo. A lista de públicos-alvo é ordenada de acordo com a data mais recente de ativação. O público-alvo ativado mais recentemente é exibido na parte superior."
 
 O widget **[!UICONTROL Públicos-alvo comuns]** fornece uma lista dos cinco principais públicos-alvo ativados na conta de destino escolhida na parte superior da página, e o destino selecionado na lista suspensa do widget. A lista de públicos-alvo é ordenada de acordo com a data mais recente de ativação. O público-alvo ativado mais recentemente é exibido na parte superior.

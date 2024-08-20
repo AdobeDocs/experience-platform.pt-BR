@@ -124,7 +124,7 @@ Insira os campos abaixo e selecione **[!UICONTROL Conectar ao destino]**:
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_kinesis_includesegmentnames"
 >title="Incluir nomes de segmentos"
->abstract="Ative se quiser que a exportação de dados inclua os nomes dos públicos-alvo que você está exportando. Veja a documentação para ter um exemplo de exportação de dados com esta opção selecionada."
+>abstract="Ative se quiser que a exportação de dados inclua os nomes dos públicos-alvo que você está exportando. Consulte a documentação para ver um exemplo de exportação de dados com esta opção selecionada."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_kinesis_includesegmenttimestamps"

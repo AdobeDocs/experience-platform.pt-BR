@@ -175,7 +175,7 @@ Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICON
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_facebook_originofaudience"
->title="Origem do público-alvo"
+>title="Origem do público"
 >abstract="Escolha como os dados do cliente no público-alvo foram coletados originalmente. Os dados serão exibidos no Facebook quando um usuário for direcionado pelo segmento"
 
 >[!CONTEXTUALHELP]

@@ -181,7 +181,7 @@ Se você selecionar o tipo de autenticação **[!UICONTROL Credenciais de Client
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_includesegmentnames"
 >title="Incluir nomes de segmentos"
->abstract="Ative se quiser que a exportação de dados inclua os nomes dos públicos-alvo que você está exportando. Veja a documentação para ter um exemplo de exportação de dados com esta opção selecionada."
+>abstract="Ative se quiser que a exportação de dados inclua os nomes dos públicos-alvo que você está exportando. Consulte a documentação para ver um exemplo de exportação de dados com esta opção selecionada."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_includesegmenttimestamps"

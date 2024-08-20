@@ -6,7 +6,7 @@ exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
 source-git-commit: d7a530c5ec2cad37b93273f5843609110d61cbfc
 workflow-type: tm+mt
 source-wordcount: '4077'
-ht-degree: 11%
+ht-degree: 13%
 
 ---
 
@@ -29,7 +29,7 @@ Este artigo explica o fluxo de trabalho necessário para ativar públicos-alvo n
 
 Para ativar públicos para destinos, você deve ter [se conectado com êxito a um destino](./connect-destination.md). Se ainda não tiver feito isso, vá para o [catálogo de destinos](../catalog/overview.md), navegue pelos destinos compatíveis e configure o destino que deseja usar.
 
-## Formatos de arquivo compatíveis com a exportação {#supported-file-formats-export}
+## Formatos de arquivo compatíveis para exportação {#supported-file-formats-export}
 
 >[!CONTEXTUALHELP]
 >id="dataset_dataflow_needs_schedule_end_date_header"
@@ -38,13 +38,13 @@ Para ativar públicos para destinos, você deve ter [se conectado com êxito a u
 
 >[!CONTEXTUALHELP]
 >id="dataset_dataflow_needs_schedule_end_date_body"
->title="Atualizar a data de término do corpo do fluxo de dados"
->abstract="Devido a atualizações recentes nesse destino, o fluxo de dados agora requer uma data de término. O Adobe definiu uma data de término padrão para 1º de março de 2025. Atualize para a data de término desejada, caso contrário, as exportações de dados serão interrompidas na data padrão."
+>title="Atualizar a data final deste corpo de fluxo de dados"
+>abstract="Devido a atualizações recentes nesse destino, o fluxo de dados agora requer uma data final. A Adobe definiu uma data final padrão para 1º de março de 2025. Atualize para a data final desejada, caso contrário, as exportações de dados serão interrompidas na data padrão."
 
 >[!CONTEXTUALHELP]
 >id="destinations_folder_name_template"
 >title="Editar caminho da pasta"
->abstract="Use várias macros fornecidas para personalizar o caminho da pasta onde os conjuntos de dados são exportados."
+>abstract="Use as diversas macros fornecidas para personalizar o caminho da pasta onde os conjuntos de dados são exportados."
 
 >[!CONTEXTUALHELP]
 >id="destinations_folder_name_template_preview"

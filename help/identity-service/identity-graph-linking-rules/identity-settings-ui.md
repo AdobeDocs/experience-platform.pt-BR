@@ -3,9 +3,9 @@ title: Interface de configurações de identidade
 description: Saiba como usar a interface do usuário de configurações de identidade.
 badge: Beta
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
-source-git-commit: 536770d0c3e7e93921fe40887dafa5c76e851f5e
+source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
 workflow-type: tm+mt
-source-wordcount: '517'
+source-wordcount: '515'
 ht-degree: 0%
 
 ---
@@ -49,7 +49,7 @@ Para designar um namespace exclusivo, marque a caixa de seleção [!UICONTROL Ex
 
 ![Dois namespaces selecionados e definidos como exclusivos.](../images/rules/unique-namespace.png)
 
-Depois que os namespaces exclusivos forem estabelecidos, os gráficos não poderão mais ter várias identidades que contenham um namespace exclusivo. Por exemplo, se você designou a ID do CRM como um namespace exclusivo, um gráfico só pode ter uma identidade com o namespace da ID do CRM. Para obter mais informações, leia a [visão geral do algoritmo de otimização de identidade](./identity-optimization-algorithm.md#unique-namespace).
+Depois que os namespaces exclusivos forem estabelecidos, os gráficos não poderão mais ter várias identidades que contenham um namespace exclusivo. Por exemplo, se você designou o CRMID como um namespace exclusivo, um gráfico só poderá ter uma identidade com o namespace CRMID. Para obter mais informações, leia a [visão geral do algoritmo de otimização de identidade](./identity-optimization-algorithm.md#unique-namespace).
 
 Quando você terminar as configurações, selecione **[!UICONTROL Avançar]**. Uma mensagem de confirmação é exibida. Use esta oportunidade para verificar se as configurações estão corretas e selecione **[!UICONTROL Concluir]**.
 

@@ -2,9 +2,9 @@
 title: Exclusões no serviço de identidade
 description: Este documento fornece uma visão geral dos vários mecanismos que você pode usar para excluir os dados de identidade no Experience Platform e para esclarecer como os gráficos de identidade podem ser afetados.
 exl-id: 0619d845-71c1-4699-82aa-c6436815d5b3
-source-git-commit: 576b17842ee1c5722332ba49e26b037537ec96ed
+source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
 workflow-type: tm+mt
-source-wordcount: '1199'
+source-wordcount: '1198'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ O documento abaixo faz referência aos seguintes recursos do Experience Platform
 
 * [Serviço de identidade](../home.md): obtenha uma melhor visão dos clientes individuais e de seu comportamento unindo as identidades de vários dispositivos e sistemas.
    * [Gráfico de identidade](./identity-graph-viewer.md): um gráfico de identidade é um mapa das relações entre diferentes identidades para um cliente específico, fornecendo uma representação visual de como o cliente interage com a sua marca em diferentes canais.
-   * [Namespaces de identidade](./namespaces.md): os namespaces de identidade são um componente do Serviço de Identidade que serve como indicadores do contexto ao qual uma identidade está relacionada. Por exemplo, eles distinguem um valor de &quot;name<span>@email.com&quot; como um endereço de email ou &quot;443522&quot; como uma ID de CRM numérica.
+   * [Namespaces de identidade](./namespaces.md): os namespaces de identidade são um componente do Serviço de Identidade que serve como indicadores do contexto ao qual uma identidade está relacionada. Por exemplo, eles distinguem um valor de &quot;name<span>@email.com&quot; como um endereço de email ou &quot;443522&quot; como um CRMID numérico.
 * [Serviço de Catálogo](../../catalog/home.md): explore a linhagem de dados, os metadados, as descrições de arquivos, os diretórios e os conjuntos de dados no data lake.
 * [Higiene de dados](../../hygiene/home.md): gerencie seus dados armazenados do consumidor agendando expirações automatizadas do conjunto de dados ou excluindo registros individuais de um conjunto de dados ou de todos os conjuntos de dados.
 * [Adobe Experience Platform Privacy Service](../../privacy-service/home.md): gerencie solicitações de clientes para acessar, cancelar a venda ou excluir seus dados pessoais nos aplicativos da Adobe Experience Cloud.

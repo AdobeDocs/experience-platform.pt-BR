@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guia de solução de problemas do serviço de identidade
 description: Este documento fornece respostas a perguntas frequentes sobre o Adobe Experience Platform Identity Service, bem como um guia de solução de problemas para erros comuns.
 exl-id: dac31bc3-7003-46d6-9d41-9f6fd3645c2c
-source-git-commit: 3fe94be9f50d64fc893b16555ab9373604b62e59
+source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
 workflow-type: tm+mt
-source-wordcount: '2166'
+source-wordcount: '2165'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ Rotular determinados campos de dados como identidades nos dados de registro e s�
 
 ## O que são identidades conhecidas e anônimas?
 
-Uma identidade conhecida se refere a um valor de identidade que pode ser usado sozinho ou com outras informações para identificar, entrar em contato ou localizar uma pessoa individual. Os exemplos de identidades conhecidas podem incluir endereços de email, números de telefone e IDs de CRM.
+Uma identidade conhecida se refere a um valor de identidade que pode ser usado sozinho ou com outras informações para identificar, entrar em contato ou localizar uma pessoa individual. Exemplos de identidades conhecidas podem incluir endereços de email, números de telefone e CRMIDs.
 
 Uma identidade anônima refere-se a um valor de identidade que não pode ser usado isoladamente ou com outras informações para identificar, entrar em contato ou localizar uma pessoa individual (como uma ID de cookie).
 

@@ -5,9 +5,9 @@ description: A Detecção de dispositivos compartilhados identifica diferentes u
 hide: true
 hidefromtoc: true
 exl-id: 36318163-ba07-4209-b1be-dc193ab7ba41
-source-git-commit: d7c7bed74d746aba2330ecba62f9f810fbaf0d63
+source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
 workflow-type: tm+mt
-source-wordcount: '1360'
+source-wordcount: '1353'
 ht-degree: 0%
 
 ---
@@ -60,7 +60,7 @@ Trabalhar com o [!DNL Shared Device Detection] requer uma compreensão dos vári
 [!DNL Shared Device Detection] funciona estabelecendo dois namespaces: o **Namespace de Identidade Compartilhado** e o **Namespace de Identidade do Usuário**.
 
 * O Namespace de identidade compartilhado representa o dispositivo que pode ser usado por vários usuários. A Adobe recomenda que os clientes usem a ECID como o identificador do dispositivo compartilhado.
-* O Namespace de identidade do usuário é mapeado para o namespace de identidade que corresponde à ID de logon de um usuário. Pode ser a ID de CRM, o endereço de email, o email com hash ou o número de telefone de um usuário.
+* O Namespace de identidade do usuário é mapeado para o namespace de identidade que corresponde à ID de logon de um usuário. Pode ser o CRMID, o endereço de email, o email com hash ou o número de telefone de um usuário.
 
 Um dispositivo compartilhado, como um tablet, tem um único **Namespace de identidade compartilhado**. Por outro lado, cada usuário de um dispositivo compartilhado tem seu próprio **Namespace de identidade do usuário** designado, que corresponde a suas respectivas IDs de logon. Por exemplo, um tablet que Kevin e Nora compartilham para uso de comércio eletrônico tem sua própria ECID de `1234`, enquanto Kevin tem seu próprio Namespace de Identidade do Usuário que está mapeado para sua conta `kevin@email.com` e Nora tem seu próprio Namespace de Identidade do Usuário mapeado para sua conta `nora@email.com`.
 
@@ -72,17 +72,17 @@ Considere o exemplo a seguir para ajudá-lo a entender como o [!DNL Shared Devic
 
 >[!NOTE]
 >
->Neste diagrama, o Namespace de identidade compartilhado é configurado para ECID e o Namespace de identidade do usuário é configurado para CRM ID.
+>Nesse diagrama, o Namespace de identidade compartilhado é configurado para ECID e o Namespace de identidade do usuário é configurado para CRMID.
 
 ![diagrama](./images/shared-device/diagram.png)
 
 * Kevin e Nora compartilham um tablet para visitar um site de comércio eletrônico. No entanto, ambos têm as suas próprias contas independentes, que cada um utiliza para navegar e comprar em linha;
    * Como um dispositivo compartilhado, o tablet tem uma ECID correspondente, que representa a ID de cookie do navegador da Web do tablet;
-* Suponha que Kevin use o tablet e **faça logon** em sua conta de comércio eletrônico para procurar fones de ouvido. Isso significa que a ID do CRM de Kevin (**Namespace de identidade do usuário**) agora está vinculada à ECID do tablet (**Namespace de identidade compartilhado**). Os dados de navegação do tablet agora são incorporados ao gráfico de identidade de Kevin.
-   * Se Kevin **sair** e Nora usar o tablet e **entrar** em sua própria conta e comprar uma câmera, sua ID do CRM agora estará vinculada à ECID do tablet. Portanto, os dados de navegação do tablet agora são incorporados ao gráfico de identidade de Nora.
-   * Se Nora **não fizer logoff** e Kevin usar o tablet, mas **não fizer logon**, os dados de navegação do tablet ainda serão incorporados a Nora, pois ela permanece como o usuário autenticado e sua ID do CRM ainda está vinculada à ECID do tablet.
-   * Se Nora **fizer logoff** e Kevin usar o tablet, mas **não fizer logon**, os dados de navegação do tablet ainda serão incorporados ao gráfico de identidade de Nora, pois, como o **último usuário autenticado**, sua ID de CRM permanecerá vinculada ao ECID do tablet.
-   * Se Kevin **fizer logon** novamente, sua ID do CRM agora será vinculada à ECID do tablet, pois ele é o último usuário autenticado e os dados de navegação do tablet agora são incorporados ao seu gráfico de identidade.
+* Suponha que Kevin use o tablet e **faça logon** em sua conta de comércio eletrônico para procurar fones de ouvido. Isso significa que o CRMID de Kevin (**Namespace de identidade do usuário**) agora está vinculado à ECID do tablet (**Namespace de identidade compartilhado**). Os dados de navegação do tablet agora são incorporados ao gráfico de identidade de Kevin.
+   * Se Kevin **sair** e Nora usar o tablet e **entrar** em sua própria conta e comprar uma câmera, seu CRMID agora estará vinculado ao ECID do tablet. Portanto, os dados de navegação do tablet agora são incorporados ao gráfico de identidade de Nora.
+   * Se Nora **não fizer logoff** e Kevin usar o tablet, mas **não fizer logon**, os dados de navegação do tablet ainda serão incorporados a Nora, pois ela permanece como o usuário autenticado e seu CRMID ainda está vinculado ao ECID do tablet.
+   * Se Nora **fizer logoff** e Kevin usar o tablet, mas **não fizer logon**, os dados de navegação do tablet ainda serão incorporados ao gráfico de identidade de Nora, pois, como o **último usuário autenticado**, seu CRMID permanecerá vinculado ao ECID do tablet.
+   * Se Kevin **fizer logon** novamente, seu CRMID agora será vinculado à ECID do tablet, pois ele agora é o último usuário autenticado e os dados de navegação do tablet agora são incorporados ao seu gráfico de identidade.
 
 ### Como o [!DNL Profile Service] mescla fragmentos de perfil com o [!DNL Shared Device Detection] habilitado
 

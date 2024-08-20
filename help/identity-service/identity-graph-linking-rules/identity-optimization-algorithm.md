@@ -3,9 +3,9 @@ title: Algoritmo de otimização de identidade
 description: Saiba mais sobre o Algoritmo de otimização de identidade no Serviço de identidade.
 badge: Beta
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: 7daa9191f2e095f01c7c09f02f87aa8724e2e325
+source-git-commit: 8762ea655399fbc82c63c87310337b8e875bd5bc
 workflow-type: tm+mt
-source-wordcount: '1565'
+source-wordcount: '1533'
 ht-degree: 1%
 
 ---
@@ -26,14 +26,14 @@ Leia esta seção para obter informações sobre namespaces exclusivos e priorid
 
 Um namespace exclusivo determina os links que serão removidos se ocorrer o recolhimento do gráfico.
 
-Um único perfil mesclado e seu gráfico de identidade correspondente devem representar um único indivíduo (entidade pessoa). Um único indivíduo geralmente é representado por IDs de CRM e/ou IDs de logon. A expectativa é que dois indivíduos (IDs de CRM) não sejam mesclados em um único perfil ou gráfico.
+Um único perfil mesclado e seu gráfico de identidade correspondente devem representar um único indivíduo (entidade pessoa). Um único indivíduo geralmente é representado por CRMIDs e/ou IDs de logon. A expectativa é que dois indivíduos (CRMIDs) não sejam mesclados em um único perfil ou gráfico.
 
-Você deve especificar quais namespaces representam uma entidade de pessoa no Serviço de identidade usando o algoritmo de otimização de identidade. Por exemplo, se um banco de dados do CRM definir uma conta de usuário a ser associada a uma única ID do CRM e um único endereço de email, as configurações de identidade para essa sandbox serão assim:
+Você deve especificar quais namespaces representam uma entidade de pessoa no Serviço de identidade usando o algoritmo de otimização de identidade. Por exemplo, se um banco de dados do CRM definir que uma conta de usuário seja associada a um único CRMID e um único endereço de email, as configurações de identidade para essa sandbox serão semelhantes a:
 
-* Namespace da ID do CRM = exclusivo
+* Namespace CRMID = exclusivo
 * Namespace do email = exclusivo
 
-Um namespace que você declara como exclusivo será configurado automaticamente para ter um limite máximo de um em um determinado gráfico de identidade. Por exemplo, se você declarar um namespace de ID do CRM como exclusivo, um gráfico de identidade poderá ter apenas uma identidade que contenha um namespace de ID do CRM. Se você não declarar um namespace como exclusivo, o gráfico poderá conter mais de uma identidade com esse namespace.
+Um namespace que você declara como exclusivo será configurado automaticamente para ter um limite máximo de um em um determinado gráfico de identidade. Por exemplo, se você declarar um namespace CRMID como exclusivo, um gráfico de identidade poderá ter apenas uma identidade que contenha um namespace CRMID. Se você não declarar um namespace como exclusivo, o gráfico poderá conter mais de uma identidade com esse namespace.
 
 >[!NOTE]
 >
@@ -84,15 +84,15 @@ Um dispositivo compartilhado refere-se a um dispositivo usado por mais de um ind
 
 | Namespace | Namespace exclusivo |
 | --- | --- |
-| ID do CRM | Sim |
+| CRMID | Sim |
 | Email | Sim |
 | ECID | Não |
 
-Neste exemplo, a ID do CRM e o Email são designados como namespaces exclusivos. Em `timestamp=0`, um conjunto de dados de registro do CRM é assimilado e cria dois gráficos diferentes devido à configuração exclusiva do namespace. Cada gráfico contém uma ID do CRM e um namespace de email.
+Neste exemplo, o CRMID e o Email são designados como namespaces exclusivos. Em `timestamp=0`, um conjunto de dados de registro do CRM é assimilado e cria dois gráficos diferentes devido à configuração exclusiva do namespace. Cada gráfico contém um CRMID e um namespace de email.
 
-* `timestamp=1`: Jane faz logon em seu site de comércio eletrônico usando um laptop. Jane é representada por sua ID de CRM e por e-mail, enquanto o navegador da Web em seu notebook que ela usa é representado por uma ECID.
-* `timestamp=2`: João faz logon no site de comércio eletrônico usando o mesmo laptop. John é representado por sua ID do CRM e por seu e-mail, enquanto o navegador da Web que ele usou já é representado por uma ECID. Devido ao mesmo ECID estar vinculado a dois gráficos diferentes, o Serviço de identidade pode saber que esse dispositivo (laptop) é um dispositivo compartilhado.
-* No entanto, devido à configuração exclusiva de namespace que define um máximo de um namespace de ID do CRM e um namespace de email por gráfico, o algoritmo de otimização de identidade divide o gráfico em dois.
+* `timestamp=1`: Jane faz logon em seu site de comércio eletrônico usando um laptop. Jane é representada pelo CRMID e pelo e-mail, enquanto o navegador da Web no laptop é representado por uma ECID.
+* `timestamp=2`: João faz logon no site de comércio eletrônico usando o mesmo laptop. John é representado por seu CRMID e Email, enquanto o navegador da Web que ele usou já é representado por um ECID. Devido ao mesmo ECID estar vinculado a dois gráficos diferentes, o Serviço de identidade pode saber que esse dispositivo (laptop) é um dispositivo compartilhado.
+* No entanto, devido à configuração exclusiva de namespace que define um máximo de um namespace CRMID e um namespace de email por gráfico, o algoritmo de otimização de identidade divide o gráfico em dois.
    * Por fim, como John é o último usuário autenticado, a ECID que representa o laptop permanece vinculada ao seu gráfico, em vez de à de Jane.
 
 ![caso de dispositivo compartilhado um](../images/identity-settings/shared-device-case-one.png)
@@ -101,16 +101,16 @@ Neste exemplo, a ID do CRM e o Email são designados como namespaces exclusivos.
 
 | Namespace | Namespace exclusivo |
 | --- | --- |
-| ID do CRM | Sim |
+| CRMID | Sim |
 | ECID | Não |
 
-Neste exemplo, o namespace da ID do CRM é designado como um namespace exclusivo.
+Neste exemplo, o namespace CRMID é designado como um namespace exclusivo.
 
-* `timestamp=1`: Jane faz logon em seu site de comércio eletrônico usando um laptop. Ela é representada por sua ID de CRM e o navegador da Web no notebook é representado pela ECID.
-* `timestamp=2`: João faz logon no site de comércio eletrônico usando o mesmo laptop. Ele é representado por sua ID do CRM e o navegador da Web que ele usa é representado pela mesma ECID.
-   * Esse evento vincula duas IDs independentes do CRM à mesma ECID, o que excede o limite configurado de uma ID do CRM.
-   * Como resultado, o algoritmo de otimização de identidade remove o link mais antigo, que neste caso é a ID do CRM da Jane que estava vinculada em `timestamp=1`.
-   * No entanto, embora a ID do CRM da Jane não exista mais como um gráfico no Serviço de identidade, ela ainda persistirá como um perfil no Perfil do cliente em tempo real. Isso ocorre porque um gráfico de identidade deve conter pelo menos duas identidades vinculadas e, como resultado da remoção dos links, a ID do CRM da Jane não tem mais outra identidade para a qual vincular.
+* `timestamp=1`: Jane faz logon em seu site de comércio eletrônico usando um laptop. Ela é representada por sua CRMID e o navegador da Web no laptop é representado pela ECID.
+* `timestamp=2`: João faz logon no site de comércio eletrônico usando o mesmo laptop. Ele é representado por sua CRMID e o navegador da Web que ele usa é representado pela mesma ECID.
+   * Esse evento vincula dois CRMIDs independentes à mesma ECID, o que excede o limite configurado de um CRMID.
+   * Como resultado, o algoritmo de otimização de identidade remove o link mais antigo, que neste caso é o CRMID de Jane que estava vinculado em `timestamp=1`.
+   * No entanto, embora a CRMID da Jane não exista mais como um gráfico no Serviço de identidade, ela ainda persistirá como um perfil no Perfil do cliente em tempo real. Isso ocorre porque um gráfico de identidade deve conter pelo menos duas identidades vinculadas e, como resultado da remoção dos links, o CRMID da Jane não tem mais outra identidade para a qual vincular.
 
 ![caso-de-dispositivo-compartilhado-dois](../images/identity-settings/shared-device-case-two.png)
 
@@ -122,18 +122,18 @@ Há instâncias em que um usuário pode inserir valores incorretos para seu emai
 
 | Namespace | Namespace exclusivo |
 | --- | --- |
-| ID do CRM | Sim |
+| CRMID | Sim |
 | Email | Sim |
 | ECID | Não |
 
-Neste exemplo, a ID do CRM e os namespaces de email são designados como exclusivos. Considere o cenário em que Jane e John se inscreveram no site de comércio eletrônico usando um valor de email incorreto (por exemplo, test<span>@test.com).
+Neste exemplo, os namespaces CRMID e Email são designados como exclusivos. Considere o cenário em que Jane e John se inscreveram no site de comércio eletrônico usando um valor de email incorreto (por exemplo, test<span>@test.com).
 
-* `timestamp=1`: Jane faz logon no seu site de comércio eletrônico usando o Safari no iPhone dela, estabelecendo a ID do CRM (informações de logon) e a ECID (navegador).
-* `timestamp=2`: John faz logon no site de comércio eletrônico usando o Google Chrome em sua iPhone, estabelecendo sua ID de CRM (informações de logon) e ECID (navegador).
-* `timestamp=3`: Seu engenheiro de dados assimila o registro do CRM da Jane, o que resulta no link de sua ID do CRM para o email incorreto.
-* `timestamp=4`: seu engenheiro de dados assimila o registro do CRM de John, o que resulta no link de sua ID do CRM para o email incorreto.
-   * Isso se torna uma violação da configuração de namespace exclusivo, pois cria um único gráfico com dois namespaces de ID de CRM.
-   * Como resultado, o algoritmo de otimização de identidade exclui o link mais antigo, que neste caso é o link entre a identidade de Jane com o namespace de ID de CRM e a identidade com test<span>@test.
+* `timestamp=1`: Jane faz logon no seu site de comércio eletrônico usando o Safari no iPhone dela, estabelecendo seu CRMID (informações de logon) e seu ECID (navegador).
+* `timestamp=2`: John faz logon no site de comércio eletrônico usando o Google Chrome em sua iPhone, estabelecendo sua CRMID (informações de logon) e ECID (navegador).
+* `timestamp=3`: Seu engenheiro de dados assimila o registro do CRM de Jane, o que resulta no link do CRMID dela para o email incorreto.
+* `timestamp=4`: seu engenheiro de dados assimila o registro CRM de John, o que resulta no link do CRMID dele para o email incorreto.
+   * Isso se torna uma violação da configuração de namespace exclusivo, pois cria um único gráfico com dois namespaces CRMID.
+   * Como resultado, o algoritmo de otimização de identidade exclui o link mais antigo, que neste caso é o link entre a identidade de Jane com o namespace CRMID e a identidade com test<span>@test.
 
 Com o algoritmo de otimização de identidade, valores de identidade inválidos, como emails falsos ou números de telefone, não são propagados por vários gráficos de identidade diferentes.
 
@@ -141,13 +141,13 @@ Com o algoritmo de otimização de identidade, valores de identidade inválidos,
 
 ### Associação de evento anônimo
 
-As ECIDs armazenam eventos não autenticados (anônimos), enquanto a ID do CRM armazena eventos autenticados. No caso de dispositivos compartilhados, a ECID (portador de eventos não autenticados) é associada ao **último usuário autenticado**.
+As ECIDs armazenam eventos não autenticados (anônimos), enquanto a CRMID armazena eventos autenticados. No caso de dispositivos compartilhados, a ECID (portador de eventos não autenticados) é associada ao **último usuário autenticado**.
 
 Exiba o diagrama abaixo para entender melhor como a associação de eventos anônimos funciona:
 
 * Kevin e Nora compartilham um tablet.
-   * `timestamp=1`: Kevin faz logon em um site de comércio eletrônico usando sua conta, estabelecendo assim sua ID de CRM (informações de logon) e uma ECID (navegador). No momento do logon, Kevin agora é considerado o último usuário autenticado.
-   * `timestamp=2`: Nora faz logon em um site de comércio eletrônico usando sua conta, estabelecendo assim sua ID de CRM (informações de logon) e a mesma ECID. No momento do logon, Nora agora é considerado o último usuário autenticado.
+   * `timestamp=1`: Kevin faz logon em um site de comércio eletrônico usando sua conta, estabelecendo assim sua CRMID (informações de logon) e uma ECID (navegador). No momento do logon, Kevin agora é considerado o último usuário autenticado.
+   * `timestamp=2`: Nora faz logon em um site de comércio eletrônico usando sua conta, estabelecendo assim sua CRMID (informações de logon) e a mesma ECID. No momento do logon, Nora agora é considerado o último usuário autenticado.
    * `timestamp=3`: Kevin usa o tablet para navegar no site de comércio eletrônico, mas não faz logon com sua conta. A atividade de navegação de Kevin é então armazenada na ECID, que por sua vez é associada a Nora porque ela é a última usuário autenticada. Nesse ponto, Nora é dona dos eventos anônimos.
       * Até que Kevin faça logon novamente, o perfil mesclado de Nora será associado a todos os eventos não autenticados armazenados na ECID (com eventos em que a ECID é a identidade principal).
    * `timestamp=4`: Kevin faz logon pela segunda vez. Nesse ponto, ele se torna novamente o último usuário autenticado e agora também é o proprietário dos eventos não autenticados:

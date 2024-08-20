@@ -3,9 +3,9 @@ keywords: Experience Platform;identidade;serviço de identidade;solução de pro
 title: Medidas de proteção do serviço de identidade
 description: Este documento fornece informações sobre limites de uso e taxa para dados do Serviço de identidade para ajudar você a otimizar o uso do gráfico de identidade.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: 6d36a6ff1243b15dcafc2f37d8bad982730f7a39
+source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
 workflow-type: tm+mt
-source-wordcount: '1591'
+source-wordcount: '1585'
 ht-degree: 1%
 
 ---
@@ -92,7 +92,7 @@ As seções a seguir descrevem as implicações que a lógica de exclusão tem p
 
 Entre em contato com a equipe de conta do Adobe para solicitar uma alteração no tipo de identidade se a sandbox de produção contiver:
 
-* Um namespace personalizado em que os identificadores de pessoa (como IDs de CRM) são configurados como tipo de identidade de cookie/dispositivo.
+* Um namespace personalizado em que os identificadores de pessoa (como CRMIDs) são configurados como tipo de identidade de cookie/dispositivo.
 * Um namespace personalizado em que os identificadores de cookie/dispositivo são configurados como tipo de identidade entre dispositivos.
 
 Quando esse recurso estiver disponível, os gráficos que excederem o limite de 50 identidades serão reduzidos para até 50 identidades. Para o Real-Time CDP B2C Edition, isso pode resultar em um aumento mínimo no número de perfis qualificados para um público-alvo, pois esses perfis foram ignorados anteriormente da Segmentação e Ativação.
@@ -106,7 +106,7 @@ A exclusão acontece somente com os dados no Serviço de identidade, não com o 
 
 #### Perfil do cliente em tempo real e WebSDK: exclusão de identidade principal
 
-Se você quiser preservar seus eventos autenticados em relação à ID do CRM, é recomendável alterar as IDs primárias de ECID para CRM ID. Leia os seguintes documentos para obter as etapas sobre como implementar essa alteração:
+Se você quiser preservar os eventos autenticados no CRMID, é recomendável alterar as IDs primárias de ECID para CRMID. Leia os seguintes documentos para obter as etapas sobre como implementar essa alteração:
 
 * [Configurar mapa de identidade para marcas Experience Platform](../tags/extensions/client/web-sdk/data-element-types.md#identity-map).
 * [Dados de identidade no SDK da Web do Experience Platform](../web-sdk/identity/overview.md#using-identitymap)
@@ -149,7 +149,7 @@ Como resultado, o Serviço de identidade exclui a identidade mais antiga com bas
 
 >[!TAB Saída de gráfico]
 
-Como resultado da exclusão de ECID:35577, as bordas que vincularam CRM ID:60013 e CRM ID:25212 com o agora excluído ECID:35577 também são excluídas. Esse processo de exclusão faz com que o gráfico seja dividido em dois gráficos menores.
+Como resultado da exclusão de ECID:35577, as bordas que vincularam CRMID:60013 e CRMID:25212 com o agora excluído ECID:35577 também são excluídas. Esse processo de exclusão faz com que o gráfico seja dividido em dois gráficos menores.
 
 ![](./images/guardrails/after-split.png)
 
@@ -176,7 +176,7 @@ No exemplo abaixo, ECID:21011 é assimilado e vinculado ao gráfico em `timestam
 
 Como resultado, o Serviço de identidade exclui a identidade mais antiga somente do gráfico de identidade, que neste caso é ECID:35577. A supressão da referência ECID:35577 também resulta na supressão do seguinte:
 
-* O link entre a ID de CRM: 60013 e a ECID:35577 excluída agora, resultando em um cenário de divisão de gráfico.
+* O vínculo entre o CRMID: 60013 e o agora excluído ECID:35577, resultando em um cenário de divisão de gráfico.
 * IDFA: 32110, IDFA: 02383 e as identidades restantes representadas por `(...)`. Essas identidades são excluídas porque, individualmente, não estão vinculadas a outras identidades e, portanto, não podem ser representadas em um gráfico.
 
 ![](./images/guardrails/hub-and-spoke-process.png)

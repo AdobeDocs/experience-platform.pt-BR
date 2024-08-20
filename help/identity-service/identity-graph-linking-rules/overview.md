@@ -3,9 +3,9 @@ title: Visão geral das regras de vinculação do gráfico de identidade
 description: Saiba mais sobre as regras de vinculação do gráfico de identidade no Serviço de identidade.
 badge: Beta
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: 7daa9191f2e095f01c7c09f02f87aa8724e2e325
+source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
 workflow-type: tm+mt
-source-wordcount: '1177'
+source-wordcount: '1170'
 ht-degree: 1%
 
 ---
@@ -26,13 +26,13 @@ ht-degree: 1%
 * [Exemplo de configurações de gráfico](./configuration.md)
 * [Exemplos de cenários](./example-scenarios.md)
 
-Com o Serviço de identidade da Adobe Experience Platform e o Perfil do cliente em tempo real, é fácil supor que seus dados são assimilados perfeitamente e que todos os perfis mesclados representam uma única pessoa por meio de um identificador de pessoa, como uma ID de CRM. No entanto, há possíveis cenários em que determinados dados podem tentar mesclar vários perfis diferentes em um único perfil (&quot;colapso de gráfico&quot;). Para evitar essas mesclagens indesejadas, é possível usar as configurações fornecidas por meio das regras de vinculação do gráfico de identidade e permitir a personalização precisa para seus usuários.
+Com o Serviço de identidade da Adobe Experience Platform e o Perfil do cliente em tempo real, é fácil supor que seus dados são assimilados perfeitamente e que todos os perfis mesclados representam uma única pessoa por meio de um identificador de pessoa, como um CRMID. No entanto, há possíveis cenários em que determinados dados podem tentar mesclar vários perfis diferentes em um único perfil (&quot;colapso de gráfico&quot;). Para evitar essas mesclagens indesejadas, é possível usar as configurações fornecidas por meio das regras de vinculação do gráfico de identidade e permitir a personalização precisa para seus usuários.
 
 ## Exemplos de cenários em que o colapso de gráficos pode ocorrer
 
 * **Dispositivo compartilhado**: dispositivo compartilhado refere-se a dispositivos que são usados por mais de um indivíduo. Exemplos de dispositivos compartilhados incluem tablets, computadores de biblioteca e quiosques.
 * **Email e números de telefone incorretos**: emails e números de telefone incorretos se referem a usuários finais que registram informações de contato inválidas, como &quot;test<span>@test.com&quot; para email e &quot;+1-111-111-1111&quot; para número de telefone.
-* **Valores de identidade errados ou inválidos**: valores de identidade errados ou inválidos se referem a valores de identidade não exclusivos que poderiam mesclar IDs de CRM. Por exemplo, embora os IDFAs devam ter 36 caracteres (32 caracteres alfanuméricos e quatro hifens), há cenários em que um IDFA com um valor de identidade de &quot;user_null&quot; pode ser assimilado. Da mesma forma, os números de telefone suportam apenas caracteres numéricos, mas um namespace de telefone com um valor de identidade &quot;não especificado&quot; pode ser assimilado.
+* **Valores de identidade incorretos ou incorretos**: valores de identidade incorretos ou incorretos se referem a valores de identidade não exclusivos que poderiam mesclar CRMIDs. Por exemplo, embora os IDFAs devam ter 36 caracteres (32 caracteres alfanuméricos e quatro hifens), há cenários em que um IDFA com um valor de identidade de &quot;user_null&quot; pode ser assimilado. Da mesma forma, os números de telefone suportam apenas caracteres numéricos, mas um namespace de telefone com um valor de identidade &quot;não especificado&quot; pode ser assimilado.
 
 Para obter mais informações sobre cenários de caso de uso para regras de vinculação de gráficos de identidade, leia o documento em [exemplos de cenários](./example-scenarios.md).
 
@@ -60,15 +60,15 @@ Considere o seguinte cenário:
 * Scott usa um tablet e abre seu navegador Google Chrome para ir até nike<span>.com, onde ele entra e navega por novos sapatos de basquete.
    * Nos bastidores, esse cenário registra as seguintes identidades:
       * Um namespace e valor de ECID para representar o uso do navegador
-      * Um namespace e valor de ID do CRM para representar o usuário autenticado (Scott entrou com sua combinação de nome de usuário e senha).
+      * Um namespace e valor CRMID para representar o usuário autenticado (Scott entrou com sua combinação de nome de usuário e senha).
 * Seu filho Peter usa o mesmo tablet e também usa o Google Chrome para ir até nike<span>.com, onde ele entra com sua própria conta para procurar equipamentos de futebol.
    * Nos bastidores, esse cenário registra as seguintes identidades:
       * O mesmo namespace e valor de ECID para representar o navegador.
-      * Um novo namespace e valor de ID do CRM para representar o usuário autenticado.
+      * Um novo namespace e valor de CRMID para representar o usuário autenticado.
 
-Se a ID do CRM foi configurada como um namespace exclusivo, o algoritmo de otimização de identidade divide as IDs do CRM em dois gráficos de identidade separados, em vez de mesclá-los.
+Se a CRMID foi configurada como um namespace exclusivo, o algoritmo de otimização de identidade divide as CRMIDs em dois gráficos de identidade separados, em vez de mesclá-los.
 
-Se você não configurar um namespace exclusivo, poderá ter mesclagens de gráficos indesejadas, como duas identidades com o mesmo namespace de ID do CRM, mas valores de identidade diferentes (cenários como esses geralmente representam duas entidades de pessoa diferentes no mesmo gráfico).
+Se você não configurar um namespace exclusivo, poderá obter mesclagens de gráficos indesejadas, como duas identidades com o mesmo namespace CRMID, mas valores de identidade diferentes (cenários como esses geralmente representam duas entidades de pessoa diferentes no mesmo gráfico).
 
 Você deve configurar um namespace exclusivo para informar o algoritmo de otimização de identidade para impor limitações aos dados de identidade que são assimilados em um determinado gráfico de identidade.
 

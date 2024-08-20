@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Visão geral do serviço de identidade
 description: O Serviço de identidade da Adobe Experience Platform ajuda você a obter uma melhor visualização do cliente e do comportamento dele, unindo as identidades em dispositivos e sistemas, permitindo que você forneça experiências digitais pessoais e impactantes em tempo real.
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-source-git-commit: 16e49628df73d5ce97ef890dbc0a6f2c8e7de346
+source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
 workflow-type: tm+mt
-source-wordcount: '1560'
+source-wordcount: '1555'
 ht-degree: 2%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 2%
 
 Para fornecer experiências digitais relevantes, você precisa de uma representação abrangente e precisa das entidades do mundo real que compõem sua base de clientes.
 
-Atualmente, organizações e empresas enfrentam um grande volume de conjuntos de dados diferentes: seus clientes individuais são representados por uma variedade de identificadores diferentes. Seu cliente pode estar vinculado a diferentes navegadores da Web (Safari, Google Chrome), dispositivos de hardware (telefones, laptops) e outros identificadores de pessoa (IDs de CRM, contas de email). Isso cria uma visualização desarticulada do cliente.
+Atualmente, organizações e empresas enfrentam um grande volume de conjuntos de dados diferentes: seus clientes individuais são representados por uma variedade de identificadores diferentes. Seu cliente pode estar vinculado a diferentes navegadores da Web (Safari, Google Chrome), dispositivos de hardware (telefones, notebooks) e outros identificadores de pessoa (CRMIDs, contas de email). Isso cria uma visualização desarticulada do cliente.
 
 Você pode resolver esses desafios com o Adobe Experience Platform Identity Service e seus recursos para:
 
@@ -78,20 +78,20 @@ Um link entre duas identidades é estabelecido quando o namespace de identidade 
 
 Um evento de logon típico **envia duas identidades** para o Experience Platform:
 
-* O identificador de pessoa (como uma ID de CRM) que representa um usuário autenticado.
+* O identificador de pessoa (como uma CRMID) que representa um usuário autenticado.
 * O identificador do navegador (como uma ECID) que representa o navegador da Web.
 
 Considere o exemplo a seguir:
 
-* Você faz logon com sua combinação de nome de usuário e senha em um site de comércio eletrônico usando seu laptop. Esse evento qualifica você como um usuário autenticado, portanto, o Serviço de identidade reconhece sua ID do CRM.
+* Você faz logon com sua combinação de nome de usuário e senha em um site de comércio eletrônico usando seu laptop. Esse evento qualifica você como um usuário autenticado, portanto, o Serviço de identidade reconhece seu CRMID.
 * O uso de um navegador para acessar o site de comércio eletrônico também é reconhecido pelo Serviço de identidade como um evento. Esse evento é representado no Serviço de identidade por meio de uma ECID.
 * Em segundo plano, o Serviço de Identidade processa os dois eventos como: `CRM_ID:ABC, ECID:123`.
-   * ID do CRM: ABC é o namespace e o valor que representam você, como um usuário autenticado.
+   * CRMID: ABC é o namespace e o valor que representam você, como um usuário autenticado.
    * ECID: 123 é o namespace e o valor que representam o uso do navegador da Web em seu laptop.
 * Em seguida, se você fizer logon com as mesmas credenciais no mesmo site de comércio eletrônico, mas usar o navegador da Web no telefone em vez do navegador da Web no laptop, uma nova ECID será registrada no Serviço de identidade.
 * Em segundo plano, o Serviço de identidade processa esse novo evento como `{CRM_ID:ABC, ECID:456}`, em que CRM_ID: ABC representa sua ID de cliente autenticada e ECID:456 representa o navegador da Web em seu dispositivo móvel.
 
-Considerando os cenários acima, o Serviço de Identidade estabelece um vínculo entre `{CRM_ID:ABC, ECID:123}` e `{CRM_ID:ABC, ECID:456}`. Isso resulta em um gráfico de identidade, no qual você &quot;é proprietário&quot; de três identidades: uma para identificador de pessoa (ID de CRM) e duas para identificadores de cookie (ECIDs).
+Considerando os cenários acima, o Serviço de Identidade estabelece um vínculo entre `{CRM_ID:ABC, ECID:123}` e `{CRM_ID:ABC, ECID:456}`. Isso resulta em um gráfico de identidade em que você &quot;é proprietário&quot; de três identidades: uma para identificador de pessoa (CRMID) e duas para identificadores de cookie (ECIDs).
 
 Para obter mais informações, leia o manual no [como o Serviço de Identidade vincula as identidades](./features/identity-linking-logic.md).
 

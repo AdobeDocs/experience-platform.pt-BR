@@ -2,9 +2,9 @@
 title: Visão geral do namespace de identidade
 description: Saiba mais sobre namespaces de identidade no Serviço de identidade.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: 59ac3d8b7fee0327396c990ef309ca3a4f292a77
+source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
 workflow-type: tm+mt
-source-wordcount: '1862'
+source-wordcount: '1858'
 ht-degree: 16%
 
 ---
@@ -35,7 +35,7 @@ Os namespaces de identidade exigem uma compreensão de vários serviços da Adob
 >abstract="Um valor de identidade é um identificador que representa uma pessoa, uma organização ou um ativo exclusivo. O contexto ou tipo de identidade que o valor representa é definido por um namespace de identidade correspondente. Ao corresponder dados de registro em fragmentos de perfil, o namespace e o valor de identidade devem coincidir. Ao corresponder dados de registro em fragmentos de perfil, o namespace e o valor da identidade devem coincidir."
 >text="Learn more in documentation"
 
-Uma identidade totalmente qualificada inclui dois componentes: um **valor de identidade** e um **namespace de identidade**. Por exemplo, se o valor de uma identidade for `scott@acme.com`, então um namespace fornecerá contexto para esse valor, diferenciando-o como um endereço de email. Da mesma forma, um namespace pode distinguir `555-123-456` como um número de telefone e `3126ABC` como uma ID de CRM. Essencialmente, **um namespace fornece contexto a uma determinada identidade**. Ao corresponder dados de registro entre fragmentos de perfil, como quando [!DNL Real-Time Customer Profile] mescla dados de perfil, o valor de identidade e o namespace devem corresponder.
+Uma identidade totalmente qualificada inclui dois componentes: um **valor de identidade** e um **namespace de identidade**. Por exemplo, se o valor de uma identidade for `scott@acme.com`, então um namespace fornecerá contexto para esse valor, diferenciando-o como um endereço de email. Da mesma forma, um namespace pode distinguir `555-123-456` como um número de telefone e `3126ABC` como um CRMID. Essencialmente, **um namespace fornece contexto a uma determinada identidade**. Ao corresponder dados de registro entre fragmentos de perfil, como quando [!DNL Real-Time Customer Profile] mescla dados de perfil, o valor de identidade e o namespace devem corresponder.
 
 Por exemplo, dois fragmentos de perfil podem conter IDs primárias diferentes, mas compartilham o mesmo valor para o namespace &quot;Email&quot;. Portanto, o Experience Platform pode ver que esses fragmentos são realmente o mesmo indivíduo e reúne os dados no gráfico de identidade do indivíduo.
 
@@ -47,8 +47,8 @@ Outra maneira de entender melhor o conceito de namespace é considerar exemplos 
 
 Aplicar a mesma lógica ao Serviço de identidade:
 
-* Acesso rápido, o valor de identidade de: `1-234-567-8900` pode parecer um número de telefone. No entanto, de uma perspectiva do sistema, esse valor poderia ter sido configurado como uma ID do CRM. O Serviço de identidade não teria como aplicar o contexto necessário a esse valor de identidade sem um namespace correspondente.
-* Outro exemplo é o valor de identidade de: `john@gmail.com`. Embora possa ser facilmente considerado que esse valor de identidade é um email, é totalmente possível que ele esteja configurado como uma ID de CRM de namespace personalizada. Com o namespace, você pode distinguir `Email:john@gmail.com` de `CRM ID:john@gmail.com`.
+* Acesso rápido, o valor de identidade de: `1-234-567-8900` pode parecer um número de telefone. No entanto, de uma perspectiva do sistema, esse valor poderia ter sido configurado como uma CRMID. O Serviço de identidade não teria como aplicar o contexto necessário a esse valor de identidade sem um namespace correspondente.
+* Outro exemplo é o valor de identidade de: `john@gmail.com`. Embora seja possível presumir facilmente que esse valor de identidade seja um email, é totalmente possível que ele esteja configurado como um CRMID de namespace personalizado. Com o namespace, você pode distinguir `Email:john@gmail.com` de `CRMID:john@gmail.com`.
 
 >[!ENDSHADEBOX]
 
@@ -81,7 +81,7 @@ Os seguintes tipos de identidade estão disponíveis no Experience Platform:
 | Tipo de identidade | Descrição |
 | --- | --- |
 | ID do cookie | As IDs de cookie identificam os navegadores da Web. Essas identidades são essenciais para a expansão e constituem a maioria do gráfico de identidade. No entanto, por natureza, eles decaem rapidamente e perdem seu valor ao longo do tempo. |
-| ID entre dispositivos | As IDs entre dispositivos identificam um indivíduo e geralmente vinculam outras IDs. Os exemplos incluem uma ID de logon, uma ID de CRM e uma ID de fidelidade. Esta é uma indicação para [!DNL Identity Service] manipular o valor de forma sensível. |
+| ID entre dispositivos | As IDs entre dispositivos identificam um indivíduo e geralmente vinculam outras IDs. Os exemplos incluem uma ID de logon, CRMID e ID de fidelidade. Esta é uma indicação para [!DNL Identity Service] manipular o valor de forma sensível. |
 | ID do dispositivo | As IDs de dispositivo identificam dispositivos de hardware, como IDFA (iPhone e iPad), GAID (Android) e RIDA (Roku), e podem ser compartilhadas por várias pessoas do domicílio. |
 | Endereço de email | Os endereços de email são frequentemente associados a uma única pessoa e, portanto, podem ser usados para identificá-la em diferentes canais. Identidades desse tipo incluem informações de identificação pessoal (PII). Esta é uma indicação para [!DNL Identity Service] manipular o valor de forma sensível. |
 | Identificador não pessoal | IDs que não sejam de pessoas são usadas para armazenar identificadores que exigem namespaces, mas não estão conectados a um conjunto de pessoas. Por exemplo, um SKU de produto, dados relacionados a produtos, organizações ou lojas. |

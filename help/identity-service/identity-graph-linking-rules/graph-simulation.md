@@ -3,9 +3,9 @@ title: Guia da interface de simulação de gráfico
 description: Saiba como usar a Simulação de gráfico na interface do usuário do serviço de identidade.
 badge: Beta
 exl-id: 89f0cf6e-c43f-40ec-859a-f3b73a6da8c8
-source-git-commit: 7daa9191f2e095f01c7c09f02f87aa8724e2e325
+source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
 workflow-type: tm+mt
-source-wordcount: '1436'
+source-wordcount: '1435'
 ht-degree: 1%
 
 ---
@@ -142,7 +142,7 @@ Uma linha de configuração vazia é exibida. Primeiro, insira o mesmo namespace
 
 Em seguida, repita as mesmas etapas e adicione seu segundo namespace, que neste caso é a ECID. Depois que todos os namespaces forem inseridos, você poderá começar a configurar suas prioridades e exclusividade.
 
-* **Prioridade de namespace**: a prioridade de um namespace determina sua importância relativa em comparação com os outros namespaces em um determinado gráfico de identidade. Por exemplo, se o seu gráfico de identidade tiver quatro namespaces diferentes: CRM ID, ECID, Email e Apple IDFA, você poderá configurar prioridades para determinar uma ordem de importância para os quatro namespaces.
+* **Prioridade de namespace**: a prioridade de um namespace determina sua importância relativa em comparação com os outros namespaces em um determinado gráfico de identidade. Por exemplo, se o seu gráfico de identidade tiver quatro namespaces diferentes: CRMID, ECID, Email e Apple IDFA, você poderá configurar prioridades para determinar uma ordem de importância para os quatro namespaces.
 * **Namespace exclusivo**: se um namespace for designado como exclusivo, o Serviço de Identidade gerará gráficos com o aviso de que apenas uma identidade com determinado namespace exclusivo pode existir. Por exemplo, se o namespace de email for designado como um namespace exclusivo, um gráfico só poderá ter uma identidade com Email. Se houver mais de uma identidade com o namespace de email, o link mais antigo será removido.
 
 Para configurar a prioridade do namespace, selecione e arraste as linhas do namespace até a ordem de prioridade desejada, com a linha superior representando a prioridade mais alta e a linha inferior representando a prioridade mais baixa. Para designar um namespace como exclusivo, marque a caixa de seleção **[!UICONTROL Exclusivo por gráfico]**.

@@ -3,9 +3,9 @@ title: Prioridade de namespace
 description: Saiba mais sobre a prioridade de namespace no Serviço de identidade.
 badge: Beta
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: c9610f935a074adf82d96c1eb824c159b18f2837
+source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
 workflow-type: tm+mt
-source-wordcount: '1639'
+source-wordcount: '1626'
 ht-degree: 2%
 
 ---
@@ -18,8 +18,8 @@ ht-degree: 2%
 
 Cada implementação de cliente é exclusiva e personalizada para atender às metas de uma organização específica e, como tal, a importância de um determinado namespace varia de acordo com o cliente. Exemplos reais incluem:
 
-* Por um lado, você pode considerar que o namespace de email representa uma entidade de pessoa e, portanto, é exclusivo por pessoa. Por outro lado, outro cliente pode considerar o namespace de email como um identificador não confiável e, portanto, pode permitir que uma única ID do CRM seja associada a várias identidades com o namespace de email.
-* Você pode coletar o comportamento online usando um namespace de &quot;ID de logon&quot;. Essa ID de logon pode ter uma relação 1:1 com a ID do CRM, que armazena atributos de um sistema CRM e pode ser considerada o namespace mais importante. Nesse caso, você está determinando que o namespace da ID do CRM é uma representação mais precisa de uma pessoa, enquanto o namespace da ID de logon é o segundo mais importante.
+* Por um lado, você pode considerar que o namespace de email representa uma entidade de pessoa e, portanto, é exclusivo por pessoa. Por outro lado, outro cliente pode considerar o namespace de email como um identificador não confiável e, portanto, pode permitir que um único CRMID seja associado a várias identidades com o namespace de email.
+* Você pode coletar o comportamento online usando um namespace de &quot;ID de logon&quot;. Essa ID de logon pode ter uma relação 1:1 com a CRMID, que armazena atributos de um sistema CRM e pode ser considerada o namespace mais importante. Nesse caso, você está determinando que o namespace CRMID é uma representação mais precisa de uma pessoa, enquanto o namespace da ID de logon é o segundo mais importante.
 
 Você deve fazer configurações no Serviço de identidade que reflitam a importância dos namespaces, pois isso influencia como os perfis são formados e segmentados.
 
@@ -49,7 +49,7 @@ Uma identidade representa um objeto real. Há três objetos que são representad
 
 Os namespaces de pessoa são relativamente imutáveis em comparação a dispositivos de hardware (como IDFA, GAID), que são relativamente imutáveis em comparação a navegadores da Web. Basicamente, você (pessoa) sempre será uma única entidade, que pode ter vários dispositivos de hardware (telefone, laptop, tablet etc.) e usar vários navegadores (Google Chrome, Safari, FireFox etc.)
 
-Outra maneira de abordar este tópico é através da cardinalidade. Para uma determinada entidade de pessoa, quantas identidades serão criadas? Na maioria dos casos, uma pessoa terá uma ID de CRM, alguns identificadores de dispositivo de hardware (redefinições de IDFA/GAID não devem ocorrer com frequência) e ainda mais cookies (um indivíduo pode navegar em vários dispositivos, usar o modo incógnito ou redefinir cookies a qualquer momento). Geralmente, **a cardinalidade mais baixa indica um namespace com um valor maior**.
+Outra maneira de abordar este tópico é através da cardinalidade. Para uma determinada entidade de pessoa, quantas identidades serão criadas? Na maioria dos casos, uma pessoa terá uma CRMID, alguns identificadores de dispositivo de hardware (redefinições de IDFA/GAID não devem ocorrer com frequência) e ainda mais cookies (um indivíduo pode navegar em vários dispositivos, usar o modo incógnito ou redefinir cookies a qualquer momento). Geralmente, **a cardinalidade mais baixa indica um namespace com um valor maior**.
 
 ## Validar as configurações de prioridade do namespace
 
@@ -112,9 +112,9 @@ Dadas as configurações descritas acima, as ações do usuário e a determinaç
 | --- | --- | --- | --- | --- |
 | Exibir página de oferta de cartão de crédito | Não autenticado (anônimo) | Web SDK | {ECID} | ECID |
 | Exibir página de ajuda | Não autenticado | SDK móvel | {ECID, IDFA} | IDFA |
-| Exibir saldo de conta corrente | Autenticado | Web SDK | {CRM ID, ECID} | ID do CRM |
-| Inscrever-se para obter empréstimo residencial | Autenticado | Conector de origem do Analytics | {ID de CRM, ECID, AAID} | ID do CRM |
-| Transferência de US$ 1.000 da verificação para a economia | Autenticado | SDK móvel | {ID DE CRM, GAID, ECID} | ID do CRM |
+| Exibir saldo de conta corrente | Autenticado | Web SDK | {CRMID, ECID} | CRMID |
+| Inscrever-se para obter empréstimo residencial | Autenticado | Conector de origem do Analytics | {CRMID, ECID, AAID} | CRMID |
+| Transferência de US$ 1.000 da verificação para a economia | Autenticado | SDK móvel | {CRMID, GAID, ECID} | CRMID |
 
 {style="table-layout:auto"}
 
@@ -148,7 +148,7 @@ Para obter mais informações, leia a [visão geral avançada do gerenciamento d
 
 ### Atributos computados
 
-Os atributos computados não usam a prioridade de namespace para calcular valores. Se estiver usando atributos calculados, você deve garantir que a ID do CRM seja designada como sua identidade primária para o WebSDK. Essa limitação deve ser resolvida em agosto de 2024.
+Os atributos computados não usam a prioridade de namespace para calcular valores. Se estiver usando atributos calculados, você deve garantir que a CRMID seja designada como sua identidade primária para o WebSDK. Essa limitação deve ser resolvida em agosto de 2024.
 
 Para obter mais informações, leia o [guia da interface do usuário de atributos computados](../../profile/computed-attributes/ui.md).
 
@@ -168,8 +168,8 @@ Para obter mais informações sobre esquemas XDM, leia a [visão geral dos esque
 
 Ao selecionar seus dados, você precisará especificar um namespace, que será usado para determinar os eventos que calculam pontuações e os eventos que armazenam as pontuações calculadas. É recomendável selecionar o namespace que representa uma pessoa.
 
-* Se estiver coletando dados de comportamento da Web usando o WebSDk, é recomendável escolher o namespace da ID do CRM no mapa de identidade.
-* Se você estiver coletando dados de comportamento da Web usando o conector de origem do Analytics, selecione o descritor de identidade (ID do CRM).
+* Se você estiver coletando dados de comportamento da Web usando o WebSDk, é recomendável escolher o namespace CRMID no mapa de identidade.
+* Se você estiver coletando dados de comportamento da Web usando o conector de origem do Analytics, selecione o descritor de identidade (CRMID).
 
 Esta configuração resulta no cálculo de pontuações somente usando eventos autenticados.
 

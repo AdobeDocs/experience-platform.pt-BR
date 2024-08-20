@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guia de solução de problemas do sistema XDM
 description: Encontre respostas para perguntas frequentes sobre o Experience Data Model (XDM), incluindo etapas para resolver erros comuns de API.
 exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
-source-git-commit: 83d3d31b2d24fd01876ff7b0f1c03a5670ed3845
+source-git-commit: ae98a185fdfad5b6ba787e78ad17296928216d08
 workflow-type: tm+mt
-source-wordcount: '2446'
+source-wordcount: '2390'
 ht-degree: 0%
 
 ---
@@ -49,7 +49,7 @@ Um tipo de campo longo é um inteiro com um tamanho máximo de 53(+1) bits, dand
 
 Para obter mais informações sobre tipos de campos, consulte o documento sobre [Restrições de tipo de campo XDM](./schema/field-constraints.md).
 
-### O que é meta:AltId e como posso recuperá-lo?
+### O que é meta:AltId?
 
 `meta:altId` é um identificador exclusivo para um esquema. O `meta:altId` fornece uma ID de referência fácil para uso em chamadas de API. Essa ID evita a necessidade de ser codificada/decodificada sempre que for usada como com o formato JSON URI.
 <!-- (Needs clarification - How do I retrieve it INCOMPLETE) ... -->
@@ -58,13 +58,6 @@ Para obter mais informações sobre tipos de campos, consulte o documento sobre 
 
 <!-- No Answer available.  -->
 <!-- INCOMPLETE ... -->
-
-### Posso obter uma representação JSON de amostra para criar um tipo de dados?
-
-Você pode usar a API do registro de esquema e a interface do usuário da plataforma para criar um tipo de dados. Consulte a documentação para obter instruções sobre como:
-
-- [Criar um tipo de dados usando a API](./api/data-types.md#create)
-- [Criar um tipo de dados usando a interface](./ui/resources/data-types.md#create)
 
 ### Quais são as restrições de uso para um tipo de dados de mapa?
 

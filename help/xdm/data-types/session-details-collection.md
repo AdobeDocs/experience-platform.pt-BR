@@ -2,10 +2,10 @@
 title: Tipo de Dados da Coleção de Detalhes da Sessão
 description: Saiba mais sobre o tipo de dados Modelo de dados de experiência (XDM) da Coleção de detalhes da sessão.
 exl-id: ffe6bcf7-61e1-4f7a-ba95-7fcb78683cc9
-source-git-commit: 799a384556b43bc844782d8b67416c7eea77fbf0
+source-git-commit: 9350cfc299c20bd63a2a559c177b3af02739e5b9
 workflow-type: tm+mt
-source-wordcount: '926'
-ht-degree: 15%
+source-wordcount: '857'
+ht-degree: 16%
 
 ---
 
@@ -31,9 +31,8 @@ A Coleção [!UICONTROL Detalhes da sessão] é um tipo de dados padrão do Expe
 | [[!UICONTROL Tipo de Conteúdo de Difusão]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#content-type) | `contentType` | String | Sim | O [!UICONTROL Tipo de Conteúdo de Difusão] da entrega de fluxo. Os valores disponíveis por [!UICONTROL Tipo de Fluxo] incluem:<br>Áudio: &quot;song&quot;, &quot;podcast&quot;, &quot;audiobook&quot; e &quot;radio&quot;;<br>Vídeo: &quot;VoD&quot;, &quot;Live&quot;, &quot;Linear&quot;, &quot;UGC&quot; e &quot;DVoD&quot;.<br>Os clientes podem fornecer valores personalizados para este parâmetro. |
 | [[!UICONTROL Rede de Difusão]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#network) | `network` | String | Não | O nome da rede/canal. |
 | [[!UICONTROL Canal de conteúdo]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#content-channel) | `channel` | String | Sim | O [!UICONTROL Canal de Conteúdo] é o canal de distribuição de onde o conteúdo foi reproduzido. |
-| [[!UICONTROL Conclusões de conteúdo]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#content-complete) | `isCompleted` | Booleano | Não | [!UICONTROL Conclusões de conteúdo] indica se um ativo de mídia cronometrado foi observado até a conclusão. Esse evento não significa necessariamente que o espectador assistiu ao vídeo inteiro; o espectador poderia ter pulado para frente. |
 | [!UICONTROL Rede de Entrega de Conteúdo] | `cdn` | String | Não | A [!UICONTROL Rede de Entrega de Conteúdo] do conteúdo reproduzido. |
-| [[!UICONTROL ID de conteúdo]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#content-id) | `name` | sequência de caracteres | Sim | A [!UICONTROL ID de Conteúdo] é um identificador exclusivo do conteúdo. Ela pode ser usada para vincular a outro setor ou IDs de CMS. |
+| [[!UICONTROL ID de conteúdo]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#content-id) | `name` | sequência de caracteres | Sim | A [!UICONTROL ID de Conteúdo] é um identificador exclusivo do conteúdo. Ela pode ser usada para vincular a outro setor ou IDs do CMS. |
 | [[!UICONTROL Nome do conteúdo]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#content-name-(variable)) | `friendlyName` | String | Não | O [!UICONTROL Nome do Conteúdo] é o nome &quot;amigável&quot; (legível) do conteúdo. |
 | [[!UICONTROL Nome do reprodutor de conteúdo]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#content-player-name) | `playerName` | String | Sim | O nome do reprodutor de conteúdo. |
 | [[!UICONTROL Nome do criador]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#originator) | `originator` | String | Não | O nome do criador do conteúdo. |
@@ -45,7 +44,6 @@ A Coleção [!UICONTROL Detalhes da sessão] é um tipo de dados padrão do Expe
 | [[!UICONTROL Gênero]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#genre) | `genre` | String | Não | O tipo ou agrupamento de conteúdo conforme definido pelo produtor do conteúdo. Os valores devem ser delimitados por vírgulas na implementação da variável. |
 | [[!UICONTROL Mídia Autorizada]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#authorized) | `authorized` | String | Não | Confirma se o usuário foi autorizado por meio da autenticação Adobe. |
 | [[!UICONTROL Duração do Conteúdo de Mídia]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#content-length-(variable)) | `length` | Número inteiro | Sim | O [!UICONTROL Comprimento do Conteúdo de Mídia] contém o comprimento/tempo de execução do clipe. Esse é o comprimento máximo (ou duração) do conteúdo que está sendo consumido (em segundos). |
-| [[!UICONTROL Inícios da mídia]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#media-starts) | `isViewed` | Booleano | Não | O evento de carregamento da mídia. Isso ocorre quando o visualizador seleciona o botão Reproduzir. Isso conta mesmo se houver anúncios antes da exibição, buffering, erros, etc. |
 | [[!UICONTROL Identificador MVPD]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#mvpd) | `mvpd` | String | Não | O identificador do Distribuidor de programação de vídeo multicanal (MVPD) fornecido pela autenticação de Adobe. |
 | [[!UICONTROL Publicador]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#publisher) | `publisher` | String | Não | O nome do publicador do conteúdo de áudio. |
 | [[!UICONTROL Estação de rádio]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#station) | `station` | String | Não | O nome da estação de rádio na qual o áudio é reproduzido. |
@@ -60,10 +58,3 @@ A Coleção [!UICONTROL Detalhes da sessão] é um tipo de dados padrão do Expe
 | [[!UICONTROL Versão]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#sdk-version) | `appVersion` | String | Não | A versão do SDK usada pelo reprodutor. Isso pode ter qualquer valor personalizado que faça sentido para o reprodutor. |
 
 {style="table-layout:auto"}
-
-<!-- This is required for sessionStart. 
-Q) How do I indicate that?
-Q) Do you know where to link for:
-Ad Load Type
-Content Delivery Network
- -->

@@ -2,7 +2,7 @@
 title: Tipo de dados da coleção de detalhes do Advertising
 description: Saiba mais sobre o tipo de dados Advertising Details Collection Experience Data Model (XDM).
 exl-id: 3f6bf1f9-c728-46af-804a-cb41eb29951b
-source-git-commit: 799a384556b43bc844782d8b67416c7eea77fbf0
+source-git-commit: 9350cfc299c20bd63a2a559c177b3af02739e5b9
 workflow-type: tm+mt
 source-wordcount: '338'
 ht-degree: 14%
@@ -22,7 +22,7 @@ A Coleção [!UICONTROL Detalhes do Advertising] é um tipo de dados padrão do 
 >Cada nome de exibição contém um link para informações adicionais sobre os parâmetros de áudio e vídeo. As páginas vinculadas contêm detalhes sobre os dados de anúncios de vídeo coletados pelo Adobe, valores de implementação, parâmetros de rede, relatórios e considerações importantes.
 
 | Nome de exibição | Propriedade | Tipo de dados | Obrigatório | Descrição |
-|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|-----------|----------------------------------------------------------------------------------------------------------------------------------|
+|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|-----------|----------|-----------------------------------------------------------------------------------------------------------------------|
 | [[!UICONTROL Anunciante de anúncio]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html#advertiser) | `advertiser` | sequência de caracteres | Não | A empresa ou marca cujo produto é apresentado no anúncio. |
 | [[!UICONTROL Campanha publicitária]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html#campaign-id) | `campaignID` | sequência de caracteres | Não | A ID da campanha publicitária. |
 | [[!UICONTROL Ad Creative ID]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html#creative-id) | `creativeID` | sequência de caracteres | Não | A ID do criativo do anúncio. |
@@ -33,3 +33,5 @@ A Coleção [!UICONTROL Detalhes do Advertising] é um tipo de dados padrão do 
 | [[!UICONTROL ID de posicionamento do anúncio]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html#placement-id) | `placementID` | sequência de caracteres | Não | A ID de posicionamento do anúncio. |
 | [[!UICONTROL Nome do player do anúncio]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html#ad-player-name) | `playerName` | sequência de caracteres | Sim | O nome do player responsável por renderizar o anúncio. |
 | [[!UICONTROL ID do Site de Anúncios]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html#site-id) | `siteID` | sequência de caracteres | Não | A ID do site do anúncio. |
+
+{style="table-layout:auto"}

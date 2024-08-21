@@ -1,14 +1,19 @@
 ---
 title: Criação de Esquema Assistida por Aprendizado de Máquina
 description: Saiba como criar esquemas na interface do usuário do Experience Platform.
-source-git-commit: 15de9351203f6b43653042ab73ede17781486160
+badgeBeta: label="Beta" type="Informative"
+source-git-commit: f1db409a2af34ac66c81d7e5a11ee1bc8e5f4c9c
 workflow-type: tm+mt
-source-wordcount: '978'
-ht-degree: 1%
+source-wordcount: '996'
+ht-degree: 2%
 
 ---
 
 # Criação de esquema assistido por aprendizado de máquina
+
+>[!AVAILABILITY]
+>
+>* A criação de esquema assistido por aprendizado de máquina está atualmente na versão beta. A documentação e a funcionalidade estão sujeitas a alterações.
 
 Use algoritmos de ML para gerar um esquema a partir de dados de amostra. Esse processo economiza tempo e aumenta a precisão ao definir a estrutura, os campos e os tipos de dados para grandes conjuntos de dados complexos.
 

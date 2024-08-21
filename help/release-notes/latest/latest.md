@@ -1,7 +1,7 @@
 ---
 title: Notas de versão da Adobe Experience Platform de agosto de 2024
 description: As notas de versão de agosto de 2024 para Adobe Experience Platform.
-source-git-commit: 67152524c9448ad1c6cd1f25437e5ed69900ef84
+source-git-commit: d01e16938485f6648cc02ce1674e0e9e84d78147
 workflow-type: tm+mt
 source-wordcount: '1300'
 ht-degree: 21%
@@ -69,11 +69,9 @@ O XDM é uma especificação de código aberto que fornece estruturas e definiç
 
 | Recurso | Descrição |
 | --- | --- |
-| Fluxo de criação de esquema assistido por ML | Use algoritmos avançados de aprendizado de máquina do para analisar arquivos de dados CSV de amostra e criar automaticamente esquemas otimizados usando campos padrão e personalizados.<br>Principais Recursos:<br><ul><li>Criação de esquema mais rápida: gere esquemas diretamente de arquivos de dados de amostra usando campos XDM recomendados e gerados pelo ML.</li><li>Evolução flexível do esquema: adicione ou atualize facilmente campos no esquema gerado.</li><li>Integração contínua: totalmente integrado ao fluxo de criação do esquema principal no URL do esquema, garantindo uma experiência do usuário perfeita e coesa.</li><li>Revisão e edição eficientes: visualize e atualize rapidamente seu esquema usando o editor de Exibição plana, tornando o processo de criação mais eficiente e fácil de usar.</li></ul> |
+| Fluxo de criação de esquema assistido por ML | Use algoritmos avançados de aprendizado de máquina do para analisar seus arquivos de dados de amostra e criar automaticamente esquemas otimizados usando campos padrão e personalizados.<br>Principais Recursos:<br><ul><li>Criação de esquema mais rápida: gere esquemas diretamente de arquivos de dados de amostra usando campos XDM recomendados e gerados pelo ML.</li><li>Evolução flexível do esquema: adicione ou atualize facilmente campos no esquema gerado.</li><li>Integração contínua: totalmente integrado ao fluxo de criação do esquema principal no URL do esquema, garantindo uma experiência do usuário perfeita e coesa.</li><li>Revisão e edição eficientes: visualize e atualize rapidamente seu esquema usando o editor de Exibição plana, tornando o processo de criação mais eficiente e fácil de usar.</li></ul><br>Para saber mais, leia o [Guia de fluxo de trabalho de criação de esquema assistido por ML](../../xdm/ui/ml-assisted-schema-creation.md). |
 
 {style="table-layout:auto"}
-
-Para saber mais, leia a [Visão geral da criação de esquema assistido por ML](../../xdm/ui/ml-assisted-schema-creation.md)
 
 Para obter mais informações sobre o XDM na Platform, consulte a [Visão geral do sistema de XDM](../../xdm/home.md).
 

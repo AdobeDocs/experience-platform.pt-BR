@@ -1,10 +1,10 @@
 ---
 title: Notas de versão da Adobe Experience Platform de agosto de 2024
 description: As notas de versão de agosto de 2024 para Adobe Experience Platform.
-source-git-commit: a44b7d5351168094041438c357dc47328975f70d
+source-git-commit: ab26566cb7f2586d709147686180625db4e920ec
 workflow-type: tm+mt
-source-wordcount: '1086'
-ht-degree: 24%
+source-wordcount: '1300'
+ht-degree: 21%
 
 ---
 
@@ -18,11 +18,28 @@ ht-degree: 24%
 
 Atualizações dos recursos e da documentação existentes no Experience Platform:
 
+- [Controle de acesso baseado em atributos](#abac)
 - [Destinos](#destinations)
 - [Experience Data Model (XDM)](#xdm)
 - [Serviço de identidade](#identity-service)
 - [Serviço de segmentação](#segmentation)
 - [Origens](#sources)
+
+## Controle de acesso baseado em atributos {#abac}
+
+O controle de acesso baseado em atributos é um recurso do Adobe Experience Platform que oferece às marcas preocupadas com a privacidade maior flexibilidade para gerenciar o acesso do usuário. Objetos individuais, como campos de esquema e segmentos, podem ser atribuídos a funções de usuário. Esse recurso permite conceder ou revogar o acesso a objetos individuais para usuários específicos da Platform em sua organização.
+
+Por meio do controle de acesso baseado em atributos, os administradores da sua organização podem controlar o acesso dos usuários a dados pessoais confidenciais (SPD), informações de identificação pessoal (PII) e outros tipos personalizados de dados em todos os fluxos de trabalho e recursos da plataforma. Os administradores podem definir funções de usuário que tenham acesso somente a campos e dados específicos que correspondam a esses campos.
+
+**Novo recurso**
+
+| Atualização de recursos | Descrição |
+| --- | --- |
+| Novo recurso do Gerenciador de permissões | Agora você pode utilizar o [Gerenciador de Permissões](../../access-control/abac/permission-manager/overview.md) para gerar relatórios usando consultas simples, o que o ajudará a entender o gerenciamento de acesso e economizar tempo verificando permissões de acesso em vários fluxos de trabalho e níveis de granularidade. Para obter mais informações sobre como criar relatórios para usuários e funções, consulte o [guia do usuário do Gerenciador de Permissões](../../access-control/abac/permission-manager/permissions.md). ![Interface de usuário do Experience Platform de imagem que destaca o Gerenciador de Permissões na navegação à esquerda.](assets/august/permission-manager-rn.png "Gerenciador de permissões na interface do usuário."){width="250" align="center" zoomable="yes"} |
+
+{style="table-layout:auto"}
+
+Para obter mais informações sobre o controle de acesso baseado em atributos, consulte a [visão geral do controle de acesso baseado em atributos](../../access-control/abac/overview.md). Para obter um guia abrangente sobre o fluxo de trabalho do controle de acesso baseado em atributos, leia o [guia completo do controle de acesso baseado em atributos](../../access-control/abac/end-to-end-guide.md).
 
 ## Destinos {#destinations}
 

@@ -3,9 +3,9 @@ title: Ativar públicos para destinos de exportação de perfil em lote
 type: Tutorial
 description: Saiba como ativar os públicos-alvo no Adobe Experience Platform enviando-os para destinos com base em perfil de lote.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: d7a530c5ec2cad37b93273f5843609110d61cbfc
+source-git-commit: 85b69af6fd21cfa9712e9c57593cbf00a62837c8
 workflow-type: tm+mt
-source-wordcount: '4077'
+source-wordcount: '4202'
 ht-degree: 13%
 
 ---
@@ -110,6 +110,10 @@ O Experience Platform define automaticamente um agendamento padrão para cada ex
 
 ![Controle de edição de agendamento realçado na etapa Agendamento.](../assets/ui/activate-batch-profile-destinations/edit-default-schedule.png)
 
+Para editar vários agendamentos ao mesmo tempo, marque os públicos usando as caixas de seleção no lado esquerdo da tela e selecione **[!UICONTROL Editar agendamento]**. O agendamento configurado será aplicado a todos os arquivos exportados para os públicos selecionados.
+
+![Imagem da interface do usuário do Experience Platform mostrando a opção de agendamento de edição para vários públicos selecionados.](../assets/ui/activate-batch-profile-destinations/edit-schedule.png)
+
 >[!TIP]
 >
 >Você pode editar os agendamentos de ativação de público para os fluxos de ativação existentes na página **[!UICONTROL Dados de ativação]**. Consulte a documentação em [agendamentos de ativação de edição em massa](../ui/destination-details-page.md#bulk-edit-schedule) para obter detalhes.
@@ -200,7 +204,7 @@ Selecione **[!UICONTROL Exportar arquivos incrementais]** para acionar uma expor
 
 4. Selecione **[!UICONTROL Criar]** para salvar o agendamento.
 
-### Configurar nomes de arquivo
+### Configurar nomes de arquivo {#configure-file-names}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_filename"
@@ -234,6 +238,10 @@ O nome de destino e a ID de público-alvo não podem ser removidos dos nomes de 
 | **[!UICONTROL Nome da sandbox]** | A ID da sandbox usada para exportar o público-alvo. |
 
 {style="table-layout:auto"}
+
+Para editar vários nomes de arquivo ao mesmo tempo, marque os públicos-alvo usando as caixas de seleção no lado esquerdo da tela e selecione **[!UICONTROL Editar nome do arquivo]**. As opções de nome de arquivo configuradas serão aplicadas a todos os arquivos exportados para os públicos selecionados.
+
+![Imagem da interface do usuário do Experience Platform mostrando a opção de edição de nome de arquivo para vários públicos selecionados.](../assets/ui/activate-batch-profile-destinations/edit-file-name.png)
 
 Selecione **[!UICONTROL Aplicar alterações]** para confirmar a seleção.
 

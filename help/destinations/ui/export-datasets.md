@@ -3,9 +3,9 @@ title: Exportar conjuntos de dados para destinos de armazenamento na nuvem
 type: Tutorial
 description: Saiba como exportar conjuntos de dados do Adobe Experience Platform para o local de armazenamento em nuvem de sua preferência.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 938e4875318f07b296fc884487ca1c664be659ef
+source-git-commit: 85b69af6fd21cfa9712e9c57593cbf00a62837c8
 workflow-type: tm+mt
-source-wordcount: '1836'
+source-wordcount: '1814'
 ht-degree: 4%
 
 ---
@@ -211,10 +211,7 @@ Para remover conjuntos de dados de um fluxo de dados existente, siga as etapas a
 
    ![A opção de navegação dos conjuntos de dados disponíveis foi realçada na coluna de dados de Ativação.](../assets/ui/export-datasets/go-to-datasets-data.png)
 
-3. [!BADGE Beta] A página **[!UICONTROL Dados de ativação]** do destino é exibida. Use as caixas de seleção no lado esquerdo da lista de conjuntos de dados para selecionar os conjuntos de dados que você deseja remover e selecione **[!UICONTROL Remover conjuntos de dados]** no painel direito para acionar a caixa de diálogo de confirmação de remoção do conjunto de dados.
-
-   >[!NOTE]
-   >Esse recurso está na versão beta e só está disponível para clientes selecionados. Para solicitar acesso a esse recurso, entre em contato com o representante da Adobe.
+3. A página **[!UICONTROL Dados de ativação]** do destino é exibida. Use as caixas de seleção no lado esquerdo da lista de conjuntos de dados para selecionar os conjuntos de dados que você deseja remover e selecione **[!UICONTROL Remover conjuntos de dados]** no painel direito para acionar a caixa de diálogo de confirmação de remoção do conjunto de dados.
 
    ![Caixa de diálogo Remover conjunto de dados mostrando o controle Remover conjunto de dados no painel direito.](../assets/ui/export-datasets/bulk-remove-datasets.png)
 

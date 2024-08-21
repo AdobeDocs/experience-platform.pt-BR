@@ -3,9 +3,9 @@ keywords: destinos;destino;página detalhes de destinos;página detalhes de dest
 title: Exibir detalhes do destino
 description: A página de detalhes de um destino individual fornece uma visão geral dos detalhes do destino. Os detalhes do destino incluem o nome do destino, a ID, os públicos mapeados para o destino e os controles para editar a ativação e habilitar e desabilitar o fluxo de dados.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 9ebdf6e675ddfe03f43b56ed10f625a7d000a662
 workflow-type: tm+mt
-source-wordcount: '1189'
+source-wordcount: '1310'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Siga as etapas abaixo para exibir mais detalhes sobre um destino existente. Voc�
 
    ![Procurar destinos](../assets/ui/details-page/browse-destinations.png)
 
-2. Selecione o ícone de filtro ![Ícone de filtro](/help/images/icons/filter.png) na parte superior esquerda para iniciar o painel de classificação. O painel de classificação fornece uma lista de todos os seus destinos. Você pode selecionar mais de um destino na lista para ver uma seleção filtrada de fluxos de dados associados ao destino selecionado.
+2. Selecione o ícone de filtro ![Ícone de filtro](../../images/icons/filter.png) na parte superior esquerda para iniciar o painel de classificação. O painel de classificação fornece uma lista de todos os seus destinos. Você pode selecionar mais de um destino na lista para ver uma seleção filtrada de fluxos de dados associados ao destino selecionado.
 
    ![Filtrar destinos](../assets/ui/details-page/filter-destinations.png)
 
@@ -103,33 +103,52 @@ Para obter mais informações, leia sobre [o fluxo de dados é executado para de
 
 Para execuções de fluxo de dados para destinos baseados em arquivo, a **[!UICONTROL Duração do processamento]** depende do tamanho dos dados que estão sendo exportados e do carregamento do sistema. Observe também que o fluxo de dados executado para destinos baseados em arquivo é detalhado por público-alvo.
 
-![Imagem da página Execuções de fluxo de dados com a coluna Tempo de processamento realçada para um destino baseado em arquivo.](/help/destinations/assets/ui/details-page/processing-time-dataflow-run-file-based.png)
+![Imagem da página Execuções de fluxo de dados com a coluna Tempo de processamento realçada para um destino baseado em arquivo.](../assets/ui/details-page/processing-time-dataflow-run-file-based.png)
 
 Para obter mais informações, leia sobre [execuções de fluxo de dados para destinos em lote (baseados em arquivo)](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) na documentação de monitoramento.
 
 ## [!UICONTROL Dados de ativação] {#activation-data}
 
-A guia [!UICONTROL Dados de ativação] exibe uma lista de públicos que foram mapeados para o destino, incluindo sua data inicial e data final (se aplicável), e outras informações relevantes para a exportação de dados, como tipo de exportação, agendamento e frequência. Para exibir os detalhes sobre um público-alvo específico, selecione o nome na lista.
+A guia **[!UICONTROL Dados de ativação]** exibe uma lista de públicos que foram mapeados para o destino, incluindo sua data inicial e data final (se aplicável), e outras informações relevantes para a exportação de dados, como tipo de exportação, agendamento e frequência. Para exibir os detalhes sobre um público-alvo específico, selecione o nome na lista.
 
 >[!TIP]
 >
 >Para exibir e editar detalhes sobre os atributos e identidades mapeados para um destino, selecione **[!UICONTROL Ativar públicos-alvo]** no [painel direito](#right-rail).
 
+>[!BEGINSHADEBOX]
+
+A guia **[!UICONTROL Dados de ativação]** para um destino baseado em arquivo.
+
 ![Destino do lote de visualização de dados de ativação](../assets/ui/details-page/activation-data-batch.png)
+
+>[!ENDSHADEBOX]
+
+
+>[!BEGINSHADEBOX]
+
+A guia **[!UICONTROL Dados de ativação]** para um destino de streaming.
 
 ![Destino de transmissão da exibição de dados de ativação](../assets/ui/details-page/activation-data-streaming.png)
 
-### [!BADGE Beta]{type=Informative} Remover vários públicos dos fluxos de ativação {#bulk-remove}
+>[!ENDSHADEBOX]
 
->[!NOTE]
->
-Esse recurso está na versão beta e só está disponível para clientes selecionados. Para solicitar acesso a esse recurso, entre em contato com o representante da Adobe.
+### Filtrar públicos ativados {#filter-audiences}
+
+Para filtrar pela lista de públicos ativados para um destino, digite um nome de público na caixa de pesquisa. A lista de públicos-alvo é atualizada automaticamente com os resultados da pesquisa.
+
+![Caixa de pesquisa para filtrar públicos.](../assets/ui/details-page/filter-audiences.png)
+
+### Remover vários públicos-alvo dos fluxos de ativação {#bulk-remove}
 
 Para remover vários públicos-alvo dos fluxos de ativação existentes, selecione os públicos-alvo e, em seguida, selecione **[!UICONTROL Remover públicos-alvo]**.
 
 ![Tela de dados de ativação destacando a opção Remover públicos.](../assets/ui/details-page/bulk-remove-audiences.png)
 
-### Exportar vários arquivos sob demanda para destinos em lote {#bulk-export}
+### [!BADGE Beta]{type=Informative} Exporte vários arquivos sob demanda para destinos em lote {#bulk-export}
+
+>[!NOTE]
+>
+Esse recurso está na versão beta e só está disponível para clientes selecionados. Para solicitar acesso a esse recurso, entre em contato com o representante da Adobe.
 
 Você pode [exportar vários arquivos sob demanda](../ui/export-file-now.md) da página **[!UICONTROL Dados de ativação]**. Para fazer isso, selecione os públicos para os quais deseja exportar arquivos por demanda e selecione o controle **[!UICONTROL Exportar arquivo agora]** para acionar uma exportação única que fornecerá um arquivo para cada público selecionado para o destino do lote.
 
@@ -144,3 +163,9 @@ Para editar o agendamento de ativação existente de vários públicos-alvo ao m
 >[!NOTE]
 >
 Para obter detalhes sobre como explorar a página de detalhes de um público-alvo, consulte a [Visão geral do Portal de público-alvo](../../segmentation/ui/audience-portal.md#segment-details).
+
+### Editar nomes de arquivos para vários públicos exportados para destinos em lote {#bulk-edit-file-names}
+
+Para editar os nomes de arquivos exportados de vários públicos-alvo ao mesmo tempo, selecione os públicos-alvo desejados e selecione **[!UICONTROL Editar nome do arquivo]**. Para obter informações detalhadas sobre como definir ou editar um nome de arquivo, leia a seção sobre como [configurar nomes de arquivo](../ui/activate-batch-profile-destinations.md#configure-file-names).
+
+![Tela de dados de ativação destacando a opção para editar nomes de arquivos para vários públicos-alvo.](../assets/ui/details-page/bulk-edit-file-name.png)

@@ -2,10 +2,10 @@
 title: Notas de versão da extensão do Adobe Analytics
 description: As notas de versão mais recentes da extensão de tag do Adobe Analytics na Adobe Experience Platform.
 exl-id: 3c7b4ec0-4b81-4ef4-b15f-6ad102525840
-source-git-commit: fbb8e2e7944fc6ef5be6fb0c6dc0ef256ca65b77
+source-git-commit: c783906b20db2b86d58aea7b3a94bde007c0a465
 workflow-type: tm+mt
-source-wordcount: '1438'
-ht-degree: 73%
+source-wordcount: '1451'
+ht-degree: 72%
 
 ---
 
@@ -16,6 +16,14 @@ Veja a seguir uma lista das notas de versão da extensão de tag do Adobe Analyt
 >[!NOTE]
 >
 >A extensão de tag do Analytics é atualizada com frequência em resposta a atualizações na [biblioteca JavaScript do AppMeasurement](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=pt-BR). Consulte as [notas de versão do AppMeasurement](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=pt-BR) para obter detalhes sobre as versões específicas mencionadas abaixo.
+
+## 12 de agosto de 2024
+
+**Extensão do Adobe Analytics 1.9.5**
+
+**Recursos**:
+
+* Atualizado para [AppMeasurement para v2.27.0](https://github.com/adobe/appmeasurement/releases/tag/v2.27.0).
 
 ## 4 de março de 2024
 

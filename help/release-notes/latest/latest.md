@@ -1,17 +1,16 @@
 ---
 title: Notas de versão da Adobe Experience Platform de agosto de 2024
 description: As notas de versão de agosto de 2024 para Adobe Experience Platform.
-exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 019d950e992e6e1ea3264fbc1f141a8bb6bc357a
+source-git-commit: f3004071f7e023cc3ddc8b5a4c8fefd5636fd9a8
 workflow-type: tm+mt
-source-wordcount: '1037'
-ht-degree: 26%
+source-wordcount: '1086'
+ht-degree: 24%
 
 ---
 
 # Notas de versão da Adobe Experience Platform
 
-**Data de lançamento: quarta-feira, 20 de agosto de 2024**
+**Data de lançamento: 20 de agosto de 2024**
 
 >[!TIP]
 >
@@ -34,12 +33,12 @@ Atualizações dos recursos e da documentação existentes no Experience Platfor
 | Recurso | Descrição |
 | ----------- | ----------- |
 | A exportação de arquivos sob demanda para destinos em lote agora está disponível de modo geral. | A opção de exportar arquivos por demanda para destinos em lote agora está disponível para todos os clientes. Consulte a [documentação dedicada](../../destinations/ui/export-file-now.md) para obter mais detalhes. |
-| Edite os agendamentos de exportação para vários públicos exportados na [etapa de agendamento](../../destinations/ui/activate-batch-profile-destinations.md#scheduling). | A opção para editar os agendamentos de exportação para vários públicos-alvo exportados diretamente da etapa de agendamento do fluxo de trabalho de ativação de público-alvo agora está disponível para todos os clientes. ![Imagem da interface de usuário do Experience Platform destacando a opção Editar agendamento na etapa de agendamento.](../2024/assets/august/edit-schedule.png){width="250" align="center" zoomable="yes"} |
-| Edite nomes de arquivos para vários públicos exportados na [etapa de agendamento](../../destinations/ui/activate-batch-profile-destinations.md#scheduling). | A opção para editar os nomes de vários arquivos exportados diretamente da etapa de agendamento do fluxo de trabalho de ativação de público agora está disponível para todos os clientes. ![Imagem da interface de usuário do Experience Platform destacando a opção Editar nome de arquivo na etapa de agendamento.](../2024/assets/august/edit-file-name.png){width="250" align="center" zoomable="yes"} |
-| Remova vários públicos-alvo de um fluxo de dados da página [Detalhes do destino](../../destinations/ui/destination-details-page.md#bulk-remove). | A opção de remover vários públicos-alvo de fluxos de dados existentes da página **[!UICONTROL Detalhes do destino]** agora está disponível para todos os clientes. ![Imagem da interface de usuário do Experience Platform destacando a opção Remover públicos-alvo na página Detalhes do Destino.](../2024/assets/august/bulk-remove-audiences.png){width="250" align="center" zoomable="yes"} |
-| Exporte vários arquivos por demanda para destinos em lote a partir da página [Detalhes do destino](../../destinations/ui/destination-details-page.md#bulk-export). | A opção de exportar vários arquivos por demanda para destinos em lote a partir da página **[!UICONTROL Detalhes do destino]** agora está disponível para todos os clientes. ![Imagem da interface de usuário do Experience Platform destacando a opção Exportar arquivo agora na página Detalhes do Destino.](../2024/assets/august/bulk-export-file-now.png){width="250" align="center" zoomable="yes"} |
-| Edite nomes de arquivos para vários públicos exportados da página [Detalhes do destino](../../destinations/ui/destination-details-page.md#bulk-edit-file-names). | Agora é possível editar os nomes de vários arquivos exportados diretamente da página **[!UICONTROL Detalhes do destino]**. ![Imagem da interface de usuário do Experience Platform destacando a opção de edição de nome de arquivo na página de detalhes do destino.](../2024/assets/august/edit-file-name-destination-details.png){width="250" align="center" zoomable="yes"} |
-| Remova vários conjuntos de dados de um fluxo de dados da página [Detalhes do destino](../../destinations/ui/export-datasets.md#remove-dataset). | A opção para remover vários conjuntos de dados de um fluxo de dados agora está disponível para todos os clientes. ![Imagem da interface de usuário do Experience Platform destacando a opção Remover conjuntos de dados na página de detalhes do destino.](../2024/assets/august/bulk-remove-datasets.png){width="250" align="center" zoomable="yes"} |
+| Edite os agendamentos de exportação para vários públicos exportados na [etapa de agendamento](../../destinations/ui/activate-batch-profile-destinations.md#scheduling). | A opção para editar os agendamentos de exportação para vários públicos-alvo exportados diretamente da etapa de agendamento do fluxo de trabalho de ativação de público-alvo agora está disponível para todos os clientes. ![Imagem da interface de usuário do Experience Platform destacando a opção Editar agendamento na etapa de agendamento.](../2024/assets/august/edit-schedule.png "Editar opção de agendamento na etapa de agendamento."){width="250" align="center" zoomable="yes"} |
+| Edite nomes de arquivos para vários públicos exportados na [etapa de agendamento](../../destinations/ui/activate-batch-profile-destinations.md#scheduling). | A opção para editar os nomes de vários arquivos exportados diretamente da etapa de agendamento do fluxo de trabalho de ativação de público agora está disponível para todos os clientes. ![Imagem da interface de usuário do Experience Platform destacando a opção Editar nome do arquivo na etapa de agendamento.](../2024/assets/august/edit-file-name.png "Editar opção de nome de arquivo na etapa de agendamento."){width="250" align="center" zoomable="yes"} |
+| Remova vários públicos-alvo de um fluxo de dados da página [Detalhes do destino](../../destinations/ui/destination-details-page.md#bulk-remove). | A opção de remover vários públicos-alvo de fluxos de dados existentes da página **[!UICONTROL Detalhes do destino]** agora está disponível para todos os clientes. ![Imagem da interface de usuário do Experience Platform destacando a opção Remover públicos-alvo na página Detalhes do destino.](../2024/assets/august/bulk-remove-audiences.png "Opção Remover públicos-alvo na página Detalhes do Destino."){width="250" align="center" zoomable="yes"} |
+| Exporte vários arquivos por demanda para destinos em lote a partir da página [Detalhes do destino](../../destinations/ui/destination-details-page.md#bulk-export). | A opção de exportar vários arquivos por demanda para destinos em lote a partir da página **[!UICONTROL Detalhes do destino]** agora está disponível para todos os clientes. ![Imagem da interface de usuário do Experience Platform destacando a opção Exportar arquivo agora na página Detalhes do Destino.](../2024/assets/august/bulk-export-file-now.png "Opção Exportar arquivo agora na página Detalhes do Destino."){width="250" align="center" zoomable="yes"} |
+| Edite nomes de arquivos para vários públicos exportados da página [Detalhes do destino](../../destinations/ui/destination-details-page.md#bulk-edit-file-names). | Agora é possível editar os nomes de vários arquivos exportados diretamente da página **[!UICONTROL Detalhes do destino]**. ![Imagem da interface de usuário do Experience Platform destacando a opção Editar nome do arquivo na página de detalhes do destino.](../2024/assets/august/edit-file-name-destination-details.png "Opção Editar nome do arquivo na página de detalhes do destino."){width="250" align="center" zoomable="yes"} |
+| Remova vários conjuntos de dados de um fluxo de dados da página [Detalhes do destino](../../destinations/ui/export-datasets.md#remove-dataset). | A opção para remover vários conjuntos de dados de um fluxo de dados agora está disponível para todos os clientes. ![Imagem da interface de usuário do Experience Platform destacando a opção Remover conjuntos de dados na página de detalhes do destino.](../2024/assets/august/bulk-remove-datasets.png "Opção Remover conjuntos de dados na página de detalhes do destino."){width="250" align="center" zoomable="yes"} |
 
 {style="table-layout:auto"}
 

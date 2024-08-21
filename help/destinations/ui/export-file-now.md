@@ -3,20 +3,15 @@ title: Exportar arquivos sob demanda para destinos em lote usando a interface do
 type: Tutorial
 description: Saiba como exportar arquivos sob demanda para destinos em lote usando a interface do usuário do Experience Platform.
 exl-id: 0cbe5089-b73d-4584-8451-2fc34d47c357
-source-git-commit: 97ae720fa4d081fcf8d6b84c81a2131e55b9b1b5
+source-git-commit: 47d0e2a7fae973edfda035d046f66c88d34bf8b2
 workflow-type: tm+mt
-source-wordcount: '720'
-ht-degree: 8%
+source-wordcount: '690'
+ht-degree: 9%
 
 ---
 
 
 # Exportar arquivos sob demanda para destinos em lote usando a interface do Experience Platform
-
->[!IMPORTANT]
->
->A opção **[!UICONTROL Exportar arquivo agora]** no Adobe Experience Platform está atualmente no Beta. A documentação e a funcionalidade estão sujeitas a alterações.
->Entre em contato com o representante da Adobe para obter acesso a essa funcionalidade.
 
 >[!IMPORTANT]
 > 

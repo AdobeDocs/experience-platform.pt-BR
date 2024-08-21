@@ -3,9 +3,9 @@ keywords: destinos;destino;página detalhes de destinos;página detalhes de dest
 title: Exibir detalhes do destino
 description: A página de detalhes de um destino individual fornece uma visão geral dos detalhes do destino. Os detalhes do destino incluem o nome do destino, a ID, os públicos mapeados para o destino e os controles para editar a ativação e habilitar e desabilitar o fluxo de dados.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: 9ebdf6e675ddfe03f43b56ed10f625a7d000a662
+source-git-commit: 47d0e2a7fae973edfda035d046f66c88d34bf8b2
 workflow-type: tm+mt
-source-wordcount: '1310'
+source-wordcount: '1286'
 ht-degree: 0%
 
 ---
@@ -144,11 +144,7 @@ Para remover vários públicos-alvo dos fluxos de ativação existentes, selecio
 
 ![Tela de dados de ativação destacando a opção Remover públicos.](../assets/ui/details-page/bulk-remove-audiences.png)
 
-### [!BADGE Beta]{type=Informative} Exporte vários arquivos sob demanda para destinos em lote {#bulk-export}
-
->[!NOTE]
->
-Esse recurso está na versão beta e só está disponível para clientes selecionados. Para solicitar acesso a esse recurso, entre em contato com o representante da Adobe.
+### Exportar vários arquivos sob demanda para destinos em lote {#bulk-export}
 
 Você pode [exportar vários arquivos sob demanda](../ui/export-file-now.md) da página **[!UICONTROL Dados de ativação]**. Para fazer isso, selecione os públicos para os quais deseja exportar arquivos por demanda e selecione o controle **[!UICONTROL Exportar arquivo agora]** para acionar uma exportação única que fornecerá um arquivo para cada público selecionado para o destino do lote.
 
@@ -162,7 +158,7 @@ Para editar o agendamento de ativação existente de vários públicos-alvo ao m
 
 >[!NOTE]
 >
-Para obter detalhes sobre como explorar a página de detalhes de um público-alvo, consulte a [Visão geral do Portal de público-alvo](../../segmentation/ui/audience-portal.md#segment-details).
+>Para obter detalhes sobre como explorar a página de detalhes de um público-alvo, consulte a [Visão geral do Portal de público-alvo](../../segmentation/ui/audience-portal.md#segment-details).
 
 ### Editar nomes de arquivos para vários públicos exportados para destinos em lote {#bulk-edit-file-names}
 

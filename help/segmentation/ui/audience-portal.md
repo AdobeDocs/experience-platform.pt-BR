@@ -2,9 +2,9 @@
 title: Visão geral do Audience Portal
 description: Saiba como usar o Audience Portal para exibir, gerenciar e criar públicos no Adobe Experience Platform.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 34964bc5af0676872fb472a7309aa99c21efdbc5
+source-git-commit: b59f5ffeb8af6f3bab7ed79189219f39533d2f1b
 workflow-type: tm+mt
-source-wordcount: '4162'
+source-wordcount: '4250'
 ht-degree: 3%
 
 ---
@@ -161,6 +161,18 @@ Para obter mais informações sobre como criar e gerenciar tags, leia o [Guia de
 #### Pastas {#folders}
 
 Você pode colocar públicos-alvo em pastas para melhorar o gerenciamento do público-alvo.
+
+Para criar uma pasta para armazenar seus públicos, selecione **[!UICONTROL Criar pasta]**.
+
+![O botão Criar pasta está realçado.](../images/ui/audience-portal/create-folder.png)
+
+>[!NOTE]
+>
+>Você só pode criar uma pasta se estiver em outra pasta. Isso significa que você **não pode** criar uma pasta se tiver **[!UICONTROL Todos os Públicos-alvo]** selecionados na barra de navegação à esquerda.
+
+Uma janela pop-up é exibida, permitindo nomear a pasta recém-criada. Selecione **[!UICONTROL Salvar]** depois de nomear sua pasta para concluir a criação da pasta. Observe que os nomes **deve** ser exclusivos para a pasta pai.
+
+![O botão Salvar na caixa de diálogo Criar pasta está realçado.](../images/ui/audience-portal/create-folder-dialog.png)
 
 Para mover um público-alvo para uma pasta, selecione **[!UICONTROL Mover para a pasta]** no público-alvo que você deseja mover.
 

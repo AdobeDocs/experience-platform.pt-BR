@@ -3,9 +3,9 @@ title: Tipos de evento na extensão SDK da Web do Adobe Experience Platform
 description: Saiba mais sobre como usar os tipos de evento fornecidos pela extensão Adobe Experience Platform Web SDK no Adobe Experience Platform Launch.
 solution: Experience Platform
 exl-id: b3162406-c5ce-42ec-ab01-af8ac8c63560
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: 666e8c6fcccf08d0841c5796677890409b22d794
 workflow-type: tm+mt
-source-wordcount: '1006'
+source-wordcount: '1127'
 ht-degree: 0%
 
 ---
@@ -260,3 +260,14 @@ if (propositions) {
   // them in some other way.
 }
 ```
+
+## [!UICONTROL Assinar itens do conjunto de regras] {#subscribe-ruleset-items}
+
+O tipo de evento **[!UICONTROL Assinar itens do conjunto de regras]** permite assinar cartões de conteúdo do Adobe Journey Optimizer para uma superfície. Sempre que os conjuntos de regras forem avaliados, o retorno de chamada fornecido para esse comando receberá um objeto de resultado com propostas que contêm os dados do cartão de conteúdo.
+
+![Imagem da interface do usuário de marcas de Experience Platform mostrando o tipo de evento de itens do conjunto de regras de Inscrição.](assets/subscribe-ruleset-items.png)
+
+Esse tipo de evento oferece suporte às seguintes propriedades configuráveis:
+
+* **[!UICONTROL Esquemas]**: uma matriz de esquemas para a qual você deseja assinar cartões de conteúdo. Você pode inserir os esquemas manualmente ou fornecendo um elemento de dados.
+* **[!UICONTROL Superfícies]**: uma matriz de superfícies na qual você deseja assinar cartões de conteúdo. Você pode inserir as superfícies manualmente ou fornecendo um elemento de dados.

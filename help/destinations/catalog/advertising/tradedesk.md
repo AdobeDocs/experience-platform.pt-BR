@@ -3,9 +3,9 @@ keywords: publicidade; a trade desk; advertising trade desk
 title: A conexão com a Trade Desk
 description: A Trade Desk é uma plataforma de autoatendimento para compradores de anúncios para executar campanhas digitais direcionadas por público e redirecionamento em fontes de inventário para exibição, vídeo e dispositivos móveis.
 exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 916c56cf8fa25c40c061b3bddc57ba2fa59cbbb1
 workflow-type: tm+mt
-source-wordcount: '742'
+source-wordcount: '778'
 ht-degree: 3%
 
 ---
@@ -14,15 +14,15 @@ ht-degree: 3%
 
 ## Visão geral {#overview}
 
-O destino [!DNL The Trade Desk] ajuda a enviar dados de perfil para [!DNL The Trade Desk].
+Use este conector de destino para enviar dados de perfil para [!DNL The Trade Desk]. Este conector envia dados para o ponto de extremidade primário [!DNL The Trade Desk]. A integração entre o Adobe Experience Platform e o [!DNL The Trade Desk] não oferece suporte à exportação de dados para o ponto de extremidade de terceiros [!DNL The Trade Desk].
 
-[!DNL The Trade Desk] é uma plataforma de autoatendimento para compradores de anúncios para executar campanhas digitais com direcionamento de público e redirecionamento em fontes de inventário para dispositivos móveis, vídeo e exibição.
+O [!DNL The Trade Desk] é uma plataforma de autoatendimento para compradores de anúncios para executar campanhas digitais com direcionamento de público e redirecionamento em fontes de inventário para dispositivos móveis, vídeo e exibição.
 
-Para enviar dados de perfil para [!DNL Trade Desk], primeiro você deve se conectar ao destino.
+Para enviar dados de perfil para [!DNL Trade Desk], primeiro você deve se conectar ao destino, conforme descrito nas seções a seguir desta página.
 
 ## Casos de uso {#use-cases}
 
-Como profissional de marketing, quero poder usar públicos-alvo criados a partir do [!DNL Trade Desk IDs] ou de IDs de dispositivo para criar campanhas digitais com redirecionamento ou direcionadas por público-alvo.
+Como profissional de marketing, quero poder usar públicos-alvo criados a partir do [!DNL Trade Desk IDs] ou de IDs de dispositivo para criar campanhas digitais de redirecionamento ou direcionadas por público-alvo.
 
 ## Identidades suportadas {#supported-identities}
 
@@ -62,7 +62,7 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 
 >[!IMPORTANT]
 >
->Se você deseja criar seu primeiro destino com o [!DNL The Trade Desk] e não habilitou a [funcionalidade de sincronização de ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) no Serviço de ID do Experience Cloud no passado (com o Adobe Audience Manager ou outros aplicativos), entre em contato com a Adobe Consulting ou com o Atendimento ao cliente para habilitar as sincronizações de ID. Se você tiver configurado anteriormente as integrações do [!DNL The Trade Desk] no Audience Manager, as sincronizações de ID configuradas serão transferidas para a Platform.
+>Se você deseja criar seu primeiro destino com o [!DNL The Trade Desk] e não habilitou a [funcionalidade de sincronização de ID](https://experienceleague.adobe.com/en/docs/id-service/using/id-service-api/methods/idsync) no Serviço de ID do Experience Cloud no passado (com o Adobe Audience Manager ou outros aplicativos), entre em contato com a Adobe Consulting ou com o Atendimento ao cliente para habilitar as sincronizações de ID. Se você tiver configurado anteriormente as integrações do [!DNL The Trade Desk] no Audience Manager, as sincronizações de ID configuradas serão transferidas para a Platform.
 
 ## Conectar ao destino {#connect}
 
@@ -79,7 +79,7 @@ Ao [configurar](../../ui/connect-destination.md) este destino, você deve fornec
 * **[!UICONTROL Nome]**: um nome pelo qual você reconhecerá este destino no futuro.
 * **[!UICONTROL Descrição]**: uma descrição que ajudará você a identificar este destino no futuro.
 * **[!UICONTROL ID da Conta]**: Sua [!DNL Trade Desk] [!UICONTROL ID da Conta].
-* **[!UICONTROL Local do Servidor]**: pergunte ao representante do [!DNL Trade Desk] qual servidor regional você deve usar. Estes são os servidores regionais disponíveis que você pode escolher:
+* **[!UICONTROL Local do Servidor]**: pergunte ao representante do [!DNL Trade Desk] qual servidor regional você deve usar. Abaixo estão os servidores regionais disponíveis que você pode escolher:
    * **[!UICONTROL Europa]**
    * **[!UICONTROL Cingapura]**
    * **[!UICONTROL Tóquio]**
@@ -104,7 +104,7 @@ Consulte [Ativar dados de público-alvo para streaming de destinos de exportaç�
 
 Na etapa [Agenda de público-alvo](../../ui/activate-segment-streaming-destinations.md#scheduling), mapeie manualmente os públicos-alvo para a ID correspondente ou nome amigável na plataforma de destino.
 
-Ao mapear segmentos, recomendamos usar o nome de público-alvo da Platform ou uma forma mais curta, para facilitar o uso. No entanto, a ID ou o nome do público-alvo no seu destino não precisa corresponder ao da sua conta da Platform. Qualquer valor inserido no campo de mapeamento será refletido pelo destino.
+Ao mapear públicos-alvo, a Adobe recomenda usar o nome de público-alvo da Platform ou uma forma mais curta dele, para facilitar o uso. No entanto, a ID ou o nome do público-alvo no seu destino não precisa corresponder ao da sua conta da Platform. Qualquer valor inserido no campo de mapeamento será refletido pelo destino.
 
 Se estiver usando vários mapeamentos de dispositivo (IDs de cookie, [!DNL IDFA], [!DNL GAID]), certifique-se de usar o mesmo valor de mapeamento para todos os três mapeamentos. [!DNL The Trade Desk] agregará todos eles em um único segmento, com um detalhamento em nível de dispositivo.
 

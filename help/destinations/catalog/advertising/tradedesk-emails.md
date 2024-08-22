@@ -3,9 +3,9 @@ title: (Beta) A conexão Trade Desk - CRM
 description: Ative perfis para sua conta da Trade Desk para direcionamento e supressão de público com base nos dados do CRM.
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 3c645ccf5b9dd17e4c3cc1267b60a9c4f1131668
 workflow-type: tm+mt
-source-wordcount: '1122'
+source-wordcount: '1148'
 ht-degree: 5%
 
 ---
@@ -25,6 +25,8 @@ ht-degree: 5%
 ## Visão geral {#overview}
 
 Este documento foi criado para ajudar você a ativar perfis na sua conta do [!DNL Trade Desk] para direcionamento de público e supressão com base nos dados do CRM.
+
+Este conector envia dados para o ponto de extremidade primário [!DNL The Trade Desk]. A integração entre o Adobe Experience Platform e o [!DNL The Trade Desk] não oferece suporte à exportação de dados para o ponto de extremidade de terceiros [!DNL The Trade Desk].
 
 O [!DNL The Trade Desk(TTD)] não lida diretamente com o arquivo de carregamento de endereços de email a qualquer momento, nem armazena seus emails brutos (sem hash).[!DNL The Trade Desk]
 
@@ -140,7 +142,7 @@ Selecionar campos de destino:
 
 Para validar se os dados foram exportados corretamente do Experience Platform para o [!DNL The Trade Desk], localize os públicos-alvo no bloco de dados Adobe 1PD na Plataforma de Gerenciamento de Dados (DMP) do [!DNL The Trade Desk]. Estas são as etapas para encontrar a ID correspondente na interface do usuário do [!DNL Trade Desk]:
 
-1. Primeiro, clique na guia **[!UICONTROL Dados]** e revise **[!UICONTROL Primários]**.
+1. Primeiro, selecione a guia **[!UICONTROL Dados]** e revise a seção **[!UICONTROL Primários]**.
 2. Role para baixo na página, em **[!UICONTROL Dados importados]**, você encontrará o **[!UICONTROL Bloco 1PD de Adobe]**.
 3. Clique no bloco **[!UICONTROL Adobe 1PD]** e ele listará todos os públicos ativados para o destino [!DNL Trade Desk] do seu anunciante. Você também pode usar a função de pesquisa.
 4. A ID de segmento # do Experience Platform será exibida como o Nome do segmento na interface do usuário do [!DNL Trade Desk].

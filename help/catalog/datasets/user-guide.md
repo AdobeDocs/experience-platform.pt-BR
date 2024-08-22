@@ -7,7 +7,7 @@ exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
 source-git-commit: a168f61fabddd06d586f7909fd92c0409fd2f51e
 workflow-type: tm+mt
 source-wordcount: '3203'
-ht-degree: 3%
+ht-degree: 6%
 
 ---
 
@@ -41,18 +41,18 @@ Este guia do usuário requer uma compreensão funcional dos seguintes componente
 
 >[!CONTEXTUALHELP]
 >id="platform_datasets_browse_datalakeretention"
->title="Retenção de Datalake"
->abstract="Mostra a política de retenção atual para cada conjunto de dados. Esse valor pode ser modificado nas configurações de retenção de cada conjunto de dados. Você só pode definir o tempo de retenção para o conjunto de dados ExperienceEvent."
+>title="Retenção de datalake"
+>abstract="Exibe a política de retenção atual para cada conjunto de dados. Esse valor pode ser modificado nas configurações de retenção de cada conjunto de dados. Você só pode definir o tempo de retenção para o conjunto de dados ExperienceEvent."
 
 >[!CONTEXTUALHELP]
 >id="platform_datasets_browse_profileretention"
 >title="Retenção de perfil"
->abstract="Mostra a política de retenção atual para cada conjunto de dados. Esse valor pode ser modificado nas configurações de retenção de cada conjunto de dados. Você só pode definir o tempo de retenção para um conjunto de dados ExperienceEvent."
+>abstract="Exibe a política de retenção atual para cada conjunto de dados. Esse valor pode ser modificado nas configurações de retenção de cada conjunto de dados. Você só pode definir o tempo de retenção para um conjunto de dados ExperienceEvent."
 
 >[!CONTEXTUALHELP]
 >id="platform_datasets_datalakesettings_datasetretention"
->title="Retenção do conjunto de dados"
->abstract="A retenção do Datalake define regras para por quanto tempo os dados são armazenados e quando devem ser excluídos em diferentes serviços. Isso garante a conformidade com as normas, gerenciando os custos de armazenamento e mantendo a qualidade dos dados."
+>title="Retenção de conjunto de dados"
+>abstract="A retenção do datalake define regras para o tempo em que os dados são armazenados e quando devem ser excluídos em diferentes serviços. Isso garante a conformidade com regulamentos, gerenciando os custos de armazenamento e mantendo a qualidade dos dados."
 
 
 Na interface do usuário do [!DNL Experience Platform], selecione **[!UICONTROL Conjuntos de dados]** no menu de navegação esquerdo para abrir o painel **[!UICONTROL Conjuntos de dados]**. O painel lista todos os conjuntos de dados disponíveis para sua organização. Os detalhes são exibidos para cada conjunto de dados listado, incluindo seu nome, o esquema ao qual o conjunto de dados adere e o status da execução de ingestão mais recente.

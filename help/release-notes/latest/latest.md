@@ -1,9 +1,9 @@
 ---
 title: Notas de versão da Adobe Experience Platform de agosto de 2024
 description: As notas de versão de agosto de 2024 para Adobe Experience Platform.
-source-git-commit: bc09b03cf34c9da9a93e27b7d1a07b7a3bc7f0aa
+source-git-commit: 6d91112654d08dd31e5334982e534ec42d9fc226
 workflow-type: tm+mt
-source-wordcount: '1352'
+source-wordcount: '1502'
 ht-degree: 21%
 
 ---
@@ -19,6 +19,7 @@ ht-degree: 21%
 Atualizações dos recursos e da documentação existentes no Experience Platform:
 
 - [Controle de acesso baseado em atributos](#abac)
+- [Assimilação de dados](#data-ingestion)
 - [Destinos](#destinations)
 - [Experience Data Model (XDM)](#xdm)
 - [Serviço de identidade](#identity-service)
@@ -40,6 +41,19 @@ Por meio do controle de acesso baseado em atributos, os administradores da sua o
 {style="table-layout:auto"}
 
 Para obter mais informações sobre o controle de acesso baseado em atributos, consulte a [visão geral do controle de acesso baseado em atributos](../../access-control/abac/overview.md). Para obter um guia abrangente sobre o fluxo de trabalho do controle de acesso baseado em atributos, leia o [guia completo do controle de acesso baseado em atributos](../../access-control/abac/end-to-end-guide.md).
+
+## Assimilação de dados (atualizada em 23 de agosto) {#data-ingestion}
+
+A Adobe Experience Platform fornece um conjunto avançado de recursos para assimilar qualquer tipo e qualquer latência de dados. Você pode assimilar usando APIs de lote ou transmissão, origens construídas pela Adobe, parceiros de integração de dados ou a interface da Adobe Experience Platform.
+
+**Manuseio de formato de data atualizado na assimilação de dados em lote**
+
+Esta versão resolve um problema com a *manipulação de formato de data* na assimilação de dados em lote. Anteriormente, o sistema transformou campos de data inseridos por clientes como `Date` no formato `DateTime`. Isso significava que o fuso horário era adicionado automaticamente aos campos e causava dificuldades para usuários que preferiam ou exigiam o formato `Date`. A partir de agora, o fuso horário não será adicionado automaticamente a campos do tipo `Date`. Essa atualização garante que o formato exportado dos dados corresponda ao formato representado no perfil desse campo, conforme solicitado pelos clientes.
+
+`Date` campos antes da versão: `"birthDate": "2018-01-12T00:00:00Z"`
+`Date` campos após o lançamento: `"birthDate": "2018-01-12"`
+
+Leia mais sobre [assimilação em lote](/help/ingestion/batch-ingestion/overview.md).
 
 ## Destinos {#destinations}
 

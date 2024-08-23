@@ -2,9 +2,9 @@
 title: Guia de configurações de gráfico
 description: Saiba mais sobre cenários de gráficos comuns que você pode encontrar ao trabalhar com regras de vinculação de gráficos de identidade e dados de identidade.
 badge: Beta
-source-git-commit: a1f12f266b74bd88fbb1c1a095bb6f6eb565612b
+source-git-commit: 90faa4079d8a58898774c1fbbae2adae01f7e0a2
 workflow-type: tm+mt
-source-wordcount: '2757'
+source-wordcount: '2749'
 ht-degree: 6%
 
 ---
@@ -478,7 +478,7 @@ Nesse cenário, há um único CRMID que representa uma entidade de pessoa. No en
 
 | Namespaces usados | Método de coleta de comportamento da Web |
 | --- | --- |
-| CRMID, Email_LC_SHA256, Phone_SHA256, ID de logon, ECID | Conector de origem do Adobe Analytics **Observação:** por padrão, as AAIDs estão bloqueadas no Serviço de identidade, portanto, você deve colocar uma prioridade mais alta nas ECIDs em relação à AAID ao usar a origem do Analytics. Leia o [guia de implementação](configuration.md#ingest-your-data) para obter mais informações. |
+| CRMID, Email_LC_SHA256, Phone_SHA256, ID de logon, ECID | Conector de origem do Adobe Analytics. <br> **Observação:** por padrão, as AAIDs estão bloqueadas no Serviço de identidade e, portanto, você deve colocar em suas ECIDs uma prioridade maior do que as AAIDs ao usar a fonte do Analytics. Leia o [guia de implementação](configuration.md#ingest-your-data) para obter mais informações.</br> |
 
 **Eventos:**
 
@@ -488,11 +488,11 @@ Você pode criar esse cenário na simulação de gráfico copiando os seguintes 
 CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
 CRMID: Tom, loginID: ID_A
 CRMID: Tom, loginID: ID_B
-loginID: ID_A, ECID: 111, AAID: AAA
+loginID: ID_A, ECID: 111
 CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
 CRMID: Summer, loginID: ID_C
 CRMID: Summer, loginID: ID_D
-loginID: ID_C, ECID: 222, AAID: BBB
+loginID: ID_C, ECID: 222
 ```
 
 **Configuração do algoritmo:**
@@ -532,7 +532,7 @@ Veja a seguir um exemplo de dois gráficos de uma pessoa em que cada um tem uma 
 
 >[!TAB Gráfico multipessoa: dispositivo compartilhado 1]
 
-Este é um cenário de dispositivo compartilhado com várias pessoas em que `{ECID:111, AAID:AAA}` estão vinculados a `{loginID:ID_A}` e `{loginID:ID_C}`. Nesse caso, os links estabelecidos mais antigos são removidos em favor dos links estabelecidos mais recentemente.
+Este é um cenário de dispositivo compartilhado com várias pessoas em que `{ECID:111}` está vinculado a `{loginID:ID_A}` e `{loginID:ID_C}`. Nesse caso, os links estabelecidos mais antigos são removidos em favor dos links estabelecidos mais recentemente.
 
 ![Um cenário de gráfico de dispositivo compartilhado com várias pessoas.](../images/graph-examples/complex_shared_device_one.png)
 
@@ -634,9 +634,9 @@ CRMID: Summer, Phone_SHA256: 111-1111
 
 >[!ENDTABS]
 
-## Uso em outros aplicativos Adobe
+## Uso em outro Adobe Commerce
 
-Os exemplos de configuração de gráfico nesta seção descrevem casos de uso para Real-time Customer Data Platform, Adobe Journey Optimizer e Adobe Commerce. Os exemplos abaixo estão focados em clientes de varejo com dois tipos de usuário:
+Os exemplos de configuração de gráfico nesta seção descrevem os casos de uso do Adobe Commerce. Os exemplos abaixo estão focados em clientes de varejo com dois tipos de usuário:
 
 * Usuário registrado (usuários que criaram uma conta)
 * Usuários convidados (usuários que têm apenas um endereço de email)

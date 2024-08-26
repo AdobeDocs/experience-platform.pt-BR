@@ -6,10 +6,10 @@ breadcrumb-title: Guia do SDK da Web
 user-guide-description: Interaja com os serviços da Experience Cloud por meio da Rede de borda.
 feature: Web SDK
 role: Developer
-source-git-commit: 1a6d42fd1319828f5bb5d470f24ea5ee8bed4661
+source-git-commit: da0d9d0976dc0f7244500e62bb364b11fab7baca
 workflow-type: tm+mt
 source-wordcount: '227'
-ht-degree: 22%
+ht-degree: 24%
 
 ---
 
@@ -63,7 +63,7 @@ ht-degree: 22%
    * [setDebug](commands/setdebug.md)
    * [sendMediaEvent](commands/sendmediaevent.md)
    * [subscribeRulesetItems](commands/subscriberulesetitems.md)
-   * [Configurar substituições da sequência de dados](commands/datastream-overrides.md)
+   * [Configurar substituições de sequência de dados](commands/datastream-overrides.md)
    * [Respostas de comando](commands/command-responses.md)
 
 * Identidade {#identity}

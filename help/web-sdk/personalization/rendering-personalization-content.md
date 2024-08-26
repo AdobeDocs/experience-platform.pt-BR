@@ -3,7 +3,7 @@ title: Renderizar conteúdo personalizado usando o SDK da Web da Adobe Experienc
 description: Saiba como renderizar conteúdo personalizado com o Adobe Experience Platform Web SDK.
 keywords: personalização;renderDecisions;sendEvent;decisionScopes;propositions;
 exl-id: 6a3252ca-cdec-48a0-a001-2944ad635805
-source-git-commit: 6841a6f777d18845ce36e3503fbdb9698ece84bb
+source-git-commit: 9489b5345c2b13b9d05b26d646aa7f1576840fb8
 workflow-type: tm+mt
 source-wordcount: '947'
 ht-degree: 0%
@@ -267,7 +267,7 @@ alloy("sendEvent", {
         break;  
       }
     }
-      // Send a "display" event 
+    // Send a "display" event 
     alloy("sendEvent", {
       "xdm": {
         "eventType": "decisioning.propositionDisplay",
@@ -279,7 +279,10 @@ alloy("sendEvent", {
                 "scope": discountProposition.scope,
                 "scopeDetails": discountProposition.scopeDetails
               }
-            ]
+            ],
+            "propositionEventType": {
+              "display": 1
+            }
           }
         }
       }
@@ -380,21 +383,21 @@ alloy("sendEvent", {
             } = proposition;
 
             alloy("sendEvent", {
-                xdm: {
-                    eventType: "decisioning.propositionDisplay",
-                    _experience: {
-                        decisioning: {
-                            propositions: [{
-                                id: id,
-                                scope: scope,
-                                scopeDetails: scopeDetails,
-                            }, ],
-                            propositionEventType: {
-                                display: 1
-                            },
-                        },
-                    },
-                },
+                "xdm": {
+                    "eventType": "decisioning.propositionDisplay",
+                    "_experience": {
+                        "decisioning": {
+                            "propositions": [{
+                              	"id": id,
+                                "scope": scope,
+                              	"scopeDetails": scopeDetails
+                            }],
+                            "propositionEventType": {
+                                "display": 1
+                            }
+                        }
+                    }
+                }
             });
         }
     });

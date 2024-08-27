@@ -3,9 +3,9 @@ title: Exemplos De Cenários Do Cliente Resolvidos Pelas Regras De Vinculação 
 description: Saiba mais sobre exemplos de cenários de clientes que são resolvidos pelas regras de vinculação do gráfico de identidade.
 badge: Beta
 exl-id: bccd5b7a-3836-47d8-b976-51747b9c1803
-source-git-commit: be6fdb7e23ed4769ab4ee7ef72532296f020f4a4
+source-git-commit: 04b04807196bb5902e398403612429eae0de3988
 workflow-type: tm+mt
-source-wordcount: '455'
+source-wordcount: '448'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 >[!AVAILABILITY]
 >
->Esse recurso ainda não está disponível; o programa beta para regras de vinculação de gráficos de identidade deve começar em julho nas sandboxes de desenvolvimento. Entre em contato com a equipe de conta do Adobe para obter informações sobre os critérios de participação.
+>As regras de vinculação do gráfico de identidade estão na versão beta. Entre em contato com a equipe de conta do Adobe para obter informações sobre os critérios de participação. O recurso e a documentação estão sujeitos a alterações.
 
 Este documento descreve cenários de exemplo que você pode considerar ao configurar regras de vinculação de gráficos de identidade.
 

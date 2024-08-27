@@ -3,9 +3,9 @@ title: Interface de configurações de identidade
 description: Saiba como usar a interface do usuário de configurações de identidade.
 badge: Beta
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
-source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
+source-git-commit: 04b04807196bb5902e398403612429eae0de3988
 workflow-type: tm+mt
-source-wordcount: '515'
+source-wordcount: '529'
 ht-degree: 0%
 
 ---
@@ -55,7 +55,7 @@ Quando você terminar as configurações, selecione **[!UICONTROL Avançar]**. U
 
 ![Página de validação com Término realçada.](../images/rules/finish.png)
 
-Um aviso é exibido indicando que as novas configurações não terão implicações nos links existentes em um gráfico de identidade e nos fragmentos de perfil de evento de experiência que já foram assimilados. Além disso, você será notificado de que levará até seis horas para que suas novas configurações sejam refletidas no sistema. Para confirmar, digite o nome da sandbox e selecione **[!UICONTROL Confirmar]**.
+Uma mensagem de aviso é exibida, indicando que os gráficos existentes só serão afetados pelo algoritmo do gráfico se forem atualizados **depois de salvar suas configurações**, e que a identidade principal dos fragmentos de evento no Perfil de cliente em tempo real não será atualizada mesmo após as alterações de prioridade do namespace. Além disso, você será notificado de que levará até **seis horas** para que as novas configurações entrem em vigor. Para confirmar, digite o nome da sandbox e selecione **[!UICONTROL Confirmar]**.
 
 ![A janela de confirmação que exibe um aviso de atraso de cerca de seis horas antes que as configurações sejam processadas.](../images/rules/confirm-settings.png)
 

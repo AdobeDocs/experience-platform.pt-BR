@@ -2,7 +2,7 @@
 title: Painéis personalizados
 description: Saiba como criar e gerenciar painéis personalizados onde você pode criar, adicionar e editar widgets personalizados para visualizar as métricas principais.
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 2ddfa221ecdebad81343516935e81691021e1fbc
 workflow-type: tm+mt
 source-wordcount: '1624'
 ht-degree: 3%
@@ -37,7 +37,7 @@ A caixa de diálogo [!UICONTROL Criar painel] é exibida. Insira um nome descrit
 
 ![A caixa de diálogo Criar painel.](./images/user-defined-dashboards/create-dashboard-dialog.png)
 
-Os usuários que compraram o Data Distiller SKU têm a opção de usar consultas SQL personalizadas para criar seus insights. Consulte o [Guia de criação de insights personalizáveis](./data-distiller/customizable-insights/overview.md) para obter instruções sobre este fluxo de trabalho.
+Os usuários que compraram o Data Distiller SKU têm a opção de usar consultas SQL personalizadas para criar seus insights. Consulte o [guia de criação do SQL Insight](./data-distiller/sql-insights/overview.md) para obter instruções sobre este fluxo de trabalho.
 
 O painel em branco recém-criado é exibido com o nome escolhido no canto superior esquerdo da exibição.
 

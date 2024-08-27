@@ -5,10 +5,10 @@ breadcrumb-title: Manual de painéis
 user-guide-description: Saiba como visualizar dados na Experience Platform por meio de painéis personalizáveis.
 feature: Dashboards
 role: Developer,User
-source-git-commit: 3ebd17eced73424135fc93a90f05d758912eb7d0
+source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
 workflow-type: tm+mt
-source-wordcount: '132'
-ht-degree: 34%
+source-wordcount: '133'
+ht-degree: 35%
 
 ---
 
@@ -22,15 +22,17 @@ ht-degree: 34%
 * [Baixar painéis no PDF](download.md)
 * Distiller de dados {#data-distiller}
    * [Visão geral](data-distiller/overview.md)
-   * Insights personalizáveis para relatórios estendidos do aplicativo {#customizable-insights}
-      * [Visão geral](data-distiller/customizable-insights/overview.md)
-      * [Modo pro da consulta (criação do gráfico SQL)](data-distiller/customizable-insights/query-pro-mode.md)
+   * SQl Insights para relatórios de aplicativo estendido {#sql-insights}
+      * [Visão geral](data-distiller/sql-insights/overview.md)
+   * Consultar modo pro {#query-pro-mode}
+      * [Visão geral](data-distiller/query-pro-mode/overview.md)
       * Filtros {#filters}
-         * [Filtro de data](data-distiller/customizable-insights/filters/date-filter.md)
-         * [Filtro global](data-distiller/customizable-insights/filters/global-filter.md)
-      * [Exibir mais](data-distiller/customizable-insights/view-more.md)
-      * [Exibir SQL](data-distiller/customizable-insights/view-sql.md)
-      * [Baixar como CSV](data-distiller/customizable-insights/download-csv.md)
+         * [Filtro de data](data-distiller/query-pro-mode/filters/date-filter.md)
+         * [Filtro global](data-distiller/query-pro-mode/filters/global-filter.md)
+      * [Exibir mais](data-distiller/query-pro-mode/view-more.md)
+      * [Exibir SQL](data-distiller/query-pro-mode/view-sql.md)
+      * [Baixar como CSV](data-distiller/query-pro-mode/download-csv.md)
+      * [Exportar como PDF](data-distiller/query-pro-mode/export-pdf.md)
 * Painéis de controle disponíveis {#guides}
    * [Perfis](guides/profiles.md)
    * [Perfis de conta](guides/account-profiles.md)

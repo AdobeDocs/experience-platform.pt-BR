@@ -2,7 +2,7 @@
 title: Notas de versão da Adobe Experience Platform de outubro de 2022
 description: As notas de versão de outubro de 2022 da Adobe Experience Platform.
 exl-id: 61ef2472-5e79-433f-9f60-b1245f619b42
-source-git-commit: 18c1d32bbc2732c38a9c37ee8fb9d36a23d4e515
+source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
 workflow-type: tm+mt
 source-wordcount: '1135'
 ht-degree: 30%
@@ -101,7 +101,7 @@ O Query Service permite usar SQL padrão para consultar dados no [!DNL Data Lake
 | Recurso | Descrição |
 | --- | --- |
 | Monitorar consultas por meio da interface do usuário da Platform | A guia Serviço de Consulta [!UICONTROL Consultas Agendadas] fornece visibilidade aprimorada para o status de todos os trabalhos de consulta por meio da interface. Agora você pode encontrar informações importantes sobre o status das execuções de consulta, incluindo mensagens de erro e códigos em caso de falha, na guia [!UICONTROL Consultas agendadas]. Também é possível assinar alertas por meio da interface do usuário para qualquer uma dessas consultas com base em seus status. Consulte o [documento Monitorar consultas](../../query-service/ui/monitor-queries.md) para saber mais sobre este recurso. |
-| Consultar modelo de dados de insights de relatórios acelerado | Como parte do SKU do Data Distiller, o armazenamento acelerado de consultas permite reduzir o tempo e o poder de processamento necessários para obter insights críticos de seus dados. Com o armazenamento acelerado da query, é possível criar um modelo de dados personalizado e/ou estender modelos de dados existentes do Adobe Real-time Customer Data Platform para melhorar os insights do relatório e suas visualizações. Consulte o [documento de insights de relatórios de armazenamento acelerado da consulta](../../query-service/data-distiller/customizable-insights/reporting-insights-data-model.md) para saber mais sobre este recurso. |
+| Consultar modelo de dados de insights de relatórios acelerado | Como parte do SKU do Data Distiller, o armazenamento acelerado de consultas permite reduzir o tempo e o poder de processamento necessários para obter insights críticos de seus dados. Com o armazenamento acelerado da query, é possível criar um modelo de dados personalizado e/ou estender modelos de dados existentes do Adobe Real-time Customer Data Platform para melhorar os insights do relatório e suas visualizações. Consulte o [documento de insights de relatórios de armazenamento acelerado da consulta](../../query-service/data-distiller/sql-insights/reporting-insights-data-model.md) para saber mais sobre este recurso. |
 
 {style="table-layout:auto"}
 

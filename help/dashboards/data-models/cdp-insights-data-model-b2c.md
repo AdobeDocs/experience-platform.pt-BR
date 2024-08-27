@@ -4,7 +4,7 @@ description: Saiba como usar consultas SQL com os Modelos de dados do Real-time 
 badgeB2B: label="Edição B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="Edição B2P" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 61bc7f23-9f79-4c75-a515-85dd9dda2d02
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
 workflow-type: tm+mt
 source-wordcount: '1155'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Edição B2C do modelo de dados do Real-time Customer Data Platform Insights
 
-O Modelo de Dados do Real-time Customer Data Platform Insights para o [B2C Edition](../../rtcdp/overview.md#rtcdp-b2c) expõe os modelos de dados e o SQL que potencializam os insights para vários widgets de perfil, destino e segmentação. Você pode personalizar esses modelos de consulta SQL para criar relatórios do Real-Time CDP para seus casos de uso de marketing e KPI (indicador chave de desempenho). Esses insights podem ser usados como widgets personalizados para seus painéis definidos pelo usuário. Consulte a documentação dos insights de relatório do repositório acelerado de consulta para saber [como criar um modelo de dados de insights de relatório por meio do Serviço de consulta para uso com dados de repositório acelerados e painéis definidos pelo usuário](../../query-service/data-distiller/customizable-insights/reporting-insights-data-model.md).
+O Modelo de Dados do Real-time Customer Data Platform Insights para o [B2C Edition](../../rtcdp/overview.md#rtcdp-b2c) expõe os modelos de dados e o SQL que potencializam os insights para vários widgets de perfil, destino e segmentação. Você pode personalizar esses modelos de consulta SQL para criar relatórios do Real-Time CDP para seus casos de uso de marketing e KPI (indicador chave de desempenho). Esses insights podem ser usados como widgets personalizados para seus painéis definidos pelo usuário. Consulte a documentação dos insights de relatório do repositório acelerado de consulta para saber [como criar um modelo de dados de insights de relatório por meio do Serviço de consulta para uso com dados de repositório acelerados e painéis definidos pelo usuário](../../query-service/data-distiller/sql-insights/reporting-insights-data-model.md).
 
 >[!NOTE]
 >

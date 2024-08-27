@@ -2,7 +2,7 @@
 title: Governança de dados no serviço de consulta
 description: Esta visão geral abrange os principais elementos da governança de dados no Serviço de query do Experience Platform.
 exl-id: 37543d43-bd8c-4bf9-88e5-39de5efe3164
-source-git-commit: 18c1d32bbc2732c38a9c37ee8fb9d36a23d4e515
+source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
 workflow-type: tm+mt
 source-wordcount: '3129'
 ht-degree: 0%
@@ -93,7 +93,7 @@ A palavra-chave `CREATE VIEW` define uma exibição de uma consulta, mas a exibi
 
 #### Criar restrições de acesso baseadas em campo em conjuntos de dados acelerados {#create-field-based-access-restrictions-on-accelerated-datasets}
 
-Com a [capacidade de controle de acesso baseada em atributos](../../access-control/abac/overview.md), você pode definir escopos organizacionais ou de uso de dados em conjuntos de dados de fatos e dimensões no [repositório acelerado](../data-distiller/customizable-insights/send-accelerated-queries.md). Isso permite que os administradores gerenciem o acesso a segmentos específicos e gerenciem melhor o acesso fornecido a usuários ou grupos de usuários.
+Com a [capacidade de controle de acesso baseada em atributos](../../access-control/abac/overview.md), você pode definir escopos organizacionais ou de uso de dados em conjuntos de dados de fatos e dimensões no [repositório acelerado](../data-distiller/sql-insights/send-accelerated-queries.md). Isso permite que os administradores gerenciem o acesso a segmentos específicos e gerenciem melhor o acesso fornecido a usuários ou grupos de usuários.
 
 Para criar restrições de acesso baseadas em campo em conjuntos de dados acelerados, você pode usar consultas CTAS do Serviço de consulta para criar conjuntos de dados acelerados e estruturar esses conjuntos de dados com base em esquemas XDM ou esquemas ad hoc existentes. Os administradores podem [adicionar e editar rótulos de uso de dados para o esquema](../../xdm/tutorials/labels.md#edit-the-labels-for-the-schema-or-field) ou [esquema ad hoc](./ad-hoc-schema-labels.md#edit-governance-labels). Você pode aplicar, criar e editar rótulos para seus esquemas do espaço de trabalho [!UICONTROL Rótulos] na interface de usuário de [!UICONTROL Esquemas].
 

@@ -3,7 +3,7 @@ title: Algoritmo de otimização de identidade
 description: Saiba mais sobre o Algoritmo de otimização de identidade no Serviço de identidade.
 badge: Beta
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: 8762ea655399fbc82c63c87310337b8e875bd5bc
+source-git-commit: 84ad4a5f522b04430ee304f1a812da25e26f6954
 workflow-type: tm+mt
 source-wordcount: '1533'
 ht-degree: 1%
@@ -68,7 +68,7 @@ Quando a restrição de namespace exclusivo é violada, o algoritmo de otimizaç
 * O gráfico seria restabelecido com base na ordem acima. Se a adição do link violar a restrição de limite (por exemplo, o gráfico contiver duas ou mais identidades com um namespace exclusivo), os links serão removidos.
 * O gráfico resultante será compatível com a restrição de namespace exclusivo que você configurou.
 
-![Um diagrama que visualiza o algoritmo de otimização de identidade.](../images/ido.png)
+![Um diagrama que visualiza o algoritmo de otimização de identidade.](../images/ido_algorithm.png)
 
 ## Exemplos de cenários para o algoritmo de otimização de identidade
 

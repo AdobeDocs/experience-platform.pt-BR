@@ -2,9 +2,9 @@
 title: Comportamento de exportação de perfil
 description: Saiba como o comportamento de exportação de perfil varia entre os diferentes padrões de integração compatíveis com destinos Experience Platform.
 exl-id: 2be62843-0644-41fa-a860-ccd65472562e
-source-git-commit: 322510055bd8b8803292a2b4af9df9e1dbee7ffb
+source-git-commit: 223734e2998568f3b9b78933fa5adf740b521f5f
 workflow-type: tm+mt
-source-wordcount: '2931'
+source-wordcount: '2930'
 ht-degree: 0%
 
 ---
@@ -145,9 +145,11 @@ Em qualquer uma das situações de exportação acima, os arquivos exportados in
 
 ### Exportações incrementais de arquivos {#incremental-file-exports}
 
-Nem todas as atualizações em um perfil qualificam um perfil para ser incluído em exportações de arquivos incrementais. Por exemplo, se um atributo foi adicionado ou removido de um perfil, isso não inclui o perfil na exportação. Somente perfis para os quais o atributo `segmentMembership` foi alterado serão incluídos em arquivos exportados. Em outras palavras, somente se o perfil se tornar parte do público-alvo ou for removido do público-alvo será incluído nas exportações de arquivos incrementais.
+Nem todas as atualizações em um perfil qualificam um perfil para ser incluído em exportações de arquivos incrementais. Por exemplo, se um atributo foi adicionado ou removido de um perfil, isso não inclui o perfil na exportação.
 
-Da mesma forma, se uma nova identidade (novo endereço de email, número de telefone, ECID etc.) for adicionada a um perfil no [gráfico de identidade](/help/identity-service/features/identity-graph-viewer.md), isso não representa um motivo para incluir o perfil em uma nova exportação de arquivo incremental.
+No entanto, quando o atributo `segmentMembership` em um perfil for alterado, o perfil será incluído nos arquivos exportados. Em outras palavras, se o perfil se tornar parte do público-alvo ou for removido do público-alvo, ele será incluído nas exportações de arquivos incrementais.
+
+Da mesma forma, se uma nova identidade (novo endereço de email, número de telefone, ECID etc.) for adicionada a um perfil no [gráfico de identidade](/help/identity-service/features/identity-graph-viewer.md), isso fará com que o perfil seja incluído em uma nova exportação de arquivo incremental.
 
 Se um novo público-alvo for adicionado a um mapeamento de destino, as qualificações e exportações de outro segmento não serão afetadas. Os agendamentos de exportação são configurados individualmente por público-alvo e os arquivos são exportados separadamente para cada segmento, mesmo que os públicos-alvo tenham sido adicionados ao mesmo fluxo de dados de destino.
 
@@ -157,10 +159,10 @@ Por exemplo, na configuração de exportação ilustrada abaixo, em que um públ
 
 ![Exportar configuração com vários atributos selecionados.](/help/destinations/assets/how-destinations-work/export-selection-batch-destination.png)
 
-* Um perfil é incluído em uma exportação de arquivo incremental quando ele é qualificado ou desqualificado para o segmento.
-* Um perfil *não* está incluído em uma exportação de arquivo incremental quando um novo número de telefone é adicionado ao gráfico de identidade.
-* Um perfil *não* está incluído em uma exportação de arquivo incremental quando o valor de qualquer um dos campos XDM mapeados, como `xdm: loyalty.points`, `xdm: loyalty.tier`, `xdm: personalEmail.address`, é atualizado em um perfil.
-* Sempre que o campo XDM `segmentMembership.status` é mapeado no fluxo de trabalho de ativação de destino, os perfis que saem do público também são incluídos em arquivos incrementais exportados, com status `exited`.
+* Um perfil *é* incluído em uma exportação de arquivo incremental quando ele se qualifica ou desqualifica para o segmento.
+* Um perfil *é* incluído em uma exportação de arquivo incremental quando um novo número de telefone é adicionado ao gráfico de identidade.
+* Um perfil *não é* incluído em uma exportação de arquivo incremental quando o valor de qualquer um dos campos XDM mapeados, como `xdm: loyalty.points`, `xdm: loyalty.tier`, `xdm: personalEmail.address`, é atualizado em um perfil.
+* Sempre que o campo XDM `segmentMembership.status` é mapeado no fluxo de trabalho de ativação de destino, os perfis que saem do público *também são incluídos* em arquivos incrementais exportados, com status `exited`.
 
 >[!ENDSHADEBOX]
 
@@ -184,7 +186,7 @@ Na primeira exportação de arquivo após a configuração do fluxo de trabalho 
 
 | O que determina uma exportação de destino | O que está incluído no arquivo exportado |
 |---------|----------|
-| <ul><li>O cronograma de exportação definido na interface ou na API determina o início de uma exportação de destino.</li><li>Quaisquer alterações na associação de público-alvo de um perfil, seja ele qualificado ou desqualificado do segmento, qualificam um perfil para ser incluído em exportações incrementais. As alterações nos atributos ou nos mapas de identidade para um perfil *não* qualificam um perfil para ser incluído em exportações incrementais.</li></ul> | <p>Os perfis para os quais a associação de público-alvo foi alterada, juntamente com as informações mais recentes para cada atributo XDM selecionado para exportação.</p><p>Perfis com o status de saída são incluídos em exportações de destino se o campo XDM `segmentMembership.status` for selecionado na etapa de mapeamento.</p> |
+| <ul><li>O cronograma de exportação definido na interface ou na API determina o início de uma exportação de destino.</li><li>Quaisquer alterações na associação de público-alvo de um perfil, seja ele qualificado ou desqualificado do segmento, ou alterações em mapas de identidade, qualificam um perfil para ser incluído em exportações incrementais. As alterações nos atributos de um perfil *não* qualificam um perfil para ser incluído em exportações incrementais.</li></ul> | <p>Os perfis para os quais a associação de público-alvo foi alterada, juntamente com as informações mais recentes para cada atributo XDM selecionado para exportação.</p><p>Perfis com o status de saída são incluídos em exportações de destino se o campo XDM `segmentMembership.status` for selecionado na etapa de mapeamento.</p> |
 
 {style="table-layout:fixed"}
 

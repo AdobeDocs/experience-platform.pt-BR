@@ -1,9 +1,10 @@
 ---
 title: Gerenciador de Permissões de Controle de Acesso Baseado em Atributo
 description: Saiba como usar o Gerenciador de permissões no Adobe Experience Platform para gerar relatórios e validar permissões de acesso.
-source-git-commit: 3f2a899705d2c05b12300b6d5b0b860ad2c05bfd
+exl-id: 4c2b8b8e-ac4f-4c6e-a23f-66f658bb6e24
+source-git-commit: 7e65e88bc49ea28d567e8204db877d22ddb8d9a6
 workflow-type: tm+mt
-source-wordcount: '612'
+source-wordcount: '603'
 ht-degree: 1%
 
 ---
@@ -40,7 +41,7 @@ Para um relatório mais granular, você pode especificar o recurso com ações e
 
 >[!INFO]
 >
->[!UICONTROL Recurso], [!UICONTROL Ações] e [!UICONTROL Sandboxes] não são campos obrigatórios. Somente um [!UICONTROL Recurso] pode ser selecionado para cada relatório. Uma ação ou sandbox pode ser removida depois de adicionada selecionando o **&#39;x&#39;** ao lado da seleção que você deseja remover.
+>[!UICONTROL Recurso], [!UICONTROL Ações] e [!UICONTROL Sandboxes] não são campos obrigatórios. Uma ação ou sandbox pode ser removida depois de adicionada selecionando o **&#39;x&#39;** ao lado da seleção que você deseja remover.
 
 ![Os menus suspensos Recurso, Ações, Sandboxes e Mostrar Resultados foram destacados](../../images/permission-manager/users-additional-attributes-select.png)
 

@@ -4,9 +4,9 @@ type: Tutorial
 description: Saiba como transmitir dados do banco de dados do Snwoflake para o Experience Platform
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 49d488f1-90d8-452a-9f3e-02afdcc79b09
-source-git-commit: 62bcaa532cdec68a2f4f62e5784c35b91b7d5743
+source-git-commit: f39ee3af176e3d9b8ad04bfad81793db0ebe71a7
 workflow-type: tm+mt
-source-wordcount: '1604'
+source-wordcount: '1648'
 ht-degree: 3%
 
 ---
@@ -54,7 +54,7 @@ Quando terminar, selecione **[!UICONTROL Conectar à origem]** e aguarde algum t
 
 | Credencial | Descrição |
 | --- | --- |
-| Conta | O nome da sua conta [!DNL Snowflake]. |
+| Conta | O nome da sua conta [!DNL Snowflake]. Para convenções sobre nomes de conta, leia o [[!DNL Snowflake Streaming] guia de autenticação](../../../../connectors/databases/snowflake-streaming.md#gather-required-credentials). |
 | Warehouse | O nome do warehouse [!DNL Snowflake]. Os depósitos gerenciam a execução de consultas em [!DNL Snowflake]. Cada warehouse [!DNL Snowflake] é independente um do outro e deve ser acessado individualmente para trazer dados para o Experience Platform. |
 | Banco de dados | O nome do banco de dados [!DNL Snowflake]. O banco de dados contém os dados que você deseja trazer para o Experience Platform. |
 | Esquema | (Opcional) O esquema de banco de dados associado à sua conta do [!DNL Snowflake]. |
@@ -78,7 +78,9 @@ Selecione **[!UICONTROL Avançar]** para continuar.
 
 >[!IMPORTANT]
 >
->Uma coluna de carimbo de data e hora deve existir na tabela de origem para que um fluxo de dados de transmissão seja criado. O carimbo de data e hora é necessário para que o Experience Platform saiba quando os dados serão assimilados e quando os dados incrementais serão transmitidos. Você pode adicionar retroativamente uma coluna de carimbo de data e hora para uma conexão existente e criar um novo fluxo de dados.
+>* Uma coluna de carimbo de data e hora deve existir na tabela de origem para que um fluxo de dados de transmissão seja criado. O carimbo de data e hora é necessário para que o Experience Platform saiba quando os dados serão assimilados e quando os dados incrementais serão transmitidos. Você pode adicionar retroativamente uma coluna de carimbo de data e hora para uma conexão existente e criar um novo fluxo de dados.
+>
+>* Verifique se o uso de letras maiúsculas e minúsculas nos campos de dados do arquivo de dados de origem de amostra está de acordo com as orientações de [!DNL Snowflake] sobre resolução de casos para identificadores. Leia o [[!DNL Snowflake] documento sobre a capitalização do identificador](https://docs.snowflake.com/en/sql-reference/identifiers-syntax#label-identifier-casing) para obter mais informações.
 
 A etapa [!UICONTROL Selecionar dados] é exibida. Nesta etapa, você deve selecionar os dados que deseja importar para o Experience Platform, configurar carimbos de data e hora e fusos horários e fornecer um arquivo de dados de origem de amostra para a assimilação de dados brutos.
 

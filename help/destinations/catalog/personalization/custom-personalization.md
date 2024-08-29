@@ -3,10 +3,10 @@ keywords: personalização personalizada, destino, destino personalizado da expe
 title: Conexão de personalização personalizada
 description: Esse destino fornece personalização externa, sistemas de gerenciamento de conteúdo, servidores de anúncios e outros aplicativos que estão sendo executados no site uma maneira de recuperar informações de público-alvo do Adobe Experience Platform. Esse destino fornece personalização em tempo real com base na associação do público-alvo do perfil do usuário.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: 182176aa2e588aa356d5fea23b49f17bc8a50314
+source-git-commit: 0f70e072402bca055b96195ded91816810759fc2
 workflow-type: tm+mt
-source-wordcount: '912'
-ht-degree: 10%
+source-wordcount: '962'
+ht-degree: 9%
 
 ---
 
@@ -35,7 +35,11 @@ Configure esse destino para permitir que plataformas de personalização externa
 
 ## Pré-requisitos {#prerequisites}
 
-Esta integração é fornecida pelo [Adobe Experience Platform Web SDK](/help/web-sdk/home.md) ou pelo [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/). Você deve usar um desses SDKs para usar esse destino.
+Esse destino requer o uso de um dos seguintes métodos de coleta de dados, dependendo de sua implementação:
+
+* Use o [Adobe Experience Platform Web SDK](/help/web-sdk/home.md) se desejar coletar dados do seu site.
+* Use o [SDK móvel do Adobe Experience Platform](https://developer.adobe.com/client-sdks/documentation/) se desejar coletar dados do seu aplicativo móvel.
+* Use a [API do Servidor Edge Network](../../../server-api/overview.md) se não estiver usando o [SDK da Web](/help/web-sdk/home.md) ou o [SDK Móvel](https://developer.adobe.com/client-sdks/documentation/), ou se quiser personalizar a experiência do usuário com base nos atributos do perfil.
 
 >[!IMPORTANT]
 >

@@ -2,7 +2,7 @@
 title: Guia de perguntas do Assistente de IA
 description: Leia este documento para conhecer exemplos de perguntas que você pode usar ao consultar o Assistente de IA.
 exl-id: d16d1262-cc2d-45c9-94c4-b86132183442
-source-git-commit: 196a39edd493dcc8296f4b6d2904393dd6f6cdd4
+source-git-commit: fc87c28d7019e123d974e4d2ad307928a3d3fe89
 workflow-type: tm+mt
 source-wordcount: '1524'
 ht-degree: 1%
@@ -33,6 +33,8 @@ As seguintes perguntas de exemplo são agrupadas por objetivos que você pode re
 ## Insights operacionais por entidade e perguntas de conhecimento do produto{#objects-questions}
 
 As perguntas a seguir são agrupadas por objetos de dados e são classificadas como [insights operacionais](./home.md#operational-insights) ou [conhecimento sobre o produto](./home.md#product-knowledge).
+
+![](./images/prompt.png)
 
 * **Públicos-alvo - Insights operacionais**
    * Quais públicos-alvo usam outros públicos-alvo?

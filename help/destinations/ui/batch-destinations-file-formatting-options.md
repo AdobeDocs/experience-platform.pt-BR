@@ -2,10 +2,10 @@
 description: Saiba como configurar opções de formatação de arquivo ao ativar dados para destinos baseados em arquivo
 title: Configurar opções de formatação de arquivo para destinos baseados em arquivo
 exl-id: f59b1952-e317-40ba-81d1-35535e132a72
-source-git-commit: 0eb17d4d7ad9db3737a14f383bdafe40d59eb12c
+source-git-commit: 4dd6e8685ff5cc61342b20e971216416918b95da
 workflow-type: tm+mt
-source-wordcount: '1193'
-ht-degree: 19%
+source-wordcount: '1228'
+ht-degree: 17%
 
 ---
 
@@ -68,17 +68,21 @@ Veja os exemplos abaixo do conteúdo nos arquivos CSV exportados com cada uma da
 >title="Caractere de aspas"
 >abstract="Use essa opção se desejar remover as aspas duplas das strings exportadas. Consulte a documentação para ver exemplos de cada seleção."
 
-Use essa opção se desejar remover as aspas duplas das strings exportadas. As opções disponíveis são:
+Use essa opção para controlar se as aspas duplas devem ser removidas ou mantidas nas cadeias de caracteres exportadas.
+
+As opções disponíveis são:
 
 * **[!UICONTROL Caractere Nulo (\0000)]**. Use essa opção para remover aspas duplas de arquivos CSV exportados.
-* **[!UICONTROL Aspas Duplas (&quot;)]**. Use essa opção para manter aspas duplas nos arquivos CSV exportados.
+* **[!UICONTROL Aspas Duplas (&quot;)]**. Use essa opção quando os valores da string contiverem um delimitador ou aspas duplas. Essa opção ajuda a manter os delimitadores ou aspas duplas nos arquivos CSV exportados, para que você possa identificar corretamente qual valor corresponde a qual campo.
 
 #### Exemplos
 
+Considere o valor de entrada `Anna,"Doe,John"`.
+
 Veja os exemplos abaixo do conteúdo de arquivos CSV exportados com cada uma das seleções na interface.
 
-* Exemplo de saída com **[!UICONTROL Caractere nulo (\0000)]** selecionado: `Test,John,LastName`
-* Exemplo de saída com **[!UICONTROL Aspas Duplas (&quot;)]** selecionadas: `"Test","John","LastName"`
+* Exemplo de saída com **[!UICONTROL Caractere nulo (\0000)]** selecionado: `Anna,Doe,John`
+* Exemplo de saída com **[!UICONTROL Aspas Duplas (&quot;)]** selecionadas: `Anna,"Doe,John"`
 
 ### Caractere de escape {#escape-character}
 

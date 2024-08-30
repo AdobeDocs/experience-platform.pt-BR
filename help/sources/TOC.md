@@ -5,9 +5,9 @@ breadcrumb-title: Guia dos conectores de origem
 user-guide-description: Assimilar dados de várias fontes. Saiba como estruturar, rotular e aprimorar os dados já assimilados.
 feature: Sources
 role: Developer
-source-git-commit: 485881d4cbba09ae89d26b3613907174c0f24cc3
+source-git-commit: b18f93078d3cdbd0498b5b282236ac9b7bad153c
 workflow-type: tm+mt
-source-wordcount: '1046'
+source-wordcount: '1043'
 ht-degree: 30%
 
 ---
@@ -28,7 +28,6 @@ ht-degree: 30%
       - Mapeamentos de campos {#mapping}
          - [Mapeamentos de campo do Analytics](connectors/adobe-applications/mapping/analytics.md)
          - [mapeamentos de campo Audience Manager](connectors/adobe-applications/mapping/audience-manager.md)
-         - [Mapeamentos de campo de público alvo](connectors/adobe-applications/mapping/target.md)
          - [mapeamentos de campo Marketo Engage](connectors/adobe-applications/mapping/marketo.md)
          - [Mapeamentos de campo do Microsoft Dynamics](connectors/adobe-applications/mapping/dynamics.md)
          - [Mapeamentos de campo do Salesforce](connectors/adobe-applications/mapping/salesforce.md)

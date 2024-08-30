@@ -3,10 +3,10 @@ keywords: destino de armazenamento na nuvem;armazenamento na nuvem
 title: Visão geral dos destinos do Cloud Storage
 description: A Adobe Experience Platform pode fornecer seus públicos-alvo como arquivos de dados para seus locais de armazenamento na nuvem do Amazon S3, AWS Kinesis, Azure Event Hubs ou SFTP.
 exl-id: d29f0a6e-b323-4f78-bbd0-dee2f1e0fedb
-source-git-commit: 8b8abea65ee0448594113ca77f75b84293646146
+source-git-commit: 9c1699471d5b3c3c725e46581e256a0c07f08a49
 workflow-type: tm+mt
-source-wordcount: '387'
-ht-degree: 6%
+source-wordcount: '453'
+ht-degree: 5%
 
 ---
 
@@ -62,6 +62,13 @@ Caminho da pasta no local de armazenamento: `acme/campaigns/2021/25768be6-ebd5-4
 
 Entrada: `acme/campaigns/2021/%SEGMENT_NAME%/%SEGMENT_ID%`
 Caminho da pasta no local de armazenamento: `acme/campaigns/2021/Luxury Audience/25768be6-ebd5-45cc-8913-12fb3f348615`
+
+**Mais macros**
+
+Semelhante aos exemplos acima, você pode usar mais macros para criar uma estrutura de pastas personalizada no local da pasta:
+
+* `%DATETIME%` ou `%TIMESTAMP%` para adicionar um nome de pasta personalizado com base no tempo de exportação dos arquivos. O formato da primeira macro é `MMDDYYYY_HHMMSS` e um formato UNIX de 10 dígitos para a segunda macro.
+* `%DESTINATION_NAME%` para adicionar uma pasta personalizada com base no nome do fluxo de dados de destino.
 
 ## Tipo de exportação de dados {#export-type}
 

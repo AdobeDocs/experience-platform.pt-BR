@@ -2,9 +2,9 @@
 title: Conexão com o Amazon S3
 description: Crie uma conexão de saída ativa com seu armazenamento Amazon Web Services (AWS) S3 para exportar arquivos de dados CSV da Adobe Experience Platform periodicamente para seus próprios buckets do S3.
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 8dbdfb1e8e574647bf621a320ee07ecc7a653a6c
 workflow-type: tm+mt
-source-wordcount: '1440'
+source-wordcount: '1499'
 ht-degree: 17%
 
 ---
@@ -109,7 +109,7 @@ Use esse método de autenticação quando quiser inserir sua chave de acesso e c
 
 Use esse tipo de autenticação se preferir não compartilhar chaves de conta e chaves secretas com a Adobe. Em vez disso, o Experience Platform se conecta ao local do Amazon S3 usando acesso com base em função.
 
-Para fazer isso, você precisa criar no console do AWS um usuário presumido para o Adobe com as [permissões necessárias certas](#required-s3-permission) para gravar em seus buckets do Amazon S3. Crie uma **[!UICONTROL Entidade confiável]** no AWS com a conta Adobe **[!UICONTROL 670664943635]**. Para obter mais informações, consulte a [documentação do AWS sobre criação de funções](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html).
+Para fazer isso, você precisa criar no console do AWS um usuário presumido para o Adobe com as [permissões necessárias certas](#minimum-permissions-iam-user) para gravar em seus buckets do Amazon S3. Crie uma **[!UICONTROL Entidade confiável]** no AWS com a conta Adobe **[!UICONTROL 670664943635]**. Para obter mais informações, consulte a [documentação do AWS sobre criação de funções](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html).
 
 * **[!DNL Role]**: Cole o ARN da função que você criou no AWS para o usuário Adobe. O padrão é semelhante a `arn:aws:iam::800873819705:role/destinations-role-customer`.
 * **[!UICONTROL Chave de criptografia]**: como opção, você pode anexar sua chave pública formatada em RSA para adicionar criptografia aos arquivos exportados. Veja um exemplo de uma chave de criptografia formatada corretamente na imagem abaixo.
@@ -162,6 +162,38 @@ Para conectar e exportar dados com êxito para o local de armazenamento do [!DNL
 * `s3:ListBucket`
 * `s3:PutObject`
 * `s3:ListMultipartUploadParts`
+
+#### Permissões mínimas necessárias para autenticação de função assumida pelo IAM {#minimum-permissions-iam-user}
+
+Ao configurar a função IAM como cliente, verifique se a política de permissão associada à função inclui as ações necessárias para a pasta de destino no bucket e a ação `s3:ListBucket` para a raiz do bucket. Veja abaixo um exemplo da política de permissões mínimas para este tipo de autenticação:
+
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": [
+                "s3:PutObject",
+                "s3:GetObject",
+                "s3:DeleteObject",
+                "s3:GetBucketLocation",
+                "s3:ListMultipartUploadParts"
+            ],
+            "Resource": "arn:aws:s3:::bucket/folder/*"
+        },
+        {
+            "Sid": "VisualEditor1",
+            "Effect": "Allow",
+            "Action": [
+                "s3:ListBucket"
+            ],
+            "Resource": "arn:aws:s3:::bucket"
+        }
+    ]
+}  
+```
 
 <!--
 

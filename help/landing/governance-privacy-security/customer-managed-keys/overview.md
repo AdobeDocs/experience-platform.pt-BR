@@ -2,9 +2,9 @@
 title: Chaves gerenciadas pelo cliente no Adobe Experience Platform
 description: Saiba como configurar suas próprias chaves de criptografia para dados armazenados no Adobe Experience Platform.
 exl-id: cd33e6c2-8189-4b68-a99b-ec7fccdc9b91
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: 5a5d35dad5f1b89c0161f4b29722b76c3caf3609
 workflow-type: tm+mt
-source-wordcount: '716'
+source-wordcount: '752'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ Os dados armazenados no Adobe Experience Platform são criptografados em repouso
 
 >[!NOTE]
 >
->Os dados no data lake e no armazenamento de perfis da Adobe Experience Platform são criptografados usando CMK. Eles são considerados seus principais armazenamentos de dados.
+>Os dados do perfil do cliente armazenados no [!DNL Azure Data Lake] da plataforma e no armazenamento de perfil do [!DNL Azure Cosmos DB] são criptografados exclusivamente usando CMK, uma vez habilitados. A revogação de chaves em seus armazenamentos de dados primários pode levar de **alguns minutos a 24 horas**, e pode demorar mais, **até 7 dias** para armazenamentos de dados transitórios ou secundários. Para obter detalhes adicionais, consulte a [seção implicações da revogação do acesso à chave](#revoke-access).
 
 Este documento fornece uma visão geral de alto nível do processo de ativação do recurso de chaves gerenciadas pelo cliente (CMK) na Platform e as informações de pré-requisitos necessárias para concluir essas etapas.
 
@@ -54,15 +54,22 @@ O processo é o seguinte:
 
 Quando o processo de configuração estiver concluído, todos os dados integrados na Platform em todas as sandboxes serão criptografados usando a configuração de chave do [!DNL Azure]. Para usar o CMK, você aproveitará a funcionalidade [!DNL Microsoft Azure] que pode fazer parte do [programa de visualização pública](https://azure.microsoft.com/en-ca/support/legal/preview-supplemental-terms/).
 
-## Revogar acesso {#revoke-access}
+## Implicações da revogação do acesso à chave {#revoke-access}
 
-Se quiser revogar o acesso da Platform aos seus dados, você poderá remover a função de usuário associada ao aplicativo do cofre de chaves no [!DNL Azure].
+Revogar ou desabilitar o acesso ao Cofre da chave, chave ou aplicativo CMK pode resultar em interrupções significativas, que incluem alterações nas operações da sua plataforma. Depois que essas chaves forem desativadas, os dados na Platform poderão se tornar inacessíveis e qualquer operação downstream que depende desses dados deixará de funcionar. É fundamental entender totalmente os impactos downstream antes de fazer qualquer alteração nas principais configurações.
 
->[!WARNING]
->
->Desabilitar o cofre de chaves, a Chave ou o aplicativo CMK pode resultar em uma mudança radical. Quando o cofre de chaves, a chave ou o aplicativo CMK estiverem desativados e os dados não estiverem mais acessíveis na Platform, nenhuma operação downstream relacionada a esses dados será mais possível. Certifique-se de entender os impactos de downstream da revogação do acesso da Platform à sua chave antes de fazer alterações na configuração.
+Se você decidir revogar o acesso da Platform aos seus dados, poderá fazê-lo removendo a função de usuário associada ao aplicativo do Cofre de Chaves no [!DNL Azure].
 
-Após remover o acesso à chave ou desabilitar/excluir a chave do cofre de chaves do [!DNL Azure], pode levar de alguns minutos a 24 horas para que essa configuração se propague para os armazenamentos de dados principais. Os fluxos de trabalho da plataforma também incluem armazenamentos de dados em cache e transitórios, necessários para o desempenho e a funcionalidade principal do aplicativo. A propagação da revogação de CMK por meio desses armazenamentos em cache e transitórios pode levar até sete dias, conforme determinado por seus workflows de processamento de dados. Por exemplo, isso significa que o painel Perfil manteria e exibiria dados de seu armazenamento de dados em cache e levaria sete dias para expirar os dados mantidos nos armazenamentos de dados em cache como parte do ciclo de atualização. O mesmo atraso se aplica para que os dados fiquem disponíveis novamente ao reativar o acesso ao aplicativo.
+### Linhas do tempo de propagação {#propagation-timelines}
+
+Depois que o acesso à chave for revogado do Cofre de Chaves do [!DNL Azure], as alterações serão propagadas da seguinte maneira:
+
+| **Tipo de armazenamento** | **Descrição** | **Linha do tempo** |
+|---|---|---|
+| Armazenamentos de dados principais | Esses armazenamentos incluem os armazenamentos Azure Data Lake e Azure Cosmos DB Profile. Quando o acesso à chave é revogado, os dados ficam inacessíveis. | De **alguns minutos a 24 horas**. |
+| Armazenamento de dados em cache/transitório | Inclui armazenamentos de dados usados para desempenho e funcionalidade de aplicativos principais. O impacto da revogação de chave está atrasado. | **Até 7 dias**. |
+
+Por exemplo, o painel Perfil continuará exibindo dados de seu cache por até sete dias antes de os dados expirarem e serem atualizados. Da mesma forma, a reativação do acesso ao aplicativo leva o mesmo tempo para restaurar a disponibilidade dos dados nesses armazenamentos.
 
 >[!NOTE]
 >

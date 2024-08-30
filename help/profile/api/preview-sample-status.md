@@ -4,7 +4,7 @@ title: Visualizar ponto de extremidade da API Status de amostra (Visualização 
 description: O ponto de extremidade de status da amostra de visualização da API do perfil do cliente em tempo real permite visualizar a amostra bem-sucedida mais recente dos dados do perfil, listar a distribuição do perfil por conjunto de dados e por identidade e gerar relatórios mostrando a sobreposição do conjunto de dados, a sobreposição de identidade e os perfis não compilados.
 role: Developer
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: 49196473f304585193e87393f8dc5dc37be7e4d9
 workflow-type: tm+mt
 source-wordcount: '2906'
 ht-degree: 1%
@@ -84,7 +84,7 @@ A resposta inclui os detalhes do último trabalho de amostra bem-sucedido execut
     "status": true,
     "submissionTimestamp": "2020-08-01 17:57:57.0"
   },
-  "cosmosDocCount": "\"300803\"",
+  "docCount": "\"300803\"",
   "totalFragmentCount": 47429,
   "lastSuccessfulBatchTimestamp": "\"null\"",
   "streamingDriven": "\"false\"",
@@ -101,7 +101,7 @@ A resposta inclui os detalhes do último trabalho de amostra bem-sucedido execut
 |---|---|
 | `numRowsToRead` | O número total de perfis mesclados na amostra. |
 | `sampleJobRunning` | Um valor booleano que retorna `true` quando um trabalho de exemplo está em andamento. Fornece transparência na latência que ocorre de quando um arquivo em lote é carregado para quando ele é realmente adicionado ao armazenamento de Perfil. |
-| `cosmosDocCount` | Contagem total de documentos no Cosmos. |
+| `docCount` | Contagem total de documentos no banco de dados. |
 | `totalFragmentCount` | Número total de fragmentos de perfil no armazenamento Perfil. |
 | `lastSuccessfulBatchTimestamp` | Carimbo de data e hora da última assimilação de lote bem-sucedida. |
 | `streamingDriven` | *Este campo foi descontinuado e não tem significado para a resposta.* |

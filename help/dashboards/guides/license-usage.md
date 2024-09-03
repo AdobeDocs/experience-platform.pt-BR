@@ -4,9 +4,9 @@ title: Painel de Uso da Licença
 description: A Adobe Experience Platform fornece um painel por meio do qual você pode visualizar informações importantes sobre o uso de licença da sua organização.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 41c2d8e28536a140136c7eb20c2a4c3dc343f5fa
+source-git-commit: 3ea67d5bcdaeefd26cd95b89c60d21bef34ecd53
 workflow-type: tm+mt
-source-wordcount: '2466'
+source-wordcount: '2646'
 ht-degree: 6%
 
 ---
@@ -17,13 +17,15 @@ ht-degree: 6%
 >id="platform_dashboards_licenseUsage"
 >title="Painel de uso da licença"
 >abstract="O painel de uso da licença oferece informações sobre os produtos da Adobe Experience Platform que você adquiriu. A visão geral do painel exibe as métricas principais de seus produtos, incluindo o uso de cada uma das métricas principais e o período de licença contratado. O espaço de trabalho de detalhes exibe um detalhamento das métricas para cada produto em sandboxes específicas."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="Expirações automatizadas de conjuntos de dados"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/pseudonymous-profiles" text="Expiração de dados de perfis pseudônimos"
 
 >[!CONTEXTUALHELP]
->id="platform_dashboards_licenseUsage_prediction"
+>id="platform_licenseusage"
 >title="Painel de uso da licença"
 >abstract="O painel de uso da licença oferece informações sobre os produtos da Adobe Experience Platform que você adquiriu. A visão geral do painel exibe as métricas principais de seus produtos, incluindo o uso de cada uma das métricas principais e o período de licença contratado. O espaço de trabalho de detalhes exibe um detalhamento das métricas para cada produto em sandboxes específicas."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html?lang=pt-BR" text="Expirações de conjuntos de dados"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=pt-BR" text="Expirações de dados de perfis pseudônimos"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="Expirações automatizadas de conjuntos de dados"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/pseudonymous-profiles" text="Expiração de dados de perfis pseudônimos"
 
 Você pode exibir informações importantes sobre o uso de licenças da sua organização no painel [!UICONTROL Uso de licenças] do Adobe Experience Platform. As informações exibidas aqui são capturadas durante um instantâneo diário da sua instância da Platform.
 
@@ -73,6 +75,20 @@ Esse painel exibe todos os produtos licenciados da Adobe Experience Platform, in
 A tabela indica a métrica principal de cada produto, pois cada produto pode rastrear várias métricas.
 
 ### [!BADGE Beta]{type=Informative} Uso previsto {#predicted-usage}
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseUsage_prediction"
+>title="Uso previsto"
+abstract="As previsões são baseadas no uso durante os últimos 6 a 7 meses e são geradas no dia 15 de cada mês. Observe que as previsões de uso de licença são aproximações baseadas no uso anterior. Você é responsável por entender o uso real da sua organização e garantir que o uso não vá além do escopo da licença da sua organização com o Adobe. Para reduzir o uso, você pode configurar as expirações de dados de conjunto de dados ou perfil pseudônimo para sandboxes e conjuntos de dados."
+additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="Expirações automatizadas de conjuntos de dados"
+additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/pseudonymous-profiles" text="Expiração de dados de perfis pseudônimos"
+
+[!CONTEXTUALHELP]
+id="platform_licenseusage_prediction"
+title="Uso previsto"
+abstract="As previsões são baseadas no uso durante os últimos 6 a 7 meses e são geradas no dia 15 de cada mês. Observe que as previsões de uso de licença são aproximações baseadas no uso anterior. Você é responsável por entender o uso real da sua organização e garantir que o uso não vá além do escopo da licença da sua organização com o Adobe. Para reduzir o uso, você pode configurar as expirações de dados de conjunto de dados ou perfil pseudônimo para sandboxes e conjuntos de dados."
+additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="Expirações automatizadas de conjuntos de dados"
+additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/pseudonymous-profiles" text="Expiração de dados de perfis pseudônimos"
 
 >[!AVAILABILITY]
 >

@@ -2,10 +2,10 @@
 title: Criar uma conexão do Adobe Analytics Source na interface
 description: Saiba como criar uma conexão de origem do Adobe Analytics na interface do usuário para trazer dados do consumidor para o Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: f177a8058f6533151978bfd7b8bba4845792f5ed
+source-git-commit: 40ad3101f643e6ce1b24d2a02c1817cfe04bd5d5
 workflow-type: tm+mt
-source-wordcount: '2755'
-ht-degree: 4%
+source-wordcount: '2577'
+ht-degree: 3%
 
 ---
 
@@ -301,7 +301,7 @@ Uma lista dos fluxos de dados existentes do Analytics em sua organização é ex
 
 ![Uma lista de fluxos de dados existentes do Adobe Analytics em sua organização.](../../../../images/tutorials/create/analytics/select-target-dataset.png)
 
-A página [!UICONTROL Atividade do conjunto de dados] fornece informações sobre o progresso dos dados que estão sendo enviados do Analytics para o Experience Platform. A interface exibe métricas como o número de registros assimilados, o número de lotes assimilados e o número de lotes com falha.
+A página [!UICONTROL Atividade do conjunto de dados] fornece informações sobre o progresso dos dados que estão sendo enviados do Analytics para o Experience Platform. A interface exibe métricas como o total de registros no mês anterior, o total de registros assimilados nos últimos sete dias e o tamanho dos dados no mês anterior.
 
 A origem instancia dois fluxos de conjunto de dados. Um fluxo representa dados de preenchimento retroativo e o outro é para dados em tempo real. Os dados de preenchimento retroativo não são configurados para assimilação no Perfil do cliente em tempo real, mas são enviados ao data lake para casos de uso analíticos e de ciência de dados.
 
@@ -309,35 +309,9 @@ Para obter mais informações sobre preenchimento retroativo, dados em tempo rea
 
 ![A página de atividade do conjunto de dados para um determinado conjunto de dados de destino para dados do Adobe Analytics.](../../../../images/tutorials/create/analytics/dataset-activity.png)
 
-+++Exibir lotes individuais usando a interface de monitoramento herdada
-
-A página de atividade do conjunto de dados não exibe uma lista de lotes individuais. Para exibir uma lista de lotes individuais, selecione um gráfico na interface da atividade do conjunto de dados.
-
-![A página de atividade do conjunto de dados com um gráfico selecionado.](../../../../images/tutorials/create/analytics/select-chart.png)
-
-Você será direcionado ao Painel de monitoramento. Em seguida, selecione **[!UICONTROL SOMENTE FALHAS DE ASSIMILAÇÃO: SIM]** para limpar o filtro e exibir uma lista de lotes individuais.
-
-![Painel de monitoramento com o filtro de falha selecionado.](../../../../images/tutorials/create/analytics/clear-filter.png)
-
-A interface é atualizada para uma lista de lotes individuais, incluindo informações sobre suas respectivas métricas.
-
-![A página de monitoramento herdada dos dados em lote.](../../../../images/tutorials/create/analytics/batch-end-to-end.png)
-
-| Métricas | Descrição |
-| --- | --- |
-| ID do lote | A ID de um determinado lote. Esse valor é gerado internamente. |
-| Nome do conjunto de dados | O nome de um determinado conjunto de dados usado para os dados do Analytics. |
-| Fonte | A fonte dos dados assimilados. |
-| Atualização dos pacotes | A data da iteração de execução de fluxo mais recente. |
-| Registros no conjunto de dados | A contagem total de registros no conjunto de dados. **Observação**: ocasionalmente, este parâmetro exibirá o status `in-progress`. Esse status indica que o processo de assimilação de registros ainda não está concluído. |
-| Novos fragmentos de perfil | A contagem total de novos fragmentos de perfil que foram assimilados. |
-| Fragmentos de perfil existentes | A contagem total de fragmentos de perfil existentes. |
-| Registros de identidade identificados | A contagem total de registros de identidade que foram compilados após a assimilação. |
-| Registros no perfil | A contagem total de registros assimilados no Perfil de Cliente em Tempo Real. |
-
-{style="table-layout:auto"}
-
-+++
+>[!NOTE]
+>
+>A página de atividade do conjunto de dados não exibe informações sobre lotes, pois o conector de origem do Analytics é totalmente gerenciado pelo Adobe. É possível monitorar se os dados estão fluindo observando as métricas sobre registros assimilados.
 
 ## Próximas etapas e recursos adicionais
 

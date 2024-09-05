@@ -1,9 +1,10 @@
 ---
 title: Notas de versão da Adobe Experience Platform de agosto de 2024
 description: As notas de versão de agosto de 2024 para Adobe Experience Platform.
-source-git-commit: 6d91112654d08dd31e5334982e534ec42d9fc226
+exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
+source-git-commit: 4fecb47084a522b4eb9808dc317e0d70e7ef42c6
 workflow-type: tm+mt
-source-wordcount: '1502'
+source-wordcount: '1562'
 ht-degree: 21%
 
 ---
@@ -131,6 +132,12 @@ Para obter mais informações sobre o [!DNL Segmentation Service], consulte a [V
 A Experience Platform fornece uma API RESTful e uma interface interativa que permite configurar conexões de origem para vários provedores de dados com facilidade. Essas conexões de origem permitem autenticar e conectar a sistemas de armazenamento externos e serviços de CRM, definir períodos para execuções de assimilação e gerenciar a taxa de transferência de assimilação de dados.
 
 Use fontes no Experience Platform para assimilar dados de um aplicativo Adobe ou de uma fonte de dados de terceiros.
+
+**Recurso atualizado**
+
+| Recurso | Descrição |
+| --- | --- |
+| Atualizações no conector de origem do Adobe Analytics | A página de atividade do conjunto de dados não exibe informações sobre lotes, pois o Conector Source do Analytics é totalmente gerenciado pelo Adobe. É possível monitorar se os dados estão fluindo observando as métricas sobre registros assimilados. Leia o manual sobre como criar uma [conexão de origem de dados do Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md) para obter mais informações. |
 
 **Documentação atualizada**
 

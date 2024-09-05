@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guia da API de acesso a dados
 description: A API de acesso a dados é compatível com o Adobe Experience Platform, fornecendo aos desenvolvedores uma interface RESTful focada na descoberta e acessibilidade de conjuntos de dados assimilados no Experience Platform.
 exl-id: 278ec322-dafa-4e3f-ae45-2d20459c5653
-source-git-commit: dbb96744c873d2bf656be03ebf1b8ea2fb08acf3
+source-git-commit: 1070c34bcd4577fcc5f0ac160196450db3aab9b0
 workflow-type: tm+mt
 source-wordcount: '554'
 ht-degree: 5%
@@ -243,4 +243,4 @@ Para obter amostras adicionais, consulte o [tutorial sobre acesso a dados](tutor
 
 ## Assinar eventos de assimilação de dados {#subscribe-to-data-ingestion-events}
 
-Você pode assinar eventos específicos de alto valor por meio da [Adobe Developer Console](https://developer.adobe.com/console/). Por exemplo, você pode assinar eventos de assimilação de dados para ser notificado de possíveis atrasos e falhas. Consulte o tutorial sobre [assinatura de notificações de assimilação de dados](../ingestion/quality/subscribe-events.md) para obter mais informações.
+Você pode assinar eventos específicos de alto valor por meio da [Adobe Developer Console](https://developer.adobe.com/console/). Por exemplo, você pode assinar eventos de assimilação de dados para ser notificado de possíveis atrasos e falhas. Consulte o tutorial em [assinatura de notificações de eventos Adobe](../observability/alerts/subscribe.md) para obter mais informações.

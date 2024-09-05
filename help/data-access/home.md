@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Visão geral do acesso a dados
 description: O Acesso a dados é compatível com o Adobe Experience Platform, fornecendo aos usuários ferramentas voltadas para a descoberta e acessibilidade de conjuntos de dados assimilados da plataforma.
 exl-id: 76e3585b-44df-412e-9ac3-aeca5f85d403
-source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
+source-git-commit: 1070c34bcd4577fcc5f0ac160196450db3aab9b0
 workflow-type: tm+mt
 source-wordcount: '180'
 ht-degree: 1%
@@ -29,4 +29,4 @@ Para obter mais informações sobre [!DNL Data Science Workspace], comece lendo 
 
 ## Assinar eventos de assimilação de dados
 
-[!DNL Platform] disponibiliza eventos específicos de alto valor para assinatura por meio da [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui). Por exemplo, você pode assinar eventos de assimilação de dados para ser notificado de possíveis atrasos e falhas. Consulte o tutorial sobre [assinatura de notificações de assimilação de dados](../ingestion/quality/subscribe-events.md) para obter mais informações.
+[!DNL Platform] disponibiliza eventos específicos de alto valor para assinatura por meio da [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui). Por exemplo, você pode assinar eventos de assimilação de dados para ser notificado de possíveis atrasos e falhas. Consulte o tutorial em [assinatura de notificações de eventos Adobe](../observability/alerts/subscribe.md) para obter mais informações.

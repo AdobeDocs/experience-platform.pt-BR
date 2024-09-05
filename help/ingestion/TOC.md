@@ -5,10 +5,10 @@ breadcrumb-title: Guia da Ingestão de dados
 user-guide-description: Traga seus dados para a Experience Platform por meio de uma assimilação em lote ou por transmissão.
 feature: Data Ingestion
 role: Developer
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+source-git-commit: 1070c34bcd4577fcc5f0ac160196450db3aab9b0
 workflow-type: tm+mt
-source-wordcount: '145'
-ht-degree: 18%
+source-wordcount: '142'
+ht-degree: 19%
 
 ---
 
@@ -44,7 +44,6 @@ ht-degree: 18%
    - [Recuperar diagnóstico de erro](quality/error-diagnostics.md)
    - [Recuperar lotes com falha](quality/retrieve-failed-batches.md)
    - [Validação de assimilação de streaming](quality/streaming-validation.md)
-   - [Notificações de assimilação de dados](quality/subscribe-events.md)
 - [Medidas de proteção para assimilação de dados](guardrails.md)
 - [Conectores do Source](source-connectors.md)
 - [Referência da API de assimilação em lote](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/)

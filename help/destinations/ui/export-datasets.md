@@ -3,9 +3,9 @@ title: Exportar conjuntos de dados para destinos de armazenamento na nuvem
 type: Tutorial
 description: Saiba como exportar conjuntos de dados do Adobe Experience Platform para o local de armazenamento em nuvem de sua preferência.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 85b69af6fd21cfa9712e9c57593cbf00a62837c8
+source-git-commit: e95c0e509931f141ff72c1defacebe5a29756157
 workflow-type: tm+mt
-source-wordcount: '1814'
+source-wordcount: '1845'
 ht-degree: 4%
 
 ---
@@ -59,7 +59,7 @@ Entenda, na tabela abaixo, quais tipos de conjunto de dados você pode exportar 
     <td> Conjuntos de dados de Perfil e Evento de experiência criados na interface do Experience Platform após assimilar ou coletar dados por meio de Fontes, SDK da Web, SDK móvel, Conector de dados do Analytics e Audience Manager.</td>
   </tr>
   <tr>
-    <td>Data Distiller</td>
+    <td>Destilador de dados</td>
     <td>Data Distiller (Complemento)</td>
     <td>Conjuntos de dados derivados criados por meio do Serviço de consulta.</td>
   </tr>
@@ -234,7 +234,8 @@ Você pode visualizar e rastrear as exportações de perfil em relação aos lim
 Lembre-se das seguintes limitações da versão de disponibilidade geral das exportações do conjunto de dados:
 
 * Atualmente, você só pode exportar arquivos incrementais e uma data de término não pode ser selecionada para suas exportações de conjunto de dados.
-* Os nomes de arquivos exportados não podem ser personalizados no momento.
+* O Experience Platform pode exportar vários arquivos mesmo para conjuntos de dados pequenos. A exportação de conjuntos de dados foi projetada para integração de sistema para sistema e otimizada para desempenho, portanto, o número de arquivos exportados não é personalizável.
+* Nomes de arquivos exportados não podem ser personalizados no momento.
 * No momento, os conjuntos de dados criados por meio da API não estão disponíveis para exportação.
 * No momento, a interface não impede que você exclua um conjunto de dados que está sendo exportado para um destino. Não exclua conjuntos de dados que estejam sendo exportados para destinos. [Remova o conjunto de dados](#remove-dataset) de um fluxo de dados de destino antes de excluí-lo.
 * Atualmente, as métricas de monitoramento para exportações de conjunto de dados estão misturadas com números para exportações de perfil, de modo que não refletem os números reais exportados.

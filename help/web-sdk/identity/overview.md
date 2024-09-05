@@ -2,7 +2,7 @@
 title: Dados de identidade no SDK da Web
 description: Saiba como recuperar e gerenciar Adobe Experience Cloud IDs (ECIDs) usando o SDK da Web da Adobe Experience Platform.
 exl-id: 03060cdb-becc-430a-b527-60c055c2a906
-source-git-commit: 1cb38e3eaa83f2ad0e7dffef185d5edaf5e6c38c
+source-git-commit: 3b0fa672c4befd8e17632e62b0eeb13b6b17bfb4
 workflow-type: tm+mt
 source-wordcount: '1472'
 ht-degree: 0%
@@ -146,7 +146,7 @@ Cada objeto de identidade na matriz de identidades contém as seguintes propried
 | Propriedade | Tipo de dados | Descrição |
 | --- | --- | --- |
 | `id` | String | **(Obrigatório)** A ID que você deseja definir para o namespace fornecido. |
-| `authenticationState` | String | **(Obrigatório)** O estado de autenticação da ID. Os valores possíveis são `ambiguous`, `authenticated` e `loggedOut`. |
+| `authenticatedState` | String | **(Obrigatório)** O estado de autenticação da ID. Os valores possíveis são `ambiguous`, `authenticated` e `loggedOut`. |
 | `primary` | Booleano | Determina se essa identidade deve ser usada como um fragmento primário no perfil. Por padrão, a ECID é definida como o identificador principal do usuário. Se omitido, esse valor assumirá `false` como padrão. |
 
 O uso do campo `identityMap` para identificar dispositivos ou usuários leva ao mesmo resultado que o uso do método [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/setcustomerids.html) de [!DNL ID Service API]. Consulte a [documentação da API do serviço de ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/get-set.html) para obter mais detalhes.

@@ -2,33 +2,43 @@
 title: Dados de identidade no SDK da Web
 description: Saiba como recuperar e gerenciar Adobe Experience Cloud IDs (ECIDs) usando o SDK da Web da Adobe Experience Platform.
 exl-id: 03060cdb-becc-430a-b527-60c055c2a906
-source-git-commit: b8c38108e7481a5c4e94e4122e0093fa6f00b96c
+source-git-commit: 1cb38e3eaa83f2ad0e7dffef185d5edaf5e6c38c
 workflow-type: tm+mt
-source-wordcount: '1481'
+source-wordcount: '1472'
 ht-degree: 0%
 
 ---
 
+
 # Dados de identidade no SDK da Web
 
-O SDK da Web da Adobe Experience Platform usa [Adobe Experience Cloud IDs (ECIDs)](../../identity-service/features/ecid.md) para rastrear o comportamento do visitante. Usando ECIDs, você pode garantir que cada dispositivo tenha um identificador exclusivo que possa persistir em várias sessões, vinculando todas as ocorrências que ocorrem durante e entre sessões da Web a um dispositivo específico.
+O SDK da Web da Adobe Experience Platform usa [Adobe Experience Cloud IDs (ECIDs)](../../identity-service/features/ecid.md) para rastrear o comportamento do visitante. Usando o [!DNL ECIDs], você pode garantir que cada dispositivo tenha um identificador exclusivo que possa persistir em várias sessões, vinculando todas as ocorrências que ocorrem durante e entre sessões da Web a um dispositivo específico.
 
-Este documento fornece uma visão geral de como gerenciar ECIDs usando o SDK da Web da plataforma.
+Este documento fornece uma visão geral de como gerenciar o [!DNL ECIDs] usando o SDK da Web.
 
-## Rastreamento de ECIDs usando o SDK
+## Rastreamento de ECIDs usando o SDK da Web {#tracking-ecids-we-sdk}
 
-O SDK da Web da Platform atribui e rastreia ECIDs usando cookies, com vários métodos disponíveis para configurar como esses cookies são gerados.
+O SDK da Web atribui e rastreia [!DNL ECIDs] usando cookies, com vários métodos disponíveis para configurar como esses cookies são gerados.
 
-Quando um novo usuário chega ao seu site, o Serviço de identidade da Adobe Experience Cloud tenta definir um cookie de identificação de dispositivo para esse usuário. Para visitantes novos, uma ECID é gerada e retornada na primeira resposta do Edge Network Adobe Experience Platform. Para visitantes repetidos, a ECID é recuperada do cookie `kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` e adicionada à carga pelo Edge Network.
+Quando um novo usuário chega ao seu site, o [Adobe Experience Cloud Identity Service](../../identity-service/home.md) tenta definir um cookie de identificação do dispositivo para esse usuário.
 
-Depois que o cookie contendo a ECID for definido, cada solicitação subsequente gerada pelo SDK da Web incluirá uma ECID codificada no cookie `kndctr_{YOUR-ORG-ID}_AdobeOrg_identity`.
+* Para novos visitantes, um [!DNL ECID] é gerado e retornado na primeira resposta do Edge Network Experience Platform.
+* Para visitantes recorrentes, o [!DNL ECID] é recuperado do cookie `kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` e adicionado à carga da solicitação pelo Edge Network.
 
-Ao usar cookies para identificação de dispositivo, você tem duas opções para interagir com o Edge Network:
+Depois que o cookie contendo o [!DNL ECID] for definido, cada solicitação subsequente gerada pelo SDK da Web incluirá um [!DNL ECID] codificado no cookie `kndctr_{YOUR-ORG-ID}_AdobeOrg_identity`.
 
-1. Enviar dados diretamente para o domínio Edge Network `adobedc.net`. Este método é conhecido como [coleção de dados de terceiros](#third-party).
+Ao usar cookies para identificação de dispositivo, você tem duas maneiras de interagir com o Edge Network:
+
 1. Crie um CNAME em seu próprio domínio que aponte para `adobedc.net`. Este método é conhecido como [coleção de dados próprios](#first-party).
+1. Enviar dados diretamente para o domínio Edge Network `adobedc.net`. Este método é conhecido como [coleção de dados de terceiros](#third-party).
 
 Conforme explicado nas seções abaixo, o método de coleta de dados que você escolhe usar tem um impacto direto na vida útil do cookie nos navegadores.
+
+### Coleta de dados primários {#first-party}
+
+A coleta de dados primários envolve a configuração de cookies por meio de um `CNAME` em seu próprio domínio que aponta para `adobedc.net`.
+
+Embora os navegadores tenham durante muito tempo tratado cookies definidos por `CNAME` pontos de extremidade de maneira semelhante aos definidos por pontos de extremidade de propriedade do site, as alterações recentes implementadas pelos navegadores criaram uma distinção em como os cookies `CNAME` são tratados. Embora não haja navegadores que atualmente bloqueiam cookies próprios `CNAME` por padrão, alguns navegadores restringem o tempo de vida dos cookies definidos com um `CNAME` para apenas sete dias.
 
 ### Coleta de dados de terceiros {#third-party}
 
@@ -36,23 +46,17 @@ A coleta de dados de terceiros envolve o envio de dados diretamente para o domí
 
 Nos últimos anos, os navegadores da Web têm se tornado cada vez mais restritivos no manuseio de cookies definidos por terceiros. Alguns navegadores bloqueiam cookies de terceiros por padrão. Se você usar cookies de terceiros para identificar visitantes do site, a vida útil desses cookies é quase sempre mais curta do que o que estaria disponível usando cookies primários. Às vezes, um cookie de terceiros expira em apenas sete dias.
 
-Além disso, quando a coleta de dados de terceiros é usada, alguns bloqueadores de anúncios restringem o tráfego aos endpoints de coleta de dados do Adobe.
-
-### Coleta de dados primários {#first-party}
-
-A coleta de dados primários envolve a configuração de cookies por meio de um CNAME em seu próprio domínio que aponta para `adobedc.net`.
-
-Embora os navegadores tenham durante muito tempo tratado os cookies definidos por endpoints CNAME de maneira semelhante aos definidos por endpoints pertencentes ao site, as alterações recentes implementadas pelos navegadores criaram uma distinção em como os cookies CNAME são tratados. Embora não haja navegadores que atualmente bloqueiam cookies próprios CNAME por padrão, alguns navegadores restringem a duração dos cookies definidos usando um CNAME para apenas sete dias.
+Além disso, ao usar a coleta de dados de terceiros, alguns bloqueadores de anúncios restringem o tráfego aos endpoints de coleta de dados do Adobe.
 
 ### Efeitos da duração do cookie em aplicativos Adobe Experience Cloud {#lifespans}
 
-Independentemente de você escolher a coleta de dados própria ou de terceiros, o tempo em que um cookie pode persistir tem um impacto direto na contagem de visitantes no Adobe Analytics e no Customer Journey Analytics. Além disso, os usuários finais podem experimentar experiências de personalização inconsistentes quando o Adobe Target ou o Offer Decisioning são usados no site.
+Independentemente de você escolher a coleção de dados próprios ou de terceiros, o período de tempo em que um cookie pode persistir tem um impacto direto na contagem de visitantes no [Adobe Analytics](https://experienceleague.adobe.com/en/docs/analytics?lang=pt-BR) e [Customer Journey Analytics](https://experienceleague.adobe.com/pt-br/docs/customer-journey-analytics). Além disso, os usuários finais podem experimentar experiências de personalização inconsistentes quando o [Adobe Target](https://experienceleague.adobe.com/en/docs/target) ou o [Offer Decisioning](https://experienceleague.adobe.com/en/docs/target/using/integrate/ajo/offer-decision) são usados no site.
 
 Por exemplo, considere uma situação em que você criou uma experiência de personalização que promove qualquer item para a página inicial se um usuário o visualizou três vezes nos últimos sete dias.
 
-Se um usuário final visitar três vezes por semana e não retornar ao site por sete dias, ele poderá ser considerado um novo usuário quando retornar ao site, pois seus cookies podem ter sido excluídos por uma política do navegador (dependendo do navegador usado quando visitou o site). Se isso ocorrer, a ferramenta do Analytics tratará o visitante como um novo usuário, embora ele tenha visitado o site há pouco mais de sete dias. Além disso, qualquer esforço para personalizar a experiência do usuário começa novamente.
+Se um usuário final visitar três vezes por semana e não retornar ao site por sete dias, ele poderá ser considerado um novo usuário quando retornar ao site, pois seus cookies podem ter sido excluídos por uma política do navegador (dependendo do navegador usado quando visitou o site). Se isso acontecer, a ferramenta do Analytics tratará o visitante como um novo usuário, embora ele tenha visitado o site há pouco mais de sete dias. Além disso, qualquer esforço para personalizar a experiência do usuário começa novamente.
 
-### IDs de dispositivo próprio
+### IDs de dispositivo próprio (FPIDs) {#fpid}
 
 Para levar em conta os efeitos da duração do cookie conforme descrito acima, você pode optar por definir e gerenciar seus próprios identificadores de dispositivo. Consulte o manual sobre [IDs de dispositivo próprio](./first-party-device-ids.md) para obter mais informações.
 
@@ -147,7 +151,7 @@ Cada objeto de identidade na matriz de identidades contém as seguintes propried
 
 O uso do campo `identityMap` para identificar dispositivos ou usuários leva ao mesmo resultado que o uso do método [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/setcustomerids.html) de [!DNL ID Service API]. Consulte a [documentação da API do serviço de ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/get-set.html) para obter mais detalhes.
 
-## Migração da API do visitante para ECID
+## Migração da API do visitante para ECID {#migrating-visitor-api-ecid}
 
 Ao migrar do usando a API do visitante, também é possível migrar os cookies AMCV existentes. Para habilitar a migração da ECID, defina o parâmetro `idMigrationEnabled` na configuração. A migração de ID habilita os seguintes casos de uso:
 

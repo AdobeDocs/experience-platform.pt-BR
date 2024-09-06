@@ -2,10 +2,10 @@
 title: Criar e configurar sequências de dados
 description: Saiba como conectar a integração do SDK da Web do lado do cliente a outros produtos da Adobe e destinos de terceiros.
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
-source-git-commit: f99370a9bff156b5cf9ecf286a1f8bc09eccc06a
+source-git-commit: b87cb25ac791bebbf865f8513f2b4b482a1531bc
 workflow-type: tm+mt
-source-wordcount: '2813'
-ht-degree: 52%
+source-wordcount: '2817'
+ht-degree: 51%
 
 ---
 
@@ -49,7 +49,7 @@ Expanda a seção **[!UICONTROL Geolocalização e pesquisa de rede]** para defi
 | Configuração | Descrição |
 | --- | --- |
 | [!UICONTROL Pesquisa geográfica] | Habilita pesquisas de geolocalização para as opções selecionadas com base no endereço IP do visitante. As opções disponíveis incluem: <ul><li>**País**: Popula `xdm.placeContext.geo.countryCode`</li><li>**Código Postal**: Preenche `xdm.placeContext.geo.postalCode`</li><li>**Estado/Província**: Popula `xdm.placeContext.geo.stateProvince`</li><li>**DMA**: preenche `xdm.placeContext.geo.dmaID`</li><li>**Cidade**: Popula `xdm.placeContext.geo.city`</li><li>**Latitude**: preenche `xdm.placeContext.geo._schema.latitude`</li><li>**Longitude**: Preenche `xdm.placeContext.geo._schema.longitude`</li></ul>As opções **[!UICONTROL Cidade]**, **[!UICONTROL Latitude]** e **[!UICONTROL Longitude]** fornecem coordenadas com até duas casas decimais, independentemente de quais outras opções estão selecionadas. Esta é considerada granularidade no nível da cidade.<br> <br>Se nenhuma opção for selecionada, as pesquisas de geolocalização serão desabilitadas. A geolocalização ocorre antes de [!UICONTROL Ofuscação de IP], o que significa que não é afetada pela configuração [!UICONTROL Ofuscação de IP]. |
-| [!UICONTROL Pesquisa de rede] | Ativa pesquisas de rede para as opções selecionadas com base no endereço IP do visitante. As opções disponíveis incluem: <ul><li>**Operadora**: Preenche `xdm.environment.carrier`</li><li>**Domínio**: Popula `xdm.environment.domain`</li><li>**ISP**: preenche `xdm.environment.ISP`</li></ul> |
+| [!UICONTROL Pesquisa de rede] | Ativa pesquisas de rede para as opções selecionadas com base no endereço IP do visitante. As opções disponíveis incluem: <ul><li>**Operadora De Celular**: Preenche `xdm.environment.carrier`</li><li>**Domínio**: Popula `xdm.environment.domain`</li><li>**ISP**: preenche `xdm.environment.ISP`</li><li>**Tipo de Conexão**: Popula `xdm.environment.connectionType`</li></ul> |
 
 Se você habilitar qualquer um dos campos acima para coleta de dados, certifique-se de definir corretamente a propriedade de matriz [`context`](/help/web-sdk/commands/configure/context.md) ao configurar o SDK da Web.
 

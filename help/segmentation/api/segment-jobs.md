@@ -4,9 +4,9 @@ title: Ponto de extremidade da API de trabalhos de segmento
 description: O endpoint de trabalhos de segmento na API do Serviço de segmentação do Adobe Experience Platform permite gerenciar de forma programática os trabalhos de segmento da sua organização.
 role: Developer
 exl-id: 105481c2-1c25-4f0e-8fb0-c6577a4616b3
-source-git-commit: f22246dec74c20459e5ac53bedc16cb6e4fba56e
+source-git-commit: f35fb6aae6aceb75391b1b615ca067a72918f4cf
 workflow-type: tm+mt
-source-wordcount: '1655'
+source-wordcount: '1648'
 ht-degree: 2%
 
 ---
@@ -922,18 +922,7 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfe
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o status HTTP 204 com as seguintes informações.
-
-+++ Um exemplo de resposta ao excluir um trabalho de segmento.
-
-```json
-{
-    "status": true,
-    "message": "Segment job with id 'd3b4a50d-dfea-43eb-9fca-557ea53771fd' has been marked for cancelling"
-}
-```
-
-+++
+Uma resposta bem-sucedida retorna o status HTTP 204 com um corpo de resposta vazio.
 
 ## Próximas etapas
 

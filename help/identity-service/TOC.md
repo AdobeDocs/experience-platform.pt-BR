@@ -5,10 +5,10 @@ breadcrumb-title: Guia do Serviço de identidade do Platform
 user-guide-description: Une as identidades dos clientes em todos os dispositivos e sistemas para entregar experiências digitais personalizadas.
 feature: Identities
 role: Admin,Developer
-source-git-commit: 536770d0c3e7e93921fe40887dafa5c76e851f5e
+source-git-commit: 16d29811715805e2f297836bf266c854db45d4c6
 workflow-type: tm+mt
-source-wordcount: '137'
-ht-degree: 29%
+source-wordcount: '143'
+ht-degree: 28%
 
 ---
 
@@ -31,6 +31,7 @@ ht-degree: 29%
       - [Configurações de identidade](./identity-graph-linking-rules/identity-settings-ui.md)
       - [Exemplo de cenários de cliente](./identity-graph-linking-rules/example-scenarios.md)
       - [Exemplo de configurações de gráfico](./identity-graph-linking-rules/example-configurations.md)
+      - [Solução de problemas das regras de vinculação do gráfico de identidade](./identity-graph-linking-rules/troubleshooting.md)
    - [Visão geral da ECID](./features/ecid.md)
 - [Guia de implementação](implementation.md)
 - [Medidas de proteção de dados de identidade](guardrails.md)

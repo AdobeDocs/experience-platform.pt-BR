@@ -4,9 +4,9 @@ title: Endpoint da API de trabalhos de exportação de segmento
 description: Os trabalhos de exportação são processos assíncronos usados para manter membros do segmento de público-alvo em conjuntos de dados. Você pode usar o endpoint /export/jobs na API do Serviço de segmentação do Adobe Experience Platform, o que permite recuperar, criar e cancelar trabalhos de exportação de forma programática.
 role: Developer
 exl-id: 5b504a4d-291a-4969-93df-c23ff5994553
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: bf90e478b38463ec8219276efe71fcc1aab6b2aa
 workflow-type: tm+mt
-source-wordcount: '1615'
+source-wordcount: '1678'
 ht-degree: 2%
 
 ---
@@ -33,20 +33,26 @@ O ponto de extremidade `/export/jobs` dá suporte a vários parâmetros de consu
 
 ```http
 GET /export/jobs
-GET /export/jobs?limit={LIMIT}
-GET /export/jobs?offset={OFFSET}
-GET /export/jobs?status={STATUS}
+GET /export/jobs?{QUERY_PARAMETERS}
 ```
 
-| Parâmetro | Descrição |
-| --------- | ----------- |
-| `{LIMIT}` | Especifica o número de trabalhos de exportação retornados. |
-| `{OFFSET}` | Especifica o deslocamento das páginas de resultados. |
-| `{STATUS}` | Filtra os resultados com base no status. Os valores compatíveis são &quot;NEW&quot;, &quot;SUCCEEDED&quot; e &quot;FAILED&quot;. |
+**Parâmetros de consulta**
+
++++ Uma lista de parâmetros de consulta disponíveis.
+
+| Parâmetro | Descrição | Exemplo |
+| --------- | ----------- | ------- |
+| `limit` | Especifica o número de trabalhos de exportação retornados. | `limit=10` |
+| `offset` | Especifica o deslocamento das páginas de resultados. | `offset=1540974701302_96` |
+| `status` | Filtra os resultados com base no status. Os valores compatíveis são &quot;NEW&quot;, &quot;SUCCEEDED&quot; e &quot;FAILED&quot;. | `status=NEW` |
+
++++
 
 **Solicitação**
 
 A solicitação a seguir recuperará os dois últimos trabalhos de exportação na organização.
+
++++ Uma solicitação de amostra para recuperar trabalhos de exportação.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/export/jobs?limit=2 \
@@ -56,9 +62,13 @@ curl -X GET https://platform.adobe.io/data/core/ups/export/jobs?limit=2 \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **Resposta**
 
 A resposta a seguir retorna o status HTTP 200 com uma lista de trabalhos de exportação concluídos com êxito, com base no parâmetro de consulta fornecido no caminho da solicitação.
+
++++ Uma resposta de amostra ao recuperar trabalhos de exportação.
 
 ```json
 {
@@ -207,6 +217,8 @@ A resposta a seguir retorna o status HTTP 200 com uma lista de trabalhos de expo
 | `page` | Informações sobre a paginação dos trabalhos de exportação solicitados. |
 | `link.next` | Um link para a próxima página de trabalhos de exportação. |
 
++++
+
 ## Criar um novo trabalho de exportação {#create}
 
 Você pode criar um novo trabalho de exportação fazendo uma solicitação POST para o ponto de extremidade `/export/jobs`.
@@ -220,6 +232,8 @@ POST /export/jobs
 **Solicitação**
 
 A solicitação a seguir cria um novo trabalho de exportação, configurado pelos parâmetros fornecidos na carga.
+
++++ Um exemplo de solicitação para criar um trabalho de exportação.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/export/jobs \
@@ -290,9 +304,13 @@ curl -X POST https://platform.adobe.io/data/core/ups/export/jobs \
 | `schema.name` | **(Obrigatório)** O nome do esquema associado ao conjunto de dados para o qual os dados devem ser exportados. |
 | `evaluationInfo.segmentation` | *(Opcional)* Um valor booliano que, se não for fornecido, assumirá `false` como padrão. Um valor de `true` indica que a segmentação precisa ser feita no trabalho de exportação. |
 
++++
+
 **Resposta**
 
 Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes do trabalho de exportação recém-criado.
+
++++ Um exemplo de resposta ao criar um trabalho de exportação.
 
 ```json
 {
@@ -380,6 +398,8 @@ Como alternativa, se `destination.segmentPerBatch` tivesse sido definido como `t
     }
 ```
 
++++
+
 ## Recuperar um trabalho de exportação específico {#get}
 
 Você pode recuperar informações detalhadas sobre um trabalho de exportação específico fazendo uma solicitação GET para o ponto de extremidade `/export/jobs` e fornecendo a ID do trabalho de exportação que deseja recuperar no caminho da solicitação.
@@ -396,6 +416,8 @@ GET /export/jobs/{EXPORT_JOB_ID}
 
 **Solicitação**
 
++++ Uma solicitação de amostra para recuperar um trabalho de exportação.
+
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/export/jobs/11037 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -404,9 +426,13 @@ curl -X GET https://platform.adobe.io/data/core/ups/export/jobs/11037 \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **Resposta**
 
 Uma resposta bem-sucedida retorna o status HTTP 200 com informações detalhadas sobre o trabalho de exportação especificado.
+
++++ Um exemplo de resposta ao recuperar um trabalho de exportação.
 
 ```json
 {
@@ -476,6 +502,8 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com informações detalhadas
 | `metrics.profileExportTime` | Um campo que indica o tempo necessário para os perfis serem exportados. |
 | `totalExportedProfileCounter` | O número total de perfis exportados em todos os lotes. |
 
++++
+
 ## Cancelar ou excluir um trabalho de exportação específico {#delete}
 
 Você pode solicitar a exclusão do trabalho de exportação especificado fazendo uma solicitação DELETE para o ponto de extremidade `/export/jobs` e fornecendo a ID do trabalho de exportação que deseja excluir no caminho da solicitação.
@@ -492,6 +520,8 @@ DELETE /export/jobs/{EXPORT_JOB_ID}
 
 **Solicitação**
 
++++ Um exemplo de solicitação para excluir um trabalho de exportação.
+
 ```shell
 curl -X DELETE https://platform.adobe.io/data/core/ups/export/jobs/{EXPORT_JOB_ID} \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -499,6 +529,8 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/export/jobs/{EXPORT_JOB_I
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
+
++++
 
 **Resposta**
 

@@ -4,10 +4,10 @@ title: Visualizações e estimativas de endpoints de API
 description: À medida que a definição de segmento é desenvolvida, é possível usar as ferramentas de estimativa e pré-visualização no Adobe Experience Platform para exibir informações em nível de resumo e ajudar a garantir que você esteja isolando o público-alvo esperado.
 role: Developer
 exl-id: 2c204f29-825f-4a5e-a7f6-40fc69263614
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: bf90e478b38463ec8219276efe71fcc1aab6b2aa
 workflow-type: tm+mt
-source-wordcount: '971'
-ht-degree: 3%
+source-wordcount: '1016'
+ht-degree: 2%
 
 ---
 
@@ -62,6 +62,8 @@ POST /preview
 
 **Solicitação**
 
++++ Um exemplo de solicitação para criar uma visualização.
+
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/preview \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -85,9 +87,13 @@ curl -X POST https://platform.adobe.io/data/core/ups/preview \
 | `predicateModel` | O nome da classe de esquema [!DNL Experience Data Model] (XDM) na qual os dados do perfil se baseiam. |
 | `graphType` | O tipo de gráfico do qual você deseja obter o cluster. Os valores com suporte são `none` (não executa compilação de identidade) e `pdg` (executa compilação de identidade com base em seu gráfico de identidade privado). |
 
++++
+
 **Resposta**
 
 Uma resposta bem-sucedida retorna o status HTTP 201 (Criado) com detalhes da visualização recém-criada.
+
++++ Uma resposta de exemplo ao criar uma visualização.
 
 ```json
 {
@@ -103,6 +109,8 @@ Uma resposta bem-sucedida retorna o status HTTP 201 (Criado) com detalhes da vis
 | -------- | ----------- |
 | `state` | O estado atual do trabalho de visualização. Quando criado inicialmente, ele estará no estado &quot;NEW&quot;. Posteriormente, ele estará no estado &quot;EM EXECUÇÃO&quot; até que o processamento seja concluído, momento em que se torna &quot;RESULT_READY&quot; ou &quot;FAILED&quot;. |
 | `previewId` | A ID do trabalho de visualização, a ser usada para fins de pesquisa ao exibir uma estimativa ou visualização, conforme descrito na próxima seção. |
+
++++
 
 ## Recuperar os resultados de uma visualização específica {#get-preview}
 
@@ -120,6 +128,8 @@ GET /preview/{PREVIEW_ID}
 
 **Solicitação**
 
++++ Uma solicitação de amostra para recuperar uma visualização.
+
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/preview/MDphcHAtMzJiZTAzMjgtM2YzMS00YjY0LThkODQtYWNkMGM0ZmJkYWQzOmU4OTAwNjhiLWY1Y2EtNGE4Zi1hNmI1LWFmODdmZjBjYWFjMzow \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -128,7 +138,11 @@ curl -X GET https://platform.adobe.io/data/core/ups/preview/MDphcHAtMzJiZTAzMjgt
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **Resposta**
+
++++ Uma resposta de amostra ao recuperar uma visualização.
 
 Uma resposta bem-sucedida retorna o status HTTP 200 com informações detalhadas sobre a visualização especificada.
 
@@ -181,6 +195,8 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com informações detalhadas
 | -------- | ----------- |
 | `results` | Uma lista de IDs de entidade, juntamente com suas identidades relacionadas. Os links fornecidos podem ser usados para pesquisar as entidades especificadas, usando o [ponto de extremidade da API de acesso ao perfil](../../profile/api/entities.md). |
 
++++
+
 ## Recuperar os resultados de um trabalho de estimativa específico {#get-estimate}
 
 Depois de criar um trabalho de visualização, você pode usar seu `previewId` no caminho de uma solicitação GET para o ponto de extremidade `/estimate` para exibir informações estatísticas sobre a definição do segmento, incluindo tamanho do público projetado, intervalo de confiança e desvio padrão de erro.
@@ -199,6 +215,8 @@ GET /estimate/{PREVIEW_ID}
 
 A solicitação a seguir recupera os resultados de um trabalho de estimativa específico.
 
++++ Uma solicitação de amostra para recuperar um trabalho estimado.
+
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/estimate/MDoyOjRhNDVlODUzLWFjOTEtNGJiNy1hNDI2LTE1MDkzN2I2YWY1Yzo0Mg \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -207,9 +225,13 @@ curl -X GET https://platform.adobe.io/data/core/ups/estimate/MDoyOjRhNDVlODUzLWF
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **Resposta**
 
 Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes do trabalho estimado.
+
++++ Um exemplo de resposta ao recuperar um trabalho estimado.
 
 ```json
 {
@@ -243,9 +265,11 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes do trabalho est
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `estimatedNamespaceDistribution` | Uma matriz de objetos que mostra o número de perfis no segmento detalhados por namespace de identidade. O número total de perfis por namespace (somando os valores mostrados para cada namespace) pode ser maior que a métrica de contagem de perfis, pois um perfil pode ser associado a vários namespaces. Por exemplo, se um cliente interagir com sua marca em mais de um canal, vários namespaces serão associados a esse cliente individual. |
+| `estimatedNamespaceDistribution` | Uma matriz de objetos que mostra o número de perfis na definição de segmento detalhados por namespace de identidade. O número total de perfis por namespace (somando os valores mostrados para cada namespace) pode ser maior que a métrica de contagem de perfis, pois um perfil pode ser associado a vários namespaces. Por exemplo, se um cliente interagir com sua marca em mais de um canal, vários namespaces serão associados a esse cliente individual. |
 | `state` | O estado atual do trabalho de visualização. O estado será &quot;RUNNING&quot; até que o processamento seja concluído, momento em que ele se torna &quot;RESULT_READY&quot; ou &quot;FAILED&quot;. |
 | `_links.preview` | Quando o `state` é &quot;RESULT_READY&quot;, este campo fornece uma URL para exibir a estimativa. |
+
++++
 
 ## Próximas etapas
 

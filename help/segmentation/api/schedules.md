@@ -4,9 +4,9 @@ title: Endpoint da API de Agendamentos
 description: Os cronogramas são uma ferramenta que pode ser usada para executar automaticamente trabalhos de segmentação em lote uma vez por dia.
 role: Developer
 exl-id: 92477add-2e7d-4d7b-bd81-47d340998ff1
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: bf90e478b38463ec8219276efe71fcc1aab6b2aa
 workflow-type: tm+mt
-source-wordcount: '2040'
+source-wordcount: '2104'
 ht-degree: 3%
 
 ---
@@ -29,18 +29,25 @@ O ponto de extremidade `/config/schedules` dá suporte a vários parâmetros de 
 
 ```http
 GET /config/schedules
-GET /config/schedules?start={START}
-GET /config/schedules?limit={LIMIT}
+GET /config/schedules?{QUERY_PARAMETERS}
 ```
 
-| Parâmetro | Descrição |
-| --------- | ----------- |
-| `{START}` | Especifica de qual página o deslocamento iniciará. Por padrão, esse valor será 0. |
-| `{LIMIT}` | Especifica o número de agendas retornadas. Por padrão, esse valor será 100. |
+**Parâmetros de consulta**
+
++++ Uma lista de parâmetros de consulta disponíveis.
+
+| Parâmetro | Descrição | Exemplo |
+| --------- | ----------- | ------- |
+| `start` | Especifica de qual página o deslocamento iniciará. Por padrão, esse valor será 0. | `start=5` |
+| `limit` | Especifica o número de agendas retornadas. Por padrão, esse valor será 100. | `limit=20` |
+
++++
 
 **Solicitação**
 
 A solicitação a seguir recuperará as dez últimas programações publicadas em sua organização.
+
++++ Uma solicitação de amostra para recuperar uma lista de agendamentos.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/config/schedules?limit=10 \
@@ -50,6 +57,8 @@ curl -X GET https://platform.adobe.io/data/core/ups/config/schedules?limit=10 \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **Resposta**
 
 Uma resposta bem-sucedida retorna o status HTTP 200 com uma lista de agendamentos para a organização especificada como JSON.
@@ -57,6 +66,8 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com uma lista de agendamento
 >[!NOTE]
 >
 >A resposta a seguir foi truncada por espaço e mostra apenas o primeiro agendamento retornado.
+
++++ Um exemplo de resposta ao recuperar uma lista de agendamentos.
 
 ```json
 {
@@ -102,6 +113,8 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com uma lista de agendamento
 | `children.schedule` | Uma string contendo o agendamento do job. Os jobs só podem ser programados para serem executados uma vez por dia, o que significa que você não pode programar um job para ser executado mais de uma vez durante um período de 24 horas. Para obter mais informações sobre cronogramas cron, leia o apêndice no [formato de expressão cron](#appendix). Neste exemplo, &quot;0 0 1 * *&quot; significa que este agendamento será executado às 1:00 AM todos os dias. |
 | `children.state` | Uma string que contém o estado do agendamento. Os dois estados compatíveis são &quot;ativo&quot; e &quot;inativo&quot;. Por padrão, o estado é definido como &quot;inativo&quot;. |
 
++++
+
 ## Criar um novo agendamento {#create}
 
 Você pode criar um novo agendamento fazendo uma solicitação POST para o ponto de extremidade `/config/schedules`.
@@ -113,6 +126,8 @@ POST /config/schedules
 ```
 
 **Solicitação**
+
++++ Um exemplo de solicitação para criar um agendamento.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/config/schedules \
@@ -144,9 +159,13 @@ curl -X POST https://platform.adobe.io/data/core/ups/config/schedules \
 | `schedule` | *Opcional.* Uma cadeia de caracteres que contém o cronograma do trabalho. Os jobs só podem ser programados para serem executados uma vez por dia, o que significa que você não pode programar um job para ser executado mais de uma vez durante um período de 24 horas. Para obter mais informações sobre cronogramas cron, leia o apêndice no [formato de expressão cron](#appendix). Neste exemplo, &quot;0 0 1 * *&quot; significa que este agendamento será executado às 1:00 AM todos os dias. <br><br>Se esta cadeia de caracteres não for fornecida, um agendamento gerado pelo sistema será gerado automaticamente. |
 | `state` | *Opcional.* Uma cadeia de caracteres que contém o estado do agendamento. Os dois estados compatíveis são &quot;ativo&quot; e &quot;inativo&quot;. Por padrão, o estado é definido como &quot;inativo&quot;. |
 
++++
+
 **Resposta**
 
 Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes do agendamento recém-criado.
+
++++ Um exemplo de resposta ao criar um agendamento.
 
 ```json
 {
@@ -172,6 +191,8 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes do agendamento 
 }
 ```
 
++++
+
 ## Recuperar uma programação específica {#get}
 
 Você pode recuperar informações detalhadas sobre um agendamento específico fazendo uma solicitação GET para o ponto de extremidade `/config/schedules` e fornecendo a ID do agendamento que você deseja recuperar no caminho da solicitação.
@@ -188,6 +209,8 @@ GET /config/schedules/{SCHEDULE_ID}
 
 **Solicitação**
 
++++ Uma solicitação de amostra para recuperar um agendamento.
+
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/config/schedules/4e538382-dbd8-449e-988a-4ac639ebe72b
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -196,9 +219,13 @@ curl -X GET https://platform.adobe.io/data/core/ups/config/schedules/4e538382-db
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **Resposta**
 
 Uma resposta bem-sucedida retorna o status HTTP 200 com informações detalhadas sobre o agendamento especificado.
+
++++ Uma resposta de exemplo ao recuperar um agendamento.
 
 ```json
 {
@@ -233,15 +260,13 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com informações detalhadas
 | `schedule` | Uma string contendo o agendamento do job. As ordens de produção só podem ser programadas para serem executadas uma vez por dia, o que significa que não é possível programar uma ordem de produção para ser executada mais de uma vez durante um período de 24 horas. Para obter mais informações sobre cronogramas cron, leia o apêndice no [formato de expressão cron](#appendix). Neste exemplo, &quot;0 0 1 * *&quot; significa que este agendamento será executado às 1:00 AM todos os dias. |
 | `state` | Uma string que contém o estado do agendamento. Os dois estados com suporte são `active` e `inactive`. Por padrão, o estado é definido como `inactive`. |
 
++++
+
 ## Atualizar detalhes de um agendamento específico {#update}
 
 Você pode atualizar um agendamento específico fazendo uma solicitação PATCH para o ponto de extremidade `/config/schedules` e fornecendo a ID do agendamento que você está tentando atualizar no caminho da solicitação.
 
 A solicitação PATCH permite atualizar o [estado](#update-state) ou o [cron schedule](#update-schedule) para um agendamento individual.
-
-### Atualizar estado da programação {#update-state}
-
-Você pode usar uma operação de patch de JSON para atualizar o estado da programação. Para atualizar o estado, declare a propriedade `path` como `/state` e defina o `value` como `active` ou `inactive`. Para obter mais informações sobre o Patch JSON, leia a documentação do [Patch JSON](https://datatracker.ietf.org/doc/html/rfc6902).
 
 **Formato da API**
 
@@ -253,7 +278,15 @@ PATCH /config/schedules/{SCHEDULE_ID}
 | --------- | ----------- |
 | `{SCHEDULE_ID}` | O valor `id` do agendamento que você deseja atualizar. |
 
+>[!BEGINTABS]
+
+>[!TAB Atualizar estado do agendamento]
+
+Você pode usar uma operação de patch de JSON para atualizar o estado da programação. Para atualizar o estado, declare a propriedade `path` como `/state` e defina o `value` como `active` ou `inactive`. Para obter mais informações sobre o Patch JSON, leia a documentação do [Patch JSON](https://datatracker.ietf.org/doc/html/rfc6902).
+
 **Solicitação**
+
++++ Um exemplo de solicitação para atualizar o estado do agendamento.
 
 ```shell
 curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/4e538382-dbd8-449e-988a-4ac639ebe72b \
@@ -271,6 +304,8 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/4e538382-
 ]'
 ```
 
++++
+
 | Propriedade | Descrição |
 | -------- | ----------- |
 | `path` | O caminho do valor que você deseja corrigir. Nesse caso, como você está atualizando o estado do agendamento, é necessário definir o valor de `path` como &quot;/state&quot;. |
@@ -280,21 +315,15 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/4e538382-
 
 Uma resposta bem-sucedida retorna o status HTTP 204 (Sem conteúdo).
 
-### Atualizar cronograma cron {#update-schedule}
+>[!TAB Atualizar cronograma cron]
 
 Você pode usar uma operação de patch de JSON para atualizar a programação cron. Para atualizar o agendamento, declare a propriedade `path` como `/schedule` e defina `value` como um agendamento cron válido. Para obter mais informações sobre o Patch JSON, leia a documentação do [Patch JSON](https://datatracker.ietf.org/doc/html/rfc6902). Para obter mais informações sobre cronogramas cron, leia o apêndice no [formato de expressão cron](#appendix).
 
-**Formato da API**
-
-```http
-PATCH /config/schedules/{SCHEDULE_ID}
-```
-
-| Parâmetro | Descrição |
-| --------- | ----------- |
-| `{SCHEDULE_ID}` | O valor `id` do agendamento que você deseja atualizar. |
+>[!ENDTABS]
 
 **Solicitação**
+
++++ Um exemplo de solicitação para atualizar o agendamento.
 
 ```shell
 curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/4e538382-dbd8-449e-988a-4ac639ebe72b \
@@ -317,6 +346,8 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/4e538382-
 | `path` | O caminho do valor que você deseja atualizar. Nesse caso, como você está atualizando o agendamento do cron, é necessário definir o valor de `path` como `/schedule`. |
 | `value` | O valor atualizado do cronograma cron. Esse valor precisa estar no formato de um cronograma cron. Neste exemplo, a programação será executada no segundo dia de cada mês. |
 
++++
+
 **Resposta**
 
 Uma resposta bem-sucedida retorna o status HTTP 204 (Sem conteúdo).
@@ -337,6 +368,8 @@ DELETE /config/schedules/{SCHEDULE_ID}
 
 **Solicitação**
 
++++ Um exemplo de solicitação para excluir um agendamento.
+
 ```shell
 curl -X DELETE https://platform.adobe.io/data/core/ups/config/schedules/4e538382-dbd8-449e-988a-4ac639ebe72b \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -344,6 +377,8 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/config/schedules/4e538382
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
+
++++
 
 **Resposta**
 

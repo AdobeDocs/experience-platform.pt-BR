@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guia da interface do construtor de segmentos
 description: O Construtor de segmentos na interface do usuário do Adobe Experience Platform fornece um espaço de trabalho avançado que permite a interação com elementos de dados de perfil. O espaço de trabalho fornece controles intuitivos para criar e editar regras, como arrastar e soltar blocos usados para representar propriedades de dados.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 7d2fe8d5e5abea768b3514d97ea7edfbb9334511
 workflow-type: tm+mt
-source-wordcount: '3743'
-ht-degree: 6%
+source-wordcount: '4767'
+ht-degree: 5%
 
 ---
 
@@ -212,6 +212,90 @@ Depois de colocar o evento no contêiner Eventos, selecione o botão [!UICONTROL
 A função count agora é adicionada. Agora você pode selecionar a função count e o valor da função. O exemplo abaixo seria para incluir qualquer evento que tenha pelo menos um clique.
 
 ![Uma lista de funções de contagem é exibida e realçada.](../images/ui/segment-builder/select-count.png)
+
+### Restrições de tempo {#time-constraints}
+
+As restrições de tempo permitem aplicar restrições de tempo a atributos baseados em tempo, eventos e à sequência entre os eventos.
+
+>[!IMPORTANT]
+>
+>Se você criou uma definição de segmento com as restrições de tempo &quot;Este mês&quot; ou &quot;Este ano&quot; antes de junho de 2024, será necessário salvar novamente as definições de segmento. Antes de junho de 2024, &quot;Este mês&quot; tinha 30 dias como base e &quot;Este ano&quot; tinha 365 dias como base.
+
+A lista de restrições de tempo disponíveis é a seguinte:
+
++++ Restrições de tempo disponíveis
+
+>[!NOTE]
+>
+>Todas as restrições de tempo são baseadas em UTC.
+>
+>Além disso, se a caixa de seleção [!UICONTROL Ignorar ano] estiver habilitada, o ano **não** será comparado como parte da avaliação de definição de segmento.
+
+| Restrição de tempo | Descrição | Pode permitir ignorar ano | Exemplo |
+| --------------- | ----------- | ------------------- | ------- |
+| Hoje | O atributo ou evento que está sendo comparado **deve** ocorrer hoje. | Sim | ![Um exemplo da restrição de tempo &quot;Hoje&quot; sendo usada.](../images/ui/segment-builder/time-constraints/today.png){width="100" zoomable="yes"} |
+| Ontem | O atributo ou evento que está sendo comparado **deve** ocorreu ontem. | Sim | ![Um exemplo de restrição de tempo &quot;Ontem&quot; sendo usada.](../images/ui/segment-builder/time-constraints/yesterday.png){width="100" zoomable="yes"} |
+| Este mês | O atributo ou evento que está sendo comparado **deve** ocorrer neste mês do calendário. | Sim | ![Um exemplo de restrição de tempo &quot;Este mês&quot; sendo usada.](../images/ui/segment-builder/time-constraints/this-month.png){width="100" zoomable="yes"} |
+| Este ano | O atributo ou evento que está sendo comparado **deve** ocorrer neste ano. | Não | ![Um exemplo de restrição de tempo &quot;Este ano&quot; sendo usada.](../images/ui/segment-builder/time-constraints/this-year.png){width="100" zoomable="yes"} |
+| Data personalizada | O atributo ou evento que está sendo comparado **deve** ocorrer na data especificada. | Sim | ![Um exemplo de restrição de tempo de &quot;Data personalizada&quot; sendo usada.](../images/ui/segment-builder/time-constraints/custom-date.png){width="100" zoomable="yes"} |
+| No(s) último(s) | O atributo ou evento que está sendo comparado **deve** ocorrer no último período escolhido. Este período é **inclusivo** até o momento da avaliação. | Não | ![Um exemplo da restrição de tempo &quot;No último&quot; sendo usada.](../images/ui/segment-builder/time-constraints/in-last.png){width="100" zoomable="yes"} |
+| De (para) | O atributo ou evento sendo comparado **deve** ocorrer dentro das duas datas do calendário escolhidas. Este período é **inclusivo** das duas datas. | Sim, se for uma data personalizada | ![Um exemplo de &quot;De para&quot; sendo usado.](../images/ui/segment-builder/time-constraints/from-to.png){width="100" zoomable="yes"} |
+| Durante | O atributo ou evento que está sendo comparado **deve** ocorrer dentro do mês ou ano selecionado. Se um mês for selecionado, você precisará escolher o mês e um ano em que o atributo ou evento ocorreu.  Se um ano for selecionado, você precisará apenas escolher o ano em que o atributo ou evento ocorreu. Se você selecionar um mês, também poderá habilitar a caixa de seleção [!UICONTROL Ignorar ano]. | Sim | ![Um exemplo de restrição de tempo &quot;Durante&quot; sendo usada.](../images/ui/segment-builder/time-constraints/during.png){width="100" zoomable="yes"} |
+| No prazo de (+/-) | O atributo ou evento que está sendo comparado **deve** ocorrer em dias, semanas, meses ou anos a partir da data selecionada. Este período é **inclusivo** das duas datas. A data selecionada pode ser hoje, ontem ou outra data personalizada de sua escolha. | Sim | ![Um exemplo de restrição de tempo &quot;Within&quot; sendo usada.](../images/ui/segment-builder/time-constraints/within.png){width="100" zoomable="yes"} |
+| Antes | O atributo ou evento que está sendo comparado **deve** ocorrer antes da data selecionada. A data selecionada pode ser uma data personalizada de sua escolha ou uma seleção entre dias, semanas, meses ou anos atrás. | Sim | ![Um exemplo da restrição de tempo &quot;Antes&quot; que está sendo usada.](../images/ui/segment-builder/time-constraints/before.png){width="100" zoomable="yes"} |
+| Depois | O atributo ou evento que está sendo comparado **deve** ocorrer após a data selecionada. A data selecionada pode ser uma data personalizada de sua escolha ou uma seleção entre dias, semanas, meses ou anos atrás. | Sim | ![Um exemplo de restrição de tempo &quot;Depois&quot; sendo usada.](../images/ui/segment-builder/time-constraints/after.png){width="100" zoomable="yes"} |
+| Intervalo contínuo | O atributo ou evento que está sendo comparado deve ocorrer entre as duas datas relativas. As datas podem ser representadas em segundos, minutos, horas, dias, semanas, meses ou anos. | Não | ![Um exemplo de restrição de tempo de &quot;Intervalo contínuo&quot; sendo usada.](../images/ui/segment-builder/time-constraints/rolling-range.png){width="100" zoomable="yes"} |
+| No próximo | O atributo ou evento que está sendo comparado deve ocorrer dentro do próximo período selecionado. Os períodos de tempo selecionados incluem minutos, horas, dias, semanas, meses e anos. | Não | ![Um exemplo da restrição de tempo &quot;Na próxima&quot; que está sendo usada.](../images/ui/segment-builder/time-constraints/in-next.png){width="100" zoomable="yes"} |
+| Existe | O atributo existe. | Não | ![Um exemplo de restrição de tempo &quot;Existe&quot; sendo usada.](../images/ui/segment-builder/time-constraints/exists.png){width="100" zoomable="yes"} |
+| Não existe | O atributo não existe. | Não | ![Um exemplo de restrição de tempo &quot;Não existe&quot; sendo usada.](../images/ui/segment-builder/time-constraints/does-not-exist.png){width="100" zoomable="yes"} |
+
++++
+
+Ao aplicar uma restrição de tempo a um evento, você pode aplicá-la no nível da tela, no nível do cartão ou entre eventos.
+
+#### Restrição no nível da tela
+
+Para aplicar uma restrição de tempo em nível de tela de desenho, selecione o ícone de relógio que aparece acima da linha do tempo dos eventos.
+
+![O seletor de restrição de tempo em nível de tela está realçado.](../images/ui/segment-builder/time-constraints/canvas-level.png)
+
+Quando você aplica uma restrição de tempo no nível da tela, ela se aplica a **todos** eventos no público-alvo.
+
+#### Restrição no nível do cartão
+
+Para aplicar uma restrição no nível do cartão, selecione o cartão no qual deseja aplicar a restrição de tempo, seguido pelo ícone de reticências e **[!UICONTROL Aplicar regra de tempo]**. Isso permite selecionar uma restrição de tempo no contêiner **[!UICONTROL Regras de evento]**.
+
+![O seletor de restrição de tempo em nível de cartão está realçado.](../images/ui/segment-builder/time-constraints/card-level.png)
+
+Ao aplicar uma restrição de tempo no nível do cartão, você aplica a restrição de tempo no evento **specified** no público-alvo.
+
+#### Restrição Entre eventos
+
+Para aplicar uma restrição de tempo entre eventos, selecione o ícone de relógio entre os dois eventos aos quais deseja aplicar a restrição de tempo.
+
+![O seletor de restrição de tempo entre eventos está realçado.](../images/ui/segment-builder/time-constraints/between-event.png)
+
+Quando você aplica uma restrição de tempo entre o evento, ela aplica a restrição de tempo ao tempo **entre** os eventos.
+
+A lista de restrições de tempo disponíveis para esta operação difere da lista principal de restrições de tempo, e é a seguinte:
+
++++ Restrições de tempo disponíveis
+
+| Restrição de tempo | Descrição |
+| --------------- | ----------- |
+| Depois | O último evento **deve pelo menos** ocorrer após o evento anterior. |
+| Dentro de | Os dois eventos **must** ocorrem durante o período listado na restrição de tempo. |
+
+>[!NOTE]
+>
+>Ao usar a restrição de tempo &quot;Depois&quot;, o último evento pode ocorrer por mais tempo do que o listado na restrição de tempo. >
+>Por exemplo, se você tiver um evento de Exibição de página e um evento de Check-out e colocar a restrição de tempo &quot;Após 1 hora&quot; entre esses dois eventos, uma definição de segmento com um evento de Check-out 2 horas após o evento de Exibição de página será qualificada.
+>
+>Além disso, essas duas restrições de tempo podem ser usadas em coordenação umas com as outras.
+>
+>Por exemplo, se você tiver um evento de Exibição de página e um evento de Check-out e colocar as restrições de tempo &quot;Após 1 hora&quot; e &quot;Dentro de 24 horas&quot;, uma definição de segmento com um evento de Check-out 12 horas após o evento de Exibição de página seria qualificada, mas uma definição de segmento com um evento de Check-out 36 horas após o evento de Exibição de página não seria qualificada.
+
++++
 
 ## Containers
 

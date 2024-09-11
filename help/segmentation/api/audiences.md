@@ -3,9 +3,9 @@ title: Endpoint da API de públicos-alvo
 description: Use o endpoint de públicos-alvo na API do serviço de segmentação do Adobe Experience Platform para criar, gerenciar e atualizar programaticamente os públicos-alvo da sua organização.
 role: Developer
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
-source-git-commit: 5d5c1f903e6a54ea983b718c4c371ada2a937297
+source-git-commit: 9c50ca0db55ce4b21978273d7b4d1de9b5f9338d
 workflow-type: tm+mt
-source-wordcount: '1406'
+source-wordcount: '1438'
 ht-degree: 3%
 
 ---
@@ -30,6 +30,10 @@ O ponto de extremidade `/audiences` dá suporte a vários parâmetros de consult
 GET /audiences
 GET /audiences?{QUERY_PARAMETERS}
 ```
+
+>[!NOTE]
+>
+>Se você usar este ponto de extremidade sem nenhum parâmetro de consulta, os públicos-alvo inativos **não** serão retornados. No entanto, se você usar este ponto de extremidade em conjunto com o parâmetro de consulta `property=audienceId`, os públicos-alvo inativos **** serão retornados.
 
 Os seguintes parâmetros de consulta podem ser usados ao recuperar uma lista de públicos-alvo:
 

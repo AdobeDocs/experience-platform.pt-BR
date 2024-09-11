@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Visão geral do controle de acesso
 description: O controle de acesso do Adobe Experience Platform é fornecido por meio da Adobe Admin Console. Essa funcionalidade aproveita perfis de produto no Admin Console, que vinculam usuários com permissões e sandboxes.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: 734a34e9acf80300c28ca14587198fb7eaf83c17
+source-git-commit: 5d5c57dfb9e4abda6b1bca96147a95d063bc17c6
 workflow-type: tm+mt
-source-wordcount: '1731'
+source-wordcount: '1787'
 ht-degree: 1%
 
 ---
@@ -116,7 +116,11 @@ A tabela a seguir descreve as permissões disponíveis para Experience Platform 
 | [!DNL Identity Management] | [!UICONTROL Gerenciar Namespaces de Identidade] | Acesso para ler, criar, editar e excluir namespaces de identidade. |
 | [!DNL Identity Management] | [!UICONTROL Exibir Namespaces De Identidade] | Acesso somente leitura para namespaces de identidade. |
 | [!DNL Identity Management] | [!UICONTROL Exibir Gráfico De Identidade] | Acesso somente leitura para gráficos de identidade. |
-| [!DNL Profile Management] | [!UICONTROL Gerenciar perfis] | Acesso para ler, criar, editar e excluir conjuntos de dados usados para perfis de clientes. Acesso somente leitura aos perfis disponíveis. |
+| [!DNL Intelligent Services] | [!UICONTROL Exibir Attribution AI] | Acesso somente leitura para configurações e insights do Attribution AI. |
+| [!DNL Intelligent Services] | [!UICONTROL Gerenciar Attribution AI] | Acesso para ler, criar, editar e excluir modelos de Attribution AI. |
+| [!DNL Intelligent Services] | [!UICONTROL Exibir IA do cliente] | Acesso para ler ou visualizar os modelos de IA do cliente. |
+| [!DNL Intelligent Services] | [!UICONTROL Gerenciar a IA do cliente] | Acesso para criar, atualizar, excluir, ativar ou desativar modelos de IA do cliente. |
+| [!DNL Profile Management] | [!UICONTROL Gerenciar perfis] | Assimile dados de várias fontes, crie perfis robustos para clientes individuais e armazene dados habilitados para perfis no data lake e no armazenamento de dados do Perfil do cliente em tempo real. |
 | [!DNL Profile Management] | [!UICONTROL Exibir Perfis] | Acesso somente leitura aos perfis disponíveis. |
 | [!DNL Profile Management] | [!UICONTROL Gerenciar segmentos] | Acesso para ler, criar, editar e excluir segmentos. |
 | [!DNL Profile Management] | [!UICONTROL Exibir Segmentos] | Acesso somente leitura aos segmentos disponíveis. |

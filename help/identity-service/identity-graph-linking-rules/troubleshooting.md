@@ -3,9 +3,9 @@ title: Guia de solução de problemas para regras de vinculação do gráfico de
 description: Saiba como solucionar problemas comuns nas regras de vinculação do gráfico de identidade.
 badge: Beta
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
-source-git-commit: 56e2e359812fcbfd011505ad917403d6f5317b4a
+source-git-commit: edda302a1f24c9991074c16fd9e770f2bf262b7c
 workflow-type: tm+mt
-source-wordcount: '2019'
+source-wordcount: '3181'
 ht-degree: 0%
 
 ---
@@ -132,12 +132,42 @@ Há vários motivos que contribuem para que os fragmentos de evento de experiên
 * [Pode ter ocorrido uma falha de validação no Perfil](../../xdm/classes/experienceevent.md).
    * Por exemplo, um evento de experiência deve conter um `_id` e um `timestamp`.
    * Além disso, o `_id` deve ser exclusivo para cada evento (registro).
+* O namespace com a prioridade mais alta é uma cadeia de caracteres vazia.
 
-No contexto da prioridade de namespace, o Perfil rejeitará qualquer evento que contenha duas ou mais identidades com a maior prioridade de namespace. Por exemplo, se GAID não estiver marcada como um namespace exclusivo e duas identidades tiverem um namespace GAID e valores de identidade diferentes, o Perfil não armazenará nenhum dos eventos.
+No contexto da prioridade de namespace, o Perfil rejeitará:
+
+* Qualquer evento que contenha duas ou mais identidades com a maior prioridade de namespace. Por exemplo, se GAID não estiver marcada como um namespace exclusivo e duas identidades tiverem um namespace GAID e valores de identidade diferentes, o Perfil não armazenará nenhum dos eventos.
+* Qualquer evento em que o namespace com a maior prioridade seja uma cadeia de caracteres vazia.
 
 **Etapas de solução de problemas**
 
-Para resolver esse erro, leia as etapas de solução de problemas descritas no guia acima em [solução de problemas de erros relacionados à não assimilação de dados no Serviço de Identidade](#my-identities-are-not-getting-ingested-into-identity-service).
+Se os dados forem enviados ao data lake, mas não ao Perfil, e você acreditar que isso se deve ao envio de duas ou mais identidades com a maior prioridade de namespace em um único evento, poderá executar a seguinte consulta para validar se há dois valores de identidade diferentes enviados para o mesmo namespace:
+
+>[!TIP]
+>
+>Nas queries a seguir, você deve:
+>
+>* Substituir `_testimsorg.identification.core.email` pelo caminho que envia a identidade.
+>* Substitua `Email` pelo namespace com a prioridade mais alta. Esse é o mesmo namespace que não está sendo assimilado.
+>* Substitua `dataset_name` pelo conjunto de dados que você deseja consultar.
+
+```sql
+  SELECT identityMap, key, col.id as identityValue, _testimsorg.identification.core.email, _id, timestamp 
+  FROM (SELECT key, explode(value), * 
+  FROM (SELECT explode(identityMap), * 
+  FROM dataset_name)) WHERE col.id != _testimsorg.identification.core.email and key = 'Email' 
+```
+
+Você também pode executar a seguinte consulta para verificar se a assimilação no perfil não está acontecendo porque o namespace mais alto tem uma cadeia de caracteres vazia:
+
+```sql
+  SELECT identityMap, key, col.id as identityValue, _testimsorg.identification.core.email, _id, timestamp 
+  FROM (SELECT key, explode(value), * 
+  FROM (SELECT explode(identityMap), * 
+  FROM dataset_name)) WHERE (col.id = '' or _testimsorg.identification.core.email = '') and key = 'Email' 
+```
+
+Essas duas consultas presumem que uma identidade é enviada a partir do identityMap e outra identidade é enviada a partir de um descritor de identidade. **OBSERVAÇÃO**: em esquemas do Experience Data Model (XDM), o descritor de identidade é o campo marcado como uma identidade.
 
 ### Os fragmentos de evento de minha experiência são assimilados, mas têm a identidade principal &quot;errada&quot; no perfil
 
@@ -296,3 +326,79 @@ Você pode usar a seguinte consulta no conjunto de dados de exportação de inst
 >[!TIP]
 >
 >As duas consultas listadas acima produzirão os resultados esperados se a sandbox não estiver habilitada para a abordagem temporária de dispositivo compartilhado e se comportará de forma diferente das regras de vinculação do gráfico de identidade.
+
+## Perguntas frequentes {#faq}
+
+Esta seção descreve uma lista de respostas às perguntas frequentes sobre as regras de vinculação do gráfico de identidade.
+
+### Algoritmo de otimização de identidade {#identity-optimization-algorithm}
+
+#### Tenho uma CRMID para cada uma das minhas unidades de negócios (CRMID B2C, CRMID B2B), mas não tenho um namespace exclusivo em todos os meus perfis. O que acontecerá se eu marcar a CRMID B2C e a CRMID B2B como exclusivas e ativar minhas configurações de identidade?
+
+Este cenário não é compatível. Portanto, você pode ver gráficos recolhidos nos casos em que um usuário usa sua CRMID B2C para fazer logon e outro usuário usa sua CRMID B2B para fazer logon. Para obter mais informações, leia a seção sobre [requisito de namespace para uma única pessoa](./configuration.md#single-person-namespace-requirement) na página de implementação.
+
+#### O algoritmo de otimização de identidade &quot;corrige&quot; os gráficos recolhidos existentes?
+
+Os gráficos recolhidos existentes serão afetados (&quot;fixos&quot;) pelo algoritmo de gráfico somente se esses gráficos forem atualizados depois que você salvar as novas configurações.
+
+#### Se duas pessoas entrarem e saírem usando o mesmo dispositivo, o que acontece com os eventos? Todos os eventos serão transferidos para o último usuário autenticado?
+
+* Eventos anônimos (eventos com ECID como identidade principal no Perfil do cliente em tempo real) serão transferidos para o último usuário autenticado. Isso ocorre porque a ECID será vinculada ao CRMID do último usuário autenticado (no Serviço de identidade).
+* Todos os eventos autenticados (eventos com CRMID definido como identidade principal) permanecerão com a pessoa.
+
+Para obter mais informações, leia o manual sobre [como determinar a identidade principal para eventos de experiência](../identity-graph-linking-rules/namespace-priority.md#real-time-customer-profile-primary-identity-determination-for-experience-events).
+
+#### Como as jornadas no Adobe Journey Optimizer serão afetadas quando a ECID for transferida de uma pessoa para outra?
+
+A CRMID do último usuário autenticado será vinculada à ECID (dispositivo compartilhado). As ECIDs podem ser reatribuídas de uma pessoa para outra com base no comportamento do usuário. O impacto dependerá de como a jornada será construída, portanto, é importante que os clientes testem a jornada em um ambiente de sandbox de desenvolvimento para validar o comportamento.
+
+Os principais pontos a serem destacados são os seguintes:
+
+* Depois que um perfil entra em uma jornada, a reatribuição da ECID não resulta na saída do perfil no meio de uma jornada.
+   * As saídas de jornada não são acionadas por alterações no gráfico.
+* Se um perfil não estiver mais associado a uma ECID, isso poderá resultar na alteração do caminho da jornada se houver uma condição que use a qualificação de público-alvo.
+   * A remoção da ECID pode alterar eventos associados a um perfil, o que pode resultar em alterações na qualificação do público-alvo.
+* A reentrada de uma jornada depende das propriedades da jornada.
+   * Se você desativar a reentrada de uma jornada, quando um perfil sair dessa jornada, o mesmo perfil não será reinserido por 91 dias (com base no tempo limite global da jornada).
+* Se uma jornada começar com um namespace ECID, o perfil que entra e o perfil que recebe a ação (por exemplo, email, oferta) podem ser diferentes, dependendo de como a jornada foi projetada.
+   * Por exemplo, se houver uma condição de espera entre as ações e as transferências da ECID durante o período de espera, um perfil diferente poderá ser direcionado.
+   * Com esse recurso, a ECID nem sempre está associada a um perfil.
+   * A recomendação é iniciar as jornadas com namespaces de pessoa (CRMID).
+
+### Prioridade de namespace
+
+#### Ativei minhas configurações de identidade. O que acontece com minhas configurações se eu quiser adicionar um namespace personalizado depois que as configurações forem ativadas?
+
+Há dois &quot;buckets&quot; de namespaces: namespaces de pessoa e namespaces de dispositivo/cookie. O namespace personalizado recém-criado terá a prioridade mais baixa em cada &quot;bucket&quot; para que esse novo namespace personalizado não afete a assimilação de dados existente.
+
+#### Se o Perfil do cliente em tempo real não estiver mais usando o sinalizador &quot;principal&quot; no identityMap, esse valor ainda precisará ser enviado?
+
+Sim, o sinalizador &quot;primário&quot; em identityMap é usado por outros serviços. Para obter mais informações, leia o manual sobre [as implicações da prioridade de namespace em outros serviços de Experience Platform](../identity-graph-linking-rules/namespace-priority.md#implications-on-other-experience-platform-services).
+
+#### A prioridade de namespace será aplicada aos conjuntos de dados de registro de Perfil no Perfil do cliente em tempo real?
+
+Não. A prioridade de namespace será aplicada somente aos conjuntos de dados de Evento de experiência que usam a Classe XDM ExperienceEvent.
+
+#### Como esse recurso funciona em conjunto com as medidas de proteção de gráfico de identidade de 50 identidades por gráfico? A prioridade de namespace afeta esta garantia definida pelo sistema?
+
+O algoritmo de otimização de identidade será aplicado primeiro para garantir a representação da entidade da pessoa. Posteriormente, se o gráfico tentar exceder a [proteção de gráfico de identidade](../guardrails.md) (50 identidades por gráfico), essa lógica será aplicada. A prioridade de namespace não afeta a lógica de exclusão da garantia de identidade/gráfico 50.
+
+### Testes
+
+#### Quais são alguns dos cenários que devo testar em um ambiente de sandbox de desenvolvimento?
+
+De modo geral, testar uma sandbox de desenvolvimento deve imitar os casos de uso que você pretende executar em sua sandbox de produção. Consulte a tabela a seguir para obter algumas áreas principais a serem validadas ao realizar testes abrangentes:
+
+| Caso de teste | Etapas de teste | Resultado esperado |
+| --- | --- | --- |
+| Representação de entidade de pessoa precisa | <ul><li>Imitar navegação anônima</li><li>Imitar duas pessoas (John, Jane) fazendo logon usando o mesmo dispositivo</li></ul> | <ul><li>John e Jane devem estar associados a seus atributos e eventos autenticados.</li><li>O último usuário autenticado deve ser associado aos eventos de navegação anônimos.</li></ul> |
+| Segmentação | Criar quatro definições de segmento (**OBSERVAÇÃO**: cada par de definições de segmento deve ter uma avaliada usando lote e a outra transmissão.) <ul><li>Definição de segmento A: qualificação de segmento com base nos eventos autenticados de John.</li><li>Definição de segmento B: qualificação de segmento com base nos eventos autenticados da Jane.</li></ul> | Independentemente dos cenários de dispositivos compartilhados, John e Jane sempre devem se qualificar para seus respectivos segmentos. |
+| Qualificação de público-alvo/jornadas unitárias no Adobe Journey Optimizer | <ul><li>Crie uma jornada começando com uma atividade de qualificação de público (como a segmentação por transmissão criada acima).</li><li>Crie uma jornada começando com um evento unitário. Esse evento unitário deve ser um evento autenticado.</li><li>Você deve desativar a reentrada ao criar essas jornadas.</li></ul> | <ul><li>Independentemente dos cenários de dispositivos compartilhados, John e Jane devem acionar as respectivas jornadas nas quais devem entrar.</li><li>John e Jane não devem entrar novamente na jornada quando a ECID for transferida de volta para eles.</li></ul> |
+
+{style="table-layout:auto"}
+
+#### Como posso validar se esse recurso está funcionando como esperado?
+
+Use a [ferramenta de simulação de gráficos](./graph-simulation.md) para validar se o recurso está funcionando em um nível de gráfico individual.
+
+Para validar o recurso em um nível de sandbox, consulte a seção [!UICONTROL Contagem de gráficos com vários namespaces] no painel de identidade.

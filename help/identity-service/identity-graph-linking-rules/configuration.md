@@ -1,16 +1,16 @@
 ---
-title: Guia de configuração das regras de vinculação do gráfico de identidade
+title: Guia de implementação para regras de vinculação do gráfico de identidade
 description: Saiba mais sobre as etapas recomendadas a serem seguidas ao implementar seus dados com configurações de regras de vinculação de gráfico de identidade.
 badge: Beta
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 3d96e057123a4dd0b4f6f34a64a93c756b583c9b
+source-git-commit: cfa2cd91f523d80fd42cb6fd2ba17e6eb3eca609
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1361'
+ht-degree: 2%
 
 ---
 
-# Guia de configuração das regras de vinculação do gráfico de identidade
+# Guia de implementação para regras de vinculação do gráfico de identidade
 
 >[!AVAILABILITY]
 >
@@ -102,7 +102,7 @@ Para qualquer comentário, use a opção **[!UICONTROL comentários sobre o Beta
 
 Leia esta seção para obter informações adicionais que você pode consultar ao implementar suas configurações de identidade e namespaces exclusivos.
 
-### Cenário do dispositivo compartilhado {#shared-device-scenario}
+### Requisito de namespace para uma única pessoa {#single-person-namespace-requirement}
 
 Você deve garantir que um único namespace seja usado em todos os perfis que representam uma pessoa. Ao fazer isso, o Serviço de identidade pode detectar o identificador de pessoa apropriado em um determinado gráfico.
 

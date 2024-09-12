@@ -3,9 +3,9 @@ title: Guia de solução de problemas para regras de vinculação do gráfico de
 description: Saiba como solucionar problemas comuns nas regras de vinculação do gráfico de identidade.
 badge: Beta
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
-source-git-commit: edda302a1f24c9991074c16fd9e770f2bf262b7c
+source-git-commit: 7104781435c0cf3891f7216797af4e873b9b37f9
 workflow-type: tm+mt
-source-wordcount: '3181'
+source-wordcount: '3226'
 ht-degree: 0%
 
 ---
@@ -333,6 +333,8 @@ Esta seção descreve uma lista de respostas às perguntas frequentes sobre as r
 
 ### Algoritmo de otimização de identidade {#identity-optimization-algorithm}
 
+Leia esta seção para obter respostas a perguntas frequentes sobre o [algoritmo de otimização de identidade](./identity-optimization-algorithm.md).
+
 #### Tenho uma CRMID para cada uma das minhas unidades de negócios (CRMID B2C, CRMID B2B), mas não tenho um namespace exclusivo em todos os meus perfis. O que acontecerá se eu marcar a CRMID B2C e a CRMID B2B como exclusivas e ativar minhas configurações de identidade?
 
 Este cenário não é compatível. Portanto, você pode ver gráficos recolhidos nos casos em que um usuário usa sua CRMID B2C para fazer logon e outro usuário usa sua CRMID B2B para fazer logon. Para obter mais informações, leia a seção sobre [requisito de namespace para uma única pessoa](./configuration.md#single-person-namespace-requirement) na página de implementação.
@@ -367,6 +369,8 @@ Os principais pontos a serem destacados são os seguintes:
 
 ### Prioridade de namespace
 
+Leia esta seção para obter respostas a perguntas frequentes sobre [prioridade de namespace](./namespace-priority.md).
+
 #### Ativei minhas configurações de identidade. O que acontece com minhas configurações se eu quiser adicionar um namespace personalizado depois que as configurações forem ativadas?
 
 Há dois &quot;buckets&quot; de namespaces: namespaces de pessoa e namespaces de dispositivo/cookie. O namespace personalizado recém-criado terá a prioridade mais baixa em cada &quot;bucket&quot; para que esse novo namespace personalizado não afete a assimilação de dados existente.
@@ -384,6 +388,8 @@ Não. A prioridade de namespace será aplicada somente aos conjuntos de dados de
 O algoritmo de otimização de identidade será aplicado primeiro para garantir a representação da entidade da pessoa. Posteriormente, se o gráfico tentar exceder a [proteção de gráfico de identidade](../guardrails.md) (50 identidades por gráfico), essa lógica será aplicada. A prioridade de namespace não afeta a lógica de exclusão da garantia de identidade/gráfico 50.
 
 ### Testes
+
+Leia esta seção para obter respostas a perguntas frequentes sobre recursos de teste e depuração nas regras de vinculação do gráfico de identidade.
 
 #### Quais são alguns dos cenários que devo testar em um ambiente de sandbox de desenvolvimento?
 

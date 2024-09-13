@@ -3,9 +3,9 @@ title: Algoritmo de otimização de identidade
 description: Saiba mais sobre o Algoritmo de otimização de identidade no Serviço de identidade.
 badge: Beta
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: d3b43c5fa90b67bcba6015d521b78998d50cc3d7
+source-git-commit: 1ea840e2c6c44d5d5080e0a034fcdab4cbdc87f1
 workflow-type: tm+mt
-source-wordcount: '1533'
+source-wordcount: '1531'
 ht-degree: 1%
 
 ---
@@ -162,7 +162,9 @@ Exiba o diagrama abaixo para entender melhor como a associação de eventos anô
 Para obter mais informações sobre regras de vinculação de gráficos de identidade, leia a seguinte documentação:
 
 * [Visão geral das regras de vinculação do gráfico de identidade](./overview.md)
+* [Guia de implementação](./implementation-guide.md)
+* [Exemplos de configurações de gráfico](./example-configurations.md)
+* [Solução de problemas e perguntas frequentes](./troubleshooting.md)
 * [Prioridade de namespace](./namespace-priority.md)
-* [Exemplos de cenários para configurar regras de vinculação de gráficos de identidade](./example-scenarios.md)
-* [Lógica de vinculação de identidade](../features/identity-linking-logic.md)
-* [Serviço de identidade e perfil do cliente em tempo real](../identity-and-profile.md)
+* [Interface de simulação de gráfico](./graph-simulation.md)
+* [Interface de configurações de identidade](./identity-settings-ui.md)

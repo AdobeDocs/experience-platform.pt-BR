@@ -3,7 +3,7 @@ title: Guia de solução de problemas para regras de vinculação do gráfico de
 description: Saiba como solucionar problemas comuns nas regras de vinculação do gráfico de identidade.
 badge: Beta
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
-source-git-commit: 7104781435c0cf3891f7216797af4e873b9b37f9
+source-git-commit: 6cdb622e76e953c42b58363c98268a7c46c98c99
 workflow-type: tm+mt
 source-wordcount: '3226'
 ht-degree: 0%
@@ -176,7 +176,7 @@ A prioridade de namespace desempenha um papel importante em como os fragmentos d
 * Depois de definir e salvar suas [configurações de identidade](./identity-settings-ui.md) para uma determinada sandbox, o Perfil usará a [prioridade de namespace](namespace-priority.md#real-time-customer-profile-primary-identity-determination-for-experience-events) para determinar a identidade principal. No caso de identityMap, o perfil não usará mais o sinalizador `primary=true`.
 * Embora o Perfil não se refira mais a esse sinalizador, outros serviços no Experience Platform podem continuar a usar o sinalizador `primary=true`.
 
-Para que [eventos de usuário autenticados](configuration.md#ingest-your-data) sejam vinculados ao namespace de pessoa, todos os eventos autenticados devem conter o namespace de pessoa (CRMID). Isso significa que mesmo depois que um usuário fizer logon, o namespace da pessoa ainda deverá estar presente em cada evento autenticado.
+Para que [eventos de usuário autenticados](implementation-guide.md#ingest-your-data) sejam vinculados ao namespace de pessoa, todos os eventos autenticados devem conter o namespace de pessoa (CRMID). Isso significa que mesmo depois que um usuário fizer logon, o namespace da pessoa ainda deverá estar presente em cada evento autenticado.
 
 Você pode continuar a ver o sinalizador `primary=true` &#39;eventos&#39; ao pesquisar um perfil no visualizador de perfil. No entanto, isso é ignorado e não será usado pelo Perfil.
 
@@ -272,9 +272,9 @@ ORDER BY timestamp desc
 Consulte a documentação sobre o [algoritmo de otimização de identidade](./identity-optimization-algorithm.md), bem como os tipos de estruturas de gráfico com suporte.
 
 * Leia o [guia de configuração de gráfico](./example-configurations.md) para ver exemplos de estruturas de gráfico com suporte.
-* Você também pode ler o [guia de implementação](./configuration.md#appendix) para ver exemplos de estruturas de gráfico não suportadas. Há dois cenários que podem acontecer:
+* Você também pode ler o [guia de implementação](./implementation-guide.md#appendix) para ver exemplos de estruturas de gráfico não suportadas. Há dois cenários que podem acontecer:
    * Nenhum namespace único em todos os perfis.
-   * Ocorre um cenário de [&quot;ID pendente&quot;](./configuration.md#dangling-loginid-scenario). Nesse cenário, o Serviço de identidade não pode determinar se a ID pendente está associada a qualquer uma das entidades de pessoa nos gráficos.
+   * Ocorre um cenário de [&quot;ID pendente&quot;](./implementation-guide.md#dangling-loginid-scenario). Nesse cenário, o Serviço de identidade não pode determinar se a ID pendente está associada a qualquer uma das entidades de pessoa nos gráficos.
 
 Você também pode usar a [ferramenta de simulação de gráficos na interface](./graph-simulation.md) para simular eventos e definir suas próprias configurações de prioridade de namespace e namespace exclusivas. Isso pode ajudar a fornecer uma compreensão da linha de base de como o algoritmo de otimização de identidade deve se comportar.
 
@@ -331,26 +331,26 @@ Você pode usar a seguinte consulta no conjunto de dados de exportação de inst
 
 Esta seção descreve uma lista de respostas às perguntas frequentes sobre as regras de vinculação do gráfico de identidade.
 
-### Algoritmo de otimização de identidade {#identity-optimization-algorithm}
+## Algoritmo de otimização de identidade {#identity-optimization-algorithm}
 
 Leia esta seção para obter respostas a perguntas frequentes sobre o [algoritmo de otimização de identidade](./identity-optimization-algorithm.md).
 
-#### Tenho uma CRMID para cada uma das minhas unidades de negócios (CRMID B2C, CRMID B2B), mas não tenho um namespace exclusivo em todos os meus perfis. O que acontecerá se eu marcar a CRMID B2C e a CRMID B2B como exclusivas e ativar minhas configurações de identidade?
+### Tenho uma CRMID para cada uma das minhas unidades de negócios (CRMID B2C, CRMID B2B), mas não tenho um namespace exclusivo em todos os meus perfis. O que acontecerá se eu marcar a CRMID B2C e a CRMID B2B como exclusivas e ativar minhas configurações de identidade?
 
-Este cenário não é compatível. Portanto, você pode ver gráficos recolhidos nos casos em que um usuário usa sua CRMID B2C para fazer logon e outro usuário usa sua CRMID B2B para fazer logon. Para obter mais informações, leia a seção sobre [requisito de namespace para uma única pessoa](./configuration.md#single-person-namespace-requirement) na página de implementação.
+Este cenário não é compatível. Portanto, você pode ver gráficos recolhidos nos casos em que um usuário usa sua CRMID B2C para fazer logon e outro usuário usa sua CRMID B2B para fazer logon. Para obter mais informações, leia a seção sobre [requisito de namespace para uma única pessoa](./implementation-guide.md#single-person-namespace-requirement) na página de implementação.
 
-#### O algoritmo de otimização de identidade &quot;corrige&quot; os gráficos recolhidos existentes?
+### O algoritmo de otimização de identidade &quot;corrige&quot; os gráficos recolhidos existentes?
 
 Os gráficos recolhidos existentes serão afetados (&quot;fixos&quot;) pelo algoritmo de gráfico somente se esses gráficos forem atualizados depois que você salvar as novas configurações.
 
-#### Se duas pessoas entrarem e saírem usando o mesmo dispositivo, o que acontece com os eventos? Todos os eventos serão transferidos para o último usuário autenticado?
+### Se duas pessoas entrarem e saírem usando o mesmo dispositivo, o que acontece com os eventos? Todos os eventos serão transferidos para o último usuário autenticado?
 
 * Eventos anônimos (eventos com ECID como identidade principal no Perfil do cliente em tempo real) serão transferidos para o último usuário autenticado. Isso ocorre porque a ECID será vinculada ao CRMID do último usuário autenticado (no Serviço de identidade).
 * Todos os eventos autenticados (eventos com CRMID definido como identidade principal) permanecerão com a pessoa.
 
 Para obter mais informações, leia o manual sobre [como determinar a identidade principal para eventos de experiência](../identity-graph-linking-rules/namespace-priority.md#real-time-customer-profile-primary-identity-determination-for-experience-events).
 
-#### Como as jornadas no Adobe Journey Optimizer serão afetadas quando a ECID for transferida de uma pessoa para outra?
+### Como as jornadas no Adobe Journey Optimizer serão afetadas quando a ECID for transferida de uma pessoa para outra?
 
 A CRMID do último usuário autenticado será vinculada à ECID (dispositivo compartilhado). As ECIDs podem ser reatribuídas de uma pessoa para outra com base no comportamento do usuário. O impacto dependerá de como a jornada será construída, portanto, é importante que os clientes testem a jornada em um ambiente de sandbox de desenvolvimento para validar o comportamento.
 
@@ -367,31 +367,31 @@ Os principais pontos a serem destacados são os seguintes:
    * Com esse recurso, a ECID nem sempre está associada a um perfil.
    * A recomendação é iniciar as jornadas com namespaces de pessoa (CRMID).
 
-### Prioridade de namespace
+## Prioridade de namespace
 
 Leia esta seção para obter respostas a perguntas frequentes sobre [prioridade de namespace](./namespace-priority.md).
 
-#### Ativei minhas configurações de identidade. O que acontece com minhas configurações se eu quiser adicionar um namespace personalizado depois que as configurações forem ativadas?
+### Ativei minhas configurações de identidade. O que acontece com minhas configurações se eu quiser adicionar um namespace personalizado depois que as configurações forem ativadas?
 
 Há dois &quot;buckets&quot; de namespaces: namespaces de pessoa e namespaces de dispositivo/cookie. O namespace personalizado recém-criado terá a prioridade mais baixa em cada &quot;bucket&quot; para que esse novo namespace personalizado não afete a assimilação de dados existente.
 
-#### Se o Perfil do cliente em tempo real não estiver mais usando o sinalizador &quot;principal&quot; no identityMap, esse valor ainda precisará ser enviado?
+### Se o Perfil do cliente em tempo real não estiver mais usando o sinalizador &quot;principal&quot; no identityMap, esse valor ainda precisará ser enviado?
 
 Sim, o sinalizador &quot;primário&quot; em identityMap é usado por outros serviços. Para obter mais informações, leia o manual sobre [as implicações da prioridade de namespace em outros serviços de Experience Platform](../identity-graph-linking-rules/namespace-priority.md#implications-on-other-experience-platform-services).
 
-#### A prioridade de namespace será aplicada aos conjuntos de dados de registro de Perfil no Perfil do cliente em tempo real?
+### A prioridade de namespace será aplicada aos conjuntos de dados de registro de Perfil no Perfil do cliente em tempo real?
 
 Não. A prioridade de namespace será aplicada somente aos conjuntos de dados de Evento de experiência que usam a Classe XDM ExperienceEvent.
 
-#### Como esse recurso funciona em conjunto com as medidas de proteção de gráfico de identidade de 50 identidades por gráfico? A prioridade de namespace afeta esta garantia definida pelo sistema?
+### Como esse recurso funciona em conjunto com as medidas de proteção de gráfico de identidade de 50 identidades por gráfico? A prioridade de namespace afeta esta garantia definida pelo sistema?
 
 O algoritmo de otimização de identidade será aplicado primeiro para garantir a representação da entidade da pessoa. Posteriormente, se o gráfico tentar exceder a [proteção de gráfico de identidade](../guardrails.md) (50 identidades por gráfico), essa lógica será aplicada. A prioridade de namespace não afeta a lógica de exclusão da garantia de identidade/gráfico 50.
 
-### Testes
+## Testes
 
 Leia esta seção para obter respostas a perguntas frequentes sobre recursos de teste e depuração nas regras de vinculação do gráfico de identidade.
 
-#### Quais são alguns dos cenários que devo testar em um ambiente de sandbox de desenvolvimento?
+### Quais são alguns dos cenários que devo testar em um ambiente de sandbox de desenvolvimento?
 
 De modo geral, testar uma sandbox de desenvolvimento deve imitar os casos de uso que você pretende executar em sua sandbox de produção. Consulte a tabela a seguir para obter algumas áreas principais a serem validadas ao realizar testes abrangentes:
 
@@ -403,7 +403,7 @@ De modo geral, testar uma sandbox de desenvolvimento deve imitar os casos de uso
 
 {style="table-layout:auto"}
 
-#### Como posso validar se esse recurso está funcionando como esperado?
+### Como posso validar se esse recurso está funcionando como esperado?
 
 Use a [ferramenta de simulação de gráficos](./graph-simulation.md) para validar se o recurso está funcionando em um nível de gráfico individual.
 

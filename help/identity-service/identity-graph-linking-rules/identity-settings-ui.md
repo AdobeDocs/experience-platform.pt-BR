@@ -3,9 +3,9 @@ title: Interface de configurações de identidade
 description: Saiba como usar a interface do usuário de configurações de identidade.
 badge: Beta
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
-source-git-commit: 04b04807196bb5902e398403612429eae0de3988
+source-git-commit: 6cdb622e76e953c42b58363c98268a7c46c98c99
 workflow-type: tm+mt
-source-wordcount: '529'
+source-wordcount: '539'
 ht-degree: 0%
 
 ---
@@ -24,8 +24,10 @@ Leia este guia para saber como definir suas configurações de identidade na int
 
 Leia os seguintes documentos antes de começar a trabalhar com configurações de identidade:
 
-* [Guia de configuração das regras de vinculação do gráfico de identidade](./configuration.md)
+* [Regras de vinculação do gráfico de identidade](./overview.md)
 * [Algoritmo de otimização de identidade](./identity-optimization-algorithm.md)
+* [Guia de implementação](./implementation-guide.md)
+* [Exemplos de configurações de gráfico](./example-configurations.md)
 * [Prioridade de namespace](./namespace-priority.md)
 * [Simulação de gráfico](./graph-simulation.md)
 
@@ -61,4 +63,12 @@ Uma mensagem de aviso é exibida, indicando que os gráficos existentes só ser�
 
 ## Próximas etapas
 
-Agora você configurou as prioridades de namespace e designou os namespaces exclusivos usando a página de interface do usuário de configurações de identidade. Para obter mais informações, leia a [visão geral das regras de vinculação do gráfico de identidade](./overview.md).
+Para obter mais informações sobre regras de vinculação de gráficos de identidade, leia a seguinte documentação:
+
+* [Visão geral das regras de vinculação do gráfico de identidade](./overview.md)
+* [Algoritmo de otimização de identidade](./identity-optimization-algorithm.md)
+* [Guia de implementação](./implementation-guide.md)
+* [Exemplos de configurações de gráfico](./example-configurations.md)
+* [Solução de problemas e perguntas frequentes](./troubleshooting.md)
+* [Prioridade de namespace](./namespace-priority.md)
+* [Interface de simulação de gráfico](./graph-simulation.md)

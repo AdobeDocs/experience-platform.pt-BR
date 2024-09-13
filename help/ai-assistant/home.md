@@ -2,14 +2,18 @@
 title: Visão geral do Assistente de IA no Adobe Experience Platform
 description: Saiba mais sobre o Assistente de IA, suas nuances e casos de uso e como você pode usá-lo para acelerar seu fluxo de trabalho com a Adobe Experience Platform e a Real-time Customer Data Platform.
 exl-id: cfd4ac22-fff3-4b50-bbc2-85b6328f603c
-source-git-commit: fc87c28d7019e123d974e4d2ad307928a3d3fe89
+source-git-commit: 6f95cae48b0f4c304eb3dbd2d95e01e00e0f01c9
 workflow-type: tm+mt
-source-wordcount: '915'
+source-wordcount: '927'
 ht-degree: 8%
 
 ---
 
 # Assistente de IA no Adobe Experience Platform
+
+O vídeo a seguir é destinado a fornecer suporte à sua compreensão do Assistente de IA.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3429845?learn=on)
 
 Leia este documento para saber mais sobre o Assistente de IA na Adobe Experience Platform.
 

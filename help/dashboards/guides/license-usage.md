@@ -4,10 +4,10 @@ title: Painel de Uso da Licença
 description: A Adobe Experience Platform fornece um painel por meio do qual você pode visualizar informações importantes sobre o uso de licença da sua organização.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: dedffe90e9107b70d4ddf65a7bf8079396ff8e8b
+source-git-commit: b1de61b2e7d0dedf2da8ef8ffb02fe5c15e82fb2
 workflow-type: tm+mt
-source-wordcount: '2641'
-ht-degree: 6%
+source-wordcount: '2720'
+ht-degree: 5%
 
 ---
 
@@ -17,6 +17,16 @@ ht-degree: 6%
 >id="testy-mctestface"
 >title="Caixa de diálogo de teste que não deve estar visível"
 >abstract="O objeto {name} está sendo exibido em {date}."
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseusage_core"
+>title="Tabela de produtos principais"
+>abstract="Os principais produtos listados na tabela têm suas próprias métricas, rastreamento de uso e exibições de drill-through no nível da sandbox. Esses produtos principais fornecem as métricas principais para rastreamento e todos os complementos estão incluídos nessas métricas."
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseusage_addons"
+>title="Tabela de complementos"
+>abstract="A tabela Complementos lista produtos cujas quantidades de licença são combinadas com as métricas compatíveis com os produtos principais. Esses complementos não têm métricas separadas, mas aprimoram o rastreamento de uso dos produtos principais aos quais estão associados."
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseUsage"

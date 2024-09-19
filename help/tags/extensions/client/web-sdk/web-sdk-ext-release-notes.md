@@ -1,17 +1,25 @@
 ---
 title: Notas de versão da extensão SDK da Web da Adobe Experience Platform
 description: Extensão de tag do SDK da Web da Adobe Experience Platform
-source-git-commit: 73a82825dd6c9ae97db76018df5462ab20c7d15e
+exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
+source-git-commit: c1fb9fe7d4863e316b824d6c8dd2ff0d3405d7ea
 workflow-type: tm+mt
-source-wordcount: '2258'
-ht-degree: 29%
+source-wordcount: '2291'
+ht-degree: 28%
 
 ---
-
 
 # Notas de versão da extensão SDK da Web da Adobe Experience Platform
 
 Este documento aborda as notas de versão da extensão de tag do SDK da Web da Adobe Experience Platform. Para obter as notas de versão mais recentes do próprio SDK, consulte as [notas de versão do SDK da Web da plataforma](/help/web-sdk/release-notes.md).
+
+## Versão 2.26.1 - 19 de setembro de 2024
+
+**Correções e melhorias**
+
+- Correção de um problema em que os cookies não eram gravados corretamente ao executar o SDK da Web localmente.
+
+Contém a versão 2.23.0 do SDK da Web do Adobe Experience Platform.
 
 ## Versão 2.26.0 - 22 de agosto de 2024
 

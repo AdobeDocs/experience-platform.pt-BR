@@ -2,9 +2,9 @@
 title: thirdPartyCookiesEnabled
 description: Permitir o uso de cookies de terceiros para identificar visitantes.
 exl-id: f241a9ae-a892-46a5-b0dd-5ac72a44d4ac
-source-git-commit: 8fc0fd96f13f0642f7671d0e0f4ecfae8ab6761f
+source-git-commit: a884790aa48fb97eebe2421124fc5d5f76c8a79d
 workflow-type: tm+mt
-source-wordcount: '278'
+source-wordcount: '237'
 ht-degree: 0%
 
 ---
@@ -12,14 +12,9 @@ ht-degree: 0%
 
 # `thirdPartyCookiesEnabled`
 
->[!IMPORTANT]
->
->A Google [anunciou](https://developers.google.com/privacy-sandbox/3pcd/prepare/prepare-for-phaseout) planos para descontinuar o suporte da Chrome para cookies de terceiros no segundo semestre de 2024. Consequentemente, os cookies de terceiros não serão mais compatíveis com a maioria dos navegadores.
->
->Quando esta alteração for implementada, o Adobe descontinuará o suporte para o cookie `demdex` que atualmente tem suporte no SDK da Web.
-
-
 A propriedade `thirdPartyCookiesEnabled` é um booliano que determina se o SDK da Web define cookies em um contexto de terceiros. Ativar essa opção é útil se você quiser identificar visitantes entre subdomínios ou domínios pertencentes à sua organização. No entanto, muitos navegadores modernos limitam a configuração e a expiração de cookies de terceiros.
+
+A propriedade `thirdPartyCookiesEnabled` também controla se um [`CORE ID`](../../identity/overview.md#tracking-coreid-web-sdk) pode ser solicitado nas chamadas [`getIdentity`](../getidentity.md).
 
 Quando esta opção é ativada, o SDK da Web usa o Adobe Audience Manager para ajudar a identificar um visitante. Quando essa opção está desativada, a chamada para o Audience Manager é desativada. Consulte [Compreender as chamadas para o domínio Demdex](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/demdex-calls.html?lang=pt-BR) no guia do usuário do Audience Manager para obter mais informações.
 

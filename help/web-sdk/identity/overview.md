@@ -2,9 +2,9 @@
 title: Dados de identidade no SDK da Web
 description: Saiba como recuperar e gerenciar Adobe Experience Cloud IDs (ECIDs) usando o SDK da Web da Adobe Experience Platform.
 exl-id: 03060cdb-becc-430a-b527-60c055c2a906
-source-git-commit: 3b0fa672c4befd8e17632e62b0eeb13b6b17bfb4
+source-git-commit: c99831cf2bb1b862d65851701b38c6d3dfe99000
 workflow-type: tm+mt
-source-wordcount: '1472'
+source-wordcount: '1554'
 ht-degree: 0%
 
 ---
@@ -14,9 +14,9 @@ ht-degree: 0%
 
 O SDK da Web da Adobe Experience Platform usa [Adobe Experience Cloud IDs (ECIDs)](../../identity-service/features/ecid.md) para rastrear o comportamento do visitante. Usando o [!DNL ECIDs], você pode garantir que cada dispositivo tenha um identificador exclusivo que possa persistir em várias sessões, vinculando todas as ocorrências que ocorrem durante e entre sessões da Web a um dispositivo específico.
 
-Este documento fornece uma visão geral de como gerenciar o [!DNL ECIDs] usando o SDK da Web.
+Este documento fornece uma visão geral de como gerenciar o [!DNL ECIDs] e o [!DNL CORE IDs] usando o SDK da Web.
 
-## Rastreamento de ECIDs usando o SDK da Web {#tracking-ecids-we-sdk}
+## Rastreamento de ECIDs usando o SDK da Web {#tracking-ecids-web-sdk}
 
 O SDK da Web atribui e rastreia [!DNL ECIDs] usando cookies, com vários métodos disponíveis para configurar como esses cookies são gerados.
 
@@ -33,6 +33,12 @@ Ao usar cookies para identificação de dispositivo, você tem duas maneiras de 
 1. Enviar dados diretamente para o domínio Edge Network `adobedc.net`. Este método é conhecido como [coleção de dados de terceiros](#third-party).
 
 Conforme explicado nas seções abaixo, o método de coleta de dados que você escolhe usar tem um impacto direto na vida útil do cookie nos navegadores.
+
+## Rastreamento de IDs principais usando o SDK da Web {#tracking-coreid-web-sdk}
+
+Ao usar o Google Chrome com cookies de terceiros habilitados e não houver nenhum cookie `kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` definido, a primeira solicitação de Edge Network passa por um domínio `demdex.net`, que define um cookie demdex. Este cookie contém um [!DNL CORE ID]. Este é um identificador de usuário único, diferente do [!DNL ECID].
+
+Dependendo da sua implementação, talvez você queira [acessar o [!DNL CORE ID]](#retrieve-coreid).
 
 ### Coleta de dados primários {#first-party}
 
@@ -84,7 +90,6 @@ Em seguida, defina o campo de destino como um caminho XDM, onde o campo é do ti
 
 ### Recuperar o [!DNL ECID] através do comando `getIdentity()` {#retrieve-ecid-getidentity}
 
-
 >[!IMPORTANT]
 >
 >Você só deve recuperar a ECID por meio do comando `getIdentity()` se precisar de [!DNL ECID] no lado do cliente. Se você quiser mapear a ECID apenas para um campo XDM, use o [Preparo de dados para a coleção de dados](#retrieve-ecid-data-prep).
@@ -107,6 +112,17 @@ alloy("getIdentity")
     // "error" will be an error object with additional information.
   });
 ```
+
+## Recuperar a ID PRINCIPAL do usuário atual {#retrieve-coreid}
+
+Para recuperar a ID CORE de um usuário, você pode usar o comando [`getIdentity()`](../commands/getidentity.md), conforme mostrado abaixo.
+
+```js
+alloy("getIdentity",{
+  "namespaces": ["CORE"]
+});
+```
+
 
 ## Usando o `identityMap` {#using-identitymap}
 

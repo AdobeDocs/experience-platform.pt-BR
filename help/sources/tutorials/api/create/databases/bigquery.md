@@ -3,9 +3,9 @@ title: Criar uma conexão básica do Google BigQuery usando a API do serviço de
 description: Saiba como conectar o Adobe Experience Platform ao Google BigQuery usando a API de serviço de fluxo.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 51f90366-7a0e-49f1-bd57-b540fa1d15af
-source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
+source-git-commit: 1fa79b31b5a257ebb3cbd60246b757d8a4a63d7c
 workflow-type: tm+mt
-source-wordcount: '524'
+source-wordcount: '523'
 ht-degree: 2%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 2%
 
 Uma conexão base representa a conexão autenticada entre uma origem e o Adobe Experience Platform.
 
-Este tutorial guiará você pelas etapas para criar uma conexão básica para [!DNL Google BigQuery] usando a [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Leia este guia para saber como criar uma conexão base para [!DNL Google BigQuery] usando a [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Introdução
 
@@ -31,18 +31,7 @@ As seções a seguir fornecem informações adicionais que você precisará sabe
 
 ### Coletar credenciais necessárias
 
-Para que [!DNL Flow Service] conecte [!DNL Google BigQuery] à Platform, você deve fornecer os seguintes valores de autenticação OAuth 2.0:
-
-| Credencial | Descrição |
-| ---------- | ----------- |
-| `project` | A ID do projeto [!DNL Google BigQuery] padrão para consulta. |
-| `clientID` | O valor de ID usado para gerar o token de atualização. |
-| `clientSecret` | O valor secreto usado para gerar o token de atualização. |
-| `refreshToken` | O token de atualização obtido de [!DNL Google] usado para autorizar o acesso a [!DNL Google BigQuery]. |
-| `largeResultsDataSetId` | A ID do conjunto de dados [!DNL Google BigQuery] pré-criada que é necessária para habilitar o suporte para grandes conjuntos de resultados. |
-| `connectionSpec.id` | A especificação de conexão retorna as propriedades do conector de uma origem, incluindo especificações de autenticação relacionadas à criação das conexões de base e de origem. A ID da especificação de conexão para [!DNL Google BigQuery] é: `3c9b37f8-13a6-43d8-bad3-b863b941fedd`. |
-
-Para obter mais informações sobre esses valores, consulte este [[!DNL Google BigQuery] documento](https://cloud.google.com/storage/docs/json_api/v1/how-tos/authorizing).
+Leia o [[!DNL Google BigQuery] guia de autenticação](../../../../connectors/databases/bigquery.md#generate-your-google-bigquery-credentials) para obter as etapas detalhadas sobre como coletar as credenciais necessárias.
 
 ### Uso de APIs da plataforma
 
@@ -60,9 +49,13 @@ Para criar uma ID de conexão base, faça uma solicitação POST para o ponto de
 POST /connections
 ```
 
+>[!BEGINTABS]
+
+>[!TAB Usar autenticação básica]
+
 **Solicitação**
 
-A solicitação a seguir cria uma conexão base para [!DNL Google BigQuery]:
+A solicitação a seguir cria uma conexão base para [!DNL Google BigQuery] usando autenticação básica:
 
 ```shell
 curl -X POST \
@@ -73,8 +66,8 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Google BigQuery connection",
-        "description": "Google BigQuery connection",
+        "name": "Google BigQuery connection with basic authentication",
+        "description": "Google BigQuery connection with basic authentication",
         "auth": {
             "specName": "Basic Authentication",
             "type": "OAuth2.0",
@@ -110,6 +103,59 @@ Uma resposta bem-sucedida retorna detalhes da conexão recém-criada, incluindo 
     "etag": "\"ca00acbf-0000-0200-0000-60149e1e0000\""
 }
 ```
+
+>[!TAB Usar autenticação de serviço]
+
+
+**Solicitação**
+
+A solicitação a seguir cria uma conexão base para [!DNL Google BigQuery] usando autenticação de serviço:
+
+```shell
+curl -X POST \
+    'https://platform.adobe.io/data/foundation/flowservice/connections' \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}' \
+    -H 'Content-Type: application/json' \
+    -d '{
+        "name": "Google BigQuery base connection with service account",
+        "description": "Google BigQuery connection with service account",
+        "auth": {
+            "specName": "Service Authentication",
+            "params": {
+                    "projectId": "{PROJECT_ID}",
+                    "keyFileContent": "{KEY_FILE_CONTENT},
+                    "largeResultsDataSetId": "{LARGE_RESULTS_DATASET_ID}"
+                }
+        },
+        "connectionSpec": {
+            "id": "3c9b37f8-13a6-43d8-bad3-b863b941fedd",
+            "version": "1.0"
+        }
+    }'
+```
+
+| Propriedade | Descrição |
+| --------- | ----------- |
+| `auth.params.projectId` | A ID do projeto [!DNL Google BigQuery] padrão a ser consultado. contra. |
+| `auth.params.keyFileContent` | O arquivo de chave usado para autenticar a conta de serviço. Você deve codificar o conteúdo do arquivo de chave em [!DNL Base64]. |
+| `auth.params.largeResultsDataSetId` | (Opcional) A ID do conjunto de dados [!DNL Google BigQuery] pré-criada que é necessária para habilitar o suporte para grandes conjuntos de resultados. |
+
+**Resposta**
+
+Uma resposta bem-sucedida retorna detalhes da conexão recém-criada, incluindo seu identificador exclusivo (`id`). Essa ID é necessária para explorar seus dados no próximo tutorial.
+
+```json
+{
+    "id": "6990abad-977d-41b9-a85d-17ea8cf1c0e4",
+    "etag": "\"ca00acbf-0000-0200-0000-60149e1e0000\""
+}
+```
+
+>[!ENDTABS]
+
 
 ## Próximas etapas
 

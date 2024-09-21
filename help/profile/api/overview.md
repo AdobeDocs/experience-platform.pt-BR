@@ -4,9 +4,9 @@ title: Guia da API do Perfil do cliente em tempo real
 description: A API de perfil do cliente em tempo real permite que os desenvolvedores explorem e trabalhem com dados de perfil, incluindo a visualização de perfis, a criação e a atualização de políticas de mesclagem, a exportação ou a amostragem de dados de perfil e a exclusão de dados de perfil que não são mais necessários ou que foram adicionados por engano. Siga este manual para saber como executar operações importantes usando a API.
 role: Developer
 exl-id: ce39b95b-cff7-46cf-a14c-8203017c8826
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: cb276c55c010aa7ccc936947ad87bf74239d6e99
 workflow-type: tm+mt
-source-wordcount: '883'
+source-wordcount: '860'
 ht-degree: 2%
 
 ---
@@ -21,11 +21,7 @@ Para exibir todos os pontos de extremidade e operações CRUD disponíveis, visi
 
 Para obter um guia para trabalhar com dados do [!DNL Real-Time Customer Profile] na interface do usuário do [!DNL Experience Platform], consulte o [Guia do usuário do perfil](../ui/user-guide.md).
 
-## [!BADGE Beta]{type=Informative} atributos computados {#computed-attributes}
-
->[!IMPORTANT]
->
-A funcionalidade de atributo computado está na versão beta e não está disponível para todos os usuários. A documentação e a funcionalidade estão sujeitas a alterações.
+## Atributos computados {#computed-attributes}
 
 Os atributos computados são funções usadas para agregar dados no nível do evento em atributos no nível do perfil. Essas funções são computadas automaticamente para que possam ser usadas na segmentação, ativação e personalização.
 

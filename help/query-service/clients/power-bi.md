@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Conectar o Power BI ao Serviço de consulta
 description: Este documento aborda as etapas para conectar o Power BI ao Serviço de consulta da Adobe Experience Platform.
 exl-id: 8fcd3056-aac7-4226-a354-ed7fb8fe9ad7
-source-git-commit: 26f0725f0f239707bd719ed46929648f8d557155
+source-git-commit: 2b76b99d1e22d75faf8d758edd6cf08acdec7c21
 workflow-type: tm+mt
-source-wordcount: '1073'
+source-wordcount: '1011'
 ht-degree: 0%
 
 ---
@@ -24,16 +24,6 @@ Este guia requer que você já tenha acesso ao aplicativo de desktop [!DNL Power
 > O aplicativo de área de trabalho [!DNL Power BI] está **somente** disponível em dispositivos Windows.
 
 Para adquirir as credenciais necessárias para conectar [!DNL Power BI] ao Experience Platform, você deve ter acesso ao espaço de trabalho de Consultas na interface do usuário da Platform. Entre em contato com o administrador da organização se você não tiver acesso ao espaço de trabalho de consultas.
-
-Após instalar o [!DNL Power BI], será necessário instalar o `Npgsql`, um pacote de driver .NET para PostgreSQL. Mais informações sobre Npgsql podem ser encontradas na [Documentação de Npgsql](https://www.npgsql.org/doc/index.html).
-
->[!IMPORTANT]
->
->Você deve baixar a v4.0.10 ou inferior, pois as versões mais recentes resultam em erros.
-
-Em &quot;[!DNL Npgsql GAC Installation]&quot;, na tela de instalação personalizada, selecione **[!DNL Will be installed on local hard drive]**.
-
-Para garantir que o Npgsql foi instalado corretamente, reinicie o computador antes de prosseguir para as próximas etapas.
 
 ## Conectar [!DNL Power BI] ao Serviço de consulta {#connect-power-bi}
 

@@ -2,10 +2,10 @@
 title: Visualização da depuração de push
 description: Este manual detalha informações sobre a visualização Depuração de push no Adobe Experience Platform Assurance.
 exl-id: a9558ee2-2e80-4b0d-ab45-2020be85e634
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: f9cc088cdda4323c80e35978fcde373cbba9204d
 workflow-type: tm+mt
-source-wordcount: '940'
-ht-degree: 100%
+source-wordcount: '919'
+ht-degree: 86%
 
 ---
 
@@ -25,7 +25,7 @@ Esta visualização só é habilitada para um cliente individual, portanto, sele
 
 ## Validar configuração
 
-A guia **[!UICONTROL Validar configuração]** valida e fornece detalhes adicionais sobre a configuração de push do aplicativo. Há três painéis que executam validações. Eles exibirão uma marca de seleção verde se todas as validações forem bem-sucedidas. Se houver três marcas de seleção verdes, o aplicativo foi configurado corretamente para mensagens por push, está gravando tokens de push no perfil de usuário e tem uma superfície de aplicativo associada configurada.
+A guia **[!UICONTROL Validar configuração]** valida e fornece detalhes adicionais sobre a configuração de push do aplicativo. Há três painéis que executam validações. Eles exibirão uma marca de seleção verde se todas as validações forem bem-sucedidas. Se houver três marcas de seleção verdes, o aplicativo foi configurado corretamente para mensagens por push, está gravando tokens de push no perfil do usuário e tem uma configuração de canal associada configurada.
 
 Se algo não estiver funcionando como o esperado, haverá um alerta com detalhes sobre como corrigir o problema:
 
@@ -49,11 +49,9 @@ Por fim, na parte inferior do painel, há um link que abrirá esse perfil espec�
 
 ### Credenciais e configuração da AppStore
 
-Este painel confirma se a ID do aplicativo e a plataforma de mensagens que foi salva no perfil têm uma superfície de aplicativo correspondente criada. Uma superfície de aplicativo é onde as credenciais de push do aplicativo são enviadas.
+Esse painel valida se a ID do aplicativo e a plataforma de mensagens que foi salva no perfil têm uma configuração de canal correspondente criada. Uma configuração de canal é onde as credenciais de push do aplicativo são carregadas.
 
-Se for válido, o perfil exibirá o nome da superfície e a ID do aplicativo além do nome do serviço de mensagens.
-
-Por fim, na parte inferior do painel, há um link que abrirá essa superfície do aplicativo específica em uma nova guia.
+Se for válido, o perfil exibirá o nome da configuração do canal, a ID do aplicativo e o nome do serviço de mensagens.
 
 ## Enviar push de teste
 
@@ -71,9 +69,9 @@ No painel **[!UICONTROL Mensagem]** é possível dar um título e um corpo para 
 
 ### Direcionamento de push
 
-O painel **[!UICONTROL Direcionamento de push]** permite personalizar qual token de push e superfície do aplicativo serão usados ao enviar a mensagem de push.
+O painel **[!UICONTROL Destino de push]** permite personalizar qual token de push e configuração de canal usar ao enviar a mensagem de push.
 
-Essas informações serão fornecidas por padrão se a guia **[!UICONTROL Configuração de validação]** mostrar três marcas de seleção verdes. No entanto, é possível fornecer seu próprio token de push e superfície de aplicativo, mesmo que o aplicativo não esteja totalmente configurado.
+Essas informações serão fornecidas por padrão se a guia **[!UICONTROL Configuração de validação]** mostrar três marcas de seleção verdes. No entanto, você pode fornecer seu próprio token de push e configuração de canal, mesmo que o aplicativo não esteja totalmente configurado.
 
 ![Painel de Direcionamento](./images/push-debug-view/target-pane.png)
 

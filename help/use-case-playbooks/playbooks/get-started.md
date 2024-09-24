@@ -4,9 +4,9 @@ title: Introdução aos manuais de caso de uso
 description: Saiba como começar a usar a funcionalidade dos manuais de estratégia de casos de uso.
 role: Admin
 exl-id: 1c39792e-49fe-4c5f-9796-fa29f60b7461
-source-git-commit: 1781aa552107b6ca1fed357c053a4f892960dc55
+source-git-commit: 703c84e61af105bc3933e4750a3cb27df8ac19fe
 workflow-type: tm+mt
-source-wordcount: '990'
+source-wordcount: '989'
 ht-degree: 14%
 
 ---
@@ -105,11 +105,11 @@ Também configure canais para manuais que contenham mensagens transacionais, com
 
 ### Superfície de canal de push
 
-Confirme se as superfícies do aplicativo estão configuradas na interface Experience Platform ou Coleções de dados. É assim que as superfícies do aplicativo se parecem no ambiente de Coleções de dados.
+Confirme se as configurações de canal estão definidas na interface Experience Platform ou na interface de Coleções de dados. É assim que as configurações de canal se parecem no ambiente de Coleções de dados.
 
-<!-- ![App surfaces in Data collections](/help/use-case-playbooks/assets/playbooks/get-started/.png) -->
+<!-- ![Channel configurations in Data collections](/help/use-case-playbooks/assets/playbooks/get-started/.png) -->
 
-Em seguida, selecione o canal, as plataformas e os aplicativos que você visualizou nas configurações da superfície do aplicativo. Selecione **Enviar** para criar a superfície de canal de push.
+Em seguida, selecione o canal, as plataformas e os aplicativos que você visualizou nas configurações de canal. Selecione **Enviar** para criar a superfície de canal de push.
 
 Leia a documentação sobre [como configurar superfícies de canal de push](https://experienceleague.adobe.com/docs/journey-optimizer/using/push/push-config/push-configuration.html).
 

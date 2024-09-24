@@ -2,9 +2,9 @@
 title: Criar uma conexão SFTP com o Source na interface
 description: Saiba como criar uma conexão de origem SFTP usando a interface do usuário do Adobe Experience Platform.
 exl-id: 1a00ed27-3c95-4e57-9f94-45ff256bf75c
-source-git-commit: f6d1cc811378f2f37968bf0a42b428249e52efd8
+source-git-commit: 9cd1232c9257d27b80ed57c26658b1e4058535e8
 workflow-type: tm+mt
-source-wordcount: '820'
+source-wordcount: '662'
 ht-degree: 1%
 
 ---
@@ -30,20 +30,7 @@ Se você já tiver uma conexão [!DNL SFTP] válida, ignore o restante deste doc
 
 ### Coletar credenciais necessárias
 
-Para se conectar a [!DNL SFTP], você deve fornecer valores para as seguintes propriedades de conexão:
-
-| Credencial | Descrição |
-| ---------- | ----------- |
-| `host` | O nome ou endereço IP associado ao servidor [!DNL SFTP]. |
-| `port` | A porta do servidor [!DNL SFTP] à qual você está se conectando. Se não for fornecido, o valor padrão será `22`. |
-| `username` | O nome de usuário com acesso ao servidor [!DNL SFTP]. |
-| `password` | A senha do servidor [!DNL SFTP]. |
-| `privateKeyContent` | O conteúdo da chave privada SSH codificada na Base64. O tipo de chave OpenSSH deve ser classificado como RSA ou DSA. |
-| `passPhrase` | A senha para descriptografar a chave privada se o arquivo de chave ou o conteúdo da chave estiver protegido por uma senha. Se PrivateKeyContent estiver protegida por senha, esse parâmetro precisará ser usado com a senha de PrivateKeyContent como valor. |
-| `maxConcurrentConnections` | Esse parâmetro permite especificar um limite máximo para o número de conexões simultâneas que a Platform criará ao se conectar ao servidor SFTP. Você deve definir esse valor como menor que o limite definido pelo SFTP. **Observação**: quando esta configuração é habilitada para uma conta SFTP existente, ela afeta apenas os fluxos de dados futuros, não os existentes. |
-| Caminho da pasta | O caminho para a pasta à qual você deseja fornecer acesso. [!DNL SFTP] origem, você pode fornecer o caminho da pasta para especificar o acesso do usuário à subpasta de sua escolha. |
-
-Depois de obter as credenciais necessárias, você poderá seguir as etapas abaixo para criar uma nova conta do [!DNL SFTP] para se conectar à Platform.
+Leia o [[!DNL SFTP] guia de autenticação](../../../../connectors/cloud-storage/sftp.md#gather-required-credentials) para obter etapas detalhadas sobre como recuperar suas credenciais de autenticação.
 
 ## Conectar ao servidor [!DNL SFTP]
 
@@ -81,13 +68,32 @@ A origem [!DNL SFTP] dá suporte à autenticação básica e à autenticação v
 
 >[!TAB Autenticação básica]
 
-Para usar a autenticação básica, selecione **[!UICONTROL Senha]** e forneça os valores de host e porta aos quais se conectar, junto com seu nome de usuário e senha. Durante essa etapa, também é possível designar o caminho para a subpasta à qual você deseja fornecer acesso. Quando terminar, selecione **[!UICONTROL Conectar à origem]**.
+Para usar a autenticação básica, selecione **[!UICONTROL Senha]** e forneça os valores apropriados para as seguintes credenciais:
+
+* host
+* porta
+* nome de usuário
+* senha
+
+Durante esta etapa, você também pode configurar o máximo de conexões simultâneas, definir o caminho da pasta e habilitar ou desabilitar a divisão para o servidor [!DNL SFTP]. Quando terminar, selecione **[!UICONTROL Conectar à origem]** e aguarde alguns momentos para estabelecer a conexão.
+
+Para obter mais informações sobre autenticação, leia o manual sobre [coleta das credenciais necessárias para [!DNL SFTP]](../../../../connectors/cloud-storage/sftp.md#gather-required-credentials).
 
 ![A tela da nova conta para a origem SFTP usando a autenticação básica](../../../../images/tutorials/create/sftp/password.png)
 
 >[!TAB Autenticação de chave pública SSH]
 
-Para usar credenciais baseadas em chave pública SSH, selecione **[!UICONTROL Chave pública SSH]** e forneça o host e os valores de porta, bem como a combinação de conteúdo de chave privada e senha. Durante essa etapa, também é possível designar o caminho para a subpasta à qual você deseja fornecer acesso. Quando terminar, selecione **[!UICONTROL Conectar à origem]**.
+Para usar credenciais baseadas em chave pública SSH, selecione **[!UICONTROL Chave pública SSH]** e forneça os valores apropriados para as seguintes credenciais:
+
+* host
+* porta
+* nome de usuário
+* conteúdo da chave privada
+* senha
+
+Durante esta etapa, você também pode configurar o máximo de conexões simultâneas, definir o caminho da pasta e habilitar ou desabilitar a divisão para o servidor [!DNL SFTP]. Quando terminar, selecione **[!UICONTROL Conectar à origem]** e aguarde alguns momentos para estabelecer a conexão.
+
+Para obter mais informações sobre autenticação, leia o manual sobre [coleta das credenciais necessárias para [!DNL SFTP]](../../../../connectors/cloud-storage/sftp.md#gather-required-credentials).
 
 ![A tela da nova conta para a origem SFTP usando a chave pública SSH.](../../../../images/tutorials/create/sftp/ssh.png)
 

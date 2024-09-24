@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guia de solução de problemas de sandboxes
 description: Este documento fornece respostas a perguntas frequentes sobre sandboxes na Adobe Experience Platform.
 exl-id: 6a496509-a4e9-4e76-829b-32d67ccfcce6
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 7ee472294e8f255d9de3c15982a6f5d2d3654755
 workflow-type: tm+mt
-source-wordcount: '840'
+source-wordcount: '820'
 ht-degree: 8%
 
 ---
@@ -31,9 +31,9 @@ As sandboxes são partições virtuais dentro de uma única instância do Experi
 
 Há dois tipos de sandbox disponíveis no Experience Platform:
 
-* **Sandbox de produção**: uma sandbox de produção deve ser usada com perfis em seu ambiente de produção. A Platform permite criar várias sandboxes de produção para fornecer a funcionalidade certa para os dados e, ao mesmo tempo, manter o isolamento operacional. Esse recurso permite dedicar sandboxes de produção específicas a linhas de negócios, marcas, projetos ou regiões distintas. As sandboxes de produção oferecem suporte a um volume de perfis de produção até o compromisso licenciado do [!DNL Profile] (medido cumulativamente em todas as sandboxes de produção autorizadas). Você está autorizado a usar o perfil médio licenciado por [!DNL Profile] autorizado (medido cumulativamente em todas as sandboxes de produção autorizadas).
+* **Sandbox de produção**: uma sandbox de produção deve ser usada com perfis em seu ambiente de produção. A Platform permite criar várias sandboxes de produção para fornecer a funcionalidade certa para os dados e, ao mesmo tempo, manter o isolamento operacional. Esse recurso permite dedicar sandboxes de produção específicas a linhas de negócios, marcas, projetos ou regiões distintas. As sandboxes de produção oferecem suporte a um volume de perfis de produção até o compromisso licenciado do [!DNL Profile] (medido cumulativamente em todas as sandboxes de produção autorizadas). Você está autorizado a usar todo o volume total de dados licenciado (medido cumulativamente em todas as sandboxes de produção autorizadas).
+
 * **Sandbox de desenvolvimento**: uma sandbox de desenvolvimento é uma sandbox que pode ser usada exclusivamente para desenvolvimento e teste com perfis de não produção. As sandboxes de desenvolvimento são compatíveis com um volume de perfis de não produção até 10% do comprometimento do [!DNL Profile] licenciado (medido cumulativamente em todas as sandboxes de desenvolvimento autorizadas). Você tem direito a até:
-   * Uma riqueza média de perfil de não produção de 75 quilobytes por perfil de não produção autorizado (medida cumulativamente em todas as sandboxes de desenvolvimento autorizadas);
    * Um trabalho de segmentação em lote por dia, por sandbox de desenvolvimento;
    * Uma média de 120 chamadas de API do [!DNL Profile], por [!DNL Profile], por ano (medidas cumulativamente em todas as sandboxes de desenvolvimento autorizadas).
 

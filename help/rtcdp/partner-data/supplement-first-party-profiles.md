@@ -3,10 +3,10 @@ title: Suplementar perfis próprios com atributos fornecidos por parceiros
 description: Saiba como suplementar perfis próprios com atributos de parceiros de dados confiáveis para melhorar sua base de dados, obter novos insights sobre sua base de clientes e aprimorar a otimização do público-alvo.
 feature: Use Cases, Profile Enrichment
 exl-id: ee21b988-88f9-4c8e-bd82-7fc55c37ec24
-source-git-commit: 9737508bd8435f4edf0e60a3559c1b4352ccb29f
+source-git-commit: 7ee472294e8f255d9de3c15982a6f5d2d3654755
 workflow-type: tm+mt
-source-wordcount: '1256'
-ht-degree: 79%
+source-wordcount: '1257'
+ht-degree: 77%
 
 ---
 
@@ -41,7 +41,7 @@ Ao considerar suplementar seus perfis próprios com atributos de parceiros de da
 
 >[!WARNING]
 >
->Os atributos adicionais fornecidos por parceiros assimilados na Real-Time CDP afetam sua *riqueza do perfil média*. Leia a [Descrição do produto da Real-time Customer Data Platform](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html?lang=pt-BR) para obter mais informações sobre riqueza do perfil.
+>Os atributos adicionais fornecidos pelo parceiro assimilados na Real-Time CDP afetam seu *volume de dados total*. Leia a [Descrição do Produto Real-time Customer Data Platform](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html?lang=pt-BR) para obter mais informações sobre o volume de dados total.
 
 ## Apresentação em vídeo {#video-walkthrough}
 

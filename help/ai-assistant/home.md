@@ -2,9 +2,9 @@
 title: Visão geral do Assistente de IA no Adobe Experience Platform
 description: Saiba mais sobre o Assistente de IA, suas nuances e casos de uso e como você pode usá-lo para acelerar seu fluxo de trabalho com a Adobe Experience Platform e a Real-time Customer Data Platform.
 exl-id: cfd4ac22-fff3-4b50-bbc2-85b6328f603c
-source-git-commit: 6f95cae48b0f4c304eb3dbd2d95e01e00e0f01c9
+source-git-commit: 0926a0e8c7ae560bf5f4f9ff6853b191af047738
 workflow-type: tm+mt
-source-wordcount: '927'
+source-wordcount: '926'
 ht-degree: 8%
 
 ---
@@ -53,7 +53,7 @@ O conhecimento do produto refere-se aos conceitos e tópicos baseados na documen
 
 | Conhecimento do produto | Exemplos |
 | --- | --- |
-| Aprendizado apontado | <ul><li>Qual é a diferença entre uma identidade e uma chave primária ou estrangeira?</li><li>Como a riqueza do perfil é calculada?</li></ul> |
+| Aprendizado apontado | <ul><li>Qual é a diferença entre uma identidade e uma chave primária ou estrangeira?</li><li>O que são públicos-alvo semelhantes?</li></ul> |
 | Abrir descoberta | <ul><li>Como posso exportar esse conjunto de dados?</li><li>Existem esquemas para clientes de assistência médica?</li></ul> |
 | Solução de problemas | <ul><li>Por que não posso ativar um esquema de propriedade do Adobe para perfil?</li><li>Por que não posso excluir um segmento?</li></ul> |
 

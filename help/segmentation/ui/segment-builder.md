@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guia da interface do construtor de segmentos
 description: O Construtor de segmentos na interface do usuário do Adobe Experience Platform fornece um espaço de trabalho avançado que permite a interação com elementos de dados de perfil. O espaço de trabalho fornece controles intuitivos para criar e editar regras, como arrastar e soltar blocos usados para representar propriedades de dados.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 7d2fe8d5e5abea768b3514d97ea7edfbb9334511
+source-git-commit: 6e1fecf2f986cbb39a2a92c28b05131e22d14b6e
 workflow-type: tm+mt
-source-wordcount: '4767'
+source-wordcount: '4717'
 ht-degree: 5%
 
 ---
@@ -111,8 +111,6 @@ Você pode passar o mouse sobre a ⓘ ao lado de um público-alvo para ver infor
 
 ![Uma imagem que demonstra como a hierarquia de pastas funciona para os públicos-alvo.](../images/ui/segment-builder/audience-folder-structure.png)
 
-Você também pode pesquisar públicos usando a barra de pesquisa, que utiliza a [sintaxe de pesquisa da Lucene](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax). Na guia **[!UICONTROL Públicos-alvo]**, selecionar uma pasta de nível superior faz com que a barra de pesquisa apareça, permitindo pesquisar dentro dessa pasta. Os resultados da pesquisa só começam a ser preenchidos depois que palavras inteiras são inseridas. Por exemplo, para encontrar um público chamado `Online Shoppers`, comece digitando &quot;Online&quot; na barra de pesquisa. Quando a palavra &quot;on-line&quot; tiver sido digitada na íntegra, os resultados da pesquisa contendo a palavra &quot;on-line&quot; serão exibidos.
-
 ## Tela do construtor de regras {#rule-builder-canvas}
 
 >[!IMPORTANT]
@@ -158,6 +156,11 @@ Observe que há um máximo de 250 valores permitidos. Se você exceder esse valo
 ![Um aviso que mostra que você atingiu o número máximo de valores é exibido.](../images/ui/segment-builder/maximum-values.png)
 
 ### Adição de públicos
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentbuilder_addaudiences"
+>title="Procurar atualizações"
+>abstract="O sistema de pesquisa existente foi atualizado para usar a Pesquisa unificada. A Pesquisa unificada permite que você pesquise seus públicos-alvo de forma mais fácil e robusta quanto à associação do segmento."
 
 Você pode arrastar e soltar um público-alvo da guia **[!UICONTROL Público-alvo]** na tela do construtor de regras para fazer referência à associação de público-alvo na nova definição de segmento. Isso permite incluir ou excluir a associação de público-alvo como um atributo nas novas regras de definição de segmento.
 

@@ -1,13 +1,13 @@
 ---
 title: Notas de versão do Adobe Experience Platform Debugger
 description: As notas de versão mais recentes do Adobe Experience Platform Debugger.
-keywords: depurador;extensão do Experience Platform Debugger;chrome;extensão;notas de versão
+keywords: debugger;extensão do experience platform debugger;chrome;extensão;notas de versão
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
 source-git-commit: 877e38154f6959d50bd0620290c2dce9decfc2b5
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '781'
-ht-degree: 4%
+ht-degree: 100%
 
 ---
 
@@ -17,19 +17,19 @@ ht-degree: 4%
 
 ### Correções e melhorias
 
-* Correção de um problema que impedia os usuários de adicionar novos códigos incorporados de Tags às páginas sem eles.
+* Correção de um problema que impedia usuários de adicionarem novos códigos incorporados de tags em páginas sem tags.
 
 ## Versão 1.6.0 - 11 de julho de 2024
 
 ### Novos recursos
 
-* Permita que os usuários aceitem/recusem a coleta de dados técnicos e pessoais.
+* Permitir que usuários aceitem ou recusem a coleta de dados técnicos e pessoais.
 
 ### Correções e melhorias
 
-* Corrija a injeção de script do Firefox e o link da política de privacidade.
-* Capture as solicitações do Analytics ausentes.
-* Corrigir falhas em páginas com muitas mensagens complexas do console.
+* Correção do link da política de privacidade e injeção de script do Firefox.
+* Captura de solicitações ausentes do Analytics.
+* Correção de falhas em páginas com várias mensagens de console complexas.
 * Atualize o Adobe Experience Platform Debugger para uma extensão Manifest v3.
 
 ## Versão 1.5.4 - 19 de dezembro de 2023
@@ -37,20 +37,20 @@ ht-degree: 4%
 ### Correções e melhorias
 
 * Correção de um problema em que as configurações não eram mantidas.
-* Correção de um problema que causava a falha do Debugger ao visualizar ocorrências pós-processadas do Analytics.
+* Correção de um problema que causava falha no Debugger ao visualizar ocorrências pós-processadas do Analytics.
 
 ## Versão 1.5.3 - 6 de dezembro de 2023
 
 ### Novos recursos
 
-* Adição de uma configuração &quot;bloquear a guia ativa ao abrir o Debugger&quot;.
+* Adição de uma configuração para “bloquear a guia ativa ao abrir o Debugger”.
 
 ### Correções e melhorias
 
 * Correção de um problema em que as solicitações do Analytics estavam ausentes em domínios privados.
-* Correção de um problema em que os dados de Activity Map estavam ausentes na tabela de solicitações do Analytics.
-* Correção de um problema em que a exibição do Rastreamento do Target causava uma falha.
-* Adição de um aviso quando o Debugger falha ao configurar a infraestrutura na página no Firefox.
+* Correção de um problema com dados do Activity Map ausentes na tabela de solicitações do Analytics.
+* Correção de uma falha na exibição do Target Trace.
+* Adição de um aviso quando o Debugger falha ao configurar a infraestrutura da página do Firefox.
 
 ## Versão 1.5.2 - 10 de novembro de 2023
 
@@ -65,78 +65,78 @@ ht-degree: 4%
 ### Correções e melhorias
 
 * Correção de problemas em que os eventos do Analytics eram ignorados ou duplicados.
-* Correção de um problema em que o tamanho máximo de armazenamento de estado era excedido.
-* Correção de um problema em que a pesquisa de Logs do Edge não filtrava eventos.
+* Correção de um problema em que o tamanho máximo do armazenamento de estado era excedido.
+* Correção de um problema em que a pesquisa de logs do Edge não filtrava eventos.
 
 ## Versão 1.5.0 - 19 de outubro de 2023
 
 ### Novos recursos
 
-* Mostrar links para a propriedade, o ambiente e as regras no resumo e nos logs das tags.
+* Exibição de links para a propriedade, o ambiente e as regras no resumo e nos logs das tags.
 
 ### Correções e melhorias
 
 * Correção de um problema em que os dados de resumo de tags não eram enviados.
-* Correção de um problema em que as sessões de Garantia apresentavam um erro no CORS
+* Correção de um erro CORS nas sessões do Assurance
 * Correção de um problema que impedia a exibição do Target Trace.
-* Correção do botão &quot;Enviar feedback&quot;.
-* Correção da &quot;ID de sequência de dados&quot; ausente no Resumo do SDK da Web para a versão ≥2.18.0.
-* Correção de um problema em que os logs do Edge não eram pesquisáveis.
+* Correção do botão “Enviar feedback”.
+* Correção da “ID de sequência de dados” ausente no Resumo do SDK da Web na versão ≥2.18.0.
+* Correção de um problema em que não era possível pesquisar os logs do Edge.
 * Adição de uma observação sobre perfis adicionais para determinados tipos de conta.
 
-## Versão 1.4.1 - 1 de novembro de 2022
+## Versão 1.4.1 - 1º de novembro de 2022
 
-* Desempenho aprimorado em páginas com muitos eventos do Adobe Experience Platform Assurance.
+* Desempenho aprimorado em páginas com vários eventos do Adobe Experience Platform Assurance.
 
 ## Versão 1.4.0 - 3 de outubro de 2022
 
-* Adição do suporte à depuração do AEP Assurance para implementações híbridas do SDK da Web.
-* Adição do suporte a várias guias na mesma sessão do AEP Assurance.
-* Correção de um problema em que os usuários não podiam alternar perfis/organizações após fazer logon.
-   * Para algumas contas, é necessário fazer logout e logon novamente para trocar de empresa.
-* Adição de uma mensagem de erro ao ativar o Target Trace.
+* Adição de suporte para depuração do AEP Assurance em implementações híbridas do SDK da Web.
+* Adição de suporte a várias guias na mesma sessão do AEP Assurance.
+* Correção de um problema em que usuários não podiam alternar entre perfis ou organizações após fazer logon.
+   * Em algumas contas, é necessário sair e fazer logon novamente para trocar de organização.
+* Adição de uma mensagem de erro para a falha ao habilitar o Target Trace.
 * Dependências atualizadas.
 
 ## Versão 1.3.3 - 20 de junho de 2022
 
-* Correção de um problema que impedia a abertura de pop-ups de tabelas de eventos de rede.
-* Correção de um problema que impedia o carregamento de informações de liga na página.
+* Correção de um problema que impedia a abertura de pop-ups a partir de tabelas de eventos de rede.
+* Correção de um problema que impedia o carregamento de informações do Alloy na página.
 
 ## Versão 1.3.2 - 9 de junho de 2022
 
-* Adição de um avatar padrão quando o usuário está conectado.
-* Adição do realce de sintaxe aos objetos JSON nos logs.
+* Adição de um avatar padrão para o usuário conectado.
+* Adição de realce de sintaxe aos objetos JSON em logs.
 
 ## Versão 1.3.1 - 24 de maio de 2022
 
 * Dependências atualizadas.
-* Correção de um problema do Analytics em que os hits pós-processo não podiam ser ativados.
-* Correção de um problema em que o depurador era anexado à janela de logon do Adobe.
-* Correção de um problema na AT.js em que as mensagens de log não eram exibidas no Debugger.
+* Correção de um problema em que não era possível habilitar ocorrências de pós-processamento do Analytics.
+* Correção de um problema em que o Debugger era fixado na janela de logon da Adobe.
+* Correção de um problema em que as mensagens de log da AT.js não eram exibidas no Debugger.
 
 ## Versão 1.3.0 - 28 de janeiro de 2022
 
-* Adição do link Sobre para mostrar a versão atual e as notas.
-* Adição de um botão para exibir ocorrências pós-processadas para solicitações do Analytics. O botão de alternância está disponível na seção Analytics.
-* Correção de um problema de sessão de depuração remota quando a sessão era fechada fora do depurador.
-* Correção da notificação de erro que estava visível na guia Transações do Edge do SDK da Web.
-* Corrigidas as tags Adobe no aviso de descontinuação da página quando o depurador acessava o objeto _satellite.
+* Adição do link Sobre para mostrar a versão atual e as notas da versão.
+* Adição de um botão para exibir ocorrências pós-processadas de solicitações do Analytics. O botão de alternância está disponível na seção Analytics.
+* Correção de um problema que ocorria ao fechar a sessão de depuração remota fora do Debugger.
+* Correção de uma notificação de erro visível na guia Transações do Edge do SDK da Web.
+* Correção de tags da Adobe que apareceiam no aviso de descontinuação da página quando o Debugger acessava o objeto _satellite.
 * Correção de alguns casos em que uma instância do AppMeasurement não era encontrada na página.
-* Correção de um problema de conexão de página que ocorria ao abrir a janela do depurador pela primeira vez.
+* Correção de um problema de conexão de página que ocorria ao abrir a janela do Debugger pela primeira vez.
 
 ## Versão 1.2.0 - 26 de outubro de 2021
 
-* Mostrar eventos de todas as guias do navegador na exibição de rede. Para ver apenas os eventos da guia atual, selecione o ícone de bloqueio no canto inferior direito do depurador.
-* Marca atualizada.
+* Mostra eventos de todas as guias do navegador na exibição de rede. Para ver apenas os eventos da guia atual, selecione o ícone de cadeado no canto inferior direito do Debugger.
+* Atualização da marca.
 
 ## Versão 1.1.0 - 5 de outubro de 2021
 
-* Visualização de depuração remota - Organize os eventos de depuração remota em um fluxograma visual na seção Adobe Experience Platform Web SDK > Transações do Edge.
-* Exigir que a organização do Adobe Experience Platform Web SDK usada na página corresponda à organização conectada ao iniciar uma nova sessão de depuração remota.
-* Mostrar somente as transações de borda da guia conectada. Os logs de rastreamento do Target ainda estão disponíveis na seção Logs > Edge.
-* Permitir a substituição da configuração da ID de fluxo de dados separada para cada instância do SDK da Web da Adobe Experience Platform na página. Adicionar alternância habilitada para depuração.
-* Correção de um problema em que o token de rastreamento do Adobe Target nem sempre era enviado com sessões de depuração remota para o SDK da Web da Adobe Experience Platform.
+* Visualização de depuração remota: organize os eventos de depuração remota em um fluxograma visual na seção SDK da Web da Adobe Experience Platform > Transações do Edge.
+* Exigir que a organização do SDK da Web da Adobe Experience Platform usada na página corresponda à organização conectada ao iniciar uma nova sessão de depuração remota.
+* Mostrar somente as transações do Edge da guia conectada. Os logs do Target Trace ainda estão disponíveis na seção Logs > Edge.
+* Permitir a substituição de configurações de ID de sequência de dados separadas para cada instância do SDK da Web da Adobe Experience Platform na página. Adição do botão de alternância para habilitar a depuração.
+* Correção de um problema em que o token TRACE do Adobe Target nem sempre era enviado com as sessões de depuração remota para o SDK da Web da Adobe Experience Platform.
 
-## Versão 1.0.0 de 5 de maio de 2021
+## Versão 1.0.0 - 5 de maio de 2021
 
-* Primeira versão principal do Experience Platform Debugger. Destina-se a substituir o Experience Cloud Debugger.
+* Primeira versão principal do Experience Platform Debugger. Criada para substituir o Experience Cloud Debugger.

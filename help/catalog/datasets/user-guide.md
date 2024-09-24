@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Guia da interface de conjuntos de dados
 description: Saiba como executar ações comuns ao trabalhar com conjuntos de dados na interface do usuário do Adobe Experience Platform.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: a168f61fabddd06d586f7909fd92c0409fd2f51e
+source-git-commit: 0bb10754e2f5bc289567368c803d4397cec77bf6
 workflow-type: tm+mt
-source-wordcount: '3203'
-ht-degree: 6%
+source-wordcount: '3801'
+ht-degree: 5%
 
 ---
 
@@ -96,6 +96,7 @@ A interface dos conjuntos de dados agora oferece uma coleção de ações em lin
 * [[!UICONTROL Gerenciar dados e acessar rótulos]](#manage-and-enforce-data-governance)
 * [[!UICONTROL Habilitar perfil unificado]](#enable-profile)
 * [[!UICONTROL Gerenciar marcas]](#manage-tags)
+* [(Beta) [!UICONTROL Definir política de retenção de dados]](#data-retention-policy)
 * [[!UICONTROL Mover para pastas]](#move-to-folders)
 * [[!UICONTROL Excluir]](#delete).
 
@@ -168,6 +169,53 @@ A caixa de diálogo [!UICONTROL Gerenciar marcas] também pode remover marcas ex
 Depois que uma tag é adicionada a um conjunto de dados, os conjuntos de dados podem ser filtrados com base na tag correspondente. Consulte a seção sobre como [filtrar conjuntos de dados por marcas](#enable-profile) para obter mais informações.
 
 Para obter mais informações sobre como classificar objetos comerciais para facilitar a descoberta e a categorização, consulte o manual em [gerenciando taxonomias de metadados](../../administrative-tags/ui/managing-tags.md). Este guia detalha como um usuário com permissões apropriadas pode criar tags predefinidas, atribuir categorias a tags e executar todas as operações CRUD relacionadas em tags e categorias de tags na interface do usuário da Platform.
+
+### (Beta) Definir a política de retenção de dados {#data-retention-policy}
+
+>[!AVAILABILITY]
+> 
+>As configurações de retenção de dados estão atualmente na versão beta e só estão disponíveis em uma **versão limitada** para organizações selecionadas. Sua interface do usuário pode não refletir o recurso descrito abaixo.
+
+Gerencie políticas de expiração e retenção do conjunto de dados no nível do conjunto de dados na guia [!UICONTROL Procurar] do espaço de trabalho [!UICONTROL Conjuntos de Dados]. Você pode usar esse recurso para configurar políticas de retenção para dados já assimilados no data lake e serviços de perfil. A data de expiração se baseia em quando os dados foram assimilados na Platform e suas regras de retenção.
+
+Para abrir a caixa de diálogo [!UICONTROL Definir retenção de dados], selecione as reticências ao lado do conjunto de dados seguido por **[!UICONTROL Definir política de retenção de dados]** no menu suspenso.
+
+![A guia Procurar do espaço de trabalho Conjuntos de Dados com as reticências e a opção Definir política de retenção de dados realçada.](../images/datasets/user-guide/set-data-retention-policy-dropdown.png)
+
+A caixa de diálogo [!UICONTROL Definir retenção de dados] é exibida. A caixa de diálogo mostra as métricas de uso de licença no nível da sandbox, os detalhes no nível do conjunto de dados e as configurações do data lake. Essas métricas mostram seu uso em comparação aos seus direitos. Os detalhes do conjunto de dados incluem o nome do conjunto de dados, o tipo, o status de ativação do perfil e o uso atual do armazenamento do data lake.
+
+>[!NOTE]
+>
+>As métricas de armazenamento de data lake licenciadas no nível de sandbox ainda estão em desenvolvimento e não estão disponíveis.
+
+![A caixa de diálogo Definir retenção de dados.](../images/datasets/user-guide/set-data-retention-dialog.png)
+
+Antes de configurar a política de retenção do conjunto de dados, a caixa de diálogo mostra as configurações de retenção recomendadas. Um mês é o período de retenção padrão recomendado. Para ajustar a política de retenção padrão, selecione e atualize o número e escolha o período desejado (dias, meses, anos). Você pode definir suas configurações de retenção para o data lake e o Serviço de perfil independentemente.
+
+>[!NOTE]
+> 
+>A duração mínima de retenção de dados para o data lake é de 30 dias. A duração mínima da retenção de dados para o Serviço de perfil é de um dia.
+
+![A caixa de diálogo Definir retenção de dados com a lista suspensa de duração e Salvar realçado.](../images/datasets/user-guide/time-unit-dropdown.png)
+
+Consulte a [página de perguntas frequentes](../catalog-faq.md) para obter mais informações sobre as regras que definem intervalos de datas de expiração do conjunto de dados e as práticas recomendadas para configurar sua política de retenção de dados.
+
+#### (Beta) Maior visibilidade dos períodos de retenção e das métricas de armazenamento {#retention-and-storage-metrics}
+
+Quatro novas colunas estão disponíveis para usuários beta que fornecem maior visibilidade de seu gerenciamento de dados: **[!UICONTROL Data Lake Storage]**, **[!UICONTROL Data Lake Retention]**, **[!UICONTROL Profile Storage]** e **[!UICONTROL Profile Retention]**. Essas métricas mostram quanto armazenamento seus dados consomem e sua duração de retenção nos serviços de data lake e perfil. Esses detalhes ajudam a otimizar as políticas de retenção, controlar o uso em relação aos direitos e garantir a conformidade com os padrões organizacionais e normativos. Essa maior visibilidade permite que você tome decisões informadas, gerencie custos, simplifique o controle e entenda claramente seu cenário de dados.
+
+![A guia Procurar do espaço de trabalho Conjuntos de Dados com as quatro novas colunas de armazenamento e retenção destacadas.](../images/datasets/user-guide/storage-and-retention-columns.png)
+
+A tabela a seguir fornece uma visão geral das novas métricas de retenção e armazenamento disponíveis na versão beta. Ele detalha a finalidade de cada coluna e como ela auxilia no gerenciamento da retenção e do armazenamento de dados na interface do usuário da plataforma.
+
+| Título da coluna | Descrição |
+|---|---|
+| [!UICONTROL Retenção de data lake] | Mostra a duração de retenção atual para cada conjunto de dados. Esse valor pode ser modificado nas configurações de retenção de cada conjunto de dados. A política de retenção de data lake define regras sobre por quanto tempo os dados são armazenados e quando devem ser excluídos em diferentes serviços. |
+| [!UICONTROL Armazenamento Data Lake] | Exibe o uso de armazenamento atual para cada conjunto de dados no data lake. Essa métrica ajuda a rastrear o espaço ocupado por cada conjunto de dados, auxiliando no gerenciamento dos limites de armazenamento e na otimização do uso. |
+| [!UICONTROL Armazenamento de perfil] | Mostra o uso de armazenamento atual para cada conjunto de dados nos Serviços de perfil. Use essas informações para monitorar o consumo de armazenamento e garantir que ele se alinhe às suas metas de gerenciamento de dados. |
+| [!UICONTROL Retenção de Perfil] | Indica a duração da retenção para cada conjunto de dados do Perfil. Esse valor pode ser ajustado nas configurações de retenção do conjunto de dados, ajudando você a controlar por quanto tempo os dados do perfil são armazenados antes da exclusão. |
+
+{style="table-layout:auto"}
 
 ### Mover para pastas {#move-to-folders}
 
@@ -344,3 +392,4 @@ Este guia do usuário forneceu instruções para executar ações comuns ao trab
 * [Criar um conjunto de dados usando APIs](create.md)
 * [Consultar dados do conjunto de dados usando a API de acesso a dados](../../data-access/home.md)
 * [Configurar um conjunto de dados para o Perfil do cliente em tempo real e o Serviço de identidade usando APIs](../../profile/tutorials/dataset-configuration.md)
+

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Funções de mapeamento de preparação de dados
 description: Este documento apresenta as funções de mapeamento usadas com o Preparo de dados.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 5a4e0b3c97d315262ded35ca5bfada3612ed6db4
+source-git-commit: 1e06fa2f8a5685cf5debcc3b5279d7efab9af0c8
 workflow-type: tm+mt
-source-wordcount: '5805'
+source-wordcount: '6024'
 ht-degree: 2%
 
 ---
@@ -178,6 +178,10 @@ Para obter informações sobre o recurso de cópia de objeto, consulte a seção
 | size_of | Retorna o tamanho da entrada. | <ul><li>ENTRADA: **Obrigatório** O objeto do qual você está tentando encontrar o tamanho.</li></ul> | size_of(INPUT) | `size_of([1, 2, 3, 4])` | 4 |
 | upsert_array_append | Esta função é usada para anexar todos os elementos na matriz de entrada inteira ao final da matriz no Perfil. Esta função é **somente** aplicável durante atualizações. Se usada no contexto de inserções, essa função retorna a entrada como está. | <ul><li>ARRAY: **Obrigatório** A matriz à qual anexar a matriz no Perfil.</li></ul> | upsert_array_append(ARRAY) | `upsert_array_append([123, 456])` | [123, 456] |
 | upsert_array_replace | Esta função é usada para substituir elementos em uma matriz. Esta função é **somente** aplicável durante atualizações. Se usada no contexto de inserções, essa função retorna a entrada como está. | <ul><li>ARRAY: **Obrigatório** A matriz para substituir a matriz no Perfil.</li></li> | upsert_array_replace(ARRAY) | `upsert_array_replace([123, 456], 1)` | [123, 456] |
+| [!BADGE Beta]{type=Informative} array_to_string | Une as representações de cadeia de caracteres dos elementos em uma matriz usando o separador especificado. Se a matriz for multidimensional, ela será nivelada antes de ser unida. **Observação**: esta função é usada em destinos. Leia a [documentação](../destinations/ui/export-arrays-calculated-fields.md) para obter mais informações. | <ul><li>SEPARATOR: **Obrigatório** O separador usado para unir os elementos na matriz.</li><li>ARRAY: **Obrigatório** A matriz que será unida (após nivelamento).</li></ul> | array_to_string(SEPARADOR, MATRIZ) | `array_to_string(";", ["Hello", "world"])` | &quot;Olá;mundo&quot; |
+| [!BADGE Beta]{type=Informative} filterArray* | Filtra a matriz especificada com base em um predicado. **Observação**: esta função é usada em destinos. Leia a [documentação](../destinations/ui/export-arrays-calculated-fields.md) para obter mais informações. | <ul><li>ARRAY: **Obrigatório** A matriz a ser filtrada</li><li>PREDICATE: **Obrigatório** O predicado a ser aplicado em cada elemento da matriz especificada. | filterArray(MATRIZ, PREDICADO) | `filterArray([5, -6, 0, 7], x -> x > 0)` | [5, 7] |
+| [!BADGE Beta]{type=Informative} transformArray* | Transforma a matriz especificada com base em um predicado. **Observação**: esta função é usada em destinos. Leia a [documentação](../destinations/ui/export-arrays-calculated-fields.md) para obter mais informações. | <ul><li>ARRAY: **Obrigatório** A matriz a ser transformada.</li><li>PREDICATE: **Obrigatório** O predicado a ser aplicado em cada elemento da matriz especificada. | transformArray(MATRIZ, PREDICADO) | ` transformArray([5, 6, 7], x -> x + 1)` | [6, 7, 8] |
+| [!BADGE Beta]{type=Informative} flattenArray* | Nivela a matriz dada (multidimensional) para uma matriz unidimensional. **Observação**: esta função é usada em destinos. Leia a [documentação](../destinations/ui/export-arrays-calculated-fields.md) para obter mais informações. | <ul><li>ARRAY: **Obrigatório** A matriz a ser nivelada.</li></ul> | flattenArray(MATRIZ) | flattenArray([[&#39;a&#39;, &#39;b&#39;], [&#39;c&#39;, &#39;d&#39;]], [[&#39;e&#39;], [&#39;f&#39;]]) | [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;f&#39;] |
 
 {style="table-layout:auto"}
 

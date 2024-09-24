@@ -4,10 +4,10 @@ title: Guia da interface de alertas
 description: Saiba como gerenciar alertas na interface do usuário do Experience Platform.
 feature: Alerts
 exl-id: 4ba3ef2b-7394-405e-979d-0e5e1fe676f3
-source-git-commit: 9004a2203996f0fd64833a03f211232ebf14e3e4
+source-git-commit: 2e0fc17fee9b1586b4c2b44c326e2c305c127fad
 workflow-type: tm+mt
-source-wordcount: '626'
-ht-degree: 0%
+source-wordcount: '797'
+ht-degree: 3%
 
 ---
 
@@ -23,7 +23,7 @@ Para começar, selecione **[!UICONTROL Alertas]** na navegação à esquerda.
 
 ![Página de Alertas destacando [!UICONTROL Alertas] na navegação à esquerda.](../images/alerts/ui/workspace.png)
 
-## Gerenciar regras de alerta
+## Gerenciar regras de alerta {#manage-rules}
 
 A guia **[!UICONTROL Procurar]** lista as regras disponíveis que podem disparar um alerta.
 
@@ -37,7 +37,7 @@ Selecione as reticências (**...**) ao lado do nome de uma regra e uma lista sus
 
 ![As reticências selecionadas revelam o menu suspenso.](../images/alerts/ui/disable-subscribe.png)
 
-## Gerenciar inscrições nos alertas
+## Gerenciar inscrições nos alertas {#manage-subscribers}
 
 >[!NOTE]
 >
@@ -67,7 +67,7 @@ Você adicionou usuários com sucesso à sua lista de notificações de alerta. 
 
 ![Um exemplo de email da notificação de alerta recebida.](../images/alerts/ui/manage-alert-subscribers-email.png)
 
-## Ativar alertas de email
+## Ativar alertas de email {#enable-email}
 
 As notificações de alerta podem ser enviadas diretamente ao seu email.
 
@@ -85,7 +85,35 @@ Role até a seção **Emails** na parte inferior da página e selecione **[!UICO
 
 Todos os alertas que você assina agora serão entregues no endereço de email que está conectado à sua conta da Adobe ID.
 
-## Exibir histórico de alertas
+## Personalizar limite de alerta {#alert-threshold}
+
+Os limites de alerta podem ser personalizados para os seguintes tipos de alerta:
+
+| Tipo de alerta | Parâmetro personalizado |
+|---|---|
+| Atraso no trabalho do segmento | Limite de atraso |
+| Atraso na exportação do segmento | Limite de atraso |
+| Atraso na execução do fluxo de destino | Limite de atraso |
+| Atraso na execução do fluxo do serviço de identidade | Limite de atraso |
+| Atraso na execução do fluxo de perfil | Limite de atraso |
+| Atraso na execução do fluxo de fontes | Limite de atraso |
+| Atraso da execução da consulta | Limite de atraso |
+| Taxa de Ignorar Ativação Excedida | Limite de erro |
+| Taxa de erro de assimilação de origens excedida | Limite de erro |
+
+Selecione as reticências (**...**) ao lado do nome de uma regra, uma lista suspensa exibe controles. Selecione **[!UICONTROL Editar]**.
+
+![A opção [!UICONTROL Editar] está realçada para a regra selecionada.](../images/alerts/ui/threshold-edit.png)
+
+A página **[!UICONTROL Personalizar alerta]** é exibida. Atualize o limite para os minutos desejados e selecione **[!UICONTROL Confirmar]**.
+
+![As opções Personalizar página de alerta destacando [!UICONTROL Limite] e [!UICONTROL Confirmar].](../images/alerts/ui/threshold-update.png)
+
+Você retornou à página **[!UICONTROL Alertas]**. Para exibir as configurações de limite para o alerta, selecione a regra na lista. Você pode ver as configurações de limite para o alerta no painel direito, incluindo detalhes como status e gravidade.
+
+![Um alerta realçado mostrando detalhes no painel direito e destacando o [!UICONTROL Limite].](../images/alerts/ui/threshold-view.png)
+
+## Exibir histórico de alertas {#alert-history}
 
 A guia **[!UICONTROL Histórico]** mostra o histórico de alertas recebidos para sua organização, incluindo a regra que acionou o alerta, a data de disparo e a data de resolução (se aplicável).
 

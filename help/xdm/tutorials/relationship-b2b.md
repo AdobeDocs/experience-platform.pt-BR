@@ -2,10 +2,10 @@
 title: Definir uma relação entre dois esquemas no Real-time Customer Data Platform B2B Edition
 description: Saiba como definir uma relação muitos para um entre dois esquemas no Adobe Real-time Customer Data Platform B2B Edition.
 exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 85d6cf10599d153a15c1bd56067f57439ddd0133
 workflow-type: tm+mt
-source-wordcount: '1363'
-ht-degree: 15%
+source-wordcount: '1769'
+ht-degree: 12%
 
 ---
 
@@ -65,19 +65,19 @@ Para levar em conta isso, todas as classes B2B padrão contêm campos &quot;key&
 
 Para fins de referência, as seções a seguir descrevem a estrutura de cada esquema usado neste tutorial antes que uma relação seja definida. Anote onde as identidades primárias foram definidas na estrutura do esquema e nos namespaces personalizados que elas usam.
 
-### Esquema [!DNL Opportunities]
+### Esquema de oportunidades
 
 O esquema de origem &quot;[!DNL Opportunities]&quot; é baseado na classe [!UICONTROL Oportunidade Comercial XDM]. Um dos campos fornecidos pela classe, `opportunityKey`, serve como o identificador do esquema. Especificamente, o campo `sourceKey` sob o objeto `opportunityKey` é definido como a identidade primária do esquema sob um namespace personalizado chamado [!DNL B2B Opportunity].
 
-Conforme visto em **[!UICONTROL Propriedades do Esquema]**, este esquema foi habilitado para uso em [!DNL Real-Time Customer Profile].
+Conforme visto em **[!UICONTROL Propriedades do Campo]**, este esquema foi habilitado para uso em [!DNL Real-Time Customer Profile].
 
-![Esquema de oportunidades](../images/tutorials/relationship-b2b/opportunities.png)
+![O esquema de Oportunidades no Editor de Esquemas com o objeto opportunityKey e a opção Enable for profile foram realçados.](../images/tutorials/relationship-b2b/opportunities.png)
 
 ### Esquema [!DNL Accounts]
 
 O esquema de referência &quot;[!DNL Accounts]&quot; é baseado na classe [!UICONTROL Conta XDM]. O campo `accountKey` de nível raiz contém o `sourceKey` que atua como sua identidade primária em um namespace personalizado chamado [!DNL B2B Account]. Este esquema também foi ativado para uso no Perfil.
 
-![Esquema de contas](../images/tutorials/relationship-b2b/accounts.png)
+![O esquema Contas no Editor de Esquemas com o objeto accountKey e a opção Enable for profile realçados.](../images/tutorials/relationship-b2b/accounts.png)
 
 ## Definir um campo de relacionamento para o esquema de origem {#relationship-field}
 
@@ -97,29 +97,64 @@ Para definir uma relação entre dois esquemas, o esquema de origem deve ter um 
 >
 >Atualmente, somente as relações muitos para um e um para um podem ser definidas de um esquema de origem para um esquema de referência. Para relações um para muitos, você deve definir o campo de relacionamento no esquema que representa o &quot;muitos&quot;.
 
-Para definir um campo de relação, selecione o ícone de seta (![Ícone de seta](/help/images/icons/alias.png)) ao lado do campo em questão na tela. No caso do esquema [!DNL Opportunities], este é o campo `accountKey.sourceKey`, já que o objetivo é estabelecer uma relação muitos para um com uma conta.
+Para definir um campo de relação, selecione o campo em questão na tela, seguido por **[!UICONTROL Adicionar relação]** na barra lateral [!UICONTROL Propriedades de esquema]. No caso do esquema [!DNL Opportunities], este é o campo `accountKey.sourceKey`, já que o objetivo é estabelecer uma relação muitos para um com uma conta.
 
-![Botão de relacionamento](../images/tutorials/relationship-b2b/relationship-button.png)
+![O Editor de Esquemas com o campo sourceKey e a relação Add realçados.](../images/tutorials/relationship-b2b/add-relationship.png)
 
-Uma caixa de diálogo é exibida, permitindo especificar os detalhes sobre o relacionamento. O tipo de relação é automaticamente definido como **[!UICONTROL Muitos para um]**.
+A caixa de diálogo [!UICONTROL Adicionar relação] é exibida. Use esta caixa de diálogo para especificar detalhes do relacionamento. O tipo de relação é definido como **[!UICONTROL Muitos para um]** por padrão.
 
-![Caixa de Diálogo de Relacionamento](../images/tutorials/relationship-b2b/relationship-dialog.png)
+![A caixa de diálogo Adicionar relação com relação de esquema Muitos para um foi realçada.](../images/tutorials/relationship-b2b/relationship-dialog.png)
 
-Em **[!UICONTROL Esquema de Referência]**, use a barra de pesquisa para localizar o nome do esquema de referência. Quando você realça o nome do esquema de referência, o campo **[!UICONTROL Namespace de identidade de referência]** atualiza automaticamente para o namespace da identidade principal do esquema.
+Em **[!UICONTROL Esquema de Referência]**, use a barra de pesquisa ou o menu suspenso para localizar o nome do esquema de referência. Quando você realça o nome do esquema de referência, o campo **[!UICONTROL Namespace de identidade de referência]** atualiza automaticamente para o namespace da identidade principal do esquema de referência.
 
-![Esquema de Referência](../images/tutorials/relationship-b2b/reference-schema.png)
+>[!NOTE]
+>
+>A lista de esquemas de referência disponíveis é filtrada para conter apenas esquemas adequados. Os esquemas **devem** ter uma identidade primária atribuída e ser uma classe B2B ou a classe Perfil Individual. Os esquemas de classe de cliente potencial não podem ter relacionamentos.
 
-Em **[!UICONTROL Nome do Relacionamento do Esquema Atual]** e **[!UICONTROL Nome do Relacionamento do Esquema de Referência]**, forneça nomes amigáveis para o relacionamento no contexto dos esquemas de origem e de referência, respectivamente. Quando terminar, selecione **[!UICONTROL Salvar]** para aplicar as alterações e salvar o esquema.
+![A caixa de diálogo Adicionar relacionamento com os campos Esquema de Referência e Namespace de Identidade de Referência foi realçada.](../images/tutorials/relationship-b2b/reference-schema.png)
 
-![Nome do relacionamento](../images/tutorials/relationship-b2b/relationship-name.png)
+Em **[!UICONTROL Nome do Relacionamento do Esquema Atual]** e **[!UICONTROL Nome do Relacionamento do Esquema de Referência]**, forneça nomes amigáveis para o relacionamento no contexto dos esquemas de origem e de referência, respectivamente. Quando terminar, selecione **[!UICONTROL Aplicar]** para confirmar as alterações e salvar a relação.
+
+>[!NOTE]
+>
+>Os nomes dos relacionamentos devem ter 35 caracteres ou menos.
+
+![A caixa de diálogo Adicionar relacionamento com os campos Nome da Relação foi realçada.](../images/tutorials/relationship-b2b/relationship-name.png)
 
 A tela será exibida novamente, com o campo de relacionamento agora marcado com o nome amigável fornecido anteriormente. O nome do relacionamento também está listado no painel esquerdo para facilitar a referência.
 
-![Relação Aplicada](../images/tutorials/relationship-b2b/relationship-applied.png)
+![O Editor de Esquemas com o novo nome de relação aplicado.](../images/tutorials/relationship-b2b/relationship-applied.png)
 
 Se você visualizar a estrutura do esquema de referência, o marcador de relacionamento aparecerá ao lado do campo de identidade principal do esquema e no painel esquerdo.
 
-![Marcador de Relação de Esquema de Destino](../images/tutorials/relationship-b2b/destination-relationship.png)
+![O esquema de destino no Editor de Esquemas com o novo marcador de relação realçado.](../images/tutorials/relationship-b2b/destination-relationship.png)
+
+## Editar uma relação de esquema B2B {#edit-schema-relationship}
+
+Depois que uma relação de esquema for estabelecida, selecione o campo de relação no esquema de origem seguido por **[!UICONTROL Editar relação]**.
+
+>[!NOTE]
+>
+>Para exibir todas as relações associadas, selecione o campo de identidade principal no esquema de referência seguido por [!UICONTROL Exibir relações].
+>![O Editor de esquemas com um campo de relacionamento selecionado e Exibir relacionamento realçado.](../images/tutorials/relationship-b2b/view-relationships.png "O Editor de Esquemas com um campo de relação selecionado e Exibir relação realçada."){width="100" zoomable="yes"}
+
+![O Editor de Esquemas com um campo de relação e Editar relação está realçado.](../images/tutorials/relationship-b2b/edit-b2b-relationship.png)
+
+A caixa de diálogo [!UICONTROL Editar relação] é exibida. Nessa caixa de diálogo, é possível alterar o esquema de referência e os nomes dos relacionamentos ou excluir os relacionamentos. O tipo de relação muitos para um não pode ser alterado.
+
+![A caixa de diálogo Editar relação.](../images/tutorials/relationship-b2b/edit-b2b-relationship-dialog.png)
+
+Para manter a integridade dos dados e evitar interrupções na segmentação e em outros processos, considere as seguintes diretrizes ao gerenciar relações de esquema com conjuntos de dados vinculados:
+
+* Evite excluir diretamente as relações se um esquema estiver associado a um conjunto de dados, pois isso pode afetar negativamente a segmentação. Em vez disso, exclua o conjunto de dados associado antes de remover a relação.
+* Não é possível alterar o esquema de referência sem primeiro excluir a relação existente. No entanto, isso deve ser feito com cuidado, pois excluir uma relação com um conjunto de dados associado pode causar consequências não intencionais.
+* A adição de novas relações a um esquema com conjuntos de dados vinculados existentes pode não funcionar conforme o esperado e pode levar a possíveis conflitos.
+
+## Filtrar e pesquisar relacionamentos {#filter-and-search}
+
+Você pode filtrar e pesquisar relações específicas em seus esquemas na guia [!UICONTROL Relações] do espaço de trabalho [!UICONTROL Esquemas]. Você pode usar essa visualização para localizar e gerenciar rapidamente seus relacionamentos. Leia o documento em [explorando recursos de esquema](../ui/explore.md#lookup) para obter instruções detalhadas sobre as opções de filtragem.
+
+![A guia Relações no espaço de trabalho Esquemas.](../images/tutorials/relationship-b2b/relationship-tab.png)
 
 ## Próximas etapas
 

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Visão geral da interface do usuário de esquemas
 description: Esta visão geral aborda os principais recursos do espaço de trabalho Esquemas no Experience Platform.
 exl-id: b6e089ce-cf9e-4150-92ab-368382a75049
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: 16d6090bc71dbdc9ab42db98eafa0ea5afb5967b
 workflow-type: tm+mt
-source-wordcount: '295'
+source-wordcount: '307'
 ht-degree: 9%
 
 ---
@@ -17,7 +17,7 @@ O espaço de trabalho [!UICONTROL Esquemas] da interface do usuário do Adobe Ex
 
 Para acessar o espaço de trabalho na interface do usuário da Platform, selecione **[!UICONTROL Esquemas]** no painel esquerdo.
 
-![](../images/ui/overview/schemas-tab.png)
+![O espaço de trabalho Esquemas com Esquemas realçados na navegação à esquerda da interface de usuário da plataforma.](../images/ui/overview/schemas-tab.png)
 
 ## Introdução
 

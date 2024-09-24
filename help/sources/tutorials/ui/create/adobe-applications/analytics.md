@@ -2,9 +2,9 @@
 title: Criar uma conexão do Adobe Analytics Source na interface
 description: Saiba como criar uma conexão de origem do Adobe Analytics na interface do usuário para trazer dados do consumidor para o Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 40ad3101f643e6ce1b24d2a02c1817cfe04bd5d5
+source-git-commit: 71932d6f743d8cf767ce4e088231e61e9c2160e0
 workflow-type: tm+mt
-source-wordcount: '2577'
+source-wordcount: '2672'
 ht-degree: 3%
 
 ---
@@ -312,6 +312,13 @@ Para obter mais informações sobre preenchimento retroativo, dados em tempo rea
 >[!NOTE]
 >
 >A página de atividade do conjunto de dados não exibe informações sobre lotes, pois o conector de origem do Analytics é totalmente gerenciado pelo Adobe. É possível monitorar se os dados estão fluindo observando as métricas sobre registros assimilados.
+
+## Excluir seu fluxo de dados {#delete-dataflow}
+
+Para excluir o fluxo de dados do Analytics, selecione **[!UICONTROL Fluxos de dados]** no cabeçalho superior do espaço de trabalho de fontes. Use a página de fluxos de dados para localizar o fluxo de dados do Analytics que você deseja excluir e selecione as reticências (`...`) ao lado dela. Em seguida, use o menu suspenso e selecione **[!UICONTROL Excluir]**.
+
+* A exclusão do fluxo de dados ativo do Analytics também excluirá seu conjunto de dados subjacente.
+* A exclusão do fluxo de dados de preenchimento retroativo do Analytics não exclui o conjunto de dados subjacente, mas interromperá o processo de preenchimento retroativo do conjunto de relatórios correspondente. Se você excluir o fluxo de dados de preenchimento retroativo, os dados assimilados ainda poderão ser visualizados no conjunto de dados.
 
 ## Próximas etapas e recursos adicionais
 

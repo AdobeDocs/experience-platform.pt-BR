@@ -3,7 +3,7 @@ title: Exemplos de configurações de gráfico
 description: Saiba mais sobre cenários de gráficos comuns que você pode encontrar ao trabalhar com regras de vinculação de gráficos de identidade e dados de identidade.
 badge: Beta
 exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
-source-git-commit: 1ea840e2c6c44d5d5080e0a034fcdab4cbdc87f1
+source-git-commit: 6ad4709d8d361c16c22eddeef5f7ccdd1f4b2fb3
 workflow-type: tm+mt
 source-wordcount: '2786'
 ht-degree: 6%
@@ -767,6 +767,6 @@ Para obter mais informações sobre regras de vinculação de gráficos de ident
 * [Algoritmo de otimização de identidade](./identity-optimization-algorithm.md)
 * [Guia de implementação](./implementation-guide.md)
 * [Solução de problemas e perguntas frequentes](./troubleshooting.md)
-* [Prioridade de namespace](./namespace-priority.md)
+* [Prioridade do namespace](./namespace-priority.md)
 * [Interface de simulação de gráfico](./graph-simulation.md)
 * [Interface de configurações de identidade](./identity-settings-ui.md)

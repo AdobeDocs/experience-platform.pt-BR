@@ -1,13 +1,12 @@
 ---
 title: Visão geral do conector Source de transmissão Snowflake
 description: Saiba como criar uma conexão de origem e um fluxo de dados para assimilar dados de transmissão da instância do Snowflake para a Adobe Experience Platform
-badgeBeta: label="Beta" type="Informative"
 badgeUltimate: label="Ultimate" type="Positive"
-last-substantial-update: 2023-05-25T00:00:00Z
+last-substantial-update: 2023-09-24T00:00:00Z
 exl-id: ed937689-e844-487e-85fb-e3536c851fe5
-source-git-commit: e8ab39ce085a95eac898f65667706b71bdadd350
+source-git-commit: 34b1676ebb5405d73cf37cd786d1e6c26cb8fdaa
 workflow-type: tm+mt
-source-wordcount: '791'
+source-wordcount: '772'
 ht-degree: 1%
 
 ---
@@ -16,8 +15,7 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->* A fonte de streaming [!DNL Snowflake] está na versão beta. Leia a [Visão geral das fontes](../../home.md#terms-and-conditions) para obter mais informações sobre o uso de fontes com rótulo beta.
->* A fonte de transmissão [!DNL Snowflake] está disponível na API para usuários que compraram o Real-time Customer Data Platform Ultimate.
+> A fonte de transmissão [!DNL Snowflake] está disponível na API para usuários que compraram o Real-time Customer Data Platform Ultimate.
 
 O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
 

@@ -3,9 +3,9 @@ title: Guia de implementação para regras de vinculação do gráfico de identi
 description: Saiba mais sobre as etapas recomendadas a serem seguidas ao implementar seus dados com configurações de regras de vinculação de gráfico de identidade.
 badge: Beta
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 1ea840e2c6c44d5d5080e0a034fcdab4cbdc87f1
+source-git-commit: 0dadff9e2719c9cd24dcc17b759ff7e732282888
 workflow-type: tm+mt
-source-wordcount: '1398'
+source-wordcount: '1470'
 ht-degree: 2%
 
 ---
@@ -20,16 +20,89 @@ Leia este documento para obter um guia passo a passo que você pode seguir ao im
 
 Estrutura passo a passo:
 
-1. [Criar os namespaces de identidade necessários](#namespace)
-2. [Use a ferramenta de simulação de gráficos para se familiarizar com o algoritmo de otimização de identidade](#graph-simulation)
-3. [Use a ferramenta de configurações de identidade para designar seus namespaces exclusivos e configurar as classificações de prioridade para seus namespaces](#identity-settings)
-4. [Criar um esquema do Experience Data Model (XDM)](#schema)
-5. [Criar um conjunto de dados](#dataset)
-6. [Assimilar seus dados no Experience Platform](#ingest)
 
-## Pré-requisitos de pré-implementação
+1. [Pré-requisitos completos para a implementação](#prerequisites-for-implementation)
+2. [Criar os namespaces de identidade necessários](#namespace)
+3. [Use a ferramenta de simulação de gráficos para se familiarizar com o algoritmo de otimização de identidade](#graph-simulation)
+4. [Use a ferramenta de configurações de identidade para designar seus namespaces exclusivos e configurar as classificações de prioridade para seus namespaces](#identity-settings)
+5. [Criar um esquema do Experience Data Model (XDM)](#schema)
+6. [Criar um conjunto de dados](#dataset)
+7. [Assimilar seus dados no Experience Platform](#ingest)
 
-Antes de começar, primeiro verifique se os eventos autenticados no sistema sempre contêm um identificador de pessoa.
+## Pré-requisitos para implementação {#prerequisites-for-implementation}
+
+Esta seção descreve as etapas de pré-requisito que você deve concluir antes de implementar as regras de vinculação do gráfico de identidade para seus dados.
+
+### Namespace exclusivo
+
+#### Requisito de namespace para uma única pessoa {#single-person-namespace-requirement}
+
+Você deve garantir que o namespace exclusivo com a maior prioridade esteja sempre presente em cada perfil. Isso permite que o Serviço de identidade detecte o identificador de pessoa apropriado em um determinado gráfico.
+
++++Selecione para exibir um exemplo de gráfico sem um namespace de identificador de pessoa singular
+
+Sem um namespace exclusivo para representar seus identificadores de pessoa, você pode acabar com um gráfico que se vincula a identificadores de pessoa diferentes para a mesma ECID. Neste exemplo, B2BCRM e B2CCRM estão vinculados à mesma ECID ao mesmo tempo. Este gráfico sugere que Tom, usando sua conta de login B2C, compartilhou um dispositivo com Summer, usando sua conta de login B2B. No entanto, o sistema reconhecerá que este é um perfil (colapso de gráfico).
+
+![Um cenário de gráfico em que dois identificadores de pessoa estão vinculados à mesma ECID.](../images/graph-examples/multi_namespaces.png)
+
++++
+
++++Selecione para exibir um exemplo de gráfico com um único namespace de identificador de pessoa
+
+Dado um namespace exclusivo (neste caso, uma CRMID em vez de dois namespaces diferentes), o Serviço de identidade pode discernir o identificador de pessoa que foi associado pela última vez à ECID. Neste exemplo, como existe uma CRMID exclusiva, o Serviço de identidade pode reconhecer um cenário de &quot;dispositivo compartilhado&quot;, em que duas entidades estão compartilhando o mesmo dispositivo.
+
+![Um cenário de gráfico de dispositivo compartilhado, em que dois identificadores de pessoa são vinculados à mesma ECID, mas o link mais antigo é removido.](../images/graph-examples/crmid_only_multi.png)
+
++++
+
+### Configuração de prioridade de namespace
+
+Se você estiver usando o [conector de origem do Adobe Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md) para assimilar dados, deverá dar às ECIDs uma prioridade mais alta do que a Adobe Analytics ID (AAID), pois o Serviço de Identidade bloqueia a AAID. Ao priorizar a ECID, você pode instruir o Perfil do cliente em tempo real para armazenar eventos não autenticados na ECID em vez da AAID.
+
+### Eventos de experiência XDM
+
+* Durante o processo de pré-implementação, você deve garantir que os eventos autenticados que seu sistema enviará para o Experience Platform sempre contenham um identificador de pessoa, como CRMID.
+* Não envie uma string vazia como um valor de identidade ao enviar eventos usando eventos de experiência XDM. Isso resultará em erros de sistema.
+
++++Selecione para exibir um exemplo de carga com uma cadeia de caracteres vazia
+
+O exemplo a seguir retorna um erro porque o valor de identidade de `Phone` é enviado como uma cadeia de caracteres vazia.
+
+```json
+    "identityMap": {
+        "ECID": [
+            {
+                "id": "24165048599243194405404369473457348936",
+                "primary": false
+            }
+        ],
+        "Phone": [
+            {
+                "id": "",
+                "primary": true
+            }
+        ]
+    }
+```
+
++++
+
+Você deve garantir que tenha uma identidade totalmente qualificada ao enviar eventos usando eventos de experiência XDM.
+
++++Selecione para exibir um exemplo de evento com uma identidade totalmente qualificada
+
+```json
+    "identityMap": {
+        "ECID": [
+            {
+                "id": "24165048599243194405404369473457348936",
+                "primary": false
+            }
+        ]
+    }
+```
+
++++
 
 ## Definir permissões {#set-permissions}
 
@@ -72,12 +145,6 @@ Para obter instruções sobre como criar um conjunto de dados, leia o [guia da i
 
 ## Assimilar seus dados {#ingest}
 
->[!WARNING]
->
->* Durante o processo de pré-implementação, você deve garantir que os eventos autenticados que seu sistema enviará para o Experience Platform sempre contenham um identificador de pessoa, como CRMID.
->* Durante a implementação, você deve garantir que o namespace exclusivo com a maior prioridade esteja sempre presente em cada perfil. Consulte o [apêndice](#appendix) para obter exemplos de cenários de gráficos que são resolvidos garantindo que cada perfil contenha o namespace exclusivo com a prioridade mais alta.
->* Se você estiver usando o [conector de origem do Adobe Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md) para assimilar dados, deverá dar às ECIDs uma prioridade mais alta do que a AAID, pois o Serviço de Identidade bloqueia a AAID. Ao priorizar a ECID, você pode instruir o Perfil do cliente em tempo real para armazenar eventos não autenticados na ECID em vez da AAID.
-
 Nesse ponto, você deve ter o seguinte:
 
 * As permissões necessárias para acessar os recursos do Serviço de identidade.
@@ -101,26 +168,6 @@ Para qualquer comentário, use a opção **[!UICONTROL comentários sobre o Beta
 ## Apêndice {#appendix}
 
 Leia esta seção para obter informações adicionais que você pode consultar ao implementar suas configurações de identidade e namespaces exclusivos.
-
-### Requisito de namespace para uma única pessoa {#single-person-namespace-requirement}
-
-Você deve garantir que um único namespace seja usado em todos os perfis que representam uma pessoa. Ao fazer isso, o Serviço de identidade pode detectar o identificador de pessoa apropriado em um determinado gráfico.
-
->[!BEGINTABS]
-
->[!TAB Sem um namespace de identificador de pessoa singular]
-
-Sem um namespace exclusivo para representar seus identificadores de pessoa, você pode acabar com um gráfico que se vincula a identificadores de pessoa diferentes para a mesma ECID. Neste exemplo, B2BCRM e B2CCRM estão vinculados à mesma ECID ao mesmo tempo. Este gráfico sugere que Tom, usando sua conta de login B2C, compartilhou um dispositivo com Summer, usando sua conta de login B2B. No entanto, o sistema reconhecerá que este é um perfil (colapso de gráfico).
-
-![Um cenário de gráfico em que dois identificadores de pessoa estão vinculados à mesma ECID.](../images/graph-examples/multi_namespaces.png)
-
->[!TAB Com um namespace de identificador de pessoa singular]
-
-Dado um namespace exclusivo (neste caso, uma CRMID em vez de dois namespaces diferentes), o Serviço de identidade pode discernir o identificador de pessoa que foi associado pela última vez à ECID. Neste exemplo, como existe uma CRMID exclusiva, o Serviço de identidade pode reconhecer um cenário de &quot;dispositivo compartilhado&quot;, em que duas entidades estão compartilhando o mesmo dispositivo.
-
-![Um cenário de gráfico de dispositivo compartilhado, em que dois identificadores de pessoa são vinculados à mesma ECID, mas o link mais antigo é removido.](../images/graph-examples/crmid_only_multi.png)
-
->[!ENDTABS]
 
 ### Perdendo o cenário de ID de logon {#dangling-loginid-scenario}
 
@@ -158,6 +205,6 @@ Para obter mais informações sobre regras de vinculação de gráficos de ident
 * [Algoritmo de otimização de identidade](./identity-optimization-algorithm.md)
 * [Exemplos de configurações de gráfico](./example-configurations.md)
 * [Solução de problemas e perguntas frequentes](./troubleshooting.md)
-* [Prioridade de namespace](./namespace-priority.md)
+* [Prioridade do namespace](./namespace-priority.md)
 * [Interface de simulação de gráfico](./graph-simulation.md)
 * [Interface de configurações de identidade](./identity-settings-ui.md)

@@ -1,11 +1,11 @@
 ---
-title: Conecte sua conta do Salesforce usando a interface do Experience Platform
-description: Saiba como conectar sua conta do Salesforce e trazer seus dados de CRM para o Experience Platform usando a interface do usuário.
+title: Conecte sua conta da Salesforce usando a interface do Experience Platform
+description: Saiba como conectar sua conta da Salesforce e trazer seus dados do CRM para o Experience Platform usando a interface do usuário do.
 exl-id: b67fa4c4-d8ff-4d2d-aa76-5d9d32aa22d6
-source-git-commit: 5951b0f549c2fd2723945f8f4089d12f73b92e6c
+source-git-commit: ae322ee421edd73cd5a3fb8499267cd417491318
 workflow-type: tm+mt
-source-wordcount: '841'
-ht-degree: 3%
+source-wordcount: '935'
+ht-degree: 2%
 
 ---
 
@@ -118,6 +118,12 @@ Quando terminar, selecione **[!UICONTROL Conectar à origem]**.
 ![A interface OAuth para a criação de conta do Salesforce.](../../../../images/tutorials/create/salesforce/oauth2.png)
 
 >[!ENDTABS]
+
+### Ignorar pré-visualização de dados de amostra {#skip-preview-of-sample-data}
+
+Durante a etapa de seleção de dados, você pode encontrar um tempo limite ao assimilar tabelas ou arquivos de dados grandes. Você pode ignorar a visualização de dados para contornar o tempo limite e ainda visualizar o esquema, embora sem dados de amostra. Para ignorar a visualização de dados, habilite a opção **[!UICONTROL Ignorar visualização de dados de amostra]**.
+
+O restante do workflow permanecerá o mesmo. O único problema é que ignorar a pré-visualização de dados pode impedir que campos calculados e obrigatórios sejam validados automaticamente durante a etapa de mapeamento e, em seguida, será necessário validar manualmente esses campos durante o mapeamento.
 
 ## Próximas etapas
 

@@ -4,10 +4,10 @@ type: Tutorial
 description: Saiba como criar uma conexão de origem de Snowflake usando a interface do usuário do Adobe Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: fb2038b9-7f27-4818-b5de-cc8072122127
-source-git-commit: d89e0c81bd250e41a863b8b28d358cc6ddea1c37
+source-git-commit: ae322ee421edd73cd5a3fb8499267cd417491318
 workflow-type: tm+mt
-source-wordcount: '792'
-ht-degree: 4%
+source-wordcount: '886'
+ht-degree: 3%
 
 ---
 
@@ -104,6 +104,12 @@ Para usar a autenticação de par de chaves, forneça valores para sua conta, no
 ![A interface de autenticação de par de chaves da conta.](../../../../images/tutorials/create/snowflake/key-pair.png)
 
 >[!ENDTABS]
+
+### Ignorar pré-visualização de dados de amostra {#skip-preview-of-sample-data}
+
+Durante a etapa de seleção de dados, você pode encontrar um tempo limite ao assimilar tabelas ou arquivos de dados grandes. Você pode ignorar a visualização de dados para contornar o tempo limite e ainda visualizar o esquema, embora sem dados de amostra. Para ignorar a visualização de dados, habilite a opção **[!UICONTROL Ignorar visualização de dados de amostra]**.
+
+O restante do workflow permanecerá o mesmo. O único problema é que ignorar a pré-visualização de dados pode impedir que campos calculados e obrigatórios sejam validados automaticamente durante a etapa de mapeamento e, em seguida, será necessário validar manualmente esses campos durante o mapeamento.
 
 ## Próximas etapas
 

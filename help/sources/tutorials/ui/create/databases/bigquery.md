@@ -3,9 +3,9 @@ title: Criar uma conexão do Google Big Query Source na interface
 description: Saiba como criar uma conexão de origem do Google Big Query usando a interface do usuário do Adobe Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 3c0902de-48b9-42d8-a4bd-0213ca85fc7f
-source-git-commit: 55aaaa39659566de81bb161d704b6f8212e29a8b
+source-git-commit: ae322ee421edd73cd5a3fb8499267cd417491318
 workflow-type: tm+mt
-source-wordcount: '526'
+source-wordcount: '620'
 ht-degree: 1%
 
 ---
@@ -74,6 +74,12 @@ Para usar a autenticação de serviço, selecione **[!UICONTROL Autenticação d
 ![A nova interface de conta onde a autenticação de serviço está selecionada.](../../../../images/tutorials/create/google-big-query/service_auth.png)
 
 >[!ENDTABS]
+
+### Ignorar pré-visualização de dados de amostra {#skip-preview-of-sample-data}
+
+Durante a etapa de seleção de dados, você pode encontrar um tempo limite ao assimilar tabelas ou arquivos de dados grandes. Você pode ignorar a visualização de dados para contornar o tempo limite e ainda visualizar o esquema, embora sem dados de amostra. Para ignorar a visualização de dados, habilite a opção **[!UICONTROL Ignorar visualização de dados de amostra]**.
+
+O restante do workflow permanecerá o mesmo. O único problema é que ignorar a pré-visualização de dados pode impedir que campos calculados e obrigatórios sejam validados automaticamente durante a etapa de mapeamento e, em seguida, será necessário validar manualmente esses campos durante o mapeamento.
 
 ## Próximas etapas
 

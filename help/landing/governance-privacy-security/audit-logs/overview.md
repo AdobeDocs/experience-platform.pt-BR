@@ -2,10 +2,10 @@
 title: Visão geral dos logs de auditoria
 description: Saiba como os logs de auditoria permitem ver quem realizou quais ações na Adobe Experience Platform.
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 7ae5e9dc79b4e1f08d2bf98876b02db1967ccbe1
 workflow-type: tm+mt
-source-wordcount: '1291'
-ht-degree: 36%
+source-wordcount: '1350'
+ht-degree: 35%
 
 ---
 
@@ -133,6 +133,22 @@ Para exportar a lista atual de logs de auditoria, selecione **[!UICONTROL Baixar
 Na caixa de diálogo exibida, selecione o formato de sua preferência (**[!UICONTROL CSV]** ou **[!UICONTROL JSON]**) e selecione **[!UICONTROL Baixar]**. O navegador baixa o arquivo gerado e o salva em seu computador.
 
 ![A caixa de diálogo de seleção de formato de arquivo com [!UICONTROL Download] foi realçada.](../../images/audit-logs/select-download-format.png)
+
+## Ativar alertas {#enable-alerts}
+
+Você pode ativar alertas de auditoria para receber notificações das seguintes regras:
+
+* Criação de público
+* Atualização de público
+* Exclusão de público
+* Criação do conjunto de dados
+* Atualização do conjunto de dados
+* Exclusão do conjunto de dados
+* Criação de esquema
+* Atualização de esquema
+* Exclusão de esquema
+
+Selecione o alerta desejado na lista para assinar e receber notificações. Para obter mais informações sobre alertas, consulte o manual sobre [assinatura de alertas usando a interface](../../../observability/alerts/ui.md).
 
 ## Gerenciamento de logs de auditoria na API
 

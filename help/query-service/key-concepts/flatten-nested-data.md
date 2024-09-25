@@ -3,7 +3,7 @@ keywords: Experience Platform;serviço de consulta;serviço de consulta;estrutur
 title: Nivelar Estruturas de Dados Aninhadas para Uso com Ferramentas de BI
 description: Este documento explica como nivelar esquemas XDM para todas as tabelas e exibições durante uma sessão ao usar ferramentas de BI de terceiros com o Serviço de consulta.
 exl-id: 7e534c0a-db6c-463e-85da-88d7b2534ece
-source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
+source-git-commit: 5f2b44c364183b7becf69f491b41e9d5558accc2
 workflow-type: tm+mt
 source-wordcount: '857'
 ht-degree: 0%
@@ -56,7 +56,7 @@ prod:all?FLATTEN
 
 O esquema de exemplo usado neste guia emprega o grupo de campos padrão [!UICONTROL Detalhes do Commerce], que utiliza a estrutura de objeto `commerce` e a matriz `productListItems`. Consulte a documentação do XDM para [mais informações sobre o [!UICONTROL grupo de campos Detalhes do Commerce]](../../xdm/field-groups/event/commerce-details.md). Uma representação da estrutura do schema pode ser vista na imagem abaixo.
 
-![Um diagrama de esquema do grupo de campos Detalhes do Commerce, incluindo as estruturas `commerce` e `productListItems`.](../images/essential-concepts/commerce-details.png)
+![Um diagrama de esquema do grupo de campos Detalhes do Commerce, incluindo as estruturas `commerce` e `productListItems`.](../images/key-concepts/commerce-details.png)
 
 Se sua ferramenta de BI não suportar estruturas de dados aninhadas, pode ser difícil fazer referência a campos aninhados caso eles contenham valores serializados (como `commerce` e `productListItems` no esquema de exemplo). Esses valores podem aparecer como partes de um único campo de cadeia de caracteres `commerce` codificado e não são realistas.
 

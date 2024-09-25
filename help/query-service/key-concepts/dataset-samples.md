@@ -2,10 +2,10 @@
 title: Amostras de conjunto de dados
 description: Os conjuntos de dados de amostra do Serviço de consulta permitem realizar consultas exploratórias em grandes volumes de dados com tempo de processamento bastante reduzido, à custa da precisão da consulta. Este guia fornece informações sobre como gerenciar suas amostras para o processamento aproximado de consultas
 exl-id: 9e676d7c-c24f-4234-878f-3e57bf57af44
-source-git-commit: 28fe8ec5a589b8d181ba2f888d50fa9d2d7d4996
+source-git-commit: 5f2b44c364183b7becf69f491b41e9d5558accc2
 workflow-type: tm+mt
-source-wordcount: '643'
-ht-degree: 0%
+source-wordcount: '632'
+ht-degree: 1%
 
 ---
 
@@ -17,12 +17,13 @@ Como muitos usuários não precisam de uma resposta exata para uma operação ag
 
 Para ajudar você a gerenciar suas amostras para o processamento aproximado de consultas, o Serviço de consulta oferece suporte às seguintes operações para amostras de conjunto de dados:
 
-- [Crie uma amostra uniforme de conjunto de dados aleatório.](#create-a-sample)
-- [Opcionalmente, especifique um critério de filtro](##optional-filter-criteria)
-- [Exibir a lista de amostras para uma tabela ADLS.](#view-list-of-samples)
-- [Consulte os conjuntos de dados de amostra diretamente.](#query-sample-datasets)
-- [Exclua uma amostra.](#delete-a-sample)
-- Excluir amostras associadas quando a tabela ADLS original for descartada.
+- [Amostras de conjunto de dados](#dataset-samples)
+   - [Introdução {#get-started}](#getting-started-get-started)
+   - [Criar uma amostra de conjunto de dados aleatório uniforme {#create-a-sample}](#create-a-uniform-random-dataset-sample-create-a-sample)
+   - [Opcionalmente, especifique um critério de filtro {#optional-filter-criteria}](#optionally-specify-a-filter-criteria-optional-filter-criteria)
+   - [Exibir a lista de amostras {#view-list-of-samples}](#view-the-list-of-samples-view-list-of-samples)
+   - [Consulte o conjunto de dados de exemplo {#query-sample-datasets}](#query-the-sample-dataset-query-sample-datasets)
+   - [Excluir amostras do conjunto de dados {#delete-a-sample}](#delete-dataset-samples-delete-a-sample)
 
 ## Introdução {#get-started}
 
@@ -32,7 +33,7 @@ Para usar os recursos aproximados de processamento de consultas detalhados neste
 >
 >Você deve ativar o sinalizador de sessão sempre que fizer logon na Platform.
 
-![O Editor de Consultas com o comando &#39;SET aqp=true;&#39; foi realçado.](../images/essential-concepts/set-session-flag.png)
+![O Editor de Consultas com o comando &#39;SET aqp=true;&#39; foi realçado.](../images/key-concepts/set-session-flag.png)
 
 ## Criar uma amostra uniforme de conjunto de dados aleatório {#create-a-sample}
 

@@ -5,10 +5,10 @@ breadcrumb-title: Guia do Serviço de consulta
 user-guide-description: Use o SQL padrão para consultar dados no data lake na Experience Platform.
 feature: Queries
 role: User,Developer
-source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
+source-git-commit: a7796a93d588b4e41c668f1a0f60bffbcb291550
 workflow-type: tm+mt
-source-wordcount: '322'
-ht-degree: 19%
+source-wordcount: '325'
+ht-degree: 23%
 
 ---
 
@@ -39,6 +39,7 @@ ht-degree: 19%
       - [Recursos do engenheiro para ML](data-distiller/ml-feature-pipelines/feature-engineering.md)
       - [Exportar dados para ambientes ML](data-distiller/ml-feature-pipelines/export-data.md)
       - [Fluxo de trabalho completo de enriquecimento do pipeline de dados de IA/ML](data-distiller/ml-feature-pipelines/end-to-end-notebook-workflow.md)
+- [Hipercubos de Distiller de dados](hypercubes.md)
 - Exemplos {#use-cases}
    - [Visão geral](use-cases/overview.md)
    - [Navegação abandonada](use-cases/abandoned-browse.md)
@@ -48,11 +49,11 @@ ht-degree: 19%
    - [Análise de consentimento](use-cases/consent-analysis.md)
    - [Valor vitalício do cliente](use-cases/customer-lifetime-value.md)
    - [Exploração de dados](./use-cases/data-exploration.md)
-   - [Conjuntos de dados derivados com base em decis](use-cases/deciles-use-case.md)
+   - [Conjuntos de dados derivados baseados em decis](use-cases/deciles-use-case.md)
    - [Correspondência difusa](use-cases/fuzzy-match.md)
    - [Listar as exibições de página de um usuário](use-cases/list-visitor-sessions.md)
    - [Listar visitantes por suas visualizações de página](use-cases/visitors-by-number-of-page-views.md)
-   - [Pontuação de tendência](use-cases/propensity-score.md)
+   - [Pontuação de propensão](use-cases/propensity-score.md)
    - [Recuperar registros semelhantes com funções de ordem superior](use-cases/retrieve-similar-records.md)
    - [Retornar e usar variáveis de merchandising dos dados de análise](use-cases/merchandising-variables.md)
    - [SQLAlchemy](use-cases/sqlalchemy.md)

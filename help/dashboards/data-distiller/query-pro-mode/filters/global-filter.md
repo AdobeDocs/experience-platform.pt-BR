@@ -2,7 +2,7 @@
 title: Criar um filtro global
 description: Saiba como filtrar seus insights de dados com um filtro aplicado globalmente e personalizado.
 exl-id: a0084039-8809-4883-9f68-c666dcac5881
-source-git-commit: 5dd821383e1b1a7bd4998a6cf14a941bfdf3f26c
+source-git-commit: 581eb2a33f9bdfddc89c9d8dbf9fca8eb3725b1d
 workflow-type: tm+mt
 source-wordcount: '507'
 ht-degree: 0%
@@ -66,4 +66,3 @@ Para abrir a caixa de diálogo [!UICONTROL Filtros], que lista todos os filtros 
 Para limpar todos os filtros globais personalizados, selecione **[!UICONTROL Limpar tudo]** na caixa de diálogo [!UICONTROL Filtros].
 
 ![A caixa de diálogo Filtros com Limpar tudo realçado.](../../../images/query-pro-mode/clear-all.png)
-

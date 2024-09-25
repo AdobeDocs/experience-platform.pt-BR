@@ -2,10 +2,10 @@
 title: Criar um filtro de datas
 description: Saiba como filtrar seus insights personalizados por data.
 exl-id: fa05d651-ea43-41f0-9b7d-f19c4a9ac256
-source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
+source-git-commit: 77cedd351b5628d15c279fceabde735f4f93f392
 workflow-type: tm+mt
-source-wordcount: '662'
-ht-degree: 0%
+source-wordcount: '922'
+ht-degree: 1%
 
 ---
 
@@ -22,6 +22,60 @@ Se você não estiver familiarizado com parâmetros de consulta, consulte a docu
 Para aplicar um filtro de datas, selecione **[!UICONTROL Adicionar filtro]** e **[!UICONTROL Filtro de Datas]** no menu suspenso do modo de exibição de painel.
 
 ![Um painel personalizado com Adicionar filtro e seu menu suspenso realçado.](../../../images/query-pro-mode/add-filter.png)
+
+As seguintes opções de filtragem de data são apresentadas a você.
+
+| Filtro | Descrição |
+| --- | --- |
+| Nenhuma data personalizada | Selecione uma ou mais datas personalizadas a partir de vários valores predefinidos. |
+| Intervalo de datas personalizado | Selecione uma ou mais datas personalizadas de vários valores predefinidos ou especifique um intervalo de datas personalizado. |
+| Data personalizada | Selecione nos valores atuais ou especifique a data de início do seu painel. |
+
+![A caixa de diálogo Criar filtro de data com as três opções personalizadas de seletor de data está realçada.](../../../images/query-pro-mode/create-date-filter.png)
+
+### Criar um filtro sem data personalizada
+
+Para aplicar um filtro de data predefinido, selecione **[!UICONTROL Sem data personalizada]** e selecione as opções de data predefinidas que deseja incluir. Por fim, use a lista suspensa para selecionar o intervalo de datas padrão, em seguida, selecione **[!UICONTROL Salvar]**.
+
+![A caixa de diálogo Criar filtro de data sem filtro de data personalizado e salvar realçada.](../../../images/query-pro-mode/no-custom-date-filter.png)
+
+Você retornará ao painel, que mostra o intervalo de datas padrão selecionado anteriormente. Use o menu suspenso para selecionar outro intervalo de datas predefinido.
+
+![Um painel personalizado mostrando o intervalo de datas padrão com a lista suspensa realçada.](../../../images/query-pro-mode/no-custom-date-filter-results.png)
+
+### Criar um filtro de intervalo de datas personalizado
+
+Para aplicar um filtro de intervalo de datas personalizado, selecione **[!UICONTROL Intervalo de datas personalizado]** e selecione as opções de data predefinidas que deseja incluir. Finalmente, selecione **[!UICONTROL Personalizado]** para definir o intervalo de datas padrão. Use o calendário para especificar um intervalo de datas, depois selecione **[!UICONTROL Salvar]**.
+
+>[!NOTE]
+>
+>Não é necessário selecionar opções de data predefinidas.
+
+![A caixa de diálogo Criar filtro de data com o filtro de intervalo de datas personalizado, personalizado e salvar realçado.](../../../images/query-pro-mode/custom-date-range-filter.png)
+
+Você retornará ao painel, que mostra o intervalo de dados personalizado especificado anteriormente. Use o menu suspenso para selecionar outro intervalo de datas predefinido.
+
+![Um painel personalizado mostrando o intervalo de datas padrão com a data personalizada realçada.](../../../images/query-pro-mode/custom-date-range-filter-results.png)
+
+### Criar um filtro de data personalizado
+
+Para aplicar um filtro de data personalizado, selecione **[!UICONTROL Data personalizada]** e selecione as opções de data predefinidas que deseja incluir. Finalmente, selecione **[!UICONTROL Personalizado]** e use o calendário para selecionar uma data de início. Finalmente, selecione **[!UICONTROL Salvar]**.
+
+>[!NOTE]
+>
+>Não é necessário selecionar opções de data predefinidas.
+
+![A caixa de diálogo Criar filtro de data com o filtro de data personalizado, personalizado e salvar realçado.](../../../images/query-pro-mode/custom-date-filter.png)
+
+Você retornará ao painel, que mostra os dados personalizados especificados anteriormente. Use o menu suspenso para selecionar outra data.
+
+![Um painel personalizado mostrando o intervalo de datas padrão com a data personalizada realçada.](../../../images/query-pro-mode/custom-date-filter-results.png)
+
+## Excluir um filtro de datas {#delete-date-filter}
+
+Para remover o filtro de datas, selecione o ícone de exclusão de filtro (![O ícone de exclusão de filtro.](/help/images/icons/filter-delete.png)).
+
+![Um painel personalizado com o ícone de exclusão de filtro realçado.](../../../images/query-pro-mode/delete-date-filter.png)
 
 ## Edite seu SQL para incluir parâmetros de consulta de data {#include-date-parameters}
 
@@ -75,25 +129,3 @@ Em seguida, selecione os parâmetros de consulta apropriados nos menus suspensos
 ![O widget composer com o menu suspenso Start_date realçado.](../../../images/sql-insights/widget-composer-date-filter-dropdown.png)
 
 Finalmente, selecione **[!UICONTROL Salvar e fechar]** para retornar ao seu painel. Agora, os filtros de data estão ativados para todos os insights que têm parâmetros de data de início e término.
-
-## Usar o filtro de datas
-
-Para usar um filtro de data personalizado, selecione o ícone de calendário e escolha um início e fim na exibição de calendário.
-
->[!IMPORTANT]
->
->Simplesmente adicionar um filtro de data não fará com que os gráficos sejam alterados. Você deve editar cada um dos insights para incluir as datas de início e término escolhidas.
-
-![Um painel personalizado com o calendário de filtro de data realçado.](../../../images/query-pro-mode/date-filter.png)
-
-Depois de selecionar um intervalo de datas no painel, os insights que têm parâmetros de data em seu SQL verão as opções de filtro de data no widget composer.
-
->[!NOTE]
->
->Selecionar um intervalo de datas no painel exibe os botões para filtros de data como parte do fluxo de trabalho de criação de insight.
-
-## Excluir um filtro de datas {#delete-date-filter}
-
-Para remover o filtro de datas, selecione o ícone de exclusão de filtro (![O ícone de exclusão de filtro.](/help/images/icons/filter-delete.png)).
-
-![Um painel personalizado com o ícone de exclusão de filtro realçado.](../../../images/query-pro-mode/delete-date-filter.png)

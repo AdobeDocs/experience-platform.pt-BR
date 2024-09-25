@@ -4,9 +4,9 @@ title: Visão geral das políticas de mesclagem
 type: Documentation
 description: O Adobe Experience Platform permite reunir fragmentos de dados de várias fontes e combiná-los para obter uma visualização completa de seus clientes individuais. Ao reunir esses dados, as políticas de mesclagem são as regras que a Platform usa para determinar como os dados serão priorizados e quais dados serão combinados para criar a visualização unificada.
 exl-id: a8ef527a-cfee-4129-9973-e8a212a3ad1e
-source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
+source-git-commit: 5e8bbdf5b7b07c31a36730c86b177fce6041e319
 workflow-type: tm+mt
-source-wordcount: '1265'
+source-wordcount: '1285'
 ht-degree: 1%
 
 ---
@@ -71,11 +71,11 @@ Uma organização pode criar uma política de mesclagem padrão para que sua org
 
 Cada organização pode criar várias políticas de mesclagem relacionadas a uma única classe de esquema XDM. No entanto, elas só podem ter uma política de mesclagem padrão declarada para cada classe. Por exemplo, sua organização pode ter uma política de mesclagem padrão relacionada à classe [!DNL XDM Individual Profile] e uma política de mesclagem padrão diferente para uma classe de Inventário de produto personalizada.
 
-Se você criar uma nova política de mesclagem e defini-la como padrão, a política de mesclagem padrão anterior será atualizada automaticamente pelo sistema para não ser mais o padrão.
+Se você criar uma nova política de mesclagem e defini-la como padrão, a política de mesclagem padrão anterior será atualizada automaticamente pelo sistema para não ser mais o padrão. Qualquer público-alvo criado após esse momento usará essa nova política de mesclagem padrão.
 
 >[!WARNING]
 >
->As contagens de perfis e os públicos-alvo com uma política de mesclagem padrão associada existente podem ser afetados. Qualquer público-alvo que tenha uma política de mesclagem padrão aplicada será atualizado para a nova política de mesclagem padrão.
+>As contagens de perfis e os públicos-alvo com uma política de mesclagem padrão associada existente podem ser afetados. Além disso, os públicos-alvo **não** serão atualizados automaticamente para usar a nova política de mesclagem padrão e continuarão a usar a política de mesclagem anterior.
 
 ## Próximas etapas
 

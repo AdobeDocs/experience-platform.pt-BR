@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guia da interface de segmentação de streaming
 description: A segmentação por transmissão no Adobe Experience Platform permite fazer a segmentação em tempo quase real, concentrando-se na riqueza de dados. Com a segmentação por transmissão, a qualificação de segmentos agora acontece à medida que os dados chegam à Platform, reduzindo a necessidade de agendar e executar trabalhos de segmentação. Com esse recurso, a maioria das regras de segmento agora pode ser avaliada à medida que os dados são passados para a Platform, o que significa que a associação do segmento será mantida atualizada sem executar trabalhos de segmentação programados.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: c2f9bcd9aeb0073b8b26413ec29e2dff1ee5c80d
+source-git-commit: a1c9003a1b219325daf8fa38cda8bb1a019a55c6
 workflow-type: tm+mt
-source-wordcount: '1537'
+source-wordcount: '1443'
 ht-degree: 0%
 
 ---
@@ -32,15 +32,13 @@ A segmentação por transmissão no [!DNL Adobe Experience Platform] permite que
 
 Uma consulta será avaliada automaticamente com a segmentação por transmissão se atender a qualquer um dos seguintes critérios:
 
-| Tipo de consulta | Detalhes | Exemplo |
-| ---------- | ------- | ------- |
-| Evento único | Qualquer definição de segmento que se refere a um único evento recebido sem restrição de tempo. | ![Um exemplo de um único evento é mostrado.](../images/ui/streaming-segmentation/incoming-hit.png) |
-| Evento único em uma janela de tempo relativa | Qualquer definição de segmento que se refere a um único evento de entrada. | ![Um exemplo de um único evento em uma janela de tempo relativa é mostrado.](../images/ui/streaming-segmentation/relative-hit-success.png) |
-| Evento único com uma janela de tempo | Qualquer definição de segmento que se refere a um único evento recebido com uma janela de tempo. | ![Um exemplo de um único evento com uma janela de tempo é mostrado.](../images/ui/streaming-segmentation/historic-time-window.png) |
-| Somente perfil | Qualquer definição de segmento que se refere apenas a um atributo de perfil. | |
-| Evento único com um atributo de perfil em uma janela de tempo relativa de menos de 24 horas | Qualquer definição de segmento que se refere a um único evento recebido, com um ou mais atributos de perfil, e ocorre em uma janela de tempo relativa de menos de 24 horas. | ![Um exemplo de um único evento com um atributo de perfil em uma janela de tempo relativa é mostrado.](../images/ui/streaming-segmentation/profile-relative-success.png) |
-| Segmento de segmentos | Qualquer definição de segmento que contenha um ou mais segmentos em lote ou de fluxo. **Observação:** se um segmento de segmentos for usado, a desqualificação de perfis ocorrerá **a cada 24 horas**. | ![Um exemplo de segmento de segmentos é mostrado.](../images/ui/streaming-segmentation/two-batches.png) |
-| Vários eventos com um atributo de perfil | Qualquer definição de segmento que se refere a vários eventos **nas últimas 24 horas** e (opcionalmente) tem um ou mais atributos de perfil. | ![Um exemplo de vários eventos com um atributo de perfil é mostrado.](../images/ui/streaming-segmentation/event-history-success.png) |
+| Tipo de consulta | Detalhes |
+| ---------- | ------- |
+| Evento único em uma janela de tempo de menos de 24 horas | Qualquer definição de segmento que se refira a um único evento recebido em uma janela de tempo de menos de 24 horas. |
+| Somente perfil | Qualquer definição de segmento que se refere apenas a um atributo de perfil. |
+| Evento único com um atributo de perfil em uma janela de tempo relativa de menos de 24 horas | Qualquer definição de segmento que se refere a um único evento recebido, com um ou mais atributos de perfil, e ocorre em uma janela de tempo relativa de menos de 24 horas. |
+| Segmento de segmentos | Qualquer definição de segmento que contenha um ou mais segmentos em lote ou de fluxo. **Observação:** se um segmento de segmentos for usado, a desqualificação de perfis ocorrerá **a cada 24 horas**. |
+| Vários eventos com um atributo de perfil | Qualquer definição de segmento que se refere a vários eventos **nas últimas 24 horas** e (opcionalmente) tem um ou mais atributos de perfil. |
 
 Uma definição de segmento **não** será habilitada para segmentação por transmissão nos seguintes cenários:
 

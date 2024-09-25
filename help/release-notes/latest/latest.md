@@ -2,10 +2,10 @@
 title: Notas de versão da Adobe Experience Platform de setembro de 2024
 description: As notas de versão de setembro de 2024 para o Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 0cb134fe6b0a87571e01ada7946c4bbb7d4c346b
+source-git-commit: e93d27ef67802c5fbdffdacb3a0649d373a41a2d
 workflow-type: tm+mt
-source-wordcount: '1975'
-ht-degree: 22%
+source-wordcount: '2144'
+ht-degree: 20%
 
 ---
 
@@ -50,9 +50,11 @@ O Experience Platform fornece vários painéis por meio dos quais você pode vis
 
 | Recurso | Descrição |
 | --- | --- |
+| Tabela de Complementos de Uso de Licença | Obtenha visibilidade granular do uso de licenças e gerencie seus recursos da Platform com tabelas dedicadas para os principais produtos e complementos. Rastreie e analise as principais métricas de cada produto principal com exibições de drill-through no nível da sandbox. As métricas complementares se integram perfeitamente às métricas dos produtos principais, oferecendo uma visualização abrangente do uso. A visibilidade aprimorada ajuda a otimizar o gerenciamento de licenças e alinhar recursos às necessidades organizacionais. Consulte o [[!UICONTROL guia do painel de Uso da licença]](../../dashboards/guides/license-usage.md#overview-tab) para obter mais detalhes. |
 | Query Pro Mode - Atualizações de Filtro Global | Melhore a análise com o novo filtro de datas do Modo Query Pro. Refine insights com parâmetros de data dinâmicos em suas consultas SQL e filtre dados por intervalos de tempo específicos. Escolha intervalos de datas predefinidos ou personalizados com uma interface intuitiva, mantendo os painéis relevantes para todos os usuários. Simplifique os fluxos de trabalho, mantenha a precisão e tome decisões oportunas. Leia o [guia sobre criação de filtros de data](../../dashboards/data-distiller/query-pro-mode/filters/global-filter.md) para obter mais informações. |
 | Modos de Consulta Pro - Drill-Throughs | Descubra insights mais profundos com o recurso de detalhamento do modo Query Pro e navegue facilmente de gráficos de alto nível para painéis detalhados. Use esse recurso para mover facilmente de resumos para análises detalhadas e explorar tendências, comportamentos de clientes e KPIs. As passagens automáticas de filtros e as passagens de vários níveis mantêm os dados consistentes, garantindo uma exploração tranquila. Simplifique os fluxos de trabalho, mantenha o contexto e acelere as decisões. Leia o [guia passo a passo sobre como criar detalhamentos](../../dashboards/data-distiller/query-pro-mode/drill-through.md) para obter mais informações. |
 | Modo Query Pro - Atributos de Tabela Avançados | Use os atributos de tabela avançados do Modo Query Pro para simplificar a visualização de dados, melhorar a eficiência do fluxo de trabalho e melhorar a clareza dos dados. Adicione classificação automática, redimensionamento e paginação às tabelas diretamente dos painéis personalizados. Classifique as colunas para priorizar os dados principais, redimensionar para facilitar a leitura e navegar por grandes conjuntos de dados sem interrupção sem modificar as consultas SQL. Leia o guia &#39;[Exibir Mais](../../dashboards/data-distiller/query-pro-mode/view-more.md)&#39; para saber como integrar esses recursos e elevar seus insights de dados. |
+| Volume de dados total | A métrica &quot;Riqueza média de perfil&quot; foi substituída pela métrica &quot;Volume total de dados&quot;. Volume de dados total refere-se à quantidade total de dados disponíveis que podem ser usados com o Perfil do cliente em tempo real para fluxos de trabalho de envolvimento e personalização. Mais detalhes sobre esta alteração podem ser encontrados no [Guia do Volume de Dados Total](../../landing/license-usage-and-guardrails/total-data-volume.md). |
 
 {style="table-layout:auto"}
 
@@ -153,7 +155,8 @@ O [!DNL Segmentation Service] define um subconjunto específico de perfis descre
 **Recursos novos ou atualizados**
 
 | Recurso | Descrição |
-| --- | --- |
+| ------- | ----------- |
+| Atualização dos critérios de segmentação de transmissão | A partir da versão de setembro de 2024, os critérios para que seus públicos-alvo se qualifiquem para segmentação de transmissão foram atualizados. Mais informações sobre essas alterações podem ser encontradas na [atualização dos critérios de qualificação de segmentação de streaming](../../segmentation/eligibility-criteria-update.md). |
 | Implementação da Pesquisa unificada | O comportamento de pesquisa no Construtor de segmentos agora usa a Pesquisa unificada. Isso permite uma experiência mais robusta ao gerenciar e pesquisar públicos para reutilização para associação de segmento. Para obter mais informações sobre esta alteração, leia o [guia do Construtor de segmentos](../../segmentation/ui/segment-builder.md#rule-builder-canvas). |
 
 {style="table-layout:auto"}

@@ -4,10 +4,10 @@ title: Segmentação do Edge usando a API
 description: Este documento contém exemplos sobre como usar a segmentação de borda com a API de serviço de segmentação do Adobe Experience Platform.
 role: Developer
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: 057db1432493a8443eb91b0fc371d0bdffb3de86
+source-git-commit: a1c9003a1b219325daf8fa38cda8bb1a019a55c6
 workflow-type: tm+mt
-source-wordcount: '806'
-ht-degree: 1%
+source-wordcount: '783'
+ht-degree: 2%
 
 ---
 
@@ -43,9 +43,7 @@ Para que um segmento seja avaliado usando a segmentação de borda, a consulta d
 
 | Tipo de consulta | Detalhes |
 | ---------- | ------- |
-| Evento único | Qualquer definição de segmento que se refere a um único evento recebido sem restrição de tempo. |
-| Evento único em uma janela de tempo relativa | Qualquer definição de segmento que se refere a um único evento de entrada. |
-| Evento único com uma janela de tempo | Qualquer definição de segmento que se refere a um único evento recebido com uma janela de tempo. |
+| Evento único em uma janela de tempo de menos de 24 horas | Qualquer definição de segmento que se refira a um único evento recebido em uma janela de tempo de menos de 24 horas. |
 | Somente perfil | Qualquer definição de segmento que se refere apenas a um atributo de perfil. |
 | Evento único com um atributo de perfil em uma janela de tempo relativa de menos de 24 horas | Qualquer definição de segmento que se refere a um único evento recebido, com um ou mais atributos de perfil, e ocorre em uma janela de tempo relativa de menos de 24 horas. |
 | Segmento de segmentos | Qualquer definição de segmento que contenha um ou mais segmentos em lote ou de fluxo. **Observação:** se um segmento de segmentos for usado, a desqualificação de perfis ocorrerá **a cada 24 horas**. |

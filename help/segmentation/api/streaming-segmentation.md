@@ -4,9 +4,9 @@ title: Avaliar eventos em tempo quase real com a segmentação de transmissão
 description: Este documento contém exemplos sobre como usar a segmentação por transmissão com a API do Serviço de segmentação do Adobe Experience Platform.
 role: Developer
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: 914174de797d7d5f6c47769d75380c0ce5685ee2
+source-git-commit: a1c9003a1b219325daf8fa38cda8bb1a019a55c6
 workflow-type: tm+mt
-source-wordcount: '2050'
+source-wordcount: '2027'
 ht-degree: 4%
 
 ---
@@ -73,9 +73,7 @@ Para que uma definição de segmento seja avaliada usando a segmentação por tr
 
 | Tipo de consulta | Detalhes |
 | ---------- | ------- |
-| Evento único | Qualquer definição de segmento que se refere a um único evento recebido sem restrição de tempo. |
-| Evento único em uma janela de tempo relativa | Qualquer definição de segmento que se refere a um único evento de entrada. |
-| Evento único com uma janela de tempo | Qualquer definição de segmento que se refere a um único evento recebido com uma janela de tempo. |
+| Evento único em uma janela de tempo de menos de 24 horas | Qualquer definição de segmento que se refira a um único evento recebido em uma janela de tempo de menos de 24 horas. |
 | Somente perfil | Qualquer definição de segmento que se refere apenas a um atributo de perfil. |
 | Evento único com um atributo de perfil em uma janela de tempo relativa de menos de 24 horas | Qualquer definição de segmento que se refere a um único evento recebido, com um ou mais atributos de perfil, e ocorre em uma janela de tempo relativa de menos de 24 horas. |
 | Segmento de segmentos | Qualquer definição de segmento que contenha um ou mais segmentos em lote ou de fluxo. **Observação:** se um segmento de segmentos for usado, a desqualificação de perfis ocorrerá **a cada 24 horas**. |

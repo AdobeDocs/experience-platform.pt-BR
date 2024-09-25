@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guia da interface do construtor de segmentos
 description: O Construtor de segmentos na interface do usuário do Adobe Experience Platform fornece um espaço de trabalho avançado que permite a interação com elementos de dados de perfil. O espaço de trabalho fornece controles intuitivos para criar e editar regras, como arrastar e soltar blocos usados para representar propriedades de dados.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 6e1fecf2f986cbb39a2a92c28b05131e22d14b6e
+source-git-commit: 6ceb28b2c9bab3b9df212764a43b202980ae239c
 workflow-type: tm+mt
-source-wordcount: '4717'
+source-wordcount: '4784'
 ht-degree: 5%
 
 ---
@@ -98,6 +98,11 @@ Depois que os conjuntos de relatórios forem mapeados, você poderá usar esses 
 | Vários conjuntos de relatórios | Nenhum descritor de nome simples é incluído com variáveis genéricas. <br><br>**Exemplo:** eVar 2 | <ul><li>Qualquer campo com vários descritores é exibido como genérico. Isso significa que nenhum nome amigável é exibido na interface do usuário.</li><li>Os queries podem usar dados de qualquer conjunto de dados que contenha o eVar, o que pode resultar em resultados mistos ou incorretos.</li></ul> | As consultas usam os resultados combinados corretamente de vários conjuntos de dados. |
 
 ### Públicos-alvo
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentBuilder_b2b_decomposition"
+>title="Avaliação complexa"
+>abstract="A expressão a seguir é muito complicada para ser expressa como um único público-alvo. Para usar regras B2B e eventos baseados em pessoas na mesma definição de segmento, siga as etapas abaixo.<ol><li>Crie uma definição de segmento que se refira apenas aos eventos com base em pessoas e salve-a como sua própria definição de segmento.</li><li>Em uma nova definição de segmento, importe a definição de segmento criada anteriormente enquanto se refere às regras B2B.</li></ol>"
 
 >[!NOTE]
 >

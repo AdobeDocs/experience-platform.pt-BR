@@ -3,10 +3,10 @@ title: Exportar conjuntos de dados para destinos de armazenamento na nuvem
 type: Tutorial
 description: Saiba como exportar conjuntos de dados do Adobe Experience Platform para o local de armazenamento em nuvem de sua preferência.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: e95c0e509931f141ff72c1defacebe5a29756157
+source-git-commit: ad33eaa48928b25502ef279f000b92f31e1667ca
 workflow-type: tm+mt
-source-wordcount: '1845'
-ht-degree: 4%
+source-wordcount: '2573'
+ht-degree: 6%
 
 ---
 
@@ -24,7 +24,7 @@ Você também pode usar as APIs de Experience Platform para exportar conjuntos d
 
 Os conjuntos de dados que você pode exportar variam com base no aplicativo Experience Platform (Real-Time CDP, Adobe Journey Optimizer), no nível (Prime ou Ultimate) e em qualquer complemento que você tenha adquirido (por exemplo: Data Distiller).
 
-Entenda, na tabela abaixo, quais tipos de conjunto de dados você pode exportar dependendo do aplicativo, da camada do produto e de qualquer complemento adquirido:
+Use a tabela abaixo para entender quais tipos de conjunto de dados você pode exportar, dependendo do aplicativo, da camada do produto e de qualquer complemento adquirido:
 
 <table>
 <thead>
@@ -137,11 +137,29 @@ Use as caixas de seleção à esquerda dos nomes dos conjuntos de dados para sel
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_datasets_exportoptions"
 >title="Opções de exportação de arquivo para conjuntos de dados"
->abstract="Selecione **Exportar arquivos incrementais** para exportar apenas os dados que foram adicionados ao conjunto de dados desde a última exportação. <br> A primeira exportação de arquivo incremental inclui todos os dados no conjunto de dados, atuando como um preenchimento retroativo. Os arquivos incrementais futuros incluem apenas os dados que foram adicionados ao conjunto de dados desde a primeira exportação."
+>abstract="Selecione **Exportar arquivos incrementais** para exportar apenas os dados que foram adicionados ao conjunto de dados desde a última exportação. <br> A primeira exportação de arquivo incremental inclui todos os dados no conjunto de dados, atuando como um preenchimento retroativo. Os arquivos incrementais futuros incluem apenas os dados que foram adicionados ao conjunto de dados desde a primeira exportação. <br> Selecione **Exportar arquivos completos** para exportar a associação completa de cada conjunto de dados em cada exportação. "
 
-Na etapa **[!UICONTROL Agendamento]**, é possível definir uma data de início e uma cadência de exportação para as exportações do conjunto de dados.
+>[!CONTEXTUALHELP]
+>id="dataset_dataflow_needs_schedule_end_date_header"
+>title="Atualizar a data final deste fluxo de dados"
+>abstract="Atualizar a data final deste fluxo de dados"
 
-A opção **[!UICONTROL Exportar arquivos incrementais]** é selecionada automaticamente. Isso aciona uma exportação de um ou vários arquivos que representam um instantâneo completo do conjunto de dados. Os arquivos subsequentes são adições incrementais ao conjunto de dados desde a exportação anterior.
+>[!CONTEXTUALHELP]
+>id="dataset_dataflow_needs_schedule_end_date_body"
+>title="Atualizar a data final deste corpo de fluxo de dados"
+>abstract="Devido a atualizações recentes nesse destino, o fluxo de dados agora requer uma data final. O Adobe definiu uma data de término padrão para 1º de maio de 2025. Atualize para a data final desejada, caso contrário, as exportações de dados serão interrompidas na data padrão."
+
+Use a etapa **[!UICONTROL Agendamento]** para:
+
+* Defina uma data de início e uma data de término, bem como uma cadência de exportação para suas exportações do conjunto de dados.
+* Configure se os arquivos do conjunto de dados exportados devem exportar a associação completa do conjunto de dados ou apenas alterações incrementais na associação em cada ocorrência de exportação.
+* Personalize o caminho da pasta no local de armazenamento para onde os conjuntos de dados devem ser exportados. Leia mais sobre como [editar o caminho da pasta de exportação](#edit-folder-path).
+
+Use o controle **[!UICONTROL Editar agenda]** na página para editar a cadência de exportação das exportações, bem como para selecionar se deseja exportar arquivos completos ou incrementais.
+
+![Controle de edição de agendamento realçado na etapa Agendamento.](/help/destinations/assets/ui/export-datasets/edit-schedule-control-highlight.png)
+
+A opção **[!UICONTROL Exportar arquivos incrementais]** está selecionada por padrão. Isso aciona uma exportação de um ou vários arquivos que representam um instantâneo completo do conjunto de dados. Os arquivos subsequentes são adições incrementais ao conjunto de dados desde a exportação anterior. Você também pode selecionar **[!UICONTROL Exportar arquivos completos]**. Nesse caso, selecione a frequência **[!UICONTROL Uma vez]** para uma exportação única e completa do conjunto de dados.
 
 >[!IMPORTANT]
 >
@@ -156,13 +174,37 @@ A opção **[!UICONTROL Exportar arquivos incrementais]** é selecionada automat
 
 2. Use o seletor **[!UICONTROL Hora]** para escolher a hora do dia, no formato [!DNL UTC], em que a exportação deve ocorrer.
 
-3. Use o seletor **[!UICONTROL Data]** para escolher o intervalo em que a exportação deve ocorrer. No momento, não é possível definir uma data final para as exportações. Para obter mais informações, exiba a seção [limitações conhecidas](#known-limitations).
+3. Use o seletor **[!UICONTROL Data]** para escolher o intervalo em que a exportação deve ocorrer.
 
-4. Selecione **[!UICONTROL Avançar]** para salvar o agendamento e prosseguir para a etapa **[!UICONTROL Revisão]**.
+4. Selecione **[!UICONTROL Salvar]** para salvar o agendamento e prosseguir para a etapa **[!UICONTROL Revisão]**.
 
 >[!NOTE]
 > 
 >Para exportações de conjunto de dados, os nomes de arquivo têm um formato padrão predefinido que não pode ser modificado. Consulte a seção [Verificar exportação do conjunto de dados bem-sucedida](#verify) para obter mais informações e exemplos de arquivos exportados.
+
+## Editar caminho da pasta {#edit-folder-path}
+
+>[!CONTEXTUALHELP]
+>id="destinations_folder_name_template"
+>title="Editar caminho da pasta"
+>abstract="Use as diversas macros fornecidas para personalizar o caminho da pasta onde os conjuntos de dados são exportados."
+
+>[!CONTEXTUALHELP]
+>id="destinations_folder_name_template_preview"
+>title="Visualização do caminho da pasta do conjunto de dados"
+>abstract="Obtenha uma visualização da estrutura de pastas criada no local de armazenamento com base nas macros adicionadas nesta janela."
+
+Selecione **[!UICONTROL Editar caminho da pasta]** para personalizar a estrutura de pastas no local de armazenamento onde os conjuntos de dados exportados são depositados.
+
+![Controle de caminho de pasta de edição realçado na etapa de agendamento.](/help/destinations/assets/ui/export-datasets/edit-folder-path.png)
+
+Você pode usar várias macros disponíveis para personalizar um nome de pasta desejado. Clique duas vezes em uma macro para adicioná-la ao caminho da pasta e use `/` entre as macros para separar as pastas.
+
+![Seleção de macros realçada na janela modal de pasta personalizada.](/help/destinations/assets/ui/export-datasets/custom-folder-path-macros.png)
+
+Depois de selecionar as macros desejadas, você pode visualizar a estrutura de pastas que será criada no local de armazenamento. O primeiro nível na estrutura de pastas representa o **[!UICONTROL Caminho da pasta]** indicado quando você [se conectou ao destino](/help/destinations/ui/connect-destination.md##set-up-connection-parameters) para exportar conjuntos de dados.
+
+![Visualização do caminho de pasta realçado na janela modal de pasta personalizada.](/help/destinations/assets/ui/export-datasets/custom-folder-path-preview.png)
 
 ## Revisar {#review}
 
@@ -174,7 +216,11 @@ Na página **[!UICONTROL Revisão]**, você pode ver um resumo da sua seleção.
 
 Ao exportar conjuntos de dados, o Experience Platform cria um ou vários arquivos `.json` ou `.parquet` no local de armazenamento fornecido. Espere que os novos arquivos sejam depositados no local de armazenamento de acordo com o agendamento de exportação fornecido.
 
-O Experience Platform cria uma estrutura de pastas no local de armazenamento especificado, onde deposita os arquivos exportados do conjunto de dados. Uma nova pasta é criada para cada exportação, seguindo o padrão abaixo:
+O Experience Platform cria uma estrutura de pastas no local de armazenamento especificado, onde deposita os arquivos exportados do conjunto de dados. O padrão de exportação de pasta padrão é mostrado abaixo, mas você pode [personalizar a estrutura de pastas com suas macros preferidas](#edit-folder-path).
+
+>[!TIP]
+> 
+>O primeiro nível nesta estrutura de pastas - `folder-name-you-provided` - representa o **[!UICONTROL caminho da Pasta]** indicado quando você [se conectou ao destino](/help/destinations/ui/connect-destination.md##set-up-connection-parameters) para exportar conjuntos de dados.
 
 `folder-name-you-provided/datasetID/exportTime=YYYYMMDDHHMM`
 
@@ -194,6 +240,8 @@ Observe a diferença no formato de arquivo entre os dois tipos de arquivo, quand
 
 * Ao exportar arquivos JSON compactados, o formato de arquivo exportado é `json.gz`
 * Ao exportar arquivos parquet compactados, o formato de arquivo exportado é `gz.parquet`
+
+Há suporte para exportações para arquivos JSON *somente no modo compactado*. As exportações para arquivos Parquet são suportadas em um modo compactado e descompactado.
 
 ## Remover conjuntos de dados dos destinos {#remove-dataset}
 
@@ -227,7 +275,7 @@ Observe que os direitos de exportação de dados para diferentes aplicativos nã
 
 Por outro lado, se você adquiriu complementos, como o Data Distiller, o limite de exportação de dados ao qual você tem direito representa a soma da camada do produto e do complemento.
 
-Você pode visualizar e rastrear as exportações de perfil em relação aos limites contratuais no painel de licenciamento.
+Você pode exibir e acompanhar suas exportações de perfil em relação aos limites contratuais no [painel de uso de licença](/help/landing/license-usage-and-guardrails/license-usage-dashboard.md).
 
 ## Limitações conhecidas {#known-limitations}
 
@@ -240,3 +288,59 @@ Lembre-se das seguintes limitações da versão de disponibilidade geral das exp
 * No momento, a interface não impede que você exclua um conjunto de dados que está sendo exportado para um destino. Não exclua conjuntos de dados que estejam sendo exportados para destinos. [Remova o conjunto de dados](#remove-dataset) de um fluxo de dados de destino antes de excluí-lo.
 * Atualmente, as métricas de monitoramento para exportações de conjunto de dados estão misturadas com números para exportações de perfil, de modo que não refletem os números reais exportados.
 * Os dados com um carimbo de data e hora com mais de 365 dias são excluídos das exportações do conjunto de dados. Para obter mais informações, exiba as [medidas de proteção para exportações agendadas do conjunto de dados](/help/destinations/guardrails.md#guardrails-for-scheduled-dataset-exports)
+
+## Perguntas frequentes {#faq}
+
+**É possível gerar um arquivo sem uma pasta se apenas salvarmos em `/` como o caminho da pasta? Além disso, se não exigirmos um caminho de pasta, como os arquivos com nomes duplicados serão gerados em uma pasta ou local?**
+
++++
+A partir da versão de setembro de 2024, é possível personalizar o nome da pasta e até mesmo usar `/` para exportar arquivos para todos os conjuntos de dados na mesma pasta. O Adobe não recomenda isso para destinos que exportam vários conjuntos de dados, pois os nomes de arquivo gerados pelo sistema pertencentes a conjuntos de dados diferentes serão misturados na mesma pasta.
++++
+
+**Você pode rotear o arquivo de manifesto para uma pasta e os arquivos de dados para outra pasta?**
+
++++
+Não, não há nenhum recurso para copiar o arquivo de manifesto para um local diferente.
++++
+
+**Podemos controlar o sequenciamento ou o tempo de entrega do arquivo?**
+
++++
+Há opções para agendar a exportação. Não há opções para atrasar ou sequenciar a cópia dos arquivos. Eles são copiados para o local de armazenamento assim que são gerados.
++++
+
+**Que formatos estão disponíveis para o arquivo de manifesto?**
+
++++
+O arquivo de manifesto está no formato .json.
++++
+
+**A API está disponível para o arquivo de manifesto?**
+
++++
+Nenhuma API está disponível para o arquivo de manifesto, mas inclui uma lista de arquivos que compreende a exportação.
++++
+
+**É possível adicionar mais detalhes ao arquivo de manifesto (ou seja, contagem de registros)? Em caso afirmativo, como?**
+
++++
+Não há possibilidade de adicionar mais informações ao arquivo de manifesto. A contagem de registros está disponível através da entidade `flowRun` (consultável via API). Leia mais em Monitoramento de destinos.
++++
+
+**Como os arquivos de dados são divididos? Quantos registros por arquivo?**
+
++++
+Os arquivos de dados são divididos pelo particionamento padrão no data lake do Experience Platform. Conjuntos de dados maiores têm um número maior de partições. O particionamento padrão não pode ser configurado pelo usuário, pois está otimizado para leitura.
++++
+
+**É possível definir um limite (número de registros por arquivo)?**
+
++++
+Não, não é possível.
++++
+
+**Como reenviar um conjunto de dados caso o envio inicial esteja incorreto?**
+
++++
+As tentativas são implementadas automaticamente para a maioria dos tipos de erros do sistema.
++++

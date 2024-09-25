@@ -3,10 +3,10 @@ title: Ativar públicos para destinos de exportação de perfil em lote
 type: Tutorial
 description: Saiba como ativar os públicos-alvo no Adobe Experience Platform enviando-os para destinos com base em perfil de lote.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 21fd5957da8914be8b4abfad5c78d1929f76d6f6
+source-git-commit: ad33eaa48928b25502ef279f000b92f31e1667ca
 workflow-type: tm+mt
-source-wordcount: '4202'
-ht-degree: 13%
+source-wordcount: '4095'
+ht-degree: 11%
 
 ---
 
@@ -30,26 +30,6 @@ Este artigo explica o fluxo de trabalho necessário para ativar públicos-alvo n
 Para ativar públicos para destinos, você deve ter [se conectado com êxito a um destino](./connect-destination.md). Se ainda não tiver feito isso, vá para o [catálogo de destinos](../catalog/overview.md), navegue pelos destinos compatíveis e configure o destino que deseja usar.
 
 ## Formatos de arquivo compatíveis para exportação {#supported-file-formats-export}
-
->[!CONTEXTUALHELP]
->id="dataset_dataflow_needs_schedule_end_date_header"
->title="Atualizar a data final deste fluxo de dados"
->abstract="Atualizar a data final deste fluxo de dados"
-
->[!CONTEXTUALHELP]
->id="dataset_dataflow_needs_schedule_end_date_body"
->title="Atualizar a data final deste corpo de fluxo de dados"
->abstract="Devido a atualizações recentes nesse destino, o fluxo de dados agora requer uma data final. O Adobe definiu uma data de término padrão para 1º de maio de 2025. Atualize para a data final desejada, caso contrário, as exportações de dados serão interrompidas na data padrão."
-
->[!CONTEXTUALHELP]
->id="destinations_folder_name_template"
->title="Editar caminho da pasta"
->abstract="Use as diversas macros fornecidas para personalizar o caminho da pasta onde os conjuntos de dados são exportados."
-
->[!CONTEXTUALHELP]
->id="destinations_folder_name_template_preview"
->title="Visualização do caminho da pasta do conjunto de dados"
->abstract="Obtenha uma visualização da estrutura de pastas criada no local de armazenamento com base nas macros adicionadas nesta janela."
 
 Os seguintes formatos de arquivo são compatíveis ao exportar públicos:
 

@@ -2,9 +2,9 @@
 title: Visão geral do modo Query Pro
 description: Saiba como usar consultas SQL na interface do usuário do Adobe Experience Platform para gerar gráficos para seus painéis personalizados.
 exl-id: 15c664c4-8546-4e04-b81d-c78bf83500d3
-source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
+source-git-commit: ed1565fad1c539d69b85fb644d4bc16d4a262673
 workflow-type: tm+mt
-source-wordcount: '1062'
+source-wordcount: '1212'
 ht-degree: 0%
 
 ---
@@ -68,6 +68,26 @@ Neste exemplo de gráfico de rosca, as opções são tamanho e cor. A cor detalh
 Para alterar o tipo de gráfico do seu widget, selecione uma das opções disponíveis na lista suspensa [!UICONTROL Marcas]. As opções incluem [!UICONTROL Linha], [!UICONTROL Rosca], [!UICONTROL Número grande] e [!UICONTROL Barra]. Uma vez selecionado, uma visualização prévia das configurações atuais do seu widget é gerada.
 
 ![O compositor de widget com a visualização de widget realçada.](../../images/sql-insights/widget-preview.png)
+
+## Atributos de tabela avançados {#advanced-attributes}
+
+Para aplicar recursos de classificação automática a qualquer ou todas as colunas das tabelas, selecione **[!UICONTROL Editar]** para editar todo o painel.
+
+![Um painel personalizado com a opção Editar realçada.](../../images/query-pro-mode/advanced-edit-dashboard.png)
+
+Selecione as reticências (`...`) no gráfico de tabela ao qual você deseja adicionar a classificação de coluna e selecione **[!UICONTROL Editar]**.
+
+![Uma tabela mostrando o menu de reticências com a opção Editar realçada.](../../images/query-pro-mode/advanced-table-edit.png)
+
+Para habilitar a classificação de qualquer coluna, marque as caixas **[!UICONTROL Classificável]**.
+
+![Página de edição de tabela com caixas de seleção classificáveis realçadas.](../../images/query-pro-mode/advanced-table-sortable.png)
+
+Selecione o ícone de propriedades (![O ícone de propriedades.](/help/images/icons/properties.png)) no painel direito para abrir o painel [!UICONTROL Propriedades]. No painel **[!UICONTROL Propriedades]**, use o menu suspenso para selecionar a coluna **[!UICONTROL Classificação padrão]** e use o menu suspenso para selecionar a **[!UICONTROL Direção de classificação]**. Finalmente, selecione **[!UICONTROL Salvar e fechar]**.
+
+![O widget composer com o ícone de propriedades, classificação padrão, direção de classificação e salvamento e fechamento realçado.](../../images/query-pro-mode/advanced-table-properties.png)
+
+Para saber mais sobre como usar os recursos de classificação, redimensionamento de colunas e paginação, consulte [Exibir mais](./view-more.md).
 
 ## Propriedades do dispositivo {#properties}
 

@@ -2,10 +2,10 @@
 title: Ver mais
 description: Saiba mais sobre as diferentes opções de exibição para seus dados analisados por SQL. No painel personalizado, é possível visualizar os resultados tabulados da análise ou baixar os dados processados no formato CSV.
 exl-id: f57d85cf-dbd2-415c-bf01-8faa49871377
-source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
+source-git-commit: ed1565fad1c539d69b85fb644d4bc16d4a262673
 workflow-type: tm+mt
-source-wordcount: '286'
-ht-degree: 2%
+source-wordcount: '551'
+ht-degree: 1%
 
 ---
 
@@ -30,6 +30,38 @@ O recurso [!UICONTROL Exibir mais] exibe os pontos de dados específicos do grá
 >O download do CSV é limitado aos primeiros 500 registros.
 
 ![Uma caixa de diálogo exibindo uma visualização do seu insight e dos resultados tabelados do SQL que gerou o insight.](../../images/query-pro-mode/view-more-download-csv.png)
+
+## Classificar por coluna {#sort-column}
+
+Ao exibir resultados tabelados, você pode usar a funcionalidade de classificação para classificar por coluna em ordem crescente ou decrescente. No painel personalizado, selecione as reticências (`...`) em qualquer tabela para acessar a opção [!UICONTROL Exibir mais].
+
+![Um painel personalizado com um menu suspenso de reticências das tabelas e a opção Exibir mais realçada.](../../images/query-pro-mode/advanced-ellipses-dropdown.png)
+
+Você pode classificar colunas selecionando o menu suspenso ao lado do nome da coluna e, em seguida, **[!UICONTROL Classificar em ordem crescente]** ou **[!UICONTROL Classificar em ordem decrescente]**.
+
+>[!NOTE]
+>
+>As opções [!UICONTROL Classificar em Ordem Crescente] e [!UICONTROL Classificar em Ordem Decrescente] só aparecerão para colunas que tenham sido configuradas com a [funcionalidade de classificação](../overview.md/#advanced-attributes).
+
+![Uma lista suspensa de coluna da tabela mostrando as opções Classificar em Ordem Crescente e Classificar em Ordem Decrescente destacadas.](../../images/query-pro-mode/advanced-sort-dropdown.png)
+
+## Redimensionar uma coluna {#resize-column}
+
+É possível redimensionar colunas em resultados tabelados para melhorar a legibilidade dos dados. No painel personalizado, selecione as reticências (`...`) da tabela para acessar a opção [!UICONTROL Exibir mais]. Use o menu suspenso ao lado do nome da coluna para redimensioná-la e selecione **[!UICONTROL Redimensionar coluna]**.
+
+![Uma lista suspensa de coluna da tabela mostrando a opção de coluna Redimensionar realçada.](../../images/query-pro-mode/advanced-resize-dropdown.png)
+
+Selecione o controle deslizante e arraste para a esquerda ou direita para ajustar o tamanho da coluna conforme necessário.
+
+![Uma tabela mostrando a barra de redimensionamento de coluna realçada.](../../images/query-pro-mode/advanced-resize-column.png)
+
+## Paginação de tabela {#table-pagination}
+
+A paginação é aplicada automaticamente às tabelas no recurso [!UICONTROL Exibir mais], eliminando a necessidade de modificar manualmente as consultas SQL. Esse recurso garante que os dados sejam apresentados em um formato mais gerenciável, o que facilita o processo de navegação por grandes conjuntos de dados.
+
+É possível ver até 500 registros por página. Para navegar pelos registros, use o **[!UICONTROL >]** localizado na parte inferior da página.
+
+![Resultados em tabela com resultados e paginação realçados.](../../images/query-pro-mode/advanced-table-pagination.png)
 
 ## Próximas etapas
 

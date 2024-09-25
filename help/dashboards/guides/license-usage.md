@@ -4,9 +4,9 @@ title: Painel de Uso da Licença
 description: A Adobe Experience Platform fornece um painel por meio do qual você pode visualizar informações importantes sobre o uso de licença da sua organização.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 0926a0e8c7ae560bf5f4f9ff6853b191af047738
+source-git-commit: 3b4a38be9b47ca65dc142bff4800ef595d3cacca
 workflow-type: tm+mt
-source-wordcount: '2702'
+source-wordcount: '2739'
 ht-degree: 5%
 
 ---
@@ -44,7 +44,7 @@ ht-degree: 5%
 
 Você pode exibir informações importantes sobre o uso de licenças da sua organização no painel [!UICONTROL Uso de licenças] do Adobe Experience Platform. As informações exibidas aqui são capturadas durante um instantâneo diário da sua instância da Platform.
 
-Os relatórios de uso de licença fornecem um alto grau de granularidade em relação às métricas de uso de licença. O painel fornece métricas de uso para cada produto comprado, o uso consolidado de métricas em todas as sandboxes de produção ou desenvolvimento e a métrica de uso de uma sandbox específica. Os aplicativos de Experience Platform a seguir podem ser rastreados com métricas de uso: Real-time Customer Data Platform, Adobe Journey Optimizer e Customer Journey Analytics.
+Os relatórios de uso de licença fornecem um alto grau de granularidade em relação às métricas de uso de licença. O painel fornece métricas de uso para cada produto comprado (e complementos associados), o uso consolidado de métricas em todas as sandboxes de produção ou desenvolvimento e a métrica de uso de uma sandbox específica. Os aplicativos de Experience Platform a seguir podem ser rastreados com métricas de uso: Real-time Customer Data Platform, Adobe Journey Optimizer e Customer Journey Analytics.
 
 Este guia descreve como acessar e trabalhar com o painel de uso de licença na interface do usuário e fornece mais informações sobre as visualizações exibidas no painel.
 
@@ -52,7 +52,7 @@ Para obter uma visão geral da interface do usuário da Platform, consulte o [gu
 
 ## Dados do painel de [!UICONTROL uso da licença]
 
-O painel de [!UICONTROL Uso da licença] exibe uma lista de todos os produtos Experience Platform que você adquiriu. Nessa lista, você pode encontrar um instantâneo dos dados de licença da sua organização para o Experience Platform em qualquer sandbox associada.
+O painel de [!UICONTROL Uso da licença] exibe uma lista de todos os produtos do Experience Platform que você adquiriu e todos os complementos para esses produtos. Nesse painel, você pode encontrar um instantâneo dos dados de licença da sua organização para o Experience Platform em qualquer sandbox associada.
 
 Os dados nesse painel são exibidos exatamente como são exibidos no momento específico em que o instantâneo foi tirado. Em outras palavras, o instantâneo não é uma aproximação ou amostra dos dados, e o painel não é atualizado em tempo real.
 
@@ -72,12 +72,16 @@ Para navegar até o painel de uso de licença na interface do usuário da Platfo
 
 ## Guia [!UICONTROL Visão geral] {#overview-tab}
 
-Esse painel exibe todos os produtos licenciados da Adobe Experience Platform, incluindo complementos, em formato de tabela. A tabela fornece as principais informações sobre o uso de licença em todos os perfis disponíveis.
+O painel de [!UICONTROL Uso da Licença] exibe duas tabelas separadas: **Produtos principais** e **Complementos**.
+
+- **[!UICONTROL Tabela de ] de produtos principais**: esta tabela lista os principais produtos da Adobe Experience Platform licenciados pela sua organização. Cada produto principal tem suas próprias métricas, rastreamento de uso e exibições de drill-through no nível da sandbox. Esses produtos principais fornecem as métricas principais para rastreamento e todos os complementos estão incluídos nessas métricas.
+
+- **[!UICONTROL Tabela de complementos]**: esta tabela lista outros produtos cujos valores de licença são combinados com as métricas suportadas pelos produtos principais. Os complementos não têm métricas separadas, mas aprimoram o rastreamento de uso dos principais produtos aos quais estão associados.
 
 | Nome da coluna | Descrição |
 |---|---|
 | **[!UICONTROL Produto]** | A solução Adobe licenciada pela sua organização. |
-| **[!UICONTROL Métrica primária]** | A métrica principal usada para rastrear o desse produto no. |
+| **[!UICONTROL Métrica primária]** | A métrica principal usada para rastreamento nesse produto. |
 | **[!UICONTROL Valor da Licença]** | O valor contratado para a quantidade máxima da Métrica primária, conforme acordado no contrato de licença do produto. |
 | **[!UICONTROL Uso]** | A quantidade de sua métrica primária usada. Esse valor fornece o uso total dessa métrica em todas as sandboxes, seja de produção ou de desenvolvimento. |
 | **[!UICONTROL Uso %]** | A porcentagem da métrica principal usada de acordo com o valor da licença. |
@@ -85,9 +89,9 @@ Esse painel exibe todos os produtos licenciados da Adobe Experience Platform, in
 
 >[!NOTE]
 >
->Adições ao [!UICONTROL Valor de Licença] como resultado de complementos são adicionadas além do [!UICONTROL Valor de Licença] para os produtos básicos, como Real-time Customer Data Platform, Adobe Journey Optimizer e Customer Journey Analytics. O uso dessa quantidade licenciada (após os complementos) é rastreado pelos produtos básicos. Por exemplo, se você comprar um pacote de cinco sandboxes, a quantidade de cinco será adicionada à do produto base. Nesse caso, o complemento mostra um [!UICONTROL Valor de Licença] de um, e o uso desse complemento fica &quot;em branco&quot; à medida que o uso é rastreado pelo produto base.
+>Os valores de licença para complementos estão incluídos no [!UICONTROL Valor de Licença] dos produtos principais. Por exemplo, se você comprar um pacote de cinco sandboxes como um complemento, a quantidade será adicionada ao do produto base. A tabela de complementos mostra um [!UICONTROL Valor de Licença] específico para o complemento, mas o uso real é rastreado por meio do produto base.
 
-A tabela indica a métrica principal de cada produto, pois cada produto pode rastrear várias métricas.
+As tabelas indicam a métrica principal de cada produto, já que cada produto pode rastrear diversas métricas.
 
 ### Uso previsto {#predicted-usage}
 
@@ -111,8 +115,9 @@ Gerencie e otimize proativamente seus recursos de licenciamento com base em prev
 >
 >As previsões são atualizadas mensalmente. A data de atualização está incluída em um ícone de informações (![Este ícone de informações.](../images/license-usage/info-icon.png)) acima do título da coluna.
 
-Para ver um resumo de uso de um direito de produtos, selecione um produto na lista [!UICONTROL Visão geral].
+Para ver um resumo do uso de direitos de um produto, selecione um produto na tabela [!UICONTROL Produtos principais].
 
+<!-- update image ... -->
 ![O [!UICONTROL Uso da licença] [!UICONTROL Visão geral] com um produto e a coluna de uso previsto realçada.](../images/license-usage/product-predicted-usage.png)
 
 A guia Summary (Resumo) é exibida. Você pode usar as previsões granulares disponíveis nas guias [!UICONTROL Resumo] e [!UICONTROL Detalhes] para garantir uma tomada de decisão informada para o uso eficiente da licença.
@@ -121,6 +126,7 @@ A guia Summary (Resumo) é exibida. Você pode usar as previsões granulares dis
 >
 >Observe que as previsões de uso de licença são aproximações baseadas no uso anterior. Você é responsável por entender o uso real da sua organização e garantir que o uso não vá além do escopo da licença da sua organização com o Adobe.
 
+<!-- update image ... -->
 ![O modo de exibição de resumo de um Produto da Plataforma com a coluna de uso previsto está realçado.](../images/license-usage/summary-predicted-usage.png)
 
 A porcentagem de uso previsto é determinada da seguinte maneira:
@@ -163,7 +169,7 @@ O relatório de consumo de sandboxes é cumulativo para todas as sandboxes do me
 >
 >1. Crie um perfil de produto no Adobe Admin Console.
 >2. Em Permissão na categoria Sandbox, adicione todas as sandboxes que deseja visualizar no painel de uso de licença.
->3. Na categoria de Permissão do painel do usuário, adicione a permissão &quot;Exibir painel de uso da licença&quot;.
+>3. Na categoria Permissão do painel do usuário, adicione a permissão &quot;Exibir painel de uso da licença&quot;.
 
 ## A guia [!UICONTROL Detalhes] {#details-tab}
 
@@ -229,7 +235,7 @@ O painel de uso da licença relata várias métricas exclusivas que são aplicá
 A disponibilidade dessas métricas e a definição específica de cada uma delas variam de acordo com o licenciamento adquirido pela sua organização. Para obter definições detalhadas de cada métrica, consulte a documentação apropriada Descrição do produto:
 
 | Licença | Descrição do produto |
-|---|---|
+| --- | --- |
 | <ul><li>ADOBE EXPERIENCE PLATFORM:OD LITE</li><li>ADOBE EXPERIENCE PLATFORM:PADRÃO OD</li><li>ADOBE EXPERIENCE PLATFORM:MUITO PESADO</li></ul> | [Adobe Experience Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform.html) |
 | <ul><li>ADOBE EXPERIENCE PLATFORM:OD</li></ul> | [Experience Platform, Serviços de Aplicativos e Serviços Inteligentes](https://helpx.adobe.com/legal/product-descriptions/exp-platform-app-svcs.html) |
 | <ul><li>PLATAFORMA DE DADOS DO CLIENTE DE RT:OD</li><li>PLATAFORMA DE DADOS DO CLIENTE DE RT:OD PRFL PARA 10M</li><li>PLATAFORMA DE DADOS DO CLIENTE DE RT:OD PRFL PARA 50M</li></ul> | [Adobe Real-time Customer Data Platform](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html?lang=pt-BR) |

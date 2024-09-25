@@ -3,9 +3,9 @@ title: Assimilar dados criptografados na interface do usuário de origens do Wor
 description: Saiba como assimilar dados criptografados no espaço de trabalho da interface do usuário de origens.
 badge: Beta
 exl-id: 34aaf9b6-5c39-404b-a70a-5553a4db9cdb
-source-git-commit: 3eba8690dcf9c808495a00b7fd4558478606f628
+source-git-commit: 990be6351f1ea8b1a9288c55067bb81f075d1c4f
 workflow-type: tm+mt
-source-wordcount: '1458'
+source-wordcount: '1464'
 ht-degree: 2%
 
 ---
@@ -33,7 +33,7 @@ Antes de continuar com este tutorial, leia os seguintes documentos para entender
 * Crie um par de chaves de criptografia usando o espaço de trabalho de origens na interface de usuário do Experience Platform.
    * Como opção, você também pode criar seu próprio par de chaves de verificação de assinatura para fornecer uma camada adicional de segurança para seus dados criptografados.
 * Use a chave pública do seu par de chaves de criptografia para criptografar os dados.
-* Coloque os dados criptografados no provedor de armazenamento na nuvem. Durante essa etapa, você também deve garantir que tenha um arquivo de amostra que possa ser usado como referência para mapear seus dados de origem para um esquema do Experience Data Model (XDM).
+* Coloque os dados criptografados no armazenamento na nuvem. Durante essa etapa, você também deve garantir que tenha um arquivo de amostra de seus dados no armazenamento na nuvem que possa ser usado como referência para mapear seus dados de origem para um esquema do Experience Data Model (XDM).
 * Use a fonte em lote de armazenamento na nuvem e comece o processo de assimilação de dados no espaço de trabalho de fontes na interface do usuário do Experience Platform.
 * Durante o processo de criação da conexão de origem, forneça a ID da chave que corresponde à chave pública usada para criptografar seus dados.
    * Se você também usou o mecanismo de par de chaves de verificação de sinal, forneça também a ID da chave de verificação de sinal que corresponde aos dados criptografados.

@@ -4,9 +4,9 @@ title: Assinar notificações de eventos Adobe I/O
 description: Este documento fornece etapas sobre como assinar notificações de eventos Adobe I/O para serviços da Adobe Experience Platform. Também são fornecidas informações de referência sobre os tipos de evento disponíveis, juntamente com links para documentação adicional sobre como interpretar dados de evento retornados para cada serviço  [!DNL Platform]  aplicável.
 feature: Alerts
 exl-id: c0ad7217-ce84-47b0-abf6-76bcf280f026
-source-git-commit: 1070c34bcd4577fcc5f0ac160196450db3aab9b0
+source-git-commit: 8e6301c5f834465acff99b4cd668017581c1dfa9
 workflow-type: tm+mt
-source-wordcount: '767'
+source-wordcount: '781'
 ht-degree: 2%
 
 ---
@@ -64,6 +64,10 @@ A próxima tela exibe uma lista de tipos de evento para se inscrever. Selecione 
 >
 >* [Notificações da plataforma](./rules.md)
 >* [Notificações Privacy Service](../../privacy-service/privacy-events.md)
+
+>[!IMPORTANT]
+>
+>Os alertas relacionados ao Edge estão atualmente na versão beta e só estão disponíveis para clientes beta selecionados.
 
 ![](../images/notifications/choose-event-subscriptions.png)
 

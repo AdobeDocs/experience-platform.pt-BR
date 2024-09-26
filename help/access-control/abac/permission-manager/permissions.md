@@ -5,7 +5,7 @@ exl-id: 4c2b8b8e-ac4f-4c6e-a23f-66f658bb6e24
 source-git-commit: 7e65e88bc49ea28d567e8204db877d22ddb8d9a6
 workflow-type: tm+mt
 source-wordcount: '603'
-ht-degree: 1%
+ht-degree: 7%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 1%
 
 Use consultas simples no [!UICONTROL Gerenciador de Permissões] para criar relatórios concisos que ajudarão você a entender o gerenciamento de acesso e economizar tempo validando permissões de acesso em vários fluxos de trabalho e níveis de granularidade. Você pode utilizar o [!UICONTROL Gerenciador de Permissões] para localizar usuários que pertençam a um grupo de usuários e tenham privilégios de acesso especificados, bem como funções com rótulos específicos.
 
-## Executar uma pesquisa de usuários em um grupo de usuários especificado {#search-users}
+## Fazer uma pesquisa de usuários em um grupo especificado {#search-users}
 
 >[!CONTEXTUALHELP]
 >id="platform_permission_manager"

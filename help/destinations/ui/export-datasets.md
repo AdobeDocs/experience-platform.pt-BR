@@ -5,8 +5,8 @@ description: Saiba como exportar conjuntos de dados do Adobe Experience Platform
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
 source-git-commit: ad33eaa48928b25502ef279f000b92f31e1667ca
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '2573'
+ht-degree: 6%
 
 ---
 
@@ -147,7 +147,7 @@ Use as caixas de seleção à esquerda dos nomes dos conjuntos de dados para sel
 >[!CONTEXTUALHELP]
 >id="dataset_dataflow_needs_schedule_end_date_body"
 >title="Atualizar a data final deste corpo de fluxo de dados"
->abstract="Devido a atualizações recentes nesse destino, o fluxo de dados agora requer uma data final. O Adobe definiu uma data de término padrão para 1º de maio de 2025. Atualize para a data final desejada, caso contrário, as exportações de dados serão interrompidas na data padrão."
+>abstract="Devido a atualizações recentes nesse destino, o fluxo de dados agora requer uma data final. A Adobe definiu a data final padrão para 1º de maio de 2025. Atualize para a data final desejada, caso contrário, as exportações de dados serão interrompidas na data padrão."
 
 Use a etapa **[!UICONTROL Agendamento]** para:
 

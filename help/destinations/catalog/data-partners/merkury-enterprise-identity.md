@@ -1,13 +1,14 @@
 ---
 title: Destino de identidade da Merkury Enterprise
 description: Saiba como criar uma conexão de destino de identidade corporativa do Merkury usando a interface do usuário do Adobe Experience Platform.
-source-git-commit: 0a1d024b5642c08cd9349220a9686d8d4cbfd55a
+last-substantial-update: 2024-07-20T00:00:00Z
+exl-id: a5452183-289c-49c3-9574-e09b0153dc00
+source-git-commit: 2b84b5106105339ab243a9f4412b47692caedf3c
 workflow-type: tm+mt
 source-wordcount: '1469'
 ht-degree: 3%
 
 ---
-
 
 # Destino de identidade da Merkury Enterprise
 
@@ -67,7 +68,7 @@ Esta seção descreve que tipo de público-alvo você pode exportar para esse de
 
 | **Público-alvo** | **Com suporte** | **Descrição** | **origem** |
 |---|---|---|---|
-| Serviço de segmentação | ✓ | Públicos gerados por meio do Experience Platform [[Serviço de segmentação]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/home). |
+| Serviço de segmentação | ✓ | Públicos gerados por meio do Experience Platform [[Serviço de segmentação]](https://experienceleague.adobe.com/pt-br/docs/experience-platform/segmentation/home). |
 | Uploads personalizados | x | Públicos-alvo [[importados]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience) para Experience Platform de arquivos CSV. |
 
 {style="table-layout:auto"}
@@ -78,7 +79,7 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 
 | **Público-alvo** | **Com suporte** | **Origem da descrição** |
 |---|---|---|      
-| Serviço de segmentação | ✓ | Públicos gerados por meio do Experience Platform [[Serviço de segmentação]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/home). |
+| Serviço de segmentação | ✓ | Públicos gerados por meio do Experience Platform [[Serviço de segmentação]](https://experienceleague.adobe.com/pt-br/docs/experience-platform/segmentation/home). |
 | Uploads personalizados | X | Públicos-alvo [[importados]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience) para Experience Platform de arquivos CSV. |
 
 {style="table-layout:auto"}

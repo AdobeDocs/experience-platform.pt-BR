@@ -1,13 +1,14 @@
 ---
 title: Destino das conexões corporativas do Merkury
 description: Saiba como criar uma conexão de destino do Merkury Enterprise Connections usando a interface do usuário do Adobe Experience Platform.
-source-git-commit: 01ce38d26cf61706de84ec143e3dd8af720d0591
+last-substantial-update: 2024-07-20T00:00:00Z
+exl-id: dffc6f4d-b756-4c13-96f3-b1cc57caacdb
+source-git-commit: 2b84b5106105339ab243a9f4412b47692caedf3c
 workflow-type: tm+mt
 source-wordcount: '1375'
 ht-degree: 3%
 
 ---
-
 
 # Destino das conexões corporativas do Merkury
 
@@ -60,7 +61,7 @@ Esta seção descreve que tipo de público-alvo você pode exportar para esse de
 
 | **Público-alvo** | **Com suporte** | **Origem da descrição** |
 |---|---|---|      
-| Serviço de segmentação | ✓ | Públicos gerados por meio do Experience Platform [[Serviço de segmentação]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/home). |
+| Serviço de segmentação | ✓ | Públicos gerados por meio do Experience Platform [[Serviço de segmentação]](https://experienceleague.adobe.com/pt-br/docs/experience-platform/segmentation/home). |
 | Uploads personalizados | X | Públicos-alvo [[importados]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience) para Experience Platform de arquivos CSV. |
 
 {style="table-layout:auto"}

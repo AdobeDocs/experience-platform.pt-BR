@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Manuseio de formatos de dados com o Preparo de dados
 description: Este documento fornece uma visão geral de como diferentes tipos de dados são tratados no Preparo de dados.
 exl-id: 4ad253b7-3f83-48cd-9c46-8b5ba627c09e
-source-git-commit: d39ae3a31405b907f330f5d54c91b95c0f999eee
+source-git-commit: a49140853124f4f7beee87a739c8e670838947f4
 workflow-type: tm+mt
-source-wordcount: '602'
+source-wordcount: '626'
 ht-degree: 11%
 
 ---
@@ -75,6 +75,10 @@ Quando os campos de sequência de caracteres dos dados recebidos são mapeados p
 > O Preparo de dados tentará converter cadeias de caracteres em datas o melhor possível. No entanto, essas conversões podem levar a resultados indesejáveis. Por exemplo, o valor da string &quot;12112020&quot; corresponde ao padrão &quot;DDaaaa&quot;, mas o usuário pode ter pretendido que a data fosse lida com o padrão &quot;DDaaaa&quot;. Como resultado, os usuários devem mencionar explicitamente o formato de data para as cadeias de caracteres.
 
 ### Cadeias de caracteres de formato de data/hora {#format}
+
+>[!TIP]
+>
+>Atualmente, a função de data na assimilação em lote remove milissegundos se os valores de data estiverem neste formato: `2024-05-05 20:39:00.005` PST. Para preservar milissegundos, use este formato: `2024-05-05 20:39:00.005-0800`
 
 A tabela a seguir mostra quais letras do padrão são definidas para cadeias de caracteres de formato. Observe que as letras diferenciam maiúsculas de minúsculas.
 

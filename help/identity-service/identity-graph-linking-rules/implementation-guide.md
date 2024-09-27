@@ -3,9 +3,9 @@ title: Guia de implementação para regras de vinculação do gráfico de identi
 description: Saiba mais sobre as etapas recomendadas a serem seguidas ao implementar seus dados com configurações de regras de vinculação de gráfico de identidade.
 badge: Beta
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 1e9d16c53100c1ee930cf4bf5e9a9a5b6bd9c347
+source-git-commit: adfb1e83289435e6991d4cdd2e2a45e3d5a9b32f
 workflow-type: tm+mt
-source-wordcount: '1526'
+source-wordcount: '1546'
 ht-degree: 2%
 
 ---
@@ -168,6 +168,8 @@ Para qualquer comentário, use a opção **[!UICONTROL comentários sobre o Beta
 ## Validar seus gráficos {#validate}
 
 Use o painel de identidade para obter insights sobre o estado dos gráficos de identidade, como a contagem geral de identidades e as tendências de contagem de gráficos, a contagem de identidades por namespace e a contagem de gráficos por tamanho do gráfico. Você também pode usar o painel de identidade para exibir tendências em gráficos com duas ou mais identidades, organizadas por namespace.
+
+Selecione as reticências (`...`) e selecione **[!UICONTROL Exibir mais]** para obter mais informações e validar se não há gráficos recolhidos.
 
 ## Apêndice {#appendix}
 

@@ -2,9 +2,9 @@
 title: Bloqueio Anônimo no Serviço de Consulta
 description: O bloco anônimo é uma sintaxe SQL compatível com o Adobe Experience Platform Query Service, que permite executar uma sequência de consultas com eficiência
 exl-id: ec497475-9d2b-43aa-bcf4-75a430590496
-source-git-commit: 9193ba821409806cd7b4667c5de73a0cf2660c66
+source-git-commit: 65eeeb1df1d512c4cd6c67892905a63cc1cc4fc5
 workflow-type: tm+mt
-source-wordcount: '616'
+source-wordcount: '603'
 ht-degree: 0%
 
 ---
@@ -44,9 +44,7 @@ $$;
 
 No exemplo abaixo, `SET` persiste o resultado de uma consulta `SELECT` na variável local especificada. A variável tem escopo para o bloco anônimo.
 
-A ID do instantâneo é armazenada como uma variável local (`@current_sid`). Ele é usado na próxima query para retornar resultados com base no SNAPSHOT do mesmo conjunto de dados/tabela.
-
-Um instantâneo de banco de dados é uma exibição estática somente leitura de um banco de dados do SQL Server. Para obter mais [informações sobre a cláusula de instantâneo](../sql/syntax.md#SNAPSHOT-clause), consulte a documentação da sintaxe SQL.
+A ID do instantâneo é armazenada como uma variável local (`@current_sid`). Ele é usado na próxima query para retornar resultados com base no SNAPSHOT do mesmo conjunto de dados/tabela. Para obter mais [informações sobre a cláusula de instantâneo](../sql/syntax.md#SNAPSHOT-clause), consulte a documentação da sintaxe SQL.
 
 ```SQL
 $$ BEGIN                                             

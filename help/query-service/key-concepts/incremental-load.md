@@ -2,9 +2,9 @@
 title: Carga incremental no serviço de consulta
 description: O recurso de carga incremental usa recursos de instantâneos e blocos anônimos para fornecer uma solução quase em tempo real para mover dados do data lake para o data warehouse, ignorando, ao mesmo tempo, dados correspondentes.
 exl-id: 1418d041-29ce-4153-90bf-06bd8da8fb78
-source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
+source-git-commit: 65eeeb1df1d512c4cd6c67892905a63cc1cc4fc5
 workflow-type: tm+mt
-source-wordcount: '688'
+source-wordcount: '671'
 ht-degree: 0%
 
 ---
@@ -125,10 +125,6 @@ As etapas abaixo demonstram como criar e carregar dados de forma incremental usa
 Essa lógica pode ser aplicada a qualquer tabela para executar cargas incrementais.
 
 ## Instantâneos expirados
-
->[!IMPORTANT]
->
->Os metadados de instantâneo expiram após **dois** dias. Um instantâneo expirado invalida a lógica do script fornecido acima.
 
 Para resolver o problema de uma ID de snapshot expirada, insira o seguinte comando no início do bloco anônimo. A linha de código a seguir substitui o `@from_snapshot_id` pelo `snapshot_id` mais antigo disponível nos metadados.
 

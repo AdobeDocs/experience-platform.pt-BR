@@ -4,9 +4,9 @@ title: Painel de Uso da Licença
 description: A Adobe Experience Platform fornece um painel por meio do qual você pode visualizar informações importantes sobre o uso de licença da sua organização.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 3b4a38be9b47ca65dc142bff4800ef595d3cacca
+source-git-commit: 67d4bcbf2a055d4427218ba7d98355f09d860a8c
 workflow-type: tm+mt
-source-wordcount: '2739'
+source-wordcount: '2738'
 ht-degree: 13%
 
 ---
@@ -171,7 +171,7 @@ O relatório de consumo de sandboxes é cumulativo para todas as sandboxes do me
 >2. Em Permissão na categoria Sandbox, adicione todas as sandboxes que deseja visualizar no painel de uso de licença.
 >3. Na categoria Permissão do painel do usuário, adicione a permissão &quot;Exibir painel de uso da licença&quot;.
 
-## A guia [!UICONTROL Detalhes] {#details-tab}
+## Guia [!UICONTROL Detalhes] {#details-tab}
 
 Para ver **uma métrica de uso específica de uma sandbox específica**, navegue até a guia [!UICONTROL Detalhes]. A guia [!UICONTROL Detalhes] mostra todas as sandboxes disponíveis nas sandboxes de Produção ou Desenvolvimento.
 

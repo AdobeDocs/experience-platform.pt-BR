@@ -2,9 +2,9 @@
 title: Notas de versão da Adobe Experience Platform de setembro de 2024
 description: As notas de versão de setembro de 2024 para o Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: e93d27ef67802c5fbdffdacb3a0649d373a41a2d
+source-git-commit: 059ed53ace6d54a0c0fb406c2f0379588fea2c44
 workflow-type: tm+mt
-source-wordcount: '2144'
+source-wordcount: '2149'
 ht-degree: 20%
 
 ---
@@ -15,15 +15,16 @@ ht-degree: 20%
 
 Atualizações dos recursos e da documentação existentes no Adobe Experience Platform:
 
-- [Alertas](#alerts)
-- [Painéis](#dashboards)
-- [Preparação de dados](#data-prep)
-- [Destinos](#destinations)
-- [Experience Data Model (XDM)](#xdm)
-- [Serviço de identidade](#identity-service)
-- [Query Service](#query-service)
-- [Serviço de segmentação](#segmentation-service)
-- [Origens](#sources)
+- [Notas de versão da Adobe Experience Platform](#adobe-experience-platform-release-notes)
+   - [Alertas {#alerts}](#alerts-alerts)
+   - [Painéis {#dashboards}](#dashboards-dashboards)
+   - [Preparo de dados {#data-prep}](#data-prep-data-prep)
+   - [Destinos {#destinations}](#destinations-destinations)
+   - [Experience Data Model (XDM) {#xdm}](#experience-data-model-xdm-xdm)
+   - [Serviço de identidade {#identity-service}](#identity-service-identity-service)
+   - [Serviço de consulta {#query-service}](#query-service-query-service)
+   - [Serviço de segmentação {#segmentation-service}](#segmentation-service-segmentation-service)
+   - [Fontes {#sources}](#sources-sources)
 
 ## Alertas {#alerts}
 
@@ -140,7 +141,7 @@ O Query Service permite usar SQL padrão para consultar dados no [!DNL data lake
 | Recurso | Descrição |
 | --- | --- |
 | Públicos-alvo de dados do Distiller | Crie, gerencie e ative facilmente os públicos-alvo com a extensão de público-alvo SQL em Experience Platform Data Distiller. Defina segmentos de público-alvo com comandos SQL diretamente do data lake, ignorando a necessidade de dados brutos em perfis. Refine as estratégias de direcionamento e sincronize automaticamente os públicos-alvo com destinos baseados em arquivos usando essa abordagem flexível e orientada por dados. Simplifique os fluxos de trabalho, otimize o gerenciamento do público-alvo e libere todo o potencial dos dados. Leia o [guia sobre como usar a extensão de público-alvo do SQL](../../query-service/data-distiller-audiences/overview.md) para elevar suas estratégias de público-alvo. |
-| Estatísticas do Data Distiller - Hipercubos | Otimize a análise de big data com Hipercubos. Lidar com cálculos complexos — como contagens distintas e análise multidimensional — sem reprocessar dados históricos. Atualize dados de maneira incremental, simplifique os fluxos de trabalho e reduza o tempo de processamento, mantendo a precisão e a eficiência. Obtenha insights mais rápidos, escaláveis e econômicos que transformam a tomada de decisões. Explore o [guia sobre o uso de Hipercubos](../../query-service/hypercubes.md) para desbloquear a análise avançada. |
+| Estatísticas do Data Distiller - Hipercubos | Otimize a análise de big data com Hipercubos. Lidar com cálculos complexos — como contagens distintas e análise multidimensional — sem reprocessar dados históricos. Atualize dados de maneira incremental, simplifique os fluxos de trabalho e reduza o tempo de processamento, mantendo a precisão e a eficiência. Obtenha insights mais rápidos, escaláveis e econômicos que transformam a tomada de decisões. Explore o [guia sobre o uso de Hipercubos](../../query-service/hypercubes/overview.md) para desbloquear a análise avançada. |
 | Navegador de objetos do Editor de consultas | Aumente a eficiência da consulta com o novo Navegador de objetos no Editor de consultas. Pesquise, filtre e acesse conjuntos de dados rapidamente para gravar e refinar consultas mais rapidamente. Com atualizações de esquema em tempo real e metadados de tabela instantâneos, você pode simplificar fluxos de trabalho, reduzir o tempo de navegação e aprimorar sua experiência de consulta. Libere o potencial de seus dados e otimize a análise. Leia o [guia sobre como usar o Pesquisador de Objetos](../../query-service/ui/user-guide.md#object-browser) para obter mais informações. |
 | Computar horas | Obtenha controle sobre o uso de recursos com a métrica Horas de computação visível recentemente para consultas programadas. Visualize as Horas de computação no nível de execução da consulta para monitorar e otimizar o uso de recursos para consultas em lote CTAS/ITAS. Rastreie horas iniciais, status de conclusão e tempo de computação para cada execução de consulta. Ajuste o desempenho e reduza custos facilmente. Leia o [guia sobre Horas de Computação](../../query-service/ui/query-schedules.md#compute-hours-at-job-level) para obter informações sobre como maximizar a eficiência da sua consulta. |
 

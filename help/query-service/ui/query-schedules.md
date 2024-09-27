@@ -2,9 +2,9 @@
 title: Agendamentos de consulta
 description: Saiba como automatizar execuções de consultas programadas, excluir ou desativar um agendamento de consultas e utilizar as opções de agendamento disponíveis por meio da interface do usuário do Adobe Experience Platform.
 exl-id: 984d5ddd-16e8-4a86-80e4-40f51f37a975
-source-git-commit: c69311b3188a8d066a24235466afad1e725d489c
+source-git-commit: c0d2f4b4f8e294d5a7b0a519ab9dad8b78558b26
 workflow-type: tm+mt
-source-wordcount: '2051'
+source-wordcount: '2066'
 ht-degree: 0%
 
 ---
@@ -163,6 +163,11 @@ A tabela a seguir fornece descrições de cada coluna disponível na seção de 
 | [!UICONTROL Horas de Computação] | Mostra o tempo de cálculo usado para cada execução de consulta, medido em horas. Isso ajuda a rastrear o uso de recursos e otimizar o desempenho da consulta. |
 
 {style="table-layout:auto"}
+
+>[!NOTE]
+>
+>Os dados de Horas de computação estão disponíveis em 15/08/2024. Os dados anteriores a essa data aparecem como &#39;Não disponível&#39;.
+
 
 Consulte o [guia consultado agendado do monitor](./monitor-queries.md#inline-actions) para obter informações completas sobre como monitorar o status de todos os trabalhos de consulta por meio da interface.
 

@@ -5,9 +5,9 @@ breadcrumb-title: Guia do Serviço de consulta
 user-guide-description: Use o SQL padrão para consultar dados no data lake na Experience Platform.
 feature: Queries
 role: User,Developer
-source-git-commit: bdd3d37baa05c8da3213f425657a00fef6afecb8
+source-git-commit: 67d4bcbf2a055d4427218ba7d98355f09d860a8c
 workflow-type: tm+mt
-source-wordcount: '333'
+source-wordcount: '339'
 ht-degree: 22%
 
 ---
@@ -41,7 +41,6 @@ ht-degree: 22%
       - [Fluxo de trabalho completo de enriquecimento do pipeline de dados de IA/ML](data-distiller/ml-feature-pipelines/end-to-end-notebook-workflow.md)
 - Públicos da Distiller de dados {#data-distiller-audiences}
    - [Criar públicos-alvo externos usando SQL](data-distiller-audiences/overview.md)
-- [HIPERCUBOS DE DADOS DO DISTILLER](hypercubes.md)
 - Exemplos {#use-cases}
    - [Visão geral](use-cases/overview.md)
    - [Navegação abandonada](use-cases/abandoned-browse.md)
@@ -70,6 +69,8 @@ ht-degree: 22%
    - [Desduplicação de dados](key-concepts/deduplication.md)
    - [Amostras de conjunto de dados](key-concepts/dataset-samples.md)
    - [Cálculo das estatísticas do conjunto de dados](key-concepts/dataset-statistics.md)
+- Hipercubos de Distiller de Dados {#hypercubes}
+   - [Análise eficiente de big data com hipercubos](hypercubes/overview.md)
 - Conectar clientes ao Serviço de Consulta {#clients}
    - [Visão geral de conexões de clientes](clients/overview.md)
    - [Modos SSL](./clients/ssl-modes.md)

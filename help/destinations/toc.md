@@ -5,9 +5,9 @@ user-guide-description: Ative seus dados conhecidos e desconhecidos para campanh
 description: Este documento lista o índice dos destinos do Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: 029cd5bdf58a143f765b37190428b817825317b0
+source-git-commit: 7db60161b638cce1845c430f6086441599a0bc61
 workflow-type: tm+mt
-source-wordcount: '1247'
+source-wordcount: '1251'
 ht-degree: 6%
 
 ---
@@ -67,6 +67,7 @@ ht-degree: 6%
       * [compartilhamento de público-alvo de Experience Platform](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
       * [Conexão Federated Audience Composition (Disponibilidade limitada)](https://www.adobe.com/go/destinations-federated-audience-composition)
    * Destinos do Advertising{#advertising}
+      * [(Beta) Distribuição de público-alvo da Acxiom](./catalog/advertising/acxiom-audience-distribution.md)
       * [Visão geral dos destinos do Advertising](./catalog/advertising/overview.md)
       * [Conexão com o Adobe Advertising Cloud](./catalog/advertising/adobe-advertising-cloud-connection.md)
       * [Extensão do Adobe Advertising Cloud](./catalog/advertising/adobe-advertising-cloud.md)

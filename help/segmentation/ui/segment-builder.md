@@ -6,7 +6,7 @@ exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
 source-git-commit: 6ceb28b2c9bab3b9df212764a43b202980ae239c
 workflow-type: tm+mt
 source-wordcount: '4784'
-ht-degree: 5%
+ht-degree: 7%
 
 ---
 
@@ -160,12 +160,12 @@ Observe que há um máximo de 250 valores permitidos. Se você exceder esse valo
 
 ![Um aviso que mostra que você atingiu o número máximo de valores é exibido.](../images/ui/segment-builder/maximum-values.png)
 
-### Adição de públicos
+### Adição de públicos-alvo
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_segmentbuilder_addaudiences"
 >title="Procurar atualizações"
->abstract="O sistema de pesquisa existente foi atualizado para usar a Pesquisa unificada. A Pesquisa unificada permite que você pesquise seus públicos-alvo de forma mais fácil e robusta quanto à associação do segmento."
+>abstract="O sistema de pesquisa foi atualizado para usar a Pesquisa unificada. A Pesquisa unificada permite que você pesquise seus públicos-alvo de forma mais fácil e robusta quanto à associação a um segmento."
 
 Você pode arrastar e soltar um público-alvo da guia **[!UICONTROL Público-alvo]** na tela do construtor de regras para fazer referência à associação de público-alvo na nova definição de segmento. Isso permite incluir ou excluir a associação de público-alvo como um atributo nas novas regras de definição de segmento.
 
@@ -327,11 +327,11 @@ Depois de selecionar **[!UICONTROL Decodificar contêiner]**, o contêiner filho
 
 ![O contêiner é mostrado após ser desencapsulado.](../images/ui/segment-builder/unwrapped-container.png)
 
-## Políticas de mesclagem
+## Mesclar políticas
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_createSegment_segmentBuilder_mergePolicies"
->title="Políticas de mesclagem"
+>title="Mesclar políticas"
 >abstract="Uma política de mesclagem permite mesclar diferentes conjuntos de dados para formar o perfil. A Platform fornece uma política de mesclagem padrão, mas você também pode criar uma nova política de mesclagem padrão em Perfis. Escolha uma política de mesclagem que corresponda à sua finalidade de marketing para este público-alvo."
 
 O [!DNL Experience Platform] permite reunir dados de várias fontes e combiná-los para obter uma visão completa de cada cliente individual. Ao reunir esses dados, as políticas de mesclagem são as regras que [!DNL Platform] usa para determinar como os dados serão priorizados e quais dados serão combinados para criar um perfil.

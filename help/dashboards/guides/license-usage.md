@@ -7,7 +7,7 @@ exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
 source-git-commit: 67d4bcbf2a055d4427218ba7d98355f09d860a8c
 workflow-type: tm+mt
 source-wordcount: '2738'
-ht-degree: 13%
+ht-degree: 16%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 13%
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_core"
 >title="Tabela de produtos principais"
->abstract="Os principais produtos listados na tabela têm suas próprias métricas, rastreamento de uso e exibições de drill-through no nível da sandbox. Esses produtos principais fornecem as métricas principais para rastreamento e todos os complementos estão incluídos nessas métricas."
+>abstract="Os principais produtos listados na tabela têm suas próprias métricas, rastreamento de uso e exibições de detalhamento no nível da sandbox. Esses produtos principais fornecem as métricas principais para rastreamento e todos os complementos estão incluídos nessas métricas."
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_addons"

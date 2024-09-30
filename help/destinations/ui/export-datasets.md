@@ -6,7 +6,7 @@ exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
 source-git-commit: ad33eaa48928b25502ef279f000b92f31e1667ca
 workflow-type: tm+mt
 source-wordcount: '2573'
-ht-degree: 6%
+ht-degree: 8%
 
 ---
 
@@ -137,7 +137,7 @@ Use as caixas de seleção à esquerda dos nomes dos conjuntos de dados para sel
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_datasets_exportoptions"
 >title="Opções de exportação de arquivo para conjuntos de dados"
->abstract="Selecione **Exportar arquivos incrementais** para exportar apenas os dados que foram adicionados ao conjunto de dados desde a última exportação. <br> A primeira exportação de arquivo incremental inclui todos os dados no conjunto de dados, atuando como um preenchimento retroativo. Os arquivos incrementais futuros incluem apenas os dados que foram adicionados ao conjunto de dados desde a primeira exportação. <br> Selecione **Exportar arquivos completos** para exportar a associação completa de cada conjunto de dados em cada exportação. "
+>abstract="Selecione **Exportar arquivos incrementais** para exportar apenas os dados que foram adicionados ao conjunto de dados desde a última exportação. <br> A primeira exportação de arquivo incremental inclui todos os dados no conjunto de dados, atuando como um preenchimento retroativo. Os arquivos incrementais futuros incluem apenas os dados que foram adicionados ao conjunto de dados desde a primeira exportação. <br> Selecione **Exportar arquivos completos** para exportar a assinatura completa de cada conjunto de dados em cada exportação. "
 
 >[!CONTEXTUALHELP]
 >id="dataset_dataflow_needs_schedule_end_date_header"

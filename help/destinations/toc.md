@@ -5,9 +5,9 @@ user-guide-description: Ative seus dados conhecidos e desconhecidos para campanh
 description: Este documento lista o índice dos destinos do Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: 7db60161b638cce1845c430f6086441599a0bc61
+source-git-commit: 5e2e8996ee48d7816d78fc9cacf6ba102f7ae66f
 workflow-type: tm+mt
-source-wordcount: '1251'
+source-wordcount: '1253'
 ht-degree: 6%
 
 ---
@@ -77,6 +77,7 @@ ht-degree: 6%
       * [Extensão UET (Rastreamento de evento universal) do Bing Ads](./catalog/advertising/bing-ads.md)
       * [Extensão de ramificação](./catalog/advertising/branch.md)
       * [(Beta) Conexão de critério](./catalog/advertising/criteo.md)
+      * [Conexão Demandbase](./catalog/advertising/demandbase.md)
       * [Extensão DoubleClick Floodlight (Beta)](./catalog/advertising/doubleclick-floodlight.md)
       * [Extensão facebook Pixel](./catalog/advertising/facebook-pixel.md)
       * [Extensão OneTag de fala rápida](./catalog/advertising/flashtalking.md)

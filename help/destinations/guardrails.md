@@ -6,9 +6,9 @@ product: experience platform
 type: Documentation
 description: Saiba mais sobre o uso padrão da ativação de dados e os limites de taxa.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: 322510055bd8b8803292a2b4af9df9e1dbee7ffb
+source-git-commit: 3ff20e51458cb9cccafb6da92414def9eeaaf821
 workflow-type: tm+mt
-source-wordcount: '1685'
+source-wordcount: '1686'
 ht-degree: 2%
 
 ---
@@ -178,7 +178,7 @@ Leia mais sobre [exportação de conjuntos de dados](/help/destinations/ui/expor
 | Grade de Proteção | Limite | Tipo de limite | Descrição |
 | --- | --- | --- | --- |
 | Número máximo de [destinos personalizados privados](/help/destinations/destination-sdk/overview.md#productized-custom-integrations) | 5 | Proteção de desempenho | Você pode criar no máximo 5 destinos personalizados de streaming ou lote privados usando o Destination SDK. Entre em contato com um representante de atendimento personalizado se precisar criar mais de 5 desses destinos. |
-| Política de exportação de perfil para Destination SDK | <ul><li>`maxBatchAgeInSecs` (mínimo 1.800 e máximo 3.600)</li><li>`maxNumEventsInBatch` (mínimo 1.000, máximo 10.000)</li></ul> | Proteção imposta pelo sistema | Ao usar a opção [agregação configurável](destination-sdk/functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) para seu destino, lembre-se dos valores mínimo e máximo que determinam a frequência com que as mensagens HTTP são enviadas para seu destino baseado em API e quantos perfis as mensagens devem incluir. |
+| Política de exportação de perfil para Destination SDK | <ul><li>`maxBatchAgeInSecs` (mínimo 1.800 e máximo 3.600)</li><li>`maxNumEventsInBatch` (mínimo 1.000 e máximo 10.000)</li></ul> | Proteção imposta pelo sistema | Ao usar a opção [agregação configurável](destination-sdk/functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) para seu destino, lembre-se dos valores mínimo e máximo que determinam a frequência com que as mensagens HTTP são enviadas para seu destino baseado em API e quantos perfis as mensagens devem incluir. |
 
 {style="table-layout:auto"}
 

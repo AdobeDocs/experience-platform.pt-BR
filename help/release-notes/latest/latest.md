@@ -2,10 +2,10 @@
 title: Notas de versão da Adobe Experience Platform de setembro de 2024
 description: As notas de versão de setembro de 2024 da Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 059ed53ace6d54a0c0fb406c2f0379588fea2c44
+source-git-commit: a342f38f09b84ef720d6135bc555844df12ee251
 workflow-type: tm+mt
-source-wordcount: '2149'
-ht-degree: 20%
+source-wordcount: '2199'
+ht-degree: 19%
 
 ---
 
@@ -15,16 +15,15 @@ ht-degree: 20%
 
 Atualizações dos recursos e da documentação existentes no Adobe Experience Platform:
 
-- [Notas de versão da Adobe Experience Platform](#adobe-experience-platform-release-notes)
-   - [Alertas {#alerts}](#alerts-alerts)
-   - [Painéis {#dashboards}](#dashboards-dashboards)
-   - [Preparo de dados {#data-prep}](#data-prep-data-prep)
-   - [Destinos {#destinations}](#destinations-destinations)
-   - [Experience Data Model (XDM) {#xdm}](#experience-data-model-xdm-xdm)
-   - [Serviço de identidade {#identity-service}](#identity-service-identity-service)
-   - [Serviço de consulta {#query-service}](#query-service-query-service)
-   - [Serviço de segmentação {#segmentation-service}](#segmentation-service-segmentation-service)
-   - [Fontes {#sources}](#sources-sources)
+- [Alertas {#alerts}](#alerts)
+- [Painéis {#dashboards}](#dashboards)
+- [Preparo de dados {#data-prep}](#data-prep)
+- [Destinos {#destinations}](#destinations)
+- [Experience Data Model (XDM) {#xdm}](#xdm)
+- [Serviço de identidade {#identity-service}](#identity-service)
+- [Serviço de consulta {#query-service}](#query-service)
+- [Serviço de segmentação {#segmentation-service}](#segmentation-service)
+- [Fontes {#sources}](#sources)
 
 ## Alertas {#alerts}
 
@@ -77,6 +76,8 @@ Para obter mais informações sobre Preparo de Dados, leia a [Visão geral do Pr
 
 ## Destinos {#destinations}
 
+**Atualizado em: 30 de setembro de 2024**
+
 [!DNL Destinations] são integrações pré-construídas com plataformas de destino que permitem a ativação perfeita de dados da Adobe Experience Platform. É possível usar destinos para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas de email, publicidade direcionada e muitos outros casos de uso.
 
 **Destinos novos ou atualizados** {#new-updated-destinations}
@@ -84,6 +85,7 @@ Para obter mais informações sobre Preparo de Dados, leia a [Visão geral do Pr
 | Destino | Descrição |
 | --- | --- |
 | [Anúncios do Amazon](/help/destinations/catalog/advertising/amazon-ads.md) | A versão de setembro de 2024 adiciona a opção de mapeamento para exportar o parâmetro `countryCode` para o Amazon Ads. Use o `countryCode` na [etapa de mapeamento](/help/destinations/catalog/advertising/amazon-ads.md#map) para melhorar suas taxas de correspondência de identidade com a Amazon. |
+| Demandbase [[!BADGE B2B]{type=Informative}](/help/destinations/catalog/advertising/demandbase.md) | Use esse destino para ativar os públicos-alvo da conta para os casos de uso do Account-Based Marketing (ABM). Anuncie para personas e funções relevantes em suas contas do target por meio do Demand Side Platform B2B (DSP) do DemandBase. As contas do Target também podem ser enriquecidas com dados de terceiros do Demandbase para outros casos de uso downstream em marketing e vendas. |
 
 {style="table-layout:auto"}
 

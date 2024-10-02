@@ -1,20 +1,19 @@
 ---
-title: Prioridade de namespace
+title: Prioridade do namespace
 description: Saiba mais sobre a prioridade de namespace no Serviço de identidade.
-badge: Beta
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
+source-git-commit: cfe0181104f09bfd91b22d165c23154a15cd5344
 workflow-type: tm+mt
-source-wordcount: '1626'
+source-wordcount: '1605'
 ht-degree: 2%
 
 ---
 
-# Prioridade de namespace
+# Prioridade do namespace
 
 >[!AVAILABILITY]
 >
->As regras de vinculação do gráfico de identidade estão na versão beta. Entre em contato com a equipe de conta do Adobe para obter informações sobre os critérios de participação. O recurso e a documentação estão sujeitos a alterações.
+>As regras de vinculação do gráfico de identidade estão atualmente com Disponibilidade limitada. Entre em contato com a equipe de conta do Adobe para obter informações sobre como acessar o recurso em sandboxes de desenvolvimento.
 
 Cada implementação de cliente é exclusiva e personalizada para atender às metas de uma organização específica e, como tal, a importância de um determinado namespace varia de acordo com o cliente. Exemplos reais incluem:
 
@@ -90,7 +89,7 @@ Para estruturas de gráficos relativamente complexas, a prioridade de namespace 
 >
 >* A identidade principal é a identidade na qual um fragmento de perfil é armazenado. Um fragmento de perfil é um registro de dados que armazena informações sobre um determinado usuário: atributos (geralmente assimilados por meio de registros do CRM) ou eventos (geralmente assimilados de eventos de experiência ou dados online).
 
-### Exemplo de cenário de gráfico
+### Exemplo de cenário
 
 Esta seção fornece um exemplo de como a configuração de prioridade pode afetar seus dados.
 
@@ -184,6 +183,6 @@ Para obter mais informações sobre, leia os documentos em [Attribution AI](../.
 
 Para obter mais informações, leia a [Visão geral do Privacy Service](../../privacy-service/home.md).
 
-### Adobe Target e personalização de borda
+### Adobe Target
 
-A [personalização do Edge](../../server-api/personalization-target.md) continuará se referindo a como você configurou sua caixa de seleção &quot;Primário&quot; no tipo de elemento de dados do SDK da Web (o que significa `primary=true` no identityMap).
+Você só pode ativar a segmentação em lote e por transmissão para o Adobe Target.

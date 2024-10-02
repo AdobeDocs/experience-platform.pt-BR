@@ -3,9 +3,9 @@ title: Guia de implementação para regras de vinculação do gráfico de identi
 description: Saiba mais sobre as etapas recomendadas a serem seguidas ao implementar seus dados com configurações de regras de vinculação de gráfico de identidade.
 badge: Beta
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: adfb1e83289435e6991d4cdd2e2a45e3d5a9b32f
+source-git-commit: 0bb99a359e7331f2235cd5385dcf546ab4c2b494
 workflow-type: tm+mt
-source-wordcount: '1546'
+source-wordcount: '1635'
 ht-degree: 2%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 >[!AVAILABILITY]
 >
->As regras de vinculação do gráfico de identidade estão na versão beta. Entre em contato com a equipe de conta do Adobe para obter informações sobre os critérios de participação. O recurso e a documentação estão sujeitos a alterações.
+>As regras de vinculação do gráfico de identidade estão atualmente com Disponibilidade limitada. Entre em contato com a equipe de conta do Adobe para obter informações sobre como acessar o recurso em sandboxes de desenvolvimento.
 
 Leia este documento para obter um guia passo a passo que você pode seguir ao implementar seus dados com o Adobe Experience Platform Identity Service.
 
@@ -61,8 +61,67 @@ Se você estiver usando o [conector de origem do Adobe Analytics](../../sources/
 
 ### Eventos de experiência XDM
 
-* Durante o processo de pré-implementação, você deve garantir que os eventos autenticados que seu sistema enviará para o Experience Platform sempre contenham um identificador de pessoa, como CRMID.
-* Não envie uma string vazia como um valor de identidade ao enviar eventos usando eventos de experiência XDM. Isso resultará em erros de sistema.
+Durante o processo de pré-implementação, você deve garantir que os eventos autenticados que seu sistema enviará para o Experience Platform sempre contenham um identificador de pessoa, como CRMID.
+
+>[!BEGINTABS]
+
+>[!TAB Eventos autenticados com identificador de pessoa]
+
+```json
+{
+  "_id": "test_id",
+  "identityMap": {
+      "ECID": [
+          {
+              "id": "62486695051193343923965772747993477018",
+              "primary": false
+          }
+      ],
+      "CRMID": [
+          {
+              "id": "John",
+              "primary": true
+          }
+      ]
+  },
+  "timestamp": "2024-09-24T15:02:32+00:00",
+  "web": {
+      "webPageDetails": {
+          "URL": "https://business.adobe.com/",
+          "name": "Adobe Business"
+      }
+  }
+}
+```
+
+>[!TAB Eventos autenticados sem identificador de pessoa]
+
+
+```json
+{
+    "_id": "test_id"
+    "identityMap": {
+        "ECID": [
+            {
+                "id": "62486695051193343923965772747993477018",
+                "primary": false
+            }
+        ]
+    },
+    "timestamp": "2024-09-24T15:02:32+00:00",
+    "web": {
+        "webPageDetails": {
+            "URL": "https://business.adobe.com/",
+            "name": "Adobe Business"
+        }
+    }
+}
+```
+
+
+>[!ENDTABS]
+
+Não envie uma string vazia como um valor de identidade ao enviar eventos usando eventos de experiência XDM. Se o valor de identidade do namespace com a prioridade mais alta for uma cadeia de caracteres vazia, o registro será ignorado no Perfil do cliente em tempo real. Isso se aplica a identityMap e a campos marcados como uma identidade.
 
 +++Selecione para exibir um exemplo de carga com uma cadeia de caracteres vazia
 
@@ -170,6 +229,12 @@ Para qualquer comentário, use a opção **[!UICONTROL comentários sobre o Beta
 Use o painel de identidade para obter insights sobre o estado dos gráficos de identidade, como a contagem geral de identidades e as tendências de contagem de gráficos, a contagem de identidades por namespace e a contagem de gráficos por tamanho do gráfico. Você também pode usar o painel de identidade para exibir tendências em gráficos com duas ou mais identidades, organizadas por namespace.
 
 Selecione as reticências (`...`) e selecione **[!UICONTROL Exibir mais]** para obter mais informações e validar se não há gráficos recolhidos.
+
+![O painel de identidade no espaço de trabalho da interface do usuário do Serviço de Identidade.](../images/implementation/identity_dashboard.png)
+
+Use a janela exibida para exibir informações sobre os gráficos recolhidos. Neste exemplo, email e telefone são marcados como namespace exclusivo, portanto, não há gráficos recolhidos na sandbox.
+
+![A janela pop-up para gráficos com várias identidades.](../images/implementation/graphs.png)
 
 ## Apêndice {#appendix}
 

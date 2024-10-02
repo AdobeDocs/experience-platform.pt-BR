@@ -1,11 +1,10 @@
 ---
 title: Guia de solução de problemas para regras de vinculação do gráfico de identidade
 description: Saiba como solucionar problemas comuns nas regras de vinculação do gráfico de identidade.
-badge: Beta
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
-source-git-commit: 6cdb622e76e953c42b58363c98268a7c46c98c99
+source-git-commit: cfe0181104f09bfd91b22d165c23154a15cd5344
 workflow-type: tm+mt
-source-wordcount: '3226'
+source-wordcount: '3247'
 ht-degree: 0%
 
 ---
@@ -14,7 +13,7 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->O recurso Regras de vinculação do gráfico de identidade está atualmente na versão beta. Entre em contato com a equipe de conta do Adobe para obter informações sobre os critérios de participação. O recurso e a documentação estão sujeitos a alterações.
+>As regras de vinculação do gráfico de identidade estão atualmente com Disponibilidade limitada. Entre em contato com a equipe de conta do Adobe para obter informações sobre como acessar o recurso em sandboxes de desenvolvimento.
 
 À medida que você testa e valida regras de vinculação de gráficos de identidade, pode ter alguns problemas relacionados à assimilação de dados e ao comportamento do gráfico. Leia este documento para saber como solucionar alguns problemas comuns que você pode encontrar ao trabalhar com regras de vinculação de gráficos de identidade.
 
@@ -167,7 +166,10 @@ Você também pode executar a seguinte consulta para verificar se a assimilaçã
   FROM dataset_name)) WHERE (col.id = '' or _testimsorg.identification.core.email = '') and key = 'Email' 
 ```
 
-Essas duas consultas presumem que uma identidade é enviada a partir do identityMap e outra identidade é enviada a partir de um descritor de identidade. **OBSERVAÇÃO**: em esquemas do Experience Data Model (XDM), o descritor de identidade é o campo marcado como uma identidade.
+Essas duas consultas presumem que:
+
+* Uma identidade é enviada a partir do identityMap e outra identidade é enviada a partir de um descritor de identidade. **OBSERVAÇÃO**: em esquemas do Experience Data Model (XDM), o descritor de identidade é o campo marcado como uma identidade.
+* O CRMID é enviado por identityMap. Se a CRMID for enviada como um campo, remova `key='Email'` da cláusula WHERE.
 
 ### Os fragmentos de evento de minha experiência são assimilados, mas têm a identidade principal &quot;errada&quot; no perfil
 
@@ -367,7 +369,7 @@ Os principais pontos a serem destacados são os seguintes:
    * Com esse recurso, a ECID nem sempre está associada a um perfil.
    * A recomendação é iniciar as jornadas com namespaces de pessoa (CRMID).
 
-## Prioridade de namespace
+## Prioridade do namespace
 
 Leia esta seção para obter respostas a perguntas frequentes sobre [prioridade de namespace](./namespace-priority.md).
 
@@ -398,7 +400,7 @@ De modo geral, testar uma sandbox de desenvolvimento deve imitar os casos de uso
 | Caso de teste | Etapas de teste | Resultado esperado |
 | --- | --- | --- |
 | Representação de entidade de pessoa precisa | <ul><li>Imitar navegação anônima</li><li>Imitar duas pessoas (John, Jane) fazendo logon usando o mesmo dispositivo</li></ul> | <ul><li>John e Jane devem estar associados a seus atributos e eventos autenticados.</li><li>O último usuário autenticado deve ser associado aos eventos de navegação anônimos.</li></ul> |
-| Segmentação | Criar quatro definições de segmento (**OBSERVAÇÃO**: cada par de definições de segmento deve ter uma avaliada usando lote e a outra transmissão.) <ul><li>Definição de segmento A: qualificação de segmento com base nos eventos autenticados de John.</li><li>Definição de segmento B: qualificação de segmento com base nos eventos autenticados da Jane.</li></ul> | Independentemente dos cenários de dispositivos compartilhados, John e Jane sempre devem se qualificar para seus respectivos segmentos. |
+| Segmentação | Criar quatro definições de segmento (**OBSERVAÇÃO**: cada par de definições de segmento deve ter uma avaliada usando lote e a outra transmissão.) <ul><li>Definição de segmento A: qualificação de segmento com base nos eventos e/ou atributos autenticados de John.</li><li>Definição de segmento B: qualificação de segmento com base nos eventos e/ou atributos autenticados da Jane.</li></ul> | Independentemente dos cenários de dispositivos compartilhados, John e Jane sempre devem se qualificar para seus respectivos segmentos. |
 | Qualificação de público-alvo/jornadas unitárias no Adobe Journey Optimizer | <ul><li>Crie uma jornada começando com uma atividade de qualificação de público (como a segmentação por transmissão criada acima).</li><li>Crie uma jornada começando com um evento unitário. Esse evento unitário deve ser um evento autenticado.</li><li>Você deve desativar a reentrada ao criar essas jornadas.</li></ul> | <ul><li>Independentemente dos cenários de dispositivos compartilhados, John e Jane devem acionar as respectivas jornadas nas quais devem entrar.</li><li>John e Jane não devem entrar novamente na jornada quando a ECID for transferida de volta para eles.</li></ul> |
 
 {style="table-layout:auto"}

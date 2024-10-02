@@ -1,12 +1,11 @@
 ---
 title: Interface de configurações de identidade
 description: Saiba como usar a interface do usuário de configurações de identidade.
-badge: Beta
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
-source-git-commit: 6cdb622e76e953c42b58363c98268a7c46c98c99
+source-git-commit: cfe0181104f09bfd91b22d165c23154a15cd5344
 workflow-type: tm+mt
-source-wordcount: '539'
-ht-degree: 0%
+source-wordcount: '536'
+ht-degree: 1%
 
 ---
 
@@ -14,7 +13,7 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->As regras de vinculação do gráfico de identidade estão na versão beta. Entre em contato com a equipe de conta do Adobe para obter informações sobre os critérios de participação. O recurso e a documentação estão sujeitos a alterações.
+>As regras de vinculação do gráfico de identidade estão atualmente com Disponibilidade limitada. Entre em contato com a equipe de conta do Adobe para obter informações sobre como acessar o recurso em sandboxes de desenvolvimento.
 
 As configurações de identidade são um recurso na interface do serviço de identidade da Adobe Experience Platform que pode ser usado para designar namespaces exclusivos e configurar a prioridade de namespace.
 
@@ -28,7 +27,7 @@ Leia os seguintes documentos antes de começar a trabalhar com configurações d
 * [Algoritmo de otimização de identidade](./identity-optimization-algorithm.md)
 * [Guia de implementação](./implementation-guide.md)
 * [Exemplos de configurações de gráfico](./example-configurations.md)
-* [Prioridade de namespace](./namespace-priority.md)
+* [Prioridade do namespace](./namespace-priority.md)
 * [Simulação de gráfico](./graph-simulation.md)
 
 ## Definir suas configurações de identidade
@@ -70,5 +69,5 @@ Para obter mais informações sobre regras de vinculação de gráficos de ident
 * [Guia de implementação](./implementation-guide.md)
 * [Exemplos de configurações de gráfico](./example-configurations.md)
 * [Solução de problemas e perguntas frequentes](./troubleshooting.md)
-* [Prioridade de namespace](./namespace-priority.md)
+* [Prioridade do namespace](./namespace-priority.md)
 * [Interface de simulação de gráfico](./graph-simulation.md)

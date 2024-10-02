@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guia da interface do construtor de segmentos
 description: O Construtor de segmentos na interface do usuário do Adobe Experience Platform fornece um espaço de trabalho avançado que permite a interação com elementos de dados de perfil. O espaço de trabalho fornece controles intuitivos para criar e editar regras, como arrastar e soltar blocos usados para representar propriedades de dados.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 6ceb28b2c9bab3b9df212764a43b202980ae239c
+source-git-commit: e74d04119593dddcaf6a5c710b685c606f5998d6
 workflow-type: tm+mt
-source-wordcount: '4784'
+source-wordcount: '4955'
 ht-degree: 7%
 
 ---
@@ -28,6 +28,19 @@ ht-degree: 7%
 >abstract="Os três tipos de campo que compõem uma definição de segmento são atributos, eventos e públicos-alvo. Os atributos permitem usar atributos de perfil que pertencem à classe de perfil individual XDM, os eventos permitem criar um público com base em ações ou eventos que ocorrem usando elementos de dados XDM ExperienceEvent e os públicos-alvo permitem usar públicos importados de fontes externas."
 
 Os blocos fundamentais das definições de segmento são atributos e eventos. Além disso, os atributos e eventos contidos nos públicos-alvo existentes podem ser usados como componentes para novas definições.
+
+>[!CONTEXTUALHELP]
+>id="platform_segments_createsegment_segmentbuilder_summarydata"
+>title="Dados de resumo"
+>abstract="Os dados de resumo só aparecem para atributos de perfil e <b>não</b> aparece para atributos de evento ou público-alvo.<br/><br/>Os dados de resumo dos atributos de perfil podem não aparecer nas seguintes circunstâncias: <ol><li>Alguns valores do atributo têm mais de 100 caracteres.</li><li>Há mais de 3000 valores únicos para o atributo.</li></ol>"
+
+>[!NOTE]
+>
+>Se você selecionar a bolha de informações de um atributo, poderá exibir a distribuição de valores, também conhecida como dados de resumo, do campo. Estes são **somente** disponíveis na guia de atributos e não estão disponíveis para uso na guia de eventos ou públicos.
+>
+>Os dados do resumo serão exibidos se o atributo atender aos seguintes critérios: Todos os valores do atributo têm 100 caracteres ou menos e há 3000 valores únicos ou menos para o atributo.
+>
+>No entanto, um atributo **não** terá dados de resumo se for um dado de várias entidades vinculado ao perfil por meio de uma relação. Por exemplo, se você tiver um esquema personalizado chamado `Vehicle`, as **propriedades** do esquema `Vehicle` **não** terão dados de resumo.
 
 Você pode ver estes blocos de construção na seção **[!UICONTROL Campos]** à esquerda do espaço de trabalho [!DNL Segment Builder]. **[!UICONTROL Campos]** contém uma guia para cada um dos blocos de construção principais: &quot;[!UICONTROL Atributos]&quot;, &quot;[!UICONTROL Eventos]&quot; e &quot;[!UICONTROL Públicos]&quot;.
 

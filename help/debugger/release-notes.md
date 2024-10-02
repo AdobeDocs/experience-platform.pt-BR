@@ -4,14 +4,20 @@ description: As notas de versão mais recentes do Adobe Experience Platform Debu
 keywords: debugger;extensão do experience platform debugger;chrome;extensão;notas de versão
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
-source-git-commit: 877e38154f6959d50bd0620290c2dce9decfc2b5
-workflow-type: ht
-source-wordcount: '781'
-ht-degree: 100%
+source-git-commit: e82cd0b24504f807f7511aae1f5a0c9d77a40f74
+workflow-type: tm+mt
+source-wordcount: '801'
+ht-degree: 98%
 
 ---
 
 # Notas de versão do Adobe Experience Platform Debugger
+
+## Versão 1.6.2 - quarta-feira, 1 de outubro de 2024
+
+### Correções e melhorias
+
+* Correção de um problema em que o Depurador era muito sensível a todos os erros da CSP
 
 ## Versão 1.6.1 - 25 de julho de 2024
 

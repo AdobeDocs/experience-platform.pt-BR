@@ -3,9 +3,9 @@ keywords: Experience Platform;início;tópicos populares;conexão de transmissã
 title: Criar uma conexão de transmissão da API HTTP usando a API do serviço de fluxo
 description: Este tutorial fornece etapas sobre como criar uma conexão de transmissão usando a fonte de API HTTP para dados brutos e XDM usando a API do serviço de fluxo
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: 84ffbb86e8973c2795d19122d3866e980949759d
+source-git-commit: 6ea5eaf28f260f974d168db2bed9bc95fcfa52af
 workflow-type: tm+mt
-source-wordcount: '1658'
+source-wordcount: '1646'
 ht-degree: 4%
 
 ---
@@ -470,9 +470,9 @@ POST /flows
 
 >[!BEGINTABS]
 
->[!TAB Sem transformações]
+>[!TAB XDM]
 
-A solicitação a seguir cria um fluxo de dados de transmissão para a API HTTP sem transformações de dados.
+A solicitação a seguir cria um fluxo de dados de transmissão para dados XDM.
 
 ```shell
 curl -X POST \
@@ -498,9 +498,9 @@ curl -X POST \
     }'
 ```
 
->[!TAB Com transformações]
+>[!TAB BRUTO]
 
-As solicitações a seguir criam um fluxo de dados de transmissão para a API HTTP com transformações de mapeamento aplicadas aos seus dados.
+As solicitações a seguir criam um fluxo de dados de transmissão para dados brutos.
 
 Ao criar um fluxo de dados com transformações, o parâmetro `name` não pode ser alterado. Este valor deve ser sempre configurado para `Mapping`.
 
@@ -559,7 +559,7 @@ Uma resposta bem-sucedida retorna o status HTTP 201 com detalhes do fluxo de dad
 }
 ```
 
-## Dados do Post a serem assimilados na plataforma {#ingest-data}
+## Dados da publicação a serem assimilados na plataforma {#ingest-data}
 
 >[!NOTE]
 >

@@ -2,9 +2,9 @@
 title: IDs de dispositivo próprio no SDK da Web
 description: Saiba como configurar IDs de dispositivo primário (FPIDs) no Adobe Experience Platform Web SDK.
 exl-id: c3b17175-8a57-43c9-b8a0-b874fecca952
-source-git-commit: 1cb38e3eaa83f2ad0e7dffef185d5edaf5e6c38c
+source-git-commit: 04ef39cbfc614369cb15f4d947474b491c34ef33
 workflow-type: tm+mt
-source-wordcount: '1904'
+source-wordcount: '2055'
 ht-degree: 0%
 
 ---
@@ -219,6 +219,16 @@ Nesse caso, a resposta do erro retornada pelo Edge Network seria semelhante ao s
     }
 }
 ```
+
+## Configurar um FPID no seu próprio domínio {#setting-fpid-domain}
+
+Além de definir o [!DNL FPID] no mapa de identidade, você pode definir o cookie [!DNL FPID] em seu próprio domínio, se tiver uma coleção de dados próprios [!DNL CNAME] configurada.
+
+Quando a coleta de dados primários é habilitada usando um [!DNL CNAME], todos os cookies do seu domínio serão enviados em solicitações feitas ao ponto de extremidade da coleta de dados.
+
+Todos os cookies não relevantes para os fins de coleta de dados do Adobe são descartados. Para [!DNL FPID], você pode especificar o nome do cookie [!DNL FPID] na configuração da sequência de dados. Ao fazer isso, o Edge Network lerá o conteúdo do cookie [!DNL FPID] em vez de procurar por [!DNL FPID] no mapa de identidade.
+
+Para usar essa funcionalidade, você precisa definir o [!DNL FPID] no nível superior do seu domínio, em vez de um subdomínio específico. Se você o definir em um subdomínio, o valor do cookie não será enviado para o Edge Network e a solução [!DNL FPID] não funcionará conforme o esperado.
 
 ## Hierarquia de ID {#id-hierarchy}
 

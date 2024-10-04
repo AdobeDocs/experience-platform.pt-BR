@@ -1,11 +1,11 @@
 ---
-title: Notas de versão da Adobe Experience Platform
+title: Notas de versão de abril de 2024 da Adobe Experience Platform
 description: As notas de versão de abril de 2024 da Adobe Experience Platform.
 exl-id: 86d72fd8-a464-4715-abc9-4177236e423c
-source-git-commit: 14dccb993b38ca352c6de3ed851bafe7c44ca631
+source-git-commit: d6e306294d0a119108e2de7ba03ebed4f633fba1
 workflow-type: tm+mt
-source-wordcount: '1895'
-ht-degree: 17%
+source-wordcount: '1897'
+ht-degree: 21%
 
 ---
 
@@ -83,7 +83,7 @@ Para obter informações mais gerais sobre destinos, consulte a [visão geral de
 
 ## Serviço de identidade {#identity-service}
 
-Use o Serviço de identidade da Adobe Experience Platform para criar uma visualização abrangente dos clientes e seus comportamentos, unindo identidades em dispositivos e sistemas, permitindo que você forneça experiências digitais pessoais e de impacto em tempo real.
+Use o Serviço de identidade da Adobe Experience Platform para criar uma visão abrangente dos clientes e seus comportamentos pela união de identidades entre dispositivos e sistemas, permitindo fornecer experiências digitais pessoais e impactantes em tempo real.
 
 **Recursos atualizados**
 
@@ -93,7 +93,7 @@ Use o Serviço de identidade da Adobe Experience Platform para criar uma visuali
 
 {style="table-layout:auto"}
 
-Para obter mais informações sobre o Serviço de identidade, leia a [Visão geral do Serviço de identidade](../../identity-service/home.md).
+Para obter mais informações sobre o Serviço de identidade, leia a [Visão geral do serviço de identidade](../../identity-service/home.md).
 
 ## Monitoramento {#monitoring}
 
@@ -160,7 +160,7 @@ Para obter mais informações sobre o [!DNL Segmentation Service], consulte a [V
 
 A Experience Platform fornece uma API RESTful e uma interface interativa que permite configurar conexões de origem para vários provedores de dados com facilidade. Essas conexões de origem permitem autenticar e conectar a sistemas de armazenamento externos e serviços de CRM, definir períodos para execuções de assimilação e gerenciar a taxa de transferência de assimilação de dados.
 
-Use fontes no Experience Platform para assimilar dados de um aplicativo Adobe ou de uma fonte de dados de terceiros.
+Use fontes na Experience Platform para assimilar dados de um aplicativo da Adobe ou de uma fonte de dados de terceiros.
 
 **Novas fontes**
 

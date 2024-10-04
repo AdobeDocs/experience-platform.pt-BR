@@ -1,11 +1,11 @@
 ---
-title: Notas de versão da Adobe Experience Platform
+title: Notas de versão da Adobe Experience Platform de outubro de 2023
 description: As notas de versão de outubro de 2023 da Adobe Experience Platform.
 exl-id: e9cf5299-8350-4b40-8f56-05e598846875
-source-git-commit: f2d0848952902d94b441566da677ef174518192e
+source-git-commit: d6e306294d0a119108e2de7ba03ebed4f633fba1
 workflow-type: tm+mt
-source-wordcount: '1052'
-ht-degree: 32%
+source-wordcount: '1054'
+ht-degree: 31%
 
 ---
 
@@ -98,7 +98,7 @@ O [!DNL Segmentation Service] permite segmentar dados relacionados a indivíduos
 
 | Recurso | Descrição |
 | ------- | ----------- |
-| Públicos-alvo da conta (disponibilidade geral limitada) | No Real-time Customer Data Platform B2B Edition, agora você pode usar a segmentação de conta para trazer a total facilidade e sofisticação da experiência de segmentação de marketing de públicos-alvo com base em pessoas para públicos-alvo com base em conta. Para obter mais informações sobre este recurso, leia a [visão geral dos públicos-alvo da conta](../../segmentation/ui/account-audiences.md). |
+| Públicos-alvo da conta (disponibilidade geral limitada) | No Real-time Customer Data Platform B2B edition, agora você pode usar a segmentação de conta para trazer a total facilidade e sofisticação da experiência de segmentação de marketing de públicos com base em pessoas para públicos com base em contas. Para obter mais informações sobre este recurso, leia a [visão geral dos públicos-alvo da conta](../../segmentation/ui/account-audiences.md). |
 
 Para saber mais sobre o Serviço de segmentação, leia a [Visão geral do serviço de segmentação](../../segmentation/home.md).
 

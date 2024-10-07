@@ -2,7 +2,7 @@
 title: Ver mais
 description: Saiba mais sobre as diferentes opções de exibição para seus dados analisados por SQL. No painel personalizado, é possível visualizar os resultados tabulados da análise ou baixar os dados processados no formato CSV.
 exl-id: f57d85cf-dbd2-415c-bf01-8faa49871377
-source-git-commit: ed1565fad1c539d69b85fb644d4bc16d4a262673
+source-git-commit: 1ef8208ccde2f44b6c5188bd5b9a57ff876da30f
 workflow-type: tm+mt
 source-wordcount: '551'
 ht-degree: 1%
@@ -41,7 +41,7 @@ Você pode classificar colunas selecionando o menu suspenso ao lado do nome da c
 
 >[!NOTE]
 >
->As opções [!UICONTROL Classificar em Ordem Crescente] e [!UICONTROL Classificar em Ordem Decrescente] só aparecerão para colunas que tenham sido configuradas com a [funcionalidade de classificação](../overview.md/#advanced-attributes).
+>As opções [!UICONTROL Classificar em Ordem Crescente] e [!UICONTROL Classificar em Ordem Decrescente] só aparecerão para colunas que tenham sido configuradas com a [funcionalidade de classificação](./overview.md#advanced-attributes).
 
 ![Uma lista suspensa de coluna da tabela mostrando as opções Classificar em Ordem Crescente e Classificar em Ordem Decrescente destacadas.](../../images/query-pro-mode/advanced-sort-dropdown.png)
 

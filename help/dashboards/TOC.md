@@ -5,10 +5,10 @@ breadcrumb-title: Manual de painéis
 user-guide-description: Saiba como visualizar dados na Experience Platform por meio de painéis personalizáveis.
 feature: Dashboards
 role: Developer,User
-source-git-commit: 18d768f296d1f7087d05208fdff317b2fd9770af
+source-git-commit: 06e319a6f7e2294a9c5daea0f41e89a09d93efd2
 workflow-type: tm+mt
-source-wordcount: '135'
-ht-degree: 36%
+source-wordcount: '134'
+ht-degree: 35%
 
 ---
 
@@ -21,7 +21,6 @@ ht-degree: 36%
 * [Painéis](user-defined-dashboards.md)
 * [Baixar painéis no PDF](download.md)
 * Distiller de dados {#data-distiller}
-   * [Visão geral](data-distiller/overview.md)
    * SQl Insights para relatórios de aplicativo estendido {#sql-insights}
       * [Visão geral](data-distiller/sql-insights/overview.md)
    * Consultar modo pro {#query-pro-mode}

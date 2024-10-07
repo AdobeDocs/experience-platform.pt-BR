@@ -2,7 +2,7 @@
 title: Insights SQL
 description: Saiba mais sobre os casos de uso, os recursos essenciais e as etapas necessárias para desenvolver um painel de insights SQL com o Data Distiller. Descubra como o recurso SQL Insights no Data Distiller pode melhorar a transparência e obter insights operacionais em diferentes dimensões, como perfis, públicos, campanhas, jornadas, direitos e consentimento.
 exl-id: f807d0fd-c8ec-42d4-96a0-5ffc5681943b
-source-git-commit: 3435ddd4b235c1c66cd29c75b779bcca607a5d4f
+source-git-commit: 4e78a7983fba492ded866a8f1fc6f98e20510b2b
 workflow-type: tm+mt
 source-wordcount: '941'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Crie modelos de dados de relatórios sob medida para extrair insights mais profundos, otimizar estratégias e adaptar a análise para atender às necessidades específicas dos negócios com os insights de SQL da Data Distiller. Use o recurso Insights SQL para melhorar a transparência e obter insights operacionais dos dados do Adobe Experience Platform em dimensões como perfis, públicos, campanhas, jornadas, direitos e consentimento. Esse recurso oferece uma solução versátil e adaptável para adaptar os modelos de dados de relatórios de sua organização às necessidades específicas de seus negócios.
 
-Para [visualizar seus Insights de SQL](../../../dashboards/data-distiller/overview.md), você pode usar o [modo profissional de consulta](../../../dashboards/data-distiller/query-pro-mode/overview.md) para realizar análises complexas com consultas SQL personalizadas e transformar seus dados em gráficos de fácil interpretação. Use o modo query pro para criar insights e visualizações sob medida em seus painéis e atender a públicos técnicos e não técnicos baixando seus insights como arquivos CSV.
+Para [visualizar seus Insights de SQL](../../../dashboards/data-distiller/sql-insights/overview.md), você pode usar o [modo profissional de consulta](../../../dashboards/data-distiller/query-pro-mode/overview.md) para realizar análises complexas com consultas SQL personalizadas e transformar seus dados em gráficos de fácil interpretação. Use o modo query pro para criar insights e visualizações sob medida em seus painéis e atender a públicos técnicos e não técnicos baixando seus insights como arquivos CSV.
 
 Este documento aborda os casos de uso, os recursos essenciais e as etapas necessárias para desenvolver um painel de insights SQL com o Data Distiller.
 

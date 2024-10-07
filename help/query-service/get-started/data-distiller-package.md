@@ -1,17 +1,16 @@
 ---
 title: Pacote do Data Distiller
 description: Uma introdução ao pacote do Data Distiller no Adobe Experience Platform.
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: 4e78a7983fba492ded866a8f1fc6f98e20510b2b
 workflow-type: tm+mt
-source-wordcount: '71'
+source-wordcount: '107'
 ht-degree: 0%
 
 ---
 
 # Pacote do Data Distiller
 
-O Data Distiller é uma oferta de pacote que inclui um subconjunto das funcionalidades do Adobe Experience Platform. Este pacote destina-se à preparação de dados após a assimilação para casos de uso de perfil do cliente em tempo real ou dados analíticos por consultas em lote executadas no Serviço de consulta. Consulte a [visão geral do Data Distiller](../data-distiller/overview.md) para obter mais detalhes sobre o pacote do Data Distiller.
+O Data Distiller é uma oferta de pacote que inclui um subconjunto das funcionalidades do Adobe Experience Platform. Este pacote destina-se à preparação de dados após a assimilação para casos de uso de perfil do cliente em tempo real ou dados analíticos por consultas em lote executadas no Serviço de consulta.
 
-<!-- Document is hidden temporarily
-See the [Data Distiller overview](../data-distiller/overview.md) for more details on the Data Distiller package, or the [Data Distiller license usage document](../data-distiller/license-usage.md) for information about your organization's Query Service license usage.
--->
+Consulte os guias sobre como [visualizar seus Insights de SQL](../../dashboards/data-distiller/sql-insights/overview.md) ou como usar o modo profissional de consulta para [realizar análises complexas com consultas SQL personalizadas e transformar seus dados em gráficos de fácil interpretação](../../dashboards/data-distiller/query-pro-mode/overview.md). Você pode usar o modo query pro para criar insights e visualizações sob medida em seus painéis personalizados.
+

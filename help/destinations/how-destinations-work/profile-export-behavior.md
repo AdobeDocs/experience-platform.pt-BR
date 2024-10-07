@@ -2,9 +2,9 @@
 title: Comportamento de exportação de perfil
 description: Saiba como o comportamento de exportação de perfil varia entre os diferentes padrões de integração compatíveis com destinos Experience Platform.
 exl-id: 2be62843-0644-41fa-a860-ccd65472562e
-source-git-commit: 223734e2998568f3b9b78933fa5adf740b521f5f
+source-git-commit: 6c2d10cffa30d9feb4d342014ea1b712094bb673
 workflow-type: tm+mt
-source-wordcount: '2930'
+source-wordcount: '2939'
 ht-degree: 0%
 
 ---
@@ -192,7 +192,7 @@ Na primeira exportação de arquivo após a configuração do fluxo de trabalho 
 
 >[!TIP]
 >
->Como lembrete, as alterações nos valores de atributo ou nos mapas de identidade de um perfil não qualificam um perfil para ser incluído em uma exportação de arquivo incremental.
+>Como lembrete, as alterações nos mapas de identidade de um perfil o qualificam para ser incluído em uma exportação de arquivo incremental. As alterações nos valores de atributo *não* qualificam-no para ser incluído em uma exportação de arquivo incremental.
 
 ## Próximas etapas {#next-steps}
 

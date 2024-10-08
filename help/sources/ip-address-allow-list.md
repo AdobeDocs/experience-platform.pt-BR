@@ -1,21 +1,27 @@
 ---
-keywords: Experience Platform;página inicial;tópicos populares;endereço ip;endereços ip;lista de permissões de endereço ip; lista de permissões
-description: Os endereços IP devem ser adicionados a uma lista de permissões antes de trabalhar com conectores de origem.
-solution: Experience Platform
-title: LISTA DE PERMISSÕES de endereço IP para conexões do Source
+description: Saiba mais sobre os endereços IP que você precisa adicionar à lista de permissões para usar fontes da Adobe Experience Platform com êxito.
+title: LISTA DE PERMISSÕES de endereço IP para origens
 exl-id: 40093c80-dbdb-4dc1-97bb-81a8200b731f
-source-git-commit: bcd74083169c40966d7de8ba7b79082931a6744d
+source-git-commit: 2c069df7552b5f03f3edbbf0bccd4ba7cbe397d3
 workflow-type: tm+mt
-source-wordcount: '152'
+source-wordcount: '210'
 ht-degree: 0%
 
 ---
 
 # LISTA DE PERMISSÕES de endereço IP
 
-Você pode definir controles de acesso à rede por meio do firewall de rede. Ao especificar o intervalo IP de origem apropriado, você pode permitir o tráfego para o serviço de transferência de dados. Os endereços IP a seguir devem ser adicionados a uma lista de permissões antes de trabalhar com conectores de origem. Falha ao adicionar endereços IP específicos da região à lista de permissões pode levar a erros ou ao não desempenho ao usar origens.
+Você pode definir controles de acesso à rede por meio do firewall de rede. Ao especificar o intervalo IP de origem apropriado, é possível permitir o fluxo de tráfego para o serviço de transferência de dados. Os endereços IP a seguir devem ser adicionados a uma lista de permissões antes de trabalhar com conectores de origem. Falha ao adicionar endereços IP específicos da região à lista de permissões pode levar a erros ou ao não desempenho ao usar origens.
 
-## VA7: América do Norte
+## LISTA DE PERMISSÕES de endereço IP para origens de lote {#batch}
+
+Você deve adicionar os seguintes endereços IP à lista de permissões para permitir o fluxo de tráfego do serviço de transferência de dados para fontes em lote.
+
+>[!BEGINTABS]
+
+>[!TAB VA7: América do Norte]
+
+### VA7: América do Norte
 
 - `20.42.2.0/23`
 - `20.42.4.0/26`
@@ -35,7 +41,9 @@ Você pode definir controles de acesso à rede por meio do firewall de rede. Ao 
 - `20.98.195.172/32`
 - `172.210.218.144/28`
 
-## NLD2: Europa
+>[!TAB NLD2: Europa]
+
+### NLD2: Europa
 
 - `13.69.67.192/28`
 - `13.69.107.112/28`
@@ -45,7 +53,9 @@ Você pode definir controles de acesso à rede por meio do firewall de rede. Ao 
 - `40.113.176.232/29`
 - `52.236.187.112/28`
 
-## AUS5: Austrália
+>[!TAB AUS5: Austrália]
+
+### AUS5: Austrália
 
 - `13.70.74.144/28`
 - `20.37.193.0/25`
@@ -56,7 +66,9 @@ Você pode definir controles de acesso à rede por meio do firewall de rede. Ao 
 - `40.79.163.80/28`
 - `40.79.171.160/28`
 
-## CAN2: Canadá
+>[!TAB CAN2: Canadá]
+
+### CAN2: Canadá
 
 - `13.71.175.80/28`
 - `20.38.147.224/28`
@@ -67,13 +79,31 @@ Você pode definir controles de acesso à rede por meio do firewall de rede. Ao 
 - `52.228.86.144/29`
 - `52.246.155.224/28`
 
+>[!TAB IND2: Índia]
+
+### IND2: Índia
+
+- `20.43.121.48/28`
+- `20.192.42.0/24`
+- `20.192.43.0/26`
+- `20.192.102.80/28`
+- `20.204.193.112/29`
+- `40.80.51.160/28`
+- `52.140.104.128/25`
+- `52.140.105.0/26`
+- `52.140.108.208/29`
+
+>[!ENDTABS]
+
 ## LISTA DE PERMISSÕES de endereço IP para fontes de transmissão {#streaming}
 
-Você deve adicionar os seguintes endereços IP à lista de permissões para permitir o tráfego do serviço de transferência de dados para fontes de streaming como [[!DNL Amazon Kinesis]](./connectors/cloud-storage/kinesis.md), [[!DNL Azure Event Hub]](./connectors/cloud-storage/eventhub.md), [[!DNL Google PubSub]](./connectors/cloud-storage/google-pubsub.md) e [[!DNL Snowflake Streaming]](./connectors/databases/snowflake-streaming.md).
+Você deve adicionar os seguintes endereços IP à sua lista de permissões para permitir o fluxo de tráfego do serviço de transferência de dados para fontes de streaming, como [[!DNL Amazon Kinesis]](./connectors/cloud-storage/kinesis.md), [[!DNL Azure Event Hub]](./connectors/cloud-storage/eventhub.md), [[!DNL Google PubSub]](./connectors/cloud-storage/google-pubsub.md) e [[!DNL Snowflake Streaming]](./connectors/databases/snowflake-streaming.md).
 
 >[!BEGINTABS]
 
->[!TAB VA7]
+>[!TAB VA7: América do Norte]
+
+### VA7: América do Norte
 
 - `52.254.106.240/28`
 - `52.254.107.144/28`
@@ -98,7 +128,9 @@ Você deve adicionar os seguintes endereços IP à lista de permissões para per
 - `52.254.107.80/28`
 - `20.186.185.227`
 
->[!TAB NLD2]
+>[!TAB NLD2: Europa]
+
+### NLD2: Europa
 
 - `51.138.17.0/28`
 - `51.138.16.176/28`
@@ -123,7 +155,9 @@ Você deve adicionar os seguintes endereços IP à lista de permissões para per
 - `51.138.16.192/28`
 - `51.138.12.100`
 
->[!TAB AUS5]
+>[!TAB AUS5: Austrália]
+
+### AUS5: Austrália
 
 - `20.40.188.194`
 - `20.53.206.128`
@@ -151,7 +185,9 @@ Você deve adicionar os seguintes endereços IP à lista de permissões para per
 - `20.227.35.177`
 - `20.43.104.48/28`
 
->[!TAB CAN2]
+>[!TAB CAN2: Canadá]
+
+### CAN2: Canadá
 
 - `20.200.70.240/28`
 - `20.200.94.116`
@@ -179,7 +215,9 @@ Você deve adicionar os seguintes endereços IP à lista de permissões para per
 - `20.200.70.192/28`
 - `20.200.71.144/28`
 
->[!TAB GBR9]
+>[!TAB GBR9: Reino Unido]
+
+### GBR9: Reino Unido
 
 - `20.254.2.128/28`
 - `20.26.131.71`
@@ -206,5 +244,37 @@ Você deve adicionar os seguintes endereços IP à lista de permissões para per
 - `20.254.3.32/28`
 - `20.26.128.247`
 - `20.26.64.112/28`
+
+>[!TAB IND2: Índia]
+
+### IND2: Índia
+
+- `4.224.74.0/28`
+- `20.244.79.80/28`
+- `20.244.79.128/28`
+- `4.188.4.154`
+- `4.213.223.207`
+- `20.244.77.16/28`
+- `4.224.74.80/28`
+- `4.224.74.64/28`
+- `4.224.74.96/28`
+- `4.188.4.99`
+- `20.244.79.0/28`
+- `20.244.79.224/28`
+- `20.244.77.208/28`
+- `4.188.4.11`
+- `20.244.79.208/28`
+- `20.244.78.0/28`
+- `20.244.79.144/28`
+- `20.244.74.112/28`
+- `20.244.79.192/28`
+- `20.244.79.48/28`
+- `20.244.79.16/28`
+- `20.244.78.208/28`
+- `4.213.40.145`
+- `4.188.4.167`
+- `20.244.77.160/28`
+- `20.244.77.0/28`
+- `4.188.4.138`
 
 >[!ENDTABS]

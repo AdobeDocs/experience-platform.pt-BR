@@ -1,13 +1,13 @@
 ---
 audience: user
 user-guide-title: Ajuda do Sandboxes na Adobe Experience Platform
-breadcrumb-title: Guia de Sandoxes
+breadcrumb-title: Guia de sandboxes
 user-guide-description: Descubra como as sandboxes funcionam e particionam uma instância da Platform em ambientes virtuais para desenvolvimento, teste e implantação de aplicativos.
 feature: Sandboxes
-source-git-commit: 06f9846c2b58071827a1c1d5360eb49ba6b1c34a
+source-git-commit: 868800de5dc6dde6654ff5256c91bddc2997b11b
 workflow-type: tm+mt
 source-wordcount: '74'
-ht-degree: 68%
+ht-degree: 66%
 
 ---
 

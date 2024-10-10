@@ -2,9 +2,9 @@
 title: (Beta) [!DNL Google Ad Manager 360] conexão
 description: O Google Ad Manager 360 é uma plataforma de veiculação de anúncios da Google que fornece aos editores os meios de gerenciar a exibição de anúncios em seus sites, por meio de vídeo e em aplicativos móveis.
 exl-id: 3251145a-3e4d-40aa-b120-d79c8c9c7cae
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 21b76877e8b36d6b844d9c0726a2347b1fab170e
 workflow-type: tm+mt
-source-wordcount: '1206'
+source-wordcount: '1217'
 ht-degree: 4%
 
 ---
@@ -35,6 +35,7 @@ O destino [!DNL Google Ad Manager 360] exporta arquivos [!DNL CSV] para o bucket
 
 Observe os detalhes a seguir que são específicos para destinos [!DNL Google Ad Manager 360].
 
+* No momento, este destino não oferece suporte ao recurso [exportar arquivos por demanda](../../ui/export-file-now.md).
 * Os públicos ativados são criados programaticamente na plataforma do Google e preenchidos no arquivo CSV.
 
 ## Identidades suportadas {#supported-identities}
@@ -79,7 +80,7 @@ A inclusão na lista de permissões é obrigatória antes de configurar seu prim
 >
 >A exceção a esta regra é para clientes [Audience Manager](https://docs.adobe.com/content/help/pt-BR/experience-cloud/user-guides/home.translate.html) existentes. Se você já tiver criado uma conexão com esse destino Google no Audience Manager, não será necessário passar pelo processo de inclusão na lista de permissões novamente e você poderá prosseguir para as próximas etapas.
 
-1. Siga as etapas descritas na [documentação do Google Ad Manager](https://support.google.com/admanager/answer/3289669?hl=en) para adicionar o Adobe como uma Plataforma de Gerenciamento de Dados (DMP) vinculada.
+1. Siga as etapas descritas na [documentação do Google Ad Manager](https://support.google.com/admanager/answer/3289669?hl=en) para adicionar o Adobe como uma Plataforma de Gerenciamento de Dados vinculada (DMP).
 2. Na interface [!DNL Google Ad Manager], vá para **[!UICONTROL Admin]** > **[!UICONTROL Configurações Globais]** > **[!UICONTROL Configurações de Rede]** e habilite o controle deslizante **[!UICONTROL Acesso à API]**.
 
 

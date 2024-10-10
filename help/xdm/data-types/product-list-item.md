@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Tipo de Dados do Item de Lista de Produtos
 description: Saiba mais sobre o tipo de dados XDM do item de lista de produtos.
 exl-id: 056fdb5b-6782-4e29-9d62-90b270c05795
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: ba6c6eb2c6b0fc1dfc4e7440fd16a85bc7b46457
 workflow-type: tm+mt
-source-wordcount: '342'
-ht-degree: 18%
+source-wordcount: '338'
+ht-degree: 20%
 
 ---
 
@@ -28,7 +28,7 @@ Os valores capturados nesse tipo de dados podem diferir do registro do produto. 
 | `discountAmount` | [!UICONTROL Duplo] | Se o produto for descontado, isso representa a diferença entre o preço normal e o preço especial do produto. |
 | `name` | [!UICONTROL String] | O nome de exibição do produto conforme apresentado ao usuário para esta visualização do produto. |
 | `priceTotal` | [!UICONTROL Duplo] | O preço total do item de linha do produto. |
-| `product` | [!UICONTROL Cadeia de caracteres] (URI) | O URI `$id` do esquema XDM que captura o próprio produto. |
+| `product` | [!UICONTROL Cadeia de caracteres] (URI) | O identificador XDM do próprio produto. |
 | `productAddMethod` | [!UICONTROL String] | O método usado para adicionar um item de produto à lista pelo visitante. |
 | `productImageUrl` | [!UICONTROL String] | Um URL para a imagem principal do produto. |
 | `quantity` | [!UICONTROL Inteiro] | O número de unidades que o cliente indicou que precisa do produto. |

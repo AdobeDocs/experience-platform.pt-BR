@@ -1,9 +1,9 @@
 ---
 title: Criar públicos-alvo usando SQL
 description: Saiba como usar a extensão de público-alvo SQL no Data Distiller do Adobe Experience Platform para criar, gerenciar e publicar públicos-alvo usando comandos SQL. Este guia aborda todos os aspectos do ciclo de vida do público-alvo, incluindo a criação, atualização e exclusão de perfis e o uso de definições de público-alvo orientadas por dados para direcionar destinos baseados em arquivos.
-source-git-commit: fbfd232c4e101f29ae01328c33763786a0e4a8cb
+source-git-commit: 8b9a46d9dd35a60fc3f3087d5fd3c4dad395b1aa
 workflow-type: tm+mt
-source-wordcount: '1267'
+source-wordcount: '1280'
 ht-degree: 1%
 
 ---
@@ -137,41 +137,103 @@ Esta seção aborda as perguntas frequentes sobre como criar e gerenciar públic
 
 +++Selecione para revelar perguntas e respostas
 
+**Perguntas**:
+
 - A criação de públicos-alvo é compatível somente com conjuntos de dados simples?
-- Conjuntos de dados aninhados também são compatíveis, mas somente atributos simples estão disponíveis no público-alvo.
+
++++Resposta
+
+Conjuntos de dados aninhados também são compatíveis, mas somente atributos simples estão disponíveis no público-alvo.
+
++++
 
 - A criação do público-alvo resulta em um único conjunto de dados ou em vários conjuntos de dados, ou ela varia de acordo com a configuração?
-- Há um mapeamento um para um entre um público-alvo e um conjunto de dados.
+
++++Resposta
+
+Há um mapeamento um para um entre um público-alvo e um conjunto de dados.
+
++++
 
 - O conjunto de dados criado durante a criação de público-alvo está marcado para o Perfil?
-- Não, o conjunto de dados criado durante a criação do público-alvo não está marcado para o Perfil.
+
++++Resposta
+
+Não, o conjunto de dados criado durante a criação do público-alvo não está marcado para o Perfil.
+
++++
 
 - O conjunto de dados foi criado no data lake?
-- Sim, o conjunto de dados é criado no data lake.
+
++++Resposta
+
+Sim, o conjunto de dados é criado no data lake.
+
++++
 
 - Os atributos no público-alvo estão restritos a serem usados apenas em destinos baseados em arquivos em lote de empresas? (Sim ou Não)
-- Sim, os atributos no público-alvo são restritos a serem usados somente em destinos baseados em arquivos em lote de empresas.
+
++++Resposta
+
+Sim, os atributos no público-alvo são restritos a serem usados somente em destinos baseados em arquivos em lote de empresas.
+
++++
 
 - Posso criar um público-alvo que use um público-alvo do Data Distiller?
-- Sim, você pode criar um público-alvo que use um público-alvo do Data Distiller.
+
++++Resposta
+
+Sim, você pode criar um público-alvo que use um público-alvo do Data Distiller.
+
++++
 
 - Esses públicos-alvo aparecem no Adobe Journey Optimizer? Caso contrário, o que acontece quando crio um novo público-alvo no construtor de regras que inclui todos os membros desse público-alvo?
-- Os públicos-alvo do destilador de dados não estão disponíveis no Adobe Journey Optimizer no momento. Você deve criar um novo público-alvo no construtor de regras do Adobe Journey Optimizer para que ele fique disponível no Adobe Journey Optimizer.
+
++++Resposta
+
+Os públicos-alvo do destilador de dados não estão disponíveis no Adobe Journey Optimizer no momento. Você deve criar um novo público-alvo no construtor de regras do Adobe Journey Optimizer para que ele fique disponível no Adobe Journey Optimizer.
+
++++
 
 - Como devo criar dois públicos-alvo do Data Distiller com programações diferentes? Quantos conjuntos de dados são criados e estão marcados para Perfil?
-- Dois conjuntos de dados serão criados, pois cada público tem um conjunto de dados subjacente. No entanto, esses conjuntos de dados não estão marcados para Perfil. Os dois conjuntos de dados são gerenciados em suas próprias programações individuais.
+
++++Resposta
+
+Dois conjuntos de dados serão criados, pois cada público tem um conjunto de dados subjacente. No entanto, esses conjuntos de dados não estão marcados para Perfil. Os dois conjuntos de dados são gerenciados em suas próprias programações individuais.
+
++++
 
 - Como excluir um público-alvo?
-- Para excluir um público-alvo, você pode usar o [`DROP AUDIENCE` comando](#delete-audience) na interface de linha de comando ou usar as [ações rápidas do espaço de trabalho de públicos-alvo](../../segmentation/ui/audience-portal.md#quick-actions). OBSERVAÇÃO: públicos-alvo usados em destinos downstream ou que são dependentes em outros públicos-alvo não podem ser excluídos.
+
++++Resposta
+
+Para excluir um público-alvo, você pode usar o [`DROP AUDIENCE` comando](#delete-audience) na interface de linha de comando ou usar as [ações rápidas do espaço de trabalho de públicos-alvo](../../segmentation/ui/audience-portal.md#quick-actions). OBSERVAÇÃO: públicos-alvo usados em destinos downstream ou que são dependentes em outros públicos-alvo não podem ser excluídos.
+
++++
 
 - Quando publico um público-alvo no Perfil, quando ele fica disponível na interface do construtor de segmentos e quando ele fica disponível nos Destinos?
-- Quando a exportação do instantâneo do perfil for concluída, os perfis poderão ser vistos no público-alvo.
+
++++Resposta
+
+Quando a exportação do instantâneo do perfil for concluída, os perfis poderão ser vistos no público-alvo.
+
++++
 
 - Os públicos-alvo da Data Distiller são excluídos a cada 30 dias, já que são públicos-alvo externos?
-- Sim, os públicos-alvo da Data Distiller são excluídos a cada 30 dias, pois são públicos-alvo externos.
+
++++Resposta
+
+Sim, os públicos-alvo da Data Distiller são excluídos a cada 30 dias, pois são públicos-alvo externos.
+
++++
 
 - Os públicos-alvo da Data Distiller aparecem no inventário de públicos-alvo?
-- Sim, os Públicos-alvo da Data Distiller aparecem no inventário de Públicos-alvo com o nome de origem &quot;Data Distiller&quot;.
+
++++Resposta
+
+Sim, os Públicos-alvo da Data Distiller aparecem no inventário de Públicos-alvo com o nome de origem &quot;Data Distiller&quot;.
+
++++
 
 +++
 

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Definir campos XDM na interface do
 description: Saiba como definir campos XDM na interface do usuário do Experience Platform.
 exl-id: 2adb03d4-581b-420e-81f8-e251cf3d9fb9
-source-git-commit: 89519918aa830dc09365fa80449099229dc475d5
+source-git-commit: 807ce0b0304fd73a455f228529d75cfc68769bf5
 workflow-type: tm+mt
-source-wordcount: '1734'
+source-wordcount: '1607'
 ht-degree: 1%
 
 ---
@@ -89,7 +89,6 @@ Ao definir um novo campo, opções de configuração adicionais podem aparecer n
 | Propriedade do campo | Tipos compatíveis | Descrição |
 | --- | --- | --- |
 | [!UICONTROL Tipo de valor do mapa] | [!UICONTROL Mapa] | A propriedade [!UICONTROL Tipo de valor do mapa] só aparecerá na interface do usuário se você selecionar o Valor do mapa nas opções suspensas [!UICONTROL Tipo]. Você pode selecionar entre os tipos de valor String e Integer para o Mapa.<br>![O Editor de esquemas com os campos de tipo de valor Tipo e Mapa realçados.](../../images/ui/fields/overview/map-type.png "O Editor de esquemas com os campos de tipo de valor Tipo e Mapa realçados."){width="100" zoomable="yes"}<br>Observação: todos os tipos de dados de mapa criados por meio da API que não são do tipo Cadeia de Caracteres ou Integer são exibidos como um tipo de dados &#39;[!UICONTROL Complexo]&#39;. Você não pode criar tipos de dados &#39;[!UICONTROL Complexos]&#39; por meio da interface do usuário. |
-| [!UICONTROL Valor padrão] | [!UICONTROL Cadeia], [!UICONTROL Duplo], [!UICONTROL Longo], [!UICONTROL Inteiro], [!UICONTROL Curto], [!UICONTROL Byte], [!UICONTROL Booleano] | Um valor padrão atribuído a esse campo se nenhum outro valor for fornecido durante a assimilação. Esse valor deve estar em conformidade com o tipo selecionado no campo.<br><br>Os valores padrão não são salvos no conjunto de dados no momento da assimilação, pois podem mudar com o tempo. Os valores padrão definidos no esquema são inferidos pelos serviços e aplicativos downstream da Platform quando leem os dados do conjunto de dados. Por exemplo, ao consultar os dados usando o Serviço de consulta, se o atributo tiver um valor NULL, mas o padrão estiver definido como `5` no nível do esquema, espera-se que o Serviço de consulta retorne `5` em vez de NULL. No momento, esse comportamento não é uniforme em todos os serviços da AEP. |
 | [!UICONTROL Padrão] | [!UICONTROL String] | Uma [expressão regular](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) que o valor deste campo deve estar em conformidade para ser aceita durante a assimilação. |
 | [!UICONTROL Formato] | [!UICONTROL String] | Selecione em uma lista de formatos predefinidos para cadeias de caracteres às quais o valor deve estar em conformidade. Os formatos disponíveis são: <ul><li>[[!UICONTROL data-hora]](https://tools.ietf.org/html/rfc3339)</li><li>[[!UICONTROL email]](https://tools.ietf.org/html/rfc2822)</li><li>[[!UICONTROL nome do host]](https://tools.ietf.org/html/rfc1123#page-13)</li><li>[[!UICONTROL ipv4]](https://tools.ietf.org/html/rfc791)</li><li>[[!UICONTROL ipv6]](https://tools.ietf.org/html/rfc2460)</li><li>[[!UICONTROL uri]](https://tools.ietf.org/html/rfc3986)</li><li>[[!UICONTROL uri-reference]](https://tools.ietf.org/html/rfc3986#section-4.1)</li><li>[[!UICONTROL modelo-url]](https://tools.ietf.org/html/rfc6570)</li><li>[[!UICONTROL ponteiro-json]](https://tools.ietf.org/html/rfc6901)</li></ul> |
 | [!UICONTROL Comprimento mínimo] | [!UICONTROL String] | O número mínimo de caracteres que a cadeia de caracteres deve conter para que o valor seja aceito durante a assimilação. |

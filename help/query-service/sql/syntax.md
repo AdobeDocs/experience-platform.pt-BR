@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Sintaxe SQL no Serviço de consulta
 description: Este documento detalha e explica a sintaxe SQL suportada pelo Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 65eeeb1df1d512c4cd6c67892905a63cc1cc4fc5
+source-git-commit: 654a8b6a3f961514ef96eaec879697cde36f8b1b
 workflow-type: tm+mt
-source-wordcount: '4291'
+source-wordcount: '4265'
 ht-degree: 2%
 
 ---
@@ -577,7 +577,7 @@ A tabela a seguir demonstra a diferença nos resultados que a configuração `au
 
 ### Resolver instantâneo de fallback em caso de falha {#resolve-fallback-snapshot-on-failure}
 
-A opção `resolve_fallback_snapshot_on_failure` é usada para resolver o problema de uma ID de instantâneo expirada. Os metadados de snapshot expiram após dois dias e um snapshot expirado pode invalidar a lógica de um script. Isso pode ser um problema ao usar blocos anônimos.
+A opção `resolve_fallback_snapshot_on_failure` é usada para resolver o problema de uma ID de instantâneo expirada.
 
 Defina a opção `resolve_fallback_snapshot_on_failure` como true para substituir um instantâneo por uma ID de instantâneo anterior.
 

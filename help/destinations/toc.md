@@ -5,10 +5,10 @@ user-guide-description: Ative seus dados conhecidos e desconhecidos para campanh
 description: Este documento lista o índice dos destinos do Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: 5e2e8996ee48d7816d78fc9cacf6ba102f7ae66f
+source-git-commit: 8ccdf80885a04280c4a92e1cb3d18e45e2d9d9e5
 workflow-type: tm+mt
-source-wordcount: '1253'
-ht-degree: 6%
+source-wordcount: '1250'
+ht-degree: 5%
 
 ---
 
@@ -48,7 +48,7 @@ ht-degree: 6%
       * [Exportar arquivos sob demanda para destinos em lote usando a interface do Experience Platform](./ui/export-file-now.md)
       * [Exportar conjuntos de dados usando a interface do usuário do Experience Platform](./ui/export-datasets.md)
       * [(Beta) Usar o atributo XDM do último horário de qualificação nos novos destinos de armazenamento na nuvem beta](./ui/activate-last-qualification-time.md)
-      * [(Beta) Usar campos calculados para exportar matrizes em arquivos de esquema simples](/help/destinations/ui/export-arrays-calculated-fields.md)
+      * [Usar campos calculados para exportar matrizes como cadeias de caracteres](/help/destinations/ui/export-arrays-calculated-fields.md)
    * [Exibir detalhes do destino](./ui/destination-details-page.md)
    * [Atualizar contas de destino](./ui/update-accounts.md)
    * [Excluir contas de destino](./ui/delete-destination-account.md)

@@ -1,30 +1,29 @@
 ---
-title: (Beta) Usar campos calculados para exportar matrizes em arquivos de esquema simples
+title: Usar campos calculados para exportar matrizes como cadeias de caracteres
 type: Tutorial
-description: Saiba como usar campos calculados para exportar matrizes em arquivos de esquema simples do Real-Time CDP para destinos de armazenamento na nuvem.
-badge: Beta
+description: Saiba como usar campos calculados para exportar matrizes do Real-Time CDP para destinos de armazenamento em nuvem como cadeias de caracteres.
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: 787aaef26fab5ca3acff8303f928efa299cafa93
+source-git-commit: 6fec0432f71e58d0e17ac75121fb1028644016e1
 workflow-type: tm+mt
-source-wordcount: '1477'
-ht-degree: 5%
+source-wordcount: '1513'
+ht-degree: 0%
 
 ---
 
-# (Beta) Usar campos calculados para exportar matrizes em arquivos de esquema simples {#use-calculated-fields-to-export-arrays-in-flat-schema-files}
+# Usar campos calculados para exportar matrizes como cadeias de caracteres{#use-calculated-fields-to-export-arrays-as-strings}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_flat_files"
->title="(Beta) Suporte a matrizes de exportação"
->abstract="Use o controle **Adicionar campo calculado** para exportar matrizes simples de valores int, string ou booleanos da Experience Platform para o destino desejado no armazenamento em nuvem. Algumas limitações se aplicam. Consulte a documentação para ver exemplos abrangentes e as funções compatíveis."
+>title="Suporte a arrays de exportação"
+>abstract="<p>Use o controle **Adicionar campo calculado** para exportar matrizes de valores int, de cadeia de caracteres, booleano e de objetos do Experience Platform para o destino de armazenamento na nuvem desejado.</p><p> Matrizes devem ser exportadas como cadeias de caracteres usando a função `array_to_string`. Consulte a documentação para obter exemplos extensos e obter mais funções compatíveis.</p>"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html?lang=pt-BR#examples" text="Exemplos"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html?lang=pt-BR#known-limitations" text="Limitações conhecidas"
 
 >[!AVAILABILITY]
 >
->* A funcionalidade para exportar matrizes por meio de campos calculados está atualmente no Beta. A documentação e a funcionalidade estão sujeitas a alterações.
+>* A funcionalidade para exportar matrizes por meio de campos calculados está geralmente disponível.
 
-Saiba como exportar matrizes por meio de campos calculados do Real-Time CDP em arquivos de esquema simples para [destinos de armazenamento na nuvem](/help/destinations/catalog/cloud-storage/overview.md). Leia este documento para entender os casos de uso ativados por essa funcionalidade.
+Saiba como exportar matrizes por meio de campos calculados do Real-Time CDP para [destinos de armazenamento na nuvem](/help/destinations/catalog/cloud-storage/overview.md) como cadeias de caracteres. Leia este documento para entender os casos de uso ativados por essa funcionalidade.
 
 Obtenha informações abrangentes sobre campos calculados - o que são e por que são importantes. Leia as páginas vinculadas abaixo para obter uma introdução aos campos calculados no Preparo de dados e mais informações sobre todas as funções disponíveis:
 
@@ -43,14 +42,34 @@ Obtenha informações abrangentes sobre campos calculados - o que são e por que
 
 No Experience Platform, você pode usar [esquemas XDM](/help/xdm/home.md) para gerenciar diferentes tipos de campos. Anteriormente, era possível exportar campos simples de tipo de par de valor-chave, como cadeias de caracteres de Experience Platform, para os destinos desejados. Um exemplo de um campo com suporte para exportação anterior é `personalEmail.address`:`johndoe@acme.org`.
 
-Outros tipos de campo no Experience Platform incluem campos de matriz. Leia mais sobre [gerenciamento de campos de matriz na interface do usuário do Experience Platform](/help/xdm/ui/fields/array.md). Além dos tipos de campo suportados anteriormente, agora é possível exportar objetos de matriz como: `organizations:[marketing, sales, engineering]`. Veja mais abaixo [exemplos extensos](#examples) de como você pode usar várias funções para acessar elementos de matrizes, unir elementos de matriz em uma cadeia de caracteres e muito mais.
+Outros tipos de campo no Experience Platform incluem campos de matriz. Leia mais sobre [gerenciamento de campos de matriz na interface do usuário do Experience Platform](/help/xdm/ui/fields/array.md). Além dos tipos de campo suportados anteriormente, agora é possível exportar objetos de matriz, como o exemplo abaixo, concatenados em uma cadeia de caracteres usando a função `array_to_string`.
+
+```
+organizations = [{
+  id: 123,
+  orgName: "Acme Inc",
+  founded: 1990,
+  latestInteraction: "2024-02-16"
+}, {
+  id: 456,
+  orgName: "Superstar Inc",
+  founded: 2004,
+  latestInteraction: "2023-08-25"
+}, {
+  id: 789,
+  orgName: 'Energy Corp',
+  founded: 2021,
+  latestInteraction: "2024-09-08"
+}]
+```
+
+Veja mais abaixo [exemplos abrangentes](#examples) de como você pode usar várias funções para acessar elementos de matrizes, transformar e filtrar matrizes, unir elementos de matriz em uma cadeia de caracteres e muito mais.
 
 ## Limitações conhecidas {#known-limitations}
 
-Observe as seguintes limitações conhecidas da versão beta dessa funcionalidade:
+Observe as seguintes limitações conhecidas que se aplicam atualmente a essa funcionalidade:
 
-* No momento, não há suporte para a exportação para arquivos JSON ou Parquet com esquemas hierárquicos. Você pode exportar matrizes somente para arquivos CSV de esquema simples, JSON e Parquet.
-* No momento, *você só pode exportar matrizes simples (ou matrizes de valores primitivos) para destinos de armazenamento na nuvem*. Isso significa que você pode exportar objetos de matriz que incluem valores de string, int ou booleanos. Não é possível exportar mapas ou matrizes de mapas ou objetos. A janela modal de campos calculados exibe apenas as matrizes que você pode exportar.
+* Exportar para arquivos JSON ou Parquet *com esquemas hierárquicos* não tem suporte no momento. Você pode exportar matrizes para arquivos CSV, JSON e Parquet *somente como cadeias de caracteres*, usando a função `array_to_string`.
 
 ## Pré-requisitos {#prerequisites}
 
@@ -58,25 +77,21 @@ Observe as seguintes limitações conhecidas da versão beta dessa funcionalidad
 
 ## Como exportar campos calculados {#how-to-export-calculated-fields}
 
-Na etapa de mapeamento do fluxo de trabalho de ativação para destinos de armazenamento na nuvem, selecione **[!UICONTROL (Beta) Adicionar campo calculado]**.
+Na etapa de mapeamento do fluxo de trabalho de ativação para destinos de armazenamento na nuvem, selecione **[!UICONTROL Adicionar campo calculado]**.
 
 ![Adicionar campo calculado realçado na etapa de mapeamento do fluxo de trabalho de ativação em lote.](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields.png)
 
-Essa ação abre uma janela modal onde é possível selecionar atributos que você pode usar para exportar atributos do Experience Platform.
-
->[!IMPORTANT]
->
->Somente alguns campos do esquema XDM estão disponíveis na exibição **[!UICONTROL Campo]**. Você pode ver valores de string e matrizes de string, int e valores booleanos. Por exemplo, a matriz `segmentMembership` não é exibida, pois inclui outros valores de matriz.
+Isso abre uma janela modal onde você pode selecionar funções e campos para exportar atributos do Experience Platform.
 
 ![Janela modal da funcionalidade de campo calculado com nenhuma função selecionada ainda.](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields-2.png)
 
-Por exemplo, use a função `join` no campo `loyaltyID`, como mostrado abaixo, para exportar uma matriz de IDs de fidelidade como uma cadeia de caracteres concatenada com um sublinhado em um arquivo CSV. Exibir [mais informações sobre este e outros exemplos mais abaixo](#join-function-export-arrays).
+Por exemplo, use a função `array_to_string` no campo `organizations`, como mostrado abaixo, para exportar a matriz de organizações como uma cadeia de caracteres em um arquivo CSV. Exibir [mais informações sobre este e outros exemplos mais abaixo](#array-to-string-function-export-arrays).
 
-![Janela modal da funcionalidade de campo calculado com a função de associação selecionada.](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields-3.png)
+![Janela modal da funcionalidade de campo calculado com a função de matriz para cadeia de caracteres selecionada.](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields-3.png)
 
 Selecione **[!UICONTROL Salvar]** para manter o campo calculado e retornar à etapa de mapeamento.
 
-![Janela modal da funcionalidade de campo calculado com a função de junção selecionada e o controle Salvar realçado.](/help/destinations/assets/ui/export-arrays-calculated-fields/save-calculated-field.png)
+![Janela modal da funcionalidade de campo calculado com a função de matriz para cadeia de caracteres selecionada e o controle Salvar realçado.](/help/destinations/assets/ui/export-arrays-calculated-fields/save-calculated-field.png)
 
 De volta à etapa de mapeamento do fluxo de trabalho, preencha o **[!UICONTROL campo de Destino]** com um valor do cabeçalho de coluna desejado para este campo nos arquivos exportados.
 
@@ -88,13 +103,16 @@ Quando estiver pronto, selecione **[!UICONTROL Avançar]** para prosseguir para 
 
 ![Etapa de mapeamento com o campo de destino realçado e um valor de destino preenchido.](/help/destinations/assets/ui/export-arrays-calculated-fields/select-next-to-proceed.png)
 
-## Funções compatíveis {#supported-functions}
+## Exemplos de funções suportadas para exportar matrizes {#supported-functions}
 
 Todas as [funções de Preparo de Dados](/help/data-prep/functions.md) documentadas têm suporte ao ativar dados para destinos baseados em arquivo.
 
-No entanto, observe que descrições abrangentes de casos de uso e informações de saída de exemplo são fornecidas atualmente apenas para as seguintes funções na versão beta de campos calculados e suporte de matriz para destinos:
+As funções abaixo, específicas para lidar com exportações de arrays, estão documentadas junto com exemplos.
 
-* `join`
+* `array_to_string`
+* `flattenArray`
+* `filterArray`
+* `transformArray`
 * `coalesce`
 * `size_of`
 * `iif`
@@ -103,31 +121,66 @@ No entanto, observe que descrições abrangentes de casos de uso e informações
 * `to_array`
 * `first`
 * `last`
-* `sha256`
-* `md5`
 
 ## Exemplos de funções usadas para exportar matrizes {#examples}
 
 Consulte exemplos e informações adicionais nas seções abaixo para algumas das funções listadas acima. Para o restante das funções listadas, consulte a [documentação de funções gerais na seção Preparo de dados](/help/data-prep/functions.md).
 
-### Função `join` para exportar matrizes {#join-function-export-arrays}
+### Função `array_to_string` para exportar matrizes {#array-to-string-function-export-arrays}
 
-Use a função `join` para concatenar os elementos de uma matriz em uma sequência, usando um separador desejado, como `_` ou `|`.
+Use a função `array_to_string` para concatenar os elementos de uma matriz em uma sequência, usando um separador desejado, como `_` ou `|`.
 
-Por exemplo, você pode combinar os seguintes campos XDM abaixo, como mostrado na captura de tela de mapeamento, usando uma sintaxe `join('_',loyalty.loyaltyID)`:
+Por exemplo, você pode combinar os seguintes campos XDM abaixo, como mostrado na captura de tela de mapeamento, usando uma sintaxe `array_to_string('_',organizations)`:
 
-* Matriz `"organizations": ["Marketing","Sales,"Finance"]`
+* Matriz `organizations`
 * Sequência de caracteres `person.name.firstName`
 * Sequência de caracteres `person.name.lastName`
 * Sequência de caracteres `personalEmail.address`
 
-![Exemplo de mapeamento incluindo a função de junção.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-join-function.png)
+![Exemplo de mapeamento incluindo a função array_to_string.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-array-to-string-function.png)
 
-Nesse caso, o arquivo de saída é semelhante ao mostrado abaixo. Observe como os três elementos da matriz são concatenados em uma única string usando o caractere `_`.
+Nesse caso, o arquivo de saída é semelhante ao mostrado abaixo. Observe como os elementos da matriz são concatenados em uma única string usando o caractere `_`.
 
 ```
-`First_Name,Last_Name,Personal_Email,Organization
-John,Doe,johndoe@acme.org, "Marketing_Sales_Finance"
+First_Name,Last_Name,Personal_Email,Organization
+John,Doe,johndoe@acme.org, "{'id':123,'orgName':'Acme Inc','founded':1990,'latestInteraction':1708041600000}_{'id':456,'orgName':'Superstar Inc','founded':2004,'latestInteraction':1692921600000}_{'id':789,'orgName':'Energy Corp','founded':2021,'latestInteraction':1725753600000}"
+```
+
+### Função `flattenArray` para exportar matrizes niveladas
+
+Use a função `flattenArray` para nivelar uma matriz multidimensional exportada. É possível combinar essa função com a função `array_to_string` descrita mais acima.
+
+Continuando com o objeto de matriz `organizations` acima, você pode gravar uma função como `array_to_string('_', flattenArray(organizations))`. Observe que a função `array_to_string` nivela a matriz de entrada por padrão em uma cadeia de caracteres.
+
+A saída resultante é a mesma da função `array_to_string` descrita acima.
+
+
+### Função `filterArray` para exportar matrizes filtradas
+
+Use a função `filterArray` para filtrar os elementos de uma matriz exportada. É possível combinar essa função com a função `array_to_string` descrita mais acima.
+
+Continuando com o objeto de matriz `organizations` acima, você pode gravar uma função como `array_to_string('_', filterArray(organizations, org -> org.founded > 2021))`, retornando as organizações com um valor para `founded` no ano de 2021 ou mais recente.
+
+![Exemplo da função filterArray.](/help/destinations/assets/ui/export-arrays-calculated-fields/filter-array-function.png)
+
+Nesse caso, o arquivo de saída é semelhante ao mostrado abaixo. Observe como os dois elementos da matriz que atendem ao critério são concatenados em uma única string usando o caractere `_`.
+
+```
+John,Doe,johndoe@acme.org, "{'id':123,'orgName':'Acme Inc','founded':1990,'latestInteraction':1708041600000}_{'id':789,'orgName':'Energy Corp','founded':2021,'latestInteraction':1725753600000}"
+```
+
+### Função `transformArray` para exportar matrizes transformadas
+
+Use a função `transformArray` para transformar os elementos de uma matriz exportada. É possível combinar essa função com a função `array_to_string` descrita mais acima.
+
+Continuando com o objeto de matriz `organizations` acima, você pode gravar uma função como `array_to_string('_', transformArray(organizations, org -> ucase(org.orgName)))`, retornando os nomes das organizações convertidas em maiúsculas.
+
+![Exemplo da função transformArray.](/help/destinations/assets/ui/export-arrays-calculated-fields/transform-array-function.png)
+
+Nesse caso, o arquivo de saída é semelhante ao mostrado abaixo. Observe como os três elementos da matriz são transformados e concatenados em uma única string usando o caractere `_`.
+
+```
+John,Doe,johndoe@acme.org,ACME INC_SUPERSTAR INC_ENERGY CORP
 ```
 
 ### Função `iif` para exportar matrizes {#iif-function-export-arrays}
@@ -145,9 +198,9 @@ John,Doe, johndoe@acme.org, "isMarketing"
 
 ### Função `add_to_array` para exportar matrizes {#add-to-array-function-export-arrays}
 
-Use a função `add_to_array` para adicionar elementos a uma matriz exportada. É possível combinar essa função com a função `join` descrita mais acima.
+Use a função `add_to_array` para adicionar elementos a uma matriz exportada. É possível combinar essa função com a função `array_to_string` descrita mais acima.
 
-Continuando com o objeto de matriz `organizations` acima, você pode gravar uma função como `source: join('_', add_to_array(organizations,"2023"))`, retornando as organizações das quais uma pessoa é membro no ano de 2023.
+Continuando com o objeto de matriz `organizations` acima, você pode gravar uma função como `source: array_to_string('_', add_to_array(organizations,"2023"))`, retornando as organizações das quais uma pessoa é membro no ano de 2023.
 
 ![Exemplo de mapeamento incluindo a função add_to_array.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-add-to-array-function.png)
 
@@ -222,21 +275,25 @@ Nesse caso, o arquivo de saída é semelhante ao mostrado abaixo, exportando a p
 johndoe@acme.org,"1538097126","1664327526"
 ```
 
-### Funções de hash {#hashing-functions}
+<!--
 
-Além das funções específicas para exportar matrizes ou elementos de uma matriz, você pode usar funções de hash para hash de atributos nos arquivos exportados. Por exemplo, se você tiver informações de identificação pessoal nos atributos, é possível aplicar hash a esses campos ao exportá-los.
+### Hashing functions {#hashing-functions}
 
-Você pode hash de valores de cadeias de caracteres diretamente, por exemplo `md5(personalEmail.address)`. Se desejar, você também pode aplicar hash a elementos individuais de campos de matriz, supondo que os elementos na matriz sejam cadeias de caracteres, como esta: `md5(purchaseTime[0])`
+In addition to the functions specific for exporting arrays or elements from an array, you can use hashing functions to hash attributes in the exported files. For example, if you have any personally identifiable information in attributes, you can hash those fields when exporting them. 
 
-As funções de hash compatíveis são:
+You can hash string values directly, for example `md5(personalEmail.address)`. If desired, you can also hash individual elements of array fields, assuming elements in the array are strings, like this: `md5(purchaseTime[0])`
 
-| Função | Exemplo de expressão |
+The supported hashing functions are:
+
+|Function | Sample expression |
 |---------|----------|
 | `sha1` | `sha1(organizations[0])` |
 | `sha256` | `sha256(organizations[0])` |
 | `sha512` | `sha512(organizations[0])` |
 | `hash` | `hash("crc32", organizations[0], "UTF-8")` |
-| `md5` | `md5(organizations[0], "UTF-8")` |
+| `md5` |  `md5(organizations[0], "UTF-8")` |
 | `crc32` | `crc32(organizations[0])` |
 
 {style="table-layout:auto"}
+
+-->

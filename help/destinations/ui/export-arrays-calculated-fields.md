@@ -3,9 +3,9 @@ title: Usar campos calculados para exportar matrizes como cadeias de caracteres
 type: Tutorial
 description: Saiba como usar campos calculados para exportar matrizes do Real-Time CDP para destinos de armazenamento em nuvem como cadeias de caracteres.
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: 6fec0432f71e58d0e17ac75121fb1028644016e1
+source-git-commit: ea3ff80ed1e1de37d5d96bff96f73183a6fa3927
 workflow-type: tm+mt
-source-wordcount: '1513'
+source-wordcount: '1520'
 ht-degree: 0%
 
 ---
@@ -40,7 +40,7 @@ Obtenha informações abrangentes sobre campos calculados - o que são e por que
 
 ## Matrizes e outros tipos de objetos na Platform {#arrays-strings-other-objects}
 
-No Experience Platform, você pode usar [esquemas XDM](/help/xdm/home.md) para gerenciar diferentes tipos de campos. Anteriormente, era possível exportar campos simples de tipo de par de valor-chave, como cadeias de caracteres de Experience Platform, para os destinos desejados. Um exemplo de um campo com suporte para exportação anterior é `personalEmail.address`:`johndoe@acme.org`.
+No Experience Platform, você pode usar [esquemas XDM](/help/xdm/home.md) para gerenciar diferentes tipos de campos. Antes de adicionar suporte para exportações de matriz, você podia exportar campos de tipo de par de valor-chave simples, como strings de Experience Platform para os destinos desejados. Um exemplo de um campo com suporte para exportação anterior é `personalEmail.address`:`johndoe@acme.org`.
 
 Outros tipos de campo no Experience Platform incluem campos de matriz. Leia mais sobre [gerenciamento de campos de matriz na interface do usuário do Experience Platform](/help/xdm/ui/fields/array.md). Além dos tipos de campo suportados anteriormente, agora é possível exportar objetos de matriz, como o exemplo abaixo, concatenados em uma cadeia de caracteres usando a função `array_to_string`.
 
@@ -146,15 +146,6 @@ First_Name,Last_Name,Personal_Email,Organization
 John,Doe,johndoe@acme.org, "{'id':123,'orgName':'Acme Inc','founded':1990,'latestInteraction':1708041600000}_{'id':456,'orgName':'Superstar Inc','founded':2004,'latestInteraction':1692921600000}_{'id':789,'orgName':'Energy Corp','founded':2021,'latestInteraction':1725753600000}"
 ```
 
-### Função `flattenArray` para exportar matrizes niveladas
-
-Use a função `flattenArray` para nivelar uma matriz multidimensional exportada. É possível combinar essa função com a função `array_to_string` descrita mais acima.
-
-Continuando com o objeto de matriz `organizations` acima, você pode gravar uma função como `array_to_string('_', flattenArray(organizations))`. Observe que a função `array_to_string` nivela a matriz de entrada por padrão em uma cadeia de caracteres.
-
-A saída resultante é a mesma da função `array_to_string` descrita acima.
-
-
 ### Função `filterArray` para exportar matrizes filtradas
 
 Use a função `filterArray` para filtrar os elementos de uma matriz exportada. É possível combinar essa função com a função `array_to_string` descrita mais acima.
@@ -210,6 +201,14 @@ Nesse caso, o arquivo de saída é semelhante ao mostrado abaixo. Observe como o
 `First_Name,Last_Name,Personal_Email,Organization_Member_2023
 John,Doe, johndoe@acme.org,"Marketing_Sales_Finance_2023"
 ```
+
+### Função `flattenArray` para exportar matrizes niveladas
+
+Use a função `flattenArray` para nivelar uma matriz multidimensional exportada. É possível combinar essa função com a função `array_to_string` descrita mais acima.
+
+Continuando com o objeto de matriz `organizations` acima, você pode gravar uma função como `array_to_string('_', flattenArray(organizations))`. Observe que a função `array_to_string` nivela a matriz de entrada por padrão em uma cadeia de caracteres.
+
+A saída resultante é a mesma da função `array_to_string` descrita mais acima.
 
 ### Função `coalesce` para exportar matrizes {#coalesce-function-export-arrays}
 

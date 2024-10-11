@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Gerenciar processos de privacidade na interface do Privacy Service
 description: Saiba como usar a interface do usuário do Privacy Service para coordenar e monitorar solicitações de privacidade em vários aplicativos Experience Cloud.
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
-source-git-commit: 341cc4cb150717f08b2e59412ef58fbd6f7b3450
+source-git-commit: 25c173e22f2aa4922aed89f7c9721e2303d5d4b9
 workflow-type: tm+mt
-source-wordcount: '1728'
-ht-degree: 12%
+source-wordcount: '1765'
+ht-degree: 11%
 
 ---
 
@@ -37,25 +37,35 @@ O painel da interface do usuário do [!DNL Privacy Service] fornece dois widgets
 O [!DNL Privacy Service] dá suporte a solicitações de trabalho para vários regulamentos de privacidade. A tabela a seguir lista os regulamentos compatíveis e seus rótulos correspondentes, conforme representados na interface do usuário:
 
 | Rótulo da interface | Regulação |
-| --- | --- |
-| [!UICONTROL APA_AUS] | O [!DNL Australia Privacy Act (Privacy Act)] |
-| [!UICONTROL CPA] | O [!DNL Colorado Privacy Act] |
-| [!UICONTROL CCPA] | O [!DNL California Consumer Privacy Act] |
-| [!UICONTROL CPRA_USA] | O [!DNL California Consumer Privacy Rights Act (CPRA)] |
-| [!UICONTROL CTDPA] | O [!DNL Connecticut Data Privacy Act] |
-| [!UICONTROL FDBR_USA] | O [!DNL Florida Digital Bill of Rights] |
-| [!UICONTROL GDPR] | O [!DNL General Data Protection Regulation] da União Europeia |
-| [!UICONTROL HIPAA_AUS] | O [!DNL Health Insurance Portability and Accountability Act] |
-| [!UICONTROL LGPD_BRA] | Do Brasil: [!DNL Lei Geral de Proteção de Dados] |
-| [!UICONTROL MHMDA] | O [!DNL Washington My Health My Data Act] |
-| [!UICONTROL NZPA_NZL] | Nova Zelândia [!DNL Privacy Act] |
-| [!UICONTROL OCPA_USA] | O [!DNL Oregon Consumer Privacy Act] |
-| [!UICONTROL PDPA_THA] | Da Tailândia: [!DNL Personal Data Protection Act] |
-| [!UICONTROL TDPSA_USA] | O [!DNL Texas Data Privacy and Security Act] |
-| [!UICONTROL UCPA] | O [!DNL Utah Consumer Privacy Act] |
-| [!UICONTROL VCDPA_USA] | O [!DNL Virginia Consumer Data Protection Act] |
+|-------------------------------------|------------------------|
+| [!UICONTROL APA_AUS (Austrália)] | O [!DNL Australia Privacy Act] |
+| [!UICONTROL CCPA (Califórnia)] | O [!DNL California Consumer Privacy Act] |
+| [!UICONTROL CPA_USA (Colorado)] | O [!DNL Colorado Privacy Act] |
+| [!UICONTROL CPRA_USA (Califórnia)] | O [!DNL California Consumer Privacy Rights Act (CPRA)] |
+| [!UICONTROL CTDPA_USA (Connecticut)] | O [!DNL Connecticut Data Privacy Act] |
+| [!UICONTROL FDBR_USA (Flórida)] | O [!DNL Florida Digital Bill of Rights] |
+| [!UICONTROL GDPR (União Europeia)] | O [!DNL General Data Protection Regulation] da União Europeia |
+| [!UICONTROL HIPPA_USA (Estados Unidos)] | O [!DNL Health Insurance Portability and Accountability Act] |
+| [!UICONTROL ICDPA_USA] (Iowa) | O [!DNL Iowa Consumer Data Protection Act] |
+| [!UICONTROL LGPD_BRA (Brasil)] | Brasil: &quot;[!DNL General Data Protection Law]&quot; [!DNL Lei Geral de Proteção de Dados] |
+| [!UICONTROL MHMDA_USA (Washington)] | O [!DNL Washington My Health My Data Act] |
+| [!UICONTROL MCDPA_USA (Montana)] | O [!DNL Montana Consumer Data Privacy Act] |
+| [!UICONTROL NDPA_USA (Nebraska)] | O [!DNL Nebraska Data Protection Act] |
+| [!UICONTROL NZPA_NZL (Nova Zelândia)] | Nova Zelândia: [!DNL Privacy Act] |
+| [!UICONTROL NHPA_USA (New Hampshire)] | O [!DNL New Hampshire Data Privacy Act] |
+| [!UICONTROL NJDPA_USA (Nova Jersey)] | O [!DNL New Jersey Data Protection Act] |
+| [!UICONTROL OCPA EUA (Oregon)] | O [!DNL Oregon Consumer Privacy Act] |
+| [!UICONTROL PDPA_THA (Tailândia)] | Da Tailândia: [!DNL Personal Data Protection Act] |
+| [!UICONTROL TDPSA EUA (Texas)] | O [!DNL Texas Data Privacy and Security Act] |
+| [!UICONTROL UCPA_USA (Utah)] | O [!DNL Utah Consumer Privacy Act] |
+| [!UICONTROL VCDPA_USA (Virgínia)] | O [!DNL Virginia Consumer Data Protection Act] |
 
 {style="table-layout:auto"}
+
+<!-- 
+Waiting:
+| **[!UICONTROL PIPA_KOR]**  ?        | South Korea [!DNL Personal Information Privacy Act] |
+ -->
 
 >[!NOTE]
 >

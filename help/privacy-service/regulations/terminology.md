@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Terminologia dos regulamentos de privacidade
 description: Este documento fornece definições para termos-chave relacionados a regulamentos de privacidade compatíveis com o Adobe Experience Cloud.
 exl-id: 9c0a7d26-0571-41d4-8cf5-6356025d51ef
-source-git-commit: be219530f33209cb4f3fe70425bb293edff4b309
+source-git-commit: c4ca3dc975b13e2dce2e12784480e53bd0c4ee02
 workflow-type: tm+mt
-source-wordcount: '2020'
+source-wordcount: '2301'
 ht-degree: 1%
 
 ---
@@ -91,6 +91,8 @@ Este documento fornece definições para termos-chave relacionados a regulamento
 
 **ID da Organização IMS**: Refere-se a um token de autorização de Adobe para autenticação de serviço para serviço, que não requer logon do usuário. Ele é emitido para um cliente IMS e não tem um usuário associado. Um cliente IMS precisa de um token de serviço para autorizar solicitações de canal de retorno entre os serviços. (O termo &quot;token do sistema&quot; é usado ocasionalmente para significar token de serviço).
 
+**[!DNL Iowa Consumer Data Protection Act]**: uma lei estadual de privacidade que concede aos residentes de Iowa o direito de acessar, excluir e recusar a venda de seus dados pessoais. O ICDPA se aplica a empresas que processam dados de mais de 100 mil residentes de Iowa ou que obtêm mais de 50% da receita com a venda de dados. Isenções notáveis incluem organizações sem fins lucrativos e instituições educacionais. A lei prevê um período de cura de 90 dias para que as empresas corrijam as violações antes da imposição de sanções.
+
 ## J
 
 ## K
@@ -105,7 +107,16 @@ Este documento fornece definições para termos-chave relacionados a regulamento
 
 **MHMDAa**: o [[!DNL Washington My Health My Data Act]](https://app.leg.wa.gov/RCW/default.aspx?cite=19.373&amp;full=true) aprimora os direitos de privacidade dos consumidores em relação aos seus dados de saúde. Ela exige a divulgação, o consentimento do consumidor e os direitos de exclusão dos dados de saúde, e proíbe a venda de dados de saúde sem autorização. Além disso, a lei torna ilegal o uso de geofencing em instalações de saúde.
 
+**[!DNL Montana Consumer Data Privacy Act]**: Essa lei concede aos moradores de Montana o direito de acessar, corrigir, excluir e solicitar cópias de seus dados pessoais. A MCDPA aplica-se a empresas que processam dados para mais de 50 mil consumidores de Montana e enfatiza a proteção de dados pessoais sensíveis, como informações biométricas e genéticas. Ela reforça a transparência em torno das práticas de coleta, compartilhamento e venda de dados.
+
 ## N
+
+**[!DNL Nebraska Data Protection Act]**: Uma lei de privacidade que concede aos nebraskenses o direito de acessar, corrigir, excluir e recusar a venda de seus dados pessoais. Ela se aplica às empresas que atendem a limites específicos de processamento de dados e de receita. O NDPA também exige que as empresas implementem medidas razoáveis de segurança de dados e oferece um período de cura de 30 dias para resolver violações antes que as penalidades sejam aplicadas.
+
+**[!DNL New Hampshire Data Privacy Act]**: essa regulamentação protege os dados pessoais dos residentes de New Hampshire concedendo-lhes direitos de acesso, exclusão e transferência de seus dados. Ele exige que as empresas divulguem suas práticas de coleta e compartilhamento de dados e permite que os consumidores recusem a venda de dados. O NHDPA se aplica a empresas que atendem a limites de processamento de dados especificados.
+
+**[!DNL New Jersey Data Protection Act]**: uma abrangente lei de privacidade estadual que concede aos residentes de Nova Jersey direitos de acesso, correção e exclusão de dados pessoais. Ele inclui mecanismos de recusa para venda de dados e publicidade direcionada. A NJDPA se aplica às empresas que processam grandes volumes de dados de consumidores e requer transparência no modo como as empresas lidam com informações pessoais.
+
 
 ## O
 

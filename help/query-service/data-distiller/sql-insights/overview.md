@@ -2,7 +2,7 @@
 title: Insights SQL
 description: Saiba mais sobre os casos de uso, os recursos essenciais e as etapas necessárias para desenvolver um painel de insights SQL com o Data Distiller. Descubra como o recurso SQL Insights no Data Distiller pode melhorar a transparência e obter insights operacionais em diferentes dimensões, como perfis, públicos, campanhas, jornadas, direitos e consentimento.
 exl-id: f807d0fd-c8ec-42d4-96a0-5ffc5681943b
-source-git-commit: 4e78a7983fba492ded866a8f1fc6f98e20510b2b
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '941'
 ht-degree: 0%
@@ -13,13 +13,13 @@ ht-degree: 0%
 
 Crie modelos de dados de relatórios sob medida para extrair insights mais profundos, otimizar estratégias e adaptar a análise para atender às necessidades específicas dos negócios com os insights de SQL da Data Distiller. Use o recurso Insights SQL para melhorar a transparência e obter insights operacionais dos dados do Adobe Experience Platform em dimensões como perfis, públicos, campanhas, jornadas, direitos e consentimento. Esse recurso oferece uma solução versátil e adaptável para adaptar os modelos de dados de relatórios de sua organização às necessidades específicas de seus negócios.
 
-Para [visualizar seus Insights de SQL](../../../dashboards/data-distiller/sql-insights/overview.md), você pode usar o [modo profissional de consulta](../../../dashboards/data-distiller/query-pro-mode/overview.md) para realizar análises complexas com consultas SQL personalizadas e transformar seus dados em gráficos de fácil interpretação. Use o modo query pro para criar insights e visualizações sob medida em seus painéis e atender a públicos técnicos e não técnicos baixando seus insights como arquivos CSV.
+Para [visualizar seus Insights de SQL](../../../dashboards/sql-insights-query-pro-mode/overview.md), você pode usar o [modo profissional de consulta](../../../dashboards/sql-insights-query-pro-mode/overview.md) para realizar análises complexas com consultas SQL personalizadas e transformar seus dados em gráficos de fácil interpretação. Use o modo query pro para criar insights e visualizações sob medida em seus painéis e atender a públicos técnicos e não técnicos baixando seus insights como arquivos CSV.
 
 Este documento aborda os casos de uso, os recursos essenciais e as etapas necessárias para desenvolver um painel de insights SQL com o Data Distiller.
 
 ## Pré-requisitos
 
-Este tutorial usa painéis definidos pelo usuário para visualizar dados de seu modelo de dados personalizado na interface do usuário da Platform. Consulte a [documentação de painéis definidos pelo usuário](../../../dashboards/user-defined-dashboards.md) para saber mais sobre este recurso.
+Este tutorial usa painéis definidos pelo usuário para visualizar dados de seu modelo de dados personalizado na interface do usuário da Platform. Consulte a [documentação de painéis definidos pelo usuário](../../../dashboards/standard-dashboards.md) para saber mais sobre este recurso.
 
 ## Introdução
 
@@ -72,7 +72,7 @@ Para desenvolver um painel de Insights SQL no Data Distiller, siga as instruçõ
 1. **Exploração de consulta ad hoc:** Comece executando consultas ad hoc `SELECT` para explorar dados brutos no data lake. Isso permite a análise de dados exploratórios e instantâneos para testar e valida dados em que os resultados das consultas não são armazenados no data lake.
 1. **Utilização de consulta em lote:** use consultas em lote para [criar trabalhos agendados](../../api/scheduled-queries.md#create-a-new-scheduled-query) para gerar tabelas agregadas de insights, garantindo uma abordagem sistemática e automatizada para o processamento de dados. As consultas em lote executam consultas `INSERT TABLE AS SELECT` e `CREATE TABLE AS SELECT` para limpar, moldar, manipular e enriquecer dados. Os resultados dessas consultas são armazenados no data lake.
 1. **Carregamento de insights agregados:** carregue os insights agregados gerados no repositório acelerado e use o SQL para testar consultas e garantir a precisão e a eficiência da recuperação de dados. Para saber como [fazer consultas sem estado ao repositório acelerado](../../api/accelerated-queries.md), consulte a documentação.
-1. **Acesso e integração:** acesse os insights armazenados no repositório acelerado facilmente ao integrar com o Adobe Experience Platform [Painéis definidos pelo usuário](../../../dashboards/user-defined-dashboards.md) ou outras ferramentas de Business Intelligence (BI) preferenciais. Essas integrações com clientes de terceiros facilitam uma experiência coesa e intuitiva para os usuários.
+1. **Acesso e integração:** acesse os insights armazenados no repositório acelerado facilmente ao integrar com o Adobe Experience Platform [Painéis definidos pelo usuário](../../../dashboards/standard-dashboards.md) ou outras ferramentas de Business Intelligence (BI) preferenciais. Essas integrações com clientes de terceiros facilitam uma experiência coesa e intuitiva para os usuários.
 
 ![Um infográfico que ilustra as quatro etapas do SQL Insights no Data Distiller.](../../images/data-distiller/sql-insights/steps-to-customizable-insights.png)
 

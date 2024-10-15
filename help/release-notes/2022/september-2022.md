@@ -1,17 +1,17 @@
 ---
 title: Notas de versão da Adobe Experience Platform de setembro de 2022
-description: As notas de versão de setembro de 2022 para o Adobe Experience Platform.
+description: As notas de versão de setembro de 2022 da Adobe Experience Platform.
 exl-id: a7a4dcf8-2cf3-4e39-879d-bdfcbacb737a
-source-git-commit: e0af1f0110ceb514a5b249c42a05bf780ea834c6
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '2762'
-ht-degree: 18%
+ht-degree: 22%
 
 ---
 
 # Notas de versão da Adobe Experience Platform
 
-**Data de lançamento: quinta-feira, 28 de setembro de 2022**
+**Data de lançamento: 28 de setembro de 2022**
 
 Novos recursos na Adobe Experience Platform:
 
@@ -35,9 +35,9 @@ Atualizações dos recursos já existentes na Adobe Experience Platform:
 >
 >O controle de acesso baseado em atributos será ativado a partir de outubro de 2022. Se você quiser ser um dos primeiros usuários, entre em contato com o representante da Adobe.
 
-O controle de acesso baseado em atributos é um recurso do Adobe Experience Platform que oferece às marcas preocupadas com a privacidade maior flexibilidade para gerenciar o acesso do usuário. Objetos individuais, como campos de esquema e segmentos, podem ser atribuídos a funções de usuário. Esse recurso permite conceder ou revogar o acesso a objetos individuais para usuários específicos da Platform em sua organização.
+O controle de acesso baseado em atributos é um recurso do Adobe Experience Platform que oferece às marcas preocupadas com a privacidade maior flexibilidade para gerenciar o acesso do usuário. É possível atribuir objetos individuais, como campos de esquema e segmentos, a funções de usuário. Esse recurso permite conceder ou revogar o acesso a objetos individuais para usuários específicos da Platform em sua organização.
 
-Por meio do controle de acesso baseado em atributos, os administradores da sua organização podem controlar o acesso dos usuários a dados pessoais confidenciais (SPD), informações de identificação pessoal (PII) e outros tipos personalizados de dados em todos os fluxos de trabalho e recursos da plataforma. Os administradores podem definir funções de usuário que tenham acesso somente a campos e dados específicos que correspondam a esses campos.
+Por meio do controle de acesso baseado em atributos, os administradores da sua organização podem controlar o acesso dos usuários a dados pessoais confidenciais (SPD), informações de identificação pessoal (PII) e outros tipos personalizados de dados em todos os fluxos de trabalho e recursos da plataforma. Admins podem definir funções de usuário que tenham acesso somente a campos e dados específicos que correspondam a esses campos.
 
 | Recurso | Descrição |
 | --- | --- |
@@ -93,7 +93,7 @@ A Adobe Experience Platform fornece vários painéis para você visualizar insig
 | Recurso | Descrição |
 | --- | --- |
 | Rótulo em uso | Quando visualizado na biblioteca de widgets, o rótulo em uso identifica facilmente a presença de widgets existentes no painel. Isso facilita evitar a duplicação, embora ainda seja possível adicionar o mesmo widget mais de uma vez, se desejar. |
-| Painéis definidos pelo usuário | Os painéis definidos pelo usuário ajudam a acelerar insights e personalizar visualizações, permitindo que você crie e gerencie painéis personalizados. Com painéis definidos pelo usuário, você pode criar, adicionar e editar widgets personalizados para visualizar as principais métricas relevantes para sua organização. Leia o [guia de recursos](../../dashboards/user-defined-dashboards.md) para saber mais. |
+| Painéis definidos pelo usuário | Os painéis definidos pelo usuário ajudam a acelerar insights e personalizar visualizações, permitindo que você crie e gerencie painéis personalizados. Com painéis definidos pelo usuário, você pode criar, adicionar e editar widgets personalizados para visualizar as principais métricas relevantes para sua organização. Leia o [guia de recursos](../../dashboards/standard-dashboards.md) para saber mais. |
 | Modelo de dados de insights da plataforma de dados do cliente | O recurso Modelo de dados de insights da Plataforma de dados do cliente (CDP) expõe os modelos de dados e o SQL que potencializa os insights para vários widgets de perfil, destino e segmentação. Você pode personalizar esses modelos de consulta SQL para criar relatórios CDP para seus casos de uso de marketing e indicadores principais de desempenho. Esses insights podem ser usados como widgets personalizados para seus painéis definidos pelo usuário. Leia o [guia de recursos do Modelo de Dados de Insights da CDP](../../dashboards/data-models/cdp-insights-data-model-b2c.md) para saber mais. |
 | Widget de relatório de sobreposição de público | Este widget está disponível para os painéis [!UICONTROL Perfis] e [!UICONTROL Segmentos]. O relatório fornece uma lista ordenada de públicos-alvo classificados pelas porcentagens de sobreposição mais alta ou mais baixa para o segmento escolhido. No painel [!UICONTROL Perfis], você pode filtrar e exibir a sobreposição de público-alvo por política de mesclagem de todos os segmentos disponíveis. Os painéis de [!UICONTROL Segmentos] permitem filtrar a sobreposição de público por um segmento específico.<br>Use esta análise para criar segmentos novos e de alto desempenho e evitar o envio do mesmo público para destinos diferentes. O relatório também ajuda a identificar insights ocultos para melhorar a segmentação ou localizar perfis únicos a serem perseguidos. Leia os respectivos guias do widget [perfis](../../dashboards/guides/profiles.md#audience-overlap-report) e [segmentos](../../dashboards/guides/audiences.md#audience-overlap-report) para saber mais. |
 
@@ -107,7 +107,7 @@ A Adobe Experience Platform fornece um conjunto de tecnologias que permitem cole
 
 | Recurso | Descrição |
 | --- | --- |
-| Integração da navegação à esquerda na interface do usuário da Platform | Todos os recursos que antes eram exclusivos da interface da Coleção de dados (incluindo tags, encaminhamento de eventos e sequências de dados) agora também estão disponíveis por meio da navegação à esquerda no Experience Platform, na categoria **[!UICONTROL Coleção de dados]**. Isso elimina a necessidade de alternar entre as interfaces do usuário ao trabalhar com recursos de coleção de dados na Platform. |
+| Integração da navegação à esquerda na interface do usuário da Platform | Todos os recursos que antes eram exclusivos da interface da Coleção de dados (incluindo tags, encaminhamento de eventos e sequências de dados) agora também estão disponíveis por meio da navegação à esquerda no Experience Platform, na categoria **[!UICONTROL Coleção de dados]**. Isso elimina a necessidade de alternar entre as interfaces ao trabalhar com recursos de coleta de dados na Platform. |
 | Atribuição de usuário em tags e encaminhamento de eventos | Quando a listagem está disponível [!UICONTROL Propriedades] em tags e encaminhamento de eventos, cada propriedade listada agora mostra quando foi atualizada pela última vez e qual usuário fez a atualização. |
 | [[!DNL Snap Conversions API] extensão](https://exchange.adobe.com/apps/ec/108550) para encaminhamento de eventos | Agora você pode enviar dados para o [!DNL Snapchat Conversions API] usando uma extensão de [encaminhamento de eventos](../../tags/ui/event-forwarding/overview.md). Para obter mais informações sobre como autenticar e usar a API, consulte a [[!DNL Snapchat Marketing API] documentação](https://marketingapi.snapchat.com/docs/conversion.html). |
 | [Dicas do Cliente de Usuário-Agente no SDK da Web](/help/web-sdk/use-cases/client-hints.md) | O SDK da Web agora oferece suporte a [User-Agent Client Hints](https://developer.chrome.com/docs/privacy-sandbox/user-agent/). As dicas do cliente permitem que os proprietários de sites acessem muitas das informações disponíveis na cadeia de caracteres [!DNL User-Agent], mas com mais privacidade. |

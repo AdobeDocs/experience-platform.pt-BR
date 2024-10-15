@@ -5,9 +5,9 @@ breadcrumb-title: Manual de painéis
 user-guide-description: Saiba como visualizar dados na Experience Platform por meio de painéis personalizáveis.
 feature: Dashboards
 role: Developer,User
-source-git-commit: 06e319a6f7e2294a9c5daea0f41e89a09d93efd2
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
-source-wordcount: '134'
+source-wordcount: '128'
 ht-degree: 35%
 
 ---
@@ -18,21 +18,18 @@ ht-degree: 35%
 * [Visão geral dos painéis](home.md)
 * [Permissões de acesso ao painel](permissions.md)
 * [Inventário de painéis](inventory.md)
-* [Painéis](user-defined-dashboards.md)
+* [Painéis de controle padrão](standard-dashboards.md)
 * [Baixar painéis no PDF](download.md)
-* Distiller de dados {#data-distiller}
-   * SQl Insights para relatórios de aplicativo estendido {#sql-insights}
-      * [Visão geral](data-distiller/sql-insights/overview.md)
-   * Consultar modo pro {#query-pro-mode}
-      * [Visão geral](data-distiller/query-pro-mode/overview.md)
-      * Filtros {#filters}
-         * [Filtro de data](data-distiller/query-pro-mode/filters/date-filter.md)
-         * [Filtro global](data-distiller/query-pro-mode/filters/global-filter.md)
-      * [Drill-through](data-distiller/query-pro-mode/drill-through.md)
-      * [Exibir mais](data-distiller/query-pro-mode/view-more.md)
-      * [Exibir SQL](data-distiller/query-pro-mode/view-sql.md)
-      * [Baixar como CSV](data-distiller/query-pro-mode/download-csv.md)
-      * [Exportar como PDF](data-distiller/query-pro-mode/export-pdf.md)
+* Insights SQL: query pro mode {#sql-insights-query-pro-mode}
+   * [Visão geral](sql-insights-query-pro-mode/overview.md)
+   * Filtros {#filters}
+      * [Filtro de data](sql-insights-query-pro-mode/filters/date-filter.md)
+      * [Filtro global](sql-insights-query-pro-mode/filters/global-filter.md)
+   * [Drill-through](sql-insights-query-pro-mode/drill-through.md)
+   * [Exibir mais](sql-insights-query-pro-mode/view-more.md)
+   * [Exibir SQL](sql-insights-query-pro-mode/view-sql.md)
+   * [Baixar como CSV](sql-insights-query-pro-mode/download-csv.md)
+   * [Exportar como PDF](sql-insights-query-pro-mode/export-pdf.md)
 * Painéis de controle disponíveis {#guides}
    * [Perfis](guides/profiles.md)
    * [Perfis de conta](guides/account-profiles.md)

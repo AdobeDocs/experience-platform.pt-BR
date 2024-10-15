@@ -2,7 +2,7 @@
 title: Audiences Insights
 description: Descubra o SQL que capacita os insights do público-alvo e use essas consultas para gerar insights personalizados e explorar ainda mais os dados do público-alvo da Adobe Experience Platform.
 exl-id: 99624234-c4e1-44bb-9567-505bc0c4723e
-source-git-commit: 34eb9151cc6bb8551553b0a8427e58871acb4dbb
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '1124'
 ht-degree: 3%
@@ -17,7 +17,7 @@ Entenda seus insights de público acessando o SQL que os capacita e gere seus pr
 
 Consulte a [Exibir documentação do SQL](../view-sql.md) para obter mais informações sobre como adaptar o SQL dos seus insights diretamente pela interface do PLatform.
 
-Os seguintes insights estão todos disponíveis para você usar como parte do [Painel de públicos-alvo](../guides/audiences.md) ou de um [painel definido pelo usuário](../user-defined-dashboards.md) personalizado. Consulte a [visão geral da personalização](../customize/overview.md) para obter instruções sobre como personalizar seu painel ou [criar e editar novos widgets](../customize/custom-widgets.md) na biblioteca de widgets e no [painel definido pelo usuário](../user-defined-dashboards.md#create-widget).
+Os seguintes insights estão todos disponíveis para você usar como parte do [Painel de públicos-alvo](../guides/audiences.md) ou de um [painel definido pelo usuário](../standard-dashboards.md) personalizado. Consulte a [visão geral da personalização](../customize/overview.md) para obter instruções sobre como personalizar seu painel ou [criar e editar novos widgets](../customize/custom-widgets.md) na biblioteca de widgets e no [painel definido pelo usuário](../standard-dashboards.md#create-widget).
 
 Os seguintes insights estão todos disponíveis para você usar como parte do [Painel de públicos-alvo](../guides/audiences.md) ou de um painel personalizado.
 
@@ -209,7 +209,7 @@ SELECT sum(count_of_profiles) AS identities,
 
 Consulte a [Documentação de widget Tendência de tamanho de público por identidade](../guides/audiences.md#audience-size-trend-by-identity) para obter informações sobre a aparência e a funcionalidade deste insight.
 
-## Tendência de tamanho do público-alvo {#audience-size-trend}
+## Tendência de tamanho do público {#audience-size-trend}
 
 Perguntas respondidas por este insight:
 

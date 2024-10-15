@@ -2,7 +2,7 @@
 title: Ver painéis configurados
 description: Visualize uma lista dos painéis configurados de sua organização na interface do usuário do Experience Platform.
 exl-id: b1fdb1aa-2d09-4c21-9c84-be379f34a9b7
-source-git-commit: bc3db67b5b9e3bfb98571541d6e4dd2ca19b3303
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '202'
 ht-degree: 0%
@@ -27,4 +27,4 @@ Quando selecionado, o painel é aberto na interface do usuário da Platform ou e
 
 ## Criar painéis personalizados
 
-Os Painéis do Adobe Experience Platform permitem criar e gerenciar painéis personalizados onde você pode criar, adicionar e editar widgets de bespoke para visualizar as métricas principais relevantes para sua organização. Consulte o [guia de painéis definido pelo usuário](./user-defined-dashboards.md) para obter instruções completas sobre como criar e configurar painéis personalizados.
+Os Painéis do Adobe Experience Platform permitem criar e gerenciar painéis personalizados onde você pode criar, adicionar e editar widgets de bespoke para visualizar as métricas principais relevantes para sua organização. Consulte o [guia de painéis definido pelo usuário](./standard-dashboards.md) para obter instruções completas sobre como criar e configurar painéis personalizados.

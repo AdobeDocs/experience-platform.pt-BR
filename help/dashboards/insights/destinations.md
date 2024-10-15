@@ -2,7 +2,7 @@
 title: Insights de destinos
 description: Descubra o SQL que capacita seus insights de destino e use essas consultas para gerar insights personalizados e explorar ainda mais a ativação de dados do Adobe Experience Platform.
 exl-id: 762a9960-e7a5-4796-80c7-ef745157cc04
-source-git-commit: d4baf6cfaa772e5d46cef470fb35818c7af868b1
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '1139'
 ht-degree: 3%
@@ -17,7 +17,7 @@ Entenda seus insights de destino acessando o SQL que os capacita e gere seus pr�
 
 Consulte a [Exibir documentação do SQL](../view-sql.md) para obter mais informações sobre como adaptar o SQL dos seus insights diretamente pela interface do PLatform.
 
-Os seguintes insights estão todos disponíveis para você usar como parte do [Painel de destinos](../guides/destinations.md) ou de um [painel definido pelo usuário](../user-defined-dashboards.md) personalizado. Consulte a [visão geral da personalização](../customize/overview.md) para obter instruções sobre como personalizar seu painel ou [criar e editar novos widgets](../customize/custom-widgets.md) na biblioteca de widgets e no [painel definido pelo usuário](../user-defined-dashboards.md#create-widget).
+Os seguintes insights estão todos disponíveis para você usar como parte do [Painel de destinos](../guides/destinations.md) ou de um [painel definido pelo usuário](../standard-dashboards.md) personalizado. Consulte a [visão geral da personalização](../customize/overview.md) para obter instruções sobre como personalizar seu painel ou [criar e editar novos widgets](../customize/custom-widgets.md) na biblioteca de widgets e no [painel definido pelo usuário](../standard-dashboards.md#create-widget).
 
 ## Públicos-alvo ativados {#activated-audiences}
 
@@ -98,7 +98,7 @@ SELECT destination_platform_name AS Destination_Platform_Name,
 
 Consulte a [documentação do widget Destinos ativos por plataforma de destino](../guides/destinations.md#active-destinations-by-destination-platform) para obter informações sobre a aparência e a funcionalidade desse insight.
 
-## Tendência de tamanho do público-alvo {#audience-size-trend}
+## Tendência de tamanho do público {#audience-size-trend}
 
 Perguntas respondidas por este insight:
 
@@ -144,7 +144,7 @@ SELECT d.destination_name,
 
 Consulte a [Documentação do widget Tendência de tamanho de público](../guides/destinations.md#audience-size-trend) para obter informações sobre a aparência e a funcionalidade desse insight.
 
-## Públicos-alvo comuns {#common-audiences}
+## Públicos comuns {#common-audiences}
 
 Perguntas respondidas por este insight:
 

@@ -2,7 +2,7 @@
 title: Consultar Guia de insights de relatórios da loja acelerada
 description: Saiba como criar um modelo de dados de insights de relatórios por meio do Serviço de consulta para usar com dados de armazenamento acelerados e painéis definidos pelo usuário.
 exl-id: 216d76a3-9ea3-43d3-ab6f-23d561831048
-source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '1034'
 ht-degree: 0%
@@ -19,7 +19,7 @@ O modelo de dados do Real-Time CDP da Adobe Experience Platform fornece insights
 
 ## Pré-requisitos
 
-Este tutorial usa painéis definidos pelo usuário para visualizar dados de seu modelo de dados personalizado na interface do usuário da Platform. Consulte a [documentação de painéis definidos pelo usuário](../../../dashboards/user-defined-dashboards.md) para saber mais sobre este recurso.
+Este tutorial usa painéis definidos pelo usuário para visualizar dados de seu modelo de dados personalizado na interface do usuário da Platform. Consulte a [documentação de painéis definidos pelo usuário](../../../dashboards/standard-dashboards.md) para saber mais sobre este recurso.
 
 ## Introdução
 
@@ -228,4 +228,4 @@ A imagem abaixo fornece um exemplo das possíveis visualizações personalizadas
 
 ![Uma contagem de correspondências por destino e widget de público-alvo criado a partir do novo modelo de dados de insights de relatórios.](../../images/data-distiller/sql-insights/user-defined-dashboard-widget.png)
 
-Seu modelo de dados personalizado pode ser encontrado na lista de modelos de dados disponíveis no espaço de trabalho do painel definido pelo usuário. Consulte o [guia do painel definido pelo usuário](../../../dashboards/user-defined-dashboards.md) para obter orientação sobre como utilizar seu modelo de dados personalizado.
+Seu modelo de dados personalizado pode ser encontrado na lista de modelos de dados disponíveis no espaço de trabalho do painel definido pelo usuário. Consulte o [guia do painel definido pelo usuário](../../../dashboards/standard-dashboards.md) para obter orientação sobre como utilizar seu modelo de dados personalizado.

@@ -3,7 +3,7 @@ title: Endpoint de consultas aceleradas
 description: Saiba como acessar o armazenamento acelerado de consultas de maneira sem estado para retornar resultados rapidamente com base em dados agregados. Este documento fornece um exemplo de solicitação HTTP e resposta para o endpoint de consultas aceleradas do Serviço de consulta.
 role: Developer
 exl-id: 29ea4d25-9c46-4b29-a6d7-45ac33dcb0fb
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '560'
 ht-degree: 1%
@@ -12,7 +12,7 @@ ht-degree: 1%
 
 # Endpoint de consultas aceleradas
 
-Como parte da SKU do Data Distiller, a [API de Serviço de Consulta](https://developer.adobe.com/experience-platform-apis/references/query-service/) permite fazer consultas sem estado ao repositório acelerado. Os resultados retornados são baseados em dados agregados. A redução da latência dos resultados permite uma troca de informações mais interativa. As APIs de consultas aceleradas também são usadas para habilitar [painéis definidos pelo usuário](../../dashboards/user-defined-dashboards.md).
+Como parte da SKU do Data Distiller, a [API de Serviço de Consulta](https://developer.adobe.com/experience-platform-apis/references/query-service/) permite fazer consultas sem estado ao repositório acelerado. Os resultados retornados são baseados em dados agregados. A redução da latência dos resultados permite uma troca de informações mais interativa. As APIs de consultas aceleradas também são usadas para habilitar [painéis definidos pelo usuário](../../dashboards/standard-dashboards.md).
 
 Antes de continuar com este guia, leia e compreenda o [Guia da API do Serviço de Consulta](./getting-started.md) para usar com êxito a API do Serviço de Consulta.
 

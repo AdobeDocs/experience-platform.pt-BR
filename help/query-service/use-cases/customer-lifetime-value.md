@@ -2,7 +2,7 @@
 title: Rastrear sinais de dados para gerar o valor vitalício do cliente
 description: Este guia fornece uma demonstração completa sobre como usar o Data Distiller e painéis definidos pelo usuário com o Real-time Customer Data Platform para medir e visualizar o valor vitalício do cliente.
 exl-id: c74b5bff-feb2-4e21-9ee4-1e0973192570
-source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '1263'
 ht-degree: 0%
@@ -62,7 +62,7 @@ Defina um agendamento para atualizar seu modelo de dados personalizado regularme
 
 ## Crie um painel para capturar insights {#build-a-custom-dashboard}
 
-Agora que criou seu modelo de dados personalizado, você está pronto para visualizar seus dados com consultas personalizadas e painéis definidos pelo usuário. Consulte a visão geral dos painéis definidos pelo usuário para obter orientação completa sobre como [criar um painel personalizado](../../dashboards/user-defined-dashboards.md). O guia da interface do usuário inclui detalhes sobre:
+Agora que criou seu modelo de dados personalizado, você está pronto para visualizar seus dados com consultas personalizadas e painéis definidos pelo usuário. Consulte a visão geral dos painéis definidos pelo usuário para obter orientação completa sobre como [criar um painel personalizado](../../dashboards/standard-dashboards.md). O guia da interface do usuário inclui detalhes sobre:
 
 * Como criar um widget.
 * Como usar o compositor de widgets.

@@ -4,7 +4,7 @@ description: Saiba como usar consultas SQL com os Modelos de dados do Real-time 
 badgeB2B: label="Edição B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="Edição B2P" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 7b77ca19-e4c6-4e93-b9e7-c4ef77d6d6d1
-source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '476'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Edição B2B do modelo de dados do Real-time Customer Data Platform Insights
 
-O modelo de dados do Real-time Customer Data Platform Insights para o B2B Edition expõe os modelos de dados e o SQL que potencializam os insights para [perfis de conta](https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/account/account-profile-overview). Você pode personalizar esses modelos de consulta SQL para criar relatórios do Real-Time CDP para seus casos de uso de marketing B2B e KPI (indicador chave de desempenho). Esses insights podem ser usados como widgets personalizados para seus painéis.
+O modelo de dados do Real-time Customer Data Platform Insights para o B2B edition expõe os modelos de dados e o SQL que potencializam os insights para [perfis de conta](https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/account/account-profile-overview). Você pode personalizar esses modelos de consulta SQL para criar relatórios do Real-Time CDP para seus casos de uso de marketing B2B e KPI (indicador chave de desempenho). Esses insights podem ser usados como widgets personalizados para seus painéis.
 
 >[!AVAILABILITY]
 >
@@ -25,7 +25,7 @@ See the query accelerated store reporting insights documentation to learn [how t
 
 ## Pré-requisitos
 
-Este guia requer entendimento prático de painéis personalizados. Leia a documentação sobre [como criar um painel personalizado](../user-defined-dashboards.md) antes de continuar com este guia.
+Este guia requer entendimento prático de painéis personalizados. Leia a documentação sobre [como criar um painel personalizado](../standard-dashboards.md) antes de continuar com este guia.
 
 ## Relatórios de insight B2B do Real-Time CDP e casos de uso {#B2B-insight-reports-and-use-cases}
 

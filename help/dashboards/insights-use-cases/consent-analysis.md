@@ -2,7 +2,7 @@
 title: Rastreamento e análise de consentimento
 description: Saiba como criar um painel de análise de consentimento para rastrear a tendência do consentimento do usuário ao longo do tempo.
 exl-id: 34accae5-8b4f-4281-8333-187a91db8199
-source-git-commit: e0af1f0110ceb514a5b249c42a05bf780ea834c6
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '1909'
 ht-degree: 0%
@@ -90,7 +90,7 @@ A caixa de diálogo Relatório de sobreposição de público-alvo é expandida p
 
 ![O relatório de sobreposição de Público-alvo, com os Usuários consentidos destacando o público-alvo por email.](../images/insights-use-cases/consent-analysis/additional-audience-overlap-reports.png)
 
-## Tendências de tamanho do público {#audience-size-trends}
+## Tendências de tamanho do público-alvo {#audience-size-trends}
 
 Ao criar um público-alvo com base em consentimento, ele é direcionado automaticamente para até 12 meses a partir da data de criação do público-alvo. Para ter uma tendência totalmente funcional do consentimento do cliente, adicione os seguintes widgets à página [!UICONTROL Segmentos] [!UICONTROL Visão geral]. Esses insights oferecem um meio poderoso de rastrear como o seu consentimento está mudando com o tempo. Eles até se correlacionam com qualquer campanha que você execute em paralelo e que possa afetar o consentimento de forma positiva ou negativa. As descrições oferecidas para esses widgets se aplicam a um caso de uso de consentimento.
 
@@ -112,13 +112,13 @@ Depois de criar um público-alvo relacionado ao consentimento, como &quot;Usuár
 
 Você também pode criar seus próprios widgets com painéis definidos pelo usuário. Criar seu próprio widget fornece controle total sobre o tipo de widget, além de flexibilidade para adicionar filtros e muito mais, diretamente no Adobe Real-Time CDP.
 
-Por exemplo, se você quiser direcionar vários públicos-alvo de consentimento no mesmo gráfico, para que possa ver ao longo do tempo como cada uma de suas preferências de consentimento foi alterada. Esse tipo de visualização é possível com painéis definidos pelo usuário em etapas mínimas e uma configuração única. Primeiro, selecione **[!UICONTROL Painéis]** na navegação à esquerda. O espaço de trabalho [!UICONTROL Painéis] é exibido. Em seguida, selecione **[!UICONTROL Criar painel]**. Instruções completas sobre como [criar um painel e um widget personalizado](../user-defined-dashboards.md) podem ser encontradas no guia de painéis definido pelo usuário.
+Por exemplo, se você quiser direcionar vários públicos-alvo de consentimento no mesmo gráfico, para que possa ver ao longo do tempo como cada uma de suas preferências de consentimento foi alterada. Esse tipo de visualização é possível com painéis definidos pelo usuário em etapas mínimas e uma configuração única. Primeiro, selecione **[!UICONTROL Painéis]** na navegação à esquerda. O espaço de trabalho [!UICONTROL Painéis] é exibido. Em seguida, selecione **[!UICONTROL Criar painel]**. Instruções completas sobre como [criar um painel e um widget personalizado](../standard-dashboards.md) podem ser encontradas no guia de painéis definido pelo usuário.
 
-![O espaço de trabalho de painéis com Painéis e Criar painel realçados.](../images/user-defined-dashboards/create-dashboard.png)
+![O espaço de trabalho de painéis com Painéis e Criar painel realçados.](../images/standard-dashboards/create-dashboard.png)
 
-Quando você [selecionar seu modelo de dados](../user-defined-dashboards.md#select-data-model) no widget composer, selecione `CDPInsights` seguido de **[!UICONTROL Próximo]**. A caixa de diálogo [!UICONTROL Selecionar tabela] é exibida.
+Quando você [selecionar seu modelo de dados](../standard-dashboards.md#select-data-model) no widget composer, selecione `CDPInsights` seguido de **[!UICONTROL Próximo]**. A caixa de diálogo [!UICONTROL Selecionar tabela] é exibida.
 
-![A caixa de diálogo Selecionar modelo de dados com o modelo CDPInsights está realçada.](../images/user-defined-dashboards/select-data-model-dialog.png)
+![A caixa de diálogo Selecionar modelo de dados com o modelo CDPInsights está realçada.](../images/standard-dashboards/select-data-model-dialog.png)
 
 A próxima exibição exibe uma lista das tabelas disponíveis no painel esquerdo. Selecione o `adwh_fact_profile_by_segment_and_namespace_trendlines`.
 
@@ -126,16 +126,16 @@ A próxima exibição exibe uma lista das tabelas disponíveis no painel esquerd
 
 Depois que o widget composer for preenchido com dados da tabela escolhida, execute as etapas abaixo:
 
-- [Pesquise [!UICONTROL Atributos]](../user-defined-dashboards.md#add-filter-attributes) para `[!UICONTROL date]` e use o ícone + para adicionar o atributo `[!UICONTROL date]` ao eixo X do menu suspenso.
-  ![O widget composer com o ícone de adição e menu suspenso realçado.](../images/user-defined-dashboards/attributes-dropdown.png)
+- [Pesquise [!UICONTROL Atributos]](../standard-dashboards.md#add-filter-attributes) para `[!UICONTROL date]` e use o ícone + para adicionar o atributo `[!UICONTROL date]` ao eixo X do menu suspenso.
+  ![O widget composer com o ícone de adição e menu suspenso realçado.](../images/standard-dashboards/attributes-dropdown.png)
 - Pesquise [!UICONTROL Atributos] para `[!UICONTROL count_of_profiles]`, em seguida, use o ícone + para adicionar o atributo `[!UICONTROL count_of_profiles]` ao eixo Y do menu suspenso.
 - Selecione o ícone `...` (elipses) no campo [!UICONTROL Eixo Y] e selecione a função de agregação [!UICONTROL SUM] no menu suspenso.
   ![Widget de Tendências de consentimento do widget com o modelo de dados, a tabela, o menu suspenso do eixo Y e o recurso SOMA destacados. ](../images/insights-use-cases/consent-analysis/y-axis-sum-function.png)
 - Selecione o menu suspenso [!UICONTROL Marcas] e altere o tipo de gráfico para [!UICONTROL Linha].
 - Pesquise [!UICONTROL Atributos] para `[!UICONTROL segment_name]`, em seguida, use o ícone + para adicionar o `segment_name` como um [!UICONTROL Filtro] no menu suspenso. A caixa de diálogo [!UICONTROL Filtro: Nome_do_Segmento] é exibida. Selecione os públicos-alvo criados anteriormente que estão relacionados ao consentimento. Para este exemplo, selecione **[!UICONTROL Usuários Consentidos em Chamadas]**, **[!UICONTROL Usuários Consentidos em SMS]** e **[!UICONTROL Usuários Consentidos em Email]**, seguido de **[!UICONTROL Aplicar]**.
 - Pesquise [!UICONTROL Atributos] para `[!UICONTROL segment_name]` e selecione o ícone + para adicionar `segment_name` como [!UICONTROL Cor] no menu suspenso.
-- Abra [o painel [!UICONTROL Propriedades]](../user-defined-dashboards.md#widget-properties) e forneça um [!UICONTROL Título do widget] e um [!UICONTROL Rótulo do eixo] apropriados.
-  ![O widget composer com o ícone de propriedades e o título do Widget destacados.](../images/user-defined-dashboards/properties-panel.png)
+- Abra [o painel [!UICONTROL Propriedades]](../standard-dashboards.md#widget-properties) e forneça um [!UICONTROL Título do widget] e um [!UICONTROL Rótulo do eixo] apropriados.
+  ![O widget composer com o ícone de propriedades e o título do Widget destacados.](../images/standard-dashboards/properties-panel.png)
 - Selecione **[!UICONTROL Salvar e fechar]** para confirmar suas configurações.
 
 >[!TIP]

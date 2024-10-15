@@ -2,7 +2,7 @@
 title: Insights do perfil
 description: Descubra o SQL que possibilita os insights do perfil e use essas consultas para gerar insights personalizados que explorem ainda mais seus clientes e as experiências do consumidor.
 exl-id: f3792076-3e01-4e26-8788-32927202a2e5
-source-git-commit: 34eb9151cc6bb8551553b0a8427e58871acb4dbb
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '1661'
 ht-degree: 3%
@@ -17,7 +17,7 @@ Entenda seus insights de perfil acessando o SQL que os capacita e gere seus pró
 
 Consulte a [Exibir documentação do SQL](../view-sql.md) para obter mais informações sobre como adaptar o SQL dos seus insights diretamente pela interface do usuário da Platform.
 
-Os seguintes insights estão todos disponíveis para você usar como parte do [Painel de perfis](../guides/profiles.md) ou de um [painel definido pelo usuário](../user-defined-dashboards.md) personalizado. Consulte a [visão geral da personalização](../customize/overview.md) para obter instruções sobre como personalizar seu painel ou [criar e editar novos widgets](../customize/custom-widgets.md) na biblioteca de widgets e no [painel definido pelo usuário](../user-defined-dashboards.md#create-widget).
+Os seguintes insights estão todos disponíveis para você usar como parte do [Painel de perfis](../guides/profiles.md) ou de um [painel definido pelo usuário](../standard-dashboards.md) personalizado. Consulte a [visão geral da personalização](../customize/overview.md) para obter instruções sobre como personalizar seu painel ou [criar e editar novos widgets](../customize/custom-widgets.md) na biblioteca de widgets e no [painel definido pelo usuário](../standard-dashboards.md#create-widget).
 
 ## Sobreposição de público por política de mesclagem {#audience-overlap-by-merge-policy}
 

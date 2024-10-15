@@ -3,9 +3,9 @@ title: Usar campos calculados para exportar matrizes como cadeias de caracteres
 type: Tutorial
 description: Saiba como usar campos calculados para exportar matrizes do Real-Time CDP para destinos de armazenamento em nuvem como cadeias de caracteres.
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: ea3ff80ed1e1de37d5d96bff96f73183a6fa3927
+source-git-commit: 849d42e36921e60b6ac3a5e89336b954e64a35d7
 workflow-type: tm+mt
-source-wordcount: '1520'
+source-wordcount: '1556'
 ht-degree: 0%
 
 ---
@@ -76,6 +76,16 @@ Observe as seguintes limitações conhecidas que se aplicam atualmente a essa fu
 [Conecte](/help/destinations/ui/connect-destination.md) a um destino de armazenamento na nuvem desejado. Prossiga pelas [etapas de ativação para destinos de armazenamento na nuvem](/help/destinations/ui/activate-batch-profile-destinations.md) e vá para a etapa [mapeamento](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
 
 ## Como exportar campos calculados {#how-to-export-calculated-fields}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_export_arrays_control"
+>title="Ativar esquema de saída hierárquico"
+>abstract="Ative se quiser exportar estruturas hierárquicas como matrizes."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_export_arrays_calculated_field_disabled"
+>title="Adicionar campos calculados desabilitado"
+>abstract="Este controle está desabilitado porque você optou por exportar estruturas simples ao se conectar ao destino."
 
 Na etapa de mapeamento do fluxo de trabalho de ativação para destinos de armazenamento na nuvem, selecione **[!UICONTROL Adicionar campo calculado]**.
 

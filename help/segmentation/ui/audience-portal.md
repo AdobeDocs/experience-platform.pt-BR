@@ -2,9 +2,9 @@
 title: Visão geral do Audience Portal
 description: Saiba como usar o Audience Portal para exibir, gerenciar e criar públicos no Adobe Experience Platform.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: b59f5ffeb8af6f3bab7ed79189219f39533d2f1b
+source-git-commit: 919e5c183296e3fbf1fc385c2a9c34dc36349660
 workflow-type: tm+mt
-source-wordcount: '4250'
+source-wordcount: '4298'
 ht-degree: 3%
 
 ---
@@ -210,6 +210,11 @@ A lista de filtros disponíveis é exibida.
 
 #### Ações em massa {#bulk-actions}
 
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_browse_flexibleaudienceevaluation"
+>title="Limites flexíveis de avaliação do público-alvo"
+>abstract="Você pode avaliar até 20 públicos-alvo em uma única execução de avaliação de público-alvo flexível.<br/><br/>Além disso, embora o trabalho de avaliação seja executado o mais rápido possível, pode haver atrasos no sistema, pois as avaliações sob demanda <b>não podem</b> ser executadas simultaneamente com outra avaliação sob demanda ou em lote."
+
 Além disso, você pode selecionar até 25 públicos diferentes e executar várias ações nesses públicos. Essas ações incluem [mover para uma pasta](#folders), [editar ou aplicar uma marca](#tags), [aplicar rótulos de acesso](../../access-control/abac/ui/labels.md) e [excluir](#browse).
 
 ![As opções disponíveis para ações em massa estão realçadas.](../images/ui/audience-portal/bulk-actions.png)
@@ -278,7 +283,7 @@ Para públicos-alvo e composições geradas pela Platform, a seção **[!UICONTR
 
 As estimativas são geradas usando um tamanho de amostra dos dados de amostra desse dia. Se houver menos de 1 milhão de entidades no armazenamento do Perfil, o conjunto de dados completo será usado; para entre 1 e 20 milhões de entidades, será usado 1 milhão de entidades; e para mais de 20 milhões de entidades, será usado 5% do total de entidades. Mais informações sobre a geração de estimativas podem ser encontradas na [seção de geração de estimativas](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) do tutorial de criação de público-alvo.
 
-### Detalhes de assimilação {#ingestion-details}
+### Detalhes de ingestão {#ingestion-details}
 
 Para públicos-alvo com uma origem de **[!UICONTROL Upload personalizado]**, a seção **[!UICONTROL Detalhes da assimilação]** mostra o total do perfil, bem como os detalhes do conjunto de dados em que o público-alvo gerado externamente foi assimilado.
 

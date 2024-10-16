@@ -3,9 +3,9 @@ keywords: Experience Platform;solução de problemas;medidas de proteção;diret
 title: Medidas de proteção para a assimilação de dados
 description: Saiba mais sobre as medidas de proteção para a assimilação de dados no Adobe Experience Platform.
 exl-id: f07751cb-f9d3-49ab-bda6-8e6fec59c337
-source-git-commit: 9c3f7f522ce6451e1d312a0221cc34287d3e8ae3
+source-git-commit: b8f64793b7f869e50c33ead3a5f02f3a8af51ff4
 workflow-type: tm+mt
-source-wordcount: '737'
+source-wordcount: '810'
 ht-degree: 0%
 
 ---
@@ -35,6 +35,7 @@ A tabela a seguir descreve as medidas de proteção a serem consideradas ao usar
 | Assimilação em lote para Perfil | <ul><li>O tamanho máximo de uma classe de registro é 100 KB (rígido).</li><li>O tamanho máximo de uma classe ExperienceEvent é 10 KB (rígido).</li></ul> | |
 | Número de lotes Profile ou ExperienceEvent assimilados por dia | **O número máximo de lotes de Profile ou ExperienceEvent assimilados por dia é 90.** Isso significa que o total combinado de lotes Profile e ExperienceEvent assimilados a cada dia não pode exceder 90. A ingestão de lotes adicionais afetará o desempenho do sistema. | Este é um limite flexível. É possível ir além de um limite flexível, no entanto, os limites flexíveis fornecem uma diretriz recomendada para o desempenho do sistema. |
 | Assimilação de dados criptografados | O tamanho máximo suportado de um único arquivo criptografado é 1 GB. Por exemplo, embora você possa assimilar 2 ou mais GBs de dados em uma única execução de fluxo de dados, nenhum arquivo individual na execução do fluxo de dados pode exceder 1 GB. | O processo de assimilação de dados criptografados pode levar mais tempo do que a assimilação normal de dados. Leia o [guia da API de assimilação de dados criptografados](../sources/tutorials/api/encrypt-data.md) para obter mais informações. |
+| Substituir assimilação em lote | A assimilação de lotes de substituição pode ser até 10x mais lenta do que lotes regulares, portanto, você deve **manter seus lotes de substituição abaixo de dois milhões de registros** para garantir um tempo de execução eficiente e evitar o bloqueio de outros lotes de serem processados na sandbox. | Embora seja possível assimilar lotes que excedam dois milhões de registros, o tempo de assimilação será significativamente maior devido às limitações de pequenas sandboxes. |
 
 {style="table-layout:auto"}
 

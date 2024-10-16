@@ -2,9 +2,9 @@
 title: Visão geral do Audience Portal
 description: Saiba como usar o Audience Portal para exibir, gerenciar e criar públicos no Adobe Experience Platform.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 919e5c183296e3fbf1fc385c2a9c34dc36349660
+source-git-commit: f74e91ba1fe2be58e1e933fa81f590566f02fff7
 workflow-type: tm+mt
-source-wordcount: '4298'
+source-wordcount: '4320'
 ht-degree: 3%
 
 ---
@@ -286,6 +286,10 @@ As estimativas são geradas usando um tamanho de amostra dos dados de amostra de
 ### Detalhes de ingestão {#ingestion-details}
 
 Para públicos-alvo com uma origem de **[!UICONTROL Upload personalizado]**, a seção **[!UICONTROL Detalhes da assimilação]** mostra o total do perfil, bem como os detalhes do conjunto de dados em que o público-alvo gerado externamente foi assimilado.
+
+>[!NOTE]
+>
+>Pode levar até 30 minutos após o trabalho de exportação para que a contagem de perfis do público-alvo seja totalmente atualizada.
 
 ![A seção de detalhes da assimilação da página de detalhes do público-alvo é exibida.](../images/ui/audience-portal/audience-details-ingestion-details.png)
 

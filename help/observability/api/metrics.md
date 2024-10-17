@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Endpoint da API de métricas
 description: Saiba como recuperar métricas de observabilidade no Experience Platform usando a API de insights de observação.
 exl-id: 08d416f0-305a-44e2-a2b7-d563b2bdd2d2
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 39eda018611d0244eaff908e924afa93dc46e14d
 workflow-type: tm+mt
-source-wordcount: '1360'
-ht-degree: 3%
+source-wordcount: '1278'
+ht-degree: 4%
 
 ---
 
@@ -56,8 +56,7 @@ curl -X POST \
                 "groupBy": true
               }
             ],
-            "aggregator": "sum",
-            "downsample": "sum"
+            "aggregator": "sum"
           },
           {
             "name": "timeseries.ingestion.dataset.dailysize",
@@ -79,12 +78,11 @@ curl -X POST \
 | --- | --- |
 | `start` | A data/hora mais antiga da qual recuperar dados de métrica. |
 | `end` | A data/hora mais recente da qual recuperar dados de métrica. |
-| `granularity` | Um campo opcional que indica o intervalo de tempo pelo qual dividir os dados de métrica. Por exemplo, um valor de `DAY` retorna métricas para cada dia entre as datas `start` e `end`, enquanto um valor de `MONTH` agruparia os resultados da métrica por mês. Ao usar esse campo, uma propriedade `downsample` correspondente também deve ser fornecida para indicar a função de agregação pela qual os dados serão agrupados. |
+| `granularity` | Um campo opcional que indica o intervalo de tempo pelo qual dividir os dados de métrica. Por exemplo, um valor de `DAY` retorna métricas para cada dia entre as datas `start` e `end`, enquanto um valor de `MONTH` agruparia os resultados da métrica por mês. |
 | `metrics` | Uma matriz de objetos, um para cada métrica que você deseja recuperar. |
 | `name` | O nome de uma métrica reconhecida pelos Insights de capacidade de observação. Consulte o [apêndice](#available-metrics) para obter uma lista completa dos nomes de métricas aceitos. |
 | `filters` | Um campo opcional que permite filtrar métricas por conjuntos de dados específicos. O campo é uma matriz de objetos (um para cada filtro), com cada objeto contendo as seguintes propriedades: <ul><li>`name`: O tipo de entidade para filtrar métricas. Atualmente, somente `dataSets` é suportado.</li><li>`value`: A ID de um ou mais conjuntos de dados. Várias IDs de conjunto de dados podem ser fornecidas como uma única cadeia de caracteres, com cada ID separada por caracteres de barra vertical (`\|`).</li><li>`groupBy`: Quando definido como verdadeiro, indica que o `value` correspondente representa vários conjuntos de dados cujos resultados de métrica devem ser retornados separadamente. Se definido como falso, os resultados da métrica para esses conjuntos de dados serão agrupados.</li></ul> |
-| `aggregator` | Especifica a função de agregação que deve ser usada para agrupar vários registros de séries temporais em resultados únicos. Para obter informações detalhadas sobre agregadores disponíveis, consulte a [documentação do OpenTSDB](https://docs.w3cub.com/opentsdb/user_guide/query/aggregators). |
-| `downsample` | Um campo opcional que permite especificar uma função de agregação para reduzir a taxa de amostragem de dados de métrica, classificando campos em intervalos (ou &quot;intervalos&quot;). O intervalo para redução de resolução é determinado pela propriedade `granularity`. Para obter informações detalhadas sobre como reduzir a resolução, consulte a [documentação do OpenTSDB](https://docs.w3cub.com/opentsdb/user_guide/query/aggregators). |
+| `aggregator` | Especifica a função de agregação que deve ser usada para agrupar vários registros de séries temporais em resultados únicos. Os agregadores atualmente compatíveis são mín., máx., soma e média, dependendo da definição da métrica. |
 
 {style="table-layout:auto"}
 
@@ -221,8 +219,7 @@ A tabela a seguir descreve as métricas do Adobe Experience Platform [!DNL Ident
 | ---- | ---- | ---- |
 | timeseries.identity.dataset.recordsuccess.count | Número de registros gravados na fonte de dados por [!DNL Identity Service], para um conjunto de dados ou para todos os conjuntos de dados. | ID do conjunto de dados |
 | timeseries.identity.dataset.recordfailed.count | Número de registros com falha por [!DNL Identity Service], para um conjunto de dados ou para todos os conjuntos de dados. | ID do conjunto de dados |
-| timeseries.identity.dataset.namespacecode.recordfailed.count | Número de registros de identidade com falha por um namespace. | ID de Namespace (**Obrigatório**) |
-| timeseries.identity.dataset.namespacecode.recordskipped.count | Número de registros de identidade ignorados por um namespace. | ID de Namespace (**Obrigatório**) |
+| timeseries.identity.dataset.namespacecode.recordskipped.count | Número de registros de identidade ignorados. | ID da organização |
 | timeseries.identity.graph.imsorg.uniqueidentities.count | Número de identidades exclusivas armazenadas no gráfico de identidade de sua organização. | N/D |
 | timeseries.identity.graph.imsorg.namespacecode.uniqueidentities.count | Número de identidades exclusivas armazenadas no gráfico de identidade de um namespace. | ID de Namespace (**Obrigatório**) |
 | timeseries.identity.graph.imsorg.graphstrength.uniqueidentities.count | Número de identidades exclusivas armazenadas no gráfico de identidade de sua organização para uma determinada intensidade de gráfico (&quot;desconhecido&quot;, &quot;fraco&quot; ou &quot;forte&quot;). | Intensidade do gráfico (**Obrigatório**) |

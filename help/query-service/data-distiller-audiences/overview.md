@@ -1,9 +1,9 @@
 ---
 title: Criar públicos-alvo usando SQL
 description: Saiba como usar a extensão de público-alvo SQL no Data Distiller do Adobe Experience Platform para criar, gerenciar e publicar públicos-alvo usando comandos SQL. Este guia aborda todos os aspectos do ciclo de vida do público-alvo, incluindo a criação, atualização e exclusão de perfis e o uso de definições de público-alvo orientadas por dados para direcionar destinos baseados em arquivos.
-source-git-commit: 8b9a46d9dd35a60fc3f3087d5fd3c4dad395b1aa
+source-git-commit: b790dc0a485011022ac637f9d9c55f21c882d5fc
 workflow-type: tm+mt
-source-wordcount: '1280'
+source-wordcount: '1166'
 ht-degree: 1%
 
 ---
@@ -135,15 +135,13 @@ Ative seus públicos direcionando-os para qualquer destino baseado em arquivo, c
 
 Esta seção aborda as perguntas frequentes sobre como criar e gerenciar públicos-alvo externos usando SQL no Data Distiller.
 
-+++Selecione para revelar perguntas e respostas
-
 **Perguntas**:
 
 - A criação de públicos-alvo é compatível somente com conjuntos de dados simples?
 
 +++Resposta
 
-Conjuntos de dados aninhados também são compatíveis, mas somente atributos simples estão disponíveis no público-alvo.
+Atualmente, a criação de público-alvo é limitada a atributos simples (nível raiz) ao definir o público-alvo.
 
 +++
 
@@ -167,15 +165,15 @@ Não, o conjunto de dados criado durante a criação do público-alvo não está
 
 +++Resposta
 
-Sim, o conjunto de dados é criado no data lake.
+Sim, o conjunto de dados associado ao público-alvo é criado no data lake. Os atributos desse conjunto de dados estão disponíveis no Audience Composer e no fluxo de destino como atributos enriquecidos.
 
 +++
 
-- Os atributos no público-alvo estão restritos a serem usados apenas em destinos baseados em arquivos em lote de empresas? (Sim ou Não)
+- Os atributos no público-alvo estão restritos aos destinos baseados em arquivos em lote corporativo? (Sim ou Não)
 
 +++Resposta
 
-Sim, os atributos no público-alvo são restritos a serem usados somente em destinos baseados em arquivos em lote de empresas.
+Não. Atributos enriquecidos no público-alvo estão disponíveis para uso em lotes corporativos e destinos baseados em arquivo. Se você encontrar um erro como &quot;As seguintes IDs de segmento têm namespaces que não são permitidos para esse destino: e917f626-a038-42f7-944c-xyxyx&quot;, crie um novo segmento no Data Distiller e use-o com qualquer destino disponível.
 
 +++
 
@@ -195,45 +193,11 @@ Os públicos-alvo do destilador de dados não estão disponíveis no Adobe Journ
 
 +++
 
-- Como devo criar dois públicos-alvo do Data Distiller com programações diferentes? Quantos conjuntos de dados são criados e estão marcados para Perfil?
-
-+++Resposta
-
-Dois conjuntos de dados serão criados, pois cada público tem um conjunto de dados subjacente. No entanto, esses conjuntos de dados não estão marcados para Perfil. Os dois conjuntos de dados são gerenciados em suas próprias programações individuais.
-
-+++
-
-- Como excluir um público-alvo?
-
-+++Resposta
-
-Para excluir um público-alvo, você pode usar o [`DROP AUDIENCE` comando](#delete-audience) na interface de linha de comando ou usar as [ações rápidas do espaço de trabalho de públicos-alvo](../../segmentation/ui/audience-portal.md#quick-actions). OBSERVAÇÃO: públicos-alvo usados em destinos downstream ou que são dependentes em outros públicos-alvo não podem ser excluídos.
-
-+++
-
-- Quando publico um público-alvo no Perfil, quando ele fica disponível na interface do construtor de segmentos e quando ele fica disponível nos Destinos?
-
-+++Resposta
-
-Quando a exportação do instantâneo do perfil for concluída, os perfis poderão ser vistos no público-alvo.
-
-+++
-
 - Os públicos-alvo da Data Distiller são excluídos a cada 30 dias, já que são públicos-alvo externos?
 
 +++Resposta
 
 Sim, os públicos-alvo da Data Distiller são excluídos a cada 30 dias, pois são públicos-alvo externos.
-
-+++
-
-- Os públicos-alvo da Data Distiller aparecem no inventário de públicos-alvo?
-
-+++Resposta
-
-Sim, os Públicos-alvo da Data Distiller aparecem no inventário de Públicos-alvo com o nome de origem &quot;Data Distiller&quot;.
-
-+++
 
 +++
 

@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Funções de filtro do PQL
 description: As funções de filtro são usadas para filtrar dados em matrizes no Profile Query Language (PQL).
 exl-id: 09d66be3-30dc-4488-84a1-cfd09c44470d
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: 7c282594e66c8c7700471a94947448fd91596814
 workflow-type: tm+mt
-source-wordcount: '203'
+source-wordcount: '211'
 ht-degree: 2%
 
 ---
@@ -16,7 +16,7 @@ As funções de filtro são usadas para filtrar dados em matrizes em [!DNL Profi
 
 ## Filtro
 
-A função `[]` (filtro) permite que filtros sejam aplicados a uma matriz e retorne um subconjunto da matriz que corresponda à condição especificada.
+A função `[]` (filtro) permite que filtros sejam aplicados a uma matriz e retorne um subconjunto da matriz que corresponda à condição especificada. Como resultado, essa função retorna uma matriz.
 
 **Formato**
 

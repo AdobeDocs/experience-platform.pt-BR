@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Funções de data e hora do PQL
 description: As funções de data e hora são usadas para executar operações de data e hora em valores no Profile Query Language (PQL).
 exl-id: 8cbffcb6-1c25-454f-8f02-eca602318e5e
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: c4d034a102c33fda81ff27bee73a8167e9896e62
 workflow-type: tm+mt
-source-wordcount: '493'
+source-wordcount: '496'
 ht-degree: 2%
 
 ---
@@ -124,7 +124,7 @@ product.sale.getDayOfMonth() <= 15
 
 ## Ocorre
 
-A função `occurs` compara a função de carimbo de data/hora fornecida a um período fixo.
+A função `occurs` compara a função de carimbo de data/hora fornecida a um período de tempo fixo como um booleano.
 
 **Formato**
 

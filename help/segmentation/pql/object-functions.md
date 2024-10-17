@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Funções de objeto do PQL
 description: O Profile Query Language (PQL) oferece funções para simplificar a interação com objetos.
 exl-id: e65257d8-5bc8-46c8-8487-33bc7ce4059b
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: c4d034a102c33fda81ff27bee73a8167e9896e62
 workflow-type: tm+mt
-source-wordcount: '121'
-ht-degree: 9%
+source-wordcount: '127'
+ht-degree: 8%
 
 ---
 
@@ -16,7 +16,7 @@ O [!DNL Profile Query Language] (PQL) oferece funções para simplificar a inter
 
 ## É nulo
 
-A função `isNull` determina se uma referência de objeto não existe.
+A função `isNull` determina se uma referência de objeto não existe como booleana.
 
 **Formato**
 
@@ -34,7 +34,7 @@ person.homeAddress.isNull()
 
 ## Não é nulo
 
-A função `isNotNull` determina se existe uma referência de objeto.
+A função `isNotNull` determina se uma referência de objeto existe como booleana.
 
 **Formato**
 

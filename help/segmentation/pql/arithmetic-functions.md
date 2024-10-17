@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Funções aritméticas PAL
 description: Funções aritméticas são usadas para realizar cálculos básicos em valores no Profile Query Language (PQL).
 exl-id: 3540ef7c-dbe4-4302-a414-3cf85618f870
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: c4d034a102c33fda81ff27bee73a8167e9896e62
 workflow-type: tm+mt
-source-wordcount: '243'
-ht-degree: 4%
+source-wordcount: '258'
+ht-degree: 3%
 
 ---
 
@@ -16,7 +16,7 @@ Funções aritméticas são usadas para realizar cálculos básicos em valores e
 
 ## Add
 
-A função `+` (adição) é usada para localizar a soma de duas expressões de argumento.
+A função `+` (adição) é usada para localizar a soma de duas expressões de argumento como um número.
 
 **Formato**
 
@@ -34,7 +34,7 @@ product1.price + product2.price
 
 ## Multiplicar
 
-A função `*` (multiplicação) é usada para localizar o produto de duas expressões de argumento.
+A função `*` (multiplicação) é usada para localizar o produto de duas expressões de argumento como um número.
 
 **Formato**
 
@@ -52,7 +52,7 @@ product.inventory * product.price
 
 ## Subtrair
 
-A função `-` (subtração) é usada para localizar a diferença de duas expressões de argumento.
+A função `-` (subtração) é usada para localizar a diferença de duas expressões de argumento como um número.
 
 **Formato**
 
@@ -70,7 +70,7 @@ product1.price - product2.price
 
 ## Divisão
 
-A função `/` (divisão) é usada para localizar o quociente de duas expressões de argumento.
+A função `/` (divisão) é usada para localizar o quociente de duas expressões de argumento como um número.
 
 **Formato**
 
@@ -88,7 +88,7 @@ totalProduct.price / totalProduct.sold
 
 ## Restante
 
-A função `%` (módulo/restante) é usada para localizar o restante após dividir as duas expressões de argumento.
+A função `%` (módulo/restante) é usada para localizar o restante após dividir as duas expressões de argumento como um número.
 
 **Formato**
 

@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Funções de string do PQL
 description: O Profile Query Language (PQL) oferece funções para tornar a interação com strings mais simples.
 exl-id: 9fd79d86-0802-4312-abce-f6ef5ba5bb34
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: c4d034a102c33fda81ff27bee73a8167e9896e62
 workflow-type: tm+mt
-source-wordcount: '815'
+source-wordcount: '848'
 ht-degree: 5%
 
 ---
@@ -16,7 +16,7 @@ O [!DNL Profile Query Language] (PQL) oferece funções para simplificar a inter
 
 ## Curtir
 
-A função `like` é usada para determinar se uma cadeia de caracteres corresponde a um padrão especificado.
+A função `like` é usada para determinar se uma cadeia de caracteres corresponde a um padrão especificado como booleano.
 
 **Formato**
 
@@ -39,7 +39,7 @@ city like "%es%"
 
 ## Inicia com
 
-A função `startsWith` é usada para determinar se uma sequência de caracteres inicia com uma subsequência especificada.
+A função `startsWith` é usada para determinar se uma sequência de caracteres inicia com uma subsequência especificada como booleana.
 
 **Formato**
 
@@ -63,7 +63,7 @@ person.name.startsWith("Joe")
 
 ## Não inicia com
 
-A função `doesNotStartWith` é usada para determinar se uma cadeia de caracteres não inicia com uma subcadeia especificada.
+A função `doesNotStartWith` é usada para determinar se uma cadeia de caracteres não inicia com uma subcadeia especificada como booleana.
 
 **Formato**
 
@@ -87,7 +87,7 @@ person.name.doesNotStartWith("Joe")
 
 ## Termina com
 
-A função `endsWith` é usada para determinar se uma sequência de caracteres termina com uma subsequência especificada.
+A função `endsWith` é usada para determinar se uma sequência de caracteres termina com uma subsequência especificada como booleana.
 
 **Formato**
 
@@ -111,7 +111,7 @@ person.emailAddress.endsWith(".com")
 
 ## Não termina com
 
-A função `doesNotEndWith` é usada para determinar se uma cadeia de caracteres não termina com uma subsequência especificada.
+A função `doesNotEndWith` é usada para determinar se uma cadeia de caracteres não termina com uma subcadeia especificada como booleana.
 
 **Formato**
 
@@ -135,7 +135,7 @@ person.emailAddress.doesNotEndWith(".com")
 
 ## Contains
 
-A função `contains` é usada para determinar se uma cadeia de caracteres contém uma subsequência especificada.
+A função `contains` é usada para determinar se uma cadeia de caracteres contém uma subsequência especificada como booleana.
 
 **Formato**
 
@@ -159,7 +159,7 @@ person.emailAddress.contains("2010@gm")
 
 ## Não contém
 
-A função `doesNotContain` é usada para determinar se uma cadeia de caracteres não contém uma subsequência especificada.
+A função `doesNotContain` é usada para determinar se uma cadeia de caracteres não contém uma subsequência especificada como booleana.
 
 **Formato**
 
@@ -183,7 +183,7 @@ person.emailAddress.doesNotContain("2010@gm")
 
 ## Igual a
 
-A função `equals` é usada para determinar se uma cadeia de caracteres é igual à cadeia de caracteres especificada.
+A função `equals` é usada para determinar se uma cadeia de caracteres é igual à cadeia de caracteres especificada como booleana.
 
 **Formato**
 
@@ -206,7 +206,7 @@ person.name.equals("John")
 
 ## Não é igual a
 
-A função `notEqualTo` é usada para determinar se uma cadeia de caracteres não é igual à cadeia especificada.
+A função `notEqualTo` é usada para determinar se uma cadeia de caracteres não é igual à cadeia de caracteres especificada como booleana.
 
 **Formato**
 
@@ -229,7 +229,7 @@ person.name.notEqualTo("John")
 
 ## Corresponde
 
-A função `matches` é usada para determinar se uma sequência de caracteres corresponde a uma expressão regular específica. Consulte [este documento](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html) para obter mais informações sobre padrões correspondentes em expressões regulares.
+A função `matches` é usada para determinar se uma sequência de caracteres corresponde a uma expressão regular específica. Consulte [este documento](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html) para obter mais informações sobre padrões correspondentes em expressões regulares como booleano.
 
 **Formato**
 
@@ -251,7 +251,7 @@ person.name.matches("(?i)^John")
 
 ## Grupo de expressão regular
 
-A função `regexGroup` é usada para extrair informações específicas, com base na expressão regular fornecida.
+A função `regexGroup` é usada para extrair informações específicas, com base na expressão regular fornecida como uma cadeia de caracteres.
 
 **Formato**
 

@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Funções de matriz, lista e definição do PQL
 description: O Profile Query Language (PQL) oferece funções para facilitar a interação com matrizes, listas e strings.
 exl-id: 5ff2b066-8857-4cde-9932-c8bf09e273d3
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: c4d034a102c33fda81ff27bee73a8167e9896e62
 workflow-type: tm+mt
-source-wordcount: '753'
+source-wordcount: '820'
 ht-degree: 4%
 
 ---
@@ -16,7 +16,7 @@ O [!DNL Profile Query Language] (PQL) oferece funções para facilitar a intera�
 
 ## Em
 
-A função `in` é usada para determinar se um item é membro de uma matriz ou lista.
+A função `in` é usada para determinar se um item é membro de uma matriz ou lista como booleano.
 
 **Formato**
 
@@ -34,7 +34,7 @@ person.birthMonth in [3, 6, 9]
 
 ## Não está em
 
-A função `notIn` é usada para determinar se um item não é membro de uma matriz ou lista.
+A função `notIn` é usada para determinar se um item não é membro de uma matriz ou lista como booleano.
 
 >[!NOTE]
 >
@@ -56,7 +56,7 @@ person.birthMonth notIn [3, 6, 9]
 
 ## Intersecta
 
-A função `intersects` é usada para determinar se duas matrizes ou listas têm pelo menos um membro comum.
+A função `intersects` é usada para determinar se duas matrizes ou listas têm pelo menos um membro comum como booleano.
 
 **Formato**
 
@@ -74,7 +74,7 @@ person.favoriteColors.intersects(["red", "blue", "green"])
 
 ## Interseção
 
-A função `intersection` é usada para determinar os membros comuns de duas matrizes ou listas.
+A função `intersection` é usada para determinar os membros comuns de duas matrizes ou listas como uma lista.
 
 **Formato**
 
@@ -92,7 +92,7 @@ person1.favoriteColors.intersection(person2.favoriteColors) = ["red", "blue", "g
 
 ## Subconjunto de
 
-A função `subsetOf` é usada para determinar se uma matriz específica (matriz A) é um subconjunto de outra matriz (matriz B). Em outras palavras, que todos os elementos na matriz A são elementos da matriz B.
+A função `subsetOf` é usada para determinar se uma matriz específica (matriz A) é um subconjunto de outra matriz (matriz B). Em outras palavras, que todos os elementos na matriz A são elementos da matriz B como booleano.
 
 **Formato**
 
@@ -110,7 +110,7 @@ person.favoriteCities.subsetOf(person.visitedCities)
 
 ## Superconjunto de
 
-A função `supersetOf` é usada para determinar se uma matriz específica (matriz A) é um superconjunto de outra matriz (matriz B). Em outras palavras, essa matriz A contém todos os elementos na matriz B.
+A função `supersetOf` é usada para determinar se uma matriz específica (matriz A) é um superconjunto de outra matriz (matriz B). Em outras palavras, essa matriz A contém todos os elementos na matriz B como booleano.
 
 **Formato**
 
@@ -128,7 +128,7 @@ person.eatenFoods.supersetOf(["sushi", "pizza"])
 
 ## Inclui
 
-A função `includes` é usada para determinar se uma matriz ou lista contém um determinado item.
+A função `includes` é usada para determinar se uma matriz ou lista contém um determinado item como booleano.
 
 **Formato**
 
@@ -146,7 +146,7 @@ person.favoriteColors.includes("red")
 
 ## Distinto
 
-A função `distinct` é usada para remover valores duplicados de uma matriz ou lista.
+A função `distinct` é usada para remover valores duplicados de uma matriz ou lista como uma matriz.
 
 **Formato**
 
@@ -164,12 +164,12 @@ person.orders.storeId.distinct().count() > 1
 
 ## Agrupar por
 
-A função `groupBy` é usada para particionar valores de uma matriz ou lista em um grupo com base no valor da expressão.
+A função `groupBy` é usada para particionar valores de uma matriz ou lista em um grupo com base no valor da expressão como um mapa de valores exclusivos da expressão de agrupamento para matrizes que são partições do valor da expressão de matriz.
 
 **Formato**
 
 ```sql
-{ARRAY}.groupBy({EXPRESSION)
+{ARRAY}.groupBy({EXPRESSION})
 ```
 
 | Argumento | Descrição |
@@ -182,12 +182,12 @@ A função `groupBy` é usada para particionar valores de uma matriz ou lista em
 A consulta do PQL a seguir agrupa todas as ordens pelas quais a ordem foi armazenada.
 
 ```sql
-orders.groupBy(storeId)
+xEvent[type="order"].groupBy(storeId)
 ```
 
 ## Filtro
 
-A função `filter` é usada para filtrar uma matriz ou lista com base em uma expressão.
+A função `filter` é usada para filtrar uma matriz ou lista com base em uma expressão como uma matriz ou lista, dependendo da entrada.
 
 **Formato**
 
@@ -210,7 +210,7 @@ person.filter(age >= 21)
 
 ## Mapa
 
-A função `map` é usada para criar uma nova matriz aplicando uma expressão a cada item em uma determinada matriz.
+A função `map` é usada para criar uma nova matriz aplicando uma expressão a cada item em uma determinada matriz como uma matriz.
 
 **Formato**
 
@@ -228,7 +228,7 @@ numbers.map(square)
 
 ## Primeiro `n` na matriz {#first-n}
 
-A função `topN` é usada para retornar os primeiros `N` itens em uma matriz, quando classificados em ordem crescente com base na expressão numérica fornecida.
+A função `topN` é usada para retornar os primeiros itens `N` em uma matriz, quando classificados em ordem crescente com base na expressão numérica fornecida como uma matriz.
 
 **Formato**
 
@@ -252,7 +252,7 @@ orders.topN(price, 5)
 
 ## Último `n` na matriz
 
-A função `bottomN` é usada para retornar os últimos `N` itens em uma matriz, quando classificados em ordem crescente com base na expressão numérica fornecida.
+A função `bottomN` é usada para retornar os últimos itens `N` em uma matriz, quando classificados em ordem crescente com base na expressão numérica fornecida como uma matriz.
 
 **Formato**
 
@@ -276,7 +276,7 @@ orders.bottomN(price, 5)
 
 ## Primeiro item
 
-A função `head` é usada para retornar o primeiro item na matriz ou lista.
+A função `head` é usada para retornar o primeiro item na matriz ou lista como um objeto.
 
 **Formato**
 

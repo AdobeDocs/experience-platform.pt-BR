@@ -6,7 +6,7 @@ exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
 source-git-commit: e74d04119593dddcaf6a5c710b685c606f5998d6
 workflow-type: tm+mt
 source-wordcount: '4955'
-ht-degree: 7%
+ht-degree: 8%
 
 ---
 
@@ -32,7 +32,7 @@ Os blocos fundamentais das definições de segmento são atributos e eventos. Al
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_summarydata"
 >title="Dados de resumo"
->abstract="Os dados de resumo só aparecem para atributos de perfil e <b>não</b> aparece para atributos de evento ou público-alvo.<br/><br/>Os dados de resumo dos atributos de perfil podem não aparecer nas seguintes circunstâncias: <ol><li>Alguns valores do atributo têm mais de 100 caracteres.</li><li>Há mais de 3000 valores únicos para o atributo.</li></ol>"
+>abstract="Os dados de resumo só aparecem para os atributos de perfil e <b>não</b> aparecem para os atributos de evento ou público-alvo.<br/><br/>Os dados de resumo dos atributos de perfil podem não aparecer nas seguintes circunstâncias: <ol><li>Alguns valores do atributo contêm mais de 100 caracteres.</li><li>Há mais de 3.000 valores exclusivos para o atributo.</li></ol>"
 
 >[!NOTE]
 >

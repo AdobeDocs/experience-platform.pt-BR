@@ -5,7 +5,7 @@ exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
 source-git-commit: 8caa10010109f9936271cb45a2166455f3678687
 workflow-type: tm+mt
 source-wordcount: '1827'
-ht-degree: 1%
+ht-degree: 5%
 
 ---
 
@@ -68,7 +68,7 @@ As informações do perfil da conta exibidas na guia [!UICONTROL Detalhes] foram
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_accountprofiles_customersperaccountoverview"
 >title="Visão geral de clientes por conta"
->abstract="Este widget de drill-through fornece insights sobre a estrutura dos dados B2B. Ele ajuda a identificar quantos perfis de conta não têm perfis de cliente vinculados ou têm um ou mais perfis de cliente associados a eles.<ul><li>Clientes Diretos: são perfis de clientes diretamente vinculados a uma Conta por meio da rota `personComponents`.</li><li>Clientes indiretos: são perfis de clientes vinculados a uma Conta através da rota `Account-Person`.</li></ul>"
+>abstract="Este widget de detalhamento fornece insights sobre a estrutura dos seus dados B2B. Ele ajuda a identificar quantos perfis de conta não têm perfis de cliente vinculados ou têm um ou mais perfis de cliente associados a si.<ul><li>Clientes diretos: são perfis de clientes diretamente vinculados a uma conta por meio da rota `personComponents`.</li><li>Clientes indiretos: são perfis de clientes vinculados a uma conta por meio da rota `Account-Person`.</li></ul>"
 
 O Adobe fornece widgets padrão que você pode usar para visualizar métricas diferentes relacionadas aos seus perfis de conta.
 

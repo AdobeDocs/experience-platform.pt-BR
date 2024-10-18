@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Endpoint da API de métricas
 description: Saiba como recuperar métricas de observabilidade no Experience Platform usando a API de insights de observação.
 exl-id: 08d416f0-305a-44e2-a2b7-d563b2bdd2d2
-source-git-commit: 39eda018611d0244eaff908e924afa93dc46e14d
+source-git-commit: a029d503d37d7e705897ce8efca98674ccf21780
 workflow-type: tm+mt
 source-wordcount: '1278'
 ht-degree: 4%
@@ -68,7 +68,6 @@ curl -X POST \
               }
             ],
             "aggregator": "sum",
-            "downsample": "sum"
           }
         ]
       }'

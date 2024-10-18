@@ -4,10 +4,10 @@ title: Painel de Uso da Licença
 description: A Adobe Experience Platform fornece um painel por meio do qual você pode visualizar informações importantes sobre o uso de licença da sua organização.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 67d4bcbf2a055d4427218ba7d98355f09d860a8c
+source-git-commit: 80380fb1287d710460ad2c75d73ea5c2c38f5ebd
 workflow-type: tm+mt
-source-wordcount: '2738'
-ht-degree: 16%
+source-wordcount: '2855'
+ht-degree: 15%
 
 ---
 
@@ -117,7 +117,6 @@ Gerencie e otimize proativamente seus recursos de licenciamento com base em prev
 
 Para ver um resumo do uso de direitos de um produto, selecione um produto na tabela [!UICONTROL Produtos principais].
 
-<!-- update image ... -->
 ![O [!UICONTROL Uso da licença] [!UICONTROL Visão geral] com um produto e a coluna de uso previsto realçada.](../images/license-usage/product-predicted-usage.png)
 
 A guia Summary (Resumo) é exibida. Você pode usar as previsões granulares disponíveis nas guias [!UICONTROL Resumo] e [!UICONTROL Detalhes] para garantir uma tomada de decisão informada para o uso eficiente da licença.
@@ -126,7 +125,6 @@ A guia Summary (Resumo) é exibida. Você pode usar as previsões granulares dis
 >
 >Observe que as previsões de uso de licença são aproximações baseadas no uso anterior. Você é responsável por entender o uso real da sua organização e garantir que o uso não vá além do escopo da licença da sua organização com o Adobe.
 
-<!-- update image ... -->
 ![O modo de exibição de resumo de um Produto da Plataforma com a coluna de uso previsto está realçado.](../images/license-usage/summary-predicted-usage.png)
 
 A porcentagem de uso previsto é determinada da seguinte maneira:
@@ -142,10 +140,9 @@ A porcentagem de uso previsto é determinada da seguinte maneira:
 O recurso de uso previsto é compatível com as seguintes métricas:
 
 - [!UICONTROL Público-alvo endereçável]
-- [!UICONTROL Riqueza média de perfil]
 - [!UICONTROL Horas de computação]
 - [!UICONTROL Número de linhas do Público-alvo de Jornada do cliente]
-- [!UICONTROL Armazenamento total]
+- [!UICONTROL Volume de Dados Total]
 
 ## Guia [!UICONTROL Resumo] {#summary-tab}
 
@@ -204,6 +201,10 @@ Você também pode selecionar **[!UICONTROL Data personalizada]** para escolher 
 
 ## Métricas disponíveis {#available-metrics}
 
+>[!IMPORTANT]
+>
+>A partir de 20 de agosto, os clientes com direitos para &#39;[!UICONTROL Riqueza Média de Perfil]&#39; e &#39;[!UICONTROL Armazenamento Total]&#39; viram &#39;[!UICONTROL Volume Total de Dados]&#39; no Painel de Uso de Licenças. Não houve alteração nos direitos do cliente, apenas uma simplificação das métricas de rastreamento. [!UICONTROL Volume de Dados Total] representa os dados disponíveis no Serviço de Perfil da Adobe Experience Platform para os fluxos de trabalho de envolvimento e personalização. Essa métrica simplificada melhorou o gerenciamento e a medição do uso do Serviço de perfil. Os clientes foram incentivados a entrar em contato com o representante da Adobe para obter mais esclarecimentos sobre essa alteração.
+
 O painel de uso da licença relata várias métricas exclusivas que são aplicáveis a vários produtos na organização. As métricas disponíveis são:
 
 | Métrica | Descrição |
@@ -211,6 +212,7 @@ O painel de uso da licença relata várias métricas exclusivas que são aplicá
 | [!UICONTROL Tamanho do Audience Activation] | O tamanho total dos perfis ativados para qualquer destino baseado em arquivo em um ano. Observação: isso não inclui perfis enviados por meio de destinos de streaming. |
 | [!UICONTROL Público-alvo endereçável] | A soma do direito de público-alvo comercial e do direito de público-alvo consumidor. Um público-alvo do consumidor é definido como o número de perfis de pessoas identificados como um &quot;Público-alvo do consumidor&quot; na ordem de venda. Um público-alvo comercial é definido como o número de perfis empresariais identificados como o &quot;Público-alvo comercial&quot; na ordem de venda. |
 | [!UICONTROL Pacotes de Usuários do Serviço de Consulta Adhoc] | Um complemento para aumentar o direito dos Usuários do Serviço de Consulta simultâneos autorizados em cinco usuários adicionais do Serviço de Consulta simultâneos e uma consulta ad hoc adicional em execução simultânea por pacote. É possível que vários pacotes adicionais de usuários de Ad Hoc Query sejam licenciados. |
+| [!UICONTROL Riqueza média de perfil] | **Obsoleto** - A soma de todos os dados de produção armazenados no Serviço de Perfil de Hub em qualquer momento, dividida por cinco vezes o número de perfis empresariais autorizados. [!UICONTROL A riqueza média do perfil] é um recurso compartilhado. |
 | [!UICONTROL Linhas do CJA Disponíveis] | A média diária de linhas de dados disponíveis para análise no Customer Journey Analytics. |
 | [!UICONTROL Atributos computados] | A contagem total de dados comportamentais agregados de perfis. Os dados comportamentais agregados do perfil são baseados em eventos de experiência convertidos em um atributo de perfil e podem ser incluídos em um perfil de pessoa ou perfil de pessoa de negócios. |
 | [!UICONTROL Público-alvo] | O número de perfis de pessoas identificados como &quot;Público-alvo do consumidor&quot; na ordem de venda. |

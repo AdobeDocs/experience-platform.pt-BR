@@ -1,13 +1,10 @@
 ---
-keywords: Experience Platform;página inicial;tópicos populares;serviço de fluxo;atualizar fluxos de dados
-solution: Experience Platform
 title: Atualizar fluxos de dados usando a API de serviço de fluxo
-type: Tutorial
-description: Este tutorial aborda as etapas para atualizar um fluxo de dados, incluindo nome, descrição e programação, usando a API de serviço de fluxo.
+description: Saiba como criar um fluxo de dados, incluindo nome, descrição e programação usando a API de serviço de fluxo.
 exl-id: 367a3a9e-0980-4144-a669-e4cfa7a9c722
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 9e1edaa4183a8025b8391f58d480063adc834616
 workflow-type: tm+mt
-source-wordcount: '603'
+source-wordcount: '656'
 ht-degree: 3%
 
 ---
@@ -15,6 +12,10 @@ ht-degree: 3%
 # Atualizar fluxos de dados usando a API de serviço de fluxo
 
 Este tutorial aborda as etapas de atualização de um fluxo de dados, incluindo informações básicas, agendamento e conjuntos de mapeamento usando a [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+
+>[!TIP]
+>
+>Sua conexão de origem e de destino devem ser mapeadas para um único fluxo de dados. Você não deve atualizar suas conexões de origem e de destino separadamente, pois as alterações não serão refletidas no fluxo de dados correspondente. Se o caso de uso exigir uma atualização das conexões de origem e destino, você deverá criar um novo par de conexões de origem e destino, bem como um novo fluxo de dados.
 
 ## Introdução
 
@@ -49,11 +50,11 @@ A solicitação a seguir recupera informações atualizadas sobre a ID de fluxo.
 
 ```shell
 curl -X GET \
-    'https://platform.adobe.io/data/foundation/flowservice/flows/2edc08ac-4df5-4fe6-936f-81a19ce92f5c' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
+  'https://platform.adobe.io/data/foundation/flowservice/flows/2edc08ac-4df5-4fe6-936f-81a19ce92f5c' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Resposta**

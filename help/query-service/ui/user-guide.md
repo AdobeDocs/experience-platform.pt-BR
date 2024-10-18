@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guia da interface do Editor de consultas
 description: O Editor de consultas é uma ferramenta interativa fornecida pelo Serviço de consultas da Adobe Experience Platform, que permite gravar, validar e executar consultas para dados de experiência do cliente na interface do usuário do Experience Platform. O Editor de consultas é compatível com o desenvolvimento de consultas para análise e exploração de dados, e permite executar consultas interativas para fins de desenvolvimento, bem como consultas não interativas para preencher conjuntos de dados no Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: f68dd020b05d1eaf6d873b9cdc2a40007ad60c84
+source-git-commit: e66f3540d22a441089916183538921ea5654b312
 workflow-type: tm+mt
-source-wordcount: '2845'
+source-wordcount: '2843'
 ht-degree: 0%
 
 ---
@@ -200,12 +200,12 @@ Se uma consulta foi agendada, a guia [!UICONTROL Consultas agendadas] oferece ma
 >
 >As consultas que não são executadas não são salvas pelo Log. Para que a consulta esteja disponível no Serviço de consulta, ela deve ser executada ou salva no Editor de consultas.
 
-### Navegador de objetos [!BADGE Beta]{type=Informative} {#object-browser}
+### [!BADGE Disponibilidade limitada]{type=Informative} Navegador de objetos {#object-browser}
 
 >[!AVAILABILITY]
 >
 O painel de navegação do conjunto de dados está disponível somente para clientes do Data Distiller. A interface do usuário da Platform pode não conter o painel de navegação do conjunto de dados esquerdo. Outras imagens neste documento podem não refletir o painel de navegação do conjunto de dados. Entre em contato com o representante da Adobe para obter mais informações.<br>
-O navegador de objetos está atualmente na versão beta e está disponível somente em uma **versão limitada**. Entre em contato com o representante da Adobe para obter acesso antecipado ao lançamento.
+O navegador de objetos está disponível atualmente somente em uma **versão limitada**. Entre em contato com o representante da Adobe para obter acesso antecipado ao lançamento.
 
 Use o navegador de objetos para pesquisar e filtrar facilmente os conjuntos de dados. O navegador de objetos reduz o tempo gasto pesquisando tabelas e conjuntos de dados em grandes ambientes com vários conjuntos de dados. Com acesso simplificado a dados e metadados relevantes, você pode se concentrar mais na criação de consultas e menos na navegação.
 

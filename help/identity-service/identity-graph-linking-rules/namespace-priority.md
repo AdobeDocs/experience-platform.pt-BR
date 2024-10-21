@@ -2,9 +2,9 @@
 title: Prioridade do namespace
 description: Saiba mais sobre a prioridade de namespace no Serviço de identidade.
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: aae82bc84eff7584098ddb35a481d7349ff837c4
+source-git-commit: b50633a8518f32051549158b23dfc503db255a82
 workflow-type: tm+mt
-source-wordcount: '1605'
+source-wordcount: '1700'
 ht-degree: 2%
 
 ---
@@ -107,7 +107,7 @@ Suponha que as seguintes configurações sejam estabelecidas para uma determinad
 
 Dadas as configurações descritas acima, as ações do usuário e a determinação da identidade principal serão resolvidas como:
 
-| Ação do usuário (Evento de experiência) | Estado de autenticação | Fonte de dados | Mapa de identidade | Identidade principal (chave principal do fragmento do perfil) |
+| Ação do usuário (Evento de experiência) | Estado de autenticação | Fonte de dados | Namespaces no evento | Namespace da identidade primária |
 | --- | --- | --- | --- | --- |
 | Exibir página de oferta de cartão de crédito | Não autenticado (anônimo) | Web SDK | {ECID} | ECID |
 | Exibir página de ajuda | Não autenticado | SDK móvel | {ECID, IDFA} | IDFA |
@@ -121,12 +121,16 @@ Dadas as configurações descritas acima, as ações do usuário e a determinaç
 
 ![Um diagrama de armazenamento de associação de segmento](../images/namespace-priority/segment-membership-storage.png)
 
-Para um determinado perfil mesclado, as associações de segmento serão armazenadas em relação à identidade com o namespace de prioridade mais alta.
+Para um determinado perfil mesclado, as associações de segmento serão armazenadas em relação à identidade com a maior prioridade de namespace.
 
 Por exemplo, suponha que haja dois perfis:
 
-* O primeiro perfil representa John.
-* O segundo perfil representa Jane.
+* O perfil 1 representa John.
+   * O perfil de John é qualificado para S1 (segmento de afiliação 1). Por exemplo, S1 pode se referir a um segmento de clientes que se identifica como masculino.
+   * O perfil de John também se qualifica para S2 (segmento de afiliação 2). Isso pode se referir a um segmento de clientes cujo status de fidelidade é ouro.
+* O perfil 2 representa Jane.
+   * O perfil de Jane se qualifica para S3 (segmento de afiliação 3). Pode se referir a um segmento de clientes que se identifica como do sexo feminino.
+   * O perfil de Jane também se qualifica para S4 (segmento de afiliação 4). Isso pode se referir a um segmento de clientes cujo status de fidelidade é platina.
 
 Se John e Jane compartilharem um dispositivo, a ECID (navegador da Web) será transferida de uma pessoa para outra. No entanto, isso não influencia as informações de associação do segmento armazenadas em relação a John e Jane.
 
@@ -141,15 +145,13 @@ Esta seção descreve como a prioridade de namespace pode afetar outros serviço
 A exclusão de registros da higiene de dados solicita funções da seguinte maneira, para uma determinada identidade:
 
 * Perfil do cliente em tempo real: exclui qualquer fragmento de perfil com a identidade especificada como identidade principal. **A identidade principal no Perfil agora será determinada com base na prioridade do namespace.**
-* Data lake: exclui qualquer registro com a identidade especificada como identidade principal.
+* Data lake: exclui qualquer registro com a identidade especificada como identidade principal. Ao contrário do Perfil do cliente em tempo real, a identidade principal no data lake é baseada na identidade principal especificada no WebSDK (`primary=true`) ou em um campo marcado como identidade principal
 
 Para obter mais informações, leia a [visão geral avançada do gerenciamento do ciclo de vida](../../hygiene/home.md).
 
 ### Atributos computados
 
-Os atributos computados não usam a prioridade de namespace para calcular valores. Se estiver usando atributos calculados, você deve garantir que a CRMID seja designada como sua identidade primária para o WebSDK. Essa limitação deve ser resolvida em agosto de 2024.
-
-Para obter mais informações, leia o [guia da interface do usuário de atributos computados](../../profile/computed-attributes/ui.md).
+Os atributos computados não usam a prioridade de namespace para calcular valores. Se estiver usando atributos calculados, você deve garantir que a CRMID seja designada como sua identidade primária para o WebSDK. Para obter mais informações, leia o [guia da interface do usuário de atributos computados](../../profile/computed-attributes/ui.md).
 
 ### Data lake
 

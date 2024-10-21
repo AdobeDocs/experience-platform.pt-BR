@@ -2,9 +2,9 @@
 title: Guia de solução de problemas para regras de vinculação do gráfico de identidade
 description: Saiba como solucionar problemas comuns nas regras de vinculação do gráfico de identidade.
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
-source-git-commit: cfe0181104f09bfd91b22d165c23154a15cd5344
+source-git-commit: b50633a8518f32051549158b23dfc503db255a82
 workflow-type: tm+mt
-source-wordcount: '3247'
+source-wordcount: '3335'
 ht-degree: 0%
 
 ---
@@ -59,8 +59,8 @@ No contexto das regras de vinculação de gráficos de identidade, um registro p
 
 Considere o seguinte evento com duas suposições:
 
-* O nome de campo CRMID é marcado como uma identidade com o namespace CRMID.
-* O namespace CRMID é definido como um namespace exclusivo.
+1. O nome de campo CRMID é marcado como uma identidade com o namespace CRMID.
+2. O namespace CRMID é definido como um namespace exclusivo.
 
 O evento a seguir retornará uma mensagem de erro indicando que a assimilação falhou.
 
@@ -123,6 +123,24 @@ Após executar a consulta, localize o registro de evento que você esperava gera
 >
 >Se as duas identidades forem exatamente as mesmas e se o evento for assimilado por transmissão, a Identidade e o Perfil desduplicarão a identidade.
 
+### ExperienceEvents pós-autenticação estão sendo atribuídos ao perfil autenticado incorreto
+
+A prioridade de namespace desempenha um papel importante em como os fragmentos de evento determinam a identidade principal.
+
+* Depois de definir e salvar suas [configurações de identidade](./identity-settings-ui.md) para uma determinada sandbox, o Perfil usará a [prioridade de namespace](namespace-priority.md#real-time-customer-profile-primary-identity-determination-for-experience-events) para determinar a identidade principal. No caso de identityMap, o perfil não usará mais o sinalizador `primary=true`.
+* Embora o Perfil não se refira mais a esse sinalizador, outros serviços no Experience Platform podem continuar a usar o sinalizador `primary=true`.
+
+Para que [eventos de usuário autenticados](implementation-guide.md#ingest-your-data) sejam vinculados ao namespace de pessoa, todos os eventos autenticados devem conter o namespace de pessoa (CRMID). Isso significa que mesmo depois que um usuário fizer logon, o namespace da pessoa ainda deverá estar presente em cada evento autenticado.
+
+Você pode continuar a ver o sinalizador `primary=true` &#39;eventos&#39; ao pesquisar um perfil no visualizador de perfil. No entanto, isso é ignorado e não será usado pelo Perfil.
+
+As AAIDs são bloqueadas por padrão. Portanto, se você estiver usando o [conector de origem do Adobe Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md), certifique-se de que a ECID tenha uma prioridade maior do que a ECID, para que os eventos não autenticados tenham uma identidade principal de ECID.
+
+**Etapas de solução de problemas**
+
+1. Para validar se os eventos autenticados contêm a pessoa e o namespace do cookie, leia as etapas descritas na seção sobre [solução de problemas de erros relacionados à não assimilação de dados no Serviço de Identidade](#my-identities-are-not-getting-ingested-into-identity-service).
+2. Para validar se os eventos autenticados têm a identidade principal do namespace de pessoa (por exemplo, CRMID), pesquise o namespace de pessoa no visualizador de perfil usando a política de mesclagem sem compilação (essa é a política de mesclagem que não usa gráfico privado). Esta pesquisa só retornará eventos associados ao namespace de pessoa.
+
 ### Meus fragmentos de evento de experiência não estão sendo assimilados no Perfil {#my-experience-event-fragments-are-not-getting-ingested-into-profile}
 
 Há vários motivos que contribuem para que os fragmentos de evento de experiência não sejam assimilados no Perfil, incluindo, mas não limitados a:
@@ -171,29 +189,11 @@ Essas duas consultas presumem que:
 * Uma identidade é enviada a partir do identityMap e outra identidade é enviada a partir de um descritor de identidade. **OBSERVAÇÃO**: em esquemas do Experience Data Model (XDM), o descritor de identidade é o campo marcado como uma identidade.
 * O CRMID é enviado por identityMap. Se a CRMID for enviada como um campo, remova `key='Email'` da cláusula WHERE.
 
-### Os fragmentos de evento de minha experiência são assimilados, mas têm a identidade principal &quot;errada&quot; no perfil
-
-A prioridade de namespace desempenha um papel importante em como os fragmentos de evento determinam a identidade principal.
-
-* Depois de definir e salvar suas [configurações de identidade](./identity-settings-ui.md) para uma determinada sandbox, o Perfil usará a [prioridade de namespace](namespace-priority.md#real-time-customer-profile-primary-identity-determination-for-experience-events) para determinar a identidade principal. No caso de identityMap, o perfil não usará mais o sinalizador `primary=true`.
-* Embora o Perfil não se refira mais a esse sinalizador, outros serviços no Experience Platform podem continuar a usar o sinalizador `primary=true`.
-
-Para que [eventos de usuário autenticados](implementation-guide.md#ingest-your-data) sejam vinculados ao namespace de pessoa, todos os eventos autenticados devem conter o namespace de pessoa (CRMID). Isso significa que mesmo depois que um usuário fizer logon, o namespace da pessoa ainda deverá estar presente em cada evento autenticado.
-
-Você pode continuar a ver o sinalizador `primary=true` &#39;eventos&#39; ao pesquisar um perfil no visualizador de perfil. No entanto, isso é ignorado e não será usado pelo Perfil.
-
-As AAIDs são bloqueadas por padrão. Portanto, se você estiver usando o [conector de origem do Adobe Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md), certifique-se de que a ECID tenha uma prioridade maior do que a ECID, para que os eventos não autenticados tenham uma identidade principal de ECID.
-
-**Etapas de solução de problemas**
-
-* Para validar se os eventos autenticados contêm a pessoa e o namespace do cookie, leia as etapas descritas na seção sobre [solução de problemas de erros relacionados à não assimilação de dados no Serviço de Identidade](#my-identities-are-not-getting-ingested-into-identity-service).
-* Para validar se os eventos autenticados têm a identidade principal do namespace de pessoa (por exemplo, CRMID), pesquise o namespace de pessoa no visualizador de perfil usando a política de mesclagem sem compilação (essa é a política de mesclagem que não usa gráfico privado). Esta pesquisa só retornará eventos associados ao namespace de pessoa.
-
 ## Problemas relacionados ao comportamento do gráfico {#graph-behavior-related-issues}
 
 Esta seção descreve problemas comuns que podem ser encontrados em relação ao comportamento do gráfico de identidade.
 
-### A identidade está sendo vinculada à pessoa &quot;errada&quot;
+### ExperienceEvents não autenticados estão sendo anexados ao perfil autenticado incorreto
 
 O algoritmo de otimização de identidade respeitará [os links estabelecidos mais recentemente e removerá os links mais antigos](./identity-optimization-algorithm.md#identity-optimization-algorithm-details). Portanto, é possível que, uma vez habilitado esse recurso, as ECIDs possam ser reatribuídas (vinculadas novamente) de uma pessoa a outra. Para entender o histórico de como uma identidade é vinculada ao longo do tempo, siga as etapas abaixo:
 
@@ -209,11 +209,11 @@ O algoritmo de otimização de identidade respeitará [os links estabelecidos ma
 
 Primeiro, você deve coletar as seguintes informações:
 
-* O símbolo de identidade (namespaceCode) do namespace de cookie (por exemplo, ECID) e o namespace de pessoa (por exemplo, CRMID) que foram enviados.
-   * Para implementações do SDK da Web, geralmente esses são os namespaces incluídos no identityMap.
-   * Para implementações do conector de origem do Analytics, esse é o identificador de cookie incluído no identityMap. O identificador de pessoa é um campo eVar marcado como uma identidade.
-* O conjunto de dados em que o evento foi enviado (dataset_name).
-* O valor de identidade do namespace do cookie a ser pesquisado (identity_value).
+1. O símbolo de identidade (namespaceCode) do namespace de cookie (por exemplo, ECID) e o namespace de pessoa (por exemplo, CRMID) que foram enviados.
+1.1. Para implementações do SDK da Web, esses são geralmente os namespaces incluídos no identityMap.
+1.2. Para implementações do conector de origem do Analytics, esses são os identificadores de cookies incluídos no identityMap. O identificador de pessoa é um campo eVar marcado como uma identidade.
+2. O conjunto de dados em que o evento foi enviado (dataset_name).
+3. O valor de identidade do namespace do cookie a ser pesquisado (identity_value).
 
 Os símbolos de identidade (namespaceCode) fazem distinção entre maiúsculas e minúsculas. Para recuperar todos os símbolos de identidade de um determinado conjunto de dados no identityMap, execute a seguinte consulta:
 
@@ -241,7 +241,7 @@ Se você não souber o valor de identidade do identificador de cookie e quiser p
 
 >[!ENDTABS]
 
-Em seguida, examine a associação do namespace do cookie em ordem de carimbo de data e hora, executando a seguinte query:
+Agora que você identificou os valores de cookie vinculados a várias IDs de pessoa, pegue um dos resultados e use-o na seguinte consulta para obter uma exibição cronológica de quando esse valor de cookie foi vinculado a um identificador de pessoa diferente:
 
 >[!BEGINTABS]
 
@@ -368,6 +368,13 @@ Os principais pontos a serem destacados são os seguintes:
    * Por exemplo, se houver uma condição de espera entre as ações e as transferências da ECID durante o período de espera, um perfil diferente poderá ser direcionado.
    * Com esse recurso, a ECID nem sempre está associada a um perfil.
    * A recomendação é iniciar as jornadas com namespaces de pessoa (CRMID).
+
+>[!TIP]
+>
+>O Jornada deve procurar um perfil com namespaces exclusivos porque um namespace não exclusivo pode ser reatribuído a outro usuário.
+>
+>* As ECIDs e os namespaces de email/telefone não exclusivos podem mudar de uma pessoa para outra.
+>* Se uma jornada tiver uma condição de espera e se esses namespaces não exclusivos forem usados para pesquisar um perfil em uma jornada, a mensagem de jornada poderá ser enviada à pessoa incorreta.
 
 ## Prioridade do namespace
 

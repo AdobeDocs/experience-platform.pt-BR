@@ -4,9 +4,9 @@ description: Saiba como criar configurações de sequência de dados dinâmicas 
 hide: true
 hidefromtoc: true
 badge: label="Beta" type="Informative"
-source-git-commit: 86416dc11f92a774cda5d95365d3981a637a5595
+source-git-commit: 615318744c233930fb9bc20e55ff42c3a396e651
 workflow-type: tm+mt
-source-wordcount: '576'
+source-wordcount: '577'
 ht-degree: 1%
 
 ---
@@ -57,7 +57,7 @@ Depois de [criar uma sequência de dados](configure.md) e [adicionar um serviço
 
    ![Imagem da interface de usuário dos fluxos de dados mostrando a regra de configuração dinâmica.](assets/configure-dynamic-datastream/drag-resources.png)
 
-1. Na seção **[!UICONTROL Configuração]**, alterne os serviços que deseja habilitar ou desabilitar para cada regra, dependendo se deseja que os dados sejam enviados para cada serviço. Se você desativar a alternância, a regra será desabilitada e *todos os dados* serão enviados para o serviço upstream.
+1. Na seção **[!UICONTROL Configuração]**, alterne os serviços que deseja habilitar ou desabilitar para cada regra, dependendo se deseja que os dados sejam enviados para cada serviço. Se você desativar a alternância, o roteamento do serviço será desabilitado e *nenhum dado* será enviado ao serviço upstream.
 
    ![Imagem da interface de usuário dos fluxos de dados mostrando a regra de configuração dinâmica.](assets/configure-dynamic-datastream/enable-service.png)
 

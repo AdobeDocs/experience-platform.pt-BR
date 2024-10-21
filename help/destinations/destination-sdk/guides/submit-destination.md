@@ -2,9 +2,9 @@
 description: Esta página fornece todas as informações necessárias para enviar para revisão um destino produzido criado por meio do Destination SDK.
 title: Enviar para análise um destino produzido criado no Destination SDK
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
-source-git-commit: 2c778f98815af87453e84f24ba8bf077774349a1
+source-git-commit: 756c14c67e349a9ca906c027a07766e952485525
 workflow-type: tm+mt
-source-wordcount: '1032'
+source-wordcount: '1052'
 ht-degree: 0%
 
 ---
@@ -32,6 +32,7 @@ Esta página lista todas as informações que você precisa fornecer ao enviar o
 * Uma descrição dos casos de uso que seu destino resolve. Isso só será necessário se você estiver enviando uma nova configuração de destino.
 * Uma descrição do motivo para o envio do seu destino. Isso só será necessário se você estiver atualizando uma configuração de destino existente.
 * Teste os resultados após usar o endpoint da API de destino de teste para executar uma chamada HTTP no destino. Compartilhe com o Adobe uma chamada de API feita para o endpoint de destino e a resposta da API recebida do endpoint de destino.
+* Uma gravação de tela que mostra a experiência do usuário para alguém se conectar ao seu destino e prosseguir com as etapas de ativação.
 * Requisitos adicionais para destinos baseados em arquivo:
    * Compartilhe uma solicitação e uma amostra de resposta após usar a API de teste para [testar seu destino baseado em arquivo com perfis de amostra](../testing-api/batch-destinations/file-based-destination-testing-api.md).
    * Anexe um arquivo de amostra gerado pelo destino e exportado para o local de armazenamento.

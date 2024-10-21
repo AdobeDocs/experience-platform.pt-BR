@@ -2,9 +2,9 @@
 title: Guia de implementação do Identity Service
 description: Saiba como os dados fornecidos ao Adobe Experience Platform são processados antes de serem usados pelo Serviço de identidade para criar gráficos de identidade.
 exl-id: c961bbf6-6b46-470f-a671-93ff4173876c
-source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
+source-git-commit: 4ba25ed684ff126ab1c4f1a33e6503f0342e8720
 workflow-type: tm+mt
-source-wordcount: '581'
+source-wordcount: '600'
 ht-degree: 0%
 
 ---
@@ -46,6 +46,7 @@ Por exemplo, ao rotular campos de número de telefone como campos de identidade,
 >
 >* Campos de tipo de matriz e mapa não são aceitos e não podem ser marcados e rotulados como campos de identidade.
 >* O namespace das identidades resultantes é fornecido no momento em que o campo é rotulado.
+>* Um campo pode ser marcado como uma identidade, desde que esse campo não esteja sob um objeto de matriz.
 
 Para obter mais informações, leia o guia no guia em [definindo campos de identidade na interface](../xdm/ui/fields/identity.md).
 

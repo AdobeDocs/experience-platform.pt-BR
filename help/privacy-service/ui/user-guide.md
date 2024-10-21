@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Gerenciar processos de privacidade na interface do Privacy Service
 description: Saiba como usar a interface do usuário do Privacy Service para coordenar e monitorar solicitações de privacidade em vários aplicativos Experience Cloud.
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
-source-git-commit: 25c173e22f2aa4922aed89f7c9721e2303d5d4b9
+source-git-commit: 0a8d7c4414f6091025d36ed85dc09e057ee24df9
 workflow-type: tm+mt
 source-wordcount: '1765'
 ht-degree: 11%
@@ -52,7 +52,7 @@ O [!DNL Privacy Service] dá suporte a solicitações de trabalho para vários r
 | [!UICONTROL MCDPA_USA (Montana)] | O [!DNL Montana Consumer Data Privacy Act] |
 | [!UICONTROL NDPA_USA (Nebraska)] | O [!DNL Nebraska Data Protection Act] |
 | [!UICONTROL NZPA_NZL (Nova Zelândia)] | Nova Zelândia: [!DNL Privacy Act] |
-| [!UICONTROL NHPA_USA (New Hampshire)] | O [!DNL New Hampshire Data Privacy Act] |
+| [!UICONTROL NHPA_USA (New Hampshire)] | O [!DNL New Hampshire Privacy Act] |
 | [!UICONTROL NJDPA_USA (Nova Jersey)] | O [!DNL New Jersey Data Protection Act] |
 | [!UICONTROL OCPA EUA (Oregon)] | O [!DNL Oregon Consumer Privacy Act] |
 | [!UICONTROL PDPA_THA (Tailândia)] | Da Tailândia: [!DNL Personal Data Protection Act] |

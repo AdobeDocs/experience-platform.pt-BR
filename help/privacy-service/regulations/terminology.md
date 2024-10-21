@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Terminologia dos regulamentos de privacidade
 description: Este documento fornece definições para termos-chave relacionados a regulamentos de privacidade compatíveis com o Adobe Experience Cloud.
 exl-id: 9c0a7d26-0571-41d4-8cf5-6356025d51ef
-source-git-commit: c4ca3dc975b13e2dce2e12784480e53bd0c4ee02
+source-git-commit: 0a8d7c4414f6091025d36ed85dc09e057ee24df9
 workflow-type: tm+mt
 source-wordcount: '2301'
 ht-degree: 1%
@@ -113,7 +113,7 @@ Este documento fornece definições para termos-chave relacionados a regulamento
 
 **[!DNL Nebraska Data Protection Act]**: Uma lei de privacidade que concede aos nebraskenses o direito de acessar, corrigir, excluir e recusar a venda de seus dados pessoais. Ela se aplica às empresas que atendem a limites específicos de processamento de dados e de receita. O NDPA também exige que as empresas implementem medidas razoáveis de segurança de dados e oferece um período de cura de 30 dias para resolver violações antes que as penalidades sejam aplicadas.
 
-**[!DNL New Hampshire Data Privacy Act]**: essa regulamentação protege os dados pessoais dos residentes de New Hampshire concedendo-lhes direitos de acesso, exclusão e transferência de seus dados. Ele exige que as empresas divulguem suas práticas de coleta e compartilhamento de dados e permite que os consumidores recusem a venda de dados. O NHDPA se aplica a empresas que atendem a limites de processamento de dados especificados.
+**[!DNL New Hampshire Privacy Act]**: essa regulamentação protege os dados pessoais dos residentes de New Hampshire concedendo-lhes direitos de acesso, exclusão e transferência de seus dados. Ele exige que as empresas divulguem suas práticas de coleta e compartilhamento de dados e permite que os consumidores recusem a venda de dados. O NHDPA se aplica a empresas que atendem a limites de processamento de dados especificados.
 
 **[!DNL New Jersey Data Protection Act]**: uma abrangente lei de privacidade estadual que concede aos residentes de Nova Jersey direitos de acesso, correção e exclusão de dados pessoais. Ele inclui mecanismos de recusa para venda de dados e publicidade direcionada. A NJDPA se aplica às empresas que processam grandes volumes de dados de consumidores e requer transparência no modo como as empresas lidam com informações pessoais.
 

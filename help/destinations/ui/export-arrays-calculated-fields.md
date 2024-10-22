@@ -1,21 +1,21 @@
 ---
-title: Usar campos calculados para exportar matrizes como cadeias de caracteres
+title: Usar campos calculados para exportar matrizes como strings
 type: Tutorial
 description: Saiba como usar campos calculados para exportar matrizes do Real-Time CDP para destinos de armazenamento em nuvem como cadeias de caracteres.
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
 source-git-commit: 849d42e36921e60b6ac3a5e89336b954e64a35d7
 workflow-type: tm+mt
 source-wordcount: '1556'
-ht-degree: 0%
+ht-degree: 7%
 
 ---
 
-# Usar campos calculados para exportar matrizes como cadeias de caracteres{#use-calculated-fields-to-export-arrays-as-strings}
+# Usar campos calculados para exportar matrizes como strings{#use-calculated-fields-to-export-arrays-as-strings}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_flat_files"
->title="Suporte a arrays de exportação"
->abstract="<p>Use o controle **Adicionar campo calculado** para exportar matrizes de valores int, de cadeia de caracteres, booleano e de objetos do Experience Platform para o destino de armazenamento na nuvem desejado.</p><p> Matrizes devem ser exportadas como cadeias de caracteres usando a função `array_to_string`. Consulte a documentação para obter exemplos extensos e obter mais funções compatíveis.</p>"
+>title="Suporte a matrizes de exportação"
+>abstract="<p>Use o controle **Adicionar campo calculado** para exportar matrizes simples de valores em números inteiros, strings ou booleanos da Experience Platform para o destino desejado no armazenamento na nuvem.</p><p> Matrizes devem ser exportadas como strings usando a função `array_to_string`. Consulte a documentação para ver exemplos abrangentes e as funções compatíveis.</p>"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html?lang=pt-BR#examples" text="Exemplos"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html?lang=pt-BR#known-limitations" text="Limitações conhecidas"
 
@@ -79,12 +79,12 @@ Observe as seguintes limitações conhecidas que se aplicam atualmente a essa fu
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_control"
->title="Ativar esquema de saída hierárquico"
+>title="Habilitar esquema de saída hierárquico"
 >abstract="Ative se quiser exportar estruturas hierárquicas como matrizes."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_calculated_field_disabled"
->title="Adicionar campos calculados desabilitado"
+>title="Controle Adicionar campos calculados desabilitado"
 >abstract="Este controle está desabilitado porque você optou por exportar estruturas simples ao se conectar ao destino."
 
 Na etapa de mapeamento do fluxo de trabalho de ativação para destinos de armazenamento na nuvem, selecione **[!UICONTROL Adicionar campo calculado]**.

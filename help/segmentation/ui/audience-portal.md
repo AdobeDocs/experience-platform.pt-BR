@@ -5,7 +5,7 @@ exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
 source-git-commit: f74e91ba1fe2be58e1e933fa81f590566f02fff7
 workflow-type: tm+mt
 source-wordcount: '4320'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -212,7 +212,7 @@ A lista de filtros disponíveis é exibida.
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_browse_flexibleaudienceevaluation"
->title="Limites flexíveis de avaliação do público-alvo"
+>title="Limites de avaliação de público-alvo flexível"
 >abstract="Você pode avaliar até 20 públicos-alvo em uma única execução de avaliação de público-alvo flexível.<br/><br/>Além disso, embora o trabalho de avaliação seja executado o mais rápido possível, pode haver atrasos no sistema, pois as avaliações sob demanda <b>não podem</b> ser executadas simultaneamente com outra avaliação sob demanda ou em lote."
 
 Além disso, você pode selecionar até 25 públicos diferentes e executar várias ações nesses públicos. Essas ações incluem [mover para uma pasta](#folders), [editar ou aplicar uma marca](#tags), [aplicar rótulos de acesso](../../access-control/abac/ui/labels.md) e [excluir](#browse).

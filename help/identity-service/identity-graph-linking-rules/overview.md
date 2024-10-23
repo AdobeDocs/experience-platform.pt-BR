@@ -2,7 +2,7 @@
 title: Regras de vinculação do gráfico de identidade
 description: Saiba mais sobre as regras de vinculação de gráficos de identidade no Serviço de identidade.
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: cfe0181104f09bfd91b22d165c23154a15cd5344
+source-git-commit: 5092421ed8d0ff61fb3ed7f0849d2271f1fa144c
 workflow-type: tm+mt
 source-wordcount: '1424'
 ht-degree: 2%
@@ -98,11 +98,11 @@ Você pode configurar um namespace para ser exclusivo usando o espaço de trabal
 
 Considere o seguinte cenário:
 
-* Scott usa um tablet e abre seu navegador Google Chrome para ir até nike<span>.com, onde ele entra e navega por novos sapatos de basquete.
+* Scott usa um tablet e abre seu navegador Google Chrome para ir para acme<span>.com, onde ele entra e navega por novos sapatos de basquete.
    * Nos bastidores, esse cenário registra as seguintes identidades:
       * Um namespace e valor de ECID para representar o uso do navegador
       * Um namespace e valor CRMID para representar o usuário autenticado (Scott entrou com sua combinação de nome de usuário e senha).
-* Seu filho Peter usa o mesmo tablet e também usa o Google Chrome para ir até nike<span>.com, onde ele entra com sua própria conta para procurar equipamentos de futebol.
+* Seu filho Peter usa o mesmo tablet e também usa o Google Chrome para ir para acme<span>.com, onde ele entra com sua própria conta para procurar equipamentos de futebol.
    * Nos bastidores, esse cenário registra as seguintes identidades:
       * O mesmo namespace e valor de ECID para representar o navegador.
       * Um novo namespace e valor de CRMID para representar o usuário autenticado.

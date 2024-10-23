@@ -2,9 +2,9 @@
 title: Guia de implementação para regras de vinculação do gráfico de identidade
 description: Saiba mais sobre as etapas recomendadas a serem seguidas ao implementar seus dados com configurações de regras de vinculação de gráfico de identidade.
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 5d1bcaa84875e55595996253fb72cf768af16e05
+source-git-commit: 720ffa1ca0ee69cfc802cd50aef26b6f38d2142c
 workflow-type: tm+mt
-source-wordcount: '1634'
+source-wordcount: '1668'
 ht-degree: 2%
 
 ---
@@ -23,7 +23,7 @@ Estrutura passo a passo:
 1. [Pré-requisitos completos para a implementação](#prerequisites-for-implementation)
 2. [Criar os namespaces de identidade necessários](#namespace)
 3. [Use a ferramenta de simulação de gráficos para se familiarizar com o algoritmo de otimização de identidade](#graph-simulation)
-4. [Use a ferramenta de configurações de identidade para designar seus namespaces exclusivos e configurar as classificações de prioridade para seus namespaces](#identity-settings)
+4. [Use a interface das configurações de identidade para designar seus namespaces exclusivos e configurar classificações de prioridade para seus namespaces](#identity-settings)
 5. [Criar um esquema do Experience Data Model (XDM)](#schema)
 6. [Criar um conjunto de dados](#dataset)
 7. [Assimilar seus dados no Experience Platform](#ingest)
@@ -183,9 +183,13 @@ Ao criar configurações diferentes, você pode usar a ferramenta de simulação
 
 ## Definir configurações de identidade {#identity-settings}
 
-Assim que tiver uma ideia melhor de como deseja que o gráfico se comporte, navegue até a [ferramenta de configurações de identidade](./identity-settings-ui.md) no espaço de trabalho da interface do usuário do Serviço de Identidade.
+Assim que tiver uma ideia melhor de como deseja que o gráfico se comporte, navegue até a [interface de configurações de identidade](./identity-settings-ui.md) no espaço de trabalho da interface do usuário do Serviço de Identidade. Para acessar a interface de configurações de identidade, selecione **[!UICONTROL Identidades]** na navegação à esquerda e selecione **[!UICONTROL Configurações]**.
 
-Use a ferramenta de configurações de identidade para designar seus namespaces exclusivos e configurar seus namespaces por ordem de prioridade. Quando terminar de aplicar as configurações, aguarde pelo menos seis horas para continuar a assimilar dados, pois levará pelo menos seis horas para que as novas configurações sejam refletidas no Serviço de identidade.
+![A página de navegação das identidades com o botão de configurações realçado.](../images/implementation/settings.png)
+
+Use a interface de configurações de identidade para designar seus namespaces exclusivos e configurar seus namespaces por ordem de prioridade. Quando terminar de aplicar as configurações, aguarde pelo menos seis horas para continuar a assimilar dados, pois levará pelo menos seis horas para que as novas configurações sejam refletidas no Serviço de identidade.
+
+Para obter mais informações, leia o [guia da interface do usuário de configurações de identidade](./identity-settings-ui.md).
 
 ## Criar um esquema do XDM {#schema}
 

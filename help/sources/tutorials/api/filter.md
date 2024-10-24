@@ -2,7 +2,7 @@
 title: Filtrar dados em nível de linha para uma Source usando a API do serviço de fluxo
 description: Este tutorial aborda as etapas sobre como filtrar dados no nível da origem usando a API do Serviço de fluxo
 exl-id: 224b454e-a079-4df3-a8b2-1bebfb37d11f
-source-git-commit: 544bb7b5aff437fd49c30ac3d6261f103a609cac
+source-git-commit: e8e8914c41d7a083395b0bf53aaac8021fcf9e9a
 workflow-type: tm+mt
 source-wordcount: '1820'
 ht-degree: 5%
@@ -687,12 +687,12 @@ Para atualizar sua conexão de origem, faça uma solicitação PATCH para o pont
 **Formato da API**
 
 ```http
-GET /sourceConnections/{SOURCE_CONNECTION_ID}
+PATCH /sourceConnections/{SOURCE_CONNECTION_ID}
 ```
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{SOURCE_CONNECTION_ID}` | A ID da conexão de origem que você deseja recuperar. |
+| `{SOURCE_CONNECTION_ID}` | A ID da conexão de origem que você deseja atualizar |
 
 +++Solicitação
 

@@ -2,9 +2,9 @@
 title: Prioridade do namespace
 description: Saiba mais sobre a prioridade de namespace no Serviço de identidade.
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: b50633a8518f32051549158b23dfc503db255a82
+source-git-commit: e8e8914c41d7a083395b0bf53aaac8021fcf9e9a
 workflow-type: tm+mt
-source-wordcount: '1700'
+source-wordcount: '1689'
 ht-degree: 2%
 
 ---
@@ -109,11 +109,11 @@ Dadas as configurações descritas acima, as ações do usuário e a determinaç
 
 | Ação do usuário (Evento de experiência) | Estado de autenticação | Fonte de dados | Namespaces no evento | Namespace da identidade primária |
 | --- | --- | --- | --- | --- |
-| Exibir página de oferta de cartão de crédito | Não autenticado (anônimo) | Web SDK | {ECID} | ECID |
-| Exibir página de ajuda | Não autenticado | SDK móvel | {ECID, IDFA} | IDFA |
-| Exibir saldo de conta corrente | Autenticado | Web SDK | {CRMID, ECID} | CRMID |
-| Inscrever-se para obter empréstimo residencial | Autenticado | Conector de origem do Analytics | {CRMID, ECID, AAID} | CRMID |
-| Transferência de US$ 1.000 da verificação para a economia | Autenticado | SDK móvel | {CRMID, GAID, ECID} | CRMID |
+| Exibir página de oferta de cartão de crédito | Não autenticado (anônimo) | Web SDK | `{ECID}` | ECID |
+| Exibir página de ajuda | Não autenticado | SDK móvel | `{ECID, IDFA}` | IDFA |
+| Exibir saldo de conta corrente | Autenticado | Web SDK | `{CRMID, ECID}` | CRMID |
+| Inscrever-se para obter empréstimo residencial | Autenticado | Conector de origem do Analytics | `{CRMID, ECID, AAID}` | CRMID |
+| Transferência de US$ 1.000 da verificação para a economia | Autenticado | SDK móvel | `{CRMID, GAID, ECID}` | CRMID |
 
 {style="table-layout:auto"}
 

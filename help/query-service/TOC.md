@@ -5,9 +5,9 @@ breadcrumb-title: Guia do Serviço de consulta
 user-guide-description: Use o SQL padrão para consultar dados no data lake na Experience Platform.
 feature: Queries
 role: User,Developer
-source-git-commit: 67d4bcbf2a055d4427218ba7d98355f09d860a8c
+source-git-commit: 3583f6e0ac72e4f813abd87949cb640d0b20b6e2
 workflow-type: tm+mt
-source-wordcount: '339'
+source-wordcount: '341'
 ht-degree: 22%
 
 ---
@@ -76,6 +76,7 @@ ht-degree: 22%
    - [Modos SSL](./clients/ssl-modes.md)
    - [Aqua Data Studio](clients/aqua-data-studio.md)
    - [DbVisualizer](./clients/dbvisulaizer.md)
+   - [GitHub Copilot](./clients/github-copilot.md)
    - [Jupyter Notebook](clients//jupyter-notebook.md)
    - [Pesquisador](clients/looker.md)
    - [Pótico](clients/postico.md)

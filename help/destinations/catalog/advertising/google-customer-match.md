@@ -3,9 +3,9 @@ keywords: correspondência do cliente do google;correspondência do cliente do G
 title: Conexão de Correspondência de cliente do Google
 description: O Google Customer Match permite usar seus dados online e offline para acessar e reengajar com seus clientes nas propriedades próprias e operadas da Google, como Search, Shopping, Gmail e YouTube.
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 25dc27d890cb2e0e23f8fa797ac9edea929164fd
 workflow-type: tm+mt
-source-wordcount: '1969'
+source-wordcount: '2100'
 ht-degree: 1%
 
 ---
@@ -215,6 +215,20 @@ O hash automático de dados de namespaces sem hash é criado por [!DNL Platform]
 Os dados de origem do atributo não são automaticamente transformados em hash. Quando o campo de origem contiver atributos sem hash, marque a opção **[!UICONTROL Aplicar transformação]** para que [!DNL Platform] coloque os dados em hash automaticamente durante a ativação.
 
 ![Aplicar controle de transformação realçado na etapa Mapeamento do fluxo de trabalho de ativação.](../../assets/ui/activate-segment-streaming-destinations/identity-mapping-gcm-transformation.png)
+
+## Monitorar destino {#monitor-destination}
+
+Depois de se conectar ao destino e estabelecer um fluxo de dados de destino, você pode usar a [funcionalidade de monitoramento](/help/dataflows/ui/monitor-destinations.md) do Real-Time CDP para obter informações abrangentes sobre os registros de perfil ativados para o destino em cada execução de fluxo de dados.
+
+>[!IMPORTANT]
+>
+> A partir de outubro de 2024, o Adobe está lançando uma atualização para aumentar a precisão dos relatórios para destinos de transmissão. Esse aprimoramento garante um melhor alinhamento entre os relatórios da Experience Platform e das plataformas de destino.
+>
+> Antes desta atualização, **[!UICONTROL Falha nas identidades]** incluiu todas as tentativas de ativação. Após essa atualização, somente a última tentativa de ativação será incluída na contagem total.
+>
+> Atualmente, esse aprimoramento se aplica ao [destino de Correspondência de cliente do Google](google-customer-match.md), mas será gradualmente implantado em outros destinos de streaming de Experience Platform.
+> Após esse aprimoramento, os usuários desse destino podem observar uma queda esperada em sua contagem de **[!UICONTROL Falha nas identidades]**.
+
 
 ## Verificar se a ativação do público-alvo foi bem-sucedida {#verify-activation}
 

@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Monitorar fluxos de dados para destinos na interface do
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 27802292a7a06f2edaea9efc39d4a63507e0e7e1
+source-git-commit: 25dc27d890cb2e0e23f8fa797ac9edea929164fd
 workflow-type: tm+mt
-source-wordcount: '3542'
-ht-degree: 10%
+source-wordcount: '3639'
+ht-degree: 9%
 
 ---
 
@@ -94,6 +94,17 @@ Cada execução de fluxo de dados individual mostra os seguintes detalhes:
 - **[!UICONTROL Identidades ativadas]**: o número total de identidades de perfil ativadas com êxito para o destino selecionado como parte da execução do fluxo de dados. Essa métrica inclui identidades que são criadas, atualizadas e removidas de públicos-alvo exportados.
 - **[!UICONTROL Identidades excluídas]**: o número total de identidades de perfil excluídas da ativação com base em atributos ausentes e violação de consentimento.
 - **[!UICONTROL Falha nas identidades]** O número total de identidades de perfil que não estão ativadas para o destino devido a erros.
+
+  >[!IMPORTANT]
+  >
+  > A partir de outubro de 2024, o Adobe está lançando uma atualização para aumentar a precisão dos relatórios para destinos de transmissão. Esse aprimoramento garante um melhor alinhamento entre os relatórios da Experience Platform e das plataformas de destino.
+  >
+  > Antes desta atualização, **[!UICONTROL Falha nas identidades]** incluiu todas as tentativas de ativação. Após essa atualização, somente a última tentativa de ativação será incluída na contagem total.
+  > 
+  > Atualmente, esse aprimoramento se aplica ao [destino de Correspondência de cliente do Google](../../destinations/catalog/advertising/google-customer-match.md), mas será gradualmente implantado em outros destinos de streaming de Experience Platform.
+  > Após esse aprimoramento, os usuários do [destino de Correspondência do Cliente do Google](../../destinations/catalog/advertising/google-customer-match.md) poderão observar uma queda esperada em sua contagem de **[!UICONTROL Falha nas identidades]**.
+
+
 - **[!UICONTROL Taxa de ativação]**: a porcentagem de identidades recebidas que foram ativadas ou ignoradas com êxito. A fórmula a seguir demonstra como esse valor é calculado:
   ![Fórmula da taxa de ativação.](../assets/ui/monitor-destinations/activation-rate-formula.png)
 - **[!UICONTROL Status]**: representa o estado em que o fluxo de dados está: [!UICONTROL Concluído] ou [!UICONTROL Processando]. [!UICONTROL Concluído] significa que todas as identidades para a execução do fluxo de dados correspondente foram exportadas dentro do período de uma hora. [!UICONTROL Processando] significa que a execução do fluxo de dados ainda não foi concluída.
@@ -205,7 +216,7 @@ Para acessar o painel de [!UICONTROL Monitoramento], selecione **[!UICONTROL Mon
 
 Use o painel [!UICONTROL Destinos] para ter uma ideia geral da integridade dos fluxos de ativação. Comece obtendo insights em um nível agregado para todos os destinos de lote e transmissão e depois analise detalhadamente as exibições de fluxos de dados, execuções de fluxo de dados e públicos ativados para obter uma análise detalhada dos dados de ativação. As telas no painel [!UICONTROL Monitoramento] fornecem insights acionáveis por meio de métricas e descrições de erros para ajudá-lo a solucionar problemas que possam surgir em seus cenários de ativação.
 
-Você pode filtrar as informações exibidas por tipo de dados - clientes, contas (somente para a edição B2B do Adobe Real-Time CDP), clientes potenciais e enriquecimento da conta. Leia mais sobre essas opções no [guia do painel de monitoramento](/help/dataflows/ui/monitor.md#monitoring-dashboard-overview).
+É possível filtrar as informações exibidas por tipo de dados - clientes, contas (somente para o Adobe Real-Time CDP B2B edition), clientes potenciais e enriquecimento da conta. Leia mais sobre essas opções no [guia do painel de monitoramento](/help/dataflows/ui/monitor.md#monitoring-dashboard-overview).
 
 ![Filtro de tipo de dados realçado na exibição do painel de monitoramento.](/help/dataflows/assets/ui/monitor-destinations/add-data-filter.png)
 

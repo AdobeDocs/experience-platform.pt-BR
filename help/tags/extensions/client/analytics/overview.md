@@ -2,10 +2,10 @@
 title: Visão geral da extensão do Adobe Analytics
 description: Saiba mais sobre a extensão de tags do Adobe Analytics na Adobe Experience Platform.
 exl-id: 33ebdcb6-9bf0-44e6-b016-e93fe78af578
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 764a9a29df0be6064d36f952d2e8a61acfa9bd33
 workflow-type: tm+mt
-source-wordcount: '2105'
-ht-degree: 91%
+source-wordcount: '2331'
+ht-degree: 83%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 91%
 
 >[!NOTE]
 >
->O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleta de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 Use essa referência para obter informações sobre como configurar a extensão do Adobe Analytics e as opções disponíveis ao usar esta extensão para criar uma regra.
 
@@ -289,7 +289,19 @@ A extensão do Analytics fornece as seguintes ações:
 
 ### Definir variáveis {#set-variables}
 
-Importante: usar a ação &quot;variáveis definidas&quot; não enviará o beacon. Você deve usar a ação &quot;enviar beacon&quot;.
+>[!IMPORTANT]
+>
+>Não é possível enviar o sinal com a ação &quot;definir variáveis&quot;. Para enviar o beacon, selecione a ação &quot;enviar beacon&quot;.
+
+Você pode escolher entre duas exibições diferentes em **Definir variáveis**:
+
+>[!BEGINTABS]
+
+>[!TAB Fornecer atributos individuais]
+
+Nesta exibição, você pode especificar diferentes variáveis, como `eVars`, `Props`, `Events`.
+
+![A página de exibição de formulário do Adobe Analytics, onde os atributos adicionais estão listados.](../../../images/adobe_analytics_extension_form_view.png)
 
 #### eVars
 
@@ -319,6 +331,25 @@ Defina um ou mais [eventos](https://experienceleague.adobe.com/docs/analytics/im
 1. (Opcional) Selecione ou especifique um elemento de dados usado para a [serialização de eventos](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/events/event-serialization.html?lang=pt-BR).
 1. (Opcional) Selecione **[!UICONTROL Adicionar evento]** para definir mais eventos.
 1. Selecione **[!UICONTROL Manter alterações]**.
+
+>[!TAB Exibição JSON]
+
+Nesta exibição, você pode exibir e editar uma versão JSON da ação **Definir Variáveis**.
+
+![Uma exibição que representa a configuração atual das variáveis definidas no formato JSON na extensão do Adobe Analytics.](../../../images/adobe_analytics_extension_json_view.png)
+
+#### JSON
+
+Na ação **Definir variáveis**, use o modo de exibição JSON para carregar, copiar ou baixar dados JSON e armazená-los em seu dispositivo.
+
+No entanto, existem algumas limitações:
+
+* **Código personalizado**: se você usar o código personalizado para preencher variáveis, ele não aparecerá no modo de exibição JSON. Em vez disso, um alerta é exibido ao visualizar, copiar ou baixar o JSON, indicando que as modificações feitas por meio do código personalizado não serão incluídas.
+* **Copiar do atributo de URL**: a cópia de um valor de uma URL não tem suporte na exibição JSON. Um alerta é exibido para indicar essa limitação.
+* **Variáveis desativadas**: as variáveis desativadas ou obsoletas são mostradas na exibição JSON e um alerta é exibido informando que as variáveis desativadas foram definidas.
+* **Elementos de Dados**: os elementos de dados são representados na exibição JSON. Se os dados JSON forem copiados para outra propriedade de tags, os elementos de dados correspondentes poderão não ser definidos lá e não serão resolvidos corretamente quando forem executados.
+
+>[!ENDTABS]
 
 #### Hierarquia
 

@@ -3,9 +3,9 @@ keywords: personalização do target, destino, destino do experience platform ta
 title: Conexão com o Adobe Target
 description: O Adobe Target é um aplicativo que fornece recursos de personalização e experimentação em tempo real e alimentados por IA em todas as interações de entrada de clientes em sites, aplicativos móveis e muito mais.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: 14dccb993b38ca352c6de3ed851bafe7c44ca631
+source-git-commit: dae0cb108c62b078d0c7dd5bec466091d4937c53
 workflow-type: tm+mt
-source-wordcount: '1755'
+source-wordcount: '1768'
 ht-degree: 10%
 
 ---
@@ -126,7 +126,8 @@ Ao [configurar](../../ui/connect-destination.md) este destino, você deve fornec
 
   >[!IMPORTANT]
   >
-  >A ID do fluxo de dados é exclusiva para cada conexão de destino do Adobe Target. Se você precisar mapear os mesmos públicos-alvo para várias sequências de dados, [crie uma nova conexão de destino](../../ui/connect-destination.md) para cada ID de sequência de dados e passe pelo [fluxo de ativação de público-alvo](#activate).
+  >A ID do fluxo de dados é exclusiva para cada conexão de destino do Adobe Target. Não é possível usar a mesma ID de sequência de dados para várias conexões de destino do Adobe Target.
+  >Se você precisar mapear os mesmos públicos-alvo para várias sequências de dados, [crie uma nova conexão de destino](../../ui/connect-destination.md) para cada ID de sequência de dados e passe pelo [fluxo de ativação de público-alvo](#activate).
 
    * **[!UICONTROL Nenhum]**: selecione essa opção se precisar configurar a personalização do Adobe Target, mas não puder implementar o [SDK da Web do Experience Platform](/help/web-sdk/home.md). Ao usar essa opção, os públicos-alvo exportados do Experience Platform para o Target serão compatíveis apenas com a personalização da próxima sessão e a segmentação de borda será desativada. Consulte a tabela na seção [casos de uso suportados](#supported-use-cases) para obter uma comparação dos casos de uso disponíveis por tipo de implementação.
 

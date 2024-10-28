@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform;perfil;perfil do cliente em tempo real;políticas de mesclagem;interface do usuário;carimbo de data/hora ordenado;precedência do conjunto de dados
 title: Guia da interface de políticas de mesclagem
 type: Documentation
-description: Ao reunir dados de várias fontes no Experience Platform, as políticas de mesclagem são as regras que a Platform usa para determinar como os dados serão priorizados e quais dados serão combinados para criar a visualização unificada. Este guia fornece instruções passo a passo para trabalhar com políticas de mesclagem usando a interface do usuário do Adobe Experience Platform.
+description: Saiba como trabalhar com políticas de mesclagem usando a interface do usuário do Adobe Experience Platform.
 exl-id: 0489217a-6a53-428c-a531-fd0a0e5bb71f
-source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
+source-git-commit: 400b20578e9a13fa2f41462b188707a34a462ea9
 workflow-type: tm+mt
-source-wordcount: '2327'
+source-wordcount: '2455'
 ht-degree: 0%
 
 ---
@@ -30,13 +29,20 @@ Este guia requer uma compreensão funcional de vários recursos importantes do [
 
 ## Exibir políticas de mesclagem {#view-merge-policies}
 
-Na interface do usuário do [!DNL Experience Platform], você pode começar a trabalhar com políticas de mesclagem selecionando **[!UICONTROL Perfis]** na navegação à esquerda e selecionando a guia **[!UICONTROL Políticas de mesclagem]**. Essa guia inclui uma lista de todas as políticas de mesclagem existentes para sua organização, bem como detalhes para cada política de mesclagem, incluindo o nome da política, se a política de mesclagem é ou não a política de mesclagem padrão e a classe de esquema à qual a política de mesclagem está relacionada.
+>[!CONTEXTUALHELP]
+>id="platform_errors_uplib_101221_404"
+>title="Política de mesclagem não encontrada"
+>abstract="Isso significa que o Platform não pôde encontrar a política de mesclagem solicitada. Para resolver esse erro, tente uma das seguintes soluções:<ul><li>Verifique se a ID da política de mesclagem correta está listada no URL.</li><li>Verifique se você tem a combinação correta de Organização e sandbox para a política de mesclagem que está tentando acessar.</li></ul>"
 
-![Página de aterrissagem de políticas de mesclagem](../images/merge-policies/landing.png)
+Na interface do usuário do [!DNL Experience Platform], você pode começar a trabalhar com políticas de mesclagem selecionando **[!UICONTROL Perfis]** na navegação à esquerda e selecionando a guia **[!UICONTROL Políticas de mesclagem]**.
 
-Para selecionar quais detalhes estão visíveis ou adicionar outras colunas à exibição, selecione **[!UICONTROL Configurar colunas]** e clique em um nome de coluna para adicioná-lo ou removê-lo do modo de exibição.
+Essa guia inclui uma lista de todas as políticas de mesclagem existentes para sua organização, bem como detalhes para cada política de mesclagem, incluindo o nome da política, se a política de mesclagem é ou não a política de mesclagem padrão e a classe de esquema à qual a política de mesclagem está relacionada.
 
-![](../images/merge-policies/adjust-view.png)
+![A página de navegação das políticas de mesclagem é exibida.](../images/merge-policies/landing.png)
+
+Para selecionar quais detalhes estão visíveis ou adicionar outras colunas à exibição, selecione ![o ícone de configurações de coluna](../../images/icons/column-settings.png) e selecione um nome de coluna para adicioná-lo ou removê-lo da exibição.
+
+![As opções disponíveis para personalizar a página de navegação da política de mesclagem são exibidas.](../images/merge-policies/adjust-view.png)
 
 ## Criar uma política de mesclagem {#create-a-merge-policy}
 
@@ -58,7 +64,7 @@ A primeira etapa do fluxo de trabalho permite configurar a política de mesclage
    * **[!UICONTROL Nenhum]**: não executar a compilação de identidades.
    * **[!UICONTROL Gráfico privado]**: execute a compilação de identidade com base em seu gráfico de identidade privado.
 * **[!UICONTROL Política de mesclagem padrão]**: um botão de alternância que permite selecionar se essa política de mesclagem será ou não o padrão para sua organização. Se o seletor estiver ativado, um aviso será exibido solicitando que você confirme se deseja alterar a política de mesclagem padrão da organização. Consulte a [visão geral das políticas de mesclagem](overview.md) para saber mais sobre políticas de mesclagem padrão.
-  ![](../images/merge-policies/create-make-default.png)
+  ![Um popover que explica o que acontece quando a política de mesclagem é definida como uma política de mesclagem padrão.](../images/merge-policies/create-make-default.png)
 * **[!UICONTROL Política de mesclagem ativa na Edge]**: um botão de alternância que permite selecionar se essa política de mesclagem estará ou não ativa na borda. Para garantir que todos os consumidores de perfil estejam trabalhando com a mesma exibição nas bordas, as políticas de mesclagem podem ser marcadas como ativas na borda. Para que um público-alvo seja ativado na borda (marcado como um público-alvo de borda), ele deve estar vinculado a uma política de mesclagem marcada como ativo na borda. Se um público-alvo estiver **não** vinculado a uma política de mesclagem marcada como ativo na borda, o público-alvo não será marcado como ativo na borda e será marcado como um público de streaming. Além disso, cada sandbox em uma Organização só pode ter **uma** política de mesclagem ativa na borda.
 
 Depois que os campos obrigatórios forem preenchidos, você poderá selecionar **[!UICONTROL Avançar]** para continuar com o fluxo de trabalho.
@@ -69,13 +75,13 @@ Depois que os campos obrigatórios forem preenchidos, você poderá selecionar *
 
 Ao criar ou editar uma política de mesclagem, você pode exibir o esquema de união para a classe de esquema escolhida selecionando **[!UICONTROL Exibir esquema de união]**.
 
-![](../images/merge-policies/view-union-schema.png)
+![O botão &quot;Exibir Esquema de União&quot; está realçado no fluxo de trabalho Nova política de mesclagem.](../images/merge-policies/view-union-schema.png)
 
 Isso abre a caixa de diálogo [!UICONTROL Exibir esquema de união], mostrando todos os esquemas de contribuição, identidades e relações associados ao esquema de união. Você pode usar a caixa de diálogo para explorar o esquema de união da mesma maneira que faria ao acessar a guia [!UICONTROL Esquema de união] na seção [!UICONTROL Perfis] da interface do usuário da Platform.
 
 Para obter informações detalhadas sobre esquemas de união, incluindo como interagir com eles na guia [!UICONTROL Esquema de união] ou na caixa de diálogo [!UICONTROL Exibir esquema de união] mostrada no fluxo de trabalho de políticas de mesclagem, visite o [guia da interface do esquema de união](../ui/union-schema.md).
 
-![](../images/merge-policies/view-union-schema-dialog.png)
+![A caixa de diálogo Exibir esquema de união.](../images/merge-policies/view-union-schema-dialog.png)
 
 ## [!UICONTROL Selecionar conjuntos de dados de perfil] {#select-profile-datasets}
 
@@ -85,7 +91,9 @@ Dependendo do método de mesclagem escolhido, todos os conjuntos de dados do Per
 
 Para obter mais informações sobre métodos de mesclagem, consulte a [visão geral das políticas de mesclagem](overview.md).
 
-### Classificação por carimbo de data e hora {#timestamp-ordered-profile}
+>[!BEGINTABS]
+
+>[!TAB Carimbo de data/hora ordenado]
 
 Selecionar **[!UICONTROL Carimbo de data/hora ordenado]** como o método de mesclagem significa que os atributos dos conjuntos de dados atualizados mais recentemente terão prioridade. Isso se aplica a todos os conjuntos de dados do Perfil.
 
@@ -93,9 +101,9 @@ Selecionar **[!UICONTROL Carimbo de data/hora ordenado]** como o método de mesc
 >
 >O número entre parênteses ao lado de **[!UICONTROL Conjuntos de dados de perfil]** (por exemplo, `(37)` na imagem mostrada) mostra o número total de conjuntos de dados de perfil que serão incluídos.
 
-![](../images/merge-policies/timestamp-ordered.png)
+![Uma imagem que exibe o método de mesclagem ordenada por carimbo de data/hora que está sendo selecionado.](../images/merge-policies/timestamp-ordered.png)
 
-### Prioridade do conjunto de dados {#dataset-precedence-profile}
+>[!TAB Prioridade de conjunto de dados]
 
 Selecionar **[!UICONTROL Prioridade de conjunto de dados]** como método de mesclagem exige que você selecione conjuntos de dados de perfil e os priorize manualmente. Cada conjunto de dados listado também inclui o status do último lote assimilado ou exibe um aviso de que nenhum lote foi assimilado nesse conjunto de dados.
 
@@ -109,37 +117,43 @@ Selecionar **[!UICONTROL Prioridade de conjunto de dados]** como método de mesc
 
 Selecionar um conjunto de dados também atualiza a seção **[!UICONTROL Esquema de união]**, mostrando os campos no esquema de união para os quais cada conjunto de dados contribui com dados. Para obter mais informações sobre esquemas de união, incluindo como interagir com as visualizações na interface, consulte o [guia da interface do esquema de união](../ui/union-schema.md)
 
-![](../images/merge-policies/dataset-precedence.png)
+![Uma imagem que exibe a precedência do conjunto de dados que está sendo selecionado, juntamente com as configurações correspondentes que você precisa escolher se essa opção está selecionada.](../images/merge-policies/dataset-precedence.png)
+
+>[!ENDTABS]
 
 ## [!UICONTROL Selecionar conjuntos de dados ExperienceEvent] {#select-experienceevent-datasets}
 
 A próxima etapa do fluxo de trabalho requer que você selecione conjuntos de dados ExperienceEvent. Esta tela é influenciada pelo método de mesclagem selecionado na tela [[!UICONTROL Selecionar conjuntos de dados do perfil]](#select-profile-datasets).
 
-### Classificação por carimbo de data e hora {#timestamp-ordered-experienceevent}
+>[!BEGINTABS]
+
+>[!TAB Carimbo de data/hora ordenado]
 
 Se você selecionou **[!UICONTROL Carimbo de data e hora ordenado]** como o método de mesclagem para conjuntos de dados de Perfil, os atributos dos conjuntos de dados ExperienceEvent atualizados mais recentemente também terão precedência aqui.
 
 >[!NOTE]
 >
->O número entre parênteses ao lado de **[!UICONTROL conjuntos de dados ExperienceEvent]** (por exemplo, `(20)` na imagem mostrada) mostra o número total de conjuntos de dados ExperienceEvent criados por sua organização que se relacionam à classe de esquema selecionada na tela de configuração da política de mesclagem.
+>O número entre parênteses ao lado de **[!UICONTROL conjuntos de dados ExperienceEvent]** (por exemplo, `(1)` na imagem mostrada) mostra o número total de conjuntos de dados ExperienceEvent criados por sua organização que se relacionam à classe de esquema selecionada na tela de configuração da política de mesclagem.
 
-![](../images/merge-policies/timestamp-experienceevent.png)
+![O número total de conjuntos de dados ExperienceEvent relacionados à classe de esquema é exibido.](../images/merge-policies/timestamp-experienceevent.png)
 
-### Prioridade do conjunto de dados {#dataset-precedence-experienceevent}
+>[!TAB Prioridade de conjunto de dados]
 
 Se você selecionou **[!UICONTROL Prioridade de conjunto de dados]** como o método de mesclagem para conjuntos de dados de Perfil, será necessário selecionar conjuntos de dados ExperienceEvent para incluir. É possível selecionar até 50 conjuntos de dados ExperienceEvent na lista de conjuntos de dados.
 
 >[!NOTE]
 >
->O número entre parênteses ao lado de **[!UICONTROL conjuntos de dados ExperienceEvent]** (por exemplo, `(20)` na imagem mostrada) mostra o número total de conjuntos de dados ExperienceEvent criados por sua organização que se relacionam à classe de esquema selecionada na tela de configuração da política de mesclagem.
+>O número entre parênteses ao lado de **[!UICONTROL conjuntos de dados ExperienceEvent]** (por exemplo, `(1)` na imagem mostrada) mostra o número total de conjuntos de dados ExperienceEvent criados por sua organização que se relacionam à classe de esquema selecionada na tela de configuração da política de mesclagem.
 
 À medida que os conjuntos de dados são selecionados, eles aparecem na seção [!UICONTROL Selecionar conjuntos de dados].
 
 Os conjuntos de dados ExperienceEvent não podem ser ordenados manualmente, em vez disso, os atributos nos conjuntos de dados ExperienceEvent são anexados aos conjuntos de dados do Perfil se fizerem parte do mesmo fragmento de perfil.
 
-Semelhante à seleção de conjuntos de dados de Perfil, a seleção de um conjunto de dados ExperienceEvent também atualiza a seção **[!UICONTROL Esquema de união]**, mostrando os campos no esquema de união para os quais cada conjunto de dados contribui com dados. Para obter mais informações sobre esquemas de união, incluindo como interagir com as visualizações na interface, consulte o [guia da interface do esquema de união](../ui/union-schema.md)
+Semelhante à seleção de conjuntos de dados de Perfil, a seleção de um conjunto de dados ExperienceEvent também atualiza a seção **[!UICONTROL Esquema de união]**, mostrando os campos no esquema de união para os quais cada conjunto de dados contribui com dados. Para obter mais informações sobre esquemas de união, incluindo como interagir com as visualizações na interface, consulte o [guia da interface do esquema de união](../ui/union-schema.md).
 
-![](../images/merge-policies/dataset-precedence-experienceevent.png)
+![Os conjuntos de dados ExperienceEvent selecionáveis são exibidos.](../images/merge-policies/dataset-precedence-experienceevent.png)
+
+>[!ENDTABS]
 
 ## [!UICONTROL Revisão] {#review}
 
@@ -149,39 +163,39 @@ Também está incluída na tela de revisão a tabela **[!UICONTROL Visualizar da
 
 Revise cuidadosamente a configuração da política de mesclagem e visualize os dados antes de selecionar **[!UICONTROL Concluir]** para concluir o fluxo de trabalho de criação.
 
-### Classificação por carimbo de data e hora {#timestamp-ordered-review}
+>[!BEGINTABS]
+
+>[!TAB Carimbo de data/hora ordenado]
 
 Se você selecionou **[!UICONTROL Carimbo de data e hora ordenado]** como o método de mesclagem para sua política de mesclagem, a lista de conjuntos de dados de perfil incluirá todos os conjuntos de dados que foram criados por sua organização relacionados à classe de esquema, em ordem de carimbo de data e hora. A lista de conjuntos de dados ExperienceEvent inclui todos os conjuntos de dados que sua organização criou para a classe de esquema escolhida e serão anexados aos conjuntos de dados do Perfil.
 
 A tabela **[!UICONTROL Dados de visualização]** mostra registros de perfil de exemplo com base em uma ordenação de carimbo de data/hora dos conjuntos de dados. Isso permite que você visualize a aparência de um perfil de cliente antes de salvar a política de mesclagem.
 
-![](../images/merge-policies/timestamp-review.png)
+Selecione **[!UICONTROL Concluir]** para criar sua nova política de mesclagem.
 
-### Prioridade do conjunto de dados {#dataset-precedence-review}
+![A página Revisar é exibida. Esta página permite examinar os detalhes da política de mesclagem recém-criada.](../images/merge-policies/timestamp-review.png)
+
+>[!TAB Prioridade de conjunto de dados]
 
 Se você selecionou **[!UICONTROL Prioridade de conjunto de dados]** como o método de mesclagem para sua política de mesclagem, as listas de conjuntos de dados Profile e ExperienceEvent incluirão apenas os conjuntos de dados Profile e ExperienceEvent selecionados durante o fluxo de trabalho de criação, respectivamente. A ordem dos conjuntos de dados do Perfil deve corresponder à precedência especificada durante a criação. Caso contrário, use o botão [!UICONTROL Voltar] para retornar às etapas anteriores do fluxo de trabalho e ajustar a prioridade.
 
 A tabela **[!UICONTROL Visualizar dados]** mostra registros de perfil de exemplo usando os conjuntos de dados selecionados. Isso permite que você visualize a aparência de um perfil de cliente antes de salvar a política de mesclagem.
 
-![](../images/merge-policies/dataset-precedence-review.png)
+Selecione **[!UICONTROL Concluir]** para criar sua nova política de mesclagem.
 
-### Lista atualizada de políticas de mesclagem {#updated-list}
+![A página Revisar é exibida. Esta página permite examinar os detalhes da política de mesclagem recém-criada.](../images/merge-policies/dataset-precedence-review.png)
 
-Após concluir o fluxo de trabalho para criar uma nova política de mesclagem, você retornará à guia **[!UICONTROL Políticas de mesclagem]**. A lista de políticas de mesclagem para sua organização agora deve incluir a política de mesclagem recém-criada.
+>[!ENDTABS]
 
-![](../images/merge-policies/new-merge-policy-created.png)
-
-## Editar uma política de mesclagem
+## Editar uma política de mesclagem {#edit}
 
 Na guia [!UICONTROL Políticas de mesclagem], você pode modificar uma política de mesclagem existente criada para a classe [!DNL XDM Individual Profile] selecionando o **[!UICONTROL Nome da política]** para a política de mesclagem que deseja editar.
-
-![Página de aterrissagem de políticas de mesclagem](../images/merge-policies/select-edit.png)
 
 Quando a tela **[!UICONTROL Editar política de mesclagem]** for exibida, você poderá fazer alterações no nome e no método de [!UICONTROL compilação de ID], bem como alterar se essa política é ou não a política de mesclagem padrão para sua organização.
 
 Selecione **[!UICONTROL Avançar]** para continuar o fluxo de trabalho da política de mesclagem para atualizar o método de mesclagem e os conjuntos de dados incluídos na política de mesclagem.
 
-![](../images/merge-policies/edit-screen.png)
+![O fluxo de trabalho de edição de política de mesclagem é exibido.](../images/merge-policies/edit-screen.png)
 
 Depois de fazer as alterações necessárias, revise sua política de mesclagem e selecione **[!UICONTROL Concluir]** para salvar suas alterações e retornar à guia [!UICONTROL Políticas de mesclagem].
 
@@ -189,17 +203,17 @@ Depois de fazer as alterações necessárias, revise sua política de mesclagem 
 >
 >Alterar uma política de mesclagem pode afetar a segmentação e os resultados do perfil, pois alterará a maneira como os conflitos de dados são resolvidos. Certifique-se de revisar cuidadosamente as alterações em suas políticas de mesclagem antes de salvá-las.
 
-![](../images/merge-policies/edit-review.png)
+![A página de revisão do fluxo de trabalho de edição de política é exibida.](../images/merge-policies/edit-review.png)
 
 ## Violações da política de governança de dados
 
-Ao criar ou atualizar uma política de mesclagem, uma verificação é executada para determinar se a política de mesclagem viola qualquer uma das políticas de uso de dados definidas pela organização. As políticas de uso de dados fazem parte da Governança de dados da Adobe Experience Platform e são regras que descrevem os tipos de ações de marketing que você tem permissão ou restrição para executar em dados específicos do [!DNL Platform]. Por exemplo, se uma política de mesclagem fosse usada para criar um público-alvo que fosse ativado para um destino de terceiros, e sua organização tivesse uma política de uso de dados que impedia a exportação de dados específicos para terceiros, você receberia uma notificação **[!UICONTROL Violação da política de governança de dados detectada]** ao tentar salvar sua política de mesclagem.
+Ao criar ou atualizar uma política de mesclagem, uma verificação é executada para determinar se a política de mesclagem viola qualquer uma das políticas de uso de dados definidas pela organização. As políticas de uso de dados fazem parte da Governança de dados da Adobe Experience Platform e são regras que descrevem os tipos de ações de marketing que você tem permissão ou restrição para executar em dados específicos do [!DNL Platform].
+
+Por exemplo, se uma política de mesclagem fosse usada para criar um público-alvo que fosse ativado para um destino de terceiros, e sua organização tivesse uma política de uso de dados que impedia a exportação de dados específicos para terceiros, você receberia uma notificação **[!UICONTROL Violação da política de governança de dados detectada]** ao tentar salvar sua política de mesclagem.
 
 Esta notificação inclui uma lista de políticas de uso de dados que foram violadas e permite exibir os detalhes da violação selecionando uma política na lista. Ao selecionar uma política violada, a guia **[!UICONTROL Linhagem de dados]** fornece o motivo da violação e as ativações afetadas, cada uma fornecendo mais detalhes sobre como a política de uso de dados foi violada.
 
 Para saber mais sobre como a governança de dados é realizada no Adobe Experience Platform, comece lendo a [visão geral da Governança de dados](../../data-governance/home.md).
-
-![](../images/merge-policies/policy-violation.png)
 
 ## Próximas etapas
 

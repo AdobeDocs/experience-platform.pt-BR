@@ -3,9 +3,9 @@ keywords: destino de armazenamento na nuvem;armazenamento na nuvem
 title: Visão geral dos destinos do Cloud Storage
 description: A Adobe Experience Platform pode fornecer seus públicos-alvo como arquivos de dados para seus locais de armazenamento na nuvem do Amazon S3, AWS Kinesis, Azure Event Hubs ou SFTP.
 exl-id: d29f0a6e-b323-4f78-bbd0-dee2f1e0fedb
-source-git-commit: 9c1699471d5b3c3c725e46581e256a0c07f08a49
+source-git-commit: 2e21e62de624c5e7e9fac4d36dbf41b46198062a
 workflow-type: tm+mt
-source-wordcount: '453'
+source-wordcount: '463'
 ht-degree: 5%
 
 ---
@@ -40,7 +40,7 @@ Para enviar públicos-alvo para destinos de armazenamento na nuvem de suas campa
 
 >[!NOTE]
 >
-> A funcionalidade descrita nesta seção está disponível no momento apenas para destinos do [Amazon S3](amazon-s3.md).
+> A funcionalidade descrita nesta seção está disponível para todos os destinos de armazenamento na nuvem. No entanto, o destino [Amazon S3](amazon-s3.md) só oferece suporte atualmente às macros `%SEGMENT_ID%` e `%SEGMENT_NAME%`.
 
 Para criar uma pasta personalizada por arquivo de público-alvo no local de armazenamento, você pode usar macros no campo de entrada do caminho da pasta. Insira as macros no final do campo de entrada, como mostrado abaixo.
 

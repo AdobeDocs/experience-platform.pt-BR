@@ -1,29 +1,24 @@
 ---
 title: Compartilhamento De Pacotes Entre Organizações Usando Ferramentas De Sandbox
 description: Saiba como usar as ferramentas de sandbox na Adobe Experience Platform para compartilhar pacotes em diferentes organizações.
-badge: Beta
-source-git-commit: 0e280972feb990221272d272aa2a9e3852beb5e8
+source-git-commit: 77994c1cdd185cc8a2963c5aa2eb345c8702fe02
 workflow-type: tm+mt
-source-wordcount: '650'
+source-wordcount: '945'
 ht-degree: 0%
 
 ---
 
 # Compartilhar pacotes entre organizações usando as ferramentas de sandbox
 
->[!NOTE]
->
->O compartilhamento de pacotes entre organizações está atualmente na versão beta e só está disponível para clientes beta selecionados.
-
 Melhore a precisão da configuração em sandboxes e exporte e importe configurações de sandbox facilmente entre sandboxes em diferentes organizações com o recurso de ferramenta sandbox. Este documento aborda como usar ferramentas de sandbox no Adobe Experience Platform para compartilhar pacotes em diferentes organizações. Há dois tipos de pacotes compartilhados:
 
 - **Pacote privado**
 
-[Pacotes privados](#private-packages) só podem ser compartilhados com organizações que aprovaram a solicitação de compartilhamento da organização de origem por meio de uma lista de permissões de aceitação.
+[Pacotes privados](#private-packages) só podem ser compartilhados com organizações que aprovaram a solicitação de compartilhamento da organização de origem.
 
 - **Pacote público**
 
-[Pacotes públicos](./sandbox-tooling.md/#export-and-import-an-entire-sandbox) estão disponíveis para importação sem nenhuma aprovação adicional. Esses pacotes podem ser compartilhados no site, blog ou plataforma de um parceiro. A carga do pacote permite que os pacotes sejam copiados e colados desses canais na organização de destino.
+[Pacotes públicos](#public-packages) estão disponíveis para importação sem nenhuma aprovação adicional. Esses pacotes podem ser compartilhados no site, blog ou plataforma de um parceiro. A carga do pacote permite que os pacotes sejam copiados e colados desses canais na organização de destino.
 
 ## Pacotes privados {#private-packages}
 
@@ -88,6 +83,52 @@ Na caixa de diálogo **[!UICONTROL Compartilhar pacote]**, selecione o pacote a 
 >É possível selecionar mais de uma organização. As organizações selecionadas aparecerão abaixo da lista suspensa [!UICONTROL Configurações de compartilhamento].
 
 ![Caixa de diálogo Compartilhar pacote com as configurações de compartilhamento e Confirmar realçada.](../images/ui/sandbox-tooling/private-share-package-confirm.png)
+
+## Pacotes públicos {#public-packages}
+
+Use o recurso Sandbox Tooling para criar pacotes públicos compartilháveis que não exigem aprovação adicional e são facilmente importados com o uso da carga do pacote.
+
+### Atualizar a disponibilidade do pacote para público {#update-package}
+
+Para atualizar o tipo de disponibilidade de um pacote, navegue até a guia [!UICONTROL Sandboxes] **[!UICONTROL Pacotes]**. Em seguida, selecione as reticências (`...`) ao lado do pacote e selecione **[!UICONTROL Atualizar para pacote público]** no menu suspenso.
+
+![A interface de usuário de Sandboxes com a guia Pacotes e o menu suspenso de opções com a opção Atualizar para pacote público realçada.](../images/ui/sandbox-tooling/update-to-public.png)
+
+Na caixa de diálogo **[!UICONTROL Alterar disponibilidade do pacote para público]**, verifique se o nome do pacote está correto e selecione **[!UICONTROL Confirmar]**.
+
+>[!IMPORTANT]
+>
+> Depois que um pacote é tornado público, ele não pode ser alterado para privado.
+
+![Altere a disponibilidade do pacote para uma caixa de diálogo pública com a opção Confirmar realçada.](../images/ui/sandbox-tooling/change-package-availability.png)
+
+### Compartilhar pacotes usando a carga do pacote
+
+Para compartilhar o pacote público, selecione as reticências (`...`) ao lado do pacote e selecione **[!UICONTROL Copiar carga do pacote]**.
+
+![A interface de Sandboxes mostrando um menu suspenso de pacotes individuais com a carga Copiar pacote realçada.](../images/ui/sandbox-tooling/copy-package-payload.png)
+
+A caixa de diálogo **[!UICONTROL Copiar carga do pacote]** exibe o nome e a carga do pacote. Selecione **[!UICONTROL Copiar carga do pacote]** para copiar a carga associada ao pacote.
+
+![Caixa de diálogo Copiar carga do pacote mostrando a carga JSON com a carga Copiar pacote realçada.](../images/ui/sandbox-tooling/confirm-payload-copy.png)
+
+### Criar um novo pacote usando uma carga de pacote
+
+Para criar um pacote usando uma carga de pacote, navegue até a guia [!UICONTROL Sandboxes] **[!UICONTROL Pacotes]**. Em seguida, selecione **[!UICONTROL Criar pacote]**.
+
+![A interface do usuário de Sandboxes mostrando Criar pacote realçada.](../images/ui/sandbox-tooling/create-package.png)
+
+Na caixa de diálogo **[!UICONTROL Criar pacote]**, selecione a opção para **[!UICONTROL Colar carga do pacote]** e selecione **[!UICONTROL Selecionar]**.
+
+![Criar caixa de diálogo de pacote com carga de pacote de colagem selecionada e Selecionar realçado.](../images/ui/sandbox-tooling/create-package-options.png)
+
+Cole a carga do pacote copiado no campo de texto e selecione **[!UICONTROL Criar]**.
+
+![Caixa de diálogo Criar pacote com o campo de texto vazio e Criar realçado.](../images/ui/sandbox-tooling/paste-payload.png)
+
+Para exibir o status atual da sua solicitação de compartilhamento, navegue até o **[!UICONTROL Status de compartilhamento]**. O status atual da solicitação é mostrado na coluna **[!UICONTROL Status de compartilhamento]**.
+
+![A guia Status de compartilhamento mostrando uma solicitação de carga pendente.](../images/ui/sandbox-tooling/sharing-status.png)
 
 ## Próximas etapas {#next-steps}
 

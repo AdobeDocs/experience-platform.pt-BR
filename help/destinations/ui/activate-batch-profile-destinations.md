@@ -3,10 +3,10 @@ title: Ativar públicos para destinos de exportação de perfil em lote
 type: Tutorial
 description: Saiba como ativar os públicos-alvo no Adobe Experience Platform enviando-os para destinos com base em perfil de lote.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: ad33eaa48928b25502ef279f000b92f31e1667ca
+source-git-commit: fdb92a0c03ce6a0d44cfc8eb20c2e3bd1583b1ce
 workflow-type: tm+mt
-source-wordcount: '4095'
-ht-degree: 11%
+source-wordcount: '4151'
+ht-degree: 10%
 
 ---
 
@@ -133,11 +133,11 @@ Selecione **[!UICONTROL Exportar arquivos completos]** para acionar a exportaç�
 
 2. Use o **[!UICONTROL Time]** para selecionar se a exportação deve ocorrer imediatamente após a avaliação do público-alvo ou de acordo com um agendamento, em um horário especificado. Ao selecionar a opção **[!UICONTROL Agendado]**, você pode usar o seletor para escolher a hora do dia, no formato [!DNL UTC], em que a exportação deve ocorrer.
 
-   >[!NOTE]
-   >
-   >A opção **[!UICONTROL Após a avaliação do segmento]** descrita abaixo está disponível somente para clientes selecionados do Beta.
+   Use a opção **[!UICONTROL Após avaliação de segmento]** para que o trabalho de ativação seja executado imediatamente após a conclusão diária do trabalho de segmentação em lote da Platform. Essa opção garante que, quando o trabalho de ativação for executado, os perfis mais atualizados sejam exportados para o seu destino. Isso pode resultar na exportação de um público-alvo várias vezes por dia, com base em suas ações.
 
-   Use a opção **[!UICONTROL Após avaliação de segmento]** para que o trabalho de ativação seja executado imediatamente após a conclusão diária do trabalho de segmentação em lote da Platform. Essa opção garante que, quando o trabalho de ativação for executado, os perfis mais atualizados sejam exportados para o seu destino.
+   >[!IMPORTANT]
+   >
+   >Se você executar a [avaliação flexível do público-alvo](../../segmentation/ui/audience-portal.md#flexible-audience-evaluation) em públicos que já estão definidos para serem ativados após a avaliação do segmento, os públicos-alvo serão ativados assim que o trabalho de avaliação flexível do público-alvo for concluído, independentemente de quaisquer trabalhos de ativação diários anteriores. Isso pode resultar na exportação de públicos-alvo várias vezes por dia, com base em suas ações.
 
    <!-- Batch segmentation currently runs at {{insert time of day}} and lasts for an average {{x hours}}. Adobe reserves the right to modify this schedule. -->
 
@@ -485,7 +485,7 @@ Como solução temporária, se você precisar adicionar namespaces de identidade
 > 
 Todos os destinos de armazenamento na nuvem do catálogo podem exibir uma [[!UICONTROL etapa de Mapeamento] aprimorada](#mapping) que substitui a **[!UICONTROL etapa Selecionar atributos]** descrita nesta seção.
 >
-Esta etapa **[!UICONTROL Selecionar atributos]** ainda é exibida para os destinos de marketing por email de Marketing Cloud do Adobe Campaign, Oracle Responsys, Oracle Eloqua e Salesforce.
+Esta etapa **[!UICONTROL Selecionar atributos]** ainda é exibida para os destinos de marketing por email do Adobe Campaign, Oracle Responsys, Oracle Eloqua e Salesforce Marketing Cloud.
 
 Para destinos baseados em perfil, você deve selecionar os atributos de perfil que deseja enviar ao destino.
 

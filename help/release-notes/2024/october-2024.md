@@ -1,7 +1,6 @@
 ---
 title: Notas de versão da Adobe Experience Platform de outubro de 2024
 description: As notas de versão de outubro de 2024 da Adobe Experience Platform.
-exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: a381bdc45ee9c3c7ffb32bb7a7ec43a1233d1556
 workflow-type: tm+mt
 source-wordcount: '861'

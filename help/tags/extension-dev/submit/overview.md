@@ -2,10 +2,10 @@
 title: Visão geral do processo de envio de extensão
 description: Saiba mais sobre as etapas para enviar sua extensão na Adobe Experience Platform, desde o desenvolvimento até o lançamento.
 exl-id: 7a30ae5c-f9c7-45f9-b648-3fb31006b1ce
-source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
+source-git-commit: fa50e101e5756923eddcd2cab409bda2a629a8a3
 workflow-type: tm+mt
-source-wordcount: '230'
-ht-degree: 87%
+source-wordcount: '231'
+ht-degree: 93%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 87%
 
 >[!NOTE]
 >
->O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleta de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 Enviar uma extensão para o catálogo da coleção de dados na Adobe Experience Platform pode parecer uma tarefa intimidante. Este documento fornece um guia passo a passo para enviar sua extensão usando guias sequenciais individuais. Para enviar sua extensão, é necessário concluir as seguintes etapas:
 
@@ -21,7 +21,7 @@ Enviar uma extensão para o catálogo da coleção de dados na Adobe Experience 
 1. [Conceder acesso ao usuário para desenvolvimento de extensão](./access.md)
 1. [Desenvolver uma extensão](./develop.md)
 1. [Criar uma lista de troca](./create-listing.md)
-1. Criar seu pacote de extensão
+1. [Criar o zip do pacote de extensão](./create-extension-package-zip.md)
 1. [Fazer upload e testar sua extensão](./upload-and-test.md)
 1. [Lançar sua extensão](./release.md)
 

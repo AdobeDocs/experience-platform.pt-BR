@@ -2,10 +2,10 @@
 title: Introdução ao desenvolvimento de extensões
 description: Comece a desenvolver suas próprias extensões de tag na Adobe Experience Platform.
 exl-id: 3925b928-0180-4a4f-aaa6-42f342089560
-source-git-commit: 0a4883cff4f8e04dd0dd62a9e01435fa302a9e54
+source-git-commit: 077d3ac5a34f052ef6293927d67e3cc8afb27563
 workflow-type: tm+mt
-source-wordcount: '448'
-ht-degree: 91%
+source-wordcount: '510'
+ht-degree: 80%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 91%
 
 >[!NOTE]
 >
->O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleta de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 Para você poder começar a trabalhar e criar extensões, vamos usar a ferramenta de andaimes de código aberto, fornecida pelos engenheiros do Adobe para criar os arquivos necessários e a estrutura de arquivos para o pacote de extensão. Assim, tudo o que você ainda precisa fazer é a parte valiosa: na verdade, criar o código.
 
@@ -40,9 +40,13 @@ npx @adobe/reactor-scaffold
 A ferramenta de andaime solicitará algumas opções de configuração iniciais da seguinte maneira:
 
 * Nome de exibição: o nome visível da extensão
+* Plataforma - Especifica se a extensão é desenvolvida para Web, dispositivo móvel ou borda
 * Versão: a versão da extensão
 * Descrição: uma breve descrição da finalidade da extensão
 * Autor: o nome do autor da extensão
+
+>[!NOTE]
+> Para extensões móveis, várias perguntas serão feitas sobre a estrutura dos aplicativos do Android e do iOS.
 
 A ferramenta de andaime fornecerá opções para a construção da estrutura de extensão:
 
@@ -52,8 +56,10 @@ A ferramenta de andaime fornecerá opções para a construção da estrutura de 
 Por exemplo, isso pode retornar se o navegador do usuário é o Chrome, se ele está usando um iPad ou se o usuário está em um domínio específico.
 * [Tipos de ação](./web/action-types.md): a ação a ser executada quando ocorrer um evento. Por exemplo, enviar um beacon de análise, mostrar uma oferta, salvar um cookie ou abrir um bate-papo de suporte.
 * [Tipos de elementos de dados](./web/data-element-types.md): um tipo de elemento de dados recupera dados. Esses dados podem estar no armazenamento local, em um cookie, em um elemento DOM ou em um local personalizado.
-* [Módulos compartilhados](./web/shared.md): um módulo compartilhado é um mecanismo pelo qual as extensões podem se comunicar com outras extensões.
+* [Módulos compartilhados](./web/shared.md) (somente Web): um módulo compartilhado é um mecanismo pelo qual as extensões podem se comunicar com outras extensões.
 * [Visualizações](./web/views.md): cada tipo de evento, condição, ação ou elemento de dados pode fornecer uma visualização que permite ao usuário fornecer configurações.
+* URL do Exchange (somente Web e borda): quando uma extensão é publicada para o catálogo público do Adobe, forneça o URL de listagem aqui.
+* Caminho do ícone: um caminho para um arquivo de ícone da extensão.
 
 >[!NOTE]
 >

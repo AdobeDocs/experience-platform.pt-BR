@@ -6,9 +6,9 @@ user-guide-description: Saiba como implantar e gerenciar tags de análise, marke
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: 5cbc2f6809156bc1a554154527ff2c5e35d3a922
+source-git-commit: fa50e101e5756923eddcd2cab409bda2a629a8a3
 workflow-type: tm+mt
-source-wordcount: '773'
+source-wordcount: '778'
 ht-degree: 44%
 
 ---
@@ -78,8 +78,8 @@ ht-degree: 44%
          * [Módulos compartilhados](./extensions/client/analytics/shared-modules.md)
          * [Notas de versão](./extensions/client/analytics/release-notes.md)
       * [Adobe Analytics E Adobe Target](https://exchange.adobe.com/apps/ec/105363/6sense-for-analytics-and-target)
-      * [Adobe Analytics e Microsoft Dynamics](https://exchange.adobe.com/apps/ec/102966)
-      * [Adobe Analytics e Salesforce](https://exchange.adobe.com/apps/ec/101530)
+      * [Adobe Analytics E Microsoft Dynamics](https://exchange.adobe.com/apps/ec/102966)
+      * [Adobe Analytics E Salesforce](https://exchange.adobe.com/apps/ec/101530)
       * Cadeia de caracteres do produto Adobe Analytics {#product-string}
          * [Visão geral](./extensions/client/product-string/overview.md)
          * [Notas de versão](./extensions/client/product-string/release-notes.md)
@@ -265,6 +265,7 @@ ht-degree: 44%
       * [Conceder acesso ao usuário](./extension-dev/submit/access.md)
       * [Desenvolver uma extensão](./extension-dev/submit/develop.md)
       * [Criar uma lista de troca](./extension-dev/submit/create-listing.md)
+      * [Criar um zip de pacote de extensão](./extension-dev/submit/create-extension-package-zip.md)
       * [Fazer upload e implementar testes completos](./extension-dev/submit/upload-and-test.md)
       * [Lançar uma extensão](./extension-dev/submit/release.md)
    * [Configuração de extensão](./extension-dev/configuration.md)

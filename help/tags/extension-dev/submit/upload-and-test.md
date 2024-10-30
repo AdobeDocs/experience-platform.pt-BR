@@ -2,10 +2,10 @@
 title: Fazer upload e implementar testes completos para uma extensão
 description: Saiba como validar, carregar e testar a extensão na Adobe Experience Platform.
 exl-id: 6176a9e1-fa06-447e-a080-42a67826ed9e
-source-git-commit: 9b99ec5e526fcbe34a41d3ce397b34a9b4105819
+source-git-commit: 8e843ce14d726f18b77189b5523b823bfa4473be
 workflow-type: tm+mt
-source-wordcount: '2362'
-ht-degree: 91%
+source-wordcount: '2345'
+ht-degree: 86%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 91%
 
 >[!NOTE]
 >
->O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleta de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 Para testar extensões de tags na Adobe Experience Platform, use a API de tags e/ou as ferramentas de linha de comando para fazer upload dos pacotes de extensão. Em seguida, use a interface da Platform ou a interface da Coleção de dados para instalar o pacote de extensão em uma propriedade e usar seus recursos em uma build e uma biblioteca de tags.
 
@@ -43,9 +43,9 @@ Para obter informações sobre como criar uma conta técnica para usar com tags 
 
 >[!IMPORTANT]
 >
->Para criar uma integração no Adobe I/O, você deve ser um Administrador de organização da Experience Cloud ou um Desenvolvedor de organização da Experience Cloud.
+>Para criar uma integração no Adobe I/O, você deve ser um Administrador de organização de Experience Cloud ou um Desenvolvedor de organização de Experience Cloud.
 
-Se não for possível criar uma integração, será provável que você não tenha as permissões corretas. Isso exigirá que um Administrador da organização conclua as etapas ou atribua a você a função de desenvolvedor.
+Se não for possível criar uma integração, provavelmente você não terá as permissões corretas. Isso exigirá que um Administrador da organização conclua as etapas ou atribua a você a função de desenvolvedor.
 
 ## Fazer upload do pacote de extensão {#upload}
 
@@ -61,14 +61,16 @@ npx @adobe/reactor-uploader
 
 `npx` permite baixar e executar um pacote npm sem instalá-lo na sua máquina. Essa é a maneira mais simples de executar o Uploader.
 
-O Uploader solicitará que você insira várias informações. A ID da conta técnica, a chave de API e outras informações podem ser recuperadas do console do Adobe I/O. Navegue até a [página Integrações](https://console.adobe.io/integrations) no console do I/O. Selecione a organização correta na lista suspensa, localize a integração apropriada e escolha **[!UICONTROL Exibir]**.
+>[!NOTE]
+> Por padrão, o carregador espera credenciais de Adobe I/O para um fluxo Oauth de servidor para servidor. As credenciais `jwt-auth` herdadas
+> O pode ser usado executando o `npx @adobe/reactor-uploader@v5.2.0` até a desativação em 1º de janeiro de 2025. Os parâmetros necessários
+> para executar a versão `jwt-auth` pode ser encontrado [aqui](https://github.com/adobe/reactor-uploader/tree/cdc27f4f0e9fa3136b8cd5ca8c7271428b842452).
 
-- Qual é o caminho para sua chave privada? /path/to/private.key. Este é o local onde você salvou sua chave privada na etapa 2 acima.
-- Qual é a sua ID organizacional? Copie e cole isso da página de visão geral do console do I/O que você deixou aberta anteriormente.
-- Qual é a sua ID de conta técnica? Copie e cole isso do Console do I/O.
-- Qual é a sua chave de API? Copie e cole isso do Console do I/O.
-- Qual é o segredo do cliente? Copie e cole isso do Console do I/O.
-- Qual é o caminho para o extension_package do qual você deseja fazer upload? /path/to/extension_package.zip. Se você chamar o carregador do diretório que contém o pacote .zip, poderá selecioná-lo na lista em vez de digitar o caminho.
+O carregador requer que você insira apenas algumas informações. Os `clientId` e `clientSecret` podem ser recuperados do console Adobe I/O. Navegue até a [página Integrações](https://console.adobe.io/integrations) no console do I/O. Selecione a organização correta na lista suspensa, localize a integração apropriada e escolha **[!UICONTROL Exibir]**.
+
+- Qual é o seu `clientId`? Copie e cole isso do Console do I/O.
+- Qual é o seu `clientSecret`? Copie e cole isso do Console do I/O.
+- Se você chamar o carregador do diretório que contém o pacote .zip, poderá selecioná-lo na lista em vez de digitar o caminho.
 
 Seu pacote de extensão será carregado e o carregador fornecerá a ID do extension_package.
 
@@ -79,6 +81,8 @@ Seu pacote de extensão será carregado e o carregador fornecerá a ID do extens
 >[!NOTE]
 >
 >Caso você planeje executar o Uploader com frequência, poderá ser difícil incluir sempre todas essas informações. Também é possível passá-las como argumentos na linha de comando. Consulte a seção [Argumentos de linha de comando](https://www.npmjs.com/package/@adobe/reactor-uploader#command-line-arguments) dos documentos do NPM para obter mais informações.
+
+Se você quiser gerenciar o upload direto da sua extensão usando a API, veja as chamadas de exemplo para [criação](../../api/endpoints/extension-packages.md/#create) ou [atualização](../../api/endpoints/extension-packages.md#update) de um pacote de extensão nos documentos da API para obter mais detalhes.
 
 ## Criar uma propriedade de desenvolvimento {#property}
 

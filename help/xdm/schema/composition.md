@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Noções básicas da composição do esquema
 description: Saiba mais sobre esquemas do Experience Data Model (XDM) e os componentes, princípios e práticas recomendadas para a composição de esquemas no Adobe Experience Platform.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 42038ecfeecc774b3a57e05d961bbd80f3178c21
+source-git-commit: 595d9bd6a0aa0c9f1059e485c54e89ce02b7ec68
 workflow-type: tm+mt
-source-wordcount: '4293'
+source-wordcount: '4365'
 ht-degree: 8%
 
 ---
@@ -223,6 +223,10 @@ A captura de tela a seguir demonstra como os grupos de campos são representados
 
 Para obter a lista mais atualizada de grupos de campos XDM padrão disponíveis, consulte o [repositório XDM oficial](https://github.com/adobe/xdm/tree/master/components/fieldgroups). Como alternativa, consulte o guia em [explorando componentes XDM](../ui/explore.md) se preferir exibir recursos na interface.
 
+>[!NOTE]
+>
+> Os grupos de campos XDM padrão estão sempre evoluindo e alguns grupos de campos foram descontinuados. Para obter a lista mais atualizada de grupos de campos obsoletos, consulte a [seção de grupos de campos obsoletos](https://github.com/adobe/xdm/tree/master/components/fieldgroups/deprecated) no repositório XDM oficial.
+
 ### Tipo de dados {#data-type}
 
 Os tipos de dados são usados como tipos de campo de referência em classes ou esquemas da mesma forma que os campos literais básicos. A principal diferença é que os tipos de dados podem definir vários subcampos da mesma forma que os grupos de campos. A principal diferença entre eles é que os tipos de dados podem ser incluídos em qualquer lugar de um esquema adicionando-o como o &quot;tipo de dados&quot; de um campo. Embora os grupos de campos sejam compatíveis apenas com determinadas classes, os tipos de dados podem ser incluídos em qualquer classe principal ou grupo de campos.
@@ -238,6 +242,10 @@ A captura de tela a seguir demonstra como os tipos de dados são representados n
 ![Um diagrama no Editor de Esquemas para uma pessoa individual com o objeto Nome completo e os atributos realçados.](../images/schema-composition/data-type.png)
 
 Para obter a lista mais atualizada dos tipos de dados XDM padrão disponíveis, consulte o [repositório XDM oficial](https://github.com/adobe/xdm/tree/master/components/datatypes). Como alternativa, consulte o guia em [explorando componentes XDM](../ui/explore.md) se preferir exibir recursos na interface.
+
+>[!NOTE]
+>
+> Os tipos de dados XDM padrão estão sempre evoluindo e alguns tipos de dados foram descontinuados. Para obter a lista mais atualizada dos tipos de dados obsoletos, consulte a [seção de tipos de dados obsoletos](https://github.com/adobe/xdm/tree/master/components/datatypes/deprecated) no repositório oficial do XDM.
 
 ### Campo {#field}
 

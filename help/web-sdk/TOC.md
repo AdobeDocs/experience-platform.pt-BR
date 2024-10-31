@@ -6,7 +6,7 @@ breadcrumb-title: Guia do SDK da Web
 user-guide-description: Interaja com os serviços da Experience Cloud por meio da Rede de borda.
 feature: Web SDK
 role: Developer
-source-git-commit: 02ae1fce01895d83d9c68248397e5288613ffe58
+source-git-commit: 7231d3a5ad9553707392c32004d02e355e3c919f
 workflow-type: tm+mt
 source-wordcount: '229'
 ht-degree: 24%
@@ -76,7 +76,6 @@ ht-degree: 24%
    * [Renderizar conteúdo personalizado](personalization/rendering-personalization-content.md)
    * [Personalization por meio de implementação híbrida](personalization/hybrid-personalization.md)
    * [Gerenciar cintilação](personalization/manage-flicker.md)
-   * [Monitoramento de ganchos](monitoring-hooks.md)
    * Adobe Target {#adobe-target}
       * [Visão geral](personalization/adobe-target/target-overview.md)
       * [Implementação de aplicativos de página única](personalization/adobe-target/spa-implementation.md)
@@ -109,6 +108,6 @@ ht-degree: 24%
    * [Métodos de depuração](use-cases/debugging.md)
    * [Usar várias instâncias do SDK da Web](use-cases/multiple-instances.md)
    * [Configurar eventos de página superior e inferior](use-cases/top-bottom-page-events.md)
-
+* [Monitoramento de ganchos](monitoring-hooks.md)
 * [Perguntas frequentes](faq.md)
 * [Recursos](resources.md)

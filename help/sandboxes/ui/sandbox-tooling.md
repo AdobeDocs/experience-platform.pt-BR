@@ -2,9 +2,9 @@
 title: Ferramentas de sandbox
 description: Exporte e importe configurações de sandbox facilmente entre sandboxes.
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: 209aaaf0c2bfdb321f75257309980c7a48cb1eb4
+source-git-commit: 85476ea8a667cf3e74cd7a24da07d81c635e1628
 workflow-type: tm+mt
-source-wordcount: '2403'
+source-wordcount: '2431'
 ht-degree: 7%
 
 ---
@@ -150,7 +150,9 @@ A página [!UICONTROL Dependências e objeto de pacote] fornece uma lista de tod
 
 >[!NOTE]
 >
->Objetos dependentes podem ser substituídos por objetos existentes na sandbox de destino, o que permite reutilizar objetos existentes em vez de criar uma nova versão. Por exemplo, ao importar um pacote incluindo esquemas, você pode reutilizar grupos de campos personalizados existentes e namespaces de identidade na sandbox de destino. Como alternativa, ao importar um pacote incluindo Jornadas, você pode reutilizar segmentos existentes na sandbox de destino.
+>Objetos dependentes podem ser substituídos por objetos existentes na sandbox de destino, que permitem reutilizar objetos existentes em vez de criar uma nova versão. Por exemplo, ao importar um pacote incluindo esquemas, você pode reutilizar grupos de campos personalizados existentes e namespaces de identidade na sandbox de destino. Como alternativa, ao importar um pacote incluindo Jornadas, você pode reutilizar segmentos existentes na sandbox de destino.
+>
+>Atualmente, as ferramentas de sandbox não permitem a atualização ou substituição de objetos existentes. Você pode optar por criar um novo objeto ou continuar a usar o objeto existente sem modificações.
 
 Para usar um objeto existente, selecione o ícone de lápis ao lado do objeto dependente.
 

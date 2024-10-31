@@ -2,9 +2,9 @@
 title: Prioridade do namespace
 description: Saiba mais sobre a prioridade de namespace no Serviço de identidade.
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: e8e8914c41d7a083395b0bf53aaac8021fcf9e9a
+source-git-commit: 07d54bf341ef2aacc6612ad323585609c0830824
 workflow-type: tm+mt
-source-wordcount: '1689'
+source-wordcount: '1732'
 ht-degree: 2%
 
 ---
@@ -150,6 +150,8 @@ A exclusão de registros da higiene de dados solicita funções da seguinte mane
 Para obter mais informações, leia a [visão geral avançada do gerenciamento do ciclo de vida](../../hygiene/home.md).
 
 ### Atributos computados
+
+Atributos computados usam a prioridade de namespace para armazenar o valor de atributo calculado. Para um determinado evento, a identidade com a maior prioridade de namespace terá o valor do atributo calculado gravado nele. Para obter mais informações, leia o [guia da interface do usuário de atributos computados](../../profile/computed-attributes/ui.md).
 
 Os atributos computados não usam a prioridade de namespace para calcular valores. Se estiver usando atributos calculados, você deve garantir que a CRMID seja designada como sua identidade primária para o WebSDK. Para obter mais informações, leia o [guia da interface do usuário de atributos computados](../../profile/computed-attributes/ui.md).
 

@@ -3,9 +3,9 @@ title: Tipos de evento na extensão SDK da Web do Adobe Experience Platform
 description: Saiba mais sobre como usar os tipos de evento fornecidos pela extensão Adobe Experience Platform Web SDK no Adobe Experience Platform Launch.
 solution: Experience Platform
 exl-id: b3162406-c5ce-42ec-ab01-af8ac8c63560
-source-git-commit: 666e8c6fcccf08d0841c5796677890409b22d794
+source-git-commit: b37bf09e3ec16f29d6acee3bca71463fa2c876ce
 workflow-type: tm+mt
-source-wordcount: '1127'
+source-wordcount: '1490'
 ht-degree: 0%
 
 ---
@@ -13,6 +13,34 @@ ht-degree: 0%
 # Tipos de evento
 
 Esta página descreve os tipos de evento do Adobe Experience Platform fornecidos pela extensão de tag do SDK da Web da Adobe Experience Platform. Eles são usados para [regras de compilação](https://experienceleague.adobe.com/docs/platform-learn/data-collection/tags/build-rules.html?lang=pt-BR) e não devem ser confundidos com o campo `eventType` no objeto [`xdm`](/help/web-sdk/commands/sendevent/xdm.md).
+
+## Gancho de monitoramento acionado {#monitoring-hook-triggered}
+
+O Adobe Experience Platform Web SDK inclui ganchos de monitoramento que podem ser usados para monitorar vários eventos do sistema. Essas ferramentas são úteis para desenvolver suas próprias ferramentas de depuração e capturar logs do SDK da Web.
+
+Para obter detalhes completos sobre quais parâmetros cada evento de gancho de monitoramento contém, consulte a [documentação de ganchos de monitoramento do SDK da Web](../../../../web-sdk/monitoring-hooks.md).
+
+![Imagem da interface do usuário de marcas mostrando o tipo de evento de gancho de monitoramento](assets/monitoring-hook-triggered.png)
+
+A extensão de tag do SDK da Web é compatível com os seguintes ganchos de monitoramento:
+
+* **[!UICONTROL onInstanceCreated]**: este evento de gancho de monitoramento é disparado quando você cria com êxito uma nova instância do SDK da Web.
+* **[!UICONTROL onInstanceConfigured]**: este evento de gancho de monitoramento é disparado pelo SDK da Web quando o comando [`configure`](../../../../web-sdk/commands/configure/overview.md) é resolvido com êxito
+* **[!UICONTROL onBeforeCommand]**: este evento de gancho de monitoramento é disparado pelo SDK da Web antes da execução de qualquer outro comando. Você pode usar esse gancho de monitoramento para recuperar as opções de configuração de um comando específico.
+* **[!UICONTROL onCommandResolved]**: este evento de gancho de monitoramento é disparado antes de resolver a promessa de comando. Você pode usar essa função para ver as opções de comando e o resultado.
+* **[!UICONTROL onCommandRejected]**: esse evento de gancho de monitoramento é disparado quando uma promessa de comando é rejeitada e contém informações sobre a causa do erro.
+* **[!UICONTROL onBeforeNetworkRequest]**: este evento de gancho de monitoramento é disparado antes da execução de uma solicitação de rede.
+* **[!UICONTROL onNetworkResponse]**: este evento de gancho de monitoramento é disparado quando o navegador recebe uma resposta.
+* **[!UICONTROL onNetworkError]**: este evento de gancho de monitoramento é disparado quando a solicitação de rede falha.
+* **[!UICONTROL onBeforeLog]**: este evento de gancho de monitoramento é disparado antes que o SDK da Web registre qualquer item no console.
+* **[!UICONTROL onContentRendering]**: este evento de gancho de monitoramento é acionado pelo componente `personalization` e ajuda a depurar a renderização do conteúdo de personalização. Esse evento pode ter status diferentes:
+   * `rendering-started`: indica que o SDK da Web está prestes a renderizar apresentações. Antes do SDK da Web começar a renderizar um escopo de decisão ou uma exibição, no objeto `data`, é possível ver as propostas que serão renderizadas pelo componente `personalization` e o nome do escopo.
+   * `no-offers`: indica que nenhuma carga foi recebida para os parâmetros solicitados.
+   * `rendering-failed`: indica que o SDK da Web falhou ao renderizar uma proposta.
+   * `rendering-succeeded`: indica que a renderização foi concluída para um escopo de decisão.
+   * `rendering-redirect`: indica que o SDK da Web executará uma apresentação de redirecionamento.
+* **[!UICONTROL onContentHiding]**: este evento de gancho de monitoramento é disparado quando um estilo pré-ocultação é aplicado ou removido.
+
 
 ## [!UICONTROL Enviar evento concluído]
 

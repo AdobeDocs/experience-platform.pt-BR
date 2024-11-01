@@ -5,9 +5,9 @@ breadcrumb-title: Guia do Serviço de consulta
 user-guide-description: Use o SQL padrão para consultar dados no data lake na Experience Platform.
 feature: Queries
 role: User,Developer
-source-git-commit: 3583f6e0ac72e4f813abd87949cb640d0b20b6e2
+source-git-commit: c94213b37813730911d207cb0de773d8aac22c13
 workflow-type: tm+mt
-source-wordcount: '341'
+source-wordcount: '357'
 ht-degree: 22%
 
 ---
@@ -39,6 +39,16 @@ ht-degree: 22%
       - [Recursos do engenheiro para ML](data-distiller/ml-feature-pipelines/feature-engineering.md)
       - [Exportar dados para ambientes ML](data-distiller/ml-feature-pipelines/export-data.md)
       - [Fluxo de trabalho completo de enriquecimento do pipeline de dados de IA/ML](data-distiller/ml-feature-pipelines/end-to-end-notebook-workflow.md)
+- Estatísticas de Distiller de Dados {#advanced-statistics}
+   - [Visão geral](advanced-statistics/overview.md)
+   - [Engenharia de recursos](advanced-statistics/feature-engineering.md)
+   - [Modelos](advanced-statistics/models.md)
+Implementar modelos {#implement-models}
+      - [Implementar modelos](advanced-statistics/implement-models/implement-models.md)
+      - [Regressão](advanced-statistics/implement-models/regression.md)
+      - [Classificação](advanced-statistics/implement-models/classification.md)
+      - [Geração de cluster](advanced-statistics/implement-models/clustering.md)
+   - [Transformação de recursos](advanced-statistics/feature-transformation.md)
 - Públicos da Distiller de dados {#data-distiller-audiences}
    - [Criar públicos-alvo externos usando SQL](data-distiller-audiences/overview.md)
 - Exemplos {#use-cases}

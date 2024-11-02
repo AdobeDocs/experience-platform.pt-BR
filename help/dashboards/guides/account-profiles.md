@@ -2,10 +2,10 @@
 title: Painel de perfis de conta
 description: A Adobe Experience Platform fornece um painel por meio do qual você pode visualizar informações importantes sobre os perfis de conta B2B da sua organização.
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
-source-git-commit: 8caa10010109f9936271cb45a2166455f3678687
+source-git-commit: 442fcee17cbe38a9e1608324581ebedee4ba7fe6
 workflow-type: tm+mt
-source-wordcount: '1827'
-ht-degree: 5%
+source-wordcount: '2362'
+ht-degree: 4%
 
 ---
 
@@ -17,7 +17,7 @@ Este documento fornece uma visão geral dos recursos no painel [!UICONTROL Perfi
 
 ## Introdução
 
-Você deve ter direito ao [Adobe Real-time Customer Data Platform B2B Edition](../../rtcdp/b2b-overview.md) para acessar o painel B2B [!UICONTROL Perfis de Conta].
+Você deve ter direito ao [Adobe Real-time Customer Data Platform B2B edition](../../rtcdp/b2b-overview.md) para acessar o painel B2B [!UICONTROL Perfis de Conta].
 
 ## Dados de perfis de conta {#data}
 
@@ -79,6 +79,10 @@ O Adobe fornece widgets padrão que você pode usar para visualizar métricas di
 Para saber mais sobre cada um dos widgets padrão disponíveis, selecione o nome de um widget na lista a seguir:
 
 * [Perfis de conta adicionados](#account-profiles-added)
+* [Visão geral de clientes por conta](#customers-per-account-overview)
+   * [Visão geral de oportunidades por conta](#opportunities-per-account-overview)
+   * [Detalhes de oportunidades por conta](#opportunities-per-account-detail)
+   * [Detalhes de clientes por conta](#customers-per-account-detail)
 * [Novas contas por setor](#accounts-by-industry)
 * [Novas contas por tipo](#accounts-by-type)
 * [Novas oportunidades por função de pessoa](#opportunities-by-person-role)
@@ -94,6 +98,52 @@ Para saber mais sobre cada um dos widgets padrão disponíveis, selecione o nome
 O widget [!UICONTROL Perfis de conta adicionados] usa um gráfico de linhas para exibir o número de perfis de conta adicionados a cada dia durante um período. Use o filtro de data global localizado na parte superior do painel para determinar o período de análise. Se nenhum filtro de data for fornecido, o comportamento padrão listará os perfis de conta adicionados para o ano anterior a hoje. Os resultados podem ser usados para inferir uma tendência no número de perfis de conta adicionados.
 
 ![O widget Perfis de conta foi adicionado.](../images/account-profiles/account-profiles-added.png)
+
+### Visão geral de clientes por conta {#customers-per-account-overview}
+
+O gráfico [!UICONTROL Visão geral de Clientes por conta] fornece um resumo das contas com base em seus tipos de clientes. Ela exibe uma tabela de quatro linhas que categoriza as contas como tendo clientes diretos ou indiretos ou aqueles sem clientes. Ele fornece o número total de contas para cada categoria. O gráfico ajuda a identificar a distribuição de contas que têm clientes diretos ou indiretos.
+
+Clientes diretos são perfis de clientes que estão diretamente vinculados a uma conta através da rota `personComponents`. Essa relação é mais simples e envolve uma conexão direta e explícita entre o cliente e a conta.
+
+Clientes indiretos são perfis de clientes vinculados a uma conta através da rota `Account-Person`. Esse relacionamento é menos simples e envolve uma entidade intermediária ou uma conexão mais complexa entre o cliente e a conta, normalmente por meio de outras contas ou relacionamentos.
+
+![Widget de visão geral de Clientes por conta.](../images/account-profiles/customers-per-account-overview-widget.png)
+
+Para acessar insights mais detalhados, selecione a elipse (**...**) no gráfico [!UICONTROL Visão geral de clientes por conta] e escolha **[!UICONTROL Detalhar]** no menu suspenso.
+
+![Widget de visão geral de Clientes por conta com menu suspenso de elipse e Drill-through realçado.](../images/account-profiles/customers-per-account-overview-dropdown.png)
+
+A view de drill-through é exibida. Em seguida, explore os gráficos de drill-through disponíveis para obter uma compreensão mais profunda da estrutura de seus dados B2B. Você pode usar esses gráficos de drill-through para identificar quantos perfis de conta não têm perfis de cliente vinculados ou têm um ou mais perfis de cliente associados a eles. Você também pode usá-los para identificar quantos clientes diretos ou indiretos estão associados às suas contas.
+
+* [[!UICONTROL Detalhes de clientes por conta]](#customers-per-account-detail)
+* [[!UICONTROL Visão geral das contas por oportunidade]](#accounts-per-opportunity-overview)
+* [[!UICONTROL Oportunidades por detalhe de conta]](#accounts-per-opportunity-detail)
+
+### [!UICONTROL Navegar entre exibições de painel] {#dashboard-view-navigation}
+
+Para alternar entre o drill-through e o painel Perfis de Conta, selecione o ícone de pasta (![Um ícone de pasta.](../images/account-profiles/folder-icon.png)) seguido da exibição correta no menu suspenso.
+
+![A exibição de detalhamento no painel Perfis de Contas com o menu suspenso de navegação realçado.](../images/account-profiles/navigation-dropdown.png)
+
+Para saber mais sobre detalhes na interface do usuário da Platform, consulte o [guia de detalhes](../sql-insights-query-pro-mode/drill-through.md).
+
+#### [!UICONTROL Detalhes de clientes por conta] {#customers-per-account-detail}
+
+O gráfico [!UICONTROL Detalhes de clientes por conta] fornece detalhes mais granulares sobre o número de contas associadas a diferentes tipos de clientes. Ele exibe uma tabela de três colunas detalhando o número de contas por tipo de cliente (direto ou indireto) e o intervalo de clientes associados a elas. Este gráfico ajuda você a entender como os clientes são distribuídos em diferentes categorias de clientes e o número total de contas associadas a cada uma.
+
+![Widget de detalhes de Clientes por conta.](../images/account-profiles/customers-per-account-detail.png)
+
+#### [!UICONTROL Visão geral das oportunidades por conta] {#opportunities-per-account-overview}
+
+O gráfico [!UICONTROL Oportunidades por conta] apresenta um resumo das contas que têm ou não têm oportunidades. Essa tabela de duas linhas ajuda a determinar rapidamente o número de contas associadas a oportunidades, fornecendo um instantâneo do engajamento da oportunidade entre as contas.
+
+![Widget de visão geral de Oportunidades por conta.](../images/account-profiles/opportunities-per-account-overview.png)
+
+#### [!UICONTROL Oportunidades por detalhe de conta] {#opportunities-per-account-detail}
+
+O gráfico [!UICONTROL Oportunidades por conta] oferece uma análise mais detalhada das contas com base no número de oportunidades que elas têm. A tabela exibe o número de contas agrupadas por faixas de contagem de oportunidades, como 1-10 oportunidades ou mais de 100 oportunidades. Este gráfico ajuda a identificar como as contas são distribuídas pelo número de oportunidades que estão gerenciando.
+
+![Widget de detalhes de Oportunidades por conta.](../images/account-profiles/opportunities-per-account-detail.png)
 
 ### Novas contas por setor {#accounts-by-industry}
 
@@ -185,4 +235,4 @@ Para resolver o problema, você deve assimilar dados da entidade B2B, como dados
 
 ## Próximas etapas
 
-Ao seguir este documento, você agora deve saber como localizar o painel [!UICONTROL Perfis de Conta] e também entender as métricas exibidas nos widgets disponíveis. Para saber mais sobre como trabalhar com perfis de conta como parte de seus dados B2B na interface do usuário do Experience Platform, consulte a [visão geral dos perfis de conta](../../rtcdp/accounts/account-profile-overview.md) para o Adobe Real-Time CDP, B2B Edition.
+Ao seguir este documento, você agora deve saber como localizar o painel [!UICONTROL Perfis de Conta] e também entender as métricas exibidas nos widgets disponíveis. Para saber mais sobre como trabalhar com perfis de conta como parte de seus dados B2B na interface do usuário do Experience Platform, consulte a [visão geral dos perfis de conta](../../rtcdp/accounts/account-profile-overview.md) para o Adobe Real-Time CDP, B2B edition.

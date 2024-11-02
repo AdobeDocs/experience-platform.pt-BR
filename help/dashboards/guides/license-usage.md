@@ -4,9 +4,9 @@ title: Painel de Uso da Licença
 description: A Adobe Experience Platform fornece um painel por meio do qual você pode visualizar informações importantes sobre o uso de licença da sua organização.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 80380fb1287d710460ad2c75d73ea5c2c38f5ebd
+source-git-commit: 37192addffea094cb2d2f3b0201bb128c912e762
 workflow-type: tm+mt
-source-wordcount: '2855'
+source-wordcount: '2867'
 ht-degree: 15%
 
 ---
@@ -226,7 +226,7 @@ O painel de uso da licença relata várias métricas exclusivas que são aplicá
 | [!UICONTROL Número de Pacotes de Riqueza de Perfis] | Um aumento no Volume total de dados autorizado de 25 KB por perfil para cada pacote adicional de Riqueza de perfil. |
 | [!UICONTROL Horas de Computação do Serviço de Consulta] | Uma medida do tempo gasto pelos mecanismos de Serviço de consulta para ler, processar e gravar dados de volta no data lake quando uma consulta em lote é executada. |
 | [!UICONTROL Número de pacotes de segmentação de streaming] | Os pacotes atualizam a associação de segmento para um perfil de pessoa à medida que novos dados entram no Serviço de segmentação por meio de um fluxo de transmissão. A associação do segmento é avaliada com base nos atributos atuais do perfil da pessoa e no valor do evento atual, sem levar em conta o comportamento histórico. A segmentação de transmissão é um recurso compartilhado. |
-| [!UICONTROL Volume de Dados Total] | A quantidade total de dados disponíveis para o Serviço de perfil da Adobe Experience Platform usar em fluxos de trabalho de envolvimento. |
+| [!UICONTROL Volume de Dados Total] | A quantidade total de dados disponíveis para o Serviço de perfil da Adobe Experience Platform usar em fluxos de trabalho de envolvimento. Consulte as [perguntas frequentes sobre o Volume Total de Dados](../../landing/license-usage-and-guardrails/total-data-volume.md) para saber mais. |
 
 <!-- |  [!UICONTROL Sandbox No of Packs] |  A logical separation within your instance of any Adobe On-demand Service that accesses Adobe Experience Platform isolating data and operations | -->
 

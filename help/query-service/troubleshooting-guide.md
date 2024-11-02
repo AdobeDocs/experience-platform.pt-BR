@@ -1,24 +1,43 @@
 ---
 keywords: Experience Platform;página inicial;tópicos populares;serviço de consulta;serviço de consulta;guia de solução de problemas;perguntas frequentes;solução de problemas;
 solution: Experience Platform
-title: Perguntas frequentes
-description: Este documento contém perguntas e respostas comuns relacionadas ao Serviço de consulta. Os tópicos incluem exportação de dados, ferramentas de terceiros e erros de PSQL.
+title: Perguntas frequentes sobre o Serviço de consulta e o Data Distiller
+description: Este documento contém perguntas e respostas comuns relacionadas ao Serviço de consulta e ao Data Distiller. Os tópicos incluem exportação de dados, ferramentas de terceiros e erros de PSQL.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 84f30a47102a51b40d6811cd4815c36f6ffd34b5
+source-git-commit: dc15ab9b94513d3acdf0e62ef0fec710c05a9fc9
 workflow-type: tm+mt
-source-wordcount: '4564'
-ht-degree: 1%
+source-wordcount: '5055'
+ht-degree: 0%
 
 ---
 
-# Perguntas frequentes
+# Perguntas frequentes sobre o Serviço de consulta e o Data Distiller
 
-Este documento fornece respostas a perguntas frequentes sobre o Serviço de consulta e fornece uma lista de códigos de erro vistos com frequência ao usar o Serviço de consulta. Para perguntas e soluções de problemas relacionados a outros serviços na Adobe Experience Platform, consulte o [guia de solução de problemas de Experience Platform](../landing/troubleshooting.md).
+Este documento responde a perguntas frequentes sobre o Serviço de consulta e o Data Distiller. Ele também inclui códigos de erro comuns ao usar o produto &quot;Queries&quot; para validação de dados ou gravar dados transformados de volta no data lake. Para perguntas e solução de problemas de outros serviços da Adobe Experience Platform, consulte o [guia de solução de problemas do Experience Platform](../landing/troubleshooting.md).
+
+Para esclarecer como o Serviço de consulta e o Data Distiller trabalham juntos no Adobe Experience Platform, veja duas perguntas fundamentais.
+
+## Qual é a relação entre o Serviço de consulta e o Data Distiller?
+
+O Serviço de consulta e o Data Distiller são componentes distintos e complementares que fornecem recursos específicos de consulta de dados. O Serviço de consulta foi projetado para consultas ad hoc para explorar, validar e experimentar dados assimilados sem alterar o data lake. Por outro lado, o Data Distiller se concentra em consultas em lote que transformam e enriquecem dados, com resultados armazenados no data lake para uso futuro. As consultas em lote no Data Distiller podem ser agendadas, monitoradas e gerenciadas, oferecendo suporte a processamento e manipulação de dados mais profundos que o Serviço de consulta sozinho não facilita.
+
+Juntos, o Serviço de consulta facilita insights rápidos, enquanto o Data Distiller permite transformações contínuas e profundas de dados.
+
+## Qual é a diferença entre o Serviço de consulta e o Data Distiller?
+
+**Serviço de consulta**: usado para consultas SQL focadas na exploração, validação e experimentação de dados. As saídas não são armazenadas no data lake e o tempo de execução é limitado a 10 minutos. Consultas ad hoc são adequadas para verificações e análises de dados leves e interativas.
+
+**Data Distiller**: permite consultas em lote que processam, limpam e enriquecem dados, com resultados armazenados de volta no data lake. Essas consultas oferecem suporte para execução mais longa (até 24 horas) e recursos adicionais como agendamento, monitoramento e relatórios acelerados. O Data Distiller é ideal para a manipulação de dados detalhada e tarefas de processamento de dados programadas.
+
+Consulte o [documento de empacotamento do Serviço de Consulta](./packaging.md) para obter informações mais detalhadas.
+
+## Categorias de perguntas {#categories}
 
 A lista de respostas a seguir para perguntas frequentes está dividida nas seguintes categorias:
 
 - [Geral](#general)
-- [Interface de Consultas](#queries-ui) 
+- [Destilador de dados](#data-distiller)
+- [Interface de consultas](#queries-ui)
 - [Amostras de conjunto de dados](#dataset-samples)
 - [Exportação de dados](#exporting-data)
 - [Sintaxe SQL](#sql-syntax) 
@@ -589,7 +608,7 @@ Sim, o controle de acesso baseado em atributos será aplicado se configurado. Co
 Não, o Serviço de consulta não oferece suporte ao comando &quot;INSERT OVERWRITE INTO&quot;.
 +++
 
-### Com que frequência os dados de uso no painel de uso de licença são atualizados para as horas de computação do Data Distiller?
+### Com que frequência os dados de uso no painel de uso de licença são atualizados para o Data Distiller Compute Hours?
 
 +++Resposta
 O painel de uso de licença para horas de computador do Data Distiller é atualizado quatro vezes por dia, a cada seis horas.
@@ -605,6 +624,38 @@ Sim, você pode usar o comando `CREATE VIEW` sem acesso ao Data Distiller. Esse 
 
 +++Resposta
 Sim. Embora alguns clientes de terceiros, como DbVisualizer, possam exigir um identificador separado antes e depois de um bloco SQL para indicar que uma parte de um script deve ser tratada como uma única instrução. Mais detalhes podem ser encontrados na [documentação de bloqueio anônimo](./key-concepts/anonymous-block.md) ou na [documentação oficial do DbVisualizer](https://confluence.dbvis.com/display/UG120/Executing+Complex+Statements#ExecutingComplexStatements-UsinganSQLDialect).
++++
+
+## Destilador de dados {#data-distiller}
+
+### Como o uso de licença da Data Distiller é rastreado e onde posso ver essas informações?
+
++++Resposta\
+A principal métrica usada para rastrear o uso de consulta em lote é a Hora do cálculo. Você tem acesso a essas informações e ao seu consumo atual por meio do [painel de uso de licenças](../dashboards/guides/license-usage.md).
++++
+
+### O que é uma hora de computação?
+
++++Resposta\
+As horas de computação são a medida de tempo que os mecanismos de Serviço de consulta levam para ler, processar e gravar dados no data lake quando uma consulta em lote é executada.
++++
+
+### Como são medidas as horas de computação?
+
++++Resposta\
+As horas de computação são medidas cumulativamente em todas as sandboxes autorizadas.
++++
+
+### Por que às vezes noto uma variação no consumo de Horas de computação mesmo quando executo a mesma consulta consecutivamente?
+
++++Resposta\
+As horas de cálculo de uma consulta podem variar devido a vários fatores. Isso inclui o volume de dados processado, a complexidade das operações de transformação dentro da consulta SQL e assim por diante. O Serviço de consulta dimensiona o cluster com base nos parâmetros acima para cada consulta, o que pode levar a diferenças nas Horas de computação.
++++
+
+### É normal notar uma redução nas Horas de computação quando executo a mesma consulta usando os mesmos dados por um longo período de tempo? Por que isso pode estar acontecendo?
+
++++Resposta\
+A infraestrutura de back-end é aprimorada constantemente para otimizar a utilização de horas de computação e o tempo de processamento. Como resultado, você pode notar alterações ao longo do tempo à medida que são implementadas melhorias de desempenho.
 +++
 
 ## Interface de consultas

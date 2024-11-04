@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guia da interface do usuário de públicos
 description: A Composição de público-alvo na interface do usuário do Adobe Experience Platform fornece um espaço de trabalho avançado que permite interagir com elementos de dados do perfil. O espaço de trabalho fornece controles intuitivos para criação e edição de públicos-alvo para sua organização.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: e17403f0529c5b94869d3bd4e860c798db620d31
+source-git-commit: 3c0fdab5d7561238a64e79e5bab5fd4843fccb0a
 workflow-type: tm+mt
-source-wordcount: '1951'
+source-wordcount: '1952'
 ht-degree: 0%
 
 ---
@@ -88,7 +88,7 @@ Depois de adicionar uma regra personalizada, selecione **[!UICONTROL Salvar]** p
 
 ## [!UICONTROL Excluir] {#exclude-block}
 
-O tipo de bloco **[!UICONTROL Excluir]** permite excluir subpúblicos-alvo ou atributos especificados de seu novo público-alvo maior.
+O tipo de bloco **[!UICONTROL Excluir]** permite excluir um subpúblico ou atributos especificados de seu novo público-alvo maior.
 
 Para adicionar um bloco **[!UICONTROL Excluir]**, selecione o ícone **+**, seguido por **[!UICONTROL Excluir]**.
 
@@ -100,7 +100,7 @@ O bloco **[!UICONTROL Excluir]** foi adicionado. Quando esse bloco for seleciona
 
 ### Excluir por público {#exclude-audience}
 
-Se você excluir por público-alvo, poderá selecionar quais públicos-alvo deseja excluir selecionando **[!UICONTROL Adicionar público-alvo]**.
+Se você excluir por público-alvo, poderá selecionar qual público-alvo deseja excluir selecionando **[!UICONTROL Adicionar público-alvo]**.
 
 ![O botão [!UICONTROL Adicionar público-alvo] está selecionado, o que permite escolher qual público-alvo você deseja excluir.](../images/ui/audience-composition/add-excluded-audience.png)
 
@@ -108,7 +108,7 @@ Se você excluir por público-alvo, poderá selecionar quais públicos-alvo dese
 >
 >Somente **públicos-alvo** publicados criados com o Construtor de segmentos podem ser usados. Públicos criados usando a Composição de público-alvo e públicos gerados externamente estão **não** disponíveis.
 
-Uma lista de públicos-alvo é exibida. Selecione **[!UICONTROL Adicionar]** para adicionar os públicos-alvo que você deseja excluir ao bloco de exclusão.
+Uma lista de públicos-alvo é exibida. Selecione **[!UICONTROL Adicionar]** para adicionar o público-alvo que você deseja excluir ao bloco de exclusão.
 
 ![Uma lista de públicos-alvo é exibida. Você pode selecionar qual público-alvo deseja adicionar desta caixa de diálogo.](../images/ui/audience-composition/select-audience.png)
 

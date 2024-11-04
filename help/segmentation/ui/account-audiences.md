@@ -1,13 +1,13 @@
 ---
 title: Públicos da conta
 description: Saiba como criar e usar públicos-alvo da conta para direcionar perfis de conta em destinos downstream.
-badgeB2B: label="Edição B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="Edição B2P" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 047930d6-939f-4418-bbcb-8aafd2cf43ba
-source-git-commit: c2f9bcd9aeb0073b8b26413ec29e2dff1ee5c80d
+source-git-commit: fd0a495d68d6a09ccca66c400993d2e72673321c
 workflow-type: tm+mt
-source-wordcount: '1130'
-ht-degree: 27%
+source-wordcount: '1518'
+ht-degree: 21%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 27%
 
 >[!AVAILABILITY]
 >
->Os públicos da conta só estão disponíveis na [Edição B2B do Real-time Customer Data Platform](../../rtcdp/overview.md#rtcdp-b2b) e na [Edição B2P do Real-time Customer Data Platform](../../rtcdp/overview.md#rtcdp-b2p).
+>Os públicos da conta só estão disponíveis no [B2B edition do Real-time Customer Data Platform](../../rtcdp/overview.md#rtcdp-b2b) e na [B2P Edition do Real-time Customer Data Platform](../../rtcdp/overview.md#rtcdp-b2p).
 
 Com a segmentação de conta, o Adobe Experience Platform permite que você ofereça a total facilidade e sofisticação da experiência de segmentação de marketing de públicos com base em pessoas para públicos com base em conta.
 
@@ -43,7 +43,7 @@ Essa exibição lista informações sobre o público-alvo, incluindo nome, conta
 
 Você também pode usar a funcionalidade de pesquisa e filtragem para pesquisar e classificar rapidamente por públicos-alvo específicos da conta. Mais informações sobre este recurso podem ser encontradas na [Visão geral do Portal de Público](./audience-portal.md#manage-audiences).
 
-## Criar público {#create}
+## Criar público-alvo {#create}
 
 >[!NOTE]
 >
@@ -66,6 +66,39 @@ Na guia [!UICONTROL Públicos-alvo], você pode adicionar públicos-alvo com bas
 ![A guia Públicos-alvo no Construtor de segmentos está realçada.](../images/ui/account-audiences/audiences.png)
 
 Para obter mais informações sobre como usar o Construtor de segmentos, leia o [Guia da interface do Construtor de segmentos](./segment-builder.md).
+
+### Estabelecer relacionamentos {#relationships}
+
+Por padrão, para públicos-alvo da conta, a interface do construtor de segmentos exibe o relacionamento direto entre uma conta e uma pessoa. No entanto, outros tipos de relacionamento estão disponíveis para públicos-alvo da conta.
+
+Para usar tipos de relações alternativas, selecione ![o ícone de configurações](../../images/icons/settings.png).
+
+![O ícone de configurações está realçado na seção Campos.](../images/ui/account-audiences/select-settings.png)
+
+Na guia [!UICONTROL Configurações], selecione **[!UICONTROL Mostrar seletores de relacionamento]** na seção **[!UICONTROL Relacionamento de campos]**.
+
+![A opção Mostrar seletores de relação está selecionada na seção Relação de campos da guia Configurações.](../images/ui/account-audiences/show-relation-selectors.png)
+
+Selecione ![o ícone de configurações](../../images/icons/settings.png) novamente para retornar à guia [!UICONTROL Campos]. Agora você pode ver a seção **[!UICONTROL Estabelecer relações]**, que permite estabelecer como a conta está conectada à pessoa e como a pessoa está conectada à oportunidade.
+
+![A seção Estabelecer relações é destacada, exibindo as opções de como conectar uma conta a uma pessoa e como conectar uma pessoa a uma oportunidade.](../images/ui/account-audiences/establish-relationships.png)
+
+Ao conectar a conta à pessoa, você pode escolher entre as seguintes opções:
+
+| Opção | Descrição |
+| ------ | ----------- |
+| Relacionamento direto | A conexão direta entre a conta e a pessoa. Especifica a quais contas cada pessoa está vinculada por meio da matriz de valores `accountID` na matriz `personComponents` no esquema de pessoa. Este caminho é o mais usado. |
+| Relação conta-pessoa | A relação entre a conta e a pessoa, que é definida pelo objeto `accountPersonRelation`. Esse caminho também permite que cada pessoa seja conectada a várias contas. É usada quando sua organização define uma tabela de relação explícita a partir dos dados de origem. |
+| Relação oportunidade-pessoa | A relação entre a oportunidade e a pessoa, que é definida pelo objeto `opportunityPersonRelation`. Isso conecta a pessoa a uma conta indo da oportunidade-pessoa para a oportunidade para a conta. Isso permite descrever em quais empresas a pessoa está associada às oportunidades. |
+
+Ao conectar a oportunidade à pessoa, você pode escolher entre as seguintes opções:
+
+| Opção | Descrição |
+| ------ | ----------- |
+| Conta | A conexão direta entre a conta e a oportunidade. Quando você usa isso em um público-alvo de conta, esse caminho conecta todas as pessoas na empresa à oportunidade. |
+| Relação oportunidade-pessoa | A relação entre a oportunidade e a pessoa, que se baseia no objeto oportunidade-pessoa. Esse caminho conecta somente as pessoas que foram especificamente identificadas como envolvidas em uma oportunidade a essa oportunidade. |
+
+Depois de estabelecer o relacionamento desejado, é possível adicionar os públicos-alvo de pessoas necessários à definição do segmento.
 
 ## Ativar público-alvo {#activate}
 

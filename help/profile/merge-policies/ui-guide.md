@@ -6,7 +6,7 @@ exl-id: 0489217a-6a53-428c-a531-fd0a0e5bb71f
 source-git-commit: 400b20578e9a13fa2f41462b188707a34a462ea9
 workflow-type: tm+mt
 source-wordcount: '2455'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
@@ -32,7 +32,7 @@ Este guia requer uma compreensão funcional de vários recursos importantes do [
 >[!CONTEXTUALHELP]
 >id="platform_errors_uplib_101221_404"
 >title="Política de mesclagem não encontrada"
->abstract="Isso significa que o Platform não pôde encontrar a política de mesclagem solicitada. Para resolver esse erro, tente uma das seguintes soluções:<ul><li>Verifique se a ID da política de mesclagem correta está listada no URL.</li><li>Verifique se você tem a combinação correta de Organização e sandbox para a política de mesclagem que está tentando acessar.</li></ul>"
+>abstract="Isso significa que a Platform não encontrou a política de mesclagem solicitada. Para resolver esse erro, tente uma das seguintes soluções:<ul><li>Verifique se a ID da política de mesclagem correta está listada no URL.</li><li>Verifique se você tem a combinação correta de organização e sandbox para a política de mesclagem que está tentando acessar.</li></ul>"
 
 Na interface do usuário do [!DNL Experience Platform], você pode começar a trabalhar com políticas de mesclagem selecionando **[!UICONTROL Perfis]** na navegação à esquerda e selecionando a guia **[!UICONTROL Políticas de mesclagem]**.
 

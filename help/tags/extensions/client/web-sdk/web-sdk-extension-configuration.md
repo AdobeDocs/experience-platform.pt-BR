@@ -2,10 +2,10 @@
 title: Configurar a extensão de tag do SDK da Web
 description: Saiba como configurar a extensão de tag do SDK da Web do Experience Platform na interface do usuário de tags.
 exl-id: 22425daa-10bd-4f06-92de-dff9f48ef16e
-source-git-commit: 660d4e72bd93ca65001092520539a249eae23bfc
+source-git-commit: f2f61c8e68fa794317e3b4f845f1950cebc59ec7
 workflow-type: tm+mt
-source-wordcount: '2012'
-ht-degree: 5%
+source-wordcount: '2525'
+ht-degree: 4%
 
 ---
 
@@ -170,6 +170,66 @@ Como alternativa à transmissão de sobreposições por meio de um comando do SD
 As substituições de fluxo de dados devem ser configuradas com base no ambiente. Os ambientes de desenvolvimento, armazenamento temporário e produção têm substituições separadas. Você pode copiar as configurações entre elas usando as opções dedicadas mostradas na tela abaixo.
 
 ![Imagem mostrando as substituições da configuração da sequência de dados usando a página de extensão de marca do SDK da Web.](assets/datastream-overrides.png)
+
+Por padrão, a substituição da configuração da sequência de dados está desativada. A opção **[!UICONTROL Corresponder configuração da sequência de dados]** está selecionada por padrão.
+
+![Interface do usuário da extensão de marca do SDK da Web mostrando a configuração padrão de substituições de configuração da sequência de dados.](assets/datastream-override-default.png)
+
+Para habilitar substituições de sequência de dados na extensão de marca, selecione **[!UICONTROL Habilitado]** no menu suspenso.
+
+![Interface do usuário da extensão de marca do SDK da Web mostrando as substituições de configuração da sequência de dados Habilitada.](assets/datastream-override-enabled.png)
+
+Depois de habilitar as sobreposições de configuração do fluxo de dados, você pode configurar as sobreposições para cada serviço descrito abaixo.
+
+As configurações de substituição de sequência de dados abaixo substituirão todas as configurações e regras de sequência de dados do lado do servidor para o ambiente selecionado.
+
+### Adobe Analytics {#analytics}
+
+Use as configurações desta seção para substituir o roteamento de dados para o serviço Adobe Analytics.
+
+![Imagem da interface do usuário da extensão de tag do SDK da Web mostrando as configurações de substituição da sequência de dados do Adobe Analytics.](assets/datastream-override-analytics.png)
+
+* **[!UICONTROL Habilitado]** / **[!UICONTROL Desabilitado]**: use este menu suspenso para habilitar ou desabilitar o roteamento de dados para o serviço Adobe Analytics.
+* **[!UICONTROL Conjuntos de relatórios]**: as IDs dos conjuntos de relatórios de destino no Adobe Analytics. O valor deve ser uma substituição pré-configurada do conjunto de relatórios (ou uma lista separada por vírgulas de conjuntos de relatórios) da configuração do fluxo de dados. Essa configuração substitui os conjuntos de relatórios principais.
+* **[!UICONTROL Adicionar Conjunto de Relatórios]**: selecione essa opção para adicionar outros conjuntos de relatórios.
+
+### Adobe Audience Manager {#audience-manager}
+
+Use as configurações desta seção para substituir o roteamento de dados para o serviço Adobe Audience Manager.
+
+![Imagem da interface do usuário da extensão de tag do SDK da Web mostrando as configurações de substituição da sequência de dados do Adobe Audience Manager.](assets/datastream-override-audience-manager.png)
+
+* **[!UICONTROL Habilitado]** / **[!UICONTROL Desabilitado]**: use este menu suspenso para habilitar ou desabilitar o roteamento de dados para o serviço Adobe Audience Manager.
+* **[!UICONTROL Contêiner de sincronização de ID de terceiros]**: a ID do contêiner de sincronização de ID de terceiros de destino no Audience Manager. O valor deve ser um contêiner secundário pré-configurado da configuração da sequência de dados e substitui o contêiner primário.
+
+### Adobe Experience Platform {#experience-platform}
+
+Use as configurações desta seção para substituir o roteamento de dados para o serviço Adobe Experience Platform.
+
+![Imagem da interface do usuário da extensão de tag do SDK da Web mostrando as configurações de substituição da sequência de dados do Adobe Experience Platform.](assets/datastream-override-experience-platform.png)
+
+* **[!UICONTROL Habilitado]** / **[!UICONTROL Desabilitado]**: use este menu suspenso para habilitar ou desabilitar o roteamento de dados para o serviço Adobe Experience Platform.
+* **[!UICONTROL Conjunto de dados do evento]**: a identificação do conjunto de dados do evento de destino na Adobe Experience Platform. O valor deve ser um conjunto de dados secundário pré-configurado na configuração do fluxo de dados.
+* **[!UICONTROL Offer decisioning]**: use este menu suspenso para habilitar ou desabilitar o roteamento de dados para o serviço [!DNL Offer Decisioning].
+* **[!UICONTROL Segmentação do Edge]**: use este menu suspenso para habilitar ou desabilitar o roteamento de dados para o serviço [!DNL Edge Segmentation].
+* **[!UICONTROL Destinos do Personalization]**: use este menu suspenso para habilitar ou desabilitar o roteamento de dados para destinos de personalização.
+* **[!UICONTROL Adobe Journey Optimizer]**: use este menu suspenso para habilitar ou desabilitar o roteamento de dados para o serviço [!DNL Adobe Journey Optimizer].
+
+### Encaminhamento de eventos do lado do servidor do Adobe {#ssf}
+
+Use as configurações desta seção para substituir o roteamento de dados para o serviço de Encaminhamento de Eventos do Lado do Servidor Adobe.
+
+![Imagem da interface do usuário da extensão de tag do SDK da Web mostrando as configurações de substituição da sequência de dados do encaminhamento de eventos do lado do servidor do Adobe.](assets/datastream-override-ssf.png)
+
+* **[!UICONTROL Habilitado]** / **[!UICONTROL Desabilitado]**: use este menu suspenso para habilitar ou desabilitar o roteamento de dados para o serviço de Encaminhamento de Eventos do Lado do Servidor Adobe.
+
+### Adobe Target {#target}
+
+Use as configurações desta seção para substituir o roteamento de dados para o serviço Adobe Target.
+
+![Imagem da interface do usuário da extensão de tag do SDK da Web mostrando as configurações de substituição da sequência de dados do Adobe Target.](assets/datastream-override-target.png)
+
+* **[!UICONTROL Habilitado]** / **[!UICONTROL Desabilitado]**: use este menu suspenso para habilitar ou desabilitar o roteamento de dados para o serviço Adobe Target.
 
 ## Definir configurações avançadas
 

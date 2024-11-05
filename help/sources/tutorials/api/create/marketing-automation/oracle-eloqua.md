@@ -2,14 +2,18 @@
 title: Criar uma conexão de base Eloqua do Oracle usando a API do serviço de fluxo
 description: Saiba como conectar o Adobe Experience Platform ao Oracle Eloqua usando a API de serviço de fluxo.
 exl-id: 866e408f-6e0b-4e81-9ad8-9d74c485c89a
-source-git-commit: e8f54f06ad3431227e140219a9960e8e04f83ccc
+source-git-commit: 0e3fee4d78646b1d1d6730495358b3ced4127f4e
 workflow-type: tm+mt
-source-wordcount: '546'
-ht-degree: 2%
+source-wordcount: '565'
+ht-degree: 1%
 
 ---
 
 # Criar uma conexão de base [!DNL Oracle Eloqua] usando a API [!DNL Flow Service]
+
+>[!IMPORTANT]
+>
+>A origem [!DNL Oracle Eloqua] será substituída no final de maio de 2025. Como alternativa, você pode usar a origem [[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md).
 
 Uma conexão base representa a conexão autenticada entre uma origem e o Adobe Experience Platform.
 

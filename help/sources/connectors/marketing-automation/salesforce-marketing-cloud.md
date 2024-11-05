@@ -4,14 +4,18 @@ title: Visão geral do Salesforce Marketing Cloud Source
 description: Saiba como conectar o Salesforce Marketing Cloud ao Adobe Experience Platform usando APIs ou a interface do usuário.
 exl-id: 2177d68c-0cef-4031-a0e7-8bf22ee2e70b
 last-substantial-update: 2023-05-25T00:00:00Z
-source-git-commit: bc37d41d0f7b0ff0cf4d52242f41467f2891d613
+source-git-commit: 0e3fee4d78646b1d1d6730495358b3ced4127f4e
 workflow-type: tm+mt
-source-wordcount: '322'
+source-wordcount: '341'
 ht-degree: 0%
 
 ---
 
 # [!DNL Salesforce Marketing Cloud]
+
+>[!IMPORTANT]
+>
+>A origem [!DNL Salesforce Marketing Cloud] será substituída no final de maio de 2025. Como alternativa, você pode usar a origem [[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md).
 
 O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
 
@@ -40,7 +44,7 @@ Uma lista de endereços IP deve ser adicionada a uma lista de permissões antes 
 
 A documentação abaixo fornece informações sobre como conectar o [!DNL Salesforce Marketing Cloud] à Platform usando APIs:
 
-* [Criar uma conexão básica de Marketing Cloud do Salesforce usando a API do Serviço de fluxo](../../tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
+* [Criar uma conexão básica de Marketing Cloud do Salesforce usando a API de serviço de fluxo](../../tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
 * [Explorar tabelas de dados usando a API de Serviço de Fluxo](../../tutorials/api/explore/tabular.md)
 * [Criar um fluxo de dados para uma fonte de automação de marketing usando a API do Serviço de fluxo](../../tutorials/api/collect/marketing-automation.md)
 
@@ -48,5 +52,5 @@ A documentação abaixo fornece informações sobre como conectar o [!DNL Salesf
 
 A documentação abaixo fornece informações sobre como conectar o [!DNL Salesforce Marketing Cloud] à Platform usando a interface do usuário:
 
-* [Criar uma conexão de origem do Marketing Cloud do Salesforce na interface](../../tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
+* [Criar uma conexão de origem do Salesforce Marketing Cloud na interface](../../tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
 * [Criar um fluxo de dados para uma conexão de origem de automação de marketing na interface](../../tutorials/ui/dataflow/marketing-automation.md)

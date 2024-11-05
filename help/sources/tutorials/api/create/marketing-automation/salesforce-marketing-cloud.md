@@ -1,11 +1,11 @@
 ---
-title: Criar uma conexão da base de Marketing Cloud do Salesforce usando a API do serviço de fluxo
-description: Saiba como autenticar sua conta do Salesforce Marketing Cloud em relação ao Experience Platform usando a API do Serviço de fluxo.
+title: Criar uma conexão com a base de Marketing Cloud do Salesforce usando a API do serviço de fluxo
+description: Saiba como autenticar sua conta de Marketing Cloud do Salesforce em relação ao Experience Platform usando a API de serviço de fluxo.
 exl-id: fbf68d3a-f8b1-4618-bd56-160cc6e3346d
-source-git-commit: 30f1e8a0424ee0f81d8e98fb24886ad1480b270c
+source-git-commit: 0e3fee4d78646b1d1d6730495358b3ced4127f4e
 workflow-type: tm+mt
-source-wordcount: '489'
-ht-degree: 5%
+source-wordcount: '508'
+ht-degree: 4%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 5%
 
 >[!IMPORTANT]
 >
->No momento, a assimilação de objetos personalizados não tem suporte da integração de origem [!DNL Salesforce Marketing Cloud].
+>A origem [!DNL Salesforce Marketing Cloud] será substituída no final de maio de 2025. Como alternativa, você pode usar a origem [[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md).
 
 Uma conexão base representa a conexão autenticada entre uma origem e o Adobe Experience Platform.
 
@@ -46,6 +46,10 @@ Para que [!DNL Flow Service] se conecte a [!DNL Salesforce Marketing Cloud], voc
 Para obter mais informações sobre a introdução, consulte este [[!DNL Salesforce Marketing Cloud] documento](<https://developer.salesforce.com/docs/atlas.en-us.mc-apis.meta/mc-apis/authentication.htm>).
 
 ## Criar uma conexão básica
+
+>[!IMPORTANT]
+>
+>No momento, a assimilação de objetos personalizados não tem suporte da integração de origem [!DNL Salesforce Marketing Cloud].
 
 Uma conexão base retém informações entre sua origem e a Platform, incluindo as credenciais de autenticação da origem, o estado atual da conexão e sua ID de conexão base exclusiva. A ID de conexão básica permite explorar e navegar pelos arquivos de dentro da origem e identificar os itens específicos que deseja assimilar, incluindo informações sobre os tipos de dados e formatos.
 

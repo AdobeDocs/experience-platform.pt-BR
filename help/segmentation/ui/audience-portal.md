@@ -2,9 +2,9 @@
 title: Visão geral do Audience Portal
 description: Saiba como usar o Audience Portal para exibir, gerenciar e criar públicos no Adobe Experience Platform.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 0378cc313445ff22d1d2d003c9ae248d791b3707
+source-git-commit: a48df00b61fd5736cfb6fd29c60cf73a02342451
 workflow-type: tm+mt
-source-wordcount: '4530'
+source-wordcount: '4547'
 ht-degree: 4%
 
 ---
@@ -244,7 +244,7 @@ O popover **[!UICONTROL Avaliar públicos-alvo sob demanda]** é exibido, exibin
 
 ![Os públicos-alvo que podem ser avaliados usando a avaliação de público-alvo flexível são exibidos.](../images/ui/audience-portal/evaluate-audiences-modal.png)
 
-Depois de confirmar que os públicos-alvo corretos estão listados, prossiga com a solicitação e a avaliação do público-alvo flexível será iniciada.
+Depois de confirmar que os públicos-alvo corretos estão listados, você pode continuar com a solicitação e a avaliação do público-alvo flexível será iniciada. Você pode exibir o status desta avaliação de público na [exibição do monitoramento do trabalho de avaliação](../../dataflows/ui/monitor-audiences.md#evaluation-job-details).
 
 >[!NOTE]
 >

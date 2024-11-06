@@ -2,9 +2,9 @@
 title: Conectar sua conta do Salesforce Marketing Cloud ao Experience Platform por meio da interface
 description: Saiba como conectar sua conta do Marketing Cloud Salesforce ao Experience Platform por meio da interface.
 exl-id: 1d9bde60-31e0-489c-9c1c-b6471e0ea554
-source-git-commit: 0e3fee4d78646b1d1d6730495358b3ced4127f4e
+source-git-commit: 0781d04af12c4c11dfc917adfdec8673cf3be8de
 workflow-type: tm+mt
-source-wordcount: '517'
+source-wordcount: '518'
 ht-degree: 2%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->A origem [!DNL Salesforce Marketing Cloud] será substituída no final de maio de 2025. Como alternativa, você pode usar a origem [[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md).
+>A origem [!DNL Salesforce Marketing Cloud] será substituída no final de maio de 2025. Você pode usar o [[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md) no lugar da origem [!DNL Salesforce Marketing Cloud].
 
 Este tutorial fornece etapas sobre como conectar sua conta do [!DNL Salesforce Marketing Cloud] à Adobe Experience Platform por meio da interface do usuário.
 

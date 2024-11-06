@@ -2,9 +2,9 @@
 title: Painel de perfis de conta
 description: A Adobe Experience Platform fornece um painel por meio do qual você pode visualizar informações importantes sobre os perfis de conta B2B da sua organização.
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
-source-git-commit: 442fcee17cbe38a9e1608324581ebedee4ba7fe6
+source-git-commit: a0b762cb89f45313724187ce36b80b2f3d0548eb
 workflow-type: tm+mt
-source-wordcount: '2362'
+source-wordcount: '2397'
 ht-degree: 4%
 
 ---
@@ -100,6 +100,10 @@ O widget [!UICONTROL Perfis de conta adicionados] usa um gráfico de linhas para
 ![O widget Perfis de conta foi adicionado.](../images/account-profiles/account-profiles-added.png)
 
 ### Visão geral de clientes por conta {#customers-per-account-overview}
+
+>[!NOTE]
+>
+>O insight [!UICONTROL Visão geral dos clientes por conta] e seus gráficos detalhados ([!UICONTROL Detalhes dos clientes por conta], [!UICONTROL Visão geral das oportunidades por conta], [!UICONTROL Detalhes das oportunidades por conta]) não são afetados por nenhum filtro de data global que você tenha definido.
 
 O gráfico [!UICONTROL Visão geral de Clientes por conta] fornece um resumo das contas com base em seus tipos de clientes. Ela exibe uma tabela de quatro linhas que categoriza as contas como tendo clientes diretos ou indiretos ou aqueles sem clientes. Ele fornece o número total de contas para cada categoria. O gráfico ajuda a identificar a distribuição de contas que têm clientes diretos ou indiretos.
 

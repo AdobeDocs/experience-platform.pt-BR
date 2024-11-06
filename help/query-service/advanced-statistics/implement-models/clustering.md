@@ -2,9 +2,9 @@
 title: Algoritmos de Cluster
 description: Saiba como configurar e otimizar vários algoritmos de clustering com parâmetros-chave, descrições e código de exemplo para ajudar a implementar modelos estatísticos avançados.
 role: Developer
-source-git-commit: 4d4e9ae527deb149f02edb39716851e995c23d21
+source-git-commit: 4ee7ce2468c1ea5f0960349c288d406f43a8bb91
 workflow-type: tm+mt
-source-wordcount: '878'
+source-wordcount: '874'
 ht-degree: 4%
 
 ---
@@ -112,7 +112,7 @@ Create MODEL modelname OPTIONS(
 
 **Parâmetros**
 
-| Parâmetro | Descrição | Valor padrão | Valores possíveis |                                                                                                                                                                  | Valor padrão | Valores possíveis |
+| Parâmetro | Descrição | Valor padrão | Valores possíveis |
 |-------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------|------------------------------------------|
 | `MAX_ITER` | O número máximo de iterações que o algoritmo executa. | 20 | (>= 0) |
 | `OPTIMIZER` | O otimizador ou algoritmo de inferência usado para estimar o modelo LDA. As opções com suporte são `"online"` (Baias de Variação Online) e `"em"` (Expectativa-Maximização). | &quot;online&quot; | `online`, `em` |
@@ -127,6 +127,8 @@ Create MODEL modelname OPTIONS(
 | `SUBSAMPLING_RATE` | Para o otimizador `online`: a fração do corpo amostrada e usada em cada iteração de descida de gradiente de minilote, no intervalo `(0, 1]`. | 0,05 | `(0, 1]` |
 | `TOPIC_CONCENTRATION` | Parâmetro de concentração (&quot;beta&quot; ou &quot;eta&quot;) para a anterior colocada nas distribuições dos tópicos em termos gerais. | Automático | (>= 0) |
 | `TOPIC_DISTRIBUTION_COL` | Coluna de saída com estimativas da distribuição de mistura de tópicos para cada documento. | NÃO DEFINIDO | Qualquer string |
+
+{style="table-layout:auto"}
 
 **Exemplo**
 

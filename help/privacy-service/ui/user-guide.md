@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Gerenciar processos de privacidade na interface do Privacy Service
 description: Saiba como usar a interface do usuário do Privacy Service para coordenar e monitorar solicitações de privacidade em vários aplicativos Experience Cloud.
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
-source-git-commit: 0a8d7c4414f6091025d36ed85dc09e057ee24df9
+source-git-commit: c870b6be603073d6dd909b272c619deb5b246f05
 workflow-type: tm+mt
-source-wordcount: '1765'
+source-wordcount: '1770'
 ht-degree: 11%
 
 ---
@@ -43,6 +43,7 @@ O [!DNL Privacy Service] dá suporte a solicitações de trabalho para vários r
 | [!UICONTROL CPA_USA (Colorado)] | O [!DNL Colorado Privacy Act] |
 | [!UICONTROL CPRA_USA (Califórnia)] | O [!DNL California Consumer Privacy Rights Act (CPRA)] |
 | [!UICONTROL CTDPA_USA (Connecticut)] | O [!DNL Connecticut Data Privacy Act] |
+| [!UICONTROL DPDPA_USA (Delaware)] | O [!DNL Delaware Personal Data Privacy Act] |
 | [!UICONTROL FDBR_USA (Flórida)] | O [!DNL Florida Digital Bill of Rights] |
 | [!UICONTROL GDPR (União Europeia)] | O [!DNL General Data Protection Regulation] da União Europeia |
 | [!UICONTROL HIPPA_USA (Estados Unidos)] | O [!DNL Health Insurance Portability and Accountability Act] |
@@ -56,6 +57,7 @@ O [!DNL Privacy Service] dá suporte a solicitações de trabalho para vários r
 | [!UICONTROL NJDPA_USA (Nova Jersey)] | O [!DNL New Jersey Data Protection Act] |
 | [!UICONTROL OCPA EUA (Oregon)] | O [!DNL Oregon Consumer Privacy Act] |
 | [!UICONTROL PDPA_THA (Tailândia)] | Da Tailândia: [!DNL Personal Data Protection Act] |
+| [!UICONTROL QL25_CAN (Quebec)] | [!DNL Quebec Law 25] |
 | [!UICONTROL TDPSA EUA (Texas)] | O [!DNL Texas Data Privacy and Security Act] |
 | [!UICONTROL UCPA_USA (Utah)] | O [!DNL Utah Consumer Privacy Act] |
 | [!UICONTROL VCDPA_USA (Virgínia)] | O [!DNL Virginia Consumer Data Protection Act] |

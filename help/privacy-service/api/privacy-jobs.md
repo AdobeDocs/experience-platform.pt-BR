@@ -5,9 +5,9 @@ title: Ponto de extremidade da API de trabalhos de privacidade
 description: Saiba como gerenciar processos de privacidade para aplicativos Experience Cloud usando a API de Privacy Service.
 role: Developer
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
-source-git-commit: 02a95212ff8a018b2b7f0a06978307d08a6915af
+source-git-commit: 26a50f21c1ebebf485eaf62712bd02de3406cceb
 workflow-type: tm+mt
-source-wordcount: '1821'
+source-wordcount: '1810'
 ht-degree: 2%
 
 ---
@@ -42,7 +42,7 @@ GET /jobs?regulation={REGULATION}&fromDate={FROMDATE}&toDate={TODATE}&status={ST
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{REGULATION}` | O tipo de regulamento a ser consultado. Os valores aceitos incluem: <ul><li>`apa_aus`</li><li>`cpa_usa`</li><li>`cpra_usa`</li><li>`ctdpa_usa`</li><li>`fdbr_usa`</li><li>`gdpr` - Observação: isso também é usado para solicitações relacionadas a regulamentos **ccpa**.</li><li>`hipaa_usa`</li><li>`icdpa_usa`</li><li>`lgpd_bra`</li><li>`mcdpa_usa`</li><li>`mhmda_usa`</li><li>`ndpa_usa`</li><li>`nhpa_usa`</li><li>`njdpa_usa`</li><li>`nzpa_nzl`</li><li>`ocpa_usa`</li><li>`pdpa_tha`</li><li>`tdpsa_usa`</li><li>`ucpa_usa`</li><li>`vcdpa_usa`</li></ul><br>Consulte a visão geral em [regulamentos com suporte](../regulations/overview.md) para obter mais informações sobre os regulamentos de privacidade que os valores acima representam. |
+| `{REGULATION}` | O tipo de regulamento a ser consultado. Os valores aceitos incluem: <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpa_usa`</li><li>`cpra_usa`</li><li>`ctdpa_usa`</li><li>`dpdpa`</li><li>`fdbr_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`icdpa_usa`</li><li>`lgpd_bra`</li><li>`mcdpa_usa`</li><li>`mhmda_usa`</li><li>`ndpa_usa`</li><li>`nhpa_usa`</li><li>`njdpa_usa`</li><li>`nzpa_nzl`</li><li>`ocpa_usa`</li><li>`pdpa_tha`</li><li>`ql25`</li><li>`tdpsa_usa`</li><li>`ucpa_usa`</li><li>`vcdpa_usa`</li></ul><br>Consulte a visão geral em [regulamentos com suporte](../regulations/overview.md) para obter mais informações sobre os regulamentos de privacidade que os valores acima representam. |
 | `{PAGE}` | A página de dados a ser exibida, usando a numeração com base em 0. O padrão é `0`. |
 | `{SIZE}` | O número de resultados a serem exibidos em cada página. O padrão é `100` e o máximo é `1000`. Exceder o máximo faz com que a API retorne um erro de código 400. |
 | `{status}` | O comportamento padrão é incluir todos os status. Se você especificar um tipo de status, a solicitação retornará somente os processos de privacidade que correspondam a esse tipo de status. Os valores aceitos incluem: <ul><li>`processing`</li><li>`complete`</li><li>`error`</li></ul> |

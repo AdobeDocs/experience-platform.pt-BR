@@ -1,14 +1,14 @@
 ---
-title: Preparar um arquivo zip do pacote de extensão
+title: Criar um arquivo zip do pacote de extensão
 description: Saiba como preparar um arquivo zip de pacote de extensão.
-source-git-commit: fa50e101e5756923eddcd2cab409bda2a629a8a3
+source-git-commit: 92e519e0662c3c3521bfe5ca814b37464e55c7e1
 workflow-type: tm+mt
-source-wordcount: '101'
-ht-degree: 50%
+source-wordcount: '102'
+ht-degree: 45%
 
 ---
 
-# Fazer upload e implementar testes completos
+# Criar um arquivo zip de pacote de extensão.
 
 >[!NOTE]
 >

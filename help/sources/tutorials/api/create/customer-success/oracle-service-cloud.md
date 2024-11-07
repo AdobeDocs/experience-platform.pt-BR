@@ -3,9 +3,9 @@ keywords: Experience Platform;página inicial;tópicos populares;Nuvem do servi�
 title: Criar uma conexão do Oracle Service Cloud Source usando a API do serviço de fluxo
 description: Saiba como conectar o Adobe Experience Platform à Oracle Service Cloud usando a API do Serviço de fluxo.
 exl-id: 00c0bc9c-a740-4bab-a882-2cfed8abe758
-source-git-commit: 0781d04af12c4c11dfc917adfdec8673cf3be8de
+source-git-commit: a32d0d7ed7d18454099d2b55b3f6809cfbcd9b62
 workflow-type: tm+mt
-source-wordcount: '531'
+source-wordcount: '522'
 ht-degree: 2%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->A origem [!DNL Oracle Service Cloud] será substituída no final de maio de 2025. Você pode usar o [[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md) no lugar da origem [!DNL Oracle Service Cloud].
+>A origem [!DNL Oracle Service Cloud] será substituída no final de maio de 2025.
 
 Uma conexão base representa a conexão autenticada entre uma origem e o Adobe Experience Platform.
 

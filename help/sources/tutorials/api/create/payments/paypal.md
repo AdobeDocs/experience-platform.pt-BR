@@ -5,9 +5,9 @@ title: Criar uma conexão base do PayPal usando a API do serviço de fluxo
 type: Tutorial
 description: Saiba como conectar o PayPal ao Adobe Experience Platform usando a API do Serviço de Fluxo.
 exl-id: 5e6ca7b4-5e2f-4706-a339-ac159e2e0938
-source-git-commit: 0781d04af12c4c11dfc917adfdec8673cf3be8de
+source-git-commit: a32d0d7ed7d18454099d2b55b3f6809cfbcd9b62
 workflow-type: tm+mt
-source-wordcount: '475'
+source-wordcount: '466'
 ht-degree: 5%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 5%
 
 >[!IMPORTANT]
 >
->A origem [!DNL PayPal] será substituída no final de maio de 2025. Você pode usar o [[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md) no lugar da origem [!DNL PayPal].
+>A origem [!DNL PayPal] será substituída no final de maio de 2025.
 
 Uma conexão base representa a conexão autenticada entre uma origem e o Adobe Experience Platform.
 

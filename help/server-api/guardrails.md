@@ -2,9 +2,9 @@
 title: Medidas de proteção de desempenho para a API do servidor de Edge Network
 description: Saiba como usar a API do servidor em medidas de proteção de desempenho ideais.
 exl-id: 063d0fbb-26d1-4727-9dea-8e7223b2173d
-source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
+source-git-commit: 316efe577274b389bd1bf50e896ad6ef53e44b7b
 workflow-type: tm+mt
-source-wordcount: '531'
+source-wordcount: '569'
 ht-degree: 2%
 
 ---
@@ -21,6 +21,8 @@ O Adobe não é responsável pela degradação do desempenho causada por limites
 >[!IMPORTANT]
 >
 >Verifique os direitos de licença em seu Pedido de Venda e a [Descrição do Produto](https://helpx.adobe.com/legal/product-descriptions.html?lang=pt-BR) correspondente sobre os limites de uso reais, além desta página de medidas de proteção.
+
+Todas as medidas de proteção de desempenho descritas nesta página se aplicam no nível da Organização IMS. Para usuários com várias Organizações IMS configuradas, cada organização está sujeita individualmente às medidas de proteção de desempenho abaixo. Consulte o [glossário de Experience Platform](../landing/glossary.md) para obter mais detalhes sobre [!DNL IMS Organizations].
 
 ## Definições
 

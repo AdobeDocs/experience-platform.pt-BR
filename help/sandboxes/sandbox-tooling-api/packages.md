@@ -2,9 +2,9 @@
 title: Endpoint da API de Pacotes de Ferramentas de Sandbox
 description: O ponto de extremidade /packages na API de ferramentas da sandbox permite gerenciar programaticamente pacotes no Adobe Experience Platform.
 exl-id: 46efee26-d897-4941-baf4-d5ca0b8311f0
-source-git-commit: 1e271a88890f41f66aad93d96dbef23a09d33077
+source-git-commit: e029380dd970195d1254ee3ea1cd68ba2574bbd3
 workflow-type: tm+mt
-source-wordcount: '2541'
+source-wordcount: '2543'
 ht-degree: 10%
 
 ---
@@ -1595,7 +1595,13 @@ Uma resposta bem-sucedida retorna uma lista de todas as solicitações de transf
 
 ### Atualizar disponibilidade do pacote de privado para público {#update-availability}
 
-Altere um pacote de privado para público fazendo uma solicitação GET para o ponto de extremidade `/transfer/list?property=status%3D%3DCOMPLETED%2CFAILED&requestType=PUBLIC`. Por padrão, um pacote é criado com disponibilidade privada.
+Altere um pacote de privado para público fazendo uma solicitação GET para o ponto de extremidade `/packages/update`. Por padrão, um pacote é criado com disponibilidade privada.
+
+**Formato da API**
+
+```http
+GET `/packages/update`
+```
 
 **Solicitação**
 
@@ -1603,7 +1609,7 @@ A solicitação a seguir altera a disponibilidade de pacotes de privada para pú
 
 ```shell
 curl -X GET \
-  http://platform.adobe.io/data/foundation/transfer/list?property=status%3D%3DCOMPLETED%2CFAILED&requestType=PUBLIC \
+  http://platform.adobe.io/data/foundation/exim/packages/update \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-type: application/json' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \

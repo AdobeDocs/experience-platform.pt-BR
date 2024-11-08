@@ -5,7 +5,7 @@ title: Criar uma conexão base do Zoho CRM usando a API do serviço de fluxo
 type: Tutorial
 description: Saiba como conectar o Adobe Experience Platform ao Zoho CRM usando a API do Serviço de fluxo.
 exl-id: 33995927-8f5e-44c5-b809-4db8706bbd34
-source-git-commit: a32d0d7ed7d18454099d2b55b3f6809cfbcd9b62
+source-git-commit: 474b81aa8caf58013f8ea7cff9ad59d92466aac8
 workflow-type: tm+mt
 source-wordcount: '649'
 ht-degree: 3%
@@ -14,7 +14,7 @@ ht-degree: 3%
 
 # Criar uma conexão de base [!DNL Zoho CRM] usando a API [!DNL Flow Service]
 
->[!IMPORTANT]
+>[!WARNING]
 >
 >A origem [!DNL Zoho CRM] será substituída no final de junho de 2025.
 

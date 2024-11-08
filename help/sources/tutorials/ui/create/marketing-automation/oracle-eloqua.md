@@ -2,7 +2,7 @@
 title: Criar uma conexão de origem do Oracle Eloqua usando a interface do usuário da plataforma
 description: Saiba como conectar o Adobe Experience Platform ao Oracle Eloqua usando a interface do usuário da plataforma.
 exl-id: c4431d85-5948-4122-9a99-dbacdde5a09f
-source-git-commit: a32d0d7ed7d18454099d2b55b3f6809cfbcd9b62
+source-git-commit: 474b81aa8caf58013f8ea7cff9ad59d92466aac8
 workflow-type: tm+mt
 source-wordcount: '523'
 ht-degree: 2%
@@ -11,7 +11,7 @@ ht-degree: 2%
 
 # Criar uma conexão de origem [!DNL Oracle Eloqua] usando a interface do usuário da plataforma
 
->[!IMPORTANT]
+>[!WARNING]
 >
 >A origem [!DNL Oracle Eloqua] será substituída no final de maio de 2025.
 

@@ -5,7 +5,7 @@ title: Criar uma Conexão do PayPal Source na interface do usuário
 type: Tutorial
 description: Saiba como criar uma conexão de origem do PayPal usando a interface do Adobe Experience Platform.
 exl-id: bbd3f634-cb28-45d8-9b7b-ed3873101882
-source-git-commit: a32d0d7ed7d18454099d2b55b3f6809cfbcd9b62
+source-git-commit: 474b81aa8caf58013f8ea7cff9ad59d92466aac8
 workflow-type: tm+mt
 source-wordcount: '458'
 ht-degree: 1%
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Criar uma conexão de origem [!DNL PayPal] na interface
 
->[!IMPORTANT]
+>[!WARNING]
 >
 >A origem [!DNL PayPal] será substituída no final de maio de 2025.
 

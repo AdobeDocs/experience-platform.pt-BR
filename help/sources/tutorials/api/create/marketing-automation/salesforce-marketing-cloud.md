@@ -2,7 +2,7 @@
 title: Criar uma conexão com a base de Marketing Cloud do Salesforce usando a API do serviço de fluxo
 description: Saiba como autenticar sua conta de Marketing Cloud do Salesforce em relação ao Experience Platform usando a API de serviço de fluxo.
 exl-id: fbf68d3a-f8b1-4618-bd56-160cc6e3346d
-source-git-commit: a32d0d7ed7d18454099d2b55b3f6809cfbcd9b62
+source-git-commit: 474b81aa8caf58013f8ea7cff9ad59d92466aac8
 workflow-type: tm+mt
 source-wordcount: '500'
 ht-degree: 5%
@@ -11,7 +11,7 @@ ht-degree: 5%
 
 # Criar uma conexão de base [!DNL Salesforce Marketing Cloud] usando a API [!DNL Flow Service]
 
->[!IMPORTANT]
+>[!WARNING]
 >
 >A origem [!DNL Salesforce Marketing Cloud] será substituída no final de maio de 2025.
 

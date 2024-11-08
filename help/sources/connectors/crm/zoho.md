@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Visão geral do Conector Zoho CRM Source
 description: Saiba como conectar o Zoho CRM ao Adobe Experience Platform usando APIs ou a interface do usuário.
 exl-id: 4a010453-3d09-4a47-b04e-5789ae4af48c
-source-git-commit: a32d0d7ed7d18454099d2b55b3f6809cfbcd9b62
+source-git-commit: 474b81aa8caf58013f8ea7cff9ad59d92466aac8
 workflow-type: tm+mt
 source-wordcount: '507'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # [!DNL Zoho CRM]
 
->[!IMPORTANT]
+>[!WARNING]
 >
 >A origem [!DNL Zoho CRM] será substituída no final de junho de 2025.
 

@@ -6,10 +6,10 @@ product: experience platform
 type: Documentation
 description: Saiba mais sobre o uso padrão da ativação de dados e os limites de taxa.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: 3ff20e51458cb9cccafb6da92414def9eeaaf821
+source-git-commit: d01e9b6d64e9040df11c45750c784079a0289477
 workflow-type: tm+mt
-source-wordcount: '1686'
-ht-degree: 2%
+source-wordcount: '1715'
+ht-degree: 1%
 
 ---
 
@@ -53,7 +53,7 @@ As medidas de proteção abaixo geralmente se aplicam à ativação por meio de 
 | Número máximo de atributos mapeados para um destino | 50 | Proteção de desempenho | No caso de vários destinos e tipos de destino, é possível selecionar atributos de perfil e identidades para mapear para exportação. Para um desempenho ideal, no máximo 50 atributos devem ser mapeados em um fluxo de dados para um destino. |
 | Número máximo de destinos | 100 | Proteção imposta pelo sistema | É possível criar um máximo de 100 destinos aos quais você pode conectar e ativar dados, *por sandbox*. [Os destinos de personalização do Edge (Personalização personalizada)](#edge-destinations-activation) podem representar, no máximo, 10 dos 100 destinos recomendados. |
 | Tipo de dados ativados para destinos | Dados de perfil, incluindo identidades e mapa de identidade | Proteção imposta pelo sistema | Atualmente, só é possível exportar *atributos de registro de perfil* para destinos. No momento, não há suporte para atributos XDM que descrevem dados de evento para exportação. |
-| Tipo de dados ativados para destinos — suporte a atributos de array e mapa | Não disponível | Proteção imposta pelo sistema | No momento, **não** é possível exportar *matriz ou mapear atributos* para destinos. A exceção a esta regra é o [mapa de identidade](/help/xdm/field-groups/profile/identitymap.md), que é exportado em ativações de streaming e baseadas em arquivo. |
+| Tipo de dados ativados para destinos — suporte a atributos de array e mapa | Parcialmente disponível | Proteção imposta pelo sistema | Você pode exportar atributos de matriz para [destinos baseados em arquivo](/help/destinations/destination-types.md#file-based). Você ainda precisa usar a função `array_to_string` para nivelar a matriz em uma cadeia de caracteres no arquivo de destino. [Leia mais](/help/release-notes/2024/october-2024.md#destinations-new-updated-functionality) sobre a funcionalidade. <br><br> No momento, **não** é possível exportar *atributos de mapa* para destinos. A exceção a esta regra é o [mapa de identidade](/help/xdm/field-groups/profile/identitymap.md), que é exportado em ativações de streaming e baseadas em arquivo. |
 
 {style="table-layout:auto"}
 

@@ -4,9 +4,9 @@ title: Exportar conjuntos de dados usando a API do Serviço de fluxo
 description: Saiba como usar a API do Serviço de fluxo para exportar conjuntos de dados para destinos selecionados.
 type: Tutorial
 exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
-source-git-commit: 22a752e28fe3cc4cb3337b456e80ef1b273f6a71
+source-git-commit: c32d2801fe38183225d24f38284b42e3d78e2631
 workflow-type: tm+mt
-source-wordcount: '5107'
+source-wordcount: '5138'
 ht-degree: 3%
 
 ---
@@ -1163,9 +1163,11 @@ Observe a ID de conexão da resposta. Essa ID será necessária na próxima etap
 
 Em seguida, é necessário criar uma conexão de destino que armazene os parâmetros de exportação para seus conjuntos de dados. Os parâmetros de exportação incluem local, formato de arquivo, compactação e outros detalhes. Consulte as propriedades `targetSpec` fornecidas na especificação de conexão do destino para entender as propriedades com suporte para cada tipo de destino. Consulte as guias abaixo para obter as propriedades `targetSpec` de todos os destinos com suporte.
 
->[!WARNING]
+>[!IMPORTANT]
 >
->As exportações para arquivos JSON são suportadas somente em um modo compactado. Há suporte para exportações para [!DNL Parquet] arquivos em um modo compactado e descompactado.
+>As exportações para arquivos JSON são suportadas somente em um modo compactado. Há suporte para exportações para [!DNL Parquet] arquivos nos modos compactado e descompactado.
+>
+>O formato do arquivo JSON exportado é NDJSON, que é o formato de intercâmbio padrão no ecossistema de big data. A Adobe recomenda usar um cliente compatível com NDJSON para ler os arquivos exportados.
 
 >[!BEGINTABS]
 

@@ -6,10 +6,10 @@ user-guide-description: Saiba como implantar e gerenciar tags de análise, marke
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: fa50e101e5756923eddcd2cab409bda2a629a8a3
+source-git-commit: 82d6d2e7d0d7f0f9484c4ebcd34339fd63e04b59
 workflow-type: tm+mt
 source-wordcount: '778'
-ht-degree: 44%
+ht-degree: 43%
 
 ---
 
@@ -261,7 +261,7 @@ ht-degree: 44%
    * [Navegadores compatíveis](./extension-dev/browsers.md)
    * Processo de envio {#submit}
       * [Visão geral](./extension-dev/submit/overview.md)
-      * [Configuração da empresa](./extension-dev/submit/setup.md)
+      * [Configuração da organização](./extension-dev/submit/setup.md)
       * [Conceder acesso ao usuário](./extension-dev/submit/access.md)
       * [Desenvolver uma extensão](./extension-dev/submit/develop.md)
       * [Criar uma lista de troca](./extension-dev/submit/create-listing.md)

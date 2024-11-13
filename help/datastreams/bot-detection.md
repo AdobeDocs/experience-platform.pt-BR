@@ -2,24 +2,22 @@
 title: Configurar a detecção de bot para sequências de dados
 description: Saiba como configurar a detecção de bot para sequências de dados, para diferenciar o tráfego humano e não humano.
 exl-id: 6b221d97-0145-4d3e-a32d-746d72534add
-source-git-commit: ff95e5e105f7b3e1213eab90456b9fa9000918d3
+source-git-commit: e3768a3f695abeedc9a3ce2fef591c6ecae9a897
 workflow-type: tm+mt
-source-wordcount: '1367'
+source-wordcount: '1358'
 ht-degree: 0%
 
 ---
 
 # Configurar a detecção de bot para sequências de dados
 
-O tráfego proveniente de entidades não humanas, como programas automatizados, web scrapers, spiders e scanners com script, pode dificultar a identificação de eventos que ocorrem de visitantes humanos. Esse tipo de tráfego pode afetar negativamente métricas comerciais importantes, resultando em relatórios de tráfego incorretos.
+O tráfego não humano de programas automatizados, raspadores da Web, aranhas e scanners com script pode dificultar a identificação de eventos de visitantes humanos. Esse tipo de tráfego pode afetar negativamente métricas comerciais importantes, resultando em relatórios de tráfego incorretos.
 
 A detecção de bot permite identificar eventos gerados pelo [SDK da Web](../web-sdk/home.md), [SDK Móvel](https://developer.adobe.com/client-sdks/home/) e [[!DNL Server API]](../server-api/overview.md) como sendo gerados pelos spiders e bots conhecidos.
 
-Ao configurar a detecção de bot para seus fluxos de dados, você pode identificar endereços IP, intervalos de IP e cabeçalhos de solicitação específicos que gostaria de classificar como eventos de bot.
+Ao configurar a detecção de bot para seus fluxos de dados, você pode identificar endereços IP específicos, intervalos IP e cabeçalhos de solicitação para classificar como eventos de bot. Isso ajuda a fornecer uma medida mais precisa da atividade do usuário no seu site ou aplicativo móvel.
 
-A identificação do tráfego de bot pode fornecer uma medida mais precisa da atividade do usuário no seu site ou aplicativo móvel.
-
-Quando uma solicitação para o Edge Network corresponde a qualquer uma das regras de detecção de bot, o esquema XDM é atualizado com uma pontuação de bot (sempre definida como 1), conforme mostrado abaixo.
+Quando uma solicitação para o Edge Network corresponde a qualquer uma das regras de detecção de bot, o esquema XDM é atualizado com uma pontuação de bot (sempre definida como 1), conforme mostrado abaixo:
 
 ```json
 {
@@ -29,7 +27,7 @@ Quando uma solicitação para o Edge Network corresponde a qualquer uma das regr
 }
 ```
 
-Essa pontuação de bot ajuda as soluções que recebem a solicitação a identificar corretamente o tráfego do bot.
+Essa pontuação de bot ajuda as soluções que recebem a solicitação a identificar corretamente o tráfego de bot.
 
 >[!IMPORTANT]
 >
@@ -66,9 +64,12 @@ Na página Regras de detecção de bot, você pode configurar a detecção de bo
 
 ### Usar a Lista Internacional de spiders e bots da IAB/ABC {#iab-list}
 
-A [Lista Internacional de Aranhas e Bots do IAB/ABC](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/) é uma lista de spiders e bots da Internet padrão do setor de terceiros, que ajuda a identificar tráfego automatizado, como rastreadores de mecanismo de pesquisa, ferramentas de monitoramento e outro tráfego não humano que talvez você não queira exibir em suas contagens de análise.
+A [Lista Internacional de Aranhas e Bots do IAB/ABC](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/) é uma lista de spiders e bots da Internet padrão do setor de terceiros. Essa lista ajuda a identificar o tráfego automatizado, como rastreadores de mecanismo de pesquisa, ferramentas de monitoramento e outro tráfego não humano que talvez você não queira incluir nas contagens de análise.
 
-Para configurar sua sequência de dados para usar o [!DNL IAB/ABC International Spiders and Bots List], alterne a opção **[!UICONTROL Usar Lista Internacional de spiders e bots IAB/ABC para detecção de bot nesta sequência de dados]** e selecione Salvar para aplicar as configurações de detecção de bot à sua sequência de dados.
+Para configurar seu fluxo de dados para usar a Lista internacional de spiders e bots da IAB/ABC:
+
+1. Ative a opção **[!UICONTROL Usar Lista Internacional de spiders e bots IAB/ABC para detecção de bot nesta sequência de dados]**.
+2. Selecione **[!UICONTROL Salvar]** para aplicar as configurações de detecção de bot à sua sequência de dados.
 
 ![Aranhas IAB e lista de bot habilitadas.](assets/bot-detection/bot-detection-list.png)
 

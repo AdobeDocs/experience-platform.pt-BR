@@ -3,14 +3,19 @@ keywords: Experience Platform; segurança; acesso a ip; validação; guia de API
 title: Endpoint de validação de IP
 description: Saiba como validar o acesso IP para sandboxes no Serviço de consulta usando o endpoint da API de validação de IP.
 role: Developer
-source-git-commit: ad1b6d8449a2a3ca9c8422e70769d12e33d8e255
+exl-id: 4ce9ab1c-e333-4ed5-a430-43ffec36a46d
+source-git-commit: bf696c8836407a2fea82e9078201cb1f5004bcf8
 workflow-type: tm+mt
-source-wordcount: '208'
-ht-degree: 1%
+source-wordcount: '229'
+ht-degree: 4%
 
 ---
 
 # Endpoint de validação de IP
+
+>[!AVAILABILITY]
+>
+>Essa funcionalidade está disponível para clientes que compraram o complemento Data Distiller. Para obter mais informações, entre em contato com o(a) representante da Adobe.
 
 Use o ponto de extremidade da API de validação de IP para verificar se um endereço IP especificado tem permissão para acessar uma sandbox designada no Serviço de consulta. Essa verificação confirma se as restrições de acesso se aplicam ou se um endereço IP tem permissão para acessar dados em uma sandbox.
 

@@ -3,14 +3,19 @@ keywords: Experience Platform; Serviço de consulta; Controle de acesso IP; auto
 title: Guia da API de autorização do serviço de consulta
 description: Saiba como começar a usar restrições de autorização e intervalo de IP para obter acesso seguro a dados no Serviço de consulta da Adobe Experience Platform.
 role: Developer
-source-git-commit: eb6558c2cc3faebb2cb14f49f7517227d57f7162
+exl-id: d93ce774-c8b2-4f15-a4d9-117d9aa5d9e7
+source-git-commit: bf696c8836407a2fea82e9078201cb1f5004bcf8
 workflow-type: tm+mt
-source-wordcount: '461'
-ht-degree: 4%
+source-wordcount: '482'
+ht-degree: 6%
 
 ---
 
 # Guia da API de autorização do serviço de consulta
+
+>[!AVAILABILITY]
+>
+>Essa funcionalidade está disponível para clientes que compraram o complemento Data Distiller. Para obter mais informações, entre em contato com o(a) representante da Adobe.
 
 A API de autorização do serviço de consulta fornece às organizações controle mais rígido sobre o acesso aos dados por meio da interface SQL no Adobe Experience Platform. Você pode usar essa API para definir restrições de IP, limitar o acesso aos dados a redes especificadas e aprimorar o monitoramento de segurança.
 

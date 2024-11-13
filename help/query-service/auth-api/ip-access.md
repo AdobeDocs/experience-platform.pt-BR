@@ -3,14 +3,19 @@ keywords: Experience Platform; segurança; ip-access; QS-Auth; guia de API; serv
 title: Ponto de Extremidade de Acesso IP
 description: Saiba como gerenciar intervalos IP para acesso à sandbox no Serviço de consulta usando o ponto de extremidade da API de acesso IP.
 role: Developer
-source-git-commit: 23e5260133f0f16ac30d14346c227a21f251b7e1
+exl-id: fc15ab50-c125-4f00-a311-81fd41697c7d
+source-git-commit: bf696c8836407a2fea82e9078201cb1f5004bcf8
 workflow-type: tm+mt
-source-wordcount: '401'
-ht-degree: 3%
+source-wordcount: '422'
+ht-degree: 5%
 
 ---
 
 # Ponto de extremidade de acesso IP
+
+>[!AVAILABILITY]
+>
+>Essa funcionalidade está disponível para clientes que compraram o complemento Data Distiller. Para obter mais informações, entre em contato com o(a) representante da Adobe.
 
 Para proteger o acesso a dados em uma sandbox do Serviço de consulta especificada, use o ponto de extremidade de Acesso a IP para gerenciar intervalos de IP permitidos. Você pode usar essa API para buscar, configurar ou excluir intervalos de IPs associados à ID da sua organização.
 
@@ -163,4 +168,3 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes dos intervalos 
   ]
 }
 ```
-

@@ -3,13 +3,13 @@ title: Plataforma de marketing Zeta
 description: A Zeta Marketing Platform (ZMP) é um sistema baseado em nuvem que ajuda a adquirir, expandir e reter clientes com mais eficiência, alimentado por inteligência (dados proprietários e IA).
 hide: true
 hidefromtoc: true
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+exl-id: 291ee60c-aa81-4f1e-9df2-9905a8eeb612
+source-git-commit: 0c3c192105146dd949e9b11f8925bf4f9d7c15c0
 workflow-type: tm+mt
 source-wordcount: '1352'
 ht-degree: 1%
 
 ---
-
 
 # Plataforma de marketing Zeta {#zeta-marketing-platform}
 
@@ -31,17 +31,17 @@ Um profissional de marketing deseja criar perfis únicos de público-alvo, ident
 
 ### Direcione usuários com anúncios {#use-case-target-users}
 
-Um anunciante tem como objetivo direcionar os usuários dentro de públicos-alvo específicos por meio do Demand Side Platform Zeta (DSP), já que esses usuários interagem com suas marcas. Para obter mais informações sobre o DSP Zeta, clique [aqui](https://knowledgebase.zetaglobal.com/programmatic-user-guide/).
+Um anunciante tem como objetivo direcionar os usuários dentro de públicos-alvo específicos por meio do Demand Side Platform Zeta (DSP), já que esses usuários interagem com suas marcas. Para obter mais informações sobre o DSP Zeta, clique [aqui](https://knowledgebase.zetaglobal.com/pug/).
 
 ## Pré-requisitos {#prerequisites}
 
 ### Pré-requisitos da Zeta Marketing Platform
 
-* Antes de configurar uma nova conexão com o destino Zeta Marketing Platform, você deve criar uma lista de clientes vazia em sua conta Zeta Marketing Platform. Você deve escolher uma dessas listas de clientes como público-alvo designado para receber o público-alvo da Adobe Experience Platform que planeja enviar. Você pode criar uma lista de clientes vazia no ZMP seguindo as instruções [aqui](https://knowledgebase.zetaglobal.com/zmp/creating-audiences#CreatingAudiences-CreatingaCustomerList).
+* Antes de configurar uma nova conexão com o destino Zeta Marketing Platform, você deve criar uma lista de clientes vazia em sua conta Zeta Marketing Platform. Você deve escolher uma dessas listas de clientes como público-alvo designado para receber o público-alvo da Adobe Experience Platform que planeja enviar. Você pode criar uma lista de clientes vazia no ZMP seguindo as instruções [aqui](https://knowledgebase.zetaglobal.com/kb/creating-audiences#CreatingAudiences-CreatingaCustomerList).
 * Embora o Adobe Experience Platform permita a ativação de vários públicos-alvo para uma instância de destino ZMP específica, é obrigatório que cada instância de destino ZMP receba apenas um público-alvo Experience Platform. Para lidar com vários públicos-alvo do Experience Platform, crie instâncias de destino ZMP adicionais para cada público-alvo e selecione uma lista de clientes diferente na lista suspensa. Essa abordagem garante que os públicos-alvo do ZMP não sejam substituídos. Consulte [Preencher detalhes do destino](#destination-details) para obter mais detalhes.
 * Use as credenciais a seguir para configurar o destino:
    * Nome de usuário: **api**
-   * Senha: sua chave de API REST ZMP. Você pode encontrar sua Chave de API REST fazendo logon em sua conta ZMP e navegando até a seção **Configurações** > **Integrações** > **Chaves e Aplicativos**. Consulte a [documentação do ZMP](https://knowledgebase.zetaglobal.com/zmp/integrations) para obter mais detalhes.
+   * Senha: sua chave de API REST ZMP. Você pode encontrar sua Chave de API REST fazendo logon em sua conta ZMP e navegando até a seção **Configurações** > **Integrações** > **Chaves e Aplicativos**. Consulte a [documentação do ZMP](https://knowledgebase.zetaglobal.com/kb/integrations) para obter mais detalhes.
 
 ## Identidades suportadas {#supported-identities}
 
@@ -94,7 +94,7 @@ Para se conectar a este destino, siga as etapas descritas no [tutorial de config
 Para autenticar no destino, preencha os campos obrigatórios e selecione **[!UICONTROL Conectar ao destino]**.
 
 * **[!UICONTROL Nome de Usuário]**: `api`
-* **[!UICONTROL Senha]**: sua chave de API REST ZMP. Você pode encontrar sua Chave de API REST fazendo logon em sua conta ZMP e navegando até a seção **Configurações** > **Integrações** > **Chaves e Aplicativos**. Consulte a [documentação do ZMP](https://knowledgebase.zetaglobal.com/zmp/integrations) para obter mais detalhes.
+* **[!UICONTROL Senha]**: sua chave de API REST ZMP. Você pode encontrar sua Chave de API REST fazendo logon em sua conta ZMP e navegando até a seção **Configurações** > **Integrações** > **Chaves e Aplicativos**. Consulte a [documentação do ZMP](https://knowledgebase.zetaglobal.com/kb/integrations) para obter mais detalhes.
 
 ### Preencher detalhes do destino {#destination-details}
 
@@ -103,7 +103,7 @@ Para configurar detalhes para o destino, preencha os campos obrigatórios e opci
 ![Imagem mostrando a configuração ZMP](../../assets/catalog/data-management-platform/zeta-marketing-platform/zeta-configure-new-destination.png)
 * **[!UICONTROL Nome]**: um nome pelo qual você reconhecerá este destino no futuro.
 * **[!UICONTROL Descrição]**: uma descrição que ajudará você a identificar este destino no futuro.
-* **[!UICONTROL Id do Site da Conta do ZMP]**: Seu **Id do Site** do ZMP para o qual você deseja enviar seus públicos-alvo. Você pode exibir sua Id do Site navegando até a seção **Configurações** > **Integrações** > **Chaves e Aplicativos**. Mais informações podem ser encontradas [aqui](https://knowledgebase.zetaglobal.com/zmp/integrations).
+* **[!UICONTROL Id do Site da Conta do ZMP]**: Seu **Id do Site** do ZMP para o qual você deseja enviar seus públicos-alvo. Você pode exibir sua Id do Site navegando até a seção **Configurações** > **Integrações** > **Chaves e Aplicativos**. Mais informações podem ser encontradas [aqui](https://knowledgebase.zetaglobal.com/kb/integrations).
 * **[!UICONTROL Segmento ZMP]**: o segmento da lista de clientes na sua conta de ID do site ZMP que você deseja atualizar com o público-alvo da Platform.
 
 ### Ativar alertas {#enable-alerts}
@@ -152,4 +152,4 @@ Todos os destinos do [!DNL Adobe Experience Platform] são compatíveis com as p
 
 ## Recursos adicionais {#additional-resources}
 
-* [Base de Dados de Conhecimento Zeta](https://knowledgebase.zetaglobal.com/zmp/)
+* [Base de Dados de Conhecimento Zeta](https://knowledgebase.zetaglobal.com/kb/)

@@ -4,9 +4,9 @@ title: Autenticar e acessar APIs de Experience Platform
 type: Tutorial
 description: Este documento fornece um tutorial passo a passo para obter acesso a uma conta de desenvolvedor da Adobe Experience Platform para fazer chamadas para APIs da Experience Platform.
 exl-id: dfe8a7be-1b86-4d78-a27e-87e4ed8b3d42
-source-git-commit: 2fb0da385baeb96d5665ecc25bf353c7516ef9f7
+source-git-commit: a6da449725d0274ccacc6f6512c9ad395366b689
 workflow-type: tm+mt
-source-wordcount: '2149'
+source-wordcount: '2383'
 ht-degree: 3%
 
 ---
@@ -67,6 +67,10 @@ Consulte o manual sobre [gerenciamento de grupos de usuários em [!DNL Admin Con
 >Se você estiver seguindo este documento a partir do [guia da API de Privacy Service](../privacy-service/api/getting-started.md), poderá retornar a esse guia para gerar as credenciais de acesso exclusivas para [!DNL Privacy Service].
 
 Depois de receber acesso de desenvolvedor e usuário à Platform por meio do [!DNL Admin Console], a próxima etapa é gerar suas credenciais do `{ORG_ID}` e do `{API_KEY}` no Adobe Developer Console. Essas credenciais só precisam ser geradas uma vez e podem ser reutilizadas em chamadas futuras da API da plataforma.
+
+>[!TIP]
+>
+>Em vez de acessar o Developer Console, você pode obter todas as credenciais de autenticação necessárias para trabalhar com APIs da plataforma diretamente das páginas de documentação de referência da API. [Leia mais](#get-credentials-functionality) sobre a funcionalidade.
 
 ### Adicionar Experience Platform a um projeto {#add-platform-to-project}
 
@@ -149,6 +153,26 @@ A próxima etapa é gerar uma credencial `{ACCESS_TOKEN}` para uso em chamadas d
 >[!TIP]
 >
 Você também pode usar um ambiente e uma coleção do Postman para gerar tokens de acesso. Para obter mais informações, leia a seção sobre [como usar o Postman para autenticar e testar chamadas de API](#use-postman).
+
+## Criar e recuperar credenciais de autenticação diretamente na documentação de referência da API {#get-credentials-functionality}
+
+A partir da versão de novembro de 2024 do Experience Platform, você poderá obter credenciais para usar as APIs de Experience Platform diretamente das páginas de referência da API, sem precisar acessar o [!UICONTROL Developer Console]. Veja o exemplo abaixo na [página API de Serviço de Fluxo - Destinos](https://developer.adobe.com/experience-platform-apis/references/destinations/).
+
+![Funcionalidade Obter credenciais realçada na parte superior de uma página de referência de API.](././images/api-authentication/get-credentials-highlighted.png)
+
+Para obter credenciais para chamar APIs da plataforma, navegue até qualquer página de referência da API de Experience Platform e selecione **[!UICONTROL Entrar]** na parte superior da página. Entre com sua **[!UICONTROL Conta Pessoal]** ou **[!UICONTROL Conta da Empresa ou Escola]**.
+
+Depois de entrar, selecione **[!UICONTROL Criar nova credencial]** para criar um novo conjunto de credenciais para acessar as APIs da plataforma.
+
+![Criar novas credenciais para acessar APIs da plataforma.](././images/api-authentication/create-credentials.gif)
+
+Em seguida, use o seletor suspenso para abrir a janela de credenciais, gerar um token de acesso e obter a chave de API e a ID da organização. Copie as credenciais nos blocos [**[!UICONTROL Experimente-a]**](/help/release-notes/2024/may-2024.md#interactive-api-documentation) nas páginas de referência da API para começar a trabalhar com APIs da Platform.
+
+![Use o seletor suspenso para exibir credenciais e gerar um token de acesso.](././images/api-authentication/view-copy-credentials.gif)
+
+>[!TIP]
+>
+O bloco de credenciais do topo da página permanece exibido enquanto você navega entre páginas de endpoint diferentes na documentação de referência da API de Experience Platform.
 
 ## [!BADGE Obsoleto]{type=negativo} Gerar um JSON Web Token (JWT) {#jwt}
 

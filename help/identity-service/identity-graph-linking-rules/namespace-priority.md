@@ -2,9 +2,9 @@
 title: Prioridade do namespace
 description: Saiba mais sobre a prioridade de namespace no Serviço de identidade.
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: a2a60f429836e26179f68a40fce91a90d73d8eee
+source-git-commit: 893d8a089dee01e65436b7ac035233ba556b231b
 workflow-type: tm+mt
-source-wordcount: '1788'
+source-wordcount: '1789'
 ht-degree: 2%
 
 ---
@@ -17,10 +17,10 @@ ht-degree: 2%
 
 Cada implementação de cliente é exclusiva e personalizada para atender às metas de uma organização específica e, como tal, a importância de um determinado namespace varia de acordo com o cliente. Exemplos reais incluem:
 
-* Por um lado, você pode considerar que o namespace de email representa uma entidade de pessoa e, portanto, é exclusivo por pessoa. Por outro lado, outro cliente pode considerar o namespace de email como um identificador não confiável e, portanto, pode permitir que um único CRMID seja associado a várias identidades com o namespace de email.
+* Sua empresa pode considerar cada endereço de email para representar uma entidade de uma única pessoa e, portanto, usar [configurações de identidade](./identity-settings-ui.md) para configurar o namespace de email como exclusivo. No entanto, outra empresa pode querer representar entidades de uma única pessoa com vários endereços de email e, portanto, configurar o namespace de email como não exclusivo. Essas empresas precisariam usar outro namespace de identidade como exclusivo, como um namespace CRMID, para que possa haver um identificador de uma única pessoa vinculado aos vários endereços de email.
 * Você pode coletar o comportamento online usando um namespace de &quot;ID de logon&quot;. Essa ID de logon pode ter uma relação 1:1 com a CRMID, que armazena atributos de um sistema CRM e pode ser considerada o namespace mais importante. Nesse caso, você está determinando que o namespace CRMID é uma representação mais precisa de uma pessoa, enquanto o namespace da ID de logon é o segundo mais importante.
 
-Você deve fazer configurações no Serviço de identidade que reflitam a importância dos namespaces, pois isso influencia como os perfis são formados e segmentados.
+Você deve fazer configurações no Serviço de identidade que reflitam a importância dos namespaces, pois isso influencia como os perfis e seus gráficos de identidade relacionados são formados e divididos.
 
 ## Determine suas prioridades
 
@@ -28,7 +28,7 @@ A determinação da prioridade do namespace é baseada nos seguintes fatores:
 
 ### Estrutura do gráfico de identidade
 
-Se o gráfico estruturado de sua organização estiver em camadas, a prioridade do namespace deverá refletir isso para que os links corretos sejam removidos no caso de recolhimento de gráficos.
+Se a estrutura de gráfico de sua organização estiver em camadas, a prioridade do namespace deverá refletir isso para que os links corretos sejam removidos no caso de recolhimento de gráficos.
 
 >[!TIP]
 >
@@ -52,11 +52,11 @@ Outra maneira de abordar este tópico é através da cardinalidade. Para uma det
 
 ## Validar as configurações de prioridade do namespace
 
-Depois de ter uma ideia de como priorizar seus namespaces, você pode usar a ferramenta Simulação de gráfico para testar vários cenários de recolhimento de gráficos e garantir que suas configurações de prioridade retornem os resultados esperados do gráfico. Para obter mais informações, leia o manual sobre como usar a [Ferramenta de simulação de gráfico](./graph-simulation.md).
+Depois de ter uma ideia de como priorizar seus namespaces, você pode usar a ferramenta Simulação de gráfico na interface do para testar vários cenários de recolhimento de gráficos e garantir que suas configurações de prioridade retornem os resultados esperados do gráfico. Para obter mais informações, leia o manual sobre como usar a [Ferramenta de simulação de gráfico](./graph-simulation.md).
 
 ## Configurar prioridade de namespace
 
-A prioridade de namespace pode ser configurada usando [!UICONTROL Configurações de Identidade]. Na interface [!UICONTROL Configurações de identidade], você pode arrastar e soltar um namespace para determinar sua importância relativa.
+A prioridade de namespace pode ser definida usando a [interface do usuário de configurações de identidade](./identity-settings-ui.md). Na interface das configurações de identidade, você pode arrastar e soltar um namespace para determinar sua importância relativa.
 
 >[!IMPORTANT]
 >
@@ -74,20 +74,20 @@ Para estruturas de gráficos relativamente complexas, a prioridade de namespace 
 
 ### Perfil do cliente em tempo real: determinação de identidade principal para eventos de experiência
 
-* Para eventos de experiência, depois de definir as Configurações de identidade para uma determinada sandbox, a identidade primária será determinada pela prioridade de namespace mais alta a partir de agora.
+* Depois de definir as configurações de identidade para uma determinada sandbox, a identidade principal para eventos de experiência será determinada pela prioridade de namespace mais alta na configuração.
    * Isso ocorre porque os eventos de experiência são de natureza dinâmica. Um mapa de identidade pode conter três ou mais identidades, e a prioridade do namespace garante que o namespace mais importante esteja associado ao evento de experiência.
 * Como resultado, as seguintes configurações **não serão mais usadas pelo Perfil de Cliente em Tempo Real**:
-   * A caixa de seleção &quot;Primário&quot; no tipo de elemento de dados no WebSDK (que se traduz em `primary=true` no identityMap). **Observação**: namespace de identidade e valor de identidade continuarão a ser usados no Perfil. Além disso, você ainda deve definir as configurações da caixa de seleção &quot;Principal&quot;, pois os serviços fora do Perfil do cliente em tempo real continuarão se referindo a essa configuração.
+   * A configuração de identidade primária (`primary=true`) ao enviar identidades no identityMap usando o SDK da Web, SDK móvel ou API de servidor Edge Network (o namespace de identidade e o valor de identidade continuarão a ser usados no perfil). **Observação**: os serviços fora do Perfil do Cliente em Tempo Real, como o armazenamento em data lake ou a Adobe Target, continuarão a usar a configuração de identidade principal (`primary=true`).
    * Quaisquer campos marcados como identidade primária em um esquema de Classe de evento de experiência XDM.
    * Configurações de identidade primária padrão no conector de origem do Adobe Analytics (ECID ou AAID).
 * Por outro lado, a **prioridade de namespace não determina a identidade principal dos registros de perfil**.
-   * Para registros de perfil, você pode usar o espaço de trabalho de esquemas na interface do usuário do Experience Platform para definir os campos de identidade, incluindo a identidade principal. Leia o manual sobre [definição de campos de identidade na interface](../../xdm/ui/fields/identity.md) para obter mais informações.
+   * Para registros de perfil, você deve continuar a definir seus campos de identidade no esquema, incluindo a identidade principal. Leia o manual sobre [definição de campos de identidade na interface](../../xdm/ui/fields/identity.md) para obter mais informações.
 
 >[!TIP]
 >
 >* A prioridade de namespace é **uma propriedade de um namespace**. É um valor numérico atribuído a um namespace para indicar sua importância relativa.
 >
->* A identidade principal é a identidade na qual um fragmento de perfil é armazenado. Um fragmento de perfil é um registro de dados que armazena informações sobre um determinado usuário: atributos (geralmente assimilados por meio de registros do CRM) ou eventos (geralmente assimilados de eventos de experiência ou dados online).
+>* A identidade principal é a identidade na qual um fragmento de perfil é armazenado. Um fragmento de perfil é um registro de dados que armazena informações sobre um determinado usuário: atributos (por exemplo, registros CRM) ou eventos (por exemplo, navegação em sites).
 
 ### Exemplo de cenário
 
@@ -151,9 +151,7 @@ Para obter mais informações, leia a [visão geral avançada do gerenciamento d
 
 ### Atributos computados
 
-Atributos computados usam a prioridade de namespace para armazenar o valor de atributo calculado. Para um determinado evento, a identidade com a maior prioridade de namespace terá o valor do atributo calculado gravado nele. Para obter mais informações, leia o [guia da interface do usuário de atributos computados](../../profile/computed-attributes/ui.md).
-
-Os atributos computados não usam a prioridade de namespace para calcular valores. Se estiver usando atributos calculados, você deve garantir que a CRMID seja designada como sua identidade primária para o WebSDK. Para obter mais informações, leia o [guia da interface do usuário de atributos computados](../../profile/computed-attributes/ui.md).
+Se as configurações de identidade estiverem habilitadas, os atributos computados usarão a prioridade de namespace para armazenar o valor do atributo computado. Para um determinado evento, a identidade com a maior prioridade de namespace terá o valor do atributo calculado gravado nele. Para obter mais informações, leia o [guia da interface do usuário de atributos computados](../../profile/computed-attributes/ui.md).
 
 ### Data lake
 
@@ -198,4 +196,4 @@ Para obter mais informações, leia a [Visão geral do Privacy Service](../../pr
 
 ### Adobe Target
 
-O Adobe Target pode produzir direcionamento inesperado de usuários para cenários de dispositivos compartilhados.
+O Adobe Target pode produzir direcionamento inesperado de usuários para cenários de dispositivos compartilhados ao usar a segmentação de borda.

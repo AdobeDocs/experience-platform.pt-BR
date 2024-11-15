@@ -2,31 +2,39 @@
 title: Acesso do usuário ao Adobe Experience Platform Assurance
 description: Este guia explica como manter o acesso do usuário ao Adobe Experience Platform Assurance gerenciando-o por meio do Admin Console.
 exl-id: b26ff857-5486-4391-b5a0-1e5cb05a1f11
-source-git-commit: 95e5dad03741d06ee33a10c48b481b792140f7f1
+source-git-commit: 464a39bd64ed4ae97cde52eeeb1755c75b0a86a9
 workflow-type: tm+mt
-source-wordcount: '199'
-ht-degree: 100%
+source-wordcount: '302'
+ht-degree: 12%
 
 ---
 
 # Acesso do usuário
 
->[!WARNING]
->
->Observe que o acesso do usuário ao Assurance está mudando. Visto que o Assurance está saindo da versão beta (Project Griffon) e sendo disponibilizado de maneira geral (como Assurance) para todos(as) os(as) clientes da Adobe Experience Cloud, o acesso ao Assurance será gerenciado por meio do [Admin Console](https://helpx.adobe.com/br/enterprise/using/admin-console.html).
->
->Se precisar de assistência, entre em contato com a equipe de administração da Adobe Experience Cloud da sua empresa.
+Conceda aos usuários acesso ao [!UICONTROL Assurance] adicionando-os a qualquer perfil de produto no Adobe Experience Platform ao concluir as seguintes etapas no [Adobe Admin Console](https://adminconsole.adobe.com/):
 
-Para receber ou manter acesso ininterrupto ao Assurance, verifique se as seguintes etapas foram concluídas no Admin Console:
+## Adicionar usuários ao Adobe Experience Platform por meio de um perfil de produto {#adding-product-profile}
 
-## Adicionar usuários à Experience Platform por meio de um perfil de produto
+Para adicionar um usuário a um perfil de produto, faça logon no [Adobe Admin Console](https://adminconsole.adobe.com/). Na guia **[!UICONTROL Visão geral]** da interface do Admin Console, selecione **[!UICONTROL Adicionar usuários]**.
 
-Para adicionar um usuário a um perfil de produto, faça logon no Admin Console e selecione **Adicionar usuários**.
+![A página Admin Console com Adicionar usuários foi realçada.](./images/user-access/admin-console.png)
 
-![O botão Adicionar usuários é realçado.](./images/get-access/product-profile-add-users.png)
+A caixa de diálogo **[!UICONTROL Adicionar usuários à sua equipe]** será exibida. Insira o email ou nome de usuário da pessoa que deseja adicionar e selecione **[!UICONTROL Adicionar como um novo usuário]**.
 
-A caixa de diálogo **Adicionar usuários à sua equipe** será exibida. Nesta caixa de diálogo, você pode inserir os detalhes do usuário que deseja adicionar. Insira o endereço de email do usuário, o nome (opcional) e o sobrenome (opcional).
+![A caixa de texto de email ou nome de usuário está realçada na caixa de diálogo Adicionar usuários.](./images/user-access/add-users.png)
 
-Selecione o ícone de lápis para escolher os produtos e grupos de usuários. Em seguida, selecione **Adobe Experience Platform**, **AEP-Padrão-Todos-Usuários** e, por fim, clique em **Salvar**.
+Duas caixas de texto aparecem para inserir um **[!UICONTROL Nome]** opcional e um **[!UICONTROL Sobrenome]** opcional. O **[!UICONTROL nome de usuário do SSO]** é preenchido automaticamente com o **[!UICONTROL País]** dentro da lista suspensa. Verifique se ambas as opções estão corretas e faça os ajustes necessários. Depois que tudo estiver correto, selecione **[!UICONTROL Produtos]**.
 
-![A caixa de diálogo que mostra como adicionar o perfil de produto é exibida.](./images/get-access/product-profile-add-profile.png)
+![Os três campos de nome e país são realçados na caixa de diálogo Adicionar usuários.](./images/user-access/name-and-products.png)
+
+A caixa de diálogo **[!UICONTROL Selecionar produto]** é exibida. Selecione o Adobe Experience Platform.
+
+![Caixa de diálogo Selecionar produtos com uma lista de três produtos e a opção Adobe Experience Platform realçada.](./images/user-access/select-products.png)
+
+A caixa de diálogo **[!UICONTROL Selecionar perfis de produtos]** é exibida, com uma lista de perfis de produtos. Selecione qualquer perfil de produto e, em seguida, **[!UICONTROL Aplicar]**. Você pode adicionar outros produtos e perfis de produto repetindo essas etapas.
+
+![Uma opção foi selecionada e realçada na caixa de diálogo Selecionar perfis de produto.](./images/user-access/select-product-profiles.png)
+
+Verifique se tudo está correto para o usuário. Aqui você pode adicionar outros usuários ou salvar suas alterações selecionando **[!UICONTROL Salvar]**.
+
+![Adicionar usuários à caixa de diálogo da equipe com todas as informações preenchidas e Salvar selecionadas.](./images/user-access/save-selections.png)

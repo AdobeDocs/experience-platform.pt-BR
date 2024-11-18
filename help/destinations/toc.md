@@ -5,10 +5,10 @@ user-guide-description: Ative seus dados conhecidos e desconhecidos para campanh
 description: Este documento lista o índice dos destinos do Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: 8ccdf80885a04280c4a92e1cb3d18e45e2d9d9e5
+source-git-commit: 07e01847c6e24564682161e88122948d200ab733
 workflow-type: tm+mt
-source-wordcount: '1250'
-ht-degree: 5%
+source-wordcount: '1248'
+ht-degree: 6%
 
 ---
 
@@ -48,7 +48,7 @@ ht-degree: 5%
       * [Exportar arquivos sob demanda para destinos em lote usando a interface do Experience Platform](./ui/export-file-now.md)
       * [Exportar conjuntos de dados usando a interface do usuário do Experience Platform](./ui/export-datasets.md)
       * [(Beta) Usar o atributo XDM do último horário de qualificação nos novos destinos de armazenamento na nuvem beta](./ui/activate-last-qualification-time.md)
-      * [Usar campos calculados para exportar matrizes como cadeias de caracteres](/help/destinations/ui/export-arrays-calculated-fields.md)
+      * [Usar campos calculados para exportar matrizes como strings](/help/destinations/ui/export-arrays-calculated-fields.md)
    * [Exibir detalhes do destino](./ui/destination-details-page.md)
    * [Atualizar contas de destino](./ui/update-accounts.md)
    * [Excluir contas de destino](./ui/delete-destination-account.md)
@@ -92,8 +92,8 @@ ht-degree: 5%
       * [Extensão de tag do linkedIn Insight](./catalog/advertising/linkedin.md)
       * [LiveRamp - Conexão de integração](./catalog/advertising/liveramp-onboarding.md)
       * [LiveRamp - Conexão de distribuição](./catalog/advertising/liveramp-distribution.md)
-      * [(Beta) Lote Magnite](/help/destinations/catalog/advertising/magnite-batch.md)
-      * [(Beta) Magnite Streaming Conexão em tempo real](/help/destinations/catalog/advertising/magnite-streaming.md)
+      * [Lote Magnite](/help/destinations/catalog/advertising/magnite-batch.md)
+      * [Magnite Streaming Conexão em tempo real](/help/destinations/catalog/advertising/magnite-streaming.md)
       * [Conexão com o Microsoft Bing](./catalog/advertising/bing.md)
       * [Extensão de rastreamento de conversão do pinterest](./catalog/advertising/pinterest-extension.md)
       * [Conexão com a Lista de clientes do pinterest](./catalog/advertising/pinterest.md)
@@ -139,7 +139,7 @@ ht-degree: 5%
       * [Endereço IP do arquivo de inclui na lista de permissões para destinos de armazenamento na nuvem baseado em arquivo](./catalog/cloud-storage/ip-address-allow-list.md)
    * Destinos do Gerenciamento de Relacionamento com o Cliente (CRM) {#crm}
       * [Conexão de Hubspot](./catalog/crm/hubspot.md)
-      * [Conexão com o Salesforce CRM](./catalog/crm/salesforce.md)
+      * [Conexão do Salesforce CRM](./catalog/crm/salesforce.md)
       * [Conexão com o Microsoft Dynamics 365](./catalog/crm/microsoft-dynamics-365.md)
       * [Conexão de alcance](catalog/crm/outreach.md)
       * [Conexão do Zendesk](catalog/crm/zendesk.md)
@@ -169,7 +169,7 @@ ht-degree: 5%
       * [(Arquivos) Conexão Oracle Eloqua](./catalog/email-marketing/oracle-eloqua.md)
       * [Conexão do Oracle Responsys](./catalog/email-marketing/oracle-responsys.md)
       * [(API) Conexão do Salesforce Marketing Cloud](./catalog/email-marketing/salesforce-marketing-cloud-exact-target.md)
-      * [(Arquivos) Conexão do Marketing Cloud do Salesforce](./catalog/email-marketing/salesforce-marketing-cloud.md)
+      * [(Arquivos) Conexão do Salesforce Marketing Cloud](./catalog/email-marketing/salesforce-marketing-cloud.md)
       * [[!DNL Salesforce Marketing Cloud Account Engagement]](./catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md)
       * [Conexão SendGrid](./catalog/email-marketing/sendgrid.md)
    * Marcar extensões {#launch-extensions}

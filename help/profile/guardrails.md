@@ -5,9 +5,9 @@ product: experience platform
 type: Documentation
 description: Saiba mais sobre o desempenho e as medidas de proteção aplicadas pelo sistema para segmentação e dados de perfil para garantir o uso ideal da funcionalidade da Real-Time CDP.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
+source-git-commit: 6962bb0ba4968ed4860e95819ac2e949bf744d79
 workflow-type: tm+mt
-source-wordcount: '2457'
+source-wordcount: '2461'
 ht-degree: 2%
 
 ---
@@ -172,9 +172,9 @@ As entidades Dimension fornecem dados de pesquisa que auxiliam e simplificam as 
 
 Neste documento, há várias medidas de proteção que se referem aos &quot;fragmentos de perfil&quot;. No Experience Platform, vários fragmentos de perfil são mesclados para formar o Perfil do cliente em tempo real. Cada fragmento representa uma identidade primária exclusiva e o registro correspondente ou conjunto completo de dados do evento para essa ID em um determinado conjunto de dados. Para saber mais sobre fragmentos de perfil, consulte a [Visão geral do perfil](home.md#profile-fragments-vs-merged-profiles).
 
-### Políticas de mesclagem {#merge-policies}
+### Mesclar políticas {#merge-policies}
 
-Ao reunir dados de várias fontes, as políticas de mesclagem são as regras que a Platform usa para determinar como os dados serão priorizados e quais dados serão combinados para criar essa visualização unificada. Por exemplo, se um cliente interagir com sua marca em vários canais, sua organização terá vários fragmentos de perfil relacionados a esse único cliente que aparecem em vários conjuntos de dados. Quando esses fragmentos são assimilados na Platform, eles são mesclados para criar um único perfil para esse cliente. Quando os dados de várias origens entram em conflito, a política de mesclagem determina quais informações incluir no perfil para o indivíduo. São permitidas no máximo cinco (5) políticas de mesclagem por organização. Para saber mais sobre políticas de mesclagem, leia a [visão geral das políticas de mesclagem](merge-policies/overview.md).
+Ao reunir dados de várias fontes, as políticas de mesclagem são as regras que a Platform usa para determinar como os dados serão priorizados e quais dados serão combinados para criar essa visualização unificada. Por exemplo, se um cliente interagir com sua marca em vários canais, sua organização terá vários fragmentos de perfil relacionados a esse único cliente que aparecem em vários conjuntos de dados. Quando esses fragmentos são assimilados na Platform, eles são mesclados para criar um único perfil para esse cliente. Quando os dados de várias origens entram em conflito, a política de mesclagem determina quais informações incluir no perfil para o indivíduo. Um máximo de cinco (5) políticas de mesclagem que usam o esquema `_xdm.context.profile` são permitidas por sandbox. Para saber mais sobre políticas de mesclagem, leia a [visão geral das políticas de mesclagem](merge-policies/overview.md).
 
 ### Conjuntos de dados do conjunto de relatórios do Adobe Analytics na plataforma {#aa-datasets}
 

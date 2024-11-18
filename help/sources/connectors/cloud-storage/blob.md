@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Visão geral do Azure Blob Source Connector
 description: Saiba como conectar o Azure Blob ao Adobe Experience Platform usando APIs ou a interface do usuário.
 exl-id: 62adc74f-3570-42c7-9ae6-3ddbc09eccc7
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 8877e7dceeebfb1d4f31b63fef4544a69c72b38e
 workflow-type: tm+mt
-source-wordcount: '466'
+source-wordcount: '443'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Uma lista de endereços IP deve ser adicionada a uma lista de permissões antes 
 
 >[!IMPORTANT]
 >
->A origem [!DNL Azure Blob] não dá suporte à conectividade da mesma região com o Experience Platform. Se sua instância do Azure estiver usando a mesma região de rede que o Experience Platform, não será possível estabelecer uma conexão com as origens de Experience Platform. Não use as regiões Leste dos EUA 2, Oeste da Europa do Azure e Leste da Austrália do Azure ao configurar sua origem [!DNL Azure Blob]. Atualmente, somente a conectividade entre regiões é compatível.
+>A origem [!DNL Azure Blob] não dá suporte à conectividade da mesma região com o Experience Platform. Se a instância do [!DNL Azure] estiver usando a mesma região de rede que o Experience Platform, não será possível estabelecer uma conexão com fontes de Experience Platform. Atualmente, somente a conectividade entre regiões é compatível.
 
 ## Restrições de nomenclatura para arquivos e diretórios
 

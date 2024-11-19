@@ -2,7 +2,7 @@
 title: Gerenciar eventos de exibição no SDK da Web
 description: Este artigo explica o que são eventos de exibição e como usá-los no SDK da Web.
 exl-id: 7150ad6e-7693-4f4d-917e-8d08a39a0b41
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: 4c7313afdce6645ab638b2998573e5a4f7c5de8f
 workflow-type: tm+mt
 source-wordcount: '351'
 ht-degree: 0%
@@ -31,7 +31,7 @@ O envio de eventos de exibição fornece automaticamente métricas de análise m
 Para enviar eventos de exibição automaticamente depois que o conteúdo personalizado for renderizado na página, você deve configurar os seguintes parâmetros:
 
 * `renderDecisions: true`
-* `personalization.sendDisplayNotifications: true` ou não especificado
+* `personalization.sendDisplayEvent: true` ou não especificado
 
 O SDK da Web envia os eventos de exibição imediatamente após qualquer personalização ser renderizada como resultado de uma chamada `sendEvent`.
 
@@ -50,9 +50,9 @@ Além disso, o envio de eventos de exibição em chamadas `sendEvent` minimiza e
 Para enviar eventos de exibição para apresentações renderizadas automaticamente, você deve configurar os seguintes parâmetros na chamada `sendEvent`:
 
 * `renderDecisions: true`
-* `personalization.sendDisplayNotifications: false` para o início da ocorrência da página
+* `personalization.sendDisplayEvent: false` para o início da ocorrência da página
 
-Para enviar os eventos de exibição, chame `sendEvent` com `personalization.includePendingDisplayNotifications: true`
+Para enviar os eventos de exibição, chame `sendEvent` com `personalization.includeRenderedPropositions: true`
 
 ### Enviar eventos de exibição para apresentações renderizadas manualmente {#manually-rendered-propositions}
 

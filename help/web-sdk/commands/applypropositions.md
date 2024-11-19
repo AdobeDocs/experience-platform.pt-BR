@@ -2,7 +2,7 @@
 title: applyPropositions
 description: Renderize novamente as apresentações que já foram renderizadas com sendEvent.
 exl-id: 6b79f334-4ea6-4ba4-8640-d35b7f90df98
-source-git-commit: 9aab41b338907f3c9fb15d08bfa877eb218f5627
+source-git-commit: 4c7313afdce6645ab638b2998573e5a4f7c5de8f
 workflow-type: tm+mt
 source-wordcount: '352'
 ht-degree: 0%
@@ -16,7 +16,7 @@ O comando `applyPropositions` permite renderizar novamente apresentações que j
 Esse comando oferece suporte aos seguintes campos:
 
 * **Propositions**: uma matriz de objetos de proposta que você deseja renderizar novamente.
-* **Nome da exibição**: o nome da exibição a ser renderizada. As notificações de exibição para essas decisões são armazenadas em cache e podem ser incluídas em um comando `sendEvent` subsequente usando a opção `personalization.includePendingDisplayNotifications`.
+* **Nome da exibição**: o nome da exibição a ser renderizada. As notificações de exibição para essas decisões são armazenadas em cache e podem ser incluídas em um comando `sendEvent` subsequente usando a opção `personalization.includeRenderedPropositions`.
 * **Metadados**: um objeto que determina como as ofertas de HTML podem ser aplicadas. Ele contém as seguintes propriedades:
    * Escopo
    * Seletor
@@ -43,7 +43,7 @@ Execute o comando `applyPropositions` ao chamar a instância configurada do SDK 
 * **`metadata`**: determina como as ofertas de HTML são aplicadas. É um mapa em que a chave é um escopo ou uma superfície, e o valor é um objeto que contém as chaves `selector` e `actionType`.
    * `selector`: uma cadeia de caracteres que contém um seletor de CSS de onde aplicar o HTML.
    * `actionType`: A ação a ser executada com o HTML. Os valores válidos incluem `setHtml`, `replaceHtml` e `appendHtml`.
-* **`viewName`**: O nome da exibição a ser renderizada em um aplicativo de página única. As notificações de exibição para essas decisões são armazenadas em cache e podem ser incluídas em um comando `sendEvent` subsequente usando `personalization.includePendingDisplayNotifications`.
+* **`viewName`**: O nome da exibição a ser renderizada em um aplicativo de página única. As notificações de exibição para essas decisões são armazenadas em cache e podem ser incluídas em um comando `sendEvent` subsequente usando `personalization.includeRenderedPropositions`.
 
 ```js
 alloy("applyPropositions",{

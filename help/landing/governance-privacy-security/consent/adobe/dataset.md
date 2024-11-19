@@ -3,8 +3,10 @@ keywords: Experience Platform;página inicial;tópicos populares
 solution: Experience Platform
 title: Configurar um conjunto de dados para capturar dados de consentimento e preferência
 description: Saiba como configurar um esquema e um conjunto de dados do Experience Data Model (XDM) para capturar dados de consentimento e preferência no Adobe Experience Platform.
+role: Developer
+feature: Consent, Schemas, Datasets
 exl-id: 61ceaa2a-c5ac-43f5-b118-502bdc432234
-source-git-commit: 3f559601b50293723f601960dbd56fddf0285148
+source-git-commit: bf651967714745a0b501dcb27373379fe014c9e1
 workflow-type: tm+mt
 source-wordcount: '1573'
 ht-degree: 0%

@@ -3,8 +3,10 @@ solution: Experience Platform
 title: Autenticar e acessar APIs de Experience Platform
 type: Tutorial
 description: Este documento fornece um tutorial passo a passo para obter acesso a uma conta de desenvolvedor da Adobe Experience Platform para fazer chamadas para APIs da Experience Platform.
+role: Developer
+feature: API
 exl-id: dfe8a7be-1b86-4d78-a27e-87e4ed8b3d42
-source-git-commit: a6da449725d0274ccacc6f6512c9ad395366b689
+source-git-commit: 48c75f88d6862fa602e43929b72a6eac27d20e07
 workflow-type: tm+mt
 source-wordcount: '2383'
 ht-degree: 3%

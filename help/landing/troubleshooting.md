@@ -6,8 +6,10 @@ description: Encontre respostas para perguntas frequentes e um guia para solucio
 landing-page-description: Encontre respostas para perguntas frequentes e um guia para solucionar erros comuns na Adobe Experience Platform.
 short-description: Encontre respostas para perguntas frequentes e um guia para solucionar erros comuns na Experience Platform.
 type: Documentation
+role: Developer
+feature: API, Audiences, Data Ingestion, Datasets, Destinations, Privacy, Queries, Schemas, Sandboxes, Sources
 exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
-source-git-commit: 81f570f8e5401624ccac74696b2323252a4de0a9
+source-git-commit: bf651967714745a0b501dcb27373379fe014c9e1
 workflow-type: tm+mt
 source-wordcount: '1812'
 ht-degree: 4%

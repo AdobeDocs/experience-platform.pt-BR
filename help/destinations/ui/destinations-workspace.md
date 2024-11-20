@@ -3,9 +3,9 @@ keywords: plataforma;destinos;destinos espaço de trabalho;espaço de trabalho;u
 title: Espaço de trabalho Destinos
 description: 'O espaço de trabalho Destinos consiste em cinco seções: Visão geral, Catálogo, Procurar, Contas e Exibição de sistema. Eles são descritos nas seções abaixo.'
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 78168493d712d2ec0974b811d288902fd94f3e40
 workflow-type: tm+mt
-source-wordcount: '1231'
+source-wordcount: '1233'
 ht-degree: 0%
 
 ---
@@ -77,11 +77,11 @@ A guia **[!UICONTROL Contas]** mostra detalhes sobre as conexões estabelecidas 
 
 | Elemento | Descrição |
 |---|---|
-| [!UICONTROL Plataforma] | O destino para o qual você configurou a conexão. |
+| [!UICONTROL Destino] | O conector de destino para o qual você configurou a conexão. |
 | [!UICONTROL Tipo de conexão] | Representa o tipo de conexão de conta para seu bucket de armazenamento ou destino. Dependendo do destino, as opções de autenticação são: <ul><li>Para destinos de marketing por email: pode ser S3, FTP ou Blob do Azure.</li><li>Para destinos de anúncios em tempo real: de servidor para servidor</li><li>Para destinos de armazenamento na nuvem do Amazon S3: Chave de acesso </li><li>Para destinos de armazenamento na nuvem SFTP: autenticação básica para SFTP</li><li>Autenticação OAuth 1 ou OAuth 2</li><li>Autenticação de token do portador</li></ul> |
-| [!UICONTROL Nome de usuário] | O nome de usuário selecionado no [assistente de destino de conexão](../catalog/email-marketing/overview.md#connect-destination). |
-| [!UICONTROL Destinos] | Representa o número de fluxos de dados de destino exclusivos bem-sucedidos conectados às informações básicas criadas para um destino. |
-| [!UICONTROL Autorizado] | A data em que a conexão com esse destino foi autorizada. |
+| [!UICONTROL Nome de usuário] | O nome de usuário selecionado no [fluxo de trabalho de destino de conexão](../catalog/email-marketing/overview.md#connect-destination). |
+| [!UICONTROL Conexões] | Representa o número de fluxos de dados de destino exclusivos bem-sucedidos conectados às informações básicas criadas para um destino. |
+| [!UICONTROL Data de autorização] | A data em que a conexão com esse destino foi autorizada. |
 
 {style="table-layout:auto"}
 

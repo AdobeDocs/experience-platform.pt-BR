@@ -1,29 +1,29 @@
 ---
 keywords: Experience Platform; Serviço de consulta; Controle de acesso IP; autorização; API; introdução
-title: Guia da API de autorização do serviço de consulta
+title: Guia da API de autorização do Data Distiller
 description: Saiba como começar a usar restrições de autorização e intervalo de IP para obter acesso seguro a dados no Serviço de consulta da Adobe Experience Platform.
 role: Developer
 exl-id: d93ce774-c8b2-4f15-a4d9-117d9aa5d9e7
-source-git-commit: bf696c8836407a2fea82e9078201cb1f5004bcf8
+source-git-commit: ac29d10d3774a736d1e54255508ba244ff72f278
 workflow-type: tm+mt
-source-wordcount: '482'
-ht-degree: 6%
+source-wordcount: '485'
+ht-degree: 5%
 
 ---
 
-# Guia da API de autorização do serviço de consulta
+# Introdução à API de autorização do Data Distiller
 
 >[!AVAILABILITY]
 >
 >Essa funcionalidade está disponível para clientes que compraram o complemento Data Distiller. Para obter mais informações, entre em contato com o(a) representante da Adobe.
 
-A API de autorização do serviço de consulta fornece às organizações controle mais rígido sobre o acesso aos dados por meio da interface SQL no Adobe Experience Platform. Você pode usar essa API para definir restrições de IP, limitar o acesso aos dados a redes especificadas e aprimorar o monitoramento de segurança.
+A API de autorização do Data Distiller fornece às organizações controle mais rígido sobre o acesso aos dados por meio da interface SQL no Adobe Experience Platform. Você pode usar essa API para definir restrições de IP, limitar o acesso aos dados a redes especificadas e aprimorar o monitoramento de segurança.
 
-Este guia descreve como configurar as credenciais de autorização e as permissões necessárias para fazer chamadas à API de autorização do serviço de consulta.
+Este guia descreve como configurar as credenciais de autorização e as permissões necessárias para fazer chamadas à API de autorização do Data Distiller.
 
 ## Introdução {#getting-started}
 
-As seções a seguir fornecem informações sobre como preparar os valores de autorização necessários e fazer suas primeiras solicitações para a API de autorização do serviço de consulta.
+As seções a seguir fornecem informações sobre como preparar os valores de autorização necessários e fazer suas primeiras solicitações para a API de autorização do Data Distiller.
 
 ### Permissões necessárias {#required-permissions}
 
@@ -41,7 +41,7 @@ As seguintes funcionalidades estão disponíveis com a permissão **[!UICONTROL 
 
 ### Coletar valores para cabeçalhos necessários {#gather-values-for-required-headers}
 
-Para fazer chamadas para a API de Autorização do Serviço de Consulta, você deve concluir o [tutorial de autenticação da API da plataforma](../../landing/api-authentication.md), que fornece valores para os cabeçalhos necessários nas chamadas de API. Inclua os seguintes cabeçalhos em cada solicitação:
+Para fazer chamadas para a API de autorização do Data Distiller, você deve concluir o [tutorial de autenticação da API da plataforma](../../landing/api-authentication.md), que fornece valores para os cabeçalhos necessários nas chamadas de API. Inclua os seguintes cabeçalhos em cada solicitação:
 
 - **Autorização**: `Bearer {ACCESS_TOKEN}`
 - **x-api-key**: `{API_KEY}`

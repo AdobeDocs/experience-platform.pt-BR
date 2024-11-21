@@ -3,7 +3,7 @@ keywords: Endereço IP, intervalo IP, lista de permissões, inclui na lista de p
 title: INCLUI NA LISTA DE PERMISSÕES de endereço IP para o serviço de consulta
 description: Esta página fornece intervalos IP atualizados que você pode adicionar ao incluo na lista de permissões para obter acesso seguro ao Serviço de consulta.
 exl-id: f6745e0f-d387-45f2-9f72-054e721016ff
-source-git-commit: e6c148b943c68bff5330c7ff021ffa88ba131639
+source-git-commit: ac29d10d3774a736d1e54255508ba244ff72f278
 workflow-type: tm+mt
 source-wordcount: '312'
 ht-degree: 0%
@@ -47,7 +47,7 @@ A Adobe recomenda adicionar os seguintes intervalos IP específicos da região a
 
 ## Configurar restrições baseadas em IP {#set-ip-restrictions}
 
-Use os [Guias da API de Autorização do Serviço de Consulta](./auth-api/overview.md) para configurar restrições baseadas em IP. Essas restrições baseadas em IP garantem que somente redes aprovadas e máquinas clientes possam acessar dados via SQL no Adobe Experience Platform. Saiba como configurar, aplicar e monitorar restrições de IP para manter altos padrões de segurança, com recursos para rastreamento e alertas de acesso em tempo real.
+Use os [Guias de API de autorização do Data Distiller](./auth-api/overview.md) para configurar restrições baseadas em IP. Essas restrições baseadas em IP garantem que somente redes aprovadas e máquinas clientes possam acessar dados via SQL no Adobe Experience Platform. Saiba como configurar, aplicar e monitorar restrições de IP para manter altos padrões de segurança, com recursos para rastreamento e alertas de acesso em tempo real.
 
 * [Guia de introdução](./auth-api/getting-started.md)
 * [Guia de Ponto de Extremidade de Acesso IP](./auth-api/ip-access.md)

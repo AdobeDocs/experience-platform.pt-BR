@@ -5,7 +5,7 @@ breadcrumb-title: Guia do Serviço de consulta
 user-guide-description: Use o SQL padrão para consultar dados no data lake na Experience Platform.
 feature: Queries
 role: User,Developer
-source-git-commit: fed47e132e1ff46fdf3df1a5a3f9f3e99bd1340c
+source-git-commit: ac29d10d3774a736d1e54255508ba244ff72f278
 workflow-type: tm+mt
 source-wordcount: '366'
 ht-degree: 22%
@@ -113,7 +113,7 @@ Implementar modelos {#implement-models}
    - [Modelos de consulta](api/query-templates.md)
    - [Consultas aceleradas](api/accelerated-queries.md)
    - [Assinaturas de alerta](api/alert-subscriptions.md)
-- API de Autenticação do Serviço de Consulta {#auth-api}
+- API de autorização de Distiller de dados {#auth-api}
    - [Visão geral](auth-api/overview.md)
    - [Introdução](auth-api/getting-started.md)
    - [Acesso IP](auth-api/ip-access.md)

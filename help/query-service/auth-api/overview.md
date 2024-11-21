@@ -1,22 +1,22 @@
 ---
-title: Guia da API de autorização do serviço de consulta
-description: Saiba como usar a API de autorização do serviço de consulta para aplicar restrições de IP baseadas em rede para conexões seguras por meio do SQL. Use essa API para aprimorar o controle de acesso aos dados do Adobe Experience Platform.
+title: Guia da API de autorização do Data Distiller
+description: Saiba como usar a API de autorização do Data Distiller para aplicar restrições de IP baseadas em rede para conexões seguras por meio do SQL. Use essa API para aprimorar o controle de acesso aos dados do Adobe Experience Platform.
 role: Developer
 exl-id: bcc5ea0e-cb6d-4c7b-bf9f-a0336f76c4c8
-source-git-commit: bf696c8836407a2fea82e9078201cb1f5004bcf8
+source-git-commit: ac29d10d3774a736d1e54255508ba244ff72f278
 workflow-type: tm+mt
 source-wordcount: '386'
 ht-degree: 2%
 
 ---
 
-# Guia da API de autorização do serviço de consulta
+# Guia da API de autorização do Data Distiller
 
 >[!AVAILABILITY]
 >
 >Essa funcionalidade está disponível para clientes que compraram o complemento Data Distiller. Para obter mais informações, entre em contato com o(a) representante da Adobe.
 
-Use a API de autorização do serviço de consulta para aplicar restrições baseadas em IP. A aplicação dessas medidas garante que somente redes aprovadas e máquinas clientes possam acessar dados via SQL no Adobe Experience Platform. Esses controles ajudam você a atender padrões rigorosos de segurança e, ao mesmo tempo, fornecer alertas e monitoramento de acesso em tempo real.
+Use a API de autorização do Data Distiller para aplicar restrições baseadas em IP. A aplicação dessas medidas garante que somente redes aprovadas e máquinas clientes possam acessar dados via SQL no Adobe Experience Platform. Esses controles ajudam você a atender padrões rigorosos de segurança e, ao mesmo tempo, fornecer alertas e monitoramento de acesso em tempo real.
 
 Com essa API, você pode configurar, aplicar e monitorar restrições de IP para acessar dados por meio da interface SQL. Este documento fornece uma visão geral de alto nível dos recursos principais da API, das funções de endpoint e dos recursos futuros.
 
@@ -39,4 +39,4 @@ Para obter mais detalhes sobre logs de auditoria, consulte a [documentação do 
 
 ## Próximas etapas
 
-Comece a usar a API de Autorização do Serviço de Consulta revisando o [Guia de Introdução](./getting-started.md) para obter as etapas de configuração essenciais, incluindo os cabeçalhos necessários e as convenções de chamada da API. Em seguida, explore os guias específicos do ponto de extremidade em [Acesso IP](./ip-access.md) e [Validação de IP](./validate.md) para configurar e gerenciar o acesso seguro aos dados.
+Comece a usar a API de Autorização do Data Distiller revisando o [Guia de Introdução](./getting-started.md) para obter as etapas de configuração essenciais, incluindo os cabeçalhos e as convenções de chamada da API necessários. Em seguida, explore os guias específicos do ponto de extremidade em [Acesso IP](./ip-access.md) e [Validação de IP](./validate.md) para configurar e gerenciar o acesso seguro aos dados.

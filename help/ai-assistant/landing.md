@@ -3,9 +3,10 @@ title: Assistente de IA na documentação do produto Adobe Experience Platform
 description: Introdução ao Assistente de IA no Adobe Experience Platform
 hide: true
 hidefromtoc: true
-source-git-commit: 4db38ebceaa7ac4ac46b2ac122b5869e6b28cab3
+exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
+source-git-commit: 8d69d7010442519ce02bb9a504d4228742b4f092
 workflow-type: tm+mt
-source-wordcount: '523'
+source-wordcount: '549'
 ht-degree: 1%
 
 ---
@@ -23,15 +24,15 @@ Comece lendo o material nos links abaixo para se familiarizar com os conceitos e
 <table style="table-layout:fixed">
   <tr style="border: 0;">
     <td>
-    <a href="./home.md#operational-insights"><img src="./assets/landing/ai-get-started.png"></a>
+    <a href="./home.md#operational-insights"><img src="./assets/landing/ai-get-started.png" style="width:" 100%;max-height: 100%"></a>
     <div><strong>Entenda seus objetos de dados</strong><br/>Recupere informações operacionais relacionadas aos seus objetos de dados para obter uma melhor exibição sobre seus status, uso e impacto na linhagem.</div>
     </td>
     <td>
-    <a href="./home.md#product-knowledge"><img src="./assets/landing/ai-audience.png"></a>
+    <a href="./home.md#product-knowledge"><img src="./assets/landing/ai-audience.png" style="width:" 100%;max-height: 100%"></a>
     <div><strong>Aprimore seu aprendizado</strong><br/>Descubra, solucione problemas e amplie sua compreensão do conhecimento sobre o produto sem interromper os fluxos de trabalho.</div>
     </td>
     <td>
-    <a href="./access.md"><img src="./assets/landing/ai-access.png"></a>
+    <a href="./access.md"><img src="./assets/landing/ai-access.png" style="width:" 100%;max-height: 100%"></a>
     <div><strong>Aplicar permissões com base no seu uso</strong><br/>Conceder e revogar permissões de acesso, dependendo das funções dos membros da equipe.</div>
     </td>
   </tr>
@@ -41,6 +42,7 @@ Comece lendo o material nos links abaixo para se familiarizar com os conceitos e
     <td align="center"><a href="./access.md"><img src="../rtcdp/assets/do-not-localize/learn-more-button.svg"></a></td>
     </tr>
 </table>
+
 
 ## Novos recursos
 
@@ -118,6 +120,14 @@ Assista aos vídeos a seguir para obter mais exemplos de caso de uso do Assisten
 >[!ENDTABS]
 
 ## Recursos adicionais
+
+>[!BEGINSHADEBOX]
+
+**Ler a folha de fatos de segurança do Assistente de IA**
+
+Para obter mais informações sobre o Assistente de IA, leia a [folha de fatos de segurança do Assistente de IA no Adobe Experience Platform](https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/adobe-ai-assistant-in-aep-security-fact-sheet.pdf).
+
+>[!ENDSHADEBOX]
 
 Navegue pelos links abaixo para obter mais informações sobre os casos de uso do Assistente de IA, seus recursos e muito mais.
 

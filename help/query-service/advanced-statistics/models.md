@@ -2,9 +2,10 @@
 title: Modelos
 description: Gerenciamento do ciclo de vida do modelo com a extensão SQL do Data Distiller. Saiba como criar, treinar e gerenciar modelos estatísticos avançados usando o SQL, incluindo processos importantes, como controle de versão, avaliação e previsão de modelos, para obter insights acionáveis de seus dados.
 role: Developer
-source-git-commit: b248e8f8420b617a117d36aabad615e5bbf66b58
+exl-id: c609a55a-dbfd-4632-8405-55e99d1e0bd8
+source-git-commit: 6a61900b19543f110c47e30f4d321d0016b65262
 workflow-type: tm+mt
-source-wordcount: '1180'
+source-wordcount: '1229'
 ht-degree: 1%
 
 ---
@@ -76,19 +77,33 @@ Use o SQL para referenciar o conjunto de dados usado para treinamento.
 
 ## Atualizar um modelo {#update}
 
-Saiba como atualizar um modelo existente de aprendizado de máquina aplicando novas transformações de engenharia de recursos e configurando opções como o tipo de algoritmo e a coluna de rótulo. O SQL abaixo demonstra como aumentar o número de versão do modelo a cada atualização e garantir que as alterações sejam rastreadas para que o modelo possa ser reutilizado em etapas futuras de avaliação ou previsão.
+Saiba como atualizar um modelo existente de aprendizado de máquina aplicando novas transformações de engenharia de recursos e configurando opções como o tipo de algoritmo e a coluna de rótulo. Cada atualização cria uma nova versão do modelo, incrementada a partir da última versão. Isso garante que as alterações sejam rastreadas e que o modelo possa ser reutilizado em etapas futuras de avaliação ou previsão.
+
+O exemplo a seguir demonstra a atualização de um modelo com novas transformações e opções:
 
 ```sql
-UPDATE model <model_alias> transform( one_hot_encoder(NAME) ohe_name, string_indexer(gender) gendersi) options ( type = 'LogisticRegression', label = <label-COLUMN>, ) ASSELECT col1,
-       col2,
-       col3
-FROM   training-dataset.
+UPDATE MODEL <model_alias> TRANSFORM (vector_assembler(array(current_customers, previous_customers)) features)  OPTIONS(MODEL_TYPE='logistic_reg', LABEL='churn_rate')  AS SELECT * FROM churn_with_rate ORDER BY period;
 ```
 
-Para ajudá-lo a entender como gerenciar versões de modelo e aplicar transformações de maneira eficaz, as notas a seguir explicam os principais componentes e opções no fluxo de trabalho de atualização de modelo.
+**Exemplo**
 
-- `UPDATE model <model_alias>`: O comando update lida com o controle de versão e aumenta o número de versão do modelo a cada atualização.
-- `version`: Uma palavra-chave opcional usada apenas durante atualizações para criar uma nova versão do modelo.
+Para entender o processo de controle de versão, considere o seguinte comando:
+
+```sql
+UPDATE MODEL model_vdqbrja OPTIONS(MODEL_TYPE='logistic_reg', LABEL='Survived') AS SELECT * FROM titanic_e2e_dnd;
+```
+
+Depois que esse comando é executado, o modelo tem uma nova versão, conforme mostrado na tabela abaixo:
+
+| ID de modelo atualizada | Modelo atualizado | Nova versão |
+|--------------------------------------------|---------------|-------------|
+| a8f6a254-8f28-42ec-8b26-94edeb4698e8 | model_vdqbrja | 2 |
+
+As notas a seguir explicam os principais componentes e opções no fluxo de trabalho de atualização de modelo.
+
+- `UPDATE model <model_alias>`: o comando de atualização manipula o controle de versão e cria uma nova versão de modelo incrementada a partir da última versão.
+- `version`: Uma palavra-chave opcional usada apenas durante atualizações para especificar explicitamente que uma nova versão deve ser criada. Se omitida, o sistema incrementa automaticamente a versão.
+
 
 ## Avaliar modelos {#evaluate-model}
 

@@ -2,9 +2,10 @@
 title: Técnicas de transformação de recursos
 description: Saiba mais sobre técnicas essenciais de pré-processamento, como transformação de dados, codificação e dimensionamento de recursos, que preparam dados para o treinamento de modelos estatísticos. Ele aborda a importância de lidar com valores ausentes e converter dados categóricos para melhorar o desempenho e a precisão do modelo.
 role: Developer
-source-git-commit: b248e8f8420b617a117d36aabad615e5bbf66b58
+exl-id: ed7fa9b7-f74e-481b-afba-8690ce50c777
+source-git-commit: e7bc30c153f67c59e9c04e8c8df60394f48871d0
 workflow-type: tm+mt
-source-wordcount: '3437'
+source-wordcount: '3450'
 ht-degree: 8%
 
 ---
@@ -55,14 +56,14 @@ CREATE model modelname options(model_type='logistic_reg', label='rating') AS SEL
 
 Para definir o pré-processamento de dados personalizado na instrução `CREATE MODEL`, use a cláusula `TRANSFORM` em combinação com qualquer número de funções de transformação disponíveis. Essas funções de pré-processamento manual também podem ser usadas fora da cláusula `TRANSFORM`. Todas as transformações discutidas na [seção de transformador abaixo](#available-transformations) podem ser usadas para pré-processar os dados manualmente.
 
-### Características principais
+### Principais características {#key-characteristics}
 
 Estas são as principais características da transformação de recursos a serem consideradas ao definir suas funções de pré-processamento:
 
 - **Sintaxe**: `TRANSFORM(functionName(colName, parameters) <aliasNAME>)`
    - O nome do alias é obrigatório na sintaxe. Você deve fornecer um nome de alias, caso contrário a consulta falhará.
 
-- **Parâmetros**: os parâmetros são argumentos posicionais. Isso significa que cada parâmetro só pode ter determinados valores. Consulte a documentação relevante para obter detalhes sobre qual função aceita qual argumento.
+- **Parâmetros**: os parâmetros são argumentos posicionais. Isso significa que cada parâmetro só pode ter determinados valores e exigir que todos os parâmetros anteriores sejam especificados se os valores personalizados forem fornecidos. Consulte a documentação relevante para obter detalhes sobre qual função aceita qual argumento.
 
 - **Transformadores de encadeamento**: a saída de um transformador pode se tornar a entrada para outro transformador.
 
@@ -180,7 +181,7 @@ transform(string_imputer(name, 'unknown_name') as name_imputed)
 | 1 | ml_unknown |
 | 2 | Alice |
 
-#### Imputador booleano {#imputer}
+#### Imputador booleano {#boolean-imputer}
 
 O transformador **imputador booleano** conclui valores ausentes em um conjunto de dados para uma coluna booleana. As colunas de entrada e saída devem ser do tipo `Boolean`.
 

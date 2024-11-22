@@ -5,10 +5,10 @@ user-guide-description: Ative seus dados conhecidos e desconhecidos para campanh
 description: Este documento lista o índice dos destinos do Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: 07e01847c6e24564682161e88122948d200ab733
+source-git-commit: 6414168c1deb047af30d8636ef8d61316f56aecf
 workflow-type: tm+mt
-source-wordcount: '1248'
-ht-degree: 6%
+source-wordcount: '1257'
+ht-degree: 5%
 
 ---
 
@@ -42,6 +42,7 @@ ht-degree: 6%
       * [Ativar públicos para destinos de exportação de perfil de transmissão](./ui/activate-streaming-profile-destinations.md)
       * [Ativar públicos para destinos de exportação de perfil em lote](./ui/activate-batch-profile-destinations.md)
       * [Ativar públicos para destinos de personalização de borda](./ui/activate-edge-personalization-destinations.md)
+      * [Pesquisar atributos de perfil na borda em tempo real](./ui/activate-edge-profile-lookup.md)
       * [Ativar públicos para destinos com curadoria com base em identificadores do LiveRamp](./ui/activate-curated-destinations.md)
       * [Ativar públicos-alvo potenciais para destinos](./ui/activate-prospect-audiences.md)
       * [Ativar públicos-alvo da conta para destinos](./ui/activate-account-audiences.md)

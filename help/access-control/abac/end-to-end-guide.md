@@ -4,10 +4,10 @@ title: Guia completo do controle de acesso baseado em atributos
 description: Este documento fornece um guia completo sobre o controle de acesso baseado em atributos no Adobe Experience Platform
 role: Developer
 exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
-source-git-commit: 9c415b7721eeceff75d46463853f22dd3310cb9a
+source-git-commit: b9ce27b6feb0300464507a21510f40900677c3be
 workflow-type: tm+mt
-source-wordcount: '1736'
-ht-degree: 18%
+source-wordcount: '1762'
+ht-degree: 17%
 
 ---
 
@@ -156,6 +156,10 @@ A caixa de diálogo **[!UICONTROL Editar rótulos]** é exibida, permitindo que 
 ![Imagem mostrando a seleção do rótulo RHD e salvando a seleção](../images/abac-end-to-end-user-guide/abac-select-segment-labels.png)
 
 Repita as etapas acima com **[!UICONTROL Insulina &lt;50]**.
+
+>[!NOTE]
+>
+> Atribua rótulos criados no espaço de trabalho [!UICONTROL Permissões] (como os rótulos de segmento acima) a vários objetos no Adobe Journey Optimizer usando o [Controle de Acesso em Nível de Objeto](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/access-control/object-based-access).&quot;
 
 ## Ativar a política de controle de acesso {#policy}
 

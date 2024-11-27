@@ -5,7 +5,7 @@ title: Criar uma conexão Couchbase Base usando a API do Serviço de fluxo
 type: Tutorial
 description: Saiba como conectar o Couchbase ao Adobe Experience Platform usando a API do Serviço de fluxo.
 exl-id: 625e3acf-fc27-44cf-b4e6-becf1d107ff2
-source-git-commit: 474b81aa8caf58013f8ea7cff9ad59d92466aac8
+source-git-commit: 9ca4f19f7b59f075250bce7035303e11d3f3710f
 workflow-type: tm+mt
 source-wordcount: '441'
 ht-degree: 5%
@@ -16,7 +16,7 @@ ht-degree: 5%
 
 >[!WARNING]
 >
->A origem [!DNL Couchbase] será substituída no final de maio de 2025.
+>A origem [!DNL Couchbase] será substituída no final de junho de 2025.
 
 Uma conexão base representa a conexão autenticada entre uma origem e o Adobe Experience Platform.
 

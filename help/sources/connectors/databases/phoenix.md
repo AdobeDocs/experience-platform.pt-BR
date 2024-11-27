@@ -3,7 +3,7 @@ title: Visão geral do Phoenix Source
 description: Saiba como conectar sua conta do Phoenix ao Adobe Experience Platform usando APIs ou a interface do usuário do.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: 45e6ef18-a0b7-4bb2-b099-b2a878e96637
-source-git-commit: 474b81aa8caf58013f8ea7cff9ad59d92466aac8
+source-git-commit: 9ca4f19f7b59f075250bce7035303e11d3f3710f
 workflow-type: tm+mt
 source-wordcount: '195'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 >[!WARNING]
 >
->A origem [!DNL Phoenix] será substituída no final de maio de 2025.
+>A origem [!DNL Phoenix] será substituída no final de junho de 2025.
 
 As Fontes do Adobe Experience Platform oferecem suporte à assimilação de dados de bancos de dados de terceiros, como [[!DNL Phoenix]](https://phoenix.apache.org/index.html). Este documento fornece as informações de pré-requisito antes de conectar a conta do [!DNL Phoenix] por meio da API do [!DNL Flow Service] ou da interface do usuário do Experience Platform.
 

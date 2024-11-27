@@ -5,7 +5,7 @@ title: Criar uma conexão Couchbase Source na interface
 type: Tutorial
 description: Saiba como criar uma conexão de origem Couchbase usando a interface do Adobe Experience Platform.
 exl-id: 4270a48a-843c-4f1e-b280-35b620581d68
-source-git-commit: 474b81aa8caf58013f8ea7cff9ad59d92466aac8
+source-git-commit: 9ca4f19f7b59f075250bce7035303e11d3f3710f
 workflow-type: tm+mt
 source-wordcount: '457'
 ht-degree: 1%
@@ -16,7 +16,7 @@ ht-degree: 1%
 
 >[!WARNING]
 >
->A origem [!DNL Couchbase] será substituída no final de maio de 2025.
+>A origem [!DNL Couchbase] será substituída no final de junho de 2025.
 
 Os conectores do Source em [!DNL Adobe Experience Platform] fornecem a capacidade de assimilar dados obtidos externamente de forma programada. Este tutorial fornece etapas para a criação de um conector de origem [!DNL Couchbase] usando a interface do usuário [!DNL Platform].
 

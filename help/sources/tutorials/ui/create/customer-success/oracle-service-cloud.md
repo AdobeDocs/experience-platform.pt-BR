@@ -3,7 +3,7 @@ keywords: Experience Platform;página inicial;tópicos populares;Nuvem do servi�
 title: Criar uma conexão do Oracle Service Cloud Source na interface
 description: Saiba como criar uma conexão de origem do Oracle Service Cloud usando a interface do Adobe Experience Platform.
 exl-id: e5869c09-b61e-4d23-a594-5a07769da3c4
-source-git-commit: 474b81aa8caf58013f8ea7cff9ad59d92466aac8
+source-git-commit: 9ca4f19f7b59f075250bce7035303e11d3f3710f
 workflow-type: tm+mt
 source-wordcount: '479'
 ht-degree: 2%
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 >[!WARNING]
 >
->A origem [!DNL Oracle Service Cloud] será substituída no final de maio de 2025.
+>A origem [!DNL Oracle Service Cloud] será substituída no final de junho de 2025.
 
 Este tutorial fornece etapas para criar uma conexão de origem do Oracle Service Cloud usando a interface do usuário do Adobe Experience Platform.
 

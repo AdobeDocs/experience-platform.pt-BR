@@ -4,14 +4,14 @@ solution: Experience Platform
 title: Práticas Recomendadas Para Modelagem De Dados
 description: Este documento fornece uma introdução aos esquemas do Experience Data Model (XDM) e aos componentes, princípios e práticas recomendadas para a composição de esquemas a serem usados no Adobe Experience Platform.
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
-source-git-commit: 8e13918abe9a63b186970b24b87bf85d1c73c3a8
+source-git-commit: fed8502afad1dfcb0b4dc91141dd621eacda720c
 workflow-type: tm+mt
-source-wordcount: '3245'
+source-wordcount: '3227'
 ht-degree: 1%
 
 ---
 
-# Práticas recomendadas para modelagem de dados
+# Práticas recomendadas de modelagem de dados
 
 O [!DNL Experience Data Model] (XDM) é a estrutura principal que padroniza os dados de experiência do cliente fornecendo estruturas e definições comuns para uso nos serviços downstream do Adobe Experience Platform. Seguindo os padrões XDM, todos os dados de experiência do cliente podem ser incorporados a uma representação comum e usados para obter insights valiosos das ações do cliente, definir públicos-alvo do cliente e expressar atributos do cliente para fins de personalização.
 
@@ -246,12 +246,12 @@ Para definir restrições em um campo específico, selecione o campo no Editor d
 Veja a seguir uma coleção de sugestões para manter a integridade dos dados ao criar um esquema.
 
 * **Considerar identidades primárias**: para produtos Adobe como SDK da Web, SDK móvel, Adobe Analytics e Adobe Journey Optimizer, o campo `identityMap` geralmente serve como a identidade primária. Evite designar campos adicionais como identidades primárias para esse esquema.
-* **Evite usar `_id` como uma identidade**: evite usar o campo `_id` nos esquemas de Evento de experiência como uma identidade. Destina-se a registrar a exclusividade, não para uso como identidade.
+* **Verifique se `_id` não é usado como uma identidade**: o campo `_id` nos esquemas de Evento de Experiência não pode ser usado como uma identidade, pois se destina à exclusividade do registro.
 * **Definir restrições de comprimento**: é prática recomendada definir comprimentos mínimos e máximos em campos marcados como identidades. Um aviso será acionado se você tentar atribuir um namespace personalizado a um campo de identidade sem atender às restrições de comprimento mínimo e máximo. Essas limitações ajudam a manter a consistência e a qualidade dos dados.
 * **Aplicar padrões para valores consistentes**: se os valores de identidade seguirem um padrão específico, você deverá usar a configuração **[!UICONTROL Padrão]** para impor essa restrição. Essa configuração pode incluir regras como somente dígitos, maiúsculas ou minúsculas ou combinações de caracteres específicas. Use expressões regulares para corresponder padrões em suas cadeias de caracteres.
 * **Limitar eVars em esquemas do Analytics**: normalmente, um esquema do Analytics deve ter apenas um eVar designado como uma identidade. Se você pretende usar mais de um eVar como identidade, verifique novamente se a estrutura de dados pode ser otimizada.
-* **Garantir a exclusividade de um campo selecionado**: o campo escolhido deve ser exclusivo em comparação à identidade primária no esquema. Se não estiver, não marque-a como uma identidade. Por exemplo, se vários clientes puderem fornecer o mesmo endereço de email, esse namespace não será uma identidade adequada. Esse princípio também se aplica a outros namespaces de identidade, como números de telefone.
-* **As restrições acionam avisos para campos de namespace personalizados**: defina restrições para acionar um aviso quando um campo de esquema for marcado com um namespace personalizado sem especificar os comprimentos mínimo e máximo. O aviso serve como um cuidado importante para manter a integridade dos dados. Consulte a documentação de [propriedades de campo específicas do tipo](../ui/fields/overview.md#type-specific-properties) para obter informações sobre como definir restrições em um determinado campo.
+* **Garantir a exclusividade de um campo selecionado**: o campo escolhido deve ser exclusivo em comparação à identidade primária no esquema. Se não estiver, não marque-a como uma identidade. Por exemplo, se vários clientes puderem fornecer o mesmo endereço de email, esse namespace não será uma identidade adequada. Esse princípio também se aplica a outros namespaces de identidade, como números de telefone. Marcar um campo não exclusivo como uma identidade pode causar o recolhimento indesejado do perfil.
+* **Verificar comprimento mínimo da cadeia de caracteres**: todos os campos da cadeia de caracteres devem ter pelo menos um caractere, pois os valores da cadeia de caracteres nunca devem estar vazios. Valores nulos para campos não obrigatórios, no entanto, são aceitáveis.
 
 ## Próximas etapas
 

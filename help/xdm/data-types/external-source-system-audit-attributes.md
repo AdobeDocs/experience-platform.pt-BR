@@ -2,10 +2,10 @@
 title: Tipo de Dados de Atributos de Auditoria do Sistema Source Externo
 description: Saiba mais sobre o tipo de dados External Source System Audit Attributes Experience Data Model (XDM).
 exl-id: ebdd8707-9675-4232-a5b7-4e4a481d706a
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 03735e7099ffb2cfd44fc7fffd35e3a4a858e3ba
 workflow-type: tm+mt
-source-wordcount: '168'
-ht-degree: 7%
+source-wordcount: '186'
+ht-degree: 6%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 7%
 | `lastActivityDate` | DateTime | A última data de atividade do sistema de origem. |
 | `lastReferencedDate` | DateTime | A última data referenciada para o sistema de origem. |
 | `lastUpdatedBy` | String | O nome da pessoa que atualizou este registro pela última vez. |
-| `lastUpdatedDate` | DateTime | A data da última atualização do sistema de origem. |
+| `lastUpdatedDate` | DateTime | A data da última atualização do sistema de origem. Este valor é usado pela [política de mesclagem de atributos](../../profile/api/merge-policies.md#attribute-merge) para determinar a prioridade em caso de conflitos de mesclagem. |
 | `lastViewedDate` | DateTime | A última data exibida para o sistema de origem. |
 
 {style="table-layout:auto"}

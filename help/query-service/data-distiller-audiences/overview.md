@@ -1,9 +1,10 @@
 ---
 title: Criar públicos-alvo usando SQL
 description: Saiba como usar a extensão de público-alvo SQL no Data Distiller do Adobe Experience Platform para criar, gerenciar e publicar públicos-alvo usando comandos SQL. Este guia aborda todos os aspectos do ciclo de vida do público-alvo, incluindo a criação, atualização e exclusão de perfis e o uso de definições de público-alvo orientadas por dados para direcionar destinos baseados em arquivos.
-source-git-commit: b790dc0a485011022ac637f9d9c55f21c882d5fc
+exl-id: c35757c1-898e-4d65-aeca-4f7113173473
+source-git-commit: cce576c00823a0c02e4b639f0888a466a5af6a0c
 workflow-type: tm+mt
-source-wordcount: '1166'
+source-wordcount: '1164'
 ht-degree: 1%
 
 ---
@@ -125,7 +126,7 @@ Os públicos-alvo criados usando a extensão SQL são registrados automaticament
 
 ![O espaço de trabalho Público-alvo na Adobe Experience Platform, mostrando os públicos-alvo da Data Distiller publicados automaticamente e prontos para uso.](../images/data-distiller/sql-audiences/audiences.png)
 
-## Ativar públicos para destinos {#activate-audiences}
+## Ativar públicos-alvo para os destinos {#activate-audiences}
 
 Ative seus públicos direcionando-os para qualquer destino baseado em arquivo, como [!DNL Amazon S3], [!DNL SFTP] ou [!DNL Azure Blob]. Os atributos de público-alvo enriquecidos estão disponíveis para refinamento e filtragem adicionais, conforme necessário.
 
@@ -209,4 +210,4 @@ Em seguida, você pode ler a documentação a seguir para desenvolver e otimizar
 
 - **Explorar avaliação de público-alvo**: saiba mais sobre os [métodos de avaliação de público-alvo no Adobe Experience Platform](../../segmentation/home.md#evaluate-segments): segmentação por transmissão para atualizações em tempo real, segmentação em lote para processamento agendado ou sob demanda e segmentação de borda para avaliação instantânea no Edge Network.
 - **Integração com Destinos**: leia o guia sobre como [exportar arquivos sob demanda para destinos em lote](../../destinations/ui/export-file-now.md) usando a interface do usuário de Destinos da Platform.
-- **Revisar desempenho do público-alvo**: analise o desempenho de seus públicos definidos pelo SQL em diferentes canais. Use insights de dados para ajustar e melhorar as definições de público-alvo e as estratégias de direcionamento. Leia o documento em [Insights do público-alvo](../../dashboards/insights/audiences.md) para saber como acessar e adaptar as consultas SQL para insights do público-alvo no Adobe Real-time Customer Data Platform. Em seguida, você pode criar seus próprios insights e transformar dados brutos em informações acionáveis personalizando o painel Públicos-alvo para visualizar e usar esses insights com eficiência para melhorar a tomada de decisões.
+- **Revisar desempenho do público-alvo**: analise o desempenho de seus públicos definidos pelo SQL em diferentes canais. Use insights de dados para ajustar e melhorar as definições de público-alvo e as estratégias de direcionamento. Leia o documento em [Insights do público-alvo](../../dashboards/insights/audiences.md) para saber como acessar e adaptar as consultas SQL para insights do público-alvo no Adobe Real-Time CDP. Em seguida, você pode criar seus próprios insights e transformar dados brutos em informações acionáveis personalizando o painel Públicos-alvo para visualizar e usar esses insights com eficiência para melhorar a tomada de decisões.

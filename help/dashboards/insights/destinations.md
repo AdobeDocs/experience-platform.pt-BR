@@ -2,16 +2,16 @@
 title: Insights de destinos
 description: Descubra o SQL que capacita seus insights de destino e use essas consultas para gerar insights personalizados e explorar ainda mais a ativação de dados do Adobe Experience Platform.
 exl-id: 762a9960-e7a5-4796-80c7-ef745157cc04
-source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
+source-git-commit: cce576c00823a0c02e4b639f0888a466a5af6a0c
 workflow-type: tm+mt
-source-wordcount: '1139'
+source-wordcount: '1137'
 ht-degree: 3%
 
 ---
 
 # Insights de destinos
 
-Os insights derivados da análise do modelo de dados tornam os dados do Adobe Real-time Customer Data Platform mais acessíveis, compreensíveis e impactantes para a tomada de decisões.
+Os insights derivados da análise do modelo de dados tornam os dados do Adobe Real-Time CDP mais acessíveis, compreensíveis e impactantes para a tomada de decisões.
 
 Entenda seus insights de destino acessando o SQL que os capacita e gere seus próprios insights para explorar ainda mais a ativação de dados do Adobe Experience Platform para suas plataformas de destino. Transforme seus dados brutos em novos insights acionáveis usando o SQL modelo de dados do Real-Time CDP existente como inspiração para criar consultas para suas necessidades comerciais exclusivas.
 

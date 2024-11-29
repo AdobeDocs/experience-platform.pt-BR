@@ -2,16 +2,16 @@
 title: Insights do perfil
 description: Descubra o SQL que possibilita os insights do perfil e use essas consultas para gerar insights personalizados que explorem ainda mais seus clientes e as experiências do consumidor.
 exl-id: f3792076-3e01-4e26-8788-32927202a2e5
-source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
+source-git-commit: cce576c00823a0c02e4b639f0888a466a5af6a0c
 workflow-type: tm+mt
-source-wordcount: '1661'
+source-wordcount: '1659'
 ht-degree: 3%
 
 ---
 
 # Insights do perfil
 
-Os insights derivados da análise do modelo de dados tornam os dados do Adobe Real-time Customer Data Platform mais acessíveis, compreensíveis e impactantes para a tomada de decisões.
+Os insights derivados da análise do modelo de dados tornam os dados do Adobe Real-Time CDP mais acessíveis, compreensíveis e impactantes para a tomada de decisões.
 
 Entenda seus insights de perfil acessando o SQL que os capacita e gere seus próprios insights para explorar ainda mais seus clientes e as experiências do consumidor que compõem seus perfis. Transforme seus dados brutos em novos insights acionáveis usando o SQL modelo de dados do Real-Time CDP existente como inspiração para criar consultas para suas necessidades comerciais exclusivas.
 

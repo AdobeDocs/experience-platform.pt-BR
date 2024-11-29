@@ -2,16 +2,16 @@
 title: Audiences Insights
 description: Descubra o SQL que capacita os insights do público-alvo e use essas consultas para gerar insights personalizados e explorar ainda mais os dados do público-alvo da Adobe Experience Platform.
 exl-id: 99624234-c4e1-44bb-9567-505bc0c4723e
-source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
+source-git-commit: cce576c00823a0c02e4b639f0888a466a5af6a0c
 workflow-type: tm+mt
-source-wordcount: '1124'
+source-wordcount: '1122'
 ht-degree: 3%
 
 ---
 
 # Insights de públicos
 
-Os insights derivados da análise do modelo de dados tornam os dados do Adobe Real-time Customer Data Platform mais acessíveis, compreensíveis e impactantes para a tomada de decisões.
+Os insights derivados da análise do modelo de dados tornam os dados do Adobe Real-Time CDP mais acessíveis, compreensíveis e impactantes para a tomada de decisões.
 
 Entenda seus insights de público acessando o SQL que os capacita e gere seus próprios insights para explorar ainda mais as identidades e os perfis que compõem seus públicos. Transforme seus dados brutos em novos insights acionáveis usando o SQL modelo de dados do Real-Time CDP existente como inspiração para criar consultas para suas necessidades comerciais exclusivas.
 

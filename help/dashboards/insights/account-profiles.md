@@ -4,16 +4,16 @@ description: Descubra o SQL que potencializa os insights do Perfil da conta e us
 badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="Edição B2P" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: a953dd56-7dd8-4cd0-baa0-85f92d192789
-source-git-commit: f9ef0e25dac1715bbb6d73db52d6368c543bf7ec
+source-git-commit: cce576c00823a0c02e4b639f0888a466a5af6a0c
 workflow-type: tm+mt
-source-wordcount: '773'
+source-wordcount: '771'
 ht-degree: 0%
 
 ---
 
 # Insights do perfil da conta
 
-[Perfis de conta](../../rtcdp/accounts/account-profile-overview.md) são usados para consolidar informações de conta de várias fontes, incluindo vários canais de marketing e sistemas organizacionais. Essa visualização unificada permite uma compreensão abrangente das contas dos clientes, aprimorando as campanhas de marketing B2B. Os insights derivados da análise do seu modelo de dados tornam os seus dados B2B do Adobe Real-time Customer Data Platform mais acessíveis, compreensíveis e impactantes para a tomada de decisões.
+[Perfis de conta](../../rtcdp/accounts/account-profile-overview.md) são usados para consolidar informações de conta de várias fontes, incluindo vários canais de marketing e sistemas organizacionais. Essa visualização unificada permite uma compreensão abrangente das contas dos clientes, aprimorando as campanhas de marketing B2B. Os insights derivados da análise do seu modelo de dados tornam os seus dados B2B do Adobe Real-Time CDP mais acessíveis, compreensíveis e impactantes para a tomada de decisões.
 
 Com acesso ao SQL que capacita seus insights, é possível entender melhor seus dados B2B e gerar seus próprios insights reutilizáveis altamente personalizados para explorar ainda mais as informações de conta do cliente. Transforme seus dados brutos em novos insights acionáveis usando o SQL modelo de dados do Real-Time CDP existente como inspiração para criar consultas para suas necessidades comerciais exclusivas.
 

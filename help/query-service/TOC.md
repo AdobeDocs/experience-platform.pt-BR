@@ -5,9 +5,9 @@ breadcrumb-title: Guia do Serviço de consulta
 user-guide-description: Use o SQL padrão para consultar dados no data lake na Experience Platform.
 feature: Queries
 role: User,Developer
-source-git-commit: ac29d10d3774a736d1e54255508ba244ff72f278
+source-git-commit: 83d15e8d6488a400a87f111ec97f06401431b339
 workflow-type: tm+mt
-source-wordcount: '366'
+source-wordcount: '369'
 ht-degree: 22%
 
 ---
@@ -39,7 +39,7 @@ ht-degree: 22%
       - [Recursos do engenheiro para ML](data-distiller/ml-feature-pipelines/feature-engineering.md)
       - [Exportar dados para ambientes ML](data-distiller/ml-feature-pipelines/export-data.md)
       - [Fluxo de trabalho completo de enriquecimento do pipeline de dados de IA/ML](data-distiller/ml-feature-pipelines/end-to-end-notebook-workflow.md)
-- Estatísticas de Distiller de Dados {#advanced-statistics}
+- Estatísticas de Distiller de dados e aprendizado de máquina {#advanced-statistics}
    - [Visão geral](advanced-statistics/overview.md)
    - [Engenharia de recursos](advanced-statistics/feature-engineering.md)
    - [Modelos](advanced-statistics/models.md)

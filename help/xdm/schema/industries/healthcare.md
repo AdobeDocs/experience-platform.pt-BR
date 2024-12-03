@@ -2,9 +2,9 @@
 title: ERD do modelo de dados do setor de saúde
 description: Exibir um diagrama de relacionamento de entidade (ERD) que descreva um modelo de dados padronizado para o setor de saúde. Esse modelo de dados é compatível com o Experience Data Model (XDM) para uso no Adobe Experience Platform.
 exl-id: ebcf97ec-f5a4-46e5-b1ad-c80d55aa2c6e
-source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
+source-git-commit: 23bf89977b13a1f51e1ea7a0bb0561522a09745d
 workflow-type: tm+mt
-source-wordcount: '617'
+source-wordcount: '605'
 ht-degree: 0%
 
 ---
@@ -20,12 +20,12 @@ O diagrama de relacionamento de entidade (ERD) a seguir representa um modelo de 
 Use a seguinte legenda para interpretar este ERD:
 
 * Cada entidade mostrada no é baseada em uma [classe do Experience Data Model (XDM)](../composition.md#class) subjacente.
-* Para uma determinada entidade, cada linha marcada em **negrito** representa um grupo de campos ou um tipo de dados, com os campos relevantes fornecidos listados abaixo em texto não negrito.
+* Os campos recuados em um campo pai representam um campo filho, ou subcampo, que pertence ao grupo de campos do pai.
 * Os campos mais importantes para uma determinada entidade são destacados em vermelho.
 * Todas as propriedades que poderiam ser usadas para identificar clientes individuais são marcadas como &quot;identidade&quot;, com uma dessas propriedades marcada como &quot;identidade principal&quot;.
 * Os relacionamentos de entidade são marcados como não dependentes, já que os eventos baseados em cookies geralmente não podem determinar a pessoa ou indivíduo que fez a transação.
 
-![Imagem mostrando o diagrama de relacionamento de entidade para o modelo de dados do setor de saúde](../../images/industries/healthcare.png)
+![Um exemplo de ERD para um modelo de dados do setor de saúde](../../images/industries/healthcare.png)
 
 >[!NOTE]
 >

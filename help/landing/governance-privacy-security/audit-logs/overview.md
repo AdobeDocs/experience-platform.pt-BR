@@ -4,10 +4,10 @@ description: Saiba como os logs de auditoria permitem ver quem realizou quais a�
 role: Admin,Developer
 feature: Audits
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: c0eb5b5c3a1968cae2bc19b7669f70a97379239b
+source-git-commit: f6e413d2d8b644775b6714739113174f5d9cb0d9
 workflow-type: tm+mt
-source-wordcount: '1350'
-ht-degree: 35%
+source-wordcount: '1388'
+ht-degree: 34%
 
 ---
 
@@ -31,6 +31,10 @@ ht-degree: 35%
 Para aumentar a transparência e a visibilidade das atividades realizadas no sistema, o Adobe Experience Platform permite auditar a atividade do usuário em vários serviços e recursos na forma de &quot;logs de auditoria&quot;. Esses registros formam uma trilha de auditoria que pode ajudar na solução de problemas na plataforma e ajudar sua empresa a cumprir com as políticas corporativas de gerenciamento de dados e os requisitos normativos.
 
 Basicamente, um log de auditoria informa **quem** executou a ação **o que** e **quando**. Cada ação registrada em um log contém metadados que indicam o tipo de ação, a data e a hora, a ID do email do usuário que executou a ação e atributos adicionais relevantes ao tipo de ação.
+
+>[!NOTE]
+>
+> Os metadados para as ações **Adicionar usuário** e **Remover usuário** dentro do recurso **Função** não conterão a ID de email do usuário que executou a ação. Em vez disso, os logs exibirão a ID de email gerada pelo sistema (system@adobe.com).
 
 Este documento aborda logs de auditoria na Platform, incluindo como visualizá-los e gerenciá-los na interface ou na API.
 

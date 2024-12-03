@@ -2,9 +2,9 @@
 title: Assistente de IA na documentação do produto Adobe Experience Platform
 description: Introdução ao Assistente de IA no Adobe Experience Platform.
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: 3f43e120225bcca640cc46ebdce1e4d61100ad45
+source-git-commit: 830daf12b1ae9718a16308d16774f4357f431f6c
 workflow-type: tm+mt
-source-wordcount: '545'
+source-wordcount: '581'
 ht-degree: 1%
 
 ---
@@ -29,15 +29,10 @@ Comece lendo o material nos links abaixo para se familiarizar com os conceitos e
     <a href="./home.md#product-knowledge"><img src="./assets/landing/ai-audience.png" style="width:" 100%;max-height: 100%"></a>
     <div><strong>Aprimore seu aprendizado</strong><br/>Descubra, solucione problemas e amplie sua compreensão do conhecimento sobre o produto sem interromper os fluxos de trabalho.</div>
     </td>
-    <td>
-    <a href="./access.md"><img src="./assets/landing/ai-access.png" style="width:" 100%;max-height: 100%"></a>
-    <div><strong>Aplicar permissões com base no seu uso</strong><br/>Conceder e revogar permissões de acesso, dependendo das funções dos membros da equipe.</div>
-    </td>
   </tr>
   <tr style="border: 0;">
     <td align="center"><a href="./home.md"><img src="../rtcdp/assets/do-not-localize/learn-more-button.svg"></a></td>
     <td align="center"><a href="./home.md#product-knowledge"><img src="../rtcdp/assets/do-not-localize/learn-more-button.svg"></a></td>
-    <td align="center"><a href="./access.md"><img src="../rtcdp/assets/do-not-localize/learn-more-button.svg"></a></td>
     </tr>
 </table>
 
@@ -84,11 +79,23 @@ Assista ao vídeo a seguir para obter uma visão geral do Assistente de IA.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3429845?learn=on)
 
+Para obter mais informações, leia o [Guia da interface do usuário do Assistente de IA](ui-guide.md).
+
 ### Obter acesso ao Assistente de IA
 
 Assista ao vídeo a seguir para saber como configurar o acesso ao AI Assistant para suas organizações e usuários.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3436470/?learn=on)
+
+Para obter mais informações, leia o [Guia de acesso do Assistente de IA](access.md).
+
+### Use o conhecimento de produto do AI Assistant para reduzir o tempo de integração
+
+Assista ao vídeo a seguir para saber como você pode usar o conhecimento do produto AI Assistant para reduzir o tempo de integração.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3438032/?learn=on)
+
+Para obter mais informações, leia sobre [conhecimento sobre produtos no Assistente de IA](home.md#product-knowledge)
 
 ### Use o Assistente de IA para desorganizar seus públicos
 

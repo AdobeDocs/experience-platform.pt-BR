@@ -5,9 +5,9 @@ user-guide-description: Ative seus dados conhecidos e desconhecidos para campanh
 description: Este documento lista o índice dos destinos do Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: 6414168c1deb047af30d8636ef8d61316f56aecf
+source-git-commit: 3a66902ab169c555a52741e3630d2b9f50149155
 workflow-type: tm+mt
-source-wordcount: '1257'
+source-wordcount: '1262'
 ht-degree: 5%
 
 ---
@@ -201,6 +201,7 @@ ht-degree: 5%
    * Destinos sociais{#social}
       * [Visão geral de destinos sociais](./catalog/social/overview.md)
       * [Conexão com o facebook](./catalog/social/facebook.md)
+      * [(Empresas) Conexão do LinkedIn Matched Audiences](./catalog/social/linkedin-b2b.md)
       * [Conexão de Públicos-alvo correspondentes do linkedIn](./catalog/social/linkedin.md)
       * [Conexão com o TikTok](./catalog/social/tiktok.md)
       * [[!DNL Twitter Custom Audiences] conexão](./catalog/social/twitter.md)

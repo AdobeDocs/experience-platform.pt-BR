@@ -3,9 +3,9 @@ keywords: conexão linkedin;conexão linkedin;destinos linkedin;linkedin;
 title: Conexão de públicos correspondentes do Linkedin
 description: Ative perfis para suas campanhas do LinkedIn para direcionamento de público, personalização e supressão, com base em emails com hash.
 exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 74d7c48042b0d2b938705b588c185f3c3f96f1cd
 workflow-type: tm+mt
-source-wordcount: '1099'
+source-wordcount: '1095'
 ht-degree: 4%
 
 ---
@@ -149,7 +149,7 @@ Consulte [Ativar dados de público-alvo para streaming de destinos de exportaç�
 
 ## Dados exportados {#exported-data}
 
-Uma ativação bem-sucedida significa que um público-alvo personalizado [!DNL LinkedIn] seria criado programaticamente em [[!DNL LinkedIn Campaign Manager]](https://www.linkedin.com/campaignmanager/login). A associação de público-alvo seria adicionada e removida à medida que os usuários fossem qualificados ou desqualificados para os públicos ativados.
+Uma ativação bem-sucedida significa que um público-alvo personalizado [!DNL LinkedIn] é criado programaticamente em [[!DNL LinkedIn Campaign Manager]](https://www.linkedin.com/campaignmanager/login). A associação de público é ajustada conforme os usuários são qualificados ou desqualificados para os públicos ativados.
 
 >[!TIP]
 >

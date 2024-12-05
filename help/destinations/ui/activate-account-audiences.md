@@ -2,12 +2,12 @@
 title: Ativar públicos-alvo da conta para destinos
 type: Tutorial
 description: Saiba como ativar públicos-alvo da conta para destinos
-badgeB2B: label="Edição B2B" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 badgeB2P: label="Edição B2P" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 exl-id: ad69d0a8-bf5b-42ac-97a3-401eadda62cd
-source-git-commit: dff460f0b0d365d3d643744544642d9f9488e18a
+source-git-commit: 1c31dd978298191dd10500b60eb446d2ca37139c
 workflow-type: tm+mt
-source-wordcount: '834'
+source-wordcount: '836'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ Este artigo explica o fluxo de trabalho necessário para exportar [públicos-alv
 
 ## Destinos compatíveis {#supported-destinations}
 
-Vá para **[!UICONTROL Conexões]** > **[!UICONTROL Destinos]** e selecione a guia **[!UICONTROL Catálogo]**. Use o filtro **[!UICONTROL Tipos de dados]** e selecione **[!UICONTROL Contas]** para ver os destinos que oferecem suporte à ativação de públicos-alvo de contas. Atualmente, a exportação de públicos-alvo de conta está disponível somente para determinados destinos de armazenamento na nuvem ([Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [ADLS Gen 2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [Armazenamento Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md), [Zona de Aterrissagem de Dados](/help/destinations/catalog/cloud-storage/data-landing-zone.md) e [SFTP](/help/destinations/catalog/cloud-storage/sftp.md)) e o destino [(Empresas) LinkedIn Matched Audiences](/help/destinations/catalog/social/linkedin.md).
+Vá para **[!UICONTROL Conexões]** > **[!UICONTROL Destinos]** e selecione a guia **[!UICONTROL Catálogo]**. Use o filtro **[!UICONTROL Tipos de dados]** e selecione **[!UICONTROL Contas]** para ver os destinos que oferecem suporte à ativação de públicos-alvo de contas. Atualmente, a exportação de públicos-alvo de conta está disponível somente para determinados destinos de armazenamento em nuvem ([Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [ADLS Gen 2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [Armazenamento Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md), [Zona de Aterrissagem de Dados](/help/destinations/catalog/cloud-storage/data-landing-zone.md) e [SFTP](/help/destinations/catalog/cloud-storage/sftp.md)) e o [Demandbase](/help/destinations/catalog/advertising/demandbase.md) e [(Empresas) LinkedIn Corresponderam a Públicos-alvo](/help/destinations/catalog/social/linkedin-b2b.md) de streaming.
 
 ![Destinos que oferecem suporte a públicos-alvo da conta.](/help/destinations/assets/ui/activate-account-audiences/data-types-filter.png)
 
@@ -57,7 +57,7 @@ Siga as instruções para selecionar um destino em que você possa exportar seus
 >
 >Os destinos que podem exportar públicos da conta são indicados com um ícone no canto superior direito do cartão, semelhante ao destino destacado abaixo, ou você pode usar o filtro de tipo de dados para exibir apenas os destinos que podem exportar públicos da conta, como [mostrado mais alto na página](#supported-destinations).
 
-![Página de destino do Amazon S3 que pode exportar públicos-alvo de perfil realçada.](/help/destinations/assets/ui/activate-account-audiences/amazon-s3-icon-activate-account-audiences.png)
+![Página de destino do Demandbase que pode exportar públicos-alvo de perfil destacados.](/help/destinations/assets/ui/activate-account-audiences/demandbase-icon-activate-account-audiences.png)
 
 1. Selecione **[!UICONTROL Contas do tipo de dados]**, seguido da conexão de destino para a qual você deseja exportar conjuntos de dados e selecione **[!UICONTROL Avançar]**.
 

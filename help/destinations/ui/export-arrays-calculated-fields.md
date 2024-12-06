@@ -3,7 +3,7 @@ title: Usar campos calculados para exportar matrizes como strings
 type: Tutorial
 description: Saiba como usar campos calculados para exportar matrizes do Real-Time CDP para destinos de armazenamento em nuvem como cadeias de caracteres.
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: 849d42e36921e60b6ac3a5e89336b954e64a35d7
+source-git-commit: 9b64e39d25ad94aa834c8e207396b37c2a121243
 workflow-type: tm+mt
 source-wordcount: '1556'
 ht-degree: 7%
@@ -21,7 +21,7 @@ ht-degree: 7%
 
 >[!AVAILABILITY]
 >
->* A funcionalidade para exportar matrizes por meio de campos calculados está geralmente disponível.
+>A funcionalidade para exportar matrizes por meio de campos calculados está geralmente disponível.
 
 Saiba como exportar matrizes por meio de campos calculados do Real-Time CDP para [destinos de armazenamento na nuvem](/help/destinations/catalog/cloud-storage/overview.md) como cadeias de caracteres. Leia este documento para entender os casos de uso ativados por essa funcionalidade.
 

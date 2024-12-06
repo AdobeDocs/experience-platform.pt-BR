@@ -3,9 +3,9 @@ title: Exportar conjuntos de dados para destinos de armazenamento na nuvem
 type: Tutorial
 description: Saiba como exportar conjuntos de dados do Adobe Experience Platform para o local de armazenamento em nuvem de sua preferência.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 74dcaff91a264062feec262784e056a296072fd7
+source-git-commit: 9b64e39d25ad94aa834c8e207396b37c2a121243
 workflow-type: tm+mt
-source-wordcount: '2603'
+source-wordcount: '2612'
 ht-degree: 8%
 
 ---
@@ -293,54 +293,54 @@ Lembre-se das seguintes limitações da versão de disponibilidade geral das exp
 
 **É possível gerar um arquivo sem uma pasta se apenas salvarmos em `/` como o caminho da pasta? Além disso, se não exigirmos um caminho de pasta, como os arquivos com nomes duplicados serão gerados em uma pasta ou local?**
 
-+++
++++Resposta
 A partir da versão de setembro de 2024, é possível personalizar o nome da pasta e até mesmo usar `/` para exportar arquivos para todos os conjuntos de dados na mesma pasta. O Adobe não recomenda isso para destinos que exportam vários conjuntos de dados, pois os nomes de arquivo gerados pelo sistema pertencentes a conjuntos de dados diferentes serão misturados na mesma pasta.
 +++
 
 **Você pode rotear o arquivo de manifesto para uma pasta e os arquivos de dados para outra pasta?**
 
-+++
++++Resposta
 Não, não há nenhum recurso para copiar o arquivo de manifesto para um local diferente.
 +++
 
 **Podemos controlar o sequenciamento ou o tempo de entrega do arquivo?**
 
-+++
++++Resposta
 Há opções para agendar a exportação. Não há opções para atrasar ou sequenciar a cópia dos arquivos. Eles são copiados para o local de armazenamento assim que são gerados.
 +++
 
 **Que formatos estão disponíveis para o arquivo de manifesto?**
 
-+++
++++Resposta
 O arquivo de manifesto está no formato .json.
 +++
 
 **A API está disponível para o arquivo de manifesto?**
 
-+++
++++Resposta
 Nenhuma API está disponível para o arquivo de manifesto, mas inclui uma lista de arquivos que compreende a exportação.
 +++
 
 **É possível adicionar mais detalhes ao arquivo de manifesto (ou seja, contagem de registros)? Em caso afirmativo, como?**
 
-+++
++++Resposta
 Não há possibilidade de adicionar mais informações ao arquivo de manifesto. A contagem de registros está disponível através da entidade `flowRun` (consultável via API). Leia mais em Monitoramento de destinos.
 +++
 
 **Como os arquivos de dados são divididos? Quantos registros por arquivo?**
 
-+++
++++Resposta
 Os arquivos de dados são divididos pelo particionamento padrão no data lake do Experience Platform. Conjuntos de dados maiores têm um número maior de partições. O particionamento padrão não pode ser configurado pelo usuário, pois está otimizado para leitura.
 +++
 
 **É possível definir um limite (número de registros por arquivo)?**
 
-+++
++++Resposta
 Não, não é possível.
 +++
 
 **Como reenviar um conjunto de dados caso o envio inicial esteja incorreto?**
 
-+++
++++Resposta
 As tentativas são implementadas automaticamente para a maioria dos tipos de erros do sistema.
 +++

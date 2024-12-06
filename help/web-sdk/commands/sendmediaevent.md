@@ -2,7 +2,7 @@
 title: sendMediaEvent
 description: Saiba como usar o comando sendMediaEvent para rastrear sessões de mídia no SDK da Web.
 exl-id: a38626fd-4810-40a0-8893-e98136634fac
-source-git-commit: 57d42d88ec9a93744450a2a352590ab57d9e5bb7
+source-git-commit: 877e12f1d53bb4a8d7c2564490d4e8f3e9e34e34
 workflow-type: tm+mt
 source-wordcount: '763'
 ht-degree: 0%
@@ -626,7 +626,7 @@ sessionPromise.then(sessionID => {
 
 ### Atualizações de estado {#state-updates}
 
-O tipo de evento `media.stateUpdate` é usado para rastrear quando o estado do player é alterado. Esse evento deve ser enviado quando o estado do player for alterado.
+O tipo de evento `media.statesUpdate` é usado para rastrear quando o estado do player é alterado. Esse evento deve ser enviado quando o estado do player for alterado.
 
 >[!BEGINTABS]
 
@@ -636,7 +636,7 @@ O tipo de evento `media.stateUpdate` é usado para rastrear quando o estado do p
 alloy("sendMediaEvent", {
     playerId: "movie-test",
     xdm: {
-        eventType: "media.stateUpdate",
+        eventType: "media.statesUpdate",
         mediaCollection: {
             statesStart: [{
                     name: "mute"

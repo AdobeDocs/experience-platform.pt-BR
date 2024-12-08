@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guia da interface do usuário do Serviço de consulta
 description: O Serviço de consulta da Adobe Experience Platform fornece uma interface que pode ser usada para gravar e executar consultas, exibir consultas executadas anteriormente e acessar consultas salvas por usuários em sua organização.
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: 3b36148aee490554672ee9e76db4e03c430dfae6
+source-git-commit: a4fc19599ea6639ee5762ee1542cb08b9ed3b6a8
 workflow-type: tm+mt
 source-wordcount: '2275'
 ht-degree: 1%
@@ -175,4 +175,3 @@ A guia **[!UICONTROL Credenciais]** exibe suas credenciais com e sem expiração
 ## Próximas etapas
 
 Agora que você está familiarizado com a interface de usuário do Serviço de Consulta em [!DNL Platform], pode acessar o Editor de Consultas para começar a criar seus próprios projetos de consulta para compartilhar com outros usuários em sua organização. Para obter mais informações sobre a criação e execução de consultas no Editor de Consultas, consulte o [guia do usuário do Editor de Consultas](./user-guide.md).
-

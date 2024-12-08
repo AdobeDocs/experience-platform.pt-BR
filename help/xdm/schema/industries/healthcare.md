@@ -2,7 +2,7 @@
 title: ERD do modelo de dados do setor de saúde
 description: Exibir um diagrama de relacionamento de entidade (ERD) que descreva um modelo de dados padronizado para o setor de saúde. Esse modelo de dados é compatível com o Experience Data Model (XDM) para uso no Adobe Experience Platform.
 exl-id: ebcf97ec-f5a4-46e5-b1ad-c80d55aa2c6e
-source-git-commit: 8f026501cf5c8087cc512ac374163908cebd17c6
+source-git-commit: a4fc19599ea6639ee5762ee1542cb08b9ed3b6a8
 workflow-type: tm+mt
 source-wordcount: '605'
 ht-degree: 0%
@@ -42,3 +42,4 @@ A tabela a seguir descreve as classes recomendadas e os grupos de campos de esqu
 | Melhore a inscrição e a criação de contas em planos de saúde rastreando o marketing de seguros por diferentes canais, a fim de entender como um cliente descobriu sobre uma empresa de seguros. | <ul><li>**[[!UICONTROL Perfil Individual XDM]](../../classes/individual-profile.md)**:<ul><li>[[!UICONTROL Detalhes do membro da área de saúde]](../../field-groups/profile/healthcare-member-details.md)</li></ul></li><li>**[[!UICONTROL Pagador]](../../classes/payer.md)**</li><li>**[[!UICONTROL Plano]](../../classes/plan.md)**:<ul><li>[[!UICONTROL Detalhes do plano de saúde]](../../field-groups/plan/healthcare-plan-details.md)</li></ul></li><li>**[[!UICONTROL XDM ExperienceEvent]](../../classes/experienceevent.md)**:<ul><li>[[!UICONTROL Detalhes da Web]](../../field-groups/event/web-details.md)</li><li>[[!UICONTROL Detalhes do Advertising]](../../field-groups/event/advertising-details.md)</li></ul></li></ul> |
 | Evite lapsos na cobertura do seguro médico. | <ul><li>**[[!UICONTROL Perfil Individual XDM]](../../classes/individual-profile.md)**:<ul><li>[[!UICONTROL Detalhes do membro da área de saúde]](../../field-groups/profile/healthcare-member-details.md)</li></ul></li><li>**[[!UICONTROL Plano]](../../classes/plan.md)**:<ul><li>[[!UICONTROL Detalhes do plano de saúde]](../../field-groups/plan/healthcare-plan-details.md)</li></ul></li></ul> |
 | Promover informações sobre medicamentos para fornecedores usando anúncios diretos ao cliente (DTC). | <ul><li>**[[!UICONTROL Perfil Individual XDM]](../../classes/individual-profile.md)**:<ul><li>[[!UICONTROL Detalhes do membro da área de saúde]](../../field-groups/profile/healthcare-member-details.md)</li></ul></li><li>**[[!UICONTROL Medicação]](../../classes/medication.md)**:<ul><li>[[!UICONTROL Medicamentos para a área de saúde]](../../field-groups/medication/healthcare-medication.md)</li></ul></li><li>**[[!UICONTROL XDM ExperienceEvent]](../../classes/experienceevent.md)**:<ul><li>[[!UICONTROL Detalhes da Web]](../../field-groups/event/web-details.md)</li><li>[[!UICONTROL Detalhes do Advertising]](../../field-groups/event/advertising-details.md)</li></ul></li></ul> |
+

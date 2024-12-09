@@ -5,10 +5,10 @@ breadcrumb-title: Guia do Experience Data Model (XDM)
 user-guide-description: Explore uma visão geral do sistema do Experience Data Model (XDM) na Experience Platform e saiba como usar classes e grupos de campos de esquema para padronizar os dados de experiência.
 feature: Schemas
 role: Developer
-source-git-commit: 15de9351203f6b43653042ab73ede17781486160
+source-git-commit: d2baf74bb5fd87045f5d25b2996911c7bce36f36
 workflow-type: tm+mt
-source-wordcount: '637'
-ht-degree: 45%
+source-wordcount: '719'
+ht-degree: 43%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 45%
 * [Visão geral do sistema XDM](home.md)
 * Esquemas {#schema}
    * [Noções básicas da composição do esquema](schema/composition.md)
-   * [Práticas recomendadas para modelagem de dados](schema/best-practices.md)
+   * [Práticas recomendadas de modelagem de dados](schema/best-practices.md)
    * [Dados sensíveis e pessoais](./schema/sensitive-and-personal-data.md)
    * [Restrições de tipo de campo XDM](schema/field-constraints.md)
    * [Namespace no XDM](./schema/namespaces.md)
@@ -29,6 +29,53 @@ ht-degree: 45%
       * [Serviços de saúde](./schema/industries/healthcare.md)
       * [Telecomunicações](./schema/industries/telecom.md)
       * [Viagens e hospitalidade](./schema/industries/travel-hospitality.md)
+   * Modelo De Dados De Serviços De Saúde V2 {#health-care-data-model-v2}
+      * [Assistência médica V2](./schema/industries/healthcare-v2.md)
+      * Classes {#health-care-classes}
+         * [Localização](./classes/location.md)
+      * Grupos de campos {#health-care-v2-field-groups}
+         * Perfil Individual XDM {#health-care-v2-profile}
+            * [Conta de assistência médica](./field-groups/profile/healthcare-account.md)
+            * [Plano de assistência médica](./field-groups/profile/healthcare-care-plan.md)
+            * [Meta da área de saúde](./field-groups/profile/healthcare-goal.md)
+            * [Organização de assistência médica](./field-groups/profile/healthcare-organization.md)
+            * [Paciente de saúde](./field-groups/profile/healthcare-patient.md)
+            * [Profissional de saúde](./field-groups/profile/healthcare-practioner.md)
+            * [Programação de assistência médica](./field-groups/profile/healthcare-schedule.md)
+         * Evento de experiência XDM {#health-care-v2-event}
+            * [Imunização da área de saúde](./field-groups/event/healthcare-immunization.md)
+         * Localização {#health-care-v2-location}
+            * [Local de assistência médica](./field-groups/location/healthcare-location.md)
+         * Medicação {#health-care-v2-medication}
+            * [Dispensa de Medicação para Assistência Médica](./field-groups/medication/healthcare-medication-dispense.md)
+            * [Solicitação de medicação para assistência médica](./field-groups/medication/healthcare-medication-request.md)
+            * [Medicação para tratamento de saúde](./field-groups/medication/healthcare-medication-v2.md)
+         * Planos {#health-care-v2-plans}
+            * [Cobertura da área de saúde](./field-groups/plan/healthcare-coverage.md)
+      * Tipos de Dados {#health-care-v2-data-types}
+         * [Endereço](./data-types/healthcare/address.md)
+         * [Anotação](./data-types/healthcare/annotation.md)
+         * [Disponibilidade](./data-types/healthcare/availability.md)
+         * [Conceito codificável](./data-types/healthcare/codeable-concept.md)
+         * [Referência codificável](./data-types/healthcare/codeable-reference.md)
+         * [Codificação](./data-types/healthcare/coding.md)
+         * [Ponto de contato](./data-types/healthcare/contact-point.md)
+         * [Dosagem](./data-types/healthcare/dosage.md)
+         * [Duração](./data-types/healthcare/duration.md)
+         * [Detalhes do Contato Estendido](./data-types/healthcare/extended-contact-detail.md)
+         * [Nome humano](./data-types/healthcare/human-name.md)
+         * [Identificador](./data-types/healthcare/identifier.md)
+         * [Dinheiro](./data-types/healthcare/money.md)
+         * [Período](./data-types/healthcare/period.md)
+         * [Pessoa](./data-types/healthcare/person.md)
+         * [Quantidade](./data-types/healthcare/quantity.md)
+         * [Intervalo](./data-types/healthcare/range.md)
+         * [Proporção](./data-types/healthcare/ratio.md)
+         * [Referência](./data-types/healthcare/reference.md)
+         * [Repetir](./data-types/healthcare/repeat.md)
+         * [Quantidade Simples](./data-types/healthcare/simple-quantity.md)
+         * [Tempo](./data-types/healthcare/timing.md)
+         * [Serviço virtual](./data-types/healthcare/virtual-service-detail.md)
    * [Dicionário de campo XDM](schema/field-dictionary.md)
 * Classes {#classes}
    * [Perfil individual XDM](./classes/individual-profile.md)
@@ -54,9 +101,9 @@ ht-degree: 45%
    * Perfil Individual XDM {#profile}
       * [Consentimentos e preferências](./field-groups/profile/consents.md)
       * [Detalhes demográficos](./field-groups/profile/demographic-details.md)
+      * [Detalhes do membro da área de saúde](./field-groups/profile/healthcare-member-details.md)
       * [Consentimento IAB TCF 2.0](./field-groups/profile/iab.md)
       * [IdentityMap](./field-groups/profile/identitymap.md)
-      * [Detalhes do membro da área de saúde](./field-groups/profile/healthcare-member-details.md)
       * [Detalhes de fidelidade](./field-groups/profile/loyalty-details.md)
       * [Detalhes de contato pessoal](./field-groups/profile/personal-contact-details.md)
       * [Enriquecimento do parceiro de perfil (amostra)](./field-groups/profile/profile-partner-enrichment.md)
@@ -236,7 +283,7 @@ ht-degree: 45%
    * [Substituir um campo XDM na API](tutorials/field-deprecation-api.md)
    * [Definir uma relação de esquema na interface](tutorials/relationship-ui.md)
    * [Definir uma relação de esquema na API](tutorials/relationship-api.md)
-   * [Definir uma relação de esquema no Real-Time CDP B2B Edition](tutorials/relationship-b2b.md)
+   * [Definir uma relação de esquema no Real-Time CDP B2B edition](tutorials/relationship-b2b.md)
    * [Gerenciar rótulos de uso de dados para um esquema](tutorials/labels.md)
    * [Criar um esquema ad hoc](tutorials/ad-hoc.md)
 * [Manual de solução de problemas](troubleshooting-guide.md)

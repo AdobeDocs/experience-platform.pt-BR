@@ -4,9 +4,9 @@ title: Painel de Uso da Licença
 description: A Adobe Experience Platform fornece um painel por meio do qual você pode visualizar informações importantes sobre o uso de licença da sua organização.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 37192addffea094cb2d2f3b0201bb128c912e762
+source-git-commit: 5d40af5c0645e9e4ee44f0c0c2133f3b3153bcb1
 workflow-type: tm+mt
-source-wordcount: '2867'
+source-wordcount: '2908'
 ht-degree: 15%
 
 ---
@@ -41,6 +41,11 @@ ht-degree: 15%
 >abstract="O painel de uso da licença oferece informações sobre os produtos da Adobe Experience Platform que você adquiriu. A visão geral do painel exibe as métricas principais de seus produtos, incluindo o uso de cada uma das métricas principais e o período de licença contratado. O espaço de trabalho de detalhes exibe um detalhamento das métricas para cada produto em sandboxes específicas."
 >additional-url="https://experienceleague.adobe.com/pt-br/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="Expirações automatizadas de conjuntos de dados"
 >additional-url="https://experienceleague.adobe.com/pt-br/docs/experience-platform/profile/pseudonymous-profiles" text="Expiração de dados de perfis pseudônimos"
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseusage_predictedusage_computehours"
+>title="Horas de Computação Previstas"
+>abstract="Seu uso pode atingir a quantidade licenciada. Para avaliar ou reduzir as horas de computação, navegue até Consultas > Log para revisar o histórico de consultas. Se você não tiver permissão para acessar o espaço de trabalho Consultas, entre em contato com o administrador."
 
 Você pode exibir informações importantes sobre o uso de licenças da sua organização no painel [!UICONTROL Uso de licenças] do Adobe Experience Platform. As informações exibidas aqui são capturadas durante um instantâneo diário da sua instância da Platform.
 

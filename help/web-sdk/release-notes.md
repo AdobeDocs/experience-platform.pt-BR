@@ -3,9 +3,9 @@ title: Notas de versão do SDK da Web da Adobe Experience Platform
 description: As notas de versão mais recentes do SDK da Web da Adobe Experience Platform.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;notas de versão;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 3dacc991fd7760c1c358bec07aca83ffeb4f4f4d
+source-git-commit: 3a50468a7596b9ba870920a8188ae50b40aaef69
 workflow-type: tm+mt
-source-wordcount: '2042'
+source-wordcount: '2085'
 ht-degree: 5%
 
 ---
@@ -14,7 +14,13 @@ ht-degree: 5%
 # Notas de versão
 
 Este documento aborda as notas de versão do Adobe Experience Platform Web SDK.
-Para obter as notas de versão mais recentes da extensão de tag do SDK da Web, consulte as [notas de versão da extensão de tag do SDK da Web](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
+Para obter as notas de versão mais recentes da extensão de tag do Web SDK, consulte as [notas de versão da extensão de tag do Web SDK](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
+
+## Versão 2.24.1 - sábado, 6 de dezembro de 2024
+
+**Correções e melhorias**
+
+- Solução de um problema de dependência relacionado ao [Mecanismo de regras do Adobe Experience Platform](https://github.com/adobe/aepsdk-rulesengine-typescript/), que estava causando erros em algumas integrações de clientes. O Web SDK agora exige o [Mecanismo de Regras do Adobe Experience Platform](https://github.com/adobe/aepsdk-rulesengine-typescript/) versão 2.0.3 ou posterior.
 
 ## Versão 2.24.0 - sexta-feira, 31 de outubro de 2024
 
@@ -44,7 +50,7 @@ Para obter as notas de versão mais recentes da extensão de tag do SDK da Web, 
 
 **Correções e melhorias**
 
-- Correção de um problema em que os cookies não eram gravados corretamente ao executar o SDK da Web localmente.
+- Correção de um problema em que os cookies não eram gravados corretamente ao executar o Web SDK localmente.
 
 ## Versão 2.22.0 - 22 de agosto de 2024
 
@@ -90,7 +96,7 @@ Para obter as notas de versão mais recentes da extensão de tag do SDK da Web, 
 
 - Correção de um problema em que os erros de identidade mascaravam outros erros e alteravam os erros de identidade para avisos.
 - Correção de um problema em que a parte inferior das chamadas de página nunca era enviada quando havia uma chamada de parte superior da página com `renderDecisions` definido como `false`.
-- Correção de um problema em que o SDK da Web não lia identidades entre domínios quando havia vários parâmetros da cadeia de consulta `adobe_mc`.
+- Correção de um problema em que o Web SDK não lia identidades entre domínios quando havia vários parâmetros da cadeia de caracteres de consulta `adobe_mc`.
 
 ## Versão 2.19.1 - sábado, 10 de novembro de 2023
 
@@ -121,13 +127,13 @@ Para obter as notas de versão mais recentes da extensão de tag do SDK da Web, 
 **Correções e melhorias**
 
 - Correção de um problema em que os links de saída falhavam ao serem qualificados devido ao domínio fazer parte da consulta.
-- Substituído `edgeConfigId` em favor de `datastreamId` na configuração do SDK da Web.
+- `edgeConfigId` substituído em favor de `datastreamId` na configuração do Web SDK.
 
 ## Versão 2.17.0 - quinta-feira, 17 de maio de 2023
 
 **Correções e melhorias**
 
-- O SDK da Web agora codifica os valores de destino do cookie Audience Manager, semelhantes à [Data Integration Library (DIL)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=pt-BR).
+- O Web SDK agora codifica os valores de destino do cookie Audience Manager, semelhante à [Data Integration Library (DIL)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=pt-BR).
 
 ## Versão 2.16.0 - 25 de abril de 2023
 
@@ -167,7 +173,7 @@ Para obter as notas de versão mais recentes da extensão de tag do SDK da Web, 
 
 **Novos recursos**
 
-- Adicionado suporte para [Página por Migração Completa de Página](home.md#migrating-to-web-sdk). O perfil do Adobe Target agora será preservado à medida que um visitante se move entre páginas da at.js e do SDK da Web.
+- Adicionado suporte para [Página por Migração Completa de Página](home.md#migrating-to-web-sdk). O perfil do Adobe Target agora será preservado à medida que um visitante se move entre as páginas da at.js e do Web SDK.
 - Adição de suporte configurável para [User-Agent Client Hints de alta entropia](/help/web-sdk/use-cases/client-hints.md).
 - Suporte adicionado para o comando [`applyResponse`](/help/web-sdk/commands/applyresponse.md). Isso habilita a personalização híbrida através da [API do Edge Network Server](../server-api/overview.md).
 - Os links do modo de controle de qualidade agora funcionam em várias páginas.
@@ -264,7 +270,7 @@ Para obter as notas de versão mais recentes da extensão de tag do SDK da Web, 
 - O comando [`getIdentity`](/help/web-sdk/commands/getidentity.md) agora retorna a ID da região da borda ao lado da identidade.
 - Os avisos e erros recebidos do servidor foram aprimorados e são tratados de maneira mais apropriada.
 - Adicionado suporte para o padrão Adobe Consent 2.0 para o comando [`setConsent`](/help/web-sdk/commands/setconsent.md).
-- As preferências de consentimento, quando recebidas, são colocadas em hash e armazenadas no armazenamento local para uma integração otimizada entre CMPs, SDK da Web da plataforma e Edge Network da plataforma. Se você estiver coletando preferências de consentimento, agora recomendamos que ligue para `setConsent` em cada carregamento de página.
+- As preferências de consentimento, quando recebidas, são colocadas em hash e armazenadas no armazenamento local para uma integração otimizada entre CMPs, Platform Web SDK e Platform Edge Network. Se você estiver coletando preferências de consentimento, agora recomendamos que ligue para `setConsent` em cada carregamento de página.
 - Dois [ganchos de monitoramento](https://github.com/adobe/alloy/wiki/Monitoring-Hooks), `onCommandResolved` e `onCommandRejected` foram adicionados.
 - Correção de erros: os eventos de notificação de interação do Personalization conteriam informações duplicadas sobre a mesma atividade quando um usuário navegasse para uma nova exibição de aplicativo de página única, voltasse para a exibição original e clicasse em um elemento qualificado para conversão.
 - Correção de erros: se o primeiro evento enviado pelo SDK tivesse `documentUnloading` definido como `true`, [`sendBeacon`](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon) seria usado para enviar o evento, resultando em um erro em relação a uma identidade que não está sendo estabelecida.
@@ -281,8 +287,8 @@ Para obter as notas de versão mais recentes da extensão de tag do SDK da Web, 
 
 ## Versão 2.2.0 - outubro de 2020
 
-- Correção de erros: o objeto de aceitação estava impedindo que o SDK da Web fizesse chamadas quando `idMigrationEnabled` fosse `true`.
-- Correção de erros: torne o SDK da Web ciente das solicitações que devem retornar ofertas de personalização para evitar um problema de oscilação.
+- Correção de erros: o objeto de aceitação estava impedindo que o Web SDK fizesse chamadas quando `idMigrationEnabled` fosse `true`.
+- Correção de erros: torne o Web SDK ciente das solicitações que devem retornar ofertas de personalização para evitar um problema de oscilação.
 
 ## Versão 2.1.0 - agosto de 2020
 

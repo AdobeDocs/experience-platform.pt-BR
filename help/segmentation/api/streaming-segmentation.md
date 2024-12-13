@@ -4,9 +4,9 @@ title: Avaliar eventos em tempo quase real com a segmentação de transmissão
 description: Este documento contém exemplos sobre como usar a segmentação por transmissão com a API do Serviço de segmentação do Adobe Experience Platform.
 role: Developer
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: a1c9003a1b219325daf8fa38cda8bb1a019a55c6
+source-git-commit: e6e9abc7ffe27a2ff9c4ccf4ca243cabdae3d631
 workflow-type: tm+mt
-source-wordcount: '2027'
+source-wordcount: '2052'
 ht-degree: 4%
 
 ---
@@ -76,7 +76,7 @@ Para que uma definição de segmento seja avaliada usando a segmentação por tr
 | Evento único em uma janela de tempo de menos de 24 horas | Qualquer definição de segmento que se refira a um único evento recebido em uma janela de tempo de menos de 24 horas. |
 | Somente perfil | Qualquer definição de segmento que se refere apenas a um atributo de perfil. |
 | Evento único com um atributo de perfil em uma janela de tempo relativa de menos de 24 horas | Qualquer definição de segmento que se refere a um único evento recebido, com um ou mais atributos de perfil, e ocorre em uma janela de tempo relativa de menos de 24 horas. |
-| Segmento de segmentos | Qualquer definição de segmento que contenha um ou mais segmentos em lote ou de fluxo. **Observação:** se um segmento de segmentos for usado, a desqualificação de perfis ocorrerá **a cada 24 horas**. |
+| Segmento de segmentos | Qualquer definição de segmento que contenha uma ou mais definições de segmento de lote ou transmissão. **Observação:** se o segmento de segmentos for usado com definições de segmento do **lote**, a desqualificação de perfil poderá levar **até 24 horas** para ocorrer. Se o segmento de segmentos for usado com **streaming** definições de segmento, a desqualificação de perfil ocorrerá de maneira streaming. |
 | Vários eventos com um atributo de perfil | Qualquer definição de segmento que se refere a vários eventos **nas últimas 24 horas** e (opcionalmente) tem um ou mais atributos de perfil. |
 
 Uma definição de segmento **não** será habilitada para segmentação por transmissão nos seguintes cenários:

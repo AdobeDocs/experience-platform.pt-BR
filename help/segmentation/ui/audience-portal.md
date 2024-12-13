@@ -2,9 +2,9 @@
 title: Visão geral do Audience Portal
 description: Saiba como usar o Audience Portal para exibir, gerenciar e criar públicos no Adobe Experience Platform.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: a48df00b61fd5736cfb6fd29c60cf73a02342451
+source-git-commit: 1aa10d9cbde66a174ddc64ba9ce11149436393c1
 workflow-type: tm+mt
-source-wordcount: '4547'
+source-wordcount: '4557'
 ht-degree: 4%
 
 ---
@@ -236,6 +236,7 @@ Ao selecionar públicos-alvo para avaliação flexível do público-alvo, as seg
 - Todos os públicos-alvo **devem** ter uma origem de &quot;Serviço de segmentação&quot;.
 - Todos os públicos-alvo **devem** ser avaliados usando a segmentação em lote.
 - Todos os públicos-alvo **devem** ser baseados em pessoas.
+- Os públicos-alvo podem **somente** ser ativados para destinos na Platform.
 - Você pode selecionar no máximo 20 públicos-alvo.
 
 ![Os públicos-alvo nos quais você deseja usar a avaliação de público-alvo flexível estão selecionados.](../images/ui/audience-portal/evaluate-audiences.png)

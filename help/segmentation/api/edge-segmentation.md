@@ -4,10 +4,10 @@ title: Segmentação do Edge usando a API
 description: Este documento contém exemplos sobre como usar a segmentação de borda com a API de serviço de segmentação do Adobe Experience Platform.
 role: Developer
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: a1c9003a1b219325daf8fa38cda8bb1a019a55c6
+source-git-commit: e6e9abc7ffe27a2ff9c4ccf4ca243cabdae3d631
 workflow-type: tm+mt
-source-wordcount: '783'
-ht-degree: 2%
+source-wordcount: '808'
+ht-degree: 1%
 
 ---
 
@@ -46,7 +46,7 @@ Para que um segmento seja avaliado usando a segmentação de borda, a consulta d
 | Evento único em uma janela de tempo de menos de 24 horas | Qualquer definição de segmento que se refira a um único evento recebido em uma janela de tempo de menos de 24 horas. |
 | Somente perfil | Qualquer definição de segmento que se refere apenas a um atributo de perfil. |
 | Evento único com um atributo de perfil em uma janela de tempo relativa de menos de 24 horas | Qualquer definição de segmento que se refere a um único evento recebido, com um ou mais atributos de perfil, e ocorre em uma janela de tempo relativa de menos de 24 horas. |
-| Segmento de segmentos | Qualquer definição de segmento que contenha um ou mais segmentos em lote ou de fluxo. **Observação:** se um segmento de segmentos for usado, a desqualificação de perfis ocorrerá **a cada 24 horas**. |
+| Segmento de segmentos | Qualquer definição de segmento que contenha uma ou mais definições de segmento de lote ou transmissão. **Observação:** se o segmento de segmentos for usado com definições de segmento do **lote**, a desqualificação de perfil poderá levar **até 24 horas** para ocorrer. Se o segmento de segmentos for usado com **streaming** definições de segmento, a desqualificação de perfil ocorrerá de maneira streaming. |
 | Vários eventos com um atributo de perfil | Qualquer definição de segmento que se refere a vários eventos **nas últimas 24 horas** e (opcionalmente) tem um ou mais atributos de perfil. |
 
 Além disso, o segmento **deve** estar vinculado a uma política de mesclagem que esteja ativa na borda. Para obter mais informações sobre políticas de mesclagem, leia o [guia de políticas de mesclagem](../../profile/api/merge-policies.md).

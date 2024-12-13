@@ -2,10 +2,10 @@
 title: Notas de versão da extensão principal
 description: As notas de versão mais recentes da extensão principal no Adobe Experience Platform.
 exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
-source-git-commit: 4f75bbfee6b550552d2c9947bac8540a982297eb
+source-git-commit: 1ce579fc1f8548d1eb5c01d63e9fa4e8b32e2a4f
 workflow-type: tm+mt
-source-wordcount: '1632'
-ht-degree: 60%
+source-wordcount: '1651'
+ht-degree: 61%
 
 ---
 
@@ -13,7 +13,13 @@ ht-degree: 60%
 
 >[!NOTE]
 >
->O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleta de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+
+## 23 de outubro de 2024
+
+v3.4.2
+
+* Corrigir erro de validação de esquema para o evento Formulário -> Alterar quando &quot;e tendo determinados valores de propriedade...&quot; estiver ativo.
 
 ## 29 de março de 2023
 
@@ -64,7 +70,7 @@ As seguintes alterações foram introduzidas no elemento de dados Valor condicio
 * Os valores numéricos são expostos como números no objeto de configurações.
 * O valor condicional não é mais necessário para que possa se comportar da mesma maneira que o valor de fallback.
 
-## 17 de setembro de 2021
+## sábado, 17 de setembro de 2021
 
 v3.1.1
 

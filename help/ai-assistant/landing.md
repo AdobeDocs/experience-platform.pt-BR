@@ -2,7 +2,7 @@
 title: Assistente de IA na documentação do produto Adobe Experience Platform
 description: Introdução ao Assistente de IA no Adobe Experience Platform.
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: 86edf0c8eeca5b3d2be5776664c397fcf5028e29
+source-git-commit: d2de642b7e84d3c4fad57cf0052afa67878dcac0
 workflow-type: tm+mt
 source-wordcount: '688'
 ht-degree: 1%
@@ -150,7 +150,7 @@ Assista aos vídeos a seguir para obter mais exemplos de caso de uso do Assisten
 
 >[!ENDTABS]
 
-## Recursos adicionais
+## Recursos adicionais {#additional-resources}
 
 >[!BEGINSHADEBOX]
 

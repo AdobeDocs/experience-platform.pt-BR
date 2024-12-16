@@ -4,7 +4,7 @@ title: Exportar conjuntos de dados usando a API do Serviço de fluxo
 description: Saiba como usar a API do Serviço de fluxo para exportar conjuntos de dados para destinos selecionados.
 type: Tutorial
 exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
-source-git-commit: c32d2801fe38183225d24f38284b42e3d78e2631
+source-git-commit: 3bce663866e7a6e8288444121331fc931a74076a
 workflow-type: tm+mt
 source-wordcount: '5138'
 ht-degree: 3%
@@ -38,7 +38,7 @@ Este artigo explica o fluxo de trabalho necessário para usar o [!DNL Flow Servi
 
 ## Conjuntos de dados disponíveis para exportação {#datasets-to-export}
 
-Os conjuntos de dados que você pode exportar dependem do aplicativo Experience Platform (Real-Time CDP, Adobe Journey Optimizer), do nível (Prime ou Ultimate) e de qualquer complemento que você tenha adquirido (por exemplo: Data Distiller).
+Os conjuntos de dados que você pode exportar dependem do aplicativo Experience Platform (Real-Time CDP, Adobe Journey Optimizer), da camada (Prime ou Ultimate) e de qualquer complemento que você adquiriu (por exemplo: Data Distiller).
 
 Consulte a [tabela na página de tutorial da interface](/help/destinations/ui/export-datasets.md#datasets-to-export) para entender quais conjuntos de dados você pode exportar.
 
@@ -996,7 +996,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'x-sandbox-name: <SANDBOX-NAME>' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-  "name": "Data Landing Zone(DLZ) Base Connection"
+  "name": "Data Landing Zone Base Connection",
+  "connectionSpec": {
+    "id": "3567r537-2a7b-4583-ac39-ed38d4b848e8",
+    "version": "1.0"
+  }
 }'
 ```
 

@@ -1,21 +1,21 @@
 ---
-keywords: RTCDP;CDP;B2B Edition;Real-time Customer Data Platform;real time customer data platform;real time cdp;b2b;cdp
+keywords: RTCDP;CDP;B2B edition;Real-time Customer Data Platform;real time customer data platform;real time cdp;b2b;cdp
 solution: Experience Platform
-title: Introdução à Real-time Customer Data Platform B2B Edition
-description: Use esse cenário como exemplo ao configurar sua implementação do Adobe Real-time Customer Data Platform B2B Edition.
+title: Introdução ao Real-time Customer Data Platform B2B edition
+description: Use esse cenário como exemplo ao configurar sua implementação do Adobe Real-time Customer Data Platform B2B edition.
 feature: Get Started, B2B
-badgeB2B: label="Edição B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: ad9ace46-9915-4b8f-913a-42e735859edf
-source-git-commit: 8a487d948d2eb7db167298b61045ef8dd2099da6
+source-git-commit: 90323c32833b0d8a2b4feb88b8eb851bc767c2f8
 workflow-type: tm+mt
 source-wordcount: '1174'
 ht-degree: 0%
 
 ---
 
-# Introdução à Real-time Customer Data Platform B2B Edition
+# Introdução ao Real-time Customer Data Platform B2B edition
 
-Este documento fornece um fluxo de trabalho completo de alto nível para a introdução ao Real-time Customer Data Platform (CDP) B2B Edition, usando um exemplo de caso de uso para ilustrar os principais conceitos.
+Este documento fornece um fluxo de trabalho completo de alto nível para a introdução ao Real-time Customer Data Platform (CDP) B2B edition, usando um exemplo de caso de uso para ilustrar os principais conceitos.
 
 A empresa de tecnologia Bodea quer combinar dados pessoais e de conta de diferentes fontes de dados em silos para direcionar os clientes com eficiência a uma campanha de anúncio por email e LinkedIn para seu novo produto. A Bodea usa o Marketo Engage como sua plataforma de automação de marketing e precisa segmentar um público específico de B2B de vários CRMs que contêm dados de clientes.
 
@@ -23,7 +23,7 @@ A empresa de tecnologia Bodea quer combinar dados pessoais e de conta de diferen
 
 Este fluxo de trabalho tutorial depende de vários serviços da Adobe Experience Platform como parte da demonstração. Se desejar acompanhar, é recomendável compreender bem os seguintes serviços:
 
-- [Modal de dados de experiência (XDM)](../xdm/home.md)
+- [Experience Data Model (XDM)](../xdm/home.md)
 - [Origens](../sources/home.md)
 - [Segmentação](../segmentation/home.md)
 - [Destinos](../destinations/home.md)
@@ -58,7 +58,7 @@ O Perfil do cliente em tempo real mescla dados de fontes diferentes para criar p
 
 ## Assimilar seus dados no Experience Platform
 
-Em seguida, o profissional de marketing Bodea usa o [conector do Marketo Engage](../sources/connectors/adobe-applications/marketo/marketo.md) para assimilar dados na Platform para uso em serviços downstream. Você também pode assimilar dados usando uma das fontes aprovadas para o Real-Time CDP B2B Edition.
+Em seguida, o profissional de marketing Bodea usa o [conector do Marketo Engage](../sources/connectors/adobe-applications/marketo/marketo.md) para assimilar dados na Platform para uso em serviços downstream. Você também pode assimilar dados usando uma das fontes aprovadas para o Real-Time CDP B2B edition.
 
 >[!NOTE]
 > 
@@ -86,7 +86,7 @@ Neste exemplo, o público-alvo encontra todas as pessoas que trabalham no depart
 
 >[!NOTE]
 > 
->Para obter instruções sobre como criar públicos-alvo para avaliar seus dados, consulte o [Guia da interface do usuário do Construtor de segmentos](../segmentation/ui/segment-builder.md). Para obter casos de uso mais específicos da segmentação B2B, consulte a [visão geral da segmentação para o Real-Time CDP B2B Edition](./segmentation/b2b.md).
+>Para obter instruções sobre como criar públicos-alvo para avaliar seus dados, consulte o [Guia da interface do usuário do Construtor de segmentos](../segmentation/ui/segment-builder.md). Para obter casos de uso mais específicos da segmentação B2B, consulte a [visão geral da segmentação para o Real-Time CDP B2B edition](./segmentation/b2b.md).
 
 O Construtor de segmentos permite criar um público-alvo comercializável a partir dos dados do Perfil do cliente em tempo real e exibir estimativas de seu público-alvo potencial com base na combinação de atributos, eventos e públicos-alvo existentes definidos.
 
@@ -106,4 +106,4 @@ O profissional de marketing do Bodea ativa o público-alvo para o destino do Mar
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você aproveitou com êxito os vários serviços da Adobe Experience Platform usados pelo Real-Time CDP B2B Edition. Como resultado, você aprendeu a assimilar, segmentar, avaliar e exportar seus dados B2B como públicos acionáveis que podem ser envolvidos em diferentes canais.
+Ao seguir este tutorial, você aproveitou com êxito os vários serviços da Adobe Experience Platform usados pelo Real-Time CDP B2B edition. Como resultado, você aprendeu a assimilar, segmentar, avaliar e exportar seus dados B2B como públicos acionáveis que podem ser envolvidos em diferentes canais.

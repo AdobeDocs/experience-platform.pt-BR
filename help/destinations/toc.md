@@ -5,9 +5,9 @@ user-guide-description: Ative seus dados conhecidos e desconhecidos para campanh
 description: Este documento lista o índice dos destinos do Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: 3a66902ab169c555a52741e3630d2b9f50149155
+source-git-commit: cc9c6f476a2b50e09cc14df915fc4dfa851a3bb9
 workflow-type: tm+mt
-source-wordcount: '1262'
+source-wordcount: '1267'
 ht-degree: 5%
 
 ---
@@ -174,7 +174,9 @@ ht-degree: 5%
       * [[!DNL Salesforce Marketing Cloud Account Engagement]](./catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md)
       * [Conexão SendGrid](./catalog/email-marketing/sendgrid.md)
    * Marcar extensões {#launch-extensions}
-      * [Visão geral da extensão de marca](./catalog/launch-extensions/overview.md)
+      * [Visão geral da extensão de tag](./catalog/launch-extensions/overview.md)
+   * Automação de marketing {#marketing-automation}
+      * [Perfis de participante RainFocus](/help/destinations/catalog/marketing-automation/rainfocus.md)
    * Destinos do engajamento móvel {#mobile-engagement}
       * [Visão geral dos destinos do Engajamento móvel](./catalog/mobile-engagement/overview.md)
       * [Conexão com os atributos do dirigível](./catalog/mobile-engagement/airship-attributes.md)

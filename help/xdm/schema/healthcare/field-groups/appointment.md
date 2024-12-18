@@ -4,7 +4,8 @@ description: Saiba mais sobre o grupo de campos Esquema de compromisso.
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: true
 hidefromtoc: true
-source-git-commit: 2a58f6f1663e95c1c7576cd4909fa937b41ae099
+exl-id: 8224a2ee-51ac-4512-b0e4-5f1ab6bfddc4
+source-git-commit: cb39966de77846758c16153f78fcf521f6a421e3
 workflow-type: tm+mt
 source-wordcount: '1227'
 ht-degree: 5%
@@ -120,3 +121,4 @@ Para obter mais detalhes sobre o grupo de campos, consulte o repositório XDM p�
 | [!UICONTROL nona Semana Do Mês] | `nthWeekOfMonth` | [[!UICONTROL Codificação]](../data-types/coding.md) | Indica a nona semana do mês em que o compromisso deve ocorrer. |
 | [!UICONTROL Dia Do Mês] | `dayOfMonth` | Número inteiro | Indica que os compromissos devem ocorrer neste dia específico do mês. |
 | [!UICONTROL Intervalo de Mês] | `monthInterval` | Número inteiro | Indica que os compromissos recorrentes devem ocorrer todos os meses. |
+

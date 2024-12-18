@@ -2,7 +2,8 @@
 title: Assistente de IA para Suporte ao cliente
 description: Saiba como você pode usar o Assistente de IA para simplificar a solução de problemas e o processo de arquivamento de tíquetes do suporte ao cliente.
 badge: Alfa
-source-git-commit: 746c40902a052f99db28a629a8e9c4da0559037f
+exl-id: 263b8a44-8902-42b9-8390-d7da8e9b5129
+source-git-commit: 88c4ba5fd7d5cd4fdd1e1da3f2eac43b03149e5e
 workflow-type: tm+mt
 source-wordcount: '349'
 ht-degree: 0%
@@ -36,7 +37,7 @@ Obtenha respostas instantâneas para perguntas comuns de suporte obtidas em docu
 * **Documentação legal do produto** que fornece informações precisas e orientadas para licenciamento.
    * Exemplo de perguntas:
       * &quot;Qual é o limite para trabalhos de segmentação em lote na Ativação do Adobe Experience Platform?&quot;
-&quot;Qual é o limite médio de riqueza de perfil na Ativação do Adobe Experience Platform?&quot;
+      * &quot;Qual é o limite médio de riqueza de perfil na Ativação do Adobe Experience Platform?&quot;
 
 ## Criação de caso de suporte
 

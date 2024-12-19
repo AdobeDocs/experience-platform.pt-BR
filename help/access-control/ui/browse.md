@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Selecione um perfil de produto para editar permissões de controle de acesso
 description: Este documento aborda as etapas necessárias para navegar pelo espaço de trabalho de controle de acesso. Para configurar o controle de acesso para o Experience Platform por meio do Adobe Admin Console, você deve ser um administrador de uma organização que tenha uma assinatura do Experience Platform.
 exl-id: 1d3c894e-b412-43ba-ba91-ddfa35303d73
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: ca204a6bdbf867268e774d5db6f8e5941d38f0ae
 workflow-type: tm+mt
 source-wordcount: '302'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
@@ -30,3 +30,4 @@ Este guia do usuário se concentra em como usar o [!DNL Admin Console] para atri
 ## Próximas etapas
 
 Depois de navegar no espaço de trabalho de controle de acesso, vá para a próxima etapa para [criar um novo perfil de produto](create-profile.md)
+

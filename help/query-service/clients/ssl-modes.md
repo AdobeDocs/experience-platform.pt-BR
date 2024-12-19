@@ -3,9 +3,9 @@ keywords: Experience Platform;início;tópicos populares;Serviço de consulta;se
 title: Opções SSL do Serviço de Consulta
 description: Saiba mais sobre o suporte SSL para conexões de terceiros ao Serviço de consulta da Adobe Experience Platform e como se conectar usando o modo SSL verify-full.
 exl-id: 41b0a71f-165e-49a2-8a7d-d809f5f683ae
-source-git-commit: 229ce98da8f1c97e421ef413826b0d23754d16df
+source-git-commit: 37c30fc1a040efbce0c221c10b36e105d5b1a962
 workflow-type: tm+mt
-source-wordcount: '1017'
+source-wordcount: '1008'
 ht-degree: 1%
 
 ---
@@ -30,8 +30,8 @@ Os diferentes valores de parâmetro `sslmode` fornecem diferentes níveis de pro
 
 | sslmode | Proteção contra espionagem | Proteção MITM | Descrição |
 |---|---|---|---|
-| `allow` | Parcial | Não | A segurança não é uma prioridade, a velocidade e uma baixa sobrecarga de processamento são mais importantes. Esse modo só optará pela criptografia se o servidor insistir nela. |
-| `prefer` | Parcial | Não | A criptografia não é necessária, mas a comunicação será criptografada se o servidor permitir. |
+| `allow` | Sim | Não | A criptografia é necessária em todas as comunicações. A rede é confiável para se conectar ao servidor correto. |
+| `prefer` | Sim | Não | A criptografia é necessária em todas as comunicações. A rede é confiável para se conectar ao servidor correto. |
 | `require` | Sim | Não | A criptografia é necessária em todas as comunicações. A rede é confiável para se conectar ao servidor correto. A validação do certificado SSL do servidor não é necessária. |
 | `verify-ca` | Sim | Depende da política de CA | A criptografia é necessária em todas as comunicações. A validação do servidor é necessária antes que os dados sejam compartilhados. Isso requer que você configure um certificado raiz no seu diretório base do [!DNL PostgreSQL]. [Detalhes fornecidos abaixo](#instructions) |
 | `verify-full` | Sim | Sim | A criptografia é necessária em todas as comunicações. A validação do servidor é necessária antes que os dados sejam compartilhados. Isso requer que você configure um certificado raiz no seu diretório base do [!DNL PostgreSQL]. [Os detalhes são fornecidos abaixo](#instructions). |

@@ -4,9 +4,9 @@ description: Saiba como criar e usar públicos-alvo da conta para direcionar per
 badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="Edição B2P" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 047930d6-939f-4418-bbcb-8aafd2cf43ba
-source-git-commit: fd0a495d68d6a09ccca66c400993d2e72673321c
+source-git-commit: 260d63d5eebd62cc5a617fccc189af52fd4d0b09
 workflow-type: tm+mt
-source-wordcount: '1518'
+source-wordcount: '1495'
 ht-degree: 21%
 
 ---
@@ -195,10 +195,6 @@ A seção a seguir fornece informações adicionais sobre os públicos-alvo da c
 >abstract="O público-alvo viola uma restrição. Leia o documento vinculado para obter mais detalhes."
 
 Ao usar públicos da conta, o público-alvo **deve** estar em conformidade com as seguintes restrições:
-
->[!NOTE]
->
->A lista a seguir mostra as restrições **padrão** para públicos-alvo da conta. Esses valores **podem** mudar, dependendo das configurações implementadas pelo administrador da sua organização.
 
 - A janela de pesquisa máxima para Eventos de Experiência é de **30 dias**.
 - A profundidade máxima de contêineres aninhados é **5**.

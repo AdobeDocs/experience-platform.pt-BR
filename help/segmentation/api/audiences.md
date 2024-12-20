@@ -3,9 +3,9 @@ title: Endpoint da API de públicos-alvo
 description: Use o endpoint de públicos-alvo na API do serviço de segmentação do Adobe Experience Platform para criar, gerenciar e atualizar programaticamente os públicos-alvo da sua organização.
 role: Developer
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
-source-git-commit: 9c50ca0db55ce4b21978273d7b4d1de9b5f9338d
+source-git-commit: 260d63d5eebd62cc5a617fccc189af52fd4d0b09
 workflow-type: tm+mt
-source-wordcount: '1438'
+source-wordcount: '1452'
 ht-degree: 3%
 
 ---
@@ -45,6 +45,7 @@ Os seguintes parâmetros de consulta podem ser usados ao recuperar uma lista de 
 | `property` | Um filtro que permite especificar públicos-alvo que **exatamente** correspondam ao valor de um atributo. Isto foi escrito no formato `property=` | `property=audienceId==test-audience-id` |
 | `name` | Um filtro que permite especificar públicos-alvo cujos nomes **contenham** o valor fornecido. Esse valor não diferencia maiúsculas de minúsculas. | `name=Sample` |
 | `description` | Um filtro que permite especificar públicos cujas descrições **contêm** o valor fornecido. Esse valor não diferencia maiúsculas de minúsculas. | `description=Test Description` |
+| `entityType` | Um filtro que permite especificar o tipo de público-alvo que você está procurando. | `entityType=_xdm.context.account` |
 
 **Solicitação**
 

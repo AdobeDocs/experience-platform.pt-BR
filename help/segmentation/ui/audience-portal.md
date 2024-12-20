@@ -2,9 +2,9 @@
 title: Visão geral do Audience Portal
 description: Saiba como usar o Audience Portal para exibir, gerenciar e criar públicos no Adobe Experience Platform.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 1aa10d9cbde66a174ddc64ba9ce11149436393c1
+source-git-commit: 260d63d5eebd62cc5a617fccc189af52fd4d0b09
 workflow-type: tm+mt
-source-wordcount: '4557'
+source-wordcount: '4571'
 ht-degree: 4%
 
 ---
@@ -249,7 +249,7 @@ Depois de confirmar que os públicos-alvo corretos estão listados, você pode c
 
 >[!NOTE]
 >
-Se você executar a avaliação flexível do público-alvo em públicos que já estão definidos para serem ativados [após a avaliação do segmento](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files), os públicos-alvo serão ativados assim que o trabalho de avaliação flexível do público-alvo for concluído, independentemente de quaisquer trabalhos de ativação diários anteriores.
+Se você executar uma avaliação de público flexível, será necessário garantir que a frequência esteja definida como **[!UICONTROL Após a avaliação do segmento]**. Executar a avaliação flexível do público-alvo em públicos que já estão definidos para serem ativados [após a avaliação do segmento](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files), ativará os públicos-alvo assim que o trabalho de avaliação flexível do público-alvo for concluído, independentemente de quaisquer trabalhos de ativação diários anteriores.
 
 ## Detalhes do público-alvo {#audience-details}
 

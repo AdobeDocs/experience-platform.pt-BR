@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Definir campos de identidade na interface
 description: Saiba como definir um campo de identidade na interface do usuário do Experience Platform.
 exl-id: 11a53345-4c3f-4537-b3eb-ee7a5952df2a
-source-git-commit: 6020f1c294f123cbf57629405128580efc5642ec
+source-git-commit: 0d16bbbaf81b2057c6b3518a5b8a8698920c36f7
 workflow-type: tm+mt
-source-wordcount: '609'
+source-wordcount: '651'
 ht-degree: 6%
 
 ---
@@ -43,6 +43,10 @@ Controles adicionais são exibidos após marcar a caixa de seleção. Se você q
 Em **[!UICONTROL Namespace de identidade]**, use o menu suspenso para selecionar o namespace apropriado para o campo de identidade. Os namespaces padrão fornecidos pelo Adobe são listados, juntamente com quaisquer namespaces personalizados definidos pela sua organização.
 
 Quando terminar, selecione **[!UICONTROL Aplicar]** para aplicar a alteração ao esquema.
+
+>[!IMPORTANT]
+>
+>Se um campo de identidade principal já estiver definido, você poderá alterar o campo de identidade principal no esquema seguindo as etapas acima. No entanto, você deve desativar e depois reativar todos os conjuntos de dados associados no perfil para que a alteração tenha efeito.
 
 ![](../../images/ui/fields/special/identity-config.png)
 

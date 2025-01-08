@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Visão geral da Adobe Experience Platform
 breadcrumb-title: Visão geral da Experience Platform
 user-guide-description: Saiba como a Experience Platform permite oferecer experiências personalizadas a clientes em tempo real com guias, documentação e tutoriais.
-source-git-commit: dde5c1367706d015308ebea687d7f2a41947fb20
+source-git-commit: 37a94874d2c104c753b0f1efbae20c1cce0b29f3
 workflow-type: tm+mt
-source-wordcount: '282'
-ht-degree: 24%
+source-wordcount: '288'
+ht-degree: 25%
 
 ---
 
@@ -57,7 +57,7 @@ ht-degree: 24%
       * TCF do IAB 2.0 {#iab}
          * [Visão geral](./governance-privacy-security/consent/iab/overview.md)
          * [Configurar um conjunto de dados para capturar dados de consentimento e preferência](./governance-privacy-security/consent/iab/dataset.md)
-      * [Integre o SDK da Web da Platform para processar dados de consentimento e preferência](./governance-privacy-security/consent/sdk.md)
+      * [Integre o Platform Web SDK para processar dados de consentimento e preferência](./governance-privacy-security/consent/sdk.md)
    * Logs de auditoria {#audit-logs}
       * [Visão geral](./governance-privacy-security/audit-logs/overview.md)
       * API de Consulta de Auditoria {#audit-api}
@@ -71,10 +71,12 @@ ht-degree: 24%
       * [Configurar um Cofre de Chaves do Azure](./governance-privacy-security/customer-managed-keys/azure-key-vault-config.md)
       * [Usar a API para configurar o CMK](./governance-privacy-security/customer-managed-keys/api-set-up.md)
       * [Use a interface do usuário para configurar o CMK](./governance-privacy-security/customer-managed-keys/ui-set-up.md)
+   * Serviço de Gerenciamento de Chaves {#key-management-service}
+      * [Serviço de Gerenciamento de Chaves](./governance-privacy-security/key-management-service/overview.md)
 * Uso de licença e medidas de proteção {#license}
    * [Práticas recomendadas de qualificação de licença de gerenciamento de dados](./license-usage-and-guardrails/data-management-best-practices.md)
    * [Painel de uso da licença](./license-usage-and-guardrails/license-usage-dashboard.md)
-   * [Volume de dados total](./license-usage-and-guardrails/total-data-volume.md)
+   * [Tamanho total de dados](./license-usage-and-guardrails/total-data-volume.md)
    * [medidas de proteção do Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/guardrails.html)
    * [medidas de proteção do Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/guardrails.html)
    * [medidas de proteção do Real-Time CDP](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/guardrails/overview.html)

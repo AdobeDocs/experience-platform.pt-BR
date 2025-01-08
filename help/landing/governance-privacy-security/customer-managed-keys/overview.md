@@ -4,9 +4,9 @@ description: Saiba como configurar suas próprias chaves de criptografia para da
 role: Developer
 feature: Privacy
 exl-id: cd33e6c2-8189-4b68-a99b-ec7fccdc9b91
-source-git-commit: c0eb5b5c3a1968cae2bc19b7669f70a97379239b
+source-git-commit: f2737355ca0652f434bd5f86acc65139f767e56f
 workflow-type: tm+mt
-source-wordcount: '752'
+source-wordcount: '828'
 ht-degree: 0%
 
 ---
@@ -14,6 +14,10 @@ ht-degree: 0%
 # Chaves gerenciadas pelo cliente no Adobe Experience Platform
 
 Os dados armazenados no Adobe Experience Platform são criptografados em repouso usando chaves de nível de sistema. Se você estiver usando um aplicativo criado sobre a Platform, poderá optar por usar suas próprias chaves de criptografia, fornecendo maior controle sobre a segurança dos dados.
+
+>[!AVAILABILITY]
+>
+>Se sua implementação do Experience Platform for executada no Amazon Web Services (AWS), você terá a opção de usar o Serviço de gerenciamento de chaves (KMS) para criptografia de dados da plataforma. O Experience Platform em execução no AWS está atualmente disponível para um número limitado de clientes. Para saber mais sobre a infraestrutura de Experience Platform compatível, consulte a [visão geral de várias nuvens do Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud). Para saber mais sobre a criação e o gerenciamento de chaves de criptografia no AWS KMS, consulte o [Guia de criptografia de dados do AWS KMS](../key-management-service/overview.md).
 
 >[!NOTE]
 >

@@ -4,14 +4,18 @@ solution: Experience Platform
 title: Visão geral do conector HTTP API Source
 description: Saiba como criar conectores de transmissão para se conectar ao Adobe Experience Platform usando APIs ou a interface do usuário.
 exl-id: 41e079f3-75b2-4033-8138-73162c31461a
-source-git-commit: 1127e85852b56cc9db3d1d0d483c1780c961b0bc
+source-git-commit: ee659ded9701132b12d5b93672b4c958e9720028
 workflow-type: tm+mt
-source-wordcount: '165'
+source-wordcount: '210'
 ht-degree: 0%
 
 ---
 
 # [!DNL HTTP API] conector
+
+>[!IMPORTANT]
+>
+>Agora você pode usar a origem [!DNL HTTP API] ao executar o Adobe Experience Platform no Amazon Web Services (AWS). O Experience Platform em execução no AWS está atualmente disponível para um número limitado de clientes. Para saber mais sobre a infraestrutura de Experience Platform compatível, consulte a [visão geral de várias nuvens do Experience Platform](../../../landing/multi-cloud.md).
 
 O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços do [!DNL Platform]. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
 

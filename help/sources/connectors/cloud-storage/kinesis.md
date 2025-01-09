@@ -3,10 +3,10 @@ title: Visão geral do Amazon Kinesis Source Connector
 description: Saiba como conectar o Amazon Kinesis ao Adobe Experience Platform usando APIs ou a interface do usuário.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: b71fc922-7722-4279-8fc6-e5d7735e1ebb
-source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
+source-git-commit: 84d09038ded1f35269ebf67c6bc1a5dacaafe4ac
 workflow-type: tm+mt
-source-wordcount: '486'
-ht-degree: 1%
+source-wordcount: '529'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +14,10 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->A origem [!DNL Amazon Kinesis] está disponível no catálogo de origens para usuários que compraram o Real-time Customer Data Platform Ultimate.
+>- A origem [!DNL Amazon Kinesis] está disponível no catálogo de origens para usuários que compraram o Real-Time CDP Ultimate.
+>
+>- Agora você pode usar a origem [!DNL Amazon Kinesis] ao executar o Adobe Experience Platform no Amazon Web Services (AWS). O Experience Platform em execução no AWS está atualmente disponível para um número limitado de clientes. Para saber mais sobre a infraestrutura de Experience Platform compatível, consulte a [visão geral de várias nuvens do Experience Platform](../../../landing/multi-cloud.md).
+
 
 O Adobe Experience Platform fornece conectividade nativa para provedores de nuvem, como AWS, [!DNL Google Cloud Platform] e [!DNL Azure]. Você pode trazer seus dados desses sistemas para o [!DNL Platform].
 

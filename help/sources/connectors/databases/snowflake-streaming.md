@@ -4,9 +4,9 @@ description: Saiba como criar uma conexão de origem e um fluxo de dados para as
 badgeUltimate: label="Ultimate" type="Positive"
 last-substantial-update: 2023-09-24T00:00:00Z
 exl-id: ed937689-e844-487e-85fb-e3536c851fe5
-source-git-commit: 34b1676ebb5405d73cf37cd786d1e6c26cb8fdaa
+source-git-commit: 84d09038ded1f35269ebf67c6bc1a5dacaafe4ac
 workflow-type: tm+mt
-source-wordcount: '772'
+source-wordcount: '816'
 ht-degree: 1%
 
 ---
@@ -15,7 +15,10 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
-> A fonte de transmissão [!DNL Snowflake] está disponível na API para usuários que compraram o Real-time Customer Data Platform Ultimate.
+>* A fonte de transmissão [!DNL Snowflake] está disponível na API para usuários que compraram o Real-Time CDP Ultimate.
+>
+>* Agora você pode usar a fonte de streaming [!DNL Snowflake] ao executar o Adobe Experience Platform no Amazon Web Services (AWS). O Experience Platform em execução no AWS está atualmente disponível para um número limitado de clientes. Para saber mais sobre a infraestrutura de Experience Platform compatível, consulte a [visão geral de várias nuvens do Experience Platform](../../../landing/multi-cloud.md).
+
 
 O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
 

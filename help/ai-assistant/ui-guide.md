@@ -2,9 +2,9 @@
 title: Assistente de IA no Adobe Experience Platform
 description: Saiba como usar o Assistente de IA para navegar e entender os conceitos de Experience Platform e Real-time Customer Data Platform, e as informações de uso sobre seus objetos.
 exl-id: 3fed2b1d-75fc-47ce-98d1-a811eb8a1d8e
-source-git-commit: 6f95cae48b0f4c304eb3dbd2d95e01e00e0f01c9
+source-git-commit: 0ee9135b2b303f4abcc4d5e5c7345e2bff9332f3
 workflow-type: tm+mt
-source-wordcount: '1505'
+source-wordcount: '1759'
 ht-degree: 0%
 
 ---
@@ -75,10 +75,6 @@ O Assistente de IA atualiza a interface e fornece links para a documentação qu
 
 ![Um menu suspenso das citações que o Assistente de IA fornece para perguntas conceituais.](./images/citations.png)
 
-Você também pode usar as sugestões que o Assistente de IA fornece em **[!UICONTROL Sugestões relacionadas]** para explorar mais os tópicos relacionados à sua pergunta original.
-
-![Uma lista de sugestões fornecidas pelo Assistente de IA.](./images/related-suggestions.png)
-
 +++
 
 ### Insights operacionais {#operational-insights}
@@ -127,9 +123,9 @@ Quando consultado sobre uma pergunta de insights operacionais, o Assistente de I
 
 +++
 
-### Usar preenchimento automático {#use-auto-complete}
+### Usar preenchimento automático de entidade {#use-entity-auto-complete}
 
-Você pode usar a função de preenchimento automático para receber uma lista de objetos de dados que existem na sandbox. As recomendações de preenchimento automático estão disponíveis para os seguintes domínios: públicos-alvo, esquemas, conjuntos de dados, fontes e destinos.
+Você pode usar a função de preenchimento automático para receber uma lista de objetos de dados que existem na sandbox. As recomendações de preenchimento automático estão disponíveis para os seguintes domínios: públicos-alvo, esquemas, conjuntos de dados, jornadas, fontes e destinos.
 
 +++Selecione para exibir um exemplo de preenchimento automático
 
@@ -176,6 +172,44 @@ Para exibir a capacidade de descoberta, selecione o ícone de lâmpada no cabeç
 Em seguida, selecione uma categoria e, em seguida, selecione um prompt na lista fornecida. Você pode usar esse recurso para ter uma ideia melhor dos tipos de perguntas que o Assistente de IA pode responder. Você também pode atualizar os prompts pré-existentes com detalhes específicos que pertencem à sua sandbox usando texto livre ou [preenchimento automático](#use-auto-complete).
 
 ![O Assistente de IA solicita na descoberta.](./images/prompt.png)
+
++++
+
+### Usar preenchimento automático de perguntas {#use-question-autocomplete}
+
+Você pode usar o recurso de preenchimento automático de perguntas do Assistente do AI para selecionar uma pergunta em uma lista de recomendações do Assistente do AI.
+
++++Selecione para exibir o exemplo de preenchimento automático de perguntas
+
+Para exibir o painel de perguntas sugeridas, digite pelo menos sete (7) caracteres na caixa de entrada. Em seguida, selecione a pergunta que é relevante para você no menu exibido.
+
+![O painel pop-up com perguntas sugeridas do Assistente de IA.](./images/suggested_questions.png)
+
+Talvez seja necessário atualizar espaços reservados em algumas instâncias em que uma pergunta sugerida envolve insights operacionais. Por exemplo, talvez seja necessário adicionar o nome específico de um conjunto de dados ou um público-alvo se a sugestão do Assistente de IA incluir espaços reservados.
+
+![Uma sugestão do Assistente de IA que inclui espaços reservados.](./images/placeholder.png)
+
+Os espaços reservados são realçados em azul. Selecione o espaço reservado para começar a atualizar seu valor. Para obter melhores resultados em espaços reservados numéricos, certifique-se de usar dígitos em vez de texto. Você também pode usar o recurso de preenchimento automático de entidade para atualizar os valores de espaço reservado. Não é possível enviar uma pergunta que tenha espaços reservados não preenchidos.
+
+**OBSERVAÇÃO**: as sugestões estão habilitadas por padrão. Selecione o botão **[!UICONTROL Sugerir ideias]** para desabilitar o recurso.
+
+![Uma sugestão do Assistente de IA com espaços reservados atualizados.](./images/updated_placeholder.png)
+
++++
+
+### Usar sugestões relacionadas {#use-related-suggestions}
+
+Você pode usar a seção sugestões relacionadas de cada resposta do Assistente de IA para continuar sua conversa.
+
++++Selecione para exibir o exemplo de sugestões relacionadas
+
+Sugestões relacionadas são retornadas com cada resposta do Assistente de IA. Para continuar a conversa, selecione qualquer uma das sugestões na seção de sugestões relacionada.
+
+![Uma lista de sugestões relacionadas do Assistente de IA.](./images/related_suggestions.png)
+
+Semelhante ao preenchimento automático dos espaços reservados em questão, será necessário atualizar os espaços reservados incluídos nas sugestões relacionadas antes de enviar a consulta.
+
+![Uma consulta de sugestões relacionadas com os espaços reservados foi atualizada.](./images/related_suggestions_placeholder.png)
 
 +++
 

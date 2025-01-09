@@ -3,9 +3,9 @@ keywords: conexão linkedin;conexão linkedin;destinos linkedin;linkedin;
 title: Conexão de públicos correspondentes do Linkedin
 description: Ative perfis para suas campanhas do LinkedIn para direcionamento de público, personalização e supressão, com base em emails com hash.
 exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
-source-git-commit: 74d7c48042b0d2b938705b588c185f3c3f96f1cd
+source-git-commit: 4f82aab78e74cb7cdd76b603a1e182fbd7fe627c
 workflow-type: tm+mt
-source-wordcount: '1095'
+source-wordcount: '1201'
 ht-degree: 4%
 
 ---
@@ -118,6 +118,22 @@ O vídeo abaixo também demonstra as etapas para configurar um destino do [!DNL 
 2. Selecione **[!UICONTROL Conectar ao destino]**.
    ![Autenticar no LinkedIn](/help/destinations/assets/catalog/social/linkedin/authenticate-linkedin-destination.png)
 3. Insira suas credenciais do LinkedIn e selecione **Fazer logon**.
+
+### Atualizar credenciais de autenticação {#refresh-authentication-credentials}
+
+Os tokens do linkedIn expiram a cada 60 dias. Quando o token expira, as exportações de dados para o destino param de funcionar. Para evitar essa situação, autentique novamente executando as seguintes etapas:
+
+1. Navegue até **[!UICONTROL Destinos]** > **[!UICONTROL Contas]**
+2. (Opcional) Use os filtros disponíveis na página para exibir somente contas do LinkedIn.
+   ![Filtrar para mostrar apenas contas do LinkedIn](/help/destinations/assets/catalog/social/linkedin/refresh-oauth-filters.png)
+3. Selecione a conta que deseja atualizar, selecione as reticências e selecione **[!UICONTROL Editar detalhes]**.
+   ![Selecionar controle de detalhes de Edição](/help/destinations/assets/catalog/social/linkedin/refresh-oauth-edit-details.png)
+4. Na janela modal, selecione **[!UICONTROL Reconectar OAuth]** e autenticar novamente com suas credenciais do LinkedIn.
+   ![Janela modal com opção Reconectar OAuth](/help/destinations/assets/catalog/social/linkedin/reconnect-oauth-control.png)
+
+>[!SUCCESS]
+> 
+>Suas credenciais de autenticação são atualizadas e o tempo de expiração é redefinido para 60 dias.
 
 ### Preencher detalhes do destino {#destination-details}
 

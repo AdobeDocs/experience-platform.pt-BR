@@ -2,10 +2,10 @@
 title: Conexão com a Lista de clientes do pinterest
 description: Crie públicos-alvo com base em suas listas de clientes, pessoas que visitaram seu site ou pessoas que já interagiram com seu conteúdo no Pinterest.
 exl-id: e601f75f-0d40-4cd0-93ca-54d7439f1db7
-source-git-commit: 8a48ce4185f8044b8563d0435dcec17030b90830
+source-git-commit: 83e2c014e62509fee2843505d7975cde368665ef
 workflow-type: tm+mt
-source-wordcount: '722'
-ht-degree: 4%
+source-wordcount: '828'
+ht-degree: 3%
 
 ---
 
@@ -72,6 +72,22 @@ Ao [configurar](../../ui/connect-destination.md) este destino, você deve fornec
 * **[!UICONTROL Nome]**: um nome pelo qual você reconhecerá este destino no futuro.
 * **[!UICONTROL Descrição]**: uma descrição que ajudará você a identificar este destino no futuro.
 * **[!UICONTROL ID da conta do anúncio]**: sua ID de anunciante do Pinterest.
+
+### Atualizar credenciais de autenticação {#refresh-authentication-credentials}
+
+Os tokens do pinterest expiram a cada 30 dias. Quando o token expira, as exportações de dados para o destino param de funcionar. Para evitar essa situação, autentique novamente executando as seguintes etapas:
+
+1. Navegue até **[!UICONTROL Destinos]** > **[!UICONTROL Contas]**
+2. (Opcional) Use os filtros disponíveis na página para exibir somente contas do Pinterest.
+   ![Filtrar para mostrar apenas contas do Pinterest](/help/destinations/assets/catalog/advertising/pinterest-customer-list/refresh-oauth-filters.png)
+3. Selecione a conta que deseja atualizar, selecione as reticências e selecione **[!UICONTROL Editar detalhes]**.
+   ![Selecionar controle de detalhes de Edição](/help/destinations/assets/catalog/advertising/pinterest-customer-list/refresh-oauth-edit-details.png)
+4. Na janela modal, selecione **[!UICONTROL Reconectar OAuth]** e autenticar novamente com suas credenciais do Pinterest.
+   ![Janela modal com opção Reconectar OAuth](/help/destinations/assets/catalog/advertising/pinterest-customer-list/reconnect-oauth-control.png)
+
+>[!SUCCESS]
+> 
+>Suas credenciais de autenticação são atualizadas e o tempo de expiração é redefinido para 30 dias.
 
 ### Ativar alertas {#enable-alerts}
 

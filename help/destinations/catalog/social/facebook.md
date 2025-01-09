@@ -3,10 +3,10 @@ keywords: conexão facebook;conexão facebook;destinos do facebook;facebook;inst
 title: Conexão com o facebook
 description: Ative perfis para suas campanhas do Facebook para direcionamento de público, personalização e supressão com base em emails com hash.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 742801c31a0371feb42df2c98b3a4ddb63ae2f48
+source-git-commit: 83e2c014e62509fee2843505d7975cde368665ef
 workflow-type: tm+mt
-source-wordcount: '1985'
-ht-degree: 7%
+source-wordcount: '2091'
+ht-degree: 6%
 
 ---
 
@@ -151,6 +151,22 @@ O vídeo abaixo também demonstra as etapas para configurar um destino do [!DNL 
 2. Selecione **[!UICONTROL Conectar ao destino]**.
    ![Etapa Autenticar para o Facebook mostrada no fluxo de trabalho de ativação.](/help/destinations/assets/catalog/social/facebook/authenticate-facebook-destination.png)
 3. Insira suas credenciais do Facebook e selecione **Fazer logon**.
+
+### Atualizar credenciais de autenticação {#refresh-authentication-credentials}
+
+Os tokens do facebook expiram a cada 60 dias. Quando o token expira, as exportações de dados para o destino param de funcionar. Para evitar essa situação, autentique novamente executando as seguintes etapas:
+
+1. Navegue até **[!UICONTROL Destinos]** > **[!UICONTROL Contas]**
+2. (Opcional) Use os filtros disponíveis na página para exibir somente contas do Facebook.
+   ![Filtrar para mostrar apenas contas do Facebook](/help/destinations/assets/catalog/social/facebook/refresh-oauth-filters.png)
+3. Selecione a conta que deseja atualizar, selecione as reticências e selecione **[!UICONTROL Editar detalhes]**.
+   ![Selecionar controle de detalhes de Edição](/help/destinations/assets/catalog/social/facebook/refresh-oauth-edit-details.png)
+4. Na janela modal, selecione **[!UICONTROL Reconectar OAuth]** e autenticar novamente com suas credenciais do Facebook.
+   ![Janela modal com opção Reconectar OAuth](/help/destinations/assets/catalog/social/facebook/reconnect-oauth-control.png)
+
+>[!SUCCESS]
+> 
+>Suas credenciais de autenticação são atualizadas e o tempo de expiração é redefinido para 60 dias.
 
 ### Preencher detalhes do destino {#destination-details}
 

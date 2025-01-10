@@ -3,9 +3,9 @@ title: Destino da Data Landing Zone
 description: Saiba como se conectar à Data Landing Zone para ativar públicos e exportar conjuntos de dados.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
-source-git-commit: cc7c8c14fe5ee4bb9001cae84d28a385a3b4b448
+source-git-commit: 5f932f3de2b875d77904582dfb320e0b6ce17afd
 workflow-type: tm+mt
-source-wordcount: '1956'
+source-wordcount: '1968'
 ht-degree: 2%
 
 ---
@@ -23,9 +23,9 @@ ht-degree: 2%
 
 A Platform impõe um TTL (time-to-live) rigoroso de sete dias em todos os arquivos carregados em um contêiner [!DNL Data Landing Zone]. Todos os arquivos são excluídos após sete dias.
 
-O conector de destino [!DNL Data Landing Zone] está disponível para clientes que usam o suporte na nuvem do Azure ou do Amazon Web Service. O mecanismo de autenticação é diferente com base na nuvem em que o destino é provisionado, tudo sobre o destino e seus casos de uso são os mesmos. Leia mais sobre os dois mecanismos de autenticação diferentes nas seções [Autenticar na Zona de Aterrissagem de Dados provisionada no Blob do Azure] e [Autenticar na Zona de Aterrissagem de Dados provisionada pela AWS](#authenticate-dlz-aws).
+O conector de destino [!DNL Data Landing Zone] está disponível para clientes que usam o suporte na nuvem do Azure ou do Amazon Web Service. O mecanismo de autenticação é diferente com base na nuvem em que o destino é provisionado, tudo sobre o destino e seus casos de uso são os mesmos. Leia mais sobre os dois mecanismos de autenticação diferentes nas seções [Autenticar na Zona de Aterrissagem de Dados provisionada no Blob do Azure](#authenticate-dlz-azure) e [Autenticar na Zona de Aterrissagem de Dados provisionada pela AWS](#authenticate-dlz-aws).
 
-![Diagrama que mostra como a implementação do destino da Zona de Aterrissagem de Dados é diferente com base no suporte de nuvem.](/help/destinations/assets/catalog/cloud-storage/data-landing-zone/dlz-workflow-based-on-cloud-implementation.png)
+![Diagrama que mostra como a implementação do destino da Zona de Aterrissagem de Dados é diferente com base no suporte da nuvem.](/help/destinations/assets/catalog/cloud-storage/data-landing-zone/dlz-workflow-based-on-cloud-implementation.png "Implementação de destino da Zona de Aterrissagem de Dados pelo suporte à nuvem"){zoomable="yes"}
 
 ## Conecte-se ao armazenamento da [!UICONTROL Zona de Aterrissagem de Dados] por meio da API ou da interface {#connect-api-or-ui}
 
@@ -77,7 +77,7 @@ Você pode ler e gravar arquivos no seu contêiner por meio do [!DNL Azure Stora
 
 O [!DNL Data Landing Zone] oferece suporte à autenticação baseada em SAS e seus dados estão protegidos com mecanismos de segurança de armazenamento [!DNL Azure Blob] padrão em repouso e em trânsito. SAS significa [assinatura de acesso compartilhado](https://learn.microsoft.com/en-us/azure/ai-services/translator/document-translation/how-to-guides/create-sas-tokens?tabs=Containers).
 
-A autenticação baseada em SAS permite que você acesse com segurança o contêiner do [!DNL Data Landing Zone] por meio de uma conexão pública com a Internet. Não há alterações de rede necessárias para você acessar o contêiner [!DNL Data Landing Zone], o que significa que você não precisa definir nenhuma configuração de lista de permissões ou entre regiões para sua rede.
+Para proteger seus dados em uma conexão pública com a Internet, use a autenticação baseada em SAS para acessar com segurança o contêiner [!DNL Data Landing Zone]. Não há alterações de rede necessárias para você acessar o contêiner [!DNL Data Landing Zone], o que significa que você não precisa definir nenhuma configuração de lista de permissões ou entre regiões para sua rede.
 
 ### Conectar seu contêiner do [!DNL Data Landing Zone] a [!DNL Azure Storage Explorer]
 
@@ -212,7 +212,7 @@ Com o contêiner [!DNL Data Landing Zone] conectado ao [!DNL Azure Storage Explo
 >
 >Esta seção se aplica às implementações do Experience Platform executadas no Amazon Web Services (AWS). O Experience Platform em execução no AWS está atualmente disponível para um número limitado de clientes. Para saber mais sobre a infraestrutura de Experience Platform compatível, consulte a [visão geral de várias nuvens do Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud).
 
-Execute as operações abaixo para obter credenciais para sua instância da Data Landing Zone provisionada no AWS. Em seguida, use um cliente preferido para se conectar à instância da Data Landing Zone.
+Execute as operações abaixo para obter credenciais para sua instância do [!DNL Data Landing Zone] provisionada no AWS. Em seguida, use um cliente de sua escolha para se conectar à sua instância do [!DNL Data Landing Zone].
 
 >[!BEGINSHADEBOX]
 
@@ -228,7 +228,7 @@ GET /data/foundation/connectors/landingzone/credentials?type=dlz_destination'
 
 | Parâmetros de consulta | Descrição |
 | --- | --- |
-| `dlz_destination` | O tipo `dlz_destination` permite que a API diferencie um contêiner de destino de zona de aterrissagem dos outros tipos de contêineres disponíveis para você. |
+| `dlz_destination` | Adicione o parâmetro de consulta `dlz_destination` para especificar que você deseja que o tipo de credenciais de contêiner [!DNL Data Landing Zone] *destino* seja recuperado. Para conectar e recuperar credenciais de uma *fonte* da Zona de Aterrissagem de Dados, exiba a [documentação de fontes](/help/sources/connectors/cloud-storage/data-landing-zone.md). |
 
 {style="table-layout:auto"}
 
@@ -270,7 +270,7 @@ A resposta a seguir retorna as informações de credencial da sua zona de aterri
 | `credentials` | Esse objeto inclui o `awsAccessKeyId`, `awsSecretAccessKey` e `awsSessionToken` que o Experience Platform usa para exportar arquivos para o local da Zona de Aterrissagem de Dados provisionada. |
 | `dlzPath` | Esse objeto inclui o caminho no local do AWS provisionado por Adobe onde os arquivos exportados são depositados. |
 | `dlzProvider` | Indica que esta é uma Zona de aterrissagem de dados provisionada pelo Amazon S3. |
-| `expiryTime` | Indica quando as credenciais no objeto acima expirarão. Você pode atualizá-los fazendo a chamada novamente. |
+| `expiryTime` | Indica quando as credenciais no objeto `credentials` irão expirar. Para atualizar as credenciais, execute a solicitação novamente. |
 
 {style="table-layout:auto"}
 

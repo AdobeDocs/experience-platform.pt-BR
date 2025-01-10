@@ -1,16 +1,16 @@
 ---
-title: Usar campos calculados para exportar matrizes como strings
+title: Exportar objetos de matriz do Real-Time CDP para destinos de armazenamento na nuvem
 type: Tutorial
 description: Saiba como usar campos calculados para exportar matrizes do Real-Time CDP para destinos de armazenamento em nuvem como cadeias de caracteres.
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: 9b64e39d25ad94aa834c8e207396b37c2a121243
+source-git-commit: a99fc58b8296b2b9ce6e30d14857529570cd3e8a
 workflow-type: tm+mt
-source-wordcount: '1556'
-ht-degree: 7%
+source-wordcount: '1622'
+ht-degree: 5%
 
 ---
 
-# Usar campos calculados para exportar matrizes como strings{#use-calculated-fields-to-export-arrays-as-strings}
+# Exportar objetos de matriz do Real-Time CDP para destinos de armazenamento na nuvem {#export-arrays-cloud-storage}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_flat_files"
@@ -21,22 +21,16 @@ ht-degree: 7%
 
 >[!AVAILABILITY]
 >
->A funcionalidade para exportar matrizes por meio de campos calculados está geralmente disponível.
+>A funcionalidade para exportar matrizes para destinos de armazenamento em nuvem está geralmente disponível.
 
-Saiba como exportar matrizes por meio de campos calculados do Real-Time CDP para [destinos de armazenamento na nuvem](/help/destinations/catalog/cloud-storage/overview.md) como cadeias de caracteres. Leia este documento para entender os casos de uso ativados por essa funcionalidade.
+Saiba como exportar matrizes do Real-Time CDP para [destinos de armazenamento na nuvem](/help/destinations/catalog/cloud-storage/overview.md). Leia este documento para entender o fluxo de trabalho de exportação, os casos de uso ativados por essa funcionalidade e as limitações conhecidas.
 
-Obtenha informações abrangentes sobre campos calculados - o que são e por que são importantes. Leia as páginas vinculadas abaixo para obter uma introdução aos campos calculados no Preparo de dados e mais informações sobre todas as funções disponíveis:
+Matrizes devem ser exportadas atualmente como cadeias de caracteres, usando a função `array_to_string`.
+
+Para exportar matrizes, você deve usar a funcionalidade de campos calculados na etapa de mapeamento do fluxo de trabalho de exportação, *a menos que você esteja [exportando elementos individuais de uma matriz](#index-based-array-access)*. Para obter informações detalhadas sobre campos calculados, visite as páginas vinculadas abaixo. Isso inclui uma introdução aos campos calculados no Preparo de dados e mais informações sobre todas as funções disponíveis:
 
 * [Guia e visão geral da interface](/help/data-prep/ui/mapping.md#calculated-fields)
 * [Funções de Preparo de dados](/help/data-prep/functions.md)
-
-<!--
-
->[!IMPORTANT]
->
->Not all functions listed above are supported *when exporting fields to cloud storage destinations* using the calculated fields functionality. See the [supported functions section](#supported-functions) further below for more information.
-
--->
 
 ## Matrizes e outros tipos de objetos na Platform {#arrays-strings-other-objects}
 
@@ -259,6 +253,10 @@ johndoe@acme.org,"5"
 ```
 
 ### Acesso ao array baseado em índice {#index-based-array-access}
+
+>[!IMPORTANT]
+>
+>Diferentemente das outras funções descritas nesta página, para exportar elementos individuais de uma matriz, você *não precisa* usar o controle **[!UICONTROL Campos calculados]** na interface.
 
 Você pode acessar um índice de uma matriz para exportar um único item da matriz. Por exemplo, semelhante ao exemplo acima para a função `size_of`, se você quiser acessar e exportar apenas a primeira vez que um cliente tiver comprado um determinado produto, você poderá usar `purchaseTime[0]` para exportar o primeiro elemento do carimbo de data e hora, `purchaseTime[1]` para exportar o segundo elemento do carimbo de data e hora, `purchaseTime[2]` para exportar o terceiro elemento do carimbo de data e hora e assim por diante.
 

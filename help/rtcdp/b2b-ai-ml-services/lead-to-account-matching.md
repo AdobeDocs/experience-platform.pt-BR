@@ -3,11 +3,11 @@ title: Lead para correspondência de contas no Real-Time CDP B2B
 type: Documentation
 description: Uma visão geral e mais informações sobre o lead para o recurso de correspondência de contas no Experience Platform CDP B2B.
 feature: Get Started, Profiles, B2B
-badgeB2B: label="Edição B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 2f853599-6bca-4ba6-bbba-131a49d8854e
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 4ba609e777716b1b38f5b143587e5476d851e344
 workflow-type: tm+mt
-source-wordcount: '605'
+source-wordcount: '408'
 ht-degree: 3%
 
 ---
@@ -24,7 +24,7 @@ O marketing baseado em conta é uma estratégia cada vez mais importante para o 
 - Menos desperdício de recursos
 - Um ciclo de vendas mais curto
 
-O marketing baseado em conta oferece a capacidade de vincular pessoas conhecidas e visitantes anônimos da Web a contas de vendas. Isso permite que as equipes de marketing se envolvam com possíveis leads das contas do target no início da jornada do cliente para aumentar suas chances de conversão. Um registro de pessoa conhecida normalmente inclui parte ou todas as seguintes informações:
+O marketing baseado em conta oferece a capacidade de vincular clientes conhecidos a contas de vendas. Isso permite que as equipes de marketing se envolvam com possíveis leads das contas do target no início da jornada do cliente para aumentar suas chances de conversão. Um registro de pessoa conhecida normalmente inclui parte ou todas as seguintes informações:
 
 - Nome da pessoa
 - Endereço de email
@@ -33,30 +33,6 @@ O marketing baseado em conta oferece a capacidade de vincular pessoas conhecidas
 - Site da empresa
 - Cargo
 - Localização
-
-A correspondência entre lead e conta permite que você associe perfis de pessoas conhecidos a perfis de conta. Em seguida, você pode segmentar e direcionar dados em um contexto B2B, como contas, oportunidades e assim por diante. Os perfis de pessoa podem ser classificados nas três categorias a seguir:
-
-- **Perfil de pessoa de conta:** O perfil de pessoa já está associado a pelo menos um perfil de conta através da relação de uma fonte de dados. Isso implica que há pelo menos um fragmento de contato.
-
->[!NOTE]
->
-> Os perfis de conta pessoal não são correspondidos ao executar trabalhos de correspondência de leads em contas.
-
-- **Perfil de pessoa conhecido:** o perfil de pessoa NÃO está associado a nenhum perfil de conta, e pelo menos um dos seguintes atributos de perfil de pessoa tem um valor:
-
-   - Endereço de email
-   - Nome da empresa
-   - Site da empresa
-
-- **Perfil de pessoa anônimo:** o perfil de pessoa NÃO está associado a nenhum perfil de conta, e nenhum dos seguintes atributos de perfil de pessoa tem um valor:
-
-   - Endereço de email
-   - Nome da empresa
-   - Site da empresa
-
->[!NOTE]
->
-> Um perfil de pessoa pode estar relacionado a vários perfis de conta. No entanto, o processo de lead para correspondência de contas só corresponderá à melhor correspondência. Se um conjunto mais amplo de correspondências for necessário, associe o lead à correspondência de contas com o recurso de contas relacionadas.
 
 ## Como funciona {#how-it-works}
 

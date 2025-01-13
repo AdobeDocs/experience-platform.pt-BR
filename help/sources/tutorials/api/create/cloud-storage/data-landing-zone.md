@@ -1,13 +1,10 @@
 ---
-keywords: Experience Platform;página inicial;tópicos populares;
-solution: Experience Platform
 title: Conectar a zona de aterrissagem de dados à Adobe Experience Platform usando a API do serviço de fluxo
-type: Tutorial
 description: Saiba como conectar o Adobe Experience Platform à Data Landing Zone usando a API do serviço de fluxo.
 exl-id: bdb60ed3-7c63-4a69-975a-c6f1508f319e
-source-git-commit: 521bfd29405d30c0e35c4095b1ba2bf29f840e8a
+source-git-commit: 527e62e5fb90bc32ef3788f261e0a24b680f29c0
 workflow-type: tm+mt
-source-wordcount: '1326'
+source-wordcount: '1375'
 ht-degree: 4%
 
 ---
@@ -29,9 +26,9 @@ Este guia requer entendimento prático dos seguintes componentes do Experience P
 * [Fontes](../../../../home.md): o Experience Platform permite que os dados sejam assimilados de várias fontes e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma.
 * [Sandboxes](../../../../../sandboxes/home.md): o Experience Platform fornece sandboxes virtuais que particionam uma única instância da Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
-As seções a seguir fornecem informações adicionais que você precisará saber para criar com êxito uma conexão de origem do [!DNL Data Landing Zone] usando a API [!DNL Flow Service].
-
 Este tutorial também requer que você leia o guia sobre [introdução às APIs da plataforma](../../../../../landing/api-guide.md) para saber como autenticar nas APIs da plataforma e interpretar as chamadas de exemplo fornecidas na documentação.
+
+As seções a seguir fornecem informações adicionais que você precisará saber para criar com êxito uma conexão de origem do [!DNL Data Landing Zone] usando a API [!DNL Flow Service].
 
 ## Recuperar uma zona de destino utilizável
 
@@ -63,7 +60,11 @@ curl -X GET \
 
 **Resposta**
 
-A resposta a seguir retorna informações sobre uma zona de aterrissagem, incluindo seus `containerName` e `containerTTL` correspondentes.
+Dependendo do seu provedor, uma solicitação bem-sucedida retorna o seguinte:
+
+>[!BEGINTABS]
+
+>[!TAB Resposta no Azure]
 
 ```json
 {
@@ -76,6 +77,26 @@ A resposta a seguir retorna informações sobre uma zona de aterrissagem, inclui
 | --- | --- |
 | `containerName` | O nome da zona de aterrissagem recuperada. |
 | `containerTTL` | O tempo de expiração (em dias) aplicado aos seus dados na zona de aterrissagem. Qualquer item em uma determinada zona de aterrissagem é excluído após sete dias. |
+
+
+>[!TAB Resposta no AWS]
+
+```json
+{
+  "dlzPath": {
+    "bucketName": "dlz-prod-sandboxName",
+    "dlzFolder": "dlz-adf-connectors"
+  },
+  "dataTTL": {
+    "timeUnit": "days",
+    "timeQuantity": 7
+  },
+  "dlzProvider": "Amazon S3"
+}
+```
+
+>[!ENDTABS]
+
 
 ## Recuperar credenciais de [!DNL Data Landing Zone]
 
@@ -103,7 +124,11 @@ curl -X GET \
 
 **Resposta**
 
-A resposta a seguir retorna as informações de credencial da sua zona de aterrissagem de dados, incluindo sua `SASToken`, `SASUri`, `storageAccountName` e data de expiração atuais.
+Dependendo do seu provedor, uma solicitação bem-sucedida retorna o seguinte:
+
+>[!BEGINTABS]
+
+>[!TAB Resposta no Azure]
 
 ```json
 {
@@ -117,10 +142,43 @@ A resposta a seguir retorna as informações de credencial da sua zona de aterri
 
 | Propriedade | Descrição |
 | --- | --- |
-| `containerName` | O nome da sua zona de destino. |
-| `SASToken` | O token de assinatura de acesso compartilhado para sua zona de aterrissagem. Esta cadeia de caracteres contém todas as informações necessárias para autorizar uma solicitação. |
-| `SASUri` | O URI de assinatura de acesso compartilhado para sua zona de aterrissagem. Essa string é uma combinação do URI para a zona de aterrissagem para a qual você está sendo autenticado e seu token SAS correspondente, |
-| `expiryDate` | A data em que o token SAS expirará. Você deve atualizar o token antes da data de expiração para continuar usando-o no aplicativo para carregar dados na Data Landing Zone. Se você não atualizar manualmente o token antes da data de expiração declarada, ele será atualizado automaticamente e fornecerá um novo token quando a chamada de credenciais do GET for executada. |
+| `containerName` | O nome de seu [!DNL Data Landing Zone]. |
+| `SASToken` | O token de assinatura de acesso compartilhado para o seu [!DNL Data Landing Zone]. Esta cadeia de caracteres contém todas as informações necessárias para autorizar uma solicitação. |
+| `storageAccountName` | O nome da sua conta de armazenamento. |
+| `SASUri` | O URI de assinatura de acesso compartilhado para o seu [!DNL Data Landing Zone]. Esta cadeia de caracteres é uma combinação do URI para o [!DNL Data Landing Zone] para o qual você está sendo autenticado e seu token SAS correspondente. |
+| `expiryDate` | A data em que o token SAS expirará. Você deve atualizar seu token antes da data de expiração para continuar usando-o em seu aplicativo para carregar dados para o [!DNL Data Landing Zone]. Se você não atualizar manualmente o token antes da data de expiração declarada, ele será atualizado automaticamente e fornecerá um novo token quando a chamada de credenciais do GET for executada. |
+
+>[!TAB Resposta no AWS]
+
+```json
+{
+  "credentials": {
+    "clientId": "example-client-id",
+    "awsAccessKeyId": "example-access-key-id",
+    "awsSecretAccessKey": "example-secret-access-key",
+    "awsSessionToken": "example-session-token"
+  },
+  "dlzPath": {
+    "bucketName": "dlz-prod-sandboxName",
+    "dlzFolder": "user_drop_zone"
+  },
+  "dlzProvider": "Amazon S3",
+  "expiryTime": 1735689599
+}
+```
+
+| Propriedade | Descrição |
+| --- | --- |
+| `credentials.clientId` | A ID do cliente do seu [!DNL Data Landing Zone] no AWS. |
+| `credentials.awsAccessKeyId` | A ID da chave de acesso do [!DNL Data Landing Zone] no AWS. |
+| `credentials.awsSecretAccessKey` | A chave de acesso secreta de seu [!DNL Data Landing Zone] no AWS. |
+| `credentials.awsSessionToken` | Seu token de sessão do AWS. |
+| `dlzPath.bucketName` | O nome do seu bucket do AWS. |
+| `dlzPath.dlzFolder` | A pasta [!DNL Data Landing Zone] que você está acessando. |
+| `dlzProvider` | O provedor [!DNL Data Landing Zone] que você está usando. Para o Amazon, será [!DNL Amazon S3]. |
+| `expiryTime` | A hora de expiração em unix time. |
+
+>[!ENDTABS]
 
 ### Recuperar os campos obrigatórios usando APIs
 

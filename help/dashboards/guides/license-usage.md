@@ -4,9 +4,9 @@ title: Painel de Uso da Licença
 description: A Adobe Experience Platform fornece um painel por meio do qual você pode visualizar informações importantes sobre o uso de licença da sua organização.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 5d40af5c0645e9e4ee44f0c0c2133f3b3153bcb1
+source-git-commit: 7605ccef8553fc775ea5496c73971f92ed4c06ab
 workflow-type: tm+mt
-source-wordcount: '2908'
+source-wordcount: '2947'
 ht-degree: 17%
 
 ---
@@ -46,6 +46,14 @@ ht-degree: 17%
 >id="platform_dashboards_licenseusage_predictedusage_computehours"
 >title="Horas de computação previstas"
 >abstract="Seu uso pode atingir a quantidade licenciada. Para avaliar ou reduzir as horas de computação, navegue até Consultas > Log para revisar o histórico de consultas. Se você não tiver permissão para acessar o espaço de trabalho Consultas, entre em contato com a administração."
+>additional-url="https://experience.adobe.com/#/platform/query/log" text="Espaço de trabalho do Log de Consultas"
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseusage_predictedusage_addressableaudience"
+>title="Público endereçável previsto"
+>abstract="Seu uso pode atingir a quantidade licenciada. Para reduzir o uso, defina expirações de conjuntos de dados ou dados de perfis pseudônimos para sandboxes e conjuntos de dados."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/event-expirations" text="Expirações do evento de experiência"
+>additional-url="https://experienceleague.adobe.com/pt-br/docs/experience-platform/profile/pseudonymous-profiles" text="Expiração de dados de perfis pseudônimos"
 
 Você pode exibir informações importantes sobre o uso de licenças da sua organização no painel [!UICONTROL Uso de licenças] do Adobe Experience Platform. As informações exibidas aqui são capturadas durante um instantâneo diário da sua instância da Platform.
 

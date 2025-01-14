@@ -5,9 +5,9 @@ product: experience platform
 type: Documentation
 description: Saiba mais sobre o desempenho e as medidas de proteção aplicadas pelo sistema para segmentação e dados de perfil para garantir o uso ideal da funcionalidade da Real-Time CDP.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 6962bb0ba4968ed4860e95819ac2e949bf744d79
+source-git-commit: 22daff3f422cd4ec5bbf5c77583e24dac6c53c76
 workflow-type: tm+mt
-source-wordcount: '2461'
+source-wordcount: '2472'
 ht-degree: 2%
 
 ---
@@ -67,7 +67,7 @@ As medidas de proteção a seguir fornecem limites recomendados ao modelar dados
 | Profundidade JSON para o campo de ID usado no relacionamento de várias entidades | 4 | Proteção de desempenho | A profundidade máxima de JSON recomendada para um campo de ID usado em relacionamentos de várias entidades é 4. Isso significa que, em um esquema altamente aninhado, os campos aninhados com mais de 4 níveis de profundidade não devem ser usados como um campo de ID em uma relação. |
 | Cardinalidade de matriz em um fragmento de perfil | &lt;=500 | Proteção de desempenho | A cardinalidade de matriz ideal em um fragmento de perfil (dados independentes do tempo) é &lt;=500. |
 | Cardinalidade de matriz no ExperienceEvent | &lt;=10 | Proteção de desempenho | A cardinalidade de array ideal em um ExperienceEvent (dados de série temporal) é &lt;=10. |
-| Contagem de identidades para o gráfico de identidade de perfil individual | 50 | Proteção imposta pelo sistema | **O número máximo de identidades em um Gráfico de identidade para um perfil individual é 50.** Todos os perfis com mais de 50 identidades são excluídos da segmentação, exportações e pesquisas. |
+| Contagem de identidades para o gráfico de identidade de perfil individual | 50 | Proteção imposta pelo sistema | **O número máximo de identidades em um Gráfico de identidade para um perfil individual é 50.** Todos os perfis com mais de 50 identidades são excluídos da segmentação, exportações e pesquisas. Para obter mais informações, leia o manual sobre [noções básicas sobre a lógica de exclusão de identidade](../identity-service/guardrails.md#understanding-the-deletion-logic-when-an-identity-graph-at-capacity-is-updated). |
 
 {style="table-layout:auto"}
 
@@ -186,6 +186,6 @@ Consulte a documentação a seguir para obter mais informações sobre outras me
 
 * [Medidas de proteção do Real-Time CDP](/help/rtcdp/guardrails/overview.md)
 * [Diagramas de latência de ponta a ponta](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) para vários serviços de Experience Platform.
-* [Real-time Customer Data Platform (B2C Edition - Pacotes Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform (B2P - Pacotes Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform (B2B - Pacotes Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [Real-time Customer Data Platform (B2C Edition - Pacotes do Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-time Customer Data Platform (B2P - Pacotes do Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-time Customer Data Platform (B2B - Pacotes do Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

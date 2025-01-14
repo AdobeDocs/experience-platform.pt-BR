@@ -5,7 +5,7 @@ hide: true
 hidefromtoc: true
 badge: Beta
 exl-id: 4f695389-2261-469c-8d40-7bd29a4e7f77
-source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
+source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
 workflow-type: tm+mt
 source-wordcount: '1961'
 ht-degree: 2%
@@ -394,7 +394,7 @@ Para obter etapas detalhadas sobre como criar um esquema XDM de destino, consult
 
 ### Criar um conjunto de dados de destino {#target-dataset}
 
-Um conjunto de dados de destino pode ser criado por meio de uma solicitação POST para a [API de Serviço de Catálogo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), fornecendo a ID do esquema de destino na carga.
+Um conjunto de dados de destino pode ser criado por meio de uma solicitação POST para a [API de Serviço de Catálogo](https://developer.adobe.com/experience-platform-apis/references/catalog/), fornecendo a ID do esquema de destino na carga.
 
 Para obter etapas detalhadas sobre como criar um conjunto de dados de destino, consulte o tutorial sobre [criação de um conjunto de dados usando a API](../../../../../catalog/api/create-dataset.md).
 

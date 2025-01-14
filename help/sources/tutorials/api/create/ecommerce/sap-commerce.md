@@ -3,7 +3,7 @@ title: Criar uma conexão de origem e um fluxo de dados para o SAP Commerce usan
 description: Saiba como criar uma conexão de origem e um fluxo de dados para trazer dados do SAP Commerce para o Experience Platform usando a API do Serviço de Fluxo.
 badge: Beta
 exl-id: 580731b9-0c04-4f83-a475-c1890ac5b7cd
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
 workflow-type: tm+mt
 source-wordcount: '2314'
 ht-degree: 1%
@@ -692,7 +692,7 @@ Para obter etapas detalhadas sobre como criar um esquema XDM de destino, consult
 
 ### Criar um conjunto de dados de destino {#target-dataset}
 
-Um conjunto de dados de destino pode ser criado por meio de uma solicitação POST para a [API de Serviço de Catálogo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), fornecendo a ID do esquema de destino na carga.
+Um conjunto de dados de destino pode ser criado por meio de uma solicitação POST para a [API de Serviço de Catálogo](https://developer.adobe.com/experience-platform-apis/references/catalog/), fornecendo a ID do esquema de destino na carga.
 
 Para obter etapas detalhadas sobre como criar um conjunto de dados de destino, consulte o tutorial sobre [criação de um conjunto de dados usando a API](../../../../../catalog/api/create-dataset.md).
 

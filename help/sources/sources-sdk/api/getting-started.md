@@ -1,23 +1,23 @@
 ---
 keywords: Experience Platform;página inicial;tópicos populares;fontes;conectores;conectores de origem;fontes sdk;sdk;SDK
 solution: Experience Platform
-title: Introdução a fontes de autoatendimento (SDK em lote)
+title: Introdução a Origens de Autoatendimento (SDK em Lote)
 description: Este documento fornece uma introdução às informações de pré-requisito que você precisa saber antes de tentar criar uma nova origem usando Origens de Autoatendimento (SDK em Lote).
 exl-id: ba131442-ff20-4854-87fe-918aa313382d
-source-git-commit: 2a5d545db18a5dd33c5ff2ac5c543ec35db4ca00
+source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
 workflow-type: tm+mt
 source-wordcount: '375'
 ht-degree: 17%
 
 ---
 
-# Introdução a fontes de autoatendimento (SDK em lote)
+# Introdução a Origens de Autoatendimento (SDK em Lote)
 
-Fontes de autoatendimento (SDK em lote) permitem integrar sua própria fonte baseada em REST para trazer dados em lote para a Adobe Experience Platform. Este documento fornece uma introdução aos conceitos principais que você precisa saber antes de tentar fazer chamadas para a [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+Fontes de autoatendimento (SDK em lote) permitem integrar sua própria origem baseada em REST para trazer dados em lote para a Adobe Experience Platform. Este documento fornece uma introdução aos conceitos principais que você precisa saber antes de tentar fazer chamadas para a [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 
 ## Pré-requisitos
 
-Para usar o Self-Serve Sources (Batch SDK), você deve garantir que tenha acesso a uma organização Sandbox provisionada com o Adobe Experience Platform Sources.
+Para usar Origens de Autoatendimento (SDK em lote), você deve garantir que tenha acesso a uma organização da Sandbox provisionada com Origens da Adobe Experience Platform.
 
 Este guia também requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 

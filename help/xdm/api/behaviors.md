@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Endpoint da API de comportamentos
 description: O ponto de extremidade /behavior na API do Registro de esquema permite recuperar todos os comportamentos disponíveis no contêiner global.
 exl-id: 3b45431f-1d55-4279-8b62-9b27863885ec
-source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
+source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
 workflow-type: tm+mt
 source-wordcount: '417'
 ht-degree: 3%
@@ -28,7 +28,7 @@ O ponto de extremidade `/behaviors` na API [!DNL Schema Registry] permite exibir
 
 ## Introdução
 
-O ponto de extremidade usado neste guia faz parte da [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/behavior-registry.yaml). Antes de continuar, consulte o [guia de introdução](./getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre os cabeçalhos necessários para fazer chamadas para qualquer API Experience Platform com êxito.
+O ponto de extremidade usado neste guia faz parte da [[!DNL Schema Registry] API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Antes de continuar, consulte o [guia de introdução](./getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre os cabeçalhos necessários para fazer chamadas para qualquer API Experience Platform com êxito.
 
 ## Recuperar uma lista de comportamentos {#list}
 

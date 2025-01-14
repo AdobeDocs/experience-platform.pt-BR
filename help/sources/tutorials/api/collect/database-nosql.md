@@ -5,7 +5,7 @@ title: Criar um Fluxo de Dados para Origens de Banco de Dados Usando a API de Se
 type: Tutorial
 description: Este tutorial aborda as etapas para recuperar dados de um banco de dados e assimilá-los na Platform usando conectores de origem e APIs.
 exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
-source-git-commit: 48aef63cffbdc52a6a96ef69e5db4f54274144b6
+source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
 workflow-type: tm+mt
 source-wordcount: '1417'
 ht-degree: 3%
@@ -137,7 +137,7 @@ Para obter etapas detalhadas sobre como criar um esquema XDM de destino, consult
 
 ## Criar um conjunto de dados de destino {#target-dataset}
 
-Um conjunto de dados de destino pode ser criado por meio de uma solicitação POST para a [API de Serviço de Catálogo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), fornecendo a ID do esquema de destino na carga.
+Um conjunto de dados de destino pode ser criado por meio de uma solicitação POST para a [API de Serviço de Catálogo](https://developer.adobe.com/experience-platform-apis/references/catalog/), fornecendo a ID do esquema de destino na carga.
 
 Para obter etapas detalhadas sobre como criar um conjunto de dados de destino, consulte o tutorial sobre [criação de um conjunto de dados usando a API](../../../../catalog/api/create-dataset.md).
 
@@ -204,7 +204,7 @@ Uma resposta bem-sucedida retorna o identificador exclusivo (`id`) da nova conex
 
 Para que os dados de origem sejam assimilados em um conjunto de dados de destino, eles devem primeiro ser mapeados para o esquema de destino ao qual o conjunto de dados de destino adere.
 
-Para criar um conjunto de mapeamento, faça uma solicitação POST para o ponto de extremidade `mappingSets` da [[!DNL Data Prep] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-prep.yaml) enquanto fornece o esquema XDM de destino `$id` e os detalhes dos conjuntos de mapeamento que deseja criar.
+Para criar um conjunto de mapeamento, faça uma solicitação POST para o ponto de extremidade `mappingSets` da [[!DNL Data Prep] API](https://developer.adobe.com/experience-platform-apis/references/data-prep/) enquanto fornece o esquema XDM de destino `$id` e os detalhes dos conjuntos de mapeamento que deseja criar.
 
 **Formato da API**
 

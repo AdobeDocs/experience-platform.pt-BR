@@ -3,7 +3,7 @@ title: Assimilar dados de pagamentos de sua conta  [!DNL Stripe]  para o Experie
 description: Saiba como assimilar dados de pagamentos de sua conta do Stripe para o Experience Platform usando a API de serviço de fluxo
 badge: Beta
 exl-id: a9cb3ef6-aab0-4a5b-894e-ce90b82f35a8
-source-git-commit: 48aef63cffbdc52a6a96ef69e5db4f54274144b6
+source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
 workflow-type: tm+mt
 source-wordcount: '2020'
 ht-degree: 2%
@@ -471,7 +471,7 @@ Para obter etapas detalhadas sobre como criar um esquema XDM de destino, consult
 
 ### Criar um conjunto de dados de destino {#target-dataset}
 
-Um conjunto de dados de destino pode ser criado por meio de uma solicitação POST para a [API de Serviço de Catálogo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), fornecendo a ID do esquema de destino na carga.
+Um conjunto de dados de destino pode ser criado por meio de uma solicitação POST para a [API de Serviço de Catálogo](https://developer.adobe.com/experience-platform-apis/references/catalog/), fornecendo a ID do esquema de destino na carga.
 
 Para obter etapas detalhadas sobre como criar um conjunto de dados de destino, consulte o tutorial sobre [criação de um conjunto de dados usando a API](../../../../../catalog/api/create-dataset.md).
 

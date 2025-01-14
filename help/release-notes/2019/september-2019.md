@@ -1,20 +1,20 @@
 ---
 title: Notas de versão da Adobe Experience Platform de setembro de 2019
-description: As notas de versão de setembro de 2019 para Adobe Experience Platform.
+description: As notas de versão de setembro de 2019 da Adobe Experience Platform.
 doc-type: release notes
 last-update: September 13, 2019
 author: ens28527
 exl-id: 7f503046-a3b4-4fdb-833c-4205b6e9fa04
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
 workflow-type: tm+mt
 source-wordcount: '531'
-ht-degree: 5%
+ht-degree: 6%
 
 ---
 
 # Notas de versão da Adobe Experience Platform
 
-**Data de lançamento: quarta-feira, 10 de setembro de 2019**
+**Data de lançamento: 10 de setembro de 2019**
 
 Atualizações dos recursos já existentes na Adobe Experience Platform:
 
@@ -48,7 +48,7 @@ O Adobe Experience Platform [!DNL Data Science Workspace] é um serviço totalme
 
 **Problemas conhecidos**
 
-* No momento, não há nenhum modo acessível no [!DNL Service Gallery] para excluir um Serviço existente. Enquanto isso, consulte a [Referência da API do Sensei Machine Learning](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) para excluir um Serviço existente por meio de chamadas de API.
+* No momento, não há nenhum modo acessível no [!DNL Service Gallery] para excluir um Serviço existente. Enquanto isso, consulte a [Referência da API do Sensei Machine Learning](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/) para excluir um Serviço existente por meio de chamadas de API.
 * O [!DNL Service Gallery] não tem suporte à paginação para filtrar o treinamento de um Serviço e as execuções de pontuação.
 * Ao configurar o treinamento ou a pontuação agendados, o [!DNL Service Gallery] é executado, definir a frequência como horária impede que a programação seja aplicada.
 

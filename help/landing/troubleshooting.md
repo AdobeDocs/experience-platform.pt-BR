@@ -9,7 +9,7 @@ type: Documentation
 role: Developer
 feature: API, Audiences, Data Ingestion, Datasets, Destinations, Privacy, Queries, Schemas, Sandboxes, Sources
 exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
-source-git-commit: bf651967714745a0b501dcb27373379fe014c9e1
+source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
 workflow-type: tm+mt
 source-wordcount: '1812'
 ht-degree: 4%
@@ -213,7 +213,7 @@ Veja a seguir uma lista de guias de solução de problemas e a documentação de
 | Controle de acesso | [API de controle de acesso](https://www.adobe.io/experience-platform-apis/references/access-control/) | [Guia de solução de problemas de controle de acesso](../access-control/troubleshooting-guide.md) |
 | Assimilação de dados Adobe Experience Platform | [[!DNL Batch Ingestion API]](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) | [Guia de solução de problemas de assimilação em lote](../ingestion/batch-ingestion/troubleshooting.md) |
 | Assimilação de dados Adobe Experience Platform | [[!DNL Streaming Ingestion API]](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/) | [Guia de solução de problemas de assimilação de streaming](../ingestion/streaming-ingestion/troubleshooting.md) |
-| Adobe Experience Platform Data Science Workspace | [[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) | [[!DNL Data Science Workspace] guia de solução de problemas](../data-science-workspace/troubleshooting-guide.md) |
+| Adobe Experience Platform Data Science Workspace | [[!DNL Sensei Machine Learning API]](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/) | [[!DNL Data Science Workspace] guia de solução de problemas](../data-science-workspace/troubleshooting-guide.md) |
 | Governança de dados do Adobe Experience Platform | [[!DNL Policy Service API]](https://www.adobe.io/experience-platform-apis/references/policy-service/) |  |
 | Serviço de identidade da Adobe Experience Platform | [[!DNL Identity Service API]](https://www.adobe.io/experience-platform-apis/references/identity-service) | [[!DNL Identity Service] guia de solução de problemas](../identity-service/troubleshooting-guide.md) |
 | Serviço de consulta Adobe Experience Platform | [[!DNL Query Service API]](https://www.adobe.io/experience-platform-apis/references/query-service/) | [[!DNL Query Service] guia de solução de problemas](../query-service/troubleshooting-guide.md) |

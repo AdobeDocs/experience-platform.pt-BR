@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform; importar fórmula compactado; Área de trabalho de ciência de dados; tópicos populares; Receitas; API; aprendizagem de máquina sensei; criar mecanismo
+keywords: Experience Platform;importar receita empacotada;Data Science Workspace;tópicos populares;receitas;api;aprendizado de máquina do sensei;criar mecanismo;import packaged revenue;Data Science;popular topics;recipes;api;sensei machine learning;create engine
 solution: Experience Platform
-title: Importar uma receita empacotada usando a API de aprendizado de máquina do Sensei
+title: Importar uma fórmula empacotada usando a API de aprendizado de máquina do Sensei
 type: Tutorial
-description: Essa tutorial usa a API de aprendizagem de máquina do Sensei para criar um Mecanismo, também conhecido como fórmula na interface usuário.
+description: Este tutorial usa a API de aprendizado de máquina do Sensei para criar um mecanismo, também conhecido como fórmula na interface do usuário.
 exl-id: c8dde30b-5234-448d-a597-f1c8d32f23d4
-source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
+source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
 workflow-type: tm+mt
 source-wordcount: '1018'
 ht-degree: 3%
@@ -20,7 +20,7 @@ ht-degree: 3%
 >
 >Esta documentação destina-se aos clientes existentes com direitos anteriores ao Data Science Workspace.
 
-Este tutorial usa o [[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) para criar um [Engine](../api/engines.md), também conhecido como Receita na interface do usuário.
+Este tutorial usa o [[!DNL Sensei Machine Learning API]](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/) para criar um [Engine](../api/engines.md), também conhecido como Receita na interface do usuário.
 
 Antes de começar, é importante observar que o Adobe Experience Platform [!DNL Data Science Workspace] usa termos diferentes para se referir a elementos semelhantes na API e na interface. Os termos da API são usados neste tutorial e a tabela a seguir descreve os termos correlacionados:
 
@@ -37,11 +37,11 @@ Um mecanismo contém algoritmos e lógica de aprendizado de máquina para resolv
 
 ## Introdução
 
-Este tutorial requer um arquivo de fórmula empacotado na forma de um URL Docker. Siga os arquivos de origem do [Pacote em um Tutorial de Receita](./package-source-files-recipe.md) para criar um arquivo receita compactado ou fornecer o seu próprio.
+Este tutorial requer um arquivo de fórmula empacotado na forma de um URL Docker. Siga o tutorial [Empacotar arquivos de origem em uma Receita](./package-source-files-recipe.md) para criar um arquivo de Receita empacotado ou fornecer o seu próprio arquivo.
 
-- `{DOCKER_URL}`: Um endereço URL para uma imagem docker de um serviço inteligente.
+- `{DOCKER_URL}`: Um endereço de URL para uma imagem Docker de um serviço inteligente.
 
-Esta tutorial exige que você tenha completado a [Authentication a Adobe Experience Platform tutorial](https://www.adobe.com/go/platform-api-authentication-en) solicitar efetuar chamadas para [!DNL Platform] APIs com êxito. Concluir o tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API da [!DNL Experience Platform], conforme mostrado abaixo:
+Este tutorial requer que você tenha concluído o [tutorial de Autenticação para Adobe Experience Platform](https://www.adobe.com/go/platform-api-authentication-en) para fazer chamadas com êxito para APIs [!DNL Platform]. Concluir o tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API da [!DNL Experience Platform], conforme mostrado abaixo:
 
 - `{ACCESS_TOKEN}`: Seu valor de token de portador específico fornecido após a autenticação.
 - `{ORG_ID}`: as credenciais da sua organização foram encontradas em sua integração exclusiva com o Adobe Experience Platform.
@@ -95,9 +95,9 @@ curl -X POST \
 | -------  | ----------- |
 | `engine.name` | O nome desejado para o mecanismo. A fórmula correspondente a este mecanismo herdará esse valor para ser exibido na interface do usuário [!DNL Data Science Workspace] como o nome da fórmula. |
 | `engine.description` | Uma descrição opcional do mecanismo. A fórmula correspondente a este mecanismo herdará esse valor para ser exibido na interface do usuário [!DNL Data Science Workspace] como a descrição da fórmula. Não remova essa propriedade, deixe esse valor ser uma string vazia se você optar por não fornecer uma descrição. |
-| `engine.type` | O tipo de execução do mecanismo. Este valor corresponde ao idioma no qual a imagem do Docker é desenvolvida. Quando um URL do Docker é fornecido para criar um Mecanismo, `type` ele é `Python`, `R`, `PySpark`( `Spark` Scala) ou `Tensorflow`. |
-| `artifacts.default.image.location` | Você `{DOCKER_URL}` vai aqui. Um Docker completo URL tem a seguinte estrutura: `your_docker_host.azurecr.io/docker_image_file:version` |
-| `artifacts.default.image.name` | Um nome adicional para o arquivo de imagem Docker. Não remova essa propriedade, deixe esse valor ser uma sequência de caracteres vazia se você optar por não fornecer um nome de arquivo de imagem adicional do Docker. |
+| `engine.type` | O tipo de execução do Mecanismo. Esse valor corresponde ao idioma em que a imagem do Docker é desenvolvida no. Quando uma URL do Docker é fornecida para criar um Mecanismo, `type` é `Python`, `R`, `PySpark`, `Spark` (Scala) ou `Tensorflow`. |
+| `artifacts.default.image.location` | Seu `{DOCKER_URL}` entra aqui. Uma URL completa do Docker tem a seguinte estrutura: `your_docker_host.azurecr.io/docker_image_file:version` |
+| `artifacts.default.image.name` | Um nome adicional para o arquivo de imagem do Docker. Não remova essa propriedade, deixe esse valor ser uma string vazia se você optar por não fornecer um nome adicional de arquivo de imagem do Docker. |
 | `artifacts.default.image.executionType` | O tipo de execução deste Mecanismo. Esse valor corresponde ao idioma em que a imagem do Docker é desenvolvida no. Quando uma URL do Docker é fornecida para criar um Mecanismo, `executionType` é `Python`, `R`, `PySpark`, `Spark` (Scala) ou `Tensorflow`. |
 
 **Solicitar PySpark**
@@ -130,14 +130,14 @@ curl -X POST \
 
 | Propriedade | Descrição |
 | --- | --- |
-| `name` | O nome desejado para o Mecanismo. A Receita correspondente a este Mecanismo herdará esse valor a ser exibido no interface como o nome da Receita. |
+| `name` | O nome desejado para o mecanismo. A fórmula correspondente a este mecanismo herdará esse valor para ser exibido na interface do usuário como o nome da fórmula. |
 | `description` | Uma descrição opcional do mecanismo. A fórmula correspondente a este mecanismo herdará esse valor para ser exibido na interface do usuário como a descrição da fórmula. Esta propriedade é obrigatória. Se não quiser fornecer uma descrição, defina o valor como uma cadeia de caracteres vazia. |
 | `type` | O tipo de execução do Mecanismo. Esse valor corresponde ao idioma no qual a imagem do Docker é criada em &quot;PySpark&quot;. |
 | `mlLibrary` | Um campo necessário ao criar mecanismos para receitas do PySpark e Scala. |
 | `artifacts.default.image.location` | A localização da imagem do Docker vinculada por um URL do Docker. |
-| `artifacts.default.image.executionType` | O tipo de execução do mecanismo. Este valor corresponde à linguagem em que a imagem do Docker é construída sobre &quot;Spark&quot;. |
+| `artifacts.default.image.executionType` | O tipo de execução do Mecanismo. Esse valor corresponde ao idioma no qual a imagem do Docker é criada no &quot;Spark&quot;. |
 
-**Solicitar escala**
+**Solicitar Escala**
 
 ```shell
 curl -X POST \
@@ -176,7 +176,7 @@ curl -X POST \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna uma carga contendo os detalhes do Mecanismo recém-criado, incluindo seu identificador exclusivo (`id`). O exemplo de resposta a seguir é para um [!DNL Python] mecanismo. As `executionType` teclas e `type` mudam com base no POST fornecido.
+Uma resposta bem-sucedida retorna uma carga contendo os detalhes do Mecanismo recém-criado, incluindo seu identificador exclusivo (`id`). O exemplo de resposta a seguir é para um Mecanismo [!DNL Python]. As chaves `executionType` e `type` são alteradas com base no POST fornecido.
 
 ```json
 {

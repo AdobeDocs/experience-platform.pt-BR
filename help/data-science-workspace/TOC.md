@@ -6,7 +6,7 @@ user-guide-description: Use o aprendizado de máquina para desenvolver, treinar 
 feature: Data Science Workspace
 solution: Experience Platform
 role: User, Developer
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
 workflow-type: tm+mt
 source-wordcount: '225'
 ht-degree: 32%
@@ -43,7 +43,7 @@ ht-degree: 32%
 * Criação de Modelo {#authoring}
    * [SDK de criação de modelo](authoring/sdk.md)
    * [Criar um pipeline de recurso](authoring/feature-pipeline.md)
-   * [Criação de modelo usando o SDK da plataforma (Python)](authoring/platform-sdk.md)
+   * [Criação de modelo usando o Platform SDK (Python)](authoring/platform-sdk.md)
    * [Acesso a dados Python](authoring/python.md)
    * [Spark data access](authoring/spark.md)
 * Tutoriais de modelos e receitas {#models-recipes}
@@ -64,5 +64,5 @@ ht-degree: 32%
    * [Publish um modelo como um serviço (API)](models-recipes/publish-model-service-api.md)
    * [Programar treinamento automatizado e pontuação em um serviço (UI)](models-recipes/schedule-models-ui.md)
 * [Manual de solução de problemas](troubleshooting-guide.md)
-* [Referência da API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)
+* [Referência da API](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/)
 * [Notas de versão da Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest?lang=pt-BR)

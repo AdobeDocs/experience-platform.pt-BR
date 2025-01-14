@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Crie um fluxo de dados para o Mailchimp Campaign usando a API do Serviço de Fluxo
 description: Saiba como conectar o Adobe Experience Platform à campanha do MailChimp usando a API do serviço de fluxo.
 exl-id: fd4821c7-6fe1-4cad-8e13-3549dbe0ce98
-source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
+source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
 workflow-type: tm+mt
 source-wordcount: '1925'
 ht-degree: 2%
@@ -331,7 +331,7 @@ Para obter etapas detalhadas sobre como criar um esquema XDM de destino, consult
 
 ### Criar um conjunto de dados de destino {#target-dataset}
 
-Um conjunto de dados de destino pode ser criado por meio de uma solicitação POST para a [API de Serviço de Catálogo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), fornecendo a ID do esquema de destino na carga.
+Um conjunto de dados de destino pode ser criado por meio de uma solicitação POST para a [API de Serviço de Catálogo](https://developer.adobe.com/experience-platform-apis/references/catalog/), fornecendo a ID do esquema de destino na carga.
 
 Para obter etapas detalhadas sobre como criar um conjunto de dados de destino, consulte o tutorial sobre [criação de um conjunto de dados usando a API](../../../../../catalog/api/create-dataset.md).
 

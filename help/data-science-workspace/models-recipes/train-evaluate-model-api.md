@@ -5,22 +5,22 @@ title: Treinar e avaliar um modelo usando a API de aprendizado de máquina do Se
 type: Tutorial
 description: Este tutorial mostrará como criar, treinar e avaliar um Modelo usando chamadas da API do Sensei Machine Learning.
 exl-id: 8107221f-184c-426c-a33e-0ef55ed7796e
-source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
+source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
 workflow-type: tm+mt
 source-wordcount: '1240'
 ht-degree: 1%
 
 ---
 
-# Treinar e avaliar um modelo usando a [!DNL Sensei Machine Learning] API
+# Treinar e avaliar um modelo usando a API [!DNL Sensei Machine Learning]
 
 >[!NOTE]
 >
->O Área de trabalho de ciência de dados não está mais disponível para compra.
+>O Data Science Workspace não está mais disponível para compra.
 >
->Esta documentação destina-se a clientes existentes com direitos anteriores à Data Science Área de trabalho.
+>Esta documentação destina-se aos clientes existentes com direitos anteriores ao Data Science Workspace.
 
-Esta tutorial mostrará como criar, treinar e avaliar um modelo usando chamadas de API. [Consulte esta documento](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) para obter uma lista detalhada da documentação da API.
+Este tutorial mostrará como criar, treinar e avaliar um Modelo usando chamadas de API. Consulte [este documento](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/) para obter uma lista detalhada da documentação da API.
 
 ## Pré-requisitos
 
@@ -69,8 +69,8 @@ curl -X POST \
   -d `{JSON_PAYLOAD}`
 ```
 
-`{ACCESS_TOKEN}`: seu valor de token portador específico fornecido após a autenticação.\
-`{ORG_ID}`: suas credenciais de organização encontradas na integração exclusiva do Adobe Experience Platform.\
+`{ACCESS_TOKEN}`: Seu valor de token de portador específico fornecido após a autenticação.\
+`{ORG_ID}`: as credenciais da sua organização foram encontradas em sua integração exclusiva com o Adobe Experience Platform.\
 `{API_KEY}`: O valor da sua chave de API específica foi encontrado na sua integração exclusiva do Adobe Experience Platform.\
 `{JSON_PAYLOAD}`: A configuração de nossa MLInstance. O exemplo que usamos em nosso tutorial é mostrado aqui:
 
@@ -183,8 +183,8 @@ curl -X POST \
 
 `{ORG_ID}`: as credenciais da sua organização foram encontradas em sua integração exclusiva com o Adobe Experience Platform.\
 `{ACCESS_TOKEN}`: Seu valor de token de portador específico fornecido após a autenticação.\
-`{API_KEY}`: seu valor de chave de API específico encontrado na integração exclusiva do Adobe Experience Platform.\
-`{JSON_PAYLOAD}`: Experimento objeto criado. O exemplo que usamos em nosso tutorial é mostrado aqui:
+`{API_KEY}`: O valor da sua chave de API específica foi encontrado na sua integração exclusiva do Adobe Experience Platform.\
+`{JSON_PAYLOAD}`: objeto de experimento criado. O exemplo que usamos em nosso tutorial é mostrado aqui:
 
 ```JSON
 {
@@ -221,7 +221,7 @@ A resposta da criação do experimento é semelhante a esta.
 
 ### Criar um experimento programado para treinamento
 
-Os Experimentos agendados são usados para que não precisemos criar cada um Experimento Corre por meio de uma chamada de API. Em vez disso, fornecemos todos os parâmetros necessários durante Experimento criação e cada execução será criada periodicamente.
+Experimentos agendados são usados para que não seja necessário criar cada uma das execuções de experimento por meio de uma chamada de API. Em vez disso, fornecemos todos os parâmetros necessários durante a criação do Experimento e cada execução será criada periodicamente.
 
 Para indicar a criação de um experimento agendado, devemos adicionar uma seção `template` no corpo da solicitação. Em `template`, todos os parâmetros necessários para execuções de agendamento estão incluídos, como `tasks`, que indica qual ação, e `schedule`, que indica o tempo das execuções agendadas.
 
@@ -238,9 +238,9 @@ curl -X POST \
 ```
 
 `{ORG_ID}`: as credenciais da sua organização foram encontradas em sua integração exclusiva com o Adobe Experience Platform.\
-`{ACCESS_TOKEN}`: seu valor de token portador específico fornecido após a autenticação.\
-`{API_KEY}`: seu valor de chave de API específico encontrado na integração exclusiva do Adobe Experience Platform.\
-`{JSON_PAYLOAD}`: conjunto de dados a ser publicado. O exemplo que usamos em nosso tutorial é mostrado aqui:
+`{ACCESS_TOKEN}`: Seu valor de token de portador específico fornecido após a autenticação.\
+`{API_KEY}`: O valor da sua chave de API específica foi encontrado na sua integração exclusiva do Adobe Experience Platform.\
+`{JSON_PAYLOAD}`: Conjunto de dados a ser postado. O exemplo que usamos em nosso tutorial é mostrado aqui:
 
 ```JSON
 {
@@ -270,7 +270,7 @@ curl -X POST \
 }
 ```
 
-Quando criamos uma Experimento, o corpo, `{JSON_PAYLOAD}`deve conter o parâmetro ou o `mlInstanceId` `mlInstanceQuery` parâmetro. Neste exemplo, uma Experimento programada executará uma execução a `cron` cada 20 minutos, definida no parâmetro, começando a `startTime` partir do até o `endTime`.
+Quando criamos um Experimento, o corpo, `{JSON_PAYLOAD}`, deve conter o parâmetro `mlInstanceId` ou `mlInstanceQuery`. Neste exemplo, um Experimento agendado chamará uma execução a cada 20 minutos, definido no parâmetro `cron`, começando em `startTime` até `endTime`.
 
 **Resposta**
 
@@ -397,11 +397,11 @@ curl -X GET \
 `{EXPERIMENT_RUN_ID}`: a identificação que representa a execução do experimento.\
 `{ACCESS_TOKEN}`: Seu valor de token de portador específico fornecido após a autenticação.\
 `{ORG_ID}`: as credenciais da sua organização foram encontradas em sua integração exclusiva com o Adobe Experience Platform.\
-`{API_KEY}`: seu valor de chave de API específico encontrado na integração exclusiva do Adobe Experience Platform.
+`{API_KEY}`: O valor da sua chave de API específica foi encontrado na sua integração exclusiva do Adobe Experience Platform.
 
 **Resposta**
 
-A chamada GET fornecerá o status no `state` parâmetro, conforme mostrado abaixo:
+A chamada do GET fornecerá o status no parâmetro `state` como mostrado abaixo:
 
 ```JSON
 {
@@ -434,7 +434,7 @@ A chamada GET fornecerá o status no `state` parâmetro, conforme mostrado abaix
 }
 ```
 
-`{EXPERIMENT_RUN_ID}`: a ID que representa o Experimento Execução.\
+`{EXPERIMENT_RUN_ID}`: a identificação que representa a execução do experimento.\
 `{EXPERIMENT_ID}`: a identificação que representa o experimento sob o qual a execução do experimento está.
 
 Além do estado `DONE`, outros estados incluem:
@@ -489,11 +489,11 @@ A resposta representa o modelo treinado que foi criado.
 
 `{MODEL_ID}`: a ID correspondente ao Modelo.\
 `{EXPERIMENT_ID}`: a ID correspondente ao experimento em que a execução do experimento está.\
-`{EXPERIMENT_RUN_ID}`: a ID correspondente ao Experimento Run.
+`{EXPERIMENT_RUN_ID}`: a identificação correspondente à execução do experimento.
 
-### Interrupção e excluir uma Experimento agendada
+### Parar e excluir um experimento agendado
 
-Se você quiser interromper a execução de um Experimento agendado antes de sua execução `endTime`, isso pode ser feito consultando um solicitação DELETE para a `{EXPERIMENT_ID}`
+Se você quiser parar a execução de um Experimento agendado antes de seu `endTime`, isso pode ser feito consultando uma solicitação DELETE para o `{EXPERIMENT_ID}`
 
 **Solicitação**
 
@@ -512,7 +512,7 @@ curl -X DELETE \
 >
 >A chamada de API desativará a criação de novas execuções de Experimento. No entanto, ela não interromperá a execução de execuções de experimentos já em execução.
 
-A seguir está a notificação de Resposta de que o Experimento foi excluído com sucesso.
+Esta é a resposta que notifica que o experimento foi excluído com sucesso.
 
 **Resposta**
 

@@ -1,22 +1,22 @@
 ---
-title: Introdução a fontes de autoatendimento (SDK de transmissão)
-description: Este documento fornece uma introdução às informações de pré-requisito que você precisa saber antes de tentar criar uma nova fonte usando Fontes de autoatendimento (SDK de transmissão).
+title: Introdução às fontes de autoatendimento (SDK de transmissão)
+description: Este documento fornece uma introdução às informações de pré-requisito que você precisa saber antes de tentar criar uma nova fonte usando Fontes de autoatendimento (Streaming SDK).
 exl-id: 6cc13279-ce0b-45bc-ad25-e2e6aafc2af0
 badge: Beta
-source-git-commit: 256857103b4037b2cd7b5b52d6c5385121af5a9f
+source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
 workflow-type: tm+mt
 source-wordcount: '543'
 ht-degree: 12%
 
 ---
 
-# Introdução a fontes de autoatendimento (SDK de transmissão)
+# Introdução às fontes de autoatendimento (SDK de transmissão)
 
 >[!NOTE]
 >
->O SDK de transmissão de fontes de autoatendimento está na versão beta. Leia a [visão geral das fontes](../../home.md#terms-and-conditions) para obter mais informações sobre o uso de fontes com rótulo beta.
+>Fontes de autoatendimento A transmissão de SDK está na versão beta. Leia a [visão geral das fontes](../../home.md#terms-and-conditions) para obter mais informações sobre o uso de fontes com rótulo beta.
 
-Fontes de autoatendimento (SDK de transmissão) permitem integrar sua própria fonte para trazer dados de transmissão para a Adobe Experience Platform. Este documento fornece uma introdução aos conceitos principais que você precisa saber antes de tentar fazer chamadas para a [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+Fontes de autoatendimento (Streaming SDK) permitem integrar sua própria fonte para trazer dados de transmissão para a Adobe Experience Platform. Este documento fornece uma introdução aos conceitos principais que você precisa saber antes de tentar fazer chamadas para a [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 
 ## Processo de alto nível
 
@@ -24,7 +24,7 @@ O processo passo a passo para configurar sua origem no Experience Platform é de
 
 ### Integração
 
-* [Crie uma nova especificação de conexão para o SDK de Streaming](create.md).
+* [Crie uma nova especificação de conexão para SDK de Streaming](create.md).
 * [Atualize a especificação de fluxo de streaming com a nova ID de especificação de conexão](update-flow-specs.md).
 * [Testar e enviar sua fonte de streaming](submit.md).
 
@@ -33,7 +33,7 @@ O processo passo a passo para configurar sua origem no Experience Platform é de
 * Para começar a documentar sua origem, leia a [visão geral sobre como criar documentação para Fontes de Autoatendimento](../documentation/doc-overview.md).
 * Leia o guia em [usando a interface da Web do GitHub](../documentation/github.md) para obter etapas sobre como criar a documentação usando o GitHub.
 * Leia o guia em [usando um editor de texto](../documentation/text-editor.md) para obter as etapas sobre como criar a documentação usando o computador local.
-* [Use o modelo de documentação da API do SDK de Streaming para documentar sua origem na API](streaming-template-api.md).
+* [Use o modelo de documentação da API de Streaming do SDK para documentar sua origem na API](streaming-template-api.md).
 * [Use o modelo de documentação da interface do SDK de Streaming para documentar sua origem na interface](streaming-template-ui.md).
 
 Você também pode baixar os modelos de documentação abaixo:
@@ -47,7 +47,7 @@ Você também pode baixar os modelos de documentação abaixo:
 >
 >A fonte que você está integrando com o Experience Platform deve ser capaz de suportar um webhook no qual um endpoint pode ser inscrito para enviar atualizações.
 
-Para usar as Fontes de autoatendimento (SDK de transmissão), você deve garantir que tenha acesso a uma organização de sandbox provisionada com o Adobe Experience Platform Sources.
+Para usar as Fontes de autoatendimento (SDK de transmissão), você deve garantir que tenha acesso a uma organização de sandbox provisionada com as Fontes do Adobe Experience Platform.
 
 Este guia também requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
@@ -80,4 +80,4 @@ Todas as solicitações que contêm um conteúdo (POST, PUT, PATCH) exigem um ca
 
 ## Próximas etapas
 
-Para começar a criar uma nova fonte com Fontes de Autoatendimento (SDK de Transmissão), consulte o tutorial em [criação de uma nova fonte](./create.md).
+Para começar a criar uma nova fonte com Fontes de Autoatendimento (SDK de Streaming), consulte o tutorial em [criação de uma nova fonte](./create.md).

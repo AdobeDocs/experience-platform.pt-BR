@@ -5,7 +5,7 @@ title: Criar um fluxo de dados de transmissão para dados brutos usando a API do
 type: Tutorial
 description: Este tutorial aborda as etapas para recuperar dados de transmissão e trazê-los para a Platform usando conectores de origem e APIs.
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
-source-git-commit: 39b5a2b76c28033b9e98dcefc4cdcaa9964f4d2e
+source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
 workflow-type: tm+mt
 source-wordcount: '1169'
 ht-degree: 3%
@@ -265,7 +265,7 @@ Uma resposta bem-sucedida retorna o identificador exclusivo (`id`) da nova conex
 
 Para que os dados de origem sejam assimilados em um conjunto de dados de destino, eles devem primeiro ser mapeados para o esquema de destino ao qual o conjunto de dados de destino adere.
 
-Para criar um conjunto de mapeamento, faça uma solicitação POST para o ponto de extremidade `mappingSets` da [[!DNL Data Prep] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-prep.yaml) enquanto fornece o esquema XDM de destino `$id` e os detalhes dos conjuntos de mapeamento que deseja criar.
+Para criar um conjunto de mapeamento, faça uma solicitação POST para o ponto de extremidade `mappingSets` da [[!DNL Data Prep] API](https://developer.adobe.com/experience-platform-apis/references/data-prep/) enquanto fornece o esquema XDM de destino `$id` e os detalhes dos conjuntos de mapeamento que deseja criar.
 
 **Formato da API**
 
@@ -482,7 +482,7 @@ Uma resposta bem-sucedida retorna a ID (`id`) do fluxo de dados recém-criado.
 }
 ```
 
-## Dados do Post para assimilação
+## Publicar dados para assimilação
 
 Veja abaixo a carga de amostra para obter exemplos de json bruto ou compatível com XDM que você pode enviar para assimilação.
 

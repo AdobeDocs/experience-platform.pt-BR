@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guia de solução de problemas do sistema XDM
 description: Encontre respostas para perguntas frequentes sobre o Experience Data Model (XDM), incluindo etapas para resolver erros comuns de API.
 exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
-source-git-commit: ae98a185fdfad5b6ba787e78ad17296928216d08
+source-git-commit: b345330595aadcfe2380dd1795802470b249cb4a
 workflow-type: tm+mt
-source-wordcount: '2390'
+source-wordcount: '2347'
 ht-degree: 0%
 
 ---
@@ -142,13 +142,7 @@ O esquema não é ativado automaticamente para o Perfil de cliente em tempo real
 
 Não é possível excluir um esquema depois que ele é ativado para o Perfil de cliente em tempo real. Depois que um esquema é ativado para o Perfil, ele não pode ser desativado ou excluído e os campos não podem ser removidos do esquema. Portanto, é crucial planejar e verificar cuidadosamente a configuração do esquema antes de habilitá-lo para o Perfil. No entanto, você pode excluir um conjunto de dados habilitado para perfil. Informações encontradas aqui: <https://experienceleague.adobe.com/en/docs/experience-platform/catalog/datasets/user-guide#delete-a-profile-enabled-dataset>
 
->[!IMPORTANT]
->
->Para remover um esquema habilitado para perfil, você precisaria da ajuda da Equipe de suporte à plataforma XDM e deve seguir estas etapas:
->
-> 1. Exclua todos os conjuntos de dados associados ao esquema (que está ativado para o Perfil)
-> 2. Exclua o instantâneo Exportação de perfil da sandbox (isso requer a ajuda da Equipe de suporte da plataforma XDM)
-> 3. Forçar exclusão de esquema da sandbox (isso só pode ser feito pela Equipe de suporte à plataforma XDM)
+Se você não quiser mais que um esquema habilitado para perfil seja usado, é recomendável renomear o esquema para incluir **Não usar** ou **Inativo**.
 
 ## Modificação e restrições do esquema
 

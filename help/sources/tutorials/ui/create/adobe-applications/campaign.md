@@ -3,9 +3,9 @@ keywords: Experience Platform;página inicial;tópicos populares;fontes;conector
 title: Criar uma conexão de origem do Adobe Campaign Managed Cloud Services usando a interface do usuário da plataforma
 description: Saiba como conectar o Adobe Experience Platform ao Adobe Campaign Managed Cloud Services usando a interface do usuário da plataforma.
 exl-id: 067ed558-b239-4845-8c85-3bf9b1d4caed
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 77d755e4ebf97521efa1dfdfe9ee40312800ad28
 workflow-type: tm+mt
-source-wordcount: '1149'
+source-wordcount: '1185'
 ht-degree: 6%
 
 ---
@@ -101,6 +101,8 @@ A Platform fornece recomendações inteligentes para campos mapeados automaticam
 >[!IMPORTANT]
 >
 >Ao mapear os campos de origem para campos XDM de destino, você deve garantir que mapeie o campo de identidade principal designado para o campo XDM de destino apropriado.
+>
+>Para cada público, você pode adicionar até 20 campos a serem mapeados para o Adobe Campaign. Você pode alterar esse limite atualizando o valor da opção `NmsCdp_Aep_Sources_Max_Columns` na pasta Administration > Platform > Options do explorador do Campaign.
 
 Depois que os dados de origem forem mapeados com êxito, selecione **[!UICONTROL Próximo]**.
 

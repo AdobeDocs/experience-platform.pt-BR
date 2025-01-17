@@ -17,7 +17,7 @@ ht-degree: 9%
 > 
 >Para ativar dados, você precisa de **[!UICONTROL Exibir Destinos]**, **[!UICONTROL Ativar Destinos]**, **[!UICONTROL Exibir Perfis]** e **[!UICONTROL Exibir Segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 
-## Visão geral do recurso **[!UICONTROL Exportar arquivo agora]**  {#overview}
+## Visão geral do recurso **[!UICONTROL Exportar arquivo agora]** {#overview}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_activatenow"

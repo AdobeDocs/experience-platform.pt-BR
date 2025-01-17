@@ -1,16 +1,16 @@
 ---
-title: Exportar objetos de matriz do Real-Time CDP para destinos de armazenamento na nuvem
+title: Exportar objetos de matriz da Real-Time CDP para destinos de armazenamento na nuvem
 type: Tutorial
 description: Saiba como usar campos calculados para exportar matrizes do Real-Time CDP para destinos de armazenamento em nuvem como cadeias de caracteres.
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
 source-git-commit: a99fc58b8296b2b9ce6e30d14857529570cd3e8a
 workflow-type: tm+mt
 source-wordcount: '1622'
-ht-degree: 5%
+ht-degree: 7%
 
 ---
 
-# Exportar objetos de matriz do Real-Time CDP para destinos de armazenamento na nuvem {#export-arrays-cloud-storage}
+# Exportar objetos de matriz da Real-Time CDP para destinos de armazenamento na nuvem {#export-arrays-cloud-storage}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_flat_files"

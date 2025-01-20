@@ -2,7 +2,7 @@
 title: Criar públicos-alvo usando SQL
 description: Saiba como usar a extensão de público-alvo SQL no Data Distiller do Adobe Experience Platform para criar, gerenciar e publicar públicos-alvo usando comandos SQL. Este guia aborda todos os aspectos do ciclo de vida do público-alvo, incluindo a criação, atualização e exclusão de perfis e o uso de definições de público-alvo orientadas por dados para direcionar destinos baseados em arquivos.
 exl-id: c35757c1-898e-4d65-aeca-4f7113173473
-source-git-commit: 7db055f598e3fa7d5a50214a0cfa86e28e5bfe47
+source-git-commit: c66a7cf779c1b6e55ace86916985087dfaa3363b
 workflow-type: tm+mt
 source-wordcount: '1481'
 ht-degree: 1%
@@ -44,7 +44,7 @@ Use estes parâmetros para definir sua consulta de criação de público-alvo SQ
 | `schema` | Opcional. Define o esquema XDM para o conjunto de dados criado pela consulta. |
 | `table_name` | Nome da tabela e público-alvo. |
 | `primary_identity` | Especifica a coluna de identidade primária para o público-alvo. |
-| `identity_namespace` | Namespace da identidade. Você pode usar um namespace existente ou criar um novo. Para ver os namespaces disponíveis, use o comando `SHOW NAMESPACE`. Para criar um novo namespace, use `CREATE NAMESPACE`. Por exemplo: `CREATE NAMESPACE lumaCrmId WITH (code='testns', TYPE='Email')`. |
+| `identity_namespace` | Namespace da identidade. Você pode usar um namespace existente ou criar um novo. Para ver os namespaces disponíveis, use o comando `SHOW NAMESPACES`. Para criar um novo namespace, use `CREATE NAMESPACE`. Por exemplo: `CREATE NAMESPACE lumaCrmId WITH (code='testns', TYPE='Email')`. |
 | `select_query` | Uma instrução SELECT que define o público-alvo. A sintaxe da consulta SELECT pode ser encontrada na seção [consultas SELECT](../sql/syntax.md#select-queries). |
 
 {style="table-layout:auto"}

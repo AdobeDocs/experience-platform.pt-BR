@@ -3,7 +3,7 @@ title: Assistente de IA na documentação do produto Adobe Experience Platform
 description: Introdução ao Assistente de IA no Adobe Experience Platform.
 feature: AI Assistant
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: 676466184e84dabfeb52947c3d3a777032ca728f
+source-git-commit: fcda4dc3ecdd4ae9272f1cc65cabb20b6236c71a
 workflow-type: tm+mt
 source-wordcount: '821'
 ht-degree: 1%
@@ -31,7 +31,7 @@ Comece lendo o material nos links abaixo para se familiarizar com os conceitos e
     <div><strong>Aprimore seu aprendizado</strong><br/>Descubra, solucione problemas e amplie sua compreensão do conhecimento sobre o produto sem interromper os fluxos de trabalho.</div>
     </td>
     <td>
-    <a href="https://experienceleague.adobe.com/en/playlists/experience-platform-get-started-with-ai-assistant"><img src="./assets/landing/ai-videos.png" style="width:100%;max-height:100%"><a>
+    <a href="https://experienceleague.adobe.com/en/playlists/experience-platform-get-started-with-ai-assistant"><img src="./assets/landing/ai-videos.png" style="width:100%;max-height:100%"></a>
     <div><strong>Visite a lista de reprodução de vídeo do Assistente de IA</strong><br/>Saiba mais sobre os vários desafios e casos de uso diferentes que você pode resolver com o Assistente de IA.</div>
     </td>
   </tr>

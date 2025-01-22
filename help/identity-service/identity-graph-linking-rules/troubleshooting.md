@@ -2,9 +2,9 @@
 title: Guia de solução de problemas para regras de vinculação do gráfico de identidade
 description: Saiba como solucionar problemas comuns nas regras de vinculação do gráfico de identidade.
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
-source-git-commit: b50633a8518f32051549158b23dfc503db255a82
+source-git-commit: 79efdff6f6068af4768fc4bad15c0521cca3ed2a
 workflow-type: tm+mt
-source-wordcount: '3335'
+source-wordcount: '3286'
 ht-degree: 0%
 
 ---
@@ -149,12 +149,8 @@ Há vários motivos que contribuem para que os fragmentos de evento de experiên
 * [Pode ter ocorrido uma falha de validação no Perfil](../../xdm/classes/experienceevent.md).
    * Por exemplo, um evento de experiência deve conter um `_id` e um `timestamp`.
    * Além disso, o `_id` deve ser exclusivo para cada evento (registro).
-* O namespace com a prioridade mais alta é uma cadeia de caracteres vazia.
 
-No contexto da prioridade de namespace, o Perfil rejeitará:
-
-* Qualquer evento que contenha duas ou mais identidades com a maior prioridade de namespace. Por exemplo, se GAID não estiver marcada como um namespace exclusivo e duas identidades tiverem um namespace GAID e valores de identidade diferentes, o Perfil não armazenará nenhum dos eventos.
-* Qualquer evento em que o namespace com a maior prioridade seja uma cadeia de caracteres vazia.
+No contexto da prioridade de namespace, o Perfil rejeitará qualquer evento que contenha duas ou mais identidades com a maior prioridade de namespace. Por exemplo, se GAID não estiver marcada como um namespace exclusivo e duas identidades tiverem um namespace GAID e valores de identidade diferentes, o Perfil não armazenará nenhum dos eventos.
 
 **Etapas de solução de problemas**
 
@@ -175,16 +171,7 @@ Se os dados forem enviados ao data lake, mas não ao Perfil, e você acreditar q
   FROM dataset_name)) WHERE col.id != _testimsorg.identification.core.email and key = 'Email' 
 ```
 
-Você também pode executar a seguinte consulta para verificar se a assimilação no perfil não está acontecendo porque o namespace mais alto tem uma cadeia de caracteres vazia:
-
-```sql
-  SELECT identityMap, key, col.id as identityValue, _testimsorg.identification.core.email, _id, timestamp 
-  FROM (SELECT key, explode(value), * 
-  FROM (SELECT explode(identityMap), * 
-  FROM dataset_name)) WHERE (col.id = '' or _testimsorg.identification.core.email = '') and key = 'Email' 
-```
-
-Essas duas consultas presumem que:
+Esse query presume que:
 
 * Uma identidade é enviada a partir do identityMap e outra identidade é enviada a partir de um descritor de identidade. **OBSERVAÇÃO**: em esquemas do Experience Data Model (XDM), o descritor de identidade é o campo marcado como uma identidade.
 * O CRMID é enviado por identityMap. Se a CRMID for enviada como um campo, remova `key='Email'` da cláusula WHERE.
@@ -210,7 +197,7 @@ O algoritmo de otimização de identidade respeitará [os links estabelecidos ma
 Primeiro, você deve coletar as seguintes informações:
 
 1. O símbolo de identidade (namespaceCode) do namespace de cookie (por exemplo, ECID) e o namespace de pessoa (por exemplo, CRMID) que foram enviados.
-1.1. Para implementações do SDK da Web, esses são geralmente os namespaces incluídos no identityMap.
+1.1. Para implementações do Web SDK, esses são geralmente os namespaces incluídos no identityMap.
 1.2. Para implementações do conector de origem do Analytics, esses são os identificadores de cookies incluídos no identityMap. O identificador de pessoa é um campo eVar marcado como uma identidade.
 2. O conjunto de dados em que o evento foi enviado (dataset_name).
 3. O valor de identidade do namespace do cookie a ser pesquisado (identity_value).
@@ -225,7 +212,7 @@ Se você não souber o valor de identidade do identificador de cookie e quiser p
 
 >[!BEGINTABS]
 
->[!TAB Implementação do SDK da Web]
+>[!TAB Implementação do Web SDK]
 
 ```sql
   SELECT identityMap['ECID'][0]['id'], count(distinct identityMap['CRMID'][0]['id']) as crmidCount FROM dataset_name GROUP BY identityMap['ECID'][0]['id'] ORDER BY crmidCount desc 
@@ -245,7 +232,7 @@ Agora que você identificou os valores de cookie vinculados a várias IDs de pes
 
 >[!BEGINTABS]
 
->[!TAB Implementação do SDK da Web]
+>[!TAB Implementação do Web SDK]
 
 ```sql
   SELECT identityMap['CRMID'][0]['id'] as personEntity, * 

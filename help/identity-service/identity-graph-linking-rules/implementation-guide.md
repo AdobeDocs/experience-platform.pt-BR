@@ -2,9 +2,9 @@
 title: Guia de implementação para regras de vinculação do gráfico de identidade
 description: Saiba mais sobre as etapas recomendadas a serem seguidas ao implementar seus dados com configurações de regras de vinculação de gráfico de identidade.
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 720ffa1ca0ee69cfc802cd50aef26b6f38d2142c
+source-git-commit: 79efdff6f6068af4768fc4bad15c0521cca3ed2a
 workflow-type: tm+mt
-source-wordcount: '1668'
+source-wordcount: '1585'
 ht-degree: 2%
 
 ---
@@ -119,31 +119,6 @@ Durante o processo de pré-implementação, você deve garantir que os eventos a
 
 
 >[!ENDTABS]
-
-Não envie uma string vazia como um valor de identidade ao enviar eventos usando eventos de experiência XDM. Se o valor de identidade do namespace com a prioridade mais alta for uma cadeia de caracteres vazia, o registro será ignorado no Perfil do cliente em tempo real. Isso se aplica a identityMap e a campos marcados como uma identidade.
-
-+++Selecione para exibir um exemplo de carga com uma cadeia de caracteres vazia
-
-O exemplo a seguir retorna um erro porque o valor de identidade de `Phone` é enviado como uma cadeia de caracteres vazia.
-
-```json
-    "identityMap": {
-        "ECID": [
-            {
-                "id": "24165048599243194405404369473457348936",
-                "primary": false
-            }
-        ],
-        "Phone": [
-            {
-                "id": "",
-                "primary": true
-            }
-        ]
-    }
-```
-
-+++
 
 Você deve garantir que tenha uma identidade totalmente qualificada ao enviar eventos usando eventos de experiência XDM.
 

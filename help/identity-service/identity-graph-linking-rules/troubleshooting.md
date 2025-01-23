@@ -2,7 +2,7 @@
 title: Guia de solução de problemas para regras de vinculação do gráfico de identidade
 description: Saiba como solucionar problemas comuns nas regras de vinculação do gráfico de identidade.
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
-source-git-commit: 79efdff6f6068af4768fc4bad15c0521cca3ed2a
+source-git-commit: 4d9954dd61b56125ae1e828432c8cc359806d280
 workflow-type: tm+mt
 source-wordcount: '3286'
 ht-degree: 0%
@@ -171,7 +171,7 @@ Se os dados forem enviados ao data lake, mas não ao Perfil, e você acreditar q
   FROM dataset_name)) WHERE col.id != _testimsorg.identification.core.email and key = 'Email' 
 ```
 
-Esse query presume que:
+Essa consulta pressupõe que:
 
 * Uma identidade é enviada a partir do identityMap e outra identidade é enviada a partir de um descritor de identidade. **OBSERVAÇÃO**: em esquemas do Experience Data Model (XDM), o descritor de identidade é o campo marcado como uma identidade.
 * O CRMID é enviado por identityMap. Se a CRMID for enviada como um campo, remova `key='Email'` da cláusula WHERE.

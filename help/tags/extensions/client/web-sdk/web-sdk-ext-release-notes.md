@@ -1,17 +1,30 @@
 ---
-title: Notas de versão da extensão SDK da Web da Adobe Experience Platform
-description: Extensão de tag do SDK da Web da Adobe Experience Platform
+title: Notas de versão da extensão para Adobe Experience Platform Web SDK
+description: Extensão de tag do Adobe Experience Platform Web SDK
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: c38456ab44f3e143a0120f1a756105213a46fab5
+source-git-commit: 08b07aa874b9ca9b5ea76850d6c0320bddddc85e
 workflow-type: tm+mt
-source-wordcount: '2332'
-ht-degree: 33%
+source-wordcount: '2413'
+ht-degree: 31%
 
 ---
 
-# Notas de versão da extensão SDK da Web da Adobe Experience Platform
+# Notas de versão da extensão do Adobe Experience Platform Web SDK
 
-Este documento aborda as notas de versão da extensão de tag do SDK da Web da Adobe Experience Platform. Para obter as notas de versão mais recentes do próprio SDK, consulte as [notas de versão do SDK da Web da plataforma](/help/web-sdk/release-notes.md).
+Este documento aborda as notas de versão da extensão de tag do Adobe Experience Platform Web SDK. Para obter as notas de versão mais recentes do próprio SDK, consulte as [notas de versão do Platform Web SDK](/help/web-sdk/release-notes.md).
+
+## Versão 2.28.0 - quarta-feira, 23 de janeiro de 2024
+
+**Correções e melhorias**
+
+- Correção de um problema em que as substituições do Contêiner de sincronização de ID não podiam ser definidas sem a ativação do Audience Manager.
+- Correção de um problema em que as substituições de configuração da sequência de dados eram desabilitadas ao atualizar para a versão mais recente.
+- Correção de um problema em que os usuários não conseguiam salvar as configurações da coleção de cliques automáticos do Target.
+
+**Novos recursos**
+
+- Adição de um novo recurso para alternar entre nomes técnicos e nomes de exibição no Objeto XDM.
+- Contém a [versão 2.25.0](../../../../web-sdk/release-notes.md#2-25-0) do Adobe Experience Platform Web SDK.
 
 ## Versão 2.27.0 - sexta-feira, 31 de outubro de 2024
 
@@ -20,15 +33,15 @@ Este documento aborda as notas de versão da extensão de tag do SDK da Web da A
 - [Substituições de sequência de dados](../web-sdk/web-sdk-extension-configuration.md#datastream-overrides) agora incluem configurações para desabilitar soluções Experience Cloud e serviços Adobe Experience Platform.
 - Agora você pode criar [substituições de sequência de dados](../web-sdk/web-sdk-extension-configuration.md) para sessões de mídia.
 
-Contém a versão 2.24.0 do SDK da Web do Adobe Experience Platform.
+Contém a versão 2.24.0 do Adobe Experience Platform Web SDK.
 
 ## Versão 2.26.1 - 19 de setembro de 2024
 
 **Correções e melhorias**
 
-- Correção de um problema em que os cookies não eram gravados corretamente ao executar o SDK da Web localmente.
+- Correção de um problema em que os cookies não eram gravados corretamente ao executar o Web SDK localmente.
 
-Contém a versão 2.23.0 do SDK da Web do Adobe Experience Platform.
+Contém a versão 2.23.0 do Adobe Experience Platform Web SDK.
 
 ## Versão 2.26.0 - 22 de agosto de 2024
 
@@ -42,7 +55,7 @@ Contém a versão 2.23.0 do SDK da Web do Adobe Experience Platform.
 - Correção de um problema em que elementos de dados variáveis duplicados podiam se substituir.
 - Ao usar o evento guiado [Solicitar personalização padrão](action-types.md#personalization), as decisões de personalização visual agora são habilitadas automaticamente.
 
-Contém a versão 2.22.0 do SDK da Web do Adobe Experience Platform.
+Contém a versão 2.22.0 do Adobe Experience Platform Web SDK.
 
 ## Versão 2.25.0 - sexta-feira, 18 de julho de 2024
 
@@ -51,7 +64,7 @@ Contém a versão 2.22.0 do SDK da Web do Adobe Experience Platform.
 - Adição de suporte para personalização de rastreamento automático no Adobe Journey Optimizer.
 - Introdução de novas configurações para gerenciar a coleção de cliques aprimorada.
 
-Contém a versão 2.21.1 do SDK da Web da Adobe Experience Platform.
+Contém a versão 2.21.1 do Adobe Experience Platform Web SDK.
 
 ## Versão 2.24.0 - quinta-feira, 5 de junho de 2024
 
@@ -62,7 +75,7 @@ Contém a versão 2.21.1 do SDK da Web da Adobe Experience Platform.
 - Correção de um erro que ocorria ao modificar uma ação de atualização de variável.
 - Permitir a redefinição do contêiner de sincronização de ID nas substituições de configuração.
 
-Contém a versão 2.20.0 do SDK da Web do Adobe Experience Platform.
+Contém a versão 2.20.0 do Adobe Experience Platform Web SDK.
 
 ## Versão 2.23.1 - quarta-feira, 28 de maio de 2024
 
@@ -72,7 +85,7 @@ Contém a versão 2.20.0 do SDK da Web do Adobe Experience Platform.
 - Adição da ação [`Send Media Event`](action-types.md#send-media-event) para a funcionalidade [!DNL Streaming Media Collection].
 - Adição do elemento de dados [`Media: Quality of Experience`](data-element-types.md#quality-experience) para a funcionalidade [!DNL Streaming Media Collection].
 
-Contém a versão 2.20.0 do SDK da Web do Adobe Experience Platform.
+Contém a versão 2.20.0 do Adobe Experience Platform Web SDK.
 
 **Correções e melhorias**
 
@@ -86,7 +99,7 @@ Contém a versão 2.20.0 do SDK da Web do Adobe Experience Platform.
 - Estenda o elemento de dados variável para suportar objetos de dados.
 - A ação Atualizar variável agora é compatível com a modificação de dados de passagem do Adobe Analytics, Adobe Audience Manager e Adobe Target.
 
-Contém a versão 2.19.2 do SDK da Web da Adobe Experience Platform.
+Contém a versão 2.19.2 do Adobe Experience Platform Web SDK.
 
 ## Versão 2.21.4 - quinta-feira, 10 de janeiro de 2024
 
@@ -95,11 +108,11 @@ Contém a versão 2.19.2 do SDK da Web da Adobe Experience Platform.
 - Correção de um problema em que salvar as Substituições de configuração sem todos os três ambientes definidos travaria a interface do usuário da extensão.
 - Correção de um problema em que a caixa de seleção limpar raiz do valor existente não era preenchida ao editar uma ação de atualização de variável.
 
-Contém a versão 2.19.2 do SDK da Web da Adobe Experience Platform.
+Contém a versão 2.19.2 do Adobe Experience Platform Web SDK.
 
 ## Versão 2.21.3 - sábado, 10 de novembro de 2023
 
-Contém a versão 2.19.1 do SDK da Web da Adobe Experience Platform.
+Contém a versão 2.19.1 do Adobe Experience Platform Web SDK.
 
 **Correções e melhorias**
 
@@ -117,7 +130,7 @@ Contém a versão 2.19.1 do SDK da Web da Adobe Experience Platform.
 
 **Correções e melhorias**
 
-- Contém a versão 2.19.0 do SDK da Web do Adobe Experience Platform.
+- Contém a versão 2.19.0 do Adobe Experience Platform Web SDK.
 
 ## Versão 2.20.3 - 8 de agosto de 2023
 
@@ -148,13 +161,13 @@ Contém a versão 2.19.1 do SDK da Web da Adobe Experience Platform.
 
 ## Versão 2.18.0 - sexta-feira, 18 de maio de 2023
 
-- Contém a versão 2.17.0 do SDK da Web do Adobe Experience Platform.
+- Contém a versão 2.17.0 do Adobe Experience Platform Web SDK.
 
 ## Versão 2.17.0 - 25 de abril de 2023
 
 **Novos recursos**
 
-- Contém a versão 2.16.0 do SDK da Web do Adobe Experience Platform.
+- Contém a versão 2.16.0 do Adobe Experience Platform Web SDK.
 - Adicionado suporte para [substituições de configuração de sequência de dados](/help/datastreams/overrides.md).
 - Adicione aviso de descontinuação à opção `datasetId` no comando `sendEvent`.
 
@@ -177,20 +190,20 @@ Contém a versão 2.19.1 do SDK da Web da Adobe Experience Platform.
 
 - Correção de um problema que fazia com que os cliques em elementos em uma tag de âncora não funcionassem quando a ação **[!UICONTROL Redirecionar com identidade]** era usada.
 - Correção de um problema em que os elementos de dados do objeto XDM não funcionavam quando havia apenas um esquema presente.
-- Contém a versão 2.15.0 do SDK da Web da Adobe Experience Platform.
+- Contém a versão 2.15.0 do Adobe Experience Platform Web SDK.
 
 ## Versão 2.15.1 - sexta-feira, 26 de janeiro de 2023
 
 - Correção de um problema em que os usuários sem acesso a sequências de dados não podiam editar a configuração da extensão.
 - Adicionado suporte para superfícies na ação `sendEvent`.
 
-Contém a versão 2.14.0 do SDK da Web do Adobe Experience Platform.
+Contém a versão 2.14.0 do Adobe Experience Platform Web SDK.
 
 ## Versão 2.14.1 - sexta-feira, 13 de outubro de 2022
 
-- Correção de um problema em que o SDK da Web não respeitava a ID do serviço de ID de Experience Cloud.
+- Correção de um problema em que o Web SDK não respeitava a ID do serviço de Experience Cloud ID.
 
-Contém a versão 2.13.1 da biblioteca do SDK da Web da Adobe Experience Platform.
+Contém a versão 2.13.1 da Biblioteca Adobe Experience Platform Web SDK.
 
 ## Versão 2.14.0 - 28 de setembro de 2022
 
@@ -198,13 +211,13 @@ Contém a versão 2.13.1 da biblioteca do SDK da Web da Adobe Experience Platfor
 - Adição de uma ação aplicar resposta para ativar implementações híbridas de cliente-servidor.
 - Adição da opção de contexto de dicas do cliente de agente do usuário de alta entropia.
 
-Contém a versão 2.13.0 da biblioteca do SDK da Web da Adobe Experience Platform.
+Contém a versão 2.13.0 da Biblioteca Adobe Experience Platform Web SDK.
 
 ## Versão 2.13.0 - quinta-feira, 29 de junho de 2022
 
 - Correção da ordem de classificação das propriedades numéricas no elemento de dados Objeto XDM, como eVars.
 
-Contém a versão 2.12.0 da biblioteca do SDK da Web da Adobe Experience Platform.
+Contém a versão 2.12.0 da Biblioteca Adobe Experience Platform Web SDK.
 
 ## Versão 2.12.0 - terça-feira, 13 de junho de 2022
 
@@ -214,24 +227,24 @@ Contém a versão 2.12.0 da biblioteca do SDK da Web da Adobe Experience Platfor
 - Atualização da biblioteca da interface do usuário do Espectro React.
 - Várias melhorias na interface do usuário.
 
-Contém a versão 2.11.0 da biblioteca do SDK da Web da Adobe Experience Platform.
+Contém a versão 2.11.0 da Biblioteca Adobe Experience Platform Web SDK.
 
 ## Versão 2.11.2 - quarta-feira, 3 de maio de 2022
 
-Contém a versão 2.10.1 da biblioteca do SDK da Web da Adobe Experience Platform.
+Contém a versão 2.10.1 da Biblioteca Adobe Experience Platform Web SDK.
 
 ## Versão 2.11.1 - 22 de abril de 2022
 
 - Correção do erro do comando configure na versão 2.11.0.
 
-Contém a versão 2.10.0 da biblioteca do SDK da Web da Adobe Experience Platform.
+Contém a versão 2.10.0 da Biblioteca Adobe Experience Platform Web SDK.
 
 ## Versão 2.11.0 - 22 de abril de 2022
 
 - Aprimoramento do desempenho da interface do usuário de tags.
 - Adicionar seletores de sandbox à configuração da extensão datastreams.
 
-Contém a versão 2.10.0 da biblioteca do SDK da Web da Adobe Experience Platform.
+Contém a versão 2.10.0 da Biblioteca Adobe Experience Platform Web SDK.
 
 ## Versão 2.10.0 - 10 de março de 2022
 

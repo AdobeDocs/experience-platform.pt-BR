@@ -5,9 +5,9 @@ breadcrumb-title: Guia do Serviço de consulta
 user-guide-description: Use o SQL padrão para consultar dados no data lake na Experience Platform.
 feature: Queries
 role: User,Developer
-source-git-commit: c3065710e5f50541b074fc493df07130221d8078
+source-git-commit: 20869e76976ff3868f1d4dbc7c6d97b58682e5c3
 workflow-type: tm+mt
-source-wordcount: '382'
+source-wordcount: '397'
 ht-degree: 21%
 
 ---
@@ -50,6 +50,7 @@ Implementar modelos {#implement-models}
       - [Classificação](advanced-statistics/implement-models/classification.md)
       - [Clustering](advanced-statistics/implement-models/clustering.md)
 Exemplos {#examples}
+      - [Filtragem de bot usando estatísticas e aprendizado de máquina](advanced-statistics/examples/statistics-and-ml-bot-filtering.md)
       - [Preveja o abandono do cliente usando regressão logística baseada em SQL](advanced-statistics/examples/predict-customer-churn.md)
 - Públicos da Distiller de dados {#data-distiller-audiences}
    - [Criar públicos-alvo externos usando SQL](data-distiller-audiences/overview.md)
@@ -58,6 +59,7 @@ Exemplos {#examples}
    - [Navegação abandonada](use-cases/abandoned-browse.md)
    - [Análise de atribuição](use-cases/attribution-analysis.md)
    - [Filtragem de bot](use-cases/bot-filtering.md)
+   - [Filtragem de bot usando estatísticas e introdução ao aprendizado de máquina](use-cases/statistics-and-ml-bot-filtering-stub.md)
    - [Criar um relatório de tendências de eventos](use-cases/trended-report-of-events.md)
    - [Análise de consentimento](use-cases/consent-analysis.md)
    - [Valor vitalício do cliente](use-cases/customer-lifetime-value.md)

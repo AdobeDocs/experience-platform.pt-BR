@@ -5,10 +5,10 @@ breadcrumb-title: Guia do Serviço de consulta
 user-guide-description: Use o SQL padrão para consultar dados no data lake na Experience Platform.
 feature: Queries
 role: User,Developer
-source-git-commit: 83d15e8d6488a400a87f111ec97f06401431b339
+source-git-commit: c3065710e5f50541b074fc493df07130221d8078
 workflow-type: tm+mt
-source-wordcount: '369'
-ht-degree: 22%
+source-wordcount: '382'
+ht-degree: 21%
 
 ---
 
@@ -43,12 +43,14 @@ ht-degree: 22%
    - [Visão geral](advanced-statistics/overview.md)
    - [Engenharia de recursos](advanced-statistics/feature-engineering.md)
    - [Modelos](advanced-statistics/models.md)
+   - [Transformação de recurso](advanced-statistics/feature-transformation.md)
 Implementar modelos {#implement-models}
       - [Implementar modelos](advanced-statistics/implement-models/implement-models.md)
       - [Regressão](advanced-statistics/implement-models/regression.md)
       - [Classificação](advanced-statistics/implement-models/classification.md)
-      - [Geração de cluster](advanced-statistics/implement-models/clustering.md)
-   - [Transformação de recursos](advanced-statistics/feature-transformation.md)
+      - [Clustering](advanced-statistics/implement-models/clustering.md)
+Exemplos {#examples}
+      - [Preveja o abandono do cliente usando regressão logística baseada em SQL](advanced-statistics/examples/predict-customer-churn.md)
 - Públicos da Distiller de dados {#data-distiller-audiences}
    - [Criar públicos-alvo externos usando SQL](data-distiller-audiences/overview.md)
 - Exemplos {#use-cases}
@@ -64,6 +66,7 @@ Implementar modelos {#implement-models}
    - [Correspondência difusa](use-cases/fuzzy-match.md)
    - [Listar as exibições de página de um usuário](use-cases/list-visitor-sessions.md)
    - [Listar visitantes por suas visualizações de página](use-cases/visitors-by-number-of-page-views.md)
+   - [Prever a rotatividade do cliente usando o SQL](use-cases/predict-customer-churn-stub.md)
    - [Pontuação de propensão](use-cases/propensity-score.md)
    - [Recuperar registros semelhantes com funções de ordem superior](use-cases/retrieve-similar-records.md)
    - [Retornar e usar variáveis de merchandising dos dados de análise](use-cases/merchandising-variables.md)

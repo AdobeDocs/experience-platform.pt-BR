@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guia da interface do Editor de consultas
 description: O Editor de consultas é uma ferramenta interativa fornecida pelo Serviço de consultas da Adobe Experience Platform, que permite gravar, validar e executar consultas para dados de experiência do cliente na interface do usuário do Experience Platform. O Editor de consultas é compatível com o desenvolvimento de consultas para análise e exploração de dados, e permite executar consultas interativas para fins de desenvolvimento, bem como consultas não interativas para preencher conjuntos de dados no Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: e66f3540d22a441089916183538921ea5654b312
+source-git-commit: 4c11a35ce914cd0b1aa0084368f5a5929f883963
 workflow-type: tm+mt
-source-wordcount: '2843'
+source-wordcount: '2807'
 ht-degree: 0%
 
 ---
@@ -217,12 +217,9 @@ Cada conjunto de dados contido em [seu banco de dados selecionado](#database-dro
 
 O esquema exibido no navegador de objetos é um esquema observável. Isso significa que você pode usá-lo para monitorar alterações e atualizações em tempo real, já que as alterações ficam visíveis imediatamente. Os esquemas observáveis ajudam a garantir a sincronização de dados e auxiliam nas tarefas de depuração ou análise.
 
-#### Limitações atuais {#current-limitations}
+#### Limitação atual {#current-limitation}
 
-Veja a seguir uma lista das limitações atuais:
-
-- Execução de consulta sequencial: somente uma consulta pode ser executada de cada vez. Enquanto uma consulta estiver em andamento, nenhuma tabela adicional poderá ser aberta na navegação à esquerda, pois as consultas são processadas sequencialmente.
-- Linhas extras em logs de consulta: você pode encontrar consultas irrelevantes rotuladas como &quot;MOSTRAR TABELAS&quot; nos logs. Eles serão removidos em versões futuras.
+O sistema processa consultas sequencialmente, o que significa que apenas uma consulta pode ser executada de cada vez. Enquanto uma consulta estiver em andamento, as tabelas adicionais não poderão ser acessadas na navegação à esquerda.
 
 #### Acessar metadados da tabela {#table-metadata}
 

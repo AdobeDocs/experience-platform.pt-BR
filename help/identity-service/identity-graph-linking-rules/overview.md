@@ -2,10 +2,10 @@
 title: Regras de vinculação do gráfico de identidade
 description: Saiba mais sobre as regras de vinculação de gráficos de identidade no Serviço de identidade.
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: 5092421ed8d0ff61fb3ed7f0849d2271f1fa144c
+source-git-commit: af36856dbf37e69cbc5c6952c583f583fd5b8e96
 workflow-type: tm+mt
-source-wordcount: '1424'
-ht-degree: 2%
+source-wordcount: '1440'
+ht-degree: 3%
 
 ---
 
@@ -34,6 +34,11 @@ Os documentos a seguir são essenciais para entender as regras de vinculação d
 Esta seção descreve cenários de exemplo que você pode considerar ao configurar regras de vinculação de gráficos de identidade.
 
 ### Dispositivo compartilhado
+
+>[!CONTEXTUALHELP]
+>id="platform_identities_graphcollapsescenarios"
+>title="Cenários de recolhimento de gráfico"
+>abstract="Há vários motivos pelos quais os gráficos podem ser “recolhidos” ou representar várias entidades de pessoas."
 
 Há instâncias em que vários logons podem ocorrer em um único dispositivo:
 
@@ -117,7 +122,7 @@ Você deve configurar um namespace exclusivo para informar o algoritmo de otimiz
 
 A prioridade de namespace refere-se à importância relativa dos namespaces em comparação uns com os outros. A prioridade de namespace é configurável por meio da interface do usuário e você pode classificar namespaces em um determinado gráfico de identidade.
 
-Uma maneira pela qual a prioridade do namespace é usada é ao determinar a identidade principal dos fragmentos de evento de experiência (comportamento do usuário) no Perfil do cliente em tempo real. Se as configurações de prioridade estiverem definidas, a configuração de identidade principal no SDK da Web não será mais usada para determinar quais fragmentos de perfil estão armazenados.
+Uma maneira pela qual a prioridade do namespace é usada é ao determinar a identidade principal dos fragmentos de evento de experiência (comportamento do usuário) no Perfil do cliente em tempo real. Se as configurações de prioridade estiverem definidas, a configuração de identidade principal no Web SDK não será mais usada para determinar quais fragmentos de perfil estão armazenados.
 
 Namespaces exclusivos e prioridades de namespace podem ser configurados no espaço de trabalho da interface do usuário de configurações de identidade. No entanto, os efeitos de suas configurações são diferentes:
 

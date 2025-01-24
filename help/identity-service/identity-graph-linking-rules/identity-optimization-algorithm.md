@@ -2,9 +2,9 @@
 title: Algoritmo de otimização de identidade
 description: Saiba mais sobre o Algoritmo de otimização de identidade no Serviço de identidade.
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: cfe0181104f09bfd91b22d165c23154a15cd5344
+source-git-commit: f067f8d4628d76b4a87b9dd97d1d703c54688871
 workflow-type: tm+mt
-source-wordcount: '1528'
+source-wordcount: '1560'
 ht-degree: 2%
 
 ---
@@ -22,6 +22,11 @@ O algoritmo de otimização de identidade é um algoritmo de gráfico no Serviç
 Leia esta seção para obter informações sobre namespaces exclusivos e prioridade de namespace. Esses dois conceitos servem como parâmetros de entrada exigidos pelo algoritmo de otimização de identidade.
 
 ### Namespace exclusivo {#unique-namespace}
+
+>[!CONTEXTUALHELP]
+>id="platform_identities_uniquenamespace"
+>title="Configuração do algoritmo"
+>abstract="Um gráfico não pode ter duas identidades com um namespace exclusivo. Se um gráfico tentar exceder esse limite, os links mais recentes serão mantidos e os links mais antigos serão removidos."
 
 Um namespace exclusivo determina os links que serão removidos se ocorrer o recolhimento do gráfico.
 

@@ -2,10 +2,10 @@
 title: Lógica de vinculação do serviço de identidade
 description: Saiba mais sobre como o Serviço de identidade vincula identidades diferentes para criar uma visualização abrangente de um cliente.
 exl-id: 1c958c0e-0777-48db-862c-eb12b2e7a03c
-source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
+source-git-commit: f067f8d4628d76b4a87b9dd97d1d703c54688871
 workflow-type: tm+mt
-source-wordcount: '955'
-ht-degree: 0%
+source-wordcount: '968'
+ht-degree: 2%
 
 ---
 
@@ -29,7 +29,12 @@ Uma identidade representa uma entidade real. Se houver um vínculo estabelecido 
 | Um usuário final faz logon usando o Google Chrome e, em seguida, o Firefox. | A CRMID está vinculada a duas ECIDs diferentes. | Uma pessoa (CRMID) está associada a dois navegadores da Web (**Observação**: cada navegador terá sua própria ECID). |
 | Um engenheiro de dados assimila um registro do CRM que inclui dois campos marcados como uma identidade: CRMID e Email. | CRMID e Email estão vinculados. | Uma pessoa (CRMID) está associada ao endereço de email. |
 
-## Compreender a lógica de vinculação do Serviço de identidade
+## Compreender a lógica de vinculação do Serviço de identidade {#identity-linking-logic}
+
+>[!CONTEXTUALHELP]
+>id="platform_identities_simulatedgraph"
+>title="Gráfico simulado"
+>abstract="As identidades são vinculadas quando o namespace de identidade e o valor da identidade correspondem."
 
 Uma identidade consiste em um namespace de identidade e um valor de identidade.
 

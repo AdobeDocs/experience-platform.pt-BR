@@ -2,14 +2,19 @@
 title: Gerenciamento de permissões para coleta de dados no Experience Platform
 description: Uma visão geral de alto nível sobre como gerenciar permissões e controlar o acesso aos recursos de coleção de dados no Adobe Experience Platform.
 exl-id: 8426d54b-ec1d-475a-a769-f45a8c924fe7
-source-git-commit: 60590a77859320891717244eec58b556935354b5
+source-git-commit: 2d71eafb00098d958c8cff9350caa27bd3f0260d
 workflow-type: tm+mt
-source-wordcount: '1338'
+source-wordcount: '1356'
 ht-degree: 26%
 
 ---
 
-# Gerenciamento de permissões para coleta de dados no Experience Platform
+# Gerenciamento de permissões para coleta de dados no Experience Platform {#permission-management}
+
+>[!CONTEXTUALHELP]
+>id="platform_tags_permissions"
+>title="Permissões"
+>abstract="Entenda as principais permissões necessárias para trabalhar com fluxos de dados, esquemas, identidades e sandboxes na Adobe Experience Platform."
 
 [A coleta de dados no Adobe Experience Platform](./home.md) é composta por várias tecnologias diferentes que trabalham juntas para coletar e transferir seus dados. O acesso a essas tecnologias é controlado por meio de permissões granulares baseadas em funções no Adobe Admin Console.
 

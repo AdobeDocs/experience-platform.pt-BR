@@ -3,7 +3,7 @@ title: Notas de versão do SDK da Web da Adobe Experience Platform
 description: As notas de versão mais recentes do SDK da Web da Adobe Experience Platform.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;notas de versão;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 08b07aa874b9ca9b5ea76850d6c0320bddddc85e
+source-git-commit: 5bf69773d0502185bbe8db3b13cb2684d6d06ac4
 workflow-type: tm+mt
 source-wordcount: '2149'
 ht-degree: 5%
@@ -16,13 +16,13 @@ ht-degree: 5%
 Este documento aborda as notas de versão do Adobe Experience Platform Web SDK.
 Para obter as notas de versão mais recentes da extensão de tag do Web SDK, consulte as [notas de versão da extensão de tag do Web SDK](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
 
-## Versão 2.25.0 - quarta-feira, 23 de janeiro de 2024 {#2-25-0}
+## Versão 2.25.0 - sexta-feira, 23 de janeiro de 2025
 
 **Correções e melhorias**
 
-- Validação de opção adicionada ao comando `setDebug`.
+- Adicionada validação de opção ao comando `setDebug`.
 - Adicionado um aviso ao configurar uma função `onBeforeLinkClickSend` ou um qualificador de link de download quando a coleção de cliques está desabilitada.
-- Correção de um problema em que as apresentações renderizadas não eram incluídas nas notificações de exibição
+- Correção de um problema em que as apresentações renderizadas não eram incluídas nas notificações de exibição.
 
 **Novos recursos**
 

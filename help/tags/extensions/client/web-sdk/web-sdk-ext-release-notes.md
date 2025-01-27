@@ -2,7 +2,7 @@
 title: Notas de versão da extensão para Adobe Experience Platform Web SDK
 description: Extensão de tag do Adobe Experience Platform Web SDK
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 08b07aa874b9ca9b5ea76850d6c0320bddddc85e
+source-git-commit: 5bf69773d0502185bbe8db3b13cb2684d6d06ac4
 workflow-type: tm+mt
 source-wordcount: '2413'
 ht-degree: 31%
@@ -13,7 +13,7 @@ ht-degree: 31%
 
 Este documento aborda as notas de versão da extensão de tag do Adobe Experience Platform Web SDK. Para obter as notas de versão mais recentes do próprio SDK, consulte as [notas de versão do Platform Web SDK](/help/web-sdk/release-notes.md).
 
-## Versão 2.28.0 - quarta-feira, 23 de janeiro de 2024
+## Versão 2.28.0 - sexta-feira, 23 de janeiro de 2025
 
 **Correções e melhorias**
 

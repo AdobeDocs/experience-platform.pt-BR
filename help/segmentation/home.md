@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Visão geral do serviço de segmentação
 description: Saiba mais sobre o Serviço de segmentação da Adobe Experience Platform e a função que ele desempenha no ecossistema da plataforma.
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-source-git-commit: 515a7cc3ba12afe14aab3e882b7fd55d5cc09069
+source-git-commit: 4ef3f6dc07cb5d17146d48c7a41e3745fd9a3a58
 workflow-type: tm+mt
-source-wordcount: '1700'
-ht-degree: 13%
+source-wordcount: '1679'
+ht-degree: 12%
 
 ---
 
@@ -52,13 +52,9 @@ Para obter informações sobre como criar definições de segmento usando a API,
 >
 >Além disso, se um valor de expiração de Evento de experiência estiver ativado no conjunto de dados, isso pode afetar a associação da definição de segmento criada. Leia o guia em [Expirações do evento de experiência](../profile/event-expirations.md) para obter mais informações sobre como esse recurso pode afetar a segmentação.
 
-### Composição federada de público-alvo {#fac}
+### Composição de público-alvo federado {#fac}
 
-Além das composições de público-alvo e definições de segmento, você pode usar a Composição de público-alvo federado do Adobe para criar novos públicos-alvo a partir de conjuntos de dados corporativos sem copiar os dados subjacentes e armazená-los no Portal de público-alvo da Adobe Experience Platform. Você também pode enriquecer os públicos-alvo existentes no Adobe Experience Platform utilizando dados de público-alvo compostos que foram federados a partir do data warehouse corporativo. Leia o guia em [Composição de Público-Alvo Federado](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home).
-
->[!AVAILABILITY]
->
->No momento, a Composição federada de público-alvo está disponível apenas para um conjunto de organizações (Disponibilidade limitada). Para obter mais informações, entre em contato com o seu representante da Adobe.
+Além das composições de público-alvo e definições de segmento, você pode usar a Composição de público-alvo federado do Adobe para criar novos públicos-alvo a partir de conjuntos de dados corporativos sem copiar os dados subjacentes e armazená-los no Portal de público-alvo da Adobe Experience Platform. Você também pode enriquecer os públicos-alvo existentes no Adobe Experience Platform utilizando dados de público-alvo compostos que foram federados a partir do data warehouse corporativo. Leia o guia em [Composição de Público-Alvo Federado](https://experienceleague.adobe.com/pt-br/docs/federated-audience-composition/using/home).
 
 ## Avaliar públicos-alvo {#evaluate-segments}
 
@@ -122,7 +118,7 @@ Ao criar uma nova definição de segmento, você deve fornecer um nome. O nome d
 >
 >Ao planejar uma definição de segmento, lembre-se de que as definições de segmento podem ser referenciadas e combinadas com qualquer outra definição de segmento. Ao selecionar um nome, considere a possibilidade de que a definição do segmento possa conter partes reutilizáveis.
 
-### Políticas de mesclagem
+### Mesclar políticas
 
 As políticas de mesclagem são regras usadas por [!DNL Profile] para determinar como os dados serão priorizados e combinados em uma exibição unificada em determinadas condições.
 

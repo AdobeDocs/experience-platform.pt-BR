@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Visão geral da interface do Experience Platform
 description: Adobe Experience Platform
 exl-id: 47f9a3fb-731d-4ade-8069-faaa18f224dc
-source-git-commit: 9844a7bf5e7198e7d5112ec924220aba71cdc14b
+source-git-commit: 6210f78e79c6c528296378756c9d11e35d092736
 workflow-type: tm+mt
-source-wordcount: '1947'
-ht-degree: 2%
+source-wordcount: '1924'
+ht-degree: 1%
 
 ---
 
@@ -157,7 +157,7 @@ A seção **[!UICONTROL Consultas]** permite criar e gerenciar consultas, regist
 
 A seção **[!UICONTROL Monitoramento]** permite monitorar a assimilação de lote e streaming. Você pode encontrar mais informações sobre monitoramento no [guia do usuário de assimilação de dados de monitoramento](../ingestion/quality/monitor-data-ingestion.md).
 
-### [!UICONTROL Dados federados] (disponibilidade limitada)
+### [!UICONTROL Dados federados]
 
 A seção **[!UICONTROL Modelos]** permite projetar e criar modelos de dados e esquemas que definem a estrutura, as relações e as restrições de seus dados. Você pode encontrar mais informações sobre modelos de dados e esquemas no [guia do usuário da Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/config/datamodel/schemas).
 
@@ -165,10 +165,6 @@ A seção **[!UICONTROL Trilha de auditoria]** fornece um registro detalhado e c
 
 
 A seção **[!UICONTROL Federated databases]** permite conectar o Adobe Experience Platform ao data warehouse da sua empresa. Você pode encontrar mais informações sobre conexão com bancos de dados federados no [guia do usuário do Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/config/federated-db).
-
->[!AVAILABILITY]
->
->No momento, a Composição federada de público-alvo está disponível apenas para um conjunto de organizações (Disponibilidade limitada). Para obter mais informações, entre em contato com o seu representante da Adobe.
 
 ### [!UICONTROL Decisão]
 

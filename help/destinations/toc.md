@@ -5,9 +5,9 @@ user-guide-description: Ative seus dados conhecidos e desconhecidos para campanh
 description: Este documento lista o índice dos destinos do Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: c5543997747daa336b0a5bb40c46aa720e8bcadd
+source-git-commit: 6210f78e79c6c528296378756c9d11e35d092736
 workflow-type: tm+mt
-source-wordcount: '1273'
+source-wordcount: '1271'
 ht-degree: 5%
 
 ---
@@ -67,7 +67,7 @@ ht-degree: 5%
       * [Conexão de Sincronização de pessoas do Marketo Engage (Beta)](./catalog/adobe/marketo-engage-person-sync.md)
       * [Conexão com o Marketo Measure Ultimate](./catalog/adobe/marketo-measure-ultimate.md)
       * [compartilhamento de público-alvo de Experience Platform](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
-      * [Conexão Federated Audience Composition (Disponibilidade limitada)](https://www.adobe.com/go/destinations-federated-audience-composition)
+      * [Conexão de Composição de Público Federado](https://www.adobe.com/go/destinations-federated-audience-composition)
    * Destinos do Advertising{#advertising}
       * [(Beta) Distribuição de público-alvo da Acxiom](./catalog/advertising/acxiom-audience-distribution.md)
       * [Visão geral dos destinos do Advertising](./catalog/advertising/overview.md)

@@ -5,10 +5,10 @@ breadcrumb-title: Guia do Serviço de segmentação
 user-guide-description: Crie públicos-alvo a partir dos dados do perfil do cliente em tempo real usando definições de segmento geradas pela Adobe Experience Platform ou fontes externas.
 feature: Segments
 role: User
-source-git-commit: 0bbee2100ed6fdc0f40457965e195d07de6eb2a1
+source-git-commit: 4ef3f6dc07cb5d17146d48c7a41e3745fd9a3a58
 workflow-type: tm+mt
-source-wordcount: '194'
-ht-degree: 44%
+source-wordcount: '192'
+ht-degree: 43%
 
 ---
 
@@ -36,7 +36,7 @@ ht-degree: 44%
    - [Portal de público-alvo](ui/audience-portal.md)
    - [Composição de público-alvo](ui/audience-composition.md)
    - [Construtor de segmentos](ui/segment-builder.md)
-   - [Composição de público-alvo federado (disponibilidade limitada)](https://experienceleague.adobe.com/pt-br/docs/federated-audience-composition/using/home)
+   - [Composição de público-alvo federado](https://experienceleague.adobe.com/pt-br/docs/federated-audience-composition/using/home)
    - [Públicos-alvo da conta](ui/account-audiences.md)
    - [Públicos-alvo semelhantes](ui/lookalike-audiences.md)
    - [Públicos-alvo em potencial](ui/prospect-audience.md)

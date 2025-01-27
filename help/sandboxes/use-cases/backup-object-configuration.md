@@ -1,7 +1,8 @@
 ---
 title: Fazer backup de configurações de objeto usando ferramentas de sandbox
 description: Para redefinir sandboxes com segurança e adicionar suporte ao controle de versão, faça backup das configurações de objeto (ou metadados) usando pacotes de ferramentas de sandbox. Os pacotes de backup evitam a perda de configurações críticas, como esquemas, conjuntos de dados e públicos-alvo, especialmente durante iterações de desenvolvimento.
-source-git-commit: f0cbee2663682f0afae6d7e4b174f250fcb3df53
+exl-id: cccbaaf1-ee68-4a00-9a44-aa5db4a83a14
+source-git-commit: 2a700788d9b59bcdb4195e34d77eccd278803d42
 workflow-type: tm+mt
 source-wordcount: '1168'
 ht-degree: 3%

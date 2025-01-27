@@ -2,9 +2,9 @@
 title: Hosts SFTP
 description: Saiba como configurar tags na Adobe Experience Platform para fornecer builds de biblioteca a um servidor SFTP seguro e auto-hospedado.
 exl-id: 3c1dc43b-291c-4df4-94f7-a03b25dbb44c
-source-git-commit: 85bd78928b1b503bbb6bbc44075ed0f66e046a4c
+source-git-commit: b3c3bf0a39a30e8c9baf81ec20945497acef5465
 workflow-type: tm+mt
-source-wordcount: '811'
+source-wordcount: '810'
 ht-degree: 38%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 38%
 >
 >O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleta de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
-O Adobe Experience Platform permite que você forneça builds de bibliotecas de tags para um servidor SFTP seguro que você hospeda, fornecendo maior controle sobre como seus builds são armazenados e gerenciados. Este guia aborda como configurar um host SFTP para uma propriedade de tag na interface do usuário do Experience Platform ou na interface da coleção de dados.
+O Experience Platform permite que você forneça builds de bibliotecas de tags para um servidor SFTP seguro que você hospeda, fornecendo maior controle sobre como seus builds são armazenados e gerenciados. Este guia aborda como configurar um host SFTP para uma propriedade de tag na interface do usuário do Experience Platform ou na interface da coleção de dados.
 
 >[!NOTE]
 >

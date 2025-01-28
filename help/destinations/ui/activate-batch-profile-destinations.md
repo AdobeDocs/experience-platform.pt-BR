@@ -3,9 +3,9 @@ title: Ativar públicos para destinos de exportação de perfil em lote
 type: Tutorial
 description: Saiba como ativar os públicos-alvo no Adobe Experience Platform enviando-os para destinos com base em perfil de lote.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: de9c838c8a9d07165b4cc8a602df0c627a8b749c
+source-git-commit: b4b185cab4defbf9559089e5152075674dab52d1
 workflow-type: tm+mt
-source-wordcount: '4395'
+source-wordcount: '4387'
 ht-degree: 10%
 
 ---
@@ -439,25 +439,32 @@ Ao exportar perfis para destinos baseados em arquivo, a desduplicação garante 
 
 * **Seleção determinística**: quando vários perfis têm chaves de desduplicação idênticas e o mesmo carimbo de data/hora de referência, a lógica de desduplicação determina qual perfil deve ser exportado ao classificar os valores de outras colunas selecionadas (excluindo tipos complexos, como matrizes, mapas ou objetos). Os valores classificados são avaliados em ordem lexicográfica e o primeiro perfil é selecionado.
 
-* **Exemplo de cenário**:\
-  Considere os seguintes dados, em que a chave de desduplicação é a coluna `Email`:\
-  |Email*|nome|sobrenome|carimbo de data/hora|\
-  |—|—|—|—|\
-  |test1@test.com|John|Morris|2024-10-12T09:50|\
-  |test1@test.com|John|Doe|2024-10-12T09:50|\
-  |test2@test.com|Frank|Smith|2024-10-12T09:50|
+* **Exemplo de cenário**
 
-  Após a desduplicação, o arquivo de exportação conterá:\
-  |Email*|nome|sobrenome|carimbo de data/hora|\
-  |—|—|—|—|\
-  |test1@test.com|John|Doe|2024-10-12T09:50|\
-  |test2@test.com|Frank|Smith|2024-10-12T09:50|
+Considere os seguintes dados, em que a chave de desduplicação é a coluna `Email`:
 
-  **Explicação**: para `test1@test.com`, ambos os perfis compartilham a mesma chave de desduplicação e carimbo de data/hora. O algoritmo classifica os valores de coluna `first_name` e `last_name` lexicograficamente. Como os nomes são idênticos, o vínculo é resolvido usando a coluna `last_name`, em que &quot;Doe&quot; vem antes de &quot;Morris&quot;.
+| E-mail* | first_name | last_name | carimbo de data e hora |
+|---|---|---|---|  
+| `test1@test.com` | John | Morris | 2024-10-12T09:50 |
+| `test1@test.com` | John | Doe | 2024-10-12T09:50 |
+| `test2@test.com` | Frank | Smith | 2024-10-12T09:50 |
 
-* **Confiabilidade aprimorada**: esse processo de desduplicação atualizado garante que execuções sucessivas com as mesmas coordenadas sempre produzirão os mesmos resultados, melhorando a consistência.
+{style="table-layout:auto"}
 
-### [!BADGE Beta]{type=Informative} Exporte matrizes por meio de campos calculados {#export-arrays-calculated-fields}
+Após a desduplicação, o arquivo de exportação conterá:
+
+| E-mail* | first_name | last_name | carimbo de data e hora |
+|---|---|---|---|  
+| `test1@test.com` | John | Doe | 2024-10-12T09:50 |
+| `test2@test.com` | Frank | Smith | 2024-10-12T09:50 |
+
+{style="table-layout:auto"}
+
+**Explicação**: para `test1@test.com`, ambos os perfis compartilham a mesma chave de desduplicação e carimbo de data/hora. O algoritmo classifica os valores de coluna `first_name` e `last_name` lexicograficamente. Como os nomes são idênticos, o vínculo é resolvido usando a coluna `last_name`, em que &quot;Doe&quot; vem antes de &quot;Morris&quot;.
+
+**Confiabilidade aprimorada**: esse processo de desduplicação atualizado garante que execuções sucessivas com as mesmas coordenadas sempre produzirão os mesmos resultados, melhorando a consistência.
+
+### Exportar matrizes por meio de campos calculados {#export-arrays-calculated-fields}
 
 Os clientes beta selecionados podem exportar objetos de matriz do Experience Platform para destinos de armazenamento na nuvem. Leia mais sobre [exportação de matrizes e campos calculados](/help/destinations/ui/export-arrays-calculated-fields.md) e entre em contato com seu representante da Adobe para obter acesso à funcionalidade.
 
@@ -474,10 +481,10 @@ Devido a uma limitação conhecida, no momento, você não pode usar a janela **
 
 >[!NOTE]
 >
-Para destinos de armazenamento em nuvem, os seguintes atributos são adicionados ao mapeamento por padrão:
+>Para destinos de armazenamento em nuvem, os seguintes atributos são adicionados ao mapeamento por padrão:
 >
-* `segmentMembership.seg_namespace.seg_id.status`
-* `segmentMembership.seg_namespace.seg_id.lastQualificationTime`
+>* `segmentMembership.seg_namespace.seg_id.status`
+>* `segmentMembership.seg_namespace.seg_id.lastQualificationTime`
 
 As exportações de arquivos variam das seguintes maneiras, dependendo se `segmentMembership.seg_namespace.seg_id.status` está ou não selecionado:
 
@@ -500,9 +507,9 @@ Como solução temporária, se você precisar adicionar namespaces de identidade
 
 >[!IMPORTANT]
 > 
-Todos os destinos de armazenamento na nuvem do catálogo podem exibir uma [[!UICONTROL etapa de Mapeamento] aprimorada](#mapping) que substitui a **[!UICONTROL etapa Selecionar atributos]** descrita nesta seção.
+>Todos os destinos de armazenamento na nuvem do catálogo podem exibir uma [[!UICONTROL etapa de Mapeamento] aprimorada](#mapping) que substitui a **[!UICONTROL etapa Selecionar atributos]** descrita nesta seção.
 >
-Esta etapa **[!UICONTROL Selecionar atributos]** ainda é exibida para os destinos de marketing por email do Adobe Campaign, Oracle Responsys, Oracle Eloqua e Salesforce Marketing Cloud.
+>Esta etapa **[!UICONTROL Selecionar atributos]** ainda é exibida para os destinos de marketing por email do Adobe Campaign, Oracle Responsys, Oracle Eloqua e Salesforce Marketing Cloud.
 
 Para destinos baseados em perfil, você deve selecionar os atributos de perfil que deseja enviar ao destino.
 
@@ -522,15 +529,15 @@ Para destinos baseados em perfil, você deve selecionar os atributos de perfil q
 
 >[!NOTE]
 >
-O Adobe Experience Platform preenche sua seleção com quatro atributos recomendados usados com frequência do esquema: `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.seg_namespace.seg_id.status`.
+> O Adobe Experience Platform preenche sua seleção com quatro atributos recomendados usados com frequência do esquema: `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.seg_namespace.seg_id.status`.
 
 ![Imagem mostrando atributos recomendados preenchidos previamente na etapa de mapeamento do fluxo de trabalho de ativação de público-alvo.](../assets/ui/activate-batch-profile-destinations/prefilled-fields.png)
 
 >[!IMPORTANT]
 >
-Devido a uma limitação conhecida, no momento, você não pode usar a janela **[!UICONTROL Selecionar campo]** para adicionar `segmentMembership.seg_namespace.seg_id.status` às suas exportações de arquivo. Em vez disso, você deve colar manualmente o valor `xdm: segmentMembership.seg_namespace.seg_id.status` no campo de esquema, conforme mostrado abaixo.
+>Devido a uma limitação conhecida, no momento, você não pode usar a janela **[!UICONTROL Selecionar campo]** para adicionar `segmentMembership.seg_namespace.seg_id.status` às suas exportações de arquivo. Em vez disso, você deve colar manualmente o valor `xdm: segmentMembership.seg_namespace.seg_id.status` no campo de esquema, conforme mostrado abaixo.
 >
-![Gravação de tela mostrando a solução alternativa de associação de público na etapa de mapeamento do fluxo de trabalho de ativação.](..//assets/ui/activate-batch-profile-destinations/segment-membership.gif)
+>![Gravação de tela mostrando a solução alternativa de associação de público na etapa de mapeamento do fluxo de trabalho de ativação.](..//assets/ui/activate-batch-profile-destinations/segment-membership.gif)
 
 As exportações de arquivos variam das seguintes maneiras, dependendo se `segmentMembership.seg_namespace.seg_id.status` está ou não selecionado:
 * Se o campo `segmentMembership.seg_namespace.seg_id.status` estiver selecionado, os arquivos exportados incluirão membros **[!UICONTROL Ativos]** no instantâneo completo inicial e membros **[!UICONTROL Ativos]** e **[!UICONTROL Expirados]** em exportações incrementais subsequentes.
@@ -538,14 +545,14 @@ As exportações de arquivos variam das seguintes maneiras, dependendo se `segme
 
 ## Selecionar atributos de enriquecimento {#select-enrichment-attributes}
 
-[!CONTEXTUALHELP]
-id="platform_destinations_activate_exclude_enrichment_attributes"
-title="Excluir atributos de enriquecimento"
-abstract="Habilite essa opção para exportar os perfis dos públicos-alvo personalizados enviados que foram selecionados para o seu destino, enquanto exclui todos os atributos deles."
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_exclude_enrichment_attributes"
+>title="Excluir atributos de enriquecimento"
+>abstract="Habilite essa opção para exportar os perfis dos públicos-alvo personalizados enviados que foram selecionados para o seu destino, enquanto exclui todos os atributos deles."
 
 >[!IMPORTANT]
 >
-Esta etapa só será exibida se você tiver selecionado **[!UICONTROL Upload personalizado]** públicos-alvo durante a etapa [seleção de público-alvo](#select-audiences).
+>Esta etapa só será exibida se você tiver selecionado **[!UICONTROL Upload personalizado]** públicos-alvo durante a etapa [seleção de público-alvo](#select-audiences).
 
 Os atributos de enriquecimento correspondem aos públicos-alvo carregados personalizados assimilados no Experience Platform como **[!UICONTROL Uploads personalizados]**. Nesta etapa, você pode selecionar quais atributos deseja exportar para o seu destino, para cada público externo selecionado.
 
@@ -572,12 +579,12 @@ Selecione **[!UICONTROL Avançar]** para ir até a etapa [Revisão](#review).
 
 >[!NOTE]
 > 
-Se algum rótulo de uso de dados tiver sido aplicado a determinados campos em um conjunto de dados (em vez do conjunto de dados inteiro), a aplicação desses rótulos de nível de campo na ativação ocorrerá nas seguintes condições:
+>Se algum rótulo de uso de dados tiver sido aplicado a determinados campos em um conjunto de dados (em vez do conjunto de dados inteiro), a aplicação desses rótulos de nível de campo na ativação ocorrerá nas seguintes condições:
 >
-* Os campos são usados na definição de público-alvo.
-* Os campos são configurados como atributos projetados para o destino.
+>* Os campos são usados na definição de público-alvo.
+>* Os campos são configurados como atributos projetados para o destino.
 >
-Por exemplo, se o campo `person.name.firstName` tiver determinados rótulos de uso de dados que estão em conflito com a ação de marketing do destino, você verá uma violação da política de uso de dados na etapa de revisão. Para obter mais informações, consulte [Governança de dados no Adobe Experience Platform](../../rtcdp/privacy/data-governance-overview.md#destinations).
+> Por exemplo, se o campo `person.name.firstName` tiver determinados rótulos de uso de dados que estão em conflito com a ação de marketing do destino, você verá uma violação da política de uso de dados na etapa de revisão. Para obter mais informações, consulte [Governança de dados no Adobe Experience Platform](../../rtcdp/privacy/data-governance-overview.md#destinations).
 
 Na página **[!UICONTROL Revisão]**, você pode ver um resumo da sua seleção. Selecione **[!UICONTROL Cancelar]** para interromper o fluxo, **[!UICONTROL Voltar]** para modificar suas configurações ou **[!UICONTROL Concluir]** para confirmar sua seleção e começar a enviar dados ao destino.
 
@@ -585,10 +592,10 @@ Na página **[!UICONTROL Revisão]**, você pode ver um resumo da sua seleção.
 
 ### Avaliação da política de consentimento {#consent-policy-evaluation}
 
-[!CONTEXTUALHELP]
-id="platform_governance_policies_viewApplicableConsentPolicies"
-title="Exibir políticas de consentimento aplicáveis"
-abstract="Se sua organização adquiriu o **Adobe Healthcare Shield** ou o **Adobe Privacy &amp; Security Shield**, selecione **[!UICONTROL Exibir políticas de consentimento aplicáveis]** para ver quais políticas de consentimento são aplicadas e quantos perfis são incluídos na ativação como resultado delas. Esse controle será desabilitado se a empresa não tiver acesso às SKUs mencionadas acima."
+>[!CONTEXTUALHELP]
+>id="platform_governance_policies_viewApplicableConsentPolicies"
+>title="Exibir políticas de consentimento aplicáveis"
+>abstract="Se sua organização adquiriu o **Adobe Healthcare Shield** ou o **Adobe Privacy &amp; Security Shield**, selecione **[!UICONTROL Exibir políticas de consentimento aplicáveis]** para ver quais políticas de consentimento são aplicadas e quantos perfis são incluídos na ativação como resultado delas. Esse controle será desabilitado se a empresa não tiver acesso às SKUs mencionadas acima."
 
 Se sua organização adquiriu o **Adobe Healthcare Shield** ou o **Adobe Privacy &amp; Security Shield**, selecione **[!UICONTROL Exibir políticas de consentimento aplicáveis]** para ver quais políticas de consentimento são aplicadas e quantos perfis são incluídos na ativação como resultado delas. Leia sobre [avaliação de política de consentimento](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) para obter mais informações.
 

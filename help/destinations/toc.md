@@ -5,9 +5,9 @@ user-guide-description: Ative seus dados conhecidos e desconhecidos para campanh
 description: Este documento lista o índice dos destinos do Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: 6210f78e79c6c528296378756c9d11e35d092736
+source-git-commit: e916488be3d10e47193e66c1f9516cb5da93c3a7
 workflow-type: tm+mt
-source-wordcount: '1271'
+source-wordcount: '1270'
 ht-degree: 5%
 
 ---
@@ -103,7 +103,7 @@ ht-degree: 5%
       * [Conexão PubMatic Connect](./catalog/advertising/pubmatic.md)
       * [Conexão com o Snapchat Ads](./catalog/advertising/snap-inc.md)
       * [A conexão com a Trade Desk](./catalog/advertising/tradedesk.md)
-      * [(Beta) A conexão do CRM da Trade Desk](./catalog/advertising/tradedesk-emails.md)
+      * [A conexão do CRM da Trade Desk](./catalog/advertising/tradedesk-emails.md)
       * [Extensão de tag do site universal do Twitter](./catalog/advertising/twitter-uwt.md)
       * [Conexão de dadosX Yahoo/Verizon](./catalog/advertising/datax.md)
    * Destinos do Analytics {#analytics}

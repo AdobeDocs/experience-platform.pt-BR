@@ -1,30 +1,28 @@
 ---
-title: (Beta) A conexão Trade Desk - CRM
+title: A conexão Trade Desk - CRM
 description: Ative perfis para sua conta da Trade Desk para direcionamento e supressão de público com base nos dados do CRM.
-last-substantial-update: 2023-01-25T00:00:00Z
+last-substantial-update: 2025-01-16T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
-source-git-commit: 3c645ccf5b9dd17e4c3cc1267b60a9c4f1131668
+source-git-commit: a189a86749996c0ee7b6146bcd030d8495745e12
 workflow-type: tm+mt
-source-wordcount: '1148'
+source-wordcount: '1117'
 ht-degree: 5%
 
 ---
 
-# (Beta) A conexão [!DNL Trade Desk] - CRM
+# A conexão [!DNL Trade Desk] - CRM
 
 >[!IMPORTANT]
->
->[!DNL The Trade Desk - CRM] destino na Platform está atualmente na versão beta. A documentação e a funcionalidade estão sujeitas a alterações.
 >
 >Com o lançamento da EUID (European Unified ID), você verá agora dois destinos do [!DNL The Trade Desk - CRM] no [catálogo de destinos](/help/destinations/catalog/overview.md).
 >* Se seus dados se originarem da UE, use o destino **[!DNL The Trade Desk - CRM (EU)]**.
 >* Se seus dados se originarem das regiões da Ásia-Pacífico ou América do Norte, use o destino **[!DNL The Trade Desk - CRM (NAMER & APAC)]**.
 >
->Ambos os destinos em Experience Platform estão atualmente em beta. Esse conector de destino e a página de documentação são criados e mantidos pela equipe *[!DNL Trade Desk]*. Para qualquer consulta ou solicitação de atualização, entre em contato com o representante do [!DNL Trade Desk], a documentação e a funcionalidade estão sujeitas a alterações.
+>Esse conector de destino e a página de documentação são criados e mantidos pela equipe *[!DNL Trade Desk]*. Para qualquer consulta ou solicitação de atualização, contate o representante do [!DNL Trade Desk].
 
 ## Visão geral {#overview}
 
-Este documento foi criado para ajudar você a ativar perfis na sua conta do [!DNL Trade Desk] para direcionamento de público e supressão com base nos dados do CRM.
+Entenda como você pode ativar perfis para sua conta do [!DNL Trade Desk] para direcionamento e supressão de público com base nos dados do CRM.
 
 Este conector envia dados para o ponto de extremidade primário [!DNL The Trade Desk]. A integração entre o Adobe Experience Platform e o [!DNL The Trade Desk] não oferece suporte à exportação de dados para o ponto de extremidade de terceiros [!DNL The Trade Desk].
 
@@ -36,7 +34,9 @@ O [!DNL The Trade Desk(TTD)] não lida diretamente com o arquivo de carregamento
 
 ## Pré-requisitos {#prerequisites}
 
-Antes de poder ativar públicos para [!DNL The Trade Desk], você deve contatar seu gerente de conta do [!DNL The Trade Desk] para assinar o contrato de Integração do CRM. [!DNL The Trade Desk] dará permissão e compartilhará sua ID de anunciante para configurar seu destino.
+>[!IMPORTANT]
+>
+>Antes de poder ativar públicos para a Trade Desk, você deve entrar em contato com o gerente de conta do [!DNL Trade Desk] para assinar o contrato de integração do CRM. O [!DNL The Trade Desk] habilitará o uso de UID2/EUID e compartilhará outros detalhes para ajudá-lo a configurar seu destino.
 
 ## Requisitos de correspondência de ID {#id-matching-requirements}
 

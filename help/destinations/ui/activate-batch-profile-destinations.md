@@ -3,9 +3,9 @@ title: Ativar públicos para destinos de exportação de perfil em lote
 type: Tutorial
 description: Saiba como ativar os públicos-alvo no Adobe Experience Platform enviando-os para destinos com base em perfil de lote.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: fdb92a0c03ce6a0d44cfc8eb20c2e3bd1583b1ce
+source-git-commit: de9c838c8a9d07165b4cc8a602df0c627a8b749c
 workflow-type: tm+mt
-source-wordcount: '4151'
+source-wordcount: '4395'
 ht-degree: 10%
 
 ---
@@ -431,14 +431,31 @@ Considerando a desduplicação pela chave composta `personalEmail + lastName`, o
 
 A Adobe recomenda selecionar um namespace de identidade, como um [!DNL CRM ID] ou endereço de email, como uma chave de desduplicação, para garantir que todos os registros de perfil sejam identificados exclusivamente.
 
->[!NOTE]
-> 
->Se algum rótulo de uso de dados tiver sido aplicado a determinados campos em um conjunto de dados (em vez do conjunto de dados inteiro), a aplicação desses rótulos de nível de campo na ativação ocorrerá nas seguintes condições:
->
->* Os campos são usados na definição de público-alvo.
->* Os campos são configurados como atributos projetados para o destino.
->
-> Por exemplo, se o campo `person.name.firstName` tiver determinados rótulos de uso de dados que estão em conflito com a ação de marketing do destino, você verá uma violação da política de uso de dados na etapa de revisão. Para obter mais informações, consulte [Governança de dados no Adobe Experience Platform](../../rtcdp/privacy/data-governance-overview.md#destinations).
+### Comportamento de desduplicação para perfis com o mesmo carimbo de data e hora {#deduplication-same-timestamp}
+
+Ao exportar perfis para destinos baseados em arquivo, a desduplicação garante que apenas um perfil seja exportado quando vários perfis compartilharem a mesma chave de desduplicação e o mesmo carimbo de data e hora de referência. Esse carimbo de data e hora representa o momento em que a associação de público-alvo ou o gráfico de identidade de um perfil foi atualizado pela última vez. Para obter mais informações sobre como os perfis são atualizados e exportados, consulte o documento [comportamento de exportação do perfil](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2).
+
+#### Principais considerações
+
+* **Seleção determinística**: quando vários perfis têm chaves de desduplicação idênticas e o mesmo carimbo de data/hora de referência, a lógica de desduplicação determina qual perfil deve ser exportado ao classificar os valores de outras colunas selecionadas (excluindo tipos complexos, como matrizes, mapas ou objetos). Os valores classificados são avaliados em ordem lexicográfica e o primeiro perfil é selecionado.
+
+* **Exemplo de cenário**:\
+  Considere os seguintes dados, em que a chave de desduplicação é a coluna `Email`:\
+  |Email*|nome|sobrenome|carimbo de data/hora|\
+  |—|—|—|—|\
+  |test1@test.com|John|Morris|2024-10-12T09:50|\
+  |test1@test.com|John|Doe|2024-10-12T09:50|\
+  |test2@test.com|Frank|Smith|2024-10-12T09:50|
+
+  Após a desduplicação, o arquivo de exportação conterá:\
+  |Email*|nome|sobrenome|carimbo de data/hora|\
+  |—|—|—|—|\
+  |test1@test.com|John|Doe|2024-10-12T09:50|\
+  |test2@test.com|Frank|Smith|2024-10-12T09:50|
+
+  **Explicação**: para `test1@test.com`, ambos os perfis compartilham a mesma chave de desduplicação e carimbo de data/hora. O algoritmo classifica os valores de coluna `first_name` e `last_name` lexicograficamente. Como os nomes são idênticos, o vínculo é resolvido usando a coluna `last_name`, em que &quot;Doe&quot; vem antes de &quot;Morris&quot;.
+
+* **Confiabilidade aprimorada**: esse processo de desduplicação atualizado garante que execuções sucessivas com as mesmas coordenadas sempre produzirão os mesmos resultados, melhorando a consistência.
 
 ### [!BADGE Beta]{type=Informative} Exporte matrizes por meio de campos calculados {#export-arrays-calculated-fields}
 
@@ -552,6 +569,15 @@ Se quiser ativar públicos externos para seus destinos sem exportar nenhum atrib
 Selecione **[!UICONTROL Avançar]** para ir até a etapa [Revisão](#review).
 
 ## Revisar {#review}
+
+>[!NOTE]
+> 
+Se algum rótulo de uso de dados tiver sido aplicado a determinados campos em um conjunto de dados (em vez do conjunto de dados inteiro), a aplicação desses rótulos de nível de campo na ativação ocorrerá nas seguintes condições:
+>
+* Os campos são usados na definição de público-alvo.
+* Os campos são configurados como atributos projetados para o destino.
+>
+Por exemplo, se o campo `person.name.firstName` tiver determinados rótulos de uso de dados que estão em conflito com a ação de marketing do destino, você verá uma violação da política de uso de dados na etapa de revisão. Para obter mais informações, consulte [Governança de dados no Adobe Experience Platform](../../rtcdp/privacy/data-governance-overview.md#destinations).
 
 Na página **[!UICONTROL Revisão]**, você pode ver um resumo da sua seleção. Selecione **[!UICONTROL Cancelar]** para interromper o fluxo, **[!UICONTROL Voltar]** para modificar suas configurações ou **[!UICONTROL Concluir]** para confirmar sua seleção e começar a enviar dados ao destino.
 

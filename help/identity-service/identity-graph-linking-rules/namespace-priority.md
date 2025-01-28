@@ -2,14 +2,20 @@
 title: Prioridade do namespace
 description: Saiba mais sobre a prioridade de namespace no Serviço de identidade.
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: 3efbb9614f08a74ad33eb1fbb4861c34c762b66b
+source-git-commit: 0c5924b4e47cf4afcf76080a10d142b3e280c4d8
 workflow-type: tm+mt
-source-wordcount: '1788'
+source-wordcount: '1804'
 ht-degree: 2%
 
 ---
 
-# Prioridade do namespace
+# Prioridade do namespace {#namespace-priority}
+
+>[!CONTEXTUALHELP]
+>id="platform_identities_namespacepriority"
+>title="Prioridade de namespace"
+>abstract="A prioridade dos namespaces determina como os links são removidos do gráfico de identidade."
+>additional-url="http://www.adobe.com/go/identity-namespace-priority" text="Saiba mais"
 
 >[!AVAILABILITY]
 >
@@ -77,7 +83,7 @@ Para estruturas de gráficos relativamente complexas, a prioridade de namespace 
 * Depois de definir as configurações de identidade para uma determinada sandbox, a identidade principal para eventos de experiência será determinada pela prioridade de namespace mais alta na configuração.
    * Isso ocorre porque os eventos de experiência são de natureza dinâmica. Um mapa de identidade pode conter três ou mais identidades, e a prioridade do namespace garante que o namespace mais importante esteja associado ao evento de experiência.
 * Como resultado, as seguintes configurações **não serão mais usadas pelo Perfil de Cliente em Tempo Real**:
-   * A configuração de identidade primária (`primary=true`) ao enviar identidades no identityMap usando o SDK da Web, SDK móvel ou API de servidor Edge Network (o namespace de identidade e o valor de identidade continuarão a ser usados no perfil). **Observação**: os serviços fora do Perfil do Cliente em Tempo Real, como o armazenamento em data lake ou a Adobe Target, continuarão a usar a configuração de identidade principal (`primary=true`).
+   * A configuração de identidade primária (`primary=true`) ao enviar identidades no identityMap usando o Web SDK, Mobile SDK ou Edge Network Server API (o namespace de identidade e o valor de identidade continuarão a ser usados no Perfil). **Observação**: os serviços fora do Perfil do Cliente em Tempo Real, como o armazenamento em data lake ou a Adobe Target, continuarão a usar a configuração de identidade principal (`primary=true`).
    * Quaisquer campos marcados como identidade primária em um esquema de Classe de evento de experiência XDM.
    * Configurações de identidade primária padrão no conector de origem do Adobe Analytics (ECID ou AAID).
 * Por outro lado, a **prioridade de namespace não determina a identidade principal dos registros de perfil**.
@@ -155,7 +161,7 @@ Se as configurações de identidade estiverem habilitadas, os atributos computad
 
 ### Data lake
 
-A assimilação de dados no data lake continuará respeitando as configurações de identidade primárias definidas no [SDK da Web](../../tags/extensions/client/web-sdk/data-element-types.md#identity-map) e nos esquemas.
+A assimilação de dados no data lake continuará respeitando as configurações de identidade primárias definidas no [Web SDK](../../tags/extensions/client/web-sdk/data-element-types.md#identity-map) e nos esquemas.
 
 O data lake não determinará a identidade principal com base na prioridade do namespace. Por exemplo, o Adobe Customer Journey Analytics continuará a usar valores no mapa de identidade mesmo após a prioridade do namespace ser ativada (como adicionar um conjunto de dados a uma nova conexão), porque o Customer Journey Analytics consome seus dados do data lake.
 

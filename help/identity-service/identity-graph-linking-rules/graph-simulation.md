@@ -2,14 +2,20 @@
 title: Guia da interface de simulação de gráfico
 description: Saiba como usar a Simulação de gráfico na interface do usuário do serviço de identidade.
 exl-id: 89f0cf6e-c43f-40ec-859a-f3b73a6da8c8
-source-git-commit: c1aaad7d7169e63c49d62ab8a7a06c4c11c85cb4
+source-git-commit: 0c5924b4e47cf4afcf76080a10d142b3e280c4d8
 workflow-type: tm+mt
-source-wordcount: '1484'
-ht-degree: 4%
+source-wordcount: '1461'
+ht-degree: 2%
 
 ---
 
-# Guia da interface do usuário do [!DNL Graph Simulation]
+# Guia da interface do usuário do [!DNL Graph Simulation] {#graph-simulation}
+
+>[!CONTEXTUALHELP]
+>id="platform_identities_graphsimulation"
+>title="Simulação de gráfico"
+>abstract="Simule gráficos para entender como o Serviço de identidade vincula identidades e como o algoritmo de otimização de identidades funciona."
+>additional-url="http://www.adobe.com/go/identity-graph-simulation" text="Saiba mais"
 
 >[!AVAILABILITY]
 >
@@ -50,12 +56,6 @@ Visualizador de gráficos simulado: o visualizador de gráficos simulado exibe o
 >[!ENDTABS]
 
 ## Adicionar eventos {#add-events}
-
->[!CONTEXTUALHELP]
->id="platform_identities_graphsimulation"
->title="Simulação de gráfico"
->abstract="Simule gráficos para entender como o Serviço de identidade vincula identidades e como o algoritmo de otimização de identidades funciona."
->text="Learn more in documentation"
 
 Para começar, selecione **[!UICONTROL Adicionar eventos]**.
 
@@ -132,16 +132,6 @@ Para excluir um evento, selecione as reticências (`...`) ao lado de um determin
 ![O ícone de evento de exclusão selecionado.](../images/graph-simulation/delete.png)
 
 ## Configurar algoritmo {#configure-algorithm}
-
->[!CONTEXTUALHELP]
->id="platform_identities_algorithmconfiguration"
->title="Configuração do algoritmo"
->abstract="Configure o namespace exclusivo e a prioridade do namespace conforme as suas identidades assimiladas."
-
->[!CONTEXTUALHELP]
->id="platform_identities_namespacepriority"
->title="Prioridade de namespace"
->abstract="A prioridade dos namespaces determina como os links são removidos do gráfico de identidade."
 
 >[!IMPORTANT]
 >

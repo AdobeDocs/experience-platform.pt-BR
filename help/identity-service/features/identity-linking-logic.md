@@ -2,14 +2,20 @@
 title: Lógica de vinculação do serviço de identidade
 description: Saiba mais sobre como o Serviço de identidade vincula identidades diferentes para criar uma visualização abrangente de um cliente.
 exl-id: 1c958c0e-0777-48db-862c-eb12b2e7a03c
-source-git-commit: f067f8d4628d76b4a87b9dd97d1d703c54688871
+source-git-commit: 627b2e5ecde28b26e7d4717e13713c38c3c09651
 workflow-type: tm+mt
-source-wordcount: '968'
+source-wordcount: '971'
 ht-degree: 2%
 
 ---
 
-# Lógica de vinculação do Serviço de identidade
+# Lógica de vinculação do Serviço de identidade {#identity-service-linking-logic}
+
+>[!CONTEXTUALHELP]
+>id="platform_identities_simulatedgraph"
+>title="Gráfico simulado"
+>abstract="As identidades são vinculadas quando o namespace de identidade e o valor da identidade correspondem."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/identity/features/identity-linking-logic" text="Saiba mais"
 
 Um link entre duas identidades é estabelecido quando o namespace de identidade e os valores de identidade são correspondentes.
 
@@ -29,12 +35,7 @@ Uma identidade representa uma entidade real. Se houver um vínculo estabelecido 
 | Um usuário final faz logon usando o Google Chrome e, em seguida, o Firefox. | A CRMID está vinculada a duas ECIDs diferentes. | Uma pessoa (CRMID) está associada a dois navegadores da Web (**Observação**: cada navegador terá sua própria ECID). |
 | Um engenheiro de dados assimila um registro do CRM que inclui dois campos marcados como uma identidade: CRMID e Email. | CRMID e Email estão vinculados. | Uma pessoa (CRMID) está associada ao endereço de email. |
 
-## Compreender a lógica de vinculação do Serviço de identidade {#identity-linking-logic}
-
->[!CONTEXTUALHELP]
->id="platform_identities_simulatedgraph"
->title="Gráfico simulado"
->abstract="As identidades são vinculadas quando o namespace de identidade e o valor da identidade correspondem."
+## Compreender a lógica de vinculação do Serviço de identidade
 
 Uma identidade consiste em um namespace de identidade e um valor de identidade.
 

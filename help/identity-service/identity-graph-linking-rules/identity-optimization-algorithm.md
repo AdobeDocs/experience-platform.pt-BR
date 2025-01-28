@@ -2,14 +2,20 @@
 title: Algoritmo de otimização de identidade
 description: Saiba mais sobre o Algoritmo de otimização de identidade no Serviço de identidade.
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: c1aaad7d7169e63c49d62ab8a7a06c4c11c85cb4
+source-git-commit: 0c5924b4e47cf4afcf76080a10d142b3e280c4d8
 workflow-type: tm+mt
-source-wordcount: '1560'
+source-wordcount: '1563'
 ht-degree: 2%
 
 ---
 
-# Algoritmo de otimização de identidade
+# Algoritmo de otimização de identidade {#identity-optimization-algorithm}
+
+>[!CONTEXTUALHELP]
+>id="platform_identities_uniquenamespace"
+>title="Namespace único"
+>abstract="Um gráfico não pode ter duas identidades com um namespace exclusivo. Se um gráfico tentar exceder esse limite, os links mais recentes serão mantidos e os links mais antigos serão removidos."
+>additional-url="http://www.adobe.com/go/identity-ido-algo" text="Saiba mais"
 
 >[!AVAILABILITY]
 >
@@ -22,11 +28,6 @@ O algoritmo de otimização de identidade é um algoritmo de gráfico no Serviç
 Leia esta seção para obter informações sobre namespaces exclusivos e prioridade de namespace. Esses dois conceitos servem como parâmetros de entrada exigidos pelo algoritmo de otimização de identidade.
 
 ### Namespace exclusivo {#unique-namespace}
-
->[!CONTEXTUALHELP]
->id="platform_identities_uniquenamespace"
->title="Namespace único"
->abstract="Um gráfico não pode ter duas identidades com um namespace exclusivo. Se um gráfico tentar exceder esse limite, os links mais recentes serão mantidos e os links mais antigos serão removidos."
 
 Um namespace exclusivo determina os links que serão removidos se ocorrer o recolhimento do gráfico.
 

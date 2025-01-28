@@ -2,9 +2,9 @@
 title: Regras de vinculação do gráfico de identidade
 description: Saiba mais sobre as regras de vinculação de gráficos de identidade no Serviço de identidade.
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: 42c2b2afff49422a539d573280e9bc3f30369c3f
+source-git-commit: 048d915d33a19a9d50a4951e165b5ade1b9d9734
 workflow-type: tm+mt
-source-wordcount: '1443'
+source-wordcount: '1436'
 ht-degree: 3%
 
 ---
@@ -29,17 +29,16 @@ Os documentos a seguir são essenciais para entender as regras de vinculação d
 * [Interface de simulação de gráfico](./graph-simulation.md)
 * [Interface de configurações de identidade](./identity-settings-ui.md)
 
-## Exemplos de cenários em que o colapso de gráficos pode ocorrer {#example-scenarios-where-graph-collapse-could-happen}
-
-Esta seção descreve cenários de exemplo que você pode considerar ao configurar regras de vinculação de gráficos de identidade.
-
-### Dispositivo compartilhado {#shared-device}
+## Cenários de recolhimento de gráfico {#graph-collapse-scenarios}
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_graphcollapsescenarios"
 >title="Recolher Cenários de Gráfico"
 >abstract="Há vários motivos pelos quais os gráficos podem ser “recolhidos” ou representar várias entidades de pessoas."
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/identity/features/identity-graph-linking-rules/overview" text="Saiba mais"
+
+Esta seção descreve cenários de exemplo que você pode considerar ao configurar regras de vinculação de gráficos de identidade.
+
+### Dispositivo compartilhado
 
 Há instâncias em que vários logons podem ocorrer em um único dispositivo:
 

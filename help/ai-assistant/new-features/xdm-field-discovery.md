@@ -4,14 +4,15 @@ description: Leia este documento para saber como usar o Assistente de IA para de
 badge: Alfa
 hide: true
 hidefromtoc: true
-source-git-commit: 2348001facd7ae3a95254130ae377b4ef3f2a749
+exl-id: 041034c6-da45-437f-ad46-f9c2ded9f82c
+source-git-commit: 58cf5d90d70239a4b47c600bd3a7a37129b07dc3
 workflow-type: tm+mt
-source-wordcount: '357'
+source-wordcount: '356'
 ht-degree: 0%
 
 ---
 
-# Descoberta de campo XDM para com o Assistente de IA
+# Descoberta de campo XDM com o Assistente de IA
 
 >[!AVAILABILITY]
 >

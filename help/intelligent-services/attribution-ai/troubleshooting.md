@@ -6,9 +6,9 @@ title: solução de problemas de erros do Attribution AI
 description: Encontre respostas para erros comuns no Attribution AI.
 type: Documentation
 exl-id: c2ff700a-1e36-4ba2-876c-9f8b56344241
-source-git-commit: 07a110f6d293abff38804b939014e28f308e3b30
+source-git-commit: e028fbb82b37b3940b308a860c26f8b5f9884d3a
 workflow-type: tm+mt
-source-wordcount: '167'
+source-wordcount: '171'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ Este documento fornece respostas a perguntas frequentes sobre o Attribution AI.
 
 Erros de carregamento no modo incógnito do Google Chrome estão presentes devido a atualizações nas configurações de segurança do modo incógnito do Google Chrome. O problema está sendo ativamente trabalhada com a Chrome para tornar experience.adobe.com um domínio confiável.
 
-<img src="./images/faq/error.PNG" width="500" /><br />
+![Imagem de erro](./images/faq/error.PNG){width=500}
 
 ### Correção recomendada
 

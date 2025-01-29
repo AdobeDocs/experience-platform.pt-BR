@@ -4,9 +4,9 @@ title: Playbooks de caso de uso disponíveis para Real-time Customer Data Platfo
 description: Uma lista de todos os manuais no Real-time Customer Data Platform e no Adobe Journey Optimizer.
 role: User
 exl-id: 00f16761-3759-4de0-882d-b77e18f7c1fe
-source-git-commit: 5b1209ed96c78810b6bd7489825b19496d8b0b6a
+source-git-commit: 0cfe3e87ae4f9e8dc9ad53e9acb096efb590b72d
 workflow-type: tm+mt
-source-wordcount: '965'
+source-wordcount: '955'
 ht-degree: 2%
 
 ---
@@ -65,9 +65,9 @@ Leia esta página para obter uma visão geral de todos os manuais disponíveis q
 
 | Nome do manual | Descrição |
 | ------------- | ----------- |
-| Navegação Abandonada: Mercadorias — Para Ativação | Redirecione os fãs depois que eles deixarem seu site ou aplicativo após adicionar a mercadoria ao carrinho. |
-| Navegação Abandonada: Produto—Para Ativação | Redirecione os compradores depois que eles deixarem o site ou aplicativo após adicionar os produtos ao carrinho. |
-| Navegação Abandonada: Reserva — Para Ativação | Redirecione os convidados depois que eles deixarem seu site ou aplicativo após adicionar uma nova reserva ao carrinho. |
+| Navegação Abandonada: Mercadorias — Para Ativação | Redirecione os fãs depois que eles deixarem seu site ou aplicativo após navegarem na mercadoria. |
+| Navegação Abandonada: Produto—Para Ativação | Redirecione os compradores depois que eles deixarem seu site ou aplicativo após navegarem em um produto. |
+| Navegação Abandonada: Reserva — Para Ativação | Redirecione os convidados depois que eles deixarem seu site ou aplicativo após navegarem em uma possível reserva. |
 | Carrinho abandonado: Mercadorias — para ativação | Redirecione os fãs depois que eles deixarem seu site ou aplicativo após adicionar a mercadoria esportiva ao carrinho. |
 | Carrinho Abandonado: Produto - Para Ativação | Redirecione os compradores depois que eles deixarem o site ou aplicativo após adicionar produtos ao carrinho. |
 | Carrinho Abandonado: Reserva — Para Ativação | Redirecione os convidados depois que eles deixarem seu site ou aplicativo após adicionar uma nova reserva ao carrinho. |

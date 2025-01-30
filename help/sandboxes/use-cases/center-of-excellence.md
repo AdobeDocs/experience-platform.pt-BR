@@ -1,7 +1,8 @@
 ---
 title: Possibilite um centro de excelência usando ferramentas de sandbox
 description: Possibilite um centro de excelência usando ferramentas de sandbox criando um pacote de "sandbox dourada" para padronizar as práticas recomendadas em várias sandboxes.
-source-git-commit: f0cbee2663682f0afae6d7e4b174f250fcb3df53
+exl-id: 6f242ad5-bb02-4a6d-b255-d196dd5fe4b8
+source-git-commit: d4df5606228347b5fb69fdaa24c637c329099895
 workflow-type: tm+mt
 source-wordcount: '881'
 ht-degree: 7%
@@ -12,7 +13,7 @@ ht-degree: 7%
 
 Possibilite um centro de excelência usando ferramentas de sandbox criando um pacote de &quot;sandbox dourada&quot; para padronizar as práticas recomendadas em várias sandboxes.
 
-![Visão geral da exportação de pacotes em diferentes organizações](../images/use-cases/packages-across-orgs.png)
+![Visão geral da exportação de pacotes em diferentes organizações](../images/use-cases/packages-across-orgs.png){zoomable="yes"}
 
 ## Por que considerar este caso de uso {#why-this-use-case}
 

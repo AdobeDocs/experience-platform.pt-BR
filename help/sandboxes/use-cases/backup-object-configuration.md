@@ -2,9 +2,9 @@
 title: Fazer backup de configurações de objeto usando ferramentas de sandbox
 description: Para redefinir sandboxes com segurança e adicionar suporte ao controle de versão, faça backup das configurações de objeto (ou metadados) usando pacotes de ferramentas de sandbox. Os pacotes de backup evitam a perda de configurações críticas, como esquemas, conjuntos de dados e públicos-alvo, especialmente durante iterações de desenvolvimento.
 exl-id: cccbaaf1-ee68-4a00-9a44-aa5db4a83a14
-source-git-commit: 2a700788d9b59bcdb4195e34d77eccd278803d42
+source-git-commit: d4df5606228347b5fb69fdaa24c637c329099895
 workflow-type: tm+mt
-source-wordcount: '1168'
+source-wordcount: '1166'
 ht-degree: 3%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 3%
 
 Para redefinir sandboxes com segurança e adicionar suporte ao controle de versão, faça backup das configurações de objeto (ou metadados) usando pacotes de ferramentas de sandbox. Os pacotes de backup evitam a perda de configurações críticas, como esquemas, conjuntos de dados e públicos-alvo, especialmente durante iterações de desenvolvimento.
 
-![Visão geral mostrando os benefícios das ferramentas de sandbox](../images/use-cases/tooling-overview.png)
+![Visão geral mostrando os benefícios das ferramentas de sandbox](../images/use-cases/tooling-overview.png){zoomable="yes"}
 
 ## Por que considerar este caso de uso {#why-this-use-case}
 
@@ -63,9 +63,9 @@ Antes de começar a criar seu pacote de backup, considere o caso de uso do pacot
 >
 > Se estiver pensando em fazer backup da sandbox para redefini-la, esteja ciente das [limitações](../ui/user-guide.md#reset-a-sandbox) que cercam a redefinição de sandboxes.
 
-### Exportar e inserir os metadados escolhidos em um pacote
+### Exportar os metadados escolhidos para um pacote
 
-Nesse momento, você está pronto para fazer backup da sandbox usando a interface de usuário de ferramentas de sandbox. Esta etapa abrangerá o backup de uma sandbox inteira e o backup de objetos específicos.
+Nesse momento, você está pronto para fazer backup da sandbox usando a interface de usuário de ferramentas de sandbox. Essa etapa abrange o backup de uma sandbox inteira e o backup de objetos específicos.
 
 >[!NOTE]
 >

@@ -1,11 +1,11 @@
 ---
 title: Notas de versão da Adobe Experience Platform de novembro de 2024
-description: As notas de versão de novembro de 2024 para Adobe Experience Platform.
+description: As notas de versão de novembro de 2024 da Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: 3f43e120225bcca640cc46ebdce1e4d61100ad45
 workflow-type: tm+mt
 source-wordcount: '852'
-ht-degree: 11%
+ht-degree: 12%
 
 ---
 

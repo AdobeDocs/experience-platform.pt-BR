@@ -3,10 +3,10 @@ keywords: Experience Platform;página inicial;tópicos populares;controle de ace
 title: Permissões da Função Gerenciar Controle de Acesso Baseado em Atributo
 description: Este documento fornece informações sobre como configurar permissões para uma função por meio da interface de Permissões no Adobe Experience Cloud
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 0c275dc18dac101455f77aa58d33f0808122b77f
 workflow-type: tm+mt
-source-wordcount: '984'
-ht-degree: 2%
+source-wordcount: '1476'
+ht-degree: 1%
 
 ---
 
@@ -26,7 +26,7 @@ Imediatamente após [criar uma nova função](#create-a-new-role), você retorna
 
 Selecione o ícone de funil (![Ícone de filtro](/help/images/icons/filter.png)) para exibir uma lista de controles de filtro para ajudar a limitar os resultados.
 
-![filtros flac](../../images/flac-ui/flac-filters.png)
+![O painel Funções na interface de Permissões com a seção de funções de filtro realçada.](../../images/flac-ui/flac-filters.png)
 
 Os seguintes filtros estão disponíveis para funções na interface do usuário do:
 
@@ -39,133 +39,151 @@ Os seguintes filtros estão disponíveis para funções na interface do usuário
 
 Para remover um filtro, selecione o &quot;X&quot; no ícone de preenchimento do filtro em questão ou selecione **[!UICONTROL Limpar tudo]** para remover todos os filtros.
 
-![flac-clear-filters](../../images/flac-ui/flac-clear-filters.png)
+![O painel Funções na interface de Permissões com o X e Limpar todas as seleções realçadas nos filtros escolhidos.](../../images/flac-ui/flac-clear-filters.png)
 
 ## Detalhes da função
 
-Selecione a função na guia **[!UICONTROL Funções]**, que abrirá a página de detalhes da função.
+Selecione a função na guia **[!UICONTROL Funções]**, que abrirá o painel [!UICONTROL Detalhes] da função.
 
-![detalhes_flac](../../images/flac-ui/flac-details.png)
+![O espaço de trabalho Detalhes da função selecionada é exibido com as informações de visão geral destacadas.](../../images/flac-ui/flac-details.png)
 
-A guia de detalhes fornece uma visão geral da função. A visão geral exibe o nome da função, a descrição da função, o nome do usuário que criou e modificou a função, quando a função foi criada e modificada e as permissões anexadas à função. O nome e a descrição da função podem ser modificados, se necessário.
+O painel [!UICONTROL Detalhes] fornece uma visão geral da função. A visão geral exibe o nome da função, a descrição, o criador e o último modificador, juntamente com as datas de criação e modificação. Ele também mostra as permissões anexadas à função e a lista de sandboxes atribuídas. O nome e a descrição da função podem ser modificados, se necessário.
 
 ## Gerenciar rótulos para uma função
 
-Selecione a guia **[!UICONTROL Rótulos]** para abrir a página de rótulos de funções, em seguida, selecione **[!UICONTROL Adicionar rótulos]** para atribuir rótulos à função.
+Selecione a guia **[!UICONTROL Rótulos]** para abrir o espaço de trabalho de rótulos de funções e selecione **[!UICONTROL Adicionar rótulos]** para atribuir rótulos à função.
 
-![rótulos flac](../../images/flac-ui/flac-labels.png)
+![O espaço de trabalho de Rótulos da função é exibido com a guia Rótulos e o botão Adicionar Rótulos destacados.](../../images/flac-ui/flac-labels.png)
 
-Os rótulos estão listados nesta página. A lista exibe o nome do rótulo, o nome amigável, a categoria e sua descrição.
+A caixa de diálogo **[!UICONTROL Aplicar rótulos de acesso e governança de dados]** é exibida, apresentando uma lista de rótulos. A lista exibe o nome do rótulo, o nome amigável, a categoria e sua descrição.
 
 Selecione os rótulos da lista que você deseja adicionar à função e selecione **[!UICONTROL Salvar]**
 
-![flac-add-labels](../../images/flac-ui/flac-add-labels.png)
+![A caixa de diálogo Aplicar Rótulos de Acesso e Governança de Dados com um rótulo selecionado.](../../images/flac-ui/flac-add-labels.png)
 
 Os rótulos adicionados aparecem na guia **[!UICONTROL Rótulos]**.
 
-![flac-adds-labels](../../images/flac-ui/flac-added-labels.png)
+![O espaço de trabalho de Rótulos da função com o rótulo adicionado realçado.](../../images/flac-ui/flac-added-labels.png)
 
-Para remover um rótulo de uma função, selecione o ícone **X** ao lado do nome dos rótulos.
+Para remover um rótulo de uma função, selecione o rótulo e, em seguida, selecione **[!UICONTROL Remover Rótulos]**.
 
-![flac-delete-labels](../../images/flac-ui/flac-delete-labels.png)
+![O espaço de trabalho de Rótulos da função com uma função selecionada e a opção Remover rótulos realçada.](../../images/flac-ui/flac-delete-labels.png)
 
-## Gerenciamento de sandboxes para a função
+## Gerenciar sandboxes para uma função
 
-Selecione a guia **[!UICONTROL Sandboxes]** para abrir a página sandboxes de funções. Aqui você pode ver uma lista de sandboxes que foram adicionadas à função.
+Selecione a guia **[!UICONTROL Detalhes]** e navegue até a seção **[!UICONTROL Sandboxes]**. Selecione **[!UICONTROL Exibir tudo]** para ver a lista completa de sandboxes adicionadas à função.
 
-![sandboxes flac](../../images/flac-ui/flac-sandboxes.png)
+![O espaço de trabalho Detalhes da função com a seção Sandboxes realçada.](../../images/flac-ui/flac-sandboxes.png)
 
-Para adicionar mais sandboxes a uma função, selecione **[!UICONTROL Editar]**.
+Para adicionar mais sandboxes a uma função, selecione **[!UICONTROL Editar]** na parte superior direita da interface.
 
-![flac-add-sandboxes](../../images/flac-ui/flac-add-sandboxes.png)
+![O espaço de trabalho Detalhes da função com a opção Editar realçada.](../../images/flac-ui/flac-add-sandboxes.png)
 
-A próxima tela solicita que você escolha quais permissões de recurso existem nas sandboxes para incluir na função usando a lista suspensa. Quando terminar, selecione **[!UICONTROL Salvar e sair]**.
+A próxima tela solicita que você escolha quais recursos de sandboxes incluir na função usando a lista suspensa. Quando terminar, selecione **[!UICONTROL Salvar]** e depois **[!UICONTROL Fechar]**.
 
-![flac-add-role-permission](../../images/flac-ui/flac-add-role-permission.png)
+![O painel de Recursos da função com o menu suspenso de recursos da sandbox foi realçado.](../../images/flac-ui/flac-add-role-permission.png)
 
-## Gerenciando usuários para a função
+## Gerenciar usuários para uma função
 
-Selecione a guia **[!UICONTROL Usuários]** para abrir a página de usuários de funções e selecione **[!UICONTROL Adicionar usuários]** para atribuir usuários à função.
+Selecione a guia **[!UICONTROL Usuários]** para abrir o espaço de trabalho de funções [!UICONTROL Usuários] e selecione **[!UICONTROL Adicionar Usuários]** para atribuir usuários à função.
 
-![flac-users](../../images/flac-ui/flac-users.png)
+![O espaço de trabalho Usuários da função é exibido com a guia Usuários e a opção Adicionar Usuários realçada.](../../images/flac-ui/flac-users.png)
 
-Selecione os usuários da lista que você deseja adicionar à função. Como alternativa, use a barra de pesquisa para procurar o usuário digitando seu nome ou endereço de email e selecione **[!UICONTROL Salvar]**
+A caixa de diálogo **[!UICONTROL Adicionar usuários]** é exibida. Selecione os usuários da lista que você deseja adicionar à função. Como alternativa, use a barra de pesquisa para procurar o usuário digitando seu nome ou endereço de email e selecione **[!UICONTROL Salvar]**
 
-![flac-add-users](../../images/flac-ui/flac-add-users.png)
+![A caixa de diálogo Adicionar Usuários com um usuário selecionado e a barra de pesquisa e a opção de gravação destacadas.](../../images/flac-ui/flac-add-users.png)
 
 Os usuários adicionados aparecem na guia **[!UICONTROL Usuários]**.
 
-![flac-adds-users](../../images/flac-ui/flac-added-users.png)
+![O espaço de trabalho Usuários da função mostrando os usuários adicionados à função.](../../images/flac-ui/flac-added-users.png)
 
-Para remover um usuário de uma função, selecione o ícone **X** ao lado do nome dos usuários.
+Para remover um usuário de uma função, selecione o ícone **X** ao lado do nome do usuário.
 
-![flac-remove-users](../../images/flac-ui/flac-remove-users.png)
+![O espaço de trabalho Usuários da função mostrando um usuário com a opção X realçada.](../../images/flac-ui/flac-remove-users.png)
 
 O vídeo a seguir tem como objetivo ajudá-lo a entender a criação de uma nova função e o gerenciamento de usuários para essa função.
 
 >[!VIDEO](https://video.tv.adobe.com/v/336081/?learn=on)
 
-## Gerenciar credenciais de API para a função {#manage-api-credentials-for-role}
+## Gerenciar credenciais de API para uma função {#manage-api-credentials-for-role}
 
-Selecione a guia **[!UICONTROL Credenciais da API]** para abrir a página de credenciais da API de funções e selecione **[!UICONTROL Adicionar credenciais da API]** para atribuir credenciais da API à função.
+>[!IMPORTANT]
+>
+> Para usar e gerenciar credenciais de API em [!UICONTROL Permissões], os usuários devem ter privilégios de administrador do sistema.
 
-![flac-api-credentials](../../images/flac-ui/flac-api-credentials.png)
+Para usar APIs Experience Platform como um usuário ou desenvolvedor, um administrador do sistema precisa adicionar credenciais de API, além de um conjunto de permissões fornecido por uma função. Para obter um guia completo sobre como criar e atribuir credenciais de API, bem como as permissões necessárias, consulte o tutorial passo a passo em [autenticar e acessar APIs de Experience Platform](../../../landing/api-authentication.md#generate-credentials).
 
-Selecione as credenciais de API na lista que você deseja adicionar à função e selecione **[!UICONTROL Salvar]**
+Selecione a guia **[!UICONTROL Credenciais de API]** para abrir o espaço de trabalho de credenciais de API de funções e selecione **[!UICONTROL Adicionar credenciais de API]** para atribuir credenciais de API à função.
 
-![flac-add-api-credentials](../../images/flac-ui/flac-add-api-credentials.png)
+![O espaço de trabalho de credenciais de API da função com a opção Adicionar credenciais foi realçado.](../../images/flac-ui/flac-api-credentials.png)
+
+A caixa de diálogo **[!UICONTROL Adicionar credenciais de API]** é exibida. Selecione as credenciais de API na lista para adicionar à função e selecione **[!UICONTROL Salvar]**
+
+![A caixa de diálogo Adicionar credenciais de API com uma credencial selecionada e a opção Salvar realçada.](../../images/flac-ui/flac-add-api-credentials.png)
 
 As credenciais de API adicionadas aparecem na guia **[!UICONTROL Credenciais de API]**.
 
-![flac-adds-api-credentials](../../images/flac-ui/flac-added-api-credentials.png)
+![O espaço de trabalho de credenciais de API da função com as credenciais adicionadas exibidas.](../../images/flac-ui/flac-added-api-credentials.png)
 
-Para remover credenciais de API de uma função, selecione o ícone **X** ao lado do nome da credencial da API.
+Para remover uma credencial de API de uma função, selecione o ícone **X** ao lado do nome da credencial de API.
 
-![flac-remove-api-credentials](../../images/flac-ui/flac-remove-api-credentials.png)
+![O espaço de trabalho de credenciais de API da função com a opção X para remover uma credencial realçada.](../../images/flac-ui/flac-remove-api-credentials.png)
 
-A caixa de diálogo **[!UICONTROL Remover credenciais de API]** é exibida, solicitando que você confirme a exclusão.
+A caixa de diálogo **[!UICONTROL Remover credenciais de API]** é exibida, solicitando que você confirme a exclusão. Selecione **[!UICONTROL Confirmar]** para concluir a remoção da credencial selecionada.
 
-![flac-confirm-api-credentials-delete](../../images/flac-ui/flac-confirm-api-credentials-delete.png)
+![O popover Remover Credencial solicitando que você confirme a remoção da credencial está realçado.](../../images/flac-ui/flac-confirm-api-credentials-delete.png)
 
 Você retornará à guia **[!UICONTROL Credenciais da API]**.
 
-## Gerenciar grupos de usuários para funções
+## Gerenciar grupos de usuários para uma função
 
 Os grupos de usuários são vários usuários que foram agrupados e têm acesso para executar as mesmas funções.
 
-Selecione a guia **[!UICONTROL Grupos de usuários]** para abrir a página de grupos de usuários de funções e selecione **[!UICONTROL Adicionar grupos]** para atribuir grupos de usuários à função.
+Selecione a guia **[!UICONTROL Grupos de usuários]** para abrir o espaço de trabalho dos grupos de usuários da função e selecione **[!UICONTROL Adicionar grupos]** para atribuir grupos de usuários à função.
 
-![flac-user-groups](../../images/flac-ui/flac-user-groups.png)
+![O espaço de trabalho dos grupos de usuários da função com a opção Adicionar Grupos](../../images/flac-ui/flac-user-groups.png)
 
-Selecione os grupos de usuários na lista que você deseja adicionar à função. Como alternativa, use a barra de pesquisa para procurar o grupo de usuários digitando o nome do grupo e selecione **[!UICONTROL Salvar]**
+A caixa de diálogo **[!UICONTROL Adicionar grupos]** é exibida. Selecione os grupos de usuários na lista que você deseja adicionar à função. Como alternativa, use a barra de pesquisa para procurar o grupo de usuários digitando o nome do grupo e selecione **[!UICONTROL Salvar]**
 
-![flac-add-user-groups](../../images/flac-ui/flac-add-user-groups.png)
+![A caixa de diálogo Adicionar Grupos com um grupo de usuários selecionado e a opção Pesquisar e Salvar realçada.](../../images/flac-ui/flac-add-user-groups.png)
 
 O grupo de usuários adicionado aparece na guia **[!UICONTROL Grupos de usuários]**.
 
-![flac-Added-User-Groups](../../images/flac-ui/flac-added-user-groups.png)
+![O espaço de trabalho dos grupos de usuários da função exibindo a lista de grupos de usuários adicionados.](../../images/flac-ui/flac-added-user-groups.png)
 
 Para remover um grupo de usuários de uma função, selecione o ícone **X** ao lado do nome do grupo de usuários.
 
-![flac-remove-user-groups](../../images/flac-ui/flac-remove-user-groups.png)
+![O espaço de trabalho dos grupos de usuários da função com a opção X para remover um grupo de usuários específico realçado.](../../images/flac-ui/flac-remove-user-groups.png)
 
-A caixa de diálogo **[!UICONTROL Remover grupo de usuários]** é exibida, solicitando que você confirme a exclusão.
+A caixa de diálogo **[!UICONTROL Remover grupo de usuários]** é exibida, solicitando que você confirme a exclusão. Selecione **[!UICONTROL Confirmar]** para remover o grupo de usuários selecionado.
 
-![flac-confirm-user-groups-delete](../../images/flac-ui/flac-confirm-user-groups-delete.png)
+![O pop-over para remover um grupo de usuários é exibido e realçado.](../../images/flac-ui/flac-confirm-user-groups-delete.png)
 
 Você retornará à guia **[!UICONTROL Grupos de usuários]**.
 
-## Adicionar usuários ao Experience Platform por meio de uma função
+## Adicionar usuários ao Experience Platform
 
-Para adicionar um usuário a uma função, faça logon no Admin Console e selecione **[!UICONTROL Adicionar usuários]**
+Como administrador do sistema, você pode conceder acesso de desenvolvedor a um usuário para que ele possa [criar integrações](../../../landing/api-authentication.md#generate-credentials) na Adobe Developer Console.
 
-![perfil de produto-adicionar-usuários](../../images/flac-ui/product-profile-add-users.png)
+Para adicionar um Experience Platform de usuário, faça logon no [Admin Console](https://adminconsole.adobe.com) e selecione **[!UICONTROL Adicionar usuários]**.
 
-A caixa de diálogo **[!UICONTROL Adicionar usuários à sua equipe]** é exibida. Insira o endereço de email do usuário, o nome (opcional) e o sobrenome (opcional).
+![O painel do Adobe Admin Console com a opção Adicionar usuários foi realçado.](../../images/flac-ui/product-profile-add-users.png)
 
-Selecione o ícone de lápis para selecionar produtos e grupos de usuários, selecione **[!UICONTROL Adobe Experience Platform]**, selecione **[!UICONTROL AEP-Padrão-Todos-Usuários]** e **[!UICONTROL Salvar]**.
+A caixa de diálogo **[!UICONTROL Adicionar usuários à sua equipe]** será exibida. Insira o endereço de email do usuário, o nome (opcional) e o sobrenome (opcional). Em seguida, selecione **[!UICONTROL Produtos]**.
 
-![perfil de produto](../../images/flac-ui/product-profile.png)
+![A caixa de diálogo Adicionar usuários à equipe com os campos de usuário e a opção Produtos foi realçada.](../../images/flac-ui/product-profile-add-users-to-your-team.png)
+
+A caixa de diálogo **[!UICONTROL Selecionar produtos]** é exibida. Selecione **[!UICONTROL Adobe Experience Platform]**.
+
+![A caixa de diálogo Selecionar produtos com o Adobe Experience Platform foi realçada.](../../images/flac-ui/product-profile-select-product.png)
+
+A caixa de diálogo **[!UICONTROL Selecionar perfis de produto]** é exibida. Selecione **[!UICONTROL AEP-Default-All-Users]** e **[!UICONTROL Salvar]**.
+
+![A caixa de diálogo Selecionar perfis de produto com AEP-Padrão-Todos-Usuários foi selecionada e Aplicar foi realçada.](../../images/flac-ui/product-profile-select-product-profiles.png)
+
+Revise as informações e selecione **[!UICONTROL Salvar]** para adicionar o usuário.
+
+![A caixa de diálogo Adicionar usuários à equipe com as informações do usuário e as seleções escolhidas, e a opção Salvar realçada.](../../images/flac-ui/product-profile-save-user.png)
 
 ## Próximas etapas
 

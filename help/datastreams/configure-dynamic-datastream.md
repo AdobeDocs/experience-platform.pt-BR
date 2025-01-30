@@ -4,13 +4,13 @@ description: Saiba como criar configurações de sequência de dados dinâmicas 
 hide: true
 hidefromtoc: true
 badge: label="Beta" type="Informative"
-source-git-commit: 615318744c233930fb9bc20e55ff42c3a396e651
+exl-id: 528ddf89-ad87-4021-b5a6-8e25b4469ac4
+source-git-commit: 39e65f1f74b95fffffb3c5400ce1b7e60aa81bad
 workflow-type: tm+mt
-source-wordcount: '577'
+source-wordcount: '642'
 ht-degree: 1%
 
 ---
-
 
 # Criar configurações dinâmicas de sequência de dados
 
@@ -30,6 +30,14 @@ Para criar uma configuração dinâmica para seu fluxo de dados, há duas condi�
 * Você deve ter *pelo menos* um serviço de Experience Cloud adicionado à sua sequência de dados. Consulte a documentação sobre como [adicionar um serviço](configure.md#add-services) a uma sequência de dados para obter informações detalhadas.
 
 Depois de criar uma sequência de dados e adicionar um serviço Experience Cloud a ela, você pode [criar uma configuração dinâmica](#create-dynamic-configuration).
+
+## Configurações dinâmicas de sequência de dados versus substituições de configuração de sequência de dados {#dynamic-versus-overrides}
+
+As configurações dinâmicas de sequência de dados e as [substituições de configuração de sequência de dados](overrides.md) são funcionalidades mutuamente exclusivas.
+
+Isso significa que não é possível usar configurações dinâmicas de sequência de dados juntamente com substituições de configuração de sequência de dados. Você deve escolher um ou outro.
+
+Se você habilitar as configurações dinâmicas de sequência de dados e as substituições de configuração de sequência de dados, as substituições de configuração terão prioridade e as regras de configuração dinâmicas de sequência de dados serão ignoradas.
 
 ## Criar uma configuração de sequência de dados dinâmica {#create-dynamic-configuration}
 

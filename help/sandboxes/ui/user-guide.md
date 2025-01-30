@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guia da interface de usuário da sandbox
 description: Este documento fornece etapas sobre como executar várias operações relacionadas a sandboxes na interface do usuário do Adobe Experience Platform.
 exl-id: b258c822-5182-4217-9d1b-8196d889740f
-source-git-commit: c63de71c248e6a41dbbadbe8089156ee3c2829cf
+source-git-commit: f8c39d2cc12e77ebdc974f931880cdf0d6367591
 workflow-type: tm+mt
-source-wordcount: '1056'
+source-wordcount: '1066'
 ht-degree: 4%
 
 ---
@@ -81,6 +81,7 @@ Quando terminar de criar a sandbox, atualize a página e a nova sandbox aparecer
 >
 >* Uma sandbox de produção criada pelo usuário usada para compartilhamento de segmento bidirecional com o Adobe Audience Manager ou o Audience Core Service pode ser redefinida após uma mensagem de aviso.
 >* Antes de iniciar uma redefinição de sandbox, será necessário excluir suas composições manualmente para garantir que os dados do público-alvo associado sejam limpos corretamente.
+>* A ID da sandbox será alterada após a conclusão da redefinição.
 
 ### Excluir composições de público
 

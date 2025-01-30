@@ -3,9 +3,9 @@ title: Assistente de IA na documentação do produto Adobe Experience Platform
 description: Introdução ao Assistente de IA no Adobe Experience Platform.
 feature: AI Assistant
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: 8022195e755df92b7ceacea52214f81593994e2a
+source-git-commit: 96e138cc12fdedaa73e3aaf69341806271413680
 workflow-type: tm+mt
-source-wordcount: '810'
+source-wordcount: '851'
 ht-degree: 1%
 
 ---
@@ -144,6 +144,14 @@ Para obter mais informações, leia a documentação em [verificando as resposta
 Assista ao vídeo a seguir para saber como você pode usar o AI Assistant para executar uma análise de impacto mais eficiente, antes que qualquer alteração seja feita em seus objetos de dados.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3441680/?learn=on)
+
+### Usar o Assistente de IA para suporte ao cliente
+
+Assista ao vídeo a seguir para saber como usar o Assistente de IA para suporte ao cliente a fim de solucionar problemas com facilidade sem sair dos fluxos de trabalho.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3443183?learn=on)
+
+Para obter mais informações, leia a documentação sobre [usando o Assistente de IA para Suporte ao Cliente](./new-features/customer-support.md).
 
 ## Biblioteca de casos de uso do Assistente de IA
 

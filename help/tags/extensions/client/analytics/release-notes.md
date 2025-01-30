@@ -2,10 +2,10 @@
 title: Notas de versão da extensão do Adobe Analytics
 description: As notas de versão mais recentes da extensão de tag do Adobe Analytics na Adobe Experience Platform.
 exl-id: 3c7b4ec0-4b81-4ef4-b15f-6ad102525840
-source-git-commit: c783906b20db2b86d58aea7b3a94bde007c0a465
+source-git-commit: 5f4e157a39bf927b3821931d55f968862b2ed16d
 workflow-type: tm+mt
-source-wordcount: '1451'
-ht-degree: 72%
+source-wordcount: '1524'
+ht-degree: 69%
 
 ---
 
@@ -17,6 +17,14 @@ Veja a seguir uma lista das notas de versão da extensão de tag do Adobe Analyt
 >
 >A extensão de tag do Analytics é atualizada com frequência em resposta a atualizações na [biblioteca JavaScript do AppMeasurement](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=pt-BR). Consulte as [notas de versão do AppMeasurement](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=pt-BR) para obter detalhes sobre as versões específicas mencionadas abaixo.
 
+## 28 de outubro de 2024
+
+**Extensão do Adobe Analytics 1.9.6**
+
+**Recursos**:
+
+* Adição de um novo recurso para permitir que os usuários exibam e editem uma versão JSON da [Ação Definir Variáveis](https://experienceleague.adobe.com/en/docs/experience-platform/tags/extensions/client/analytics/overview#set-variables). A Extensão Adobe Web SDK também inclui uma ação para [preencher uma variável de análise](https://experienceleague.adobe.com/en/docs/experience-platform/tags/extensions/client/web-sdk/data-element-types) fornecendo JSON. Copiando dados JSON da extensão AA para a extensão Web SDK, os clientes da migração podem facilmente transferir várias configurações de uma só vez, em vez de adicionar cada variável manualmente.
+
 ## 12 de agosto de 2024
 
 **Extensão do Adobe Analytics 1.9.5**
@@ -25,7 +33,7 @@ Veja a seguir uma lista das notas de versão da extensão de tag do Adobe Analyt
 
 * Atualizado para [AppMeasurement para v2.27.0](https://github.com/adobe/appmeasurement/releases/tag/v2.27.0).
 
-## 4 de março de 2024
+## terça-feira, 4 de março de 2024
 
 **Extensão do Adobe Analytics 1.9.4**
 
@@ -33,7 +41,7 @@ Veja a seguir uma lista das notas de versão da extensão de tag do Adobe Analyt
 
 * Atualizado para [AppMeasurement para v2.26.0](https://github.com/adobe/appmeasurement/releases/tag/v2.26.0).
 
-## 15 de setembro de 2023
+## sábado, 15 de setembro de 2023
 
 **Extensão do Adobe Analytics 1.9.3**
 
@@ -42,7 +50,7 @@ Veja a seguir uma lista das notas de versão da extensão de tag do Adobe Analyt
 * Atualizado para [AppMeasurement para v2.25.0](https://github.com/adobe/appmeasurement/releases/tag/v2.25.0).
 
 
-## 19 de julho de 2023
+## quinta-feira, 19 de julho de 2023
 
 **Extensão do Adobe Analytics 1.9.2**
 
@@ -56,7 +64,7 @@ Veja a seguir uma lista das notas de versão da extensão de tag do Adobe Analyt
 * Adição de tratamento de erros para navegadores com [dicas do cliente de usuário-agente](https://experienceleague.adobe.com/docs/analytics/technotes/client-hints.html) de alta entropia com falha.
 * O cabeçalho [POST](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Methods/POST) Content-Type foi alterado para usar `x-www-form-urlencoded` por padrão.
 
-## 23 de setembro de 2022
+## sábado, 23 de setembro de 2022
 
 **Extensão do Adobe Analytics 1.9.1**
 
@@ -65,7 +73,7 @@ Veja a seguir uma lista das notas de versão da extensão de tag do Adobe Analyt
 * Atualizado para o AppMeasurement v2.23.0.
 * A extensão agora pode coletar [dicas do cliente de usuário-agente](https://developer.mozilla.org/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) de alta entropia, conforme o suporte da versão mais recente do AppMeasurement.
 
-## 28 de fevereiro de 2022
+## terça-feira, 28 de fevereiro de 2022
 
 **Extensão do Adobe Analytics 1.9.0**
 

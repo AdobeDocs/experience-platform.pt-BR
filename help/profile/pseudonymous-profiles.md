@@ -4,16 +4,16 @@ solution: Experience Platform
 title: Expiração de dados do perfil pseudônimo
 description: Este documento fornece orientação geral sobre como configurar a expiração de dados para Perfis pseudônimos no Adobe Experience Platform.
 exl-id: e8d31718-0b50-44b5-a15b-17668a063a9c
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: 9489156617f29d4aab2038b74f75a832ff4dc8eb
 workflow-type: tm+mt
-source-wordcount: '1004'
+source-wordcount: '1005'
 ht-degree: 0%
 
 ---
 
 # Expiração de dados de perfis pseudônimos
 
-No Adobe Experience Platform, você pode configurar as horas de expiração para perfis pseudônimos, permitindo remover automaticamente dados do armazenamento de perfis que não são mais válidos ou úteis para seus casos de uso.
+No Adobe Experience Platform, é possível configurar as horas de expiração de dados para perfis pseudônimos, permitindo remover automaticamente dados do armazenamento de Perfis que não são mais válidos ou úteis para seus casos de uso.
 
 ## Perfil pseudônimo {#pseudonymous-profile}
 
@@ -36,9 +36,9 @@ A expiração de dados do perfil de pseudônimo não pode ser configurada por me
 
 A seção a seguir lista as perguntas frequentes sobre a expiração dos dados de perfis pseudônimos:
 
-### Como a expiração de dados do Perfil de pseudônimo difere da expiração de dados do Evento de experiência?
+### Como a expiração de dados do Perfil pseudônimo difere da expiração de dados do Evento de experiência?
 
-A expiração de dados do Perfil de pseudônimo e a expiração de dados do Evento de experiência são recursos complementares.
+A expiração de dados do perfil pseudônimo e a expiração de dados do evento de experiência são recursos complementares.
 
 #### Granularidade
 
@@ -58,17 +58,17 @@ A expiração de dados de Perfil pseudônimo remove **ambos** registros de event
 
 A expiração de dados do Evento de Experiência **only** remove eventos e **not** remove dados da classe de perfil. Os dados da classe de perfil só são removidos quando todos os dados são removidos em **todos** conjuntos de dados e há **não** registros de classe de perfil restantes para o perfil.
 
-### Como a expiração de dados do Perfil de pseudônimo pode ser usada juntamente com a expiração de dados do Evento de experiência?
+### Como a expiração de dados do perfil pseudônimo pode ser usada juntamente com a expiração de dados do evento de experiência?
 
-A expiração de dados do perfil de pseudônimo e a expiração de dados do evento de experiência podem ser usadas para se complementar.
+A expiração de dados do perfil pseudônimo e a expiração de dados do evento de experiência podem ser usadas para se complementar.
 
-Você deve **sempre** configurar a expiração dos dados do Evento de experiência em seus conjuntos de dados, com base nas suas necessidades de retenção de dados sobre clientes conhecidos. Depois que a expiração de dados do evento de experiência for configurada, você poderá usar a expiração de dados do perfil de pseudônimo para remover automaticamente os perfis de pseudônimo. Normalmente, o período de expiração dos dados para perfis pseudônimos é menor que o período de expiração dos dados para eventos de experiência.
+Você deve **sempre** configurar a expiração dos dados do Evento de experiência em seus conjuntos de dados, com base nas suas necessidades de retenção de dados sobre clientes conhecidos. Depois que a expiração de dados do evento de experiência for configurada, você poderá usar a expiração de dados do perfil de pseudônimo para remover automaticamente os perfis de pseudônimo. Normalmente, o período de expiração dos dados para Perfis pseudônimos é menor que o período de expiração dos dados para Eventos de experiência.
 
-Para um caso de uso típico, você pode definir a expiração de dados do evento de experiência com base nos valores dos dados do usuário conhecidos e definir a expiração de dados do perfil pseudônimo para uma duração muito mais curta para limitar o impacto dos perfis pseudônimos na conformidade de licença da plataforma.
+Para um caso de uso típico, você pode definir sua expiração de dados do evento de experiência com base nos valores de seus dados de usuário conhecidos e pode definir sua expiração de dados do perfil pseudônimo para uma duração muito mais curta para limitar o impacto dos perfis pseudônimos na conformidade de licença da plataforma.
 
 ### Quais usuários devem usar a expiração de dados de perfis pseudônimos?
 
-- Se você estiver usando o SDK da Web para enviar dados diretamente para a Platform.
+- Se você estiver usando o Web SDK para enviar dados diretamente para a Platform.
 - Se você tiver um site que atende clientes não autenticados em massa.
 - Se você tiver contagens excessivas de perfis em seus conjuntos de dados e tiver confirmado que essa contagem excessiva de perfis se deve ao namespace de identidade anônimo baseado em cookies.
    - Para determinar isso, você deve usar o relatório de sobreposição de namespace de identidade. Mais informações sobre este relatório podem ser encontradas na [seção de relatório de sobreposição de identidade](./api/preview-sample-status.md#identity-overlap-report) do guia de API de status de amostra de visualização.

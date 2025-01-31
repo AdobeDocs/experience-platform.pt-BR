@@ -6,7 +6,7 @@ breadcrumb-title: Guia do SDK da Web
 user-guide-description: Interaja com os serviços da Experience Cloud por meio da Rede de borda.
 feature: Web SDK
 role: Developer
-source-git-commit: 7231d3a5ad9553707392c32004d02e355e3c919f
+source-git-commit: d5bf1b207900009829454d0b7aa095a08c1e1718
 workflow-type: tm+mt
 source-wordcount: '229'
 ht-degree: 24%
@@ -18,15 +18,15 @@ ht-degree: 24%
 
 * [Visão geral do SDK Web](home.md)
 * [Notas de versão](release-notes.md)
-* Instalação do SDK da Web {#install}
+* Instalação do Web SDK {#install}
    * [Visão geral](install/overview.md)
-   * [Instale o SDK da Web usando a extensão de tag](install/extension.md)
-   * [Instale o SDK da Web usando a biblioteca do JavaScript](install/library.md)
-   * [Instalar o SDK da Web usando o pacote NPM](install/npm.md)
+   * [Instalar o Web SDK usando a extensão de tag](install/extension.md)
+   * [Instale o Web SDK usando a biblioteca JavaScript](install/library.md)
+   * [Instalar o Web SDK usando o pacote NPM](install/npm.md)
 * Comandos {#commands}
    * configurar {#configure}
       * [Visão geral](commands/configure/overview.md)
-      * [autoTrackPropositionInteractionsEnabled](commands/configure/autotrackpropositioninteractionsenabled.md)
+      * [autoCollectPropositionInteractions](commands/configure/autocollectpropositioninteractions.md)
       * [clickCollectionEnabled](commands/configure/clickcollectionenabled.md)
       * [clickCollection](commands/configure/clickcollection.md)
       * [contexto](commands/configure/context.md)
@@ -81,7 +81,7 @@ ht-degree: 24%
       * [Implementação de aplicativos de página única](personalization/adobe-target/spa-implementation.md)
       * [Acesso aos tokens de resposta](personalization/adobe-target/accessing-response-tokens.md)
       * [Uso da ID de terceiros da mbox](personalization/adobe-target/using-mbox-3rdpartyid.md)
-      * [Comparação da biblioteca at.js com o SDK da Web](personalization/adobe-target/web-sdk-atjs-comparison.md)
+      * [Comparação da biblioteca at.js com a Web SDK](personalization/adobe-target/web-sdk-atjs-comparison.md)
       * Log do Analytics for Target (A4T) {#a4t}
          * [Visão geral](personalization/adobe-target/analytics-logging/overview.md)
          * [Registro no lado do cliente](personalization/adobe-target/analytics-logging/client-side.md)
@@ -91,7 +91,7 @@ ht-degree: 24%
    * Adobe Journey Optimizer {#ajo}
       * [Visão geral](personalization/ajo/overview.md)
       * [Implementação de aplicativos de página única](personalization/ajo/web-spa-implementation.md)
-      * [Configurar o suporte a mensagens no aplicativo da Web no SDK da Web](personalization/web-in-app-messaging.md)
+      * [Configurar o suporte a mensagens no aplicativo da Web no Web SDK](personalization/web-in-app-messaging.md)
 
 * Consentimento {#consent}
    * Estrutura de transparência e consentimento 2.0 do IAB {#iab-tcf}
@@ -101,12 +101,12 @@ ht-degree: 24%
 
 * Casos de uso {#use-cases}
    * [Visão geral](use-cases/overview.md)
-   * [Enviar dados para a Adobe Analytics usando o SDK da Web](use-cases/adobe-analytics.md)
+   * [Enviar dados para o Adobe Analytics usando a Web SDK](use-cases/adobe-analytics.md)
    * [Dicas do cliente do agente do usuário](use-cases/client-hints.md)
    * [Coletar dados de comércio](use-cases/collect-commerce-data.md)
    * [Configurar uma CSP](use-cases/configuring-a-csp.md)
    * [Métodos de depuração](use-cases/debugging.md)
-   * [Usar várias instâncias do SDK da Web](use-cases/multiple-instances.md)
+   * [Usar várias instâncias do Web SDK](use-cases/multiple-instances.md)
    * [Configurar eventos de página superior e inferior](use-cases/top-bottom-page-events.md)
 * [Monitoramento de ganchos](monitoring-hooks.md)
 * [Perguntas frequentes](faq.md)

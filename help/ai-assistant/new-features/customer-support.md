@@ -3,9 +3,9 @@ title: Assistente de IA para Suporte ao cliente
 description: Saiba como você pode usar o Assistente de IA para simplificar a solução de problemas e o processo de arquivamento de tíquetes do suporte ao cliente.
 badge: Alfa
 exl-id: 263b8a44-8902-42b9-8390-d7da8e9b5129
-source-git-commit: 88c4ba5fd7d5cd4fdd1e1da3f2eac43b03149e5e
+source-git-commit: e224716f8fba59529c5d7634d4b4a3013a0986a3
 workflow-type: tm+mt
-source-wordcount: '349'
+source-wordcount: '374'
 ht-degree: 0%
 
 ---
@@ -56,3 +56,8 @@ Acompanhe o status dos problemas de suporte de maneira contínua.
    * &quot;Qual é a atualização no ticket E-67890?&quot;
 
 Para obter acesso ao Assistente de IA para Suporte ao cliente, entre em contato com a equipe de conta do Adobe.
+
+Para obter mais informações, assista ao vídeo a seguir para saber como usar o Assistente de IA para suporte ao cliente para solucionar problemas com facilidade sem sair dos fluxos de trabalho.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3443183?learn=on)
+

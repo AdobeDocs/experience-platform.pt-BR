@@ -2,7 +2,7 @@
 title: autoCollectPropositionInteractions
 description: Saiba como configurar o Experience Platform Web SDK para coletar automaticamente dados de links.
 exl-id: c70db76a-3f2f-45a6-86ab-36efcb18d20f
-source-git-commit: 405f161dee633b7230be944cd17093616826e27f
+source-git-commit: 55c656e7fd08e98b75c20f0688a6697baf533291
 workflow-type: tm+mt
 source-wordcount: '595'
 ht-degree: 1%
@@ -123,11 +123,11 @@ alloy("sendEvent", {
 ## Ativar o rastreamento de cliques de apresentações e interações automáticas por meio da extensão de tag do Web SDK {#tag-extension}
 
 1. Faça logon em [experience.adobe.com](https://experience.adobe.com) usando sua credencial da Adobe ID.
-2. Navegue até **Coleção de dados** > **Marcas**.
-3. Selecione a propriedade de tag desejada.
-4. Navegue até **Extensões** e selecione **Configurar** no cartão do Adobe Experience Platform Web SDK.
-5. Role para baixo até a seção **[!UICONTROL Coleção de dados]** e marque a caixa de seleção **Habilitar propostas e rastreamento de link de interação**.
-6. Selecione **Salvar** e publique suas alterações.
+1. Navegue até **Coleção de dados** > **Marcas**.
+1. Selecione a propriedade de tag desejada.
+1. Navegue até **Extensões** e selecione **Configurar** no cartão do Adobe Experience Platform Web SDK.
+1. Role para baixo até a seção **[!UICONTROL Coleção de dados]** e marque a caixa de seleção **Habilitar propostas e rastreamento de link de interação**.
+1. Selecione **Salvar** e publique suas alterações.
 
 ## Ativar o rastreamento de links de propostas e interações automáticas por meio da biblioteca JavaScript do Web SDK {#library}
 

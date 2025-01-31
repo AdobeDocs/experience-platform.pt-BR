@@ -6,10 +6,10 @@ user-guide-description: Saiba como implantar e gerenciar tags de análise, marke
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: 82d6d2e7d0d7f0f9484c4ebcd34339fd63e04b59
+source-git-commit: 1b2f8e5a9cc85887efe9d623baa346956ae5d93d
 workflow-type: tm+mt
-source-wordcount: '778'
-ht-degree: 43%
+source-wordcount: '775'
+ht-degree: 44%
 
 ---
 
@@ -84,7 +84,7 @@ ht-degree: 43%
          * [Visão geral](./extensions/client/product-string/overview.md)
          * [Notas de versão](./extensions/client/product-string/release-notes.md)
       * [Construtor de cadeia de caracteres do produto Adobe Analytics](https://exchange.adobe.com/apps/ec/101461)
-      * [Adobe Analytics via SDK da Web da Adobe Experience Platform](https://exchange.adobe.com/apps/ec/108985/search-discovery-for-adobe-analytics-via-aep-web-sdk)
+      * [Adobe Analytics via Adobe Experience Platform Web SDK](https://exchange.adobe.com/apps/ec/108985/search-discovery-for-adobe-analytics-via-aep-web-sdk)
       * Adobe Audience Manager {#audience-manager}
          * [Visão geral](./extensions/client/audience-manager/overview.md)
       * Camada de Dados de Clientes Adobe {#client-data-layer}
@@ -100,14 +100,14 @@ ht-degree: 43%
          * [Visão geral](./extensions/client/platform-demo/overview.md)
       * SDK da Web da Adobe Experience Platform {#web-sdk}
          * [Visão geral](./extensions/client/web-sdk/overview.md)
-         * [Configurar a extensão de tag do SDK da Web](./extensions/client/web-sdk/web-sdk-extension-configuration.md)
+         * [Configurar a extensão de tag do Web SDK](./extensions/client/web-sdk/web-sdk-extension-configuration.md)
          * [Tipos de evento](./extensions/client/web-sdk/event-types.md)
          * [Tipos de ação](./extensions/client/web-sdk/action-types.md)
          * [Tipos de elementos de dados](./extensions/client/web-sdk/data-element-types.md)
          * [Acessar a ECID](./extensions/client/web-sdk/accessing-the-ecid.md)
-         * [Plug-ins do SDK da Web](./extensions/client/web-sdk/web-sdk-plugins.md)
-         * [Notas de versão da extensão SDK da Web](./extensions/client/web-sdk/web-sdk-ext-release-notes.md)
-         * [Notas de versão dos plug-ins do SDK da Web](./extensions/client/web-sdk/web-sdk-plugins-release-notes.md)
+         * [Plug-ins do Web SDK](./extensions/client/web-sdk/web-sdk-plugins.md)
+         * [Notas de versão da extensão do Web SDK](./extensions/client/web-sdk/web-sdk-ext-release-notes.md)
+         * [Notas de versão de plug-ins do Web SDK](./extensions/client/web-sdk/web-sdk-plugins-release-notes.md)
       * Adobe Experience Manager Asset Insights {#asset-insights}
          * [Visão geral](./extensions/client/asset-insights/overview.md)
          * [Notas de versão](./extensions/client/asset-insights/release-notes.md)
@@ -115,7 +115,7 @@ ht-degree: 43%
       * Adobe Medium Analytics para áudio e vídeo {#media-analytics}
          * [Visão geral](./extensions/client/media-analytics/overview.md)
          * [Notas de versão](./extensions/client/media-analytics/release-notes.md)
-      * Adobe Medium Analytics (SDK 3.x) {#media-analytics-3x}
+      * Adobe Medium Analytics (3.x SDK) {#media-analytics-3x}
          * [Visão geral](./extensions/client/media-analytics-3x/overview.md)
          * [Notas de versão](./extensions/client/media-analytics-3x/release-notes.md)
       * Privacidade Adobe {#privacy}
@@ -206,9 +206,8 @@ ht-degree: 43%
       * [Reprodução do Vimeo](https://exchange.adobe.com/apps/ec/108937)
       * [Vitais da Web](https://exchange.adobe.com/apps/ec/106769)
       * [XDM Composer](https://exchange.adobe.com/apps/ec/106062)
-      * [Ponto do Yahoo](https://exchange.adobe.com/apps/ec/106062)
       * [Rastreamento de Conversão de Texto](https://exchange.adobe.com/apps/ec/103174)
-      * [[!DNL Youtube] Reprodução](https://exchange.adobe.com/apps/ec/103174)
+      * [[!DNL Youtube] Reprodução](https://exchange.adobe.com/apps/ec/104160)
       * [!DNL YouTube] monitoramento de vídeo {#youtube}
          * [Visão geral](./extensions/client/youtube/overview.md)
          * [Notas de versão](./extensions/client/youtube/release-notes.md)

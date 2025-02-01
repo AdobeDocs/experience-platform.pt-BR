@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Tipo de dados do sinal
 description: Saiba mais sobre a classe Perfil individual XDM.
 exl-id: a3767c8d-a009-49b4-81a4-b084b6e5101a
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
 workflow-type: tm+mt
-source-wordcount: '233'
+source-wordcount: '235'
 ht-degree: 17%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 17%
 
 [!UICONTROL Beacon] é um tipo de dados XDM padrão que descreve o dispositivo sem fio que comunica informações de identidade para aplicativos móveis à medida que os dispositivos móveis ficam ao alcance.
 
-<img src="../images/data-types/beacon.png" width="450" /><br />
+![](../images/data-types/beacon.png){width=450}
 
 | Propriedade | Tipo de dados | Descrição |
 | --- | --- | --- |

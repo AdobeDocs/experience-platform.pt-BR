@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Tipo de Dados da Forma Geográfica
 description: Saiba mais sobre o tipo de dados Geo Shape XDM.
 exl-id: 50b9d783-a555-45eb-b154-7dc71389e224
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
 workflow-type: tm+mt
-source-wordcount: '238'
+source-wordcount: '240'
 ht-degree: 6%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 6%
 
 [!UICONTROL Forma Geográfica] é um tipo de dados XDM padrão que descreve a forma de uma área geográfica. Este tipo de dados é baseado na especificação pública documentada em [schema.org](https://schema.org/GeoShape).
 
-<img src="../images/data-types/geo-shape.png" width="500" /><br />
+![](../images/data-types/geo-shape.png){width=500}
 
 | Propriedade | Tipo de dados | Descrição |
 | --- | --- | --- |

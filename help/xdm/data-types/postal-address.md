@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Tipo de Dados do Endereço Postal
 description: Saiba mais sobre o tipo de dados XDM do endereço postal.
 exl-id: 94457fe5-80bc-4822-9f6c-48f77d56c89b
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
 workflow-type: tm+mt
-source-wordcount: '313'
+source-wordcount: '315'
 ht-degree: 23%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 23%
 
 [!UICONTROL Endereço postal] é um tipo de dados XDM padrão que descreve os detalhes de um endereço para correspondência.
 
-<img src="../images/data-types/postal-address.png" width="450" /><br />
+![](../images/data-types/postal-address.png){width=450}
 
 | Propriedade | Descrição |
 | --- | --- |

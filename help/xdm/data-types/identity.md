@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Tipo de dados de identidade
 description: Saiba mais sobre o tipo de dados XDM da identidade.
 exl-id: fb02b6b4-255b-442f-895c-600022231a1c
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
 workflow-type: tm+mt
-source-wordcount: '262'
+source-wordcount: '264'
 ht-degree: 11%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 11%
 
 [!UICONTROL Identidade] é um tipo de dados XDM padrão usado para distinguir claramente as pessoas que estão interagindo com experiências digitais. A identidade é estabelecida por um provedor de identidade, que é referenciado em um atributo `namespace`. Em cada `namespace`, a identidade é única.
 
-<img src="../images/data-types/identity.png" width="550" /><br />
+![](../images/data-types/identity.png){width=550}
 
 | Propriedade | Tipo de dados | Descrição |
 | --- | --- | --- |

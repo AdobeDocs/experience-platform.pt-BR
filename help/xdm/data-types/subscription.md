@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Tipo de Dados de Assinatura
 description: Saiba mais sobre o tipo de dados Subscription Experience Data Model (XDM).
 exl-id: 6fd1e073-441b-45f0-bb4f-54f51ab18694
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
 workflow-type: tm+mt
-source-wordcount: '388'
+source-wordcount: '390'
 ht-degree: 28%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 28%
 
 [!UICONTROL Assinatura] é um tipo de dados padrão do Experience Data Model (XDM) que descreve direitos licenciados para software, serviços ou bens que são utilizados com base no tempo ou no uso.
 
-<img src="../images/data-types/subscription-data-type.png" width="500" /><br />
+![](../images/data-types/subscription-data-type.png){width=500}
 
 | Propriedade | Tipo de dados | Descrição |
 | --- | --- | --- |

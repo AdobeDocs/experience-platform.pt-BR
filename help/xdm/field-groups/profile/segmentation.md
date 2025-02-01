@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Grupo de campos Esquema de detalhes da associação do segmento
 description: Saiba mais sobre o grupo de campos de esquema Detalhes da associação do segmento.
 exl-id: 4d463f3a-2247-4307-8afe-9527e7fd72a7
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
 workflow-type: tm+mt
-source-wordcount: '398'
-ht-degree: 3%
+source-wordcount: '402'
+ht-degree: 2%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 3%
 >
 >Embora o campo `segmentMembership` deva ser adicionado manualmente ao esquema de perfil usando esse grupo de campos, você não deve tentar preencher ou atualizar manualmente esse campo. O sistema atualiza automaticamente o mapa `segmentMembership` para cada perfil à medida que são realizados trabalhos de segmentação.
 
-<img src="../../images/data-types/profile-segmentation.png" width="400" /><br />
+![segmentação de perfil](../../images/data-types/profile-segmentation.png){width=400}
 
 | Propriedade | Tipo de dados | Descrição |
 | --- | --- | --- |

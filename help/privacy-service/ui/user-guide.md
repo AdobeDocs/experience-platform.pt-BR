@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Gerenciar processos de privacidade na interface do Privacy Service
 description: Saiba como usar a interface do usuário do Privacy Service para coordenar e monitorar solicitações de privacidade em vários aplicativos Experience Cloud.
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
-source-git-commit: c870b6be603073d6dd909b272c619deb5b246f05
+source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
 workflow-type: tm+mt
-source-wordcount: '1770'
+source-wordcount: '1786'
 ht-degree: 11%
 
 ---
@@ -159,29 +159,29 @@ Para começar a usar o Construtor de solicitações, selecione **[!UICONTROL Cri
 
 A caixa de diálogo **[!UICONTROL Criar Solicitação]** é aberta, exibindo as opções disponíveis para enviar uma solicitação de trabalho de privacidade para o tipo de regulamento selecionado atualmente.
 
-<img src="../images/user-guide/request-builder.png" width="500" /><br/>
+![](../images/user-guide/request-builder.png){width=500}
 
 Selecione o **[!UICONTROL Tipo de Trabalho]** da solicitação (&quot;Excluir&quot; ou &quot;Acessar&quot;) e um ou mais produtos disponíveis na lista.
 
 O Privacy Service oferece suporte a dois tipos de solicitações de trabalho para dados pessoais: [!UICONTROL Acesso] (leitura) e/ou [!UICONTROL Exclusão]. Você pode enviar uma solicitação para receber todas as informações contidas no produto relacionadas ao assunto da pesquisa ou solicitar a exclusão de todas as informações relacionadas ao assunto da pesquisa.
 
-<img src="../images/user-guide/type-and-products.png" width="500" /><br/>
+![](../images/user-guide/type-and-products.png){width=500}
 
 Em **[!UICONTROL Tipo de namespace]**, selecione o tipo de namespace apropriado para as IDs do cliente que estão sendo enviadas para [!DNL Privacy Service].
 
-<img src="../images/user-guide/namespace-type.png" width="500" /><br/>
+![](../images/user-guide/namespace-type.png){width=500}
 
 Ao usar o tipo de namespace padrão, selecione um namespace no menu suspenso (email, ECID ou AAID) e digite os valores de ID na caixa de texto à direita, pressionando **\&lt;enter>** para cada ID adicioná-lo à lista.
 
-<img src="../images/user-guide/standard-namespace.png" width="500" /><br/>
+![](../images/user-guide/standard-namespace.png){width=500}
 
 Ao usar o tipo de namespace personalizado, você deve digitar manualmente o namespace antes de fornecer os valores de ID abaixo.
 
-<img src="../images/user-guide/custom-namespace.png" width="500" /><br/>
+![](../images/user-guide/custom-namespace.png){width=500}
 
 Quando terminar, selecione **[!UICONTROL Criar]**.
 
-<img src="../images/user-guide/request-builder-create.png" width="500" /><br/>
+![](../images/user-guide/request-builder-create.png){width=500}
 
 A caixa de diálogo desaparece e a nova tarefa (ou tarefas) é listada no widget Solicitações de tarefa junto com seu status de processamento atual.
 
@@ -195,12 +195,12 @@ Selecione a seta ao lado de **[!UICONTROL Criar solicitação]**, abaixo do widg
 
 A caixa de diálogo **[!UICONTROL Carregar JSON]** é exibida, fornecendo uma janela para que você arraste e solte seu arquivo JSON.
 
-<img src="../images/user-guide/upload-json.png" width="500" /><br/>
+![](../images/user-guide/upload-json.png){width=500}
 
 Se você não tiver um arquivo JSON para carregar, selecione **[!UICONTROL Baixar Adobe-GDPR-Request.json]** para baixar um modelo que você pode preencher de acordo com os valores coletados dos titulares de dados.
 
 
-<img src="../images/user-guide/privacy-template.png" width="500" /><br/>
+![](../images/user-guide/privacy-template.png){width=500}
 
 
 Localize o arquivo JSON no computador e arraste-o para a janela de diálogo. Se o upload for bem-sucedido, o nome do arquivo aparecerá na caixa de diálogo. Você pode continuar a adicionar mais arquivos JSON, conforme necessário, arrastando-os e soltando-os na caixa de diálogo.

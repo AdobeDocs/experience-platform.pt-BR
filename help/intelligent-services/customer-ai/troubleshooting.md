@@ -6,9 +6,9 @@ title: Solução de problemas de erro do Customer AI
 description: Encontre respostas para erros comuns na IA do cliente.
 type: Documentation
 exl-id: 37ff4e85-da92-41ca-afd4-b7f3555ebd43
-source-git-commit: e028fbb82b37b3940b308a860c26f8b5f9884d3a
+source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
 workflow-type: tm+mt
-source-wordcount: '1751'
+source-wordcount: '1755'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ A IA do cliente exibe erros quando o treinamento do modelo, a pontuação e a co
 
 Caso **[!UICONTROL Falha]** ou **[!UICONTROL Problema de treinamento]** seja exibido, você pode selecionar o status de execução para abrir um painel lateral. O painel lateral contém o **[!UICONTROL status da última execução]** e os **[!UICONTROL detalhes da última execução]**. **[!UICONTROL Detalhes da última execução]** contém informações sobre o motivo da falha na execução. Caso a IA do cliente não possa fornecer detalhes sobre o erro, entre em contato com o suporte com o código de erro fornecido.
 
-<img src="./images/errors/last-run-details.png" width="300" /><br />
+![](./images/errors/last-run-details.png){width=300}
 
 ## Não é possível acessar a IA do cliente no Chrome incógnito
 
@@ -39,7 +39,7 @@ Para contornar esse problema, é necessário adicionar experience.adobe.com como
 
 Se você receber o erro &quot;[!UICONTROL A qualidade do modelo é ruim. Recomendamos criar um novo aplicativo com a configuração modificada &quot;]&quot;. Siga as etapas recomendadas abaixo para ajudar a solucionar problemas.
 
-<img src="./images/errors/model-quality.png" width="300" /><br />
+![](./images/errors/model-quality.png){width=300}
 
 ### Correção recomendada
 

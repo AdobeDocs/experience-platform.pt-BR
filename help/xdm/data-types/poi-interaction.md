@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Tipo de dados da interação do ponto de interesse
 description: Saiba mais sobre o tipo de dados XDM da interação do Ponto de interesse.
 exl-id: 398f56d9-1802-458d-b565-4096beb5b014
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
 workflow-type: tm+mt
-source-wordcount: '162'
+source-wordcount: '164'
 ht-degree: 3%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 3%
 
 [!UICONTROL Interação de ponto de interesse] é um tipo de dados XDM padrão que descreve o dispositivo sem fio que comunica informações de identidade para aplicativos móveis à medida que os dispositivos móveis ficam ao alcance.
 
-<img src="../images/data-types/poi-interaction.png" width="400" /><br />
+![](../images/data-types/poi-interaction.png){width=400}
 
 | Propriedade | Tipo de dados | Descrição |
 | --- | --- | --- |

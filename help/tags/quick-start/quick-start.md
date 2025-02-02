@@ -2,10 +2,10 @@
 title: Manual de início rápido
 description: Saiba como começar a usar as tags na Adobe Experience Platform.
 exl-id: 490ee344-3b18-4189-9293-2378f86fb10d
-source-git-commit: 60d88be5d710314cdc6900f4b63643c740b91fa6
+source-git-commit: 8c881d99554a8694da79bdc29ad30ebbc870db20
 workflow-type: tm+mt
 source-wordcount: '1521'
-ht-degree: 88%
+ht-degree: 90%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 88%
 
 >[!NOTE]
 >
->O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleta de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 As tags são a próxima geração da tecnologia de gerenciamento de tags da Adobe Experience Platform. Elas foram criadas do zero para dar suporte a um ecossistema aberto e sustentável, em que qualquer pessoa pode criar suas próprias integrações, que os clientes da Adobe poderão implantar em seus sites. É um aplicativo de API First, portanto, tudo o que pode ser feito por meio da interface do usuário também pode ser feito por meio de uma API.
 
@@ -134,6 +134,6 @@ Para obter mais informações sobre os diferentes estados e opções disponívei
 
 Para saber mais sobre tags, consulte estes recursos:
 
-* **[Comunidade da Coleção de dados](https://forums.adobe.com/community/experience-cloud/platform/launch)**: faça e responda perguntas, envie ideias e vote nas ideias de outras pessoas. Faça logon com seu Adobe ID.
+* **[Comunidade da Coleção de dados](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/ct-p/adobe-launch-community)**: faça e responda perguntas, envie ideias e vote nas ideias de outras pessoas. Faça logon com seu Adobe ID.
 * **[Documentos do desenvolvedor](../api/overview.md)**: envolva-se com a comunidade do desenvolvedor de tags para criar extensões ou usar as APIs de tags
 * **[Visão geral dos tutoriais](https://experienceleague.adobe.com/docs/launch-learn/tutorials/overview.html?lang=pt-BR)**: esses documentos apresentam conceitos de tags, incluindo encaminhamento de eventos e SDK móvel em aplicativos Android.

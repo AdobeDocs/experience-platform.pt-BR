@@ -3,10 +3,10 @@ title: Introdução ao encaminhamento de eventos
 description: Siga este tutorial passo a passo para começar a usar o encaminhamento de eventos na Adobe Experience Platform.
 feature: Event Forwarding
 exl-id: f82bfac9-dc2d-44de-a308-651300f107df
-source-git-commit: 0a95d09eb1ce59e45d52372c4b08725c009001c3
+source-git-commit: e9f98e1f94aa6ae2ecf29940912d296813611d4c
 workflow-type: tm+mt
 source-wordcount: '887'
-ht-degree: 74%
+ht-degree: 76%
 
 ---
 
@@ -14,11 +14,11 @@ ht-degree: 74%
 
 >[!NOTE]
 >
->O encaminhamento de eventos é um recurso pago incluído como parte das ofertas do Adobe Real-time Customer Data Platform Connections, Prime ou Ultimate.
+>O encaminhamento de eventos é um recurso pago incluído como parte das ofertas de Conexões da Adobe Real-time Customer Data Platform, Prime ou Ultimate.
 
 >[!NOTE]
 >
->O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleta de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 Para usar a Adobe Experience Platform, os dados devem ser enviados à borda da rede da Adobe Experience Platform usando uma ou mais das três seguintes opções:
 
@@ -33,9 +33,9 @@ Depois de enviar dados para a rede de borda, você pode alternar entre as soluç
 
 ## Pré-requisitos
 
-* Adobe Real-Time CDP Connections, Prime ou Ultimate (Entre em contato com a equipe de conta do Adobe para obter preços)
+* Adobe Real-Time CDP Connections, Prime ou Ultimate (Entre em contato com a equipe da conta Adobe para obter preços)
 * Encaminhamento de eventos na Adobe Experience Platform
-* SDK da Web da Adobe Experience Platform, SDK móvel ou API do servidor Edge Network configurada para enviar dados para o Edge Network
+* Adobe Experience Platform Web SDK, Mobile SDK ou Edge Network Server API configurados para enviar dados para Edge Network
 * Mapear dados para o Experience Data Model (XDM) (esse mapeamento pode ser feito usando tags)
 
 ## Criar um esquema do XDM
@@ -82,7 +82,7 @@ A descrição ajuda a identificar configurações em uma lista de várias config
 
 1. Selecione **[!UICONTROL Salvar]**.
 
-## Ativar o encaminhamento de eventos
+## Ativar o encaminhamento de eventos {#enable-event-forwarding}
 
 Em seguida, configure o Edge Network para enviar dados ao encaminhamento de eventos e a outros produtos da Adobe.
 
@@ -100,17 +100,17 @@ Em seguida, configure o Edge Network para enviar dados ao encaminhamento de even
 
 Depois de configurar, anote as IDs de ambiente para a nova propriedade.
 
-## Configure a extensão SDK da Web da Platform para enviar dados ao fluxo de dados criado anteriormente
+## Configure a extensão Platform Web SDK para enviar dados ao fluxo de dados criado anteriormente
 
-Crie a propriedade no espaço de trabalho **[!UICONTROL Tags]**, navegue até **[!UICONTROL Extensões]** e selecione a extensão SDK da Web do Experience Platform no catálogo para configurá-la e instalá-la.
+Crie a propriedade no espaço de trabalho **[!UICONTROL Tags]**, navegue até **[!UICONTROL Extensões]** e selecione a extensão Experience Platform Web SDK no catálogo para configurá-la e instalá-la.
 
-Consulte a [documentação de extensão do SDK da Web](../../extensions/client/web-sdk/overview.md) para obter detalhes sobre as opções de configuração.
+Consulte a [documentação de extensão do Web SDK](../../extensions/client/web-sdk/overview.md) para obter detalhes sobre as opções de configuração.
 
 ## Criar uma regra de tag para enviar dados ao SDK da Web da Platform
 
 Depois que tudo estiver configurado, crie definições de dados, regras e assim por diante, que usam encaminhamento de eventos e tags, mas que só precisam de uma única solicitação da página.
 
-Crie uma regra de carregamento de página usando a extensão SDK da Web da plataforma e o tipo de ação &quot;Enviar evento&quot;:
+Crie uma regra de carregamento de página usando a extensão do Platform Web SDK e o tipo de ação &quot;Enviar evento&quot;:
 
 1. Abra a guia **[!UICONTROL Regras]** e selecione **[!UICONTROL Criar nova regra]**.
 

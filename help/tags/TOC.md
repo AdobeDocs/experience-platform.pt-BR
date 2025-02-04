@@ -6,9 +6,9 @@ user-guide-description: Saiba como implantar e gerenciar tags de análise, marke
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: 1b2f8e5a9cc85887efe9d623baa346956ae5d93d
+source-git-commit: 18690a72c8a84c6426677b3e8993d8453a8e7cf1
 workflow-type: tm+mt
-source-wordcount: '775'
+source-wordcount: '772'
 ht-degree: 44%
 
 ---
@@ -241,7 +241,8 @@ ht-degree: 44%
       * [Hub de decisão do cliente Pega](https://exchange.adobe.com/apps/ec/107597)
       * [!DNL Pinterest] {#pinterest}
          * [Visão geral](./extensions/server/pinterest/overview.md)
-      * [API de Conversões de Snap](https://exchange.adobe.com/apps/ec/108550)
+      * [!DNL Snapchat] {#snap}
+         * [Visão geral](./extensions/server/snap/overview.md)
       * [!DNL Snowflake] {#snowflake}
          * [Visão geral](./extensions/server/snowflake/overview.md)
       * [!DNL Splunk] {#splunk}

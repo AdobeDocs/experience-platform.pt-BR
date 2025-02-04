@@ -3,9 +3,9 @@ title: Visão geral do Amazon Redshift Source Connector
 description: Saiba como conectar o Amazon Redshift ao Adobe Experience Platform usando APIs ou a interface do usuário.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 75e577dd-a0b0-4f82-a371-5ec9255544f8
-source-git-commit: 84d09038ded1f35269ebf67c6bc1a5dacaafe4ac
+source-git-commit: 77941e08df893fab6dfdaf987c56c4d5a3fd4757
 workflow-type: tm+mt
-source-wordcount: '351'
+source-wordcount: '378'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,11 @@ O Adobe Experience Platform permite que os dados sejam assimilados de fontes ext
 
 O Experience Platform fornece suporte para assimilação de dados de um banco de dados de terceiros. A Platform pode se conectar a diferentes tipos de bancos de dados, como bancos de dados relacionais, NoSQL ou data warehouses. O suporte para provedores de banco de dados inclui [!DNL Amazon Redshift].
 
-## LISTA DE PERMISSÕES de endereço IP
+## Configure sua origem [!DNL Amazon Redshift] para o Experience Platform no Azure {#azure}
+
+Siga as etapas abaixo para saber como configurar sua conta do [!DNL Amazon Redshift] para o Experience Platform no Azure.
+
+### LISTA DE PERMISSÕES de endereço IP
 
 Uma lista de endereços IP deve ser adicionada a uma lista de permissões antes de trabalhar com conectores de origem. Falha ao adicionar endereços IP específicos da região à lista de permissões pode levar a erros ou ao não desempenho ao usar origens. Consulte a página [lista de permissões de endereço IP](../../ip-address-allow-list.md) para obter mais informações.
 
@@ -41,7 +45,7 @@ Adicione os seguintes endereços IP ao seu Experience Platform no Amazon Web Ser
 
 ## Conectar [!DNL Amazon Redshift] à plataforma usando APIs
 
-- [Criar uma conexão básica do Amazon Redshift usando a API do serviço de fluxo](../../tutorials/api/create/databases/redshift.md)
+- [Conecte o Amazon Redshift ao Experience Platform usando a API do serviço de fluxo](../../tutorials/api/create/databases/redshift.md)
 - [Explorar tabelas de dados usando a API de Serviço de Fluxo](../../tutorials/api/explore/tabular.md)
 - [Criar um fluxo de dados para uma fonte de banco de dados usando a API do Serviço de fluxo](../../tutorials/api/collect/database-nosql.md)
 

@@ -4,10 +4,10 @@ title: Guia completo do controle de acesso baseado em atributos
 description: Este documento fornece um guia completo sobre o controle de acesso baseado em atributos no Adobe Experience Platform
 role: Developer
 exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
-source-git-commit: 5b9200b9e534519ce2f3c1a529a30b032642ab7f
+source-git-commit: 74980c6108a32ec6736ab5892d89590e04e8a500
 workflow-type: tm+mt
-source-wordcount: '1794'
-ht-degree: 17%
+source-wordcount: '1593'
+ht-degree: 3%
 
 ---
 
@@ -66,31 +66,8 @@ O espaço de trabalho de Permissões para a interface do usuário da Platform é
 >[!CONTEXTUALHELP]
 >id="platform_permissions_labels_about"
 >title="O que são rótulos?"
->abstract="Os rótulos permitem categorizar conjuntos de dados e campos de acordo com as políticas de uso que se aplicam a esses dados. A Platform fornece vários rótulos de uso de dados “principais” definidos pela Adobe, que abrangem uma grande variedade de restrições comuns aplicáveis à governança de dados. Por exemplo, rótulos sensíveis “S”, como RHD (Regulated Health Data, dados de saúde regulamentados), permitem categorizar dados que se referem a PHI (Protected Health Information, informações de saúde protegidas). Também é possível definir seus próprios rótulos personalizados que atendam às necessidades de sua organização."
+>abstract="Use rótulos para categorizar conjuntos de dados e campos de acordo com as políticas de uso e acesso aplicáveis a esses dados. A Platform fornece vários rótulos de uso de dados <strong>core</strong> definidos pelo Adobe, que abrangem uma grande variedade de restrições comuns aplicáveis à governança de dados. Por exemplo, rótulos sensíveis <strong>S</strong>, como RHD (Dados de Integridade Regulamentados), permitem categorizar dados que se referem a PHI (Informações de Integridade Protegidas). Também é possível definir seus próprios rótulos personalizados que atendam às necessidades de sua organização."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=pt-BR#understanding-data-usage-labels" text="Visão geral dos rótulos de uso de dados"
-
->[!CONTEXTUALHELP]
->id="platform_permissions_labels_about_create"
->title="Criar novo rótulo"
->abstract="É possível criar seus próprios rótulos personalizados para atender às necessidades de sua organização. Os rótulos personalizados podem ser usados para aplicar configurações de governança de dados e controle de acesso aos seus dados."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=pt-BR#manage-labels" text="Gerenciar rótulos personalizados"
-
->[!CONTEXTUALHELP]
->id="platform_permissions_roles_about"
->title="O que são funções?"
->abstract="Funções são maneiras de categorizar os tipos de usuários que estão interagindo com sua instância da Platform. São os pilares das políticas de controle de acesso. Uma função tem um determinado conjunto de permissões, e os membros da organização podem ter uma ou mais funções atribuídas, dependendo do escopo do acesso de visualização ou gravação necessário."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=pt-BR" text="Gerenciar funções"
-
->[!CONTEXTUALHELP]
->id="platform_permissions_roles_about_create"
->title="Criar nova função"
->abstract="É possível criar uma nova função para categorizar melhor os usuários que estão acessando sua instância da Platform. Por exemplo, você pode criar uma função para uma equipe interna de marketing e aplicar o rótulo RHD a essa função, permitindo que sua equipe interna de marketing acesse as informações de saúde protegidas (PHI). Como alternativa, você também pode criar uma função para uma agência externa e negar acesso a essa função para dados PHI ao não aplicar o rótulo RHD a essa função."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=pt-BR#create-a-new-role" text="Criar uma nova função"
-
->[!CONTEXTUALHELP]
->id="platform_permissions_roles_details"
->title="Visão geral da função"
->abstract="A caixa de diálogo de visão geral da função exibe os recursos e as sandbox que uma determinada função tem permissão para acessar."
 
 Funções são maneiras de categorizar os tipos de usuários que interagem com sua instância da Platform e são blocos fundamentais das políticas de controle de acesso. Uma função tem determinado conjunto de permissões, e os membros da sua organização podem ser atribuídos a uma ou mais funções, dependendo do escopo de acesso de que precisam.
 

@@ -3,14 +3,20 @@ keywords: Experience Platform;página inicial;tópicos populares;controle de ace
 title: Permissões da Função Gerenciar Controle de Acesso Baseado em Atributo
 description: Este documento fornece informações sobre como configurar permissões para uma função por meio da interface de Permissões no Adobe Experience Cloud
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
-source-git-commit: 0c275dc18dac101455f77aa58d33f0808122b77f
+source-git-commit: 207317d16a21cc2461ebd3f7867735735227c173
 workflow-type: tm+mt
-source-wordcount: '1476'
-ht-degree: 1%
+source-wordcount: '1608'
+ht-degree: 4%
 
 ---
 
-# Gerenciar permissões de uma função
+# Gerenciar permissões de uma função {#manage-role-permissions}
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_roles_about"
+>title="O que são funções?"
+>abstract="As funções definem o acesso que um administrador, um especialista ou um usuário final tem aos recursos em sua organização. Eles categorizam os usuários que interagem com a instância da Platform e são os blocos de construção das políticas de controle de acesso. Uma função tem um determinado conjunto de permissões, e os membros da organização podem ter uma ou mais funções atribuídas, dependendo do escopo do acesso de visualização ou gravação necessário."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=pt-BR" text="Gerenciar funções"
 
 >[!IMPORTANT]
 >
@@ -41,7 +47,14 @@ Para remover um filtro, selecione o &quot;X&quot; no ícone de preenchimento do 
 
 ![O painel Funções na interface de Permissões com o X e Limpar todas as seleções realçadas nos filtros escolhidos.](../../images/flac-ui/flac-clear-filters.png)
 
-## Detalhes da função
+## Detalhes da função {#role-details}
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_roles_details"
+>title="Visão geral da função"
+>abstract="A caixa de diálogo de visão geral da função exibe os detalhes da função, incluindo os recursos e sandboxes que uma determinada função tem permissão para acessar. Você pode gerenciar rótulos, usuários, grupos de usuários e credenciais de API para a função navegando até a guia correspondente no espaço de trabalho da função."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/permissions-ui/permissions#manage-labels-for-a-role" text="Gerenciar rótulos para uma função"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/permissions-ui/permissions#manage-users-for-a-role" text="Gerenciar usuários para uma função"
 
 Selecione a função na guia **[!UICONTROL Funções]**, que abrirá o painel [!UICONTROL Detalhes] da função.
 

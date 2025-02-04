@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guia da interface de usuário da sandbox
 description: Este documento fornece etapas sobre como executar várias operações relacionadas a sandboxes na interface do usuário do Adobe Experience Platform.
 exl-id: b258c822-5182-4217-9d1b-8196d889740f
-source-git-commit: f8c39d2cc12e77ebdc974f931880cdf0d6367591
+source-git-commit: b9b00f41f146b34a1326c4c2ac104c022a416dc9
 workflow-type: tm+mt
-source-wordcount: '1066'
+source-wordcount: '1115'
 ht-degree: 4%
 
 ---
@@ -82,6 +82,7 @@ Quando terminar de criar a sandbox, atualize a página e a nova sandbox aparecer
 >* Uma sandbox de produção criada pelo usuário usada para compartilhamento de segmento bidirecional com o Adobe Audience Manager ou o Audience Core Service pode ser redefinida após uma mensagem de aviso.
 >* Antes de iniciar uma redefinição de sandbox, será necessário excluir suas composições manualmente para garantir que os dados do público-alvo associado sejam limpos corretamente.
 >* A ID da sandbox será alterada após a conclusão da redefinição.
+>* Para o [Journey Optimizer B2B edition](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer-b2b/user/guide-overview), a redefinição da sandbox é **não suportada no momento**. Redefinir ou excluir uma sandbox mapeada para o Journey Optimizer B2B edition pode resultar em perda permanente de dados no Journey Optimizer B2B edition e exigir o provisionamento de uma nova instância do Journey Optimizer B2B edition.
 
 ### Excluir composições de público
 

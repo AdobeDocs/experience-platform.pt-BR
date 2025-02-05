@@ -2,10 +2,10 @@
 title: Visão geral do gerenciamento avançado do ciclo de vida dos dados
 description: O Gerenciamento avançado do ciclo de vida dos dados permite gerenciar o ciclo de vida dos dados atualizando ou removendo registros desatualizados ou imprecisos.
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
-source-git-commit: 1f82403d4f8f5639f6a9181a7ea98bd27af54904
+source-git-commit: 6ef09957d1eb2c07e5607105c782c36f20344bfa
 workflow-type: tm+mt
-source-wordcount: '636'
-ht-degree: 2%
+source-wordcount: '828'
+ht-degree: 1%
 
 ---
 
@@ -38,24 +38,30 @@ Para obter etapas detalhadas sobre como gerenciar tarefas do ciclo de vida de da
 
 A interface do [!UICONTROL Ciclo de vida dos dados] foi criada com base na API de Higiene de Dados, cujos endpoints estão disponíveis para você usar diretamente, caso prefira automatizar as atividades do ciclo de vida dos dados. Consulte o [Guia da API de higiene de dados](./api/overview.md) para obter mais informações.
 
-## Linhas de tempo e transparência
+## Linhas de tempo e transparência {#timelines-and-transparency}
 
 [As solicitações de exclusão de registro](./ui/record-delete.md) e de expiração de conjunto de dados têm suas próprias linhas do tempo de processamento e fornecem atualizações de transparência em pontos-chave em seus respectivos fluxos de trabalho.
 
-<!-- ### Dataset expirations {#dataset-expiration-transparency} -->
-
 O seguinte ocorre quando uma [solicitação de expiração do conjunto de dados](./ui/dataset-expiration.md) é criada:
 
-| Preparo | Tempo após a expiração programada | Descrição |
+| Estágio | Tempo após a expiração programada | Descrição |
 | --- | --- | --- |
 | A solicitação foi enviada | 0 horas | Um administrador de dados ou analista de privacidade envia uma solicitação para que um conjunto de dados expire em um determinado momento. A solicitação está visível na [!UICONTROL Interface do Usuário do Ciclo de Vida de Dados] após ser enviada e permanece com o status pendente até o horário de expiração agendado, após o qual a solicitação será executada. |
-| Conjunto de dados descartado | 1 hora | O conjunto de dados é descartado da [página de inventário do conjunto de dados](../catalog/datasets/user-guide.md) na interface. Os dados no data lake são excluídos apenas por software e permanecerão assim até o final do processo, após o qual serão excluídos com dificuldade. |
+| O conjunto de dados está sinalizado para exclusão | 0-2 horas | Depois que a solicitação é executada, o conjunto de dados é sinalizado para exclusão. Se estiver usando o armazenamento de dados do Amazon Web Services (AWS), esse processo levará até duas horas. Durante esse tempo, operações como segmentação em lote e por transmissão, pré-visualização ou estimativa, exportação e acesso desconsideram esse conjunto de dados. |
+| Conjunto de dados descartado | 3 horas | **Uma hora depois que o conjunto de dados for sinalizado para exclusão**, ele será totalmente removido do sistema. Neste ponto, o conjunto de dados é descartado da [página de inventário do conjunto de dados](../catalog/datasets/user-guide.md) na interface. No entanto, os dados no data lake são excluídos apenas por software neste estágio e permanecerão assim até que o processo de exclusão permanente seja concluído. |
 | Contagem de perfis atualizada | 30 horas | Dependendo do conteúdo do conjunto de dados que está sendo excluído, alguns perfis podem ser removidos do sistema se todos os atributos do componente estiverem vinculados a esse conjunto de dados. 30 horas após a exclusão do conjunto de dados, as alterações resultantes na contagem geral dos perfis são refletidas nos [widgets do painel](../dashboards/guides/profiles.md#profile-count-trend) e outros relatórios. |
 | Públicos atualizados | 48 horas | Depois que todos os perfis afetados forem atualizados, todos os [públicos-alvo](../segmentation/home.md) relacionados serão atualizados para refletir seu novo tamanho. Dependendo do conjunto de dados removido e dos atributos nos quais você está segmentando, o tamanho de cada público pode aumentar ou diminuir como resultado da exclusão. |
 | Jornadas e destinos atualizados | 50 horas | [Jornada](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html), [campanhas](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html) e [destinos](../destinations/home.md) são atualizados de acordo com as alterações nos segmentos relacionados. |
 | Exclusão forçada concluída | 15 dias | Todos os dados relacionados ao conjunto de dados são excluídos permanentemente do data lake. O [status do trabalho do ciclo de vida dos dados](./ui/browse.md#view-details) que excluiu o conjunto de dados foi atualizado para refletir isso. |
 
 {style="table-layout:auto"}
+
+>[!IMPORTANT]
+>
+>As exclusões de conjuntos de dados na Amazon Web Services (AWS) estão sujeitas a uma latência de cerca de três horas antes de as alterações serem totalmente aplicadas. Isso inclui até duas horas para que o conjunto de dados seja sinalizado para exclusão, seguidas por uma hora adicional antes de ser totalmente descartado do sistema. Por outro lado, as solicitações de exclusão de instâncias da Platform que usam o Azure Data Lake resultam em alterações imediatas em todas as funções comerciais.
+>
+>Para usuários do AWS, esse atraso pode afetar a segmentação em lote, a segmentação por transmissão, as visualizações, as estimativas, as exportações e o acesso aos dados. Essa latência afeta apenas os clientes que usam o AWS, já que os usuários do Azure Data Lake experimentam atualizações imediatas. Para usuários do AWS, pode levar até três horas para que as solicitações de exclusão se propaguem totalmente em todos os sistemas afetados. Ajuste suas expectativas de acordo.
+
 
 <!-- ### Record deletes {#record-delete-transparency}
 

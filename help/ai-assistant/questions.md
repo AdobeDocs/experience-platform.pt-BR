@@ -2,10 +2,10 @@
 title: Guia de perguntas do Assistente de IA
 description: Leia este documento para conhecer exemplos de perguntas que você pode usar ao consultar o Assistente de IA.
 exl-id: d16d1262-cc2d-45c9-94c4-b86132183442
-source-git-commit: 0926a0e8c7ae560bf5f4f9ff6853b191af047738
+source-git-commit: 7268895d0b1924f9d3e7cee24e549c79245ef099
 workflow-type: tm+mt
-source-wordcount: '1519'
-ht-degree: 1%
+source-wordcount: '2105'
+ht-degree: 0%
 
 ---
 
@@ -115,6 +115,75 @@ As tabelas a seguir descrevem as práticas recomendadas que você pode seguir ao
 | Omitir critérios ou parâmetros. | Mostre-me conjuntos de dados. |
 
 {style="table-layout:auto"}
+
+## Observabilidade do conjunto de dados {#dataset-observability}
+
+O AI Assistant agora pode responder a perguntas sobre métricas específicas do conjunto de dados, como tamanho do armazenamento e contagem de linhas.
+
+* Quais são meus maiores conjuntos de dados por tamanho?
+* Quais são meus maiores conjuntos de dados por linhas?
+* Quantos conjuntos de dados estão vazios?
+* Quais conjuntos de dados estão vazios?
+
+Além disso, você pode transmitir uma intenção semelhante por meio de várias variações para as quatro perguntas acima.
+
++++Selecione para exibir variações aceitas de perguntas de observabilidade do conjunto de dados
+
+* Quais são os cinco principais conjuntos de dados por tamanho?
+* Qual conjunto de dados tem o maior número de linhas?
+* Quantos conjuntos de dados não têm dados?
+* Listar os conjuntos de dados com tamanho >10 MB?
+* Listar os conjuntos de dados com linhas menores que 10.
+* Você pode me mostrar os conjuntos de dados que estão completamente vazios?
+* Qual conjunto de dados é o maior por tamanho de armazenamento?
+* Qual é o menor conjunto de dados em termos de contagem de linhas?
+* Quantos dos meus conjuntos de dados têm dados e quantos estão vazios?
+* Qual é a contagem de linhas do conjunto de dados chamado {DATASET_NAME}?
+* Como o tamanho de {DATASET_NAME} se compara aos meus outros conjuntos de dados?
+* Qual é o tamanho de {DATASET_NAME}?
+* Quantas linhas {DATASET_NAME} tem?
+* Qual é o tamanho e a contagem de linhas de {DATASET_NAME}?
+* Você pode listar os maiores e menores conjuntos de dados por tamanho de armazenamento?
+
++++
+
+Você também pode refinar suas perguntas de observabilidade de dados com um qualificador para filtrar sua consulta por um determinado período de tempo:
+
+* Conjuntos de dados que recebem lotes nos últimos (x) dias
+* Conjuntos de dados que não recebem lotes nos últimos (x) dias
+* Conjuntos de dados com mais dados assimilados nos últimos (x) dias
+* Contagem de registros de um conjunto de dados específico nos últimos (x) dias
+
++++Selecione para exibir variações aceitas de perguntas de observabilidade do conjunto de dados
+
+* Quantos conjuntos de dados receberam lotes nos últimos (x) dias?
+* Quais conjuntos de dados receberam lotes nos últimos (x) dias?
+* Você pode listar os conjuntos de dados que tiveram dados assimilados nos últimos (x) dias?
+* Quantos conjuntos de dados receberam novos lotes nos (x) dias anteriores?
+* Quais são os conjuntos de dados que foram atualizados com novos dados nos últimos (x) dias?
+* Listar conjuntos de dados que tiveram atividade em lote nos últimos (x) dias.
+* Quantos conjuntos de dados não receberam lotes nos últimos (x) dias?
+* Quais conjuntos de dados não receberam nenhum lote nos últimos (x) dias?
+* Você consegue identificar conjuntos de dados sem assimilação de dados nos últimos (x) dias?
+* Quantos conjuntos de dados não receberam atualizações nos últimos (x) dias?
+* Quais conjuntos de dados ficaram inativos nos últimos (x) dias?
+* Liste conjuntos de dados que não obtiveram novos lotes nos últimos (x) dias.
+* Quando foi a última vez que os dados foram assimilados no conjunto de dados (x)?
+* Quais são os 10 principais conjuntos de dados nos quais a maioria dos dados foi assimilada nos últimos (x) dias?
+* Quais são os 10 principais conjuntos de dados por volume de dados assimilados nos últimos (x) dias?
+* Quais foram os 10 conjuntos de dados que tiveram a maior assimilação de dados nos últimos (x) dias?
+* Mostre os 10 principais conjuntos de dados com a maior assimilação de dados nos (x) dias anteriores.
+* Quais são os principais conjuntos de dados por dados recebidos nos últimos (x) dias?
+* Liste os 10 principais conjuntos de dados que assimilaram mais dados nos últimos (x) dias.
+* Quantos registros foram recebidos no conjunto de dados (x), nos últimos (y) dias?
+* Quantos registros o conjunto de dados (x) recebeu nos últimos (y) dias?
+* Qual é a contagem de registros assimilada para o conjunto de dados (x) nos últimos (y) dias?
+* Você pode fornecer o número de registros adicionados ao conjunto de dados (x) nos últimos (y) dias?
+* Quantos dados foram recebidos por conjunto de dados (x) nos últimos (y) dias?
+* Qual é o volume de registros assimilados para o conjunto de dados (x) nos (y) dias anteriores?
+
++++
+
 
 ## Exemplos de perguntas não suportadas {#unsupported-questions}
 

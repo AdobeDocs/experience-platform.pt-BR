@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Visão geral da coleção de dados
 description: Saiba mais sobre as várias tecnologias envolvidas na coleta de dados sobre as experiências do cliente no Adobe Experience Platform.
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: b8332686043311c4dd3afeff12300fbd2827498c
 workflow-type: tm+mt
-source-wordcount: '489'
+source-wordcount: '472'
 ht-degree: 5%
 
 ---
@@ -36,13 +36,13 @@ A coleta de dados se concentra na descoberta e na acessibilidade de conjuntos de
 
 Este guia fornece uma introdução de alto nível à coleta de dados e como ela funciona para enviar dados para produtos Adobe Experience Cloud e aplicativos não-Adobe pelo Edge Network da plataforma.
 
-## Tags, SDK da Web e SDK móvel
+## Tags, Web SDK e SDK móvel
 
-O SDK da Web da Platform e o SDK móvel da Platform recolhem e compactam todas as bibliotecas de produtos do Adobe em um único kit de desenvolvimento para plataformas móveis e da Web, respectivamente. Eles podem ser implementados com o uso de código bruto ou de [marcas](../tags/home.md) por meio da interface da Coleção de Dados ou da interface do Adobe Experience Platform.
+O Platform Web SDK e o Platform Mobile SDK recolhem e compactam todas as bibliotecas de produtos Adobe em um único kit de desenvolvimento para plataformas móveis e da Web, respectivamente. Eles podem ser implementados com o uso de código bruto ou de [marcas](../tags/home.md) por meio da interface da Coleção de Dados ou da interface do Adobe Experience Platform.
 
 A compactação dessas bibliotecas acelera a coleta de dados e consolida as operações em um único fluxo de dispositivos do lado do cliente para o Edge Network da plataforma.
 
-![Tags, SDK da Web, SDK móvel](./images/home/tags-sdks.png)
+![Tags, Web SDK, SDK Móvel](./images/home/tags-sdks.png)
 
 ## Edge Network da plataforma e fluxos de dados {#edge}
 
@@ -52,10 +52,6 @@ Além disso, os fluxos de dados são integrados a vários recursos da Platform q
 
 ![Fluxos de dados e soluções de Adobe](./images/home/adobe-solutions.png)
 
->[!NOTE]
->
->Para obter uma introdução de alto nível ao Edge Network da Platform, consulte o seguinte [tour interativo do produto](https://adobe-ideacloud.forgedx.com/adobe-adobe-edge-collection/adobe-experience-edge/public/mx?SUID=hgb1a48ICSCpbM6MzBYHbxnsh9DgjUy1).
-
 ## Encaminhamento de eventos
 
 O [encaminhamento de eventos](../tags/ui/event-forwarding/overview.md) pode acessar qualquer sequência de dados de Experience Platform, permitindo transformar, enriquecer e enviar dados para qualquer destino que não seja de Adobe com latência extremamente baixa e sem adicionar código de terceiros ao dispositivo cliente.
@@ -64,7 +60,7 @@ O [encaminhamento de eventos](../tags/ui/event-forwarding/overview.md) pode aces
 
 >[!NOTE]
 >
->O encaminhamento de eventos é um recurso pago incluído como parte das ofertas do Adobe Real-time Customer Data Platform Connections, Prime ou Ultimate.
+>O encaminhamento de eventos é um recurso pago incluído como parte das ofertas de Conexões da Adobe Real-time Customer Data Platform, Prime ou Ultimate.
 
 ## Próximas etapas
 

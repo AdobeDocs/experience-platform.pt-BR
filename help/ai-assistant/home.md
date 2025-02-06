@@ -2,9 +2,9 @@
 title: Visão geral do Assistente de IA no Adobe Experience Platform
 description: Saiba mais sobre o Assistente de IA, suas nuances e casos de uso e como você pode usá-lo para acelerar seu fluxo de trabalho com a Adobe Experience Platform e a Real-time Customer Data Platform.
 exl-id: cfd4ac22-fff3-4b50-bbc2-85b6328f603c
-source-git-commit: 1910ac68be2c154467d250a614d0d13d62ef6875
+source-git-commit: 9a10db0da1985c5ccaaeb84e040eea9e76ec1ae4
 workflow-type: tm+mt
-source-wordcount: '938'
+source-wordcount: '950'
 ht-degree: 8%
 
 ---
@@ -91,6 +91,10 @@ Você pode fazer perguntas ao Assistente de IA sobre seus insights operacionais 
 {style="table-layout:auto"}
 
 Para perguntas sobre insights operacionais, as respostas podem não refletir o estado atual da interface do usuário. Os dados que sustentam essas perguntas são atualizados uma vez a cada 24 horas. Por exemplo, as alterações que os usuários fazem no Real-Time CDP durante o dia são sincronizadas com os armazenamentos de dados à noite e, em seguida, ficam disponíveis para perguntas do usuário de manhã. Você precisará fazer logon em uma sandbox para consultar sobre dados específicos relacionados a objetos.
+
+Assista ao vídeo a seguir para obter mais informações sobre os insights operacionais do Assistente de IA:
+
+>[!VIDEO](https://video.tv.adobe.com/v/3444031?learn=on&enablevpops)
 
 ### Escopo do recurso {#feature-scope}
 

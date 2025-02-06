@@ -2,9 +2,10 @@
 title: Visão geral da extensão da API de conversões do Snapchat
 description: Use a conversão do Snapchat para enviar dados do evento do lado do servidor para o Snap.
 last-substantial-update: 2025-01-20T00:00:00Z
-source-git-commit: 79e19b12dd39208827c215094b6c8ec9163d6624
+exl-id: 1c2d7243-5bcd-40a0-8515-9ab72613c5f3
+source-git-commit: 7cece312a2f019d48653dbd208cc8b7593ab0ee3
 workflow-type: tm+mt
-source-wordcount: '965'
+source-wordcount: '964'
 ht-degree: 3%
 
 ---
@@ -24,7 +25,7 @@ Crie um [Datastream](/help/tags/ui/event-forwarding/getting-started.md) e adicio
 
 Uma conta do **[!DNL Snapchat]** [Business Manager](https://business.snapchat.com/) é necessária para usar a API de Conversões. O Business Manager ajuda os anunciantes a integrar os esforços de marketing de **[!DNL Snapchat]** em seus negócios e com parceiros externos. Consulte o **[!DNL Snapchat]** [artigo da central de ajuda](https://businesshelp.snapchat.com/s/article/get-started?language=en_US) sobre como criar uma conta do Business Manager, se você não tiver uma.
 
-Um **[!DNL Snap Pixel]**(https://businesshelp.snapchat.com/s/article/pixel-website-install?language=en_US) deve ser configurado no Gerenciador de Anúncios do Snapchat e você deve ter acesso para visualizar o `Pixel ID`. O `Pixel ID` pode ser encontrado na seção **[!UICONTROL Gerenciador de Eventos]**(https://businesshelp.snapchat.com/s/article/events-manager?language=en_US).
+Um [!DNL [Snap Pixel]](https://businesshelp.snapchat.com/s/article/pixel-website-install?language=en_US) deve ser configurado no Gerenciador de Anúncios do Snapchat e você deve ter acesso para visualizar o `Pixel ID`. O `Pixel ID` pode ser encontrado na seção [!UICONTROL [Gerenciador de Eventos]](https://businesshelp.snapchat.com/s/article/events-manager?language=en_US).
 
 Você precisa de um token de API estático de longa duração. Consulte a [[!DNL Snapchat] Documentação da API de conversões](https://developers.snap.com/api/marketing-api/Conversions-API/GetStarted#access-token) para obter este token.
 
@@ -190,7 +191,7 @@ Depois de definir o nome, a condição e a ação da regra conforme descrito aci
 
 ![Imagem mostrando a regra habilitada](../../../images/extensions/server/snap/enabled_rule.png)
 
-Agora você pode publicar essas alterações na propriedade. Consulte a documentação no [fluxo de publicação](/help/tags/ui/publishing/overview.md)(https://experienceleague.adobe.com/en/docs/experience-platform/tags/publish/overview) para obter mais informações.
+Agora você pode publicar essas alterações na propriedade. Consulte a documentação em [fluxo de publicação](/help/tags/ui/publishing/overview.md) para obter mais informações.
 
 ## Solução de problemas {#troubleshoot}
 

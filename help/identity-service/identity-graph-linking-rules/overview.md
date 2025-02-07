@@ -5,7 +5,7 @@ exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
 source-git-commit: 048d915d33a19a9d50a4951e165b5ade1b9d9734
 workflow-type: tm+mt
 source-wordcount: '1436'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -25,7 +25,7 @@ Os documentos a seguir são essenciais para entender as regras de vinculação d
 * [Guia de implementação](./implementation-guide.md)
 * [Exemplos de configurações de gráfico](./example-configurations.md)
 * [Solução de problemas e perguntas frequentes](./troubleshooting.md)
-* [Prioridade do namespace](./namespace-priority.md)
+* [Prioridade de namespace](./namespace-priority.md)
 * [Interface de simulação de gráfico](./graph-simulation.md)
 * [Interface de configurações de identidade](./identity-settings-ui.md)
 
@@ -33,8 +33,8 @@ Os documentos a seguir são essenciais para entender as regras de vinculação d
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_graphcollapsescenarios"
->title="Recolher Cenários de Gráfico"
->abstract="Há vários motivos pelos quais os gráficos podem ser “recolhidos” ou representar várias entidades de pessoas."
+>title="Cenários de recolhimento de gráfico"
+>abstract="Há várias razões pelas quais os gráficos podem &quot;recolher&quot; ou representar várias entidades de pessoa."
 
 Esta seção descreve cenários de exemplo que você pode considerar ao configurar regras de vinculação de gráficos de identidade.
 
@@ -94,7 +94,7 @@ Com as regras de vinculação do gráfico de identidade, você pode:
 | Terminologia | Descrição |
 | --- | --- |
 | Namespace exclusivo | Um namespace exclusivo é um namespace de identidade que foi configurado para ser distinto no contexto de um gráfico de identidade. Você pode configurar um namespace para ser exclusivo usando a interface do usuário. Depois que um namespace é definido como exclusivo, um gráfico só pode ter uma identidade que contenha esse namespace. |
-| Prioridade do namespace | A prioridade de namespace refere-se à importância relativa dos namespaces em comparação uns com os outros. A prioridade de namespace pode ser configurada por meio da interface do usuário. Você pode classificar namespaces em um determinado gráfico de identidade. Depois de ativada, a prioridade de nomes será usada em vários cenários, como entrada para o algoritmo de otimização de identidade e determinação da identidade principal para fragmentos de evento de experiência. |
+| Prioridade de namespace | A prioridade de namespace refere-se à importância relativa dos namespaces em comparação uns com os outros. A prioridade de namespace pode ser configurada por meio da interface do usuário. Você pode classificar namespaces em um determinado gráfico de identidade. Depois de ativada, a prioridade de nomes será usada em vários cenários, como entrada para o algoritmo de otimização de identidade e determinação da identidade principal para fragmentos de evento de experiência. |
 | Algoritmo de otimização de identidade | O algoritmo de otimização de identidade garante que as diretrizes criadas pela configuração de um namespace exclusivo e de prioridades de namespace sejam aplicadas em um determinado gráfico de identidade. |
 
 ### Namespace exclusivo {#unique-namespace}
@@ -118,7 +118,7 @@ Se você não configurar um namespace exclusivo, poderá obter mesclagens de gr�
 
 Você deve configurar um namespace exclusivo para informar o algoritmo de otimização de identidade para impor limitações aos dados de identidade que são assimilados em um determinado gráfico de identidade.
 
-### Prioridade do namespace {#namespace-priority}
+### Prioridade de namespace {#namespace-priority}
 
 A prioridade de namespace refere-se à importância relativa dos namespaces em comparação uns com os outros. A prioridade de namespace é configurável por meio da interface do usuário e você pode classificar namespaces em um determinado gráfico de identidade.
 
@@ -129,7 +129,7 @@ Namespaces exclusivos e prioridades de namespace podem ser configurados no espa�
 | | Serviço de identidade | Perfil do cliente em tempo real |
 | --- | --- | --- |
 | Namespace exclusivo | No Serviço de identidade, o algoritmo de otimização de identidade se refere a namespaces exclusivos para determinar os dados de identidade que são assimilados em um determinado gráfico de identidade. | Os namespaces exclusivos não afetam o Perfil do cliente em tempo real. |
-| Prioridade do namespace | No Identity Service, para gráficos com várias camadas, a prioridade do namespace determinará se os links apropriados foram removidos. | Quando um evento de experiência é assimilado no Perfil, o namespace com a prioridade mais alta se torna a identidade principal do fragmento de perfil. |
+| Prioridade de namespace | No Identity Service, para gráficos com várias camadas, a prioridade do namespace determinará se os links apropriados foram removidos. | Quando um evento de experiência é assimilado no Perfil, o namespace com a prioridade mais alta se torna a identidade principal do fragmento de perfil. |
 
 * A prioridade de namespace não afeta o comportamento do gráfico quando o limite de 50 identidades por gráfico é atingido.
 * **A prioridade de namespace é um valor numérico** atribuído a um namespace indicando sua importância relativa. Esta é uma propriedade de um namespace.
@@ -148,6 +148,6 @@ Para obter mais informações sobre regras de vinculação de gráficos de ident
 * [Guia de implementação](./implementation-guide.md)
 * [Exemplos de configurações de gráfico](./example-configurations.md)
 * [Solução de problemas e perguntas frequentes](./troubleshooting.md)
-* [Prioridade do namespace](./namespace-priority.md)
+* [Prioridade de namespace](./namespace-priority.md)
 * [Interface de simulação de gráfico](./graph-simulation.md)
 * [Interface de configurações de identidade](./identity-settings-ui.md)

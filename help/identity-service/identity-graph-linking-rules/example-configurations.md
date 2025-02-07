@@ -14,7 +14,7 @@ ht-degree: 6%
 >[!CONTEXTUALHELP]
 >id="platform_identities_algorithmconfiguration"
 >title="Configuração do algoritmo"
->abstract="Configure o namespace exclusivo e a prioridade do namespace conforme as suas identidades assimiladas."
+>abstract="Configure um namespace único e uma prioridade de namespace adaptados às suas identidades assimiladas."
 
 >[!AVAILABILITY]
 >
@@ -770,6 +770,6 @@ Para obter mais informações sobre regras de vinculação de gráficos de ident
 * [Algoritmo de otimização de identidade](./identity-optimization-algorithm.md)
 * [Guia de implementação](./implementation-guide.md)
 * [Solução de problemas e perguntas frequentes](./troubleshooting.md)
-* [Prioridade do namespace](./namespace-priority.md)
+* [Prioridade de namespace](./namespace-priority.md)
 * [Interface de simulação de gráfico](./graph-simulation.md)
 * [Interface de configurações de identidade](./identity-settings-ui.md)

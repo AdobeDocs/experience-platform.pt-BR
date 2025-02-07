@@ -5,7 +5,7 @@ exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
 source-git-commit: 048d915d33a19a9d50a4951e165b5ade1b9d9734
 workflow-type: tm+mt
 source-wordcount: '1560'
-ht-degree: 2%
+ht-degree: 4%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 2%
 >[!CONTEXTUALHELP]
 >id="platform_identities_uniquenamespace"
 >title="Namespace único"
->abstract="Um gráfico não pode ter duas identidades com um namespace exclusivo. Se um gráfico tentar exceder esse limite, os links mais recentes serão mantidos e os links mais antigos serão removidos."
+>abstract="Um gráfico não pode ter duas identidades com um namespace único. Se um gráfico tentar exceder esse limite, os links mais recentes serão mantidos e os links mais antigos serão removidos."
 
 >[!AVAILABILITY]
 >
@@ -45,7 +45,7 @@ Um namespace que você declara como exclusivo será configurado automaticamente 
 >
 >* Todos os namespaces que são identificadores de pessoas e que são usados na sandbox para gerar gráficos de identidade devem ser marcados como um namespace exclusivo. Caso contrário, você poderá ver resultados indesejáveis de vinculação.
 
-### Prioridade do namespace {#namespace-priority}
+### Prioridade de namespace {#namespace-priority}
 
 A prioridade de namespace determina como o algoritmo de otimização de identidade remove os links.
 
@@ -169,6 +169,6 @@ Para obter mais informações sobre regras de vinculação de gráficos de ident
 * [Guia de implementação](./implementation-guide.md)
 * [Exemplos de configurações de gráfico](./example-configurations.md)
 * [Solução de problemas e perguntas frequentes](./troubleshooting.md)
-* [Prioridade do namespace](./namespace-priority.md)
+* [Prioridade de namespace](./namespace-priority.md)
 * [Interface de simulação de gráfico](./graph-simulation.md)
 * [Interface de configurações de identidade](./identity-settings-ui.md)

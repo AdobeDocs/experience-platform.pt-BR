@@ -1,15 +1,15 @@
 ---
-title: Gerenciamento de permissões para coleta de dados no Experience Platform
+title: Gerenciamento de permissões para coleção de dados na Experience Platform
 description: Uma visão geral de alto nível sobre como gerenciar permissões e controlar o acesso aos recursos de coleção de dados no Adobe Experience Platform.
 exl-id: 8426d54b-ec1d-475a-a769-f45a8c924fe7
 source-git-commit: 2d71eafb00098d958c8cff9350caa27bd3f0260d
 workflow-type: tm+mt
 source-wordcount: '1356'
-ht-degree: 26%
+ht-degree: 28%
 
 ---
 
-# Gerenciamento de permissões para coleta de dados no Experience Platform {#permission-management}
+# Gerenciamento de permissões para coleção de dados na Experience Platform {#permission-management}
 
 >[!CONTEXTUALHELP]
 >id="platform_tags_permissions"

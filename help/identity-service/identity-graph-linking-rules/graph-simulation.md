@@ -5,16 +5,16 @@ exl-id: 89f0cf6e-c43f-40ec-859a-f3b73a6da8c8
 source-git-commit: 048d915d33a19a9d50a4951e165b5ade1b9d9734
 workflow-type: tm+mt
 source-wordcount: '1458'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
-# Guia da interface do usuário do [!DNL Graph Simulation] {#graph-simulation}
+# [!DNL Graph Simulation] Guia da interface {#graph-simulation}
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_graphsimulation"
 >title="Simulação de gráfico"
->abstract="Simule gráficos para entender como o Serviço de identidade vincula identidades e como o algoritmo de otimização de identidades funciona."
+>abstract="Simule gráficos para entender como o Serviço de identidade vincula identidades e como o algoritmo de otimização de identidade funciona."
 
 >[!AVAILABILITY]
 >
@@ -181,5 +181,5 @@ Após a leitura deste documento, você sabe como usar a ferramenta [!DNL Graph S
 * [Guia de implementação](./implementation-guide.md)
 * [Solução de problemas e perguntas frequentes](./troubleshooting.md)
 * [Exemplos de configurações de gráfico](./example-configurations.md)
-* [Prioridade do namespace](./namespace-priority.md)
+* [Prioridade de namespace](./namespace-priority.md)
 * [Interface de configurações de identidade](./identity-settings-ui.md)

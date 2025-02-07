@@ -2,7 +2,7 @@
 title: Visão geral do Perfil do cliente em tempo real
 description: O Perfil do cliente em tempo real mescla dados de várias fontes e fornece acesso a esses dados na forma de perfis de clientes individuais e eventos de séries de tempo relacionados. Esse recurso permite que os profissionais de marketing promovam experiências coordenadas, consistentes e relevantes com seus públicos-alvo em vários canais.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: 7d515401eb49ffd2ad5cf0bd074896b274c4fb05
 workflow-type: tm+mt
 source-wordcount: '1821'
 ht-degree: 1%
@@ -49,7 +49,7 @@ O armazenamento de perfis usa uma infraestrutura do Microsoft Azure Cosmos DB e 
 
 ### Medidas de proteção de perfil
 
-O Experience Platform fornece uma série de medidas de proteção para ajudar você a evitar a criação de [esquemas do Experience Data Model (XDM)](../xdm/home.md), para os quais o Perfil do cliente em tempo real não pode oferecer suporte. Isso inclui limites flexíveis que resultarão em degradação do desempenho, bem como limites rígidos que resultarão em erros e quebras do sistema. Para obter mais informações, incluindo uma lista de diretrizes e casos de uso de exemplo, leia a documentação [Medidas de proteção de perfil](guardrails.md).
+O Experience Platform fornece uma série de medidas de proteção para ajudar você a evitar a criação de [esquemas do Experience Data Model (XDM)](../xdm/home.md), para os quais o Perfil do cliente em tempo real não pode oferecer suporte. Isso inclui limites flexíveis que resultarão na degradação do desempenho, bem como limites rígidos que resultarão em erros e quebras do sistema. Para obter mais informações, incluindo uma lista de diretrizes e casos de uso de exemplo, leia a documentação [Medidas de proteção de perfil](guardrails.md).
 
 ### Painel do perfil {#profile-dashboard}
 
@@ -75,7 +75,7 @@ Os dados de série temporal fornecem um instantâneo do sistema no momento em qu
 
 Toda empresa quer se comunicar com seus clientes de uma forma que pareça pessoal. No entanto, um dos desafios de fornecer experiências digitais relevantes para os clientes é entender como unir seus dados desconectados, que geralmente estão distribuídos em diferentes canais digitais, como tablets, celulares e notebooks. O [!DNL Identity Service] permite que você reúna a imagem completa do cliente, vinculando identidades de vários canais e criando um gráfico de identidade para cada cliente. Visite a [Visão geral do Serviço de Identidade](../identity-service/home.md) para obter mais informações.
 
-### Políticas de mesclagem
+### Mesclar políticas
 
 Ao reunir fragmentos de dados de várias fontes e combiná-los para ver uma exibição completa de cada cliente individual, as políticas de mesclagem são as regras que o [!DNL Platform] usa para determinar como os dados serão priorizados e quais dados serão usados para criar o perfil do cliente.
 

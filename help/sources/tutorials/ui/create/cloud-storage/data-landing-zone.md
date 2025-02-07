@@ -2,9 +2,9 @@
 title: Conectar a zona de aterrissagem de dados à plataforma usando a interface do
 description: Saiba como criar um conector de origem da Zona de aterrissagem de dados usando a interface do usuário da Platform.
 exl-id: 653c9958-5d89-4b0c-af3d-a3e74aa47a08
-source-git-commit: 22f3b76c02e641d2f4c0dd7c0e5cc93038782836
+source-git-commit: cdcce07a5adf08bf9d5e6a08d6bc965d37458a5d
 workflow-type: tm+mt
-source-wordcount: '736'
+source-wordcount: '767'
 ht-degree: 0%
 
 ---
@@ -27,6 +27,10 @@ Este tutorial requer uma compreensão funcional dos seguintes componentes do Ado
 * [Sandboxes](../../../../../sandboxes/home.md): o Experience Platform fornece sandboxes virtuais que particionam uma única instância da Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
 ## Trazer seus arquivos do [!DNL Data Landing Zone] para a Platform
+
+>[!IMPORTANT]
+>
+> Para se conectar à origem, você precisa das **[!UICONTROL Exibir Fontes]** e **[!UICONTROL Gerenciar Fontes]** permissões de controle de acesso. Leia a [visão geral do controle de acesso](../../../../../access-control/home.md) ou contate o administrador do produto para obter as permissões necessárias.
 
 Na interface da Platform, selecione **[!UICONTROL Fontes]** na navegação à esquerda para acessar o espaço de trabalho [!UICONTROL Fontes]. A tela [!UICONTROL Catálogo] exibe uma variedade de fontes com as quais você pode criar uma conta.
 

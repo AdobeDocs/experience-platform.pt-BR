@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Monitorar fluxos de dados para destinos na interface do
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 25dc27d890cb2e0e23f8fa797ac9edea929164fd
+source-git-commit: f10706fbbde9cef112460f5431af24d09b0e0460
 workflow-type: tm+mt
-source-wordcount: '3639'
-ht-degree: 9%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -105,7 +105,7 @@ Cada execução de fluxo de dados individual mostra os seguintes detalhes:
   > Após esse aprimoramento, os usuários do [destino de Correspondência do Cliente do Google](../../destinations/catalog/advertising/google-customer-match.md) poderão observar uma queda esperada em sua contagem de **[!UICONTROL Falha nas identidades]**.
 
 
-- **[!UICONTROL Taxa de ativação]**: a porcentagem de identidades recebidas que foram ativadas ou ignoradas com êxito. A fórmula a seguir demonstra como esse valor é calculado:
+- **[!UICONTROL Taxa de ativação]**: a porcentagem de identidades recebidas que foram ativadas com êxito. A fórmula a seguir demonstra como esse valor é calculado:
   ![Fórmula da taxa de ativação.](../assets/ui/monitor-destinations/activation-rate-formula.png)
 - **[!UICONTROL Status]**: representa o estado em que o fluxo de dados está: [!UICONTROL Concluído] ou [!UICONTROL Processando]. [!UICONTROL Concluído] significa que todas as identidades para a execução do fluxo de dados correspondente foram exportadas dentro do período de uma hora. [!UICONTROL Processando] significa que a execução do fluxo de dados ainda não foi concluída.
 

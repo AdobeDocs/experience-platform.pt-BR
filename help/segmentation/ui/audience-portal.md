@@ -2,9 +2,9 @@
 title: Visão geral do Audience Portal
 description: Saiba como usar o Audience Portal para exibir, gerenciar e criar públicos no Adobe Experience Platform.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 4ef3f6dc07cb5d17146d48c7a41e3745fd9a3a58
+source-git-commit: 9f4facebcd55dc15761db1bf744acfef9ccb15ff
 workflow-type: tm+mt
-source-wordcount: '4569'
+source-wordcount: '4597'
 ht-degree: 4%
 
 ---
@@ -233,6 +233,8 @@ A avaliação flexível do público-alvo permite executar um trabalho de segment
 >
 Ao selecionar públicos-alvo para avaliação flexível do público-alvo, as seguintes condições se aplicam:
 >
+- Você só pode usar a avaliação de público flexível **duas vezes** por dia. Esse limite é redefinido à meia-noite (UTC).
+- Você tem um **máximo** de 50 execuções flexíveis de avaliação de público-alvo por ano.
 - Todos os públicos-alvo **devem** ter uma origem de &quot;Serviço de segmentação&quot;.
 - Todos os públicos-alvo **devem** ser avaliados usando a segmentação em lote.
 - Todos os públicos-alvo **devem** ser baseados em pessoas.

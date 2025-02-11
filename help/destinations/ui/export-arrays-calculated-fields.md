@@ -3,10 +3,10 @@ title: Exportar objetos de matriz da Real-Time CDP para destinos de armazenament
 type: Tutorial
 description: Saiba como usar campos calculados para exportar matrizes do Real-Time CDP para destinos de armazenamento em nuvem como cadeias de caracteres.
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: 6b182df562ea59d537050aa26e3c813fc2007e9f
+source-git-commit: 546ef0f9a5a9c37de3891aba02491540a5c6f8c9
 workflow-type: tm+mt
-source-wordcount: '1698'
-ht-degree: 6%
+source-wordcount: '1730'
+ht-degree: 5%
 
 ---
 
@@ -73,8 +73,8 @@ Observe as seguintes limitações conhecidas que se aplicam atualmente a essa fu
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_maps_objects"
->title="Habilitar esquema de saída hierárquico"
->abstract="<p> Ative esta configuração **em** para habilitar a exportação de matrizes, mapas e objetos para arquivos JSON ou Parquet.</p><p>Com essa opção desativada, você pode usar a opção de campos calculados ao ativar públicos, mas não pode exportar matrizes, mapas e objetos para arquivos JSON ou Parquet</p>"
+>title="Exportar arrays, mapas e objetos"
+>abstract="<p> Ative esta configuração <b>em</b> para habilitar a exportação de matrizes, mapas e objetos para arquivos JSON ou Parquet. Você pode selecionar esses tipos de objetos na exibição do campo de origem da etapa de mapeamento.</p><p>Com este botão de alternância <b>desativado</b>, você pode usar a opção de campos calculados e aplicar várias funções de transformação de dados ao ativar públicos. No entanto, você pode <i>não</i> exportar matrizes, mapas e objetos para arquivos JSON ou Parquet e deve configurar um destino separado para essa finalidade.</p>"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_control"

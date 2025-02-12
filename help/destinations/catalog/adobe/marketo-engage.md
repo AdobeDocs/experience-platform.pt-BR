@@ -2,14 +2,14 @@
 title: Destino do Marketo Engage
 description: O Marketo Engage é a única solução completa de gerenciamento de experiência do cliente (CXM) para marketing, publicidade, análises e comércio. Ele permite automatizar e gerenciar atividades do gerenciamento de clientes potenciais de CRM e do envolvimento do cliente para o marketing baseado em conta e a atribuição de receita.
 exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 58be4f2f44312116a3aa2e8f5a7889424000fd9f
 workflow-type: tm+mt
-source-wordcount: '885'
+source-wordcount: '903'
 ht-degree: 1%
 
 ---
 
-# destino Marketo Engage {#beta-marketo-engage-destination}
+# Destino do Marketo Engage {#beta-marketo-engage-destination}
 
 ## Log de alterações de destino {#changelog}
 
@@ -57,7 +57,7 @@ Esta seção descreve quais tipos de públicos-alvo você pode exportar para ess
 
 | Origem do público | Suportado | Descrição |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Públicos gerados por meio do [Serviço de segmentação](../../../segmentation/home.md) do Experience Platform. |
+| [!DNL Segmentation Service] | ✓ | Públicos-alvo gerados pelo [Serviço de Segmentação](../../../segmentation/home.md) da Experience Platform. |
 | Uploads personalizados | ✓ | Públicos [importados](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV. |
 
 {style="table-layout:auto"}
@@ -69,7 +69,7 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 | Item | Tipo | Notas |
 ---------|----------|---------|
 | Tipo de exportação | **[!UICONTROL Exportação de público-alvo]** | Você está exportando todos os membros de um público com os identificadores (email, ECID) usados no destino [!DNL Marketo Engage]. |
-| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil é atualizado em Experience Platform com base na avaliação do público-alvo, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil for atualizado no Experience Platform com base na avaliação do público-alvo, o conector enviará a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -88,8 +88,8 @@ O vídeo abaixo também demonstra as etapas para configurar um destino do Market
 >
 >O vídeo não reflete totalmente a capacidade atual. Para obter as informações mais atualizadas, consulte o manual vinculado acima. As seguintes partes do vídeo estão desatualizadas:
 > 
->* O cartão de destino que você deve usar na interface do usuário do Experience Platform é o **[!UICONTROL Marketo V2]**.
->* O vídeo não mostra o novo campo seletor **[!UICONTROL Criação de pessoa]** na conexão com o fluxo de trabalho de destino.
+>* O cartão de destino que você deve usar na interface do Experience Platform é o **[!UICONTROL Marketo V2]**.
+>* O vídeo não mostra o novo campo seletor **[!UICONTROL Criação de pessoa]** na conexão com o fluxo de trabalho de destino. Para usar esse campo, você deve mapear o nome e o sobrenome durante a etapa de mapeamento do atributo.
 >* As duas limitações chamadas no vídeo não se aplicam mais. Agora é possível mapear vários outros campos de atributo de perfil, além das informações de associação de público-alvo aceitas no momento em que o vídeo foi gravado. Você também pode exportar membros do público-alvo para o Marketo que ainda não existem nas listas estáticas do Marketo e eles serão adicionados às listas.
 >* Na **[!UICONTROL etapa Agendar público-alvo]** do fluxo de trabalho de ativação, no Marketo V1, foi necessário adicionar manualmente uma **[!UICONTROL ID de Mapeamento]** para exportar dados com êxito para o Marketo. Esta etapa manual não é mais necessária no Marketo V2.
 

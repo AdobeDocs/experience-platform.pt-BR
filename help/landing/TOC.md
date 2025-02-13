@@ -3,9 +3,9 @@ audience: user
 user-guide-title: Visão geral da Adobe Experience Platform
 breadcrumb-title: Visão geral da Experience Platform
 user-guide-description: Saiba como a Experience Platform permite oferecer experiências personalizadas a clientes em tempo real com guias, documentação e tutoriais.
-source-git-commit: 90b8a3253e8298a634c0deaf82ac8be05f478622
+source-git-commit: 08a63fb854fe1c2aa83e7a7f74df4c02580e4d4c
 workflow-type: tm+mt
-source-wordcount: '304'
+source-wordcount: '309'
 ht-degree: 24%
 
 ---
@@ -16,6 +16,7 @@ ht-degree: 24%
 * [Visão geral da plataforma](home.md)
 * [Visão geral da plataforma (Vídeo)](video/platform-overview.md)
 * [Visão geral de várias nuvens](multi-cloud.md)
+* [Comparação entre Edge Network e hub](./edge-and-hub-comparison.md)
 * [Tutoriais da Platform](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html)
 * [Uma experiência do cliente viabilizada pela Platform (Vídeo)](video/customer-experience.md)
 * [Nos bastidores de uma experiência do cliente viabilizada pela Platform (Vídeo)](video/customer-experience-bts.md)
@@ -25,13 +26,13 @@ ht-degree: 24%
    * [Principais casos de uso (Vídeo)](video/platform-use-cases.md)
    * [Arquitetura da plataforma (Vídeo)](video/platform-architecture.md)
    * [Funções e fases do projeto (Vídeo)](video/roles-project-phases.md)
-* IU DO Experience Platform {#platform-ui}
+* Interface do usuário do Experience Platform {#platform-ui}
    * [Guia da interface do usuário da Platform](ui-guide.md)
    * [Tour da interface do usuário da plataforma (Vídeo)](video/platform-ui.md)
    * [Guia da interface de workflows](workflows.md)
    * [Suporte a navegador e idioma](browser-language-support.md)
    * [Pesquisa de autoidentificação](self-identification.md)
-* APIs Experience Platform {#platform-apis}
+* APIs do Experience Platform {#platform-apis}
    * [Introdução às APIs da Platform](api-guide.md)
    * [Autenticar e acessar APIs da plataforma](api-authentication.md)
    * [Fundamentos da API](api-fundamentals.md)
@@ -42,7 +43,7 @@ ht-degree: 24%
    * [Idiomas disponíveis](documentation/language-support.md)
 * Aplicativos criados na plataforma {#ecosystem}
    * [Visão geral](application-services.md)
-   * [Adobe Real-time Customer Data Platform (todas as edições)](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html)
+   * [Adobe Real-Time Customer Data Platform (todas as edições)](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html)
    * [Serviços inteligentes e de aplicativos (Vídeo)](video/application-intelligent-services.md)
    * [Customer Journey Analytics](https://experienceleague.adobe.com/docs/customer-journey-analytics.html?lang=pt-BR)
    * [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer.html?lang=pt-BR)

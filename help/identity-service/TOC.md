@@ -5,10 +5,10 @@ breadcrumb-title: Guia do Serviço de identidade do Platform
 user-guide-description: Une as identidades dos clientes em todos os dispositivos e sistemas para entregar experiências digitais personalizadas.
 feature: Identities
 role: Admin,Developer
-source-git-commit: 6cdb622e76e953c42b58363c98268a7c46c98c99
+source-git-commit: cbdfa76d546be631a8c1fa588896648835d2a159
 workflow-type: tm+mt
-source-wordcount: '146'
-ht-degree: 26%
+source-wordcount: '143'
+ht-degree: 30%
 
 ---
 
@@ -44,7 +44,6 @@ ht-degree: 26%
    - [Criar um namespace personalizado](api/create-custom-namespace.md)
    - [Listar a ID nativa de uma identidade](api/list-native-id.md)
    - [Referência da API](https://www.adobe.io/experience-platform-apis/references/identity-service)
-- [Detecção de dispositivo compartilhado](shared-device-detection.md)
 - [Definir campos de identidade na interface](label-identities.md)
 - [Processamento de solicitação de privacidade](privacy.md)
 - [Manual de solução de problemas](troubleshooting-guide.md)

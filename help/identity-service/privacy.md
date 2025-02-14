@@ -3,10 +3,10 @@ keywords: Experience Platform;página inicial;tópicos populares
 title: Processamento de solicitação de privacidade no serviço de identidade
 description: O Adobe Experience Platform Privacy Service processa solicitações de clientes para acessar, cancelar a venda ou excluir seus dados pessoais, conforme definido por várias regulamentações de privacidade. Este documento aborda conceitos essenciais relacionados ao processamento de solicitações de privacidade do Serviço de identidade.
 exl-id: ab84450b-1a4b-4fdd-b77d-508c86bbb073
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: a75a5603eacc1b4625a19adfddbb2f4bb81f66d3
 workflow-type: tm+mt
-source-wordcount: '1016'
-ht-degree: 0%
+source-wordcount: '1000'
+ht-degree: 1%
 
 ---
 
@@ -18,7 +18,7 @@ Este documento aborda conceitos essenciais relacionados ao processamento de soli
 
 >[!NOTE]
 >
->Este guia aborda apenas como fazer solicitações de privacidade para o armazenamento de dados de identidade no Experience Platform. Se você também planeja fazer solicitações de privacidade para o data lake da Platform ou o [!DNL Real-Time Customer Profile], consulte o manual sobre [processamento de solicitações de privacidade no data lake](../catalog/privacy.md) e o manual sobre [processamento de solicitação de privacidade para o Perfil](../profile/privacy.md), além deste tutorial.
+>Este guia aborda apenas como fazer solicitações de privacidade para o armazenamento de dados de identidade na Experience Platform. Se você também planeja fazer solicitações de privacidade para o data lake da Platform ou o [!DNL Real-Time Customer Profile], consulte o manual sobre [processamento de solicitações de privacidade no data lake](../catalog/privacy.md) e o manual sobre [processamento de solicitação de privacidade para o Perfil](../profile/privacy.md), além deste tutorial.
 >
 >Para obter etapas sobre como fazer solicitações de privacidade para outros aplicativos da Adobe Experience Cloud, consulte a [documentação do Privacy Service](../privacy-service/experience-cloud-apps.md).
 
@@ -40,7 +40,7 @@ Para obter mais informações sobre namespaces de identidade em [!DNL Experience
 
 ## Envio de solicitações {#submit}
 
-As seções abaixo descrevem como fazer solicitações de privacidade para [!DNL Identity Service] usando a API ou a interface do usuário [!DNL Privacy Service]. Antes de ler estas seções, é altamente recomendável que você consulte a documentação da [API de Privacy Service](../privacy-service/api/getting-started.md) ou da [Interface do usuário de Privacy Service](../privacy-service/ui/overview.md) para ver as etapas completas sobre como enviar um trabalho de privacidade, incluindo como formatar corretamente os dados do usuário nas cargas de solicitação.
+As seções abaixo descrevem como fazer solicitações de privacidade para [!DNL Identity Service] usando a API ou a interface do usuário [!DNL Privacy Service]. Antes de ler estas seções, é altamente recomendável que você consulte a documentação da [API do Privacy Service](../privacy-service/api/getting-started.md) ou da [Interface do usuário do Privacy Service](../privacy-service/ui/overview.md) para ver as etapas completas sobre como enviar um trabalho de privacidade, incluindo como formatar corretamente os dados do usuário nas cargas de solicitação.
 
 ### Uso da API
 
@@ -52,7 +52,7 @@ A solicitação a seguir cria um novo trabalho de privacidade no GDPR para os da
 
 >[!TIP]
 >
->Ao excluir um namespace personalizado usando a API, você deve especificar o símbolo de identidade como namespace, em vez do nome de exibição.
+>Você deve especificar o símbolo de identidade como namespace, em vez do nome de exibição, ao excluir identidades usando a exclusão do GDPR.
 
 ```shell
 curl -X POST \
@@ -96,7 +96,7 @@ curl -X POST \
 
 >[!TIP]
 >
->Ao excluir um namespace personalizado usando a interface do usuário, você deve especificar o símbolo de identidade como namespace, em vez do nome de exibição. Além disso, não é possível excluir namespaces personalizados na interface do usuário para sandboxes de não produção.
+>Você deve especificar o símbolo de identidade como namespace, em vez do nome de exibição, ao excluir identidades usando a exclusão do GDPR.
 
 Ao criar solicitações de trabalho na interface do usuário, selecione **[!UICONTROL Identidade]** em **[!UICONTROL Produtos]** para processar trabalhos para dados armazenados em [!DNL Identity Service].
 

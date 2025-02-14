@@ -2,9 +2,9 @@
 keywords: Experience Platform;página inicial;tópicos populares;api;API;XDM;sistema XDM;modelo de dados de experiência;modelo de dados;ui;espaço de trabalho;esquema;esquemas;
 solution: Experience Platform
 title: Criar e editar esquemas na interface
-description: Saiba mais sobre as noções básicas sobre como criar e editar esquemas na interface do usuário do Experience Platform.
+description: Saiba mais sobre as noções básicas sobre como criar e editar esquemas na interface do Experience Platform.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 24b26e256fb346ccd1a03984f3e0d199c640159c
+source-git-commit: 9691ce1ca560acce7a9512df7eb92e61962bc467
 workflow-type: tm+mt
 source-wordcount: '4072'
 ht-degree: 1%
@@ -23,7 +23,7 @@ Este guia fornece uma visão geral de como criar, editar e gerenciar esquemas do
 
 ## Pré-requisitos {#prerequisites}
 
-Este guia requer uma compreensão funcional do Sistema XDM. Consulte a [visão geral do XDM](../../home.md) para obter uma introdução à função do XDM no ecossistema de Experience Platform, e as [noções básicas da composição de esquemas](../../schema/composition.md) para obter uma visão geral de como os esquemas são construídos.
+Este guia requer uma compreensão funcional do Sistema XDM. Consulte a [Visão geral do XDM](../../home.md) para obter uma introdução à função do XDM no ecossistema do Experience Platform e as [noções básicas da composição de esquemas](../../schema/composition.md) para obter uma visão geral de como os esquemas são construídos.
 
 ## Criar um novo esquema {#create}
 
@@ -159,7 +159,7 @@ O [!DNL Schema Editor] reaparece com os campos fornecidos por grupos de campos r
 
 >[!NOTE]
 >
-No Editor de esquemas, classes e grupos de campos padrão (gerados por Adobe) são indicados com o ícone de cadeado (![Um ícone de cadeado.](/help/images/icons/lock-closed.png). O cadeado é exibido no painel à esquerda, ao lado do nome da classe ou do grupo de campos, e também ao lado de qualquer campo no diagrama de esquema que faça parte de um recurso gerado pelo sistema.
+No Editor de esquemas, classes e grupos de campos padrão (gerados pela Adobe) são indicados com o ícone de cadeado ![Um ícone de cadeado.](/help/images/icons/lock-closed.png). O cadeado é exibido no painel à esquerda, ao lado do nome da classe ou do grupo de campos, e também ao lado de qualquer campo no diagrama de esquema que faça parte de um recurso gerado pelo sistema.
 >
 ![O Editor de Esquemas com o ícone de cadeado realçado](../../images/ui/explore/schema-editor-padlock-icon.png)
 
@@ -374,7 +374,7 @@ Para reatribuir uma classe, selecione **[!UICONTROL Atribuir]** no lado esquerdo
 
 ![](../../images/ui/resources/schemas/assign-class-button.png)
 
-Uma caixa de diálogo é exibida, mostrando uma lista de todas as classes disponíveis, incluindo as definidas pela sua organização (sendo o proprietário &quot;[!UICONTROL Cliente]&quot;), bem como as classes padrão definidas pelo Adobe.
+Uma caixa de diálogo é exibida, mostrando uma lista de todas as classes disponíveis, incluindo as definidas pela sua organização (sendo o proprietário &quot;[!UICONTROL Cliente]&quot;), bem como as classes padrão definidas pela Adobe.
 
 Selecione uma classe na lista para exibir sua descrição no lado direito da caixa de diálogo. Você também pode selecionar **[!UICONTROL Visualizar estrutura de classe]** para ver os campos e metadados associados à classe. Selecione **[!UICONTROL Atribuir classe]** para continuar.
 

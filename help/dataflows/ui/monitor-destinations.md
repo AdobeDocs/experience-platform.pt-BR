@@ -4,16 +4,16 @@ solution: Experience Platform
 title: Monitorar fluxos de dados para destinos na interface do
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: f10706fbbde9cef112460f5431af24d09b0e0460
+source-git-commit: b814becaed88ce23527dc58f7ec056c05a48379f
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '3637'
+ht-degree: 9%
 
 ---
 
 # Monitorar fluxos de dados para destinos na interface do
 
-Use os vários destinos no catálogo de Experience Platform para ativar seus dados da Platform para inúmeros parceiros externos. O Platform facilita o processo de rastreamento do fluxo de dados para seus destinos ao fornecer transparência aos fluxos de dados.
+Use os vários destinos no catálogo do Experience Platform para ativar seus dados da Platform para inúmeros parceiros externos. O Platform facilita o processo de rastreamento do fluxo de dados para seus destinos ao fornecer transparência aos fluxos de dados.
 
 O painel de monitoramento fornece uma representação visual da jornada de um fluxo de dados, incluindo o destino em que os dados estão sendo ativados, o tipo de dados que você está visualizando, dados exportados por execução de fluxo de dados e muito mais.
 
@@ -97,11 +97,11 @@ Cada execução de fluxo de dados individual mostra os seguintes detalhes:
 
   >[!IMPORTANT]
   >
-  > A partir de outubro de 2024, o Adobe está lançando uma atualização para aumentar a precisão dos relatórios para destinos de transmissão. Esse aprimoramento garante um melhor alinhamento entre os relatórios da Experience Platform e das plataformas de destino.
+  > A partir de outubro de 2024, a Adobe está lançando uma atualização para aumentar a precisão dos relatórios para destinos de transmissão. Esse aprimoramento garante um melhor alinhamento entre o Experience Platform e os relatórios das plataformas de destino.
   >
   > Antes desta atualização, **[!UICONTROL Falha nas identidades]** incluiu todas as tentativas de ativação. Após essa atualização, somente a última tentativa de ativação será incluída na contagem total.
   > 
-  > Atualmente, esse aprimoramento se aplica ao [destino de Correspondência de cliente do Google](../../destinations/catalog/advertising/google-customer-match.md), mas será gradualmente implantado em outros destinos de streaming de Experience Platform.
+  > Este aprimoramento se aplica atualmente ao [destino de Correspondência de Cliente do Google](../../destinations/catalog/advertising/google-customer-match.md), mas será gradualmente implantado em outros destinos de transmissão do Experience Platform.
   > Após esse aprimoramento, os usuários do [destino de Correspondência do Cliente do Google](../../destinations/catalog/advertising/google-customer-match.md) poderão observar uma queda esperada em sua contagem de **[!UICONTROL Falha nas identidades]**.
 
 
@@ -121,7 +121,12 @@ A página de detalhes também exibe uma lista de identidades que falharam e as q
 
 #### (Beta) Monitoramento de execução de fluxo de dados no nível do público-alvo para destinos de transmissão {#audience-level-dataflow-runs-for-streaming-destinations}
 
-Você pode exibir informações sobre as identidades ativadas, excluídas ou com falha em um nível de público-alvo, para cada público que faz parte do fluxo de dados. O monitoramento em nível de público-alvo para destinos de streaming está disponível somente para o [[!DNL Google Customer Match + Display & Video 360] destino](/help/destinations/catalog/advertising/google-customer-match-dv360.md).
+Você pode exibir informações sobre as identidades ativadas, excluídas ou com falha em um nível de público-alvo, para cada público que faz parte do fluxo de dados.
+
+O monitoramento no nível do público-alvo para destinos de streaming está disponível atualmente apenas para os seguintes destinos:
+
+- [[!DNL Google Customer Match + Display & Video 360]](/help/destinations/catalog/advertising/google-customer-match-dv360.md)
+- [[!DNL Marketo Engage]](/help/destinations/catalog/adobe/marketo-engage.md)
 
 ![Monitoramento no nível do público-alvo para destinos de streaming.](/help/dataflows/assets/ui/monitor-destinations/audience-level-monitoring-streaming.png)
 

@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;página inicial;tópicos populares;controle de acesso;controle de acesso baseado em atributos;
+keywords: Experience Platform;home;popular tópicos;controle de acesso;controle de acesso baseado em atributo;
 title: Guia completo do controle de acesso baseado em atributos
 description: Este documento fornece um guia completo sobre o controle de acesso baseado em atributos no Adobe Experience Platform
 role: Developer
@@ -7,7 +7,7 @@ exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
 source-git-commit: 74980c6108a32ec6736ab5892d89590e04e8a500
 workflow-type: tm+mt
 source-wordcount: '1593'
-ht-degree: 3%
+ht-degree: 7%
 
 ---
 
@@ -55,7 +55,7 @@ Através das [!UICONTROL Permissões], é possível criar e gerenciar funções 
 
 Entre em contato com o administrador do sistema para obter acesso se você não tiver privilégios de administrador.
 
-Depois de ter privilégios de administrador, vá para [Adobe Experience Cloud](https://experience.adobe.com/) e entre usando suas credenciais de Adobe. Depois de conectado, a página **[!UICONTROL Visão geral]** é exibida para a sua organização para a qual você tem privilégios de administrador. Esta página mostra os produtos nos quais sua organização está inscrita, juntamente com outros controles para adicionar usuários e administradores à organização. Selecione **[!UICONTROL Permissões]** para abrir o espaço de trabalho para a integração com a Platform.
+Depois que você tiver privilégios de administrador, vá para [Adobe Experience Cloud](https://experience.adobe.com/) e entre usando suas credenciais da Adobe. Depois de conectado, a página **[!UICONTROL Visão geral]** é exibida para a sua organização para a qual você tem privilégios de administrador. Esta página mostra os produtos nos quais sua organização está inscrita, juntamente com outros controles para adicionar usuários e administradores à organização. Selecione **[!UICONTROL Permissões]** para abrir o espaço de trabalho para a integração com a Platform.
 
 ![Imagem mostrando o produto de Permissões sendo selecionado no Adobe Experience Cloud](../images/flac-ui/flac-select-product.png)
 
@@ -66,7 +66,7 @@ O espaço de trabalho de Permissões para a interface do usuário da Platform é
 >[!CONTEXTUALHELP]
 >id="platform_permissions_labels_about"
 >title="O que são rótulos?"
->abstract="Use rótulos para categorizar conjuntos de dados e campos de acordo com as políticas de uso e acesso aplicáveis a esses dados. A Platform fornece vários rótulos de uso de dados <strong>core</strong> definidos pelo Adobe, que abrangem uma grande variedade de restrições comuns aplicáveis à governança de dados. Por exemplo, rótulos sensíveis <strong>S</strong>, como RHD (Dados de Integridade Regulamentados), permitem categorizar dados que se referem a PHI (Informações de Integridade Protegidas). Também é possível definir seus próprios rótulos personalizados que atendam às necessidades de sua organização."
+>abstract="Use rótulos para categorizar conjuntos de dados e campos de acordo com as políticas de uso e acesso aplicáveis. A Platform fornece vários rótulos de uso de dados <strong>essenciais</strong>, os quais são definidos pela Adobe e abrangem uma ampla variedade de restrições comuns aplicáveis à governança de dados. Por exemplo, rótulos sensíveis <strong>S</strong> como os de dados de saúde regulamentados (RHD) permitem categorizar dados referentes a informações de saúde protegidas (PHI). Também é possível definir seus próprios rótulos personalizados para atender às necessidades de sua organização."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=pt-BR#understanding-data-usage-labels" text="Visão geral dos rótulos de uso de dados"
 
 Funções são maneiras de categorizar os tipos de usuários que interagem com sua instância da Platform e são blocos fundamentais das políticas de controle de acesso. Uma função tem determinado conjunto de permissões, e os membros da sua organização podem ser atribuídos a uma ou mais funções, dependendo do escopo de acesso de que precisam.

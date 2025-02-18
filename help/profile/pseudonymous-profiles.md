@@ -7,7 +7,7 @@ exl-id: e8d31718-0b50-44b5-a15b-17668a063a9c
 source-git-commit: 9d38fdae0fc65048d02a4337375004edafedd1b6
 workflow-type: tm+mt
 source-wordcount: '1065'
-ht-degree: 0%
+ht-degree: 6%
 
 ---
 
@@ -20,13 +20,13 @@ No Adobe Experience Platform, é possível configurar as horas de expiração de
 >[!CONTEXTUALHELP]
 >id="platform_profile_pseudonymousprofile"
 >title="O que é um perfil pseudônimo?"
->abstract="Um perfil pseudônimo é um perfil que tem um namespace de identidade pseudônimo ou desconhecido, ou um perfil que não teve nenhuma atividade ocorrendo por um determinado período."
+>abstract="Um perfil pseudônimo é um perfil que utiliza um namespace de identidade pseudônimo ou desconhecido ou um perfil que não realizou nenhuma atividade por um determinado período."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_profile_pseudonymousprofile_dataexpiration"
 >title="Expiração de dados de perfil pseudônimo"
->abstract="A expiração dos dados do perfil pseudônimo representa o número de dias que um perfil pseudônimo permanecerá no Adobe Experience Platform antes de ser removido."
+>abstract="A expiração de dados de perfil pseudônimo representa o número de dias que um perfil pseudônimo permanecerá na Adobe Experience Platform antes de ser removido."
 
 Um perfil é considerado para expiração de dados pseudônimos se atender às seguintes condições:
 

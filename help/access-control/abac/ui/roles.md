@@ -1,27 +1,27 @@
 ---
-keywords: Experience Platform;página inicial;tópicos populares;controle de acesso;controle de acesso baseado em atributos;ABAC
+keywords: Experience Platform;página inicial;tópicos populares;controle de acesso;controle de acesso baseado em atributo;;home;popular topics;access control;attribute-based access control;ABAC
 title: Controle de acesso baseado em atributos Criar uma função
 description: Este documento fornece informações sobre como gerenciar funções por meio da interface de Permissões no Adobe Experience Cloud
 exl-id: 85699716-339d-4992-8390-95563c7ea7fe
 source-git-commit: 74980c6108a32ec6736ab5892d89590e04e8a500
 workflow-type: tm+mt
 source-wordcount: '618'
-ht-degree: 7%
+ht-degree: 23%
 
 ---
 
 # Gerenciar funções
 
-As funções definem o acesso que um administrador, um especialista ou um usuário final tem aos recursos em sua organização. Em um ambiente de controle de acesso baseado em funções, o provisionamento de acesso do usuário é agrupado por meio de responsabilidades e necessidades comuns. Uma função tem um determinado conjunto de permissões, e os membros da organização podem ter uma ou mais funções atribuídas, dependendo do escopo do acesso de visualização ou gravação necessário.
+As funções definem o acesso que um(a) admin, especialista ou usuário final tem aos recursos em sua organização. Em um ambiente de controle de acesso baseado em funções, o provisionamento de acesso do usuário é agrupado por meio de responsabilidades e necessidades comuns. Uma função tem um determinado conjunto de permissões, e os membros da organização podem ter uma ou mais funções atribuídas, dependendo do escopo do acesso de visualização ou gravação necessário.
 
 ## Criar uma nova função {#create-new-role}
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_roles_about_create"
 >title="Criar nova função"
->abstract="Crie novas funções para categorizar melhor os usuários que interagem com sua instância da Platform. Por exemplo, você pode criar uma função para uma equipe interna de marketing e aplicar o rótulo Dados de saúde regulamentados (RHD) a essa função, permitindo que sua equipe interna de marketing acesse Informações de saúde protegidas (PHI). Como alternativa, você também pode criar uma função para uma agência externa e negar acesso a essa função para dados PHI ao não aplicar o rótulo RHD a essa função."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=pt-BR" text="Gerenciar uma função"
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/end-to-end-guide#label-roles" text="Aplicar rótulos a uma função"
+>abstract="Crie novas funções para categorizar melhor os usuários que interagem com sua instância da Platform. Por exemplo, é possível criar uma função para uma equipe interna de marketing e aplicar o rótulo de dados de saúde regulamentados (RHD) a essa função, permitindo que sua equipe de marketing interna acesse informações de saúde protegidas (PHI). Como alternativa, também é possível criar uma função para uma agência externa e negar o acesso dela aos dados de PHI por não aplicar o rótulo RHD a essa função."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html" text="Gerenciar uma função"
+>additional-url="https://experienceleague.adobe.com/pt-br/docs/experience-platform/access-control/abac/end-to-end-guide#label-roles" text="Aplicar rótulos a uma função"
 
 Para criar uma nova função, selecione a guia **[!UICONTROL Funções]** na barra lateral e selecione **[!UICONTROL Criar Função]**.
 

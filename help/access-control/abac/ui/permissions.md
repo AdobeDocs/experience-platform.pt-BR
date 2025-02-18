@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;página inicial;tópicos populares;controle de acesso;controle de acesso baseado em atributos;ABAC
+keywords: Experience Platform;página inicial;tópicos populares;controle de acesso;controle de acesso baseado em atributo;;home;popular topics;access control;attribute-based access control;ABAC
 title: Permissões da Função Gerenciar Controle de Acesso Baseado em Atributo
 description: Este documento fornece informações sobre como configurar permissões para uma função por meio da interface de Permissões no Adobe Experience Cloud
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
 source-git-commit: 207317d16a21cc2461ebd3f7867735735227c173
 workflow-type: tm+mt
 source-wordcount: '1608'
-ht-degree: 4%
+ht-degree: 11%
 
 ---
 
@@ -15,12 +15,12 @@ ht-degree: 4%
 >[!CONTEXTUALHELP]
 >id="platform_permissions_roles_about"
 >title="O que são funções?"
->abstract="As funções definem o acesso que um administrador, um especialista ou um usuário final tem aos recursos em sua organização. Eles categorizam os usuários que interagem com a instância da Platform e são os blocos de construção das políticas de controle de acesso. Uma função tem um determinado conjunto de permissões, e os membros da organização podem ter uma ou mais funções atribuídas, dependendo do escopo do acesso de visualização ou gravação necessário."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=pt-BR" text="Gerenciar funções"
+>abstract="As funções definem o acesso que um(a) admin, especialista ou usuário final tem aos recursos em sua organização. Elas categorizam os usuários que interagem com a instância da Platform e são elementos essenciais das políticas de controle de acesso. Uma função tem um determinado conjunto de permissões, e os membros da organização podem ter uma ou mais funções atribuídas, dependendo do escopo do acesso de visualização ou gravação necessário."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html" text="Gerenciar funções"
 
 >[!IMPORTANT]
 >
->O controle de acesso usa a ID do usuário (uma ID exclusiva interna atribuída a um usuário) para conceder permissões. Quando uma organização for migrada do Adobe ID para a Business ID, todas as permissões definidas para os usuários serão perdidas, pois as alterações na ID do usuário e o controle de acesso usarão a ID do usuário recém-gerada. Se sua organização migrou para a Business ID, entre em contato com o representante da Adobe para migrar sua ID de usuário da Adobe ID para a Business ID.
+>O controle de acesso usa a ID do usuário (uma ID exclusiva interna atribuída a um usuário) para conceder permissões. Quando uma organização for migrada do Adobe ID para a Business ID, todas as permissões definidas para os usuários serão perdidas, pois as alterações na ID do usuário e o controle de acesso usarão a ID do usuário recém-gerada. Se sua organização tiver migrado para a Business ID, entre em contato com o representante da Adobe para migrar sua ID de usuário da Adobe ID para a Business ID.
 
 Permissões é a área do Experience Cloud em que os administradores podem definir funções de usuário e políticas de acesso para gerenciar permissões de acesso para recursos e objetos em um aplicativo de produto.
 
@@ -52,9 +52,9 @@ Para remover um filtro, selecione o &quot;X&quot; no ícone de preenchimento do 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_roles_details"
 >title="Visão geral da função"
->abstract="A caixa de diálogo de visão geral da função exibe os detalhes da função, incluindo os recursos e sandboxes que uma determinada função tem permissão para acessar. Você pode gerenciar rótulos, usuários, grupos de usuários e credenciais de API para a função navegando até a guia correspondente no espaço de trabalho da função."
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/permissions-ui/permissions#manage-labels-for-a-role" text="Gerenciar rótulos para uma função"
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/permissions-ui/permissions#manage-users-for-a-role" text="Gerenciar usuários para uma função"
+>abstract="A caixa de diálogo de visão geral exibe os detalhes da função, incluindo os recursos e as sandboxes que uma determinada função tem permissão para acessar. Para gerenciar rótulos, usuários, grupos de usuários e credenciais de API da função, navegue até a guia correspondente no espaço de trabalho da função."
+>additional-url="https://experienceleague.adobe.com/pt-br/docs/experience-platform/access-control/abac/permissions-ui/permissions#manage-labels-for-a-role" text="Gerenciar rótulos de uma função"
+>additional-url="https://experienceleague.adobe.com/pt-br/docs/experience-platform/access-control/abac/permissions-ui/permissions#manage-users-for-a-role" text="Gerenciar usuários de uma função"
 
 Selecione a função na guia **[!UICONTROL Funções]**, que abrirá o painel [!UICONTROL Detalhes] da função.
 
@@ -62,7 +62,7 @@ Selecione a função na guia **[!UICONTROL Funções]**, que abrirá o painel [!
 
 O painel [!UICONTROL Detalhes] fornece uma visão geral da função. A visão geral exibe o nome da função, a descrição, o criador e o último modificador, juntamente com as datas de criação e modificação. Ele também mostra as permissões anexadas à função e a lista de sandboxes atribuídas. O nome e a descrição da função podem ser modificados, se necessário.
 
-## Gerenciar rótulos para uma função
+## Gerenciar rótulos de uma função
 
 Selecione a guia **[!UICONTROL Rótulos]** para abrir o espaço de trabalho de rótulos de funções e selecione **[!UICONTROL Adicionar rótulos]** para atribuir rótulos à função.
 
@@ -96,7 +96,7 @@ A próxima tela solicita que você escolha quais recursos de sandboxes incluir n
 
 ![O painel de Recursos da função com o menu suspenso de recursos da sandbox foi realçado.](../../images/flac-ui/flac-add-role-permission.png)
 
-## Gerenciar usuários para uma função
+## Gerenciar usuários de uma função
 
 Selecione a guia **[!UICONTROL Usuários]** para abrir o espaço de trabalho de funções [!UICONTROL Usuários] e selecione **[!UICONTROL Adicionar Usuários]** para atribuir usuários à função.
 
@@ -124,7 +124,7 @@ O vídeo a seguir tem como objetivo ajudá-lo a entender a criação de uma nova
 >
 > Para usar e gerenciar credenciais de API em [!UICONTROL Permissões], os usuários devem ter privilégios de administrador do sistema.
 
-Para usar APIs Experience Platform como um usuário ou desenvolvedor, um administrador do sistema precisa adicionar credenciais de API, além de um conjunto de permissões fornecido por uma função. Para obter um guia completo sobre como criar e atribuir credenciais de API, bem como as permissões necessárias, consulte o tutorial passo a passo em [autenticar e acessar APIs de Experience Platform](../../../landing/api-authentication.md#generate-credentials).
+Para usar as APIs do Experience Platform como um usuário ou desenvolvedor, um administrador do sistema precisa adicionar credenciais de API, além de um conjunto de permissões fornecido por uma função. Para obter um guia completo sobre como criar e atribuir credenciais de API, bem como as permissões necessárias, consulte o tutorial passo a passo em [autenticar e acessar APIs do Experience Platform](../../../landing/api-authentication.md#generate-credentials).
 
 Selecione a guia **[!UICONTROL Credenciais de API]** para abrir o espaço de trabalho de credenciais de API de funções e selecione **[!UICONTROL Adicionar credenciais de API]** para atribuir credenciais de API à função.
 
@@ -178,7 +178,7 @@ Você retornará à guia **[!UICONTROL Grupos de usuários]**.
 
 Como administrador do sistema, você pode conceder acesso de desenvolvedor a um usuário para que ele possa [criar integrações](../../../landing/api-authentication.md#generate-credentials) na Adobe Developer Console.
 
-Para adicionar um Experience Platform de usuário, faça logon no [Admin Console](https://adminconsole.adobe.com) e selecione **[!UICONTROL Adicionar usuários]**.
+Para adicionar uma Experience Platform de usuário, faça logon no [Admin Console](https://adminconsole.adobe.com) e selecione **[!UICONTROL Adicionar usuários]**.
 
 ![O painel do Adobe Admin Console com a opção Adicionar usuários foi realçado.](../../images/flac-ui/product-profile-add-users.png)
 

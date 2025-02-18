@@ -6,7 +6,7 @@ exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
 source-git-commit: 546ef0f9a5a9c37de3891aba02491540a5c6f8c9
 workflow-type: tm+mt
 source-wordcount: '1730'
-ht-degree: 5%
+ht-degree: 8%
 
 ---
 
@@ -34,9 +34,9 @@ Para exportar matrizes, você deve usar a funcionalidade de campos calculados na
 
 ## Matrizes e outros tipos de objetos na Platform {#arrays-strings-other-objects}
 
-No Experience Platform, você pode usar [esquemas XDM](/help/xdm/home.md) para gerenciar diferentes tipos de campos. Antes de adicionar suporte para exportações de matriz, você podia exportar campos de tipo de par de valor-chave simples, como strings de Experience Platform para os destinos desejados. Um exemplo de um campo com suporte para exportação anterior é `personalEmail.address`:`johndoe@acme.org`.
+No Experience Platform, você pode usar [esquemas XDM](/help/xdm/home.md) para gerenciar diferentes tipos de campos. Antes de adicionar suporte a exportações de matriz, você podia exportar campos de tipo de par de valor-chave simples, como cadeias de caracteres do Experience Platform, para os destinos desejados. Um exemplo de um campo com suporte para exportação anterior é `personalEmail.address`:`johndoe@acme.org`.
 
-Outros tipos de campo no Experience Platform incluem campos de matriz. Leia mais sobre [gerenciamento de campos de matriz na interface do usuário do Experience Platform](/help/xdm/ui/fields/array.md). Além dos tipos de campo suportados anteriormente, agora é possível exportar objetos de matriz, como o exemplo abaixo, concatenados em uma cadeia de caracteres usando a função `array_to_string`.
+Outros tipos de campo no Experience Platform incluem campos de matriz. Leia mais sobre [gerenciamento de campos de matriz na interface do Experience Platform](/help/xdm/ui/fields/array.md). Além dos tipos de campo suportados anteriormente, agora é possível exportar objetos de matriz, como o exemplo abaixo, concatenados em uma cadeia de caracteres usando a função `array_to_string`.
 
 ```
 organizations = [{
@@ -84,7 +84,7 @@ Observe as seguintes limitações conhecidas que se aplicam atualmente a essa fu
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_calculated_field_disabled"
 >title="Controle Adicionar campos calculados desabilitado"
->abstract="Este controle está desabilitado porque você selecionou **Exportar matrizes, mapas, objetos** para *ativar* ao configurar esta conexão de destino. Para usar campos calculados e as funções disponíveis em, configure uma nova conexão de destino com o **Export arrays, maps, objects** alterne *off*."
+>abstract="Este controle está desabilitado porque você *ativou* a opção **Exportar matrizes, mapas e objetos** ao configurar a conexão de destino. Para usar campos calculados e as funções disponíveis neles, configure uma nova conexão de destino com a opção **Exportar matrizes, mapas e objetos** *desativada*."
 
 Na etapa de mapeamento do fluxo de trabalho de ativação para destinos de armazenamento na nuvem, selecione **[!UICONTROL Adicionar campo calculado]**.
 

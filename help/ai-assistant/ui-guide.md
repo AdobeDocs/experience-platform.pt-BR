@@ -1,10 +1,10 @@
 ---
 title: Assistente de IA no Adobe Experience Platform
-description: Saiba como usar o Assistente de IA para navegar e entender os conceitos de Experience Platform e Real-time Customer Data Platform, e as informações de uso sobre seus objetos.
+description: Saiba como usar o Assistente de IA para navegar e entender os conceitos do Experience Platform e do Real-Time Customer Data Platform, além de informações de uso sobre seus objetos.
 exl-id: 3fed2b1d-75fc-47ce-98d1-a811eb8a1d8e
-source-git-commit: 0ee9135b2b303f4abcc4d5e5c7345e2bff9332f3
+source-git-commit: 4fd40d66ecc2fe7604e157fcd230883c6c48d761
 workflow-type: tm+mt
-source-wordcount: '1759'
+source-wordcount: '1734'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Leia este guia para saber como usar o Assistente de IA na interface do usuário 
 
 Para iniciar o Assistente de IA, selecione o **[!UICONTROL ícone do Assistente de IA]** no cabeçalho superior da interface do Experience Platform.
 
-![A página inicial do Experience Platform, com o ícone do Assistente do AI selecionado e a interface do Assistente do AI aberta.](./images/ai-assistant-full-icon.png)
+![A página inicial do Experience Platform, com o ícone do Assistente de IA selecionado e a interface do Assistente de IA aberta.](./images/ai-assistant-full-icon.png)
 
 A interface do Assistente de IA é exibida, fornecendo imediatamente informações para começar. Você pode usar as opções fornecidas em [!UICONTROL Ideias para começar] para responder perguntas e comandos como:
 
@@ -87,7 +87,7 @@ No exemplo abaixo, o Assistente de IA é solicitado com a seguinte consulta: **&
 
 ![Uma pergunta sobre insights operacionais.](./images/op-insights-question.png)
 
-O Assistente de IA responde com uma tabela listando seus fluxos de dados e as IDs correspondentes. Para exibir toda a tabela de dados, selecione o ícone de expansão na parte superior direita.
+O Assistente de IA responde com uma tabela listando seus fluxos de dados e as IDs correspondentes. Selecione o ícone de download (![Ícone de download](/help/images/icons/download.png)) para baixar a tabela como um arquivo CSV. Para exibir a tabela inteira, selecione o ícone de expansão (![Ícone de expansão](/help/images/icons/expand.png)).
 
 ![Uma resposta dos insights operacionais](./images/op-insights-answer.png)
 
@@ -100,10 +100,6 @@ Quando solicitado com uma pergunta sobre insights operacionais, o Assistente de 
 ![O Assistente de IA fornece uma explicação sobre como ele calculou sua resposta.](./images/answer-explained.png)
 
 Você também pode fornecer filtros e modificações às suas perguntas e instruir o Assistente de IA a renderizar as descobertas com base nos filtros incluídos. Por exemplo, você pode solicitar que o Assistente de IA mostre uma tendência da contagem de definições de segmento na ordem de sua data de criação, remover definições de segmento com total de perfis zero e usar nomes de meses em vez de números inteiros ao exibir os dados.
-
-**Observação:** as respostas dos Insights operacionais estão atualmente na versão beta. Selecione o ícone de dica de ferramenta na interface do assistente do AI para exibir o aviso do Beta e para obter um link para a documentação.
-
-![Ícone de dica de ferramenta do Assistente de IA selecionado.](./images/op-insights-beta-note.png)
 
 +++
 

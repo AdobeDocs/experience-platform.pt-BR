@@ -2,9 +2,9 @@
 title: Visão geral do Assistente de IA no Adobe Experience Platform
 description: Saiba mais sobre o Assistente de IA, suas nuances e casos de uso e como você pode usá-lo para acelerar seu fluxo de trabalho com a Adobe Experience Platform e a Real-time Customer Data Platform.
 exl-id: cfd4ac22-fff3-4b50-bbc2-85b6328f603c
-source-git-commit: 9a10db0da1985c5ccaaeb84e040eea9e76ec1ae4
+source-git-commit: e90333d09585c8aa0ef176dcfc4717e86364fd54
 workflow-type: tm+mt
-source-wordcount: '950'
+source-wordcount: '927'
 ht-degree: 8%
 
 ---
@@ -17,7 +17,7 @@ O vídeo a seguir é destinado a fornecer suporte à sua compreensão do Assiste
 
 Leia este documento para saber mais sobre o Assistente de IA na Adobe Experience Platform.
 
-O Assistente de IA no Adobe Experience Platform é uma experiência de conversação que você pode usar para acelerar seus fluxos de trabalho em aplicativos Adobe. Você pode usar o AI Assistant para entender melhor o conhecimento do produto, solucionar problemas ou pesquisar informações e encontrar insights operacionais. O Assistente de IA é compatível com Experience Platform, Real-time Customer Data Platform, Adobe Journey Optimizer e Customer Journey Analytics.
+O Assistente de IA no Adobe Experience Platform é uma experiência de conversação que você pode usar para acelerar seus fluxos de trabalho em aplicativos do Adobe. Você pode usar o AI Assistant para entender melhor o conhecimento do produto, solucionar problemas ou pesquisar informações e encontrar insights operacionais. O Assistente de IA é compatível com Experience Platform, Real-Time Customer Data Platform, Adobe Journey Optimizer e Customer Journey Analytics.
 
 ![A interface do Assistente de IA com a primeira experiência de usuário foi acionada.](./images/ai-assistant-full.png)
 
@@ -49,13 +49,13 @@ Há duas classes de perguntas a serem consideradas antes de consultar o Assisten
 
 ### Conhecimento do produto {#product-knowledge}
 
-O conhecimento do produto refere-se aos conceitos e tópicos baseados na documentação do Experience League. As perguntas sobre o conhecimento do produto podem ser especificadas mais detalhadamente nos seguintes subgrupos:
+O conhecimento do produto refere-se a conceitos e tópicos fundamentados na documentação do Experience League. As perguntas sobre o conhecimento do produto podem ser especificadas mais detalhadamente nos seguintes subgrupos:
 
 | Conhecimento do produto | Exemplos |
 | --- | --- |
 | Aprendizado apontado | <ul><li>Qual é a diferença entre uma identidade e uma chave primária ou estrangeira?</li><li>O que são públicos-alvo semelhantes?</li></ul> |
 | Abrir descoberta | <ul><li>Como posso exportar esse conjunto de dados?</li><li>Existem esquemas para clientes de assistência médica?</li></ul> |
-| Solução de problemas | <ul><li>Por que não posso ativar um esquema de propriedade do Adobe para perfil?</li><li>Por que não posso excluir um segmento?</li></ul> |
+| Solução de problemas | <ul><li>Por que não posso ativar um esquema de propriedade da Adobe para o perfil?</li><li>Por que não posso excluir um segmento?</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -64,10 +64,6 @@ Assista ao vídeo a seguir para obter informações adicionais sobre o conhecime
 >[!VIDEO](https://video.tv.adobe.com/v/3438032/?learn=on)
 
 ### Insights operacionais {#operational-insights}
-
->[!IMPORTANT]
->
->As respostas dos insights operacionais estão na versão beta. Qualquer pessoa com acesso à permissão **Exibir Insights Operacionais** terá acesso às respostas dos insights operacionais.
 
 Os insights operacionais se referem às respostas que o AI Assistant gera sobre os objetos de metadados (atributos, públicos, fluxos de dados, conjuntos de dados, destinos, jornadas, esquemas e fontes), incluindo contagens, pesquisas e impacto de linhagem. Ele não analisa dados na sandbox.
 
@@ -100,7 +96,7 @@ Assista ao vídeo a seguir para obter mais informações sobre os insights opera
 
 Atualmente, o escopo do Assistente de IA é o seguinte:
 
-* [Conhecimento de produto](./home.md#product-knowledge): o AI Assistant pode responder a perguntas de conhecimento de produto do Experience Platform, Real-time Customer Data Platform e Adobe Journey Optimizer. Você também pode se aprofundar em tópicos de conhecimento sobre produtos para o Customer Journey Analytics, mas somente por meio da interface do usuário do Customer Journey Analytics.
+* [Conhecimento de produto](./home.md#product-knowledge): o AI Assistant pode responder a perguntas de conhecimento de produto do Experience Platform, Real-Time Customer Data Platform e Adobe Journey Optimizer. Você também pode se aprofundar em tópicos de conhecimento do produto para o Customer Journey Analytics, mas somente por meio da interface do usuário do Customer Journey Analytics.
 * [Insights operacionais](./home.md#operational-insights): você pode fazer perguntas ao Assistente de IA sobre insights operacionais nos seguintes objetos de dados: atributos, públicos, fluxos de dados, conjuntos de dados, destinos, jornadas, esquemas e fontes.
 
 ## Próximas etapas

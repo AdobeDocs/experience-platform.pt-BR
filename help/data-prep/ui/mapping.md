@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform;página inicial;tópicos populares;mapear csv;mapear arquivo csv;mapear arquivo csv para xdm;mapear csv para xdm;guia de interface do usuário;mapeador;mapeamento;preparação de dados;preparação de dados;
 title: Guia da interface de preparação de dados
-description: Este documento fornece instruções sobre como usar as funções de preparação de dados na interface do usuário da plataforma para mapear arquivos CSV para um esquema XDM.
+description: Saiba como usar as funções de preparação de dados na interface do usuário do Experience Platform para mapear arquivos CSV para um esquema XDM.
 exl-id: fafa4aca-fb64-47ff-a97d-c18e58ae4dae
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 06aa84aaccf3aeb45bfe19f8741b6bca96258d89
 workflow-type: tm+mt
-source-wordcount: '1847'
+source-wordcount: '1471'
 ht-degree: 1%
 
 ---
 
 # Guia da interface de preparação de dados
 
-Este documento fornece instruções sobre como usar as funções de preparação de dados na interface do usuário do Adobe Experience Platform para mapear arquivos CSV para um esquema XDM.
+Leia este guia para saber como usar as funções de mapeamento [preparação de dados](../home.md) na interface do usuário do Adobe Experience Platform para mapear arquivos CSV para um esquema [Experience Data Model (XDM)](../../xdm/home.md).
 
 ## Introdução
 
@@ -23,65 +23,24 @@ Este tutorial requer uma compreensão funcional dos seguintes componentes da Pla
    * [Tutorial do Editor de esquemas](../../xdm/tutorials/create-schema-ui.md): saiba como criar esquemas personalizados usando a interface do Editor de esquemas.
 * [Serviço de identidade](../../identity-service/home.md): obtenha uma melhor visão dos clientes individuais e de seu comportamento unindo as identidades de vários dispositivos e sistemas.
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md): Fornece um perfil de consumidor unificado em tempo real com base em dados agregados de várias fontes.
-* [Fontes](../../sources/home.md): o Experience Platform permite que os dados sejam assimilados de várias fontes e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma.
+* [Fontes](../../sources/home.md): o Experience Platform permite que os dados sejam assimilados de várias fontes e fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma.
 
-## Detalhes do fluxo de dados
+## Acessar a interface de mapeamento na interface do
 
->[!TIP]
->
->Você pode acessar os detalhes do fluxo de dados selecionando qualquer origem no catálogo de origens. Para obter mais informações, consulte a [visão geral das fontes](../../sources/home.md).
+Você pode acessar a interface de mapeamento na interface por dois caminhos diferentes.
 
-Antes de mapear os dados CSV para um esquema XDM, primeiro estabeleça os detalhes do fluxo de dados.
+1. Na interface do usuário do Experience Platform, selecione **[!UICONTROL Workflows]** no menu de navegação esquerdo e selecione **[!UICONTROL Mapear CSV para esquema XDM]**. Em seguida, forneça os detalhes do fluxo de dados e selecione os dados que deseja assimilar. Quando terminar, você é levado para a interface de mapeamento, onde é possível configurar o mapeamento entre os dados de origem e um esquema XDM.
+2. Também é possível acessar a interface de mapeamento por meio do espaço de trabalho de origens.
 
-A página [!UICONTROL Detalhes do fluxo de dados] permite selecionar se você deseja assimilar os dados CSV em um conjunto de dados de destino existente ou em um novo conjunto de dados de destino. Um conjunto de dados existente vem com um esquema de destino pré-criado para mapear seus dados, enquanto um novo conjunto de dados exige que você selecione um esquema existente ou crie um novo esquema para mapear seus dados.
+## Mapear arquivos CSV em um esquema XDM
 
-### Usar um conjunto de dados de destino existente
+Use a interface de mapeamento e o conjunto de ferramentas abrangente fornecido para mapear com êxito os campos de dados do esquema de origem para os campos XDM de destino apropriados no esquema de destino.
 
-Para assimilar seus dados CSV em um conjunto de dados existente, selecione **[!UICONTROL Conjunto de dados existente]**. Você pode recuperar um conjunto de dados existente usando a opção [!UICONTROL Pesquisa avançada] ou rolando pela lista de conjuntos de dados existentes no menu suspenso.
-
-Com um conjunto de dados selecionado, forneça um nome para o fluxo de dados e uma descrição opcional.
-
-Durante esse processo, você também pode habilitar o [!UICONTROL Diagnóstico de erro] e a [!UICONTROL Assimilação parcial]. O [!UICONTROL Diagnóstico de erro] habilita a geração de mensagens de erro detalhadas para todos os registros incorretos que ocorrem no fluxo de dados, enquanto a [!UICONTROL Assimilação parcial] permite assimilar dados que contêm erros, até um determinado limite definido manualmente. Consulte a [visão geral da assimilação parcial de lotes](../../ingestion/batch-ingestion/partial.md) para obter mais informações.
-
-![conjunto de dados existente](../images/ui/mapping/existing-dataset.png)
-
-### Usar um novo conjunto de dados de destino
-
-Para assimilar seus dados CSV em um novo conjunto de dados, selecione **[!UICONTROL Novo conjunto de dados]** e forneça um nome de conjunto de dados de saída e uma descrição opcional. Em seguida, selecione um esquema para mapear usando a opção [!UICONTROL Pesquisa avançada] ou rolando pela lista de esquemas existentes no menu suspenso.
-
-Com um esquema selecionado, forneça um nome para o fluxo de dados e uma descrição opcional e aplique as [!UICONTROL configurações de diagnóstico de erro] e [!UICONTROL assimilação parcial] desejadas para o fluxo de dados. Quando terminar, selecione **[!UICONTROL Próximo]**.
-
-![novo-conjunto-de-dados](../images/ui/mapping/new-dataset.png)
-
-## Selecionar dados
-
-A etapa [!UICONTROL Selecionar dados] é exibida, fornecendo uma interface para carregar seus arquivos locais e pré-visualizar sua estrutura e conteúdo. Selecione **[!UICONTROL Escolher arquivos]** para carregar um arquivo CSV do seu sistema local. Como alternativa, você pode arrastar e soltar o arquivo CSV que deseja carregar no painel [!UICONTROL Arrastar e soltar arquivos].
-
->[!TIP]
->
->No momento, somente arquivos CSV são compatíveis com o upload de arquivo local. O tamanho máximo para cada arquivo é de 1 GB.
-
-![escolher-arquivos](../images/ui/mapping/choose-files.png)
-
-Depois que o arquivo for carregado, a interface de visualização será atualizada para exibir o conteúdo e a estrutura do arquivo.
-
-![visualizar-amostra-dados](../images/ui/mapping/preview-sample-data.png)
-
-Dependendo do arquivo, você pode selecionar um delimitador de coluna, como guias, vírgulas, barras verticais ou um delimitador de coluna personalizado para seus dados de origem. Selecione a seta suspensa **[!UICONTROL Delimitador]** e selecione o delimitador apropriado no menu.
-
-Quando terminar, selecione **[!UICONTROL Próximo]**.
-
-![delimitador](../images/ui/mapping/delimiter.png)
-
-## Mapeamento
-
-A interface **[!UICONTROL mapping]** fornece uma ferramenta abrangente para mapear campos de origem do esquema de origem para os campos XDM de destino apropriados no esquema de destino.
-
-![map-csv-to-xdm](../images/ui/mapping/map-csv-to-xdm.png)
+![A interface de mapeamento na interface do Experience Platform.](../images/ui/mapping/base_mapping.png)
 
 ### Noções básicas sobre a interface de mapeamento {#mapping-interface}
 
-A interface de mapeamento inclui um painel que fornece informações sobre a integridade dos campos de mapeamento no contexto do fluxo de trabalho de assimilação. O painel exibe os seguintes detalhes em relação aos campos de mapeamento:
+Consulte o painel na parte superior da interface para obter informações sobre a integridade dos campos de mapeamento no contexto do workflow de assimilação. O painel exibe os seguintes detalhes em relação aos campos de mapeamento:
 
 | Propriedade | Descrição |
 | --- | --- |
@@ -90,38 +49,24 @@ A interface de mapeamento inclui um painel que fornece informações sobre a int
 | [!UICONTROL Campos de identidade] | Exibe o número total de campos de mapeamento definidos como identidade. Esses campos de mapeamento são representados por um ícone de impressão digital. |
 | [!UICONTROL Erros] | Exibe o número de campos de mapeamento incorretos. |
 
-![painel superior](../images/ui/mapping/top-panel.png)
+{style="table-layout:auto"}
 
-A interface de mapeamento também fornece um painel de opções que você pode escolher para interagir ou filtrar melhor pelos campos de mapeamento.
+Em seguida, você pode usar as opções listadas no cabeçalho para interagir ou filtrar melhor pelos campos de mapeamento.
 
-![segundo-painel](../images/ui/mapping/second-panel.png)
-
-Para procurar um conjunto de mapeamento específico, selecione **[!UICONTROL Pesquisar campos de origem]** e insira o nome dos dados de origem que deseja isolar.
-
-![pesquisar](../images/ui/mapping/search.png)
-
-Selecione **[!UICONTROL Todos os campos de origem]** para ver um menu suspenso de opções de filtragem para restringir melhor sua exibição da interface de mapeamento.
-
-As opções de filtro são:
-
-| Campos do Source | Descrição |
+| Opção | Descrição |
 | --- | --- |
-| [!UICONTROL Todos os campos de origem] | Essa opção exibe todos os campos de origem do esquema de origem. Essa opção é exibida por padrão. |
-| [!UICONTROL Campos obrigatórios] | Essa opção filtra o esquema de origem para exibir apenas os campos necessários para concluir o mapeamento. |
-| [!UICONTROL Campos de identidade] | Essa opção filtra o esquema de origem para exibir apenas os campos marcados para Identidade. |
-| [!UICONTROL Campos mapeados] | Essa opção filtra o esquema de origem para exibir apenas os campos que já foram mapeados. |
-| [!UICONTROL Campos não mapeados] | Essa opção filtra o esquema de origem para exibir apenas os campos que ainda não foram mapeados. |
-| [!UICONTROL Campos com recomendação] | Essa opção filtra o esquema de origem para exibir apenas os campos que contêm recomendações de mapeamento. |
+| [!UICONTROL Pesquisar campos de origem] | Use a barra de pesquisa para navegar até um campo de origem específico. |
+| [!UICONTROL Todos os campos] | Selecione **[!UICONTROL Todos os campos]** para exibir um menu suspenso de opções para filtrar seus mapeamentos. As opções de filtro disponíveis incluem:<ul><li>**[!UICONTROL Campos obrigatórios]**: filtra a interface para exibir somente os campos necessários para concluir o fluxo de trabalho.</li><li> **[!UICONTROL Campos de identidade]**: filtra a interface para exibir somente campos marcados como identidades.</li><li>**[!UICONTROL Campos mapeados]**: filtra a interface para exibir somente os campos que já foram mapeados.</li><li>**[!UICONTROL Campos não mapeados]**: filtra a interface para exibir somente os campos que ainda não foram mapeados.</li><li>**[!UICONTROL Campos com erros]**: filtra a interface para exibir somente campos com erros.</li></ul> |
+| [!UICONTROL Novo tipo de campo] | Selecione **[!UICONTROL Novo tipo de campo]** para adicionar um novo campo ou um campo calculado. Para obter mais informações, leia a seção sobre [adição de um novo tipo de campo](#add-a-new-field-type). |
+| [!UICONTROL Importar mapeamentos] | Selecione **[!UICONTROL Importar mapeamentos]** para importar mapeamentos de um arquivo ou fluxo de dados existente. Para obter mais informações, leia a seção sobre [importação de mapeamentos](#import-mapping). |
+| [!UICONTROL Validar] | Selecione **[!UICONTROL Validar]** para verificar se há erros nos mapeamentos. |
+| [!UICONTROL Baixar modelo] | Selecione **[!UICONTROL Baixar modelo]** para exportar e baixar um arquivo CSV de seus mapeamentos. |
+| [!UICONTROL Visualizar dados] | Selecione **[!UICONTROL Visualizar dados]** para usar o painel de visualização e inspecionar a estrutura e o conteúdo do conjunto de dados de origem. |
+| [!UICONTROL Limpar tudo] | Selecione **[!UICONTROL Limpar tudo]** para excluir todos os mapeamentos da interface. |
 
-Selecione **[!UICONTROL Campos com erros]** para ver todos os campos de mapeamento com erros.
+{style="table-layout:auto"}
 
-![filtro](../images/ui/mapping/filter.png)
-
-Uma exibição isolada de campos de mapeamento incorretos é exibida, permitindo que você solucione erros por meio de recomendações de mapeamento inteligentes ou pela árvore de mapeamento manual.
-
-![campos com erros](../images/ui/mapping/fields-with-errors.png)
-
-### Adicionar um novo tipo de campo
+### Adicionar um novo tipo de campo {#add-a-new-field-type}
 
 Você pode adicionar um novo campo de mapeamento ou um campo calculado selecionando **[!UICONTROL Novo tipo de campo]**.
 
@@ -129,23 +74,19 @@ Você pode adicionar um novo campo de mapeamento ou um campo calculado seleciona
 
 Para adicionar um novo campo de mapeamento, selecione **[!UICONTROL Novo tipo de campo]** e **[!UICONTROL Adicionar novo campo]** no menu suspenso exibido.
 
-![adicionar-novo-campo](../images/ui/mapping/add-new-field.png)
+![A interface de mapeamento com o botão &quot;adicionar novo campo&quot; selecionado.](../images/ui/mapping/add_new_field.png)
 
 Em seguida, selecione o campo de origem que deseja adicionar da árvore de esquema de origem exibida e selecione **[!UICONTROL Selecionar]**.
 
-![selecionar novo campo](../images/ui/mapping/select-new-field.png)
+![O esquema de origem com &quot;país&quot; selecionado como um novo campo adicional.](../images/ui/mapping/source_field.png)
 
 A interface de mapeamento é atualizada com o campo de origem selecionado e um campo de destino vazio. Selecione **[!UICONTROL Mapear campo de destino]** para começar a mapear o novo campo de origem para seu campo XDM de destino apropriado.
 
-![campo-alvo-mapa](../images/ui/mapping/map-target-field.png)
+![A interface de mapeamento com um campo de origem novo e não mapeado.](../images/ui/mapping/new_field_added.png)
 
 Uma árvore de esquema de destino interativa é exibida, permitindo navegar manualmente pelo esquema de destino e localizar o campo XDM de destino apropriado para o campo de origem.
 
-![mapeamento manual](../images/ui/mapping/manual-mapping.png)
-
-Quando terminar, selecione o ícone do esquema para fechar a interface do esquema de destino.
-
-![árvore-esquema](../images/ui/mapping/schema-tree.png)
+![A árvore de esquema de destino interativa com um novo campo de destino selecionado.](../images/ui/mapping/add_target_field.png)
 
 #### Campos calculados {#calculated-fields}
 
@@ -153,9 +94,9 @@ Os campos calculados permitem que valores sejam criados com base nos atributos n
 
 Para criar um campo calculado, selecione **[!UICONTROL Novo tipo de campo]** e **[!UICONTROL Adicionar campo calculado]**
 
-![adicionar-campo-calculado](../images/ui/mapping/add-calculated-field.png)
+![A interface de mapeamento com o botão &quot;adicionar campo calculado&quot; selecionado.](../images/ui/mapping/new_calculated_field.png)
 
-O painel **[!UICONTROL Criar campo calculado]** é exibido. A caixa de diálogo à esquerda contém os campos, funções e operadores compatíveis com os campos calculados. Selecione uma das guias para começar a adicionar funções, campos ou operadores ao editor de expressão.
+A janela **[!UICONTROL Criar campo calculado]** é exibida. Use a interface para inserir seus campos calculados e consulte a caixa de diálogo à esquerda para obter campos, funções e operadores compatíveis.
 
 | Tabulação | Descrição |
 | --- | ----------- |
@@ -163,83 +104,59 @@ O painel **[!UICONTROL Criar campo calculado]** é exibido. A caixa de diálogo 
 | [!UICONTROL Campo] | A guia fields lista campos e atributos disponíveis no schema de origem. |
 | [!UICONTROL Operador] | A guia operators lista os operadores disponíveis para transformar os dados. |
 
-![guias](../images/ui/mapping/tabs.png)
+![A interface de campo calculado](../images/ui/mapping/calculated_field.png)
 
 Você pode adicionar campos, funções e operadores manualmente usando o editor de expressão no centro. Selecione o editor para começar a criar uma expressão. Depois de concluir, selecione **[!UICONTROL Salvar]** para continuar.
 
-![criar-campo-calculado](../images/ui/mapping/create-calculated-field.png)
+### Importar mapeamento {#import-mapping}
 
-### Importar mapeamento {#import}
+Você pode reduzir o tempo de configuração manual do processo de assimilação de dados e limitar erros usando a funcionalidade de mapeamento de importação do preparo de dados. Você pode importar mapeamentos de um fluxo existente ou de um arquivo exportado.
 
-Você pode reutilizar o mapeamento de um fluxo de dados existente para reduzir o tempo de configuração manual de sua assimilação de dados e limitar erros. Selecione **[!UICONTROL Importar mapeamento]** para reutilizar um mapeamento existente.
+>[!BEGINTABS]
 
-![import-mapping](../images/ui/mapping/import-mapping.png)
+>[!TAB Importar mapeamento do fluxo]
 
-A janela [!UICONTROL Importar mapeamento] é exibida, fornecendo uma lista de fluxos de dados para escolher.
+Se você tiver vários fluxos de dados com base em arquivos de origem e esquemas de destino semelhantes, poderá importar o mapeamento existente e reutilizá-los para novos fluxos de dados.
 
-Selecione o ícone de visualização para visualizar o mapeamento do fluxo de dados selecionado.
+Para importar o mapeamento de um fluxo de dados existente, selecione **[!UICONTROL Importar mapeamentos]** e **[!UICONTROL Importar mapeamento do fluxo]**.
 
-![list-mapping](../images/ui/mapping/list-mapping.png)
+![A interface de mapeamento com &quot;mapeamento de importação&quot; e &quot;mapeamento de importação do fluxo&quot; selecionada.](../images/ui/mapping/import_from_flow.png)
 
-A janela de visualização permite inspecionar o mapeamento existente antes de importar para o fluxo de dados. Depois de verificar o mapeamento, você pode selecionar **[!UICONTROL Voltar]** para retornar à lista de fluxos de dados e inspecionar outro conjunto de mapeamentos, ou pode selecionar **[!UICONTROL Selecionar]** para continuar.
+Em seguida, use a janela pop-up para localizar o fluxo de dados cujo mapeamento você deseja importar. Durante essa etapa, você também pode usar a função de pesquisa para isolar um fluxo de dados específico e recuperar seus mapeamentos. Quando terminar, selecione **[!UICONTROL Selecionar]**.
 
-![mapeamento de visualização](../images/ui/mapping/preview-mapping.png)
+![Uma lista de fluxos de dados existentes cujos mapeamentos correspondentes podem ser importados.](../images/ui/mapping/import_flow_window.png)
 
-Como alternativa, você pode selecionar o mapeamento que deseja importar na janela da lista de fluxos de dados. Selecione o fluxo de dados que contém o mapeamento que você deseja importar e selecione **[!UICONTROL Selecionar]** para continuar.
+>[!TAB Importar mapeamento do arquivo]
 
-![selecionar-mapeamento](../images/ui/mapping/select-mapping.png)
+Em alguns casos, pode ser necessário implementar um grande número de mapeamentos para seus dados. Você pode fazer isso manualmente com a interface de mapeamento, mas também pode exportar seu modelo de mapeamento e configurar os mapeamentos em uma planilha offline para economizar tempo e evitar tempos limite do usuário no Experience Platform.
 
-A interface é atualizada com o mapeamento importado.
+Para importar o mapeamento de um arquivo exportado, selecione **[!UICONTROL Importar mapeamentos]** e **[!UICONTROL Importar mapeamento do arquivo]**.
 
->[!NOTE]
->
->Todos os conjuntos de mapeamento existentes que você estabelecer ou as recomendações de mapeamento de ML serão substituídos pelo mapeamento que você importou de um fluxo de dados existente.
+![A interface de mapeamento com &quot;mapeamento de importação&quot; e &quot;mapeamento de importação do arquivo&quot; selecionada.](../images/ui/mapping/import_from_file.png)
 
-![mapeamento-importado](../images/ui/mapping/mapping-imported.png)
+Em seguida, use a janela [!UICONTROL Carregar modelo] para baixar uma cópia CSV de seus mapeamentos. Em seguida, você pode configurar os mapeamentos localmente no dispositivo, usando qualquer software que suporte a edição de tipos de arquivos CSV. Durante essa etapa, você deve garantir que esteja usando apenas os campos fornecidos no arquivo de origem e no esquema de destino.
 
-Selecione **[!UICONTROL Visualizar dados]** para ver os resultados do mapeamento de até 100 linhas de dados de amostra do conjunto de dados selecionado.
+![A janela de modelo de carregamento que exibe opções para baixar e carregar um arquivo csv exportado dos mapeamentos.](../images/ui/mapping/upload_template.png)
 
-![dados de visualização](../images/ui/mapping/preview-data.png)
++++Selecione para exibir um exemplo de um arquivo de mapeamento exportado
 
-Durante a visualização, a coluna de identidade é priorizada como o primeiro campo, pois são as informações principais necessárias ao validar os resultados do mapeamento. Quando terminar, selecione **[!UICONTROL Fechar]**.
+![O arquivo csv baixado do modelo de mapeamento.](../images/ui/mapping/mapping_csv_file.png)
 
-![tela de visualização](../images/ui/mapping/preview-screen.png)
++++
 
-Para remover todos os campos de mapeamento, selecione **[!UICONTROL Limpar todos os mapeamentos]**.
+Quando terminar, selecione **[!UICONTROL Carregar arquivo]** e selecione o arquivo csv atualizado de seus mapeamentos. Aguarde um breve momento para que o sistema seja processado e selecione **[!UICONTROL Concluído]**.
 
-![limpar-tudo](../images/ui/mapping/clear-all.png)
+![A janela de modelo de carregamento com um novo arquivo carregado.](../images/ui/mapping/upload_successful.png)
 
-### Uso da interface de mapeamento
+>[!ENDTABS]
 
-A Platform fornece recomendações inteligentes automaticamente para campos mapeados automaticamente com base no esquema ou conjunto de dados de destino selecionado. Você pode ajustar manualmente as regras de mapeamento para atender aos seus casos de uso ou corrigir campos de mapeamento duplicados para eliminar erros.
+Com os mapeamentos concluídos, agora é possível selecionar **[!UICONTROL Concluir]** e prosseguir para a próxima etapa para concluir o fluxo de dados.
 
-![interface-mapeamento](../images/ui/mapping/mapping-interface.png)
-
-Selecione o ícone de lâmpada no campo de destino que você deseja ajustar.
-
-![mapeamento-recc](../images/ui/mapping/mapping-recc.png)
-
-O painel pop-up [!UICONTROL Recomendações de mapeamento] é exibido, exibindo uma lista de campos de destino recomendados que podem ser mapeados para um campo de origem específico. Por padrão, a primeira recomendação é aplicada automaticamente.
-
-Às vezes, mais de uma recomendação está disponível para o esquema de origem. Quando isso acontece, o cartão de mapeamento exibe a recomendação mais proeminente, seguida por um ícone que contém o número de recomendações adicionais disponíveis. Selecionar o ícone de lâmpada mostrará uma lista das recomendações adicionais. Você pode escolher uma das recomendações alternativas marcando a caixa de seleção ao lado da recomendação para a qual deseja mapear.
-
-Aqui, você pode alterar o campo de destino selecionado para corrigir um erro ou corresponder ao seu caso de uso.
-
-Como alternativa, você pode selecionar **[!UICONTROL Selecionar manualmente]** para usar manualmente a árvore de mapeamento do esquema de destino interativo.
-
-![recc-panel](../images/ui/mapping/recc-panel.png)
-
-A interface de mapeamento do esquema de destino aparece na mesma exibição dos campos de mapeamento, permitindo modificar pares de mapeamento na mesma tela. Selecione o campo de destino que se ajusta ao seu caso de uso ou que corrige seus erros.
-
-![selecionar-campo-alvo](../images/ui/mapping/select-target-field.png)
-
-Quando terminar, selecione **[!UICONTROL Concluir]** para continuar.
-
-![concluir](../images/ui/mapping/finish.png)
+![A interface de mapeamento com um conjunto completo de mapeamentos.](../images/ui/mapping/completed_mappings.png)
 
 ## Próximas etapas
 
-Ao ler este documento, você mapeou com êxito um arquivo CSV para um esquema XDM de destino usando a interface de mapeamento na interface da Platform. Consulte os seguintes documentos para obter mais informações:
+Agora é possível mapear com êxito um arquivo CSV para um esquema XDM de destino usando a interface de mapeamento na interface do Experience Platform. Para obter mais informações, leia os seguintes documentos:
 
 * [Visão geral do Preparo de dados](../home.md)
 * [Visão geral das fontes](../../sources/home.md)

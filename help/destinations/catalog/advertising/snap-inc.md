@@ -2,10 +2,10 @@
 title: Conexão Snap Inc
 description: Saiba como se conectar à plataforma Snapchat Ads e exportar seus públicos do Experience Platform.
 exl-id: 1f0f2dc0-5f3d-424b-9b22-b1a14ac30039
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 9a80a9b49b1983e8e488d11b114c02130b045686
 workflow-type: tm+mt
-source-wordcount: '1012'
-ht-degree: 2%
+source-wordcount: '1063'
+ht-degree: 3%
 
 ---
 
@@ -59,14 +59,26 @@ Todos os identificadores enviados para o destino *Snap Inc* devem ter hash no fo
 
 {style="table-layout:auto"}
 
+## Públicos-alvo compatíveis {#supported-audiences}
+
+Esta seção descreve quais tipos de públicos-alvo você pode exportar para esse destino.
+
+| Origem do público | Suportado | Descrição |
+|---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Públicos-alvo gerados pelo [Serviço de Segmentação](../../../segmentation/home.md) da Experience Platform. |
+| Uploads personalizados | ✓ | Públicos [importados](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV. |
+| [!DNL Federated Audience Composition] | ✓ | Públicos importados para o Experience Platform por meio da [Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/start/audiences). |
+
+{style="table-layout:auto"}
+
 ## Tipo e frequência de exportação {#export-type-frequency}
 
 Consulte a tabela abaixo para obter informações sobre o tipo e a frequência da exportação de destino.
 
 | Item | Tipo | Notas |
 ---------|----------|---------|
-| Tipo de exportação | **[!UICONTROL Exportação de público-alvo]** | Você está exportando todos os membros de um público com os identificadores (nome, número de telefone ou outros) usados no destino *YOURDESTINATION*. |
-| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil é atualizado em Experience Platform com base na avaliação do público-alvo, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Tipo de exportação | **[!UICONTROL Exportação de público-alvo]** | Você está exportando todos os membros de um público-alvo com os identificadores (nome, número de telefone ou outros) usados no destino Snap Inc. |
+| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil for atualizado no Experience Platform com base na avaliação do público-alvo, o conector enviará a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -128,7 +140,7 @@ Depois de ativar os públicos-alvo para o destino *Snap Inc*, você poderá ver 
 
 ![Públicos-alvo](/help/destinations/assets/catalog/advertising/snapchat-ads/audiences.png)
 
-Observe que, quando um público-alvo Adobe é ativado pela primeira vez para a Snap Inc, você o verá inicialmente como um público-alvo vazio. Isso ocorre porque a Adobe Experience Platform não exporta dados de membros para a Snap Inc até avaliar o público-alvo. Para obter mais informações sobre como os públicos-alvo são avaliados em Experience Platform, consulte a [visão geral do Serviço de segmentação](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html#evaluate-segments).
+Observe que, quando um público-alvo do Adobe é ativado pela primeira vez para a Snap Inc, você o verá inicialmente como um público-alvo vazio. Isso ocorre porque a Adobe Experience Platform não exporta dados de membros para a Snap Inc até avaliar o público-alvo. Para obter mais informações sobre como os públicos-alvo são avaliados no Experience Platform, consulte a [visão geral do Serviço de segmentação](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html#evaluate-segments).
 
 ## Uso e governança de dados {#data-usage-governance}
 

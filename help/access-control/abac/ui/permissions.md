@@ -3,10 +3,10 @@ keywords: Experience Platform;página inicial;tópicos populares;controle de ace
 title: Permissões da Função Gerenciar Controle de Acesso Baseado em Atributo
 description: Este documento fornece informações sobre como configurar permissões para uma função por meio da interface de Permissões no Adobe Experience Cloud
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
-source-git-commit: 207317d16a21cc2461ebd3f7867735735227c173
+source-git-commit: afd883c530ab1b335888e79b5f4075e774fced4b
 workflow-type: tm+mt
-source-wordcount: '1608'
-ht-degree: 11%
+source-wordcount: '1699'
+ht-degree: 10%
 
 ---
 
@@ -120,6 +120,12 @@ O vídeo a seguir tem como objetivo ajudá-lo a entender a criação de uma nova
 
 ## Gerenciar credenciais de API para uma função {#manage-api-credentials-for-role}
 
+>[!CONTEXTUALHELP]
+>id="platform_permissions_apicredentials_about"
+>title="O que são credenciais de API?"
+>abstract="As credenciais da API são atribuídas a funções para conceder aos usuários e desenvolvedores acesso às APIs da plataforma. Usando APIs da Platform, você pode executar programaticamente operações básicas de CRUD (Criar, Ler, Atualizar, Excluir) em dados, como configurar atributos computados, acessar dados/entidades, exportar dados, excluir dados ou lotes desnecessários e muito mais."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/landing/platform-apis/api-guide" text="Guia da API da plataforma"
+
 >[!IMPORTANT]
 >
 > Para usar e gerenciar credenciais de API em [!UICONTROL Permissões], os usuários devem ter privilégios de administrador do sistema.
@@ -148,7 +154,13 @@ A caixa de diálogo **[!UICONTROL Remover credenciais de API]** é exibida, soli
 
 Você retornará à guia **[!UICONTROL Credenciais da API]**.
 
-## Gerenciar grupos de usuários para uma função
+## Gerenciar grupos de usuários para uma função {#manage-user-groups}
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_usergroups_about"
+>title="O que são grupos de usuários?"
+>abstract="Grupos de usuários são coleções de vários usuários que compartilham acesso às mesmas funções. O acesso aos recursos em uma organização é gerenciado por meio de funções atribuídas aos grupos de usuários."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/permissions-ui/roles" text="Gerenciar funções"
 
 Os grupos de usuários são vários usuários que foram agrupados e têm acesso para executar as mesmas funções.
 

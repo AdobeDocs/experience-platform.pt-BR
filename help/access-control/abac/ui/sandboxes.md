@@ -1,18 +1,24 @@
 ---
-keywords: Experience Platform;página inicial;tópicos populares;controle de acesso;controle de acesso baseado em atributos;ABAC
+keywords: Experience Platform;página inicial;tópicos populares;controle de acesso;controle de acesso baseado em atributo;;home;popular topics;access control;attribute-based access control;ABAC
 title: Sandboxes de controle de acesso baseado em atributo
 description: Este documento fornece informações sobre como gerenciar sandboxes por meio da interface de Permissões na Adobe Experience Cloud
 exl-id: c21eb319-fc0d-442a-b778-bbfa2d6bb22d
-source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
+source-git-commit: afd883c530ab1b335888e79b5f4075e774fced4b
 workflow-type: tm+mt
-source-wordcount: '217'
+source-wordcount: '259'
 ht-degree: 0%
 
 ---
 
-# Gerenciar sandboxes
+# Gerenciar sandboxes {#mange-sandboxes}
 
-As sandboxes são partições virtuais dentro de uma única instância do Experience Platform, o que permite uma integração perfeita com o processo de desenvolvimento de seus aplicativos de experiência digital. Todo o conteúdo e as ações realizadas em uma sandbox estão confinados somente a essa sandbox e não afetam outras sandboxes. Para obter mais informações sobre sandboxes, consulte a [Visão geral das sandboxes](../../../sandboxes/home.md).
+>[!CONTEXTUALHELP]
+>id="platform_permissions_sandboxes_about"
+>title="O que são sandboxes?"
+>abstract="As sandboxes são partições virtuais em uma única instância da Platform. Todo o conteúdo e as ações realizadas em uma sandbox estão confinados a essa sandbox e não afetam outras sandboxes. O acesso a sandboxes é gerenciado por meio de funções."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/home" text="Visão geral de sandboxes"
+
+As sandboxes são partições virtuais em uma única instância do Experience Platform, o que permite uma integração perfeita com o processo de desenvolvimento de seus aplicativos de experiência digital. Todo o conteúdo e as ações realizadas em uma sandbox estão confinados somente a essa sandbox e não afetam outras sandboxes. Para obter mais informações sobre sandboxes, consulte a [Visão geral das sandboxes](../../../sandboxes/home.md).
 
 ## Configurar sandboxes
 

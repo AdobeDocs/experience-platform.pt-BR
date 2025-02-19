@@ -1,16 +1,22 @@
 ---
-keywords: Experience Platform;página inicial;tópicos populares;controle de acesso;controle de acesso baseado em atributos;ABAC
+keywords: Experience Platform;página inicial;tópicos populares;controle de acesso;controle de acesso baseado em atributo;;home;popular topics;access control;attribute-based access control;ABAC
 title: Usuários do gerenciador de controle de acesso baseado em atributos
 description: Este documento fornece informações sobre como gerenciar usuários e grupos de usuários por meio da interface de Permissões no Adobe Experience Cloud
 exl-id: 16450867-040a-4be1-a6c0-f03d0a1b90ba
-source-git-commit: d410e7ea635471f2bbc93c9d332ad7e2f619d054
+source-git-commit: afd883c530ab1b335888e79b5f4075e774fced4b
 workflow-type: tm+mt
-source-wordcount: '257'
-ht-degree: 0%
+source-wordcount: '285'
+ht-degree: 1%
 
 ---
 
-# Gerenciar usuários
+# Gerenciar usuários {#manage-users}
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_users_about"
+>title="O que são usuários?"
+>abstract="Os usuários são os indivíduos que têm acesso ao Experience Platform. O acesso de um usuário individual aos recursos de uma organização é gerenciado por meio de funções."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/permissions-ui/roles" text="Gerenciar funções"
 
 Se quiser exibir os detalhes e as funções dos usuários aos quais eles estão atribuídos, selecione a guia **[!UICONTROL Usuários]**.
 
@@ -26,7 +32,7 @@ Selecione a guia **[!UICONTROL Funções]** para exibir as funções às quais o
 
 A página ![Funções foi exibida com a guia [!UICONTROL Funções] e a função destacada.](../../images/flac-ui/flac-users-roles.png)
 
-## Desenvolvedor e controle de acesso à API com permissões de Experience Platform
+## Desenvolvedor e controle de acesso à API com permissões do Experience Platform
 
 >[!NOTE]
 >

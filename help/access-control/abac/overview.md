@@ -1,21 +1,16 @@
 ---
-keywords: Experience Platform;página inicial;tópicos populares;controle de acesso;controle de acesso baseado em atributos;
+keywords: Experience Platform;home;popular tópicos;controle de acesso;controle de acesso baseado em atributo;
 title: Visão Geral do Controle de Acesso Baseado em Atributo
 description: Este documento fornece informações sobre o controle de acesso baseado em atributos no Adobe Experience Platform
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 37131ce16b70bfaa737ee1cd896d0042e06bab15
 workflow-type: tm+mt
-source-wordcount: '1864'
-ht-degree: 13%
+source-wordcount: '1860'
+ht-degree: 14%
 
 ---
 
 # Visão geral do controle de acesso baseado em atributos {#attribute-based-access-control-overview}
-
->[!CONTEXTUALHELP]
->id="platform_accesscontrol_abac_labelusageaccesspolicy"
->title="Política de acesso ao uso de rótulo"
->abstract=""
 
 O controle de acesso baseado em atributos é um recurso do Adobe Experience Platform que permite aos administradores controlar o acesso a objetos e/ou recursos específicos com base em atributos. Os atributos podem ser metadados adicionados a um objeto, como um rótulo adicionado a um campo ou segmento de esquema. Um administrador define políticas de acesso que incluem atributos para gerenciar permissões de acesso do usuário.
 
@@ -23,9 +18,9 @@ Use essa funcionalidade para rotular campos de esquema do Experience Data Model 
 
 >[!IMPORTANT]
 >
->O controle de acesso baseado em atributos não deve ser confundido com os recursos de governança de dados do Experience Platform, que permitem usar rótulos e políticas para controlar como os dados são usados na Platform, em vez de quais usuários em sua organização têm acesso a eles. Consulte a [visão geral da governança de dados](../../data-governance/home.md) para obter mais informações.
+>O controle de acesso baseado em atributos não deve ser confundido com os recursos de governança de dados da Experience Platform, que permitem usar rótulos e políticas para controlar como os dados são usados na Platform, em vez de quais usuários na organização têm acesso a eles. Consulte a [visão geral da governança de dados](../../data-governance/home.md) para obter mais informações.
 
-Por meio do controle de acesso baseado em atributos, os administradores da sua organização podem controlar o acesso dos usuários a dados pessoais confidenciais (SPD), informações de identificação pessoal (PII) e tipo personalizado de dados em todos os fluxos de trabalho e recursos da plataforma. Os administradores podem definir funções de usuário que tenham acesso somente a campos e dados específicos que correspondam a esses campos.
+Por meio do controle de acesso baseado em atributos, os administradores da sua organização podem controlar o acesso dos usuários a dados pessoais confidenciais (SPD), informações de identificação pessoal (PII) e tipo personalizado de dados em todos os fluxos de trabalho e recursos da plataforma. Admins podem definir funções de usuário que tenham acesso somente a campos e dados específicos que correspondam a esses campos.
 
 O vídeo a seguir é destinado a ajudá-lo a entender o controle de acesso baseado em atributos e descreve como configurar funções, recursos e políticas.
 
@@ -75,7 +70,7 @@ Há disponibilidade limitada de controle de acesso baseado em atributos para cli
 
 * Rotulagem: adicione, edite e remova rótulos de funções de usuário, campos de esquema, segmentos e outros objetos compatíveis para aproveitar as políticas de controle de acesso. **Observação:** qualquer segmento que utilize um atributo rotulado também deverá ser rotulado se você quiser que as mesmas restrições de acesso se apliquem a ele.
 
-Os workflows de administração de todos os aplicativos alimentados por Experience Platform do Admin Console para a nova interface de Permissões estão sendo trocados.
+Os workflows de administração de todos os aplicativos alimentados pela Experience Platform, desde o Admin Console até a nova interface de Permissões, estão sendo alternados.
 
 >[!IMPORTANT]
 >

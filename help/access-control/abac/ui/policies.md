@@ -1,18 +1,18 @@
 ---
-keywords: Experience Platform;página inicial;tópicos populares;controle de acesso;controle de acesso baseado em atributos;ABAC
+keywords: Experience Platform;página inicial;tópicos populares;controle de acesso;controle de acesso baseado em atributo;;home;popular topics;access control;attribute-based access control;ABAC
 title: Gerenciar políticas de controle de acesso
 description: Este documento fornece informações sobre como gerenciar políticas de controle de acesso por meio da interface de Permissões no Adobe Experience Cloud.
 exl-id: 66820711-2db0-4621-908d-01187771de14
-source-git-commit: 7cafe1f7e9dd6789db4199631cb605be666ce48a
+source-git-commit: afd883c530ab1b335888e79b5f4075e774fced4b
 workflow-type: tm+mt
-source-wordcount: '613'
-ht-degree: 0%
+source-wordcount: '684'
+ht-degree: 2%
 
 ---
 
 # Gerenciar políticas de controle de acesso
 
-As políticas de controle de acesso são declarações que reúnem atributos para estabelecer ações permitidas e inadmissíveis. As políticas de acesso podem ser locais ou globais e podem substituir outras políticas. O Adobe fornece uma política padrão que pode ser ativada imediatamente ou sempre que a organização estiver pronta para começar a controlar o acesso a objetos específicos com base em rótulos. A política padrão usa rótulos aplicados a recursos para negar acesso, a menos que os usuários estejam em uma função com um rótulo correspondente.
+As políticas de controle de acesso são declarações que reúnem atributos para estabelecer ações permitidas e inadmissíveis. As políticas de acesso podem ser locais ou globais e podem substituir outras políticas. A Adobe fornece uma política padrão que pode ser ativada imediatamente ou sempre que sua organização estiver pronta para começar a controlar o acesso a objetos específicos com base em rótulos. A política padrão usa rótulos aplicados a recursos para negar acesso, a menos que os usuários estejam em uma função com um rótulo correspondente.
 
 >[!IMPORTANT]
 >
@@ -184,7 +184,13 @@ A caixa de diálogo **[!UICONTROL Remover]** é exibida solicitando que você co
 >
 >A sandbox selecionada foi removida com sucesso da política.
 
-## Ativar uma política
+## Ativar uma política {#activate-policy}
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_policies_about"
+>title="O que são políticas?"
+>abstract="Políticas são declarações que reúnem atributos para estabelecer ações permitidas e não permitidas. Cada organização vem com uma política padrão que deve ser ativada para começar a controlar o acesso a objetos específicos com base em rótulos. Os rótulos aplicados aos recursos negam acesso, a menos que os usuários sejam atribuídos a uma função com um rótulo correspondente. As políticas padrão não podem ser editadas ou excluídas, mas podem ser ativadas ou desativadas."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/permissions-ui/labels" text="Gerenciar rótulos"
 
 Para ativar uma política existente, selecione a política na guia **[!UICONTROL Políticas]**.
 

@@ -1,9 +1,9 @@
 ---
-keywords: conexão facebook;conexão facebook;destinos do facebook;facebook;instagram;messenger;facebook messenger
-title: Conexão com o facebook
+keywords: conexão do facebook;conexão do facebook;destinos do facebook;instagram;messenger;facebook messenger
+title: Conexão com o Facebook
 description: Ative perfis para suas campanhas do Facebook para direcionamento de público, personalização e supressão com base em emails com hash.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 83e2c014e62509fee2843505d7975cde368665ef
+source-git-commit: 0d98183838125fac66768b94bc1993bde9a374b5
 workflow-type: tm+mt
 source-wordcount: '2091'
 ht-degree: 6%
@@ -18,7 +18,7 @@ Ative perfis para suas campanhas do [!DNL Facebook] para direcionamento de públ
 
 Você pode usar este destino para direcionamento de público em toda a família de aplicativos [!DNL Facebook's] com suporte no [!DNL Custom Audiences], incluindo [!DNL Facebook], [!DNL Instagram], [!DNL Audience Network] e [!DNL Messenger]. A seleção do aplicativo no qual você deseja executar a campanha é indicada no nível de posicionamento em [!DNL Facebook Ads Manager].
 
-![Destino do Facebook na interface do usuário do Adobe Experience Platform.](../../assets/catalog/social/facebook/catalog.png)
+![Destino do Facebook na interface do Adobe Experience Platform.](../../assets/catalog/social/facebook/catalog.png)
 
 ## Casos de uso
 
@@ -54,7 +54,7 @@ Esta seção descreve quais tipos de públicos-alvo você pode exportar para ess
 
 | Origem do público | Suportado | Descrição |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Públicos gerados por meio do [Serviço de segmentação](../../../segmentation/home.md) do Experience Platform. |
+| [!DNL Segmentation Service] | ✓ | Públicos-alvo gerados pelo [Serviço de Segmentação](../../../segmentation/home.md) da Experience Platform. |
 | Uploads personalizados | ✓ | Públicos [importados](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV. |
 
 {style="table-layout:auto"}
@@ -65,22 +65,25 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 
 | Item | Tipo | Notas |
 ---------|----------|---------|
-| Tipo de exportação | **[!UICONTROL Exportação de público-alvo]** | Você está exportando todos os membros de um público com os identificadores (nome, número de telefone ou outros) usados no destino do Facebook. |
-| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil é atualizado em Experience Platform com base na avaliação do público-alvo, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Tipo de exportação | **[!UICONTROL Exportação de público-alvo]** | Você está exportando todos os membros de um público-alvo com os identificadores (nome, número de telefone ou outros) usados no destino do Facebook. |
+| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil for atualizado no Experience Platform com base na avaliação do público-alvo, o conector enviará a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
-## Pré-requisitos da conta do facebook {#facebook-account-prerequisites}
+## Pré-requisitos da conta do Facebook {#facebook-account-prerequisites}
 
 Antes de enviar seus públicos-alvo para o [!DNL Facebook], verifique se você atende aos seguintes requisitos:
 
 * Sua conta de usuário do [!DNL Facebook] deve ter acesso total ao [!DNL Facebook Business Account], proprietário da conta de Anúncio que você está usando.
 * A permissão **[!DNL Manage campaigns]** da conta de usuário [!DNL Facebook] deve estar habilitada para a conta de Anúncio que você pretende usar.
-* A conta comercial **Adobe Experience Cloud** deve ser adicionada como um parceiro de publicidade em seu [!DNL Facebook Ad Account]. Usar `business ID=206617933627973`. Consulte [Adicionar parceiros ao seu gerente de negócios](https://www.facebook.com/business/help/1717412048538897) na documentação da Facebook para obter detalhes.
+* A conta comercial **Adobe Experience Cloud** deve ser adicionada como um parceiro de publicidade em seu [!DNL Facebook Ad Account]. Usar `business ID=206617933627973`. Consulte [Adicionar parceiros ao seu gerente de negócios](https://www.facebook.com/business/help/1717412048538897) na documentação do Facebook para obter detalhes.
+
   >[!IMPORTANT]
   >
   > Ao configurar as permissões para o Adobe Experience Cloud, você deve habilitar a permissão **Gerenciar campanhas**. A permissão é necessária para a integração [!DNL Adobe Experience Platform].
+
 * Leia e assine os Termos de Serviço do [!DNL Facebook Custom Audiences]. Para fazer isso, vá para `https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]&business_id=206617933627973`, onde `accountID` é seu [!DNL Facebook Ad Account ID]. Verifique se a seção `business_id=206617933627973` está presente na URL quando você assinar os Termos de Serviço.
+
   >[!IMPORTANT]
   >
   >Ao assinar os Termos de Serviço do [!DNL Facebook Custom Audiences], use a mesma conta de usuário usada para autenticação na API do Facebook.
@@ -106,7 +109,7 @@ Há dois métodos para ativar números de telefone em [!DNL Facebook]:
 
 Você pode aplicar hash a endereços de email antes de assimilá-los no Adobe Experience Platform, ou usar endereços de email em limpar no Experience Platform, e aplicar hash a [!DNL Platform] neles na ativação.
 
-Para saber mais sobre como assimilar endereços de email no Experience Platform, consulte a [visão geral de assimilação em lote](/help/ingestion/batch-ingestion/overview.md) e a [visão geral de assimilação de streaming](/help/ingestion/streaming-ingestion/overview.md).
+Para saber mais sobre a assimilação de endereços de email no Experience Platform, consulte a [visão geral da assimilação em lote](/help/ingestion/batch-ingestion/overview.md) e a [visão geral da assimilação de streaming](/help/ingestion/streaming-ingestion/overview.md).
 
 Se você optar por criar o hash dos endereços de email, não se esqueça de atender aos seguintes requisitos:
 
@@ -143,7 +146,7 @@ O vídeo abaixo também demonstra as etapas para configurar um destino do [!DNL 
 
 >[!NOTE]
 >
->A interface do usuário do Experience Platform é atualizada com frequência e pode ter mudado desde a gravação deste vídeo. Para obter as informações mais atualizadas, consulte o [tutorial de configuração de destino](../../ui/connect-destination.md).
+>A interface do usuário do Experience Platform é atualizada com frequência e pode ter sido alterada desde a gravação deste vídeo. Para obter as informações mais atualizadas, consulte o [tutorial de configuração de destino](../../ui/connect-destination.md).
 
 ### Autenticar para o destino {#authenticate}
 
@@ -154,7 +157,7 @@ O vídeo abaixo também demonstra as etapas para configurar um destino do [!DNL 
 
 ### Atualizar credenciais de autenticação {#refresh-authentication-credentials}
 
-Os tokens do facebook expiram a cada 60 dias. Quando o token expira, as exportações de dados para o destino param de funcionar. Para evitar essa situação, autentique novamente executando as seguintes etapas:
+Os tokens do Facebook expiram a cada 60 dias. Quando o token expira, as exportações de dados para o destino param de funcionar. Para evitar essa situação, autentique novamente executando as seguintes etapas:
 
 1. Navegue até **[!UICONTROL Destinos]** > **[!UICONTROL Contas]**
 2. (Opcional) Use os filtros disponíveis na página para exibir somente contas do Facebook.
@@ -218,7 +221,7 @@ Consulte [Ativar dados de público-alvo para streaming de destinos de exportaç�
 
 Na etapa **[!UICONTROL Agendamento de segmento]**, você deve fornecer a [!UICONTROL Origem do público] ao enviar públicos-alvo para [!DNL Facebook Custom Audiences].
 
-![Lista suspensa Origem do público mostrada na etapa de ativação do Facebook.](../../assets/catalog/social/facebook/facebook-origin-audience.png)
+![Lista suspensa Origem do Público exibida na etapa de ativação do Facebook.](../../assets/catalog/social/facebook/facebook-origin-audience.png)
 
 ### Exemplo de mapeamento: ativação de dados de público-alvo em [!DNL Facebook Custom Audience] {#example-facebook}
 

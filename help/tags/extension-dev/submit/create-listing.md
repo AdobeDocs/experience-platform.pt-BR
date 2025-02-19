@@ -2,10 +2,10 @@
 title: Criar uma lista do Exchange para uma extensão
 description: Saiba como adicionar sua extensão ao catálogo público na Adobe Experience Platform.
 exl-id: 0395fc99-5e2b-46d6-a067-f8f167733e02
-source-git-commit: fcc586034317fb31122721fa9754b580c761a1da
+source-git-commit: 0d98183838125fac66768b94bc1993bde9a374b5
 workflow-type: tm+mt
 source-wordcount: '1193'
-ht-degree: 67%
+ht-degree: 69%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 67%
 
 >[!NOTE]
 >
->O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleta de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 A Adobe Experience Platform tem um catálogo unificado em que os usuários podem encontrar extensões de tag disponíveis para instalação. Este catálogo está disponível no produto e contém extensões de três tipos:
 
@@ -45,6 +45,7 @@ Se você já tiver uma conta da empresa ou se não precisar de uma lista do Exch
 1. Selecione a guia **Criar novo aplicativo** e selecione **Criar novo aplicativo** para obter uma solução personalizada ou selecione um modelo aplicável.
 1. Forneça suas informações de lista. Para obter informações detalhadas sobre o App Manager, leia todo o [artigo](https://adobeexchangeec.zendesk.com/hc/en-us/articles/360024197931). As informações da lista devem ser muito claras sobre o que a extensão faz e por que ela é útil. A lista funciona como um espaço de divulgação para seu aplicativo. Promova sua extensão aqui usando descrições claras, links das páginas de destino de seu site, links de documentos de ajuda e endereços de email de suporte, entre outros. Embora o espaço de exibição de extensões seja limitado, a lista do Exchange oferece uma oportunidade de divulgar a extensão e sua empresa. Veja a seguir sugestões para melhorar a divulgação da extensão:
    - **Ícone de Aplicativo** - Verifique se o ícone da lista do Exchange tem as dimensões apropriadas, 512 x 512 para png ou proporção 1:1 para jpg.
+
      >[!NOTE]
      >
      >Esse é um formato de arquivo diferente daquele usado no código da extensão. A própria extensão conterá um arquivo svg como o [ícone](../manifest.md).
@@ -55,7 +56,7 @@ Se você já tiver uma conta da empresa ou se não precisar de uma lista do Exch
    - **Tags** - na primeira página de edição da sua lista, inclua a palavra &quot;Launch&quot; no campo &quot;Tags personalizadas&quot;. Assim, sua lista será mostrada em pesquisas de tags no marketplace do Exchange:
      ![](../images/getting-started/custom-tags.jpg)
    - **Sandboxes** — seu acesso às soluções da Adobe é feito por meio de uma conta de sandbox na qual você tem acesso a uma versão totalmente funcional da Adobe Experience Platform. Essas contas de sandbox são solicitadas à medida que você cria sua lista de aplicativos. Na seção **Conexões** selecione as conexões específicas aplicáveis ao aplicativo criado (sua extensão de tag) e, quando você pressionar **Salvar**, a solicitação da sandbox será gerada, se necessário.
-1. Envie sua lista. A equipe do Adobe Exchange verificará seu aplicativo e fornecerá feedback se atualizações forem necessárias. Se você marcar a caixa de seleção **publicar imediatamente** ao enviar a listagem, ela será publicada imediatamente após a aprovação. Se quiser publicar seu aplicativo posteriormente, deixe a caixa de seleção desmarcada. Quando sua lista de extensões for aprovada, um botão azul **Publish** será exibido ao lado dela na página de listas do seu aplicativo (extensão).
+1. Envie sua lista. A equipe do Adobe Exchange verificará seu aplicativo e fornecerá feedback se atualizações forem necessárias. Se você marcar a caixa de seleção **publicar imediatamente** ao enviar a listagem, ela será publicada imediatamente após a aprovação. Se quiser publicar seu aplicativo posteriormente, deixe a caixa de seleção desmarcada. Quando sua lista de extensões for aprovada, um botão azul **Publicar** aparecerá ao lado dela na página de listas do seu aplicativo (extensão).
 
 ### Criar uma lista eficaz
 

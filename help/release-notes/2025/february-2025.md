@@ -1,8 +1,7 @@
 ---
 title: Notas da versão de fevereiro de 2025 da Adobe Experience Platform
 description: Notas da versão de fevereiro de 2025 da Adobe Experience Platform.
-exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 5a7f244b1a3872dc7cbf3821f2b26d3b90ff9ecc
+source-git-commit: 03c0b782d0763a1638afeab34d61f89db8075d5b
 workflow-type: tm+mt
 source-wordcount: '1439'
 ht-degree: 14%

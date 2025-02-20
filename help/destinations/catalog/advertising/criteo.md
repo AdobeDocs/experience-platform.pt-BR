@@ -3,20 +3,20 @@ keywords: publicidade, critério,
 title: Conexão de critério
 description: O Criteo capacita a publicidade confiável e impactante para trazer experiências mais ricas para cada consumidor através da internet aberta. Com o maior conjunto de dados de comércio do mundo e a melhor IA do setor, o Criteo garante que cada ponto de contato na jornada de compras seja personalizado para alcançar os clientes com o anúncio certo, na hora certa.
 exl-id: e6f394b2-ab82-47bb-8521-1cf9d01a203b
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: e594e473ac78663203c9254623fe8e324985fa39
 workflow-type: tm+mt
-source-wordcount: '1029'
+source-wordcount: '1016'
 ht-degree: 3%
 
 ---
 
-# (Beta) Conexão de critério
+# Conexão de critério
 
 ## Visão geral {#overview}
 
 >[!IMPORTANT]
 >
->Esse conector de destino e a página de documentação são criados e mantidos pela Criteo. No momento, esse é um produto beta e a funcionalidade está sujeita a alterações. Para qualquer consulta ou solicitação de atualização, contate o Critério diretamente [aqui](mailto:criteoTechnicalPartnerships@criteo.com).
+>Esse conector de destino e a página de documentação são criados e mantidos pela Criteo. Para qualquer consulta ou solicitação de atualização, contate o Critério diretamente [aqui](mailto:criteoTechnicalPartnerships@criteo.com).
 
 O Criteo capacita a publicidade confiável e impactante para trazer experiências mais ricas para cada consumidor através da internet aberta. Com o maior conjunto de dados de comércio do mundo e a melhor IA do setor, o Criteo garante que cada ponto de contato na jornada de compras seja personalizado para alcançar os clientes com o anúncio certo, na hora certa.
 
@@ -49,7 +49,7 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 | Item | Tipo | Notas |
 | --- | --- | --- |
 | Tipo de exportação | Exportação de público | Você está exportando todos os membros de um público com os identificadores (nome, número de telefone ou outros) usados no destino [!DNL Criteo]. |
-| Frequência de exportação | Transmissão | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil é atualizado em Experience Platform com base na avaliação do público-alvo, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de streaming](../../destination-types.md#streaming-destinations). |
+| Frequência de exportação | Transmissão | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil for atualizado no Experience Platform com base na avaliação do público-alvo, o conector enviará a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de streaming](../../destination-types.md#streaming-destinations). |
 
 ## Casos de uso {#use-cases}
 
@@ -57,11 +57,11 @@ Para ajudá-lo a entender melhor como usar o destino [!DNL Criteo], veja a segui
 
 ### Caso de uso 1: obter tráfego
 
-Mostre sua empresa com ofertas de produtos relevantes e criações flexíveis. Com recomendações de produtos inteligentes, seus anúncios apresentarão automaticamente os produtos com maior probabilidade de acionar visitas e engajamento. O direcionamento flexível permite criar públicos-alvo a partir do conjunto de dados de comércio da Criteo ou de suas próprias listas de clientes potenciais e segmentos da CDP Adobe.
+Mostre sua empresa com ofertas de produtos relevantes e criações flexíveis. Com recomendações de produtos inteligentes, seus anúncios apresentarão automaticamente os produtos com maior probabilidade de acionar visitas e engajamento. O direcionamento flexível permite criar públicos-alvo a partir do conjunto de dados de comércio da Criteo ou de suas próprias listas de clientes potenciais e segmentos da Adobe CDP.
 
 ### Caso de uso 2: aumentar as conversões de site
 
-Quando os visitantes saírem do site, lembre-os do que estão perdendo com anúncios de redirecionamento que aumentam as conversões ao mostrar ofertas especiais e ofertas hiper-relevantes, onde quer que estejam. Conecte seu público-alvo da CDP do Adobe para reengajar clientes existentes ou direcionar consumidores semelhantes aos seus compradores mais fiéis.
+Quando os visitantes saírem do site, lembre-os do que estão perdendo com anúncios de redirecionamento que aumentam as conversões ao mostrar ofertas especiais e ofertas hiper-relevantes, onde quer que estejam. Conecte seu público-alvo da Adobe CDP para reengajar clientes existentes ou direcionar consumidores semelhantes aos seus compradores mais fiéis.
 
 ## Conectar-se ao critério {#connect}
 

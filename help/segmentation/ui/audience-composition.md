@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guia da interface do usuário de públicos
 description: A Composição de público-alvo na interface do usuário do Adobe Experience Platform fornece um espaço de trabalho avançado que permite interagir com elementos de dados do perfil. O espaço de trabalho fornece controles intuitivos para criação e edição de públicos-alvo para sua organização.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: 3c0fdab5d7561238a64e79e5bab5fd4843fccb0a
+source-git-commit: 65871f307468428ee0e3b67c1a6577e913f3a312
 workflow-type: tm+mt
-source-wordcount: '1952'
-ht-degree: 0%
+source-wordcount: '2228'
+ht-degree: 1%
 
 ---
 
@@ -36,7 +36,17 @@ A tela de composição de público é composta por quatro tipos diferentes de bl
 
 ## [!UICONTROL Público-alvo] {#audience-block}
 
-O tipo de bloco **[!UICONTROL Público]** permite adicionar os subpúblicos que você deseja compor para seu novo público maior. Por padrão, um bloco **[!UICONTROL Público-alvo]** está incluído na parte superior da tela de composição.
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_audience"
+>title="Bloco de público"
+>abstract="O bloco Público-alvo permite selecionar os subpúblicos-alvo que você deseja usar para compor o novo público-alvo."
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_merge_types"
+>title="Tipos de mesclagem"
+>abstract="Os tipos de mesclagem determinam como os subpúblicos-alvo selecionados são combinados. Os valores compatíveis incluem Union, Intersection e Exclude overlap."
+
+O tipo de bloco **[!UICONTROL Público]** permite adicionar os subpúblicos que você deseja usar para compor seu novo público maior. Por padrão, um bloco **[!UICONTROL Público-alvo]** está incluído na parte superior da tela de composição.
 
 Ao selecionar o bloco **[!UICONTROL Público-alvo]**, o painel direito exibe controles para rotular o público-alvo, adicionar públicos-alvo ao bloco, bem como criar regras personalizadas para o bloco de público-alvo.
 
@@ -88,6 +98,16 @@ Depois de adicionar uma regra personalizada, selecione **[!UICONTROL Salvar]** p
 
 ## [!UICONTROL Excluir] {#exclude-block}
 
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_exclude"
+>title="Excluir bloco"
+>abstract="O bloco Excluir permite excluir públicos-alvo ou atributos especificados da composição."
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_exclude_type"
+>title="Excluir tipo"
+>abstract="Você pode excluir perfis que pertencem a um público-alvo específico (Excluir por público-alvo) ou excluir perfis com base em um atributo específico (Excluir por atributo)."
+
 O tipo de bloco **[!UICONTROL Excluir]** permite excluir um subpúblico ou atributos especificados de seu novo público-alvo maior.
 
 Para adicionar um bloco **[!UICONTROL Excluir]**, selecione o ícone **+**, seguido por **[!UICONTROL Excluir]**.
@@ -127,6 +147,26 @@ Uma lista de atributos de perfil é exibida. Selecione o tipo de atributo que de
 >Ao excluir por atributo, você só pode especificar **um** valor para excluir. Usar qualquer tipo de separador, como vírgula ou ponto e vírgula, resultará apenas na exclusão desse valor exato. Por exemplo, definir o valor como `red, blue` resultará na exclusão do termo `red, blue` do atributo, mas **não** resultará na exclusão do termo `red` ou `blue`.
 
 ## [!UICONTROL Enriquecer] {#enrich-block}
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_enrich"
+>title="Enriquecer bloco"
+>abstract="O bloco Enrich permite enriquecer seu público-alvo com atributos adicionais provenientes de conjuntos de dados da Adobe Experience Platform."
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_dataset"
+>title="Conjunto de dados de enriquecimento"
+>abstract="O conjunto de dados de enriquecimento contém os dados que você deseja associar à composição."
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_enrich_criteria"
+>title="Critérios de enriquecimento"
+>abstract="Os critérios de enriquecimento incluem a chave de associação do Source e a chave de associação do conjunto de dados de Enriquecimento. Essas duas chaves reconciliam o conjunto de dados de origem e o conjunto de dados de enriquecimento."
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_enrich_attributes"
+>title="Atributos de enriquecimento"
+>abstract="Os atributos de enriquecimento são os atributos que você deseja ter associados à composição."
 
 >[!IMPORTANT]
 >
@@ -206,6 +246,16 @@ Your selected audiences now appear within the right rail when the **[!UICONTROL 
 
 ## [!UICONTROL Classificação] {#rank-block}
 
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_ranking"
+>title="Bloco de classificação"
+>abstract="O bloco Rank permite classificar perfis com base em um atributo específico e incluí-los em sua composição."
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_rank_profilelimit_text"
+>title="Adicionar limite de perfil"
+>abstract="O botão Add profile limit permite especificar um número máximo de perfis a serem incluídos como parte do processo de classificação."
+
 O tipo de bloco **[!UICONTROL Rank]** permite classificar e classificar perfis com base em um atributo especificado e incluir esses perfis classificados na sua composição.
 
 Para adicionar um bloco **[!UICONTROL Rank]**, selecione o ícone **+**, seguido por **[!UICONTROL Rank]**.
@@ -231,6 +281,21 @@ Além disso, é possível limitar o número de perfis retornados habilitando a o
 ![A opção Adicionar limite de perfil está realçada, o que permite limitar o número de perfis retornados.](../images/ui/audience-composition/add-profile-limit.png)
 
 ## [!UICONTROL Split] {#split-block}
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_split"
+>title="Dividir bloco"
+>abstract="O bloco Split permite dividir a composição em vários caminhos."
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_split_type"
+>title="Tipo de divisão"
+>abstract="Você pode dividir sua composição por Divisão de porcentagem ou Divisão de atributo. A divisão de porcentagem divide aleatoriamente os perfis em vários caminhos. A divisão de atributos permite dividir perfis com base em um atributo especificado."
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_split_otherprofiles_text"
+>title="Outros perfis"
+>abstract="A opção Other profiles permite criar um caminho adicional com os perfis restantes que não correspondem a nenhuma das condições especificadas dos outros caminhos."
 
 O tipo de bloco **[!UICONTROL Split]** permite dividir o novo público em vários subpúblicos. Você pode dividir esse público com base na porcentagem ou por um atributo. Ao dividir o público em subpúblicos, essa divisão é **não** persistente. Isso significa que os perfis podem estar em subpúblicos diferentes para cada avaliação.
 
@@ -272,13 +337,13 @@ Além disso, você pode habilitar a opção **[!UICONTROL Outros perfis]** para 
 >
 >Ao publicar sua composição de público-alvo, observe que pode levar até 48 horas para que ela seja avaliada e ativada para uso em serviços downstream, como um destino do Real-Time CDP ou canal do Adobe Journey Optimizer.
 
-Depois de criar sua composição, você pode salvá-la e publicá-la selecionando **[!UICONTROL Publish]**.
+Depois de criar sua composição, você pode salvá-la e publicá-la selecionando **[!UICONTROL Publicar]**.
 
-![O botão Publish está realçado, mostrando como salvar e publicar sua composição.](../images/ui/audience-composition/publish.png)
+![O botão Publicar está realçado, mostrando como salvar e publicar sua composição.](../images/ui/audience-composition/publish.png)
 
 Se houver erros ao criar o público-alvo, um alerta será exibido, informando como resolver o problema.
 
-![O botão Publish está realçado, mostrando como salvar e publicar sua composição.](../images/ui/audience-composition/audience-alert.png)
+![O botão Publicar está realçado, mostrando como salvar e publicar sua composição.](../images/ui/audience-composition/audience-alert.png)
 
 ## Próximas etapas
 

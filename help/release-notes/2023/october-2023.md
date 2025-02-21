@@ -2,7 +2,7 @@
 title: Notas de versão da Adobe Experience Platform de outubro de 2023
 description: As notas de versão de outubro de 2023 da Adobe Experience Platform.
 exl-id: e9cf5299-8350-4b40-8f56-05e598846875
-source-git-commit: d6e306294d0a119108e2de7ba03ebed4f633fba1
+source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
 workflow-type: tm+mt
 source-wordcount: '1054'
 ht-degree: 31%
@@ -44,8 +44,8 @@ A Adobe Experience Platform fornece um conjunto de tecnologias que permitem cole
 
 | Tipo | Recurso | Descrição |
 | --- | --- | --- |
-| Extensões | Aprimoramento da API de conversões de [!DNL Meta] | Há três aprimoramentos na extensão da API de [Metaconversões](/help/tags/extensions/server/meta/overview.md): <ul><li>Integração com o [[!DNL Meta Business Extension (MBE)]](/help/tags/extensions/server/meta/overview.md#integration-with-meta-business-extension-mbe): cria uma experiência de logon contínua ao permitir que você compartilhe seu pixelID e token de acesso para a integração da API de conversões com o Adobe.</li><li>Integração com o [[!DNL Event Match Quality Score (EMQ)]](/help/tags/extensions/server/meta/overview.md#integration-with-event-quality-match-score-emq): permite que você faça anúncios para pessoas com maior probabilidade de concluir a ação desejada e vincular a ação de volta aos anúncios entregues.</li><li>Integração com [[!DNL LiveRamp (Alpha)]](/help/tags/extensions/server/meta/overview.md#integration-with-liveramp-alpha): permite que você passe a RampID do LiveRamp no campo CIP, eliminando a necessidade de compartilhar PII diretamente com parceiros ou Meta. </li></ul> |
-| Extensões | [!DNL LinkedIn] API de conversões | A extensão [[!DNL LinkedIn] API de conversões](../../tags/extensions/server/linkedin/overview.md) permite avaliar a eficácia de suas campanhas de marketing do LinkedIn, encaminhando dados de eventos de Experience Platform para o LinkedIn. |
+| Extensões | Aprimoramento da API de conversões de [!DNL Meta] | Há três aprimoramentos na extensão da API de [Metaconversões](/help/tags/extensions/server/meta/overview.md): <ul><li>Integração com o [[!DNL Meta Business Extension (MBE)]](/help/tags/extensions/server/meta/overview.md#integration-with-meta-business-extension-mbe): cria uma experiência de logon contínua ao permitir que você compartilhe sua pixelID e token de acesso para a integração da API de conversões com o Adobe.</li><li>Integração com o [[!DNL Event Match Quality Score (EMQ)]](/help/tags/extensions/server/meta/overview.md#integration-with-event-quality-match-score-emq): permite que você faça anúncios para pessoas com maior probabilidade de concluir a ação desejada e vincular a ação de volta aos anúncios entregues.</li><li>Integração com [[!DNL LiveRamp (Alpha)]](/help/tags/extensions/server/meta/overview.md#integration-with-liveramp-alpha): permite que você passe a RampID do LiveRamp no campo CIP, eliminando a necessidade de compartilhar PII diretamente com parceiros ou Meta. </li></ul> |
+| Extensões | [!DNL LinkedIn] API de conversões | A extensão [[!DNL LinkedIn] API de conversões](../../tags/extensions/server/linkedin/overview.md) permite avaliar a eficácia de suas campanhas de marketing do LinkedIn, encaminhando dados de eventos do Experience Platform para o LinkedIn. |
 | Segredo | Segredo do OAuth 2 de [!DNL LinkedIn] | O [[!DNL LinkedIn] Segredo do OAuth 2](../../tags/ui/event-forwarding/secrets.md#linkedin-oauth-2) permite enviar interações servidor-servidor para [!DNL LinkedIn] no encaminhamento de eventos. |
 | Encaminhamento de eventos | Atualização de tags e encaminhamento de eventos | Para preservar o desempenho de [Tags](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=pt-BR) e [Encaminhamento de Eventos](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html) na Platform, somente as compilações de Desenvolvimento e Preparo mais recentes, bem-sucedidas e malsucedidas, serão mantidas. Todas as builds que não estão mais em uso serão removidas. Além disso, a limitação e a limitação de taxa foram implementadas para garantir que alguns usos intensos de API não prejudiquem o desempenho da API para outros. |
 | Extensões | Elementos, regras e extensões | [Elementos, regras e extensões](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/overview.html) agora estão classificados na saída da biblioteca para garantir mais consistência entre várias compilações e implantações da mesma biblioteca. |
@@ -70,7 +70,7 @@ Para obter mais informações sobre a coleção de dados, leia a [visão geral d
 | Funcionalidade | Descrição |
 | ----------- | ----------- |
 | (Beta) Suporte para funções de hash em campos calculados | Além das funções específicas para [exportar matrizes](../../destinations/ui/export-arrays-calculated-fields.md) ou elementos de uma matriz, agora você pode usar [funções de hash](../../destinations/ui/export-arrays-calculated-fields.md#hashing-functions) adicionais para executar hash em atributos nos arquivos exportados. As funções de hash com suporte são: `sha`, `sha256`, `sha512`, `hash`, `md5`, `crc32`. |
-| (Disponibilidade limitada) Ativar públicos-alvo da conta para determinados destinos | Os clientes B2B do Real-Time CDP agora podem ativar [públicos-alvo da conta](../../segmentation/ui/account-audiences.md) para determinados destinos. Para obter mais informações sobre este recurso, leia o [tutorial para ativar públicos-alvo da conta](/help/destinations/ui/activate-account-audiences.md). |
+| (Disponibilidade limitada) Ativar públicos-alvo da conta para determinados destinos | Os clientes B2B do Real-Time CDP agora podem ativar [públicos-alvo da conta](../../segmentation/types/account-audiences.md) para determinados destinos. Para obter mais informações sobre este recurso, leia o [tutorial para ativar públicos-alvo da conta](/help/destinations/ui/activate-account-audiences.md). |
 
 {style="table-layout:auto"}
 
@@ -80,7 +80,7 @@ Para obter informações mais gerais sobre destinos, consulte a [visão geral de
 
 ## Sandboxes {#sandboxes}
 
-O Adobe Experience Platform foi criado para enriquecer aplicativos de experiência digital em escala global. As empresas geralmente executam vários aplicativos de experiência digital em paralelo e precisam atender ao desenvolvimento, ao teste e à implantação desses aplicativos enquanto garantem a conformidade operacional. Para atender a essa necessidade, o Experience Platform fornece sandboxes que particionam uma única instância da Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
+O Adobe Experience Platform foi criado para enriquecer aplicativos de experiência digital em escala global. As empresas geralmente executam vários aplicativos de experiência digital em paralelo e precisam atender ao desenvolvimento, ao teste e à implantação desses aplicativos enquanto garantem a conformidade operacional. Para atender a essa necessidade, a Experience Platform fornece sandboxes que particionam uma única instância da Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
 **Novo recurso**
 
@@ -98,7 +98,7 @@ O [!DNL Segmentation Service] permite segmentar dados relacionados a indivíduos
 
 | Recurso | Descrição |
 | ------- | ----------- |
-| Públicos-alvo da conta (disponibilidade geral limitada) | No Real-time Customer Data Platform B2B edition, agora você pode usar a segmentação de conta para trazer a total facilidade e sofisticação da experiência de segmentação de marketing de públicos com base em pessoas para públicos com base em contas. Para obter mais informações sobre este recurso, leia a [visão geral dos públicos-alvo da conta](../../segmentation/ui/account-audiences.md). |
+| Públicos-alvo da conta (disponibilidade geral limitada) | No Real-Time Customer Data Platform B2B edition, agora você pode usar a segmentação de conta para trazer a total facilidade e sofisticação da experiência de segmentação de marketing de públicos com base em pessoas para públicos com base em contas. Para obter mais informações sobre este recurso, leia a [visão geral dos públicos-alvo da conta](../../segmentation/types/account-audiences.md). |
 
 Para saber mais sobre o Serviço de segmentação, leia a [Visão geral do serviço de segmentação](../../segmentation/home.md).
 

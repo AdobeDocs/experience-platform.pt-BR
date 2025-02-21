@@ -3,7 +3,7 @@ title: Personalizar experiências no site para visitantes desconhecidos usando o
 description: Saiba como usar o reconhecimento de visitante com auxílio de parceiros para fornecer experiências de site personalizadas para visitantes.
 feature: Use Cases, Personalization, Customer Acquisition
 exl-id: 99677988-1df8-47b1-96b1-0ef6db818a1d
-source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
+source-git-commit: 02f2082e695d157415c9e0c59ca5d371c94bb991
 workflow-type: tm+mt
 source-wordcount: '2673'
 ht-degree: 89%
@@ -56,7 +56,7 @@ Para implementar com sucesso esse caso de uso, você deve usar várias áreas da
    * [Rótulos de uso de dados](/help/data-governance/labels/overview.md)
    * [Conjuntos de dados](/help/catalog/datasets/overview.md)
 * Personalização de propriedade da Web
-   * [Segmentação de borda](/help/segmentation/ui/edge-segmentation.md)
+   * [Segmentação de borda](/help/segmentation/methods/edge-segmentation.md)
    * [Destinos de personalização de borda](/help/destinations/destination-types.md#edge-personalization-destinations)
    * [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) (ou uma plataforma de personalização de sua escolha. Este tutorial de caso de uso destaca o Adobe Target como mecanismo de personalização)
 
@@ -263,7 +263,7 @@ Na interface da Platform, navegue até **[!UICONTROL Cliente]** > **[!UICONTROL 
 
 ![Exibir como navegar até públicos-alvo.](/help/rtcdp/assets/partner-data/onsite-personalization/navigate-to-audiences.png)
 
-Você deve configurar seu público-alvo com [segmentação de borda](/help/segmentation/ui/edge-segmentation.md) para que a associação de público-alvo de seus visitantes seja avaliada em tempo real à medida que eles visitam sua propriedade da Web.
+Você deve configurar seu público-alvo com [segmentação de borda](/help/segmentation/methods/edge-segmentation.md) para que a associação de público-alvo de seus visitantes seja avaliada em tempo real à medida que eles visitam sua propriedade da Web.
 
 Configure também uma [política de mesclagem ativa na borda](/help/destinations/ui/activate-edge-personalization-destinations.md#create-merge-policy) para os públicos-alvo de borda.
 

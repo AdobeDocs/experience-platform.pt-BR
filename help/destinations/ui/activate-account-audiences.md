@@ -5,7 +5,7 @@ description: Saiba como ativar públicos-alvo da conta para destinos
 badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 badgeB2P: label="Edição B2P" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 exl-id: ad69d0a8-bf5b-42ac-97a3-401eadda62cd
-source-git-commit: 1c31dd978298191dd10500b60eb446d2ca37139c
+source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
 workflow-type: tm+mt
 source-wordcount: '836'
 ht-degree: 0%
@@ -16,13 +16,13 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->A funcionalidade para ativar públicos da conta para destinos está disponível para empresas que compram as edições [Business-to-Business](/help/rtcdp/overview.md#rtcdp-b2b) e [Business-to-Person](/help/rtcdp/overview.md#rtcdp-b2p) do Real-time Customer Data Platform.
+>A funcionalidade para ativar públicos da conta para destinos está disponível para empresas que compram as edições [Business-to-Business](/help/rtcdp/overview.md#rtcdp-b2b) e [Business-to-Person](/help/rtcdp/overview.md#rtcdp-b2p) do Real-Time Customer Data Platform.
 
-Este artigo explica o fluxo de trabalho necessário para exportar [públicos-alvo da conta](/help/segmentation/ui/account-audiences.md) do Adobe Experience Platform para o seu destino preferido.
+Este artigo explica o fluxo de trabalho necessário para exportar [públicos-alvo da conta](/help/segmentation/types/account-audiences.md) do Adobe Experience Platform para o seu destino preferido.
 
 ## Destinos compatíveis {#supported-destinations}
 
-Vá para **[!UICONTROL Conexões]** > **[!UICONTROL Destinos]** e selecione a guia **[!UICONTROL Catálogo]**. Use o filtro **[!UICONTROL Tipos de dados]** e selecione **[!UICONTROL Contas]** para ver os destinos que oferecem suporte à ativação de públicos-alvo de contas. Atualmente, a exportação de públicos-alvo de conta está disponível somente para determinados destinos de armazenamento em nuvem ([Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [ADLS Gen 2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [Armazenamento Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md), [Zona de Aterrissagem de Dados](/help/destinations/catalog/cloud-storage/data-landing-zone.md) e [SFTP](/help/destinations/catalog/cloud-storage/sftp.md)) e o [Demandbase](/help/destinations/catalog/advertising/demandbase.md) e [(Empresas) LinkedIn Corresponderam a Públicos-alvo](/help/destinations/catalog/social/linkedin-b2b.md) de streaming.
+Vá para **[!UICONTROL Conexões]** > **[!UICONTROL Destinos]** e selecione a guia **[!UICONTROL Catálogo]**. Use o filtro **[!UICONTROL Tipos de dados]** e selecione **[!UICONTROL Contas]** para ver os destinos que oferecem suporte à ativação de públicos-alvo de contas. Atualmente, a exportação de públicos-alvo de conta está disponível somente para determinados destinos de armazenamento em nuvem ([Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [ADLS Gen 2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [Armazenamento Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md), [Zona de Aterrissagem de Dados](/help/destinations/catalog/cloud-storage/data-landing-zone.md) e [SFTP](/help/destinations/catalog/cloud-storage/sftp.md)) e o [Demandbase](/help/destinations/catalog/advertising/demandbase.md) e [(Empresas) LinkedIn Corresponderam públicos-alvo](/help/destinations/catalog/social/linkedin-b2b.md) de streaming.
 
 ![Destinos que oferecem suporte a públicos-alvo da conta.](/help/destinations/assets/ui/activate-account-audiences/data-types-filter.png)
 
@@ -34,7 +34,7 @@ Assista ao vídeo abaixo para obter uma visão geral da criação e ativação d
 
 ## Pré-requisitos {#prerequisites}
 
-* Você deve primeiro assimilar [perfis de conta](/help/rtcdp/accounts/account-profile-overview.md) e criar [públicos-alvo de conta](/help/segmentation/ui/account-audiences.md) antes de ativá-los para destinos downstream.
+* Você deve primeiro assimilar [perfis de conta](/help/rtcdp/accounts/account-profile-overview.md) e criar [públicos-alvo de conta](/help/segmentation/types/account-audiences.md) antes de ativá-los para destinos downstream.
 * Para ativar públicos-alvo da conta para destinos, você deve ter se conectado com êxito a um destino. Se ainda não tiver feito isso, vá para o [catálogo de destinos](../catalog/overview.md), navegue pelos destinos compatíveis e configure o destino que deseja usar. Leia o tutorial da interface do usuário em [conexão com destinos](./connect-destination.md) para obter mais informações.
 
 ### Permissões necessárias {#permissions}
@@ -77,7 +77,7 @@ Use as caixas de seleção à esquerda dos nomes dos públicos-alvo da conta par
 
 ## Programação e próximas etapas
 
-No restante do fluxo de trabalho de ativação para exportar públicos da conta, leia o tutorial sobre a ativação de dados para destinos baseados em arquivo. Continue na [etapa de exportação de público-alvo de agendamento](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling). Se você estiver ativando audiências da conta para o destino **[!UICONTROL (Empresas) LinkedIn Matched Audiences]**, leia o tutorial sobre ativação de destinos de streaming. Continue a partir da [etapa de mapeamento](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping).
+No restante do fluxo de trabalho de ativação para exportar públicos da conta, leia o tutorial sobre a ativação de dados para destinos baseados em arquivo. Continue na [etapa de exportação de público-alvo de agendamento](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling). Se você estiver ativando públicos da conta para o destino **[!UICONTROL (Empresas) LinkedIn Matched Audiences]**, leia o tutorial sobre ativação de destinos de transmissão. Continue a partir da [etapa de mapeamento](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping).
 
 >[!NOTE]
 >
@@ -87,7 +87,7 @@ No restante do fluxo de trabalho de ativação para exportar públicos da conta,
 
 Observe as importantes chamadas a seguir e as limitações conhecidas da versão de disponibilidade geral da funcionalidade para ativar públicos-alvo da conta.
 
-### Pares de mapeamento necessários na etapa de mapeamento ao ativar públicos-alvo da conta para o destino **[!UICONTROL (Empresas) LinkedIn Matched Audiences]** {#required-mappings}
+### Pares de mapeamento necessários na etapa de mapeamento ao ativar públicos da conta para o destino **[!UICONTROL (Empresas) LinkedIn Matched Audiences]** {#required-mappings}
 
 Ao ativar públicos da conta para o destino **[!UICONTROL (Empresas) LinkedIn Matched Audiences]**, observe que os dois pares de mapeamento a seguir são obrigatórios para exportar dados com êxito:
 

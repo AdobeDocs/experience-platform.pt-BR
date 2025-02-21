@@ -1,19 +1,19 @@
 ---
 keywords: governança de dados rtcdp;governança de dados rtcdp;governança de dados do perfil de dados do cliente em tempo real;privacidade rtcdp;privacidade rtcdp
-title: Privacidade na Real-time Customer Data Platform
-description: O Adobe Real-time Customer Data Platform permite simplificar o processo de manter suas operações de dados em conformidade com as regulamentações de privacidade.
+title: Privacidade na Real-Time Customer Data Platform
+description: O Adobe Real-Time Customer Data Platform permite simplificar o processo de manter suas operações de dados em conformidade com as regulamentações de privacidade.
 feature: Get Started, Privacy
 exl-id: bcb0e42e-4549-4952-bb69-5534aee353f8
-source-git-commit: 82535ec3ac2dd27e685bb591fdf661d3ab5dd2c9
+source-git-commit: adc6d50f2784fe665d0590c3af053a057f8e4e38
 workflow-type: tm+mt
 source-wordcount: '386'
 ht-degree: 0%
 
 ---
 
-# Privacidade na Real-time Customer Data Platform
+# Privacidade na Real-Time Customer Data Platform
 
-[!DNL Adobe Real-Time Customer Data Platform] ([!DNL Real-Time CDP]) ajuda os profissionais de marketing a reunir dados de vários sistemas corporativos, permitindo que eles identifiquem, compreendam e envolvam melhor seus clientes. O Adobe mantém a privacidade de dados do consumidor como um princípio de design fundamental e fornece vários controles para ajudar os profissionais de marketing a gerenciar a privacidade de dados de seus clientes.
+[!DNL Adobe Real-Time Customer Data Platform] ([!DNL Real-Time CDP]) ajuda os profissionais de marketing a reunir dados de vários sistemas corporativos, permitindo que eles identifiquem, compreendam e envolvam melhor seus clientes. A Adobe considera a privacidade de dados do consumidor como um princípio de design fundamental e fornece vários controles para ajudar os profissionais de marketing a gerenciar a privacidade de dados de seus clientes.
 
 A maioria dos recursos do [!DNL Real-Time CDP] é da plataforma Adobe Experience Platform. Este documento fornece informações sobre as várias tecnologias de aprimoramento de privacidade com suporte no [!DNL Real-Time CDP], com links para a documentação do [!DNL Experience Platform] para obter mais informações.
 
@@ -29,7 +29,7 @@ Regulamentos legais de privacidade, como o [!DNL General Data Protection Regulat
 
 O [!DNL Real-Time CDP] permite que os clientes optem por não ter seus dados pessoais incluídos em casos de uso de segmentação. As preferências de recusa dos clientes são capturadas e armazenadas por [!DNL Real-Time Customer Profile] e podem ser aplicadas excluindo os usuários que optaram por não participar de um público-alvo usando lógica booleana (&quot;AND NOT&quot;) no predicado de segmento.
 
-Consulte o documento sobre [atendimento às solicitações de recusa](../../segmentation/consents.md) na documentação do Serviço de segmentação da Adobe Experience Platform para obter mais informações.
+Consulte o documento sobre [atendimento às solicitações de recusa](../../segmentation/tutorials/consents.md) na documentação do Serviço de segmentação da Adobe Experience Platform para obter mais informações.
 
 ## Suporte ao IAB TCF 2.0
 

@@ -3,7 +3,7 @@ title: Interagir e adquirir novos clientes sem depender de cookies de terceiros
 description: Saiba como engajar e adquirir novos clientes por meio de casos de uso de prospecção, sem depender de cookies de terceiros.
 feature: Use Cases, Customer Acquisition
 exl-id: b9e7b3af-2a13-4904-bd12-e3ed05a1988e
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: e7c0551276d31d6809ace096c00e0dc2665090e6
 workflow-type: tm+mt
 source-wordcount: '2074'
 ht-degree: 85%
@@ -24,7 +24,7 @@ Use o suporte a dados de terceiros da Real-Time CDP para expandir sua base de pe
 
 As marcas estão enfrentando simultaneamente desafios assustadores de executar com responsabilidade casos de uso de aquisição de clientes topo de funil sem dependência de cookies de terceiros, orçamentos limitados e maior demanda de transparência e retorno sobre o investimento em anúncios.
 
-A Adobe Real-time Customer Data Platform pode ajudar as marcas a fazer a transição segura de seus casos de uso compatíveis com a Plataforma de gerenciamento de dados (DMP) para alternativas sem cookies, de uma forma que promova a total sofisticação e o poder da segmentação de autoatendimento, curadoria de público-alvo e ativação em um único sistema. Tudo isso sem comprometer o foco inabalável do Adobe no uso responsável dos dados por meio de uma estrutura patenteada de governança e consentimento de dados.
+A Adobe Real-Time Customer Data Platform pode ajudar as marcas a fazer a transição segura de seus casos de uso compatíveis com a Plataforma de gerenciamento de dados (DMP) para alternativas sem cookies, de uma forma que promova a total sofisticação e o poder da segmentação de autoatendimento, curadoria de público-alvo e ativação em um único sistema. Tudo isso sem comprometer o foco inabalável da Adobe no uso responsável de dados por meio de uma estrutura patenteada de consentimento e governança de dados.
 
 Por exemplo, siga as etapas descritas neste caso de uso quando precisar executar uma campanha para atrair prospetos para se tornarem usuários ou clientes conhecidos.
 
@@ -71,7 +71,7 @@ Ao concluir as etapas para implementar o caso de uso, você usará a seguinte fu
 * [Conjuntos de dados](/help/catalog/datasets/overview.md)
 * [Origens](/help/sources/home.md)
 * [Perfis em potencial](/help/profile/ui/prospect-profile.md)
-* [Públicos-alvo em potencial](/help/segmentation/ui/prospect-audience.md)
+* [Públicos-alvo em potencial](/help/segmentation/types/prospect-audiences.md)
 * [Destinos](/help/destinations/home.md)
 
 ### Detalhes de licença de perfil de terceiros do parceiro {#license-profiles-from-partner}
@@ -213,7 +213,7 @@ Observe que a experiência de criação de públicos-alvo para perfis em potenci
 * Avaliação de perfis em lote, apenas.
 * Não permite a criação de públicos-alvo com base em eventos de série temporal.
 
-Leia mais sobre [públicos-alvo em potencial](/help/segmentation/ui/prospect-audience.md).
+Leia mais sobre [públicos-alvo em potencial](/help/segmentation/types/prospect-audiences.md).
 
 ### Ativar perfis em potencial para destinos {#activate-to-destinations}
 

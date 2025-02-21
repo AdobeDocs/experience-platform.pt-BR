@@ -1,30 +1,30 @@
 ---
 title: Conexão Demandbase
-description: Use esse destino para ativar os públicos-alvo da conta para os casos de uso do Account-Based Marketing (ABM). Anuncie para personas e funções relevantes em suas contas do target por meio do Demand Side Platform B2B (DSP) do DemandBase. As contas do Target também podem ser enriquecidas com dados de terceiros do Demandbase para outros casos de uso downstream em marketing e vendas.
-badgeB2B: label="Edição B2B" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
+description: Use esse destino para ativar os públicos-alvo da conta para os casos de uso do Account-Based Marketing (ABM). Anuncie para personas e funções relevantes em suas contas do target por meio do Demand Side Platform B2B (DSP) da DemandBase. As contas do Target também podem ser enriquecidas com dados de terceiros do Demandbase para outros casos de uso downstream em marketing e vendas.
+badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 badgeB2P: label="Edição B2P" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 last-substantial-update: 2024-09-30T00:00:00Z
-source-git-commit: 92abae6bc63c13f1103364ae82cc9c04459ce00f
+exl-id: a84609a2-f1d3-4998-9db4-ad59c0a0b631
+source-git-commit: 08c2c7f5080f0e6afb7be53aad9f88ba0fccf923
 workflow-type: tm+mt
 source-wordcount: '696'
 ht-degree: 4%
 
 ---
 
-
 # Conexão Demandbase {#demandbase}
 
 >[!AVAILABILITY]
 >
->>A funcionalidade para ativar públicos-alvo para o destino do Demandbase está disponível para empresas que compram as edições [Business-to-Business](/help/rtcdp/overview.md#rtcdp-b2b) e [Business-to-Person](/help/rtcdp/overview.md#rtcdp-b2p) do Real-time Customer Data Platform.
+>>A funcionalidade para ativar públicos-alvo para o destino do Demandbase está disponível para empresas que compram as edições [Business-to-Business](/help/rtcdp/overview.md#rtcdp-b2b) e [Business-to-Person](/help/rtcdp/overview.md#rtcdp-b2p) do Real-Time Customer Data Platform.
 
-Ative perfis para suas campanhas do Demandbase para direcionamento de público, personalização e supressão, com base em [públicos-alvo de conta](/help/segmentation/ui/account-audiences.md).
+Ative perfis para suas campanhas do Demandbase para direcionamento de público, personalização e supressão, com base em [públicos-alvo de conta](/help/segmentation/types/account-audiences.md).
 
 ## Caso de uso {#use-case}
 
-Use esse destino para ativar os públicos-alvo da conta para os casos de uso do Account-Based Marketing (ABM). Anuncie para personas e funções relevantes em suas contas do target por meio do Demand Side Platform B2B (DSP) do DemandBase. As contas do Target também podem ser enriquecidas com dados de terceiros do Demandbase para outros casos de uso downstream em marketing e vendas.
+Use esse destino para ativar os públicos-alvo da conta para os casos de uso do Account-Based Marketing (ABM). Anuncie para personas e funções relevantes em suas contas do target por meio do Demand Side Platform B2B (DSP) da DemandBase. As contas do Target também podem ser enriquecidas com dados de terceiros do Demandbase para outros casos de uso downstream em marketing e vendas.
 
-Por exemplo, aproveite o DSP de ad-tech do Demandbase para direcionar personas ou funções específicas em contas-chave para a geração de leads topo de funil ou para criar e expandir grupos de compras. Use o destino do Demandbase para explorar outros casos de uso para direcionar suas contas com eficiência.
+Por exemplo, aproveite o DSP de tecnologia de anúncios do Demandbase para direcionar perfis ou funções específicas em contas-chave para a geração de leads topo de funil ou para criar e expandir grupos de compras. Use o destino do Demandbase para explorar outros casos de uso para direcionar suas contas com eficiência.
 
 Com essa integração, você também pode personalizar a experiência do site usando a pesquisa de informações da conta em tempo real para otimizar o engajamento.
 
@@ -34,7 +34,7 @@ Esta seção descreve que tipo de público-alvo você pode exportar para esse de
 
 | Origem do público | Suportado | Descrição |
 ---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Públicos gerados por meio do [Serviço de segmentação](../../../segmentation/home.md) do Experience Platform. |
+| [!DNL Segmentation Service] | ✓ | Públicos-alvo gerados pelo [Serviço de Segmentação](../../../segmentation/home.md) da Experience Platform. |
 | Uploads personalizados | X | Públicos [importados](../../../segmentation/ui/overview.md#import-audience) para o Experience Platform de arquivos CSV. |
 
 {style="table-layout:auto"}
@@ -97,4 +97,4 @@ Leia [Ativar públicos-alvo da conta](/help/destinations/ui/activate-account-aud
 ## Observações adicionais e chamadas de retorno importantes {#additional-notes}
 
 * Se um público-alvo da conta com o mesmo nome tiver sido ativado anteriormente no Demandbase, não será possível ativá-lo novamente por meio de um fluxo de dados diferente para o destino do Demandbase.
-* Se você tiver exportado públicos para o Demandbase e as exportações forem bem-sucedidas no Experience Platform e nem todos os dados atingirem o Demandbase, você pode ter encontrado a limitação de API no lado do Demandbase. Entre em contato com eles para obter esclarecimentos.
+* Se você tiver exportado públicos para o Demandbase e as exportações forem bem-sucedidas no Experience Platform, mas nem todos os dados chegarem ao Demandbase, você pode ter encontrado a limitação de API no Demandbase. Entre em contato com eles para obter esclarecimentos.

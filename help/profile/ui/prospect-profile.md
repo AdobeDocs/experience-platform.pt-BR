@@ -3,7 +3,7 @@ title: Perfis de cliente potencial
 description: Saiba como criar e usar perfis de prospecto para coletar informações sobre clientes desconhecidos usando informações de terceiros.
 type: Documentation
 exl-id: 194d25d6-88ae-4a7a-9b79-39120bced5c7
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: e7c0551276d31d6809ace096c00e0dc2665090e6
 workflow-type: tm+mt
 source-wordcount: '400'
 ht-degree: 1%
@@ -56,10 +56,10 @@ A caixa de diálogo [!UICONTROL Exibir JSON] é exibida. Os atributos do perfil 
 
 ## Casos de uso sugeridos {#use-cases}
 
-Para saber como você pode usar a funcionalidade de perfis de cliente potencial no Experience Platform em combinação com outra funcionalidade da Platform, leia a documentação do caso de uso a seguir:
+Para saber como usar a funcionalidade de perfis de cliente potencial no Experience Platform em combinação com outra funcionalidade da Platform, leia a seguinte documentação do caso de uso:
 
 - [Envolver e adquirir novos clientes por meio da funcionalidade de prospecção](../../rtcdp/partner-data/prospecting.md)
 
 ## Próximas etapas
 
-Depois de ler este guia, você entenderá como os perfis de cliente potencial podem ser usados no Adobe Experience Platform. Para saber como esses perfis de clientes potenciais podem ser usados em públicos-alvo, leia o [guia de públicos-alvo de clientes potenciais](../../segmentation/ui/prospect-audience.md).
+Depois de ler este guia, você entenderá como os perfis de cliente potencial podem ser usados no Adobe Experience Platform. Para saber como esses perfis de clientes potenciais podem ser usados em públicos-alvo, leia o [guia de públicos-alvo de clientes potenciais](../../segmentation/types/prospect-audiences.md).

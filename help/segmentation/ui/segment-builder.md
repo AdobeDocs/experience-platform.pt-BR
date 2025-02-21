@@ -3,14 +3,14 @@ solution: Experience Platform
 title: Guia da interface do construtor de segmentos
 description: O Construtor de segmentos na interface do usuário do Adobe Experience Platform fornece um espaço de trabalho avançado que permite a interação com elementos de dados de perfil. O espaço de trabalho fornece controles intuitivos para criar e editar regras, como arrastar e soltar blocos usados para representar propriedades de dados.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: e74d04119593dddcaf6a5c710b685c606f5998d6
+source-git-commit: e7c0551276d31d6809ace096c00e0dc2665090e6
 workflow-type: tm+mt
-source-wordcount: '4955'
+source-wordcount: '4976'
 ht-degree: 8%
 
 ---
 
-# Guia da interface do usuário do [!DNL Segment Builder]
+# [!DNL Segment Builder] Guia da interface
 
 >[!NOTE]
 >
@@ -86,10 +86,10 @@ Por exemplo, considere uma situação em que você tinha dois conjuntos de relat
 
 | Campo | Esquema A do conjunto de relatórios | Esquema B do conjunto de relatórios |
 | ----- | --------------------- | --------------------- |
-| EVAR 1 | Domínio de referência | Conectado em S/N |
-| EVAR 2 | Nome da página | ID de fidelidade do membro |
-| EVAR 3 | URL | Nome da página |
-| EVAR 4 | Pesquisar termos | Nome do produto |
+| EVAR1 | Domínio de referência | Conectado em S/N |
+| EVAR2 | Nome da página | ID de fidelidade do membro |
+| EVAR3 | URL | Nome da página |
+| EVAR4 | Pesquisar termos | Nome do produto |
 | event1 | Cliques | Page Views |
 | event2 | Page Views | Adições ao carrinho |
 | event3 | Adições ao carrinho | Check-outs |
@@ -101,14 +101,14 @@ Nesse caso, você pode mapear os dois conjuntos de relatórios com o seguinte es
 
 >[!NOTE]
 >
->Embora os valores de eVar genéricos ainda sejam preenchidos, você deve **não** usá-los nas definições de segmento (se possível), já que os valores podem ter significados diferentes dos que estavam originalmente em seus relatórios.
+>Embora os valores genéricos do eVar ainda sejam preenchidos, você deve **não** usá-los nas definições de segmento (se possível), já que os valores podem ter significados diferentes do que eles eram originalmente em seus relatórios.
 
 Depois que os conjuntos de relatórios forem mapeados, você poderá usar esses campos recém-mapeados em seus fluxos de trabalho e segmentação relacionados ao perfil.
 
 | Cenário | Experiência do esquema de união | Variável genérica de segmentação | Variável mapeada de segmentação |
 | -------- | ----------------------- | ----------------------------- | ---------------------------- |
-| Conjunto de relatórios único | O descritor de nome amigável está incluído nas variáveis genéricas. <br><br>**Exemplo:** Nome da Página (eVar 2) | <ul><li>Descritor de nome amigável incluído com variáveis genéricas</li><li>Os queries usam dados do conjunto de dados específico, pois ele é o único</li></ul> | Os queries podem usar dados do Adobe Analytics e possivelmente outras fontes. |
-| Vários conjuntos de relatórios | Nenhum descritor de nome simples é incluído com variáveis genéricas. <br><br>**Exemplo:** eVar 2 | <ul><li>Qualquer campo com vários descritores é exibido como genérico. Isso significa que nenhum nome amigável é exibido na interface do usuário.</li><li>Os queries podem usar dados de qualquer conjunto de dados que contenha o eVar, o que pode resultar em resultados mistos ou incorretos.</li></ul> | As consultas usam os resultados combinados corretamente de vários conjuntos de dados. |
+| Conjunto de relatórios único | O descritor de nome amigável está incluído nas variáveis genéricas. <br><br>**Exemplo:** Nome da Página (eVar2) | <ul><li>Descritor de nome amigável incluído com variáveis genéricas</li><li>Os queries usam dados do conjunto de dados específico, pois ele é o único</li></ul> | Os queries podem usar dados do Adobe Analytics e possivelmente outras fontes. |
+| Vários conjuntos de relatórios | Nenhum descritor de nome simples é incluído com variáveis genéricas. <br><br>**Exemplo:** eVar2 | <ul><li>Qualquer campo com vários descritores é exibido como genérico. Isso significa que nenhum nome amigável é exibido na interface do usuário.</li><li>Os queries podem usar dados de qualquer conjunto de dados que contenha a eVar, o que pode resultar em resultados mistos ou incorretos.</li></ul> | As consultas usam os resultados combinados corretamente de vários conjuntos de dados. |
 
 ### Públicos-alvo
 
@@ -241,6 +241,10 @@ As restrições de tempo permitem aplicar restrições de tempo a atributos base
 >[!IMPORTANT]
 >
 >Se você criou uma definição de segmento com as restrições de tempo &quot;Este mês&quot; ou &quot;Este ano&quot; antes de junho de 2024, será necessário salvar novamente as definições de segmento. Antes de junho de 2024, &quot;Este mês&quot; tinha 30 dias como base e &quot;Este ano&quot; tinha 365 dias como base.
+
+>[!NOTE]
+>
+>Ambas as [restrições de tempo de ano ignoradas](./ignore-year.md) e [restrições de tempo em nível de regra](./segment-refactoring.md) foram refatoradas anteriormente, com mais informações disponíveis nas visões gerais vinculadas.
 
 A lista de restrições de tempo disponíveis é a seguinte:
 
@@ -394,7 +398,7 @@ A seção **[!UICONTROL Propriedades de público-alvo]** também é o local onde
 
 Você também pode selecionar seu método de avaliação. Se você souber qual método de avaliação deseja usar, poderá selecionar o método de avaliação desejado usando a lista suspensa. Se quiser saber para quais tipos de avaliação essa definição de segmento se qualifica, você pode selecionar o ícone de navegação ![ícone de pasta com uma lupa](/help/images/icons/folder-search.png) para ver uma lista dos métodos de avaliação de definição de segmento disponíveis.
 
-O popover [!UICONTROL Qualificação para o método de avaliação] é exibido. Esse popover exibe os métodos de avaliação disponíveis, que são batch, streaming e edge. O popover mostra quais métodos de avaliação são elegíveis e inelegíveis. Dependendo dos parâmetros usados na definição do segmento, ele pode não se qualificar para determinados métodos de avaliação. Para obter mais informações sobre os requisitos de cada método de avaliação, leia as visões gerais da [segmentação de transmissão](./streaming-segmentation.md#query-types) ou da [segmentação de borda](./edge-segmentation.md#query-types).
+O popover [!UICONTROL Qualificação para o método de avaliação] é exibido. Esse popover exibe os métodos de avaliação disponíveis, que são batch, streaming e edge. O popover mostra quais métodos de avaliação são elegíveis e inelegíveis. Dependendo dos parâmetros usados na definição do segmento, ele pode não se qualificar para determinados métodos de avaliação. Para obter mais informações sobre os requisitos de cada método de avaliação, leia as visões gerais da [segmentação de transmissão](../methods/streaming-segmentation.md#query-types) ou da [segmentação de borda](../methods/edge-segmentation.md#query-types).
 
 Você também pode alterar o método de avaliação da definição do segmento depois de terminar de criá-lo. Se você alterar o método de avaliação de Edge ou Streaming para Batch, **não** poderá alterá-lo de volta para Edge ou Streaming. A alteração no método de avaliação **somente** entrará em vigor depois que você selecionar **[!UICONTROL Salvar]** no popover. Cancelar a caixa de diálogo **manterá** o método de avaliação original.
 

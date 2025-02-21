@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Guia da interface do usuário do Serviço de segmentação
 description: Saiba como criar e gerenciar públicos e definições de segmento na interface do usuário do Adobe Experience Platform.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 9844a7bf5e7198e7d5112ec924220aba71cdc14b
+source-git-commit: 276fd7c532843c9589e1d51b0bc7a76cb5c3eb9f
 workflow-type: tm+mt
 source-wordcount: '1043'
 ht-degree: 2%
@@ -90,9 +90,9 @@ Para ver como o público-alvo é composto, selecione o nome de um público-alvo 
 
 A página Composição de público-alvo é exibida com os blocos fundamentais que compõem seu público-alvo. Para obter mais detalhes sobre como usar a Composição de público-alvo, leia o [Guia da interface do usuário da Composição de público-alvo](./audience-composition.md).
 
-## Composição federada de público-alvo {#fac}
+## Composição de público-alvo federado {#fac}
 
-Além das composições de público-alvo e definições de segmento, você pode usar a Composição de público-alvo federado do Adobe para criar novos públicos-alvo a partir de conjuntos de dados corporativos sem copiar os dados subjacentes e armazená-los no Portal de público-alvo da Adobe Experience Platform. Você também pode enriquecer os públicos-alvo existentes no Adobe Experience Platform utilizando dados de público-alvo compostos que foram federados a partir do data warehouse corporativo. Leia o guia em [Composição de Público-Alvo Federado](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home).
+Além das composições de público-alvo e definições de segmento, você pode usar a Adobe Federated Audience Composition para criar novos públicos-alvo a partir de conjuntos de dados corporativos sem copiar os dados subjacentes e armazená-los no Adobe Experience Platform Audience Portal. Você também pode enriquecer os públicos-alvo existentes no Adobe Experience Platform utilizando dados de público-alvo compostos que foram federados a partir do data warehouse corporativo. Leia o guia em [Composição de Público-Alvo Federado](https://experienceleague.adobe.com/pt-br/docs/federated-audience-composition/using/home).
 
 ![Uma lista de públicos-alvo criados na Composição de Público Federado para sua organização.](../images/ui/overview/federated-audience-composition.png)
 
@@ -100,7 +100,7 @@ Além das composições de público-alvo e definições de segmento, você pode 
 
 A segmentação de transmissão é a capacidade de fazer a segmentação no [!DNL Platform] em tempo quase real, enquanto se concentra na riqueza de dados. Com a segmentação por transmissão, a qualificação para segmentação acontece agora, à medida que os dados chegam ao [!DNL Platform], diminuindo a necessidade de agendar e executar trabalhos de segmentação.
 
-Mais informações sobre a segmentação por transmissão podem ser encontradas no [guia do usuário da segmentação por transmissão](./streaming-segmentation.md).
+Mais informações sobre a segmentação por transmissão podem ser encontradas no [guia do usuário da segmentação por transmissão](../methods/streaming-segmentation.md).
 
 >[!NOTE]
 >
@@ -110,7 +110,7 @@ Mais informações sobre a segmentação por transmissão podem ser encontradas 
 
 A segmentação do Edge é a capacidade de avaliar públicos-alvo na Platform instantaneamente na borda, permitindo casos de uso de personalização da mesma página e da próxima página.
 
-Mais informações sobre a segmentação de borda podem ser encontradas no [guia da interface de segmentação de borda](./edge-segmentation.md)
+Mais informações sobre a segmentação de borda podem ser encontradas no [guia da interface de segmentação de borda](../methods/edge-segmentation.md)
 
 ## Violações de política
 

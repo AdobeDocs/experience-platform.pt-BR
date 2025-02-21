@@ -3,7 +3,7 @@ keywords: destinos;destino;destinos tipos;destinations;destination;destination t
 title: Tipos e categorias de destino
 description: Saiba mais sobre os diferentes tipos e categorias de destinos no Adobe Experience Platform.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: 322510055bd8b8803292a2b4af9df9e1dbee7ffb
+source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
 workflow-type: tm+mt
 source-wordcount: '805'
 ht-degree: 1%
@@ -41,11 +41,11 @@ Os destinos de exportação de perfil recebem dados brutos, geralmente com o end
 
 >[!IMPORTANT]
 >
->Destinos corporativos avançados, ou destinos de exportação de perfil de streaming, estão disponíveis somente para clientes do [Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html?lang=pt-BR).
+>Destinos corporativos avançados, ou destinos de exportação de perfil de streaming, estão disponíveis somente para clientes do [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html?lang=pt-BR).
 
-Use os conectores avançados de dados de destino corporativo para fornecer perfis do Adobe Real-time Customer Data Platform em tempo quase real a sistemas internos ou a outros sistemas de terceiros para sincronização de dados, análise e outros casos de uso de enriquecimento de perfil.
+Use os conectores avançados de dados de destino corporativo para fornecer perfis do Adobe Real-Time Customer Data Platform em tempo quase real a sistemas internos ou a outros sistemas de terceiros para sincronização de dados, análise e outros casos de uso de enriquecimento de perfil.
 
-Esses destinos recebem dados de público-alvo e perfil como fluxos de dados de Experience Platform.
+Esses destinos recebem dados de público-alvo e perfil como fluxos de dados do Experience Platform.
 
 Os destinos corporativos avançados incluem:
 
@@ -59,7 +59,7 @@ Os destinos baseados em arquivo recebem `.csv` arquivos contendo perfis e/ou atr
 
 ## Destinos de exportação de público para transmissão {#streaming-destinations}
 
-Os destinos de exportação de público-alvo recebem dados de público-alvo de Experience Platform. Esses destinos usam IDs de público-alvo ou IDs de usuário. Advertising e destinos sociais como [[!DNL Google Display & Video 360]](catalog/advertising/google-dv360.md), [[!DNL Google Ads]](catalog/advertising/google-ads-destination.md) ou [Facebook](catalog/social/facebook.md) são exemplos desses destinos.
+Os destinos de exportação de público recebem dados de público do Experience Platform. Esses destinos usam IDs de público-alvo ou IDs de usuário. Advertising e destinos sociais como [[!DNL Google Display & Video 360]](catalog/advertising/google-dv360.md), [[!DNL Google Ads]](catalog/advertising/google-ads-destination.md) ou [Facebook](catalog/social/facebook.md) são exemplos desses destinos.
 
 ## Destinos de personalização do Edge {#edge-personalization-destinations}
 
@@ -81,7 +81,7 @@ Você pode exportar três tipos de públicos-alvo do Experience Platform para v�
 * Públicos-alvo da conta
 * Públicos-alvo em potencial
 
-Saiba mais sobre os [vários tipos de público-alvo](/help/segmentation/ui/account-audiences.md#terminology).
+Saiba mais sobre os [vários tipos de público-alvo](/help/segmentation/types/account-audiences.md#terminology).
 
 Um símbolo no cartão de destino mostra quais tipos de públicos-alvo você pode exportar para cada destino.
 

@@ -5,7 +5,7 @@ product: experience platform
 type: Documentation
 description: Saiba mais sobre o desempenho e as medidas de proteção aplicadas pelo sistema para segmentação e dados de perfil para garantir o uso ideal da funcionalidade da Real-Time CDP.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 1f682fc5c109f3dc8a7ed8513260a1a3c3108bbb
+source-git-commit: 1150b7726a7cabe6df6bbc7a850fb4d48afa208e
 workflow-type: tm+mt
 source-wordcount: '2511'
 ht-degree: 2%
@@ -28,7 +28,7 @@ Este documento fornece limites de uso e taxa padrão para ajudar você a modelar
 
 ## Introdução
 
-Os seguintes serviços de Experience Platform estão envolvidos na modelagem de dados do Perfil do cliente em tempo real:
+Os seguintes serviços da Experience Platform estão envolvidos na modelagem de dados do Perfil do cliente em tempo real:
 
 * [[!DNL Real-Time Customer Profile]](home.md): Criar perfis de consumidor unificados usando dados de várias fontes.
 * [Identidades](../identity-service/home.md): identidades da Bridge de fontes de dados diferentes conforme são assimiladas na Platform.
@@ -41,7 +41,7 @@ Há dois tipos de limites padrão neste documento:
 
 | Tipo de grade de proteção | Descrição |
 | -------------- | ----------- |
-| **Proteção de desempenho (limite flexível)** | As medidas de proteção de desempenho são limites de uso relacionados ao escopo dos seus casos de uso. Ao exceder as medidas de proteção de desempenho, você pode enfrentar degradação e latência do desempenho. O Adobe não é responsável por essa degradação de desempenho. Os clientes que excederem consistentemente uma garantia de desempenho podem optar por licenciar capacidade adicional para evitar a degradação do desempenho. |
+| **Proteção de desempenho (limite flexível)** | As medidas de proteção de desempenho são limites de uso relacionados ao escopo dos seus casos de uso. Ao exceder as medidas de proteção de desempenho, você pode enfrentar degradação e latência do desempenho. A Adobe não é responsável por essa degradação de desempenho. Os clientes que excederem consistentemente uma garantia de desempenho podem optar por licenciar capacidade adicional para evitar a degradação do desempenho. |
 | **Medidas de proteção aplicadas pelo sistema (Limite rígido)** | As medidas de proteção aplicadas pelo sistema são aplicadas pela interface do usuário ou API do Real-Time CDP. Esses são limites que você não pode exceder, pois a interface do usuário e a API o bloquearão de fazer isso ou retornarão um erro. |
 
 {style="table-layout:auto"}
@@ -71,7 +71,7 @@ As medidas de proteção a seguir fornecem limites recomendados ao modelar dados
 
 {style="table-layout:auto"}
 
-### Medidas de proteção de entidade Dimension
+### Medidas de proteção de entidade do Dimension
 
 | Grade de Proteção | Limite | Tipo de limite | Descrição |
 | --------- | ----- | ---------- | ----------- |
@@ -102,13 +102,13 @@ As medidas de proteção a seguir se referem ao tamanho dos dados e fornecem lim
 
 {style="table-layout:auto"}
 
-### Medidas de proteção de entidade Dimension
+### Medidas de proteção de entidade do Dimension
 
 | Grade de Proteção | Limite | Tipo de limite | Descrição |
 | --------- | ----- | ---------- | ----------- |
 | Tamanho total de todas as entidades dimensionais | 5GB | Proteção de desempenho | O tamanho total recomendado para todas as entidades dimensionais é 5 GB. A ingestão de entidades de dimensão grandes pode afetar o desempenho do sistema. Por exemplo, não é recomendado tentar carregar um catálogo de produtos de 10 GB como uma entidade de dimensão. |
 | Esquema de entidade dimensional de conjuntos de dados | 5 | Proteção de desempenho | Recomenda-se um máximo de 5 conjuntos de dados associados a cada esquema de entidade dimensional. Por exemplo, se você criar um esquema para &quot;produtos&quot; e adicionar cinco conjuntos de dados de contribuição, não deverá criar um sexto conjunto de dados vinculado ao esquema de produtos. |
-| Lotes de entidades Dimension assimilados por dia | 4 por entidade | Proteção de desempenho | O número máximo recomendado de lotes de entidades de dimensão assimilados por dia é 4 por entidade. Por exemplo, você pode assimilar atualizações em um catálogo de produtos até 4 vezes por dia. A ingestão de lotes de entidades de dimensão adicionais para a mesma entidade pode afetar o desempenho do sistema. |
+| Lotes de entidades do Dimension assimilados por dia | 4 por entidade | Proteção de desempenho | O número máximo recomendado de lotes de entidades de dimensão assimilados por dia é 4 por entidade. Por exemplo, você pode assimilar atualizações em um catálogo de produtos até 4 vezes por dia. A ingestão de lotes de entidades de dimensão adicionais para a mesma entidade pode afetar o desempenho do sistema. |
 
 {style="table-layout:auto"}
 
@@ -119,12 +119,12 @@ As medidas de proteção descritas nesta seção referem-se ao número e à natu
 | Grade de Proteção | Limite | Tipo de limite | Descrição |
 | --------- | ----- | ---------- | ----------- |
 | Públicos-alvo por sandbox | 4000 | Proteção de desempenho | Você pode ter até 4000 **públicos-alvo** ativos por sandbox. Você pode ter mais de 4000 sandboxes por organização, desde que haja menos de 4000 públicos-alvo em cada sandbox **individual**. Isso inclui públicos em lote, de streaming e de borda. Tentar criar públicos adicionais pode afetar o desempenho do sistema. Leia mais sobre [criação de públicos-alvo](/help/segmentation/ui/segment-builder.md) por meio do construtor de segmentos. |
-| Públicos-alvo do Edge por sandbox | 150 | Proteção de desempenho | Você pode ter até 150 públicos-alvo de borda **ativos** por sandbox. Você pode ter mais de 150 públicos-alvo de borda por organização, desde que haja menos de 150 públicos-alvo de borda em cada sandbox **individual**. Tentar criar públicos-alvo de borda adicionais pode afetar o desempenho do sistema. Leia mais sobre [públicos-alvo de borda](/help/segmentation/ui/edge-segmentation.md). |
-| Taxa de transferência do Edge em todas as sandboxes | 1500 RPS | Proteção de desempenho | A segmentação do Edge é compatível com um valor de pico de 1500 eventos de entrada por segundo ao entrar no Edge Network Adobe Experience Platform. A segmentação do Edge pode levar até 350 milissegundos para processar um evento de entrada depois que ele entrar no Edge Network Adobe Experience Platform. Leia mais sobre [públicos-alvo de borda](/help/segmentation/ui/edge-segmentation.md). |
-| Públicos-alvo de transmissão por sandbox | 500 | Proteção de desempenho | Você pode ter até 500 **públicos-alvo de streaming** ativos por sandbox. Você pode ter mais de 500 públicos-alvo de streaming por organização, desde que haja menos de 500 públicos-alvo de streaming em cada sandbox **individual**. Isso inclui públicos de transmissão e de borda. Tentar criar públicos de transmissão adicionais pode afetar o desempenho do sistema. Leia mais sobre [públicos-alvo de streaming](/help/segmentation/ui/streaming-segmentation.md). |
-| Taxa de transferência de transmissão em todas as sandboxes | 1500 RPS | Proteção de desempenho | A segmentação de transmissão oferece suporte a um valor de pico de 1500 eventos de entrada por segundo. A segmentação de transmissão pode levar até 5 minutos para qualificar um perfil para associação de segmento. Leia mais sobre [públicos-alvo de streaming](/help/segmentation/ui/streaming-segmentation.md). |
+| Públicos-alvo do Edge por sandbox | 150 | Proteção de desempenho | Você pode ter até 150 públicos-alvo de borda **ativos** por sandbox. Você pode ter mais de 150 públicos-alvo de borda por organização, desde que haja menos de 150 públicos-alvo de borda em cada sandbox **individual**. Tentar criar públicos-alvo de borda adicionais pode afetar o desempenho do sistema. Leia mais sobre [públicos-alvo de borda](/help/segmentation/methods/edge-segmentation.md). |
+| Taxa de transferência do Edge em todas as sandboxes | 1500 RPS | Proteção de desempenho | A segmentação do Edge é compatível com um valor de pico de 1500 eventos de entrada por segundo ao entrar no Adobe Experience Platform Edge Network. A segmentação do Edge pode levar até 350 milissegundos para processar um evento de entrada depois que ele entra no Adobe Experience Platform Edge Network. Leia mais sobre [públicos-alvo de borda](/help/segmentation/methods/edge-segmentation.md). |
+| Públicos-alvo de transmissão por sandbox | 500 | Proteção de desempenho | Você pode ter até 500 **públicos-alvo de streaming** ativos por sandbox. Você pode ter mais de 500 públicos-alvo de streaming por organização, desde que haja menos de 500 públicos-alvo de streaming em cada sandbox **individual**. Isso inclui públicos de transmissão e de borda. Tentar criar públicos de transmissão adicionais pode afetar o desempenho do sistema. Leia mais sobre [públicos-alvo de streaming](/help/segmentation/methods/streaming-segmentation.md). |
+| Taxa de transferência de transmissão em todas as sandboxes | 1500 RPS | Proteção de desempenho | A segmentação de transmissão oferece suporte a um valor de pico de 1500 eventos de entrada por segundo. A segmentação de transmissão pode levar até 5 minutos para qualificar um perfil para associação de segmento. Leia mais sobre [públicos-alvo de streaming](/help/segmentation/methods/streaming-segmentation.md). |
 | Públicos em lote por sandbox | 4000 | Proteção de desempenho | Você pode ter até 4000 públicos-alvo em lote **ativos** por sandbox. Você pode ter mais de 4000 públicos-alvo em lote por organização, desde que haja menos de 4000 públicos-alvo em lote em cada sandbox **individual**. Tentar criar públicos-alvo em lote adicionais pode afetar o desempenho do sistema. |
-| Públicos-alvo da conta por sandbox | 50 | Proteção imposta pelo sistema | Você pode criar no máximo 50 públicos-alvo de conta em uma sandbox. Depois de atingir 50 públicos-alvo em uma sandbox, o controle **[!UICONTROL Criar público-alvo]** é desabilitado ao tentar criar um novo público-alvo para a conta. Leia mais sobre [públicos-alvo da conta](/help/segmentation/ui/account-audiences.md). |
+| Públicos-alvo da conta por sandbox | 50 | Proteção imposta pelo sistema | Você pode criar no máximo 50 públicos-alvo de conta em uma sandbox. Depois de atingir 50 públicos-alvo em uma sandbox, o controle **[!UICONTROL Criar público-alvo]** é desabilitado ao tentar criar um novo público-alvo para a conta. Leia mais sobre [públicos-alvo da conta](/help/segmentation/types/account-audiences.md). |
 | Composições publicadas por sandbox | 10 | Proteção de desempenho | Você pode ter no máximo 10 composições publicadas em uma sandbox. Leia mais sobre [composição de público-alvo no guia da interface](/help/segmentation/ui/audience-composition.md). |
 | Tamanho máximo do público | 30 por cento | Proteção de desempenho | A associação máxima recomendada de um público-alvo é de 30% do número total de perfis no sistema. É possível criar públicos-alvo com mais de 30% dos perfis como membros ou vários públicos-alvo grandes, mas isso afetará o desempenho do sistema. |
 
@@ -158,9 +158,9 @@ Atributos independentes de tempo, também conhecidos como &quot;dados de registr
 
 ![Um infográfico que descreve as diferenças entre os dados de registro e os dados de série temporal.](images/guardrails/profile-entity.png)
 
-#### entidade Dimension
+#### Entidade Dimension
 
-Embora o armazenamento de dados do perfil que mantém os dados do perfil não seja um armazenamento relacional, o Perfil permite a integração com entidades de pequena dimensão para criar públicos-alvo de maneira simplificada e intuitiva. Essa integração é conhecida como [segmentação de várias entidades](../segmentation/multi-entity-segmentation.md).
+Embora o armazenamento de dados do perfil que mantém os dados do perfil não seja um armazenamento relacional, o Perfil permite a integração com entidades de pequena dimensão para criar públicos-alvo de maneira simplificada e intuitiva. Essa integração é conhecida como [segmentação de várias entidades](../segmentation/tutorials/multi-entity-segmentation.md).
 
 Sua organização também pode definir classes XDM para descrever coisas que não sejam indivíduos, como lojas, produtos ou propriedades. Esses esquemas não [!DNL XDM Individual Profile] são chamados de &quot;entidades de dimensão&quot; (também conhecidas como &quot;entidades de pesquisa&quot;) e não contêm dados de série temporal. Esquemas que representam entidades de dimensão são vinculados a entidades de perfil por meio do uso de [relações de esquema](../xdm/tutorials/relationship-ui.md).
 
@@ -182,10 +182,10 @@ Vários conjuntos de relatórios podem ser ativados para o Perfil desde que todo
 
 ## Próximas etapas
 
-Consulte a documentação a seguir para obter mais informações sobre outras medidas de proteção dos serviços de Experience Platform, informações de latência de ponta a ponta e informações de licenciamento dos documentos Descrição do produto Real-Time CDP:
+Consulte a documentação a seguir para obter mais informações sobre outras medidas de proteção dos serviços da Experience Platform, informações de latência de ponta a ponta e informações de licenciamento dos documentos Descrição do produto da Real-Time CDP:
 
 * [Medidas de proteção do Real-Time CDP](/help/rtcdp/guardrails/overview.md)
-* [Diagramas de latência de ponta a ponta](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) para vários serviços de Experience Platform.
-* [Real-time Customer Data Platform (B2C Edition - Pacotes do Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform (B2P - Pacotes do Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform (B2B - Pacotes do Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [Diagramas de latência de ponta a ponta](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) para vários serviços da Experience Platform.
+* [Real-Time Customer Data Platform (B2C Edition - Pacotes do Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2P - Pacotes do Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2B - Pacotes do Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

@@ -3,7 +3,7 @@ title: Ativar públicos-alvo potenciais para destinos
 type: Tutorial
 description: Saiba como ativar públicos-alvo potenciais para destinos
 exl-id: 3e034a14-09d0-4b08-b171-5afb62ae4b62
-source-git-commit: fbc2a6c81682797af4674adabff358a62d973007
+source-git-commit: e7c0551276d31d6809ace096c00e0dc2665090e6
 workflow-type: tm+mt
 source-wordcount: '619'
 ht-degree: 13%
@@ -14,9 +14,9 @@ ht-degree: 13%
 
 >[!AVAILABILITY]
 >
->Essa funcionalidade está disponível para clientes que compraram o pacote Real-Time CDP Prime e Ultimate. Entre em contato com o representante da Adobe para obter mais informações.
+>Essa funcionalidade está disponível para clientes que compraram o pacote Real-Time CDP Prime e Ultimate. Entre em contato com seu representante da Adobe para obter mais informações.
 
-Este artigo explica o fluxo de trabalho necessário para exportar [públicos-alvo potenciais](/help/segmentation/ui/prospect-audience.md) do Adobe Experience Platform para o seu destino preferido.
+Este artigo explica o fluxo de trabalho necessário para exportar [públicos-alvo potenciais](/help/segmentation/types/prospect-audiences.md) do Adobe Experience Platform para o seu destino preferido.
 
 ## Destinos compatíveis {#supported-destinations}
 
@@ -26,7 +26,7 @@ Vá para **[!UICONTROL Conexões]** > **[!UICONTROL Destinos]** e selecione a gu
 
 ## Pré-requisitos {#prerequisites}
 
-* Você deve primeiro assimilar [perfis de clientes potenciais](/help/profile/ui/prospect-profile.md) e criar [públicos-alvo de clientes potenciais](/help/segmentation/ui/prospect-audience.md) antes de ativá-los em destinos downstream.
+* Você deve primeiro assimilar [perfis de clientes potenciais](/help/profile/ui/prospect-profile.md) e criar [públicos-alvo de clientes potenciais](/help/segmentation/types/prospect-audiences.md) antes de ativá-los em destinos downstream.
 * Para ativar públicos-alvo de prospecto para destinos, você deve ter se conectado com êxito a um destino. Se ainda não tiver feito isso, vá para o [catálogo de destinos](../catalog/overview.md), navegue pelos destinos compatíveis e configure o destino que deseja usar. Leia o tutorial da interface do usuário em [conexão com destinos](./connect-destination.md) para obter mais informações.
 
 ### Permissões necessárias {#permissions}

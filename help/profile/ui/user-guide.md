@@ -1,16 +1,16 @@
 ---
-keywords: Experience Platform;perfil;perfil de cliente em tempo real;solução de problemas;API;perfil unificado;Perfil unificado;unificado;Perfil;rtcp;habilitar perfil;Habilitar perfil;esquema de união;PERFIL DE UNIÃO;perfil de união
+keywords: Experience Platform;perfil;perfil do cliente em tempo real;solução de problemas;API;perfil unificado;Perfil unificado;unificado;Perfil;rtcp;habilitar perfil;Habilitar perfil;esquema de união;PERFIL DE UNIÃO;perfil de união
 title: Guia da interface do usuário do Perfil do cliente em tempo real
 description: O Perfil do cliente em tempo real cria uma visualização integral de cada cliente individual, combinando dados de vários canais, inclusive dados online, offline, de CRM e de terceiros. Este documento serve como um guia para interagir com o Perfil do cliente em tempo real na interface do usuário do Adobe Experience Platform.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: dc31258dad5cf03a8f4f60db4d4aefc29e8157c8
+source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
 workflow-type: tm+mt
 source-wordcount: '2212'
 ht-degree: 3%
 
 ---
 
-# Guia da interface do usuário do [!DNL Real-Time Customer Profile]
+# [!DNL Real-Time Customer Profile] Guia da interface
 
 O [!DNL Real-Time Customer Profile] cria uma visualização integral de cada cliente individual, combinando dados de vários canais, inclusive dados online, offline, de CRM e de terceiros. Este documento serve como um guia para interagir com os dados do [!DNL Real-Time Customer Profile] na interface do usuário (UI) do Adobe Experience Platform.
 
@@ -24,7 +24,7 @@ Este guia de interface do usuário requer uma compreensão dos vários serviços
 
 ## [!UICONTROL Visão geral]
 
-Na interface do Experience Platform, selecione **[!UICONTROL Perfis]** na navegação à esquerda para abrir a guia **[!UICONTROL Visão geral]** que exibe o painel de perfil.
+Na interface do usuário do Experience Platform, selecione **[!UICONTROL Perfis]** na navegação à esquerda para abrir a guia **[!UICONTROL Visão geral]** exibindo o painel de perfil.
 
 >[!NOTE]
 >
@@ -54,7 +54,7 @@ Além dessas métricas, esta seção fornece uma data e hora da última atualiza
 
 ### Contagem de perfis {#profile-count}
 
-A contagem de perfis exibe o número total de perfis que sua organização tem no Experience Platform, depois que a política de mesclagem padrão da organização mescla fragmentos de perfis para formar um único perfil para cada cliente individual. Em outras palavras, sua organização pode ter vários fragmentos de perfil relacionados a um único cliente que interage com sua marca em diferentes canais, mas esses fragmentos seriam mesclados (de acordo com a política de mesclagem padrão) e retornariam uma contagem de &quot;1&quot; perfil, pois todos estão relacionados ao mesmo indivíduo.
+A contagem de perfis exibe o número total de perfis que sua organização tem na Experience Platform, depois que a política de mesclagem padrão da organização se mescla com fragmentos de perfil para formar um único perfil para cada cliente individual. Em outras palavras, sua organização pode ter vários fragmentos de perfil relacionados a um único cliente que interage com sua marca em diferentes canais, mas esses fragmentos seriam mesclados (de acordo com a política de mesclagem padrão) e retornariam uma contagem de &quot;1&quot; perfil, pois todos estão relacionados ao mesmo indivíduo.
 
 A contagem de perfis também inclui perfis com atributos (dados de registro), bem como perfis que contêm apenas dados de série temporal (evento), como perfis do Adobe Analytics. A contagem de perfis é atualizada regularmente para fornecer um número total de perfis atualizado na Platform.
 
@@ -171,11 +171,11 @@ Os eventos também podem ser exibidos como um objeto JSON ao selecionar **[!UICO
 
 A guia **[!UICONTROL Associação de público-alvo]** exibe uma lista com o nome e a descrição dos públicos-alvo aos quais o perfil de cliente individual pertence atualmente. Essa lista é atualizada automaticamente conforme o perfil se qualifica ou expira dos públicos-alvo. A contagem total de públicos para os quais o perfil está qualificado no momento é mostrada no lado direito da guia.
 
-Para obter mais informações sobre a segmentação em Experience Platform Adobe, consulte a [documentação do Experience Platform Segmentation Service](../../segmentation/home.md).
+Para obter mais informações sobre segmentação no Experience Platform, consulte a [documentação do Serviço de segmentação do Experience Platform](../../segmentation/home.md).
 
 ![A guia Associação de público-alvo está realçada. Os detalhes de associação de público do perfil são exibidos.](../images/user-guide/audience-membership.png)
 
-Para exibir a associação de público-alvo dos perfis disponíveis na Edge, selecione **[!UICONTROL Edge]** no seletor de local de dados. Mais informações sobre a segmentação de borda podem ser encontradas no [guia de segmentação de borda](../../segmentation/ui/edge-segmentation.md).
+Para exibir a associação de público-alvo dos perfis disponíveis na Edge, selecione **[!UICONTROL Edge]** no seletor de local de dados. Mais informações sobre a segmentação de borda podem ser encontradas no [guia de segmentação de borda](../../segmentation/methods/edge-segmentation.md).
 
 ![O seletor de local de dados na guia de associação de público-alvo está realçado.](../images/user-guide/audience-membership-select.png)
 
@@ -205,4 +205,4 @@ Para obter mais informações sobre atributos computados, leia a [visão geral s
 
 ## Próximas etapas
 
-Ao ler este guia, você sabe como visualizar e gerenciar os dados de perfil de sua organização usando a interface do usuário do Experience Platform. Para obter informações sobre como trabalhar com dados de perfil usando APIs de Experience Platform, consulte o [Guia da API de perfil do cliente em tempo real](../api/overview.md).
+Ao ler este guia, você sabe como visualizar e gerenciar os dados de perfil de sua organização usando a interface do usuário do Experience Platform. Para obter informações sobre como trabalhar com dados de perfil usando APIs do Experience Platform, consulte o [Guia da API de perfil do cliente em tempo real](../api/overview.md).

@@ -2,16 +2,16 @@
 title: Perguntas frequentes do Audiences
 description: Descubra respostas para perguntas frequentes sobre públicos-alvo e outros conceitos relacionados à segmentação.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: 29d9445e6e71c60f4b596a5e645a56d2b70e133c
+source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
 workflow-type: tm+mt
-source-wordcount: '4235'
-ht-degree: 0%
+source-wordcount: '4830'
+ht-degree: 2%
 
 ---
 
 # Perguntas frequentes
 
-O Adobe Experience Platform [!DNL Segmentation Service] fornece uma interface de usuário e uma API RESTful que permite criar públicos-alvo por meio de definições de segmento ou outras fontes a partir dos dados do [!DNL Real-Time Customer Profile]. Esses públicos-alvo são configurados e mantidos centralmente na Platform e estão prontamente acessíveis por qualquer solução da Adobe. Veja a seguir uma lista das perguntas frequentes sobre públicos-alvo e segmentação.
+O Adobe Experience Platform [!DNL Segmentation Service] fornece uma interface de usuário e uma API RESTful que permite criar públicos-alvo por meio de definições de segmento ou outras fontes a partir dos dados do [!DNL Real-Time Customer Profile]. Esses públicos-alvo são configurados e mantidos centralmente na Platform e podem ser acessados prontamente por qualquer solução da Adobe. Veja a seguir uma lista das perguntas frequentes sobre públicos-alvo e segmentação.
 
 ## Portal de público-alvo
 
@@ -19,7 +19,7 @@ A seção a seguir lista perguntas relacionadas ao Audience Portal.
 
 ### Tenho acesso ao Audience Portal e à Composição de público-alvo?
 
-O Audience Portal e a Composição de público-alvo estão disponíveis para todos os clientes do Real-Time CDP Prime e Ultimate (edições B2C, B2B e B2P) e para clientes do Journey Optimizer Select, Prime, Ultimate Starter e Ultimate.
+O Audience Portal e a Composição de público-alvo estão disponíveis para todos os clientes do Real-Time CDP Prime e do Ultimate (edições B2C, B2B e B2P) e clientes do Journey Optimizer Select, Prime, Ultimate Starter e Ultimate.
 
 Nesse momento, somente os públicos-alvo baseados em perfil são compatíveis. O suporte para públicos-alvo baseados em conta será adicionado em uma versão posterior.
 
@@ -51,9 +51,9 @@ Sim, o público-alvo gerado externamente será mesclado com o perfil existente n
 
 ### Como as preferências de consentimento do cliente são respeitadas para públicos-alvo gerados externamente que são importados para o Audience Portal?{#consent}
 
-Como os dados do cliente são capturados em vários canais, as políticas de compilação e mesclagem de identidades permitem que esses dados sejam consolidados em um único Perfil do cliente em tempo real. As informações sobre as preferências de consentimento dos clientes são armazenadas e avaliadas no nível do perfil.
+Como os dados do cliente são captados em vários canais, as políticas de mesclagem e de compilação de identidades permitem que esses dados sejam consolidados em um mesmo perfil do cliente em tempo real. As informações sobre as preferências de consentimento dos clientes são armazenadas e avaliadas na camada do perfil.
 
-Os destinos downstream verificam cada perfil em busca de informações de consentimento antes da ativação. As informações de consentimento de cada perfil são comparadas com os requisitos de consentimento de um determinado destino. Se o perfil não atender aos requisitos, ele não será enviado para um destino.
+Os destinos downstream verificam cada perfil em busca de informações de consentimento antes da ativação. As informações de consentimento de cada perfil são comparadas com os requisitos de consentimento de um determinado destino. Se o perfil não satisfizer os requisitos, ele não será enviado a um destino.
 
 Quando um público externo é assimilado no Portal de público-alvo, ele é unido a perfis existentes usando uma ID primária, como email ou ECID. Como resultado, as políticas de consentimento existentes permanecerão em vigor durante a ativação.
 
@@ -180,7 +180,7 @@ Quando um público-alvo está no estado publicado, você **não pode** alterar o
 
 ### Como colocar um público-alvo no estado publicado?
 
-Para públicos-alvo criados com o Construtor de segmentos ou a Composição de público-alvo, é possível definir o público-alvo para o estado publicado ao selecionar &quot;[!UICONTROL Publish]&quot; nas respectivas interfaces do usuário.
+Para públicos-alvo criados com o Construtor de segmentos ou a Composição de público-alvo, é possível definir o público-alvo para o estado publicado ao selecionar &quot;[!UICONTROL Publicar]&quot; nas respectivas interfaces do usuário.
 
 Os públicos-alvo criados externamente são definidos como publicados automaticamente.
 
@@ -194,7 +194,7 @@ Para colocar um público publicado no estado inativo, abra o menu de ações rá
 >
 >O estado &quot;republicado&quot; é igual ao estado publicado para o comportamento do público-alvo.
 
-Você pode republicar um público selecionando um público que esteja no estado inativo, abrindo o menu de ações rápidas no Portal de público e selecionando [!UICONTROL Publish].
+Você pode republicar um público selecionando um público que esteja no estado inativo, abrindo o menu de ações rápidas no Portal de público e selecionando [!UICONTROL Publicar].
 
 ### Como colocar um público-alvo no estado excluído?
 
@@ -358,6 +358,16 @@ A seção a seguir lista perguntas relacionadas à associação de público-alvo
 
 Para confirmar a associação de público-alvo de um perfil, visite a página de detalhes do perfil do perfil que deseja confirmar. Selecione **[!UICONTROL Atributos]**, seguido por **[!UICONTROL Exibir JSON]**, e você poderá confirmar se o objeto `segmentMembership` contém a ID do público-alvo.
 
+### A associação de público pode variar entre a associação ideal e real?
+
+Sim, a associação de público-alvo pode variar entre associação ideal e real se um público-alvo for avaliado usando a segmentação por transmissão **e**, esse público-alvo será baseado em um público-alvo avaliado usando a segmentação em lote.
+
+Por exemplo, se o Público-alvo A se basear no Público-alvo B e o Público-alvo B for avaliado usando a segmentação em lote, já que o Público-alvo B é atualizado somente a cada 24 horas, o Público-alvo A se afastará dos dados reais até ressincronizar com as atualizações do Público-alvo B.
+
+## Segmentação em lote {#batch-segmentation}
+
+A seção a seguir lista perguntas relacionadas à segmentação em lote.
+
 ### Como a segmentação em lote resolve a associação de perfis?
 
 Os públicos avaliados usando a segmentação em lote são resolvidos diariamente, com os resultados da associação de público sendo registrados no atributo `segmentMembership` do perfil. As pesquisas de perfil geram uma nova versão do perfil no momento da pesquisa, mas **não** atualiza os resultados da segmentação em lote.
@@ -380,3 +390,44 @@ Pode levar até três horas para que os dados de transmissão estejam disponíve
 
 Por exemplo, se um trabalho de segmentação em lote for executado às 21 horas, será garantido que ele conterá transmissão de dados assimilados **até** 18 horas. Os dados assimilados por transmissão que foram assimilados após as 18h, mas antes das 21h de **maio** serão incluídos.
 
+## Segmentação de borda {#edge-segmentation}
+
+A seção a seguir lista perguntas relacionadas à segmentação de borda.
+
+### Quanto tempo leva para uma definição de segmento ficar disponível no Edge Network?
+
+Demora até uma hora para uma definição de segmento estar disponível no Edge Network.
+
+## Segmentação de transmissão {#streaming-segmentation}
+
+A seção a seguir lista perguntas relacionadas à segmentação de transmissão.
+
+### A &quot;desqualificação&quot; da segmentação por transmissão também ocorre em tempo real?
+
+Para a maioria das instâncias, a desqualificação da segmentação por transmissão ocorre em tempo real. No entanto, os segmentos de transmissão que usam segmentos de segmentos **não** não se qualificam em tempo real, em vez disso, se desqualificam após 24 horas.
+
+### Em quais dados a segmentação por transmissão funciona?
+
+A segmentação de streaming funciona em todos os dados que foram assimilados usando uma fonte de streaming. Os dados assimilados usando uma fonte baseada em lote serão avaliados à noite, mesmo que se qualifiquem para segmentação por transmissão. Os eventos transmitidos para o sistema com um carimbo de data e hora com mais de 24 horas serão processados na tarefa em lote subsequente.
+
+### Como os segmentos são definidos como segmentação em lote ou por transmissão?
+
+Uma definição de segmento é definida como segmentação de lote, fluxo ou borda com base em uma combinação de tipo de consulta e duração do histórico de eventos. Uma lista de quais segmentos serão avaliados como uma definição de segmento de streaming pode ser encontrada na [seção de tipos de consulta de segmentação de streaming](#query-types).
+
+Observe que se uma definição de segmento contiver **ambos** uma expressão `inSegment` e uma cadeia direta de evento único, ela não poderá se qualificar para segmentação de transmissão. Se você quiser que essa definição de segmento se qualifique para a segmentação por transmissão, transforme a cadeia direta de evento único em seu próprio segmento.
+
+### Por que o número de segmentos &quot;total qualificado&quot; continua aumentando, enquanto o número em &quot;Últimos X dias&quot; permanece em zero na seção de detalhes de definição do segmento?
+
+O número total de segmentos qualificados é retirado do trabalho diário de segmentação, que inclui públicos qualificados para segmentos em lote e de fluxo. Esse valor é mostrado para segmentos em lote e de transmissão.
+
+O número nos &quot;Últimos X dias&quot; **somente** inclui públicos qualificados na segmentação por transmissão e **somente** aumenta se você tiver transmitido dados para o sistema e se contar para essa definição de transmissão. Este valor é **somente** exibido para segmentos de streaming. Como resultado, o valor **maio** é exibido como 0 para segmentos em lote.
+
+Como resultado, se você vir que o número em &quot;Últimos X dias&quot; é zero e o gráfico de linha também está relatando zero, você **não** transmitiu qualquer perfil no sistema que se qualificaria para esse segmento.
+
+### Quanto tempo leva para uma definição de segmento ficar disponível?
+
+Leva até uma hora para uma definição de segmento estar disponível.
+
+### Existem limitações para os dados que estão sendo transmitidos?
+
+Para que os dados transmitidos sejam usados na segmentação por transmissão, **deve** haver um espaçamento entre os eventos transmitidos. Se muitos eventos forem transmitidos no mesmo segundo, a Platform tratará esses eventos como dados gerados pelo bot e eles serão descartados. Como prática recomendada, você deve ter **pelo menos** cinco segundos entre os dados do evento para garantir que os dados sejam usados corretamente.

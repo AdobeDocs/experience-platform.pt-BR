@@ -2,7 +2,7 @@
 title: Notas de versão de agosto de 2023 da Adobe Experience Platform
 description: As notas de versão de agosto de 2023 da Adobe Experience Platform.
 exl-id: c67dca3a-eccb-427e-8ab3-b69c51b57938
-source-git-commit: d6e306294d0a119108e2de7ba03ebed4f633fba1
+source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
 workflow-type: tm+mt
 source-wordcount: '1741'
 ht-degree: 40%
@@ -29,7 +29,7 @@ Atualizações dos recursos já existentes na Adobe Experience Platform:
 
 ## Real-Time Customer Data Platform {#rtcdp}
 
-Criada na Experience Platform, a Real-time Customer Data Platform ([!DNL Real-Time CDP]) ajuda empresas a reunir dados conhecidos e desconhecidos para ativar perfis de clientes com decisões inteligentes em toda a jornada do cliente.
+Criada na Experience Platform, a Real-Time Customer Data Platform ([!DNL Real-Time CDP]) ajuda empresas a reunir dados conhecidos e desconhecidos para ativar perfis de clientes com decisões inteligentes em toda a jornada do cliente.
 
 A [!DNL Real-Time CDP] combina várias fontes de dados corporativos para criar perfis de clientes em tempo real. Os segmentos criados a partir desses perfis podem ser enviados para destinos downstream com o fim de oferecer experiências de cliente personalizadas em todos os canais e dispositivos.
 
@@ -82,7 +82,7 @@ A Adobe Experience Platform fornece um conjunto de tecnologias que permitem cole
 
 | Tipo | Recurso | Descrição |
 | --- | --- | --- |
-| Tags e encaminhamento de eventos | [Marcas de Experience Platform (China)](/help/tags/ui/publishing/premium-cdn.md) | O novo recurso Tags de Experience Platform (China) melhora a confiabilidade e a latência do site, resultando em tempos de resposta mais rápidos para clientes que implantam Tags em sites na China. Agora, os clientes podem utilizar o código JavaScript na biblioteca de tags ao implementar sites na China. Esse recurso também foi adicionado ao Unified Provisioning Protocol (UPP), permitindo que a implantação do produto seja automatizada após a compra. |
+| Tags e encaminhamento de eventos | [Marcas do Experience Platform (China)](/help/tags/ui/publishing/premium-cdn.md) | O novo recurso Tags do Experience Platform (China) melhora a confiabilidade e a latência do site, resultando em tempos de resposta mais rápidos para clientes que implantam Tags em sites na China. Agora, os clientes podem utilizar o código JavaScript na biblioteca de tags ao implementar sites na China. Esse recurso também foi adicionado ao Unified Provisioning Protocol (UPP), permitindo que a implantação do produto seja automatizada após a compra. |
 
 {style="table-layout:auto"}
 
@@ -156,7 +156,7 @@ O Serviço de identidade da Adobe Experience Platform fornece uma visão abrange
 
 | Recurso | Descrição |
 | --- | --- |
-| Alterações nos limites do gráfico de identidade | Até o final de setembro, o gráfico de identidade será alterado para 50 identidades por gráfico, e a identidade mais recente será assimilada. Como consequência, a identidade mais antiga será excluída com base no carimbo de data e hora de assimilação e no tipo de identidade, com os tipos de identidade de cookie sendo excluídos primeiro. Hoje, os gráficos de identidade têm um limite de 150 identidades por gráfico e, uma vez atingido esse limite, os gráficos não são mais atualizados. Entre em contato com o representante de conta para solicitar uma alteração no tipo de identidade se a sandbox de produção contiver: <ul><li>um namespace personalizado em que os identificadores de pessoa (como IDs de CRM) são configurados como tipo de identidade de cookie/dispositivo.</li><li>um namespace personalizado em que os identificadores de cookie/dispositivo são configurados como tipo de identidade entre dispositivos.</li></ul> A engenharia de Adobe processará manualmente essas solicitações. Para obter mais informações, leia as [medidas de proteção para os dados do Serviço de Identidade](../../identity-service/guardrails.md). |
+| Alterações nos limites do gráfico de identidade | Até o final de setembro, o gráfico de identidade será alterado para 50 identidades por gráfico, e a identidade mais recente será assimilada. Como consequência, a identidade mais antiga será excluída com base no carimbo de data e hora de assimilação e no tipo de identidade, com os tipos de identidade de cookie sendo excluídos primeiro. Hoje, os gráficos de identidade têm um limite de 150 identidades por gráfico e, uma vez atingido esse limite, os gráficos não são mais atualizados. Entre em contato com o representante de conta para solicitar uma alteração no tipo de identidade se a sandbox de produção contiver: <ul><li>um namespace personalizado em que os identificadores de pessoa (como IDs de CRM) são configurados como tipo de identidade de cookie/dispositivo.</li><li>um namespace personalizado em que os identificadores de cookie/dispositivo são configurados como tipo de identidade entre dispositivos.</li></ul> A engenharia do Adobe processará manualmente essas solicitações. Para obter mais informações, leia as [medidas de proteção para os dados do Serviço de Identidade](../../identity-service/guardrails.md). |
 
 Para obter mais informações, leia a [visão geral do Serviço de Identidade](../../identity-service/home.md).
 
@@ -168,7 +168,7 @@ O [!DNL Segmentation Service] permite segmentar dados relacionados a indivíduos
 
 | Recurso | Descrição |
 | --- | --- |
-| Públicos-alvo semelhantes (disponibilidade limitada) | Públicos semelhantes fornecem insights inteligentes sobre cada um de seus públicos, aproveitando insights baseados em aprendizado de máquina para identificar e direcionar clientes de alto valor com suas campanhas de marketing. Com Públicos-alvo semelhantes, você pode criar públicos-alvo expandidos que direcionem clientes semelhantes aos seus públicos-alvo de alto desempenho ou clientes-alvo semelhantes aos públicos-alvo convertidos anteriormente. Para obter mais informações sobre públicos-alvo semelhantes, leia a [Visão geral sobre públicos-alvo semelhantes](../../segmentation/ui/lookalike-audiences.md). |
+| Públicos-alvo semelhantes (disponibilidade limitada) | Públicos semelhantes fornecem insights inteligentes sobre cada um de seus públicos, aproveitando insights baseados em aprendizado de máquina para identificar e direcionar clientes de alto valor com suas campanhas de marketing. Com Públicos-alvo semelhantes, você pode criar públicos-alvo expandidos que direcionem clientes semelhantes aos seus públicos-alvo de alto desempenho ou clientes-alvo semelhantes aos públicos-alvo convertidos anteriormente. Para obter mais informações sobre públicos-alvo semelhantes, leia a [Visão geral sobre públicos-alvo semelhantes](../../segmentation/types/account-audiences.md). |
 
 {style="table-layout:auto"}
 

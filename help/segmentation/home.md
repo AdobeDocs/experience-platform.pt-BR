@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Visão geral do serviço de segmentação
 description: Saiba mais sobre o Serviço de segmentação da Adobe Experience Platform e a função que ele desempenha no ecossistema da plataforma.
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-source-git-commit: 4ef3f6dc07cb5d17146d48c7a41e3745fd9a3a58
+source-git-commit: acc0c1b3f088e412c68557a4a7310889f2ad65a7
 workflow-type: tm+mt
-source-wordcount: '1679'
-ht-degree: 12%
+source-wordcount: '1665'
+ht-degree: 11%
 
 ---
 
@@ -54,7 +54,7 @@ Para obter informações sobre como criar definições de segmento usando a API,
 
 ### Composição de público-alvo federado {#fac}
 
-Além das composições de público-alvo e definições de segmento, você pode usar a Composição de público-alvo federado do Adobe para criar novos públicos-alvo a partir de conjuntos de dados corporativos sem copiar os dados subjacentes e armazená-los no Portal de público-alvo da Adobe Experience Platform. Você também pode enriquecer os públicos-alvo existentes no Adobe Experience Platform utilizando dados de público-alvo compostos que foram federados a partir do data warehouse corporativo. Leia o guia em [Composição de Público-Alvo Federado](https://experienceleague.adobe.com/pt-br/docs/federated-audience-composition/using/home).
+Além das composições de público-alvo e definições de segmento, você pode usar a Adobe Federated Audience Composition para criar novos públicos-alvo a partir de conjuntos de dados corporativos sem copiar os dados subjacentes e armazená-los no Adobe Experience Platform Audience Portal. Você também pode enriquecer os públicos-alvo existentes no Adobe Experience Platform utilizando dados de público-alvo compostos que foram federados a partir do data warehouse corporativo. Leia o guia em [Composição de Público-Alvo Federado](https://experienceleague.adobe.com/pt-br/docs/federated-audience-composition/using/home).
 
 ## Avaliar públicos-alvo {#evaluate-segments}
 
@@ -67,7 +67,6 @@ Além das composições de público-alvo e definições de segmento, você pode 
 >id="platform_segments_evaluation_streaming"
 >title="Avaliação de transmissão"
 >abstract="A segmentação de transmissão é um processo contínuo de seleção de dados que atualiza os públicos-alvo em resposta à atividade do usuário."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/api/streaming-segmentation.html?lang=pt-BR" text="Avaliar eventos em tempo quase real com a segmentação de transmissão"
 
 Atualmente, a Platform aceita três métodos de avaliação de públicos-alvo: segmentação de transmissão, segmentação em lote e segmentação de borda.
 
@@ -75,7 +74,7 @@ Atualmente, a Platform aceita três métodos de avaliação de públicos-alvo: s
 
 A segmentação por transmissão é um processo contínuo de seleção de dados que atualiza os públicos-alvo em resposta à atividade do usuário. Depois que um público-alvo é criado e salvo, a definição do segmento é aplicada contra os dados recebidos para [!DNL Real-Time Customer Profile]. As adições e remoções para o público-alvo são processadas regularmente, garantindo que o público-alvo permaneça relevante.
 
-Para saber mais sobre a segmentação por transmissão, leia a [documentação sobre segmentação por transmissão](./api/streaming-segmentation.md).
+Para saber mais sobre a segmentação por transmissão, leia a [documentação sobre segmentação por transmissão](./methods/streaming-segmentation.md).
 
 ### Segmentação em lote {#batch}
 
@@ -94,11 +93,10 @@ Os públicos-alvo em lote são avaliados automaticamente a cada 24 horas. Se qui
 >id="platform_segments_evaluation_edge"
 >title="Avaliação da borda"
 >abstract="A segmentação de borda é a capacidade de avaliar segmentos na rede de borda da Platform instantaneamente, permitindo casos de uso de personalização da mesma página ou da próxima página."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/edge-segmentation.html?lang=pt-BR" text="Guia da interface de segmentação de borda"
 
-A segmentação do Edge é a capacidade de avaliar segmentos na Platform instantaneamente [no Edge Network](../web-sdk/home.md), permitindo casos de uso de personalização de mesma página e próxima página.
+A segmentação do Edge é a capacidade de avaliar segmentos na Platform instantaneamente [na Edge Network](../landing/edge-and-hub-comparison.md), permitindo casos de uso de personalização de mesma página e próxima página.
 
-Para saber mais sobre a segmentação de borda, leia a [documentação da API](./api/edge-segmentation.md) ou a [documentação da interface](./ui/edge-segmentation.md).
+Para saber mais sobre a segmentação de borda, leia a [documentação da API](./methods/edge-segmentation.md) ou a [documentação da interface](./methods/edge-segmentation.md).
 
 ## Acessar resultados de segmentação
 
@@ -165,7 +163,7 @@ Ao atribuir uma variável ao atributo de estado de compra, a definição de segm
 
 ### Segmentação de várias entidades {#multi-entity}
 
-Com o recurso avançado de segmentação de várias entidades, você pode estender dados do [!DNL Real-Time Customer Profile] com dados adicionais com base em produtos, lojas ou outras entidades que não sejam de pessoas, também conhecidas como entidades de &quot;dimensão&quot;. Como resultado, [!DNL Segmentation Service] pode acessar campos adicionais durante a definição do segmento como se fossem nativos do armazenamento de dados [!DNL Profile]. A segmentação de várias entidades oferece flexibilidade ao identificar públicos com base em dados relevantes para suas necessidades comerciais exclusivas. Para obter mais informações, incluindo casos de uso e fluxos de trabalho, consulte o [guia de segmentação de várias entidades](multi-entity-segmentation.md).
+Com o recurso avançado de segmentação de várias entidades, você pode estender dados do [!DNL Real-Time Customer Profile] com dados adicionais com base em produtos, lojas ou outras entidades que não sejam de pessoas, também conhecidas como entidades de &quot;dimensão&quot;. Como resultado, [!DNL Segmentation Service] pode acessar campos adicionais durante a definição do segmento como se fossem nativos do armazenamento de dados [!DNL Profile]. A segmentação de várias entidades oferece flexibilidade ao identificar públicos com base em dados relevantes para suas necessidades comerciais exclusivas. Para obter mais informações, incluindo casos de uso e fluxos de trabalho, consulte o [guia de segmentação de várias entidades](./tutorials/multi-entity-segmentation.md).
 
 ## [!DNL Segmentation Service] tipos de dados
 

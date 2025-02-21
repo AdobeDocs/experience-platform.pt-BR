@@ -3,7 +3,7 @@ title: Ativar públicos para destinos de personalização de borda
 description: Saiba como ativar públicos do Adobe Experience Platform para destinos de personalização de borda para casos de uso de personalização de mesma página e próxima página.
 type: Tutorial
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: 14dccb993b38ca352c6de3ed851bafe7c44ca631
+source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
 workflow-type: tm+mt
 source-wordcount: '1957'
 ht-degree: 2%
@@ -15,7 +15,7 @@ ht-degree: 2%
 
 ## Visão geral {#overview}
 
-O Adobe Experience Platform usa a [segmentação de borda](../../segmentation/ui/edge-segmentation.md) juntamente com os [destinos de borda](/help/destinations/destination-types.md#edge-personalization-destinations) para permitir que os clientes criem e direcionem públicos-alvo em alta escala, em tempo real. Esse recurso ajuda a configurar casos de uso de personalização de mesma página e próxima página.
+O Adobe Experience Platform usa a [segmentação de borda](../../segmentation/methods/edge-segmentation.md) juntamente com os [destinos de borda](/help/destinations/destination-types.md#edge-personalization-destinations) para permitir que os clientes criem e direcionem públicos-alvo em alta escala, em tempo real. Esse recurso ajuda a configurar casos de uso de personalização de mesma página e próxima página.
 
 Exemplos de destinos de borda são as conexões [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) e [Personalização personalizada](../../destinations/catalog/personalization/custom-personalization.md).
 
@@ -31,13 +31,13 @@ Exemplos de destinos de borda são as conexões [Adobe Target](../../destination
 > 
 > Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 
-Este artigo explica o fluxo de trabalho necessário para ativar públicos para destinos de borda do Adobe Experience Platform. Quando usados junto com a [segmentação de borda](../../segmentation/ui/edge-segmentation.md) e o [mapeamento de atributos de perfil](#mapping) opcional, esses destinos habilitam casos de uso de personalização de mesma página e próxima página em suas propriedades da Web e móveis.
+Este artigo explica o fluxo de trabalho necessário para ativar públicos para destinos de borda do Adobe Experience Platform. Quando usados junto com a [segmentação de borda](../../segmentation/methods/edge-segmentation.md) e o [mapeamento de atributos de perfil](#mapping) opcional, esses destinos habilitam casos de uso de personalização de mesma página e próxima página em suas propriedades da Web e móveis.
 
 Para obter uma breve visão geral sobre como configurar a conexão do Adobe Target para personalização de borda, assista ao vídeo abaixo.
 
 >[!NOTE]
 >
->A interface do usuário do Experience Platform é atualizada com frequência e pode ter mudado desde a gravação deste vídeo. Para obter as informações mais atualizadas, consulte as etapas de configuração descritas nas seções abaixo.
+>A interface do usuário do Experience Platform é atualizada com frequência e pode ter sido alterada desde a gravação deste vídeo. Para obter as informações mais atualizadas, consulte as etapas de configuração descritas nas seções abaixo.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3418799/?quality=12&learn=on)
 
@@ -47,15 +47,15 @@ Para obter uma breve visão geral de como compartilhar públicos-alvo e atributo
 
 ## Casos de uso {#use-cases}
 
-Use as soluções de personalização de Adobe, como o Adobe Target, ou suas próprias plataformas de parceiros de personalização (por exemplo, [!DNL Optimizely], [!DNL Pega]), e sistemas proprietários (por exemplo, CMS interno) para potencializar uma experiência mais profunda de personalização do cliente por meio do destino [Personalization personalizada](../catalog/personalization/custom-personalization.md). Tudo isso enquanto também aproveita os recursos de coleta e segmentação de dados do Experience Platform Edge Network.
+Use as soluções de personalização da Adobe, como o Adobe Target, ou suas próprias plataformas de parceiros de personalização (por exemplo, [!DNL Optimizely], [!DNL Pega]), bem como sistemas proprietários (por exemplo, CMS interno) para potencializar uma experiência mais profunda de personalização do cliente por meio do destino [Personalization personalizada](../catalog/personalization/custom-personalization.md). Tudo isso enquanto também aproveita os recursos de coleta e segmentação de dados do Experience Platform Edge Network.
 
 Os casos de uso descritos abaixo incluem personalização do site e publicidade direcionada no site.
 
-Para habilitar esses casos de uso, os clientes precisam de uma forma rápida e simplificada de recuperar informações de atributos de perfil e público-alvo do Experience Platform e de enviar essas informações para as conexões [Adobe Target](../catalog/personalization/adobe-target-connection.md) ou [Personalization personalizado](../catalog/personalization/custom-personalization.md) na interface do Experience Platform.
+Para habilitar esses casos de uso, os clientes precisam de uma forma rápida e simplificada de recuperar informações de atributos de perfil e público-alvo do Experience Platform e de enviar essas informações para as conexões do [Adobe Target](../catalog/personalization/adobe-target-connection.md) ou do [Personalization personalizado](../catalog/personalization/custom-personalization.md) na interface do usuário do Experience Platform.
 
 ### Personalização de mesma página {#same-page}
 
-Um usuário visita uma página do site. Você pode usar as informações de visita da página atual (por exemplo, URL de referência, idioma do navegador, informações de produto incorporadas) para selecionar a próxima ação ou decisão (por exemplo, personalização), usando a conexão [Personalização personalizada](../catalog/personalization/custom-personalization.md) para plataformas que não sejam Adobe (por exemplo, [!DNL Pega], [!DNL Optimizely] ou outras.).
+Um usuário visita uma página do site. Você pode usar as informações de visita da página atual (por exemplo, URL de referência, idioma do navegador, informações de produto inseridas) para selecionar a próxima ação ou decisão (por exemplo, personalização), usando a conexão [Personalização personalizada](../catalog/personalization/custom-personalization.md) para plataformas que não sejam da Adobe (por exemplo, [!DNL Pega], [!DNL Optimizely] ou outras.).
 
 ### Personalização da próxima página {#next-page}
 
@@ -75,7 +75,7 @@ Uma empresa de vendas e aluguel de residências quer personalizar sua página in
 
 ### Configurar um fluxo de dados na interface da coleção de dados {#configure-datastream}
 
-A primeira etapa na configuração do destino de personalização é configurar um fluxo de dados para o SDK da Web do Experience Platform. Isso é feito na interface da Coleção de dados.
+A primeira etapa na configuração do destino de personalização é configurar um fluxo de dados para o Experience Platform Web SDK. Isso é feito na interface da Coleção de dados.
 
 Ao configurar a sequência de dados, em **[!UICONTROL Adobe Experience Platform]**, verifique se a **[!UICONTROL Segmentação do Edge]** e os **[!UICONTROL Destinos do Personalization]** estão selecionados.
 
@@ -85,11 +85,11 @@ Ao configurar a sequência de dados, em **[!UICONTROL Adobe Experience Platform]
 
 ![Configuração de sequência de dados com Segmentação do Edge e Destinos do Personalization realçados!](../assets/ui/activate-edge-personalization-destinations/datastream-config.png)
 
-Para obter mais detalhes sobre como configurar uma sequência de dados, siga as instruções descritas na [documentação do SDK da Web da plataforma](../../datastreams/configure.md#aep).
+Para obter mais detalhes sobre como configurar uma sequência de dados, siga as instruções descritas na [documentação do Platform Web SDK](../../datastreams/configure.md#aep).
 
 ### Criar uma política de mesclagem [!DNL Active-On-Edge] {#create-merge-policy}
 
-Depois de criar a conexão de destino, você deve criar uma política de mesclagem do [!DNL Active-On-Edge]. A política de mesclagem do [!DNL Active-On-Edge] garante que os públicos-alvo sejam avaliados constantemente [na borda](../../segmentation/ui/edge-segmentation.md) e estejam disponíveis para o caso de uso de personalização em tempo real e na próxima página.
+Depois de criar a conexão de destino, você deve criar uma política de mesclagem do [!DNL Active-On-Edge]. A política de mesclagem do [!DNL Active-On-Edge] garante que os públicos-alvo sejam avaliados constantemente [na borda](../../segmentation/methods/edge-segmentation.md) e estejam disponíveis para o caso de uso de personalização em tempo real e na próxima página.
 
 >[!IMPORTANT]
 >
@@ -140,9 +140,9 @@ Para selecionar os públicos que você deseja ativar para o destino, use as caix
 
 Você pode selecionar entre vários tipos de públicos-alvo, dependendo de sua origem:
 
-* **[!UICONTROL Serviço de segmentação]**: públicos-alvo gerados em Experience Platform pelo serviço de segmentação. Consulte a [documentação de segmentação](../../segmentation/ui/overview.md) para obter mais detalhes.
+* **[!UICONTROL Serviço de segmentação]**: públicos-alvo gerados no Experience Platform pelo serviço de segmentação. Consulte a [documentação de segmentação](../../segmentation/ui/overview.md) para obter mais detalhes.
 * **[!UICONTROL Upload personalizado]**: públicos-alvo gerados fora do Experience Platform e carregados na Platform como arquivos CSV. Para saber mais sobre públicos-alvo externos, consulte a documentação sobre [importação de um público-alvo](../../segmentation/ui/audience-portal.md#import-audience).
-* Outros tipos de públicos-alvo, originados de outras soluções de Adobe, como o [!DNL Audience Manager].
+* Outros tipos de públicos-alvo, originados de outras soluções da Adobe, como o [!DNL Audience Manager].
 
 ![Selecione a etapa de públicos do fluxo de trabalho de ativação com vários públicos realçados.](../assets/ui/activate-edge-personalization-destinations/select-audiences.png)
 
@@ -150,9 +150,9 @@ Você pode selecionar entre vários tipos de públicos-alvo, dependendo de sua o
 
 >[!IMPORTANT]
 >
->Os atributos do perfil podem conter dados confidenciais. Para proteger esses dados, o destino **[!UICONTROL Personalization Personalizado]** exige que você use a [API do Servidor Edge Network](../../server-api/overview.md) ao configurar o destino para personalização baseada em atributos. Todas as chamadas da API do Servidor devem ser feitas em um [contexto autenticado](../../server-api/authentication.md).
+>Os atributos do perfil podem conter dados confidenciais. Para proteger esses dados, o destino **[!UICONTROL Personalization Personalizado]** exige que você use a [API do Edge Network Server](../../server-api/overview.md) ao configurar o destino para personalização baseada em atributos. Todas as chamadas da API do Servidor devem ser feitas em um [contexto autenticado](../../server-api/authentication.md).
 >
-><br>Se já estiver usando o SDK da Web ou o SDK móvel para a integração, você poderá recuperar atributos por meio da API do servidor adicionando uma integração do lado do servidor.
+><br>Se já estiver usando o Web SDK ou o Mobile SDK para sua integração, você poderá recuperar atributos por meio da API do servidor adicionando uma integração do lado do servidor.
 >
 ><br>Se você não seguir os requisitos acima, a personalização será baseada somente na associação ao público-alvo.
 
@@ -204,7 +204,7 @@ Se sua organização adquiriu o **Adobe Healthcare Shield** ou o **Adobe Privacy
 
 ### Verificações de política de uso de dados {#data-usage-policy-checks}
 
-Na etapa **[!UICONTROL Revisar]**, o Experience Platform também verifica se há violações de política de uso de dados. Veja abaixo um exemplo de violação de uma política. Não é possível concluir o fluxo de trabalho de ativação de público-alvo até que a violação seja resolvida. Para obter informações sobre como resolver violações de política, leia sobre [violações de política de uso de dados](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) na seção de documentação sobre governança de dados.
+Na etapa **[!UICONTROL Revisão]**, a Experience Platform também verifica se há violações de política de uso de dados. Veja abaixo um exemplo de violação de uma política. Não é possível concluir o fluxo de trabalho de ativação de público-alvo até que a violação seja resolvida. Para obter informações sobre como resolver violações de política, leia sobre [violações de política de uso de dados](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) na seção de documentação sobre governança de dados.
 
 ![Um exemplo de violação de política de dados.](../assets/common/data-policy-violation.png)
 

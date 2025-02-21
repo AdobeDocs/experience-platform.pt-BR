@@ -1,22 +1,23 @@
 ---
-title: Conexão do LinkedIn (Empresas)
+title: (Empresas) LinkedIn connection
 description: Use esse destino para ativar os públicos-alvo da conta para os casos de uso do Account-Based Marketing (ABM). Ative perfis para suas campanhas do LinkedIn para direcionamento de público, personalização e supressão, com base em emails com hash.
 badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 badgeB2P: label="Edição B2P" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
-source-git-commit: e45c50a6447be4a60145eea6956d30d51166e675
+exl-id: 68d2cca3-952b-49d0-8ea2-e776a233b752
+source-git-commit: e7c0551276d31d6809ace096c00e0dc2665090e6
 workflow-type: tm+mt
 source-wordcount: '693'
 ht-degree: 4%
 
 ---
 
-# (Empresas) Conexão do LinkedIn Match Audiences {#companies-linkedin}
+# (Empresas) Conexão de públicos-alvo de correspondência do LinkedIn {#companies-linkedin}
 
 >[!AVAILABILITY]
 >
->A funcionalidade para ativar públicos-alvo da conta para o destino (Empresas) do LinkedIn está disponível para empresas que compram as edições [Business-to-Business](/help/rtcdp/overview.md#rtcdp-b2b) e [Business-to-Person](/help/rtcdp/overview.md#rtcdp-b2p) do Real-time Customer Data Platform.
+>A funcionalidade para ativar públicos-alvo da conta para o destino do LinkedIn (Empresas) está disponível para empresas que compram as edições [Business-to-Business](/help/rtcdp/overview.md#rtcdp-b2b) e [Business-to-Person](/help/rtcdp/overview.md#rtcdp-b2p) do Real-Time Customer Data Platform.
 
-Use este destino para ativar seus [públicos-alvo da conta](/help/segmentation/ui/account-audiences.md) para casos de uso do Account-Based Marketing (ABM). Anuncie personalidades e funções relevantes em suas contas de destino por meio do destino business-to-business **[!UICONTROL (Empresas) LinkedIn]**. Visite a documentação do LinkedIn para [saber mais sobre o direcionamento de conta](https://business.linkedin.com/marketing-solutions/cx/21/10/ad-targeting/account-targeting) na plataforma LinkedIn.
+Use este destino para ativar seus [públicos-alvo da conta](/help/segmentation/types/account-audiences.md) para casos de uso do Account-Based Marketing (ABM). Anuncie para personas e funções relevantes em suas contas de destino por meio do LinkedIn **[!UICONTROL (Empresas)]** de destino B2B. Visite a documentação do LinkedIn para [saber mais sobre o direcionamento de conta](https://business.linkedin.com/marketing-solutions/cx/21/10/ad-targeting/account-targeting) na plataforma do LinkedIn.
 
 >[!TIP]
 >
@@ -30,7 +31,7 @@ Esta seção descreve que tipo de público-alvo você pode exportar para esse de
 
 | Origem do público | Suportado | Descrição |
 ---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Públicos gerados por meio do [Serviço de segmentação](../../../segmentation/home.md) do Experience Platform. |
+| [!DNL Segmentation Service] | ✓ | Públicos-alvo gerados pelo [Serviço de Segmentação](../../../segmentation/home.md) da Experience Platform. |
 | Uploads personalizados | X | Públicos [importados](../../../segmentation/ui/overview.md#import-audience) para o Experience Platform de arquivos CSV. |
 
 {style="table-layout:auto"}
@@ -48,9 +49,9 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 
 ## Pré-requisitos {#prerequisites}
 
-Verifique os pré-requisitos abaixo para exportar públicos-alvo da conta para a LinkedIn:
+Verifique os pré-requisitos abaixo para exportar públicos-alvo da conta para o LinkedIn:
 
-### Pré-requisitos da conta do linkedIn {#LinkedIn-account-prerequisites}
+### Pré-requisitos da conta do LinkedIn {#LinkedIn-account-prerequisites}
 
 Antes de usar o destino [!UICONTROL (Empresas) LinkedIn Matched Audience], verifique se a sua conta [!DNL LinkedIn Campaign Manager] tem o nível de permissão [!DNL Creative Manager] ou superior.
 
@@ -68,10 +69,10 @@ Para se conectar a este destino, siga as etapas descritas no [tutorial de config
 
 1. Localize o destino [!DNL (Companies) LinkedIn Matched Audiences] no catálogo de destino e selecione **[!UICONTROL Configurar]**.
 2. Selecione **[!UICONTROL Conectar ao destino]**.
-   ![Autenticar no LinkedIn](/help/destinations/assets/catalog/social/linkedin-b2b/authenticate-linkedin-destination.png)
+   ![Autenticar para o LinkedIn](/help/destinations/assets/catalog/social/linkedin-b2b/authenticate-linkedin-destination.png)
 3. Insira suas credenciais do LinkedIn e selecione **Fazer logon**.
 
-Após concluir o processo de logon com o LinkedIn, você pode prosseguir para a próxima etapa.
+Depois de concluir o processo de logon com o LinkedIn, você pode prosseguir para a próxima etapa.
 
 ### Preencher detalhes do destino {#destination-details}
 
@@ -81,7 +82,7 @@ Para configurar detalhes para o destino, preencha os campos obrigatórios e opci
 * **[!UICONTROL Descrição]**: uma descrição que ajudará você a identificar este destino no futuro.
 * **[!UICONTROL ID da Conta]**: Seu [!DNL LinkedIn Campaign Manager Account ID]. Você pode encontrar essa ID na sua conta do [!DNL LinkedIn Campaign Manager].
 
-Agora você está pronto para ativar os públicos-alvo da conta para a LinkedIn.
+Agora você está pronto para ativar os públicos-alvo da conta para o LinkedIn.
 
 ## Ativar públicos-alvo para esse destino {#activate}
 
@@ -92,7 +93,7 @@ Agora você está pronto para ativar os públicos-alvo da conta para a LinkedIn.
 
 Leia [Ativar públicos-alvo da conta](/help/destinations/ui/activate-account-audiences.md) para obter instruções sobre como ativar públicos-alvo da conta para este destino.
 
-## Pares de mapeamento necessários na etapa de mapeamento ao ativar públicos-alvo da conta para o destino **[!UICONTROL (Empresas) LinkedIn Matched Audiences]** {#required-mappings}
+## Pares de mapeamento necessários na etapa de mapeamento ao ativar públicos da conta para o destino **[!UICONTROL (Empresas) LinkedIn Matched Audiences]** {#required-mappings}
 
 Ao ativar públicos da conta para o destino **[!UICONTROL (Empresas) LinkedIn Matched Audiences]**, observe que os dois pares de mapeamento a seguir são obrigatórios para exportar dados com êxito:
 

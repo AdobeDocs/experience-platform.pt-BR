@@ -2,7 +2,7 @@
 title: Visão geral do Perfil do cliente em tempo real
 description: O Perfil do cliente em tempo real mescla dados de várias fontes e fornece acesso a esses dados na forma de perfis de clientes individuais e eventos de séries de tempo relacionados. Esse recurso permite que os profissionais de marketing promovam experiências coordenadas, consistentes e relevantes com seus públicos-alvo em vários canais.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: 7d515401eb49ffd2ad5cf0bd074896b274c4fb05
+source-git-commit: fc53d1b32eb3fc0251f307d5b2f076b1153a2931
 workflow-type: tm+mt
 source-wordcount: '1821'
 ht-degree: 1%
@@ -15,7 +15,7 @@ A Adobe Experience Platform permite gerar experiências coordenadas, consistente
 
 ## [!DNL Profile] no Experience Platform
 
-A relação entre o Perfil do cliente em tempo real e outros serviços no Experience Platform é destacada no diagrama a seguir:
+A relação entre o Perfil do cliente em tempo real e outros serviços na Experience Platform é destacada no diagrama a seguir:
 
 ![A relação entre o Perfil do Cliente em Tempo Real e outros serviços na Adobe Experience Platform. Este diagrama mostra que o Perfil é um dos componentes principais do Adobe Experience Platform.](images/profile-overview/profile-in-platform.png)
 
@@ -25,7 +25,7 @@ O [!DNL Real-Time Customer Profile] mescla dados de vários sistemas corporativo
 
 ### Composição da entidade de perfil
 
-Um Perfil de cliente em tempo real é composto por uma entidade principal, chamada **entidade principal**, e várias entidades de suporte. No contexto do Experience Platform, a entidade primária geralmente é uma **entidade de perfil**, que é composta de características, comportamentos e associações de público-alvo de uma pessoa individual. Outras entidades permitem que o mecanismo de segmentação utilize dados fora da entidade principal do perfil e incluem o seguinte:
+Um Perfil de cliente em tempo real é composto por uma entidade principal, chamada **entidade principal**, e várias entidades de suporte. No contexto do Experience Platform, a entidade principal geralmente é uma **entidade de perfil**, que é composta de características, comportamentos e associações de público-alvo de uma pessoa individual. Outras entidades permitem que o mecanismo de segmentação utilize dados fora da entidade principal do perfil e incluem o seguinte:
 
 - **Entidade dimensional**: a entidade usada para simplificar o processo de modelagem de dados para informações compartilhadas entre eventos ou registros de perfil. Também é conhecida como entidade de pesquisa ou entidade de classificação.
 - **Entidade B2B**: entidades que descrevem a relação do perfil com as contas e oportunidades empresa a empresa.
@@ -49,11 +49,11 @@ O armazenamento de perfis usa uma infraestrutura do Microsoft Azure Cosmos DB e 
 
 ### Medidas de proteção de perfil
 
-O Experience Platform fornece uma série de medidas de proteção para ajudar você a evitar a criação de [esquemas do Experience Data Model (XDM)](../xdm/home.md), para os quais o Perfil do cliente em tempo real não pode oferecer suporte. Isso inclui limites flexíveis que resultarão na degradação do desempenho, bem como limites rígidos que resultarão em erros e quebras do sistema. Para obter mais informações, incluindo uma lista de diretrizes e casos de uso de exemplo, leia a documentação [Medidas de proteção de perfil](guardrails.md).
+A Experience Platform fornece uma série de medidas de proteção para ajudar você a evitar a criação de [esquemas do Experience Data Model (XDM)](../xdm/home.md), para os quais o Perfil do cliente em tempo real não pode oferecer suporte. Isso inclui limites flexíveis que resultarão na degradação do desempenho, bem como limites rígidos que resultarão em erros e quebras do sistema. Para obter mais informações, incluindo uma lista de diretrizes e casos de uso de exemplo, leia a documentação [Medidas de proteção de perfil](guardrails.md).
 
 ### Painel do perfil {#profile-dashboard}
 
-A interface do usuário do Experience Platform fornece um painel por meio do qual você pode visualizar informações importantes sobre os dados do Perfil do cliente em tempo real, conforme capturados durante um instantâneo diário. Para saber como acessar e trabalhar com o painel [!DNL Profile] na interface do usuário, além de informações detalhadas sobre as métricas exibidas no painel, consulte o [Guia de interface do usuário do painel de perfil](ui/profile-dashboard.md).
+A interface do usuário do Experience Platform fornece um painel por meio do qual você pode exibir informações importantes sobre os dados do Perfil do cliente em tempo real, conforme capturados durante um instantâneo diário. Para saber como acessar e trabalhar com o painel [!DNL Profile] na interface do usuário, além de informações detalhadas sobre as métricas exibidas no painel, consulte o [Guia de interface do usuário do painel de perfil](ui/profile-dashboard.md).
 
 ### Fragmentos de perfil versus perfis mesclados {#profile-fragments-vs-merged-profiles}
 
@@ -81,7 +81,7 @@ Ao reunir fragmentos de dados de várias fontes e combiná-los para ver uma exib
 
 Quando há dados conflitantes de vários conjuntos de dados, a política de mesclagem determina como esses dados devem ser tratados e qual valor deve ser usado. Por meio das APIs RESTful ou da interface do usuário, você pode criar novas políticas de mesclagem, gerenciar políticas existentes e definir uma política de mesclagem padrão para sua organização.
 
-Para saber mais sobre as políticas de mesclagem e sua função no Experience Platform, comece lendo a [visão geral das políticas de mesclagem](merge-policies/overview.md).
+Para saber mais sobre as políticas de mesclagem e sua função na Experience Platform, comece lendo a [visão geral das políticas de mesclagem](merge-policies/overview.md).
 
 ### Esquemas de união {#profile-fragments-and-union-schemas}
 
@@ -111,7 +111,7 @@ O [!DNL Platform] pode ser configurado para enviar dados de registro e série te
 
 >[!NOTE]
 >
->Dados coletados por meio de soluções Adobe, incluindo [!DNL Analytics Cloud], [!DNL Marketing Cloud] e [!DNL Advertising Cloud], fluem para [!DNL Experience Platform] e são assimilados para [!DNL Profile].
+>Dados coletados pelas soluções da Adobe, incluindo [!DNL Analytics Cloud], [!DNL Marketing Cloud] e [!DNL Advertising Cloud], fluem para [!DNL Experience Platform] e são assimilados em [!DNL Profile].
 
 ### Métricas de assimilação de perfil
 
@@ -135,7 +135,7 @@ A governança de dados é gerenciada em vários pontos. Isso inclui decidir quai
 
 ### Lidar com solicitações de recusa e privacidade de dados
 
-O [!DNL Experience Platform] permite que seus clientes enviem solicitações de recusa relacionadas ao uso e armazenamento de seus dados no [!DNL Real-Time Customer Profile]. Para obter mais informações sobre como as solicitações de recusa são tratadas, consulte a documentação em [atendendo às solicitações de recusa](../segmentation/consents.md).
+O [!DNL Experience Platform] permite que seus clientes enviem solicitações de recusa relacionadas ao uso e armazenamento de seus dados no [!DNL Real-Time Customer Profile]. Para obter mais informações sobre como as solicitações de recusa são tratadas, consulte a documentação em [atendendo às solicitações de recusa](../segmentation/tutorials/consents.md).
 
 ## Próximas etapas e recursos adicionais
 

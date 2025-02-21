@@ -2,7 +2,7 @@
 title: Rastreamento e análise de consentimento
 description: Saiba como criar um painel de análise de consentimento para rastrear a tendência do consentimento do usuário ao longo do tempo.
 exl-id: 34accae5-8b4f-4281-8333-187a91db8199
-source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
+source-git-commit: adc6d50f2784fe665d0590c3af053a057f8e4e38
 workflow-type: tm+mt
 source-wordcount: '1909'
 ht-degree: 0%
@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Rastreamento e análise de consentimento
 
-No cenário de marketing de hoje, você precisa entender e respeitar as preferências de consentimento do cliente. O Adobe Real-time Customer Data Platform oferece a capacidade de os profissionais de marketing analisarem o consentimento do cliente para criar confiança, cumprir as regulamentações de privacidade e fornecer experiências mais personalizadas.
+No cenário de marketing de hoje, você precisa entender e respeitar as preferências de consentimento do cliente. O Adobe Real-Time Customer Data Platform oferece a capacidade de os profissionais de marketing analisarem o consentimento do cliente para criar confiança, cumprir as regulamentações de privacidade e fornecer experiências mais personalizadas.
 
 Este documento detalha como criar um painel de consentimento para vários casos de uso de marketing para dados do Real-Time CDP. Especificamente, ele se concentra em como criar um público-alvo com os atributos apropriados para suas necessidades comerciais e, em seguida, consumir os insights por meio do uso de widgets pré-configurados na interface do usuário do Adobe Experience Platform. Um método alternativo de criar seu próprio widget personalizado com o recurso de painéis definido pelo usuário também é apresentado.
 
@@ -24,7 +24,7 @@ Os casos de uso abordados neste guia são tendência de consentimento e sobrepos
 
 ## Criar públicos-alvo com consentimento {#create-consent-audiences}
 
-Para criar um painel de consentimento, primeiro crie um público-alvo de todos os perfis que consentiram em entrar em contato com o. Para navegar até o Construtor de segmentos do Real-time Customer Data Platform, selecione **[!UICONTROL Públicos-alvo]** na navegação à esquerda da interface do usuário da plataforma. Na guia [!UICONTROL Cliente] do painel [!UICONTROL Públicos-alvo], selecione **[!UICONTROL Criar público-alvo]** na parte superior direita da exibição e **[!UICONTROL Regras de compilação]**.
+Para criar um painel de consentimento, primeiro crie um público-alvo de todos os perfis que consentiram em entrar em contato com o. Para navegar até o Construtor de segmentos do Real-Time Customer Data Platform, selecione **[!UICONTROL Públicos-alvo]** na navegação à esquerda da interface do usuário da plataforma. Na guia [!UICONTROL Cliente] do painel [!UICONTROL Públicos-alvo], selecione **[!UICONTROL Criar público-alvo]** na parte superior direita da exibição e **[!UICONTROL Regras de compilação]**.
 
 ![O painel [!UICONTROL Públicos-alvo] com [!UICONTROL Cliente], [!UICONTROL Públicos-alvo] e [!UICONTROL Criar segmento] foi realçado.](../images/insights-use-cases/consent-analysis/create-audience.png)
 
@@ -36,9 +36,9 @@ Localize seus atributos de consentimento nas opções disponíveis. Selecione **
 
 >[!NOTE]
 >
->Se você tiver mantido o consentimento do usuário em um atributo diferente do grupo de campos recomendado Adobe, deverá selecionar esses atributos em vez dos mostrados abaixo.
+>Se você tiver mantido o consentimento do usuário em um atributo diferente do grupo de campos recomendado do Adobe, deverá selecionar esses atributos em vez dos mostrados abaixo.
 
-Mais informações podem ser encontradas no [tratamento do consentimento na documentação de segmentação](../../segmentation/consents.md#handling-consent-in-segmentation).
+Mais informações podem ser encontradas no [tratamento do consentimento na documentação de segmentação](../../segmentation/tutorials/consents.md#handling-consent-in-segmentation).
 
 ![O Construtor de Segmentos com a pasta de atributos [!UICONTROL Consentimento e Preferências] está realçada.](../images/insights-use-cases/consent-analysis/consent-and-preferences.png)
 

@@ -1,18 +1,18 @@
 ---
 title: Pesquisar atributos de perfil de borda em tempo real
-description: Saiba como pesquisar atributos de perfil de borda em tempo real, usando o destino do Personalization personalizado e a API Edge Network
+description: Saiba como pesquisar atributos de perfil de borda em tempo real, usando o destino do Personalization personalizado e a API do Edge Network
 type: Tutorial
-source-git-commit: 6414168c1deb047af30d8636ef8d61316f56aecf
+exl-id: e185d741-af30-4706-bc8f-d880204d9ec7
+source-git-commit: 276fd7c532843c9589e1d51b0bc7a76cb5c3eb9f
 workflow-type: tm+mt
 source-wordcount: '1904'
 ht-degree: 2%
 
 ---
 
-
 # Pesquisar atributos de perfil na borda em tempo real
 
-A Adobe Experience Platform usa o [Perfil de cliente em tempo real](../../profile/home.md) como a única fonte da verdade para todos os dados de perfil. Para recuperação rápida de dados em tempo real, ele usa [perfis de borda](../../profile/edge-profiles.md), que são perfis leves distribuídos pelo [Edge Network](../../collection/home.md#edge). Isso permite casos de uso de personalização rápidos e em tempo real.
+A Adobe Experience Platform usa o [Perfil de cliente em tempo real](../../profile/home.md) como a única fonte da verdade para todos os dados de perfil. Para recuperação rápida de dados em tempo real, ele usa [perfis de borda](../../profile/edge-profiles.md), que são perfis leves distribuídos pela [Edge Network](../../collection/home.md#edge). Isso permite casos de uso de personalização rápidos e em tempo real.
 
 ## Casos de uso {#use-cases}
 
@@ -27,19 +27,19 @@ Esta página descreve as etapas que você deve seguir para pesquisar dados do pe
 
 Ao configurar o caso de uso descrito nesta página, você usará os seguintes componentes da plataforma:
 
-* [Datastreams](../../datastreams/overview.md): uma sequência de dados recebe dados de evento do SDK da Web e responde com dados de perfil de borda.
+* [Datastreams](../../datastreams/overview.md): uma sequência de dados recebe dados de evento do Web SDK e responde com dados de perfil de borda.
 * [Políticas de Mesclagem](../../segmentation/ui/segment-builder.md#merge-policies): você criará uma política de mesclagem do [!UICONTROL Ative-On-Edge] para garantir que os perfis de borda usem os dados de perfil corretos.
 * [Conexão personalizada com o Personalization](../catalog/personalization/custom-personalization.md): você configurará uma nova conexão personalizada que enviará os atributos do perfil para o Edge Network.
-* [API de Edge Network](../../server-api/overview.md): você usará a funcionalidade [coleção de dados interativa](../../server-api/interactive-data-collection.md) da API de Edge Network para recuperar rapidamente atributos de perfil dos perfis de borda.
+* [API do Edge Network](../../server-api/overview.md): você usará a funcionalidade [coleção de dados interativa](../../server-api/interactive-data-collection.md) da API do Edge Network para recuperar rapidamente atributos de perfil dos perfis de borda.
 
 ## Medidas de proteção de desempenho {#guardrails}
 
-Os casos de uso de pesquisa de perfil do Edge estão sujeitos às medidas de proteção de desempenho específicas descritas na tabela abaixo. Para obter mais detalhes sobre as medidas de proteção da API Edge Network, consulte a [página de documentação](https://developer.adobe.com/data-collection-apis/docs/getting-started/guardrails/) das medidas de proteção.
+Os casos de uso de pesquisa de perfil do Edge estão sujeitos às medidas de proteção de desempenho específicas descritas na tabela abaixo. Para obter mais detalhes sobre as medidas de proteção da API do Edge Network, consulte as medidas de proteção [página de documentação](https://developer.adobe.com/data-collection-apis/docs/getting-started/guardrails/).
 
 | Serviço Edge Network | Segmentação do Edge | Solicitações por segundo |
 |---------|----------|---------|
-| [Destino de personalização personalizado](../catalog/personalization/custom-personalization.md) via [API Edge Network](https://developer.adobe.com/data-collection-apis/docs/api/) | Sim | 1500 |
-| [Destino de personalização personalizado](../catalog/personalization/custom-personalization.md) via [API Edge Network](https://developer.adobe.com/data-collection-apis/docs/api/) | Não | 1500 |
+| [Destino de personalização personalizado](../catalog/personalization/custom-personalization.md) via [API do Edge Network](https://developer.adobe.com/data-collection-apis/docs/api/) | Sim | 1500 |
+| [Destino de personalização personalizado](../catalog/personalization/custom-personalization.md) via [API do Edge Network](https://developer.adobe.com/data-collection-apis/docs/api/) | Não | 1500 |
 
 ## Etapa 1: Criar e configurar um fluxo de dados {#create-datastream}
 
@@ -61,7 +61,7 @@ Siga as etapas na documentação da [configuração da sequência de dados](../.
 
 A pesquisa de atributos de perfil na borda exige que os públicos-alvo sejam configurados para avaliação de borda.
 
-Verifique se os públicos que você planeja ativar têm a [Política de mesclagem ativa no Edge](../../segmentation/ui/segment-builder.md#merge-policies) definida como padrão. A política de mesclagem do [!DNL Active-On-Edge] garante que os públicos-alvo sejam avaliados constantemente [na borda](../../segmentation/ui/edge-segmentation.md) e estejam disponíveis para casos de uso de personalização em tempo real.
+Verifique se os públicos que você planeja ativar têm a [Política de mesclagem ativa no Edge](../../segmentation/ui/segment-builder.md#merge-policies) definida como padrão. A política de mesclagem do [!DNL Active-On-Edge] garante que os públicos-alvo sejam avaliados constantemente [na borda](../../segmentation/methods/edge-segmentation.md) e estejam disponíveis para casos de uso de personalização em tempo real.
 
 Siga as instruções em [criando uma política de mesclagem](../../profile/merge-policies/ui-guide.md#create-a-merge-policy) e habilite a **[!UICONTROL Política de mesclagem Ative-On-Edge]**.
 
@@ -69,9 +69,9 @@ Siga as instruções em [criando uma política de mesclagem](../../profile/merge
 >
 >Se os públicos-alvo usarem uma política de mesclagem diferente, você não poderá recuperar atributos de perfil da borda e não poderá executar a pesquisa de perfil da borda.
 
-## Etapa 3: Enviar dados do atributo de perfil para o Edge Network{#configure-custom-personalization-connection}
+## Etapa 3: enviar dados do atributo de perfil para a Edge Network{#configure-custom-personalization-connection}
 
-Para pesquisar perfis de borda, incluindo atributos e dados de associação de público-alvo, em tempo real, os dados precisam ser disponibilizados no Edge Network. Para isso, você deve criar uma conexão com um destino **[!UICONTROL Personalization Personalizado com Atributos]** e ativar os públicos, incluindo os atributos que você gostaria de pesquisar nos perfis de borda.
+Para pesquisar perfis de borda, incluindo atributos e dados de associação de público-alvo, em tempo real, os dados precisam ser disponibilizados na Edge Network. Para isso, você deve criar uma conexão com um destino **[!UICONTROL Personalization Personalizado com Atributos]** e ativar os públicos, incluindo os atributos que você gostaria de pesquisar nos perfis de borda.
 
 +++ Configurar uma conexão Personalization personalizada com atributos
 
@@ -85,7 +85,7 @@ Ao configurar o novo destino, selecione a sequência de dados que você criou na
 
 +++Ativar os públicos-alvo para a conexão Personalization personalizado com atributos
 
-Depois de criar uma conexão **[!UICONTROL Personalization Personalizada com Atributos]**, você estará pronto para enviar dados de perfil para o Edge Network.
+Depois de criar uma conexão **[!UICONTROL Personalization Personalizada com Atributos]**, você estará pronto para enviar dados de perfil para a Edge Network.
 
 >[!IMPORTANT]
 > 
@@ -109,9 +109,9 @@ Depois de criar uma conexão **[!UICONTROL Personalization Personalizada com Atr
 
    Você pode selecionar entre vários tipos de públicos-alvo, dependendo de sua origem:
 
-   * **[!UICONTROL Serviço de segmentação]**: públicos-alvo gerados em Experience Platform pelo serviço de segmentação. Consulte a [documentação de segmentação](../../segmentation/ui/overview.md) para obter mais detalhes.
+   * **[!UICONTROL Serviço de segmentação]**: públicos-alvo gerados no Experience Platform pelo serviço de segmentação. Consulte a [documentação de segmentação](../../segmentation/ui/overview.md) para obter mais detalhes.
    * **[!UICONTROL Upload personalizado]**: públicos-alvo gerados fora do Experience Platform e carregados na Platform como arquivos CSV. Para saber mais sobre públicos-alvo externos, consulte a documentação sobre [importação de um público-alvo](../../segmentation/ui/overview.md#import-audience).
-   * Outros tipos de públicos-alvo, originados de outras soluções de Adobe, como o [!DNL Audience Manager].
+   * Outros tipos de públicos-alvo, originados de outras soluções da Adobe, como o [!DNL Audience Manager].
 
      ![Selecione a etapa de públicos do fluxo de trabalho de ativação com vários públicos realçados.](../assets/ui/activate-edge-personalization-destinations/select-audiences.png)
 
@@ -129,7 +129,7 @@ Depois de criar uma conexão **[!UICONTROL Personalization Personalizada com Atr
 
 Quando terminar de mapear os atributos do perfil, selecione **[!UICONTROL Avançar]**.
 
-Na página **[!UICONTROL Revisão]**, você pode ver um resumo da sua seleção. Selecione **[!UICONTROL Cancelar]** para interromper o fluxo, **[!UICONTROL Voltar]** para modificar as configurações ou **[!UICONTROL Concluir]** para confirmar a seleção e começar a enviar dados de perfil para o Edge Network.
+Na página **[!UICONTROL Revisão]**, você pode ver um resumo da sua seleção. Selecione **[!UICONTROL Cancelar]** para interromper o fluxo, **[!UICONTROL Voltar]** para modificar as configurações ou **[!UICONTROL Concluir]** para confirmar a seleção e começar a enviar dados de perfil para a Edge Network.
 
 ![Resumo da seleção na etapa de revisão.](../assets/ui/activate-edge-personalization-destinations/review.png)
 
@@ -141,7 +141,7 @@ Se sua organização adquiriu o **Adobe Healthcare Shield** ou o **Adobe Privacy
 
 **Verificações de política de uso de dados**
 
-Na etapa **[!UICONTROL Revisar]**, o Experience Platform também verifica se há violações de política de uso de dados. Veja abaixo um exemplo de violação de uma política. Não é possível concluir o fluxo de trabalho de ativação de público-alvo até que a violação seja resolvida. Para obter informações sobre como resolver violações de política, leia sobre [violações de política de uso de dados](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) na seção de documentação sobre governança de dados.
+Na etapa **[!UICONTROL Revisão]**, a Experience Platform também verifica se há violações de política de uso de dados. Veja abaixo um exemplo de violação de uma política. Não é possível concluir o fluxo de trabalho de ativação de público-alvo até que a violação seja resolvida. Para obter informações sobre como resolver violações de política, leia sobre [violações de política de uso de dados](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) na seção de documentação sobre governança de dados.
 
 ![Um exemplo de violação de política de dados.](../assets/common/data-policy-violation.png)
 
@@ -160,13 +160,13 @@ Se você estiver satisfeito com a sua seleção e nenhuma violação de polític
 
 ## Etapa 4: pesquisar os atributos do perfil na borda {#configure-edge-profile-lookup}
 
-Agora você já deve ter terminado [configurando sua sequência de dados](#create-datastream), você [criou um novo Personalization Personalizado com conexão de destino de Atributos](#configure-destination) e usou essa conexão para [enviar os atributos de perfil](#activate-audiences) que você poderá pesquisar no Edge Network.
+Agora você já deve ter concluído a [configuração da sua sequência de dados](#create-datastream), você [criou uma nova conexão de destino Personalization Personalizada com Atributos](#configure-destination) e usou essa conexão para [enviar os atributos de perfil](#activate-audiences) que você poderá pesquisar na Edge Network.
 
 A próxima etapa é configurar sua solução de personalização para recuperar atributos de perfil dos perfis de borda.
 
 >[!IMPORTANT]
 >
->Os atributos do perfil podem conter dados confidenciais. Para proteger esses dados, você deve recuperar os atributos de perfil por meio da [API Edge Network](../../server-api/overview.md). Além disso, você deve recuperar os atributos de perfil por meio da API de Edge Network [ponto de extremidade de coleta de dados interativa](../../server-api/interactive-data-collection.md) para que as chamadas de API sejam autenticadas.
+>Os atributos do perfil podem conter dados confidenciais. Para proteger esses dados, você deve recuperar os atributos do perfil por meio da [API do Edge Network](../../server-api/overview.md). Além disso, você deve recuperar os atributos do perfil por meio da API do Edge Network [ponto de extremidade de coleta de dados interativa](../../server-api/interactive-data-collection.md), para que as chamadas de API sejam autenticadas.
 ><br>Se você não seguir os requisitos acima, a personalização será baseada somente na associação ao público-alvo e os atributos de perfil não estarão disponíveis para você.
 
 A sequência de dados configurada na [etapa 1](#create-datastream) agora está pronta para aceitar dados de eventos de entrada e responder com informações de perfil de borda.

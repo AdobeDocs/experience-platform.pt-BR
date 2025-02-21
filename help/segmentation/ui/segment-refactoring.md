@@ -2,8 +2,9 @@
 solution: Experience Platform
 title: Guia da interface de usuário de restrições de tempo de segmentação refatorada
 description: O Construtor de segmentos fornece um espaço de trabalho avançado que permite a você interagir com elementos de dados do Perfil. O espaço de trabalho fornece controles intuitivos para criar e editar regras, como arrastar e soltar blocos usados para representar propriedades de dados.
+hidefromtoc: true
 exl-id: 3a352d46-829f-4a58-b676-73c3147f792c
-source-git-commit: 665bbd1904e857336a4fb677230389d7977f6b60
+source-git-commit: c7d71113ddcef6aca8b2637814b46e589a6b7fdf
 workflow-type: tm+mt
 source-wordcount: '354'
 ht-degree: 9%

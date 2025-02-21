@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Visão geral do serviço de segmentação
 description: Saiba mais sobre o Serviço de segmentação da Adobe Experience Platform e a função que ele desempenha no ecossistema da plataforma.
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-source-git-commit: acc0c1b3f088e412c68557a4a7310889f2ad65a7
+source-git-commit: f981b26a468a1d5ab9931a9cce59b176cd0fd9b3
 workflow-type: tm+mt
-source-wordcount: '1665'
-ht-degree: 11%
+source-wordcount: '1678'
+ht-degree: 12%
 
 ---
 
@@ -67,6 +67,7 @@ Além das composições de público-alvo e definições de segmento, você pode 
 >id="platform_segments_evaluation_streaming"
 >title="Avaliação de transmissão"
 >abstract="A segmentação de transmissão é um processo contínuo de seleção de dados que atualiza os públicos-alvo em resposta à atividade do usuário."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/methods/streaming-segmentation.html" text="Avaliar eventos em tempo quase real com a segmentação de transmissão"
 
 Atualmente, a Platform aceita três métodos de avaliação de públicos-alvo: segmentação de transmissão, segmentação em lote e segmentação de borda.
 
@@ -93,6 +94,7 @@ Os públicos-alvo em lote são avaliados automaticamente a cada 24 horas. Se qui
 >id="platform_segments_evaluation_edge"
 >title="Avaliação da borda"
 >abstract="A segmentação de borda é a capacidade de avaliar segmentos na rede de borda da Platform instantaneamente, permitindo casos de uso de personalização da mesma página ou da próxima página."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/methods/edge-segmentation.html" text="Guia de segmentação do Edge"
 
 A segmentação do Edge é a capacidade de avaliar segmentos na Platform instantaneamente [na Edge Network](../landing/edge-and-hub-comparison.md), permitindo casos de uso de personalização de mesma página e próxima página.
 

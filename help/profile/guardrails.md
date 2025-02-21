@@ -5,9 +5,9 @@ product: experience platform
 type: Documentation
 description: Saiba mais sobre o desempenho e as medidas de proteção aplicadas pelo sistema para segmentação e dados de perfil para garantir o uso ideal da funcionalidade da Real-Time CDP.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 1150b7726a7cabe6df6bbc7a850fb4d48afa208e
+source-git-commit: 5d972b6b4f59ca58ff3c4b76383db9ee7667dba3
 workflow-type: tm+mt
-source-wordcount: '2511'
+source-wordcount: '2523'
 ht-degree: 2%
 
 ---
@@ -118,7 +118,7 @@ As medidas de proteção descritas nesta seção referem-se ao número e à natu
 
 | Grade de Proteção | Limite | Tipo de limite | Descrição |
 | --------- | ----- | ---------- | ----------- |
-| Públicos-alvo por sandbox | 4000 | Proteção de desempenho | Você pode ter até 4000 **públicos-alvo** ativos por sandbox. Você pode ter mais de 4000 sandboxes por organização, desde que haja menos de 4000 públicos-alvo em cada sandbox **individual**. Isso inclui públicos em lote, de streaming e de borda. Tentar criar públicos adicionais pode afetar o desempenho do sistema. Leia mais sobre [criação de públicos-alvo](/help/segmentation/ui/segment-builder.md) por meio do construtor de segmentos. |
+| Públicos-alvo por sandbox | 4000 | Proteção de desempenho | Você pode ter até 4000 **públicos-alvo** ativos por sandbox. Você pode ter mais de 4000 públicos-alvo por organização, desde que haja menos de 4000 públicos-alvo em cada sandbox **individual**. Isso inclui públicos em lote, de streaming e de borda. Tentar criar públicos adicionais pode afetar o desempenho do sistema. Leia mais sobre [criação de públicos-alvo](/help/segmentation/ui/segment-builder.md) por meio do construtor de segmentos. |
 | Públicos-alvo do Edge por sandbox | 150 | Proteção de desempenho | Você pode ter até 150 públicos-alvo de borda **ativos** por sandbox. Você pode ter mais de 150 públicos-alvo de borda por organização, desde que haja menos de 150 públicos-alvo de borda em cada sandbox **individual**. Tentar criar públicos-alvo de borda adicionais pode afetar o desempenho do sistema. Leia mais sobre [públicos-alvo de borda](/help/segmentation/methods/edge-segmentation.md). |
 | Taxa de transferência do Edge em todas as sandboxes | 1500 RPS | Proteção de desempenho | A segmentação do Edge é compatível com um valor de pico de 1500 eventos de entrada por segundo ao entrar no Adobe Experience Platform Edge Network. A segmentação do Edge pode levar até 350 milissegundos para processar um evento de entrada depois que ele entra no Adobe Experience Platform Edge Network. Leia mais sobre [públicos-alvo de borda](/help/segmentation/methods/edge-segmentation.md). |
 | Públicos-alvo de transmissão por sandbox | 500 | Proteção de desempenho | Você pode ter até 500 **públicos-alvo de streaming** ativos por sandbox. Você pode ter mais de 500 públicos-alvo de streaming por organização, desde que haja menos de 500 públicos-alvo de streaming em cada sandbox **individual**. Isso inclui públicos de transmissão e de borda. Tentar criar públicos de transmissão adicionais pode afetar o desempenho do sistema. Leia mais sobre [públicos-alvo de streaming](/help/segmentation/methods/streaming-segmentation.md). |
@@ -162,7 +162,7 @@ Atributos independentes de tempo, também conhecidos como &quot;dados de registr
 
 Embora o armazenamento de dados do perfil que mantém os dados do perfil não seja um armazenamento relacional, o Perfil permite a integração com entidades de pequena dimensão para criar públicos-alvo de maneira simplificada e intuitiva. Essa integração é conhecida como [segmentação de várias entidades](../segmentation/tutorials/multi-entity-segmentation.md).
 
-Sua organização também pode definir classes XDM para descrever coisas que não sejam indivíduos, como lojas, produtos ou propriedades. Esses esquemas não [!DNL XDM Individual Profile] são chamados de &quot;entidades de dimensão&quot; (também conhecidas como &quot;entidades de pesquisa&quot;) e não contêm dados de série temporal. Esquemas que representam entidades de dimensão são vinculados a entidades de perfil por meio do uso de [relações de esquema](../xdm/tutorials/relationship-ui.md).
+Sua organização também pode definir classes XDM para descrever coisas que não sejam indivíduos, como lojas, produtos ou propriedades. Esses esquemas, que são modelados usando classes XDM diferentes da classe Perfil individual XDM, são chamados de &quot;entidades de dimensão&quot; (também conhecidas como &quot;entidades de pesquisa&quot;) e não contêm dados de série temporal. Esquemas que representam entidades de dimensão são vinculados a entidades de perfil por meio do uso de [relações de esquema](../xdm/tutorials/relationship-ui.md).
 
 As entidades Dimension fornecem dados de pesquisa que auxiliam e simplificam as definições de segmento de várias entidades e devem ser pequenas o suficiente para que o mecanismo de segmentação possa carregar todo o conjunto de dados na memória para um processamento ideal (pesquisa rápida por ponto).
 

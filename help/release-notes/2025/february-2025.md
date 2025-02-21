@@ -1,10 +1,10 @@
 ---
 title: Notas da versão de fevereiro de 2025 da Adobe Experience Platform
 description: Notas da versão de fevereiro de 2025 da Adobe Experience Platform.
-source-git-commit: b29c63942b00fdf597ebfd3ab105519a6b05a476
+source-git-commit: 8786ac8ab42d2b9e0c43000bbc6604462ea06f64
 workflow-type: tm+mt
-source-wordcount: '1378'
-ht-degree: 15%
+source-wordcount: '1481'
+ht-degree: 14%
 
 ---
 
@@ -73,7 +73,7 @@ Use o preparo de dados para mapear, transformar e validar dados de e para o Expe
 
 Para obter mais informações, leia a [Visão geral do Preparo de Dados](../../data-prep/home.md).
 
-## Destinos {#destinations}
+## Destinos (atualizado em 20 de fevereiro) {#destinations}
 
 [!DNL Destinations] são integrações pré-construídas com plataformas de destino que permitem a ativação perfeita de dados da Adobe Experience Platform. É possível usar destinos para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas de email, publicidade direcionada e muitos outros casos de uso.
 
@@ -96,6 +96,7 @@ Para obter mais informações, leia a [Visão geral do Preparo de Dados](../../d
 | Usar rótulos de acesso para gerenciar o acesso do usuário aos fluxos de dados de destino | Como parte da funcionalidade do [[!UICONTROL controle de acesso baseado em atributos]](/help/access-control/abac/overview.md) no Real-Time CDP, agora é possível aplicar rótulos de acesso aos [fluxos de dados de destino](/help/dataflows/ui/monitor-destinations.md). Dessa forma, você pode garantir que apenas um subconjunto de usuários em sua organização tenha acesso a fluxos de dados de destino específicos. <br> **Importante**: ao pesquisar fluxos de dados de destino usando a caixa de pesquisa na parte superior da interface do usuário do Experience Platform, os resultados podem incluir fluxos de dados de destino que os rótulos de acesso do usuário impedem que você veja. Esse comportamento será corrigido em uma atualização futura. |
 | [Relatórios no nível do público-alvo](/help/dataflows/ui/monitor-destinations.md#audience-level-dataflow-runs-for-streaming-destinations) da [conexão com o Marketo Engage](/help/destinations/catalog/adobe/marketo-engage.md) | Agora você pode [exibir informações](/help/dataflows/ui/monitor-destinations.md#audience-level-dataflow-runs-for-streaming-destinations) sobre as identidades ativadas, excluídas ou com falha detalhadas em um nível de público-alvo, para cada público que faz parte dos fluxos de dados deste destino. |
 | Suporte a públicos externos para as conexões [TikTok](/help/destinations/catalog/social/tiktok.md) e [Snap Inc](/help/destinations/catalog/advertising/snap-inc.md) | Você pode ativar públicos externos para esses destinos em [uploads personalizados](../../segmentation/ui/audience-portal.md#import-audience) e [Composição de Público Federado](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/start/audiences). |
+| Exportar arrays, mapas e objetos para destinos de armazenamento na nuvem | Ao usar o botão de alternância **[!UICONTROL Exportar matrizes, mapas, objetos]** ao se conectar a um destino de armazenamento na nuvem, você pode exportar novos objetos complexos para destinos selecionados. [Leia mais](/help/destinations/ui/export-arrays-calculated-fields.md) sobre a funcionalidade. |
 
 {style="table-layout:auto"}
 
@@ -103,6 +104,10 @@ Para obter mais informações, leia a [Visão geral do Preparo de Dados](../../d
 
 - Um problema nas ferramentas de teste do Destination SDK foi corrigido. Alguns clientes ou parceiros encontraram problemas com a [ferramenta de geração de perfil de exemplo](/help/destinations/destination-sdk/testing-api/streaming-destinations/sample-profile-generation-api.md) devido a um formato sem suporte quando o esquema usado para gerar perfis incluía tipos de dados com um seletor `No format`.
 - Correção de um problema ao atualizar a especificação de destinos `targetConnection` usando a API de Serviço de Fluxo. Em alguns casos, a operação do PATCH se comportaria de forma semelhante a uma operação POST, corrompendo os fluxos de dados existentes. Esse problema foi corrigido e todos os clientes podem usar a API de Serviço de Fluxo para atualizar suas especificações do `targetConnection`. [Leia mais](/help/destinations/api/edit-destination.md#patch-target-connection).
+- Ao exportar perfis para destinos baseados em arquivo, a desduplicação garante que apenas um perfil seja exportado quando vários perfis compartilharem a mesma chave de desduplicação e o mesmo carimbo de data e hora de referência. Essa versão inclui uma atualização do processo de desduplicação, garantindo que execuções sucessivas com as mesmas coordenadas sempre produzam os mesmos resultados, melhorando a consistência. [Leia mais](/help/destinations/ui/activate-batch-profile-destinations.md#deduplication-same-timestamp).
+
+Para obter mais informações, leia a [visão geral de destinos](../../destinations/home.md).
+
 
 ## Origens {#sources}
 

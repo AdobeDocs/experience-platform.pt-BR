@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guia da interface do usuário de públicos
 description: A Composição de público-alvo na interface do usuário do Adobe Experience Platform fornece um espaço de trabalho avançado que permite interagir com elementos de dados do perfil. O espaço de trabalho fornece controles intuitivos para criação e edição de públicos-alvo para sua organização.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: 65871f307468428ee0e3b67c1a6577e913f3a312
+source-git-commit: f2abd9445c6b725c166f031407e330a2c15e9edb
 workflow-type: tm+mt
-source-wordcount: '2228'
+source-wordcount: '2342'
 ht-degree: 1%
 
 ---
@@ -39,7 +39,7 @@ A tela de composição de público é composta por quatro tipos diferentes de bl
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_audience"
 >title="Bloco de público"
->abstract="O bloco Público-alvo permite selecionar os subpúblicos-alvo que você deseja usar para compor o novo público-alvo."
+>abstract="O bloco Público-alvo permite adicionar os subpúblicos-alvo que você deseja usar para compor seu novo público-alvo."
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_merge_types"
@@ -83,6 +83,11 @@ Os públicos selecionados agora aparecem no painel direito quando o bloco **[!UI
 | [!UICONTROL Excluir sobreposição] | Os públicos são combinados, com apenas os públicos compartilhados em **um, mas não todos** adicionados. Isso seria o equivalente a uma operação XOR. |
 
 ### [!UICONTROL Regra de compilação] {#build-rule}
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_rule_builder"
+>title="Construtor de segmentos"
+>abstract="Você pode usar o Construtor de segmentos para adicionar uma regra personalizada para sua composição."
 
 Para adicionar uma regra personalizada ao bloco Público-alvo, selecione **[!UICONTROL Criar regra]**.
 
@@ -134,7 +139,12 @@ Uma lista de públicos-alvo é exibida. Selecione **[!UICONTROL Adicionar]** par
 
 ### Excluir por atributo {#exclude-attribute}
 
-Se você excluir por atributo, poderá selecionar quais atributos deseja excluir selecionando o ícone ![filtro](/help/images/icons/project-edit.png) na seção **[!UICONTROL Regra de exclusão]**.
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_exclude_attribute"
+>title="Excluir por atributo"
+>abstract="Ao excluir por atributo, você pode excluir perfis específicos da exibição em sua composição com base nos atributos selecionados."
+
+Se você excluir por atributo, poderá selecionar quais atributos deseja excluir selecionando o ícone ![filtro](/help/images/icons/project-edit.png) na seção **[!UICONTROL Regra de exclusão]**. Excluir o atributo permite excluir qualquer perfil que contenha esse atributo do público-alvo resultante.
 
 ![A seção de atributo está realçada, mostrando onde escolher o atributo a ser excluído.](../images/ui/audience-composition/exclude-attribute.png)
 
@@ -307,6 +317,16 @@ Ao dividir o público, você pode dividir por porcentagem ou dividir por atribut
 
 ### Dividir por porcentagem {#split-percentage}
 
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_split_percentage"
+>title="Dividir por porcentagem"
+>abstract="Você pode dividir aleatoriamente o público em vários públicos, com base no número de caminhos e porcentagens fornecidos."
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_split_persistent"
+>title="Divisão persistente"
+>abstract="Você pode tornar a divisão de porcentagem persistente ativando essa opção e selecionando em qual namespace de identidade a divisão persistirá."
+
 Ao dividir por porcentagem, os públicos-alvo serão divididos aleatoriamente, com base no número de caminhos e porcentagens fornecidos.
 
 Por exemplo, você pode ter três caminhos, cada um com uma porcentagem diferente de perfis.
@@ -331,7 +351,12 @@ Além disso, você pode habilitar a opção **[!UICONTROL Outros perfis]** para 
 
 ![A opção Outros perfis está realçada.](../images/ui/audience-composition/split-other-profiles.png)
 
-## Publicar seu público
+## Publicar seu público {#publish}
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_publish"
+>title="Publicar"
+>abstract="Você pode publicar sua composição para criar o(s) público(s) resultante(s) no Adobe Experience Platform."
 
 >[!IMPORTANT]
 >

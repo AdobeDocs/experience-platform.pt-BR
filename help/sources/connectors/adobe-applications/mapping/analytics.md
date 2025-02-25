@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Mapeamento de campos para o Adobe Analytics Source Connector
 description: Mapeie campos do Adobe Analytics para campos XDM usando o Analytics Source Connector.
 exl-id: 15dc1368-5cf1-42e1-9683-d5158f8aa2db
-source-git-commit: 6cbd902c6a1159d062fb38bf124a09bb18ad1ba8
+source-git-commit: 15d63db308ea9d2daf7660b463785d04ff94e296
 workflow-type: tm+mt
-source-wordcount: '2388'
+source-wordcount: '2415'
 ht-degree: 8%
 
 ---
@@ -173,9 +173,9 @@ Selecionar campos provenientes do ADC devem ser transformados, exigindo que uma 
 | `ip` | `environment.ipV4` | sequência de caracteres | O endereço IP, com base no cabeçalho HTTP da solicitação de imagem. |
 | `j_jscript` | `environment.browserDetails.javaScriptEnabled` | booleano | A versão do JavaScript usada. |
 | `mcvisid_high` + `mcvisid_low` | identityMap | objeto | A ID de visitante do Experience Cloud. |
-| `mcvisid_high` + `mcvisid_low` | endUserIDs._experience.mcid.id | sequência de caracteres | A ID de Experience Cloud (ECID) também é conhecida como MCID e, às vezes, é usada em namespaces. |
-| `mcvisid_high` | `endUserIDs._experience.mcid.primary` | booleano | A ID de Experience Cloud (ECID) também é conhecida como MCID e, às vezes, é usada em namespaces. |
-| `mcvisid_high` | `endUserIDs._experience.mcid.namespace.code` | sequência de caracteres | A ID de Experience Cloud (ECID) também é conhecida como MCID e, às vezes, é usada em namespaces. |
+| `mcvisid_high` + `mcvisid_low` | endUserIDs._experience.mcid.id | sequência de caracteres | A Experience Cloud ID (ECID) também é conhecida como MCID e às vezes é usada em namespaces. |
+| `mcvisid_high` | `endUserIDs._experience.mcid.primary` | booleano | A Experience Cloud ID (ECID) também é conhecida como MCID e às vezes é usada em namespaces. |
+| `mcvisid_high` | `endUserIDs._experience.mcid.namespace.code` | sequência de caracteres | A Experience Cloud ID (ECID) também é conhecida como MCID e às vezes é usada em namespaces. |
 | `mcvisid_low` | `identityMap` | objeto | A ID de visitante do Experience Cloud. |
 | `sdid_high` + `sdid_low` | `_experience.target.supplementalDataID` | sequência de caracteres | ID de compilação da ocorrência. O campo de análise sdid_high e sdid_low é a ID de dados complementar usada para compilar duas (ou mais) ocorrências recebidas. |
 | `mobilebeaconproximity` | `placeContext.POIinteraction.POIDetail.`<br/>`beaconInteractionDetails.proximity` | sequência de caracteres | Proximidade de beacon do Mobile Services. |
@@ -186,9 +186,11 @@ Selecionar campos provenientes do ADC devem ser transformados, exigindo que uma 
 
 ## Campos de mapeamento avançado
 
-Selecionar campos (conhecidos como &quot;valores de publicação&quot;) contêm dados depois que o Adobe ajusta seus valores usando Regras de processamento, regras VISTA e tabelas de pesquisa. A maioria dos valores de postagem tem uma contrapartida pré-processada. Sua organização pode decidir se deseja usar o campo pré-processado, o campo pós-processado ou ambos.
+Selecionar campos (conhecidos como &quot;valores de publicação&quot;) que contêm dados depois que o Adobe ajusta seus valores usando Regras de processamento, Regras VISTA e tabelas de pesquisa. A maioria dos valores de postagem tem uma contrapartida pré-processada.
 
-Para saber mais sobre como executar essas transformações usando o Serviço de Consulta, consulte [funções definidas por Adobe](/help/query-service/sql/adobe-defined-functions.md) no guia do usuário do Serviço de Consulta.
+O conector de origem do Analytics envia dados pré-processados em um conjunto de dados na Experience Platform. Você pode transformar esses dados em sua contraparte pós-proposta usando transformações. Para saber mais sobre como executar essas transformações usando o Serviço de Consulta, consulte [funções definidas pela Adobe](/help/query-service/sql/adobe-defined-functions.md) no guia do usuário do Serviço de Consulta.
+
+Para saber mais sobre como executar essas transformações usando o Serviço de Consulta, consulte [funções definidas pela Adobe](/help/query-service/sql/adobe-defined-functions.md) no guia do usuário do Serviço de Consulta.
 
 | Campo do Analytics | Campo XDM | Tipo XDM | Descrição |
 | --------------- | --------- | -------- | ---------- |

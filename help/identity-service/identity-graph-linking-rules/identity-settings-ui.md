@@ -2,10 +2,10 @@
 title: Interface de configurações de identidade
 description: Saiba como usar a interface do usuário de configurações de identidade.
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
-source-git-commit: ee0f6d6dbbbdf55a1a0f10038b785e48f2b41474
+source-git-commit: 7c2e5cad997b7e7b9e0a08d3a3a1f5c9b218329e
 workflow-type: tm+mt
 source-wordcount: '538'
-ht-degree: 1%
+ht-degree: 4%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 1%
 
 >[!AVAILABILITY]
 >
->As regras de vinculação do gráfico de identidade estão atualmente com Disponibilidade limitada. Entre em contato com a equipe de conta do Adobe para obter informações sobre como acessar o recurso em sandboxes de desenvolvimento.
+>As regras de vinculação do gráfico de identidade estão atualmente com Disponibilidade limitada. Entre em contato com a equipe de conta da Adobe para obter informações sobre como acessar o recurso em sandboxes de desenvolvimento.
 
 As configurações de identidade são um recurso na interface do serviço de identidade da Adobe Experience Platform que pode ser usado para designar namespaces exclusivos e configurar a prioridade de namespace.
 
@@ -27,7 +27,7 @@ Leia os seguintes documentos antes de começar a trabalhar com configurações d
 * [Algoritmo de otimização de identidade](./identity-optimization-algorithm.md)
 * [Guia de implementação](./implementation-guide.md)
 * [Exemplos de configurações de gráfico](./example-configurations.md)
-* [Prioridade do namespace](./namespace-priority.md)
+* [Prioridade de namespace](./namespace-priority.md)
 * [Simulação de gráfico](./graph-simulation.md)
 
 ## Definir suas configurações de identidade
@@ -46,7 +46,7 @@ Para configurar a prioridade de namespace, selecione um namespace no menu de con
 
 ### Designar seu namespace exclusivo
 
-Para designar um namespace exclusivo, marque a caixa de seleção [!UICONTROL Exclusivo por gráfico] que corresponde a esse namespace. Você pode selecionar mais de um namespace exclusivo para sua configuração de definições de identidade.
+Para designar um namespace exclusivo, marque a caixa de seleção [!UICONTROL Exclusivo por gráfico] que corresponde a esse namespace. Você pode selecionar até três namespaces exclusivos para suas configurações de identidade.
 
 ![Dois namespaces selecionados e definidos como exclusivos.](../images/rules/unique-namespace.png)
 
@@ -69,5 +69,5 @@ Para obter mais informações sobre regras de vinculação de gráficos de ident
 * [Guia de implementação](./implementation-guide.md)
 * [Exemplos de configurações de gráfico](./example-configurations.md)
 * [Solução de problemas e perguntas frequentes](./troubleshooting.md)
-* [Prioridade do namespace](./namespace-priority.md)
+* [Prioridade de namespace](./namespace-priority.md)
 * [Interface de simulação de gráfico](./graph-simulation.md)

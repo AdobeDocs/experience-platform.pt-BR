@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Mapeamento de campos para o Adobe Analytics Source Connector
 description: Mapeie campos do Adobe Analytics para campos XDM usando o Analytics Source Connector.
 exl-id: 15dc1368-5cf1-42e1-9683-d5158f8aa2db
-source-git-commit: 15d63db308ea9d2daf7660b463785d04ff94e296
+source-git-commit: ae8a54f8e9fafe782cb24e54e5b638d83d468e3a
 workflow-type: tm+mt
 source-wordcount: '2415'
 ht-degree: 8%
@@ -188,7 +188,7 @@ Selecionar campos provenientes do ADC devem ser transformados, exigindo que uma 
 
 Selecionar campos (conhecidos como &quot;valores de publicação&quot;) que contêm dados depois que o Adobe ajusta seus valores usando Regras de processamento, Regras VISTA e tabelas de pesquisa. A maioria dos valores de postagem tem uma contrapartida pré-processada.
 
-O conector de origem do Analytics envia dados pré-processados em um conjunto de dados na Experience Platform. Você pode transformar esses dados em sua contraparte pós-proposta usando transformações. Para saber mais sobre como executar essas transformações usando o Serviço de Consulta, consulte [funções definidas pela Adobe](/help/query-service/sql/adobe-defined-functions.md) no guia do usuário do Serviço de Consulta.
+O conector de origem do Analytics envia dados pré-processados em um conjunto de dados na Experience Platform. Você pode transformar esses dados em sua contraparte pós-processada usando transformações. Para saber mais sobre como executar essas transformações usando o Serviço de Consulta, consulte [funções definidas pela Adobe](/help/query-service/sql/adobe-defined-functions.md) no guia do usuário do Serviço de Consulta.
 
 Para saber mais sobre como executar essas transformações usando o Serviço de Consulta, consulte [funções definidas pela Adobe](/help/query-service/sql/adobe-defined-functions.md) no guia do usuário do Serviço de Consulta.
 

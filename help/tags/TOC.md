@@ -6,9 +6,9 @@ user-guide-description: Saiba como implantar e gerenciar tags de análise, marke
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: 18690a72c8a84c6426677b3e8993d8453a8e7cf1
+source-git-commit: 77432a559009d29711a8afa4ca6d8f6ea11d70cf
 workflow-type: tm+mt
-source-wordcount: '772'
+source-wordcount: '776'
 ht-degree: 44%
 
 ---
@@ -69,7 +69,7 @@ ht-degree: 44%
    * Extensões de marca (lado do cliente) {#client}
       * [Visão geral](./extensions/client/overview.md)
       * [Métricas de velocidade de site acessíveis](https://exchange.adobe.com/apps/ec/103053)
-      * [Personalizador de Activity Map](https://exchange.adobe.com/apps/ec/101531)
+      * [Personalizador do Activity Map](https://exchange.adobe.com/apps/ec/101531)
       * [Atualização de Página de Ação](https://exchange.adobe.com/apps/ec/102848)
       * [Acompanhamento de Sites de Adform](https://exchange.adobe.com/apps/ec/103195)
       * [Adobe Advertising Cloud](https://exchange.adobe.com/apps/ec/100155)
@@ -90,6 +90,8 @@ ht-degree: 44%
       * Camada de Dados de Clientes Adobe {#client-data-layer}
          * [Visão geral](./extensions/client/client-data-layer/overview.md)
          * [Notas de versão](./extensions/client/client-data-layer/release-notes.md)
+      * Análise de conteúdo do Adobe {#contentanalytics}
+         * [Visão geral](./extensions/client/content-analytics/overview.md)
       * Adobe ContextHub {#contexthub}
          * [Visão geral](./extensions/client/contexthub/overview.md)
       * [Adobe Experience Manager Forms](https://exchange.adobe.com/apps/ec/107493)
@@ -112,15 +114,15 @@ ht-degree: 44%
          * [Visão geral](./extensions/client/asset-insights/overview.md)
          * [Notas de versão](./extensions/client/asset-insights/release-notes.md)
       * [Adobe Fonts](https://exchange.adobe.com/apps/ec/101538)
-      * Adobe Medium Analytics para áudio e vídeo {#media-analytics}
+      * Adobe Media Analytics para áudio e vídeo {#media-analytics}
          * [Visão geral](./extensions/client/media-analytics/overview.md)
          * [Notas de versão](./extensions/client/media-analytics/release-notes.md)
-      * Adobe Medium Analytics (3.x SDK) {#media-analytics-3x}
+      * Adobe Media Analytics (3.x SDK) {#media-analytics-3x}
          * [Visão geral](./extensions/client/media-analytics-3x/overview.md)
          * [Notas de versão](./extensions/client/media-analytics-3x/release-notes.md)
-      * Privacidade Adobe {#privacy}
+      * Privacidade do Adobe {#privacy}
          * [Visão geral](./extensions/client/privacy/overview.md)
-      * [Seletor do Conjunto de Relatórios de Adobe](https://exchange.adobe.com/apps/ec/100640)
+      * [Seletor do Conjunto de Relatórios do Adobe](https://exchange.adobe.com/apps/ec/100640)
       * Adobe Target {#target}
          * [Visão geral](./extensions/client/target/overview.md)
          * [Notas de versão](./extensions/client/target/release-notes.md)
@@ -129,7 +131,7 @@ ht-degree: 44%
          * [Notas de versão](./extensions/client/target-v2/release-notes.md)
       * [Kit de ferramentas do Adobe Target](https://exchange.adobe.com/apps/ec/100640)
       * [Advertising Cloud](https://exchange.adobe.com/apps/ec/100640)
-      * [Insights de ativos do AEM](https://exchange.adobe.com/apps/ec/103406)
+      * [AEM Asset Insights](https://exchange.adobe.com/apps/ec/103406)
       * [Notificador JS de freio de ar](https://exchange.adobe.com/apps/ec/103342)
       * [Amplitude](https://exchange.adobe.com/apps/ec/108010)
       * [Apollo QAX](https://exchange.adobe.com/apps/ec/105068)
@@ -220,7 +222,7 @@ ht-degree: 44%
          * [Visão geral](./extensions/server/aws/overview.md)
       * [!DNL Braze] {#braze}
          * [Visão geral](./extensions/server/braze/overview.md)
-      * [Conector de nuvem para Google Analytics](https://exchange.adobe.com/apps/ec/106542)
+      * [Conector de nuvem do Google Analytics](https://exchange.adobe.com/apps/ec/106542)
       * Núcleo {#core}
          * [Visão geral](./extensions/server/core/overview.md)
       * [API de Evento Epsilon](https://exchange.adobe.com/apps/ec/109127)

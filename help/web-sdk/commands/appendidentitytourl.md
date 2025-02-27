@@ -2,7 +2,7 @@
 title: appendIdentityToUrl
 description: Ofereça experiências personalizadas com mais precisão entre aplicativos, Web e domínios.
 exl-id: 09dd03bd-66d8-4d53-bda8-84fc4caadea6
-source-git-commit: 153c5bae42c027c25a38a8b63070249d1b1a8f01
+source-git-commit: 7c262e5819f8e3488c5ddd5a0221d1c52c28c029
 workflow-type: tm+mt
 source-wordcount: '412'
 ht-degree: 0%
@@ -11,15 +11,15 @@ ht-degree: 0%
 
 # `appendIdentityToUrl`
 
-O comando `appendIdentityToUrl` permite adicionar um identificador de usuário à URL como uma cadeia de caracteres de consulta. Essa ação permite que você carregue a identidade de um visitante entre domínios, evitando contagens de visitantes duplicadas para conjuntos de dados que incluem domínios ou canais. Ele está disponível nas versões 2.11.0 ou posteriores do SDK da Web.
+O comando `appendIdentityToUrl` permite adicionar um identificador de usuário à URL como uma cadeia de caracteres de consulta. Essa ação permite que você carregue a identidade de um visitante entre domínios, evitando contagens de visitantes duplicadas para conjuntos de dados que incluem domínios ou canais. Ele está disponível nas versões 2.11.0 ou posteriores do Web SDK.
 
-A cadeia de consulta gerada e anexada à URL é `adobe_mc`. Se o SDK da Web não puder encontrar uma ECID, ele chamará o ponto de extremidade `/acquire` para gerar uma.
+A cadeia de consulta gerada e anexada à URL é `adobe_mc`. Se o Web SDK não puder encontrar uma ECID, ele chamará o ponto de extremidade `/acquire` para gerar uma.
 
 >[!NOTE]
 >
 >Se o consentimento não tiver sido fornecido, o URL desse método será retornado inalterado. Este comando é executado imediatamente; ele não espera por uma atualização de consentimento.
 
-## Anexar identidade ao URL usando a extensão SDK da Web {#extension}
+## Anexar identidade ao URL usando a extensão Web SDK {#extension}
 
 Anexar uma identidade a um URL é executado como uma ação em uma regra na interface das tags da Coleção de dados da Adobe Experience Platform.
 
@@ -72,12 +72,16 @@ Anexe a identidade ao URL.
 
 +++
 
-## Anexar identidade ao URL usando a biblioteca JavaScript do SDK da Web
+## Anexar identidade ao URL usando a biblioteca JavaScript do Web SDK
 
 Execute o comando `appendIdentityToUrl` com uma URL como parâmetro. O método retorna um URL com o identificador anexado como uma string de consulta.
 
 ```js
-alloy("appendIdentityToUrl",document.location);
+alloy("appendIdentityToUrl",
+  {
+    url: document.location.href
+  }
+);
 ```
 
 Você pode adicionar um ouvinte de eventos para todos os cliques recebidos na página e verificar se o URL corresponde a algum domínio desejado. Se isso acontecer, anexe a identidade ao URL e redirecione o usuário.

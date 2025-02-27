@@ -2,10 +2,10 @@
 title: Notas da versão de fevereiro de 2025 da Adobe Experience Platform
 description: Notas da versão de fevereiro de 2025 da Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 300be2f922f81f0666a794815cb27777802efb60
+source-git-commit: c4064771a384a90d94903ba1761fc9ee20f47747
 workflow-type: tm+mt
-source-wordcount: '1542'
-ht-degree: 14%
+source-wordcount: '1645'
+ht-degree: 16%
 
 ---
 
@@ -24,6 +24,7 @@ Atualizações dos recursos e da documentação existentes no Adobe Experience P
 - [Preparação de dados](#data-prep)
 - [Destinos](#destinations)
 - [Origens](#sources)
+- [Serviço de segmentação](#segmentation)
 - [Atualizações na documentação](#documentation-updates)
    - [Comparação entre a rede e o hub Edge](#edge)
    - [API do Serviço de fluxo expandida para origens](#flow-service)
@@ -107,6 +108,18 @@ Para obter mais informações, leia a [Visão geral do Preparo de Dados](../../d
 - Ao exportar perfis para destinos baseados em arquivo, a desduplicação garante que apenas um perfil seja exportado quando vários perfis compartilharem a mesma chave de desduplicação e o mesmo carimbo de data e hora de referência. Essa versão inclui uma atualização do processo de desduplicação, garantindo que execuções sucessivas com as mesmas coordenadas sempre produzam os mesmos resultados, melhorando a consistência. [Leia mais](/help/destinations/ui/activate-batch-profile-destinations.md#deduplication-same-timestamp).
 
 Para obter mais informações, leia a [visão geral de destinos](../../destinations/home.md).
+
+## Serviço de segmentação {#segmentation-service}
+
+O [!DNL Segmentation Service] define um subconjunto específico de perfis descrevendo os critérios que distinguem um grupo de pessoas na sua base de clientes que pode ser direcionado por campanhas de marketing. Os segmentos podem ser baseados em dados de registro (como informações demográficas) ou em eventos de séries temporais que representam interações de clientes com sua marca.
+
+**Recursos novos ou atualizados**
+
+| Recurso | Descrição |
+| ------- | ----------- |
+| Divisão persistente | A Composição de público-alvo agora é compatível com divisões persistentes. É possível fazer com que os públicos-alvo divididos permaneçam constantes ao dividir por perfil ao adicionar um namespace de identidade ao bloco Split. Mais informações sobre este recurso podem ser encontradas na [documentação de Composição do Público-alvo](../../segmentation/ui/audience-composition.md). |
+
+Para obter mais informações sobre o [!DNL Segmentation Service], consulte a [Visão geral de segmentação](../../segmentation/home.md).
 
 ## Origens {#sources}
 

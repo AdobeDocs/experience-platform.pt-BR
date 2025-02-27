@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guia da interface do usuário de públicos
 description: A Composição de público-alvo na interface do usuário do Adobe Experience Platform fornece um espaço de trabalho avançado que permite interagir com elementos de dados do perfil. O espaço de trabalho fornece controles intuitivos para criação e edição de públicos-alvo para sua organização.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: f2abd9445c6b725c166f031407e330a2c15e9edb
+source-git-commit: c4064771a384a90d94903ba1761fc9ee20f47747
 workflow-type: tm+mt
-source-wordcount: '2342'
+source-wordcount: '2313'
 ht-degree: 1%
 
 ---
@@ -60,7 +60,7 @@ Ao selecionar o bloco **[!UICONTROL Público-alvo]**, o painel direito exibe con
 
 Para adicionar públicos-alvo ao bloco Público-alvo. selecione **[!UICONTROL Adicionar público-alvo]**.
 
-![O botão Adicionar público-alvo está realçado.](../images/ui/audience-composition/add-audience.png)
+![O botão Adicionar público-alvo está realçado.](../images/ui/audience-composition/select-add-audience.png)
 
 >[!IMPORTANT]
 >
@@ -91,7 +91,7 @@ Os públicos selecionados agora aparecem no painel direito quando o bloco **[!UI
 
 Para adicionar uma regra personalizada ao bloco Público-alvo, selecione **[!UICONTROL Criar regra]**.
 
-![O botão Criar regra está realçado.](../images/ui/audience-composition/build-rule.png)
+![O botão Criar regra está realçado.](../images/ui/audience-composition/select-build-rule.png)
 
 O Construtor de segmentos é exibido. Você pode usar o Construtor de segmentos para criar uma regra personalizada a ser seguida pelo público-alvo. Mais informações sobre como usar o Construtor de segmentos podem ser encontradas no [guia do Construtor de segmentos](./segment-builder.md).
 
@@ -196,7 +196,7 @@ Para selecionar o conjunto de dados com o qual o público será enriquecido, sel
 
 O popover **[!UICONTROL Selecionar conjunto de dados]** é exibido. Selecione o conjunto de dados que você deseja adicionar para enriquecimento, seguido de **[!UICONTROL Selecionar]** para adicionar o conjunto de dados para enriquecimento.
 
-![O conjunto de dados escolhido está selecionado.](../images/ui/audience-composition/enrich-dataset-selected.png)
+![O conjunto de dados escolhido está selecionado.](../images/ui/audience-composition/select-dataset.png)
 
 >[!IMPORTANT]
 >
@@ -212,27 +212,21 @@ A seção **[!UICONTROL Critérios de enriquecimento]** agora aparece no painel 
 
 Para selecionar a **[!UICONTROL chave de junção do Source]**, selecione o ícone ![filtro](/help/images/icons/project-edit.png).
 
-![O ícone de filtro da [!UICONTROL chave de junção do Source] está realçado.](../images/ui/audience-composition/enrich-select-source-join-key.png)
-
 O popover **[!UICONTROL Selecionar um atributo de perfil]** é exibido. Selecione o atributo de perfil que você deseja usar como chave de junção de origem, seguido por **[!UICONTROL Selecionar]** para escolher esse atributo como sua chave de junção de origem.
 
-![O atributo que você deseja usar como chave de junção de origem está realçado.](../images/ui/audience-composition/enrich-select-profile-attribute.png)
+![O atributo que você deseja usar como chave de junção de origem está realçado.](../images/ui/audience-composition/select-source-join-key.png)
 
 Para selecionar a chave de junção do conjunto de dados de **[!UICONTROL Enriquecimento]**, selecione o ícone ![filtro](/help/images/icons/project-edit.png).
 
-![O ícone de filtro da [!UICONTROL Chave de junção do conjunto de dados de Enriquecimento] está realçado.](../images/ui/audience-composition/enrich-select-enrichment-dataset-join-key.png)
-
 O popover **[!UICONTROL Atributos de enriquecimento]** é exibido. Selecione o atributo que deseja usar como chave de junção do conjunto de dados de enriquecimento, seguido por **[!UICONTROL Selecionar]** para escolher esse atributo como sua chave de junção do conjunto de dados de enriquecimento.
 
-![O atributo que você deseja usar como chave de junção do conjunto de dados de enriquecimento está realçado.](../images/ui/audience-composition/enrich-select-enrichment-dataset-attribute.png)
+![O atributo que você deseja usar como chave de junção do conjunto de dados de enriquecimento está realçado.](../images/ui/audience-composition/select-enrichment-dataset-join-key.png)
 
 Agora que você adicionou ambas as chaves de junção, a seção **[!UICONTROL Atributos de enriquecimento]** é exibida. Agora você pode adicionar o atributo com o qual deseja aprimorar seu público-alvo. Para adicionar esses atributos, selecione **[!UICONTROL Adicionar atributo]**.
 
-![O botão [!UICONTROL Adicionar atributo] está realçado.](../images/ui/audience-composition/enrich-select-add-attribute.png)
-
 O popover **[!UICONTROL Atributos de enriquecimento]** é exibido. Você pode selecionar os atributos do conjunto de dados com os quais enriquecer seu público, seguido de **[!UICONTROL Selecionar]** para adicionar os atributos ao seu público.
 
-![Os atributos de enriquecimento que você deseja adicionar estão realçados.](../images/ui/audience-composition/enrich-add-enrichment-attributes.png)
+![Os atributos de enriquecimento que você deseja adicionar estão realçados.](../images/ui/audience-composition/select-enrichment-attribute.png)
 
 <!-- ## [!UICONTROL Join] {#join-block}
 
@@ -282,13 +276,13 @@ Para selecionar por qual atributo classificar os públicos-alvo, selecione o íc
 
 Uma lista de atributos de perfil é exibida. Nesse popover, você pode selecionar o tipo de atributo pelo qual deseja classificar seu público-alvo. Selecione **[!UICONTROL Selecionar]** para adicioná-lo ao bloco de classificação. Observe que o atributo selecionado pode **ser apenas** números.
 
-![Uma lista de atributos é exibida.](../images/ui/audience-composition/select-attribute-rank.png)
+![Uma lista de atributos é exibida.](../images/ui/audience-composition/rank-attribute.png)
 
 Depois de selecionar o atributo, você pode selecionar a ordem pela qual ele será classificado. É em ordem crescente (do mais baixo para o mais alto) ou decrescente (do mais alto para o mais baixo).
 
 Além disso, é possível limitar o número de perfis retornados habilitando a opção **[!UICONTROL Adicionar limite de perfil]**. Quando esta opção estiver habilitada, você poderá definir o número máximo de perfis retornados no campo **[!UICONTROL Perfis incluídos]**.
 
-![A opção Adicionar limite de perfil está realçada, o que permite limitar o número de perfis retornados.](../images/ui/audience-composition/add-profile-limit.png)
+![A opção Adicionar limite de perfil está realçada, o que permite limitar o número de perfis retornados.](../images/ui/audience-composition/add-profile-limit-rank.png)
 
 ## [!UICONTROL Split] {#split-block}
 
@@ -307,7 +301,7 @@ Além disso, é possível limitar o número de perfis retornados habilitando a o
 >title="Outros perfis"
 >abstract="A opção Other profiles permite criar um caminho adicional com os perfis restantes que não correspondem a nenhuma das condições especificadas dos outros caminhos."
 
-O tipo de bloco **[!UICONTROL Split]** permite dividir o novo público em vários subpúblicos. Você pode dividir esse público com base na porcentagem ou por um atributo. Ao dividir o público em subpúblicos, essa divisão é **não** persistente. Isso significa que os perfis podem estar em subpúblicos diferentes para cada avaliação.
+O tipo de bloco **[!UICONTROL Split]** permite dividir o novo público em vários subpúblicos. Você pode dividir esse público com base na porcentagem ou por um atributo.
 
 Para adicionar um bloco **[!UICONTROL Split]**, selecione o ícone **+**, seguido por **[!UICONTROL Split]**.
 
@@ -325,23 +319,25 @@ Ao dividir o público, você pode dividir por porcentagem ou dividir por atribut
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_split_persistent"
 >title="Divisão persistente"
->abstract="Você pode tornar a divisão de porcentagem persistente ativando essa opção e selecionando em qual namespace de identidade a divisão persistirá."
+>abstract="Você pode tornar a divisão de porcentagem persistente ativando essa opção e selecionando um namespace de identidade."
 
 Ao dividir por porcentagem, os públicos-alvo serão divididos aleatoriamente, com base no número de caminhos e porcentagens fornecidos.
 
-Por exemplo, você pode ter três caminhos, cada um com uma porcentagem diferente de perfis.
+![A divisão de porcentagem está realçada.](../images/ui/audience-composition/split-by-percentage.png)
 
-![O detalhamento em número de públicos salvos e porcentagens é mostrado.](../images/ui/audience-composition/percentages.png)
+Como alternativa, você também pode fornecer uma identidade, que tornaria a divisão baseada em porcentagem persistente. Os tipos de identidade disponíveis incluem todos os namespaces de identidade disponíveis em sua organização.
+
+![A caixa de seleção Dividir por identidade está realçada. Além disso, a lista suspensa que permite selecionar com identidade para dividir é realçada.](../images/ui/audience-composition/split-by-identity.png)
 
 ### Dividir por atributo {#split-attribute}
 
 Ao dividir por atributo, os públicos-alvo serão divididos com base nos atributos fornecidos. Para selecionar o atributo para divisão, selecione o bloco **[!UICONTROL Split]**, seguido pelo ícone ![filtro](/help/images/icons/project-edit.png).
 
-![O botão Filtrar está selecionado, mostrando como filtrar por atributo.](../images/ui/audience-composition/select-split-attribute.png)
+![O botão Filtrar está selecionado, mostrando como filtrar por atributo.](../images/ui/audience-composition/split-by-attribute.png)
 
 Uma lista de atributos de perfil é exibida. Selecione o tipo de atributo, seguido por **[!UICONTROL Selecionar]** para adicioná-lo ao bloco dividido.
 
-![Uma lista de atributos é exibida.](../images/ui/audience-composition/select-attribute-exclude.png)
+![Uma lista de atributos é exibida.](../images/ui/audience-composition/select-attribute.png)
 
 Após selecionar o atributo, você pode escolher quais perfis pertencerão a qual subpúblico-alvo adicionando os valores no campo **[!UICONTROL Valores]**.
 

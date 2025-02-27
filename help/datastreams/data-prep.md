@@ -2,10 +2,10 @@
 title: Preparo de dados para a coleção de dados
 description: Saiba como mapear seus dados para um esquema de evento do Experience Data Model (XDM) ao configurar uma sequência de dados para os SDKs da web e móvel da Adobe Experience Platform.
 exl-id: 87a70d56-1093-445c-97a5-b8fa72a28ad0
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: e90bd5abe502a7638ae54fca5eb0f051a925a2d8
 workflow-type: tm+mt
-source-wordcount: '1183'
-ht-degree: 60%
+source-wordcount: '1199'
+ht-degree: 59%
 
 ---
 
@@ -17,7 +17,7 @@ Todos os dados enviados de uma página da Web devem chegar ao Experience Platfor
 
 1. Reformate a camada de dados no XDM na própria página da Web.
 2. Use a funcionalidade de elementos de dados nativos das tags para reformatar o formato de camada de dados existente de uma página da Web no XDM.
-3. Reformate um formato de camada de dados existente da página da Web no XDM por meio do Edge Network, usando o Preparo de dados para coleção de dados.
+3. Reformate o formato da camada de dados existente de uma página da Web no XDM por meio do Edge Network, usando o Preparo de dados para coleção de dados.
 
 Este guia foca na 3ª opção.
 
@@ -28,11 +28,11 @@ Há dois casos de uso em que o Preparo de dados para a coleção de dados é út
 1. O site tem uma camada de dados bem formada, controlada e mantida, e há uma preferência por enviá-la diretamente para o Edge Network em vez de usar a manipulação do JavaScript para convertê-la em XDM na página (por meio de elementos de dados de tags ou por manipulação manual do JavaScript).
 2. Um sistema de marcação diferente de Tags é implantado no site.
 
-## Enviar uma camada de dados existente para o Edge Network via WebSDK {#send-datalayer-via-websdk}
+## Enviar uma camada de dados existente para a Edge Network por meio do SDK da Web {#send-datalayer-via-websdk}
 
 A camada de dados existente deve ser enviada usando o objeto [`data`](/help/web-sdk/commands/sendevent/data.md) dentro do comando `sendEvent`.
 
-Se você estiver usando Marcas, deverá usar o campo **[!UICONTROL Dados]** do tipo de ação **[!UICONTROL Enviar Evento]**, conforme descrito na [documentação da extensão de marca do SDK da Web](/help/tags/extensions/client/web-sdk/action-types.md).
+Se você estiver usando Marcas, deverá usar o campo **[!UICONTROL Dados]** do tipo de ação **[!UICONTROL Enviar Evento]**, conforme descrito na [documentação da extensão de marcas do Web SDK](/help/tags/extensions/client/web-sdk/action-types.md).
 
 O restante deste guia enfocará como mapear a camada de dados para padrões XDM após ter sido enviada pelo WebSDK.
 
@@ -166,6 +166,10 @@ A etapa **[!UICONTROL Mapeamento]** é exibida, permitindo mapear os campos nos 
 
 * [Crie regras de mapeamento](#create-mapping) para esta sequência de dados por meio de um processo manual.
 * [Importar regras de mapeamento](#import-mapping) de uma sequência de dados existente.
+
+>[!IMPORTANT]
+>
+>O mapeamento do Preparo de dados substitui `identityMap` cargas XDM, o que pode afetar ainda mais a correspondência de perfis em relação aos públicos da Real-Time CDP.
 
 ### Criar regras de mapeamento {#create-mapping}
 

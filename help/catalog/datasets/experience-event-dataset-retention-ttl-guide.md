@@ -1,9 +1,10 @@
 ---
 title: Gerenciar a retenção do conjunto de dados do evento de experiência no Data Lake usando TTL
 description: Saiba como avaliar, definir e gerenciar a Retenção de conjunto de dados de evento de experiência no data lake usando configurações de Tempo de vida (TTL) com APIs do Adobe Experience Platform. Este guia explica como a expiração em nível de linha de TTL suporta políticas de retenção de dados, otimiza a eficiência do armazenamento e garante um gerenciamento eficaz do ciclo de vida dos dados. Ela também fornece casos de uso e práticas recomendadas para ajudar você a aplicar o TTL de maneira eficaz.
-source-git-commit: 74b6e5f10f7532745180760adf1d96bc57e7b590
+exl-id: d688d4d0-aa8b-4e93-a74c-f1a1089d2df0
+source-git-commit: affaeb0869423292a44eb7ada8343482bb163ca6
 workflow-type: tm+mt
-source-wordcount: '2106'
+source-wordcount: '2196'
 ht-degree: 1%
 
 ---
@@ -28,6 +29,12 @@ O TTL é útil ao gerenciar dados sensíveis ao tempo que perdem relevância ao 
 - Melhore o desempenho da consulta minimizando dados irrelevantes.
 - Mantenha a higiene de dados mantendo somente as informações relevantes.
 - Otimize a retenção de dados para dar suporte aos objetivos de negócios.
+
+>[!NOTE]
+>
+>A retenção do conjunto de dados do evento de experiência se aplica aos dados do evento armazenados no data lake. Se você estiver gerenciando a retenção no Real-Time Customer Data Platform, considere usar a [Expiração do evento de experiência](../../profile/event-expirations.md) e a [Expiração do perfil pseudônimo](../../profile/pseudonymous-profiles.md) junto com as configurações de retenção do data lake.
+>
+>As configurações de TTL ajudam a otimizar o armazenamento com base nos direitos. Embora os dados do Armazenamento de perfil (usados no Real-Time CDP) possam ser considerados obsoletos e removidos após 30 dias, os mesmos dados de evento no data lake podem permanecer disponíveis por 12 a 13 meses (ou mais, com base no direito) para casos de uso do Analytics e do Data Distiller.
 
 ### Exemplo do setor {#industry-example}
 
@@ -121,7 +128,7 @@ Uma resposta bem-sucedida retorna a configuração TTL para o conjunto de dados,
                 "rowExpiration": {
                     "defaultValue": "P12M",
                     "maxValue": "P12M",
-                    "minValue": "P7D"
+                    "minValue": "P30D"
                 }
             },
             "adobe_unifiedProfile": {  
@@ -254,7 +261,7 @@ Uma resposta bem-sucedida mostra a configuração de TTL do conjunto de dados. I
 | `extensions` | Um container para metadados adicionais relacionados ao conjunto de dados. |
 | `extensions.adobe_lakeHouse` | Especifica configurações relacionadas à arquitetura de armazenamento, incluindo configurações de expiração em nível de linha |
 | `rowExpiration` | O objeto contém configurações TTL que definem o período de retenção do conjunto de dados. |
-| `rowExpiration.ttlValue` | Define a duração antes da remoção automática dos registros no conjunto de dados. Usa o formato de período ISO-8601 (por exemplo, `P3M` para 3 meses ou `P7D` para uma semana). |
+| `rowExpiration.ttlValue` | Define a duração antes da remoção automática dos registros no conjunto de dados. Usa o formato de período ISO-8601 (por exemplo, `P3M` para 3 meses ou `P30D` para uma semana). |
 | `rowExpiration.valueStatus` | A string indica se a configuração TTL é um valor padrão do sistema ou um valor personalizado definido por um usuário. Valores possíveis: `default`, `custom`. |
 | `rowExpiration.setBy` | Especifica quem modificou a configuração TTL pela última vez. Os valores possíveis incluem: `user` (definido manualmente) ou `service` (atribuído automaticamente). |
 | `rowExpiration.updated` | O carimbo de data e hora da última atualização TTL. Esse valor indica quando a configuração TTL foi modificada pela última vez. |
@@ -418,4 +425,3 @@ Agora que você aprendeu a gerenciar configurações de TTL para expiração em 
 - Trabalhos de retenção: saiba como agendar e automatizar as expirações de conjuntos de dados na interface da plataforma com o [guia da interface do usuário do ciclo de vida dos dados](../../hygiene/ui/dataset-expiration.md), ou verifique as configurações de Retenção do conjunto de dados e se os registros expirados foram excluídos.
 - [Guia de ponto de extremidade da API de expiração do conjunto de dados](../../hygiene/api/dataset-expiration.md): descubra como excluir conjuntos de dados inteiros em vez de apenas linhas. Saiba como agendar, gerenciar e automatizar a expiração do conjunto de dados usando a API para garantir uma retenção de dados eficiente.
 - [Visão geral das políticas de uso de dados](../../data-governance/policies/overview.md): saiba como alinhar sua estratégia de retenção de dados a requisitos de conformidade mais amplos e restrições de uso de marketing.
-

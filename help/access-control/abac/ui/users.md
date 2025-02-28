@@ -6,7 +6,7 @@ exl-id: 16450867-040a-4be1-a6c0-f03d0a1b90ba
 source-git-commit: afd883c530ab1b335888e79b5f4075e774fced4b
 workflow-type: tm+mt
 source-wordcount: '285'
-ht-degree: 1%
+ht-degree: 11%
 
 ---
 
@@ -15,8 +15,8 @@ ht-degree: 1%
 >[!CONTEXTUALHELP]
 >id="platform_permissions_users_about"
 >title="O que são usuários?"
->abstract="Os usuários são os indivíduos que têm acesso ao Experience Platform. O acesso de um usuário individual aos recursos de uma organização é gerenciado por meio de funções."
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/permissions-ui/roles" text="Gerenciar funções"
+>abstract="Usuários são indivíduos que têm acesso à Experience Platform. O acesso de um usuário individual aos recursos de uma organização é gerenciado por meio de funções."
+>additional-url="https://experienceleague.adobe.com/pt-br/docs/experience-platform/access-control/abac/permissions-ui/roles" text="Gerenciar funções"
 
 Se quiser exibir os detalhes e as funções dos usuários aos quais eles estão atribuídos, selecione a guia **[!UICONTROL Usuários]**.
 

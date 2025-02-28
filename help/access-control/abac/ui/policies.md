@@ -6,7 +6,7 @@ exl-id: 66820711-2db0-4621-908d-01187771de14
 source-git-commit: afd883c530ab1b335888e79b5f4075e774fced4b
 workflow-type: tm+mt
 source-wordcount: '684'
-ht-degree: 2%
+ht-degree: 11%
 
 ---
 
@@ -189,8 +189,8 @@ A caixa de diálogo **[!UICONTROL Remover]** é exibida solicitando que você co
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_about"
 >title="O que são políticas?"
->abstract="Políticas são declarações que reúnem atributos para estabelecer ações permitidas e não permitidas. Cada organização vem com uma política padrão que deve ser ativada para começar a controlar o acesso a objetos específicos com base em rótulos. Os rótulos aplicados aos recursos negam acesso, a menos que os usuários sejam atribuídos a uma função com um rótulo correspondente. As políticas padrão não podem ser editadas ou excluídas, mas podem ser ativadas ou desativadas."
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/permissions-ui/labels" text="Gerenciar rótulos"
+>abstract="Políticas são declarações que reúnem atributos para estabelecer ações permitidas e não permitidas. Cada organização possui uma política padrão que você deve ativar para começar a controlar o acesso a objetos específicos com base em rótulos. Os rótulos aplicados aos recursos negam o acesso, a menos que os usuários sejam atribuídos a uma função com um rótulo correspondente. As políticas padrão não podem ser editadas ou excluídas, mas é possível ativá-las ou desativá-las."
+>additional-url="https://experienceleague.adobe.com/pt-br/docs/experience-platform/access-control/abac/permissions-ui/labels" text="Gerenciar rótulos"
 
 Para ativar uma política existente, selecione a política na guia **[!UICONTROL Políticas]**.
 

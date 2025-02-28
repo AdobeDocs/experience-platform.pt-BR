@@ -2,10 +2,11 @@
 title: Executar transformações nos dados exportados para destinos de armazenamento na nuvem usando campos calculados
 type: Tutorial
 description: Entenda como usar a funcionalidade de campos calculados para executar transformações nos dados exportados para destinos de armazenamento na nuvem
-source-git-commit: 6122ddc078101c26061e8662de3fcdcb1cb65992
+exl-id: 1e14f964-4c03-4d0c-be8d-c3dcb48a335a
+source-git-commit: 9ce451f54f180aa6ee1831ba08e178ba1a8c8e2f
 workflow-type: tm+mt
 source-wordcount: '1600'
-ht-degree: 3%
+ht-degree: 8%
 
 ---
 
@@ -14,7 +15,7 @@ ht-degree: 3%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_flat_files"
 >title="Adicionar campos calculados"
->abstract="<p>Use o controle **Adicionar campo calculado** para executar várias transformações de dados em dados exportados para destinos de armazenamento na nuvem. Por exemplo, você pode aplicar hash aos dados, concatenar matrizes em strings e muito mais."
+>abstract="<p>Use o controle **Adicionar campo calculado** para executar várias transformações de dados em dados exportados para destinos de armazenamento na nuvem. Por exemplo, é possível aplicar hash em dados, concatenar matrizes em strings e muito mais."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html?lang=pt-BR#examples" text="Exemplos"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html?lang=pt-BR#known-limitations" text="Limitações conhecidas"
 
@@ -39,7 +40,7 @@ Para usar campos calculados para transformações de dados:
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_control"
 >title="Habilitar esquema de saída hierárquico"
->abstract="Ative essa configuração para permitir a exportação de matrizes, mapas e objetos para arquivos JSON ou Parquet."
+>abstract="Ative esta configuração para habilitar a exportação de matrizes, mapas e objetos para arquivos JSON ou Parquet."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_calculated_field_disabled"

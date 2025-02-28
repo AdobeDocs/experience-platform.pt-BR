@@ -6,7 +6,7 @@ exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
 source-git-commit: afd883c530ab1b335888e79b5f4075e774fced4b
 workflow-type: tm+mt
 source-wordcount: '1699'
-ht-degree: 10%
+ht-degree: 16%
 
 ---
 
@@ -123,8 +123,8 @@ O vídeo a seguir tem como objetivo ajudá-lo a entender a criação de uma nova
 >[!CONTEXTUALHELP]
 >id="platform_permissions_apicredentials_about"
 >title="O que são credenciais de API?"
->abstract="As credenciais da API são atribuídas a funções para conceder aos usuários e desenvolvedores acesso às APIs da plataforma. Usando APIs da Platform, você pode executar programaticamente operações básicas de CRUD (Criar, Ler, Atualizar, Excluir) em dados, como configurar atributos computados, acessar dados/entidades, exportar dados, excluir dados ou lotes desnecessários e muito mais."
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/landing/platform-apis/api-guide" text="Guia da API da plataforma"
+>abstract="As credenciais de API são atribuídas às funções para conceder aos usuários e desenvolvedores acesso às APIs da Platform. Usando as APIs da Platform, é possível executar programaticamente operações CRUD (criação, leitura, atualização e exclusão) básicas em dados, como configurar atributos calculados, acessar dados e entidades, exportar dados, excluir dados ou lotes desnecessários e muito mais."
+>additional-url="https://experienceleague.adobe.com/pt-br/docs/experience-platform/landing/platform-apis/api-guide" text="Guia da API da Platform"
 
 >[!IMPORTANT]
 >
@@ -159,8 +159,8 @@ Você retornará à guia **[!UICONTROL Credenciais da API]**.
 >[!CONTEXTUALHELP]
 >id="platform_permissions_usergroups_about"
 >title="O que são grupos de usuários?"
->abstract="Grupos de usuários são coleções de vários usuários que compartilham acesso às mesmas funções. O acesso aos recursos em uma organização é gerenciado por meio de funções atribuídas aos grupos de usuários."
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/permissions-ui/roles" text="Gerenciar funções"
+>abstract="Grupos de usuários são coleções de vários usuários que compartilham o acesso às mesmas funções. O acesso aos recursos em uma organização é gerenciado por meio de funções atribuídas a grupos de usuários."
+>additional-url="https://experienceleague.adobe.com/pt-br/docs/experience-platform/access-control/abac/permissions-ui/roles" text="Gerenciar funções"
 
 Os grupos de usuários são vários usuários que foram agrupados e têm acesso para executar as mesmas funções.
 

@@ -6,7 +6,7 @@ exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
 source-git-commit: 6122ddc078101c26061e8662de3fcdcb1cb65992
 workflow-type: tm+mt
 source-wordcount: '884'
-ht-degree: 7%
+ht-degree: 15%
 
 ---
 
@@ -61,12 +61,12 @@ Além de matrizes, você também pode exportar mapas e objetos do Experience Pla
 
 [Conecte](/help/destinations/ui/connect-destination.md) a um destino de armazenamento na nuvem desejado. Prossiga pelas [etapas de ativação para destinos de armazenamento na nuvem](/help/destinations/ui/activate-batch-profile-destinations.md) e vá para a etapa [mapeamento](/help/destinations/ui/activate-batch-profile-destinations.md#mapping). Ao se conectar ao destino de nuvem desejado, você deve selecionar a opção **[!UICONTROL Exportar matrizes, mapas, objetos]** ativada. Obtenha mais informações na seção abaixo.
 
-## Exportar arrays, mapas, objetos alternados {#export-arrays-maps-objects-toggle}
+## Botão de alternância Exportar matrizes, mapas e objetos {#export-arrays-maps-objects-toggle}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_maps_objects"
 >title="Exportar matrizes, mapas e objetos"
->abstract="<p> <b>Ative</b> esta configuração para habilitar a exportação de matrizes, mapas e objetos para arquivos JSON ou Parquet. Você pode selecionar esses tipos de objetos na exibição do campo de origem da etapa de mapeamento. Com a opção de alternar ativada, não é possível usar a opção de campos calculados na etapa de mapeamento.</p><p>Com este botão de alternância <b>desativado</b>, você pode usar a opção de campos calculados e aplicar várias funções de transformação de dados ao ativar públicos. No entanto, você <i>não</i> pode exportar matrizes, mapas e objetos para arquivos JSON ou Parquet e deve configurar um outro destino para essa finalidade.</p>"
+>abstract="<p> <b>Ative</b> esta configuração para habilitar a exportação de matrizes, mapas e objetos para arquivos JSON ou Parquet. É possível selecionar esses tipos de objetos na exibição do campo de origem da etapa de mapeamento. Com o botão ativado, não é possível usar a opção de campos calculados na etapa de mapeamento.</p><p>Com o botão <b>desativado</b>, é possível usar a opção de campos calculados e aplicar várias funções de transformação de dados ao ativar públicos-alvo. No entanto, você <i>não</i> pode exportar matrizes, mapas e objetos para arquivos JSON ou Parquet e deve configurar um outro destino para essa finalidade.</p>"
 
 Ao se conectar a um destino de armazenamento na nuvem, você pode ativar ou desativar a **[!UICONTROL Exportação de matrizes, mapas e objetos]**.
 
@@ -74,7 +74,7 @@ Ao se conectar a um destino de armazenamento na nuvem, você pode ativar ou desa
 
 **Ative** esta configuração para habilitar a exportação de matrizes, mapas e objetos para arquivos JSON ou Parquet. Você pode selecionar esses tipos de objeto na exibição de campo de origem da [etapa de mapeamento](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) ao ativar públicos para destinos de armazenamento na nuvem. No entanto, com essa configuração ativada, não é possível usar a opção calculated fields para transformar dados na ativação.
 
-Com este botão de alternância **desativado**, você pode usar a opção de campos calculados e aplicar várias funções de transformação de dados ao ativar públicos. No entanto, não é possível exportar matrizes, mapas e objetos para arquivos JSON ou Parquet e você deve configurar um destino separado para essa finalidade.
+Com o botão **desativado**, é possível usar a opção de campos calculados e aplicar várias funções de transformação de dados ao ativar públicos-alvo. No entanto, não é possível exportar matrizes, mapas e objetos para arquivos JSON ou Parquet e você deve configurar um destino separado para essa finalidade.
 
 ## Exportar matrizes, mapas, objetos alternados *em* {#export-arrays-maps-objects-toggle-on}
 

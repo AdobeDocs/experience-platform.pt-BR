@@ -3,9 +3,9 @@ title: Conexão Moengage
 description: A Moengage é uma plataforma de engajamento do cliente que promove interações centradas no cliente entre consumidores e marcas em tempo real.
 last-substantial-update: 2023-10-11T00:00:00Z
 exl-id: 051f1a10-3c41-4c0a-b187-bf80de0565f0
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: 1e22ad63414876af45d156ed030b8103908de8a1
 workflow-type: tm+mt
-source-wordcount: '996'
+source-wordcount: '1036'
 ht-degree: 2%
 
 ---
@@ -14,9 +14,9 @@ ht-degree: 2%
 
 ## Visão geral {#overview}
 
-Use o destino [!DNL Moengage] para conectar e mapear seus dados de Adobe (atributos de usuário, segmentos e eventos) para MoEngage em tempo real. Os clientes podem então agir com base nesses dados, fornecendo experiências personalizadas e direcionadas.
+Use o destino [!DNL Moengage] para conectar e mapear seus dados do Adobe (atributos de usuário, segmentos e eventos) para MoEngage em tempo real. Os clientes podem então agir com base nesses dados, fornecendo experiências personalizadas e direcionadas.
 
-Com o Adobe, a integração é muito simples e intuitiva. Basta pegar qualquer perfil de usuário Adobe e mapeá-lo para um atributo de usuário MoEngage.
+Com o Adobe, a integração é muito simples e intuitiva. Basta pegar qualquer perfil de usuário do Adobe e mapeá-lo para um atributo de usuário do MoEngage.
 
 >[!IMPORTANT]
 >
@@ -51,7 +51,7 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 | Item | Tipo | Notas |
 ---------|----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Tipo de exportação | **[!UICONTROL Baseado em perfil]** | Você está exportando todos os membros de um segmento (público-alvo) com os identificadores (user_id, anonymous_id) junto com os atributos personalizados definidos por você exportados para [!DNL Moengage]. |
-| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil é atualizado em Experience Platform com base na avaliação do segmento, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil for atualizado no Experience Platform com base na avaliação do segmento, o conector enviará a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -143,7 +143,10 @@ Para adicionar mais mapeamentos, repita as etapas anteriores.
 
 ## Dados exportados / Validar exportação de dados {#exported-data}
 
-Para verificar se os dados foram exportados com êxito para o destino [!DNL Moengage], vá para o perfil de usuário em sua conta [!DNL Moengage]. Você verá um atributo de usuário chamado Segmento AEP.
+Para verificar se os dados foram exportados com êxito para o destino [!DNL Moengage], vá para o perfil de usuário em sua conta [!DNL Moengage]. Aqui, você deve encontrar um atributo de usuário chamado `AEPSegments`, criado automaticamente e os outros atributos personalizados que foram mapeados nas etapas anteriores no Adobe Experience Platform.
+
+`AEPSegments` é um atributo de tipo matriz em [!DNL Moengage]. Ela lista todos os nomes de público-alvo do Adobe aos quais o usuário está associado no Experience Platform.
+
 
 ![Mapeamento de Destino do Moengage Concluído](../../assets/catalog/mobile-engagement/moengage/validation.png)
 

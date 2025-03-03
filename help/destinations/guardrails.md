@@ -6,10 +6,10 @@ product: experience platform
 type: Documentation
 description: Saiba mais sobre o uso padrão da ativação de dados e os limites de taxa.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: d01e9b6d64e9040df11c45750c784079a0289477
+source-git-commit: 818d751996cb84440f620ada50c6e6ec33cff40d
 workflow-type: tm+mt
-source-wordcount: '1715'
-ht-degree: 1%
+source-wordcount: '1666'
+ht-degree: 2%
 
 ---
 
@@ -33,7 +33,7 @@ Há dois tipos de limites padrão neste documento:
 
 | Tipo de grade de proteção | Descrição |
 |----------|---------|
-| **Proteção de desempenho (limite flexível)** | As medidas de proteção de desempenho são limites de uso relacionados ao escopo dos seus casos de uso. Ao exceder as medidas de proteção de desempenho, você pode enfrentar degradação e latência do desempenho. O Adobe não é responsável por essa degradação de desempenho. Os clientes que excederem consistentemente uma garantia de desempenho podem optar por licenciar capacidade adicional para evitar a degradação do desempenho. |
+| **Proteção de desempenho (limite flexível)** | As medidas de proteção de desempenho são limites de uso relacionados ao escopo dos seus casos de uso. Ao exceder as medidas de proteção de desempenho, você pode enfrentar degradação e latência do desempenho. A Adobe não é responsável por essa degradação de desempenho. Os clientes que excederem consistentemente uma garantia de desempenho podem optar por licenciar capacidade adicional para evitar a degradação do desempenho. |
 | **Medidas de proteção aplicadas pelo sistema (Limite rígido)** | As medidas de proteção aplicadas pelo sistema são aplicadas pela interface do usuário ou API do Real-Time CDP. Esses são limites que você não pode exceder, pois a interface do usuário e a API o bloquearão de fazer isso ou retornarão um erro. |
 
 {style="table-layout:auto"}
@@ -53,7 +53,7 @@ As medidas de proteção abaixo geralmente se aplicam à ativação por meio de 
 | Número máximo de atributos mapeados para um destino | 50 | Proteção de desempenho | No caso de vários destinos e tipos de destino, é possível selecionar atributos de perfil e identidades para mapear para exportação. Para um desempenho ideal, no máximo 50 atributos devem ser mapeados em um fluxo de dados para um destino. |
 | Número máximo de destinos | 100 | Proteção imposta pelo sistema | É possível criar um máximo de 100 destinos aos quais você pode conectar e ativar dados, *por sandbox*. [Os destinos de personalização do Edge (Personalização personalizada)](#edge-destinations-activation) podem representar, no máximo, 10 dos 100 destinos recomendados. |
 | Tipo de dados ativados para destinos | Dados de perfil, incluindo identidades e mapa de identidade | Proteção imposta pelo sistema | Atualmente, só é possível exportar *atributos de registro de perfil* para destinos. No momento, não há suporte para atributos XDM que descrevem dados de evento para exportação. |
-| Tipo de dados ativados para destinos — suporte a atributos de array e mapa | Parcialmente disponível | Proteção imposta pelo sistema | Você pode exportar atributos de matriz para [destinos baseados em arquivo](/help/destinations/destination-types.md#file-based). Você ainda precisa usar a função `array_to_string` para nivelar a matriz em uma cadeia de caracteres no arquivo de destino. [Leia mais](/help/release-notes/2024/october-2024.md#destinations-new-updated-functionality) sobre a funcionalidade. <br><br> No momento, **não** é possível exportar *atributos de mapa* para destinos. A exceção a esta regra é o [mapa de identidade](/help/xdm/field-groups/profile/identitymap.md), que é exportado em ativações de streaming e baseadas em arquivo. |
+| Tipo de dados ativados para destinos — suporte a atributos de array e mapa | Parcialmente disponível | Proteção imposta pelo sistema | Você pode exportar atributos de matriz para [destinos baseados em arquivo](/help/destinations/destination-types.md#file-based). [Leia mais](/help/destinations/ui/export-arrays-calculated-fields.md) sobre a funcionalidade. |
 
 {style="table-layout:auto"}
 
@@ -63,7 +63,7 @@ As medidas de proteção abaixo se aplicam à ativação por meio de [destinos d
 
 | Grade de Proteção | Limite | Tipo de limite | Descrição |
 | --- | --- | --- | --- |
-| Número de ativações (mensagens HTTP com exportações de perfil) por segundo | N/D | - | No momento, não há limite para o número de mensagens por segundo enviadas do Experience Platform para os endpoints da API dos destinos do parceiro. <br> Quaisquer limites ou latências são ditados pelo ponto de extremidade onde o Experience Platform está enviando dados. Verifique também a página do [catálogo](/help/destinations/catalog/overview.md) do destino ao qual você está conectando e ativando dados. |
+| Número de ativações (mensagens HTTP com exportações de perfil) por segundo | N/D | - | No momento, não há limite para o número de mensagens por segundo enviadas do Experience Platform para os endpoints da API de destinos do parceiro. <br> Quaisquer limites ou latências são ditados pelo ponto de extremidade onde a Experience Platform está enviando dados. Verifique também a página do [catálogo](/help/destinations/catalog/overview.md) do destino ao qual você está conectando e ativando dados. |
 
 {style="table-layout:auto"}
 
@@ -126,7 +126,7 @@ No caso de conjuntos de dados baseados no esquema XDM Experience Events, o esque
 **Conjuntos de dados com base no esquema do Perfil Individual XDM**
 No caso de conjuntos de dados baseados no esquema do Perfil individual XDM, o esquema do conjunto de dados não inclui uma coluna *carimbo de data/hora* de nível superior. Os dados são assimilados de forma ascendente.
 
-A proteção flexível abaixo se aplica a todos os conjuntos de dados exportados do Experience Platform. Revise também as medidas de proteção rígidas mais abaixo, específicas para diferentes conjuntos de dados e tipos de compactação.
+A proteção simples abaixo se aplica a todos os conjuntos de dados exportados do Experience Platform. Revise também as medidas de proteção rígidas mais abaixo, específicas para diferentes conjuntos de dados e tipos de compactação.
 
 | Grade de Proteção | Limite | Tipo de limite | Descrição |
 | --- | --- | --- | --- |
@@ -171,14 +171,14 @@ The guardrails below are the same whether you are exporting parquet of JSON file
 Leia mais sobre [exportação de conjuntos de dados](/help/destinations/ui/export-datasets.md).
 
 
-### Grades de proteção de Destination SDK {#destination-sdk-guardrails}
+### Medidas de proteção do Destination SDK {#destination-sdk-guardrails}
 
-[Destination SDK](/help/destinations/destination-sdk/overview.md) é um conjunto de APIs de configuração que permitem configurar padrões de integração de destino para que o Experience Platform forneça dados de público-alvo e perfil para o seu ponto de extremidade, com base nos formatos de dados e autenticação de sua escolha. As medidas de proteção abaixo se aplicam aos destinos configurados por meio do Destination SDK.
+O [Destination SDK](/help/destinations/destination-sdk/overview.md) é um conjunto de APIs de configuração que permitem configurar padrões de integração de destino para que o Experience Platform forneça dados de público-alvo e perfil para o seu ponto de extremidade, com base nos formatos de dados e autenticação de sua escolha. As medidas de proteção abaixo se aplicam aos destinos configurados por você com o Destination SDK.
 
 | Grade de Proteção | Limite | Tipo de limite | Descrição |
 | --- | --- | --- | --- |
 | Número máximo de [destinos personalizados privados](/help/destinations/destination-sdk/overview.md#productized-custom-integrations) | 5 | Proteção de desempenho | Você pode criar no máximo 5 destinos personalizados de streaming ou lote privados usando o Destination SDK. Entre em contato com um representante de atendimento personalizado se precisar criar mais de 5 desses destinos. |
-| Política de exportação de perfil para Destination SDK | <ul><li>`maxBatchAgeInSecs` (mínimo 1.800 e máximo 3.600)</li><li>`maxNumEventsInBatch` (mínimo 1.000 e máximo 10.000)</li></ul> | Proteção imposta pelo sistema | Ao usar a opção [agregação configurável](destination-sdk/functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) para seu destino, lembre-se dos valores mínimo e máximo que determinam a frequência com que as mensagens HTTP são enviadas para seu destino baseado em API e quantos perfis as mensagens devem incluir. |
+| Política de exportação de perfil para o Destination SDK | <ul><li>`maxBatchAgeInSecs` (mínimo 1.800 e máximo 3.600)</li><li>`maxNumEventsInBatch` (mínimo 1.000 e máximo 10.000)</li></ul> | Proteção imposta pelo sistema | Ao usar a opção [agregação configurável](destination-sdk/functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) para seu destino, lembre-se dos valores mínimo e máximo que determinam a frequência com que as mensagens HTTP são enviadas para seu destino baseado em API e quantos perfis as mensagens devem incluir. |
 
 {style="table-layout:auto"}
 
@@ -188,16 +188,16 @@ Detalhes sobre limites ou limitações de limitação para determinados destinos
 
 | Tipo de destino | Descrição |
 | --- | --- |
-| Destinos empresariais (API HTTP, Amazon Kinesis, EventHubs do Azure) | Em 95% das vezes, o Experience Platform tenta oferecer uma latência de throughput de menos de 10 minutos para mensagens enviadas com êxito, com uma taxa de menos de 10 mil solicitações por segundo para cada fluxo de dados a um destino corporativo. <br> Em caso de falha nas solicitações para o destino da sua empresa, o Experience Platform armazena as solicitações com falha e tenta novamente enviar as solicitações duas vezes para o seu ponto de extremidade. |
+| Destinos empresariais (API HTTP, Amazon Kinesis, Azure EventHubs) | Em 95% das vezes, o Experience Platform tenta oferecer uma latência de taxa de transferência de menos de 10 minutos para mensagens enviadas com êxito, com uma taxa de menos de 10 mil solicitações por segundo para cada fluxo de dados a um destino corporativo. <br> Em caso de falha nas solicitações para o destino da sua empresa, o Experience Platform armazena as solicitações com falha e tenta enviar novamente as solicitações para o seu ponto de extremidade. |
 
 {style="table-layout:auto"}
 
 ## Próximas etapas
 
-Consulte a documentação a seguir para obter mais informações sobre outras medidas de proteção dos serviços de Experience Platform, informações de latência de ponta a ponta e informações de licenciamento dos documentos Descrição do produto Real-Time CDP:
+Consulte a documentação a seguir para obter mais informações sobre outras medidas de proteção dos serviços da Experience Platform, informações de latência de ponta a ponta e informações de licenciamento dos documentos Descrição do produto da Real-Time CDP:
 
 * [Medidas de proteção do Real-Time CDP](/help/rtcdp/guardrails/overview.md)
-* [Diagramas de latência de ponta a ponta](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) para vários serviços de Experience Platform.
-* [Real-time Customer Data Platform (B2C Edition - Pacotes Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform (B2P - Pacotes Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform (B2B - Pacotes Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [Diagramas de latência de ponta a ponta](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) para vários serviços da Experience Platform.
+* [Real-Time Customer Data Platform (B2C Edition - Pacotes do Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2P - Pacotes do Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2B - Pacotes do Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

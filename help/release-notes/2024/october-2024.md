@@ -1,7 +1,8 @@
 ---
 title: Notas de versão da Adobe Experience Platform de outubro de 2024
 description: As notas de versão de outubro de 2024 da Adobe Experience Platform.
-source-git-commit: f30a124a40928abf69366d311131e353c2779191
+exl-id: 5e2112b8-2a0a-4c1e-af3e-b00d8cc4f4cf
+source-git-commit: 2d640b282feb783694276c69366b1fccadddfd78
 workflow-type: tm+mt
 source-wordcount: '1159'
 ht-degree: 21%
@@ -41,13 +42,13 @@ Para obter mais informações sobre painéis, incluindo como conceder permissõe
 
 ## Coleção de dados {#collection}
 
-A Adobe Experience Platform fornece um conjunto de tecnologias que permitem coletar dados de experiência do cliente do lado do cliente e enviá-los para o Edge Network de Experience Platform, onde podem ser enriquecidos, transformados e distribuídos para destinos Adobe ou não Adobe.
+O Adobe Experience Platform fornece um conjunto de tecnologias que permitem coletar dados de experiência do cliente do lado do cliente e enviá-los para o Experience Platform Edge Network, onde podem ser enriquecidos, transformados e distribuídos para destinos da Adobe ou que não sejam da Adobe.
 
 **Novos recursos**
 
 | Tipo | Recurso | Descrição |
 | --- | --- | --- |
-| Tags e extensões | Visualização JSON do Adobe Analytics | Agora você pode usar a extensão de tags da Adobe Analytics para examinar eVars, props e configurações de evento como JSON, que agora pode ser incluído na extensão SDK da Web e exportado para edição. Você também pode carregar ou copiar esses dados e armazená-los em seu dispositivo. Leia a [documentação de extensão do Adobe Analytics](../../tags/extensions/client/analytics/overview.md) para obter mais informações. |
+| Tags e extensões | Visualização JSON do Adobe Analytics | Agora você pode usar a extensão de tags da Adobe Analytics para examinar eVars, props e configurações de evento como JSON, que agora pode ser incluído na extensão do Web SDK e exportado para edição. Você também pode carregar ou copiar esses dados e armazená-los em seu dispositivo. Leia a [documentação de extensão do Adobe Analytics](../../tags/extensions/client/analytics/overview.md) para obter mais informações. |
 
 {style="table-layout:auto"}
 
@@ -61,8 +62,8 @@ Para obter mais informações, leia a [visão geral da coleção de dados](../..
 
 | Recurso | Descrição |
 | ----------- | ----------- |
-| [Suporte à exportação de matrizes disponível no geral](../../destinations/ui/export-arrays-calculated-fields.md) | Todos os clientes agora podem usar a opção **[!UICONTROL Adicionar campo calculado]** ao ativar públicos-alvo *para destinos baseados em arquivo* para exportar matrizes ou elementos de matrizes inteiras. Observe que ainda é necessário usar a função `array_to_string` para nivelar a matriz em uma cadeia de caracteres no arquivo de destino. <br> ![Adicionar seleção de campo calculado com funções e campos.](../2024/assets/october/array-export.gif "Adicionar campo calculado com uma seleção da função array_to_string e da matriz de organizações."){width="250" align="center" zoomable="yes"} |
-| [Aprimoramentos na precisão dos relatórios para destinos de streaming](/help/destinations/ui/export-datasets.md) | A partir de outubro de 2024, o Adobe está lançando uma atualização para aumentar a precisão dos relatórios para destinos de transmissão. Esse aprimoramento garante um melhor alinhamento entre os relatórios da Experience Platform e das plataformas de destino. <br> Antes desta atualização, **[!UICONTROL Falha nas identidades]** incluiu todas as tentativas de ativação. Após essa atualização, somente a última tentativa de ativação será incluída na contagem total. <br> Atualmente, este aprimoramento se aplica ao [destino de Correspondência de Cliente do Google](../../destinations/catalog/advertising/google-customer-match.md), mas será gradualmente implantado em outros destinos de streaming de Experience Platform. Após esse aprimoramento, os usuários do [destino de Correspondência do Cliente do Google](../../destinations/catalog/advertising/google-customer-match.md) poderão observar uma queda esperada em sua contagem de **[!UICONTROL Falha nas identidades]**. |
+| [Suporte à exportação de matrizes disponível no geral](../../destinations/ui/export-arrays-maps-objects.md) | Todos os clientes agora podem usar a opção **[!UICONTROL Adicionar campo calculado]** ao ativar públicos-alvo *para destinos baseados em arquivo* para exportar matrizes ou elementos de matrizes inteiras. Observe que ainda é necessário usar a função `array_to_string` para nivelar a matriz em uma cadeia de caracteres no arquivo de destino. <br> ![Adicionar seleção de campo calculado com funções e campos.](../2024/assets/october/array-export.gif "Adicionar campo calculado com uma seleção da função array_to_string e da matriz de organizações."){width="250" align="center" zoomable="yes"} |
+| [Aprimoramentos na precisão dos relatórios para destinos de streaming](/help/destinations/ui/export-datasets.md) | A partir de outubro de 2024, a Adobe está lançando uma atualização para aumentar a precisão dos relatórios para destinos de transmissão. Esse aprimoramento garante um melhor alinhamento entre o Experience Platform e os relatórios das plataformas de destino. <br> Antes desta atualização, **[!UICONTROL Falha nas identidades]** incluiu todas as tentativas de ativação. Após essa atualização, somente a última tentativa de ativação será incluída na contagem total. <br> Esse aprimoramento se aplica atualmente ao [destino de Correspondência de Cliente do Google](../../destinations/catalog/advertising/google-customer-match.md), mas será gradualmente implantado em outros destinos de transmissão do Experience Platform. Após esse aprimoramento, os usuários do [destino de Correspondência do Cliente do Google](../../destinations/catalog/advertising/google-customer-match.md) poderão observar uma queda esperada em sua contagem de **[!UICONTROL Falha nas identidades]**. |
 | Implicações flexíveis da avaliação do público-alvo na [ativação do público-alvo em lote](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files) | Se você executar a [avaliação flexível do público-alvo](../../segmentation/ui/audience-portal.md#flexible-audience-evaluation) em públicos que já estão definidos para serem ativados após a avaliação do segmento, os públicos-alvo serão ativados assim que o trabalho de avaliação flexível do público-alvo for concluído, independentemente de quaisquer trabalhos de ativação diários anteriores. <br> Isso pode resultar na exportação de públicos-alvo várias vezes ao dia, com base em suas ações. |
 
 {style="table-layout:auto"}
@@ -85,7 +86,7 @@ Para obter mais informações sobre [!DNL Segmentation Service], leia a [Visão 
 
 ## Sandboxes {#sandboxes}
 
-O Adobe Experience Platform foi criado para enriquecer aplicativos de experiência digital em escala global. As empresas geralmente executam vários aplicativos de experiência digital em paralelo e precisam atender ao desenvolvimento, ao teste e à implantação desses aplicativos enquanto garantem a conformidade operacional. Para atender a essa necessidade, o Experience Platform fornece sandboxes que particionam uma única instância da Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
+O Adobe Experience Platform foi criado para enriquecer aplicativos de experiência digital em escala global. As empresas geralmente executam vários aplicativos de experiência digital em paralelo e precisam atender ao desenvolvimento, ao teste e à implantação desses aplicativos enquanto garantem a conformidade operacional. Para atender a essa necessidade, a Experience Platform fornece sandboxes que particionam uma única instância da Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
 **Recursos novos ou atualizados**
 

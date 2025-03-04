@@ -2,7 +2,7 @@
 title: Notas de versão da Adobe Experience Platform de outubro de 2023
 description: As notas de versão de outubro de 2023 da Adobe Experience Platform.
 exl-id: e9cf5299-8350-4b40-8f56-05e598846875
-source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
+source-git-commit: 2d640b282feb783694276c69366b1fccadddfd78
 workflow-type: tm+mt
 source-wordcount: '1054'
 ht-degree: 31%
@@ -69,7 +69,7 @@ Para obter mais informações sobre a coleção de dados, leia a [visão geral d
 
 | Funcionalidade | Descrição |
 | ----------- | ----------- |
-| (Beta) Suporte para funções de hash em campos calculados | Além das funções específicas para [exportar matrizes](../../destinations/ui/export-arrays-calculated-fields.md) ou elementos de uma matriz, agora você pode usar [funções de hash](../../destinations/ui/export-arrays-calculated-fields.md#hashing-functions) adicionais para executar hash em atributos nos arquivos exportados. As funções de hash com suporte são: `sha`, `sha256`, `sha512`, `hash`, `md5`, `crc32`. |
+| (Beta) Suporte para funções de hash em campos calculados | Além das funções específicas para [exportar matrizes](../../destinations/ui/export-arrays-maps-objects.md) ou elementos de uma matriz, agora você pode usar [funções de hash](../../destinations/ui/export-arrays-maps-objects.md#hashing-functions) adicionais para executar hash em atributos nos arquivos exportados. As funções de hash com suporte são: `sha`, `sha256`, `sha512`, `hash`, `md5`, `crc32`. |
 | (Disponibilidade limitada) Ativar públicos-alvo da conta para determinados destinos | Os clientes B2B do Real-Time CDP agora podem ativar [públicos-alvo da conta](../../segmentation/types/account-audiences.md) para determinados destinos. Para obter mais informações sobre este recurso, leia o [tutorial para ativar públicos-alvo da conta](/help/destinations/ui/activate-account-audiences.md). |
 
 {style="table-layout:auto"}

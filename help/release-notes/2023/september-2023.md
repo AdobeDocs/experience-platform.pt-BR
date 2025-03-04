@@ -2,7 +2,7 @@
 title: Notas de versão da Adobe Experience Platform de setembro de 2023
 description: As notas de versão de setembro de 2023 da Adobe Experience Platform.
 exl-id: ff7fb0c1-6941-4339-8648-58f9b9e9a91f
-source-git-commit: d6e306294d0a119108e2de7ba03ebed4f633fba1
+source-git-commit: 2d640b282feb783694276c69366b1fccadddfd78
 workflow-type: tm+mt
 source-wordcount: '2265'
 ht-degree: 24%
@@ -55,7 +55,7 @@ A Adobe Experience Platform fornece vários [!DNL dashboards] através dos quais
 
 | Recurso | Descrição |
 | --- | --- |
-| [Aprimoramento do painel de uso da licença](../../dashboards/guides/license-usage.md) | Mantenha o controle de seus contratos de licença com relatórios aprimorados e visualizações de métricas principais relacionadas ao uso de licença de sua organização. Essas melhorias oferecem um alto grau de granularidade em relação às métricas de uso de licença para todos os produtos Experience Platform que você adquiriu. |
+| [Aprimoramento do painel de uso da licença](../../dashboards/guides/license-usage.md) | Mantenha o controle de seus contratos de licença com relatórios aprimorados e visualizações de métricas principais relacionadas ao uso de licença de sua organização. Essas melhorias fornecem um alto grau de granularidade sobre as métricas de uso de licença de todos os produtos da Experience Platform que você adquiriu. |
 
 {style="table-layout:auto"}
 
@@ -69,8 +69,8 @@ A Adobe Experience Platform fornece um conjunto de tecnologias que permitem cole
 
 | Tipo | Recurso | Descrição |
 | --- | --- | --- |
-| Sequências de dados | Suporte à pesquisa de dispositivo | Ao configurar um fluxo de dados, agora é possível selecionar o nível de informações de pesquisa de dispositivo a serem coletadas. As informações de pesquisa do dispositivo incluem dados sobre o dispositivo, hardware, sistema operacional e navegador usados para interagir com a página. <br> As informações de pesquisa do dispositivo não podem ser coletadas junto com o agente do usuário e as dicas do cliente. Optar por coletar informações do dispositivo desativará a coleta de agentes do usuário e dicas do cliente, e vice-versa. Todas as informações de pesquisa do dispositivo são armazenadas no grupo de campos `xdm:device`. Saiba mais na documentação sobre [configuração de sequências de dados](../../datastreams/configure.md#geolocation-device-lookup). |
-| Extensões | Extensão de API de eventos da Web do [!DNL TikTok] | A extensão [[!DNL TikTok] API de Eventos da Web](https://exchange.adobe.com/apps/ec/109834/tiktok-web-events-api) permite aproveitar os dados capturados no Edge Network do Adobe Experience Platform e enviá-los para [!DNL TikTok] na forma de eventos do lado do servidor usando a API de Eventos da Web [!DNL TikTok]. |
+| Sequência de dados | Suporte à pesquisa de dispositivo | Ao configurar um fluxo de dados, agora é possível selecionar o nível de informações de pesquisa de dispositivo a serem coletadas. As informações de pesquisa do dispositivo incluem dados sobre o dispositivo, hardware, sistema operacional e navegador usados para interagir com a página. <br> As informações de pesquisa do dispositivo não podem ser coletadas junto com o agente do usuário e as dicas do cliente. Optar por coletar informações do dispositivo desativará a coleta de agentes do usuário e dicas do cliente, e vice-versa. Todas as informações de pesquisa do dispositivo são armazenadas no grupo de campos `xdm:device`. Saiba mais na documentação sobre [configuração de sequências de dados](../../datastreams/configure.md#geolocation-device-lookup). |
+| Extensões | Extensão de API de eventos da Web do [!DNL TikTok] | A extensão [[!DNL TikTok] API de Eventos da Web](https://exchange.adobe.com/apps/ec/109834/tiktok-web-events-api) permite aproveitar os dados capturados no Adobe Experience Platform Edge Network e enviá-los para [!DNL TikTok] na forma de eventos do lado do servidor usando a API de Eventos da Web [!DNL TikTok]. |
 
 {style="table-layout:auto"}
 
@@ -116,7 +116,7 @@ Para obter mais informações sobre os recursos de higiene de dados da Platform,
 | [[!DNL LiveRamp - Distribution]](../../destinations/catalog/advertising/liveramp-distribution.md) | Novo | Ative públicos integrados anteriormente no [!DNL LiveRamp] para editores premium em mídias para dispositivos móveis, Web, vídeo e TV conectada. <br> Depois de integrar os públicos-alvo à sua conta do [!DNL LiveRamp] por meio da conexão [LiveRamp - Integração](../../destinations/catalog/advertising/liveramp-onboarding.md), use a nova conexão [[!DNL LiveRamp - Distribution]](../../destinations/catalog/advertising/liveramp-distribution.md) para ativar os públicos-alvo para destinos downstream. |
 | [[!DNL HubSpot]](../../destinations/catalog/crm/hubspot.md) | Novo | [[!DNL HubSpot]](https://www.hubspot.com) é uma plataforma de CRM com todos os softwares, integrações e recursos necessários para conectar marketing, vendas, gerenciamento de conteúdo e atendimento ao cliente. Ele permite conectar seus dados, equipes e clientes em uma plataforma de CRM. |
 | [[!DNL Microsoft Dynamics 365]](../../destinations/catalog/crm/microsoft-dynamics-365.md) | Atualização dos pacotes | Adicionado suporte para [!DNL Dynamics 365] prefixos de campos personalizados para campos personalizados que não foram criados na solução padrão em [!DNL Dynamics 365]. Um novo campo de entrada, **[!UICONTROL Prefixo de Personalização]**, foi adicionado na etapa [Preencher detalhes de destino](#destination-details). |
-| [[!DNL Experience Cloud Audiences]](../../destinations/catalog/adobe/experience-cloud-audiences.md) | Atualização dos pacotes | O destino do Experience Cloud Audiences agora está disponível para o público geral. Use esse destino para ativar públicos do Real-Time CDP para o Audience Manager e o Adobe Analytics. Você precisa de uma licença Audience Manager para enviar públicos-alvo para a Adobe Analytics. |
+| [[!DNL Experience Cloud Audiences]](../../destinations/catalog/adobe/experience-cloud-audiences.md) | Atualização dos pacotes | O destino do Experience Cloud Audiences agora está disponível para o público em geral. Use esse destino para ativar públicos do Real-Time CDP para o Audience Manager e o Adobe Analytics. Você precisa de uma licença do Audience Manager para enviar públicos-alvo para a Adobe Analytics. |
 
 {style="table-layout:auto"}
 
@@ -133,8 +133,8 @@ Add these to release notes as they go out
 
 | Funcionalidade | Descrição |
 | ----------- | ----------- |
-| Exportações de dados no Real-Time CDP | A funcionalidade [exportação do conjunto de dados](../../destinations/ui/export-datasets.md) agora está disponível. Veja [quais conjuntos de dados você pode exportar com base no aplicativo Experience Platform](../../destinations/ui/export-datasets.md#datasets-to-export) que adquiriu e verifique as [medidas de proteção para exportar conjuntos de dados](/help/destinations/guardrails.md#dataset-exports). |
-| (Beta) Suporte para exportar objetos do tipo matriz | Exporte matrizes de valores primitivos (valores de string, int ou booleanos) como arquivos de esquema simples para destinos de armazenamento na nuvem. Leia mais sobre a funcionalidade na [documentação](../../destinations/ui/export-arrays-calculated-fields.md). |
+| Exportações de dados no Real-Time CDP | A funcionalidade [exportação do conjunto de dados](../../destinations/ui/export-datasets.md) agora está disponível. Veja [quais conjuntos de dados você pode exportar com base no aplicativo Experience Platform](../../destinations/ui/export-datasets.md#datasets-to-export) que você comprou e verifique as [medidas de proteção para exportar conjuntos de dados](/help/destinations/guardrails.md#dataset-exports). |
+| (Beta) Suporte para exportar objetos do tipo matriz | Exporte matrizes de valores primitivos (valores de string, int ou booleanos) como arquivos de esquema simples para destinos de armazenamento na nuvem. Leia mais sobre a funcionalidade na [documentação](../../destinations/ui/export-arrays-maps-objects.md). |
 | Seletores de lista suspensa dinâmica no Destination SDK | Ao criar um destino por meio do Destination SDK, agora é possível usar [seletores de lista suspensa dinâmica](../../destinations/destination-sdk/functionality/destination-configuration/customer-data-fields.md#dynamic-dropdown-selectors) para preencher os campos de um seletor de lista suspensa com valores recuperados de uma API. |
 
 **Correções e aprimoramentos** {#destinations-fixes-and-enhancements}
@@ -153,7 +153,7 @@ O XDM é uma especificação de código aberto que fornece estruturas e definiç
 | Recurso | Descrição |
 | --- | --- |
 | Ações rápidas adicionadas ao Editor de esquemas | Novas ações rápidas foram adicionadas à tela do Editor de esquemas. Agora você pode copiar a estrutura JSON ou excluir o esquema diretamente do editor.<br>![As ações rápidas no Editor de Esquemas.](../2023/assets/schema-editor-copy-json.png "O Editor de esquemas com Mais e Copiar para JSON foi realçado."){width="100" zoomable="yes"} |
-| Filtrar recursos XDM por criador personalizado ou padrão | As listas de esquemas, grupos de campos, tipos de dados e classes disponíveis agora são pré-filtradas com base em seu método de criação. Isso permite filtrar recursos com base no fato de serem criados de forma personalizada ou criados pelo Adobe.<br>![Os filtros Padrão e Personalizado no espaço de trabalho Esquemas.](../2023/assets/standard-and-custom-classes.png "O espaço de trabalho Esquemas com os filtros Padrão e Personalizado realçados."){width="100" zoomable="yes"} <br> Consulte a [documentação sobre criação e edição de recursos](../../xdm/ui/resources/classes.md#filter.md) para obter mais informações. |
+| Filtrar recursos XDM por criador personalizado ou padrão | As listas de esquemas, grupos de campos, tipos de dados e classes disponíveis agora são pré-filtradas com base em seu método de criação. Isso permite filtrar recursos com base no fato de serem personalizados ou criados pela Adobe.<br>![Os filtros Padrão e Personalizado no espaço de trabalho Esquemas.](../2023/assets/standard-and-custom-classes.png "O espaço de trabalho Esquemas com os filtros Padrão e Personalizado realçados."){width="100" zoomable="yes"} <br> Consulte a [documentação sobre criação e edição de recursos](../../xdm/ui/resources/classes.md#filter.md) para obter mais informações. |
 
 **Recursos atualizados**
 
@@ -191,7 +191,7 @@ O Serviço de identidade da Adobe Experience Platform fornece uma visão abrange
 | Recurso | Descrição |
 | --- | --- |
 | Aprimoramentos na interface do usuário do serviço de identidade | Use a ferramenta aprimorada de criação de namespace personalizado na interface do usuário do Experience Platform para gerenciar melhor seus namespaces personalizados e seus tipos de identidade correspondentes. A interface aprimorada do serviço de identidade fornece: <ul><li>Experiência contextual: dicas visuais, clareza e contexto para o que é um namespace de identidade e os tipos de identidade.</li><li>Precisão: melhor tratamento de erros, sem mais nomes de identidade duplicados.</li><li>Capacidade de descoberta: acesso à documentação por meio de uma caixa de diálogo no produto.</li></ul> Para obter mais informações, leia o manual sobre [criação de namespaces personalizados](../../identity-service/features/namespaces.md#create-namespaces). |
-| Alterações nos limites do gráfico de identidade | O limite do gráfico de identidade foi alterado de 150 identidades para 50 identidades. Quando uma nova identidade é assimilada em um gráfico completo, a identidade mais antiga com base no carimbo de data e hora de assimilação e no tipo de identidade é excluída. Os tipos de identidade de cookie são priorizados para exclusão. Entre em contato com a equipe de conta do Adobe para solicitar uma alteração no tipo de identidade se a sandbox de produção contiver: <ul><li>um namespace personalizado em que os identificadores de pessoa (como IDs de CRM) são configurados como tipo de identidade de cookie/dispositivo.</li><li>um namespace personalizado em que os identificadores de cookie/dispositivo são configurados como tipo de identidade entre dispositivos.</li></ul> A engenharia de Adobe processará manualmente essas solicitações. Para obter mais informações, leia as [medidas de proteção para dados do Serviço de Identidade](../../identity-service/guardrails.md) e o guia sobre [práticas recomendadas de direito de licença de gerenciamento de dados](../../landing/license-usage-and-guardrails/data-management-best-practices.md). |
+| Alterações nos limites do gráfico de identidade | O limite do gráfico de identidade foi alterado de 150 identidades para 50 identidades. Quando uma nova identidade é assimilada em um gráfico completo, a identidade mais antiga com base no carimbo de data e hora de assimilação e no tipo de identidade é excluída. Os tipos de identidade de cookie são priorizados para exclusão. Entre em contato com a equipe de conta da Adobe para solicitar uma alteração no tipo de identidade se a sandbox de produção contiver: <ul><li>um namespace personalizado em que os identificadores de pessoa (como IDs de CRM) são configurados como tipo de identidade de cookie/dispositivo.</li><li>um namespace personalizado em que os identificadores de cookie/dispositivo são configurados como tipo de identidade entre dispositivos.</li></ul> A engenharia do Adobe processará manualmente essas solicitações. Para obter mais informações, leia as [medidas de proteção para dados do Serviço de Identidade](../../identity-service/guardrails.md) e o guia sobre [práticas recomendadas de direito de licença de gerenciamento de dados](../../landing/license-usage-and-guardrails/data-management-best-practices.md). |
 
 {style="table-layout:auto"}
 
@@ -233,7 +233,7 @@ A Experience Platform fornece uma API RESTful e uma interface interativa que per
 
 | Recurso | Descrição |
 | --- | --- |
-| Novos parâmetros para paginação de `offset` em fontes de autoatendimento (SDK em lote) | Agora você pode especificar um `endConditionName` e `endConditionValue` para sua origem ao usar a paginação `offset`. Esses parâmetros permitem indicar a condição que encerrará o loop de paginação na próxima solicitação HTTP. Para obter mais informações, leia o [guia de paginação para fontes de autoatendimento (SDK em lote)](../../sources/sources-sdk/config/sourcespec.md#pagination). |
+| Novos parâmetros para paginação de `offset` em fontes de autoatendimento (SDK em lote) | Agora você pode especificar um `endConditionName` e `endConditionValue` para sua origem ao usar a paginação `offset`. Esses parâmetros permitem indicar a condição que encerrará o loop de paginação na próxima solicitação HTTP. Para obter mais informações, leia o [guia de paginação para Fontes de Autoatendimento (SDK em Lote)](../../sources/sources-sdk/config/sourcespec.md#pagination). |
 
 {style="table-layout:auto"}
 

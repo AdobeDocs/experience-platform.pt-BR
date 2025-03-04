@@ -3,9 +3,9 @@ title: Ativar públicos para destinos de exportação de perfil em lote
 type: Tutorial
 description: Saiba como ativar os públicos-alvo no Adobe Experience Platform enviando-os para destinos com base em perfil de lote.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: b4b185cab4defbf9559089e5152075674dab52d1
+source-git-commit: 2d640b282feb783694276c69366b1fccadddfd78
 workflow-type: tm+mt
-source-wordcount: '4387'
+source-wordcount: '4374'
 ht-degree: 10%
 
 ---
@@ -63,9 +63,9 @@ Para selecionar os públicos que você deseja ativar para o destino, use as caix
 
 Você pode selecionar entre vários tipos de públicos-alvo, dependendo de sua origem:
 
-* **[!UICONTROL Serviço de segmentação]**: públicos-alvo gerados em Experience Platform pelo serviço de segmentação. Consulte a [documentação de segmentação](../../segmentation/ui/overview.md) para obter mais detalhes.
+* **[!UICONTROL Serviço de segmentação]**: públicos-alvo gerados no Experience Platform pelo serviço de segmentação. Consulte a [documentação de segmentação](../../segmentation/ui/overview.md) para obter mais detalhes.
 * **[!UICONTROL Upload personalizado]**: públicos-alvo gerados fora do Experience Platform e carregados na Platform como arquivos CSV. Para saber mais sobre públicos-alvo externos, consulte a documentação sobre [importação de um público-alvo](../../segmentation/ui/audience-portal.md#import-audience).
-* Outros tipos de públicos-alvo, originados de outras soluções de Adobe, como o [!DNL Audience Manager].
+* Outros tipos de públicos-alvo, originados de outras soluções da Adobe, como o [!DNL Audience Manager].
 
 ![Caixas de seleção exibidas ao selecionar um ou vários públicos-alvo a serem ativados.](../assets/ui/activate-batch-profile-destinations/select-audiences.png)
 
@@ -92,7 +92,7 @@ O Experience Platform define automaticamente um agendamento padrão para cada ex
 
 Para editar vários agendamentos ao mesmo tempo, marque os públicos usando as caixas de seleção no lado esquerdo da tela e selecione **[!UICONTROL Editar agendamento]**. O agendamento configurado será aplicado a todos os arquivos exportados para os públicos selecionados.
 
-![Imagem da interface do usuário do Experience Platform mostrando a opção de agendamento de edição para vários públicos selecionados.](../assets/ui/activate-batch-profile-destinations/edit-schedule.png)
+![Imagem da interface do usuário do Experience Platform mostrando a opção de edição de agendamento para vários públicos selecionados.](../assets/ui/activate-batch-profile-destinations/edit-schedule.png)
 
 >[!TIP]
 >
@@ -142,7 +142,7 @@ Selecione **[!UICONTROL Exportar arquivos completos]** para acionar a exportaç�
    <!-- Batch segmentation currently runs at {{insert time of day}} and lasts for an average {{x hours}}. Adobe reserves the right to modify this schedule. -->
 
    ![Imagem destacando a opção Após avaliação de segmento no fluxo de ativação para destinos em lote.](../assets/ui/activate-batch-profile-destinations/after-segment-evaluation-option.png)
-Use a opção **[!UICONTROL Agendado]** para que o trabalho de ativação seja executado em um horário fixo. Essa opção garante que os dados do perfil de Experience Platform sejam exportados no mesmo horário todos os dias. No entanto, os perfis exportados podem não ser os mais atualizados, dependendo se o trabalho de segmentação em lote foi concluído antes do início do trabalho de ativação.
+Use a opção **[!UICONTROL Agendado]** para que o trabalho de ativação seja executado em um horário fixo. Essa opção garante que os dados de perfil do Experience Platform sejam exportados ao mesmo tempo todos os dias. No entanto, os perfis exportados podem não ser os mais atualizados, dependendo se o trabalho de segmentação em lote foi concluído antes do início do trabalho de ativação.
 
    ![Imagem destacando a opção Agendado no fluxo de ativação para destinos em lote e mostrando o seletor de tempo.](../assets/ui/activate-batch-profile-destinations/scheduled-option.png)
 
@@ -214,7 +214,7 @@ O nome de destino e a ID de público-alvo não podem ser removidos dos nomes de 
 | **[!UICONTROL Texto personalizado]** | Qualquer texto personalizado que você deseja adicionar aos nomes de arquivo. |
 | **[!UICONTROL ID de Destino]** | A ID do fluxo de dados de destino usado para exportar o público-alvo. |
 | **[!UICONTROL Nome do destino]** | O nome do fluxo de dados de destino usado para exportar o público. |
-| **[!UICONTROL Nome da organização]** | O nome da sua organização em Experience Platform. |
+| **[!UICONTROL Nome da organização]** | O nome da sua organização no Experience Platform. |
 | **[!UICONTROL Nome da sandbox]** | A ID da sandbox usada para exportar o público-alvo. |
 
 {style="table-layout:auto"}
@@ -270,7 +270,7 @@ Nesta etapa, você deve selecionar os atributos de perfil que deseja adicionar a
 
    >[!NOTE]
    >
-   >Esse recurso está na versão beta e só está disponível para clientes selecionados. Para solicitar acesso a esse recurso, entre em contato com o representante da Adobe.
+   >Esse recurso está na versão beta e só está disponível para clientes selecionados. Para solicitar o acesso a esse recurso, entre em contato com o representante da Adobe.
 
    ![Gravação mostrando a reorganização dos campos de mapeamento por arrastar e soltar.](../assets/ui/activate-batch-profile-destinations/reorder-fields.gif)
 
@@ -464,9 +464,9 @@ Após a desduplicação, o arquivo de exportação conterá:
 
 **Confiabilidade aprimorada**: esse processo de desduplicação atualizado garante que execuções sucessivas com as mesmas coordenadas sempre produzirão os mesmos resultados, melhorando a consistência.
 
-### Exportar matrizes por meio de campos calculados {#export-arrays-calculated-fields}
+### Executar transformações de dados por meio de campos calculados {#calculated-fields}
 
-Os clientes beta selecionados podem exportar objetos de matriz do Experience Platform para destinos de armazenamento na nuvem. Leia mais sobre [exportação de matrizes e campos calculados](/help/destinations/ui/export-arrays-calculated-fields.md) e entre em contato com seu representante da Adobe para obter acesso à funcionalidade.
+Você pode usar o controle [Campos calculados](/help/destinations/ui/data-transformations-calculated-fields.md) para executar várias transformações de dados nos dados exportados para destinos baseados em arquivo.
 
 ### Limitações conhecidas {#known-limitations}
 
@@ -501,7 +501,7 @@ No momento, não há suporte para a seleção de namespaces de identidade para e
 
 Como solução temporária, se você precisar adicionar namespaces de identidade aos arquivos exportados durante a versão beta, será possível:
 * Use os destinos de armazenamento na nuvem herdados para os fluxos de dados em que deseja incluir namespaces de identidade nas exportações
-* Faça upload de identidades como atributos no Experience Platform para, em seguida, exportá-las para seus destinos de armazenamento na nuvem.
+* Faça upload de identidades como atributos na Experience Platform e, em seguida, exporte-as para seus destinos de armazenamento na nuvem.
 
 ## Selecionar atributos de perfil {#select-attributes}
 
@@ -601,7 +601,7 @@ Se sua organização adquiriu o **Adobe Healthcare Shield** ou o **Adobe Privacy
 
 ### Verificações de política de uso de dados {#data-usage-policy-checks}
 
-Na etapa **[!UICONTROL Revisar]**, o Experience Platform também verifica se há violações de política de uso de dados. Veja abaixo um exemplo de violação de uma política. Não é possível concluir o fluxo de trabalho de ativação de público-alvo até que a violação seja resolvida. Para obter informações sobre como resolver violações de política, leia sobre [violações de política de uso de dados](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) na seção de documentação sobre governança de dados.
+Na etapa **[!UICONTROL Revisão]**, a Experience Platform também verifica se há violações de política de uso de dados. Veja abaixo um exemplo de violação de uma política. Não é possível concluir o fluxo de trabalho de ativação de público-alvo até que a violação seja resolvida. Para obter informações sobre como resolver violações de política, leia sobre [violações de política de uso de dados](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) na seção de documentação sobre governança de dados.
 
 ![Um exemplo de violação de política de dados mostrado no fluxo de trabalho de ativação.](../assets/common/data-policy-violation.png)
 

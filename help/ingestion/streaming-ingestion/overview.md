@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Visão geral da assimilação de fluxo
 description: A assimilação de streaming para o Adobe Experience Platform fornece aos usuários um método para enviar dados de dispositivos cliente e do lado do servidor para o Experience Platform em tempo real.
 exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
-source-git-commit: d6424e2a9afc046f4bff329797954fd43939a819
+source-git-commit: 9b2d0c8fad1ed328725129664be94cf1800f6631
 workflow-type: tm+mt
 source-wordcount: '424'
 ht-degree: 2%
@@ -35,7 +35,7 @@ Depois de ter certeza de que seus dados estão limpos, você poderá habilitar s
 
 Para obter mais informações sobre como habilitar um conjunto de dados para [!DNL Profile] e [!DNL Identity Service], leia o [guia de configuração de um conjunto de dados](../../profile/tutorials/dataset-configuration.md).
 
-## Qual é a latência esperada para assimilação por transmissão no Experience Platform?
+## Qual é a latência esperada para a assimilação por transmissão no Experience Platform?
 
 >[!IMPORTANT]
 >
@@ -53,7 +53,7 @@ A tabela abaixo exibe orientações sobre os limites de solicitação por segund
 | Limite de RPS | Notas |
 | --- | --- |
 | 1000 solicitações por segundo | Eles podem conter várias mensagens ao usar o ponto de extremidade `/collection/batch`. |
-| 10000 mensagens individuais por segundo | As mensagens podem ser agrupadas em menos solicitações reais ao usar o ponto de extremidade `/collection/batch`. |
+| 10000 mensagens individuais por segundo | As mensagens podem ser agrupadas em menos solicitações reais ao usar o ponto de extremidade `/collection/`. |
 
 >[!IMPORTANT]
 >
@@ -61,4 +61,4 @@ A tabela abaixo exibe orientações sobre os limites de solicitação por segund
 
 ## Extensão da Adobe Experience Platform
 
-Você pode usar a extensão Adobe Experience Platform para criar uma nova conexão de transmissão. A extensão [!DNL Experience Platform] fornece ações para enviar sinais formatados em [!DNL Experience Data Model] (XDM) para assimilação em tempo real para [!DNL Experience Platform]. Visite a documentação da [Extensão Experience Platform](../../tags/extensions/client/web-sdk/overview.md) para obter mais informações.
+Você pode usar a extensão Adobe Experience Platform para criar uma nova conexão de transmissão. A extensão [!DNL Experience Platform] fornece ações para enviar sinais formatados em [!DNL Experience Data Model] (XDM) para assimilação em tempo real para [!DNL Experience Platform]. Visite a documentação da [Extensão do Experience Platform](../../tags/extensions/client/web-sdk/overview.md) para obter mais informações.

@@ -6,10 +6,10 @@ breadcrumb-title: Guia do SDK da Web
 user-guide-description: Interaja com os serviços da Experience Cloud por meio da Rede de borda.
 feature: Web SDK
 role: Developer
-source-git-commit: d5bf1b207900009829454d0b7aa095a08c1e1718
+source-git-commit: bed63cb9be1ffe39a538d1c3f8be9065ffb2ca28
 workflow-type: tm+mt
-source-wordcount: '229'
-ht-degree: 24%
+source-wordcount: '239'
+ht-degree: 23%
 
 ---
 
@@ -23,6 +23,7 @@ ht-degree: 24%
    * [Instalar o Web SDK usando a extensão de tag](install/extension.md)
    * [Instale o Web SDK usando a biblioteca JavaScript](install/library.md)
    * [Instalar o Web SDK usando o pacote NPM](install/npm.md)
+   * [Criar um build personalizado do Web SDK usando o pacote NPM](install/create-custom-build.md)
 * Comandos {#commands}
    * configurar {#configure}
       * [Visão geral](commands/configure/overview.md)
@@ -86,7 +87,7 @@ ht-degree: 24%
          * [Visão geral](personalization/adobe-target/analytics-logging/overview.md)
          * [Registro no lado do cliente](personalization/adobe-target/analytics-logging/client-side.md)
          * [Registro do lado do servidor](personalization/adobe-target/analytics-logging/server-side.md)
-   * Offer decisioning {#offer-decisioning}
+   * Offer Decisioning {#offer-decisioning}
       * [Visão geral](personalization/offer-decisioning/offer-decisioning-overview.md)
    * Adobe Journey Optimizer {#ajo}
       * [Visão geral](personalization/ajo/overview.md)

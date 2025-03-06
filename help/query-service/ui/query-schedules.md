@@ -2,9 +2,9 @@
 title: Agendamentos de consulta
 description: Saiba como automatizar execuções de consultas programadas, excluir ou desativar um agendamento de consultas e utilizar as opções de agendamento disponíveis por meio da interface do usuário do Adobe Experience Platform.
 exl-id: 984d5ddd-16e8-4a86-80e4-40f51f37a975
-source-git-commit: c0d2f4b4f8e294d5a7b0a519ab9dad8b78558b26
+source-git-commit: db0ba3bb32b5458ab3a32525c3c63939fe804ab4
 workflow-type: tm+mt
-source-wordcount: '2066'
+source-wordcount: '2027'
 ht-degree: 0%
 
 ---
@@ -119,10 +119,6 @@ Para obter uma visão geral dos alertas no Adobe Experience Platform, incluindo 
 
 ### Definir parâmetros para uma consulta parametrizada programada {#set-parameters}
 
->[!IMPORTANT]
->
->O recurso de interface de consulta parametrizada está disponível atualmente em uma **versão limitada somente** e não está disponível para todos os clientes. Se você não tiver acesso a consultas parametrizadas, continue até a seção [excluir ou desabilitar um agendamento](#delete-schedule).
-
 Se você estiver criando uma consulta programada para uma consulta parametrizada, deverá definir os valores de parâmetro para essas execuções de consulta.
 
 ![A seção Detalhes do agendamento do fluxo de trabalho de criação de agendamento com a seção Parâmetros de consulta realçada.](../images/ui/query-schedules/scheduled-query-parameter.png)
@@ -147,7 +143,7 @@ Rastreie as horas de cálculo consumidas no nível de execução da consulta par
 
 >[!AVAILABILITY]
 >
->A funcionalidade Horas de Computação é exclusiva para usuários que compraram a [SKU do Data Distiller](../data-distiller/overview.md). Entre em contato com o representante da Adobe para obter mais informações.
+>A funcionalidade Horas de Computação é exclusiva para usuários que compraram a [SKU do Data Distiller](../data-distiller/overview.md). Entre em contato com seu representante da Adobe para obter mais informações.
 
 ![A seção de detalhes do espaço de trabalho Consultas Agendadas com uma lista de execuções de consulta foi destacada para uma consulta agendada.](../images/ui/query-schedules/list-of-scheduled-runs.png)
 

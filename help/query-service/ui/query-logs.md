@@ -2,18 +2,14 @@
 title: Logs de consulta
 description: Os logs de consulta são gerados automaticamente cada vez que uma consulta é executada e ficam disponíveis por meio da interface do usuário para ajudar na solução de problemas. Este documento descreve como usar e navegar na seção Logs do serviço de consulta da interface do usuário.
 exl-id: 929e9fba-a9ba-4bf9-a363-ca8657a84f75
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: db0ba3bb32b5458ab3a32525c3c63939fe804ab4
 workflow-type: tm+mt
-source-wordcount: '1012'
+source-wordcount: '948'
 ht-degree: 0%
 
 ---
 
 # Logs de consulta
-
->[!IMPORTANT]
->
->Determinados recursos de logs de consulta estão atualmente em uma versão limitada e não estão disponíveis para todos os clientes. Sua interface do usuário pode parecer um pouco diferente sem um ícone de edição. Além disso, o processo de seleção de um nome de consulta pode navegar até o Editor de Consulta em vez da exibição [!UICONTROL Detalhes do log de consulta].
 
 O Adobe Experience Platform mantém um log de todos os eventos de consulta que ocorrem por meio da API e da interface do usuário. Essas informações estão disponíveis na interface do Serviço de consulta na guia [!UICONTROL Logs].
 
@@ -52,10 +48,6 @@ No painel de detalhes do log, é possível executar várias ações. Você pode 
 >A opção para [!UICONTROL Executar como CTAS] só está disponível para uma consulta SELECT.
 
 ![O espaço de trabalho Log de Consultas com uma linha selecionada, Executar como CTAS, Excluir consulta e o ícone Copiar SQL realçados.](../images/ui/query-log/edit-output-dataset.png)
-
->[!IMPORTANT]
->
->Determinados recursos de logs de consulta estão atualmente em uma versão limitada e não estão disponíveis para todos os clientes.
 
 Você também pode selecionar um nome de modelo de consulta na coluna [!UICONTROL Nome] para navegar diretamente para a exibição [!UICONTROL Detalhes do log de consulta].
 

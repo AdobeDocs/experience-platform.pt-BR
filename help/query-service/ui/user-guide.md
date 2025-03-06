@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guia da interface do Editor de consultas
 description: O Editor de consultas é uma ferramenta interativa fornecida pelo Serviço de consultas da Adobe Experience Platform, que permite gravar, validar e executar consultas para dados de experiência do cliente na interface do usuário do Experience Platform. O Editor de consultas é compatível com o desenvolvimento de consultas para análise e exploração de dados e permite executar consultas interativas para fins de desenvolvimento, bem como consultas não interativas para preencher conjuntos de dados no Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: e1ecdb5d701093d9c73b6a05dad9a4dd848e0083
+source-git-commit: ae189e2f6d303043e32e6ca658161bcdf4c28dc6
 workflow-type: tm+mt
-source-wordcount: '2745'
+source-wordcount: '2682'
 ht-degree: 0%
 
 ---
@@ -192,12 +192,7 @@ Se uma consulta foi agendada, a guia [!UICONTROL Consultas agendadas] oferece ma
 >
 >As consultas que não são executadas não são salvas pelo Log. Para que a consulta esteja disponível no Serviço de consulta, ela deve ser executada ou salva no Editor de consultas.
 
-### [!BADGE Disponibilidade limitada]{type=Informative} Navegador de objetos {#object-browser}
-
->[!AVAILABILITY]
->
-O painel de navegação do conjunto de dados está disponível somente para clientes do Data Distiller. A interface do usuário da Platform pode não conter o painel de navegação do conjunto de dados esquerdo. Outras imagens neste documento podem não refletir o painel de navegação do conjunto de dados. Entre em contato com seu representante da Adobe para obter mais informações.<br>
-O navegador de objetos está disponível atualmente somente em uma **versão limitada**. Entre em contato com o representante da Adobe para obter acesso antecipado ao lançamento.
+### Navegador de objetos {#object-browser}
 
 Use o navegador de objetos para pesquisar e filtrar facilmente os conjuntos de dados. O navegador de objetos reduz o tempo gasto pesquisando tabelas e conjuntos de dados em grandes ambientes com vários conjuntos de dados. Com acesso simplificado a dados e metadados relevantes, você pode se concentrar mais na criação de consultas e menos na navegação.
 
@@ -221,7 +216,7 @@ Além das pesquisas rápidas, agora é possível acessar facilmente os metadados
 
 #### Explorar tabelas secundárias
 
-Para explorar tabelas secundárias ou vinculadas, selecione a seta suspensa ao lado do nome de uma tabela na lista. Isso expande a tabela para mostrar quaisquer tabelas secundárias associadas, fornece uma visualização clara da estrutura de dados e permite construções de consulta mais complexas. O ícone ao lado do nome do campo indica o tipo de dados da coluna, to ajuda a identificá-lo durante consultas complexas.
+Para explorar tabelas secundárias ou vinculadas, selecione a seta suspensa ao lado do nome de uma tabela na lista. Isso expande a tabela para mostrar quaisquer tabelas secundárias associadas, fornece uma visualização clara da estrutura de dados e permite construções de consulta mais complexas. O ícone ao lado do nome do campo indica o tipo de dados da coluna, para ajudar você a identificá-la durante consultas complexas.
 
 ![O Editor de Consultas com a lista de tabelas filtrada exibida.](../images/ui/query-editor/child-table-list.png)
 
@@ -237,7 +232,7 @@ O console fornece informações sobre o status e a operação do Serviço de con
 
 >[!NOTE]
 >
-O console mostra apenas os erros que resultaram da execução de um query. Ele não mostra os erros de validação de consulta que ocorrem antes da execução de uma consulta.
+>O console mostra apenas os erros que resultaram da execução de um query. Ele não mostra os erros de validação de consulta que ocorrem antes da execução de uma consulta.
 
 ### Resultados da consulta {#query-results}
 
@@ -257,7 +252,7 @@ O vídeo a seguir mostra como executar queries na interface do Adobe Experience 
 
 >[!NOTE]
 >
-A interface do usuário descrita no vídeo está desatualizada, mas a lógica usada no fluxo de trabalho permanece a mesma.
+>A interface do usuário descrita no vídeo está desatualizada, mas a lógica usada no fluxo de trabalho permanece a mesma.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
 

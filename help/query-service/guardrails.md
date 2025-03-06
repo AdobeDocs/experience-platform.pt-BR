@@ -3,9 +3,9 @@ keywords: Experience Platform;consulta;serviço de consulta;solução de problem
 title: Medidas de proteção do serviço de consulta
 description: Este documento fornece informações sobre limites de uso para dados do Serviço de consulta para ajudar você a otimizar o uso da consulta.
 exl-id: 1ad5dcf4-d048-49ff-97e3-07040392b65b
-source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
+source-git-commit: 23c7a4590b365a49edb066567b6ebe2ac08c67e8
 workflow-type: tm+mt
-source-wordcount: '1181'
+source-wordcount: '1168'
 ht-degree: 2%
 
 ---
@@ -27,7 +27,7 @@ Antes de continuar com este documento, você deve ter uma boa compreensão das p
 
 * **Consultas em lote**: para executar consultas `INSERT TABLE AS SELECT` e `CREATE TABLE AS SELECT` para limpar, formatar, manipular e enriquecer dados. Os resultados destas consultas **são armazenados** no data lake. A métrica para medir o consumo dessa funcionalidade é a de horas computacionais.
 
-* **Usuários do Serviço de Consulta**: os usuários do Serviço de Consulta fornecidos em sua licença atual para Customer Journey Analytics, Adobe Real-time Customer Data Platform e/ou Adobe Journey Optimizer também podem ser usados com o Data Distiller. Os usuários do Serviço de consulta são compartilhados entre os recursos.
+* **Usuários do Serviço de Consulta**: os usuários do Serviço de Consulta fornecidos em sua licença atual para Customer Journey Analytics, Adobe Real-Time Customer Data Platform e/ou Adobe Journey Optimizer também podem ser usados com o Data Distiller. Os usuários do Serviço de consulta são compartilhados entre os recursos.
 
 * **Usuários ad hoc**: os usuários ad hoc são aqueles que executam consultas ad hoc.
 
@@ -35,15 +35,13 @@ Antes de continuar com este documento, você deve ter uma boa compreensão das p
 
 * **API de relatórios**: uma API para fazer chamadas de busca de dados (interna ou externamente). Os modelos de dados de relatórios estendidos são derivados dos modelos de dados de relatórios nativos no Adobe Experience Platform, como o modelo de dados dos painéis do Real-Time CDP.
 
-A ilustração abaixo resume como os recursos do Serviço de consulta são atualmente empacotados e licenciados:
-
 ## Tipos de grade de proteção
 
 Há dois tipos de limites padrão neste documento:
 
 | Tipo de grade de proteção | Descrição |
 |----------|---------|
-| **Proteção de desempenho (limite flexível)** | As medidas de proteção de desempenho são limites de uso relacionados ao escopo dos seus casos de uso. Ao exceder as medidas de proteção de desempenho, você pode enfrentar degradação e latência do desempenho. O Adobe não é responsável por essa degradação de desempenho. Os clientes que excederem consistentemente uma garantia de desempenho podem optar por licenciar capacidade adicional para evitar a degradação do desempenho. |
+| **Proteção de desempenho (limite flexível)** | As medidas de proteção de desempenho são limites de uso relacionados ao escopo dos seus casos de uso. Ao exceder as medidas de proteção de desempenho, você pode enfrentar degradação e latência do desempenho. A Adobe não é responsável por essa degradação de desempenho. Os clientes que excederem consistentemente uma garantia de desempenho podem optar por licenciar capacidade adicional para evitar a degradação do desempenho. |
 | **Medidas de proteção aplicadas pelo sistema (Limite rígido)** | As medidas de proteção aplicadas pelo sistema são aplicadas pela interface do usuário ou API do Real-Time CDP. Esses são limites que você não pode exceder, pois a interface do usuário e a API o bloquearão de fazer isso ou retornarão um erro. |
 
 {style="table-layout:auto"}
@@ -101,10 +99,10 @@ Consulte a documentação a seguir para obter mais informações sobre o Serviç
 * [API do serviço de consulta](./api/getting-started.md)
 * [Interface do usuário do serviço de consulta](./ui/overview.md)
 
-Consulte a documentação a seguir para obter mais informações sobre outras medidas de proteção dos serviços de Experience Platform, informações de latência de ponta a ponta e informações de licenciamento dos documentos Descrição do produto Real-Time CDP:
+Consulte a documentação a seguir para obter mais informações sobre outras medidas de proteção dos serviços da Experience Platform, informações de latência de ponta a ponta e informações de licenciamento dos documentos Descrição do produto da Real-Time CDP:
 
 * [Medidas de proteção do Real-Time CDP](/help/rtcdp/guardrails/overview.md)
-* [Diagramas de latência de ponta a ponta](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) para vários serviços de Experience Platform.
-* [Real-time Customer Data Platform (B2C Edition - Pacotes Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform (B2P - Pacotes Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform (B2B - Pacotes Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [Diagramas de latência de ponta a ponta](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) para vários serviços da Experience Platform.
+* [Real-Time Customer Data Platform (B2C Edition - Pacotes do Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2P - Pacotes do Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2B - Pacotes do Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

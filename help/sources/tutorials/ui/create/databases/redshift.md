@@ -3,9 +3,9 @@ title: Conectar o AWS Redshift ao Experience Platform usando a interface do usu�
 description: Saiba como conectar uma conta do AWS Redshift ao Experience Platform usando a interface do usuário de origens.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 4faf3200-673b-4a20-8f94-d049e800444b
-source-git-commit: dd9aee1ac887637d4761188d6dbcf55ad5bde407
+source-git-commit: 8533aa3527bfb74a77f5b15dacf9ecfe622477d5
 workflow-type: tm+mt
-source-wordcount: '715'
+source-wordcount: '718'
 ht-degree: 2%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 2%
 >
 >A origem [!DNL AWS Redshift] está disponível no catálogo de origens para usuários que compraram o Real-Time Customer Data Platform Ultimate.
 
-Leia este guia para saber como conectar sua conta do [!DNL AWS Redshift] à Adobe Experience Platform usando a interface do usuário.
+Leia este guia para saber como conectar sua conta do [!DNL AWS Redshift] à Adobe Experience Platform usando o espaço de trabalho de fontes na interface do usuário.
 
 ## Introdução
 

@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guia da API de acesso a dados
 description: A API de acesso a dados é compatível com o Adobe Experience Platform, fornecendo aos desenvolvedores uma interface RESTful focada na descoberta e acessibilidade de conjuntos de dados assimilados no Experience Platform.
 exl-id: 278ec322-dafa-4e3f-ae45-2d20459c5653
-source-git-commit: 804eeb4ec976cf41fdd450bd8f307499c3ebae03
+source-git-commit: 78dbb735bad70e2115cbbaabb6cf74bf38983460
 workflow-type: tm+mt
 source-wordcount: '566'
 ht-degree: 5%
@@ -154,7 +154,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID} \
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `data.name` | O nome do arquivo (por exemplo, `profiles.csv`). |
+| `data.name` | O nome do arquivo (por exemplo, `profiles.parquet`). |
 | `data.length` | O tamanho do arquivo (em bytes). |
 | `data._links.self.href` | O URL para baixar o arquivo. |
 
@@ -201,7 +201,7 @@ Quando um diretório é retornado, ele contém uma matriz de todos os arquivos d
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `data.name` | O nome do arquivo (por exemplo, `profiles.csv`). |
+| `data.name` | O nome do arquivo (por exemplo, `profiles.parquet`). |
 | `data._links.self.href` | O URL para baixar o arquivo. |
 
 ## Acessar o conteúdo de um arquivo {#access-file-contents}
@@ -231,7 +231,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID}?pat
 | Propriedade | Descrição |
 | -------- | ----------- |
 | `{FILE_ID}` | A ID do arquivo em um conjunto de dados. |
-| `{FILE_NAME}` | O nome completo do arquivo (por exemplo, `profiles.csv`). |
+| `{FILE_NAME}` | O nome completo do arquivo (por exemplo, `profiles.parquet`). |
 
 **Resposta**
 
@@ -243,4 +243,4 @@ Para obter amostras adicionais, consulte o [tutorial sobre acesso a dados](tutor
 
 ## Assinar eventos de assimilação de dados {#subscribe-to-data-ingestion-events}
 
-Você pode assinar eventos específicos de alto valor por meio da [Adobe Developer Console](https://developer.adobe.com/console/). Por exemplo, você pode assinar eventos de assimilação de dados para ser notificado de possíveis atrasos e falhas. Consulte o tutorial em [assinatura de notificações de eventos Adobe](../observability/alerts/subscribe.md) para obter mais informações.
+Você pode assinar eventos específicos de alto valor por meio da [Adobe Developer Console](https://developer.adobe.com/console/). Por exemplo, você pode assinar eventos de assimilação de dados para ser notificado de possíveis atrasos e falhas. Consulte o tutorial sobre [assinatura de notificações de eventos do Adobe](../observability/alerts/subscribe.md) para obter mais informações.

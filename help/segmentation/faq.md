@@ -2,9 +2,9 @@
 title: Perguntas frequentes do Audiences
 description: Descubra respostas para perguntas frequentes sobre públicos-alvo e outros conceitos relacionados à segmentação.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
+source-git-commit: 16ffdd0e28687c04b4b8a2b33f10ddceea9ec03a
 workflow-type: tm+mt
-source-wordcount: '4830'
+source-wordcount: '4832'
 ht-degree: 2%
 
 ---
@@ -83,7 +83,7 @@ A política de mesclagem padrão específica da organização é aplicada automa
 
 ### Onde posso ativar públicos gerados externamente para o?
 
-Um público gerado externamente pode ser mapeado para qualquer destino e usado em campanhas do Adobe Journey Optimizer.
+Um público gerado externamente pode ser mapeado para qualquer destino e usado em campanhas e jornadas do Adobe Journey Optimizer.
 
 ### Posso excluir um público-alvo gerado externamente?
 
@@ -313,7 +313,7 @@ Além disso, as seguintes restrições (?) aplicar ao usar estes blocos:
    - Além disso, este bloco **não** oferece suporte a atributos de enriquecimento.
 - Excluir bloco
    - Este bloco **não** oferece suporte ao tipo de dados data ou booleano.
-- Bloco de classificação
+- Classificar bloco
    - Este bloco **não** dá suporte a atributos de enriquecimento.
 
 Para obter mais detalhes sobre como usar a Composição de público-alvo, leia o [Guia da interface do usuário de Composição de público-alvo](./ui/audience-composition.md).

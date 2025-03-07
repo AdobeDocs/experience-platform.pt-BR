@@ -3,9 +3,9 @@ title: Ativar públicos para destinos de exportação de perfil em lote
 type: Tutorial
 description: Saiba como ativar os públicos-alvo no Adobe Experience Platform enviando-os para destinos com base em perfil de lote.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 2d640b282feb783694276c69366b1fccadddfd78
+source-git-commit: 8a1ac01c503bd1e5b9873714514d438b22f45cfb
 workflow-type: tm+mt
-source-wordcount: '4374'
+source-wordcount: '4405'
 ht-degree: 10%
 
 ---
@@ -64,18 +64,18 @@ Para selecionar os públicos que você deseja ativar para o destino, use as caix
 Você pode selecionar entre vários tipos de públicos-alvo, dependendo de sua origem:
 
 * **[!UICONTROL Serviço de segmentação]**: públicos-alvo gerados no Experience Platform pelo serviço de segmentação. Consulte a [documentação de segmentação](../../segmentation/ui/overview.md) para obter mais detalhes.
-* **[!UICONTROL Upload personalizado]**: públicos-alvo gerados fora do Experience Platform e carregados na Platform como arquivos CSV. Para saber mais sobre públicos-alvo externos, consulte a documentação sobre [importação de um público-alvo](../../segmentation/ui/audience-portal.md#import-audience).
+* **[!UICONTROL Upload personalizado]**: públicos-alvo gerados fora do Experience Platform e carregados na Platform como arquivos CSV. Para saber mais sobre públicos-alvo externos, consulte a documentação sobre [importação de um público-alvo](../../segmentation/ui/audience-portal.md#import-audience). A seleção de públicos originados de **[!UICONTROL Uploads personalizados]** habilita automaticamente a etapa [Selecionar atributos de enriquecimento](#select-enrichment-attributes).
 * Outros tipos de públicos-alvo, originados de outras soluções da Adobe, como o [!DNL Audience Manager].
+
+>[!IMPORTANT]
+>
+>Ao ativar públicos-alvo de upload personalizados para destinos baseados em arquivo em lote, há um limite de 10 desses públicos-alvo que você pode ativar em um fluxo de dados.
 
 ![Caixas de seleção exibidas ao selecionar um ou vários públicos-alvo a serem ativados.](../assets/ui/activate-batch-profile-destinations/select-audiences.png)
 
 >[!TIP]
 >
->A seleção de públicos originados de **[!UICONTROL Uploads personalizados]** habilita automaticamente a etapa [Selecionar atributos de enriquecimento](#select-enrichment-attributes).
-
->[!TIP]
->
->Você pode remover públicos de fluxos de ativação existentes da página **[!UICONTROL Dados de ativação]**. Consulte a [documentação dedicada](../ui/destination-details-page.md#bulk-remove) para obter detalhes.
+>Para remover públicos dos fluxos de ativação existentes, use a página **[!UICONTROL Dados de ativação]**. Leia a seção sobre como [remover vários públicos-alvo dos fluxos de ativação](../ui/destination-details-page.md#bulk-remove) para obter detalhes.
 
 ## Programar exportação de público-alvo {#scheduling}
 

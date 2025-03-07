@@ -6,9 +6,9 @@ product: experience platform
 type: Documentation
 description: Saiba mais sobre o uso padrão da ativação de dados e os limites de taxa.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: 2d640b282feb783694276c69366b1fccadddfd78
+source-git-commit: 8a1ac01c503bd1e5b9873714514d438b22f45cfb
 workflow-type: tm+mt
-source-wordcount: '1666'
+source-wordcount: '1718'
 ht-degree: 2%
 
 ---
@@ -76,6 +76,7 @@ As medidas de proteção abaixo se aplicam à ativação por meio de [destinos e
 | Frequência de ativação | Uma exportação completa diária ou exportações incrementais mais frequentes a cada 3, 6, 8 ou 12 horas. | Proteção imposta pelo sistema | Leia as seções de documentação de [exportar arquivos completos](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) e [exportar arquivos incrementais](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) para obter mais informações sobre os incrementos de frequência para exportações em lote. |
 | Número máximo de públicos que podem ser exportados em uma determinada hora | 100 | Proteção de desempenho | A recomendação é adicionar no máximo 100 públicos-alvo aos fluxos de dados de destino em lote. |
 | Número máximo de linhas (registros) por arquivo a serem ativados | 5 milhões | Proteção imposta pelo sistema | O Adobe Experience Platform divide automaticamente os arquivos exportados em 5 milhões de registros (linhas) por arquivo. Cada linha representa um perfil. Nomes de arquivos divididos são anexados com um número que indica que o arquivo é parte de uma exportação maior, como: `filename.csv`, `filename_2.csv`, `filename_3.csv`. Para obter mais informações, leia a [seção de agendamento](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) do tutorial ativar destinos em lote. |
+| Número máximo de públicos-alvo de upload personalizados para ativar em um fluxo de dados | 10 | Proteção imposta pelo sistema | Ao ativar [públicos-alvo personalizados](/help/segmentation/ui/audience-portal.md#import-audience) para destinos baseados em arquivo em lote, há um limite de 10 desses públicos-alvo que você pode ativar em um fluxo de dados. Leia mais sobre o fluxo de trabalho para [ativar públicos-alvo de carregamento personalizado para destinos baseados em arquivo em lote](/help/destinations/ui/activate-batch-profile-destinations.md#select-audiences). |
 
 {style="table-layout:auto"}
 

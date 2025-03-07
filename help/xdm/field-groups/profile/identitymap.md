@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;página inicial;tópicos populares;esquema;Esquema;XDM;perfil individual;campos;esquemas;Esquemas;identityMap;mapa de identidade;mapa de identidade;Design de esquema;mapa;Mapa;esquema de união;união
+keywords: Experience Platform;página inicial;tópicos populares;esquema;Esquema;XDM;perfil individual;campos;esquemas;Esquemas;identityMap;identity map;Identity map;Schema design;map;Map;union schema;union
 title: Grupo de campos de esquema do IdentityMap
 description: Saiba mais sobre a classe Perfil individual XDM.
 exl-id: c9928e85-ef1e-4739-ba1d-80505a9e60c3
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: cfa3e5c6811f148376a2d2012f5687be6fad2299
 workflow-type: tm+mt
-source-wordcount: '139'
+source-wordcount: '152'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 >
 >Os nomes de vários grupos de campos de esquema foram alterados. Consulte o documento em [atualizações de nome de grupo de campos](../name-updates.md) para obter mais informações.
 
-[!UICONTROL IdentityMap] é um grupo de campos de esquema padrão para a [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md). O grupo de campos fornece um único campo de mapa, que contém um conjunto de identidades de usuário digitadas por namespace.
+[!UICONTROL IdentityMap] é um grupo de campos de esquema padrão para a [[!UICONTROL classe XDM ExperienceEvent]](../../classes/experienceevent.md) e um grupo de campos compatível para a [[!UICONTROL classe XDM Individual Profile]](../../classes/individual-profile.md). O grupo de campos fornece um único campo de mapa, que contém um conjunto de identidades de usuário digitadas por namespace.
 
 ![Um diagrama do [!UICONTROL IdentityMap] grupo de campos de esquema](../../images/field-groups/identitymap.png)
 

@@ -1,10 +1,10 @@
 ---
 title: Assimilação sob demanda para fluxos de dados de origens na interface
-description: Saiba como criar fluxos de dados sob demanda para suas conexões de origem usando a interface do usuário Experience Platform.
+description: Saiba como criar fluxos de dados sob demanda para suas conexões de origem usando a interface do usuário do Experience Platform.
 exl-id: e5a70044-2484-416a-8098-48e6d99c2d98
-source-git-commit: 38da1c1d5e563ea3f66cc25a69ad726f709784d0
+source-git-commit: 7a287c8de3c3fd0670cbdf29cd58558b30982122
 workflow-type: tm+mt
-source-wordcount: '522'
+source-wordcount: '549'
 ht-degree: 0%
 
 ---
@@ -31,9 +31,9 @@ As execuções de fluxo representam uma instância da execução do fluxo de dad
 
 Este documento requer uma compreensão funcional dos seguintes componentes do Experience Platform:
 
-* [Fontes](../../home.md): o Experience Platform permite que os dados sejam assimilados de várias fontes e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma.
+* [Fontes](../../home.md): o Experience Platform permite que os dados sejam assimilados de várias fontes e fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma.
 * [Fluxos de dados](../../../dataflows/home.md): um fluxo de dados é uma representação de trabalhos de dados que movem dados pela Plataforma. Os fluxos de dados são configurados em diferentes serviços, ajudando a mover dados dos conectores de origem para conjuntos de dados de destino, para o Serviço de identidade, o Perfil do cliente em tempo real e para Destinos.
-* [Sandboxes](../../../sandboxes/home.md): o Experience Platform fornece sandboxes virtuais que particionam uma única instância da Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
+* [Sandboxes](../../../sandboxes/home.md): a Experience Platform fornece sandboxes virtuais que particionam uma única instância da Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
 ## Criar um fluxo de dados sob demanda {#create-a-dataflow-on-demand}
 
@@ -57,7 +57,7 @@ Selecione **[!UICONTROL Agendar]** e aguarde alguns momentos para o fluxo de dad
 
 ![A janela de configuração de agendamento para assimilação sob demanda.](../../images/tutorials/on-demand/configure-schedule.png)
 
-Selecione o nome do fluxo de dados para exibir a atividade do fluxo de dados. Aqui você verá uma lista de execuções de fluxo de dados que foram processadas. Selecione uma execução de fluxo de dados e selecione **[!UICONTROL Repetir]** no painel direito para repetir a assimilação de uma iteração de execução de fluxo de dados selecionada.
+Selecione o nome do fluxo de dados para exibir a atividade do fluxo de dados. Aqui você verá uma lista de execuções de fluxo de dados que foram processadas. Você pode executar novamente iterações individuais das execuções do fluxo de dados, independentemente de terem falhado ou sido bem-sucedidas. Para iterações de execução que falharam, você pode usar **[!UICONTROL Repetir]** para iniciar a execução novamente após diagnosticar e resolver quaisquer erros que tenham sido encontrados durante o processo de criação.
 
 ![Uma lista de execuções de fluxo processadas para um fluxo de dados selecionado.](../../images/tutorials/on-demand/processed.png)
 

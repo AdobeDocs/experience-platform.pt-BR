@@ -1,10 +1,10 @@
 ---
 title: Acessar o assistente de IA no Experience Platform
-description: Saiba como acessar o Assistente de IA na interface do usuário do Experience Cloud.
+description: Saiba como acessar o Assistente de IA na interface do Experience Cloud.
 exl-id: c4cdff25-512c-4b4c-be91-ad9360067a0a
-source-git-commit: 8d69d7010442519ce02bb9a504d4228742b4f092
+source-git-commit: b26a1f12c9ea07d4dd077f1f3c1578e6c69866a7
 workflow-type: tm+mt
-source-wordcount: '364'
+source-wordcount: '539'
 ht-degree: 0%
 
 ---
@@ -25,13 +25,34 @@ O acesso ao AI Assistant é regido pelos seguintes parâmetros:
    * Como administrador, você pode adicionar o **Habilitar o Assistente de IA** a uma determinada função e adicionar um usuário a essa função, para permitir que ele acesse o Assistente de IA em sua organização.
    * Como administrador, você pode adicionar o **Exibir Insights Operacionais** a uma determinada função e adicionar um usuário a essa função, para permitir que ele use os recursos de insights operacionais do Assistente de IA. Os insights operacionais estão atualmente na versão beta.
 
-![A página da interface do usuário de permissões com o Assistente de IA habilitado e as permissões de Insights Operacionais de Exibição incluídas em uma determinada função.](./images/permissions.png)
+Use a [interface de permissões](../access-control/abac/ui/roles.md) para conceder permissões para usar o Assistente de IA no Experience Platform e no Journey Optimizer. Para obter informações sobre como acessar o Assistente de IA no Customer Journey Analytics. Leia a documentação no [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/ai-assistant).
 
-Use a interface de permissões para conceder permissões para usar o Assistente de IA no Experience Platform e no Journey Optimizer. Para obter informações sobre como acessar o Assistente de IA no Customer Journey Analytics. Leia a documentação em [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/ai-assistant).
+![A página da interface do usuário de permissões com o Assistente de IA habilitado e as permissões de Insights Operacionais de Exibição incluídas em uma determinada função.](./images/access/access-permissions.png)
+
+Pode haver dois motivos pelos quais você não pode acessar o Assistente de IA:
+
+1. Você está usando uma organização que não está legalmente qualificada para usar o Assistente de IA;
+2. Seus administradores não concederam a você as permissões apropriadas para usar o Assistente de IA.
+
+>[!BEGINTABS]
+
+>[!TAB Sua organização não pode usar o Assistente de IA]
+
+Você verá a seguinte mensagem se estiver usando uma organização que não seja legalmente qualificada para usar o Assistente de IA. Nesse cenário, você deve entrar em contato com a equipe de conta da Adobe para resolver o problema de acesso.
+
+![A mensagem pop-up exibida na interface do usuário do Experience Platform caso a organização não possa usar o Assistente de IA.](./images/access/modal-one.png)
+
+>[!TAB Você não tem as permissões certas]
+
+Se sua organização estiver legalmente qualificada para usar o Assistente de IA e você ainda não conseguir acessar o recurso, você verá a seguinte mensagem na interface do usuário do Experience Platform. Esse cenário significa que você não tem permissões suficientes para acessar o recurso e deve entrar em contato com seus administradores para resolver as permissões.
+
+![A mensagem pop-up exibida na interface do usuário do Experience Platform caso você não tenha as permissões necessárias para o Assistente de IA.](./images/access/modal-two.png)
+
+>[!ENDTABS]
 
 Depois de ter as permissões necessárias, você pode acessar o Assistente do AI selecionando o ícone do Assistente do AI no cabeçalho superior do aplicativo que está usando.
 
-![Assistente de IA com experiência de usuário pela primeira vez.](./images/ai-assistant.png)
+![Assistente de IA com experiência de usuário pela primeira vez.](./images/access/access-home.png)
 
 ## Obter acesso ao Assistente de IA
 

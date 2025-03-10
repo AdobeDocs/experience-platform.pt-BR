@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;página inicial;tópicos populares;fontes;conectores;conectores de origem;campanha;serviços gerenciados de campanha
+keywords: Experience Platform;página inicial;tópicos populares;fontes;conectores;conectores de origem;campanha;serviços gerenciados de campanha;;home;popular topics;sources;connectors;source connectors;campaign;campaign managed services
 title: Criar uma conexão de origem do Adobe Campaign Managed Cloud Services usando a interface do usuário da plataforma
 description: Saiba como conectar o Adobe Experience Platform ao Adobe Campaign Managed Cloud Services usando a interface do usuário da plataforma.
 exl-id: 067ed558-b239-4845-8c85-3bf9b1d4caed
-source-git-commit: 77d755e4ebf97521efa1dfdfe9ee40312800ad28
+source-git-commit: 67f42c155bf34f2b8adc3b08536bb3310bb77390
 workflow-type: tm+mt
-source-wordcount: '1185'
+source-wordcount: '1233'
 ht-degree: 6%
 
 ---
@@ -16,7 +16,7 @@ Este tutorial fornece etapas para criar uma conexão de origem a fim de trazer s
 
 ## Introdução
 
-Este guia requer entendimento prático dos seguintes componentes do Experience Platform:
+Este guia requer uma compreensão funcional dos seguintes componentes do Experience Platform:
 
 * [Fontes](../../../../home.md): a Platform permite que dados sejam assimilados de várias fontes e fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da Platform.
 * [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): a estrutura padronizada pela qual o Experience Platform organiza os dados de experiência do cliente.
@@ -30,7 +30,7 @@ Na interface da Platform, selecione **[!UICONTROL Fontes]** na navegação à es
 
 Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Você também pode usar a barra de pesquisa para restringir as fontes exibidas.
 
-Na categoria **[!UICONTROL aplicativos de Adobe]**, selecione **[!UICONTROL Adobe Campaign Managed Cloud Services]** e **[!UICONTROL Adicionar dados]**.
+Na categoria **[!UICONTROL aplicativos do Adobe]**, selecione **[!UICONTROL Adobe Campaign Managed Cloud Services]** e **[!UICONTROL Adicionar dados]**.
 
 ![O catálogo de origens exibindo o cartão Adobe Campaign Managed Cloud Services.](../../../../images/tutorials/create/campaign/catalog.png)
 
@@ -136,6 +136,12 @@ A página de atividade do conjunto de dados é exibida. Aqui, você pode ver inf
 Essa página também fornece uma interface para atualizar a descrição dos metadados do fluxo de dados, habilitar a assimilação parcial e o diagnóstico de erros, bem como adicionar novos dados ao conjunto de dados.
 
 ![Uma interface com gráficos que representam a taxa de assimilação de um conjunto de dados selecionado.](../../../../images/tutorials/create/campaign/dataset-activity.png)
+
+
+>[!IMPORTANT]
+>
+>Não é possível preencher retroativamente logs de eventos antigos com a origem do Adobe Campaign Managed Cloud Services. Se o preenchimento retroativo for necessário, use um fluxo de trabalho personalizado ou uma implementação personalizada para exportar dados para o Amazon S3 ou Azure Blob, ou do Amazon S3 ou Azure Blob para um conjunto de dados do Adobe Experience Platform.
+
 
 ## Próximas etapas
 

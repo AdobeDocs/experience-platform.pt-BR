@@ -2,10 +2,10 @@
 title: Regras de vinculação do gráfico de identidade
 description: Saiba mais sobre as regras de vinculação de gráficos de identidade no Serviço de identidade.
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: 048d915d33a19a9d50a4951e165b5ade1b9d9734
+source-git-commit: 31d4c895294e779ef39639710fad0e517fa03cf2
 workflow-type: tm+mt
-source-wordcount: '1436'
-ht-degree: 4%
+source-wordcount: '1449'
+ht-degree: 5%
 
 ---
 
@@ -13,9 +13,13 @@ ht-degree: 4%
 
 >[!AVAILABILITY]
 >
->As regras de vinculação do gráfico de identidade estão atualmente com Disponibilidade limitada. Entre em contato com a equipe de conta do Adobe para obter informações sobre como acessar o recurso em sandboxes de desenvolvimento.
+>As regras de vinculação do gráfico de identidade estão atualmente com Disponibilidade limitada. Entre em contato com a equipe de conta da Adobe para obter informações sobre como acessar o recurso em sandboxes de desenvolvimento.
 
 Com o Serviço de identidade da Adobe Experience Platform e o Perfil do cliente em tempo real, é fácil supor que seus dados são assimilados perfeitamente e que todos os perfis mesclados representam uma única pessoa por meio de um identificador de pessoa, como um CRMID. No entanto, há possíveis cenários em que determinados dados podem tentar mesclar vários perfis diferentes em um único perfil (&quot;colapso de gráfico&quot;). Para evitar essas mesclagens indesejadas, é possível usar as configurações fornecidas por meio das regras de vinculação do gráfico de identidade e permitir a personalização precisa para seus usuários.
+
+Assista ao vídeo a seguir para obter mais informações sobre como usar as regras de vinculação do gráfico de identidade:
+
+>[!VIDEO](https://video.tv.adobe.com/v/3448250/?learn=on&enablevpops)
 
 ## Introdução
 

@@ -1,19 +1,19 @@
 ---
 solution: Experience Platform
-title: Assistente de IA para casos de uso - Crie e compartilhe seus próprios manuais.
+title: Saiba como criar e compartilhar seus próprios manuais usando o Assistente de IA.
 description: Como criar e compartilhar seus próprios manuais de casos de uso.
 role: User
-source-git-commit: f813db7599409a8fc048480f7803ed86c9f397fe
+exl-id: 0bc49710-ad9e-4509-b7e6-55f9b9037aa9
+source-git-commit: f76db5c8d397c6c7b006c70147c054dc0a67be04
 workflow-type: tm+mt
-source-wordcount: '1111'
+source-wordcount: '1112'
 ht-degree: 0%
 
 ---
 
-
 # Crie e compartilhe seus próprios manuais
 
-A **Estrutura de Criação do Manual**, disponibilizada pelo Assistente de IA do Adobe, permite que você crie, gerencie e compartilhe manuais com eficiência no Adobe Experience Platform.
+O [!DNL Playbook Authoring Framework], viabilizado pelo Assistente de IA no Adobe Experience Platform, permite criar, gerenciar e compartilhar manuais com eficiência no Adobe Experience Platform.
 
 A estrutura segue um processo de três etapas:
 
@@ -23,35 +23,33 @@ A estrutura segue um processo de três etapas:
 
 3. **Distribuição do manual**: compartilhe manuais de reprodução em diferentes organizações. Por exemplo, o Centro de Excelência Martech da ACME na Alemanha pode criar um manual &quot;dourado&quot; e distribuí-lo para organizações regionais na Tailândia, Austrália etc. para ajudar a padronizar o caso de uso de marketing.
 
-## Criar um manual com o Assistente de IA do Adobe
+## Criar um manual
+
+Você pode criar um manual de duas maneiras: usando o Assistente de IA ou manualmente. Leia as seções a seguir para saber como.
 
 ### Visão geral do manual
 
-Você pode criar um manual de duas maneiras: usando o Assistente de IA do Adobe ou manualmente.
+Siga estas etapas para criar um manual com o Assistente de IA:
 
-Siga estas etapas para criar um manual com o Assistente de IA do Adobe:
-
-1. No painel de navegação esquerdo, selecione **Guias de Reprodução**.
+No painel de navegação esquerdo, selecione **[!UICONTROL Livros de reprodução]**.
 
 ![&quot;Guias de Reprodução&quot; realçado no painel de navegação esquerdo na interface do usuário.](/help/use-case-playbooks/assets/playbooks/authoring/playbooks.png)
 
-1. Selecione **Novo manual** e **Gerar manual com o Assistente de IA**.
+Selecione **[!UICONTROL Novo manual]** e **Gerar manual com o Assistente de IA**.
 
-![Selecione o botão &quot;Novo Manual&quot;.](/help/use-case-playbooks/assets/playbooks/authoring/new-playbook.png)
+![A interface do manual com a opção &quot;Gerar manual com o Assistente de IA&quot; está selecionada.](/help/use-case-playbooks/assets/playbooks/authoring/generate-playbook.png)
 
-![Selecione o botão &quot;Gerar manual com o Assistente de IA&quot; realçado.](/help/use-case-playbooks/assets/playbooks/authoring/generate-playbook.png)
-
-1. No campo de prompt, descreva o caso de uso.
+No campo de prompt, descreva o caso de uso.
 
 **Exemplo**: &quot;Envolva clientes da ACME que navegaram em tênis de corrida, mas não concluíram a compra.&quot;
 
-![Selecione o botão &quot;Gerar manual com o Assistente de IA&quot;.](/help/use-case-playbooks/assets/playbooks/authoring/prompt.png)
+![A interface do manual com a área de formulário Web realçada.](/help/use-case-playbooks/assets/playbooks/authoring/prompt.png)
 
-1. Selecione **Gerar** para criar os metadados do manual.
+Selecione **[!UICONTROL Gerar]** para criar os metadados do manual.
 
 ![A área de prompt com o botão de manual &quot;Gerar&quot; realçado.](/help/use-case-playbooks/assets/playbooks/authoring/generate.png)
 
-1. Depois de gerado, selecione **[!UICONTROL Editar]** para modificar o título, a descrição e os metadados gerados, conforme necessário.
+Depois de gerado, selecione **[!UICONTROL Editar]** para modificar o título, a descrição e os metadados gerados, conforme necessário.
 
 ![O manual gerado com o botão &quot;Editar&quot; realçado.](/help/use-case-playbooks/assets/playbooks/authoring/edit.png)
 
@@ -61,17 +59,15 @@ Para garantir que os engenheiros de dados tenham todos os detalhes necessários 
 * **Público-alvo**
 * **Canal de marketing**
 
-![Seção de detalhes do manual com o botão &quot;Editar&quot; realçado.](/help/use-case-playbooks/assets/playbooks/authoring/edit-details.png)
+![A seção de detalhes do manual com o botão &quot;Editar&quot; realçado.](/help/use-case-playbooks/assets/playbooks/authoring/edit-details.png)
 
-Depois que os metadados forem gerados, selecione o botão **Editar mapa de jornadas** para ajustar as etapas no mapa de jornadas conforme necessário.
+Depois que os metadados forem gerados, selecione **[!UICONTROL Editar mapa de jornadas]** para ajustar as etapas no mapa de jornadas conforme necessário.
 
 ![Editar o botão do mapa de jornadas.](/help/use-case-playbooks/assets/playbooks/authoring/edit-journey-map-button.png)
 
 ![Edite o mapa de jornadas depois de capturar os metadados do manual.](/help/use-case-playbooks/assets/playbooks/authoring/edit-journey-map.png)
 
-Em seguida, prossiga para associar o manual a ativos técnicos.
-
-Para criar um manual de reprodução, selecione **Criar manual de reprodução**.
+Em seguida, prossiga para associar o manual a ativos técnicos. Para criar um manual de reprodução, selecione **[!UICONTROL Criar manual de reprodução]**.
 
 ![Criar manual de reprodução](/help/use-case-playbooks/assets/playbooks/authoring/create-manually.png)
 
@@ -79,13 +75,13 @@ Um modelo em branco do manual é exibido. Preencha detalhes como **Título** e *
 
 ## Associar o manual aos ativos técnicos
 
-Independentemente de você criar um manual ou com o Assistente de IA, é necessário associá-lo aos ativos técnicos necessários. Navegue até a guia **[!UICONTROL Assets Técnico]** e selecione o produto necessário. Para este exemplo, escolha **[!UICONTROL Journey Optimizer]**.
+Independentemente de você criar um manual ou com o Assistente de IA, é necessário associá-lo aos ativos técnicos necessários. Navegue até a guia **[!UICONTROL Assets Técnico]** e selecione o produto necessário. Para este exemplo, selecione **[!UICONTROL Journey Optimizer]**.
 
 >[!NOTE]
 >
-> O suporte para o Real-Time Customer Data Platform será adicionado em uma versão futura.
+> O suporte para o Real-Time CDP será adicionado em uma versão futura.
 
-A guia &quot;Ativos técnicos&quot; do ![ e o botão &quot;Adicionar produto necessário&quot; estão destacados.](/help/use-case-playbooks/assets/playbooks/authoring/technical-assets-add-required-product.png)
+![A guia &quot;Ativos técnicos&quot; e o botão &quot;Adicionar produto necessário&quot; foram realçados.](/help/use-case-playbooks/assets/playbooks/authoring/technical-assets-add-required-product.png)
 
 Escolha **[!UICONTROL Selecionar um Ativo]** para associar este manual a uma jornada, conforme mostrado na imagem abaixo. Em seguida, selecione **Publicar manual** para finalizar o manual.
 
@@ -162,4 +158,4 @@ Se um manual for sinalizado para conteúdo inadequado ou ofensivo, ele será aut
 
 ## Próximas etapas
 
-Agora que você entende como criar e publicar manuais usando o Assistente de IA do Adobe, saiba como começar a usar os manuais disponíveis e escolha o correto para seu caso de uso em [Lista de manuais](/help/use-case-playbooks/playbooks/choose.md).
+Agora que você entende como criar e publicar manuais usando o Assistente de IA, saiba como começar a usar os manuais disponíveis e escolha o correto para o seu caso de uso em [Lista de manuais](/help/use-case-playbooks/playbooks/choose.md).

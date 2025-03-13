@@ -2,7 +2,7 @@
 title: Visão geral do Audience Portal
 description: Saiba como usar o Audience Portal para exibir, gerenciar e criar públicos no Adobe Experience Platform.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: a862e532382472eadf29aee2568c550b1a71211a
+source-git-commit: 5220fa9be3f567d72f864d35596f6b219f15fb9d
 workflow-type: tm+mt
 source-wordcount: '4609'
 ht-degree: 4%
@@ -114,7 +114,7 @@ Se o detalhamento for selecionado, a exibição mostrará um gráfico de barras 
 | Status | Descrição |
 | ------ | ----------- |
 | [!UICONTROL Realizado] | A contagem de perfis que **qualificaram** para o público nas últimas 24 horas desde a execução do último trabalho de segmento em lote. |
-| [!UICONTROL Existente] | A contagem de perfis que **permaneceram** no público nas últimas 24 horas desde a execução do último trabalho de segmento em lote. Este campo é **calculado** e não é exibido no objeto `segmentMembership`. |
+| [!UICONTROL Existente] | A contagem de perfis que **permaneceram** no público nas últimas 24 horas desde a execução do último trabalho de segmento em lote. Este campo é **calculado** e não aparece no [`segmentMembership` objeto](../../xdm/field-groups/profile/segmentation.md). |
 | [!UICONTROL Saindo] | A contagem de perfis que **saiu** do público-alvo nas últimas 24 horas desde a execução do último trabalho de segmento em lote. |
 
 Após selecionar os campos que deseja exibir, você também pode redimensionar a largura das colunas exibidas. Você pode fazer isso arrastando a área entre as colunas ou selecionando o ![ícone de seta](/help/images/icons/chevron-down.png) da coluna que deseja redimensionar, seguido de **[!UICONTROL Redimensionar coluna]**.

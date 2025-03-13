@@ -4,10 +4,10 @@ description: Saiba como os logs de auditoria permitem ver quem realizou quais a�
 role: Admin,Developer
 feature: Audits
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: f6e413d2d8b644775b6714739113174f5d9cb0d9
+source-git-commit: acbd46b5810a491d838f1c4c3366d19c91c15d51
 workflow-type: tm+mt
-source-wordcount: '1388'
-ht-degree: 34%
+source-wordcount: '1466'
+ht-degree: 31%
 
 ---
 
@@ -46,7 +46,7 @@ A tabela a seguir descreve quais ações em quais recursos são registrados por 
 | --- | --- |
 | [Política de controle de acesso (controle de acesso baseado em atributo)](../../../access-control/home.md) | <ul><li>Criar</li><li>Atualização</li><li>Excluir</li></ul> |
 | [Conta (Adobe)](../../../sources/connectors/tutorials/ui/../../../tutorials/ui/update.md) | <ul><li>Criar</li><li>Atualização</li><li>Excluir</li></ul> |
-| [Attribution AI](../../../intelligent-services/attribution-ai/overview.md) | <ul><li>Criar</li><li>Atualização</li><li>Excluir</li><li>Habilitar</li><li>Desabilitar</li></ul> |
+| [Instância da IA de atribuição](../../../intelligent-services/attribution-ai/overview.md) | <ul><li>Criar</li><li>Atualização</li><li>Excluir</li><li>Habilitar</li><li>Desabilitar</li></ul> |
 | [Logs de auditoria](../../../landing/governance-privacy-security/audit-logs/overview.md) | <ul><li>Exportar</li></ul> |
 | [Classe](../../../xdm/schema/composition.md#class) | <ul><li>Criar</li><li>Atualização</li><li>Excluir</li></ul> |
 | Atributo calculado | <ul><li>Criar</li><li>Atualização</li><li>Excluir</li></ul> |
@@ -87,7 +87,9 @@ Você pode visualizar logs de auditoria para diferentes recursos do Experience P
 
 ![O painel Auditorias destacando Auditorias no menu esquerdo.](../../images/audit-logs/audits.png)
 
-Os logs de auditoria são retidos por 365 dias após os quais serão excluídos do sistema. Portanto, você só pode voltar por um período máximo de 365 dias. Se você precisar de dados com mais de 365 dias, exporte logs regularmente para atender aos requisitos da política interna.
+Os logs de auditoria são retidos por 365 dias após os quais serão excluídos do sistema. Se você precisar de dados com mais de 365 dias, exporte logs regularmente para atender aos requisitos da política interna.
+
+Seu método de solicitar logs de auditoria altera o período permitido e o número de registros aos quais você terá acesso. [A exportação de logs](#export-audit-logs) permite voltar 365 dias (em intervalos de 90 dias) a um máximo de 1000 registros, onde, como a [interface do usuário do log de atividades](#filter-audit-logs) no Experience Platform, exibe os últimos 90 dias a um máximo de 1000 registros.
 
 Selecione um evento na lista para exibir seus detalhes no painel direito.
 
@@ -95,12 +97,11 @@ Selecione um evento na lista para exibir seus detalhes no painel direito.
 
 ### Filtrar logs de auditoria
 
+Selecione o ícone de funil (![Ícone de filtro](/help/images/icons/filter.png)) para exibir uma lista de controles de filtro para ajudar a limitar os resultados.
+
 >[!NOTE]
 >
->Como esse é um novo recurso, os dados exibidos só retornam a março de 2022. Dependendo do recurso selecionado, dados anteriores poderão estar disponíveis a partir de janeiro de 2022.
-
-
-Selecione o ícone de funil (![Ícone de filtro](/help/images/icons/filter.png)) para exibir uma lista de controles de filtro para ajudar a limitar os resultados. Somente os últimos 1000 registros são exibidos independentemente dos vários filtros selecionados.
+>A interface do usuário do Experience Platform exibe apenas os últimos 90 dias até o máximo de 1000 registros, independentemente dos filtros aplicados. Se você precisar de logs depois disso (até um máximo de 365 dias), precisará [exportar seus logs de auditoria](#export-audit-logs).
 
 ![O painel de Auditorias com o log de atividades filtrado realçado.](../../images/audit-logs/filters.png)
 
@@ -130,9 +131,13 @@ Os dados do log de auditoria retornados contêm as seguintes informações em to
 
 ![O painel de Auditorias com o log de atividades filtrado realçado.](../../images/audit-logs/filtered.png)
 
-### Exportar logs de auditoria
+### Exportar logs de auditoria {#export-audit-logs}
 
 Para exportar a lista atual de logs de auditoria, selecione **[!UICONTROL Baixar log]**.
+
+>[!NOTE]
+>
+>Os registros podem ser solicitados em intervalos de 90 dias até 365 dias retroativamente. No entanto, a quantidade máxima de logs que podem ser retornados durante uma única exportação é 10.000.
 
 ![Painel de Auditorias com o [!UICONTROL Log de download] realçado.](../../images/audit-logs/download.png)
 

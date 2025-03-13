@@ -2,9 +2,9 @@
 title: Visão geral do Audience Portal
 description: Saiba como usar o Audience Portal para exibir, gerenciar e criar públicos no Adobe Experience Platform.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 9f4facebcd55dc15761db1bf744acfef9ccb15ff
+source-git-commit: a862e532382472eadf29aee2568c550b1a71211a
 workflow-type: tm+mt
-source-wordcount: '4597'
+source-wordcount: '4609'
 ht-degree: 4%
 
 ---
@@ -62,7 +62,7 @@ Ao lado de cada público há um ícone de reticências. Selecionar essa opção 
 | [!UICONTROL Mover para a pasta] | Composição de público-alvo, Upload personalizado, Serviço de segmentação | Gerencia a pasta à qual o público-alvo pertence. Para obter mais informações sobre este recurso, leia a seção sobre [filtragem e marcação](#manage-audiences). |
 | [!UICONTROL Copiar] | Serviço de segmentação | Duplica o público selecionado. Mais informações sobre esta função podem ser encontradas nas [Perguntas frequentes sobre segmentação](../faq.md#copy). |
 | [!UICONTROL Aplicar rótulos de acesso] | Composição de público-alvo, Upload personalizado, Serviço de segmentação | Gerencia os rótulos de acesso que pertencem ao público. Para obter mais informações sobre rótulos de acesso, leia a documentação em [gerenciando rótulos](../../access-control/abac/ui/labels.md). |
-| [!UICONTROL Publish] | Upload personalizado, Serviço de segmentação | Publica o público selecionado. Para obter mais informações sobre o gerenciamento do status do ciclo de vida, leia a seção [estado do ciclo de vida das Perguntas frequentes sobre segmentação](../faq.md#lifecycle-states). |
+| [!UICONTROL Publicar] | Upload personalizado, Serviço de segmentação | Publica o público selecionado. Para obter mais informações sobre o gerenciamento do status do ciclo de vida, leia a seção [estado do ciclo de vida das Perguntas frequentes sobre segmentação](../faq.md#lifecycle-states). |
 | [!UICONTROL Desativar] | Upload personalizado, Serviço de segmentação | Desativa o público selecionado. Para obter mais informações sobre o gerenciamento do status do ciclo de vida, leia a seção [estado do ciclo de vida das Perguntas frequentes sobre segmentação](../faq.md#lifecycle-states). |
 | [!UICONTROL Excluir] | Composição de público-alvo, Upload personalizado, Serviço de segmentação | Exclui o público selecionado. Públicos-alvo que são usados em destinos downstream ou que são dependentes de outros públicos-alvo **não podem** ser excluídos. Para obter mais informações sobre exclusão de público, leia as [perguntas frequentes sobre segmentação](../faq.md#lifecycle-states). |
 | [!UICONTROL Adicionar ao pacote] | Composição de público-alvo, Upload personalizado, Serviço de segmentação | Move o público-alvo entre sandboxes. Para obter mais informações sobre este recurso, leia o [guia de ferramentas da sandbox](../../sandboxes/ui/sandbox-tooling.md). |
@@ -113,9 +113,9 @@ Se o detalhamento for selecionado, a exibição mostrará um gráfico de barras 
 
 | Status | Descrição |
 | ------ | ----------- |
-| [!UICONTROL Realizado] | A contagem de perfis que **qualificaram** para o segmento nas últimas 24 horas desde a execução do último trabalho de segmento em lote. |
-| [!UICONTROL Existente] | A contagem de perfis que **permaneceram** no segmento nas últimas 24 horas desde a execução do último trabalho de segmento em lote. |
-| [!UICONTROL Saindo] | A contagem de perfis que **saiu** do segmento nas últimas 24 horas desde a execução do último trabalho de segmento em lote. |
+| [!UICONTROL Realizado] | A contagem de perfis que **qualificaram** para o público nas últimas 24 horas desde a execução do último trabalho de segmento em lote. |
+| [!UICONTROL Existente] | A contagem de perfis que **permaneceram** no público nas últimas 24 horas desde a execução do último trabalho de segmento em lote. Este campo é **calculado** e não é exibido no objeto `segmentMembership`. |
+| [!UICONTROL Saindo] | A contagem de perfis que **saiu** do público-alvo nas últimas 24 horas desde a execução do último trabalho de segmento em lote. |
 
 Após selecionar os campos que deseja exibir, você também pode redimensionar a largura das colunas exibidas. Você pode fazer isso arrastando a área entre as colunas ou selecionando o ![ícone de seta](/help/images/icons/chevron-down.png) da coluna que deseja redimensionar, seguido de **[!UICONTROL Redimensionar coluna]**.
 
@@ -414,7 +414,7 @@ Selecionar a **[!UICONTROL regra de compilação]** leva você ao Construtor de 
 
 ### Composição de público-alvo federado {#fac}
 
-Além das composições de público-alvo e definições de segmento, você pode usar a Composição de público-alvo federado do Adobe para criar novos públicos-alvo a partir de conjuntos de dados corporativos sem copiar os dados subjacentes e armazená-los no Portal de público-alvo da Adobe Experience Platform. Você também pode enriquecer os públicos-alvo existentes no Adobe Experience Platform utilizando dados de público-alvo compostos que foram federados a partir do data warehouse corporativo. Leia o guia em [Composição de Público-Alvo Federado](https://experienceleague.adobe.com/pt-br/docs/federated-audience-composition/using/home).
+Além das composições de público-alvo e definições de segmento, você pode usar a Adobe Federated Audience Composition para criar novos públicos-alvo a partir de conjuntos de dados corporativos sem copiar os dados subjacentes e armazená-los no Adobe Experience Platform Audience Portal. Você também pode enriquecer os públicos-alvo existentes no Adobe Experience Platform utilizando dados de público-alvo compostos que foram federados a partir do data warehouse corporativo. Leia o guia em [Composição de Público-Alvo Federado](https://experienceleague.adobe.com/pt-br/docs/federated-audience-composition/using/home).
 
 ![Uma lista de públicos-alvo criados na Composição de Público Federado para sua organização.](../images/ui/overview/federated-audience-composition.png)
 

@@ -2,11 +2,11 @@
 keywords: Endereço IP, intervalo de IP, destinos de lista de permissões, incluir na lista de permissões, incluir na lista de permissões destinos de transmissão
 title: INCLUI NA LISTA DE PERMISSÕES de endereço IP para destinos de transmissão
 type: Documentation
-description: Esta página fornece intervalos IP que você pode adicionar à lista de permissões para exportar com segurança dados do Experience Platform para o terminal da API REST HTTP, o Amazon Kinesis ou a instância do Azure Event Hubs.
+description: Esta página fornece intervalos IP que você pode adicionar à lista de permissões para exportar com segurança dados do Experience Platform para o terminal da API REST HTTP, Amazon Kinesis ou instância do Azure Event Hubs.
 exl-id: f41303bd-c886-4c67-9e39-21efc3f5b768
-source-git-commit: ccb0f80334241afd3f8d8b6ce2833cfd39b223ac
+source-git-commit: 118b0b5e6a1936b644da4153fe7bfeb872ae137e
 workflow-type: tm+mt
-source-wordcount: '275'
+source-wordcount: '307'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> * A Adobe recomenda que você marque essa página como favorito e a revisite a cada três meses para verificar os endereços IP mais recentes. O Adobe não fornece notificação de novos intervalos IP.
+> * A Adobe recomenda que você marque esta página como favorito e a revisite a cada três meses para verificar os endereços IP mais recentes. A Adobe não fornece notificação de novos intervalos IP.
 > * A lista de IPs documentada aqui *não* se aplica a nenhum destino que você tenha compilado usando o [[!DNL Destination SDK]](/help/destinations/destination-sdk/overview.md).
 
 ## Visão geral {#overview}
@@ -28,11 +28,11 @@ Os intervalos IP documentados aqui se aplicam aos seguintes destinos:
 
 O tráfego de saída do Experience Platform para esses destinos sempre passa pelos IPs listados nesta página.
 
-Incluir na lista de permissões Esta página fornece intervalos IP que você pode adicionar ao arquivo para exportar com segurança dados do Experience Platform para o seu ponto de extremidade HTTP, instância [!DNL Amazon Kinesis] ou [!DNL Azure Event Hubs]. Incluir na lista de permissões Essa funcionalidade é especialmente útil se o seu ponto de extremidade HTTP estiver localizado atrás de um firewall corporativo ou se os padrões de segurança e conformidade da sua empresa exigirem uma lista de intervalos IP a serem.
+Incluir na lista de permissões Esta página fornece intervalos IP que você pode adicionar ao arquivo para exportar com segurança dados do Experience Platform para o seu terminal HTTP, instância [!DNL Amazon Kinesis] ou [!DNL Azure Event Hubs]. Incluir na lista de permissões Essa funcionalidade é especialmente útil se o seu ponto de extremidade HTTP estiver localizado atrás de um firewall corporativo ou se os padrões de segurança e conformidade da sua empresa exigirem uma lista de intervalos IP a serem.
 
 Você pode definir controles de acesso à rede por meio do firewall de rede. Ao especificar o intervalo IP apropriado, você pode permitir o tráfego para o serviço de transferência de dados.
 
-A Adobe recomenda que você adicione os seguintes intervalos IP a uma inclui na lista de permissões antes de trabalhar com os destinos mencionados acima nesta página. Se você não adicionar um intervalo IP específico da região ao seu incluo na lista de permissões, poderá causar erros ou problemas de desempenho ao usar esses destinos de transmissão.
+A Adobe recomenda adicionar os seguintes intervalos IP a uma inclui na lista de permissões antes de trabalhar com os destinos mencionados acima nesta página. Se você não adicionar um intervalo IP específico da região ao seu incluo na lista de permissões, poderá causar erros ou problemas de desempenho ao usar esses destinos de transmissão.
 
 ## VA7: clientes dos EUA e das Américas {#us-americas}
 
@@ -57,6 +57,12 @@ A Adobe recomenda que você adicione os seguintes intervalos IP a uma inclui na 
 `52.254.107.0/28`
 `52.254.107.144/28`
 `20.22.83.112`
+
+## VA6: Clientes dos EUA e das Américas executando no AWS {#aws}
+
+O intervalo IP abaixo se aplica aos clientes do Experience Platform que usam o Amazon Web Services (AWS). Consulte a [Visão geral de várias nuvens do Experience Platform](../../../landing/multi-cloud.md) para obter mais informações.
+
+`66.117.18.0/24`
 
 ## NLD2: clientes EMEA {#emea}
 

@@ -3,9 +3,9 @@ title: LISTA DE PERMISSÕES de endereço IP para destinos de armazenamento na nu
 type: Documentation
 description: Esta página fornece intervalos IP que podem ser adicionados à lista de permissões para exportar dados com segurança do Experience Platform para destinos de armazenamento na nuvem.
 exl-id: 0b8086aa-786e-4244-b2a5-a3f57ad59a8b
-source-git-commit: 1d8ba11b1043fa68bf3c0205e8cecc2de8910234
+source-git-commit: 118b0b5e6a1936b644da4153fe7bfeb872ae137e
 workflow-type: tm+mt
-source-wordcount: '249'
+source-wordcount: '299'
 ht-degree: 1%
 
 ---
@@ -14,8 +14,8 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
-> * A Adobe recomenda que você marque essa página como favorito e a revisite a cada três meses para verificar os endereços IP mais recentes. O Adobe não fornece notificação de novos intervalos IP.
-> * Embora o Adobe ofereça suporte a exportações de dados para servidores SFTP, os locais de armazenamento na nuvem recomendados para exportar dados são [!DNL Amazon S3] e [!DNL Azure Blob].
+> * A Adobe recomenda que você marque esta página como favorito e a revisite a cada três meses para verificar os endereços IP mais recentes. A Adobe não fornece notificação de novos intervalos IP.
+> * Embora a Adobe ofereça suporte a exportações de dados para servidores SFTP, os locais de armazenamento na nuvem recomendados para a exportação de dados são [!DNL Amazon S3] e [!DNL Azure Blob].
 
 ## Aplicabilidade {#applicability}
 
@@ -35,11 +35,21 @@ Incluir na lista de permissões Esta página fornece intervalos IP que você pod
 
 Você pode definir controles de acesso à rede por meio do firewall de rede. Ao especificar o intervalo IP apropriado, você pode permitir o tráfego para o serviço de transferência de dados.
 
-O Adobe recomenda que você adicione os seguintes intervalos IP a um incluo na lista de permissões antes de trabalhar com conexões de destino de armazenamento na nuvem. Falha ao adicionar o intervalo IP específico da região à sua inclui na lista de permissões pode levar a erros ou ao não desempenho ao usar as conexões de destino do armazenamento em nuvem.
+A Adobe recomenda que você adicione os seguintes intervalos IP a uma inclui na lista de permissões antes de trabalhar com conexões de destino de armazenamento na nuvem. Falha ao adicionar o intervalo IP específico da região à sua inclui na lista de permissões pode levar a erros ou ao não desempenho ao usar as conexões de destino do armazenamento em nuvem.
 
 ## Obrigatório para todos os clientes {#all-customers}
 
 * `52.247.108.70`
+
+## Clientes dos EUA que executam o AWS {#aws}
+
+O intervalo IP abaixo se aplica aos clientes do Experience Platform que usam o Amazon Web Services (AWS). Consulte a [Visão geral de várias nuvens do Experience Platform](../../../landing/multi-cloud.md) para obter mais informações.
+
+>[!NOTE]
+>
+>Esse intervalo IP não é compatível com clientes que executam o AWS e usam destinos baseados em arquivos para exportar dados para o Amazon S3.
+
+* `66.117.18.0/24`
 
 ## Clientes dos EUA {#us-customers}
 

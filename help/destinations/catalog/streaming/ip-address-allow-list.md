@@ -4,9 +4,9 @@ title: INCLUI NA LISTA DE PERMISSÕES de endereço IP para destinos de transmiss
 type: Documentation
 description: Esta página fornece intervalos IP que você pode adicionar à lista de permissões para exportar com segurança dados do Experience Platform para o terminal da API REST HTTP, Amazon Kinesis ou instância do Azure Event Hubs.
 exl-id: f41303bd-c886-4c67-9e39-21efc3f5b768
-source-git-commit: 118b0b5e6a1936b644da4153fe7bfeb872ae137e
+source-git-commit: ee4c42a2298c588590b1535524ed8f3dfe13b603
 workflow-type: tm+mt
-source-wordcount: '307'
+source-wordcount: '275'
 ht-degree: 0%
 
 ---
@@ -57,12 +57,12 @@ A Adobe recomenda adicionar os seguintes intervalos IP a uma inclui na lista de 
 `52.254.107.0/28`
 `52.254.107.144/28`
 `20.22.83.112`
+<!-- 
+## VA6: US and Americas customers running on AWS {#aws}
 
-## VA6: Clientes dos EUA e das Américas executando no AWS {#aws}
+The IP range below applies to Experience Platform customers running on Amazon Web Services (AWS). See the [Experience Platform Multi-Cloud overview](../../../landing/multi-cloud.md) for more information.
 
-O intervalo IP abaixo se aplica aos clientes do Experience Platform que usam o Amazon Web Services (AWS). Consulte a [Visão geral de várias nuvens do Experience Platform](../../../landing/multi-cloud.md) para obter mais informações.
-
-`66.117.18.0/24`
+`66.117.18.0/24` -->
 
 ## NLD2: clientes EMEA {#emea}
 

@@ -4,7 +4,7 @@ description: Saiba como os logs de auditoria permitem ver quem realizou quais a�
 role: Admin,Developer
 feature: Audits
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: acbd46b5810a491d838f1c4c3366d19c91c15d51
+source-git-commit: 9bc80c2ee01e7a739db55cc7fc77ea19e609b265
 workflow-type: tm+mt
 source-wordcount: '1466'
 ht-degree: 31%
@@ -89,7 +89,7 @@ Você pode visualizar logs de auditoria para diferentes recursos do Experience P
 
 Os logs de auditoria são retidos por 365 dias após os quais serão excluídos do sistema. Se você precisar de dados com mais de 365 dias, exporte logs regularmente para atender aos requisitos da política interna.
 
-Seu método de solicitar logs de auditoria altera o período permitido e o número de registros aos quais você terá acesso. [A exportação de logs](#export-audit-logs) permite voltar 365 dias (em intervalos de 90 dias) a um máximo de 1000 registros, onde, como a [interface do usuário do log de atividades](#filter-audit-logs) no Experience Platform, exibe os últimos 90 dias a um máximo de 1000 registros.
+Seu método de solicitar logs de auditoria altera o período permitido e o número de registros aos quais você terá acesso. [A exportação de logs](#export-audit-logs) permite voltar 365 dias (em intervalos de 90 dias) a um máximo de 10.000 registros, enquanto a [IU do log de atividades](#filter-audit-logs) no Experience Platform exibe os últimos 90 dias a um máximo de 1.000 registros.
 
 Selecione um evento na lista para exibir seus detalhes no painel direito.
 

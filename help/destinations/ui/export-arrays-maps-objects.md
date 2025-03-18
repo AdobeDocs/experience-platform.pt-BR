@@ -3,10 +3,10 @@ title: Exportar matrizes, mapas e objetos do Real-Time CDP para destinos de arma
 type: Tutorial
 description: Saiba como exportar matrizes, mapas e objetos do Real-Time CDP para destinos de armazenamento na nuvem.
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: 2d640b282feb783694276c69366b1fccadddfd78
+source-git-commit: 99093e0bbcd3c3560ebe201fdac72e83e67dae43
 workflow-type: tm+mt
-source-wordcount: '884'
-ht-degree: 15%
+source-wordcount: '862'
+ht-degree: 16%
 
 ---
 
@@ -14,9 +14,9 @@ ht-degree: 15%
 
 >[!AVAILABILITY]
 >
->A funcionalidade para exportar matrizes para destinos de armazenamento na nuvem está geralmente disponível para os seguintes destinos: [[!DNL Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md), [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md), [[!DNL Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md), [[!DNL Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md), [[!DNL Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md), [[!DNL SFTP]](../../destinations/catalog/cloud-storage/sftp.md),
+>A funcionalidade para exportar matrizes e outros objetos complexos para destinos de armazenamento na nuvem está geralmente disponível para os seguintes destinos: [[!DNL Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md), [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md), [[!DNL Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md), [[!DNL Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md), [[!DNL Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md), [[!DNL SFTP]](../../destinations/catalog/cloud-storage/sftp.md),
 
-Saiba como exportar matrizes do Real-Time CDP para [destinos de armazenamento na nuvem](/help/destinations/catalog/cloud-storage/overview.md). Leia este documento para entender o fluxo de trabalho de exportação, os casos de uso ativados por essa funcionalidade e as limitações conhecidas.
+Saiba como exportar matrizes, mapas e objetos do Real-Time CDP para [destinos de armazenamento na nuvem](/help/destinations/catalog/cloud-storage/overview.md). Leia este documento para entender o fluxo de trabalho de exportação, os casos de uso ativados por essa funcionalidade e as limitações conhecidas.
 
 Considere essa página o local de entrada para tudo o que você deseja saber sobre a exportação de arrays, mapas e outros tipos de objetos do Experience Platform.
 
@@ -52,8 +52,6 @@ organizations = [{
   latestInteraction: "2024-09-08"
 }]
 ```
-
-Veja mais abaixo [exemplos abrangentes](#examples) de como você pode usar várias funções para acessar elementos de matrizes, transformar e filtrar matrizes, unir elementos de matriz em uma cadeia de caracteres e muito mais.
 
 Além de matrizes, você também pode exportar mapas e objetos do Experience Platform para o destino de armazenamento na nuvem desejado. Leia mais sobre [mapas](/help/xdm/ui/fields/map.md) e [objetos](/help/xdm/ui/fields/object.md) no Experience Platform.
 

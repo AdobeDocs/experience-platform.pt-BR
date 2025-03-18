@@ -1,24 +1,24 @@
 ---
-title: Prioridade do namespace
+title: Prioridade de namespace
 description: Saiba mais sobre a prioridade de namespace no Serviço de identidade.
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: 048d915d33a19a9d50a4951e165b5ade1b9d9734
+source-git-commit: 7174c2c0d8c4ada8d5bba334492bad396c1cfb34
 workflow-type: tm+mt
 source-wordcount: '1801'
 ht-degree: 2%
 
 ---
 
-# Prioridade do namespace {#namespace-priority}
+# Prioridade de namespace {#namespace-priority}
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_namespacepriority"
 >title="Prioridade de namespace"
->abstract="A prioridade dos namespaces determina como os links são removidos do gráfico de identidade."
+>abstract="A prioridade do namespace determina como os links são removidos do gráfico de identidade."
 
 >[!AVAILABILITY]
 >
->As regras de vinculação do gráfico de identidade estão atualmente com Disponibilidade limitada. Entre em contato com a equipe de conta do Adobe para obter informações sobre como acessar o recurso em sandboxes de desenvolvimento.
+>As regras de vinculação do gráfico de identidade estão atualmente com Disponibilidade limitada. Entre em contato com a equipe de conta da Adobe para obter informações sobre como acessar o recurso em sandboxes de desenvolvimento.
 
 Cada implementação de cliente é exclusiva e personalizada para atender às metas de uma organização específica e, como tal, a importância de um determinado namespace varia de acordo com o cliente. Exemplos reais incluem:
 
@@ -82,7 +82,7 @@ Para estruturas de gráficos relativamente complexas, a prioridade de namespace 
 * Depois de definir as configurações de identidade para uma determinada sandbox, a identidade principal para eventos de experiência será determinada pela prioridade de namespace mais alta na configuração.
    * Isso ocorre porque os eventos de experiência são de natureza dinâmica. Um mapa de identidade pode conter três ou mais identidades, e a prioridade do namespace garante que o namespace mais importante esteja associado ao evento de experiência.
 * Como resultado, as seguintes configurações **não serão mais usadas pelo Perfil de Cliente em Tempo Real**:
-   * A configuração de identidade primária (`primary=true`) ao enviar identidades no identityMap usando o Web SDK, Mobile SDK ou Edge Network Server API (o namespace de identidade e o valor de identidade continuarão a ser usados no Perfil). **Observação**: os serviços fora do Perfil do Cliente em Tempo Real, como o armazenamento em data lake ou a Adobe Target, continuarão a usar a configuração de identidade principal (`primary=true`).
+   * A configuração de identidade primária (`primary=true`) ao enviar identidades no identityMap usando o Web SDK, Mobile SDK ou a API do Edge Network Server (o namespace de identidade e o valor de identidade continuarão a ser usados no Perfil). **Observação**: os serviços fora do Perfil do Cliente em Tempo Real, como o armazenamento em data lake ou a Adobe Target, continuarão a usar a configuração de identidade principal (`primary=true`).
    * Quaisquer campos marcados como identidade primária em um esquema de Classe de evento de experiência XDM.
    * Configurações de identidade primária padrão no conector de origem do Adobe Analytics (ECID ou AAID).
 * Por outro lado, a **prioridade de namespace não determina a identidade principal dos registros de perfil**.
@@ -141,9 +141,9 @@ Se John e Jane compartilharem um dispositivo, a ECID (navegador da Web) será tr
 
 Se os critérios de qualificação de segmento fossem baseados apenas em eventos anônimos armazenados na ECID, Jane se qualificaria para esse segmento
 
-## Implicações em outros serviços do Experience Platform {#implications}
+## Implicações em outros serviços da Experience Platform {#implications}
 
-Esta seção descreve como a prioridade de namespace pode afetar outros serviços de Experience Platform.
+Esta seção descreve como a prioridade de namespace pode afetar outros serviços da Experience Platform.
 
 ### Gerenciamento avançado do ciclo de vida dos dados
 
@@ -179,7 +179,7 @@ Ao selecionar seus dados, você precisará especificar um namespace, que será u
 
 Esta configuração resulta no cálculo de pontuações somente usando eventos autenticados.
 
-Para obter mais informações, leia os documentos em [Attribution AI](../../intelligent-services/attribution-ai/overview.md) e [IA do cliente](../../intelligent-services/customer-ai/overview.md).
+Para obter mais informações, leia os documentos sobre a [IA de atribuição](../../intelligent-services/attribution-ai/overview.md) e a [IA do cliente](../../intelligent-services/customer-ai/overview.md).
 
 ### Destinos criados por parceiros
 
@@ -192,7 +192,7 @@ Para obter mais informações sobre destinos criados por parceiros, leia a [vis�
 
 ### Privacy Service
 
-[as solicitações de exclusão Privacy Service](../privacy.md) funcionam da seguinte maneira para uma determinada identidade:
+[As solicitações de exclusão do Privacy Service](../privacy.md) funcionam da seguinte maneira para uma determinada identidade:
 
 * Perfil do cliente em tempo real: exclui qualquer fragmento de perfil com valor de identidade especificado como identidade principal. **A identidade principal no Perfil agora será determinada com base na prioridade do namespace.**
 * Data lake: exclui qualquer registro com a identidade especificada como identidade primária ou secundária.

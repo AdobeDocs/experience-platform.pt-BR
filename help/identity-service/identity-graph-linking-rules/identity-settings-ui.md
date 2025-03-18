@@ -2,10 +2,10 @@
 title: Interface de configurações de identidade
 description: Saiba como usar a interface do usuário de configurações de identidade.
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
-source-git-commit: f2e2c094b42248369b4a59d0ad6f950e62e0a7c1
+source-git-commit: 7174c2c0d8c4ada8d5bba334492bad396c1cfb34
 workflow-type: tm+mt
-source-wordcount: '571'
-ht-degree: 4%
+source-wordcount: '601'
+ht-degree: 3%
 
 ---
 
@@ -13,7 +13,9 @@ ht-degree: 4%
 
 >[!AVAILABILITY]
 >
->As regras de vinculação do gráfico de identidade estão atualmente com Disponibilidade limitada. Entre em contato com a equipe de conta da Adobe para obter informações sobre como acessar o recurso em sandboxes de desenvolvimento.
+>* As regras de vinculação do gráfico de identidade estão atualmente com Disponibilidade limitada. Entre em contato com a equipe de conta da Adobe para obter informações sobre como acessar o recurso em sandboxes de desenvolvimento.
+>
+>* Sua conta deve ter a permissão **Exibir Gráfico de Identidade** para acessar configurações de identidade na interface. Para obter mais informações, leia o [guia sobre permissões no controle de acesso baseado em atributo](../../access-control/abac/ui/permissions.md).
 
 As configurações de identidade são um recurso na interface do serviço de identidade da Adobe Experience Platform que pode ser usado para designar namespaces exclusivos e configurar a prioridade de namespace.
 

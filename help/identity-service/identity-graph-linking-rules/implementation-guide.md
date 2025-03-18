@@ -2,9 +2,9 @@
 title: Guia de implementação para regras de vinculação do gráfico de identidade
 description: Saiba mais sobre as etapas recomendadas a serem seguidas ao implementar seus dados com configurações de regras de vinculação de gráfico de identidade.
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 79efdff6f6068af4768fc4bad15c0521cca3ed2a
+source-git-commit: 7174c2c0d8c4ada8d5bba334492bad396c1cfb34
 workflow-type: tm+mt
-source-wordcount: '1585'
+source-wordcount: '1688'
 ht-degree: 2%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 2%
 
 >[!AVAILABILITY]
 >
->As regras de vinculação do gráfico de identidade estão atualmente com Disponibilidade limitada. Entre em contato com a equipe de conta do Adobe para obter informações sobre como acessar o recurso em sandboxes de desenvolvimento.
+>As regras de vinculação do gráfico de identidade estão atualmente com Disponibilidade limitada. Entre em contato com a equipe de conta da Adobe para obter informações sobre como acessar o recurso em sandboxes de desenvolvimento.
 
 Leia este documento para obter um guia passo a passo que você pode seguir ao implementar seus dados com o Adobe Experience Platform Identity Service.
 
@@ -26,7 +26,7 @@ Estrutura passo a passo:
 4. [Use a interface das configurações de identidade para designar seus namespaces exclusivos e configurar classificações de prioridade para seus namespaces](#identity-settings)
 5. [Criar um esquema do Experience Data Model (XDM)](#schema)
 6. [Criar um conjunto de dados](#dataset)
-7. [Assimilar seus dados no Experience Platform](#ingest)
+7. [Assimilar seus dados na Experience Platform](#ingest)
 
 ## Pré-requisitos para implementação {#prerequisites-for-implementation}
 
@@ -60,7 +60,7 @@ Se você estiver usando o [conector de origem do Adobe Analytics](../../sources/
 
 ### Eventos de experiência XDM
 
-Durante o processo de pré-implementação, você deve garantir que os eventos autenticados que seu sistema enviará para o Experience Platform sempre contenham um identificador de pessoa, como CRMID.
+Durante o processo de pré-implementação, verifique se os eventos autenticados que seu sistema enviará para o Experience Platform sempre contêm um identificador de pessoa, como CRMID.
 
 >[!BEGINTABS]
 
@@ -120,26 +120,28 @@ Durante o processo de pré-implementação, você deve garantir que os eventos a
 
 >[!ENDTABS]
 
-Você deve garantir que tenha uma identidade totalmente qualificada ao enviar eventos usando eventos de experiência XDM.
+Durante o processo de pré-implementação, você deve garantir que os eventos autenticados que seu sistema enviará para a Experience Platform sempre contenham um **identificador de pessoa** único, como um CRMID.
 
-+++Selecione para exibir um exemplo de evento com uma identidade totalmente qualificada
+* (Recomendado) Eventos autenticados com um identificador de pessoa.
+* (Não recomendado) Eventos autenticados com dois identificadores de pessoa.
+* (Não recomendado) Eventos autenticados sem identificadores de pessoa.
 
-```json
-    "identityMap": {
-        "ECID": [
-            {
-                "id": "24165048599243194405404369473457348936",
-                "primary": false
-            }
-        ]
-    }
-```
+Se o sistema enviar dois identificadores de pessoa, a implementação pode falhar o requisito de namespace de pessoa única. Por exemplo, se o identityMap na implementação do SDK da Web contiver um CRMID, um customerID e um namespace ECID, dois indivíduos que compartilham um dispositivo podem ser associados incorretamente a namespaces diferentes.
+
+No Serviço de identidade, essa implementação pode ser semelhante a:
+
+* `timestamp1` = João faz logon -> capturas do sistema `CRMID: John, ECID: 111`.
+* `timestamp2` = Jane faz logon -> capturas de sistema `customerID: Jane, ECID: 111`.
+
++++Exibir a aparência da implementação na simulação do gráfico
+
+![A interface do usuário de simulação de gráfico com um gráfico de exemplo renderizado.](../images/implementation/example-graph.png)
 
 +++
 
 ## Definir permissões {#set-permissions}
 
-A primeira etapa do processo de implementação do Serviço de identidade é garantir que sua conta Experience Platform seja adicionada a uma função que esteja provisionada com as permissões necessárias. O administrador pode configurar permissões para sua conta navegando até a interface de permissões no Adobe Experience Cloud. A partir daí, sua conta deve ser adicionada a uma função com as seguintes permissões:
+A primeira etapa do processo de implementação do Serviço de identidade é garantir que sua conta da Experience Platform seja adicionada a uma função que seja provisionada com as permissões necessárias. O administrador pode configurar permissões para sua conta navegando até a interface de permissões no Adobe Experience Cloud. A partir daí, sua conta deve ser adicionada a uma função com as seguintes permissões:
 
 * [!UICONTROL Exibir Configurações de Identidade]: aplique esta permissão para poder exibir namespaces exclusivos e a prioridade de namespace na página de procura de namespace de identidade.
 * [!UICONTROL Editar configurações de identidade]: aplique esta permissão para poder editar e salvar suas configurações de identidade.
@@ -190,11 +192,11 @@ Nesse ponto, você deve ter o seguinte:
 * Pelo menos um esquema XDM. (Dependendo dos seus dados e do caso de uso específico, talvez seja necessário criar esquemas de evento de perfil e de experiência.)
 * Um conjunto de dados baseado no seu esquema.
 
-Depois de ter todos os itens listados acima, você pode começar a assimilar seus dados no Experience Platform. Você pode realizar a assimilação de dados de várias maneiras diferentes. Você pode usar os seguintes serviços para trazer seus dados para o Experience Platform:
+Depois de ter todos os itens listados acima, você pode começar a assimilar seus dados na Experience Platform. Você pode realizar a assimilação de dados de várias maneiras diferentes. Você pode usar os seguintes serviços para trazer seus dados para a Experience Platform:
 
 * [Assimilação em lote e por transmissão](../../ingestion/home.md)
 * [Coleta de dados no Experience Platform](../../collection/home.md)
-* [origens de Experience Platform](../../sources/home.md)
+* [Fontes do Experience Platform](../../sources/home.md)
 
 >[!TIP]
 >
@@ -254,6 +256,6 @@ Para obter mais informações sobre regras de vinculação de gráficos de ident
 * [Algoritmo de otimização de identidade](./identity-optimization-algorithm.md)
 * [Exemplos de configurações de gráfico](./example-configurations.md)
 * [Solução de problemas e perguntas frequentes](./troubleshooting.md)
-* [Prioridade do namespace](./namespace-priority.md)
+* [Prioridade de namespace](./namespace-priority.md)
 * [Interface de simulação de gráfico](./graph-simulation.md)
 * [Interface de configurações de identidade](./identity-settings-ui.md)

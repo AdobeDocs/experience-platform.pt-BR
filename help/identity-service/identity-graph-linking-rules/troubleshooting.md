@@ -2,7 +2,7 @@
 title: Guia de solução de problemas para regras de vinculação do gráfico de identidade
 description: Saiba como solucionar problemas comuns nas regras de vinculação do gráfico de identidade.
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
-source-git-commit: 4d9954dd61b56125ae1e828432c8cc359806d280
+source-git-commit: 7174c2c0d8c4ada8d5bba334492bad396c1cfb34
 workflow-type: tm+mt
 source-wordcount: '3286'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->As regras de vinculação do gráfico de identidade estão atualmente com Disponibilidade limitada. Entre em contato com a equipe de conta do Adobe para obter informações sobre como acessar o recurso em sandboxes de desenvolvimento.
+>As regras de vinculação do gráfico de identidade estão atualmente com Disponibilidade limitada. Entre em contato com a equipe de conta da Adobe para obter informações sobre como acessar o recurso em sandboxes de desenvolvimento.
 
 À medida que você testa e valida regras de vinculação de gráficos de identidade, pode ter alguns problemas relacionados à assimilação de dados e ao comportamento do gráfico. Leia este documento para saber como solucionar alguns problemas comuns que você pode encontrar ao trabalhar com regras de vinculação de gráficos de identidade.
 
@@ -26,7 +26,7 @@ O diagrama a seguir é uma representação simplificada de como os dados fluem p
 É importante observar os seguintes fatores:
 
 * Para dados de transmissão, o Perfil do cliente em tempo real, o Serviço de identidade e o data lake iniciarão o processamento dos dados quando os dados forem enviados. No entanto, a latência para concluir o processamento dos dados depende do serviço. Normalmente, o data lake levará um tempo maior para processar, em comparação ao Perfil e à Identidade.
-   * Se os dados não aparecerem ao executar um query em um conjunto de dados mesmo após algumas horas, é provável que os dados não tenham sido assimilados no Experience Platform.
+   * Se os dados não aparecerem ao executar um query em um conjunto de dados mesmo após algumas horas, é provável que os dados não tenham sido assimilados na Experience Platform.
 * Para dados em lote, todos os dados fluirão para o data lake primeiro e, em seguida, os dados serão propagados para o Perfil e a Identidade se o conjunto de dados estiver habilitado para Perfil e Identidade.
 * Para problemas relacionados à assimilação, é importante que o problema seja isolado em um nível de serviço para uma depuração e solução de problemas precisas. Há três tipos de problemas em potencial a serem considerados:
 
@@ -40,7 +40,7 @@ O diagrama a seguir é uma representação simplificada de como os dados fluem p
 
 >[!NOTE]
 >
->* Esta seção presume que os dados foram assimilados com êxito no data lake e que não houve sintaxe ou outros erros que impediriam que os dados fossem assimilados no Experience Platform.
+>* Esta seção presume que os dados foram assimilados com êxito no data lake e que não houve sintaxe ou outros erros que impediriam que os dados fossem assimilados no Experience Platform em primeiro lugar.
 >
 >* Os exemplos usam a ECID como o namespace do cookie e a CRMID como o namespace da pessoa.
 
@@ -128,7 +128,7 @@ Após executar a consulta, localize o registro de evento que você esperava gera
 A prioridade de namespace desempenha um papel importante em como os fragmentos de evento determinam a identidade principal.
 
 * Depois de definir e salvar suas [configurações de identidade](./identity-settings-ui.md) para uma determinada sandbox, o Perfil usará a [prioridade de namespace](namespace-priority.md#real-time-customer-profile-primary-identity-determination-for-experience-events) para determinar a identidade principal. No caso de identityMap, o perfil não usará mais o sinalizador `primary=true`.
-* Embora o Perfil não se refira mais a esse sinalizador, outros serviços no Experience Platform podem continuar a usar o sinalizador `primary=true`.
+* Embora o Perfil não se refira mais a esse sinalizador, outros serviços na Experience Platform podem continuar a usar o sinalizador `primary=true`.
 
 Para que [eventos de usuário autenticados](implementation-guide.md#ingest-your-data) sejam vinculados ao namespace de pessoa, todos os eventos autenticados devem conter o namespace de pessoa (CRMID). Isso significa que mesmo depois que um usuário fizer logon, o namespace da pessoa ainda deverá estar presente em cada evento autenticado.
 
@@ -198,7 +198,7 @@ Primeiro, você deve coletar as seguintes informações:
 
 1. O símbolo de identidade (namespaceCode) do namespace de cookie (por exemplo, ECID) e o namespace de pessoa (por exemplo, CRMID) que foram enviados.
 1.1. Para implementações do Web SDK, esses são geralmente os namespaces incluídos no identityMap.
-1.2. Para implementações do conector de origem do Analytics, esses são os identificadores de cookies incluídos no identityMap. O identificador de pessoa é um campo eVar marcado como uma identidade.
+1.2. Para implementações do conector de origem do Analytics, esses são os identificadores de cookies incluídos no identityMap. O identificador de pessoa é um campo do eVar marcado como uma identidade.
 2. O conjunto de dados em que o evento foi enviado (dataset_name).
 3. O valor de identidade do namespace do cookie a ser pesquisado (identity_value).
 
@@ -363,7 +363,7 @@ Os principais pontos a serem destacados são os seguintes:
 >* As ECIDs e os namespaces de email/telefone não exclusivos podem mudar de uma pessoa para outra.
 >* Se uma jornada tiver uma condição de espera e se esses namespaces não exclusivos forem usados para pesquisar um perfil em uma jornada, a mensagem de jornada poderá ser enviada à pessoa incorreta.
 
-## Prioridade do namespace
+## Prioridade de namespace
 
 Leia esta seção para obter respostas a perguntas frequentes sobre [prioridade de namespace](./namespace-priority.md).
 
@@ -373,7 +373,7 @@ Há dois &quot;buckets&quot; de namespaces: namespaces de pessoa e namespaces de
 
 ### Se o Perfil do cliente em tempo real não estiver mais usando o sinalizador &quot;principal&quot; no identityMap, esse valor ainda precisará ser enviado?
 
-Sim, o sinalizador &quot;primário&quot; em identityMap é usado por outros serviços. Para obter mais informações, leia o manual sobre [as implicações da prioridade de namespace em outros serviços de Experience Platform](../identity-graph-linking-rules/namespace-priority.md#implications-on-other-experience-platform-services).
+Sim, o sinalizador &quot;primário&quot; em identityMap é usado por outros serviços. Para obter mais informações, leia o manual sobre [as implicações da prioridade de namespace em outros serviços da Experience Platform](../identity-graph-linking-rules/namespace-priority.md#implications-on-other-experience-platform-services).
 
 ### A prioridade de namespace será aplicada aos conjuntos de dados de registro de Perfil no Perfil do cliente em tempo real?
 

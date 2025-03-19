@@ -2,7 +2,7 @@
 title: Principais dicas para maximizar o valor com o Adobe Experience Platform Data Distiller - OS656
 description: Saiba como maximizar o valor com o Adobe Experience Platform Data Distiller enriquecendo os dados de Perfil do cliente em tempo real e usando insights comportamentais para criar públicos-alvo direcionados. Esse recurso inclui um conjunto de dados de amostra e um estudo de caso que demonstra como aplicar o modelo de Recenticidade, Frequência, Monetário (RFM) para segmentação de clientes.
 exl-id: f3af4b9a-5024-471a-b740-a52fd226a985
-source-git-commit: 9eee0f65c4aa46c61b699b734aba9fe2deb0f44a
+source-git-commit: fac4ca20f15bdfd765b73fde9db8dd7e2fc1a149
 workflow-type: tm+mt
 source-wordcount: '3657'
 ht-degree: 0%
@@ -328,11 +328,11 @@ O resultado é semelhante à imagem a seguir, mas com uma ID de visualização d
 Com as pontuações RFM calculadas, os clientes podem ser categorizados nos seis segmentos de prioridade a seguir:
 
 1. `Core`: melhores clientes com alta Recenticidade, Frequência e Valor monetário (Recenticidade = 1, Frequência = 1, Monetário = 1).
-2. `Loyal`: Clientes frequentes que são consistentes, mas não são os principais gastadores (Frequência = 1).
-3. `Whales`: maiores gastadores, independentemente de Recenticidade e Frequência (Monetário = 1).
-4. `Promising`: Gastadores frequentes, mas baixos (Frequência = 1, 2, 3; Monetário = 2, 3, 4).
-5. `Rookies`: Novos clientes com baixa frequência (Recenticidade = 1, Frequência = 4).
-6. `Slipping`: Clientes anteriormente fiéis com atividade diminuída (Recenticidade = 2, 3, 4; Frequência = 4).
+1. `Loyal`: Clientes frequentes que são consistentes, mas não são os principais gastadores (Frequência = 1).
+1. `Whales`: maiores gastadores, independentemente de Recenticidade e Frequência (Monetário = 1).
+1. `Promising`: Gastadores frequentes, mas baixos (Frequência = 1, 2, 3; Monetário = 2, 3, 4).
+1. `Rookies`: Novos clientes com baixa frequência (Recenticidade = 1, Frequência = 4).
+1. `Slipping`: Clientes anteriormente fiéis com atividade diminuída (Recenticidade = 2, 3, 4; Frequência = 4).
 
 Para simplificar o acesso e a reutilização, crie um `VIEW` que armazene os segmentos, as pontuações e os valores de RFM.
 

@@ -3,9 +3,10 @@ title: Visão geral da extensão do Adobe Content Analytics
 description: Saiba mais sobre a extensão de tag do Adobe Content Analytics no Adobe Experience Platform.
 hide: true
 hidefromtoc: true
-source-git-commit: d6288d9515d7efaf874cb056f06d04b2002fd369
+exl-id: fcc46c86-e765-4bc7-bfdf-b8b10e8afacc
+source-git-commit: 80bfaeb7fec229e77c83230a01b75a200cf37e29
 workflow-type: tm+mt
-source-wordcount: '532'
+source-wordcount: '645'
 ht-degree: 0%
 
 ---
@@ -22,20 +23,20 @@ Este documento explica como configurar a extensão de tag na interface do usuár
 
 >[!NOTE]
 >
->A extensão de marca do Adobe Content Analytics é instalada automaticamente como parte da propriedade de marca criada automaticamente ao usar o [assistente de configuração guiado do Content Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/content-analytics/configuration/guided){target="_blank"}.
+>A extensão de marca da Adobe Content Analytics é instalada automaticamente como parte da propriedade de marca criada automaticamente ao usar o [assistente de configuração guiada da Content Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/content-analytics/configuration/guided){target="_blank"}.
 
 
 ### Instalação manual
 
 No caso de uma configuração manual, a extensão de tag do Adobe Content Analytics precisa de uma propriedade para ser instalada no. Se ainda não tiver feito isso, consulte a documentação sobre [criação de uma propriedade de marca](https://experienceleague.adobe.com/en/docs/platform-learn/implement-in-websites/configure-tags/create-a-property).
 
-Após criar uma propriedade ou ao selecionar a propriedade criada usando o [assistente de configuração guiada do Content Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/content-analytics/configuration/guided), abra a propriedade e selecione a guia **[!UICONTROL Extensões]** na barra lateral esquerda.
+Após criar uma propriedade ou ao selecionar a propriedade criada com o [assistente de configuração guiada do Content Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/content-analytics/configuration/guided), abra a propriedade e selecione a guia **[!UICONTROL Extensões]** na barra lateral esquerda.
 
 Selecione a guia **[!UICONTROL Catálogo]**. Na lista de extensões disponíveis, localize a extensão **[!DNL Adobe Content Analytics]** e selecione **[!UICONTROL Instalar]**.
 
 ![Imagem mostrando a interface do usuário de Marcas com a extensão do Web SDK selecionada](assets/aca-tag-install.png)
 
-Depois de selecionar **[!UICONTROL Instalar]**, você deve configurar a extensão de tag do Adobe Content Analytics e salvar a configuração.
+Depois de selecionar **[!UICONTROL Instalar]**, você deve configurar a extensão de marca da Adobe Content Analytics e salvar a configuração.
 
 
 <!--
@@ -53,9 +54,9 @@ The [Content Analytics guided configuration wizard](https://experienceleague.ado
 
 ## Configurar datastreams
 
-O [assistente de configuração guiada do Content Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/content-analytics/configuration/guided) seleciona automaticamente o valor adequado da **[!UICONTROL Sandbox]** e da **[!UICONTROL Sequência de Dados de Produção]**. Opcionalmente, você pode configurar uma **[!UICONTROL Sequência de Dados de Preparo]** e uma **[!UICONTROL Sequência de Dados de Desenvolvimento]** adicionais.
+O [assistente de configuração guiada do Content Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/content-analytics/configuration/guided) seleciona automaticamente o valor correto para a **[!UICONTROL Sandbox]** e a **[!UICONTROL Sequência de Dados de Produção]**. Opcionalmente, você pode configurar uma **[!UICONTROL Sequência de Dados de Preparo]** e uma **[!UICONTROL Sequência de Dados de Desenvolvimento]** adicionais.
 
-![Imagem que mostra a configuração de Sequências de Dados da extensão de marca do Adobe Content Analytics na interface de Marcas](assets/aca-tag-datastreams.png)
+![Imagem que mostra a configuração de Datastreams da extensão de marca Adobe Content Analytics na interface do usuário de Marcas](assets/aca-tag-datastreams.png)
 
 Você pode substituir os valores selecionados automaticamente para **[!UICONTROL Sandbox]** e **[!UICONTROL Sequência de dados de produção]** caso queira usar o Content Analytics em uma sandbox diferente e com sequências de dados diferentes. Ao fazer isso, você pode selecionar uma sandbox e sequências de dados nos menus suspensos disponíveis ou selecionar **[!UICONTROL Inserir valores]** e inserir uma ID de sequência de dados personalizada para cada ambiente.
 
@@ -64,17 +65,28 @@ Você pode substituir os valores selecionados automaticamente para **[!UICONTROL
 >Ao configurar outra sandbox e fluxos de dados, verifique se
 >
 >* a sandbox selecionada ainda não está associada a outra configuração do Content Analytics e
->* qualquer sequência de dados selecionada tem o serviço Experience Platform configurado com um conjunto de dados de evento de experiência do Content Analytics habilitado.
+>* qualquer sequência de dados selecionada tem o serviço Experience Platform configurado com um conjunto de dados de eventos do Content Analytics experience habilitado.
 
 Consulte o guia em [datastreams](../../../../datastreams/overview.md) para saber como configurar um datastream.
 
+## Configurar a captura e a definição da experiência
 
+Na seção **[!UICONTROL Captura e definição de experiência]**, você pode habilitar **[!UICONTROL Incluir experiências]** para incluir experiências ao coletar dados para o Content Analytics.
+
+![Imagem mostrando a seção Captura de Experiência e Definição na extensão](assets/aca-tag-experiencecapture.png)
+
+1. Habilitar **[!UICONTROL Incluir experiências]**.
+1. Opcionalmente. especifique os parâmetros como o conteúdo é renderizado em seu site. Os parâmetros são zero ou mais combinações de uma **[!UICONTROL expressão regular de domínio]** e **[!UICONTROL parâmetros de consulta]**.
+   1. Insira uma **[!UICONTROL Expressão regular de domínio]**, por exemplo `^(?!.*\b(store|help|admin)\b)`.
+   1. Especifique uma lista separada por vírgulas de **[!UICONTROL Parâmetros de consulta]**, por exemplo `outdoors, patio, kitchen`.
+1. Selecione **[!UICONTROL Remover]** se desejar remover uma combinação de expressão regular de domínio e parâmetros de consulta.
+1. Selecione **[!UICONTROL Adicionar Regex]** se quiser adicionar outra combinação de uma expressão regular e parâmetros de consulta.
 
 ## Configurar a filtragem de eventos
 
-Na seção **[!UICONTROL Filtragem de Eventos]**, você pode modificar as expressões regulares para filtrar **[!UICONTROL URLs de Páginas]** e **[!UICONTROL URLs de Assets]** ao coletar dados para a Análise de Conteúdo. As expressões regulares definidas no [assistente de configuração guiada do Content Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/content-analytics/configuration/guided) são preenchidas automaticamente.
+Na seção **[!UICONTROL Filtragem de Eventos]**, você pode modificar as expressões regulares para filtrar **[!UICONTROL URLs de Páginas]** e **[!UICONTROL URLs de Assets]** ao coletar dados para o Content Analytics. As expressões regulares definidas no [assistente de configuração guiada do Content Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/content-analytics/configuration/guided) são preenchidas automaticamente.
 
-![Imagem mostrando as configurações de filtragem de eventos da extensão de marca do Adobe Content Analytics na interface de Marcas](assets/aca-tag-eventfiltering.png)
+![Imagem mostrando as configurações de filtragem de eventos da extensão de marca Adobe Content Analytics na interface do usuário de Marcas](assets/aca-tag-eventfiltering.png)
 
 
 ### Exemplos
@@ -84,5 +96,5 @@ Na seção **[!UICONTROL Filtragem de Eventos]**, você pode modificar as expres
 
 Você pode usar **[!UICONTROL Testar Regex]** para testar sua expressão regular no **[!UICONTROL Testador de Expressão Regular]**.
 
-![Imagem mostrando o testador de expressão regular da extensão de marca do Adobe Content Analytics na interface do usuário de Marcas](assets/aca-tag-regextester.png)
+![Imagem mostrando o testador de expressão regular da extensão de marca Adobe Content Analytics na interface do usuário de Marcas](assets/aca-tag-regextester.png)
 

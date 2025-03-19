@@ -2,9 +2,9 @@
 title: Principais dicas para maximizar o valor com o Adobe Experience Platform Data Distiller - OS656
 description: Saiba como maximizar o valor com o Adobe Experience Platform Data Distiller enriquecendo os dados de Perfil do cliente em tempo real e usando insights comportamentais para criar públicos-alvo direcionados. Esse recurso inclui um conjunto de dados de amostra e um estudo de caso que demonstra como aplicar o modelo de Recenticidade, Frequência, Monetário (RFM) para segmentação de clientes.
 exl-id: f3af4b9a-5024-471a-b740-a52fd226a985
-source-git-commit: fac4ca20f15bdfd765b73fde9db8dd7e2fc1a149
+source-git-commit: cfa8395e68ed828be5095a979d5bf0ea6e9a9ae9
 workflow-type: tm+mt
-source-wordcount: '3657'
+source-wordcount: '3658'
 ht-degree: 0%
 
 ---
@@ -438,15 +438,15 @@ Como o Editor de consultas oferece suporte à execução sequencial, você pode 
 
 ```sql
 CREATE TABLE IF NOT EXISTS adls_rfm_profile (
-    userId TEXT PRIMARY IDENTITY NAMESPACE 'Email', -- Primary identity field using the 'Email' namespace
-    days_since_last_purchase INTEGER, -- Days since the last purchase
-    orders INTEGER, -- Total number of orders
-    total_revenue DECIMAL(18, 2), -- Total revenue with two decimal precision
-    recency INTEGER, -- Recency score
-    frequency INTEGER, -- Frequency score
-    monetization INTEGER, -- Monetary score
-    rfm_model TEXT -- RFM segment classification
-) WITH (LABEL = 'PROFILE'); -- Enable the table for Real-Time Customer Profile
+    userId TEXT PRIMARY IDENTITY NAMESPACE 'Email',
+    days_since_last_purchase INTEGER,
+    orders INTEGER,
+    total_revenue DECIMAL(18, 2),
+    recency INTEGER,
+    frequency INTEGER,
+    monetization INTEGER,
+    rfm_model TEXT
+) WITH (LABEL = 'PROFILE');
 
 INSERT INTO adls_rfm_profile
 SELECT STRUCT(userId, days_since_last_purchase, orders, total_revenue, recency,
@@ -578,28 +578,9 @@ WITH (
 );
 ```
 
-#### Inserir um público {#insert-an-audience}
+#### Criar um conjunto de dados de público-alvo vazio {#create-empty-audience-dataset}
 
-Para adicionar perfis a um público existente, use o comando `INSERT INTO`. Isso permite adicionar perfis individuais ou públicos-alvo inteiros a um conjunto de dados de público-alvo existente.
-
-```sql
--- Insert profiles into the audience dataset
-INSERT INTO AUDIENCE adls_rfm_audience 
-SELECT 
-    _{TENANT_ID}.userId, 
-    _{TENANT_ID}.days_since_last_purchase, 
-    _{TENANT_ID}.orders, 
-    _{TENANT_ID}.total_revenue, 
-    _{TENANT_ID}.recency, 
-    _{TENANT_ID}.frequency, 
-    _{TENANT_ID}.monetization 
-FROM adls_rfm_profile 
-WHERE _{TENANT_ID}.rfm_model = '6. Slipping - Once Loyal, Now Gone';
-```
-
-#### Adicionar perfis a um público-alvo {#add-profiles-to-audience}
-
-Use os seguintes comandos SQL para criar e preencher um público-alvo:
+Antes de adicionar perfis, crie um conjunto de dados vazio para armazenar registros de público-alvo.
 
 ```sql
 -- Create an empty audience dataset
@@ -620,11 +601,28 @@ SELECT
 WHERE FALSE;
 ```
 
+#### Inserir perfis em um público existente {#insert-an-audience}
+
+Para adicionar perfis a um público existente, use o comando INSERT INTO. Isso permite adicionar perfis individuais ou segmentos de público-alvo inteiros a um conjunto de dados de público-alvo existente.
+
+```sql
+-- Insert profiles into the audience dataset
+INSERT INTO AUDIENCE adls_rfm_audience 
+SELECT 
+    _{TENANT_ID}.userId, 
+    _{TENANT_ID}.days_since_last_purchase, 
+    _{TENANT_ID}.orders, 
+    _{TENANT_ID}.total_revenue, 
+    _{TENANT_ID}.recency, 
+    _{TENANT_ID}.frequency, 
+    _{TENANT_ID}.monetization 
+FROM adls_rfm_profile 
+WHERE _{TENANT_ID}.rfm_model = '6. Slipping - Once Loyal, Now Gone';
+```
+
 #### Excluir um público {#delete-an-audience}
 
-Para excluir um público existente, use o comando `DROP AUDIENCE`. Se o público-alvo não existir, uma exceção ocorrerá, a menos que `IF EXISTS` seja especificado.
-
-Use o seguinte comando SQL para excluir um público-alvo:
+Para excluir um público existente, use o comando SOLTAR PÚBLICO. Se o público-alvo não existir, ocorrerá uma exceção, a menos que IF EXISTS seja especificado.
 
 ```sql
 DROP AUDIENCE IF EXISTS adls_rfm_audience;

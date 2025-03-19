@@ -5,9 +5,9 @@ breadcrumb-title: Guia do Serviço de consulta
 user-guide-description: Use o SQL padrão para consultar dados no data lake na Experience Platform.
 feature: Queries
 role: User,Developer
-source-git-commit: e63ecbd14db2e9e4f35fb89aaaa406a4c584416a
+source-git-commit: 9eee0f65c4aa46c61b699b734aba9fe2deb0f44a
 workflow-type: tm+mt
-source-wordcount: '402'
+source-wordcount: '400'
 ht-degree: 21%
 
 ---
@@ -23,7 +23,6 @@ ht-degree: 21%
 - Distiller de dados {#data-distiller}
    - [Visão geral](data-distiller/overview.md)
    - [Uso da licença](data-distiller/license-usage.md)
-   - [Principais dicas para maximizar o valor](data-distiller/top-tips-to-maximize-value.md)
    - Conjuntos de dados derivados {#derived-datasets}
       - [Visão geral](data-distiller/derived-datasets/overview.md)
       - [Criar conjuntos de dados derivados com SQL](data-distiller/derived-datasets/create-derived-datasets-with-sql.md)
@@ -40,6 +39,7 @@ ht-degree: 21%
       - [Recursos do engenheiro para ML](data-distiller/ml-feature-pipelines/feature-engineering.md)
       - [Exportar dados para ambientes ML](data-distiller/ml-feature-pipelines/export-data.md)
       - [Fluxo de trabalho completo de enriquecimento do pipeline de dados de IA/ML](data-distiller/ml-feature-pipelines/end-to-end-notebook-workflow.md)
+   - [Sessão do Summit 2025](data-distiller/top-tips-to-maximize-value.md)
 - Estatísticas de Distiller de dados e aprendizado de máquina {#advanced-statistics}
    - [Visão geral](advanced-statistics/overview.md)
    - [Engenharia de recursos](advanced-statistics/feature-engineering.md)
@@ -135,7 +135,7 @@ ht-degree: 21%
 - Referência SQL {#sql}
    - [Visão geral de SQL](sql/overview.md)
    - [Sintaxe SQL](sql/syntax.md)
-   - [Funções definidas pelo Adobe](sql/adobe-defined-functions.md)
+   - [Funções definidas pela Adobe](sql/adobe-defined-functions.md)
    - [Funções de ordem superior](sql/higher-order-functions.md)
    - [Funções do Spark SQL](sql/spark-sql-functions.md)
    - [Comandos de metadados](sql/metadata.md)

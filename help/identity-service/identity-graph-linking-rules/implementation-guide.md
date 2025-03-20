@@ -2,9 +2,9 @@
 title: Guia de implementação para regras de vinculação do gráfico de identidade
 description: Saiba mais sobre as etapas recomendadas a serem seguidas ao implementar seus dados com configurações de regras de vinculação de gráfico de identidade.
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 7174c2c0d8c4ada8d5bba334492bad396c1cfb34
+source-git-commit: 9243da3ebe5e963ec457da5ae3e300e852787d37
 workflow-type: tm+mt
-source-wordcount: '1688'
+source-wordcount: '1725'
 ht-degree: 2%
 
 ---
@@ -58,7 +58,12 @@ Dado um namespace exclusivo (neste caso, uma CRMID em vez de dois namespaces dif
 
 Se você estiver usando o [conector de origem do Adobe Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md) para assimilar dados, deverá dar às ECIDs uma prioridade mais alta do que a Adobe Analytics ID (AAID), pois o Serviço de Identidade bloqueia a AAID. Ao priorizar a ECID, você pode instruir o Perfil do cliente em tempo real para armazenar eventos não autenticados na ECID em vez da AAID.
 
-### Eventos de experiência XDM
+### Eventos de experiência XDM {#xdm-experience-events}
+
+>[!CONTEXTUALHELP]
+>id="platform_identities_linkingrules_xdm"
+>title="Certifique-se de ter um único identificador de pessoa"
+>abstract="Durante o processo de pré-implementação, você deve garantir que os eventos autenticados que seu sistema enviará para a Experience Platform sempre contenham um **identificador de pessoa** único, como um CRMID."
 
 Durante o processo de pré-implementação, verifique se os eventos autenticados que seu sistema enviará para o Experience Platform sempre contêm um identificador de pessoa, como CRMID.
 

@@ -2,9 +2,9 @@
 title: Principais dicas para maximizar o valor com o Adobe Experience Platform Data Distiller - OS656
 description: Saiba como maximizar o valor com o Adobe Experience Platform Data Distiller enriquecendo os dados de Perfil do cliente em tempo real e usando insights comportamentais para criar públicos-alvo direcionados. Esse recurso inclui um conjunto de dados de amostra e um estudo de caso que demonstra como aplicar o modelo de Recenticidade, Frequência, Monetário (RFM) para segmentação de clientes.
 exl-id: f3af4b9a-5024-471a-b740-a52fd226a985
-source-git-commit: cfa8395e68ed828be5095a979d5bf0ea6e9a9ae9
+source-git-commit: 30db967fc94d8f5b9ded22ce81da3d51001610af
 workflow-type: tm+mt
-source-wordcount: '3658'
+source-wordcount: '3704'
 ht-degree: 0%
 
 ---
@@ -18,6 +18,16 @@ Através do estudo de caso Luma, você analisará os dados comportamentais do us
 ## Pré-requisito
 
 Para executar este caso de uso, sua instância do Adobe Experience Platform deve ser licenciada para o [Data Distiller](./overview.md). Entre em contato com seu representante da Adobe para obter mais informações.
+
+Você também precisa saber a **ID de locatário da sua organização**, que é necessária para executar consultas. Sua ID de locatário é a primeira parte do URL ao fazer logon no Experience Platform, aparecendo imediatamente após o símbolo @.
+
+Por exemplo, no URL a seguir:
+
+```http
+https://experience.adobe.com/#/@pfreportingonprod/sname:prod/platform/home
+```
+
+A ID do locatário é `pfreportingonprod`.
 
 ## Visão geral do modelo RFM {#rfm-overview}
 

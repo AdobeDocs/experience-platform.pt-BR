@@ -2,7 +2,7 @@
 title: Modelos integrados
 description: Saiba como reutilizar várias condições em várias consultas com modelos em linha.
 exl-id: 78959070-f9e5-4736-b72a-a8ef518bfa4f
-source-git-commit: 37aeff5131b9f67dbc99f6199918403e699478c8
+source-git-commit: ef4c7f20710f56ca0de7c0dfdb99751ff2fe8ebe
 workflow-type: tm+mt
 source-wordcount: '486'
 ht-degree: 1%
@@ -42,7 +42,7 @@ Ao executar a consulta, o Serviço de consulta substitui o nome do modelo começ
 
 Você pode usar modelos para armazenar uma ou várias condições. Eles não precisam ser uma consulta completa por si só. Se o modelo contiver uma consulta válida, você poderá executar a consulta simplesmente chamando o nome do modelo precedido por um símbolo de hash. Por exemplo, se você armazenasse `SELECT * FROM JUNE_2023_LOYALTY_MEMBERS;` como um modelo chamado `JUNE_2023_LOYALTY_MEMBERS`, o comando `#JUNE_2023_LOYALTY_MEMBERS;` executaria a consulta válida contida no modelo.
 
->
+>[!NOTE]
 >
 >Na interface do usuário do Adobe Experience Platform, os modelos em linha na forma de consultas parametrizadas só são suportados no nível principal. Isso significa que as consultas parametrizadas só funcionam quando usadas no template original. O modelo filho deve ser um modelo estático e não pode ter parâmetros dinâmicos. Consulte a [documentação de consultas parametrizadas](../ui/parameterized-queries.md) para saber mais.
 

@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;página inicial;tópicos populares;serviço de consulta;serviço de consulta;guia de solução de problemas;perguntas frequentes;solução de problemas;
+keywords: Experience Platform;página inicial;tópicos populares;serviço de consulta;Serviço de consulta;guia de solução de problemas;perguntas frequentes;solução de problemas;
 solution: Experience Platform
 title: Perguntas frequentes sobre o Serviço de consulta e o Data Distiller
 description: Este documento contém perguntas e respostas comuns relacionadas ao Serviço de consulta e ao Data Distiller. Os tópicos incluem exportação de dados, ferramentas de terceiros e erros de PSQL.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: dc15ab9b94513d3acdf0e62ef0fec710c05a9fc9
+source-git-commit: ef4c7f20710f56ca0de7c0dfdb99751ff2fe8ebe
 workflow-type: tm+mt
-source-wordcount: '5055'
+source-wordcount: '5024'
 ht-degree: 0%
 
 ---
@@ -65,7 +65,7 @@ Uma possível causa é o recurso de preenchimento automático. O recurso process
 ### Posso usar [!DNL Postman] para a API do Serviço de consulta?
 
 +++Resposta
-Sim, você pode visualizar e interagir com todos os serviços de API de Adobe usando o [!DNL Postman] (um aplicativo gratuito de terceiros). Assista ao [[!DNL Postman] guia de instalação](https://video.tv.adobe.com/v/28832) para obter instruções passo a passo sobre como configurar um projeto no Adobe Developer Console e adquirir todas as credenciais necessárias para usar com o [!DNL Postman]. Consulte a documentação oficial para obter [orientação sobre como iniciar, executar e compartilhar [!DNL Postman] coleções](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
+Sim, você pode visualizar e interagir com todos os serviços de API da Adobe usando o [!DNL Postman] (um aplicativo gratuito de terceiros). Assista ao [[!DNL Postman] guia de instalação](https://video.tv.adobe.com/v/28832) para obter instruções passo a passo sobre como configurar um projeto no Adobe Developer Console e adquirir todas as credenciais necessárias para usar com o [!DNL Postman]. Consulte a documentação oficial para obter [orientação sobre como iniciar, executar e compartilhar [!DNL Postman] coleções](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
 +++
 
 ### Há um limite para o número máximo de linhas retornadas de uma consulta por meio da interface do usuário?
@@ -84,17 +84,6 @@ Em consultas em lote, não há suporte para a atualização de uma linha dentro 
 
 +++Resposta
 Não. Não há limite de tamanho de dados, mas há um tempo limite de consulta de 10 minutos de uma sessão interativa. Se a consulta for executada como um CTAS em lote, um tempo limite de 10 minutos não será aplicável. Consulte a orientação sobre [execução de consulta interativa](./best-practices/writing-queries.md#interactive-query-execution) para obter mais detalhes.
-+++
-
-### Como ignorar o limite no número de saída de linhas de uma consulta SELECT?
-
-+++Resposta
-Para ignorar o limite de linha de saída, aplique &quot;LIMIT 0&quot; na query. Por exemplo:
-
-```sql
-SELECT * FROM customers LIMIT 0;
-```
-
 +++
 
 ### Como faço para impedir que minhas consultas expirem em 10 minutos?
@@ -153,25 +142,25 @@ Para melhorar o desempenho de consultas em conjuntos de dados contendo matrizes,
 +++Resposta
 Se o query tiver demorado muito tempo em um conjunto de dados muito pequeno, entre em contato com o suporte ao cliente.
 
-Pode haver vários motivos para uma consulta ficar paralisada durante o processamento. Determinar a causa exata requer uma análise detalhada caso a caso. [Contate o atendimento ao cliente do Adobe](#customer-support) para executar esse processo.
+Pode haver vários motivos para uma consulta ficar paralisada durante o processamento. Determinar a causa exata requer uma análise detalhada caso a caso. [Contate o atendimento ao cliente da Adobe](#customer-support) para executar esse processo.
 +++
 
-### Como entrar em contato com o suporte ao cliente do Adobe? {#customer-support}
+### Como entrar em contato com o suporte ao cliente da Adobe? {#customer-support}
 
 +++Resposta
-[Uma lista completa dos números de telefone de suporte ao cliente do Adobe](https://helpx.adobe.com/ca/contact/phone.html) está disponível na página de ajuda do Adobe. Como alternativa, a ajuda pode ser encontrada online executando as seguintes etapas:
+[Uma lista completa dos números de telefone do suporte ao cliente da Adobe](https://helpx.adobe.com/ca/contact/phone.html) está disponível na página de ajuda do Adobe. Como alternativa, a ajuda pode ser encontrada online executando as seguintes etapas:
 
 - Navegue até [https://www.adobe.com/](https://www.adobe.com/) no navegador da Web.
 - No lado direito da barra de navegação superior, selecione **[!UICONTROL Entrar]**.
 
-![O site do Adobe com logon foi realçado.](./images/troubleshooting/adobe-sign-in.png)
+![O site da Adobe com logon foi realçado.](./images/troubleshooting/adobe-sign-in.png)
 
-- Use sua Adobe ID e senha registradas com sua licença do Adobe.
+- Use a Adobe ID e a senha registradas com sua licença da Adobe.
 - Selecione **[!UICONTROL Ajuda e Suporte]** na barra de navegação superior.
 
 ![O menu suspenso da barra de navegação superior com Ajuda e suporte, Suporte corporativo e Fale conosco realçado.](./images/troubleshooting/help-and-support.png)
 
-Um banner suspenso é exibido contendo uma seção de [!UICONTROL Ajuda e suporte]. Selecione **[!UICONTROL Contate-nos]** para abrir o Adobe Customer Care Virtual Assistant ou selecione **[!UICONTROL Suporte corporativo]** para obter ajuda dedicada para organizações grandes.
+Um banner suspenso é exibido contendo uma seção de [!UICONTROL Ajuda e suporte]. Selecione **[!UICONTROL Contate-nos]** para abrir o Assistente Virtual de Atendimento ao Cliente Adobe ou selecione **[!UICONTROL Suporte corporativo]** para obter ajuda dedicada para organizações grandes.
 +++
 
 ### Como implementar uma série sequencial de jobs sem executar jobs subsequentes se o job anterior não for concluído com sucesso?
@@ -187,7 +176,7 @@ Consulte a [documentação de bloqueio anônimo](./key-concepts/anonymous-block.
 +++Resposta
 Há duas maneiras de implementar a atribuição personalizada:
 
-1. Use uma combinação de [funções definidas por Adobe](./sql/adobe-defined-functions.md) existentes para identificar se as necessidades de caso de uso foram atendidas.
+1. Use uma combinação de [funções definidas pela Adobe](./sql/adobe-defined-functions.md) existentes para identificar se as necessidades de caso de uso foram atendidas.
 1. Se a sugestão anterior não atender ao seu caso de uso, você deverá usar uma combinação de [funções de janela](./sql/adobe-defined-functions.md#window-functions). As funções de janela observam todos os eventos em uma sequência. Elas também permitem que você analise os dados do histórico e podem ser usados em qualquer combinação.
 +++
 
@@ -202,7 +191,7 @@ Sim, você pode modelar consultas usando instruções preparadas. As instruçõe
 +++Resposta
 Para recuperar logs de erros de uma consulta específica, primeiro use a API do Serviço de Consulta para obter os detalhes do log de consultas. A resposta HTTP contém as IDs de consulta necessárias para investigar um erro de consulta.
 
-Use o comando GET para recuperar várias consultas. Informações sobre como fazer uma chamada para a API podem ser encontradas na [documentação de exemplos de chamadas para a API](./api/queries.md#sample-api-calls).
+Use o comando do GET para recuperar várias consultas. Informações sobre como fazer uma chamada para a API podem ser encontradas na [documentação de exemplos de chamadas para a API](./api/queries.md#sample-api-calls).
 
 Na resposta, identifique a consulta que deseja investigar e faça outra solicitação GET usando seu valor `id`. Instruções completas podem ser encontradas na [documentação de recuperação de uma consulta por ID](./api/queries.md#retrieve-a-query-by-id).
 
@@ -584,7 +573,7 @@ Há três abordagens para restringir o acesso. Elas são as seguintes:
 Sim, os modos SSL são compatíveis. Consulte a [documentação sobre modos SSL](./clients/ssl-modes.md) para obter um detalhamento dos diferentes modos SSL disponíveis e o nível de proteção fornecido por eles.
 +++
 
-### Usamos o TLS 1.2 para todas as conexões de clientes Power BI com o serviço de consulta?
+### Usamos o TLS 1.2 para todas as conexões de clientes Power BI para o serviço de consulta?
 
 +++Resposta
 Sim. Os dados em trânsito são sempre compatíveis com HTTPS. A versão atualmente compatível é TLS1.2.
@@ -768,7 +757,7 @@ Qualquer editor SQL de terceiros compatível com o PSQL ou com o cliente [!DNL P
 ### Posso conectar a ferramenta Power BI ao Serviço de consulta?
 
 +++Resposta
-Sim, você pode conectar o Power BI ao Serviço de consulta. Consulte a documentação para obter [instruções sobre como conectar o aplicativo de desktop do Power BI ao Serviço de Consulta](./clients/power-bi.md).
+Sim, você pode conectar o Power BI ao Serviço de consulta. Consulte a documentação para obter [instruções sobre como conectar o aplicativo de desktop do Power BI ao Serviço de consulta](./clients/power-bi.md).
 +++
 
 ### Por que os painéis demoram muito para carregar quando conectados ao Serviço de consulta?
@@ -776,7 +765,7 @@ Sim, você pode conectar o Power BI ao Serviço de consulta. Consulte a document
 +++Resposta
 Quando o sistema está conectado ao Serviço de consulta, ele é conectado a um mecanismo de processamento interativo ou em lote. Isso pode resultar em tempos de carregamento mais longos para refletir os dados processados.
 
-Se quiser melhorar os tempos de resposta dos painéis, implemente um servidor de Business Intelligence (BI) como uma camada de cache entre o Serviço de consulta e as ferramentas de BI. Geralmente, a maioria das ferramentas de BI tem uma oferta adicional para um servidor.
+Se quiser melhorar os tempos de resposta dos painéis, implemente um servidor Business Intelligence (BI) como uma camada de cache entre o Serviço de consulta e as ferramentas de BI. Geralmente, a maioria das ferramentas de BI tem uma oferta adicional para um servidor.
 
 A finalidade de adicionar a camada do servidor de cache é armazenar os dados em cache do Serviço de consulta e utilizar os mesmos para que os painéis acelerem a resposta. Isso é possível, pois os resultados das consultas executadas seriam armazenados em cache no servidor de BI todos os dias. O servidor de cache fornece esses resultados para qualquer usuário com a mesma consulta para diminuir a latência. Consulte a documentação do utilitário ou ferramenta de terceiros que você está usando para obter esclarecimentos sobre esta configuração.
 +++

@@ -2,10 +2,10 @@
 title: Visão geral do Audience Portal
 description: Saiba como usar o Audience Portal para exibir, gerenciar e criar públicos no Adobe Experience Platform.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 5220fa9be3f567d72f864d35596f6b219f15fb9d
+source-git-commit: a0543777e9a72f3a9ed6ff19e8b11973eb647b6b
 workflow-type: tm+mt
-source-wordcount: '4609'
-ht-degree: 4%
+source-wordcount: '4561'
+ht-degree: 3%
 
 ---
 
@@ -221,11 +221,6 @@ Quando você aplica ações em massa a públicos, as seguintes condições se ap
 - Se você selecionar um filtro, os públicos selecionados **serão** redefinidos.
 
 #### [!BADGE Disponibilidade limitada]{type=Informative} Avaliação flexível de público-alvo {#flexible-audience-evaluation}
-
->[!CONTEXTUALHELP]
->id="platform_segmentation_browse_flexibleaudienceevaluation"
->title="Limites de avaliação de público-alvo flexível"
-abstract="Você pode avaliar até 20 públicos-alvo em uma única execução de avaliação de público-alvo flexível.<br/><br/>Além disso, embora o trabalho de avaliação seja executado o mais rápido possível, pode haver atrasos no sistema, pois as avaliações sob demanda <b>não podem</b> ser executadas simultaneamente com outra avaliação sob demanda ou em lote."
 
 A avaliação flexível do público-alvo permite executar um trabalho de segmentação sob demanda. Escolha os públicos que você deseja avaliar e selecione **[!UICONTROL Avaliar públicos]**.
 

@@ -2,9 +2,9 @@
 title: Interface de configurações de identidade
 description: Saiba como usar a interface do usuário de configurações de identidade.
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
-source-git-commit: 7174c2c0d8c4ada8d5bba334492bad396c1cfb34
+source-git-commit: 0b4d9a493df6125decc6c46ddcd404f0bb1c9c6a
 workflow-type: tm+mt
-source-wordcount: '601'
+source-wordcount: '641'
 ht-degree: 3%
 
 ---
@@ -13,9 +13,7 @@ ht-degree: 3%
 
 >[!AVAILABILITY]
 >
->* As regras de vinculação do gráfico de identidade estão atualmente com Disponibilidade limitada. Entre em contato com a equipe de conta da Adobe para obter informações sobre como acessar o recurso em sandboxes de desenvolvimento.
->
->* Sua conta deve ter a permissão **Exibir Gráfico de Identidade** para acessar configurações de identidade na interface. Para obter mais informações, leia o [guia sobre permissões no controle de acesso baseado em atributo](../../access-control/abac/ui/permissions.md).
+>As regras de vinculação do gráfico de identidade estão atualmente com Disponibilidade limitada. Entre em contato com a equipe de conta da Adobe para obter informações sobre como acessar o recurso em sandboxes de desenvolvimento.
 
 As configurações de identidade são um recurso na interface do serviço de identidade da Adobe Experience Platform que pode ser usado para designar namespaces exclusivos e configurar a prioridade de namespace.
 
@@ -31,6 +29,15 @@ Leia os seguintes documentos antes de começar a trabalhar com configurações d
 * [Exemplos de configurações de gráfico](./example-configurations.md)
 * [Prioridade de namespace](./namespace-priority.md)
 * [Simulação de gráfico](./graph-simulation.md)
+
+### Definir permissões {#set-permissions}
+
+Em seguida, verifique se sua conta foi provisionada com as seguintes permissões:
+
+* **[!UICONTROL Exibir Configurações de Identidade]**: aplique esta permissão para poder exibir namespaces exclusivos e a prioridade de namespace na página de procura de namespace de identidade.
+* **[!UICONTROL Editar configurações de identidade]**: aplique esta permissão para poder editar e salvar suas configurações de identidade.
+
+Entre em contato com o administrador se não tiver essas permissões. Para obter mais informações, leia o [guia de permissões](../../access-control/abac/ui/permissions.md).
 
 ## Definir suas configurações de identidade
 

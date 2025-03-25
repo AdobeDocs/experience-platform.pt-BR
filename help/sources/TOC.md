@@ -5,9 +5,9 @@ breadcrumb-title: Guia dos conectores de origem
 user-guide-description: Assimilar dados de várias fontes. Saiba como estruturar, rotular e aprimorar os dados já assimilados.
 feature: Sources
 role: Developer
-source-git-commit: b900ef8cbbab78071d462484f088e17eb20fe9b6
+source-git-commit: 3ada2136e712abd1dad956cd579d6877b3e729c9
 workflow-type: tm+mt
-source-wordcount: '1047'
+source-wordcount: '1059'
 ht-degree: 30%
 
 ---
@@ -236,6 +236,7 @@ ht-degree: 30%
    - [Excluir fluxos de dados](tutorials/api/delete-dataflows.md)
    - [Assimilar dados criptografados](tutorials/api/encrypt-data.md)
    - [Salvar um fluxo de dados como rascunho](tutorials/api/draft.md)
+   - [Aplicar rótulos de acesso a um fluxo de dados](tutorials/api/labels.md)
 - Tutoriais da interface {#ui-tutorials}
    - Criar uma conexão de origem {#create}
       - Aplicativos Adobe {#adobe-applications}
@@ -361,6 +362,7 @@ ht-degree: 30%
    - [Excluir fluxos de dados](tutorials/ui/delete.md)
    - [Assinar alertas de origens](tutorials/ui/alerts.md)
    - [Salvar um fluxo de dados como rascunho](tutorials/ui/draft.md)
+   - [Aplicar rótulos de acesso a um fluxo de dados](tutorials/ui/labels.md)
 - Fontes de Autoatendimento (SDK em Lote) {#sdk}
    - [Visão geral](sources-sdk/overview.md)
    - Configurar a especificação de conexão {#config}

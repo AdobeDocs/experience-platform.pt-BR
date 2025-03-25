@@ -1,27 +1,29 @@
 ---
-description: Saiba mais sobre os endereços IP que você precisa adicionar à lista de permissões para usar fontes da Adobe Experience Platform com êxito.
-title: LISTA DE PERMISSÕES de endereço IP para origens
+description: Saiba mais sobre os endereços IP que você precisa adicionar ao seu arquivo de inclui na lista de permissões do para usar com êxito as fontes da Adobe Experience Platform.
+title: INCLUI NA LISTA DE PERMISSÕES de endereço IP para origens
 exl-id: 40093c80-dbdb-4dc1-97bb-81a8200b731f
-source-git-commit: bb0e84ff26027e92d617b7fd0b85979dff501a7d
+source-git-commit: 719f1bca20d5118de14ebe324675bb0aab6161e8
 workflow-type: tm+mt
-source-wordcount: '210'
+source-wordcount: '242'
 ht-degree: 0%
 
 ---
 
-# LISTA DE PERMISSÕES de endereço IP
+# INCLUIR NA LISTA DE PERMISSÕES endereço IP
 
-Você pode definir controles de acesso à rede por meio do firewall de rede. Ao especificar o intervalo IP de origem apropriado, é possível permitir o fluxo de tráfego para o serviço de transferência de dados. Os endereços IP a seguir devem ser adicionados a uma lista de permissões antes de trabalhar com conectores de origem. Falha ao adicionar endereços IP específicos da região à lista de permissões pode levar a erros ou ao não desempenho ao usar origens.
+Você pode definir controles de acesso à rede por meio do firewall de rede. Ao especificar o intervalo IP de origem apropriado, é possível permitir o fluxo de tráfego para o serviço de transferência de dados. Os seguintes endereços IP devem ser adicionados a um incluo na lista de permissões antes de trabalhar com conectores de origem. Falha ao adicionar endereços IP específicos da região ao seu incluo na lista de permissões pode levar a erros ou ao não desempenho ao usar origens.
 
-## LISTA DE PERMISSÕES de endereço IP para origens de lote {#batch}
+## Endereços IP permitem a inclui na lista de permissões de origens conectadas ao Experience Platform em [!DNL Azure] {#azure}
 
-Você deve adicionar os seguintes endereços IP à lista de permissões para permitir o fluxo de tráfego do serviço de transferência de dados para fontes em lote.
+### Origens em lote no Experience Platform em [!DNL Azure] {#batch}
+
+Incluir na lista de permissões Você deve adicionar os seguintes endereços IP ao seu arquivo para permitir o fluxo de tráfego do serviço de transferência de dados para fontes em lote.
 
 >[!BEGINTABS]
 
 >[!TAB VA7: América do Norte]
 
-### VA7: América do Norte
+#### VA7: América do Norte
 
 - `20.42.2.0/23`
 - `20.42.4.0/26`
@@ -48,7 +50,7 @@ Você deve adicionar os seguintes endereços IP à lista de permissões para per
 
 >[!TAB NLD2: Europa]
 
-### NLD2: Europa
+#### NLD2: Europa
 
 - `13.69.67.192/28`
 - `13.69.107.112/28`
@@ -60,7 +62,7 @@ Você deve adicionar os seguintes endereços IP à lista de permissões para per
 
 >[!TAB AUS5: Austrália]
 
-### AUS5: Austrália
+#### AUS5: Austrália
 
 - `13.70.74.144/28`
 - `20.37.193.0/25`
@@ -75,7 +77,7 @@ Você deve adicionar os seguintes endereços IP à lista de permissões para per
 
 >[!TAB CAN2: Canadá]
 
-### CAN2: Canadá
+#### CAN2: Canadá
 
 - `13.71.175.80/28`
 - `20.38.147.224/28`
@@ -88,7 +90,7 @@ Você deve adicionar os seguintes endereços IP à lista de permissões para per
 
 >[!TAB IND2: Índia]
 
-### IND2: Índia
+#### IND2: Índia
 
 - `20.43.121.48/28`
 - `20.192.42.0/24`
@@ -102,15 +104,15 @@ Você deve adicionar os seguintes endereços IP à lista de permissões para per
 
 >[!ENDTABS]
 
-## LISTA DE PERMISSÕES de endereço IP para fontes de transmissão {#streaming}
+### Fontes de streaming no Experience Platform em [!DNL Azure] {#streaming}
 
-Você deve adicionar os seguintes endereços IP à sua lista de permissões para permitir o fluxo de tráfego do serviço de transferência de dados para fontes de streaming, como [[!DNL Amazon Kinesis]](./connectors/cloud-storage/kinesis.md), [[!DNL Azure Event Hub]](./connectors/cloud-storage/eventhub.md), [[!DNL Google PubSub]](./connectors/cloud-storage/google-pubsub.md) e [[!DNL Snowflake Streaming]](./connectors/databases/snowflake-streaming.md).
+Incluir na lista de permissões Você deve adicionar os seguintes endereços IP ao seu arquivo para permitir o fluxo de tráfego do serviço de transferência de dados para fontes de transmissão, como [[!DNL Amazon Kinesis]](./connectors/cloud-storage/kinesis.md), [[!DNL Azure Event Hub]](./connectors/cloud-storage/eventhub.md), [[!DNL Google PubSub]](./connectors/cloud-storage/google-pubsub.md) e [[!DNL Snowflake Streaming]](./connectors/databases/snowflake-streaming.md).
 
 >[!BEGINTABS]
 
 >[!TAB VA7: América do Norte]
 
-### VA7: América do Norte
+#### VA7: América do Norte
 
 - `52.254.106.240/28`
 - `52.254.107.144/28`
@@ -137,7 +139,7 @@ Você deve adicionar os seguintes endereços IP à sua lista de permissões para
 
 >[!TAB NLD2: Europa]
 
-### NLD2: Europa
+#### NLD2: Europa
 
 - `51.138.17.0/28`
 - `51.138.16.176/28`
@@ -164,7 +166,7 @@ Você deve adicionar os seguintes endereços IP à sua lista de permissões para
 
 >[!TAB AUS5: Austrália]
 
-### AUS5: Austrália
+#### AUS5: Austrália
 
 - `20.40.188.194`
 - `20.53.206.128`
@@ -194,7 +196,7 @@ Você deve adicionar os seguintes endereços IP à sua lista de permissões para
 
 >[!TAB CAN2: Canadá]
 
-### CAN2: Canadá
+#### CAN2: Canadá
 
 - `20.200.70.240/28`
 - `20.200.94.116`
@@ -224,7 +226,7 @@ Você deve adicionar os seguintes endereços IP à sua lista de permissões para
 
 >[!TAB GBR9: Reino Unido]
 
-### GBR9: Reino Unido
+#### GBR9: Reino Unido
 
 - `20.254.2.128/28`
 - `20.26.131.71`
@@ -254,7 +256,7 @@ Você deve adicionar os seguintes endereços IP à sua lista de permissões para
 
 >[!TAB IND2: Índia]
 
-### IND2: Índia
+#### IND2: Índia
 
 - `4.224.74.0/28`
 - `20.244.79.80/28`
@@ -285,3 +287,9 @@ Você deve adicionar os seguintes endereços IP à sua lista de permissões para
 - `4.188.4.138`
 
 >[!ENDTABS]
+
+## Endereços IP para incluir na lista de permissões a conexão de origens com o Experience Platform em [!DNL Amazon Web Services] (AWS) {#aws}
+
+Incluir na lista de permissões Você deve adicionar o seguinte endereço IP ao seu arquivo para conectar sua origem à Experience no AWS:
+
+- `66.117.18.0/24`

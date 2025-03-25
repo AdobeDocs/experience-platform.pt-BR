@@ -2,9 +2,9 @@
 title: Source da zona de aterrissagem de dados
 description: Saiba como conectar a Data Landing Zone ao Adobe Experience Platform
 exl-id: bdc10095-7de4-4183-bfad-a7b5c89197e3
-source-git-commit: 1d4dd60180ef2a3cbf6dcd565c2f09dd575716b9
+source-git-commit: 719f1bca20d5118de14ebe324675bb0aab6161e8
 workflow-type: tm+mt
-source-wordcount: '1316'
+source-wordcount: '1362'
 ht-degree: 0%
 
 ---
@@ -13,11 +13,11 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Esta página é específica para o conector de [!DNL Data Landing Zone] *origem* no Experience Platform. Para obter informações sobre como se conectar ao conector de [!DNL Data Landing Zone] *destino*, consulte a [[!DNL Data Landing Zone] página de documentação de destino](/help/destinations/catalog/cloud-storage/data-landing-zone.md).
+>Esta página é específica para o conector de [!DNL Data Landing Zone] *origem* na Experience Platform. Para obter informações sobre como se conectar ao conector de [!DNL Data Landing Zone] *destino*, consulte a [[!DNL Data Landing Zone] página de documentação de destino](/help/destinations/catalog/cloud-storage/data-landing-zone.md).
 
-O [!DNL Data Landing Zone] é uma interface de armazenamento do [!DNL Azure Blob] provisionada pela Adobe Experience Platform, que concede a você acesso a um recurso de armazenamento de arquivos seguro e baseado em nuvem para trazer arquivos para a Platform. Você tem acesso a um contêiner [!DNL Data Landing Zone] por sandbox, e o volume total de dados em todos os contêineres é limitado ao total de dados fornecidos com sua licença de Produtos e Serviços da Plataforma. Todos os clientes do Experience Platform são provisionados com um contêiner [!DNL Data Landing Zone] por sandbox. Você pode ler e gravar arquivos no seu contêiner por meio do [!DNL Azure Storage Explorer] ou da interface de linha de comando.
+O [!DNL Data Landing Zone] é uma interface de armazenamento do [!DNL Azure Blob] provisionada pela Adobe Experience Platform, que concede a você acesso a um recurso de armazenamento de arquivos seguro e baseado em nuvem para trazer arquivos para a Platform. Você tem acesso a um contêiner [!DNL Data Landing Zone] por sandbox, e o volume total de dados em todos os contêineres é limitado ao total de dados fornecidos com sua licença de Produtos e Serviços da Plataforma. Todos os clientes do Experience Platform são provisionados com um contêiner de [!DNL Data Landing Zone] por sandbox. Você pode ler e gravar arquivos no seu contêiner por meio do [!DNL Azure Storage Explorer] ou da interface de linha de comando.
 
-O [!DNL Data Landing Zone] oferece suporte à autenticação baseada em SAS e seus dados estão protegidos com mecanismos de segurança de armazenamento [!DNL Azure Blob] padrão em repouso e em trânsito. A autenticação baseada em SAS permite que você acesse com segurança o contêiner do [!DNL Data Landing Zone] por meio de uma conexão pública com a Internet. Não há alterações de rede necessárias para você acessar o contêiner [!DNL Data Landing Zone], o que significa que você não precisa definir nenhuma configuração de lista de permissões ou entre regiões para sua rede. O Experience Platform impõe um tempo de expiração estrito de sete dias em todos os arquivos e pastas carregados em um contêiner [!DNL Data Landing Zone]. Todos os arquivos e pastas são excluídos após sete dias.
+O [!DNL Data Landing Zone] oferece suporte à autenticação baseada em SAS e seus dados estão protegidos com mecanismos de segurança de armazenamento [!DNL Azure Blob] padrão em repouso e em trânsito. A autenticação baseada em SAS permite que você acesse com segurança o contêiner do [!DNL Data Landing Zone] por meio de uma conexão pública com a Internet. Não há alterações de rede necessárias para você acessar o contêiner [!DNL Data Landing Zone], o que significa que você não precisa definir nenhuma configuração de lista de permissões ou entre regiões para sua rede. O Experience Platform impõe um tempo de expiração rigoroso de sete dias em todos os arquivos e pastas carregados em um contêiner [!DNL Data Landing Zone]. Todos os arquivos e pastas são excluídos após sete dias.
 
 ## Configure sua origem [!DNL Data Landing Zone] para o Experience Platform no Azure {#azure}
 
@@ -25,7 +25,7 @@ Siga as etapas abaixo para saber como configurar sua conta do [!DNL Data Landing
 
 >[!NOTE]
 >
->Para acessar [!DNL Data Landing Zone] de [!DNL Azure Data Factory], você deve criar um serviço vinculado para [!DNL Data Landing Zone] usando as [credenciais SAS](../../tutorials/ui/create/cloud-storage/data-landing-zone.md#retrieve-your-data-landing-zone-credentials) fornecidas pelo Experience Platform. Depois de criar o serviço vinculado, você pode explorar o [!DNL Data Landing Zone] selecionando o caminho do contêiner em vez do caminho raiz padrão.
+>Para acessar [!DNL Data Landing Zone] a partir de [!DNL Azure Data Factory], você deve criar um serviço vinculado para [!DNL Data Landing Zone] usando as [credenciais SAS](../../tutorials/ui/create/cloud-storage/data-landing-zone.md#retrieve-your-data-landing-zone-credentials) fornecidas pela Experience Platform. Depois de criar o serviço vinculado, você pode explorar o [!DNL Data Landing Zone] selecionando o caminho do contêiner em vez do caminho raiz padrão.
 
 ### Restrições de nomenclatura para arquivos e diretórios
 
@@ -155,13 +155,17 @@ set srcFilePath=<PATH TO LOCAL FILE(S); WORKS WITH WILDCARD PATTERNS>
 azcopy copy "%srcFilePath%" "%sasUri%" --overwrite=true --recursive=true
 ```
 
-## Configurar a origem do [!DNL Data Landing Zone] para o Experience Platform no Amazon Web Services {#aws}
+## Configure sua origem do [!DNL Data Landing Zone] para o Experience Platform no Amazon Web Services {#aws}
 
 >[!AVAILABILITY]
 >
->Esta seção se aplica às implementações do Experience Platform executadas no Amazon Web Services (AWS). O Experience Platform em execução no AWS está atualmente disponível para um número limitado de clientes. Para saber mais sobre a infraestrutura de Experience Platform compatível, consulte a [visão geral de várias nuvens do Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud).
+>Esta seção se aplica às implementações do Experience Platform em execução no Amazon Web Services (AWS). O Experience Platform em execução no AWS está disponível atualmente para um número limitado de clientes. Para saber mais sobre a infraestrutura do Experience Platform compatível, consulte a [visão geral da nuvem múltipla do Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud).
 
 Siga as etapas abaixo para saber como configurar sua conta do [!DNL Data Landing Zone] para o Experience Platform no Amazon Web Services (AWS).
+
+### INCLUI NA LISTA DE PERMISSÕES de endereço IP para conexão no AWS
+
+Você deve adicionar endereços IP específicos da sua região à inclui na lista de permissões antes de conectar suas fontes à Experience Platform no AWS. Para obter mais informações, leia o manual sobre [sobre como ler os endereços IP de incluir na lista de permissões para se conectar ao Experience Platform no AWS](../../ip-address-allow-list.md) para obter mais informações.
 
 ### Configurar a CLI do AWS e executar operações
 
@@ -303,7 +307,7 @@ Finalmente, navegue até a URL gerada para fazer logon diretamente no Console do
 >
 >- Para se conectar à origem, você precisa das **[!UICONTROL Exibir Fontes]** e **[!UICONTROL Gerenciar Fontes]** permissões de controle de acesso. Para obter mais informações, leia a [visão geral do controle de acesso](../../../access-control/home.md) ou contate o administrador do produto para obter as permissões necessárias.
 >
->- No momento, não há suporte para links privados ao conectar-se ao Experience Platform usando o [!DNL Data Landing Zone]. Os únicos métodos suportados para acesso são os métodos listados [aqui](#manage-the-contents-of-your-data-landing-zone).
+>- No momento, não há suporte para links privados ao se conectar ao Experience Platform usando o [!DNL Data Landing Zone]. Os únicos métodos suportados para acesso são os métodos listados [aqui](#manage-the-contents-of-your-data-landing-zone).
 
 A documentação abaixo fornece informações sobre como trazer dados do seu contêiner do [!DNL Data Landing Zone] para a Adobe Experience Platform usando APIs ou a interface do usuário.
 

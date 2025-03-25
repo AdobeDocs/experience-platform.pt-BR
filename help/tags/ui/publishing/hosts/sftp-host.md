@@ -2,10 +2,10 @@
 title: Hosts SFTP
 description: Saiba como configurar tags na Adobe Experience Platform para fornecer builds de biblioteca a um servidor SFTP seguro e auto-hospedado.
 exl-id: 3c1dc43b-291c-4df4-94f7-a03b25dbb44c
-source-git-commit: b3c3bf0a39a30e8c9baf81ec20945497acef5465
+source-git-commit: 5b362d28eb3be5e2a45464390c694f7ae59f899c
 workflow-type: tm+mt
-source-wordcount: '810'
-ht-degree: 38%
+source-wordcount: '875'
+ht-degree: 35%
 
 ---
 
@@ -19,7 +19,7 @@ O Experience Platform permite que você forneça builds de bibliotecas de tags p
 
 >[!NOTE]
 >
->Em vez disso, você também pode optar por usar um host gerenciado pelo Adobe. Consulte o manual sobre [hosts gerenciados por Adobe](./managed-by-adobe-host.md) para obter mais informações.
+>Em vez disso, você também pode optar por usar um host gerenciado pela Adobe. Consulte o manual sobre [hosts gerenciados pela Adobe](./managed-by-adobe-host.md) para obter mais informações.
 >
 >Para obter informações sobre os benefícios e limitações das bibliotecas de auto-hospedagem, consulte o [guia de auto-hospedagem](./self-hosting-libraries.md).
 
@@ -36,6 +36,22 @@ Você deve ter um par de chaves pública/privada instalado no servidor SFTP. Voc
 A chave privada é usada para criptografar a chave pública. Será necessário fornecer a chave privada durante o processo de criação do host SFTP. Consulte a seção sobre [criptografar valores](../../../api/guides/encrypting-values.md) no guia da API do Reator para obter instruções sobre como criptografar chaves públicas. Use a chave GPG do ambiente de produção, a menos que você saiba que precisa de uma específica. Por fim, você pode criptografar sua chave privada de qualquer computador e não precisa instalar o GPG no servidor para concluir essa etapa.
 
 ### Incluir na lista de permissões endereços IP da Platform
+
+>[!IMPORTANT]
+>
+> Em 23 de junho de 2025, o Adobe Launch atualizará os endereços IP externos usados para oferecer suporte ao tipo de host SFTP e à funcionalidade de API de retorno de chamada. Para continuar usando qualquer um desses recursos, verifique se as regras de firewall permitem o tráfego dos novos endereços IP.
+>
+> Para manter o acesso ininterrupto, recomendamos adicionar os novos IPs agora e remover os antigos após 23 de junho de 2025.
+>
+>**Endereços IP antigos:**
+> * `184.72.239.68`
+> * `23.20.85.113`
+> * `54.226.193.184`
+>
+>**Novos endereços IP:**
+> * `34.227.138.75 `
+> * `44.194.43.191`
+> * `3.215.163.18`
 
 Talvez seja necessário aprovar um conjunto de endereços IP para ser usado no firewall da empresa para permitir que a Platform acesse o servidor SFTP e se conecte a ele. Esses endereços IP são:
 

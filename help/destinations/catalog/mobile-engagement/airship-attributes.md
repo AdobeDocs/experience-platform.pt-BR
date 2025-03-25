@@ -1,22 +1,30 @@
 ---
 keywords: atributos do dirigível;destino do dirigível
 title: Conexão com os atributos do dirigível
-description: Transmita dados de público-alvo do Adobe para o dirigível como atributos de público-alvo para direcionamento no dirigível.
+description: Transmita facilmente os dados de público-alvo da Adobe para o Airship como atributos de público-alvo para direcionamento no Airship.
 exl-id: bfc1b52f-2d68-40d6-9052-c2ee1e877961
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 453884612e787439ea58f312d8080622ee0441f7
 workflow-type: tm+mt
-source-wordcount: '1039'
+source-wordcount: '1150'
 ht-degree: 2%
 
 ---
 
 # [!DNL Airship Attributes] conexão {#airship-attributes-destination}
 
+>[!IMPORTANT]
+>
+>* A partir de 25 de março de 2025, você poderá ver dois cartões [!DNL Airship Attributes] lado a lado no catálogo de destinos. Isso se deve a uma atualização interna do serviço de destinos. O conector de destino [!DNL Airship Attributes] existente foi renomeado para **[!UICONTROL (Obsoleto) Atributos de Dirigível]** e uma nova placa com o nome **[!UICONTROL Atributos de Dirigível]** está disponível para você.
+>* Use a conexão **[!UICONTROL Atributos da Aeronave]** no catálogo para novos fluxos de dados de ativação. Se você tiver fluxos de dados ativos para o destino **[!UICONTROL (Obsoleto) Atributos de Aeróstato]**, eles serão atualizados automaticamente, portanto, nenhuma ação é necessária.
+>* Se você estiver criando fluxos de dados por meio da [API de Serviço de Fluxo](https://developer.adobe.com/experience-platform-apis/references/destinations/), atualize o [!DNL flow spec ID] e o [!DNL connection spec ID] para os seguintes valores:
+>   * ID da especificação de fluxo: `a862e0be-966e-4e5a-80d3-1bb566461986`
+>   * ID de especificação da conexão: `594bc002-4a47-49b7-8a98-ac0d21045502`
+
 ## Visão geral {#overview}
 
 O [!DNL Airship] é a principal plataforma de engajamento do cliente, ajudando você a fornecer mensagens omnicanais relevantes e personalizadas aos seus usuários em cada estágio do ciclo de vida do cliente.
 
-Esta integração transmite dados de perfil de Adobe para [!DNL Airship] como [Atributos](https://docs.airship.com/guides/audience/attributes/) para direcionamento ou acionamento.
+Esta integração transmite dados de perfil do Adobe para [!DNL Airship] como [Atributos](https://docs.airship.com/guides/audience/attributes/) para direcionamento ou acionamento.
 
 Para saber mais sobre [!DNL Airship], consulte os [Documentação de dirigível](https://docs.airship.com).
 
@@ -41,7 +49,7 @@ Esta seção descreve quais tipos de públicos-alvo você pode exportar para ess
 
 | Origem do público | Suportado | Descrição |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Públicos gerados por meio do [Serviço de segmentação](../../../segmentation/home.md) do Experience Platform. |
+| [!DNL Segmentation Service] | ✓ | Públicos-alvo gerados pelo [Serviço de Segmentação](../../../segmentation/home.md) da Experience Platform. |
 | Uploads personalizados | ✓ | Públicos [importados](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV. |
 
 {style="table-layout:auto"}
@@ -53,7 +61,7 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 | Item | Tipo | Notas |
 ---------|----------|---------|
 | Tipo de exportação | **[!UICONTROL Baseado em perfil]** | Você está exportando todos os membros de um segmento, juntamente com os campos de esquema desejados (por exemplo: endereço de email, número de telefone, sobrenome) e/ou identidades, de acordo com o mapeamento de campos. |
-| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil é atualizado em Experience Platform com base na avaliação do público-alvo, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil for atualizado no Experience Platform com base na avaliação do público-alvo, o conector enviará a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -69,7 +77,7 @@ Vá para **[!UICONTROL Configurações]**&quot; **[!UICONTROL APIs e integraçõ
 
 Clique em **[!UICONTROL Criar token]**.
 
-Forneça um nome amigável para o token, por exemplo, &quot;Destino dos atributos de Adobe&quot;, e selecione &quot;Acesso integral&quot; para a função.
+Forneça um nome amigável para o token, por exemplo, &quot;Destino de atributos do Adobe&quot;, e selecione &quot;Todo acesso&quot; para a função.
 
 Clique em **[!UICONTROL Criar token]** e salve os detalhes como confidenciais.
 
@@ -83,7 +91,7 @@ Aproveite os dados de perfil coletados no Adobe Experience Platform para persona
 
 ### Caso de uso #2
 
-Aproveite os atributos do Adobe Experience Platform para enriquecer ainda mais [!DNL Airship] perfis e combiná-los com SDK ou dados preditivos [!DNL Airship]. Por exemplo, um varejista pode criar um público-alvo com status de fidelidade e dados de localização (atributos da Platform) e [!DNL Airship] previstos para dados de churn para enviar mensagens altamente direcionadas aos usuários no status de fidelidade gold que vivem em Las Vegas, Nova York e têm uma alta probabilidade de churn.
+Aproveite os Atributos do Adobe Experience Platform para enriquecer ainda mais [!DNL Airship] perfis e combiná-los com SDK ou dados preditivos [!DNL Airship]. Por exemplo, um varejista pode criar um público-alvo com status de fidelidade e dados de localização (atributos da Platform) e [!DNL Airship] previstos para dados de churn para enviar mensagens altamente direcionadas aos usuários no status de fidelidade gold que vivem em Las Vegas, Nova York e têm uma alta probabilidade de churn.
 
 ## Conectar ao destino {#connect}
 
@@ -131,7 +139,7 @@ Os atributos [!DNL Airship] podem ser definidos em um canal, que representa a in
 Para identificadores que devem ser mapeados para um canal, ou seja, um dispositivo, mapeie para o canal apropriado com base na origem. As imagens a seguir mostram como dois mapeamentos são criados:
 
 * ID do iOS Advertising IDFA para um canal do iOS [!DNL Airship]
-* Adobe `fullName` atributo para [!DNL Airship] atributo &quot;Nome Completo&quot;
+* Atributo `fullName` do Adobe para o atributo &quot;Full Name&quot; [!DNL Airship]
 
 >[!NOTE]
 >

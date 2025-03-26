@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;página inicial;tópicos populares;conectores de origem;conector de origem;fontes;fontes de dados;fonte de dados;conexão da fonte de dados
+keywords: Experience Platform;início;tópicos populares;conectores de origem;conector de origem;fontes;fontes de dados;fonte de dados;conexão da fonte de dados
 solution: Experience Platform
 title: Visão geral dos Source Connectors
-description: O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
+description: O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos da Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 8541af0e2c0a2f5709f1621877ca204b0d3d64bd
+source-git-commit: 0a6a9fe759d71fd62e3eaf5c93a091614f3c76a0
 workflow-type: tm+mt
-source-wordcount: '1548'
+source-wordcount: '1552'
 ht-degree: 2%
 
 ---
@@ -17,7 +17,7 @@ O Adobe Experience Platform permite que os dados sejam assimilados de fontes ext
 
 O [!DNL Flow Service] é usado para coletar e centralizar dados do cliente de várias fontes diferentes na Plataforma. O serviço fornece uma interface de usuário e API RESTful que permite configurar conexões de origem com vários provedores de dados com facilidade. Essas conexões de origem permitem autenticar seus sistemas de terceiros, definir tempos para execuções de assimilação e gerenciar a taxa de transferência de assimilação de dados.
 
-Com o Experience Platform, é possível centralizar os dados coletados de fontes diferentes e usar os insights obtidos com eles para fazer mais.
+Com o Experience Platform, você pode centralizar os dados coletados de fontes diferentes e usar os insights obtidos com eles para fazer mais.
 
 <div id="recs-overview-body-1"></div>
 <div id="recs-overview-body-2"></div>
@@ -28,7 +28,7 @@ Com o Experience Platform, é possível centralizar os dados coletados de fontes
 
 ## Fontes empresariais avançadas {#advanced-enterprise-sources}
 
-As fontes a seguir estão disponíveis somente para clientes do [Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
+As fontes a seguir estão disponíveis somente para clientes do [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 
 - [[!DNL Amazon Kinesis]](connectors/cloud-storage/kinesis.md) [!BADGE Streaming]{type=Positive}
 - [[!DNL Amazon Redshift]](connectors/databases/redshift.md) [!BADGE Lote]{type=Informative}
@@ -39,19 +39,19 @@ As fontes a seguir estão disponíveis somente para clientes do [Adobe Real-time
 - [[!DNL Snowflake]](connectors/databases/snowflake-streaming.md) [!BADGE Streaming]{type=Positive}
 - [[!DNL Snowflake]](connectors/databases/snowflake.md) [!BADGE Lote]{type=Informative}
 
-## origens desenvolvidas por Adobe e parceiros {#adobe-and-partner-built-sources}
+## Fontes criadas pela Adobe e criadas por parceiros {#adobe-and-partner-built-sources}
 
-Alguns dos conectores no catálogo de origens de Experience Platform são criados e mantidos pelo Adobe, enquanto outros são criados e mantidos por empresas parceiras usando o [SDK de origens](/help/sources/sources-sdk/overview.md). Uma observação na parte superior da página de documentação para cada conector criado pelo parceiro chama se uma origem é criada e mantida pelo parceiro. Por exemplo, o [conector Amazon S3](/help/sources/connectors/cloud-storage/s3.md) é criado pelo Adobe, enquanto o [conector RainFocus](/help/sources/connectors/analytics/rainfocus.md) é criado e mantido pela equipe RainFocus.
+Alguns dos conectores no catálogo de fontes do Experience Platform são criados e mantidos pela Adobe, enquanto outros são criados e mantidos por empresas parceiras usando o [SDK de Fontes](/help/sources/sources-sdk/overview.md). Uma observação na parte superior da página de documentação para cada conector criado pelo parceiro chama se uma origem é criada e mantida pelo parceiro. Por exemplo, o [conector Amazon S3](/help/sources/connectors/cloud-storage/s3.md) é criado pela Adobe, enquanto o [conector RainFocus](/help/sources/connectors/analytics/rainfocus.md) é criado e mantido pela equipe RainFocus.
 
-Para conectores criados e mantidos pelo parceiro, isso significa que os problemas com o conector podem precisar ser resolvidos pela equipe do parceiro (método de contato fornecido na observação na página de documentação). No caso de problemas com conectores criados e mantidos pelo Adobe, entre em contato com o representante da Adobe ou com o Atendimento ao cliente.
+Para conectores criados e mantidos pelo parceiro, isso significa que os problemas com o conector podem precisar ser resolvidos pela equipe do parceiro (método de contato fornecido na observação na página de documentação). No caso de problemas com conectores criados e mantidos pela Adobe, entre em contato com o representante da Adobe ou com o Atendimento ao cliente.
 
 ## Categorias de origens
 
-As origens em Experience Platform são agrupadas nas seguintes categorias:
+As origens no Experience Platform são agrupadas nas seguintes categorias:
 
 ### aplicativos Adobe {#adobe-applications}
 
-O Experience Platform permite que os dados sejam assimilados de outros aplicativos Adobe, incluindo Adobe Analytics e Adobe Audience Manager. Consulte os seguintes documentos relacionados para obter mais informações:
+O Experience Platform permite que os dados sejam assimilados de outros aplicativos da Adobe, incluindo o Adobe Analytics e o Adobe Audience Manager. Consulte os seguintes documentos relacionados para obter mais informações:
 
 - [Visão geral da origem do Adobe Audience Manager](connectors/adobe-applications/audience-manager.md)
    - [Criar uma conexão de origem do Adobe Audience Manager na interface](./tutorials/ui/create/adobe-applications/audience-manager.md)
@@ -76,7 +76,7 @@ O Experience Platform fornece suporte para assimilação de dados de um sistema 
 
 ### Analytics {#analytics}
 
-O Experience Platform fornece suporte para assimilação de dados de uma plataforma de análise de terceiros. Leia os seguintes documentos relacionados para obter mais informações:
+O Experience Platform oferece suporte para assimilação de dados de uma plataforma de análise de terceiros. Leia os seguintes documentos relacionados para obter mais informações:
 
 - [[!DNL Mixpanel]](connectors/analytics/mixpanel.md) [!BADGE Lote]{type=Informative}
 - [[!DNL Pendo]](connectors/analytics/pendo-webhook.md) [!BADGE Streaming]{type=Positive}
@@ -105,7 +105,7 @@ O Experience Platform oferece suporte para assimilação de dados de uma platafo
 
 ### Gerenciamento de Relacionamento com o Cliente (CRM) {#customer-relationship-management}
 
-Os sistemas de CRM fornecem dados que podem ajudar a criar relacionamentos com o cliente, o que, por sua vez, cria fidelidade e impulsiona a retenção do cliente. O Experience Platform fornece suporte para assimilação de dados do CRM de [!DNL Microsoft Dynamics 365] e [!DNL Salesforce]. Consulte os seguintes documentos relacionados para obter mais informações:
+Os sistemas de CRM fornecem dados que podem ajudar a criar relacionamentos com o cliente, o que, por sua vez, cria fidelidade e impulsiona a retenção do cliente. A Experience Platform oferece suporte para assimilação de dados do CRM de [!DNL Microsoft Dynamics 365] e [!DNL Salesforce]. Consulte os seguintes documentos relacionados para obter mais informações:
 
 - [[!DNL Microsoft Dynamics]](connectors/crm/ms-dynamics.md) [!BADGE Lote]{type=Informative}
 - [[!DNL Salesforce]](connectors/crm/salesforce.md) [!BADGE Lote]{type=Informative}
@@ -115,7 +115,7 @@ Os sistemas de CRM fornecem dados que podem ajudar a criar relacionamentos com o
 
 ### Sucesso do cliente {#customer-success}
 
-O Experience Platform fornece suporte para assimilação de dados de um aplicativo de sucesso de clientes de terceiros. Consulte os seguintes documentos relacionados para obter mais informações:
+A Experience Platform oferece suporte para assimilação de dados de um aplicativo de sucesso de clientes de terceiros. Consulte os seguintes documentos relacionados para obter mais informações:
 
 - [[!DNL Oracle Service Cloud]](connectors/customer-success/oracle-service-cloud.md) [!BADGE Lote]{type=Informative}
 - [[!DNL Salesforce Service Cloud]](connectors/customer-success/salesforce-service-cloud.md) [!BADGE Lote]{type=Informative}
@@ -124,7 +124,7 @@ O Experience Platform fornece suporte para assimilação de dados de um aplicati
 
 ### Banco de dados {#database}
 
-O Experience Platform fornece suporte para assimilação de dados de um banco de dados de terceiros. Consulte os seguintes documentos relacionados para obter mais informações sobre conectores de origem específicos:
+O Experience Platform oferece suporte para assimilação de dados de um banco de dados de terceiros. Consulte os seguintes documentos relacionados para obter mais informações sobre conectores de origem específicos:
 
 - [[!DNL Apache Hive on Azure HDInsights]](connectors/databases/hive.md) [!BADGE Lote]{type=Informative}
 - [[!DNL Apache Spark on Azure HDInsights]](connectors/databases/spark.md) [!BADGE Lote]{type=Informative}
@@ -144,15 +144,17 @@ O Experience Platform fornece suporte para assimilação de dados de um banco de
 
 ### Parceiros de dados e identidade {#data-partner}
 
-O Experience Platform fornece suporte para assimilação de dados de um banco de dados de terceiros. Consulte os seguintes documentos relacionados para obter mais informações sobre conectores de origem específicos:
+O Experience Platform oferece suporte para assimilação de dados de um parceiro de dados e identidade. Consulte os seguintes documentos relacionados para obter mais informações sobre conectores de origem específicos:
 
 - [[!DNL Acxiom Data Ingestion]](connectors/data-partners/acxiom-data-ingestion.md) [!BADGE Lote]{type=Informative}
 - [[!DNL Acxiom Prospecting Data Import]](connectors/data-partners/acxiom-prospecting-data-import.md) [!BADGE Lote]{type=Informative}
+- [[!DNL Bombora Intent]](connectors/data-partners/bombora.md) [!BADGE Lote]{type=Informative}
+- [[!DNL Demandbase Intent]](connectors/data-partners/demandbase.md) [!BADGE Lote]{type=Informative}
 - [[!DNL Merkury Enterprise Identity Resolution]](connectors/data-partners/merkury.md) [!BADGE Lote]{type=Informative}
 
 ### comércio eletrônico {#ecommerce}
 
-O Experience Platform fornece suporte para assimilação de dados de um sistema de comércio eletrônico de terceiros. Consulte os seguintes documentos relacionados para obter mais informações sobre conectores de origem específicos:
+O Experience Platform oferece suporte para assimilação de dados de um sistema de comércio eletrônico de terceiros. Consulte os seguintes documentos relacionados para obter mais informações sobre conectores de origem específicos:
 
 - [[!DNL SAP Commerce]](connectors/ecommerce/sap-commerce.md) [!BADGE Lote]{type=Informative}
 - [[!DNL Shopify]](connectors/ecommerce/shopify.md) [!BADGE Lote]{type=Informative}
@@ -160,13 +162,13 @@ O Experience Platform fornece suporte para assimilação de dados de um sistema 
 
 ### Sistema local {#local-system}
 
-O Experience Platform fornece suporte para assimilação de dados do sistema local. Consulte os seguintes documentos relacionados para obter mais informações sobre conectores de origem específicos:
+O Experience Platform oferece suporte para assimilação de dados do sistema local. Consulte os seguintes documentos relacionados para obter mais informações sobre conectores de origem específicos:
 
 - [Upload de arquivo local](connectors/local-system/local-file-upload.md)
 
 ### Automação de marketing {#marketing-automation}
 
-O Experience Platform fornece suporte para assimilação de dados de um sistema de automação de marketing de terceiros. Consulte os seguintes documentos relacionados para obter mais informações sobre conectores de origem específicos:
+O Experience Platform oferece suporte para assimilação de dados de um sistema de automação de marketing de terceiros. Consulte os seguintes documentos relacionados para obter mais informações sobre conectores de origem específicos:
 
 - [[!DNL Braze]](connectors/marketing-automation/braze.md) [!BADGE Streaming]{type=Positive}
 - [[!DNL Chatlio]](connectors/marketing-automation/chatlio-webhook.md) [!BADGE Streaming]{type=Positive}
@@ -191,13 +193,13 @@ O Experience Platform oferece suporte para assimilação de dados de um sistema 
 
 ### Transmissão {#streaming}
 
-O Experience Platform fornece suporte para assimilação de dados de fontes de transmissão. Consulte os seguintes documentos relacionados para obter mais informações sobre conectores de origem específicos:
+O Experience Platform oferece suporte para assimilação de dados de fontes de transmissão. Consulte os seguintes documentos relacionados para obter mais informações sobre conectores de origem específicos:
 
 - [[!DNL HTTP API]](connectors/streaming/http.md) [!BADGE Streaming]{type=Positive}
 
 ### Protocolos {#protocols}
 
-O Experience Platform fornece suporte para assimilação de dados de um sistema de protocolos de terceiros. Consulte os seguintes documentos relacionados para obter mais informações sobre conectores de origem específicos:
+O Experience Platform oferece suporte para assimilação de dados de um sistema de protocolos de terceiros. Consulte os seguintes documentos relacionados para obter mais informações sobre conectores de origem específicos:
 
 - [[!DNL Generic OData]](connectors/protocols/odata.md) [!BADGE Lote]{type=Informative}
 - [[!DNL Generic REST API]](connectors/protocols/generic-rest.md) [!BADGE Lote]{type=Informative}
@@ -214,7 +216,7 @@ A tabela a seguir descreve como a interface do usuário se comporta com base em 
 | **[!UICONTROL Gerenciar Fontes]** Em | Além das funções incluídas em **[!UICONTROL Exibir Fontes]**, concede acesso à opção **[!UICONTROL Conectar Source]** do **[!UICONTROL Catálogo]** e à opção **[!UICONTROL Selecionar Dados]** do **[!UICONTROL Procurar]**. **[!UICONTROL Gerenciar Fontes]** também permite habilitar ou desabilitar **[!UICONTROL DataFlows]** e editar suas agendas. |
 | **[!UICONTROL Exibir Fontes]** Desativada e **[!UICONTROL Gerenciar Fontes]** Desativada | Revogar todo o acesso a origens. |
 
-Para obter mais informações sobre as permissões disponíveis concedidas por meio das Permissões Adobe, leia a [visão geral do controle de acesso](../access-control/home.md).
+Para obter mais informações sobre as permissões disponíveis concedidas por meio das Permissões do Adobe, leia a [visão geral do controle de acesso](../access-control/home.md).
 
 ### Controle de acesso baseado em atributos
 
@@ -238,8 +240,8 @@ Para obter mais informações sobre o controle de acesso baseado em atributos, l
 
 Ao usar qualquer uma das Fontes rotuladas como beta (&quot;Beta&quot;), você reconhece que a Beta é fornecida ***&quot;no estado em que se encontra&quot; sem garantias de qualquer tipo***.
 
-O Adobe não terá nenhuma obrigação de manter, corrigir, atualizar, alterar, modificar ou oferecer suporte à Beta. Você é aconselhado a usar materiais informativos e não se basear, de forma alguma, no funcionamento ou no desempenho corretos desses Beta e/ou dos materiais que os acompanham. O Beta é considerado Informações confidenciais do Adobe.
+A Adobe não tem nenhuma obrigação de manter, corrigir, atualizar, alterar, modificar ou oferecer suporte à Beta. Você é aconselhado a usar materiais informativos e não se basear, de forma alguma, no funcionamento ou no desempenho corretos desses Beta e/ou dos materiais que os acompanham. O Beta é considerado Informações confidenciais da Adobe.
 
-Qualquer &quot;Feedback&quot; (informação sobre o Beta incluindo, mas não se limitando a, problemas ou defeitos encontrados durante o uso do Beta, sugestões, melhorias e recomendações) fornecido por Você ao Adobe é atribuído ao Adobe, incluindo todos os direitos, títulos e interesses no e para esse Feedback.
+Qualquer &quot;Feedback&quot; (informação sobre o Beta incluindo, mas não se limitando a, problemas ou defeitos encontrados durante o uso do Beta, sugestões, melhorias e recomendações) fornecido por Você ao Adobe é atribuído ao Adobe, incluindo todos os direitos, cargos e interesses no e no Feedback.
 
 Envie Feedback Aberto ou crie um Tíquete de Suporte para compartilhar suas sugestões ou relatar um erro, buscar um aprimoramento de recurso.

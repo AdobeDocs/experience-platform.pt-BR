@@ -2,9 +2,9 @@
 title: Conectar a intenção do Bombora ao Experience Platform usando a interface do usuário
 description: Saiba como conectar o Bombora Intent ao Experience Platform
 exl-id: 76a4fed5-b2d5-46d5-9245-b52792a7d323
-source-git-commit: 9f6f84d16c30c1e32184007ebc2a401db5f8b9ac
+source-git-commit: 0a6a9fe759d71fd62e3eaf5c93a091614f3c76a0
 workflow-type: tm+mt
-source-wordcount: '942'
+source-wordcount: '955'
 ht-degree: 4%
 
 ---
@@ -20,6 +20,10 @@ Este tutorial requer uma compreensão funcional dos seguintes componentes do Exp
 * [Real-Time CDP B2B edition](../../../../../rtcdp/b2b-overview.md): o Real-Time CDP B2B edition foi criado especificamente para profissionais de marketing que operam em um modelo de serviço business-to-business. A plataforma reúne dados de várias origens e os combina numa única exibição de perfis de pessoas e contas. Esses dados unificados permitem que profissionais de marketing direcionem públicos-alvo específicos com precisão e gerem engajamento em todos os canais disponíveis.
 * [Fontes](../../../../home.md): o Experience Platform permite a assimilação de dados de várias fontes, ao mesmo tempo em que fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços do Experience Platform.
 * [Sandboxes](../../../../../sandboxes/home.md): a Experience Platform fornece sandboxes virtuais que particionam uma única instância do Experience Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
+
+### Pré-requisitos
+
+Leia a [[!DNL Bombora Intent] visão geral](../../../../connectors/data-partners/bombora.md) para obter informações sobre como recuperar suas credenciais de autenticação.
 
 ## Navegar pelo catálogo de origens
 

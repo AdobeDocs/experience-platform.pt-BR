@@ -5,9 +5,9 @@ breadcrumb-title: Guia dos conectores de origem
 user-guide-description: Assimilar dados de várias fontes. Saiba como estruturar, rotular e aprimorar os dados já assimilados.
 feature: Sources
 role: Developer
-source-git-commit: 86f17ed4dc012481c2b4a7f1a40b492bfac5e137
+source-git-commit: 0a6a9fe759d71fd62e3eaf5c93a091614f3c76a0
 workflow-type: tm+mt
-source-wordcount: '1061'
+source-wordcount: '1063'
 ht-degree: 29%
 
 ---
@@ -96,6 +96,7 @@ ht-degree: 29%
       - [Assimilação de dados da Acxiom](connectors/data-partners/acxiom-data-ingestion.md)
       - [Importação de dados de prospecção da Acxiom](connectors/data-partners/acxiom-prospecting-data-import.md)
       - [Intenção de Bombora](connectors/data-partners/bombora.md)
+      - [Intenção do Demandbase](connectors/data-partners/demandbase.md)
       - [Resolução de identidade empresarial Merkury](connectors/data-partners/merkury.md)
    - Comércio eletrônico {#ecommerce}
       - [SAP COMMERCE](connectors/ecommerce/sap-commerce.md)

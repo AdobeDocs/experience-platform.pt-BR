@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Monitorar fluxos de dados para destinos na interface do
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: b814becaed88ce23527dc58f7ec056c05a48379f
+source-git-commit: 7f3560eaccecc8f42bbfa7d27b82ad71397df035
 workflow-type: tm+mt
-source-wordcount: '3637'
+source-wordcount: '3620'
 ht-degree: 9%
 
 ---
@@ -97,12 +97,12 @@ Cada execução de fluxo de dados individual mostra os seguintes detalhes:
 
   >[!IMPORTANT]
   >
-  > A partir de outubro de 2024, a Adobe está lançando uma atualização para aumentar a precisão dos relatórios para destinos de transmissão. Esse aprimoramento garante um melhor alinhamento entre o Experience Platform e os relatórios das plataformas de destino.
+  > A partir de março de 2025, a Adobe está lançando uma atualização para aumentar a precisão dos relatórios para destinos de transmissão. Esse aprimoramento garante um melhor alinhamento entre os relatórios no Experience Platform e as plataformas de destino.
   >
   > Antes desta atualização, **[!UICONTROL Falha nas identidades]** incluiu todas as tentativas de ativação. Após essa atualização, somente a última tentativa de ativação será incluída na contagem total.
   > 
-  > Este aprimoramento se aplica atualmente ao [destino de Correspondência de Cliente do Google](../../destinations/catalog/advertising/google-customer-match.md), mas será gradualmente implantado em outros destinos de transmissão do Experience Platform.
-  > Após esse aprimoramento, os usuários do [destino de Correspondência do Cliente do Google](../../destinations/catalog/advertising/google-customer-match.md) poderão observar uma queda esperada em sua contagem de **[!UICONTROL Falha nas identidades]**.
+  > Esse aprimoramento se aplica a todos os destinos de streaming.
+  > Após esse aprimoramento, os usuários de destinos de streaming podem observar uma queda esperada em sua contagem de **[!UICONTROL Falha de identidades]**.
 
 
 - **[!UICONTROL Taxa de ativação]**: a porcentagem de identidades recebidas que foram ativadas com êxito. A fórmula a seguir demonstra como esse valor é calculado:

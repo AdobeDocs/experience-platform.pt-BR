@@ -1,13 +1,13 @@
 ---
 title: Métodos de avaliação de público-alvo
 description: Saiba mais sobre os diferentes tipos de métodos de avaliação disponíveis no Adobe Experience Platform.
-source-git-commit: cffd7bad831f0f58bd2b62585bfd0b84280b1732
+exl-id: 54513369-42fa-4bab-803a-21d6dcd87660
+source-git-commit: 9eb5ccc24db58a887473f61c66a83aa92e16efa7
 workflow-type: tm+mt
-source-wordcount: '215'
-ht-degree: 5%
+source-wordcount: '241'
+ht-degree: 4%
 
 ---
-
 
 # Métodos de avaliação de público-alvo
 
@@ -18,6 +18,10 @@ O Adobe Experience Platform oferece uma variedade de métodos de avaliação par
 A segmentação em lote é um método de avaliação de segmentação que pode ser usado para mover os dados do perfil de uma só vez e criar os públicos correspondentes. Você pode usar a segmentação em lote para criar públicos-alvo detalhados e avançados para direcionar grandes grupos de perfis.
 
 Para obter mais informações sobre segmentação em lote, leia a [visão geral de segmentação em lote](./batch-segmentation.md).
+
+### Avaliação flexível do público
+
+A avaliação flexível do público-alvo permite executar um trabalho de segmentação em lote sob demanda. Você pode ler o [guia de avaliação de público-alvo flexível](./flexible-audience-evaluation.md) para obter mais informações.
 
 ## Segmentação de transmissão
 

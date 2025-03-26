@@ -2,12 +2,10 @@
 title: Guia flexível de avaliação de público-alvo
 description: Saiba como usar a avaliação flexível de público para executar trabalhos de segmentação em lote sob demanda.
 role: Developer, User
-hide: true
-hidefromtoc: true
-source-git-commit: a0543777e9a72f3a9ed6ff19e8b11973eb647b6b
+source-git-commit: 5c86161a2f9442d99426f2c05fb762cf50004049
 workflow-type: tm+mt
-source-wordcount: '893'
-ht-degree: 6%
+source-wordcount: '996'
+ht-degree: 5%
 
 ---
 
@@ -32,6 +30,10 @@ Ao executar a avaliação flexível do público-alvo, lembre-se das seguintes co
 - Todos os públicos-alvo **devem** ser avaliados usando a segmentação em lote.
 - Todos os públicos-alvo **devem** ser baseados em pessoas.
 - Você pode selecionar no máximo 20 públicos-alvo por execução de avaliação de público-alvo flexível.
+
+>[!NOTE]
+>
+>Você *pode* comprar execuções adicionais de avaliação de público flexível por ano. Para obter mais informações, entre em contato com o Atendimento ao cliente da Adobe.
 
 ## Acesso {#access}
 
@@ -308,11 +310,17 @@ Depois de confirmar que os públicos-alvo corretos estão listados, você pode c
 
 >[!NOTE]
 >
->Se você executar uma avaliação de público flexível, será necessário garantir que a frequência esteja definida como **[!UICONTROL Após a avaliação do segmento]**. Executar a avaliação flexível do público-alvo em públicos que já estão definidos para serem ativados [após a avaliação do segmento](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files), ativará os públicos-alvo assim que o trabalho de avaliação flexível do público-alvo for concluído, independentemente de quaisquer trabalhos de ativação diários anteriores.
+>O status do trabalho do segmento pode ser relatado como no estado &quot;Em fila&quot; no painel de monitoramento. Você pode visualizar o status mais atualizado do trabalho do segmento fazendo uma solicitação GET para o ponto de extremidade `/segment/jobs`, fornecendo a ID do trabalho do segmento no caminho da solicitação. Mais informações sobre como usar esse endpoint podem ser encontradas na guia API.
+>
+>Se você executar a avaliação de público-alvo flexível e quiser que a avaliação ative o público-alvo para um destino, será necessário garantir que a frequência esteja definida como **[!UICONTROL Após a avaliação do segmento]**. Executar a avaliação flexível do público-alvo em públicos que já estão definidos para serem ativados [após a avaliação do segmento](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files), ativará os públicos-alvo assim que o trabalho de avaliação flexível do público-alvo for concluído, independentemente de quaisquer trabalhos de ativação diários anteriores.
 
 >[!ENDTABS]
 
-## Próximas etapas {#next-steps}
+## Vídeo {#video}
+
+O vídeo a seguir demonstra como acessar e usar a avaliação de público-alvo flexível no Experience Platform.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3453640?)
 
 ## Perguntas frequentes {#faq}
 

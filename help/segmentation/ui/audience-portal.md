@@ -2,9 +2,9 @@
 title: Visão geral do Audience Portal
 description: Saiba como usar o Audience Portal para exibir, gerenciar e criar públicos no Adobe Experience Platform.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: a0543777e9a72f3a9ed6ff19e8b11973eb647b6b
+source-git-commit: 9eb5ccc24db58a887473f61c66a83aa92e16efa7
 workflow-type: tm+mt
-source-wordcount: '4561'
+source-wordcount: '4310'
 ht-degree: 3%
 
 ---
@@ -220,33 +220,9 @@ Quando você aplica ações em massa a públicos, as seguintes condições se ap
 - Você **não pode** excluir um público-alvo que está sendo usado em uma ativação de destino.
 - Se você selecionar um filtro, os públicos selecionados **serão** redefinidos.
 
-#### [!BADGE Disponibilidade limitada]{type=Informative} Avaliação flexível de público-alvo {#flexible-audience-evaluation}
+#### Avaliação flexível do público {#flexible-audience-evaluation}
 
-A avaliação flexível do público-alvo permite executar um trabalho de segmentação sob demanda. Escolha os públicos que você deseja avaliar e selecione **[!UICONTROL Avaliar públicos]**.
-
->[!IMPORTANT]
->
-Ao selecionar públicos-alvo para avaliação flexível do público-alvo, as seguintes condições se aplicam:
->
-- Você só pode usar a avaliação de público flexível **duas vezes** por dia. Esse limite é redefinido à meia-noite (UTC).
-- Você tem um **máximo** de 50 execuções flexíveis de avaliação de público-alvo por ano.
-- Todos os públicos-alvo **devem** ter uma origem de &quot;Serviço de segmentação&quot;.
-- Todos os públicos-alvo **devem** ser avaliados usando a segmentação em lote.
-- Todos os públicos-alvo **devem** ser baseados em pessoas.
-- Os públicos-alvo podem **somente** ser ativados para destinos na Platform.
-- Você pode selecionar no máximo 20 públicos-alvo.
-
-![Os públicos-alvo nos quais você deseja usar a avaliação de público-alvo flexível estão selecionados.](../images/ui/audience-portal/evaluate-audiences.png)
-
-O popover **[!UICONTROL Avaliar públicos-alvo sob demanda]** é exibido, exibindo a lista de públicos-alvo que serão avaliados com o trabalho por segmento sob demanda. Se um público-alvo não for elegível para avaliação sob demanda, ele será removido automaticamente do trabalho de avaliação. Confirme se os públicos-alvo listados são aqueles que você deseja avaliar.
-
-![Os públicos-alvo que podem ser avaliados usando a avaliação de público-alvo flexível são exibidos.](../images/ui/audience-portal/evaluate-audiences-modal.png)
-
-Depois de confirmar que os públicos-alvo corretos estão listados, você pode continuar com a solicitação e a avaliação do público-alvo flexível será iniciada. Você pode exibir o status desta avaliação de público na [exibição do monitoramento do trabalho de avaliação](../../dataflows/ui/monitor-audiences.md#evaluation-job-details).
-
->[!NOTE]
->
-Se você executar uma avaliação de público flexível, será necessário garantir que a frequência esteja definida como **[!UICONTROL Após a avaliação do segmento]**. Executar a avaliação flexível do público-alvo em públicos que já estão definidos para serem ativados [após a avaliação do segmento](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files), ativará os públicos-alvo assim que o trabalho de avaliação flexível do público-alvo for concluído, independentemente de quaisquer trabalhos de ativação diários anteriores.
+A avaliação flexível do público-alvo permite executar um trabalho de segmentação sob demanda. Para saber mais sobre a avaliação de público-alvo flexível, leia o [guia de avaliação de público-alvo flexível](../methods/flexible-audience-evaluation.md).
 
 ## Detalhes do público-alvo {#audience-details}
 
@@ -302,7 +278,7 @@ Para públicos-alvo e composições geradas pela Platform, a seção **[!UICONTR
 
 >[!NOTE]
 >
-Pode levar até 30 minutos para que a contagem total do público-alvo seja atualizada após a conclusão do trabalho de exportação.
+>Pode levar até 30 minutos para que a contagem total do público-alvo seja atualizada após a conclusão do trabalho de exportação.
 
 As estimativas são geradas usando um tamanho de amostra dos dados de amostra desse dia. Se houver menos de 1 milhão de entidades no armazenamento do Perfil, o conjunto de dados completo será usado; para entre 1 e 20 milhões de entidades, será usado 1 milhão de entidades; e para mais de 20 milhões de entidades, será usado 5% do total de entidades. Mais informações sobre a geração de estimativas podem ser encontradas na [seção de geração de estimativas](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) do tutorial de criação de público-alvo.
 
@@ -312,7 +288,7 @@ Para públicos-alvo com uma origem de **[!UICONTROL Upload personalizado]**, a s
 
 >[!NOTE]
 >
-Pode levar até 30 minutos após o trabalho de exportação para que a contagem de perfis do público-alvo seja totalmente atualizada.
+>Pode levar até 30 minutos após o trabalho de exportação para que a contagem de perfis do público-alvo seja totalmente atualizada.
 
 ![A seção de detalhes da assimilação da página de detalhes do público-alvo é exibida.](../images/ui/audience-portal/audience-details-ingestion-details.png)
 
@@ -330,7 +306,7 @@ Pode levar até 30 minutos após o trabalho de exportação para que a contagem 
 
 >[!NOTE]
 >
-Aplicar rótulos de uso de dados ao esquema é a prática recomendada. Você **não pode** aplicar um rótulo de uso de dados diretamente ao público-alvo.
+>Aplicar rótulos de uso de dados ao esquema é a prática recomendada. Você **não pode** aplicar um rótulo de uso de dados diretamente ao público-alvo.
 
 ### Destinos ativados {#activated-destinations}
 
@@ -338,7 +314,7 @@ A seção **[!UICONTROL Destinos ativados]** mostra os destinos para os quais es
 
 >[!NOTE]
 >
-Os destinos são um recurso disponível com o [!DNL Adobe Real-Time Customer Data Platform] e permitem exportar dados para plataformas externas. Para obter mais informações sobre destinos, leia a [visão geral sobre destinos](../../destinations/home.md). Para saber como ativar um segmento para um destino, consulte [visão geral da ativação](../../destinations/ui/activation-overview.md).
+> Os destinos são um recurso disponível com o [!DNL Adobe Real-Time Customer Data Platform] e permitem exportar dados para plataformas externas. Para obter mais informações sobre destinos, leia a [visão geral sobre destinos](../../destinations/home.md). Para saber como ativar um segmento para um destino, consulte [visão geral da ativação](../../destinations/ui/activation-overview.md).
 
 ### Amostras de perfil {#profile-samples}
 
@@ -364,10 +340,10 @@ Para obter informações mais detalhadas sobre cada [!DNL Profile], selecione a 
 
 ## Segmentação programada {#scheduled-segmentation}
 
-[!CONTEXTUALHELP]
-id="platform_segments_browse_addallsegmentstoschedule"
-title="Adicionar todos os públicos-alvo à programação"
-abstract="Permite incluir todos os públicos-alvo avaliados usando a segmentação em lote na atualização diária programada. Desabilite para remover todos os públicos-alvo da atualização programada."
+>[!CONTEXTUALHELP]
+>id="platform_segments_browse_addallsegmentstoschedule"
+>title="Adicionar todos os públicos-alvo à programação"
+>abstract="Permite incluir todos os públicos-alvo avaliados usando a segmentação em lote na atualização diária programada. Desabilite para remover todos os públicos-alvo da atualização programada."
 
 Depois que os públicos-alvo forem criados, você poderá avaliá-los por meio de uma avaliação sob demanda ou agendada (contínua). A avaliação significa mover dados de [!DNL Real-Time Customer Profile] por meio de trabalhos de segmento para produzir públicos correspondentes. Após criado, os públicos-alvo são salvos e armazenados para que possam ser exportados usando as APIs [!DNL Experience Platform].
 
@@ -379,7 +355,7 @@ A habilitação dos públicos para avaliação agendada pode ser feita usando a 
 
 >[!NOTE]
 >
-A avaliação agendada pode ser habilitada para sandboxes com um máximo de cinco (5) políticas de mesclagem para [!DNL XDM Individual Profile]. Se sua organização tiver mais de cinco políticas de mesclagem para [!DNL XDM Individual Profile] em um único ambiente de sandbox, você não poderá usar a avaliação agendada.
+>A avaliação agendada pode ser habilitada para sandboxes com um máximo de cinco (5) políticas de mesclagem para [!DNL XDM Individual Profile]. Se sua organização tiver mais de cinco políticas de mesclagem para [!DNL XDM Individual Profile] em um único ambiente de sandbox, você não poderá usar a avaliação agendada.
 
 Atualmente, os cronogramas só podem ser criados usando a API. Para obter etapas detalhadas sobre como criar, editar e trabalhar com agendamentos usando a API, siga o tutorial para avaliar e acessar resultados de segmentação, especificamente a seção sobre [avaliação agendada usando a API](../tutorials/evaluate-a-segment.md#scheduled-evaluation).
 
@@ -393,7 +369,7 @@ Você pode selecionar **[!UICONTROL Criar público-alvo]** para criar um públic
 
 Um popover é exibido, permitindo que você escolha entre compor um público-alvo ou criar regras.
 
-![Um popover que exibe os dois tipos of públicos-alvo que você pode criar.](../images/ui/audience-portal/create-audience-type.png)
+![Um popover que exibe os dois tipos de públicos-alvo que você pode criar.](../images/ui/audience-portal/create-audience-type.png)
 
 ### Composição de público-alvo {#audience-composition}
 
@@ -417,7 +393,7 @@ Além das composições de público-alvo e definições de segmento, você pode 
 
 >[!IMPORTANT]
 >
-Para importar um público gerado externamente, você **deve** ter as seguintes permissões: [!UICONTROL Exibir segmentos], [!UICONTROL Gerenciar segmentos] e [!UICONTROL Importar público]. Para obter mais informações sobre essa permissão, leia a [visão geral do controle de acesso](../../access-control/home.md#permissions).
+>Para importar um público gerado externamente, você **deve** ter as seguintes permissões: [!UICONTROL Exibir segmentos], [!UICONTROL Gerenciar segmentos] e [!UICONTROL Importar público]. Para obter mais informações sobre essa permissão, leia a [visão geral do controle de acesso](../../access-control/home.md#permissions).
 
 Você pode selecionar **[!UICONTROL Importar público-alvo]** para importar um público-alvo gerado externamente.
 
@@ -429,11 +405,11 @@ O fluxo de trabalho **[!UICONTROL Importar CSV de público-alvo]** aparece. Voc�
 
 >[!NOTE]
 >
-O público-alvo gerado externo **deve** estar no formato CSV, ter **no máximo** de 25 colunas e ter menos de 1 GB.
+>O público-alvo gerado externo **deve** estar no formato CSV, ter **no máximo** de 25 colunas e ter menos de 1 GB.
 >
-Além disso, você **não pode** usar espaços ou traços na primeira linha ou nas colunas associadas do CSV.
+>Além disso, você **não pode** usar espaços ou traços na primeira linha ou nas colunas associadas do CSV.
 >
-Por exemplo, o valor da primeira linha pode ser &quot;FirstName&quot; ou &quot;First_Name&quot;, mas não pode ser &quot;First Name&quot; ou &quot;First-Name&quot;.
+>Por exemplo, o valor da primeira linha pode ser &quot;FirstName&quot; ou &quot;First_Name&quot;, mas não pode ser &quot;First Name&quot; ou &quot;First-Name&quot;.
 
 Depois de selecionar o arquivo CSV a ser importado, uma lista de dados de amostra é mostrada para esse público-alvo gerado externamente. Depois de confirmar que os dados de exemplo estão corretos, selecione **[!UICONTROL Próximo]**.
 
@@ -449,10 +425,10 @@ Opcionalmente, também é possível adicionar alguns detalhes extras ao público
 
 >[!NOTE]
 >
-Se você usar uma ID de público-alvo externa personalizada, ela deverá seguir as seguintes diretrizes:
+>Se você usar uma ID de público-alvo externa personalizada, ela deverá seguir as seguintes diretrizes:
 >
-- Ele **deve** começar com uma letra (a-z ou A-Z), um sublinhado (_) ou um cifrão ($).
-- Todos os caracteres subsequentes podem ser alfanuméricos (a-z, A-Z, 0-9), sublinhados (_) ou cifrões ($).
+> - Ele **deve** começar com uma letra (a-z ou A-Z), um sublinhado (_) ou um cifrão ($).
+> - Todos os caracteres subsequentes podem ser alfanuméricos (a-z, A-Z, 0-9), sublinhados (_) ou cifrões ($).
 
 Depois de preencher os detalhes do seu público, selecione **[!UICONTROL Próximo]**.
 
@@ -466,11 +442,11 @@ Depois de confirmar que os detalhes estão corretos, selecione **[!UICONTROL Con
 
 >[!IMPORTANT]
 >
-Por padrão, os públicos-alvo gerados externamente têm uma expiração de dados de 30 dias. A expiração dos dados é redefinida se o público-alvo for atualizado ou modificado de alguma forma.
+>Por padrão, os públicos-alvo gerados externamente têm uma expiração de dados de 30 dias. A expiração dos dados é redefinida se o público-alvo for atualizado ou modificado de alguma forma.
 >
-Além disso, se o público-alvo gerado externamente contiver informações confidenciais e/ou relacionadas à saúde, você **deverá** aplicar os rótulos de uso de dados necessários antes de ativá-las para qualquer destino. Como as variáveis de públicos geradas externamente são armazenadas no data lake em vez de no Perfil do cliente em tempo real, você deve **não** incluir dados de consentimento no arquivo CSV.
+>Além disso, se o público-alvo gerado externamente contiver informações confidenciais e/ou relacionadas à saúde, você **deverá** aplicar os rótulos de uso de dados necessários antes de ativá-las para qualquer destino. Como as variáveis de públicos geradas externamente são armazenadas no data lake em vez de no Perfil do cliente em tempo real, você deve **não** incluir dados de consentimento no arquivo CSV.
 >
-Para obter mais informações sobre como aplicar rótulos de uso de dados, leia a documentação em [gerenciando rótulos](../../access-control/abac/ui/labels.md). Para saber mais sobre os rótulos de uso de dados na Platform em geral, leia a [visão geral dos rótulos de uso de dados](../../data-governance/labels/overview.md). Para saber como o consentimento funciona em públicos gerados externamente, leia as [Perguntas frequentes sobre públicos-alvo](../faq.md#consent).
+>Para obter mais informações sobre como aplicar rótulos de uso de dados, leia a documentação em [gerenciando rótulos](../../access-control/abac/ui/labels.md). Para saber mais sobre os rótulos de uso de dados na Platform em geral, leia a [visão geral dos rótulos de uso de dados](../../data-governance/labels/overview.md). Para saber como o consentimento funciona em públicos gerados externamente, leia as [Perguntas frequentes sobre públicos-alvo](../faq.md#consent).
 
 ## Próximas etapas
 

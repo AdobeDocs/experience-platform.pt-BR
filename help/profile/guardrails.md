@@ -5,9 +5,9 @@ product: experience platform
 type: Documentation
 description: Saiba mais sobre o desempenho e as medidas de proteção aplicadas pelo sistema para segmentação e dados de perfil para garantir o uso ideal da funcionalidade da Real-Time CDP.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 5d972b6b4f59ca58ff3c4b76383db9ee7667dba3
+source-git-commit: 31f725fc30b8fd9a045c0aac5ee65832cd995363
 workflow-type: tm+mt
-source-wordcount: '2523'
+source-wordcount: '2611'
 ht-degree: 2%
 
 ---
@@ -127,6 +127,9 @@ As medidas de proteção descritas nesta seção referem-se ao número e à natu
 | Públicos-alvo da conta por sandbox | 50 | Proteção imposta pelo sistema | Você pode criar no máximo 50 públicos-alvo de conta em uma sandbox. Depois de atingir 50 públicos-alvo em uma sandbox, o controle **[!UICONTROL Criar público-alvo]** é desabilitado ao tentar criar um novo público-alvo para a conta. Leia mais sobre [públicos-alvo da conta](/help/segmentation/types/account-audiences.md). |
 | Composições publicadas por sandbox | 10 | Proteção de desempenho | Você pode ter no máximo 10 composições publicadas em uma sandbox. Leia mais sobre [composição de público-alvo no guia da interface](/help/segmentation/ui/audience-composition.md). |
 | Tamanho máximo do público | 30 por cento | Proteção de desempenho | A associação máxima recomendada de um público-alvo é de 30% do número total de perfis no sistema. É possível criar públicos-alvo com mais de 30% dos perfis como membros ou vários públicos-alvo grandes, mas isso afetará o desempenho do sistema. |
+| Execuções flexíveis de avaliação de público | 50 por ano (sandbox de produção)<br/>100 por ano (sandbox de desenvolvimento) | Proteção imposta pelo sistema | Você tem no máximo 50 execuções de avaliação de público flexíveis por ano por sandbox de **produção**. Você tem no máximo 100 execuções de avaliação de público-alvo flexíveis por ano por sandbox de **desenvolvimento**. |
+| Execuções flexíveis de avaliação de público | 2 por dia | Proteção imposta pelo sistema | Você tem no máximo 2 execuções por dia por sandbox. |
+| Públicos-alvo por execução de avaliação de público-alvo flexível | 20 | Proteção imposta pelo sistema | Você pode ter no máximo 20 públicos-alvo por execução de avaliação de público-alvo flexível. |
 
 {style="table-layout:auto"}
 

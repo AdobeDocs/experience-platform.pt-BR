@@ -4,10 +4,10 @@ title: Ponto de extremidade da API de trabalhos de segmento
 description: O endpoint de trabalhos de segmento na API do Serviço de segmentação do Adobe Experience Platform permite gerenciar de forma programática os trabalhos de segmento da sua organização.
 role: Developer
 exl-id: 105481c2-1c25-4f0e-8fb0-c6577a4616b3
-source-git-commit: f35fb6aae6aceb75391b1b615ca067a72918f4cf
+source-git-commit: 9eb5ccc24db58a887473f61c66a83aa92e16efa7
 workflow-type: tm+mt
-source-wordcount: '1648'
-ht-degree: 2%
+source-wordcount: '1232'
+ht-degree: 3%
 
 ---
 
@@ -64,13 +64,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o status HTTP 200 com uma lista de trabalhos de segmento para a organização especificada como JSON. No entanto, a resposta será diferente, dependendo do número de definições de segmento no trabalho de segmento.
-
->[!BEGINTABS]
-
->[!TAB Menor que ou igual a 1500 definições de segmento no trabalho de segmento]
-
-Se você tiver menos de 1500 definições de segmento em execução no seu trabalho de segmento, uma lista completa de todas as definições de segmento será exibida no atributo `children.segments`.
+Uma resposta bem-sucedida retorna o status HTTP 200 com uma lista de trabalhos de segmento para a organização especificada como JSON. Uma lista completa de todas as definições de segmento será exibida no atributo `children.segments`.
 
 >[!NOTE]
 >
@@ -178,105 +172,6 @@ Se você tiver menos de 1500 definições de segmento em execução no seu traba
 }
 ```
 
-+++
-
->[!TAB Mais de 1500 definições de segmento]
-
-Se você tiver mais de 1500 definições de segmento em execução no seu trabalho de segmento, o atributo `children.segments` exibirá `*`, indicando que todas as definições de segmento estão sendo avaliadas.
-
->[!NOTE]
->
->A resposta a seguir foi truncada por questões de espaço e mostrará apenas a primeira tarefa retornada.
-
-+++ Um exemplo de resposta ao visualizar uma lista de jobs de segmento.
-
-```json
-{
-    "_page": {
-        "totalCount": 14,
-        "pageSize": 14
-    },
-    "children": [
-        {
-            "id": "b31aed3d-b3b1-4613-98c6-7d3846e8d48f",
-            "imsOrgId": "E95186D65A28ABF00A495D82@AdobeOrg",
-            "sandbox": {
-                "sandboxId": "28e74200-e3de-11e9-8f5d-7f27416c5f0d",
-                "sandboxName": "prod",
-                "type": "production",
-                "default": true
-            },
-            "profileInstanceId": "ups",
-            "source": "scheduler",
-            "status": "SUCCEEDED",
-            "batchId": "678f53bc-e21d-4c47-a7ec-5ad0064f8e4c",
-            "computeJobId": 8811,
-            "computeGatewayJobId": "9ea97b25-a0f5-410e-ae87-b2d85e58f399",
-            "segments": [
-                {
-                    "segmentId": "*",
-                }
-            ],
-            "metrics": {
-                "totalTime": {
-                    "startTimeInMs": 1573203617195,
-                    "endTimeInMs": 1573204395655,
-                    "totalTimeInMs": 778460
-                },
-                "profileSegmentationTime": {
-                    "startTimeInMs": 1573204266727,
-                    "endTimeInMs": 1573204395655,
-                    "totalTimeInMs": 128928
-                },
-                "totalProfiles": 13146432,
-                "segmentedProfileCounter":{
-                    "94509dba-7387-452f-addc-5d8d979f6ae8":1033
-                },
-                "segmentedProfileByNamespaceCounter":{
-                    "94509dba-7387-452f-addc-5d8d979f6ae8":{
-                        "tenantiduserobjid":1033,
-                        "campaign_profile_mscom_mkt_prod2":1033
-                    }
-                },
-                "segmentedProfileByStatusCounter":{
-                    "94509dba-7387-452f-addc-5d8d979f6ae8":{
-                        "exited":144646,
-                        "realized":2056
-                    }
-                },
-                "totalProfilesByMergePolicy":{
-                    "25c548a0-ca7f-4dcd-81d5-997642f178b9":13146432
-                }
-            },
-            "requestId": "4e538382-dbd8-449e-988a-4ac639ebe72b-1573203600264",
-            "schema": {
-                "name": "_xdm.context.profile"
-            },
-            "properties": {
-                "scheduleId": "4e538382-dbd8-449e-988a-4ac639ebe72b",
-                "runId": "e6c1308d-0d4b-4246-b2eb-43697b50a149"
-            },
-            "_links": {
-                "cancel": {
-                    "href": "/segment/jobs/b31aed3d-b3b1-4613-98c6-7d3846e8d48f",
-                    "method": "DELETE"
-                },
-                "checkStatus": {
-                    "href": "/segment/jobs/b31aed3d-b3b1-4613-98c6-7d3846e8d48f",
-                    "method": "GET"
-                }
-            },
-            "updateTime": 1573204395000,
-            "creationTime": 1573203600535,
-            "updateEpoch": 1573204395
-        }
-    ],
-    "_links": {
-        "next": {}
-    }
-}
-```
-
 | Propriedade | Descrição |
 | -------- | ----------- |
 | `id` | Um identificador somente leitura gerado pelo sistema para o trabalho de segmento. |
@@ -294,23 +189,15 @@ Se você tiver mais de 1500 definições de segmento em execução no seu trabal
 
 +++
 
->[!ENDTABS]
-
 ## Criar um novo trabalho de segmento {#create}
 
-Você pode criar um novo trabalho de segmento fazendo uma solicitação POST para o ponto de extremidade `/segment/jobs` e incluindo no corpo a ID da definição de segmento a partir da qual deseja criar um novo público-alvo.
+Você pode criar um novo trabalho de segmento fazendo uma solicitação POST para o ponto de extremidade `/segment/jobs` e incluindo as IDs da definição de segmento no corpo da solicitação.
 
 **Formato da API**
 
 ```http
 POST /segment/jobs
 ```
-
-Ao criar um novo trabalho de segmento, a solicitação e a resposta serão diferentes dependendo do número de definições de segmento no trabalho de segmento.
-
->[!BEGINTABS]
-
->[!TAB Menos de ou igual a 1500 segmentos no trabalho do seu segmento]
 
 **Solicitação**
 
@@ -335,7 +222,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `segmentId` | A ID da definição de segmento para a qual você deseja criar um trabalho de segmento. Essas definições de segmento podem pertencer a diferentes políticas de mesclagem. Mais informações sobre definições de segmento podem ser encontradas no [manual de ponto de extremidade de definição de segmento](./segment-definitions.md). |
+| `segmentId` | A ID da definição de segmento que você deseja avaliar. Essas definições de segmento podem pertencer a diferentes políticas de mesclagem. Mais informações sobre definições de segmento podem ser encontradas no [manual de ponto de extremidade de definição de segmento](./segment-definitions.md). |
 
 +++
 
@@ -460,136 +347,6 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com informações sobre o tr
 
 +++
 
->[!TAB Mais de 1500 definições de segmento em seu trabalho de segmento]
-
-**Solicitação**
-
->[!NOTE]
->
->Embora você possa criar um trabalho de segmento com mais de 1500 definições de segmento, isso **não é altamente recomendado**.
-
-+++ Um exemplo de solicitação para criar um trabalho de segmento.
-
-```shell
-curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
- -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'Content-Type: application/json' \
- -H 'x-gw-ims-org-id: {ORG_ID}' \
- -H 'x-api-key: {API_KEY}' \
- -H 'x-sandbox-name: {SANDBOX_NAME}' \
- -d '{
-    "schema": {
-        "name": "_xdm.context.profile"
-    },
-    "segments": [
-        {
-            "segmentId": "*"
-        }
-    ]
- }'
-```
-
-| Propriedade | Descrição |
-| -------- | ----------- |
-| `schema.name` | O nome do esquema para as definições de segmento. |
-| `segments.segmentId` | Ao executar um trabalho de segmento com mais de 1500 segmentos, será necessário passar `*` como a ID do segmento para indicar que você deseja executar um trabalho de segmentação com todos os segmentos. |
-
-+++
-
-**Resposta**
-
-Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes do trabalho de segmento recém-criado.
-
-+++ Um exemplo de resposta ao criar um trabalho de segmento.
-
-```json
-{
-    "id": "b31aed3d-b3b1-4613-98c6-7d3846e8d48f",
-    "imsOrgId": "E95186D65A28ABF00A495D82@AdobeOrg",
-    "sandbox": {
-        "sandboxId": "28e74200-e3de-11e9-8f5d-7f27416c5f0d",
-        "sandboxName": "prod",
-        "type": "production",
-        "default": true
-    },
-    "profileInstanceId": "ups",
-    "source": "scheduler",
-    "status": "PROCESSING",
-    "batchId": "678f53bc-e21d-4c47-a7ec-5ad0064f8e4c",
-    "computeJobId": 8811,
-    "computeGatewayJobId": "9ea97b25-a0f5-410e-ae87-b2d85e58f399",
-    "segments": [
-        {
-            "segmentId": "*"
-        }
-    ],
-    "metrics": {
-        "totalTime": {
-            "startTimeInMs": 1573203617195,
-            "endTimeInMs": 1573204395655,
-            "totalTimeInMs": 778460
-        },
-        "profileSegmentationTime": {
-            "startTimeInMs": 1573204266727,
-            "endTimeInMs": 1573204395655,
-            "totalTimeInMs": 128928
-        },
-        "segmentedProfileCounter":{
-            "7863c010-e092-41c8-ae5e-9e533186752e":1033
-        },
-        "segmentedProfileByNamespaceCounter":{
-            "7863c010-e092-41c8-ae5e-9e533186752e":{
-                "tenantiduserobjid":1033,
-                "campaign_profile_mscom_mkt_prod2":1033
-            }
-        },
-        "segmentedProfileByStatusCounter":{
-            "7863c010-e092-41c8-ae5e-9e533186752e":{
-                "exited":144646,
-                "realized":2056
-            }
-        },
-        "totalProfiles":13146432,
-        "totalProfilesByMergePolicy":{
-            "25c548a0-ca7f-4dcd-81d5-997642f178b9":13146432
-        }
-    },
-    "requestId": "4e538382-dbd8-449e-988a-4ac639ebe72b-1573203600264",
-    "schema": {
-        "name": "_xdm.context.profile"
-    },
-    "properties": {
-        "scheduleId": "4e538382-dbd8-449e-988a-4ac639ebe72b",
-        "runId": "e6c1308d-0d4b-4246-b2eb-43697b50a149"
-    },
-    "_links": {
-        "cancel": {
-            "href": "/segment/jobs/b31aed3d-b3b1-4613-98c6-7d3846e8d48f",
-            "method": "DELETE"
-        },
-        "checkStatus": {
-            "href": "/segment/jobs/b31aed3d-b3b1-4613-98c6-7d3846e8d48f",
-            "method": "GET"
-        }
-    },
-    "updateTime": 1573204395000,
-    "creationTime": 1573203600535,
-    "updateEpoch": 1573204395
-}
-```
-
-| Propriedade | Descrição |
-| -------- | ----------- |
-| `id` | Um identificador somente leitura gerado pelo sistema para o trabalho de segmento recém-criado. |
-| `status` | O status atual do trabalho do segmento. Como o trabalho do segmento é recém-criado, o status sempre será `NEW`. |
-| `segments` | Um objeto que contém informações sobre as definições de segmento para as quais esse trabalho de segmento está sendo executado. |
-| `segments.segment.id` | O `*` significa que esse trabalho de segmento está em execução para todas as definições de segmento na sua organização. |
-
-+++
-
->[!ENDTABS]
-
-
 ## Recuperar um trabalho de segmento específico {#get}
 
 Você pode recuperar informações detalhadas sobre um trabalho de segmento específico fazendo uma solicitação GET para o ponto de extremidade `/segment/jobs` e fornecendo a ID do trabalho de segmento que você deseja recuperar no caminho da solicitação.
@@ -620,13 +377,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfea-4
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o status HTTP 200 com informações detalhadas sobre o trabalho de segmento especificado.  No entanto, a resposta será diferente dependendo do número de definições de segmento no trabalho de segmento.
-
->[!BEGINTABS]
-
->[!TAB Menor que ou igual a 1500 definições de segmento no trabalho de segmento]
-
-Se você tiver menos de 1500 definições de segmento em execução no seu trabalho de segmento, uma lista completa de todas as definições de segmento será exibida no atributo `children.segments`.
+Uma resposta bem-sucedida retorna o status HTTP 200 com informações detalhadas sobre o trabalho de segmento especificado. Uma lista completa de todas as definições de segmento será exibida no atributo `children.segments`.
 
 +++ Uma resposta de amostra para recuperar um trabalho de segmento.
 
@@ -690,90 +441,6 @@ Se você tiver menos de 1500 definições de segmento em execução no seu traba
 }
 ```
 
-+++
-
->[!TAB Mais de 1500 definições de segmento]
-
-Se você tiver mais de 1500 definições de segmento em execução no seu trabalho de segmento, o atributo `children.segments` exibirá `*`, indicando que todas as definições de segmento estão sendo avaliadas.
-
-+++ Uma resposta de amostra para recuperar um trabalho de segmento.
-
-```json
-{
-    "id": "b31aed3d-b3b1-4613-98c6-7d3846e8d48f",
-    "imsOrgId": "E95186D65A28ABF00A495D82@AdobeOrg",
-    "sandbox": {
-        "sandboxId": "28e74200-e3de-11e9-8f5d-7f27416c5f0d",
-        "sandboxName": "prod",
-        "type": "production",
-        "default": true
-    },
-    "profileInstanceId": "ups",
-    "source": "scheduler",
-    "status": "SUCCEEDED",
-    "batchId": "678f53bc-e21d-4c47-a7ec-5ad0064f8e4c",
-    "computeJobId": 8811,
-    "computeGatewayJobId": "9ea97b25-a0f5-410e-ae87-b2d85e58f399",
-    "segments": [
-        {
-            "segmentId": "*"
-        }
-    ],
-    "metrics": {
-        "totalTime": {
-            "startTimeInMs": 1573203617195,
-            "endTimeInMs": 1573204395655,
-            "totalTimeInMs": 778460
-        },
-        "profileSegmentationTime": {
-            "startTimeInMs": 1573204266727,
-            "endTimeInMs": 1573204395655,
-            "totalTimeInMs": 128928
-        },
-        "segmentedProfileCounter":{
-            "7863c010-e092-41c8-ae5e-9e533186752e":1033
-        },
-        "segmentedProfileByNamespaceCounter":{
-            "7863c010-e092-41c8-ae5e-9e533186752e":{
-                "tenantiduserobjid":1033,
-                "campaign_profile_mscom_mkt_prod2":1033
-            }
-        },
-        "segmentedProfileByStatusCounter":{
-            "7863c010-e092-41c8-ae5e-9e533186752e":{
-                "exited":144646,
-                "realized":2056
-            }
-        },
-        "totalProfiles":13146432,
-        "totalProfilesByMergePolicy":{
-            "25c548a0-ca7f-4dcd-81d5-997642f178b9":13146432
-        }
-    },
-    "requestId": "4e538382-dbd8-449e-988a-4ac639ebe72b-1573203600264",
-    "schema": {
-        "name": "_xdm.context.profile"
-    },
-    "properties": {
-        "scheduleId": "4e538382-dbd8-449e-988a-4ac639ebe72b",
-        "runId": "e6c1308d-0d4b-4246-b2eb-43697b50a149"
-    },
-    "_links": {
-        "cancel": {
-            "href": "/segment/jobs/b31aed3d-b3b1-4613-98c6-7d3846e8d48f",
-            "method": "DELETE"
-        },
-        "checkStatus": {
-            "href": "/segment/jobs/b31aed3d-b3b1-4613-98c6-7d3846e8d48f",
-            "method": "GET"
-        }
-    },
-    "updateTime": 1573204395000,
-    "creationTime": 1573203600535,
-    "updateEpoch": 1573204395
-}
-```
-
 | Propriedade | Descrição |
 | -------- | ----------- |
 | `id` | Um identificador somente leitura gerado pelo sistema para o trabalho de segmento. |
@@ -824,7 +491,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs/bulk-get \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o status HTTP 207 com os trabalhos de segmento solicitados. No entanto, o valor do atributo `children.segments` difere, dependendo se o trabalho de segmento está em execução para mais de 1500 definições de segmento.
+Uma resposta bem-sucedida retorna o status HTTP 207 com os trabalhos de segmento solicitados.
 
 >[!NOTE]
 >
@@ -867,7 +534,20 @@ Uma resposta bem-sucedida retorna o status HTTP 207 com os trabalhos de segmento
             "status": "SUCCEEDED",
             "segments": [
                 {
-                    "segmentId": "*"
+                    "segmentId": "30230300-d78c-48ad-8012-c5563a007069",
+                    "segment": {
+                        "id": "30230300-d78c-48ad-8012-c5563a007069",
+                        "expression": {
+                            "type": "PQL",
+                            "format": "pql/json",
+                            "value": "{PQL_EXPRESSION}"
+                        },
+                        "mergePolicyId": "b83185bb-0bc6-489c-9363-0075eb30b4c8",
+                        "mergePolicy": {
+                            "id": "b83185bb-0bc6-489c-9363-0075eb30b4c8",
+                            "version": 1
+                        }
+                    }
                 }
             ],
             "updateTime": 1573204395000,

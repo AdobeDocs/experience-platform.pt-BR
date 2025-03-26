@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Notas de versão da Adobe Experience Platform
 breadcrumb-title: Notas de versão da Platform
 user-guide-description: Encontre notas de versão mensais da Adobe Experience Platform.
-source-git-commit: 6877d7a1679184976cdc608dbc400a257ef8e2f6
+source-git-commit: f29aedc417aed0e2e82117741dda7ec71adfd92e
 workflow-type: tm+mt
-source-wordcount: '156'
-ht-degree: 99%
+source-wordcount: '158'
+ht-degree: 100%
 
 ---
 
@@ -15,6 +15,7 @@ ht-degree: 99%
 
 * [Notas de versão atuais da Platform](latest/latest.md)
 * 2025 {#2025}
+   * [Março de 2025](2025/march-2025.md)
    * [Fevereiro de 2025](2025/february-2025.md)
 * 2024 {#2024}
    * [Novembro de 2024](2024/november-2024.md)

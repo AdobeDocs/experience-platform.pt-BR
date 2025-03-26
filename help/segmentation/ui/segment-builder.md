@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Guia da interface do construtor de segmentos
 description: O Construtor de segmentos na interface do usuário do Adobe Experience Platform fornece um espaço de trabalho avançado que permite a interação com elementos de dados de perfil. O espaço de trabalho fornece controles intuitivos para criar e editar regras, como arrastar e soltar blocos usados para representar propriedades de dados.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: e7c0551276d31d6809ace096c00e0dc2665090e6
+source-git-commit: dc36c5e2eb109d1728f2290ee61e69f458929ba7
 workflow-type: tm+mt
 source-wordcount: '4976'
 ht-degree: 8%
@@ -322,7 +322,7 @@ A lista de restrições de tempo disponíveis para esta operação difere da lis
 
 +++
 
-## Containers
+## Containers {#containers}
 
 As regras de segmento são avaliadas na ordem em que são listadas. Os containers permitem controlar a ordem de execução por meio do uso de consultas aninhadas.
 

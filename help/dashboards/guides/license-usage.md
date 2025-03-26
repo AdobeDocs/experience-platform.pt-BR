@@ -4,10 +4,10 @@ title: Painel de Uso da Licença
 description: A Adobe Experience Platform fornece um painel por meio do qual você pode visualizar informações importantes sobre o uso de licença da sua organização.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 1c31ef58eec727638cab28202afc762da0e226a2
+source-git-commit: 7332b39b0e213632e595dc52eda390aa0b9a24ec
 workflow-type: tm+mt
-source-wordcount: '3125'
-ht-degree: 22%
+source-wordcount: '3483'
+ht-degree: 14%
 
 ---
 
@@ -45,48 +45,90 @@ ht-degree: 22%
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_predictedusage_computehours"
 >title="Horas de computação previstas"
->abstract="Seu uso pode atingir a quantidade licenciada. Para avaliar ou reduzir as horas de computação, navegue até Consultas > Log para revisar o histórico de consultas. Se você não tiver permissão para acessar o espaço de trabalho Consultas, entre em contato com a administração."
+>abstract="As Horas de computação medem o tempo que os mecanismos de Serviço de consulta gastam lendo, processando e gravando dados ao executar consultas em lote.<br>Seu uso pode atingir o valor licenciado. Para avaliar ou reduzir o uso, acesse Consultas > Log para revisar o histórico de consultas. Se você não tiver acesso ao espaço de trabalho Consultas, entre em contato com o administrador."
 >additional-url="https://experience.adobe.com/#/platform/query/log.html" text="Workspace do log de consultas"
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_predictedusage_addressableaudience"
 >title="Público-alvo endereçável previsto"
->abstract="Seu uso pode atingir a quantidade licenciada. Para reduzir o uso, você pode configurar expirações de dados de conjuntos de dados ou perfis pseudônimos para sandboxes e conjuntos de dados."
+>abstract="O Público-alvo endereçável é o conjunto de perfis de pessoas no Perfil do cliente em tempo real que a sua organização está autorizada a utilizar. Isso inclui perfis diretamente identificáveis e com pseudônimos.<br>Seu uso pode atingir o valor licenciado. Para reduzir o uso, configure as expirações de dados do conjunto de dados ou Perfil de pseudônimo."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=pt-BR" text="Expirações do evento de experiência"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=pt-BR" text="Expiração de dados de perfis pseudônimos"
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_predictedusage_engageableprofiles"
 >title="Perfis previsíveis que podem ser ativados"
->abstract="Seu uso pode atingir a quantidade licenciada. Para reduzir o uso, você pode configurar expirações de dados de conjuntos de dados ou perfis pseudônimos para sandboxes e conjuntos de dados."
+>abstract="Perfis acionáveis são perfis de pessoas no Perfil do cliente em tempo real que sua organização tentou ativar usando o Journey Optimizer nos últimos 12 meses.<br>Seu uso pode atingir o valor licenciado. Para reduzir o uso, configure as expirações de dados do conjunto de dados ou Perfil de pseudônimo."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=pt-BR" text="Expirações do evento de experiência"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=pt-BR" text="Expiração de dados de perfis pseudônimos"
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_predictedusage_businesspersonprofile"
 >title="Perfil de Pessoa de Negócios Previsto"
->abstract="Seu uso pode atingir a quantidade licenciada. Para reduzir o uso, você pode configurar expirações de dados de conjuntos de dados ou perfis pseudônimos para sandboxes e conjuntos de dados."
+>abstract="Perfis de pessoas de negócios são registros no Perfil do cliente em tempo real que representam pessoas físicas em um contexto B2B.<br>Seu uso pode atingir o valor licenciado. Para reduzir o uso, configure as expirações de dados do conjunto de dados ou Perfil de pseudônimo."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=pt-BR" text="Expirações do evento de experiência"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=pt-BR" text="Expiração de dados de perfis pseudônimos"
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_predictedusage_corehours"
 >title="Principais Horas Previstas"
->abstract="Seu uso pode atingir a quantidade licenciada. Para reduzir o uso, você pode configurar expirações de dados de conjuntos de dados ou perfis pseudônimos para sandboxes e conjuntos de dados."
+>abstract="As horas principais representam o tempo de processamento consumido pelos serviços da Experience Platform.<br>Seu uso pode atingir o valor licenciado. Para reduzir o uso, configure as expirações de dados do conjunto de dados ou Perfil de pseudônimo."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=pt-BR" text="Expirações do evento de experiência"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=pt-BR" text="Expiração de dados de perfis pseudônimos"
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_predictedusage_totaldatavolume"
 >title="Volume de dados total previsto"
->abstract="Seu uso pode atingir a quantidade licenciada. Para reduzir o uso, você pode configurar expirações de dados de conjuntos de dados ou perfis pseudônimos para sandboxes e conjuntos de dados."
+>abstract="Volume de dados total é a quantidade de dados disponíveis no Perfil do cliente em tempo real para uso em fluxos de trabalho de envolvimento e personalização.<br>Seu uso pode atingir o valor licenciado. Para reduzir o uso, configure as expirações de dados do conjunto de dados ou Perfil de pseudônimo."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=pt-BR" text="Expirações do evento de experiência"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=pt-BR" text="Expiração de dados de perfis pseudônimos"
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_predictedusage_cjaRowsAvailable"
 >title="Linhas de CJA Previstas Disponíveis"
->abstract="Seu uso pode atingir a quantidade licenciada. Para reduzir o uso, você pode configurar expirações de dados de conjuntos de dados ou perfis pseudônimos para sandboxes e conjuntos de dados."
+>abstract="Linhas de CJA disponíveis refere-se às linhas médias diárias de dados disponíveis para análise no Customer Journey Analytics.<br>Seu uso pode atingir o valor licenciado. Para reduzir o uso, configure as expirações de dados do conjunto de dados ou Perfil de pseudônimo."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=pt-BR" text="Expirações do evento de experiência"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=pt-BR" text="Expiração de dados de perfis pseudônimos"
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseusage_exceededusage_addressableaudience"
+>title="Público-alvo endereçável previsto"
+>abstract="O Público-alvo endereçável é o conjunto de perfis de pessoas no Perfil do cliente em tempo real que a sua organização está autorizada a utilizar. Isso inclui perfis diretamente identificáveis e com pseudônimos.<br>O uso excedeu a quantidade licenciada. Para reduzir o uso, configure as expirações de dados do conjunto de dados ou Perfil de pseudônimo."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=pt-BR" text="Expirações do evento de experiência"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=pt-BR" text="Expiração de dados de perfis pseudônimos"
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseusage_exceededusage_engageableprofiles"
+>title="Perfis previsíveis que podem ser ativados"
+>abstract="Perfis acionáveis são perfis de pessoas no Perfil do cliente em tempo real que sua organização tentou ativar usando o Journey Optimizer nos últimos 12 meses.<br>O uso excedeu a quantidade licenciada. Para reduzir o uso, configure as expirações de dados do conjunto de dados ou Perfil de pseudônimo."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=pt-BR" text="Expirações do evento de experiência"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=pt-BR" text="Expiração de dados de perfis pseudônimos"
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseusage_exceededusage_businesspersonprofile"
+>title="Perfil de Pessoa de Negócios Previsto"
+>abstract="Perfis de pessoas de negócios são registros no Perfil do cliente em tempo real que representam pessoas físicas em um contexto B2B.<br>O uso excedeu a quantidade licenciada. Para reduzir o uso, configure as expirações de dados do conjunto de dados ou Perfil de pseudônimo."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=pt-BR" text="Expirações do evento de experiência"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=pt-BR" text="Expiração de dados de perfis pseudônimos"
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseusage_exceededusage_corehours"
+>title="Principais Horas Previstas"
+>abstract="As horas principais representam o tempo de processamento consumido pelos serviços da Experience Platform.<br>O uso excedeu a quantidade licenciada. Para reduzir o uso, configure as expirações de dados do conjunto de dados ou Perfil de pseudônimo."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=pt-BR" text="Expirações do evento de experiência"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=pt-BR" text="Expiração de dados de perfis pseudônimos"
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseusage_exceededusage_totaldatavolume"
+>title="Volume de dados total previsto"
+>abstract="Volume de dados total é a quantidade de dados disponíveis no Perfil do cliente em tempo real para uso em fluxos de trabalho de envolvimento e personalização.<br>O uso excedeu a quantidade licenciada. Para reduzir o uso, configure as expirações de dados do conjunto de dados ou Perfil de pseudônimo."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=pt-BR" text="Expirações do evento de experiência"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=pt-BR" text="Expiração de dados de perfis pseudônimos"
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseusage_exceededusage_cjaRowsAvailable"
+>title="Linhas de CJA Previstas Disponíveis"
+>abstract="Linhas de CJA disponíveis refere-se às linhas médias diárias de dados disponíveis para análise no Customer Journey Analytics.<br>O uso excedeu a quantidade licenciada. Para reduzir o uso, configure as expirações de dados do conjunto de dados ou Perfil de pseudônimo."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=pt-BR" text="Expirações do evento de experiência"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=pt-BR" text="Expiração de dados de perfis pseudônimos"
 
@@ -146,22 +188,22 @@ As tabelas indicam a métrica principal de cada produto, já que cada produto po
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseUsage_prediction"
 >title="Uso previsto"
->abstract="As previsões são baseadas no uso durante os últimos 6 a 7 meses e são geradas no dia 15 de cada mês. Observe que as previsões de uso de licença são aproximações baseadas no uso anterior. Você é responsável por entender o uso real da sua organização e garantir que ele não ultrapasse o escopo da licença da organização na Adobe. Para reduzir o uso, você pode configurar expirações de dados de conjuntos de dados ou perfis pseudônimos para sandboxes e conjuntos de dados."
+>abstract="As previsões são baseadas no uso durante os últimos 6 a 7 meses e são geradas semanalmente todas as sextas-feiras. Observe que as previsões de uso de licença são aproximações baseadas no uso anterior. Você é responsável por entender o uso real da sua organização e garantir que ele não ultrapasse o escopo da licença da organização na Adobe. Para reduzir o uso, você pode configurar as expirações de dados do conjunto de dados ou Perfil pseudônimo para sandboxes e conjuntos de dados."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html?lang=pt-BR" text="Expirações automatizadas de conjuntos de dados"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=pt-BR" text="Expiração de dados de perfis pseudônimos"
 
 >[!CONTEXTUALHELP]
 >id="platform_licenseusage_prediction"
 >title="Uso previsto"
->abstract="As previsões são baseadas no uso durante os últimos 6 a 7 meses e são geradas no dia 15 de cada mês. Observe que as previsões de uso de licença são aproximações baseadas no uso anterior. Você é responsável por entender o uso real da sua organização e garantir que ele não ultrapasse o escopo da licença da organização na Adobe. Para reduzir o uso, você pode configurar expirações de dados de conjuntos de dados ou perfis pseudônimos para sandboxes e conjuntos de dados."
+>abstract="As previsões são baseadas no uso durante os últimos 6 a 7 meses e são geradas no dia 15 de cada mês. Observe que as previsões de uso de licença são aproximações baseadas no uso anterior. Você é responsável por entender o uso real da sua organização e garantir que ele não ultrapasse o escopo da licença da organização na Adobe. Para reduzir o uso, você pode configurar as expirações de dados do conjunto de dados ou Perfil pseudônimo para sandboxes e conjuntos de dados."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html?lang=pt-BR" text="Expirações automatizadas de conjuntos de dados"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=pt-BR" text="Expiração de dados de perfis pseudônimos"
 
-Gerencie e otimize proativamente seus recursos de licenciamento com base em previsões de uso relevantes. A coluna [!UICONTROL Uso previsto] prevê com precisão o uso futuro de licenças no nível da sandbox, em todas as sandboxes de produção e desenvolvimento, para todos os produtos adquiridos. Esse recurso de alerta fornece uma previsão do uso de licenças por seis semanas no futuro, com base no seu uso até o dia 15 deste mês. As previsões são fornecidas com um limite inferior e superior.
+Gerencie e otimize proativamente seus recursos de licenciamento com previsões de uso precisas e atualizadas. A coluna [!UICONTROL Uso previsto] prevê o uso futuro de licenças no nível da sandbox em todas as sandboxes de produção e desenvolvimento para todos os produtos comprados. As previsões agora são atualizadas semanalmente, fornecendo uma previsão de seis semanas com base nos dados de uso mais recentes. Cada previsão inclui um limite inferior e superior para oferecer suporte ao planejamento informado.
 
 >[!IMPORTANT]
 >
->As previsões são atualizadas mensalmente. A data de atualização está incluída em um ícone de informações (![Este ícone de informações.](../images/license-usage/info-icon.png)) acima do título da coluna.
+>As previsões são atualizadas semanalmente todas as sextas-feiras. A data de atualização está incluída em um ícone de informações (![Este ícone de informações.](../images/license-usage/info-icon.png)) acima do título da coluna.
 
 Para ver um resumo do uso de direitos de um produto, selecione um produto na tabela [!UICONTROL Produtos principais].
 
@@ -188,8 +230,10 @@ A porcentagem de uso previsto é determinada da seguinte maneira:
 O recurso de uso previsto é compatível com as seguintes métricas:
 
 - [!UICONTROL Público-alvo endereçável]
+- [!UICONTROL Perfis empresariais]
 - [!UICONTROL Horas de computação]
 - [!UICONTROL Número de linhas do Público-alvo de Jornada do cliente]
+- [!UICONTROL Perfis envolventes]
 - [!UICONTROL Volume de Dados Total]
 
 ## Guia [!UICONTROL Resumo] {#summary-tab}
@@ -251,30 +295,34 @@ Você também pode selecionar **[!UICONTROL Data personalizada]** para escolher 
 
 >[!IMPORTANT]
 >
->A partir de 20 de agosto, os clientes com direitos para &#39;[!UICONTROL Riqueza Média de Perfil]&#39; e &#39;[!UICONTROL Armazenamento Total]&#39; viram &#39;[!UICONTROL Volume Total de Dados]&#39; no Painel de Uso de Licenças. Não houve alteração nos direitos do cliente, apenas uma simplificação das métricas de rastreamento. [!UICONTROL Volume de Dados Total] representa os dados disponíveis no Serviço de Perfil da Adobe Experience Platform para os fluxos de trabalho de envolvimento e personalização. Essa métrica simplificada melhorou o gerenciamento e a medição do uso do Serviço de perfil. Os clientes foram incentivados a entrar em contato com o representante da Adobe para obter mais esclarecimentos sobre essa alteração.
+>A partir de 20 de agosto, os clientes com direitos para &#39;[!UICONTROL Riqueza Média de Perfil]&#39; e &#39;[!UICONTROL Armazenamento Total]&#39; viram &#39;[!UICONTROL Volume Total de Dados]&#39; no Painel de Uso de Licenças. Não houve alteração nos direitos do cliente, apenas uma simplificação das métricas de rastreamento. [!UICONTROL Volume de Dados Total] representa os dados disponíveis no Perfil de Cliente em Tempo Real para fluxos de trabalho de envolvimento e personalização. Essa métrica simplificada melhorou o gerenciamento e a medição do uso do Perfil do cliente em tempo real. Os clientes foram incentivados a entrar em contato com o representante da Adobe para obter mais esclarecimentos sobre essa alteração.
 
 O painel de uso da licença relata várias métricas exclusivas que são aplicáveis a vários produtos na organização. As métricas disponíveis são:
 
 | Métrica | Descrição |
 |---|---|
 | [!UICONTROL Tamanho do Audience Activation] | O tamanho total dos perfis ativados para qualquer destino baseado em arquivo em um ano. Observação: isso não inclui perfis enviados por meio de destinos de streaming. |
-| [!UICONTROL Público-alvo endereçável] | A soma do direito de público-alvo comercial e do direito de público-alvo consumidor. Um público-alvo do consumidor é definido como o número de perfis de pessoas identificados como um &quot;Público-alvo do consumidor&quot; na ordem de venda. Um público-alvo comercial é definido como o número de perfis empresariais identificados como o &quot;Público-alvo comercial&quot; na ordem de venda. |
+| [!UICONTROL Público-alvo endereçável] | O conjunto de perfis de pessoas no Perfil do cliente em tempo real que sua organização tem direito a envolver, incluindo Perfis diretamente identificáveis e de pseudônimo. Esses perfis podem conter atributos, comportamentos e dados de associação de segmento. Os volumes de perfil são calculados usando o Gráfico de identidade determinístico padrão do Adobe Experience Platform e são considerados um Recurso compartilhado. |
 | [!UICONTROL Pacotes de Usuários do Serviço de Consulta Adhoc] | Um complemento para aumentar o direito dos Usuários do Serviço de Consulta simultâneos autorizados em cinco usuários adicionais do Serviço de Consulta simultâneos e uma consulta ad hoc adicional em execução simultânea por pacote. É possível que vários pacotes adicionais de usuários de Ad Hoc Query sejam licenciados. |
 | [!UICONTROL Riqueza média de perfil] | **Obsoleto** - A soma de todos os dados de produção armazenados no Serviço de Perfil de Hub em qualquer momento, dividida por cinco vezes o número de perfis empresariais autorizados. [!UICONTROL A riqueza média do perfil] é um recurso compartilhado. |
 | [!UICONTROL Linhas do CJA Disponíveis] | As linhas médias diárias de dados disponíveis para análise no Customer Journey Analytics. |
-| [!UICONTROL Atributos computados] | A contagem total de dados comportamentais agregados de perfis. Os dados comportamentais agregados do perfil são baseados em eventos de experiência convertidos em um atributo de perfil e podem ser incluídos em um perfil de pessoa ou perfil de pessoa de negócios. |
+| [!UICONTROL Atributos computados] | Dados comportamentais agregados do perfil com base em eventos de experiência que são convertidos em um atributo de Perfil e podem ser incluídos em um Perfil de pessoa. |
 | [!UICONTROL Público-alvo] | O número de perfis de pessoas identificados como &quot;Público-alvo do consumidor&quot; na ordem de venda. |
 | [!UICONTROL Tamanho da Exportação de Dados] | A quantidade de dados enviados por meio de ativações de conjuntos de dados em um ano. |
 | [!UICONTROL Exportações de dados] | O tamanho total dos conjuntos de dados que podem ser exportados para qualquer solução que não seja da Adobe (direta ou indiretamente) em um ano. |
 | [!UICONTROL Armazenamento Data Lake] | A quantidade usada do armazenamento de dados analíticos no Adobe Experience Platform. |
-| [!UICONTROL Público-alvo envolvente] | Essa métrica se refere ao público-alvo de perfis utilizáveis. Um perfil envolvível é um registro de informações que representam um indivíduo e é representado no Serviço de perfil. Esses registros são perfis que você tentou utilizar com os recursos de criação, decisão, entrega, experimentação ou orquestração do Journey Optimizer nos últimos 12 meses. |
-| [!UICONTROL Públicos-alvo semelhantes] | A contagem de públicos-alvo gerada pela modelagem de um público-alvo de consumidor existente para identificar perfis de pessoas semelhantes ao público-alvo de consumidor existente. |
+| [!UICONTROL Público-alvo envolvente] | Um grupo de perfis de pessoas no Perfil do cliente em tempo real que você tentou utilizar nos últimos 12 meses usando os recursos de criação, decisão, entrega, experimentação ou orquestração da Journey Optimizer. |
+| [!UICONTROL Públicos-alvo semelhantes] | Um Público-alvo semelhante ao consumidor é um público-alvo gerado pela modelagem de um Público-alvo de consumidor existente para identificar Perfis de pessoa com atributos ou comportamentos semelhantes. |
 | [!UICONTROL Número de Modelos AMM] | Uma contagem do modelo de aprendizado de máquina (Adobe Mix Modeler integrado) usada para medir e/ou prever um resultado especificado com base em seus investimentos. |
 | [!UICONTROL Número de Sandboxes] | A contagem de separações lógicas na instância de qualquer Serviço por demanda do Adobe que acessa dados e operações de isolamento do Adobe Experience Platform. |
 | [!UICONTROL Número de Pacotes de Riqueza de Perfis] | Um aumento no Volume total de dados autorizado de 25 KB por perfil para cada pacote adicional de Riqueza de perfil. |
 | [!UICONTROL Horas de Computação do Serviço de Consulta] | Uma medida do tempo gasto pelos mecanismos de Serviço de consulta para ler, processar e gravar dados de volta no data lake quando uma consulta em lote é executada. |
 | [!UICONTROL Número de pacotes de segmentação de streaming] | Os pacotes atualizam a associação de segmento para um perfil de pessoa à medida que novos dados entram no Serviço de segmentação por meio de um fluxo de transmissão. A associação do segmento é avaliada com base nos atributos atuais do perfil da pessoa e no valor do evento atual, sem levar em conta o comportamento histórico. A segmentação de transmissão é um recurso compartilhado. |
-| [!UICONTROL Volume de Dados Total] | A quantidade total de dados disponíveis para o Serviço de perfil da Adobe Experience Platform usar em fluxos de trabalho de envolvimento. Consulte as [perguntas frequentes sobre o Volume Total de Dados](../../landing/license-usage-and-guardrails/total-data-volume.md) para saber mais. |
+| [!UICONTROL Volume de Dados Total] | A quantidade total de dados disponíveis para o Perfil do cliente em tempo real usar em fluxos de trabalho de envolvimento. Consulte as [perguntas frequentes sobre o Volume Total de Dados](../../landing/license-usage-and-guardrails/total-data-volume.md) para saber mais. |
+| [!UICONTROL Volume total de saída de dados] | O volume anual cumulativo de dados exportados do Adobe Experience Platform para data warehouses de terceiros. |
+
+<!-- Approval needed on my revision above.
+Original PM version: | [!UICONTROL Total Volume of Data Egress] | The cumulative annual amount of data processed from third-party data warehouses. | -->
 
 <!-- |  [!UICONTROL Sandbox No of Packs] |  A logical separation within your instance of any Adobe On-demand Service that accesses Adobe Experience Platform isolating data and operations | -->
 

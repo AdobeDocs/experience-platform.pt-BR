@@ -3,9 +3,9 @@ keywords: destinos de publicidade;destinos;destinos de plataformas;advertising d
 title: Visão geral dos destinos do Advertising
 description: Conecte o Adobe Experience Platform a uma plataforma de publicidade de terceiros (por exemplo, DSP, rede de publicidade, SSP) e compartilhe públicos com pseudônimos nessas plataformas.
 exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
-source-git-commit: f6fb88cbc89d419e3dbb39c9cc8958f9455b2953
+source-git-commit: b193a7458e4e6e02a748dcac0bbf5550b2979899
 workflow-type: tm+mt
-source-wordcount: '272'
+source-wordcount: '274'
 ht-degree: 1%
 
 ---
@@ -29,6 +29,7 @@ Para entender a diferença entre conexões e extensões, consulte [Conexões](..
 * [(Beta) Distribuição de público-alvo da Acxiom](acxiom-audience-distribution.md)
 * [Conexão com a Adobe Advertising Cloud](adobe-advertising-cloud-connection.md)
 * [Conexão do Amazon Ads](amazon-ads.md)
+* [Conexão Bombora](bombora.md)
 * [Conexão de critério](criteo.md)
 * [Conexão do Google Display &amp; Video 360](google-dv360.md)
 * [Conexão do Google Ads](google-ads-destination.md)

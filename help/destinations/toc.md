@@ -5,9 +5,9 @@ user-guide-description: Ative seus dados conhecidos e desconhecidos para campanh
 description: Este documento lista o índice dos destinos do Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: 9b9cecc9e1a6e5979fa8eb454cef677b8995f1b6
+source-git-commit: 9b41ec996c254840952ae3c45dfdddd8ac172085
 workflow-type: tm+mt
-source-wordcount: '1276'
+source-wordcount: '1278'
 ht-degree: 5%
 
 ---
@@ -78,6 +78,7 @@ ht-degree: 5%
       * [Extensão de tag de conversão do anunciante Awin](./catalog/advertising/awin-conversiontag.md)
       * [Extensão Awin Advertiser Mastertag](./catalog/advertising/awin-mastertag.md)
       * [Extensão UET (Rastreamento de evento universal) do Bing Ads](./catalog/advertising/bing-ads.md)
+      * [Conexão Bombora](./catalog/advertising/bombora.md)
       * [Extensão de ramificação](./catalog/advertising/branch.md)
       * [Conexão de critério](./catalog/advertising/criteo.md)
       * [Conexão Demandbase](./catalog/advertising/demandbase.md)

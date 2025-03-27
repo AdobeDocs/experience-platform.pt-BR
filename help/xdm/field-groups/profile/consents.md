@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Grupo de campos de esquema de consentimentos e preferências
 description: Saiba mais sobre o grupo de campos de esquema Consentimentos e Preferências.
 exl-id: ec592102-a9d3-4cac-8b94-58296a138573
-source-git-commit: b08c6cf12a38f79e019544dea91913a77bd6490a
+source-git-commit: be35c5398cd96cdfe424c5088db288ba4061ac4a
 workflow-type: tm+mt
 source-wordcount: '933'
 ht-degree: 0%
@@ -169,7 +169,7 @@ O consentimento de `adID` representa o consentimento do cliente para que uma ID 
 
 >[!NOTE]
 >
->Não é esperado que você defina esse valor diretamente, já que o SDK do Adobe Experience Platform Mobile o define automaticamente quando apropriado.
+>Não é esperado que você defina esse valor diretamente, já que o Adobe Experience Platform Mobile SDK o define automaticamente quando apropriado.
 
 ## Assimilar dados usando o grupo de campos {#ingest}
 
@@ -185,7 +185,7 @@ Consulte o tutorial sobre [criação de um esquema na interface](https://www.ado
 
 ## Lidar com alterações de consentimento e preferência
 
-Quando um cliente altera seus consentimentos ou preferências no site, essas alterações devem ser coletadas e imediatamente aplicadas usando o [Adobe Experience Platform Web SDK](../../../web-sdk/commands/setconsent.md). Se um cliente recusar a coleta de dados, toda a coleta de dados deverá ser interrompida imediatamente. Se um cliente optar por não ser personalizado, não deverá haver personalização na próxima página que visitar.
+Quando um cliente altera seus consentimentos ou preferências no site, essas alterações devem ser coletadas e imediatamente aplicadas usando o [Adobe Experience Platform Web SDK](../../../web-sdk/commands/setconsent.md). Se um cliente recusar a coleta de dados, toda a coleta de dados deverá ser interrompida imediatamente. Se um cliente recusar a personalização, não deverá haver personalização presente na próxima página que ele carregar.
 
 ## Próximas etapas
 

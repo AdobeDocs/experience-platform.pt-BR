@@ -2,9 +2,9 @@
 title: Criar uma conexão básica do Microsoft Dynamics usando a API do serviço de fluxo
 description: Saiba como conectar a Platform a uma conta do Microsoft Dynamics usando a API do serviço de fluxo.
 exl-id: 423c6047-f183-4d92-8d2f-cc8cc26647ef
-source-git-commit: bda26fa4ecf4f54cb36ffbedf6a9aa13faf7a09d
+source-git-commit: 4e119056c0ab89cfc79eeb46e6f870c89356dc7d
 workflow-type: tm+mt
-source-wordcount: '1102'
+source-wordcount: '1330'
 ht-degree: 5%
 
 ---
@@ -264,6 +264,44 @@ Uma resposta bem-sucedida retorna o diretório de tabelas e exibições [!DNL Dy
 
 +++
 
+### Usar a chave primária para otimizar a exploração de dados
+
+>[!NOTE]
+>
+>Você só pode usar atributos que não sejam de pesquisa ao usar a abordagem de chave primária para otimização.
+
+Você pode otimizar suas consultas de exploração fornecendo `primaryKey` como parte de seus parâmetros de consulta. Você deve especificar a chave primária da tabela [!DNL Dynamics] ao incluir `primaryKey` como um parâmetro de consulta.
+
+**Formato da API**
+
+```http
+GET /connections/{BASE_CONNECTION_ID}/explore?preview=true&object={OBJECT}&objectType={OBJECT_TYPE}&previewCount=10&primaryKey={PRIMARY_KEY}
+```
+
+| Parâmetros de consulta | Descrição |
+| --- | --- |
+| `{BASE_CONNECTION_ID}` | A ID da conexão base. Use essa ID para explorar o conteúdo e a estrutura da fonte. |
+| `preview` | Um valor booleano que permite a visualização de dados. |
+| `{OBJECT}` | O objeto [!DNL Dynamics] que você deseja explorar. |
+| `{OBJECT_TYPE}` | O tipo do objeto. |
+| `previewCount` | Uma restrição que limita a visualização retornada a apenas um determinado número de registros. |
+| `{PRIMARY_KEY}` | A chave primária da tabela que você está recuperando para visualização. |
+
+**Solicitação**
+
++++Selecione para exibir o exemplo de solicitação
+
+```shell
+curl -X GET \
+  'https://platform-stage.adobe.io/data/foundation/flowservice/connections/dd668808-25da-493f-8782-f3433b976d1e/explore?preview=true&object=lead&objectType=table&previewCount=10&primaryKey=leadid' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+```
+
++++
 
 ## Inspecionar a estrutura de uma tabela
 
@@ -581,6 +619,74 @@ Uma resposta bem-sucedida retorna a ID de conexão de origem recém-gerada e a t
 ```
 
 +++
+
+### Usar a chave primária para otimizar seu fluxo de dados
+
+Você também pode otimizar o fluxo de dados do [!DNL Dynamics] especificando a chave primária como parte dos parâmetros do corpo da solicitação.
+
+**Formato da API**
+
+```http
+POST /sourceConnections
+```
+
+**Solicitação**
+
+A solicitação a seguir cria uma conexão de origem [!DNL Dynamics] ao especificar a chave primária como `contactid`.
+
++++Selecione para exibir o exemplo de solicitação
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "Dynamics Source Connection",
+      "description": "Dynamics Source Connection",
+      "baseConnectionId": "dd668808-25da-493f-8782-f3433b976d1e",
+      "data": {
+          "format": "tabular"
+      },
+      "params": {
+          "tableName": "contact",
+          "primaryKey": "contactid"
+      },
+      "connectionSpec": {
+          "id": "38ad80fe-8b06-4938-94f4-d4ee80266b07",
+          "version": "1.0"
+      }
+  }'
+```
+
+| Propriedade | Descrição |
+| --- | --- |
+| `baseConnectionId` | A ID da conexão base. |
+| `data.format` | O formato dos dados. |
+| `params.tableName` | O nome da tabela em [!DNL Dynamics]. |
+| `params.primaryKey` | A chave primária da tabela que otimizará as consultas. |
+| `connectionSpec.id` | A ID de especificação da conexão que corresponde à origem [!DNL Dynamics]. |
+
++++
+
+**Resposta**
+
+Uma resposta bem-sucedida retorna a ID de conexão de origem recém-gerada e a tag correspondente.
+
++++Selecione para exibir o exemplo de resposta
+
+```json
+{
+    "id": "e566bab3-1b58-428c-b751-86b8cc79a3b4",
+    "etag": "\"82009592-0000-0200-0000-678121030000\""
+}
+```
+
++++
+
 
 ## Próximas etapas
 

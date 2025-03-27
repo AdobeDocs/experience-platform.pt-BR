@@ -2,9 +2,9 @@
 title: Notas da versão de março de 2025 da Adobe Experience Platform
 description: As notas da versão de março de 2025 da Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 445bf302baadf478a39b0c11a31ccfe25d5dd726
+source-git-commit: 16056a35624b4a053e9f50acef0ec3f63254a065
 workflow-type: tm+mt
-source-wordcount: '1185'
+source-wordcount: '1227'
 ht-degree: 21%
 
 ---
@@ -46,6 +46,8 @@ Para obter mais informações sobre painéis, incluindo como conceder permissõe
 
 | Destino | Descrição |
 | --- | --- |
+| [Conexão de pessoas do Demandbase](/help/destinations/catalog/advertising/demandbase-people.md) | Use a conexão [!DNL Demandbase People] para ativar perfis para suas campanhas do Demandbase para direcionamento de público, personalização e supressão. |
+| [Conexão de conta do Bombora](/help/destinations/catalog/advertising/bombora.md) | Use a conexão [!DNL Bombora] para ativar perfis para suas campanhas do Bombora para direcionamento de público, personalização e supressão, com base em [públicos-alvo de conta](/help/segmentation/types/account-audiences.md). |
 | Atualização de [Atributos da Aeronave](/help/destinations/catalog/mobile-engagement/airship-attributes.md) | A partir de 25 de março de 2025, você poderá ver dois cartões **[!UICONTROL Atributos da aeronave]** lado a lado no catálogo de destinos. Isso se deve a uma atualização interna do serviço de destinos. O conector de destino **[!UICONTROL Atributos de Dirigível]** existente foi renomeado para **[!UICONTROL (Obsoleto) Atributos de Dirigível]** e uma nova placa com o nome **[!UICONTROL Atributos de Dirigível]** está disponível para você. <br> Use a conexão **[!UICONTROL Atributos da Aeronave]** no catálogo para novos fluxos de dados de ativação. Se você tiver fluxos de dados ativos para o destino [!DNL (Deprecated) Airship Attributes], eles serão atualizados automaticamente, portanto, nenhuma ação é necessária. <br> Se você estiver criando fluxos de dados por meio da [API de Serviço de Fluxo](https://developer.adobe.com/experience-platform-apis/references/destinations/), atualize o [!DNL flow spec ID] e o [!DNL connection spec ID] para os seguintes valores: <ul><li> ID da especificação de fluxo: `a862e0be-966e-4e5a-80d3-1bb566461986`</li><li> ID de especificação da conexão: `594bc002-4a47-49b7-8a98-ac0d21045502`</li> </ul> |
 
 {style="table-layout:auto"}

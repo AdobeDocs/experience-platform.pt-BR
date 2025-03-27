@@ -1,9 +1,8 @@
 ---
 title: Aplicar rótulos de acesso para gerenciar o acesso do usuário a fluxos de dados de origens na interface
 description: Saiba como usar a interface do usuário do Experience Platform para aplicar rótulos de acesso e gerenciar o acesso do usuário aos fluxos de dados de suas fontes.
-hide: true
-hidefromtoc: true
-source-git-commit: 80fb60abdf33eb2a7ca691a9a48a811c632b34fc
+exl-id: 7aab9706-2f43-43c7-9878-1959d5a8a6b0
+source-git-commit: f57fa04e668fa9c61b9b15778e74969edffae0fa
 workflow-type: tm+mt
 source-wordcount: '501'
 ht-degree: 2%

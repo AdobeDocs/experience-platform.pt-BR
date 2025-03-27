@@ -1,47 +1,47 @@
 ---
-title: Criar uma conexão básica do Google BigQuery usando a API do serviço de fluxo
+title: Conecte O Google BigQuery Ao Experience Platform Usando A API Do Serviço De Fluxo
 description: Saiba como conectar o Adobe Experience Platform ao Google BigQuery usando a API de serviço de fluxo.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 51f90366-7a0e-49f1-bd57-b540fa1d15af
-source-git-commit: 1fa79b31b5a257ebb3cbd60246b757d8a4a63d7c
+source-git-commit: 1900a8c6a3f3119c8b9049b12f5660cc9fd181a2
 workflow-type: tm+mt
-source-wordcount: '523'
+source-wordcount: '697'
 ht-degree: 2%
 
 ---
 
-# Criar uma conexão de base [!DNL Google BigQuery] usando a API [!DNL Flow Service]
+# Conectar o [!DNL Google BigQuery] ao Experience Platform usando a API [!DNL Flow Service]
 
 >[!IMPORTANT]
 >
->A origem [!DNL Google BigQuery] está disponível no catálogo de origens para usuários que compraram o Real-time Customer Data Platform Ultimate.
+>A origem [!DNL Google BigQuery] está disponível no catálogo de origens para usuários que compraram o Real-Time Customer Data Platform Ultimate.
 
-Uma conexão base representa a conexão autenticada entre uma origem e o Adobe Experience Platform.
-
-Leia este guia para saber como criar uma conexão base para [!DNL Google BigQuery] usando a [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Leia este guia para saber como conectar seu banco de dados do [!DNL Google BigQuery] ao Adobe Experience Platform usando a [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 
 ## Introdução
 
-Este guia requer entendimento prático dos seguintes componentes do Experience Platform:
+Este guia requer uma compreensão funcional dos seguintes componentes do Experience Platform:
 
-* [Fontes](../../../../home.md): o Experience Platform permite que os dados sejam assimilados de várias fontes e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma.
-* [Sandboxes](../../../../../sandboxes/home.md): o Experience Platform fornece sandboxes virtuais que particionam uma única instância da Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
-
-As seções a seguir fornecem informações adicionais que você precisará saber para se conectar com êxito ao [!DNL Google BigQuery] usando a API [!DNL Flow Service].
-
-### Coletar credenciais necessárias
-
-Leia o [[!DNL Google BigQuery] guia de autenticação](../../../../connectors/databases/bigquery.md#generate-your-google-bigquery-credentials) para obter as etapas detalhadas sobre como coletar as credenciais necessárias.
+* [Fontes](../../../../home.md): o Experience Platform permite que os dados sejam assimilados de várias fontes e fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma.
+* [Sandboxes](../../../../../sandboxes/home.md): a Experience Platform fornece sandboxes virtuais que particionam uma única instância da Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
 ### Uso de APIs da plataforma
 
 Para obter informações sobre como fazer chamadas para APIs da Platform com êxito, consulte o manual sobre [introdução às APIs da Platform](../../../../../landing/api-guide.md).
 
-## Criar uma conexão básica
+### Coletar credenciais necessárias
+
+Leia o [[!DNL Google BigQuery] guia de autenticação](../../../../connectors/databases/bigquery.md#prerequisites) para obter as etapas detalhadas sobre como recuperar suas credenciais do [!DNL Google BigQuery].
+
+## Conectar [!DNL Google BigQuery] ao Experience Platform no Azure {#azure}
+
+Leia as etapas abaixo para obter informações sobre como conectar sua origem do [!DNL Google BigQuery] à Experience Platform no Azure.
+
+### Criar uma conexão base para [!DNL Google BigQuery] no Experience Platform no Azure {#azure-base}
 
 Uma conexão base retém informações entre sua origem e a Platform, incluindo as credenciais de autenticação da origem, o estado atual da conexão e sua ID de conexão base exclusiva. A ID de conexão básica permite explorar e navegar pelos arquivos de dentro da origem e identificar os itens específicos que deseja assimilar, incluindo informações sobre os tipos de dados e formatos.
 
-Para criar uma ID de conexão base, faça uma solicitação POST para o ponto de extremidade `/connections` enquanto fornece suas credenciais de autenticação [!DNL Google BigQuery] como parte dos parâmetros de solicitação.
+Para criar uma ID de conexão base, faça uma solicitação POST para o ponto de extremidade `/connections` ao fornecer suas credenciais de autenticação [!DNL Google BigQuery] como parte dos parâmetros de solicitação.
 
 **Formato da API**
 
@@ -53,9 +53,9 @@ POST /connections
 
 >[!TAB Usar autenticação básica]
 
-**Solicitação**
++++Solicitação
 
-A solicitação a seguir cria uma conexão base para [!DNL Google BigQuery] usando autenticação básica:
+A solicitação a seguir cria uma conexão base para [!DNL Google BigQuery] usando autenticação básica.
 
 ```shell
 curl -X POST \
@@ -93,7 +93,9 @@ curl -X POST \
 | `auth.params.refreshToken` | O token de atualização obtido de [!DNL Google] usado para autorizar o acesso a [!DNL Google BigQuery]. |
 | `connectionSpec.id` | A ID da especificação de conexão [!DNL Google BigQuery]: `3c9b37f8-13a6-43d8-bad3-b863b941fedd`. |
 
-**Resposta**
++++
+
++++Resposta
 
 Uma resposta bem-sucedida retorna detalhes da conexão recém-criada, incluindo seu identificador exclusivo (`id`). Essa ID é necessária para explorar seus dados no próximo tutorial.
 
@@ -104,37 +106,39 @@ Uma resposta bem-sucedida retorna detalhes da conexão recém-criada, incluindo 
 }
 ```
 
++++
+
 >[!TAB Usar autenticação de serviço]
 
 
-**Solicitação**
++++Solicitação
 
 A solicitação a seguir cria uma conexão base para [!DNL Google BigQuery] usando autenticação de serviço:
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/connections' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "name": "Google BigQuery base connection with service account",
-        "description": "Google BigQuery connection with service account",
-        "auth": {
-            "specName": "Service Authentication",
-            "params": {
-                    "projectId": "{PROJECT_ID}",
-                    "keyFileContent": "{KEY_FILE_CONTENT},
-                    "largeResultsDataSetId": "{LARGE_RESULTS_DATASET_ID}"
-                }
-        },
-        "connectionSpec": {
-            "id": "3c9b37f8-13a6-43d8-bad3-b863b941fedd",
-            "version": "1.0"
-        }
-    }'
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "Google BigQuery base connection with service account",
+      "description": "Google BigQuery connection with service account",
+      "auth": {
+          "specName": "Service Authentication",
+          "params": {
+                  "projectId": "{PROJECT_ID}",
+                  "keyFileContent": "{KEY_FILE_CONTENT},
+                  "largeResultsDataSetId": "{LARGE_RESULTS_DATASET_ID}"
+              }
+      },
+      "connectionSpec": {
+          "id": "3c9b37f8-13a6-43d8-bad3-b863b941fedd",
+          "version": "1.0"
+      }
+  }'
 ```
 
 | Propriedade | Descrição |
@@ -143,7 +147,9 @@ curl -X POST \
 | `auth.params.keyFileContent` | O arquivo de chave usado para autenticar a conta de serviço. Você deve codificar o conteúdo do arquivo de chave em [!DNL Base64]. |
 | `auth.params.largeResultsDataSetId` | (Opcional) A ID do conjunto de dados [!DNL Google BigQuery] pré-criada que é necessária para habilitar o suporte para grandes conjuntos de resultados. |
 
-**Resposta**
++++
+
++++Resposta
 
 Uma resposta bem-sucedida retorna detalhes da conexão recém-criada, incluindo seu identificador exclusivo (`id`). Essa ID é necessária para explorar seus dados no próximo tutorial.
 
@@ -154,8 +160,79 @@ Uma resposta bem-sucedida retorna detalhes da conexão recém-criada, incluindo 
 }
 ```
 
++++
+
 >[!ENDTABS]
 
+## Conectar o [!DNL Google BigQuery] ao Experience Platform no Amazon Web Services (AWS) {#aws}
+
+Leia as etapas abaixo para obter informações sobre como conectar o banco de dados do [!DNL Google BigQuery] ao Experience Platform no AWS.
+
+### Criar uma conexão base para [!DNL Google BigQuery] no Experience Platform no AWS
+
+>[!AVAILABILITY]
+>
+>Esta seção se aplica às implementações do Experience Platform em execução no Amazon Web Services (AWS). O Experience Platform em execução no AWS está disponível atualmente para um número limitado de clientes. Para saber mais sobre a infraestrutura do Experience Platform compatível, consulte a [visão geral da nuvem múltipla do Experience Platform](../../../../../landing/multi-cloud.md).
+
+**Formato da API**
+
+```https
+POST /connections
+```
+
+**Solicitação**
+
+A solicitação a seguir cria uma conexão básica para conectar [!DNL Google BigQuery] ao Experience Platform no AWS.
+
++++Selecione para exibir o exemplo
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "Google BigQuery base connection on AWS",
+      "description": "Google BigQuery base connection on AWS",
+      "auth": {
+          "specName": "Service Authentication",
+          "params": {
+                  "projectId": "{PROJECT_ID}",
+                  "keyFileContent": "{KEY_FILE_CONTENT},
+                  "datasetId": "{DATASET_ID}"
+      },
+      "connectionSpec": {
+          "id": "3c9b37f8-13a6-43d8-bad3-b863b941fedd",
+          "version": "1.0"
+      }
+  }'
+```
+
+| Propriedade | Descrição |
+| --- | --- |
+| `auth.params.projectId` | A ID do projeto [!DNL Google BigQuery] padrão a ser consultado. contra. |
+| `auth.params.keyFileContent` | O arquivo de chave usado para autenticar a conta de serviço. Você deve codificar o conteúdo do arquivo de chave em [!DNL Base64]. |
+| `auth.params.datasetId` | A ID do conjunto de dados que corresponde à sua origem [!DNL Google BigQuery]. Essa ID representa onde as tabelas de dados estão localizadas. |
+
++++
+
+**Resposta**
+
+Uma resposta bem-sucedida retorna detalhes da conexão recém-criada, incluindo seu identificador exclusivo (`id`). Essa ID é necessária para explorar seu armazenamento no próximo tutorial.
+
++++Selecione para exibir o exemplo
+
+```json
+{
+    "id": "6990abad-977d-41b9-a85d-17ea8cf1c0e4",
+    "etag": "\"ca00acbf-0000-0200-0000-60149e1e0000\""
+}
+```
+
++++
 
 ## Próximas etapas
 

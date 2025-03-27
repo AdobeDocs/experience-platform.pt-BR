@@ -1,22 +1,36 @@
 ---
-title: Exportar matrizes, mapas e objetos do Real-Time CDP para destinos de armazenamento na nuvem
+title: Exportar arrays, mapas e objetos do Real-Time CDP
 type: Tutorial
 description: Saiba como exportar matrizes, mapas e objetos do Real-Time CDP para destinos de armazenamento na nuvem.
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: 99093e0bbcd3c3560ebe201fdac72e83e67dae43
+source-git-commit: 2d59a92d7ff1e0be7977a90df460190a3b417809
 workflow-type: tm+mt
-source-wordcount: '862'
-ht-degree: 16%
+source-wordcount: '1095'
+ht-degree: 13%
 
 ---
 
-# Exportar matrizes, mapas e objetos do Real-Time CDP para destinos de armazenamento na nuvem {#export-arrays-cloud-storage}
+# Exportar arrays, mapas e objetos do Real-Time CDP {#export-arrays-cloud-storage}
 
 >[!AVAILABILITY]
 >
->A funcionalidade para exportar matrizes e outros objetos complexos para destinos de armazenamento na nuvem está geralmente disponível para os seguintes destinos: [[!DNL Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md), [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md), [[!DNL Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md), [[!DNL Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md), [[!DNL Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md), [[!DNL SFTP]](../../destinations/catalog/cloud-storage/sftp.md),
+>A funcionalidade para exportar matrizes e outros objetos complexos para destinos de armazenamento na nuvem está geralmente disponível para os seguintes destinos: [[!DNL Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md), [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md), [[!DNL Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md), [[!DNL Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md), [[!DNL Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md), [[!DNL SFTP]](../../destinations/catalog/cloud-storage/sftp.md).
+>
+>Além disso, você pode exportar campos do tipo mapa para os seguintes destinos: [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [API HTTP](/help/destinations/catalog/streaming/http-destination.md), [Hubs de Eventos do Azure](/help/destinations/catalog/cloud-storage/azure-event-hubs.md), [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md).
 
-Saiba como exportar matrizes, mapas e objetos do Real-Time CDP para [destinos de armazenamento na nuvem](/help/destinations/catalog/cloud-storage/overview.md). Leia este documento para entender o fluxo de trabalho de exportação, os casos de uso ativados por essa funcionalidade e as limitações conhecidas.
+
+Saiba como exportar matrizes, mapas e objetos do Real-Time CDP para [destinos de armazenamento na nuvem](/help/destinations/catalog/cloud-storage/overview.md). Além disso, você pode exportar campos do tipo mapa para [destinos corporativos](/help/destinations/destination-types.md#advanced-enterprise-destinations) e [destinos de personalização de borda](/help/destinations/destination-types.md#edge-personalization-destinations) limitados. Leia este documento para entender o fluxo de trabalho de exportação, os casos de uso ativados por essa funcionalidade e as limitações conhecidas. Consulte a tabela abaixo para entender a funcionalidade disponível por tipo de destino.
+
+| Tipo de destino | Capacidade de exportar arrays, mapas e outros objetos personalizados |
+|---|---|
+| Destinos de armazenamento na nuvem criados pela Adobe (Amazon S3, Azure Blob, Azure Data Lake Storage Gen2, Data Landing Zone, Google Cloud Storage, SFTP) | Sim, com a opção Enable export of arrays, maps, and objects ativada ao configurar uma conexão de destino. |
+| Destinos de marketing por email baseados em arquivo (Adobe Campaign, Oracle Eloqua, Oracle Responsys, Salesforce Marketing Cloud) | Não |
+| Destinos de armazenamento na nuvem personalizados criados por parceiros existentes (destinos personalizados baseados em arquivo criados por meio do Destination SDK) | Não |
+| Destinos empresariais (Amazon Kinesis, Hubs de eventos do Azure, API HTTP) | Parcialmente. Você pode selecionar e exportar objetos do tipo mapa na etapa de mapeamento do fluxo de trabalho de ativação. |
+| Destinos de transmissão (por exemplo: Facebook, Braze, Google Customer Match e muito mais) | Não |
+| Destinos de personalização do Edge (Adobe Target) | Parcialmente. Você pode selecionar e exportar objetos do tipo mapa na etapa de mapeamento do fluxo de trabalho de ativação. |
+
+{style="table-layout:auto"}
 
 Considere essa página o local de entrada para tudo o que você deseja saber sobre a exportação de arrays, mapas e outros tipos de objetos do Experience Platform.
 
@@ -24,9 +38,9 @@ Considere essa página o local de entrada para tudo o que você deseja saber sob
 
 Obtenha as informações mais importantes sobre a funcionalidade nesta seção e prossiga abaixo para as outras seções no documento para obter informações detalhadas.
 
-* A capacidade de exportar matrizes, mapas e objetos depende da sua seleção da opção **Exportar matrizes, mapas, objetos**. Leia mais sobre ele [mais abaixo na página](#export-arrays-maps-objects-toggle).
-* Você pode exportar matrizes, mapas e objetos apenas para destinos de armazenamento na nuvem, em `JSON` e `Parquet` arquivos. Há suporte para públicos-alvo de pessoas e de clientes potenciais, mas não para públicos-alvo de contas.
-* Você *pode* exportar matrizes, mapas e objetos para arquivos CSV, mas somente usando a funcionalidade de campos calculados e concatenando-os em uma cadeia de caracteres usando a função `array_to_string`.
+* Para destinos de armazenamento na nuvem, a capacidade de exportar matrizes, mapas e objetos depende da sua seleção da opção **Exportar matrizes, mapas, objetos**. Leia mais sobre ele [mais abaixo na página](#export-arrays-maps-objects-toggle).
+* Você pode exportar matrizes, mapas e objetos para destinos de armazenamento na nuvem em `JSON` e `Parquet` arquivos. Para destinos de personalização corporativa e de borda, o tipo de dados exportado é `JSON`. Há suporte para públicos-alvo de pessoas e de clientes potenciais, mas não para públicos-alvo de contas.
+* Para destinos de armazenamento na nuvem baseados em arquivo, você *pode* exportar matrizes, mapas e objetos para arquivos CSV, mas somente usando a funcionalidade de campos calculados e concatenando-os em uma cadeia de caracteres usando a função `array_to_string`.
 
 ## Matrizes e outros tipos de objetos na Platform {#arrays-strings-other-objects}
 
@@ -59,6 +73,10 @@ Além de matrizes, você também pode exportar mapas e objetos do Experience Pla
 
 [Conecte](/help/destinations/ui/connect-destination.md) a um destino de armazenamento na nuvem desejado. Prossiga pelas [etapas de ativação para destinos de armazenamento na nuvem](/help/destinations/ui/activate-batch-profile-destinations.md) e vá para a etapa [mapeamento](/help/destinations/ui/activate-batch-profile-destinations.md#mapping). Ao se conectar ao destino de nuvem desejado, você deve selecionar a opção **[!UICONTROL Exportar matrizes, mapas, objetos]** ativada. Obtenha mais informações na seção abaixo.
 
+>[!NOTE]
+>
+>Para destinos de personalização corporativa e de borda, o suporte à exportação para campos do tipo mapa está disponível sem a necessidade de selecionar um botão **[!UICONTROL Exportar matrizes, mapas, objetos]** ativado. Esse botão não está disponível ou não é necessário ao se conectar a esses tipos de destinos.
+
 ## Botão de alternância Exportar matrizes, mapas e objetos {#export-arrays-maps-objects-toggle}
 
 >[!CONTEXTUALHELP]
@@ -66,7 +84,7 @@ Além de matrizes, você também pode exportar mapas e objetos do Experience Pla
 >title="Exportar matrizes, mapas e objetos"
 >abstract="<p> <b>Ative</b> esta configuração para habilitar a exportação de matrizes, mapas e objetos para arquivos JSON ou Parquet. É possível selecionar esses tipos de objetos na exibição do campo de origem da etapa de mapeamento. Com o botão ativado, não é possível usar a opção de campos calculados na etapa de mapeamento.</p><p>Com o botão <b>desativado</b>, é possível usar a opção de campos calculados e aplicar várias funções de transformação de dados ao ativar públicos-alvo. No entanto, você <i>não</i> pode exportar matrizes, mapas e objetos para arquivos JSON ou Parquet e deve configurar um outro destino para essa finalidade.</p>"
 
-Ao se conectar a um destino de armazenamento na nuvem, você pode ativar ou desativar a **[!UICONTROL Exportação de matrizes, mapas e objetos]**.
+Ao se conectar a um destino de armazenamento na nuvem baseado em arquivo, você pode ativar ou desativar a **[!UICONTROL Exportar matrizes, mapas, objetos]**.
 
 ![Exportar matrizes, mapas, objetos alternados exibidos com uma configuração ativada ou desativada, bem como realçar o popover.](/help/destinations/assets/ui/export-arrays-calculated-fields/export-objects-toggle.gif)
 

@@ -3,9 +3,9 @@ title: Assistente de IA na documentação do produto Adobe Experience Platform
 description: Introdução ao Assistente de IA no Adobe Experience Platform.
 feature: AI Assistant
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: b26a1f12c9ea07d4dd077f1f3c1578e6c69866a7
+source-git-commit: a34c3cae803c9e70530dbd382fbec2ece17fc71a
 workflow-type: tm+mt
-source-wordcount: '1059'
+source-wordcount: '1095'
 ht-degree: 0%
 
 ---
@@ -97,11 +97,9 @@ For more information about AI Assistant, read the [security fact sheet for AI As
 
 >[!ENDSHADEBOX] -->
 
-## Biblioteca de vídeos
+## Noções básicas do
 
-Assista aos seguintes vídeos para ampliar ainda mais seu conhecimento sobre os recursos do Assistente de IA e casos de uso:
-
-### Noções básicas do
+Assista aos vídeos a seguir para saber mais sobre alguns dos aspectos fundamentais do Assistente de IA.
 
 <!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
 <div class="columns">
@@ -252,7 +250,9 @@ Assista aos seguintes vídeos para ampliar ainda mais seu conhecimento sobre os 
 </div>
 <!-- END CARDS HTML - DO NOT MODIFY BY HAND -->
 
-### Biblioteca de casos de uso
+## Biblioteca de casos de uso
+
+Assista aos vídeos a seguir para saber mais sobre os casos de uso do Assistente de IA.
 
 <!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
 <div class="columns">
@@ -416,7 +416,7 @@ Assista aos seguintes vídeos para ampliar ainda mais seu conhecimento sobre os 
 </div>
 <!-- END CARDS HTML - DO NOT MODIFY BY HAND -->
 
-## Biblioteca de casos de uso do Assistente de IA
+## Casos de uso adicionais
 
 >[!BEGINTABS]
 
@@ -439,6 +439,14 @@ Assista aos vídeos a seguir para obter mais exemplos de caso de uso do Assisten
 * [Desbloquear insights operacionais com o Assistente de IA](https://www.youtube.com/watch?v=fGgFwAOZle8)
 
 >[!ENDTABS]
+
+### Aumente sua produtividade com o AI Assistant
+
+Leia o seguinte para obter um guia prático sobre como aumentar sua produtividade com o AI Assistant.
+
+* [Aumente sua produtividade com o AI Assistant](./assets/landing/ai-assistant-lab-workbook.pdf)
+
+## Próximas etapas
 
 Navegue pelos links abaixo para obter mais informações sobre os casos de uso do Assistente de IA, seus recursos e muito mais.
 

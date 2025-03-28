@@ -3,9 +3,9 @@ title: Endpoint da API de públicos-alvo
 description: Use o endpoint de públicos-alvo na API do serviço de segmentação do Adobe Experience Platform para criar, gerenciar e atualizar programaticamente os públicos-alvo da sua organização.
 role: Developer
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
-source-git-commit: 260d63d5eebd62cc5a617fccc189af52fd4d0b09
+source-git-commit: 7b1dedeab8df9678134474045cb87b27550f7fb6
 workflow-type: tm+mt
-source-wordcount: '1452'
+source-wordcount: '1590'
 ht-degree: 3%
 
 ---
@@ -422,7 +422,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com informações sobre o p�
 
 +++
 
-## Atualizar um público {#put}
+## Substituir um público-alvo {#put}
 
 Você pode atualizar (substituir) um público-alvo específico fazendo uma solicitação PUT para o ponto de extremidade `/audiences` e fornecendo a ID do público-alvo que você deseja atualizar no caminho da solicitação.
 
@@ -453,6 +453,11 @@ curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513
     "namespace": "AEPSegments",
     "description": "Last 30 days",
     "type": "SegmentDefinition",
+    "expression": {
+        "type": "PQL",
+        "format": "pql/text",
+        "value": "workAddress.country=\"US\""
+    }
     "lifecycleState": "published",
     "datasetId": "6254cf3c97f8e31b639fb14d",
     "labels": [
@@ -468,6 +473,7 @@ curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513
 | `namespace` | O namespace do público. |
 | `description` | Uma descrição do público. |
 | `type` | Um campo gerado pelo sistema que mostra se o público-alvo é gerado pela Platform ou um público-alvo gerado externamente. Os valores possíveis incluem `SegmentDefinition` e `ExternalSegment`. Um `SegmentDefinition` refere-se a um público-alvo gerado na Platform, enquanto um `ExternalSegment` refere-se a um público-alvo que não foi gerado na Platform. |
+| `expression` | Um objeto que contém a expressão PQL do público-alvo. |
 | `lifecycleState` | O status do público. Os valores possíveis incluem `draft`, `published` e `inactive`. `draft` representa quando o público-alvo é criado, `published` quando o público-alvo é publicado e `inactive` quando o público-alvo não está mais ativo. |
 | `datasetId` | A ID do conjunto de dados em que os dados de público-alvo podem ser encontrados. |
 | `labels` | Uso de dados no nível do objeto e rótulos de controle de acesso baseados em atributos que são relevantes para o público-alvo. |
@@ -496,6 +502,81 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes do público rec
     "description": "Last 30 days",
     "type": "SegmentDefinition",
     "lifecycleState": "published",
+    "createdBy": "{CREATED_BY_ID}",
+    "datasetId": "6254cf3c97f8e31b639fb14d",
+    "_etag": "\"f4102699-0000-0200-0000-625cd61a0000\"",
+    "creationTime": 1650251290000,
+    "updateEpoch": 1650251290,
+    "updateTime": 1650251290000,
+    "createEpoch": 1650251290
+}
+```
+
++++
+
+## Atualizar um público {#patch}
+
+Você pode atualizar um público-alvo específico fazendo uma solicitação PATCH para o ponto de extremidade `/audiences` e fornecendo a ID do público-alvo que você deseja atualizar no caminho da solicitação.
+
+**Formato da API**
+
+```http
+PATCH /audiences/{AUDIENCE_ID}
+```
+
+| Parâmetro | Descrição |
+| --------- | ----------- |
+| `{AUDIENCE_ID}` | A ID do público que você deseja atualizar. Observe que este é o campo `id`, e é **não** o campo `audienceId`. |
+
+**Solicitação**
+
++++ Um exemplo de solicitação para atualizar um público-alvo.
+
+```shell
+curl -X PATCH https://platform.adobe.io/data/core/ups/audiences/60ccea95-1435-4180-97a5-58af4aa285ab5
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
+ -d '[
+    {
+        "op": "add",
+        "path": "/lifecycleState",
+        "value": "inactive"
+    }
+ ]'
+```
+
+| Propriedade | Descrição |
+| -------- | ----------- |
+| `op` | O tipo de operação PATCH executada. Para este ponto de extremidade, este valor é **sempre** `/add`. |
+| `path` | O caminho do campo a ser atualizado. Campos gerados pelo sistema, como `id`, `audienceId` e `namespace` **não podem** ser editados. |
+| `value` | O novo valor atribuído à propriedade especificada em `path`. |
+
++++
+
+**Resposta**
+
+Uma resposta bem-sucedida retorna o status HTTP 200 com o público-alvo atualizado.
+
++++Uma resposta de amostra ao corrigir um campo em um público-alvo.
+
+```json
+{
+    "id": "60ccea95-1435-4180-97a5-58af4aa285ab5",
+    "audienceId": "test-platform-audience-id",
+    "name": "New Platform audience",
+    "namespace": "AEPSegments",
+    "imsOrgId": "{ORG_ID}",
+    "sandbox": {
+        "sandboxId": "6ed34f6f-fe21-4a30-934f-6ffe21fa3075",
+        "sandboxName": "prod",
+        "type": "production",
+        "default": true
+    },
+    "description": "Last 30 days",
+    "type": "SegmentDefinition",
+    "lifecycleState": "inactive",
     "createdBy": "{CREATED_BY_ID}",
     "datasetId": "6254cf3c97f8e31b639fb14d",
     "_etag": "\"f4102699-0000-0200-0000-625cd61a0000\"",

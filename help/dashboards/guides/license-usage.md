@@ -4,9 +4,9 @@ title: Painel de Uso da Licença
 description: A Adobe Experience Platform fornece um painel por meio do qual você pode visualizar informações importantes sobre o uso de licença da sua organização.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 03b35ecf940f9b1cb40d8b1243ff530f38bcdcd4
+source-git-commit: 243a99748d31cddcb8a550d52f9bb390726644be
 workflow-type: tm+mt
-source-wordcount: '3367'
+source-wordcount: '3408'
 ht-degree: 14%
 
 ---
@@ -144,11 +144,11 @@ Para obter uma visão geral da interface do usuário da Platform, consulte o [gu
 
 O painel de [!UICONTROL Uso da licença] exibe uma lista de todos os produtos da Experience Platform que você adquiriu e todos os complementos para esses produtos. Nesse painel, você pode encontrar um instantâneo dos dados de licença da sua organização para o Experience Platform em qualquer sandbox associada.
 
-Os dados nesse painel são exibidos exatamente como são exibidos no momento específico em que o instantâneo foi tirado. Em outras palavras, o instantâneo não é uma aproximação ou amostra dos dados, e o painel não é atualizado em tempo real.
+Os dados nesse painel são exibidos exatamente como eram exibidos no momento específico em que o instantâneo foi tirado. Não é uma aproximação ou amostra, mas o painel não é atualizado em tempo real.
 
 >[!NOTE]
 >
->Quaisquer alterações ou atualizações feitas nos dados desde que o instantâneo foi tirado não serão refletidas no painel até que o próximo instantâneo seja tirado.
+>A maioria das métricas no painel é atualizada diariamente, com base em um instantâneo da instância da Platform. [!UICONTROL Linhas do CJA Disponíveis] é uma exceção e é atualizada mensalmente. As métricas rotuladas com &quot;pacotes&quot;, como [!UICONTROL Pacotes de Usuários do Serviço de Consulta Adhoc], [!UICONTROL Número de Pacotes de Riqueza de Perfil] e [!UICONTROL Número de Pacotes de Segmentação de Streaming], refletem os direitos de licença para ofertas complementares e não acompanham o uso contínuo. As alterações feitas após o instantâneo não estarão visíveis até que o próximo instantâneo seja tirado.
 
 ## Explorar o painel de uso de licença {#explore}
 

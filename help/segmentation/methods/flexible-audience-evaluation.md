@@ -2,15 +2,19 @@
 title: Guia flexível de avaliação de público-alvo
 description: Saiba como usar a avaliação flexível de público para executar trabalhos de segmentação em lote sob demanda.
 role: Developer, User
-source-git-commit: 5c86161a2f9442d99426f2c05fb762cf50004049
+exl-id: b85bf735-be02-4bf7-bd63-8d74ae905e58
+source-git-commit: 71818ee273749bb5053286c5b8bbd07a4429c341
 workflow-type: tm+mt
-source-wordcount: '996'
+source-wordcount: '1049'
 ht-degree: 5%
 
 ---
 
-
 # Guia flexível de avaliação do público-alvo
+
+>[!AVAILABILITY]
+>
+>A avaliação de público flexível está **somente** disponível em instâncias do Experience Platform em execução em [!DNL Microsoft Azure]. Para saber mais sobre a infraestrutura do Experience Platform compatível, consulte a [visão geral da nuvem múltipla do Experience Platform](../../landing/multi-cloud.md).
 
 A avaliação flexível do público-alvo permite executar um trabalho de segmentação em lote sob demanda. Com a avaliação flexível do público-alvo, você pode executar lançamentos de campanhas ad-hoc, comunicações just-in-time ou outras atividades sensíveis ao tempo.
 
@@ -33,7 +37,7 @@ Ao executar a avaliação flexível do público-alvo, lembre-se das seguintes co
 
 >[!NOTE]
 >
->Você *pode* comprar execuções adicionais de avaliação de público flexível por ano. Para obter mais informações, entre em contato com o Atendimento ao cliente da Adobe.
+>Você pode adquirir execuções adicionais de avaliação de público-alvo flexível por ano. Para obter mais informações, entre em contato com o Atendimento ao cliente da Adobe.
 
 ## Acesso {#access}
 
@@ -326,6 +330,14 @@ O vídeo a seguir demonstra como acessar e usar a avaliação de público-alvo f
 
 A seção a seguir lista as perguntas frequentes relacionadas à avaliação flexível do público-alvo.
 
+### Em quanto tempo posso ativar um público-alvo usando a avaliação flexível de públicos-alvo?
+
++++ Resposta
+
+Você pode ativar um público-alvo usando a avaliação de público-alvo flexível imediatamente após sua criação.
+
++++
+
 ### Posso executar o agendamento com avaliação de público-alvo flexível?
 
 +++ Resposta
@@ -373,4 +385,3 @@ Somente os públicos-alvo com a origem do Serviço de segmentação são compat�
 Execuções de avaliação de público flexíveis que foram criadas usando a API ou a interface do usuário contam para o limite máximo. No entanto, a execução diária do trabalho de segmentação em lotes que é executado à noite **não** contribui para esse limite.
 
 +++
-

@@ -2,9 +2,10 @@
 title: Intenção do Demandbase
 description: Saiba mais sobre a fonte de intenção do Demandbase no Experience Platform.
 last-substantial-update: 2025-03-26T00:00:00Z
-source-git-commit: 0a6a9fe759d71fd62e3eaf5c93a091614f3c76a0
+exl-id: 62dd27e0-b846-4c04-977f-8a3ab99bc464
+source-git-commit: 78aae71ff48fc710aaaabf4ef71f6e50d2a8c12e
 workflow-type: tm+mt
-source-wordcount: '1488'
+source-wordcount: '1465'
 ht-degree: 1%
 
 ---
@@ -84,7 +85,7 @@ O esquema [!DNL Demandbase] é chamado de **Intenção Semanal da Empresa**. Sã
 
 ## Conectar sua conta do [!DNL Demandbase] à Experience Platform na interface
 
-Agora que você concluiu a configuração de pré-requisito para [!DNL Demandbase], você pode prosseguir para [conectar sua conta do [!DNL Demandbase] à Experience Platform usando a interface do usuário]Depois de concluir a configuração de pré-requisito, leia o tutorial em [conectando sua conta do  [!DNL Demandbase]  à Experience Platform](../../tutorials/ui/create/data-partners/demandbase.md) para iniciar a integração.
+Após concluir a configuração de pré-requisito, leia o tutorial em [conectando sua conta [!DNL Demandbase] à Experience Platform](../../tutorials/ui/create/data-partners/demandbase.md) para iniciar a integração.
 
 ## Perguntas frequentes {#faq}
 

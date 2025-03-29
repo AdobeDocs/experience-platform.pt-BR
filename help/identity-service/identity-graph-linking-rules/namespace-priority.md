@@ -2,7 +2,7 @@
 title: Prioridade de namespace
 description: Saiba mais sobre a prioridade de namespace no Serviço de identidade.
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: 7174c2c0d8c4ada8d5bba334492bad396c1cfb34
+source-git-commit: 8157eaf3d79523995fd50d02234e7873cffcea14
 workflow-type: tm+mt
 source-wordcount: '1801'
 ht-degree: 2%
@@ -73,11 +73,11 @@ Atualmente, a prioridade do namespace influencia o comportamento do sistema do P
 
 ![Um diagrama do escopo de aplicativo de prioridade de namespace](../images/namespace-priority/application-scope.png)
 
-### Serviço de identidade: algoritmo de otimização de identidade
+## Serviço de identidade: algoritmo de otimização de identidade
 
 Para estruturas de gráficos relativamente complexas, a prioridade de namespace desempenha um papel importante para garantir que os links corretos sejam removidos quando ocorrem cenários de recolhimento de gráficos. Para obter mais informações, leia a [visão geral do algoritmo de otimização de identidade](../identity-graph-linking-rules/identity-optimization-algorithm.md).
 
-### Perfil do cliente em tempo real: determinação de identidade principal para eventos de experiência
+## Perfil do cliente em tempo real: determinação de identidade principal para eventos de experiência
 
 * Depois de definir as configurações de identidade para uma determinada sandbox, a identidade principal para eventos de experiência será determinada pela prioridade de namespace mais alta na configuração.
    * Isso ocorre porque os eventos de experiência são de natureza dinâmica. Um mapa de identidade pode conter três ou mais identidades, e a prioridade do namespace garante que o namespace mais importante esteja associado ao evento de experiência.
@@ -122,7 +122,7 @@ Dadas as configurações descritas acima, as ações do usuário e a determinaç
 
 {style="table-layout:auto"}
 
-### Serviço de segmentação: armazenamento de metadados de associação de segmento
+## Serviço de segmentação: armazenamento de metadados de associação de segmento
 
 ![Um diagrama de armazenamento de associação de segmento](../images/namespace-priority/segment-membership-storage.png)
 
@@ -139,7 +139,7 @@ Por exemplo, suponha que haja dois perfis:
 
 Se John e Jane compartilharem um dispositivo, a ECID (navegador da Web) será transferida de uma pessoa para outra. No entanto, isso não influencia as informações de associação do segmento armazenadas em relação a John e Jane.
 
-Se os critérios de qualificação de segmento fossem baseados apenas em eventos anônimos armazenados na ECID, Jane se qualificaria para esse segmento
+Se os critérios de qualificação de segmento fossem baseados apenas em eventos anônimos armazenados na ECID, Jane se qualificaria para esse segmento.
 
 ## Implicações em outros serviços da Experience Platform {#implications}
 

@@ -2,9 +2,9 @@
 title: Notas da versão de março de 2025 da Adobe Experience Platform
 description: As notas da versão de março de 2025 da Adobe Experience Platform.
 exl-id: 3da1c912-2581-4afa-bd21-0b8303531dcd
-source-git-commit: 16056a35624b4a053e9f50acef0ec3f63254a065
+source-git-commit: edcdf84a8cb954c15f7dd235fb14cf14e11e22c8
 workflow-type: tm+mt
-source-wordcount: '1227'
+source-wordcount: '1250'
 ht-degree: 21%
 
 ---
@@ -18,6 +18,7 @@ Atualizações dos recursos e da documentação existentes no Adobe Experience P
 - [Notas de versão da Adobe Experience Platform](#adobe-experience-platform-release-notes)
    - [Painéis](#dashboards)
    - [Destinos](#destinations)
+   - [Composição de público-alvo federado](#federated-audience-composition)
    - [Serviço de segmentação](#segmentation-service)
    - [Origens](#sources)
 
@@ -61,6 +62,10 @@ Para obter mais informações sobre painéis, incluindo como conceder permissõe
 {style="table-layout:auto"}
 
 Para obter mais informações, leia a [visão geral de destinos](../../destinations/home.md).
+
+## Composição de público-alvo federado {#federated-audience-composition}
+
+Para obter informações sobre as atualizações mais recentes da Federated Audience Composition, leia as [notas de versão dedicadas](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/release-notes) aqui.
 
 ## Serviço de segmentação {#segmentation-service}
 

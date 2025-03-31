@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;página inicial;tópicos populares;esquema;Esquema;grupo de campos;Grupo de campos;Grupos de campos;grupos de campos;tipo de dados;tipos de dados;Tipos de dados;Tipo de dados;design de esquema;tipo de dados;tipo de dados;Tipo de dados;esquemas;Esquemas;Design de esquema;mapa;Mapa;
+keywords: Experience Platform;página inicial;tópicos populares;esquema;Esquema;grupo de campos;Grupo de campos;Grupos de campos;grupos de campos;tipo de dados;tipos de dados;Tipos de dados;tipo de dados;design de esquema;tipo de dados;tipo de dados;Tipo de dados;esquemas;Esquemas;Design de esquema;mapa;Mapa;
 solution: Experience Platform
 title: Restrições de tipo de campo XDM
 description: Uma referência para restrições de tipo de campo no Experience Data Model (XDM), incluindo os outros formatos de serialização aos quais eles podem ser mapeados e como definir seus próprios tipos de campo na API.
 exl-id: 63839a28-6d26-46f1-8bbf-b524e82ac4df
-source-git-commit: eb1cf204e95591082b27dc97cd3c709a23b20b08
+source-git-commit: ca8859c7b71d1b0aad30880ff066d2b4b33b0a35
 workflow-type: tm+mt
 source-wordcount: '683'
 ht-degree: 2%
@@ -130,7 +130,7 @@ A tabela a seguir descreve como cada tipo de XDM é representado no Esquema JSON
       <td>[!UICONTROL Booleano]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{"type": "string"}</pre>
+{"type": "boolean"}</pre>
       </td>
       <td><code>true</code></td>
     </tr>

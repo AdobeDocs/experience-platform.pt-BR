@@ -3,9 +3,9 @@ title: Ativar públicos para destinos de exportação de perfil em lote
 type: Tutorial
 description: Saiba como ativar os públicos-alvo no Adobe Experience Platform enviando-os para destinos com base em perfil de lote.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 8a1ac01c503bd1e5b9873714514d438b22f45cfb
+source-git-commit: f01a044d3d12ef457c6242a0b93acbfeeaf48588
 workflow-type: tm+mt
-source-wordcount: '4405'
+source-wordcount: '4452'
 ht-degree: 10%
 
 ---
@@ -145,6 +145,10 @@ Selecione **[!UICONTROL Exportar arquivos completos]** para acionar a exportaç�
 Use a opção **[!UICONTROL Agendado]** para que o trabalho de ativação seja executado em um horário fixo. Essa opção garante que os dados de perfil do Experience Platform sejam exportados ao mesmo tempo todos os dias. No entanto, os perfis exportados podem não ser os mais atualizados, dependendo se o trabalho de segmentação em lote foi concluído antes do início do trabalho de ativação.
 
    ![Imagem destacando a opção Agendado no fluxo de ativação para destinos em lote e mostrando o seletor de tempo.](../assets/ui/activate-batch-profile-destinations/scheduled-option.png)
+
+   >[!IMPORTANT]
+   >
+   >Ao mapear um público criado nas últimas 24 horas e avaliado por meio de [segmentação em lote](../../segmentation/methods/batch-segmentation.md), defina o agendamento de exportação diário para iniciar o dia seguinte com a maior brevidade. Isso garante que o trabalho de avaliação diária em lote seja executado primeiro e que você esteja exportando os dados completos do público-alvo.
 
 3. Use o seletor **[!UICONTROL Data]** para escolher o dia ou intervalo em que a exportação deve ocorrer. Para exportações diárias, a prática recomendada é definir a data de início e término para alinhar-se à duração das campanhas em suas plataformas downstream.
 

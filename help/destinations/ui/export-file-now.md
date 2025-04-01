@@ -1,9 +1,9 @@
 ---
-title: Exportar arquivos sob demanda para destinos em lote usando a interface do Experience Platform
+title: Exportar arquivos sob demanda para destinos em lote usando a interface do usuário do Experience Platform
 type: Tutorial
-description: Saiba como exportar arquivos sob demanda para destinos em lote usando a interface do usuário do Experience Platform.
+description: Saiba como exportar arquivos por demanda para destinos em lote usando a interface do usuário do Experience Platform.
 exl-id: 0cbe5089-b73d-4584-8451-2fc34d47c357
-source-git-commit: 47d0e2a7fae973edfda035d046f66c88d34bf8b2
+source-git-commit: d3bd76f5b36b6a6afcb67fe923eb8e4f3d7a9415
 workflow-type: tm+mt
 source-wordcount: '690'
 ht-degree: 9%
@@ -11,7 +11,7 @@ ht-degree: 9%
 ---
 
 
-# Exportar arquivos sob demanda para destinos em lote usando a interface do Experience Platform
+# Exportar arquivos sob demanda para destinos em lote usando a interface do usuário do Experience Platform
 
 >[!IMPORTANT]
 > 
@@ -24,11 +24,11 @@ ht-degree: 9%
 >title="Exportar arquivo agora"
 >abstract="Selecione esse controle para fornecer uma exportação de arquivo completa, além de qualquer exportação agendada anteriormente. A exportação de arquivos é acionada imediatamente e obtém os resultados mais recentes das execuções de segmentação da Experience Platform."
 
-Este artigo explica como usar a interface do usuário do Experience Platform para exportar arquivos sob demanda para destinos em lote, como destinos de [armazenamento na nuvem](/help/destinations/catalog/cloud-storage/overview.md) e [marketing por email](/help/destinations/catalog/email-marketing/overview.md).
+Este artigo explica como usar a interface do Experience Platform para exportar arquivos sob demanda para destinos em lote, como destinos de [armazenamento na nuvem](/help/destinations/catalog/cloud-storage/overview.md) e [marketing por email](/help/destinations/catalog/email-marketing/overview.md).
 
 O controle **[!UICONTROL Exportar arquivo agora]** permite exportar um arquivo completo sem interromper o agendamento de exportação atual de um público agendado anteriormente. Essa exportação ocorre além das exportações previamente agendadas e não altera a frequência de exportação do público-alvo. A exportação de arquivos é acionada imediatamente e obtém os resultados mais recentes das execuções de segmentação da Experience Platform.
 
-Também é possível usar as APIs de Experience Platform para essa finalidade. Leia como [ativar públicos-alvo sob demanda para destinos em lote por meio da API de ativação ad-hoc](/help/destinations/api/ad-hoc-activation-api.md).
+Também é possível usar as APIs do Experience Platform para essa finalidade. Leia como [ativar públicos-alvo sob demanda para destinos em lote por meio da API de ativação ad-hoc](/help/destinations/api/ad-hoc-activation-api.md).
 
 ## Pré-requisitos {#prerequisites}
 
@@ -63,7 +63,7 @@ Para exportar arquivos por demanda para destinos em lote, você deve ter [se con
 Lembre-se das seguintes considerações ao usar o controle **[!UICONTROL Exportar arquivo agora]**:
 
 * **[!UICONTROL Exportar arquivo agora]** funciona somente para públicos cujo agendamento no fluxo de dados de ativação em lote se sobrepõe à data atual. Isso inclui públicos com agendamentos sem data de término (frequência de exportação de **[!UICONTROL Uma vez]**) ou em que a data de término ainda não tenha passado.
-* Ao adicionar um público a um fluxo de dados existente, aguarde pelo menos 15 minutos até usar o controle **[!UICONTROL Exportar arquivo agora]**.
+* Ao adicionar um público a um fluxo de dados existente, aguarde pelo menos **uma hora** antes de usar o controle **[!UICONTROL Exportar arquivo agora]**.
 * Se você alterar a política de mesclagem de um público ou se criar um público que use uma nova política de mesclagem, aguarde 24 horas até usar o controle **[!UICONTROL Exportar arquivo agora]**.
 
 ## Mensagens de erro da interface do usuário {#ui-error-messages}

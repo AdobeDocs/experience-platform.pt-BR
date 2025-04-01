@@ -5,7 +5,7 @@ title: Ativar públicos para destinos em lote por meio da API de ativação ad-h
 description: Este artigo ilustra o fluxo de trabalho completo para ativar públicos-alvo por meio da API de ativação ad-hoc, incluindo os trabalhos de segmentação que ocorrem antes da ativação.
 type: Tutorial
 exl-id: 1a09f5ff-0b04-413d-a9f6-57911a92b4e4
-source-git-commit: deecaf0af269b64af507126dba0523d2b16a5721
+source-git-commit: f01a044d3d12ef457c6242a0b93acbfeeaf48588
 workflow-type: tm+mt
 source-wordcount: '1612'
 ht-degree: 0%
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Depois de concluir a fase Beta, o [!DNL ad-hoc activation API] está agora disponível para todos os clientes do Experience Platform. Na versão do GA, a API foi atualizada para a versão 2. A etapa 4 ([Obter a ID de trabalho de exportação de público-alvo mais recente](#segment-export-id)) não é mais necessária, pois a API não exige mais a ID de exportação.
+>Depois de concluir a fase do Beta, o [!DNL ad-hoc activation API] agora está disponível para todos os clientes do Experience Platform. Na versão do GA, a API foi atualizada para a versão 2. A etapa 4 ([Obter a ID de trabalho de exportação de público-alvo mais recente](#segment-export-id)) não é mais necessária, pois a API não exige mais a ID de exportação.
 >
 >Consulte [Executar o trabalho de ativação ad-hoc](#activation-job) mais abaixo neste tutorial para obter mais informações.
 
@@ -30,13 +30,11 @@ O diagrama abaixo ilustra o fluxo de trabalho completo para ativar públicos-alv
 
 ![ad-hoc-ativation](../assets/api/ad-hoc-activation/ad-hoc-activation-overview.png)
 
-
-
 ## Casos de uso {#use-cases}
 
-### Vendas ou promoções de Flashes
+### Vendas ou promoções rápidas
 
-Um varejista online está preparando uma venda rápida limitada e deseja notificar os clientes em um curto prazo. Por meio da API de ativação ad-hoc do Experience Platform, a equipe de marketing pode exportar públicos-alvo sob demanda e enviar rapidamente emails promocionais para a base de clientes.
+Uma retailer online está preparando uma venda rápida limitada e deseja notificar os clientes em curto prazo. Por meio da API de ativação ad-hoc do Experience Platform, a equipe de marketing pode exportar públicos-alvo sob demanda e enviar rapidamente emails promocionais para a base de clientes.
 
 ### Eventos atuais ou últimas notícias
 
@@ -63,12 +61,12 @@ O Adobe Experience Platform executa tarefas de segmentação programadas uma vez
 Antes de fazer chamadas para as APIs do Adobe Experience Platform, verifique se os seguintes pré-requisitos são atendidos:
 
 * Você tem uma conta de organização com acesso ao Adobe Experience Platform.
-* Sua conta Experience Platform tem as funções `developer` e `user` habilitadas para o perfil de produto API do Adobe Experience Platform. Contate o administrador do [Admin Console](../../access-control/home.md) para habilitar essas funções para sua conta.
+* Sua conta do Experience Platform tem as funções `developer` e `user` habilitadas para o perfil de produto API do Adobe Experience Platform. Contate o administrador do [Admin Console](../../access-control/home.md) para habilitar essas funções para sua conta.
 * Você tem uma Adobe ID. Se você não tiver uma Adobe ID, vá para a [Adobe Developer Console](https://developer.adobe.com/console) e crie uma nova conta.
 
 ## Etapa 2: Coletar credenciais {#credentials}
 
-Para fazer chamadas para APIs da Platform, primeiro conclua o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). Concluir o tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API de Experience Platform, conforme mostrado abaixo:
+Para fazer chamadas para APIs da Platform, primeiro conclua o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). Concluir o tutorial de autenticação fornece os valores de cada um dos cabeçalhos necessários em todas as chamadas de API do Experience Platform, conforme mostrado abaixo:
 
 * Autorização: Portador `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
@@ -80,7 +78,7 @@ Os recursos no Experience Platform podem ser isolados em sandboxes virtuais espe
 
 >[!NOTE]
 >
->Para obter mais informações sobre sandboxes no Experience Platform, consulte a [documentação de visão geral da sandbox](../../sandboxes/home.md).
+>Para obter mais informações sobre sandboxes na Experience Platform, consulte a [documentação de visão geral da sandbox](../../sandboxes/home.md).
 
 Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabeçalho de tipo de mídia adicional:
 
@@ -126,7 +124,7 @@ O Adobe Experience Platform executa tarefas de segmentação programadas uma vez
 
 >[!IMPORTANT]
 >
->Observe a seguinte restrição única: Antes de executar um trabalho de ativação ad hoc, verifique se pelo menos 20 minutos se passaram desde o momento em que o público-alvo foi ativado pela primeira vez, de acordo com o agendamento definido em [Etapa 3 - Criar fluxo de ativação na interface do usuário da Platform](#activation-flow).
+>Observe a seguinte restrição única: Antes de executar um trabalho de ativação ad hoc, verifique se pelo menos uma hora se passou a partir do momento em que o público-alvo foi ativado pela primeira vez, de acordo com o agendamento definido em [Etapa 3 - Criar fluxo de ativação na interface do usuário da Platform](#activation-flow).
 
 Antes de executar um trabalho de ativação ad-hoc, verifique se o trabalho de exportação de público-alvo agendado para seus públicos-alvo foi concluído. Consulte [monitoramento do fluxo de dados de destino](../../dataflows/ui/monitor-destinations.md) para obter informações sobre como monitorar o status dos fluxos de ativação. Por exemplo, se o fluxo de dados de ativação mostrar um status de **[!UICONTROL Processando]**, aguarde a conclusão antes de executar o trabalho de ativação ad-hoc para exportar um arquivo completo.
 
@@ -239,7 +237,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200.
 
 ## Manipulação de erros de API {#api-error-handling}
 
-Os endpoints da API Destination SDK seguem os princípios gerais de mensagem de erro da API Experience Platform. Consulte [códigos de status da API](../../landing/troubleshooting.md#api-status-codes) e [erros no cabeçalho da solicitação](../../landing/troubleshooting.md#request-header-errors) no guia de solução de problemas da Platform.
+Os endpoints da API do Destination SDK seguem os princípios gerais de mensagem de erro da API do Experience Platform. Consulte [códigos de status da API](../../landing/troubleshooting.md#api-status-codes) e [erros no cabeçalho da solicitação](../../landing/troubleshooting.md#request-header-errors) no guia de solução de problemas da Platform.
 
 ### Códigos de erro de API e mensagens específicas para a API de ativação ad-hoc {#specific-error-messages}
 
@@ -253,4 +251,4 @@ Ao usar a API de ativação ad-hoc, você pode encontrar mensagens de erro espec
 ## Informações relacionadas {#related-information}
 
 * [Conectar-se a destinos em lote e ativar dados usando a API do Serviço de fluxo](/help/destinations/api/connect-activate-batch-destinations.md)
-* [(Beta) Exportar arquivos sob demanda para destinos em lote usando a interface do Experience Platform](/help/destinations/ui/export-file-now.md)
+* [(Beta) Exportar arquivos sob demanda para destinos em lote usando a interface do usuário do Experience Platform](/help/destinations/ui/export-file-now.md)

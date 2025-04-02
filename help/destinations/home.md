@@ -2,9 +2,9 @@
 title: Visão geral dos destinos
 description: Os destinos são integrações pré-criadas com plataformas de destino que permitem a ativação contínua de dados do Adobe Experience Platform. Você pode usar Destinos na Adobe Experience Platform para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas de email, publicidade direcionada e muitos outros casos de uso.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: 6d97f132788a249e0bf5c293e34d9d529325f099
+source-git-commit: 8d57694ffe0ac962b988ebcf9f35fbb7bf816c04
 workflow-type: tm+mt
-source-wordcount: '1231'
+source-wordcount: '1359'
 ht-degree: 3%
 
 ---
@@ -47,11 +47,11 @@ Os controles no [espaço de trabalho de destinos](./ui/destinations-workspace.md
 
 Com o Experience Platform, você pode ativar dados para vários tipos de destinos para atender aos casos de uso de ativação. Os destinos variam de integrações baseadas em API a integrações com sistemas de recepção de arquivos, destinos de pesquisa de perfil e muito mais. Para obter informações detalhadas sobre todos os destinos disponíveis, leia a [visão geral sobre tipos e categorias de destino](./destination-types.md).
 
-## Destinos criados pelo Adobe e por parceiros {#adobe-and-partner-built-destinations}
+## Destinos criados pela Adobe e por parceiros {#adobe-and-partner-built-destinations}
 
-Alguns dos conectores no catálogo de destinos de Experience Platform são criados e mantidos pelo Adobe, enquanto outros são criados e mantidos por empresas parceiras usando o [Destination SDK](/help/destinations/destination-sdk/overview.md). Uma observação na parte superior da página de documentação para cada conector criado pelo parceiro chama se um destino é criado e mantido pelo parceiro. Por exemplo, o [conector Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md) é criado pelo Adobe, enquanto o [conector TikTok](/help/destinations/catalog/social/tiktok.md) é criado e mantido pela equipe do TikTok.
+Alguns dos conectores no catálogo de destinos do Experience Platform são criados e mantidos pela Adobe, enquanto outros são criados e mantidos por empresas parceiras usando o [Destination SDK](/help/destinations/destination-sdk/overview.md). Uma observação na parte superior da página de documentação para cada conector criado pelo parceiro chama se um destino é criado e mantido pelo parceiro. Por exemplo, o [conector Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md) é criado pela Adobe, enquanto o [conector TikTok](/help/destinations/catalog/social/tiktok.md) é criado e mantido pela equipe do TikTok.
 
-Para conectores criados e mantidos pelo parceiro, isso significa que os problemas com o conector podem precisar ser resolvidos pela equipe do parceiro (método de contato fornecido na observação na página de documentação). No caso de problemas com conectores criados e mantidos pelo Adobe, entre em contato com o representante da Adobe ou com o Atendimento ao cliente.
+Para conectores criados e mantidos pelo parceiro, isso significa que os problemas com o conector podem precisar ser resolvidos pela equipe do parceiro (método de contato fornecido na observação na página de documentação). No caso de problemas com conectores criados e mantidos pela Adobe, entre em contato com o representante da Adobe ou com o Atendimento ao cliente.
 
 ## Destinos e controles de acesso {#access-controls}
 
@@ -61,7 +61,7 @@ A tabela a seguir descreve as permissões e as combinações de permissões nece
 
 | Nível de permissão | Descrição |
 | ---- | ---- |
-| **[!UICONTROL Exibir Destinos]** | Para acessar a guia de destinos na interface do usuário do Experience Platform, você precisa da **[!UICONTROL permissão de controle de acesso](/help/access-control/home.md#permissions) para [Exibir Destinos]**. |
+| **[!UICONTROL Exibir Destinos]** | Para acessar a guia de destinos na interface do usuário do Experience Platform, você precisa da **[!UICONTROL permissão de controle de acesso](/help/access-control/home.md#permissions) de [Exibir Destinos]**. |
 | **[!UICONTROL Exibir Destinos]**, **[!UICONTROL Gerenciar Destinos]** | Para se conectar a destinos, você precisa de **[!UICONTROL Exibir Destinos]** e **[!UICONTROL Gerenciar Destinos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). |
 | **[!UICONTROL Exibir Destinos]**, **[!UICONTROL Ativar Destinos]**, **[!UICONTROL Exibir Perfis]** e **[!UICONTROL Exibir Segmentos]** | Para ativar públicos para destinos e habilitar a [etapa de mapeamento](ui/activate-batch-profile-destinations.md#mapping) do fluxo de trabalho, você precisa das **[!UICONTROL Exibir Destinos]**, **[!UICONTROL Ativar Destinos]**, **[!UICONTROL Exibir Perfis]** e **[!UICONTROL Exibir Segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). |
 | **[!UICONTROL Exibir destinos]**, **[!UICONTROL Ativar segmentos sem mapeamento]**, **[!UICONTROL Exibir perfis]** e **[!UICONTROL Exibir segmentos]** | Para adicionar ou remover públicos-alvo de fluxos de dados existentes sem ter acesso à [etapa de mapeamento](ui/activate-batch-profile-destinations.md#mapping) do fluxo de trabalho, você precisa das **[!UICONTROL Exibir Destinos]**, **[!UICONTROL Ativar Segmentos sem Mapeamento]**, **[!UICONTROL Exibir Perfis]** e **[!UICONTROL Exibir Segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). |
@@ -83,6 +83,14 @@ O controle de acesso baseado em atributos no Adobe Experience Platform permite q
 Com o controle de acesso baseado em atributos, é possível aplicar configurações de mapeamento a campos aos quais você tem permissões. Além disso, não é possível exportar dados para um destino se você não tiver acesso a todos os campos no conjunto de dados.
 
 Para obter mais informações sobre como os destinos funcionam com os controles de acesso baseados em atributos, leia a [visão geral do controle de acesso baseado em atributos](../access-control/abac/overview.md#destinations).
+
+## Remoção de perfil dos destinos {#profile-removal}
+
+Quando um perfil é removido de um público-alvo ativado para um destino, esse perfil também é removido do público-alvo correspondente na plataforma de destino. Por exemplo, se um perfil for removido de um público que foi ativado anteriormente para o LinkedIn, esse perfil será removido do [!UICONTROL Público-alvo correspondente do LinkedIn] associado.
+
+A remoção de perfis de destinos — também conhecida como não segmentação — ocorre na mesma cadência que a segmentação. Assim que um perfil é removido de um público-alvo no Experience Platform, o próximo fluxo de dados agendado para o destino reflete essa alteração e remove o perfil do público-alvo de destino.
+
+A velocidade real na qual a remoção de perfil tem efeito na plataforma de destino pode variar com base no comportamento de assimilação e processamento do destino.
 
 ## Monitoramento de destinos {#destinations-monitoring}
 
@@ -120,8 +128,8 @@ Para obter mais informações sobre violações de política de dados no fluxo d
 
 Ao usar qualquer um dos Destinos rotulados como beta (&quot;Beta&quot;), você reconhece que a Beta é fornecida ***&quot;no estado em que se encontra&quot; sem garantias de qualquer tipo***.
 
-O Adobe não terá nenhuma obrigação de manter, corrigir, atualizar, alterar, modificar ou oferecer suporte à Beta. Você é aconselhado a usar materiais informativos e não se basear, de forma alguma, no funcionamento ou no desempenho corretos desses Beta e/ou dos materiais que os acompanham. O Beta é considerado Informações confidenciais do Adobe.
+A Adobe não tem nenhuma obrigação de manter, corrigir, atualizar, alterar, modificar ou oferecer suporte à Beta. Você é aconselhado a usar materiais informativos e não se basear, de forma alguma, no funcionamento ou no desempenho corretos desses Beta e/ou dos materiais que os acompanham. O Beta é considerado Informações confidenciais da Adobe.
 
-Qualquer &quot;Feedback&quot; (informação sobre o Beta incluindo, mas não se limitando a, problemas ou defeitos encontrados durante o uso do Beta, sugestões, melhorias e recomendações) fornecido por Você ao Adobe é atribuído ao Adobe, incluindo todos os direitos, títulos e interesses no e para esse Feedback.
+Qualquer &quot;Feedback&quot; (informação sobre o Beta incluindo, mas não se limitando a, problemas ou defeitos encontrados durante o uso do Beta, sugestões, melhorias e recomendações) fornecido por Você ao Adobe é atribuído ao Adobe, incluindo todos os direitos, cargos e interesses no e no Feedback.
 
 Envie Feedback Aberto ou crie um Tíquete de Suporte para compartilhar suas sugestões ou relatar um erro, buscar um aprimoramento de recurso.

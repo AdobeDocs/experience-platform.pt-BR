@@ -4,9 +4,9 @@ title: Conexão da API HTTP
 description: Use o destino da API HTTP no Adobe Experience Platform para enviar dados de perfil para um endpoint HTTP de terceiros para executar sua própria análise ou executar outras operações necessárias nos dados de perfil exportados do Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: fffeb2221c4e25bae8386419de1646c89aa93a06
+source-git-commit: 2fa6997c043ef7ff24b1383dd8626cfe1cca4f54
 workflow-type: tm+mt
-source-wordcount: '2664'
+source-wordcount: '2701'
 ht-degree: 8%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 8%
 
 >[!IMPORTANT]
 >
-> Este destino está disponível somente para clientes do [Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html?lang=pt-BR).
+> Este destino está disponível somente para clientes do [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html?lang=pt-BR).
 
 O destino da API HTTP é um destino de streaming [!DNL Adobe Experience Platform] que ajuda a enviar dados de perfil para pontos de extremidade HTTP de terceiros.
 
@@ -35,7 +35,7 @@ Esta seção descreve quais tipos de públicos-alvo você pode exportar para ess
 
 | Origem do público | Suportado | Descrição |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Públicos gerados por meio do [Serviço de segmentação](../../../segmentation/home.md) do Experience Platform. |
+| [!DNL Segmentation Service] | ✓ | Públicos-alvo gerados pelo [Serviço de Segmentação](../../../segmentation/home.md) da Experience Platform. |
 | Uploads personalizados | ✓ | Públicos [importados](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV. |
 
 {style="table-layout:auto"}
@@ -47,7 +47,7 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 | Item | Tipo | Notas |
 ---------|----------|---------|
 | Tipo de exportação | **[!UICONTROL Baseado em perfil]** | Você está exportando todos os membros de um segmento, juntamente com os campos de esquema desejados (por exemplo: endereço de email, número de telefone, sobrenome), conforme escolhido na tela de mapeamento do [fluxo de trabalho de ativação de destino](../../ui/activate-segment-streaming-destinations.md#mapping). |
-| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil é atualizado em Experience Platform com base na avaliação do público-alvo, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil for atualizado no Experience Platform com base na avaliação do público-alvo, o conector enviará a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -56,12 +56,12 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 Para usar o destino da API HTTP para exportar dados do Experience Platform, você deve atender aos seguintes pré-requisitos:
 
 * Você deve ter um endpoint HTTP compatível com REST API.
-* Seu ponto de extremidade HTTP deve ser compatível com o esquema do perfil de Experience Platform. Nenhuma transformação em um esquema de carga de terceiros é compatível com o destino da API HTTP. Consulte a seção [dados exportados](#exported-data) para obter um exemplo do esquema de saída de Experience Platform.
+* Seu endpoint HTTP deve ser compatível com o esquema de perfil do Experience Platform. Nenhuma transformação em um esquema de carga de terceiros é compatível com o destino da API HTTP. Consulte a seção [dados exportados](#exported-data) para obter um exemplo do esquema de saída do Experience Platform.
 * Seu ponto de extremidade HTTP deve oferecer suporte a cabeçalhos.
 
 >[!TIP]
 >
-> Você também pode usar o [Adobe Experience Platform Destination SDK](/help/destinations/destination-sdk/overview.md) para configurar uma integração e enviar dados de perfil de Experience Platform para um ponto de extremidade HTTP.
+> Você também pode usar o [Adobe Experience Platform Destination SDK](/help/destinations/destination-sdk/overview.md) para configurar uma integração e enviar dados de perfil do Experience Platform para um ponto de extremidade HTTP.
 
 ## Suporte e certificado do protocolo mTLS {#mtls-protocol-support}
 
@@ -81,7 +81,7 @@ Você também pode recuperar certificados públicos com segurança fazendo uma s
 
 ## INCLUIR NA LISTA DE PERMISSÕES endereço IP {#ip-address-allowlist}
 
-Para atender aos requisitos de segurança e conformidade dos clientes, o Experience Platform fornece uma lista de IPs estáticos que você pode incluir na lista de permissões pelo destino da API HTTP. Consulte [inclui na lista de permissões de endereço IPs para destinos de transmissão](/help/destinations/catalog/streaming/ip-address-allow-list.md) para obter a lista completa de IPs para incluir na lista de permissões.
+Para atender aos requisitos de segurança e conformidade dos clientes, o Experience Platform incluir na lista de permissões fornece uma lista de IPs estáticos que você pode classificar para o destino da API HTTP. Consulte [inclui na lista de permissões de endereço IPs para destinos de transmissão](/help/destinations/catalog/streaming/ip-address-allow-list.md) para obter a lista completa de IPs para incluir na lista de permissões.
 
 ## Tipos de autenticação compatíveis {#supported-authentication-types}
 
@@ -159,6 +159,10 @@ Se você selecionar o tipo de autenticação **[!UICONTROL Credenciais de Client
 
 ![Imagem da tela da interface do usuário na qual você pode se conectar ao destino da API HTTP, usando o OAuth 2 com autenticação de Credenciais de Cliente.](../../assets/catalog/http/http-api-authentication-oauth2-client-credentials.png)
 
+>[!WARNING]
+> 
+>Ao usar a autenticação [!UICONTROL Credenciais de Cliente do OAuth 2], a [!UICONTROL URL do Token de Acesso] pode ter no máximo um parâmetro de consulta. Adicionar uma [!UICONTROL URL do Token de Acesso] com mais parâmetros de consulta pode levar a problemas ao conectar ao seu ponto de extremidade.
+
 * **[!UICONTROL URL do Token de Acesso]**: a URL no seu lado que emite tokens de acesso e, opcionalmente, atualiza tokens.
 * **[!UICONTROL ID do Cliente]**: o [!DNL client ID] que seu sistema atribui à Adobe Experience Platform.
 * **[!UICONTROL Segredo do Cliente]**: o [!DNL client secret] que seu sistema atribui à Adobe Experience Platform.
@@ -222,11 +226,11 @@ Consulte [Ativar dados de público-alvo para destinos de exportação de perfil 
 
 ### Atributos de destino {#attributes}
 
-Na etapa [[!UICONTROL Selecionar atributos]](../../ui/activate-streaming-profile-destinations.md#select-attributes), o Adobe recomenda que você selecione um identificador exclusivo do seu [esquema de união](../../../profile/home.md#profile-fragments-and-union-schemas). Selecione o identificador exclusivo e quaisquer outros campos XDM que você deseja exportar para o destino.
+Na etapa [[!UICONTROL Selecionar atributos]](../../ui/activate-streaming-profile-destinations.md#select-attributes), a Adobe recomenda selecionar um identificador exclusivo do seu [esquema de união](../../../profile/home.md#profile-fragments-and-union-schemas). Selecione o identificador exclusivo e quaisquer outros campos XDM que você deseja exportar para o destino.
 
 ## Comportamento de exportação de perfil {#profile-export-behavior}
 
-O Experience Platform otimiza o comportamento de exportação de perfil para seu destino de API HTTP, a fim de exportar dados somente para seu endpoint de API quando atualizações relevantes para um perfil tiverem ocorrido após a qualificação de público-alvo ou outros eventos significativos. Os perfis são exportados para seu destino nas seguintes situações:
+O Experience Platform otimiza o comportamento de exportação de perfis para o destino da API HTTP, a fim de exportar dados somente para o endpoint da API quando atualizações relevantes para um perfil tiverem ocorrido após a qualificação de público-alvo ou outros eventos significativos. Os perfis são exportados para seu destino nas seguintes situações:
 
 * A atualização do perfil foi determinada por uma alteração na associação de público-alvo para pelo menos um dos públicos-alvo mapeados para o destino. Por exemplo, o perfil se qualificou para um dos públicos mapeados para o destino ou saiu de um dos públicos mapeados para o destino.
 * A atualização do perfil foi determinada por uma alteração no [mapa de identidade](/help/xdm/field-groups/profile/identitymap.md). Por exemplo, um perfil que já se qualificou para um dos públicos-alvo mapeados para o destino recebeu uma nova identidade no atributo de mapa de identidade.
@@ -358,6 +362,6 @@ Abaixo estão mais exemplos de dados exportados, dependendo das configurações 
 
 ## Política de limites e novas tentativas {#limits-retry-policy}
 
-Em 95% das vezes, o Experience Platform tenta oferecer uma latência de taxa de transferência de menos de 10 minutos para mensagens enviadas com êxito, com uma taxa de menos de 10 mil solicitações por segundo para cada fluxo de dados para um destino HTTP.
+Em 95% das vezes, o Experience Platform tenta oferecer uma latência de taxa de transferência de menos de 10 minutos para mensagens enviadas com êxito, com uma taxa de menos de 10 mil solicitações por segundo para cada fluxo de dados a um destino HTTP.
 
-No caso de solicitações com falha para o destino da API HTTP, o Experience Platform armazena as solicitações com falha e tenta enviar as solicitações duas vezes para o endpoint.
+No caso de solicitações com falha para o destino da API HTTP, o Experience Platform armazena as solicitações com falha e tenta enviar as solicitações duas vezes para o seu endpoint.

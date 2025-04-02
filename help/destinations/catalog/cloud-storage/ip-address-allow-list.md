@@ -3,9 +3,9 @@ title: LISTA DE PERMISSÕES de endereço IP para destinos de armazenamento na nu
 type: Documentation
 description: Esta página fornece intervalos IP que podem ser adicionados à lista de permissões para exportar dados com segurança do Experience Platform para destinos de armazenamento na nuvem.
 exl-id: 0b8086aa-786e-4244-b2a5-a3f57ad59a8b
-source-git-commit: ee4c42a2298c588590b1535524ed8f3dfe13b603
+source-git-commit: 7cf15550d7619e247052efc4d9b4c72c5d32641a
 workflow-type: tm+mt
-source-wordcount: '249'
+source-wordcount: '299'
 ht-degree: 1%
 
 ---
@@ -40,14 +40,14 @@ A Adobe recomenda que você adicione os seguintes intervalos IP a uma inclui na 
 ## Obrigatório para todos os clientes {#all-customers}
 
 * `52.247.108.70`
-<!-- 
-## US customers running on AWS {#aws}
 
-The IP range below applies to Experience Platform customers running on Amazon Web Services (AWS). See the [Experience Platform Multi-Cloud overview](../../../landing/multi-cloud.md) for more information.
+## Clientes dos EUA que executam o AWS {#aws}
+
+O intervalo IP abaixo se aplica aos clientes do Experience Platform que usam o Amazon Web Services (AWS). Consulte a [Visão geral de várias nuvens do Experience Platform](../../../landing/multi-cloud.md) para obter mais informações.
 
 >[!NOTE]
 >
->This IP range is not supported for customers running on AWS who use file-based destinations to export data to Amazon S3. -->
+>Esse intervalo IP não é compatível com clientes que executam o AWS e usam destinos baseados em arquivos para exportar dados para o Amazon S3.
 
 * `66.117.18.0/24`
 

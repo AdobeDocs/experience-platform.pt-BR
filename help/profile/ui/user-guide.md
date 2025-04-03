@@ -3,9 +3,9 @@ keywords: Experience Platform;perfil;perfil do cliente em tempo real;solução d
 title: Guia da interface do usuário do Perfil do cliente em tempo real
 description: O Perfil do cliente em tempo real cria uma visualização integral de cada cliente individual, combinando dados de vários canais, inclusive dados online, offline, de CRM e de terceiros. Este documento serve como um guia para interagir com o Perfil do cliente em tempo real na interface do usuário do Adobe Experience Platform.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2212'
+source-wordcount: '2219'
 ht-degree: 3%
 
 ---
@@ -19,8 +19,8 @@ O [!DNL Real-Time Customer Profile] cria uma visualização integral de cada cli
 Este guia de interface do usuário requer uma compreensão dos vários serviços do [!DNL Experience Platform] envolvidos no gerenciamento do [!DNL Real-Time Customer Profiles]. Antes de ler este guia ou trabalhar na interface do usuário, consulte a documentação dos seguintes serviços:
 
 * [[!DNL Real-Time Customer Profile] visão geral](../home.md): fornece um perfil de consumidor unificado em tempo real com base em dados agregados de várias fontes.
-* [[!DNL Identity Service]](../../identity-service/home.md): Habilita [!DNL Real-Time Customer Profile] unindo identidades de fontes de dados diferentes conforme elas são assimiladas em [!DNL Platform].
-* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): a estrutura padronizada pela qual o [!DNL Platform] organiza os dados de experiência do cliente.
+* [[!DNL Identity Service]](../../identity-service/home.md): Habilita [!DNL Real-Time Customer Profile] unindo identidades de fontes de dados diferentes conforme elas são assimiladas em [!DNL Experience Platform].
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): a estrutura padronizada pela qual o [!DNL Experience Platform] organiza os dados de experiência do cliente.
 
 ## [!UICONTROL Visão geral]
 
@@ -28,7 +28,7 @@ Na interface do usuário do Experience Platform, selecione **[!UICONTROL Perfis]
 
 >[!NOTE]
 >
->Se sua organização é nova na Plataforma e ainda não tem conjuntos de dados de Perfil ou políticas de mesclagem ativos criados, o painel [!UICONTROL Perfis] não estará visível. Em vez disso, a guia [!UICONTROL Visão geral] exibe links e documentação para ajudar você a começar a usar o Perfil do cliente em tempo real.
+>Se sua organização for nova no Experience Platform e ainda não tiver conjuntos de dados de Perfil ativos ou políticas de mesclagem criadas, o painel [!UICONTROL Perfis] não estará visível. Em vez disso, a guia [!UICONTROL Visão geral] exibe links e documentação para ajudar você a começar a usar o Perfil do cliente em tempo real.
 
 ### Painel do perfil {#profile-dashboard}
 
@@ -56,7 +56,7 @@ Além dessas métricas, esta seção fornece uma data e hora da última atualiza
 
 A contagem de perfis exibe o número total de perfis que sua organização tem na Experience Platform, depois que a política de mesclagem padrão da organização se mescla com fragmentos de perfil para formar um único perfil para cada cliente individual. Em outras palavras, sua organização pode ter vários fragmentos de perfil relacionados a um único cliente que interage com sua marca em diferentes canais, mas esses fragmentos seriam mesclados (de acordo com a política de mesclagem padrão) e retornariam uma contagem de &quot;1&quot; perfil, pois todos estão relacionados ao mesmo indivíduo.
 
-A contagem de perfis também inclui perfis com atributos (dados de registro), bem como perfis que contêm apenas dados de série temporal (evento), como perfis do Adobe Analytics. A contagem de perfis é atualizada regularmente para fornecer um número total de perfis atualizado na Platform.
+A contagem de perfis também inclui perfis com atributos (dados de registro), bem como perfis que contêm apenas dados de série temporal (evento), como perfis do Adobe Analytics. A contagem de perfis é atualizada regularmente para fornecer um número total de perfis atualizado no Experience Platform.
 
 #### Atualização da métrica de contagem de perfis
 
@@ -96,7 +96,7 @@ Para exibir os detalhes de um dos perfis de exemplo, selecione a **[!UICONTROL I
 
 ![Perfis de exemplo que correspondem à política de mesclagem são exibidos.](../images/user-guide/sample-profiles.png)
 
-Para saber mais sobre as políticas de mesclagem e sua função na Platform, consulte a [visão geral das políticas de mesclagem](../merge-policies/overview.md).
+Para saber mais sobre as políticas de mesclagem e sua função na Experience Platform, consulte a [visão geral das políticas de mesclagem](../merge-policies/overview.md).
 
 ### Procurar por [!UICONTROL Identidade] {#browse-identity}
 
@@ -131,7 +131,7 @@ Depois que um valor for inserido, selecione **[!UICONTROL Exibir]** e um único 
 >[!CONTEXTUALHELP]
 >id="platform_errors_uplib_201001_404"
 >title="Entidade não encontrada"
->abstract="Isso significa que a Platform não encontrou a entidade solicitada. Para resolver esse erro, tente uma das seguintes soluções:<ul><li>Verifique se a ID do perfil correta está listada no URL da entidade que você está tentando acessar.</li><li>Verifique se você tem a combinação correta de Organização e sandbox para a entidade que está tentando acessar.</li></ul>"
+>abstract="Isso significa que o Experience Platform não pôde encontrar a entidade solicitada. Para resolver esse erro, tente uma das seguintes soluções:<ul><li>Verifique se a ID do perfil correta está listada no URL da entidade que você está tentando acessar.</li><li>Verifique se você tem a combinação correta de Organização e sandbox para a entidade que está tentando acessar.</li></ul>"
 
 Depois de selecionar uma **[!UICONTROL ID de perfil]**, a guia **[!UICONTROL Detalhes]** é aberta. As informações do perfil exibidas na guia **[!UICONTROL Detalhes]** foram mescladas de vários fragmentos de perfil para formar uma única visualização do cliente individual. Isso inclui detalhes do cliente, como atributos básicos, identidades vinculadas e preferências de canal.
 
@@ -149,7 +149,7 @@ Para exibir informações adicionais relacionadas ao perfil de cliente individua
 
 A guia **[!UICONTROL Atributos]** fornece uma exibição de lista resumindo todos os atributos relacionados a um único perfil, após a política de mesclagem especificada ser aplicada.
 
-Esses atributos também podem ser exibidos como um objeto JSON ao selecionar **[!UICONTROL Exibir JSON]**. Isso é útil para qualquer usuário que deseje entender melhor como os atributos do perfil são assimilados na Platform.
+Esses atributos também podem ser exibidos como um objeto JSON ao selecionar **[!UICONTROL Exibir JSON]**. Isso é útil para qualquer usuário que deseje entender melhor como os atributos de perfil são assimilados na Experience Platform.
 
 ![A guia Atributos está realçada. Os atributos do perfil são exibidos.](../images/user-guide/attributes.png)
 
@@ -163,7 +163,7 @@ Para obter mais informações sobre perfis de borda, leia a [documentação sobr
 
 A guia **[!UICONTROL Eventos]** contém dados dos 100 Eventos de Experiência mais recentes associados ao cliente. Esses dados podem incluir aberturas de email, atividades de carrinho e exibições de página. Selecionar **[!UICONTROL Exibir todos]** para qualquer evento individual fornece campos e valores adicionais para capturas como parte do evento.
 
-Os eventos também podem ser exibidos como um objeto JSON ao selecionar **[!UICONTROL Exibir JSON]**. Isso é útil para entender como os eventos são capturados na Platform.
+Os eventos também podem ser exibidos como um objeto JSON ao selecionar **[!UICONTROL Exibir JSON]**. Isso é útil para entender como os eventos são capturados no Experience Platform.
 
 ![A guia Eventos está realçada. Os eventos de perfil são exibidos.](../images/user-guide/events.png)
 
@@ -201,7 +201,7 @@ No menu principal **[!UICONTROL Perfis]**, selecione a guia **[!UICONTROL Atribu
 
 ![A guia Atributos computados está realçada.](../images/user-guide/computed-attributes.png)
 
-Para obter mais informações sobre atributos computados, leia a [visão geral sobre atributos computados](../computed-attributes/overview.md). Para obter mais informações sobre como usar atributos computados na interface da Platform, leia o [guia da interface do usuário de atributos computados](../computed-attributes/ui.md).
+Para obter mais informações sobre atributos computados, leia a [visão geral sobre atributos computados](../computed-attributes/overview.md). Para obter mais informações sobre como usar atributos computados na interface do Experience Platform, leia o [guia da interface do usuário de atributos computados](../computed-attributes/ui.md).
 
 ## Próximas etapas
 

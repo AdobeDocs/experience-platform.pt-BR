@@ -3,10 +3,10 @@ keywords: Experience Platform;página inicial;tópicos populares;controle de ace
 title: Permissões da Função Gerenciar Controle de Acesso Baseado em Atributo
 description: Este documento fornece informações sobre como configurar permissões para uma função por meio da interface de Permissões no Adobe Experience Cloud
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
-source-git-commit: afd883c530ab1b335888e79b5f4075e774fced4b
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1699'
-ht-degree: 16%
+source-wordcount: '1703'
+ht-degree: 12%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 16%
 >[!CONTEXTUALHELP]
 >id="platform_permissions_roles_about"
 >title="O que são funções?"
->abstract="As funções definem o acesso que um(a) admin, especialista ou usuário final tem aos recursos em sua organização. Elas categorizam os usuários que interagem com a instância da Platform e são elementos essenciais das políticas de controle de acesso. Uma função tem um determinado conjunto de permissões, e os membros da organização podem ter uma ou mais funções atribuídas, dependendo do escopo do acesso de visualização ou gravação necessário."
+>abstract="As funções definem o acesso que um(a) admin, especialista ou usuário final tem aos recursos em sua organização. Eles categorizam os usuários que interagem com a instância do Experience Platform e são os blocos fundamentais das políticas de controle de acesso. Uma função tem um determinado conjunto de permissões, e os membros da organização podem ter uma ou mais funções atribuídas, dependendo do escopo do acesso de visualização ou gravação necessário."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html" text="Gerenciar funções"
 
 >[!IMPORTANT]
@@ -123,8 +123,8 @@ O vídeo a seguir tem como objetivo ajudá-lo a entender a criação de uma nova
 >[!CONTEXTUALHELP]
 >id="platform_permissions_apicredentials_about"
 >title="O que são credenciais de API?"
->abstract="As credenciais de API são atribuídas às funções para conceder aos usuários e desenvolvedores acesso às APIs da Platform. Usando as APIs da Platform, é possível executar programaticamente operações CRUD (criação, leitura, atualização e exclusão) básicas em dados, como configurar atributos calculados, acessar dados e entidades, exportar dados, excluir dados ou lotes desnecessários e muito mais."
->additional-url="https://experienceleague.adobe.com/pt-br/docs/experience-platform/landing/platform-apis/api-guide" text="Guia da API da Platform"
+>abstract="As credenciais da API são atribuídas a funções para conceder aos usuários e desenvolvedores acesso às APIs do Experience Platform. Usando APIs do Experience Platform, você pode executar programaticamente operações básicas de CRUD (Criar, Ler, Atualizar, Excluir) em dados, como configurar atributos calculados, acessar dados/entidades, exportar dados, excluir dados ou lotes desnecessários e muito mais."
+>additional-url="https://experienceleague.adobe.com/pt-br/docs/experience-platform/landing/platform-apis/api-guide" text="Guia da API do Experience Platform"
 
 >[!IMPORTANT]
 >

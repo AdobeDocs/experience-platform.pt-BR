@@ -4,31 +4,31 @@ title: Guia completo do controle de acesso baseado em atributos
 description: Este documento fornece um guia completo sobre o controle de acesso baseado em atributos no Adobe Experience Platform
 role: Developer
 exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
-source-git-commit: 74980c6108a32ec6736ab5892d89590e04e8a500
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1593'
-ht-degree: 7%
+source-wordcount: '1603'
+ht-degree: 4%
 
 ---
 
 # Guia completo do controle de acesso baseado em atributos
 
-Use o controle de acesso baseado em atributos no Adobe Experience Platform para oferecer a si mesmo e a outros clientes preocupados com a privacidade de várias marcas maior flexibilidade para gerenciar o acesso dos usuários. O acesso a objetos individuais, como campos de esquema e públicos-alvo, pode ser concedido com políticas baseadas nos atributos e na função do objeto. Esse recurso permite conceder ou revogar o acesso a objetos individuais para usuários específicos da Platform em sua organização.
+Use o controle de acesso baseado em atributos no Adobe Experience Platform para oferecer a si mesmo e a outros clientes preocupados com a privacidade de várias marcas maior flexibilidade para gerenciar o acesso dos usuários. O acesso a objetos individuais, como campos de esquema e públicos-alvo, pode ser concedido com políticas baseadas nos atributos e na função do objeto. Esse recurso permite conceder ou revogar o acesso a objetos individuais para usuários específicos da Experience Platform em sua organização.
 
 Essa funcionalidade permite categorizar campos de esquema, públicos-alvo etc. com rótulos que definem escopos organizacionais ou de uso de dados. Você pode aplicar esses mesmos rótulos a jornadas, Ofertas e outros objetos no Adobe Journey Optimizer. Em paralelo, os administradores podem definir políticas de acesso em torno dos campos de esquema do Experience Data Model (XDM) e gerenciar melhor quais usuários ou grupos (usuários internos, externos ou de terceiros) podem acessar esses campos.
 
 >[!NOTE]
 >
->Este documento se concentra no caso de uso de políticas de controle de acesso. Se você estiver tentando configurar políticas para controlar o **uso** de dados, em vez de quais usuários da Platform têm acesso a eles, consulte o manual completo sobre [governança de dados](../../data-governance/e2e.md).
+>Este documento se concentra no caso de uso de políticas de controle de acesso. Se você estiver tentando configurar políticas para controlar o **uso** de dados, em vez de quais usuários do Experience Platform têm acesso a eles, consulte o manual completo sobre [governança de dados](../../data-governance/e2e.md).
 
 ## Introdução
 
-Este tutorial requer uma compreensão funcional dos seguintes componentes da Platform:
+Este tutorial requer uma compreensão funcional dos seguintes componentes do Experience Platform:
 
 * [[!DNL Experience Data Model (XDM)] Sistema](../../xdm/home.md): a estrutura padronizada pela qual o Experience Platform organiza os dados de experiência do cliente.
    * [Noções básicas sobre a composição de esquema](../../xdm/schema/composition.md): saiba mais sobre os blocos de construção básicos de esquemas XDM, incluindo princípios-chave e práticas recomendadas na composição de esquema.
    * [Tutorial do Editor de esquemas](../../xdm/tutorials/create-schema-ui.md): saiba como criar esquemas personalizados usando a interface do Editor de esquemas.
-* [Serviço de segmentação do Adobe Experience Platform](../../segmentation/home.md): o mecanismo de segmentação do [!DNL Platform] usado para criar segmentos de público-alvo a partir dos perfis do cliente com base nos comportamentos e atributos do cliente.
+* [Serviço de segmentação do Adobe Experience Platform](../../segmentation/home.md): o mecanismo de segmentação do [!DNL Experience Platform] usado para criar segmentos de público-alvo a partir dos perfis do cliente com base nos comportamentos e atributos do cliente.
 
 ### Visão geral do caso de uso
 
@@ -55,21 +55,21 @@ Através das [!UICONTROL Permissões], é possível criar e gerenciar funções 
 
 Entre em contato com o administrador do sistema para obter acesso se você não tiver privilégios de administrador.
 
-Depois que você tiver privilégios de administrador, vá para [Adobe Experience Cloud](https://experience.adobe.com/) e entre usando suas credenciais da Adobe. Depois de conectado, a página **[!UICONTROL Visão geral]** é exibida para a sua organização para a qual você tem privilégios de administrador. Esta página mostra os produtos nos quais sua organização está inscrita, juntamente com outros controles para adicionar usuários e administradores à organização. Selecione **[!UICONTROL Permissões]** para abrir o espaço de trabalho para a integração com a Platform.
+Depois que você tiver privilégios de administrador, vá para [Adobe Experience Cloud](https://experience.adobe.com/) e entre usando suas credenciais da Adobe. Depois de conectado, a página **[!UICONTROL Visão geral]** é exibida para a sua organização para a qual você tem privilégios de administrador. Esta página mostra os produtos nos quais sua organização está inscrita, juntamente com outros controles para adicionar usuários e administradores à organização. Selecione **[!UICONTROL Permissões]** para abrir o espaço de trabalho para a integração com o Experience Platform.
 
 ![Imagem mostrando o produto de Permissões sendo selecionado no Adobe Experience Cloud](../images/flac-ui/flac-select-product.png)
 
-O espaço de trabalho de Permissões para a interface do usuário da Platform é exibido, abrindo na página **[!UICONTROL Visão geral]**.
+O espaço de trabalho de Permissões para a interface do Experience Platform é exibido, abrindo na página **[!UICONTROL Visão geral]**.
 
 ## Aplicar rótulos a uma função {#label-roles}
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_labels_about"
 >title="O que são rótulos?"
->abstract="Use rótulos para categorizar conjuntos de dados e campos de acordo com as políticas de uso e acesso aplicáveis. A Platform fornece vários rótulos de uso de dados <strong>essenciais</strong>, os quais são definidos pela Adobe e abrangem uma ampla variedade de restrições comuns aplicáveis à governança de dados. Por exemplo, rótulos sensíveis <strong>S</strong> como os de dados de saúde regulamentados (RHD) permitem categorizar dados referentes a informações de saúde protegidas (PHI). Também é possível definir seus próprios rótulos personalizados para atender às necessidades de sua organização."
+>abstract="Use rótulos para categorizar conjuntos de dados e campos de acordo com as políticas de uso e acesso aplicáveis. A Adobe Experience Platform fornece vários rótulos de uso de dados do <strong>core</strong> definidos pela Adobe, que abrangem uma grande variedade de restrições comuns aplicáveis à governança de dados. Por exemplo, rótulos sensíveis <strong>S</strong> como os de dados de saúde regulamentados (RHD) permitem categorizar dados referentes a informações de saúde protegidas (PHI). Também é possível definir seus próprios rótulos personalizados para atender às necessidades de sua organização."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=pt-BR#understanding-data-usage-labels" text="Visão geral dos rótulos de uso de dados"
 
-Funções são maneiras de categorizar os tipos de usuários que interagem com sua instância da Platform e são blocos fundamentais das políticas de controle de acesso. Uma função tem determinado conjunto de permissões, e os membros da sua organização podem ser atribuídos a uma ou mais funções, dependendo do escopo de acesso de que precisam.
+Funções são maneiras de categorizar os tipos de usuários que interagem com sua instância do Experience Platform e são blocos fundamentais das políticas de controle de acesso. Uma função tem determinado conjunto de permissões, e os membros da sua organização podem ser atribuídos a uma ou mais funções, dependendo do escopo de acesso de que precisam.
 
 Para começar, selecione **[!UICONTROL Funções]** na navegação à esquerda e selecione **[!UICONTROL Grupo Funcional ACME]**.
 
@@ -144,7 +144,7 @@ Repita as etapas acima com **[!UICONTROL Insulina &lt;50]**.
 
 ## Ativar a política de controle de acesso {#policy}
 
-A política de controle de acesso padrão aproveitará os rótulos para definir quais funções de usuário têm acesso a recursos específicos da plataforma. Neste exemplo, o acesso a campos de esquema e públicos-alvo será negado em todas as sandboxes para usuários que não estejam em uma função que tenha os rótulos correspondentes no campo de esquema.
+A política de controle de acesso padrão utilizará rótulos para definir quais funções de usuário têm acesso a recursos específicos do Experience Platform. Neste exemplo, o acesso a campos de esquema e públicos-alvo será negado em todas as sandboxes para usuários que não estejam em uma função que tenha os rótulos correspondentes no campo de esquema.
 
 Para ativar a política de controle de acesso, selecione [!UICONTROL Permissões] na navegação à esquerda e selecione **[!UICONTROL Políticas]**.
 
@@ -192,7 +192,7 @@ A confirmação da ativação da política é recebida e você retorna à págin
 >title="Edit conditions"
 >abstract="Apply conditional statements to your policy to configure user access to certain resources. Select match all to require users to have roles with the same labels as a resource to be permitted access. Select match any to require users to have a role with just one label matching a label on a resource. Labels can either be defined as core or custom labels, with core labels representing labels created and provided by Adobe and custom labels representing labels that you created for your organization."
 
-Access control policies leverage labels to define which user roles have access to specific Platform resources. Policies can either be local or global and can override other policies. In this example, access to schema fields and segments will be denied in all sandboxes for users who don't have the corresponding labels in the schema field.
+Access control policies leverage labels to define which user roles have access to specific Experience Platform resources. Policies can either be local or global and can override other policies. In this example, access to schema fields and segments will be denied in all sandboxes for users who don't have the corresponding labels in the schema field.
 
 >[!NOTE]
 >
@@ -218,7 +218,7 @@ The table below shows the conditions available when creating a policy:
 | The following being true| When 'Permit access to' is set, access will be permitted if the user meets the selected criteria. |
 | Matches any| The user has a label that matches any label applied to a resource. |
 | Matches all| The user has all labels that matches all labels applied to a resource. |
-| Core label| A core label is an Adobe-defined label that is available in all Platform instances.|
+| Core label| A core label is an Adobe-defined label that is available in all Experience Platform instances.|
 | Custom label| A custom label is a label that has been created by your organization.|
 
 Select **[!UICONTROL The following being false]** and then select **[!UICONTROL No attribute selected]**. Next, select the user **[!UICONTROL Core label]**, then select **[!UICONTROL Matches all]**. Select the resource **[!UICONTROL Core label]** and finally select **[!UICONTROL Add resource]**.

@@ -1,12 +1,12 @@
 ---
 description: Saiba como usar modelos na interface do usuário do Adobe Experience Platform para acelerar seu processo de assimilação de dados para dados B2B.
 title: Criar um fluxo de dados de origem usando modelos na interface
-badge1: "Beta"
+badge1: Beta
 exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2241'
-ht-degree: 10%
+source-wordcount: '2250'
+ht-degree: 9%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 10%
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_marketo_mapping"
->title="Modelos para fontes na interface da Platform"
+>title="Modelos para fontes na interface do usuário do Experience Platform"
 >abstract="Os modelos incluem ativos gerados automaticamente, como esquemas, conjuntos de dados, identidades, regras de mapeamento, namespaces de identidade e fluxos de dados que você pode usar ao trazer dados de uma fonte para a Experience Platform. É possível atualizar ativos gerados automaticamente para personalização de acordo com seus casos de uso."
 
 >[!IMPORTANT]
@@ -27,7 +27,7 @@ ht-degree: 10%
 >
 >A documentação e as funcionalidades estão sujeitas a alterações.
 
-A Adobe Experience Platform fornece modelos pré-configurados que você pode usar para acelerar o processo de assimilação de dados. Os modelos incluem ativos gerados automaticamente, como esquemas, conjuntos de dados, identidades, regras de mapeamento, namespaces de identidade e fluxos de dados que você pode usar ao trazer dados de uma origem para o Experience Platform.
+A Adobe Experience Platform fornece modelos pré-configurados que você pode usar para acelerar o processo de assimilação de dados. Os modelos incluem ativos gerados automaticamente, como esquemas, conjuntos de dados, identidades, regras de mapeamento, namespaces de identidade e fluxos de dados que você pode usar ao trazer dados de uma origem para a Experience Platform.
 
 Com os modelos, é possível:
 
@@ -35,17 +35,17 @@ Com os modelos, é possível:
 * Minimize os erros que podem ocorrer durante o processo manual de assimilação de dados.
 * Atualize ativos gerados automaticamente em qualquer ponto para atender aos seus casos de uso.
 
-O tutorial a seguir fornece etapas sobre como usar modelos na interface do usuário da Platform.
+O tutorial a seguir fornece etapas sobre como usar modelos na interface do usuário do Experience Platform.
 
 ## Introdução
 
-Este tutorial requer um entendimento prático dos seguintes componentes do Experience Platform:
+Este tutorial requer uma compreensão funcional dos seguintes componentes do Experience Platform:
 
-* [Fontes](../../home.md): o Experience Platform permite que os dados sejam assimilados de várias fontes e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma.
+* [Fontes](../../home.md): o Experience Platform permite a assimilação de dados de várias fontes, ao mesmo tempo em que fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços do Experience Platform.
 * [[!DNL Experience Data Model (XDM)] Sistema](../../../xdm/home.md): a estrutura padronizada pela qual o Experience Platform organiza os dados de experiência do cliente.
-* [Sandboxes](../../../sandboxes/home.md): o Experience Platform fornece sandboxes virtuais que particionam uma única instância da Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
+* [Sandboxes](../../../sandboxes/home.md): a Experience Platform fornece sandboxes virtuais que particionam uma única instância do Experience Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
-## Usar modelos na interface da Platform {#use-templates-in-the-platform-ui}
+## Usar modelos na interface do usuário do Experience Platform {#use-templates-in-the-platform-ui}
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_templates_accounttype"
@@ -53,13 +53,13 @@ Este tutorial requer um entendimento prático dos seguintes componentes do Exper
 >abstract="Selecione o tipo de empresa apropriado para seu caso de uso. O acesso pode variar dependendo da conta de assinatura da Real-time Customer Data Platform."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=pt-BR" text="Visão geral da Real-Time CDP"
 
-Na interface da Platform, selecione **[!UICONTROL Fontes]** na navegação à esquerda para acessar o espaço de trabalho [!UICONTROL Fontes] e ver um catálogo de fontes disponíveis no Experience Platform.
+Na interface do usuário do Experience Platform, selecione **[!UICONTROL Fontes]** na navegação à esquerda para acessar o espaço de trabalho [!UICONTROL Fontes] e ver um catálogo de fontes disponíveis no Experience Platform.
 
 Use o menu *[!UICONTROL Categorias]* para filtrar fontes por categoria. Como alternativa, insira um nome de origem na barra de pesquisa para localizar uma origem específica do catálogo.
 
-Vá para a categoria [!UICONTROL Adobe applications] para ver o cartão de origem [!DNL Marketo Engage] e selecione [!UICONTROL Adicionar dados] para começar.
+Vá para a categoria [!UICONTROL aplicativos Adobe] para ver o cartão de origem [!DNL Marketo Engage] e selecione [!UICONTROL Adicionar dados] para começar.
 
-![Um catálogo do espaço de trabalho de origens com a origem de Marketo Engage realçada.](../../images/tutorials/templates/catalog.png)
+![Um catálogo do espaço de trabalho de origens com a origem do Marketo Engage realçada.](../../images/tutorials/templates/catalog.png)
 
 Uma janela pop-up é exibida, apresentando a opção de procurar modelos ou usar esquemas e conjuntos de dados existentes.
 
@@ -237,7 +237,7 @@ Você pode usar a visualização do editor de esquemas para atualizar o esquema 
 >
 >![Uma lista de fluxos de dados existentes no catálogo de fluxos de dados do espaço de trabalho de fontes.](../../images/tutorials/templates/dataflows.png)
 
-### Publish seu fluxo de dados
+### Publicar seu fluxo de dados
 
 Comece o processo de publicação navegando pelo fluxo de trabalho de origens. Depois de selecionar [!UICONTROL Atualizar fluxo de dados], você será direcionado para a etapa *[!UICONTROL Adicionar dados]* do fluxo de trabalho. Selecione **[!UICONTROL Avançar]** para continuar.
 
@@ -267,8 +267,8 @@ Seguindo este tutorial, você criou fluxos de dados, bem como ativos como esquem
 
 Os modelos são compatíveis com os Alertas do Adobe Experience Platform e você pode usar o painel de notificações para receber atualizações sobre o status dos ativos e também para navegar de volta para a página de revisão.
 
-Selecione o ícone de notificação no cabeçalho superior da interface do Platform e selecione o alerta de status para ver os ativos que deseja revisar.
+Selecione o ícone de notificação no cabeçalho superior da interface do usuário do Experience Platform e selecione o alerta de status para ver os ativos que deseja revisar.
 
-![O painel de notificações na interface do usuário da Platform com uma notificação alertando um fluxo de dados com falha foi realçado.](../../images/tutorials/templates/notifications.png)
+![O painel de notificações na interface do Experience Platform com uma notificação alertando um fluxo de dados com falha foi realçado.](../../images/tutorials/templates/notifications.png)
 
-Você pode atualizar as configurações de alerta de seus modelos para receber notificações por email e na plataforma sobre o status dos fluxos de dados. Para obter mais informações sobre como configurar alertas, leia o manual sobre [como assinar alertas para fluxos de dados de fontes](../ui/alerts.md).
+Você pode atualizar as configurações de alerta de seus modelos para receber notificações por email e no Experience Platform sobre o status dos fluxos de dados. Para obter mais informações sobre como configurar alertas, leia o manual sobre [como assinar alertas para fluxos de dados de fontes](../ui/alerts.md).

@@ -3,9 +3,9 @@ title: Guia da interface de políticas de mesclagem
 type: Documentation
 description: Saiba como trabalhar com políticas de mesclagem usando a interface do usuário do Adobe Experience Platform.
 exl-id: 0489217a-6a53-428c-a531-fd0a0e5bb71f
-source-git-commit: 400b20578e9a13fa2f41462b188707a34a462ea9
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2455'
+source-wordcount: '2458'
 ht-degree: 2%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 2%
 
 # Guia da interface de políticas de mesclagem
 
-O Adobe Experience Platform permite reunir fragmentos de dados de várias fontes e combiná-los para obter uma visualização completa de cada cliente individual. Ao reunir esses dados, as políticas de mesclagem são as regras que [!DNL Platform] usa para determinar como os dados serão priorizados e quais dados serão combinados para criar a exibição unificada.
+O Adobe Experience Platform permite reunir fragmentos de dados de várias fontes e combiná-los para obter uma visualização completa de cada cliente individual. Ao reunir esses dados, as políticas de mesclagem são as regras que [!DNL Experience Platform] usa para determinar como os dados serão priorizados e quais dados serão combinados para criar a exibição unificada.
 
 Usando APIs RESTful ou a interface do usuário, você pode criar novas políticas de mesclagem, gerenciar políticas existentes e definir uma política de mesclagem padrão para sua organização. Este guia fornece instruções passo a passo para trabalhar com políticas de mesclagem usando a interface do usuário do Adobe Experience Platform.
 
@@ -24,15 +24,15 @@ Para saber mais sobre as políticas de mesclagem e a função que elas desempenh
 Este guia requer uma compreensão funcional de vários recursos importantes do [!DNL Experience Platform]. Antes de seguir este guia, consulte a documentação dos seguintes serviços:
 
 * [Perfil de cliente em tempo real](../home.md): fornece um perfil de cliente unificado em tempo real com base em dados agregados de várias fontes.
-* [Adobe Experience Platform Identity Service](../../identity-service/home.md): habilita o Perfil de Cliente em Tempo Real unindo identidades de diferentes fontes de dados que estão sendo assimiladas em [!DNL Platform].
-* [Experience Data Model (XDM)](../../xdm/home.md): a estrutura padronizada pela qual o [!DNL Platform] organiza os dados de experiência do cliente.
+* [Adobe Experience Platform Identity Service](../../identity-service/home.md): habilita o Perfil de Cliente em Tempo Real unindo identidades de diferentes fontes de dados que estão sendo assimiladas em [!DNL Experience Platform].
+* [Experience Data Model (XDM)](../../xdm/home.md): a estrutura padronizada pela qual o [!DNL Experience Platform] organiza os dados de experiência do cliente.
 
 ## Exibir políticas de mesclagem {#view-merge-policies}
 
 >[!CONTEXTUALHELP]
 >id="platform_errors_uplib_101221_404"
 >title="Política de mesclagem não encontrada"
->abstract="Isso significa que a Platform não encontrou a política de mesclagem solicitada. Para resolver esse erro, tente uma das seguintes soluções:<ul><li>Verifique se a ID da política de mesclagem correta está listada no URL.</li><li>Verifique se você tem a combinação correta de organização e sandbox para a política de mesclagem que está tentando acessar.</li></ul>"
+>abstract="Isso significa que o Experience Platform não pôde encontrar a política de mesclagem solicitada. Para resolver esse erro, tente uma das seguintes soluções:<ul><li>Verifique se a ID da política de mesclagem correta está listada no URL.</li><li>Verifique se você tem a combinação correta de organização e sandbox para a política de mesclagem que está tentando acessar.</li></ul>"
 
 Na interface do usuário do [!DNL Experience Platform], você pode começar a trabalhar com políticas de mesclagem selecionando **[!UICONTROL Perfis]** na navegação à esquerda e selecionando a guia **[!UICONTROL Políticas de mesclagem]**.
 
@@ -77,7 +77,7 @@ Ao criar ou editar uma política de mesclagem, você pode exibir o esquema de un
 
 ![O botão &quot;Exibir Esquema de União&quot; está realçado no fluxo de trabalho Nova política de mesclagem.](../images/merge-policies/view-union-schema.png)
 
-Isso abre a caixa de diálogo [!UICONTROL Exibir esquema de união], mostrando todos os esquemas de contribuição, identidades e relações associados ao esquema de união. Você pode usar a caixa de diálogo para explorar o esquema de união da mesma maneira que faria ao acessar a guia [!UICONTROL Esquema de união] na seção [!UICONTROL Perfis] da interface do usuário da Platform.
+Isso abre a caixa de diálogo [!UICONTROL Exibir esquema de união], mostrando todos os esquemas de contribuição, identidades e relações associados ao esquema de união. Você pode usar a caixa de diálogo para explorar o esquema de união da mesma maneira que faria ao acessar a guia [!UICONTROL Esquema de união] na seção [!UICONTROL Perfis] da interface do Experience Platform.
 
 Para obter informações detalhadas sobre esquemas de união, incluindo como interagir com eles na guia [!UICONTROL Esquema de união] ou na caixa de diálogo [!UICONTROL Exibir esquema de união] mostrada no fluxo de trabalho de políticas de mesclagem, visite o [guia da interface do esquema de união](../ui/union-schema.md).
 
@@ -207,7 +207,7 @@ Depois de fazer as alterações necessárias, revise sua política de mesclagem 
 
 ## Violações da política de governança de dados
 
-Ao criar ou atualizar uma política de mesclagem, uma verificação é executada para determinar se a política de mesclagem viola qualquer uma das políticas de uso de dados definidas pela organização. As políticas de uso de dados fazem parte da Governança de dados da Adobe Experience Platform e são regras que descrevem os tipos de ações de marketing que você tem permissão ou restrição para executar em dados específicos do [!DNL Platform].
+Ao criar ou atualizar uma política de mesclagem, uma verificação é executada para determinar se a política de mesclagem viola qualquer uma das políticas de uso de dados definidas pela organização. As políticas de uso de dados fazem parte da Governança de dados da Adobe Experience Platform e são regras que descrevem os tipos de ações de marketing que você tem permissão ou restrição para executar em dados específicos do [!DNL Experience Platform].
 
 Por exemplo, se uma política de mesclagem fosse usada para criar um público-alvo que fosse ativado para um destino de terceiros, e sua organização tivesse uma política de uso de dados que impedia a exportação de dados específicos para terceiros, você receberia uma notificação **[!UICONTROL Violação da política de governança de dados detectada]** ao tentar salvar sua política de mesclagem.
 
@@ -217,4 +217,4 @@ Para saber mais sobre como a governança de dados é realizada no Adobe Experien
 
 ## Próximas etapas
 
-Agora que você criou e configurou políticas de mesclagem para sua organização, é possível usá-las para ajustar a visualização de perfis de clientes na Platform e para criar públicos-alvo a partir dos dados do perfil. Consulte a [visão geral da segmentação](../../segmentation/home.md) para obter mais informações sobre como criar e trabalhar com públicos usando a interface e as APIs do [!DNL Experience Platform].
+Agora que você criou e configurou políticas de mesclagem para sua organização, é possível usá-las para ajustar a visualização de perfis de clientes no Experience Platform e para criar públicos-alvo a partir dos dados do perfil. Consulte a [visão geral da segmentação](../../segmentation/home.md) para obter mais informações sobre como criar e trabalhar com públicos usando a interface e as APIs do [!DNL Experience Platform].

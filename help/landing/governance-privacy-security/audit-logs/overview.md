@@ -4,10 +4,10 @@ description: Saiba como os logs de auditoria permitem ver quem realizou quais a�
 role: Admin,Developer
 feature: Audits
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: 9bc80c2ee01e7a739db55cc7fc77ea19e609b265
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1466'
-ht-degree: 31%
+source-wordcount: '1476'
+ht-degree: 26%
 
 ---
 
@@ -16,19 +16,19 @@ ht-degree: 31%
 >[!CONTEXTUALHELP]
 >id="platform_audits_privacyconsole_actions"
 >title="Principais ações"
->abstract="Esse widget mostra os principais tipos de ações que foram realizadas na Experience Platform no período selecionado. Para ver a lista completa de ações registradas na Platform, selecione **Auditorias** no painel de navegação esquerdo."
+>abstract="Esse widget mostra os principais tipos de ações que foram realizadas na Experience Platform no período selecionado. Para ver a lista completa de ações registradas no Experience Platform, selecione **Auditorias** na navegação à esquerda."
 
 >[!CONTEXTUALHELP]
 >id="platform_audits_privacyconsole_users"
 >title="Principais usuários"
->abstract="Esse widget mostra os usuários que executaram mais ações na Experience Platform no período selecionado. Para ver a lista completa de ações registradas na Platform, selecione **Auditorias** no painel de navegação esquerdo."
+>abstract="Esse widget mostra os usuários que executaram mais ações na Experience Platform no período selecionado. Para ver a lista completa de ações registradas no Experience Platform, selecione **Auditorias** na navegação à esquerda."
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_audits_description"
->title="Monitorar atividades do usuário na Platform"
->abstract="<h2>Descrição</h2><p>Você pode monitorar a atividade do usuário em vários serviços e recursos da Platform no formato de logs de auditoria. Esses logs formam uma trilha de auditoria que registra <b>quem</b> executou <b>que</b> ação e <b>quando</b>. Os logs de auditoria podem ajudar na solução de problemas na Platform e auxiliar sua empresa a cumprir efetivamente com as políticas corporativas de gerenciamento de dados e os requisitos regulatórios.</p>"
+>title="Monitorar atividades do usuário no Experience Platform"
+>abstract="<h2>Descrição</h2><p>Você pode monitorar a atividade do usuário para vários serviços e recursos da Experience Platform na forma de logs de auditoria. Esses logs formam uma trilha de auditoria que registra <b>quem</b> executou <b>que</b> ação e <b>quando</b>. Os logs de auditoria podem ajudar na solução de problemas no Experience Platform e ajudar sua empresa a cumprir com as políticas corporativas de gerenciamento de dados e os requisitos normativos.</p>"
 
-Para aumentar a transparência e a visibilidade das atividades realizadas no sistema, o Adobe Experience Platform permite auditar a atividade do usuário em vários serviços e recursos na forma de &quot;logs de auditoria&quot;. Esses registros formam uma trilha de auditoria que pode ajudar na solução de problemas na plataforma e ajudar sua empresa a cumprir com as políticas corporativas de gerenciamento de dados e os requisitos normativos.
+Para aumentar a transparência e a visibilidade das atividades realizadas no sistema, o Adobe Experience Platform permite auditar a atividade do usuário em vários serviços e recursos na forma de &quot;logs de auditoria&quot;. Esses registros formam uma trilha de auditoria que pode ajudar na solução de problemas no Experience Platform e ajudar sua empresa a cumprir com as políticas corporativas de gerenciamento de dados e os requisitos normativos.
 
 Basicamente, um log de auditoria informa **quem** executou a ação **o que** e **quando**. Cada ação registrada em um log contém metadados que indicam o tipo de ação, a data e a hora, a ID do email do usuário que executou a ação e atributos adicionais relevantes ao tipo de ação.
 
@@ -36,7 +36,7 @@ Basicamente, um log de auditoria informa **quem** executou a ação **o que** e 
 >
 > Os metadados para as ações **Adicionar usuário** e **Remover usuário** dentro do recurso **Função** não conterão a ID de email do usuário que executou a ação. Em vez disso, os logs exibirão a ID de email gerada pelo sistema (system@adobe.com).
 
-Este documento aborda logs de auditoria na Platform, incluindo como visualizá-los e gerenciá-los na interface ou na API.
+Este documento aborda logs de auditoria no Experience Platform, incluindo como visualizá-los e gerenciá-los na interface ou na API.
 
 ## Tipos de evento capturados por logs de auditoria {#category}
 
@@ -74,7 +74,7 @@ A tabela a seguir descreve quais ações em quais recursos são registrados por 
 
 Quando o recurso é ativado para sua organização, os logs de auditoria são coletados automaticamente conforme a atividade ocorre. Não é necessário ativar manualmente a coleção de logs.
 
-Para exibir e exportar logs de auditoria, você deve ter a permissão de controle de acesso **[!UICONTROL Exibir Log de Atividade do Usuário]** concedida (encontrada na categoria [!UICONTROL Governança de Dados]). Para saber como gerenciar permissões individuais para recursos da Platform, consulte a [documentação de controle de acesso](../../../access-control/home.md).
+Para exibir e exportar logs de auditoria, você deve ter a permissão de controle de acesso **[!UICONTROL Exibir Log de Atividade do Usuário]** concedida (encontrada na categoria [!UICONTROL Governança de Dados]). Para saber como gerenciar permissões individuais para recursos do Experience Platform, consulte a [documentação de controle de acesso](../../../access-control/home.md).
 
 ## Gerenciamento de logs de auditoria na interface {#managing-audit-logs-in-the-ui}
 
@@ -83,7 +83,7 @@ Para exibir e exportar logs de auditoria, você deve ter a permissão de control
 >title="Instruções"
 >abstract="<ul><li>Selecione <b>Auditorias</b> no painel de navegação esquerdo. O espaço de trabalho Auditorias mostra uma lista de logs registrados e por padrão classificados do mais recente para o menos recente.</li>   <li> OBSERVAÇÃO: Os logs de auditoria são retidos por 365 dias após o que serão excluídos do sistema. Portanto, você só pode voltar por um período máximo de 365 dias. Se precisar consultar dados com mais de 365 dias, exporte logs regularmente para atender aos requisitos de política interna. </li><li>Selecione um evento na lista para exibir seus detalhes no painel direito. </li><li>Selecione o ícone de funil para exibir uma lista de controles de filtro para ajudar a limitar os resultados. Somente os últimos 1.000 registros são exibidos, independentemente dos filtros selecionados. </li><li>Para exportar a lista atual de logs de auditoria, selecione **Baixar log**.</li><li>Para obter mais ajuda com esse recurso, consulte <a href="https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/audit-logs/overview.html?lang=pt-BR">visão geral dos logs de auditoria</a> na Experience League.</li></ul>"
 
-Você pode visualizar logs de auditoria para diferentes recursos do Experience Platform no espaço de trabalho **[!UICONTROL Auditorias]** na interface do usuário da plataforma. O espaço de trabalho mostra uma lista de logs registrados, por padrão, classificados do mais recente ao menos recente.
+Você pode exibir logs de auditoria para diferentes recursos do Experience Platform no espaço de trabalho **[!UICONTROL Auditorias]** na interface do usuário do Experience Platform. O espaço de trabalho mostra uma lista de logs registrados, por padrão, classificados do mais recente ao menos recente.
 
 ![O painel Auditorias destacando Auditorias no menu esquerdo.](../../images/audit-logs/audits.png)
 
@@ -171,7 +171,7 @@ Para saber como gerenciar logs de auditoria para atividades no Adobe Admin Conso
 
 ## Próximas etapas e recursos adicionais
 
-Este guia abordou como gerenciar logs de auditoria no Experience Platform. Para obter mais informações sobre como monitorar as atividades da Platform, consulte a documentação sobre [Insights de capacidade de observação](../../../observability/home.md) e [assimilação de dados de monitoramento](../../../ingestion/quality/monitor-data-ingestion.md).
+Este guia abordou como gerenciar logs de auditoria no Experience Platform. Para obter mais informações sobre como monitorar as atividades do Experience Platform, consulte a documentação sobre [Insights de capacidade de observação](../../../observability/home.md) e [assimilação de dados de monitoramento](../../../ingestion/quality/monitor-data-ingestion.md).
 
 Para reforçar sua compreensão de logs de auditoria no Experience Platform, assista ao seguinte vídeo:
 

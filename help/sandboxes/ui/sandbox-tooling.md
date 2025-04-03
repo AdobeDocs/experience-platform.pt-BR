@@ -2,9 +2,9 @@
 title: Ferramentas de sandbox
 description: Exporte e importe configurações de sandbox facilmente entre sandboxes.
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: 85476ea8a667cf3e74cd7a24da07d81c635e1628
+source-git-commit: 3cedf019cff7ef0aa06da1242798a533196f9b2a
 workflow-type: tm+mt
-source-wordcount: '2431'
+source-wordcount: '2485'
 ht-degree: 7%
 
 ---
@@ -23,7 +23,7 @@ Você pode usar o recurso de ferramenta sandbox para selecionar objetos diferent
 
 O recurso de ferramenta de sandbox fornece a capacidade de exportar objetos [!DNL Adobe Real-Time Customer Data Platform] e [!DNL Adobe Journey Optimizer] para um pacote.
 
-### Objetos do Real-time Customer Data Platform {#real-time-cdp-objects}
+### Objetos da Real-time Customer Data Platform {#real-time-cdp-objects}
 
 A tabela abaixo lista [!DNL Adobe Real-Time Customer Data Platform] objetos que atualmente têm suporte para ferramentas de sandbox:
 
@@ -31,7 +31,7 @@ A tabela abaixo lista [!DNL Adobe Real-Time Customer Data Platform] objetos que 
 | --- | --- | --- |
 | Plataforma de dados do cliente | Origens | As credenciais da conta de origem não são replicadas na sandbox de destino por motivos de segurança e precisarão ser atualizadas manualmente. O fluxo de dados de origem é copiado em um status de rascunho por padrão. |
 | Plataforma de dados do cliente | Públicos-alvo | Somente o **[!UICONTROL Público-alvo do cliente]** do tipo **[!UICONTROL Serviço de segmentação]** é suportado. Os rótulos existentes para consentimento e governança serão copiados no mesmo trabalho de importação. O sistema selecionará automaticamente a Política de mesclagem padrão na sandbox de destino com a mesma classe XDM ao verificar as dependências da política de mesclagem. |
-| Plataforma de dados do cliente | Identidades | O sistema deduplicará automaticamente os namespaces de identidade padrão do Adobe ao criar na sandbox de destino. Os públicos só podem ser copiados quando todos os atributos nas regras de público-alvo estão habilitados no esquema de união. Os esquemas necessários devem ser movidos e ativados para o perfil unificado primeiro. |
+| Plataforma de dados do cliente | Identidades | O sistema eliminará automaticamente a duplicação de namespaces de identidade padrão do Adobe ao criar na sandbox de destino. Os públicos só podem ser copiados quando todos os atributos nas regras de público-alvo estão habilitados no esquema de união. Os esquemas necessários devem ser movidos e ativados para o perfil unificado primeiro. |
 | Plataforma de dados do cliente | Esquemas | Os rótulos existentes para consentimento e governança serão copiados no mesmo trabalho de importação. O usuário tem a flexibilidade de importar esquemas sem a opção Perfil unificado ativada. O caso de borda das relações de esquema não está incluído no pacote. |
 | Plataforma de dados do cliente | Conjuntos de dados | Os conjuntos de dados são copiados com a configuração de perfil unificado desativada por padrão. |
 | Plataforma de dados do cliente | Políticas de consentimento e governança | Adicionar políticas personalizadas criadas por um usuário a um pacote e movê-las para sandboxes. |
@@ -60,6 +60,7 @@ A tabela abaixo lista [!DNL Adobe Journey Optimizer] objetos que atualmente têm
 | [!DNL Adobe Journey Optimizer] | Jornada | Adicionar uma jornada inteira a um pacote copiará a maioria dos objetos dos quais a jornada depende, incluindo públicos, esquemas, eventos e ações. |
 | [!DNL Adobe Journey Optimizer] | Modelo de conteúdo | Um template de conteúdo pode ser copiado como um objeto dependente do objeto de jornada. Modelos independentes permitem reutilizar facilmente o conteúdo personalizado em campanhas e jornadas do Journey Optimizer. |
 | [!DNL Adobe Journey Optimizer] | Fragmento | Um fragmento pode ser copiado como um objeto dependente do objeto de jornada. Os fragmentos são componentes reutilizáveis que podem ser referenciados em um ou mais emails em campanhas e jornadas do Journey Optimizer. |
+| [!DNL Adobe Journey Optimizer] | Campanhas | As campanhas podem ser copiadas junto com todos os itens relacionados ao perfil, público-alvo, esquema, mensagens embutidas e objetos dependentes. Alguns itens não são copiados, como itens de decisão, rótulos de uso de dados e configurações de idioma. Para obter uma lista completa de objetos que não podem ser copiados, consulte o guia [exportação de objetos para outra sandbox](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox). |
 
 As superfícies (por exemplo, predefinições) não são copiadas. O sistema seleciona automaticamente a correspondência mais próxima possível na sandbox de destino com base no tipo de mensagem e no nome da superfície. Se não houver superfícies encontradas na sandbox de destino, a cópia de superfície falhará, fazendo com que a cópia da mensagem falhe, pois uma mensagem requer que uma superfície esteja disponível para configuração. Nesse caso, pelo menos uma superfície precisa ser criada para o canal direito da mensagem para que a cópia funcione.
 
@@ -114,13 +115,13 @@ A caixa de diálogo **[!UICONTROL Adicionar ao pacote]** é exibida. Selecione a
 
 Caixa de diálogo ![[!UICONTROL Adicionar ao pacote], mostrando um pacote selecionado na lista suspensa.](../images/ui/sandbox-tooling/add-to-existing-package.png)
 
-A lista de objetos adicionados ao pacote é listada. Para publicar o pacote e disponibilizá-lo para importação em sandboxes, selecione **[!UICONTROL Publish]**.
+A lista de objetos adicionados ao pacote é listada. Para publicar o pacote e disponibilizá-lo para importação em sandboxes, selecione **[!UICONTROL Publicar]**.
 
-![Uma lista de objetos no pacote, destacando a opção [!UICONTROL Publish].](../images/ui/sandbox-tooling/publish-package.png)
+![Uma lista de objetos no pacote, destacando a opção [!UICONTROL Publicar].](../images/ui/sandbox-tooling/publish-package.png)
 
-Selecione **[!UICONTROL Publish]** para confirmar a publicação do pacote.
+Selecione **[!UICONTROL Publicar]** para confirmar a publicação do pacote.
 
-Caixa de diálogo de confirmação do pacote do ![Publish, destacando a opção [!UICONTROL Publish].](../images/ui/sandbox-tooling/publish-package-confirmation.png)
+![Caixa de diálogo de confirmação de publicação do pacote, destacando a opção [!UICONTROL Publicar].](../images/ui/sandbox-tooling/publish-package-confirmation.png)
 
 >[!NOTE]
 >
@@ -174,7 +175,7 @@ Você retornou à página [!UICONTROL Dependências e objeto de pacote]. Aqui, s
 
 >[!NOTE]
 >
->Atualmente, somente objetos do Real-time Customer Data Platform são suportados ao exportar ou importar uma sandbox inteira. Objetos do Adobe Journey Optimizer, como jornadas, não são suportados no momento.
+>Atualmente, somente os objetos da Real-time Customer Data Platform são compatíveis ao exportar ou importar uma sandbox inteira. Objetos do Adobe Journey Optimizer, como jornadas, não são suportados no momento.
 
 Você pode exportar todos os tipos de objeto compatíveis em um pacote de sandbox completo e, em seguida, importar o pacote em várias sandboxes para replicar as configurações de objeto. Por exemplo, essa funcionalidade permite:
 
@@ -191,7 +192,7 @@ Selecione **[!UICONTROL Toda a sandbox]** para o [!UICONTROL Tipo de pacote] na 
 
 ![A caixa de diálogo [!UICONTROL Criar pacote] mostrando campos concluídos e destacando [!UICONTROL Criar].](../images/ui/sandbox-tooling/create-package-dialog.png)
 
-O pacote foi criado com êxito. Selecione **[!UICONTROL Publish]** para publicar o pacote.
+O pacote foi criado com êxito, selecione **[!UICONTROL Publicar]** para publicar o pacote.
 
 ![Lista de pacotes de sandbox que destaca o novo pacote publicado.](../images/ui/sandbox-tooling/publish-entire-sandbox-packages.png)
 
@@ -261,6 +262,6 @@ O vídeo a seguir é destinado a ajudá-lo a entender as ferramentas de sandbox 
 
 ## Próximas etapas
 
-Este documento demonstrou como usar o recurso de ferramenta sandbox na interface do usuário do Experience Platform. Para obter informações sobre sandboxes, consulte o [guia do usuário da sandbox](../ui/user-guide.md).
+Este documento demonstrou como usar o recurso de ferramenta de sandbox na interface do usuário do Experience Platform. Para obter informações sobre sandboxes, consulte o [guia do usuário da sandbox](../ui/user-guide.md).
 
 Para obter etapas sobre como executar operações diferentes usando a API de sandbox, consulte o [guia do desenvolvedor da sandbox](../api/getting-started.md). Para obter uma visão geral de alto nível das sandboxes no Experience Platform, consulte a [documentação de visão geral](../home.md).

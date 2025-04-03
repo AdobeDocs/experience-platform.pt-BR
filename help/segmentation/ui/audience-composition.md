@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guia da interface do usuário de públicos
 description: A Composição de público-alvo na interface do usuário do Adobe Experience Platform fornece um espaço de trabalho avançado que permite interagir com elementos de dados do perfil. O espaço de trabalho fornece controles intuitivos para criação e edição de públicos-alvo para sua organização.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: 758ec9de9bf3e6bb9853c9455c69e0b5ca7948d5
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '2344'
+source-wordcount: '2345'
 ht-degree: 15%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 15%
 >- Gerenciar perfis
 >- Gerenciar políticas de mesclagem
 >
->Mais informações sobre permissões na Platform podem ser encontradas na [visão geral do controle de acesso](../../access-control/home.md#permissions).
+>Mais informações sobre permissões no Experience Platform podem ser encontradas na [visão geral do controle de acesso](../../access-control/home.md#permissions).
 
 >[!NOTE]
 >

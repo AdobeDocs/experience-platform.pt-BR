@@ -2,16 +2,16 @@
 title: Perguntas frequentes do Audiences
 description: Descubra respostas para perguntas frequentes sobre públicos-alvo e outros conceitos relacionados à segmentação.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: 16ffdd0e28687c04b4b8a2b33f10ddceea9ec03a
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '4832'
+source-wordcount: '4842'
 ht-degree: 2%
 
 ---
 
 # Perguntas frequentes
 
-O Adobe Experience Platform [!DNL Segmentation Service] fornece uma interface de usuário e uma API RESTful que permite criar públicos-alvo por meio de definições de segmento ou outras fontes a partir dos dados do [!DNL Real-Time Customer Profile]. Esses públicos-alvo são configurados e mantidos centralmente na Platform e podem ser acessados prontamente por qualquer solução da Adobe. Veja a seguir uma lista das perguntas frequentes sobre públicos-alvo e segmentação.
+O Adobe Experience Platform [!DNL Segmentation Service] fornece uma interface de usuário e uma API RESTful que permite criar públicos-alvo por meio de definições de segmento ou outras fontes a partir dos dados do [!DNL Real-Time Customer Profile]. Esses públicos-alvo são configurados e mantidos de forma centralizada no Experience Platform e prontamente acessíveis por qualquer solução da Adobe. Veja a seguir uma lista das perguntas frequentes sobre públicos-alvo e segmentação.
 
 ## Portal de público-alvo
 
@@ -35,7 +35,7 @@ Para carregar públicos gerados externamente, você precisa ter as permissões &
 
 Ao fazer upload de um público gerado externamente, um conjunto de dados será criado e ficará visível no inventário do conjunto de dados. O nome do conjunto de dados será **o mesmo** do nome do público-alvo gerado externamente que você carregou.
 
-### O que é composto por um público-alvo gerado externamente e o que acontece com esses dados quando são importados para a Platform?
+### O que é composto por um público-alvo gerado externamente e o que acontece com esses dados quando são importados para o Experience Platform?
 
 Durante o fluxo de trabalho de importação de público externo, você deve especificar qual coluna no arquivo CSV corresponde à **Identidade principal**. Um exemplo de identidade primária inclui endereço de email, ECID ou um namespace de identidade personalizado específico de uma organização.
 
@@ -45,9 +45,9 @@ Todos os outros dados dentro do público gerado externamente são considerados *
 
 Embora seja possível fazer referência ao público-alvo gerado externamente ao criar públicos-alvo usando o Construtor de segmentos, os atributos de perfil individuais **não podem** ser usados.
 
-### Posso reconciliar dados de público-alvo gerados externamente com um perfil existente na Platform?
+### É possível reconciliar dados de público-alvo gerados externamente com um perfil existente no Experience Platform?
 
-Sim, o público-alvo gerado externamente será mesclado com o perfil existente na Platform se os identificadores principais corresponderem. Esses dados podem levar até 24 horas para serem reconciliados. Se os dados do perfil ainda não existirem, um novo perfil será criado à medida que os dados forem assimilados.
+Sim, o público-alvo gerado externamente será mesclado com o perfil existente no Experience Platform se os identificadores primários corresponderem. Esses dados podem levar até 24 horas para serem reconciliados. Se os dados do perfil ainda não existirem, um novo perfil será criado à medida que os dados forem assimilados.
 
 ### Como as preferências de consentimento do cliente são respeitadas para públicos-alvo gerados externamente que são importados para o Audience Portal?{#consent}
 
@@ -135,7 +135,7 @@ O gráfico a seguir explica os diferentes status do ciclo de vida, o que eles re
 | --- | --- | --- | --- | --- | --- | --- | --- | -- |
 | Rascunho | Um público no estado **Rascunho** é um público que ainda está em desenvolvimento e não está pronto para ser usado em outros serviços. | Sim, mas pode ser oculto. | Não | Sim | Podem ser importadas ou atualizadas durante o processo de refinamento. | Avaliado para obter contagens de publicação precisas. | Sim, mas não é recomendável usar. | Sim |
 | Publicado | Um público no estado **Publicado** é um público pronto para uso em todos os serviços downstream. | Sim | Sim | Sim | Pode ser importado ou atualizado. | Avaliado usando segmentação em lote, de fluxo ou de borda. | Sim | Sim |
-| Inativo | Um público no estado **Inativo** é um público que não está sendo usado no momento. Ele ainda existe na Platform, mas **não** poderá ser usado até que seja marcado como rascunho ou publicado. | Não, mas pode ser exibido. | Não | Não | Não é mais atualizado. | Não é mais avaliado ou atualizado pela Platform. | Não | Sim |
+| Inativo | Um público no estado **Inativo** é um público que não está sendo usado no momento. Ela ainda existe no Experience Platform, mas **não** poderá ser usada até que seja marcada como rascunho ou publicada. | Não, mas pode ser exibido. | Não | Não | Não é mais atualizado. | Não é mais avaliado ou atualizado pelo Experience Platform. | Não | Sim |
 | Excluído | Um público no estado **Excluído** é um público que foi excluído. A exclusão real dos dados pode levar alguns minutos para ser executada. | Não | Não | Não | Os dados subjacentes são excluídos. | Não ocorre avaliação ou execução de dados após a conclusão da exclusão. | Não | Não |
 
 ### Em quais estados posso editar meus públicos-alvo?
@@ -272,7 +272,7 @@ A seção a seguir lista perguntas relacionadas à Composição do público-alvo
 
 ### Quando devo usar a Composição de público-alvo em vez de usar o Construtor de segmentos?
 
-A composição do público-alvo e o Construtor de segmentos têm funções importantes na criação de públicos-alvo de construção na Platform.
+A composição do público-alvo e o Construtor de segmentos têm funções importantes na criação de públicos-alvo no Experience Platform.
 
 O Construtor de segmentos é mais adequado para o público-alvo **criação** (para construir um público do zero), enquanto a Composição de público-alvo é mais adequada para o público-alvo **curadoria e personalização** (para criar novos públicos com base em um público-alvo existente).
 
@@ -376,9 +376,9 @@ Como resultado, quando são feitas alterações no perfil, como a mesclagem de d
 
 Por exemplo, digamos que você tenha criado dois públicos mutuamente exclusivos: o Público-alvo A é para pessoas que vivem em Washington e o Público-alvo B é para pessoas que vivem **não** em Washington. Há dois perfis - perfil 1 para uma pessoa que mora em Washington e perfil 2 para uma pessoa que mora em Oregon.
 
-Quando o trabalho de avaliação de segmentação em lote é executado, o perfil 1 vai para o Público-alvo A, enquanto o perfil 2 vai para o Público-alvo B. Posteriormente, mas antes da execução do trabalho de avaliação de segmentação em lote do próximo dia, um evento que reconcilia os dois perfis entra na Platform. Como resultado, um único perfil mesclado que contém os perfis 1 e 2 é criado.
+Quando o trabalho de avaliação de segmentação em lote é executado, o perfil 1 vai para o Público-alvo A, enquanto o perfil 2 vai para o Público-alvo B. Posteriormente, mas antes da execução do trabalho de avaliação de segmentação em lote do próximo dia, um evento que reconcilia os dois perfis entra no Experience Platform. Como resultado, um único perfil mesclado que contém os perfis 1 e 2 é criado.
 
-Até que o próximo trabalho de avaliação de segmento em lote seja executado, o novo perfil mesclado terá uma associação de público-alvo em **ambos** perfil 1 e perfil 2. Como resultado, ele se tornará um membro de **ambos** o Público-alvo A e o Público-alvo B, apesar do fato de que esses públicos-alvo têm definições contraditórias. Para o usuário final, esta é a **mesma situação** de antes da conexão dos perfis, pois sempre havia apenas uma pessoa envolvida, e a Platform **não** tinha informações suficientes para conectar os dois perfis.
+Até que o próximo trabalho de avaliação de segmento em lote seja executado, o novo perfil mesclado terá uma associação de público-alvo em **ambos** perfil 1 e perfil 2. Como resultado, ele se tornará um membro de **ambos** o Público-alvo A e o Público-alvo B, apesar do fato de que esses públicos-alvo têm definições contraditórias. Para o usuário final, esta é a **mesma situação** de antes da conexão dos perfis, pois sempre havia apenas uma pessoa envolvida, e o Experience Platform **não** tinha informações suficientes para conectar os dois perfis.
 
 Se você usar a pesquisa de perfil para recuperar o perfil recém-criado e examinar sua associação de público-alvo, ela mostrará que é um membro de **ambos** o Público-alvo A e o Público B, apesar do fato de que esses dois públicos-alvo têm definições contraditórias. Quando o trabalho diário de avaliação da segmentação em lote for executado, a associação de público-alvo será atualizada para refletir esse estado atualizado dos dados do perfil.
 
@@ -430,4 +430,4 @@ Leva até uma hora para uma definição de segmento estar disponível.
 
 ### Existem limitações para os dados que estão sendo transmitidos?
 
-Para que os dados transmitidos sejam usados na segmentação por transmissão, **deve** haver um espaçamento entre os eventos transmitidos. Se muitos eventos forem transmitidos no mesmo segundo, a Platform tratará esses eventos como dados gerados pelo bot e eles serão descartados. Como prática recomendada, você deve ter **pelo menos** cinco segundos entre os dados do evento para garantir que os dados sejam usados corretamente.
+Para que os dados transmitidos sejam usados na segmentação por transmissão, **deve** haver um espaçamento entre os eventos transmitidos. Se muitos eventos forem transmitidos no mesmo segundo, o Experience Platform tratará esses eventos como dados gerados por bot e eles serão descartados. Como prática recomendada, você deve ter **pelo menos** cinco segundos entre os dados do evento para garantir que os dados sejam usados corretamente.

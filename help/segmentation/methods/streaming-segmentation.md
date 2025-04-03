@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guia de segmentação de streaming
 description: Saiba mais sobre a segmentação por transmissão, incluindo o que é, como criar um público avaliado usando a segmentação por transmissão e como visualizar seus públicos criados usando a segmentação por transmissão.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: 3f0cfd6c36344f481751bf05236df4fb288eab60
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '1253'
+source-wordcount: '1256'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 A segmentação de transmissão é a capacidade de avaliar públicos-alvo no Adobe Experience Platform em tempo quase real, concentrando-se na riqueza de dados.
 
-Com a segmentação por transmissão, a qualificação de público-alvo agora acontece à medida que os dados de transmissão chegam à Platform, reduzindo a necessidade de agendar e executar trabalhos de segmentação. Isso permite avaliar os dados conforme eles são transmitidos para a Platform, permitindo que a associação do público-alvo seja mantida atualizada automaticamente.
+Com a segmentação por transmissão, a qualificação de público-alvo agora acontece à medida que os dados de transmissão chegam ao Experience Platform, reduzindo a necessidade de agendar e executar trabalhos de segmentação. Isso permite avaliar os dados conforme eles são transmitidos para o Experience Platform, permitindo que a associação do público-alvo seja mantida atualizada automaticamente.
 
 ## Tipos de consulta elegíveis {#query-types}
 
@@ -312,7 +312,7 @@ Nos filtros disponíveis, vá para **[!UICONTROL Atualizar frequência]** e sele
 
 ![A frequência de atualização de streaming está selecionada, exibindo todos os públicos-alvo na organização que são avaliados por meio da segmentação de streaming.](../images/methods/streaming/filter-streaming.png)
 
-Para saber mais sobre como visualizar públicos-alvo na Platform, leia o [Guia do Portal de Público-Alvo](../ui/audience-portal.md).
+Para saber mais sobre como exibir públicos-alvo no Experience Platform, leia o [Guia do Portal de Público-Alvo](../ui/audience-portal.md).
 
 >[!ENDTABS]
 

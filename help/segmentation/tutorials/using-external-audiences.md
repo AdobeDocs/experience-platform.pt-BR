@@ -5,9 +5,9 @@ description: Siga este tutorial para saber como usar públicos externos com o Ad
 exl-id: 56fc8bd3-3e62-4a09-bb9c-6caf0523f3fe
 hide: true
 hidefromtoc: true
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '1724'
+source-wordcount: '1732'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Este tutorial requer uma compreensão funcional dos vários serviços do [!DNL A
 
 - [Serviço de segmentação](../home.md): permite que você crie públicos-alvo a partir dos dados do Perfil do cliente em tempo real.
 - [Perfil de cliente em tempo real](../../profile/home.md): fornece um perfil de cliente unificado em tempo real com base em dados agregados de várias fontes.
-- [Experience Data Model (XDM)](../../xdm/home.md): a estrutura padronizada pela qual a Platform organiza os dados de experiência do cliente. Para melhor usar a Segmentação, verifique se seus dados são assimilados como perfis e eventos de acordo com as [práticas recomendadas para modelagem de dados](../../xdm/schema/best-practices.md).
+- [Experience Data Model (XDM)](../../xdm/home.md): a estrutura padronizada pela qual a Experience Platform organiza os dados de experiência do cliente. Para melhor usar a Segmentação, verifique se seus dados são assimilados como perfis e eventos de acordo com as [práticas recomendadas para modelagem de dados](../../xdm/schema/best-practices.md).
 - [Conjuntos de dados](../../catalog/datasets/overview.md): a construção de armazenamento e gerenciamento para a persistência de dados no Experience Platform.
 - [Assimilação por streaming](../../ingestion/streaming-ingestion/overview.md): como o Experience Platform assimila e armazena dados de dispositivos no lado do cliente e do servidor em tempo real.
 
@@ -44,7 +44,7 @@ As definições de segmento incluem informações como nome, descrição, expres
 
 ## Criar um namespace de identidade para o público externo
 
-A primeira etapa para usar públicos-alvo externos é criar um namespace de identidade. Os namespaces de identidade permitem que a Platform associe de onde um público-alvo se origina.
+A primeira etapa para usar públicos-alvo externos é criar um namespace de identidade. Os namespaces de identidade permitem que o Experience Platform associe de onde um público-alvo se origina.
 
 Para criar um namespace de identidade, siga as instruções no [guia de namespace de identidade](../../identity-service/features/namespaces.md#manage-namespaces). Ao criar seu namespace de identidade, adicione os detalhes de origem ao namespace de identidade e marque seu [!UICONTROL Type] como um **[!UICONTROL Identificador não pessoal]**.
 
@@ -70,7 +70,7 @@ Depois de marcar o campo `_id` como a identidade principal, selecione o título 
 
 ![A opção para habilitar o esquema para Perfil está realçada no Editor de Esquemas.](../images/tutorials/external-audiences/schema-profile.png)
 
-Agora, esse esquema é ativado para Perfil, com a identificação principal atribuída ao namespace de identidade que não é de pessoa que você criou. Como resultado, isso significa que os metadados de segmento importados para a Platform usando esse esquema serão assimilados no Perfil sem serem mesclados com outros dados de perfil relacionados às pessoas.
+Agora, esse esquema é ativado para Perfil, com a identificação principal atribuída ao namespace de identidade que não é de pessoa que você criou. Como resultado, isso significa que os metadados de segmento importados para o Experience Platform usando esse esquema serão assimilados no Perfil sem serem mesclados com outros dados de perfil relacionados às pessoas.
 
 ## Criar um conjunto de dados para o esquema
 
@@ -86,7 +86,7 @@ Depois de criar o conjunto de dados, continue seguindo as instruções no [guia 
 
 ## Configurar e importar dados de público
 
-Com o conjunto de dados ativado, os dados agora podem ser enviados para a Platform por meio da interface do usuário ou usando as APIs de Experience Platform. Você pode assimilar esses dados por meio de uma conexão em lote ou de transmissão.
+Com o conjunto de dados ativado, os dados agora podem ser enviados para a Experience Platform por meio da interface do usuário ou usando as APIs do Experience Platform. Você pode assimilar esses dados por meio de uma conexão em lote ou de transmissão.
 
 ### Assimilar dados usando uma conexão em lote
 
@@ -102,7 +102,7 @@ Depois de criar a conexão de streaming, você terá acesso ao terminal de strea
 
 ## Estrutura de metadados de público
 
-Depois de criar uma conexão, você pode assimilar seus dados na Platform.
+Depois de criar uma conexão, você pode assimilar seus dados na Experience Platform.
 
 Uma amostra dos metadados da carga do público-alvo externo pode ser vista abaixo:
 
@@ -163,7 +163,7 @@ Agora que você pode usar públicos-alvo externos nos segmentos, pode usar o Con
 
 ## Apêndice
 
-Além de usar metadados de público-alvo externo importados e usá-los para criar segmentos, você também pode importar associações de segmento externo para a Platform.
+Além de usar metadados de público-alvo externo importados e usá-los para criar segmentos, você também pode importar associações de segmento externo para o Experience Platform.
 
 ### Configurar um esquema de destino de associação de segmento externo
 
@@ -193,7 +193,7 @@ Depois de criar o conjunto de dados, continue seguindo as instruções no [guia 
 
 ## Configurar e importar dados de associação de público externo
 
-Com o conjunto de dados ativado, os dados agora podem ser enviados para a Platform por meio da interface do usuário ou usando as APIs de Experience Platform. Você pode assimilar esses dados por meio de uma conexão em lote ou de transmissão.
+Com o conjunto de dados ativado, os dados agora podem ser enviados para a Experience Platform por meio da interface do usuário ou usando as APIs do Experience Platform. Você pode assimilar esses dados por meio de uma conexão em lote ou de transmissão.
 
 ### Assimilar dados usando uma conexão em lote
 
@@ -209,7 +209,7 @@ Depois de criar a conexão de streaming, você terá acesso ao terminal de strea
 
 ## Estrutura de associação de segmento
 
-Depois de criar uma conexão, você pode assimilar seus dados na Platform.
+Depois de criar uma conexão, você pode assimilar seus dados na Experience Platform.
 
 Um exemplo da carga de associação do público-alvo externo pode ser visto abaixo:
 

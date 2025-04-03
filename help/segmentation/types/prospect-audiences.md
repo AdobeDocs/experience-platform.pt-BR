@@ -3,9 +3,9 @@ title: Públicos-alvo potenciais
 description: Saiba como criar e usar públicos-alvo potenciais para direcionar clientes desconhecidos usando informações de terceiros.
 type: Documentation
 exl-id: b48cc0cf-f1c4-46fe-bb1d-cad53a9439dc
-source-git-commit: 78cb7fd24b858859226c737affbb4e93783c884d
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '392'
+source-wordcount: '393'
 ht-degree: 2%
 
 ---
@@ -56,7 +56,7 @@ Para obter mais informações sobre como usar o Construtor de segmentos, leia o 
 
 ## Casos de uso sugeridos {#use-cases}
 
-Para saber como você pode usar a funcionalidade de públicos-alvo potenciais no Experience Platform em combinação com outra funcionalidade da Platform, leia a documentação do caso de uso a seguir:
+Para saber como você pode usar a funcionalidade de públicos-alvo potenciais no Experience Platform em combinação com outra funcionalidade do Experience Platform, leia a documentação do caso de uso a seguir:
 
 - [Envolver e adquirir novos clientes por meio da funcionalidade de prospecção](../../rtcdp/partner-data/prospecting.md)
 

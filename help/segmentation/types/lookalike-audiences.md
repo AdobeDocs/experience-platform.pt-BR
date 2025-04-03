@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Públicos-alvo semelhantes
 description: Saiba como direcionar novos públicos-alvo de alto valor no Adobe Experience Platform usando públicos-alvo semelhantes.
 exl-id: c43dac6c-18a0-482f-803e-b75e1b211e98
-source-git-commit: f981b26a468a1d5ab9931a9cce59b176cd0fd9b3
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '2192'
+source-wordcount: '2193'
 ht-degree: 9%
 
 ---
@@ -33,7 +33,7 @@ Antes de começar a usar públicos-alvo semelhantes, compreenda os seguintes con
 
 Para usar insights semelhantes, o público base **deve** atender aos seguintes critérios de qualificação:
 
-- O público-alvo base **deve** ser criado dentro da Platform.
+- A audiência base **deve** ser criada no Experience Platform.
    - Públicos gerados externamente **não** qualificados para insights semelhantes.
 - O público-alvo base **deve** estar na política de mesclagem padrão.
 - O público base **deve** não usar campos restritos pela governança de dados.

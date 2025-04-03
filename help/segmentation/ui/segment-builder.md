@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guia da interface do construtor de segmentos
 description: O Construtor de segmentos na interface do usuário do Adobe Experience Platform fornece um espaço de trabalho avançado que permite a interação com elementos de dados de perfil. O espaço de trabalho fornece controles intuitivos para criar e editar regras, como arrastar e soltar blocos usados para representar propriedades de dados.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: dc36c5e2eb109d1728f2290ee61e69f458929ba7
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '4976'
-ht-degree: 8%
+source-wordcount: '4980'
+ht-degree: 7%
 
 ---
 
@@ -76,11 +76,11 @@ Por padrão, somente os campos de esquema preenchidos no armazenamento de dados 
 
 Você pode usar dados de um único conjunto de relatórios do Adobe Analytics ou de vários conjuntos de relatórios como eventos dentro da segmentação.
 
-Ao usar dados de um único conjunto de relatórios do Analytics, a Platform adicionará automaticamente descritores e nomes amigáveis às eVars, facilitando a localização desses campos no [!DNL Segment Builder].
+Ao usar dados de um único conjunto de relatórios do Analytics, o Experience Platform adicionará automaticamente descritores e nomes amigáveis às eVars, facilitando a localização desses campos no [!DNL Segment Builder].
 
 ![Uma imagem que mostra como as variáveis genéricas (eVars) são mapeadas com um nome amigável.](../images/ui/segment-builder/single-report-suite.png)
 
-Ao usar dados de vários conjuntos de relatórios do Analytics, a Platform **não pode** adicionar automaticamente descritores ou nomes amigáveis às eVars. Como resultado, antes de usar os dados dos conjuntos de relatórios do Analytics, você deve mapear para campos XDM. Mais informações sobre como mapear variáveis do Analytics para o XDM podem ser encontradas no [guia de conexão de origem do Adobe Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md#mapping).
+Ao usar dados de vários conjuntos de relatórios do Analytics, o Experience Platform **não pode** adicionar automaticamente descritores ou nomes amigáveis às eVars. Como resultado, antes de usar os dados dos conjuntos de relatórios do Analytics, você deve mapear para campos XDM. Mais informações sobre como mapear variáveis do Analytics para o XDM podem ser encontradas no [guia de conexão de origem do Adobe Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md#mapping).
 
 Por exemplo, considere uma situação em que você tinha dois conjuntos de relatórios com as seguintes variáveis:
 
@@ -119,7 +119,7 @@ Depois que os conjuntos de relatórios forem mapeados, você poderá usar esses 
 
 >[!NOTE]
 >
->Para públicos criados na Platform, somente os públicos com a **mesma** política de mesclagem serão exibidos.
+>Para públicos criados no Experience Platform, somente os públicos com a **mesma** política de mesclagem serão exibidos.
 
 A guia **[!UICONTROL Públicos-alvo]** lista todos os públicos-alvo importados de fontes externas, como Adobe Audience Manager ou Customer Journey Analytics, bem como os públicos-alvo criados em [!DNL Experience Platform].
 
@@ -182,7 +182,7 @@ Observe que há um máximo de 250 valores permitidos. Se você exceder esse valo
 
 Você pode arrastar e soltar um público-alvo da guia **[!UICONTROL Público-alvo]** na tela do construtor de regras para fazer referência à associação de público-alvo na nova definição de segmento. Isso permite incluir ou excluir a associação de público-alvo como um atributo nas novas regras de definição de segmento.
 
-Para [!DNL Platform] públicos-alvo criados com o [!DNL Segment Builder], você tem a opção de converter o público-alvo para o conjunto de regras que foram usadas na definição de segmento desse público-alvo. Essa conversão faz uma cópia da lógica da regra, que pode ser modificada sem afetar a definição do segmento original. Certifique-se de ter salvo as alterações recentes na definição do segmento antes de convertê-lo na lógica da regra.
+Para [!DNL Experience Platform] públicos-alvo criados com o [!DNL Segment Builder], você tem a opção de converter o público-alvo para o conjunto de regras que foram usadas na definição de segmento desse público-alvo. Essa conversão faz uma cópia da lógica da regra, que pode ser modificada sem afetar a definição do segmento original. Certifique-se de ter salvo as alterações recentes na definição do segmento antes de convertê-lo na lógica da regra.
 
 >[!NOTE]
 >
@@ -349,11 +349,11 @@ Depois de selecionar **[!UICONTROL Decodificar contêiner]**, o contêiner filho
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_createSegment_segmentBuilder_mergePolicies"
 >title="Mesclar políticas"
->abstract="Uma política de mesclagem permite mesclar diferentes conjuntos de dados para formar o perfil. A Platform fornece uma política de mesclagem padrão, mas você também pode criar uma nova política de mesclagem padrão em Perfis. Escolha uma política de mesclagem que corresponda à sua finalidade de marketing para este público-alvo."
+>abstract="Uma política de mesclagem permite mesclar diferentes conjuntos de dados para formar o perfil. A Experience Platform forneceu uma política de mesclagem padrão ou você pode criar uma nova política de mesclagem padrão em Perfis. Escolha uma política de mesclagem que corresponda à sua finalidade de marketing para este público-alvo."
 
-O [!DNL Experience Platform] permite reunir dados de várias fontes e combiná-los para obter uma visão completa de cada cliente individual. Ao reunir esses dados, as políticas de mesclagem são as regras que [!DNL Platform] usa para determinar como os dados serão priorizados e quais dados serão combinados para criar um perfil.
+O [!DNL Experience Platform] permite reunir dados de várias fontes e combiná-los para obter uma visão completa de cada cliente individual. Ao reunir esses dados, as políticas de mesclagem são as regras que [!DNL Experience Platform] usa para determinar como os dados serão priorizados e quais dados serão combinados para criar um perfil.
 
-Você pode selecionar uma política de mesclagem que corresponda à sua finalidade de marketing para este público ou usar a política de mesclagem padrão fornecida por [!DNL Platform]. É possível criar várias políticas de mesclagem exclusivas para sua organização, incluindo a criação de sua própria política de mesclagem padrão. Para obter instruções passo a passo sobre como criar políticas de mesclagem para sua organização, comece lendo a [visão geral das políticas de mesclagem](../../profile/merge-policies/overview.md).
+Você pode selecionar uma política de mesclagem que corresponda à sua finalidade de marketing para este público ou usar a política de mesclagem padrão fornecida por [!DNL Experience Platform]. É possível criar várias políticas de mesclagem exclusivas para sua organização, incluindo a criação de sua própria política de mesclagem padrão. Para obter instruções passo a passo sobre como criar políticas de mesclagem para sua organização, comece lendo a [visão geral das políticas de mesclagem](../../profile/merge-policies/overview.md).
 
 Para selecionar uma política de mesclagem para a definição do segmento, selecione o ícone de engrenagem na guia **[!UICONTROL Campos]** e use o menu suspenso **[!UICONTROL Política de mesclagem]** para selecionar a política de mesclagem que deseja usar.
 

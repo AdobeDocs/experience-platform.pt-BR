@@ -2,18 +2,18 @@
 keywords: Experience Platform;página inicial;tópicos populares;segmentação;Segmentação;Correspondência de segmentos;correspondência de segmentos
 solution: Experience Platform
 title: Visão geral da correspondência de segmentos
-description: A Correspondência de segmentos é um serviço de compartilhamento de segmentos no Adobe Experience Platform que permite que dois ou mais usuários da Platform troquem dados de segmento de maneira segura, controlada e compatível com a privacidade.
+description: A Correspondência de segmentos é um serviço de compartilhamento de segmentos no Adobe Experience Platform que permite que dois ou mais usuários do Experience Platform troquem dados de segmento de maneira segura, controlada e compatível com a privacidade.
 exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
-source-git-commit: b82bbdf7957e5a8d331d61f02293efdaf878971c
+source-git-commit: 0a9028beca36b46d6228c0038366bbac5d32603c
 workflow-type: tm+mt
-source-wordcount: '1968'
+source-wordcount: '1978'
 ht-degree: 2%
 
 ---
 
 # Visão geral do [!DNL Segment Match]
 
-A correspondência de segmentos do Adobe Experience Platform é um serviço de compartilhamento de segmentos que permite que dois ou mais usuários da Platform troquem dados de segmento de maneira segura, controlada e compatível com a privacidade. O [!DNL Segment Match] usa os padrões de privacidade da Platform e identificadores pessoais, como emails com hash, números de telefone com hash e identificadores de dispositivos, como IDFAs e GAIDs.
+A Correspondência de segmentos do Adobe Experience Platform é um serviço de compartilhamento de segmentos que permite que dois ou mais usuários do Experience Platform troquem dados de segmento de maneira segura, controlada e compatível com a privacidade. O [!DNL Segment Match] usa os padrões de privacidade da Experience Platform e identificadores pessoais, como emails com hash, números de telefone com hash e identificadores de dispositivos, como IDFAs e GAIDs.
 
 Com [!DNL Segment Match] você pode:
 
@@ -44,9 +44,9 @@ A lista de namespaces compatíveis é a seguinte:
 
 | Namespace | Descrição |
 | --------- | ----------- |
-| Emails (SHA256, em letras minúsculas) | Um namespace para o endereço de email com hash prévio. Os valores fornecidos neste namespace são convertidos em minúsculas antes do hash com SHA256. Espaços à esquerda e à direita precisam ser cortados antes da normalização de um endereço de email. Esta configuração não pode ser alterada retroativamente. A Platform oferece dois métodos de hash de suporte na coleta de dados, por meio de [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html#hashing-support) e por meio de [preparação de dados](../../../data-prep/functions.md#hashing). |
+| Emails (SHA256, em letras minúsculas) | Um namespace para o endereço de email com hash prévio. Os valores fornecidos neste namespace são convertidos em minúsculas antes do hash com SHA256. Espaços à esquerda e à direita precisam ser cortados antes da normalização de um endereço de email. Esta configuração não pode ser alterada retroativamente. A Experience Platform oferece dois métodos de hash de suporte na coleta de dados, por meio de [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html#hashing-support) e por meio de [preparação de dados](../../../data-prep/functions.md#hashing). |
 | Telefone (SHA256_E.164) | Um namespace que representa números de telefone brutos que precisam de hash usando os formatos SHA256 e E.164. |
-| ECID | Um namespace que representa um valor de ID de Experience Cloud (ECID). Esse namespace também pode ser referenciado pelos seguintes aliases: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Consulte a [visão geral da ECID](../../../identity-service/features/ecid.md) para obter mais informações. |
+| ECID | Um namespace que representa um valor de Experience Cloud ID (ECID). Esse namespace também pode ser referenciado pelos seguintes aliases: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Consulte a [visão geral da ECID](../../../identity-service/features/ecid.md) para obter mais informações. |
 | Apple IDFA (ID para anunciantes) | Um namespace que representa a Apple ID para anunciantes. Consulte o seguinte documento em [anúncios baseados em interesses](https://support.apple.com/en-us/HT202074) para obter mais informações. |
 | ID Google Ad | Um namespace que representa uma Google Advertising ID. Consulte o seguinte documento no [Google Advertising ID](https://support.google.com/googleplay/android-developer/answer/6048248?hl=en) para obter mais informações. |
 
@@ -56,7 +56,7 @@ Você deve fornecer uma configuração de consentimento e definir seu valor padr
 
 A verificação de consentimento de aceitação e recusa determina se você pode operar com o consentimento para compartilhar dados do usuário por padrão. Se o padrão de configuração de consentimento for definido como `opt-out`, os dados do usuário poderão ser compartilhados, a menos que um usuário recuse explicitamente. Se o padrão estiver definido como `opt-in`, os dados do usuário não poderão ser compartilhados, a menos que um usuário opte explicitamente por participar.
 
-A configuração de consentimento padrão para [!DNL Segment Match] está definida como `opt-out`. Para aplicar um modelo de aceitação para seus dados, envie uma solicitação por email para a equipe de conta do Adobe.
+A configuração de consentimento padrão para [!DNL Segment Match] está definida como `opt-out`. Para aplicar um modelo de aceitação para seus dados, envie uma solicitação por email para a equipe de conta da Adobe.
 
 Para obter mais informações sobre o atributo `share` usado para definir o valor de consentimento de compartilhamento de dados, consulte a documentação a seguir no [grupo de campos de privacidade e consentimentos](../../../xdm/field-groups/profile/consents.md). Para obter informações sobre o grupo de campos específico usado para registrar o consentimento do consumidor para a coleta e uso de dados relacionados à privacidade, personalização e preferências de marketing, consulte o seguinte [Exemplo de consentimento para privacidade, Personalization e Preferências de marketing do GitHub](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/consent/consent-preferences.schema.md).
 
@@ -64,7 +64,7 @@ Para obter mais informações sobre o atributo `share` usado para definir o valo
 
 O último pré-requisito que você deve estabelecer é configurar um novo rótulo de uso de dados para impedir o compartilhamento de dados. Por meio dos rótulos de uso de dados, você pode gerenciar quais dados podem ser compartilhados por meio do [!DNL Segment Match].
 
-Os rótulos de uso de dados permitem categorizar conjuntos de dados e campos de acordo com as políticas de uso que se aplicam a esses dados. Os rótulos podem ser aplicados a qualquer momento, proporcionando flexibilidade na maneira como você escolhe controlar os dados. As práticas recomendadas incentivam a rotulação de dados assim que eles forem assimilados no Experience Platform ou assim que os dados estiverem disponíveis para uso na plataforma.
+Os rótulos de uso de dados permitem categorizar conjuntos de dados e campos de acordo com as políticas de uso que se aplicam a esses dados. Os rótulos podem ser aplicados a qualquer momento, proporcionando flexibilidade na maneira como você escolhe controlar os dados. As práticas recomendadas incentivam a rotulação de dados assim que eles forem assimilados na Experience Platform ou assim que os dados estiverem disponíveis para uso no Experience Platform.
 
 [!DNL Segment Match] usa o rótulo C11, um rótulo de contrato específico para [!DNL Segment Match] que você pode adicionar manualmente a qualquer conjunto de dados ou atributo para garantir que eles sejam excluídos do processo de compartilhamento de parceiros [!DNL Segment Match]. O rótulo C11 indica dados que não devem ser usados em [!DNL Segment Match] processos. Depois de determinar quais conjuntos de dados e/ou campos você deseja excluir de [!DNL Segment Match] e adicionar o rótulo C11 de acordo, o rótulo será aplicado automaticamente pelo fluxo de trabalho [!DNL Segment Match]. [!DNL Segment Match] habilita automaticamente a [!UICONTROL Política principal Restringir compartilhamento de dados]. Para obter instruções específicas sobre como aplicar rótulos de uso de dados a conjuntos de dados, consulte o tutorial em [gerenciamento de rótulos de uso de dados na interface](../../../data-governance/labels/user-guide.md).
 
@@ -87,7 +87,7 @@ Após configurar seus dados de identidade e namespaces, a configuração de cons
 
 ### Gerenciar parceiro
 
-Na interface da Platform, selecione **[!UICONTROL Segmentos]** no menu de navegação esquerdo e selecione **[!UICONTROL Feeds]** no cabeçalho superior.
+Na interface do usuário do Experience Platform, selecione **[!UICONTROL Segmentos]** na navegação à esquerda e selecione **[!UICONTROL Feeds]** no cabeçalho superior.
 
 ![segment-feed.png](./images/segments-feed.png)
 
@@ -95,7 +95,7 @@ A página [!UICONTROL Feeds] contém uma lista de feeds recebidos de parceiros, 
 
 ![manage-partners.png](./images/manage-partners.png)
 
-Uma conexão entre dois parceiros é um &quot;handshake bidirecional&quot; que atua como um método de autoatendimento para que os usuários conectem suas organizações da Platform em conjunto no nível da sandbox. A conexão é necessária para informar à Platform que um contrato foi estabelecido e que a Platform pode facilitar o compartilhamento de serviços entre você e seu(s) parceiro(s).
+Uma conexão entre dois parceiros é um &quot;handshake bidirecional&quot; que atua como um método de autoatendimento para que os usuários conectem suas organizações da Experience Platform em conjunto no nível da sandbox. A conexão é necessária para informar à Experience Platform que um contrato foi estabelecido e que a Experience Platform pode facilitar o compartilhamento de serviços entre você e seu(s) parceiro(s).
 
 >[!NOTE]
 >
@@ -121,7 +121,7 @@ Para conectar um parceiro usando sua [!UICONTROL ID de conexão], digite o valor
 >abstract="Casos de uso restritos de marketing ajudam a fornecer orientação aos parceiros para garantir que os segmentos compartilhados sejam usados adequadamente de acordo com as restrições de governança de dados."
 >text="Learn more in documentation"
 
-Um **feed** é um agrupamento de dados (segmentos), as regras sobre como esses dados podem ser expostos ou usados e as configurações que determinam como seus dados são comparados com os dados de seus parceiros. Um feed pode ser gerenciado de forma independente e trocado com outros usuários da Platform por meio de [!DNL Segment Match].
+Um **feed** é um agrupamento de dados (segmentos), as regras sobre como esses dados podem ser expostos ou usados e as configurações que determinam como seus dados são comparados com os dados de seus parceiros. Um feed pode ser gerenciado de forma independente e trocado com outros usuários do Experience Platform por meio de [!DNL Segment Match].
 
 Para criar um novo feed, selecione **[!UICONTROL Criar feed]** no painel [!UICONTROL Feeds].
 

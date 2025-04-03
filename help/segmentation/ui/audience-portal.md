@@ -2,9 +2,9 @@
 title: Visão geral do Audience Portal
 description: Saiba como usar o Audience Portal para exibir, gerenciar e criar públicos no Adobe Experience Platform.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 9eb5ccc24db58a887473f61c66a83aa92e16efa7
+source-git-commit: c1f06b14cb33a0fc29a50a2851c1fb52ae82c45d
 workflow-type: tm+mt
-source-wordcount: '4310'
+source-wordcount: '4356'
 ht-degree: 3%
 
 ---
@@ -26,6 +26,7 @@ No Audience Portal, você pode realizar as seguintes tarefas:
    - [Usar o Construtor de segmentos para criar um público-alvo](#segment-builder)
    - [Usar composição de público-alvo para criar um público-alvo](#audience-composition)
    - [Use a Federated Audience Composition para criar um público-alvo usando dados de seu data warehouse existente](#fac)
+   - [Usar o Data Distiller para criar um público-alvo](#data-distiller)
 - [Importar públicos gerados externamente](#import-audience)
 
 Para abrir o Portal de público-alvo, selecione a guia **[!UICONTROL Procurar]** na seção Segmentação.
@@ -57,7 +58,7 @@ Ao lado de cada público há um ícone de reticências. Selecionar essa opção 
 | [!UICONTROL Editar] | Serviço de segmentação | Abre o Construtor de segmentos para editar o público-alvo. Observe que, se o público-alvo foi criado por meio da API, você **não** poderá editá-lo usando o Construtor de segmentos. Para obter mais informações sobre como usar o Construtor de segmentos, leia o [Guia da interface do Construtor de segmentos](./segment-builder.md). |
 | [!UICONTROL Abrir composição] | Composição de público-alvo | Abre a composição de Público-alvo para ver seu público-alvo. Para obter mais informações sobre a Composição de público, leia o [guia da interface da composição de público](./audience-composition.md). |
 | [!UICONTROL Ativar para destino] | Serviço de segmentação | Ativa o público-alvo para um destino. Para obter informações mais detalhadas sobre como ativar um público para um destino, leia a [visão geral da ativação](../../destinations/ui/activation-overview.md). |
-| [!UICONTROL Compartilhar com parceiros] | Composição de público-alvo, Upload personalizado, Serviço de segmentação | Compartilha seu público-alvo com outros usuários da Platform. Para obter mais informações sobre este recurso, leia a [Visão geral da correspondência de segmentos](./segment-match/overview.md). |
+| [!UICONTROL Compartilhar com parceiros] | Composição de público-alvo, Upload personalizado, Serviço de segmentação | Compartilha o público com outros usuários do Experience Platform. Para obter mais informações sobre este recurso, leia a [Visão geral da correspondência de segmentos](./segment-match/overview.md). |
 | [!UICONTROL Gerenciar marcas] | Composição de público-alvo, Upload personalizado, Serviço de segmentação | Gerencia as tags definidas pelo usuário que pertencem ao público. Para obter mais informações sobre este recurso, leia a seção sobre [filtragem e marcação](#manage-audiences). |
 | [!UICONTROL Mover para a pasta] | Composição de público-alvo, Upload personalizado, Serviço de segmentação | Gerencia a pasta à qual o público-alvo pertence. Para obter mais informações sobre este recurso, leia a seção sobre [filtragem e marcação](#manage-audiences). |
 | [!UICONTROL Copiar] | Serviço de segmentação | Duplica o público selecionado. Mais informações sobre esta função podem ser encontradas nas [Perguntas frequentes sobre segmentação](../faq.md#copy). |
@@ -274,7 +275,7 @@ Selecionar **[!UICONTROL Editar propriedades]** permitirá que você edite os de
 
 ### Total de público {#audience-total}
 
-Para públicos-alvo e composições geradas pela Platform, a seção **[!UICONTROL Audience total]** mostra o número total de perfis qualificados para o público-alvo.
+Para públicos-alvo e composições geradas pela Experience Platform, a seção **[!UICONTROL Total de público-alvo]** mostra o número total de perfis qualificados para o público-alvo.
 
 >[!NOTE]
 >
@@ -297,7 +298,7 @@ Para públicos-alvo com uma origem de **[!UICONTROL Upload personalizado]**, a s
 | Contagem de perfis | O número total de perfis qualificados para o público-alvo. |
 | Nome do conjunto de dados | O nome do conjunto de dados em que o público-alvo foi assimilado. É possível selecionar o nome do conjunto de dados para obter mais informações sobre ele. Para saber mais sobre conjuntos de dados, leia o [manual da interface do conjunto de dados](../../catalog/datasets/user-guide.md). |
 | Lote do conjunto de dados | A ID do conjunto de dados em que o público-alvo foi assimilado. Você pode selecionar a ID do lote para obter mais informações sobre o lote. Para saber mais sobre lotes, leia o [guia de assimilação de dados de monitoramento](../../ingestion/quality/monitor-data-ingestion.md#viewing-batches). |
-| Lote de perfis | A ID do lote que criou os perfis na plataforma. Você pode selecionar a ID do lote para obter mais informações sobre o lote. Para saber mais sobre lotes, leia o [guia de assimilação de dados de monitoramento](../../ingestion/quality/monitor-data-ingestion.md#viewing-batches). |
+| Lote de perfis | A ID do lote que criou os perfis no Experience Platform. Você pode selecionar a ID do lote para obter mais informações sobre o lote. Para saber mais sobre lotes, leia o [guia de assimilação de dados de monitoramento](../../ingestion/quality/monitor-data-ingestion.md#viewing-batches). |
 | Esquema | O nome do esquema ao qual o público-alvo pertence. Você pode selecionar o nome do schema para exibir informações sobre a estrutura do schema e aplicar rótulos de uso de dados. Para obter mais informações, leia o [guia de gerenciamento de uso de dados](../../xdm/tutorials/labels.md). |
 | Registros assimilados | O número de registros assimilados no conjunto de dados. |
 | Registros com falha | O número de registros que não puderam ser assimilados no conjunto de dados. |
@@ -385,9 +386,17 @@ Selecionar a **[!UICONTROL regra de compilação]** leva você ao Construtor de 
 
 ### Composição de público-alvo federado {#fac}
 
-Além das composições de público-alvo e definições de segmento, você pode usar a Adobe Federated Audience Composition para criar novos públicos-alvo a partir de conjuntos de dados corporativos sem copiar os dados subjacentes e armazená-los no Adobe Experience Platform Audience Portal. Você também pode enriquecer os públicos-alvo existentes no Adobe Experience Platform utilizando dados de público-alvo compostos que foram federados a partir do data warehouse corporativo. Leia o guia em [Composição de Público-Alvo Federado](https://experienceleague.adobe.com/pt-br/docs/federated-audience-composition/using/home).
+Você pode usar a Composição de público federado do Adobe para criar novos públicos-alvo a partir de conjuntos de dados corporativos sem copiar dados subjacentes e armazenar esses públicos-alvo no Portal de público-alvo da Adobe Experience Platform.
+
+Você também pode enriquecer os públicos-alvo existentes no Adobe Experience Platform utilizando dados de público-alvo compostos que foram federados a partir do data warehouse corporativo. Leia o guia em [Composição de Público-Alvo Federado](https://experienceleague.adobe.com/pt-br/docs/federated-audience-composition/using/home).
 
 ![Uma lista de públicos-alvo criados na Composição de Público Federado para sua organização.](../images/ui/overview/federated-audience-composition.png)
+
+### Destilador de dados {#data-distiller}
+
+Você pode usar a extensão SQL do Data Distiller para criar públicos-alvo a partir do data lake. Esses dados incluem entidades de dimensão existentes, como atributos do cliente ou informações do produto.
+
+Mais informações sobre o Data Distiller podem ser encontradas na [criação de públicos-alvo usando o guia SQL](../../query-service/data-distiller-audiences/overview.md).
 
 ## Importação de um público-alvo {#import-audience}
 
@@ -446,7 +455,7 @@ Depois de confirmar que os detalhes estão corretos, selecione **[!UICONTROL Con
 >
 >Além disso, se o público-alvo gerado externamente contiver informações confidenciais e/ou relacionadas à saúde, você **deverá** aplicar os rótulos de uso de dados necessários antes de ativá-las para qualquer destino. Como as variáveis de públicos geradas externamente são armazenadas no data lake em vez de no Perfil do cliente em tempo real, você deve **não** incluir dados de consentimento no arquivo CSV.
 >
->Para obter mais informações sobre como aplicar rótulos de uso de dados, leia a documentação em [gerenciando rótulos](../../access-control/abac/ui/labels.md). Para saber mais sobre os rótulos de uso de dados na Platform em geral, leia a [visão geral dos rótulos de uso de dados](../../data-governance/labels/overview.md). Para saber como o consentimento funciona em públicos gerados externamente, leia as [Perguntas frequentes sobre públicos-alvo](../faq.md#consent).
+>Para obter mais informações sobre como aplicar rótulos de uso de dados, leia a documentação em [gerenciando rótulos](../../access-control/abac/ui/labels.md). Para saber mais sobre os rótulos de uso de dados na Experience Platform em geral, leia a [visão geral dos rótulos de uso de dados](../../data-governance/labels/overview.md). Para saber como o consentimento funciona em públicos gerados externamente, leia as [Perguntas frequentes sobre públicos-alvo](../faq.md#consent).
 
 ## Próximas etapas
 

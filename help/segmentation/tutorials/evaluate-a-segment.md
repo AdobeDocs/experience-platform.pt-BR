@@ -4,7 +4,7 @@ title: Avaliar e acessar resultados do segmento
 type: Tutorial
 description: Siga este tutorial para saber como avaliar definições de segmento e acessar resultados da segmentação usando a API do serviço de segmentação do Adobe Experience Platform.
 exl-id: 47702819-f5f8-49a8-a35d-034ecac4dd98
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
 source-wordcount: '1594'
 ht-degree: 2%
@@ -22,25 +22,25 @@ Este tutorial requer uma compreensão funcional dos vários serviços do [!DNL A
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): fornece um perfil de cliente unificado em tempo real com base em dados agregados de várias fontes.
 - [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): permite que você compile públicos a partir de dados de [!DNL Real-Time Customer Profile].
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): a estrutura padronizada pela qual a Platform organiza os dados de experiência do cliente. Para melhor usar a Segmentação, verifique se seus dados são assimilados como perfis e eventos de acordo com as [práticas recomendadas para modelagem de dados](../../xdm/schema/best-practices.md).
-- [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] fornece sandboxes virtuais que particionam uma única instância do [!DNL Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
+- [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] fornece sandboxes virtuais que particionam uma única instância do [!DNL Experience Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
 ### Cabeçalhos obrigatórios
 
-Este tutorial também requer que você tenha concluído o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en) para fazer chamadas com êxito para as APIs [!DNL Platform]. Concluir o tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API da [!DNL Experience Platform], conforme mostrado abaixo:
+Este tutorial também requer que você tenha concluído o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en) para fazer chamadas com êxito para as APIs [!DNL Experience Platform]. Concluir o tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API da [!DNL Experience Platform], conforme mostrado abaixo:
 
 - Autorização: Portador `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id `{ORG_ID}`
 
-Todos os recursos em [!DNL Experience Platform] estão isolados em sandboxes virtuais específicas. As solicitações para [!DNL Platform] APIs exigem um cabeçalho que especifique o nome da sandbox em que a operação ocorrerá:
+Todos os recursos em [!DNL Experience Platform] estão isolados em sandboxes virtuais específicas. As solicitações para [!DNL Experience Platform] APIs exigem um cabeçalho que especifique o nome da sandbox em que a operação ocorrerá:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Para obter mais informações sobre sandboxes em [!DNL Platform], consulte a [documentação de visão geral da sandbox](../../sandboxes/home.md).
+>Para obter mais informações sobre sandboxes em [!DNL Experience Platform], consulte a [documentação de visão geral da sandbox](../../sandboxes/home.md).
 
-Todas as solicitações de POST, PUT e PATCH exigem um cabeçalho adicional:
+Todas as solicitações POST, PUT e PATCH exigem um cabeçalho adicional:
 
 - Tipo de conteúdo: application/json
 
@@ -68,7 +68,7 @@ Informações mais detalhadas sobre o uso deste ponto de extremidade podem ser e
 
 ### Ativar um agendamento
 
-Por padrão, um agendamento fica inativo quando criado, a menos que a propriedade `state` esteja definida como `active` no corpo da solicitação create (POST). Você pode habilitar um agendamento (definir `state` como `active`) fazendo uma solicitação PATCH para o ponto de extremidade `/config/schedules` e incluindo a ID do agendamento no caminho.
+Por padrão, um agendamento fica inativo quando criado, a menos que a propriedade `state` esteja definida como `active` no corpo da solicitação de criação (POST). Você pode habilitar um agendamento (definir `state` como `active`) fazendo uma solicitação PATCH para o ponto de extremidade `/config/schedules` e incluindo a ID do agendamento no caminho.
 
 Informações mais detalhadas sobre o uso deste ponto de extremidade podem ser encontradas no [manual do ponto de extremidade de agendamentos](../api/schedules.md#update-state)
 
@@ -98,7 +98,7 @@ Informações mais detalhadas sobre como usar este ponto de extremidade podem se
 
 ## Interpretar resultados do trabalho do segmento
 
-Quando trabalhos de segmento são executados com êxito, o mapa `segmentMembership` é atualizado para cada perfil incluído na definição do segmento. O `segmentMembership` também armazena quaisquer públicos pré-avaliados que sejam assimilados no [!DNL Platform], permitindo a integração com outras soluções, como o [!DNL Adobe Audience Manager].
+Quando trabalhos de segmento são executados com êxito, o mapa `segmentMembership` é atualizado para cada perfil incluído na definição do segmento. O `segmentMembership` também armazena quaisquer públicos pré-avaliados que sejam assimilados no [!DNL Experience Platform], permitindo a integração com outras soluções, como o [!DNL Adobe Audience Manager].
 
 O exemplo a seguir mostra a aparência do atributo `segmentMembership` para cada registro de perfil individual:
 
@@ -212,7 +212,7 @@ Uma resposta bem-sucedida retorna uma matriz que contém a ID exclusiva gerada p
 
 ### Gerar perfis para membros do público {#generate-profiles}
 
-Depois de ter um conjunto de dados persistente em união, você pode criar um trabalho de exportação para persistir os membros do público-alvo para o conjunto de dados fazendo uma solicitação POST para o ponto de extremidade `/export/jobs` na API [!DNL Real-Time Customer Profile] e fornecendo a ID do conjunto de dados e as informações de definição de segmento para as definições de segmento que você deseja exportar.
+Depois de ter um conjunto de dados com persistência de união, você pode criar um trabalho de exportação para persistir os membros do público-alvo para o conjunto de dados fazendo uma solicitação POST para o ponto de extremidade `/export/jobs` na API [!DNL Real-Time Customer Profile] e fornecendo a ID do conjunto de dados e as informações de definição de segmento para as definições de segmento que você deseja exportar.
 
 Informações mais detalhadas sobre o uso deste ponto de extremidade podem ser encontradas no [manual do ponto de extremidade de trabalhos de exportação](../api/export-jobs.md#create)
 

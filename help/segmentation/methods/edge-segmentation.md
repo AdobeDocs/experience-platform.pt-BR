@@ -1,15 +1,15 @@
 ---
 title: Guia de segmentação do Edge
-description: Saiba como usar a segmentação de borda para avaliar públicos na Platform instantaneamente na borda, permitindo casos de uso de personalização da mesma página e da próxima página.
+description: Saiba como usar a segmentação de borda para avaliar públicos no Experience Platform instantaneamente na borda, permitindo casos de uso de personalização da mesma página e da próxima página.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: 7ed92ed7573f82a2da2fc96f0868fe6f97a61899
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '1152'
+source-wordcount: '1154'
 ht-degree: 1%
 
 ---
 
-# Guia de segmentação do Edge
+# Guia de segmentação de borda
 
 A segmentação do Edge é a capacidade de avaliar definições de segmento no Adobe Experience Platform instantaneamente [na borda](../../landing/edge-and-hub-comparison.md), habilitando casos de uso de personalização da mesma página e da próxima página.
 
@@ -302,7 +302,7 @@ Nos filtros disponíveis, vá para **Atualizar frequência** e selecione &quot;E
 
 ![A frequência de atualização do Edge está selecionada, exibindo todos os públicos-alvo na organização que são avaliados usando a segmentação de borda.](../images/methods/edge/filter-edge.png)
 
-Para saber mais sobre como visualizar públicos-alvo na Platform, leia o [Guia do Portal de Público-Alvo](../ui/audience-portal.md).
+Para saber mais sobre como exibir públicos-alvo no Experience Platform, leia o [Guia do Portal de Público-Alvo](../ui/audience-portal.md).
 
 >[!ENDTABS]
 

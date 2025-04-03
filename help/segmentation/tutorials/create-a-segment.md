@@ -4,9 +4,9 @@ title: Criar uma definição de segmento usando a API do serviço de segmentaç�
 type: Tutorial
 description: Siga este tutorial para saber como desenvolver, testar, visualizar e salvar uma definição de segmento usando a API do serviço de segmentação do Adobe Experience Platform.
 exl-id: 78684ae0-3721-4736-99f1-a7d1660dc849
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '1066'
+source-wordcount: '1067'
 ht-degree: 6%
 
 ---
@@ -23,9 +23,9 @@ Este tutorial requer entendimento prático dos vários serviços do [!DNL Adobe 
 
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): Fornece um perfil de consumidor unificado em tempo real com base em dados agregados de várias fontes.
 - [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): permite criar públicos-alvo usando definições de segmento ou outras fontes externas dos dados do Perfil do Cliente em Tempo Real.
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): a estrutura padronizada pela qual o [!DNL Platform] organiza os dados de experiência do cliente. Para melhor usar a Segmentação, verifique se seus dados são assimilados como perfis e eventos de acordo com as [práticas recomendadas para modelagem de dados](../../xdm/schema/best-practices.md).
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): a estrutura padronizada pela qual o [!DNL Experience Platform] organiza os dados de experiência do cliente. Para melhor usar a Segmentação, verifique se seus dados são assimilados como perfis e eventos de acordo com as [práticas recomendadas para modelagem de dados](../../xdm/schema/best-practices.md).
 
-As seções a seguir fornecem informações adicionais que você precisará saber para fazer chamadas com êxito para as APIs do [!DNL Platform].
+As seções a seguir fornecem informações adicionais que você precisará saber para fazer chamadas com êxito para as APIs do [!DNL Experience Platform].
 
 ### Leitura de chamadas de API de amostra
 
@@ -33,19 +33,19 @@ Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar 
 
 ### Coletar valores para cabeçalhos necessários
 
-Para fazer chamadas para APIs do [!DNL Platform], primeiro complete o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). Concluir o tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API da [!DNL Experience Platform], conforme mostrado abaixo:
+Para fazer chamadas para APIs do [!DNL Experience Platform], primeiro complete o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). Concluir o tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API da [!DNL Experience Platform], conforme mostrado abaixo:
 
 - Autorização: Portador `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id `{ORG_ID}`
 
-Todos os recursos em [!DNL Experience Platform] estão isolados em sandboxes virtuais específicas. Todas as solicitações para [!DNL Platform] APIs exigem um cabeçalho que especifique o nome da sandbox em que a operação ocorrerá:
+Todos os recursos em [!DNL Experience Platform] estão isolados em sandboxes virtuais específicas. Todas as solicitações para [!DNL Experience Platform] APIs exigem um cabeçalho que especifique o nome da sandbox em que a operação ocorrerá:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Para obter mais informações sobre sandboxes em [!DNL Platform], consulte a [documentação de visão geral da sandbox](../../sandboxes/home.md).
+>Para obter mais informações sobre sandboxes em [!DNL Experience Platform], consulte a [documentação de visão geral da sandbox](../../sandboxes/home.md).
 
 Todas as solicitações que contêm um conteúdo (POST, PUT, PATCH) exigem um cabeçalho adicional:
 
@@ -72,7 +72,7 @@ Há duas etapas necessárias para visualizar ou obter uma estimativa da definiç
 
 ### Como as estimativas são geradas
 
-Como os dados ativados para o Perfil do cliente em tempo real são assimilados na Platform, eles são armazenados no armazenamento de dados do Perfil. Quando a assimilação de registros no armazenamento de Perfil aumenta ou diminui a contagem total de perfis em mais de 5%, um trabalho de amostragem é acionado para atualizar a contagem. Se a contagem de perfis não for alterada em mais de 5%, o trabalho de amostragem será executado automaticamente uma vez por semana.
+Como os dados ativados para o Perfil do cliente em tempo real são assimilados na Experience Platform, eles são armazenados no armazenamento de dados do Perfil. Quando a assimilação de registros no armazenamento de Perfil aumenta ou diminui a contagem total de perfis em mais de 5%, um trabalho de amostragem é acionado para atualizar a contagem. Se a contagem de perfis não for alterada em mais de 5%, o trabalho de amostragem será executado automaticamente uma vez por semana.
 
 O modo como a amostra é acionada depende do tipo de ingestão sendo usado:
 
@@ -97,7 +97,7 @@ Instruções detalhadas sobre como criar um trabalho de visualização podem ser
 
 ### Exibir uma estimativa ou visualização
 
-Os processos de estimativa e pré-visualização são executados de forma assíncrona, pois consultas diferentes podem levar períodos diferentes para serem concluídas. Depois que um query for iniciado, você poderá usar chamadas de API para recuperar (GET) o estado atual da estimativa ou pré-visualização conforme avança.
+Os processos de estimativa e pré-visualização são executados de forma assíncrona, pois consultas diferentes podem levar períodos diferentes para serem concluídas. Depois que um query é iniciado, você pode usar chamadas de API para recuperar (GET) o estado atual da estimativa ou pré-visualização conforme avança.
 
 Usando a API [!DNL Segmentation Service], você pode pesquisar o estado atual de um trabalho de visualização por sua ID. Se o estado for &quot;RESULT_READY&quot;, você poderá exibir os resultados. Para pesquisar o estado atual de um trabalho de visualização, leia a seção sobre [recuperação de uma seção de trabalho de visualização](../api/previews-and-estimates.md#get-preview) no guia de visualizações e estimativas de pontos de extremidade. Para pesquisar o estado atual de um trabalho estimado, leia a seção sobre [recuperação de um trabalho estimado](../api/previews-and-estimates.md#get-estimate) no guia de visualizações e pontos de extremidade de estimativas.
 

@@ -2,9 +2,9 @@
 title: Métodos de avaliação de público-alvo
 description: Saiba mais sobre os diferentes tipos de métodos de avaliação disponíveis no Adobe Experience Platform.
 exl-id: 54513369-42fa-4bab-803a-21d6dcd87660
-source-git-commit: 9eb5ccc24db58a887473f61c66a83aa92e16efa7
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '241'
+source-wordcount: '242'
 ht-degree: 4%
 
 ---
@@ -25,7 +25,7 @@ A avaliação flexível do público-alvo permite executar um trabalho de segment
 
 ## Segmentação de transmissão
 
-A segmentação de transmissão é um método de avaliação de segmentação que você pode usar para avaliar públicos-alvo em tempo quase real, concentrando-se na riqueza de dados. Você pode usar a segmentação de transmissão para segmentar rapidamente os dados de transmissão conforme chegam à Platform.
+A segmentação de transmissão é um método de avaliação de segmentação que você pode usar para avaliar públicos-alvo em tempo quase real, concentrando-se na riqueza de dados. Você pode usar a segmentação por transmissão para segmentar rapidamente os dados de transmissão conforme chegam ao Experience Platform.
 
 Para obter mais informações sobre a segmentação por transmissão, leia a [visão geral da segmentação por transmissão](./streaming-segmentation.md).
 

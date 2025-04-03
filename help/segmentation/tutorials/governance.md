@@ -4,7 +4,7 @@ title: Impor a conformidade do uso de dados para um segmento de público-alvo us
 type: Tutorial
 description: Este tutorial aborda as etapas para aplicar definições de segmento de conformidade de uso de dados usando APIs.
 exl-id: 2299328c-d41a-4fdc-b7ed-72891569eaf2
-source-git-commit: 914174de797d7d5f6c47769d75380c0ce5685ee2
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
 source-wordcount: '1348'
 ht-degree: 6%
@@ -19,16 +19,16 @@ Este tutorial aborda as etapas para impor a conformidade do uso de dados para de
 
 Este tutorial requer entendimento prático dos seguintes componentes do [!DNL Adobe Experience Platform]:
 
-- [[!DNL Real-Time Customer Profile]](../../profile/home.md): [!DNL Real-Time Customer Profile] é um repositório de entidade de pesquisa genérico e é usado para gerenciar dados de [!DNL Experience Data Model (XDM)] em [!DNL Platform]. O perfil mescla dados em vários ativos de dados corporativos e fornece acesso a esses dados em uma apresentação unificada.
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md): [!DNL Real-Time Customer Profile] é um repositório de entidade de pesquisa genérico e é usado para gerenciar dados de [!DNL Experience Data Model (XDM)] em [!DNL Experience Platform]. O perfil mescla dados em vários ativos de dados corporativos e fornece acesso a esses dados em uma apresentação unificada.
    - [Políticas de mesclagem](../../profile/api/merge-policies.md): regras usadas por [!DNL Real-Time Customer Profile] para determinar quais dados podem ser mesclados em uma exibição unificada em determinadas condições. As políticas de mesclagem podem ser configuradas para fins de governança de dados.
 - [[!DNL Segmentation]](../home.md): Como o [!DNL Real-Time Customer Profile] divide um grande grupo de indivíduos contidos no armazenamento de Perfil em grupos menores que compartilham características semelhantes e responderão de forma semelhante às estratégias de marketing.
 - [Governança de Dados](../../data-governance/home.md): a Governança de Dados fornece a infraestrutura para rotulagem e aplicação de uso de dados, usando os seguintes componentes:
    - [Rótulos de uso de dados](../../data-governance/labels/user-guide.md): rótulos usados para descrever conjuntos de dados e campos em termos do nível de sensibilidade com que tratar seus respectivos dados.
    - [Políticas de uso de dados](../../data-governance/policies/overview.md): configurações que indicam quais ações de marketing são permitidas em dados categorizados por rótulos de uso de dados específicos.
    - [Imposição de política](../../data-governance/enforcement/overview.md): permite que você imponha políticas de uso de dados e impeça operações de dados que constituam violações de política.
-- [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] fornece sandboxes virtuais que particionam uma única instância do [!DNL Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
+- [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] fornece sandboxes virtuais que particionam uma única instância do [!DNL Experience Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
-As seções a seguir fornecem informações adicionais que você precisará saber para fazer chamadas com êxito para as APIs do [!DNL Platform].
+As seções a seguir fornecem informações adicionais que você precisará saber para fazer chamadas com êxito para as APIs do [!DNL Experience Platform].
 
 ### Leitura de chamadas de API de amostra
 
@@ -36,19 +36,19 @@ Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar 
 
 ### Coletar valores para cabeçalhos necessários
 
-Para fazer chamadas para APIs do [!DNL Platform], primeiro complete o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). Concluir o tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API da [!DNL Experience Platform], conforme mostrado abaixo:
+Para fazer chamadas para APIs do [!DNL Experience Platform], primeiro complete o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). Concluir o tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API da [!DNL Experience Platform], conforme mostrado abaixo:
 
 - Autorização: Portador `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id `{ORG_ID}`
 
-Todos os recursos em [!DNL Experience Platform] estão isolados em sandboxes virtuais específicas. Todas as solicitações para [!DNL Platform] APIs exigem um cabeçalho que especifique o nome da sandbox em que a operação ocorrerá:
+Todos os recursos em [!DNL Experience Platform] estão isolados em sandboxes virtuais específicas. Todas as solicitações para [!DNL Experience Platform] APIs exigem um cabeçalho que especifique o nome da sandbox em que a operação ocorrerá:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Para obter mais informações sobre sandboxes em [!DNL Platform], consulte a [documentação de visão geral da sandbox](../../sandboxes/home.md).
+>Para obter mais informações sobre sandboxes em [!DNL Experience Platform], consulte a [documentação de visão geral da sandbox](../../sandboxes/home.md).
 
 Todas as solicitações que contêm um conteúdo (POST, PUT, PATCH) exigem um cabeçalho adicional:
 
@@ -198,7 +198,7 @@ POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{MARKETING_ACTION_NAME}` | O nome da ação de marketing associada à política de uso de dados pela qual você está avaliando os conjuntos de dados. Dependendo se a política foi definida pelo Adobe ou por sua organização, você deve usar `/marketingActions/core` ou `/marketingActions/custom`, respectivamente. |
+| `{MARKETING_ACTION_NAME}` | O nome da ação de marketing associada à política de uso de dados pela qual você está avaliando os conjuntos de dados. Dependendo se a política foi definida pela Adobe ou por sua organização, você deve usar `/marketingActions/core` ou `/marketingActions/custom`, respectivamente. |
 
 **Solicitação**
 

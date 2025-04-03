@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guia da interface do usuário do Serviço de segmentação
 description: Saiba como criar e gerenciar públicos e definições de segmento na interface do usuário do Adobe Experience Platform.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 276fd7c532843c9589e1d51b0bc7a76cb5c3eb9f
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '1043'
+source-wordcount: '1046'
 ht-degree: 2%
 
 ---
@@ -20,12 +20,12 @@ Trabalhar com públicos e definições de segmento requer uma compreensão dos v
 
 - [[!DNL Segmentation Service]](../home.md): [!DNL Segmentation Service] permite segmentar os dados armazenados em [!DNL Experience Platform] que estejam relacionados a indivíduos (como clientes, clientes potenciais, usuários ou organizações) em grupos menores.
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): Fornece um perfil de consumidor unificado em tempo real com base em dados agregados de várias fontes.
-- [[!DNL Adobe Experience Platform Identity Service]](../../identity-service/home.md): permite a criação de perfis de clientes unindo identidades de diferentes fontes de dados que estão sendo assimiladas em [!DNL Platform].
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): a estrutura padronizada pela qual o [!DNL Platform] organiza os dados de experiência do cliente. Para melhor usar a Segmentação, verifique se seus dados são assimilados como perfis e eventos de acordo com as [práticas recomendadas para modelagem de dados](../../xdm/schema/best-practices.md).
+- [[!DNL Adobe Experience Platform Identity Service]](../../identity-service/home.md): permite a criação de perfis de clientes unindo identidades de diferentes fontes de dados que estão sendo assimiladas em [!DNL Experience Platform].
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): a estrutura padronizada pela qual o [!DNL Experience Platform] organiza os dados de experiência do cliente. Para melhor usar a Segmentação, verifique se seus dados são assimilados como perfis e eventos de acordo com as [práticas recomendadas para modelagem de dados](../../xdm/schema/best-practices.md).
 
 Você também deve compreender os termos principais a seguir que são usados neste documento e compreender a diferença entre eles:
 
-- **Público-alvo**: uma coleção de pessoas que compartilham comportamentos e/ou características semelhantes. Essa coleção de pessoas pode ser gerada pelo Adobe Experience Platform usando definições de segmento (público-alvo gerado pela Platform), composição de público-alvo ou de fontes externas, como uploads personalizados (público-alvo gerado externamente).
+- **Público-alvo**: uma coleção de pessoas que compartilham comportamentos e/ou características semelhantes. Essa coleção de pessoas pode ser gerada pelo Adobe Experience Platform usando definições de segmento (público-alvo gerado pela Experience Platform), composição de público-alvo ou de fontes externas, como uploads personalizados (público-alvo gerado externamente).
 - **Definição de segmento**: as regras que a Adobe Experience Platform usa para descrever as principais características ou o comportamento de um público-alvo.
 - **Segmento**: o ato de separar perfis em públicos.
 
@@ -35,7 +35,7 @@ Na interface do Experience Platform, selecione **[!UICONTROL Públicos-alvo]** n
 
 >[!NOTE]
 >
->Se sua organização é nova na Platform e ainda não tem conjuntos de dados de Perfil ativos ou políticas de mesclagem criadas, o painel [!UICONTROL Públicos-alvo] não estará visível. Em vez disso, a guia [!UICONTROL Visão geral] exibe links e documentação para ajudar você a começar a usar os públicos-alvo.
+>Se sua organização for nova no Experience Platform e ainda não tiver conjuntos de dados de Perfil ativos ou políticas de mesclagem criadas, o painel [!UICONTROL Públicos-alvo] não estará visível. Em vez disso, a guia [!UICONTROL Visão geral] exibe links e documentação para ajudar você a começar a usar os públicos-alvo.
 
 ### Painel de [!UICONTROL Públicos-alvo] {#segments-dashboard}
 
@@ -49,7 +49,7 @@ Para saber mais, visite o [guia do painel de públicos-alvo](../../dashboards/gu
 
 Selecione a guia **[!UICONTROL Procurar]** para ver o Portal de público-alvo. O Portal de público-alvo fornece uma lista de todos os públicos-alvo que pertencem à sua organização e sandbox, e inclui detalhes como contagem de perfis, origem, data de criação, data da última modificação, tags e detalhamento.
 
-Além disso, o Audience Portal permite criar novos públicos-alvo usando o Construtor de segmentos ou a Composição de público-alvo, bem como importar públicos gerados externamente para a Platform.
+Além disso, o Audience Portal permite criar novos públicos-alvo usando o Construtor de segmentos ou a Composição de público-alvo, bem como importar públicos gerados externamente para o Experience Platform.
 
 Para obter mais informações sobre o Audience Portal, leia a [Visão geral do Audience Portal](./audience-portal.md).
 
@@ -98,7 +98,7 @@ Além das composições de público-alvo e definições de segmento, você pode 
 
 ## Segmentação de transmissão {#streaming-segmentation}
 
-A segmentação de transmissão é a capacidade de fazer a segmentação no [!DNL Platform] em tempo quase real, enquanto se concentra na riqueza de dados. Com a segmentação por transmissão, a qualificação para segmentação acontece agora, à medida que os dados chegam ao [!DNL Platform], diminuindo a necessidade de agendar e executar trabalhos de segmentação.
+A segmentação de transmissão é a capacidade de fazer a segmentação no [!DNL Experience Platform] em tempo quase real, enquanto se concentra na riqueza de dados. Com a segmentação por transmissão, a qualificação para segmentação acontece agora, à medida que os dados chegam ao [!DNL Experience Platform], diminuindo a necessidade de agendar e executar trabalhos de segmentação.
 
 Mais informações sobre a segmentação por transmissão podem ser encontradas no [guia do usuário da segmentação por transmissão](../methods/streaming-segmentation.md).
 
@@ -108,7 +108,7 @@ Mais informações sobre a segmentação por transmissão podem ser encontradas 
 
 ## Segmentação de borda {#edge-segmentation}
 
-A segmentação do Edge é a capacidade de avaliar públicos-alvo na Platform instantaneamente na borda, permitindo casos de uso de personalização da mesma página e da próxima página.
+A segmentação do Edge é a capacidade de avaliar públicos no Experience Platform instantaneamente na borda, permitindo casos de uso de personalização da mesma página e da próxima página.
 
 Mais informações sobre a segmentação de borda podem ser encontradas no [guia da interface de segmentação de borda](../methods/edge-segmentation.md)
 

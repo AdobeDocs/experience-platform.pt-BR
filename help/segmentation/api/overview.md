@@ -3,9 +3,9 @@ title: Guia da API do Serviço de segmentação
 description: A API do Serviço de segmentação permite que os desenvolvedores gerenciem programaticamente as operações de segmentação no Adobe Experience Platform. Siga este manual para saber como executar operações importantes usando a API.
 role: Developer
 exl-id: cebecaf3-9746-4b0b-9c50-11789fba66c3
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '556'
+source-wordcount: '557'
 ht-degree: 3%
 
 ---
@@ -20,7 +20,7 @@ Para exibir todos os pontos de extremidade e operações CRUD disponíveis, cons
 
 ## Públicos-alvo
 
-Os públicos-alvo são uma coleção de pessoas que compartilham comportamentos e/ou características semelhantes. Eles podem ser gerados usando a Platform ou de fontes externas. Você pode usar o ponto de extremidade `/audiences` para recuperar todos os públicos, criar um novo público, recuperar detalhes de um público específico, atualizar um público específico ou excluir um público específico.
+Os públicos-alvo são uma coleção de pessoas que compartilham comportamentos e/ou características semelhantes. Eles podem ser gerados com o uso do Experience Platform ou de fontes externas. Você pode usar o ponto de extremidade `/audiences` para recuperar todos os públicos, criar um novo público, recuperar detalhes de um público específico, atualizar um público específico ou excluir um público específico.
 
 Para obter mais informações sobre como usar este ponto de extremidade, leia o [manual do ponto de extremidade de públicos-alvo](./audiences.md).
 
@@ -62,4 +62,4 @@ A pesquisa de segmentos é usada para pesquisar campos contidos em várias fonte
 
 ## Próximas etapas
 
-Para começar a usar a API [!DNL Segmentation Service], revise os diferentes manuais de ponto de extremidade para obter etapas detalhadas sobre como fazer chamadas para os vários pontos de extremidade do serviço. Para saber mais sobre como trabalhar com segmentos usando a interface do usuário do [!DNL Platform], consulte o [Guia do usuário de segmentação](../ui/overview.md).
+Para começar a usar a API [!DNL Segmentation Service], revise os diferentes manuais de ponto de extremidade para obter etapas detalhadas sobre como fazer chamadas para os vários pontos de extremidade do serviço. Para saber mais sobre como trabalhar com segmentos usando a interface do usuário do [!DNL Experience Platform], consulte o [Guia do usuário de segmentação](../ui/overview.md).

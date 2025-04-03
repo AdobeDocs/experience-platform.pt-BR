@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Cumprimento do consentimento nas definições de segmento
 description: Saiba como respeitar as preferências de consentimento do cliente para a coleta e o compartilhamento de dados pessoais em operações de segmentação.
 exl-id: fe851ce3-60db-4984-a73c-f9c5964bfbad
-source-git-commit: bf0e5065e771b748ee9d6ae3c431e76f08552983
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '678'
+source-wordcount: '680'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ Se um cliente tiver retirado ou retido o consentimento para o compartilhamento d
 
 O cumprimento dos valores de consentimento do cliente requer uma compreensão dos vários serviços do [!DNL Adobe Experience Platform] envolvidos. Antes de iniciar este tutorial, verifique se você está familiarizado com os seguintes serviços:
 
-* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): a estrutura padronizada pela qual a Platform organiza os dados de experiência do cliente.
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): a estrutura padronizada pela qual o Experience Platform organiza os dados de experiência do cliente.
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md): fornece um perfil de cliente unificado em tempo real com base em dados agregados de várias fontes.
 * [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): permite que você compile públicos a partir de dados de [!DNL Real-Time Customer Profile].
 
@@ -75,7 +75,7 @@ Com os valores de consentimento **[!UICONTROL Coleta de dados]** e **[!UICONTROL
 
 Seguindo este tutorial, você deve ter um melhor entendimento de como honrar os consentimentos e as preferências do cliente ao criar definições de segmento no Experience Platform.
 
-Para obter mais informações sobre como gerenciar o consentimento na Platform, consulte a seguinte documentação:
+Para obter mais informações sobre como gerenciar o consentimento no Experience Platform, consulte a seguinte documentação:
 
 * [Processamento de consentimento usando o padrão Adobe](../../landing/governance-privacy-security/consent/adobe/overview.md)
 * [Processamento de consentimento usando o padrão IAB TCF 2.0](../../landing/governance-privacy-security/consent/iab/overview.md)

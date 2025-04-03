@@ -4,9 +4,9 @@ description: Saiba como criar e usar públicos-alvo da conta para direcionar per
 badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="Edição B2P" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 047930d6-939f-4418-bbcb-8aafd2cf43ba
-source-git-commit: 78cb7fd24b858859226c737affbb4e93783c884d
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '1494'
+source-wordcount: '1495'
 ht-degree: 21%
 
 ---
@@ -53,7 +53,7 @@ Para criar um público-alvo para uma conta, selecione **[!UICONTROL Criar públi
 
 ![O botão [!UICONTROL Criar público-alvo] está realçado na página de navegação do público-alvo da conta.](../images/types/account/select-create-audience.png)
 
-O Construtor de segmentos é exibido. Os atributos e os públicos-alvo da conta são exibidos na barra de navegação esquerda. Na guia [!UICONTROL Atributos], é possível adicionar atributos personalizados e criados pela plataforma.
+O Construtor de segmentos é exibido. Os atributos e os públicos-alvo da conta são exibidos na barra de navegação esquerda. Na guia [!UICONTROL Atributos], é possível adicionar atributos criados e personalizados pela Experience Platform.
 
 ![O Construtor de segmentos é exibido. Observe que somente os atributos e os públicos-alvo são exibidos.](../images/types/account/segment-builder.png)
 
@@ -116,7 +116,7 @@ A página [!UICONTROL Ativar destino] é exibida. Para obter mais informações 
 
 ## Próximas etapas {#next-steps}
 
-Depois de ler este guia, você compreenderá melhor como criar e usar os públicos-alvo da sua conta no Adobe Experience Platform. Para saber como usar outros tipos de público-alvo na Platform, leia a [visão geral do tipo de público-alvo](./overview.md).
+Depois de ler este guia, você compreenderá melhor como criar e usar os públicos-alvo da sua conta no Adobe Experience Platform. Para saber como usar outros tipos de público-alvo no Experience Platform, leia a [visão geral sobre o tipo de público-alvo](./overview.md).
 
 ## Apêndice {#appendix}
 

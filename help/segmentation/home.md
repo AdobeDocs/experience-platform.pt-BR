@@ -1,18 +1,18 @@
 ---
 solution: Experience Platform
 title: Visão geral do serviço de segmentação
-description: Saiba mais sobre o Serviço de segmentação da Adobe Experience Platform e a função que ele desempenha no ecossistema da plataforma.
+description: Saiba mais sobre o Serviço de segmentação da Adobe Experience Platform e a função que ele desempenha no ecossistema da Experience Platform.
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-source-git-commit: f981b26a468a1d5ab9931a9cce59b176cd0fd9b3
+source-git-commit: 0a9028beca36b46d6228c0038366bbac5d32603c
 workflow-type: tm+mt
-source-wordcount: '1678'
-ht-degree: 12%
+source-wordcount: '1679'
+ht-degree: 9%
 
 ---
 
 # Visão geral do [!DNL Segmentation Service]
 
-O Adobe Experience Platform [!DNL Segmentation Service] fornece uma interface de usuário e uma API RESTful que permite criar públicos-alvo por meio de definições de segmento ou outras fontes a partir dos dados do [!DNL Real-Time Customer Profile]. Esses públicos-alvo são configurados e mantidos de forma centralizada na [!DNL Platform] e podem ser acessados a qualquer momento usando as soluções da Adobe.
+O Adobe Experience Platform [!DNL Segmentation Service] fornece uma interface de usuário e uma API RESTful que permite criar públicos-alvo por meio de definições de segmento ou outras fontes a partir dos dados do [!DNL Real-Time Customer Profile]. Esses públicos-alvo são configurados e mantidos de forma centralizada na [!DNL Experience Platform] e podem ser acessados a qualquer momento usando as soluções da Adobe.
 
 Este documento fornece uma visão geral do [!DNL Segmentation Service] e sua função no Adobe Experience Platform.
 
@@ -20,7 +20,7 @@ Este documento fornece uma visão geral do [!DNL Segmentation Service] e sua fun
 
 Você deve entender os seguintes termos principais usados neste documento:
 
-- **Público-alvo**: uma coleção de pessoas que compartilham comportamentos e/ou características semelhantes. Essa coleção de pessoas pode ser gerada pelo Adobe Experience Platform usando definições de segmento (público-alvo gerado pela Platform) ou de fontes externas (público-alvo gerado externamente).
+- **Público-alvo**: uma coleção de pessoas que compartilham comportamentos e/ou características semelhantes. Essa coleção de pessoas pode ser gerada pelo Adobe Experience Platform usando definições de segmento (público-alvo gerado pela Experience Platform) ou de fontes externas (público-alvo gerado externamente).
 - **Definição de segmento**: o conjunto de regras que a Adobe Experience Platform usa para descrever as principais características ou o comportamento de um público-alvo.
 - **Segmento**: o ato de separar perfis em públicos.
 
@@ -28,15 +28,15 @@ Você deve entender os seguintes termos principais usados neste documento:
 
 A segmentação é o processo de definir atributos ou comportamentos específicos compartilhados por um subconjunto de perfis da sua loja de Perfis para distinguir um grupo comercializável de pessoas da sua base de clientes. Por exemplo, em uma campanha de email chamada &quot;Você se esqueceu de comprar seu tênis?&quot;, você pode querer um público de todos os usuários que procuraram tênis de corrida nos últimos 30 dias, mas que não concluíram uma compra.
 
-Depois que um público-alvo é definido conceitualmente, ele é incorporado no [!DNL Experience Platform]. Normalmente, os públicos-alvo são criados pelo profissional de marketing ou especialista em público-alvo, embora algumas organizações prefiram que sejam criados pelo departamento de marketing em colaboração com os analistas de dados. Ao revisar os dados que estão sendo enviados para [!DNL Platform], o analista de dados pode criar o público-alvo de duas maneiras: criando uma definição de segmento e selecionando quais campos e valores serão usados para criar as regras ou condições do público-alvo, ou compondo um público-alvo usando a Composição de público-alvo.
+Depois que um público-alvo é definido conceitualmente, ele é incorporado no [!DNL Experience Platform]. Normalmente, os públicos-alvo são criados pelo profissional de marketing ou especialista em público-alvo, embora algumas organizações prefiram que sejam criados pelo departamento de marketing em colaboração com os analistas de dados. Ao revisar os dados que estão sendo enviados para [!DNL Experience Platform], o analista de dados pode criar o público-alvo de duas maneiras: criando uma definição de segmento e selecionando quais campos e valores serão usados para criar as regras ou condições do público-alvo, ou compondo um público-alvo usando a Composição de público-alvo.
 
 ## Criar públicos-alvo
 
-Os públicos-alvo podem ser criados de duas maneiras diferentes no Adobe Experience Platform: diretamente compostos como públicos-alvo ou por meio de definições de segmentos derivadas da plataforma.
+Você pode criar públicos-alvo de várias maneiras no Adobe Experience Platform, incluindo por meio de composições, definições de segmento, dados federados e Data Distiller.
 
 ### Composição de público-alvo
 
-Ao compor diretamente um público-alvo na Platform, você pode usar a Composição de público-alvo. Para saber como usar a Composição de público-alvo para criar um público-alvo, leia o [Guia de Composição de Público-alvo](./ui/audience-composition.md) para obter mais informações.
+Ao compor um público diretamente no Experience Platform, você pode usar a Composição de público. Para saber como usar a Composição de público-alvo para criar um público-alvo, leia o [Guia de Composição de Público-alvo](./ui/audience-composition.md) para obter mais informações.
 
 ### Definições de segmento
 
@@ -61,7 +61,7 @@ Além das composições de público-alvo e definições de segmento, você pode 
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation"
 >title="Métodos de avaliação"
->abstract="Atualmente, a Platform aceita três métodos de avaliação de públicos-alvo: segmentação de transmissão, segmentação em lote e segmentação de borda."
+>abstract="Atualmente, o Experience Platform oferece suporte a três métodos de avaliação de públicos-alvo: segmentação por transmissão, segmentação em lote e segmentação de borda."
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_streaming"
@@ -69,7 +69,7 @@ Além das composições de público-alvo e definições de segmento, você pode 
 >abstract="A segmentação de transmissão é um processo contínuo de seleção de dados que atualiza os públicos-alvo em resposta à atividade do usuário."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/methods/streaming-segmentation.html" text="Avaliar eventos em tempo quase real com a segmentação de transmissão"
 
-Atualmente, a Platform aceita três métodos de avaliação de públicos-alvo: segmentação de transmissão, segmentação em lote e segmentação de borda.
+Atualmente, o Experience Platform oferece suporte a três métodos de avaliação de públicos-alvo: segmentação por transmissão, segmentação em lote e segmentação de borda.
 
 ### Segmentação de transmissão {#streaming}
 
@@ -93,12 +93,12 @@ Os públicos-alvo em lote são avaliados automaticamente a cada 24 horas. Se qui
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_edge"
 >title="Avaliação da borda"
->abstract="A segmentação de borda é a capacidade de avaliar segmentos na rede de borda da Platform instantaneamente, permitindo casos de uso de personalização da mesma página ou da próxima página."
+>abstract="A segmentação do Edge é a capacidade de avaliar segmentos no Experience Platform instantaneamente no Edge Network, permitindo casos de uso de personalização de mesma página e próxima página."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/methods/edge-segmentation.html" text="Guia de segmentação de borda"
 
-A segmentação do Edge é a capacidade de avaliar segmentos na Platform instantaneamente [na Edge Network](../landing/edge-and-hub-comparison.md), permitindo casos de uso de personalização de mesma página e próxima página.
+A segmentação do Edge é a capacidade de avaliar segmentos no Experience Platform instantaneamente [no Edge Network](../landing/edge-and-hub-comparison.md), permitindo casos de uso de personalização de mesma página e próxima página.
 
-Para saber mais sobre a segmentação de borda, leia a [documentação da API](./methods/edge-segmentation.md) ou a [documentação da interface](./methods/edge-segmentation.md).
+Para saber mais sobre a segmentação de borda, leia a [visão geral da segmentação de borda](./methods/edge-segmentation.md).
 
 ## Acessar resultados de segmentação
 
@@ -122,7 +122,7 @@ Ao criar uma nova definição de segmento, você deve fornecer um nome. O nome d
 
 As políticas de mesclagem são regras usadas por [!DNL Profile] para determinar como os dados serão priorizados e combinados em uma exibição unificada em determinadas condições.
 
-Se uma política de mesclagem não estiver definida, a política de mesclagem padrão [!DNL Platform] será usada. Se você preferir usar uma política de mesclagem específica para sua organização, poderá criar a sua própria e marcá-la como o padrão da organização.
+Se uma política de mesclagem não estiver definida, a política de mesclagem padrão [!DNL Experience Platform] será usada. Se você preferir usar uma política de mesclagem específica para sua organização, poderá criar a sua própria e marcá-la como o padrão da organização.
 
 Mais informações sobre políticas de mesclagem podem ser encontradas no [guia de políticas de mesclagem](../profile/api/merge-policies.md).
 
@@ -137,6 +137,7 @@ Além da política de nome e mesclagem, o [!DNL Segment Builder] oferece um camp
 ## Recursos avançados de segmentação
 
 As definições de segmento podem ser configuradas para gerar continuamente um público-alvo de forma contínua, combinando a [assimilação de dados por transmissão](../ingestion/streaming-ingestion/overview.md) com qualquer um dos seguintes recursos avançados de segmentação:
+
 - [Segmentação sequencial](#sequential)
 - [Segmentação dinâmica](#dynamic)
 - [Segmentação de várias entidades](#multi-entity)

@@ -1,13 +1,13 @@
 ---
 title: Guia de segmentação em lote
 description: Saiba mais sobre a segmentação em lote, incluindo o que é, como criar um público-alvo avaliado usando a segmentação em lote e como visualizar os públicos-alvo criados usando a segmentação em lote.
-source-git-commit: cffd7bad831f0f58bd2b62585bfd0b84280b1732
+exl-id: b6fba2fb-8eec-4429-92fd-ece5c79d379d
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '549'
+source-wordcount: '550'
 ht-degree: 2%
 
 ---
-
 
 # Guia de segmentação em lote
 
@@ -279,7 +279,7 @@ Nos filtros disponíveis, vá para **[!UICONTROL Atualizar frequência]** e sele
 
 ![A frequência de atualização em lote está selecionada, exibindo todos os públicos-alvo na organização que são avaliados usando a segmentação em lote.](../images/methods/batch/filter-batch.png)
 
-Para saber mais sobre como visualizar públicos-alvo na Platform, leia o [Guia do Portal de Público-Alvo](../ui/audience-portal.md).
+Para saber mais sobre como exibir públicos-alvo no Experience Platform, leia o [Guia do Portal de Público-Alvo](../ui/audience-portal.md).
 
 >[!ENDTABS]
 

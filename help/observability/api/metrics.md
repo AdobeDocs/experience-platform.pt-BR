@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Endpoint da API de métricas
 description: Saiba como recuperar métricas de observabilidade no Experience Platform usando a API de insights de observação.
 exl-id: 08d416f0-305a-44e2-a2b7-d563b2bdd2d2
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 3b217f7bcb60f762b5d380d82076cfb17d7a2d13
 workflow-type: tm+mt
-source-wordcount: '1278'
+source-wordcount: '1294'
 ht-degree: 4%
 
 ---
@@ -277,7 +277,7 @@ A tabela a seguir lista os diferentes códigos de erro que podem ser retornados 
 
 | Código de erro | Título | Descrição |
 | --- | --- | --- |
-| `INSGHT-1000-400` | Conteúdo de solicitação inválido | Algo deu errado com a carga da solicitação. Verifique se você corresponde exatamente à formatação da carga conforme mostrado [acima](#v2). Qualquer um dos possíveis motivos pode acionar esse erro:<ul><li>Campos obrigatórios ausentes, como `aggregator`</li><li>Métricas inválidas</li><li>A solicitação contém um agregador inválido</li><li>Uma data inicial ocorre após uma data final</li></ul> |
+| `INSGHT-1000-400` | Conteúdo de solicitação inválido | Algo deu errado com a carga da solicitação. Verifique se você corresponde exatamente à formatação da carga conforme mostrado [acima](#v2). Qualquer um dos possíveis motivos pode acionar esse erro:<ul><li>Campos obrigatórios ausentes, como `aggregator`</li><li>Métricas inválidas</li><li>A solicitação contém um agregador inválido</li><li>Uma data inicial ocorre após uma data final</li><li>A solicitação tem um intervalo de tempo (entre as datas inicial e final) superior a 32 dias</li></ul> |
 | `INSGHT-1001-400` | Falha na consulta de métricas | Ocorreu um erro ao tentar consultar o banco de dados de métricas devido a uma solicitação inválida ou a própria consulta não pode ser analisada. Verifique se a solicitação está formatada corretamente antes de tentar novamente. |
 | `INSGHT-1001-500` | Falha na consulta de métricas | Ocorreu um erro ao tentar consultar o banco de dados de métricas devido a um erro no servidor. Tente a solicitação novamente e, se o problema persistir, entre em contato com o suporte da Adobe. |
 | `INSGHT-1002-500` | Erro de serviço | A solicitação não pôde ser processada devido a um erro interno. Tente a solicitação novamente e, se o problema persistir, entre em contato com o suporte da Adobe. |
